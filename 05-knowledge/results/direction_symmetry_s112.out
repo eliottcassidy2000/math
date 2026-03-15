@@ -1,0 +1,110 @@
+DIRECTION AND SYMMETRY: THE COSH/SINH DECOMPOSITION
+============================================================
+
+Q^m decomposes into:
+  SYMMETRIC (even in x):  C(m,x) = cosh(2m*arctanh(x)) = (Q^m + Q^{-m})/2
+  ANTISYMMETRIC (odd in x): S(m,x) = sinh(2m*arctanh(x)) = (Q^m - Q^{-m})/2
+
+Coefficients:
+  m=1:
+    [x^0] Q^1 = 1, belongs to SYMMETRIC (cosh)
+    [x^1] Q^1 = 2, belongs to ANTISYMMETRIC (sinh)
+    [x^2] Q^1 = 2, belongs to SYMMETRIC (cosh)
+    [x^3] Q^1 = 2, belongs to ANTISYMMETRIC (sinh)
+    [x^4] Q^1 = 2, belongs to SYMMETRIC (cosh)
+    [x^5] Q^1 = 2, belongs to ANTISYMMETRIC (sinh)
+    [x^6] Q^1 = 2, belongs to SYMMETRIC (cosh)
+  m=3:
+    [x^0] Q^3 = 1, belongs to SYMMETRIC (cosh)
+    [x^1] Q^3 = 6, belongs to ANTISYMMETRIC (sinh)
+    [x^2] Q^3 = 18, belongs to SYMMETRIC (cosh)
+    [x^3] Q^3 = 38, belongs to ANTISYMMETRIC (sinh)
+    [x^4] Q^3 = 66, belongs to SYMMETRIC (cosh)
+    [x^5] Q^3 = 102, belongs to ANTISYMMETRIC (sinh)
+    [x^6] Q^3 = 146, belongs to SYMMETRIC (cosh)
+  m=5:
+    [x^0] Q^5 = 1, belongs to SYMMETRIC (cosh)
+    [x^1] Q^5 = 10, belongs to ANTISYMMETRIC (sinh)
+    [x^2] Q^5 = 50, belongs to SYMMETRIC (cosh)
+    [x^3] Q^5 = 170, belongs to ANTISYMMETRIC (sinh)
+    [x^4] Q^5 = 450, belongs to SYMMETRIC (cosh)
+    [x^5] Q^5 = 1002, belongs to ANTISYMMETRIC (sinh)
+    [x^6] Q^5 = 1970, belongs to SYMMETRIC (cosh)
+
+PHYSICAL INTERPRETATION:
+
+  cosh part (EVEN k) = STANDING WAVE = direction-blind
+    Detects: undirected step patterns, co-occurrences
+    Example: k=2 detects WHETHER two positions have unit steps
+
+  sinh part (ODD k) = TRAVELING WAVE = direction-sensitive
+    Detects: directed cycles, causal chains
+    Example: k=1 detects the NET direction (up vs down)
+             k=3 detects 3-cycles (intransitivity)
+
+The RATIO sinh/cosh = tanh(2m*arctanh(x)):
+  = purity of direction
+  = what fraction of the total structure is CAUSAL
+
+  m=1, x=0.1: purity = 0.1980
+  m=1, x=0.5: purity = 0.8000
+  m=3, x=0.1: purity = 0.5385
+  m=3, x=0.5: purity = 0.9973
+  m=5, x=0.1: purity = 0.7630
+  m=5, x=0.5: purity = 1.0000
+  m=10, x=0.1: purity = 0.9645
+  m=10, x=0.5: purity = 1.0000
+
+As m grows: purity -> 1 (fully directed, all information is causal)
+As x -> 0: purity -> 0 (no coupling, no direction)
+
+============================================================
+SYMMETRY BREAKING HIERARCHY
+============================================================
+
+Level 0: FULL SYMMETRY
+  Group: S_n x Z/2  (permutations and complement)
+  Invariant: E[H] = n!/2^{n-1}
+  Nothing is broken. Q = 1.
+
+Level 1: COMPLEMENT BROKEN (Z/2 broken, S_n preserved)
+  A specific tournament T chosen: T != T^op in general.
+  The ODD harmonics (sinh part) become nonzero.
+  arctanh(x) appears: the GENERATOR of direction.
+  This is like a PHASE TRANSITION: from disordered to ordered.
+
+Level 2: POSITION BROKEN (translation broken)
+  The transfer matrix M(x) acts at specific positions.
+  The Delannoy structure (cluster matchings) emerges.
+  g_k(m) varies with position m = n-2k.
+
+Level 3: FULLY BROKEN
+  Individual tournament T with Aut(T) only.
+  H(T) = I(Omega(T), 2): full OCF formula.
+
+============================================================
+DIRECTION IS TIME. SYMMETRY IS SPACE.
+============================================================
+
+cosh = space-like (symmetric, undirected, standing)
+sinh = time-like (antisymmetric, directed, traveling)
+
+Direction IS causality. A > B means A precedes B.
+H(T) counts consistent TIMELINES.
+A tournament with many timelines is highly ORDERED.
+A tournament with few timelines is nearly CONTRADICTORY.
+
+The Cayley transform Q = (1+x)/(1-x) = exp(2*arctanh):
+  converts spatial correlation x into temporal odds Q
+  arctanh(x) = proper time in hyperbolic spacetime
+  Q^m = time evolution by m units
+
+The EVEN/ODD decomposition of the natural numbers is
+the SPACE/TIME decomposition of the comparison structure.
+
+Space (even): tells you HOW MUCH comparison is happening
+Time (odd):   tells you IN WHICH DIRECTION
+
+Both together = the full natural number series = SPACETIME.
+And spacetime generates 1/(1-x) = the geometric series
+= the simplest possible growth: one comparison at a time.
