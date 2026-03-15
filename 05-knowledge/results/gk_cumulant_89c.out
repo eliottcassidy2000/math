@@ -1,0 +1,164 @@
+======================================================================
+JOINT vs INDEPENDENT CLUSTER EXPECTATIONS
+======================================================================
+
+n=6:
+  h_1 = 1/15
+  2 clusters, gap=0: joint=1/180, indep=1/225
+    ratio=5/4, cumulant κ₂=1/900
+
+n=7:
+  h_1 = 1/21
+  2 clusters, gap=0: joint=1/420, indep=1/441
+    ratio=21/20, cumulant κ₂=1/8820
+  2 clusters, gap=1: joint=1/210, indep=1/441
+    ratio=21/10, cumulant κ₂=11/4410
+
+n=8:
+  h_1 = 1/28
+  2 clusters, gap=0: joint=1/840, indep=1/784
+    ratio=14/15, cumulant κ₂=-1/11760
+  2 clusters, gap=1: joint=1/420, indep=1/784
+    ratio=28/15, cumulant κ₂=13/11760
+  2 clusters, gap=2: joint=1/420, indep=1/784
+    ratio=28/15, cumulant κ₂=13/11760
+  3 clusters, gaps=(0,0): joint=1/10080
+    κ₃=1/49392
+
+n=9:
+  h_1 = 1/36
+  2 clusters, gap=0: joint=1/1512, indep=1/1296
+    ratio=6/7, cumulant κ₂=-1/9072
+  2 clusters, gap=1: joint=1/756, indep=1/1296
+    ratio=12/7, cumulant κ₂=5/9072
+  2 clusters, gap=2: joint=1/756, indep=1/1296
+    ratio=12/7, cumulant κ₂=5/9072
+  2 clusters, gap=3: joint=1/756, indep=1/1296
+    ratio=12/7, cumulant κ₂=5/9072
+  3 clusters, gaps=(0,0): joint=1/30240
+    κ₃=1/408240
+  3 clusters, gaps=(0,1): joint=1/15120
+    κ₃=1/58320
+  3 clusters, gaps=(1,0): joint=1/15120
+    κ₃=1/58320
+
+======================================================================
+EFFECTIVE r-CLUSTER WEIGHTS (summed over compositions)
+======================================================================
+
+k=1:
+  True Δ^r: [0, 1]
+  Naive:    [0, 1]
+  DEGREE ≤ 3 ✓
+
+k=2:
+  True Δ^r: [0, 1, 2]
+  Naive:    [0, 1, 2]
+  DEGREE ≤ 3 ✓
+
+k=3:
+  True Δ^r: [Fraction(0, 1), Fraction(1, 1), Fraction(4, 1), Fraction(4, 1)]
+  Naive:    [0, 1, 4, 4]
+  DEGREE ≤ 3 ✓
+
+k=4:
+  True Δ^r: [Fraction(-8, 1), Fraction(9, 1), Fraction(-2, 1), Fraction(20, 1)]
+  Naive:    [0, 1, 6, 12, 8]
+  DEGREE ≤ 3 ✓
+
+k=5:
+  True Δ^r: [Fraction(-592, 1), Fraction(593, 1), Fraction(-584, 1), Fraction(776, 1)]
+  Naive:    [0, 1, 8, 24, 32, 16]
+  DEGREE ≤ 3 ✓
+
+k=6:
+  True Δ^r: [Fraction(-114320, 1), Fraction(114321, 1), Fraction(-114310, 1), Fraction(139320, 1)]
+  Naive:    [0, 1, 10, 40, 80, 80]
+  DEGREE ≤ 3 ✓
+
+k=7:
+  True Δ^r: [Fraction(-33338240, 1), Fraction(33338241, 1), Fraction(-33338228, 1), Fraction(39652540, 1)]
+  Naive:    [0, 1, 12, 60, 160, 240]
+  DEGREE ≤ 3 ✓
+
+k=8:
+  True Δ^r: [Fraction(-12475185560, 1), Fraction(12475185561, 1), Fraction(-12475185546, 1), Fraction(14619453484, 1)]
+  Naive:    [0, 1, 14, 84, 280, 560]
+  DEGREE ≤ 3 ✓
+
+k=9:
+  True Δ^r: [Fraction(-5629549881808, 1), Fraction(5629549881809, 1), Fraction(-5629549881792, 1), Fraction(6525375440480, 1)]
+  Naive:    [0, 1, 16, 112, 448, 1120]
+  DEGREE ≤ 3 ✓
+
+======================================================================
+PER-COMPOSITION WEIGHTS for k=4
+======================================================================
+
+n=9, m=1:
+
+n=10, m=2:
+
+n=11, m=3:
+  4 singletons at 01|34|67|9,10: joint=0
+    independent = 1/9150625
+    ratio = 0
+    (n)_8/2 = 3326400
+    weighted = 0
+
+======================================================================
+UNDERSTANDING THE r=3 WEIGHT FOR k=4
+======================================================================
+
+n=11, m=3:
+  (1,1,2) at 01|34|6789: joint=1/831600
+    independent = 1/11979000
+    ratio = 605/42
+    weighted joint = 4
+  (1,2,1) at 01|3456|89: joint=1/831600
+    independent = 1/11979000
+    ratio = 605/42
+  (2,1,1) at 0123|56|89: joint=1/831600
+    independent = 1/11979000
+    ratio = 605/42
+
+======================================================================
+GAP INDEPENDENCE: does ratio depend on gap sizes?
+======================================================================
+n=10, h_1=1/45, h_2=1/2520
+
+Two s=1 clusters:
+  gap=0: ratio = 45/56
+  gap=1: ratio = 45/28
+  gap=2: ratio = 45/28
+  gap=3: ratio = 45/28
+  gap=4: ratio = 45/28
+
+s=1 and s=2 clusters:
+  gap=0: ratio = 3/2
+  gap=1: ratio = 3
+  gap=2: ratio = 3
+  gap=3: ratio = 3
+
+Two s=2 clusters:
+  gap=0: ratio = 7
+  gap=1: ratio = 14
+  gap=2: ratio = 0
+
+Three s=1 clusters (equal gaps):
+  gaps=(0,0): ratio = 135/112
+  gaps=(1,1): ratio = 135/28
+  gaps=(2,2): ratio = 0
+
+Three s=1 clusters (different gaps):
+  gaps=(0,0): ratio = 135/112
+  gaps=(0,1): ratio = 135/56
+  gaps=(0,2): ratio = 135/56
+  gaps=(1,0): ratio = 135/56
+  gaps=(1,1): ratio = 135/28
+  gaps=(1,2): ratio = 135/28
+  gaps=(2,0): ratio = 135/56
+  gaps=(2,1): ratio = 135/28
+  gaps=(2,2): ratio = 0
+
+Done!
