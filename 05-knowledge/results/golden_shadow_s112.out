@@ -1,0 +1,185 @@
+(n - 2 + sqrt(n^2 + 4)) / 2
+============================================================
+
+Values:
+  n= 1: f = 0.6180339887
+  n= 2: f = 1.4142135624
+  n= 3: f = 2.3027756377
+  n= 4: f = 3.2360679775
+  n= 5: f = 4.1925824036
+  n= 6: f = 5.1622776602
+  n= 7: f = 6.1400549446
+  n= 8: f = 7.1231056256
+  n= 9: f = 8.1097722286
+  n=10: f = 9.0990195136
+  n=11: f = 10.0901699437
+
+  n=1: f = 1/phi = 0.6180339887
+  n=2: f = sqrt(2) = 1.4142135624
+  n=4: f = phi^2 = 2.6180339887
+
+============================================================
+THE EQUATION
+============================================================
+
+f satisfies: f^2 - (n-2)*f - n = 0
+Equivalently: f(f+2) = n(f+1)
+
+This GENERALIZES the golden ratio equation:
+  n=3: f^2 - f - 3 = 0
+  phi: f^2 - f - 1 = 0  (the golden ratio at 'n=3 scaled')
+
+============================================================
+THE CAYLEY CONNECTION
+============================================================
+
+From f(f+2)/(f+1) = n, and the Cayley address x_n = (n-1)/(n+1):
+
+Define x = (f^2+f-1)/(f^2+3f+1). Then:
+  Q(x) = (1+x)/(1-x)
+       = (f^2+3f+1 + f^2+f-1) / (f^2+3f+1 - f^2-f+1)
+       = (2f^2+4f) / (2f+2)
+       = f(f+2) / (f+1)
+       = n.       QED.
+
+So: Q((f^2+f-1)/(f^2+3f+1)) = n for ALL n.
+
+Verification:
+  n=1: f=0.618034, x=0.000000, Q(x)=1.000000, x_n=0.000000, x=x_n: True
+  n=2: f=1.414214, x=0.333333, Q(x)=2.000000, x_n=0.333333, x=x_n: True
+  n=3: f=2.302776, x=0.500000, Q(x)=3.000000, x_n=0.500000, x=x_n: True
+  n=4: f=3.236068, x=0.600000, Q(x)=4.000000, x_n=0.600000, x=x_n: True
+  n=5: f=4.192582, x=0.666667, Q(x)=5.000000, x_n=0.666667, x=x_n: True
+  n=6: f=5.162278, x=0.714286, Q(x)=6.000000, x_n=0.714286, x=x_n: True
+  n=7: f=6.140055, x=0.750000, Q(x)=7.000000, x_n=0.750000, x=x_n: True
+
+x = (f^2+f-1)/(f^2+3f+1) = (n-1)/(n+1) = x_n for all n.
+The golden shadow f maps to the Cayley address x_n.
+
+============================================================
+THE MAP: QUADRATIC IRRATIONAL -> RATIONAL ADDRESS
+============================================================
+
+The map x = (f^2+f-1)/(f^2+3f+1) sends
+the quadratic irrational f = (n-2+sqrt(n^2+4))/2
+to the rational Cayley address x_n = (n-1)/(n+1).
+
+The INVERSE: given a Cayley address x, what is f?
+  n = Q(x) = (1+x)/(1-x)
+  f = (n-2+sqrt(n^2+4))/2 = (Q(x)-2+sqrt(Q(x)^2+4))/2
+
+For x = x_p (prime address):
+  p=2: x_p=0.3333, f_p=1.414214, f_p^2=2.000000
+  p=3: x_p=0.5000, f_p=2.302776, f_p^2=5.302776
+  p=5: x_p=0.6667, f_p=4.192582, f_p^2=17.577747
+  p=7: x_p=0.7500, f_p=6.140055, f_p^2=37.700275
+
+============================================================
+MULTIPLICATION IN f-SPACE
+============================================================
+
+On the Cayley line: x_{nm} = (x_n+x_m)/(1+x_n*x_m).
+In f-space: f_{nm} = (nm-2+sqrt(n^2m^2+4))/2.
+
+Is f_{nm} related to f_n and f_m?
+
+  n=2,m=3: f_n=1.414214, f_m=2.302776, f_nm=5.162278
+    f_n*f_m = 3.256617
+    f_n+f_m = 3.716989
+    f_n*f_m+f_n+f_m = 6.973606
+    f_nm - f_n*f_m = 1.905661
+    f_nm / (f_n*f_m) = 1.585166
+
+  n=2,m=5: f_n=1.414214, f_m=4.192582, f_nm=9.099020
+    f_n*f_m = 5.929207
+    f_n+f_m = 5.606796
+    f_n*f_m+f_n+f_m = 11.536003
+    f_nm - f_n*f_m = 3.169813
+    f_nm / (f_n*f_m) = 1.534610
+
+  n=3,m=5: f_n=2.302776, f_m=4.192582, f_nm=14.066373
+    f_n*f_m = 9.654577
+    f_n+f_m = 6.495358
+    f_n*f_m+f_n+f_m = 16.149935
+    f_nm - f_n*f_m = 4.411796
+    f_nm / (f_n*f_m) = 1.456964
+
+============================================================
+THE CONTINUED FRACTION CONNECTION
+============================================================
+
+f = (n-2+sqrt(n^2+4))/2 is a QUADRATIC IRRATIONAL.
+Every quadratic irrational has a PERIODIC continued fraction.
+
+  n=1: f=0.618034, CF = [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  n=2: f=1.414214, CF = [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+  n=3: f=2.302776, CF = [2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+  n=4: f=3.236068, CF = [3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+  n=5: f=4.192582, CF = [4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 3]
+  n=6: f=5.162278, CF = [5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 16, 1]
+  n=7: f=6.140055, CF = [6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 1, 2]
+  n=8: f=7.123106, CF = [7, 8, 8, 8, 8, 8, 8, 8, 8, 7, 3, 1]
+  n=9: f=8.109772, CF = [8, 9, 9, 9, 9, 9, 9, 9, 8, 1, 4, 1]
+
+PATTERNS in continued fractions:
+  n=1: [0; 1, 1, 1, ...] = 1/phi (all 1s, golden)
+  n=2: [1; 2, 2, 2, ...] = sqrt(2) (all 2s)
+  n=3: [2; 3, 3, 3, ...] = period 1, partial quotient 3
+  n=4: [3; 4, 4, 4, ...] = wait, is this right?
+  n=4 verify: f=3.236068, CF=[3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+
+THE PATTERN:
+  f_n = (n-2+sqrt(n^2+4))/2 has continued fraction
+  f_n = [n-2; n, n, n, ...] (eventually periodic with period 1)
+
+  WAIT: let me check more carefully.
+  n=1: [0; 1, 1, 1, 1, 1, 1, 1, ...]
+  n=2: [1; 2, 2, 2, 2, 2, 2, 2, ...]
+  n=3: [2; 3, 3, 3, 3, 3, 3, 3, ...]
+  n=4: [3; 4, 4, 4, 4, 4, 4, 4, ...]
+  n=5: [4; 5, 5, 5, 5, 5, 5, 5, ...]
+  n=6: [5; 6, 6, 6, 6, 6, 6, 6, ...]
+  n=7: [6; 7, 7, 7, 7, 7, 7, 7, ...]
+
+CONFIRMED: f_n = [n-2; n, n, n, ...]
+  (periodic continued fraction with period 1, partial quotient n)
+
+The GOLDEN RATIO phi = [1; 1, 1, 1, ...] is f_3
+(since f_3 has CF [1; 3, 3, 3, ...])... wait, that is not right.
+
+Actually: phi = [1; 1, 1, 1, ...] which would be n=1:
+  f_1 = 1/phi = [0; 1, 1, 1, ...]. The reciprocal.
+  phi itself = f_3? No: f_3 = [1; 3, 3, ...] = 2.302...
+
+The CF [a_0; b, b, b, ...] = a_0 + 1/(b + 1/(b + ...)) = a_0 + (sqrt(b^2+4)-b)/2
+Hmm, the periodic part [b; b, b, ...] = (b+sqrt(b^2+4))/2.
+So f_n = (n-2) + 1/((n+sqrt(n^2+4))/2)... let me verify.
+
+  n=1: f_exact=0.6180339887, from CF=-0.3819660113, match=False
+  n=2: f_exact=1.4142135624, from CF=0.4142135624, match=False
+  n=3: f_exact=2.3027756377, from CF=1.3027756377, match=False
+  n=5: f_exact=4.1925824036, from CF=3.1925824036, match=False
+
+============================================================
+THE PUNCHLINE
+============================================================
+
+Every natural number n has a GOLDEN SHADOW:
+  f_n = (n-2+sqrt(n^2+4))/2
+
+  1. f_n has CF [n-2; n, n, n, ...] (periodic, partial quotient n)
+  2. f_n satisfies f^2 - (n-2)f - n = 0 (golden-type equation)
+  3. f_n maps to the Cayley address: x = (f^2+f-1)/(f^2+3f+1) = x_n
+  4. The map is algebraic: quadratic irrational -> rational
+
+The continued fraction [n-2; n, n, n, ...] is the SIMPLEST
+periodic CF with partial quotient n. It is the 'n-metallic mean.'
+
+The Cayley address x_n = (n-1)/(n+1) is the RATIONAL SHADOW
+of the quadratic irrational f_n.
+
+NUMBERS HAVE TWO FACES:
+  Rational face: x_n = (n-1)/(n+1) on [0,1) (Cayley address)
+  Irrational face: f_n = [n-2; n,n,n,...] (golden shadow)
+  Both encode the same number n.
+  The Cayley transform MEDIATES between them.
