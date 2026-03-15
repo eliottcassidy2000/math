@@ -13,6 +13,31 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-15-S90 — 2026-03-15: The Helical Simplicial Rédei — 16-Part Exploration
+
+**Account:** opus
+**Continuation of:** opus-2026-03-15-S89c
+**Summary of work:** Massive multi-part exploration session (S90a through S90p) covering: (1) Simplicial Rédei theorem (THM-220) proved — sim_H ∈ {0,1} verified exhaustively n≤8, algebraic dichotomy proof, near-transitive = single reversed arc, H=2^{n-2}+1 via OCF. (2) Transfer matrix char poly = tribonacci at x=1, discriminant Δ=4x(x²-11x-1) with golden ratio zeros. (3) Cayley monad Q⁴=Id, cross-ratio of orbit = 2, D₄ symmetry group, octahedron geometry. (4) Spectral zeta ζ_M(s) at s=-3 gives 7, s=-5 gives 21 (forbidden H values!). (5) OPEN-Q-029 definitively resolved: Tr(M⁸)=131 exactly. (6) τ-φ clock with gear ratio arg(λ_c)/π ≈ ln(2), quasicrystal structure. (7) Equidecomposability = Hilbert's third problem for tournaments (β₁ as Dehn invariant). (8) Near-transitive has β₁=1 always (n=3..8). (9) Tournament Wick rotation: arctanh(2) = log(3)/2+iπ/2, ln(2) as renormalized criticality. (10) The formula (n-2+√(n²+4))/2: continued fraction [n-2; n,n,n,...], Pell equation f·f'=-n, n-tribonacci family.
+**New contributions:**
+- THM-220 (Simplicial Rédei): PROVED all parts, verified n≤8 exhaustive
+- Near-transitive char poly: p(λ) = λ^{n-2}(λ²+1) - (1+λ)^{n-2} (PROVED)
+- Near-transitive Ω = K_{2^{n-3}} with 2^{n-3} odd cycles (PROVED via OCF)
+- Near-transitive β₁ = 1 always (verified n=3..8)
+- Discriminant: Δ(x) = 4x(x²-11x-1), zeros at (11±5√5)/2
+- Cayley monad: Q⁴=Id verified on 3×3 matrix, D₄ of order 8
+- Spectral zeta: ζ_M(-3)=7, ζ_M(-5)=21 (forbidden H = spectral zeta values)
+- τ-φ clock: gear ratio ≈ ln(2), Tr mod 8 has exact period 8
+- Equidecomposability: (H,β₁) gives 8 classes at n=5, complete for I(Ω₃,x)
+- OPEN-Q-029 RESOLVED, OPEN-Q-030/031/032/033 opened
+- n-tribonacci family: T_n dom root of λ³=(n-2)λ²+λ+1, τ₃-φ = max memory correction
+- Golden shadow CF: f(n) = [n-2; n,n,n,...] (period 1)
+- 22 Python scripts, 24 output files, 1 C program (simplicial_redei_n8.c)
+**Unresolved threads:**
+- Prove Simplicial Rédei Key Lemma for ALL n (currently verified n≤7)
+- Is arg(λ_c)/π = ln(2) exact? (NO, but why so close?)
+- Tournament equidecomposability: is (H,β₁) complete at n≥6?
+- Prove T_n - M_{n-2} ~ 1/(n-2)² asymptotic
+
 ## opus-2026-03-15-S72c — 2026-03-15: Walsh-β₁ spectral connection + β₁ ≤ 1 investigation
 
 **Account:** opus

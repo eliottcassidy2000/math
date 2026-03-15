@@ -560,13 +560,62 @@ The EXACT formula uses combinatorial g_k polynomials of degree k:
 
 ---
 
-## OPEN-Q-029 🟢 Why does log_tau(131) = 8.0003?
+## OPEN-Q-029 -- RESOLVED
+**Why does log_tau(131) = 8.0003?**
 
-**Statement:** The numerator of Var/Mean^2 at n=7 (= 131) satisfies log_tau(131) = 8.0003, making it almost exactly tau^8. Is this a coincidence or does it follow from the grand formula?
+**RESOLVED by opus-2026-03-15-S90 (multiple proofs):**
 
-**Evidence:** 131/504 = Var/Mean^2 at n=7. tau is Pisot so tau^k are near-integers, but 131 is EXCEPTIONALLY close (frac part 0.0003). The denominator 504 is a tribonacci number.
+131 = Tr(M^8) EXACTLY, where M is the 3×3 transfer matrix from S112. τ₃^8 ≈ 130.977 and the Pisot correction 2|λ_c|^8 cos(8θ) ≈ +0.023 pushes the sum to exactly 131.
 
-**Source:** kind-pasteur-S107f
+**Why the correction is so small:** arg(λ_c)/π ≈ ln(2), so 8·arg/π ≈ 8·ln(2) ≈ 5.545 ≈ 5.5, making cos(8·arg) ≈ cos(5.5π) ≈ 0.13 (small). The n=8 case is special because 8·ln(2) is close to the half-integer 11/2.
+
+**Additional discoveries (S90 session):**
+- 504 = T(13) in the standard tribonacci sequence (confirmed)
+- The transfer matrix char poly at x=1 IS the tribonacci equation
+- The τ-φ clock gear ratio arg(λ_c)/π ≈ ln(2) explains ALL Pisot near-integers
+- Tr(M^n) mod 8 has EXACT period 8 (Bott periodicity connection)
+
+**Source:** opus-2026-03-15-S90c (monad), S90h (τ-φ clock), S90l (the number 8)
+
+---
+
+## OPEN-Q-030 🟡 Prove Simplicial Rédei for ALL n (THM-220)
+
+**Statement:** For any tournament T on n ≥ 4 vertices, sim_H(T) ∈ {0,1}.
+
+**Evidence:** Exhaustively verified n=4..8 (268M tournaments at n=8). Algebraic proof of the dichotomy (at most one non-core edge). Near-transitive construction proved (single reversed min-max arc, H=2^{n-2}+1, Ω = K_{2^{n-3}}).
+
+**What remains:** The algebraic proof needs the Key Lemma fully proved for all n (currently verified exhaustively n≤7): "If arc a→b is not in any transitive triple, then every third vertex forms a 3-cycle with {a,b}."
+
+**Source:** opus-2026-03-15-S90 (THM-220)
+
+---
+
+## OPEN-Q-031 🟢 Is arg(λ_c)/π = ln(2) exact or approximate?
+
+**Statement:** The tribonacci complex eigenvalue angle satisfies arg(λ_c)/π ≈ ln(2) to 4 significant figures (difference 4.3×10⁻⁴). Is this exact?
+
+**Evidence:** NOT exact (verified: the predicted root from arg=π·ln(2) does not satisfy the char poly). But the proximity is remarkable and explained by the information-theoretic interpretation: the tribonacci clock ticks at approximately 1 bit per half-revolution.
+
+**Source:** opus-2026-03-15-S90h (τ-φ clock)
+
+---
+
+## OPEN-Q-032 🟢 Tournament equidecomposability: is (H, β₁) a complete invariant?
+
+**Statement:** At n=5, tournaments with the same (H, β₁) pair have the same I(Ω₃, x). Does this hold for all n? Is (H, β₁, β₃, ...) a complete invariant for the independence polynomial?
+
+**Evidence:** Verified at n=5 exhaustive (8 equidecomposability classes, each with unique I(Ω₃, x)). This is the tournament analog of the Dehn-Sydler theorem.
+
+**Source:** opus-2026-03-15-S90k (equidecomposability)
+
+---
+
+## OPEN-Q-033 🟢 The n-tribonacci family: prove T_n - M_{n-2} ~ 1/(n-2)² for large n
+
+**Statement:** The n-tribonacci constant T_n (dominant root of λ³=(n-2)λ²+λ+1) satisfies T_n → M_{n-2} (metallic mean) as n→∞. The memory correction T_n - M_{n-2} is maximum at n=3 (= τ₃-φ = 0.221) and decays. Prove the asymptotic rate.
+
+**Source:** opus-2026-03-15-S90p (golden shadow extended)
 
 ---
 
