@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-15-S71y — 2026-03-15: The Functor — Logic as Geometry, Geometry as Logic
+
+**Account:** opus
+**Continuation of:** opus-2026-03-15-S71x
+**Summary of work:** 12th session of S71 descent. Shifted from objects/symbols to ARROWS/FUNCTORS as primary. Key: (1) Five fundamental functors: H(counting), Ω(structure), I(evaluation), ∂(boundary), W(duality) — corresponding to e,π,1,0,i. (2) OCF as functor factorization: H = ev₂ ∘ I ∘ Ω. (3) H = |Hom(P_n, T)| via Yoneda — H counts path embeddings (probe interpretation). (4) Modal tournament logic: □(H odd), □(β₂=0), ✗(H=7), ◇(β₃>0). (5) Galois connection between properties and invariants: 8 closed classes at n=5. (6) β₂=0 implies asphericity: path complex is K(π₁,1). (7) Tournament monad with unit=transitivity. (8) Curry-Howard: OCF proof = program constructing HP↔IndSet bijection. (9) Logic-Algebra-Geometry triangle with OCF at center.
+**New contributions:** HYP-1544 through HYP-1553, functors_S71y.py, results/functors_S71y.out
+**Unresolved threads:** The arrows are the substance. The triangle Logic-Algebra-Geometry may have further internal structure.
+
 ## kind-pasteur-2026-03-15-S112 — 2026-03-15: Transfer Matrix Weight Formula — g_k Has Degree k, Not 3
 
 **Account:** kind-pasteur
