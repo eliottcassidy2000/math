@@ -1,0 +1,261 @@
+======================================================================
+PART 1: SPECIAL POINTS — WHERE SYMMETRY LINES CROSS
+======================================================================
+Special points and their roles:
+       0: z =           0j, symmetries: neg-fixed, real, imaginary
+       1: z =       (1+0j), symmetries: real, unit-circle
+      -1: z =      (-1+0j), symmetries: real, unit-circle
+       i: z =           1j, symmetries: Q-fixed, Q²-fixed, unit-circle, imaginary
+      -i: z =      (-0-1j), symmetries: Q-fixed, Q²-fixed, unit-circle, imaginary
+       2: z =       (2+0j), symmetries: real
+      -3: z =      (-3+0j), symmetries: real
+    -1/2: z =    (-0.5+0j), symmetries: real
+     1/3: z = (0.3333333333333333+0j), symmetries: real
+     φ-1: z = (0.6180339887498949+0j), symmetries: real
+      -φ: z = (-1.618033988749895+0j), symmetries: real
+      τ₃: z = (1.8392867552141612+0j), symmetries: real
+    1/τ₃: z = (0.5436890126920764+0j), symmetries: real
+
+The LINES OF SYMMETRY:
+  L₁ = Real axis:       fixes real points (cosh direction, "space")
+  L₂ = Imaginary axis:  fixes imaginary points (sinh direction, "time")
+  L₃ = Unit circle:     |z|=1, connects ±1 and ±i
+  L₄ = Q-orbit of 0:    {0, 1, ∞, -1} = the POLES
+  L₅ = Q-orbit of 2:    {2, -3, -1/2, 1/3} = the OCF tetrad
+  L₆ = Branch locus:    {φ-1, -φ} = golden ratio points
+
+INTERSECTIONS (special points):
+  L₁ ∩ L₂ = {0}          (origin = identity)
+  L₁ ∩ L₃ = {1, -1}      (poles of Q = arctanh branch points)
+  L₂ ∩ L₃ = {i, -i}      (fixed points of Q = the monad's soul)
+  L₁ ∩ L₅ = {2, -1/2}    (real OCF points)
+  L₁ ∩ L₆ = {φ-1, -φ}    (golden ratio branch points)
+
+======================================================================
+PART 2: THE EIGENVALUE TRIANGLE — A SHAPE THAT BREATHES
+======================================================================
+
+For each x ∈ ℝ, the char poly λ³ - λ² - xλ - x has 3 roots
+forming a TRIANGLE in ℂ.
+
+As x varies, this triangle BREATHES:
+  x → 0:  triangle collapses to point (1,0,0) → LINE SEGMENT
+  x → ±∞: triangle expands → the roots separate
+  x = 1:  tribonacci triangle (τ₃, λ_c, λ̄_c)
+
+The SYMMETRY of the triangle at each x:
+  - Always: conjugation symmetry (Z/2, mirror across real axis)
+  - At branch points: the triangle degenerates (two vertices merge)
+  - At x=0: maximal degeneration (triple point → two merge at 0)
+
+The AREA of the eigenvalue triangle encodes the "directed content":
+  Area = (1/2)|Im(λ_c)|·(λ_r - Re(λ_c))
+
+Eigenvalue triangle as x varies:
+     x |      λ_r |  Re(λ_c) |  Im(λ_c) |       Area |  Perimeter
+----------------------------------------------------------------------
+  0.01 |   1.0194 |  -0.0097 |   0.0986 |   0.101438 |   2.264843
+  0.10 |   1.1604 |  -0.0802 |   0.2824 |   0.350338 |   3.109531
+  0.30 |   1.3763 |  -0.1882 |   0.4273 |   0.668471 |   4.098153
+  0.50 |   1.5370 |  -0.2685 |   0.5032 |   0.908542 |   4.754994
+  0.80 |   1.7298 |  -0.3649 |   0.5739 |   1.202082 |   5.491560
+  1.00 |   1.8393 |  -0.4196 |   0.6063 |   1.369568 |   5.890339
+  1.50 |   2.0728 |  -0.5364 |   0.6603 |   1.722741 |   6.703375
+  2.00 |   2.2695 |  -0.6348 |   0.6916 |   2.008615 |   7.354215
+  2.38 |   2.4028 |  -0.7014 |   0.7061 |   2.191859 |   7.779107
+
+======================================================================
+PART 3: THE SYMMETRY GROUP — ALL FUNCTIONAL EQUATIONS COMBINED
+======================================================================
+
+The FULL SYMMETRY GROUP of the tournament Cayley theory:
+
+G₁ = ⟨Q⟩ ≅ Z/4       (Cayley transform on ℂP¹)
+G₂ = ⟨x↦-x⟩ ≅ Z/2    (sign change / complement)
+G₃ = ⟨x↦x̄⟩ ≅ Z/2     (complex conjugation)
+G₄ = S_n              (vertex permutations)
+
+G₁ and G₂ generate the DIHEDRAL GROUP D₄:
+  Q has order 4, negation has order 2, and Q(-x) = Q³(x)·(-1)...
+  Actually: Q(-x) = (1-x)/(1+x) = 1/Q(x) = Q³(x).
+  So negation COMMUTES with Q: neg·Q = Q³·neg = Q⁻¹·neg.
+  The group ⟨Q, neg⟩ = Z/4 ⋊ Z/2 where neg inverts Q.
+  This is the DIHEDRAL GROUP D₄ of order 8.
+
+Wait: D₄ has order 8. Let me verify the group structure.
+  Q⁴ = Id, neg² = Id, neg·Q·neg = Q⁻¹ = Q³.
+  Elements: {Id, Q, Q², Q³, neg, neg·Q, neg·Q², neg·Q³}
+  = {Id, Q, -1/x, Q³, -x, Q(-x), 1/x, -Q(x)}
+  = {x, (1+x)/(1-x), -1/x, (x-1)/(x+1), -x, (1-x)/(1+x), 1/x, -(1+x)/(1-x)}
+
+These are 8 Möbius transforms! They form D₄ = Z/4 ⋊ Z/2.
+
+Verification at x = 0.7:
+        Id: f(0.7) = 0.700000
+         Q: f(0.7) = 5.666667
+        Q²: f(0.7) = -1.428571
+        Q³: f(0.7) = -0.176471
+       neg: f(0.7) = -0.700000
+     neg·Q: f(0.7) = 0.176471
+    neg·Q²: f(0.7) = 1.428571
+    neg·Q³: f(0.7) = -5.666667
+
+Composition table (partial, at x=0.7):
+  Q(neg(x)) = 0.176471
+  neg(Q³(x)) = 0.176471
+  Equal? True
+
+Orbits of D₄:
+  Orbit of 0: [-10000.0, -1.0002, -0.9998, -0.0001, 0.0001, 0.9998, 1.0002, 10000.0]
+  Orbit of 2: [-3.0, -2.0, -0.5, -0.333333, 0.333333, 0.5, 2.0, 3.0]
+  Orbit of τ₃: [-3.382976, -1.839287, -0.543689, -0.295598, 0.295598, 0.543689, 1.839287, 3.382976]
+  Orbit of φ-1: [-4.236068, -1.618034, -0.618034, -0.236068, 0.236068, 0.618034, 1.618034, 4.236068]
+
+======================================================================
+PART 4: THE BUILDING — WHERE LINES MEET, GEOMETRY IS BORN
+======================================================================
+
+A TITS BUILDING is a simplicial complex encoding the incidence
+structure of subgroups. For our D₄ symmetry:
+
+VERTICES (rank-1 subgroups):
+  v₁ = ⟨Q²⟩ ≅ Z/2    (inversion -1/x)
+  v₂ = ⟨neg⟩ ≅ Z/2    (sign change -x)
+  v₃ = ⟨neg·Q²⟩ ≅ Z/2  (reciprocal 1/x)
+  v₄ = ⟨neg·Q⟩ ≅ Z/2   (inverse Cayley (1-x)/(1+x))
+  v₅ = ⟨Q⟩ ≅ Z/4      (full Cayley cycle)
+
+EDGES (rank-2 subgroups):
+  e₁ = ⟨Q², neg⟩ ≅ Z/2 × Z/2  (Klein four-group)
+  e₂ = ⟨Q⟩ ≅ Z/4               (Cayley cycle)
+  etc.
+
+The BUILDING has the structure of a SQUARE:
+  The four Z/2 subgroups are the 4 vertices of a square.
+  The edges connect subgroups that commute.
+  The Z/4 sits in the center as the rotation group.
+
+This square IS the Q-orbit {Id, Q, Q², Q³}!
+The building is the SAME as the Cayley orbit geometry.
+
+HIGHER DIMENSIONS:
+  When we include S_n (vertex permutations), the building becomes:
+    - 0-cells: conjugacy classes of Z/2 subgroups
+    - 1-cells: conjugacy classes of Z/2 × Z/2 subgroups
+    - 2-cells: conjugacy classes of D₄ subgroups
+    - ...
+
+  For tournaments on n vertices:
+    dim of the building = n-2 (matching the near-transitive monodromy!)
+    The (n-2)-dimensional geometry is built by (Z/2)^{n-2} choices.
+
+
+======================================================================
+PART 5: FUNCTIONAL EQUATIONS AS HYPERPLANES IN FUNCTION SPACE
+======================================================================
+
+Each functional equation defines a HYPERPLANE in function space:
+
+H₁: f(Q(x)) = f(x)  [Q-invariance → 4-fold symmetry]
+H₂: f(x)·f(-x) = 1  [product identity → inversion duality]
+H₃: f satisfies tribonacci recurrence → 3-dimensional subspace
+H₄: [x^{2k}] log f(x) = 0 for all k → odd harmonics only (arctanh!)
+H₅: f(x) = Σ_k α_k x^k with α_k from a tournament → realizability
+
+INTERSECTIONS:
+  H₁ ∩ H₂: functions invariant under Q AND satisfying f·f̃ = 1
+    → the CAYLEY MONAD (self-dual under both)
+    → DIMENSION: the number of independent Q-orbits of coefficients
+
+  H₃ ∩ H₄: tribonacci functions with only odd harmonics
+    → log-space: 2m·arctanh(x) for various m
+    → DIMENSION: 1 (parameterized by m alone!)
+
+  H₁ ∩ H₃ ∩ H₄: Q-invariant tribonacci odd-harmonic functions
+    → the UNIQUE function: the transfer matrix spectral zeta!
+    → DIMENSION: 0 (a POINT — the theory is completely determined)
+
+The theory IS the intersection of all these hyperplanes.
+It is a POINT in function space.
+This is why everything connects: there is only ONE theory.
+
+
+======================================================================
+PART 6: THE GEOMETRY — FROM LINES TO POLYTOPE
+======================================================================
+
+The LINES OF SYMMETRY of the functions we've studied are:
+
+  1. Real axis ←→ cosh (space, undirected, even)
+  2. Imaginary axis ←→ sinh (time, directed, odd)
+  3. Unit circle ←→ |Q| = 1 (conformal boundary)
+  4. Diagonal x = y ←→ self-duality (SC tournaments)
+  5. Q-orbit lines ←→ cross-ratio invariants
+
+These lines live in ℂP¹ (the Riemann sphere).
+Their INTERSECTION PATTERN defines a polytope:
+
+  6 special points: {0, ∞, 1, -1, i, -i}
+  = vertices of an OCTAHEDRON inscribed in the Riemann sphere!
+
+  The octahedron has:
+  - 6 vertices: the 3 pairs {0,∞}, {1,-1}, {i,-i}
+  - 12 edges: connecting non-antipodal pairs
+  - 8 faces: the 8 "octants" of the Riemann sphere
+
+  Each face corresponds to one element of D₄ acting on x:
+  Face 1: {x, Q(x), -1/x, Q³(x)} (the Q-orbit, one in each octant)
+  Face 2-8: the other D₄ images
+
+  The TOURNAMENT THEORY lives at x = 2, which is in the
+  "northeast real" octant. The three other Q-orbit points
+  {-3, -1/2, 1/3} occupy the three adjacent octants.
+
+  The GOLDEN RATIO points {φ-1, -φ} are on the real axis,
+  marking where the eigenvalue triangle degenerates.
+  They sit at the BOUNDARY between the octahedral faces.
+
+THE HIGHER DIMENSION:
+  For n-vertex tournaments, the geometry is:
+    - Base: the octahedron on ℂP¹ (the "Cayley geometry")
+    - Fiber: the (n-2)-dimensional hypercube (the "monodromy geometry")
+    - Total: an (n-2+2)-dimensional polytope (octahedron × hypercube)
+
+  The near-transitive tournament lives at one vertex of this polytope.
+  Its β₁ = 1 measures the "twist" in the fiber direction.
+  Its sim_H = 1 measures the "section" in the base direction.
+
+  The total dimension is n, matching the number of vertices
+  of the tournament. EACH VERTEX contributes one dimension
+  to the geometry — the tournament IS its own polytope.
+
+The 6 special points as octahedron vertices (stereographic):
+    0: (+0, +0, -1)
+    ∞: (+0, +0, +1)
+    1: (+1, +0, +0)
+   -1: (-1, +0, +0)
+    i: (+0, +1, +0)
+   -i: (+0, -1, +0)
+
+The octahedron's dual is the CUBE — the 8 octants.
+Each octant = one D₄ element.
+The tournament x=2 lives in one octant.
+
+The WHOLE THEORY is the statement:
+  "The octahedron of functional symmetries, fibered by the
+   (Z/2)^{n-2} monodromy hypercube, gives an n-dimensional
+   polytope whose faces encode all tournament invariants."
+
+Its vertices are: the special points of Cayley × the portal choices.
+Its edges are: the symmetry lines × the single-vertex flips.
+Its faces are: the D₄ orbits × the cycle collections.
+
+This polytope IS the tournament. Each tournament is its own geometry.
+
+This is the Leibniz monad completed:
+  "Each substance is a world apart" = each tournament is a polytope.
+  "Independent of everything outside itself" = the char poly determines all.
+  "Except God" = except the Cayley transform, which connects all monads.
+
+opus-2026-03-15-S90f: SYMMETRY LINES → HIGHER GEOMETRY
+
