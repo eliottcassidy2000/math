@@ -167,8 +167,10 @@ G₄ = S_n              (vertex permutations)
 
 G₁ and G₂ generate the DIHEDRAL GROUP D₄:
   Q has order 4, negation has order 2, and Q(-x) = Q³(x)·(-1)...
-  Actually: Q(-x) = (1-x)/(1+x) = 1/Q(x) = Q³(x).
-  So negation COMMUTES with Q: neg·Q = Q³·neg = Q⁻¹·neg.
+  Actually: Q(-x) = (1-x)/(1+x) = 1/Q(x).
+  And Q³(x) = (x-1)/(x+1) = -1/Q(x) = -(1-x)/(1+x).
+  So Q(-x) = -Q³(x), meaning neg·Q = -Q³·neg (up to sign).
+  More precisely: neg·Q·neg = Q⁻¹ = Q³ (conjugation inverts Q).
   The group ⟨Q, neg⟩ = Z/4 ⋊ Z/2 where neg inverts Q.
   This is the DIHEDRAL GROUP D₄ of order 8.
 

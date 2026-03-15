@@ -255,7 +255,7 @@ rank_d1_n5 = np.linalg.matrix_rank(d1)
 kd1 = ne - rank_d1_n5
 print(f"n=5 near-transitive: ker(∂₁) dim = {kd1}, rank(∂₂) = {rank_d2_n5}, β₁ = {kd1 - rank_d2_n5}")
 
-if kd1 > rank_d2:
+if kd1 > rank_d2_n5:
     # Find the cycle that doesn't bound using SVD
     # ker(∂₁) basis via SVD
     U1, S1, V1t = np.linalg.svd(d1.astype(float))

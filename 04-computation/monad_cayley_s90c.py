@@ -67,7 +67,7 @@ orbit = [x]
 for _ in range(3):
     orbit.append(Q(orbit[-1]))
 print(f"\nOrbit of x=2 under Q: {orbit}")
-print(f"  = {{2, 3, -1/2, 1/3}}")
+print(f"  = {{2, -3, -1/2, 1/3}}")
 
 # Fixed points
 print(f"\nFixed points of Q (solve Q(x) = x):")
@@ -202,12 +202,12 @@ print("""
 The CROSS-RATIO of four points on ℂP¹ is the fundamental invariant
 of the projective line. For the Cayley orbit {2, 3, -1/2, 1/3}:
 
-  CR(2, 3, -1/2, 1/3) = (2-(-1/2))(3-1/3) / ((2-1/3)(3-(-1/2)))
-                        = (5/2)(8/3) / ((5/3)(7/2))
-                        = (40/6) / (35/6)
-                        = 40/35 = 8/7
+  CR(2, -3, -1/2, 1/3) = (2-(-1/2))(-3-1/3) / ((2-1/3)(-3-(-1/2)))
+                        = (5/2)(-10/3) / ((5/3)(-5/2))
+                        = (-50/6) / (-25/6)
+                        = 2
 
-The cross-ratio of the Cayley orbit of 2 is 8/7!
+The cross-ratio of the Cayley orbit of 2 is 2 — the OCF fugacity itself!
 
 For the independence polynomial I(G, x), the four values
 I(G, 2), I(G, 3), I(G, -1/2), I(G, 1/3) satisfy:
@@ -391,7 +391,7 @@ print("""
 ║                                                                    ║
 ║  THE ORBIT OF x=2:                                                 ║
 ║    {2, 3, -1/2, 1/3}                                              ║
-║    These four values give the CROSS-RATIO 8/7.                     ║
+║    These four values give the CROSS-RATIO 2 (= the fugacity!).     ║
 ║    H(T) = I(Ω, 2) is one of four related evaluations.             ║
 ║                                                                    ║
 ║  THE HELIX = LOG OF THE MONAD:                                     ║
@@ -474,7 +474,7 @@ print("APPENDIX: CROSS-RATIO OF THE CAYLEY ORBIT")
 print("=" * 70)
 
 # Cross-ratio CR(a,b,c,d) = (a-c)(b-d)/((a-d)(b-c))
-a, b, c, d = 2, 3, -0.5, 1/3
+a, b, c, d = 2, -3, -0.5, 1/3
 cr = (a-c)*(b-d) / ((a-d)*(b-c))
 print(f"\nCR(2, 3, -1/2, 1/3) = ({a}-{c})({b}-{d}) / (({a}-{d})({b}-{c}))")
 print(f"  = ({a-c})({b-d}) / (({a-d})({b-c}))")
