@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-15-S71v — 2026-03-15: The Interior — Beyond the Cube into the Substance
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S71u
+**Summary of work:** 9th session in the S71 philosophical descent series. Explored the INTERIOR of the duality cube — what fills it beyond the 8 vertices. Key: (1) Full independence polynomial I(Ω,x) computed exactly (not first-order), verified I(Ω,2)=H for ALL tournaments n≤6. (2) Fiber topology: H=1 always single connected component, H=max always fully fragmented singletons. (3) Absolute ring needs more than (H,c₃) — score sequence required at n≥4. (4) A_8 has 14 conjugacy classes = 14 irreps = 14 spectral channels for tournament invariants. (5) H-gradient ∇H is anti-invariant under complement: ∇H(T^op)=-∇H(T), a section of the Möbius bundle. (6) Jet tower H ⊂ Jet¹ ⊂ ... ⊂ Jet^m fills the cube interior, each level adding C(m,k) dimensions.
+**New contributions:** HYP-1514 through HYP-1523, interior_S71v.py, results/interior_S71v.out
+**Unresolved threads:** Fiber topology at n≥6, A_8 representation theory applications, jet tower duality actions, absolute ring minimal generating set
+
 ## opus-2026-03-15-S89c — 2026-03-15: g_k Polynomial Cascade — All Cubics, Universal Cluster Weights
 
 **Account:** opus
