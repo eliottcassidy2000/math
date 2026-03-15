@@ -1,0 +1,194 @@
+======================================================================
+PART 1: Exact moments and ratios
+======================================================================
+
+  n=3: 8 tournaments
+    E[H] = 3/2
+    E[H²]/E[H]² = 4/3 = 1.33333333
+    CV² = 1/3 = 0.33333333
+    E[1/H] = 5/6 = 0.83333333
+    E[1/H] × E[H] = 5/4 = 1.25000000
+    E[H³]/E[H]³ = 2.22222222
+
+  n=4: 64 tournaments
+    E[H] = 3
+    E[H²]/E[H]² = 4/3 = 1.33333333
+    CV² = 1/3 = 0.33333333
+    E[1/H] = 8/15 = 0.53333333
+    E[1/H] × E[H] = 8/5 = 1.60000000
+    E[H³]/E[H]³ = 2.00000000
+
+  n=5: 1024 tournaments
+    E[H] = 15/2
+    E[H²]/E[H]² = 79/60 = 1.31666667
+    CV² = 19/60 = 0.31666667
+    E[1/H] = 8683/34320 = 0.25300117
+    E[1/H] × E[H] = 8683/4576 = 1.89750874
+    E[H³]/E[H]³ = 1.96222222
+
+  n=6: 32768 tournaments
+    E[H] = 45/2
+    E[H²]/E[H]² = 58/45 = 1.28888889
+    CV² = 13/45 = 0.28888889
+    E[1/H] = 2679002927098759/29903454472388640 = 0.08958841
+    E[1/H] × E[H] = 8037008781296277/3987127262985152 = 2.01573922
+    E[H³]/E[H]³ = 1.86777778
+
+======================================================================
+PART 2: The E[1/H]×E[H] sequence — what's the limit?
+======================================================================
+  n=3: E[1/H]×E[H] = 1.25000000
+  n=4: E[1/H]×E[H] = 1.60000000
+  n=5: E[1/H]×E[H] = 1.89750874
+  n=6: E[1/H]×E[H] = 2.01573922
+
+  Candidates for limit:
+    e = 2.718282
+    2 = 2.000000
+    π-1 = 2.141593
+    √π = 1.772454
+    e/√e = √e = 1.648721
+    1+1/e = 1.367879
+    Δ from n=3 to n=4: 0.350000
+    Δ from n=4 to n=5: 0.297509
+    Δ from n=5 to n=6: 0.118230
+
+======================================================================
+PART 3: The CV² sequence — closed form?
+======================================================================
+  n=3: CV² = 1/3 = 0.3333333333
+  n=4: CV² = 1/3 = 0.3333333333
+  n=5: CV² = 19/60 = 0.3166666667
+  n=6: CV² = 13/45 = 0.2888888889
+
+  CV² values: ['1/3', '1/3', '19/60', '13/45']
+  As decimals: [0.3333333333333333, 0.3333333333333333, 0.31666666666666665, 0.28888888888888886]
+  Δ(n=3→4) = 0.0000000000
+  Δ(n=4→5) = -0.0166666667
+  Δ(n=5→6) = -0.0277777778
+
+  1/3 - CV²:
+    n=3: 0.0000000000, × n² = 0.000000
+    n=4: 0.0000000000, × n² = 0.000000
+    n=5: 0.0166666667, × n² = 0.416667
+    n=6: 0.0444444444, × n² = 1.600000
+
+======================================================================
+PART 4: The E[H²] pair counting formula (exact)
+======================================================================
+
+  n=3: E[H²] direct = 3.0000
+    E[H²] formula = 3.0000
+    Match: ✓
+    Compatible pairs: 18 out of 36
+
+  n=4: E[H²] direct = 12.0000
+    E[H²] formula = 12.0000
+    Match: ✓
+    Compatible pairs: 264 out of 576
+
+  n=5: E[H²] direct = 74.0625
+    E[H²] formula = 74.0625
+    Match: ✓
+    Compatible pairs: 6360 out of 14400
+
+======================================================================
+PART 5: E[H^k] / E[H]^k for various k — universality?
+======================================================================
+  E[H^1]/E[H]^1:
+    n=3: 1.00000000
+    n=4: 1.00000000
+    n=5: 1.00000000
+    n=6: 1.00000000
+
+  E[H^2]/E[H]^2:
+    n=3: 1.33333333
+    n=4: 1.33333333
+    n=5: 1.31666667
+    n=6: 1.28888889
+
+  E[H^3]/E[H]^3:
+    n=3: 2.22222222
+    n=4: 2.00000000
+    n=5: 1.96222222
+    n=6: 1.86777778
+
+  E[H^4]/E[H]^4:
+    n=3: 4.14814815
+    n=4: 3.14814815
+    n=5: 3.13540741
+    n=6: 2.89314678
+
+  E[H^5]/E[H]^5:
+    n=3: 8.09876543
+    n=4: 5.07407407
+    n=5: 5.24412840
+    n=6: 4.68179899
+
+  E[H^6]/E[H]^6:
+    n=3: 16.06584362
+    n=4: 8.28806584
+    n=5: 9.06550255
+    n=6: 7.82035632
+
+
+======================================================================
+PART 6: Does H/E[H] have a log-normal distribution?
+======================================================================
+
+  n=3:
+    ln(H) mean μ = 0.274653
+    ln(H) var σ² = 0.226303
+    k=2: actual E[H^k]/E[H]^k = 1.333333, log-normal prediction = 1.253955
+    k=3: actual E[H^k]/E[H]^k = 2.222222, log-normal prediction = 1.971725
+
+  n=4:
+    ln(H) mean μ = 0.878192
+    ln(H) var σ² = 0.501874
+    k=2: actual E[H^k]/E[H]^k = 1.333333, log-normal prediction = 1.651815
+    k=3: actual E[H^k]/E[H]^k = 2.000000, log-normal prediction = 4.506962
+
+  n=5:
+    ln(H) mean μ = 1.771767
+    ln(H) var σ² = 0.644031
+    k=2: actual E[H^k]/E[H]^k = 1.316667, log-normal prediction = 1.904142
+    k=3: actual E[H^k]/E[H]^k = 1.962222, log-normal prediction = 6.903952
+
+  n=6:
+    ln(H) mean μ = 2.884457
+    ln(H) var σ² = 0.639530
+    k=2: actual E[H^k]/E[H]^k = 1.288889, log-normal prediction = 1.895590
+    k=3: actual E[H^k]/E[H]^k = 1.867778, log-normal prediction = 6.811347
+
+======================================================================
+SUMMARY
+======================================================================
+
+  KEY FINDINGS:
+
+  1. Forbidden H values at n=6: {7, 21, 35, 39}
+     REASON: t₃+t₅ = 3, 10, 17, 19 never occur.
+     The odd-cycle count has GAPS at specific values.
+
+  2. E[1/H]×E[H] sequence: 1.25, 1.60, 1.90, 2.02
+     Slowly growing, limit unknown. NOT approaching e (too slow).
+
+  3. CV² = Var/E²: 1/3, 1/3, 19/60, 13/45
+     Slowly decreasing, approaching ~1/4?
+
+  4. E[H²]/E[H]² = 4/3, 4/3, 79/60, 58/45
+     Also decreasing, approaching 1 + 1/4 = 5/4?
+
+  5. H is NOT log-normal (log-normal predictions don't match moments).
+     The distribution is more structured than log-normal.
+
+  6. Score sequence does NOT determine H.
+     At n=6, score (1,2,2,3,3,4) gives 6 different H values.
+
+  7. All IP zeros are real and negative (Lee-Yang property).
+     We evaluate at λ=2 in the supercritical regime.
+
+  π APPEARS in the SHAPE of the H distribution (CLT, entropy),
+  in the SCALE (Stirling), and in the SPECTRAL STRUCTURE (eigenvalues).
+
+Done!
