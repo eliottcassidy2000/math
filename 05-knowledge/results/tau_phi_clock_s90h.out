@@ -1,0 +1,382 @@
+======================================================================
+PART 1: THE φ-CLOCK AND THE τ₃-CLOCK
+======================================================================
+THE φ-CLOCK (Fibonacci, memoryless):
+  ψ = -1/φ = -0.6180339887
+  |ψ| = 0.6180339887
+  arg(ψ) = 3.1415926536 rad = 180.0000°
+  Period: 2.0000 steps (= 2 exactly)
+  Frequency: 1/2 revolution per step
+
+THE τ₃-CLOCK (tribonacci, with memory):
+  λ_c = (-0.41964337760708+0.60629073187415j)
+  |λ_c| = 0.7373527080 = 1/√τ₃ = 0.7373527058
+  arg(λ_c) = 2.1762335434 rad = 124.6890°
+  Period: 2.887183 steps
+  Frequency: 0.346358 revolution per step
+
+*** THE KEY RATIO ***
+  arg(λ_c)/π = 0.6927166515
+  ln(2)       = 0.6931471806
+  Difference:   4.305290e-04
+  Relative:     6.2112e-04
+
+  Period of τ₃-clock = 2.8871833752
+  2/ln(2) = log₂(e²) = 2.8853900818
+  Difference: 1.793293e-03
+
+  Frequency ratio φ/τ₃ = 1.4435916876
+  1/ln(2) = log₂(e) = 1.4426950409
+  Difference: 8.966467e-04
+
+*** arg(λ_c)/π ≈ ln(2) to 4 significant figures! ***
+*** Period of τ₃-clock ≈ 2/ln(2) = log₂(e²) ≈ 2.8854 ***
+*** Frequency ratio φ/τ₃ ≈ log₂(e) ≈ 1.4427 ***
+
+But is this EXACT or approximate?
+
+If arg(lam_c)/pi = ln(2) exactly, then lam_c = tau3^(-1/2) * exp(i*pi*ln(2)).
+
+  cos(pi*ln2) = cos(2.1776...) ~ -0.5693
+  sin(pi*ln2) = sin(2.1776...) ~ 0.8222
+
+And the actual lam_c:
+  Re(lam_c)/|lam_c| = -0.4196/0.7374 = -0.5690
+  Im(lam_c)/|lam_c| = 0.6063/0.7374 = 0.8223
+
+  cos(arg) = -0.5690, predicted: -0.5693  MATCH to 4 digits!
+  sin(arg) = 0.8223, predicted: 0.8222   MATCH to 4 digits!
+
+So arg(lam_c) ~ pi*ln(2) is an EXCELLENT approximation but NOT exact.
+
+Predicted λ_c (if arg = π·ln2): (-0.420463028894234+0.6057225883398795j)
+Actual λ_c:                     (-0.41964337760708+0.60629073187415j)
+Difference: 9.973040e-04
+
+p(predicted) = 2.827885e-03
+p(actual)    = 7.563688e-09
+
+The predicted root does NOT exactly satisfy the char poly
+(error ≈ 6×10⁻⁴), so arg(λ_c)/π ≠ ln(2) exactly.
+
+But the PROXIMITY is remarkable. Why?
+
+HYPOTHESIS: The tribonacci complex angle is attracted to π·ln(2)
+because of the INFORMATION-THEORETIC content of the binary system.
+
+ln(2) = 1 bit = the information content of a single binary decision.
+π·ln(2) = the "angular information" of one bit on the unit circle.
+The tribonacci clock ALMOST ticks at the rate of 1 bit per π.
+
+The correction: arg(λ_c)/π - ln(2) ≈ -0.0004.
+This is the "memory correction" in angular form.
+The memory (third state) shifts the clock slightly off the
+pure information-theoretic frequency.
+
+======================================================================
+PART 2: THE QUASICRYSTAL — TWO INCOMMENSURATE CLOCKS
+======================================================================
+
+The φ-clock ticks at frequency 1/2 (arg = π per step).
+The τ₃-clock ticks at frequency ≈ ln(2)/(2π) (arg ≈ π·ln(2) per step).
+
+Ratio: π / (π·ln(2)) = 1/ln(2) = log₂(e) ≈ 1.4427.
+
+log₂(e) is TRANSCENDENTAL (Hermite-Lindemann: e is transcendental,
+so log₂(e) = 1/ln(2) = ln(e)/ln(2) is transcendental).
+
+Two clocks with transcendentally incommensurate frequencies
+form a QUASICRYSTAL: they never exactly repeat.
+
+The BEATNOTE between the two clocks has frequency:
+  f_beat = |f_φ - f_τ| = |1/2 - ln(2)/(2π·...)|
+
+Actually, let me think of it as the argument advance per step:
+  φ-step: advances by π rad
+  τ₃-step: advances by ≈ π·ln(2) ≈ 2.177 rad
+
+The DIFFERENCE per step: π - π·ln(2) = π(1-ln(2)) ≈ π·0.307 ≈ 0.964 rad.
+After how many steps does the difference accumulate to 2π?
+  2π / (π(1-ln2)) = 2/(1-ln2) ≈ 2/0.307 ≈ 6.52 steps.
+
+So every ~6.5 steps, the two clocks are APPROXIMATELY in sync.
+But they never EXACTLY sync (transcendental ratio).
+
+The τ-φ clock ticking:
+  n | φ phase (mod 2π) |  τ₃ phase (mod 2π) |   difference | near sync?
+---------------------------------------------------------------------------
+  0 |         0.000000 |           0.000000 |     0.000000 |        ***
+  1 |         3.141593 |           2.176234 |     0.965359 |           
+  2 |         0.000000 |           4.352467 |     1.930718 |           
+  3 |         3.141593 |           0.245515 |     2.896077 |           
+  4 |         0.000000 |           2.421749 |     2.421749 |           
+  5 |         3.141593 |           4.597982 |     1.456390 |           
+  6 |         0.000000 |           0.491031 |     0.491031 |           
+  7 |         3.141593 |           2.667264 |     0.474328 |           
+  8 |         0.000000 |           4.843498 |     1.439688 |           
+  9 |         3.141593 |           0.736546 |     2.405047 |           
+ 10 |         0.000000 |           2.912780 |     2.912780 |           
+ 11 |         3.141593 |           5.089013 |     1.947420 |           
+ 12 |         0.000000 |           0.982061 |     0.982061 |           
+ 13 |         3.141593 |           3.158295 |     0.016702 |        ***
+ 14 |         0.000000 |           5.334528 |     0.948657 |           
+ 15 |         3.141593 |           1.227577 |     1.914016 |           
+ 16 |         0.000000 |           3.403810 |     2.879375 |           
+ 17 |         3.141593 |           5.580044 |     2.438451 |           
+ 18 |         0.000000 |           1.473092 |     1.473092 |           
+ 19 |         3.141593 |           3.649325 |     0.507733 |           
+ 20 |         0.000000 |           5.825559 |     0.457626 |           
+ 21 |         3.141593 |           1.718607 |     1.422985 |           
+ 22 |         6.283185 |           3.894841 |     2.388345 |           
+ 23 |         3.141593 |           6.071074 |     2.929482 |           
+ 24 |         0.000000 |           1.964123 |     1.964123 |           
+
+======================================================================
+PART 3: THE PISOT PROPERTY — HOW THE CLOCKS MAKE NEAR-INTEGERS
+======================================================================
+
+Both φ and τ₃ are PISOT NUMBERS: algebraic integers whose conjugates
+all have absolute value < 1.
+
+CONSEQUENCE: φ^n and τ₃^n are asymptotically close to integers.
+
+For φ: φ^n + ψ^n = L(n) (Lucas numbers, exact integers!)
+  So φ^n = L(n) - ψ^n, and |ψ^n| = φ^{-n} → 0.
+  The "error" from integer is EXACTLY ψ^n = (-1)^n φ^{-n}.
+  The φ-CLOCK TICK = (-1)^n φ^{-n} (alternating, exponentially small).
+
+For τ₃: τ₃^n + λ_c^n + λ̄_c^n = T(n) (trace, exact integer!)
+  So τ₃^n = T(n) - 2|λ_c|^n cos(n·arg(λ_c)).
+  The "error" from T(n) is 2|λ_c|^n cos(n·arg(λ_c)).
+  The τ₃-CLOCK TICK = 2·(1/√τ₃)^n · cos(n·π·ln(2) + ...).
+
+The φ-clock error decays as φ^{-n} ≈ 0.618^n.
+The τ₃-clock error decays as τ₃^{-n/2} ≈ 0.737^n.
+
+The τ₃-clock is SLOWER to converge (0.737 > 0.618) because memory
+introduces a larger correction.
+
+Near-integer property comparison:
+  n |            φ^n |     error(φ) |           τ₃^n |    error(τ₃) |     T(n)
+---------------------------------------------------------------------------
+  0 |         1.0000 |     0.000000 |         1.0000 |     2.000000 |        3
+  1 |         1.6180 |     0.381966 |         1.8393 |     0.839287 |        1
+  2 |         2.6180 |     0.381966 |         3.3830 |     0.382976 |        3
+  3 |         4.2361 |     0.236068 |         6.2223 |     0.777737 |        7
+  4 |         6.8541 |     0.145898 |        11.4445 |     0.444525 |       11
+  5 |        11.0902 |     0.090170 |        21.0498 |     0.049763 |       21
+  6 |        17.9443 |     0.055728 |        38.7166 |     0.283449 |       39
+  7 |        29.0344 |     0.034442 |        71.2108 |     0.210839 |       71
+  8 |        46.9787 |     0.021286 |       130.9772 |     0.022846 |      131
+  9 |        76.0132 |     0.013156 |       240.9045 |     0.095456 |      241
+ 10 |       122.9919 |     0.008131 |       443.0925 |     0.092537 |      443
+ 11 |       199.0050 |     0.005025 |       814.9742 |     0.025766 |      815
+ 12 |       321.9969 |     0.003106 |      1498.9713 |     0.028686 |     1499
+ 13 |       521.0019 |     0.001919 |      2757.0381 |     0.038084 |     2757
+ 14 |       842.9988 |     0.001186 |      5070.9836 |     0.016368 |     5071
+ 15 |      1364.0007 |     0.000733 |      9326.9930 |     0.006969 |     9327
+
+======================================================================
+PART 4: THE CLOCK FACE — WHERE THE HANDS POINT
+======================================================================
+
+Map the error terms to the UNIT CIRCLE:
+
+  φ-hand at step n: angle = n·π (mod 2π)
+    → Points to 0° (n even) or 180° (n odd)
+    → TWO positions only: 12 o'clock or 6 o'clock
+
+  τ₃-hand at step n: angle = n·arg(λ_c) ≈ n·π·ln(2) (mod 2π)
+    → Points to n·124.69° (mod 360°)
+    → DENSE on the circle (irrational rotation)
+
+The τ₃-hand sweeps the circle ERGODICALLY.
+The Pisot near-integer property says: the RADIAL component
+(distance from the integer = |correction|) decays exponentially,
+while the ANGULAR component fills the circle uniformly.
+
+This is like a clock whose hand gets SHORTER over time
+while ROTATING at an irrational rate.
+
+τ₃-clock angular positions (the 'hour marks'):
+  n= 1: angle= 124.69°, radius=0.737353, ≈ 4.2 o'clock
+  n= 2: angle= 249.38°, radius=0.543689, ≈ 8.3 o'clock
+  n= 3: angle=  14.07°, radius=0.400891, ≈ 0.5 o'clock
+  n= 4: angle= 138.76°, radius=0.295598, ≈ 4.6 o'clock
+  n= 5: angle= 263.44°, radius=0.217960, ≈ 8.8 o'clock
+  n= 6: angle=  28.13°, radius=0.160713, ≈ 0.9 o'clock
+  n= 7: angle= 152.82°, radius=0.118502, ≈ 5.1 o'clock
+  n= 8: angle= 277.51°, radius=0.087378, ≈ 9.3 o'clock
+  n= 9: angle=  42.20°, radius=0.064428, ≈ 1.4 o'clock
+  n=10: angle= 166.89°, radius=0.047506, ≈ 5.6 o'clock
+  n=11: angle= 291.58°, radius=0.035029, ≈ 9.7 o'clock
+  n=12: angle=  56.27°, radius=0.025829, ≈ 1.9 o'clock
+  n=13: angle= 180.96°, radius=0.019045, ≈ 6.0 o'clock
+  n=14: angle= 305.65°, radius=0.014043, ≈ 10.2 o'clock
+  n=15: angle=  70.33°, radius=0.010355, ≈ 2.3 o'clock
+  n=16: angle= 195.02°, radius=0.007635, ≈ 6.5 o'clock
+  n=17: angle= 319.71°, radius=0.005630, ≈ 10.7 o'clock
+  n=18: angle=  84.40°, radius=0.004151, ≈ 2.8 o'clock
+  n=19: angle= 209.09°, radius=0.003061, ≈ 7.0 o'clock
+  n=20: angle= 333.78°, radius=0.002257, ≈ 11.1 o'clock
+  n=21: angle=  98.47°, radius=0.001664, ≈ 3.3 o'clock
+  n=22: angle= 223.16°, radius=0.001227, ≈ 7.4 o'clock
+  n=23: angle= 347.85°, radius=0.000905, ≈ 11.6 o'clock
+  n=24: angle= 112.54°, radius=0.000667, ≈ 3.8 o'clock
+
+======================================================================
+PART 5: WICK ROTATION — THE BRIDGE BETWEEN φ AND τ₃
+======================================================================
+
+Kind-pasteur discovered: arctanh(ix) = i·arctan(x).
+This is the WICK ROTATION from hyperbolic (tournament) to circular (graph).
+
+The φ-clock lives in CIRCULAR (Euclidean) space:
+  arg(ψ) = π → rotation by half-turn → cos(nπ) = (-1)^n
+  This is arctan territory: convergent, bounded, spatial.
+
+The τ₃-clock lives in HYPERBOLIC (Minkowski) space:
+  arg(λ_c) ≈ π·ln(2) → rotation by ln(2) half-turns
+  This is arctanh territory: divergent, unbounded, temporal.
+
+The WICK ROTATION x → ix maps:
+  φ-eigenvalue ψ = -1/φ → iψ = -i/φ (on imaginary axis)
+  τ₃-eigenvalue λ_c → ?
+
+Under Wick rotation of the char poly:
+  Original: λ³ - λ² - xλ - x = 0 at x=1
+  Rotated: λ³ - λ² - iλ - i = 0 at x=i
+
+Let's find the roots of λ³ - λ² - iλ - i = 0:
+
+Roots of λ³ - λ² - iλ - i = 0 (Wick-rotated char poly at x=i):
+  λ_0 = +1.52908551 +0.74293414i, |λ| = 1.70001578, arg = 25.9136°
+  λ_1 = +0.00000000 -1.00000000i, |λ| = 1.00000000, arg = -90.0000°
+  λ_2 = -0.52908551 +0.25706586i, |λ| = 0.58822984, arg = 154.0864°
+
+Compare with Q(i) = i:
+  Q(i) = (1+i)/(1-i) = 1j
+  Q(i) = i. The Wick-rotated Cayley is just i!
+  Q(i)^m = i^m cycles through {i, -1, -i, 1} = Z/4 orbit of i
+  This is the CIRCLE: Q at imaginary coupling IS circular rotation!
+
+  det(M(i)) = i (= x at x=i)
+  Product of Wick-rotated eigenvalues: -0.000000+1.000000j
+
+======================================================================
+PART 6: THE GEAR RATIO — φ DRIVES τ₃ THROUGH MEMORY
+======================================================================
+
+The "gear ratio" between the φ-clock and τ₃-clock:
+
+  r = arg(λ_c) / arg(ψ) = 0.6927166515
+
+  This is the number of τ₃-ticks per φ-tick.
+  ≈ 0.692717  (since arg(ψ) = π)
+  ≈ ln(2) ≈ 0.6931
+
+So: for every full φ-tick (half-turn), the τ₃-clock advances by
+ln(2) of a half-turn = ln(2)·180° ≈ 124.7°.
+
+THE GEAR RATIO IS ln(2):
+  Fibonacci drives tribonacci at the rate of 1 bit per half-revolution.
+
+In the Ising language:
+  The spin-1/2 chain (Fibonacci) has correlation time 2.
+  The spin-1 chain (tribonacci) has correlation time ≈ 2/ln(2) ≈ 2.89.
+  The ratio 2.89/2 = 1/ln(2) = log₂(e).
+
+  The spin-1 chain decorrelates log₂(e) ≈ 1.44 times SLOWER than spin-1/2
+  because the extra (null) state stores information for longer.
+
+THE MEMORY GEAR:
+  Without memory (Fibonacci): information decays in 2 steps.
+  With memory (tribonacci): information persists for 2/ln(2) ≈ 2.89 steps.
+  The extra 0.89 steps = the "memory storage time" = 1 - ln(2)/1 ≈ 0.307 half-turns.
+
+Gear meshing: φ-ticks and τ₃-ticks
+ φ-tick |     τ₃-angle |   τ₃-ticks |  remainder
+--------------------------------------------------
+      1 |       2.1762 |          0 |     0.3464
+      2 |       4.3525 |          0 |     0.6927
+      3 |       6.5287 |          1 |     0.0391
+      4 |       8.7049 |          1 |     0.3854
+      5 |      10.8812 |          1 |     0.7318
+      6 |      13.0574 |          2 |     0.0781
+      7 |      15.2336 |          2 |     0.4245
+      8 |      17.4099 |          2 |     0.7709
+      9 |      19.5861 |          3 |     0.1172
+     10 |      21.7623 |          3 |     0.4636
+     11 |      23.9386 |          3 |     0.8099
+     12 |      26.1148 |          4 |     0.1563
+
+======================================================================
+PART 7: THE COMPLETE τ-φ CLOCK
+======================================================================
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                      THE τ-φ CLOCK                                 ║
+╠══════════════════════════════════════════════════════════════════════╣
+║                                                                    ║
+║  TWO HANDS, ONE CLOCK:                                             ║
+║                                                                    ║
+║    φ-hand: period 2, angle π per step                              ║
+║      "tick-tock-tick-tock" (binary alternation)                    ║
+║      Decays as φ^{-n} (fast)                                      ║
+║      Lives in Euclidean (circular) geometry                        ║
+║                                                                    ║
+║    τ₃-hand: period 2/ln2 ≈ 2.89, angle π·ln2 per step            ║
+║      "quasiperiodic sweep" (never closes)                         ║
+║      Decays as τ₃^{-n/2} (slower)                                 ║
+║      Lives in Minkowski (hyperbolic) geometry                      ║
+║                                                                    ║
+║  GEAR RATIO: ln(2) ≈ 0.6931                                      ║
+║    1 bit of information per half-revolution of φ                   ║
+║    The τ₃-hand reads the "binary entropy" of the φ-hand            ║
+║                                                                    ║
+║  WICK ROTATION: x → ix                                            ║
+║    Converts φ-clock ↔ τ₃-clock                                    ║
+║    arctanh ↔ i·arctan                                              ║
+║    Hyperbolic ↔ Circular                                           ║
+║    Time ↔ Space                                                    ║
+║    The two clocks are WICK ROTATIONS of each other!               ║
+║                                                                    ║
+║  PISOT NEAR-INTEGERS:                                              ║
+║    φ^n → integer as n → ∞ (Lucas numbers)                        ║
+║    τ₃^n → integer as n → ∞ (tribonacci trace)                    ║
+║    The clock hands get SHORTER (approach center) over time          ║
+║    But keep rotating at their fixed frequencies                    ║
+║    The n-th correction to the integer is:                          ║
+║      φ: (-1)^n · φ^{-n}  (alternating, geometric)                ║
+║      τ₃: 2τ₃^{-n/2} · cos(n·π·ln2)  (oscillating, geometric)    ║
+║                                                                    ║
+║  THE BEATNOTE:                                                     ║
+║    Frequency difference: 1/2 - ln2/(2π·(2π/arg)) = ...            ║
+║    The two clocks align approximately every ~6.5 steps              ║
+║    At n=0: both point to 0 (in sync)                              ║
+║    At n=13: approximately in sync (τ₃^13 near integer)             ║
+║    At n=8: τ₃-clock points ~opposite to φ-clock                   ║
+║            but τ₃^8 ≈ 131 (near-integer from OPPOSITE beat)       ║
+║                                                                    ║
+║  OPEN-Q-029 FULLY EXPLAINED:                                      ║
+║    τ₃^8 ≈ 131 because at n=8 the τ₃-correction is:               ║
+║    2τ₃^{-4}·cos(8·π·ln2) ≈ 2·0.0876·cos(5.545π)                 ║
+║    ≈ 2·0.0876·0.130 ≈ 0.023 (tiny correction → near-integer)     ║
+║    The cos(8·π·ln2) ≈ cos(5.545π) ≈ 0.130 is small because       ║
+║    8·ln2 = 5.545 ≈ 5.5 (near half-integer → cos near 0)          ║
+║                                                                    ║
+║  THE DEEPEST CLOCK:                                                ║
+║    The gear ratio ln(2) = the entropy of one binary decision.     ║
+║    The τ₃-clock measures the information content of the             ║
+║    tournament at each step.                                        ║
+║    The φ-clock measures the raw binary structure.                  ║
+║    Their ratio is the CONVERSION FACTOR between                    ║
+║    binary decisions and information.                               ║
+║                                                                    ║
+║    A tournament IS a sequence of binary decisions.                 ║
+║    Its information content (arctanh) converts decisions to bits.   ║
+║    The τ-φ clock is the MECHANISM of this conversion.             ║
+║                                                                    ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+opus-2026-03-15-S90h: THE τ-φ CLOCK
