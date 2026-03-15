@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-15-S89c — 2026-03-15: g_k Polynomial Cascade — All Cubics, Universal Cluster Weights
+
+**Account:** opus
+**Continuation of:** opus-2026-03-14-S89c (context continuation)
+**Summary of work:** Extended the CV² polynomial analysis. Key discoveries: (1) All g_k(m) for k≥3 are degree-3 polynomials — verified by exact match of W(n)/n!-1 for n=3..21. (2) Extracted complete coefficient table for k=3..9 via cascading bootstrap using g_k(1)=1 and g_k(2)=2k. (3) Proved h_s(n) = 2/(n)_{2s} — universal cluster weight for any contiguous block of s dominos. (4) Discovered naive formula g_k(m) = Σ C(k-1,r-1)·C(m,r)·2^{r-1} is exact for k≤3 but fails for k≥4. (5) For k=4, correction is exactly -(m-1)(m-2)(m-3)(m-4)/3. (6) The degree-3 universality comes from inter-cluster correlation corrections killing all degree≥4 terms.
+**New contributions:**
+- THM-216 updated with full coefficient table for g_k, k=3..9
+- gk_verify_89c.py: cross-verification showing exact W(n) match for n=3..21
+- gk_coefficients_v2_89c.py: sequential extraction of g_k polynomials
+- gk_structure_89c.py: domino tiling decomposition, C(k-1,r-1)·C(m,r) formula
+- gk_factorization_89c.py: cluster correlation analysis, gap-independence
+- gk_naive_formula_89c.py: naive formula vs corrections
+- W(n) and g_k(3) sequences both new to OEIS (not found)
+- Leading coefficient sequence 2,10,388,69660,19826270,7309726742,3262687720240 is new
+**Unresolved threads:**
+- Find closed form/GF for leading coefficients a_k
+- Prove WHY cluster correlations kill degree≥4 (cumulant structure?)
+- OEIS submissions for W(n), g_k(3), a_k sequences
+- H(P_29) computation via orbit DP
+- General combinatorial interpretation of g_k polynomials
+
 ## opus-2026-03-14-S71u — 2026-03-14: Beyond the Ouroboros — The Eighth Session Closes the Cube
 
 **Account:** opus
