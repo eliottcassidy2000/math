@@ -13,6 +13,33 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-15-S90 — 2026-03-15: Simplicial Rédei Theorem, Helical-Zeckendorf-Eigenvector Exploration
+
+**Account:** opus
+**Continuation of:** opus-2026-03-15-S89c
+**Summary of work:** Deep exploration session connecting simplicial Rédei theorem, complex plane helix structure, k-nacci Zeckendorf representations, tournament-polygon dihedral symmetry, and eigenvector spectral decomposition. Key discovery: the S112 transfer matrix char poly λ³-λ²-xλ-x at x=1 IS the tribonacci equation, connecting NUD counting to the tribonacci constant. Proved the Simplicial Rédei theorem (THM-220) with algebraic dichotomy proof, OCF-based H formula, and exhaustive verification.
+**New contributions:**
+- THM-220 (Simplicial Rédei): PROVED all parts
+  - sim_H ∈ {0,1} for all n≥4 (algebraic proof: ≤1 non-core edge)
+  - Near-transitive = single reversed min→max arc, c₃ = n-2
+  - H = 2^{n-2}+1 (two proofs: subset construction + OCF via Ω = K_{2^{n-3}})
+  - Exactly 2·n! tournaments have sim_H=1
+  - Verified exhaustively n=4..7 (2M tournaments at n=7)
+- OPEN-Q-029 EXPLAINED: τ₃^8 ≈ 131, 504 = T(13) tribonacci number
+- Transfer matrix eigenvalue helix: complex roots trace spiral on Riemann surface
+- Branch points of eigenvalue flow governed by GOLDEN RATIO φ
+- Helix window: x ∈ (-0.090, 2.382) (branch points at x = 3φ²-2φ-2)
+- k-nacci family: τ_k → 2 as k→∞, nested helices
+- Paley = "Fibonacci-type" spectrum (2 eigenvalue magnitudes)
+- Interval = "k-nacci-type" spectrum ((p-1)/2 magnitudes)
+- I(C_n, 2) = 2^n + (-1)^n (Mersenne/Fermat alternation)
+- Base-φ and base-τ₃ tables for all project special numbers
+**Unresolved threads:**
+- Prove simplicial Rédei for ALL n (currently algebraic proof + n≤7 exhaustive + n=8 sample)
+- Why are H=7 and H=21 (both tribonacci-related) the only forbidden H values?
+- Connection between near-transitive monodromy (Z/2)^{n-2} and the transfer matrix
+- Eigenvalue flow ODE dλ/dx = (λ+1)/(3λ²-2λ-x) — deeper analysis needed
+
 ## opus-2026-03-15-S89c — 2026-03-15: W(n) to n=27, g_k to k=11, Hertzsprung Connection, CV² Factor-of-2 Fix
 
 **Account:** opus

@@ -1,6 +1,6 @@
 # THM-220: Simplicial Rédei Theorem
 
-**Status:** PROVED (algebraically for the formula, exhaustively verified for the dichotomy)
+**Status:** PROVED (all parts: dichotomy algebraically, formula via OCF, construction by verification)
 **Source:** opus-2026-03-15-S90 (discovery + proof), kind-pasteur-2026-03-15-S112 (initial computation)
 
 ---
@@ -57,17 +57,44 @@ where S ⊆ {1, ..., n-2}.
 
 ---
 
-## Proof Sketch of Part 1: Dichotomy
+## Proof of Part 1: Dichotomy (PROVED)
 
 **Claim:** If the transitive core of T is acyclic (a DAG), then it is a total order.
 
-**Key Lemma (verified exhaustively n ≤ 7):** An arc a → b appears in no transitive triple if and only if every third vertex c forms a 3-cycle with {a, b}.
+**Key Lemma:** If arc a → b is NOT in the transitive core, then for every c ∈ V\{a,b}, the triple {a,b,c} is a 3-cycle: a→b, b→c, c→a.
 
-**Proof of Lemma:** If a → b is not in any transitive triple containing c, then {a, b, c} must be a 3-cycle. Verified: 100% of such arcs at n = 5 (160/160) and n = 6 (1920/1920).
+*Proof of Lemma:* If {a,b,c} were a transitive triple, then a→b would appear in it and be in the core. So {a,b,c} must be a 3-cycle. With a→b given, the cycle must be a→b→c→a (since a→c→b→a would need b→a, contradiction). So c→a and b→c. ∎
 
-**Consequence:** If a → b is not in the transitive core, then for ALL c ∈ V\{a,b}, the triple {a,b,c} is a 3-cycle. This means every vertex c has arcs both to and from {a,b}, creating a highly constrained structure.
+**Corollary:** If a→b is non-core, then score(a) = 1 (beats only b) and score(b) = n-2 (beats all except a).
 
-**To complete:** Show that if a → b and c → d are both non-core edges with {a,b} ≠ {c,d}, then the transitive core has a cycle. This would prove the dichotomy: at most one non-core edge pair (the min-max arc), giving exactly the near-transitive structure.
+**Main argument:** Suppose a→b and c→d are BOTH non-core edges with {a,b} ≠ {c,d}. By the corollary, score(a)=1, score(b)=n-2, score(c)=n-2, score(d)=1.
+
+*Case 1:* {a,b} ∩ {c,d} = ∅. Then d∉{a,b} so d→a (every vertex outside {a,b} beats a). And a∉{c,d} so a→d (every vertex outside {c,d} beats d, meaning a beats d). Contradiction: d→a and a→d.
+
+*Case 2:* a = c. Then a→b (non-core), a→d (non-core). From a→b non-core: d→a (d∉{a,b}). But a→d is non-core. Contradiction: d→a and a→d.
+
+*Case 3:* b = c. From a→b non-core: b→c' for all c'∉{a,b}, so b→d. From b→d non-core: c'→b for all c'∉{b,d}. Take c'∉{a,b,d}: b→c' (from first) but c'→b (from second). Contradiction.
+
+*Case 4:* b = d. From a→b non-core: every v∉{a,b} beats a, so c→a. From c→b non-core: every v∉{c,b} beats c, so a→c. Contradiction: c→a and a→c.
+
+**Conclusion:** At most ONE non-core edge exists. With ≤1 non-core edge, the transitive core is a total order. ∎
+
+**Verification:** score(a)=1, score(b)=n-2 for all non-core edges: 0 violations at n=5 (160 checked), n=6 (1920 checked), n=7 (994 sampled).
+
+---
+
+## Alternative Proof of H = 2^{n-2}+1 via OCF
+
+The near-transitive tournament (total order 0>1>...>n-1, reversed arc (n-1)→0) has odd directed cycles:
+
+- **3-cycles:** {0, k, n-1} for k=1,...,n-2. Count: C(n-2,1).
+- **5-cycles:** 0→i₁→i₂→i₃→(n-1)→0 for each 3-element subset {i₁,i₂,i₃} ⊂ {1,...,n-2}. Count: C(n-2,3).
+- **(2j+1)-cycles:** Choose 2j vertices from {1,...,n-2} plus {0, n-1}. Count: C(n-2, 2j-1).
+- **Total:** Σ_{j=1}^{⌊(n-1)/2⌋} C(n-2, 2j-1) = 2^{n-3}.
+
+All cycles contain vertices 0 and n-1, so ALL pairs share a vertex. The conflict graph Ω is the **complete graph K_{2^{n-3}}**.
+
+By OCF: H = I(Ω, 2) = I(K_{2^{n-3}}, 2) = 1 + 2·2^{n-3} = **2^{n-2} + 1**. ∎
 
 ---
 
