@@ -1,0 +1,140 @@
+========================================================================
+TOURNAMENT TDA — FEATURE EXTRACTOR FOR ML PIPELINES
+opus-2026-03-15-S72
+========================================================================
+
+========================================================================
+DEMO 1: SPORTS LEAGUE ANALYSIS
+========================================================================
+
+  Scenario                      H  H-ratio   t3   β₁  Trans%  Condorcet
+  -----------------------------------------------------------------
+  Dominant team                 1   0.0083    0    0  1.0000        Yes
+  Balanced league              15   0.1250    5    1  0.5000         No
+  Rock-paper-scissors          15   0.1250    5    1  0.5000         No
+  Near-transitive               3   0.0250    1    0  0.9000        Yes
+
+  Interpretation:
+    - 'Dominant team': H=120 (max), β₁=0 → clear hierarchy, transitive
+    - 'Balanced league': low H, high t3 → competitive, many upsets
+    - 'Rock-paper-scissors': cyclic → Condorcet paradox, no clear winner
+
+========================================================================
+DEMO 2: ELECTION PREFERENCE ANALYSIS
+========================================================================
+
+  Coherent electorate:
+    H = 1 (max 120)
+    3-cycles (Condorcet paradoxes): 0
+    Condorcet winner: yes
+    β₁ = 0 (topological complexity)
+    Transitivity: 100.00%
+    Copeland ranking: ['A', 'B', 'C', 'D', 'E']
+
+  Polarized electorate:
+    H = 1 (max 120)
+    3-cycles (Condorcet paradoxes): 0
+    Condorcet winner: yes
+    β₁ = 0 (topological complexity)
+    Transitivity: 100.00%
+    Copeland ranking: ['C', 'A', 'E', 'B', 'D']
+
+  Chaotic electorate:
+    H = 15 (max 120)
+    3-cycles (Condorcet paradoxes): 5
+    Condorcet winner: no
+    β₁ = 1 (topological complexity)
+    Transitivity: 50.00%
+    Copeland ranking: ['A', 'B', 'C', 'D', 'E']
+
+========================================================================
+DEMO 3: ML FEATURE EXTRACTION
+========================================================================
+
+  Feature names: ['H', 'H_ratio', 'log_H', 'score_range', 'score_var', 'is_regular', 't3', 't3_density', 'transitivity_ratio', 'has_condorcet_winner', 'beta_1', 'chi_partial', 'walsh_0', 'walsh_2']
+
+  Classification at n=5 (1024 tournaments):
+
+    transitive: 120 tournaments
+      H range: [1, 1]
+      Mean H-ratio: 0.0083
+      Mean t3-density: 0.0000
+      Mean β₁: 0.00
+
+    near_trans: 120 tournaments
+      H range: [3, 3]
+      Mean H-ratio: 0.0250
+      Mean t3-density: 0.1000
+      Mean β₁: 0.00
+
+    regular: 24 tournaments
+      H range: [15, 15]
+      Mean H-ratio: 0.1250
+      Mean t3-density: 0.5000
+      Mean β₁: 1.00
+
+    cyclic: 760 tournaments
+      H range: [5, 15]
+      Mean H-ratio: 0.0750
+      Mean t3-density: 0.3053
+      Mean β₁: 0.37
+
+========================================================================
+DEMO 4: SUPPLY CHAIN CYCLE DETECTION
+========================================================================
+
+  Healthy chain:
+    H = 1 (chain efficiency)
+    3-cycles = 0 (circular dependencies)
+    Transitivity = 100.00%
+    β₁ = 0 (topological complexity)
+    ✓ Clean hierarchy, no circular dependencies
+
+  Circular deps:
+    H = 12 (chain efficiency)
+    3-cycles = 6 (circular dependencies)
+    Transitivity = 70.00%
+    β₁ = 7 (topological complexity)
+    ⚠ WARNING: 6 circular dependency patterns detected!
+
+========================================================================
+API SUMMARY
+========================================================================
+
+USAGE:
+
+  from tournament_tda import TournamentFeatures
+
+  # From pairwise comparison matrix
+  tf = TournamentFeatures.from_comparisons(A)
+  features = tf.extract()          # dict of all features
+  vec, names = tf.feature_vector() # flat numpy array for ML
+
+  # From ranked preferences (election/survey data)
+  tf = TournamentFeatures.from_rankings([
+      ['A','B','C','D'],  # voter 1's ranking
+      ['B','A','D','C'],  # voter 2's ranking
+      ...
+  ])
+
+  # From win/loss records (sports)
+  tf = TournamentFeatures.from_results([
+      ('TeamA', 'TeamB'),  # TeamA beat TeamB
+      ('TeamC', 'TeamA'),
+      ...
+  ])
+
+FEATURES:
+  H             Hamiltonian path count (ordering entropy)
+  H_ratio       H / n! (decisiveness, 0-1)
+  t3            3-cycle count (cycling/paradox measure)
+  t3_density    t3 / C(n,3) (normalized cycling)
+  transitivity  fraction of transitive triples
+  beta_1        1st Betti number (topological complexity)
+  score_var     score sequence variance (regularity)
+  walsh_*       Walsh-Fourier spectral amplitudes
+
+  All features are tournament isomorphism invariants.
+
+
+DONE — tournament_tda.py complete

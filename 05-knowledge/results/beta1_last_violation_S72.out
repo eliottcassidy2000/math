@@ -1,0 +1,26 @@
+========================================================================
+LAST VIOLATION ANALYSIS
+========================================================================
+Collected in 52.3s
+
+Violations where (c3v, sc4) gives multiple β₁ values:
+
+  c3v=(2, 2, 3, 3, 4, 4), sc4=11:
+    β₁=0: 1440 tournaments
+      bits=145: scores=(1, 2, 2, 3, 3, 4), c4=7
+      bits=153: scores=(1, 2, 2, 3, 3, 4), c4=7
+      bits=210: scores=(1, 2, 2, 3, 3, 4), c4=7
+    β₁=1: 720 tournaments
+      bits=144: scores=(1, 2, 2, 3, 3, 4), c4=7
+      bits=208: scores=(1, 2, 2, 3, 3, 4), c4=7
+      bits=265: scores=(1, 2, 2, 3, 3, 4), c4=7
+    ✗ c4 overlap: {7}
+    score_seq overlap: {(1, 2, 2, 3, 3, 4)}
+    sc5 overlap: {6}
+
+========================================================================
+FINAL: Does (c3v, sc4, c4) determine β₁ at n=6?
+========================================================================
+  (c3v, sc4, c4) determines β₁: NO (1 violations)
+
+DONE

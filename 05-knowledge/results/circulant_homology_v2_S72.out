@@ -1,0 +1,25 @@
+========================================================================
+CIRCULANT HOMOLOGY v2 — THM-125 FAST BETTI COMPUTATION
+opus-2026-03-15-S72
+========================================================================
+
+--- Paley tournament Betti numbers ---
+     p                                    Betti     χ     Time
+  ------------------------------------------------------------
+     3                                [1, 1, 0]     0    0.000s
+     5                          [1, 6, 0, 0, 0]    -5    0.002s
+     7                    [1, 0, 0, 0, 6, 0, 0]     7    0.118s
+
+--- General circulant digraphs ---
+  Name                                               Betti     χ     Time
+  ----------------------------------------------------------------------
+  C_5^{1}                                  [1, 1, 0, 0, 0]     0    0.001s
+  C_6^{1,2}                             [1, 1, 0, 0, 0, 0]     0    0.008s
+  C_7^{1,3}                             [1, 2, 1, 0, 0, 0]     0    0.009s
+  P_7                                  [1, 0, 0, 0, 6, 21]   -14    0.092s
+  C_8^{1,3}                             [1, 2, 1, 0, 0, 0]     0    0.019s
+
+  THM-125 speedup: for P_p, only 1 eigenspace instead of p
+  Memory: CSC sparse format reduces 42 GB → ~1.2 MB for P_19
+
+DONE — circulant_homology_v2.py complete

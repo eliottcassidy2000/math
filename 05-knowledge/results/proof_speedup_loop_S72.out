@@ -1,0 +1,110 @@
+========================================================================
+PROOF ↔ SPEEDUP FEEDBACK LOOP EXPLORER
+opus-2026-03-15-S72
+========================================================================
+
+Strategy: Find formulas that skip expensive computation.
+Each proved formula → larger n reachable → more patterns → more proofs.
+
+The loop: PROVE formula → SKIP matrix op → COMPUTE at 10× larger n
+           → SEE new pattern → PROVE next formula → ...
+
+
+========================================================================
+TARGET A: Is Ω_k determined by score sequence?
+If YES → skip constraint matrix entirely → O(n²) Ω computation
+========================================================================
+
+  n=4:
+    ✓ Ω IS determined by score sequence at n=4
+    (0, 1, 2, 3) → Ω=[4, 6, 4, 1]
+    (0, 2, 2, 2) → Ω=[4, 6, 3, 0]
+    (1, 1, 1, 3) → Ω=[4, 6, 3, 0]
+    (1, 1, 2, 2) → Ω=[4, 6, 3, 1]
+
+  n=5:
+    VIOLATION: score_seq=(1, 1, 2, 3, 3) → 2 different Ω vectors:
+      Ω=[5, 10, 9, 3, 0]: 120 tournaments
+      Ω=[5, 10, 9, 5, 1]: 120 tournaments
+    VIOLATION: score_seq=(1, 2, 2, 2, 3) → 3 different Ω vectors:
+      Ω=[5, 10, 10, 7, 2]: 120 tournaments
+      Ω=[5, 10, 9, 4, 1]: 120 tournaments
+      Ω=[5, 10, 8, 3, 0]: 40 tournaments
+    ✗ 2 score sequences have multiple Ω vectors
+
+  n=6:
+    VIOLATION: score_seq=(0, 2, 2, 3, 4, 4) → 2 different Ω vectors:
+      Ω=[6, 15, 19, 12, 3]: 720 tournaments
+      Ω=[6, 15, 19, 14, 6]: 720 tournaments
+    VIOLATION: score_seq=(0, 2, 3, 3, 3, 4) → 3 different Ω vectors:
+      Ω=[6, 15, 19, 13, 5]: 720 tournaments
+      Ω=[6, 15, 18, 11, 3]: 240 tournaments
+      Ω=[6, 15, 20, 17, 9]: 720 tournaments
+    VIOLATION: score_seq=(1, 1, 2, 3, 3, 5) → 2 different Ω vectors:
+      Ω=[6, 15, 19, 12, 3]: 720 tournaments
+      Ω=[6, 15, 19, 14, 6]: 720 tournaments
+    VIOLATION: score_seq=(1, 1, 2, 3, 4, 4) → 3 different Ω vectors:
+      Ω=[6, 15, 19, 12, 3]: 1440 tournaments
+      Ω=[6, 15, 19, 12, 4]: 720 tournaments
+      Ω=[6, 15, 19, 15, 6]: 720 tournaments
+    VIOLATION: score_seq=(1, 1, 3, 3, 3, 4) → 3 different Ω vectors:
+      Ω=[6, 15, 19, 13, 5]: 720 tournaments
+      Ω=[6, 15, 18, 12, 3]: 240 tournaments
+      Ω=[6, 15, 20, 15, 6]: 720 tournaments
+    VIOLATION: score_seq=(1, 2, 2, 2, 3, 5) → 3 different Ω vectors:
+      Ω=[6, 15, 19, 13, 5]: 720 tournaments
+      Ω=[6, 15, 18, 11, 3]: 240 tournaments
+      Ω=[6, 15, 20, 17, 9]: 720 tournaments
+    VIOLATION: score_seq=(1, 2, 2, 2, 4, 4) → 3 different Ω vectors:
+      Ω=[6, 15, 19, 13, 5]: 720 tournaments
+      Ω=[6, 15, 18, 12, 3]: 240 tournaments
+      Ω=[6, 15, 20, 15, 6]: 720 tournaments
+    VIOLATION: score_seq=(1, 2, 2, 3, 3, 4) → 8 different Ω vectors:
+      Ω=[6, 15, 21, 19, 11]: 720 tournaments
+      Ω=[6, 15, 19, 12, 3]: 1440 tournaments
+      Ω=[6, 15, 18, 13, 5]: 720 tournaments
+      Ω=[6, 15, 20, 15, 7]: 720 tournaments
+      Ω=[6, 15, 20, 16, 7]: 1440 tournaments
+      Ω=[6, 15, 20, 14, 4]: 1440 tournaments
+      Ω=[6, 15, 19, 14, 6]: 720 tournaments
+      Ω=[6, 15, 21, 20, 10]: 1440 tournaments
+    VIOLATION: score_seq=(1, 2, 3, 3, 3, 3) → 4 different Ω vectors:
+      Ω=[6, 15, 20, 17, 6]: 240 tournaments
+      Ω=[6, 15, 21, 21, 14]: 720 tournaments
+      Ω=[6, 15, 20, 15, 6]: 720 tournaments
+      Ω=[6, 15, 21, 20, 12]: 720 tournaments
+    VIOLATION: score_seq=(2, 2, 2, 2, 3, 4) → 4 different Ω vectors:
+      Ω=[6, 15, 20, 17, 6]: 240 tournaments
+      Ω=[6, 15, 21, 21, 14]: 720 tournaments
+      Ω=[6, 15, 20, 15, 6]: 720 tournaments
+      Ω=[6, 15, 21, 20, 12]: 720 tournaments
+    VIOLATION: score_seq=(2, 2, 2, 3, 3, 3) → 4 different Ω vectors:
+      Ω=[6, 15, 24, 33, 27]: 240 tournaments
+      Ω=[6, 15, 21, 18, 9]: 240 tournaments
+      Ω=[6, 15, 21, 20, 11]: 1440 tournaments
+      Ω=[6, 15, 22, 28, 22]: 720 tournaments
+    ✗ 11 score sequences have multiple Ω vectors
+
+========================================================================
+TARGET B: Does β₁ satisfy deletion-contraction?
+If YES → O(2^n) β₁ instead of O(n³) matrix rank
+========================================================================
+
+  n=4:
+    ✓ β₁ IS determined by deletion signature at n=4
+    del_betas=[0, 0, 0, 0] → β₁=0  (sum=0, max=0)
+    del_betas=[0, 0, 0, 1] → β₁=0  (sum=1, max=1)
+    del_betas=[0, 0, 1, 0] → β₁=0  (sum=1, max=1)
+    del_betas=[0, 0, 1, 1] → β₁=1  (sum=2, max=1)
+    del_betas=[0, 1, 0, 0] → β₁=0  (sum=1, max=1)
+    del_betas=[0, 1, 0, 1] → β₁=1  (sum=2, max=1)
+    del_betas=[0, 1, 1, 0] → β₁=1  (sum=2, max=1)
+    del_betas=[1, 0, 0, 0] → β₁=0  (sum=1, max=1)
+    del_betas=[1, 0, 0, 1] → β₁=1  (sum=2, max=1)
+    del_betas=[1, 0, 1, 0] → β₁=1  (sum=2, max=1)
+    del_betas=[1, 1, 0, 0] → β₁=1  (sum=2, max=1)
+
+  n=5:
+    ✗ Deletion signature does NOT determine β₁ uniquely
+
+  n=6:

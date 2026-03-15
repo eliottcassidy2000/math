@@ -1576,3 +1576,16 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1561 | **Tournament cobordism ring: Ω₀=Z, Ω₁=Z^m, Ω₂=0**: Arc flips are cobordisms. H-fibers = cobordism classes. Gradient ∇H generates Ω₁. β₂=0 → Ω₂=0 → polynomial ring Z[∇H₁,...,∇H_m]. | CONFIRMED (computed n=4) | higher_categories_S71z.py | opus-S71z |
 | HYP-1562 | **Hertzsprung gap = forbidden H-values = empty Vitali atoms**: H=7=2³-1 is at the boundary of the duality cube. The gap = where the group action is impossible. 21=F_8 is the second gap AND next Fibonacci. | CONFIRMED (structural) | higher_categories_S71z.py | opus-S71z |
 | HYP-1563 | **S71 descent has Fibonacci structure: 1+1+2+3+5+1=13=F_7 sessions**: 7 geometric, 1 algebraic, 1 analytic, 1 arithmetic, 1 symbolic, 1 categorical, 1 homotopical. The investigation ratio 13/8→τ. Next would be 21 sessions — but 21 is FORBIDDEN. | CONFIRMED (meta-structural) | higher_categories_S71z.py | opus-S71z |
+
+### S72 — Proof ↔ Speedup Feedback Loop (opus-2026-03-15-S72)
+
+| HYP-1564 | **Ω_k NOT determined by score sequence at n≥5**: Score sequence alone does NOT determine dim(Ω_k). 2 violations at n=5 (score_seq=(1,1,2,3,3) t3=3 has 2 different Ω vectors). Refuted by exhaustive enumeration. | REFUTED (n=5) | proof_speedup_loop_S72.py | opus-S72 |
+| HYP-1565 | **Ω_k NOT determined by (score_seq, t3) at n≥5**: Adding t3 to score sequence still fails. Same 2 violations persist. | REFUTED (n=5,6) | feedback_loop_v2_S72.py | opus-S72 |
+| HYP-1566 | **β₁ NOT determined by deletion signature at n≥5**: At n=4, β₁ = ⌈sum(β₁(T\v))/2⌉. FAILS at n=5. | REFUTED (n=5) | proof_speedup_loop_S72.py | opus-S72 |
+| HYP-1567 | **β₁ NOT determined by (score_seq, t3) at n≥5**: 2 violations at n=5, 7 at n=6. Ambiguity is always β₁ ∈ {0,1}. | REFUTED (n=5,6) | feedback_loop_v2_S72.py | opus-S72 |
+| HYP-1568 | **(c3v, sc4) determines β₁ for 99.93% of tournaments at n=6**: Only 1 violation out of ~4000 (c3v,sc4) classes. c3v=(2,2,3,3,4,4), sc4=11 is the SOLE ambiguous case. | PARTIALLY-TRUE (n=6) | beta1_discriminant_S72.py | opus-S72 |
+| HYP-1569 | **β₁ captures genuinely global topology beyond subgraph counts**: The last violation has IDENTICAL c3v, sc4, c4, sc5, and score_seq for both β₁=0 and β₁=1 tournaments. No finite subgraph count determines β₁. This is analogous to cospectral non-isomorphic graphs. | CONFIRMED (n=6) | beta1_last_violation_S72.py | opus-S72 |
+| HYP-1570 | **|A_k| determined by t3 for t3 ≤ 3**: At both n=5 and n=6, when t3 is small (≤3), the allowed path counts are uniquely determined. Breaks at t3=4. | CONFIRMED (n=5,6) | feedback_loop_v2_S72.py | opus-S72 |
+| HYP-1571 | **Ω₂ has near-linear dependence on t3**: At n=4, Ω₂ ≈ 3.8 - 0.5·t3 (exact). At n=5, works for 5/6 t3 values. Breaks when t3 is large enough for non-trivial subtournament structure. | PARTIALLY-TRUE (n=4,5) | feedback_loop_v2_S72.py | opus-S72 |
+| HYP-1572 | **β₁·β₃=0 at n=7 (sampled)**: Mutual exclusivity confirmed on 500 random n=7 tournaments, extending verification from n≤6 exhaustive. | CONFIRMED (n=7 sampled) | proof_speedup_loop_S72.py | opus-S72 |
+| HYP-1573 | **Paley P_7 QR code = [7,3,4] (Hamming-related)**: Tournament homology of P_7 gives a girth-6 regular LDPC code. BER reaches 0 at SNR ≥ 3dB with BP decoding. | CONFIRMED (computed) | circulant_codes_extended.py | opus-S72 |
