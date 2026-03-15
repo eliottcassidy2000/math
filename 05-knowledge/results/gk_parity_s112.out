@@ -1,0 +1,55 @@
+k= 1: 1*g_1(m) = 1*m^1
+       parity=ODD powers only: True
+       D_k=1, (2k-1)!!=1, D_k/(2k-1)!!=1
+       verified=True
+k= 2: 1*g_2(m) = 1*m^2
+       parity=EVEN powers only: True
+       D_k=1, (2k-1)!!=3, D_k/(2k-1)!!=1/3
+       verified=True
+k= 3: 3*g_3(m) = 2*m^3 + 1*m^1
+       parity=ODD powers only: True
+       D_k=3, (2k-1)!!=15, D_k/(2k-1)!!=1/5
+       verified=True
+k= 4: 3*g_4(m) = 1*m^4 + 2*m^2
+       parity=EVEN powers only: True
+       D_k=3, (2k-1)!!=105, D_k/(2k-1)!!=1/35
+       verified=True
+k= 5: 15*g_5(m) = 2*m^5 + 10*m^3 + 3*m^1
+       parity=ODD powers only: True
+       D_k=15, (2k-1)!!=945, D_k/(2k-1)!!=1/63
+       verified=True
+k= 6: 45*g_6(m) = 2*m^6 + 20*m^4 + 23*m^2
+       parity=EVEN powers only: True
+       D_k=45, (2k-1)!!=10395, D_k/(2k-1)!!=1/231
+       verified=True
+k= 7: 315*g_7(m) = 4*m^7 + 70*m^5 + 196*m^3 + 45*m^1
+       parity=ODD powers only: True
+       D_k=315, (2k-1)!!=135135, D_k/(2k-1)!!=1/429
+       verified=True
+k= 8: 315*g_8(m) = 1*m^8 + 28*m^6 + 154*m^4 + 132*m^2
+       parity=EVEN powers only: True
+       D_k=315, (2k-1)!!=2027025, D_k/(2k-1)!!=1/6435
+       verified=True
+k= 9: 2835*g_9(m) = 2*m^9 + 84*m^7 + 798*m^5 + 1636*m^3 + 315*m^1
+       parity=ODD powers only: True
+       D_k=2835, (2k-1)!!=34459425, D_k/(2k-1)!!=1/12155
+       verified=True
+k=10: 14175*g_10(m) = 2*m^10 + 120*m^8 + 1806*m^6 + 7180*m^4 + 5067*m^2
+       parity=EVEN powers only: True
+       D_k=14175, (2k-1)!!=654729075, D_k/(2k-1)!!=1/46189
+       verified=True
+
+Denominator sequence:
+D_k = [1, 1, 3, 3, 15, 45, 315, 315, 2835, 14175]
+(2k-1)!! = [1, 1, 3, 15, 105, 945, 10395, 135135, 2027025, 34459425]
+
+Substitution u = m^2:
+k=1 (odd): g_1(m)/m at m=1..3: ['1', '1', '1']
+k=2 (even): g_2(m) at m^2=1,4,9,...: ['1', '4', '9', '16']
+k=3 (odd): g_3(m)/m at m=1..5: ['1', '3', '19/3', '11', '17']
+k=4 (even): g_4(m) at m^2=1,4,9,...: ['1', '8', '33', '96', '225', '456']
+k=5 (odd): g_5(m)/m at m=1..7: ['1', '5', '17', '45', '501/5', '197', '353']
+k=6 (even): g_6(m) at m^2=1,4,9,...: ['1', '12', '73', '304', '985', '2668', '6321', '13504']
+k=7 (odd): g_7(m)/m at m=1..9: ['1', '7', '33', '119', '353', '903', '14407/7', '4279', '8257']
+
+Done!

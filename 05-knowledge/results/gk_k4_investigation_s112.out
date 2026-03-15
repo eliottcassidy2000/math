@@ -1,0 +1,255 @@
+Computing Z values for all n=10 permutations...
+  500000/3628800 permutations processed...
+  1000000/3628800 permutations processed...
+  1500000/3628800 permutations processed...
+  2000000/3628800 permutations processed...
+  2500000/3628800 permutations processed...
+  3000000/3628800 permutations processed...
+  3500000/3628800 permutations processed...
+Done. 3628800 permutations.
+
+4-edge matchings of P_9 (8 edges): 5 total
+  edges=(0, 2, 4, 6), comps=(8,), c=1, L=8: OK
+  edges=(0, 2, 4, 7), comps=(6, 2), c=2, L=8: OK
+  edges=(0, 2, 5, 7), comps=(4, 4), c=2, L=8: OK
+  edges=(0, 3, 5, 7), comps=(2, 6), c=2, L=8: OK
+  edges=(1, 3, 5, 7), comps=(8,), c=1, L=8: OK
+
+3-edge matchings (spot check):
+  edges=(0, 2, 4), comps=(6,), c=1, L=6: OK
+  edges=(0, 3, 6), comps=(2, 2, 2), c=3, L=6: OK
+  edges=(0, 2, 7), comps=(4, 2), c=2, L=6: OK
+  edges=(1, 4, 7), comps=(2, 2, 2), c=3, L=6: OK
+
+============================================================
+PART 2: CORRECTION STRUCTURE
+============================================================
+
+k=4: Delta_k(m) = TM_g_k(m) - opus_g_k(m)
+  m=1: TM=1, opus=1, Delta=0
+  m=2: TM=8, opus=8, Delta=0
+  m=3: TM=33, opus=33, Delta=0
+  m=4: TM=96, opus=96, Delta=0
+  m=5: TM=225, opus=217, Delta=8
+  m=6: TM=456, opus=416, Delta=40
+  m=7: TM=833, opus=713, Delta=120
+  m=8: TM=1408, opus=1128, Delta=280
+  m=9: TM=2241, opus=1681, Delta=560
+  m=10: TM=3400, opus=2392, Delta=1008
+  m=11: TM=4961, opus=3281, Delta=1680
+  m=12: TM=7008, opus=4368, Delta=2640
+  Forward diffs of Delta (from m=2):
+    d1: [Fraction(0, 1), Fraction(0, 1), Fraction(8, 1), Fraction(32, 1), Fraction(80, 1), Fraction(160, 1)]
+    d2: [Fraction(0, 1), Fraction(8, 1), Fraction(24, 1), Fraction(48, 1), Fraction(80, 1), Fraction(120, 1)]
+    d3: [Fraction(8, 1), Fraction(16, 1), Fraction(24, 1), Fraction(32, 1), Fraction(40, 1), Fraction(48, 1)]
+    d4: [Fraction(8, 1), Fraction(8, 1), Fraction(8, 1), Fraction(8, 1), Fraction(8, 1), Fraction(8, 1)]
+    d5: [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+  Ratio Delta/C(m-1,4):
+    m=5: Delta=8, C(m-1,4)=1, ratio=8
+    m=6: Delta=40, C(m-1,4)=5, ratio=8
+    m=7: Delta=120, C(m-1,4)=15, ratio=8
+    m=8: Delta=280, C(m-1,4)=35, ratio=8
+    m=9: Delta=560, C(m-1,4)=70, ratio=8
+    m=10: Delta=1008, C(m-1,4)=126, ratio=8
+    m=11: Delta=1680, C(m-1,4)=210, ratio=8
+    m=12: Delta=2640, C(m-1,4)=330, ratio=8
+
+k=5: Delta_k(m) = TM_g_k(m) - opus_g_k(m)
+  m=1: TM=1, opus=1, Delta=0
+  m=2: TM=10, opus=10, Delta=0
+  m=3: TM=51, opus=211, Delta=-160
+  m=4: TM=180, opus=1380, Delta=-1200
+  m=5: TM=501, opus=4293, Delta=-3792
+  m=6: TM=1182, opus=9726, Delta=-8544
+  m=7: TM=2471, opus=18455, Delta=-15984
+  m=8: TM=4712, opus=31256, Delta=-26544
+  m=9: TM=8361, opus=48905, Delta=-40544
+  m=10: TM=14002, opus=72178, Delta=-58176
+  m=11: TM=22363, opus=101851, Delta=-79488
+  m=12: TM=34332, opus=138700, Delta=-104368
+  Forward diffs of Delta (from m=2):
+    d1: [Fraction(-160, 1), Fraction(-1040, 1), Fraction(-2592, 1), Fraction(-4752, 1), Fraction(-7440, 1), Fraction(-10560, 1)]
+    d2: [Fraction(-880, 1), Fraction(-1552, 1), Fraction(-2160, 1), Fraction(-2688, 1), Fraction(-3120, 1), Fraction(-3440, 1)]
+    d3: [Fraction(-672, 1), Fraction(-608, 1), Fraction(-528, 1), Fraction(-432, 1), Fraction(-320, 1), Fraction(-192, 1)]
+    d4: [Fraction(64, 1), Fraction(80, 1), Fraction(96, 1), Fraction(112, 1), Fraction(128, 1), Fraction(144, 1)]
+    d5: [Fraction(16, 1), Fraction(16, 1), Fraction(16, 1), Fraction(16, 1), Fraction(16, 1)]
+  Ratio Delta/C(m-1,5):
+    m=6: Delta=-8544, C(m-1,5)=1, ratio=-8544
+    m=7: Delta=-15984, C(m-1,5)=6, ratio=-2664
+    m=8: Delta=-26544, C(m-1,5)=21, ratio=-1264
+    m=9: Delta=-40544, C(m-1,5)=56, ratio=-724
+    m=10: Delta=-58176, C(m-1,5)=126, ratio=-3232/7
+    m=11: Delta=-79488, C(m-1,5)=252, ratio=-2208/7
+    m=12: Delta=-104368, C(m-1,5)=462, ratio=-4744/21
+
+k=6: Delta_k(m) = TM_g_k(m) - opus_g_k(m)
+  m=1: TM=1, opus=1, Delta=0
+  m=2: TM=12, opus=12, Delta=0
+  m=3: TM=73, opus=25033, Delta=-24960
+  m=4: TM=304, opus=214384, Delta=-214080
+  m=5: TM=985, opus=707385, Delta=-706400
+  m=6: TM=2668, opus=1643356, Delta=-1640688
+  m=7: TM=6321, opus=3161617, Delta=-3155296
+  m=8: TM=13504, opus=5401488, Delta=-5387984
+  m=9: TM=26577, opus=8502289, Delta=-8475712
+  m=10: TM=48940, opus=12603340, Delta=-12554400
+  m=11: TM=85305, opus=17843961, Delta=-17758656
+  m=12: TM=142000, opus=24363472, Delta=-24221472
+  Forward diffs of Delta (from m=2):
+    d1: [Fraction(-24960, 1), Fraction(-189120, 1), Fraction(-492320, 1), Fraction(-934288, 1), Fraction(-1514608, 1), Fraction(-2232688, 1)]
+    d2: [Fraction(-164160, 1), Fraction(-303200, 1), Fraction(-441968, 1), Fraction(-580320, 1), Fraction(-718080, 1), Fraction(-855040, 1)]
+    d3: [Fraction(-139040, 1), Fraction(-138768, 1), Fraction(-138352, 1), Fraction(-137760, 1), Fraction(-136960, 1), Fraction(-135920, 1)]
+    d4: [Fraction(272, 1), Fraction(416, 1), Fraction(592, 1), Fraction(800, 1), Fraction(1040, 1), Fraction(1312, 1)]
+    d5: [Fraction(144, 1), Fraction(176, 1), Fraction(208, 1), Fraction(240, 1), Fraction(272, 1)]
+  Ratio Delta/C(m-1,6):
+    m=7: Delta=-3155296, C(m-1,6)=1, ratio=-3155296
+    m=8: Delta=-5387984, C(m-1,6)=7, ratio=-769712
+    m=9: Delta=-8475712, C(m-1,6)=28, ratio=-302704
+    m=10: Delta=-12554400, C(m-1,6)=84, ratio=-1046200/7
+    m=11: Delta=-17758656, C(m-1,6)=210, ratio=-2959776/35
+    m=12: Delta=-24221472, C(m-1,6)=462, ratio=-366992/7
+
+k=7: Delta_k(m) = TM_g_k(m) - opus_g_k(m)
+  m=1: TM=1, opus=1, Delta=0
+  m=2: TM=14, opus=14, Delta=0
+  m=3: TM=99, opus=6314339, Delta=-6314240
+  m=4: TM=476, opus=58595516, Delta=-58595040
+  m=5: TM=1765, opus=196496085, Delta=-196494320
+  m=6: TM=5418, opus=459668586, Delta=-459663168
+  m=7: TM=14407, opus=887765559, Delta=-887751152
+  m=8: TM=34232, opus=1520439544, Delta=-1520405312
+  m=9: TM=74313, opus=2397343081, Delta=-2397268768
+  m=10: TM=149830, opus=3558128710, Delta=-3557978880
+  m=11: TM=284075, opus=5042448971, Delta=-5042164896
+  m=12: TM=511380, opus=6889956404, Delta=-6889445024
+  Forward diffs of Delta (from m=2):
+    d1: [Fraction(-6314240, 1), Fraction(-52280800, 1), Fraction(-137899280, 1), Fraction(-263168848, 1), Fraction(-428087984, 1), Fraction(-632654160, 1)]
+    d2: [Fraction(-45966560, 1), Fraction(-85618480, 1), Fraction(-125269568, 1), Fraction(-164919136, 1), Fraction(-204566176, 1), Fraction(-244209296, 1)]
+    d3: [Fraction(-39651920, 1), Fraction(-39651088, 1), Fraction(-39649568, 1), Fraction(-39647040, 1), Fraction(-39643120, 1), Fraction(-39637360, 1)]
+    d4: [Fraction(832, 1), Fraction(1520, 1), Fraction(2528, 1), Fraction(3920, 1), Fraction(5760, 1), Fraction(8112, 1)]
+    d5: [Fraction(688, 1), Fraction(1008, 1), Fraction(1392, 1), Fraction(1840, 1), Fraction(2352, 1)]
+  Ratio Delta/C(m-1,7):
+    m=8: Delta=-1520405312, C(m-1,7)=1, ratio=-1520405312
+    m=9: Delta=-2397268768, C(m-1,7)=8, ratio=-299658596
+    m=10: Delta=-3557978880, C(m-1,7)=36, ratio=-296498240/3
+    m=11: Delta=-5042164896, C(m-1,7)=120, ratio=-210090204/5
+    m=12: Delta=-6889445024, C(m-1,7)=330, ratio=-313156592/15
+
+k=8: Delta_k(m) = TM_g_k(m) - opus_g_k(m)
+  m=1: TM=1, opus=1, Delta=0
+  m=2: TM=16, opus=16, Delta=0
+  m=3: TM=129, opus=2144267969, Delta=-2144267840
+  m=4: TM=704, opus=21052257344, Delta=-21052256640
+  m=5: TM=2945, opus=71343421625, Delta=-71343418680
+  m=6: TM=10128, opus=167637214296, Delta=-167637204168
+  m=7: TM=29953, opus=324553088841, Delta=-324553058888
+  m=8: TM=78592, opus=556710498744, Delta=-556710420152
+  m=9: TM=187137, opus=878728897489, Delta=-878728710352
+  m=10: TM=411280, opus=1305227738560, Delta=-1305227327280
+  m=11: TM=845185, opus=1850826475441, Delta=-1850825630256
+  m=12: TM=1640640, opus=2530144561616, Delta=-2530142920976
+  Forward diffs of Delta (from m=2):
+    d1: [Fraction(-2144267840, 1), Fraction(-18907988800, 1), Fraction(-50291162040, 1), Fraction(-96293785488, 1), Fraction(-156915854720, 1), Fraction(-232157361264, 1)]
+    d2: [Fraction(-16763720960, 1), Fraction(-31383173240, 1), Fraction(-46002623448, 1), Fraction(-60622069232, 1), Fraction(-75241506544, 1), Fraction(-89860928936, 1)]
+    d3: [Fraction(-14619452280, 1), Fraction(-14619450208, 1), Fraction(-14619445784, 1), Fraction(-14619437312, 1), Fraction(-14619422392, 1), Fraction(-14619397792, 1)]
+    d4: [Fraction(2072, 1), Fraction(4424, 1), Fraction(8472, 1), Fraction(14920, 1), Fraction(24600, 1), Fraction(38472, 1)]
+    d5: [Fraction(2352, 1), Fraction(4048, 1), Fraction(6448, 1), Fraction(9680, 1), Fraction(13872, 1)]
+  Ratio Delta/C(m-1,8):
+    m=9: Delta=-878728710352, C(m-1,8)=1, ratio=-878728710352
+    m=10: Delta=-1305227327280, C(m-1,8)=9, ratio=-435075775760/3
+    m=11: Delta=-1850825630256, C(m-1,8)=45, ratio=-616941876752/15
+    m=12: Delta=-2530142920976, C(m-1,8)=165, ratio=-230012992816/15
+
+k=9: Delta_k(m) = TM_g_k(m) - opus_g_k(m)
+  m=1: TM=1, opus=1, Delta=0
+  m=2: TM=18, opus=18, Delta=0
+  m=3: TM=163, opus=895825558723, Delta=-895825558560
+  m=4: TM=996, opus=9212852116596, Delta=-9212852115600
+  m=5: TM=4645, opus=31476455114117, Delta=-31476455109472
+  m=6: TM=17718, opus=74212009991766, Delta=-74212009974048
+  m=7: TM=57799, opus=143944892190023, Delta=-143944892132224
+  m=8: TM=166344, opus=247200477149368, Delta=-247200476983024
+  m=9: TM=432073, opus=390504140310281, Delta=-390504139878208
+  m=10: TM=1030490, opus=580381257113242, Delta=-580381256082752
+  m=11: TM=2286955, opus=823357202998731, Delta=-823357200711776
+  m=12: TM=4772780, opus=1125957353407228, Delta=-1125957348634448
+  Forward diffs of Delta (from m=2):
+    d1: [Fraction(-895825558560, 1), Fraction(-8317026557040, 1), Fraction(-22263602993872, 1), Fraction(-42735554864576, 1), Fraction(-69732882158176, 1), Fraction(-103255584850800, 1)]
+    d2: [Fraction(-7421200998480, 1), Fraction(-13946576436832, 1), Fraction(-20471951870704, 1), Fraction(-26997327293600, 1), Fraction(-33522702692624, 1), Fraction(-40048078044384, 1)]
+    d3: [Fraction(-6525375438352, 1), Fraction(-6525375433872, 1), Fraction(-6525375422896, 1), Fraction(-6525375399024, 1), Fraction(-6525375351760, 1), Fraction(-6525375264976, 1)]
+    d4: [Fraction(4480, 1), Fraction(10976, 1), Fraction(23872, 1), Fraction(47264, 1), Fraction(86784, 1), Fraction(149856, 1)]
+    d5: [Fraction(6496, 1), Fraction(12896, 1), Fraction(23392, 1), Fraction(39520, 1), Fraction(63072, 1)]
+  Ratio Delta/C(m-1,9):
+    m=10: Delta=-580381256082752, C(m-1,9)=1, ratio=-580381256082752
+    m=11: Delta=-823357200711776, C(m-1,9)=10, ratio=-411678600355888/5
+    m=12: Delta=-1125957348634448, C(m-1,9)=55, ratio=-102359758966768/5
+
+============================================================
+PART 3: BINOMIAL BASIS OF CORRECTIONS
+============================================================
+
+k=4: Delta_4(m) in binomial basis C(m,j):
+  alpha_5 = 8
+  alpha_6 = -8
+  alpha_7 = 8
+  alpha_8 = -8
+
+k=5: Delta_5(m) in binomial basis C(m,j):
+  alpha_3 = -160
+  alpha_4 = -560
+  alpha_5 = 608
+  alpha_6 = -592
+  alpha_7 = 592
+  alpha_8 = -592
+  alpha_9 = 592
+
+k=6: Delta_6(m) in binomial basis C(m,j):
+  alpha_3 = -24960
+  alpha_4 = -114240
+  alpha_5 = 114400
+  alpha_6 = -114288
+  alpha_7 = 114320
+  alpha_8 = -114320
+  alpha_9 = 114320
+  alpha_10 = -114320
+
+k=7: Delta_7(m) in binomial basis C(m,j):
+  alpha_3 = -6314240
+  alpha_4 = -33338080
+  alpha_5 = 33338480
+  alpha_6 = -33338048
+  alpha_7 = 33338304
+  alpha_8 = -33338240
+  alpha_9 = 33338240
+  alpha_10 = -33338240
+  alpha_11 = 33338240
+
+============================================================
+PART 4: PATTERN IN BINOMIAL COEFFICIENTS alpha_{k,j}
+============================================================
+alpha_{k,j} table:
+  k |            j=0           j=1           j=2           j=3           j=4           j=5           j=6           j=7           j=8           j=9          j=10          j=11
+----------------------------------------------------------------------------------------------------
+  4 |              0             0             0             0             0             8            -8             8            -8
+  5 |              0             0             0          -160          -560           608          -592           592          -592           592
+  6 |              0             0             0        -24960       -114240        114400       -114288        114320       -114320        114320       -114320
+  7 |              0             0             0      -6314240     -33338080      33338480     -33338048      33338304     -33338240      33338240     -33338240      33338240
+  8 |              0             0             0   -2144267840  -12475185280   12475186120  -12475184888   12475186008  -12475185432   12475185560  -12475185560   12475185560
+  9 |              0             0             0 -895825558560-5629549881360 5629549882928-5629549880016 5629549883600-5629549880784 5629549882064-5629549881808 5629549881808
+
+Ratio alpha_{k,k}/alpha_{k,4}:
+  k=5: alpha_5,5=608, alpha_5,4=-560, ratio=-38/35
+  k=6: alpha_6,6=-114288, alpha_6,4=-114240, ratio=2381/2380
+  k=7: alpha_7,7=33338304, alpha_7,4=-33338080, ratio=-1041822/1041815
+  k=8: alpha_8,8=-12475185432, alpha_8,4=-12475185280, ratio=1559398179/1559398160
+  k=9: alpha_9,9=5629549882064, alpha_9,4=-5629549881360, ratio=-351846867629/351846867585
+
+alpha_{k,4} sequence:
+  k=4: alpha_4 = 0
+  k=5: alpha_4 = -560
+  k=6: alpha_4 = -114240
+  k=7: alpha_4 = -33338080
+  k=8: alpha_4 = -12475185280
+  k=9: alpha_4 = -5629549881360
+
+Done!
