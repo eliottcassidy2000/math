@@ -1,0 +1,20 @@
+%I A??????
+%S A?????? 1,2,8,32,158,928,6350,49752,439670,4327904,46963358,556953448,
+%T A?????? 7166360054,99428495088,1479600188798,23506712352248,
+%U A?????? 397095175477430,7107209383674112
+%N A?????? Sum over permutations of {0,...,n-1} with no unit descents of 2^(number of unit ascents).
+%C A?????? A unit ascent at position j means sigma(j+1) = sigma(j) + 1. A unit descent means sigma(j+1) = sigma(j) - 1. The sum is over permutations with no unit descents (NUD), weighted by 2^(number of unit ascents).
+%C A?????? a(n)/n! = 1 + CV^2(H) where H is the number of Hamiltonian paths in a uniformly random tournament on n vertices and CV^2 = Var(H)/E[H]^2.
+%C A?????? a(n)/n! = sum_{k=0}^{floor((n-1)/2)} [x^k] ((1+x)/(1-x))^{n-2k} / (n)_{2k} where (n)_{2k} is the falling factorial.
+%C A?????? The generating function involves the x-tribonacci recurrence F(N+3,x) = F(N+2,x) + x*F(N+1,x) + x*F(N,x) with bivariate GF (1 + 2xy + xy^2)/(1 - y - xy^2 - xy^3).
+%F A?????? a(n) = Sum_{sigma in S_n, no unit descent} 2^(adj1(sigma)) where adj1 counts unit ascents.
+%F A?????? a(n)/n! = 1 + Sum_{k=1}^{floor((n-1)/2)} 2*g_k(n-2k)/(n)_{2k} where g_k(m) = Sum_{j=1}^{min(k,m)} C(k-1,j-1)*C(m,j)*2^(j-1) and (n)_{2k} = n!/(n-2k)!.
+%F A?????? The Cayley transform identity: ((1+x)/(1-x))^m = 1 + 2*Sum_{k>=1} g_k(m)*x^k.
+%e A?????? a(1) = 1: the single permutation (0) has no ascents or descents.
+%e A?????? a(2) = 2: permutation (0,1) has 1 unit ascent, weight 2^1=2. Permutation (1,0) has 1 unit descent, excluded. So a(2) = 2.
+%e A?????? a(3) = 8: NUD permutations of {0,1,2}: (0,1,2) has 2 unit ascents (weight 4), (1,2,0) has 1 unit ascent (weight 2), (2,0,1) has 1 unit ascent (weight 2). The 3 excluded permutations each have a unit descent. Total: 4+2+2 = 8.
+%Y A?????? The diagonal of k*g_k(k) gives A108666.
+%Y A?????? Cf. A000142 (n!), A000255.
+%K A?????? nonn
+%O A?????? 1,2
+%A A?????? Eliott Cassidy, Mar 16 2026

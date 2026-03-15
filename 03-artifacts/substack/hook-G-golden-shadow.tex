@@ -1,0 +1,23 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Every Number Has a Golden Shadow}
+\end{center}
+
+\medskip
+
+Every natural number $n$ has a \emph{golden shadow}: the quadratic irrational
+\[
+f_n = \frac{n-2+\sqrt{n^2+4}}{2},
+\]
+which satisfies $f^2 - (n{-}2)f - n = 0$, equivalently $f(f{+}2) = n(f{+}1)$.
+
+Its continued fraction is $f_n = [n{-}1;\; n, n, n, \ldots]$---periodic with partial quotient $n$. Special cases: $f_1 = 1/\varphi$ (golden reciprocal), $f_2 = \sqrt{2}$ (silver ratio), $f_4 = \varphi^2$ (golden ratio squared).
+
+The golden shadow maps to the Cayley address via $x = (f^2{+}f{-}1)/(f^2{+}3f{+}1) = (n{-}1)/(n{+}1)$, and $Q(x) = (1{+}x)/(1{-}x) = n$. Every number has two faces: a \textbf{rational face} $x_n = (n{-}1)/(n{+}1)$ on the hyperbolic line, and an \textbf{irrational face} $f_n = [n{-}1; n, n, n, \ldots]$ encoding its intrinsic complexity. The Cayley transform mediates between them.
+
+\end{document}
