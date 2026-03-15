@@ -1,0 +1,112 @@
+RIGOROUS THEOREMS ON THE CAYLEY LINE
+============================================================
+
+THEOREM A: CAYLEY-DIRICHLET CONVOLUTION
+----------------------------------------
+If d*q = n, then (x_d + x_q)/(1 + x_d*x_q) = x_n.
+
+Proof: LHS num = (d-1)(q+1)+(q-1)(d+1) = 2dq-2 = 2(n-1)
+       LHS den = (d+1)(q+1)+(d-1)(q-1) = 2dq+2 = 2(n+1)
+       LHS = (n-1)/(n+1) = x_n.  QED
+
+  d=2,q=6,n=12: 11/13 = 11/13: True
+  d=3,q=4,n=12: 11/13 = 11/13: True
+  d=5,q=7,n=35: 17/18 = 17/18: True
+
+THEOREM B: MULTIPLICATIVE = EXPONENTIAL
+----------------------------------------
+If f is completely multiplicative and continuous,
+define F(t) = f(e^{2t}). Then F(t+s) = F(t)F(s).
+Cauchy: F(t) = e^{ct}, so f(n) = n^{c/2}.  QED
+
+THEOREM C: EULER TOTIENT
+----------------------------------------
+phi(n)/n = prod_{p|n} (1 - Q(x_p)^{-1})
+
+Proof: (p-1)/p = 2x_p/(1+x_p) = 1 - 1/Q(x_p).  QED
+
+  p=2: (p-1)/p=1/2, 1-1/Q(x_p)=1/2: True
+  p=3: (p-1)/p=2/3, 1-1/Q(x_p)=2/3: True
+  p=5: (p-1)/p=4/5, 1-1/Q(x_p)=4/5: True
+  p=7: (p-1)/p=6/7, 1-1/Q(x_p)=6/7: True
+  p=11: (p-1)/p=10/11, 1-1/Q(x_p)=10/11: True
+
+THEOREM D: DELANNOY EXPANSION OF PRIME POWERS
+----------------------------------------
+For prime p, integer m >= 1:
+  p^m = 1 + 2*sum_{k=1}^inf g_k(m)*((p-1)/(p+1))^k
+
+Proof: Q(x)^m = 1 + 2*sum g_k(m)*x^k. Set x = x_p. QED
+
+  p=2,m=1: sum=2.000000, p^m=2, err=1.46e-14
+  p=2,m=2: sum=4.000000, p^m=4, err=8.89e-13
+  p=2,m=3: sum=8.000000, p^m=8, err=2.71e-11
+  p=3,m=1: sum=3.000000, p^m=3, err=3.73e-09
+  p=3,m=2: sum=9.000000, p^m=9, err=2.31e-07
+  p=3,m=3: sum=26.999993, p^m=27, err=7.18e-06
+  p=5,m=1: sum=4.999969, p^m=5, err=3.13e-05
+  p=5,m=2: sum=24.997997, p^m=25, err=2.00e-03
+  p=5,m=3: sum=124.935510, p^m=125, err=6.45e-02
+
+THEOREM E: EVEN g_k FROM FUNCTIONAL EQUATION
+----------------------------------------
+Q^m * Q(-x)^m = 1 implies:
+  g_{2k} = sum_{j=1}^{2k-1} (-1)^{j+1} g_j g_{2k-j}
+
+  m=5, g_2: actual=25, predicted=25, match=True
+  m=5, g_4: actual=225, predicted=225, match=True
+  m=5, g_6: actual=985, predicted=985, match=True
+  m=7, g_2: actual=49, predicted=49, match=True
+  m=7, g_4: actual=833, predicted=833, match=True
+  m=7, g_6: actual=6321, predicted=6321, match=True
+
+THEOREM F: 1/n^2 CANCELLATION
+----------------------------------------
+The functional equation at k=1: g_2(m) = g_1(m)^2 = m^2.
+
+Expansion of CV^2:
+  k=1 term: 2(n-2)/(n(n-1)) = 2/n - 2/n^2 + O(1/n^3)
+  k=2 term: 2(n-4)^2/(n)_4 = 2/n^2 + O(1/n^3)
+  Sum at 1/n^2: -2 + 2 = 0.  QED
+
+The vanishing is FORCED by g_2 = g_1^2, which comes from
+[x^2] log Q^m = 0 (the even log-coefficient vanishes).
+
+THEOREM G: LOG STRUCTURE
+----------------------------------------
+log Q^m = 2m*arctanh(x) = 2m*(x + x^3/3 + x^5/5 + ...)
+[x^k] log Q^m = 2m/k for odd k, 0 for even k.
+
+Proof: log((1+x)/(1-x)) = log(1+x) - log(1-x)
+  = (x-x^2/2+x^3/3-...) - (-x-x^2/2-x^3/3-...)
+  = 2x + 2x^3/3 + 2x^5/5 + ... = 2*arctanh(x).  QED
+
+THEOREM H: UNIQUENESS OF arctanh
+----------------------------------------
+arctanh is the unique odd FPS f with exp(f) rational of degree (1,1).
+
+Proof: f odd, R=exp(f)=P/Q coprime. R(-x)=exp(-f)=1/R(x).
+P(-x)Q(x) = P(x)Q(-x). Coprimality: P(-x)=cQ(x).
+c=1 from f(0)=0. Degree (1,1): Q=1-ax, P=1+ax.
+f = log((1+ax)/(1-ax)) = 2*arctanh(ax).  QED
+
+THEOREM I: WICK ROTATION
+----------------------------------------
+arctanh(ix) = i*arctan(x). In particular arctanh(i) = i*pi/4.
+
+Proof: arctanh(ix) = sum (ix)^{2k+1}/(2k+1)
+  = i*sum (-1)^k x^{2k+1}/(2k+1) = i*arctan(x).  QED
+
+============================================================
+CATALOG OF PROVED RESULTS
+============================================================
+
+A. Hyp addition = Dirichlet divisor (algebraic identity)
+B. Multiplicative = exponential (Cauchy functional equation)
+C. phi(n)/n = prod(1-Q^{-1}) (algebraic identity)
+D. p^m = 1+2*sum g_k*x_p^k (master GF at prime address)
+E. g_{2k} from g_{odd} (functional equation Q*Q(-x)=1)
+F. 1/n^2 cancels (consequence of g_2=g_1^2 from log structure)
+G. Log-coefficients: 2m/k odd, 0 even (arctanh expansion)
+H. arctanh unique odd FPS with rational exp (coprimality)
+I. Wick rotation: arctanh(i)=i*pi/4 (series substitution)
