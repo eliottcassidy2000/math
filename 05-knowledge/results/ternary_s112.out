@@ -1,0 +1,27 @@
+Ternary Cayley transform Q_3:
+  Q_3 = omega^2*(t-1)/(t-omega^2), omega=exp(2pi*i/3)
+  Period test at t=0.3:
+    Q_3^0(0.3) = 0.300000 + 0.000000i
+    Q_3^1(0.3) = 0.579137 + 0.130838i
+    Q_3^2(0.3) = 0.300000 + 0.000000i
+    Q_3^3(0.3) = 0.579137 + 0.130838i
+    Q_3^4(0.3) = 0.300000 + 0.000000i
+  Q_3^3 = original? False
+
+BINARY vs TERNARY:
+  Binary Q_2: Q=(1+x)/(1-x), period 4, REAL
+  Ternary Q_3: Q=omega^2*(t-1)/(t-omega^2), period 3, COMPLEX
+  Binary log: arctanh(x) = REAL odd function
+  Ternary log: complex-valued, involves cube roots of unity
+
+Binary is the ONLY n where the Cayley transform is real-valued.
+n=2 is special because Z/2Z is the only cyclic group
+whose nontrivial character is REAL (the sign character).
+
+For n>=3: nontrivial characters involve complex roots of unity.
+The theory is inherently COMPLEX.
+
+The step from 2 to 3 is the step from R to C.
+From algebra to geometry. From line to plane.
+From arctanh to complex logarithm.
+From tournaments to signed graphs.
