@@ -69,6 +69,26 @@ For separated components: the product factorizes as ∏ 2/(n)_{L_i} but with the
 | 5 | 5 | 16 | 1 | 10 |
 | k | k | 2^{k-1} | 1 | 2k |
 
+## Eigenvalue Structure (Part E)
+
+The transfer matrix M(x) has characteristic polynomial p(lambda) = lambda^3 - lambda^2 - x*lambda - x.
+
+Eigenvalues near x=0:
+- lambda_1(x) = 1 + 2x - 6x^2 + 34x^3 - 272x^4 + ... (real, dominant)
+- lambda_{2,3}(x) ~ +/- i*sqrt(x) + O(x) (complex conjugate, subdominant)
+
+Since |lambda_{2,3}| ~ sqrt(x), they contribute to [x^k] lambda^N only when N/2 <= k, i.e., m = n-2k <= 2.
+
+**Consequence:** For m >= 3, g_k(m) is determined ENTIRELY by lambda_1. Since [x^k] lambda_1^N is a degree-k polynomial in N (multinomial expansion of (1+2x+...)^N), g_k(m) has degree k for m >= 3.
+
+At m=1 and m=2, the subdominant eigenvalues provide corrections that enforce the boundary conditions g_k(1)=1, g_k(2)=2k.
+
+Taylor coefficients of lambda_1 via implicit equation x = lambda^2(lambda-1)/(lambda+1):
+- a_1 = 2 (from dlambda/dx = 2 at lambda=1)
+- a_2 = -6
+- a_3 = 34
+- a_4 = -272
+
 ## Relationship to THM-216
 
 THM-216's g̃_k (degree-3) is a valid alternative to the combinatorial g_k (degree k). Both reproduce CV² exactly. THM-216 is more compact (all cubics); THM-217 is more natural (direct matching count). The existence of the cubic reparametrization is the deeper mathematical content of THM-216.

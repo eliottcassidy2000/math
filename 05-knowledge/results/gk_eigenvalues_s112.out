@@ -1,0 +1,85 @@
+============================================================
+EIGENVALUE ANALYSIS OF M(x)
+============================================================
+
+Numerical eigenvalues at x = 0, 0.1, 0.5, 1, 2, 5:
+  x= 0.00: lambda = 1.000000, 0.000000, 0.000000
+  x= 0.01: lambda = 1.019432+0.000000j, -0.009716+0.098565j, -0.009716-0.098565j
+  x= 0.10: lambda = 1.160435+0.000000j, -0.080218+0.282382j, -0.080218-0.282382j
+  x= 0.50: lambda = 1.536974+0.000000j, -0.268487+0.503219j, -0.268487-0.503219j
+  x= 1.00: lambda = 1.839287+0.000000j, -0.419643+0.606291j, -0.419643-0.606291j
+  x= 2.00: lambda = 2.269531+0.000000j, -0.634765+0.691601j, -0.634765-0.691601j
+  x= 5.00: lambda = 3.117942+0.000000j, -1.058971+0.694408j, -1.058971-0.694408j
+
+Taylor expansion of lambda_1(x):
+  lambda_1 = 1 + 2x - 6x^2 + 34x^3 - 272x^4 + ...
+
+============================================================
+EIGENVALUE DECOMPOSITION at specific x values
+============================================================
+
+x=0.01:
+  lambda_1 = 1.019432+0.000000j, |lambda| = 1.019432
+  lambda_2 = -0.009716-0.098565j, |lambda| = 0.099042
+  lambda_3 = -0.009716+0.098565j, |lambda| = 0.099042
+
+x=0.1:
+  lambda_1 = 1.160435+0.000000j, |lambda| = 1.160435
+  lambda_2 = -0.080218-0.282382j, |lambda| = 0.293555
+  lambda_3 = -0.080218+0.282382j, |lambda| = 0.293555
+
+x=0.5:
+  lambda_1 = 1.536974+0.000000j, |lambda| = 1.536974
+  lambda_2 = -0.268487-0.503219j, |lambda| = 0.570364
+  lambda_3 = -0.268487+0.503219j, |lambda| = 0.570364
+
+x=1.0:
+  lambda_1 = 1.839287+0.000000j, |lambda| = 1.839287
+  lambda_2 = -0.419643-0.606291j, |lambda| = 0.737353
+  lambda_3 = -0.419643+0.606291j, |lambda| = 0.737353
+
+x=2.0:
+  lambda_1 = 2.269531+0.000000j, |lambda| = 2.269531
+  lambda_2 = -0.634765+0.691601j, |lambda| = 0.938744
+  lambda_3 = -0.634765-0.691601j, |lambda| = 0.938744
+
+============================================================
+SMALL-x EXPANSION: lambda_{2,3} ~ +/- i*sqrt(x)
+============================================================
+  x=0.001: lambda_1 = 1.00199403+0.00000000j, predicted = 1.00200000
+  x=0.001: lambda_2 = -0.00099702-0.03157556j, predicted = 0.00000000+0.03162278j
+  x=0.001: lambda_3 = -0.00099702+0.03157556j, predicted = 0.00000000-0.03162278j
+  x=0.01: lambda_1 = 1.01943179+0.00000000j, predicted = 1.02000000
+  x=0.01: lambda_2 = -0.00971590-0.09856464j, predicted = 0.00000000+0.10000000j
+  x=0.01: lambda_3 = -0.00971590+0.09856464j, predicted = 0.00000000-0.10000000j
+  x=0.1: lambda_1 = 1.16043514+0.00000000j, predicted = 1.20000000
+  x=0.1: lambda_2 = -0.08021757-0.28238221j, predicted = 0.00000000+0.31622777j
+  x=0.1: lambda_3 = -0.08021757+0.28238221j, predicted = 0.00000000-0.31622777j
+
+============================================================
+THEOREM: Non-dominant eigenvalue contribution
+============================================================
+lambda_1(x) ~ 1 + 2x: contributes to ALL m values
+lambda_{2,3}(x) ~ +/- i*sqrt(x): contribute ONLY at m=2 (N even)
+
+Consequence: g_k(m) for m >= 3 is determined SOLELY by lambda_1.
+The dominant eigenvalue gives [x^k] lambda_1^N = degree-k polynomial in N.
+g_k(m) for m >= 3 is a degree-k polynomial in m.
+
+At m=1: g_k(1) = 1 for all k (boundary condition).
+At m=2: g_k(2) = 2k (includes lambda_{2,3} correction).
+
+The opus degree-3 fit absorbs the m=2 correction into the polynomial,
+but this forces the polynomial to have the WRONG degree for m >= 5.
+Both give the same CV^2 sum because the errors redistribute across k-levels.
+
+============================================================
+DOMINANT EIGENVALUE g_k vs FULL g_k
+============================================================
+
+k=1:
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\gk_eigenvalues_s112.py", line 311, in <module>
+    tm = transfer_gk_local(n, k)
+         ^^^^^^^^^^^^^^^^^
+NameError: name 'transfer_gk_local' is not defined
