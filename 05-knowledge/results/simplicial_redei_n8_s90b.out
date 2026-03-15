@@ -1,0 +1,26 @@
+Simplicial Rédei exhaustive at n=8 (268435456 tournaments)
+
+======================================================================
+RESULTS: Simplicial Rédei at n=8 (EXHAUSTIVE)
+======================================================================
+
+sim_H = 0 (cyclic core):     268354816
+sim_H = 1 (total order):     80640
+sim_H > 1 (partial DAG):     0
+
+  *** SIMPLICIAL REDEI HOLDS: sim_H in {0,1} for ALL 268435456 tournaments! ***
+
+Breakdown of sim_H = 1 (80640 total):
+  Transitive (H=1):    40320  (expected: 40320 = 8!)
+  H=65 (=2^6+1):      40320  (expected: 40320 = 8!)
+  Other H values:      0
+  Total sim_H=1:       80640  (expected: 80640 = 2*8!)
+
+H value distribution for sim_H=1:
+  H=  1: 40320 tournaments
+  H= 65: 40320 tournaments
+
+Fraction with sim_H=1: 80640/268435456 = 0.00030041
+Predicted fraction (2*n!/2^C(n,2)): 0.00030041
+
+Elapsed: 78 seconds
