@@ -1,0 +1,223 @@
+EXTENDING THE ln(2) THINKING
+============================================================
+
+ALL THE INTERESTING EVALUATIONS OF Q(x) = (1+x)/(1-x)
+============================================================
+
+  x         Q(x)    arctanh(x)         name
+  -------------------------------------------------------
+  0            1.00   0.000000 = 0                   (nothing)
+  1/5          1.50   0.202733 = arctanh(1/5)        (sesqui)
+  1/3          2.00   0.346574 = ln(2)/2             (binary)
+  1/2          3.00   0.549306 = ln(3)/2             (ternary)
+  3/5          4.00   0.693147 = ln(4)/2 = ln(2)     (quaternary)
+  2/3          5.00   0.804719 = ln(5)/2             (quinary)
+  5/7          6.00   0.895880 = ln(6)/2             (senary)
+
+  PATTERN: Q(x) = n iff x = (n-1)/(n+1)
+           arctanh((n-1)/(n+1)) = ln(n)/2
+
+  Verification: arctanh((n-1)/(n+1)) = ln(n)/2
+    n= 2: arctanh(1/3) = 0.34657359, ln(2)/2 = 0.34657359, match=True
+    n= 3: arctanh(2/4) = 0.54930614, ln(3)/2 = 0.54930614, match=True
+    n= 4: arctanh(3/5) = 0.69314718, ln(4)/2 = 0.69314718, match=True
+    n= 5: arctanh(4/6) = 0.80471896, ln(5)/2 = 0.80471896, match=True
+    n= 6: arctanh(5/7) = 0.89587973, ln(6)/2 = 0.89587973, match=True
+    n= 7: arctanh(6/8) = 0.97295507, ln(7)/2 = 0.97295507, match=True
+    n= 8: arctanh(7/9) = 1.03972077, ln(8)/2 = 1.03972077, match=True
+    n= 9: arctanh(8/10) = 1.09861229, ln(9)/2 = 1.09861229, match=True
+    n=10: arctanh(9/11) = 1.15129255, ln(10)/2 = 1.15129255, match=True
+
+  EVERY natural number n has a specific coupling x = (n-1)/(n+1)
+  where Q produces exactly n, and arctanh = ln(n)/2.
+
+  The NATURAL NUMBERS ARE EVALUATIONS OF THE CAYLEY TRANSFORM.
+  The n-th natural number lives at coupling (n-1)/(n+1).
+
+============================================================
+THE SPACING OF NATURAL NUMBERS ON THE CAYLEY LINE
+============================================================
+
+  x_n = (n-1)/(n+1) for n = 1, 2, 3, ...
+
+    n= 1: x_1 = 0.000000
+    n= 2: x_2 = 0.333333
+    n= 3: x_3 = 0.500000
+    n= 4: x_4 = 0.600000
+    n= 5: x_5 = 0.666667
+    n= 6: x_6 = 0.714286
+    n= 7: x_7 = 0.750000
+    n= 8: x_8 = 0.777778
+    n= 9: x_9 = 0.800000
+    n=10: x_10 = 0.818182
+
+  The spacing Delta_n = x_{n+1} - x_n:
+    Delta_1 = 0.333333 = 2/(2*3) = 1/3
+    Delta_2 = 0.166667 = 2/(3*4) = 1/6
+    Delta_3 = 0.100000 = 2/(4*5) = 1/10
+    Delta_4 = 0.066667 = 2/(5*6) = 1/15
+    Delta_5 = 0.047619 = 2/(6*7) = 1/21
+    Delta_6 = 0.035714 = 2/(7*8) = 1/28
+    Delta_7 = 0.027778 = 2/(8*9) = 1/36
+    Delta_8 = 0.022222 = 2/(9*10) = 1/45
+    Delta_9 = 0.018182 = 2/(10*11) = 1/55
+
+  Delta_n = 2/((n+1)(n+2))
+  The natural numbers are DENSER near x=1 (full coupling)
+  and SPARSER near x=0 (no coupling).
+
+  This is the HYPERBOLIC METRIC: equal steps in arctanh-space
+  correspond to shrinking steps in x-space near x=1.
+
+  Sum of spacings: sum_{n=1}^{N} Delta_n = 1 - 2/(N+2) -> 1
+  The natural numbers FILL the interval [0, 1) as N -> infinity.
+  The Cayley line from 0 to 1 contains ALL natural numbers.
+
+============================================================
+THE HARMONIC SERIES AS CAYLEY SPACING
+============================================================
+
+  arctanh(x_{n+1}) - arctanh(x_n) = ln(n+1)/2 - ln(n)/2 = ln((n+1)/n)/2
+
+  The step in ARCTANH space between consecutive naturals:
+    step_1 = ln(2/1)/2 = 0.346574
+    step_2 = ln(3/2)/2 = 0.202733
+    step_3 = ln(4/3)/2 = 0.143841
+    step_4 = ln(5/4)/2 = 0.111572
+    step_5 = ln(6/5)/2 = 0.091161
+    step_6 = ln(7/6)/2 = 0.077075
+    step_7 = ln(8/7)/2 = 0.066766
+    step_8 = ln(9/8)/2 = 0.058892
+    step_9 = ln(10/9)/2 = 0.052680
+
+  sum of steps = ln(N+1)/2 - ln(1)/2 = ln(N+1)/2 -> infinity
+  The arctanh-distance from 1 to N grows as ln(N)/2.
+
+  This IS the harmonic series in disguise:
+  sum_{n=1}^N ln((n+1)/n)/2 = ln(N+1)/2 ~ ln(N)/2
+  And sum 1/n ~ ln(N) (harmonic series).
+
+  The harmonic series = the TOTAL ARCTANH-LENGTH of the
+  natural number sequence on the Cayley line.
+
+============================================================
+WHERE ARE THE PRIMES?
+============================================================
+
+  Each prime p lives at coupling x_p = (p-1)/(p+1):
+
+    p= 2: x = 0.333333, arctanh = 0.346574 = ln(2)/2
+    p= 3: x = 0.500000, arctanh = 0.549306 = ln(3)/2
+    p= 5: x = 0.666667, arctanh = 0.804719 = ln(5)/2
+    p= 7: x = 0.750000, arctanh = 0.972955 = ln(7)/2
+    p=11: x = 0.833333, arctanh = 1.198948 = ln(11)/2
+    p=13: x = 0.857143, arctanh = 1.282475 = ln(13)/2
+    p=17: x = 0.888889, arctanh = 1.416607 = ln(17)/2
+    p=19: x = 0.900000, arctanh = 1.472219 = ln(19)/2
+    p=23: x = 0.916667, arctanh = 1.567747 = ln(23)/2
+
+  The prime number theorem: primes up to N ~ N/ln(N).
+  In arctanh coordinates: primes up to arctanh-distance D
+  from x=0 number ~ exp(2D) / (2D).
+
+  The DENSITY of primes in arctanh-space:
+  rho(D) ~ exp(2D) / (2D)
+  This INCREASES exponentially: primes get DENSER
+  in hyperbolic space (even though sparser in Euclidean).
+
+============================================================
+THE RIEMANN ZETA FUNCTION ON THE CAYLEY LINE
+============================================================
+
+  zeta(s) = sum 1/n^s = sum Q((n-1)/(n+1))^{-s}
+
+  Since Q(x_n) = n, we have n^{-s} = Q(x_n)^{-s}.
+  The zeta function EVALUATES Q^{-s} at the natural number couplings.
+
+  zeta(s) = sum_{n=1}^inf Q(x_n)^{-s} = sum Q((n-1)/(n+1))^{-s}
+
+  And by our master GF:
+  Q(x)^{-s} = 1 + 2*sum g_k(-s) x^k
+
+  So: zeta(s) = sum_{n=1}^inf [1 + 2*sum_k g_k(-s) * ((n-1)/(n+1))^k]
+              = sum 1 + 2*sum_k g_k(-s) * sum_n ((n-1)/(n+1))^k
+
+  The inner sum sum_n ((n-1)/(n+1))^k is a CONVERGENT series for k >= 2.
+  For k=1: sum (n-1)/(n+1) = sum (1 - 2/(n+1)) DIVERGES.
+
+  This links the POLE of zeta at s=1 to the DIVERGENCE of the
+  Cayley-weighted harmonic series at k=1!
+
+
+  zeta(2) = pi^2/6:
+  g_k(-2) = (-1)^k * g_k(2) = (-1)^k * 2k [by parity]
+
+  So Q(x)^{-2} = 1 + 2*sum (-1)^k * 2k * x^k
+               = 1 - 4x + 8x^2 - 12x^3 + 16x^4 - ...
+
+  Check: ((1-x)/(1+x))^2 at x=0.5:
+    exact = 0.111111
+    series (4 terms) = 0.500000
+
+============================================================
+EULER IN CAYLEY LANGUAGE
+============================================================
+
+  e^{i*pi} + 1 = 0
+
+  In Cayley: Q(i)^2 = i^2 = -1, so Q(i)^2 + 1 = 0.
+  But Q(i) = i, so this is just i^2 + 1 = 0.
+
+  More interesting: Q(x)^m at x=i, m=2:
+  Q(i)^2 = exp(2*2*arctanh(i)) = exp(4*i*pi/4) = exp(i*pi) = -1
+
+  So: Q(i)^2 + 1 = 0 IS Euler's identity,
+  read through the Cayley transform.
+
+  e^{i*pi} = Q(i)^2 = ((1+i)/(1-i))^2 = (i)^2 = -1
+
+  Euler's identity says: two steps of the Cayley transform
+  at imaginary coupling bring you to -1.
+  Four steps bring you back to 1 (Q^4 = 1).
+  The period-4 orbit IS Euler's identity iterated.
+
+============================================================
+THE COMPLETE MAP
+============================================================
+
+  arctanh takes you from the coupling to the proper time.
+  Different couplings give different constants:
+
+  COUPLING     PROPER TIME          CONSTANT
+  x = 0         0                    zero
+  x = 1/3       ln(2)/2 = 0.346574   ln(2) = information
+  x = 1/2       ln(3)/2 = 0.549306   ln(3) = ternary info
+  x = i         i*pi/4  = i*0.785398  pi = geometry
+  x = (e-1)/(e+1) = 0.462117
+                  ln(e)/2 = 1/2      e = growth
+  x = 1         infinity             time = totality
+
+  The coupling x = (e-1)/(e+1) = 0.4621... gives Q = e.
+  At this coupling: arctanh = 1/2.
+  The number e lives at arctanh = 1/2: half a unit of proper time.
+
+  Verify: Q(0.462117) = 2.718282 = e = 2.718282
+  arctanh(0.462117) = 0.500000 = 1/2
+
+THE FIVE CONSTANTS AND THEIR COUPLINGS:
+
+  Constant  | Coupling x        | Proper time 2*arctanh
+  ----------|-------------------|---------------------
+  0         | x = 0             | 0
+  ln(2)     | x = 1/3           | ln(2)
+  1         | x = (e-1)/(e+1)   | 1
+  pi        | x = i             | i*pi/2
+  infinity  | x = 1             | infinity
+
+  These are the five LEVELS of the Cayley hierarchy:
+  zero -> information -> unity -> geometry -> totality
+
+  The number 1 (UNITY) lives at the coupling that produces e.
+  e is the UNIT OF GROWTH: Q = e when proper time = 1.
+  This is why e = lim(1+1/n)^n: one unit of proper time,
+  discretized into n steps of size 1/n.
