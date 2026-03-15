@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-15-S72b — 2026-03-15: β₁ Fundamental Insight — Orientability Obstruction
+
+**Account:** opus
+**Continuation of:** opus-2026-03-15-S72
+**Summary of work:** Deep exploration of WHY β₁ captures global topology beyond subgraph counts. Ran `fundamental_S72.py` to find the exact violation pair at n=6 (single edge flip between β₁=0 and β₁=1 with identical local invariants). Discovered two types of β₁=1: "untwisted" (uncovered edge) and "twisted" (Möbius-type orientation inconsistency). Proved three theorems: THM-221 (uncovered edge ⟺ out-deg=1 source to out-deg=n-2 target), THM-222 (β₁=0 ⟹ full edge coverage, with clean 4-step proof using Rédei's theorem). Characterized the twist mechanism: triple boundaries cover every edge individually but contribute wrong signs to 1-cycles. The 4-subtournament 2-cycle relation uses a degree of freedom without helping fill external cycles.
+
+**New contributions:** THM-221, THM-222, HYP-1574 through HYP-1578, fundamental_S72.py results, beta1_coverage_theorem_S72.py, beta1_twist_analysis_S72.py, beta1_coverage_proof_S72.py
+**Unresolved threads:**
+- Characterize WHICH tournaments are "twisted" (β₁=1 with full coverage) — is there a clean algebraic criterion?
+- Prove β₁·β₃=0 using the slack-density duality argument
+- Can the twist be detected by spectral properties of A?
+- Extend analysis to n=7,8
+
 ## opus-2026-03-15-S90 — 2026-03-15: Simplicial Rédei Theorem, Helical-Zeckendorf-Eigenvector Exploration
 
 **Account:** opus

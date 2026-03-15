@@ -1,0 +1,182 @@
+========================================================================
+THE MÖBIUS TWIST — β₁=1 with full coverage
+opus-2026-03-15-S72
+========================================================================
+
+n=5: 720 clean, 144 twisted, 160 untwisted (1.2s)
+
+============================================================
+TWISTED CASES (β₁=1, all edges covered)
+============================================================
+
+  Score sequences: {(1, 2, 2, 2, 3): 120, (2, 2, 2, 2, 2): 24}
+  t3 distribution: {4: 120, 5: 24}
+  #triples distribution: {6: 120, 5: 24}
+
+============================================================
+UNTWISTED CASES (β₁=1, has uncovered edges)
+============================================================
+
+  Score sequences: {(1, 1, 2, 3, 3): 120, (1, 2, 2, 2, 3): 40}
+  t3 distribution: {3: 120, 4: 40}
+  #triples distribution: {7: 120, 6: 40}
+
+============================================================
+DEEP DIVE: One twisted tournament
+============================================================
+
+  bits=12, score_seq=(1, 2, 2, 2, 3), t3=4
+  Adjacency:
+    [0, 0, 0, 1, 1]
+    [1, 0, 0, 0, 0]
+    [1, 1, 0, 0, 0]
+    [0, 1, 1, 0, 0]
+    [0, 1, 1, 1, 0]
+  #edges=10, #triples=6, rank(∂₂)=5
+  Uncovered edges: set()
+
+  Unbounding cycle(s):
+    Cycle 0: [((0, 3), 1), ((1, 0), 1), ((3, 1), 1)]
+    Edges in cycle: {(1, 0), (0, 3), (3, 1)}
+      Edge (0, 3) (coeff=1): covered by 1 triples: [(0, 4, 3)]
+      Edge (1, 0) (coeff=1): covered by 1 triples: [(2, 1, 0)]
+      Edge (3, 1) (coeff=1): covered by 2 triples: [(3, 2, 1), (4, 3, 1)]
+    Cycle 1: [((0, 3), 1), ((2, 0), 1), ((3, 2), 1)]
+    Edges in cycle: {(3, 2), (0, 3), (2, 0)}
+      Edge (0, 3) (coeff=1): covered by 1 triples: [(0, 4, 3)]
+      Edge (2, 0) (coeff=1): covered by 1 triples: [(2, 1, 0)]
+      Edge (3, 2) (coeff=1): covered by 2 triples: [(3, 2, 1), (4, 3, 2)]
+    Cycle 2: [((0, 4), 1), ((1, 0), 1), ((4, 1), 1)]
+    Edges in cycle: {(1, 0), (0, 4), (4, 1)}
+      Edge (0, 4) (coeff=1): covered by 1 triples: [(0, 4, 3)]
+      Edge (1, 0) (coeff=1): covered by 1 triples: [(2, 1, 0)]
+      Edge (4, 1) (coeff=1): covered by 2 triples: [(4, 2, 1), (4, 3, 1)]
+    Cycle 3: [((0, 4), 1), ((2, 0), 1), ((4, 2), 1)]
+    Edges in cycle: {(2, 0), (0, 4), (4, 2)}
+      Edge (0, 4) (coeff=1): covered by 1 triples: [(0, 4, 3)]
+      Edge (2, 0) (coeff=1): covered by 1 triples: [(2, 1, 0)]
+      Edge (4, 2) (coeff=1): covered by 2 triples: [(4, 2, 1), (4, 3, 2)]
+
+============================================================
+WHY CAN'T TRIPLES FILL THE CYCLE?
+============================================================
+
+  The cycle is a vector c ∈ ker(∂₁) with c ∉ im(∂₂).
+  Even though every edge in c is covered by some triple,
+  no LINEAR COMBINATION of triple boundaries equals c.
+
+  This is like: every side of a Möbius strip is locally
+  a piece of paper, but you can't tile it consistently.
+
+  Let's see the actual linear algebra obstruction:
+
+  dim(ker ∂₁) = 6
+  rank(∂₂) = 5
+  β₁ = 6 - 5 = 1
+
+  Boundary matrix ∂₂ (10×6):
+  Edges: [(0, 3), (0, 4), (1, 0), (2, 0), (2, 1), (3, 1), (3, 2), (4, 1), (4, 2), (4, 3)]
+  Triples: [(0, 4, 3), (2, 1, 0), (3, 2, 1), (4, 2, 1), (4, 3, 1), (4, 3, 2)]
+
+  Unbounding cycle vector:
+    +1 × (0, 3)
+    +1 × (1, 0)
+    +1 × (3, 1)
+
+  Triple boundaries:
+    ∂(0,4,3) = -1×(0, 3) +1×(0, 4) +1×(4, 3)
+    ∂(2,1,0) = +1×(1, 0) -1×(2, 0) +1×(2, 1)
+    ∂(3,2,1) = +1×(2, 1) -1×(3, 1) +1×(3, 2)
+    ∂(4,2,1) = +1×(2, 1) -1×(4, 1) +1×(4, 2)
+    ∂(4,3,1) = +1×(3, 1) -1×(4, 1) +1×(4, 3)
+    ∂(4,3,2) = +1×(3, 2) -1×(4, 2) +1×(4, 3)
+
+============================================================
+3-CYCLES vs TRANSITIVE TRIPLES
+============================================================
+
+  --- twisted examples ---
+    bits=12: t3=4, #trans_triples=6, 3-cycles=4, ratio=1.50
+    bits=28: t3=4, #trans_triples=6, 3-cycles=4, ratio=1.50
+    bits=57: t3=4, #trans_triples=6, 3-cycles=4, ratio=1.50
+
+  --- untwisted examples ---
+    bits=8: t3=3, #trans_triples=7, 3-cycles=3, ratio=2.33
+    bits=14: t3=3, #trans_triples=7, 3-cycles=3, ratio=2.33
+    bits=24: t3=3, #trans_triples=7, 3-cycles=3, ratio=2.33
+
+============================================================
+SEARCHING FOR TWIST INVARIANT
+============================================================
+
+  Comparing rank(∂₂) distributions:
+  Clean (β₁=0):    rank(∂₂) dist = {6: 720}
+  Twisted (β₁=1):  rank(∂₂) dist = {5: 144}
+  Untwisted (β₁=1): rank(∂₂) dist = {5: 160}
+
+  Comparing #triples distributions:
+  Clean       : #triples dist = {6: 120, 7: 120, 8: 240, 9: 120, 10: 120}
+  Twisted     : #triples dist = {5: 24, 6: 120}
+  Untwisted   : #triples dist = {6: 40, 7: 120}
+
+============================================================
+CYCLE-EDGE PARTICIPATION IN TRANSITIVE TRIPLES
+============================================================
+
+  --- Twisted ---
+    bits=12: 3-cyc edges=8, trans edges=10, both=8, only-cycle=0
+    bits=28: 3-cyc edges=8, trans edges=10, both=8, only-cycle=0
+    bits=57: 3-cyc edges=8, trans edges=10, both=8, only-cycle=0
+    bits=70: 3-cyc edges=8, trans edges=10, both=8, only-cycle=0
+    bits=72: 3-cyc edges=8, trans edges=10, both=8, only-cycle=0
+
+  --- Untwisted ---
+    bits=8: 3-cyc edges=7, trans edges=9, both=6, only-cycle=1
+    bits=14: 3-cyc edges=7, trans edges=9, both=6, only-cycle=1
+    bits=24: 3-cyc edges=7, trans edges=9, both=6, only-cycle=1
+    bits=29: 3-cyc edges=7, trans edges=9, both=6, only-cycle=1
+    bits=40: 3-cyc edges=10, trans edges=9, both=9, only-cycle=1
+
+============================================================
+LINEAR DEPENDENCE STRUCTURE
+============================================================
+
+  For a twisted tournament, rank(∂₂) = 5 (one less than the 6 it needs)
+  This means there's a linear relation among the triple boundaries.
+  What IS this relation?
+
+  Left nullspace of ∂₂ (relations among rows):
+    dim = 5 (these are the relations)
+
+  Right nullspace of ∂₂ (2-cycles = relations among triples):
+    dim = 1
+    Relation 0: -1×∂((3, 2, 1)) +1×∂((4, 2, 1)) -1×∂((4, 3, 1)) +1×∂((4, 3, 2)) = 0
+           Vertices: [1, 2, 3, 4]
+
+  For comparison, clean tournament bits=0:
+    #triples=10, rank(∂₂)=6
+    2-cycles (right nullspace dim) = 4
+
+============================================================
+FINAL SYNTHESIS
+============================================================
+
+  At n=5:
+  - 720 tournaments have β₁=0 (all edges covered, all 1-cycles bound)
+  - 160 tournaments have β₁=1 with uncovered edge (obvious obstruction)
+  - 144 tournaments have β₁=1 with full coverage (THE TWIST)
+
+  The 144 twisted cases have:
+  - All edges covered by transitive triples
+  - But the triple system has a "topological twist"
+  - The boundaries of triples can cover every edge individually
+    but cannot SIMULTANEOUSLY fill a 1-cycle
+  - This is exactly like a Möbius strip: locally orientable,
+    globally non-orientable
+
+  The 2-cycles (right nullspace of ∂₂) reveal the structure:
+  - Relations among triples show which surfaces are "closed"
+  - In twisted tournaments, these closed surfaces don't
+    span all of ker(∂₁)
+
+DONE — beta1_twist_analysis_S72.py complete

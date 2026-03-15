@@ -1,0 +1,199 @@
+========================================================================
+THE FUNDAMENTAL QUESTION
+What does β₁ see that subgraph counts cannot?
+========================================================================
+
+Searching for violation pair at n=6...
+
+Found pair!
+
+========================================================================
+STEP 2: Structural comparison of β₁=0 vs β₁=1
+========================================================================
+
+  β₁=0 tournament (bits=145):
+    Adjacency matrix:
+      [0, 1, 0, 0, 0, 1]
+      [0, 0, 0, 0, 1, 0]
+      [1, 1, 0, 0, 0, 0]
+      [1, 1, 1, 0, 0, 0]
+      [1, 0, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+    Out-degrees: [2, 1, 2, 3, 3, 4]
+    rank(∂₂) = 10, #triples = 14
+
+  β₁=1 tournament (bits=144):
+    Adjacency matrix:
+      [0, 0, 0, 0, 0, 1]
+      [1, 0, 0, 0, 1, 0]
+      [1, 1, 0, 0, 0, 0]
+      [1, 1, 1, 0, 0, 0]
+      [1, 0, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+    Out-degrees: [1, 2, 2, 3, 3, 4]
+    rank(∂₂) = 9, #triples = 14
+
+  Difference in rank(∂₂): 1
+
+========================================================================
+STEP 3: The cycle that doesn't bound
+========================================================================
+
+  The 1-cycle in β₁=1 tournament that has no 2-chain boundary:
+    +1·(0→5)
+    +1·(1→0)
+    +1·(5→1)
+  Total: 3 edges in the cycle
+
+  This cycle exists in ker(∂₁) but NOT in im(∂₂).
+  It wraps around the tournament in a way that no combination
+  of transitive triples can decompose.
+
+========================================================================
+STEP 4: Topological difference
+========================================================================
+
+  β₁=0: 3-cycles: [(0, 1, 4), (0, 2, 5), (0, 3, 5), (0, 4, 5), (1, 2, 4), (1, 3, 4)]
+  β₁=1: 3-cycles: [(0, 1, 5), (0, 2, 5), (0, 3, 5), (0, 4, 5), (1, 2, 4), (1, 3, 4)]
+
+  Edges that differ between the two tournaments:
+    0→1 in T0, 1→0 in T1
+  Total flipped edges: 1
+
+========================================================================
+STEP 5: Symmetry analysis
+========================================================================
+  T1 isomorphic to T0^op? False
+  T0 isomorphic to T1? False
+  T0 self-complementary? True
+  T1 self-complementary? True
+
+========================================================================
+STEP 6: Path coverage analysis
+========================================================================
+
+  β₁=0 tournament:
+    #triples: 14
+    #edges: 15
+    #edges in ≥1 triple: 15/15
+    Uncovered edges: []
+    Coverage distribution: {1: 2, 2: 1, 3: 10, 4: 2}
+
+  β₁=1 tournament:
+    #triples: 14
+    #edges: 15
+    #edges in ≥1 triple: 14/15
+    Uncovered edges: [(0, 5)]
+    Coverage distribution: {2: 1, 3: 12, 4: 1}
+
+========================================================================
+STEP 7: Why β₁·β₃=0? The underfilling/overfilling duality
+========================================================================
+
+  β₁ > 0 means: UNDERFILLING — there exist directed cycles that
+  cannot be decomposed into transitive triple boundaries.
+  The 2-path system doesn't reach far enough.
+
+  β₃ > 0 means: OVERFILLING — there exist 3-dimensional holes.
+  The 4-path system creates cavities that can't be filled.
+
+  CONJECTURE for why β₁·β₃ = 0:
+
+  If β₁ > 0, the tournament has "topological slack" — uncoverable cycles.
+  This slack means there's room for 3-chains to fill any potential 3-holes.
+  The im(∂₃) → ker(∂₂) exactness (β₂=0) then forces im(∂₄) → ker(∂₃).
+
+  If β₃ > 0, the tournament is "topologically dense" — so many paths that
+  they wrap around creating cavities. But this density means every 1-cycle
+  IS decomposable (β₁=0).
+
+  This is a DUALITY: slack ↔ density. You can't have both.
+
+  Verification at n=5 (exhaustive):
+
+    β₁=0 tournaments (720):
+      H range: [1, 13], mean: 6.0
+      t3 range: [0, 4], mean: 2.0
+
+    β₁=1 tournaments (304):
+      H range: [9, 15], mean: 11.1
+      t3 range: [3, 5], mean: 3.7
+
+  β₁=1 tournaments have HIGHER H and t3 on average!
+  This seems to CONTRADICT the 'underfilling' hypothesis...
+  Unless: β₁=1 means 'topological TWISTING' not 'sparsity'.
+
+========================================================================
+STEP 8: The Möbius twist interpretation
+========================================================================
+
+  REVISED INSIGHT:
+
+  β₁ > 0 does NOT mean "too few paths." It means TWISTED paths.
+  The tournament has a directed cycle where the 2-paths that
+  should fill it are "oriented the wrong way" — like trying to
+  tile a Möbius strip with oriented squares.
+
+  The unbounding cycle wraps around in a way that reverses
+  the orientation of any potential filling.
+
+  This is why subgraph counts can't detect it: COUNTS are
+  orientation-blind. β₁ sees ORIENTATION.
+
+  The analogy: Two surfaces can have the same number of
+  triangles, edges, vertices — but one is orientable (S²)
+  and the other is not (RP²). β₁ detects this.
+
+  For tournaments: the directed edges carry orientation.
+  A 1-cycle is a signed combination of edges. Whether it
+  bounds depends on whether the orientations of 2-paths
+  ALIGN consistently. This is a GLOBAL orientation property.
+
+  The unbounding cycle edges form a pattern:
+  Vertices involved: [0, 1, 5]
+  Induced subtournament on these vertices:
+    0: [0, 0, 1]
+    1: [1, 0, 0]
+    5: [0, 1, 0]
+  Subtournament score sequence: [1, 1, 1]
+  Strongly connected? True
+
+========================================================================
+STEP 9: THE FUNDAMENTAL INSIGHT
+========================================================================
+
+  β₁ is the ORIENTABILITY OBSTRUCTION of the tournament's path complex.
+
+  Key chain of reasoning:
+
+  1. β₂ = 0 (PROVED): The path complex is exact at degree 2.
+     This means every 2-cycle bounds. The complex is "2-acyclic."
+
+  2. β₁ measures 1-cycles that don't bound 2-chains.
+     In an oriented complex, this happens when the ORIENTATIONS
+     of 2-cells are INCONSISTENT with the cycle's orientation.
+
+  3. For tournaments, "orientation inconsistency" means:
+     the cycle wraps through vertices whose out-neighborhoods
+     create a TWISTING pattern in the path space.
+
+  4. No subgraph count can detect twisting because counts are
+     symmetric under relabeling. But orientation is NOT.
+     Two tournaments can have the same unlabeled subgraph
+     census but different labeled orientation patterns.
+
+  5. The β₁·β₃ = 0 mutual exclusivity then says:
+     - Twisted tournaments (β₁>0) can't create 3-holes
+       because the twist PREVENTS higher-dimensional wrapping.
+     - Dense tournaments (β₃>0) can't be twisted because
+       density forces orientation consistency at the 1-level.
+
+  This is the TOPOLOGICAL CONTENT of tournament theory.
+  OCF (H = I(Ω,2)) is an ALGEBRAIC identity.
+  β₁·β₃ = 0 is a GEOMETRIC constraint.
+  Together they give the full picture:
+    ALGEBRAIC: how many paths (counted by H)
+    GEOMETRIC: how paths wrap (measured by β)
+
+
+DONE — fundamental_S72.py complete

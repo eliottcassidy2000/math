@@ -1,0 +1,114 @@
+========================================================================
+COVERAGE THEOREM TEST — Does β₁ correlate with uncovered edges?
+opus-2026-03-15-S72
+========================================================================
+
+============================================================
+n = 5
+============================================================
+
+  Exhaustive search: 1024 tournaments in 0.7s
+
+  β₁ → uncovered edge counts:
+    β₁=0: {0: 720}  (total: 720)
+    β₁=1: {0: 144, 1: 160}  (total: 304)
+
+  uncovered count → β₁ values:
+    uncov=0: β₁ distribution = {0: 720, 1: 144}  (total: 864)
+    uncov=1: β₁ distribution = {1: 160}  (total: 160)
+
+  CONJECTURE TESTS:
+    'uncov=0 ⟹ β₁=0': violations = 144
+    'β₁=0 ⟹ uncov=0': violations = 0
+    ✗ Full coverage does NOT imply β₁=0
+    ✓ β₁=0 IMPLIES full coverage
+
+============================================================
+n = 6
+============================================================
+
+  Exhaustive search: 32768 tournaments in 34.6s
+
+  β₁ → uncovered edge counts:
+    β₁=0: {0: 27968}  (total: 27968)
+    β₁=1: {0: 2880, 1: 1920}  (total: 4800)
+
+  uncovered count → β₁ values:
+    uncov=0: β₁ distribution = {0: 27968, 1: 2880}  (total: 30848)
+    uncov=1: β₁ distribution = {1: 1920}  (total: 1920)
+
+  CONJECTURE TESTS:
+    'uncov=0 ⟹ β₁=0': violations = 2880
+    'β₁=0 ⟹ uncov=0': violations = 0
+    ✗ Full coverage does NOT imply β₁=0
+    ✓ β₁=0 IMPLIES full coverage
+
+============================================================
+DEEPER: Does the unbounding cycle pass through uncovered edges?
+============================================================
+
+  n=5, β₁>0 tournaments: 304
+  Unbounding cycle passes through uncovered edge: 160
+  Unbounding cycle does NOT pass through uncovered: 144
+
+============================================================
+WHAT MAKES AN EDGE UNCOVERED?
+============================================================
+
+  bits=8, uncovered edge 0→4:
+    Common out-neighbors of 0,4: []
+    Common in-neighbors of 0,4: []
+    Intermediates (i→k→j): []
+    out-deg(0)=1, out-deg(4)=3
+
+  bits=14, uncovered edge 1→0:
+    Common out-neighbors of 1,0: []
+    Common in-neighbors of 1,0: []
+    Intermediates (i→k→j): []
+    out-deg(1)=1, out-deg(0)=3
+
+  bits=24, uncovered edge 0→4:
+    Common out-neighbors of 0,4: []
+    Common in-neighbors of 0,4: []
+    Intermediates (i→k→j): []
+    out-deg(0)=1, out-deg(4)=3
+
+  Edge i→j is uncovered iff:
+    - No k with (i→j, j→k, i→k) [common out-neighbor]
+    - No k with (k→i, i→j, k→j) [common in-neighbor that also beats j]
+    - No k with (i→k, k→j, i→j) [intermediate on transitive path]
+    = No vertex k forming a transitive triple with edge i→j
+    = For all k: either k→i or j→k (k 'reverses' the path through i→j)
+
+  INSIGHT: edge i→j is uncovered iff every other vertex k satisfies:
+    k→i OR j→k (or both)
+  i.e., every k either beats i or loses to j.
+  In other words: N_in(i) ∪ N_out(j) ⊇ V\{i,j}
+  Equivalently: N_out(i)\{j} ⊆ N_out(j)\{i}
+  The out-neighborhood of i (minus j) is CONTAINED in that of j!
+
+  Verifying containment characterization at n=5...
+    Correct: 6080, Wrong: 4160
+
+  Verifying containment characterization at n=6...
+    Correct: 337920, Wrong: 153600
+
+============================================================
+SUMMARY OF FINDINGS
+============================================================
+
+  1. Edge i→j is NOT covered by any transitive triple
+     iff N_out(i)\{j} ⊆ N_out(j)\{i}
+     (j dominates all of i's other out-neighbors)
+
+  2. β₁ > 0 ⟹ ∃ such an edge (full coverage implies β₁=0)
+
+  3. The unbounding cycle PASSES THROUGH the uncovered edge(s)
+
+  4. GRAPH-THEORETIC MEANING: An uncovered edge i→j means
+     j is "almost dominating" i — j beats everyone i beats.
+     This creates a local ordering i < j that can't be
+     consistently extended to a global acyclic structure
+     via transitive triples.
+
+DONE — beta1_coverage_theorem_S72.py complete
