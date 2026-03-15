@@ -51,3 +51,14 @@ n=27: 11692423738081050318010736030
 # g_k(0) sequence: 0, 0, 0, -8, -592, -114320, -33338240, -12475185560, -5629549881808, -2973062116837472, -1807627677927630720
 # a_k/a_{k-1} ~ 5k^2 for large k
 # g_k(0)/a_k slowly approaches ~-2
+#
+# IMPORTANT: CV²(n) = 2 * Σ_k g_k(n-2k)/(n)_{2k}  (factor of 2!)
+#
+# g_12 partial determination from W(27):
+# g_12(1) = 1, g_12(2) = 24, g_12(3) = 165564813972957667489
+# g_12(0) + 2*a_12 = 165564813972957667420
+# Need W(28) for full g_12.
+#
+# N(n,0) = A002464 (Hertzsprung numbers — perms with |σ(i+1)-σ(i)| ≠ 1)
+# Hertzsprung recurrence: a(n) = (n+1)a(n-1) - (n-2)a(n-2) - (n-5)a(n-3) + (n-3)a(n-4)
+# N(n,j) triangle data saved in nnj_triangle_89c.txt

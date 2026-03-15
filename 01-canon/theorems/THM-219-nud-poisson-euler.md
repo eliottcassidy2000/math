@@ -43,10 +43,23 @@ Computational verification: the distribution of adj1 converges to Poisson(1) for
 | 20 | 2.846 | 0.099 | 1.985 |
 | 25 | 2.822 | 0.080 | 1.991 |
 
+### Part E: Hertzsprung connection
+Define N(n,j) = #{σ ∈ NUD(n) : adj1(σ) = j}. Then:
+- Row sums: Σ_j N(n,j) = NUD(n) = A000255(n-1)
+- Column j=0: N(n,0) = A002464(n) (Hertzsprung numbers — perms where |σ(i+1)-σ(i)| ≠ 1 for all i)
+- W(n) = Σ_j 2^j N(n,j)
+
+The Hertzsprung column satisfies:
+N(n,0) = (n+1)·N(n-1,0) - (n-2)·N(n-2,0) - (n-5)·N(n-3,0) + (n-3)·N(n-4,0)
+
+This recurrence does NOT extend to j > 0; the bivariate recurrence for N(n,j) is unknown.
+
 ## Related sequences
 
 - NUD(n): A000255 (offset by 1)
+- N(n,0): A002464 (Hertzsprung numbers)
 - W(n): NEW — not in OEIS as of 2026-03-15
+- N(n,j) triangle: NEW — not in OEIS as of 2026-03-15
 - W(n) = 1, 2, 8, 32, 158, 928, 6350, 49752, 439670, 4327904, 46963358, ... for n=1,2,3,...
 
 ## Open questions
@@ -55,3 +68,5 @@ Computational verification: the distribution of adj1 converges to Poisson(1) for
 2. Find the EGF of W(n) explicitly (bivariate EGF marking adj1 in NUD perms)
 3. Determine the next correction: CV²(n) = 2/n + c/n^α + ... (what is c and α?)
 4. Submit W(n) to OEIS
+5. Submit N(n,j) triangle to OEIS
+6. Find bivariate recurrence for N(n,j)

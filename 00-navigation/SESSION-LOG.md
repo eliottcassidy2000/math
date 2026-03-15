@@ -13,26 +13,33 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-15-S89c — 2026-03-15: W(n) to n=27, g_k to k=11, NUD-Poisson-e Connection
+## opus-2026-03-15-S89c — 2026-03-15: W(n) to n=27, g_k to k=11, Hertzsprung Connection, CV² Factor-of-2 Fix
 
 **Account:** opus
-**Continuation of:** opus-2026-03-15-S89c (context continuation)
-**Summary of work:** Extended W(n) computation from n=24 to n=27 using progressively optimized C programs (bitmask DP → popcount-level → rank-based → packed endpoints). Computed g_11 polynomial. Discovered deep structural connections: NUD(n) = A000255(n-1) with EGF exp(-x)/(1-x)², W(n)/NUD(n) → e (Euler's number), CV²(n) ≈ 2/n, and adj1 → Poisson(1) in random NUD perms.
+**Continuation of:** opus-2026-03-15-S89c (multi-context session)
+**Summary of work:** Extended W(n) from n=24 to n=27 via progressively optimized C programs (bitmask DP → popcount-level → rank-based → packed endpoints → multi-pass disk-backed). Computed g_11 polynomial and g_12(3) partial. Key discoveries: (1) N(n,0) = A002464 (Hertzsprung numbers) — unit-ascent-free NUD perms are adjacency-free perms. (2) CORRECTED CV² formula: CV²(n) = **2** × Σ_k g_k(n-2k)/(n)_{2k} (factor of 2 was missing). (3) Verified NUD and Hertzsprung Alekseyev formulas. (4) Computed full N(n,j) triangle for n=1..15. (5) Systematic recurrence searches for a_k, W(n), and N(n,j) all negative. (6) n=28 infeasible on current hardware (8 GB RAM, 7 GB disk).
 **New contributions:**
-- W(n) extended: n=25 (16746599265666151628174198), n=26 (434187457363955400414175008), n=27 (11692423738081050318010736030)
+- W(n) extended: n=25..27 (see wn_values_89c.txt)
 - g_11 polynomial: 3·g_11(m) = 1030345293948358170·m³ - 5802477398736520560·m² + 10195015138571054553·m - 5422883033782892160
-- g_12(3) = 165564813972957667489 (partial: D0+D3 = 165564813972957667420)
-- NUD(n) = A000255(n-1), recurrence NUD(n) = (n-1)·NUD(n-1) + (n-2)·NUD(n-2)
-- W(n)/NUD(n) → e as n → ∞ (Poisson(1) mechanism: adj1 ≈ Poisson(1) in NUD perms)
-- CV²(n) ≈ 2/n (Richardson extrapolation: CV²·n → 2)
-- a_k/a_{k-1} ≈ 5k² (growth rate of leading coefficient)
-- THM-217 updated to k=1..11
-- wn_rank2.c: packed endpoint storage, 2× memory savings (n=27 peak 8.7 GB on 8 GB machine)
+- g_12(3) = 165564813972957667489 (partial: g_12(0) + 2·a_12 = 165564813972957667420)
+- **CRITICAL FIX**: CV²(n) = 2 × Σ_k g_k(n-2k)/(n)_{2k} (factor of 2)
+- **N(n,0) = A002464** (Hertzsprung numbers): NUD perms with zero unit ascents = perms with no adjacencies at all
+- N(n,j) triangle computed for n=1..15 (saved in nnj_triangle_89c.txt)
+- Hertzsprung recurrence verified: a(n) = (n+1)a(n-1) - (n-2)a(n-2) - (n-5)a(n-3) + (n-3)a(n-4)
+- NUD Alekseyev formula verified: 1^t clusters (vs 2^t for Hertzsprung)
+- (1+u)^t hypothesis for W_u(n) **DISPROVED** — ascent marking not independent of descent IE
+- a_k recurrence search: 2-term quadratic, 3-term linear all fail
+- W(n) recurrence search: polynomial coefficients depth ≤ 4 all fail
+- wn_rank4.c: adaptive multi-pass disk-backed DP (2 GB chunks)
+- THM-219 updated with Part E (Hertzsprung connection)
+- a_12 estimated ≈ 7.11×10²⁰ via Richardson extrapolation (a_12/a_11 ≈ 690)
 **Unresolved threads:**
-- W(28) needed for full g_12 (requires 18 GB peak — beyond current hardware)
-- Prove W(n)/NUD(n) → e analytically (Poisson approximation argument sketched)
-- Find recurrence/GF for a_k sequence
-- Prove binomial truncation (why r≥4 terms cancel in g_k)
+- W(28) needed for full g_12 (requires 9+ GB RAM or 17+ GB disk — beyond current hardware)
+- Prove W(n)/NUD(n) → e analytically (Chen-Stein / Poisson approximation)
+- Find recurrence/GF for a_k sequence (systematic search negative)
+- Find bivariate recurrence for N(n,j) (systematic search negative)
+- Prove binomial truncation analytically (THM-217)
+- OEIS submissions: W(n), N(n,j) triangle, a_k, g_k(0) sequences
 
 ## kind-pasteur-2026-03-15-S112 — 2026-03-15: Transfer Matrix Weight Formula — g_k Has Degree k, Not 3
 

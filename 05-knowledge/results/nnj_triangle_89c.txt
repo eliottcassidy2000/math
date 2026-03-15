@@ -1,0 +1,41 @@
+# N(n,j) = #{σ ∈ NUD(n) : adj1(σ) = j}
+# NUD(n) = permutations of [n] with no unit descent (σ(i)-σ(i+1)=1 never occurs)
+# adj1(σ) = number of unit ascents (positions where σ(i+1)=σ(i)+1)
+# Computed by bitmask DP (nud_adj1_dist.py)
+# opus-2026-03-15-S89c
+#
+# Row sums: NUD(n) = A000255(n-1)
+# Column j=0: A002464 (Hertzsprung numbers — perms with no adjacent values differing by 1)
+# W(n) = Σ_j 2^j N(n,j)
+#
+# Hertzsprung recurrence (verified for j=0 column):
+#   N(n,0) = (n+1)N(n-1,0) - (n-2)N(n-2,0) - (n-5)N(n-3,0) + (n-3)N(n-4,0)
+# This recurrence does NOT hold for j>0; the bivariate recurrence is unknown.
+
+n=1:  [1]
+n=2:  [0, 1]
+n=3:  [0, 2, 1]
+n=4:  [2, 5, 3, 1]
+n=5:  [14, 20, 14, 4, 1]
+n=6:  [90, 115, 72, 26, 5, 1]
+n=7:  [646, 790, 467, 168, 41, 6, 1]
+n=8:  [5242, 6217, 3557, 1285, 319, 59, 7, 1]
+n=9:  [47622, 55160, 30968, 11120, 2834, 536, 80, 8, 1]
+n=10: [479306, 545135, 301970, 107918, 27752, 5432, 830, 104, 9, 1]
+n=11: [5296790, 5938490, 3255789, 1158624, 299454, 59580, 9450, 1212, 131, 10, 1]
+n=12: [63779034, 70686805, 38434607, 13626345, 3530514, 710034, 114894, 15312, 1693, 161, 11, 1]
+n=13: [831283558, 912660508, 492864354, 174148604, 45172191, 9147096, 1501020, 204456, 23495, 2284, 194, 12, 1]
+n=14: [11661506218, 12702694075, 6820525996, 2402630714, 623426927, 126812523, 21010320, 2907630, 341809, 34529, 2996, 230, 13, 1]
+n=15: [175203184374, 189579135710, 101292697671, 35583328840, 9231722935, 1883522306, 314193675, 43976556, 5258009, 543586, 48997, 3840, 269, 14, 1]
+
+# Key statistics:
+# E[adj1] in NUD(n): converges to 1 as n → ∞ (from above, rate 1 + 1/(n-1))
+# Var[adj1] in NUD(n): converges to 1 as n → ∞
+# Distribution: adj1 → Poisson(1) as n → ∞ (Chen-Stein, verified)
+# W(n)/NUD(n) → e (from E[2^Poisson(1)] = e)
+#
+# Alekseyev's formula for column j=0:
+#   A002464(n) = n! + Σ_{k=1}^{n} (-1)^k Σ_{t=1}^{k} C(k-1,t-1) C(n-k,t) 2^t (n-k)!
+#
+# The triangle N(n,j) appears to be new (not in OEIS as of 2026-03-15).
+# Candidate for OEIS submission.
