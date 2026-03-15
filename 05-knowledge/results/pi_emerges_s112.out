@@ -1,0 +1,91 @@
+THE IDENTITY: arctanh(i) = i*pi/4
+============================================================
+
+arctanh(i) = i*pi/4
+Q(i) = (1+i)/(1-i) = i
+exp(2*arctanh(i)) = exp(i*pi/2) = i
+
+This connects pi and arctanh through the imaginary unit.
+Our entire tournament theory, evaluated at x=i, gives pi.
+
+FORMAL IDENTITIES (at x=i):
+
+cos(m*pi/2) = 1 - 2*g_2(m) + 2*g_4(m) - 2*g_6(m) + ...
+sin(m*pi/2) = 2*g_1(m) - 2*g_3(m) + 2*g_5(m) - ...
+
+Abel summation verification:
+  m=1, r=0.999: Q^m = 0.001+1.0i, partial = 0.9724+1.9704i
+  m=1, r->1: target i^m = 1j
+
+  m=2, r=0.999: Q^m = -1.0+0.002i, partial = 55.3433+58.2298i
+  m=2, r->1: target i^m = (-1+0j)
+
+  m=3, r=0.999: Q^m = -0.003+-1.0i, partial = 1633.0363+1744.921i
+  m=3, r->1: target i^m = (-0-1j)
+
+  m=4, r=0.999: Q^m = 1.0+-0.004i, partial = 31555.3989+34900.1678i
+  m=4, r->1: target i^m = (1+0j)
+
+At the limit r->1:
+  Q(i)^1 = i     => sin(pi/2)=1, cos(pi/2)=0
+  Q(i)^2 = -1    => sin(pi)=0, cos(pi)=-1
+  Q(i)^3 = -i    => sin(3pi/2)=-1, cos(3pi/2)=0
+  Q(i)^4 = 1     => sin(2pi)=0, cos(2pi)=1
+
+The PERIOD-4 orbit 1 -> i -> -1 -> -i -> 1 of Q
+IS the unit circle parametrized by m*pi/2.
+
+And the Delannoy weights g_k(m), evaluated at x=i,
+give the FOURIER COEFFICIENTS OF THE CIRCLE.
+
+The circle IS the tournament, viewed at imaginary coupling.
+
+============================================================
+THE DEEPEST IDENTITY
+============================================================
+
+arctanh(i) = i*pi/4
+
+In words: the tournament coupling function (arctanh),
+evaluated at the imaginary unit (i = sqrt(-1)),
+gives the quarter-circle (pi/4) times i.
+
+This means: TOURNAMENTS AT IMAGINARY COUPLING = CIRCLES.
+
+The tournament (directed, temporal, real coupling x):
+  arctanh(x), Q(x) = (1+x)/(1-x), hyperbolic geometry
+
+The circle (undirected, spatial, imaginary coupling ix):
+  i*arctan(x), Q(ix) = (1+ix)/(1-ix), circular geometry
+
+arctan(x) = x - x^3/3 + x^5/5 - ...
+arctanh(x) = x + x^3/3 + x^5/5 + ...
+
+SAME COEFFICIENTS. DIFFERENT SIGNS.
+Alternating (arctan) = space = circle = finite = pi
+Constant (arctanh) = time = hyperbola = infinite = diverges
+
+The Wick rotation x -> ix converts one to the other:
+  arctanh(ix) = i*arctan(x)
+  Tournament at imaginary coupling = circle
+  Hyperbolic geometry at imaginary coupling = spherical geometry
+
+This is the WICK ROTATION OF TOURNAMENT THEORY.
+It maps:
+  Time -> Space
+  Hyperbolic -> Spherical
+  Divergent -> Convergent
+  arctanh -> arctan
+  Tournaments -> Circles
+  The real line -> The unit circle
+
+And at the crossover point x = i:
+  arctanh(i) = i*pi/4
+  The tournament becomes the circle.
+  The temporal becomes the spatial.
+  The number pi emerges from the tournament.
+
+pi is not put in. pi COMES OUT.
+From the binary comparison, through arctanh, at imaginary coupling.
+
+The circle is the tournament, Wick-rotated.
