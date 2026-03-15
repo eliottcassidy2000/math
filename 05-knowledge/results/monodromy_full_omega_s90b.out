@@ -1,0 +1,326 @@
+======================================================================
+PART 1: FULL CONFLICT GRAPH Ω FOR NEAR-TRANSITIVE TOURNAMENTS
+======================================================================
+
+For the near-transitive tournament (total order 0>1>...>n-1, arc (n-1)→0):
+
+Odd cycles of length 2k+1 use vertices {0, i₁, ..., i_{2k-1}, n-1} where
+{i₁,...,i_{2k-1}} ⊂ {1,...,n-2}. The cycle is:
+  0 → i₁ → i₂ → ... → i_{2k-1} → (n-1) → 0
+
+For this to be a valid cycle, we need:
+  0→i₁ (i₁ < n-1, so this is a forward arc ✓)
+  i_{j} → i_{j+1} for each j (forward arcs if i_j < i_{j+1} ✓)
+  i_{2k-1} → (n-1) (forward arc ✓)
+  (n-1) → 0 (reversed arc ✓)
+
+So we need the i_j to be in INCREASING order! The number of such cycles
+of length 2k+1 is C(n-2, 2k-1) (choose 2k-1 vertices from {1,...,n-2}).
+
+Total odd cycles = Σ_{k=1}^{⌊(n-1)/2⌋} C(n-2, 2k-1) = 2^{n-3}
+(sum of odd-indexed binomial coefficients of n-2).
+
+
+n=4: predicted total odd cycles = 2 = 2^1 = 2
+  By length: {3: 2}
+  Actual:    {3: 2}
+  Total actual: 2, predicted: 2, match: True
+  All share vertex 0: True
+  All share vertex 3: True
+  Ω: 2 vertices, 1/1 edges (complete? True)
+  I(Ω, 2) = 5 (expected H = 5)
+  α vector: [1, 2, 0]
+
+n=5: predicted total odd cycles = 4 = 2^2 = 4
+  By length: {3: 3, 5: 1}
+  Actual:    {3: 3, 5: 1}
+  Total actual: 4, predicted: 4, match: True
+  All share vertex 0: True
+  All share vertex 4: True
+  Ω: 4 vertices, 6/6 edges (complete? True)
+  I(Ω, 2) = 9 (expected H = 9)
+  α vector: [1, 4, 0, 0, 0]
+
+n=6: predicted total odd cycles = 8 = 2^3 = 8
+  By length: {3: 4, 5: 4}
+  Actual:    {3: 4, 5: 4}
+  Total actual: 8, predicted: 8, match: True
+  All share vertex 0: True
+  All share vertex 5: True
+  Ω: 8 vertices, 28/28 edges (complete? True)
+  I(Ω, 2) = 17 (expected H = 17)
+  α vector: [1, 8, 0, 0, 0, 0]
+
+n=7: predicted total odd cycles = 16 = 2^4 = 16
+  By length: {3: 5, 5: 10, 7: 1}
+  Actual:    {3: 5, 5: 10, 7: 1}
+  Total actual: 16, predicted: 16, match: True
+  All share vertex 0: True
+  All share vertex 6: True
+  Ω: 16 vertices, 120/120 edges (complete? True)
+  I(Ω, 2) = 33 (expected H = 33)
+  α vector: [1, 16, 0, 0, 0, 0]
+
+n=8: predicted total odd cycles = 32 = 2^5 = 32
+  By length: {3: 6, 5: 20, 7: 6}
+  Actual:    {5: 20, 3: 6, 7: 6}
+  Total actual: 32, predicted: 32, match: True
+  All share vertex 0: True
+  All share vertex 7: True
+  Ω: 32 vertices, 496/496 edges (complete? True)
+  Ω = K_32, I(K_32, 2) = 65 (expected H = 65)
+
+n=9: predicted total odd cycles = 64 = 2^6 = 64
+  By length: {3: 7, 5: 35, 7: 21, 9: 1}
+
+======================================================================
+PART 2: MONODROMY GROUP OF NEAR-TRANSITIVE TOURNAMENTS
+======================================================================
+
+The monodromy group of the near-transitive tournament is (Z/2)^{n-2}.
+
+GEOMETRIC INTERPRETATION:
+The transitive core defines a total order σ = (v₁ > ... > vₙ).
+The unique simplicial path follows σ.
+The single reversed arc (min→max) creates a "portal" between the
+bottom and top of the order.
+
+Each Hamiltonian path using the portal has the form:
+  (S in ↑ order, n-1, 0, {1,...,n-2}\S in ↑ order)
+for some subset S ⊆ {1,...,n-2}.
+
+The MONODROMY ACTION: each intermediate vertex k ∈ {1,...,n-2}
+has a binary choice: "before the portal" (k ∈ S) or "after" (k ∉ S).
+This gives a (Z/2)^{n-2} action on the set of portal-using paths.
+
+The group structure:
+  - Generator g_k: flip vertex k between S and complement(S)
+  - Relations: g_k² = 1, g_k g_j = g_j g_k (abelian)
+  - The group is the n-2 dimensional cube / Boolean lattice
+
+
+n=5: 9 total paths, 8 portal, 1 simplicial
+  Simplicial path: (0, 1, 2, 3, 4)
+  Portal path subsets S (vertices before portal):
+    S=[]              binary=000 path=(4, 0, 1, 2, 3)
+    S=[1]             binary=100 path=(1, 4, 0, 2, 3)
+    S=[2]             binary=010 path=(2, 4, 0, 1, 3)
+    S=[1, 2]          binary=110 path=(1, 2, 4, 0, 3)
+    S=[3]             binary=001 path=(3, 4, 0, 1, 2)
+    S=[1, 3]          binary=101 path=(1, 3, 4, 0, 2)
+    S=[2, 3]          binary=011 path=(2, 3, 4, 0, 1)
+    S=[1, 2, 3]       binary=111 path=(1, 2, 3, 4, 0)
+
+n=6: 17 total paths, 16 portal, 1 simplicial
+  Simplicial path: (0, 1, 2, 3, 4, 5)
+  Portal path subsets S (vertices before portal):
+    S=[]              binary=0000 path=(5, 0, 1, 2, 3, 4)
+    S=[1]             binary=1000 path=(1, 5, 0, 2, 3, 4)
+    S=[2]             binary=0100 path=(2, 5, 0, 1, 3, 4)
+    S=[1, 2]          binary=1100 path=(1, 2, 5, 0, 3, 4)
+    S=[3]             binary=0010 path=(3, 5, 0, 1, 2, 4)
+    S=[1, 3]          binary=1010 path=(1, 3, 5, 0, 2, 4)
+    S=[2, 3]          binary=0110 path=(2, 3, 5, 0, 1, 4)
+    S=[1, 2, 3]       binary=1110 path=(1, 2, 3, 5, 0, 4)
+    S=[4]             binary=0001 path=(4, 5, 0, 1, 2, 3)
+    S=[1, 4]          binary=1001 path=(1, 4, 5, 0, 2, 3)
+    S=[2, 4]          binary=0101 path=(2, 4, 5, 0, 1, 3)
+    S=[1, 2, 4]       binary=1101 path=(1, 2, 4, 5, 0, 3)
+    S=[3, 4]          binary=0011 path=(3, 4, 5, 0, 1, 2)
+    S=[1, 3, 4]       binary=1011 path=(1, 3, 4, 5, 0, 2)
+    S=[2, 3, 4]       binary=0111 path=(2, 3, 4, 5, 0, 1)
+    S=[1, 2, 3, 4]    binary=1111 path=(1, 2, 3, 4, 5, 0)
+
+n=7: 33 total paths, 32 portal, 1 simplicial
+  Simplicial path: (0, 1, 2, 3, 4, 5, 6)
+  Portal path subsets S (vertices before portal):
+    S=[]              binary=00000 path=(6, 0, 1, 2, 3, 4, 5)
+    S=[1]             binary=10000 path=(1, 6, 0, 2, 3, 4, 5)
+    S=[2]             binary=01000 path=(2, 6, 0, 1, 3, 4, 5)
+    S=[1, 2]          binary=11000 path=(1, 2, 6, 0, 3, 4, 5)
+    S=[3]             binary=00100 path=(3, 6, 0, 1, 2, 4, 5)
+    S=[1, 3]          binary=10100 path=(1, 3, 6, 0, 2, 4, 5)
+    S=[2, 3]          binary=01100 path=(2, 3, 6, 0, 1, 4, 5)
+    S=[1, 2, 3]       binary=11100 path=(1, 2, 3, 6, 0, 4, 5)
+    S=[4]             binary=00010 path=(4, 6, 0, 1, 2, 3, 5)
+    S=[1, 4]          binary=10010 path=(1, 4, 6, 0, 2, 3, 5)
+    S=[2, 4]          binary=01010 path=(2, 4, 6, 0, 1, 3, 5)
+    S=[1, 2, 4]       binary=11010 path=(1, 2, 4, 6, 0, 3, 5)
+    S=[3, 4]          binary=00110 path=(3, 4, 6, 0, 1, 2, 5)
+    S=[1, 3, 4]       binary=10110 path=(1, 3, 4, 6, 0, 2, 5)
+    S=[2, 3, 4]       binary=01110 path=(2, 3, 4, 6, 0, 1, 5)
+    S=[1, 2, 3, 4]    binary=11110 path=(1, 2, 3, 4, 6, 0, 5)
+    S=[5]             binary=00001 path=(5, 6, 0, 1, 2, 3, 4)
+    S=[1, 5]          binary=10001 path=(1, 5, 6, 0, 2, 3, 4)
+    S=[2, 5]          binary=01001 path=(2, 5, 6, 0, 1, 3, 4)
+    S=[1, 2, 5]       binary=11001 path=(1, 2, 5, 6, 0, 3, 4)
+    S=[3, 5]          binary=00101 path=(3, 5, 6, 0, 1, 2, 4)
+    S=[1, 3, 5]       binary=10101 path=(1, 3, 5, 6, 0, 2, 4)
+    S=[2, 3, 5]       binary=01101 path=(2, 3, 5, 6, 0, 1, 4)
+    S=[1, 2, 3, 5]    binary=11101 path=(1, 2, 3, 5, 6, 0, 4)
+    S=[4, 5]          binary=00011 path=(4, 5, 6, 0, 1, 2, 3)
+    S=[1, 4, 5]       binary=10011 path=(1, 4, 5, 6, 0, 2, 3)
+    S=[2, 4, 5]       binary=01011 path=(2, 4, 5, 6, 0, 1, 3)
+    S=[1, 2, 4, 5]    binary=11011 path=(1, 2, 4, 5, 6, 0, 3)
+    S=[3, 4, 5]       binary=00111 path=(3, 4, 5, 6, 0, 1, 2)
+    S=[1, 3, 4, 5]    binary=10111 path=(1, 3, 4, 5, 6, 0, 2)
+    S=[2, 3, 4, 5]    binary=01111 path=(2, 3, 4, 5, 6, 0, 1)
+    S=[1, 2, 3, 4, 5] binary=11111 path=(1, 2, 3, 4, 5, 6, 0)
+
+======================================================================
+PART 3: EIGENVALUES OF NEAR-TRANSITIVE ADJACENCY MATRIX
+======================================================================
+
+The adjacency matrix of the near-transitive tournament is:
+  A = J_upper - e_0 e_{n-1}^T + e_{n-1} e_0^T
+where J_upper is the strict upper triangular all-ones matrix
+(the transitive tournament).
+
+The transitive tournament has eigenvalues:
+  λ_k = (n-1)/2 * exp(2πik/n) ?? NO — the transitive tournament
+  is NOT circulant, so DFT doesn't apply.
+
+Actually, the adjacency matrix of the transitive tournament on
+{0,...,n-1} (with i→j iff i<j) is the strict upper triangular matrix:
+  A_trans[i][j] = 1 if i < j, 0 otherwise.
+
+Eigenvalues of strict upper triangular: all eigenvalues are 0!
+(It's nilpotent: A^n = 0.)
+
+So the near-transitive perturbation (rank-2 update) changes the
+eigenvalues from all-zero to something nontrivial.
+
+The perturbation: remove arc 0→(n-1), add arc (n-1)→0.
+This is a rank-2 update: A_nt = A_trans - e_0 e_{n-1}^T + e_{n-1} e_0^T.
+
+
+n=4: Eigenvalues of near-transitive adjacency matrix:
+  λ_0 = 1.395337
+  λ_1 = -0.460355 + 1.139318i  (|λ| = 1.228809)
+  λ_2 = -0.460355 + -1.139318i  (|λ| = 1.228809)
+  λ_3 = -0.474627
+  Char poly: [np.float64(1.0), np.float64(0.0), np.float64(-0.0), np.float64(-2.0), np.float64(-1.0)]
+  det = -1, trace = 0
+  H = 5 (= 2^2+1 = 5)
+
+n=5: Eigenvalues of near-transitive adjacency matrix:
+  λ_0 = 1.719393
+  λ_1 = -0.378202 + 1.335245i  (|λ| = 1.387774)
+  λ_2 = -0.378202 + -1.335245i  (|λ| = 1.387774)
+  λ_3 = -0.481495 + 0.264857i  (|λ| = 0.549533)
+  λ_4 = -0.481495 + -0.264857i  (|λ| = 0.549533)
+  Char poly: [np.float64(1.0), np.float64(-0.0), np.float64(0.0), np.float64(-3.0), np.float64(-3.0), np.float64(-1.0)]
+  det = 1, trace = 0
+  H = 9 (= 2^3+1 = 9)
+
+n=6: Eigenvalues of near-transitive adjacency matrix:
+  λ_0 = 2.008489
+  λ_1 = -0.274026 + 1.497800i  (|λ| = 1.522660)
+  λ_2 = -0.274026 + -1.497800i  (|λ| = 1.522660)
+  λ_3 = -0.486716
+  λ_4 = -0.486861 + 0.451863i  (|λ| = 0.664239)
+  λ_5 = -0.486861 + -0.451863i  (|λ| = 0.664239)
+  Char poly: [np.float64(1.0), np.float64(0.0), np.float64(0.0), np.float64(-4.0), np.float64(-6.0), np.float64(-4.0), np.float64(-1.0)]
+  det = -1, trace = 0
+  H = 17 (= 2^4+1 = 17)
+
+n=7: Eigenvalues of near-transitive adjacency matrix:
+  λ_0 = 2.275767
+  λ_1 = -0.156112 + 1.643889i  (|λ| = 1.651285)
+  λ_2 = -0.156112 + -1.643889i  (|λ| = 1.651285)
+  λ_3 = -0.488903 + 0.155533i  (|λ| = 0.513046)
+  λ_4 = -0.488903 + -0.155533i  (|λ| = 0.513046)
+  λ_5 = -0.492868 + 0.607710i  (|λ| = 0.782452)
+  λ_6 = -0.492868 + -0.607710i  (|λ| = 0.782452)
+  Char poly: [np.float64(1.0), np.float64(0.0), np.float64(0.0), np.float64(-5.0), np.float64(-10.0), np.float64(-10.0), np.float64(-5.0), np.float64(-1.0)]
+  det = 1, trace = 0
+  H = 33 (= 2^5+1 = 33)
+
+n=8: Eigenvalues of near-transitive adjacency matrix:
+  λ_0 = 2.527692
+  λ_1 = -0.030100 + 1.781780i  (|λ| = 1.782034)
+  λ_2 = -0.030100 + -1.781780i  (|λ| = 1.782034)
+  λ_3 = -0.490303 + 0.276040i  (|λ| = 0.562668)
+  λ_4 = -0.490303 + -0.276040i  (|λ| = 0.562668)
+  λ_5 = -0.491002
+  λ_6 = -0.497942 + 0.743953i  (|λ| = 0.895216)
+  λ_7 = -0.497942 + -0.743953i  (|λ| = 0.895216)
+  Char poly: [np.float64(1.0), np.float64(0.0), np.float64(0.0), np.float64(-6.0), np.float64(-15.0), np.float64(-20.0), np.float64(-15.0), np.float64(-6.0), np.float64(-1.0)]
+  det = -1, trace = 0
+
+======================================================================
+PART 4: CYCLE INDEX OF NEAR-TRANSITIVE = BINARY EXPANSION
+======================================================================
+
+The odd cycle count by length for the near-transitive tournament is:
+  c_{2k+1} = C(n-2, 2k-1)
+
+This is the ODD-INDEXED row of Pascal's triangle!
+
+    n  | c_3   c_5   c_7   c_9  | total = 2^{n-3}
+  -----+------------------------+------------------
+    4  |  2                      |  2
+    5  |  3    1                 |  4
+    6  |  4    4                 |  8
+    7  |  5   10    1            |  16
+    8  |  6   20    6            |  32
+    9  |  7   35   21    1       |  64
+   10  |  8   56   56    8       |  128
+
+The generating function: Σ_k c_{2k+1} x^k = Σ_k C(n-2, 2k-1) x^k.
+
+At x=1: sum = 2^{n-3} (half the binomial coefficients of n-2).
+
+The OCF gives: H = I(K_m, 2) = 1 + 2m where m = 2^{n-3}.
+
+The cycle INDEX polynomial is:
+  Z(x) = Σ_k C(n-2, 2k-1) x^{2k+1}
+       = x · ((1+x)^{n-2} - (1-x)^{n-2}) / 2
+
+This IS the ODD PART of (1+x)^{n-2}!
+
+In terms of the Cayley transform Q(x) = (1+x)/(1-x):
+  The odd part of Q(x)^m is related to sinh via:
+  (Q^m - Q^{-m})/2 = sinh(2m·arctanh(x)) / (1-x^2)^m
+
+This connects the cycle index to the HYPERBOLIC SINE —
+the imaginary part of the helix!
+
+The real part (cosh) gives the EVEN part (transitive triples),
+and the imaginary part (sinh) gives the ODD part (cycles).
+
+TOURNAMENT HELICAL DECOMPOSITION:
+  even part ↔ cosh ↔ transitive triples ↔ simplicial skeleton
+  odd part  ↔ sinh ↔ odd cycles ↔ monodromy loops
+
+  n= 4: {3: 2}  total = 2 = 2^1 = 2
+  n= 5: {3: 3, 5: 1}  total = 4 = 2^2 = 4
+  n= 6: {3: 4, 5: 4}  total = 8 = 2^3 = 8
+  n= 7: {3: 5, 5: 10, 7: 1}  total = 16 = 2^4 = 16
+  n= 8: {3: 6, 5: 20, 7: 6}  total = 32 = 2^5 = 32
+  n= 9: {3: 7, 5: 35, 7: 21, 9: 1}  total = 64 = 2^6 = 64
+  n=10: {3: 8, 5: 56, 7: 56, 9: 8}  total = 128 = 2^7 = 128
+  n=11: {3: 9, 5: 84, 7: 126, 9: 36, 11: 1}  total = 256 = 2^8 = 256
+
+THE k-NACCI CONNECTION:
+The cycle counts C(n-2, 1), C(n-2, 3), C(n-2, 5), ... are the
+odd-indexed binomial coefficients. These satisfy:
+
+  Σ C(n-2, 2k-1) = 2^{n-3}
+
+The RATIO of consecutive terms:
+  C(n-2, 2k+1) / C(n-2, 2k-1) = (n-2k-1)(n-2k-2) / ((2k+1)(2k))
+
+As n → ∞ with k fixed: this ratio → (n/2k)² / 4 → ∞.
+As k → ∞ with n fixed: ratio → 0.
+
+This is NOT a k-nacci-type recurrence. Instead, the cycle counts
+form a UNIMODAL sequence (rising then falling), peaking near k ≈ n/4.
+
+But the TOTAL 2^{n-3} IS the tribonacci connection: it equals
+the number of binary strings of length n-3 (no constraints),
+which is the k→∞ limit of the k-nacci count!
+
+======================================================================
+COMPLETE — opus-2026-03-15-S90b
+======================================================================
