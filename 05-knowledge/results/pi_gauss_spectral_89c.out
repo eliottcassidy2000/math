@@ -1,0 +1,392 @@
+======================================================================
+GAUSS SUMS AND π IN PALEY TOURNAMENT SPECTRA
+======================================================================
+
+--- p = 3 ---
+  Gauss sum g = 0.000000 + 1.732051i
+  |g| = 1.732051, √p = 1.732051
+  g² = -3.000000 + 0.000000i
+  -p = -3
+  arg(g)/π = 0.50000000
+
+  Eigenvalue λ_0 = 0.000000 + 0.000000i (should be 0)
+
+  Non-zero eigenvalues (grouped by |λ|):
+    k=1: λ = +0.000000 +1.732051i, |λ|=1.7321, arg/π=+0.50000000
+    k=2: λ = -0.000000 -1.732051i, |λ|=1.7321, arg/π=-0.50000000
+
+  Sorted phases (arg/π):
+    -0.50000000
+    +0.50000000
+
+  Verification: λ_k = (k/p) × g?
+    k=1: (k/p)=+1, predicted=+0.0000+1.7321i, actual=+0.0000+1.7321i, ✓
+    k=2: (k/p)=-1, predicted=-0.0000-1.7321i, actual=-0.0000-1.7321i, ✓
+    All match: ✓
+
+  Multiplicities: +g appears 1 times, -g appears 1 times
+
+  Product of nonzero eigenvalues: 3.0000 + -0.0000i
+  Predicted: p^((p-1)/2) = 3
+  Match: ✓
+
+  arg(g) = 1.57079633 = 0.50000000 × π
+  arg(g)/π - 1/2 = -0.00000000
+
+--- p = 7 ---
+  Gauss sum g = 0.000000 + 2.645751i
+  |g| = 2.645751, √p = 2.645751
+  g² = -7.000000 + 0.000000i
+  -p = -7
+  arg(g)/π = 0.50000000
+
+  Eigenvalue λ_0 = 0.000000 + 0.000000i (should be 0)
+
+  Non-zero eigenvalues (grouped by |λ|):
+    k=1: λ = +0.000000 +2.645751i, |λ|=2.6458, arg/π=+0.50000000
+    k=2: λ = +0.000000 +2.645751i, |λ|=2.6458, arg/π=+0.50000000
+    k=3: λ = -0.000000 -2.645751i, |λ|=2.6458, arg/π=-0.50000000
+    k=4: λ = +0.000000 +2.645751i, |λ|=2.6458, arg/π=+0.50000000
+    k=5: λ = -0.000000 -2.645751i, |λ|=2.6458, arg/π=-0.50000000
+    k=6: λ = -0.000000 -2.645751i, |λ|=2.6458, arg/π=-0.50000000
+
+  Sorted phases (arg/π):
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+
+  Verification: λ_k = (k/p) × g?
+    k=1: (k/p)=+1, predicted=+0.0000+2.6458i, actual=+0.0000+2.6458i, ✓
+    k=2: (k/p)=+1, predicted=+0.0000+2.6458i, actual=+0.0000+2.6458i, ✓
+    k=3: (k/p)=-1, predicted=-0.0000-2.6458i, actual=-0.0000-2.6458i, ✓
+    k=4: (k/p)=+1, predicted=+0.0000+2.6458i, actual=+0.0000+2.6458i, ✓
+    k=5: (k/p)=-1, predicted=-0.0000-2.6458i, actual=-0.0000-2.6458i, ✓
+    All match: ✓
+
+  Multiplicities: +g appears 3 times, -g appears 3 times
+
+  Product of nonzero eigenvalues: 343.0000 + -0.0000i
+  Predicted: p^((p-1)/2) = 343
+  Match: ✓
+
+  arg(g) = 1.57079633 = 0.50000000 × π
+  arg(g)/π - 1/2 = 0.00000000
+
+--- p = 11 ---
+  Gauss sum g = 0.000000 + 3.316625i
+  |g| = 3.316625, √p = 3.316625
+  g² = -11.000000 + 0.000000i
+  -p = -11
+  arg(g)/π = 0.50000000
+
+  Eigenvalue λ_0 = 0.000000 + 0.000000i (should be 0)
+
+  Non-zero eigenvalues (grouped by |λ|):
+    k=1: λ = +0.000000 +3.316625i, |λ|=3.3166, arg/π=+0.50000000
+    k=2: λ = -0.000000 -3.316625i, |λ|=3.3166, arg/π=-0.50000000
+    k=3: λ = +0.000000 +3.316625i, |λ|=3.3166, arg/π=+0.50000000
+    k=4: λ = +0.000000 +3.316625i, |λ|=3.3166, arg/π=+0.50000000
+    k=5: λ = +0.000000 +3.316625i, |λ|=3.3166, arg/π=+0.50000000
+    k=6: λ = -0.000000 -3.316625i, |λ|=3.3166, arg/π=-0.50000000
+
+  Sorted phases (arg/π):
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+
+  Verification: λ_k = (k/p) × g?
+    k=1: (k/p)=+1, predicted=+0.0000+3.3166i, actual=+0.0000+3.3166i, ✓
+    k=2: (k/p)=-1, predicted=-0.0000-3.3166i, actual=-0.0000-3.3166i, ✓
+    k=3: (k/p)=+1, predicted=+0.0000+3.3166i, actual=+0.0000+3.3166i, ✓
+    k=4: (k/p)=+1, predicted=+0.0000+3.3166i, actual=+0.0000+3.3166i, ✓
+    k=5: (k/p)=+1, predicted=+0.0000+3.3166i, actual=+0.0000+3.3166i, ✓
+    All match: ✓
+
+  Multiplicities: +g appears 5 times, -g appears 5 times
+
+  Product of nonzero eigenvalues: 161051.0000 + -0.0000i
+  Predicted: p^((p-1)/2) = 161051
+  Match: ✓
+
+  arg(g) = 1.57079633 = 0.50000000 × π
+  arg(g)/π - 1/2 = 0.00000000
+
+--- p = 19 ---
+  Gauss sum g = 0.000000 + 4.358899i
+  |g| = 4.358899, √p = 4.358899
+  g² = -19.000000 + 0.000000i
+  -p = -19
+  arg(g)/π = 0.50000000
+
+  Eigenvalue λ_0 = 0.000000 + 0.000000i (should be 0)
+
+  Non-zero eigenvalues (grouped by |λ|):
+    k=1: λ = +0.000000 +4.358899i, |λ|=4.3589, arg/π=+0.50000000
+    k=2: λ = -0.000000 -4.358899i, |λ|=4.3589, arg/π=-0.50000000
+    k=3: λ = +0.000000 -4.358899i, |λ|=4.3589, arg/π=-0.50000000
+    k=4: λ = +0.000000 +4.358899i, |λ|=4.3589, arg/π=+0.50000000
+    k=5: λ = +0.000000 +4.358899i, |λ|=4.3589, arg/π=+0.50000000
+    k=6: λ = +0.000000 +4.358899i, |λ|=4.3589, arg/π=+0.50000000
+
+  Sorted phases (arg/π):
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+
+  Verification: λ_k = (k/p) × g?
+    k=1: (k/p)=+1, predicted=+0.0000+4.3589i, actual=+0.0000+4.3589i, ✓
+    k=2: (k/p)=-1, predicted=-0.0000-4.3589i, actual=-0.0000-4.3589i, ✓
+    k=3: (k/p)=-1, predicted=-0.0000-4.3589i, actual=+0.0000-4.3589i, ✓
+    k=4: (k/p)=+1, predicted=+0.0000+4.3589i, actual=+0.0000+4.3589i, ✓
+    k=5: (k/p)=+1, predicted=+0.0000+4.3589i, actual=+0.0000+4.3589i, ✓
+    All match: ✓
+
+  Multiplicities: +g appears 9 times, -g appears 9 times
+
+  Product of nonzero eigenvalues: 322687697778.9608 + -0.0135i
+  Predicted: p^((p-1)/2) = 322687697779
+  Match: ✓
+
+  arg(g) = 1.57079633 = 0.50000000 × π
+  arg(g)/π - 1/2 = -0.00000000
+
+--- p = 23 ---
+  Gauss sum g = 0.000000 + 4.795832i
+  |g| = 4.795832, √p = 4.795832
+  g² = -23.000000 + 0.000000i
+  -p = -23
+  arg(g)/π = 0.50000000
+
+  Eigenvalue λ_0 = 0.000000 + 0.000000i (should be 0)
+
+  Non-zero eigenvalues (grouped by |λ|):
+    k=1: λ = +0.000000 +4.795832i, |λ|=4.7958, arg/π=+0.50000000
+    k=2: λ = +0.000000 +4.795832i, |λ|=4.7958, arg/π=+0.50000000
+    k=3: λ = +0.000000 +4.795832i, |λ|=4.7958, arg/π=+0.50000000
+    k=4: λ = +0.000000 +4.795832i, |λ|=4.7958, arg/π=+0.50000000
+    k=5: λ = -0.000000 -4.795832i, |λ|=4.7958, arg/π=-0.50000000
+    k=6: λ = +0.000000 +4.795832i, |λ|=4.7958, arg/π=+0.50000000
+
+  Sorted phases (arg/π):
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+
+  Verification: λ_k = (k/p) × g?
+    k=1: (k/p)=+1, predicted=+0.0000+4.7958i, actual=+0.0000+4.7958i, ✓
+    k=2: (k/p)=+1, predicted=+0.0000+4.7958i, actual=+0.0000+4.7958i, ✓
+    k=3: (k/p)=+1, predicted=+0.0000+4.7958i, actual=+0.0000+4.7958i, ✓
+    k=4: (k/p)=+1, predicted=+0.0000+4.7958i, actual=+0.0000+4.7958i, ✓
+    k=5: (k/p)=-1, predicted=-0.0000-4.7958i, actual=-0.0000-4.7958i, ✓
+    All match: ✓
+
+  Multiplicities: +g appears 11 times, -g appears 11 times
+
+  Product of nonzero eigenvalues: 952809757913974.3750 + -79.7179i
+  Predicted: p^((p-1)/2) = 952809757913927
+  Match: ✗
+
+  arg(g) = 1.57079633 = 0.50000000 × π
+  arg(g)/π - 1/2 = 0.00000000
+
+--- p = 31 ---
+  Gauss sum g = 0.000000 + 5.567764i
+  |g| = 5.567764, √p = 5.567764
+  g² = -31.000000 + 0.000000i
+  -p = -31
+  arg(g)/π = 0.50000000
+
+  Eigenvalue λ_0 = 0.000000 + 0.000000i (should be 0)
+
+  Non-zero eigenvalues (grouped by |λ|):
+    k=1: λ = +0.000000 +5.567764i, |λ|=5.5678, arg/π=+0.50000000
+    k=2: λ = +0.000000 +5.567764i, |λ|=5.5678, arg/π=+0.50000000
+    k=3: λ = +0.000000 -5.567764i, |λ|=5.5678, arg/π=-0.50000000
+    k=4: λ = +0.000000 +5.567764i, |λ|=5.5678, arg/π=+0.50000000
+    k=5: λ = +0.000000 +5.567764i, |λ|=5.5678, arg/π=+0.50000000
+    k=6: λ = -0.000000 -5.567764i, |λ|=5.5678, arg/π=-0.50000000
+
+  Sorted phases (arg/π):
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    -0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+    +0.50000000
+
+  Verification: λ_k = (k/p) × g?
+    k=1: (k/p)=+1, predicted=+0.0000+5.5678i, actual=+0.0000+5.5678i, ✓
+    k=2: (k/p)=+1, predicted=+0.0000+5.5678i, actual=+0.0000+5.5678i, ✓
+    k=3: (k/p)=-1, predicted=-0.0000-5.5678i, actual=+0.0000-5.5678i, ✓
+    k=4: (k/p)=+1, predicted=+0.0000+5.5678i, actual=+0.0000+5.5678i, ✓
+    k=5: (k/p)=+1, predicted=+0.0000+5.5678i, actual=+0.0000+5.5678i, ✓
+    All match: ✓
+
+  Multiplicities: +g appears 15 times, -g appears 15 times
+
+  Product of nonzero eigenvalues: 23465261991844747673600.0000 + -1509188270.9157i
+  Predicted: p^((p-1)/2) = 23465261991844685929951
+  Match: ✗
+
+  arg(g) = 1.57079633 = 0.50000000 × π
+  arg(g)/π - 1/2 = -0.00000000
+
+======================================================================
+THE π CONNECTION: GAUSS SUM PHASE
+======================================================================
+
+  For p ≡ 3 (mod 4), the quadratic Gauss sum satisfies:
+    g² = (-1)^{(p-1)/2} × p = -p
+
+  So g = ±i√p, meaning arg(g) = ±π/2.
+
+  ALL non-zero eigenvalues of P_p have |λ| = √p and arg = ±π/2.
+
+  The skew-adjacency matrix is pure imaginary (up to the zero eigenvalue).
+  This is because P_p is a "self-complementary" tournament:
+    (a/p) = -(−a/p) when p ≡ 3 mod 4.
+
+  The factor π appears because:
+  1. Gauss sums g = i√p have phase π/2 (EXACT, not approximate)
+  2. The eigenvalues sit at ±i√p on the imaginary axis
+  3. The spectral radius is √p (Ramanujan-like bound)
+  4. det(S_{00}) = p^{(p-3)/2} (Pfaffian involves p^{(p-3)/4})
+
+======================================================================
+TRACE FORMULA: CLOSED WALKS AND CYCLE COUNTS
+======================================================================
+
+  p = 3:
+    Tr(S^1) = 0, spectral = -0.0+0.0i
+    Tr(S^2) = -6, spectral = -6.0+0.0i
+    Tr(S^3) = 0, spectral = 0.0+0.0i
+    Tr(S^4) = 18, spectral = 18.0+-0.0i
+    Tr(S^5) = 0, spectral = -0.0+0.0i
+    Tr(S^6) = -54, spectral = -54.0+0.0i
+    Tr(S^7) = 0, spectral = 0.0+0.0i
+
+  p = 7:
+    Tr(S^1) = 0, spectral = -0.0+-0.0i
+    Tr(S^2) = -42, spectral = -42.0+0.0i
+    Tr(S^3) = 0, spectral = 0.0+0.0i
+    Tr(S^4) = 294, spectral = 294.0+-0.0i
+    Tr(S^5) = 0, spectral = -0.0+-0.0i
+    Tr(S^6) = -2058, spectral = -2058.0+0.0i
+    Tr(S^7) = 0, spectral = 0.0+0.0i
+
+  p = 11:
+    Tr(S^1) = 0, spectral = -0.0+-0.0i
+    Tr(S^2) = -110, spectral = -110.0+0.0i
+    Tr(S^3) = 0, spectral = 0.0+0.0i
+    Tr(S^4) = 1210, spectral = 1210.0+-0.0i
+    Tr(S^5) = 0, spectral = -0.0+-0.0i
+    Tr(S^6) = -13310, spectral = -13310.0+0.0i
+    Tr(S^7) = 0, spectral = 0.0+0.0i
+
+======================================================================
+SPECTRAL DETERMINANT OF MINOR S_00
+======================================================================
+  p=3: det(S_00) = 1, predicted p^((p-3)/2) = 1, match: ✓
+    Pf(S_00)² = 1, |Pf| = 1 = p^((p-3)/4) = 1
+  p=7: det(S_00) = 49, predicted p^((p-3)/2) = 49, match: ✓
+    Pf(S_00)² = 49, |Pf| = 7 = p^((p-3)/4) = 7
+  p=11: det(S_00) = 14641, predicted p^((p-3)/2) = 14641, match: ✓
+    Pf(S_00)² = 14641, |Pf| = 121 = p^((p-3)/4) = 121
+  p=19: det(S_00) = 16983563041, predicted p^((p-3)/2) = 16983563041, match: ✓
+  p=23: det(S_00) = 41426511213649, predicted p^((p-3)/2) = 41426511213649, match: ✓
+
+======================================================================
+SUMMARY: WHERE π LIVES IN THE SPECTRUM
+======================================================================
+
+  The Paley tournament P_p (p ≡ 3 mod 4) has spectrum:
+
+  • One zero eigenvalue (from all-ones vector)
+  • (p-1)/2 eigenvalues at +i√p  (QR characters)
+  • (p-1)/2 eigenvalues at -i√p  (NQR characters)
+
+  The eigenvalues lie on the IMAGINARY axis at ±i√p.
+
+  arg(eigenvalue) = ±π/2    (EXACT, not approximate)
+
+  This π/2 phase comes from the Gauss sum identity:
+    g² = -p  ⟹  g = ±i√p  ⟹  arg(g) = ±π/2
+
+  This is why Gauss sums are called "imaginary" for p ≡ 3 mod 4.
+  The factor π enters through the complex exponential:
+    ζ_p = e^{2πi/p}
+  which is the ONLY place π appears in the definition.
+
+  DEEPER: The Gauss sum g = Σ (t/p) e^{2πit/p} is a discrete
+  Fourier transform of the Legendre symbol. The resulting phase
+  π/2 is a consequence of quadratic reciprocity + Euler's formula.
+
+Done!
