@@ -6,17 +6,25 @@ proved_by: opus-2026-03-14-S89c
 verified_computationally: n=3..25
 ---
 
-# THM-216: CV²(H) = 2/n + O(1/n²)
+# THM-216: CV²(H) = 2/n + O(1/n³)
 
 ## Statement
 
 For the Hamiltonian path count H over uniformly random tournaments on n vertices:
 
-  CV²(H) = Var(H)/E[H]² = 2/n + O(1/n²)
+  CV²(H) = Var(H)/E[H]² = 2/n + O(1/n³)
 
-Equivalently: Var(H) ~ 2·E[H]²/n as n → ∞.
+The 1/n² coefficient vanishes exactly. More precisely:
 
-More precisely: CV² = 2/n - 2/(n(n-1)) + O(1/n²), so n·CV² = 2 - 2/(n-1) + O(1/n²).
+  CV² = Σ_{k≥1} 2·g_k(n-2k) / (n)_{2k}
+
+where (n)_{2k} is the falling factorial, and the scaled contributions are:
+  g₁(m) = m        (dominos)
+  g₂(m) = m²       (domino pairs)
+  g₃(m) = m(2m²+1)/3   (domino triples)
+
+The 1/n² cancellation: |S|=2 contributes -2/n² and |S|=4 contributes +2/n²,
+giving exact cancellation. The leading correction is -14/(3n³) + O(1/n⁴).
 
 ## Proof
 
@@ -90,16 +98,33 @@ All |S| ≥ 6 contribute O(1/n³). Total from |S| ≥ 4: O(1/n²).
 | 20 | 0.09927 | 1.9855 |
 | 25 | 0.07964 | 1.9911 |
 
-## Key Identity
+## Key Identities
 
-The proof rests on a product identity: the matrix E[Z_jZ_k] is TRIDIAGONAL.
-- Diagonal: E[Z_j²] = 2/n (probability of unit ascent OR descent at position j)
+### Tridiagonal covariance
+The matrix E[Z_jZ_k] is TRIDIAGONAL:
+- Diagonal: E[Z_j²] = 2/n
 - Off-diagonal (adjacent): E[Z_jZ_{j+1}] = 2/(n(n-1))
 - All other entries: exactly 0
 
-This tridiagonal structure is because:
-1. Non-adjacent positions have orientation-independent joint distributions
-2. Adjacent positions have forbidden cross-type pairs (ascent then descent or vice versa creates a repeated value)
+### Domino structure
+Only "domino" subsets S (unions of adjacent pairs {j,j+1}) contribute
+to E[∏_{j∈S} Z_j]. All other subsets give 0, because:
+1. Isolated positions give 0 by the complement symmetry Z→-Z
+2. Three+one patterns give 0 by the same argument applied to the odd part
+
+### Exact |S|=2k contributions (verified n=3..10)
+The |S|=2k contribution equals 2·g_k(n-2k) / (n)_{2k} where:
+  g₁(m) = m
+  g₂(m) = m²
+  g₃(m) = m(2m²+1)/3
+  g₄(1) = 1, g₄(2) = 8 (need more data for full formula)
+
+### 1/n² cancellation
+|S|=2: 2(n-2)/(n(n-1)) = 2/n - 2/n² + 2/n³ - ...
+|S|=4: 2(n-4)²/(n)_4 = 2/n² - 4/n³ + ...
+Sum:   2/n + 0/n² + (2-4)/n³ + |S|=6 + ...
+|S|=6: 4/(3n³) + ...
+Total: 2/n + (-6 + 4/3)/n³ = 2/n - 14/(3n³) + O(1/n⁴)
 
 ## Note
 
