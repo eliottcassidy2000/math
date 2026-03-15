@@ -205,6 +205,23 @@ if __name__ == "__main__":
             assert actual == predicted, f"FuncEq failed at m={m},k={two_k}"
     print("Functional equation: OK")
 
+    # Test Wick rotation: arctanh(i) = i*pi/4
+    import cmath
+    wick = cmath.atanh(1j)
+    expected = 1j * cmath.pi / 4
+    assert abs(wick - expected) < 1e-14, f"Wick rotation failed: {wick} != {expected}"
+    # Q(i) = i
+    qi = (1 + 1j) / (1 - 1j)
+    assert abs(qi - 1j) < 1e-14, f"Q(i) failed: {qi} != i"
+    print("Wick rotation: OK")
+
+    # Test OEIS A108666 diagonal
+    oeis_a108666 = [0, 1, 8, 57, 384, 2505, 16008, 100849, 628736, 3888657]
+    for n in range(1, 10):
+        t = T_matrix(n, n)
+        assert t == oeis_a108666[n], f"A108666 failed at n={n}: {t} != {oeis_a108666[n]}"
+    print("OEIS A108666: OK")
+
     # Test cv2 against W
     for n in range(3, 10):
         w = W(n)
