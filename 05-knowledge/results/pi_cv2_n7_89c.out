@@ -1,0 +1,8 @@
+Computing E[H²] at n=7 using compatible pair formula
+n! = 5040, n!² = 25401600
+m = 21 undirected edges
+Pre-computing path edge sets...
+Pre-computed 5040 permutations
+Computing compatible pairs...
+  1000/5040 (19.8%), 3s elapsed, ETA 10s
+  2000/5040 (39.7%), 5s elapsed, ETA 8s
