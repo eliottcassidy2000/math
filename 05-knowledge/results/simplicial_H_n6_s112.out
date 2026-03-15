@@ -1,0 +1,56 @@
+======================================================================
+n=6: EXHAUSTIVE ANALYSIS (32768 tournaments)
+======================================================================
+  5000/32768 processed...
+  10000/32768 processed...
+  15000/32768 processed...
+  20000/32768 processed...
+  25000/32768 processed...
+  30000/32768 processed...
+
+Done! 32768 tournaments analyzed.
+
+sim_H values at n=6: [0, 1]
+
+sim_H distribution:
+  sim_H=0: 31328 (95.6%)
+  sim_H=1: 1440 (4.4%)
+
+sim_H is BINARY (0 or 1): True
+
+(H, sim_H) distribution:
+  (H= 1, sH=1):   720
+  (H= 3, sH=0):   960
+  (H= 5, sH=0):  2160
+  (H= 9, sH=0):  2960
+  (H=11, sH=0):  1440
+  (H=13, sH=0):  1440
+  (H=15, sH=0):  2208
+  (H=17, sH=0):   720
+  (H=17, sH=1):   720
+  (H=19, sH=0):  1440
+  (H=23, sH=0):  2880
+  (H=25, sH=0):  1440
+  (H=27, sH=0):   480
+  (H=29, sH=0):  2880
+  (H=31, sH=0):  1440
+  (H=33, sH=0):  2640
+  (H=37, sH=0):  3600
+  (H=41, sH=0):   720
+  (H=43, sH=0):  1440
+  (H=45, sH=0):   480
+
+Score sequences with sim_H=1:
+  scores=(0, 1, 2, 3, 4, 5): 720/720 have sim_H=1 (100%)
+  scores=(1, 1, 2, 3, 4, 4): 720/2880 have sim_H=1 (25%)
+
+Fraction with sim_H=1:
+  n=4: 48/64 = 0.7500
+  n=5: 240/1024 = 0.2344
+  n=6: 1440/32768 = 0.0439
+
+  Ratios: ['0.7500', '0.2344', '0.0439']
+  Declining? True
+  Successive ratios: ['0.3125', '0.1875']
+
+Done!

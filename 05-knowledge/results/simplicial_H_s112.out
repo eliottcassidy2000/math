@@ -1,0 +1,94 @@
+======================================================================
+PART 1: EXHAUSTIVE ANALYSIS AT n=4
+======================================================================
+(H, sim_H, #3cycles): count
+  (1, 1, 0): 24
+  (3, 0, 1): 16
+  (5, 1, 2): 24
+
+======================================================================
+PART 2: EXHAUSTIVE ANALYSIS AT n=5
+======================================================================
+(H, sim_H): count
+  ( 1,  1):   120
+  ( 3,  0):   120
+  ( 5,  0):   240
+  ( 9,  0):   120
+  ( 9,  1):   120
+  (11,  0):   120
+  (13,  0):   120
+  (15,  0):    64
+
+sim_H distribution:
+  sim_H=0: 784 (76.6%)
+  sim_H=1: 240 (23.4%)
+
+======================================================================
+PART 3: WHAT IS sim_H?
+======================================================================
+Checking: sim_H = #linear extensions of transitive core?
+
+  n=4: sim_H = #LE(transitive core) for ALL 64 tournaments!
+  n=5: 0 mismatches out of 1024 tournaments
+  sim_H = #LE(transitive core) for ALL 1024 tournaments!
+
+======================================================================
+PART 4: PARITY OF sim_H
+======================================================================
+  n=4: sim_H values = [0, 1]
+  n=5: sim_H values = [0, 1]
+
+  Parity check at n=5:
+    sim_H=0: parity=even, count=784
+    sim_H=1: parity=odd, count=240
+
+======================================================================
+PART 5: SIMPLICIAL CONFLICT GRAPH
+======================================================================
+
+For tournament H(T), the OCF gives H = I(Omega(T), 2) where Omega is
+the conflict graph of odd cycles.
+
+Question: is there a 'simplicial OCF' where sim_H = I(Omega_simp, 2)
+for some simplicial conflict structure?
+
+The simplicial constraints are: for each transitive triple (a,b,c),
+the ordering must have a before b before c. Two triples CONFLICT
+if they impose contradictory orderings on shared vertices.
+
+This is exactly a CONSTRAINT SATISFACTION problem, and the number
+of solutions is sim_H.
+
+Example analysis for n=5 tournaments:
+
+======================================================================
+PART 6: sim_H = LINEAR EXTENSIONS OF TRANSITIVE REDUCTION
+======================================================================
+  n=5: transitive core is DAG for all 240/1024 tournaments
+  WARNING: 784 tournaments have CYCLIC transitive cores!
+
+======================================================================
+PART 7: SIMPLICIAL REDEI THEOREM?
+======================================================================
+Parity of sim_H at n=4:
+  sim_H=0 (even): 16 tournaments
+  sim_H=1 (odd): 48 tournaments
+
+Parity of sim_H at n=5:
+  sim_H=0 (even): 784 tournaments
+  sim_H=1 (odd): 240 tournaments
+
+When sim_H > 0 at n=5:
+  sim_H odd: 240
+  sim_H even: 0
+
+======================================================================
+PART 8: STATISTICS OF sim_H
+======================================================================
+
+n=4:
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\simplicial_H_s112.py", line 427, in <module>
+    E_H = Fraction(sum_H, total_T)
+          ^^^^^^^^
+NameError: name 'Fraction' is not defined
