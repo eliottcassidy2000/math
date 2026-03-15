@@ -1,0 +1,32 @@
+Simplicial Rédei exhaustive verification at n=7
+Total tournaments: 2097152
+
+  500000/2097152 processed (23.8%) ...
+  1000000/2097152 processed (47.7%) ...
+  1500000/2097152 processed (71.5%) ...
+  2000000/2097152 processed (95.4%) ...
+
+======================================================================
+RESULTS: Simplicial Rédei at n=7
+======================================================================
+
+sim_H = 0 (cyclic core):     2087072
+sim_H = 1 (total order):     10080
+sim_H > 1 (partial DAG):     0
+
+  *** SIMPLICIAL REDEI HOLDS: sim_H in {0,1} for ALL 2097152 tournaments! ***
+
+Breakdown of sim_H = 1 (10080 total):
+  Transitive (H=1):    5040  (expected: 5040 = 7!)
+  H=33 (=2^5+1):      5040  (expected: 5040 = 7!)
+  Other H values:      0
+  Total sim_H=1:       10080  (expected: 10080 = 2*7!)
+
+H value distribution for sim_H=1:
+  H=  1: 5040 tournaments
+  H= 33: 5040 tournaments
+
+Fraction with sim_H=1: 10080/2097152 = 0.004807
+Predicted fraction (2*n!/2^C(n,2)): 0.004807
+
+Elapsed: 1 seconds

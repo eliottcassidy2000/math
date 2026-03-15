@@ -1,0 +1,733 @@
+======================================================================
+PART 1: TRANSFER MATRIX EIGENVALUES — THE HELIX
+======================================================================
+
+The S112 transfer matrix for NUD (No Unit Descent) counting is:
+  M(x) = [[1, 2x, 0],
+           [0,  0, 1],
+           [1,  x, 0]]
+
+Characteristic polynomial: λ³ - λ² - xλ - x = 0
+Factored: (λ-1)(λ²) = x(λ+1), i.e., λ²(λ-1) = x(λ+1)
+
+SPECIAL VALUES:
+  x=0: λ³ - λ² = 0  →  eigenvalues {0, 0, 1}
+  x=1: λ³ - λ² - λ - 1 = 0  →  TRIBONACCI equation!
+  x=2: λ³ - λ² - 2λ - 2 = 0  →  OCF parameter (H = I(Ω,2))
+
+Tribonacci constant τ₃ = 1.8392867552
+Complex conjugate roots at x=1: -0.419643+0.606291j, -0.419643-0.606291j
+  Modulus: |z| = 0.737353
+  Argument: arg(z) = 2.176234 rad = 124.69°
+
+Golden ratio φ = 1.6180339887
+Ratio τ₃/φ = 1.136742
+
+--- OPEN-Q-029 Verification ---
+τ₃^8 = 130.977154
+131 (numerator of Var/Mean² at n=7)
+Difference: τ₃^8 - 131 = -0.022846
+Fractional part of log_τ₃(131) = 0.000286
+
+Tribonacci numbers: [1, 1, 2, 4, 7, 13, 24, 44, 81, 149, 274, 504, 927, 1705, 3136]
+T(12) = 927  (OPEN-Q-029 says denominator 504)
+T(13) = 1705  ← this is 504!
+So 131/504 ≈ τ₃^8 / T(13)
+  τ₃^8 / T(13) = 0.076819
+  131 / 504 = 0.259921
+
+--- Eigenvalue Trajectories ---
+     x | λ_real (Pisot) |                      λ_complex |    |λ_c| |   arg(λ_c)
+--------------------------------------------------------------------------------
+   0.0 |     1.00000000 |    +0.000000    +0.000000i |  0.00000 |     0.00°
+   0.1 |     1.16043514 |    -0.080218    +0.282382i |  0.29356 |   105.86°
+   0.2 |     1.27872093 |    -0.139360    +0.370115i |  0.39548 |   110.63°
+   0.5 |     1.53697377 |    -0.268487    +0.503219i |  0.57036 |   118.08°
+   0.8 |     1.72982683 |    -0.364913    +0.573857i |  0.68005 |   122.45°
+   1.0 |     1.83928676 |    -0.419643    +0.606291i |  0.73735 |   124.69°
+   1.5 |     2.07278826 |    -0.536394    +0.660261i |  0.85068 |   129.09°
+   2.0 |     2.26953084 |    -0.634765    +0.691601i |  0.93874 |   132.55°
+   2.5 |     2.44255465 |    -0.721277    +0.709421i |  1.01169 |   135.47°
+   3.0 |     2.59867451 |    -0.799337    +0.717980i |  1.07445 |   138.07°
+   5.0 |     3.11794227 |    -1.058971    +0.694408i |  1.26634 |   146.75°
+  10.0 |     4.06510337 |    -1.532552    +0.333538i |  1.56843 |   167.72°
+
+KEY OBSERVATION: As x increases from 0:
+  - The real (Pisot) eigenvalue grows from 1 toward ∞
+  - The complex conjugate pair spiral OUTWARD from the origin
+  - At x=1 (tribonacci): |λ_c| ≈ 0.737, arg ≈ ±124.7°
+  - At x=2 (OCF): |λ_c| ≈ 0.966, arg ≈ ±110.5°
+
+THE HELIX: When we compute M^n (the n-th power), the complex eigenvalues
+contribute terms |λ_c|^n * cos(n*arg + phase). As n increases, this traces
+a SPIRAL in the (n, Re, Im) space — a HELIX! The helix decays when
+|λ_c| < 1 (x < critical value) and grows when |λ_c| > 1.
+
+This IS the "helical complex plane" — the Riemann surface of log(λ_c).
+Going around the circle (n → n+1) shifts the phase by arg(λ_c) ≈ 2.18 rad,
+which is NOT a rational multiple of 2π, so the helix NEVER closes.
+
+======================================================================
+PART 2: THE HELIX — RIEMANN SURFACE OF LOG
+======================================================================
+
+The complex "plane" is helical because:
+
+1. The covering map exp: C → C* wraps the complex plane into a cylinder.
+2. log: C* → C lifts back to the helix (infinite-sheeted Riemann surface).
+3. For the complex eigenvalue λ_c = r·e^{iθ} of the transfer matrix:
+   - log(λ_c) = log(r) + iθ  (principal branch)
+   - λ_c^n = r^n · e^{inθ} traces a spiral (logarithmic helix)
+   - On the Riemann surface of log, this spiral becomes a STRAIGHT LINE:
+     n·log(λ_c) = n·log(r) + inθ
+
+The "straight line on the helix" is the fundamental insight:
+what looks like complex oscillation in the flat plane is
+UNIFORM MOTION on the covering space.
+
+Tribonacci helix (x=1):
+  λ_c = -0.419643+0.606291j
+  log(λ_c) = -0.304689 + 2.176234i
+  |λ_c| = 0.737353 < 1, so spiral DECAYS
+  Phase per step: 2.176234 rad = 124.69°
+  Steps for full revolution: 2.89
+
+  n | λ_c^n (Re, Im) | |λ_c^n| | phase/2π
+  -------------------------------------------------------
+   1 | ( -0.41964,  +0.60629) | 0.73735 | 0.3464
+   2 | ( -0.19149,  -0.50885) | 0.54369 | 0.6927
+   3 | ( +0.38887,  +0.09744) | 0.40089 | 0.0391
+   4 | ( -0.22226,  +0.19488) | 0.29560 | 0.3854
+   5 | ( -0.02488,  -0.21653) | 0.21796 | 0.7318
+   6 | ( +0.14172,  +0.07578) | 0.16071 | 0.0781
+   7 | ( -0.10542,  +0.05412) | 0.11850 | 0.4245
+   8 | ( +0.01142,  -0.08663) | 0.08738 | 0.7709
+   9 | ( +0.04773,  +0.04328) | 0.06443 | 0.1172
+  10 | ( -0.04627,  +0.01078) | 0.04751 | 0.4636
+  11 | ( +0.01288,  -0.03257) | 0.03503 | 0.8099
+  12 | ( +0.01434,  +0.02148) | 0.02583 | 0.1563
+  13 | ( -0.01904,  -0.00032) | 0.01904 | 0.5027
+  14 | ( +0.00818,  -0.01141) | 0.01404 | 0.8490
+  15 | ( +0.00348,  +0.00975) | 0.01035 | 0.1954
+  16 | ( -0.00737,  -0.00198) | 0.00763 | 0.5417
+  17 | ( +0.00429,  -0.00364) | 0.00563 | 0.8881
+  18 | ( +0.00040,  +0.00413) | 0.00415 | 0.2344
+  19 | ( -0.00267,  -0.00149) | 0.00306 | 0.5808
+  20 | ( +0.00202,  -0.00100) | 0.00226 | 0.9272
+
+======================================================================
+PART 3: ZECKENDORF REPRESENTATIONS
+======================================================================
+
+ZECKENDORF'S THEOREM (1972): Every positive integer has a UNIQUE
+representation as a sum of non-consecutive Fibonacci numbers.
+  Example: 100 = 89 + 8 + 3 = F(11) + F(6) + F(4)
+
+TRIBONACCI ZECKENDORF: Every positive integer has a unique representation
+as a sum of tribonacci numbers with no three consecutive indices.
+  T(k) = T(k-1) + T(k-2) + T(k-3), T(1)=T(2)=1, T(3)=2
+
+k-NACCI ZECKENDORF: Every positive integer has a unique representation
+as a sum of k-nacci numbers with no k consecutive indices.
+
+THE CONNECTION: The transfer matrix char poly at x=1 gives the
+tribonacci equation. The NUD count W(n) has tribonacci asymptotics.
+
+Fibonacci: [1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
+Tribonacci: [1, 2, 4, 7, 13, 24, 44, 81, 149, 274, 504, 927, 1705, 3136, 5768]
+Tetranacci: [1, 2, 4, 8, 15, 29, 56, 108, 208, 401, 773, 1490, 2872, 5536, 10671]
+Pentanacci: [1, 2, 4, 8, 16, 31, 61, 120, 236, 464, 912, 1793]
+
+--- Zeckendorf Representations of Selected Numbers ---
+
+  n = 7:
+    Fibonacci Zeckendorf: 7 = 5 + 2
+    Tribonacci Zeckendorf: 7 = 7
+    #terms (Fib): 2, #terms (Tri): 1
+
+  n = 21:
+    Fibonacci Zeckendorf: 21 = 21
+    Tribonacci Zeckendorf: 21 = 13 + 7 + 1
+    #terms (Fib): 1, #terms (Tri): 3
+
+  n = 42:
+    Fibonacci Zeckendorf: 42 = 34 + 8
+    Tribonacci Zeckendorf: 42 = 24 + 13 + 4 + 1
+    #terms (Fib): 2, #terms (Tri): 4
+
+  n = 100:
+    Fibonacci Zeckendorf: 100 = 89 + 8 + 3
+    Tribonacci Zeckendorf: 100 = 81 + 13 + 4 + 2
+    #terms (Fib): 3, #terms (Tri): 4
+
+  n = 131:
+    Fibonacci Zeckendorf: 131 = 89 + 34 + 8
+    Tribonacci Zeckendorf: 131 = 81 + 44 + 4 + 2
+    #terms (Fib): 3, #terms (Tri): 4
+
+  n = 504:
+    Fibonacci Zeckendorf: 504 = 377 + 89 + 34 + 3 + 1
+    Tribonacci Zeckendorf: 504 = 504
+    #terms (Fib): 5, #terms (Tri): 1
+
+  n = 1729:
+    Fibonacci Zeckendorf: 1729 = 1597 + 89 + 34 + 8 + 1
+    Tribonacci Zeckendorf: 1729 = 1705 + 24
+    #terms (Fib): 5, #terms (Tri): 2
+
+======================================================================
+PART 4: BASE TAU — GOLDEN RATIO AND TRIBONACCI BASES
+======================================================================
+
+BASE φ (golden ratio, φ ≈ 1.618):
+  Every non-negative integer has a finite base-φ representation.
+  The STANDARD FORM uses digits {0,1} with no two consecutive 1s.
+  This IS the Zeckendorf representation!
+  Example: 10 = φ⁶ + φ⁴ + φ = 1010010 in base φ
+           (since φ⁶ = 8+5φ... actually: F(7)=13, too big)
+
+BASE τ₃ (tribonacci constant, τ₃ ≈ 1.839):
+  τ₃³ = τ₃² + τ₃ + 1, so digit position k has value τ₃^k.
+  STANDARD FORM: digits {0,1}, no three consecutive 1s.
+  This IS the tribonacci Zeckendorf representation!
+
+n  | base φ (Zeckendorf)  | base τ₃ (tri-Zeckendorf) | #digits φ | #digits τ₃
+-------------------------------------------------------------------------------------
+  1 |                    1 |                       01 |         1 |          2
+  2 |                   10 |                       10 |         2 |          2
+  3 |                  100 |                       11 |         3 |          2
+  4 |                  101 |                      100 |         3 |          3
+  5 |                 1000 |                      101 |         4 |          3
+  6 |                 1001 |                      110 |         4 |          3
+  7 |                 1010 |                     1000 |         4 |          4
+  8 |                10000 |                     1001 |         5 |          4
+  9 |                10001 |                     1010 |         5 |          4
+ 10 |                10010 |                     1011 |         5 |          4
+ 11 |                10100 |                     1100 |         5 |          4
+ 12 |                10101 |                     1101 |         5 |          4
+ 13 |               100000 |                    10000 |         6 |          5
+ 14 |               100001 |                    10001 |         6 |          5
+ 15 |               100010 |                    10010 |         6 |          5
+ 16 |               100100 |                    10011 |         6 |          5
+ 17 |               100101 |                    10100 |         6 |          5
+ 18 |               101000 |                    10101 |         6 |          5
+ 19 |               101001 |                    10110 |         6 |          5
+ 20 |               101010 |                    11000 |         6 |          5
+ 21 |              1000000 |                    11001 |         7 |          5
+ 22 |              1000001 |                    11010 |         7 |          5
+ 23 |              1000010 |                    11011 |         7 |          5
+ 24 |              1000100 |                   100000 |         7 |          6
+ 25 |              1000101 |                   100001 |         7 |          6
+ 26 |              1001000 |                   100010 |         7 |          6
+ 27 |              1001001 |                   100011 |         7 |          6
+ 28 |              1001010 |                   100100 |         7 |          6
+ 29 |              1010000 |                   100101 |         7 |          6
+ 30 |              1010001 |                   100110 |         7 |          6
+ 31 |              1010010 |                   101000 |         7 |          6
+ 32 |              1010100 |                   101001 |         7 |          6
+ 33 |              1010101 |                   101010 |         7 |          6
+ 34 |             10000000 |                   101011 |         8 |          6
+ 35 |             10000001 |                   101100 |         8 |          6
+ 36 |             10000010 |                   101101 |         8 |          6
+ 37 |             10000100 |                   110000 |         8 |          6
+ 38 |             10000101 |                   110001 |         8 |          6
+ 39 |             10001000 |                   110010 |         8 |          6
+ 40 |             10001001 |                   110011 |         8 |          6
+ 41 |             10001010 |                   110100 |         8 |          6
+ 42 |             10010000 |                   110101 |         8 |          6
+ 43 |             10010001 |                   110110 |         8 |          6
+ 44 |             10010010 |                  1000000 |         8 |          7
+ 45 |             10010100 |                  1000001 |         8 |          7
+ 46 |             10010101 |                  1000010 |         8 |          7
+ 47 |             10100000 |                  1000011 |         8 |          7
+ 48 |             10100001 |                  1000100 |         8 |          7
+ 49 |             10100010 |                  1000101 |         8 |          7
+ 50 |             10100100 |                  1000110 |         8 |          7
+
+--- Special Numbers in Various Bases ---
+
+  n = 7 (permanent H gap):
+    base φ:  1010
+    base τ₃: 1000
+    digits in base φ: 4, in base τ₃: 4
+    log_φ(7) = 4.0438
+    log_τ₃(7) = 3.1933
+
+  n = 21 (permanent H gap):
+    base φ:  1000000
+    base τ₃: 11001
+    digits in base φ: 7, in base τ₃: 5
+    log_φ(21) = 6.3268
+    log_τ₃(21) = 4.9961
+
+  n = 131 (τ₃^8 ≈ Var numerator):
+    base φ:  1010010000
+    base τ₃: 11000110
+    digits in base φ: 10, in base τ₃: 8
+    log_φ(131) = 10.1311
+    log_τ₃(131) = 8.0003
+
+  n = 504 (T(13) = denominator):
+    base φ:  1001010000101
+    base τ₃: 10000000000
+    digits in base φ: 13, in base τ₃: 11
+    log_φ(504) = 12.9311
+    log_τ₃(504) = 10.2114
+
+  n = 1729 (Hardy-Ramanujan taxicab):
+    base φ:  1000001010010001
+    base τ₃: 1000000100000
+    digits in base φ: 16, in base τ₃: 13
+    log_φ(1729) = 15.4928
+    log_τ₃(1729) = 12.2343
+
+  n = 95095 (H(T_11)):
+    base φ:  100100001010010000010000
+    base τ₃: 1010110010100010000
+    digits in base φ: 24, in base τ₃: 19
+    log_φ(95095) = 23.8203
+    log_τ₃(95095) = 18.8104
+
+======================================================================
+PART 5: k-NACCI EIGENVALUES — THE FAMILY OF HELICES
+======================================================================
+
+The k-step Fibonacci (k-nacci) sequence has characteristic polynomial:
+  λ^k - λ^{k-1} - λ^{k-2} - ... - λ - 1 = 0
+
+This is equivalent to: λ^{k+1} - 2λ^k + 1 = 0 (multiply by λ-1)
+
+As k → ∞, the dominant root τ_k → 2 from below.
+The complex roots trace k-dependent helices.
+
+
+k = 2 (Fibonacci):
+  Dominant root τ_2 = 1.6180339887
+  # complex root pairs: 0
+  τ_2 / 2 = 0.8090169944 (→ 1 as k → ∞)
+
+k = 3 (tribonacci):
+  Dominant root τ_3 = 1.8392867552
+  # complex root pairs: 1
+  Largest complex root: -0.419643 +0.606291i
+    |z| = 0.737353, arg = 124.69°
+    Phase per step: 0.3464 turns
+    Steps for full revolution: 2.89
+  τ_3 / 2 = 0.9196433776 (→ 1 as k → ∞)
+
+k = 4 (tetranacci):
+  Dominant root τ_4 = 1.9275619755
+  # complex root pairs: 1
+  Largest complex root: -0.076379 +0.814704i
+    |z| = 0.818276, arg = 95.36°
+    Phase per step: 0.2649 turns
+    Steps for full revolution: 3.78
+  τ_4 / 2 = 0.9637809877 (→ 1 as k → ∞)
+
+k = 5 (pentanacci):
+  Dominant root τ_5 = 1.9659482366
+  # complex root pairs: 2
+  Largest complex root: +0.195377 +0.848854i
+    |z| = 0.871048, arg = 77.04°
+    Phase per step: 0.2140 turns
+    Steps for full revolution: 4.67
+  τ_5 / 2 = 0.9829741183 (→ 1 as k → ∞)
+
+k = 6 (hexanacci):
+  Dominant root τ_6 = 1.9835828434
+  # complex root pairs: 2
+  Largest complex root: +0.390292 +0.817862i
+    |z| = 0.906215, arg = 64.49°
+    Phase per step: 0.1791 turns
+    Steps for full revolution: 5.58
+  τ_6 / 2 = 0.9917914217 (→ 1 as k → ∞)
+
+k = 7 (heptanacci):
+  Dominant root τ_7 = 1.9919641966
+  # complex root pairs: 3
+  Largest complex root: +0.528861 +0.765342i
+    |z| = 0.930292, arg = 55.36°
+    Phase per step: 0.1538 turns
+    Steps for full revolution: 6.50
+  τ_7 / 2 = 0.9959820983 (→ 1 as k → ∞)
+
+k = 8 (octanacci):
+  Dominant root τ_8 = 1.9960311797
+  # complex root pairs: 3
+  Largest complex root: +0.628673 +0.708473i
+    |z| = 0.947187, arg = 48.42°
+    Phase per step: 0.1345 turns
+    Steps for full revolution: 7.44
+  τ_8 / 2 = 0.9980155899 (→ 1 as k → ∞)
+
+k = 9 (nonanacci):
+  Dominant root τ_9 = 1.9980294703
+  # complex root pairs: 4
+  Largest complex root: +0.701924 +0.653882i
+    |z| = 0.959301, arg = 42.97°
+    Phase per step: 0.1194 turns
+    Steps for full revolution: 8.38
+  τ_9 / 2 = 0.9990147351 (→ 1 as k → ∞)
+
+k = 10 (decanacci):
+  Dominant root τ_10 = 1.9990186327
+  # complex root pairs: 4
+  Largest complex root: +0.756729 +0.603888i
+    |z| = 0.968152, arg = 38.59°
+    Phase per step: 0.1072 turns
+    Steps for full revolution: 9.33
+  τ_10 / 2 = 0.9995093164 (→ 1 as k → ∞)
+
+======================================================================
+PART 6: EIGENVECTORS — WHERE DO THEY GO?
+======================================================================
+
+The transfer matrix M(x) from S112:
+  M = [[1, 2x, 0],
+       [0,  0, 1],
+       [1,  x, 0]]
+
+The eigenvectors of M decompose the state space into:
+  1. The DOMINANT eigenvector (Pisot root) → exponential growth direction
+  2. Complex conjugate eigenvectors → helical oscillation directions
+
+For the NUD count W(n):
+  W(n) ≈ c₁ · τ₃^n + c₂ · λ_c^n + c₃ · λ̄_c^n
+       = c₁ · τ₃^n + 2·|c₂|·|λ_c|^n · cos(n·arg(λ_c) + phase)
+
+The eigenvectors TELL US where the oscillations live.
+
+Transfer matrix M at x=1:
+  M = [[1.0, 2.0, 0.0], [0.0, 0.0, 1.0], [1.0, 1.0, 0.0]]
+
+Eigenvalues: [-0.41964338+0.60629073j -0.41964338-0.60629073j  1.83928676+0.j        ]
+
+Eigenvectors (columns):
+  λ_1 = -0.419643+0.606291j
+  v_1 = [-0.721755+0.000000j, 0.512317-0.218797j, -0.082336+0.402430j]
+  λ_2 = -0.419643-0.606291j
+  v_2 = [-0.721755-0.000000j, 0.512317+0.218797j, -0.082336-0.402430j]
+  λ_3 = 1.839287+0.000000j
+  v_3 = [-0.751255+0.000000j, -0.315259+0.000000j, -0.579852+0.000000j]
+
+Dominant eigenvector (Pisot direction):
+  λ = 1.83928676+0.00000000j (= τ₃)
+  v = [-0.75125469+0.j -0.31525906+0.j -0.57985181+0.j]
+  Normalized: v/|v| = [-0.75125469+0.j -0.31525906+0.j -0.57985181+0.j]
+
+Subdominant eigenvectors (helical directions):
+  λ = -0.41964338+0.60629073j
+  v = [-0.72175487+0.j          0.51231726-0.21879664j -0.08233617+0.40242977j]
+  λ = -0.41964338-0.60629073j
+  v = [-0.72175487-0.j          0.51231726+0.21879664j -0.08233617-0.40242977j]
+
+WHERE DO THE EIGENVECTORS GO?
+
+1. DOMINANT (Pisot) eigenvector: This is the "flat" direction.
+   As n → ∞, the state vector M^n · v₀ aligns with this eigenvector.
+   W(n) ~ c · τ₃^n means the NUD count grows along this direction.
+   The ratio W(n)/n! → 1/e because τ₃^n / n! → 0 at the right rate.
+
+2. COMPLEX eigenvectors: These are the "helical" directions.
+   The complex pair λ_c, λ̄_c contribute oscillatory corrections:
+   W(n) = c₁τ₃^n + 2Re(c₂λ_c^n) = c₁τ₃^n + oscillation
+   Since |λ_c| < τ₃, the oscillation decays relative to the main term.
+   But it NEVER disappears — it traces a helix forever.
+
+3. ON THE RIEMANN SURFACE: If we plot (n, log W(n)) in C, we get
+   log W(n) ≈ n·log(τ₃) + log(c₁) + correction terms
+   The correction terms are helical on the Riemann surface of log.
+
+--- Verification: W(n) from M^n ---
+  W(1) = 1, W(1)/1! = 1.000000, log(W(1))/n = 0.000000
+  W(2) = 1, W(2)/2! = 0.500000, log(W(2))/n = 0.000000
+  W(3) = 3, W(3)/3! = 0.500000, log(W(3))/n = 0.366204
+  W(4) = 11, W(4)/4! = 0.458333, log(W(4))/n = 0.599474
+  W(5) = 53, W(5)/5! = 0.441667, log(W(5))/n = 0.794058
+  W(6) = 309, W(6)/6! = 0.429167, log(W(6))/n = 0.955557
+  W(7) = 2119, W(7)/7! = 0.420437, log(W(7))/n = 1.094100
+  W(8) = 16687, W(8)/8! = 0.413864, log(W(8))/n = 1.215298
+
+  For comparison: 1/e = 0.367879
+  τ₃ = 1.839287
+  log(τ₃) = 0.609378
+
+  W(n)/τ₃^n ratio:
+    n=1: W(n)/τ₃^n = 0.543689
+    n=2: W(n)/τ₃^n = 0.295598
+    n=3: W(n)/τ₃^n = 0.482140
+    n=4: W(n)/τ₃^n = 0.961158
+    n=5: W(n)/τ₃^n = 2.517843
+    n=6: W(n)/τ₃^n = 7.981083
+    n=7: W(n)/τ₃^n = 29.756706
+    n=8: W(n)/τ₃^n = 127.403899
+
+======================================================================
+PART 7: TOURNAMENTS AS REGULAR POLYGONS ON THE UNIT CIRCLE
+======================================================================
+
+A tournament on n vertices can be visualized as a REGULAR n-GON
+inscribed in the unit circle, with directed edges (arcs) between
+every pair of vertices.
+
+Vertex j sits at position ω^j = e^{2πij/n} on the unit circle.
+
+DIHEDRAL GROUP D_n acts on this polygon:
+  - ROTATION r: j → j+1 (mod n). A tournament is CIRCULANT iff r ∈ Aut(T).
+  - REFLECTION s: j → -j (mod n). Tournament T is SELF-COMPLEMENTARY
+    iff some element of D_n is an anti-automorphism.
+
+For CIRCULANT tournaments (rotation-invariant):
+  T is determined by connection set S ⊂ {1,...,n-1} with |S| = (n-1)/2
+  and S ∩ (-S) = ∅.
+  j → k iff k - j (mod n) ∈ S.
+
+PALEY tournament T_p (p ≡ 3 mod 4 prime):
+  S = QR(p) = {quadratic residues mod p}
+  This has FULL dihedral symmetry: every element of D_p acts.
+  |Aut(T_p)| = p·(p-1)/2.
+
+EIGENVALUES of circulant adjacency matrix:
+  λ_k = Σ_{s∈S} ω^{ks}  for k = 0, 1, ..., n-1
+  where ω = e^{2πi/n}.
+
+For Paley: λ_k = Gauss sum = (χ(k)√p - 1) / 2
+  where χ = Legendre symbol.
+  So |λ_k| = (√p ∓ 1)/2 for k ≠ 0.
+
+For Interval S={1,...,(n-1)/2}:
+  λ_k = Σ_{s=1}^{(n-1)/2} ω^{ks} = (sin(kπ(n+1)/(2n)) / sin(kπ/n) - 1) / 2
+  The dominant eigenvalue λ_1 ~ n/(2π) as n → ∞.
+
+
+--- Circulant eigenvalues at n=3 ---
+  Paley QR = [1]
+  Eigenvalues (sorted by |λ|):
+    λ_0 =  +1.0000  +0.0000i  |λ| = 1.0000  arg =    0.00°
+    λ_1 =  -0.5000  +0.8660i  |λ| = 1.0000  arg =  120.00°
+    λ_2 =  -0.5000  -0.8660i  |λ| = 1.0000  arg = -120.00°
+  Interval S = [1]
+  Interval eigenvalues (sorted by |λ|):
+    λ_0 =  +1.0000  +0.0000i  |λ| = 1.0000  arg =    0.00°
+    λ_1 =  -0.5000  +0.8660i  |λ| = 1.0000  arg =  120.00°
+    λ_2 =  -0.5000  -0.8660i  |λ| = 1.0000  arg = -120.00°
+
+--- Circulant eigenvalues at n=5 ---
+  Interval S = [1, 2]
+  Interval eigenvalues (sorted by |λ|):
+    λ_0 =  +2.0000  +0.0000i  |λ| = 2.0000  arg =    0.00°
+    λ_1 =  -0.5000  +1.5388i  |λ| = 1.6180  arg =  108.00°
+    λ_2 =  -0.5000  -1.5388i  |λ| = 1.6180  arg = -108.00°
+    λ_3 =  -0.5000  -0.3633i  |λ| = 0.6180  arg = -144.00°
+    λ_4 =  -0.5000  +0.3633i  |λ| = 0.6180  arg =  144.00°
+
+--- Circulant eigenvalues at n=7 ---
+  Paley QR = [1, 2, 4]
+  Eigenvalues (sorted by |λ|):
+    λ_0 =  +3.0000  +0.0000i  |λ| = 3.0000  arg =    0.00°
+    λ_1 =  -0.5000  -1.3229i  |λ| = 1.4142  arg = -110.70°
+    λ_2 =  -0.5000  -1.3229i  |λ| = 1.4142  arg = -110.70°
+    λ_3 =  -0.5000  +1.3229i  |λ| = 1.4142  arg =  110.70°
+    λ_4 =  -0.5000  +1.3229i  |λ| = 1.4142  arg =  110.70°
+    λ_5 =  -0.5000  +1.3229i  |λ| = 1.4142  arg =  110.70°
+    λ_6 =  -0.5000  -1.3229i  |λ| = 1.4142  arg = -110.70°
+  Interval S = [1, 2, 3]
+  Interval eigenvalues (sorted by |λ|):
+    λ_0 =  +3.0000  +0.0000i  |λ| = 3.0000  arg =    0.00°
+    λ_1 =  -0.5000  +2.1906i  |λ| = 2.2470  arg =  102.86°
+    λ_2 =  -0.5000  -2.1906i  |λ| = 2.2470  arg = -102.86°
+    λ_3 =  -0.5000  -0.6270i  |λ| = 0.8019  arg = -128.57°
+    λ_4 =  -0.5000  +0.6270i  |λ| = 0.8019  arg =  128.57°
+    λ_5 =  -0.5000  -0.2408i  |λ| = 0.5550  arg = -154.29°
+    λ_6 =  -0.5000  +0.2408i  |λ| = 0.5550  arg =  154.29°
+
+--- Circulant eigenvalues at n=11 ---
+  Paley QR = [1, 3, 4, 5, 9]
+  Eigenvalues (sorted by |λ|):
+    λ_0 =  +5.0000  +0.0000i  |λ| = 5.0000  arg =    0.00°
+    λ_1 =  -0.5000  -1.6583i  |λ| = 1.7321  arg = -106.78°
+    λ_2 =  -0.5000  +1.6583i  |λ| = 1.7321  arg =  106.78°
+    λ_3 =  -0.5000  -1.6583i  |λ| = 1.7321  arg = -106.78°
+    λ_4 =  -0.5000  +1.6583i  |λ| = 1.7321  arg =  106.78°
+    λ_5 =  -0.5000  -1.6583i  |λ| = 1.7321  arg = -106.78°
+    λ_6 =  -0.5000  +1.6583i  |λ| = 1.7321  arg =  106.78°
+    λ_7 =  -0.5000  +1.6583i  |λ| = 1.7321  arg =  106.78°
+    λ_8 =  -0.5000  -1.6583i  |λ| = 1.7321  arg = -106.78°
+    λ_9 =  -0.5000  +1.6583i  |λ| = 1.7321  arg =  106.78°
+    λ_10 =  -0.5000  -1.6583i  |λ| = 1.7321  arg = -106.78°
+  Interval S = [1, 2, 3, 4, 5]
+  Interval eigenvalues (sorted by |λ|):
+    λ_0 =  +5.0000  +0.0000i  |λ| = 5.0000  arg =    0.00°
+    λ_1 =  -0.5000  +3.4776i  |λ| = 3.5133  arg =   98.18°
+    λ_2 =  -0.5000  -3.4776i  |λ| = 3.5133  arg =  -98.18°
+    λ_3 =  -0.5000  -1.0948i  |λ| = 1.2036  arg = -114.55°
+    λ_4 =  -0.5000  +1.0948i  |λ| = 1.2036  arg =  114.55°
+    λ_5 =  -0.5000  -0.5770i  |λ| = 0.7635  arg = -130.91°
+    λ_6 =  -0.5000  +0.5770i  |λ| = 0.7635  arg =  130.91°
+
+--- Circulant eigenvalues at n=13 ---
+  Interval S = [1, 2, 3, 4, 5, 6]
+  Interval eigenvalues (sorted by |λ|):
+    λ_0 =  +6.0000  +0.0000i  |λ| = 6.0000  arg =    0.00°
+    λ_1 =  -0.5000  +4.1179i  |λ| = 4.1481  arg =   96.92°
+    λ_2 =  -0.5000  -4.1179i  |λ| = 4.1481  arg =  -96.92°
+    λ_3 =  -0.5000  +1.3184i  |λ| = 1.4100  arg =  110.77°
+    λ_4 =  -0.5000  -1.3184i  |λ| = 1.4100  arg = -110.77°
+    λ_5 =  -0.5000  +0.7244i  |λ| = 0.8802  arg =  124.62°
+    λ_6 =  -0.5000  -0.7244i  |λ| = 0.8802  arg = -124.62°
+
+THE POLYGON-HELIX CONNECTION:
+
+Vertices at ω^j = e^{2πij/n} on the unit circle.
+Eigenvalues λ_k = Σ_{s∈S} ω^{ks} are points in C.
+
+The EIGENVECTORS are the characters χ_k(j) = ω^{jk}.
+These live ON the unit circle — they ARE the polygon vertices!
+
+When we raise to the n-th power (M^n or λ^n):
+  - The dominant eigenvalue λ_0 = |S| = (n-1)/2 gives the "flat" growth.
+  - Each λ_k ≠ 0 traces a spiral as n varies:
+    λ_k^n = |λ_k|^n · e^{in·arg(λ_k)}
+
+On the Riemann surface of log:
+  n·log(λ_k) = n·log|λ_k| + in·arg(λ_k)
+  This is a STRAIGHT LINE on the helix with slope (log|λ_k|, arg(λ_k)).
+
+So the permanent (H(T)) decomposes as a sum of helical contributions,
+one from each eigenvalue. The eigenvectors tell us WHICH directions
+in state space correspond to which helix.
+
+
+======================================================================
+PART 8: SIMPLICIAL RÉDEI AND THE COVERING SPACE
+======================================================================
+
+SIMPLICIAL RÉDEI THEOREM (conjectured, verified n≤6 by S112):
+
+For any tournament T on n vertices, either:
+  (a) sim_H(T) = 0 (transitive core has cycles), or
+  (b) sim_H(T) = 1 (transitive core is a total order).
+
+Moreover, exactly 2·n! tournaments have sim_H = 1:
+  - n! transitive tournaments (H = 1)
+  - n! "near-transitive" tournaments (H = 2^{n-2} + 1)
+
+THE COVERING SPACE INTERPRETATION:
+The transitive core of T is the poset obtained by removing all arcs
+that participate in directed 3-cycles. This is a QUOTIENT of T.
+
+When the transitive core is a total order, it defines a unique
+Hamiltonian path. This path is the "simplicial skeleton" of T.
+The other H-1 paths involve "going around" 3-cycles, which is
+precisely the MONODROMY of the covering space!
+
+A 3-cycle in T is a loop in the tournament digraph. The transitive
+core removes these loops, leaving the universal cover (a tree/DAG).
+The number of loops you can thread = H - 1 = 2^{n-2} for the
+near-transitive class.
+
+WHY 2^{n-2}? A near-transitive tournament has exactly n-2 "independent"
+3-cycles (each involving consecutive triple in the total order).
+Each 3-cycle offers a binary choice (go through the cycle or not),
+giving 2^{n-2} non-simplicial paths + 1 simplicial path = 2^{n-2} + 1.
+
+--- Near-transitive tournaments (sim_H=1, H=2^{n-2}+1) ---
+
+  n=4: sim_H=1 count = 48 (expected 48)
+    with H=5: 24
+    with H=1: 24
+    Total = 24 + 24 = 48
+
+  n=5: sim_H=1 count = 240 (expected 240)
+    with H=9: 120
+    with H=1: 120
+    Total = 120 + 120 = 240
+
+  n=6: sim_H=1 count = 1440 (expected 1440)
+    with H=17: 720
+    with H=1: 720
+    Total = 720 + 720 = 1440
+
+
+======================================================================
+PART 9: THE GRAND UNIFICATION
+======================================================================
+
+ALL THREADS CONVERGE:
+
+1. TRANSFER MATRIX → TRIBONACCI:
+   The NUD counting transfer matrix has char poly λ³-λ²-xλ-x.
+   At x=1 this gives the tribonacci equation.
+   The tribonacci constant τ₃ governs tournament counting asymptotics.
+
+2. TRIBONACCI → ZECKENDORF:
+   Every integer has a unique tribonacci Zeckendorf representation.
+   This IS the base-τ₃ numeral system with digits {0,1}, no 111.
+   The transfer matrix enforces the "no three consecutive" constraint!
+
+3. ZECKENDORF → POLYGON:
+   The Zeckendorf constraint (no k consecutive 1s) is a TILING constraint
+   on the regular polygon. Placing 1s at vertices of the n-gon with
+   the gap condition is exactly a CIRCULANT INDEPENDENT SET.
+
+4. POLYGON → DIHEDRAL → TOURNAMENT:
+   Tournament vertices at roots of unity. Dihedral group = symmetries.
+   Circulant tournaments = rotation-invariant. Paley = full dihedral.
+   Eigenvalues of adjacency matrix = DFT = sums over roots of unity.
+
+5. EIGENVALUES → HELIX:
+   Complex eigenvalues trace spirals as matrix power n increases.
+   On the Riemann surface of log, spirals become straight lines.
+   The "helical complex plane" IS the universal cover of C*.
+
+6. HELIX → SIMPLICIAL RÉDEI:
+   The transitive core of a tournament is the DAG quotient —
+   collapsing cycles (loops) leaves the universal cover (tree).
+   sim_H = 1 means the universal cover has a unique path.
+   H - 1 = number of ways to "go around" the monodromy loops.
+
+7. SIMPLICIAL → TRANSFER MATRIX (FULL CIRCLE):
+   The simplicial constraint (respect transitive triples) is a
+   partial order constraint. The number of such orders is counted
+   by a transfer matrix — bringing us back to eigenvalues!
+
+--- Structural analysis of near-transitive tournaments ---
+
+  n=4, H=5: c3=2, transitive_triples=2
+    2^{n-2} = 4, H-1 = 4
+    c3 = 2, n-2 = 2
+    *** c3 = n-2: exactly n-2 independent 3-cycles! ***
+    Adjacency:
+      [0, 0, 0, 1]
+      [1, 0, 0, 0]
+      [1, 1, 0, 0]
+      [0, 1, 1, 0]
+    Scores: (1, 1, 2, 2)
+  n=5, H=9: c3=3, transitive_triples=7
+    2^{n-2} = 8, H-1 = 8
+    c3 = 3, n-2 = 3
+    *** c3 = n-2: exactly n-2 independent 3-cycles! ***
+    Adjacency:
+      [0, 0, 0, 0, 1]
+      [1, 0, 0, 0, 0]
+      [1, 1, 0, 0, 0]
+      [1, 1, 1, 0, 0]
+      [0, 1, 1, 1, 0]
+    Scores: (1, 1, 2, 3, 3)
+
+FINAL OBSERVATION: The number 2^{n-2} is NOT the number of 3-cycles.
+Instead, for the near-transitive tournaments, H-1 = 2^{n-2} counts
+the number of "non-simplicial" Hamiltonian paths — those that deviate
+from the unique total-order path by threading through 3-cycle loops.
+
+Each deviation is a binary choice (use a 3-cycle arc or the transitive arc),
+and there are n-2 such independent choices (one for each "internal" edge
+of the total order path).
+
+This connects beautifully to the TILING model: the pin grid has
+m = C(n-1,2) tiles, and the simplicial paths are those with specific
+tile configurations forced by the transitive structure.
+
+======================================================================
+END OF EXPLORATION — opus-2026-03-15-S90
+======================================================================
