@@ -1,0 +1,169 @@
+======================================================================
+NAIVE vs TRUE g_k VALUES
+======================================================================
+
+k=1:
+  m=1: naive=         1, true=         1  ✓
+  m=2: naive=         2, true=         2  ✓
+  m=3: naive=         3, true=         3  ✓
+  m=4: naive=         4, true=         4  ✓
+  m=5: naive=         5, true=         5  ✓
+  m=6: naive=         6, true=         6  ✓
+  m=7: naive=         7, true=         7  ✓
+
+k=2:
+  m=1: naive=         1, true=         1  ✓
+  m=2: naive=         4, true=         4  ✓
+  m=3: naive=         9, true=         9  ✓
+  m=4: naive=        16, true=        16  ✓
+  m=5: naive=        25, true=        25  ✓
+  m=6: naive=        36, true=        36  ✓
+  m=7: naive=        49, true=        49  ✓
+
+k=3:
+  m=1: naive=         1, true=         1  ✓
+  m=2: naive=         6, true=         6  ✓
+  m=3: naive=        19, true=        19  ✓
+  m=4: naive=        44, true=        44  ✓
+  m=5: naive=        85, true=        85  ✓
+  m=6: naive=       146, true=       146  ✓
+  m=7: naive=       231, true=       231  ✓
+
+k=4:
+  m=1: naive=         1, true=         1  ✓
+  m=2: naive=         8, true=         8  ✓
+  m=3: naive=        33, true=        33  ✓
+  m=4: naive=        96, true=        96  ✓
+  m=5: naive=       225, true=       217  diff=8
+  m=6: naive=       456, true=       416  diff=40
+  m=7: naive=       833, true=       713  diff=120
+
+k=5:
+  m=1: naive=         1, true=         1  ✓
+  m=2: naive=        10, true=        10  ✓
+  m=3: naive=        51, true=       211  diff=-160
+  m=4: naive=       180, true=      1380  diff=-1200
+  m=5: naive=       501, true=      4293  diff=-3792
+  m=6: naive=      1182, true=      9726  diff=-8544
+  m=7: naive=      2471, true=     18455  diff=-15984
+
+k=6:
+  m=1: naive=         1, true=         1  ✓
+  m=2: naive=        12, true=        12  ✓
+  m=3: naive=        73, true=     25033  diff=-24960
+  m=4: naive=       304, true=    214384  diff=-214080
+  m=5: naive=       985, true=    707385  diff=-706400
+  m=6: naive=      2668, true=   1643356  diff=-1640688
+  m=7: naive=      6321, true=   3161617  diff=-3155296
+
+k=7:
+  m=1: naive=         1, true=         1  ✓
+  m=2: naive=        14, true=        14  ✓
+  m=3: naive=        99, true=   6314339  diff=-6314240
+  m=4: naive=       476, true=  58595516  diff=-58595040
+  m=5: naive=      1765, true= 196496085  diff=-196494320
+  m=6: naive=      5418, true= 459668586  diff=-459663168
+  m=7: naive=     14407, true= 887765559  diff=-887751152
+
+======================================================================
+CORRECTION: E_k(m) = g_k(m) - naive_k(m)
+======================================================================
+
+k=4: E_4(m) =
+  E_4(1) = 0
+  E_4(2) = 0
+  E_4(3) = 0
+  E_4(4) = 0
+  E_4(5) = -8
+  E_4(6) = -40
+  E_4(7) = -120
+  E_4(8) = -280
+  E_4(9) = -560
+
+  Check: -(m-1)(m-2)(m-3)(m-4)/3 =
+    m=1: 0  ✓
+    m=2: 0  ✓
+    m=3: 0  ✓
+    m=4: 0  ✓
+    m=5: -8  ✓
+    m=6: -40  ✓
+    m=7: -120  ✓
+    m=8: -280  ✓
+    m=9: -560  ✓
+
+k=5: E_5(m) =
+  E_5(1) = 0
+  E_5(2) = 0
+  E_5(3) = 160
+  E_5(4) = 1200
+  E_5(5) = 3792
+  E_5(6) = 8544
+  E_5(7) = 15984
+  E_5(8) = 26544
+  E_5(9) = 40544
+
+k=6: E_6(m) =
+  E_6(1) = 0
+  E_6(2) = 0
+  E_6(3) = 24960
+  E_6(4) = 214080
+  E_6(5) = 706400
+  E_6(6) = 1640688
+  E_6(7) = 3155296
+  E_6(8) = 5387984
+  E_6(9) = 8475712
+
+k=7: E_7(m) =
+  E_7(1) = 0
+  E_7(2) = 0
+  E_7(3) = 6314240
+  E_7(4) = 58595040
+  E_7(5) = 196494320
+  E_7(6) = 459663168
+  E_7(7) = 887751152
+  E_7(8) = 1520405312
+  E_7(9) = 2397268768
+
+======================================================================
+DEGREE-4 CORRECTION ANALYSIS
+======================================================================
+
+k=4: correction pattern analysis
+  First nonzero at m=5
+  corrections: [0, 0, 0, 0, -8, -40, -120, -280, -560]
+  Leading zeros: 4
+
+k=5: correction pattern analysis
+  First nonzero at m=3
+  corrections: [0, 0, 160, 1200, 3792, 8544, 15984, 26544, 40544]
+  Leading zeros: 2
+
+k=6: correction pattern analysis
+  First nonzero at m=3
+  corrections: [0, 0, 24960, 214080, 706400, 1640688, 3155296, 5387984, 8475712]
+  Leading zeros: 2
+
+k=7: correction pattern analysis
+  First nonzero at m=3
+  corrections: [0, 0, 6314240, 58595040, 196494320, 459663168, 887751152, 1520405312, 2397268768]
+  Leading zeros: 2
+
+======================================================================
+BINOMIAL BASIS EXPANSION: g_k(m) = Σ a_{k,r}·C(m,r)
+======================================================================
+
+k=1: g_1(m) = 1·C(m,1) ✓
+
+k=2: g_2(m) = 1·C(m,1) ✓ + 2·C(m,2) ✓
+
+k=3: g_3(m) = 1·C(m,1) ✓ + 4·C(m,2) ✓ + 4·C(m,3) ✓
+
+k=4: g_4(m) = -8·C(m,0) + 9·C(m,1) (naive=1) + -2·C(m,2) (naive=6) + 20·C(m,3) (naive=12)
+
+k=5: g_5(m) = -592·C(m,0) + 593·C(m,1) (naive=1) + -584·C(m,2) (naive=8) + 776·C(m,3) (naive=24)
+
+k=6: g_6(m) = -114320·C(m,0) + 114321·C(m,1) (naive=1) + -114310·C(m,2) (naive=10) + 139320·C(m,3) (naive=40)
+
+k=7: g_7(m) = -33338240·C(m,0) + 33338241·C(m,1) (naive=1) + -33338228·C(m,2) (naive=12) + 39652540·C(m,3) (naive=60)
+
+Done!

@@ -1,0 +1,334 @@
+======================================================================
+DOMINO TILINGS BY CLUSTER TYPE
+======================================================================
+
+k=1:
+  m=1: total tilings=1 (expected C(1,1)=1)
+    cluster type (1,): 1
+  m=2: total tilings=2 (expected C(2,1)=2)
+    cluster type (1,): 2
+  m=3: total tilings=3 (expected C(3,1)=3)
+    cluster type (1,): 3
+  m=4: total tilings=4 (expected C(4,1)=4)
+    cluster type (1,): 4
+  m=5: total tilings=5 (expected C(5,1)=5)
+    cluster type (1,): 5
+  m=6: total tilings=6 (expected C(6,1)=6)
+    cluster type (1,): 6
+  m=7: total tilings=7 (expected C(7,1)=7)
+    cluster type (1,): 7
+
+k=2:
+  m=1: total tilings=1 (expected C(2,2)=1)
+    cluster type (2,): 1
+  m=2: total tilings=3 (expected C(3,2)=3)
+    cluster type (1, 1): 1
+    cluster type (2,): 2
+  m=3: total tilings=6 (expected C(4,2)=6)
+    cluster type (1, 1): 3
+    cluster type (2,): 3
+  m=4: total tilings=10 (expected C(5,2)=10)
+    cluster type (1, 1): 6
+    cluster type (2,): 4
+  m=5: total tilings=15 (expected C(6,2)=15)
+    cluster type (1, 1): 10
+    cluster type (2,): 5
+  m=6: total tilings=21 (expected C(7,2)=21)
+    cluster type (1, 1): 15
+    cluster type (2,): 6
+  m=7: total tilings=28 (expected C(8,2)=28)
+    cluster type (1, 1): 21
+    cluster type (2,): 7
+
+k=3:
+  m=1: total tilings=1 (expected C(3,3)=1)
+    cluster type (3,): 1
+  m=2: total tilings=4 (expected C(4,3)=4)
+    cluster type (2, 1): 2
+    cluster type (3,): 2
+  m=3: total tilings=10 (expected C(5,3)=10)
+    cluster type (1, 1, 1): 1
+    cluster type (2, 1): 6
+    cluster type (3,): 3
+  m=4: total tilings=20 (expected C(6,3)=20)
+    cluster type (1, 1, 1): 4
+    cluster type (2, 1): 12
+    cluster type (3,): 4
+  m=5: total tilings=35 (expected C(7,3)=35)
+    cluster type (1, 1, 1): 10
+    cluster type (2, 1): 20
+    cluster type (3,): 5
+  m=6: total tilings=56 (expected C(8,3)=56)
+    cluster type (1, 1, 1): 20
+    cluster type (2, 1): 30
+    cluster type (3,): 6
+  m=7: total tilings=84 (expected C(9,3)=84)
+    cluster type (1, 1, 1): 35
+    cluster type (2, 1): 42
+    cluster type (3,): 7
+
+k=4:
+  m=1: total tilings=1 (expected C(4,4)=1)
+    cluster type (4,): 1
+  m=2: total tilings=5 (expected C(5,4)=5)
+    cluster type (2, 2): 1
+    cluster type (3, 1): 2
+    cluster type (4,): 2
+  m=3: total tilings=15 (expected C(6,4)=15)
+    cluster type (2, 1, 1): 3
+    cluster type (2, 2): 3
+    cluster type (3, 1): 6
+    cluster type (4,): 3
+  m=4: total tilings=35 (expected C(7,4)=35)
+    cluster type (1, 1, 1, 1): 1
+    cluster type (2, 1, 1): 12
+    cluster type (2, 2): 6
+    cluster type (3, 1): 12
+    cluster type (4,): 4
+  m=5: total tilings=70 (expected C(8,4)=70)
+    cluster type (1, 1, 1, 1): 5
+    cluster type (2, 1, 1): 30
+    cluster type (2, 2): 10
+    cluster type (3, 1): 20
+    cluster type (4,): 5
+  m=6: total tilings=126 (expected C(9,4)=126)
+    cluster type (1, 1, 1, 1): 15
+    cluster type (2, 1, 1): 60
+    cluster type (2, 2): 15
+    cluster type (3, 1): 30
+    cluster type (4,): 6
+  m=7: total tilings=210 (expected C(10,4)=210)
+    cluster type (1, 1, 1, 1): 35
+    cluster type (2, 1, 1): 105
+    cluster type (2, 2): 21
+    cluster type (3, 1): 42
+    cluster type (4,): 7
+
+k=5:
+  m=1: total tilings=1 (expected C(5,5)=1)
+    cluster type (5,): 1
+  m=2: total tilings=6 (expected C(6,5)=6)
+    cluster type (3, 2): 2
+    cluster type (4, 1): 2
+    cluster type (5,): 2
+  m=3: total tilings=21 (expected C(7,5)=21)
+    cluster type (2, 2, 1): 3
+    cluster type (3, 1, 1): 3
+    cluster type (3, 2): 6
+    cluster type (4, 1): 6
+    cluster type (5,): 3
+  m=4: total tilings=56 (expected C(8,5)=56)
+    cluster type (2, 1, 1, 1): 4
+    cluster type (2, 2, 1): 12
+    cluster type (3, 1, 1): 12
+    cluster type (3, 2): 12
+    cluster type (4, 1): 12
+    cluster type (5,): 4
+  m=5: total tilings=126 (expected C(9,5)=126)
+    cluster type (1, 1, 1, 1, 1): 1
+    cluster type (2, 1, 1, 1): 20
+    cluster type (2, 2, 1): 30
+    cluster type (3, 1, 1): 30
+    cluster type (3, 2): 20
+    cluster type (4, 1): 20
+    cluster type (5,): 5
+  m=6: total tilings=252 (expected C(10,5)=252)
+    cluster type (1, 1, 1, 1, 1): 6
+    cluster type (2, 1, 1, 1): 60
+    cluster type (2, 2, 1): 60
+    cluster type (3, 1, 1): 60
+    cluster type (3, 2): 30
+    cluster type (4, 1): 30
+    cluster type (5,): 6
+  m=7: total tilings=462 (expected C(11,5)=462)
+    cluster type (1, 1, 1, 1, 1): 21
+    cluster type (2, 1, 1, 1): 140
+    cluster type (2, 2, 1): 105
+    cluster type (3, 1, 1): 105
+    cluster type (3, 2): 42
+    cluster type (4, 1): 42
+    cluster type (5,): 7
+
+k=6:
+  m=1: total tilings=1 (expected C(6,6)=1)
+    cluster type (6,): 1
+  m=2: total tilings=7 (expected C(7,6)=7)
+    cluster type (3, 3): 1
+    cluster type (4, 2): 2
+    cluster type (5, 1): 2
+    cluster type (6,): 2
+  m=3: total tilings=28 (expected C(8,6)=28)
+    cluster type (2, 2, 2): 1
+    cluster type (3, 2, 1): 6
+    cluster type (3, 3): 3
+    cluster type (4, 1, 1): 3
+    cluster type (4, 2): 6
+    cluster type (5, 1): 6
+    cluster type (6,): 3
+  m=4: total tilings=84 (expected C(9,6)=84)
+    cluster type (2, 2, 1, 1): 6
+    cluster type (2, 2, 2): 4
+    cluster type (3, 1, 1, 1): 4
+    cluster type (3, 2, 1): 24
+    cluster type (3, 3): 6
+    cluster type (4, 1, 1): 12
+    cluster type (4, 2): 12
+    cluster type (5, 1): 12
+    cluster type (6,): 4
+  m=5: total tilings=210 (expected C(10,6)=210)
+    cluster type (2, 1, 1, 1, 1): 5
+    cluster type (2, 2, 1, 1): 30
+    cluster type (2, 2, 2): 10
+    cluster type (3, 1, 1, 1): 20
+    cluster type (3, 2, 1): 60
+    cluster type (3, 3): 10
+    cluster type (4, 1, 1): 30
+    cluster type (4, 2): 20
+    cluster type (5, 1): 20
+    cluster type (6,): 5
+  m=6: total tilings=462 (expected C(11,6)=462)
+    cluster type (1, 1, 1, 1, 1, 1): 1
+    cluster type (2, 1, 1, 1, 1): 30
+    cluster type (2, 2, 1, 1): 90
+    cluster type (2, 2, 2): 20
+    cluster type (3, 1, 1, 1): 60
+    cluster type (3, 2, 1): 120
+    cluster type (3, 3): 15
+    cluster type (4, 1, 1): 60
+    cluster type (4, 2): 30
+    cluster type (5, 1): 30
+    cluster type (6,): 6
+  m=7: total tilings=924 (expected C(12,6)=924)
+    cluster type (1, 1, 1, 1, 1, 1): 7
+    cluster type (2, 1, 1, 1, 1): 105
+    cluster type (2, 2, 1, 1): 210
+    cluster type (2, 2, 2): 35
+    cluster type (3, 1, 1, 1): 140
+    cluster type (3, 2, 1): 210
+    cluster type (3, 3): 21
+    cluster type (4, 1, 1): 105
+    cluster type (4, 2): 42
+    cluster type (5, 1): 42
+    cluster type (6,): 7
+
+======================================================================
+DECOMPOSITION: tilings by number of clusters r
+======================================================================
+
+k=1:
+  m=1: by #clusters: {1: 1}
+  m=2: by #clusters: {1: 2}
+  m=3: by #clusters: {1: 3}
+  m=4: by #clusters: {1: 4}
+  m=5: by #clusters: {1: 5}
+  m=6: by #clusters: {1: 6}
+  m=7: by #clusters: {1: 7}
+
+k=2:
+  m=1: by #clusters: {1: 1}
+  m=2: by #clusters: {1: 2, 2: 1}
+  m=3: by #clusters: {1: 3, 2: 3}
+  m=4: by #clusters: {1: 4, 2: 6}
+  m=5: by #clusters: {1: 5, 2: 10}
+  m=6: by #clusters: {1: 6, 2: 15}
+  m=7: by #clusters: {1: 7, 2: 21}
+
+k=3:
+  m=1: by #clusters: {1: 1}
+  m=2: by #clusters: {1: 2, 2: 2}
+  m=3: by #clusters: {1: 3, 2: 6, 3: 1}
+  m=4: by #clusters: {1: 4, 2: 12, 3: 4}
+  m=5: by #clusters: {1: 5, 2: 20, 3: 10}
+  m=6: by #clusters: {1: 6, 2: 30, 3: 20}
+  m=7: by #clusters: {1: 7, 2: 42, 3: 35}
+
+k=4:
+  m=1: by #clusters: {1: 1}
+  m=2: by #clusters: {1: 2, 2: 3}
+  m=3: by #clusters: {1: 3, 2: 9, 3: 3}
+  m=4: by #clusters: {1: 4, 2: 18, 3: 12, 4: 1}
+  m=5: by #clusters: {1: 5, 2: 30, 3: 30, 4: 5}
+  m=6: by #clusters: {1: 6, 2: 45, 3: 60, 4: 15}
+  m=7: by #clusters: {1: 7, 2: 63, 3: 105, 4: 35}
+
+k=5:
+  m=1: by #clusters: {1: 1}
+  m=2: by #clusters: {1: 2, 2: 4}
+  m=3: by #clusters: {1: 3, 2: 12, 3: 6}
+  m=4: by #clusters: {1: 4, 2: 24, 3: 24, 4: 4}
+  m=5: by #clusters: {1: 5, 2: 40, 3: 60, 4: 20, 5: 1}
+  m=6: by #clusters: {1: 6, 2: 60, 3: 120, 4: 60, 5: 6}
+  m=7: by #clusters: {1: 7, 2: 84, 3: 210, 4: 140, 5: 21}
+
+k=6:
+  m=1: by #clusters: {1: 1}
+  m=2: by #clusters: {1: 2, 2: 5}
+  m=3: by #clusters: {1: 3, 2: 15, 3: 10}
+  m=4: by #clusters: {1: 4, 2: 30, 3: 40, 4: 10}
+  m=5: by #clusters: {1: 5, 2: 50, 3: 100, 4: 50, 5: 5}
+  m=6: by #clusters: {1: 6, 2: 75, 3: 200, 4: 150, 5: 30, 6: 1}
+  m=7: by #clusters: {1: 7, 2: 105, 3: 350, 4: 350, 5: 105, 6: 7}
+
+======================================================================
+VERIFY: tilings with r clusters = C(k-1,r-1)·C(m,r)
+======================================================================
+
+k=1:
+  ✓ All match!
+
+k=2:
+  ✓ All match!
+
+k=3:
+  ✓ All match!
+
+k=4:
+  ✓ All match!
+
+k=5:
+  ✓ All match!
+
+k=6:
+  ✓ All match!
+
+======================================================================
+CLUSTER WEIGHTS h_s(n) = E[Z_0·Z_1·...·Z_{2s-1}] (from brute force)
+======================================================================
+
+n=3:
+  h_1(3) = 1/3 = 0.3333333333
+    h_1·(n)_{2}/2 = 1
+
+n=4:
+  h_1(4) = 1/6 = 0.1666666667
+    h_1·(n)_{2}/2 = 1
+
+n=5:
+  h_1(5) = 1/10 = 0.1000000000
+    h_1·(n)_{2}/2 = 1
+  h_2(5) = 1/60 = 0.0166666667
+    h_2·(n)_{4}/2 = 1
+
+n=6:
+  h_1(6) = 1/15 = 0.0666666667
+    h_1·(n)_{2}/2 = 1
+  h_2(6) = 1/180 = 0.0055555556
+    h_2·(n)_{4}/2 = 1
+
+n=7:
+  h_1(7) = 1/21 = 0.0476190476
+    h_1·(n)_{2}/2 = 1
+  h_2(7) = 1/420 = 0.0023809524
+    h_2·(n)_{4}/2 = 1
+  h_3(7) = 1/2520 = 0.0003968254
+    h_3·(n)_{6}/2 = 1
+
+n=8:
+  h_1(8) = 1/28 = 0.0357142857
+    h_1·(n)_{2}/2 = 1
+  h_2(8) = 1/840 = 0.0011904762
+    h_2·(n)_{4}/2 = 1
+  h_3(8) = 1/10080 = 0.0000992063
+    h_3·(n)_{6}/2 = 1
+
+Done!

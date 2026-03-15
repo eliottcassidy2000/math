@@ -1,0 +1,95 @@
+======================================================================
+TEST: FACTORIZATION OF NON-ADJACENT CLUSTER EXPECTATIONS
+======================================================================
+
+n=6:
+  h_1(n) = E[Z_0Z_1] = 1/15 = 0.0666666667
+  gap=0: E[Z_0Z_1·Z_2Z_3] = 1/180 = 0.0055555556
+           h_1² = 1/225 = 0.0044444444
+           ratio = 5/4  ✗ DOES NOT FACTORIZE
+  gap=1: E[Z_0Z_1·Z_3Z_4] = 1/90 = 0.0111111111
+           h_1² = 1/225 = 0.0044444444
+           ratio = 5/2  ✗ DOES NOT FACTORIZE
+
+n=7:
+  h_1(n) = E[Z_0Z_1] = 1/21 = 0.0476190476
+  gap=0: E[Z_0Z_1·Z_2Z_3] = 1/420 = 0.0023809524
+           h_1² = 1/441 = 0.0022675737
+           ratio = 21/20  ✗ DOES NOT FACTORIZE
+  gap=1: E[Z_0Z_1·Z_3Z_4] = 1/210 = 0.0047619048
+           h_1² = 1/441 = 0.0022675737
+           ratio = 21/10  ✗ DOES NOT FACTORIZE
+  gap=2: E[Z_0Z_1·Z_4Z_5] = 1/210 = 0.0047619048
+           h_1² = 1/441 = 0.0022675737
+           ratio = 21/10  ✗ DOES NOT FACTORIZE
+
+n=8:
+  h_1(n) = E[Z_0Z_1] = 1/28 = 0.0357142857
+  gap=0: E[Z_0Z_1·Z_2Z_3] = 1/840 = 0.0011904762
+           h_1² = 1/784 = 0.0012755102
+           ratio = 14/15  ✗ DOES NOT FACTORIZE
+  gap=1: E[Z_0Z_1·Z_3Z_4] = 1/420 = 0.0023809524
+           h_1² = 1/784 = 0.0012755102
+           ratio = 28/15  ✗ DOES NOT FACTORIZE
+  gap=2: E[Z_0Z_1·Z_4Z_5] = 1/420 = 0.0023809524
+           h_1² = 1/784 = 0.0012755102
+           ratio = 28/15  ✗ DOES NOT FACTORIZE
+  gap=3: E[Z_0Z_1·Z_5Z_6] = 1/420 = 0.0023809524
+           h_1² = 1/784 = 0.0012755102
+           ratio = 28/15  ✗ DOES NOT FACTORIZE
+
+n=9:
+  h_1(n) = E[Z_0Z_1] = 1/36 = 0.0277777778
+  gap=0: E[Z_0Z_1·Z_2Z_3] = 1/1512 = 0.0006613757
+           h_1² = 1/1296 = 0.0007716049
+           ratio = 6/7  ✗ DOES NOT FACTORIZE
+  gap=1: E[Z_0Z_1·Z_3Z_4] = 1/756 = 0.0013227513
+           h_1² = 1/1296 = 0.0007716049
+           ratio = 12/7  ✗ DOES NOT FACTORIZE
+  gap=2: E[Z_0Z_1·Z_4Z_5] = 1/756 = 0.0013227513
+           h_1² = 1/1296 = 0.0007716049
+           ratio = 12/7  ✗ DOES NOT FACTORIZE
+  gap=3: E[Z_0Z_1·Z_5Z_6] = 1/756 = 0.0013227513
+           h_1² = 1/1296 = 0.0007716049
+           ratio = 12/7  ✗ DOES NOT FACTORIZE
+  gap=4: E[Z_0Z_1·Z_6Z_7] = 1/756 = 0.0013227513
+           h_1² = 1/1296 = 0.0007716049
+           ratio = 12/7  ✗ DOES NOT FACTORIZE
+
+======================================================================
+CORRECTION FACTORS: E[Z_0Z_1Z_lZ_{l+1}] / h_1²
+======================================================================
+
+n=6: h_1 = 1/15
+  gap=0: ratio = 5/4 = 1.2500000000
+  gap=1: ratio = 5/2 = 2.5000000000
+
+n=7: h_1 = 1/21
+  gap=0: ratio = 21/20 = 1.0500000000
+  gap=1: ratio = 21/10 = 2.1000000000
+  gap=2: ratio = 21/10 = 2.1000000000
+
+n=8: h_1 = 1/28
+  gap=0: ratio = 14/15 = 0.9333333333
+  gap=1: ratio = 28/15 = 1.8666666667
+  gap=2: ratio = 28/15 = 1.8666666667
+  gap=3: ratio = 28/15 = 1.8666666667
+
+n=9: h_1 = 1/36
+  gap=0: ratio = 6/7 = 0.8571428571
+  gap=1: ratio = 12/7 = 1.7142857143
+  gap=2: ratio = 12/7 = 1.7142857143
+  gap=3: ratio = 12/7 = 1.7142857143
+  gap=4: ratio = 12/7 = 1.7142857143
+
+======================================================================
+THREE-CLUSTER FACTORIZATION
+======================================================================
+
+n=8:
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/gk_factorization_89c.py", line 77, in <module>
+    joint_3 = compute_joint(n, [0, 1, 3, 4, 6, 7])
+  File "/Users/e/Documents/GitHub/math/04-computation/gk_factorization_89c.py", line 23, in compute_joint
+    xj = 1 if perm[j+1] == perm[j] + 1 else 0
+IndexError: tuple index out of range
