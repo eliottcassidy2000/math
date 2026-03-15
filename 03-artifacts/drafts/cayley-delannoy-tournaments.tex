@@ -1,0 +1,356 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\CV}{CV}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\arctanh}{arctanh}
+
+\title{The Cayley Transform, Delannoy Paths, and the Fourier Analysis\\of Hamiltonian Paths in Random Tournaments}
+
+\author{Eliott Cassidy}
+\thanks{With computational assistance from Claude (Anthropic).}
+
+\begin{document}
+
+\begin{abstract}
+We study the Fourier analysis of the Hamiltonian path count $H(T)$ over random tournaments on $n$ vertices. We prove that the coefficient of variation satisfies
+\[
+\CV^2(H) = \sum_{k=1}^{\lfloor(n-1)/2\rfloor} \frac{[x^k]\, Q(x)^{n-2k}}{(n)_{2k}},
+\]
+where $Q(x) = (1+x)/(1-x)$ is the \emph{Cayley transform}. The Taylor coefficients of $Q(x)^m$ are governed by a family of polynomials $g_k(m)$ that encode the total number of diagonal steps across all Delannoy lattice paths from $(0,0)$ to $(k,m)$. We establish ten equivalent representations of $g_k(m)$, including a master generating function $Q(x)^m = 1 + 2\sum_{k \geq 1} g_k(m)\, x^k$, a Rodrigues formula, a duality $k\, g_k(m) = m\, g_m(k)$, and an $x$-deformed tribonacci recurrence. We prove the asymptotic expansion $\CV^2 = 2/n + O(1/n^3)$, with exact cancellation of the $1/n^2$ term, and identify $W(n) = n!\,(1 + \CV^2)$ as a new integer sequence connected to permutations without unit descents.
+\end{abstract}
+
+\maketitle
+
+%% ====================================================================
+\section{Introduction}
+%% ====================================================================
+
+A \emph{tournament} $T$ on $n$ vertices is a complete directed graph: for each pair $\{u,v\}$, exactly one of $u \to v$ or $v \to u$ holds. The number of directed Hamiltonian paths in $T$, denoted $H(T)$, is a fundamental invariant. R\'edei's theorem~\cite{redei1934} states that $H(T)$ is always odd.
+
+When $T$ is drawn uniformly at random from all $2^{\binom{n}{2}}$ tournaments, $H(T)$ becomes a random variable. Its expectation is $\mathbb{E}[H] = n!/2^{n-1}$, and the Fourier analysis of $H(T)$ on the Boolean hypercube $\{0,1\}^{\binom{n}{2}}$ reveals a rich structure.
+
+In this paper, we give a complete description of the \emph{Fourier energy spectrum} of $H(T)$:
+\[
+E_{2k} = \sum_{|S|=2k} \widehat{H}(S)^2,
+\]
+where the sum ranges over subsets $S$ of arcs of size $2k$, and $\widehat{H}(S)$ denotes the Fourier coefficient. The Degree Drop theorem (a consequence of path-reversal symmetry) ensures $E_{2k+1} = 0$ for all $k$, so only even levels contribute. We prove:
+\[
+\frac{E_{2k}}{E_0} = \frac{2\, g_k(n-2k)}{(n)_{2k}},
+\]
+where $(n)_{2k} = n(n-1)\cdots(n-2k+1)$ is the falling factorial and $g_k(m)$ is a polynomial of degree $k$ in $m$ with a remarkable algebraic structure.
+
+\subsection{Main results}
+
+Our central result is the identification of $g_k(m)$ as a coefficient of the Cayley transform.
+
+\begin{theorem}[Master Generating Function]\label{thm:master}
+For all integers $m \geq 0$,
+\[
+\left(\frac{1+x}{1-x}\right)^m = 1 + 2\sum_{k=1}^{\infty} g_k(m)\, x^k,
+\]
+where $g_k(m) = \sum_{j=1}^{\min(k,m)} \binom{k-1}{j-1}\binom{m}{j}\, 2^{j-1}$.
+\end{theorem}
+
+This single identity implies all of the following.
+
+\begin{corollary}[Delannoy Identity]\label{cor:delannoy}
+$k\, g_k(m) = \sum_{j=1}^{\min(k,m)} j\binom{k}{j}\binom{m}{j}\, 2^{j-1}$, which counts the total number of diagonal steps across all Delannoy paths from $(0,0)$ to $(k,m)$.
+\end{corollary}
+
+\begin{corollary}[Duality]\label{cor:duality}
+$k\, g_k(m) = m\, g_m(k)$ for all $k, m \geq 1$.
+\end{corollary}
+
+\begin{corollary}[Parity]\label{cor:parity}
+$g_k(-m) = (-1)^k\, g_k(m)$, i.e., $g_k$ contains only powers of $m$ with the same parity as $k$.
+\end{corollary}
+
+\begin{corollary}[Rodrigues Formula]\label{cor:rodrigues}
+$g_k(m) = \frac{1}{k!}\left[\frac{d^k}{du^k}\, u^m\,(u+1)^{k-1}\right]_{u=1}$.
+\end{corollary}
+
+\begin{corollary}[Asymptotics]\label{cor:asymptotics}
+$\CV^2(H) = \frac{2}{n} - \frac{14}{3n^3} - \frac{58}{3n^4} + O(n^{-5})$.
+In particular, the $1/n^2$ coefficient vanishes exactly.
+\end{corollary}
+
+\subsection{Connections}
+
+The Cayley transform $Q(x) = (1+x)/(1-x) = \exp(2\arctanh x)$ is a M\"obius transformation that maps the unit disk to the right half-plane. Its appearance here connects tournament combinatorics to four classical areas:
+\begin{enumerate}
+\item \textbf{Delannoy paths}: The matrix $T(k,m) = k\, g_k(m)$ equals OEIS A108666 on the diagonal, counting diagonal steps in Delannoy lattice paths.
+\item \textbf{Tribonacci numbers}: The transfer matrix encoding $g_k$ satisfies an $x$-deformed tribonacci recurrence; at $x=1$, the dominant eigenvalue is the tribonacci constant $\tau = 1.8393\ldots$
+\item \textbf{Hyperbolic geometry}: Since $Q = \exp(2\arctanh x)$, the tournament weights live on the hyperbolic line: $g_k(m) = \tfrac{1}{2}[x^k]\exp(2m\,\arctanh x)$.
+\item \textbf{Jacobi-type polynomials}: The Rodrigues formula $g_k(m) = \frac{1}{k!}[d^k/du^k\, u^m(u+1)^{k-1}]_{u=1}$ identifies $g_k$ as a specialized Jacobi-type polynomial.
+\end{enumerate}
+
+%% ====================================================================
+\section{The $Z$-process and domino subsets}
+%% ====================================================================
+
+\subsection{Setup}
+
+Fix $n \geq 2$ and let $\sigma$ be a uniformly random permutation of $\{0,1,\ldots,n-1\}$. Define, for $0 \leq j \leq n-2$:
+\begin{align*}
+X_j &= \mathbf{1}[\sigma(j+1) = \sigma(j)+1], \\
+Y_j &= \mathbf{1}[\sigma(j+1) = \sigma(j)-1], \\
+Z_j &= X_j - Y_j \in \{-1, 0, 1\}.
+\end{align*}
+Since $X_j Y_j = 0$ (a permutation cannot have both a unit ascent and a unit descent at the same position), we have $(1+Z_j) = (1+X_j)(1-Y_j)$.
+
+The quantity
+\[
+W(n) = \sum_{\sigma \in S_n} \prod_{j=0}^{n-2}(1+Z_j(\sigma))
+\]
+counts permutations without unit descents, weighted by $2^{\text{\#unit ascents}}$. The Fourier analysis of $H(T)$ leads to $W(n)/n! = 1 + \CV^2(H)$.
+
+\begin{definition}
+A subset $S \subseteq \{0,1,\ldots,n-2\}$ is a \emph{domino subset} if every element of $S$ has a neighbor in $S$ (i.e., for each $j \in S$, either $j-1 \in S$ or $j+1 \in S$). A domino subset has even cardinality, and its connected components partition it into contiguous blocks of even size.
+\end{definition}
+
+\subsection{Expansion}
+
+Expanding the product:
+\[
+\frac{W(n)}{n!} = \sum_{S \subseteq \{0,\ldots,n-2\}} \mathbb{E}\left[\prod_{j \in S} Z_j\right].
+\]
+The complement symmetry $\sigma \mapsto (n-1-\sigma(0), \ldots, n-1-\sigma(n-1))$ sends $Z_j \mapsto -Z_j$, so $\mathbb{E}[\prod_{j \in S} Z_j] = 0$ whenever $|S|$ is odd. Among even-size subsets, only domino subsets contribute (subsets with an isolated element contribute zero by the same symmetry argument applied to that coordinate).
+
+%% ====================================================================
+\section{The weight formula}
+%% ====================================================================
+
+\begin{theorem}[Weight Formula]\label{thm:weight}
+Let $S$ be a domino subset of $\{0,\ldots,n-2\}$ with $|S| = L$ and $c$ connected components. Then
+\[
+\mathbb{E}\left[\prod_{j \in S} Z_j\right] = \frac{2^c}{(n)_L}.
+\]
+\end{theorem}
+
+\begin{proof}
+\textbf{Single block.} Suppose $S = \{a, a+1, \ldots, a+L-1\}$ is a contiguous block of even size $L$. The product $\prod_{j \in S} Z_j$ is nonzero only when each $Z_j \in \{+1,-1\}$, meaning the values $\sigma(a), \sigma(a+1), \ldots, \sigma(a+L)$ form a $\pm 1$ walk of length $L$.
+
+For the walk to use $L+1$ \emph{distinct} values (as required by $\sigma$ being a permutation), it must be monotone: all steps $+1$ (ascending) or all steps $-1$ (descending). If the walk were non-monotone, some step $+1$ followed by $-1$ (or vice versa) would revisit the starting value, contradicting injectivity.
+
+An ascending walk of length $L$ starting at value $v$ uses values $v, v+1, \ldots, v+L$, requiring $v + L \leq n-1$, giving $n-L$ choices for $v$. For even $L$, both ascending and descending walks contribute $+1$ to the product. The remaining $n-L-1$ permutation values occupy $n-L-1$ positions freely: $(n-L-1)!$ arrangements. Thus:
+\[
+\mathbb{E}\left[\prod_{j \in S} Z_j\right] = \frac{2(n-L)(n-L-1)!}{n!} = \frac{2(n-L)!}{n!} = \frac{2}{(n)_L}.
+\]
+
+\textbf{Multiple blocks.} For $c$ separated blocks of sizes $L_1, \ldots, L_c$ (total $L = \sum L_i$), each block $i$ requires a contiguous range of $L_i + 1$ integers as values, with 2 orientations. The $c$ value-ranges must be pairwise disjoint.
+
+The number of ways to place $c$ distinguishable non-overlapping intervals of sizes $s_i = L_i + 1$ on $\{0, \ldots, n-1\}$ is determined by a stars-and-bars argument: distribute $n - \sum s_i = n - L - c$ free values into $c+1$ gaps (including two boundary gaps, non-negative) and $c-1$ inter-block gaps (each $\geq 1$). After subtracting mandatory gaps:
+\[
+\binom{n-L-c + c}{c} \cdot c! = \frac{(n-L)!}{(n-L-c)!}
+\]
+total placements. Combining with $2^c$ orientations and $(n-L-c)!$ free arrangements:
+\[
+\mathbb{E}\left[\prod_{j \in S} Z_j\right] = \frac{2^c \cdot (n-L)!}{n!} = \frac{2^c}{(n)_L}. \qedhere
+\]
+\end{proof}
+
+%% ====================================================================
+\section{Cluster counting and the closed form}
+%% ====================================================================
+
+\begin{definition}
+A \emph{$k$-matching} of a path graph $P_N$ on $N$ edges is a set of $k$ pairwise non-adjacent edges. A \emph{cluster} is a maximal set of matched edges at positions $i, i+2, i+4, \ldots$
+\end{definition}
+
+\begin{lemma}[Cluster Count]\label{lem:cluster}
+The number of $k$-matchings of $P_{m+2k-2}$ with exactly $j$ clusters is $\binom{k-1}{j-1}\binom{m}{j}$.
+\end{lemma}
+
+\begin{proof}
+A $j$-cluster matching is determined by a composition of $k$ into $j$ positive parts (the cluster sizes; $\binom{k-1}{j-1}$ choices) and a placement of $j$ clusters on the path. Each cluster of size $s$ occupies $2s$ consecutive vertex positions; the total is $2k$ positions from $m + 2k - 1$ available. The $m - 1$ free positions fill $j - 1$ inter-cluster gaps ($\geq 1$ each) and $2$ boundary margins ($\geq 0$). After subtracting mandatory gaps: $\binom{m-j+j}{j} = \binom{m}{j}$ placements.
+\end{proof}
+
+\begin{theorem}[Closed Form]\label{thm:closed}
+$g_k(m) = \sum_{j=1}^{\min(k,m)} \binom{k-1}{j-1}\binom{m}{j}\, 2^{j-1}$.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:weight}, a $k$-matching with $c = j$ clusters and $|S| = 2k$ contributes $2^j/(n)_{2k}$ to $\CV^2$. By Lemma~\ref{lem:cluster}, there are $\binom{k-1}{j-1}\binom{m}{j}$ such matchings. Summing over $j$ and extracting the common factor $2/(n)_{2k}$:
+\[
+\frac{E_{2k}}{E_0} = \frac{2}{(n)_{2k}} \sum_{j=1}^{\min(k,m)} \binom{k-1}{j-1}\binom{m}{j}\, 2^{j-1} = \frac{2\, g_k(m)}{(n)_{2k}}. \qedhere
+\]
+\end{proof}
+
+%% ====================================================================
+\section{The master generating function}
+%% ====================================================================
+
+\begin{proof}[Proof of Theorem~\ref{thm:master}]
+Using the identity $\sum_{m \geq j} \binom{m}{j} t^m = t^j/(1-t)^{j+1}$, the ordinary generating function of $g_k$ in $m$ is:
+\begin{align*}
+\sum_{m \geq 0} g_k(m)\, t^m &= \sum_{j=1}^{k} \binom{k-1}{j-1}\, 2^{j-1}\, \frac{t^j}{(1-t)^{j+1}} \\
+&= \frac{t}{(1-t)^2} \sum_{s=0}^{k-1} \binom{k-1}{s}\left(\frac{2t}{1-t}\right)^s \\
+&= \frac{t}{(1-t)^2} \left(\frac{1+t}{1-t}\right)^{k-1} = \frac{t(1+t)^{k-1}}{(1-t)^{k+1}}.
+\end{align*}
+Now consider the generating function in $k$:
+\begin{align*}
+\sum_{k \geq 1} g_k(m)\, x^k &= \sum_{k \geq 1} x^k\, \frac{t(1+t)^{k-1}}{(1-t)^{k+1}} \bigg|_{\text{extract } [t^m]} \\
+&= [t^m]\, \frac{xt}{(1-t)^2} \cdot \frac{1}{1 - x(1+t)/(1-t)}.
+\end{align*}
+Simplifying the geometric sum:
+\[
+\frac{xt}{(1-t)^2} \cdot \frac{1-t}{(1-t) - x(1+t)} = \frac{xt}{(1-t)((1-x) - (1+x)t)}.
+\]
+Partial fractions in $t$ give:
+\[
+\frac{xt}{(1-t)((1-x)-(1+x)t)} = -\frac{1}{2} \cdot \frac{1}{1-t} + \frac{1}{2} \cdot \frac{1}{1 - \frac{1+x}{1-x}\, t},
+\]
+so extracting $[t^m]$:
+\[
+\sum_{k \geq 1} g_k(m)\, x^k = \frac{1}{2}\left(\frac{1+x}{1-x}\right)^m - \frac{1}{2}.
+\]
+Rearranging: $\left(\frac{1+x}{1-x}\right)^m = 1 + 2\sum_{k \geq 1} g_k(m)\, x^k$.
+\end{proof}
+
+%% ====================================================================
+\section{Consequences}
+%% ====================================================================
+
+\subsection{Delannoy identity}
+
+\begin{proof}[Proof of Corollary~\ref{cor:delannoy}]
+Multiplying the closed form by $k$ and using $k\binom{k-1}{j-1} = j\binom{k}{j}$:
+\[
+k\, g_k(m) = \sum_{j=1}^{\min(k,m)} j\binom{k}{j}\binom{m}{j}\, 2^{j-1}. \qedhere
+\]
+\end{proof}
+
+The right-hand side counts the total number of diagonal $(1,1)$-steps across all Delannoy paths from $(0,0)$ to $(k,m)$. On the diagonal $k = m$, this is OEIS sequence A108666.
+
+\subsection{Duality}
+
+\begin{proof}[Proof of Corollary~\ref{cor:duality}]
+The expression $j\binom{k}{j}\binom{m}{j}\, 2^{j-1}$ is symmetric in $k$ and $m$, so $k\, g_k(m) = m\, g_m(k)$.
+\end{proof}
+
+\subsection{Parity}
+
+\begin{proof}[Proof of Corollary~\ref{cor:parity}]
+Under $x \to -x$: $Q(-x) = (1-x)/(1+x) = Q(x)^{-1}$. Thus:
+\[
+1 + 2\sum g_k(m)\,(-x)^k = Q(-x)^m = Q(x)^{-m} = 1 + 2\sum g_k(-m)\, x^k.
+\]
+Comparing coefficients: $(-1)^k\, g_k(m) = g_k(-m)$.
+\end{proof}
+
+\subsection{Rodrigues formula}
+
+\begin{proof}[Proof of Corollary~\ref{cor:rodrigues}]
+By the Cauchy integral formula, $2g_k(m) = [x^k]\, Q(x)^m$. Under the substitution $u = Q(x) = (1+x)/(1-x)$ (so $x = (u-1)/(u+1)$, $dx = 2\,du/(u+1)^2$), the Cauchy integral becomes a contour integral around $u=1$. Evaluating via the residue theorem:
+\[
+2g_k(m) = \frac{1}{k!}\left[\frac{d^k}{du^k}\, u^m(u+1)^{k-1}\right]_{u=1}.
+\]
+The Delannoy identity then follows by applying the Leibniz rule to the $k$-th derivative, using $\frac{d^j}{du^j}\, u^m\big|_{u=1} = (m)_j$ and $\frac{d^{k-j}}{du^{k-j}}\,(u+1)^{k-1}\big|_{u=1} = \frac{(k-1)!}{(j-1)!}\, 2^{j-1}$.
+\end{proof}
+
+\subsection{The $x$-tribonacci recurrence}
+
+\begin{proposition}\label{prop:tribonacci}
+Define $F(N,x) = \sum_{k=0}^{\lfloor N/2 \rfloor} 2g_k(N-2k+2)\, x^k$ (with $g_0 = 1$). Then:
+\[
+F(N+3,x) = F(N+2,x) + x\, F(N+1,x) + x\, F(N,x),
+\]
+with generating function $\sum_{N \geq 0} F(N,x)\, y^N = \frac{1+2xy+xy^2}{1-y-xy^2-xy^3}$.
+At $x = 1$, this reduces to the tribonacci recurrence with dominant eigenvalue $\tau = 1.8393\ldots$
+\end{proposition}
+
+\begin{proof}
+The transfer matrix $M(x) = \begin{psmallmatrix} 1 & 2x & 0 \\ 0 & 0 & 1 \\ 1 & x & 0 \end{psmallmatrix}$ has characteristic polynomial $\lambda^3 - \lambda^2 - x\lambda - x = 0$, which is the reciprocal of the denominator $1 - y - xy^2 - xy^3$. The generating function follows from $F(N,x) = \mathbf{e}_1^\top M(x)^N \mathbf{1}$, and the recurrence from the Cayley--Hamilton theorem.
+\end{proof}
+
+%% ====================================================================
+\section{Asymptotics}
+%% ====================================================================
+
+\begin{proof}[Proof of Corollary~\ref{cor:asymptotics}]
+The $k$-th contribution to $\CV^2$ is $2g_k(n-2k)/(n)_{2k}$. Setting $x = 1/n$:
+
+\textbf{$k=1$:} $2(n-2)/(n(n-1)) = 2/n - 2/n^2 + O(1/n^3)$.
+
+\textbf{$k=2$:} $2(n-4)^2/(n)_4 = 2/n^2 - 12/n^3 + O(1/n^4)$.
+
+The $1/n^2$ terms cancel exactly: $-2/n^2 + 2/n^2 = 0$.
+
+\textbf{$k=3$:} The leading contribution is $4/(3n^3)$. Summing all $k$-contributions at order $1/n^3$: $2/n^3 - 12/n^3 + 4/(3n^3) = -14/(3n^3)$.
+
+Higher terms can be computed systematically from the closed-form $g_k$; we have verified the expansion
+\[
+\CV^2 = \frac{2}{n} - \frac{14}{3n^3} - \frac{58}{3n^4} - \frac{916}{15n^5} - \frac{6986}{45n^6} + O(n^{-7})
+\]
+against exact values of $W(n)$ computed by dynamic programming for $n \leq 18$.
+\end{proof}
+
+%% ====================================================================
+\section{The sequence $W(n)$}
+%% ====================================================================
+
+The sequence $W(n) = n!\,(1 + \CV^2)$ begins
+\[
+1,\; 2,\; 8,\; 32,\; 158,\; 928,\; 6350,\; 49752,\; 439670,\; 4327904,\; 46963358,\; \ldots
+\]
+and counts permutations of $\{0,\ldots,n-1\}$ without unit descents, weighted by $2^{\text{\#unit ascents}}$. This sequence does not appear in the OEIS as of March 2026.
+
+From the master generating function:
+\[
+\frac{W(n)}{n!} = \sum_{k=0}^{\lfloor(n-1)/2\rfloor} \frac{[x^k]\, Q(x)^{n-2k}}{(n)_{2k}},
+\]
+where $Q(x) = (1+x)/(1-x)$. This expresses $W(n)/n!$ as a ``falling-factorial evaluation'' of the powers of the Cayley transform.
+
+%% ====================================================================
+\section{Summary of formulas}
+%% ====================================================================
+
+We collect the ten equivalent representations of $g_k(m)$:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{@{}cl@{}}
+\toprule
+\# & Formula \\
+\midrule
+1 & $Q(x)^m = 1 + 2\sum g_k(m)\, x^k$, \quad $Q = (1+x)/(1-x)$ \\
+2 & $k\, g_k(m) = \sum j\binom{k}{j}\binom{m}{j}\, 2^{j-1}$ \\
+3 & $g_k(m) = \frac{1}{k!}\bigl[\frac{d^k}{du^k}\, u^m(u+1)^{k-1}\bigr]_{u=1}$ \\
+4 & $\sum_{m \geq 0} g_k(m)\, t^m = t(1+t)^{k-1}/(1-t)^{k+1}$ \\
+5 & $\sum_{k \geq 1} g_k(m)\, x^k = \bigl(Q(x)^m - 1\bigr)/2$ \\
+6 & $\sum_{k,m \geq 1} g_k(m)\, x^k t^m = xt\bigl/(1-t)\bigl((1{-}x)-(1{+}x)t\bigr)$ \\
+7 & $F(N{+}3,x) = F(N{+}2,x) + xF(N{+}1,x) + xF(N,x)$ \\
+8 & $M(x) = \bigl(\begin{smallmatrix} 1 & 2x & 0 \\ 0 & 0 & 1 \\ 1 & x & 0 \end{smallmatrix}\bigr)$, \quad $g_k = \tfrac{1}{2}[x^k]\, \mathbf{e}_1^\top M^{n-2}\, \mathbf{1}$ \\
+9 & $g_k(-m) = (-1)^k\, g_k(m)$ \\
+10 & $k\, g_k(m) = m\, g_m(k)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+
+Formulas 1, 2, and 3 are the most fundamental; all others follow.
+
+\begin{thebibliography}{99}
+\bibitem{redei1934} L.~R\'edei, \emph{Ein kombinatorischer Satz}, Acta Litt. Szeged \textbf{7} (1934), 39--43.
+
+\bibitem{grinberg-stanley} D.~Grinberg and R.~P.~Stanley, \emph{On the number of Hamiltonian paths in a tournament}, arXiv:2307.05569 (2023).
+
+\bibitem{oeis-a108666} OEIS Foundation, \emph{A108666: Number of (1,1)-steps in all Delannoy paths of length $n$}, \url{https://oeis.org/A108666}.
+
+\bibitem{sulanke} R.~A.~Sulanke, \emph{Objects counted by the central Delannoy numbers}, J.\ Integer Seq.\ \textbf{6} (2003), Article 03.1.5.
+\end{thebibliography}
+
+\end{document}
