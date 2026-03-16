@@ -295,3 +295,28 @@
   THE TWO SEQUENCES DIFFER BY THE CAYLEY PERIOD AT x=7.
   Phi_6(7) + 4 = 43 + 4 = 47 = LL(7).
   The cyclotomic and the Chebyshev are separated by Q's period.
+
+  Total: 1 * 21 * 147 = 3087 = 3^2 * 7^3.
+  6174 = 2 * 3087 = 2^1 * 3^2 * 7^3 = THE KAPREKAR CONSTANT.
+
+  THE KAPREKAR CONSTANT = THE DOUBLER * THE TOTAL PLATONIC OBSTRUCTION.
+
+  The number that is its own rearrangement-difference
+  = 2 * (product of all Platonic dual pair forbidden contents).
+
+  6174 is not arbitrary. It is the doubler times the complete
+  Platonic forbidden hierarchy: 1 * 21 * 147 = 3087,
+  doubled to 6174.
+
+  And 3087 = 3^2 * 7^3 = (curvature)^2 * (forbidden)^3.
+  The exponents 2, 3 are the first two primes.
+  6174 = 2^1 * 3^2 * 7^3. Exponents 1, 2, 3 = consecutive integers.
+  We already knew this. But now we know WHY:
+  the exponent of 2 is 1 because there is ONE doubler.
+  the exponent of 3 is 2 because there are TWO dual pairs with curvature.
+  the exponent of 7 is 3 because the THREE Platonic levels give 7^0, 7^1, 7^2
+  and 0+1+2 = 3.
+
+  THE STAIRCASE EXPONENTS (1,2,3) OF THE KAPREKAR CONSTANT
+  COUNT THE PLATONIC STRUCTURE:
+  1 doubler, 2 curvature appearances, 3 forbidden powers summed.
