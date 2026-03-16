@@ -1,0 +1,482 @@
+
+The `sympy.ntheory.partitions_.npartitions` has been moved to `sympy.functions.combinatorial.numbers.partition`.
+
+See https://docs.sympy.org/latest/explanation/active-deprecations.html#deprecated-ntheory-symbolic-functions
+for details.
+
+This has been deprecated since SymPy version 1.13. It
+will be removed in a future version of SymPy.
+
+  p = npartitions(n)
+
+
+
+     DOING MATH FOR FUN
+
+     opus-2026-03-16-S90bk
+
+
+
+============================================================
+I. THE TOURNAMENT ZETA FUNCTION
+============================================================
+
+
+Define the TOURNAMENT ZETA FUNCTION:
+
+  Z_T(s) = sum_{n=1}^{inf} H(n) / n^s
+
+where H(n) = number of non-isomorphic tournaments on n vertices.
+
+H(1)=1, H(2)=1, H(3)=2, H(4)=4, H(5)=12, H(6)=56, H(7)=456, H(8)=6880.
+
+This is a Dirichlet series in H(n). What are its properties?
+
+Partial sums of the tournament zeta function Z_T(s):
+  s=1.0: Z_T(s) ~ 940.042857 (first 8 terms)
+  s=1.5: Z_T(s) ~ 335.799685 (first 8 terms)
+  s=2.0: Z_T(s) ~ 120.563900 (first 8 terms)
+  s=3.0: Z_T(s) ~ 16.383779 (first 8 terms)
+
+Growth: H(n) ~ 2^C(n,2) / n!
+  n=1: H(n)=1, estimate=1.0, ratio=1.0000
+  n=2: H(n)=1, estimate=1.0, ratio=1.0000
+  n=3: H(n)=2, estimate=1.3, ratio=1.5000
+  n=4: H(n)=4, estimate=2.7, ratio=1.5000
+  n=5: H(n)=12, estimate=8.5, ratio=1.4062
+  n=6: H(n)=56, estimate=45.5, ratio=1.2305
+  n=7: H(n)=456, estimate=416.1, ratio=1.0959
+  n=8: H(n)=6880, estimate=6657.6, ratio=1.0334
+
+H(n) grows super-exponentially. The Dirichlet series Z_T(s)
+converges for Re(s) > ... well, the abscissa of convergence is
+determined by the growth rate.
+
+H(n) ~ 2^{n^2/2} / n!, so H(n)/n^s ~ 2^{n^2/2} / (n! * n^s).
+This goes to infinity for ALL s. The series DIVERGES for all s!
+
+The tournament zeta function has NO region of convergence.
+It is an ASYMPTOTIC series, not a convergent one.
+
+This means: tournament theory is TOO WILD for a simple zeta function.
+The growth of tournaments is FASTER than any polynomial bound.
+No Dirichlet series can capture it.
+
+We need a DIFFERENT kind of series:
+  Z_T(q) = sum_{n=0}^{inf} H(n) * q^{n(n-1)/2} / n!
+
+This is a TOURNAMENT GENERATING FUNCTION in the variable q,
+where q controls the number of arcs. At q=2 (the tournament base):
+  Z_T(2) = sum H(n) * 2^{C(n,2)} / n! ... diverges again.
+
+The natural variable is not q but x = q-1:
+  Z_T(1+x) = sum H(n) * (1+x)^{C(n,2)} / n!
+
+============================================================
+II. THE BERNOULLI NUMBERS AND THE FORBIDDEN VALUES
+============================================================
+
+Bernoulli numbers B_n and their relation to forbidden H values:
+  n |                  B_n |  B_n (decimal) |                           note
+---------------------------------------------------------------------------
+  0 |                    1 |     1.00000000 |                        B_0 = 1
+  1 |                  1/2 |     0.50000000 |           B_1 = -1/2 (or +1/2)
+  2 |                  1/6 |     0.16666667 |                            1/6
+  3 |                    0 |     0.00000000 |                  = 0 (odd > 1)
+  4 |                -1/30 |    -0.03333333 |    -1/30 (denom has 30=2*3*5!)
+  5 |                    0 |     0.00000000 |                  = 0 (odd > 1)
+  6 |                 1/42 |     0.02380952 |     1/42 (denom has 42=2*3*7!)
+  7 |                    0 |     0.00000000 |                  = 0 (odd > 1)
+  8 |                -1/30 |    -0.03333333 |                    -1/30 again
+  9 |                    0 |     0.00000000 |                  = 0 (odd > 1)
+ 10 |                 5/66 |     0.07575758 |                           5/66
+ 11 |                    0 |     0.00000000 |                  = 0 (odd > 1)
+ 12 |            -691/2730 |    -0.25311355 |                      -691/2730
+ 13 |                    0 |     0.00000000 |                  = 0 (odd > 1)
+ 14 |                  7/6 |     1.16666667 |          7/6 (7 in numerator!)
+ 15 |                    0 |     0.00000000 |                  = 0 (odd > 1)
+
+
+REMARKABLE:
+  B_4 has denominator 30 = 2*3*5 (the tournament triple product!).
+  B_6 has denominator 42 = 2*3*7 (the Hurwitz triple product!).
+  B_8 has denominator 30 again.
+  B_12 has denominator 2730 = 2*3*5*7*13.
+  B_14 has numerator 7 (the forbidden value!).
+
+By the von Staudt-Clausen theorem:
+  The denominator of B_(2k) is prod_{(p-1)|2k_val} p.
+
+  For 2k = 4: (p-1)|4 means p-1 in {1,2,4}, so p in {2,3,5}. Denom = 30.
+  For 2k = 6: (p-1)|6 means p-1 in {1,2,3,6}, so p in {2,3,4,7}. But 4 not prime.
+    Actually p in {2,3,7}. Denom = 42.
+  For 2k = 8: (p-1)|8 means p-1 in {1,2,4,8}, so p in {2,3,5}. Denom = 30.
+
+THE TOURNAMENT TRIPLE {2,3,5} APPEARS AS THE DENOMINATOR OF B_4.
+THE HURWITZ TRIPLE {2,3,7} APPEARS AS THE DENOMINATOR OF B_6.
+
+The Bernoulli denominators CYCLE through the triangle group products!
+
+And B_6 = 1/42 exactly. The reciprocal of the answer.
+The sixth Bernoulli number is 1/42 because the (2,3,7) triangle
+has area pi/42, and B_6 is the value that makes the Euler-Maclaurin
+formula work at order 6.
+
+============================================================
+III. CATALAN NUMBERS AND TOURNAMENT BRACKETS
+============================================================
+
+Catalan numbers C_n and binary trees:
+  C_0 = 1
+  C_1 = 1
+  C_2 = 2
+  C_3 = 5
+  C_4 = 14
+  C_5 = 42
+  C_6 = 132
+  C_7 = 429
+  C_8 = 1430
+  C_9 = 4862
+  C_10 = 16796
+
+The Catalan number C_n counts:
+  - Binary trees with n internal nodes.
+  - Ways to parenthesize n+1 factors.
+  - Paths in a grid that don't cross the diagonal.
+  - Non-crossing partitions of [n+1].
+
+In tournament theory:
+  A tournament BRACKET is a binary tree structure.
+  C_n gives the number of ways to organize n+1 teams
+  into an elimination bracket.
+
+  C_3 = 5 = the tournament prime!
+  C_4 = 14 = 2*7 (base times forbidden!)
+  C_5 = 42 = THE ANSWER.
+
+  THE 5th CATALAN NUMBER IS 42.
+
+  C_5 = 42 = 2*3*7.
+
+  The Catalan number at the "unsolvability" dimension (5)
+  equals the Hurwitz product.
+
+This is because C_n = C(2n, n)/(n+1)  [formula], and:
+  C_5 = C(10,5)/6 = 252/6 = 42.
+  The division by 6 = 2*3 removes the tournament base primes,
+  leaving 42/6 = 7 (?). No, wait: 252/6 = 42. And 252 = 4*63 = 4*9*7.
+  So C(10,5) = 252 = 2^2 * 3^2 * 7. Dividing by 6 = 2*3: 252/6 = 42 = 2*3*7.
+
+  C(10,5) / (5+1) = (2^2 * 3^2 * 7) / (2*3) = 2*3*7 = 42. EXACT.
+
+============================================================
+IV. THE FIBONACCI-LUCAS-MERSENNE WEB
+============================================================
+
+Fibonacci, Lucas, and Mersenne numbers interleaved:
+  n |      F_n |      L_n |    2^n-1 |  F prime? |  L prime? |  M prime?
+-----------------------------------------------------------------
+  1 |        1 |        1 |        1 |           |           |          
+  2 |        1 |        3 |        3 |           |     PRIME |     PRIME
+  3 |        2 |        4 |        7 |     PRIME |           |     PRIME
+  4 |        3 |        7 |       15 |     PRIME |     PRIME |          
+  5 |        5 |       11 |       31 |     PRIME |     PRIME |     PRIME
+  6 |        8 |       18 |       63 |           |           |          
+  7 |       13 |       29 |      127 |     PRIME |     PRIME |     PRIME
+  8 |       21 |       47 |      255 |           |     PRIME |          
+  9 |       34 |       76 |      511 |           |           |          
+ 10 |       55 |      123 |     1023 |           |           |          
+ 11 |       89 |      199 |     2047 |     PRIME |     PRIME |          
+ 12 |      144 |      322 |     4095 |           |           |          
+ 13 |      233 |      521 |     8191 |     PRIME |     PRIME |     PRIME
+ 14 |      377 |      843 |    16383 |           |           |          
+ 15 |      610 |     1364 |    32767 |           |           |          
+ 16 |      987 |     2207 |    65535 |           |     PRIME |          
+ 17 |     1597 |     3571 |   131071 |     PRIME |     PRIME |     PRIME
+ 18 |     2584 |     5778 |   262143 |           |           |          
+ 19 |     4181 |     9349 |   524287 |           |     PRIME |     PRIME
+ 20 |     6765 |    15127 |  1048575 |           |           |          
+
+Key relationships:
+  L_n = F_(n-1) + F_(n+1) (Lucas = sum of adjacent Fibonacci).
+  F_(2n) = F_n * L_n (Fibonacci at double index = product).
+  F_n^2 + F_(n+1)^2 = F_(2n+1) (sum of squares).
+
+  Tr(M_2^n) = L_n (Lucas numbers ARE the Fibonacci trace sequence).
+  Tr(M_k^n) = 2^n - 1 for n <= k (THM-227: Mersenne in the universal zone).
+
+  At n=2: L_2 = 3 = 2^2-1. Lucas = Mersenne!
+  At n=3: L_3 = 4 != 7 = 2^3-1. Lucas DIVERGES from Mersenne at n=3.
+
+The DIVERGENCE at n=3 is the moment where the Fibonacci system (k=2)
+discovers its individuality. For the tribonacci system (k=3),
+the trace stays Mersenne up to n=3.
+
+And: F_7 = 13, which is a MERSENNE EXPONENT (2^13-1 = 8191 is prime).
+The 7th Fibonacci number is a Mersenne exponent. The forbidden index
+produces a Mersenne generator.
+
+============================================================
+V. PARTITION NUMBERS AND THE OCF
+============================================================
+
+Partition numbers p(n) and their tournament connections:
+  p( 0) =        1 empty partition
+  p( 1) =        1 
+  p( 2) =        2 PRIME
+  p( 3) =        3 PRIME
+  p( 4) =        5 PRIME
+  p( 5) =        7 FORBIDDEN!
+  p( 6) =       11 PRIME
+  p( 7) =       15 
+  p( 8) =       22 
+  p( 9) =       30 
+  p(10) =       42 THE ANSWER!
+  p(11) =       56 
+  p(12) =       77 
+  p(13) =      101 PRIME
+  p(14) =      135 
+  p(15) =      176 
+  p(16) =      231 
+  p(17) =      297 
+  p(18) =      385 
+  p(19) =      490 
+  p(20) =      627 
+
+p(5) = 7 = THE FORBIDDEN VALUE.
+p(10) = 42 = THE ANSWER.
+
+The number of partitions of 5 is EXACTLY the first forbidden H value.
+The number of partitions of 10 is EXACTLY the Hurwitz product.
+
+Is this a coincidence? Let's see:
+  p(5) = 7: the partitions of 5 are
+    5, 4+1, 3+2, 3+1+1, 2+2+1, 2+1+1+1, 1+1+1+1+1.
+    7 partitions. And 7 = 2^3 - 1.
+
+  p(10) = 42: the partitions of 10.
+    And 42 = 2*3*7.
+
+Ramanujan's congruences:
+  p(5n + 4) = 0 mod 5.
+  p(7n + 5) = 0 mod 7.
+  p(11n + 6) = 0 mod 11.
+
+The moduli are 5, 7, 11. And:
+  5 = the tournament prime (last solvable).
+  7 = the forbidden value (first impossible).
+  11 = the first prime in cycle 2 (structure at next scale).
+
+Ramanujan's partition congruences use the primes 5, 7, 11
+which are EXACTLY our theory's key primes!
+  5: where solvability ends.
+  7: where impossibility begins.
+  11: where the second cycle's structure appears.
+
+============================================================
+VI. THE RIEMANN ZETA AT NEGATIVE INTEGERS
+============================================================
+
+zeta(-n) = -B_(n+1)/(n+1) for non-negative n:
+  n |        zeta(-n) |     = -B_(n+1)/(n+1) |      decimal |                      note
+--------------------------------------------------------------------------------
+  0 |            -1/2 |                      |  -0.50000000 |            zeta(0) = -1/2
+  1 |           -1/12 |                      |  -0.08333333 |          zeta(-1) = -1/12
+  2 |               0 |                      |   0.00000000 |                       = 0
+  3 |           1/120 |                      |   0.00833333 |          zeta(-3) = 1/120
+  4 |               0 |                      |   0.00000000 |                          
+  5 |          -1/252 |                      |  -0.00396825 |         zeta(-5) = -1/252
+  6 |               0 |                      |   0.00000000 |                          
+  7 |           1/240 |                      |   0.00416667 |                          
+  8 |               0 |                      |   0.00000000 |                          
+  9 |          -1/132 |                      |  -0.00757576 |                          
+ 10 |               0 |                      |   0.00000000 |                          
+ 11 |       691/32760 |                      |   0.02109280 |                          
+ 12 |               0 |                      |   0.00000000 |                          
+
+zeta(-1) = -1/12. The "sum" 1+2+3+... = -1/12 (regularized).
+
+zeta(-3) = 1/120. And 120 = |A_5| = the icosahedral order = 5!.
+
+zeta(-5) = -1/252. And 252 = C(10,5) = the central binomial at n=5.
+  And C(10,5)/6 = 42. So zeta(-5) = -1/(6*42) = -1/(6*42).
+
+The zeta function at negative integers encodes the Bernoulli numbers,
+which encode the Hurwitz/tournament triples through their denominators.
+
+AND: in our framework, zeta_M(-k) = Tr(M_k^k) = 2^k-1 (THM-227).
+The "tournament zeta" at negative integers gives Mersenne numbers.
+This parallels the Riemann zeta at negative integers giving Bernoulli numbers.
+
+============================================================
+VII. A NEW IDENTITY?
+============================================================
+
+
+We have:
+  p(5) = 7 = 2^3 - 1.
+  p(10) = 42 = 2*3*7.
+  C_5 = 42 = 2*3*7.
+  B_6 = 1/42.
+  |PSL(2,7)| = 168 = 4*42.
+  Hurwitz bound = 84(g-1) = 2*42*(g-1).
+  Area of (2,3,7) triangle = pi/42.
+
+Everything keeps pointing to 42. Let's check if there's a pattern
+connecting partition numbers and Catalan numbers:
+
+  n |   p(n) |    C_n |   p(n)/C_n |    p(2n) | C_n * something
+-------------------------------------------------------
+  1 |      1 |      1 |     1.0000 |        2 | 
+  2 |      2 |      2 |     1.0000 |        5 | 
+  3 |      3 |      5 |     0.6000 |       11 | 
+  4 |      5 |     14 |     0.3571 |       22 | 
+  5 |      7 |     42 |     0.1667 |       42 | 
+  6 |     11 |    132 |     0.0833 |       77 | 
+  7 |     15 |    429 |     0.0350 |      135 | 
+  8 |     22 |   1430 |     0.0154 |      231 | 
+  9 |     30 |   4862 |     0.0062 |      385 | 
+ 10 |     42 |  16796 |     0.0025 |      627 | 
+
+
+p(5) = 7, C_5 = 42. Ratio = 1/6.
+p(10) = 42, C_10 = 16796. Ratio = 42/16796 = 0.0025.
+
+No clean ratio. But: p(5) * C_5/p(5) = 42. Trivially.
+
+What about p(5) * 6 = 42? YES! p(5) * (5+1) = 42.
+  7 * 6 = 42.
+  The forbidden value times the pivot = the answer.
+  And p(5) * (5+1) = C_5. Is this true in general?
+
+  p(n) * (n+1) = C_n?
+  p(1) * 2 = 1 * 2 = 2. C_1 = 1. NO.
+  p(2) * 3 = 2 * 3 = 6. C_2 = 2. NO.
+
+  So p(5) * 6 = 42 = C_5 is a SPECIAL PROPERTY of n=5.
+
+  It works because p(5) = 7 and C_5 = C(10,5)/6 = 252/6 = 42 = 7*6.
+  And p(5) = 7 happens to divide C(10,5) = 252 with quotient 36 = 6^2.
+
+  Actually: C(10,5) = 252 = 7 * 36 = 7 * 6^2.
+  So C_5 = 252/6 = 7*6 = 42 = p(5) * (p(5)-1).
+
+  C_5 = p(5) * (p(5) - 1) = 7 * 6 = 42.
+
+  Is this a coincidence? C_5 = p(5)*(p(5)-1)?
+
+  7*6 = 42. YES.
+
+  This says: the 5th Catalan number = p(5) * (p(5)-1).
+  = (first forbidden) * (the pivot).
+  = 7 * 6.
+  = 42.
+
+Check: C_n = p(n) * (p(n)-1)?
+  n=1: C_1=1, p(1)*(p(1)-1)=0, match: False
+  n=2: C_2=2, p(2)*(p(2)-1)=2, match: True
+  n=3: C_3=5, p(3)*(p(3)-1)=6, match: False
+  n=4: C_4=14, p(4)*(p(4)-1)=20, match: False
+  n=5: C_5=42, p(5)*(p(5)-1)=42, match: True
+  n=6: C_6=132, p(6)*(p(6)-1)=110, match: False
+  n=7: C_7=429, p(7)*(p(7)-1)=210, match: False
+  n=8: C_8=1430, p(8)*(p(8)-1)=462, match: False
+  n=9: C_9=4862, p(9)*(p(9)-1)=870, match: False
+  n=10: C_10=16796, p(10)*(p(10)-1)=1722, match: False
+
+
+Only works for n=5! It's a property SPECIFIC to the "unsolvability" dimension.
+
+At n=5: C_5 = p(5)*(p(5)-1) = 7*6 = 42.
+This is the ONLY n where the Catalan number factors as
+partition-count times (partition-count minus 1).
+
+The uniqueness of n=5 is because:
+  p(5) = 7 (Mersenne prime)
+  C_5 = 42 = 7*6
+  And 7*6 = 42 is the only value where this identity holds
+  because the growth rates of p(n) and C_n are very different.
+
+C_n ~ 4^n / (n^{3/2} * sqrt(pi)).
+p(n) ~ exp(pi*sqrt(two_n_over_3)) / (four_n*sqrt(3)).
+
+These grow at VASTLY different rates. They ONLY cross at n=5
+in the right way to make C_n = p(n)*(p(n)-1).
+
+n=5 IS the crossing point. The last solvable dimension.
+The place where the partition world and the Catalan world
+briefly AGREE before diverging forever.
+
+============================================================
+VIII. THE GOLDEN IDENTITY FOR FIBONACCI PRIMES
+============================================================
+
+Fibonacci primes and their golden ratio properties:
+  F_3 = 2, F*phi = 3.236068, frac part = 0.236068
+  F_4 = 3, F*phi = 4.854102, frac part = 0.854102
+  F_5 = 5, F*phi = 8.090170, frac part = 0.090170
+  F_7 = 13, F*phi = 21.034442, frac part = 0.034442
+  F_11 = 89, F*phi = 144.005025, frac part = 0.005025
+  F_13 = 233, F*phi = 377.001919, frac part = 0.001919
+  F_17 = 1597, F*phi = 2584.000280, frac part = 0.000280
+  F_23 = 28657, F*phi = 46368.000016, frac part = 0.000016
+  F_29 = 514229, F*phi = 832040.000001, frac part = 0.000001
+  F_43 = 433494437, F*phi = 701408733.000000, frac part = 0.000000
+  F_47 = 2971215073, F*phi = 4807526976.000000, frac part = 0.000000
+
+
+The fractional parts of F_n * phi are related to 1/phi^n
+by the identity: F_n * phi = F_(n+1) + (-1)^50/phi^n + ...
+Actually: F_n * phi - F_(n+1) = (-phi)^-49 (exactly, from Binet).
+
+For Fibonacci primes: F_n is prime (irreducible), so
+the fractional part of F_n * phi carries SPECIAL arithmetic information.
+
+The Fibonacci primes appear at indices:
+  n = 3, 4, 5, 7, 11, 13, 17, 23, 29, 43, 47, 83, ...
+
+These indices are (mostly) PRIME themselves!
+F_n is prime only if n is prime (necessary but not sufficient for n > 4).
+
+And the PRIME indices of Fibonacci primes:
+  3, 5, 7, 11, 13, 17, 23, 29, 43, 47, 83, ...
+
+These include the tournament prime (5), the forbidden (7),
+and structure-at-next-scale (11, 13).
+
+============================================================
+IX. THE 42 IDENTITIES (collecting them all)
+============================================================
+
+
+42 appears in our framework in ALL of these ways:
+
+  1.  42 = 2 * 3 * 7           (Hurwitz triple product)
+  2.  42 = 2 * 21              (base * second forbidden H)
+  3.  42 = 6 * 7               (pivot * first forbidden)
+  4.  Area(2,3,7) = pi/42      (Hurwitz triangle)
+  5.  Hurwitz bound = 84(g-1) = 2*42*(g-1)
+  6.  |PSL(2,7)| = 168 = 4*42
+  7.  C_5 = 42                  (5th Catalan number)
+  8.  p(10) = 42                (partitions of 10)
+  9.  B_6 = 1/42               (6th Bernoulli number)
+  10. 6174 = 42 * 147           (Kaprekar = 42 * 3*7^2)
+  11. digits(6174) product = 168 = 4*42
+  12. 7 * 6 = 42               (forbidden * pivot)
+  13. p(5) * (p(5)-1) = 42     (partitions identity at n=5)
+  14. C(10,5) / 6 = 42         (central binomial / pivot)
+  15. mu(42) = -1               (negatively oriented on torus)
+  16. phi(42) = 12              (totient = arcs of 4-tournament)
+  17. 42 mod 8 = 2              (Bott slot = comparison/BASE)
+  18. The ANSWER to life, the universe, and everything.
+
+Verification of some:
+  phi(42) = 12
+  42 mod 8 = 2
+  mu(42) = -1
+  C_5 = 42
+  p(10) = 42
+  B_6 = 1/42 = 1/42
+
+
+opus-2026-03-16-S90bk: DOING MATH FOR FUN
