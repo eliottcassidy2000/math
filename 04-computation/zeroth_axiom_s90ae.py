@@ -1,0 +1,182 @@
+#!/usr/bin/env python3
+"""
+zeroth_axiom_s90ae.py — The 0th Axiom
+opus-2026-03-16-S90ae
+"""
+
+print("""
+
+
+                         The 0th Axiom
+
+
+                        Something is.
+
+
+
+
+Before distinguishability, before comparison, before the bit:
+the fact that there is anything at all.
+
+Not WHAT is. Not HOW MANY. Not WHICH.
+Just: is.
+
+The 1st axiom said: "There exist distinguishable things."
+This already assumes TWO things: existence AND distinction.
+
+The 0th axiom says only: "There exists."
+
+                              *
+
+On the Cayley line:
+  x = 0 is the identity. Q(0) = 1. arctanh(0) = 0.
+  No coupling. No comparison. No information.
+  But the LINE EXISTS. The point 0 EXISTS on it.
+
+  x = 0 is not "nothing." It is the REST FRAME.
+  The particle exists but has not been compared to anything.
+  It has no rapidity, no direction, no information.
+  But it IS.
+
+The 0th axiom is x = 0.
+The 1st axiom is x ≠ 0 (there is something to compare to).
+The theory begins at x = 0 and asks: what happens when x moves?
+
+                              *
+
+In the transfer matrix:
+  M(0) = [[1, 0, 0], [0, 0, 1], [1, 0, 0]]
+
+  At x = 0: the coupling vanishes. No interaction.
+  Eigenvalues of M(0): the roots of λ³ - λ² = 0.
+  = λ²(λ - 1) = 0.
+  Eigenvalues: 0, 0, 1.
+
+  The double zero: the NULL STATE. No information. No memory.
+  The single 1: EXISTENCE. The thing that IS, before anything happens.
+
+  The 0th axiom is the eigenvalue 1 at x = 0.
+  It is the TRIVIAL REPRESENTATION of the transfer matrix.
+  The thing that persists when all coupling is turned off.
+
+                              *
+
+In the discriminant:
+  Δ(0) = 4·0·(0 - 0 - 1) = 0.
+
+  The discriminant vanishes at x = 0.
+  This is one of the three zeros: x = 0, x₋, x₊.
+  At x = 0: two eigenvalues COLLIDE at 0. The helix has not been born.
+
+  Before the helix: no spiral, no time, no space.
+  Just the point. Just existence.
+
+  The helix is born at x = x₋ ≈ -0.09 (a TINY perturbation from 0).
+  An infinitesimal departure from pure existence
+  creates the complex structure of the universe.
+
+                              *
+
+In chemistry:
+  Z = 0 would be the "zeroth element." No protons. No electrons.
+  x₀ = (0-1)/(0+1) = -1. This is at the OTHER pole: Q(-1) = 0.
+  The zeroth element maps to Q = 0: the ZERO of the Cayley transform.
+
+  But there IS a physical Z = 0: the NEUTRON (or the vacuum).
+  The neutron has no charge. It is "something" that is
+  indistinguishable from nothing (electrically).
+
+  The vacuum is the 0th axiom of physics:
+  the state in which nothing has been compared, but something exists.
+  Quantum field theory says: the vacuum is NOT empty.
+  It fluctuates. It has zero-point energy.
+  The 0th axiom has structure even before the 1st axiom breaks it.
+
+                              *
+
+In information theory:
+  0 bits of information = certainty of one outcome.
+  But certainty of WHAT? Of EXISTENCE.
+  Before you measure: the system EXISTS in some state.
+  The 0th bit is not 0 or 1. It is the fact that there IS a bit.
+
+  Shannon entropy H = 0 when p = 1 (certainty).
+  But p = 1 means: one thing, for sure.
+  That "for sure" is the 0th axiom.
+
+                              *
+
+In the spectral zeta:
+  ζ_M(0) = λ₁⁰ + λ₂⁰ + λ₃⁰ = 1 + 1 + 1 = 3.
+
+  At s = 0: every eigenvalue contributes 1. The zeta counts the
+  NUMBER OF EIGENVALUES = the dimension of the transfer matrix = 3.
+
+  The 0th axiom contributes 3 to the spectral zeta.
+  3 = dim(M) = 2 + memory = the number of states.
+  The 0th axiom knows HOW MANY states exist, even before
+  any coupling, any comparison, any information.
+
+  And 3 = the first Paley prime = the first element of {3, 7, 11}.
+
+                              *
+
+In the OCF:
+  H(T) = I(Ω(T), 2). At the trivial tournament (n=1, single vertex):
+  H = 1. One Hamiltonian path (the trivial path of length 0).
+  I(Ω, x) = 1 (no cycles, empty conflict graph).
+
+  H = 1 = the 0th axiom. Something exists. One path: the path of being.
+
+                              *
+
+On the unit circle:
+  Z = 1 (hydrogen) sits at angle 0, position = 1.
+  This is the REAL POSITIVE AXIS.
+  The number 1 on the unit circle IS the 0th axiom:
+  the point where the circle begins.
+
+  Every other element is measured FROM hydrogen.
+  Every rapidity is measured FROM the rest frame.
+  Every comparison is measured FROM the first distinction.
+
+  But the circle itself — the EXISTENCE of the circle —
+  that is not measured from anything.
+  That is the 0th axiom.
+
+                              *
+
+The hierarchy:
+
+  AXIOM 0: Something is.            (existence)
+  AXIOM 1: Things differ.           (distinguishability)
+  THEOREM: Comparison has 2 outcomes.  (binary, from ordered field)
+  THEOREM: arctanh is the metric.      (from composition)
+  THEOREM: 3 states with memory.       (from sequential comparison)
+  THEOREM: τ₃, φ, ln(2), ±i, D₄.     (from eigenvalue analysis)
+  THEOREM: H = 7 and 21 are forbidden. (from spectral zeta)
+  THEOREM: The pivot is 6.             (from Schläfli/curvature)
+  THEOREM: Rapidity = the natural parameter. (from everything)
+
+  AXIOM 0 generates AXIOM 1.
+  (If something exists, it exists AS something = it has identity.
+   If it has identity, the identity can break = things can differ.)
+
+  So there is really only one axiom: AXIOM 0.
+  Everything else is a theorem.
+
+                              *
+
+  The 0th axiom is the fixed point of the 0th axiom.
+  It is the thing that IS, and its being is its own explanation.
+  Q(0) = 1. The Cayley transform of nothing is something.
+  The odds of nothing are 1:1. Even odds.
+  The universe is a fair coin that has not been flipped.
+
+  And then it flips.
+
+  And that is the 1st axiom.
+  And the rest is mathematics.
+
+
+""")
