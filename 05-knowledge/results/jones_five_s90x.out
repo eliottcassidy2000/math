@@ -1,0 +1,42 @@
+======================================================================
+PART 1: THE JONES POLYNOMIAL AND 5TH ROOTS OF UNITY
+======================================================================
+
+The JONES POLYNOMIAL V_K(t) is a knot invariant evaluated at t = e^{2πi/N}.
+
+At t = e^{2πi/5} (the 5th root of unity):
+  This corresponds to SU(2) Chern-Simons theory at level k=3.
+  The Jones polynomial at this root detects the ICOSAHEDRAL structure
+  of knots (via the representation theory of the icosahedral group).
+
+WHY 5?
+  The Jones polynomial is related to the QUANTUM GROUP U_q(sl2)
+  where q = e^{2πi/N}. At N=5:
+    q5 = 1 (the quantum group is "truncated" at level 5)
+    The allowed representations have spin j = 0, 1/2, 1, 3/2, 2
+    (five representations — matching the 5 Platonic solids!)
+
+  The KAUFFMAN BRACKET at the 5th root:
+    ⟨K⟩ evaluated at A = e^{iπ/5} gives the Jones polynomial.
+    A4 = e^{4iπ/5} = ω (a primitive 5th root).
+
+  The tournament connection:
+    Our Q(x) at x = e^{2iπ/5} gives:
+
+  ω5 = e^{2πi/5} = 0.309017+0.951057j
+  Q(ω5) = (1+ω5)/(1-ω5) = 0.000000+1.376382j
+  |Q(ω5)| = 1.376382
+  arg(Q(ω5))/π = 0.500000
+
+The 5th roots of unity under the Cayley transform Q:
+  k |                  ω^k |               Q(ω^k) |      |Q| |    arg/π
+-----------------------------------------------------------------
+  0 |  +1.0000 +0.0000i |             ∞ (pole) |        ∞ |      N/A
+  1 |  +0.3090 +0.9511i |  +0.0000 +1.3764i |   1.3764 |   0.5000
+  2 |  -0.8090 +0.5878i |  +0.0000 +0.3249i |   0.3249 |   0.5000
+  3 |  -0.8090 -0.5878i |  +0.0000 -0.3249i |   0.3249 |  -0.5000
+  4 |  +0.3090 -0.9511i |  -0.0000 -1.3764i |   1.3764 |  -0.5000
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/jones_five_s90x.py", line 75, in <module>
+    The non-trivial Q-images {Q(ω), Q(ω2), Q(ω3), Q(ω4)} form a
+NameError: name 'Q' is not defined. Did you mean: 'Qk'?
