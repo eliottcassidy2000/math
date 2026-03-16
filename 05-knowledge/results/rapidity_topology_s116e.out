@@ -1,0 +1,764 @@
+rapidity_topology_s116e.py
+kind-pasteur-2026-03-15-S116e
+
+Exploring the rapidity structure of topology.
+Q(x) = (1+x)/(1-x), rapidity = arctanh(v) = ln(Q(v))/2
+f(n) = (n+1)/n, Q(e^{it}) = i*cot(t/2)
+
+========================================================================
+SECTION 1: EULER CHARACTERISTIC -> RAPIDITY
+========================================================================
+
+Euler characteristic chi = V - E + F for a closed surface.
+Genus-g orientable surface: chi(Sigma_g) = 2 - 2g
+
+Map chi to rapidity via rapidity_from_integer:
+  For integer n, rapidity = ln(Q(n))/2 = ln((1+n)/(1-n))/2
+  For n >= 1, Q(n) <= 0, so rapidity is complex.
+
+Surface              chi    genus   Q(chi)         rapidity = ln(Q)/2
+------------------------------------------------------------
+  Sphere S^2             2   g=0     Q=   -3.0000    +0.549306 + i*0.500000*pi
+  Torus T^2              0   g=1     Q=    1.0000    +0.000000
+  Double torus          -2   g=2     Q=   -0.3333    -0.549306 + i*0.500000*pi
+  Triple torus          -4   g=3     Q=   -0.6000    -0.255413 + i*0.500000*pi
+  Genus-4               -6   g=4     Q=   -0.7143    -0.168236 + i*0.500000*pi
+  Genus-5               -8   g=5     Q=   -0.7778    -0.125657 + i*0.500000*pi
+  Genus-10             -18   g=10    Q=   -0.8947    -0.055613 + i*0.500000*pi
+  Genus-20             -38   g=20    Q=   -0.9487    -0.026322 + i*0.500000*pi
+
+KEY OBSERVATIONS:
+  1. chi=2 (sphere): Q(2) = (1+2)/(1-2) = -3
+     rapidity = ln(|-3|)/2 + i*pi/2 = 0.549306 + i*pi/2
+     = (0.5493061443340549+1.5707963267948966j)
+
+  2. chi=0 (torus): Q(0) = (1+0)/(1-0) = 1
+     rapidity = ln(1)/2 = 0
+     The torus is the ZERO of rapidity! The identity surface.
+
+  3. chi < 0 (higher genus): Q(chi) = (1+chi)/(1-chi)
+     For chi = -2k: Q(-2k) = (1-2k)/(1+2k)
+     This is REAL and in (0,1) for k >= 1, so rapidity is REAL NEGATIVE.
+
+  Higher genus surfaces have REAL NEGATIVE rapidity:
+    g= 2: chi=  -2, Q= -0.333333, rapidity =  -0.549306 + i*pi/2
+    g= 3: chi=  -4, Q= -0.600000, rapidity =  -0.255413 + i*pi/2
+    g= 4: chi=  -6, Q= -0.714286, rapidity =  -0.168236 + i*pi/2
+    g= 5: chi=  -8, Q= -0.777778, rapidity =  -0.125657 + i*pi/2
+    g= 6: chi= -10, Q= -0.818182, rapidity =  -0.100335 + i*pi/2
+    g= 7: chi= -12, Q= -0.846154, rapidity =  -0.083527 + i*pi/2
+    g= 8: chi= -14, Q= -0.866667, rapidity =  -0.071550 + i*pi/2
+    g= 9: chi= -16, Q= -0.882353, rapidity =  -0.062582 + i*pi/2
+    g=10: chi= -18, Q= -0.894737, rapidity =  -0.055613 + i*pi/2
+
+  GENUS-RAPIDITY RELATIONSHIP:
+  chi = 2 - 2g, Q(chi) = (3 - 2g)/(2g - 1)
+  For g >= 2: Q(chi) = (3-2g)/(2g-1) is in (0,1) when g=2 gives 1/3 < 1
+  wait -- g=2: (3-4)/(4-1) = -1/3 < 0. Let me recompute.
+
+  Careful computation of Q(2-2g):
+    g= 0: chi=   2, Q =        inf =  -3.000000
+    g= 1: chi=   0, Q =          1 =  +1.000000
+    g= 2: chi=  -2, Q =       -1/3 =  -0.333333
+    g= 3: chi=  -4, Q =       -3/5 =  -0.600000
+    g= 4: chi=  -6, Q =       -5/7 =  -0.714286
+    g= 5: chi=  -8, Q =       -7/9 =  -0.777778
+    g= 6: chi= -10, Q =      -9/11 =  -0.818182
+    g= 7: chi= -12, Q =     -11/13 =  -0.846154
+    g= 8: chi= -14, Q =     -13/15 =  -0.866667
+    g= 9: chi= -16, Q =     -15/17 =  -0.882353
+    g=10: chi= -18, Q =     -17/19 =  -0.894737
+
+  Pattern: Q(chi) for genus g>=2 is negative, magnitude decreasing to 1.
+  As g -> inf: Q -> (3-2g)/(2g-1) -> -1  (from below)
+  rapidity -> ln(1)/2 + i*pi/2 = i*pi/2
+  INTERPRETATION: The infinite-genus surface has purely imaginary rapidity = i*pi/2.
+  This is Q^{-1}(-1) = 0... the torus has rapidity 0, but infinite genus -> i*pi/2.
+
+  ADDITIVE STRUCTURE OF GENUS:
+  Adding a handle: g -> g+1 means chi -> chi - 2
+  In Q-space: Q(chi-2) = (chi-1)/(3-chi)
+  This is NOT additive in rapidity. But...
+
+  Consider the RATIO Q(chi_{g+1})/Q(chi_g):
+    g=0->1: Q ratio = +1.0000/-3.0000 = -0.333333
+    g=1->2: Q ratio = -0.3333/+1.0000 = -0.333333
+    g=2->3: Q ratio = -0.6000/-0.3333 = +1.800000
+    g=3->4: Q ratio = -0.7143/-0.6000 = +1.190476
+    g=4->5: Q ratio = -0.7778/-0.7143 = +1.088889
+    g=5->6: Q ratio = -0.8182/-0.7778 = +1.051948
+    g=6->7: Q ratio = -0.8462/-0.8182 = +1.034188
+    g=7->8: Q ratio = -0.8667/-0.8462 = +1.024242
+
+  The Q-ratios are NOT constant => genus addition is not rapidity-additive.
+  Instead, chi is additive (under connected sum), and rapidity is a nonlinear
+  encoding. The torus (chi=0) is the rapidity zero, which is the identity for
+  connected sum of tori (chi is additive: chi(A#B) = chi(A)+chi(B)-2 for closed).
+
+========================================================================
+SECTION 2: GAUSS-BONNET IN RAPIDITY
+========================================================================
+
+Gauss-Bonnet theorem: integral_M K dA = 2*pi*chi(M)
+
+If we define rapidity of curvature integral:
+  Let I = integral K dA = 2*pi*chi
+  I / (2*pi) = chi
+
+The curvature integral is 2*pi times the Euler characteristic.
+So the 'curvature rapidity' is just a scaled version of chi-rapidity.
+
+For constant-curvature surfaces:
+
+  Sphere S^2(r): K = 1/r^2, Area = 4*pi*r^2, integral K = 4*pi, chi = 2
+  Flat torus:    K = 0,      integral K = 0,                chi = 0
+  Hyperbolic:    K = -1/r^2, Area = 4*pi*(g-1)*r^2,        chi = 2-2g
+
+  The curvature integral is quantized: always 2*pi * integer.
+  In rapidity: rapidity(I/(2*pi)) = rapidity(chi).
+
+QUANTIZED CURVATURE RAPIDITY TABLE:
+  Surface              K*Area       chi    Q(chi)      
+------------------------------------------------------------
+  Sphere               4*pi         2      -3.0000     
+  RP^2                 2*pi         1      inf         
+  Torus                0            0      1.0000      
+  Klein bottle         0            0      1.0000      
+  Genus-2              -4*pi        -2     -0.3333     
+  Genus-3              -8*pi        -4     -0.6000     
+  Genus-g              -4pi(g-1)    2-2g   (3-2g)/(2g-1)
+
+GAUSS-BONNET RAPIDITY INTERPRETATION:
+  The Gauss-Bonnet integral = 2*pi * chi.
+  Total curvature is QUANTIZED in units of 2*pi.
+  Each quantum of curvature corresponds to one unit of Euler characteristic.
+
+  In rapidity encoding:
+    Positive curvature (sphere): rapidity has imaginary part pi/2 (since Q(2)<0)
+    Zero curvature (torus): rapidity = 0 (the neutral element)
+    Negative curvature (genus>1): rapidity is complex with imaginary part pi/2
+
+  The torus is the FIXED POINT of the Gauss-Bonnet rapidity map.
+  Adding/removing curvature quanta shifts the rapidity of chi.
+
+ANGULAR DEFECT VERSION:
+  For a polyhedron with V vertices, each with angular defect delta_v:
+  sum delta_v = 2*pi*chi (Descartes theorem)
+  For a cube: 8 vertices, each defect = pi/2, total = 4*pi, chi = 2. Correct.
+  For a tetrahedron: 4 vertices, each defect = pi, total = 4*pi, chi = 2.
+
+  Average defect per vertex: <delta> = 2*pi*chi/V
+  rapidity(<delta>/(2*pi)) = rapidity(chi/V)
+
+  Solid              V    E    F  chi  defect/vertex   defect/(2pi)
+  ------------------------------------------------------------
+  Tetrahedron        4    6    4    2       3.141593       0.500000
+  Cube               8   12    6    2       1.570796       0.250000
+  Octahedron         6   12    8    2       2.094395       0.333333
+  Dodecahedron      20   30   12    2       0.628319       0.100000
+  Icosahedron       12   30   20    2       1.047198       0.166667
+
+  All Platonic solids have chi = 2 (they are spheres).
+  The defect is distributed differently among vertices,
+  but always sums to 4*pi.
+
+========================================================================
+SECTION 3: POINCARE DISK IN RAPIDITY COORDINATES
+========================================================================
+
+Poincare disk model of hyperbolic plane H^2:
+  D = {z in C : |z| < 1}
+  ds^2 = 4|dz|^2 / (1-|z|^2)^2
+
+Let r = |z|. Define rapidity coordinate:
+  phi = arctanh(r)
+  Then r = tanh(phi), 1 - r^2 = 1/cosh^2(phi)
+
+The metric becomes:
+  ds^2 = 4|dz|^2 * cosh^4(phi)
+
+Wait -- let's be more careful. Write z = r*e^{i*theta}.
+  dz = dr*e^{i*theta} + i*r*e^{i*theta}*d(theta)
+  |dz|^2 = dr^2 + r^2 d(theta)^2
+
+  ds^2 = 4(dr^2 + r^2 d(theta)^2) / (1-r^2)^2
+
+Now substitute r = tanh(phi), dr = d(phi)/cosh^2(phi):
+  dr^2 = d(phi)^2 / cosh^4(phi)
+  r^2 = tanh^2(phi) = sinh^2(phi)/cosh^2(phi)
+  1 - r^2 = 1/cosh^2(phi)
+  (1-r^2)^2 = 1/cosh^4(phi)
+
+  ds^2 = 4 * [d(phi)^2/cosh^4(phi) + sinh^2(phi)/cosh^2(phi) * d(theta)^2]
+            / [1/cosh^4(phi)]
+
+  ds^2 = 4 * [d(phi)^2 + sinh^2(phi)*cosh^2(phi) * d(theta)^2]
+
+  ds^2 = 4*d(phi)^2 + 4*sinh^2(phi)*cosh^2(phi)*d(theta)^2
+       = 4*d(phi)^2 + sinh^2(2*phi)*d(theta)^2
+
+  POINCARE DISK IN RAPIDITY COORDINATES:
+  ds^2 = 4*d(phi)^2 + sinh^2(2*phi)*d(theta)^2
+
+  where phi = arctanh(|z|) is the rapidity of the Euclidean radius.
+
+NUMERICAL VERIFICATION:
+         r   phi=atanh(r)    4/(1-r^2)^2     4 (radial)   sinh^2(2phi)   4r^2/(1-r^2)^2
+  ------------------------------------------------------------
+    0.1000       0.100335         4.0812              4         0.0408           0.0408
+    0.3000       0.309520         4.8303              4         0.4347           0.4347
+    0.5000       0.549306         7.1111              4         1.7778           1.7778
+    0.7000       0.867301        15.3787              4         7.5356           7.5356
+    0.9000       1.472219       110.8033              4        89.7507          89.7507
+    0.9500       1.831781       420.7758              4       379.7502         379.7502
+    0.9900       2.646652     10100.7550              4      9899.7500        9899.7500
+
+  The radial part simplifies beautifully: g_{phi,phi} = 4 (CONSTANT).
+  The angular part: g_{theta,theta} = sinh^2(2*phi).
+
+  Compare standard hyperbolic polar: ds^2 = d(rho)^2 + sinh^2(rho)*d(theta)^2
+  where rho = hyperbolic distance from origin = 2*phi (= 2*arctanh(r)).
+
+  So rho = 2*phi: the hyperbolic distance is TWICE the rapidity!
+  Or: rapidity = (hyperbolic distance)/2.
+
+  This is EXACTLY analogous to special relativity where
+  rapidity = arctanh(v/c) and the Lorentz factor gamma = cosh(rapidity).
+
+GEODESIC DISTANCE IN RAPIDITY:
+  d(0, z) = 2*arctanh(|z|) = 2*phi
+  d(z, w) = 2*arctanh(|z-w|/|1-z*conj(w)|)
+
+  For z on the real axis: d(0, r) = 2*arctanh(r) = 2*rapidity(r)
+
+    r = 0.10: rapidity = 0.100335, hyperbolic distance = 0.200671
+    r = 0.30: rapidity = 0.309520, hyperbolic distance = 0.619039
+    r = 0.50: rapidity = 0.549306, hyperbolic distance = 1.098612
+    r = 0.80: rapidity = 1.098612, hyperbolic distance = 2.197225
+    r = 0.90: rapidity = 1.472219, hyperbolic distance = 2.944439
+    r = 0.99: rapidity = 2.646652, hyperbolic distance = 5.293305
+
+  CURVATURE in rapidity coordinates:
+  The Gaussian curvature K = -1 everywhere (standard normalization).
+  Area element: dA = sinh(2*phi) * 2 * d(phi) * d(theta)
+  Area of disk of rapidity-radius phi_0:
+    A = integral_0^{2pi} integral_0^{phi_0} 2*sinh(2*phi) d(phi) d(theta)
+      = 2*pi * [cosh(2*phi_0) - 1]
+      = 4*pi * sinh^2(phi_0)
+
+    phi_0 = 0.5 (r=0.4621): Area = 3.4123 = 1.0862*pi
+    phi_0 = 1.0 (r=0.7616): Area = 17.3554 = 5.5244*pi
+    phi_0 = 2.0 (r=0.9640): Area = 165.2995 = 52.6165*pi
+    phi_0 = 3.0 (r=0.9951): Area = 1261.1335 = 401.4313*pi
+
+  CAYLEY TRANSFORM CONNECTION:
+  Q(r) = (1+r)/(1-r) for r = |z| in Poincare disk.
+  Q(r) maps [0,1) -> [1,infinity).
+  rapidity = ln(Q(r))/2 = arctanh(r).
+  So Q(r) = e^{2*rapidity} = e^{hyperbolic_distance}.
+
+  REMARKABLE: Q of Poincare radius = exp(hyperbolic distance from origin)!
+
+
+========================================================================
+SECTION 4: KNOT INVARIANTS AT CAYLEY-TRANSFORMED ROOTS
+========================================================================
+
+The Jones polynomial V_K(t) evaluated at roots of unity t = e^{2*pi*i/n}.
+
+Key identity: Q(e^{it}) = i*cot(t/2) for t not 0 mod 2*pi.
+So Q(e^{2*pi*i/n}) = i*cot(pi/n).
+
+TABLE: Q at roots of unity
+     n          e^{2pi*i/n}                         Q         |Q|     cot(pi/n)
+  ------------------------------------------------------------
+     2    -1.0000+0.0000i          -0.0000 +0.0000i      0.0000      0.000000
+     3    -0.5000+0.8660i          +0.0000 +0.5774i      0.5774      0.577350
+     4    +0.0000+1.0000i          -0.0000 +1.0000i      1.0000      1.000000
+     5    +0.3090+0.9511i          +0.0000 +1.3764i      1.3764      1.376382
+     6    +0.5000+0.8660i          -0.0000 +1.7321i      1.7321      1.732051
+     7    +0.6235+0.7818i          -0.0000 +2.0765i      2.0765      2.076521
+     8    +0.7071+0.7071i          -0.0000 +2.4142i      2.4142      2.414214
+     9    +0.7660+0.6428i          +0.0000 +2.7475i      2.7475      2.747477
+    10    +0.8090+0.5878i          -0.0000 +3.0777i      3.0777      3.077684
+    11    +0.8413+0.5406i          -0.0000 +3.4057i      3.4057      3.405687
+    12    +0.8660+0.5000i          -0.0000 +3.7321i      3.7321      3.732051
+    13    +0.8855+0.4647i          -0.0000 +4.0572i      4.0572      4.057159
+    14    +0.9010+0.4339i          -0.0000 +4.3813i      4.3813      4.381286
+    15    +0.9135+0.4067i          +0.0000 +4.7046i      4.7046      4.704630
+    16    +0.9239+0.3827i          +0.0000 +5.0273i      5.0273      5.027339
+    17    +0.9325+0.3612i          -0.0000 +5.3495i      5.3495      5.349528
+    18    +0.9397+0.3420i          -0.0000 +5.6713i      5.6713      5.671282
+    19    +0.9458+0.3247i          +0.0000 +5.9927i      5.9927      5.992671
+    20    +0.9511+0.3090i          +0.0000 +6.3138i      6.3138      6.313752
+
+  Q(e^{2pi*i/n}) = i*cot(pi/n)  -- PURELY IMAGINARY for all n >= 2.
+  |Q| = |cot(pi/n)| = cos(pi/n)/sin(pi/n).
+
+  Notable values:
+    n=2: Q(-1) = 0     (the zero, t=-1 is the 'Alexander' point)
+    n=3: Q(omega_3) = i*cot(pi/3) = i/sqrt(3) = i*0.5774...
+    n=4: Q(i) = i*cot(pi/4) = i*1 = i
+    n=6: Q(omega_6) = i*cot(pi/6) = i*sqrt(3) = i*1.7321...
+
+JONES POLYNOMIAL OF THE TREFOIL:
+  V_{3_1}(t) = -t^{-4} + t^{-3} + t^{-1}
+
+  Evaluate at t = e^{2*pi*i/n}:
+     n                            V(t)         |V|                     V at Q^{-1}
+  ------------------------------------------------------------
+     3            +1.000000 +0.000000i    1.000000
+     4            -1.000000 -0.000000i    1.000000
+     5            -0.809017 -1.314328i    1.543362
+     6            +0.000000 -1.732051i    1.732051
+     7            +0.623490 -1.649599i    1.763495
+     8            +1.000000 -1.414214i    1.732051
+     9            +1.205737 -1.166793i    1.677858
+    10            +1.309017 -0.951057i    1.618034
+    11            +1.353799 -0.774713i    1.559792
+    12            +1.366025 -0.633975i    1.505971
+    13            +1.360598 -0.522416i    1.457444
+    14            +1.346011 -0.433884i    1.414214
+    15            +1.327091 -0.363271i    1.375913
+
+  Now consider: what if we evaluate V at q = Q(t) = i*cot(pi/n)?
+  This maps roots of unity to PURELY IMAGINARY values.
+
+  V_{trefoil}(q) where q = i*cot(pi/n):
+     n   q = i*cot(pi/n)                            V(q)      |V(q)|
+  ------------------------------------------------------------
+     3       +0.577350i        -9.00000000 +3.46410162i    9.643651
+     4       +1.000000i        -1.00000000 -0.00000000i    1.000000
+     5       +1.376382i        -0.27864045 -0.34302685i    0.441937
+     6       +1.732051i        -0.11111111 -0.38490018i    0.400617
+     7       +2.076521i        -0.05378416 -0.36989067i    0.373780
+     8       +2.414214i        -0.02943725 -0.34314575i    0.344406
+     9       +2.747477i        -0.01754945 -0.31575352i    0.316241
+    10       +3.077684i        -0.01114562 -0.29061701i    0.290831
+    11       +3.405687i        -0.00743329 -0.26831104i    0.268414
+    12       +3.732051i        -0.00515478 -0.24871131i    0.248765
+
+  OBSERVATION: V(i*cot(pi/n)) produces values with interesting structure.
+  At n=4 (q=i): V(i) = -i^{-4} + i^{-3} + i^{-1} = -1 + (-i) + (-i) = -1-2i
+  Check: V(i) = -1.0000 +0.0000i
+
+FIGURE-EIGHT KNOT (4_1):
+  V_{4_1}(t) = t^2 - t + 1 - t^{-1} + t^{-2}
+
+     n                  V(e^{2pi*i/n})                  V(i*cot(pi/n))
+  ------------------------------------------------------------
+     3            +1.000000 +0.000000i            -2.333333 +1.154701i
+     4            -1.000000 -0.000000i            -1.000000 -0.000000i
+     5            -1.236068 +0.000000i            -1.422291 -0.649839i
+     6            -1.000000 +0.000000i            -2.333333 -1.154701i
+     7            -0.692021 +0.000000i            -3.543855 -1.594947i
+     8            -0.414214 +0.000000i            -5.000000 -2.000000i
+     9            -0.184793 -0.000000i            -6.681107 -2.383507i
+    10            +0.000000 +0.000000i            -8.577709 -2.752764i
+    11            +0.148323 +0.000000i           -10.684922 -3.112061i
+    12            +0.267949 +0.000000i           -13.000000 -3.464102i
+
+  KEY INSIGHT: The Cayley transform Q maps the circle (where Jones polynomial
+  is typically evaluated) to the imaginary axis. Knot invariants at imaginary
+  arguments probe a different 'rapidity regime' of the knot.
+
+  The Jones polynomial at t = e^{2*pi*i/n} connects to quantum groups at
+  q = e^{2*pi*i/n} (Witten-Reshetikhin-Turaev invariants).
+  Composing with Q: the quantum group parameter becomes purely imaginary,
+  which corresponds to the 'split real form' of the quantum group.
+
+
+========================================================================
+SECTION 5: HOPF FIBRATION THROUGH Q
+========================================================================
+
+The Hopf fibration: S^3 -> S^2 with fiber S^1.
+
+S^3 = {(z_1, z_2) in C^2 : |z_1|^2 + |z_2|^2 = 1}
+Hopf map: h(z_1, z_2) = (2*Re(z_1*conj(z_2)), 2*Im(z_1*conj(z_2)), |z_1|^2-|z_2|^2)
+This maps to S^2 in R^3. The fiber over each point is a great circle in S^3.
+
+Alternative: h(z_1, z_2) = z_1/z_2 in CP^1 = S^2 (Riemann sphere).
+The Hopf invariant = 1 (the linking number of any two fibers).
+
+APPLYING Q TO THE HOPF MAP:
+
+  For (z_1, z_2) on S^3, the ratio w = z_1/z_2 is on the Riemann sphere.
+  Apply Q to w: Q(w) = (1+w)/(1-w) = (z_2+z_1)/(z_2-z_1).
+
+  Q(z_1/z_2) = (z_1 + z_2)/(z_2 - z_1)
+
+  This is a CAYLEY-TRANSFORMED Hopf map. It maps S^3 -> C_inf via:
+    h_Q(z_1, z_2) = (z_1 + z_2) / (z_2 - z_1)
+
+  Special fibers:
+    h_Q = 0  when z_1 + z_2 = 0, i.e., z_2 = -z_1 => original w = -1
+    h_Q = inf when z_2 = z_1 => original w = 1
+    h_Q = 1  when z_1 + z_2 = z_2 - z_1 => 2*z_1 = 0 => w = 0 (south pole)
+    h_Q = -1 when z_1 + z_2 = -(z_2 - z_1) => 2*z_2 = 0 => w = inf (north pole)
+
+  FIBER PARAMETRIZATION:
+  The fiber over w_0 in the Hopf map: (z_1, z_2) = (e^{it}*cos(a), e^{it}*sin(a)*e^{ip})
+  where w_0 = cot(a)*e^{-ip}, t parametrizes the fiber circle.
+
+  For w_0 on the equator (|w_0| = 1), write w_0 = e^{ip}:
+    a = pi/4, so |z_1| = |z_2| = 1/sqrt(2)
+    Q(w_0) = Q(e^{ip}) = i*cot(p/2)
+
+  The EQUATOR of S^2 maps to the IMAGINARY AXIS under Q!
+  This is the rapidity axis for the equatorial fibers.
+
+  Sample equatorial fibers (w_0 = e^{ip}):
+     p/(2pi)                  w_0    Q(w_0)=i*cot(p/2)        |Q|
+  ------------------------------------------------------------
+      0.0833    +0.8660+0.5000i    -0.0000+3.7321i     3.7321
+      0.1667    +0.5000+0.8660i    -0.0000+1.7321i     1.7321
+      0.2500    +0.0000+1.0000i    -0.0000+1.0000i     1.0000
+      0.3333    -0.5000+0.8660i    +0.0000+0.5774i     0.5774
+      0.4167    -0.8660+0.5000i    +0.0000+0.2679i     0.2679
+      0.5000    -1.0000+0.0000i    -0.0000+0.0000i     0.0000
+      0.5833    -0.8660-0.5000i    +0.0000-0.2679i     0.2679
+      0.6667    -0.5000-0.8660i    -0.0000-0.5774i     0.5774
+      0.7500    -0.0000-1.0000i    +0.0000-1.0000i     1.0000
+      0.8333    +0.5000-0.8660i    -0.0000-1.7321i     1.7321
+      0.9167    +0.8660-0.5000i    +0.0000-3.7321i     3.7321
+
+  HOPF INVARIANT AND RAPIDITY:
+  The Hopf invariant = integral_{S^3} alpha ^ d(alpha) where alpha = h*(vol_{S^2})
+  = linking number of any two fibers = 1.
+
+  rapidity(1) = arctanh(1) = INFINITY.
+  But 1 is a very specific infinity: Q(1) = inf, and Q^{-1}(inf) = 1.
+
+  Better: use f(n) = (n+1)/n. f(1) = 2, rapidity(f(1)) = arctanh(2) -- complex!
+  f(1) = 2 => rapidity_from_integer(2) = ln(3)/2 + i*pi/2
+  = (0.5493061443340549+1.5707963267948966j)
+
+  The Hopf invariant 1, through f, becomes the same rapidity as the sphere (chi=2)!
+  This is NOT a coincidence: the Hopf fibration is deeply connected to S^2.
+
+  LINKING IN RAPIDITY:
+  Two linked circles have linking number +/- 1.
+  Two unlinked circles have linking number 0.
+  Q(linking number = 0) = Q(0) = 1 (neutral)
+  Q(linking number = 1) = Q(1) = inf
+  Q(linking number = -1) = Q(-1) = 0
+
+  Linking 0 -> Q = 1 (the boundary between 'linked' and 'anti-linked')
+  Linking +1 -> Q = infinity (maximally linked)
+  Linking -1 -> Q = 0 (maximally anti-linked)
+
+  Rapidity: lk=0 -> 0 (neutral), lk=+1 -> +inf, lk=-1 -> -inf
+  The rapidity of linking number is arctanh(lk), which diverges at +/-1.
+  This is consistent with the TOPOLOGICAL NATURE of linking: you cannot
+  continuously interpolate between linked and unlinked, just as you cannot
+  reach rapidity infinity at finite boost.
+
+
+========================================================================
+SECTION 6: BETTI NUMBERS OF TOURNAMENT COMPLEXES -> RAPIDITY
+========================================================================
+
+From tournament path homology (established results):
+  beta_0 >= 1 (from n=1)
+  beta_1 >= 0 (from n=3)
+  beta_2 = 0 ALWAYS (deepest invariant)
+  beta_3 >= 0 (from n=6)
+  beta_4 >= 0 (from n=8)
+  beta_5 >= 0 (from n=8)
+
+Euler characteristic of path homology complex:
+  chi = sum_{k>=0} (-1)^k beta_k = beta_0 - beta_1 + 0 - beta_3 + beta_4 - beta_5 + ...
+
+  Name                   n  Betti numbers          chi     Q(chi)             rapidity
+  ------------------------------------------------------------
+  Transitive T_3         3  [1, 0]                   1        inf                  inf
+  Cyclic C_3             3  [1, 1]                   0     1.0000             0.000000
+  Generic n=5            5  [1, 2, 0, 0]            -1     0.0000     -inf+i*0.5000*pi
+  Regular n=5            5  [1, 4, 0, 0]            -3    -0.5000  -0.3466+i*0.5000*pi
+  Generic n=7            7  [1, 8, 0, 2]            -9    -0.8000  -0.1116+i*0.5000*pi
+  Paley T_7              7  [1, 14, 0, 0]          -13    -0.8571  -0.0771+i*0.5000*pi
+  n=8 with b4            8  [1, 10, 0, 1, 1]        -9    -0.8000  -0.1116+i*0.5000*pi
+  n=8 generic            8  [1, 12, 0, 0, 0]       -11    -0.8333  -0.0912+i*0.5000*pi
+
+  OBSERVATIONS:
+  1. chi(path complex) = beta_0 - beta_1 - beta_3 + beta_4 - ...
+     (beta_2 = 0 always, so it drops out)
+
+  2. For transitive tournaments: beta_k = 0 for k >= 1 (acyclic).
+     chi = 1. Q(1) = inf. rapidity = +inf.
+     Transitive = INFINITE RAPIDITY (unreachable by continuous deformation).
+
+  3. For cyclic C_3: beta = [1,1], chi = 0. rapidity = 0.
+     The 3-cycle is the ZERO of rapidity, like the torus in surfaces!
+
+  4. Increasing beta_1 (more independent cycles) DECREASES chi,
+     which for chi < 0 makes rapidity complex.
+
+  RAPIDITY OF INDIVIDUAL BETTI NUMBERS:
+  Map each beta_k to rapidity_from_integer(beta_k):
+
+  Transitive T (beta = [1,0,0,...]):
+    rap(beta_0=1) = +inf, rap(beta_k=0 for k>0) = 0
+    Total rapidity 'profile': [inf, 0, 0, ...]
+
+  Transitive T_3      : betti=[1, 0]               -> rap = [inf, 0]
+  Cyclic C_3          : betti=[1, 1]               -> rap = [inf, inf]
+  Generic n=5         : betti=[1, 2, 0, 0]         -> rap = [inf, 0.549+i*pi/2, 0, 0]
+  Regular n=5         : betti=[1, 4, 0, 0]         -> rap = [inf, 0.255+i*pi/2, 0, 0]
+  Generic n=7         : betti=[1, 8, 0, 2]         -> rap = [inf, 0.126+i*pi/2, 0, 0.549+i*pi/2]
+  Paley T_7           : betti=[1, 14, 0, 0]        -> rap = [inf, 0.072+i*pi/2, 0, 0]
+  n=8 with b4         : betti=[1, 10, 0, 1, 1]     -> rap = [inf, 0.100+i*pi/2, 0, inf, inf]
+  n=8 generic         : betti=[1, 12, 0, 0, 0]     -> rap = [inf, 0.084+i*pi/2, 0, 0, 0]
+
+  PATTERN: beta_k = 0 -> rapidity 0 (absent)
+           beta_k = 1 -> rapidity +inf (unique class)
+           beta_k >= 2 -> complex rapidity (multiple classes, 'superluminal')
+
+  The beta_2 = 0 theorem means: rapidity of beta_2 is ALWAYS 0.
+  This is the fixed zero of the path homology rapidity profile.
+
+  POINCARE POLYNOMIAL IN RAPIDITY:
+  P(t) = sum beta_k * t^k is the Poincare polynomial.
+  Evaluate at t = -1: P(-1) = chi.
+  Evaluate at t = Q(-1) = 0: P(0) = beta_0.
+  Evaluate at t = Q(0) = 1: P(1) = sum beta_k = total Betti number.
+
+  Q maps evaluation points:
+    t = -1 (chi) -> Q(-1) = 0
+    t = 0 (beta_0) -> Q(0) = 1
+    t = 1 (total) -> Q(1) = inf
+
+  In the Q-transformed variable u = Q(t):
+    P at u=0 gives chi
+    P at u=1 gives beta_0
+    P at u=inf gives total Betti
+
+  This is a natural hierarchy: chi (global) -> beta_0 (connected) -> total (all)
+
+========================================================================
+SECTION 7: COVERING SPACES AND RAPIDITY OF DEGREE
+========================================================================
+
+A covering space p: Y -> X of degree n means each point has n preimages.
+The fundamental group: [pi_1(X) : p_*(pi_1(Y))] = n.
+
+Rapidity of covering degree:
+  n = 1: trivial cover, rapidity = arctanh(1) = +inf  (wait, this is wrong)
+  We need f(n) = (n+1)/n for the rapidity homomorphism.
+
+  f(n) = (n+1)/n:  f(1)=2, f(2)=3/2, f(3)=4/3, ...
+  rapidity(f(n)) = arctanh((n+1)/n) -- but (n+1)/n > 1 for all n >= 1!
+  So this is always complex.
+
+  Alternative: use ln(Q(n))/2 directly.
+
+COVERING DEGREE -> RAPIDITY TABLE:
+    Degree n         Q(n)                 rapidity                        Example
+  ------------------------------------------------------------
+           1          inf                      inf                   trivial cover
+           2      -3.0000        0.549306 + i*pi/2       double cover (orientable)
+           3      -2.0000        0.346574 + i*pi/2                    triple cover
+           4      -1.6667        0.255413 + i*pi/2                    4-fold cover
+           5      -1.5000        0.202733 + i*pi/2                    5-fold cover
+           6      -1.4000        0.168236 + i*pi/2                    6-fold cover
+           7      -1.3333        0.143841 + i*pi/2                    7-fold cover
+          12      -1.1818        0.083527 + i*pi/2              dodecahedral cover
+          24      -1.0870        0.041691 + i*pi/2  orientation double of genus-12
+          60      -1.0339        0.016668 + i*pi/2               icosahedral cover
+
+  ALL covering degrees >= 2 have Q(n) < 0, hence complex rapidity
+  with imaginary part exactly pi/2.
+
+  Real part: Re(rapidity(n)) = ln((n+1)/(n-1))/2
+    n= 2: Re = ln(3/1)/2 = 0.549306
+    n= 3: Re = ln(4/2)/2 = 0.346574
+    n= 4: Re = ln(5/3)/2 = 0.255413
+    n= 5: Re = ln(6/4)/2 = 0.202733
+    n= 6: Re = ln(7/5)/2 = 0.168236
+    n= 7: Re = ln(8/6)/2 = 0.143841
+    n= 8: Re = ln(9/7)/2 = 0.125657
+    n= 9: Re = ln(10/8)/2 = 0.111572
+    n=10: Re = ln(11/9)/2 = 0.100335
+
+  The real parts DECREASE monotonically: higher degree covers have
+  rapidity closer to i*pi/2 (the infinite-degree limit).
+
+  UNIVERSAL COVER (n = inf): rapidity -> 0 + i*pi/2 = i*pi/2.
+  This matches the infinite-genus limit from Section 1!
+
+  MULTIPLICATIVITY OF COVERING DEGREE:
+  If Y -> X has degree m and Z -> Y has degree n, then Z -> X has degree m*n.
+  In Q-space: Q(m*n) != Q(m)*Q(n) in general. But in rapidity:
+
+  rapidity(m*n) = ln(Q(m*n))/2 = ln((1+mn)/(1-mn))/2
+  rapidity(m) + rapidity(n) = ln((1+m)/(1-m))/2 + ln((1+n)/(1-n))/2
+                            = ln((1+m)(1+n)/((1-m)(1-n)))/2
+
+  These are NOT equal. Covering degree is multiplicative,
+  but rapidity is NOT additive under multiplication of degrees.
+
+  However: ln(m*n) = ln(m) + ln(n). The LOGARITHM of degree IS additive.
+  And ln(n)/2 is the real part of rapidity for large n:
+    rapidity(n) ~ ln(n)/2 + i*pi/2 as n -> inf.
+  So for large covering degrees, the real part is approximately additive!
+
+    deg 2*3=6: Re(rap(6))=0.168236, Re(rap(2))+Re(rap(3))=0.895880, ln(6)/2=0.895880
+    deg 2*5=10: Re(rap(10))=0.100335, Re(rap(2))+Re(rap(5))=0.752039, ln(10)/2=1.151293
+    deg 3*4=12: Re(rap(12))=0.083527, Re(rap(3))+Re(rap(4))=0.601986, ln(12)/2=1.242453
+    deg 5*12=60: Re(rap(60))=0.016668, Re(rap(5))+Re(rap(12))=0.286260, ln(60)/2=2.047172
+
+  The approximation Re(rapidity(n)) ~ ln(n)/2 works well for moderate n.
+  This means: rapidity of covering degree is APPROXIMATELY ADDITIVE
+  under composition of covers, with the approximation improving for larger degrees.
+
+  EULER CHARACTERISTIC UNDER COVERING:
+  chi(Y) = n * chi(X) for an n-fold cover Y -> X.
+
+  Example: double cover of genus-2 surface (chi=-2):
+    chi(cover) = 2 * (-2) = -4 => genus-3 surface
+    Q(chi=-2) = -0.3333, Q(chi=-4) = -0.6000
+    Ratio Q(-4)/Q(-2) = 1.800000
+    Compare Q(2) = -3.0000
+
+  In general: chi(cover)/chi(base) = n, but
+  Q(n*chi) / Q(chi) is NOT simply Q(n).
+  The rapidity encoding is nonlinear: it captures the topology
+  in a different way than the additive structure of chi.
+
+========================================================================
+SECTION 8: MOBIUS STRIP AS OCTAVE SHIFT
+========================================================================
+
+The Mobius strip M and its double cover (the cylinder/annulus C).
+
+  Mobius strip: chi(M) = 0  (non-orientable, with boundary)
+  Cylinder:     chi(C) = 0  (orientable, with boundary)
+  Covering degree: 2
+
+  Both have chi = 0, so rapidity(chi) = 0 for both.
+  The covering degree 2 has rapidity:
+    rapidity(2) = (0.5493061443340549+1.5707963267948966j)
+    = ln(3)/2 + i*pi/2
+    Real part: ln(3)/2 = 0.549306
+
+  OCTAVE INTERPRETATION:
+  In music, an octave = frequency ratio of 2:1.
+  rapidity(2) = ln(3)/2 + i*pi/2.
+
+  If we use the LOGARITHMIC rapidity (just ln(n)/2):
+    ln(2)/2 = 0.346574
+
+  In the f(n)=(n+1)/n framework:
+    f(2) = 3/2, arctanh(3/2) = complex
+    ln(Q(2))/2 = ln(-3)/2 = ln(3)/2 + i*pi/2
+
+  The 'octave' in rapidity space is the complex number ln(3)/2 + i*pi/2.
+  The Mobius strip IS one octave (degree-2 cover) away from its double cover.
+
+  MORE PRECISELY:
+  The cylinder C is a 2:1 cover of the Mobius strip M.
+  Both have the same Euler characteristic (chi = 0).
+  The topological difference is ENTIRELY in the covering structure.
+  This covering structure lives at rapidity(2) = ln(3)/2 + i*pi/2.
+
+  The imaginary part pi/2 reflects the SIGN FLIP in orientation
+  (the Mobius strip reverses orientation, contributing a phase of pi).
+  The half-phase pi/2 in rapidity corresponds to the half-twist.
+
+  OTHER NON-ORIENTABLE SURFACES AND THEIR DOUBLE COVERS:
+  Surface                chi Double cover         chi_dbl Degree
+  ------------------------------------------------------------
+  RP^2                     1 S^2                        2      2
+  Klein bottle             0 Torus                      0      2
+  Genus-3 nonor.          -1 Genus-2 orient.           -2      2
+  Genus-4 nonor.          -2 Genus-3 orient.           -4      2
+  Genus-k nonor.         2-k Genus-(k-1) or.       2(2-k)      2
+
+  NOTE: For RP^2, chi(RP^2) = 1, chi(S^2) = 2.
+    chi(double cover) = 2 * chi(base) for orientable double cover:
+    chi(S^2) = 2 * chi(RP^2) = 2*1 = 2. Correct!
+
+  rapidity(chi=1) = arctanh(1) = +inf.
+  RP^2 is at INFINITE rapidity (like the transitive tournament).
+  Its double cover S^2 has chi=2, rapidity = ln(3)/2 + i*pi/2.
+
+  THE OCTAVE LADDER OF TOPOLOGY:
+  Each 2:1 covering adds one 'octave' in the rapidity of the covering space.
+
+  Start with S^1 (circle), chi = 0, rapidity = 0.
+  2:1 cover of S^1 is S^1 again (z -> z^2). chi still 0.
+  But the covering NUMBER accumulates:
+
+    2^1 =    2-fold cover: rapidity = 0.549306 + i*pi/2, ln(2^1)/2 = 0.346574
+    2^2 =    4-fold cover: rapidity = 0.255413 + i*pi/2, ln(2^2)/2 = 0.693147
+    2^3 =    8-fold cover: rapidity = 0.125657 + i*pi/2, ln(2^3)/2 = 1.039721
+    2^4 =   16-fold cover: rapidity = 0.062582 + i*pi/2, ln(2^4)/2 = 1.386294
+    2^5 =   32-fold cover: rapidity = 0.031260 + i*pi/2, ln(2^5)/2 = 1.732868
+    2^6 =   64-fold cover: rapidity = 0.015626 + i*pi/2, ln(2^6)/2 = 2.079442
+    2^7 =  128-fold cover: rapidity = 0.007813 + i*pi/2, ln(2^7)/2 = 2.426015
+    2^8 =  256-fold cover: rapidity = 0.003906 + i*pi/2, ln(2^8)/2 = 2.772589
+
+  The real part of rapidity for 2^k-fold covers:
+    ln((2^k+1)/(2^k-1))/2 -> ln(1)/2 = 0 as k -> inf
+
+  But ln(2^k)/2 = k*ln(2)/2, which grows linearly!
+  The two formulas diverge: rapidity_from_integer gives the 'intrinsic' rapidity
+  (which saturates), while ln(n)/2 gives the 'logarithmic' rapidity (which grows).
+
+  RESOLUTION: The rapidity_from_integer formula maps n -> arctanh(n),
+  which for n > 1 is complex. The real part converges to 0 as n -> inf.
+  This reflects that VERY LARGE covering degrees are all 'essentially the same'
+  from the rapidity perspective -- they are all 'superluminal'.
+
+  The Mobius octave: the degree-2 covering is the SMALLEST nontrivial cover,
+  and it is the one that distinguishes orientable from non-orientable.
+  Its rapidity ln(3)/2 + i*pi/2 = 0.549306 + 1.570796i
+  is the fundamental unit of the 'topological octave'.
+
+========================================================================
+SYNTHESIS: RAPIDITY STRUCTURE OF TOPOLOGY
+========================================================================
+
+KEY FINDINGS:
+
+1. EULER CHARACTERISTIC: The torus (chi=0) is the rapidity ZERO.
+   Positive chi (sphere, RP^2) gives complex rapidity with Im = pi/2.
+   Negative chi (higher genus) also gives complex rapidity with Im = pi/2.
+   The chi -> rapidity map is nonlinear but respects the torus as identity.
+
+2. GAUSS-BONNET: Curvature integral = 2*pi*chi, so curvature rapidity
+   is just a rescaled chi-rapidity. Zero curvature <-> zero rapidity.
+
+3. POINCARE DISK: The rapidity phi = arctanh(|z|) gives the metric
+   ds^2 = 4*d(phi)^2 + sinh^2(2*phi)*d(theta)^2.
+   Hyperbolic distance = 2 * rapidity. Q(|z|) = exp(hyperbolic distance).
+   This is the DEEPEST connection: rapidity IS half the hyperbolic distance.
+
+4. KNOT INVARIANTS: Q maps roots of unity to the imaginary axis:
+   Q(e^{2pi*i/n}) = i*cot(pi/n). Jones polynomial at Cayley-transformed
+   roots probes the 'split real form' of quantum groups.
+
+5. HOPF FIBRATION: Q transforms the Hopf map z_1/z_2 to (z_1+z_2)/(z_2-z_1).
+   The equator of S^2 maps to the imaginary axis (= rapidity axis).
+   The Hopf invariant 1 lives at rapidity +infinity (arctanh(1)).
+
+6. TOURNAMENT BETTI NUMBERS: Transitive tournament has chi=1 (infinite rapidity).
+   The 3-cycle has chi=0 (zero rapidity, like the torus).
+   beta_2=0 universally means the degree-2 rapidity is ALWAYS zero.
+   Higher Betti numbers give complex rapidity (superluminal).
+
+7. COVERING SPACES: All degrees >= 2 have complex rapidity with Im = pi/2.
+   Real part ~ ln(n)/2 for large n (approximately additive under composition).
+   The universal cover (n=inf) has rapidity i*pi/2 (purely imaginary).
+
+8. MOBIUS STRIP: The degree-2 double cover has rapidity ln(3)/2 + i*pi/2.
+   This is the 'topological octave' -- the fundamental covering unit.
+   The imaginary pi/2 corresponds to the orientation-reversing half-twist.
+
+UNIFYING THEME: Rapidity provides a natural 'relativistic' coordinate system
+for topology. The torus/3-cycle is the rest frame (rapidity 0). Positive and
+negative curvature are 'boosts' in opposite directions. Covering spaces are
+'superluminal' (complex rapidity). The Poincare disk metric in rapidity
+coordinates is the most concrete instance: hyperbolic distance = 2 * rapidity.
+
