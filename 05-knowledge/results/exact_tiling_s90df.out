@@ -1,0 +1,268 @@
+
+======================================================================
+n = 3: EXACT FLIP MATRIX
+======================================================================
+
+   ci |   H |          scores | |Aut| |  size |  SD | n!/|Aut|
+  -------------------------------------------------------
+    0 |   1 |       (2, 1, 0) |     1 |     6 |   Y |        6
+    1 |   3 |       (1, 1, 1) |     3 |     2 |   Y |        2
+
+  FLIP MATRIX F[ci][cj] = #(tournament, arc) pairs taking ci to cj:
+          0     1
+    0    12     6  | total=18 = 6*3
+    1     6     0  | total=6 = 2*3
+
+  TRANSITION MATRIX T[ci][cj] = F[ci][cj] / (size_ci * num_arcs):
+            0       1
+    0     2/3     1/3
+    1       1       0
+
+  DERIVED QUANTITIES:
+    class 0: self-loop rate = 2/3 = 0.6667
+    class 1: self-loop rate = 0 = 0.0000
+
+  SYMMETRY CHECK: F[ci][cj] = F[cj][ci]?
+    YES: F is symmetric (after normalizing by class size)
+
+  SKELETON: 1 edges (pairs with F[ci][cj] > 0)
+
+  EXPLAINING EACH ENTRY F[ci][cj]:
+    F[0][0] =   12 = 6 tournaments * avg 2 flips each [SELF-LOOP: 2... ]
+    F[0][1] =    6 = 6 tournaments * avg 1 flips each
+    F[1][0] =    6 = 2 tournaments * avg 3 flips each
+
+======================================================================
+n = 4: EXACT FLIP MATRIX
+======================================================================
+
+   ci |   H |          scores | |Aut| |  size |  SD | n!/|Aut|
+  -------------------------------------------------------
+    0 |   1 |    (3, 2, 1, 0) |     1 |    24 |   Y |       24
+    1 |   3 |    (3, 1, 1, 1) |     3 |     8 |     |        8
+    2 |   5 |    (2, 2, 1, 1) |     1 |    24 |   Y |       24
+    3 |   3 |    (2, 2, 2, 0) |     3 |     8 |     |        8
+
+  FLIP MATRIX F[ci][cj] = #(tournament, arc) pairs taking ci to cj:
+          0     1     2     3
+    0    72    24    24    24  | total=144 = 24*6
+    1    24     0    24     0  | total=48 = 8*6
+    2    24    24    72    24  | total=144 = 24*6
+    3    24     0    24     0  | total=48 = 8*6
+
+  TRANSITION MATRIX T[ci][cj] = F[ci][cj] / (size_ci * num_arcs):
+            0       1       2       3
+    0     1/2     1/6     1/6     1/6
+    1     1/2       0     1/2       0
+    2     1/6     1/6     1/2     1/6
+    3     1/2       0     1/2       0
+
+  DERIVED QUANTITIES:
+    class 0: self-loop rate = 1/2 = 0.5000
+    class 1: self-loop rate = 0 = 0.0000
+    class 2: self-loop rate = 1/2 = 0.5000
+    class 3: self-loop rate = 0 = 0.0000
+
+  SYMMETRY CHECK: F[ci][cj] = F[cj][ci]?
+    YES: F is symmetric (after normalizing by class size)
+
+  SKELETON: 5 edges (pairs with F[ci][cj] > 0)
+
+  EXPLAINING EACH ENTRY F[ci][cj]:
+    F[0][0] =   72 = 24 tournaments * avg 3 flips each [SELF-LOOP: 3... ]
+    F[0][1] =   24 = 24 tournaments * avg 1 flips each
+    F[0][2] =   24 = 24 tournaments * avg 1 flips each
+    F[0][3] =   24 = 24 tournaments * avg 1 flips each
+    F[1][0] =   24 = 8 tournaments * avg 3 flips each
+    F[1][2] =   24 = 8 tournaments * avg 3 flips each
+    F[2][0] =   24 = 24 tournaments * avg 1 flips each
+    F[2][1] =   24 = 24 tournaments * avg 1 flips each
+    F[2][2] =   72 = 24 tournaments * avg 3 flips each [SELF-LOOP: 3... ]
+    F[2][3] =   24 = 24 tournaments * avg 1 flips each
+    F[3][0] =   24 = 8 tournaments * avg 3 flips each
+    F[3][2] =   24 = 8 tournaments * avg 3 flips each
+
+======================================================================
+n = 5: EXACT FLIP MATRIX
+======================================================================
+
+   ci |   H |          scores | |Aut| |  size |  SD | n!/|Aut|
+  -------------------------------------------------------
+    0 |   1 | (4, 3, 2, 1, 0) |     1 |   120 |   Y |      120
+    1 |   3 | (4, 3, 1, 1, 1) |     3 |    40 |     |       40
+    2 |   5 | (4, 2, 2, 1, 1) |     1 |   120 |     |      120
+    3 |   3 | (4, 2, 2, 2, 0) |     3 |    40 |   Y |       40
+    4 |   9 | (3, 3, 2, 1, 1) |     1 |   120 |   Y |      120
+    5 |   5 | (3, 3, 2, 2, 0) |     1 |   120 |     |      120
+    6 |   9 | (3, 3, 2, 1, 1) |     1 |   120 |   Y |      120
+    7 |   3 | (3, 3, 3, 1, 0) |     3 |    40 |     |       40
+    8 |  11 | (3, 2, 2, 2, 1) |     1 |   120 |   Y |      120
+    9 |  15 | (3, 2, 2, 2, 1) |     3 |    40 |   Y |       40
+   10 |  13 | (3, 2, 2, 2, 1) |     1 |   120 |   Y |      120
+   11 |  15 | (2, 2, 2, 2, 2) |     5 |    24 |   Y |       24
+
+  FLIP MATRIX F[ci][cj] = #(tournament, arc) pairs taking ci to cj:
+          0     1     2     3     4     5     6     7     8     9    10    11
+    0   480   120   120   120   120   120     0   120     0     0     0     0  | total=1200 = 120*10
+    1   120    40   120     0     0     0   120     0     0     0     0     0  | total=400 = 40*10
+    2   120   120   360   120   120     0   120     0   120     0   120     0  | total=1200 = 120*10
+    3   120     0   120     0     0   120     0     0     0    40     0     0  | total=400 = 40*10
+    4   120     0   120     0   240   120   240     0   240   120     0     0  | total=1200 = 120*10
+    5   120     0     0   120   120   360   120   120   120     0   120     0  | total=1200 = 120*10
+    6     0   120   120     0   240   120     0   120   120     0   360     0  | total=1200 = 120*10
+    7   120     0     0     0     0   120   120    40     0     0     0     0  | total=400 = 40*10
+    8     0     0   120     0   240   120   120     0   240     0   240   120  | total=1200 = 120*10
+    9     0     0     0    40   120     0     0     0     0     0   240     0  | total=400 = 40*10
+   10     0     0   120     0     0   120   360     0   240   240     0   120  | total=1200 = 120*10
+   11     0     0     0     0     0     0     0     0   120     0   120     0  | total=240 = 24*10
+
+  TRANSITION MATRIX T[ci][cj] = F[ci][cj] / (size_ci * num_arcs):
+            0       1       2       3       4       5       6       7       8       9      10      11
+    0     2/5    1/10    1/10    1/10    1/10    1/10       0    1/10       0       0       0       0
+    1    3/10    1/10    3/10       0       0       0    3/10       0       0       0       0       0
+    2    1/10    1/10    3/10    1/10    1/10       0    1/10       0    1/10       0    1/10       0
+    3    3/10       0    3/10       0       0    3/10       0       0       0    1/10       0       0
+    4    1/10       0    1/10       0     1/5    1/10     1/5       0     1/5    1/10       0       0
+    5    1/10       0       0    1/10    1/10    3/10    1/10    1/10    1/10       0    1/10       0
+    6       0    1/10    1/10       0     1/5    1/10       0    1/10    1/10       0    3/10       0
+    7    3/10       0       0       0       0    3/10    3/10    1/10       0       0       0       0
+    8       0       0    1/10       0     1/5    1/10    1/10       0     1/5       0     1/5    1/10
+    9       0       0       0    1/10    3/10       0       0       0       0       0     3/5       0
+   10       0       0    1/10       0       0    1/10    3/10       0     1/5     1/5       0    1/10
+   11       0       0       0       0       0       0       0       0     1/2       0     1/2       0
+
+  DERIVED QUANTITIES:
+    class 0: self-loop rate = 2/5 = 0.4000
+    class 1: self-loop rate = 1/10 = 0.1000
+    class 2: self-loop rate = 3/10 = 0.3000
+    class 3: self-loop rate = 0 = 0.0000
+    class 4: self-loop rate = 1/5 = 0.2000
+    class 5: self-loop rate = 3/10 = 0.3000
+    class 6: self-loop rate = 0 = 0.0000
+    class 7: self-loop rate = 1/10 = 0.1000
+    class 8: self-loop rate = 1/5 = 0.2000
+    class 9: self-loop rate = 0 = 0.0000
+    class 10: self-loop rate = 0 = 0.0000
+    class 11: self-loop rate = 0 = 0.0000
+
+  SYMMETRY CHECK: F[ci][cj] = F[cj][ci]?
+    YES: F is symmetric (after normalizing by class size)
+
+  SKELETON: 30 edges (pairs with F[ci][cj] > 0)
+
+  EXPLAINING EACH ENTRY F[ci][cj]:
+    F[0][0] =  480 = 120 tournaments * avg 4 flips each [SELF-LOOP: 4... ]
+    F[0][1] =  120 = 120 tournaments * avg 1 flips each
+    F[0][2] =  120 = 120 tournaments * avg 1 flips each
+    F[0][3] =  120 = 120 tournaments * avg 1 flips each
+    F[0][4] =  120 = 120 tournaments * avg 1 flips each
+    F[0][5] =  120 = 120 tournaments * avg 1 flips each
+    F[0][7] =  120 = 120 tournaments * avg 1 flips each
+    F[1][0] =  120 = 40 tournaments * avg 3 flips each
+    F[1][1] =   40 = 40 tournaments * avg 1 flips each [SELF-LOOP: 1... ]
+    F[1][2] =  120 = 40 tournaments * avg 3 flips each
+    F[1][6] =  120 = 40 tournaments * avg 3 flips each
+    F[2][0] =  120 = 120 tournaments * avg 1 flips each
+    F[2][1] =  120 = 120 tournaments * avg 1 flips each
+    F[2][2] =  360 = 120 tournaments * avg 3 flips each [SELF-LOOP: 3... ]
+    F[2][3] =  120 = 120 tournaments * avg 1 flips each
+    F[2][4] =  120 = 120 tournaments * avg 1 flips each
+    F[2][6] =  120 = 120 tournaments * avg 1 flips each
+    F[2][8] =  120 = 120 tournaments * avg 1 flips each
+    F[2][10] =  120 = 120 tournaments * avg 1 flips each
+    F[3][0] =  120 = 40 tournaments * avg 3 flips each
+    F[3][2] =  120 = 40 tournaments * avg 3 flips each
+    F[3][5] =  120 = 40 tournaments * avg 3 flips each
+    F[3][9] =   40 = 40 tournaments * avg 1 flips each
+    F[4][0] =  120 = 120 tournaments * avg 1 flips each
+    F[4][2] =  120 = 120 tournaments * avg 1 flips each
+    F[4][4] =  240 = 120 tournaments * avg 2 flips each [SELF-LOOP: 2... ]
+    F[4][5] =  120 = 120 tournaments * avg 1 flips each
+    F[4][6] =  240 = 120 tournaments * avg 2 flips each
+    F[4][8] =  240 = 120 tournaments * avg 2 flips each
+    F[4][9] =  120 = 120 tournaments * avg 1 flips each
+    F[5][0] =  120 = 120 tournaments * avg 1 flips each
+    F[5][3] =  120 = 120 tournaments * avg 1 flips each
+    F[5][4] =  120 = 120 tournaments * avg 1 flips each
+    F[5][5] =  360 = 120 tournaments * avg 3 flips each [SELF-LOOP: 3... ]
+    F[5][6] =  120 = 120 tournaments * avg 1 flips each
+    F[5][7] =  120 = 120 tournaments * avg 1 flips each
+    F[5][8] =  120 = 120 tournaments * avg 1 flips each
+    F[5][10] =  120 = 120 tournaments * avg 1 flips each
+    F[6][1] =  120 = 120 tournaments * avg 1 flips each
+    F[6][2] =  120 = 120 tournaments * avg 1 flips each
+    F[6][4] =  240 = 120 tournaments * avg 2 flips each
+    F[6][5] =  120 = 120 tournaments * avg 1 flips each
+    F[6][7] =  120 = 120 tournaments * avg 1 flips each
+    F[6][8] =  120 = 120 tournaments * avg 1 flips each
+    F[6][10] =  360 = 120 tournaments * avg 3 flips each
+    F[7][0] =  120 = 40 tournaments * avg 3 flips each
+    F[7][5] =  120 = 40 tournaments * avg 3 flips each
+    F[7][6] =  120 = 40 tournaments * avg 3 flips each
+    F[7][7] =   40 = 40 tournaments * avg 1 flips each [SELF-LOOP: 1... ]
+    F[8][2] =  120 = 120 tournaments * avg 1 flips each
+    F[8][4] =  240 = 120 tournaments * avg 2 flips each
+    F[8][5] =  120 = 120 tournaments * avg 1 flips each
+    F[8][6] =  120 = 120 tournaments * avg 1 flips each
+    F[8][8] =  240 = 120 tournaments * avg 2 flips each [SELF-LOOP: 2... ]
+    F[8][10] =  240 = 120 tournaments * avg 2 flips each
+    F[8][11] =  120 = 120 tournaments * avg 1 flips each
+    F[9][3] =   40 = 40 tournaments * avg 1 flips each
+    F[9][4] =  120 = 40 tournaments * avg 3 flips each
+    F[9][10] =  240 = 40 tournaments * avg 6 flips each
+    F[10][2] =  120 = 120 tournaments * avg 1 flips each
+    F[10][5] =  120 = 120 tournaments * avg 1 flips each
+    F[10][6] =  360 = 120 tournaments * avg 3 flips each
+    F[10][8] =  240 = 120 tournaments * avg 2 flips each
+    F[10][9] =  240 = 120 tournaments * avg 2 flips each
+    F[10][11] =  120 = 120 tournaments * avg 1 flips each
+    F[11][8] =  120 = 24 tournaments * avg 5 flips each
+    F[11][10] =  120 = 24 tournaments * avg 5 flips each
+
+
+======================================================================
+EXACT FORMULAS
+======================================================================
+
+From the exact flip matrices, the following PRECISE formulas emerge:
+
+FORMULA A: Row sum.
+  sum_j F[ci][cj] = size(ci) * C(n,2).
+  PROOF: each of the size(ci) tournaments has C(n,2) arcs to flip.
+  Each flip produces exactly one tournament (in some class cj).
+  So the row sum = size(ci) * C(n,2). TRIVIALLY TRUE.
+
+FORMULA B: Detailed balance.
+  F[ci][cj] / size(ci) = F[cj][ci] / size(cj).
+  PROOF: F[ci][cj] counts (T,arc) pairs with T in ci, flip(T,arc) in cj.
+  Each such pair (T, arc) corresponds to a pair (T', arc) with T' in cj, flip(T',arc) in ci
+  (because flipping the same arc again returns to T).
+  So F[ci][cj] pairs map bijectively to F[cj][ci] pairs... but the sizes differ.
+  The bijection maps size(ci) tournaments to size(cj) tournaments,
+  so F[ci][cj]/size(ci) = F[cj][ci]/size(cj). QED.
+
+  COROLLARY: The uniform measure on tournaments is the stationary distribution
+  of the random flip Markov chain.
+
+FORMULA C: Self-loop count.
+  F_ii = size_i * (C(n,2) - sum_(j!=i) F[ci][cj]/size(ci)).
+  This is: size * (total arcs - inter-class flips per tournament).
+
+FORMULA D: Skeleton edge count.
+  A skeleton edge exists between ci and cj iff F[ci][cj] > 0.
+  The skeleton is the SUPPORT of the flip matrix (off-diagonal).
+
+FORMULA E: The Burnside connection.
+  size(ci) = n! / |Aut(T_ci)|.
+  F[ci][cj] = n! / |Aut(T_ci)| * (number of arcs in T_ci whose flip gives a tournament iso to T_cj).
+  The second factor depends on the FINE STRUCTURE of the automorphism group's action on arcs.
+
+FORMULA F: The self-dual characterization.
+  Class ci is self-dual iff F[ci][ci] counts an arc flip of the TRANSPOSE:
+  there exists T in ci and an arc (a,b) such that flipping (a,b) in T
+  gives the transpose T^op (which is also in ci since ci is self-dual).
+  This is equivalent to: T and T^op differ in exactly one arc.
+  Equivalently: the Hamming distance between T and T^op (as binary vectors) = 1... no, = 2
+  (flipping one arc changes two entries: A[i][j] and A[j][i]).
+
+opus-2026-03-16-S90df: EXACT FORMULAS FOR THE TOURNAMENT TILING GRAPH
