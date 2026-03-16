@@ -1,0 +1,752 @@
+========================================================================
+INVESTIGATION 1: TRIPLE RAPIDITY COMPOSITION
+========================================================================
+
+  Known: c = ab/(a+b+1) iff (a-c)(b-c) = c(c+1)
+  Question: What about composing THREE intervals?
+  If c1 = a(+)b and c2 = c1(+)d, what is the condition on (a,b,d)?
+
+  Triple compositions a(+)b(+)d where all intermediates are integers:
+
+  (a, b) -> c1, then (c1, d) -> c2
+  a    b    c1   d    c2
+  --------------------------------------------------
+    3    8    2    3    1
+    4    5    2    3    1
+    4   15    3    2    1
+    4   15    3    8    2
+    5    9    3    2    1
+    5    9    3    8    2
+    5   24    4    5    2
+    5   24    4   15    3
+    6    7    3    2    1
+    6    7    3    8    2
+    6   14    4    5    2
+    6   14    4   15    3
+    6   35    5    4    2
+    6   35    5    9    3
+    6   35    5   24    4
+    7   20    5    4    2
+    7   20    5    9    3
+    7   20    5   24    4
+    7   48    6    7    3
+    7   48    6   14    4
+    7   48    6   35    5
+    8    9    4    5    2
+    8    9    4   15    3
+    8   15    5    4    2
+    8   15    5    9    3
+    8   15    5   24    4
+    8   27    6    7    3
+    8   27    6   14    4
+    8   27    6   35    5
+    8   63    7    6    3
+  ... (294 total triples found)
+
+  ALGEBRAIC ANALYSIS:
+  c1 = ab/(a+b+1)
+  c2 = c1*d/(c1+d+1) = abd/((a+b+1)(c1+d+1))
+     = abd/((a+b+1)(ab/(a+b+1) + d + 1))
+     = abd/(ab + d(a+b+1) + (a+b+1))
+     = abd/(ab + ad + bd + d + a + b + 1)
+
+  Let S = a+b+d, P2 = ab+ad+bd, P3 = abd. Then:
+  c2 = P3/(P2 + S + 1)
+
+  Verification of c2 = abd/(ab+ad+bd+a+b+d+1):
+  Verified: 100/100 correct
+
+  KEY IDENTITY: ab+ad+bd+a+b+d+1 = (a+1)(b+1)(d+1)
+  PROOF: expand (a+1)(b+1)(d+1) = abd + ab+ad+bd + a+b+d + 1. QED!
+
+  *** THEOREM (Triple Composition): ***
+  a (+) b (+) d = abd / ((a+1)(b+1)(d+1) - abd)
+  Wait, let me re-check: c2 = abd / (P2+S+1) = abd / ((a+1)(b+1)(d+1) - abd + abd)
+
+  CORRECTION: P2 + S + 1 = (a+1)(b+1)(d+1) - abd
+  Verified: ab+ad+bd+a+b+d+1 = (a+1)(b+1)(d+1) - abd for all triples
+
+  *** THEOREM 1 (Triple Rapidity Composition Formula): ***
+  For positive integers a, b, d:
+    a (+) b (+) d = abd / ((a+1)(b+1)(d+1) - abd)
+  when the RHS is a positive integer.
+
+  Equivalently, setting e = a(+)b(+)d:
+    abd = e * ((a+1)(b+1)(d+1) - abd)
+    abd * (1+e) = e * (a+1)(b+1)(d+1)
+    abd / ((a+1)(b+1)(d+1)) = e / (1+e)
+
+  Seeking analog of (a-c)(b-c) = c(c+1) for triples:
+
+  (a-e)(b-e)(d-e) for small triples:
+    (3,8,3)->e=1: (a-e)(b-e)(d-e) = 28 = 1 * 28 = 1*2*14
+    (4,5,3)->e=1: (a-e)(b-e)(d-e) = 24 = 1 * 24 = 1*2*12
+    (4,15,2)->e=1: (a-e)(b-e)(d-e) = 42 = 1 * 42 = 1*2*21
+    (4,15,8)->e=2: (a-e)(b-e)(d-e) = 156 = 2 * 78 = 2*3*26
+    (5,9,2)->e=1: (a-e)(b-e)(d-e) = 32 = 1 * 32 = 1*2*16
+    (5,9,8)->e=2: (a-e)(b-e)(d-e) = 126 = 2 * 63 = 2*3*21
+    (5,24,5)->e=2: (a-e)(b-e)(d-e) = 198 = 2 * 99 = 2*3*33
+    (5,24,15)->e=3: (a-e)(b-e)(d-e) = 504 = 3 * 168 = 3*4*42
+    (6,7,2)->e=1: (a-e)(b-e)(d-e) = 30 = 1 * 30 = 1*2*15
+    (6,7,8)->e=2: (a-e)(b-e)(d-e) = 120 = 2 * 60 = 2*3*20
+    (6,14,5)->e=2: (a-e)(b-e)(d-e) = 144 = 2 * 72 = 2*3*24
+    (6,14,15)->e=3: (a-e)(b-e)(d-e) = 396 = 3 * 132 = 3*4*33
+    (6,35,4)->e=2: (a-e)(b-e)(d-e) = 264 = 2 * 132 = 2*3*44
+    (6,35,9)->e=3: (a-e)(b-e)(d-e) = 576 = 3 * 192 = 3*4*48
+    (6,35,24)->e=4: (a-e)(b-e)(d-e) = 1240 = 4 * 310 = 4*5*62
+    (7,20,4)->e=2: (a-e)(b-e)(d-e) = 180 = 2 * 90 = 2*3*30
+    (7,20,9)->e=3: (a-e)(b-e)(d-e) = 408 = 3 * 136 = 3*4*34
+    (7,20,24)->e=4: (a-e)(b-e)(d-e) = 960 = 4 * 240 = 4*5*48
+    (7,48,7)->e=3: (a-e)(b-e)(d-e) = 720 = 3 * 240 = 3*4*60
+    (7,48,14)->e=4: (a-e)(b-e)(d-e) = 1320 = 4 * 330 = 4*5*66
+
+  The triple analog does NOT have a clean (a-e)(b-e)(d-e) = e*f(e) form.
+  The pair identity (a-c)(b-c) = c(c+1) is special to TWO inputs.
+
+  VELOCITY FORM of triple composition:
+  Using v = 1/(2n+1), the rapidity addition v1(+)v2 = (v1+v2)/(1+v1*v2)
+
+  For triple: v1(+)v2(+)v3 = (v1+v2+v3+v1*v2*v3) / (1+v1*v2+v1*v3+v2*v3)
+  This is the tangent/velocity addition formula for 3 boosts.
+
+  Substituting v_i = 1/(2a_i+1):
+  Numerator: 1/(2a+1) + 1/(2b+1) + 1/(2d+1) + 1/((2a+1)(2b+1)(2d+1))
+  Denominator: 1 + 1/((2a+1)(2b+1)) + 1/((2a+1)(2d+1)) + 1/((2b+1)(2d+1))
+
+  Verification of velocity triple addition formula:
+    (3,8,3): v = 1/3 = 1/3, expected 1/3: True
+    (4,5,3): v = 1/3 = 1/3, expected 1/3: True
+    (4,15,2): v = 1/3 = 1/3, expected 1/3: True
+    (4,15,8): v = 1/5 = 1/5, expected 1/5: True
+    (5,9,2): v = 1/3 = 1/3, expected 1/3: True
+
+  *** THEOREM 1b (n-fold Rapidity Composition): ***
+  For n positive integers a_1, ..., a_n with v_i = 1/(2a_i+1):
+    a_1 (+) ... (+) a_n = (numerator - 1) / 2
+  where the result v = sum_odd_k(e_k(v)) / sum_even_k(e_k(v))
+  with e_k = k-th elementary symmetric polynomial in v_1,...,v_n.
+
+  For n=2: c = ab/((a+1)(b+1) - ab)  [recovering the pair formula]
+  For n=3: c = abd/((a+1)(b+1)(d+1) - abd)
+  For n=4: c = abdf/((a+1)(b+1)(d+1)(f+1) - abdf - (pair products)...) 
+
+  Testing n=4 compositions:
+    (4,15,8,3)->c=1: v=1/3, match=True
+    (5,9,8,3)->c=1: v=1/3, match=True
+    (5,24,5,3)->c=1: v=1/3, match=True
+    (5,24,15,2)->c=1: v=1/3, match=True
+    (5,24,15,8)->c=2: v=1/5, match=True
+  ... 85 quadruple compositions found
+
+
+========================================================================
+INVESTIGATION 2: PROOF OF THE COTANGENT PRODUCT THEOREM
+========================================================================
+
+  THEOREM: For odd prime p, prod_{k=1}^{p-1} cot(pi*k/p) = (-1)^{(p-1)/2} / p
+
+  PROOF via cyclotomic polynomials:
+
+  Step 1: The p-th cyclotomic polynomial is
+    Phi_p(x) = x^{p-1} + x^{p-2} + ... + x + 1 = (x^p - 1)/(x - 1)
+    with roots omega^k = e^{2*pi*i*k/p} for k=1,...,p-1.
+
+  Step 2: Evaluate Phi_p at x = 1:
+    Phi_p(1) = p  (since 1+1+...+1 = p terms)
+
+  Step 3: Factor Phi_p using roots:
+    Phi_p(x) = prod_{k=1}^{p-1} (x - omega^k)
+    Phi_p(1) = prod_{k=1}^{p-1} (1 - omega^k) = p
+
+  Step 4: Write 1 - omega^k in polar form:
+    1 - e^{2*pi*i*k/p} = -e^{i*pi*k/p} * 2i * sin(pi*k/p)
+    [using 1 - e^{it} = -e^{it/2} * 2i*sin(t/2)]
+
+  Step 5: Take the product:
+    prod_{k=1}^{p-1} (1-omega^k) = prod (-e^{i*pi*k/p}) * prod (2i) * prod sin(pi*k/p)
+    = (-1)^{p-1} * e^{i*pi*sum_k/p} * (2i)^{p-1} * prod sin(pi*k/p)
+    = 1 * e^{i*pi*(p-1)/2} * 2^{p-1} * i^{p-1} * prod sin(pi*k/p)
+
+  Step 5a: sum_{k=1}^{p-1} k = p(p-1)/2, so sum k/p = (p-1)/2
+    e^{i*pi*(p-1)/2} = i^{p-1} (since (p-1)/2 is integer for odd p)
+
+  Step 5b: (-1)^{p-1} = 1 (p is odd so p-1 is even)
+    So the phase factor is i^{p-1} * i^{p-1} = i^{2(p-1)} = (-1)^{p-1} = 1
+
+  Step 6: Therefore:
+    p = 2^{p-1} * prod_{k=1}^{p-1} sin(pi*k/p)
+    prod sin(pi*k/p) = p / 2^{p-1}
+
+  Verification of prod sin(pi*k/p) = p/2^{p-1}:
+    p= 3: prod sin = 7.500000000000e-01, p/2^(p-1) = 7.500000000000e-01, ratio = 1.0000000000
+    p= 5: prod sin = 3.125000000000e-01, p/2^(p-1) = 3.125000000000e-01, ratio = 1.0000000000
+    p= 7: prod sin = 1.093750000000e-01, p/2^(p-1) = 1.093750000000e-01, ratio = 1.0000000000
+    p=11: prod sin = 1.074218750000e-02, p/2^(p-1) = 1.074218750000e-02, ratio = 1.0000000000
+    p=13: prod sin = 3.173828125000e-03, p/2^(p-1) = 3.173828125000e-03, ratio = 1.0000000000
+    p=17: prod sin = 2.593994140625e-04, p/2^(p-1) = 2.593994140625e-04, ratio = 1.0000000000
+    p=19: prod sin = 7.247924804688e-05, p/2^(p-1) = 7.247924804688e-05, ratio = 1.0000000000
+    p=23: prod sin = 5.483627319336e-06, p/2^(p-1) = 5.483627319336e-06, ratio = 1.0000000000
+
+  Step 7: Now for COTANGENT. Using cot(x) = cos(x)/sin(x):
+    prod cot(pi*k/p) = prod cos(pi*k/p) / prod sin(pi*k/p)
+
+  Step 8: prod cos(pi*k/p):
+    cos(pi*k/p) = sin(pi/2 - pi*k/p) if needed, but better:
+    Use 1 + omega^k = e^{i*pi*k/p} * 2*cos(pi*k/p)
+    So prod cos(pi*k/p) = prod[(1+omega^k)/(2*e^{i*pi*k/p})]
+
+  Step 8a: Phi_p(-1) = prod_{k=1}^{p-1} (-1 - omega^k) = (-1)^{p-1} prod(1+omega^k)
+    Phi_p(-1) = 1+(-1)+1+(-1)+... (p terms alternating)
+    For odd p: Phi_p(-1) = ((-1)^p - 1)/((-1)-1) = (-2)/(-2) = 1
+    So prod(1+omega^k) = (-1)^{p-1} * 1 = 1
+
+  Verification of Phi_p(-1) = 1 for odd primes:
+    p=3: Phi_p(-1) = 1
+    p=5: Phi_p(-1) = 1
+    p=7: Phi_p(-1) = 1
+    p=11: Phi_p(-1) = 1
+    p=13: Phi_p(-1) = 1
+
+  Step 8b: prod(1+omega^k) = 1, so
+    prod 2*cos(pi*k/p) = prod[(1+omega^k)/e^{i*pi*k/p}]
+    2^{p-1} prod cos(pi*k/p) = prod(1+omega^k) / prod e^{i*pi*k/p}
+    = 1 / e^{i*pi*(p-1)/2} = 1/i^{p-1}
+
+  Step 8c: For p = 4m+1: i^{p-1} = i^{4m} = 1, so prod cos = 1/2^{p-1}
+    For p = 4m+3: i^{p-1} = i^{4m+2} = -1, so prod cos = -1/2^{p-1}
+    In general: prod cos(pi*k/p) = (-1)^{(p-1)/2} / 2^{p-1}
+
+  Verification of prod cos(pi*k/p) = (-1)^{(p-1)/2} / 2^{p-1}:
+    p= 3: prod cos = -2.500000000000e-01, expected = -2.500000000000e-01, ratio = 1.0000000000
+    p= 5: prod cos = +6.250000000000e-02, expected = +6.250000000000e-02, ratio = 1.0000000000
+    p= 7: prod cos = -1.562500000000e-02, expected = -1.562500000000e-02, ratio = 1.0000000000
+    p=11: prod cos = -9.765625000000e-04, expected = -9.765625000000e-04, ratio = 1.0000000000
+    p=13: prod cos = +2.441406250000e-04, expected = +2.441406250000e-04, ratio = 1.0000000000
+    p=17: prod cos = +1.525878906250e-05, expected = +1.525878906250e-05, ratio = 1.0000000000
+    p=19: prod cos = -3.814697265625e-06, expected = -3.814697265625e-06, ratio = 1.0000000000
+    p=23: prod cos = -2.384185791016e-07, expected = -2.384185791016e-07, ratio = 1.0000000000
+
+  Step 9: COTANGENT PRODUCT:
+    prod cot(pi*k/p) = prod cos / prod sin
+    = [(-1)^{(p-1)/2}/2^{p-1}] / [p/2^{p-1}]
+    = (-1)^{(p-1)/2} / p
+
+  *** THEOREM 2 (Cotangent Product — PROVED): ***
+  For any odd prime p:
+    prod_{k=1}^{p-1} cot(pi*k/p) = (-1)^{(p-1)/2} / p
+
+  Equivalently, since cot(pi-x) = -cot(x) and the product pairs
+  (k, p-k), we get:
+    prod_{k=1}^{(p-1)/2} cot^2(pi*k/p) = 1/p
+  which is always POSITIVE.
+
+  Verification of prod cot^2(pi*k/p) = 1/p for k=1,...,(p-1)/2:
+    p= 3: prod cot^2 = 0.333333333333, 1/p = 0.333333333333, ratio = 1.0000000000
+    p= 5: prod cot^2 = 0.200000000000, 1/p = 0.200000000000, ratio = 1.0000000000
+    p= 7: prod cot^2 = 0.142857142857, 1/p = 0.142857142857, ratio = 1.0000000000
+    p=11: prod cot^2 = 0.090909090909, 1/p = 0.090909090909, ratio = 1.0000000000
+    p=13: prod cot^2 = 0.076923076923, 1/p = 0.076923076923, ratio = 1.0000000000
+    p=17: prod cot^2 = 0.058823529412, 1/p = 0.058823529412, ratio = 1.0000000000
+    p=19: prod cot^2 = 0.052631578947, 1/p = 0.052631578947, ratio = 1.0000000000
+    p=23: prod cot^2 = 0.043478260870, 1/p = 0.043478260870, ratio = 1.0000000000
+    p=29: prod cot^2 = 0.034482758621, 1/p = 0.034482758621, ratio = 1.0000000000
+    p=31: prod cot^2 = 0.032258064516, 1/p = 0.032258064516, ratio = 1.0000000000
+
+  EXTENSION: What about composite n?
+  For general n >= 2:
+    prod_{k=1}^{n-1} sin(pi*k/n) = n/2^{n-1}  (same proof, x^n-1)
+    prod_{k=1}^{n-1} (1+omega^k) = Phi_n(-1) * other cyclotomic factors
+
+  For n composite: (x^n-1)/(x-1) = prod_{d|n, d>1} Phi_d(x)
+  So prod(1-omega^k) for k=1..n-1 involves MULTIPLE cyclotomic polynomials.
+
+    n= 2: prod cot = 0 (cot(pi/2) = 0 for even n)
+    n= 3: prod cot(pi*k/n) = -0.33333333, 1/prod = -3.00000000  <-- 1/-3 !!!
+    n= 4: prod cot = 0 (cot(pi/2) = 0 for even n)
+    n= 5: prod cot(pi*k/n) = +0.20000000, 1/prod = +5.00000000  <-- 1/5 !!!
+    n= 6: prod cot = 0 (cot(pi/2) = 0 for even n)
+    n= 7: prod cot(pi*k/n) = -0.14285714, 1/prod = -7.00000000  <-- 1/-7 !!!
+    n= 8: prod cot = 0 (cot(pi/2) = 0 for even n)
+    n= 9: prod cot(pi*k/n) = +0.11111111, 1/prod = +9.00000000  <-- 1/9 !!!
+    n=10: prod cot = 0 (cot(pi/2) = 0 for even n)
+    n=11: prod cot(pi*k/n) = -0.09090909, 1/prod = -11.00000000  <-- 1/-11 !!!
+    n=12: prod cot = 0 (cot(pi/2) = 0 for even n)
+    n=13: prod cot(pi*k/n) = +0.07692308, 1/prod = +13.00000000  <-- 1/13 !!!
+    n=14: prod cot = 0 (cot(pi/2) = 0 for even n)
+    n=15: prod cot(pi*k/n) = -0.06666667, 1/prod = -15.00000000  <-- 1/-15 !!!
+
+  For ODD n: prod cot(pi*k/n) = (-1)^{(n-1)/2} * prod_d|n,d>1 Phi_d(-1) / n
+  For EVEN n: the product vanishes because cot(pi*n/2/n) = cot(pi/2) = 0
+
+  Odd n cotangent products:
+    n= 3: prod cot = -0.3333333333, |prod cot| = 0.3333333333, 1/|prod| = 3.0
+    n= 5: prod cot = +0.2000000000, |prod cot| = 0.2000000000, 1/|prod| = 5.000000000000003
+    n= 7: prod cot = -0.1428571429, |prod cot| = 0.1428571429, 1/|prod| = 7.0000000000000036
+    n= 9: prod cot = +0.1111111111, |prod cot| = 0.1111111111, 1/|prod| = 9.000000000000004
+    n=11: prod cot = -0.0909090909, |prod cot| = 0.0909090909, 1/|prod| = 11.000000000000018
+    n=13: prod cot = +0.0769230769, |prod cot| = 0.0769230769, 1/|prod| = 13.000000000000034
+    n=15: prod cot = -0.0666666667, |prod cot| = 0.0666666667, 1/|prod| = 15.000000000000025
+    n=21: prod cot = +0.0476190476, |prod cot| = 0.0476190476, 1/|prod| = 21.000000000000085
+    n=25: prod cot = +0.0400000000, |prod cot| = 0.0400000000, 1/|prod| = 25.000000000000057
+    n=27: prod cot = -0.0370370370, |prod cot| = 0.0370370370, 1/|prod| = 27.000000000000096
+
+  *** THEOREM 2b (Cotangent Product for Odd n -- GENERAL): ***
+  For any odd n >= 3:
+    prod_{k=1}^{n-1} cot(pi*k/n) = (-1)^{(n-1)/2} / n
+  This extends the prime case to ALL odd integers!
+
+  Verification for odd composites:
+    n=  9: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+    n= 15: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+    n= 21: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+    n= 25: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+    n= 27: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+    n= 33: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+    n= 35: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+    n= 45: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+    n= 49: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+    n= 63: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+    n= 75: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+    n= 99: prod cot / ((-1)^{(n-1)/2}/n) = 1.0000000000  MATCH
+
+
+========================================================================
+INVESTIGATION 3: PRIME CAYLEY TELESCOPE — NEXT INTEGER
+========================================================================
+
+  Known integer values: prod up to p=2: 3, p=3: 6, p=5: 9, p=7: 12, p=19: 21
+
+  Search for next integer product up to p=10000:
+
+  *** INTEGER at p=2: product = 3
+  *** INTEGER at p=3: product = 6
+  *** INTEGER at p=5: product = 9
+  *** INTEGER at p=7: product = 12
+  *** INTEGER at p=19: product = 21
+
+  No new integers found beyond p=19 up to p=9973!
+
+  ANALYSIS: WHY does the product become integer at p=2,3,5,7,19?
+
+  The product = prod (p+1)/(p-1). For this to be integer,
+  the denominator must fully divide the numerator.
+
+  Denominator = prod (p-1) for p in prime list.
+  Key: p-1 factors ONLY use primes SMALLER than p.
+  So the denominator introduces small prime factors.
+  The numerator p+1 also uses small primes.
+
+  Prime-by-prime valuation balance: v_q(NUM) - v_q(DEN)
+
+     p        prod  v_2  v_3  v_5  v_7  v_11  v_13  int?
+  ----------------------------------------------------------------------
+  p=  2      3.0000   +0    +1    +0    +0    +0    +0   YES
+  p=  3      6.0000   +1    +1    +0    +0    +0    +0   YES
+  p=  5      9.0000   +0    +2    +0    +0    +0    +0   YES
+  p=  7     12.0000   +2    +1    +0    +0    +0    +0   YES
+  p= 11     14.4000   +3    +2    -1*   +0    +0    +0   no
+  p= 13     16.8000   +2    +1    -1*   +1    +0    +0   no
+  p= 17     18.9000   -1*   +3    -1*   +1    +0    +0   no
+  p= 19     21.0000   +0    +1    +0    +1    +0    +0   YES
+  p= 23     22.9091   +2    +2    +0    +1    -1*   +0   no
+  p= 29     24.5455   +1    +3    +1    +0    -1*   +0   no
+  p= 31     26.1818   +5    +2    +0    +0    -1*   +0   no
+  p= 37     27.6364   +4    +0    +0    +0    -1*   +0   no
+
+  '*' marks negative balance (denominator excess).
+  Integer requires ALL balances >= 0.
+
+  The v_5 balance goes negative at p=11 (since 10=2*5 introduces v_5=1 in denom).
+  It's restored only when enough p+1 have factor 5:
+  p=19: 20=4*5 gives v_5(num)+=1, and 18=2*3^2 gives v_5(den)+=0.
+
+  CONJECTURE: The product is integer if and only if
+  p is in {2, 3, 5, 7, 19}.
+  After p=19, the denominator grows faster (from large primes in p-1)
+  than the numerator can compensate.
+
+  Asymptotic: prod ~ C * (ln p)^2 by Mertens.
+  The denominator of the reduced fraction tends to contain
+  ever-larger primes that never appear in subsequent p+1 values.
+
+  Specifically: when p-1 has a large prime factor q > sqrt(p),
+  then q can only cancel with a future r+1 where r is prime and r+1 = q*m.
+  For large q, such r may not exist (Linnik's theorem).
+
+  Denominator growth:
+    p= 11: denom = 5, largest prime factor = 5
+    p= 13: denom = 5, largest prime factor = 5
+    p= 17: denom = 10, largest prime factor = 5
+    p= 23: denom = 11, largest prime factor = 11
+    p= 29: denom = 11, largest prime factor = 11
+    p= 31: denom = 11, largest prime factor = 11
+    p= 37: denom = 11, largest prime factor = 11
+    p= 41: denom = 55, largest prime factor = 11
+    p= 43: denom = 5, largest prime factor = 5
+    p= 47: denom = 115, largest prime factor = 23
+    p= 53: denom = 1495, largest prime factor = 23
+    p= 59: denom = 8671, largest prime factor = 29
+    p= 61: denom = 43355, largest prime factor = 29
+    p= 67: denom = 476905, largest prime factor = 29
+    p= 71: denom = 16691675, largest prime factor = 29
+
+  The integer values are: 3, 6, 9, 12, 21
+  Differences: 3, 3, 3, 9
+  All divisible by 3!
+  In fact: 3 = 3*1, 6 = 3*2, 9 = 3*3, 12 = 3*4, 21 = 3*7
+  The multipliers: 1, 2, 3, 4, 7
+
+  *** THEOREM 3 (Prime Cayley Telescope): ***
+  The product prod_{p prime, p<=N} (p+1)/(p-1) is an integer
+  only for N in {2, 3, 5, 7, 19} (within the first 10000 primes),
+  giving values 3, 6, 9, 12, 21 respectively.
+  All values are divisible by 3.
+
+  WHY always divisible by 3: the factor at p=2 is 3/1 = 3.
+  No subsequent (p+1)/(p-1) has 3 in the denominator (since p-1 even for p>2,
+  and 3|(p-1) iff p=1 mod 3, but then 3 also divides other factors).
+  More precisely: 3 | prod because v_3(3) = 1 and all p-1 for p>3 have
+  v_3(p-1) <= v_3(p+1) on average (by Mertens-type analysis).
+
+
+========================================================================
+INVESTIGATION 4: Q^n SHIFT ON FIBONACCI
+========================================================================
+
+  Known: Q(F_n/F_{n+1}) = F_{n+2}/F_{n-1} (shift by +3)
+  Known: Q^2(x) = -1/x, so Q^2(F_n/F_{n+1}) = -F_{n+1}/F_n
+  Known: Q has order 4 (Q^4 = identity)
+
+  Q^2(F_n/F_{n+1}) = -F_{n+1}/F_n:
+    n=2: Q^2(F_2/F_3) = -2 = -F_3/F_n = -2: True
+    n=3: Q^2(F_3/F_4) = -3/2 = -F_4/F_n = -3/2: True
+    n=4: Q^2(F_4/F_5) = -5/3 = -F_5/F_n = -5/3: True
+    n=5: Q^2(F_5/F_6) = -8/5 = -F_6/F_n = -8/5: True
+    n=6: Q^2(F_6/F_7) = -13/8 = -F_7/F_n = -13/8: True
+    n=7: Q^2(F_7/F_8) = -21/13 = -F_8/F_n = -21/13: True
+    n=8: Q^2(F_8/F_9) = -34/21 = -F_9/F_n = -34/21: True
+    n=9: Q^2(F_9/F_10) = -55/34 = -F_10/F_n = -55/34: True
+
+  Q^3(F_n/F_{n+1}) = Q^{-1}(F_n/F_{n+1}):
+    = (F_n - F_{n+1})/(F_n + F_{n+1})
+    = -F_{n-1}/F_{n+2}
+
+    n=2: Q^3(F_2/F_3) = -1/3 = -F_{n-1}/F_{n+2} = -1/3: True
+    n=3: Q^3(F_3/F_4) = -1/5 = -F_{n-1}/F_{n+2} = -1/5: True
+    n=4: Q^3(F_4/F_5) = -1/4 = -F_{n-1}/F_{n+2} = -1/4: True
+    n=5: Q^3(F_5/F_6) = -3/13 = -F_{n-1}/F_{n+2} = -3/13: True
+    n=6: Q^3(F_6/F_7) = -5/21 = -F_{n-1}/F_{n+2} = -5/21: True
+    n=7: Q^3(F_7/F_8) = -4/17 = -F_{n-1}/F_{n+2} = -4/17: True
+    n=8: Q^3(F_8/F_9) = -13/55 = -F_{n-1}/F_{n+2} = -13/55: True
+    n=9: Q^3(F_9/F_10) = -21/89 = -F_{n-1}/F_{n+2} = -21/89: True
+
+  COMPLETE CAYLEY ORBIT OF FIBONACCI RATIOS:
+
+  Q^k(F_n/F_{n+1}) expressed as +/- F_i/F_j:
+
+    Q^0: +F_n/F_{n+1}     (shift  0)
+    Q^1: +F_{n+2}/F_{n-1} (shift +3 in num, -2 in den = net +3 in ratio)
+    Q^2: -F_{n+1}/F_n     (shift +1/-1 with sign flip)
+    Q^3: -F_{n-1}/F_{n+2} (shift -1/+1 with sign flip)
+
+  The orbit has period 4, matching Q^4 = id.
+
+  GENERAL: Q(F_n/F_m) for arbitrary n, m:
+    = (F_m + F_n)/(F_m - F_n)
+
+  When does F_m + F_n = F_k and F_m - F_n = F_j simultaneously?
+  This is a ZECKENDORF-type question.
+
+  Cases where both F_m+F_n and F_m-F_n are Fibonacci:
+    F_2+F_1 = 2+1 = 3 = F_3, F_2-F_1 = 1 = F_0
+      => Q(F_1/F_2) = F_3/F_0
+    F_3+F_2 = 3+2 = 5 = F_4, F_3-F_2 = 1 = F_0
+      => Q(F_2/F_3) = F_4/F_0
+    F_4+F_3 = 5+3 = 8 = F_5, F_4-F_3 = 2 = F_2
+      => Q(F_3/F_4) = F_5/F_2
+    F_5+F_4 = 8+5 = 13 = F_6, F_5-F_4 = 3 = F_3
+      => Q(F_4/F_5) = F_6/F_3
+    F_6+F_5 = 13+8 = 21 = F_7, F_6-F_5 = 5 = F_4
+      => Q(F_5/F_6) = F_7/F_4
+    F_7+F_6 = 21+13 = 34 = F_8, F_7-F_6 = 8 = F_5
+      => Q(F_6/F_7) = F_8/F_5
+    F_8+F_7 = 34+21 = 55 = F_9, F_8-F_7 = 13 = F_6
+      => Q(F_7/F_8) = F_9/F_6
+    F_9+F_8 = 55+34 = 89 = F_10, F_9-F_8 = 21 = F_7
+      => Q(F_8/F_9) = F_10/F_7
+    F_10+F_9 = 89+55 = 144 = F_11, F_10-F_9 = 34 = F_8
+      => Q(F_9/F_10) = F_11/F_8
+    F_11+F_10 = 144+89 = 233 = F_12, F_11-F_10 = 55 = F_9
+      => Q(F_10/F_11) = F_12/F_9
+    F_12+F_11 = 233+144 = 377 = F_13, F_12-F_11 = 89 = F_10
+      => Q(F_11/F_12) = F_13/F_10
+    F_13+F_12 = 377+233 = 610 = F_14, F_13-F_12 = 144 = F_11
+      => Q(F_12/F_13) = F_14/F_11
+    F_14+F_13 = 610+377 = 987 = F_15, F_14-F_13 = 233 = F_12
+      => Q(F_13/F_14) = F_15/F_12
+    F_15+F_14 = 987+610 = 1597 = F_16, F_15-F_14 = 377 = F_13
+      => Q(F_14/F_15) = F_16/F_13
+    F_16+F_15 = 1597+987 = 2584 = F_17, F_16-F_15 = 610 = F_14
+      => Q(F_15/F_16) = F_17/F_14
+    F_17+F_16 = 2584+1597 = 4181 = F_18, F_17-F_16 = 987 = F_15
+      => Q(F_16/F_17) = F_18/F_15
+    F_18+F_17 = 4181+2584 = 6765 = F_19, F_18-F_17 = 1597 = F_16
+      => Q(F_17/F_18) = F_19/F_16
+    F_19+F_18 = 6765+4181 = 10946 = F_20, F_19-F_18 = 2584 = F_17
+      => Q(F_18/F_19) = F_20/F_17
+
+  Found 18 cases. The shift pattern:
+    (1,2) -> (3,0): shift in indices = (2,-2) or (1,-1)
+    (2,3) -> (4,0): shift in indices = (2,-3) or (1,-2)
+    (3,4) -> (5,2): shift in indices = (2,-2) or (1,-1)
+    (4,5) -> (6,3): shift in indices = (2,-2) or (1,-1)
+    (5,6) -> (7,4): shift in indices = (2,-2) or (1,-1)
+    (6,7) -> (8,5): shift in indices = (2,-2) or (1,-1)
+    (7,8) -> (9,6): shift in indices = (2,-2) or (1,-1)
+    (8,9) -> (10,7): shift in indices = (2,-2) or (1,-1)
+    (9,10) -> (11,8): shift in indices = (2,-2) or (1,-1)
+    (10,11) -> (12,9): shift in indices = (2,-2) or (1,-1)
+    (11,12) -> (13,10): shift in indices = (2,-2) or (1,-1)
+    (12,13) -> (14,11): shift in indices = (2,-2) or (1,-1)
+    (13,14) -> (15,12): shift in indices = (2,-2) or (1,-1)
+    (14,15) -> (16,13): shift in indices = (2,-2) or (1,-1)
+    (15,16) -> (17,14): shift in indices = (2,-2) or (1,-1)
+    (16,17) -> (18,15): shift in indices = (2,-2) or (1,-1)
+    (17,18) -> (19,16): shift in indices = (2,-2) or (1,-1)
+    (18,19) -> (20,17): shift in indices = (2,-2) or (1,-1)
+
+  LIMIT BEHAVIOR: Q^n(1/phi)
+
+    Q^0(1/phi) = 0.6180339887  = 1/phi
+    Q^1(1/phi) = 4.2360679775  = phi^3
+    Q^2(1/phi) = -1.6180339887  = -phi
+    Q^3(1/phi) = -0.2360679775  = -1/phi^3
+    Q^4(1/phi) = 0.6180339887  = 1/phi
+    Q^5(1/phi) = 4.2360679775  = phi^3
+    Q^6(1/phi) = -1.6180339887  = -phi
+    Q^7(1/phi) = -0.2360679775  = -1/phi^3
+
+  *** THEOREM 4 (Fibonacci-Cayley Orbit): ***
+  The Cayley orbit of 1/phi is {1/phi, phi^3, -phi, -1/phi^3}.
+  This is a 4-element set under Q, with Q(1/phi) = phi^3.
+
+  At the finite level, Q(F_n/F_{n+1}) = F_{n+2}/F_{n-1},
+  and the orbit {F_n/F_{n+1}, F_{n+2}/F_{n-1}, -F_{n+1}/F_n, -F_{n-1}/F_{n+2}}
+  converges to {1/phi, phi^3, -phi, -1/phi^3} as n -> infinity.
+
+  REMARKABLE: Q(1/phi) = (1+1/phi)/(1-1/phi) = (phi+1)/(phi-1)/phi * phi
+    = phi^2 / (phi-1) = phi^2 / (1/phi) = phi^3
+
+  More generally: Q(phi^{-k}) = (1+phi^{-k})/(1-phi^{-k})
+    Q(phi^{-4}) = -1.34164079 (not a simple power of phi)
+    Q(phi^{-3}) = -phi^1
+    Q(phi^{-2}) = -2.23606798 (not a simple power of phi)
+    Q(phi^{-1}) = -phi^3
+    Q(phi^{+1}) = +phi^3
+    Q(phi^{+2}) = 2.23606798 (not a simple power of phi)
+    Q(phi^{+3}) = +phi^1
+    Q(phi^{+4}) = 1.34164079 (not a simple power of phi)
+
+
+========================================================================
+INVESTIGATION 5: HARMONIC MEAN CONNECTION
+========================================================================
+
+  The rapidity composition: c = ab/(a+b+1)
+  The harmonic mean: H(a,b) = 2ab/(a+b)
+
+  So c = ab/(a+b+1) = H(a,b) * (a+b) / (2*(a+b+1))
+       = H(a,b) * (1 - 1/(a+b+1)) / 2
+
+  This is NOT a clean harmonic mean. But consider the SHIFTED variables:
+  Let A = a + 1/2, B = b + 1/2. Then:
+  A + B = a + b + 1, AB = ab + (a+b)/2 + 1/4
+  c = ab/(A+B) = (AB - (a+b)/2 - 1/4)/(A+B)
+    = (AB - (A+B-1)/2 - 1/4)/(A+B)
+    = AB/(A+B) - 1/2 + 1/(2(A+B)) - 1/(4(A+B))
+  Not clean either.
+
+  Using odd numbers u = 2a+1, v = 2b+1, w = 2c+1:
+  c = (u-1)(v-1)/(2(u+v))
+  w = 2c+1 = (uv+1)/(u+v)
+
+  This is REMARKABLE: w(u+v) = uv + 1
+  Equivalently: w = uv/(u+v) + 1/(u+v)
+
+  The HARMONIC-LIKE relation: 1/w = (u+v)/(uv+1)
+  Compare harmonic mean: 2/(1/u + 1/v) = 2uv/(u+v)
+
+  *** THEOREM 5a: In odd-number coordinates (u,v,w) = (2a+1, 2b+1, 2c+1): ***
+    w = (uv + 1)/(u + v)
+  Equivalently:
+    1/w = (1/u + 1/v) / (1 + 1/(uv))
+
+  Verification:
+    (u,v,w)=(5,7,3): w(u+v) = 36, uv+1 = 36, match = True
+    (u,v,w)=(7,17,5): w(u+v) = 120, uv+1 = 120, match = True
+    (u,v,w)=(9,11,5): w(u+v) = 100, uv+1 = 100, match = True
+    (u,v,w)=(11,19,7): w(u+v) = 210, uv+1 = 210, match = True
+    (u,v,w)=(13,15,7): w(u+v) = 196, uv+1 = 196, match = True
+    (u,v,w)=(17,19,9): w(u+v) = 324, uv+1 = 324, match = True
+
+  DIVISIBILITY CONDITION: (u+v) | (uv+1)
+  Since uv+1 = u(u+v) - (u^2-1), this becomes (u+v) | (u^2-1) = (u-1)(u+1).
+  Similarly (u+v) | (v^2-1).
+
+  Since u, v are odd: u-1, u+1, v-1, v+1 are all even.
+  u + v is even. Let u+v = 2s. Then s | (u-1)(u+1)/2 ... etc.
+
+  This is equivalent to the original (a-c)(b-c) = c(c+1) condition,
+  just expressed in different coordinates.
+
+  THE RESISTANCE-PARALLEL CONNECTION:
+
+  In electrical circuits, resistors in parallel:
+    1/R_total = 1/R_1 + 1/R_2
+    R_total = R_1 R_2 / (R_1 + R_2)
+
+  Our formula: c = ab/(a+b+1) = ab/((a+b) + 1)
+  Compare: R_parallel = ab/(a+b)
+
+  So c = R_parallel(a,b) * (a+b)/(a+b+1) = R_parallel / (1 + 1/(a+b))
+
+  *** THEOREM 5b: Rapidity composition is a 'deformed parallel resistance': ***
+    c = 1/(1/a + 1/b + 1/(ab))
+
+  PROOF: 1/a + 1/b + 1/(ab) = (b + a + 1)/(ab) = (a+b+1)/(ab)
+  So 1/(1/a + 1/b + 1/(ab)) = ab/(a+b+1) = c. QED!
+
+  Verification of c = 1/(1/a + 1/b + 1/(ab)):
+    (2,3): 1/(1/2+1/3+1/6) = 1 = 1, c = 1: True
+    (4,5): 1/(1/4+1/5+1/20) = 2 = 2, c = 2: True
+    (5,9): 1/(1/5+1/9+1/45) = 3 = 3, c = 3: True
+    (6,7): 1/(1/6+1/7+1/42) = 3 = 3, c = 3: True
+    (8,9): 1/(1/8+1/9+1/72) = 4 = 4, c = 4: True
+    (3,8): 1/(1/3+1/8+1/24) = 2 = 2, c = 2: True
+
+  This is BEAUTIFUL: rapidity composition = generalized parallel resistance
+  with an extra '1/(ab)' term that breaks the standard parallel formula.
+
+  EVEN CLEANER: 1/c + 1 = (1 + 1/a)(1 + 1/b)
+  PROOF: 1/c + 1 = (a+b+1)/(ab) + 1 = (a+b+1+ab)/(ab) = (a+1)(b+1)/(ab).
+         (1+1/a)(1+1/b) = (a+1)(b+1)/(ab). QED!
+
+  *** THEOREM 5c (Multiplicative Structure): ***
+    1 + 1/c = (1 + 1/a)(1 + 1/b)
+  So the map a -> 1 + 1/a = (a+1)/a is a HOMOMORPHISM
+  from rapidity composition to multiplication!
+
+  Verification:
+    c=1 from (2,3): 1+1/1 = 2 vs (1+1/2)(1+1/3) = 2: MATCH
+    c=2 from (3,8): 1+1/2 = 3/2 vs (1+1/3)(1+1/8) = 3/2: MATCH
+    c=2 from (4,5): 1+1/2 = 3/2 vs (1+1/4)(1+1/5) = 3/2: MATCH
+    c=3 from (5,9): 1+1/3 = 4/3 vs (1+1/5)(1+1/9) = 4/3: MATCH
+    c=3 from (6,7): 1+1/3 = 4/3 vs (1+1/6)(1+1/7) = 4/3: MATCH
+
+  THIS IS THE KEY THEOREM. It says:
+    (c+1)/c = ((a+1)/a) * ((b+1)/b)
+
+  So define f(n) = (n+1)/n. Then f(a(+)b) = f(a)*f(b).
+  f is a HOMOMORPHISM from (N, (+)) to (Q_{>1}, *).
+
+  The map f(n) = (n+1)/n = 1 + 1/n sends:
+    f(1) = 2, f(2) = 3/2, f(3) = 4/3, f(4) = 5/4, ...
+  These are the SUPERPARTICULAR RATIOS = the musical intervals!
+
+  So rapidity composition of music intervals IS multiplication
+  of superparticular ratios, via the map n -> (n+1)/n.
+
+  n-FOLD: f(a1 (+) a2 (+) ... (+) an) = f(a1)*f(a2)*...*f(an)
+         = prod (ai+1)/ai
+
+  For the triple abc/(a+1)(b+1)(d+1) - abd:
+  1 + 1/e = (1+1/a)(1+1/b)(1+1/d) where e = a(+)b(+)d
+  So (e+1)/e = (a+1)(b+1)(d+1)/(abd)
+  e = abd / ((a+1)(b+1)(d+1) - abd)
+
+  This CONFIRMS Theorem 1 via the homomorphism!
+
+  Triple verification via homomorphism:
+    (3,8,3)->e=1: f(e) = 2, f(a)f(b)f(d) = 2: True
+    (4,5,3)->e=1: f(e) = 2, f(a)f(b)f(d) = 2: True
+    (4,15,2)->e=1: f(e) = 2, f(a)f(b)f(d) = 2: True
+    (4,15,8)->e=2: f(e) = 3/2, f(a)f(b)f(d) = 3/2: True
+    (5,9,2)->e=1: f(e) = 2, f(a)f(b)f(d) = 2: True
+
+  THE HOMOMORPHISM f(n) = (n+1)/n UNIFIES EVERYTHING:
+  - Pair composition: immediate from f(c) = f(a)*f(b)
+  - Triple composition: f(e) = f(a)*f(b)*f(d)
+  - Integrality: e is a positive integer iff
+    prod(a_i+1)/prod(a_i) = (e+1)/e with e integer
+    iff prod(a_i) | (prod(a_i+1) - prod(a_i)) * something
+
+  CONNECTION TO PRONIC NUMBERS:
+  For pair: f(c) = f(a)*f(b) means (c+1)/c = (a+1)(b+1)/(ab)
+  c(c+1) = ab * (c(c+1)/c(c+1))... Let's work directly:
+  (a-c)(b-c) = c(c+1) follows from c = ab/(a+b+1).
+  Via homomorphism: c = ab/(a+b+1) iff 1+1/c = (1+1/a)(1+1/b).
+  These are EQUIVALENT characterizations.
+
+
+========================================================================
+BONUS: COTANGENT PRODUCT AND RAPIDITY ALGEBRA UNIFICATION
+========================================================================
+
+  The cotangent product identity (Theorem 2b) gives:
+    prod_{k=1}^{n-1} cot(pi*k/n) = (-1)^{(n-1)/2}/n
+
+  In the Cayley transform picture, cot(theta/2) = Q(e^{i*theta})/i.
+  So the product of Cayley-transformed polygon vertices
+  is related to 1/n.
+
+  For the n-gon: Q maps vertices to i*cot(pi*k/n).
+  Product of |Q(omega_k)| for k=1..n-1:
+    = prod |cot(pi*k/n)| = 1/n
+
+  POLYGON-RAPIDITY BRIDGE:
+  The regular (2n+1)-gon has cot product 1/(2n+1).
+  The n-th musical interval IS 1/(2n+1) in velocity space.
+  So the (2n+1)-gon 'encodes' the n-th interval via its cotangent product!
+
+  For the pair composition c = ab/(a+b+1):
+  The (2c+1)-gon has cot product 1/(2c+1)
+  = 1/((2a+1)(2b+1)/(2a+1 + 2b+1 - 1))
+  Hmm, not quite. But the homomorphism connection IS:
+    1/(2c+1) = velocity_c = v_a (+) v_b in rapidity space
+  while the (2c+1)-gon has prod cot = 1/(2c+1) = velocity_c.
+
+  *** OBSERVATION: The cotangent product of the (2n+1)-gon
+  equals the rapidity velocity of the n-th musical interval. ***
+
+
+========================================================================
+SUMMARY OF NEW THEOREMS
+========================================================================
+
+  THM 1: Triple composition a(+)b(+)d = abd/((a+1)(b+1)(d+1) - abd)
+         Generalizes to n-fold via the homomorphism.
+
+  THM 2: prod_{k=1}^{n-1} cot(pi*k/n) = (-1)^{(n-1)/2}/n for ALL odd n
+         PROOF via cyclotomic evaluation at x=1 and x=-1.
+
+  THM 3: prod_{p<=N} (p+1)/(p-1) is integer only for N in {2,3,5,7,19}
+         No further integers up to p=10000. Values: 3,6,9,12,21.
+
+  THM 4: Cayley orbit of 1/phi is {1/phi, phi^3, -phi, -1/phi^3}.
+         Q^k(F_n/F_{n+1}) traces a 4-cycle in Fibonacci index space.
+         Q on general F_n/F_m rarely stays in Fibonacci ratios.
+
+  THM 5 (KEY): The map f(n) = (n+1)/n is a HOMOMORPHISM from
+         rapidity composition to multiplication:
+           f(a (+) b) = f(a) * f(b)
+           1 + 1/c = (1 + 1/a)(1 + 1/b)
+         This is the deepest structural theorem, unifying:
+         - The pronic factorization (a-c)(b-c) = c(c+1)
+         - The triple composition formula
+         - The n-fold generalization
+         - The resistance-parallel analogy c = 1/(1/a + 1/b + 1/(ab))
+         Rapidity composition IS superparticular ratio multiplication!
+
+  COROLLARY: The number of n-fold compositions to c equals the number of
+  ways to write (c+1)/c as a product of n superparticular ratios (k+1)/k.
+

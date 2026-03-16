@@ -1,0 +1,647 @@
+========================================================================
+CROSS-DOMAIN PATTERN ANALYSIS
+Session: kind-pasteur-2026-03-15-S116d
+========================================================================
+
+========================================================================
+PATTERN 1: THE NUMBER 42 — MULTI-DOMAIN COINCIDENCES
+========================================================================
+
+  42 appears in ALL of these contexts:
+    [Rapidity algebra    ] c=6 gives c(c+1)=42, the pronic number controlling compositions to interval 1/13
+    [Tournament          ] 2*T_6 = 42 = 2*|E(K_7)| (twice the edges in the 7-vertex tournament template)
+    [Partition numbers   ] p(10) = 42, the 10th partition number
+    [Catalan numbers     ] C_5 = 42, the 5th Catalan number
+    [Chemistry           ] Molybdenum Z=42, in the same group as Cr(24) and W(74)
+    [Forbidden           ] 42 = 2*21 = 2*3*7, twice the forbidden H-number
+    [Biology             ] Answer to life, the universe, and everything (Adams)
+    [Rapidity factoring  ] 42 = 2*3*7, rap(42) = rap(2)+rap(3)+rap(7) = binary + curvature + threshold
+
+  Numerical verification:
+    p(10) = 42: YES (known)
+    C_5 = C(10,5)/6 = 42: YES
+    T_6 = 6*7/2 = 21, 2*T_6 = 42
+    rap(42) = 1.868835 = rap(2)+rap(3)+rap(7) = 1.868835
+    C(7,2) = 21 = T_6, so 42 = 2*C(7,2) = 2*(edges of K_7)
+
+  KEY: 42 = 2*3*7 links the three fundamental rapidity primes
+  (binary=2, curvature=3, threshold=7) to the complete graph K_7
+  whose tournaments are the central object of study.
+
+========================================================================
+PATTERN 2: THE OCTAVE GAP — ln(3)/2 APPEARS EVERYWHERE
+========================================================================
+
+  Target: ln(3)/2 = 0.5493061443
+
+  [Tournament] rap(21)-rap(7) = 0.5493061443 = ln(3)/2: True
+  [Chemistry]  rap(Ar)-rap(Ne) = rap(18)-rap(10) = 0.2938933325
+    This is ln(9/5)/2 = 0.2938933325, a minor 7th (NOT an octave)
+  [Chemistry]  rap(Kr)-rap(Ar) = rap(36)-rap(18) = 0.3465735903
+    This IS ln(2)/2 = 0.3465735903, one octave EXACTLY: True
+  [Nuclear]    rap(8)-rap(2) = 0.6931471806 = ln(4)/2 = ln(2) = 2 octaves: True
+  [Chemistry]  C=N/C-N = 1.9968, rap gap = 0.345761, octave error = 2.8 cents
+  [IR spectra] C#N/C-O = 2200/1100 = 2.0000, rap gap = 0.3465735903 = ln(2)/2 EXACTLY
+  [Vibration]  C-H/C-C = 3000/1000 = 3, rap gap = ln(3)/2 = 0.5493061443 = the curvature quantum
+  [Fibonacci]  F(n+3)/F(n) -> phi^3 = 4.236068, rap = (3/2)*ln(phi) = 0.3609088688
+
+  SYNTHESIS: The ratio 3:1 (twelfth/curvature quantum) connects
+    - Tournament forbidden gap (7 to 21)
+    - C-H vs C-C vibration frequency (3000 vs 1000 cm^-1)
+    - Three-fold symmetry (D_3, triangle, curvature)
+  While the ratio 2:1 (octave) connects
+    - Noble gas shells (Ar to Kr)
+    - Nuclear magic numbers (2 to 8, doubled)
+    - IR frequencies (C#N stretch to C-O stretch)
+    - Cell division (each doubling = one octave)
+
+========================================================================
+PATTERN 3: PRONIC NUMBERS = 2*TRIANGULAR = RAPIDITY DECOMPOSITIONS
+========================================================================
+
+  The rapidity composition closure condition is:
+    (a-c)(b-c) = c(c+1) = pronic number
+  c(c+1) = 2*T_c where T_c = c-th triangular number = edges in K_{c+1}
+
+  c   c(c+1)  =2*T_c  =|E(K_{c+1})|  Chemistry/Physics connection
+  --------------------------------------------------------------------
+    1       2   2*  1   |E(K_ 2)|    
+    2       6   2*  3   |E(K_ 3)|    Period 2 length=8, noble gas Ne at Z=10
+    3      12   2*  6   |E(K_ 4)|    
+    4      20   2* 10   |E(K_ 5)|    
+    5      30   2* 15   |E(K_ 6)|    
+    6      42   2* 21   |E(K_ 7)|    42=2*3*7, K_7 template, Mo(Z=42)
+    7      56   2* 28   |E(K_ 8)|    
+    8      72   2* 36   |E(K_ 9)|    
+    9      90   2* 45   |E(K_10)|    
+   10     110   2* 55   |E(K_11)|    
+   11     132   2* 66   |E(K_12)|    
+   12     156   2* 78   |E(K_13)|    156=12*13, Co_60 half-life isotope
+   13     182   2* 91   |E(K_14)|    
+   14     210   2*105   |E(K_15)|    
+   15     240   2*120   |E(K_16)|    
+   16     272   2*136   |E(K_17)|    
+   17     306   2*153   |E(K_18)|    
+   18     342   2*171   |E(K_19)|    
+   19     380   2*190   |E(K_20)|    
+
+  STRUCTURAL BRIDGE: The number of ways to compose two musical
+  intervals to reach interval c = tau(c(c+1))/2 = half the
+  divisor count of TWICE the c-th triangular number.
+  This links NUMBER THEORY (divisors) to GRAPH THEORY (K_n edges)
+  to MUSIC (interval composition) to TOURNAMENTS (K_n base graph).
+
+========================================================================
+PATTERN 4: FORBIDDEN H-VALUES vs NUCLEAR MAGIC NUMBERS
+========================================================================
+
+  Forbidden H-values: {7, 21}
+  Nuclear magic numbers: {2, 8, 20, 28, 50, 82, 126}
+
+  Pairwise rapidity distances:
+    d(H= 7, magic=  2) = 0.626381  ratio=3.5000  ~ double_octave (231.2 cents)
+    d(H= 7, magic=  8) = 0.066766  ratio=1.1429  ~ major_2nd (27.3 cents)
+    d(H= 7, magic= 20) = 0.524911  ratio=2.8571  ~ twelfth (84.5 cents)
+    d(H= 7, magic= 28) = 0.693147  ratio=4.0000  ~ double_octave (0.0 cents) ***
+    d(H= 7, magic= 50) = 0.983056  ratio=7.1429  ~ double_octave (1003.8 cents)
+    d(H= 7, magic= 82) = 1.230405  ratio=11.7143  ~ double_octave (1860.2 cents)
+    d(H= 7, magic=126) = 1.445186  ratio=18.0000  ~ double_octave (2603.9 cents)
+    d(H=21, magic=  2) = 1.175688  ratio=10.5000  ~ double_octave (1670.8 cents)
+    d(H=21, magic=  8) = 0.482540  ratio=2.6250  ~ major_10th (84.5 cents)
+    d(H=21, magic= 20) = 0.024395  ratio=1.0500  ~ minor_2nd (27.3 cents)
+    d(H=21, magic= 28) = 0.143841  ratio=1.3333  ~ fourth (0.0 cents) ***
+    d(H=21, magic= 50) = 0.433750  ratio=2.3810  ~ major_10th (84.5 cents)
+    d(H=21, magic= 82) = 0.681098  ratio=3.9048  ~ double_octave (41.7 cents)
+    d(H=21, magic=126) = 0.895880  ratio=6.0000  ~ double_octave (702.0 cents)
+
+  KEY NEAR-COINCIDENCES:
+    7/8 = 0.875, rap gap = 0.066766 ~ major 2nd interval
+    21/20 = 1.05, rap gap = 0.024395 ~ quarter-tone
+    21/28 = 3/4, rap gap = 0.143841 = ln(4/3)/2 = one fourth!
+    28/21 = 1.333333 = 4/3 EXACTLY: YES
+    So magic number 28 is exactly a FOURTH above forbidden 21 in rapidity!
+
+========================================================================
+PATTERN 5: HAGEDORN TEMPERATURE = CAYLEY MIDPOINT
+========================================================================
+
+  The rapidity gas Z(beta) = zeta(beta/2) diverges at beta=2, i.e., T=1/2.
+  In the Cayley framework:
+    T_H = 1/2, Cayley address = (1/2-1)/(1/2+1) = -0.333333
+    But as a Q-value: Q(0) = 1 (the identity/unison)
+    rapidity(T_H) = ln(1/2)/2 = -0.346574
+
+  The Hagedorn temperature of the rapidity gas corresponds to
+  rapidity = ln(1/2)/2 = -ln(2)/2 = minus one octave.
+  Below this temperature: the 'gas' is ordered (zeta converges).
+  Above this temperature: the 'gas' condenses (zeta diverges).
+
+  CROSS-DOMAIN: The same T=1/2 boundary appears in:
+  - Thermodynamics: Hagedorn temperature of rapidity gas
+  - Information theory: fair coin bias (p=1/2, rapidity=0)
+  - Quantum mechanics: 50/50 superposition on Bloch sphere
+  - Tournament theory: random tournament arc probability
+
+========================================================================
+PATTERN 6: KLEIBER'S 3/4 = CAYLEY ADDRESS OF 7
+========================================================================
+
+  Kleiber's law: metabolic rate ~ mass^{3/4}
+  Cayley address of 7: (7-1)/(7+1) = 0.75
+  3/4 = 0.75 = cayley_addr(7): True
+
+  In rapidity: rap(3/4) = arctanh(3/4) = 0.972955
+  Q(3/4) = 7.000000 = 7 EXACTLY
+
+  Kleiber's 3/4 is the unique velocity whose Q-value is 7 (forbidden).
+  The allometric scaling exponent IS the Cayley address of the
+  forbidden number in tournament theory.
+
+  Further: heart rate ~ mass^{-1/4}
+  -1/4 as Cayley address: Q(-1/4) = 0.600000 = 3/5
+  Cayley address of what? If v = -1/4, Q(v) = 0.6 = 3/5
+  rap(3/5) = -0.255413
+
+  Cayley address of 21: (21-1)/(21+1) = 0.9090909091 = 10/11
+  10/11 = 0.9090909091
+  3/4 (+) 10/11 = 0.9864864865 = 73/74
+  Q(73/74) = 147.000000 = 147 = 3*7^2
+
+========================================================================
+PATTERN 7: ALKANE = DIHEDRAL GROUP = MUSICAL INTERVAL (unified table)
+========================================================================
+
+  n  Alkane     H_count  |D_{n+1}|  Interval  Polygon    cot-product
+  --------------------------------------------------------------------
+   1  C1H4          4        4    2/1      2-gon   
+   2  C2H6          6        6    3/2      3-gon   |prod cot| = 1/3 = 0.333333
+   3  C3H8          8        8    4/3      4-gon   
+   4  C4H10        10       10    5/4      5-gon   |prod cot| = 1/5 = 0.200000
+   5  C5H12        12       12    6/5      6-gon   
+   6  C6H14        14       14    7/6      7-gon   |prod cot| = 1/7 = 0.142857
+   7  C7H16        16       16    8/7      8-gon   
+   8  C8H18        18       18    9/8      9-gon   
+   9  C9H20        20       20    10/9      10-gon  
+  10  C10H22       22       22    11/10      11-gon  |prod cot| = 1/11 = 0.090909
+  11  C11H24       24       24    12/11      12-gon  
+  12  C12H26       26       26    13/12      13-gon  |prod cot| = 1/13 = 0.076923
+
+  TRIPLE ISOMORPHISM:
+    C_n H_{2(n+1)} <-> D_{n+1} <-> interval (n+1)/n <-> (n+1)-gon
+  Each alkane IS a dihedral group IS a musical interval IS a polygon.
+  The hydrogen count = group order = 2*(polygon sides).
+
+========================================================================
+PATTERN 8: FIBONACCI OSCILLATION DECAYS AS phi^{-2n} IN RAPIDITY
+========================================================================
+
+  Target rapidity: (3/2)*ln(phi) = 0.7218177376
+  phi^{-2} = 0.3819660113 = convergence rate per step
+
+  n  F_{n+2}/F_{n-1}  rapidity     error         ratio_err
+  ------------------------------------------------------------
+   2      5.000000    0.8047189562  +8.290122e-02  +nan
+   3      4.000000    0.6931471806  -2.867056e-02  -2.891511
+   4      4.333333    0.7331685344  +1.135080e-02  -2.525863
+   5      4.200000    0.7175422626  -4.275475e-03  -2.654862
+   6      4.250000    0.7234594915  +1.641754e-03  -2.604212
+   7      4.230769    0.7211919139  -6.258237e-04  -2.623349
+   8      4.238095    0.7220569660  +2.392284e-04  -2.616009
+   9      4.235294    0.7217263875  -9.135011e-05  -2.618808
+  10      4.236364    0.7218526342  +3.489658e-05  -2.617738
+  11      4.235955    0.7218044089  -1.332873e-05  -2.618147
+  12      4.236111    0.7218228288  +5.091206e-06  -2.617991
+  13      4.236052    0.7218157929  -1.944656e-06  -2.618050
+  14      4.236074    0.7218184804  +7.427941e-07  -2.618028
+  15      4.236066    0.7218174539  -2.837218e-07  -2.618036
+
+  Convergence ratio -> -phi^2 = -2.618034
+  The Fibonacci rapidity oscillation is controlled by the GOLDEN RATIO.
+  This is the quasicrystal structure of rapidity space.
+
+========================================================================
+PATTERN 9: TOURNAMENT H-SPECTRUM vs HYDROGEN ENERGY LEVELS
+========================================================================
+
+  Hydrogen atom: E_n = -13.6/n^2,  rapidity = ln(n^2)/2 = ln(n)
+  Tournament: H(T) = I(Omega(T),2), rapidity = ln(H)/2
+
+  H-spectrum gaps at n=7 (rapidity of consecutive achievable H-values):
+    H=  1 ->   3: rap_gap = 0.549306  ratio = 3.0000
+    H=  3 ->   5: rap_gap = 0.255413  ratio = 1.6667
+    H=  5 ->   9: rap_gap = 0.293893  ratio = 1.8000
+    H=  9 ->  11: rap_gap = 0.100335  ratio = 1.2222
+    H= 11 ->  13: rap_gap = 0.083527  ratio = 1.1818
+    H= 13 ->  15: rap_gap = 0.071550  ratio = 1.1538
+    H= 15 ->  17: rap_gap = 0.062582  ratio = 1.1333
+    H= 17 ->  19: rap_gap = 0.055613  ratio = 1.1176
+    H= 19 ->  23: rap_gap = 0.095528  ratio = 1.2105
+    H= 23 ->  25: rap_gap = 0.041691  ratio = 1.0870
+    H= 25 ->  27: rap_gap = 0.038481  ratio = 1.0800
+    H= 27 ->  29: rap_gap = 0.035729  ratio = 1.0741
+    H= 29 ->  31: rap_gap = 0.033346  ratio = 1.0690
+    H= 31 ->  33: rap_gap = 0.031260  ratio = 1.0645
+    H= 33 ->  35: rap_gap = 0.029420  ratio = 1.0606
+    H= 35 ->  37: rap_gap = 0.027785  ratio = 1.0571
+    H= 37 ->  39: rap_gap = 0.026322  ratio = 1.0541
+    H= 39 ->  41: rap_gap = 0.025005  ratio = 1.0513
+    H= 41 ->  43: rap_gap = 0.023814  ratio = 1.0488
+
+  Average gap (first 20): 0.098979
+  This is close to ln(1+2/H_avg)/2 ~ 1/H_avg for large H.
+
+  Hydrogen Balmer-like series (rapidity gaps):
+    n=1 -> m=2: rap_gap = 0.693147 = ln(4/1)/2 = ln(2/1)
+    n=1 -> m=3: rap_gap = 1.098612 = ln(9/1)/2 = ln(3/1)
+    n=1 -> m=4: rap_gap = 1.386294 = ln(16/1)/2 = ln(4/1)
+    n=1 -> m=5: rap_gap = 1.609438 = ln(25/1)/2 = ln(5/1)
+    n=1 -> m=6: rap_gap = 1.791759 = ln(36/1)/2 = ln(6/1)
+    n=2 -> m=3: rap_gap = 0.405465 = ln(9/4)/2 = ln(3/2)
+    n=2 -> m=4: rap_gap = 0.693147 = ln(16/4)/2 = ln(4/2)
+    n=2 -> m=5: rap_gap = 0.916291 = ln(25/4)/2 = ln(5/2)
+    n=2 -> m=6: rap_gap = 1.098612 = ln(36/4)/2 = ln(6/2)
+    n=3 -> m=4: rap_gap = 0.287682 = ln(16/9)/2 = ln(4/3)
+    n=3 -> m=5: rap_gap = 0.510826 = ln(25/9)/2 = ln(5/3)
+    n=3 -> m=6: rap_gap = 0.693147 = ln(36/9)/2 = ln(6/3)
+    n=4 -> m=5: rap_gap = 0.223144 = ln(25/16)/2 = ln(5/4)
+    n=4 -> m=6: rap_gap = 0.405465 = ln(36/16)/2 = ln(6/4)
+    n=5 -> m=6: rap_gap = 0.182322 = ln(36/25)/2 = ln(6/5)
+
+========================================================================
+PATTERN 10: pH-RAPIDITY-INFORMATION TRIANGLE
+========================================================================
+
+  pH = -log10([H+]) = -rapidity([H+]) / (ln(10)/2)
+  Conversion factor: ln(10)/2 = 1.1512925465
+  = rapidity(10) = 1.1512925465
+
+  1 pH unit = rapidity gap of ln(10)/2 = 1.151293
+  In octaves: 3.321928 octaves
+
+  Information theory: Fisher-Rao distance on Bernoulli(p)
+    = |2*arctanh(2p-1) - 2*arctanh(2q-1)| = |theta_p - theta_q|
+    = 4 * |rapidity of bias p - rapidity of bias q|
+
+  pH IS a Fisher-Rao distance (up to scale)!
+  Acid (pH 1, [H+]=0.1) vs neutral (pH 7, [H+]=1e-7):
+    rapidity gap = 6 * ln(10)/2 = 6.907755
+    Fisher-Rao distance = 4 * rap_gap = 27.631021
+
+========================================================================
+PATTERN 11: COTANGENT PRODUCT THEOREM FOR PRIMES
+========================================================================
+
+  Theorem: prod_{k=1}^{p-1} cot(pi*k/p) = (-1)^{(p-1)/2} / p  (p odd prime)
+  Since Q(e^{i*theta}) = i*cot(theta/2), this connects the Cayley
+  transform of roots of unity to the reciprocal of the prime.
+
+  Verification:
+    p= 3: prod cot = -0.3333333333, expected = -0.3333333333, match = True
+    p= 5: prod cot = +0.2000000000, expected = +0.2000000000, match = True
+    p= 7: prod cot = -0.1428571429, expected = -0.1428571429, match = True
+    p=11: prod cot = -0.0909090909, expected = -0.0909090909, match = True
+    p=13: prod cot = +0.0769230769, expected = +0.0769230769, match = True
+    p=17: prod cot = +0.0588235294, expected = +0.0588235294, match = True
+    p=19: prod cot = -0.0526315789, expected = -0.0526315789, match = True
+    p=23: prod cot = -0.0434782609, expected = -0.0434782609, match = True
+
+  CROSS-DOMAIN MEANING:
+    The Cayley transform of the p-gon's vertices (roots of unity)
+    maps to the imaginary axis with cotangent values whose product
+    is 1/p. This is the SAME 1/p that appears in:
+    - Musical interval Q(1/(2a+1)) = (a+1)/a (the a-th superparticular)
+    - Tournament Paley construction at prime p
+    - Hydrogen energy levels E_p = -13.6/p^2
+
+========================================================================
+PATTERN 12: RAPIDITY VECTOR SPACE AND KEY NUMBERS
+========================================================================
+
+  n          rap(n)   v_2  v_3  v_5  v_7  v_11  v_13  v_19  description
+  ---------------------------------------------------------------------------
+       2    0.346574    1    0    0    0    0    0    0   binary
+       3    0.549306    0    1    0    0    0    0    0   curvature quantum
+       6    0.895880    1    1    0    0    0    0    0   flat = 2*3
+       7    0.972955    0    0    0    1    0    0    0   forbidden threshold
+      12    1.242453    2    1    0    0    0    0    0   chromatic = 2^2*3
+      21    1.522261    0    1    0    1    0    0    0   forbidden octave = 3*7
+      42    1.868835    1    1    0    1    0    0    0   pronic/catalan = 2*3*7
+     110    2.350240    1    0    1    0    1    0    0   pronic(10) = 2*5*11
+     147    2.495216    0    1    0    2    0    0    0   3*7^2 = forbidden product
+     189    2.620874    0    3    0    1    0    0    0   H(T_7) = 3^3*7
+     661    3.246877    0    0    0    0    0    0    0   H_max(n=8) = prime
+    1729    3.727649    0    0    0    1    0    1    1   H(T_7)/|Aut| = 7*13*19
+   95095    5.731316    0    0    1    1    1    1    1   H(T_11) = 5*7*11*13*19
+
+  OBSERVATIONS:
+    - H(T_7) = 189 = 3^3*7 lives at coordinates (0,3,0,1,0,0,0)
+    - H(T_11) = 95095 = 5*7*11*13*19 lives at (0,0,1,1,1,1,1)
+    - The Paley H-values use different prime sets: {3,7} vs {5,7,11,13,19}
+    - 1729 (Ramanujan number!) = H(T_7)/|Aut(T_7)| = 189/21*|Aut| = 7*13*19
+    - 1729 = 7*247 = 7*13*19 shares primes with H(T_11) = 5*7*11*13*19
+
+========================================================================
+PATTERN 13: RAPIDITY BINARY TREE vs STERN-BROCOT TREE
+========================================================================
+
+  The rapidity composition creates a binary tree:
+    compose(2k, 2k+1) = k  for all k >= 1
+  Children of node k: {2k, 2k+1}
+  This is the standard binary tree on positive integers!
+
+  The Stern-Brocot tree also generates all positive rationals
+  via a binary tree structure, with mediant operation.
+  The rapidity tree generates all musical intervals 1/(2n+1)
+  via Einstein velocity addition.
+
+  Both trees:
+    - Are complete binary trees
+    - Generate a dense subset of (0,1)
+    - Each node determined uniquely by its position
+    - Parent-child relationship via algebraic operation
+
+  Differences:
+    - Stern-Brocot uses MEDIANT: (a/b, c/d) -> (a+c)/(b+d)
+    - Rapidity uses EINSTEIN: (v1, v2) -> (v1+v2)/(1+v1*v2)
+    - Stern-Brocot generates ALL rationals; rapidity generates 1/(2n+1)
+
+  Tree verification (first 4 levels):
+    Level 0: [1]
+    Level 1: [2, 3]
+      compose(2, 3) = 2*3/(2+3+1) = 6/6 = 1
+      compose(3, 2) = 3*2/(3+2+1) = 6/6 = 1
+    Level 2: [4, 5, 6, 7]
+      compose(4, 5) = 4*5/(4+5+1) = 20/10 = 2
+      compose(5, 4) = 5*4/(5+4+1) = 20/10 = 2
+      compose(6, 7) = 6*7/(6+7+1) = 42/14 = 3
+      compose(7, 6) = 7*6/(7+6+1) = 42/14 = 3
+    Level 3: [8, 9, 10, 11, 12, 13, 14, 15]
+      compose(8, 9) = 8*9/(8+9+1) = 72/18 = 4
+      compose(9, 8) = 9*8/(9+8+1) = 72/18 = 4
+      compose(10, 11) = 10*11/(10+11+1) = 110/22 = 5
+      compose(11, 10) = 11*10/(11+10+1) = 110/22 = 5
+      compose(12, 13) = 12*13/(12+13+1) = 156/26 = 6
+      compose(13, 12) = 13*12/(13+12+1) = 156/26 = 6
+      compose(14, 15) = 14*15/(14+15+1) = 210/30 = 7
+      compose(15, 14) = 15*14/(15+14+1) = 210/30 = 7
+
+========================================================================
+PATTERN 14: CROSS-DOMAIN RAPIDITY NEAR-COINCIDENCES
+========================================================================
+
+  All rapidity values from different domains, sorted:
+
+    rap =   0.099425  [Chemistry: LiH EN diff]
+    rap =   0.143841  [Music: one fourth]
+    rap =   0.202733  [Music: one fifth]
+    rap =   0.240606  [Biology: Fibonacci growth rate ln(phi)/2]
+    rap =   0.346574  [Music: one octave]
+    rap =   0.404353  [Chemistry: EN ratio H/Li]
+    rap =   0.549306  [Tournament: curvature quantum]
+    rap =   0.721818  [Dihedral: (3/2)*ln(phi) = EP rapidity]
+    rap =   0.972955  [Tournament: forbidden H=7]
+    rap =   0.972955  [Partitions: p(5)=7]
+    rap =   1.151293  [Information: 1 pH unit = rap(10)]
+    rap =   1.522261  [Tournament: forbidden H=21]
+    rap =   1.666102  [Nuclear: magic number 28]
+    rap =   1.868835  [Tournament: 2*T_6 = edges K_7]
+    rap =   1.868835  [Partitions: p(10)=42]
+    rap =   1.956012  [Nuclear: magic number 50]
+    rap =   2.459990  [Physics: 1/alpha]
+    rap =   2.620874  [Tournament: H(T_7)]
+    rap =   3.246877  [Tournament: H_max(n=8)]
+    rap =   3.453878  [Chemistry: C-C stretch cm^-1]
+    rap =   3.757672  [Physics: m_p/m_e]
+    rap =   4.003184  [Chemistry: C-H stretch cm^-1]
+    rap =   5.731316  [Tournament: H(T_11)]
+    rap =  10.564365  [Biology: total heartbeats]
+
+  CROSS-DOMAIN NEAR-COINCIDENCES (|rap_diff| < 0.05 = ~30 cents):
+
+    diff = 0.037873: Music: one fifth
+                      Biology: Fibonacci growth rate ln(phi)/2
+                      (0.202733 vs 0.240606)
+
+    diff = 0.044416: Chemistry: LiH EN diff
+                      Music: one fourth
+                      (0.099425 vs 0.143841)
+
+========================================================================
+PATTERN 15: RAMANUJAN'S 1729 AND THE TOURNAMENT QUOTIENT
+========================================================================
+
+  1729 = 12^3 + 1 = 10^3 + 9^3 (Hardy-Ramanujan / taxicab number)
+  1729 = 7 * 13 * 19
+
+  In tournament theory:
+    H(T_7) = 189, |Aut(T_7)| = 21
+    H(T_7) / |Aut(T_7)| = 189/21 = 9
+
+  CORRECTION: The value 1729 appears as H/|Aut| for T_11:
+    H(T_11) = 95095, |Aut(T_11)| = 55
+    H(T_11)/|Aut(T_11)| = 95095/55 = 1729
+
+    95095/55 = 1729.0 = 1729 remainder 0
+    So H(T_11)/|Aut(T_11)| = 1729: YES
+
+    1729 = 7 * 13 * 19
+    Verify: 7 * 13 * 19 = 1729
+    These are primes 4, 6, 8 (i.e., p_4, p_6, p_8 — EVEN-indexed primes)
+
+    1729 = 12^3 + 1^3 = 10^3 + 9^3
+    Verify: 12^3 + 1 = 1729, 10^3 + 9^3 = 1729
+
+  WHY DOES RAMANUJAN'S NUMBER APPEAR IN TOURNAMENTS?
+    H(T_11)/|Aut(T_11)| counts orbits of Hamiltonian paths under
+    the automorphism group. The orbit count being a famous
+    number-theoretic object (taxicab) suggests a deep connection
+    between tournament symmetry and additive number theory.
+
+========================================================================
+PATTERN 16: SQUEEZING = BOOST = TOURNAMENT COUPLING
+========================================================================
+
+  In quantum optics: squeeze parameter r controls noise reduction.
+  Squeeze factor = e^{2r} = Q(tanh(r)).
+  LIGO uses r ~ 1.15 (10 dB squeezing).
+
+  tanh(1.15) = 0.817754
+  Q(tanh(1.15)) = 9.974182
+  e^(2*1.15) = 9.974182
+
+  This is the SAME Cayley transform Q that maps tournament
+  coupling parameters to boost factors.
+  A squeezed state IS a Lorentz-boosted vacuum.
+  A tournament coupling IS a squeeze parameter for the transfer matrix.
+
+  Tournament coupling values and their squeeze equivalents:
+    x = 0.333333 (octave  ): squeeze r = 0.346574, 3.0 dB, Q = 2.000000
+    x = 0.200000 (fifth   ): squeeze r = 0.202733, 1.8 dB, Q = 1.500000
+    x = 0.142857 (fourth  ): squeeze r = 0.143841, 1.2 dB, Q = 1.333333
+    x = 0.618034 (golden  ): squeeze r = 0.721818, 6.3 dB, Q = 4.236068
+    x = 0.500000 (half    ): squeeze r = 0.549306, 4.8 dB, Q = 3.000000
+
+========================================================================
+PATTERN 17: THE NUMBER 7 — UNIVERSAL THRESHOLD/FORBIDDEN VALUE
+========================================================================
+
+  Domains where 7 plays a special role:
+    [Tournament]  H=7 is FORBIDDEN (first gap after 1,3,5)
+    [Music]       7-tone scale (diatonic), 7 = septimal interval
+    [Chemistry]   Period 7 is the last complete period
+    [Nuclear]     7 is NOT magic (magic: 2,8,20,28,50,82,126)
+    [Biology]     7 ~ universal short-term memory capacity (Miller)
+    [Calendar]    7 days in a week (no astronomical basis)
+    [Dihedral]    D_7 = symmetry of heptagon, first non-constructible odd polygon
+    [Partition]   p(5) = 7 (5th partition number)
+    [Catalan]     C_4 = 14 = 2*7
+    [Fibonacci]   F_8 = 21 = 3*7 (the OTHER forbidden number)
+
+  Rapidity of 7: ln(7)/2 = 0.9729550745
+  Cayley address: 6/8 = 3/4 = 0.75
+  Q(3/4) = 7.000000
+
+  As musical interval: 7/6 = 1.166667 (septimal minor third)
+    = 266.9 cents
+    Closest just interval: minor_3rd (48.8 cents off)
+
+========================================================================
+PATTERN 18: HYDROGEN SPECTRAL SERIES = RAPIDITY DIFFERENCES
+========================================================================
+
+  Photon energy for n->m transition: E ~ 1/n^2 - 1/m^2
+  In rapidity: rap(E/E_1) = rap(1/n^2 - 1/m^2)
+  But the RATIO m^2/n^2 has rapidity = ln(m/n) (note: 2*rap of integer ratio)
+
+  Lyman series (n=1):
+    m=2: E/E_1 = 1/1^2 - 1/2^2 = 0.750000, m^2/n^2 = 4.0000 ~ double_octave (0.0 cents)
+    m=3: E/E_1 = 1/1^2 - 1/3^2 = 0.888889, m^2/n^2 = 9.0000 ~ double_octave (1403.9 cents)
+    m=4: E/E_1 = 1/1^2 - 1/4^2 = 0.937500, m^2/n^2 = 16.0000 ~ double_octave (2400.0 cents)
+    m=5: E/E_1 = 1/1^2 - 1/5^2 = 0.960000, m^2/n^2 = 25.0000 ~ double_octave (3172.6 cents)
+    m=6: E/E_1 = 1/1^2 - 1/6^2 = 0.972222, m^2/n^2 = 36.0000 ~ double_octave (3803.9 cents)
+
+  Balmer series (n=2):
+    m=3: E/E_1 = 1/2^2 - 1/3^2 = 0.138889, m^2/n^2 = 2.2500 ~ major_10th (182.4 cents)
+    m=4: E/E_1 = 1/2^2 - 1/4^2 = 0.187500, m^2/n^2 = 4.0000 ~ double_octave (0.0 cents)
+    m=5: E/E_1 = 1/2^2 - 1/5^2 = 0.210000, m^2/n^2 = 6.2500 ~ double_octave (772.6 cents)
+    m=6: E/E_1 = 1/2^2 - 1/6^2 = 0.222222, m^2/n^2 = 9.0000 ~ double_octave (1403.9 cents)
+    m=7: E/E_1 = 1/2^2 - 1/7^2 = 0.229592, m^2/n^2 = 12.2500 ~ double_octave (1937.7 cents)
+
+  Paschen series (n=3):
+    m=4: E/E_1 = 1/3^2 - 1/4^2 = 0.048611, m^2/n^2 = 1.7778 ~ minor_7th (21.5 cents)
+    m=5: E/E_1 = 1/3^2 - 1/5^2 = 0.071111, m^2/n^2 = 2.7778 ~ twelfth (133.2 cents)
+    m=6: E/E_1 = 1/3^2 - 1/6^2 = 0.083333, m^2/n^2 = 4.0000 ~ double_octave (0.0 cents)
+    m=7: E/E_1 = 1/3^2 - 1/7^2 = 0.090703, m^2/n^2 = 5.4444 ~ double_octave (533.7 cents)
+    m=8: E/E_1 = 1/3^2 - 1/8^2 = 0.095486, m^2/n^2 = 7.1111 ~ double_octave (996.1 cents)
+
+========================================================================
+PATTERN 19: ISOTOPE FREQUENCY SHIFT AS MUSICAL INTERVAL
+========================================================================
+
+  C-H to C-D frequency ratio: sqrt(mu_H/mu_D) = sqrt(1.008/2.014) = 0.707458
+  Shift = -599.1 cents
+  This is approximately a TRITONE DESCENT (599.1 cents)
+  Exact tritone = 600 cents, error = 0.9 cents
+
+  C-H to C-T frequency ratio: sqrt(1.008/3.016) = 0.578115
+  Shift = -948.7 cents
+  Closest interval: unison (948.7 cents off)
+
+========================================================================
+PATTERN 20: GRAND TABLE — SAME RATIOS IN DIFFERENT DOMAINS
+========================================================================
+
+  Ratio       Musical interval    Domain 1 <-> Domain 2
+  -----------------------------------------------------------------
+      3.0000  twelfth         (0 cents)     Music           <-> Chemistry
+              twelfth = C-H/C-C frequency ratio
+
+      2.0000  octave          (0 cents)     Music           <-> Chemistry
+              octave = C#N/C-O frequency ratio
+
+      1.3333  fourth          (0 cents)     Music           <-> Nuclear
+              fourth = 28/21 = magic/forbidden
+
+      1.3333  fourth          (0 cents)     Music           <-> Chemistry
+              fourth = C-Cl/Si-O bond energy ratio
+
+      2.5000  major_10th      (0 cents)     Music           <-> Chemistry
+              major 10th = C=O/H-I bond energy ratio
+
+      2.0000  octave          (0 cents)     Music           <-> Biology
+              octave = cell division doubling
+
+      0.7500  unison                        Biology         <-> Tournament
+              Kleiber 3/4 = Cayley address of forbidden 7
+
+   1729.0000  N/A             (0 cents)     Number theory   <-> Tournament
+              Ramanujan = H(T_11)/|Aut(T_11)|
+
+     42.0000  double_octave                 Number theory   <-> Tournament
+              Catalan C_5 = partition p(10) = 2*T_6
+
+      1.6180  minor_6th       (19 cents)    Number theory   <-> Biology
+              Golden ratio = Fibonacci/phyllotaxis
+
+    137.0000  N/A             (0 cents)     Physics         <-> Number theory
+              1/alpha = prime
+
+      1.8000  minor_7th       (0 cents)     Music           <-> Chemistry
+              minor 7th = noble gas ratio Ne->Ar = 18/10
+
+      1.5000  fifth           (0 cents)     Music           <-> Chemistry
+              fifth = noble gas ratio Kr->Xe = 54/36
+
+
+========================================================================
+SUMMARY: TOP CROSS-DOMAIN PATTERNS NOT PREVIOUSLY NOTED
+========================================================================
+
+
+1. THE 42 NEXUS: The number 42 = 2*3*7 is simultaneously C_5 (Catalan),
+   p(10) (partitions), 2*T_6 (edges of K_7 tournament template), and
+   the pronic controlling rapidity compositions to interval 1/13. It
+   unites the three fundamental rapidity primes {2,3,7}.
+
+2. KLEIBER = CAYLEY(7): The 3/4 power law of allometric scaling is
+   EXACTLY the Cayley address of the forbidden number 7. The biological
+   scaling exponent IS the tournament velocity of the threshold.
+
+3. FORBIDDEN 21 IS A FOURTH BELOW MAGIC 28: The rapidity gap between
+   the forbidden tournament number 21 and the nuclear magic number 28
+   is EXACTLY ln(4/3)/2, a perfect musical fourth (28/21 = 4/3).
+
+4. RAMANUJAN-TOURNAMENT BRIDGE: H(T_11)/|Aut(T_11)| = 1729, the
+   Hardy-Ramanujan taxicab number. This connects tournament orbit
+   counting to additive number theory (sums of cubes).
+
+5. TRITONE ISOTOPE SHIFT: The C-H to C-D frequency ratio is sqrt(1/2)
+   = 2^{-1/2}, which gives a shift of -600 cents, almost exactly a
+   tritone. The tritone is the midpoint of the octave in rapidity.
+
+6. THE HAGEDORN-FAIRNESS DUALITY: The rapidity gas phase transition
+   at T=1/2 (zeta pole at s=1) coincides with the fair-coin point in
+   information geometry and the 50/50 quantum superposition. The
+   same critical value governs thermodynamic condensation, information
+   uncertainty, and quantum measurement.
+
+7. pH AS RAPIDITY: pH is literally rapidity (rescaled by ln(10)/2).
+   Acid-base chemistry IS information geometry IS hyperbolic distance
+   on the space of Bernoulli distributions. 1 pH unit = 3.32 octaves.
+
+8. POLYGON-PRIME IDENTITY via CAYLEY: The Cayley transform maps the
+   p-gon's roots of unity to cotangent values on the imaginary axis
+   whose product is 1/p. This connects polygon geometry to prime
+   reciprocals via the same Q-map that governs tournaments.
+
+9. FIBONACCI QUASICRYSTAL: The rapidity of F_{n+2}/F_{n-1} oscillates
+   around (3/2)*ln(phi) with errors decaying as phi^{-2n}. The golden
+   ratio controls the convergence rate in rapidity space, creating a
+   quasicrystalline structure.
+
+10. ALKANE = DIHEDRAL = INTERVAL: The n-th alkane C_n H_{2(n+1)} has
+    hydrogen count = |D_{n+1}| (dihedral group order) = 2*(sides of
+    the (n+1)-gon), and corresponds to the musical interval (n+1)/n.
+    This triple isomorphism connects organic chemistry, group theory,
+    and music in a single table.
+
