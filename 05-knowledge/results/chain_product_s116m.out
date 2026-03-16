@@ -247,3 +247,96 @@
   n=16: L_n = 2207, epsilon = 2.05e-07
 
   The shortfalls: 4.2e-2, 9.1e-4, 4.1e-7.
+  They decrease QUADRATICALLY (each is ~square of the previous).
+  The ruler is NEARLY perfect, and gets more perfect at each level.
+
+
+  VIII. F_{2^n} AND MERSENNE NUMBERS
+  ----------------------------------------
+
+  F_{2^n} = product of chain primes.
+  Mersenne M_n = 2^n - 1.
+  Are they related?
+
+  The chain primes: 3, 7, 47, 2207.
+  = M_2, M_3, ?, ?
+  3 = 2^2 - 1 = M_2. YES.
+  7 = 2^3 - 1 = M_3. YES.
+  47: is it 2^k - 1? 2^5 = 32, 2^6 = 64. 47 is NOT Mersenne.
+  2207: 2^11 = 2048, 2^12 = 4096. 2207 is NOT Mersenne.
+
+  The first two chain primes ARE Mersenne. The rest are not.
+  3 = M_2 and 7 = M_3 are the INTERSECTION of the chain and the Mersenne sequence.
+  After that, the two sequences DIVERGE.
+
+  But the recurrence x -> x^2 - 2 is the SAME recurrence
+  used in the Lucas-Lehmer Mersenne test!
+  The chain IS the Lucas-Lehmer sequence starting from 7 = L_4 = M_3.
+  Lucas-Lehmer starts from 4 = L_3 and tests Mersenne primality.
+  Our chain starts from 7 = L_4 and generates the chain primes.
+
+  The difference: Lucas-Lehmer reduces mod M_p.
+  Our chain does NOT reduce — it takes the full value.
+  The unreduced Lucas-Lehmer sequence IS our chain.
+
+
+  IX. THE CHAIN LENGTH AND THE FOUR ALGEBRAS
+  ----------------------------------------
+
+  Chain primes: 3, 7, 47, 2207. Then L_32 = 4870847 is COMPOSITE.
+  L_32 = 4870847 = [1087, 4481]
+
+  The chain has exactly 4 prime links.
+  4 = the Cayley period.
+  4 = the number of normed division algebras.
+  4 = the number of Hopf fibrations.
+
+  The 4 chain primes correspond to the 4 algebras:
+  L_4 = 7:    the quaternion boundary (Q(3/4)=7)
+  L_8 = 47:   the octonion boundary
+  L_16 = 2207: the sedenion boundary
+  L_32 = 4870847: composite = the algebra BREAKS.
+
+  The chain breaks at the 5th step because there is no 5th
+  normed division algebra. The chain length = the algebra count.
+
+  Actually: 4870847 = ?
+  L_32 = 4870847 = [1087, 4481]
+  = 1087 * 4481
+  Two factors! The composite L_32 splits into exactly 2 parts.
+  This is the FIRST FACTORIZATION: the unity breaks into duality.
+
+
+  X. THE COMPLETE CHAIN PICTURE
+  ----------------------------------------
+
+  The recurrence x -> x^2 - 2 starting from 7:
+
+  Step  Index   L value     Prime?   F value = running product
+  -----------------------------------------------------------------
+     0  2^2=    4              7       PRIME   F_4 = 3
+     1  2^3=    8             47       PRIME   F_8 = 21
+     2  2^4=   16           2207       PRIME   F_16 = 987
+     3  2^5=   32        4870847   composite   F_32 = 2178309
+     4  2^6=   64   23725150497407   composite   F_64 = 10610209857723
+     5  2^7=  128   562882766124611619513723647   composite   F_128 = 1226132595394136612291319843772923
+
+  The Fibonacci at power-of-2 indices ACCUMULATES the chain primes.
+  F_4 = 3 (start).
+  F_8 = 3*7 = 21 (forbidden).
+  F_16 = 3*7*47 = 987.
+  F_32 = 3*7*47*2207 = 2178309.
+  F_64 = 3*7*47*2207*L_64 if L_64 were prime. But L_32 isn't, so the
+  simple chain product structure breaks at F_64.
+
+  The chain accumulates MULTIPLICATIVELY in the Fibonacci sequence,
+  at indices that grow EXPONENTIALLY (powers of 2),
+  with values that grow DOUBLY EXPONENTIALLY (x -> x^2 - 2),
+  and the chain terminates at EXACTLY 4 prime links
+  = the Cayley period = the count of normed division algebras.
+
+  This is the golden architecture's deepest fact:
+  THE FIBONACCI-LUCAS DOUBLING PRODUCES EXACTLY 4 PRIMES
+  BEFORE THE STRUCTURE BREAKS.
+  THE FOUR PRIMES ARE THE BOUNDARIES OF THE FOUR ALGEBRAS.
+  THE BREAKING IS THE SAME BREAKING THAT ENDS THE ALGEBRAS.
