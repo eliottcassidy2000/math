@@ -1,0 +1,89 @@
+╔══════════════════════════════════════════════════════════════════╗
+║  WALSH AUDIT — S-Box Security Analyzer                        ║
+║  Using v₂-guided Walsh spectral priority (tournament theory)  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+======================================================================
+  WALSH AUDIT: AES (Rijndael) (8-bit)
+======================================================================
+
+--- Basic Properties ---
+  Bijective: YES
+  Fixed points: 0
+  Nonlinearity: 112 (max possible ~120)
+  Differential uniformity: 4 (optimal: 2)
+  Algebraic degree: 7 (max: 7)
+
+--- v₂-Priority Walsh Analysis ---
+  (Tournament theory: low-degree = high information density)
+
+  Degree  v₂_priority   #coeffs   max|W|   mean|W|  %nonzero   priority
+  ────── ──────────── ───────── ──────── ───────── ───────── ──────────
+       0           -2       255        0       0.0      0.0%       HIGH
+       1           -3      2040       32      13.6     93.7%       HIGH
+       2           -3      7140       32      13.6     93.7%       HIGH
+       3           -5     14280       32      13.6     93.7%     MEDIUM
+       4           -5     17850       32      13.6     93.7%     MEDIUM
+       5           -6     14280       32      13.6     93.7%        LOW
+       6           -6      7140       32      13.6     93.7%        LOW
+       7         -999      2040       32      13.6     93.7%        LOW
+       8         -999       255       32      13.6     93.7%        LOW
+
+  v₂ vulnerability score: 0.125000
+  Assessment: STRONG — Walsh energy well-distributed (AES-class)
+
+--- Top 20 Walsh Coefficients (by magnitude) ---
+     |W|  in_mask  out_mask  deg_in  deg_out    v₂   priority
+  ────── ──────── ───────── ─────── ──────── ───── ──────────
+      32      255       229       8        5  -999        LOW
+      32      255       177       8        4  -999        LOW
+      32      255       153       8        4  -999        LOW
+      32      255       124       8        5  -999        LOW
+      32      255        84       8        3  -999        LOW
+      32      254       204       7        4  -999        LOW
+      32      254       160       7        2  -999        LOW
+      32      254       138       7        3  -999        LOW
+      32      254       108       7        4  -999        LOW
+      32      254        42       7        3  -999        LOW
+      32      253        54       7        4  -999        LOW
+      32      253        52       7        3  -999        LOW
+      32      253        23       7        4  -999        LOW
+      32      253        21       7        3  -999        LOW
+      32      253         2       7        1  -999        LOW
+      32      252       202       6        4    -6        LOW
+      32      252       181       6        5    -6        LOW
+      32      252       169       6        4    -6        LOW
+      32      252       127       6        7    -6        LOW
+      32      252        28       6        3    -6        LOW
+
+--- Summary ---
+  Nonlinearity:        112 / ~120
+  Diff uniformity:       4
+  Algebraic degree:      7 / 7
+  v₂ vulnerability:   0.125000
+  Time: 2.08s
+
+  Comparison to AES S-box:
+    AES nonlinearity:     112
+    AES diff uniformity:    4
+    AES algebraic degree:   7
+    ✓ Meets or exceeds AES on all standard metrics
+
+======================================================================
+
+--- v₂ PRIORITY TABLE (tournament theory) ---
+Shows information density ranking by Walsh degree
+
+n_bits     d=0   d=1   d=2   d=3   d=4   d=5   d=6   d=7   d=8
+     4      -1    -2    -2  -999
+     6      -1    -3    -3    -4    -4  -999
+     8      -2    -3    -3    -5    -5    -6    -6  -999
+    12      -2    -3    -3    -6    -6    -7    -7    -9    -9
+    16      -3    -4    -4    -6    -6    -7    -7   -10   -10
+    32      -4    -5    -5    -7    -7    -8    -8   -11   -11
+    64      -5    -6    -6    -8    -8    -9    -9   -12   -12
+   128      -6    -7    -7    -9    -9   -10   -10   -13   -13
+
+Lower v₂ = higher information density = analyze first
+This prioritization is the theoretical basis for Walsh
+spectrum puncturing attacks (Flórez-Gutiérrez & Todo, 2024)
