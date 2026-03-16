@@ -1,0 +1,380 @@
+
+  THE COLLATZ CONJECTURE IN RAPIDITY SPACE
+
+======================================================================
+
+  I. RAPIDITY IS HALF THE LOG
+  --------------------------------------------------
+
+  Cayley address: x_n = (n-1)/(n+1) = Q^{-1}(n)
+  Rapidity: rho(n) = arctanh(x_n) = (1/2)*ln(n)
+
+  Proof: arctanh((n-1)/(n+1)) = (1/2)*ln((1+(n-1)/(n+1))/(1-(n-1)/(n+1)))
+       = (1/2)*ln((2n/(n+1)) / (2/(n+1)))
+       = (1/2)*ln(n)
+
+  n=   2: x_n = 0.333333, rho = 0.346574, ln(n)/2 = 0.346574, match: True
+  n=   3: x_n = 0.500000, rho = 0.549306, ln(n)/2 = 0.549306, match: True
+  n=   7: x_n = 0.750000, rho = 0.972955, ln(n)/2 = 0.972955, match: True
+  n=  42: x_n = 0.953488, rho = 1.868835, ln(n)/2 = 1.868835, match: True
+  n= 100: x_n = 0.980198, rho = 2.302585, ln(n)/2 = 2.302585, match: True
+
+  II. COLLATZ IN RAPIDITY SPACE
+  --------------------------------------------------
+
+  The rapidity changes:
+  Even step n -> n/2: rho -> rho - ln(2)/2 = rho - 0.346574
+  Odd step n -> 3n+1: rho -> (1/2)*ln(3n+1)
+    For large n: ~ rho + ln(3)/2 = rho + 0.549306
+    Correction: (1/2)*ln(3n+1) = (1/2)*ln(3) + (1/2)*ln(n+1/3)
+              = (1/2)*ln(3) + (1/2)*ln(n) + (1/2)*ln(1+1/(3n))
+              ~ rho + 0.549306 + O(1/n)
+
+  After an odd step, the result 3n+1 is always EVEN.
+  So an odd step is ALWAYS followed by at least one even step.
+  Combined 'odd + k halvings': rho -> rho + ln(3)/2 - k*ln(2)/2
+  = rho + (ln(3) - k*ln(2))/2
+
+  THE 2-ADIC TREE OF COLLATZ:
+
+  v_2(3n+1) depends on n mod 2^k:
+    n = 3 mod 4: v_2(3n+1) = 1
+    n = 1 mod 8: v_2(3n+1) = 2
+    n = 13 mod 16: v_2(3n+1) = 3
+    n = 5 mod 32: v_2(3n+1) = 4
+    n = 53 mod 64: v_2(3n+1) = 5
+    n = 21 mod 128: v_2(3n+1) = 6
+
+  III. THE RAPIDITY ORBIT
+  --------------------------------------------------
+
+  n = 27: orbit length = 112, max = 9232
+    Rapidity: 1.648, 2.203, 1.857, 2.410, 2.064, 1.717, 2.272, 1.925, 2.478, 2.131, 2.683, 2.336, 2.887, 2.541, 3.091, ...
+    Start rho = 1.6479, peak rho = 4.5652, end rho = 0.0000 (=0 at n=1)
+    Odd steps: 41, Even steps: 70, ratio E/O = 1.7073
+    Total rapidity change: -1.6479 = 41*ln(3)/2 - 70*ln(2)/2 + corrections
+    Predicted (no corrections): -1.7386, actual: -1.6479
+
+  n = 42: orbit length = 9, max = 64
+    Rapidity: 1.869, 1.522, 2.079, 1.733, 1.386, 1.040, 0.693, 0.347, 0.000, ...
+    Start rho = 1.8688, peak rho = 2.0794, end rho = 0.0000 (=0 at n=1)
+    Odd steps: 1, Even steps: 7, ratio E/O = 7.0000
+    Total rapidity change: -1.8688 = 1*ln(3)/2 - 7*ln(2)/2 + corrections
+    Predicted (no corrections): -1.8767, actual: -1.8688
+
+  n = 97: orbit length = 119, max = 9232
+    Rapidity: 2.287, 2.838, 2.492, 2.145, 2.697, 2.350, 2.004, 2.556, 2.209, 2.761, 2.414, 2.965, 2.618, 2.272, 1.925, ...
+    Start rho = 2.2874, peak rho = 4.5652, end rho = 0.0000 (=0 at n=1)
+    Odd steps: 43, Even steps: 75, ratio E/O = 1.7442
+    Total rapidity change: -2.2874 = 43*ln(3)/2 - 75*ln(2)/2 + corrections
+    Predicted (no corrections): -2.3729, actual: -2.2874
+
+  n = 871: orbit length = 179, max = 190996
+    Rapidity: 3.385, 3.934, 3.588, 4.137, 3.791, 4.340, 3.993, 3.647, 4.196, 3.850, 4.399, 4.053, 4.602, 4.255, 4.805, ...
+    Start rho = 3.3848, peak rho = 6.0800, end rho = 0.0000 (=0 at n=1)
+    Odd steps: 65, Even steps: 113, ratio E/O = 1.7385
+    Total rapidity change: -3.3848 = 65*ln(3)/2 - 113*ln(2)/2 + corrections
+    Predicted (no corrections): -3.4579, actual: -3.3848
+
+  IV. THE EVEN/ODD RATIO AND ln(3)/ln(2)
+  --------------------------------------------------
+
+  For rapidity to decrease to 0 (reaching n=1):
+  Need: odd_steps * ln(3)/2 - even_steps * ln(2)/2 < -rho_0
+  => even/odd > ln(3)/ln(2) = 1.584963
+  This is the CRITICAL RATIO.
+
+  ln(3)/ln(2) = 1.5849625007
+  Continued fraction: [1; 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, ...]
+  Convergents: 1, 2, 3/2, 8/5, 19/12, 65/41, 84/53, ...
+
+  Even/Odd ratio for first N steps (starting from n=27):
+    After   20 steps: E/O = 1.222222 (target: 1.584963, diff: -0.362740)
+    After   40 steps: E/O = 1.352941 (target: 1.584963, diff: -0.232021)
+    After   60 steps: E/O = 1.400000 (target: 1.584963, diff: -0.184963)
+    After   80 steps: E/O = 1.424242 (target: 1.584963, diff: -0.160720)
+    After  100 steps: E/O = 1.564103 (target: 1.584963, diff: -0.020860)
+
+  Large-scale E/O ratios:
+  Over all odd n in [3, 10000]: E/O = 1.97841342
+  ln(3)/ln(2) = 1.58496250
+  Difference: +0.39345092
+
+  V. THE 2-ADIC ENCODING: COLLATZ AS A PATH IN Z_2
+  --------------------------------------------------
+
+  Parity sequences (0=even, 1=odd) for small odd n:
+  n=  1: 1  (transitions: 0)
+  n=  3: 10100001  (transitions: 4)
+  n=  5: 100001  (transitions: 2)
+  n=  7: 10101001000100001  (transitions: 10)
+  n=  9: 10010101001000100001  (transitions: 12)
+  n= 11: 101001000100001  (transitions: 8)
+  n= 13: 1000100001  (transitions: 4)
+  n= 15: 101010100000100001  (transitions: 10)
+  n= 17: 1001000100001  (transitions: 6)
+  n= 19: 101000101001000100001  (transitions: 12)
+  n= 21: 10000001  (transitions: 2)
+  n= 27: 101001010101010010010100  (transitions: 19)
+
+  Compressed (odd-only) orbits:
+  n=  3: 3 -> 5 -> 1
+  n=  7: 7 -> 11 -> 17 -> 13 -> 5 -> 1
+  n= 27: 27 -> 41 -> 31 -> 47 -> 71 -> 107 -> 161 -> 121 -> 91 -> 137 -> 103 -> 155...
+  n= 41: 41 -> 31 -> 47 -> 71 -> 107 -> 161 -> 121 -> 91 -> 137 -> 103 -> 155 -> 233...
+  n= 97: 97 -> 73 -> 55 -> 83 -> 125 -> 47 -> 71 -> 107 -> 161 -> 121 -> 91 -> 137...
+
+  Shortcut map S(n) = (3n+1)/2^v (odd -> odd):
+  n mod 4 = 1: 3n+1 = 0 mod 4, so v >= 2.
+  n mod 4 = 3: 3n+1 = 2 mod 4, so v = 1 exactly.
+
+  S(  1) =     1  (v_2 = 2, DOWN, n mod 4 = 1, n mod 8 = 1)
+  S(  3) =     5  (v_2 = 1, UP  , n mod 4 = 3, n mod 8 = 3)
+  S(  5) =     1  (v_2 = 4, DOWN, n mod 4 = 1, n mod 8 = 5)
+  S(  7) =    11  (v_2 = 1, UP  , n mod 4 = 3, n mod 8 = 7)
+  S(  9) =     7  (v_2 = 2, DOWN, n mod 4 = 1, n mod 8 = 1)
+  S( 11) =    17  (v_2 = 1, UP  , n mod 4 = 3, n mod 8 = 3)
+  S( 13) =     5  (v_2 = 3, DOWN, n mod 4 = 1, n mod 8 = 5)
+  S( 15) =    23  (v_2 = 1, UP  , n mod 4 = 3, n mod 8 = 7)
+  S( 17) =    13  (v_2 = 2, DOWN, n mod 4 = 1, n mod 8 = 1)
+  S( 19) =    29  (v_2 = 1, UP  , n mod 4 = 3, n mod 8 = 3)
+  S( 21) =     1  (v_2 = 6, DOWN, n mod 4 = 1, n mod 8 = 5)
+  S( 23) =    35  (v_2 = 1, UP  , n mod 4 = 3, n mod 8 = 7)
+  S( 25) =    19  (v_2 = 2, DOWN, n mod 4 = 1, n mod 8 = 1)
+  S( 27) =    41  (v_2 = 1, UP  , n mod 4 = 3, n mod 8 = 3)
+  S( 29) =    11  (v_2 = 3, DOWN, n mod 4 = 1, n mod 8 = 5)
+  S( 31) =    47  (v_2 = 1, UP  , n mod 4 = 3, n mod 8 = 7)
+  S( 33) =    25  (v_2 = 2, DOWN, n mod 4 = 1, n mod 8 = 1)
+  S( 35) =    53  (v_2 = 1, UP  , n mod 4 = 3, n mod 8 = 3)
+  S( 37) =     7  (v_2 = 4, DOWN, n mod 4 = 1, n mod 8 = 5)
+  S( 39) =    59  (v_2 = 1, UP  , n mod 4 = 3, n mod 8 = 7)
+
+  VI. THE HIGHER-DIMENSIONAL ENCODING
+  --------------------------------------------------
+
+  The Collatz orbit of n encodes a point in the infinite-dimensional space
+  Z_2 x Z_3 x Z_5 x ... (the profinite completion of Z).
+
+  But the DYNAMICS depend only on the 2-adic and 3-adic components:
+  - The 2-adic part determines the halving depth (v_2 structure)
+  - The 3-adic part tracks how 3n+1 interacts with powers of 3
+
+  v_2 and v_3 traces for n=27 orbit:
+  step       n  v_2  v_3       rho  n mod 12
+     0      27    0    3    1.6479         3
+     1      82    1    0    2.2034        10
+     2      41    0    0    1.8568         5
+     3     124    2    0    2.4101         4
+     4      62    1    0    2.0636         2
+     5      31    0    0    1.7170         7
+     6      94    1    0    2.2716        10
+     7      47    0    0    1.9251        11
+     8     142    1    0    2.4779        10
+     9      71    0    0    2.1313        11
+    10     214    1    0    2.6830        10
+    11     107    0    0    2.3364        11
+    12     322    1    0    2.8873        10
+    13     161    0    0    2.5407         5
+    14     484    2    0    3.0910         4
+    15     242    1    0    2.7445         2
+    16     121    0    0    2.3979         1
+    17     364    2    0    2.9486         4
+    18     182    1    0    2.6020         2
+    19      91    0    0    2.2554         7
+    20     274    1    0    2.8066        10
+    21     137    0    0    2.4600         5
+    22     412    2    0    3.0105         4
+    23     206    1    0    2.6639         2
+    24     103    0    0    2.3174         7
+    25     310    1    0    2.8683        10
+    26     155    0    0    2.5217        11
+    27     466    1    0    3.0721        10
+    28     233    0    0    2.7255         5
+    29     700    2    0    3.2755         4
+  ... (112 total steps)
+
+  VII. THE THREE PRIMES {2, 3, 5} AND COLLATZ
+  --------------------------------------------------
+
+  The Collatz map involves exactly two primes: 2 (halving) and 3 (tripling).
+  These are the first two Hurwitz primes!
+
+  In our framework:
+  - 2 = the doubler (formal group evaluation point)
+  - 3 = the first Cayley pair of 7 (the forbidden prime)
+  - 3n+1 = 3(n + 1/3) = 3(n + Q^{-1}(2))
+  The odd step ADDS the Cayley address of 2, then MULTIPLIES by 3.
+
+  The VS chain diverges when 5 enters (via 4+1=5).
+  The Collatz map never involves 5 directly.
+  But the ORBIT passes through multiples of 5:
+  Fraction of orbit values divisible by 5: 182425/859666 = 0.212205
+  Expected (random): 1/5 = 0.200000
+  Ratio: 1.061023
+
+  VIII. COLLATZ AND THE FORMAL GROUP
+  --------------------------------------------------
+
+  In the Cayley formal group F(x,y) = (x+y)/(1+xy):
+  [n](x) = Q^{-1}(Q(x)^n)
+
+  The Collatz even step n -> n/2:
+  In formal group: 'divide by 2' = apply the INVERSE of [2].
+  [2](x) = 2x/(1+x^2). Inverse: solve 2y/(1+y^2) = x.
+  y^2*x - 2y + x = 0. y = (2 +/- sqrt(4-4x^2))/(2x) = (1 +/- sqrt(1-x^2))/x
+  The formal inverse exists only as a MULTIVALUED function.
+  This is the formal group saying: HALVING IS NOT A HOMOMORPHISM.
+
+  The Collatz odd step n -> 3n+1:
+  In Cayley addresses: x_{3n+1} = (3n)/(3n+2) = 3n/(3n+2)
+  While x_n = (n-1)/(n+1).
+  Relationship: x_{3n+1} = (3*((n+1)*x_n/(1+x_n^{-1}))... complex.
+  The odd step is NOT a formal group operation.
+
+  KEY INSIGHT: Collatz is not a formal group map.
+  It mixes MULTIPLICATION (3n) with ADDITION (+1),
+  but the formal group only sees one operation at a time.
+  The +1 is the PERTURBATION that makes Collatz non-algebraic.
+
+  IX. THE DRIFT IN RAPIDITY SPACE
+  --------------------------------------------------
+
+  Distribution of v_2(3n+1) for odd n in [1, 100000):
+    v_2 = 1:  25000/50000 = 0.500000  (expected: 0.500000)  drift = +0.202733
+    v_2 = 2:  12500/50000 = 0.250000  (expected: 0.250000)  drift = -0.143841
+    v_2 = 3:   6250/50000 = 0.125000  (expected: 0.125000)  drift = -0.490415
+    v_2 = 4:   3125/50000 = 0.062500  (expected: 0.062500)  drift = -0.836988
+    v_2 = 5:   1562/50000 = 0.031240  (expected: 0.031250)  drift = -1.183562
+    v_2 = 6:    782/50000 = 0.015640  (expected: 0.015625)  drift = -1.530135
+    v_2 = 7:    390/50000 = 0.007800  (expected: 0.007812)  drift = -1.876709
+    v_2 = 8:    196/50000 = 0.003920  (expected: 0.003906)  drift = -2.223283
+    v_2 = 9:     97/50000 = 0.001940  (expected: 0.001953)  drift = -2.569856
+    v_2 = 10:     49/50000 = 0.000980  (expected: 0.000977)  drift = -2.916430
+    v_2 = 11:     24/50000 = 0.000480  (expected: 0.000488)  drift = -3.263003
+    v_2 = 12:     13/50000 = 0.000260  (expected: 0.000244)  drift = -3.609577
+    v_2 = 13:      6/50000 = 0.000120  (expected: 0.000122)  drift = -3.956151
+    v_2 = 14:      3/50000 = 0.000060  (expected: 0.000061)  drift = -4.302724
+    v_2 = 15:      1/50000 = 0.000020  (expected: 0.000031)  drift = -4.649298
+    v_2 = 16:      1/50000 = 0.000020  (expected: 0.000015)  drift = -4.995871
+    v_2 = 18:      1/50000 = 0.000020  (expected: 0.000004)  drift = -5.689018
+
+  Expected drift per odd step: -0.14385490
+  Theoretical: sum_{k=1}^inf (1/2^k) * (ln(3) - k*ln(2))/2
+  = (ln(3)/2) * sum(1/2^k) - (ln(2)/2) * sum(k/2^k)
+  = (ln(3)/2) * 1 - (ln(2)/2) * 2 = ln(3)/2 - ln(2)
+  = -0.14384104
+
+  Average drift per odd step = ln(3)/2 - ln(2) = (ln(3) - 2*ln(2))/2
+  = ln(3/4)/2 = -0.14384104
+  This is NEGATIVE: orbits drift DOWNWARD in rapidity on average.
+
+  X. THE STOPPING TIME AND RAPIDITY RETURN
+  --------------------------------------------------
+
+  Stopping times vs rapidity for odd n up to 10000:
+       n    rho(n)   stop_time   total_time   rho/|drift|
+       3    0.5493           6            7          3.82
+       7    0.9730          11           16          6.76
+      27    1.6479          96          111         11.46
+      97    2.2874           3          118         15.90
+     255    2.7706          21           47         19.26
+     871    3.3848          57          178         23.53
+    2463    3.9046          34          208         27.15
+    4591    4.2159         106          170         29.31
+    6171    4.3638          94          261         30.34
+    8191    4.5054          70          158         31.32
+    9663    4.5880          88          184         31.90
+
+  XI. THE 2-ADIC TREE: COLLATZ ENCODES Z_2
+  --------------------------------------------------
+
+  Each odd n defines a path in the binary tree by its mod-2^k behavior.
+  The Collatz dynamics depend on n mod 2^k for increasing k.
+
+  n = 27 = 11011 in binary. Residues:
+    mod 2^1 = 1: odd -> apply 3n+1
+    mod 2^2 = 3: 3*3+1 = 10, v_2 = 1
+    mod 2^3 = 3: 3*3+1 = 10, v_2 = 1, next odd = 5 mod 2^3
+    mod 2^4 = 11: 3*11+1 = 34, v_2 = 1, next odd = 17 mod 2^4
+    mod 2^5 = 27: 3*27+1 = 82, v_2 = 1, next odd = 41 mod 2^5
+    mod 2^6 = 27: 3*27+1 = 82, v_2 = 1, next odd = 41 mod 2^6
+    mod 2^7 = 27: 3*27+1 = 82, v_2 = 1, next odd = 41 mod 2^7
+
+  The TREE ADDRESS of each n (v_2 sequence of shortcut map):
+  n=  1: v_2 sequence = []
+  n=  3: v_2 sequence = [1, 4]
+  n=  5: v_2 sequence = [4]
+  n=  7: v_2 sequence = [1, 1, 2, 3, 4]
+  n=  9: v_2 sequence = [2, 1, 1, 2, 3, 4]
+  n= 11: v_2 sequence = [1, 2, 3, 4]
+  n= 13: v_2 sequence = [3, 4]
+  n= 15: v_2 sequence = [1, 1, 1, 5, 4]
+  n= 27: v_2 sequence = [1, 2, 1, 1, 1, 1, 2, 2]
+  n= 41: v_2 sequence = [2, 1, 1, 1, 1, 2, 2, 1]
+
+  These v_2 sequences ARE coordinates in the 'higher-dimensional space'
+  that the Collatz conjecture encodes. Each sequence is a path through
+  the tree of possible halvings, indexed by the 2-adic expansion of n.
+
+  XII. THE CONNECTION: VS CHAIN AND COLLATZ
+  --------------------------------------------------
+
+  VS chain: n -> prod{p : (p-1)|n}
+  Collatz:  n -> n/2 or 3n+1
+
+  Both are iterated arithmetic maps with attractors:
+  - VS has attractor 1806 (density 0.64)
+  - Collatz has attractor {1,2,4} (conjectured density 1.0)
+
+  The VS basin: ALL odd n converge (vs_prod(odd) = 2).
+  The Collatz basin: ALL n converge (conjectured).
+  Both are controlled by 2-adic structure:
+  - VS diverges when 4|n (prime 5 enters)
+  - Collatz behavior depends on v_2(3n+1)
+
+  The formal group connection:
+  - VS uses primes p with (p-1)|n: divisibility of TOTIENT
+  - Collatz uses v_2(3n+1): powers of 2 in an AFFINE image
+  - Both probe the multiplicative structure of n through the prime 2
+
+  42 appears in both:
+  - VS: 42 is the bridge to the fixed point 1806
+  - Collatz: 42 -> 21 -> 64 -> 32 -> 16 -> 8 -> 4 -> 2 -> 1
+    Orbit: 42 -> 21 -> 64 -> 32 -> 16 -> 8 -> 4 -> 2 -> 1
+    Steps: 8. Via 21 -> 64 = 2^6 (fast descent).
+
+  42's rapidity journey:
+    step 0: n=  42, rho=+1.8688
+    step 1: n=  21, rho=+1.5223  (delta = -0.3466)
+    step 2: n=  64, rho=+2.0794  (delta = +0.5572)
+    step 3: n=  32, rho=+1.7329  (delta = -0.3466)
+    step 4: n=  16, rho=+1.3863  (delta = -0.3466)
+    step 5: n=   8, rho=+1.0397  (delta = -0.3466)
+    step 6: n=   4, rho=+0.6931  (delta = -0.3466)
+    step 7: n=   2, rho=+0.3466  (delta = -0.3466)
+    step 8: n=   1, rho=+0.0000  (delta = -0.3466)
+
+  XIII. SYNTHESIS: THE THREE LAYERS
+  --------------------------------------------------
+
+  Layer 1: RAPIDITY (the 'height' coordinate)
+    rho(n) = (1/2)*ln(n)
+    Collatz has drift ln(3/4)/2 = -0.144 per odd step
+    Reaching n=1 means reaching rho=0
+
+  Layer 2: THE 2-ADIC TREE (the 'horizontal' coordinates)
+    n mod 2^k for k=1,2,3,... determines the halving depth
+    v_2 sequence = coordinates in the infinite-dimensional cube {1,2,3,...}^N
+    The 'higher-dimensional space' is Z_2 (2-adic integers)
+
+  Layer 3: THE FORMAL GROUP (the algebraic structure)
+    F(x,y) = (x+y)/(1+xy), log_F = arctanh = rapidity
+    Height infinity at p=2: the 2-adic structure is maximally degenerate
+    Collatz is NOT a formal group map (the +1 breaks homomorphism)
+    But rapidity = log_F is the right coordinate for tracking orbits
+
+  The Collatz conjecture lives in the tension between:
+  - The formal group (algebraic, multiplicative, structured)
+  - The +1 perturbation (arithmetic, additive, chaotic)
+  The conjecture says: the algebraic drift always wins.
+
