@@ -1,0 +1,522 @@
+**********************************************************************
+* FIBONACCI-PRIME PRACTICAL APPLICATIONS
+* kind-pasteur-2026-03-16-S116l
+**********************************************************************
+
+======================================================================
+TOOL 1: FIBONACCI PRIMALITY WITNESS
+======================================================================
+
+Theory: For prime p != 2,5: p | F_{p - (p/5)}
+  where (p/5) is +1 if p = 1,4 mod 5, else -1.
+
+Numbers 2..10000:
+  Actual primes:      1229
+  Fib-PRP positives:  1238
+  False positives (Fibonacci pseudoprimes): 9
+  First 20 Fibonacci pseudoprimes: [323, 377, 1891, 3827, 4181, 5777, 6601, 6721, 8149]
+  False negatives:    0
+
+Speed (2..10000):
+  Fibonacci PRP test: 0.0132 sec
+  Trial division:     0.0019 sec
+  Ratio (Fib/Trial):  6.92x
+
+Large number test (n = 10^15 + 37, which is prime):
+  Fib PRP: True in 0.000031 sec
+  Trial:   True in 0.478081 sec
+  Speedup: 15307.0x
+
+
+======================================================================
+TOOL 2: LUCAS PSEUDOPRIME TEST
+======================================================================
+
+Theory: L_p = 1 mod p for odd prime p.
+A Lucas pseudoprime is composite n with L_n = 1 mod n.
+
+Verification for small primes:
+  L_2 = 3, L_2 mod 2 = 1
+  L_3 = 4, L_3 mod 3 = 1
+  L_5 = 11, L_5 mod 5 = 1
+  L_7 = 29, L_7 mod 7 = 1
+  L_11 = 199, L_11 mod 11 = 1
+  L_13 = 521, L_13 mod 13 = 1
+  L_17 = 3571, L_17 mod 17 = 1
+  L_19 = 9349, L_19 mod 19 = 1
+  L_23 = 64079, L_23 mod 23 = 1
+  L_29 = 1149851, L_29 mod 29 = 1
+  L_31 = 3010349, L_31 mod 31 = 1
+
+Searching for Lucas pseudoprimes (composite n with L_n = 1 mod n)...
+  Composites tested up to 100000: 90407
+  Lucas pseudoprimes found: 25
+  List: [705, 2465, 2737, 3745, 4181, 5777, 6721, 10877, 13201, 15251, 24465, 29281, 34561, 35785, 51841, 54705, 64079, 64681, 67861, 68251, 75077, 80189, 90061, 96049, 97921]
+
+Comparison to Fermat pseudoprimes (base 2) up to 100000:
+  Fermat pseudoprimes: 78
+  First 15: [341, 561, 645, 1105, 1387, 1729, 1905, 2047, 2465, 2701, 2821, 3277, 4033, 4369, 4371]
+  Lucas pseudoprimes:  25
+  Ratio Fermat/Lucas:  3.1x
+
+Extended search up to 500000 for Lucas pseudoprimes...
+  FOUND: 100065 (factors: 3 x 33355)
+  FOUND: 100127 (factors: 223 x 449)
+  FOUND: 105281 (factors: 11 x 9571)
+  FOUND: 113573 (factors: 137 x 829)
+  FOUND: 118441 (factors: 83 x 1427)
+  FOUND: 146611 (factors: 271 x 541)
+  FOUND: 161027 (factors: 283 x 569)
+  FOUND: 162133 (factors: 73 x 2221)
+  FOUND: 163081 (factors: 17 x 9593)
+  FOUND: 179697 (factors: 3 x 59899)
+  FOUND: 186961 (factors: 31 x 6031)
+  FOUND: 194833 (factors: 23 x 8471)
+  FOUND: 197209 (factors: 199 x 991)
+  FOUND: 209665 (factors: 5 x 41933)
+  FOUND: 219781 (factors: 271 x 811)
+  FOUND: 228241 (factors: 13 x 17557)
+  FOUND: 229445 (factors: 5 x 45889)
+  FOUND: 231703 (factors: 263 x 881)
+  FOUND: 252601 (factors: 41 x 6161)
+  FOUND: 254321 (factors: 263 x 967)
+  FOUND: 257761 (factors: 7 x 36823)
+  FOUND: 268801 (factors: 13 x 20677)
+  FOUND: 272611 (factors: 131 x 2081)
+  FOUND: 283361 (factors: 13 x 21797)
+  FOUND: 302101 (factors: 317 x 953)
+  FOUND: 303101 (factors: 101 x 3001)
+  FOUND: 327313 (factors: 7 x 46759)
+  FOUND: 330929 (factors: 149 x 2221)
+  FOUND: 399001 (factors: 31 x 12871)
+  FOUND: 430127 (factors: 463 x 929)
+  FOUND: 433621 (factors: 199 x 2179)
+  FOUND: 438751 (factors: 541 x 811)
+  FOUND: 447145 (factors: 5 x 89429)
+  FOUND: 455961 (factors: 3 x 151987)
+  FOUND: 489601 (factors: 7 x 69943)
+  FOUND: 490841 (factors: 13 x 37757)
+  FOUND: 497761 (factors: 11 x 45251)
+  Total Lucas pseudoprimes up to 500000: 62
+  All found: [705, 2465, 2737, 3745, 4181, 5777, 6721, 10877, 13201, 15251, 24465, 29281, 34561, 35785, 51841, 54705, 64079, 64681, 67861, 68251, 75077, 80189, 90061, 96049, 97921, 100065, 100127, 105281, 113573, 118441, 146611, 161027, 162133, 163081, 179697, 186961, 194833, 197209, 209665, 219781, 228241, 229445, 231703, 252601, 254321, 257761, 268801, 272611, 283361, 302101, 303101, 327313, 330929, 399001, 430127, 433621, 438751, 447145, 455961, 489601, 490841, 497761]
+
+
+======================================================================
+TOOL 3: FIBONACCI ENTRY POINT FACTORING
+======================================================================
+
+Theory: alpha(n) = min k with n | F_k. Then gcd(n, F_d)
+for d | alpha(n) often reveals factors of n.
+
+n = 21:
+  alpha(21) = 8  (F_8 = 0 mod 21)
+  Divisors of alpha: [1, 2, 4, 8]
+    gcd(21, F_4) = gcd(21, 3) = 3 <-- FACTOR!
+    gcd(21, F_8) = 21 (= n, trivial)
+  Factorization: 21 = 3 x 7
+
+n = 42:
+  alpha(42) = 24  (F_24 = 0 mod 42)
+  Divisors of alpha: [1, 2, 3, 4, 6, 8, 12, 24]
+    gcd(42, F_3) = gcd(42, 2) = 2 <-- FACTOR!
+    gcd(42, F_4) = gcd(42, 3) = 3 <-- FACTOR!
+    gcd(42, F_6) = gcd(42, 8) = 2 <-- FACTOR!
+    gcd(42, F_8) = gcd(42, 21) = 21 <-- FACTOR!
+    gcd(42, F_12) = gcd(42, 144) = 6 <-- FACTOR!
+    gcd(42, F_24) = 42 (= n, trivial)
+  Factorization: 42 = 2 x 3 x 7
+
+n = 91:
+  alpha(91) = 56  (F_56 = 0 mod 91)
+  Divisors of alpha: [1, 2, 4, 7, 8, 14, 28, 56]
+    gcd(91, F_7) = gcd(91, 13) = 13 <-- FACTOR!
+    gcd(91, F_8) = gcd(91, 21) = 7 <-- FACTOR!
+    gcd(91, F_14) = gcd(91, 377) = 13 <-- FACTOR!
+    gcd(91, F_28) = gcd(91, 317811) = 13 <-- FACTOR!
+    gcd(91, F_56) = 91 (= n, trivial)
+  Factorization: 91 = 7 x 13
+
+n = 143:
+  alpha(143) = 70  (F_70 = 0 mod 143)
+  Divisors of alpha: [1, 2, 5, 7, 10, 14, 35, 70]
+    gcd(143, F_7) = gcd(143, 13) = 13 <-- FACTOR!
+    gcd(143, F_10) = gcd(143, 55) = 11 <-- FACTOR!
+    gcd(143, F_14) = gcd(143, 377) = 13 <-- FACTOR!
+    gcd(143, F_35) = gcd(143, 9227465) = 13 <-- FACTOR!
+    gcd(143, F_70) = 143 (= n, trivial)
+  Factorization: 143 = 11 x 13
+
+n = 6174:
+  alpha(6174) = 1176  (F_1176 = 0 mod 6174)
+  Divisors of alpha: [1, 2, 3, 4, 6, 7, 8, 12, 14, 21, 24, 28, 42, 49, 56, 84, 98, 147, 168, 196, 294, 392, 588, 1176]
+    gcd(6174, F_3) = gcd(6174, 2) = 2 <-- FACTOR!
+    gcd(6174, F_4) = gcd(6174, 3) = 3 <-- FACTOR!
+    gcd(6174, F_6) = gcd(6174, 8) = 2 <-- FACTOR!
+    gcd(6174, F_8) = gcd(6174, 21) = 21 <-- FACTOR!
+    gcd(6174, F_12) = gcd(6174, 144) = 18 <-- FACTOR!
+    gcd(6174, F_21) = gcd(6174, 10946) = 2 <-- FACTOR!
+    gcd(6174, F_24) = gcd(6174, 46368) = 126 <-- FACTOR!
+    gcd(6174, F_28) = gcd(6174, 317811) = 3 <-- FACTOR!
+    gcd(6174, F_42) = gcd(6174, 267914296) = 2 <-- FACTOR!
+    gcd(6174, F_56) = gcd(6174, 225851433717) = 147 <-- FACTOR!
+    gcd(6174, F_84) = gcd(6174, ...) = 18 <-- FACTOR!
+    gcd(6174, F_147) = gcd(6174, ...) = 2 <-- FACTOR!
+    gcd(6174, F_168) = gcd(6174, ...) = 882 <-- FACTOR!
+    gcd(6174, F_196) = gcd(6174, ...) = 3 <-- FACTOR!
+    gcd(6174, F_294) = gcd(6174, ...) = 2 <-- FACTOR!
+    gcd(6174, F_392) = gcd(6174, ...) = 1029 <-- FACTOR!
+    gcd(6174, F_588) = gcd(6174, ...) = 18 <-- FACTOR!
+    gcd(6174, F_1176) = 6174 (= n, trivial)
+  Factorization: 6174 = 2 x 3 x 3 x 7 x 7 x 7
+
+Bonus -- factoring semiprimes via Fibonacci entry points:
+  15 = 3 x 5  (alpha = 20)
+  77 = 7 x 11  (alpha = 40)
+  221 = 13 x 17  (alpha = 63)
+  323 = 17 x 19  (alpha = 18)
+  437 = 19 x 23  (alpha = 72)
+  667 = 23 x 29  (alpha = 168)
+  899 = 29 x 31  (alpha = 210)
+  1147 = 31 x 37  (alpha = 570)
+
+
+======================================================================
+TOOL 4: FIBONACCI (ZECKENDORF) CODING
+======================================================================
+
+Theory: Every positive integer = unique sum of non-consecutive
+Fibonacci numbers (Zeckendorf's theorem, 1972).
+
+Reference Fibonacci sequence:
+  F_1=1, F_2=2, F_3=3, F_4=5, F_5=8, F_6=13, F_7=21,
+  F_8=34, F_9=55, F_10=89, F_11=144, F_12=233, F_13=377,
+  F_14=610, F_15=987, F_16=1597, F_17=2584, F_18=4181, F_19=6765
+
+Zeckendorf representations of important numbers:
+       n |              Indices |                  Fibonacci sum |            Bitstring
+  -------+----------------------+--------------------------------+---------------------
+       7 |               [2, 4] |                          2 + 5 |                 1010
+      21 |                  [7] |                             21 |              1000000
+      42 |               [5, 8] |                         8 + 34 |             10010000
+     168 |           [3, 7, 11] |                   3 + 21 + 144 |          10001000100
+    6174 | [1, 4, 6, 13, 16, 18] | 1 + 5 + 13 + 377 + 1597 + 4181 |   101001000000101001
+
+Verification -- no consecutive Fibonacci indices used:
+  7: indices [2, 4] -- consecutive? False
+  21: indices [7] -- consecutive? False
+  42: indices [5, 8] -- consecutive? False
+  168: indices [3, 7, 11] -- consecutive? False
+  6174: indices [1, 4, 6, 13, 16, 18] -- consecutive? False
+
+Pattern analysis:
+  7 = 5 + 2          -- uses F_4 + F_2 (even indices)
+  21 = 21            -- IS a Fibonacci number (F_7)
+  42 = 34 + 8        -- uses F_8 + F_5
+  168 = 144 + 21 + 3 -- uses F_11 + F_7 + F_3 (all odd indices!)
+  6174 = 4181+1597+377+13+5+1 -- 6 terms
+
+Zeckendorf statistics for 1..1000:
+  1 terms: 15 numbers (1.5%)
+  2 terms: 84 numbers (8.4%)
+  3 terms: 226 numbers (22.6%)
+  4 terms: 331 numbers (33.1%)
+  5 terms: 252 numbers (25.2%)
+  6 terms: 84 numbers (8.4%)
+  7 terms: 8 numbers (0.8%)
+  Average terms: 4.005
+  (Theory predicts ~log_phi(n) / (1+1/phi) terms on average)
+
+  Numbers that are Fibonacci numbers: [21]
+
+
+======================================================================
+TOOL 5: FIBONACCI HASH
+======================================================================
+
+hash_F(n) = F_n mod M. Testing collision properties.
+
+M = 97, hashing keys 0..999:
+  Fib hash:    69 distinct values, max bucket 22, 69 buckets with collision, 931 total collisions
+  Simple mod:  97 distinct values, max bucket 11
+  Pisano period pi(97) = 196
+  Fib hash cycles every 196 keys => 196 distinct outputs max
+
+M = 127, hashing keys 0..999:
+  Fib hash:    97 distinct values, max bucket 16, 97 buckets with collision, 903 total collisions
+  Simple mod:  127 distinct values, max bucket 8
+  Pisano period pi(127) = 256
+  Fib hash cycles every 256 keys => 256 distinct outputs max
+
+M = 251, hashing keys 0..999:
+  Fib hash:    157 distinct values, max bucket 12, 157 buckets with collision, 843 total collisions
+  Simple mod:  251 distinct values, max bucket 4
+  Pisano period pi(251) = 250
+  Fib hash cycles every 250 keys => 250 distinct outputs max
+
+M = 1009, hashing keys 0..999:
+  Fib hash:    92 distinct values, max bucket 24, 92 buckets with collision, 908 total collisions
+  Simple mod:  1000 distinct values, max bucket 1
+  Pisano period pi(1009) = 126
+  Fib hash cycles every 126 keys => 126 distinct outputs max
+
+M = 4096, hashing keys 0..999:
+  Fib hash:    897 distinct values, max bucket 2, 103 buckets with collision, 103 total collisions
+  Simple mod:  1000 distinct values, max bucket 1
+  Pisano period pi(4096) = 6144
+  Fib hash cycles every 6144 keys => 6144 distinct outputs max
+
+Application: Fibonacci hash for tournament vertex labeling
+  For n-vertex tournament, label vertices 0..n-1.
+  Use F-hash to map vertex pairs to edge buckets.
+
+  n=5: 10 edges, 5 distinct F-hashes (mod 10), coverage 50.0%
+  n=7: 21 edges, 7 distinct F-hashes (mod 21), coverage 33.3%
+  n=11: 55 edges, 12 distinct F-hashes (mod 55), coverage 21.8%
+  n=13: 78 edges, 44 distinct F-hashes (mod 78), coverage 56.4%
+
+
+======================================================================
+TOOL 6: GOLDEN RATIO APPROXIMATION TOOL
+======================================================================
+
+phi = (1 + sqrt(5))/2 = 1.618033988749895
+
+Convergents F_{n+1}/F_n:
+    n |     F_{n+1}/F_n |              Value |           Error
+  ----+-----------------+--------------------+----------------
+    1 |             1/1 |  1.000000000000000 |        6.18e-01
+    2 |             2/1 |  2.000000000000000 |        3.82e-01
+    3 |             3/2 |  1.500000000000000 |        1.18e-01
+    4 |             5/3 |  1.666666666666667 |        4.86e-02
+    5 |             8/5 |  1.600000000000000 |        1.80e-02
+    6 |            13/8 |  1.625000000000000 |        6.97e-03
+    7 |           21/13 |  1.615384615384615 |        2.65e-03
+    8 |           34/21 |  1.619047619047619 |        1.01e-03
+    9 |           55/34 |  1.617647058823529 |        3.87e-04
+   10 |           89/55 |  1.618181818181818 |        1.48e-04
+   11 |          144/89 |  1.617977528089888 |        5.65e-05
+   12 |         233/144 |  1.618055555555556 |        2.16e-05
+   13 |         377/233 |  1.618025751072961 |        8.24e-06
+   14 |         610/377 |  1.618037135278515 |        3.15e-06
+   15 |         987/610 |  1.618032786885246 |        1.20e-06
+   16 |        1597/987 |  1.618034447821682 |        4.59e-07
+   17 |       2584/1597 |  1.618033813400125 |        1.75e-07
+   18 |       4181/2584 |  1.618034055727554 |        6.70e-08
+   19 |       6765/4181 |  1.618033963166706 |        2.56e-08
+   20 |      10946/6765 |  1.618033998521803 |        9.77e-09
+
+Error decreases as 1/phi^{2n} -- exponential convergence!
+  Error ratio (consecutive): 1.618 3.236 2.427 2.697 2.589 2.629 2.614 
+  phi^2 = 2.618034 (should match ratios)
+
+Approximating 3/4 = 0.75 with F-ratios:
+
+    n |  F_{n+1}/F_n |              Value |     |val - 3/4|
+  ----+--------------+--------------------+----------------
+    1 |          1/1 |  1.000000000000000 |  0.250000000000 <-- BEST
+    2 |          2/1 |  2.000000000000000 |  1.250000000000
+    3 |          3/2 |  1.500000000000000 |  0.750000000000
+    4 |          5/3 |  1.666666666666667 |  0.916666666667
+    5 |          8/5 |  1.600000000000000 |  0.850000000000
+    6 |         13/8 |  1.625000000000000 |  0.875000000000
+    7 |        21/13 |  1.615384615384615 |  0.865384615385
+    8 |        34/21 |  1.619047619047619 |  0.869047619048
+    9 |        55/34 |  1.617647058823529 |  0.867647058824
+   10 |        89/55 |  1.618181818181818 |  0.868181818182
+   11 |       144/89 |  1.617977528089888 |  0.867977528090
+   12 |      233/144 |  1.618055555555556 |  0.868055555556
+   13 |      377/233 |  1.618025751072961 |  0.868025751073
+   14 |      610/377 |  1.618037135278515 |  0.868037135279
+   15 |      987/610 |  1.618032786885246 |  0.868032786885
+   16 |     1597/987 |  1.618034447821682 |  0.868034447822
+   17 |    2584/1597 |  1.618033813400125 |  0.868033813400
+   18 |    4181/2584 |  1.618034055727554 |  0.868034055728
+   19 |    6765/4181 |  1.618033963166706 |  0.868033963167
+
+Best F-ratio approximation to 3/4:
+  F_2/F_1 = 1/1 = 1.000000000000000
+  Error: 0.250000000000000
+
+Precision table:
+  1 digits: need F_5/F_4 = 5/3
+  2 digits: need F_7/F_6 = 13/8
+  3 digits: need F_10/F_9 = 55/34
+  4 digits: need F_12/F_11 = 144/89
+  5 digits: need F_14/F_13 = 377/233
+  6 digits: need F_17/F_16 = 1597/987
+  7 digits: need F_19/F_18 = 4181/2584
+  8 digits: need F_21/F_20 = 10946/6765
+  9 digits: need n > 20
+  10 digits: need n > 20
+  11 digits: need n > 20
+  12 digits: need n > 20
+  13 digits: need n > 20
+  14 digits: need n > 20
+  15 digits: need n > 20
+
+
+======================================================================
+TOOL 7: FIBONACCI-WEIGHTED PRIME COUNTER
+======================================================================
+
+pi_F(N) = sum_{p <= N, p prime} F_{index(p)}
+where index(p) = position of p in the prime sequence (1-indexed).
+
+       N |  pi(N) |              pi_F(N) |      pi_F/pi |  log(pi_F)
+  -------+--------+----------------------+--------------+-----------
+      10 |      4 |                    7 |         1.75 |     1.9459
+      20 |      8 |                   54 |         6.75 |     3.9890
+      50 |     15 |                 1596 |       106.40 |     7.3753
+     100 |     25 |               196417 |      7856.68 |    12.1880
+     200 |     46 |           4807526975 | 104511455.98 |    22.2934
+     500 |     95 | 83621143489848422976 | 880222563051036032.00 |    45.8728
+    1000 |    168 | 150804340016807970735635273952047184 | 897644881052428463807720010547200.00 |    81.0013
+    2000 |    303 | 2464593359921179141398048006246675396881836888835835456250887804 | 8133971484888379359060952520471285151681586828897221561286656.00 |   145.9649
+    5000 |    669 | 76071434434275996245450651810502251293053343675909383072806500450427721205029553200424258508447999692160174311581845255665234840742378430528 | 113709169557961124356016994470955876173001896477968220667328631427693703541743311607341667522713955479227485402291132961782556193663746048.00 |   322.0884
+   10000 |   1229 | 82091869400456868675788383971950136567814826817182809854548600805886244668090124354145430988935852086652783963270701783629331573637990153274350120161320558698187639465895520505298827854557494025169000487710175614104306232651487891685603022411399062367507068 | 66795662652934802107880941574331756103496333396949449829719077926999699622152238055074242780290483818076239211863167858354718834414427070583480050177376049077082034250634045816743415246093305251484598138412713082375209004583542063627217168920691353845760.00 |   591.5670
+
+Growth analysis:
+  pi(N) ~ N/ln(N)  (prime number theorem)
+  F_k ~ phi^k / sqrt(5)
+  pi_F(N) ~ sum_{k=1}^{pi(N)} phi^k/sqrt(5)
+         ~ phi^{pi(N)+1} / (sqrt(5)*(phi-1))
+         ~ phi^{N/ln(N)} / sqrt(5)
+
+  So log(pi_F(N)) ~ (N/ln(N)) * ln(phi)
+  ln(phi) = 0.481212
+
+Predicted vs actual log(pi_F):
+  N=   10: actual log=      1.95, predicted ~      1.92, ratio=1.0109
+  N=   20: actual log=      3.99, predicted ~      3.85, ratio=1.0362
+  N=   50: actual log=      7.38, predicted ~      7.22, ratio=1.0218
+  N=  100: actual log=     12.19, predicted ~     12.03, ratio=1.0131
+  N=  200: actual log=     22.29, predicted ~     22.14, ratio=1.0071
+  N=  500: actual log=     45.87, predicted ~     45.72, ratio=1.0034
+  N= 1000: actual log=     81.00, predicted ~     80.84, ratio=1.0020
+  N= 2000: actual log=    145.96, predicted ~    145.81, ratio=1.0011
+  N= 5000: actual log=    322.09, predicted ~    321.93, ratio=1.0005
+  N=10000: actual log=    591.57, predicted ~    591.41, ratio=1.0003
+
+
+======================================================================
+TOOL 8: LUCAS-TOURNAMENT CONNECTION
+======================================================================
+
+For Paley primes p in {3, 5, 7, 11}, compare L_p, F_p, H(T_p).
+
+     p |      F_p |      L_p |     H(T_p) |        H/F_p |        H/L_p
+  -----+----------+----------+------------+--------------+-------------
+     3 |        2 |        4 |          3 |     1.500000 |     0.750000
+     5 |        5 |       11 |         15 |     3.000000 |     1.363636
+     7 |       13 |       29 |        189 |    14.538462 |     6.517241
+    11 |       89 |      199 |      95095 |  1068.483146 |   477.864322
+
+Detailed analysis:
+
+  p = 3:
+    F_3 = 2
+    L_3 = 4
+    H(T_3) = 3
+    H mod F_3 = 1
+    H mod L_3 = 3
+    H / p! = 0.500000
+    H / (p-1)! = 1.500000
+    H factored: 3
+    F_3 * L_3 = 8, H mod (F*L) = 3
+    F_6 = 8, H mod F_6 = 3
+
+  p = 5:
+    F_5 = 5
+    L_5 = 11
+    H(T_5) = 15
+    H mod F_5 = 0
+    H mod L_5 = 4
+    H / p! = 0.125000
+    H / (p-1)! = 0.625000
+    H factored: 3 * 5
+    F_5 * L_5 = 55, H mod (F*L) = 15
+    F_10 = 55, H mod F_10 = 15
+
+  p = 7:
+    F_7 = 13
+    L_7 = 29
+    H(T_7) = 189
+    H mod F_7 = 7
+    H mod L_7 = 15
+    H / p! = 0.037500
+    H / (p-1)! = 0.262500
+    H factored: 3 * 3 * 3 * 7
+    F_7 * L_7 = 377, H mod (F*L) = 189
+    F_14 = 377, H mod F_14 = 189
+
+  p = 11:
+    F_11 = 89
+    L_11 = 199
+    H(T_11) = 95095
+    H mod F_11 = 43
+    H mod L_11 = 172
+    H / p! = 0.002382
+    H / (p-1)! = 0.026206
+    H factored: 5 * 7 * 11 * 13 * 19
+    F_11 * L_11 = 17711, H mod (F*L) = 6540
+    F_22 = 17711, H mod F_22 = 6540
+
+Summary of key ratios:
+
+  H(T_p) / (p-1)!! where (p-1)!! = double factorial:
+    p=3: H/(p-1)!! = 3/2 = 1.500000
+    p=5: H/(p-1)!! = 15/8 = 1.875000
+    p=7: H/(p-1)!! = 189/48 = 3.937500
+    p=11: H/(p-1)!! = 95095/3840 = 24.764323
+
+  H(T_p) / C(p, (p-1)/2):
+    p=3: H/C(3,1) = 3/3 = 1.000000
+    p=5: H/C(5,2) = 15/10 = 1.500000
+    p=7: H/C(7,3) = 189/35 = 5.400000
+    p=11: H/C(11,5) = 95095/462 = 205.833333
+
+  H(T_p) as products of small primes:
+    H(T_3)  = 3
+    H(T_5)  = 15 = 3 * 5
+    H(T_7)  = 189 = 3^3 * 7
+    H(T_11) = 95095 = 5 * 7 * 11 * 13 * 19
+
+  H(T_p) / |Aut(T_p)| (orbit count for Hamiltonian paths):
+    p=3: H/|Aut| = 3/3 = 1
+    p=5: H/|Aut| = 15/10 = 1
+    p=7: H/|Aut| = 189/21 = 9
+    p=11: H/|Aut| = 95095/55 = 1729
+    Sequence: 1, 1.5(?), 9, 1729
+    Wait -- 15/10 = 1.5, not integer. Let me recheck...
+    15/10 = 1.5 -- H(T_5)=15 confirmed, |Aut(T_5)|=10
+    But orbits must be integer. So |Aut| acts on DIRECTED paths,
+    some orbits may have smaller stabilizer.
+
+  Modular patterns:
+    p=3: H mod p = 0, H mod F_p = 1, H mod L_p = 3
+    p=5: H mod p = 0, H mod F_p = 0, H mod L_p = 4
+    p=7: H mod p = 0, H mod F_p = 7, H mod L_p = 15
+    p=11: H mod p = 0, H mod F_p = 43, H mod L_p = 172
+
+  Key observation: H(T_p) = 0 mod p for all tested Paley primes.
+  This is expected: Aut(T_p) acts on Ham paths, |Aut| = p(p-1)/2,
+  so p | |Aut| | (something), and fixed-point count argument gives p | H.
+
+  Direct Lucas connection search:
+    p=3: L_3 = 4, H mod L_3 = 3, H/L_3 = 0.7500, gcd(H, L_3) = 1
+    p=5: L_5 = 11, H mod L_5 = 4, H/L_5 = 1.3636, gcd(H, L_5) = 1
+    p=7: L_7 = 29, H mod L_7 = 15, H/L_7 = 6.5172, gcd(H, L_7) = 1
+    p=11: L_11 = 199, H mod L_11 = 172, H/L_11 = 477.8643, gcd(H, L_11) = 1
+
+  Verdict: No clean H(T_p) = f(L_p, F_p) formula emerges.
+  The Fibonacci/Lucas numbers and Paley Hamiltonian path counts
+  live in different algebraic worlds: F/L from linear recurrences,
+  H from permanent-like combinatorial sums over tournaments.
+  Their connection to p is through DIFFERENT mechanisms:
+    - F_p, L_p: via p | F_{p-(p/5)} and L_p = 1 mod p
+    - H(T_p):   via Aut(T_p) = PSL(2,p) orbit structure
+
+
+======================================================================
+ALL 8 TOOLS COMPLETE.
+======================================================================

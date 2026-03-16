@@ -442,6 +442,9 @@ for n in range(1, 16):
     # Q(F/L) = (L^2 + F^2) / (L^2 - F^2)
     num = Ln * Ln + Fn * Fn
     den = Ln * Ln - Fn * Fn
+    if den == 0:
+        print(f"  n={n:2d}: F/L = {Fn}/{Ln}, Q = ({num})/({den}) = UNDEFINED (F=L)")
+        continue
     # Use Fraction for exact
     q_exact = Fraction(num, den)
     print(f"  n={n:2d}: F/L = {Fn}/{Ln}, Q = ({num})/({den}) = {q_exact} = {float(q_exact):.10f}")
@@ -467,10 +470,17 @@ for n in range(1, 11):
     sign = (-1) ** n
     num = 3 * Fn * Fn + 2 * sign
     den = 2 * (Fn * Fn + sign)
+    if den == 0:
+        print(f"  n={n:2d}: SKIP (denominator = 0, F_n^2 = 1, (-1)^n = -1)")
+        continue
     q_formula = Fraction(num, den)
     # Compare with direct
     Ln = lucas(n)
-    q_direct = Fraction(Ln * Ln + Fn * Fn, Ln * Ln - Fn * Fn)
+    den_direct = Ln * Ln - Fn * Fn
+    if den_direct == 0:
+        print(f"  n={n:2d}: SKIP (L_n = F_n)")
+        continue
+    q_direct = Fraction(Ln * Ln + Fn * Fn, den_direct)
     print(f"  n={n:2d}: formula = {q_formula}, direct = {q_direct}, match = {q_formula == q_direct}")
 
 print()
