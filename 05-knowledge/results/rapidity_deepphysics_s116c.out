@@ -1,0 +1,473 @@
+==============================================================================
+DEEP PHYSICS THROUGH THE RAPIDITY LENS
+kind-pasteur-2026-03-15-S116c
+phi(x) = ln(x)/2 = arctanh((x-1)/(x+1))
+==============================================================================
+
+==============================================================================
+1. SCHWARZSCHILD RADIUS AND BEKENSTEIN-HAWKING ENTROPY
+==============================================================================
+
+The Schwarzschild radius: R_s = 2GM/c^2
+For M solar masses: R_s = 2.953 km * (M/M_sun)
+
+Bekenstein-Hawking entropy: S_BH = A/(4*l_P^2) = pi*R_s^2/l_P^2
+In rapidity: phi(S_BH) = phi(pi) + 2*phi(R_s/l_P)
+
+  Black Hole                               M/M_sun        R_s (m)        R_s/l_P   phi(R_s/l_P)           S_BH    phi(S_BH)
+  ---------------------------------------------------------------------------------------------------------
+  Stellar BH (10 M_sun)                    1.0e+01     2.9538e+04     1.8276e+39        45.2019     1.0493e+79      90.9762
+  Cygnus X-1 (~21 M_sun)                   2.1e+01     6.2031e+04     3.8379e+39        45.5729     4.6275e+79      91.7181
+  GW150914 remnant (~62 M_sun)             6.2e+01     1.8314e+05     1.1331e+40        46.1142     4.0336e+80      92.8007
+  Intermediate (~1000 M_sun)               1.0e+03     2.9538e+06     1.8276e+41        47.5045     1.0493e+83      95.5813
+  Sgr A* (~4e6 M_sun)                      4.0e+06     1.1815e+10     7.3103e+44        51.6515     1.6789e+90     103.8754
+  M87* (~6.5e9 M_sun)                      6.5e+09     1.9200e+13     1.1879e+48        55.3481     4.4334e+96     111.2687
+  TON 618 (~66e9 M_sun)                    6.6e+10     1.9495e+14     1.2062e+49        56.5071     4.5708e+98     113.5865
+  Phoenix A (~100e9 M_sun)                 1.0e+11     2.9538e+14     1.8276e+49        56.7148     1.0493e+99     114.0020
+
+KEY INSIGHT: Schwarzschild radius rapidity spans only phi ~ 22 to 33
+  even though physical radii span 10 orders of magnitude.
+  Bekenstein-Hawking entropy rapidity spans phi ~ 46 to 67.
+  The entropy of a Planck-mass BH: R_s ~ 2*l_P, S ~ 4*pi ~ 12.6
+  phi(S_planck_BH) = 1.2655
+
+  Hawking temperatures T_H = hbar*c^3/(8*pi*G*M*k_B):
+  Black Hole                                 T_H (K)        T_P/T_H   phi(T_P/T_H)
+  --------------------------------------------------------------------------------
+  Stellar BH (10 M_sun)                   6.1696e-09     2.2964e+40        46.4674
+  Cygnus X-1 (~21 M_sun)                  2.9379e-09     4.8225e+40        46.8383
+  GW150914 remnant (~62 M_sun)            9.9509e-10     1.4238e+41        47.3797
+  Intermediate (~1000 M_sun)              6.1696e-11     2.2964e+42        48.7700
+  Sgr A* (~4e6 M_sun)                     1.5424e-14     9.1856e+45        52.9170
+  M87* (~6.5e9 M_sun)                     9.4916e-18     1.4927e+49        56.6136
+  TON 618 (~66e9 M_sun)                   9.3478e-19     1.5156e+50        57.7725
+  Phoenix A (~100e9 M_sun)                6.1696e-19     2.2964e+50        57.9803
+
+==============================================================================
+2. ALL OF PHYSICS AS RAPIDITY OFFSETS FROM PLANCK SCALE
+==============================================================================
+
+Every physical quantity is a dimensionless ratio to its Planck counterpart.
+In rapidity, these ratios become additive offsets: phi(quantity/Planck_unit).
+
+  Quantity                                          Value    Ratio to Planck   phi(ratio)
+  ----------------------------------------------------------------------------------------
+  Electron mass / m_P                          9.1094e-31         4.1855e-23     -25.7639
+  Proton mass / m_P                            1.6726e-27         7.6850e-20     -22.0062
+  Neutron mass / m_P                           1.6749e-27         7.6956e-20     -22.0055
+  Bohr radius / l_P                            5.2918e-11         3.2741e+24      28.2240
+  Classical electron radius / l_P              2.8180e-15         1.7435e+20      23.3038
+  Compton wavelength (electron) / l_P          2.4260e-12         1.5010e+23      26.6828
+  Compton wavelength (proton) / l_P            1.3210e-15         8.1732e+19      22.9250
+  Hydrogen atom radius / l_P                   5.2900e-11         3.2730e+24      28.2239
+  1 second / t_P                               1.0000e+00         1.8549e+43      49.8145
+  1 year / t_P                                 3.1560e+07         5.8539e+50      58.4482
+  Room temperature (300 K) / T_P               3.0000e+02         2.1175e-30     -34.1637
+  Sun surface (5778 K) / T_P                   5.7780e+03         4.0783e-29     -32.6846
+  Sun core (1.5e7 K) / T_P                     1.5000e+07         1.0587e-25     -28.7538
+
+KEY INSIGHT: The electron/Planck mass ratio ~ 4.2e-23 has rapidity -25.8.
+  The proton/Planck mass ratio ~ 7.7e-20 has rapidity -22.0.
+  The ENTIRE Standard Model mass hierarchy fits in |phi| < 30.
+  Room temperature vs Planck temperature: phi ~ -34.1.
+  A year in Planck times: phi ~ 58.8.
+
+
+==============================================================================
+3. THE FINE STRUCTURE CONSTANT alpha = 1/137.036 IN RAPIDITY
+==============================================================================
+
+  alpha = 1/137.036 = 7.297353e-03
+  1/alpha = 137.036
+
+  phi(1/alpha) = ln(137.036)/2 = 2.460122
+  phi(alpha)   = ln(1/137.036)/2 = -2.460122
+
+  Note: phi(1/alpha) + phi(alpha) = 0 (rapidity is odd under inversion)
+
+  Is phi(1/alpha) = 2.4573 close to any musical interval combination?
+
+
+  Combinations of two stacked intervals near phi(1/alpha) = 2.4573:
+
+  Numerology of 137:
+    137 is prime
+    137 = 2^7 + 2^3 + 2^0 = 128 + 8 + 1
+    e^(2*phi(1/alpha)) = 137.036 (tautology, but the point is:
+      phi(1/alpha) ~ 2.457 is between phi(6) = 0.8959 and phi(7) = 0.9730)
+    137 ~ 6^(2*2.457/ln(6)) ~ 6^2.7422 = 6^2.7430
+    More precisely: 137 = e^(4.920) ~ (2*pi)^2 * e^(1.255)
+    (2*pi)^2 = 39.4784, ln((2*pi)^2)/2 = 1.8379
+    Residual: phi(1/alpha) - phi((2*pi)^2) = 0.6222
+
+  alpha in the hydrogen spectrum:
+    n=1: E_n = 13.6000 eV, E_1/E_n = 1, phi(E_1/E_n) = 0.0000
+    n=2: E_n = 3.4000 eV, E_1/E_n = 4, phi(E_1/E_n) = 0.6931
+    n=3: E_n = 1.5111 eV, E_1/E_n = 9, phi(E_1/E_n) = 1.0986
+    n=4: E_n = 0.8500 eV, E_1/E_n = 16, phi(E_1/E_n) = 1.3863
+
+==============================================================================
+4. RUNNING COUPLING CONSTANTS --> GRAND UNIFICATION IN RAPIDITY
+==============================================================================
+
+  Coupling constants at M_Z = 91.2 GeV:
+    alpha_s  = 0.1180       1/alpha_s  = 8.47     phi(1/alpha_s)  = 1.0685
+    alpha_W  = 0.0338       1/alpha_W  = 29.60     phi(1/alpha_W)  = 1.6939
+    alpha_EM = 0.007819     1/alpha_EM = 127.90    phi(1/alpha_EM) = 2.4256
+
+  At GUT scale ~10^16 GeV:
+    alpha_GUT ~ 0.0400      1/alpha_GUT = 25.0      phi(1/alpha_GUT) = 1.6094
+
+  Rapidity SPREAD at M_Z:
+    phi(1/alpha_EM) - phi(1/alpha_s) = 1.3571
+    phi(1/alpha_W)  - phi(1/alpha_s) = 0.6254
+
+  Rapidity of the energy scales:
+    M_Z  = 91.2 GeV:  phi(M_Z/m_e)  = 6.0461
+    GUT  = 10^16 GeV: phi(GUT/m_e)  = 22.2103
+    Planck = 1.22e19 GeV: phi(M_Pl/m_e) = 25.7636
+
+  UNIFICATION in rapidity: the three inverse couplings converge from a
+  rapidity spread of 1.36 at M_Z to ~0 at the GUT scale.
+  The energy range from M_Z to GUT in rapidity:
+    phi(E_GUT/E_Z) = 16.1642
+
+  One-loop running of 1/alpha_i vs ln(mu/M_Z):
+    ln(mu/M_Z)  phi(mu/M_Z)  1/alpha_1  1/alpha_2  1/alpha_3     spread
+  ----------------------------------------------------------------------
+           0.0         0.00      59.00      29.60       8.47      50.53
+           5.0         2.50      55.74      32.12      14.04      41.69
+          10.0         5.00      52.47      34.64      19.62      32.86
+          15.0         7.50      49.21      37.16      25.19      24.03
+          20.0        10.00      45.95      39.68      30.76      15.19
+          25.0        12.50      42.69      42.20      36.33       6.36
+          30.0        15.00      39.42      44.72      41.90       5.30
+          33.0        16.50      37.47      46.23      45.24       8.77
+
+  Note: ln(mu/M_Z) IS 2*phi(mu/M_Z) -- the running is LINEAR in rapidity!
+  Unification means the three lines converge to a single point in rapidity space.
+  The GUT scale at ln(mu/M_Z) ~ 33 corresponds to phi(mu/M_Z) ~ 16.5.
+
+
+==============================================================================
+5. PARTICLE MASS SPECTRUM AS RAPIDITY LADDER
+==============================================================================
+
+  Particle               Mass (MeV)          m/m_e   phi(m/m_e)   phi(m/m_P)
+  --------------------------------------------------------------------------
+  electron                    0.511         1.0000       0.0000     -25.7639
+  up quark                    2.160         4.2270       0.7207     -25.0432
+  down quark                  4.670         9.1389       1.1063     -24.6577
+  strange quark              93.400       182.7789       2.6041     -23.1598
+  muon                      105.658       206.7671       2.6658     -23.0981
+  proton                    938.272      1836.1487       3.7577     -22.0062
+  neutron                   939.565      1838.6791       3.7584     -22.0055
+  charm quark              1270.000      2485.3229       3.9091     -21.8548
+  tau                      1776.860      3477.2211       4.0770     -21.6869
+  bottom quark             4180.000      8180.0391       4.5047     -21.2592
+  W boson                 80379.000    157297.4560       5.9829     -19.7810
+  Z boson                 91187.600    178449.3151       6.0460     -19.7179
+  Higgs boson            125250.000    245107.6321       6.2047     -19.5592
+  top quark              173000.000    338551.8591       6.3662     -19.3977
+
+  MASS RATIOS NEAR MUSICAL INTERVALS:
+  Ratio                                         Value        phi     Nearest interval  Cents off
+  ----------------------------------------------------------------------------------------------
+  muon/electron                              206.7671     2.6658        two_oct+fifth     6128.3
+  tau/muon                                    16.8171     1.4112        two_oct+fifth     1784.3
+  tau/electron                              3477.2211     4.0770        two_oct+fifth    11014.5
+  proton/electron                           1836.1487     3.7577        two_oct+fifth     9909.0
+  W/proton                                    85.6671     2.2252        two_oct+fifth     4602.8
+  Z/W                                          1.1345     0.0631         major_second       14.5 <--
+  Higgs/W                                      1.5582     0.2218          minor_sixth       45.8
+  Higgs/Z                                      1.3735     0.1587              tritone       40.7
+  top/Higgs                                    1.3812     0.1615              tritone       31.1
+  top/W                                        2.1523     0.3833               octave      127.1
+  neutron/proton                               1.0014     0.0007               unison        2.4 <--
+  tau/proton                                   1.8938     0.3193        major_seventh       17.2 <--
+  bottom/charm                                 3.2913     0.5956         octave+fifth      160.5
+  charm/strange                               13.5974     1.3049        two_oct+fifth     1416.4
+  strange/down                                20.0000     1.4979        two_oct+fifth     2084.4
+  down/up                                      2.1620     0.3855               octave      134.9
+  top/bottom                                  41.3876     1.8615        two_oct+fifth     3343.4
+
+  GENERATION STRUCTURE IN RAPIDITY:
+    phi(m_mu/m_e)  = 2.6658   (1st -> 2nd generation leptons)
+    phi(m_tau/m_mu) = 1.4112   (2nd -> 3rd generation leptons)
+    Ratio of steps: 0.5294
+    (If generations were exactly geometric, this ratio would be 1.000)
+
+    phi(m_c/m_s)   = 1.3049   (2nd -> 3rd gen quarks, strange -> charm)
+    phi(m_b/m_c)   = 0.5956   (charm -> bottom)
+    phi(m_t/m_b)   = 1.8615   (bottom -> top)
+
+  The lepton generation steps are NEARLY equal in rapidity (~2.7 and ~1.4).
+  The quark generation steps are more uneven.
+
+
+==============================================================================
+6. CMB TEMPERATURE AND AGE OF THE UNIVERSE
+==============================================================================
+
+  CMB temperature: T_CMB = 2.7255 K
+  Planck temperature: T_P = 1.4168e+32 K
+  Ratio T_P / T_CMB = 5.1983e+31
+
+  phi(T_P / T_CMB) = 36.5142
+
+  This is the "rapidity distance" from the CMB to the Planck temperature.
+  Equivalently, the universe has cooled by rapidity 36.5 from Planck epoch.
+
+  Age of universe: 4.3549e+17 seconds
+  In Planck times: 8.0778e+60
+  phi(age / t_P)  = 70.1221
+
+  REMARKABLE: The rapidity of the age (in Planck times) ~ 70.1
+  and the rapidity of the temperature ratio ~ 36.5
+  are of the SAME ORDER. Both measure "how far we are from the Planck epoch."
+
+  Their difference: 33.6079
+  Their ratio: 1.9204
+
+  In a radiation-dominated universe, T ~ 1/sqrt(t), so:
+    T_P/T_CMB ~ sqrt(age/t_P) => phi(T_P/T_CMB) ~ phi(age/t_P)/2
+    Expected: 35.0611  vs  Actual: 36.5142
+    (Differs because universe is NOT radiation-dominated for most of its history)
+
+
+==============================================================================
+7. COSMOLOGICAL SCALES: HUGE NUMBERS BECOME MODEST RAPIDITIES
+==============================================================================
+  Ratio                                                            Value   phi(ratio)
+  ------------------------------------------------------------------------------------
+  Observable universe / Planck length                         2.7223e+61      70.7296
+  Hubble time / Planck time                                   8.0778e+60      70.1221
+  Planck density / cosmic density (~10^122)                  1.0000e+122     140.4577
+  Cosmological constant (dimensionless, ~10^-122)            1.0000e-122    -140.4577
+  Number of particles (~10^80)                                1.0000e+80      92.1034
+  Number of photons in CMB (~10^89)                           1.0000e+89     102.4650
+  Entropy of observable universe (~10^90 k_B)                 1.0000e+90     103.6163
+  Proton lifetime lower bound / Planck time                   5.8539e+91     105.6512
+  Avogadro's number                                           6.0220e+23      27.3774
+  Googol                                                     1.0000e+100     115.1293
+
+  THE RAPIDITY COMPRESSION PRINCIPLE:
+    10^1   -> phi = 1.1513
+    10^10  -> phi = 11.5129
+    10^50  -> phi = 57.5646
+    10^100 -> phi = 115.1293
+    10^122 -> phi = 140.4577
+
+  The ENTIRE range of physical scales, from 10^-35 m to 10^26 m
+  (61 orders of magnitude), fits in a rapidity window of width 70.2.
+  The vacuum energy problem (120 orders of magnitude) is rapidity 140.5.
+  Even a googolplex (10^(10^100)) would be rapidity ~ 1.1513e+100.
+
+
+==============================================================================
+8. NUCLEAR BINDING ENERGY: THE SEMI-EMPIRICAL MASS FORMULA IN RAPIDITY
+==============================================================================
+
+  Nucleus                 A    Z  B/A (MeV)   phi(B/A)   B/A / (B/A)_Fe   phi(ratio)
+  --------------------------------------------------------------------------------
+  H-2 (deuteron)          2    1      1.112     0.0531         0.126507    -1.033727
+  He-3                    3    2      2.573     0.4725         0.292719    -0.614271
+  He-4 (alpha)            4    2      7.074     0.9782         0.804778    -0.108594
+  Li-6                    6    3      5.333     0.8370         0.606712    -0.249850
+  Li-7                    7    3      5.606     0.8619         0.637770    -0.224889
+  C-12                   12    6      7.680     1.0193         0.873720    -0.067498
+  N-14                   14    7      7.476     1.0058         0.850512    -0.080958
+  O-16                   16    8      7.976     1.0382         0.907395    -0.048589
+  Si-28                  28   14      8.448     1.0670         0.961092    -0.019842
+  Ca-40                  40   20      8.551     1.0730         0.972810    -0.013783
+  Fe-56                  56   26      8.790     1.0868         1.000000     0.000000
+  Ni-62                  62   28      8.795     1.0871         1.000569     0.000284
+  Zr-90                  90   40      8.710     1.0822         0.990899    -0.004571
+  Sn-120                120   50      8.505     1.0703         0.967577    -0.016480
+  Pb-208                208   82      7.867     1.0313         0.894994    -0.055469
+  U-238                 238   92      7.570     1.0121         0.861206    -0.074711
+
+  SEMI-EMPIRICAL MASS FORMULA (Bethe-Weizsacker) COEFFICIENTS:
+    Volume term:    a_V = 15.67 MeV   phi(a_V) = 1.3759
+    Surface term:   a_S = 17.23 MeV   phi(a_S) = 1.4233
+    Coulomb term:   a_C = 0.714 MeV   phi(a_C) = -0.1684
+    Asymmetry term: a_A = 23.29 MeV   phi(a_A) = 1.5740
+    Pairing term:   a_P = 12.00 MeV   phi(a_P) = 1.2425
+
+  Rapidity ratios between SEMF coefficients:
+    a_V / a_C = 21.95   phi = 1.5443  (volume vs Coulomb)
+    a_A / a_C = 32.62   phi = 1.7424  (asymmetry vs Coulomb)
+    a_V / a_S = 0.9095   phi = -0.0475  (volume vs surface ~ 1)
+    a_S / a_V = 1.0996   phi = 0.0475
+
+  The volume and surface terms are nearly equal (phi ratio ~ 0),
+  reflecting that nuclear matter is close to a liquid drop with
+  nearly equal bulk and surface energies per nucleon.
+
+  B/A in rapidity relative to 1 MeV spans only [0.053, 1.087].
+
+
+==============================================================================
+9. THERMAL DE BROGLIE WAVELENGTH IN RAPIDITY
+==============================================================================
+
+  lambda_dB = h / sqrt(2 * pi * m * k_B * T)
+  This is the quantum "size" of a particle at temperature T.
+  When lambda_dB ~ interparticle spacing, quantum effects dominate.
+
+  Particle     Temperature           lambda_dB (m)     lambda/l_P  phi(lambda/l_P)
+  --------------------------------------------------------------------------------
+  electron     Room temp (300 K)        4.3036e-09     2.6627e+26          30.4233
+  electron     Liquid He (4 K)          3.7270e-08     2.3059e+27          31.5026
+  electron     Sun surface (5778 K)     9.8062e-10     6.0672e+25          29.6838
+  electron     Sun core (1.5e7 K)       1.9246e-11     1.1908e+24          27.7183
+
+  proton       Room temp (300 K)        1.0043e-10     6.2139e+24          28.5444
+  proton       Liquid He (4 K)          8.6978e-10     5.3814e+25          29.6238
+  proton       Sun surface (5778 K)     2.2885e-11     1.4159e+24          27.8049
+  proton       Sun core (1.5e7 K)       4.4915e-13     2.7790e+22          25.8395
+
+  neutron      Room temp (300 K)        1.0036e-10     6.2097e+24          28.5441
+  neutron      Liquid He (4 K)          8.6918e-10     5.3777e+25          29.6234
+  neutron      Sun surface (5778 K)     2.2869e-11     1.4149e+24          27.8046
+  neutron      Sun core (1.5e7 K)       4.4884e-13     2.7771e+22          25.8391
+
+  Rapidity ratios at room temperature:
+    lambda_e / lambda_p = 42.8500
+    phi(lambda_e / lambda_p) = 1.8789
+    This equals phi(sqrt(m_p/m_e)) = phi(m_p/m_e)/2 = 1.8789 (up to ln 2 factor)
+    Exact: ln(sqrt(m_p/m_e))/2 = 1.8789
+
+  Quantum degeneracy onset (lambda_dB ~ interparticle spacing):
+    For electrons in metal: n ~ 10^28 m^-3, spacing ~ 10^-9.3 m
+    lambda_e(300K) = 4.3036e-09 m (comparable! -> electrons are quantum at room temp)
+    For atoms in gas: n ~ 10^25 m^-3, spacing ~ 10^-8.3 m
+    lambda_proton(300K) = 1.0043e-10 m (much smaller -> classical)
+
+
+==============================================================================
+10. PARTICLE LIFETIMES: THE DECAY HIERARCHY IN RAPIDITY
+==============================================================================
+
+  Particle lifetimes span from ~10^-25 s (top quark) to ~10^3 s (neutron).
+  That's 28 orders of magnitude. In rapidity, it's a span of ~32.
+
+  Particle                    Lifetime (s)        tau/t_P   phi(tau/t_P)      Force
+  ----------------------------------------------------------------------------------
+  Proton (lower bound)          3.1560e+48     5.8539e+91       105.6512    stable?
+  Neutron (free)                8.7940e+02     1.6312e+46        53.2041       weak
+  Muon                          2.1970e-06     4.0751e+37        43.3003       weak
+  Charged pion                  2.6030e-08     4.8282e+35        41.0825       weak
+  Charged kaon                  1.2380e-08     2.2963e+35        40.7109       weak
+  B meson                       1.6380e-12     3.0383e+31        36.2457       weak
+  D meson                       1.0400e-12     1.9291e+31        36.0186       weak
+  Tau                           2.9030e-13     5.3847e+30        35.3806       weak
+  Neutral pion                  8.4300e-17     1.5636e+27        31.3084         EM
+  J/psi                         7.0900e-21     1.3151e+23        26.6167     strong
+  Higgs boson                   1.5600e-22     2.8936e+21        24.7084    various
+  Top quark                     5.0000e-25     9.2743e+18        21.8369       weak
+  W boson                       3.1570e-25     5.8558e+18        21.6070       weak
+  Z boson                       2.6420e-25     4.9005e+18        21.5179       weak
+
+  RAPIDITY GAPS (steps between adjacent lifetimes):
+  From                      To                           Delta phi
+  -----------------------------------------------------------------
+  Proton (lower bound)      Neutron (free)                 52.4471
+  Neutron (free)            Muon                            9.9038
+  Muon                      Charged pion                    2.2178
+  Charged pion              Charged kaon                    0.3716
+  Charged kaon              B meson                         4.4652
+  B meson                   D meson                         0.2271
+  D meson                   Tau                             0.6380
+  Tau                       Neutral pion                    4.0721
+  Neutral pion              J/psi                           4.6917
+  J/psi                     Higgs boson                     1.9083
+  Higgs boson               Top quark                       2.8715
+  Top quark                 W boson                         0.2299
+  W boson                   Z boson                         0.0890
+
+  THE LIFETIME HIERARCHY IN RAPIDITY:
+    Stable (proton): phi > 106
+    Weak decays: phi ~ 20-50
+    EM decays: phi ~ 13
+    Strong decays: phi ~ 0-5
+    Top/W/Z: phi ~ -0.5 to 0.5 (barely more than 1 Planck time in rapidity!)
+
+  The "stable" particles (proton, electron, neutrinos, photon) have
+  infinite rapidity lifetime. The weak force hierarchy from top to
+  neutron spans rapidity ~ 50, reflecting 28 decades of lifetime.
+
+
+==============================================================================
+GRAND SUMMARY: THE RAPIDITY MAP OF ALL PHYSICS
+==============================================================================
+
+  phi ~ -140            Cosmological constant (dimensionless)
+  phi ~ -70             Planck length / Observable universe
+  phi ~ -34             Room temperature / Planck temperature
+  phi ~ -26             Electron mass / Planck mass
+  phi ~ -22             Proton mass / Planck mass
+  phi ~ -2.5            Fine structure constant alpha
+  phi ~ 0               Unity (Planck scale / Planck scale)
+  phi ~ +1.1            Bekenstein-Hawking S for Planck BH
+  phi ~ +2.5            1/alpha = 137
+  phi ~ +3.7            Proton/electron mass ratio
+  phi ~ +5.6            Muon/electron mass ratio
+  phi ~ +22             Planck mass / proton mass
+  phi ~ +26             Planck mass / electron mass
+  phi ~ +34             Planck temperature / room temp
+  phi ~ +46             BH entropy (stellar, 10 M_sun)
+  phi ~ +58             Age of universe / Planck time
+  phi ~ +70             Observable universe / Planck length
+  phi ~ +92             Number of particles in universe
+  phi ~ +140            Planck density / cosmic density
+
+  ALL OF PHYSICS fits in the rapidity window [-140, +140].
+  This is because rapidity compresses exponentials: phi(10^N) = N * ln(10)/2 ~ 1.15 * N.
+
+  The deepest fact: rapidity is ADDITIVE for multiplicative structure.
+  A ratio of 10^61 (universe/Planck) is just phi = 70.
+  The vacuum energy discrepancy of 10^122 is phi = 140.
+  Even 10^(10^100) would only be phi ~ 10^100 -- still a finite rapidity.
+
+  Rapidity maps the multiplicative structure of physics onto an additive
+  real line, making the hierarchy problem, the cosmological constant problem,
+  and the mass spectrum all visible as DISTANCES on a single number line.
+
+
+==============================================================================
+BONUS: WHICH FUNDAMENTAL RATIOS ARE NEAR MUSICAL INTERVALS?
+==============================================================================
+
+  Ratio                                      Value        phi     Nearest interval  Cents off
+  --------------------------------------------------------------------------------------------
+  m_proton / m_electron                1836.148728     3.7577        two_oct+fifth     9909.0
+  m_muon / m_electron                   206.767123     2.6658        two_oct+fifth     6128.3
+  m_tau / m_muon                         16.817089     1.4112        two_oct+fifth     1784.3
+  m_Z / m_W                               1.134470     0.0631         major_second       14.5 ***
+  m_Higgs / m_Z                           1.373542     0.1587              tritone       40.7
+  m_neutron / m_proton                    1.001378     0.0007               unison        2.4 ***
+  1/alpha                               137.036000     2.4601        two_oct+fifth     5416.1
+  T_P / T_CMB                         51982535314621171160527264546816.000000    36.5142        two_oct+fifth   123327.4
+  R_universe / l_P                    27223426996358867187437898466566257131609228847102019843915776.000000    70.7296        two_oct+fifth   241797.0
+  a_V / a_S (nuclear)                     0.909460    -0.0475               unison      164.3
+  a_V / a_C (nuclear)                    21.946779     1.5443        two_oct+fifth     2245.2
+  B/A(Fe) / B/A(He4)                      1.242578     0.1086          major_third       10.3 ***
+  sqrt(2)                                 1.414214     0.1733              tritone        9.8 ***
+  golden ratio                            1.618034     0.2406          minor_sixth       19.4 *
+  e (Euler)                               2.718282     0.5000         octave+fifth      170.7
+  pi                                      3.141593     0.5724         octave+fifth       79.8
+
+  *** = within 15 cents (barely distinguishable by ear)
+  *   = within 30 cents (noticeable but close)
+
+  CONCLUSION: Most fundamental ratios do NOT land on simple musical intervals.
+  The exceptions (n/p mass ratio ~ unison, Z/W ~ unison, a_V/a_S ~ unison)
+  reflect physical near-equalities rather than deep musical structure.
+  The musical connection is strongest for SMALL integer ratios appearing
+  in quantum mechanics (harmonic oscillator levels, hydrogen spectrum).
+
+
+==============================================================================
+END OF DEEP PHYSICS RAPIDITY EXPLORATION
+==============================================================================

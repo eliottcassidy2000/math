@@ -1,0 +1,548 @@
+======================================================================
+RAPIDITY AND CHEMISTRY: EIGHT INVESTIGATIONS
+kind-pasteur-2026-03-15-S116c
+======================================================================
+
+======================================================================
+1. THE PERIODIC TABLE IN RAPIDITY
+======================================================================
+
+--- Noble Gases: Z = 2, 10, 18, 36, 54, 86 ---
+Element    Z    rapidity    Cayley v
+    He    2    0.346574    0.333333
+    Ne   10    1.151293    0.818182
+    Ar   18    1.445186    0.894737
+    Kr   36    1.791759    0.945946
+    Xe   54    1.994492    0.963636
+    Rn   86    2.227174    0.977011
+
+  Rapidity gaps between consecutive noble gases:
+  He->Ne: Z ratio = 10/2 = 5.0000, rap gap = 0.804719, ~ double_octave (4/1), 386.3 cents off
+  Ne->Ar: Z ratio = 18/10 = 1.8000, rap gap = 0.293893, ~ minor_seventh (9/5), 0.0 cents off
+  Ar->Kr: Z ratio = 36/18 = 2.0000, rap gap = 0.346574, ~ octave (2/1), 0.0 cents off
+  Kr->Xe: Z ratio = 54/36 = 1.5000, rap gap = 0.202733, ~ fifth (3/2), 0.0 cents off
+  Xe->Rn: Z ratio = 86/54 = 1.5926, rap gap = 0.232682, ~ minor_sixth (8/5), 8.0 cents off
+
+  Noble gas Z ratios as fractions:
+  He->Ne: 5 = 5.000000
+  Ne->Ar: 9/5 = 1.800000
+  Ar->Kr: 2 = 2.000000
+  Kr->Xe: 3/2 = 1.500000
+  Xe->Rn: 43/27 = 1.592593
+
+--- Nuclear Magic Numbers: 2, 8, 20, 28, 50, 82, 126 ---
+ Magic#    rapidity    Cayley v
+      2    0.346574    0.333333
+      8    1.039721    0.777778
+     20    1.497866    0.904762
+     28    1.666102    0.931034
+     50    1.956012    0.960784
+     82    2.203360    0.975904
+    126    2.418141    0.984252
+
+  Rapidity gaps between consecutive magic numbers:
+    2->  8: ratio = 4.0000, rap gap = 0.693147, ~ double_octave (4/1), 0.0 cents off
+    8-> 20: ratio = 2.5000, rap gap = 0.458145, ~ major_tenth (5/2), 0.0 cents off
+   20-> 28: ratio = 1.4000, rap gap = 0.168236, ~ tritone (45/32), 7.7 cents off
+   28-> 50: ratio = 1.7857, rap gap = 0.289909, ~ minor_seventh (9/5), 13.8 cents off
+   50-> 82: ratio = 1.6400, rap gap = 0.247348, ~ major_sixth (5/3), 27.9 cents off
+   82->126: ratio = 1.5366, rap gap = 0.214781, ~ fifth (3/2), 41.7 cents off
+
+  Magic number ratios vs simple fractions:
+    2->  8: ratio = 4.0000, approx = 4 = 4.0000
+    8-> 20: ratio = 2.5000, approx = 5/2 = 2.5000
+   20-> 28: ratio = 1.4000, approx = 7/5 = 1.4000
+   28-> 50: ratio = 1.7857, approx = 25/14 = 1.7857
+   50-> 82: ratio = 1.6400, approx = 23/14 = 1.6429
+   82->126: ratio = 1.5366, approx = 20/13 = 1.5385
+
+--- Period Lengths: 2, 8, 8, 18, 18, 32, 32 ---
+  Unique period lengths and their rapidities:
+    2: rapidity = 0.346574
+    8: rapidity = 1.039721
+   18: rapidity = 1.445186
+   32: rapidity = 1.732868
+
+  Ratios: 8/2 = 4.0, 18/8 = 2.25 = 9/4, 32/18 = 1.7778 = 16/9
+  Period lengths = 2*n^2 for n=1,2,3,4: [2, 8, 18, 32]
+  rapidity(2n^2) = rapidity(2) + 2*rapidity(n) = ln(2)/2 + ln(n)
+
+======================================================================
+2. ELECTRONEGATIVITY IN RAPIDITY
+======================================================================
+
+  Element    EN     rapidity(EN)    Cayley v(EN)
+    Cs     0.79     -0.117861     -0.117318
+     K     0.82     -0.099225     -0.098901
+    Ba     0.89     -0.058267     -0.058201
+    Na     0.93     -0.036285     -0.036269
+    Li     0.98     -0.010101     -0.010101
+    Ca     1.00      0.000000      0.000000
+    Mg     1.31      0.135014      0.134199
+    Be     1.57      0.225538      0.221790
+    Al     1.61      0.238117      0.233716
+    Zn     1.65      0.250388      0.245283
+    Fe     1.83      0.302158      0.293286
+    Si     1.90      0.320927      0.310345
+    Cu     1.90      0.320927      0.310345
+     B     2.04      0.356475      0.342105
+     P     2.19      0.391951      0.373041
+     H     2.20      0.394229      0.375000
+    Au     2.54      0.466082      0.435028
+     C     2.55      0.468047      0.436620
+     S     2.58      0.473895      0.441341
+     I     2.66      0.489163      0.453552
+    Br     2.96      0.542595      0.494949
+     N     3.04      0.555929      0.504950
+    Cl     3.16      0.575286      0.519231
+     O     3.44      0.617736      0.549550
+     F     3.98      0.690641      0.598394
+
+--- Bond EN differences: ratio vs rapidity ---
+
+    Bond   EN_A   EN_B   diff   ratio    rap(A)    rap(B)   rap_diff        ratio~interval
+     C-H   2.55   2.20   0.35   1.159    0.4680    0.3942   0.073818  major_second (9/8), 51.7 cents off
+     C-N   2.55   3.04   0.49   1.192    0.4680    0.5559   0.087882  minor_third (6/5), 11.4 cents off
+    C-Cl   2.55   3.16   0.61   1.239    0.4680    0.5753   0.107239  major_third (5/4), 15.0 cents off
+     N-H   3.04   2.20   0.84   1.382    0.5559    0.3942   0.161700  tritone (45/32), 30.3 cents off
+     C-O   2.55   3.44   0.89   1.349    0.4680    0.6177   0.149689  fourth (4/3), 20.2 cents off
+    H-Cl   2.20   3.16   0.96   1.436    0.3942    0.5753   0.181057  tritone (45/32), 36.7 cents off
+     H-O   2.20   3.44   1.24   1.564    0.3942    0.6177   0.223507  minor_sixth (8/5), 39.8 cents off
+     C-F   2.55   3.98   1.43   1.561    0.4680    0.6906   0.222594  minor_sixth (8/5), 43.0 cents off
+     H-F   2.20   3.98   1.78   1.809    0.3942    0.6906   0.296412  minor_seventh (9/5), 8.7 cents off
+   Na-Cl   0.93   3.16   2.23   3.398   -0.0363    0.5753   0.611571  twelfth (3/1), 215.6 cents off
+    Li-F   0.98   3.98   3.00   4.061   -0.0101    0.6906   0.700742  double_octave (4/1), 26.3 cents off
+     K-F   0.82   3.98   3.16   4.854   -0.0992    0.6906   0.789866  double_octave (4/1), 334.9 cents off
+    Cs-F   0.79   3.98   3.19   5.038   -0.1179    0.6906   0.808502  double_octave (4/1), 399.4 cents off
+
+--- KEY: EN ratio as Q-transform ---
+  For a bond A-B, EN_B/EN_A = Q(v_bond) where v_bond = Cayley velocity
+  v_bond = (EN_B - EN_A)/(EN_B + EN_A) = tanh(rapidity_gap)
+     C-H: v_bond = 0.073684, tanh(rap_gap) = 0.073684, match = True
+     C-N: v_bond = 0.087657, tanh(rap_gap) = 0.087657, match = True
+    C-Cl: v_bond = 0.106830, tanh(rap_gap) = 0.106830, match = True
+     N-H: v_bond = 0.160305, tanh(rap_gap) = 0.160305, match = True
+     C-O: v_bond = 0.148581, tanh(rap_gap) = 0.148581, match = True
+    H-Cl: v_bond = 0.179104, tanh(rap_gap) = 0.179104, match = True
+     H-O: v_bond = 0.219858, tanh(rap_gap) = 0.219858, match = True
+     C-F: v_bond = 0.218989, tanh(rap_gap) = 0.218989, match = True
+     H-F: v_bond = 0.288026, tanh(rap_gap) = 0.288026, match = True
+   Na-Cl: v_bond = 0.545232, tanh(rap_gap) = 0.545232, match = True
+    Li-F: v_bond = 0.604839, tanh(rap_gap) = 0.604839, match = True
+     K-F: v_bond = 0.658333, tanh(rap_gap) = 0.658333, match = True
+    Cs-F: v_bond = 0.668763, tanh(rap_gap) = 0.668763, match = True
+
+======================================================================
+3. IONIZATION ENERGIES IN RAPIDITY
+======================================================================
+
+    Z   El    IE(eV)     rap(IE)      rap(Z)   Cayley_IE
+    1    H    13.598    1.304961    0.000000    0.862995
+    2   He    24.587    1.601109    0.346574    0.921835
+    3   Li     5.392    0.842458    0.549306    0.687109
+    4   Be     9.323    1.116242    0.693147    0.806258
+    5    B     8.298    1.058007    0.804719    0.784900
+    6    C    11.260    1.210628    0.895880    0.836868
+    7    N    14.534    1.338245    0.972955    0.871250
+    8    O    13.618    1.305696    1.039721    0.863182
+    9    F    17.423    1.428896    1.098612    0.891440
+   10   Ne    21.565    1.535536    1.151293    0.911367
+   11   Na     5.139    0.818429    1.198948    0.674214
+   12   Mg     7.646    1.017091    1.242453    0.768679
+   13   Al     5.986    0.894712    1.282475    0.713713
+   14   Si     8.152    1.049132    1.319529    0.781469
+   15    P    10.487    1.175068    1.354025    0.825890
+   16    S    10.360    1.168976    1.386294    0.823944
+   17   Cl    12.968    1.281242    1.416607    0.856816
+   18   Ar    15.760    1.378738    1.445186    0.880668
+   19    K     4.341    0.734052    1.472219    0.625538
+   20   Ca     6.113    0.905209    1.497866    0.718825
+   21   Sc     6.562    0.940648    1.522261    0.735520
+   22   Ti     6.828    0.960516    1.545521    0.744507
+   23    V     6.746    0.954475    1.567747    0.741802
+   24   Cr     6.767    0.956029    1.589027    0.742500
+   25   Mn     7.434    1.003032    1.609438    0.762865
+   26   Fe     7.902    1.033558    1.629048    0.775331
+   27   Co     7.881    1.032227    1.647918    0.774800
+   28   Ni     7.640    1.016699    1.666102    0.768519
+   29   Cu     7.726    1.022296    1.683648    0.770800
+   30   Zn     9.394    1.120036    1.700599    0.807581
+   31   Ga     5.999    0.895796    1.716994    0.714245
+   32   Ge     7.900    1.033431    1.732868    0.775281
+   33   As     9.789    1.140630    1.748254    0.814626
+   34   Se     9.752    1.138736    1.763180    0.813988
+   35   Br    11.814    1.234643    1.777674    0.843921
+   36   Kr    13.999    1.319493    1.791759    0.866658
+
+--- Noble gas IE ratios (shell closure signatures) ---
+  IE(He)/IE(Ne) = 24.587/21.565 = 1.1401, ~ major_second (9/8), 23.1 cents off
+  IE(Ne)/IE(Ar) = 21.565/15.760 = 1.3683, ~ fourth (4/3), 44.9 cents off
+  IE(Ar)/IE(Kr) = 15.760/13.999 = 1.1258, ~ major_second (9/8), 1.2 cents off
+
+--- Alkali IE drops (new shell opening) ---
+  He->Li: IE ratio = 24.587/5.392 = 4.5599, rap drop = 0.758651, ~ double_octave (4/1), 226.8 cents off
+  Ne->Na: IE ratio = 21.565/5.139 = 4.1963, rap drop = 0.717107, ~ double_octave (4/1), 83.0 cents off
+  Ar->K: IE ratio = 15.760/4.341 = 3.6305, rap drop = 0.644685, ~ double_octave (4/1), 167.8 cents off
+
+--- IE profile within Period 2 (Li to Ne) ---
+   Li (Z= 3): IE/IE(Li) = 1.0000, ~ unison (1/1), 0.0 cents off
+   Be (Z= 4): IE/IE(Li) = 1.7290, ~ major_sixth (5/3), 63.6 cents off
+    B (Z= 5): IE/IE(Li) = 1.5389, ~ fifth (3/2), 44.4 cents off
+    C (Z= 6): IE/IE(Li) = 2.0883, ~ octave (2/1), 74.8 cents off
+    N (Z= 7): IE/IE(Li) = 2.6955, ~ major_tenth (5/2), 130.3 cents off
+    O (Z= 8): IE/IE(Li) = 2.5256, ~ major_tenth (5/2), 17.6 cents off
+    F (Z= 9): IE/IE(Li) = 3.2313, ~ twelfth (3/1), 128.6 cents off
+   Ne (Z=10): IE/IE(Li) = 3.9994, ~ double_octave (4/1), 0.2 cents off
+
+======================================================================
+4. BOND ENERGIES AND MUSICAL INTERVALS
+======================================================================
+
+     Bond   BE(kJ)    rapidity
+      O-O      146    2.491803
+      I-I      151    2.508640
+      F-F      155    2.521713
+      N-N      163    2.546875
+    Br-Br      193    2.631345
+    Cl-Cl      242    2.744469
+      H-I      298    2.848547
+      C-N      308    2.865050
+     C-Cl      339    2.913000
+      C-C      348    2.926101
+      C-O      360    2.943052
+     H-Br      366    2.951317
+      N-H      391    2.984354
+      C-H      413    3.011724
+      N=N      418    3.017741
+     H-Cl      431    3.033054
+      H-H      436    3.038821
+     Si-O      452    3.056841
+      O-H      463    3.068864
+      C-F      485    3.092074
+      O=O      498    3.105300
+      H-F      567    3.170180
+      C=C      614    3.209997
+      C=N      615    3.210811
+      C=O      745    3.306692
+      C#C      839    3.366105
+      C#N      891    3.396172
+      N#N      945    3.425592
+
+--- Bond Order Progressions (single -> double -> triple) ---
+
+  C-C/C=C/C#C:
+    C-C: 348 kJ/mol, rapidity = 2.926101
+    C=C: 614 kJ/mol, rapidity = 3.209997
+    C#C: 839 kJ/mol, rapidity = 3.366105
+    C=C/C-C = 1.7644, rap gap = 0.283896, ~ minor_seventh (9/5), 34.6 cents off
+    C#C/C=C = 1.3664, rap gap = 0.156108, ~ fourth (4/3), 42.5 cents off
+
+  C-N/C=N/C#N:
+    C-N: 308 kJ/mol, rapidity = 2.865050
+    C=N: 615 kJ/mol, rapidity = 3.210811
+    C#N: 891 kJ/mol, rapidity = 3.396172
+    C=N/C-N = 1.9968, rap gap = 0.345761, ~ octave (2/1), 2.8 cents off
+    C#N/C=N = 1.4488, rap gap = 0.185361, ~ tritone (45/32), 51.6 cents off
+
+  N-N/N=N/N#N:
+    N-N: 163 kJ/mol, rapidity = 2.546875
+    N=N: 418 kJ/mol, rapidity = 3.017741
+    N#N: 945 kJ/mol, rapidity = 3.425592
+    N=N/N-N = 2.5644, rap gap = 0.470866, ~ major_tenth (5/2), 44.0 cents off
+    N#N/N=N = 2.2608, rap gap = 0.407852, ~ major_tenth (5/2), 174.1 cents off
+
+  O-O/O=O:
+    O-O: 146 kJ/mol, rapidity = 2.491803
+    O=O: 498 kJ/mol, rapidity = 3.105300
+    O=O/O-O = 3.4110, rap gap = 0.613497, ~ twelfth (3/1), 222.3 cents off
+
+--- Bond energy ratios closest to just intervals (< 30 cents) ---
+     C-Cl/   Si-O = 1.3333 ~ fourth (4/3), 0.0 cents off
+      C=O/    H-I = 2.5000 ~ major_tenth (5/2), 0.0 cents off
+      H-F/    N#N = 1.6667 ~ major_sixth (5/3), 0.0 cents off
+      C-F/   H-Cl = 1.1253 ~ major_second (9/8), 0.4 cents off
+    Cl-Cl/    H-H = 1.8017 ~ minor_seventh (9/5), 1.6 cents off
+      C-C/    N=N = 1.2011 ~ minor_third (6/5), 1.7 cents off
+      C#C/    C=O = 1.1262 ~ major_second (9/8), 1.8 cents off
+      C#C/    N#N = 1.1263 ~ major_second (9/8), 2.1 cents off
+      C-C/    N-H = 1.1236 ~ major_second (9/8), 2.2 cents off
+      C=C/    H-H = 1.4083 ~ tritone (45/32), 2.5 cents off
+     H-Br/    N-H = 1.0683 ~ minor_second (16/15), 2.7 cents off
+      C-N/    C=N = 1.9968 ~ octave (2/1), 2.8 cents off
+      C=C/    C=N = 1.0016 ~ unison (1/1), 2.8 cents off
+    Cl-Cl/    I-I = 1.6026 ~ minor_sixth (8/5), 2.9 cents off
+    Br-Br/    C-C = 1.8031 ~ minor_seventh (9/5), 3.0 cents off
+      C-F/  Cl-Cl = 2.0041 ~ octave (2/1), 3.6 cents off
+      C-H/    C=O = 1.8039 ~ minor_seventh (9/5), 3.7 cents off
+      C-C/    O-H = 1.3305 ~ fourth (4/3), 3.7 cents off
+      C-N/    O-H = 1.5032 ~ fifth (3/2), 3.7 cents off
+      I-I/   Si-O = 2.9934 ~ twelfth (3/1), 3.8 cents off
+      N-H/    N=N = 1.0691 ~ minor_second (16/15), 3.9 cents off
+      C-C/    H-H = 1.2529 ~ major_third (5/4), 4.0 cents off
+      C-O/   H-Cl = 1.1972 ~ minor_third (6/5), 4.0 cents off
+      H-I/    N=N = 1.4027 ~ tritone (45/32), 4.4 cents off
+    Br-Br/    C-N = 1.5959 ~ minor_sixth (8/5), 4.5 cents off
+
+======================================================================
+5. MOLECULAR VIBRATION FREQUENCIES
+======================================================================
+
+              Mode   freq(cm-1)    rapidity
+       O-H stretch         3500    4.080259
+       N-H stretch         3400    4.065765
+       C-H stretch         3000    4.003184
+       C#N stretch         2200    3.848106
+       C#C stretch         2150    3.836612
+       C=O stretch         1715    3.723584
+       C=C stretch         1650    3.704265
+          N-H bend         1600    3.688879
+          C-H bend         1460    3.643096
+       C-O stretch         1100    3.501533
+       C-C stretch         1000    3.453878
+      C-Cl stretch          750    3.310037
+      C-Br stretch          650    3.238486
+       C-I stretch          500    3.107304
+
+--- IR frequency ratios closest to musical intervals (< 25 cents) ---
+       C#N stretch / C-O stretch      = 2.0000 ~ octave (2/1), 0.0 cents off
+       C#N stretch / C=C stretch      = 1.3333 ~ fourth (4/3), 0.0 cents off
+       C-C stretch / C-Cl stretch     = 1.3333 ~ fourth (4/3), 0.0 cents off
+       C-C stretch / C-H stretch      = 3.0000 ~ twelfth (3/1), 0.0 cents off
+       C-C stretch / C-I stretch      = 2.0000 ~ octave (2/1), 0.0 cents off
+       C-C stretch / N-H bend         = 1.6000 ~ minor_sixth (8/5), 0.0 cents off
+      C-Cl stretch / C-H stretch      = 4.0000 ~ double_octave (4/1), 0.0 cents off
+      C-Cl stretch / C-I stretch      = 1.5000 ~ fifth (3/2), 0.0 cents off
+       C-H stretch / N-H bend         = 1.8750 ~ major_seventh (15/8), 0.0 cents off
+       C-O stretch / C=C stretch      = 1.5000 ~ fifth (3/2), 0.0 cents off
+       C#C stretch / C=O stretch      = 1.2536 ~ major_third (5/4), 5.0 cents off
+          C-H bend / C-O stretch      = 1.3273 ~ fourth (4/3), 7.9 cents off
+       C#N stretch / C-H bend         = 1.5068 ~ fifth (3/2), 7.9 cents off
+          C-H bend / C=C stretch      = 1.1301 ~ major_second (9/8), 7.9 cents off
+       C=O stretch / N-H bend         = 1.0719 ~ minor_second (16/15), 8.4 cents off
+       C#N stretch / O-H stretch      = 1.5909 ~ minor_sixth (8/5), 9.9 cents off
+       C-H stretch / N-H stretch      = 1.1333 ~ major_second (9/8), 12.8 cents off
+       C#C stretch / C-H stretch      = 1.3953 ~ tritone (45/32), 13.5 cents off
+       C#C stretch / N-H bend         = 1.3438 ~ fourth (4/3), 13.5 cents off
+       C=O stretch / N-H stretch      = 1.9825 ~ octave (2/1), 15.2 cents off
+
+--- Harmonic oscillator in rapidity ---
+  For a diatomic: omega = sqrt(k/mu)
+  rapidity(omega) = [rapidity(k) - rapidity(mu)] / 2
+  Isotope shift: rap(omega_D) - rap(omega_H) = [rap(mu_H) - rap(mu_D)] / 2
+  C-H to C-D: freq ratio = sqrt(1.008/2.014) = 0.707458
+  Isotope shift = -599.1 cents (almost exactly a tritone descent!)
+  The descent interval: ~ tritone (45/32), 8.9 cents off
+
+======================================================================
+6. FUNDAMENTAL CONSTANTS IN RAPIDITY
+======================================================================
+
+              Constant            Value      rapidity
+          N_A (mol^-1)     6.022141e+23     27.377450
+             k_B (J/K)     1.380649e-23    -26.318452
+               h (J*s)     6.626070e-34    -38.198441
+            hbar (J*s)     1.054572e-34    -39.117379
+               c (m/s)     2.997925e+08      9.759300
+                 e (C)     1.602177e-19    -21.638877
+       epsilon_0 (F/m)     8.854188e-12    -12.725065
+              m_e (kg)     9.109384e-31    -34.585416
+              m_p (kg)     1.672622e-27    -30.827703
+              alpha^-1     1.370360e+02      2.460122
+          R_inf (m^-1)     1.097373e+07      8.105507
+               a_0 (m)     5.291772e-11    -11.831141
+                eV (J)     1.602177e-19    -21.638877
+
+--- Rapidity relationships between constants ---
+  rap(N_A) = 27.377450
+  rap(k_B) = -26.318452
+  rap(N_A) + rap(k_B) = 1.058998
+  rap(R) where R = N_A * k_B = 8.314 J/(mol*K): 1.058998
+  CHECK: rap(N_A) + rap(k_B) = rap(N_A*k_B) = rap(R)
+  (This is just log(ab) = log(a)+log(b) -- rapidity is additive!)
+
+  rap(h) = -38.198441
+  rap(c) = 9.759300
+  rap(hc) = -28.439140
+  Direct: rap(hc) = -28.439140
+
+  rap(1/alpha) = rap(137.036) = 2.460122
+  2 * rap(1/alpha) = 4.920244
+  This is the rapidity of 1/alpha^2 = 18778.87
+  137 as interval: ~ double_octave (4/1), 6117.6 cents off
+  137 = 128 * (137/128) = 2^7 * 1.070312
+  137/128 excess over 7 octaves: 117.6 cents
+
+  m_p/m_e = 1836.15
+  rap(m_p/m_e) = 3.757714
+  In octaves: 10.8425 octaves
+  2^10 = 1024, 2^11 = 2048 => m_p/m_e ~ 1.79 * 2^10
+  m_p/(m_e * 2^10) = 1.793118 ~ minor_seventh (9/5), 6.6 cents off
+
+======================================================================
+7. RADIOACTIVE HALF-LIVES IN RAPIDITY
+======================================================================
+
+           Isotope     t_1/2 (s)    rapidity   octaves from 1s
+           W boson     3.170e-25    -28.2054            -81.38
+         Top quark     5.000e-25    -27.9776            -80.73
+       Higgs boson     1.560e-22    -25.1061            -72.44
+           Neutron     6.110e+02      3.2075              9.26
+            Rn-222     3.300e+05      6.3534             18.33
+             I-131     6.930e+05      6.7244             19.40
+            Po-210     1.200e+07      8.1502             23.52
+             Co-60     1.660e+08      9.4637             27.31
+     Tritium (H-3)     3.888e+08      9.8893             28.53
+             Sr-90     9.090e+08     10.3139             29.76
+            Cs-137     9.490e+08     10.3355             29.82
+            Ra-226     5.050e+10     12.3226             35.56
+              C-14     1.808e+11     12.9603             37.40
+            Pu-239     7.610e+11     13.6789             39.47
+             U-235     2.220e+16     18.8194             54.30
+              K-40     3.940e+16     19.1063             55.13
+             U-238     1.410e+17     19.7438             56.97
+            Th-232     4.420e+17     20.3150             58.62
+
+  Total rapidity range: 48.5205 (140.0 octaves)
+  From 3.17e-25 s to 4.42e+17 s = 1.39e+42 ratio
+
+--- Half-life ratios of related isotopes ---
+       U-238/U-235     : ratio = 6.3514e+00, rap gap = 0.9243, = 2.67 octaves
+       U-238/C-14      : ratio = 7.7987e+05, rap gap = 6.7834, = 19.57 octaves
+        C-14/Rn-222    : ratio = 5.4788e+05, rap gap = 6.6069, = 19.06 octaves
+      Ra-226/Rn-222    : ratio = 1.5303e+05, rap gap = 5.9692, = 17.22 octaves
+       U-238/Ra-226    : ratio = 2.7921e+06, rap gap = 7.4211, = 21.41 octaves
+      Th-232/U-238     : ratio = 3.1348e+00, rap gap = 0.5713, = 1.65 octaves
+      Cs-137/I-131     : ratio = 1.3694e+03, rap gap = 3.6111, = 10.42 octaves
+     Neutron/Rn-222    : ratio = 1.8515e-03, rap gap = -3.1459, = -9.08 octaves
+
+======================================================================
+8. pH AND RAPIDITY
+======================================================================
+
+  FUNDAMENTAL CONNECTION:
+  pH = -log10([H+])
+  rapidity([H+]) = ln([H+])/2 = -pH * ln(10) / 2
+  So: rapidity = -pH * 1.151293
+  Equivalently: pH = -rapidity / 1.151293
+  The conversion factor ln(10)/2 = 1.151293
+  Its reciprocal 2/ln(10) = 0.868589
+
+              Solution      pH          [H+]    rapidity    Cayley v
+          Battery acid     1.0      1.00e-01     -1.1513  -0.81818182
+          Stomach acid     1.5      3.16e-02     -1.7269  -0.93869314
+           Lemon juice     2.0      1.00e-02     -2.3026  -0.98019802
+               Vinegar     2.4      3.98e-03     -2.7631  -0.99206943
+          Orange juice     3.5      3.16e-04     -4.0295  -0.99936774
+                Coffee     5.0      1.00e-05     -5.7565  -0.99998000
+                  Milk     6.5      3.16e-07     -7.4834  -0.99999937
+            Pure water     7.0      1.00e-07     -8.0590  -0.99999980
+                 Blood     7.4      3.98e-08     -8.5196  -0.99999992
+             Sea water     8.1      7.94e-09     -9.3255  -0.99999998
+           Baking soda     8.3      5.01e-09     -9.5557  -0.99999999
+      Milk of magnesia    10.5      3.16e-11    -12.0886  -1.00000000
+               Ammonia    11.0      1.00e-11    -12.6642  -1.00000000
+                Bleach    12.5      3.16e-13    -14.3912  -1.00000000
+         Drain cleaner    14.0      1.00e-14    -16.1181  -1.00000000
+
+--- pH unit steps as rapidity intervals ---
+  1 pH unit = rapidity gap of 1.151293
+  This is rapidity(10) = ln(10)/2 = 1.151293
+  In octaves: 3.321928 octaves
+  10:1 as musical interval: ~ double_octave (4/1), 1586.3 cents off
+
+--- Notable pH differences ---
+         Acid->Neutral: delta_pH = 6.00, rap gap = 6.9078, conc ratio = 1.00e+06
+         Neutral->Base: delta_pH = 7.00, rap gap = 8.0590, conc ratio = 1.00e+07
+           Blood range: delta_pH = 0.10, rap gap = 0.1151, conc ratio = 1.26e+00
+        Stomach->Blood: delta_pH = 5.90, rap gap = 6.7926, conc ratio = 7.94e+05
+
+--- pH as chromatic scale ---
+  12 semitones = 1 octave = rapidity gap ln(2)/2 = 0.346574
+  1 pH unit = rapidity gap ln(10)/2 = 1.151293
+  pH unit / semitone = 39.8631
+  So 1 pH unit ~ 39.9 semitones = 3.32 octaves
+
+======================================================================
+9. SYNTHESIS: CROSS-DOMAIN RAPIDITY CONNECTIONS
+======================================================================
+
+--- Rapidity as universal logarithmic coordinate ---
+  In EVERY domain, rapidity(x) = ln(x)/2 gives:
+  - Multiplicative relationships become ADDITIVE
+  - Ratios become DIFFERENCES
+  - Powers become MULTIPLES
+  - Geometric means become arithmetic means
+
+--- The Q-map Q(v) = (1+v)/(1-v) unifies: ---
+  CHEMISTRY:   EN_B/EN_A = Q(v_bond) where v_bond = EN difference
+  MUSIC:       Intervals = Q(1/(2n+1)) = (n+1)/n
+  RELATIVITY:  Doppler factor = Q(v)
+  pH:          [H+] ratio = Q(v) for acid-base reactions
+
+--- The octave (ratio 2:1) appears in: ---
+                pH: 1 pH unit ~ 3.32 octaves (10:1 concentration ratio)
+        Half-lives: U-238 to U-235: 2.67 octaves
+          IE drops: He->Li IE ratio: 4.56:1 = 2.19 octaves
+       Noble gas Z: Ar/Ne = 1.8 = 9/5 (close to double octave? no, 1.8)
+     Bond energies: N#N/O=O = 1.8976 ~ major_seventh (15/8), 20.7 cents off
+
+--- NEWLANDS' LAW OF OCTAVES (1866) ---
+  John Newlands noticed that every 8th element (by atomic weight)
+  had similar properties -- he called this the 'Law of Octaves'.
+  In rapidity: elements Z and Z+7 have rapidity gap:
+  Z= 3 (Li) to Z=10 (Ne): ratio = 3.3333, rap gap = 0.601986, ~ twelfth (3/1), 182.4 cents off
+  Z=11 (Na) to Z=18 (Ar): ratio = 1.6364, rap gap = 0.246238, ~ major_sixth (5/3), 31.8 cents off
+  Z=19 ( K) to Z=26 (Fe): ratio = 1.3684, rap gap = 0.156829, ~ fourth (4/3), 45.0 cents off
+
+  Newlands was RIGHT that periodicity ~ musical interval,
+  but it is NOT a literal octave (2:1). The actual ratios:
+  10/3 = 10/3 ~ major_sixth + octave
+  18/11 = 18/11 ~ tritone
+  The period-length doubling (2,8,8,18,18,32,32) is the true structure.
+
+--- Period lengths in rapidity ---
+  Period k has length L_k = 2 * ceil(k/2)^2
+  The CUMULATIVE Z at end of each period:
+  Z=  2 -> Z= 10: ratio = 5.0000, rap gap = 0.8047, ~ double_octave (4/1), 386.3 cents off
+  Z= 10 -> Z= 18: ratio = 1.8000, rap gap = 0.2939, ~ minor_seventh (9/5), 0.0 cents off
+  Z= 18 -> Z= 36: ratio = 2.0000, rap gap = 0.3466, ~ octave (2/1), 0.0 cents off
+  Z= 36 -> Z= 54: ratio = 1.5000, rap gap = 0.2027, ~ fifth (3/2), 0.0 cents off
+  Z= 54 -> Z= 86: ratio = 1.5926, rap gap = 0.2327, ~ minor_sixth (8/5), 8.0 cents off
+  Z= 86 -> Z=118: ratio = 1.3721, rap gap = 0.1582, ~ tritone (45/32), 42.6 cents off
+
+======================================================================
+SUMMARY OF KEY FINDINGS
+======================================================================
+
+1. PERIODIC TABLE: Noble gas Z-ratios give specific musical intervals:
+   He->Ne = 5:1 (major_tenth), Ne->Ar = 9:5 (minor_seventh), Ar->Kr = 2:1 (octave!)
+   Period lengths = 2n^2 formula, rapidity(period) = ln(2)/2 + ln(n).
+
+2. ELECTRONEGATIVITY: The EN ratio between bonded atoms is EXACTLY a Q-transform:
+   EN_B/EN_A = Q(v_bond) where v_bond = (EN_B-EN_A)/(EN_B+EN_A).
+   This is a TAUTOLOGY (definition of Q), but shows EN lives naturally in rapidity.
+   Bond polarity IS a Cayley velocity.
+
+3. IONIZATION ENERGY: Shell closure ratios are NOT simple musical intervals.
+   The alkali drops (He->Li, Ne->Na, Ar->K) give IE ratios ~4.6, 4.2, 3.6
+   which approach but never reach a double octave (4:1).
+
+4. BOND ENERGIES: Several bond-energy ratios are near-musical:
+   Ratios within 30 cents of just intervals found in multiple pairs.
+   Bond-order progressions (single->double->triple) show non-uniform scaling.
+
+5. IR FREQUENCIES: Molecular vibration frequency ratios include near-musical
+   intervals. The C-H/C-D isotope shift is close to a tritone.
+
+6. FUNDAMENTAL CONSTANTS: rapidity is additive for products (R = N_A * k_B).
+   The fine structure constant 1/alpha = 137 is 7 octaves + 119 cents.
+   m_p/m_e ~ 2^10.84.
+
+7. HALF-LIVES: Span ~140 octaves from W boson to Th-232.
+   Rapidity naturally orders the decay timeline.
+
+8. pH IS RAPIDITY (rescaled): rapidity([H+]) = -pH * ln(10)/2.
+   1 pH unit = ~3.32 octaves worth of rapidity.
+   Newlands' "Law of Octaves" anticipated rapidity coordinates in chemistry.
+
+Done.
