@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-16-S116n32 — 2026-03-16: Von Staudt Fixed Point and Bernoulli Chain
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-16-S116n31 (recovered from crash)
+**Files read:** SESSION-LOG.md, .session-state.json, all pre-crash scripts, OPEN-QUESTIONS.md, MISTAKES.md
+**Summary of work:** Recovered from mid-session crash. Ran the p-adic Cayley script (height infinity at p=2 = Redei avatar). Then discovered three major results about the arithmetic of 42:
+
+1. **sigma(n) = 2n + phi(n) uniqueness**: 4 solutions to 10^7 (12, 42, 1242, 6137440). 42 is the UNIQUE squarefree solution (proved algebraically for all squarefree n).
+2. **Von Staudt fixed point**: The chain n -> prod{p:(p-1)|n} gives 1->2->6->42->1806->1806. 1806 = 2*3*7*43 is the UNIQUE VS fixed point to 100000. The set {2,3,7,43} is self-selecting: primes with (p-1)|1806 are exactly {2,3,7,43}. No new prime can enter because 1807=13*139 is composite.
+3. **Basin density**: ALL odd integers converge to 1806 (density 1). ALL multiples of 4 diverge (density 0). Total density ~0.640. The intruder prime 5 (from d=4, d+1=5) triggers divergence.
+
+**New contributions:** 7 scripts (padic_cayley, sigma_phi_uniqueness, sigma_phi_triple, bernoulli_chain, vs_attractor, vs_density), 2 reflections (bernoulli-hurwitz, bernoulli-fixed-point), updated totient-divisor-harmonic reflection
+**Unresolved threads:**
+- Is 0.640 density exact (=16/25?) or asymptotic?
+- Are there more VS fixed points beyond 100000?
+- Connection between VS fixed point 1806 and formal group height
+- OEIS check for sequence 12, 42, 1242, 6137440
+
 ## opus-2026-03-16-S90ch — 2026-03-16: Marathon session — 30+ scripts from tanh to statistical insights
 
 **Account:** opus
