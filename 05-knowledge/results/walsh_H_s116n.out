@@ -1,0 +1,225 @@
+
+  WALSH DECOMPOSITION OF H ON THE TILING HYPERCUBE
+
+======================================================================
+
+  Computing H for all 1024 canonical-path tilings...
+  Done. min=1, max=45, mean=29.00
+
+  I. MULTILINEAR POLYNOMIAL (STANDARD BASIS)
+  --------------------------------------------------
+
+  Computing multilinear coefficients (this is 2^20 operations)...
+  Done. 213 nonzero terms.
+
+  VERIFIED: multilinear polynomial matches all 1024 values!
+
+  II. COEFFICIENT STRUCTURE BY DEGREE
+  --------------------------------------------------
+
+  Degree 0: 1 terms, coefficients in [17, 17], sum = 17
+  Degree 1: 10 terms, coefficients in [-2, 12], sum = 68
+  Degree 2: 44 terms, coefficients in [-8, 4], sum = -52
+  Degree 3: 77 terms, coefficients in [-6, 6], sum = -112
+  Degree 4: 81 terms, coefficients in [-4, 4], sum = 80
+
+  III. ALL TERMS (GROUPED BY DEGREE)
+  --------------------------------------------------
+
+  DEGREE 0:
+     +17  (constant)
+
+  DEGREE 1:
+     +12 * x6                              arcs=(1, 5)                                   verts=[1, 5]
+     +12 * x5                              arcs=(1, 4)                                   verts=[1, 4]
+     +12 * x3                              arcs=(0, 5)                                   verts=[0, 5]
+     +12 * x2                              arcs=(0, 4)                                   verts=[0, 4]
+      +6 * x8                              arcs=(2, 5)                                   verts=[2, 5]
+      +6 * x7                              arcs=(2, 4)                                   verts=[2, 4]
+      +6 * x4                              arcs=(1, 3)                                   verts=[1, 3]
+      +6 * x1                              arcs=(0, 3)                                   verts=[0, 3]
+      -2 * x9                              arcs=(3, 5)                                   verts=[3, 5]
+      -2 * x0                              arcs=(0, 2)                                   verts=[0, 2]
+
+  DEGREE 2:
+      -8 * x3*x9                           arcs=(0, 5),(3, 5)                            verts=[0, 3, 5]
+      -8 * x3*x6                           arcs=(0, 5),(1, 5)                            verts=[0, 1, 5]
+      -8 * x2*x3                           arcs=(0, 4),(0, 5)                            verts=[0, 4, 5]
+      -8 * x0*x3                           arcs=(0, 2),(0, 5)                            verts=[0, 2, 5]
+      -6 * x8*x9                           arcs=(2, 5),(3, 5)                            verts=[2, 3, 5]
+      -6 * x6*x8                           arcs=(1, 5),(2, 5)                            verts=[1, 2, 5]
+      -6 * x1*x2                           arcs=(0, 3),(0, 4)                            verts=[0, 3, 4]
+      -6 * x0*x1                           arcs=(0, 2),(0, 3)                            verts=[0, 2, 3]
+      -4 * x6*x9                           arcs=(1, 5),(3, 5)                            verts=[1, 3, 5]
+      +4 * x5*x9                           arcs=(1, 4),(3, 5)                            verts=[1, 3, 4, 5]
+      -4 * x5*x7                           arcs=(1, 4),(2, 4)                            verts=[1, 2, 4]
+      -4 * x5*x6                           arcs=(1, 4),(1, 5)                            verts=[1, 4, 5]
+      +4 * x4*x9                           arcs=(1, 3),(3, 5)                            verts=[1, 3, 5]
+      -4 * x4*x5                           arcs=(1, 3),(1, 4)                            verts=[1, 3, 4]
+      -4 * x3*x8                           arcs=(0, 5),(2, 5)                            verts=[0, 2, 5]
+      +4 * x3*x5                           arcs=(0, 5),(1, 4)                            verts=[0, 1, 4, 5]
+      +4 * x2*x6                           arcs=(0, 4),(1, 5)                            verts=[0, 1, 4, 5]
+      -4 * x2*x5                           arcs=(0, 4),(1, 4)                            verts=[0, 1, 4]
+      +4 * x1*x9                           arcs=(0, 3),(3, 5)                            verts=[0, 3, 5]
+      +4 * x1*x8                           arcs=(0, 3),(2, 5)                            verts=[0, 2, 3, 5]
+      -4 * x1*x3                           arcs=(0, 3),(0, 5)                            verts=[0, 3, 5]
+      +4 * x0*x9                           arcs=(0, 2),(3, 5)                            verts=[0, 2, 3, 5]
+      +4 * x0*x8                           arcs=(0, 2),(2, 5)                            verts=[0, 2, 5]
+      +4 * x0*x7                           arcs=(0, 2),(2, 4)                            verts=[0, 2, 4]
+      +4 * x0*x5                           arcs=(0, 2),(1, 4)                            verts=[0, 1, 2, 4]
+      -4 * x0*x2                           arcs=(0, 2),(0, 4)                            verts=[0, 2, 4]
+      -2 * x7*x9                           arcs=(2, 4),(3, 5)                            verts=[2, 3, 4, 5]
+      -2 * x7*x8                           arcs=(2, 4),(2, 5)                            verts=[2, 4, 5]
+      -2 * x6*x7                           arcs=(1, 5),(2, 4)                            verts=[1, 2, 4, 5]
+      -2 * x5*x8                           arcs=(1, 4),(2, 5)                            verts=[1, 2, 4, 5]
+    ... and 14 more terms
+
+  DEGREE 3:
+      -6 * x4*x7*x8                        arcs=(1, 3),(2, 4),(2, 5)                     verts=[1, 2, 3, 4, 5]
+      -6 * x3*x5*x7                        arcs=(0, 5),(1, 4),(2, 4)                     verts=[0, 1, 2, 4, 5]
+      -6 * x3*x4*x5                        arcs=(0, 5),(1, 3),(1, 4)                     verts=[0, 1, 3, 4, 5]
+      -6 * x2*x6*x7                        arcs=(0, 4),(1, 5),(2, 4)                     verts=[0, 1, 2, 4, 5]
+      +6 * x2*x4*x9                        arcs=(0, 4),(1, 3),(3, 5)                     verts=[0, 1, 3, 4, 5]
+      -6 * x2*x4*x6                        arcs=(0, 4),(1, 3),(1, 5)                     verts=[0, 1, 3, 4, 5]
+      +6 * x1*x7*x9                        arcs=(0, 3),(2, 4),(3, 5)                     verts=[0, 2, 3, 4, 5]
+      -6 * x1*x4*x7                        arcs=(0, 3),(1, 3),(2, 4)                     verts=[0, 1, 2, 3, 4]
+      +6 * x0*x6*x7                        arcs=(0, 2),(1, 5),(2, 4)                     verts=[0, 1, 2, 4, 5]
+      +6 * x0*x4*x8                        arcs=(0, 2),(1, 3),(2, 5)                     verts=[0, 1, 2, 3, 5]
+      -4 * x5*x8*x9                        arcs=(1, 4),(2, 5),(3, 5)                     verts=[1, 2, 3, 4, 5]
+      -4 * x5*x7*x8                        arcs=(1, 4),(2, 4),(2, 5)                     verts=[1, 2, 4, 5]
+      +4 * x4*x7*x9                        arcs=(1, 3),(2, 4),(3, 5)                     verts=[1, 2, 3, 4, 5]
+      -4 * x3*x4*x8                        arcs=(0, 5),(1, 3),(2, 5)                     verts=[0, 1, 2, 3, 5]
+      -4 * x2*x6*x9                        arcs=(0, 4),(1, 5),(3, 5)                     verts=[0, 1, 3, 4, 5]
+      -4 * x2*x5*x9                        arcs=(0, 4),(1, 4),(3, 5)                     verts=[0, 1, 3, 4, 5]
+      -4 * x2*x5*x6                        arcs=(0, 4),(1, 4),(1, 5)                     verts=[0, 1, 4, 5]
+      -4 * x1*x6*x8                        arcs=(0, 3),(1, 5),(2, 5)                     verts=[0, 1, 2, 3, 5]
+      +4 * x1*x5*x9                        arcs=(0, 3),(1, 4),(3, 5)                     verts=[0, 1, 3, 4, 5]
+      -4 * x1*x4*x5                        arcs=(0, 3),(1, 3),(1, 4)                     verts=[0, 1, 3, 4]
+      -4 * x1*x3*x8                        arcs=(0, 3),(0, 5),(2, 5)                     verts=[0, 2, 3, 5]
+      -4 * x1*x3*x7                        arcs=(0, 3),(0, 5),(2, 4)                     verts=[0, 2, 3, 4, 5]
+      -4 * x1*x2*x8                        arcs=(0, 3),(0, 4),(2, 5)                     verts=[0, 2, 3, 4, 5]
+      +4 * x0*x5*x8                        arcs=(0, 2),(1, 4),(2, 5)                     verts=[0, 1, 2, 4, 5]
+      -4 * x0*x5*x6                        arcs=(0, 2),(1, 4),(1, 5)                     verts=[0, 1, 2, 4, 5]
+      +4 * x0*x4*x7                        arcs=(0, 2),(1, 3),(2, 4)                     verts=[0, 1, 2, 3, 4]
+      +4 * x0*x3*x9                        arcs=(0, 2),(0, 5),(3, 5)                     verts=[0, 2, 3, 5]
+      -4 * x0*x2*x6                        arcs=(0, 2),(0, 4),(1, 5)                     verts=[0, 1, 2, 4, 5]
+      -4 * x0*x1*x5                        arcs=(0, 2),(0, 3),(1, 4)                     verts=[0, 1, 2, 3, 4]
+      -2 * x6*x7*x8                        arcs=(1, 5),(2, 4),(2, 5)                     verts=[1, 2, 4, 5]
+    ... and 47 more terms
+
+  DEGREE 4:
+      +4 * x3*x5*x7*x9                     arcs=(0, 5),(1, 4),(2, 4),(3, 5)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x3*x4*x5*x8                     arcs=(0, 5),(1, 3),(1, 4),(2, 5)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x2*x6*x7*x9                     arcs=(0, 4),(1, 5),(2, 4),(3, 5)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x2*x5*x8*x9                     arcs=(0, 4),(1, 4),(2, 5),(3, 5)              verts=[0, 1, 2, 3, 4, 5]
+      -4 * x2*x4*x7*x9                     arcs=(0, 4),(1, 3),(2, 4),(3, 5)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x2*x4*x6*x7                     arcs=(0, 4),(1, 3),(1, 5),(2, 4)              verts=[0, 1, 2, 3, 4, 5]
+      -4 * x1*x5*x7*x9                     arcs=(0, 3),(1, 4),(2, 4),(3, 5)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x1*x4*x7*x8                     arcs=(0, 3),(1, 3),(2, 4),(2, 5)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x1*x3*x5*x7                     arcs=(0, 3),(0, 5),(1, 4),(2, 4)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x1*x2*x6*x8                     arcs=(0, 3),(0, 4),(1, 5),(2, 5)              verts=[0, 1, 2, 3, 4, 5]
+      -4 * x0*x6*x7*x9                     arcs=(0, 2),(1, 5),(2, 4),(3, 5)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x0*x4*x7*x9                     arcs=(0, 2),(1, 3),(2, 4),(3, 5)              verts=[0, 1, 2, 3, 4, 5]
+      -4 * x0*x4*x6*x7                     arcs=(0, 2),(1, 3),(1, 5),(2, 4)              verts=[0, 1, 2, 3, 4, 5]
+      -4 * x0*x4*x5*x8                     arcs=(0, 2),(1, 3),(1, 4),(2, 5)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x0*x3*x4*x5                     arcs=(0, 2),(0, 5),(1, 3),(1, 4)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x0*x2*x6*x9                     arcs=(0, 2),(0, 4),(1, 5),(3, 5)              verts=[0, 1, 2, 3, 4, 5]
+      -4 * x0*x2*x4*x9                     arcs=(0, 2),(0, 4),(1, 3),(3, 5)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x0*x2*x4*x6                     arcs=(0, 2),(0, 4),(1, 3),(1, 5)              verts=[0, 1, 2, 3, 4, 5]
+      +4 * x0*x1*x5*x6                     arcs=(0, 2),(0, 3),(1, 4),(1, 5)              verts=[0, 1, 2, 3, 4, 5]
+      +2 * x5*x7*x8*x9                     arcs=(1, 4),(2, 4),(2, 5),(3, 5)              verts=[1, 2, 3, 4, 5]
+      +2 * x5*x6*x7*x9                     arcs=(1, 4),(1, 5),(2, 4),(3, 5)              verts=[1, 2, 3, 4, 5]
+      -2 * x4*x7*x8*x9                     arcs=(1, 3),(2, 4),(2, 5),(3, 5)              verts=[1, 2, 3, 4, 5]
+      +2 * x4*x6*x7*x8                     arcs=(1, 3),(1, 5),(2, 4),(2, 5)              verts=[1, 2, 3, 4, 5]
+      +2 * x4*x5*x8*x9                     arcs=(1, 3),(1, 4),(2, 5),(3, 5)              verts=[1, 2, 3, 4, 5]
+      -2 * x4*x5*x7*x9                     arcs=(1, 3),(1, 4),(2, 4),(3, 5)              verts=[1, 2, 3, 4, 5]
+      +2 * x4*x5*x7*x8                     arcs=(1, 3),(1, 4),(2, 4),(2, 5)              verts=[1, 2, 3, 4, 5]
+      +2 * x3*x5*x7*x8                     arcs=(0, 5),(1, 4),(2, 4),(2, 5)              verts=[0, 1, 2, 4, 5]
+      +2 * x3*x5*x6*x7                     arcs=(0, 5),(1, 4),(1, 5),(2, 4)              verts=[0, 1, 2, 4, 5]
+      +2 * x3*x4*x5*x9                     arcs=(0, 5),(1, 3),(1, 4),(3, 5)              verts=[0, 1, 3, 4, 5]
+      +2 * x2*x7*x8*x9                     arcs=(0, 4),(2, 4),(2, 5),(3, 5)              verts=[0, 2, 3, 4, 5]
+    ... and 51 more terms
+
+  IV. VARIANCE DECOMPOSITION BY DEGREE
+  --------------------------------------------------
+
+  Mean H = 29.0000
+  Total variance = 104.5625
+
+  Degree 1: variance contribution =   182.00 (174.1%)
+  Degree 2: variance contribution =    47.50 ( 45.4%)
+  Degree 3: variance contribution =    13.38 ( 12.8%)
+  Degree 4: variance contribution =     2.16 (  2.1%)
+  Total from Parseval: 245.0312 (should be 104.5625)
+
+  V. TOP 20 MOST IMPORTANT TERMS (BY VARIANCE CONTRIBUTION)
+  --------------------------------------------------
+
+  Rank   Coeff     Var%                       Term                                      Arcs
+     1     +12   34.43%                         x2                                  [(0, 4)]
+     2     +12   34.43%                         x3                                  [(0, 5)]
+     3     +12   34.43%                         x5                                  [(1, 4)]
+     4     +12   34.43%                         x6                                  [(1, 5)]
+     5      +6    8.61%                         x1                                  [(0, 3)]
+     6      +6    8.61%                         x4                                  [(1, 3)]
+     7      +6    8.61%                         x7                                  [(2, 4)]
+     8      +6    8.61%                         x8                                  [(2, 5)]
+     9      -8    3.83%                      x0*x3                          [(0, 2), (0, 5)]
+    10      -8    3.83%                      x2*x3                          [(0, 4), (0, 5)]
+    11      -8    3.83%                      x3*x6                          [(0, 5), (1, 5)]
+    12      -8    3.83%                      x3*x9                          [(0, 5), (3, 5)]
+    13      -6    2.15%                      x0*x1                          [(0, 2), (0, 3)]
+    14      -6    2.15%                      x1*x2                          [(0, 3), (0, 4)]
+    15      -6    2.15%                      x6*x8                          [(1, 5), (2, 5)]
+    16      -6    2.15%                      x8*x9                          [(2, 5), (3, 5)]
+    17      -2    0.96%                         x0                                  [(0, 2)]
+    18      -4    0.96%                      x0*x2                          [(0, 2), (0, 4)]
+    19      -4    0.96%                      x1*x3                          [(0, 3), (0, 5)]
+    20      +4    0.96%                      x0*x5                          [(0, 2), (1, 4)]
+  Cumulative top 20: 199.9%
+
+  VI. THE COMBINATORIAL NATURE
+  --------------------------------------------------
+
+  Positive terms: 100
+  Negative terms: 112
+
+  Variance by degree (Parseval):
+    Degree 1:   182.00 (174.1%)
+    Degree 2:    47.50 ( 45.4%)
+    Degree 3:    13.38 ( 12.8%)
+    Degree 4:     2.16 (  2.1%)
+    Degree 5:     0.00 (  0.0%)
+
+  Linear coefficients (the main effects):
+    a_{0} =   -2  (arc (0, 2), skip 2)
+    a_{1} =   +6  (arc (0, 3), skip 3)
+    a_{2} =  +12  (arc (0, 4), skip 4)
+    a_{3} =  +12  (arc (0, 5), skip 5)
+    a_{4} =   +6  (arc (1, 3), skip 2)
+    a_{5} =  +12  (arc (1, 4), skip 3)
+    a_{6} =  +12  (arc (1, 5), skip 4)
+    a_{7} =   +6  (arc (2, 4), skip 2)
+    a_{8} =   +6  (arc (2, 5), skip 3)
+    a_{9} =   -2  (arc (3, 5), skip 2)
+
+  CONCLUSION:
+  H on the tiling hypercube is a degree-? polynomial with ? nonzero terms.
+  Max degree: 4
+  Total nonzero terms: 213
+  Terms per degree: {0: 1, 1: 10, 2: 44, 3: 77, 4: 81}
+
+  WHY THE LINEAR MODEL FAILS:
+  Linear terms explain only 174.1% of variance.
+  Quadratic terms add 45.4%.
+  Cubic terms add 12.8%.
+  Together, degrees 1-3 explain 232.3%.
+  The remaining -132.3% requires degrees 4+.
+
+  THE COMBINATORIAL NATURE IS:
+  H depends on SPECIFIC CONFIGURATIONS of 2-4 bits,
+  not on aggregate statistics (like total forward count).
+  Each configuration corresponds to a tournament substructure
+  (a 3-cycle, a 5-cycle, or a disjoint pair of cycles)
+  whose presence or absence shifts H by a fixed amount.
+

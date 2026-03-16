@@ -1,0 +1,275 @@
+
+  THE EXACT POLYNOMIAL FOR H(tiling)
+
+======================================================================
+
+  I. THE 20 TRIPLES AND THEIR CYCLICITY CONDITIONS
+  --------------------------------------------------
+
+      Triple   #path               Cycle 1 condition               Cycle 2
+      ------   -----  ------------------------------  --------------------
+  {0,1,2}       2                          {0: 0}            IMPOSSIBLE
+  {0,1,3}       1                    {4: 1, 1: 0}            IMPOSSIBLE
+  {0,1,4}       1                    {5: 1, 2: 0}            IMPOSSIBLE
+  {0,1,5}       1                    {6: 1, 3: 0}            IMPOSSIBLE
+  {0,2,3}       1                    {0: 1, 1: 0}            IMPOSSIBLE
+  {0,2,4}       0              {0: 1, 7: 1, 2: 0}    {2: 1, 7: 0, 0: 0}
+  {0,2,5}       0              {0: 1, 8: 1, 3: 0}    {3: 1, 8: 0, 0: 0}
+  {0,3,4}       1                    {1: 1, 2: 0}            IMPOSSIBLE
+  {0,3,5}       0              {1: 1, 9: 1, 3: 0}    {3: 1, 9: 0, 1: 0}
+  {0,4,5}       1                    {2: 1, 3: 0}            IMPOSSIBLE
+  {1,2,3}       2                          {4: 0}            IMPOSSIBLE
+  {1,2,4}       1                    {7: 1, 5: 0}            IMPOSSIBLE
+  {1,2,5}       1                    {8: 1, 6: 0}            IMPOSSIBLE
+  {1,3,4}       1                    {4: 1, 5: 0}            IMPOSSIBLE
+  {1,3,5}       0              {4: 1, 9: 1, 6: 0}    {6: 1, 9: 0, 4: 0}
+  {1,4,5}       1                    {5: 1, 6: 0}            IMPOSSIBLE
+  {2,3,4}       2                          {7: 0}            IMPOSSIBLE
+  {2,3,5}       1                    {9: 1, 8: 0}            IMPOSSIBLE
+  {2,4,5}       1                    {7: 1, 8: 0}            IMPOSSIBLE
+  {3,4,5}       2                          {9: 0}            IMPOSSIBLE
+
+  II. c3 AS A SUM OF BIT-CONDITIONS
+  --------------------------------------------------
+
+  c3 polynomial has 33 terms:
+    Degree 0: 1 terms
+       +4 * 1
+    Degree 1: 8 terms
+       +1 * x1
+       +2 * x2
+       +2 * x3
+       +1 * x4
+       +2 * x5
+       +2 * x6
+       +1 * x7
+       +1 * x8
+    Degree 2: 24 terms
+
+  III. VERIFY THE POLYNOMIAL
+  --------------------------------------------------
+
+  VERIFIED: c3 polynomial matches brute force for all 1024 tilings!
+
+  IV. THE STRUCTURE OF THE c3 POLYNOMIAL
+  --------------------------------------------------
+
+  Constant term (all backward): 4
+  This means: with ALL non-path arcs backward, c3 = 4
+
+  Linear terms (effect of flipping bit k from 0 to 1):
+    x0 (arc (0, 2), skip 2): coefficient = +0
+    x1 (arc (0, 3), skip 3): coefficient = +1
+    x2 (arc (0, 4), skip 4): coefficient = +2
+    x3 (arc (0, 5), skip 5): coefficient = +2
+    x4 (arc (1, 3), skip 2): coefficient = +1
+    x5 (arc (1, 4), skip 3): coefficient = +2
+    x6 (arc (1, 5), skip 4): coefficient = +2
+    x7 (arc (2, 4), skip 2): coefficient = +1
+    x8 (arc (2, 5), skip 3): coefficient = +1
+    x9 (arc (3, 5), skip 2): coefficient = +0
+
+  Quadratic terms (pairwise interactions):
+    x0*x1 ((0, 2)x(0, 3), share {0}): -1
+    x0*x2 ((0, 2)x(0, 4), share {0}): -1
+    x0*x3 ((0, 2)x(0, 5), share {0}): -1
+    x0*x7 ((0, 2)x(2, 4), share {2}): +1
+    x0*x8 ((0, 2)x(2, 5), share {2}): +1
+    x1*x2 ((0, 3)x(0, 4), share {0}): -1
+    x1*x3 ((0, 3)x(0, 5), share {0}): -1
+    x1*x4 ((0, 3)x(1, 3), share {3}): -1
+    x1*x9 ((0, 3)x(3, 5), share {3}): +1
+    x2*x3 ((0, 4)x(0, 5), share {0}): -1
+    x2*x5 ((0, 4)x(1, 4), share {4}): -1
+    x2*x7 ((0, 4)x(2, 4), share {4}): -1
+    x3*x6 ((0, 5)x(1, 5), share {5}): -1
+    x3*x8 ((0, 5)x(2, 5), share {5}): -1
+    x3*x9 ((0, 5)x(3, 5), share {5}): -1
+    x4*x5 ((1, 3)x(1, 4), share {1}): -1
+    x4*x6 ((1, 3)x(1, 5), share {1}): -1
+    x4*x9 ((1, 3)x(3, 5), share {3}): +1
+    x5*x6 ((1, 4)x(1, 5), share {1}): -1
+    x5*x7 ((1, 4)x(2, 4), share {4}): -1
+    x6*x8 ((1, 5)x(2, 5), share {5}): -1
+    x6*x9 ((1, 5)x(3, 5), share {5}): -1
+    x7*x8 ((2, 4)x(2, 5), share {2}): -1
+    x8*x9 ((2, 5)x(3, 5), share {5}): -1
+
+  Cubic terms (3-way interactions):
+
+  V. NOW THE FULL H POLYNOMIAL
+  --------------------------------------------------
+
+  10 vertex-disjoint triple partitions:
+    (0, 1, 2) | (3, 4, 5)
+    (0, 1, 3) | (2, 4, 5)
+    (0, 1, 4) | (2, 3, 5)
+    (0, 1, 5) | (2, 3, 4)
+    (0, 2, 3) | (1, 4, 5)
+    (0, 2, 4) | (1, 3, 5)
+    (0, 2, 5) | (1, 3, 4)
+    (0, 3, 4) | (1, 2, 5)
+    (0, 3, 5) | (1, 2, 4)
+    (0, 4, 5) | (1, 2, 3)
+
+  H polynomial has 88 terms:
+    Degree 0: 1 terms
+    Degree 1: 10 terms
+    Degree 2: 34 terms
+    Degree 3: 24 terms
+    Degree 4: 19 terms
+
+  Verifying H polynomial...
+  ERROR at (0, 0, 0, 0, 0, 0, 0, 0, 0, 0): poly=13, brute=17
+  ERROR at (1, 0, 0, 0, 0, 0, 0, 0, 0, 0): poly=9, brute=15
+  ERROR at (0, 1, 0, 0, 0, 0, 0, 0, 0, 0): poly=15, brute=23
+  1003 mismatches found!
+
+  VI. THE H POLYNOMIAL COEFFICIENTS
+  --------------------------------------------------
+
+  DEGREE 0 (constant):
+    13
+
+  DEGREE 1 (linear effects of each bit):
+     -4 * x0 (arc (0, 2), skip 2)
+     +2 * x1 (arc (0, 3), skip 3)
+     +8 * x2 (arc (0, 4), skip 4)
+     +4 * x3 (arc (0, 5), skip 5)
+     +2 * x4 (arc (1, 3), skip 2)
+     +4 * x5 (arc (1, 4), skip 3)
+     +8 * x6 (arc (1, 5), skip 4)
+     +2 * x7 (arc (2, 4), skip 2)
+     +2 * x8 (arc (2, 5), skip 3)
+     -4 * x9 (arc (3, 5), skip 2)
+  Sum of linear coefficients: 24
+
+  DEGREE 2 (pairwise interactions):
+     -2 * x0*x1 ((0, 2)x(0, 3), share {0})
+     -2 * x0*x2 ((0, 2)x(0, 4), share {0})
+     -2 * x0*x3 ((0, 2)x(0, 5), share {0})
+     +4 * x0*x5 ((0, 2)x(1, 4), disjoint)
+     +2 * x0*x7 ((0, 2)x(2, 4), share {2})
+     +2 * x0*x8 ((0, 2)x(2, 5), share {2})
+     +4 * x0*x9 ((0, 2)x(3, 5), disjoint)
+     -2 * x1*x2 ((0, 3)x(0, 4), share {0})
+     -2 * x1*x3 ((0, 3)x(0, 5), share {0})
+     -2 * x1*x4 ((0, 3)x(1, 3), share {3})
+     +4 * x1*x8 ((0, 3)x(2, 5), disjoint)
+     +2 * x1*x9 ((0, 3)x(3, 5), share {3})
+     -6 * x2*x3 ((0, 4)x(0, 5), share {0})
+     -4 * x2*x4 ((0, 4)x(1, 3), disjoint)
+     -2 * x2*x5 ((0, 4)x(1, 4), share {4})
+     +4 * x2*x6 ((0, 4)x(1, 5), disjoint)
+     -2 * x2*x7 ((0, 4)x(2, 4), share {4})
+     +4 * x3*x4 ((0, 5)x(1, 3), disjoint)
+     -6 * x3*x6 ((0, 5)x(1, 5), share {5})
+     +4 * x3*x7 ((0, 5)x(2, 4), disjoint)
+     -2 * x3*x8 ((0, 5)x(2, 5), share {5})
+     -2 * x3*x9 ((0, 5)x(3, 5), share {5})
+     -2 * x4*x5 ((1, 3)x(1, 4), share {1})
+     -2 * x4*x6 ((1, 3)x(1, 5), share {1})
+     +4 * x4*x7 ((1, 3)x(2, 4), disjoint)
+     +2 * x4*x9 ((1, 3)x(3, 5), share {3})
+     -2 * x5*x6 ((1, 4)x(1, 5), share {1})
+     -2 * x5*x7 ((1, 4)x(2, 4), share {4})
+     +4 * x5*x9 ((1, 4)x(3, 5), disjoint)
+     -4 * x6*x7 ((1, 5)x(2, 4), disjoint)
+     -2 * x6*x8 ((1, 5)x(2, 5), share {5})
+     -2 * x6*x9 ((1, 5)x(3, 5), share {5})
+     -2 * x7*x8 ((2, 4)x(2, 5), share {2})
+     -2 * x8*x9 ((2, 5)x(3, 5), share {5})
+
+  DEGREE 3: 24 terms
+     -4 * x0*x1*x5 (verts [0, 1, 2, 3, 4])
+     -4 * x0*x2*x6 (verts [0, 1, 2, 4, 5])
+     -4 * x0*x3*x4 (verts [0, 1, 2, 3, 5])
+     +4 * x0*x4*x8 (verts [0, 1, 2, 3, 5])
+     -4 * x0*x5*x6 (verts [0, 1, 2, 4, 5])
+     +4 * x0*x6*x7 (verts [0, 1, 2, 4, 5])
+     -4 * x1*x2*x8 (verts [0, 2, 3, 4, 5])
+     -4 * x1*x3*x7 (verts [0, 2, 3, 4, 5])
+     -4 * x1*x4*x7 (verts [0, 1, 2, 3, 4])
+     -4 * x1*x6*x8 (verts [0, 1, 2, 3, 5])
+     +4 * x1*x7*x9 (verts [0, 2, 3, 4, 5])
+     +4 * x2*x3*x4 (verts [0, 1, 3, 4, 5])
+     -4 * x2*x4*x6 (verts [0, 1, 3, 4, 5])
+     +4 * x2*x4*x9 (verts [0, 1, 3, 4, 5])
+     -4 * x2*x5*x9 (verts [0, 1, 3, 4, 5])
+     -4 * x2*x6*x7 (verts [0, 1, 2, 4, 5])
+     -4 * x2*x6*x9 (verts [0, 1, 3, 4, 5])
+     -4 * x3*x4*x5 (verts [0, 1, 3, 4, 5])
+     -4 * x3*x4*x8 (verts [0, 1, 2, 3, 5])
+     -4 * x3*x5*x7 (verts [0, 1, 2, 4, 5])
+     +4 * x3*x6*x7 (verts [0, 1, 2, 4, 5])
+     -4 * x3*x7*x9 (verts [0, 2, 3, 4, 5])
+     -4 * x4*x7*x8 (verts [1, 2, 3, 4, 5])
+     -4 * x5*x8*x9 (verts [1, 2, 3, 4, 5])
+
+  DEGREE 4: 19 terms
+    Coefficients: [-4, 4]
+    Sum: 28
+
+  VII. VARIANCE DECOMPOSITION BY DEGREE
+  --------------------------------------------------
+
+  Mean H = 29.0000
+  Total variance = 179.5000
+
+  Degree 1: variance =    52.00 ( 29.0% of total), cov(H, H_1) =    -4.50
+  Degree 2: variance =    58.50 ( 32.6% of total), cov(H, H_2) =    22.25
+  Degree 3: variance =    61.00 ( 34.0% of total), cov(H, H_3) =    18.50
+  Degree 4: variance =    16.44 (  9.2% of total), cov(H, H_4) =    -6.81
+
+  VIII. THE KEY INSIGHT: WHAT DRIVES H?
+  --------------------------------------------------
+
+  Top 20 largest-magnitude coefficients:
+     +13 * 1                     deg=0, verts=[]
+      +8 * x6                    deg=1, verts=[1, 5]
+      +8 * x2                    deg=1, verts=[0, 4]
+      -6 * x3*x6                 deg=2, verts=[0, 1, 5]
+      -6 * x2*x3                 deg=2, verts=[0, 4, 5]
+      +4 * x5                    deg=1, verts=[1, 4]
+      +4 * x3                    deg=1, verts=[0, 5]
+      -4 * x9                    deg=1, verts=[3, 5]
+      -4 * x0                    deg=1, verts=[0, 2]
+      +4 * x0*x9                 deg=2, verts=[0, 2, 3, 5]
+      +4 * x4*x7                 deg=2, verts=[1, 2, 3, 4]
+      -4 * x4*x7*x8              deg=3, verts=[1, 2, 3, 4, 5]
+      -4 * x1*x4*x7              deg=3, verts=[0, 1, 2, 3, 4]
+      +4 * x1*x4*x7*x8           deg=4, verts=[0, 1, 2, 3, 4, 5]
+      +4 * x5*x9                 deg=2, verts=[1, 3, 4, 5]
+      -4 * x5*x8*x9              deg=3, verts=[1, 2, 3, 4, 5]
+      -4 * x2*x5*x9              deg=3, verts=[0, 1, 3, 4, 5]
+      +4 * x2*x5*x8*x9           deg=4, verts=[0, 1, 2, 3, 4, 5]
+      -4 * x6*x7                 deg=2, verts=[1, 2, 4, 5]
+      +4 * x3*x6*x7              deg=3, verts=[0, 1, 2, 4, 5]
+
+  IX. THE COMBINATORIAL NATURE REVEALED
+  --------------------------------------------------
+
+  How many H-polynomial terms involve each bit:
+    x0 (arc (0, 2), skip 2): in 23 terms
+    x1 (arc (0, 3), skip 3): in 18 terms
+    x2 (arc (0, 4), skip 4): in 24 terms
+    x3 (arc (0, 5), skip 5): in 21 terms
+    x4 (arc (1, 3), skip 2): in 27 terms
+    x5 (arc (1, 4), skip 3): in 21 terms
+    x6 (arc (1, 5), skip 4): in 24 terms
+    x7 (arc (2, 4), skip 2): in 27 terms
+    x8 (arc (2, 5), skip 3): in 18 terms
+    x9 (arc (3, 5), skip 2): in 23 terms
+
+  Total coefficient weight involving each bit:
+    x0 (arc (0, 2), skip 2): weight = 82
+    x1 (arc (0, 3), skip 3): weight = 60
+    x2 (arc (0, 4), skip 4): weight = 94
+    x3 (arc (0, 5), skip 5): weight = 80
+    x4 (arc (1, 3), skip 2): weight = 98
+    x5 (arc (1, 4), skip 3): weight = 76
+    x6 (arc (1, 5), skip 4): weight = 94
+    x7 (arc (2, 4), skip 2): weight = 98
+    x8 (arc (2, 5), skip 3): weight = 60
+    x9 (arc (3, 5), skip 2): weight = 82
+
