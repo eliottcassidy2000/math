@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-16-S90au — 2026-03-16: THM-227 k-nacci Mersenne Identity, Formal Group, Witt Vectors
+
+**Account:** opus
+**Continuation of:** opus-2026-03-16-S90ao (continued from context-truncated session)
+**Summary of work:** Proved and explored the k-nacci Mersenne identity and its deep connections:
+1. **THM-227 PROVED**: Tr(M_k^n) = 2^n - 1 for all 1 <= n <= k (k-nacci trace = Mersenne number in the "Newton range"). Proof: induction on Newton's identities with all-(-1) coefficients.
+2. **Dominant eigenvalue identity**: tau_k^k = 1/(2 - tau_k), proved from augmented polynomial. Golden ratio phi^2 = phi+1 is the k=2 case.
+3. **Trace triangle and universal zone**: T(k,n) = 2^n-1 for n<=k (independent of k), with phase transition at n=k where growth rate drops from 2 to tau_k. Deficit D(k,k+j) = O(k) for each j.
+4. **Formal group law**: F(x,y) = (x+y)/(1+xy) on Cayley addresses IS multiplication (F(x_m, x_n) = x_{mn}). Cayley transform Q is a group homomorphism. [m]-series gives exponentiation.
+5. **Witt vector interpretation**: Mersenne numbers 2^n-1 are the ghost components of [2]-[1] in the big Witt ring. Necklace polynomial M(n,2) gives Teichmuller coordinates.
+6. **Artin's conjecture connection**: Tr(M_k^n) mod p = 0 iff ord_p(2) | n. Forbidden values = first Mersenne primes in trace sequence.
+7. **Grand synthesis**: 10-layer chain connecting tanh -> formal group -> multiplication -> powers of 2 -> Mersenne -> k-nacci -> Witt vectors -> necklaces -> periodic orbits -> forbidden H.
+**New contributions:** THM-227, HYP-1600, 8 scripts (s90ao through s90au)
+**Unresolved threads:** Paper draft incorporating formal group law perspective; n=9 simplicial Redei still pending
+
 ## opus-2026-03-15-S72d — 2026-03-15: Seesaw Identity and β₁·β₃=0 Mechanism
 
 **Account:** opus
