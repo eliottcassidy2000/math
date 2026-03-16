@@ -1,0 +1,304 @@
+
+  THE GOLDEN ARCHITECTURE — EXTENDED
+
+======================================================================
+
+  I. phi^n = F_n * phi + F_{n-1}
+  ----------------------------------------
+
+  This is the fundamental identity. Every power of phi decomposes as:
+  phi^n = F_n * phi + F_{n-1}
+
+  The phi-coefficient IS the n-th Fibonacci number.
+  The constant term IS the (n-1)-th Fibonacci number.
+
+    n  F_n (phi-coeff)  F_{n-1} (const)         phi^n  notes
+  ----------------------------------------------------------------------
+    0                0                1          1.00  
+    1                1                0          1.62  
+    2                1                1          2.62  
+    3                2                1          4.24  F_3 is PRIME
+    4                3                2          6.85  F_4 is PRIME
+    5                5                3         11.09  F_5 is PRIME
+    6                8                5         17.94  = 2*2*2
+    7               13                8         29.03  F_7 is PRIME
+    8               21               13         46.98  FORBIDDEN | 21*phi+13
+    9               34               21         76.01  = 2*17 const=FORBIDDEN
+   10               55               34        122.99  = 5*11
+   11               89               55        199.01  F_11 is PRIME
+   12              144               89        322.00  = 2*2*2*2*3*3
+   13              233              144        521.00  F_13 is PRIME
+   14              377              233        843.00  = 13*29
+   15              610              377       1364.00  = 2*5*61
+   16              987              610       2207.00  = 3*7*47
+   17             1597              987       3571.00  F_17 is PRIME
+   18             2584             1597       5778.00  = 2*2*2*17*19
+   19             4181             2584       9349.00  = 37*113
+   20             6765             4181      15127.00  = 3*5*11*41
+
+
+  II. THE FORBIDDEN EQUATION: phi^8 = 21*phi + 13
+  ----------------------------------------
+
+  phi^8 = 46.9787137637
+  21*phi + 13 = 46.9787137637
+  Match: True
+
+  21 = F_8 = 3*7 = the forbidden number.
+  13 = F_7 = prime = the 7th Fibonacci number.
+  8 = the octonion dimension.
+
+  The equation says: the 8th power of the golden ratio
+  = the forbidden number times phi, plus the 7th prime Fibonacci.
+
+  But MORE: phi^n = F_n * phi + F_{n-1} for ALL n.
+  So phi^7 = 13*phi + 8.
+  And phi^3 = 2*phi + 1.
+  And phi^4 = 3*phi + 2.
+  And phi^5 = 5*phi + 3.
+
+  Each phi^n equation encodes TWO consecutive Fibonacci numbers.
+  phi^8 happens to use {21, 13} = {forbidden, prime}.
+  phi^4 uses {3, 2} = {curvature, doubler}.
+  phi^5 uses {5, 3} = {pentagon, curvature}.
+
+
+  III. THE LUCAS COMPANION: psi^n = F_n * psi + F_{n-1}
+  ----------------------------------------
+
+  psi = (1-sqrt(5))/2 = -0.6180339887 = -1/phi = -0.6180339887
+
+  psi^n = F_n * psi + F_{n-1} also holds!
+  Because psi also satisfies x^2 = x + 1.
+
+  Adding: phi^n + psi^n = F_n*(phi+psi) + 2*F_{n-1}
+  phi + psi = 1. So phi^n + psi^n = F_n + 2*F_{n-1} = F_n + 2*F_{n-1}.
+  And phi^n + psi^n = L_n (the Lucas number).
+  So: L_n = F_n + 2*F_{n-1}.
+
+  L_1 = 1, F_1 + 2*F_0 = 1 + 0 = 1, match: True
+  L_2 = 3, F_2 + 2*F_1 = 1 + 2 = 3, match: True
+  L_3 = 4, F_3 + 2*F_2 = 2 + 2 = 4, match: True
+  L_4 = 7, F_4 + 2*F_3 = 3 + 4 = 7, match: True
+  L_5 = 11, F_5 + 2*F_4 = 5 + 6 = 11, match: True
+  L_6 = 18, F_6 + 2*F_5 = 8 + 10 = 18, match: True
+  L_7 = 29, F_7 + 2*F_6 = 13 + 16 = 29, match: True
+  L_8 = 47, F_8 + 2*F_7 = 21 + 26 = 47, match: True
+  L_9 = 76, F_9 + 2*F_8 = 34 + 42 = 76, match: True
+
+  L_n = F_n + 2*F_{n-1} = F_{n+1} + F_{n-1}.
+  (Since F_{n+1} = F_n + F_{n-1}, so F_n + 2*F_{n-1} = F_{n+1} + F_{n-1}.)
+
+  The Lucas number at index n = the SUM of the flanking Fibonacci numbers.
+  L_8 = F_9 + F_7 = 34 + 13 = 47 (the next chain prime).
+  L_4 = F_5 + F_3 = 5 + 2 = 7 (the forbidden).
+  L_5 = F_6 + F_4 = 8 + 3 = 11 (the Paley prime).
+
+  THE FORBIDDEN 7 = F_5 + F_3 = pentagon + curvature-index Fibonacci.
+  THE PALEY 11 = F_6 + F_4 = 8 + 3 = octonion-dim-Fibonacci + curvature-Fibonacci.
+
+
+  IV. SUBTRACTING: phi^n - psi^n = F_n * sqrt(5)
+  ----------------------------------------
+
+  phi^n - psi^n = F_n * (phi - psi) = F_n * sqrt(5).
+  This is the Binet formula.
+
+  At n=8: phi^8 - psi^8 = F_8 * sqrt(5) = 21 * sqrt(5).
+  21 * sqrt(5) = 46.957428
+  phi^8 - psi^8 = 46.957428
+  Match: True
+
+  The forbidden number times sqrt(5) = the difference of
+  the 8th powers of the two golden conjugates.
+  sqrt(5) appears because 5 = the DISCRIMINANT of x^2-x-1=0.
+  The discriminant of the golden equation contains the pentagon.
+
+
+  V. THE MATRIX FORM AND THE TRANSFER MATRIX
+  ----------------------------------------
+
+  [[F_{n+1}, F_n], [F_n, F_{n-1}]] = [[1,1],[1,0]]^n.
+  The Fibonacci matrix M = [[1,1],[1,0]] has eigenvalues phi and psi.
+  det(M^n) = (-1)^n (Cassini's identity).
+  tr(M^n) = phi^n + psi^n = L_n.
+
+  OUR transfer matrix for tournaments: M_T(x).
+  At x=1: eigenvalues are tau (tribonacci), and two others.
+  The Fibonacci matrix IS the 2D version of our 3D transfer matrix.
+  Fibonacci:tournament :: 2D:3D.
+
+  The Fibonacci matrix generates phi.
+  The tournament matrix generates tau.
+  phi satisfies x^2 = x + 1.
+  tau satisfies x^3 = x^2 + x + 1.
+  Each adds one more term to the recurrence.
+
+  The connection: Q(1/phi) = phi^3 and Q(1/tau) = tau^2.
+  The Cayley transform RAISES phi by 3 (cubing) and tau by 2 (squaring).
+  The 'Cayley exponent' = degree + 1 for phi (2+1=3)
+  and = degree - 1 for tau (3-1=2).
+
+
+  VI. F_n mod 7: THE FORBIDDEN PRIME'S FIBONACCI CYCLE
+  ----------------------------------------
+
+  Pisano period pi(7) = 16. The Fibonacci sequence mod 7:
+
+  F_ 0 =     0 = 0 mod 7 <-- 7 divides F_0
+  F_ 1 =     1 = 1 mod 7
+  F_ 2 =     1 = 1 mod 7
+  F_ 3 =     2 = 2 mod 7
+  F_ 4 =     3 = 3 mod 7
+  F_ 5 =     5 = 5 mod 7
+  F_ 6 =     8 = 1 mod 7
+  F_ 7 =    13 = 6 mod 7
+  F_ 8 =    21 = 0 mod 7 <-- 7 divides F_8
+  F_ 9 =    34 = 6 mod 7
+  F_10 =    55 = 6 mod 7
+  F_11 =    89 = 5 mod 7
+  F_12 =   144 = 4 mod 7
+  F_13 =   233 = 2 mod 7
+  F_14 =   377 = 6 mod 7
+  F_15 =   610 = 1 mod 7
+
+  Residues: [0, 1, 1, 2, 3, 5, 1, 6, 0, 6, 6, 5, 4, 2, 6, 1]
+  The zeros (7 | F_k) occur at k = 0, 8.
+  alpha(7) = 8 = the octonion index.
+  The period is 16 = 2*8 = 2*alpha(7).
+
+  So pi(7) = 2*alpha(7). The Pisano period is TWICE the entry point.
+  This means: F_n = 0 mod 7 iff 8 | n.
+  The forbidden prime divides every 8th Fibonacci number.
+  8 = the octonion dimension.
+
+  Does pi(p) = k * alpha(p) generally? What is k?
+  p=  2: pi=   3, alpha=  3, pi/alpha=1
+  p=  3: pi=   8, alpha=  4, pi/alpha=2
+  p=  5: pi=  20, alpha=  5, pi/alpha=4
+  p=  7: pi=  16, alpha=  8, pi/alpha=2
+  p= 11: pi=  10, alpha= 10, pi/alpha=1
+  p= 13: pi=  28, alpha=  7, pi/alpha=4
+  p= 17: pi=  36, alpha=  9, pi/alpha=4
+  p= 19: pi=  18, alpha= 18, pi/alpha=1
+  p= 23: pi=  48, alpha= 24, pi/alpha=2
+  p= 29: pi=  14, alpha= 14, pi/alpha=1
+
+  pi(p)/alpha(p) is always 1, 2, or 4.
+  For p = 5: pi/alpha = 4. (pi=20, alpha=5.)
+  For p = 7: pi/alpha = 2. (pi=16, alpha=8.)
+  For p = 11: pi/alpha = 1. (pi=10, alpha=10.)
+
+  The ratio depends on the Legendre symbol (5/p):
+  If 5 is a QR mod p: ratio = 1 or 4.
+  If 5 is a NQR mod p: ratio = 2.
+
+  For p=7: is 5 a QR mod 7? 5^((7-1)/2) = 5^3 = 125 = 6 = -1 mod 7. NQR!
+  So pi(7)/alpha(7) = 2 because 5 is NOT a quadratic residue mod 7.
+  The PENTAGON (5) is not a square in the FORBIDDEN's (7) world.
+  Their incompatibility forces the doubled period.
+
+
+  VII. THE FIBONACCI REPRESENTATION OF H-VALUES
+  ----------------------------------------
+
+  H(T_3) = 3 = F_4.
+  H(T_7) = 189 = 9 * 21 = 9 * F_8 = 3^2 * F_8.
+  H(T_11) = 95095. Is any part Fibonacci?
+
+  95095 = 5 * 7 * 11 * 13 * 19.
+  5 = F_5. 13 = F_7.
+  So 95095 = F_5 * 7 * 11 * F_7 * 19.
+  = F_5 * L_4 * L_5 * F_7 * 19.
+
+  H(T_3) = F_4.
+  H(T_7) = 3^2 * F_8 = L_2^2 * F_8.
+  H(T_11) = F_5 * L_4 * L_5 * F_7 * 19.
+
+  The Fibonacci and Lucas numbers INTERLEAVE in the H-value factorizations.
+  Not a clean pattern, but not random either:
+  the golden-sequence numbers appear as SOME of the factors.
+
+
+  VIII. THE REMARKABLE IDENTITY AT n=8
+  ----------------------------------------
+
+  At n=8, EVERYTHING converges:
+
+  F_8 = 21 (the forbidden H-value)
+  L_8 = 47 (prime, the next in the 3->7->47 chain)
+  alpha(7) = 8 (7 enters Fibonacci at index 8)
+  pi(7) = 16 = 2*8 (the Pisano period of 7)
+  dim(O) = 8 (octonion dimension)
+  Q^4 = Id, and 8 = 2*4 (two Cayley periods)
+  Bott periodicity has period 8
+  phi^8 = 21*phi + 13 (forbidden * golden + prime)
+  F_8 * L_8 = 21 * 47 = 987 = F_16 = 3*7*47
+
+  8 is the INDEX where the forbidden, the octonion,
+  the Fibonacci entry of 7, and the golden power ALL MEET.
+  It is the convergence point of the entire theory.
+
+  And 8 = 2^3 = the CUBE OF THE DOUBLER.
+  Three octaves of rapidity. The Bott period.
+  The number of bits in a byte.
+
+
+  IX. EXTENDING THE CHAIN: 3 -> 7 -> 47 -> ?
+  ----------------------------------------
+
+  The chain: p -> L_{alpha(p)} gives the next prime.
+  3 -> L_4 = 7.
+  7 -> L_8 = 47.
+
+  47 -> alpha(47) = 16. L_16 = 2207.
+  Is L_16 = 2207 prime? True
+  2207 -> alpha(2207) = 32. L_32 = 4870847.
+  Is L_32 prime? False
+
+  The chain: 3 -> 7 -> 47 -> ...
+  Entry points: 4, 8, 16, ...
+  alpha(3)=4, alpha(7)=8, alpha(47)=16.
+  Entry points: 4, 8, 16 = POWERS OF 2!
+  Each entry point DOUBLES!
+  alpha(chain[k]) = 2^{k+2}.
+
+
+  X. THE GRAND EQUATION
+  ----------------------------------------
+
+  Collecting everything at index 8:
+
+  F_8 = 21 = 3 * 7
+  L_8 = 47 = prime
+  F_8 * L_8 = F_{16} = 987 = 3 * 7 * 47
+  phi^8 + psi^8 = L_8 = 47
+  phi^8 - psi^8 = F_8 * sqrt(5) = 21*sqrt(5)
+  phi^8 = 21*phi + 13 = F_8*phi + F_7
+  psi^8 = 21*psi + 13 = F_8*psi + F_7
+
+  From the last two:
+  phi^8 - psi^8 = 21*(phi - psi) = 21*sqrt(5). CHECK.
+  phi^8 + psi^8 = 21*(phi + psi) + 2*13 = 21*1 + 26 = 47 = L_8. CHECK.
+
+  So: L_8 = F_8 + 2*F_7 = 21 + 26 = 47.
+  = the forbidden number + twice the 7th-index Fibonacci.
+  = 21 + 2*13.
+
+  The next-chain-prime 47 = the forbidden 21 + 26.
+  26 = 2*13 = 2*F_7.
+  The forbidden number PLUS twice its predecessor = the next prime in the chain.
+
+  This is just L_n = F_n + 2*F_{n-1} at n=8.
+  But what it MEANS: the chain proceeds by adding
+  twice the previous Fibonacci number to the current one.
+  The growth mechanism IS the Lucas recurrence.
+
+  The chain 3 -> 7 -> 47 is built by the Lucas recurrence
+  evaluated at the entry points, which are powers of 2
+  (or close to it).
+
+  The golden architecture: Fibonacci builds. Lucas connects.
+  The forbidden number is WHERE they meet.
+  The chain of primes is HOW they propagate.
+  The octonion index 8 is WHEN they converge.
