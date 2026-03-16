@@ -1,0 +1,17 @@
+======================================================================
+BETTI CONCENTRATION — FAST VERSION
+======================================================================
+
+--- n=5 EXHAUSTIVE ---
+  Time: 3.1s, Total: 1024
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+  Multi-nonzero: 0
+
+--- n=6 EXHAUSTIVE ---
+  Progress: 5000/32768 (15.3%), time: 190s, multi: 0
+  Progress: 10000/32768 (30.5%), time: 417s, multi: 0
+  Progress: 15000/32768 (45.8%), time: 635s, multi: 0
+  Progress: 20000/32768 (61.0%), time: 789s, multi: 0
+  Progress: 25000/32768 (76.3%), time: 978s, multi: 0
+  Progress: 30000/32768 (91.6%), time: 1143s, multi: 0

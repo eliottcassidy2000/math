@@ -1,0 +1,279 @@
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+======================================================================
+PART 1: TOP EIGENVALUE OF C_T^TC_T
+======================================================================
+n=6: Top eigenvalue of C_T^TC_T across 500 random tournaments:
+  Min top eig: 6.000000
+  Max top eig: 6.000000
+  ALL = 6? True
+  t₃ range: [12, 20]
+
+PROOF that top eigenvalue = n for ALL tournaments with t₃ > 0:
+
+Let C be the FULL constraint matrix (transitive tournament, C(n,3) rows).
+C^TC = n·P where P is projection onto rank-(n-1)(n-2)/2 subspace (THM-224).
+
+For tournament T, C_T is C restricted to its t₃ transitive triple rows.
+Let C_R be the REMOVED rows (cyclic triples). Then:
+  C^TC = C_T^TC_T + C_R^TC_R
+
+So C_T^TC_T = n·P - C_R^TC_R, and eigenvalues of C_T^TC_T ≤ n.
+
+Top eigenvalue = n iff ∃ v with C_T^TC_T·v = n·v, i.e., C_R^TC_R·v = 0.
+This means v ⊥ all rows of C_R, i.e., v is consistent with 
+the REMOVED constraints (even though they're "wrong" for this tournament).
+
+CLAIM: Such v always exists when t₃ ≥ n.
+
+The rows of C_R span a subspace of dimension ≤ |C_R| = C(n,3) - t₃.
+We need v ∈ im(C^T) ∩ ker(C_R), so:
+  dim(im(C^T) ∩ ker(C_R)) ≥ dim(im(C^T)) + dim(ker(C_R)) - E
+  = (n-1)(n-2)/2 + (E - rank(C_R)) - E
+  = (n-1)(n-2)/2 - rank(C_R)
+  ≥ (n-1)(n-2)/2 - (C(n,3) - t₃)
+
+This is > 0 when t₃ > C(n,3) - (n-1)(n-2)/2 = C(n-1,3) = redundancy.
+
+For n=5: C(n-1,3) = C(4,3) = 4. So t₃ > 4, i.e., t₃ ≥ 5. ✓ (min t₃=5)
+For n=6: C(n-1,3) = C(5,3) = 10. So t₃ > 10, i.e., t₃ ≥ 11.
+  But min t₃ at n=6 can be less than 11! Let me check...
+
+Minimum t₃ at n=6 (sampled 2000): 12
+C(n-1,3) = 10
+Need t₃ > 10 for guaranteed top eig = n
+  New min t₃=12, top eig=6.0000, bits=29452
+
+Best min t₃ found at n=6: 12
+
+======================================================================
+PART 2: THE SPECTRAL TRANSITION AT t₃ = max_rank
+======================================================================
+
+At n=5, max_rank = 6. The data shows:
+
+  t₃ < 6 (=5): rank=5, β₁=1 ALWAYS. Not enough constraints.
+  t₃ = 6:      rank=5 or 6. DEPENDS ON WHICH triples.
+  t₃ > 6:      rank=6 MORE LIKELY. Redundancy helps.
+  t₃ ≥ 8:      rank=6 ALWAYS.
+
+The transition at t₃ = max_rank is the CRITICAL POINT.
+At this point, independence ratio = max_rank/t₃ = 1.
+
+Below: independence ratio > 1 (system is "overloaded" — would need 
+  more independent constraints than exist).
+Above: independence ratio < 1 (system has redundancy).
+
+The transitive tournament has ratio = 3/n (maximum redundancy).
+
+
+======================================================================
+PART 3: THM-217 AT x = n²·REDUNDANCY
+======================================================================
+
+THM-217 transfer matrix M(x) = [[1,2x,0],[0,0,1],[1,x,0]]
+Char poly: λ³ - λ² - xλ - x = 0
+
+At x = n(n-3) = n²·(redundancy fraction):
+  λ³ - λ² - n(n-3)λ - n(n-3) = 0
+
+At n=6: λ³ - λ² - 18λ - 18 = (λ+3)(λ² - 4λ - 6) = 0
+  Eigenvalues: -3, 2+√10, 2-√10
+
+MEANING of the eigenvalues:
+  α = 3-n = -n·redundancy_fraction
+    → This eigenvalue DIRECTLY encodes the constraint redundancy.
+    → At n=6: α = -3 = -6·(1/2) = -n/2.
+    → The redundancy eigenvalue governs ALTERNATING behavior.
+
+  λ₁ = (n-2+√(n²+4))/2 = metallic mean M_n - 1
+    → Growth rate of the recurrence a_{k+1} = (n-2)a_k + n·a_{k-1}
+    → The "propagation" eigenvalue.
+
+  λ₂ = -n/λ₁ = (n-2-√(n²+4))/2
+    → The "correction" eigenvalue. |λ₂| → 1 as n → ∞.
+
+
+n=5: x=n(n-3)=10
+  Eigenvalues: [ 4.065103 -1.532552 -1.532552]
+  Tr(M^1) = 1.0, sum λ^1 = 1.0
+  Tr(M^2) = 21.0, sum λ^2 = 21.0
+  Tr(M^3) = 61.0, sum λ^3 = 61.0
+  Tr(M^4) = 281.0, sum λ^4 = 281.0
+
+n=6: x=n(n-3)=18
+  Eigenvalues: [ 5.162278 -1.162278 -3.      ]
+  Tr(M^1) = 1.0, sum λ^1 = 1.0
+  Tr(M^2) = 37.0, sum λ^2 = 37.0
+  Tr(M^3) = 109.0, sum λ^3 = 109.0
+  Tr(M^4) = 793.0, sum λ^4 = 793.0
+
+n=7: x=n(n-3)=28
+  Eigenvalues: [ 6.22273  -1.088344 -4.134386]
+  Tr(M^1) = 1.0, sum λ^1 = 1.0
+  Tr(M^2) = 57.0, sum λ^2 = 57.0
+  Tr(M^3) = 169.0, sum λ^3 = 169.0
+  Tr(M^4) = 1793.0, sum λ^4 = 1793.0
+
+======================================================================
+PART 4: THE SPECTRAL GOLDEN RATIO
+======================================================================
+
+At n=5, the C_T^TC_T eigenvalues for tournaments with few transitive 
+triples include (5±√5)/2 ≈ 3.618, 1.382.
+
+These are GOLDEN RATIO-related: (n±√n)/2 at n=5.
+
+Question: Is this always (n±√n)/2 or specific to n=5?
+
+n=5: λ² - 5λ + 5 = 0
+  Roots: (5±√5)/2 = 3.6180, 1.3820
+n=6: λ² - 6λ + 6 = 0
+  Roots: (6±√12)/2 = 4.7321, 1.2679
+n=7: λ² - 7λ + 7 = 0
+  Roots: (7±√21)/2 = 5.7913, 1.2087
+n=8: λ² - 8λ + 8 = 0
+  Roots: (8±√32)/2 = 6.8284, 1.1716
+
+n=5, t₃=5 tournaments (the 24 regular ones):
+Regular tournament C_5^{1,2}: t₃=5
+Eigenvalues: [ 5.        3.618034  3.618034  1.381966  1.381966  0.        0.
+ -0.       -0.       -0.      ]
+Rank: 5
+
+(5+√5)/2 = 3.618034
+(5-√5)/2 = 1.381966
+
+Product: 5.0000 = (25-5)/4 = 5 = n
+Sum: 5.0000 = 5 = n
+
+n=6: (6±√12)/2 = 3±√3 = 4.7321, 1.2679
+
+n=6, min-t₃ tournament (t₃=12): eigenvalues = [ 6.      6.      5.254   4.6766  4.2565  3.      3.      2.      1.5243
+  0.2885  0.      0.      0.     -0.     -0.    ]
+  Product = n: 3.0000 * 2.0000 = 6.0000
+  Product = n: 3.0000 * 2.0000 = 6.0000

@@ -1,0 +1,1613 @@
+======================================================================
+SECTION A: EIGENVALUE ANATOMY OF C_T^TC_T AT n=5
+======================================================================
+
+n=5: Exhaustive scan of 1024 tournaments
+max_rank = 6, C(n,3) = 10
+
+  t₃=5 (24 tournaments):
+    β₁=1, nonzero eigs=[5.000, 3.618, 3.618, 1.382, 1.382] × 24
+      sum=15.000 (=trace), product=125.004
+
+  t₃=6 (280 tournaments):
+    β₁=1, nonzero eigs=[5.000, 5.000, 4.000, 2.000, 2.000] × 120
+      sum=18.000 (=trace), product=400.000
+    β₁=0, nonzero eigs=[5.000, 5.000, 3.618, 2.618, 1.382, 0.382] × 120
+      sum=18.000 (=trace), product=125.011
+    β₁=1, nonzero eigs=[5.000, 5.000, 3.000, 3.000, 2.000] × 40
+      sum=18.000 (=trace), product=450.000
+
+  t₃=7 (240 tournaments):
+    β₁=1, nonzero eigs=[5.000, 5.000, 5.000, 3.000, 3.000] × 120
+      sum=21.000 (=trace), product=1125.000
+    β₁=0, nonzero eigs=[5.000, 5.000, 5.000, 3.414, 2.000, 0.586] × 120
+      sum=21.000 (=trace), product=500.151
+
+  t₃=8 (240 tournaments):
+    β₁=0, nonzero eigs=[5.000, 5.000, 5.000, 5.000, 3.000, 1.000] × 240
+      sum=24.000 (=trace), product=1875.000
+
+  t₃=9 (120 tournaments):
+    β₁=0, nonzero eigs=[5.000, 5.000, 5.000, 5.000, 5.000, 2.000] × 120
+      sum=27.000 (=trace), product=6250.000
+
+  t₃=10 (120 tournaments):
+    β₁=0, nonzero eigs=[5.000, 5.000, 5.000, 5.000, 5.000, 5.000] × 120
+      sum=30.000 (=trace), product=15625.000
+
+======================================================================
+SECTION B: EIGENVALUE PAIRS WITH PRODUCT = n
+======================================================================
+
+Searching for eigenvalue pairs (λ,μ) with λ·μ = 5...
+Expected from THM-224: all eigenvalues = n for transitive tournament.
+For general tournaments: eigenvalues split into pairs with product=n?
+
+  t₃=5:
+    β₁=1: [(5, 'self'), (3.618, 1.382), (3.618, 1.382)] | unpaired=[] × 24
+
+  t₃=6:
+    β₁=1: [(5, 'self'), (5, 'self')] | unpaired=[4.0, 2.0, 2.0] × 120
+    β₁=0: [(5, 'self'), (5, 'self'), (3.618, 1.382)] | unpaired=[2.618, 0.382] × 120
+    β₁=1: [(5, 'self'), (5, 'self')] | unpaired=[3.0, 3.0, 2.0] × 40
+
+  t₃=7:
+    β₁=1: [(5, 'self'), (5, 'self'), (5, 'self')] | unpaired=[3.0, 3.0] × 120
+    β₁=0: [(5, 'self'), (5, 'self'), (5, 'self')] | unpaired=[3.414, 2.0, 0.586] × 120
+
+  t₃=8:
+    β₁=0: [(5.0, 1.0), (5, 'self'), (5, 'self'), (5, 'self')] | unpaired=[3.0] × 240
+
+  t₃=9:
+    β₁=0: [(5, 'self'), (5, 'self'), (5, 'self'), (5, 'self'), (5, 'self')] | unpaired=[2.0] × 120
+
+  t₃=10:
+    β₁=0: [(5, 'self'), (5, 'self'), (5, 'self'), (5, 'self'), (5, 'self'), (5, 'self')] | unpaired=[] × 120
+
+======================================================================
+SECTION C: THE CONSTRAINT LAPLACIAN DECOMPOSITION
+======================================================================
+
+THM-224 says C^TC = n·P for the FULL (transitive) constraint matrix.
+For a general tournament T with t₃ transitive triples:
+  C_T^TC_T = n·P - C_R^TC_R
+
+where C_R has the cyclic triple rows. This gives:
+  eigenvalues of C_T^TC_T = n - eigenvalues of C_R^TC_R (on im(C^T))
+
+So the spectrum of C_T^TC_T is determined by how the CYCLIC triples
+interact with the constraint column space.
+
+KEY: C_R^TC_R has rank ≤ min(|C_R|, dim(im(C^T)∩im(C_R^T)))
+
+Verifying C_T^TC_T + C_R^TC_R = n·P at n=5:
+  bits=42: t₃=6, c₃=4, sum eigenvalues = [5.0, 5.0, 5.0, 5.0, 5.0, 5.0]
+
+======================================================================
+SECTION D: THE 3/n FRACTION IN EIGENVALUE STATISTICS
+======================================================================
+
+The fraction 3/n = max_rank/C(n,3) appears as:
+  1. Independence fraction of the constraint system
+  2. The ratio α/(−n) where α = 3-n is the THM-217 third eigenvalue
+  3. The "efficiency" of each constraint (each of n edges contributes to
+     n-2 triples, but only 3/n of triples are independent)
+
+Question: Does 3/n appear DIRECTLY in the eigenvalue statistics?
+
+  t₃= 5: avg trace=15.0, 3·t₃=15, top=5.000, min_nz=1.382, indep_ratio=1.200
+  t₃= 6: avg trace=18.0, 3·t₃=18, top=5.000, min_nz=1.307, indep_ratio=1.000
+  t₃= 7: avg trace=21.0, 3·t₃=21, top=5.000, min_nz=1.793, indep_ratio=0.857
+  t₃= 8: avg trace=24.0, 3·t₃=24, top=5.000, min_nz=1.000, indep_ratio=0.750
+  t₃= 9: avg trace=27.0, 3·t₃=27, top=5.000, min_nz=2.000, indep_ratio=0.667
+  t₃=10: avg trace=30.0, 3·t₃=30, top=5.000, min_nz=5.000, indep_ratio=0.600
+
+  NOTE: trace(C_T^TC_T) = 3·t₃ ALWAYS (each triple contributes 3 to diagonal)
+  For transitive: 3·C(n,3) = 3·10 = 30 = n·max_rank = 5·6 = 30
+  So: 3·C(n,3)/max_rank = 5.0 = n, confirming 3/n identity
+
+======================================================================
+SECTION E: THE TRACE IDENTITY AND 3/n
+======================================================================
+
+FUNDAMENTAL IDENTITY:
+  trace(C^TC) = 3 · C(n,3) = n(n-1)(n-2)/2
+  rank(C) = (n-1)(n-2)/2
+
+  ⟹ trace/rank = n     (the uniform eigenvalue!)
+
+  And: rank/C(n,3) = 3/n (the independence fraction)
+
+  So: trace = rank · n = C(n,3) · 3
+
+This triple identity is the HEART of the 3/n connection:
+
+  trace = 3 · C(n,3)         [each triple has 3 edges]
+  rank = C(n,3) · (3/n)      [only 3/n of triples are independent]
+  eigenvalue = n              [trace/rank = n]
+
+The 3/n fraction is the ratio that makes the uniform eigenvalue n work!
+
+For a GENERAL tournament T with t₃ transitive triples:
+  trace(C_T^TC_T) = 3·t₃
+  rank(C_T) = min(t₃, max_rank) - β₁
+
+  "effective eigenvalue" = 3·t₃ / rank(C_T)
+
+  For transitive: 3·C(n,3) / max_rank = n
+  For regular tournament at n=5: 3·5 / 5 = 3 (not n!)
+
+  t₃=5, β₁=1: rank=5, trace=15.0, trace/rank=3.000, 3·t₃/rank=3.000
+  t₃=6, β₁=1: rank=5, trace=18.0, trace/rank=3.600, 3·t₃/rank=3.600
+  t₃=7, β₁=1: rank=5, trace=21.0, trace/rank=4.200, 3·t₃/rank=4.200
+  t₃=8, β₁=0: rank=6, trace=24.0, trace/rank=4.000, 3·t₃/rank=4.000
+  t₃=9, β₁=0: rank=6, trace=27.0, trace/rank=4.500, 3·t₃/rank=4.500
+  t₃=10, β₁=0: rank=6, trace=30.0, trace/rank=5.000, 3·t₃/rank=5.000
+
+======================================================================
+SECTION F: THM-217 EIGENVALUES IN THE CONSTRAINT SPECTRUM
+======================================================================
+
+Does the metallic mean M_n - 1 = (n-2+√(n²+4))/2 appear in C_T^TC_T?
+
+At n=5: M₅-1 = (3+√29)/2 ≈ 4.193
+At n=6: M₆-1 = (4+√40)/2 = 2+√10 ≈ 5.162
+
+
+n=5: M_5-1 = 4.192582
+  (n±√n)/2 = 3.618034, 1.381966
+  n = 5
+  These are DIFFERENT numbers:
+    metallic M_n-1 = 4.192582 (from transfer matrix)
+    (n+√n)/2 = 3.618034 (from C_T^TC_T regular tournament)
+    n = 5 (from C^TC = n·P)
+
+n=6: M_6-1 = 5.162278
+  (n±√n)/2 = 4.224745, 1.775255
+  n = 6
+  These are DIFFERENT numbers:
+    metallic M_n-1 = 5.162278 (from transfer matrix)
+    (n+√n)/2 = 4.224745 (from C_T^TC_T regular tournament)
+    n = 6 (from C^TC = n·P)
+
+======================================================================
+SECTION G: THE DEEPER BRIDGE — CV² AT x = n(n-3)
+======================================================================
+
+THM-217 says CV²(H) = Σ_k 2·g_k(n-2k) / (n)_{2k}
+
+The transfer matrix M(x) generates g_k via [x^k] Tr(M^{n-2k}).
+
+At x = n(n-3), the char poly factors as (λ-(3-n))(λ²-(n-2)λ-n).
+
+What does evaluating g_k at x = n(n-3) mean?
+
+The generating parameter x is NOT the same as the constraint count.
+In THM-217, x tracks domino matching weight.
+The value x = n(n-3) is the point where the char poly factors via
+the metallic mean.
+
+But n(n-3) = n² · (1-3/n) = n² · redundancy_fraction.
+
+MEANING: x = n(n-3) is the "redundancy-weighted" version of n².
+If we think of n² as the "total constraint capacity", then x captures
+the portion attributable to redundant constraints.
+
+The THM-224 eigenvalue n appears as:
+  trace/rank = 3·C(n,3)/max_rank = n
+
+The THM-217 factorization parameter x = n(n-3) = n² - 3n appears as:
+  n² · (C(n,3) - max_rank)/C(n,3) = n² · (n-3)/n = n(n-3) ✓
+
+Both encode the SAME underlying ratio 3/n, but in different
+algebraic frameworks.
+
+The number 3 in '3/n' has multiple meanings:
+  1. Each constraint involves 3 edges (simplex dimension)
+  2. Each edge appears in n-2 constraints → trace = 3·C(n,3)
+  3. THM-217 uses a 3×3 transfer matrix
+  4. The metallic quadratic is DEGREE 2 (one less than 3)
+
+======================================================================
+SECTION H: UNIVERSAL TOP EIGENVALUE — PROOF COMPLETION
+======================================================================
+
+THEOREM: For ANY tournament T on n vertices with t₃ ≥ 1,
+the top eigenvalue of C_T^TC_T is exactly n.
+
+PROOF (building on THM-224):
+
+1. C_T^TC_T = n·P - C_R^TC_R where P = (1/n)·C^TC (THM-224).
+
+2. Need: ∃ v ∈ im(P) with C_R·v = 0.
+   i.e., v ∈ im(C^T) ∩ ker(C_R).
+
+3. dim(im(C^T)) = (n-1)(n-2)/2
+   dim(ker(C_R)) ≥ E - |C_R| = n(n-1)/2 - (C(n,3)-t₃)
+
+   Dimension argument: intersection nonempty if
+   (n-1)(n-2)/2 + n(n-1)/2 - (C(n,3)-t₃) > E = n(n-1)/2
+   ⟺ (n-1)(n-2)/2 > C(n,3) - t₃
+   ⟺ t₃ > C(n,3) - (n-1)(n-2)/2 = C(n-1,3)
+
+4. For n ≤ 5: every tournament has t₃ ≥ C(n-1,3)+1 (checkable).
+   For n ≥ 6: need STRONGER argument.
+
+   Actually, the minimum t₃ for tournaments on n vertices is
+   C(n,3) - n(n-1)(n-3)/24 (for odd n, regular tournament).
+   This is n(n-1)(n-5)/24, which is < C(n-1,3) for n ≤ ???
+
+  n=3: min_t₃=1, C(n-1,3)=0, min_t₃ > C(n-1,3)? True
+  n=4: min_t₃=? (even n), C(n-1,3)=1
+  n=5: min_t₃=9, C(n-1,3)=4, min_t₃ > C(n-1,3)? True
+  n=6: min_t₃=? (even n), C(n-1,3)=10
+  n=7: min_t₃=28, C(n-1,3)=20, min_t₃ > C(n-1,3)? True
+  n=8: min_t₃=? (even n), C(n-1,3)=35
+  n=9: min_t₃=66, C(n-1,3)=56, min_t₃ > C(n-1,3)? True
+  n=10: min_t₃=? (even n), C(n-1,3)=84
+  n=11: min_t₃=129, C(n-1,3)=120, min_t₃ > C(n-1,3)? True
+
+For odd n:
+  min_t₃ = n(n-1)(n-5)/24
+  C(n-1,3) = (n-1)(n-2)(n-3)/6
+
+  Need: n(n-1)(n-5)/24 > (n-1)(n-2)(n-3)/6
+  ⟺ n(n-5)/4 > (n-2)(n-3)
+  ⟺ n²-5n > 4(n²-5n+6) = 4n²-20n+24
+  ⟺ -3n² + 15n - 24 > 0
+  ⟺ 3n² - 15n + 24 < 0
+
+  Discriminant: 225 - 288 = -63 < 0. NEVER true.
+
+  So for odd n ≥ 7: min_t₃ < C(n-1,3). The dimension argument FAILS.
+  Yet the top eigenvalue is still n. WHY?
+
+ALTERNATIVE PROOF APPROACH:
+
+The rows of C (full constraint matrix) are boundary vectors ∂₂(face).
+The rows of C_R are boundaries of CYCLIC triples.
+
+Key observation: Each cyclic triple {a,b,c} has boundary
+  ∂₂(a,b,c)_cyclic = e_{bc} - e_{ac} + e_{ab}
+which is the SAME vector (up to sign) as the transitive boundary!
+
+Actually no — in the simplicial complex, the boundary only depends on
+the UNDIRECTED triple, not orientation. So C has one row per {a,b,c},
+and C_T/C_R partition these rows based on tournament structure.
+
+The key is: im(C_T^T) + im(C_R^T) = im(C^T).
+
+And C^TC = n·P means n·P = C_T^TC_T + C_R^TC_R.
+
+For v to satisfy C_T^TC_T·v = n·v, we need C_R^TC_R·v = 0,
+i.e., C_R·v = 0. But v must also be in im(P) = im(C^T).
+
+CLAIM: The gradient subspace ker(P) = im(∂₁^T) is contained in
+ker(C_R) (because ∂₂·∂₁^T = 0 regardless of which triples we use).
+
+So ker(C_R) ⊇ ker(P), and we need v ∈ im(P) ∩ ker(C_R).
+
+This is the INTERSECTION of im(P) (dimension (n-1)(n-2)/2) with
+ker(C_R) (dimension ≥ E - rank(C_R)).
+
+The question is whether C_R has ANY row that is NOT in the span of C_T.
+If all rows of C_R are already in im(C_T^T), then ker(C_R) ⊇ ker(C_T)
+and the intersection might be empty.
+
+
+Checking if im(C_R^T) ⊆ im(C_T^T) at n=5:
+  bits=8: t₃=7, c₃=3, rank(C_T)=5, rank(C_full)=6
+
+Exhaustive verification at n=5: top eigenvalue of C_T^TC_T = 5?
+  Violations: 0 / 1024
+
+======================================================================
+SECTION I: WHAT DETERMINES THE NON-TOP EIGENVALUES?
+======================================================================
+
+Since the top eigenvalue is ALWAYS n, the interesting spectral information
+is in the REMAINING eigenvalues. For C_T^TC_T = n·P - C_R^TC_R:
+
+  eigenvalue λ_i of C_T^TC_T = n - μ_i where μ_i = eigenvalue of C_R^TC_R
+  (restricted to im(P))
+
+So the non-top eigenvalues are n minus the CYCLIC-triple Gram matrix eigenvalues.
+
+For β₁ = 0 (all (n-1)(n-2)/2 eigenvalues nonzero):
+  ALL eigenvalues of C_R^TC_R on im(P) are < n.
+
+For β₁ = 1 (one eigenvalue drops to 0):
+  C_R^TC_R has eigenvalue n on im(P) → one constraint direction is
+  COMPLETELY cyclic.
+
+C_R^TC_R eigenvalues at n=5 by t₃:
+
+  t₃=5, β₁=1 (24 tournaments):
+    C_R^TC_R|_{im(P)} nonzero eigs = [5.000, 3.618, 3.618, 1.382, 1.382] × 24
+      ^^^ Contains eigenvalue 5 → accounts for β₁=1
+      → C_T^TC_T eigs = n - these = [0.000, 1.382, 1.382, 3.618, 3.618]
+
+  t₃=6, β₁=0 (120 tournaments):
+    C_R^TC_R|_{im(P)} nonzero eigs = [4.618, 3.618, 2.382, 1.382] × 120
+      → C_T^TC_T eigs = n - these = [0.382, 1.382, 2.618, 3.618]
+
+  t₃=6, β₁=1 (160 tournaments):
+    C_R^TC_R|_{im(P)} nonzero eigs = [5.000, 3.000, 3.000, 1.000] × 120
+      ^^^ Contains eigenvalue 5 → accounts for β₁=1
+      → C_T^TC_T eigs = n - these = [0.000, 2.000, 2.000, 4.000]
+    C_R^TC_R|_{im(P)} nonzero eigs = [5.000, 3.000, 2.000, 2.000] × 40
+      ^^^ Contains eigenvalue 5 → accounts for β₁=1
+      → C_T^TC_T eigs = n - these = [0.000, 2.000, 3.000, 3.000]
+
+  t₃=7, β₁=0 (120 tournaments):
+    C_R^TC_R|_{im(P)} nonzero eigs = [4.414, 3.000, 1.586] × 120
+      → C_T^TC_T eigs = n - these = [0.586, 2.000, 3.414]
+
+  t₃=7, β₁=1 (120 tournaments):
+    C_R^TC_R|_{im(P)} nonzero eigs = [5.000, 2.000, 2.000] × 120
+      ^^^ Contains eigenvalue 5 → accounts for β₁=1
+      → C_T^TC_T eigs = n - these = [0.000, 3.000, 3.000]
+
+  t₃=8, β₁=0 (240 tournaments):
+    C_R^TC_R|_{im(P)} nonzero eigs = [4.000, 2.000] × 240
+      → C_T^TC_T eigs = n - these = [1.000, 3.000]
+
+  t₃=9, β₁=0 (120 tournaments):
+    C_R^TC_R|_{im(P)} nonzero eigs = [3.000] × 120
+      → C_T^TC_T eigs = n - these = [2.000]
+======================================================================
+PROOF THAT TOP EIGENVALUE = n: THE POTENTIAL VECTOR ARGUMENT
+======================================================================
+
+CLAIM: For any tournament T with at least one transitive triple,
+  max eigenvalue of C_T^TC_T = n.
+
+PROOF STRATEGY: Construct an explicit eigenvector.
+
+The eigenvector for eigenvalue n of C^TC (full matrix) lives in im(C^T) = im(∂₂^T).
+This is the space of "co-exact 1-forms" — edge functions that arise from
+assigning values to triangles.
+
+For the TRANSITIVE tournament: the potential function f(v) = rank(v) gives
+  h(i,j) = f(j) - f(i) = rank(j) - rank(i)
+This is a gradient (1-coboundary), which is in ker(∂₂^T ∂₂) = ker(P).
+NOT useful for eigenvalue n.
+
+Instead, we need v ∈ im(∂₂^T) with C_R·v = 0.
+Meaning: v is orthogonal to all CYCLIC triple boundaries.
+
+KEY: The space ker(C_R) ∩ im(C^T) consists of edge functions that:
+  1. Can be written as linear combination of triangle "charges"
+  2. Have zero "charge" on every cyclic triple
+
+This means: assign a charge q_{abc} to each TRANSITIVE triple {a,b,c},
+and compute v = Σ q_{abc} · ∂₂(a,b,c).
+Then C_R·v = 0 automatically (since v involves no cyclic triples).
+
+But wait: v = C_T^T · q where q = (q_{abc}). So v ∈ im(C_T^T).
+
+C_T^TC_T · v = C_T^T (C_T C_T^T q) ... this doesn't immediately give n·v.
+
+Let me think differently.
+
+Checking the cross-Gram C_R C_T^T at n=5:
+C_full shape: (10, 10)
+
+  bits=234: t₃=6, c₃=4
+  C_R C_T^T shape: (4, 6)
+  C_R C_T^T rank: 4
+  C_R C_T^T:
+[[ 1.  1. -1.  1.  0.  0.]
+ [ 1.  0.  1.  1.  0.  1.]
+ [-1.  1.  1.  0.  1.  1.]
+ [ 0. -1.  1.  1.  1. -1.]]
+
+  C_R C_R^T (cyclic self-Gram):
+[[ 3. -1.  0.  1.]
+ [-1.  3. -1.  0.]
+ [ 0. -1.  3.  0.]
+ [ 1.  0.  0.  3.]]
+  Eigenvalues of C_R C_R^T: [4.618 3.618 2.382 1.382]
+
+
+======================================================================
+THE SIMPLICIAL INNER PRODUCT STRUCTURE
+======================================================================
+
+For two triples σ₁ = {a,b,c} and σ₂ = {d,e,f}:
+  <∂₂(σ₁), ∂₂(σ₂)> depends only on |σ₁ ∩ σ₂|:
+
+  |intersection| = 3 (same triple): inner product = 3
+  |intersection| = 2 (share an edge): inner product = ±1
+  |intersection| = 1 (share a vertex only): inner product = 0
+  |intersection| = 0 (disjoint): inner product = 0
+
+So C_full · C_full^T is a {0, ±1, 3}-valued matrix.
+Its block structure (T×T, T×R, R×T, R×R) determines everything.
+
+Full Gram matrix C·C^T at n=5: (10, 10)
+Diagonal entries: [3. 3. 3. 3. 3. 3. 3. 3. 3. 3.]
+Off-diagonal values: [-1.0, 0.0, 1.0]
+Each triple shares edge with 3*(n-3) = 6 others
+Row sum of |off-diag|: should be 6
+Actual: 6.0
+
+Eigenvalues of C·C^T (full, n=5): [ 5.  5.  5.  5.  5.  5.  0.  0. -0. -0.]
+Nonzero count: 6, expected (n-1)(n-2)/2 = 6
+Nonzero eigenvalues: [5. 5. 5. 5. 5. 5.]
+
+
+======================================================================
+KEY DISCOVERY: THE n-EIGENSPACE OF C_R^TC_R
+======================================================================
+
+β₁ = 1 ⟺ C_R^TC_R has eigenvalue n on im(P).
+
+Since C_R^TC_R|_{im(P)} has eigenvalues μ_i, and C_T^TC_T|_{im(P)} has
+eigenvalues n - μ_i, we have β₁ = 1 iff some μ_i = n.
+
+For μ_i = n: there exists v ∈ im(P) with ||C_R v||² = n||v||².
+Since C^TC = n·P, this means ||C_R v||² = ||C v||² (on im(P)),
+which means ||C_T v||² = ||C v||² - ||C_R v||² = 0.
+i.e., C_T v = 0.
+
+So: β₁ = 1 ⟺ ∃ v ∈ im(P) ∩ ker(C_T) ⟺ im(P) ⊄ im(C_T^T)^⊥
+Actually: v ∈ im(P) ∩ ker(C_T) means v is in the constraint column
+space but is killed by all transitive triple constraints.
+
+This is a NON-TRIVIAL condition: it says the homological "cycle"
+that defines β₁ is visible in the simplicial structure.
+
+Finding the β₁=1 eigenvector at n=5:
+
+  Tournament bits=8, scores=(1, 1, 2, 3, 3), t₃=7:
+    ||C_T v|| = 0.000000 (should be ~0)
+    ||v - Pv|| = 0.000000 (should be ~0)
+    v = [-0.2582 -0.2582 -0.2582  0.7746 -0.      0.     -0.2582 -0.     -0.2582
+ -0.2582]
+      edge (0,1): -0.2582
+      edge (0,2): -0.2582
+      edge (0,3): -0.2582
+      edge (0,4): 0.7746
+      edge (1,4): -0.2582
+      edge (2,4): -0.2582
+      edge (3,4): -0.2582
+
+  Tournament bits=12, scores=(1, 2, 2, 2, 3), t₃=6:
+    ||C_T v|| = 0.000000 (should be ~0)
+    ||v - Pv|| = 0.000000 (should be ~0)
+    v = [-0.4472 -0.4472  0.4472  0.4472  0.     -0.2236 -0.2236 -0.2236 -0.2236
+ -0.    ]
+      edge (0,1): -0.4472
+      edge (0,2): -0.4472
+      edge (0,3): 0.4472
+      edge (0,4): 0.4472
+      edge (1,3): -0.2236
+      edge (1,4): -0.2236
+      edge (2,3): -0.2236
+      edge (2,4): -0.2236
+
+  Tournament bits=14, scores=(1, 1, 2, 3, 3), t₃=7:
+    ||C_T v|| = 0.000000 (should be ~0)
+    ||v - Pv|| = 0.000000 (should be ~0)
+    v = [ 0.7746 -0.2582 -0.2582 -0.2582  0.2582  0.2582  0.2582 -0.     -0.
+ -0.    ]
+      edge (0,1): 0.7746
+      edge (0,2): -0.2582
+      edge (0,3): -0.2582
+      edge (0,4): -0.2582
+      edge (1,2): 0.2582
+      edge (1,3): 0.2582
+      edge (1,4): 0.2582
+
+
+======================================================================
+THE SPECTRAL ARITHMETIC: EIGENVALUE PATTERNS
+======================================================================
+
+From Section A (n=5 exhaustive), the eigenvalue spectra have EXACT algebraic values:
+
+t₃=5 (regular): [5, φn, φn, φ̄n, φ̄n] where φn=(5+√5)/2, φ̄n=(5-√5)/2
+t₃=6 (β₁=0):   [5, 5, φn, 1+φ̄n, φ̄n, 1-φn] = [5,5,3.618,2.618,1.382,0.382]
+t₃=6 (β₁=1,A): [5, 5, 4, 2, 2]
+t₃=6 (β₁=1,B): [5, 5, 3, 3, 2]
+t₃=7 (β₁=0):   [5, 5, 5, 2+√2, 2, 2-√2]
+t₃=7 (β₁=1):   [5, 5, 5, 3, 3]
+t₃=8:           [5, 5, 5, 5, 3, 1]
+t₃=9:           [5, 5, 5, 5, 5, 2]
+t₃=10:          [5, 5, 5, 5, 5, 5]
+
+OBSERVATION 1: As t₃ increases, eigenvalues "collapse" toward n=5.
+  The C_R^TC_R eigenvalues shrink to 0 as fewer cyclic triples remain.
+
+OBSERVATION 2: The golden ratio pair (φ,φ̄) at t₃=5 is:
+  φ = (5+√5)/2, φ̄ = (5-√5)/2
+  These solve λ² - 5λ + 5 = 0, i.e., λ(λ-5) = -5.
+
+  At t₃=6 (β₁=0), we get φ, φ̄ PLUS shifted versions:
+  1+φ̄ = (7-√5)/2 = 2.618,  1-φ+5 = (3+√5)/2 ...
+  Actually: 2.618 = 1 + 1.618 = 1 + (5-√5)/2? No, 1+(5-√5)/2 = (7-√5)/2 ≈ 2.382.
+  Let me recompute.
+
+φ = (5+√5)/2 = 3.618034
+φ̄ = (5-√5)/2 = 1.381966
+φ + φ̄ = 5.000000 = n
+φ · φ̄ = 5.000000 = n
+
+t₃=6, β₁=0: non-n eigenvalues are φ, φ-1, φ̄, φ̄-1:
+  3.618, 2.618, 1.382, 0.382
+  Sum = 8.000 = 2n-2 = 8
+
+t₃=7, β₁=0: non-n eigenvalues: 2+√2=3.414, 2, 2-√2=0.586
+  Sum = 6.000 = 6 = 3*7-15 = 21-15
+  Products: (2+√2)(2-√2) = 2.000 = 2
+
+--- PATTERN: Non-n eigenvalue sums ---
+  t₃=5: 4 non-n eigenvalues, sum=10.000, 5×2+10.000=20.000 = 3·t₃=15
+  t₃=6: 4 non-n eigenvalues, sum=8.000, 5×2+8.000=18.000 = 3·t₃=18
+  t₃=7: 3 non-n eigenvalues, sum=6.000, 5×3+6.000=21.000 = 3·t₃=21
+  t₃=8: 2 non-n eigenvalues, sum=4.000, 5×4+4.000=24.000 = 3·t₃=24
+  t₃=9: 1 non-n eigenvalues, sum=2.000, 5×5+2.000=27.000 = 3·t₃=27
+  t₃=10: 0 non-n eigenvalues, sum=0.000, 5×6+0.000=30.000 = 3·t₃=30
+
+Non-n sum = 3·t₃ - n·(max_rank - #non_n_eigs)
+
+
+======================================================================
+THE BRIDGE: C_R^TC_R EIGENVALUES AND THE THM-217 CONNECTION
+======================================================================
+
+The C_R^TC_R eigenvalues on im(P) are μ_i = n - λ_i where λ_i are
+the C_T^TC_T eigenvalues.
+
+For the REGULAR tournament at n=5 (t₃=5):
+  C_T^TC_T eigenvalues: [5, φ, φ, φ̄, φ̄, 0]
+  C_R^TC_R eigenvalues: [0, n-φ, n-φ, n-φ̄, n-φ̄, n]
+                       = [0, φ̄, φ̄, φ, φ, 5]
+
+REMARKABLE: C_R^TC_R has the SAME spectrum as C_T^TC_T!
+This is because t₃ = c₃ = 5 (symmetric partition).
+
+Actually this makes sense: if T is the regular tournament, T^op is also
+regular but with t₃ and c₃ SWAPPED... no, complement reversal doesn't
+swap transitive and cyclic triples.
+
+Wait — for the regular tournament at n=5, t₃ = c₃ = 5, so
+C_T and C_R have the SAME number of rows. And by the dihedral symmetry
+of the regular tournament, they might even be isomorphic.
+
+The golden ratio eigenvalues (φ, φ̄) are SHARED between C_T^TC_T and
+C_R^TC_R precisely because of this T ↔ R symmetry at t₃ = c₃.
+
+For n=5: φ·φ̄ = n = 5. So the pair (φ,φ̄) satisfies λ² - nλ + n = 0.
+
+Q: Does the equation λ² - nλ + n = 0 have algebraic significance?
+  Rewrite: λ(n-λ) = n, or equivalently (n-λ)(n-(n-λ)) = n.
+  This says the eigenvalue and its "complement" n-μ multiply to n.
+  i.e., the C_T and C_R eigenvalues are DUAL under the map μ ↦ n-μ,
+  and when they're equal (as at the regular tournament), they satisfy
+  μ(n-μ) = n.
+
+Verifying C_T^TC_T and C_R^TC_R duality at n=5:
+
+  t₃=9, c₃=1:
+    C_T eigs on im(P): [5. 5. 5. 5. 5. 2.]
+    C_R eigs on im(P): [ 3.  0.  0. -0. -0. -0.]
+    Sum check: [8. 5. 5. 5. 5. 2.]
+    C_T + rev(C_R): [5. 5. 5. 5. 5. 5.]
+
+  t₃=8, c₃=2:
+    C_T eigs on im(P): [5. 5. 5. 5. 3. 1.]
+    C_R eigs on im(P): [ 4.  2.  0. -0. -0. -0.]
+    Sum check: [9. 7. 5. 5. 3. 1.]
+    C_T + rev(C_R): [5. 5. 5. 5. 5. 5.]
+
+  t₃=7, c₃=3:
+    C_T eigs on im(P): [5. 5. 5. 3. 3. 0.]
+    C_R eigs on im(P): [5. 2. 2. 0. 0. 0.]
+    Sum check: [10.  7.  7.  3.  3.  0.]
+    C_T + rev(C_R): [5. 5. 5. 5. 5. 5.]
+
+  t₃=6, c₃=4:
+    C_T eigs on im(P): [5. 5. 4. 2. 2. 0.]
+    C_R eigs on im(P): [ 5.  3.  3.  1.  0. -0.]
+    Sum check: [10.  8.  7.  3.  2.  0.]
+    C_T + rev(C_R): [5. 5. 5. 5. 5. 5.]
+
+  t₃=5, c₃=5:
+    C_T eigs on im(P): [5.    3.618 3.618 1.382 1.382 0.   ]
+    C_R eigs on im(P): [ 5.     3.618  3.618  1.382  1.382 -0.   ]
+    Sum check: [10.     7.236  7.236  2.764  2.764 -0.   ]
+    C_T + rev(C_R): [5. 5. 5. 5. 5. 5.]
+
+
+======================================================================
+THE 3/n BRIDGE: UNIFIED PERSPECTIVE
+======================================================================
+
+SYNTHESIS: The fraction 3/n connects THM-217 and THM-224 through
+a DUALITY between transitive and cyclic triples.
+
+THM-224 (Homological):
+  C^TC = n·P, where rank(P) = (n-1)(n-2)/2 = C(n,3) · (3/n).
+  The uniform eigenvalue n arises because:
+    n = trace/rank = 3·C(n,3) / [(n-1)(n-2)/2] = n.
+
+  The number 3 comes from dim(∂Δ²) = 3 (each triangle has 3 edges).
+  The number (n-1)(n-2)/2 comes from H₁(K_n) = 0 (K_n is simply connected).
+
+THM-217 (HP-counting):
+  M(x) = [[1,2x,0],[0,0,1],[1,x,0]], char poly λ³-λ²-xλ-x.
+  At x = n(n-3) = n²·(1-3/n), the char poly factors as:
+    (λ-(3-n))(λ²-(n-2)λ-n) = 0
+
+  Eigenvalues: α=3-n, λ₁=M_n-1, λ₂=-n/λ₁.
+
+  α = 3-n encodes the independence fraction: α/(-n) = (n-3)/n = 1-3/n.
+
+THE BRIDGE:
+  Both structures encode the same combinatorial fact:
+    "Each edge appears in n-2 triples, and each triple involves 3 edges."
+
+  In THM-224: this gives trace = 3·C(n,3) = E·(n-2), eigenvalue = n.
+  In THM-217: this gives x = n(n-3) as the "redundancy capacity" of n².
+
+  The eigenvalue n in THM-224 and the parameter x=n(n-3) in THM-217 are
+  related by:
+    x = n(n-3) = n·(n-3) = n·(max_rank - 3)  ... hmm
+
+  Actually: x = n(n-3) = n·E·(3/n)·[(n-3)/3] ... let me think.
+
+  The cleaner relationship:
+    3·C(n,3) = n · rank(C) = n · (n-1)(n-2)/2
+    n(n-3) = 3·C(n,3) - 3·rank(C) = n·rank(C) - 3·rank(C) = (n-3)·rank(C)
+
+  So: x = (n-3) · rank(C) = (n-3)(n-1)(n-2)/2 = C(n,3)·(n-3)·3/(n·1)...
+  Actually:
+    x = n(n-3) and rank = (n-1)(n-2)/2
+    x/rank = 2n(n-3)/((n-1)(n-2)) = 2n(n-3)/((n-1)(n-2))
+
+  At n=6: x/rank = 2·6·3/(5·4) = 36/20 = 1.8. Not obviously clean.
+
+  Better: x = C(n,3) - rank = REDUNDANCY COUNT
+    C(n,3) - rank = C(n,3) - (n-1)(n-2)/2 = C(n-1,3)
+    And C(n-1,3) = (n-1)(n-2)(n-3)/6.
+    But x = n(n-3). And C(n-1,3) = (n-1)(n-2)(n-3)/6.
+
+    x/C(n-1,3) = n(n-3)/[(n-1)(n-2)(n-3)/6] = 6n/[(n-1)(n-2)]
+    At n=5: 10/4 = 2.5. At n=6: 18/10 = 1.8.
+
+  Hmm, x ≠ redundancy count exactly. Let me recheck.
+
+  n=3: x=0, rank=1, redundancy=0
+  n=4: x=n(n-3)=4, rank=3, C(n,3)=4, redundancy=C(n-1,3)=1, x/redundancy=4.000
+  n=5: x=n(n-3)=10, rank=6, C(n,3)=10, redundancy=C(n-1,3)=4, x/redundancy=2.500
+  n=6: x=n(n-3)=18, rank=10, C(n,3)=20, redundancy=C(n-1,3)=10, x/redundancy=1.800
+  n=7: x=n(n-3)=28, rank=15, C(n,3)=35, redundancy=C(n-1,3)=20, x/redundancy=1.400
+  n=8: x=n(n-3)=40, rank=21, C(n,3)=56, redundancy=C(n-1,3)=35, x/redundancy=1.143
+  n=9: x=n(n-3)=54, rank=28, C(n,3)=84, redundancy=C(n-1,3)=56, x/redundancy=0.964
+
+x/redundancy = n(n-3)/C(n-1,3) = n(n-3)/[(n-1)(n-2)(n-3)/6] = 6n/[(n-1)(n-2)]
+
+At n=6: 6·6/(5·4) = 36/20 = 9/5 = 1.8
+At n=∞: → 6n/n² = 6/n → 0
+
+So x and redundancy grow at DIFFERENT rates. The connection is NOT
+x = redundancy_count, but x = n² · (redundancy_fraction).
+
+The fraction 3/n appears in both:
+  THM-224: independence_fraction = 3/n
+  THM-217: x = n² · (1 - 3/n) = n² - 3n
+
+This means:
+  x + 3n = n²
+  x = n² - 3n = n(n-3)
+
+The "3n" that's subtracted from n² is 3 times the system size.
+This is the "cost" of each triple involving 3 edges.
+The remaining n(n-3) is the "free capacity" for non-trivial structure.
+
+
+======================================================================
+FINAL: THE EIGENVALUE EQUATION λ²-nλ+n=0 AS A BRIDGE
+======================================================================
+
+The equation λ²-nλ+n=0 appears in BOTH frameworks:
+
+1. THM-224 context: At the regular tournament (t₃=c₃), the eigenvalues
+   of C_T^TC_T on the non-top subspace satisfy λ(n-λ) = n.
+   This is the SELF-DUALITY condition: an eigenvalue λ of C_T^TC_T
+   corresponds to eigenvalue n-λ of C_R^TC_R, and when T↔R symmetry
+   holds, λ = n-λ' where λ' is another eigenvalue of C_T^TC_T,
+   forming pairs with product n.
+
+2. THM-217 context: The metallic quadratic λ²-(n-2)λ-n=0 gives
+   eigenvalues of M(x) at the special point. Compare:
+     Metallic: λ² = (n-2)λ + n  (product = -n, sum = n-2)
+     THM-224:  λ² = nλ - n      (product = +n, sum = n)
+
+   These are related by the substitution λ ↦ n-λ:
+     If μ = n-λ satisfies μ²-nμ+n=0, then
+     (n-λ)² - n(n-λ) + n = n²-2nλ+λ² - n²+nλ + n = λ²-nλ+n = 0.
+   Same equation! So the substitution λ↦n-λ is an INVOLUTION.
+
+   The metallic equation λ²-(n-2)λ-n=0 is DIFFERENT: it gives
+   the THM-217 eigenvalues, not the THM-224 eigenvalues.
+
+   But: metallic eigenvalue λ₁ satisfies λ₁²=(n-2)λ₁+n.
+   THM-224 eigenvalue φ satisfies φ²=nφ-n.
+
+   At n=5: λ₁ = (3+√29)/2 ≈ 4.193, φ = (5+√5)/2 ≈ 3.618.
+   These are NOT the same.
+
+   HOWEVER: the DISCRIMINANTS are related.
+   Metallic: Δ = (n-2)²+4n = n²+4
+   THM-224:  Δ = n²-4n = n(n-4)
+
+   Ratio: (n²+4)/(n²-4n) = (n²+4)/(n(n-4))
+   At n=5: 29/5. At n=6: 40/12 = 10/3.
+
+   Sum of discriminants: (n²+4) + n(n-4) = 2n²-4n+4 = 2(n²-2n+2) = 2((n-1)²+1)
+   Difference: (n²+4) - n(n-4) = 4n+4 = 4(n+1)
+
+   So Δ_metallic - Δ_THM224 = 4(n+1). At n=5: 24. At n=6: 28.
+
+  n=5: metallic=4.1926, φ_224=3.6180
+    Δ_met=29, Δ_224=5, diff=24=4(n+1)=24
+    metallic eq at φ_224: -2.7639
+    THM-224 eq at metallic: 1.6148
+  n=6: metallic=5.1623, φ_224=4.7321
+    Δ_met=40, Δ_224=12, diff=28=4(n+1)=28
+    metallic eq at φ_224: -2.5359
+    THM-224 eq at metallic: 1.6754
+  n=7: metallic=6.1401, φ_224=5.7913
+    Δ_met=53, Δ_224=21, diff=32=4(n+1)=32
+    metallic eq at φ_224: -2.4174
+    THM-224 eq at metallic: 1.7199
+  n=8: metallic=7.1231, φ_224=6.8284
+    Δ_met=68, Δ_224=32, diff=36=4(n+1)=36
+    metallic eq at φ_224: -2.3431
+    THM-224 eq at metallic: 1.7538
+======================================================================
+n=6: THE UNIQUE CONSISTENCY POINT
+======================================================================
+n=6: E=15, max_rank=10, C(n,3)=20
+  Independence fraction = 3/n = 0.5000
+  Redundancy fraction = (n-3)/n = 0.5000
+  At n=6: redundancy = 1/2 (HALF the constraints are redundant)
+  This is the unique n where redundancy = independence (both = 1/2)
+
+THM-217 at n=6:
+  x = n(n-3) = 18
+  α = 3-n = -3
+  λ₁ = 2+√10 = 5.162278
+  λ₂ = 2-√10 = -1.162278
+  α·λ₁·λ₂ = 18.000000 (char poly constant)
+  Expected: x = 18
+
+THM-224 self-dual equation λ²-6λ+6=0:
+  φ = 3+√3 = 4.732051
+  φ̄ = 3-√3 = 1.267949
+  Product: 6.000000 = n
+  Sum: 6.000000 = n
+
+======================================================================
+SAMPLING n=6: SPECTRAL ANATOMY
+======================================================================
+
+n=6, 10000 random tournaments:
+  t₃=12, β₁=0: 504 tournaments, 2 distinct spectra
+    [6.00, 6.00, 5.25, 4.68, 4.26, 3.00, 3.00, 2.00, 1.52, 0.29] × 430
+      2 eigenvalues = 6, rest sum=24.00, prod=830.48
+    [6.00, 6.00, 5.30, 4.30, 4.00, 4.00, 2.00, 2.00, 1.70, 0.70] × 74
+      2 eigenvalues = 6, rest sum=24.00, prod=1735.69
+  t₃=12, β₁=1: 276 tournaments, 2 distinct spectra
+    [6.00, 6.00, 5.41, 4.73, 4.00, 4.00, 2.59, 2.00, 1.27] × 221
+      2 eigenvalues = 6, rest sum=24.00, prod=2693.47
+    [6.00, 6.00, 6.00, 4.00, 4.00, 4.00, 2.00, 2.00, 2.00] × 55
+      3 eigenvalues = 6, rest sum=18.00, prod=512.00
+  t₃=13, β₁=0: 1318 tournaments, 3 distinct spectra
+    [6.00, 6.00, 6.00, 5.18, 4.27, 4.00, 3.00, 2.48, 1.63, 0.45] × 450
+      3 eigenvalues = 6, rest sum=21.01, prod=482.83
+    [6.00, 6.00, 6.00, 5.41, 4.21, 4.00, 3.00, 2.59, 1.46, 0.32] × 443
+      3 eigenvalues = 6, rest sum=20.99, prod=330.72
+  t₃=13, β₁=1: 157 tournaments, 1 distinct spectra
+    [6.00, 6.00, 6.00, 5.00, 5.00, 3.00, 3.00, 3.00, 2.00] × 157
+      3 eigenvalues = 6, rest sum=21.00, prod=1350.00
+  t₃=14, β₁=0: 1948 tournaments, 6 distinct spectra
+    [6.00, 6.00, 6.00, 6.00, 5.00, 4.56, 3.00, 3.00, 2.00, 0.44] × 450
+      4 eigenvalues = 6, rest sum=18.00, prod=180.58
+    [6.00, 6.00, 6.00, 6.00, 4.77, 4.00, 4.00, 2.81, 1.64, 0.77] × 441
+      4 eigenvalues = 6, rest sum=17.99, prod=270.82
+  t₃=14, β₁=1: 634 tournaments, 2 distinct spectra
+    [6.00, 6.00, 6.00, 6.00, 5.00, 5.00, 3.00, 3.00, 2.00] × 425
+      4 eigenvalues = 6, rest sum=18.00, prod=450.00
+    [6.00, 6.00, 6.00, 6.00, 4.00, 4.00, 4.00, 4.00, 2.00] × 209
+      4 eigenvalues = 6, rest sum=18.00, prod=512.00
+  t₃=15, β₁=0: 1003 tournaments, 3 distinct spectra
+    [6.00, 6.00, 6.00, 6.00, 6.00, 5.00, 4.17, 3.00, 2.31, 0.52] × 465
+      5 eigenvalues = 6, rest sum=15.00, prod=75.14
+    [6.00, 6.00, 6.00, 6.00, 6.00, 4.68, 4.00, 3.54, 2.00, 0.79] × 441
+      5 eigenvalues = 6, rest sum=15.01, prod=104.70
+  t₃=15, β₁=1: 124 tournaments, 1 distinct spectra
+    [6.00, 6.00, 6.00, 6.00, 6.00, 4.00, 4.00, 4.00, 3.00] × 124
+      5 eigenvalues = 6, rest sum=15.00, prod=192.00
+  t₃=16, β₁=0: 1673 tournaments, 4 distinct spectra
+    [6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 4.62, 3.62, 2.38, 1.38] × 640
+      6 eigenvalues = 6, rest sum=12.00, prod=54.93
+    [6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 4.48, 4.00, 2.69, 0.83] × 446
+      6 eigenvalues = 6, rest sum=12.00, prod=40.01
+  t₃=16, β₁=1: 202 tournaments, 1 distinct spectra
+    [6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 4.00, 4.00, 4.00] × 202
+      6 eigenvalues = 6, rest sum=12.00, prod=64.00
+  t₃=17, β₁=0: 934 tournaments, 2 distinct spectra
+    [6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 4.41, 3.00, 1.59] × 486
+      7 eigenvalues = 6, rest sum=9.00, prod=21.04
+    [6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 4.00, 4.00, 1.00] × 448
+      7 eigenvalues = 6, rest sum=9.00, prod=16.00
+  t₃=18, β₁=0: 684 tournaments, 2 distinct spectra
+    [6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 4.00, 2.00] × 661
+      8 eigenvalues = 6, rest sum=6.00, prod=8.00
+    [6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 3.00, 3.00] × 23
+      8 eigenvalues = 6, rest sum=6.00, prod=9.00
+  t₃=19, β₁=0: 305 tournaments, 1 distinct spectra
+    [6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 3.00] × 305
+      9 eigenvalues = 6, rest sum=3.00, prod=3.00
+  t₃=20, β₁=0: 238 tournaments, 1 distinct spectra
+    [6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00, 6.00] × 238
+      10 eigenvalues = 6, rest sum=0.00, prod=1.00
+
+======================================================================
+T/R DUALITY AT n=6
+======================================================================
+
+No t₃=10 tournaments found in 50000 samples. Checking t₃ distribution...
+    t₃=12: 812 (8.1%)
+    t₃=13: 1366 (13.7%)
+    t₃=14: 2588 (25.9%)
+    t₃=15: 1160 (11.6%)
+    t₃=16: 1938 (19.4%)
+    t₃=17: 931 (9.3%)
+    t₃=18: 721 (7.2%)
+    t₃=19: 289 (2.9%)
+    t₃=20: 195 (1.9%)
+
+======================================================================
+THE n=6 TRANSFER MATRIX TRACES vs CONSTRAINT TRACES
+======================================================================
+
+THM-217 transfer matrix at x = 18 (n=6):
+  M(18) eigenvalues: α=-3, λ₁=2+√10, λ₂=2-√10
+
+  Tr(M^N) = α^N + λ₁^N + λ₂^N
+
+THM-224 constraint matrix at n=6:
+  C^TC eigenvalue = n = 6, multiplicity = 10
+
+  Tr((C^TC)^N) = 6^N · 10
+
+The "bridge" quantity: trace of (C_T^TC_T)^N for a tournament T.
+  = sum of (eigenvalues of C_T^TC_T)^N
+
+  N=1: Tr(M^1) = 1.0, Tr((C^TC)^1) = 60
+  N=2: Tr(M^2) = 37.0, Tr((C^TC)^2) = 360
+  N=3: Tr(M^3) = 109.0, Tr((C^TC)^3) = 2160
+  N=4: Tr(M^4) = 793.0, Tr((C^TC)^4) = 12960
+  N=5: Tr(M^5) = 3421.0, Tr((C^TC)^5) = 77760
+  N=6: Tr(M^6) = 19657.0, Tr((C^TC)^6) = 466560
+  N=7: Tr(M^7) = 95509.0, Tr((C^TC)^7) = 2799360
+
+  Finding most balanced tournaments at n=6:
+  Most balanced tournament: scores=[2, 2, 2, 3, 3, 3], t₃=12, c₃=8
+  Eigenvalues: [ 6.     6.     5.254  4.677  4.257  3.     3.     2.     1.524  0.289
+  0.     0.     0.    -0.    -0.   ]
+
+======================================================================
+SYNTHESIS: WHY n=6 IS UNIQUE
+======================================================================
+
+n=6 is the UNIQUE point where three structures align:
+
+1. REDUNDANCY = INDEPENDENCE (both = 1/2)
+   At n<6: independence > redundancy (system is "lean")
+   At n>6: redundancy > independence (system is "fat")
+   At n=6: exact balance
+
+2. THM-217 SELF-CONSISTENCY
+   The char poly λ³-λ²-xλ-x factors via the metallic quadratic
+   λ²-(n-2)λ-n ONLY at n=6 (gap = n-6 = 0).
+   The third eigenvalue α=3-n=-3 exactly satisfies BOTH the constant
+   term condition (αc=-x → -3·6=-18 ✓) and the linear term
+   condition (αb-c=-x → -3·4-6=-18 ✓).
+
+3. THE SPECTRAL DUALITY
+   C_T^TC_T + C_R^TC_R = n·P means eigenvalues pair as (λ, n-λ).
+   At n=6 with redundancy=1/2, the "typical" tournament has t₃≈c₃,
+   making the T↔R duality most symmetric.
+
+The number n=6 also has unique combinatorial properties:
+  - C(6,3) = 20, max_rank = 10, redundancy = 10 (equal!)
+  - 6 is the smallest n where the constraint system has "room" for
+    both types of eigenvalue behavior
+  - The metallic mean M₆-1 = 2+√10 ≈ 5.162 is closest to n among all M_n-1
+    (since M_n-1 ≈ n-1+1/(n-1), at n=6: M₆-1 ≈ 5.2 vs n=6)
+
+M_n-1 vs n:
+  n=3: M_n-1 = 2.3028, n-1 = 2, ratio M_n-1/n = 0.7676
+  n=4: M_n-1 = 3.2361, n-1 = 3, ratio M_n-1/n = 0.8090
+  n=5: M_n-1 = 4.1926, n-1 = 4, ratio M_n-1/n = 0.8385
+  n=6: M_n-1 = 5.1623, n-1 = 5, ratio M_n-1/n = 0.8604
+  n=7: M_n-1 = 6.1401, n-1 = 6, ratio M_n-1/n = 0.8772
+  n=8: M_n-1 = 7.1231, n-1 = 7, ratio M_n-1/n = 0.8904
+  n=9: M_n-1 = 8.1098, n-1 = 8, ratio M_n-1/n = 0.9011
+  n=10: M_n-1 = 9.0990, n-1 = 9, ratio M_n-1/n = 0.9099
+  n=11: M_n-1 = 10.0902, n-1 = 10, ratio M_n-1/n = 0.9173
+  n=12: M_n-1 = 11.0828, n-1 = 11, ratio M_n-1/n = 0.9236
+  n=13: M_n-1 = 12.0765, n-1 = 12, ratio M_n-1/n = 0.9290
+  n=14: M_n-1 = 13.0711, n-1 = 13, ratio M_n-1/n = 0.9336
+
+======================================================================
+THE UNIVERSAL TOP EIGENVALUE: PROOF VIA POTENTIAL FUNCTIONS
+======================================================================
+
+THEOREM (THM-225?): For any tournament T on n≥3 vertices with t₃≥1,
+the largest eigenvalue of C_T^TC_T equals n.
+
+PROOF:
+
+Step 1: C_T^TC_T = n·P - C_R^TC_R (from THM-224).
+So max_eig(C_T^TC_T) ≤ n (since C_R^TC_R ≥ 0).
+
+Step 2: We need v ∈ im(P) with C_R v = 0, i.e., v ∈ im(∂₂^T) ∩ ker(C_R).
+
+Step 3: im(∂₂^T) = ker(∂₁)^⊥ in ℝ^E (Hodge decomposition on simplex).
+So v ∈ im(∂₂^T) means v is orthogonal to all gradient 1-forms.
+
+Step 4: ker(C_R) = {v : v·∂₂(σ)=0 for all cyclic σ}.
+Since ∂₂(σ) has the same form regardless of whether σ is transitive
+or cyclic in the tournament, this means v assigns zero "flux" through
+every cyclic triple.
+
+Step 5: Choose any TRANSITIVE TRIPLE σ₀ = {a,b,c} of T.
+Let v₀ = P · ∂₂(σ₀) (project the boundary of σ₀ onto im(∂₂^T)).
+Then v₀ ∈ im(P). And C_T v₀ has nonzero entry at σ₀ (at minimum).
+
+But C_R v₀ might not be zero...
+
+ALTERNATIVE: Use the vertex potential approach.
+
+For any tournament T, define f_e for edge e = (i,j) as follows:
+Choose a transitive triple {i,j,k} (exists since t₃≥1).
+Actually, not every edge need be in a transitive triple.
+
+Let me try a different approach: the SIGNED SCORE vector.
+
+Define s_i = out-degree of vertex i in T. Then s_i ∈ {0,...,n-1}
+and Σ s_i = C(n,2).
+
+Define the edge vector v by v_{(i,j)} = s_j - s_i (the score difference).
+
+This is a GRADIENT: v = ∂₁^T s, so v ∈ im(∂₁^T) = ker(P).
+Not useful — gives eigenvalue 0.
+
+Instead, define v_{(i,j)} = s_j - s_i - (n-1-2s_i)?? No, too ad hoc.
+
+Actually, the proof might be simpler:
+
+Step A: v = C_T^T · 1 (the sum of all transitive triple boundaries).
+This v has v_{(i,j)} = (# trans triples containing (i,j) with + sign)
+                      - (# trans triples containing (i,j) with - sign).
+
+Step B: Similarly, C_R^T · 1 is the sum of all cyclic triple boundaries.
+And C^T · 1 = C_T^T · 1 + C_R^T · 1.
+
+Step C: C^T · 1 is in im(C^T) = im(P), and
+(C^TC)·(C^T·1) = n·P·(C^T·1) = n·C^T·1 (since C^T·1 ∈ im(P)).
+So ||C·(C^T·1)||² = n·||C^T·1||².
+
+Hmm, that's the eigenvalue equation for C·C^T, not C^TC.
+Actually: C^TC · (C^T·1) = C^T·(C·C^T·1).
+And C·C^T is the triple-triple Gram matrix, all eigenvalues = n.
+So C·C^T·1 = n·P'·1 where P' is the triple-space projection.
+
+This is getting complicated. Let me try numerically.
+
+  bits=7296, t₃=19: C_T^T·1 is NOT eigenvector. Rayleigh quotient = 5.9189
+    C^T·1: Rayleigh quotient = 5.7000
+    C^T·(±1): Rayleigh quotient = 6.0000, ||v||²=108.0000
+  bits=1639, t₃=18: C_T^T·1 is NOT eigenvector. Rayleigh quotient = 5.9231
+    C^T·1: Rayleigh quotient = 5.4000
+    C^T·(±1): Rayleigh quotient = 5.9231, ||v||²=104.0000
+  bits=18024, t₃=15: C_T^T·1 is NOT eigenvector. Rayleigh quotient = 5.3200
+    C^T·1: Rayleigh quotient = 4.5000
+    C^T·(±1): Rayleigh quotient = 5.6000, ||v||²=60.0000
+  bits=16049, t₃=15: C_T^T·1 is NOT eigenvector. Rayleigh quotient = 5.6667
+    C^T·1: Rayleigh quotient = 4.5000
+    C^T·(±1): Rayleigh quotient = 5.1429, ||v||²=84.0000
+  bits=14628, t₃=14: C_T^T·1 is NOT eigenvector. Rayleigh quotient = 4.8750
+    C^T·1: Rayleigh quotient = 4.2000
+    C^T·(±1): Rayleigh quotient = 5.4000, ||v||²=40.0000
+
+======================================================================
+PROOF BY EXPLICIT CONSTRUCTION
+======================================================================
+
+Let me try: for each edge e, define its "transitive score"
+  w(e) = (# transitive triples containing e) - (# cyclic triples containing e)
+
+Then w = (C_T^T · 1_T - C_R^T · 1_R) componentwise... no, that's not right
+because the signs in C are not all +1.
+
+Actually: for edge (i,j), the diagonal of C_T^TC_T is
+  (C_T^TC_T)_{ee} = Σ_σ [∂₂(σ)_e]² = # transitive triples containing e
+
+And (C_R^TC_R)_{ee} = # cyclic triples containing e.
+
+Sum: (C^TC)_{ee} = n-2 (THM-224 diagonal).
+
+So: (C_T^TC_T)_{ee} = t₃(e) and (C_R^TC_R)_{ee} = c₃(e)
+where t₃(e)+c₃(e) = n-2.
+
+n=5, bits=234:
+  Diagonal of C_T^TC_T: [2. 1. 1. 2. 1. 3. 2. 2. 2. 2.]
+  Diagonal of C_R^TC_R: [1. 2. 2. 1. 2. 0. 1. 1. 1. 1.]
+  Sum: [3. 3. 3. 3. 3. 3. 3. 3. 3. 3.]
+  Expected: n-2 = 3
+
+  Σ t₃(e) = 18, 3·t₃ = 18
+
+======================================================================
+THE QUADRATIC DUALITY
+======================================================================
+
+The two quadratic equations:
+
+  METALLIC (THM-217): μ² - (n-2)μ - n = 0
+    Roots: μ = [(n-2) ± √(n²+4)] / 2
+    Sum = n-2, Product = -n
+
+  SELF-DUAL (THM-224): λ² - nλ + n = 0
+    Roots: λ = [n ± √(n²-4n)] / 2 = [n ± √(n(n-4))] / 2
+    Sum = n, Product = n
+
+OBSERVATION: The metallic equation can be rewritten as
+  μ(μ-(n-2)) = n
+while the self-dual equation is
+  λ(n-λ) = n, i.e., λ(λ-n) = -n
+
+So:
+  Metallic: product of (root, root shifted by n-2) = n
+  Self-dual: product of (root, root shifted by n) = -n
+
+The shift DIFFERENCE is 2. The product RATIO is -1.
+
+If we define the CENTERED roots:
+  Metallic: μ - (n-2)/2 = ±√(n²+4)/2
+  Self-dual: λ - n/2 = ±√(n²-4n)/2
+
+The half-sums are (n-2)/2 and n/2, differing by 1.
+The half-discriminants are √(n²+4)/2 and √(n(n-4))/2.
+
+RATIO of discriminants: √(n²+4)/√(n²-4n) = √((n²+4)/(n²-4n))
+
+At n=6: √(40/12) = √(10/3) ≈ 1.826
+
+At n=∞: √((n²+4)/(n²-4n)) → 1
+
+So the two quadratics CONVERGE as n→∞ (both → centered at n/2 with half-width n/2).
+
+The FINITE-n difference is what makes n=6 special:
+at n=6, the metallic mean M₆-1 = 2+√10 ≈ 5.162, and
+the self-dual eigenvalue φ = 3+√3 ≈ 4.732.
+Their difference 5.162-4.732 = 0.430 is among the smallest.
+
+Metallic vs Self-dual eigenvalues:
+  n      M_n-1        φ_n       diff      ratio
+  5     4.1926     3.6180     0.5745     1.1588
+  6     5.1623     4.7321     0.4302     1.0909
+  7     6.1401     5.7913     0.3488     1.0602
+  8     7.1231     6.8284     0.2947     1.0432
+  9     8.1098     7.8541     0.2557     1.0326
+ 10     9.0990     8.8730     0.2260     1.0255
+ 11    10.0902     9.8875     0.2027     1.0205
+ 12    11.0828    10.8990     0.1838     1.0169
+ 13    12.0765    11.9083     0.1681     1.0141
+ 14    13.0711    12.9161     0.1550     1.0120
+ 15    14.0664    13.9226     0.1438     1.0103
+ 16    15.0623    14.9282     0.1341     1.0090
+ 17    16.0586    15.9330     0.1256     1.0079
+ 18    17.0554    16.9373     0.1181     1.0070
+ 19    18.0525    17.9410     0.1115     1.0062
+
+======================================================================
+THE 3/n BRIDGE: FINAL FORMULATION
+======================================================================
+
+╔══════════════════════════════════════════════════════════════════╗
+║              THE 3/n BRIDGE: UNIFIED FRAMEWORK                  ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                  ║
+║  The fraction 3/n is the INDEPENDENCE RATIO of the simplicial    ║
+║  boundary on K_n: rank(∂₂)/C(n,3) = 3/n.                       ║
+║                                                                  ║
+║  THM-224: C^TC = n·P                                            ║
+║    - Eigenvalue n = trace/rank = 3·C(n,3)/[C(n,3)·(3/n)] = n   ║
+║    - The 3 comes from dim(∂Δ²) = 3 (triangle has 3 edges)      ║
+║    - The 3/n comes from H₁(K_n)=0 (complete graph contractible) ║
+║                                                                  ║
+║  THM-217: char poly factors at x = n(n-3) = n²·(1-3/n)         ║
+║    - Third eigenvalue α = 3-n = -n·(1-3/n)                      ║
+║    - Encodes the redundancy fraction (n-3)/n = 1-3/n            ║
+║    - Self-consistent ONLY at n=6 (gap = n-6)                    ║
+║                                                                  ║
+║  BRIDGE:                                                         ║
+║    Both theorems encode the same simplicial combinatorics:       ║
+║    "3 edges per triple, n-2 triples per edge"                    ║
+║                                                                  ║
+║    THM-224 captures this SPECTRALLY (uniform eigenvalue n)       ║
+║    THM-217 captures this ALGEBRAICALLY (factorization at n(n-3)) ║
+║                                                                  ║
+║  SPECTRAL DUALITY:                                               ║
+║    For any tournament T: C_T^TC_T + C_R^TC_R = n·P              ║
+║    Eigenvalues pair as (λ, n-λ)                                  ║
+║    β₁=1 ⟺ C_R^TC_R has eigenvalue n on im(P)                  ║
+║    ⟺ some edge function in the constraint column space is       ║
+║      "completely cyclic" (zero flux through all transitive triples)║
+║                                                                  ║
+║  AT n=6 (unique):                                                ║
+║    - Redundancy = Independence (both = 10)                       ║
+║    - THM-217 factorization is self-consistent                    ║
+║    - The metallic mean 2+√10 governs the HP growth rate          ║
+║      at exactly the "redundancy capacity" x = 18 = n²/2         ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+======================================================================
+APPROACH 1: THE SIGNED VECTOR v = C^T · s
+======================================================================
+
+n=5: Testing v = C^T · s where s = +1 (trans) / -1 (cyclic)
+  t₃=5: Rayleigh quotients = [1.611111, 2.5, 3.388889]
+  t₃=6: Rayleigh quotients = [3.0, 3.190476, 3.380952, 3.615385, 3.8, 4.230769, 4.6, 4.777778]
+  t₃=7: Rayleigh quotients = [3.5, 3.9, 3.97619, 4.388889, 4.576923]
+  t₃=8: Rayleigh quotients = [4.571429, 4.923077]
+  t₃=9: Rayleigh quotients = [4.97619]
+  t₃=10: Rayleigh quotients = [5.0]
+
+======================================================================
+APPROACH 2: THE INDIVIDUAL TRIPLE BOUNDARY PROJECTION
+======================================================================
+
+Key idea: for any transitive triple σ in T, the vector ∂₂(σ) is a row
+of C_full. Its projection onto im(P) is P·∂₂(σ).
+
+C_T^TC_T · (P·∂₂(σ)) = C_T^T·(C_T·P·∂₂(σ))
+
+If P·∂₂(σ) happens to be in ker(C_R), then C_T^TC_T·(P·∂₂(σ)) = n·P·∂₂(σ).
+
+When is P·∂₂(σ) ∈ ker(C_R)?
+  C_R·P·∂₂(σ) = 0
+  ⟺ ∂₂(τ)·P·∂₂(σ) = 0 for every cyclic triple τ
+  ⟺ (C_full·C_full^T)_{τ,σ}/n · n = 0  ... hmm
+  Actually P = (1/n) C_full^T C_full, so
+  C_R · P · ∂₂(σ)^T = (1/n) C_R C_full^T C_full ∂₂(σ)^T
+  = (1/n) C_R (n P) ∂₂(σ)^T? No, C_full^T C_full = n P acts on ℝ^E.
+  ∂₂(σ) ∈ ℝ^E. So n P ∂₂(σ) = n · P ∂₂(σ).
+
+Wait: P is projection onto im(C_full^T). P∂₂(σ) = P·(row of C_full^T) ...
+Actually ∂₂(σ) is a ROW of C_full, or equivalently a COLUMN of C_full^T.
+So ∂₂(σ) ∈ im(C_full^T) if and only if ∂₂(σ) is in the column space of C_full^T.
+But C_full^T has columns = rows of C_full = ∂₂ of all triples.
+So ∂₂(σ) IS a column of C_full^T, hence ∂₂(σ) ∈ im(C_full^T).
+Therefore P·∂₂(σ) = ∂₂(σ).
+
+So: C_R·∂₂(σ) = [<∂₂(τ), ∂₂(σ)> for each cyclic τ].
+This is the column of C_full·C_full^T corresponding to σ, restricted to cyclic rows.
+
+C_full·C_full^T has ALL eigenvalues = n (on rank space) or 0.
+So (C_full·C_full^T)·e_σ = n·P'·e_σ where P' is the projection in triple-space.
+
+If P'·e_σ has zero components on all cyclic triples, then C_R·∂₂(σ)=0.
+This happens iff e_σ (unit vector in triple space) has its P'-image
+entirely supported on transitive triples.
+
+But P' is NOT the identity — it's the projection onto the column space
+of C_full (in triple-space). The nullspace of C_full·C_full^T is the
+nullspace of C_full^T (dependency space of triples).
+
+
+  bits=234: t₃=6, c₃=4
+    rank(C_R C_T^T) = 4, nullity = 2
+    Null vector v: ||C_R v|| = 0.000000, Rayleigh = 5.000000
+
+  bits=42: t₃=6, c₃=4
+    rank(C_R C_T^T) = 4, nullity = 2
+    Null vector v: ||C_R v|| = 0.000000, Rayleigh = 5.000000
+
+  bits=127: t₃=10, c₃=0
+    Triple #0: C_R·∂₂(σ) = 0 ← EIGENVECTOR!
+    Triple #1: C_R·∂₂(σ) = 0 ← EIGENVECTOR!
+    Triple #2: C_R·∂₂(σ) = 0 ← EIGENVECTOR!
+    Triple #3: C_R·∂₂(σ) = 0 ← EIGENVECTOR!
+    Triple #4: C_R·∂₂(σ) = 0 ← EIGENVECTOR!
+    Triple #5: C_R·∂₂(σ) = 0 ← EIGENVECTOR!
+    Triple #6: C_R·∂₂(σ) = 0 ← EIGENVECTOR!
+    Triple #7: C_R·∂₂(σ) = 0 ← EIGENVECTOR!
+    Triple #8: C_R·∂₂(σ) = 0 ← EIGENVECTOR!
+    Triple #9: C_R·∂₂(σ) = 0 ← EIGENVECTOR!
+Traceback (most recent call last):
+  File "/tmp/prove_top_eig.py", line 167, in <module>
+    rk_cross = np.linalg.matrix_rank(cross)
+  File "/home/e/.local/lib/python3.10/site-packages/numpy/linalg/linalg.py", line 1924, in matrix_rank
+    tol = S.max(axis=-1, keepdims=True) * max(A.shape[-2:]) * finfo(S.dtype).eps
+  File "/home/e/.local/lib/python3.10/site-packages/numpy/core/_methods.py", line 41, in _amax
+    return umr_maximum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation maximum which has no identity
+======================================================================
+EXHAUSTIVE PROOF CHECK: dim(im(C_T^T) ∩ ker(C_R)) ≥ 1
+======================================================================
+
+n=5 (exhaustive):
+  Bad cases (effective dim ≤ 0): 0
+  Distribution of dim(im(C_T^T) ∩ ker(C_R)):
+    dim = 1: 24 tournaments
+    dim = 2: 280 tournaments
+    dim = 3: 240 tournaments
+    dim = 4: 240 tournaments
+    dim = 5: 120 tournaments
+
+n=6 (sampled 20000):
+  Bad cases (effective dim ≤ 0): 0
+  Distribution of dim(im(C_T^T) ∩ ker(C_R)):
+    dim = 2: 1432 tournaments
+    dim = 3: 3142 tournaments
+    dim = 4: 5170 tournaments
+    dim = 5: 2173 tournaments
+    dim = 6: 3847 tournaments
+    dim = 7: 1802 tournaments
+    dim = 8: 1347 tournaments
+    dim = 9: 605 tournaments
+
+======================================================================
+THE ALGEBRAIC PROOF
+======================================================================
+
+THEOREM (THM-225): For any tournament T on n ≥ 3 vertices with t₃ ≥ 1,
+max eigenvalue of C_T^TC_T = n.
+
+PROOF:
+
+(A) Upper bound: C_T^TC_T = n·P - C_R^TC_R ≤ n·P (since C_R^TC_R ≥ 0).
+    Hence max eigenvalue ≤ n.
+
+(B) Attainment: We show ∃ nonzero v ∈ im(C_T^T) with C_R·v = 0.
+    Then v ∈ im(C^T) and C_T^TC_T·v = n·P·v - C_R^T·(C_R·v) = n·v - 0 = n·v.
+
+    Construction: v = C_T^T·q where q ∈ ker(C_R·C_T^T) ∖ ker(C_T^T).
+
+    Such q exists iff dim(ker(C_R·C_T^T)) > dim(ker(C_T^T)),
+    equivalently rank(C_T) > rank(C_R·C_T^T).
+
+(C) Since rank(C_R·C_T^T) ≤ rank(C_R), it suffices to show rank(C_T) > rank(C_R).
+
+    KEY LEMMA: rank(C_T) > rank(C_R) for all tournaments on n ≥ 3 with t₃ ≥ 1.
+
+    Proof of lemma:
+    Let r = rank of the full constraint matrix C.
+    r = (n-1)(n-2)/2 (from THM-224, since K_n is simply connected).
+
+    Both C_T and C_R are submatrices of C (disjoint row subsets).
+    rank(C_T) + rank(C_R) ≤ rank(C) + dim(im(C_T) ∩ im(C_R))... NO,
+    this isn't standard.
+
+    Actually: rank([C_T; C_R]) = rank(C) = r.
+    And rank([C_T; C_R]) ≤ rank(C_T) + rank(C_R).
+    So rank(C_T) + rank(C_R) ≥ r = (n-1)(n-2)/2.
+
+    We know rank(C_T) ≤ min(t₃, r) and rank(C_R) ≤ min(c₃, r).
+
+    If rank(C_T) = rank(C_R), then 2·rank(C_T) ≥ r, so rank(C_T) ≥ r/2.
+    And rank(C_R) = rank(C_T) ≥ r/2. But rank(C_R) ≤ c₃ < t₃
+    (since t₃ > c₃ always). And rank(C_T) ≤ t₃.
+
+    Hmm, this doesn't immediately give rank(C_T) > rank(C_R).
+
+    Let me try differently. We KNOW rank(C_T) ∈ {r-1, r} (from THM-223:
+    β₁ ∈ {0,1}). And rank(C_R) ≤ c₃ = C(n,3) - t₃.
+
+    The maximum rank of C_R is min(c₃, r-β₁) where β₁ is β₁ of T.
+    Actually rank(C_R) is at most E - rank(C_T)... no, that's not right either.
+
+    Let me just check: is rank(C_T) > rank(C_R) always TRUE?
+
+
+n=5: rank(C_T) > rank(C_R)? Violations: 24/1024
+  Examples:
+    bits=76: t₃=5, c₃=5, rk_T=5, rk_R=5, β₁=1
+    bits=105: t₃=5, c₃=5, rk_T=5, rk_R=5, β₁=1
+    bits=202: t₃=5, c₃=5, rk_T=5, rk_R=5, β₁=1
+    bits=217: t₃=5, c₃=5, rk_T=5, rk_R=5, β₁=1
+    bits=284: t₃=5, c₃=5, rk_T=5, rk_R=5, β₁=1
+
+Direct check: rank(C_T) - rank(C_R C_T^T) ≥ 1?
+  Violations: 0/1024
+
+  Can every transitive ∂₂(σ) be in span of cyclic ∂₂'s?
+n=5: r=6, max_c₃_seen=5, max_rank(C_R)=5, c₃>r? False, violations=0/1024
+  theoretical max_c₃ (regular)=5
+n=6: r=10, max_c₃_seen=8, max_rank(C_R)=8, c₃>r? False, violations=0/32768
+n=7: r=15, max_c₃_seen=14, max_rank(C_R)=14, c₃>r? False, violations=0/10000
+  theoretical max_c₃ (regular)=14
+n=8: r=21, max_c₃_seen=20, max_rank(C_R)=20, c₃>r? False, violations=0/10000
+  n=9: VIOLATION! rank(C_R)=28 ≥ r=28, c₃=29
+  n=9: VIOLATION! rank(C_R)=28 ≥ r=28, c₃=28
+  n=9: VIOLATION! rank(C_R)=28 ≥ r=28, c₃=28
+  n=9: VIOLATION! rank(C_R)=28 ≥ r=28, c₃=29
+  n=9: VIOLATION! rank(C_R)=28 ≥ r=28, c₃=29
+  n=9: VIOLATION! rank(C_R)=28 ≥ r=28, c₃=28
+  n=9: VIOLATION! rank(C_R)=28 ≥ r=28, c₃=28
+  n=9: VIOLATION! rank(C_R)=28 ≥ r=28, c₃=29
+  n=9: VIOLATION! rank(C_R)=28 ≥ r=28, c₃=28
+  n=9: VIOLATION! rank(C_R)=28 ≥ r=28, c₃=29
+  n=9: VIOLATION! rank(C_R)=28 ≥ r=28, c₃=28
+n=9: r=28, max_c₃_seen=29, max_rank(C_R)=28, c₃>r? True, violations=11/10000
+  theoretical max_c₃ (regular)=30
+
+--- FOCUSED TEST: n=9 regular tournament ---
+Regular tournament C_9^{1,2,3,4}: c₃=30, rank(C_R)=27, r=28
+  gap = r - rank(C_R) = 1
+  Random tournament: c₃=20, rank(C_R)=18, gap=10
+  Random tournament: c₃=10, rank(C_R)=10, gap=18
+  Random tournament: c₃=26, rank(C_R)=25, gap=3
+  Random tournament: c₃=24, rank(C_R)=23, gap=5
+  Random tournament: c₃=22, rank(C_R)=22, gap=6
+
+======================================================================
+WHY rank(C_R) < r: THE GRADIENT OBSTRUCTION
+======================================================================
+
+PROOF that rank(C_R) < r for any tournament:
+
+The constraint column space im(C^T) decomposes (via Hodge theory on K_n) as:
+  im(C^T) = im(∂₂^T) (curl space, dimension r)
+
+The "gradient" space im(∂₁^T) has dimension n-1, and is orthogonal to im(C^T).
+Together: ℝ^E = im(∂₁^T) ⊕ im(∂₂^T).
+
+Now: the SCORE VECTOR s = (s₁,...,s_n) where s_i = out-degree(i) defines
+a gradient 1-form v = ∂₁^T·s by v_{(i,j)} = s_j - s_i.
+
+For any triple σ={a,b,c}: ∂₂(σ)·v = v_{bc} - v_{ac} + v_{ab}
+= (s_c-s_b) - (s_c-s_a) + (s_b-s_a) = 0.
+
+So the score gradient v is in ker(C) = ker(C_T) ∩ ker(C_R). This means
+EVERY row of C (transitive or cyclic) is orthogonal to v.
+
+But this doesn't help — v is in im(∂₁^T) which is already orthogonal to im(C^T).
+
+DIFFERENT APPROACH: Use the simplicial dependency structure.
+
+Every 4-vertex subset {a,b,c,d} gives a DEPENDENCY among the 4 triple
+boundaries: ∂₂(bcd) - ∂₂(acd) + ∂₂(abd) - ∂₂(abc) = 0.
+(This is ∂₃ of the 3-simplex.)
+
+In a tournament, these 4 triples can be split into transitive and cyclic.
+The dependency holds among ALL 4, regardless of T/C classification.
+
+For rank(C_R) = r: the c₃ cyclic rows must span all r dimensions.
+But the rows of C_R satisfy ALL the dependency relations that involve
+at least one transitive triple. Each dependency is:
+  Σ (cyclic rows) = -Σ (transitive rows in same dependency)
+
+If a dependency involves k transitive rows and 4-k cyclic rows,
+then the k transitive rows are in the span of the cyclic rows
+(by the dependency).
+
+rank(C_R) = r iff every transitive triple boundary is in span of
+cyclic triple boundaries, i.e., every transitive triple appears in
+some dependency where all OTHER triples are cyclic.
+
+A 4-vertex subset {a,b,c,d} has 4 triples. For ALL 4 to be cyclic
+except one transitive: this requires a specific structure.
+
+CLAIM: At least one transitive triple has ALL its dependency partners
+being themselves transitive (or mixed), preventing it from being
+expressed as a combination of cyclic rows.
+
+PROOF OF CLAIM: Consider the transitive tournament restricted to the
+top 3 vertices (by out-degree). In any tournament, there exist 3
+vertices with... hmm, this is getting complicated.
+
+Actually, let me try a simpler argument:
+
+The TRANSITIVE TOURNAMENT has c₃ = 0 and t₃ = C(n,3).
+Clearly rank(C_R) = 0 < r. ✓
+
+For a tournament ONE step from transitive (β₁=0, high t₃):
+rank(C_R) ≤ c₃ which is small. ✓
+
+The hard case is the REGULAR tournament (maximum c₃).
+Let me verify at n=9: rank(C_R) for the regular tournament.
+
+
+Summary:
+n=9, regular tournament: c₃=30, r=28, rank(C_R)=22, gap=6
+
+So even at n=9 where c₃=30 > r=28, rank(C_R) < r!
+The cyclic boundaries have 8 dependencies among themselves
+(beyond the simplicial dependencies).
+======================================================================
+GLMY PATH HOMOLOGY v2 — VALIDATION
+======================================================================
+
+--- Directed 3-cycle C_3 ---
+  Expected: β = [1, 1, 0] (1 component, 1 directed hole)
+  Got: β = [1, 1, 0]
+
+--- Directed path P_3 ---
+  Expected: β = [1, 0, 0] (connected, contractible)
+  Got: β = [1, 0, 0]
+
+--- Transitive tournament T_3: 0->1, 0->2, 1->2 ---
+  This is an acyclic tournament. Expected: β_1 = 0 (no directed holes)
+  Got: β = [1, 0, 0]
+
+--- 3-cycle tournament: 0->1, 1->2, 2->0 ---
+  Got: β = [1, 1, 0]
+
+--- Directed 4-cycle C_4 ---
+  Expected: β = [1, 1, 0, 0]
+  Got: β = [1, 1, 0, 0]
+
+--- Complete bidirected K_3 ---
+  Got: β = [1, 0, 2]
+
+--- 0->1, vertex 2 isolated ---
+  Got: β = [2, 0, 0]
+  Expected: β_0 = 3 or 2 (depends on convention)
+
+
+======================================================================
+CIRCULANT DIGRAPHS C_n^S
+======================================================================
+  C_3^{1} (directed cycle): β = [1, 1, 0]
+  C_4^{1} (directed cycle): β = [1, 1, 0, 0]
+  C_5^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_6^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+  C_7^{1} (directed cycle): β = [1, 1, 0, 0, 0]
+
+  C_4^{1,2}: β = [1, 1, 0, 0]
+  C_5^{1,2}: β = [1, 1, 0, 0, 0]
+  C_6^{1,2}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2}: β = [1, 1, 0, 0, 0]
+
+  C_5^{1,2,3}: β = [1, 0, 0, 1, 0]
+  C_6^{1,2,3}: β = [1, 1, 0, 0, 0]
+  C_7^{1,2,3}: β = [1, 1, 0, 0, 0]
+
+
+======================================================================
+ALL TOURNAMENTS — PATH HOMOLOGY
+======================================================================
+
+--- All tournaments n=3 ---
+  Betti distribution:
+    β=[1, 0, 0]: 6 tournaments
+    β=[1, 1, 0]: 2 tournaments
+  By t3:
+    t3=0: {(1, 0, 0): 6}
+    t3=1: {(1, 1, 0): 2}
+
+--- All tournaments n=4 ---
+  Betti distribution:
+    β=[1, 0, 0, 0]: 40 tournaments
+    β=[1, 1, 0, 0]: 24 tournaments
+  By t3:
+    t3=0: {(1, 0, 0, 0): 24}
+    t3=1: {(1, 0, 0, 0): 16}
+    t3=2: {(1, 1, 0, 0): 24}
+
+--- All tournaments n=5 ---
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=1, H=3: β=[1, 0, 0, 0, 0]
+  t3=0, H=1: β=[1, 0, 0, 0, 0]
+  t3=2, H=5: β=[1, 0, 0, 0, 0]
+
+  Betti distribution (n=5, 1024 tournaments):
+    β=[1, 0, 0, 0, 0]: 720
+    β=[1, 1, 0, 0, 0]: 304
+
+  By t3:
+    t3=0: {(1, 0, 0, 0, 0): 120}
+    t3=1: {(1, 0, 0, 0, 0): 120}
+    t3=2: {(1, 0, 0, 0, 0): 240}
+    t3=3: {(1, 1, 0, 0, 0): 120, (1, 0, 0, 0, 0): 120}
+    t3=4: {(1, 1, 0, 0, 0): 160, (1, 0, 0, 0, 0): 120}
+    t3=5: {(1, 1, 0, 0, 0): 24}
+
+
+======================================================================
+GEOMETRIC INTERPRETATION
+======================================================================
+
+The GLMY path Betti numbers measure "directed topological features":
+
+β_0 = # connected components (in path homology sense)
+β_1 = # independent directed 1-holes (directed cycles not bounding anything)
+β_2 = # independent directed 2-holes (directed "cavities")
+
+For TOURNAMENTS:
+- β_0 = 1 always (tournament is connected)
+- β_1 depends on the 3-cycle structure
+- β_2 and higher: potential higher-dimensional directed cavities
+
+TOPOLOGICAL SPACES ANALOGY:
+- β = (1,0,...) : contractible → like a point
+- β = (1,1,0,...) : one 1-hole → like a circle S^1
+- β = (1,2,1,...) : like a torus T^2
+- β = (1,0,1,...) : one 2-hole → like a sphere S^2
+
+SUMMARY: Which topological space does each tournament resemble?
+
+n=3:
+  β=[1, 0, 0, 0]: 40 tournaments → point
+  β=[1, 1, 0, 0]: 24 tournaments → circle S^1
+
+n=4:
+
+n=5:
+  β=[1, 0, 0, 0, 0]: 720 tournaments → point
+  β=[1, 1, 0, 0, 0]: 304 tournaments → circle S^1
+
+
+Done.
+  Regular C_9: β = [1, 0, 0]
+  rank(C_T) = 28, β₁ = 0
+  rank(C_R) = 22
+  rank(C_T) + rank(C_R) = 50, r = 28
+  dim(im(C_T) ∩ im(C_R)) = rank(C_T) + rank(C_R) - r = 22
+
+  dim(ker(C_R) ∩ im(C^T)) = r - rank(C_R) = 6
+  This gives 6 eigenvectors for eigenvalue n = 9
+  Top eigenvalue of C_T^TC_T: 9.000000
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.912412
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.878987
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.899407
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.841601
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.866743
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.917261
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.922327
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.916871
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.887422
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.883291
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.916568
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.904007
+  TOP EIG VIOLATION: bits=..., c₃=30, rank(C_R)=28, top_eig=8.886409
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.899407
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.915548
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.928028
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.883291
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.935582
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.917271
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.933719
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.941911
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.876162
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.868881
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.904781
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.933044
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.912638
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.914545
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.936277
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.882167
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.938227
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.887422
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.899399
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.904781
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.916568
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.868881
+  TOP EIG VIOLATION: bits=..., c₃=29, rank(C_R)=28, top_eig=8.868958
+  TOP EIG VIOLATION: bits=..., c₃=28, rank(C_R)=28, top_eig=8.922407
+
+Summary: 37 cases with rank(C_R)≥r out of 50000 with c₃≥r
+Top eigenvalue violations: 37

@@ -1,0 +1,33 @@
+======================================================================
+CORRECT DOMINATION CHECK FOR β₃=1 TOURNAMENTS
+======================================================================
+  10000/32768, t=255s
+  20000/32768, t=515s
+  30000/32768, t=784s
+
+Done in 848.0s
+
+--- β₁=1 (4800 tournaments) ---
+  Free 3-cycles: {4: 1920, 6: 1920, 8: 960}
+  All have free3 > 0: True
+
+--- β₃=1 (320 tournaments) ---
+  Free 3-cycles: {0: 80, 2: 240}
+  All have free3 = 0: False
+
+  β₃=1 examples:
+    bits=87: score=[1, 1, 1, 4, 4, 4], c₃=2, free=0
+    bits=356: score=[1, 1, 1, 4, 4, 4], c₃=2, free=0
+    bits=567: score=[1, 1, 1, 4, 4, 4], c₃=2, free=0
+    bits=866: score=[1, 1, 1, 4, 4, 4], c₃=2, free=0
+    bits=1278: score=[1, 1, 1, 4, 4, 4], c₃=2, free=0
+
+--- Contractible (27648 tournaments) ---
+  Free 3-cycles: {0: 11808, 1: 4320, 2: 2880, 3: 4320, 4: 2880, 5: 1440}
+
+=== STRUCTURAL DICHOTOMY ===
+  β₃=1 => all 3-cycles dominated: False
+  β₁=1 => some free 3-cycle exists: True
+  Structural dichotomy NOT confirmed. Need different mechanism.
+
+Done.

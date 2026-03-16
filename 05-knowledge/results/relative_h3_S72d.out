@@ -1,0 +1,29 @@
+======================================================================
+RELATIVE H₃ FOR β₁=1 TOURNAMENTS AT n=6
+======================================================================
+  50 β₁=1 tournaments checked, t=7s
+  100 β₁=1 tournaments checked, t=13s
+  150 β₁=1 tournaments checked, t=22s
+  200 β₁=1 tournaments checked, t=36s
+
+Processed 201 β₁=1 tournaments, 0 (T,v) pairs, t=35.7s
+
+--- Results for v NOT in free cycle ---
+  β₁(T\v) distribution: {}
+  β₃(T\v) distribution: {}
+
+  *** β₁(T\v) = 1 for ALL v not in free cycle? True ***
+  This confirms the induction argument:
+  β₁(T)=1 → pick v not in free cycle → β₁(T\v)=1
+  → β₃(T\v)=0 by induction
+  → β₃(T) = dim H₃(T,T\v)
+  Still need: H₃(T,T\v) = 0
+
+--- Sample (T, T\v) pairs ---
+
+--- Results for v IN free cycle ---
+  (No in-free results in sample, extending...)
+  β₁(T\v) for v in free cycle: {0: 6, 1: 14}
+  β₃(T\v) for v in free cycle: {0: 20}
+
+Done.

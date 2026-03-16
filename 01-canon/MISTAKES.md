@@ -970,6 +970,7 @@ The disconnected decomposition 63=7×9 is correctly blocked, but connected Ω gr
 
 Always check prior session results before claiming a new proof. The H-spectrum density analysis (hspectrum_density.out) had already settled this question computationally. Cross-reference before broadcasting claims.
 
+<<<<<<< Updated upstream
 ---
 
 ## MISTAKE-025: S112 W(8) Value Off By 8
@@ -1023,3 +1024,30 @@ Cross-ratio = 2 = the OCF fugacity itself. This is MORE meaningful than 8/7 — 
 
 ### Source
 Code review agent, opus-2026-03-15-S90.
+=======
+## MISTAKE-018: THM-225 "Universal Top Eigenvalue = n" is FALSE at n ≥ 9
+
+**Date discovered:** 2026-03-15
+**Found by:** opus-S72d
+**Affects:** THM-225, HYP-1594
+
+### What was assumed
+
+That the top eigenvalue of C_T^TC_T equals n for ALL tournaments on n vertices (verified exhaustively at n=5, sampled at n=6). This was stated as a theorem.
+
+### Why it was wrong
+
+The proof strategy required rank(C_R) < r = (n-1)(n-2)/2. At n ≤ 8, this holds because max c₃ < r (the number of cyclic triples never exceeds the rank of the full constraint matrix). At n = 9, c₃ can reach 30 while r = 28, and for ~0.1% of tournaments, rank(C_R) achieves its maximum r, leaving ker(C_R) ∩ im(C^T) = {0}. The top eigenvalue then drops to ~8.84-8.94.
+
+### The correct framing
+
+THM-225 holds for n ≤ 8 (PROVED for n ≤ 5 exhaustive, sampled at n=6,7,8 with 0 violations from 20000 samples each). It FAILS at n ≥ 9. The condition for top eigenvalue = n is rank(C_R) < (n-1)(n-2)/2.
+
+### Impact
+
+The spectral T/R duality (C_T^TC_T + C_R^TC_R = n·P) and the 3/n bridge framework remain valid. The universal top eigenvalue was a COROLLARY that holds only when the cyclic boundaries don't span the full constraint space.
+
+### Lesson
+
+When verifying at n=5 and n=6, the parameter regime (c₃ < r always) hid the failure mode. Always check at the CROSSOVER point where qualitative behavior changes. For rank arguments, the critical n is where max c₃ first exceeds r.
+>>>>>>> Stashed changes

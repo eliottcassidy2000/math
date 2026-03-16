@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-15-S72d — 2026-03-15: Seesaw Identity and β₁·β₃=0 Mechanism
+
+**Account:** opus
+**Continuation of:** opus-2026-03-15-S72c
+**Summary of work:** Deep investigation into Tournament Betti Structure Theorem (THM-226). Key results:
+1. Fixed THM-225 (top eigenvalue) — replaced false "t₃>c₃" with correct Kendall-Babington Smith bound
+2. Created THM-226 documenting the tournament Betti structure pattern
+3. Discovered β₃ first appears at n=6 (corrects prior claim of n=7): 320/32768 tournaments
+4. Verified β₁·β₃=0 exhaustively at n=6 (32768 tournaments) and sampled at n=7 (3000)
+5. Found strict Betti concentration is FALSE: β₁=β₄=1 at n=7 (bits=1251547)
+6. PROVED algebraic seesaw identity: β₁+β₃ = ker(d₁)+Ω₃-Ω₂-im(d₄) (from β₂=0)
+7. Verified β₁+β₃ ∈ {0,1} exhaustively at n=5,6 — would prove β₁·β₃=0 if shown for all n
+8. CORRECTED false claim: "β₃=1 requires all 3-cycles dominated" — FALSE (240/320 β₃=1 tournaments have free cycles)
+9. Developed LES induction approach: works if H₃(T,T\v)=0 for vertex outside free cycle
+10. Euler characteristic χ ∈ {0,1} confirmed exhaustively at n=6
+
+**New contributions:** THM-225 fix, THM-226 creation+update, seesaw_identity.py, beta13_mechanism.py, domination_fix.py, relative_h3.py, betti_concentration_v2.py, beta3_generator_anatomy.py
+**Unresolved threads:**
+- Proving β₁+β₃ ≤ 1 algebraically (the seesaw bound)
+- Proving H₃(T,T\v) = 0 for the LES approach
+- n=8 Betti sampling still running (100/500 done)
+- χ ∈ {0,1} conjecture needs proof
+
 ## kind-pasteur-2026-03-15-S116c — 2026-03-15: Rapidity is Everything
 
 **Account:** kind-pasteur
