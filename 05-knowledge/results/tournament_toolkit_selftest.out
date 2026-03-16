@@ -1,0 +1,75 @@
+tournament_toolkit.py — Self-test
+==================================================
+
+Test 1: TilingGrid
+  n=6, m=10 bits
+  All-forward (transitive):
+  skip 2: [F F F F]  (0,2) (1,3) (2,4) (3,5)
+  skip 3: [F F F]  (0,3) (1,4) (2,5)
+  skip 4: [F F]  (0,4) (1,5)
+  skip 5: [F]  (0,5)
+  H = 1 (should be 1 for transitive)
+  After flipping bit 5: H = 5
+  Skip profile: {2: 0, 3: 1, 4: 0, 5: 0}
+  PASSED
+
+Test 2: FlipGraph at n=4
+  Nodes: 8, Edges: 12
+  H range: (1, 5)
+  H distinct: 3
+  Delta H distribution: {0: 5, 2: 6, 4: 1}
+  PASSED
+
+Test 3: RankAmbiguity (LLM ranking scenario)
+=== Ranking Ambiguity Report (5 items) ===
+
+Ambiguity (H): 1 consistent total orderings
+Ambiguity ratio: 8.333333e-03
+Kemeny distance: 10 backward arcs
+Condorcet winner: GPT-4
+Regime: pivot
+Score rigidity: YES
+
+Ranking confidence (Copeland):
+  GPT-4: 1.000
+  Claude: 0.750
+  Gemini: 0.500
+  Llama: 0.250
+  Mistral: 0.000
+
+High-leverage comparisons:
+  GPT-4 > Mistral: reversing changes H by 8
+  Claude > Mistral: reversing changes H by 4
+  GPT-4 > Llama: reversing changes H by 4
+  Claude > Llama: reversing changes H by 2
+  GPT-4 > Gemini: reversing changes H by 2
+
+=== Ranking Ambiguity Report (5 items) ===
+
+Ambiguity (H): 3 consistent total orderings
+Ambiguity ratio: 2.500000e-02
+Kemeny distance: 8 backward arcs
+Condorcet winner: NONE (cyclic)
+Regime: pivot
+Score rigidity: YES
+
+Ranking confidence (Copeland):
+  Claude: 0.750
+  GPT-4: 0.750
+  Gemini: 0.750
+  Llama: 0.250
+  Mistral: 0.000
+
+High-leverage comparisons:
+  Claude > Mistral: reversing changes H by 6
+  GPT-4 > Mistral: reversing changes H by 6
+  Gemini > Mistral: reversing changes H by 6
+  Claude > GPT-4: reversing changes H by 2
+  Gemini > Claude: reversing changes H by 2
+
+Test 4: TournamentTDA features
+  Features: {'n': 7, 'H': 103, 'log_H': 4.634728988229636, 'H_normalized': 0.020436507936507937, 'c3': 10, 'c3_normalized': 0.2857142857142857, 'backward_arcs': 15, 'backward_ratio': 0.7142857142857143, 'H_mod3': 1, 'H_mod6': 1, 'regime_code': 1, 'score_variance': 1.1428571428571428, 'score_range': 3}
+  H-spectrum stats: {'H': 103, 'spectrum_size': 17, 'spectrum_min': 37, 'spectrum_max': 139, 'spectrum_mean': 96.05882352941177, 'up_neighbors': 7, 'down_neighbors': 9, 'flat_neighbors': 1}
+  PASSED
+
+ALL TESTS PASSED
