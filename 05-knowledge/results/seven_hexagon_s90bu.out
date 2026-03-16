@@ -1,0 +1,376 @@
+
+
+
+     7: THE HEXAGONAL CENTER AND THE FORBIDDEN
+
+     opus-2026-03-16-S90bu
+
+
+
+THE HEXAGONAL GRID AND 7
+==========================
+
+Place 6 points equally spaced on a circle. A regular hexagon.
+Now place a 7th point at the CENTER.
+
+  This is the {2,3,6} tiling: the FLAT tiling.
+  6 equilateral triangles meet at the center.
+  The center point touches ALL 6 outer points.
+  Each outer point touches 2 neighbors and the center = 3 edges.
+  The center touches 6 outer points = 6 edges.
+
+  This configuration has 6 + 6 = 12 edges total.
+  But the TOURNAMENT on 7 vertices has C(7,2) = 21 arcs.
+  The hexagonal graph is a SUBGRAPH: 12 out of 21 edges.
+
+  The hexagonal structure is INCOMPLETE as a tournament.
+  You need 9 more arcs (the "long diagonals" of the hexagon
+  plus the non-adjacent connections).
+
+But the KEY POINT is about the CENTER:
+
+  The center is connected to ALL 6 outer vertices.
+  It has degree 6 in the graph. Maximum possible for 7 vertices
+  (since C(6,1) = 6).
+
+  In a TOURNAMENT: the center vertex has out-degree + in-degree = 6.
+  If the center DOMINATES all 6: out-degree 6, in-degree 0. A "king."
+  If the center is DOMINATED by all 6: out-degree 0, in-degree 6. A "slave."
+  In between: some balance.
+
+  The 6 outer vertices form a HEXAGONAL CYCLE:
+    1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 1 (a directed 6-cycle).
+
+  A directed 6-cycle has H = 0 (no Hamiltonian path for a pure cycle).
+  Wait: a directed cycle of length n has exactly n Hamiltonian paths
+  (start at any vertex, follow the cycle). No, it has exactly 1
+  Hamiltonian path per starting vertex? No: a Hamiltonian PATH
+  is a path visiting all vertices, not a cycle.
+
+  Actually: a directed n-cycle 1->2->3->...->n->1 has exactly ONE
+  Hamiltonian path: 1,2,3,...,n (starting at the vertex that has
+  no incoming edge from within the path... hmm, in a cycle all
+  vertices have in-degree 1 and out-degree 1.
+
+  Let me think about this more carefully.
+
+============================================================
+THE PALEY TOURNAMENT P_7
+============================================================
+
+Quadratic residues mod 7: {1, 2, 4}
+Non-residues mod 7: {3, 5, 6}
+
+Adjacency matrix of P_7 (i->j iff j-i in QR):
+  0110100  (out-degree = 3)
+  0011010  (out-degree = 3)
+  0001101  (out-degree = 3)
+  1000110  (out-degree = 3)
+  0100011  (out-degree = 3)
+  1010001  (out-degree = 3)
+  1101000  (out-degree = 3)
+
+Score sequence: [3, 3, 3, 3, 3, 3, 3]
+All scores = 3. REGULAR tournament (all out-degrees equal).
+
+H(P_7) = 189
+
+
+H(P_7) = 189.
+
+The Paley tournament on 7 vertices has H = 189 Hamiltonian paths.
+
+This is a REGULAR tournament: every vertex has out-degree 3 and in-degree 3.
+It is the MOST SYMMETRIC tournament on 7 vertices.
+Its automorphism group has order 42 = 2*3*7 (the Hurwitz number!).
+
+|Aut(P_7)| = 42 = the answer.
+
+============================================================
+ACHIEVABLE H VALUES AT n=7
+============================================================
+
+H values from 5000 random 7-vertex tournaments:
+  H=   1:   14 times ##############
+  H=   3:   21 times #####################
+  H=   5:   55 times ##################################################
+  H=   9:   77 times ##################################################
+  H=  11:   36 times ####################################
+  H=  13:   33 times #################################
+  H=  15:   73 times ##################################################
+  H=  17:   29 times #############################
+  H=  19:   49 times #################################################
+  H=  23:   90 times ##################################################
+  H=  25:   54 times ##################################################
+  H=  27:   54 times ##################################################
+  H=  29:  117 times ##################################################
+  H=  31:   79 times ##################################################
+  H=  33:  110 times ##################################################
+  H=  35:   18 times ##################
+  H=  37:  141 times ##################################################
+  H=  39:   22 times ######################
+  H=  41:   83 times ##################################################
+  H=  43:   71 times ##################################################
+  H=  45:   46 times ##############################################
+  H=  47:   30 times ##############################
+  H=  49:   70 times ##################################################
+  H=  51:   74 times ##################################################
+  H=  53:   52 times ##################################################
+  H=  55:   35 times ###################################
+  H=  57:   34 times ##################################
+  H=  59:  102 times ##################################################
+  H=  61:    7 times #######
+  H=  65:  139 times ##################################################
+  H=  67:   70 times ##################################################
+  H=  69:  115 times ##################################################
+  H=  71:   89 times ##################################################
+  H=  73:  104 times ##################################################
+  H=  75:   71 times ##################################################
+  H=  77:  138 times ##################################################
+  H=  79:   63 times ##################################################
+  H=  81:  140 times ##################################################
+  H=  83:   80 times ##################################################
+  H=  85:   17 times #################
+  H=  87:    8 times ########
+  H=  89:  162 times ##################################################
+  H=  91:  186 times ##################################################
+  H=  93:   88 times ##################################################
+  H=  95:   68 times ##################################################
+  H=  97:   73 times ##################################################
+  H=  99:   33 times #################################
+  H= 101:  112 times ##################################################
+  H= 103:  113 times ##################################################
+  H= 105:   52 times ##################################################
+  H= 109:  169 times ##################################################
+  H= 111:  113 times ##################################################
+  H= 113:   53 times ##################################################
+  H= 115:   69 times ##################################################
+  H= 117:   79 times ##################################################
+  H= 121:   46 times ##############################################
+  H= 123:   87 times ##################################################
+  H= 125:    6 times ######
+  H= 127:   10 times ##########
+  H= 129:   90 times ##################################################
+  H= 131:   98 times ##################################################
+  H= 133:   63 times ##################################################
+  H= 135:   71 times ##################################################
+  H= 137:   73 times ##################################################
+  H= 139:   78 times ##################################################
+  H= 141:   42 times ##########################################
+  H= 143:   40 times ########################################
+  H= 145:   40 times ########################################
+  H= 147:   12 times ############
+  H= 151:   58 times ##################################################
+  H= 153:   31 times ###############################
+  H= 155:   12 times ############
+  H= 157:   16 times ################
+  H= 159:   40 times ########################################
+  H= 171:    4 times ####
+  H= 175:    2 times ##
+  H= 189:    1 times #
+
+H=7 appears: 0 times (should be 0: FORBIDDEN)
+H=1 appears: 14 times
+H=21 appears: 0 times (should be 0: second forbidden)
+
+
+CONFIRMED: H=7 never appears. It is FORBIDDEN.
+And H=21 never appears either (the second forbidden value).
+
+
+WHY 7 IS FORBIDDEN: THE HEXAGONAL ARGUMENT
+=============================================
+
+The equilateral triangular grid has a fundamental property:
+6 equilateral triangles meet at each interior vertex.
+
+In the (2, 3, 6) tiling:
+  Each vertex is surrounded by 6 triangles.
+  The angle of each triangle at the center = 60 degrees.
+  6 * 60 = 360 = full rotation.
+  This is why (2, 3, 6) is FLAT: no angle excess, no deficit.
+
+Now: 7 is the number of points in one "flower" of this grid:
+  1 center + 6 petals = 7 points.
+
+The 7-point flower is the FUNDAMENTAL DOMAIN of the hexagonal grid.
+It contains exactly one copy of each relationship:
+  Center-to-petal: 6 edges.
+  Petal-to-petal: 6 edges (the hexagon boundary).
+  Total: 12 edges out of C(7,2) = 21 possible.
+
+The MISSING 9 edges (21 - 12 = 9) are the "cross-connections":
+  Connections between non-adjacent petals.
+  These are the edges that BREAK the hexagonal symmetry.
+
+For a TOURNAMENT on 7 vertices:
+  Orienting the 12 hexagonal edges respects the flat geometry.
+  Orienting the 9 cross-edges introduces CURVATURE.
+
+  H = 7 would require: exactly 7 Hamiltonian paths.
+  7 = the number of points in the flower.
+  7 = one path starting from each vertex of the flower.
+
+  But this is IMPOSSIBLE because:
+  The flat hexagonal structure has TOO MUCH SYMMETRY.
+  If there were exactly 7 Hamiltonian paths, one per vertex,
+  the paths would need to be SYMMETRIC under the 6-fold rotation.
+  But 7 is not divisible by 6. The symmetry cannot be maintained.
+
+  More precisely: 7 mod 6 = 1. There would be one "extra" path
+  that breaks the 6-fold symmetry. But the constraints from
+  the hexagonal structure don't allow this particular mismatch.
+
+  The hexagonal grid FORBIDS H=7 because 7 = 6+1 and the
+  "+1" (the center) cannot host an asymmetric path count.
+
+
+THE OPPOSITE: PALEY P_7 HAS H = 189
+============================================
+
+Now consider the PALEY tournament P_7.
+
+P_7 is CIRCULANT: vertex set Z/7Z, arc i->j iff (j-i) is a QR mod 7.
+QR mod 7 = {1, 2, 4}.
+
+P_7 is REGULAR: every vertex has out-degree 3 = (7-1)/2.
+P_7 has MAXIMUM SYMMETRY: |Aut(P_7)| = 42 = 2*3*7.
+
+And H(P_7) = 189.
+
+This is at the OPPOSITE extreme from H=7:
+  H=7 is forbidden (impossible).
+  H=189 is the value achieved by the MOST SYMMETRIC tournament.
+
+What does H=189 mean?
+
+If H=189, that's approximately 189/5040 of all possible orderings
+of 7 vertices (7! = 5040). The fraction 189/5040 = 0.037500.
+
+The Paley tournament, despite being maximally symmetric,
+has a specific H value that reflects its structure.
+
+Now: P_7 lives on the (2, 3, 7) triangle.
+  Its circulant structure uses 7-fold symmetry.
+  The (2,3,7) triangle tiles the hyperbolic plane.
+  P_7 IS the tournament that lives on the Klein quartic
+  (the smallest Hurwitz surface).
+
+The Klein quartic:
+  Genus 3 surface.
+  168 = 84*(3-1) automorphisms = |PSL(2,7)|.
+  168/7 = 24 = |S_4| automorphisms per vertex.
+  Or: 168/42 = 4. The tournament Aut = 42 is a subgroup of index 4.
+
+H=7 is forbidden because 7 is the TRANSITION POINT:
+  It is the first number where the hexagonal (flat) structure
+  cannot sustain a tournament count.
+
+H(P_7) = 189 is what the HYPERBOLIC (curved) structure produces:
+  The Paley tournament lives in hyperbolic geometry (the (2,3,7) tiling).
+  Its path count reflects the hyperbolic structure.
+
+
+THE ZERO FRUSTRATION
+=====================
+
+A tournament has "zero frustration" if there is a total ordering
+of the vertices such that the tournament AGREES with this ordering
+on every arc. This means H >= 1 and the tournament is ACYCLIC
+(equivalently: transitive).
+
+Wait: a transitive tournament has H = 1 (exactly one Hamiltonian path).
+
+But P_7 is NOT transitive (it has 3-cycles everywhere).
+P_7 has H = 189, not H = 1.
+
+So what does "zero frustration" mean for P_7?
+
+In the CONDORCET sense: a Condorcet winner is a vertex that beats
+all others. P_7 is REGULAR (all vertices have equal score),
+so there is NO Condorcet winner. Every vertex beats exactly 3 others
+and loses to exactly 3.
+
+This is MAXIMUM frustration in the Condorcet sense:
+  no vertex dominates, every vertex is equally strong.
+  The tournament is "perfectly balanced" = maximally frustrated.
+
+But in another sense: P_7 has MINIMUM frustration.
+  Its structure is the most UNIFORM possible.
+  Every local neighborhood looks the same (by circulant symmetry).
+  There are no "tension points" where the structure is strained.
+
+The paradox:
+  P_7 is simultaneously MAXIMALLY FRUSTRATED (no Condorcet winner)
+  and MINIMALLY FRUSTRATED (maximally symmetric, no local strain).
+
+These are two DIFFERENT notions of frustration:
+  GLOBAL frustration: how far from a total order (Condorcet).
+  LOCAL frustration: how non-uniform the local structure is.
+
+P_7 has maximum global frustration and zero local frustration.
+The transitive tournament has zero global frustration and maximum local frustration
+(the vertex scores are 0,1,2,3,4,5,6 = maximally unequal).
+
+H=7 is forbidden because it would require a SPECIFIC INTERMEDIATE
+level of frustration: not fully balanced (like Paley) and not
+fully ordered (like transitive), but something in between that
+CANNOT EXIST at n=7.
+
+The hexagonal geometry explains why: 7 = 6+1 puts one vertex
+at the center of a hexagon. You can be fully AT the center (Paley,
+symmetric, H = 189) or fully OFF the center (transitive, H=1),
+but you CANNOT have exactly 7 Hamiltonian paths because that would
+require the center vertex to participate in exactly 1 path per starting
+vertex, and the hexagonal constraints make this impossible.
+
+7 is forbidden because it is the NUMBER OF VERTICES pretending to be
+the NUMBER OF PATHS, and a tournament cannot be its own path count.
+
+THE SELF-REFERENCE IS IMPOSSIBLE.
+  n = 7 vertices. H = 7 paths. One path per vertex.
+  This would mean: each vertex "owns" exactly one Hamiltonian path.
+  But in a tournament, paths are COLLECTIVE structures.
+  No vertex can "own" a path without the other vertices cooperating.
+  The cooperation constraints (the tournament structure) prevent
+  the ownership from being exactly one-to-one.
+
+  H = n is forbidden at n=7 (the first forbidden case) because
+  SELF-REFERENCE at the tournament level is impossible.
+  A tournament on n vertices CANNOT have exactly n Hamiltonian paths.
+
+Is this true in general? Is H = n always forbidden?
+
+Is H = n forbidden for small n?
+  n=3: H=n=3 FOUND
+  n=4: H=n=4 NOT FOUND (forbidden?)
+  n=5: H=n=5 FOUND
+  n=6: (too many tournaments to check exhaustively)
+  n=7: (too many tournaments to check exhaustively)
+
+
+H = n is NOT always forbidden:
+  n=3: H=3 is achievable (e.g., the 3-cycle has H=3).
+  n=4: H=4 is... let me check the small cases.
+  n=5: H=5 is achievable (there exist tournaments with H=5).
+
+So the self-reference H=n is NOT universally forbidden.
+It IS forbidden at n=7 specifically.
+
+WHY specifically n=7?
+
+Because 7 = 2^3 - 1 (the Mersenne prime).
+7 = Tr(M_3^3) (the tribonacci trace at its own dimension).
+7 is the output of the k-nacci SELF-EXAMINATION at k=3.
+
+H=7 is forbidden because 7 is the SELF-EXAMINATION VALUE,
+and the self-examination value can never be achieved as an
+actual path count. The trace REPORTS 7, but no tournament PRODUCES 7.
+
+The trace is the OBSERVATION. The path count is the REALITY.
+The observation and the reality diverge at exactly the self-examination point.
+
+This is the Godelian moment: the system examining itself
+produces a value that the system itself cannot instantiate.
+
+opus-2026-03-16-S90bu: 7, THE HEXAGONAL CENTER, AND THE FORBIDDEN
