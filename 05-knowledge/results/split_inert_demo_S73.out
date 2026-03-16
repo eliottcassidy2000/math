@@ -1,0 +1,279 @@
+SPLIT/INERT PRIME ANALYZER — Demo
+==================================================
+
+p=   7 (Paley): risk=HIGH     min_split_q=29     Cheb=0.1667
+
+p=  11 (Paley): risk=HIGH     min_split_q=23     Cheb=0.1000
+
+p=  23 (Paley): risk=HIGH     min_split_q=47     Cheb=0.0455
+
+p=  47 (Paley): risk=MEDIUM   min_split_q=283    Cheb=0.0217
+
+p= 587 (Paley): risk=MEDIUM   min_split_q=8219   Cheb=0.0017
+
+======================================================================
+DEFENSE RANKING: Primes p ≤ 100 by resistance to decomposition
+======================================================================
+rank     p  min_split_q   split%    Cheb%  Paley
+---- ----- ------------ -------- -------- ------
+   1    59          709    1.20%    1.72%      ✓
+   2    71          569    1.20%    1.43%      ✓
+   3    97          389    1.20%    1.04%       
+   4    61          367    1.80%    1.67%       
+   5    79          317    0.60%    1.28%      ✓
+   6    31          311    1.80%    3.33%      ✓
+   7    73          293    1.80%    1.39%       
+   8    47          283    1.80%    2.17%      ✓
+   9    67          269    0.60%    1.52%      ✓
+  10    19          191    4.19%    5.56%      ✓
+
+======================================================================
+TORSION DETECTION: Paley tournament P_7
+======================================================================
+Matrix ∂_2 size: 21 × 63
+Edges: 21, 3-paths: 63
+
+    q   rank   drop
+----- ------ ------
+    2     21      0
+    3     21      0
+    5     21      0
+   11     21      0
+   13     21      0
+   17     21      0
+   19     21      0
+   23     21      0
+   29     21      0
+   31     21      0
+   37     21      0
+   41     21      0
+   43     21      0
+   47     21      0
+
+Generic rank: 21
+No torsion detected (rank stable across all tested primes)
+
+======================================================================
+TORSION DETECTION: Paley tournament P_11
+======================================================================
+Matrix ∂_2 size: 55 × 275
+Edges: 55, 3-paths: 275
+
+    q   rank   drop
+----- ------ ------
+    2     55      0
+    3     55      0
+    5     55      0
+    7     55      0
+   13     55      0
+   17     55      0
+   19     55      0
+   23     55      0
+   29     55      0
+   31     55      0
+   37     55      0
+   41     55      0
+   43     55      0
+   47     55      0
+
+Generic rank: 55
+No torsion detected (rank stable across all tested primes)
+
+======================================================================
+TORSION DETECTION: Paley tournament P_19
+======================================================================
+Matrix ∂_2 size: 171 × 1539
+Edges: 171, 3-paths: 1539
+
+    q   rank   drop
+----- ------ ------
+    2    171      0
+    3    171      0
+    5    171      0
+    7    171      0
+   11    171      0
+   13    171      0
+   17    171      0
+   23    171      0
+   29    171      0
+   31    171      0
+   37    171      0
+   41    171      0
+   43    171      0
+   47    171      0
+
+Generic rank: 171
+No torsion detected (rank stable across all tested primes)
+
+======================================================================
+TORSION DETECTION: Paley tournament P_23
+======================================================================
+Matrix ∂_2 size: 253 × 2783
+Edges: 253, 3-paths: 2783
+
+    q   rank   drop
+----- ------ ------
+    2    253      0
+    3    253      0
+    5    253      0
+    7    253      0
+   11    253      0
+   13    253      0
+   17    253      0
+   19    253      0
+   29    253      0
+   31    253      0
+   37    253      0
+   41    253      0
+   43    253      0
+   47    253      0
+
+Generic rank: 253
+No torsion detected (rank stable across all tested primes)
+
+======================================================================
+POST-QUANTUM PARAMETER CHECK
+======================================================================
+
+BIKE-L1 (r≈12323): p=12323
+  Smallest splitting q: 73939
+  Chebotarev density: 1/12322 ≈ 8.12e-05
+
+HQC-L1 (n≈17669): p=17669
+  Smallest splitting q: 35339
+  Chebotarev density: 1/17668 ≈ 5.66e-05
+
+======================================================================
+TORSION DETECTION: Paley tournament P_7
+======================================================================
+
+--- ∂_2 ---
+Matrix size: 21 × 63
+
+    q   rank   drop
+----- ------ ------
+    2     21      0
+    3     21      0
+    5     21      0
+   11     21      0
+   13     21      0
+   17     21      0
+   19     21      0
+   23     21      0
+   29     21      0
+   31     21      0
+   37     21      0
+   41     21      0
+   43     21      0
+   47     21      0
+
+Generic rank: 21
+No torsion detected at ∂_2
+
+--- ∂_3 ---
+Matrix size: 63 × 147
+
+    q   rank   drop
+----- ------ ------
+    2     63      0
+    3     63      0
+    5     63      0
+   11     63      0
+   13     63      0
+   17     63      0
+   19     63      0
+   23     63      0
+   29     63      0
+   31     63      0
+   37     63      0
+   41     63      0
+   43     63      0
+   47     63      0
+
+Generic rank: 63
+No torsion detected at ∂_3
+
+======================================================================
+TORSION DETECTION: Paley tournament P_11
+======================================================================
+
+--- ∂_2 ---
+Matrix size: 55 × 275
+
+    q   rank   drop
+----- ------ ------
+    2     55      0
+    3     55      0
+    5     55      0
+    7     55      0
+   13     55      0
+   17     55      0
+   19     55      0
+   23     55      0
+   29     55      0
+   31     55      0
+   37     55      0
+   41     55      0
+   43     55      0
+   47     55      0
+
+Generic rank: 55
+No torsion detected at ∂_2
+
+--- ∂_3 ---
+Matrix size: 275 × 1210
+
+    q   rank   drop
+----- ------ ------
+    2    275      0
+    3    275      0
+    5    275      0
+    7    275      0
+   13    275      0
+   17    275      0
+   19    275      0
+   23    275      0
+   29    275      0
+   31    275      0
+   37    275      0
+   41    275      0
+   43    275      0
+   47    275      0
+
+Generic rank: 275
+No torsion detected at ∂_3
+
+======================================================================
+QC-LDPC SECURITY AUDIT: circulant block size p = 587
+======================================================================
+
+--- Basic Properties ---
+p = 587 (prime)
+Paley tournament: Yes (p ≡ 3 mod 4)
+Full eigenspace dimension: 587
+
+--- Splitting Analysis ---
+Smallest fully-splitting prime: q = 8219
+Splitting primes below 100: 0
+Splitting primes below 1000: 0
+Splitting primes below 10000: 1
+Chebotarev density: 0.001706 (≈ 1 in 586 primes)
+
+--- Attack Primes (q ≡ 1 mod 587) ---
+  q = 8219  (speedup: 586×)
+
+--- Best Partial Decompositions ---
+  q =  2347, ord_587(q) = 2, factors = 293, speedup = 293×
+  q =     3, ord_587(q) = 293, factors = 2, speedup = 2×
+  q =     7, ord_587(q) = 293, factors = 2, speedup = 2×
+  q =    17, ord_587(q) = 293, factors = 2, speedup = 2×
+  q =    29, ord_587(q) = 293, factors = 2, speedup = 2×
+
+======================================================================
+RISK LEVEL: MEDIUM
+  No small full split, but partial decomposition gives 293× speedup at q=2347.
+======================================================================
+
+--- Recommendations ---
+  △ p=587 has moderate resistance
+  △ Increase security parameter to compensate for partial decomposition
