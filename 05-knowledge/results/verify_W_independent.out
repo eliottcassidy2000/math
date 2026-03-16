@@ -1,0 +1,165 @@
+========================================================================
+PART 1: W(n) by EXPLICIT PERMUTATION ENUMERATION (no bitmask DP)
+========================================================================
+
+  n  W(n) computed    W(n) known   Match  #NUD perms          n!    NUD/n!
+------------------------------------------------------------------------
+  1             1             1      OK           1           1    1.0000
+  2             2             2      OK           1           2    0.5000
+  3             8             8      OK           3           6    0.5000
+  4            32            32      OK          11          24    0.4583
+  5           158           158      OK          53         120    0.4417
+  6           928           928      OK         309         720    0.4292
+  7          6350          6350      OK        2119        5040    0.4204
+  8         49752         49752      OK       16687       40320    0.4139
+
+*** ALL VALUES MATCH — W(n) independently verified for n=1..8 ***
+
+========================================================================
+PART 2: Unit ascent histograms for NUD permutations
+========================================================================
+
+n=1: W=1, #NUD=1/1
+  #ascents    #perms  contribution    cumulative
+         0         1             1             1
+
+n=2: W=2, #NUD=1/2
+  #ascents    #perms  contribution    cumulative
+         1         1             2             2
+
+n=3: W=8, #NUD=3/6
+  #ascents    #perms  contribution    cumulative
+         1         2             4             4
+         2         1             4             8
+
+n=4: W=32, #NUD=11/24
+  #ascents    #perms  contribution    cumulative
+         0         2             2             2
+         1         5            10            12
+         2         3            12            24
+         3         1             8            32
+
+n=5: W=158, #NUD=53/120
+  #ascents    #perms  contribution    cumulative
+         0        14            14            14
+         1        20            40            54
+         2        14            56           110
+         3         4            32           142
+         4         1            16           158
+
+n=6: W=928, #NUD=309/720
+  #ascents    #perms  contribution    cumulative
+         0        90            90            90
+         1       115           230           320
+         2        72           288           608
+         3        26           208           816
+         4         5            80           896
+         5         1            32           928
+
+n=7: W=6350, #NUD=2119/5040
+  #ascents    #perms  contribution    cumulative
+         0       646           646           646
+         1       790          1580          2226
+         2       467          1868          4094
+         3       168          1344          5438
+         4        41           656          6094
+         5         6           192          6286
+         6         1            64          6350
+
+n=8: W=49752, #NUD=16687/40320
+  #ascents    #perms  contribution    cumulative
+         0      5242          5242          5242
+         1      6217         12434         17676
+         2      3557         14228         31904
+         3      1285         10280         42184
+         4       319          5104         47288
+         5        59          1888         49176
+         6         7           448         49624
+         7         1           128         49752
+
+========================================================================
+PART 3: Verify W(n)/n! = 1 + CV^2 via Delannoy formula
+========================================================================
+
+  n             W(n)/n!   1+CV^2 (Delannoy)   Match    CV^2 decimal
+------------------------------------------------------------------------
+  3                 4/3                 4/3      OK    0.3333333333
+  4                 4/3                 4/3      OK    0.3333333333
+  5               79/60               79/60      OK    0.3166666667
+  6               58/45               58/45      OK    0.2888888889
+  7             635/504             635/504      OK    0.2599206349
+  8             691/560             691/560      OK    0.2339285714
+
+*** W(n)/n! = 1 + CV^2 verified for n=3..8 via Delannoy formula ***
+
+========================================================================
+PART 4: Delannoy decomposition of CV^2 by level k
+========================================================================
+
+n=3:
+  k=1: g_1(1) = 1, (n)_{2k} = 6, term = 1/3 = 0.3333333333
+  CV^2 = 1/3 = 0.3333333333
+
+n=4:
+  k=1: g_1(2) = 2, (n)_{2k} = 12, term = 1/3 = 0.3333333333
+  CV^2 = 1/3 = 0.3333333333
+
+n=5:
+  k=1: g_1(3) = 3, (n)_{2k} = 20, term = 3/10 = 0.3000000000
+  k=2: g_2(1) = 1, (n)_{2k} = 120, term = 1/60 = 0.0166666667
+  CV^2 = 19/60 = 0.3166666667
+
+n=6:
+  k=1: g_1(4) = 4, (n)_{2k} = 30, term = 4/15 = 0.2666666667
+  k=2: g_2(2) = 4, (n)_{2k} = 360, term = 1/45 = 0.0222222222
+  CV^2 = 13/45 = 0.2888888889
+
+n=7:
+  k=1: g_1(5) = 5, (n)_{2k} = 42, term = 5/21 = 0.2380952381
+  k=2: g_2(3) = 9, (n)_{2k} = 840, term = 3/140 = 0.0214285714
+  k=3: g_3(1) = 1, (n)_{2k} = 5040, term = 1/2520 = 0.0003968254
+  CV^2 = 131/504 = 0.2599206349
+
+n=8:
+  k=1: g_1(6) = 6, (n)_{2k} = 56, term = 3/14 = 0.2142857143
+  k=2: g_2(4) = 16, (n)_{2k} = 1680, term = 2/105 = 0.0190476190
+  k=3: g_3(2) = 6, (n)_{2k} = 20160, term = 1/1680 = 0.0005952381
+  CV^2 = 131/560 = 0.2339285714
+
+========================================================================
+PART 5: Additional cross-checks
+========================================================================
+
+W(1) = 1 (expected 1: single permutation, 0 ascents, 2^0=1)
+W(2) = 2 (expected 2: perm (0,1) gives 2^1=2, perm (1,0) is unit descent -> excluded)
+  n=2 detail: 1 NUD perms out of 2
+  perm (0, 1): unit_descent=False, unit_ascents=1, contribution=2^1=2
+  perm (1, 0): unit_descent=True -> EXCLUDED
+
+W(3) = 8 manual check:
+  (0, 1, 2): diffs=[1, 1]  -> 2^2 = 4
+  (0, 2, 1): diffs=[2, -1]  -> EXCLUDED (unit descent)
+  (1, 0, 2): diffs=[-1, 2]  -> EXCLUDED (unit descent)
+  (1, 2, 0): diffs=[1, -2]  -> 2^1 = 2
+  (2, 0, 1): diffs=[-2, 1]  -> 2^1 = 2
+  (2, 1, 0): diffs=[-1, -1]  -> EXCLUDED (unit descent)
+  Total W(3) = 8
+
+========================================================================
+SUMMARY
+========================================================================
+
+Method: Explicit enumeration of ALL n! permutations (no bitmask DP)
+
+Results:
+  1. W(n) sequence independently verified for n=1..8:
+     W = [1, 2, 8, 32, 158, 928, 6350, 49752]
+
+  2. W(n)/n! = 1 + CV^2(n) verified for n=3..8 using
+     the Delannoy formula:
+       CV^2 = sum_{k=1}^{floor((n-1)/2)} 2*g_k(n-2k) / (n)_{2k}
+     where g_k(m) = sum_{j=1}^{min(k,m)} C(k-1,j-1)*C(m,j)*2^{j-1}
+
+  3. Both methods agree exactly (rational arithmetic, no floating point).
+
+VERIFICATION STATUS: PASSED
