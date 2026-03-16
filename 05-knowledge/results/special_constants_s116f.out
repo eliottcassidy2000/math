@@ -1,0 +1,364 @@
+
+  FOUR NUMBERS: 1/4, 1/2, ln(2), 7/8
+
+======================================================================
+
+  FIRST: WHAT ARE THEY?
+  ----------------------------------------
+
+  1/4   = 0.25
+  1/2   = 0.5
+  ln(2) = 0.6931471806
+  7/8   = 0.875
+
+  Rapidity of each (as a point on [-1,1]):
+  arctanh(1/4) = 0.2554128119
+  arctanh(1/2) = 0.5493061443 = ln(3)/2 = 0.5493061443
+  arctanh(ln2) = 0.8539880480
+  arctanh(7/8) = 1.3540251006
+
+  Q-value of each:
+  Q(1/4) = 1.6666666667 = 5/3
+  Q(1/2) = 3.0000000000 = 3
+  Q(ln2) = 5.5177827065
+  Q(7/8) = 15.0000000000 = 15
+
+  THE CAYLEY VALUES
+  ----------------------------------------
+
+  Q(1/4) = 5/3 = major sixth (musical interval!)
+  Q(1/2) = 3   = perfect twelfth (octave + fifth)
+  Q(7/8) = 15  = ... let's see: 15 = 3*5
+
+  Q(1/4) = 5/3. In music: the major sixth.
+  Q(1/2) = 3.   In music: the perfect twelfth.
+  Q(7/8) = 15.  In music: 15 = 3*5 = twelfth * major third.
+
+  And Q(ln(2)) = (1+ln2)/(1-ln2) = 5.5177827065
+  This is NOT a nice rational number.
+  But: 1+ln2 = 1.6931471806
+       1-ln2 = 0.3068528194
+  Q(ln2) ~ 5.518. Not obviously musical.
+
+  THE CHAIN: 1/4 -> 1/2 -> ln(2) -> 7/8
+  ----------------------------------------
+
+  Is there a pattern connecting these four numbers?
+
+  1/4 = (1/2)^2. Square.
+  1/2 = 1/2. The midpoint.
+  ln(2) = 0.6931... Transcendental. Between 1/2 and 1.
+  7/8 = 1 - 1/8 = 1 - (1/2)^3. Almost 1.
+
+  Differences:
+  1/2 - 1/4 = 1/4
+  ln(2) - 1/2 = 0.1931471806
+  7/8 - ln(2) = 0.1818528194
+
+  The gaps: 0.25, 0.193, 0.182. Decreasing but not geometric.
+
+  RAPIDITY RELATIONSHIPS
+  ----------------------------------------
+
+  arctanh(1/4) = 0.2554128119
+  arctanh(1/2) = 0.5493061443
+  arctanh(ln2) = 0.8539880480
+  arctanh(7/8) = 1.3540251006
+
+  Ratios:
+  arctanh(1/2) / arctanh(1/4) = 2.1506601031
+  arctanh(ln2) / arctanh(1/2) = 1.5546668407
+  arctanh(7/8) / arctanh(ln2) = 1.5855316754
+
+  arctanh(7/8) / arctanh(1/4) = 5.3013202062
+  arctanh(7/8) / arctanh(1/2) = 2.4649735207
+
+  WHERE THEY APPEAR IN THE PROJECT
+  ----------------------------------------
+
+  1/4:
+    - Kleiber exponent = 3/4, so 1-Kleiber = 1/4
+    - Stevens brightness exponent = 0.33 ~ 1/3 (not 1/4)
+    - Rapidity of sqrt(n) = rapidity(n)/2 = half rapidity
+    - The semitone rapidity = ln(2)/24 = octave/12
+    - In music: Q(1/4) = 5/3 = major sixth
+    - In rapidity algebra: Q^{-1}(5/3) = 1/4
+    - 1/4 = rapidity of 4th root: rapidity(n^0.25) = rapidity(n)/4
+
+  1/2:
+    - The FAIR COIN. Rapidity = 0 at p=1/2.
+    - But arctanh(1/2) = ln(3)/2 != 0
+    - This DISTINCTION is crucial:
+      1/2 as a PROBABILITY has rapidity 0 (via 2p-1 = 0)
+      1/2 as a POINT ON [-1,1] has rapidity ln(3)/2
+    - The two roles of 1/2 are DIFFERENT.
+    - As probability: the center, zero rapidity, maximum uncertainty
+    - As velocity: v = c/2, rapidity = ln(3)/2 = one musical twelfth
+
+    - Q(1/2) = 3 = the curvature quantum
+    - The velocity c/2 gives Q-value 3 = the smallest odd cycle size
+    - C-H / C-C stretch = 3:1 = Q(1/2)
+    - arctanh(1/2) = 0.5493061443 = ln(3)/2
+
+  ln(2):
+    - THE OCTAVE in rapidity: ln(2)/2 = 0.3465735903
+    - Rapidity of v=3/5 = arctanh(3/5) = ln(2) (the Doppler octave!)
+    - Verify: arctanh(3/5) = 0.6931471806, ln(2) = 0.6931471806
+    - Match: True
+
+    - So ln(2) appears as BOTH:
+      (a) half the octave rapidity: ln(2)/2 = rapidity gap for doubling
+      (b) THE FULL rapidity of v=3/5: arctanh(3/5) = ln(2)
+
+    - As a point on [-1,1]: ln(2) = 0.693... lives between 1/2 and 1
+    - Q(ln2) = 5.517783
+    - arctanh(ln2) = 0.853988
+
+    - ln(2) = the constrained channel capacity (0,2)-RLL code
+    - ln(2) ~ arg(lambda_c)/pi for the transfer matrix (near-coincidence)
+    - Information content of one bit = ln(2) nats
+
+  7/8:
+    - 7/8 = 1 - 1/8 = 1 - 2^{-3}
+    - The Cayley address of 15: (15-1)/(15+1) = 14/16 = 7/8
+    - Q(7/8) = (1+7/8)/(1-7/8) = (15/8)/(1/8) = 15
+    - 15 = 3*5 = H(T_5) for the cyclic tournament on 5 vertices!
+
+    - 7/8 is the Cayley address of 15 = max H at n=5
+    - Also: 7/8 = 7 * (1/8) = forbidden number * 2^{-3}
+    - Also: 7/8 = (2^3 - 1)/2^3 = Mersenne-like
+
+    - arctanh(7/8) = 1.3540251006
+    - = ln(15)/2 = 1.3540251006
+    - = ln(3)/2 + ln(5)/2 = 1.3540251006
+    - = rapidity(3) + rapidity(5)
+    - = rapidity of the curvature quantum + rapidity of the pentagon!
+
+
+  THE DEEP CONNECTIONS
+  ----------------------------------------
+
+  1. THE COMPOSITION CHAIN
+
+  1/4 (+) 1/2 = ?
+     (1/4 + 1/2)/(1 + 1/8) = (3/4)/(9/8) = 2/3
+     = 2/3
+     Q(2/3) = (1+2/3)/(1-2/3) = (5/3)/(1/3) = 5
+
+  1/4 (+) 1/2 = 2/3, and Q(2/3) = 5 = the number of Platonic solids!
+
+  1/2 (+) 7/8 = ?
+     (1/2 + 7/8)/(1 + 7/16) = (11/8)/(23/16) = 22/23
+     = 22/23 = 0.9565217391
+     Q(22/23) = 45 = 45.0000
+
+  1/4 (+) 7/8 = 12/13 = 0.9230769231
+  Q(12/13) = 25.0000
+
+
+  2. THE BINARY STRUCTURE
+  ----------------------------------------
+
+  1/4 = 2^{-2}
+  1/2 = 2^{-1}
+  ln(2) = log of 2^1
+  7/8 = 1 - 2^{-3}
+
+  They all involve powers of 2.
+  1/4 and 1/2 are negative powers.
+  ln(2) is the natural log of the base.
+  7/8 is one minus a negative power.
+
+  In binary:
+  1/4 = 0.01
+  1/2 = 0.1
+  ln(2) = 0.10110001... (irrational)
+  7/8 = 0.111
+
+  1/4 has one bit set (position 2).
+  1/2 has one bit set (position 1).
+  7/8 has three bits set (positions 1,2,3).
+  ln(2) has infinitely many bits set.
+
+  The RAPIDITY of 2^{-k}:
+    2^{-0} = 1: AT THE POLE
+    2^{-1} = 0.5000: rapidity = 0.549306, Q = 3.0000
+    2^{-2} = 0.2500: rapidity = 0.255413, Q = 1.6667
+    2^{-3} = 0.1250: rapidity = 0.125657, Q = 1.2857
+    2^{-4} = 0.0625: rapidity = 0.062582, Q = 1.1333
+
+  The RAPIDITY of 1 - 2^{-k}:
+    1-2^{-1} = 0.50000: rapidity = 0.549306, Q = 3.0000 = 3
+    1-2^{-2} = 0.75000: rapidity = 0.972955, Q = 7.0000 = 7
+    1-2^{-3} = 0.87500: rapidity = 1.354025, Q = 15.0000 = 15
+    1-2^{-4} = 0.93750: rapidity = 1.716994, Q = 31.0000 = 31
+    1-2^{-5} = 0.96875: rapidity = 2.071567, Q = 63.0000 = 63
+
+  Q(1 - 2^{-k}) = (2 - 2^{-k}) / 2^{-k} = 2^{k+1} - 1 = MERSENNE NUMBER!
+
+  So 7/8 maps to Q = 15 = 2^4 - 1 = Mersenne M_4.
+  And 3/4 maps to Q = 7 = 2^3 - 1 = Mersenne M_3 = FORBIDDEN!
+  And 1/2 maps to Q = 3 = 2^2 - 1 = Mersenne M_2 = curvature quantum!
+
+  THE PATTERN: x = 1 - 2^{-k} maps to Q = 2^{k+1} - 1 = M_{k+1}.
+
+  k=1: x=1/2, Q=3 (Mersenne prime, curvature)
+  k=2: x=3/4, Q=7 (Mersenne prime, FORBIDDEN)
+  k=3: x=7/8, Q=15 (not prime: 3*5)
+  k=4: x=15/16, Q=31 (Mersenne prime)
+  k=5: x=31/32, Q=63 (not prime: 7*9)
+  k=6: x=63/64, Q=127 (Mersenne prime)
+
+  The Cayley transform maps 1 - 2^{-k} to Mersenne numbers!
+  Mersenne PRIMES correspond to 'prime' positions near the pole.
+  The first non-trivial Mersenne prime Q-value is 7 = THE FORBIDDEN NUMBER.
+
+
+  3. THE ln(2) BRIDGE
+  ----------------------------------------
+
+  ln(2) sits between 1/2 and 7/8.
+  It is the ONLY transcendental number in the list.
+  The others are all rational (dyadic).
+
+  ln(2) is the bridge between:
+  - The discrete (1/4, 1/2, 7/8 = binary fractions)
+  - The continuous (ln, exp, the real line)
+
+  In rapidity:
+  arctanh(1/2) = ln(3)/2 = 0.549306
+  arctanh(ln2) = 0.853988
+  arctanh(7/8) = ln(15)/2 = 1.354025
+
+  arctanh(ln2) - arctanh(1/2) = 0.304682
+  arctanh(7/8) - arctanh(ln2) = 0.500037
+
+  ln(2) as a velocity: v = ln(2) = 0.693c.
+  This is a very fast velocity — 69.3% of light speed.
+  Doppler factor at v=ln(2): D = sqrt(Q(ln2)) = 2.348996
+  = 2.348996
+
+  Q(ln(2)) = (1+ln2)/(1-ln2)
+  = 5.5177827065
+  ln(Q(ln2)) = 1.7079760960
+  2*arctanh(ln2) = 1.7079760960
+  Compare: pi = 3.1415926536
+  Compare: e = 2.7182818285
+  Compare: 2*phi = 3.2360679775
+  Q(ln2) ~ 5.518. Not a recognizable constant.
+
+
+  4. THE QUADRUPLE AS INFORMATION ARCHITECTURE
+  ----------------------------------------
+
+  1/4 = probability of two independent fair coins both heads
+  1/2 = probability of one fair coin heads
+  ln(2) = information content of one bit (in nats)
+  7/8 = probability of NOT getting three tails in a row
+
+  REWRITTEN:
+  1/4 = P(HH)     = the probability of FULL AGREEMENT (2 coins)
+  1/2 = P(H)      = the probability of ONE AGREEMENT
+  ln(2) = I(coin)  = the INFORMATION in one agreement
+  7/8 = 1-P(TTT)  = the probability of AT LEAST ONE agreement (3 coins)
+
+  They encode:
+  1/4 = AND (both agree)
+  1/2 = MAYBE (one agrees)
+  ln(2) = BIT (the measure of one agreement)
+  7/8 = OR (at least one agrees)
+
+  AND < MAYBE < BIT < OR
+  0.25 < 0.50 < 0.693 < 0.875
+
+  This is the HIERARCHY OF LOGICAL CONNECTIVES as numbers!
+  AND is the most restrictive: both must agree.
+  MAYBE is the fair point: one agrees, one doesn't.
+  BIT is the transcendental bridge: the COST of one distinction.
+  OR is the most permissive: at least one agrees.
+
+
+  5. THE MERSENNE LADDER
+  ----------------------------------------
+
+  x_k = 1 - 2^{-k} maps to Q = 2^{k+1} - 1 = M_{k+1}.
+
+  The ladder:
+    x_0 = 0     -> Q = 1   (identity)
+    x_1 = 1/2   -> Q = 3   (Mersenne prime, curvature)
+    x_2 = 3/4   -> Q = 7   (Mersenne prime, FORBIDDEN)
+    x_3 = 7/8   -> Q = 15  (composite: 3*5)
+    x_4 = 15/16 -> Q = 31  (Mersenne prime)
+    x_5 = 31/32 -> Q = 63  (composite: 7*9)
+    x_6 = 63/64 -> Q = 127 (Mersenne prime)
+
+  1/4 = x_2/x_3 = (3/4)/(7/8) = 6/7.
+  Wait, 1/4 is NOT on the Mersenne ladder (it's x=1/4, not 1-2^{-k}).
+
+  But 1/4 = 2^{-2} IS the STEP SIZE of the ladder at level 2:
+  x_2 - x_1 = 3/4 - 1/2 = 1/4.
+  x_3 - x_2 = 7/8 - 3/4 = 1/8.
+  x_4 - x_3 = 15/16 - 7/8 = 1/16.
+
+  The step from level 1 to level 2 IS 1/4.
+  The step from level 2 to level 3 IS 1/8.
+  Each step halves. The ladder is GEOMETRIC with ratio 1/2.
+
+  So our four numbers participate in the Mersenne ladder:
+  1/2 = x_1 (start of the ladder)
+  1/4 = step from x_1 to x_2
+  3/4 = x_2 (the FORBIDDEN rung)
+  7/8 = x_3 (the next rung)
+
+  And ln(2) = the NATURAL UNIT of the ladder.
+  Each rung is separated by ln(2)/2 of rapidity? Let's check:
+  arctanh(1/2)  = 0.549306
+  arctanh(3/4)  = 0.972955
+  arctanh(7/8)  = 1.354025
+  arctanh(15/16)= 1.716994
+
+  Gaps: 0.423649, 0.381070, 0.362969
+
+  The gaps are NOT constant. They INCREASE.
+  The ladder accelerates in rapidity as it approaches the pole.
+
+
+  6. THE SYNTHESIS
+  ----------------------------------------
+
+  The four numbers 1/4, 1/2, ln(2), 7/8 are:
+
+  1/4 = the AND gate = two coins agreeing = Q^{-1}(5/3) = major sixth
+  1/2 = the MAYBE = one coin = Q^{-1}(3) = twelfth = curvature velocity
+  ln(2) = the BIT = the cost of one distinction = the octave in nats
+  7/8 = the OR gate = at least one coin agreeing = Q^{-1}(15) = Mersenne M_4
+
+  Together they trace the Mersenne ladder from Q=3 to Q=15,
+  passing through Q=7 (the forbidden rung) at x=3/4.
+
+  3/4 is not in the original list. But it is BETWEEN 1/2 and 7/8.
+  And 3/4 is the Kleiber exponent. And Q(3/4) = 7 = forbidden.
+  The four numbers BRACKET the forbidden number on both sides.
+
+  1/2 < 3/4 < 7/8: the forbidden 3/4 sits between 1/2 and 7/8.
+  ln(2) also sits between 1/2 and 7/8: 1/2 < ln(2) < 7/8.
+  And ln(2) ~ 0.693 while 3/4 = 0.750.
+  They are CLOSE but not equal.
+
+  3/4 - ln(2) = 0.0568528194
+  ln(2)/(3/4) = 0.9241962407
+  The gap between ln(2) and 3/4 is only 5.7% of the interval.
+
+  ln(2) is the TRANSCENDENTAL shadow of 3/4.
+  3/4 is the RATIONAL shadow of ln(2).
+  One is the bit. The other is the biological threshold.
+  They are two versions of the same thing:
+  THE BOUNDARY BETWEEN ORDER AND COMPLEXITY.
+
+  ln(2) says: this is the COST of one distinction (information).
+  3/4 says: this is the THRESHOLD of complexity (biology/tournaments).
+  Both live at rapidity ~ 0.5-1.0, the crossover region.
+
+  And the four numbers 1/4, 1/2, ln(2), 7/8 are the
+  SCAFFOLD around this crossover:
+  1/4 and 1/2 below it, 7/8 above it, ln(2) inside it.
