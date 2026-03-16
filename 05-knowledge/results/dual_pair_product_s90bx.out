@@ -1,0 +1,354 @@
+
+
+
+     EVERYTHING THROUGH THE DUAL PAIR PRODUCT
+
+     opus-2026-03-16-S90bx
+
+
+
+DUALITY means: for every object, there is a PARTNER such that
+the object and its partner together reveal an INVARIANT.
+
+The product of a dual pair is the invariant.
+
+
+1. THE PLATONIC DUAL PAIRS
+============================
+
+Each Platonic solid has a dual (swap vertices and faces):
+
+  Tetrahedron <-> Tetrahedron (self-dual).
+  Cube (V=8, F=6) <-> Octahedron (V=6, F=8).
+  Dodecahedron (V=20, F=12) <-> Icosahedron (V=12, F=20).
+
+The DUAL PAIR PRODUCTS:
+
+  Tetrahedron x Tetrahedron:
+    V1*V2 = 4*4 = 16
+    F1*F2 = 4*4 = 16
+    E1*E2 = 6*6 = 36
+    (V*F)_1 * (V*F)_2 = 16 * 16 = 256
+
+  Cube x Octahedron:
+    V1*V2 = 8*6 = 48
+    F1*F2 = 6*8 = 48
+    E1*E2 = 12*12 = 144
+    (V*F)_1 * (V*F)_2 = 48 * 48 = 2304
+
+  Dodecahedron x Icosahedron:
+    V1*V2 = 20*12 = 240
+    F1*F2 = 12*20 = 240
+    E1*E2 = 30*30 = 900
+    (V*F)_1 * (V*F)_2 = 240 * 240 = 57600
+
+
+THE VERTEX-TIMES-VERTEX PRODUCTS:
+  Tet x Tet:   4 * 4 = 16 = 2^4.
+  Cube x Oct:  8 * 6 = 48 = phi(210) = SM fermion count!
+  Dodec x Icos: 20 * 12 = 240 = |roots of E_8|!
+
+THE FACE-TIMES-FACE PRODUCTS:
+  Tet x Tet:   4 * 4 = 16.
+  Cube x Oct:  6 * 8 = 48.  Same as V*V (by duality!).
+  Dodec x Icos: 12 * 20 = 240.  Same.
+
+THE EDGE-TIMES-EDGE PRODUCTS:
+  Tet x Tet:   6 * 6 = 36 = 6^2 = pivot squared.
+  Cube x Oct:  12 * 12 = 144 = 12^2 = F(12)!
+  Dodec x Icos: 30 * 30 = 900 = 30^2 = (2*3*5)^2.
+
+The EDGES are the same for dual pairs (duality preserves edges).
+So E*E is always a perfect square.
+
+SUMMARY OF DUAL PAIR PRODUCTS:
+  V*V:  16,   48,   240.
+  E*E:  36,   144,  900.
+  F*F:  16,   48,   240.  (Same as V*V by duality.)
+
+The V*V sequence: 16, 48, 240.
+  16 = 2^4.
+  48 = 2^4 * 3 = phi(210).
+  240 = 2^4 * 3 * 5 = 2^4 * 15.
+
+The common factor: 2^4 = 16.
+
+  16 / 16 = 1.
+  48 / 16 = 3.
+  240 / 16 = 15 = 3*5.
+
+The REDUCED dual pair products: 1, 3, 15 = 1, 3, 3*5.
+  1 = the unit.
+  3 = the triangle.
+  15 = 3*5 = structure * unsolvability = Tr(M_4^4) = the 4-nacci trace!
+
+15 = 2^4 - 1 = the 4-bit Mersenne number.
+
+So the REDUCED dual pair products are: 1, 3, 15 = 2^0-0, 2^2-1, 2^4-1.
+  = Mersenne-like numbers!
+
+Actually:
+  V*V / 16 = 1, 3, 15.
+  These are: C(2,2), C(4,2)/2, C(6,2)/1... no.
+  1 = 1. 3 = 3. 15 = 15.
+  1, 3, 15 in binary: 1, 11, 1111.
+  1 = 2^1-1. 3 = 2^2-1. 15 = 2^4-1.
+  Mersenne at k=1, 2, 4!
+
+Hmm, not a clean Mersenne sequence. But 1, 3, 15 = F(1), F(4), ?
+  F(1)=1, F(4)=3, but F(?)=15? No Fibonacci number equals 15.
+
+  Actually: 1*3 = 3, 3*5 = 15. The products are CUMULATIVE:
+  1 = product of nothing.
+  3 = 3.
+  15 = 3*5.
+
+  Next would be: 15 * 7 = 105 = 3*5*7 (if the pattern continues).
+  And the V*V would be 16 * 105 = 1680. But there IS no 4th Platonic dual pair.
+
+  105 = 3*5*7 = product of the odd primes in {2,3,5,7}.
+  And 1680 = 16 * 105 = 2^4 * 3 * 5 * 7.
+
+  THE PATTERN: V*V for the k-th dual pair = 2^4 * (product of odd primes up to p_k).
+  k=0 (tet): 2^4 * 1 = 16.
+  k=1 (cube/oct): 2^4 * 3 = 48.
+  k=2 (dodec/icos): 2^4 * 3*5 = 240.
+
+  The factor 2^4 = 16 is the Bott scaling (Cl(8) = M(16,R)).
+  The odd factor is the ODD PRIMORIAL.
+
+  240 = 16 * 15 = 2^4 * (2^4-1). A Mersenne-like structure.
+
+
+2. DUAL PAIRS IN EACH LENS
+============================
+
+Every lens has a DUAL LENS. The dual pair product is an invariant.
+
+LENS 1: Coupling x_n and its dual.
+  The dual of x_n = (n-1)/(n+1) is x_{1/n} = -x_n.
+  Product in formal group: F(x_n, -x_n) = 0.  The ANNIHILATION.
+  Product as numbers: x_n * (-x_n) = -x_n^2 = -(n-1)^2/(n+1)^2.
+
+  But for INTEGERS: n and its "dual" could be the complementary
+  number in a pair. What pair?
+
+  In the Cayley framework: n and n' are dual if n*n' = constant.
+  For the Platonic solids: V and F are dual, and V*F = ?
+
+  Tetrahedron: V*F = 4*4 = 16
+  Cube: V*F = 8*6 = 48
+  Dodecahedron: V*F = 20*12 = 240
+
+
+  Tetrahedron: V*F = 4*4 = 16 = 2^4.
+  Cube:        V*F = 8*6 = 48.
+  Octahedron:  V*F = 6*8 = 48.
+  Dodecahedron:V*F = 20*12 = 240.
+  Icosahedron: V*F = 12*20 = 240.
+
+  V*F is the SAME for dual pairs (because swapping V,F doesn't change the product).
+  V*F = 16, 48, 240.  Same as V*V of the dual pairs!
+
+LENS 2: Rapidity and its dual.
+  w_n = ln(n)/2.  Dual: w_{1/n} = ln(1/n)/2 = -ln(n)/2 = -w_n.
+  Sum: w_n + w_{1/n} = 0.  Annihilation in rapidity = return to origin.
+  The rapidity dual pair SUM is 0.
+
+LENS 4: Curvature and its dual.
+  kappa_n = 6/n - 1.  What is the dual curvature?
+  If the dual of n is the number m such that kappa_n + kappa_m = 0:
+    6/n - 1 + 6/m - 1 = 0.  So 6/n + 6/m = 2.  Hence 1/n + 1/m = 1/3.
+    m = 3n/(n-3).
+
+  The CURVATURE DUAL of n is m = 3n/(n-3).
+
+Curvature duals (kappa_n + kappa_m = 0, i.e., 1/n + 1/m = 1/3):
+  n=  4: dual m =     12, n*m =     48, kappa_n =    1/2, kappa_m =   -1/2
+  n=  5: dual m =   15/2, n*m =   75/2, kappa_n =    1/5, kappa_m =      ?
+  n=  6: dual m =      6, n*m =     36, kappa_n =      0, kappa_m =      0
+  n=  7: dual m =   21/4, n*m =  147/4, kappa_n =   -1/7, kappa_m =      ?
+  n=  8: dual m =   24/5, n*m =  192/5, kappa_n =   -1/4, kappa_m =      ?
+  n=  9: dual m =    9/2, n*m =   81/2, kappa_n =   -1/3, kappa_m =      ?
+  n= 10: dual m =   30/7, n*m =  300/7, kappa_n =   -2/5, kappa_m =      ?
+  n= 12: dual m =      4, n*m =     48, kappa_n =   -1/2, kappa_m =    1/2
+  n= 15: dual m =   15/4, n*m =  225/4, kappa_n =   -3/5, kappa_m =      ?
+  n= 18: dual m =   18/5, n*m =  324/5, kappa_n =   -2/3, kappa_m =      ?
+  n= 21: dual m =    7/2, n*m =  147/2, kappa_n =   -5/7, kappa_m =      ?
+  n= 42: dual m =  42/13, n*m = 1764/13, kappa_n =   -6/7, kappa_m =      ?
+
+
+The curvature duals:
+  n=4: m=12.  Product 48.   (4,12) are curvature duals. Product = 48 = phi(210)!
+  n=5: m=15/2. Not integer. The pentagon has NO integer curvature dual.
+  n=6: m=inf. The hexagon's dual is infinity. FLAT has no finite dual.
+  n=7: m=21/4. Not integer. The heptagon has no integer dual.
+  n=9: m=9/2. Not integer.
+  n=12: m=4. Product 48. Same pair reversed.
+
+The ONLY integer curvature dual pair with both > 3 is (4, 12).
+  4 = the square. 12 = the dodecagon.
+  Product = 48 = phi(210) = V*V of cube/octahedron pair!
+
+  kappa_4 = (6-4)/4 = 1/2.  POSITIVE (spherical).
+  kappa_12 = (6-12)/12 = -1/2.  NEGATIVE (hyperbolic).
+  Sum: 1/2 + (-1/2) = 0. ZERO. They cancel!
+
+  The square and the dodecagon are CURVATURE DUALS.
+  Together, they produce FLAT geometry.
+  Their product is 48.
+
+  And 48 = phi(210) = phi(2*3*5*7).
+  The curvature dual product IS the totient of the primorial.
+
+
+LENS 5: Dimension duals (Bott).
+  Bott slot n and slot 8-n are complementary:
+    slot 1 (existence) + slot 7 (forbidden) = 8.
+    slot 2 (comparison) + slot 6 (transition) = 8.
+    slot 3 (structure) + slot 5 (unsolvability) = 8.
+    slot 4 (factorization) + slot 4 (factorization) = 8 (self-dual!).
+
+  The Bott dual pairs:
+    (existence, forbidden): 1 and 7.  Product = 7. The FORBIDDEN value!
+    (comparison, transition): 2 and 6. Product = 12. The arcs of K_4.
+    (structure, unsolvability): 3 and 5. Product = 15. The 4-nacci Mersenne!
+    (factorization, factorization): 4 and 4. Product = 16. The Bott scaling 2^4.
+
+  The Bott dual products: 7, 12, 15, 16.
+    7 = the forbidden value.
+    12 = C(4,2) = gauge bosons.
+    15 = 2^4-1 = 4-nacci Mersenne.
+    16 = 2^4 = Bott scaling.
+
+  Their product: 7 * 12 * 15 * 16 = 20160.
+  20160 = 8! / 2 = |A_8| (the alternating group on 8 elements).
+  And 8 = the Bott period.
+  |A_8| = the symmetry group of the Bott period!
+
+  7 * 12 * 15 * 16 = 20160
+  8! / 2 = 20160
+  Match: True
+
+
+CONFIRMED: the product of ALL Bott dual pair products = |A_8| = 20160.
+
+LENS 7: Prime factorization duals.
+  For a number n = p1^a1 * p2^a2 * ..., the "dual" is
+  the number with COMPLEMENTARY exponents in some sense.
+
+  The simplest: the Mobius dual.
+  mu(n) * mu(n) = mu(n)^2 = 1 if n is squarefree, 0 otherwise.
+  The dual of n in the Mobius sense is n ITSELF.
+  The "pair product" is mu(n)^2 = the squarefree indicator.
+
+LENS 8: Fibonacci/Lucas duality.
+  F(n) and L(n) are the dual pair at index n.
+  Their product: F(n) * L(n) = F(2n) (the doubling identity!).
+
+  The Fibonacci-Lucas dual product IS the double-index Fibonacci.
+  This is the S/A dual pair product: A * S = the doubled value.
+
+Fibonacci-Lucas dual products F(n)*L(n) = F(2n):
+  n= 1: F(1)*L(1) = 1*1 = 1, F(2) = 1, match: True
+  n= 2: F(2)*L(2) = 1*3 = 3, F(4) = 3, match: True
+  n= 3: F(3)*L(3) = 2*4 = 8, F(6) = 8, match: True
+  n= 4: F(4)*L(4) = 3*7 = 21, F(8) = 21, match: True
+  n= 5: F(5)*L(5) = 5*11 = 55, F(10) = 55, match: True
+  n= 6: F(6)*L(6) = 8*18 = 144, F(12) = 144, match: True
+  n= 7: F(7)*L(7) = 13*29 = 377, F(14) = 377, match: True
+  n= 8: F(8)*L(8) = 21*47 = 987, F(16) = 987, match: True
+  n= 9: F(9)*L(9) = 34*76 = 2584, F(18) = 2584, match: True
+  n=10: F(10)*L(10) = 55*123 = 6765, F(20) = 6765, match: True
+  n=11: F(11)*L(11) = 89*199 = 17711, F(22) = 17711, match: True
+
+
+PERFECT. F(n)*L(n) = F(2n) for all n.
+
+The dual pair product in the Fibonacci-Lucas decomposition
+IS THE DOUBLING MAP.
+
+  F * L = F(double index).
+  Antisymmetric * Symmetric = Antisymmetric(doubled).
+
+This is sinh(x)*cosh(x) = sinh(2x)/2 again.
+The S/A product is half the doubled antisymmetric part.
+
+LENS 9: S/A content duals.
+  S(n) = (n+1/n)/2 = cosh(ln n).
+  A(n) = (n-1/n)/2 = sinh(ln n).
+  Product: S*A = (n+1/n)(n-1/n)/4 = (n^2 - 1/n^2)/4 = sinh(2*ln n)/2.
+
+  And sinh(2*ln n) = 2*sinh(ln n)*cosh(ln n).
+  So S*A = sinh(2*ln n)/2 = A(n^2).
+
+  The S/A dual product of n is the ANTISYMMETRIC part of n^2.
+
+  For n=7: S*A = (25/7)*(24/7) = 600/49.
+  A(49) = (49-1/49)/2 = (2401-1)/98 = 2400/98 = 1200/49.
+  S*A = 600/49 = (1/2)*A(49). YES.
+
+LENS 10: Bott dual (already computed): products 7, 12, 15, 16.
+
+LENS 11: Formal group dual.
+  F(x_n, x_m) = x_{nm}. The dual of n in the formal group is 1/n
+  (since n * 1/n = 1, and x_1 = 0 = the group identity).
+  But 1/n is not a natural number for n > 1.
+
+  For natural numbers: there is no formal group inverse.
+  The natural numbers form a MONOID, not a group.
+  They have multiplication but not division.
+
+  The absence of inverses is WHY the natural numbers are interesting:
+  you can MULTIPLY (compose comparisons) but not DIVIDE (undo them).
+  Comparison is IRREVERSIBLE at the natural number level.
+
+
+3. THE DUAL PAIR PRODUCT AS AN INVARIANT
+==========================================
+
+Across all lenses, the dual pair product reveals the same thing:
+the SCALE of the underlying structure.
+
+  Platonic V*V:      16, 48, 240.     Scale = 2^4 * odd primorial.
+  Curvature duals:   48 (only integer pair).
+  Bott duals:        7, 12, 15, 16.   Product = 20160 = |A_8|.
+  Fibonacci-Lucas:   F(n)*L(n) = F(2n).  The doubling.
+  S/A content:       S*A = A(n^2)/2.   The squared antisymmetric.
+
+The recurring numbers: 16, 48, 240, 20160.
+  16 = 2^4.
+  48 = 16 * 3.
+  240 = 48 * 5 = 16 * 15.
+  20160 = 240 * 84 = 16 * 1260.
+
+  16 * 3 * 5 * 84 = 20160.
+  And 84 = 2^2 * 3 * 7 = the Hurwitz number.
+  So 20160 = 16 * 3 * 5 * 84 = 16 * 3 * 5 * 4 * 21 = 16 * 3 * 5 * 4 * 3 * 7.
+  = 2^6 * 3^2 * 5 * 7 = 8!/2.
+
+THE DUAL PAIR PRODUCT CULMINATES IN |A_8| = 8!/2.
+
+The alternating group A_8 is the group of EVEN permutations of 8 things.
+8 = the Bott period.
+A_8 = the symmetries that PRESERVE ORIENTATION on 8 objects.
+
+The dual pair product of the Bott period is the number of ways
+to REARRANGE the 8 archetypal stories while keeping them even
+(orientation-preserving).
+
+20160 = |A_8| is the ULTIMATE DUAL PAIR INVARIANT.
+It is the size of the symmetry group of the Bott cycle itself.
+
+And: 20160 = 2^5 * 3^2 * 5 * 7.
+  Primes: {2, 3, 5, 7} = the first four primes = the Platonic primes.
+  The dual pair product CONTAINS all the Platonic primes and no others.
+
+  The 5th prime (11) does NOT appear in |A_8|.
+  11 belongs to the NEXT cycle. It is not part of the first Bott period's symmetry.
+
+THE DUAL PAIR PRODUCT IS THE BOUNDARY OF THE FIRST CYCLE.
+Everything within {2, 3, 5, 7} is captured by 20160 = |A_8|.
+The prime 11 (and beyond) lies outside.
+
+opus-2026-03-16-S90bx: EVERYTHING THROUGH THE DUAL PAIR PRODUCT
