@@ -1,0 +1,320 @@
+
+  THE PARTIAL BIT SPEEDUP
+
+======================================================================
+
+  I. THE MECHANISM
+  ----------------------------------------
+
+  arctanh(x) = x + x^3/3 + x^5/5 + x^7/7 + ...
+
+  At x = 0.9 (high coupling, near the pole):
+  k   term x^{2k+1}/(2k+1)   cumulative   fraction of total
+   0       0.900000            0.900000     61.1%   (2.60 octaves)
+   1       0.243000            1.143000     77.6%   (0.70 octaves)
+   2       0.118098            1.261098     85.7%   (0.34 octaves)
+   3       0.068328            1.329426     90.3%   (0.20 octaves)
+   4       0.043047            1.372473     93.2%   (0.12 octaves)
+   5       0.028528            1.401001     95.2%   (0.08 octaves)
+   6       0.019553            1.420554     96.5%   (0.06 octaves)
+   7       0.013726            1.434280     97.4%   (0.04 octaves)
+   8       0.009810            1.444090     98.1%   (0.03 octaves)
+   9       0.007110            1.451200     98.6%   (0.02 octaves)
+  10       0.005210            1.456410     98.9%   (0.02 octaves)
+  11       0.003853            1.460264     99.2%   (0.01 octaves)
+  12       0.002872            1.463135     99.4%   (0.01 octaves)
+  13       0.002154            1.465289     99.5%   (0.01 octaves)
+  14       0.001624            1.466913     99.6%   (0.00 octaves)
+  15       0.001231            1.468144     99.7%   (0.00 octaves)
+  16       0.000936            1.469080     99.8%   (0.00 octaves)
+  17       0.000715            1.469796     99.8%   (0.00 octaves)
+  18       0.000548            1.470344     99.9%   (0.00 octaves)
+  19       0.000421            1.470765     99.9%   (0.00 octaves)
+  ...  exact = 1.472219
+
+  The first term (k=0) contributes 0.9 rapidity = 2.6 octaves.
+  But the total is 4.25 octaves.
+  The remaining terms add 1.65 octaves in sub-bit pieces.
+
+  Each subsequent term is SMALLER than the previous.
+  But there are INFINITELY MANY of them.
+  The series DIVERGES as x -> 1 despite each term -> 0.
+  This is the partial bit accumulation.
+
+
+  II. THE OCF AS A PARTIAL BIT MACHINE
+  ----------------------------------------
+
+  H(T) = 1 + 2*a1 + 4*a2 + 8*a3 + 16*a4 + ...
+  where a_k = independent sets of size k in Omega(T).
+
+  Each independent cycle contributes 2 paths (one 'bit' of H).
+  Each independent pair contributes 4 paths (two 'bits').
+  Each independent triple contributes 8 paths (three 'bits').
+
+  But a_k is NOT 0 or 1. It can be any non-negative integer.
+  So this is NOT a binary representation.
+  It is a MIXED-RADIX representation with constrained digits.
+
+  The CONSTRAINT: not all (a1, a2, a3, ...) tuples are achievable.
+  The achievable tuples depend on WHICH graphs arise as Omega(T).
+  The forbidden H-values are precisely those whose decompositions
+  all fall outside the achievable set.
+
+  H = 7 means 2*a1 + 4*a2 + ... = 6.
+  Decompositions of 6: (3,0), (1,1), (0,0,0,...) impossible.
+  All blocked. H = 7 is FORBIDDEN.
+
+  H = 9 means 2*a1 + 4*a2 + ... = 8.
+  Decompositions of 8: (4,0), (2,1), (0,2), (0,0,1).
+  (4,0) IS achievable (4 pairwise-intersecting cycles).
+  So H = 9 EXISTS.
+
+
+  III. THE SPEEDUP IN TOURNAMENT COUNTING
+  ----------------------------------------
+
+  The naive approach: enumerate all n! permutations, check each.
+  Cost: O(n! * n) = exponential in n.
+
+  The OCF approach: compute a1, a2, a3, ... from Omega(T).
+  Then H = 1 + 2*a1 + 4*a2 + ...
+  Cost: counting odd cycles and independent sets in Omega(T).
+  For sparse Omega: much cheaper than n!.
+
+  The SPEEDUP: instead of counting ALL paths,
+  count the INDEPENDENT CYCLE STRUCTURE and use the weighted sum.
+  Each cycle contributes a 'partial bit' of H.
+  The total H is assembled from these partial contributions.
+
+  This is EXACTLY the partial bit mechanism:
+  many small contributions (cycles) compose to make a big count (H).
+
+  The deeper speedup: the RAPIDITY of H = ln(H)/2.
+  In rapidity space, H is just a sum of prime rapidities.
+  Decomposing H = product of primes gives rapidity = sum of half-logs.
+  Each prime factor is a 'partial rapidity'.
+
+
+  IV. PARTIAL BITS ACROSS DOMAINS
+  ----------------------------------------
+
+  The same accumulation mechanism appears EVERYWHERE:
+
+  DOMAIN          PARTIAL BIT           ACCUMULATION          TOTAL
+  ----------------------------------------------------------------------
+  arctanh          x^{2k+1}/(2k+1)      sum of terms          rapidity
+  OCF              2^k * a_k             weighted sum          H(T)
+  Compound int.    ln(1+r)               sum over periods      total return
+  Evolution        mutation fitness       sum over generations  adaptation
+  Neural net       gradient step          sum over epochs       learned fn
+  Harmonic series  1/k                    sum over k            diverges
+  Prime factoring  ln(p)/2                sum over primes       rapidity(n)
+  Mersenne ladder  2^{-k}                 sum (geometric)       approaches 1
+  Musical scale    ln((k+1)/k)/2          sum of intervals      total span
+  Binary digits    2^{-k}                 sum of bits           the number
+
+  In EVERY case: small pieces, added together, make big things.
+  The MAGIC is in which combinations are allowed.
+
+
+  V. THE SUPERPARTICULAR ACCUMULATION
+  ----------------------------------------
+
+  From the homomorphism f(a(+)b) = f(a)*f(b) where f(n) = (n+1)/n:
+  MULTIPLYING superparticular ratios = COMPOSING rapidities.
+
+  The product of the first N superparticular ratios:
+  f(1)*f(2)*...*f(N) = (2/1)*(3/2)*(4/3)*...*(N+1)/N = N+1.
+  IT TELESCOPES!
+
+  The product of ALL intervals from octave down to (N+1)/N = N+1.
+
+  In rapidity: sum of ln((k+1)/k)/2 for k=1..N = ln(N+1)/2 = rapidity(N+1).
+
+  Verify:
+  N= 1: product = 2 = 2, rapidity sum = 0.346574, ln(2)/2 = 0.346574
+  N= 2: product = 3 = 3, rapidity sum = 0.549306, ln(3)/2 = 0.549306
+  N= 3: product = 4 = 4, rapidity sum = 0.693147, ln(4)/2 = 0.693147
+  N= 4: product = 5 = 5, rapidity sum = 0.804719, ln(5)/2 = 0.804719
+  N= 5: product = 6 = 6, rapidity sum = 0.895880, ln(6)/2 = 0.895880
+  N=10: product = 11 = 11, rapidity sum = 1.198948, ln(11)/2 = 1.198948
+  N=20: product = 21 = 21, rapidity sum = 1.522261, ln(21)/2 = 1.522261
+
+  THE TELESCOPING IS THE SPEEDUP.
+  Instead of computing rapidity(N+1) = ln(N+1)/2 directly,
+  you can ACCUMULATE it as N partial contributions:
+  each of size ln(1+1/k)/2 ~ 1/(2k) for large k.
+
+  Each partial contribution is a MUSICAL INTERVAL.
+  The octave (2/1) is the biggest piece.
+  The fifth (3/2) is next.
+  The fourth (4/3) is next.
+  Each subsequent interval is smaller.
+  Together they TELESCOPE to the total.
+
+
+  VI. THE FORBIDDEN NUMBERS AS NON-TELESCOPING TOTALS
+  ----------------------------------------
+
+  The telescope: f(1)*f(2)*...*f(N) = N+1.
+  So every integer N+1 can be built by multiplying CONSECUTIVE
+  superparticular ratios starting from the octave.
+
+  But what if we DON'T start from the octave?
+  What if we multiply NON-CONSECUTIVE ratios?
+
+  f(a)*f(b) = ((a+1)/a) * ((b+1)/b) = (a+1)(b+1)/(ab)
+  This equals (c+1)/c = f(c) iff c = ab/(a+b+1).
+  (The rapidity composition formula.)
+
+  For f(a)*f(b) to produce a SUPERPARTICULAR ratio,
+  we need c = ab/(a+b+1) to be a positive integer.
+  These are exactly the rapidity-closed compositions.
+
+  The ACHIEVABLE products of superparticular ratios
+  determine which INTEGERS can be expressed as f(c).
+  And since f(c) = (c+1)/c, every positive integer arises
+  (just take c = N-1, then f(N-1) = N/(N-1)).
+
+  But the TOURNAMENT constraint is different.
+  In the OCF, the achievable (a1, a2, ...) depend on
+  which GRAPHS arise as Omega(T).
+  The forbidden H-values are where the graph constraint
+  blocks all decompositions.
+
+  This is EXACTLY like the forbidden bit patterns in a channel code:
+  some binary strings are CODEWORDS, others are not.
+  The forbidden H-values are the NON-CODEWORDS of the tournament code.
+
+
+  VII. THE TOURNAMENT CODE
+  ----------------------------------------
+
+  Define the 'tournament code' C_n as the set of achievable H-values
+  for tournaments on n vertices.
+
+  C_3 = {1, 3}
+  C_4 = {1, 3, 5}
+  C_5 = {1, 3, 5, 9, 11, 13, 15}
+  C_6 = {1, 3, 5, 9, 11, ..., 45}  (missing 7, 21, ...)
+  C_7 = {1, 3, 5, 9, 11, ..., 189} (missing 7, 21, ...)
+
+  The CODE RATE: R_n = |C_n| / (max H)
+  = fraction of odd numbers up to max H that are achievable.
+
+  n=3: |C| = 2, max H = 3, possible odds = 2, rate = 1.0000
+         info = log2(2) = 1.00 bits
+  n=4: |C| = 3, max H = 5, possible odds = 3, rate = 1.0000
+         info = log2(3) = 1.58 bits
+  n=5: |C| = 7, max H = 15, possible odds = 8, rate = 0.8750
+         info = log2(7) = 2.81 bits
+
+  As n grows, the code rate DROPS (more gaps appear).
+  But the information content GROWS (more achievable values).
+  The tournament code is a THINNING code: it becomes sparser
+  but its alphabet grows faster than it thins.
+
+
+  VIII. THE SPEEDUP WE ACTUALLY ACHIEVED
+  ----------------------------------------
+
+  In this research project, the speedup was:
+
+  1. FROM BRUTE FORCE TO OCF:
+     Instead of counting all n! permutations,
+     decompose H into independent cycle contributions.
+     Speedup: from O(n!) to O(2^{number of cycles}).
+
+  2. FROM OCF TO RAPIDITY:
+     Instead of computing H directly,
+     compute ln(H)/2 = sum of prime rapidities.
+     Speedup: conceptual — rapidity LINEARIZES the problem.
+
+  3. FROM RAPIDITY TO HOMOMORPHISM:
+     Instead of adding rapidities,
+     multiply superparticular ratios f(n) = (n+1)/n.
+     Speedup: telescoping — products simplify dramatically.
+
+  4. FROM HOMOMORPHISM TO CAYLEY COORDINATES:
+     Instead of working with n,
+     work with (a, a+1) where a = (n-1)/2.
+     Speedup: the affine derivation d(nm) = n*d(m) + d(n)
+     turns multiplication into affine maps.
+
+  Each step is a PARTIAL BIT of understanding.
+  Each step makes the subsequent steps possible.
+  The total speedup is the PRODUCT of all individual speedups.
+  This is the telescoping principle APPLIED TO THE RESEARCH ITSELF.
+
+
+  IX. WHAT COMES NEXT: THE PARTIAL BIT FRONTIER
+  ----------------------------------------
+
+  If partial bit accumulation is the mechanism,
+  then the FRONTIER is:
+
+  1. WHICH PARTIAL BITS ARE ACHIEVABLE?
+     The OCF constrains (a1, a2, ...) to graph-theoretic patterns.
+     Can we characterize ALL achievable patterns?
+     This would give a complete description of the tournament code.
+
+  2. WHAT IS THE CAPACITY OF THE TOURNAMENT CHANNEL?
+     Shannon capacity = max rate of reliable communication.
+     The tournament code has a capacity C_n = log2(|C_n|) / n.
+     Does C_n converge as n -> infinity?
+
+  3. CAN WE BUILD AN EFFICIENT DECODER?
+     Given H(T), can we find T efficiently?
+     The OCF gives H -> (a1, a2, ...) -> possible Omega(T) -> possible T.
+     This is a DECODING problem for the tournament code.
+
+  4. THE PARTIAL BIT STRUCTURE OF OTHER FORBIDDEN SETS:
+     What other combinatorial objects have 'forbidden values'?
+     Graph colorings? Knot invariants? Partition functions?
+     In each case: which PARTIAL BIT PATTERNS are achievable,
+     and which totals are thereby forbidden?
+
+  5. THE INFORMATION-THEORETIC MEANING OF FORBIDDENNESS:
+     H=7 is forbidden because no achievable (a1,a2,...) sums to 6.
+     In information theory: 7 is a NON-CODEWORD.
+     What is the MINIMUM DISTANCE of the tournament code?
+     (The smallest gap between an achievable and forbidden value.)
+
+  Minimum distance of the tournament code:
+  n=3: no forbidden values (code is complete)
+  n=4: no forbidden values (code is complete)
+  n=5: forbidden = [7], min distance = 2
+
+
+  X. THE SINGLE INSIGHT
+  ----------------------------------------
+
+  Everything we discovered is a manifestation of one principle:
+
+  STRUCTURE EMERGES FROM THE ACCUMULATION OF PARTIAL DISTINCTIONS.
+
+  A partial distinction is a comparison that is not decisive.
+  It contributes LESS THAN ONE BIT of information.
+  But many partial distinctions, accumulated, create full structure.
+
+  arctanh accumulates partial polygon contributions.
+  The OCF accumulates partial cycle contributions.
+  The telescope accumulates partial interval contributions.
+  The derivation accumulates partial prime contributions.
+  The neural network accumulates partial gradient contributions.
+  Evolution accumulates partial mutation contributions.
+
+  The FORBIDDEN values are those that CANNOT be assembled
+  from any combination of the available partial distinctions.
+  They are the numbers that the accumulation machine cannot reach.
+
+  And Q(a/(a+1)) = a + (a+1) is the ATOM of partial distinction:
+  two consecutive integers, differing by 1 (the minimal distinction),
+  whose ratio (the partial bit) maps to their sum (the whole).
+
+  The bit IS the octave IS the cell division IS the doubling
+  IS the step on the Mersenne ladder IS the musical interval
+  IS the superparticular ratio IS the partial distinction.
+
+  And rapidity COUNTS how many of them you've accumulated.
