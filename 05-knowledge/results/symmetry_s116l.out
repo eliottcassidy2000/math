@@ -1,0 +1,276 @@
+
+  SYMMETRIC AND INTRINSIC
+
+======================================================================
+
+  I. THE TWO PARTS OF PHI^n
+  ----------------------------------------
+
+  phi^n = F_n * phi + F_{n-1}
+  psi^n = F_n * psi + F_{n-1}
+
+  Adding: phi^n + psi^n = F_n*(phi+psi) + 2*F_{n-1} = F_n + 2*F_{n-1} = L_n.
+  Subtracting: phi^n - psi^n = F_n*(phi-psi) = F_n*sqrt(5).
+
+  L_n = phi^n + psi^n: the SYMMETRIC part.
+    Symmetric under phi <-> psi (conjugation).
+    Even function of the golden ratio.
+    What you see from OUTSIDE the golden structure.
+
+  F_n*sqrt(5) = phi^n - psi^n: the INTRINSIC part.
+    Anti-symmetric under phi <-> psi.
+    Odd function. Changes sign under conjugation.
+    What the structure IS, that conjugation CANNOT preserve.
+
+
+  II. WHAT SYMMETRIC AND INTRINSIC MEAN
+  ----------------------------------------
+
+  SYMMETRIC (Lucas):
+    L_n counts CLOSED paths (cycles) in the Fibonacci graph.
+    L_n = trace of [[1,1],[1,0]]^n.
+    The trace is the SYMMETRIC invariant of a matrix.
+    It doesn't change under conjugation (similarity).
+    It measures what the system looks like FROM THE OUTSIDE.
+
+  INTRINSIC (Fibonacci):
+    F_n counts OPEN paths in the Fibonacci graph.
+    F_n = off-diagonal entry of [[1,1],[1,0]]^n.
+    The off-diagonal IS the asymmetry.
+    It measures the FLOW from one state to another.
+    It IS the irreversibility, the arrow, the direction.
+
+  Lucas = what is PRESERVED. Fibonacci = what is CHANGED.
+  Lucas = the GROUP. Fibonacci = the ACTION.
+  Lucas = the noun. Fibonacci = the verb.
+
+
+  III. OUR FUNDAMENTAL PRIMES: WHICH ARE SYMMETRIC, WHICH INTRINSIC?
+  ----------------------------------------
+
+  L_0=2, L_2=3, L_4=7, L_5=11.  These are LUCAS: symmetric.
+  F_3=2, F_4=3, F_5=5, F_8=21.   These are FIBONACCI: intrinsic.
+
+  The number 2 appears in BOTH (L_0=2, F_3=2).
+  It is both symmetric AND intrinsic. The PIVOT.
+
+  The number 3 appears in BOTH (L_2=3, F_4=3).
+  Also both. Also a pivot.
+
+  But 7 is Lucas ONLY (L_4=7, but 7 is NOT a Fibonacci number).
+  7 IS PURELY SYMMETRIC. It is what the structure looks like
+  from outside. It is the symmetry that FORBIDS.
+
+  And 5 is Fibonacci ONLY (F_5=5, but 5 is NOT a Lucas number).
+  5 IS PURELY INTRINSIC. It is the pentagon, the golden ratio's
+  discriminant, the thing that makes the structure ITSELF.
+
+  11 is Lucas ONLY (L_5=11).
+  21 is Fibonacci ONLY (F_8=21).
+
+  THE CLASSIFICATION:
+  BOTH (pivots):     2, 3
+  Lucas only (symmetric): 7, 11, 47, 2207
+  Fibonacci only (intrinsic): 5, 8, 13, 21, 34, 55, 89, ...
+
+  The FORBIDDEN numbers (7, 21) split:
+  7 is SYMMETRIC (Lucas). It is the symmetry that obstructs.
+  21 is INTRINSIC (Fibonacci). It is the structure that overshoots.
+
+  They are forbidden for DIFFERENT REASONS:
+  7 is forbidden because the SYMMETRY (commutativity) breaks there.
+  21 is forbidden because the STRUCTURE (cycle topology) overshoots there.
+  One is a symmetry obstruction. The other is a structural obstruction.
+
+
+  IV. THE CHAIN AS SYMMETRIC PROPAGATION
+  ----------------------------------------
+
+  The chain 3 -> 7 -> 47 -> 2207 uses LUCAS numbers at entry points.
+  L_{alpha(p)} = the next prime in the chain.
+  The chain propagates through the SYMMETRIC (Lucas) side.
+
+  The entry points 4, 8, 16, 32 DOUBLE.
+  Doubling is the INTRINSIC operation (Q'(0) = 2, the octave).
+
+  So the chain uses INTRINSIC steps (doubling the entry point)
+  to find SYMMETRIC values (Lucas numbers that are prime).
+  The chain ALTERNATES between intrinsic and symmetric at each step.
+
+  Step: p (symmetric, a Lucas prime)
+    -> alpha(p) (intrinsic, the entry point, a power of 2)
+    -> L_{alpha(p)} (symmetric, the next Lucas prime)
+    -> alpha(that) (intrinsic, the next entry point, doubled)
+    -> ...
+
+  The chain is a BRAID of symmetric and intrinsic.
+  Each step converts one into the other.
+  You can't have one without the other.
+  The chain EXISTS because symmetric and intrinsic alternate.
+
+
+  V. THE TOURNAMENT THROUGH BOTH LENSES
+  ----------------------------------------
+
+  A tournament T has:
+
+  SYMMETRIC structure:
+    |Aut(T)| = the automorphism group size.
+    The symmetries of T. What PRESERVES T.
+    For Paley T_p: |Aut| = p*(p-1)/2.
+    For T_7: |Aut| = 21 = the FORBIDDEN number.
+
+  INTRINSIC structure:
+    H(T) = the Hamiltonian path count.
+    The number of orderings. What T PRODUCES.
+    For T_7: H = 189 = 3^3 * 7.
+
+  H/|Aut| = the number of ORBITS of Hamiltonian paths.
+  For T_7: 189/21 = 9 = 3^2.
+  For T_11: 95095/55 = 1729 = the taxicab number.
+
+  THE ORBIT COUNT is the ratio of INTRINSIC to SYMMETRIC.
+  It measures: how many GENUINELY DIFFERENT things does T produce,
+  after removing the redundancy of symmetry?
+
+  For T_7: 9 genuinely different path orderings.
+  For T_11: 1729 genuinely different path orderings.
+
+
+  VI. THE FORMAL GROUP: SYMMETRIC AND INTRINSIC MODES
+  ----------------------------------------
+
+  F_h(x,y) = (x+y)/(1+xy).
+
+  SYMMETRIC property: F_h(x,y) = F_h(y,x). Commutative.
+  INTRINSIC property: F_h(x,x) = 2x/(1+x^2). Self-composition.
+
+  The symmetric property says: the order of inputs doesn't matter.
+  The intrinsic property says: the self-interaction is determined.
+
+  When we go to QUATERNIONS (d=2), the symmetric property BREAKS.
+  F_h(x,y) != F_h(y,x) in the quaternionic extension.
+  But the intrinsic property (self-composition) SURVIVES
+  because of ALTERNATIVITY: x(xy) = x^2 * y.
+
+  The chain 3 -> 7 -> 47 -> 2207 breaks at L_32 (composite).
+  The symmetric property (Lucas prime) FAILS at the 5th step.
+  But the intrinsic property (entry points doubling) could CONTINUE.
+  alpha would keep doubling: 64, 128, 256, ...
+  But L_64, L_128, ... are composite. The SYMMETRY gives out.
+
+  THE CHAIN BREAKS BECAUSE SYMMETRY IS FINITE.
+  Intrinsic structure (doubling) continues forever.
+  But symmetric structure (Lucas primes) eventually fails.
+  The primes thin out. The Lucas numbers grow too fast.
+  Eventually NO Lucas number at a power-of-2 index is prime.
+
+
+  VII. CASSINI'S IDENTITY: THE INTERPLAY
+  ----------------------------------------
+
+  F_{n+1}*F_{n-1} - F_n^2 = (-1)^n.
+  The product of flanking Fibonaccis minus the square
+  = a SIGN that alternates.
+
+  In matrix form: det([[F_{n+1}, F_n],[F_n, F_{n-1}]]) = (-1)^n.
+  The DETERMINANT (intrinsic) alternates.
+  The TRACE (symmetric) = L_n.
+
+  At n=8:
+  F_9*F_7 - F_8^2 = 34*13 - 21^2 = 442 - 441 = 1.
+  34*13 - 21^2 = 442 - 441 = 1.
+  (-1)^8 = 1. CHECK.
+
+  34*13 = 442 = 21^2 + 1.
+  The product of the flanking Fibonaccis EXCEEDS the forbidden squared by 1.
+  The intrinsic determinant = +1 at even indices, -1 at odd.
+  The alternation IS the quasicrystal beat.
+  The +-1 IS the minimal distinction (the atom).
+
+
+  VIII. THE Q ORBIT: FOUR MODES OF SYMMETRY
+  ----------------------------------------
+
+  The orbit {x, Q(x), -1/x, Q^{-1}(x)} has four elements.
+
+  x:         the INTRINSIC value. What the thing IS.
+  Q(x):      the SYMMETRIC image. What the thing PRODUCES.
+  -1/x:      the SHADOW. The intrinsic value NEGATED and INVERTED.
+  Q^{-1}(x): the PREREQUISITE. What must exist for x to be.
+
+  The four elements partition into two PAIRS:
+  {x, -1/x}: the INTRINSIC pair. Related by Q^2 (negation-inversion).
+  {Q(x), Q^{-1}(x)}: the SYMMETRIC pair. Related by Q^2.
+
+  The intrinsic pair: x and its shadow.
+  The symmetric pair: the production and its prerequisite.
+
+  For x = 1/3 (the octave velocity):
+  Intrinsic pair: {1/3, -3}. The velocity and its negative reciprocal.
+  Symmetric pair: {2, -1/2}. The Q-value and the inverse Cayley.
+
+  The INTRINSIC pair encodes the THING (1/3) and its COST (-3).
+  The SYMMETRIC pair encodes the OUTPUT (2) and the INPUT (-1/2).
+
+
+  IX. REDEI'S THEOREM: INTRINSIC FORCES PARITY
+  ----------------------------------------
+
+  H(T) is always odd. This is an INTRINSIC property of tournaments.
+  It doesn't depend on symmetry (automorphisms).
+  It doesn't depend on labeling (vertex names).
+  It depends ONLY on the directed graph structure.
+
+  In the formal group: [2](x) = 0 mod 2. Height infinity at p=2.
+  This is the formal group's way of saying:
+  'the intrinsic parity is FIXED. You cannot change it.'
+
+  The symmetric property (commutativity of F_h) means:
+  'the order of composition doesn't matter.'
+  The intrinsic property (height infinity at 2) means:
+  'parity is absolute. No amount of composition changes it.'
+
+  Redei = the intrinsic always wins over the symmetric at p=2.
+  Parity is more fundamental than symmetry.
+
+
+  X. THE COMPLETE PICTURE
+  ----------------------------------------
+
+  Everything decomposes into symmetric + intrinsic.
+
+  OBJECT           SYMMETRIC (Lucas)       INTRINSIC (Fibonacci)
+  -----------------------------------------------------------------
+  phi^n             L_n = trace             F_n*sqrt(5) = det-related
+  Matrix M^n        trace(M^n) = L_n        det(M^n) = (-1)^n
+  Tournament T      |Aut(T)| = symmetries   H(T) = paths = structure
+  Orbit {x...}      {Q(x), Q^{-1}(x)}      {x, -1/x}
+  Number n           ---                     prime factorization
+  Prime p            L_{alpha(p)} (chain)    F_{alpha(p)} (entry)
+  Forbidden 7        L_4 (symmetric source)  7 not Fibonacci
+  Forbidden 21       ---                     F_8 (intrinsic source)
+  Formal group       commutativity           height (parity)
+  The chain          Lucas primes            entry points (2^k)
+  Music              consonance (ratio)      frequency (Hz)
+  Perception         symmetry (pattern)      qualia (experience)
+
+  The SYMMETRIC sees the world as CLOSED: groups, cycles, periodicity.
+  The INTRINSIC sees the world as OPEN: flows, paths, irreversibility.
+
+  Neither is complete without the other.
+  L_n ALONE doesn't determine n (L_1 = L_2 = 1).
+  F_n ALONE doesn't determine n (F_1 = F_2 = 1).
+  TOGETHER they determine n uniquely (for n >= 0).
+
+  The full information = symmetric + intrinsic.
+  Like real + imaginary in complex numbers.
+  Like cosine + sine in Fourier.
+  Like trace + determinant in matrices.
+  Like group + action in algebra.
+
+  The Cayley transform Q converts between them.
+  Q is the ROTATION that takes symmetric into intrinsic
+  and back, with period 4.
+  Four quarter-turns. Four algebras. Four chain links.
+  The same 4, one last time.
