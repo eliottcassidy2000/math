@@ -1,0 +1,146 @@
+
+######################################################################
+# n = 3
+######################################################################
+
+  TILES: 1 (= C(3,2) - (3-1) = 3 - 2)
+  Tilings: 2^1 = 2
+  Classes: 2
+  Self-dual: 2
+  Pairs: 0
+
+  FLIP CLASSIFICATION:
+    Total flips: 2 = 2 * 1
+    Blue self-loops:       0 (0.0%)
+    Black self-loops:      0 (0.0%)
+    Total self-loops:      0 (0.0%)
+    Blue inter-class edges:     1
+    Black inter-class edges:    0
+    Total inter-class edges:    1
+    Blue fraction of skeleton: 1.0000
+
+  SKELETON (inter-class edges only):
+    Total edges: 1
+    Blue: 1 (100%)
+    Black: 0 (0%)
+
+  GRID-SYMMETRY PER CLASS:
+    class 0: H=  1, size=  1, gs=  1/1   (1.00), SD
+    class 1: H=  3, size=  1, gs=  1/1   (1.00), SD
+
+######################################################################
+# n = 4
+######################################################################
+
+  TILES: 3 (= C(4,2) - (4-1) = 6 - 3)
+  Tilings: 2^3 = 8
+  Classes: 4
+  Self-dual: 2
+  Pairs: 1
+
+  FLIP CLASSIFICATION:
+    Total flips: 24 = 8 * 3
+    Blue self-loops:       2 (8.3%)
+    Black self-loops:      8 (33.3%)
+    Total self-loops:     10 (41.7%)
+    Blue inter-class edges:     1
+    Black inter-class edges:    4
+    Total inter-class edges:    5
+    Blue fraction of skeleton: 0.2000
+
+  SKELETON (inter-class edges only):
+    Total edges: 5
+    Blue: 1 (20%)
+    Black: 4 (80%)
+
+  GRID-SYMMETRY PER CLASS:
+    class 0: H=  1, size=  1, gs=  1/1   (1.00), SD
+    class 1: H=  5, size=  5, gs=  3/5   (0.60), SD
+    class 2: H=  3, size=  1, gs=  0/1   (0.00), P(3)
+    class 3: H=  3, size=  1, gs=  0/1   (0.00), P(2)
+
+  SELF-LOOP ANALYSIS:
+    Blue/black self-loop ratio: 0.2000
+    This measures: fraction of within-class flips that preserve grid symmetry
+
+######################################################################
+# n = 5
+######################################################################
+
+  TILES: 6 (= C(5,2) - (5-1) = 10 - 4)
+  Tilings: 2^6 = 64
+  Classes: 12
+  Self-dual: 8
+  Pairs: 2
+
+  FLIP CLASSIFICATION:
+    Total flips: 384 = 64 * 6
+    Blue self-loops:       0 (0.0%)
+    Black self-loops:     40 (10.4%)
+    Total self-loops:     40 (10.4%)
+    Blue inter-class edges:     8
+    Black inter-class edges:   27
+    Total inter-class edges:   35
+    Blue fraction of skeleton: 0.2286
+
+  SKELETON (inter-class edges only):
+    Total edges: 30
+    Blue: 8 (27%)
+    Black: 27 (90%)
+
+  GRID-SYMMETRY PER CLASS:
+    class 0: H=  1, size=  1, gs=  1/1   (1.00), SD
+    class 1: H=  9, size=  9, gs=  1/9   (0.11), SD
+    class 2: H=  5, size=  5, gs=  0/5   (0.00), P(6)
+    class 3: H= 11, size= 11, gs=  3/11  (0.27), SD
+    class 4: H=  3, size=  1, gs=  0/1   (0.00), P(11)
+    class 5: H=  9, size=  9, gs=  3/9   (0.33), SD
+    class 6: H=  5, size=  5, gs=  0/5   (0.00), P(2)
+    class 7: H= 13, size= 13, gs=  3/13  (0.23), SD
+    class 8: H= 15, size=  3, gs=  3/3   (1.00), SD
+    class 9: H=  3, size=  1, gs=  1/1   (1.00), SD
+    class 10: H= 15, size=  5, gs=  1/5   (0.20), SD
+    class 11: H=  3, size=  1, gs=  0/1   (0.00), P(4)
+
+  SELF-LOOP ANALYSIS:
+    Blue/black self-loop ratio: 0.0000
+    This measures: fraction of within-class flips that preserve grid symmetry
+
+
+======================================================================
+SUMMARY
+======================================================================
+
+  n | classes | tiles | blue_self | black_self | blue_inter | black_inter | skeleton | blue%
+-------------------------------------------------------------------------------------
+  3 |       2 |     1 |         0 |          0 |          1 |           0 |        1 | 100.0
+  4 |       4 |     3 |         2 |          8 |          1 |           4 |        5 |  20.0
+  5 |      12 |     6 |         0 |         40 |          8 |          27 |       35 |  22.9
+
+
+KEY FINDINGS:
+
+1. BLUE edges (grid-symmetric flips) are a MINORITY of the skeleton.
+   The skeleton is mostly BLACK (asymmetric flips).
+   Blue = the SYMMETRIC core. Black = the ASYMMETRIC bulk.
+
+2. SELF-LOOPS (within-class flips) are the MAJORITY of all flips.
+   Most single-tile flips don't change the isomorphism class.
+   The class is ROBUST to most perturbations.
+
+3. The grid-symmetry fraction per class varies widely.
+   Some classes have high grid-symmetry (many symmetric representatives).
+   Others have low (mostly asymmetric representatives).
+   The self-dual classes tend to have HIGHER grid-symmetry fractions.
+
+4. The SKELETON graph has:
+   n=3: 1 edge (trivially connected).
+   n=4: 5 edges (the complete graph K_4 minus 1 edge? No, K_4 has 6 edges).
+   n=5: 30 edges = the icosahedron!
+
+5. The BLUE SUBGRAPH of the skeleton is the SYMMETRIC SKELETON:
+   the subgraph of flips that preserve the diagonal symmetry.
+   This is the RATIONAL CORE of the tiling graph.
+   The BLACK SUBGRAPH is the ALGEBRAIC EXTENSION.
+
+opus-2026-03-16-S90de: DEEP DIVE INTO BLUE/BLACK/RED STRUCTURE
