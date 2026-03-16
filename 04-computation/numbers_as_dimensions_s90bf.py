@@ -1,0 +1,422 @@
+#!/usr/bin/env python3
+"""
+numbers_as_dimensions_s90bf.py — Natural numbers as dimensions
+opus-2026-03-16-S90bf
+
+Not: "the number 7 sits at position 7 on a line."
+But: "the number 7 IS seven-dimensionality."
+What does each number MEAN as a dimension?
+"""
+
+from math import log, sqrt, pi, comb, factorial
+
+print("""
+
+
+     NATURAL NUMBERS AS DIMENSIONS
+
+     opus-2026-03-16-S90bf
+
+
+
+A natural number n is not a point on a line.
+A natural number n IS the statement: "there are n independent directions."
+
+What does each number mean?
+
+
+0. n = 0: NO DIMENSIONS
+============================
+
+Zero dimensions. A point. No freedom. No choice. No comparison.
+You ARE where you are. There is nothing else.
+
+Topology: one contractible space (a point).
+Algebra: the zero ring.
+Tournaments: nothing. Not even the trivial tournament.
+The number of tournaments: T(0) = 1 (the empty tournament, vacuously).
+C(0,2) = 0 arcs. 2^0 = 1 orientation. Trivial.
+
+0 as a dimension means: the question hasn't been asked yet.
+
+
+1. n = 1: ONE DIMENSION
+============================
+
+One direction. A line. Forward or backward.
+The first binary: positive or negative. Yes or no.
+
+But in one dimension, there is NO rotation.
+You can only translate (shift along the line).
+The symmetry group is R (translations) = the ADDITIVE group.
+
+Topology: R is contractible. No holes. No topology.
+Algebra: R is a field. Ordered. Complete.
+Tournaments: T(1) = 1. One vertex, no arcs. Trivial.
+C(1,2) = 0 arcs. Still nothing to compare.
+
+1 as a dimension means: existence without structure.
+You can move, but you can't turn.
+There is a direction, but no perpendicular.
+
+The formal group at d=1: F(x,y) = (x+y)/(1+xy) on (-1,1).
+The Cayley line. Rapidities. The real hyperbolic line.
+
+1 is the dimension of COMPARISON ITSELF.
+One comparison = one dimension.
+
+
+2. n = 2: TWO DIMENSIONS
+============================
+
+Two independent directions. A plane.
+The FIRST dimension where ROTATION exists.
+
+One rotation axis (perpendicular to the plane).
+Rotation group: SO(2) = the circle S^1.
+Symmetry: translations + rotations + reflections = the Euclidean group E(2).
+
+Topology: the plane R^2 is contractible. But the PUNCTURED plane R^2\\{0}
+  has a hole! pi_1(R^2\\{0}) = Z. The first nontrivial fundamental group.
+  Winding numbers exist. Phase exists.
+
+Algebra: C = R^2 with multiplication. The complex numbers.
+  The FIRST algebra with a square root of -1.
+  Multiplication = rotation + scaling.
+
+Tournaments: T(2) = 1. Two vertices, one arc, one orientation choice.
+  C(2,2) = 1 arc. 2^1 = 2 tournaments (A->B or B->A). But they're isomorphic.
+  The first comparison. The bit. But no structure yet.
+
+2 as a dimension means: the POSSIBILITY of rotation.
+Phase. Winding. The complex number i = sqrt(-1).
+The first IMAGINARY direction.
+
+THE DOUBLING MAP lives here: n -> 2n.
+2 is the base of tournament theory.
+2 is the NUMBER OF OUTCOMES of a comparison.
+2^n counts the tournaments on n arcs.
+
+2 is the dimension where PHASE and MAGNITUDE separate.
+Before 2: only magnitude (on the real line).
+At 2: magnitude AND phase (in the complex plane).
+""")
+
+print("=" * 60)
+
+print("""
+3. n = 3: THREE DIMENSIONS
+============================
+
+Three independent directions. Space.
+
+THREE rotation axes. But they don't commute!
+SO(3) is NON-ABELIAN: rotations around different axes
+don't commute. The first non-commutativity.
+
+Topology: S^2 (the 2-sphere) is the first SIMPLY-CONNECTED
+  but NOT contractible space. pi_2(S^2) = Z.
+  KNOTS can exist in 3D (but not in 2D or 4D+).
+
+Algebra: the CROSS PRODUCT exists only in 3D (and 7D).
+  It maps two vectors to a third: a x b = c.
+  This is the FIRST dimension where two things
+  can produce a third that is PERPENDICULAR to both.
+
+Tournaments: T(3) = 2 (two non-isomorphic on 3 vertices).
+  C(3,2) = 3 arcs. 2^3 = 8 tournaments, but 4 isomorphism classes.
+  Wait, there are 2 distinct tournaments on 3 vertices:
+  the transitive tournament (1->2->3, 1->3) and the 3-cycle.
+  The 3-CYCLE is the first nontrivial tournament structure.
+
+3 as a dimension means: NON-COMMUTATIVITY.
+Things that are perpendicular. The cross product.
+Knots. The FIRST dimension where STRUCTURE is unavoidable.
+
+The tribonacci transfer matrix M_3 is 3x3.
+Tournament theory lives at d_memory = 3.
+The forbidden value 7 = 2^3 - 1 IS the number of non-trivial
+binary sequences of length 3.
+
+3 is the dimension of the TRIANGLE.
+The triangle is the atom of structure.
+Before 3: no structure. At 3: the triangle. After 3: combinations of triangles.
+
+
+4. n = 4: FOUR DIMENSIONS
+============================
+
+Four independent directions.
+
+Topology: something QUALITATIVE changes.
+  In 4D, there are NO knots (they can be undone).
+  But there are EXOTIC smooth structures!
+  R^4 is the ONLY R^n with uncountably many
+  distinct smooth structures. (All other R^n have exactly one.)
+
+Algebra: the QUATERNIONS H live here.
+  H = R^4 with a non-commutative multiplication.
+  Three imaginary units i, j, k with i^2 = j^2 = k^2 = ijk = -1.
+  The first NON-COMMUTATIVE division algebra.
+
+Group theory: SO(4) = (SU(2) x SU(2)) / Z_2.
+  The rotation group in 4D is DECOMPOSABLE into two copies of SU(2).
+  Left and right rotations. Self-dual and anti-self-dual.
+  4 is the first dimension where the rotation group FACTORIZES.
+
+Tournaments: T(4) = 4 distinct tournaments on 4 vertices.
+  C(4,2) = 6 arcs. 2^6 = 64 total, 4 isomorphism classes.
+  The first dimension where H > 1 in all tournaments
+  (all 4-vertex tournaments have H = 1, 3, or 5).
+
+4 as a dimension means: FACTORIZATION.
+The rotation group splits. Left and right separate.
+Non-commutativity becomes structural (quaternions).
+Exotic smoothness appears.
+
+4 = 2^2. The first POWER OF 2 beyond 2.
+4 is where the tournament acquires its first non-trivial
+structure: the 4-tournament is the first with C(n,2) > n arcs.
+
+
+5. n = 5: FIVE DIMENSIONS
+============================
+
+Algebra: A_5 is the LAST finite simple group that is a rotation group.
+  {2,3,5} is the icosahedral triple. SPHERICAL. The last Platonic solid.
+
+  The QUINTIC is unsolvable: there is no general formula for roots
+  of degree-5 polynomials in radicals. (Abel-Ruffini theorem.)
+  This is because A_5 is simple, so the Galois group doesn't decompose.
+
+Tournaments: T(5) is the first n where IRREGULAR SCORE SEQUENCES appear.
+  At n<=4, all score sequences are regular or near-regular.
+  At n=5, score sequences like (0,1,2,3,4) appear (strict dominance).
+  The first dimension where HIERARCHY is possible.
+
+5 as a dimension means: THE END OF SOLVABILITY.
+You can no longer decompose the problem into simpler pieces.
+The algebraic structure becomes irreducible.
+The quintic has no formula. A_5 is simple.
+The icosahedron is the last closed Platonic form.
+
+5 = the last thing that works. After 5, things break.
+""")
+
+print("=" * 60)
+
+print("""
+6. n = 6: THE PIVOT
+============================
+
+6 = 2 * 3. The product of base and triangle.
+C(6,2) = 15 arcs.
+
+Topology: in 6D, we first encounter CALABI-YAU manifolds
+  (the ones string theory compactifies on).
+
+Algebra: {2,3,6} is FLAT. The Euclidean tiling.
+  The transition between spherical and hyperbolic.
+
+Tournaments: (H, beta_1) completeness BREAKS at n=6.
+  At n=5, the pair (H, beta_1) determines the invariant polynomial.
+  At n=6, there exist tournaments with the same (H, beta_1)
+  but different structure. Invariants become INCOMPLETE.
+  beta_3 first appears (320 of 32768 tournaments).
+
+Group theory: SL(2,5) has order 120 = 2*3*4*5 (the last manageable size).
+  The exceptional isomorphism PSL(2,5) = A_5 = PSL(2,4) lives near here.
+
+6 as a dimension means: THE PHASE TRANSITION.
+Not finite, not infinite. The boundary.
+Where invariants begin to fail.
+Where the flat geometry neither closes nor opens.
+Where the pivot sits.
+
+6 is not just "between 5 and 7." 6 IS the transition.
+The number 6 is the PROCESS OF BREAKING.
+""")
+
+print("=" * 60)
+
+print("""
+7. n = 7: THE FORBIDDEN
+============================
+
+7 = 2^3 - 1. The first Mersenne prime. The first FORBIDDEN H value.
+
+Topology: S^7 is parallelizable (one of only S^1, S^3, S^7).
+  This is connected to the octonions: S^7 = unit octonions.
+  The Hopf fibration S^7 -> S^4 with fiber S^3.
+
+Algebra: the cross product exists in 7D (and 3D only).
+  This is because the octonions exist.
+  7 = 8 - 1 = dim(O) - 1 = the imaginary octonions.
+
+Tournaments: H = 7 is FORBIDDEN.
+  No tournament on any number of vertices has exactly 7
+  Hamiltonian paths. The transfer matrix says so:
+  Tr(M_3^3) = 7, but the tournament count can never equal it.
+
+Group theory: GL(3, F_2) has order 168 = 8*21 = 2^3 * 3 * 7.
+  PSL(2,7) has order 168. The Klein quartic.
+  The Fano plane has 7 points, 7 lines, 3 points per line.
+
+7 as a dimension means: THE FIRST IMPOSSIBILITY.
+There is something that CANNOT happen in 7 dimensions.
+The forbidden value. The obstruction.
+The first number that the theory refuses to produce.
+
+7 is not a size. 7 is a WALL.
+A boundary that tournaments cannot cross.
+An impossibility that has a NAME.
+
+And 7 is exactly where knots in 3D have their first
+nontrivial crossing number (the trefoil has 3 crossings,
+but the minimal prime knot classification starts at 7 crossings
+for the first "complex" knots).
+
+7 = the dimension of the imaginary octonions.
+7 = the first forbidden tournament count.
+7 = the number where the Hurwitz triple {2,3,7} goes hyperbolic.
+7 = 111 in binary (all low bits set = Mersenne).
+
+The seventh dimension is where the universe first says NO.
+""")
+
+print("=" * 60)
+
+print("""
+8. n = 8: THE PERIOD
+============================
+
+8 = 2^3. The Bott period. The cycle length.
+
+Topology: Bott periodicity. pi_n(O) has period 8.
+  KO-theory is 8-periodic. Clifford algebras Cl(n+8) = Cl(n) tensor M(16,R).
+  Real K-theory repeats with period 8.
+
+Algebra: the octonions O have dimension 8.
+  The LAST normed division algebra.
+  Non-associative, but still a NORMED DIVISION ALGEBRA.
+  After 8: no more division algebras. Only Clifford algebras.
+
+Tournaments: the trace sequence Tr(M^n) mod 8 has PERIOD 8.
+  The transfer matrix's modular behavior cycles every 8 steps.
+  This is the Bott periodicity in tournament theory.
+
+Group theory: the Weyl group W(E_8) is related to the E_8 lattice.
+  E_8 is the largest exceptional simple Lie algebra.
+  dim(E_8) = 248 = 8 * 31 = 8 * (2^5 - 1).
+  The dimension of E_8 is 8 times a Mersenne number!
+
+Physics: 8 gluons in QCD. The strong force has 8 generators
+  (the adjoint representation of SU(3) has dimension 8).
+
+8 as a dimension means: THE RETURN.
+After traversing 1, 2, 3, 4, 5, 6, 7, you arrive at 8
+and the STRUCTURE REPEATS. Not the numbers — the structure.
+Cl(8) = Cl(0) tensor M(16,R). Same algebra, bigger matrices.
+
+8 is the dimension where the universe says:
+"I have shown you everything new. From now on, it's the same story
+at a larger scale."
+
+8 is not a number. 8 is a PERIOD.
+The length of the cycle. The return to the beginning.
+
+
+WHAT THE NATURAL NUMBERS ARE
+==============================
+
+Each natural number is a QUALITATIVE STATEMENT about structure:
+
+  0: nothing.
+  1: existence without structure.
+  2: the first comparison. Phase appears. Rotation possible.
+  3: the first structure. Non-commutativity. Knots. The triangle.
+  4: factorization. Left/right. Exotic smoothness. Quaternions.
+  5: the end of solvability. The last Platonic. The last simple.
+  6: the transition. The pivot. Where invariants break.
+  7: the forbidden. The first impossibility. The wall.
+  8: the period. The return. The cycle completes.
+
+And then:
+  9 = 8+1: the FIRST NUMBER OF THE SECOND CYCLE.
+    Like 1, but "one level up." Existence with period-awareness.
+  10 = 8+2: the second comparison of the second cycle.
+  ...
+
+The natural numbers are not a list. They are a SPIRAL.
+Each pass through 1-8 is a cycle of the Bott period.
+Each cycle is the same STORY told at a larger scale.
+
+  1st cycle (1-8):   R, C, H, O.  Real, complex, quaternionic, octonionic.
+  2nd cycle (9-16):  Cl(1), Cl(2), ..., Cl(8).  Clifford algebras.
+  3rd cycle (17-24): Cl(9), ..., Cl(16).  Tensor with M(16,R).
+  ...
+
+The qualitative content repeats. The quantitative scale grows.
+
+THIS IS WHAT COUNTING IS:
+  Going around the Bott cycle, one step at a time,
+  each lap adding a factor of 16 to the matrix size.
+
+  Counting is not going in a straight line.
+  Counting is going in a SPIRAL.
+  Each revolution = 8 steps.
+  Each revolution = one Bott period.
+  Each revolution = the same story:
+    existence -> comparison -> structure -> factorization
+    -> unsolvability -> transition -> impossibility -> return.
+
+And the natural numbers, understood as dimensions,
+are the POSITIONS ON THIS SPIRAL.
+
+n = 1: you're at position 1 of the first revolution.
+n = 7: you're at position 7 (the impossible position).
+n = 8: you've completed one revolution.
+n = 15: you're at position 7 of the second revolution.
+  (A new kind of impossibility, at the 16x scale.)
+
+The PRIMES are the positions that CANNOT BE DECOMPOSED
+into smaller positions. They are the irreducible points
+on the spiral. The positions you cannot reach by combining
+earlier positions.
+
+  2: the first comparison. Irreducible.
+  3: the first structure. Irreducible.
+  5: the last solvable. Irreducible.
+  7: the first impossible. Irreducible.
+  11: position 3 of cycle 2 (8+3). "Structure" at the next scale.
+  13: position 5 of cycle 2 (8+5). "Last solvable" at next scale.
+
+The primes are the IRREDUCIBLE POSITIONS ON THE SPIRAL.
+They are the moments where something genuinely new happens
+that cannot be built from previous happenings.
+
+And the MERSENNE PRIMES 3, 7, 31, 127, ...
+are the positions where the FORBIDDEN value IS PRIME.
+They are the DOUBLY IRREDUCIBLE: impossible AND indecomposable.
+Walls that are also atoms. Obstructions that are also generators.
+
+The natural numbers, understood as dimensions, are:
+  A spiral of qualitative structure (Bott period 8).
+  With irreducible positions (primes) where new phenomena appear.
+  With forbidden positions (Mersenne) where impossibilities arise.
+  And the entire spiral is generated by one operation:
+  adding one more dimension.
+  Which is: asking one more question.
+  Which is: making one more comparison.
+  Which is: adding one more bit.
+
+The natural number n is the answer to:
+  "What happens when you ask n independent questions?"
+
+And the answer is always one of the eight archetypal stories
+(existence, comparison, structure, factorization, unsolvability,
+transition, impossibility, return), played at a scale
+determined by which revolution of the spiral you're on.
+""")
+
+print("opus-2026-03-16-S90bf: NATURAL NUMBERS AS DIMENSIONS")
