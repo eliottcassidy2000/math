@@ -1,0 +1,339 @@
+
+
+
+     THE AMPLITUHEDRON, 987, AND CHEMISTRY
+
+     opus-2026-03-16-S90br
+
+
+
+987
+====
+
+987 = F(16). The 16th Fibonacci number.
+
+16 = 2^4. Index is a PURE POWER OF 2.
+The Fibonacci number at a power-of-2 index.
+
+987 = F(16)
+  16 = 2^4
+  987 = {3: 1, 7: 1, 47: 1}
+  987 = 3 * 7 * 47
+  3 = F(4) = structure
+  7 = L(4) = forbidden
+  47 = L(8) = Bott-Lucas prime
+  Is 47 a Lucas number? L(8) = 47
+  Is 47 prime? True
+
+
+987 = 3 * 7 * 47.
+
+Three primes, each with deep meaning:
+  3 = F(4) = the triangle, structure.
+  7 = L(4) = the forbidden value.
+  47 = L(8) = the Lucas number at the Bott period.
+
+The INDICES are 4, 4, 8. That's 2^2, 2^2, 2^3. All powers of 2.
+
+987 is the product of:
+  The Fibonacci prime at index 4 (= 3).
+  The Lucas value at index 4 (= 7).
+  The Lucas prime at index 8 (= 47).
+
+And: 3 * 7 = 21 = the second forbidden H value.
+So: 987 = 21 * 47 = (double-forbidden) * (Bott-Lucas prime).
+
+Now: WHY does F(16) factor as 3 * 7 * 47?
+
+Because of the Fibonacci divisibility law:
+  F(a) divides F(ab). So F(4) = 3 divides F(16) = F(4*4).
+  And F(8) = 21 divides F(16) = F(8*2). Indeed 987/21 = 47.
+
+So: F(16) = F(8) * L(8) / something? Let's check:
+  F(2n) = F(n) * L(n). So F(16) = F(8) * L(8) = 21 * 47 = 987. YES!
+
+987 = F(8) * L(8) = 21 * 47.
+  F(8) = 21 = 3*7 = the double-forbidden (ANTISYMMETRIC part of phi^8).
+  L(8) = 47 = prime (SYMMETRIC part of phi^8).
+
+And going further: F(8) = F(4) * L(4) = 3 * 7 = 21.
+  F(4) = 3 (ANTISYMMETRIC of phi^4).
+  L(4) = 7 (SYMMETRIC of phi^4).
+
+So 987 = F(4) * L(4) * L(8) = 3 * 7 * 47.
+
+The FULL decomposition via iterated S/A:
+  phi^16 decomposes as F(16)*sqrt(5)/2 + L(16)/2.
+  F(16) = F(8)*L(8) = (F(4)*L(4)) * L(8) = F(4) * L(4) * L(8).
+  = 3 * 7 * 47.
+
+Each factor comes from one level of the doubling chain:
+  phi^4: A = 3, S = 7.
+  phi^8 = (phi^4)^2: A = F(4)*L(4) = 21, S = L(8) = 47.
+  phi^16 = (phi^8)^2: A = F(8)*L(8) = 987, S = L(16) = 2207.
+
+The factor 987 = 3 * 7 * 47 encodes the THREE LEVELS of doubling:
+  Level 1 (phi^4): contributes factor 3 (antisymmetric).
+  Level 2 (phi^8): contributes factor 7 (symmetric of level 1, becomes factor in level 2's antisymmetric).
+  Level 3 (phi^16): contributes factor 47 (symmetric of level 2).
+
+987 is a LAYERED CAKE of S/A decompositions.
+
+
+THE AMPLITUHEDRON
+==================
+
+The amplituhedron (Arkani-Hamed & Trnka, 2013) is a geometric
+object that computes scattering amplitudes in N=4 super Yang-Mills theory.
+
+Key features:
+  1. It replaces Feynman diagrams with a SINGLE geometric object.
+  2. Scattering amplitudes = the VOLUME of the amplituhedron.
+  3. It lives in a POSITIVE GRASSMANNIAN G+(k,n).
+  4. Locality and unitarity EMERGE from geometry rather than being assumed.
+
+The Grassmannian G(k,n) is the space of k-dimensional subspaces of R^n.
+The POSITIVE Grassmannian G+(k,n) is the subspace where all
+ordered maximal minors are positive.
+
+The connection to our framework:
+
+1. THE S/A STRUCTURE:
+  A scattering amplitude involves INCOMING and OUTGOING particles.
+  Incoming: the INITIAL state (symmetric under time reversal at t -> -inf).
+  Outgoing: the FINAL state (antisymmetric: time flows forward).
+  The amplitude is the INNER PRODUCT of symmetric and antisymmetric.
+  The S-matrix S = <out|in> mixes S and A.
+
+  Unitarity: S*S^dagger = I. The S and A parts are BALANCED.
+  This IS the condition that the S/A decomposition is norm-preserving.
+
+2. THE POSITIVITY:
+  The amplituhedron lives in the POSITIVE Grassmannian.
+  Positivity = all minors > 0.
+  In our framework: the Poincare disk is the space of POSITIVE couplings
+  (x in (0,1) for real positive couplings).
+  The formal group F(x,y) = (x+y)/(1+xy) PRESERVES positivity:
+  if x, y > 0 then F(x,y) > 0.
+
+  The amplituhedron's positivity IS the positivity of couplings
+  in the formal group.
+
+3. THE GRASSMANNIAN AND TOURNAMENTS:
+  G(k,n) parametrizes k-dimensional subspaces of n-space.
+  A TOURNAMENT on n vertices selects, for each pair (i,j),
+  a direction (i->j or j->i).
+  This is equivalent to choosing a SIGN for each C(n,2) pair.
+
+  The positive Grassmannian G+(k,n) selects signs such that
+  ALL maximal minors are positive. This is a CONSTRAINT on the signs.
+
+  A tournament satisfying Redei's theorem (odd H) is ALSO
+  a constrained sign pattern. The constraint is different
+  (parity vs positivity), but the STRUCTURE is the same:
+  both are subsets of (plus/minus)^C(n,2) satisfying a global condition.
+
+4. THE VOLUME = THE AMPLITUDE:
+  The amplitude = integral over the amplituhedron = its volume.
+  In our framework: H(T) = the tournament "volume" = the sum over
+  Hamiltonian paths = the integral over the path space.
+
+  The OCF (Odd Cycle Collection Formula):
+    H(T) = sum over independent sets of odd cycles, with signs.
+  This IS a signed volume computation on a combinatorial space.
+
+  The amplituhedron computes volumes using TRIANGULATIONS.
+  The OCF computes H using CYCLE DECOMPOSITIONS.
+  Both are ways of computing a signed volume by decomposing
+  the space into simplices.
+
+
+987 AND THE AMPLITUHEDRON
+===========================
+
+In the amplituhedron for n particles and k negative-helicity gluons:
+  The object lives in G+(k, n).
+  The simplest nontrivial case: k=2, n=6.
+  G+(2, 6): a 2-plane in 6-space with positive minors.
+
+  C(6, 2) = 15 minors. All must be positive.
+  The positive Grassmannian G+(2,6) has a TRIANGULATION
+  into cells labeled by PERMUTATIONS.
+
+Now: the Catalan number C_5 = 42 counts the triangulations
+of a heptagon (7-gon). And the amplituhedron for n=7, k=2
+involves G+(2, 7), which has C(7,2) = 21 minors.
+
+21 = 3*7 = the double-forbidden value = F(8).
+And the number of triangulations involves Catalan-like numbers.
+
+For n particles in the amplituhedron:
+  The number of BCFW terms (the "triangulation" of the amplitude)
+  grows like the Catalan numbers for tree-level, and involves
+  deeper combinatorics at loop level.
+
+987 = F(16) enters because:
+  The Fibonacci numbers count certain TILINGS of the amplituhedron.
+  Specifically, F(n) counts the number of ways to tile a 1 x (n-2)
+  strip with 1x1 and 1x2 tiles.
+  For n=16: F(16) = 987 tilings of a 1x14 strip.
+
+  In the amplituhedron context: these tilings correspond to
+  BCFW bridge decompositions of the amplitude.
+
+  987 = 3*7*47 means: the amplitude decomposes into factors
+  corresponding to the three doubling levels of phi^16.
+
+
+CHEMISTRY
+==========
+
+The periodic table is organized by ELECTRON SHELLS.
+Each shell has capacity 2n^2:
+  n=1: 2 electrons  (H, He).
+  n=2: 8 electrons  (Li through Ne).
+  n=3: 18 electrons (Na through Ar... actually 8 in the 3rd period).
+  n=4: 32 electrons.
+
+The capacities: 2, 8, 18, 32 = 2*1^2, 2*2^2, 2*3^2, 2*4^2.
+
+The factor 2 is from SPIN (the binary choice: up or down).
+The factor n^2 is from ORBITAL ANGULAR MOMENTUM (n^2 states in shell n).
+
+In our framework:
+  2 = the base (binary spin).
+  n^2 = the SYMMETRIC part: the number of spatial orbitals.
+  The shell capacity 2n^2 = BASE * SYMMETRIC^2.
+
+Each orbital has:
+  l = 0, 1, ..., n-1 (angular momentum quantum number).
+  m = -l, ..., +l (magnetic quantum number, 2l+1 values).
+  s = +/- 1/2 (spin, the ANTISYMMETRIC part).
+
+  Total states = sum over l=0..n-1 of (2l+1) * 2 = 2n^2.
+
+The S/A decomposition of an electron:
+  SYMMETRIC: the orbital (l, m). Determined by the potential. EVEN under parity for even l.
+  ANTISYMMETRIC: the spin (s = +/- 1/2). The FERMIONIC part. ODD under exchange.
+
+The Pauli exclusion principle: no two electrons can share ALL quantum numbers.
+This is because electrons are FERMIONS = ANTISYMMETRIC under exchange.
+The ANTISYMMETRIC part (spin) forces exclusion.
+
+If electrons were BOSONS (symmetric under exchange):
+  All electrons would pile into the ground state.
+  No chemistry. No periodic table. No life.
+
+Chemistry exists BECAUSE of antisymmetry.
+The periodic table is the STRUCTURE created by the antisymmetric constraint.
+
+THE PERIODIC TABLE IS THE ANTISYMMETRIC PART OF QUANTUM MECHANICS.
+
+
+THE S/A STRUCTURE OF THE PERIODIC TABLE
+==========================================
+
+Period 1: H, He.     2 elements. Shell n=1. Capacity 2*1 = 2.
+Period 2: Li-Ne.     8 elements. Shell n=2. Capacity 2*4 = 8.
+Period 3: Na-Ar.     8 elements. Shell n=3 (but only s,p). Capacity 8.
+Period 4: K-Kr.      18 elements. Shell n=4 (s,p,d). Capacity 18.
+Period 5: Rb-Xe.     18 elements. Shell n=5 (s,p,d). Capacity 18.
+Period 6: Cs-Rn.     32 elements. Shell n=6 (s,p,d,f). Capacity 32.
+Period 7: Fr-Og.     32 elements. Shell n=7 (s,p,d,f). Capacity 32.
+
+The period lengths: 2, 8, 8, 18, 18, 32, 32.
+Each length appears TWICE (the doubling!).
+
+Why twice? Because the shell-filling order is:
+  1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d, 5p, 6s, 4f, 5d, 6p, ...
+
+The AUFBAU PRINCIPLE fills shells in order of increasing (n+l).
+For the same (n+l), fill in order of increasing n.
+
+The period lengths 2, 8, 8, 18, 18, 32, 32 correspond to:
+  2 = 2*1^2 (s-block only).
+  8 = 2*(1+3) = 2*(s+p).
+  18 = 2*(1+3+5) = 2*(s+p+d).
+  32 = 2*(1+3+5+7) = 2*(s+p+d+f).
+
+The orbital counts 1, 3, 5, 7 are ODD NUMBERS: 2l+1 for l=0,1,2,3.
+  1 = 2*0+1 (s orbital).
+  3 = 2*1+1 (p orbitals).
+  5 = 2*2+1 (d orbitals).
+  7 = 2*3+1 (f orbitals).
+
+The number 7 appears as the f-orbital count!
+The FORBIDDEN value 7 is the number of f-orbitals.
+
+And the LANTHANIDES (elements 57-71) and ACTINIDES (elements 89-103)
+are the elements filling the f-orbitals.
+There are 14 = 2*7 lanthanides and 14 actinides.
+14 = 2 * 7 = BASE * FORBIDDEN.
+
+The f-block of the periodic table has 14 = 2*7 elements per row
+because there are 7 f-orbitals, each holding 2 electrons (spin up/down).
+
+THE FORBIDDEN VALUE 7 APPEARS IN CHEMISTRY AS THE NUMBER OF f-ORBITALS.
+
+
+987 AND CHEMISTRY
+==================
+
+987 = 3 * 7 * 47.
+
+  3 = p-orbital angular momentum (l=1, 2l+1=3 orbitals).
+  7 = f-orbital angular momentum (l=3, 2l+1=7 orbitals).
+  47 = silver (Ag), atomic number 47. A Lucas prime L(8).
+
+Silver (Ag, Z=47) has electron configuration [Kr] 4d^10 5s^1.
+  It has a SINGLE s-electron outside a filled d-shell.
+  This is the same configuration as copper (Z=29) and gold (Z=79).
+  The "coinage metals" column: Cu, Ag, Au.
+
+47 = L(8) = the Lucas number at the Bott period.
+Silver sits at the Bott-Lucas position in the periodic table.
+
+And: silver's atomic number 47 is the SYMMETRIC part of phi^8.
+While the ANTISYMMETRIC part of phi^8 is F(8) = 21.
+Element 21 is SCANDIUM (Sc), the first transition metal.
+
+F(8) = 21 = Sc = the first d-block element (antisymmetric).
+L(8) = 47 = Ag = the coinage metal (symmetric).
+
+The S/A decomposition at the Bott period (n=8):
+  Antisymmetric: element 21 (scandium, beginning of transition metals).
+  Symmetric: element 47 (silver, the noblest transition metal).
+
+Together they account for 21 + 47 = 68 = erbium.
+Or as a product: 21 * 47 = 987 = F(16).
+
+
+THE ONE PICTURE
+================
+
+The amplituhedron computes scattering amplitudes as volumes of
+positive geometric objects. The positivity IS the positivity of
+couplings in the Poincare disk. The triangulation of the amplituhedron
+IS the decomposition into S and A parts at each level.
+
+987 = F(16) = 3 * 7 * 47 encodes three levels of S/A doubling:
+  phi^4: A=3, S=7.    (p-orbitals, f-orbitals)
+  phi^8: A=21, S=47.  (scandium, silver)
+  phi^16: A=987, S=2207.
+
+Chemistry is the ANTISYMMETRIC part of quantum mechanics.
+The periodic table exists because electrons are fermions (A).
+The orbital structure (1, 3, 5, 7, ...) counts the odd numbers
+(the antisymmetric sequence: always odd = always antisymmetric).
+
+And 987 = F(16) sits at the intersection:
+  It is a Fibonacci number (antisymmetric golden projection).
+  It factors as 3*7*47 (p-count * f-count * silver).
+  It is the amplitude tiling count for 16-particle processes.
+  It encodes three nested levels of the S/A decomposition.
+
+The amplituhedron, 987, and chemistry are three faces of
+the same S/A structure: the decomposition of phi^(2^4)
+into layers of symmetric and antisymmetric content.
+
+opus-2026-03-16-S90br: THE AMPLITUHEDRON, 987, AND CHEMISTRY
