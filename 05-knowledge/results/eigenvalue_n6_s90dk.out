@@ -1,0 +1,267 @@
+TOURNAMENT FLIP CHAIN — TRANSITION MATRIX EIGENVALUES AT n=6
+======================================================================
+n = 6, arcs = 15, tournaments = 32768
+
+Step 1: Precomputing S_6 permutation actions on arc indices...
+  720 permutations, 15 arcs each
+  Time: 0.00s
+
+Step 2: Classifying 32768 tournaments into iso classes...
+  Found 56 isomorphism classes
+  Class sizes: min=80, max=720, sum=32768
+  Time: 40.35s
+
+Step 3: Building 56x56 flip count matrix F...
+  F matrix built and verified.
+  Row sums = sizes[ci] * 15 (verified for all 56 classes)
+  F diagonal (self-flips): [np.int64(3600), np.int64(480), np.int64(2880), np.int64(240), np.int64(1440), np.int64(2160), np.int64(0), np.int64(240), np.int64(1440), np.int64(2160)]
+  Time: 0.16s
+
+Step 4: Building transition matrix T = D^{-1} F...
+  T is stochastic (all row sums = 1, verified)
+  Time: 0.00s
+
+Step 5: Computing eigenvalues of T...
+  Max imaginary part: 2.80e-17
+  Eigenvalues (real parts, descending):
+    λ_ 0 = +1.000000000000
+    λ_ 1 = +0.733333333333
+    λ_ 2 = +0.600000000000
+    λ_ 3 = +0.466666666667
+    λ_ 4 = +0.466666666667
+    λ_ 5 = +0.466666666667
+    λ_ 6 = +0.466666666667
+    λ_ 7 = +0.466666666667
+    λ_ 8 = +0.333333333333
+    λ_ 9 = +0.333333333333
+    λ_10 = +0.333333333333
+    λ_11 = +0.333333333333
+    λ_12 = +0.333333333333
+    λ_13 = +0.200000000000
+    λ_14 = +0.200000000000
+    λ_15 = +0.200000000000
+    λ_16 = +0.200000000000
+    λ_17 = +0.200000000000
+    λ_18 = +0.200000000000
+    λ_19 = +0.200000000000
+    λ_20 = +0.200000000000
+    λ_21 = +0.200000000000
+    λ_22 = +0.200000000000
+    λ_23 = +0.066666666667
+    λ_24 = +0.066666666667
+    λ_25 = +0.066666666667
+    λ_26 = +0.066666666667
+    λ_27 = +0.066666666667
+    λ_28 = +0.066666666667
+    λ_29 = +0.066666666667
+    λ_30 = +0.066666666667
+    λ_31 = -0.066666666667
+    λ_32 = -0.066666666667
+    λ_33 = -0.066666666667
+    λ_34 = -0.066666666667
+    λ_35 = -0.066666666667
+    λ_36 = -0.066666666667
+    λ_37 = -0.066666666667
+    λ_38 = -0.066666666667
+    λ_39 = -0.066666666667
+    λ_40 = -0.066666666667
+    λ_41 = -0.066666666667
+    λ_42 = -0.066666666667
+    λ_43 = -0.200000000000
+    λ_44 = -0.200000000000
+    λ_45 = -0.200000000000
+    λ_46 = -0.200000000000
+    λ_47 = -0.200000000000
+    λ_48 = -0.200000000000
+    λ_49 = -0.333333333333
+    λ_50 = -0.333333333333
+    λ_51 = -0.333333333333
+    λ_52 = -0.333333333333
+    λ_53 = -0.466666666667
+    λ_54 = -0.466666666667
+    λ_55 = -0.600000000000
+  Time: 0.00s
+
+Step 6: Rounding to exact fractions...
+  Testing denominators up to 1000...
+
+  Exact eigenvalues as fractions:
+    λ_ 0 =        1  (+1.000000000000)
+    λ_ 1 =    11/15  (+0.733333333333)
+    λ_ 2 =      3/5  (+0.600000000000)
+    λ_ 3 =     7/15  (+0.466666666667)
+    λ_ 4 =     7/15  (+0.466666666667)
+    λ_ 5 =     7/15  (+0.466666666667)
+    λ_ 6 =     7/15  (+0.466666666667)
+    λ_ 7 =     7/15  (+0.466666666667)
+    λ_ 8 =      1/3  (+0.333333333333)
+    λ_ 9 =      1/3  (+0.333333333333)
+    λ_10 =      1/3  (+0.333333333333)
+    λ_11 =      1/3  (+0.333333333333)
+    λ_12 =      1/3  (+0.333333333333)
+    λ_13 =      1/5  (+0.200000000000)
+    λ_14 =      1/5  (+0.200000000000)
+    λ_15 =      1/5  (+0.200000000000)
+    λ_16 =      1/5  (+0.200000000000)
+    λ_17 =      1/5  (+0.200000000000)
+    λ_18 =      1/5  (+0.200000000000)
+    λ_19 =      1/5  (+0.200000000000)
+    λ_20 =      1/5  (+0.200000000000)
+    λ_21 =      1/5  (+0.200000000000)
+    λ_22 =      1/5  (+0.200000000000)
+    λ_23 =     1/15  (+0.066666666667)
+    λ_24 =     1/15  (+0.066666666667)
+    λ_25 =     1/15  (+0.066666666667)
+    λ_26 =     1/15  (+0.066666666667)
+    λ_27 =     1/15  (+0.066666666667)
+    λ_28 =     1/15  (+0.066666666667)
+    λ_29 =     1/15  (+0.066666666667)
+    λ_30 =     1/15  (+0.066666666667)
+    λ_31 =    -1/15  (-0.066666666667)
+    λ_32 =    -1/15  (-0.066666666667)
+    λ_33 =    -1/15  (-0.066666666667)
+    λ_34 =    -1/15  (-0.066666666667)
+    λ_35 =    -1/15  (-0.066666666667)
+    λ_36 =    -1/15  (-0.066666666667)
+    λ_37 =    -1/15  (-0.066666666667)
+    λ_38 =    -1/15  (-0.066666666667)
+    λ_39 =    -1/15  (-0.066666666667)
+    λ_40 =    -1/15  (-0.066666666667)
+    λ_41 =    -1/15  (-0.066666666667)
+    λ_42 =    -1/15  (-0.066666666667)
+    λ_43 =     -1/5  (-0.200000000000)
+    λ_44 =     -1/5  (-0.200000000000)
+    λ_45 =     -1/5  (-0.200000000000)
+    λ_46 =     -1/5  (-0.200000000000)
+    λ_47 =     -1/5  (-0.200000000000)
+    λ_48 =     -1/5  (-0.200000000000)
+    λ_49 =     -1/3  (-0.333333333333)
+    λ_50 =     -1/3  (-0.333333333333)
+    λ_51 =     -1/3  (-0.333333333333)
+    λ_52 =     -1/3  (-0.333333333333)
+    λ_53 =    -7/15  (-0.466666666667)
+    λ_54 =    -7/15  (-0.466666666667)
+    λ_55 =     -3/5  (-0.600000000000)
+
+  Distinct eigenvalues with multiplicities:
+           1: multiplicity 1
+       11/15: multiplicity 1
+         3/5: multiplicity 1
+        7/15: multiplicity 5
+         1/3: multiplicity 5
+         1/5: multiplicity 10
+        1/15: multiplicity 8
+       -1/15: multiplicity 12
+        -1/5: multiplicity 6
+        -1/3: multiplicity 4
+       -7/15: multiplicity 2
+        -3/5: multiplicity 1
+  Total: 56 eigenvalues, 12 distinct
+
+======================================================================
+Step 7: TESTING CONJECTURE — All eigenvalues multiples of 1/5?
+======================================================================
+  Largest prime <= 6 is 5.
+  Conjecture: every eigenvalue = k/5 for some integer k.
+
+  FAILS: 11/15 has denominator 15
+  FAILS: 7/15 has denominator 15
+  FAILS: 7/15 has denominator 15
+  FAILS: 7/15 has denominator 15
+  FAILS: 7/15 has denominator 15
+  FAILS: 7/15 has denominator 15
+  FAILS: 1/3 has denominator 3
+  FAILS: 1/3 has denominator 3
+  FAILS: 1/3 has denominator 3
+  FAILS: 1/3 has denominator 3
+  FAILS: 1/3 has denominator 3
+  FAILS: 1/15 has denominator 15
+  FAILS: 1/15 has denominator 15
+  FAILS: 1/15 has denominator 15
+  FAILS: 1/15 has denominator 15
+  FAILS: 1/15 has denominator 15
+  FAILS: 1/15 has denominator 15
+  FAILS: 1/15 has denominator 15
+  FAILS: 1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/15 has denominator 15
+  FAILS: -1/3 has denominator 3
+  FAILS: -1/3 has denominator 3
+  FAILS: -1/3 has denominator 3
+  FAILS: -1/3 has denominator 3
+  FAILS: -7/15 has denominator 15
+  FAILS: -7/15 has denominator 15
+  *** CONJECTURE FAILS ***
+  Denominators found: [1, 3, 5, 15]
+  All denominators (in lowest terms): [1, 3, 5, 15]
+
+======================================================================
+Step 8: SPECTRAL GAP ANALYSIS
+======================================================================
+  λ_1 (largest)       = 1
+  λ_2 (second largest)= 11/15
+  λ_min (most neg.)   = -3/5
+  Spectral gap (1 - λ_2)        = 4/15
+  Absolute spectral gap          = 4/15
+  (uses 1 - max(|λ_2|, |λ_min|))
+
+  Conjectured spectral gap: 2/5 = 2/5
+  Actual spectral gap:      4/15
+  Match (1 - λ_2 = 2/5)?   NO
+
+======================================================================
+ADDITIONAL ANALYSIS
+======================================================================
+
+  Positive-negative pairing of eigenvalues:
+  Positive eigenvalues: ['1', '11/15', '3/5', '7/15', '1/3', '1/5', '1/15']
+  Negative eigenvalues: ['-3/5', '-7/15', '-1/3', '-1/5', '-1/15']
+  Zero multiplicity: 0
+  No pair for +11/15
+  Multiplicity mismatch: 7/15 has mult 5, -7/15 has mult 2
+  Multiplicity mismatch: 1/3 has mult 5, -1/3 has mult 4
+  Multiplicity mismatch: 1/5 has mult 10, -1/5 has mult 6
+  Multiplicity mismatch: 1/15 has mult 8, -1/15 has mult 12
+  All non-trivial eigenvalues paired? NO
+
+  Trace from eigenvalues: 4 = 4.000000
+  Trace from T diagonal:  4 = 4.000000
+  Match? YES
+
+======================================================================
+SUMMARY
+======================================================================
+  n = 6
+  Tournaments: 32768
+  Isomorphism classes: 56
+  Distinct eigenvalues: 12
+  All multiples of 1/5: NO
+  Spectral gap = 4/15 
+  Total time: 40.53s
+
+======================================================================
+COMPARISON WITH KNOWN RESULTS
+======================================================================
+  n=3: eigenvalues {1, -1/3}           — denominator 3, gap 2/3 = 2/3
+  n=4: eigenvalues {1, 1/3, 0, -1/3}   — denominator 3, gap 2/3 = 2/3
+  n=5: eigenvalues {1, 3/5, 2/5, 1/5(x4), 0, -1/5(x3), -3/5}
+                                        — denominator 5, gap 2/5 = 2/5
+  n=6: 56 eigenvalues         — denominator ?, gap 4/15
+
+  The largest prime <= n pattern:
+    n=3: p=3, denominator=3, gap=2/3 ✓
+    n=4: p=3, denominator=3, gap=2/3 ✓
+    n=5: p=5, denominator=5, gap=2/5 ✓
+    n=6: p=5, denominator=FAILS, gap=4/15 FAILS
+
+opus-2026-03-16-S90dk: EIGENVALUE COMPUTATION COMPLETE
