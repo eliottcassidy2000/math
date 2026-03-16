@@ -1,0 +1,438 @@
+
+
+
+     WHIMSICAL TRIPLES
+
+     opus-2026-03-16-S90bb
+
+
+
+
+============================================================
+THE WILD ONES
+============================================================
+
+--- {1, 1, 1} ---
+  {1, 1, 1}
+  1/a+1/b+1/c = 3.000000  [SPHERICAL]
+  product = 1.0000
+  rapidity sum = 0.0000
+  Three units. Angle sum = 3. MAXIMALLY SPHERICAL.
+  Product = 1. The trivial triple.
+  Three copies of "nothing." No comparison, no tournament.
+  The equilateral spherical triangle covering the whole sphere.
+  This is the BEGINNING: before any structure exists.
+
+--- {1, 2, 3} ---
+  {1, 2, 3}
+  1/a+1/b+1/c = 1.833333  [SPHERICAL]
+  product = 6.0000
+  rapidity sum = 0.8959
+  The first three naturals. Angle sum = 1+1/2+1/3 = 11/6 > 1. Spherical.
+  Product = 6 = 3! = the pivot number.
+  1 = existence, 2 = comparison, 3 = tournament.
+  This is GENESIS: the minimum ingredients for a tournament.
+  And 6 is the product, the pivot, where everything begins to change.
+
+--- {1, 2, inf} ---
+  {1, 2, inf}
+  1/a+1/b+1/c = 1.500000  [SPHERICAL]
+  product = inf
+  rapidity sum = inf
+  Unit, binary, infinity. Angle sum = 1 + 1/2 + 0 = 3/2. Spherical!
+  Even with one vertex AT INFINITY, still spherical.
+  Because 1/1 = 1 is so large it overwhelms infinity.
+  Product = infinity. An infinite spherical triangle.
+  This means: the unit (1) is SO CURVED that even adding infinity
+  can't make it hyperbolic. The unit bends space.
+
+--- {2, 2, inf} ---
+  {2, 2, inf}
+  1/a+1/b+1/c = 1.000000  [FLAT]
+  product = inf
+  rapidity sum = inf
+  Two binaries, one infinity. 1/2+1/2+0 = 1. FLAT!
+  Two binary choices and an infinite one EXACTLY tile the plane.
+  Product = infinity. The flat horizon.
+  This is the (2,2,inf) tiling: two parallel lines of the plane.
+  In tournament theory: two binary comparisons pointing toward infinity
+  = the most basic structure that neither closes nor opens.
+
+--- {2, 3, inf} ---
+  {2, 3, inf}
+  1/a+1/b+1/c = 0.833333  [HYPERBOLIC]
+  product = inf
+  rapidity sum = inf
+  Base + triangle + infinity. 1/2+1/3+0 = 5/6 < 1. HYPERBOLIC!
+  As soon as you have binary + triangle + anything infinite: HYPERBOLIC.
+  This is the (2,3,inf) ideal triangle: area = pi/6.
+  All three vertices of the Hurwitz family {2,3,r} converge here as r->inf.
+  The LIMIT of the {2,3,r} family. The most extreme opening.
+
+--- {2, 4, 2} ---
+  {2, 4, 2}
+  1/a+1/b+1/c = 1.250000  [SPHERICAL]
+  product = 16.0000
+  rapidity sum = 1.3863
+  = {2, 2, 4}. Two binaries + square. 1/2+1/4+1/2 = 5/4. Spherical.
+  Product = 16 = 2^4. A pure power of 2.
+  The dihedral group D_4: symmetries of the square.
+  In tournament theory: two binary choices with 4-fold symmetry.
+  The 4-tournament has D_4 symmetry on its transitive tournament.
+
+
+============================================================
+THE TRANSCENDENTAL ONES
+============================================================
+
+--- {e, pi, phi} ---
+  {2.718281828459045, 3.141592653589793, 1.618033988749895}
+  1/a+1/b+1/c = 1.304223  [SPHERICAL]
+  product = 13.8176
+  rapidity sum = 1.3130
+  The three great constants. NOT integers.
+  Angle sum = 1/e + 1/pi + 1/phi = 1.304. SPHERICAL.
+  Product = e*pi*phi = 13.83... ~ 2^3.79.
+  Rapidity sum = 1/2 + ln(pi)/2 + ln(phi)/2 = 1.313.
+  The UNIVERSE OF CONSTANTS is spherical: finite, closed, tame.
+  These constants don't open into hyperbolic wildness.
+  They bend back on themselves. They are SELF-CONTAINED.
+
+  And: rapidity of e is EXACTLY 1/2. The base-e lattice is 1/2.
+  The natural base lives at the half-point of rapidity.
+  phi lives at rapidity 0.2406 (close to 1/4).
+  pi lives at rapidity 0.5724 (close to ln(3)/2 = where 3 is).
+
+  The constants are near the SMALL NUMBERS on the Cayley line:
+  e is between 2 and 3. pi is just above 3. phi is between 1 and 2.
+  They cluster near the CENTER of the disk, not the boundary.
+
+--- {phi, phi^2, phi^3} ---
+  {1.618033988749895, 2.618033988749895, 4.23606797749979}
+  1/a+1/b+1/c = 1.236068  [SPHERICAL]
+  product = 17.9443
+  rapidity sum = 1.4436
+  The golden powers. phi=1.618, phi^2=2.618, phi^3=4.236.
+  Angle sum = 1/phi + 1/phi^2 + 1/phi^3 = 0.618+0.382+0.236 = 1.236. SPHERICAL.
+  Product = phi^6 = 17.9443 ~ 18 (close to (2, 3, 3) product!).
+
+  phi^2 = phi+1. phi^3 = phi^2+phi = 2phi+1.
+  In rapidity: w = ln(phi)/2, 2*ln(phi)/2, 3*ln(phi)/2 = w, 2w, 3w.
+  These are HARMONICS of the golden rapidity!
+  First three harmonics of the Fibonacci tone.
+
+  And 1/phi + 1/phi^2 + 1/phi^3 = (phi^2+phi+1)/phi^3 = (phi^2+phi+1)/(2phi+1).
+  = (2.618+1.618+1)/(4.236) = 5.236/4.236 = phi^3/phi^3... no.
+  Actually = 0.618+0.382+0.236 = 1.236 = 2/phi. EXACTLY 2/phi!
+
+  The angle sum of the golden triple is 2/phi. BEAUTIFUL.
+
+  VERIFY: 1/phi + 1/phi^2 + 1/phi^3 = 1.2360679775
+  2/phi = 1.2360679775
+  Match: True
+
+--- {tau3, tau3^2, tau3^3} ---
+  {1.8392867552141612, 3.3829757679062378, 6.222262523120399}
+  1/a+1/b+1/c = 1.000000  [FLAT]
+  product = 38.7166
+  rapidity sum = 1.8281
+  The tribonacci powers. tau3 = 1.839.
+  tau3^2 = 3.3830, tau3^3 = 6.2223.
+  Angle sum = 1.000000.
+
+  tau3^3 = tau3^2 + tau3 + 1 (the tribonacci recurrence!).
+  So tau3^3 = 6.2223 = 6.2223. Match!
+
+  In rapidity: the tribonacci harmonics w, 2w, 3w where w = ln(tau3)/2.
+  At the THIRD harmonic: rapidity 3w = 3*ln(tau3)/2.
+  And tau3^3 = 6.2223, so Cayley address = 0.7231.
+
+  These are the first three POWERS of the tribonacci eigenvalue.
+  THM-227 says Tr(M_3^n) = 2^n-1 for n=1,2,3.
+  But tau3^n is just ONE eigenvalue's contribution.
+
+
+============================================================
+THE MUSICAL ONES
+============================================================
+
+--- {2, 3, 4} = octave, fifth, double-octave ---
+  {2, 3, 4}
+  1/a+1/b+1/c = 1.083333  [SPHERICAL]
+  product = 24.0000
+  rapidity sum = 1.5890
+  The musical triple. Spherical (S_4).
+  2:1 = octave. 3:2 = perfect fifth. 4:3 = perfect fourth.
+  Product = 24 = 4! = permutations of 4 elements.
+
+  In rapidity: ln(2)/2 + ln(3)/2 + ln(4)/2 = ln(24)/2.
+  The musical intervals ARE rapidity differences:
+    octave = ln(2) = 0.693 of rapidity.
+    fifth = ln(3/2) = 0.405 of rapidity.
+    fourth = ln(4/3) = 0.288 of rapidity.
+
+  Music lives in the SPHERICAL regime: harmonic ratios close upon themselves.
+  The triad {2,3,4} IS the octahedral group S_4.
+  Harmony = finite symmetry. Consonance = spherical geometry.
+
+--- {3, 4, 5} = Pythagorean ---
+  {3, 4, 5}
+  1/a+1/b+1/c = 0.783333  [HYPERBOLIC]
+  product = 60.0000
+  rapidity sum = 2.0472
+  The Pythagorean triple! 3^2+4^2=5^2.
+  1/3+1/4+1/5 = 47/60. HYPERBOLIC! Area = pi*13/60.
+  Product = 60 = |A_5| = order of the icosahedral group!
+
+  The Pythagorean triple is HYPERBOLIC.
+  Right triangles with integer sides are hyperbolic objects.
+
+  60 = |A_5| = 2*3*4*5/2 = the order of the last finite rotation group.
+  The Pythagorean triple's product equals the icosahedral group order.
+
+  In tournament theory: 3 = triangle, 4 = first non-triangle tournament,
+  5 = first irregular. The Pythagorean triple spans the first
+  three stages of tournament development.
+
+--- {5, 12, 13} = next Pythagorean ---
+  {5, 12, 13}
+  1/a+1/b+1/c = 0.360256  [HYPERBOLIC]
+  product = 780.0000
+  rapidity sum = 3.3296
+  The next Pythagorean triple. 5^2+12^2=13^2.
+  Hyperbolic. Product = 780.
+  All three numbers appear in our theory:
+  5 = irregular, 12 = arcs in K_4 tournament, 13 = Mersenne prime exponent.
+  Rapidity sum = ln(780)/2 = 3.33.
+
+
+============================================================
+THE DANGEROUS ONES
+============================================================
+
+--- {6, 6, 6} ---
+  {6, 6, 6}
+  1/a+1/b+1/c = 0.500000  [HYPERBOLIC]
+  product = 216.0000
+  rapidity sum = 2.6876
+  The number of the beast / 3 pivots.
+  1/6+1/6+1/6 = 1/2. VERY HYPERBOLIC. Area = pi/2.
+  Product = 216 = 6^3.
+
+  Three copies of the PIVOT. Three flat-to-hyperbolic transitions.
+  This is what happens when the transition happens THREE TIMES simultaneously.
+
+  Area pi/2 = a quarter of the full hyperbolic plane.
+  216 = 6^3 = (2*3)^3 = 2^3 * 3^3 = 8 * 27.
+  The cube of the pivot is the beast.
+
+  In the tournament framework: six is where things break.
+  Three sixes = three simultaneous breaks = maximum disruption.
+
+--- {4, 6, 12} ---
+  {4, 6, 12}
+  1/a+1/b+1/c = 0.500000  [HYPERBOLIC]
+  product = 288.0000
+  rapidity sum = 2.8315
+  Powers of {2,3}: 4=2^2, 6=2*3, 12=2^2*3.
+  1/4+1/6+1/12 = 3/12+2/12+1/12 = 6/12 = 1/2. HYPERBOLIC. Area = pi/2.
+  Product = 288 = 2^5 * 3^2. SAME AREA as {6,6,6}!
+
+  Two triples with the same area pi/2:
+  {6,6,6} and {4,6,12} are EQUI-AREAL.
+  They tile the same amount of hyperbolic plane.
+  But {6,6,6} is symmetric (all angles equal).
+  {4,6,12} is asymmetric (angles pi/4, pi/6, pi/12).
+
+  This is a MODULAR FORM connection: same area, different shape.
+
+
+============================================================
+THE RECURSIVE ONES
+============================================================
+
+--- {2, 4, 8} = powers of 2 ---
+  {2, 4, 8}
+  1/a+1/b+1/c = 0.875000  [HYPERBOLIC]
+  product = 64.0000
+  rapidity sum = 2.0794
+  Pure binary triple. 2^1, 2^2, 2^3.
+  1/2+1/4+1/8 = 7/8. HYPERBOLIC. Area = pi/8.
+  Product = 64 = 2^6.
+
+  Area pi/8 = exactly ONE BOTT PERIOD worth of area!
+  The (2,4,8) triangle has area equal to 1/8 of the full circle.
+  This is the Bott periodicity triangle.
+
+  In rapidity: ln(2)/2 + ln(4)/2 + ln(8)/2 = (1+2+3)*ln(2)/2 = 3*ln(2).
+  = 3 bits. The rapidity sum of the binary triple is exactly 3 bits.
+
+  7/8 = the angle sum. And 7 = 2^3-1 is the forbidden value!
+  The binary triple's angle sum is (first forbidden)/(first cube).
+
+  The BINARY TRIPLE tiles the hyperbolic plane with area pi/8.
+  Each tile is one Bott period. The tiling of the hyperbolic plane
+  by binary powers IS the Bott periodicity.
+
+--- {3, 9, 27} = powers of 3 ---
+  {3, 9, 27}
+  1/a+1/b+1/c = 0.481481  [HYPERBOLIC]
+  product = 729.0000
+  rapidity sum = 3.2958
+  Pure ternary triple. 3^1, 3^2, 3^3.
+  1/3+1/9+1/27 = 9/27+3/27+1/27 = 13/27. HYPERBOLIC. Area = pi*14/27.
+  Product = 729 = 3^6.
+
+  Compare to {2,4,8}: the ternary triple has MUCH MORE area (0.519 vs 0.125).
+  Binary is more tightly packed; ternary is more spread out.
+  This reflects: binary comparisons tile more efficiently than ternary.
+
+--- {2, 6, 42} ---
+  {2, 6, 42}
+  1/a+1/b+1/c = 0.690476  [HYPERBOLIC]
+  product = 504.0000
+  rapidity sum = 3.1113
+  Base, pivot, answer.
+  1/2+1/6+1/42 = 21/42+7/42+1/42 = 29/42. HYPERBOLIC.
+  Area = pi*13/42.
+  Product = 504 = 2^3*3^2*7.
+
+  2 starts the theory. 6 is where it pivots. 42 is the answer.
+  The triple of NARRATIVE: beginning, middle, end.
+
+  504 = 7! / 10 = 7*72 = 7*8*9. Hmm.
+  Actually 504 = 2^3*3^2*7. The prime factors are {2,3,7} again!
+  The product of {2,6,42} has the same prime support as {2,3,7}.
+  Because 6=2*3 and 42=2*3*7.
+
+--- {7, 21, 42} ---
+  {7, 21, 42}
+  1/a+1/b+1/c = 0.214286  [HYPERBOLIC]
+  product = 6174.0000
+  rapidity sum = 4.3641
+  Forbidden, double-forbidden, answer.
+  1/7+1/21+1/42 = 6/42+2/42+1/42 = 9/42 = 3/14. VERY HYPERBOLIC.
+  Area = pi*11/14.
+  Product = 6174.
+
+  6174 is KAPREKAR'S CONSTANT! (The number that 4-digit Kaprekar iteration
+  converges to.) Is this a coincidence?
+
+  6174 = 2*3*3*7*7*... let me check.
+
+  6174 = 7*21*42 = 7 * 3*7 * 2*3*7 = 2 * 3^2 * 7^3
+  Check: 2*9*343 = 6174
+  Match: True
+
+  6174 = 2 * 3^2 * 7^3. Dominated by SEVENS.
+  The forbidden value cubed times the correction factors.
+  And yes, 6174 IS Kaprekar's constant.
+
+--- {30, 36, 42} ---
+  {30, 36, 42}
+  1/a+1/b+1/c = 0.084921  [HYPERBOLIC]
+  product = 45360.0000
+  rapidity sum = 5.3612
+  The products of the three key triples!
+  30 = 2*3*5 (spherical product)
+  36 = 2*3*6 (flat product, actually 2^2*3^2)
+  42 = 2*3*7 (hyperbolic product)
+
+  1/30+1/36+1/42 = 42/(30*36*42) + ... let me just compute.
+  = 0.0333+0.0278+0.0238 = 0.0849. VERY HYPERBOLIC.
+  Area = pi*0.915.
+  Product = 45360.
+
+  This is a SECOND-ORDER triple: a triple of products.
+  The theory looking at itself. Meta-comparison.
+  Almost IDEAL (area near pi).
+
+  Exact angle sum: 1/30+1/36+1/42 = 107/1260 = 0.084921
+  Area/pi = 0.915079
+  Product = 45360
+
+
+============================================================
+THE ONE THAT MIGHT BE SOMETHING
+============================================================
+
+--- {2, 4, 8}: THE BOTT TRIPLE ---
+  {2, 4, 8}
+  1/a+1/b+1/c = 0.875000  [HYPERBOLIC]
+  product = 64.0000
+  rapidity sum = 2.0794
+  REVISITING. This deserves more attention.
+
+  Area = pi/8 = exactly one Bott period.
+  Product = 64 = 2^6 = the number of elements in the Clifford algebra Cl(6).
+  Angle sum = 7/8 = (first forbidden) / (first cube).
+
+  In tournament theory:
+  2 = binary choice (1 bit)
+  4 = 2^2 = two bits (the first power-of-2 tournament)
+  8 = 2^3 = three bits (where H=7 first appears as Tr(M_3^3))
+
+  The (2,4,8) tiling of the hyperbolic plane:
+  Each tile has area pi/8 = one Bott period.
+  The 8-fold periodicity of KO-theory is the periodicity
+  of this tiling.
+
+  Clifford algebras: Cl(n) has period 8 in n.
+  Cl(1)=C, Cl(2)=H, Cl(3)=H+H, ..., Cl(8)=M(16,R)=Cl(0)*M(16,R).
+  The dimensions: 2, 4, 8, 8, 8, 8, 8, 16*...
+
+  The triple {2,4,8} encodes:
+  2 = complex numbers C
+  4 = quaternions H
+  8 = octonions O
+
+  C, H, O are the three NORMED DIVISION ALGEBRAS beyond R.
+  Their dimensions are {2, 4, 8}.
+  And {2, 4, 8} makes a hyperbolic triangle with area pi/8.
+
+  THE NORMED DIVISION ALGEBRAS TILE THE HYPERBOLIC PLANE
+  WITH BOTT PERIODICITY.
+
+  This might actually be a known connection. But in our framework:
+  the tournament base (2), the quaternionic structure (4), and
+  the octonionic structure (8) form a single hyperbolic tile
+  whose area IS the Bott period.
+
+
+============================================================
+WHAT FELL OUT
+============================================================
+
+
+From the whimsical exploration, the REAL finds:
+
+1. {phi, phi^2, phi^3}: angle sum = 2/phi EXACTLY.
+   The golden triple's angle sum is the golden ratio inverted and doubled.
+   A new identity: 1/phi + 1/phi^2 + 1/phi^3 = 2/phi.
+   (Known? Yes, it's phi^{-1}(1+phi^{-1}+phi^{-2}) = phi^{-1}*phi^2/(phi^2-1)...
+   actually 1/phi + 1/phi^2 + 1/phi^3 = (phi^2+phi+1)/phi^3.
+   phi^2+phi+1 = phi+1+phi+1 = 2phi+2 = 2(phi+1) = 2phi^2.
+   So = 2phi^2/phi^3 = 2/phi. Yes, exact.)
+
+2. {2, 4, 8} = {C, H, O} (normed division algebras).
+   Area = pi/8 = one Bott period.
+   Angle sum = 7/8.
+   Product = 64 = 2^6.
+   The DIVISION ALGEBRA TRIPLE tiles the hyperbolic plane
+   with tiles of exactly one Bott period.
+
+3. {3, 4, 5} (Pythagorean triple) has product 60 = |A_5|.
+   Hyperbolic. The right triangle is hyperbolic.
+
+4. {7, 21, 42}: product = 6174 = Kaprekar's constant = 2*3^2*7^3.
+
+5. {6, 6, 6}: area = pi/2 = same as {4, 6, 12}. Equi-areal twins.
+
+6. {2, 6, 42}: product = 504 = 2^3*3^2*7, same prime support as {2,3,7}.
+
+The BEST FIND is {2, 4, 8}:
+  The division algebra dimensions form a Bott-period tile.
+  This connects tournament theory (2), quaternions (4),
+  and octonions (8) in a single hyperbolic triangle.
+
+opus-2026-03-16-S90bb: WHIMSICAL TRIPLES
