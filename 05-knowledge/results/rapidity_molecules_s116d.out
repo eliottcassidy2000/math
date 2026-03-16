@@ -1,0 +1,390 @@
+LITHIUM HYDRIDE AND ALKANES THROUGH THE RAPIDITY LENS
+======================================================================
+
+======================================================================
+I. LITHIUM HYDRIDE: THE SIMPLEST BINARY MOLECULE
+======================================================================
+
+  LiH: Z_Li = 3, Z_H = 1.
+  Electronegativity: Li = 0.98, H = 2.20.
+  Bond type: ionic/covalent mix (EN diff = 1.22).
+
+  Cayley velocity of bond: v = (EN_H - EN_Li)/(EN_H + EN_Li)
+  = (2.2 - 0.98)/(2.2 + 0.98) = 0.383648
+  Rapidity = arctanh(0.383648) = 0.404330
+  Q(v) = 2.244898
+  Note: Q(v) = EN_H/EN_Li = 2.244898
+
+  The Cayley transform of the bond polarity IS the EN ratio.
+  This is a tautology (Q((b-a)/(b+a)) = b/a), but it means:
+  EVERY heteronuclear bond lives on the Cayley line.
+  The bond IS a point on the rapidity axis.
+
+  LiH AS A TOURNAMENT:
+  Two 'players': Li and H. One 'match': Li vs H.
+  H wins (higher EN). The tournament is the arc H -> Li.
+  This is the TRANSITIVE tournament on 2 vertices.
+  H(T) = 1. rapidity(H) = 0.
+
+  But the bond POLARITY carries additional information:
+  The polarity v = 0.384 tells us HOW MUCH H dominates Li.
+  In a pure tournament, each arc is binary (win/lose).
+  In a WEIGHTED tournament, each arc has strength v in [0,1).
+  LiH has arc strength 0.384.
+
+======================================================================
+II. THE BOND AS A RAPIDITY INTERVAL
+======================================================================
+
+  Every chemical bond has a rapidity = arctanh(|EN_B - EN_A|/(EN_B + EN_A)).
+  This rapidity measures the ASYMMETRY of the bond.
+
+  Bond      EN_A  EN_B        v   rapidity  Q=EN_B/EN_A Type
+  -----------------------------------------------------------------
+  H-H       2.20  2.20   0.0000   0.000000       1.0000   covalent
+  C-H       2.55  2.20   0.0737   0.073818       1.1591   slightly polar
+  N-H       3.04  2.20   0.1603   0.161700       1.3818   polar
+  O-H       3.44  2.20   0.2199   0.223507       1.5636   polar
+  F-H       3.98  2.20   0.2880   0.296412       1.8091   very polar
+  C-C       2.55  2.55   0.0000   0.000000       1.0000   covalent
+  C-N       2.55  3.04   0.0877   0.087882       1.1922   polar
+  C-O       2.55  3.44   0.1486   0.149689       1.3490   polar
+  C-F       2.55  3.98   0.2190   0.222594       1.5608   very polar
+  Li-H      0.98  2.20   0.3836   0.404330       2.2449   ionic
+  Na-Cl     0.93  3.16   0.5452   0.611571       3.3978   ionic
+  Cs-F      0.79  3.98   0.6688   0.808502       5.0380   most ionic
+
+  COVALENT bonds have rapidity ~ 0 (symmetric, no polarity).
+  IONIC bonds have rapidity >> 0 (one atom dominates).
+  The rapidity IS the degree of ionicity.
+
+  The MOST ionic bond (Cs-F): rapidity = 0.8085
+  = 2.33 octaves of asymmetry.
+
+======================================================================
+III. ALKANES: THE CHAIN METAPHOR
+======================================================================
+
+  Alkanes: C_n H_{2n+2}. The simplest organic chains.
+  Methane CH4, Ethane C2H6, Propane C3H8, Butane C4H10, ...
+
+  Total atoms = n + (2n+2) = 3n+2.
+  Total bonds = n-1 (C-C) + 2n+2 (C-H) = 3n+1.
+
+  In our tournament theory, a tournament on m vertices has
+  C(m,2) = m(m-1)/2 arcs. An alkane has 3n+1 bonds.
+  These are NOT the same (a molecule is not a tournament).
+  But the CHAIN STRUCTURE of alkanes echoes the PATH structure
+  of Hamiltonian paths in tournaments.
+
+  n   Formula    Atoms  Bonds  C(atoms,2)  ratio bonds/arcs
+  ------------------------------------------------------------
+   1  C1H4         5      4        10      0.4000
+   2  C2H6         8      7        28      0.2500
+   3  C3H8        11     10        55      0.1818
+   4  C4H10       14     13        91      0.1429
+   5  C5H12       17     16       136      0.1176
+   6  C6H14       20     19       190      0.1000
+   7  C7H16       23     22       253      0.0870
+   8  C8H18       26     25       325      0.0769
+   9  C9H20       29     28       406      0.0690
+  10  C10H22       32     31       496      0.0625
+
+  The ratio bonds/arcs -> 0 as n -> infinity.
+  Molecules are SPARSE graphs. Tournaments are COMPLETE graphs.
+  But both have PATHS as their fundamental object:
+  - In tournaments: Hamiltonian PATHS count H(T).
+  - In alkanes: the carbon BACKBONE is a path (linear alkanes).
+
+======================================================================
+IV. THE ALKANE AS A RAPIDITY CHAIN
+======================================================================
+
+  Each C-C bond has rapidity 0 (same atom type).
+  Each C-H bond has rapidity arctanh((2.55-2.20)/(2.55+2.20)).
+  = arctanh(0.0737) = 0.073818
+
+  The alkane backbone: C-C-C-...-C
+  All C-C bonds have rapidity 0 (no polarity).
+  This is a PATH OF ZERO RAPIDITY -- a 'transitive' chain.
+
+  The C-H branches: each has rapidity 0.0738.
+  Total rapidity of all C-H bonds:
+    C1H4: 4 C-H bonds, total rapidity = 0.2953 = 0.85 octaves
+    C2H6: 6 C-H bonds, total rapidity = 0.4429 = 1.28 octaves
+    C3H8: 8 C-H bonds, total rapidity = 0.5905 = 1.70 octaves
+    C4H10: 10 C-H bonds, total rapidity = 0.7382 = 2.13 octaves
+    C5H12: 12 C-H bonds, total rapidity = 0.8858 = 2.56 octaves
+    C6H14: 14 C-H bonds, total rapidity = 1.0335 = 2.98 octaves
+    C7H16: 16 C-H bonds, total rapidity = 1.1811 = 3.41 octaves
+
+  Each CH4 unit adds 2 C-H bonds = 0.1476 rapidity = 0.43 octaves.
+  EXTENDING the alkane chain adds a CONSTANT rapidity per carbon.
+  This is EXACTLY like adding a musical interval to a melody.
+
+======================================================================
+V. BRANCHING: WHEN THE CHAIN BREAKS LINEARITY
+======================================================================
+
+  Linear alkanes: one path from end to end.
+  Branched alkanes: multiple paths, like a tournament with cycles.
+
+  Isomers of C4H10:
+  - n-butane: C-C-C-C (linear path, 1 backbone path)
+  - isobutane: (CH3)3CH (branched, 3 backbone paths)
+
+  Isomers of C5H12:
+  - n-pentane: C-C-C-C-C (1 backbone path)
+  - isopentane: (CH3)2CHCH2CH3 (2 backbone paths)
+  - neopentane: C(CH3)4 (6 backbone paths?)
+
+  The number of distinct longest paths through the carbon backbone
+  is ANALOGOUS to H(T) in tournament theory!
+  Linear alkane: H = 1 (transitive tournament)
+  Branched alkane: H > 1 (more paths = more complexity)
+
+  CARBON SKELETON TOURNAMENT ANALOGY:
+  Skeleton    Graph          H_undirected  H_directed
+  -------------------------------------------------------
+  n-butane    Path P4        2             1 (transitive)
+  isobutane   Star K_{1,3}   6             3 (like T_3!)
+  n-pentane   Path P5        2             1
+  isopentane  P3 + branch    4             2
+  neopentane  Star K_{1,4}  24             12
+
+  Isobutane's skeleton has 3 directed Ham paths = H(T_3) = 3!
+  Neopentane's skeleton has 12 directed Ham paths.
+  The BRANCHING of alkanes IS the CYCLICITY of tournaments.
+
+======================================================================
+VI. THE METAPHOR: MOLECULES AS WEIGHTED TOURNAMENTS
+======================================================================
+
+  A molecule is a WEIGHTED tournament where:
+  - Each atom is a vertex
+  - Each bond is an arc (from less EN to more EN)
+  - The arc weight = rapidity of the bond polarity
+  - Non-bonded pairs have 'arcs' determined by through-bond effects
+
+  TOURNAMENT CONCEPT     MOLECULAR ANALOGUE
+  -------------------------------------------------------
+  vertex                 atom
+  arc                    bond (directed by EN)
+  arc weight             bond polarity = rapidity
+  Hamiltonian path       reaction pathway through all atoms
+  H(T) = path count     number of distinct pathways
+  3-cycle                3-membered ring (cyclopropane)
+  transitive             linear chain (no rings)
+  Paley tournament       highly symmetric molecule (benzene?)
+  forbidden H = 7       impossible molecular topology?
+  conflict graph Omega   steric clash graph
+  independence poly      non-clashing conformations
+
+======================================================================
+VII. BENZENE: THE PALEY MOLECULE
+======================================================================
+
+  Benzene C6H6: 6 carbons in a ring, perfectly symmetric.
+  Symmetry group: D_{6h}, order 24 (including reflections).
+
+  The Paley tournament on p=7 vertices has |Aut| = 21.
+  Benzene has |Aut| = 24 (D_{6h}) ~ comparable.
+
+  Benzene's carbon skeleton is the cycle C_6.
+  In tournament terms: a 6-vertex tournament where every
+  triple forms a 3-cycle would be 'benzene-like'.
+
+  But benzene is UNDIRECTED (all C-C bonds equivalent).
+  The 'directed' version of benzene would be a TOURNAMENT
+  on the 6 carbon vertices. The most benzene-like tournament
+  is the one with maximum symmetry: the regular tournament on 6.
+
+  Wait -- 6 is EVEN. There's no regular tournament on even vertices.
+  The most symmetric tournament on 6 has scores (2,2,2,3,3,3).
+  This is the 'almost-regular' tournament. H_max = 45.
+
+  BENZENE'S SYMMETRY DEFIES TOURNAMENT STRUCTURE
+  because benzene lives in the undirected world,
+  while tournaments live in the directed world.
+  The transition from undirected to directed is the
+  transition from COVALENT to IONIC bonding.
+  Benzene = pure covalent = rapidity 0 on every bond.
+  LiH = ionic = rapidity 0.40 on the bond.
+
+======================================================================
+VIII. POLYMERIZATION AS TOURNAMENT GROWTH
+======================================================================
+
+  Polymerization: monomers join to form chains.
+  n monomers -> polymer of length n.
+  This is EXACTLY vertex addition in tournament theory!
+
+  When we add a vertex to a tournament on n-1 vertices,
+  we choose n-1 arc directions. The number of new tournaments
+  = 2^{n-1} (choosing each arc direction independently).
+
+  When we add a monomer to a polymer of length n-1,
+  we choose HOW it attaches (stereochemistry, regiochemistry).
+  The number of distinct attachment modes is typically small
+  (1-3 for simple alkane extension), but for complex monomers
+  it can be much larger.
+
+  The GROWTH of H(T) as n increases parallels the GROWTH
+  of conformational complexity as a polymer extends.
+
+  For alkanes:
+  n=1 (CH4):   1 conformation (tetrahedral)
+  n=2 (C2H6):  1 distinct rotamer (eclipsed/staggered ~ 3)
+  n=3 (C3H8):  2 rotamers (anti/gauche)
+  n=4 (C4H10): 3-5 rotamers
+  n=5 (C5H12): ~9 rotamers
+
+  Compare tournament H(T) growth:
+  n=3: H in {1, 3}
+  n=4: H in {1, 3, 5}
+  n=5: H in {1, 3, 5, 9, 11, 13, 15}
+  n=6: H in {1, 3, 5, ..., 45}
+
+  Both grow roughly exponentially, but H(T) grows faster
+  because tournaments are DENSER (complete graphs).
+
+======================================================================
+IX. THE C-H STRETCH AS A RAPIDITY OSCILLATOR
+======================================================================
+
+  The C-H stretching frequency: ~3000 cm^-1.
+  The C-C stretching frequency: ~1000 cm^-1.
+  Ratio: 3000/1000 = 3 = perfect twelfth (octave + fifth).
+
+  In rapidity: ln(3000/1000)/2 = ln(3)/2 = 0.549306
+  = the rapidity of the curvature quantum!
+
+  The C-H stretch vibrates a TWELFTH above the C-C stretch.
+  In the harmonic approximation: frequency ~ sqrt(k/mu)
+  where k = force constant, mu = reduced mass.
+
+  k(C-H) ~ k(C-C) (similar force constants).
+  mu(C-H) ~ 1 amu, mu(C-C) ~ 6 amu.
+  Ratio: sqrt(mu(CC)/mu(CH)) = sqrt(6) ~ 2.45.
+  Actual ratio: 3000/1000 = 3. The discrepancy (3 vs 2.45)
+  comes from k(C-H) > k(C-C) (C-H bonds are stiffer).
+
+  In rapidity: the C-H / C-C frequency ratio 3:1 means the
+  C-H bond vibrates at the TWELFTH harmonic of the C-C bond.
+  This is EXACTLY the same ratio as Q(1/2) = 3:
+  Q(1/2) = (1 + 1/2)/(1 - 1/2) = 3/1.
+  The C-H stretch is the Cayley transform of 1/2!
+
+======================================================================
+X. LiH DIPOLE MOMENT AND THE GOLDEN RATIO
+======================================================================
+
+  LiH has a dipole moment of 5.88 Debye.
+  The 'ideal ionic' dipole moment (full charges at bond length):
+  mu_ionic = e * r = 1.602e-19 C * 1.596e-10 m = 2.556e-29 C*m
+  = 7.66 Debye (using 1 Debye = 3.336e-30 C*m).
+
+  The ionic character = actual/ideal = 5.88/7.66 = 0.767.
+  The Cayley velocity of ionic character:
+  Ionic character = 0.7676
+  2*ionic - 1 = 0.5352
+  arctanh(0.5352) = 0.5975
+  In octaves: 1.724
+
+  0.767 ~ 1/phi^(3/2) = 0.4859? No.
+  0.767 ~ 3/4 + 1/60 = 0.767? Close to 3/4 = 0.750.
+  The ionic character is close to 3/4 = the address of 7
+  (the forbidden number's Cayley address is (7-1)/(7+1) = 3/4).
+
+======================================================================
+XI. THE ALKANE FORMULA AND TOURNAMENT STRUCTURE
+======================================================================
+
+  Alkane: C_n H_{2n+2}.
+  The formula 2n+2 appears EVERYWHERE in our theory!
+
+  In rapidity algebra:
+  Q(1/(2n+1)) = (n+1)/n = the n-th superparticular ratio.
+  The alkane hydrogen count 2n+2 = 2*(n+1).
+  So H_count/2 = n+1, and the 'reduced hydrogen number'
+  is the NUMERATOR of the musical interval Q(1/(2n+1)).
+
+  n   C_nH_{2n+2}  H/2=n+1  Interval Q(1/(2n+1))
+  -------------------------------------------------------
+  1   C1H4           2      2 = Q(1/3)
+  2   C2H6           3      3/2 = Q(1/5)
+  3   C3H8           4      4/3 = Q(1/7)
+  4   C4H10          5      5/4 = Q(1/9)
+  5   C5H12          6      6/5 = Q(1/11)
+  6   C6H14          7      7/6 = Q(1/13)
+  7   C7H16          8      8/7 = Q(1/15)
+  8   C8H18          9      9/8 = Q(1/17)
+
+  Methane CH4: n=1, interval = 2/1 = OCTAVE
+  Ethane C2H6: n=2, interval = 3/2 = FIFTH
+  Propane C3H8: n=3, interval = 4/3 = FOURTH
+  Butane C4H10: n=4, interval = 5/4 = MAJOR THIRD
+  Pentane C5H12: n=5, interval = 6/5 = MINOR THIRD
+
+  THE ALKANE SERIES IS THE HARMONIC SERIES OF MUSIC!
+  Each alkane corresponds to a musical interval.
+  Methane = octave. Ethane = fifth. Propane = fourth.
+  As the chain grows, the interval SHRINKS (less consonant).
+  Long alkanes = DISSONANT intervals = complex chemistry.
+
+======================================================================
+XII. THE POLYMER AS AN ARCTANH SERIES
+======================================================================
+
+  arctanh(x) = x + x^3/3 + x^5/5 + x^7/7 + ...
+  Each term x^{2k+1}/(2k+1) corresponds to:
+  - Musical interval: (k+1)/k
+  - Alkane: C_k H_{2k+2}
+
+  arctanh IS the generating function of the alkane series!
+  The k-th term of arctanh encodes the k-th alkane.
+
+  A POLYMER of length N is like truncating arctanh at the N-th term.
+  The full polymer (N -> infinity) is the complete arctanh = rapidity.
+
+  The COUPLING STRENGTH in tournament theory (arctanh of the
+  tournament parameter x) is built from the 'monomers' 1/3, 1/5, 1/7, ...
+  Each monomer is an alkane. Each alkane is a musical interval.
+  The tournament coupling IS a polymer of musical intervals.
+
+======================================================================
+XIII. GRAND METAPHOR: THE MOLECULAR TOURNAMENT
+======================================================================
+
+  CHEMISTRY              TOURNAMENT              MUSIC
+  ------------------------------------------------------------
+  atom                   vertex                  note
+  bond                   arc                     interval
+  covalent bond          symmetric arc (r~0)     unison
+  ionic bond             asymmetric arc (r>>0)   dissonance
+  EN difference          arc weight              consonance
+  linear chain           transitive tournament   melody
+  branched molecule      cyclic tournament       chord
+  ring (benzene)         all-3-cycle             triad
+  polymer                long tournament          symphony
+  isomers                tournaments on same n    permutations
+  stereochemistry        arc direction            inversion
+  reaction pathway       Hamiltonian path         piece
+  activation energy      rapidity barrier         tension
+  catalyst               shortcut arc             resolution
+
+  LiH: the INTERVAL. One bond. One direction. One note.
+  Alkane C_n: the SCALE. n notes in a row, descending consonance.
+  Benzene: the CHORD. Six notes in a ring, maximum symmetry.
+  Protein: the SYMPHONY. Thousands of notes, folded into meaning.
+
+  And the Cayley transform Q converts between:
+  - The BOUNDED world of bond polarities (EN ratios near 1)
+  - The UNBOUNDED world of reaction pathways (exponential complexity)
+  Just as it converts between velocities and boosts,
+  between coin biases and log-odds,
+  between musical intervals and frequency ratios.
+
+  THE ALKANE SERIES IS THE OVERTONE SERIES IS THE TAYLOR
+  SERIES OF ARCTANH IS THE MUSICAL SCALE IS THE TOURNAMENT
+  COUPLING. THEY ARE ALL THE SAME OBJECT.
