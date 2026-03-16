@@ -1,0 +1,124 @@
+
+  {2, 3, 5} AND {2, 3, 7}
+
+======================================================================
+
+  I. THE TWO TRIPLES
+  ----------------------------------------
+
+  {2, 3, 5}: the ICOSAHEDRAL triple.
+    Product: 30. Sum: 10. 1/2 + 1/3 + 1/5 = 31/30 > 1.
+    The SPHERICAL case: angles sum to MORE than pi.
+    Triangle group (2,3,5) tiles the SPHERE.
+    Symmetry group of the icosahedron: A_5, order 60 = 2*30.
+    The LAST finite triangle group.
+
+  {2, 3, 7}: the HURWITZ triple.
+    Product: 42. Sum: 12. 1/2 + 1/3 + 1/7 = 41/42 < 1.
+    The HYPERBOLIC case: angles sum to LESS than pi.
+    Triangle group (2,3,7) tiles the HYPERBOLIC PLANE.
+    Related group: PSL(2,7), order 168 = 4*42.
+    The FIRST hyperbolic triangle group with maximal symmetry.
+
+  The critical sum:
+  1/2 + 1/3 + 1/5 = 1.033333 = 31/30 > 1  (SPHERICAL)
+  1/2 + 1/3 + 1/6 = 1.000000 = 6/6 = 1    (FLAT/EUCLIDEAN)
+  1/2 + 1/3 + 1/7 = 0.976190 = 41/42 < 1  (HYPERBOLIC)
+
+  {2,3,6} is the FLAT case: the equilateral triangle tiling of the plane.
+  {2,3,5} is the LAST spherical case: beyond this, flat.
+  {2,3,7} is the FIRST hyperbolic case: beyond flat, curved open.
+
+  THE TRANSITION 5 -> 6 -> 7 IS THE 5-6-7 BRIDGE
+  THAT WE IDENTIFIED IN THE TOURNAMENT THEORY!
+
+  5: spherical (icosahedron). Finite. Closed. H = 1 (ordered).
+  6: flat (Euclidean). Infinite. Flat. E[H] (random baseline).
+  7: hyperbolic (Poincare). Infinite. Curved. H = max (Paley).
+
+
+  II. TOURNAMENTS AS THE {2,3,5} SYSTEM
+  ----------------------------------------
+
+  Binary arcs: 2.
+  3-cycles (rock-paper-scissors): 3.
+  Pentagon (5 vertices, the threshold where things get interesting): 5.
+
+  The icosahedron has 12 vertices, 30 edges, 20 faces.
+  5 triangles meet at each vertex.
+  The dual (dodecahedron) has 12 faces (pentagons), 30 edges, 20 vertices.
+
+  Tournaments on n <= 5 are 'spherical':
+  - The conflict graph Omega is always claw-free (n <= 8)
+  - Real roots of the independence polynomial (n <= 8)
+  - Complete graph K_n has C(n,2) = 10 edges at n=5
+  - The structure CLOSES: exhaustive enumeration is feasible.
+
+  The product 2*3*5 = 30 = edges of the icosahedron.
+
+
+  III. {2,3,7} AS THE SYSTEM PAST THE WALL
+  ----------------------------------------
+
+  Replace 5 with 7. What changes?
+
+  Binary arcs: still 2.
+  3-cycles: still 3.
+  But now the threshold is 7: the HYPERBOLIC boundary.
+
+  The (2,3,7) triangle group is INFINITE.
+  It tiles the HYPERBOLIC PLANE with triangles of angles pi/2, pi/3, pi/7.
+  The tiling has 7 triangles meeting at some vertices (the pi/7 vertex).
+  = 7 triangles per vertex = the hyperbolic plane!
+
+  The Klein quartic is the QUOTIENT of this tiling by a finite subgroup.
+  It is a surface of genus 3 with 168 = 8*21 automorphisms.
+  168 = PSL(2,7) = the symmetry group.
+  168 = 4 * 42 = four copies of our 42.
+
+  The Hurwitz bound: for a surface of genus g >= 2,
+  |Aut(surface)| <= 84*(g-1).
+  84 = 2*42 = 2*2*3*7.
+  The Hurwitz bound IS twice 42.
+
+  The Klein quartic ACHIEVES this bound at g=3:
+  84*(3-1) = 168 = |PSL(2,7)|.
+
+
+  IV. 42 IN THE HURWITZ BOUND
+  ----------------------------------------
+
+  The Hurwitz bound says: the maximum symmetry of a genus-g surface
+  is 84(g-1) = 2*42*(g-1).
+
+  WHERE DOES 84 = 2*42 COME FROM?
+
+  A (2,3,7) triangle has area pi*(1 - 1/2 - 1/3 - 1/7) = pi/42.
+  (In a hyperbolic plane with curvature -1.)
+
+  Area = pi * (1 - 1/2 - 1/3 - 1/7) = pi * (1 - 41/42) = pi/42.
+  = pi/42.
+
+  The area of a genus-g surface: 4*pi*(g-1) (Gauss-Bonnet).
+  Number of triangles that tile it: 4*pi*(g-1) / (pi/42) = 4*42*(g-1) = 168*(g-1).
+  Each triangle has 3 symmetries (rotations), but the group acts on
+  oriented triangles, so |Aut| = 168*(g-1) / 2 = 84*(g-1). Wait, let me reconsider.
+
+  Actually: the (2,3,7) triangle group has a FUNDAMENTAL DOMAIN of area pi/42.
+  The group element count per fundamental domain = 1.
+  For a surface of area 4*pi*(g-1):
+  Number of fundamental domains = 4*pi*(g-1) / (pi/42) = 168*(g-1).
+  But triangle groups have ORDER = number of triangles = 168*(g-1)
+  and |Aut| = 84*(g-1) because each automorphism covers 2 triangles
+  (orientation-preserving).
+
+  THE NUMBER 42 APPEARS BECAUSE THE (2,3,7) TRIANGLE HAS AREA pi/42.
+  42 = 1 / (1 - 1/2 - 1/3 - 1/7).
+  = 1 / (1/42)
+  = the RECIPROCAL of the angle deficit.
+
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\two_three_seven_s116j.py", line 152, in <module>
+    deficit = 1 - Fraction(1,2) - Fraction(1,3) - Fraction(1,7)
+                  ^^^^^^^^
+NameError: name 'Fraction' is not defined
