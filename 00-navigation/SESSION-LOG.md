@@ -31,6 +31,18 @@ Entry format:
 - Connection between VS fixed point 1806 and formal group height
 - OEIS check for sequence 12, 42, 1242, 6137440
 
+## opus-2026-03-16-S73c — 2026-03-16: Base-42 synthesis — master splitting criterion, Erdős-Straus corrections, spectral zeta
+
+**Account:** opus
+**Continuation of:** opus-2026-03-16-S73 (third context continuation)
+**Summary of work:** Persisted all findings from the extended S73 exploration session:
+1. **7 new hypotheses** (HYP-1615 through HYP-1621): master k/N splitting criterion, generalized double factorial fixed point, cyclotomic splitting pattern, spectral zeta forbidden values, Wilson complement, multi-r Erdős-Straus covering, p≡13 mod 24 unconditional case
+2. **Erdős-Straus reflection corrected**: "secondary always catches" was WRONG — multi-r approach needed (max r=59 at p=118801). Verification extended to 10^6 (19,564 primes, 0 failures)
+3. **New sections in base42-erdos-straus.md**: unconditional cases, generalized splitting table, spectral zeta connection
+4. **3 new tangents** (T249-T251): master splitting/cyclotomic, spectral zeta forbidden values, Wilson complement
+**New contributions:** HYP-1615-1621, T249-T251, base42-erdos-straus.md updated
+**Unresolved threads:** HYP-1618 (spectral zeta) needs deeper proof; package split_inert_analyzer.py for PyPI; OEIS submission for k²+A000788(k-1)
+
 ## opus-2026-03-16-S90ch — 2026-03-16: Marathon session — 30+ scripts from tanh to statistical insights
 
 **Account:** opus
