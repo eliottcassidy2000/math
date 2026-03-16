@@ -1,0 +1,6 @@
+A000568 v3 BENCHMARK
+============================================================
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/a000568_v3_s90dm.py", line 85, in <module>
+    assert T_v3(n) == known[n], f"FAIL at n={n}"
+AssertionError: FAIL at n=2
