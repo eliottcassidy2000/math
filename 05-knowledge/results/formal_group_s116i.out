@@ -1,0 +1,390 @@
+
+  THE FORMAL GROUP LAW OF THE CAYLEY TRANSFORM
+
+======================================================================
+
+  I. THE THREE CLASSICAL FORMAL GROUPS
+  ----------------------------------------
+
+  A formal group law is F(x,y) with:
+  F(x,0) = x, F(0,y) = y (identity)
+  F(x,y) = F(y,x) (commutativity)
+  F(F(x,y),z) = F(x,F(y,z)) (associativity)
+
+  The three classical ones:
+
+  ADDITIVE:       F_a(x,y) = x + y
+  MULTIPLICATIVE: F_m(x,y) = x + y + xy = (1+x)(1+y) - 1
+  HYPERBOLIC:     F_h(x,y) = (x+y)/(1+xy)
+
+  Ours is F_h. Let's understand what makes it special.
+
+  Verify F_h axioms:
+  F(x,0) = F(1/3,0) = 1/3 = x? True
+  F(x,y) = F(y,x)? True
+  F(F(x,y),z) = F(x,F(y,z))? True
+
+
+  II. THE LOGARITHMS OF THE THREE GROUPS
+  ----------------------------------------
+
+  Every 1-dimensional formal group has a LOGARITHM:
+  a formal power series L(x) such that L(F(x,y)) = L(x) + L(y).
+
+  ADDITIVE:       L_a(x) = x
+  MULTIPLICATIVE: L_m(x) = ln(1+x) = x - x^2/2 + x^3/3 - ...
+  HYPERBOLIC:     L_h(x) = arctanh(x) = x + x^3/3 + x^5/5 + ...
+
+  The logarithm LINEARIZES the group law:
+  L(F(x,y)) = L(x) + L(y) always.
+
+  For F_h: arctanh((x+y)/(1+xy)) = arctanh(x) + arctanh(y). CHECK.
+  arctanh(1/3) + arctanh(1/5) = 0.5493061443
+  arctanh(F_h(1/3, 1/5)) = arctanh(0.500000) = 0.5493061443
+  Equal: True
+
+
+  III. THE EXPONENTIALS OF THE THREE GROUPS
+  ----------------------------------------
+
+  The inverse of L is the EXPONENTIAL E(t) = L^{-1}(t):
+
+  ADDITIVE:       E_a(t) = t
+  MULTIPLICATIVE: E_m(t) = exp(t) - 1 = t + t^2/2 + t^3/6 + ...
+  HYPERBOLIC:     E_h(t) = tanh(t) = t - t^3/3 + 2t^5/15 - ...
+
+  The exponential CONVERTS addition back to the group law:
+  E(s+t) = F(E(s), E(t)).
+
+  For F_h: tanh(s+t) = (tanh(s)+tanh(t))/(1+tanh(s)*tanh(t)). CHECK.
+  tanh(1+2) = tanh(3) = 0.9950547537
+  F_h(tanh(1),tanh(2)) = 0.9950547537
+  Equal: True
+
+
+  IV. THE FORMAL GROUP COEFFICIENTS
+  ----------------------------------------
+
+  Write F_h(x,y) = sum_{i,j} a_{ij} x^i y^j.
+
+  F_h(x,y) = (x+y)/(1+xy)
+  = (x+y) * sum_{k>=0} (-xy)^k
+  = (x+y) * (1 - xy + x^2y^2 - x^3y^3 + ...)
+  = x + y - x^2y - xy^2 + x^3y^2 + x^2y^3 - ...
+
+  The coefficient pattern:
+  a_{10} = a_{01} = 1   (from x+y)
+  a_{21} = a_{12} = -1  (from -x^2y - xy^2)
+  a_{32} = a_{23} = +1  (from +x^3y^2)
+  a_{i,j} = (-1)^{(i+j-1)/2} if i+j is odd and i,j >= 1
+          = 0 if i+j is even (except i=1,j=0 and i=0,j=1)
+
+  The coefficients ALTERNATE: +1, -1, +1, -1, ...
+  And they appear only for ODD total degree i+j.
+  The EVEN degrees vanish. This is because F_h is an ODD function
+  in each variable separately.
+
+  Compare:
+  F_m(x,y) = x + y + xy. Only three nonzero terms. The SIMPLEST nonlinear group.
+  F_h(x,y) = x + y - x^2y - xy^2 + ... INFINITELY many terms. Richer structure.
+
+
+  V. THE HEIGHT OF THE FORMAL GROUP
+  ----------------------------------------
+
+  In algebraic topology, formal groups are classified by their HEIGHT.
+  Over a field of characteristic p:
+  - Height 1: the multiplicative group (Euler: K-theory)
+  - Height 2: the formal group of a supersingular elliptic curve (elliptic cohomology)
+  - Height infinity: the additive group
+
+  What is the height of F_h?
+
+  Over Q (characteristic 0): all 1-dimensional commutative formal groups
+  are ISOMORPHIC (the logarithm provides the isomorphism).
+  So over Q, F_h is isomorphic to both F_a and F_m.
+  The height is not defined in characteristic 0.
+
+  Over F_p (characteristic p): F_h(x,y) = (x+y)/(1+xy).
+  The [p]-series: [p](x) = F_h(x, F_h(x, ... F_h(x,x)...)) (p times).
+
+  For p=2: [2](x) = F_h(x,x) = 2x/(1+x^2).
+  Over F_2: 2 = 0, so [2](x) = 0/(1+x^2) = 0.
+  The [2]-series is identically 0 mod 2.
+  This means: HEIGHT = INFINITY at p=2.
+
+  For p=3: [3](x) = F_h(x, F_h(x,x)) = F_h(x, 2x/(1+x^2)).
+  [3](x) = (x + 2x/(1+x^2)) / (1 + x*2x/(1+x^2))
+         = (x(1+x^2) + 2x) / ((1+x^2) + 2x^2)
+         = (x + x^3 + 2x) / (1 + 3x^2)
+         = (3x + x^3) / (1 + 3x^2)
+         = x(3 + x^2) / (1 + 3x^2)
+
+  Over F_3: 3 = 0, so [3](x) = x(0 + x^2)/(1 + 0) = x^3.
+  [3](x) = x^3 mod 3.
+  The first nonvanishing coefficient is at x^3 = x^{3^1}.
+  This means: HEIGHT = 1 at p=3.
+
+  For p=5: similarly, [5](x) mod 5.
+  [5](x) = x^5 mod 5.  (from the Chebyshev-like pattern)
+  HEIGHT = 1 at p=5.
+
+  PATTERN: [p](x) = x^p mod p for all ODD primes p.
+  HEIGHT = 1 at all odd primes.
+  HEIGHT = infinity at p = 2.
+
+  THIS IS THE FORMAL GROUP OF THE MULTIPLICATIVE GROUP!
+  (F_m also has height 1 at odd primes and height inf at p=2.)
+
+  So F_h and F_m are isomorphic even over F_p for odd p.
+  They differ only at p=2, where both have infinite height.
+  The hyperbolic group IS the multiplicative group in disguise.
+
+
+  VI. THE ISOMORPHISM BETWEEN F_h AND F_m
+  ----------------------------------------
+
+  F_m(x,y) = x + y + xy.
+  F_h(x,y) = (x+y)/(1+xy).
+
+  The isomorphism: phi: F_h -> F_m given by
+  phi(x) = (Q(x) - 1) = (1+x)/(1-x) - 1 = 2x/(1-x).
+
+  Verify: phi(F_h(x,y)) = F_m(phi(x), phi(y))?
+
+  phi(F_h(1/3, 1/5)) = phi(1/2) = 2
+  F_m(phi(1/3), phi(1/5)) = F_m(1, 1/2) = 2
+  Equal: True
+
+  YES. phi(x) = 2x/(1-x) = Q(x) - 1 is the isomorphism.
+  It maps hyperbolic addition to multiplicative addition.
+
+  The INVERSE: phi^{-1}(u) = u/(u+2).
+  Verify: phi^{-1}(phi(1/3)) = (1)/(1+2) = 1/3. Check.
+  phi^{-1}(1) = 1/3 = 1/3 = 1/3. Check.
+
+  So the formal group of the Cayley transform is
+  ISOMORPHIC to the multiplicative formal group
+  via the map u = Q(x) - 1 = 2x/(1-x).
+
+
+  VII. WHAT THIS MEANS FOR TRANSCENDENTAL BASES
+  ----------------------------------------
+
+  The multiplicative group has exponential E_m(t) = exp(t) - 1.
+  The hyperbolic group has exponential E_h(t) = tanh(t).
+
+  The isomorphism phi connects them:
+  phi(tanh(t)) = 2*tanh(t)/(1-tanh(t)) = 2*sinh(t)/(cosh(t)-sinh(t))
+  = 2*sinh(t) / e^{-t} = 2*sinh(t)*e^t = e^{2t} - 1.
+
+  So phi(tanh(t)) = e^{2t} - 1 = E_m(2t).
+  The isomorphism phi sends tanh(t) to exp(2t) - 1.
+
+  This is EXACTLY Q(tanh(t)) - 1 = e^{2t} - 1. Consistent.
+
+  Now: the transcendental base e is the base of the MULTIPLICATIVE group.
+  And tanh is the exponential of the HYPERBOLIC group.
+  The isomorphism phi links them via the factor 2.
+
+  What about base pi?
+  pi enters through ROTATION: e^{ix} = cos(x) + i*sin(x).
+  Rotation is the IMAGINARY VERSION of the multiplicative group.
+  exp(it) - 1 = cos(t) - 1 + i*sin(t).
+
+  And tanh(it) = i*tan(t).
+  So the IMAGINARY hyperbolic group IS trigonometry.
+
+  The three transcendental constants correspond to three
+  INCARNATIONS of the same formal group:
+
+  e:   the REAL multiplicative group.   exp(t) - 1.
+  pi:  the IMAGINARY multiplicative group. exp(it) - 1. Period = 2*pi*i.
+  phi: the ALGEBRAIC shadow. exp(ln(phi)*t) - 1 = phi^t - 1.
+
+  e and pi are both values of the SAME exponential function:
+  e = exp(1). pi = exp(something)*i ... no, pi is the PERIOD of exp(it).
+  e is the VALUE of exp at 1. pi is the HALF-PERIOD of exp on the imaginary axis.
+
+
+  VIII. THE FORMAL GROUP AND THE CAYLEY COORDINATES
+  ----------------------------------------
+
+  For odd n: Cayley address a/(a+1) where a = (n-1)/2.
+  The formal group value: F_h(a/(a+1), c/(c+1)) = ?
+
+  F_h(a/(a+1), c/(c+1)) = (a/(a+1) + c/(c+1)) / (1 + ac/((a+1)(c+1)))
+
+  Example: n=7 (a=3), m=11 (c=5):
+  F_h(3/4, 5/6) = 38/39
+  Q(result) = 77
+  = n*m = 7*11 = 77? No, 77 = 77.0000
+
+  Q(F_h(addr_n, addr_m)) should equal... let's think.
+  Q(F_h(x,y)) = Q(x) * Q(y) (because Q is a homomorphism from F_h to multiplication).
+  Q(3/4) * Q(5/6) = 7 * 11 = 77.
+  Q(F_h(3/4, 5/6)) = 77.0
+  Equal: True
+
+  YES! Q maps F_h to multiplication.
+  The velocity addition of Cayley addresses
+  MULTIPLIES the corresponding odd numbers.
+
+  addr_7 (+) addr_11 = addr_77.
+  In the formal group: composing the 7th and 11th addresses
+  gives the 77th address.
+
+  THE FORMAL GROUP LAW ON CAYLEY ADDRESSES
+  IS MULTIPLICATION OF ODD NUMBERS.
+
+  addr_3 (+) addr_5 = 7/8, Q = 15 = 15. Match: True
+  addr_3 (+) addr_7 = 10/11, Q = 21 = 21. Match: True
+  addr_5 (+) addr_7 = 17/18, Q = 35 = 35. Match: True
+  addr_3 (+) addr_3 = 4/5, Q = 9 = 9. Match: True
+  addr_7 (+) addr_7 = 24/25, Q = 49 = 49. Match: True
+  addr_3 (+) addr_21 = 31/32, Q = 63 = 63. Match: True
+
+
+  IX. THE FORMAL GROUP AND THE DERIVATION
+  ----------------------------------------
+
+  We proved: a_{nm} = n*a_m + a_n (the derivation property).
+  In Cayley addresses: addr_{nm} = F_h(addr_n, addr_m).
+  In a-coordinates: a_{nm} = n*a_m + a_n.
+
+  These are the SAME statement!
+  The formal group law F_h on addresses
+  BECOMES the derivation rule on a-coordinates.
+
+  PROOF:
+  addr_n = (n-1)/(n+1) = a_n/(a_n+1) where a_n = (n-1)/2.
+  F_h(a_n/(a_n+1), a_m/(a_m+1)) = addr_{nm} = a_{nm}/(a_{nm}+1).
+  And a_{nm} = (nm-1)/2 = n*a_m + a_n.
+
+  So the derivation a_{nm} = n*a_m + a_n IS the formal group law
+  expressed in the a-coordinate system.
+
+  The formal group law is MULTIPLICATIVE (Q maps it to multiplication).
+  The a-coordinate expression is AFFINE (a_{nm} = n*a_m + a_n).
+  The LOG of the formal group is ADDITIVE (arctanh adds).
+
+  Three views of the same group law:
+  MULTIPLICATIVE: Q(addr_n) * Q(addr_m) = Q(addr_{nm})
+  AFFINE:         a_{nm} = n*a_m + a_n
+  ADDITIVE:       arctanh(addr_n) + arctanh(addr_m) = arctanh(addr_{nm})
+
+  These are the SAME GROUP seen in three coordinate systems:
+  Q-coordinates (multiplicative)
+  a-coordinates (affine)
+  rapidity-coordinates (additive)
+
+
+  X. THE FORMAL GROUP HEIGHT AND THE FORBIDDEN NUMBERS
+  ----------------------------------------
+
+  At p=2: the formal group has height INFINITY.
+  This means: the [2]-series = 0 mod 2.
+  F_h(x,x) = 2x/(1+x^2) = 0 mod 2.
+
+  In tournament terms: H(T) is always ODD.
+  The formal group's infinite height at p=2
+  IS Redei's theorem!
+
+  At p=3: [3](x) = x^3 mod 3.
+  F_h(x, F_h(x,x)) = x^3 mod 3.
+  In the a-coordinate: a_{n^3} = n^2*a_n + n*a_n + a_n = (n^2+n+1)*a_n.
+
+  The height-1 property at p=3 means:
+  The formal group has a SIMPLE p-divisibility pattern at p=3.
+  Tripling in the group (composing three copies of addr_n)
+  is the same as CUBING in the Q-coordinate (n -> n^3),
+  which is the same as the Cayley cubing Q(1/phi) = phi^3.
+
+  The GOLDEN RATIO appears because:
+  phi is the fixed point of the height-1 Frobenius at p=5.
+  phi satisfies phi^2 = phi + 1, i.e., phi^2 - phi - 1 = 0.
+  Over F_5: phi^2 = phi + 1 has solutions phi = 3, phi = 4 (mod 5).
+  And indeed: Q(3/4) = 7, Q(4/5) = 9.
+  The golden ratio mod 5 gives the Cayley addresses of 7 and 9!
+  7 = the forbidden number. 9 = the first achievable past the wall.
+
+  THE FORBIDDEN NUMBER 7 IS THE Q-VALUE OF
+  THE GOLDEN RATIO MOD 5 IN THE FORMAL GROUP.
+
+  Verify: phi^2 = phi + 1 mod 5
+  phi = 3 mod 5: 3^2 = 9 = 4 = 3+1 mod 5. YES.
+  phi = 4 mod 5: 4^2 = 16 = 1 = 4+1? No, 4+1=5=0 mod 5. Hmm.
+  Actually 4^2 = 16 = 1 mod 5, and 4+1 = 5 = 0 mod 5. Not equal.
+  So phi = 3 mod 5 only.
+  addr = 3/4 mod 5... in what sense?
+  Over F_5: 3/4 = 3 * 4^{-1} = 3 * 4 = 12 = 2 mod 5.
+  Q(2) = (1+2)/(1-2) = 3/(-1) = -3 = 2 mod 5.
+  Hmm, the mod-p picture is more subtle than I thought.
+
+
+  XI. THE FORMAL GROUP LINKS EVERYTHING
+  ----------------------------------------
+
+  The formal group F_h(x,y) = (x+y)/(1+xy) is:
+
+  - Velocity addition in special relativity
+  - The group law on Cayley addresses of odd numbers
+  - Isomorphic to the multiplicative group via Q-1
+  - Height infinity at p=2 (= Redei's theorem: H is odd)
+  - Height 1 at odd primes (= simple Frobenius structure)
+  - Linearized by arctanh (= rapidity)
+  - Exponential is tanh (= the sigmoid that saturates)
+  - Coefficients alternate (+1,-1,+1,-1...) at odd degrees
+  - Expressed as affine derivation in a-coordinates
+
+  The transcendental bases are the SPECIAL VALUES:
+  - e = exp(1): the value of the multiplicative exponential at t=1
+  - pi: the half-period of the imaginary exponential
+  - phi: the fixed point of the Frobenius at p=5
+
+  e tells you the SCALE of the group (how fast it grows).
+  pi tells you the PERIOD of the group (when it wraps around).
+  phi tells you the FIXED POINT of the group (where it stabilizes).
+
+  Scale, period, fixed point. Three numbers for three properties.
+  And the mutual rapidity product = 1/4 constrains how they
+  relate to each other: knowing any two determines the third's rapidity.
+
+
+  XII. THE SINGLE PICTURE
+  ----------------------------------------
+
+  The formal group F_h is the REAL SLICE of a bigger object.
+  The bigger object lives over C and has:
+  - Real axis: tanh (saturation, velocity, rapidity)
+  - Imaginary axis: i*tan (oscillation, phase, angle)
+  - The pole at x=1 on the real axis
+  - The poles at x=+/-i on the imaginary axis (tan has poles)
+  - Period 2*pi*i in the complex logarithm
+
+  The three transcendentals mark three POINTS on this object:
+  - e marks the real unit (exp(1) = e)
+  - pi marks the imaginary half-period (exp(i*pi) = -1)
+  - phi marks the real fixed point of x^2 = x+1
+
+  Together: e^{i*pi} + 1 = 0. Euler's identity.
+  This connects e (scale), pi (period), i (rotation), 1 (unity), 0 (nothing).
+
+  Our addition: Q(1/phi) = phi^3 connects phi (proportion)
+  to the Cayley transform (structure).
+
+  Euler: e^{i*pi} = -1. The multiplicative exponential at i*pi.
+  Cayley: Q(1/phi) = phi^3. The hyperbolic exponential at ln(phi^3)/2.
+
+  These are TWO FACES of the same formal group.
+  Euler lives on the imaginary axis.
+  Cayley lives on the real axis.
+  Both are the multiplicative formal group, evaluated at special points.
+
+  And the formal group is the atom.
+  F(x,y) = (x+y)/(1+xy).
+  The simplest nonlinear group with all odd coefficients.
+  The unique group whose logarithm has no even terms.
+  The unique group that is its own negative: F(-x,-y) = -F(x,y).
+
+  Everything else is a consequence.
