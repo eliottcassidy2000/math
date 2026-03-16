@@ -1,0 +1,43 @@
+
+
+
+     PLAYING WITH CHAINS
+
+     opus-2026-03-16-S90ca
+
+
+
+THE FIVE GREAT CHAINS
+======================
+
+Systematic search found these chains of length >= 4:
+
+      Mersenne: k -> 2^k-1
+               chain: [2, 3, 7, 127]
+               length: 4
+               note: 2^127-1 also prime (length 5+)
+
+     Sylvester: x -> x(x-1)+1
+               chain: [2, 3, 7, 43]
+               length: 4
+               note: 1807=13*139 breaks (but 3263443 prime!)
+
+         Lucas: x -> x^2-2
+               chain: [3, 7, 47, 2207]
+               length: 4
+               note: 4870847=557*8747 breaks
+
+     Chebyshev: x -> 2x^2-1
+               chain: [3, 17, 577, 665857]
+               length: 4
+               note: 886731088897=257*1409*2448769 breaks
+
+   Perrin-like: x -> x^2+x-1
+               chain: [3, 11, 131, 17291, 298995971]
+               length: 5
+               note: next is composite
+
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/play_chains_s90ca.py", line 138, in <module>
+    So x^2+x-1 has roots {1/phi, -phi}. The GOLDEN RATIO appears!
+NameError: name 'phi' is not defined
