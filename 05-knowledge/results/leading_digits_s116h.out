@@ -1,0 +1,327 @@
+
+  POWERS OF 2, LEADING DIGITS, AND THE GEOMETRY OF GOOD ENOUGH
+
+======================================================================
+
+  THE TABLE
+  ----------------------------------------
+
+  n    2^n          leading   fractional     position on
+                    digit     part of log    decimal circle
+  -----------------------------------------------------------------
+   0              1     1        0.00000        |
+   1              2     2        0.30103        |############
+   2              4     4        0.60206        |########################
+   3              8     8        0.90309        |####################################
+   4             16     1        0.20412        |########
+   5             32     3        0.50515        |####################
+   6             64     6        0.80618        |################################
+   7            128     1        0.10721        |####
+   8            256     2        0.40824        |################
+   9            512     5        0.70927        |############################
+  10           1024     1        0.01030        |
+  11           2048     2        0.31133        |############
+  12           4096     4        0.61236        |########################
+  13           8192     8        0.91339        |####################################
+  14          16384     1        0.21442        |########
+  15          32768     3        0.51545        |####################
+  16          65536     6        0.81648        |################################
+  17         131072     1        0.11751        |####
+  18         262144     2        0.41854        |################
+  19         524288     5        0.71957        |############################
+  20        1048576     1        0.02060        |
+  21        2097152     2        0.32163        |############
+  22        4194304     4        0.62266        |########################
+  23        8388608     8        0.92369        |####################################
+  24       16777216     1        0.22472        |########
+  25       33554432     3        0.52575        |#####################
+  26       67108864     6        0.82678        |#################################
+  27      134217728     1        0.12781        |#####
+  28      268435456     2        0.42884        |#################
+  29      536870912     5        0.72987        |#############################
+  30     1073741824     1        0.03090        |#
+  31     2147483648     2        0.33193        |#############
+  32     4294967296     4        0.63296        |#########################
+  33     8589934592     8        0.93399        |#####################################
+  34    17179869184     1        0.23502        |#########
+
+
+  THE OBSERVATION
+  ----------------------------------------
+
+  2^0  = 1     leading digit 1
+  2^1  = 2                   2
+  2^2  = 4                   4
+  2^3  = 8                   8
+  2^4  = 16                  1  <-- back to 1, but 16 not 10
+  2^5  = 32                  3
+  2^6  = 64                  6
+  2^7  = 128                 1  <-- back to 1 again
+  2^8  = 256                 2
+  2^9  = 512                 5
+  2^10 = 1024                1  <-- back to 1 again
+
+  Gaps between leading-digit-1 appearances: 4, 3, 3, 4, 3, 3, 4, 3, 3, ...
+
+  Gaps: [4, 3, 3, 4, 3, 3, 4, 3, 3, 4, 3, 3, 4, 3, 3, 4, 3, 3, 4, 3]
+
+  The pattern is {4, 3, 3} repeating!
+  4 + 3 + 3 = 10 steps per full decade.
+  10 steps for 2^10 = 1024 ~ 10^3.
+
+  WHY {4, 3, 3}?
+  Because log10(2) = 0.30103...
+  To get from leading digit 1 back to 1, need the fractional part
+  of n*log10(2) to pass through 1 (mod 1).
+  1/0.30103 = 3.322... steps per revolution.
+  So approximately every 3.32 steps, the leading digit returns to 1.
+  3.32 ~ 10/3. The actual pattern: 3, 3, 4, 3, 3, 4, ...
+  = two shorts (3) and one long (4), repeating.
+
+
+  THE GEOMETRY: A CIRCLE WITH A STEP
+  ----------------------------------------
+
+  The fractional part {n * log10(2)} traces a path on the
+  unit circle (identified with [0, 1)).
+  Each step advances by log10(2) = 0.30103.
+
+  After 3 steps: 3 * 0.30103 = 0.90309. Almost 1. Short by 0.097.
+  After 4 steps: 4 * 0.30103 = 1.20412. Past 1. Overshoot by 0.204.
+
+  The DECISION at each '1': do we take 3 steps or 4?
+  If we've accumulated DEFICIT (we're behind), take 4 (catch up).
+  If we've accumulated SURPLUS (we're ahead), take 3 (coast).
+
+  The deficit/surplus after each cycle:
+  Cycle  Steps  End position   Deficit from integer
+    0     3      0.90309       -0.09691
+    1     4      1.10721       +0.10721
+    2     3      1.01030       +0.01030
+    3     3      0.91339       -0.08661
+    4     4      1.11751       +0.11751
+    5     3      1.02060       +0.02060
+    6     3      0.92369       -0.07631
+    7     4      1.12781       +0.12781
+    8     3      1.03090       +0.03090
+    9     3      0.93399       -0.06601
+
+
+  THE CONTINUED FRACTION OF log10(2)
+  ----------------------------------------
+
+  log10(2) = 0.30103... = [0; 3, 3, 9, 2, 1, 1, 2, 1, 3, 1, 18, ...]
+
+  CF = [0, 3, 3, 9, 2, 2, 4, 6, 2, 1, 1, 3]
+
+  The first partial quotients: 0, 3, 3, 9, 2, ...
+  The convergents:
+  [0, 3] = 3/1 = 3.0000000000  err = 2.70e+00
+  [0, 3, 3] = 10/3 = 3.3333333333  err = 3.03e+00
+  [0, 3, 3, 9] = 93/28 = 3.3214285714  err = 3.02e+00
+  [0, 3, 3, 9, 2] = 196/59 = 3.3220338983  err = 3.02e+00
+  [0, 3, 3, 9, 2, 2] = 485/146 = 3.3219178082  err = 3.02e+00
+  [0, 3, 3, 9, 2, 2, 4] = 2136/643 = 3.3219284603  err = 3.02e+00
+  [0, 3, 3, 9, 2, 2, 4, 6] = 13301/4004 = 3.3219280719  err = 3.02e+00
+  [0, 3, 3, 9, 2, 2, 4, 6, 2] = 28738/8651 = 3.3219281008  err = 3.02e+00
+  [0, 3, 3, 9, 2, 2, 4, 6, 2, 1] = 42039/12655 = 3.3219280917  err = 3.02e+00
+  [0, 3, 3, 9, 2, 2, 4, 6, 2, 1, 1] = 70777/21306 = 3.3219280954  err = 3.02e+00
+  [0, 3, 3, 9, 2, 2, 4, 6, 2, 1, 1, 3] = 254370/76573 = 3.3219280948  err = 3.02e+00
+
+  The BEST rational approximations to log10(2):
+  3/10 = 0.3     (10 steps ~ 3 decades. 2^10 = 1024 ~ 10^3)
+  0.30103... exact
+
+  The approximation 3/10 says: 10 doublings ~ 3 decades.
+  The error: 10*log10(2) - 3 = 0.0103.
+  2^10 = 1024 = 1000 * 1.024. The 2.4% error.
+
+  The NEXT approximation: log10(2) ~ 59/196.
+  But the USEFUL one is 3/10: good enough for engineering.
+  '2^10 ~ 10^3' is the GOOD ENOUGH approximation.
+
+
+  GOOD ENOUGH: THE 3-3-4 PATTERN AS A BEAT FREQUENCY
+  ----------------------------------------
+
+  Two frequencies: the DOUBLING (period 1 in log-space)
+  and the DECADE (period 1/log10(2) = 3.322 in log-space).
+
+  They are incommensurable (log10(2) is irrational).
+  The BEAT between them has a quasi-period.
+
+  The beat pattern 3-3-4 is the SIMPLEST approximation:
+  3+3+4 = 10 doublings per 3 decades.
+  Average: 10/3 = 3.333... doublings per decade.
+  Actual: 1/log10(2) = 3.322... doublings per decade.
+  Error: 0.011/3.322 = 0.3%.
+
+  The 3-3-4 pattern is 'good enough' because:
+  - It uses only TWO step sizes (3 and 4)
+  - It repeats every 10 steps
+  - The error is < 1%
+
+  This is EXACTLY the same as equal temperament in music!
+  12 semitones approximate the octave (frequency ratio 2).
+  7 semitones approximate the fifth (3/2).
+  The error: the Pythagorean comma, ~1.4%.
+
+  The 3-3-4 pattern IS a temperament for log10(2).
+  It tempers the decade into {3,3,4} doublings.
+  Just as 12-TET tempers the octave into 12 equal semitones.
+
+
+  THE GEOMETRY THAT MOVES WITH THIS PERIODICITY
+  ----------------------------------------
+
+  A point on a circle, advancing by angle 2*pi*log10(2) per step.
+  = 2*pi * 0.30103 = 1.8912 radians = 108.4 degrees per step.
+
+  108 degrees is close to 360/3.333 = 108 degrees exactly.
+  And 108 degrees = interior angle of a regular PENTAGON!
+
+  Angle per step: 108.37 degrees
+  Pentagon interior angle: 108.00 degrees
+  Difference: 0.37 degrees
+
+  The step angle is 0.4 degrees MORE than the pentagon angle.
+  So the geometry is a SLIGHTLY OVER-ROTATING pentagon.
+  After 5 steps: 5 * 108.37 = 541.85 degrees = 360 + 181.85.
+  That's 1.5 full turns + 1.85 degrees.
+
+  After 10 steps: 10 * 108.37 = 1083.7 degrees = 3 * 360 + 3.7.
+  Almost exactly 3 full turns. Off by 3.7 degrees.
+
+  After 100 steps: 100 * 108.37 = 10837 degrees = 30 * 360 + 37.
+  30.1 turns. Still drifting.
+
+  The SHAPE: a star polygon {10/3}.
+  Connect every 3rd vertex of a regular 10-gon.
+  This traces a star that visits 10 vertices in order
+  0, 3, 6, 9, 2, 5, 8, 1, 4, 7 (mod 10).
+  The step is 3 out of 10 = 0.3 of the circle = log10(2) approximately!
+
+  The {10/3} star polygon IS the geometry of powers of 2
+  on the decimal circle.
+
+  The star {10/3}:
+  Step 0: position 0 (digit 1)
+  Step 1: position 3 (digit 2... no, 8)
+
+  The 10 positions (approximately):
+  n=0: frac = 0.0000 ~ 0/10, leading digit = 1
+  n=1: frac = 0.3010 ~ 3/10, leading digit = 2
+  n=2: frac = 0.6021 ~ 6/10, leading digit = 4
+  n=3: frac = 0.9031 ~ 9/10, leading digit = 8
+  n=4: frac = 0.2041 ~ 2/10, leading digit = 1
+  n=5: frac = 0.5051 ~ 5/10, leading digit = 3
+  n=6: frac = 0.8062 ~ 8/10, leading digit = 6
+  n=7: frac = 0.1072 ~ 1/10, leading digit = 1
+  n=8: frac = 0.4082 ~ 4/10, leading digit = 2
+  n=9: frac = 0.7093 ~ 7/10, leading digit = 5
+
+  The positions follow the pattern 0,3,6,9,2,5,8,1,4,7 (mod 10).
+  This IS multiplication by 3 modulo 10.
+  The multiplicative group Z/10Z* = {1,3,7,9} has order 4.
+  But 3 generates all of Z/10Z under addition (gcd(3,10)=1).
+
+  So the leading digit pattern of 2^n is controlled by the
+  additive structure of 3 in Z/10Z.
+  And 3 in Z/10Z is the CURVATURE QUANTUM modulo the decimal base.
+
+
+  THE RAPIDITY CONNECTION
+  ----------------------------------------
+
+  log10(2) = ln(2)/ln(10) = (2*rapidity(2))/(2*rapidity(10))
+  = rapidity(2)/rapidity(10)
+
+  rapidity(2) = 0.346574
+  rapidity(10) = 1.151293
+  ratio = 0.301030 = log10(2)
+
+  log10(2) IS the rapidity of 2 measured in units of rapidity(10).
+  The decimal system uses rapidity(10) as its unit.
+  The binary system uses rapidity(2) as its unit.
+
+  Their ratio is irrational: decimal and binary are INCOMMENSURABLE.
+  The 3-3-4 pattern is the best 'temperament' reconciling them.
+
+  In the Cayley framework:
+  Q(address of 2) = 2. address = 1/3.
+  Q(address of 10) = 10. address = 9/11.
+
+  1/3 and 9/11: these are the Cayley addresses of 2 and 10.
+  Their rapidity ratio log10(2) determines the leading digit pattern.
+  The ENTIRE structure of 'how binary meets decimal'
+  is encoded in the ratio of two Cayley addresses.
+
+
+  GOOD ENOUGH AND THE PHILOSOPHY OF APPROXIMATION
+  ----------------------------------------
+
+  The exact value: log10(2) = 0.3010299957...
+  The 'good enough' value: 3/10 = 0.3.
+  Error: 0.34%.
+
+  This 0.34% error is WHY:
+  - 2^10 = 1024, not 1000 (2.4% overshoot)
+  - A kilobyte is 1024 bytes, not 1000
+  - The SI/IEC prefix confusion (kB vs KiB)
+  - The leading digit returns to 1 every 3 or 4 steps, not exactly 3.32
+
+  The 'good enough' approximation 3/10 is the FIRST convergent
+  of the continued fraction of log10(2).
+  It is the BEST rational with denominator <= 10.
+
+  The NEXT 'good enough': 59/196 ~ 0.30102.
+  Error: 0.003%. But denominator 196 is too big to be useful.
+
+  In practice, 3/10 is WHERE EVERYONE STOPS.
+  'A kilobyte is about a thousand bytes.'
+  'Ten doublings is about three orders of magnitude.'
+  'The leading digit returns to 1 every 3-4 steps.'
+
+  GOOD ENOUGH is the first convergent.
+  It is the point where the continued fraction FIRST gives
+  an approximation within human tolerance (~1%).
+  Beyond that, improvement is academic.
+
+
+  THE STAR {10/3} AND THE PENTAGON {5/2}
+  ----------------------------------------
+
+  The star polygon {10/3} visits every 3rd vertex of a 10-gon.
+  The pentagram {5/2} visits every 2nd vertex of a 5-gon.
+
+  {10/3} = double cover of {5/3}? No.
+  {10/3}: step 3 in 10-gon. Visits all 10 vertices. gcd(3,10)=1.
+  {5/2}: step 2 in 5-gon. Visits all 5 vertices. gcd(2,5)=1.
+
+  Their ratio: {10/3} has angle step 108 degrees.
+               {5/2} has angle step 144 degrees.
+  108/144 = 3/4 = the Cayley address of 7 = the forbidden number!
+
+  THE RATIO OF THE TWO STAR POLYGON ANGLES IS 3/4.
+  THE CAYLEY ADDRESS OF THE FORBIDDEN NUMBER.
+
+  And 108 degrees = pi - pi/5 = the supplement of the golden angle's cousin.
+  144 degrees = pi - pi/5 = ... no, 144 = 4*36 = 4*pi/5.
+  108 = 3*36 = 3*pi/5.
+  108/144 = 3/4. YES.
+
+  The decimal-binary beat frequency (108 degrees)
+  and the pentagram angle (144 degrees)
+  are in the ratio 3:4 = the Cayley address of 7.
+
+  Three things meet:
+  1. The leading digit pattern of 2^n (log10(2) ~ 3/10)
+  2. The pentagram / golden ratio (108 and 144 degrees)
+  3. The forbidden number 7 (Cayley address 3/4)
+
+  They meet because 3/4 = 3*36/4*36 = 108/144,
+  and 36 = 360/10 = the angular step of the decimal circle,
+  and log10(2) ~ 3/10 = three such steps.
+
+  The forbidden number lives in the ratio of the binary step
+  to the pentagonal step on the decimal circle.
