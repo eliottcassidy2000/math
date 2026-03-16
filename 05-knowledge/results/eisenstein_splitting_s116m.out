@@ -1,0 +1,231 @@
+
+  EISENSTEIN SPLITTING AND THE FORBIDDEN NUMBER
+
+======================================================================
+
+  I. SPLITTING BEHAVIOR IN Z[omega]
+  ----------------------------------------
+
+  The Eisenstein integers Z[omega], omega = e^{2*pi*i/3} = (-1+i*sqrt(3))/2.
+  Norm: N(a + b*omega) = a^2 - ab + b^2.
+
+  Splitting of rational primes p:
+  p = 3: RAMIFIES. 3 = -omega^2 * (1-omega)^2. The curvature is singular.
+  p = 1 mod 3: SPLITS. p = pi * conjugate(pi) for Eisenstein prime pi.
+  p = 2 mod 3: INERT. p remains prime in Z[omega].
+
+     p  p mod 3    behavior              Eisenstein factors  notes
+  ---------------------------------------------------------------------------
+     2        2       INERT                 2 (stays prime)  the doubler
+     3        0    RAMIFIES          -omega^2 * (1-omega)^2  curvature quantum
+     5        2       INERT                 5 (stays prime)  the pentagon
+     7        1      SPLITS        (1+3*omega)(1+3*omega^2)  FORBIDDEN - chain prime
+    11        2       INERT                11 (stays prime)  Paley prime - chain via L_5
+    13        1      SPLITS        (1+4*omega)(1+4*omega^2)  F_7
+    17        2       INERT                17 (stays prime)  Fermat prime
+    19        1      SPLITS        (2+5*omega)(2+5*omega^2)  in H(T_11)
+    23        2       INERT                23 (stays prime)  Paley prime
+    29        2       INERT                29 (stays prime)  
+    31        1      SPLITS        (1+6*omega)(1+6*omega^2)  Mersenne M_5
+    37        1      SPLITS        (3+7*omega)(3+7*omega^2)  H_3 centered hex
+    41        2       INERT                41 (stays prime)  
+    43        1      SPLITS        (1+7*omega)(1+7*omega^2)  
+    47        2       INERT                47 (stays prime)  chain prime L_8
+    53        2       INERT                53 (stays prime)  
+    59        2       INERT                59 (stays prime)  
+    61        1      SPLITS        (4+9*omega)(4+9*omega^2)  H_4 centered hex
+    67        1      SPLITS        (2+9*omega)(2+9*omega^2)  
+    71        2       INERT                71 (stays prime)  
+    73        1      SPLITS        (1+9*omega)(1+9*omega^2)  
+    79        1      SPLITS      (3+10*omega)(3+10*omega^2)  
+    83        2       INERT                83 (stays prime)  
+    89        2       INERT                89 (stays prime)  Fibonacci F_11
+    97        1      SPLITS      (3+11*omega)(3+11*omega^2)  
+
+
+  II. THE CHAIN PRIMES' SPLITTING BEHAVIOR
+  ----------------------------------------
+
+  Chain: 3 -> 7 -> 47 -> 2207.
+
+  3: RAMIFIES (3 = 0 mod 3). The singular prime.
+  7: SPLITS (7 = 1 mod 3). The ONLY chain prime that splits!
+  47: INERT (47 = 2 mod 3). Stays whole.
+  2207: 2207 mod 3 = ?
+  2207 mod 3 = 2. INERT.
+
+  Of the four chain primes, ONLY 7 splits in the Eisenstein integers.
+  3 is singular (it IS the hexagonal structure's special prime).
+  47 and 2207 are inert (they pass through the hex lattice unchanged).
+  7 splits: it DECOMPOSES into two conjugate Eisenstein primes.
+
+  THE FORBIDDEN NUMBER IS THE UNIQUE CHAIN PRIME THAT SPLITS.
+
+
+  III. WHAT SPLITTING MEANS GEOMETRICALLY
+  ----------------------------------------
+
+  An INERT prime p creates a CIRCLE of radius p in the Eisenstein norm.
+  It acts uniformly. No preferred direction. No twist.
+
+  A SPLIT prime p = pi * pi_bar creates TWO POINTS on the circle.
+  Each point has norm sqrt(p) and a specific ANGLE (the twist).
+  The two points are CONJUGATE: opposite twists.
+  The DIRECTION matters. The circle is broken into two marked points.
+
+  For 7 = (3+omega)(3+omega^2):
+  pi = 3+omega has angle arctan(sqrt(3)/5) = 19.11 degrees.
+  pi_bar = 3+omega^2 has angle -19.11 degrees.
+  The circle of norm 7 has TWO marked points at +/- 19.11 degrees.
+
+  SPLITTING = SYMMETRY BREAKING.
+  The circle (full rotational symmetry) is broken into two points
+  (only 2-fold symmetry remains: pi <-> pi_bar).
+
+  THE FORBIDDEN NUMBER IS WHERE THE CIRCULAR SYMMETRY BREAKS
+  IN THE HEXAGONAL LATTICE.
+
+
+  IV. WHY ONLY 7 AND NOT 13, 19, 31, ...?
+  ----------------------------------------
+
+  Many primes split in Z[omega]: all p = 1 mod 3.
+  = 7, 13, 19, 31, 37, 43, 61, 67, 73, 79, 97, ...
+
+  What makes 7 SPECIAL among all splitting primes?
+  7 is the SMALLEST prime that is 1 mod 3.
+  It is the FIRST splitting prime.
+
+  Just as 2 is the first prime (and uniquely even),
+  7 is the first SPLITTING prime in Z[omega].
+  2 is special because it's first. 7 is special because it's first.
+
+  The 'first' matters because of the FORMAL GROUP:
+  F_h is commutative. It can handle INERT primes (they don't decompose).
+  But a SPLIT prime introduces two conjugate factors with a TWIST.
+  The first split prime is where the formal group first encounters
+  a decomposition it must handle.
+
+  And 7 is also:
+  - The smallest number where 1/2 + 1/3 + 1/p < 1 (hyperbolic)
+  - L_4 (the Lucas number at the Cayley period index)
+  - M_3 (the Mersenne number at the curvature index)
+  - The imaginary dimension of the octonions
+
+  These are all DIFFERENT REASONS for 7 to be special.
+  The Eisenstein splitting adds one more:
+  7 is the FIRST PRIME THAT DECOMPOSES IN THE HEXAGONAL WORLD.
+
+
+  V. THE PRIMES IN H(T_11) AND THEIR SPLITTING
+  ----------------------------------------
+
+  H(T_11) = 95095 = 5 * 7 * 11 * 13 * 19.
+
+  5: 5 mod 3 = 2, INERT
+  7: 7 mod 3 = 1, SPLITS
+  11: 11 mod 3 = 2, INERT
+  13: 13 mod 3 = 1, SPLITS
+  19: 19 mod 3 = 1, SPLITS
+
+  5: INERT (2 mod 3)
+  7: SPLITS (1 mod 3)
+  11: INERT (2 mod 3)
+  13: SPLITS (1 mod 3)
+  19: SPLITS (1 mod 3)
+
+  H(T_11) = (inert) * (split) * (inert) * (split) * (split)
+  = one inert * three split * one inert.
+  = 5 * (7*13*19) * 11.
+
+  The SPLIT part: 7*13*19 = 1729 = the TAXICAB NUMBER!
+  H(T_11) / |Aut(T_11)| = 95095 / 55 = 1729.
+  The orbit count = the product of the SPLITTING primes.
+
+  THE TAXICAB NUMBER 1729 = THE PRODUCT OF THE SPLITTING PRIMES IN H(T_11).
+
+  1729 = 7 * 13 * 19.
+  Each of these splits in Z[omega].
+  7 = (3+omega)(3+omega^2).
+  13 = (4+omega)(4+omega^2).
+  19 = (5+2*omega)(5+2*omega^2).
+
+  |3+1*omega|^2 = 3^2-3*1+1^2 = 7 = 7? True
+  |4+1*omega|^2 = 4^2-4*1+1^2 = 13 = 13? True
+  |2+5*omega|^2 = 2^2-2*5+5^2 = 19 = 19.
+
+  The Eisenstein factorizations:
+  7 = (3+omega)(3+omega^2)   -- coefficients (3,1)
+  13 = (4+omega)(4+omega^2)   -- coefficients (4,1)
+  19 = ?
+  19 = (2+5*omega)(2+5*omega^2) -- coefficients (2,5)
+
+  The coefficients for {7, 13, 19}: (3,1), (4,1), (?,?).
+  The 'a' values: 3, 4, ... = consecutive integers starting at 3!
+  This is because (a+omega)(a+omega^2) = a^2 - a + 1 for b=1.
+  a^2-a+1 = 7 at a=3, = 13 at a=4, = 21 at a=5 (NOT prime!), = 31 at a=6.
+
+  The sequence a^2-a+1 for a = 1,2,3,4,5,6,7,8,9,10:
+  a= 1: a^2-a+1 =    1  
+  a= 2: a^2-a+1 =    3  prime
+  a= 3: a^2-a+1 =    7  FORBIDDEN
+  a= 4: a^2-a+1 =   13  prime
+  a= 5: a^2-a+1 =   21  FORBIDDEN (21=3*7)
+  a= 6: a^2-a+1 =   31  prime
+  a= 7: a^2-a+1 =   43  prime
+  a= 8: a^2-a+1 =   57  
+  a= 9: a^2-a+1 =   73  prime
+  a=10: a^2-a+1 =   91  
+  a=11: a^2-a+1 =  111  
+  a=12: a^2-a+1 =  133  
+  a=13: a^2-a+1 =  157  prime
+  a=14: a^2-a+1 =  183  
+
+  The polynomial a^2-a+1 generates our FORBIDDEN numbers!
+  a=3: 7 (first forbidden).
+  a=5: 21 (second forbidden).
+
+  a^2 - a + 1 = 7 at a=3. a^2 - a + 1 = 21 at a=5.
+  The forbidden numbers are VALUES of the Eisenstein norm polynomial
+  x^2 - x + 1 at x = 3 and x = 5!
+
+  And x^2 - x + 1 is the MINIMAL POLYNOMIAL of omega (= e^{2*pi*i/3}).
+  omega^2 - omega + 1 = 0. So x^2 - x + 1 = 0 has roots omega, omega^2.
+
+  THE FORBIDDEN NUMBERS ARE THE EISENSTEIN NORM POLYNOMIAL
+  EVALUATED AT THE CURVATURE (3) AND THE PENTAGON (5).
+
+  7 = 3^2 - 3 + 1. The norm polynomial at the curvature quantum.
+  21 = 5^2 - 5 + 1. Wait: 25-5+1 = 21. YES!
+  = the norm polynomial at the pentagon.
+
+  THE FORBIDDEN NUMBERS ARE N(a) = a^2 - a + 1 FOR a = 3, 5.
+  THE CURVATURE AND THE PENTAGON, PASSED THROUGH THE EISENSTEIN NORM.
+
+
+  VI. THE EISENSTEIN NORM POLYNOMIAL IS THE CYCLOTOMIC PHI_6
+  ----------------------------------------
+
+  x^2 - x + 1 = Phi_6(x), the 6th cyclotomic polynomial!
+  Its roots are the PRIMITIVE 6th roots of unity: e^{i*pi/3} and e^{-i*pi/3}.
+  = omega and omega^2 (which are also primitive 3rd roots, shifted).
+
+  Wait: omega = e^{2*pi*i/3} satisfies omega^2+omega+1=0, i.e., x^2+x+1=0 = Phi_3(x).
+  And Phi_6(x) = x^2-x+1 has roots e^{i*pi/3} and e^{-i*pi/3}.
+  These are -omega and -omega^2 (negatives of the cube roots).
+
+  So: Phi_6(a) = a^2 - a + 1.
+  Phi_6(3) = 7.
+  Phi_6(5) = 21 = 3*7.
+
+  The forbidden numbers = Phi_6 evaluated at {3, 5} = {curvature, pentagon}.
+  And Phi_6 = the 6th cyclotomic = the polynomial of the FLAT number.
+
+  6 = the flat number. Phi_6 = the cyclotomic polynomial of 6.
+  The FLAT POLYNOMIAL, evaluated at the curvature and the pentagon,
+  produces the two forbidden numbers.
+
+  THE FORBIDDEN NUMBERS ARE BORN FROM THE FLAT.
+  Phi_6(3) = 7. Phi_6(5) = 21.
+  The sixth cyclotomic polynomial, at the two closing primes.
+
