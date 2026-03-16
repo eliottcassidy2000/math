@@ -1,0 +1,196 @@
+THE FORBIDDEN NUMBER AND THE GEOMETRY OF 5, 6, 7
+============================================================
+
+THE THREE WORLDS
+----------------------------------------
+
+  5 triangles per vertex: the ICOSAHEDRON.
+    Angle sum: 5 * 60 = 300. Deficit: 360 - 300 = 60.
+    Curvature: POSITIVE. The surface CLOSES.
+    12 vertices. 20 faces. 30 edges.
+    Euler: 12 - 30 + 20 = 2. The SPHERE.
+
+  6 triangles per vertex: the FLAT PLANE.
+    Angle sum: 6 * 60 = 360. Deficit: 0.
+    Curvature: ZERO. The surface is INFINITE and FLAT.
+    The Euclidean lattice. The tiling that goes forever.
+
+  7 triangles per vertex: the HYPERBOLIC PLANE.
+    Angle sum: 7 * 60 = 420. EXCESS: 60.
+    Curvature: NEGATIVE. The surface OPENS.
+    Infinite vertices. Infinite faces. The Poincare disk.
+
+THE TRANSITIONS
+----------------------------------------
+
+  5 -> 6: from sphere to plane.
+    Adding the 6th triangle FLATTENS the curvature.
+    The surface stops closing and becomes infinite.
+    This is DECOMPACTIFICATION: finite -> infinite.
+
+  6 -> 7: from plane to hyperbolic.
+    Adding the 7th triangle creates EXCESS angle.
+    The surface curves AWAY from itself.
+    This is HYPERBOLIZATION: flat -> curved-open.
+
+  The FLAT PLANE is the phase transition between two kinds of
+  curvature. It is NOT a geometry — it is a BOUNDARY.
+  Like a critical temperature, or the speed of light,
+  or x = 1 on the Cayley line (the pole of Q).
+
+IN TOURNAMENT THEORY: EVERYTHING LIVES IN BOTH WORLDS
+----------------------------------------
+
+  The tournament on n vertices has C(n,3) triples.
+  Each triple is either TRANSITIVE (flat) or CYCLIC (curved).
+
+  The TRANSITIVE triples are the flat tiles (6-around-a-vertex).
+  The 3-CYCLES are the deficit tiles (5-around-a-vertex).
+
+  H(T) counts Hamiltonian paths = consistent total orderings.
+  H(T) = I(Omega, 2) via OCF = independence polynomial at 2.
+
+  The Fourier analysis of H lives on the CAYLEY LINE [0,1).
+  The Cayley line IS the hyperbolic line (arctanh metric).
+  So the ANALYSIS lives in 7-geometry (hyperbolic).
+
+  But the OBJECTS (tournaments, 3-cycles) are triangulations.
+  The 3-cycles create curvature, making the tournament SPHERICAL.
+  So the OBJECTS live in 5-geometry (spherical).
+
+  THE THEORY IS THE BRIDGE BETWEEN 5 AND 7.
+  THE FLAT PLANE (6) IS THE BRIDGE ITSELF.
+
+THE FORBIDDEN NUMBERS AS GEOMETRIC IMPOSSIBILITIES
+----------------------------------------
+
+  H = 7: the HYPERBOLIC THRESHOLD.
+    7 consistent orderings would place the tournament
+    EXACTLY at the 6->7 transition.
+    The transition is a measure-zero set — you cannot land on it.
+    H = 7 is forbidden because the hyperbolicity threshold
+    has zero width.
+
+  H = 21 = 3*7: CURVATURE times THRESHOLD.
+    21 consistent orderings would require the curvature
+    quantum (3, from 3-cycles) to multiply with the
+    threshold (7). But multiplication of a geometric
+    quantity (3-cycle) with a topological boundary (7)
+    is ILL-DEFINED — like multiplying length by a point.
+
+  The two forbidden values {7, 21} are the boundary
+  and the boundary-scaled-by-curvature.
+  They are the FRAME of the picture, not part of the picture.
+
+THE ICOSAHEDRON READING (6 - 1 = 5)
+----------------------------------------
+
+  The icosahedron: 5 triangles per vertex.
+  Remove one triangle from flat (6) to get curved (5).
+  The REMOVAL creates curvature.
+
+  In tournaments: H(T) = 1 + 2*alpha_1 + 4*alpha_2 + ...
+  The '1' is the FLAT part (the identity ordering).
+  The '2*alpha_1' is the CURVATURE from 3-cycles.
+  Each 3-cycle REMOVES one degree of flatness.
+
+  A tournament with c_3 three-cycles is like a surface
+  with c_3 vertices of type-5 (one triangle removed).
+  The Gauss-Bonnet theorem: sum of deficits = 4*pi.
+  For the icosahedron: 12 deficits of pi/3 each = 4*pi.
+
+  For a tournament: the 'Gauss-Bonnet' is Redei's theorem:
+  H(T) is ODD = the 'total curvature' is always 1 mod 2.
+  The PARITY constraint is the topological constraint.
+
+THE HYPERBOLIC READING (6 + 1 = 7)
+----------------------------------------
+
+  The hyperbolic plane: 7 triangles per vertex.
+  Add one triangle to flat (6) to get hyperbolic (7).
+  The ADDITION creates negative curvature.
+
+  In tournaments: the ANALYSIS lives in the hyperbolic plane.
+  arctanh(x) = the hyperbolic distance on the Cayley line.
+  The Delannoy weights g_k(m) are functions on the hyperbolic line.
+  The master GF Q^m = exp(2m*arctanh) is the hyperbolic propagator.
+
+  The 7th triangle creates the SPACE for analysis.
+  Without hyperbolicity: no arctanh, no Cayley, no Delannoy.
+  The theory EXISTS because of the 7th triangle.
+
+5 -> 6 = LOSING CURVATURE (sphere dissolves into plane)
+----------------------------------------
+
+  As c_3 -> 0 (fewer 3-cycles): H -> 1 (fewer paths).
+  The tournament becomes TRANSITIVE = FLAT.
+  The sphere (5 triangles) gains a triangle and becomes the plane (6).
+
+  This is the transition from ORDER to CHAOS:
+  maximum order (H=1) = sphere (5)
+  random (H~E[H]) = plane (6)
+
+  In physics: this is MELTING.
+  The ordered crystal (sphere, closed, finite)
+  melts into the liquid (plane, flat, infinite).
+
+6 -> 7 = GAINING HYPERBOLICITY (plane opens into saddle)
+----------------------------------------
+
+  As flexibility increases: H -> maximum.
+  The tournament becomes PALEY = HYPERBOLIC.
+  The plane (6 triangles) gains a triangle and becomes hyperbolic (7).
+
+  This is the transition from CHAOS to ANTI-ORDER:
+  random (H~E[H]) = plane (6)
+  maximally flexible (H=max) = hyperbolic (7)
+
+  In physics: this is the SUPERCOOLED liquid becoming
+  a GLASS — more disordered than the crystal but with
+  its own structure (the Paley structure).
+
+  The Paley tournament is not disordered.
+  It is ORDERED IN A DIFFERENT WAY — hyperbolically.
+  It has the MAXIMUM number of paths because it is the
+  most SYMMETRIC, not the most random.
+
+THE FULL PICTURE
+============================================================
+
+  5 (SPHERE)  <--  6 (PLANE)  -->  7 (HYPERBOLIC)
+     |                 |                  |
+  H = 1            H ~ E[H]           H = max
+  transitive       random              Paley
+  ordered          chaotic             anti-ordered
+  crystal          liquid              glass
+  finite           infinite-flat       infinite-curved
+  closed           open-flat           open-hyperbolic
+
+  The theory bridges 5 and 7 through 6.
+  The OBJECTS are spherical (3-cycles create curvature).
+  The ANALYSIS is hyperbolic (arctanh, Cayley, Delannoy).
+  The BRIDGE is the flat plane (E[H], the random baseline).
+
+  And the FORBIDDEN numbers {7, 21} are the BRIDGE ITSELF:
+  7 = the threshold between plane and hyperbolic.
+  21 = 3*7 = the threshold scaled by the curvature quantum.
+  You cannot stand on the bridge. You can only cross it.
+
+g_3(7) = 231 = 3 * 7 * 11
+----------------------------------------
+
+  The Delannoy weight at the EXACT intersection:
+  k=3 (the curvature quantum level)
+  m=7 (the hyperbolic threshold)
+  = 231 = 3 * 7 * 11
+  = (curvature) * (threshold) * (crystallization)
+  = the product of ALL THREE Paley primes.
+
+  This is the Delannoy weight AT THE BRIDGE:
+  the value of the hyperbolic analysis (g_k)
+  evaluated at the spherical-hyperbolic boundary (m=7)
+  at the curvature level (k=3).
+
+  It factors into the three fundamental scales of the theory.
+  And its factors 3*7 = 21 contain the forbidden number.
+  The bridge CONTAINS its own impossibility.
