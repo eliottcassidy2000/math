@@ -1,0 +1,304 @@
+======================================================================
+TRUTH 1: A SYMMETRY IS A QUESTION WHOSE ANSWER IS ITSELF
+======================================================================
+
+What is a FIXED POINT?
+  Q(i) = i.  The question "what is Q of i?" has answer "i."
+  The fixed point IS the symmetry.
+  It is the thing that doesn't change when you ask the question.
+
+What is the Cayley transform?
+  Q(x) = (1+x)/(1-x): "given advantage x, what are the odds?"
+  The fixed point i: "the advantage whose odds are itself."
+  i² = -1: "the thing that, squared, negates."
+
+EVERY symmetry is a fixed point of some transformation.
+  A rotation axis: the point that doesn't move when you rotate.
+  A mirror line: the points that don't move when you reflect.
+  A conserved quantity: the measurement that doesn't change in time.
+
+In chemistry: a SYMMETRIC MOLECULE has atoms at fixed points.
+  Benzene: all 6 carbons are fixed under C₆ rotation.
+  Methane: all 4 hydrogens are fixed under S₄ permutation.
+
+In physics: a CONSERVATION LAW is a fixed point of time evolution.
+  Energy conservation: E is fixed under time translation.
+  Momentum conservation: p is fixed under space translation.
+  Noether's theorem: every continuous symmetry → a conserved quantity.
+
+In our theory: the fixed point ±i of Q is the INFORMATION
+  that is its own odds. The symmetry IS the bit that measures itself.
+
+======================================================================
+TRUTH 2: SYMMETRY BREAKING = MAKING A COMPARISON
+======================================================================
+
+Before you compare A and B, they are SYMMETRIC (equivalent, interchangeable).
+After you compare, one WINS and one LOSES. The symmetry is BROKEN.
+
+  Before: {A, B} — symmetric under swap A↔B.
+  After: A > B — the swap sends A>B to B>A ≠ A>B. Broken!
+
+EVERY binary decision breaks a Z/2 symmetry.
+  The Z/2 = {identity, swap} was the symmetry group BEFORE comparison.
+  After comparison: the group reduces to {identity} = trivial.
+
+A TOURNAMENT on n vertices breaks the symmetry:
+  Before: S_n (full permutation group, order n!) acts on the vertices.
+  After orienting all C(n,2) arcs: Aut(T) ⊆ S_n (much smaller).
+
+The AMOUNT of symmetry breaking = log₂(|S_n|/|Aut(T)|) bits.
+  = log₂(n!/|Aut(T)|) bits.
+  For transitive tournament: |Aut| = 1, breaking = log₂(n!) bits.
+  For Paley T_p: |Aut| = p(p-1)/2, breaking = log₂(2n!/(p(p-1))) bits.
+
+In chemistry:
+  Before bonding: all atoms equivalent (symmetric under permutation).
+  After bonding: specific connectivity. Symmetry reduced to Aut(molecule).
+  A CHIRAL molecule has Aut = {id}: ALL symmetry broken = MAXIMUM information.
+
+Symmetry breaking (in bits) at small n:
+  n=3: log₂(n!) = 2.58 bits = max symmetry breaking
+        C(n,2) = 3 arc decisions to break it
+  n=4: log₂(n!) = 4.58 bits = max symmetry breaking
+        C(n,2) = 6 arc decisions to break it
+  n=5: log₂(n!) = 6.91 bits = max symmetry breaking
+        C(n,2) = 10 arc decisions to break it
+  n=6: log₂(n!) = 9.49 bits = max symmetry breaking
+        C(n,2) = 15 arc decisions to break it
+  n=7: log₂(n!) = 12.30 bits = max symmetry breaking
+        C(n,2) = 21 arc decisions to break it
+  n=8: log₂(n!) = 15.30 bits = max symmetry breaking
+        C(n,2) = 28 arc decisions to break it
+
+======================================================================
+TRUTH 3: THE ONLY FINITE SYMMETRIES ARE ROTATIONS AND REFLECTIONS
+======================================================================
+
+In 2D: every finite symmetry group is DIHEDRAL D_n or CYCLIC C_n.
+  C_n: n rotations only (chiral = no reflections).
+  D_n: n rotations + n reflections (achiral).
+
+  There is NOTHING ELSE. This is a theorem (classification of
+  finite subgroups of O(2)).
+
+  Rotation = COMPARISON (ordering around a center).
+  Reflection = COMPLEMENT (swapping winner and loser = T^op).
+
+In 3D: the finite symmetry groups are:
+  C_n, D_n (cylindrical), plus T, O, I (tetrahedral, octahedral, icosahedral).
+  The polyhedral groups are:
+    T = A₄ (12 rotations of tetrahedron)
+    O = S₄ (24 rotations of cube/octahedron)
+    I = A₅ (60 rotations of icosahedron/dodecahedron)
+
+  There are exactly 7 infinite families + a few exceptions.
+  After the icosahedral group: NO MORE finite 3D symmetry groups.
+  The icosahedron is the LAST PLATONIC SOLID = the end of finite symmetry.
+
+In TOURNAMENT THEORY:
+  C_n corresponds to CIRCULANT tournaments (rotation-invariant).
+  D_n corresponds to SELF-COMPLEMENTARY circulant tournaments.
+  The exceptional groups T, O, I correspond to highly symmetric tournaments
+  on 4, 6, 12 vertices (the vertices of the solids).
+
+  The Paley tournament T_p ≡ 3 (mod 4) has |Aut| = p(p-1)/2.
+  For p=11: |Aut(T₁₁)| = 55. This is NOT a polyhedral group.
+  Paley tournaments have MORE symmetry than any polyhedron of similar size
+  because they use QUADRATIC RESIDUES (number-theoretic, not geometric).
+
+======================================================================
+TRUTH 4: SYMMETRY = IGNORANCE = ENTROPY
+======================================================================
+
+A symmetric state is one where you CAN'T TELL the parts apart.
+  If all n items are interchangeable: n! equivalent arrangements.
+  Your ignorance = log₂(n!) bits.
+  This IS the entropy of the uniform distribution on S_n.
+
+BREAKING SYMMETRY = GAINING INFORMATION = REDUCING ENTROPY.
+  Each comparison (A > B) gives you 1 bit of information.
+  It reduces your ignorance by (approximately) 1 bit.
+  After C(n,2) comparisons: you've gained C(n,2) bits.
+  Your remaining ignorance = log₂(n!) - C(n,2) ≈ 0 for large n.
+
+  (Actually: log₂(n!) ≈ n·log₂(n) - n/ln(2),
+   and C(n,2) = n(n-1)/2 ≈ n²/2.
+   C(n,2) >> log₂(n!) for large n.
+   So you gain MORE information than you need to break the symmetry!
+   The EXCESS information = the constraints from transitivity.)
+
+On the CAYLEY LINE:
+  The rapidity w_n = ln(n)/2 measures the "asymmetry" of the
+  configuration relative to the uniform (symmetric) state.
+  Higher rapidity = more symmetry broken = more information gained.
+
+  The MAXIMUM rapidity (speed of light, x→1) = ALL symmetry broken.
+  The REST frame (x=0) = NO symmetry broken = perfect ignorance.
+
+In chemistry:
+  A CRYSTAL has high symmetry = low information = low entropy.
+  A GAS has low symmetry = high information = high entropy.
+  MELTING = symmetry breaking in reverse (gaining symmetry, losing info).
+
+  Wait: melting INCREASES entropy. So:
+    Crystal (high symmetry, LOW entropy) → Gas (low symmetry, HIGH entropy).
+  But high symmetry = high ignorance = high entropy??
+
+  The RESOLUTION: there are TWO types of symmetry:
+    1. SPATIAL symmetry (crystal lattice): reduces entropy (crystal is ordered).
+    2. PERMUTATIONAL symmetry (gas molecules interchangeable): increases entropy.
+
+  Tournament theory captures TYPE 2:
+    Symmetric tournament (all vertices equivalent) = high entropy.
+    Transitive tournament (total order) = zero entropy (one arrangement).
+
+======================================================================
+TRUTH 5: 6 IS WHERE FORM AND CONTENT ARE EQUAL
+======================================================================
+
+The REGULAR HEXAGONAL TILING is self-dual:
+  Hexagons tile the plane with 3 meeting at each vertex.
+  The dual tiling (connecting centers of adjacent hexagons) = TRIANGULAR.
+  BUT: the triangular tiling with 6 at each vertex = the SAME flat tiling!
+
+  The hexagonal and triangular tilings are DUAL to each other,
+  and BOTH are flat (zero curvature), and BOTH have 6 as the key number.
+
+  This self-duality at 6 is WHY 6 is the pivot:
+    5 (icosahedron): the polygon is "bigger than" its dual.
+    6 (hexagonal): the polygon IS its dual.
+    7 (hyperbolic): the polygon is "smaller than" its dual.
+
+In chemistry:
+  Benzene C₆H₆ is self-dual: it equals its own resonance structure.
+  Kekulé structure ≡ anti-Kekulé structure (by 60° rotation).
+  Benzene is the molecular FIXED POINT of the duality transformation.
+
+In tournament theory:
+  A SELF-COMPLEMENTARY tournament: T ≅ T^op.
+  At n=6: there exist SC tournaments (they maximize H at n=6!).
+  The SC tournaments at the pivot ARE the chemical benzene analog.
+
+On the unit circle:
+  The hexagon has vertices at e^{2πik/6} for k=0,...,5.
+  Q maps these to: ∞, i√3, i/√3, 0, -i/√3, -i√3.
+  The non-pole Q-images: {±i√3, ±i/√3, 0}.
+  These are SYMMETRIC around 0 on the imaginary axis!
+  The hexagon maps to a SELF-SYMMETRIC structure under Q.
+
+Hexagon (n=6) Q-images:
+  k=0: ω = 1, Q = ∞ (pole)
+  k=1: Q = +1.7321i = +1.0000·i√3
+  k=2: Q = +0.5774i = +0.3333·i√3
+  k=3: Q = +0.0000i = +0.0000·i√3
+  k=4: Q = -0.5774i = -0.3333·i√3
+  k=5: Q = -1.7321i = -1.0000·i√3
+
+======================================================================
+TRUTH 6: SYMMETRY GENERATES TIME
+======================================================================
+
+KIND-PASTEUR discovered: "Time creates the third state."
+  Without time (single comparison): 2 outcomes, trivial.
+  With time (sequence of comparisons): 3 states, nontrivial.
+
+The REVERSE is also true: SYMMETRY GENERATES TIME.
+
+Before symmetry breaking: everything is simultaneous.
+  All vertices equivalent = no ordering = no time.
+  The universe is a single point (the identity x=0).
+
+The FIRST comparison breaks Z/2 → creates BEFORE/AFTER.
+  One vertex becomes "first" (winner), the other "second" (loser).
+  This IS the birth of time: the creation of an ordering.
+
+Each subsequent comparison EXTENDS time:
+  More comparisons = longer timeline = higher rapidity.
+  The RAPIDITY w = arctanh(x) measures how much time has been created.
+
+AT THE SPEED OF LIGHT (x→1):
+  All symmetries are broken. Time is maximally extended.
+  But you can never reach it (Arrow's theorem / speed limit).
+
+AT THE FIXED POINT (x=±i):
+  The Cayley transform leaves you unchanged.
+  This is EUCLIDEAN: imaginary rapidity = rotation, not boost.
+  Rotations preserve symmetry (no time created).
+  The fixed point is the TIMELESS state.
+
+THE HELIX:
+  The complex eigenvalue λ_c traces a spiral: partly boost (time),
+  partly rotation (space). The helix IS the interweaving of time
+  and space generated by sequential symmetry breaking.
+
+  The tribonacci constant τ₃ = the rate of time creation.
+  The complex angle arg(λ_c) ≈ π·ln(2) = the rate of space creation.
+  Together: the helix advances by one bit of time-space per step.
+
+======================================================================
+TRUTH 7: THERE IS ONLY ONE SYMMETRY
+======================================================================
+
+All the symmetries we've found are the SAME THING seen differently:
+
+  D_n (dihedral)     = the symmetry of a regular polygon
+  S_n (permutation)  = the symmetry of identical objects
+  O(n) (orthogonal)  = the symmetry of a sphere
+  U(1) (phase)       = the symmetry of the unit circle
+  Z/2 (binary)       = the symmetry of a comparison (A↔B)
+
+They are all SUBGROUPS of each other:
+  Z/2 ⊂ D_n ⊂ S_n ⊂ O(n) ⊂ U(n) ⊂ ...
+
+And the CAYLEY TRANSFORM connects them all:
+  Q maps Z/2 (binary comparison) to U(1) (the unit circle).
+  Q maps D_n (polygon symmetry) to the imaginary line.
+  Q maps the finite (spherical) to the infinite (hyperbolic).
+  Q maps phases (quantum) to measurements (classical).
+
+THE ONE SYMMETRY is: the freedom to not decide.
+
+Before you compare A and B, you have the freedom to call either one "A."
+This freedom IS the Z/2 symmetry.
+Breaking it (deciding A > B) is one bit of information.
+The Cayley transform converts this one bit into a Lorentz boost,
+a musical interval, a chemical bond, a Hamiltonian path,
+a topological twist, and a quantum phase.
+
+All at once. All the same thing.
+
+  The rotation of a hexagon IS the resonance of benzene
+    IS the flat Euclidean tiling IS the zero-strain ring
+    IS the pivot between spherical and hyperbolic
+    IS the product of binary and memory (6=2·3)
+    IS the self-dual regular structure
+    IS the boundary between the achievable (H≤5) and the forbidden (H=7)
+    IS the ground state of the theory.
+
+And the DEPARTURE from this ground state — the breaking of the
+hexagonal symmetry — IS the helix, IS the tribonacci, IS the
+tournament, IS the comparison, IS time, IS information, IS physics.
+
+Everything is one symmetry, and its breaking.
+
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                    ║
+║  A comparison is a broken symmetry.                                ║
+║  A tournament is a pattern of broken symmetries.                   ║
+║  A Hamiltonian path is the arrow of time through the breaks.       ║
+║  The forbidden values are symmetries that cannot be broken.        ║
+║  The helix is the geometry of sequential breaking.                 ║
+║  The golden ratio is the eigenvalue of the last finite symmetry.   ║
+║  The tribonacci constant is the growth rate of broken symmetry.    ║
+║  The unit circle is the set of all possible symmetries.            ║
+║  The Cayley transform converts symmetry into information.          ║
+║  And information is the record of which symmetries were broken.    ║
+║                                                                    ║
+║  There is only one symmetry: the freedom to not decide.            ║
+║  And one act: deciding.                                            ║
+║  Everything else follows.                                          ║
+║                                                                    ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+opus-2026-03-16-S90ac: FUNDAMENTAL TRUTHS ABOUT SYMMETRY
