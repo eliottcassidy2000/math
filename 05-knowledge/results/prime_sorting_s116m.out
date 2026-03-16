@@ -1,0 +1,297 @@
+
+  HOW NUMBERS SORT THEMSELVES
+
+======================================================================
+
+  I. Phi_6 AT EVERY SMALL INTEGER
+  ----------------------------------------
+
+  Phi_6(x) = x^2 - x + 1. The flat polynomial.
+
+     x  Phi_6(x)          factors  meaning
+  -------------------------------------------------------
+    -5        31               31  Mersenne M_5
+    -4        21              3*7  FORBIDDEN-2
+    -3        13               13  F_7
+    -2         7                7  FORBIDDEN-1
+    -1         3                3  CURVATURE
+     0         1                1  identity
+     1         1                1  identity
+     2         3                3  CURVATURE
+     3         7                7  FORBIDDEN-1
+     4        13               13  F_7
+     5        21              3*7  FORBIDDEN-2
+     6        31               31  Mersenne M_5
+     7        43               43  prime
+     8        57             3*19  3*19
+     9        73               73  prime
+    10        91             7*13  7*13 = H_5 centered hex
+    11       111             3*37  3*37
+    12       133             7*19  7*19
+    13       157              157  prime
+    14       183             3*61  
+    15       211              211  
+    16       241              241  
+    17       273           3*7*13  
+    18       307              307  
+    19       343            7*7*7  
+
+  NEGATIVE x values give the SAME sequence (Phi_6(-x) = x^2+x+1 = Phi_3(x)).
+  Wait: Phi_6(-x) = x^2 - (-x) + 1 = x^2 + x + 1 = Phi_3(x).
+  So Phi_6 at negative integers = Phi_3 at positive integers!
+
+  Phi_3(x) = x^2 + x + 1:
+  Phi_3(1) = 3
+  Phi_3(2) = 7
+  Phi_3(3) = 13
+  Phi_3(4) = 21
+  Phi_3(5) = 31
+  Phi_3(6) = 43
+  Phi_3(7) = 57
+  Phi_3(8) = 73
+  Phi_3(9) = 91
+
+  Phi_3(1) = 3 = curvature. Phi_3(2) = 7 = forbidden.
+  Phi_3(3) = 13. Phi_3(4) = 21 = forbidden-2. Phi_3(5) = 31 = Mersenne.
+
+  So Phi_6(x) = Phi_3(x-1) shifted by 1!
+  Phi_6(x) = (x-1)^2 + (x-1) + 1 = x^2 - 2x + 1 + x - 1 + 1 = x^2 - x + 1. CHECK.
+  And Phi_3(x) = x^2 + x + 1 = Phi_6(x+1).
+
+  BOTH cyclotomic polynomials produce the forbidden numbers:
+  Phi_3(2) = 7.  Phi_3(4) = 21.
+  Phi_6(3) = 7.  Phi_6(5) = 21.
+  The inputs {2,4} for Phi_3 differ by 2. The inputs {3,5} for Phi_6 differ by 2.
+  Both use the gap of 2 = the doubler.
+
+
+  II. EVERY NUMBER'S EISENSTEIN TYPE
+  ----------------------------------------
+
+  A number n = product of primes. Each prime is RAMIFIED, SPLIT, or INERT.
+  The number inherits a COMPOSITE type from its factors.
+
+  Define:
+  R(n) = number of ramified prime factors (only 3)
+  S(n) = number of split prime factors (primes = 1 mod 3)
+  I(n) = number of inert prime factors (primes = 2 mod 3)
+
+      n          factors   R  S  I    dominant type  notes
+  -----------------------------------------------------------------
+      1                1   0  0  0             unit  
+      2                2   0  0  1            INERT  
+      3                3   1  0  0         RAMIFIED  
+      4              2*2   0  0  2            INERT  
+      5                5   0  0  1            INERT  
+      6              2*3   1  0  1            INERT  
+      7                7   0  1  0            SPLIT  forbidden-1
+      8            2*2*2   0  0  3            INERT  
+      9              3*3   2  0  0         RAMIFIED  
+     10              2*5   0  0  2            INERT  
+     11               11   0  0  1            INERT  
+     12            2*2*3   1  0  2            INERT  
+     13               13   0  1  0            SPLIT  
+     14              2*7   0  1  1         BALANCED  
+     15              3*5   1  0  1            INERT  
+     21              3*7   1  1  0            SPLIT  forbidden-2
+     28            2*2*7   0  1  2            INERT  perfect, T_7
+     30            2*3*5   1  0  2            INERT  
+     42            2*3*7   1  1  1         BALANCED  Hurwitz
+     55             5*11   0  0  2            INERT  |Aut(T_11)|
+     91             7*13   0  2  0            SPLIT  7*13, hex H_5
+    127              127   0  1  0            SPLIT  Mersenne M_7
+    168        2*2*2*3*7   1  1  3            INERT  |PSL(2,7)|
+    189          3*3*3*7   3  1  0         RAMIFIED  H(T_7)
+   1729          7*13*19   0  3  0            SPLIT  taxicab = orbits
+   6174      2*3*3*7*7*7   2  3  1            SPLIT  Kaprekar
+  95095     5*7*11*13*19   0  3  2            SPLIT  H(T_11)
+
+
+  III. THE SORTING IN H(T_11)
+  ----------------------------------------
+
+  H(T_11) = 95095 = 5 * 7 * 11 * 13 * 19.
+
+  SPLIT primes (= 1 mod 3): 7, 13, 19. Product = 1729 = ORBITS.
+  INERT primes (= 2 mod 3): 5, 11. Product = 55 = SYMMETRY.
+  RAMIFIED (= 3): absent.
+
+  H = ORBITS * SYMMETRY = SPLIT_product * INERT_product.
+  = 1729 * 55 = 95095.
+
+  The ORBITS carry the twist (from Eisenstein splitting).
+  The SYMMETRY passes through unchanged (Eisenstein inertia).
+
+  Does this pattern hold for OTHER Paley tournaments?
+
+  H(T_3) = 3. Factors: {3}. R=1, S=0, I=0. All RAMIFIED.
+  |Aut(T_3)| = 3. H/|Aut| = 1. ORBITS = 1 (trivial).
+  At n=3: the curvature IS the tournament. Everything is singular.
+
+  H(T_7) = 189 = 3^3 * 7. R=3, S=1, I=0.
+  |Aut(T_7)| = 21 = 3 * 7. R=1, S=1, I=0.
+  H/|Aut| = 9 = 3^2. ORBITS = curvature squared. All RAMIFIED.
+
+  Hmm: at n=7, the split prime 7 appears in BOTH H and |Aut|.
+  It doesn't cleanly sort into orbits vs symmetry.
+  The sorting is CLEAN at n=11 but MIXED at n=7.
+
+  Why? Because at n=7, the tournament IS the hexagonal neighborhood.
+  7 vertices = the centered hex. The split prime 7 is BOTH
+  the structure (H contains 7) and the symmetry (|Aut| contains 7).
+  At this scale, structure and symmetry have not yet separated.
+
+  At n=11, they separate: structure primes {7,13,19} go to orbits,
+  symmetry primes {5,11} go to automorphisms.
+  The FIRST CLEAN SEPARATION happens at the Paley prime 11.
+
+
+  IV. THE CURVATURE OF THE PENTAGON AS A NUMBER
+  ----------------------------------------
+
+  The angular deficit at each vertex of a Platonic solid:
+  deficit = 2*pi - (face_angle * faces_per_vertex).
+
+  Deficit as a fraction of pi:
+
+            Solid  face  f/v     deficit   = pi/  Phi_6(denom)
+  ------------------------------------------------------------
+      Tetrahedron     3    3           1*pi      1             1
+             Cube     4    3         1/2*pi      2             3
+       Octahedron     3    4         2/3*pi      3             7
+     Dodecahedron     5    3         1/5*pi      5            21
+      Icosahedron     3    5         1/3*pi      3             7
+
+  Wait, let me recompute more carefully.
+
+      Tetrahedron: deficit = 1 * pi, Phi_6(1) = 1
+             Cube: deficit = 1/2 * pi, Phi_6(2) = 3
+       Octahedron: deficit = 2/3 * pi, Phi_6(3) = 7
+     Dodecahedron: deficit = 1/5 * pi, Phi_6(5) = 21
+      Icosahedron: deficit = 1/3 * pi, Phi_6(3) = 7
+
+  Tetrahedron: deficit = 1*pi = pi/1. Phi_6(1) = 1. IDENTITY.
+  Cube: deficit = 1/2*pi = pi/2. Phi_6(2) = 3. CURVATURE.
+  Octahedron: deficit = 2/3*pi. Phi_6(3) = 7. FORBIDDEN.
+  Dodecahedron: deficit = 1/5*pi = pi/5. Phi_6(5) = 21. FORBIDDEN-2.
+  Icosahedron: deficit = 1/3*pi = pi/3. Phi_6(3) = 7. FORBIDDEN.
+
+  The deficits pi/k give Phi_6(k) = our fundamental numbers.
+  AND the deficits themselves are pi * {1, 1/2, 2/3, 1/5, 1/3}.
+
+  The DENOMINATORS: 1, 2, 3, 5, 3.
+  = {1, 2, 3, 5} = the first four primes (with 3 repeated for dual pair)!
+
+
+  V. THE DUAL PAIRS AND THEIR SYMMETRY
+  ----------------------------------------
+
+  Tetrahedron is SELF-DUAL. Deficit denominator 1.
+  Cube <-> Octahedron. Deficit denominators 2 and 3.
+  Dodecahedron <-> Icosahedron. Deficit denominators 5 and 3.
+
+  Each dual pair shares the SAME symmetry group but has
+  DIFFERENT deficit denominators.
+
+  Cube/Octahedron: Phi_6(2)*Phi_6(3) = 3*7 = 21 = FORBIDDEN-2!
+  Dodecahedron/Icosahedron: Phi_6(5)*Phi_6(3) = 21*7 = 147 = 3*7^2.
+
+  The PRODUCT of Phi_6 values over a dual pair:
+  {Cube, Oct}: 3*7 = 21.
+  {Dodec, Ico}: 21*7 = 147.
+  {Tetra, Tetra}: 1*1 = 1.
+
+  21 = the forbidden number AGAIN.
+  The Cube-Octahedron dual pair's Phi_6 product IS the second forbidden.
+  147 = 3*7^2 = the composed-forbidden Q-value (from rapidity session).
+
+
+  VI. WHAT THIS MEANS FOR UNDERSTANDING NUMBERS
+  ----------------------------------------
+
+  Every positive integer n has:
+
+  1. A FACTORIZATION into primes.
+  2. Each prime has an EISENSTEIN TYPE (ramified/split/inert).
+  3. The split primes CREATE STRUCTURE (orbits, twist, chirality).
+  4. The inert primes ARE SYMMETRY (pass through unchanged).
+  5. The ramified prime (3) IS THE LATTICE ITSELF.
+
+  STRUCTURE-DOMINANT numbers: more split factors than inert.
+    7 (S=1), 13 (S=1), 19 (S=1), 91=7*13 (S=2), 1729=7*13*19 (S=3).
+    These numbers create more structure than symmetry.
+    They are the 'interesting' numbers — the ones where things happen.
+
+  SYMMETRY-DOMINANT numbers: more inert factors than split.
+    2 (I=1), 5 (I=1), 11 (I=1), 55=5*11 (I=2).
+    These numbers preserve symmetry. They are the 'stable' numbers.
+
+  BALANCED numbers: equal split and inert.
+    42=2*3*7 (R=1,S=1,I=1), 6174=2*3^2*7^3 (R=2,S=3,I=1).
+    These sit at the INTERFACE of structure and symmetry.
+
+  RAMIFIED-DOMINANT: powers of 3.
+    3, 9, 27, 81. Pure curvature. The lattice talking to itself.
+
+  This classification is ADDITIVE in rapidity:
+  rapidity(n) = R*rapidity(3) + S*sum(split rapidities) + I*sum(inert rapidities).
+  The rapidity of any number decomposes into lattice + structure + symmetry.
+
+
+  VII. THE Phi_6 ORBIT
+  ----------------------------------------
+
+  Iterating Phi_6:
+  x -> Phi_6(x) = x^2 - x + 1.
+
+  Starting from x = 1:
+  Phi_6(1) = 1
+  Phi_6(1) = 1
+  Phi_6(1) = 1
+  Phi_6(1) = 1
+  Phi_6(1) = 1
+  Phi_6(1) = 1
+
+  Starting from x = 2:
+  Phi_6(2) = 3 = [3]
+  Phi_6(3) = 7 = [7]
+  Phi_6(7) = 43 = [43]
+  Phi_6(43) = 1807 = [13, 139]
+  Phi_6(1807) = 3263443 = [3263443]
+
+  Starting from x = 3:
+  Phi_6(3) = 7 = [7]
+  Phi_6(7) = 43 = [43]
+  Phi_6(43) = 1807 = [13, 139]
+  Phi_6(1807) = 3263443 = [3263443]
+
+  Starting from 1: 1 -> 1 -> 1 -> ... FIXED POINT.
+  Starting from 2: 2 -> 3 -> 7 -> 43 -> 1807 -> ...
+  Starting from 3: 3 -> 7 -> 43 -> 1807 -> ...
+
+  THE ORBIT OF 2 UNDER Phi_6: 2, 3, 7, 43, 1807, ...
+  CONTAINS THE CURVATURE (3) AND THE FORBIDDEN (7)!
+
+  43 = Phi_6(7) = 7^2 - 7 + 1 = 43. Prime.
+  43 is the 14th prime. 14 = 2*7. Hmm.
+  And 1807 = Phi_6(43) = 43^2 - 43 + 1 = 1849 - 43 + 1 = 1807.
+  1807 = [13, 139]
+
+  COMPARE TWO ITERATIONS:
+  Phi_6: x -> x^2 - x + 1:  2, 3, 7, 43, 1807, ...
+  Lucas-Lehmer: x -> x^2 - 2:  4, 7, 47, 2207, 4870847, ...
+  (starting from L_3=4)
+
+  Both produce 7 early on!
+  Phi_6 gets to 7 at step 2 (from 2).
+  Lucas-Lehmer gets to 7 at step 1 (from 4).
+
+  After 7, they DIVERGE: Phi_6 gives 43, Lucas-Lehmer gives 47.
+  The difference: Phi_6 subtracts x (a first-order term).
+  Lucas-Lehmer subtracts 2 (a constant).
+  Phi_6 = x^2 - x + 1. LL = x^2 - 2. Phi_6 = LL + (x-1) - 2 + 1 = LL + x - 2.
+  At x=7: Phi_6(7) = 43. LL(7) = 47. Difference = 4 = the period!
+
+  THE TWO SEQUENCES DIFFER BY THE CAYLEY PERIOD AT x=7.
+  Phi_6(7) + 4 = 43 + 4 = 47 = LL(7).
+  The cyclotomic and the Chebyshev are separated by Q's period.
