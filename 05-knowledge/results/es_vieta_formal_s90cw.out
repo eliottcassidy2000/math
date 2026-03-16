@@ -1,0 +1,138 @@
+
+ERDOS-STRAUS VIA VIETA JUMPING = FORMAL GROUP ON FACTORIZATIONS
+=================================================================
+
+ES solution counts for primes up to 500:
+    p | #sols | mod 4 | mod 7 | mod 42 | Bott | min a |       note
+------------------------------------------------------------
+    2 |     1 |     2 |     2 |     2 |    2 |     1 |       HARD
+    3 |     2 |     3 |     3 |     3 |    3 |     1 |       HARD
+    5 |     2 |     1 |     5 |     5 |    5 |     2 |       HARD
+    7 |     4 |     3 |     0 |     7 |    7 |     2 |        KEY
+   11 |     5 |     3 |     4 |    11 |    3 |     3 |        KEY
+   13 |     3 |     1 |     6 |    13 |    5 |     4 |       HARD
+   17 |     2 |     1 |     3 |    17 |    1 |     5 |       HARD
+   19 |     5 |     3 |     5 |    19 |    3 |     5 |           
+   23 |    11 |     3 |     2 |    23 |    7 |     6 |           
+   29 |     5 |     1 |     1 |    29 |    5 |     8 |           
+   37 |     5 |     1 |     2 |    37 |    5 |    10 |           
+   41 |     4 |     1 |     6 |    41 |    1 |    11 |           
+   47 |    18 |     3 |     5 |     5 |    7 |    12 |        KEY
+   61 |     5 |     1 |     5 |    19 |    5 |    16 |           
+   73 |     5 |     1 |     3 |    31 |    1 |    20 |           
+   89 |     5 |     1 |     5 |     5 |    1 |    23 |           
+   97 |     3 |     1 |     6 |    13 |    1 |    25 |       HARD
+  127 |    13 |     3 |     1 |     1 |    7 |    32 |        KEY
+  193 |     4 |     1 |     4 |    25 |    1 |    50 |           
+  241 |     4 |     1 |     3 |    31 |    1 |    62 |           
+  313 |     5 |     1 |     5 |    19 |    1 |    80 |           
+  421 |     5 |     1 |     1 |     1 |    5 |   106 |           
+
+Hardest primes (fewest solutions):
+  p=    2:   1 solutions, mod 4=2, mod 7=2, mod 42=2, Bott=2
+  p=    3:   2 solutions, mod 4=3, mod 7=3, mod 42=3, Bott=3
+  p=    5:   2 solutions, mod 4=1, mod 7=5, mod 42=5, Bott=5
+  p=   17:   2 solutions, mod 4=1, mod 7=3, mod 42=17, Bott=1
+  p=   13:   3 solutions, mod 4=1, mod 7=6, mod 42=13, Bott=5
+  p=   97:   3 solutions, mod 4=1, mod 7=6, mod 42=13, Bott=1
+  p=    7:   4 solutions, mod 4=3, mod 7=0, mod 42=7, Bott=7
+  p=   41:   4 solutions, mod 4=1, mod 7=6, mod 42=41, Bott=1
+  p=  193:   4 solutions, mod 4=1, mod 7=4, mod 42=25, Bott=1
+  p=  241:   4 solutions, mod 4=1, mod 7=3, mod 42=31, Bott=1
+  p=   11:   5 solutions, mod 4=3, mod 7=4, mod 42=11, Bott=3
+  p=   19:   5 solutions, mod 4=3, mod 7=5, mod 42=19, Bott=3
+  p=   29:   5 solutions, mod 4=1, mod 7=1, mod 42=29, Bott=5
+  p=   37:   5 solutions, mod 4=1, mod 7=2, mod 42=37, Bott=5
+  p=   61:   5 solutions, mod 4=1, mod 7=5, mod 42=19, Bott=5
+
+Mean solution count by residue class:
+
+  By mod 4:
+    mod 4= 1: mean=    7.3, count= 43, min=  2, max=  14
+    mod 4= 3: mean=   20.2, count= 49, min=  4, max=  66
+
+  By mod 7:
+    mod 7= 0: mean=    4.0, count=  1, min=  4, max=   4
+    mod 7= 1: mean=   13.1, count= 15, min=  5, max=  50
+    mod 7= 2: mean=   14.3, count= 16, min=  5, max=  51
+    mod 7= 3: mean=   15.2, count= 16, min=  2, max=  66
+    mod 7= 4: mean=   13.9, count= 14, min=  4, max=  42
+    mod 7= 5: mean=   14.7, count= 15, min=  5, max=  39
+    mod 7= 6: mean=   14.6, count= 15, min=  3, max=  35
+
+  By Bott:
+    Bott= 1: mean=    6.0, count= 20, min=  2, max=   9
+    Bott= 3: mean=   14.2, count= 24, min=  5, max=  35
+    Bott= 5: mean=    8.4, count= 23, min=  3, max=  14
+    Bott= 7: mean=   26.0, count= 25, min=  4, max=  66
+
+  By mod 42:
+    mod 42= 1: mean=   10.7, count=  7, min=  5, max=  20
+    mod 42= 5: mean=   17.6, count=  7, min=  5, max=  39
+    mod 42= 7: mean=    4.0, count=  1, min=  4, max=   4
+    mod 42=11: mean=   17.6, count=  8, min=  5, max=  42
+    mod 42=13: mean=   11.5, count=  8, min=  3, max=  26
+    mod 42=17: mean=   19.9, count=  8, min=  2, max=  66
+    mod 42=19: mean=   12.1, count=  8, min=  5, max=  31
+    mod 42=23: mean=   17.9, count=  9, min=  9, max=  51
+    mod 42=25: mean=    8.8, count=  6, min=  4, max=  14
+    mod 42=29: mean=   15.1, count=  8, min=  5, max=  50
+    mod 42=31: mean=   10.5, count=  8, min=  4, max=  19
+    mod 42=37: mean=    9.7, count=  7, min=  5, max=  17
+    mod 42=41: mean=   18.1, count=  7, min=  4, max=  35
+
+Correlation: mod 42 residue vs ES difficulty
+  mod 42 =  1: mean solutions =    10.7 (7 primes)
+  mod 42 =  5: mean solutions =    17.6 (7 primes)
+  mod 42 = 11: mean solutions =    19.4 (7 primes)
+  mod 42 = 13: mean solutions =    12.7 (7 primes)
+  mod 42 = 17: mean solutions =    22.4 (7 primes)
+  mod 42 = 19: mean solutions =    13.1 (7 primes)
+  mod 42 = 23: mean solutions =    18.8 (8 primes)
+  mod 42 = 25: mean solutions =     8.8 (6 primes)
+  mod 42 = 29: mean solutions =    16.6 (7 primes)
+  mod 42 = 31: mean solutions =    10.7 (7 primes)
+  mod 42 = 37: mean solutions =    10.5 (6 primes)
+  mod 42 = 41: mean solutions =    20.5 (6 primes)
+
+Split vs Inert (in Q(i)) and ES difficulty:
+  Split (p=1 mod 4): mean = 7.3, min = 2, n = 43
+  Inert (p=3 mod 4): mean = 20.2, min = 4, n = 49
+  Ratio split/inert: 0.361
+
+Split vs Inert (in Q(phi) = Q(sqrt(5))) and ES difficulty:
+  Split in Q(phi): mean = 16.7, n = 45
+  Inert in Q(phi): mean = 11.8, n = 47
+
+
+THE VIETA-FORMAL GROUP CONNECTION
+====================================
+
+The Erdos-Straus decomposition 4/p = 1/(pk) + 1/b + 1/c
+reduces via Vieta to: FACTOR p^2*k^2 as d1*d2 where
+b = (d1+pk)/(4k-1) and c = (d2+pk)/(4k-1) are positive integers.
+
+The number of ES decompositions = number of valid factorizations of p^2*k^2
+summed over all k.
+
+The factorization count depends on:
+  d(p^2*k^2) = number of divisors of p^2*k^2.
+  For k=1: d(p^2) = 3 (divisors: 1, p, p^2).
+  For k=2: d(4p^2) = d(4)*d(p^2) = 3*3 = 9 (if gcd(4,p)=1).
+
+More divisors = more potential solutions.
+But the divisibility condition (4k-1) | (d+pk) filters most out.
+
+The FORMAL GROUP enters through the Cayley transform:
+  The factorization d1*d2 = p^2*k^2 is a MULTIPLICATIVE decomposition.
+  This is the formal group's native operation.
+  The (4k-1) divisibility is the ADDITIVE constraint
+  translated to the multiplicative side via Vieta.
+
+THE S/A DUALITY IN ES:
+  ADDITIVE (antisymmetric): 4/p = sum of unit fractions.
+  MULTIPLICATIVE (symmetric): factor p^2*k^2 as d1*d2.
+  VIETA JUMPING: the bridge between A and S.
+  Solution count = intersection of A and S constraints.
+
+opus-2026-03-16-S90cw: ERDOS-STRAUS VIA VIETA = FORMAL GROUP ON FACTORIZATIONS
