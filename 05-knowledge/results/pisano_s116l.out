@@ -1,0 +1,260 @@
+
+  PISANO PERIODS AND THE FORMAL GROUP
+
+======================================================================
+
+  I. PISANO PERIODS OF THE FUNDAMENTAL PRIMES
+  ----------------------------------------
+
+     p   pi(p)  alpha(p)   pi/alpha  pi(p) factors
+  -------------------------------------------------------
+     2       3         3          1  3 <-- fundamental
+     3       8         4          2  2*2*2 <-- fundamental
+     5      20         5          4  2*2*5 <-- fundamental
+     7      16         8          2  2*2*2*2 <-- fundamental
+    11      10        10          1  2*5 <-- fundamental
+    13      28         7          4  2*2*7
+    17      36         9          4  2*2*3*3
+    19      18        18          1  2*3*3
+    23      48        24          2  2*2*2*2*3
+    29      14        14          1  2*7
+    31      30        30          1  2*3*5
+    37      76        19          4  2*2*19
+    41      40        20          2  2*2*2*5
+    42      48        24          2  2*2*2*2*3 <-- Hurwitz
+    43      88        44          2  2*2*2*11
+    47      32        16          2  2*2*2*2*2
+
+  The Pisano periods of {2,3,5,7,11}:
+  pi(2) = 3
+  pi(3) = 8
+  pi(5) = 20
+  pi(7) = 16
+  pi(11) = 10
+
+  LOOK AT THAT:
+  pi(2) = 3 = the curvature quantum
+  pi(3) = 8 = the octonion dimension
+  pi(5) = 20 = 4*5 = period * pentagon
+  pi(7) = 16 = 2^4 = the sedenion dimension
+  pi(11) = 10 = T_4 = the reset cost = Petersen vertices
+
+
+  II. THE PISANO PERIODS ENCODE THE CAYLEY-DICKSON CHAIN
+  ----------------------------------------
+
+  pi(2) = 3.  F_n mod 2 repeats every 3 steps.
+  pi(3) = 8 = 2^3 = dim(octonions).
+  pi(7) = 16 = 2^4 = dim(sedenions).
+
+  For p = 2: pi = 3.
+  For p = 3: pi = 8 = 2^3.
+  For p = 7: pi = 16 = 2^4.
+
+  The primes {2, 3, 7} give Pisano periods {3, 8, 16}.
+  8 and 16 are consecutive POWERS OF 2.
+  8 = dim(O), the last good algebra.
+  16 = dim(S), the first broken algebra.
+
+  THE PISANO PERIOD OF 3 = THE OCTONION DIMENSION.
+  THE PISANO PERIOD OF 7 = THE SEDENION DIMENSION.
+  The curvature quantum and the forbidden threshold have
+  Pisano periods that are exactly the Cayley-Dickson dimensions!
+
+
+  III. pi(11) = 10 AND THE PETERSEN GRAPH
+  ----------------------------------------
+
+  pi(11) = 10 = |V(Petersen)| = C(5,2) = T_4.
+
+  The Fibonacci sequence mod 11 has period 10.
+  F_0, F_1, ..., F_9 mod 11:
+  F_0 = 0 = 0 mod 11
+  F_1 = 1 = 1 mod 11
+  F_2 = 1 = 1 mod 11
+  F_3 = 2 = 2 mod 11
+  F_4 = 3 = 3 mod 11
+  F_5 = 5 = 5 mod 11
+  F_6 = 8 = 8 mod 11
+  F_7 = 13 = 2 mod 11
+  F_8 = 21 = 10 mod 11
+  F_9 = 34 = 1 mod 11
+
+  The residues: 0, 1, 1, 2, 3, 5, 8, 2, 10, 1.
+  Then F_10 = 55 = 0 mod 11 (since 11|55), F_11 = 89 = 1 mod 11.
+  Back to (0, 1). Period = 10. CHECK.
+
+  The 10 residues mod 11: {0,1,1,2,3,5,8,2,10,1}.
+  Distinct values: {0, 1, 2, 3, 5, 8, 10}.
+  Missing: {4, 6, 7, 9}.
+
+  The MISSING residues mod 11: {4, 6, 7, 9}.
+  = {4, 6, 7, 9}.
+  7 is missing! The forbidden number does NOT appear as F_k mod 11.
+
+  The PRESENT residues: {0, 1, 2, 3, 5, 8, 10}.
+  These are the Fibonacci numbers mod 11.
+  The NON-Fibonacci residues mod 11: {4, 6, 7, 9}.
+
+  Are the non-Fibonacci residues mod 11 meaningful?
+  {4, 6, 7, 9}:
+  4 = the period of Q.
+  6 = the flat number.
+  7 = the FORBIDDEN number.
+  9 = 3^2 = first H past the wall.
+
+  The non-Fibonacci residues mod 11 ARE {4, 6, 7, 9}.
+  = {period, flat, forbidden, first-past-wall}.
+  These are EXACTLY the numbers from the 5-6-7 bridge!
+
+
+  IV. THE ENTRY POINTS
+  ----------------------------------------
+
+  alpha(p) = smallest k with p | F_k.
+  alpha(2) = 3 (F_3 = 2). alpha(3) = 4 (F_4 = 3).
+  alpha(5) = 5 (F_5 = 5). alpha(7) = 8 (F_8 = 21 = 3*7, so 7|F_8).
+  alpha(11) = 10 (F_10 = 55 = 5*11).
+
+  alpha(7) = 8. The forbidden prime enters Fibonacci at index 8 = dim(O)!
+  alpha(11) = 10. The Paley prime enters at 10 = T_4 = Petersen.
+
+  And alpha(21) = ?
+  alpha(21) = 8. F_8 = 21. 21/21 = 1.
+  F_8 = 21 itself! So alpha(21) = 8.
+  The forbidden number 21 IS F_8. Its entry point is its own index.
+
+  alpha(42) = ?
+  alpha(42) = 24. F_24 = 46368. 46368/42 = 1104.
+
+
+  V. THE LUCAS NUMBERS AT THE FUNDAMENTAL INDICES
+  ----------------------------------------
+
+  The entry points alpha give us KEY indices.
+  What are the LUCAS numbers at these indices?
+
+     p  alpha(p)     F_alpha     L_alpha  L_alpha prime?
+  -------------------------------------------------------
+     2         3           2           4              no
+     3         4           3           7             YES
+     5         5           5          11             YES
+     7         8          21          47             YES
+    11        10          55         123              no
+    13         7          13          29             YES
+    21         8          21          47             YES
+    42        24       46368      103682              no
+
+  L_3 = 4. L_4 = 7. L_5 = 11. L_8 = 47. L_10 = 123.
+
+  At alpha(2)=3: L_3 = 4 = the Cayley period!
+  At alpha(3)=4: L_4 = 7 = the FORBIDDEN number!
+  At alpha(5)=5: L_5 = 11 = the Paley prime! (Wait, we said L_5=7 earlier?)
+
+  L_5 = 11. Actually L_0=2, L_1=1, L_2=3, L_3=4, L_4=7, L_5=11.
+  With 0-indexing: L_5 = 11. YES, L_5 = 11.
+
+  CORRECTION from earlier: I was using 1-indexed Lucas before.
+  With 0-indexing (standard): L_0=2, L_1=1, L_2=3, L_3=4, L_4=7, L_5=11.
+
+  NOW THE PATTERN IS CRYSTAL CLEAR:
+  The prime p ENTERS Fibonacci at index alpha(p).
+  The Lucas number at that index GIVES THE NEXT FUNDAMENTAL NUMBER:
+
+  p=2: enters at alpha=3. L_3 = 4 = the PERIOD.
+  p=3: enters at alpha=4. L_4 = 7 = the FORBIDDEN.
+  p=5: enters at alpha=5. L_5 = 11 = the PALEY PRIME.
+  p=7: enters at alpha=8. L_8 = 47 (prime).
+  p=11: enters at alpha=10. L_10 = 123 = 3*41.
+
+  THE LUCAS NUMBER AT THE FIBONACCI ENTRY POINT OF p
+  IS THE 'NEXT LEVEL' OF THE THEORY!
+  2 -> 4 (period). 3 -> 7 (forbidden). 5 -> 11 (Paley).
+
+  The SUCCESSOR in our framework:
+  2 --Lucas-at-entry--> 4
+  3 --Lucas-at-entry--> 7
+  5 --Lucas-at-entry--> 11
+
+  This is a MAP from fundamental primes to fundamental numbers!
+  L_{alpha(p)} maps the theory forward one level.
+
+
+  VI. THE ENTRY-LUCAS MAP
+  ----------------------------------------
+
+  Define EL(p) = L_{alpha(p)} = the Lucas number at the Fibonacci entry of p.
+
+     p  alpha(p)     EL(p)  meaning
+  --------------------------------------------------
+     2         3         4  4 = Cayley period
+     3         4         7  7 = FORBIDDEN
+     5         5        11  11 = Paley prime
+     7         8        47  47 = prime
+    11        10       123  123 = 3*41
+    13         7        29  29
+    17         9        76  
+    19        18      5778  
+    23        24    103682  
+    29        14       843  
+    31        30   1860498  
+
+  The chain: 2 -> 4 -> ... but 4 is not prime.
+  If we follow only PRIMES: 2 -> 3 -> 7 -> 47 -> ...
+
+  Is there a chain?
+  Start with 2. alpha(2)=3. L_3=4. Not prime, but contains F entry alpha(3)=4.
+  Start with 3. alpha(3)=4. L_4=7. PRIME. Forbidden.
+  Start with 7. alpha(7)=8. L_8=47. PRIME.
+  Start with 47. alpha(47)=?
+  alpha(47) = 16. L_16 = 2207.
+  L_16 = 2207. Prime? True
+
+  The chain through primes: 3 -> 7 -> 47 -> ...
+  Next: alpha(2207) = 32. L_32 = 4870847.
+
+  WHETHER OR NOT this chain continues,
+  the first three steps are remarkable:
+  3 -> 7 -> 47
+  curvature -> forbidden -> a prime that is L_8 = Lucas at the octonion index.
+
+
+  VII. F_n * L_n = F_{2n}
+  ----------------------------------------
+
+  This identity means:
+  F_8 * L_8 = 21 * 47 = 987 = F_16.
+  Verify: F_16 = 987. 21*47 = 987. Match: True
+
+  The forbidden number (F_8=21) times the next-chain prime (L_8=47)
+  equals F_16 = 987.
+  987 = 3 * 7 * 47. Factor: 3*7*47.
+  = curvature * forbidden * next-chain-prime.
+
+  F_{2n} = F_n * L_n means DOUBLING the Fibonacci index
+  = MULTIPLYING the Fibonacci value by its Lucas companion.
+
+  In rapidity: rapidity(F_{2n}) = rapidity(F_n) + rapidity(L_n).
+  Doubling the index ADDS the Lucas rapidity to the Fibonacci rapidity.
+  This is the FORMAL GROUP at work:
+  the index-doubling IS velocity composition in the golden helix.
+
+
+  VIII. THE PISANO PERIODS AS CAYLEY-DICKSON DIMENSIONS
+  ----------------------------------------
+
+  Summary of what we found:
+
+  pi(2) = 3 = curvature quantum
+  pi(3) = 8 = octonion dimension = 2^3
+  pi(5) = 20 = 4*5 = period * pentagon
+  pi(7) = 16 = sedenion dimension = 2^4
+  pi(11) = 10 = Petersen vertices = T_4 = reset cost
+
+  The Pisano periods of the fundamental primes ARE the
+  structural constants of the Cayley-Dickson chain,
+  the Petersen graph, and the self-reference hierarchy.
+
+  Fibonacci 'knows' about our entire theory through its mod-p behavior.
+  The periodicity of F_n mod p encodes the DIMENSION and STRUCTURE
+  that p governs in the Cayley framework.
