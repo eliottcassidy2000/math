@@ -1,0 +1,319 @@
+
+  THE CAYLEY HELIX
+
+======================================================================
+
+  I. WHAT WE NEED TO SOLVE
+  ----------------------------------------
+
+  Over the reals, arctanh(x) is defined only for |x| < 1.
+  At x = 1: pole. At x > 1: undefined (real-valued).
+  But many important quantities LIVE past x = 1:
+
+  - tau (tribonacci) = 1.839: past the pole.
+  - phi (golden) = 1.618: past the pole.
+  - 2, 3, 7, 21, all integers > 1: past the pole.
+
+  To handle these, we need to EXTEND arctanh beyond [-1,1].
+
+  The complex extension: arctanh(x) = (1/2)*ln((1+x)/(1-x)).
+  For x > 1: (1+x)/(1-x) is NEGATIVE.
+  ln(negative) = ln(|negative|) + i*pi.
+  So: arctanh(x) = (1/2)*ln(|(1+x)/(1-x)|) + i*pi/2.
+
+  The IMAGINARY PART is always +/- pi/2 for x outside [-1,1].
+  The REAL PART is (1/2)*ln(|(1+x)/(x-1)|).
+
+  arctanh(1.100) = 1.522261 + 0.5000*pi*i
+  arctanh(1.500) = 0.804719 + 0.5000*pi*i
+  arctanh(1.618) = 0.721818 + 0.5000*pi*i
+  arctanh(2.000) = 0.549306 + 0.5000*pi*i
+  arctanh(3.000) = 0.346574 + 0.5000*pi*i
+  arctanh(7.000) = 0.143841 + 0.5000*pi*i
+  arctanh(21.000) = 0.047655 + 0.5000*pi*i
+
+  For ALL x > 1: imaginary part = pi/2 exactly.
+  The real part = (1/2)*ln((x+1)/(x-1)) = arctanh(1/x) + correction.
+
+  Actually: for x > 1,
+  arctanh(x) = arctanh(1/x) + i*pi/2.
+  PROOF: arctanh(x) = (1/2)*ln((1+x)/(1-x))
+  = (1/2)*ln(-(1+x)/(x-1))
+  = (1/2)*(ln((1+x)/(x-1)) + i*pi)
+  = (1/2)*ln((1+x)/(x-1)) + i*pi/2
+  And (1+x)/(x-1) = (1+x)/(x-1) = Q(1/x) (since 1/x < 1).
+  So (1/2)*ln(Q(1/x)) = arctanh(1/x).
+  Therefore: arctanh(x) = arctanh(1/x) + i*pi/2. QED.
+
+  x=1.618: arctanh(x) = 0.721818+1.570796i, arctanh(1/x)+ipi/2 = 0.721818+1.570796i, match: True
+  x=2.000: arctanh(x) = 0.549306+1.570796i, arctanh(1/x)+ipi/2 = 0.549306+1.570796i, match: True
+  x=7.000: arctanh(x) = 0.143841+1.570796i, arctanh(1/x)+ipi/2 = 0.143841+1.570796i, match: True
+
+
+  II. THE HELIX STRUCTURE
+  ----------------------------------------
+
+  arctanh(x) for x traversing the entire real line:
+
+  x < -1: Re = arctanh(1/x), Im = -pi/2
+  -1 < x < 1: Re = arctanh(x), Im = 0
+  x > 1: Re = arctanh(1/x), Im = +pi/2
+
+  The imaginary part JUMPS by pi/2 at each pole (x = +/-1).
+  Going around the full real line:
+  ...(-inf, -1): Im = -pi/2
+  (-1, 1): Im = 0
+  (1, inf): Im = +pi/2
+
+  If we continue through COMPLEX x, the imaginary part
+  wraps around continuously. The full picture is a HELIX:
+  the real part increases monotonically,
+  the imaginary part spirals with period 2*pi.
+
+  The PERIOD of the spiral: 2*pi*i in the complex logarithm.
+  Each full turn of the helix = one period of the imaginary part.
+  Q^4 = identity corresponds to the helix advancing by 4 * (pi/2) = 2*pi
+  in the imaginary direction = ONE FULL TURN.
+
+  Q^1: advance pi/2 (quarter turn). From real to imaginary.
+  Q^2: advance pi (half turn). From real to negative real.
+  Q^3: advance 3*pi/2 (three-quarter turn).
+  Q^4: advance 2*pi (full turn). Return to start.
+
+  THE PERIOD-4 SYMMETRY OF Q IS THE HELIX MAKING ONE FULL TURN.
+
+
+  III. THE THREE MODES OF ACCUMULATION ON THE HELIX
+  ----------------------------------------
+
+  e: GROWTH. Moving along the REAL axis of the helix.
+     The helix stretches but doesn't turn.
+     Pure real rapidity. Im = 0.
+
+  pi: ROTATION. Moving along the IMAGINARY axis of the helix.
+     The helix turns but doesn't stretch.
+     Pure imaginary rapidity. Re = 0.
+
+  phi: SELF-SIMILARITY. Moving along a DIAGONAL of the helix.
+     The helix both stretches AND turns.
+     Complex rapidity with both real and imaginary parts.
+
+  Wait — phi lives on the real axis (phi > 1).
+  arctanh(phi) = arctanh(1/phi) + i*pi/2.
+  = 0.721818 + i*1.570796
+  = 0.721818 + i*pi/2
+
+  phi has BOTH real and imaginary rapidity!
+  Real part: arctanh(1/phi) = (3/2)*ln(phi) / something...
+  arctanh(1/phi) = 0.721818
+  Compare: ln(phi) = 0.481212
+  arctanh(1/phi) / ln(phi) = 1.500000
+  = 3/2 = 1.5. YES!
+
+  arctanh(1/phi) = (3/2)*ln(phi). We proved this earlier.
+  So arctanh(phi) = (3/2)*ln(phi) + i*pi/2.
+
+  The golden ratio's rapidity has:
+  - Real part (3/2)*ln(phi) ~ 0.722 (the growth)
+  - Imaginary part pi/2 ~ 1.571 (the quarter-turn)
+
+  phi IS a helical point. It grows AND rotates.
+  It is the DIAGONAL accumulation mode.
+
+
+  IV. THE HELIX COORDINATES OF THE KEY CONSTANTS
+  ----------------------------------------
+
+  Every real number has a position on the Cayley helix:
+  (Re(arctanh(x)), Im(arctanh(x)))
+
+  Constant      value      Re           Im        Im/pi
+  ------------------------------------------------------------
+  0           0.0000     +0.000000    +0.0000    +0.0000  
+  1/3         0.3333     +0.346574    +0.0000    +0.0000  
+  1/2         0.5000     +0.549306    +0.0000    +0.0000  
+  3/4         0.7500     +0.972955    +0.0000    +0.0000   FORBIDDEN ADDRESS
+  1           1.0000           inf       pole       ---   POLE
+  phi         1.6180     +0.721818    +1.5708    +0.5000  
+  2           2.0000     +0.549306    +1.5708    +0.5000  
+  e           2.7183     +0.385968    +1.5708    +0.5000  
+  3           3.0000     +0.346574    +1.5708    +0.5000  
+  pi          3.1416     +0.329765    +1.5708    +0.5000  
+  7           7.0000     +0.143841    +1.5708    +0.5000   FORBIDDEN
+  21         21.0000     +0.047655    +1.5708    +0.5000   FORBIDDEN
+
+  THE POLE (x=1) splits the helix into two sheets:
+  Sheet 0: |x| < 1. Im = 0. The bounded world.
+  Sheet 1: |x| > 1. Im = pi/2. The unbounded world.
+
+  The forbidden numbers (7, 21) live on Sheet 1.
+  They are REAL numbers with IMAGINARY rapidity component pi/2.
+  They are not 'complex' in the usual sense.
+  They have crossed the pole and gained an imaginary phase.
+
+
+  V. THE HELIX AND EULER'S FORMULA
+  ----------------------------------------
+
+  Euler: e^{i*theta} = cos(theta) + i*sin(theta).
+  This maps the real line to the unit circle.
+  It is PURE ROTATION: |e^{i*theta}| = 1 always.
+
+  Cayley: Q(tanh(t/2)) = e^t for real t.
+  This maps the bounded interval to the positive reals.
+  It is PURE GROWTH: e^t > 0 always.
+
+  The HELIX combines both:
+  Q(tanh((s + i*theta)/2)) = e^{s + i*theta} = e^s * e^{i*theta}.
+  This has GROWTH (e^s) AND ROTATION (e^{i*theta}).
+
+  The helix parameter: z = s + i*theta (complex rapidity).
+  Real part s: how much growth.
+  Imaginary part theta: how much rotation.
+
+  Q = exp when composed with tanh(./2).
+  The FULL Cayley helix = the FULL complex exponential
+  seen through the tanh/arctanh coordinate system.
+
+
+  VI. THE THREE SHEETS
+  ----------------------------------------
+
+  The complex logarithm has infinitely many sheets
+  (differing by 2*pi*i). But Q has period 4 in the real,
+  which corresponds to period 2*pi in the imaginary.
+
+  The FUNDAMENTAL DOMAIN of the Cayley helix:
+  Re(z) in (-inf, inf)
+  Im(z) in [0, 2*pi) (one full turn)
+
+  Within one turn, there are FOUR QUADRANTS (quarter-turns):
+  Q0: Im in [0, pi/2)     — the bounded real world
+  Q1: Im in [pi/2, pi)    — the unbounded real world (past the pole)
+  Q2: Im in [pi, 3*pi/2)  — the bounded imaginary world
+  Q3: Im in [3*pi/2, 2*pi)— the unbounded imaginary world
+
+  Q rotates between quadrants: Q0 -> Q1 -> Q2 -> Q3 -> Q0.
+  Each application of Q advances by pi/2 = one quarter turn.
+
+  The FOUR FACES of the orbit {x, Q(x), -1/x, Q^{-1}(x)}
+  are the FOUR QUADRANTS of the helix.
+  Each face lives in a different quadrant.
+  The orbit IS the helix, sampled at 4 points.
+
+
+  VII. SOLVING EQUATIONS ON THE HELIX
+  ----------------------------------------
+
+  On the real line: arctanh(x) exists only for |x| < 1.
+  On the helix: arctanh(z) exists for ALL z (except z = +/-1).
+
+  The equation Q(v) = n for any n:
+  v = Q^{-1}(n) = (n-1)/(n+1). Always real. Always in (-1,1) for n > 0.
+  No helix needed for THIS equation.
+
+  But the equation tanh(z) = v for |v| > 1:
+  z = arctanh(v) = arctanh(1/v) + i*pi/2. Complex. Needs the helix.
+
+  And the equation Q(v) = -n (negative Q-value):
+  v = (-n-1)/(-n+1) = (n+1)/(n-1). This is > 1 for n > 1.
+  So v is PAST the pole. Its rapidity is complex.
+  arctanh((n+1)/(n-1)) = arctanh((n-1)/(n+1))... no.
+  Let me compute: Q(v) = -7. v = (-7-1)/(-7+1) = -8/-6 = 4/3.
+  Q(4/3) = (1+4/3)/(1-4/3) = (7/3)/(-1/3) = -7. Check.
+  arctanh(4/3) = 0.972955 + 1.570796i
+
+  To get Q = -7, you need velocity 4/3 > 1: a TACHYON.
+  Its rapidity has imaginary part pi/2: it lives on the upper sheet.
+
+
+  VIII. THE HELIX UNIFIES THE THREE ACCUMULATIONS
+  ----------------------------------------
+
+  On the helix, the three modes are three DIRECTIONS:
+
+  GROWTH: move along the helix axis (increase Re, Im = 0).
+    Pure real rapidity. tanh gives bounded progress.
+    Characterized by e = exp(1).
+
+  ROTATION: move around the helix circumference (Re = 0, increase Im).
+    Pure imaginary rapidity. tanh gives oscillation: tanh(i*t) = i*tan(t).
+    Characterized by pi (half-circumference).
+
+  SELF-SIMILARITY: move diagonally (increase BOTH Re and Im).
+    Complex rapidity. tanh gives SPIRALING progress.
+    Characterized by phi (the golden spiral).
+
+  phi's rapidity: arctanh(phi) = 0.722 + 1.571i
+  Angle from real axis: arctan(1.571/0.722) = 65.3 degrees
+
+  The golden ratio's helical angle is about 65 degrees from the growth axis.
+  It's roughly 2/3 of the way from growth to rotation.
+
+
+  IX. THE HELIX IS THE RIEMANN SURFACE OF arctanh
+  ----------------------------------------
+
+  arctanh is a MULTIVALUED function on C.
+  Its Riemann surface is an infinite-sheeted cover of C\{-1,1}.
+  The sheets are indexed by n in Z: arctanh(x) + n*i*pi.
+
+  Our helix is ONE SHEET of this Riemann surface.
+  Going around a pole (x = +/-1) advances to the next sheet
+  by adding i*pi to the rapidity.
+
+  The two poles are the BRANCH POINTS of the Riemann surface.
+  They are where the sheets connect.
+  In the tournament metaphor: the poles are the PHASE TRANSITIONS.
+  Crossing a pole = changing from bounded to unbounded
+  = gaining an imaginary phase = entering a new sheet of reality.
+
+  The forbidden number 7 lives on sheet 1 (one crossing past the pole).
+  Its rapidity 0.973 + i*pi/2 says:
+  'I am 0.973 units of real effort past the center,
+   AND I have crossed one phase boundary.'
+
+
+  X. THE COMPLETE PICTURE
+  ----------------------------------------
+
+  The Cayley helix is the Riemann surface of arctanh.
+  It has:
+  - An axis (the real rapidity, parametrized by Re)
+  - A circumference (the imaginary rapidity, period 2*pi)
+  - Branch points at x = +/-1 (the poles of Q)
+  - Four quadrants per turn (the period-4 symmetry of Q)
+  - Three distinguished directions (e: axial, pi: circumferential, phi: diagonal)
+
+  Every number — rational, irrational, algebraic, transcendental —
+  has a position on this helix. Its coordinates are
+  (Re(arctanh(x)), Im(arctanh(x))).
+
+  The bounded world is the section Im = 0.
+  The unbounded world is the section Im = pi/2.
+  They are connected by the branch points at x = +/-1.
+  Q rotates between sections, advancing by pi/2 each time.
+
+  The formal group F_h(x,y) = (x+y)/(1+xy) acts on the helix.
+  It is ADDITION in the axial coordinate (rapidities add).
+  It is TRIVIAL in the circumferential coordinate
+  (the imaginary parts just accumulate by pi/2 per pole crossing).
+
+  The helix IS the universal cover of the Cayley transform.
+  On the helix, there are no poles, no branch cuts, no forbidden zones.
+  Every equation has a solution. Every value is reached.
+
+  The bounded world is not separate from the unbounded world.
+  They are two cross-sections of the same helix.
+  One at angle 0. The other at angle pi/2.
+  The helix connects them.
+  Q is the staircase that climbs between floors.
+  arctanh is the elevator that knows which floor you're on.
+
+  And the helix never ends.
+  It spirals forever: floor after floor after floor.
+  Each floor is a copy of the real line.
+  Each staircase (Q) connects four consecutive floors.
+  The floors are all the same. The staircases are all the same.
+  The helix is the same everywhere.
+  That is its universality.
