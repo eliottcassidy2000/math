@@ -1,0 +1,367 @@
+
+  THE GEOMETRY OF 6174 = 2^1 * 3^2 * 7^3
+
+======================================================================
+
+  I. THE THREE TRIPLES
+  --------------------------------------------------
+
+  6174 = 2^1 * 3^2 * 7^3
+
+  Three triples (base, exponent, value):
+  Triple A: (2, 1, 2)   — the DOUBLER at power 1
+  Triple B: (3, 2, 9)   — the CURVER at power 2
+  Triple C: (7, 3, 343) — the FORBIDDEN at power 3
+
+  Product: 2 * 9 * 343 = 6174
+
+  The exponent IS the position:
+  1st Hurwitz prime (2) raised to 1st power
+  2nd Hurwitz prime (3) raised to 2nd power
+  3rd Hurwitz prime (7) raised to 3rd power
+
+  All 6 orderings of exponents (1,2,3) on bases (2,3,7):
+  2^1 * 3^2 * 7^3 =   6174 <== KAPREKAR FIXED POINT!
+  2^1 * 3^3 * 7^2 =   2646
+  2^2 * 3^1 * 7^3 =   4116
+  2^2 * 3^3 * 7^1 =    756
+  2^3 * 3^1 * 7^2 =   1176
+  2^3 * 3^2 * 7^1 =    504
+
+  II. THE DIGIT STRUCTURE
+  --------------------------------------------------
+
+  6174 in digits: 6, 1, 7, 4
+  Digit sum: 6+1+7+4 = 18 = 2*3^2 = 2*9
+  Digit product: 6*1*7*4 = 168 = |PSL(2,7)| = 4*42!
+
+  REMARKABLE: digit_product(6174) = 168 = |PSL(2,7)| = 84*(3-1)
+  84 = 2*42 = Hurwitz bound coefficient
+  168 = maximum automorphisms of a genus-3 curve (Klein quartic)
+
+  Each digit as Hurwitz factorization:
+  6 = 2*3     (the GEOMETRIC BASE)
+  1 = 1       (the IDENTITY)
+  7 = 7       (the FORBIDDEN PRIME)
+  4 = 2^2     (the DOUBLED DOUBLER)
+
+  7641 - 1467 = 6174 (Kaprekar fixed point)
+  7641 = 3 * 2547 = 3 * 3 * 849 = 9 * 849 = 9 * 3 * 283
+  1467 = 3 * 489 = 3 * 3 * 163
+  Both divisible by 9 = 3^2 (the CURVER squared)
+
+  III. THE KAPREKAR ITERATION MAP
+  --------------------------------------------------
+
+  Steps to reach 6174 (from non-repdigit 4-digit numbers):
+  0 steps:     1 numbers 
+  1 steps:   383 numbers #######
+  2 steps:   576 numbers ###########
+  3 steps:  2400 numbers ################################################
+  4 steps:  1272 numbers #########################
+  5 steps:  1518 numbers ##############################
+  6 steps:  1656 numbers #################################
+  7 steps:  2184 numbers ###########################################
+
+  Numbers reaching 6174 in exactly 5 steps: 1518
+  First 30: [1, 10, 23, 27, 32, 35, 38, 45, 53, 54, 55, 56, 57, 65, 72, 75, 78, 83, 87, 100, 111, 133, 137, 145, 148, 154, 155, 166, 167, 173]
+
+  IV. THE PENTAGONAL STRUCTURE
+  --------------------------------------------------
+
+  Factoring 5-step numbers:
+  Hurwitz content of 5-step numbers (first 100):
+    Hurwitz part = 1: 33 numbers
+    Hurwitz part = 2: 16 numbers
+    Hurwitz part = 3: 10 numbers
+    Hurwitz part = 4: 4 numbers
+    Hurwitz part = 6: 4 numbers
+    Hurwitz part = 7: 5 numbers
+    Hurwitz part = 8: 2 numbers
+    Hurwitz part = 9: 2 numbers
+    Hurwitz part = 14: 2 numbers
+    Hurwitz part = 16: 2 numbers
+    Hurwitz part = 18: 1 numbers
+    Hurwitz part = 21: 2 numbers
+    Hurwitz part = 24: 1 numbers
+    Hurwitz part = 27: 1 numbers
+    Hurwitz part = 28: 2 numbers
+
+  Key numbers reaching 6174 in exactly 5 steps:
+    42: steps = 2, chain = 42 -> 4176 -> 6174 -> 6174
+    1806: steps = 7, chain = 1806 -> 8442 -> 5994 -> 5355 -> 1998 -> 8082 -> 8532 -> 6174
+    210: steps = 3, chain = 210 -> 2088 -> 8532 -> 6174 -> 6174
+    30: steps = 6, chain = 30 -> 2997 -> 7173 -> 6354 -> 3087 -> 8352 -> 6174 -> 6174
+    2520: steps = 6, chain = 2520 -> 4995 -> 5355 -> 1998 -> 8082 -> 8532 -> 6174 -> 6174
+
+  Multiples of 42 and their step counts:
+    42*1 = 42: 2 steps
+    42*2 = 84: 2 steps
+    42*3 = 126: 7 steps
+    42*4 = 168: 7 steps
+    42*5 = 210: 3 steps
+    42*6 = 252: 6 steps
+    42*7 = 294: 3 steps
+    42*8 = 336: 6 steps
+    42*9 = 378: 2 steps
+    42*10 = 420: 2 steps
+    42*11 = 462: 1 steps
+    42*12 = 504: 5 steps
+    42*13 = 546: 7 steps
+    42*14 = 588: 5 steps
+    42*15 = 630: 3 steps
+    42*16 = 672: 3 steps
+    42*17 = 714: 6 steps
+    42*18 = 756: 3 steps
+    42*19 = 798: 4 steps
+    42*20 = 840: 2 steps
+    42*21 = 882: 2 steps
+    42*22 = 924: 3 steps
+    42*23 = 966: 4 steps
+    42*24 = 1008: 3 steps
+    42*25 = 1050: 7 steps
+    42*26 = 1092: 4 steps
+    42*27 = 1134: 5 steps
+    42*28 = 1176: 5 steps
+    42*29 = 1218: 3 steps
+    42*30 = 1260: 7 steps
+    42*31 = 1302: 3 steps
+    42*32 = 1344: 3 steps
+    42*33 = 1386: 6 steps
+    42*34 = 1428: 5 steps
+    42*35 = 1470: 6 steps
+    42*36 = 1512: 7 steps
+    42*37 = 1554: 7 steps
+    42*38 = 1596: 3 steps
+    42*39 = 1638: 6 steps
+    42*40 = 1680: 7 steps
+    42*41 = 1722: 6 steps
+    42*42 = 1764: 1 steps
+    42*43 = 1806: 7 steps
+    42*44 = 1848: 3 steps
+    42*45 = 1890: 3 steps
+    42*46 = 1932: 3 steps
+    42*47 = 1974: 5 steps
+    42*48 = 2016: 7 steps
+    42*49 = 2058: 5 steps
+
+  V. THE TETRAHEDRON: FOUR DIGITS AS FOUR VERTICES
+  --------------------------------------------------
+
+  Vertices: {6, 1, 7, 4}
+  Edges (absolute differences):
+    |6-1| = 5
+    |6-7| = 1
+    |6-4| = 2
+    |1-7| = 6
+    |1-4| = 3
+    |7-4| = 3
+  Edge lengths: [1, 2, 3, 3, 5, 6]
+  Sum of edges: 20
+  Product of edges: 1
+  Product of nonzero edges: 540
+
+  Faces (triangles of 3 digits):
+  (1, 6, 7): sum=14, product=42  = 42 (PURE HURWITZ!)
+  (1, 4, 6): sum=11, product=24  = 24 (PURE HURWITZ!)
+  (4, 6, 7): sum=17, product=168  = 168 (PURE HURWITZ!)
+  (1, 4, 7): sum=12, product=28  = 28 (PURE HURWITZ!)
+
+  REMARKABLE: Face {1, 6, 7} has product 42 = THE HURWITZ CONSTANT!
+  The tetrahedron of 6174's digits CONTAINS 42 as a face.
+
+  Face {4, 6, 7} has product 168 = |PSL(2,7)| = Klein quartic group!
+  This is the Hurwitz bound: 84(g-1) = 168 for g=3.
+
+  VI. THE TRIPLE OF TRIPLES AS A 3x3 MATRIX
+  --------------------------------------------------
+
+  The 3x3 matrix:
+    [2, 1, 2]
+    [3, 2, 9]
+    [7, 3, 343]
+
+  Determinant = 342
+  det = 342 = 2*3*3*19
+
+  Trace = 347
+  347 is prime: True
+
+  Column products: [42, 6, 6174]
+  Col 0 (primes): 2*3*7 = 42 = 42 = HURWITZ!
+  Col 1 (exponents): 1*2*3 = 6 = 6 = geometric base
+  Col 2 (values): 2*9*343 = 6174 = 6174 = KAPREKAR!
+
+  Row products: [4, 54, 7203]
+  Row 0: 2*1*2 = 4 = 4 = 2^2
+  Row 1: 3*2*9 = 54 = 54 = 2*27 = 2*3^3
+  Row 2: 7*3*343 = 7203 = 7203 = 3*7^4
+
+  Grand product (all 9 entries): 1555848
+  = 2*2*2*3*3*3*3*7*7*7*7
+  = 2^3 * 3^4 * 7^4 = 1555848
+
+  VII. THE PENTAGONAL CONNECTION: 5 EVERYWHERE
+  --------------------------------------------------
+
+  The number 5 appears throughout the Kaprekar structure:
+
+  Iteration paths from Hurwitz-related numbers:
+    42: 2 steps -> 42 -> 4176 -> 6174
+    84: 2 steps -> 84 -> 8352 -> 6174
+    168: 7 steps -> 168 -> 8442 -> 5994 -> 5355 -> 1998 -> 8082 -> 8532 -> 6174
+    210: 3 steps -> 210 -> 2088 -> 8532 -> 6174
+    420: 2 steps -> 420 -> 4176 -> 6174
+    1806: 7 steps -> 1806 -> 8442 -> 5994 -> 5355 -> 1998 -> 8082 -> 8532 -> 6174
+    2520: 6 steps -> 2520 -> 4995 -> 5355 -> 1998 -> 8082 -> 8532 -> 6174
+    5040: 5 steps -> 5040 -> 5355 -> 1998 -> 8082 -> 8532 -> 6174
+
+  7641 / 1467 = 849/163 = 5.208589
+  Compare to golden ratio phi = 1.618034
+  Ratio / phi = 3.219085
+
+  Digit pair differences:
+  max pair: 7-1 = 6 = 2*3 (geometric base)
+  mid pair: 6-4 = 2 (doubler)
+  OR: 7-4 = 3 (curver), 6-1 = 5 (GOLDEN!)
+
+  The digits 6174, split as (6,1) and (7,4):
+  6-1 = 5 = GOLDEN PRIME
+  7-4 = 3 = RAMIFIED PRIME
+  Product of differences: 5*3 = 15 = max H at n=5!
+
+  6174 mod key numbers:
+    6174 mod   5 = 4
+    6174 mod   6 = 0
+    6174 mod   7 = 0
+    6174 mod  12 = 6
+    6174 mod  30 = 24
+    6174 mod  42 = 0
+    6174 mod 210 = 84
+
+  6174 mod 5 = 4 (divides into 5 equal parts of 1234)
+  6174 / 5 = 1234.8 ... not integer. 6174 mod 5 = 4.
+
+  Step distribution histogram:
+    0 steps:     1
+    1 steps:   383
+    2 steps:   576
+    3 steps:  2400
+    4 steps:  1272
+    5 steps:  1518
+    6 steps:  1656
+    7 steps:  2184
+  Total: 9990
+
+  MOST COMMON step count: 3 steps (2400 numbers)
+
+  VIII. THE PENTAGON OF DIFFERENCES
+  --------------------------------------------------
+
+  Every Kaprekar result = 999*p + 90*q where p=a-d, q=b-c
+  6174 = 999*6 + 90*2 = 5994 + 180
+  p = 6 = 2*3 (GEOMETRIC BASE)
+  q = 2 = DOUBLER
+
+  The Kaprekar map in (p,q) space:
+  (p,q) -> value -> digits -> next (p',q')
+
+  (1,0) ->  999 -> digits 9990 -> (9,0)
+  (1,1) -> 1089 -> digits 9810 -> (9,7)
+  (2,0) -> 1998 -> digits 9981 -> (8,1)
+  (2,1) -> 2088 -> digits 8820 -> (8,6)
+  (2,2) -> 2178 -> digits 8721 -> (7,5)
+  (3,0) -> 2997 -> digits 9972 -> (7,2)
+  (3,1) -> 3087 -> digits 8730 -> (8,4)
+  (3,2) -> 3177 -> digits 7731 -> (6,4)
+  (3,3) -> 3267 -> digits 7632 -> (5,3)
+  (4,0) -> 3996 -> digits 9963 -> (6,3)
+  (4,1) -> 4086 -> digits 8640 -> (8,2)
+  (4,2) -> 4176 -> digits 7641 -> (6,2)
+  (4,3) -> 4266 -> digits 6642 -> (4,2)
+  (4,4) -> 4356 -> digits 6543 -> (3,1)
+  (5,0) -> 4995 -> digits 9954 -> (5,4)
+  (5,1) -> 5085 -> digits 8550 -> (8,0)
+  (5,2) -> 5175 -> digits 7551 -> (6,0)
+  (5,3) -> 5265 -> digits 6552 -> (4,0)
+  (5,4) -> 5355 -> digits 5553 -> (2,0)
+  (5,5) -> 5445 -> digits 5544 -> (1,1)
+  (6,0) -> 5994 -> digits 9954 -> (5,4)
+  (6,1) -> 6084 -> digits 8640 -> (8,2)
+  (6,2) -> 6174 -> digits 7641 -> (6,2)
+  (6,3) -> 6264 -> digits 6642 -> (4,2)
+  (6,4) -> 6354 -> digits 6543 -> (3,1)
+  (6,5) -> 6444 -> digits 6444 -> (2,0)
+  (6,6) -> 6534 -> digits 6543 -> (3,1)
+  (7,0) -> 6993 -> digits 9963 -> (6,3)
+  (7,1) -> 7083 -> digits 8730 -> (8,4)
+  (7,2) -> 7173 -> digits 7731 -> (6,4)
+  (7,3) -> 7263 -> digits 7632 -> (5,3)
+  (7,4) -> 7353 -> digits 7533 -> (4,2)
+  (7,5) -> 7443 -> digits 7443 -> (4,0)
+  (7,6) -> 7533 -> digits 7533 -> (4,2)
+  (7,7) -> 7623 -> digits 7632 -> (5,3)
+  (8,0) -> 7992 -> digits 9972 -> (7,2)
+  (8,1) -> 8082 -> digits 8820 -> (8,6)
+  (8,2) -> 8172 -> digits 8721 -> (7,5)
+  (8,3) -> 8262 -> digits 8622 -> (6,4)
+  (8,4) -> 8352 -> digits 8532 -> (6,2)
+  (8,5) -> 8442 -> digits 8442 -> (6,0)
+  (8,6) -> 8532 -> digits 8532 -> (6,2)
+  (8,7) -> 8622 -> digits 8622 -> (6,4)
+  (8,8) -> 8712 -> digits 8721 -> (7,5)
+  (9,0) -> 8991 -> digits 9981 -> (8,1)
+  (9,1) -> 9081 -> digits 9810 -> (9,7)
+  (9,2) -> 9171 -> digits 9711 -> (8,6)
+  (9,3) -> 9261 -> digits 9621 -> (8,4)
+  (9,4) -> 9351 -> digits 9531 -> (8,2)
+  (9,5) -> 9441 -> digits 9441 -> (8,0)
+  (9,6) -> 9531 -> digits 9531 -> (8,2)
+  (9,7) -> 9621 -> digits 9621 -> (8,4)
+  (9,8) -> 9711 -> digits 9711 -> (8,6)
+  (9,9) -> 9801 -> digits 9810 -> (9,7)
+
+  FIXED POINT: (6,2) -> 6174 -> (6,2)
+  p=6 = 2*3, q=2 = 2. The fixed point is at the GEOMETRIC BASE.
+
+  Steps from each (p,q) to fixed point (6,2):
+  1 steps: [(4, 2), (6, 2), (8, 4), (8, 6)]
+  2 steps: [(2, 1), (3, 1), (4, 3), (6, 3), (7, 1), (7, 4), (7, 6), (8, 1), (9, 2), (9, 3), (9, 7), (9, 8)]
+  3 steps: [(1, 1), (2, 0), (4, 0), (4, 4), (6, 4), (6, 6), (7, 0), (9, 0), (9, 1), (9, 9)]
+  4 steps: [(1, 0), (3, 2), (5, 3), (5, 4), (5, 5), (6, 5), (7, 2), (7, 5), (8, 3), (8, 7)]
+  5 steps: [(2, 2), (3, 0), (3, 3), (5, 0), (6, 0), (7, 3), (7, 7), (8, 0), (8, 2), (8, 8)]
+  6 steps: [(4, 1), (5, 1), (5, 2), (6, 1), (8, 5), (9, 4), (9, 5), (9, 6)]
+
+  IX. THE GRAND SYNTHESIS
+  --------------------------------------------------
+
+  6174 = 2^1 * 3^2 * 7^3 is a TRIPLE RESONANCE:
+
+  LAYER 1 — THE TRIPLE OF TRIPLES (3x3 matrix):
+    Column 0 product = 42 (Hurwitz constant)
+    Column 1 product = 6 (geometric base)
+    Column 2 product = 6174 (Kaprekar fixed point)
+
+  LAYER 2 — THE TETRAHEDRON (4 digits as 4 vertices):
+    Face {1,6,7} product = 42 = HURWITZ CONSTANT
+    Face {4,6,7} product = 168 = |PSL(2,7)| = KLEIN QUARTIC
+    All 4 digits product = 168 = Klein quartic group order
+
+  LAYER 3 — THE PENTAGON (5 in the structure):
+    Digit difference 6-1 = 5 = GOLDEN PRIME
+    Digit difference 7-4 = 3 = RAMIFIED PRIME
+    5 * 3 = 15 = max H at n=5 = {GOLDEN}*{RAMIFIED}
+    Kaprekar = 999*6 + 90*2 in (p,q) space
+    p=6 = {2,3} base, q=2 = DOUBLER
+
+  The fixed point 6174 ENCODES the entire project:
+    Its prime factorization gives the Hurwitz primes {2,3,7}
+    Its digit product gives the Klein quartic 168
+    Its digit differences give the primes {3,5}
+    Its (p,q) coordinates give the geometric base {2,3}
+    Its 3x3 matrix column products give {42, 6, 6174}
+
+  6174 is the CRYSTALLIZATION of {2,3,5,7} into a single number.
+  The Kaprekar iteration is the CONVERGENCE process that
+  finds this crystallized form from arbitrary initial conditions.
+
