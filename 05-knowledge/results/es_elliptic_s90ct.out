@@ -1,0 +1,210 @@
+Erdos-Straus Conjecture: 4/n = 1/a + 1/b + 1/c
+Analyzing all 168 primes up to 1000
+========================================================================
+
+Primes with NO solution: NONE (conjecture holds for all primes <= 1000)
+
+Solution count statistics:
+  Min: 1, Max: 194, Median: 37
+  Mean: 42.1
+
+========================================================================
+TOP 20 HARDEST PRIMES (fewest ES decompositions):
+   Prime   #Sol   mod4  mod42  mod12  Sample decomposition
+------------------------------------------------------------------------
+       2      1      2      2      2  4/2 = 1/1 + 1/2 + 1/2
+       5      2      1      5      5  4/5 = 1/2 + 1/4 + 1/20
+       3      3      3      3      3  4/3 = 1/1 + 1/4 + 1/12
+      13      4      1     13      1  4/13 = 1/4 + 1/18 + 1/468
+      17      4      1     17      5  4/17 = 1/5 + 1/30 + 1/510
+     193      6      1     25      1  4/193 = 1/50 + 1/1380 + 1/1331700
+       7      7      3      7      7  4/7 = 1/2 + 1/15 + 1/210
+      29      7      1     29      5  4/29 = 1/8 + 1/78 + 1/9048
+      41      7      1     41      5  4/41 = 1/11 + 1/154 + 1/6314
+      73      7      1     31      1  4/73 = 1/20 + 1/210 + 1/30660
+      97      8      1     13      1  4/97 = 1/25 + 1/810 + 1/392850
+     241      8      1     31      1  4/241 = 1/62 + 1/2139 + 1/1030998
+      11      9      3     11     11  4/11 = 1/3 + 1/34 + 1/1122
+      37      9      1     37      1  4/37 = 1/10 + 1/124 + 1/22940
+      89     10      1      5      5  4/89 = 1/23 + 1/690 + 1/61410
+      19     11      3     19      7  4/19 = 1/5 + 1/96 + 1/9120
+      61     11      1     19      1  4/61 = 1/16 + 1/326 + 1/159088
+      53     13      1     11      5  4/53 = 1/14 + 1/248 + 1/92008
+     113     13      1     29      5  4/113 = 1/29 + 1/1102 + 1/124526
+      43     14      3      1      7  4/43 = 1/11 + 1/474 + 1/224202
+
+TOP 10 EASIEST PRIMES (most decompositions):
+   Prime   #Sol   mod4  mod42
+--------------------------------------------------
+     839    194      3     41
+     719    172      3      5
+     479    150      3     17
+     911    123      3     29
+     863    118      3     23
+     599    118      3     11
+     359    110      3     23
+     503    108      3     41
+     239    106      3     29
+     431     93      3     11
+
+========================================================================
+SOLUTION COUNT BY n mod 42:
+ Residue  #Primes     AvgSol   MinSol   MaxSol
+--------------------------------------------------
+       1       13       33.6       14       57
+       2        1        1.0        1        1
+       3        1        3.0        3        3
+       5       16       45.9        2      172
+       7        1        7.0        7        7
+      11       14       46.6        9      118
+      13       15       32.9        4       80
+      17       15       47.8        4      150
+      19       13       38.4       11       80
+      23       14       45.4       18      118
+      25       12       40.0        6       73
+      29       15       49.4        7      123
+      31       14       32.1        7       52
+      37       12       39.8        9       88
+      41       12       61.3        7      194
+
+========================================================================
+SOLUTION COUNT BY n mod 4:
+  p = 1 mod 4: 80 primes, avg=26.0, min=2, max=59
+  p = 3 mod 4: 86 primes, avg=58.0, min=7, max=194
+
+========================================================================
+RATIONAL CURVE ANALYSIS (genus-0 conic for each fixed a):
+For the 10 hardest primes, show how solutions distribute across 'a' values.
+
+  n = 2 (1 solutions total, a ranges [1, 2]):
+    a=1: D^2/(na)^2 has 1 valid divisor pairs. R=4a-n=2. (1,2,2)
+  n = 5 (2 solutions total, a ranges [2, 4]):
+    a=2: D^2/(na)^2 has 2 valid divisor pairs. R=4a-n=3. (2,4,20); (2,5,10)
+  n = 3 (3 solutions total, a ranges [1, 3]):
+    a=1: D^2/(na)^2 has 2 valid divisor pairs. R=4a-n=1. (1,4,12); (1,6,6)
+    a=2: D^2/(na)^2 has 1 valid divisor pairs. R=4a-n=5. (2,2,3)
+  n = 13 (4 solutions total, a ranges [4, 10]):
+    a=4: D^2/(na)^2 has 3 valid divisor pairs. R=4a-n=3. (4,18,468); (4,20,130); (4,26,52)
+    a=5: D^2/(na)^2 has 1 valid divisor pairs. R=4a-n=7. (5,10,130)
+  n = 17 (4 solutions total, a ranges [5, 13]):
+    a=5: D^2/(na)^2 has 2 valid divisor pairs. R=4a-n=3. (5,30,510); (5,34,170)
+    a=6: D^2/(na)^2 has 2 valid divisor pairs. R=4a-n=7. (6,15,510); (6,17,102)
+  n = 193 (6 solutions total, a ranges [49, 145]):
+    a=50: D^2/(na)^2 has 3 valid divisor pairs. R=4a-n=7. (50,1380,1331700); (50,1450,27985); (50,1930,4825)
+    a=52: D^2/(na)^2 has 2 valid divisor pairs. R=4a-n=15. (52,676,65234); (52,772,5018)
+    a=58: D^2/(na)^2 has 1 valid divisor pairs. R=4a-n=39. (58,290,27985)
+  n = 7 (7 solutions total, a ranges [2, 6]):
+    a=2: D^2/(na)^2 has 5 valid divisor pairs. R=4a-n=1. (2,15,210); (2,16,112); (2,18,63) +2 more
+    a=3: D^2/(na)^2 has 1 valid divisor pairs. R=4a-n=5. (3,6,14)
+    a=4: D^2/(na)^2 has 1 valid divisor pairs. R=4a-n=9. (4,4,14)
+  n = 29 (7 solutions total, a ranges [8, 22]):
+    a=8: D^2/(na)^2 has 5 valid divisor pairs. R=4a-n=3. (8,78,9048); (8,80,2320); (8,87,696) +2 more
+    a=10: D^2/(na)^2 has 1 valid divisor pairs. R=4a-n=11. (10,29,290)
+    a=11: D^2/(na)^2 has 1 valid divisor pairs. R=4a-n=15. (11,22,638)
+  n = 41 (7 solutions total, a ranges [11, 31]):
+    a=11: D^2/(na)^2 has 2 valid divisor pairs. R=4a-n=3. (11,154,6314); (11,164,1804)
+    a=12: D^2/(na)^2 has 3 valid divisor pairs. R=4a-n=7. (12,72,2952); (12,82,492); (12,123,164)
+    a=14: D^2/(na)^2 has 1 valid divisor pairs. R=4a-n=15. (14,41,574)
+    a=18: D^2/(na)^2 has 1 valid divisor pairs. R=4a-n=31. (18,24,2952)
+  n = 73 (7 solutions total, a ranges [19, 55]):
+    a=20: D^2/(na)^2 has 4 valid divisor pairs. R=4a-n=7. (20,210,30660); (20,219,4380); (20,220,4015) +1 more
+    a=21: D^2/(na)^2 has 2 valid divisor pairs. R=4a-n=11. (21,140,30660); (21,146,3066)
+    a=22: D^2/(na)^2 has 1 valid divisor pairs. R=4a-n=15. (22,110,4015)
+
+========================================================================
+GREEDY vs OPTIMAL for p = 1 mod 4:
+   Prime     Greedy_c    Optimal_c    Ratio   Greedy wins?
+------------------------------------------------------------
+       5           20           10     2.00        OPTIMAL
+      13          468           52     9.00        OPTIMAL
+      17          N/A          102      ---        OPTIMAL
+      29         9048          232    39.00        OPTIMAL
+      37        22940          370    62.00        OPTIMAL
+      41          N/A          164      ---        OPTIMAL
+      53        92008          742   124.00        OPTIMAL
+      61       159088          549   289.78        OPTIMAL
+      73          N/A          730      ---        OPTIMAL
+      89          N/A          712      ---        OPTIMAL
+      97          N/A         2716      ---        OPTIMAL
+     101      1150188          707  1626.86        OPTIMAL
+     109      1553468          654  2375.33        OPTIMAL
+     113          N/A         1695      ---        OPTIMAL
+     137          N/A         1644      ---        OPTIMAL
+     149      5344928         5662   944.00        OPTIMAL
+     157      6575160         4710  1396.00        OPTIMAL
+     173      9659628         2768  3489.75        OPTIMAL
+     181     11556488         2896  3990.50        OPTIMAL
+     193          N/A         4825      ---        OPTIMAL
+     197     16173700         9850  1642.00        OPTIMAL
+     229     29406348         2748 10701.00        OPTIMAL
+     233          N/A         4660      ---        OPTIMAL
+     241          N/A        15906      ---        OPTIMAL
+     257          N/A         9509      ---        OPTIMAL
+     269     55772308        18292  3049.00        OPTIMAL
+     277     62668480         6648  9426.67        OPTIMAL
+     281          N/A         5339      ---        OPTIMAL
+     293     78358748         3809 20572.00        OPTIMAL
+     313          N/A        12520      ---        OPTIMAL
+
+  Summary (first 30 primes = 1 mod 4):
+    Greedy better: 0, Optimal better: 17, Ties: 0
+  Full (all 80 primes = 1 mod 4 up to 1000):
+    Greedy better: 0, Optimal better: 43, Ties: 0
+
+========================================================================
+SOLUTION COUNT GROWTH:
+  Primes in [5,100): n=23, avg=15.0, min=2, max=40
+  Primes in [100,200): n=21, avg=28.8, min=6, max=67
+  Primes in [200,400): n=32, avg=40.8, min=8, max=110
+  Primes in [400,600): n=31, avg=48.4, min=15, max=150
+  Primes in [600,800): n=30, avg=51.4, min=16, max=172
+  Primes in [800,1001): n=29, avg=60.9, min=27, max=194
+
+========================================================================
+MOD-42 DIFFICULTY RANKING (by average solution count, ascending):
+ Residue     AvgSol  #Primes  Note
+--------------------------------------------------
+      31       32.1       14  (coprime to 42)
+      13       32.9       15  (coprime to 42)
+       1       33.6       13  (coprime to 42)
+      19       38.4       13  (coprime to 42)
+      37       39.8       12  (coprime to 42)
+      25       40.0       12  (coprime to 42)
+      23       45.4       14  (coprime to 42)
+       5       45.9       16  (coprime to 42)
+      11       46.6       14  (coprime to 42)
+      17       47.8       15  (coprime to 42)
+      29       49.4       15  (coprime to 42)
+      41       61.3       12  (coprime to 42)
+
+========================================================================
+PRIMES REQUIRING LARGEST DENOMINATORS (max c across all solutions):
+   Prime     MinMax_c   mod4  mod24   #Sol
+--------------------------------------------------
+     967       234014      3      7     57
+     863       186408      3     23    118
+     839       176190      3     23    194
+     577       167330      1      1     18
+     919       141526      3      7     88
+     743       138198      3     23     79
+     683       116793      3     11     51
+     769       103046      1      1     18
+     751        94626      3      7     60
+     601        92554      1      1     16
+     727        90148      3      7     80
+     991        83244      3      7     73
+     977        82068      1     17     38
+     877        70160      1     13     59
+     797        65354      1      5     51
+
+========================================================================
+BOTT SLOT (mod 8) ANALYSIS:
+  p = 1 mod 8: n=37, avg=20.7, min=4, max=41
+  p = 3 mod 8: n=43, avg=43.1, min=9, max=84
+  p = 5 mod 8: n=43, avg=30.5, min=2, max=59
+  p = 7 mod 8: n=43, avg=72.8, min=7, max=194
+
+========================================================================
+DONE. Erdos-Straus verified for all primes <= 1000.
+Total decompositions found: 7066
+Key insight: the conic (Rb-D)(Rc-D)=D^2 reduces ES to divisor counting.

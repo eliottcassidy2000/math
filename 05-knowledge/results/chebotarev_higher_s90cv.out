@@ -1,0 +1,121 @@
+======================================================================
+  CHEBOTAREV DENSITIES FOR HIGHER NUMBER FIELDS — opus-2026-03-16-S90cv
+======================================================================
+
+1. Q(zeta_5): Gal = Z/4Z, phi(5)=4
+   ord=1: split completely | ord=2: 2 factors | ord=4: inert
+
+  ord        cnt   density      pred
+  1         2387   0.24885   0.25000  p%5 in [1]
+  2         2390   0.24917   0.25000  p%5 in [4]
+  4         4814   0.50188   0.50000  p%5 in [2, 3]
+
+2. Q(zeta_7): Gal = Z/6Z, phi(7)=6
+   ord=1: 6 factors | ord=2: 3 factors | ord=3: 2 factors | ord=6: inert
+
+  ord        cnt   density      pred first
+  1         1593   0.16608   0.16667  [29, 43, 71, 113, 127]
+  2         1596   0.16639   0.16667  [13, 41, 83, 97, 139]
+  3         3185   0.33205   0.33333  [2, 11, 23, 37, 53]
+  6         3217   0.33538   0.33333  [3, 5, 17, 19, 31]
+
+3. Q(2^{1/3}): non-Galois cubic, splitting field Gal=S_3
+   Conj classes: {e}->1/6, 3 transpos->1/2, 2 3-cycles->1/3
+
+  type        cnt   density      pred
+  split       200   0.16273       1/6
+  mixed       617   0.50203       1/2
+  inert       411   0.33442       1/3
+  ramif         1   0.00081        ~0
+
+4. Q(sqrt5, sqrt2): Gal = Z/2 x Z/2
+
+  (5|p),(2|p)    meaning            cnt   density      pred
+  (1, 1)         full split        2374   0.24752   0.25000
+  (1, -1)        spl sqrt5         2403   0.25055   0.25000
+  (-1, 1)        spl sqrt2         2409   0.25117   0.25000
+  (-1, -1)       inert both        2404   0.25065   0.25000
+
+5. Q(zeta_42): phi(42)=12, split completely iff p=1 mod 42
+   Primes p<1000000 with p=1(42): 6530
+   Density: 0.083187  predicted: 0.083333 = 1/12
+   Smallest: 43,  first 15: [43, 127, 211, 337, 379, 421, 463, 547, 631, 673, 757, 883, 967, 1009, 1051]
+
+6. KEY PRIMES SPLITTING TABLE
+    p pr?   Q(z5)   Q(z7)   cbrt2    biquad   Q(z42)
+-------------------------------------------------------
+    2   Y     o=4     o=3     ram       ram      ram
+    3   Y     o=4     o=6   mixed     inert      ram
+    5   Y     ram     o=6   mixed       ram        5
+    7   Y     o=4     ram   inert        s2      ram
+   11   Y     o=1     o=3   mixed        s5       11
+   13   Y     o=4     o=2   inert     inert       13
+   42   N       -       -       -         -        -
+   47   Y     o=4     o=6   mixed        s2        5
+  127   Y     o=4     o=1   split        s2    SPLIT
+
+7. ERDOS-STRAUS #DECOMPOSITIONS vs ord_7(p) for primes 3..199
+    p  o7 p%4   #ES
+    3   6   3     3
+    5   6   1     2
+   11   3   3     9
+   13   2   1     4
+   17   6   1     4
+   19   6   3    11
+   23   3   3    21
+   29   1   1     7
+   31   6   3    19
+   37   3   1     9
+   41   2   1     7
+   43   1   3    14
+   47   6   3    34
+   53   3   1    13
+   59   6   3    27
+  151   3   3    17
+  157   6   1     9
+  163   3   3    18
+  167   2   3    24
+  173   6   1    15
+  179   3   3    23
+  181   2   1    11
+  191   3   3    25
+  193   3   1     6
+  197   1   1    12
+  199   6   3    15
+
+  Aggregate by ord_7:
+   o7    n     mean   med   min   max
+    1    6    16.67    14     7    38
+    2    7    14.14    11     4    24
+    3   15    16.67    16     6    33
+    6   16    13.38    13     2    34
+
+======================================================================
+8. COMPREHENSIVE DENSITY SUMMARY
+Field                  Group      Type                    Obs     Pred
+--------------------------------------------------------------------
+Q(zeta_5)              Z/4Z       ord=1               0.24885  0.25000
+Q(zeta_5)              Z/4Z       ord=2               0.24917  0.25000
+Q(zeta_5)              Z/4Z       ord=4               0.50188  0.50000
+Q(zeta_7)              Z/6Z       ord=1               0.16608  0.16667
+Q(zeta_7)              Z/6Z       ord=2               0.16639  0.16667
+Q(zeta_7)              Z/6Z       ord=3               0.33205  0.33333
+Q(zeta_7)              Z/6Z       ord=6               0.33538  0.33333
+Q(cbrt2)               S_3        split               0.16273  0.16667
+Q(cbrt2)               S_3        mixed               0.50203  0.50000
+Q(cbrt2)               S_3        inert               0.33442  0.33333
+Q(sqrt5,sqrt2)         Z/2xZ/2    full split          0.24752  0.25000
+Q(sqrt5,sqrt2)         Z/2xZ/2    spl sqrt5           0.25055  0.25000
+Q(sqrt5,sqrt2)         Z/2xZ/2    spl sqrt2           0.25117  0.25000
+Q(sqrt5,sqrt2)         Z/2xZ/2    inert both          0.25065  0.25000
+Q(zeta_42)             (Z/42Z)*   fully split         0.08319  0.08333
+
+======================================================================
+ALL densities match Chebotarev predictions to within statistical noise.
+
+Key: p=127 splits COMPLETELY in Q(zeta_7) [ord=1] and Q(zeta_42) [127=1 mod 42].
+     p=43 is the smallest prime splitting completely in Q(zeta_42).
+     6530 primes below 10^6 split completely in Q(zeta_42).
+     ES difficulty shows NO significant correlation with ord_7(p).
+
+opus-2026-03-16-S90cv
