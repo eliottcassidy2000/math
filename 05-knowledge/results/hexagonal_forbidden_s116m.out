@@ -1,0 +1,270 @@
+
+  7 AS CENTER OF HEXAGON
+
+======================================================================
+
+  I. THE CENTERED HEXAGONAL NUMBERS
+  ----------------------------------------
+
+  H_n = 3n(n-1) + 1 = the number of cells in a hex neighborhood of radius n.
+
+  H_0 =     1 = 1            = identity
+  H_1 =     1 = 1            = identity
+  H_2 =     7 = 7            = FORBIDDEN
+  H_3 =    19 = 19           = prime
+  H_4 =    37 = 37           = prime
+  H_5 =    61 = 61           = prime
+  H_6 =    91 = 7*13         = 7*13
+  H_7 =   127 = 127          = Mersenne prime M_7
+
+  H_0 = 1 (center alone).
+  H_1 = 7 (center + 6 neighbors = FORBIDDEN).
+  H_5 = 91 = 7 * 13. The 5th hex number is 7 times 13.
+  H_6 = 127 = Mersenne prime M_7 = 2^7 - 1. The 6th hex number is Mersenne!
+
+  127 = 2^7 - 1. The exponent IS 7 = the forbidden number.
+  The 6th centered hexagonal number = 2^{forbidden} - 1.
+  Flat (6) -> Mersenne of forbidden (2^7 - 1). The flat ring
+  produces the Mersenne prime indexed by the forbidden.
+
+
+  II. THE HEXAGONAL ZOOM: SCALING BY sqrt(7)
+  ----------------------------------------
+
+  In the Eisenstein integer lattice (triangular grid),
+  scaling by sqrt(7) maps the lattice to a SUBLATTICE.
+  The sublattice has index 7 (every 7th point is hit).
+
+  The scaling involves a ROTATION by angle:
+  The Eisenstein integer 3+omega has norm sqrt(7).
+  (3+omega = 5/2 + i*sqrt(3)/2, |3+omega|^2 = 25/4+3/4 = 7.)
+  Its argument: arctan(sqrt(3)/5) = 0.333473 radians = 19.11 degrees.
+
+  The hex zoom angle: 19.11 degrees.
+  This is NOT a multiple of 60 degrees (the hex symmetry).
+  60/(19.11) = 3.1403.
+  The zoom angle is INCOMMENSURABLE with the hex symmetry!
+
+  This means: zooming by sqrt(7) introduces a TWIST that
+  never exactly aligns with the original lattice orientation.
+  The zoom is QUASICRYSTALLINE: self-similar but with irrational rotation.
+
+
+  III. THE ZOOM AND THE CAYLEY TRANSFORM
+  ----------------------------------------
+
+  Q(3/4) = 7. sqrt(Q(3/4)) = sqrt(7) = 2.645751.
+  The Cayley transform of the Kleiber exponent gives the forbidden number.
+  The SQUARE ROOT of that gives the hexagonal zoom factor.
+
+  rapidity of sqrt(7) = ln(sqrt(7))/2 = ln(7)/4 = 0.486478.
+  = HALF the forbidden rapidity = rapidity(7)/2.
+  = one HALF-FORBIDDEN RAPIDITY per zoom level.
+
+  Each zoom level costs HALF a forbidden rapidity.
+  Two zoom levels = one full forbidden rapidity.
+  This is WHY the forbidden number is 7 and not sqrt(7):
+  the forbidden rapidity is the DOUBLE of the zoom rapidity.
+  You must zoom TWICE to accumulate one forbidden crossing.
+
+  In terms of the Cayley helix:
+  One zoom = rapidity ln(7)/4 = 0.486 (about half an octave).
+  Two zooms = rapidity ln(7)/2 = 0.973 (the full forbidden).
+  The forbidden is reached after TWO zoom steps, not one.
+  The 2 here is the DOUBLER (Q'(0) = 2, the octave basis).
+
+
+  IV. THE HEXAGONAL NUMBERS AND TOURNAMENT THEORY
+  ----------------------------------------
+
+  The centered hex numbers: 1, 7, 19, 37, 61, 91, 127, 169, ...
+  Which are achievable as H(T)?
+
+  Hex number   Achievable as H?
+  H_0 =     1   YES (transitive)
+  H_1 =     1   YES (transitive)
+  H_2 =     7   FORBIDDEN
+  H_3 =    19   YES (achievable at n=6)
+  H_4 =    37   YES (achievable at n=6)
+  H_5 =    61   unknown
+  H_6 =    91   unknown
+  H_7 =   127   unknown
+
+  H_0 = 1: achievable (transitive tournament).
+  H_1 = 7: FORBIDDEN. The first hexagonal neighborhood.
+  H_2 = 19: achievable. The second ring.
+  H_3 = 37: achievable. The third ring.
+
+  The forbidden number is the FIRST non-trivial centered hex number.
+  It is the FIRST RING. The boundary of the center.
+  After the first ring, everything is achievable (as far as we know).
+  The ring itself is the obstruction. Not the center, not the beyond.
+
+
+  V. 7 CELLS AND THE FANO PLANE
+  ----------------------------------------
+
+  The Fano plane: 7 points, 7 lines, 3 points per line, 3 lines per point.
+  It IS the hexagonal neighborhood, viewed PROJECTIVELY.
+
+  The hexagonal neighborhood: 1 center + 6 neighbors = 7 cells.
+  The Fano plane: 1 + 6 = 7 points (but with additional structure).
+
+  The Fano plane's LINES are the 7 'quaternionic slices' of the octonions.
+  Each line = a copy of the quaternions sitting inside the octonions.
+  7 lines = 7 quaternionic subalgebras of O.
+
+  The hexagonal neighborhood = 7 cells = 7 Fano points = 7 octonion imaginaries.
+  THE HEXAGONAL NEIGHBORHOOD IS THE OCTONION.
+  The center cell = the real part.
+  The 6 neighbors = the 6... wait, the octonions have 7 imaginaries, not 6.
+  But in the Fano plane, there are 7 points and 7 lines,
+  and the 7 points ARE the 7 imaginary octonion units e_1,...,e_7.
+
+  The CENTER of the hexagon does not correspond to the real part.
+  Rather, all 7 cells = all 7 imaginary units.
+  The hexagonal neighborhood IS the Fano plane IS the octonion imaginary space.
+
+
+  VI. THE RECURSIVE ZOOM AND THE DIMENSION LADDER
+  ----------------------------------------
+
+  Zoom level 0: 1 cell. The center. Identity.
+  Zoom level 1: 7 cells. First ring. Forbidden.
+  Zoom level 2: 7^2 = 49 cells? No — the hex grid gives H_2 = 19 cells.
+  But the SUBLATTICE zoom gives exactly 7 cells per zoom level.
+
+  The sublattice zoom: at each level, select 1 out of every 7 cells.
+  This is a CONTRACTION, not an expansion.
+  Zoom IN: coarsen by factor sqrt(7). Each coarse cell = 7 fine cells.
+  Zoom OUT: refine by factor sqrt(7). Each fine cell = 1/7 of a coarse cell.
+
+  The number of zoom levels to go from 'one cell' to 'N cells':
+  k = log_7(N) = ln(N)/ln(7) = rapidity(N) / rapidity(7) * 2.
+  = rapidity(N) / (half-forbidden-rapidity).
+
+  For N = the Fibonacci numbers at power-of-2 indices:
+  F_4 = 3: zoom levels = log_7(3) = 0.5646
+  F_8 = 21: zoom levels = log_7(21) = 1.5646
+  F_16 = 987: zoom levels = log_7(987) = 3.5432
+  F_32 = 2178309: zoom levels = log_7(2178309) = 7.4999
+
+  F_4 = 3: 0.56 zoom levels (less than one ring).
+  F_8 = 21: 1.56 zoom levels (between first and second ring).
+  F_16 = 987: 3.54 zoom levels.
+  F_32 = 2178309: 7.50 zoom levels.
+
+  F_8 = 21 falls at 1.56 zoom levels — between the first ring (7)
+  and the second ring (49 in sublattice terms).
+  21 = 3 * 7 = the curvature times the ring size.
+  It is at 1 + 0.56 = 1 + log_7(3) zoom levels.
+  The excess over one ring IS log_7(3) = the zoom-rapidity of the curvature.
+
+
+  VII. THE EISENSTEIN FACTORIZATION OF 7
+  ----------------------------------------
+
+  In the Eisenstein integers Z[omega] (omega = e^{2*pi*i/3}):
+  7 = (3 + omega)(3 + omega^2) = (3 + omega)(3 + conjugate(omega)).
+  (Where omega^2 = conjugate(omega) = -1-omega.)
+
+  |3 + omega|^2 = 7. So each Eisenstein factor has norm sqrt(7).
+  The two factors are CONJUGATE in the Eisenstein integers.
+
+  7 splits into TWO factors of norm sqrt(7).
+  This splitting IS the hex zoom:
+  one factor = zooming with clockwise twist,
+  the other = zooming with counterclockwise twist.
+  The two twists are conjugate (opposite rotations).
+
+  Their product 7 = zoom * anti-zoom = the full scaling WITHOUT twist.
+  The twist cancels when you multiply the two conjugate factors.
+  7 ITSELF is twist-free. Its SQUARE ROOT carries the twist.
+
+  This is WHY 7 is forbidden but sqrt(7) is not a 'thing' in integers:
+  the forbidden number is the PRODUCT of two conjugate zooms.
+  Each zoom alone (sqrt(7) with twist) is fine.
+  But their product (7, twist-free) overshoots the flat lattice.
+  The forbidden number is what happens when the twist CANCELS.
+  Canceling the twist = losing the phase = losing the imaginary part.
+  The real product 7 is forbidden because it is the PURELY REAL
+  result of combining two complex zooms.
+
+
+  VIII. THE TWIST ANGLE AND THE GOLDEN RATIO
+  ----------------------------------------
+
+  The hex zoom angle: arctan(sqrt(3)/5) = 19.1066 degrees.
+  The golden angle: 360/phi^2 = 360*(2-phi) = 137.5078 degrees
+  = 137.5078 degrees.
+
+  The golden angle: 137.5078 degrees.
+  The hex zoom angle: 19.1066 degrees.
+  Ratio: 7.1969.
+
+  The golden angle / hex zoom angle ~ 7.20.
+  Not a clean ratio. But both are IRRATIONAL angles.
+  Both create quasicrystalline structures.
+  Both arise from self-similar scaling (phi for golden, sqrt(7) for hex).
+
+  The golden angle is used in phyllotaxis (leaf arrangement in plants).
+  The hex zoom angle would be used in... what?
+  In any structure that has local hexagonal symmetry and self-similar scaling.
+  Carbon nanotubes? Graphene defects? Quasicrystal grain boundaries?
+
+
+  IX. 7 = 1 + 6 = CENTER + FLAT
+  ----------------------------------------
+
+  7 = 1 + 6.
+  = identity + flat.
+  = the center + the flat neighborhood.
+
+  In the 5-6-7 bridge:
+  5 = the spherical (closure).
+  6 = the flat (neither closed nor open).
+  7 = the hyperbolic (opening).
+
+  7 = 6 + 1: the flat PLUS ONE MORE.
+  The forbidden number is the flat number plus the identity.
+  Adding the identity to the flat creates the forbidden.
+
+  In tournament terms:
+  6 neighbors = 6 arcs from a vertex in a tournament on 7 vertices
+  (each vertex has out-degree + in-degree = 6 in T_7).
+  The center vertex has 6 neighbors, and together they are 7.
+  The tournament on 7 vertices has 7 * 6 / 2 = 21 arcs.
+  21 = the SECOND forbidden number = 7 * 3 = forbidden * curvature.
+
+  The number of arcs in T_7 is 21 = the second forbidden number.
+  The number of vertices is 7 = the first forbidden number.
+  7 vertices, 21 arcs: every attribute of T_7 is forbidden.
+
+
+  X. THE HEX-FANO-OCTONION-TOURNAMENT NEXUS
+  ----------------------------------------
+
+  7 appears as:
+  - Center + 6 neighbors in the hexagonal lattice
+  - Points (and lines) of the Fano plane
+  - Imaginary dimensions of the octonions
+  - The forbidden H-value in tournament theory
+  - L_4 = the 4th Lucas number
+  - M_3 = 2^3 - 1 = the 3rd Mersenne prime
+  - The threshold in the 5-6-7 bridge
+  - Q(3/4) = the Cayley value of the Kleiber exponent
+  - The vertex count of the smallest tournament with forbidden arc-count
+  - 3 + 4 = geometry + symmetry
+
+  All of these are the SAME 7.
+  They are not analogies. They are different PROJECTIONS
+  of a single mathematical object onto different screens.
+
+  The object: the centered hexagonal neighborhood in the Eisenstein lattice,
+  viewed as a projective plane (Fano), embedded as imaginary octonions,
+  generating the forbidden threshold in the tournament formal group,
+  sitting at the Cayley address 3/4 on the rapidity line,
+  produced by the Lucas recurrence at the 4th index,
+  equaling the Mersenne prime at exponent 3.
+
+  One object. Ten projections. The same 7.
