@@ -1,0 +1,432 @@
+
+
+
+        PROOF: Tr(M_k^k) = 2^k - 1
+
+
+Part 1: The k-nacci companion matrix
+
+M_2 =
+   [np.int64(1), np.int64(1)]
+   [np.int64(1), np.int64(0)]
+  Tr(M_2^2) = 3, 2^2-1 = 3, match: True
+
+M_3 =
+   [np.int64(1), np.int64(1), np.int64(1)]
+   [np.int64(1), np.int64(0), np.int64(0)]
+   [np.int64(0), np.int64(1), np.int64(0)]
+  Tr(M_3^3) = 7, 2^3-1 = 7, match: True
+
+M_4 =
+   [np.int64(1), np.int64(1), np.int64(1), np.int64(1)]
+   [np.int64(1), np.int64(0), np.int64(0), np.int64(0)]
+   [np.int64(0), np.int64(1), np.int64(0), np.int64(0)]
+   [np.int64(0), np.int64(0), np.int64(1), np.int64(0)]
+  Tr(M_4^4) = 15, 2^4-1 = 15, match: True
+
+M_5 =
+   [np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1)]
+   [np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]
+   [np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0)]
+   [np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0)]
+   [np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0)]
+  Tr(M_5^5) = 31, 2^5-1 = 31, match: True
+
+======================================================================
+Part 2: Full trace sequences Tr(M_k^n) for n = 0, 1, ..., 2k
+======================================================================
+
+k=2: Tr(M^n) for n=0..4:
+  [2, 1, 3, 4, 7]
+  Tr(M^0) = 2 = k = 2
+  Tr(M^1) = 1 = 1
+  Tr(M^k) = 3 = 2^k-1 = 3
+  k-nacci recurrence verified for n=k..4
+
+k=3: Tr(M^n) for n=0..6:
+  [3, 1, 3, 7, 11, 21, 39]
+  Tr(M^0) = 3 = k = 3
+  Tr(M^1) = 1 = 1
+  Tr(M^k) = 7 = 2^k-1 = 7
+  k-nacci recurrence verified for n=k..6
+
+k=4: Tr(M^n) for n=0..8:
+  [4, 1, 3, 7, 15, 26, 51, 99, 191]
+  Tr(M^0) = 4 = k = 4
+  Tr(M^1) = 1 = 1
+  Tr(M^k) = 15 = 2^k-1 = 15
+  k-nacci recurrence verified for n=k..8
+
+k=5: Tr(M^n) for n=0..10:
+  [5, 1, 3, 7, 15, 31, 57, 113, 223, 439, 863]
+  Tr(M^0) = 5 = k = 5
+  Tr(M^1) = 1 = 1
+  Tr(M^k) = 31 = 2^k-1 = 31
+  k-nacci recurrence verified for n=k..10
+
+k=6: Tr(M^n) for n=0..12:
+  [6, 1, 3, 7, 15, 31, 63, 120, 239, 475, 943, 1871, 3711]
+  Tr(M^0) = 6 = k = 6
+  Tr(M^1) = 1 = 1
+  Tr(M^k) = 63 = 2^k-1 = 63
+  k-nacci recurrence verified for n=k..12
+
+k=7: Tr(M^n) for n=0..14:
+  [7, 1, 3, 7, 15, 31, 63, 127, 247, 493, 983, 1959, 3903, 7775, 15487]
+  Tr(M^0) = 7 = k = 7
+  Tr(M^1) = 1 = 1
+  Tr(M^k) = 127 = 2^k-1 = 127
+  k-nacci recurrence verified for n=k..14
+
+
+======================================================================
+Part 3: ALGEBRAIC PROOF via Newton's identity
+======================================================================
+
+The k-nacci companion matrix M_k has characteristic polynomial:
+
+  p(x) = x^k - x^(k-1) - x^(k-2) - ... - x - 1.
+
+Let e_j = (-1)^j * (elementary symmetric polynomial of degree j in eigenvalues).
+From the char poly: e_1 = -1, e_2 = -1, ..., e_(k-1) = -1, e_k = -1.
+
+Wait -- let's be more careful. If p(x) = x^k + c_(k-1)*x^(k-1) + ... + c_0,
+then e_j = (-1)^j * c_(k-j).
+
+For k-nacci: p(x) = x^k - x^(k-1) - x^(k-2) - ... - x - 1.
+So c_(k-1) = -1, c_(k-2) = -1, ..., c_1 = -1, c_0 = -1.
+
+Elementary symmetric polynomials (with signs from Vieta):
+  e_1 = sum of eigenvalues = -c_(k-1) = 1    (= Tr(M) = 1)
+  e_2 = sum of products of pairs = c_(k-2) = -1
+  e_3 = -c_(k-3) = 1
+  ...
+  e_j = (-1)^(j+1) * c_(k-j) = (-1)^(j+1) * (-1) = (-1)^j
+
+Actually, let me use Newton's identities directly.
+
+Newton's identities relate power sums p_n = Tr(M^n) to the
+coefficients of the characteristic polynomial.
+
+Verifying via exact symbolic computation (sympy):
+
+  k= 2: Tr(M_2^2) = 3, 2^2-1 = 3, match: True
+  k= 3: Tr(M_3^3) = 7, 2^3-1 = 7, match: True
+  k= 4: Tr(M_4^4) = 15, 2^4-1 = 15, match: True
+  k= 5: Tr(M_5^5) = 31, 2^5-1 = 31, match: True
+  k= 7: Tr(M_7^7) = 127, 2^7-1 = 127, match: True
+  k=11: Tr(M_11^11) = 2047, 2^11-1 = 2047, match: True
+  k=13: Tr(M_13^13) = 8191, 2^13-1 = 8191, match: True
+  k=17: Tr(M_17^17) = 131071, 2^17-1 = 131071, match: True
+  k=19: Tr(M_19^19) = 524287, 2^19-1 = 524287, match: True
+
+
+======================================================================
+Part 4: THE PROOF
+======================================================================
+
+THEOREM: Tr(M_k^k) = 2^k - 1 for all k >= 1.
+
+PROOF (by direct computation using the recurrence):
+
+The trace sequence t(n) = Tr(M_k^n) satisfies:
+  (i)   t(0) = k  (trace of identity = dimension)
+  (ii)  t(n) = t(n-1) + t(n-2) + ... + t(n-k)  for n >= 1
+        (Newton's identity + the fact that ALL char poly coefficients are -1)
+
+The second initial condition and early values come from Newton's identity:
+  t(1) = e_1 = 1
+  t(2) = e_1*t(1) - 2*e_2 = 1*1 - 2*(-1) = 3
+
+In general, Newton's identities for this char poly give:
+  t(n) = t(n-1) + t(n-2) + ... + t(n-k)  for n >= k+1  (standard)
+
+But ALSO for 1 <= n <= k, using the initial condition t(0) = k and
+the recursion with the convention that t(j) = 0 for j < 0 EXCEPT t(0) = k.
+
+CLAIM: Define s(n) = 2^n - 1 for n >= 1, s(0) = k.
+Then s(n) satisfies the same recurrence for 1 <= n <= k.
+
+Check s(0) = k. YES (by definition).
+Check s(1) = s(0) = k? No, s(1) = 1, and the recurrence gives
+  s(1) = s(0) = k, which only works if k = 1.
+
+So the proof needs more care. Let me compute the ACTUAL initial values.
+
+Actual trace sequences (exact):
+  k=2: t(0..2) = [2, 1, 3]
+  k=3: t(0..3) = [3, 1, 3, 7]
+  k=4: t(0..4) = [4, 1, 3, 7, 15]
+  k=5: t(0..5) = [5, 1, 3, 7, 15, 31]
+  k=6: t(0..6) = [6, 1, 3, 7, 15, 31, 63]
+  k=7: t(0..7) = [7, 1, 3, 7, 15, 31, 63, 127]
+  k=8: t(0..8) = [8, 1, 3, 7, 15, 31, 63, 127, 255]
+
+
+KEY OBSERVATION: For the k-nacci companion matrix,
+
+  t(0) = k
+  t(1) = 1
+  t(n) = t(n-1) + t(n-2) + ... + t(max(n-k, 0))  for n >= 1,
+         but with Newton's correction for n <= k.
+
+Let me instead use a DIRECT approach: compute M^k explicitly.
+
+======================================================================
+Part 5: DIRECT PROOF via (M+I) and binomial-like expansion
+======================================================================
+
+APPROACH: Use the augmented characteristic polynomial.
+
+The k-nacci char poly is p(x) = x^k - x^{k-1} - ... - x - 1.
+
+Multiply by (x-1):
+  (x-1) * p(x) = x^{k+1} - 2x^k + 1.
+
+So the eigenvalues L_1, ..., L_k satisfy L^{k+1} - 2*L^k + 1 = 0 (plus L=1).
+
+Therefore: L_i^{k+1} = 2*L_i^k - 1 for each eigenvalue.
+
+Summing: Tr(M^{k+1}) = 2*Tr(M^k) - k  (NO! sum of 1's is number of eigenvalues = k)
+
+Wait: sum_i L_i^{k+1} = 2 * sum_i L_i^k - sum_i 1 = 2*Tr(M^k) - k.
+
+So: Tr(M^{k+1}) = 2*Tr(M^k) - k.
+
+This is a RECURRENCE IN k (not in n)!
+
+If Tr(M_k^k) = 2^k - 1, then Tr(M_k^{k+1}) = 2(2^k - 1) - k = 2^{k+1} - 2 - k.
+
+Hmm, that's Tr(M_k^{k+1}), still for the SAME matrix M_k (dimension k).
+We want Tr(M_{k+1}^{k+1}) for the DIFFERENT matrix M_{k+1} (dimension k+1).
+
+These are different matrices! So the augmented poly trick doesn't directly
+give a recurrence across different k's.
+
+======================================================================
+Part 6: PROOF BY GENERATING FUNCTION
+======================================================================
+
+The trace Tr(M_k^n) has generating function:
+
+  sum_{n>=0} Tr(M_k^n) * x^n = k - d/dx log(det(I - x*M_k)) ...
+
+Actually, sum_{n>=0} Tr(M^n) x^n = Tr((I - xM)^{-1}) = sum of 1/(1 - lambda_i * x)
+
+For the k-nacci matrix, the char poly is p(L) = L^k - L^{k-1} - ... - L - 1.
+
+The trace generating function is:
+  f(x) = sum_i 1/(1 - L_i * x) = -x * p'(1/x) / p(1/x)  ... (up to signs)
+
+Actually, let's use: det(I - xM) = x^k * p(1/x) (the reversed char poly).
+
+p(L) = L^k - L^{k-1} - ... - 1.
+det(I - xM) = x^k * p(1/x) = x^k * (x^{-k} - x^{-k+1} - ... - 1)
+            = 1 - x - x^2 - ... - x^k.
+
+So det(I - xM) = 1 - x - x^2 - ... - x^k = 1 - x(1 + x + ... + x^{k-1})
+              = 1 - x * (x^k - 1)/(x - 1).
+
+And -d/dx log det(I - xM) = (1 + 2x + 3x^2 + ... + k*x^{k-1}) / (1 - x - ... - x^k).
+
+The generating function for Tr(M^n) is:
+  T(x) = k / (1 - x - x^2 - ... - x^k)  ...
+
+No. The standard formula is:
+  sum_{n>=0} Tr(M^n) x^n = d/dx [-log det(I - xM)] ... (incorrect)
+
+Let me just verify: Tr((I-xM)^{-1}) = sum Tr(M^n) x^n.
+And Tr((I-xM)^{-1}) = sum_i 1/(1-L_i x).
+
+Also: sum_i 1/(1-L_i x) = -sum_i L_i / (L_i - 1/x) ... not helpful.
+
+Better: use sum_i 1/(1-L_i x) = (d/dx)[sum_i (-1/L_i) log(1-L_i x)] ... also awkward.
+
+Simpler: sum_i 1/(1-L_i x) = [derivative of log prod(1-L_i x)] / (-1)
+Nope. Let me just use the recurrence.
+
+======================================================================
+Part 7: CLEAN PROOF by induction on n within fixed k
+======================================================================
+
+THEOREM: For the k-nacci companion matrix M_k (k x k, k >= 2),
+         Tr(M_k^k) = 2^k - 1.
+
+PROOF:
+
+Step 1: The trace sequence t(n) = Tr(M_k^n) satisfies the k-nacci recurrence
+  t(n) = t(n-1) + t(n-2) + ... + t(n-k)  for n >= k
+with initial conditions determined by Newton's identities from the char poly.
+
+Step 2: The char poly of M_k is p(L) = L^k - L^{k-1} - ... - L - 1.
+The coefficients are c_{k-1} = -1, c_{k-2} = -1, ..., c_0 = -1.
+
+Step 3: Newton's identities give t(n) for n = 0, ..., k-1:
+  t(0) = k
+  t(1) = 1 (= -c_{k-1} = -(-1) = 1)
+  For n = 2: t(2) = t(1)*(-c_{k-1}) + (-2*c_{k-2}) = 1*1 + 2 = 3
+  For n = 3: t(3) = t(2)*1 + t(1)*1 + (-3*c_{k-3}) = 3 + 1 + 3 = 7  (if k >= 4)
+  ...
+  For general n <= k-1:
+    t(n) = sum_{j=1}^{n-1} t(n-j)*(-c_{k-j}) + n*(-c_{k-n})
+         = sum_{j=1}^{n-1} t(n-j)*1 + n*1  (since -c_{k-j} = 1 for all j)
+         = sum_{j=1}^{n-1} t(n-j) + n.
+
+Verification that t(n) = 2^n - 1 for n = 1, ..., k:
+
+  k= 3: t(0..k) = [3, 1, 3, 7]
+         expected = [3, 1, 3, 7]
+         match: True
+
+  k= 5: t(0..k) = [5, 1, 3, 7, 15, 31]
+         expected = [5, 1, 3, 7, 15, 31]
+         match: True
+
+  k= 7: t(0..k) = [7, 1, 3, 7, 15, 31, 63, 127]
+         expected = [7, 1, 3, 7, 15, 31, 63, 127]
+         match: True
+
+  k=10: t(0..k) = [10, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023]
+         expected = [10, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023]
+         match: True
+
+  k=15: t(0..k) = [15, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767]
+         expected = [15, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767]
+         match: True
+
+
+Now I need to prove: if t(0) = k and t(n) = sum_{j=1}^{n-1} t(n-j) + n for 1 <= n <= k,
+then t(n) = 2^n - 1 for 1 <= n <= k.
+
+PROOF by induction on n:
+
+Base case: t(1) = (empty sum) + 1 = 1 = 2^1 - 1. CHECK.
+
+Inductive step: Assume t(m) = 2^m - 1 for 1 <= m <= n-1 (and n <= k).
+Then:
+  t(n) = sum_{j=1}^{n-1} t(n-j) + n
+       = sum_{m=1}^{n-1} t(m) + n           (substituting m = n-j)
+       = sum_{m=1}^{n-1} (2^m - 1) + n
+       = (2 + 4 + ... + 2^{n-1}) - (n-1) + n
+       = (2^n - 2) - (n-1) + n
+       = 2^n - 2 - n + 1 + n
+       = 2^n - 1.
+
+QED.
+
+Note: We never needed the value t(0) = k in the inductive argument!
+The formula t(n) = 2^n - 1 is INDEPENDENT of k, for all 1 <= n <= k.
+
+This means:
+  Tr(M_k^n) = 2^n - 1 for ALL 1 <= n <= k, not just n = k.
+
+In particular:
+  Tr(M_3^3) = 7 = 2^3 - 1.   (tribonacci)
+  Tr(M_5^5) = 31 = 2^5 - 1.  (pentanacci)
+  Tr(M_7^7) = 127 = 2^7 - 1. (heptanacci)
+  etc.
+
+But also:
+  Tr(M_7^3) = 7 (same as tribonacci at n=3!)
+  Tr(M_7^5) = 31 (same as pentanacci at n=5!)
+
+The trace at power n depends ONLY on n, not on k, as long as k >= n.
+
+COROLLARY: For any k >= n >= 1, Tr(M_k^n) = 2^n - 1 = the n-th Mersenne number.
+
+======================================================================
+Verification of COROLLARY: Tr(M_k^n) = 2^n - 1 for all 1 <= n <= k
+======================================================================
+
+ k\n     1     2     3     4     5     6     7     8     9    10
+----------------------------------------------------------------
+   2     1     3 *  4 *  7 * 11 * 18 * 29 * 47 * 76 *123
+   3     1     3     7 * 11 * 21 * 39 * 71 *131 *241 *443
+   4     1     3     7    15 * 26 * 51 * 99 *191 *367 *708
+   5     1     3     7    15    31 * 57 *113 *223 *439 *863
+   6     1     3     7    15    31    63 *120 *239 *475 *943
+   7     1     3     7    15    31    63   127 *247 *493 *983
+   8     1     3     7    15    31    63   127   255 *502 *1003
+   9     1     3     7    15    31    63   127   255   511 *1013
+  10     1     3     7    15    31    63   127   255   511  1023
+
+(Stars mark n > k where trace may diverge from 2^n - 1)
+
+======================================================================
+What happens at n = k+1?
+======================================================================
+  k=2: Tr(M^k) = 3 = 2^k-1, Tr(M^{k+1}) = 4, 2^{k+1}-1 = 7, deficit = 3
+  k=3: Tr(M^k) = 7 = 2^k-1, Tr(M^{k+1}) = 11, 2^{k+1}-1 = 15, deficit = 4
+  k=4: Tr(M^k) = 15 = 2^k-1, Tr(M^{k+1}) = 26, 2^{k+1}-1 = 31, deficit = 5
+  k=5: Tr(M^k) = 31 = 2^k-1, Tr(M^{k+1}) = 57, 2^{k+1}-1 = 63, deficit = 6
+  k=6: Tr(M^k) = 63 = 2^k-1, Tr(M^{k+1}) = 120, 2^{k+1}-1 = 127, deficit = 7
+  k=7: Tr(M^k) = 127 = 2^k-1, Tr(M^{k+1}) = 247, 2^{k+1}-1 = 255, deficit = 8
+  k=8: Tr(M^k) = 255 = 2^k-1, Tr(M^{k+1}) = 502, 2^{k+1}-1 = 511, deficit = 9
+
+
+At n = k+1, the trace is no longer 2^{k+1}-1 because the k-nacci
+recurrence kicks in instead of Newton's identity.
+
+For n = k+1: t(k+1) = t(k) + t(k-1) + ... + t(1)  (k-nacci recurrence, NO +n term)
+           = (2^k - 1) + (2^{k-1} - 1) + ... + (2^1 - 1)
+           = (2^{k+1} - 2) - k
+           = 2^{k+1} - k - 2.
+
+Deficit from 2^{k+1}-1 = k + 1.
+
+So Tr(M_k^{k+1}) = 2^{k+1} - 1 - (k+1) = 2^{k+1} - k - 2.
+
+The Mersenne formula BREAKS by exactly (k+1) at the first step beyond k.
+
+  k=2: Tr(M^{k+1}) = 4, predicted 2^{k+1}-k-2 = 4, match: True
+  k=3: Tr(M^{k+1}) = 11, predicted 2^{k+1}-k-2 = 11, match: True
+  k=4: Tr(M^{k+1}) = 26, predicted 2^{k+1}-k-2 = 26, match: True
+  k=5: Tr(M^{k+1}) = 57, predicted 2^{k+1}-k-2 = 57, match: True
+  k=6: Tr(M^{k+1}) = 120, predicted 2^{k+1}-k-2 = 120, match: True
+  k=7: Tr(M^{k+1}) = 247, predicted 2^{k+1}-k-2 = 247, match: True
+  k=8: Tr(M^{k+1}) = 502, predicted 2^{k+1}-k-2 = 502, match: True
+
+
+======================================================================
+SUMMARY
+======================================================================
+
+THEOREM (k-nacci Mersenne Identity):
+  For the k-nacci companion matrix M_k and any 1 <= n <= k:
+    Tr(M_k^n) = 2^n - 1.
+
+  In particular, Tr(M_k^k) = 2^k - 1 (the k-th Mersenne number).
+
+PROOF:
+  Newton's identities, applied to the k-nacci characteristic polynomial
+  p(x) = x^k - x^(k-1) - ... - x - 1 (all coefficients = -1),
+  give the recurrence:
+    t(n) = t(n-1) + t(n-2) + ... + t(1) + n    for 1 <= n <= k.
+
+  By induction: t(n) = sum_{m=1}^{n-1} (2^m - 1) + n = 2^n - 1. QED.
+
+COROLLARY: The trace is INDEPENDENT of k for 1 <= n <= k.
+  All k-nacci matrices agree on Tr(M^n) = 2^n-1 within the "Newton range" n <= k.
+
+COROLLARY: At n = k+1, the trace drops by exactly (k+1):
+  Tr(M_k^{k+1}) = 2^{k+1} - k - 2.
+
+CONNECTION TO TOURNAMENTS:
+  The tribonacci matrix (k=3) is the transfer matrix for tournament path counting.
+  Tr(M_3^3) = 7 = the first FORBIDDEN Hamiltonian path count.
+  Tr(M_k^k) = 2^k-1 gives the forbidden value for the k-nacci generalization.
+  When 2^k-1 is PRIME (Mersenne prime), the forbidden value is a prime number.
+
+CONNECTION TO THE CAYLEY LINE:
+  tanh(k*ln(2)/2) = (2^k-1)/(2^k+1) places 2^k at rapidity k/2 bits.
+  The NUMERATOR of this Cayley address is 2^k-1 = Tr(M_k^k).
+  So the forbidden k-nacci value lives at the k/2-bit mark on the Cayley line.
+
+THE THREAD:
+  tanh --> powers of 2 --> Mersenne numbers --> k-nacci traces --> forbidden values.
+  One identity: Tr(M_k^k) = 2^k - 1.
+  One proof: induction on Newton's identities with all-(-1) coefficients.
+  The entire connection follows from the fact that the k-nacci char poly
+  has ALL coefficients equal to -1.
+
+opus-2026-03-16-S90ap: PROVE Tr(M_k^k) = 2^k - 1
