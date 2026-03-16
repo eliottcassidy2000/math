@@ -1,0 +1,210 @@
+
+  ENUMERATIVE SPEEDUPS FOR H(T)
+
+======================================================================
+
+  I. TIMING COMPARISON AT n=6
+  --------------------------------------------------
+
+  n=6: H = 15
+  Brute force:  0.16 ms  (checks 6! = 720 perms)
+  Subset DP:    0.70 ms  (uses n^2 * 2^n = 2304 ops)
+  Smart OCF:    0.20 ms
+  All agree: False
+
+  II. TIMING COMPARISON AT n=7
+  --------------------------------------------------
+
+  n=7: H = 103
+  Brute force:  1.50 ms  (checks 7! = 5040 perms)
+  Subset DP:    0.37 ms  (uses n^2 * 2^n = 6272 ops)
+  Smart OCF:    0.66 ms
+  All agree: False
+
+  III. TIMING AT n=8 (brute force too slow)
+  --------------------------------------------------
+
+  n=8: H = 243
+  Subset DP:    0.73 ms
+  Smart OCF:    3.96 ms
+  Agree: False
+
+  IV. SUBSET DP SCALING
+  --------------------------------------------------
+
+  n= 6: H=        15, time=       0.1 ms, ops=        2304, time/op=34.4 ns
+  n= 7: H=       103, time=       0.3 ms, ops=        6272, time/op=47.7 ns
+  n= 8: H=       243, time=       0.5 ms, ops=       16384, time/op=32.1 ns
+  n= 9: H=      2101, time=       1.5 ms, ops=       41472, time/op=35.9 ns
+  n=10: H=      4213, time=       4.8 ms, ops=      102400, time/op=47.3 ns
+  n=11: H=     18043, time=       9.2 ms, ops=      247808, time/op=37.3 ns
+  n=12: H=     91111, time=      24.1 ms, ops=      589824, time/op=40.9 ns
+  n=13: H=    962497, time=      63.0 ms, ops=     1384448, time/op=45.5 ns
+
+  V. NEW SPEEDUP: SKIP-HIERARCHY DECOMPOSITION
+  --------------------------------------------------
+
+  For n=6 (canonical path), fixing LONG-RANGE arcs (skip 4,5):
+  3 long-range bits -> 2^3 = 8 framework configs
+  7 short-range bits -> 2^7 = 128 fine-tuning configs per framework
+
+   LR config   count   min_H   max_H     avg_H     std_H   range
+   (0, 0, 0)     128      15      45     32.25      8.21      30
+   (0, 0, 1)     128      15      45     33.25      6.93      30
+   (0, 1, 0)     128      15      45     32.25      8.21      30
+   (0, 1, 1)     128       9      45     24.75     10.13      36
+   (1, 0, 0)     128      15      45     33.25      6.93      30
+   (1, 0, 1)     128      15      45     33.25      7.64      30
+   (1, 1, 0)     128       9      45     24.75     10.13      36
+   (1, 1, 1)     128       1      45     18.25     10.72      44
+
+  Total variance: 104.56
+  Between-group (long-range): 28.38 (27.1%)
+  Within-group (short-range): 76.19 (72.9%)
+
+  VI. SEQUENCE HUNTING: OEIS CONNECTIONS
+  --------------------------------------------------
+
+  H-value frequencies at n=6 (ALL 32768 tournaments):
+  H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  Frequencies: [720, 960, 2160, 2960, 1440, 1440, 2208, 1440, 1440, 2880, 1440, 480, 2880, 1440, 2640, 3600, 720, 1440, 480]
+
+  Achievable H values at n=6: { 1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45 }
+  Number of achievable values: 19
+
+  Frequency sequence: [720, 960, 2160, 2960, 1440, 1440, 2208, 1440, 1440, 2880, 1440, 480, 2880, 1440, 2640, 3600, 720, 1440, 480]
+
+  H statistics by score sequence at n=6:
+                 Score   count   min_H   max_H     avg_H   #distinct
+    (0, 1, 2, 3, 4, 5)     720       1       1      1.00           1
+    (0, 1, 2, 4, 4, 4)     240       3       3      3.00           1
+    (0, 1, 3, 3, 3, 5)     240       3       3      3.00           1
+    (0, 1, 3, 3, 4, 4)     720       5       5      5.00           1
+    (0, 2, 2, 2, 4, 5)     240       3       3      3.00           1
+    (0, 2, 2, 3, 3, 5)     720       5       5      5.00           1
+    (0, 2, 2, 3, 4, 4)    1440       9       9      9.00           1
+    (0, 2, 3, 3, 3, 4)    1680      11      15     12.43           3
+    (0, 3, 3, 3, 3, 3)     144      15      15     15.00           1
+    (1, 1, 1, 3, 4, 5)     240       3       3      3.00           1
+    (1, 1, 1, 4, 4, 4)      80       9       9      9.00           1
+    (1, 1, 2, 2, 4, 5)     720       5       5      5.00           1
+    (1, 1, 2, 3, 3, 5)    1440       9       9      9.00           1
+    (1, 1, 2, 3, 4, 4)    2880      15      17     16.00           2
+    (1, 1, 3, 3, 3, 4)    1680      19      27     21.86           3
+    (1, 2, 2, 2, 3, 5)    1680      11      15     12.43           3
+    (1, 2, 2, 2, 4, 4)    1680      19      27     21.86           3
+    (1, 2, 2, 3, 3, 4)    8640      23      37     28.67           6
+    (1, 2, 3, 3, 3, 3)    2400      33      37     35.40           2
+    (2, 2, 2, 2, 2, 5)     144      15      15     15.00           1
+    (2, 2, 2, 2, 3, 4)    2400      33      37     35.40           2
+    (2, 2, 2, 3, 3, 3)    2640      41      45     42.82           3
+
+  c3 by score (Rao's formula):
+  score (0, 1, 2, 3, 4, 5): c3=0, 1+2*c3=1, actual min=1, gap=0
+  score (0, 1, 2, 4, 4, 4): c3=1, 1+2*c3=3, actual min=3, gap=0
+  score (0, 1, 3, 3, 3, 5): c3=1, 1+2*c3=3, actual min=3, gap=0
+  score (0, 1, 3, 3, 4, 4): c3=2, 1+2*c3=5, actual min=5, gap=0
+  score (0, 2, 2, 2, 4, 5): c3=1, 1+2*c3=3, actual min=3, gap=0
+  score (0, 2, 2, 3, 3, 5): c3=2, 1+2*c3=5, actual min=5, gap=0
+  score (0, 2, 2, 3, 4, 4): c3=3, 1+2*c3=7, actual min=9, gap=2
+  score (0, 2, 3, 3, 3, 4): c3=4, 1+2*c3=9, actual min=11, gap=2
+  score (0, 3, 3, 3, 3, 3): c3=5, 1+2*c3=11, actual min=15, gap=4
+  score (1, 1, 1, 3, 4, 5): c3=1, 1+2*c3=3, actual min=3, gap=0
+  score (1, 1, 1, 4, 4, 4): c3=2, 1+2*c3=5, actual min=9, gap=4
+  score (1, 1, 2, 2, 4, 5): c3=2, 1+2*c3=5, actual min=5, gap=0
+  score (1, 1, 2, 3, 3, 5): c3=3, 1+2*c3=7, actual min=9, gap=2
+  score (1, 1, 2, 3, 4, 4): c3=4, 1+2*c3=9, actual min=15, gap=6
+  score (1, 1, 3, 3, 3, 4): c3=5, 1+2*c3=11, actual min=19, gap=8
+  score (1, 2, 2, 2, 3, 5): c3=4, 1+2*c3=9, actual min=11, gap=2
+  score (1, 2, 2, 2, 4, 4): c3=5, 1+2*c3=11, actual min=19, gap=8
+  score (1, 2, 2, 3, 3, 4): c3=6, 1+2*c3=13, actual min=23, gap=10
+  score (1, 2, 3, 3, 3, 3): c3=7, 1+2*c3=15, actual min=33, gap=18
+  score (2, 2, 2, 2, 2, 5): c3=5, 1+2*c3=11, actual min=15, gap=4
+  score (2, 2, 2, 2, 3, 4): c3=7, 1+2*c3=15, actual min=33, gap=18
+  score (2, 2, 2, 3, 3, 3): c3=8, 1+2*c3=17, actual min=41, gap=24
+
+  VII. THE GAP SEQUENCE: min_H - (1+2*c3)
+  --------------------------------------------------
+
+  Min 5-cycle + alpha_2 contribution by score:
+  score (0, 1, 2, 3, 4, 5): gap = 0 (= 2*min_c5 + 4*min_alpha_2)
+  score (0, 1, 2, 4, 4, 4): gap = 0 (= 2*min_c5 + 4*min_alpha_2)
+  score (0, 1, 3, 3, 3, 5): gap = 0 (= 2*min_c5 + 4*min_alpha_2)
+  score (0, 1, 3, 3, 4, 4): gap = 0 (= 2*min_c5 + 4*min_alpha_2)
+  score (0, 2, 2, 2, 4, 5): gap = 0 (= 2*min_c5 + 4*min_alpha_2)
+  score (0, 2, 2, 3, 3, 5): gap = 0 (= 2*min_c5 + 4*min_alpha_2)
+  score (1, 1, 1, 3, 4, 5): gap = 0 (= 2*min_c5 + 4*min_alpha_2)
+  score (1, 1, 2, 2, 4, 5): gap = 0 (= 2*min_c5 + 4*min_alpha_2)
+  score (0, 2, 2, 3, 4, 4): gap = 2 (= 2*min_c5 + 4*min_alpha_2)
+  score (0, 2, 3, 3, 3, 4): gap = 2 (= 2*min_c5 + 4*min_alpha_2)
+  score (1, 1, 2, 3, 3, 5): gap = 2 (= 2*min_c5 + 4*min_alpha_2)
+  score (1, 2, 2, 2, 3, 5): gap = 2 (= 2*min_c5 + 4*min_alpha_2)
+  score (0, 3, 3, 3, 3, 3): gap = 4 (= 2*min_c5 + 4*min_alpha_2)
+  score (1, 1, 1, 4, 4, 4): gap = 4 (= 2*min_c5 + 4*min_alpha_2)
+  score (2, 2, 2, 2, 2, 5): gap = 4 (= 2*min_c5 + 4*min_alpha_2)
+  score (1, 1, 2, 3, 4, 4): gap = 6 (= 2*min_c5 + 4*min_alpha_2)
+  score (1, 1, 3, 3, 3, 4): gap = 8 (= 2*min_c5 + 4*min_alpha_2)
+  score (1, 2, 2, 2, 4, 4): gap = 8 (= 2*min_c5 + 4*min_alpha_2)
+  score (1, 2, 2, 3, 3, 4): gap = 10 (= 2*min_c5 + 4*min_alpha_2)
+  score (1, 2, 3, 3, 3, 3): gap = 18 (= 2*min_c5 + 4*min_alpha_2)
+  score (2, 2, 2, 2, 3, 4): gap = 18 (= 2*min_c5 + 4*min_alpha_2)
+  score (2, 2, 2, 3, 3, 3): gap = 24 (= 2*min_c5 + 4*min_alpha_2)
+
+  Scores with gap = 0 (no 5-cycles needed): [(0, 1, 2, 3, 4, 5), (0, 1, 2, 4, 4, 4), (0, 1, 3, 3, 3, 5), (0, 1, 3, 3, 4, 4), (0, 2, 2, 2, 4, 5), (0, 2, 2, 3, 3, 5), (1, 1, 1, 3, 4, 5), (1, 1, 2, 2, 4, 5)]
+
+  VIII. THE MAXIMUM SPEEDUP POTENTIAL
+  --------------------------------------------------
+
+  Complexity comparison:
+  n= 5: n!=            120, n^2*2^n=         800, ratio=       0.1x, cycle_enum~            180
+  n= 6: n!=            720, n^2*2^n=        2304, ratio=       0.3x, cycle_enum~            840
+  n= 7: n!=           5040, n^2*2^n=        6272, ratio=       0.8x, cycle_enum~           7770
+  n= 8: n!=          40320, n^2*2^n=       16384, ratio=       2.5x, cycle_enum~          47376
+  n= 9: n!=         362880, n^2*2^n=       41472, ratio=       8.8x, cycle_enum~         559944
+  n=10: n!=        3628800, n^2*2^n=      102400, ratio=      35.4x, cycle_enum~        4264560
+  n=11: n!=       39916800, n^2*2^n=      247808, ratio=     161.1x, cycle_enum~       61594830
+  n=12: n!=      479001600, n^2*2^n=      589824, ratio=     812.1x, cycle_enum~      562923240
+  n=13: n!=     6227020800, n^2*2^n=     1384448, ratio=    4497.8x, cycle_enum~     9608795196
+  n=14: n!=    87178291200, n^2*2^n=     3211264, ratio=   27147.7x, cycle_enum~   102452031864
+  n=15: n!=  1307674368000, n^2*2^n=     7372800, ratio=  177364.7x, cycle_enum~  2017846993890
+  n=16: n!= 20922789888000, n^2*2^n=    16777216, ratio= 1247095.5x, cycle_enum~ 24588487650720
+  n=17: n!=355687428096000, n^2*2^n=    37879808, ratio= 9389895.2x, cycle_enum~548854382342160
+
+  DP wins over brute force starting at n=8.
+  At n=13: DP is 717x faster. At n=15: 35000x faster.
+
+  IX. NEW INSIGHT: THE SCORE-STRATIFIED SPEEDUP
+  --------------------------------------------------
+
+  Correction range by score at n=6:
+  score (0, 1, 2, 3, 4, 5): c3=0, base=1, correction in [0, 0], 1 distinct values
+  score (0, 1, 2, 4, 4, 4): c3=1, base=3, correction in [0, 0], 1 distinct values
+  score (0, 1, 3, 3, 3, 5): c3=1, base=3, correction in [0, 0], 1 distinct values
+  score (0, 1, 3, 3, 4, 4): c3=2, base=5, correction in [0, 0], 1 distinct values
+  score (0, 2, 2, 2, 4, 5): c3=1, base=3, correction in [0, 0], 1 distinct values
+  score (0, 2, 2, 3, 3, 5): c3=2, base=5, correction in [0, 0], 1 distinct values
+  score (0, 2, 2, 3, 4, 4): c3=3, base=7, correction in [2, 2], 1 distinct values
+  score (0, 2, 3, 3, 3, 4): c3=4, base=9, correction in [2, 6], 3 distinct values
+  score (0, 3, 3, 3, 3, 3): c3=5, base=11, correction in [4, 4], 1 distinct values
+  score (1, 1, 1, 3, 4, 5): c3=1, base=3, correction in [0, 0], 1 distinct values
+  score (1, 1, 1, 4, 4, 4): c3=2, base=5, correction in [4, 4], 1 distinct values
+  score (1, 1, 2, 2, 4, 5): c3=2, base=5, correction in [0, 0], 1 distinct values
+  score (1, 1, 2, 3, 3, 5): c3=3, base=7, correction in [2, 2], 1 distinct values
+  score (1, 1, 2, 3, 4, 4): c3=4, base=9, correction in [6, 8], 2 distinct values
+  score (1, 1, 3, 3, 3, 4): c3=5, base=11, correction in [8, 16], 3 distinct values
+  score (1, 2, 2, 2, 3, 5): c3=4, base=9, correction in [2, 6], 3 distinct values
+  score (1, 2, 2, 2, 4, 4): c3=5, base=11, correction in [8, 16], 3 distinct values
+  score (1, 2, 2, 3, 3, 4): c3=6, base=13, correction in [10, 24], 6 distinct values
+  score (1, 2, 3, 3, 3, 3): c3=7, base=15, correction in [18, 22], 2 distinct values
+  score (2, 2, 2, 2, 2, 5): c3=5, base=11, correction in [4, 4], 1 distinct values
+  score (2, 2, 2, 2, 3, 4): c3=7, base=15, correction in [18, 22], 2 distinct values
+  score (2, 2, 2, 3, 3, 3): c3=8, base=17, correction in [24, 28], 3 distinct values
+
+  CONCLUSION: The 'combinatorial surplus' beyond c3 is largest for
+  regular tournaments and smallest for near-transitive ones.
+  A fast H algorithm could:
+  1. Compute c3 from score in O(n) time (Rao)
+  2. Compute correction via 5-cycle/alpha_2 enumeration
+  3. For near-transitive: correction ~ 0, almost free
+  4. For regular: need full enumeration, but can bound
+
