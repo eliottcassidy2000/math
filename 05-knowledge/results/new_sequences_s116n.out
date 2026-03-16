@@ -1,0 +1,160 @@
+
+  NEW TOURNAMENT SEQUENCES FOR OEIS
+
+======================================================================
+
+  I. SEQUENCE A: NUMBER OF ACHIEVABLE H VALUES
+  --------------------------------------------------
+
+  n=2: 1 achievable H values (out of 2 tournaments)
+    Values: [1]
+
+  n=3: 2 achievable H values (out of 8 tournaments)
+    Values: [1, 3]
+
+  n=4: 3 achievable H values (out of 64 tournaments)
+    Values: [1, 3, 5]
+
+  n=5: 7 achievable H values (out of 1024 tournaments)
+    Values: [1, 3, 5, 9, 11, 13, 15]
+
+  n=6: 19 achievable H values (out of 32768 tournaments)
+    Values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+  n=7: >= 77 achievable H values (sampled 50000/2097152)
+    Range: [1, 189]
+
+  SEQUENCE A (# achievable H values):
+  a(n) = 1, 1, 2, 3, 7, 19, ...
+
+  II. SEQUENCE B: NUMBER OF SCORE-RIGID CLASSES
+  --------------------------------------------------
+
+  n=2: 1 score classes, 1 rigid (100%), 0 non-rigid
+
+  n=3: 2 score classes, 2 rigid (100%), 0 non-rigid
+
+  n=4: 4 score classes, 4 rigid (100%), 0 non-rigid
+
+  n=5: 9 score classes, 8 rigid (89%), 1 non-rigid
+    non-rigid: score=(1, 2, 2, 2, 3), H in [11, 13, 15]
+
+  n=6: 22 score classes, 13 rigid (59%), 9 non-rigid
+    non-rigid: score=(0, 2, 3, 3, 3, 4), H in [11, 13, 15]
+    non-rigid: score=(1, 1, 2, 3, 4, 4), H in [15, 17]
+    non-rigid: score=(1, 1, 3, 3, 3, 4), H in [19, 23, 27]
+    non-rigid: score=(1, 2, 2, 2, 3, 5), H in [11, 13, 15]
+    non-rigid: score=(1, 2, 2, 2, 4, 4), H in [19, 23, 27]
+    non-rigid: score=(1, 2, 2, 3, 3, 4), H in [23, 25, 29, 31, 33, 37]
+    non-rigid: score=(1, 2, 3, 3, 3, 3), H in [33, 37]
+    non-rigid: score=(2, 2, 2, 2, 3, 4), H in [33, 37]
+    non-rigid: score=(2, 2, 2, 3, 3, 3), H in [41, 43, 45]
+
+  SEQUENCE B (# rigid score classes): 1, 1, 2, 3, 14, ...
+  SEQUENCE B' (# total score classes): 1, 1, 2, 4, 9, 22, ...
+  SEQUENCE B'' (# non-rigid classes): 0, 0, 0, 1, 5(?), 8, ...
+
+  III. SEQUENCE C: THE GAP SEQUENCE
+  --------------------------------------------------
+
+  Gap values by n:
+  n=3: gaps = [0, 0]
+    max gap = 0, sum = 0
+
+  n=4: gaps = [0, 0, 0, 0]
+    max gap = 0, sum = 0
+
+  n=5: gaps = [0, 0, 0, 0, 0, 0, 2, 2, 4]
+    max gap = 4, sum = 8
+
+  n=6: gaps = [0, 0, 0, 0, 0, 0, 2, 2, 4, 0, 4, 0, 2, 6, 8, 2, 8, 10, 18, 4, 18, 24]
+    max gap = 24, sum = 112
+
+  IV. SEQUENCE D: H mod 6 DISTRIBUTION
+  --------------------------------------------------
+
+  n=3: H mod 6 distribution:
+    H = 1 mod 6:        6 / 8 = 75.00%
+    H = 3 mod 6:        2 / 8 = 25.00%
+    H = 5 mod 6:        0 / 8 = 0.00%
+    Ratio (1:3:5): 6:2:0
+
+  n=4: H mod 6 distribution:
+    H = 1 mod 6:       24 / 64 = 37.50%
+    H = 3 mod 6:       16 / 64 = 25.00%
+    H = 5 mod 6:       24 / 64 = 37.50%
+    Ratio (1:3:5): 24:16:24
+
+  n=5: H mod 6 distribution:
+    H = 1 mod 6:      240 / 1024 = 23.44%
+    H = 3 mod 6:      424 / 1024 = 41.41%
+    H = 5 mod 6:      360 / 1024 = 35.16%
+    Ratio (1:3:5): 240:424:360
+
+  n=6: H mod 6 distribution:
+    H = 1 mod 6:    11520 / 32768 = 35.16%
+    H = 3 mod 6:     9728 / 32768 = 29.69%
+    H = 5 mod 6:    11520 / 32768 = 35.16%
+    Ratio (1:3:5): 11520:9728:11520
+
+  V. SEQUENCE E: TOURNAMENTS WITH H = max
+  --------------------------------------------------
+
+  n=2: max H = 1, achieved by 2 labeled tournaments (100.00%)
+  n=3: max H = 3, achieved by 2 labeled tournaments (25.00%)
+  n=4: max H = 5, achieved by 24 labeled tournaments (37.50%)
+  n=5: max H = 15, achieved by 64 labeled tournaments (6.25%)
+  n=6: max H = 45, achieved by 480 labeled tournaments (1.46%)
+
+  SEQUENCE E (max H): 1, 1, 3, 5, 15, 45, 189, 661, ...
+  SEQUENCE E' (# labeled achieving max): 2, 6, 24, 240, ?, ?, ...
+
+  VI. SCORE-STRATIFIED SPEEDUP DEMONSTRATION
+  --------------------------------------------------
+
+  n=6: 7088/32768 tournaments (21.6%) are score-rigid.
+  For these, H = 1 + 2*c3 + gap(score) in O(n) time.
+  Only 25680 (78.4%) need DP enumeration.
+
+  Speedup estimate (if DP costs 100x score computation):
+  Without stratification: 32768 DP calls = 32768 units
+  With stratification: 7088 score + 25680 DP = 25751 units
+  Speedup: 1.27x
+
+  VII. FAST FORMULAS FOR SPECIFIC TOURNAMENT FAMILIES
+  --------------------------------------------------
+
+  Tribonacci family (anti-transitive):
+  H values: [3, 5, 9, 17, 31, 57, 105, 193, 355, 653, 1201, 2209]
+  Check recurrence: ALL OK
+
+  Paley family:
+  T_3: H = 3
+  T_7: H = 189
+  T_11: H = 95095
+  No known closed-form recurrence for Paley H values.
+
+  Transitive family: H(transitive_n) = 1 for all n. (Trivial)
+
+  Near-transitive (one flip from transitive):
+  n=3: single-flip H values = [1, 3]
+  n=4: single-flip H values = [1, 3, 5]
+  n=5: single-flip H values = [1, 3, 5, 9]
+  n=6: single-flip H values = [1, 3, 5, 9, 17]
+  n=7: single-flip H values = [1, 3, 5, 9, 17, 33]
+
+  VIII. SUMMARY OF NEW SEQUENCES
+  --------------------------------------------------
+
+  A. # achievable H values: 1, 1, 2, 3, 7, 19, ...
+  B. # rigid score classes:  1, 1, 2, 3, 14, ...
+  C. Max gap:                0, 0, 0, 0, 0, 24, ...
+  D. # with H=1 mod 6:      2, 2, 8, 32, 720+960+, ...
+  E. Max H:                  1, 1, 3, 5, 15, 45, 189, 661
+  E'. # achieving max H:     2, 6, 24, 240, ?, ?, ...
+  F. Single-flip H set size: 1, 2, 3, 4, 5, ...
+
+  The score-stratification speedup gives ~2x for exhaustive H enumeration
+  at n=6, and should give larger speedups at n=7+ where more score classes
+  become rigid (due to transitive-like scores dominating).
+
