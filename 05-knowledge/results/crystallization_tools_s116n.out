@@ -1,0 +1,143 @@
+
+  CRYSTALLIZATION ENGINES
+
+======================================================================
+
+  ENGINE 1: PREFERENCE CRYSTALLIZER
+  ----------------------------------------
+
+  Problem: Given noisy, inconsistent pairwise preferences,
+  find the STABLE CORE — the preferences that survive iteration.
+
+  Method: Kaprekar-like iteration on tournaments.
+  Step: for each triple (i,j,k), if it forms a 3-cycle,
+  FLIP the weakest arc (the one with fewest supporting votes).
+  Repeat until no more 3-cycles exist or a fixed point is reached.
+
+  DEMO: 5 restaurants rated by 10 people (noisy)
+  After 0 iterations, 0 weak arcs flipped:
+  Ranking: Sushi > Pizza > Tacos > Pasta > Burger
+  Remaining cycles: 0
+  True order: Sushi > Pizza > Tacos > Pasta > Burger
+  Match: True
+
+
+  ENGINE 2: CONSENSUS CRYSTALLIZER
+  ----------------------------------------
+
+  Problem: Multiple rankers provide orderings.
+  Find the consensus that CRYSTALLIZES from repeated merging.
+
+  Method: Build a tournament from majority votes across all rankers.
+  Then crystallize (Engine 1). The fixed point IS the consensus.
+
+  5 experts rank 7 languages.
+  Crystallization: 0 iterations, 0 flips.
+  Consensus: Python > Rust > Go > TS > JS > C++ > Java
+  Remaining disagreements: 0 cycles
+
+
+  ENGINE 3: FEATURE IMPORTANCE CRYSTALLIZER
+  ----------------------------------------
+
+  Problem: Given pairwise A/B test results on features,
+  crystallize the importance ranking.
+
+  The crystallization naturally handles:
+  - Feature A beats B on metric 1 but loses on metric 2
+  - These form genuine cycles (tradeoffs, not noise)
+  - The crystallizer identifies which arcs to flip (noise)
+    vs which cycles to preserve (genuine tradeoffs)
+
+  Method: Run Engine 1 but STOP when all remaining cycles
+  have high margin (= genuine tradeoffs, not weak preferences).
+
+  DEMO: A/B test results on 5 UI features
+  Ranking: Search > Speed > Dark Mode > Layout > Filters
+  Noise removed: 0 weak arcs flipped
+  Genuine tradeoffs found: 0
+
+
+  ENGINE 4: TEXT SUMMARIZATION BY CRYSTALLIZATION
+  ----------------------------------------
+
+  Problem: Given multiple summaries of the same text,
+  find the CRYSTALLIZED summary that all agree on.
+
+  Method: Treat each sentence as an 'item'.
+  Each summary RANKS sentences by importance (inclusion order).
+  Crystallize the rankings to find the consensus importance.
+
+  This is Engine 2 applied to sentences instead of items.
+  The crystallized ranking = the sentences in consensus order.
+  The top k sentences = the crystallized summary.
+
+  Not implemented here (needs NLP), but the ENGINE is Engine 2.
+  The crystallization principle: iterate majority-merge until stable.
+
+
+  ENGINE 5: TEAM FORMATION CRYSTALLIZER
+  ----------------------------------------
+
+  Problem: N people, form teams of 7.
+  Each person has pairwise compatibility scores.
+  Find teams that CRYSTALLIZE (stable — no one wants to switch).
+
+  Method:
+  1. Random initial teams of 7.
+  2. Within each team: run Engine 1 to find the team's 'chemistry'
+     (H-value = how many compatible orderings exist).
+  3. If a team has high H (many cycles = many conflicts):
+     find the person involved in the most cycles.
+     SWAP them with someone from a low-H team.
+  4. Repeat until all teams have acceptable H.
+
+  The crystallization: teams SELF-ORGANIZE through iterated swaps.
+  The fixed point: teams where no swap improves any team's H.
+  This is a STABLE MATCHING — but via crystallization, not algorithm.
+
+
+  ENGINE 6: ANOMALY DETECTOR BY CRYSTALLIZATION
+  ----------------------------------------
+
+  Problem: Detect fraudulent or anomalous data in comparisons.
+
+  Method: Crystallize the data (Engine 1).
+  The arcs that get FLIPPED during crystallization are the anomalies.
+  Arcs flipped early (low margin) = noise.
+  Arcs flipped late (high margin) = genuine anomalies.
+  Arcs NEVER flipped = consistent data.
+
+  The crystallization process SORTS the data by reliability.
+  The first flips = least reliable comparisons.
+  The last flips = most surprising genuine disagreements.
+  If an arc survives crystallization AND contradicts the final ranking:
+  it's a GENUINE ANOMALY — structurally preserved, not noise.
+
+  DEMO: Detecting a rigged comparison
+  Data includes 12 rigged 'E beats A' votes.
+  Crystallization: 1 iterations, 1 flips.
+  Final ranking: A > B > C > D > E
+  Remaining cycles: 0
+
+
+  THE PRINCIPLE
+  ----------------------------------------
+
+  Every engine uses the same principle:
+
+  1. START with raw, noisy, inconsistent data.
+  2. ITERATE a simple local rule (flip weakest contradictions).
+  3. STOP when no more weak contradictions exist.
+  4. The FIXED POINT is the answer.
+
+  The fixed point is not computed from a formula.
+  It is not approximated by optimization.
+  It GROWS from the iteration.
+  It IS the crystal.
+
+  The crystal preserves GENUINE structure (strong cycles = real tradeoffs)
+  and removes NOISE (weak arcs that create spurious cycles).
+  This separation of signal from noise happens AUTOMATICALLY
+  through the iteration. No threshold needed. No training needed.
+  The crystallization process IS the signal-noise separator.
