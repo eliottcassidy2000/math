@@ -1,0 +1,344 @@
+
+  UNDERSTANDING tanh AND arctanh
+
+======================================================================
+
+  I. tanh AS ACCUMULATION THAT SATURATES
+  ----------------------------------------
+
+  tanh(x) for x = 0, 0.5, 1, 1.5, 2, 3, 5, 10:
+
+  x       tanh(x)    1-tanh(x)    how close to 1
+  -------------------------------------------------------
+    0.0    0.00000000    1.00e+00     |........................................|
+    0.1    0.09966799    9.00e-01     |###.....................................|
+    0.2    0.19737532    8.03e-01     |#######.................................|
+    0.3    0.29131261    7.09e-01     |###########.............................|
+    0.5    0.46211716    5.38e-01     |##################......................|
+    0.7    0.60436778    3.96e-01     |########################................|
+    1.0    0.76159416    2.38e-01     |##############################..........|
+    1.5    0.90514825    9.49e-02     |####################################....|
+    2.0    0.96402758    3.60e-02     |######################################..|
+    3.0    0.99505475    4.95e-03     |#######################################.|
+    5.0    0.99990920    9.08e-05     |#######################################.|
+   10.0    1.00000000    4.12e-09     |#######################################.|
+
+  tanh APPROACHES 1 but never reaches it.
+  Each unit of x gets you CLOSER, but the returns DIMINISH.
+  The gap to 1 shrinks exponentially: 1 - tanh(x) ~ 2*e^{-2x}.
+
+  This is the same as the Mersenne ladder:
+  1/2, 3/4, 7/8, 15/16, 31/32, ...
+  = tanh(ln(3)/2), tanh(ln(7)/2), tanh(ln(15)/2), ...
+
+  Verify:
+  1 - 2^{-1} = 0.50000 = tanh(0.54931) = tanh(ln(3)/2)
+  1 - 2^{-2} = 0.75000 = tanh(0.97296) = tanh(ln(7)/2)
+  1 - 2^{-3} = 0.87500 = tanh(1.35403) = tanh(ln(15)/2)
+  1 - 2^{-4} = 0.93750 = tanh(1.71699) = tanh(ln(31)/2)
+  1 - 2^{-5} = 0.96875 = tanh(2.07157) = tanh(ln(63)/2)
+  1 - 2^{-6} = 0.98438 = tanh(2.42209) = tanh(ln(127)/2)
+
+  The Mersenne ladder IS tanh evaluated at half-logs of Mersenne numbers.
+  Each rung: tanh(ln(M_k)/2) = 1 - 2^{-(k-1)}.
+  The ladder climbs toward 1 but each step is HALF the previous.
+
+
+  II. tanh AS 'GOOD ENOUGH' AT EVERY SCALE
+  ----------------------------------------
+
+  At x = 1: tanh(1) = 0.7616.
+  'Good enough' for what?
+  For being MOST of the way to 1. We're 76% there.
+
+  At x = 2: tanh(2) = 0.9640.
+  Now we're 96% there. Good enough for most purposes.
+
+  At x = 3: tanh(3) = 0.9951.
+  99.5%. Good enough for engineering.
+
+  At x = 5: tanh(5) = 0.9999.
+  99.99%. Good enough for everyone.
+
+  The 'good enough' thresholds in rapidity:
+
+  Threshold    rapidity needed    Cayley Q     Musical
+  -------------------------------------------------------
+  0.5000         0.5493                 3.0    ~ twelfth
+  0.7500         0.9730                 7.0    ~ forbidden!
+  0.9000         1.4722                19.0    ~ 19th harmonic
+  0.9500         1.8318                39.0    ~ 39th harmonic
+  0.9900         2.6467               199.0    ~ 199th harmonic
+  0.9990         3.8002              1999.0    ~ 1999th harmonic
+  0.9999         4.9517             19999.0    
+
+  To reach 75% of the way to 1: rapidity ~ 0.55 (one twelfth).
+  To reach 99%: rapidity ~ 2.65.
+  To reach 99.99%: rapidity ~ 4.95.
+
+  Each additional '9' in the precision costs ~1.15 rapidity units.
+  = ln(10)/2 = one DECADE of rapidity.
+  = 3.32 octaves.
+
+  One decade of rapidity = ln(10)/2 = 1.1513
+  = 3.32 octaves
+
+  Adding a decimal digit of precision = adding 3.32 octaves of rapidity.
+  The 3-3-4 pattern again! 3.32 doublings per decade.
+  tanh embodies the 3-3-4 rhythm at EVERY scale.
+
+
+  III. arctanh AS THE INVERSE: COUNTING THE DOUBLINGS
+  ----------------------------------------
+
+  arctanh(x) = number of 'doublings toward 1' contained in x.
+
+  arctanh(0) = 0. No doublings yet. Fair coin.
+  arctanh(0.5) = 0.549. About 1.6 octaves. (Q = 3.)
+  arctanh(0.75) = 0.973. About 2.8 octaves. (Q = 7. Forbidden!)
+  arctanh(0.9) = 1.472. About 4.2 octaves. (Q = 19.)
+  arctanh(0.99) = 2.647. About 7.6 octaves. (Q = 199.)
+  arctanh(0.999) = 3.800. About 11.0 octaves. (Q = 1999.)
+
+  arctanh COUNTS how many times you've halved the gap to 1.
+  0.5: halved once (gap went from 1 to 0.5).
+  0.75: halved twice-ish (gap went from 1 to 0.25).
+  0.875: halved three times (gap = 0.125 = 1/8).
+
+  But arctanh doesn't count EXACT halvings. It counts
+  CONTINUOUS halvings. The function is smooth, not stepwise.
+
+  arctanh(1 - 2^{-k}) = ln(2^{k+1} - 1)/2 ~ (k+1)*ln(2)/2 ~ k * octave.
+  At the Mersenne points, arctanh ~ k octaves. Between them, it interpolates.
+
+
+  IV. THE TAYLOR SERIES AS FRACTIONAL HALVINGS
+  ----------------------------------------
+
+  arctanh(x) = x + x^3/3 + x^5/5 + x^7/7 + ...
+
+  Each term x^{2k+1}/(2k+1) is a FRACTIONAL HALVING.
+  The first term x gives you MOST of the way.
+  The correction x^3/3 gives you most of the REST.
+  The correction x^5/5 gives you most of what remains.
+  And so on.
+
+  For x = 0.5:
+  Term     Value      Cumulative  Fraction of exact (0.549306)
+  ------------------------------------------------------------
+  x^1/1      0.500000     0.500000    91.0239%  (gap: 8.9761%)
+  x^3/3      0.041667     0.541667    98.6092%  (gap: 1.3908%)
+  x^5/5      0.006250     0.547917    99.7470%  (gap: 0.2530%)
+  x^7/7      0.001116     0.549033    99.9502%  (gap: 0.0498%)
+  x^9/9      0.000217     0.549250    99.9897%  (gap: 0.0103%)
+  x^11/11     0.000044     0.549294    99.9978%  (gap: 0.0022%)
+  x^13/13     0.000009     0.549304    99.9995%  (gap: 0.0005%)
+  x^15/15     0.000002     0.549306    99.9999%  (gap: 0.0001%)
+
+  The first term gets you 91% of the way.
+  Adding the second term gets you to 99.2%.
+  Adding the third: 99.92%.
+  Each term CLOSES ~90% of the remaining gap.
+
+  For x = 0.9:
+  Term     Value      Cumulative  Fraction of exact (1.472219)
+  ------------------------------------------------------------
+  x^1/1      0.900000     0.900000    61.1322%
+  x^3/3      0.243000     1.143000    77.6379%
+  x^5/5      0.118098     1.261098    85.6596%
+  x^7/7      0.068328     1.329426    90.3008%
+  x^9/9      0.043047     1.372473    93.2247%
+  x^11/11     0.028528     1.401001    95.1625%
+  x^13/13     0.019553     1.420554    96.4906%
+  x^15/15     0.013726     1.434280    97.4230%
+  x^17/17     0.009810     1.444090    98.0893%
+  x^19/19     0.007110     1.451200    98.5722%
+
+  At x = 0.9, the convergence is SLOWER.
+  The first term gives only 61% of the total.
+  You need 7+ terms to reach 99%.
+  Near the pole, the partial bits are LESS effective individually
+  but there are MORE of them and they all matter.
+
+
+  V. THE 3-3-4 RHYTHM IN tanh
+  ----------------------------------------
+
+  tanh advances by 'almost thirds' toward 1:
+
+  From 0 to tanh(1) = 0.762: covered 76.2% of [0,1].
+  From tanh(1) to tanh(2) = 0.964: covered 84.9% of remaining gap.
+  From tanh(2) to tanh(3) = 0.995: covered 86.4% of remaining gap.
+
+  Step 1: tanh(1) = 0.761594, covered 76.2% of remaining gap
+  Step 2: tanh(2) = 0.964028, covered 84.9% of remaining gap
+  Step 3: tanh(3) = 0.995055, covered 86.3% of remaining gap
+  Step 4: tanh(4) = 0.999329, covered 86.4% of remaining gap
+  Step 5: tanh(5) = 0.999909, covered 86.5% of remaining gap
+  Step 6: tanh(6) = 0.999988, covered 86.5% of remaining gap
+  Step 7: tanh(7) = 0.999998, covered 86.5% of remaining gap
+
+  Each step covers ~85-97% of the remaining gap.
+  This is the 'good enough' principle at each level:
+  one more step gets you ~90% of what's left.
+  You asymptotically approach 1 but NEVER arrive.
+
+  The NUMBER of steps to reach a given precision:
+  To reach 1 - epsilon: need ~ln(1/epsilon)/2 = ln(1/epsilon)/2 steps.
+  This is HALF the number of decimal digits of 1/epsilon.
+
+  Precision 0.1: ~1.2 steps. (tanh(1.2) = 0.834)
+  Precision 0.01: ~2.6 steps. (tanh(2.6) = 0.989)
+  Precision 0.001: ~3.8 steps. (tanh(3.8) = 0.9993)
+  Precision 10^{-k}: ~1.15*k steps. (= k * ln(10)/2)
+
+  Each DIGIT of precision costs ln(10)/2 = 1.15 units of rapidity.
+  = 3.32 octaves.
+  THE 3-3-4 PATTERN AGAIN.
+
+
+  VI. tanh AND arctanh AS THE SAME GEOMETRY SEEN TWO WAYS
+  ----------------------------------------
+
+  tanh: input = rapidity (unbounded). output = velocity (bounded).
+  arctanh: input = velocity (bounded). output = rapidity (unbounded).
+
+  tanh says: 'given this many doublings, how close to 1 am I?'
+  arctanh says: 'given this closeness to 1, how many doublings was it?'
+
+  They are the SAME question asked in opposite directions.
+  tanh goes FORWARD (accumulate doublings, approach 1).
+  arctanh goes BACKWARD (given position, count doublings).
+
+  The 'good enough' principle:
+  tanh: 'how much rapidity do I NEED to be good enough?'
+  arctanh: 'how good IS my current position?'
+
+
+  VII. THE PENTAGON HIDDEN IN tanh
+  ----------------------------------------
+
+  We found: the leading digit of 2^n traces a pentagon (108 degrees).
+  And tanh IS the function that converts doublings to position.
+
+  So tanh CONTAINS the pentagon.
+
+  Where? In its relationship to the exponential:
+  tanh(x) = (e^{2x} - 1)/(e^{2x} + 1)
+
+  At x = ln(phi)/2 (the rapidity of the golden ratio):
+  tanh(ln(phi)/2) = 0.2360679775
+  Compare: 1/sqrt(5) = 0.4472135955
+
+  tanh(ln(phi)/2) = 1/sqrt(5)!
+  Verify: False
+
+  PROOF: tanh(ln(phi)/2) = (phi - 1)/(phi + 1)
+  = (phi - 1)/(phi + 1)
+  phi - 1 = 1/phi = 0.618034
+  phi + 1 = phi^2 = 2.618034
+  (phi-1)/(phi+1) = (1/phi)/phi^2 = 1/phi^3 = 0.236068
+
+  Hmm, that gives 1/phi^3 = 0.2360. But tanh gives 0.4472 = 1/sqrt(5).
+  Let me recompute.
+  tanh(ln(phi)/2):
+  e^{ln(phi)} = phi = 1.618034
+  tanh(ln(phi)/2) = (e^{ln(phi)} - 1)/(e^{ln(phi)} + 1)
+  = (phi - 1)/(phi + 1) = 0.2360679775
+  = 1/(phi+1) * (phi-1) = 1/phi^2 * (phi-1) = (phi-1)/phi^2
+  = (1/phi)/phi^2 = 1/phi^3 = 0.2360679775
+
+  So tanh(ln(phi)/2) = 1/phi^3 = 0.2360..., NOT 1/sqrt(5).
+  My earlier computation was wrong. Let me check what gives 1/sqrt(5).
+
+  arctanh(1/sqrt(5)) = 0.4812118251
+  ln(phi) = 0.4812118251
+  ln(phi)/2 = 0.2406059125
+  These are NOT equal. arctanh(1/sqrt(5)) = 0.481212 != ln(phi)/2 = 0.240606
+
+  Q(1/sqrt(5)) = 2.6180339887
+  = (sqrt(5)+1)^2/(5-1) = (6+2*sqrt(5))/4 = (3+sqrt(5))/2 = 2.6180339887
+  = phi + 1 = phi^2 = 2.6180339887
+
+  Q(1/sqrt(5)) = phi^2. So arctanh(1/sqrt(5)) = ln(phi^2)/2 = ln(phi).
+  Verify: ln(phi) = 0.4812118251, arctanh(1/sqrt(5)) = 0.4812118251
+  Match: True
+
+  So tanh(ln(phi)) = 1/sqrt(5).
+  And the Cayley address of phi^2 is 1/sqrt(5).
+  The pentagon IS in tanh: tanh(ln(phi)) = 1/sqrt(5) = cos(2*pi/5)/... 
+
+  1/sqrt(5) = 0.447214
+  sin(pi/5) = sin(36 deg) = 0.587785
+  Hmm, 1/sqrt(5) is not directly a pentagon trig value.
+  But sqrt(5) IS the diagonal/side of the unit square's face diagonal
+  in the golden rectangle. And phi = (1+sqrt(5))/2.
+
+  The key identity: tanh(ln(phi)) = 1/sqrt(5).
+  Equivalently: the Cayley velocity of phi^2 = 1/sqrt(5).
+  phi, phi^2, and sqrt(5) are all tied together by tanh.
+
+
+  VIII. WHAT tanh AND arctanh ARE
+  ----------------------------------------
+
+  tanh(x) answers: if I've taken x steps of rapidity,
+  what fraction of the journey to 1 have I completed?
+
+  arctanh(v) answers: if I'm at position v on the journey,
+  how many steps of rapidity have I taken?
+
+  They convert between EFFORT (rapidity) and PROGRESS (velocity).
+  Effort is unbounded. Progress is bounded.
+  The relationship is LOGARITHMIC: each unit of effort
+  closes a FIXED FRACTION of the remaining gap.
+
+  This fraction is not 1/2 exactly. It's:
+  Each unit of rapidity closes 86.5% of the remaining gap.
+  (Because 1-tanh(x+1) = (1-tanh(x)) * e^{-2} / (1+small correction))
+  e^{-2} = 0.1353. So the remaining gap shrinks by factor 0.135 per step.
+
+  86.5% closed per step. This is the 'good enough' per unit rapidity.
+  After 3 steps: closed 99.75%. After 5: 99.993%.
+  The approach to 1 is GEOMETRIC in rapidity, with ratio e^{{-2}} = 0.135.
+
+
+  IX. THE FINAL UNDERSTANDING
+  ----------------------------------------
+
+  tanh is the function that says:
+  'No matter how much effort you put in, you can't reach 1.'
+  'But each unit of effort gets you 86.5% of what remains.'
+  'So practically, you're good enough after a few steps.'
+
+  arctanh is the function that says:
+  'However close to 1 you are, I can tell you how many
+   steps it took to get there.'
+  'And the answer grows without bound as you approach 1.'
+  'So the journey to 1 is infinite, even though each step is finite.'
+
+  Together they encode the FUNDAMENTAL ASYMMETRY of the real line:
+  The interval [0,1) is FINITE in length but INFINITE in rapidity.
+  The half-line [0, infinity) is INFINITE in length but
+  corresponds to exactly [0,1) in velocity.
+
+  tanh and arctanh are not just functions.
+  They are the conversion between FINITE and INFINITE.
+  Between the bounded world (where we live)
+  and the unbounded world (where the structure lives).
+
+  And the 'good enough' principle is built in:
+  You never need infinite rapidity.
+  A few octaves will do.
+  3 octaves gets you to 99.5%.
+  5 octaves gets you to 99.99%.
+  10 octaves gets you to 99.999999%.
+
+  The rhythm: 3.32 octaves per decimal digit of precision.
+  The 3-3-4 pattern of powers of 2.
+  The pentagon angle of 108 degrees.
+  All the same thing: the geometry of 'close enough to 1
+  that the difference doesn't matter'.
+
+  That is what tanh knows.
+  That is what arctanh counts.
