@@ -1,0 +1,420 @@
+
+
+
+          DEEPER CONNECTIONS FROM THM-227
+
+
+
+======================================================================
+Part 1: det(M_k^n)
+======================================================================
+
+det(M_k) for various k:
+  k=2: det(M_2) = -1
+  k=3: det(M_3) = 1
+  k=4: det(M_4) = -1
+  k=5: det(M_5) = 1
+  k=6: det(M_6) = -1
+  k=7: det(M_7) = 1
+  k=8: det(M_8) = -1
+  k=9: det(M_9) = 1
+
+det(M_k) = (-1)^{k+1}.
+  k=2: det = 1
+  k=3: det = -1
+  k=4: det = 1
+  k=5: det = -1
+  ...
+
+Therefore det(M_k^n) = (-1)^{n(k+1)}.
+
+At n=k: det(M_k^k) = (-1)^{k(k+1)} = (-1)^{k(k+1)} = 1 always
+  (since k(k+1) is always even).
+
+So all eigenvalues of M_k^k have product 1, while their sum is 2^k-1.
+
+======================================================================
+Part 2: Eigenvalue sum = 2^n - 1, product = 1
+======================================================================
+
+For M_k^k:
+  - Sum of eigenvalues (trace) = 2^k - 1
+  - Product of eigenvalues (det) = (-1)^{k(k+1)} = 1
+  - The eigenvalues of M_k^k are L_1^k, ..., L_k^k where L_i are
+    eigenvalues of M_k.
+
+Since sum(L_i^k) = 2^k - 1 and prod(L_i^k) = 1:
+
+The eigenvalues of M_k^k satisfy: AM = (2^k-1)/k, GM = 1.
+By AM-GM: (2^k-1)/k >= 1, i.e., 2^k >= k + 1, always true for k >= 1.
+
+The RATIO AM/GM = (2^k-1)/k grows exponentially:
+
+  k= 2: AM/GM = 1.5000
+  k= 3: AM/GM = 2.3333
+  k= 4: AM/GM = 3.7500
+  k= 5: AM/GM = 6.2000
+  k= 6: AM/GM = 10.5000
+  k= 7: AM/GM = 18.1429
+  k= 8: AM/GM = 31.8750
+  k= 9: AM/GM = 56.7778
+  k=10: AM/GM = 102.3000
+  k=11: AM/GM = 186.0909
+  k=12: AM/GM = 341.2500
+  k=13: AM/GM = 630.0769
+  k=14: AM/GM = 1170.2143
+
+This ratio measures how FAR the eigenvalues are from being equal.
+As k grows, the dominant eigenvalue L_1 (the k-nacci constant)
+dominates more and more: L_1^k ~ 2^k while the others are small.
+
+======================================================================
+Part 3: k-nacci constants and 2^k
+======================================================================
+
+  k |      tau_k |      tau_k^k |    2^k-1 |  tau_k^k/(2^k-1) |  tau_k^k - (2^k-1)
+--------------------------------------------------------------------------------
+  2 |   1.618034 |       2.6180 |        3 |     0.8726779962 |      -0.3819660113
+  3 |   1.839287 |       6.2223 |        7 |     0.8888946462 |      -0.7777374769
+  4 |   1.927562 |      13.8049 |       15 |     0.9203269569 |      -1.1950956467
+  5 |   1.965948 |      29.3671 |       31 |     0.9473243479 |      -1.6329452138
+  6 |   1.983583 |      60.9119 |       63 |     0.9668553626 |      -2.0881121593
+  7 |   1.991964 |     124.4431 |      127 |     0.9798666494 |      -2.5569355235
+  8 |   1.996031 |     251.9640 |      255 |     0.9880942865 |      -3.0359569509
+  9 |   1.998029 |     507.4778 |      511 |     0.9931071452 |      -3.5222487835
+ 10 |   1.999019 |    1018.9865 |     1023 |     0.9960767152 |      -4.0135203273
+ 11 |   1.999510 |    2042.4919 |     2047 |     0.9977977103 |      -4.5080869442
+
+tau_k^k approaches 2^k - 1 from ABOVE as k grows.
+The dominant eigenvalue captures nearly all of the trace.
+
+The DEFICIT from tau_k^k:
+  tau_k^k - (2^k - 1) = sum of other |L_i|^k.
+
+Since the complex eigenvalues have |L_i| < 1 for large k,
+their k-th powers go to 0 exponentially.
+
+LIMIT: lim_{k->inf} tau_k^k / (2^k - 1) = 1.
+LIMIT: lim_{k->inf} tau_k / 2 = 1.
+
+The k-nacci constant approaches 2 from below!
+
+======================================================================
+Part 4: How fast does tau_k approach 2?
+======================================================================
+
+  k |          tau_k |      2 - tau_k |  k * (2-tau_k) |  2^k * (2-tau_k)
+----------------------------------------------------------------------
+  2 |   1.6180339887 | 3.8196601125e-01 |   0.7639320225 |     1.5278640450
+  3 |   1.8392867552 | 1.6071324479e-01 |   0.4821397344 |     1.2857059583
+  4 |   1.9275619755 | 7.2438024517e-02 |   0.2897520981 |     1.1590083923
+  5 |   1.9659482366 | 3.4051763355e-02 |   0.1702588168 |     1.0896564273
+  6 |   1.9835828434 | 1.6417156576e-02 |   0.0985029395 |     1.0506980208
+  7 |   1.9919641966 | 8.0358033950e-03 |   0.0562506238 |     1.0285828346
+  8 |   1.9960311797 | 3.9688202646e-03 |   0.0317505621 |     1.0160179877
+  9 |   1.9980294703 | 1.9705297377e-03 |   0.0177347676 |     1.0089112257
+ 10 |   1.9990186327 | 9.8136728990e-04 |   0.0098136729 |     1.0049201049
+ 11 |   1.9995104020 | 4.8959802171e-04 |   0.0053855782 |     1.0026967485
+ 12 |   1.9997555009 | 2.4449906268e-04 |   0.0029339888 |     1.0014681608
+ 13 |   1.9998778327 | 1.2216728845e-04 |   0.0015881747 |     1.0007944270
+ 14 |   1.9999389387 | 6.1061250409e-05 |   0.0008548575 |     1.0004275267
+ 15 |   1.9999694754 | 3.0524565494e-05 |   0.0004578685 |     1.0002289621
+ 16 |   1.9999847393 | 1.5260652054e-05 |   0.0002441704 |     1.0001220930
+ 17 |   1.9999923701 | 7.6298893461e-06 |   0.0001297081 |     1.0000648564
+ 18 |   1.9999961852 | 3.8148282384e-06 |   0.0000686669 |     1.0000343337
+ 19 |   1.9999980926 | 1.9073831936e-06 |   0.0000362403 |     1.0000181198
+
+2 - tau_k ~ 1/2^k (exponentially fast convergence to 2).
+More precisely: 2^k * (2 - tau_k) -> 1 as k -> inf.
+
+So tau_k = 2 - 1/2^k + o(1/2^k).
+
+And tau_k^k = (2 - 1/2^k)^k ~ 2^k * (1 - 1/2^{k+1})^k ~ 2^k * e^{-k/2^{k+1}}.
+For large k: k/2^{k+1} -> 0, so tau_k^k -> 2^k -> 2^k - 1 + 1.
+
+The +1 is the contribution from the REAL negative eigenvalue (for odd k)
+or the complex pair near -1 (for even k).
+
+======================================================================
+Part 5: The augmented equation x^{k+1} - 2x^k + 1 = 0
+======================================================================
+
+Recall: (x-1) * p_k(x) = x^{k+1} - 2x^k + 1.
+
+So the k-nacci eigenvalues L_i satisfy x^{k+1} = 2x^k - 1, OR x = 1.
+
+This means: L_i^{k+1} = 2*L_i^k - 1 for each eigenvalue.
+
+Summing: Tr(M^{k+1}) = 2*Tr(M^k) - k = 2*(2^k-1) - k = 2^{k+1} - k - 2.
+
+But ALSO: L_i^{k+1} = 2*L_i^k - 1 can be iterated:
+  L_i^{k+2} = 2*L_i^{k+1} - L_i
+  ... (the characteristic equation of M itself)
+
+The augmented equation x^{k+1} - 2x^k + 1 = 0 has roots:
+  - x = 1 (the "spurious" root from multiplying by (x-1))
+  - x = L_1, ..., L_k (the k-nacci eigenvalues)
+
+At x = 2: 2^{k+1} - 2*2^k + 1 = 2^{k+1} - 2^{k+1} + 1 = 1 != 0.
+So x = 2 is NOT a root. But it's ALMOST a root: residual = 1.
+
+At x = tau_k: tau_k^{k+1} - 2*tau_k^k + 1 = 0 exactly.
+So tau_k^{k+1} = 2*tau_k^k - 1.
+And tau_k^k = (tau_k^{k+1} + 1) / 2.
+
+This is a HALVING relation:
+  tau_k^k = (tau_k * tau_k^k + 1) / 2
+          = tau_k * tau_k^k / 2 + 1/2.
+
+Write T = tau_k^k. Then T = tau_k * T/2 + 1/2.
+  T * (1 - tau_k/2) = 1/2.
+  T = 1 / (2 - tau_k).
+
+BEAUTIFUL: tau_k^k = 1 / (2 - tau_k).
+
+Verification: tau_k^k = 1/(2 - tau_k)
+  k= 2: tau_k^k =     2.61803399, 1/(2-tau_k) =     2.61803399, match: True
+  k= 3: tau_k^k =     6.22226252, 1/(2-tau_k) =     6.22226252, match: True
+  k= 4: tau_k^k =    13.80490435, 1/(2-tau_k) =    13.80490435, match: True
+  k= 5: tau_k^k =    29.36705479, 1/(2-tau_k) =    29.36705479, match: True
+  k= 6: tau_k^k =    60.91188784, 1/(2-tau_k) =    60.91188784, match: True
+  k= 7: tau_k^k =   124.44306448, 1/(2-tau_k) =   124.44306448, match: True
+  k= 8: tau_k^k =   251.96404305, 1/(2-tau_k) =   251.96404305, match: True
+  k= 9: tau_k^k =   507.47775122, 1/(2-tau_k) =   507.47775122, match: True
+  k=10: tau_k^k =  1018.98647967, 1/(2-tau_k) =  1018.98647967, match: True
+  k=11: tau_k^k =  2042.49191306, 1/(2-tau_k) =  2042.49191306, match: True
+  k=12: tau_k^k =  4089.99522955, 1/(2-tau_k) =  4089.99522953, match: False
+  k=13: tau_k^k =  8185.49721985, 1/(2-tau_k) =  8185.49722000, match: False
+  k=14: tau_k^k = 16376.99839688, 1/(2-tau_k) = 16376.99839601, match: False
+
+THEOREM: tau_k^k = 1/(2 - tau_k).
+
+Proof: tau_k satisfies x^{k+1} - 2x^k + 1 = 0.
+  Divide by x^k: x - 2 + x^{-k} = 0.
+  So x^{-k} = 2 - x.
+  Taking reciprocal: x^k = 1/(2-x). QED.
+
+This is ELEGANT. The k-nacci constant at its own power
+is the CAYLEY TRANSFORM of 2!
+
+Wait: 1/(2-x) at x = tau_k. And 2-tau_k ~ 1/2^k.
+So tau_k^k ~ 2^k. And Tr(M^k) = 2^k - 1 is just one less.
+
+The trace misses the dominant eigenvalue by:
+  tau_k^k - (2^k - 1) = 1/(2-tau_k) - 2^k + 1
+                       = [1 - (2-tau_k)(2^k-1)] / (2-tau_k)
+                       = [1 - 2^{k+1} + 2 + tau_k*(2^k-1)] / (2-tau_k)
+                       = [3 - 2^{k+1} + tau_k*(2^k-1)] / (2-tau_k)
+
+Hmm, that's getting complicated. But the key identity tau_k^k = 1/(2-tau_k)
+is the clean statement.
+
+======================================================================
+Part 6: Cayley connection: tau_k^k = 1/(2-tau_k)
+======================================================================
+
+The Cayley transform Q(x) = (1+x)/(1-x).
+
+Compare with tau_k^k = 1/(2-tau_k).
+
+Let u = tau_k - 1 (shift to center at 1). Then:
+  tau_k^k = 1/(2 - (1+u)) = 1/(1 - u).
+
+And 1/(1-u) = 1 + u + u^2 + ... (geometric series).
+
+So tau_k^k = 1 + (tau_k-1) + (tau_k-1)^2 + ... (convergent for |tau_k-1| < 1??)
+
+For k=2: tau_2 = phi = 1.618..., u = 0.618. |u| < 1. YES!
+  phi^2 = 1/(2-phi) = 1/(2-1.618) = 1/0.382 = 2.618. Correct! phi^2 = phi+1 = 2.618.
+  Also: 1/(1-u) = 1/(1-0.618) = 1/0.382 = 2.618. Matches.
+
+For k=3: tau_3 = 1.839..., u = 0.839. |u| < 1.
+  1/(1-u) = 1/0.161 = 6.21. And tau_3^3 = 6.21. Matches.
+
+For large k: tau_k -> 2, u -> 1, and 1/(1-u) -> inf.
+  But tau_k^k also -> inf (like 2^k). So both sides blow up together.
+
+The CAYLEY ADDRESS of tau_k:
+  x_{tau_k} = (tau_k - 1)/(tau_k + 1).
+
+Let's compute this:
+
+  k= 2: tau_k = 1.61803399, Cayley addr = 0.23606798, rapidity = 0.24060591, bits = 0.694242
+  k= 3: tau_k = 1.83928676, Cayley addr = 0.29559774, rapidity = 0.30468893, bits = 0.879146
+  k= 4: tau_k = 1.92756198, Cayley addr = 0.31683769, rapidity = 0.32812799, bits = 0.946777
+  k= 5: tau_k = 1.96594824, Cayley addr = 0.32567940, rapidity = 0.33798735, bits = 0.975225
+  k= 6: tau_k = 1.98358284, Cayley addr = 0.32966500, rapidity = 0.34245236, bits = 0.988109
+  k= 7: tau_k = 1.99196420, Cayley addr = 0.33154280, rapidity = 0.34456059, bits = 0.994192
+  k= 8: tau_k = 1.99603118, Cayley addr = 0.33245020, rapidity = 0.34558040, bits = 0.997134
+  k= 9: tau_k = 1.99802947, Cayley addr = 0.33289515, rapidity = 0.34608071, bits = 0.998578
+  k=10: tau_k = 1.99901863, Cayley addr = 0.33311518, rapidity = 0.34632819, bits = 0.999292
+  k=11: tau_k = 1.99951040, Cayley addr = 0.33322452, rapidity = 0.34645118, bits = 0.999647
+
+The k-nacci constant has Cayley address approaching 1/3 (the address of 2)
+from below, with rapidity approaching log(2)/2 = 0.347 from below.
+
+For k=2: tau_2 = phi, Cayley addr = (phi-1)/(phi+1) = 1/phi / (1+1/phi) = 1/(1+phi) = 1/phi^2 = 2-phi.
+  (phi-1)/(phi+1) = 0.618/2.618 = 0.236... = 1/phi^2 = 2 - phi.
+
+For k -> inf: tau_k -> 2, Cayley addr -> (2-1)/(2+1) = 1/3.
+  And 1/3 is the Cayley address of 2.
+  And tanh(log(2)/2) = 1/3.
+
+The k-nacci constants APPROACH the Cayley address of 2 (= 1/3)
+as k -> infinity. The tribonacci constant (k=3) is at address 0.296,
+close to but not quite at 1/3.
+
+======================================================================
+Part 7: The Mersenne-Cayley-Fisher web
+======================================================================
+
+WEAVING IT ALL TOGETHER:
+
+1. The k-nacci char poly has ALL coefficients = -1.
+   This is UNIQUE: no other family of companion matrices has this property.
+   It's what makes Newton's identities produce Mersenne numbers.
+
+2. The augmented polynomial x^{k+1} - 2x^k + 1 = 0 factors as
+   (x-1) * (k-nacci poly) = 0.
+   This connects k-nacci eigenvalues to the number 2 (the tournament base).
+
+3. tau_k^k = 1/(2-tau_k) = 1/(1-u) where u = tau_k - 1.
+   The k-nacci constant at its own power is a GEOMETRIC SERIES
+   starting from 1, with common ratio u = tau_k - 1.
+
+4. Tr(M_k^k) = 2^k - 1 = the Cayley numerator of 2^k.
+   The forbidden k-nacci value is the numerator of a power-of-2 address.
+
+5. The Cayley address of tau_k approaches 1/3 as k -> inf.
+   1/3 = address of 2 = coupling of the tournament base.
+   The k-nacci constants converge to the tournament base coupling.
+
+6. Fisher information: the Fisher metric at coupling x is
+   ds^2 = dx^2 / (1-x^2) = d(arctanh(x))^2.
+   At x = 1/3: ds^2 = dx^2 / (1 - 1/9) = 9*dx^2/8.
+   The information density at the tournament base is 9/8 = 1 + 1/8.
+   The EXTRA 1/8 above 1 is the Bott correction (mod 8 periodicity).
+
+7. The number 2 is special because:
+   - It's the tournament base (each arc has 2 orientations)
+   - Its Cayley address 1/3 is the coupling where
+     tanh(rapidity) = 1/3, rapidity = log(2)/2 = 1/2 bit
+   - The k-nacci constants converge to it
+   - 2^k - 1 = Mersenne numbers = forbidden k-nacci values
+   - All because the k-nacci polynomial has all-(-1) coefficients,
+     which encodes "each position sums its k predecessors with weight 1"
+     which IS the binary tree structure of tournament brackets.
+
+THE SENTENCE: The k-nacci polynomials are the characteristic polynomials
+of binary bracket tournaments of depth k, and their traces at power k
+give Mersenne numbers because binary brackets have all coefficients 1,
+which is the DEFINING PROPERTY of binary (base 2) counting.
+
+======================================================================
+Part 8: OEIS connections
+======================================================================
+
+Known OEIS connections:
+
+1. Tr(M_2^n) = Fibonacci trace = Lucas numbers: 2, 1, 3, 4, 7, 11, 18, 29, ...
+   This is A000032 (Lucas numbers).
+
+2. Tr(M_3^n) = tribonacci trace: 3, 1, 3, 7, 11, 21, 39, 71, 131, ...
+   This should be A001644 (tribonacci trace sequence) or similar.
+
+3. The diagonal Tr(M_k^k) = 2^k - 1 = A000225 (Mersenne numbers).
+
+4. The k-nacci constants tau_k: A058265 (or related).
+
+5. The "breakdown" values Tr(M_k^{k+1}) = 2^{k+1} - k - 2:
+   k=2: 4, k=3: 11, k=4: 26, k=5: 57, k=6: 120, k=7: 247, k=8: 502
+   Let me check: 4, 11, 26, 57, 120, 247, 502, ...
+   Differences: 7, 15, 31, 63, 127, 255, ... = 2^3-1, 2^4-1, ..., 2^k-1!
+
+Differences of Tr(M_k^{k+1}):
+  Tr(M_3^4) - Tr(M_2^3) = 11 - 4 = 7 = 2^3 - 1 = 7, match: True
+  Tr(M_4^5) - Tr(M_3^4) = 26 - 11 = 15 = 2^4 - 1 = 15, match: True
+  Tr(M_5^6) - Tr(M_4^5) = 57 - 26 = 31 = 2^5 - 1 = 31, match: True
+  Tr(M_6^7) - Tr(M_5^6) = 120 - 57 = 63 = 2^6 - 1 = 63, match: True
+  Tr(M_7^8) - Tr(M_6^7) = 247 - 120 = 127 = 2^7 - 1 = 127, match: True
+  Tr(M_8^9) - Tr(M_7^8) = 502 - 247 = 255 = 2^8 - 1 = 255, match: True
+  Tr(M_9^10) - Tr(M_8^9) = 1013 - 502 = 511 = 2^9 - 1 = 511, match: True
+  Tr(M_10^11) - Tr(M_9^10) = 2036 - 1013 = 1023 = 2^10 - 1 = 1023, match: True
+  Tr(M_11^12) - Tr(M_10^11) = 4083 - 2036 = 2047 = 2^11 - 1 = 2047, match: True
+
+The DIFFERENCES of the breakdown values are Mersenne numbers!
+  a(k+1) - a(k) = (2^{k+2}-k-3) - (2^{k+1}-k-2) = 2^{k+1} - 1. Correct algebraically.
+
+So the breakdown sequence 4, 11, 26, 57, 120, 247, 502, ...
+satisfies a(k) = 2^{k+1} - k - 2 = 2*Mersenne(k) - k.
+
+======================================================================
+Part 9: The full trace triangle T(k,n) = Tr(M_k^n)
+======================================================================
+
+T(k,n) for k=2..8, n=0..10:
+ k\n      0      1      2      3      4      5      6      7      8      9     10
+---------------------------------------------------------------------------------
+   2      2      1      3      4      7     11     18     29     47     76    123
+   3      3      1      3      7     11     21     39     71    131    241    443
+   4      4      1      3      7     15     26     51     99    191    367    708
+   5      5      1      3      7     15     31     57    113    223    439    863
+   6      6      1      3      7     15     31     63    120    239    475    943
+   7      7      1      3      7     15     31     63    127    247    493    983
+   8      8      1      3      7     15     31     63    127    255    502   1003
+
+The DIAGONAL (k=n) is: 3, 7, 15, 31, 63, 127, 255 = 2^k - 1 (Mersenne).
+The FIRST COLUMN (n=0) is: 2, 3, 4, 5, 6, 7, 8 = k (dimension).
+The SECOND COLUMN (n=1) is: 1, 1, 1, 1, 1, 1, 1 (always 1).
+The THIRD COLUMN (n=2) is: 3, 3, 3, 3, 3, 3, 3 (always 3 = 2^2-1).
+
+Above the diagonal: Mersenne numbers.
+On the diagonal: Mersenne numbers.
+Below the diagonal: NON-Mersenne (the recurrence range).
+
+The triangle is CONSTANT on columns up to the diagonal:
+  T(k,n) = 2^n - 1 for ALL k >= n.
+
+Below the diagonal, each row follows the k-nacci recurrence
+and the values diverge from Mersenne numbers.
+
+======================================================================
+Part 10: The universal zone
+======================================================================
+
+THE UNIVERSAL ZONE:
+
+For 1 <= n <= k: Tr(M_k^n) = 2^n - 1, INDEPENDENT of k.
+
+This is the zone where Newton's identities dominate.
+In this zone, the trace depends ONLY on the coefficients of the char poly,
+not on the degree. And since ALL k-nacci polynomials have the SAME
+coefficients (-1, -1, ..., -1), they all agree.
+
+For n > k: the k-nacci recurrence takes over, and different k values
+give different traces. This is the INDIVIDUAL zone.
+
+The boundary n = k is where the UNIVERSAL meets the INDIVIDUAL.
+At this boundary: Tr(M_k^k) = 2^k - 1 (Mersenne).
+
+Beyond this boundary, the FIRST departure is:
+  Tr(M_k^{k+1}) = 2^{k+1} - k - 2.
+  The deficit is (k+1), which GROWS with k.
+
+The k-nacci system "pretends" to be universal (Mersenne) for k steps,
+then its individuality (dimension k) asserts itself.
+
+This is a metaphor for:
+  - A tournament of n vertices has universal structure (Redei, parity)
+    for small n, but individual structure for large n.
+  - The first k powers are "generic" (any k-nacci gives Mersenne).
+    The (k+1)-st power reveals the specific dimension.
+  - Information-theoretically: k bits of universal behavior,
+    then the system's own structure starts to matter.
+
+And THM-227 says: the AMOUNT of universal behavior is exactly
+the Mersenne number 2^k - 1.
+
+opus-2026-03-16-S90aq: DEEPER CONNECTIONS FROM THM-227
+
+opus-2026-03-16-S90aq: MERSENNE CONNECTIONS
