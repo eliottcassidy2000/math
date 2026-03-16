@@ -1,0 +1,354 @@
+
+  THREE INTERWOVEN CHAINS IN BASE 42
+
+======================================================================
+
+  I. THE CRT DECOMPOSITION
+  ----------------------------------------
+
+  Every n mod 42 = (n mod 2, n mod 3, n mod 7).
+  This is a BIJECTION: Z/42Z <-> Z/2Z x Z/3Z x Z/7Z.
+
+  n mod 42  mod 2  mod 3  mod 7  character
+  --------------------------------------------------
+         0      0      0      0  zero
+         1      1      1      1  identity
+         2      0      2      2  doubler
+         3      1      0      3  curvature
+         4      0      1      4  
+         5      1      2      5  pentagon
+         6      0      0      6  flat
+         7      1      1      0  forbidden
+         8      0      2      1  
+         9      1      0      2  
+        10      0      1      3  
+        11      1      2      4  coprime
+        12      0      0      5  
+        13      1      1      6  coprime
+        14      0      2      0  
+        15      1      0      1  
+        16      0      1      2  
+        17      1      2      3  coprime
+        18      0      0      4  
+        19      1      1      5  coprime
+        20      0      2      6  
+        21      1      0      0  forbidden-2
+        22      0      1      1  
+        23      1      2      2  coprime
+        24      0      0      3  
+        25      1      1      4  coprime
+        26      0      2      5  
+        27      1      0      6  
+        28      0      1      0  
+        29      1      2      1  coprime
+        30      0      0      2  
+        31      1      1      3  coprime
+        32      0      2      4  
+        33      1      0      5  
+        34      0      1      6  
+        35      1      2      0  
+        36      0      0      1  
+        37      1      1      2  coprime
+        38      0      2      3  
+        39      1      0      4  
+        40      0      1      5  
+        41      1      2      6  = -1 mod 42
+
+
+  II. THE 3D CUBOID
+  ----------------------------------------
+
+  The space Z/2 x Z/3 x Z/7 is a 2 x 3 x 7 cuboid.
+  It has 42 cells.
+
+  AXES:
+  x-axis (mod 2): PARITY. Length 2. The binary channel. {even, odd}.
+  y-axis (mod 3): CURVATURE. Length 3. The ternary channel. {0, 1, 2}.
+  z-axis (mod 7): POSITION. Length 7. The septenary channel. {0,...,6}.
+
+  Each number mod 42 is a POINT in this cuboid.
+  The point (x, y, z) encodes three INDEPENDENT properties:
+  x = parity (even/odd)
+  y = curvature class (mod 3)
+  z = position within the forbidden cycle (mod 7)
+
+  The three channels are ORTHOGONAL:
+  changing x doesn't affect y or z.
+  This is because gcd(2,3) = gcd(2,7) = gcd(3,7) = 1.
+
+
+  III. THE THREE CHAINS
+  ----------------------------------------
+
+  Chain 0 (binary): n, n+2, n+4, n+6, ... (step by 2)
+    Stays on the same x-parity plane.
+    Cycles through y and z with periods 3 and 7.
+    Full period: lcm(3,7) = 21 steps of 2 = 42. Returns to start.
+
+  Chain 1 (ternary): n, n+3, n+6, n+9, ... (step by 3)
+    Stays on the same y-curvature level.
+    Cycles through x and z with periods 2 and 7.
+    Full period: lcm(2,7) = 14 steps of 3 = 42.
+
+  Chain 2 (septenary): n, n+7, n+14, n+21, ... (step by 7)
+    Stays on the same z-position level.
+    Cycles through x and y with periods 2 and 3.
+    Full period: lcm(2,3) = 6 steps of 7 = 42.
+
+  Each chain steps along ONE axis of the cuboid,
+  wrapping around the other two axes.
+  They are INTERWOVEN: each chain covers all 42 cells
+  but visits them in different orders.
+
+  Chain 0 (step 2) from 0:
+  [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
+  In 3D: [(0, 0, 0), (0, 2, 2), (0, 1, 4), (0, 0, 6), (0, 2, 1), (0, 1, 3), (0, 0, 5)]...
+
+  Chain 1 (step 3) from 0:
+  [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39]
+  In 3D: [(0, 0, 0), (1, 0, 3), (0, 0, 6), (1, 0, 2), (0, 0, 5), (1, 0, 1), (0, 0, 4)]...
+
+  Chain 2 (step 7) from 0:
+  [0, 7, 14, 21, 28, 35]
+  In 3D: [(0, 0, 0), (1, 1, 0), (0, 2, 0), (1, 0, 0), (0, 1, 0), (1, 2, 0)]
+
+  Chain 2 has only 6 steps (lcm(2,3) = 6).
+  It visits: 0, 7, 14, 21, 28, 35.
+  In 3D: (0,0,0), (1,1,0), (0,2,0), (1,0,0), (0,1,0), (1,2,0).
+  ALL have z=0! The septenary chain stays at z=0
+  (because 7 = 0 mod 7). It only moves through x and y.
+
+  This means: stepping by 7 (the forbidden) moves you
+  through PARITY and CURVATURE but NOT through POSITION.
+  The forbidden step is BLIND to its own axis.
+
+
+  IV. THE FORBIDDEN'S BLINDNESS
+  ----------------------------------------
+
+  Stepping by 7 in mod-42 arithmetic:
+  7 mod 2 = 1 (flips parity)
+  7 mod 3 = 1 (advances curvature by 1)
+  7 mod 7 = 0 (STAYS PUT on the position axis)
+
+  The forbidden number advances parity and curvature
+  but CANNOT MOVE along its own axis.
+  It is FROZEN in the z-direction.
+
+  Compare: stepping by 2:
+  2 mod 2 = 0 (stays on same parity)
+  2 mod 3 = 2 (advances curvature by 2)
+  2 mod 7 = 2 (advances position by 2)
+  The doubler stays on its OWN axis (parity fixed)
+  but moves through curvature and position.
+
+  And stepping by 3:
+  3 mod 2 = 1 (flips parity)
+  3 mod 3 = 0 (stays on same curvature)
+  3 mod 7 = 3 (advances position by 3)
+  The curvature quantum stays on its OWN axis (curvature fixed)
+  but moves through parity and position.
+
+  EACH FUNDAMENTAL PRIME IS BLIND TO ITS OWN AXIS.
+  2 can't change parity. 3 can't change curvature. 7 can't change position.
+  Each prime FREEZES the dimension it NAMES and moves through the others.
+
+
+  V. THE 3D STRUCTURE OF IMPORTANT NUMBERS
+  ----------------------------------------
+
+  Number mod 42  (x=mod2, y=mod3, z=mod7)  Meaning
+  -------------------------------------------------------
+     0           (0, 0, 0)              zero
+     1           (1, 1, 1)              identity
+     2           (0, 2, 2)              doubler
+     3           (1, 0, 3)              curvature
+     5           (1, 2, 5)              pentagon
+     6           (0, 0, 6)              flat
+     7           (1, 1, 0)              FORBIDDEN
+     8           (0, 2, 1)              octonion dim
+     9           (1, 0, 2)              3^2
+    10           (0, 1, 3)              Petersen
+    11           (1, 2, 4)              Paley prime
+    12           (0, 0, 5)              chromatic
+    13           (1, 1, 6)              F_7
+    14           (0, 2, 0)              2*7
+    15           (1, 0, 1)              3*5
+    19           (1, 1, 5)              splitting
+    21           (1, 0, 0)              FORBIDDEN-2
+    28           (0, 1, 0)              perfect/T_7
+    30           (0, 0, 2)              icosahedron edges
+    41           (1, 2, 6)              = -1 mod 42
+
+  KEY OBSERVATIONS:
+
+  The forbidden 7  = (1, 1, 0). z=0: no position. Just parity and curvature.
+  The forbidden 21 = (1, 0, 0). y=0 AND z=0: no curvature, no position. Just parity.
+  The flat 6       = (0, 0, 6). x=0 AND y=0: no parity, no curvature. Just position.
+  The identity 1   = (1, 1, 1). All ones. Present on every axis.
+
+  7 has z=0: it is ABSENT from the position (septenary) axis.
+  21 has y=0 AND z=0: absent from curvature AND position. Just parity.
+  The forbidden numbers are increasingly ABSENT from the cuboid's axes.
+
+  6 has x=0 AND y=0: the flat number is absent from parity and curvature.
+  It lives ONLY in the position axis. Pure position. No parity, no curvature.
+  FLAT = pure position. FORBIDDEN = pure parity.
+
+
+  VI. THE COPRIME RESIDUES: THE 'ACTIVE' CELLS
+  ----------------------------------------
+
+  phi(42) = 12 residues coprime to 42.
+  These are the cells (x, y, z) with x != 0 AND y != 0 AND z != 0.
+  = the cells that are NONZERO on ALL THREE axes.
+  = the FULLY ACTIVE cells.
+
+  Coprime residues: [1, 5, 11, 13, 17, 19, 23, 25, 29, 31, 37, 41]
+  In 3D:
+      1 = (1, 1, 1)
+      5 = (1, 2, 5)
+     11 = (1, 2, 4)
+     13 = (1, 1, 6)
+     17 = (1, 2, 3)
+     19 = (1, 1, 5)
+     23 = (1, 2, 2)
+     25 = (1, 1, 4)
+     29 = (1, 2, 1)
+     31 = (1, 1, 3)
+     37 = (1, 1, 2)
+     41 = (1, 2, 6)
+
+  These 12 cells form a 1 x 2 x 6 sub-cuboid:
+  x in {1}, y in {1, 2}, z in {1, 2, 3, 4, 5, 6}.
+  (x=0 is excluded because 2|r. y=0 excluded because 3|r. z=0 because 7|r.)
+
+  The coprime residues are the ODD numbers with nonzero curvature
+  and nonzero position. They are the numbers that are FULLY PRESENT
+  in the cuboid — active on all three axes simultaneously.
+
+  12 = phi(42) = |D_6| = dihedral group of hexagon = 2*6.
+  The number of fully active cells = the symmetry of the hexagon!
+
+
+  VII. MULTIPLICATION AS 3D VECTOR ADDITION
+  ----------------------------------------
+
+  In Z/42Z: multiplication mod 42.
+  By CRT: (a*b) mod 42 = ((a mod 2)*(b mod 2) mod 2,
+                           (a mod 3)*(b mod 3) mod 3,
+                           (a mod 7)*(b mod 7) mod 7)
+
+  Multiplication DECOMPOSES into three independent channel multiplications.
+  On each channel, multiplication is a GROUP OPERATION:
+  mod 2: {0,1} with * (trivial)
+  mod 3: {0,1,2} with * (Z/3Z)
+  mod 7: {0,1,2,3,4,5,6} with * (Z/7Z)
+
+  On the coprime residues (units mod 42):
+  (Z/42Z)* = (Z/2Z)* x (Z/3Z)* x (Z/7Z)* = {1} x Z/2Z x Z/6Z.
+  |(Z/42Z)*| = 1 * 2 * 6 = 12 = phi(42). CHECK.
+
+  The unit group is Z/2Z x Z/6Z = Z/2Z x Z/2Z x Z/3Z (since Z/6Z = Z/2Z x Z/3Z).
+  So: (Z/42Z)* = Z/2Z x Z/2Z x Z/3Z. Order 12.
+
+  Taking DISCRETE LOGARITHMS on each channel
+  converts multiplication to ADDITION:
+  log(a*b) = log(a) + log(b) mod the channel order.
+
+  This IS rapidity! The discrete log on each channel
+  is the DISCRETE RAPIDITY for that channel.
+  Multiplication in Z/42Z = addition of three discrete rapidities.
+
+
+  VIII. THE 3D SPACE AS A TOURNAMENT DIAGNOSTIC SPACE
+  ----------------------------------------
+
+  For a 7-item tournament (the lossless engine):
+  H(T) ranges from 1 to 189.
+  189 = 3^3 * 7 = 27 * 7.
+
+  H mod 2 = 1 always (Redei). FIXED on the parity axis.
+  H mod 3 = 0 or not (depends on tournament).
+  H mod 7 = 0 or not (depends on tournament).
+
+  So the INTERESTING variation of H is in the mod-3 and mod-7 channels.
+  H mod 42 gives a point in the cuboid.
+  Since H is odd: x = 1 always. The tournament lives on the ODD SLICE.
+
+  The odd slice of the cuboid has 21 cells (x=1):
+  y in {0,1,2}, z in {0,1,2,3,4,5,6}. 3*7 = 21 cells.
+  21 = the second forbidden number = C(7,2) = arcs in T_7!
+
+  The 21 possible (mod 3, mod 7) residues of H
+  correspond to the 21 ARCS of the tournament.
+  Each arc contributes to the mod-3 and mod-7 structure of H.
+
+  THE 3D CUBOID IS THE TOURNAMENT ITSELF.
+  The x-axis (parity) is FIXED by Redei.
+  The y-axis (mod 3) encodes the CURVATURE structure.
+  The z-axis (mod 7) encodes the POSITION structure.
+  The 21 free cells = the 21 arcs.
+
+
+  IX. WHAT THIS MEANS FOR COMPRESSION
+  ----------------------------------------
+
+  A base-42 digit encodes THREE independent channels simultaneously.
+  This is not just a number representation — it's a 3D COORDINATE.
+
+  For the lossless decision engine:
+  Each of the 21 comparisons in a 7-item tournament
+  contributes to three independent channels:
+  - Parity channel (mod 2): always odd. No information. 0 bits.
+  - Curvature channel (mod 3): the cycle structure. 1.585 bits.
+  - Position channel (mod 7): the ordering structure. 2.807 bits.
+
+  Total information per comparison: 1.585 + 2.807 = 4.392 bits.
+  Wait: each comparison is binary (1 bit).
+  But it contributes to TWO channels (curvature and position).
+  21 comparisons * 1 bit each = 21 bits total.
+  = 3 * 7 = the product of the two free channel sizes.
+
+  The 21 bits of a tournament on 7 vertices decompose into:
+  Channel mod 3: contributes to 3-cycle structure (3^k combinations)
+  Channel mod 7: contributes to 7-position structure (7^k combinations)
+  The tournament IS a 3D object compressed into 21 binary bits.
+
+
+  X. THE KILLER APPLICATION
+  ----------------------------------------
+
+  The three channels {mod 2, mod 3, mod 7} give three INDEPENDENT
+  diagnostic dimensions for any pairwise comparison dataset.
+
+  Dimension 1 (mod 2 = parity):
+    Is the result even or odd? For tournaments: always odd (Redei).
+    For other systems: parity check = error detection.
+
+  Dimension 2 (mod 3 = curvature):
+    Does the dataset have 3-cycles? How many?
+    alpha_1 mod 3 = the curvature channel.
+    This detects: circular preferences, rock-paper-scissors dynamics.
+
+  Dimension 3 (mod 7 = position):
+    Where in the 7-element group does the H-value sit?
+    H mod 7 = the position channel.
+    This detects: which of the 7 positions in the forbidden cycle
+    the tournament occupies. Position 0 = divisible by 7 = maximally structured.
+
+  The THREE CHANNELS together give a 3D diagnostic vector
+  for any pairwise comparison dataset.
+  Each channel operates INDEPENDENTLY and LOSSLESSLY.
+  The full diagnostic = the CRT reconstruction from the three channels.
+
+  This is a 3D HEALTH CHECK for rankings:
+  Channel 1 (parity): is the data structurally valid?
+  Channel 2 (curvature): how circular is the data?
+  Channel 3 (position): how structured is the data?
+
+  No other diagnostic system gives three INDEPENDENT, ORTHOGONAL
+  channels of analysis from pairwise comparison data.
+  The base-42 structure makes this AUTOMATIC:
+  reduce H mod 42, read off the three coordinates.
+  That's the full 3D diagnostic in one step.
