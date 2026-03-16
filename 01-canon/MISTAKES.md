@@ -969,3 +969,57 @@ The disconnected decomposition 63=7×9 is correctly blocked, but connected Ω gr
 ### Lesson
 
 Always check prior session results before claiming a new proof. The H-spectrum density analysis (hspectrum_density.out) had already settled this question computationally. Cross-reference before broadcasting claims.
+
+---
+
+## MISTAKE-025: S112 W(8) Value Off By 8
+
+**Date discovered:** 2026-03-16 (opus-S90 continuation session)
+**Found by:** opus-S90, via independent brute-force verification
+**Affects:** kind-pasteur-S112 W(n) sequence, D_n(2) computations
+
+### What was claimed
+kind-pasteur-S112 reported W(n) = 1, 2, 8, 32, 158, 928, 6350, **49760**, 439766 for n=1..9.
+
+### Why it was wrong
+Independent brute-force computation (iterating over all 8! = 40320 permutations) gives W(8) = **49752**, not 49760. The error is exactly +8 = 2³. The S89c C-program DP computation also gives 49752, confirming the brute-force result.
+
+### The correct values
+W(n) = 1, 2, 8, 32, 158, 928, 6350, **49752**, 439670 (from S89c DP).
+
+### Impact assessment
+- **S89c values (opus):** CORRECT through n=27 (computed by bitmask DP in C).
+- **S112 values (kind-pasteur):** INCORRECT at n=8 by +8. Values at n≤7 match. Values at n≥9 need reverification against S89c.
+- **OEIS submission:** Use S89c values, not S112.
+- **CV² formula and g_k polynomials:** UNAFFECTED (derived independently of W(n) enumeration).
+
+### Source
+opus-2026-03-16 (S90 continuation): brute-force W(8) verification via Python permutation enumeration.
+
+### Lesson
+When two independent computations disagree, trust the one with the simpler algorithm (brute force) over the one with more complex logic. The discrepancy of exactly 2³ suggests a boundary condition or off-by-one error in the S112 computation, not a random bug.
+
+---
+
+## MISTAKE-026: Cross-Ratio of Cayley Orbit Initially Claimed as 8/7
+
+**Date discovered:** 2026-03-15 (code review during S90)
+**Found by:** opus-S90 code review agent
+**Affects:** monad_cayley_s90c.py, commit messages
+
+### What was claimed
+The cross-ratio of the Q-orbit of x=2 was initially computed as 8/7, using the WRONG orbit point (3 instead of -3).
+
+### Why it was wrong
+Q(2) = (1+2)/(1-2) = 3/(-1) = **-3**, not 3. The orbit is {2, **-3**, -1/2, 1/3}. The cross-ratio CR(2, -3, -1/2, 1/3) = **2**, not 8/7.
+
+### The correct value
+Cross-ratio = 2 = the OCF fugacity itself. This is MORE meaningful than 8/7 — the cross-ratio equals the evaluation point.
+
+### Impact
+- The narrative about "tournament constant 8/7" in commit messages is wrong.
+- The correct "tournament constant" is 2 (the fugacity).
+- Script monad_cayley_s90c.py has been corrected.
+
+### Source
+Code review agent, opus-2026-03-15-S90.
