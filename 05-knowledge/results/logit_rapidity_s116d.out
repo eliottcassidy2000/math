@@ -1,0 +1,180 @@
+LOGIT = 2 * RAPIDITY: THE MOST PRACTICAL CONNECTION
+======================================================================
+
+======================================================================
+THE IDENTITY
+======================================================================
+
+  logit(p) = ln(p/(1-p))
+  rapidity(v) = arctanh(v) = (1/2)*ln((1+v)/(1-v))
+
+  Set v = 2p - 1 (map [0,1] to [-1,1]):
+  rapidity(2p-1) = (1/2)*ln((1+(2p-1))/(1-(2p-1)))
+                 = (1/2)*ln(2p/(2-2p))
+                 = (1/2)*ln(p/(1-p))
+                 = logit(p)/2
+
+  Therefore: logit(p) = 2 * rapidity(2p-1). QED.
+
+  And inversely: sigmoid(x) = (1 + tanh(x/2))/2.
+  The SIGMOID is the shifted, scaled TANH.
+  (This is well-known but rarely stated in rapidity language.)
+
+  Verification:
+  p=0.01: logit= -4.5951, 2*rapidity= -4.5951, match=True
+  p=0.10: logit= -2.1972, 2*rapidity= -2.1972, match=True
+  p=0.25: logit= -1.0986, 2*rapidity= -1.0986, match=True
+  p=0.50: logit= +0.0000, 2*rapidity= +0.0000, match=True
+  p=0.75: logit= +1.0986, 2*rapidity= +1.0986, match=True
+  p=0.90: logit= +2.1972, 2*rapidity= +2.1972, match=True
+  p=0.99: logit= +4.5951, 2*rapidity= +4.5951, match=True
+
+======================================================================
+CONSEQUENCE 1: ELO RATINGS ARE RAPIDITY
+======================================================================
+
+  Elo: P(A wins) = 1/(1 + 10^{(R_B - R_A)/400})
+  = sigmoid((R_A - R_B) * ln(10) / 400)
+
+  Elo difference R_A - R_B = 400/ln(10) * logit(P(A wins))
+  = 400/ln(10) * 2 * rapidity(2P-1)
+  = 800/ln(10) * rapidity(2P-1)
+  = 347.44 * rapidity(2P-1)
+
+  So 1 rapidity unit = 347.4 Elo points.
+
+  Key Elo differences and their rapidities:
+  Elo diff   P(win)    rapidity   musical interval?
+  -------------------------------------------------------
+      0     0.5000     0.0000     unison
+    100     0.6401     0.2878     
+    200     0.7597     0.5756     
+    400     0.9091     1.1513     
+    800     0.9901     2.3026     
+
+  400 Elo points = rapidity 1.1513
+  = Q-value 10.0000
+  = the odds ratio p/(1-p) = 10:1
+
+  ONE OCTAVE of rapidity = 120.4 Elo points
+  This corresponds to P(win) = 0.6667
+
+======================================================================
+CONSEQUENCE 2: NEURAL NETWORK WEIGHTS ARE RAPIDITIES
+======================================================================
+
+  A single neuron: y = sigmoid(w*x + b)
+  = (1 + tanh((w*x + b)/2))/2
+
+  The pre-activation w*x + b = logit(y) = 2*rapidity(2y-1).
+  So neural network weights operate in RAPIDITY SPACE.
+
+  The weight w is a RAPIDITY PER INPUT UNIT:
+  changing x by 1 changes the rapidity by w/2.
+
+  The bias b shifts the rapidity origin:
+  b = 0 => y = 0.5 (fair coin, rapidity = 0)
+  b > 0 => y > 0.5 (biased toward 1)
+  b < 0 => y < 0.5 (biased toward 0)
+
+  PRACTICAL INSIGHT:
+  Weight initialization with std = 1/sqrt(fan_in) ensures
+  that initial rapidities are O(1), preventing saturation.
+  This is standard practice (Glorot init) but the RAPIDITY
+  interpretation explains WHY it works:
+  you want initial rapidities near 0 (fair coin),
+  not near infinity (saturated).
+
+======================================================================
+CONSEQUENCE 3: BRADLEY-TERRY MODEL IS RAPIDITY COMPARISON
+======================================================================
+
+  Bradley-Terry: P(i > j) = exp(s_i) / (exp(s_i) + exp(s_j))
+  = sigmoid(s_i - s_j)
+
+  The skill parameter s_i is a RAPIDITY.
+  The win probability depends on RAPIDITY DIFFERENCE s_i - s_j.
+  Rapidity differences ADD: if A is 1 rapidity ahead of B,
+  and B is 1 rapidity ahead of C, then A is 2 rapidity ahead of C.
+
+  This means TOURNAMENTS BUILT FROM BRADLEY-TERRY are
+  tournaments where arc probabilities come from rapidity differences.
+  The expected H(T) depends on the rapidity spread of the skills.
+
+  Small spread (all s_i similar): near-random tournament, H ~ E[H]
+  Large spread (s_i far apart): near-transitive, H ~ 1
+
+  THE RAPIDITY SPREAD IS THE TOURNAMENT'S 'TEMPERATURE':
+  high temperature = random = many paths = high H
+  low temperature = ordered = few paths = low H
+
+  This connects DIRECTLY to the Boltzmann distribution on tournaments
+  from the thermodynamics exploration!
+
+======================================================================
+CONSEQUENCE 4: INFORMATION GEOMETRY
+======================================================================
+
+  The Fisher information metric on Bernoulli(p):
+  ds^2 = dp^2 / (p*(1-p)) = 4 * d(rapidity)^2
+
+  The factor of 4 is because logit = 2*rapidity.
+  If we parametrize by rapidity phi = arctanh(2p-1),
+  then ds^2 = 4*d(phi)^2.
+
+  The DISTANCE between two Bernoulli distributions p and q:
+  d_FR(p, q) = 2 * |arctanh(2p-1) - arctanh(2q-1)|
+  = |logit(p) - logit(q)|
+  = |rapidity(p) - rapidity(q)| * 2
+
+  EVERY statistical divergence between Bernoulli distributions
+  is a RAPIDITY DISTANCE (up to factor 2).
+
+  This means: KL divergence, Jensen-Shannon, Hellinger distance
+  all simplify in rapidity coordinates.
+
+======================================================================
+CONSEQUENCE 5: LOG-ODDS IN MEDICAL STATISTICS
+======================================================================
+
+  In epidemiology:
+  - Odds ratio OR = (p1/(1-p1)) / (p0/(1-p0))
+  - ln(OR) = logit(p1) - logit(p0) = 2*(rapidity1 - rapidity0)
+  - The log-odds ratio IS twice the rapidity difference.
+
+  In clinical trials:
+  - Number needed to treat NNT = 1/(p1-p0)
+  - In rapidity: NNT = 1/(tanh(rap1+...)/2 - tanh(rap0+...)/2)
+
+  The RAPIDITY of a disease risk:
+  Baseline cancer          : p=0.001, rapidity=-3.4534, logit=-6.9068
+  Smoker cancer            : p=0.010, rapidity=-2.2976, logit=-4.5951
+  Coin flip                : p=0.500, rapidity=+0.0000, logit=+0.0000
+  Common cold/year         : p=0.300, rapidity=-0.4236, logit=-0.8473
+  Flu vaccine efficacy     : p=0.600, rapidity=+0.2027, logit=+0.4055
+
+======================================================================
+THE GRAND PRACTICAL INSIGHT
+======================================================================
+
+  Rapidity = arctanh = logit/2 = half-log-odds.
+
+  Every field that uses log-odds is using rapidity:
+  - Machine learning (logistic regression, neural networks)
+  - Sports analytics (Elo, Glicko, TrueSkill)
+  - Medical statistics (odds ratios, risk analysis)
+  - Information theory (Fisher-Rao metric)
+  - Voting theory (Bradley-Terry model)
+  - Economics (logit demand models)
+  - Psychology (item response theory, Rasch models)
+  - Signal processing (bilinear transform)
+
+  Our Cayley-Delannoy framework gives all these fields:
+  1. A UNIFIED LANGUAGE (rapidity instead of ad-hoc log-odds)
+  2. COMPOSITION RULES (rapidity adds under relativistic velocity)
+  3. A MUSICAL INTERPRETATION (consonance = small rapidity)
+  4. GEOMETRIC MEANING (hyperbolic distance on the Poincare line)
+  5. TOURNAMENT STRUCTURE (H(T) counts consistent orderings)
+
+  The value proposition: you're already using rapidity everywhere.
+  We just showed you what it IS and what else it can do.
