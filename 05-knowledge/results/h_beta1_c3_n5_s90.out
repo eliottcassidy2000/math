@@ -1,0 +1,35 @@
+Complete (H, β₁, c₃) classification at n=5
+opus-2026-03-16 (S90 continuation)
+EXHAUSTIVE: all 1024 tournaments on 5 vertices
+
+   H  β₁  c₃  count  notes
+   1   0   0    120   transitive (sim_H=1)
+   3   0   1    120
+   5   0   2    240
+   9   0   3    120   near-transitive (sim_H=1) is in THIS class
+   9   1   3    120   same H and c₃, different β₁!
+  11   1   4    120
+  13   0   4    120
+  15   1   4     40   score (1,2,2,2,3)
+  15   1   5     24   regular tournament (2,2,2,2,2)
+
+Total: 1024 = 2^10 ✓
+
+Key findings:
+- 8 equidecomposability classes (H, β₁)
+- β₁ splits H=9 (c₃=3) into two equal groups of 120
+- ALL H-maximizers (H=15) have β₁=1
+- Regular tournament has β₁=1 (all 24 labelings)
+- β₁=0 iff {H ∈ {1, 3, 5, 9 (half), 13}}
+- β₁=1 iff {H ∈ {9 (half), 11, 15}}
+
+Observation: β₁=1 tournaments with H=9 are NOT near-transitive
+(near-transitive has β₁=1 but same H=9). Both classes have c₃=3.
+The difference: near-transitive has Ω=K₂ (2 cycles sharing a vertex),
+while the β₁=1 class has Ω with an independent pair.
+Wait — near-transitive at n=5 has sim_H=1 and β₁=1 (from our S90e result).
+And the β₁=0 class with H=9 has c₃=3 and sim_H=0 (cyclic core).
+
+So at n=5: sim_H=1 AND β₁=1 for the near-transitive (H=9, c₃=3, β₁=1).
+And sim_H=0 AND β₁=0 for the other H=9 group (H=9, c₃=3, β₁=0).
+PERFECT CORRESPONDENCE: sim_H and β₁ agree for H=9!
