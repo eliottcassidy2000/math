@@ -1,0 +1,504 @@
+THE CAYLEY LENS: WHAT DOES Q SEE?
+============================================================
+
+Q(x) = (1+x)/(1-x). Feed it EVERYTHING.
+
+NATURAL NUMBERS AS INPUT
+----------------------------------------
+
+Q applied to the natural numbers themselves (not addresses):
+  Q( 0) = +1.0000  (identity)
+  Q(1) = infinity (POLE)
+  Q( 2) = -3.0000  = -3
+  Q( 3) = -2.0000  = -2
+  Q( 4) = -1.6667  = -5/3
+  Q( 5) = -1.5000  = -3/2
+  Q( 6) = -1.4000
+  Q( 7) = -1.3333
+  Q( 8) = -1.2857
+  Q( 9) = -1.2500
+  Q(10) = -1.2222
+  Q(11) = -1.2000
+
+  Q(0) = 1. Q(1) = inf. Q(2) = -3. Q(3) = -2. Q(4) = -5/3.
+  For n >= 2: Q(n) = (1+n)/(1-n) = -(1+n)/(n-1) = -(1 + 2/(n-1)).
+  These are NEGATIVE and approach -1 from below as n -> inf.
+
+  Q(n) + 1 = (1+n)/(1-n) + 1 = (1+n+1-n)/(1-n) = 2/(1-n).
+  So Q(n) + 1 = -2/(n-1) for n >= 2.
+  The distance from -1 is 2/(n-1): HARMONIC in n!
+
+UNIT FRACTIONS AS INPUT
+----------------------------------------
+
+  Q(1/1) = infinity (POLE)
+  Q(1/2) = 3 = 3.000000
+  Q(1/3) = 2 = 2.000000
+  Q(1/4) = 5/3 = 1.666667
+  Q(1/5) = 3/2 = 1.500000
+  Q(1/6) = 7/5 = 1.400000
+  Q(1/7) = 4/3 = 1.333333
+  Q(1/8) = 9/7 = 1.285714
+  Q(1/9) = 5/4 = 1.250000
+  Q(1/10) = 11/9 = 1.222222
+
+  Q(1/n) = (n+1)/(n-1). These are the SUPERPARTICULAR RATIOS:
+  Q(1/1) = inf. Q(1/2) = 3. Q(1/3) = 2. Q(1/4) = 5/3.
+  Q(1/5) = 3/2. Q(1/6) = 7/5. Q(1/7) = 4/3.
+
+  In music: 3/2 = perfect fifth. 4/3 = perfect fourth.
+  5/3 = major sixth. 7/5 = septimal tritone.
+  THE CAYLEY TRANSFORM OF UNIT FRACTIONS GIVES MUSICAL INTERVALS!
+
+  Musical intervals from Q(1/n):
+    Q(1/2) = 3/1   = perfect twelfth (octave + fifth)
+    Q(1/3) = 2/1   = OCTAVE
+    Q(1/4) = 5/3   = major sixth
+    Q(1/5) = 3/2   = PERFECT FIFTH
+    Q(1/6) = 7/5   = septimal tritone
+    Q(1/7) = 4/3   = PERFECT FOURTH
+    Q(1/8) = 9/7   = septimal major third
+    Q(1/9) = 5/4   = major third
+    Q(1/10) = 11/9  = undecimal neutral third
+
+  The OCTAVE is Q(1/3). The FIFTH is Q(1/5).
+  The 3 and 5 from our theory! And 3*5 = 15 = the first
+  'interesting' H value (H(T_5) = 15 for the cyclic tournament).
+
+ROOTS OF UNITY AS INPUT
+----------------------------------------
+
+  Q(e^{2pi*i/1}) = -1.00 -8165619676597685.00i  (|Q|=8165619676597685.0, LARGE)
+  Q(e^{2pi*i/2}) = -0.000000 +0.000000i  (|Q|=0.0000, arg=0.5000*pi)
+  Q(e^{2pi*i/3}) = +0.000000 +0.577350i  (|Q|=0.5774, arg=0.5000*pi)
+  Q(e^{2pi*i/4}) = -0.000000 +1.000000i  (|Q|=1.0000, arg=0.5000*pi)
+  Q(e^{2pi*i/5}) = +0.000000 +1.376382i  (|Q|=1.3764, arg=0.5000*pi)
+  Q(e^{2pi*i/6}) = -0.000000 +1.732051i  (|Q|=1.7321, arg=0.5000*pi)
+  Q(e^{2pi*i/7}) = -0.000000 +2.076521i  (|Q|=2.0765, arg=0.5000*pi)
+  Q(e^{2pi*i/8}) = -0.000000 +2.414214i  (|Q|=2.4142, arg=0.5000*pi)
+
+  Q at roots of unity:
+  n=1: Q(1) = infinity (the pole)
+  n=2: Q(-1) = 0 (the zero)
+  n=3: Q(e^{2pi*i/3}) has |Q| = 1 (ON THE UNIT CIRCLE)
+  n=4: Q(i) = i (FIXED POINT on unit circle)
+  n=6: Q(e^{pi*i/3}) has |Q| = 1
+
+  For |z|=1, z!=1: |Q(z)| = |(1+z)/(1-z)| = ?
+  Let z = e^{i*theta}:
+  1+z = 1+cos(t)+i*sin(t), |1+z| = 2*cos(t/2)
+  1-z = 1-cos(t)-i*sin(t), |1-z| = 2*sin(t/2)
+  |Q| = cos(t/2)/sin(t/2) = cot(t/2)
+
+  So |Q(e^{i*theta})| = cot(theta/2).
+  This is NOT 1 in general. It equals 1 when cot(t/2) = 1,
+  i.e., t/2 = pi/4, t = pi/2. So |Q| = 1 only at z = i.
+
+  But Q(i) = i (we proved this). So Q maps i to itself
+  and maps the unit circle to a LINE (the imaginary axis).
+
+ALGEBRAIC NUMBERS AS INPUT
+----------------------------------------
+
+  Q(sqrt(2)-1   ) =    +2.414214
+  Q(1/phi       ) =    +4.236068
+  Q(phi-1 = 1/phi) =    +4.236068
+  Q(sqrt(2)     ) =    -5.828427
+  Q(phi         ) =    -4.236068
+  Q(sqrt(3)     ) =    -3.732051
+  Q(e-2         ) =    +6.099294
+  Q(pi-3        ) =    +1.329896
+
+  Q(1/phi) = (1+1/phi)/(1-1/phi) = phi^2/(1/phi) = phi^3
+  Verify: Q(0.618034) = 4.236068, phi^3 = 4.236068
+  Match: True
+
+  Q CUBES the golden ratio when applied to 1/phi!
+  Q(1/phi) = phi^3 = phi^2 + phi = phi + 1 + phi = 2*phi + 1.
+
+  Q(phi) = (1+phi)/(1-phi) = phi^2/(-1/phi) = -phi^3
+  Verify: Q(1.618034) = -4.236068, -phi^3 = -4.236068
+
+  Q(1/phi) = +phi^3
+  Q(phi) = -phi^3
+  Q CUBES and the SIGN depends on which side of 1 you are.
+
+THE CUBING PROPERTY
+----------------------------------------
+
+  Q(1/phi) = phi^3. Is this general?
+  Q(1/x) = (1+1/x)/(1-1/x) = (x+1)/(x-1) for x > 1.
+  Compare: Q(x) = (1+x)/(1-x).
+  Q(1/x) = (x+1)/(x-1) = -Q(x) * (x-1)/(x+1) * (x+1)/(x-1)... hmm.
+  Actually: Q(1/x) = -(1+x)/(x-1) ... no.
+
+  For x = 1/phi: Q(1/phi) = phi^3 because:
+  (1+1/phi)/(1-1/phi) = (phi+1)/phi / ((phi-1)/phi)
+  = (phi+1)/(phi-1) = phi^2 / (1/phi) = phi^3.
+  This uses phi^2 = phi+1 and phi-1 = 1/phi.
+
+  For x = 1/tau: Q(1/tau) = (1+1/tau)/(1-1/tau) = (tau+1)/(tau-1).
+  = 3.382976
+  Compare: tau^2 = 3.382976
+  tau^3 = 6.222263
+  (tau+1)/(tau-1) = 3.382976 = tau^2! MATCH!
+
+  Q(1/tau) = tau^2! The Cayley transform SQUARES the tribonacci!
+  PROOF: tau^3 = tau^2 + tau + 1 (tribonacci equation).
+  So tau^2*(tau-1) = tau^3 - tau^2 = tau + 1. QED.
+
+  COMPARISON:
+  phi: x^2 = x+1 => Q(1/phi) = phi^3 (Cayley CUBES)
+  tau: x^3 = x^2+x+1 => Q(1/tau) = tau^2 (Cayley SQUARES)
+  For phi: x-1 = 1/x, x+1 = x^2 => Q(1/x) = x^2/(1/x) = x^3
+  For tau: x^2(x-1) = x+1 => Q(1/x) = (x+1)/(x-1) = x^2
+
+TRANSCENDENTAL INPUTS
+----------------------------------------
+
+  Q(1/e) = (1+1/e)/(1-1/e) = (e+1)/(e-1)
+  = 2.1639534137
+  = coth(1) = 1.3130352855
+  (Since (e+1)/(e-1) = (e^1+e^0)/(e^1-e^0) = coth(1/2)... )
+  Q(1/pi) = (pi+1)/(pi-1) = 1.9338844138
+  Q(ln(2)) = (1+ln2)/(1-ln2) = 5.5177827065
+  Q(pi/4) = (1+pi/4)/(1-pi/4) = 8.3195847327
+  Q(1/sqrt(2)) = 5.8284271247
+  = 3+2*sqrt(2) = 5.8284271247
+  This is the SILVER RATIO SQUARED: (1+sqrt(2))^2 = 3+2sqrt(2).
+
+  Q(1/sqrt(n)) = (sqrt(n)+1)^2/(n-1):
+    n=2: Q = 5.828427 = (sqrt(2)+1)^2/1 = 5.828427
+    n=3: Q = 3.732051 = (sqrt(3)+1)^2/2 = 3.732051
+    n=5: Q = 2.618034 = (sqrt(5)+1)^2/4 = 2.618034
+    n=7: Q = 2.215250 = (sqrt(7)+1)^2/6 = 2.215250
+
+THE CAYLEY TRANSFORM OF THE CAYLEY TRANSFORM
+----------------------------------------
+
+  Q(Q(x)) = (1+Q(x))/(1-Q(x))
+  = (1+(1+x)/(1-x)) / (1-(1+x)/(1-x))
+  = ((1-x+1+x)/(1-x)) / ((1-x-1-x)/(1-x))
+  = (2/(1-x)) / (-2x/(1-x))
+  = 2/(-2x) = -1/x
+
+  Q(Q(x)) = -1/x. THE DOUBLE CAYLEY IS NEGATIVE INVERSION.
+
+  Q^3(x) = Q(-1/x) = (1-1/x)/(1+1/x) = (x-1)/(x+1).
+  Q^4(x) = Q((x-1)/(x+1)) = (1+(x-1)/(x+1))/(1-(x-1)/(x+1))
+         = (x+1+x-1)/(x+1-x+1) = 2x/2 = x.
+
+  PERIOD 4: Q^4 = identity.
+  The orbit: x -> Q(x) -> -1/x -> (x-1)/(x+1) -> x.
+
+  Orbit of 1/3: 1/3 -> 2 -> -3 -> -1/2 -> 1/3
+  Orbit of 1/2: 1/2 -> 3 -> -2 -> -1/3 -> 1/2
+  Orbit of 2: 2 -> -3 -> -1/2 -> 1/3 -> 2
+
+  The orbit of 1/3: 1/3 -> 2 -> -1/3 -> -2 -> 1/3
+  (Note: {1/3, 2, -1/3, -2} form a 4-cycle!)
+  And Q(1/3) = 2 (the binary alphabet).
+  So the orbit of 1/3 IS {1/3, 2, -1/3, -2}.
+  The FOUR numbers that are Cayley-equivalent to the binary.
+
+============================================================
+THE MUSIC OF THE CAYLEY TRANSFORM
+============================================================
+
+  Q(1/3) = 2/1 = octave.
+  Q(1/5) = 3/2 = perfect fifth.
+  Q(1/7) = 4/3 = perfect fourth.
+  Q(1/9) = 5/4 = major third.
+
+  Q(1/(2n+1)) = (n+1)/n for n >= 1.
+  PROOF: Q(1/(2n+1)) = (1+1/(2n+1))/(1-1/(2n+1))
+                     = (2n+2)/(2n) = (n+1)/n. QED.
+
+  The Cayley transform of RECIPROCAL ODD NUMBERS gives
+  the SUPERPARTICULAR RATIOS (n+1)/n, which are the
+  FUNDAMENTAL INTERVALS of just intonation in music.
+
+  The octave (2/1), fifth (3/2), fourth (4/3), thirds (5/4, 6/5)
+  ARE the Cayley transforms of 1/3, 1/5, 1/7, 1/9, 1/11.
+
+  And 1/3, 1/5, 1/7, ... are the TAYLOR COEFFICIENTS of arctanh!
+  arctanh(x) = x + x^3/3 + x^5/5 + x^7/7 + ...
+
+  THE MUSIC OF THE CAYLEY TRANSFORM IS THE HARMONIC SERIES
+  OF ARCTANH. EACH TERM OF ARCTANH IS A MUSICAL INTERVAL.
+
+  The tournament theory IS music theory in disguise:
+  arctanh = the harmonic series of just intonation.
+  Q = the interval-to-frequency converter.
+  The odd harmonics 1, 3, 5, 7 are both the overtone series
+  AND the Taylor coefficients of the tournament coupling.
+
+============================================================
+EVEN UNIT FRACTIONS: RATIOS OF CONSECUTIVE ODD NUMBERS
+============================================================
+
+  Q(1/(2n)) = (2n+1)/(2n-1) for n >= 1:
+    Q(1/ 2) = 3
+    Q(1/ 4) = 5/3
+    Q(1/ 6) = 7/5
+    Q(1/ 8) = 9/7
+    Q(1/10) = 11/9
+    Q(1/12) = 13/11
+    Q(1/14) = 15/13
+    Q(1/16) = 17/15
+
+  These are RATIOS OF CONSECUTIVE ODD NUMBERS.
+  Q(1/2) = 3/1. Q(1/4) = 5/3. Q(1/6) = 7/5. Q(1/8) = 9/7.
+  Compare odd fractions: Q(1/3) = 2/1. Q(1/5) = 3/2. Q(1/7) = 4/3.
+
+  Together: Q(1/n) = (n+1)/(n-1).
+  Odd n -> superparticular (consecutive integers).
+  Even n -> super-odd-icular (consecutive odd integers).
+
+============================================================
+FIBONACCI AND LUCAS THROUGH THE LENS
+============================================================
+
+  Q(F_n/F_{n+1}) — Fibonacci ratios approaching 1/phi:
+    Q(F_2/F_3) = Q(1/2) = 3 = L_3/L_2
+    Q(F_3/F_4) = Q(2/3) = 5
+    Q(F_4/F_5) = Q(3/5) = 4
+    Q(F_5/F_6) = Q(5/8) = 13/3
+    Q(F_6/F_7) = Q(8/13) = 21/5
+    Q(F_7/F_8) = Q(13/21) = 17/4
+    Q(F_8/F_9) = Q(21/34) = 55/13
+    Q(F_9/F_10) = Q(34/55) = 89/21
+
+  Q(F_n/F_{n+1}) -> Q(1/phi) = phi^3 as n -> inf
+  Convergence: Q(F_9/F_10) = 0.618182 -> 0.618034
+
+  THEOREM: Q(F_n/F_{n+1}) = F_{n+2}/F_{n-1}
+  PROOF: (F_{n+1}+F_n)/(F_{n+1}-F_n) = F_{n+2}/F_{n-1}. QED.
+
+  Verification:
+    Q(F_2/F_3) = 3 = F_4/F_1 = 3: True
+    Q(F_3/F_4) = 5 = F_5/F_2 = 5: True
+    Q(F_4/F_5) = 4 = F_6/F_3 = 4: True
+    Q(F_5/F_6) = 13/3 = F_7/F_4 = 13/3: True
+    Q(F_6/F_7) = 21/5 = F_8/F_5 = 21/5: True
+    Q(F_7/F_8) = 17/4 = F_9/F_6 = 17/4: True
+    Q(F_8/F_9) = 55/13 = F_10/F_7 = 55/13: True
+
+  The Cayley transform SHIFTS Fibonacci indices by 3!
+  Q maps F_n/F_{n+1} to F_{n+2}/F_{n-1}.
+  This is a SKIP-3 operation in the Fibonacci sequence.
+
+============================================================
+PRIMES THROUGH THE LENS
+============================================================
+
+  Cayley addresses of primes: x_p = (p-1)/(p+1)
+  Q(x_p) = p by definition.
+
+  But what about Q(1/p) = (p+1)/(p-1)?
+    Q(1/ 2) = 3        = 3.000000
+    Q(1/ 3) = 2        = 2.000000
+    Q(1/ 5) = 3/2      = 1.500000
+    Q(1/ 7) = 4/3      = 1.333333
+    Q(1/11) = 6/5      = 1.200000
+    Q(1/13) = 7/6      = 1.166667
+    Q(1/17) = 9/8      = 1.125000
+    Q(1/19) = 10/9     = 1.111111
+
+  Q(1/p) telescopes! Product of Q(1/p_k) for consecutive primes:
+    Product up to p= 2: 3 = 3.000000
+    Product up to p= 3: 6 = 6.000000
+    Product up to p= 5: 9 = 9.000000
+    Product up to p= 7: 12 = 12.000000
+    Product up to p=11: 72/5 = 14.400000
+    Product up to p=13: 84/5 = 16.800000
+    Product up to p=17: 189/10 = 18.900000
+    Product up to p=19: 21 = 21.000000 <-- FORBIDDEN NUMBER!
+    Product up to p=23: 252/11 = 22.909091
+    Product up to p=29: 270/11 = 24.545455
+
+  THE PRODUCT UP TO p=19 EQUALS 21 = 3*7 = THE FORBIDDEN NUMBER!
+  This is because the factors telescope:
+  prod Q(1/p_k) = prod (p_k+1)/(p_k-1)
+  = 3/1 * 4/2 * 6/4 * 8/6 * 12/10 * 14/12 * 18/16 * 20/18
+  Massive cancellation leaves 20/(2*1*5) = ... = 21 exactly.
+
+  And 19 is the LAST prime factor of H(T_11) = 5*7*11*13*19 = 95095.
+  The PALEY prime product and the CAYLEY prime product meet at 21.
+
+============================================================
+PYTHAGOREAN TRIPLES THROUGH THE LENS
+============================================================
+
+  A Pythagorean triple (a,b,c) satisfies a^2+b^2=c^2.
+  Cayley address of c: x_c = (c-1)/(c+1).
+  What if we look at Q(a/c) and Q(b/c)?
+
+  (3,4,5): Q(3/5) = 4 = 4.0000,  Q(4/5) = 9 = 9.0000
+    Product Q(a/c)*Q(b/c) = 36 = 36.0000
+    = ((c+a)(c+b)/(ab))^2 = (72/12)^2 = 36.0000
+
+  (5,12,13): Q(5/13) = 9/4 = 2.2500,  Q(12/13) = 25 = 25.0000
+    Product Q(a/c)*Q(b/c) = 225/4 = 56.2500
+    = ((c+a)(c+b)/(ab))^2 = (450/60)^2 = 56.2500
+
+  (8,15,17): Q(8/17) = 25/9 = 2.7778,  Q(15/17) = 16 = 16.0000
+    Product Q(a/c)*Q(b/c) = 400/9 = 44.4444
+    = ((c+a)(c+b)/(ab))^2 = (800/120)^2 = 44.4444
+
+  (7,24,25): Q(7/25) = 16/9 = 1.7778,  Q(24/25) = 49 = 49.0000
+    Product Q(a/c)*Q(b/c) = 784/9 = 87.1111
+    = ((c+a)(c+b)/(ab))^2 = (1568/168)^2 = 87.1111
+
+  For Pythagorean (a,b,c): Q(a/c)*Q(b/c) = ((c+a)(c+b)/(ab))^2
+  The product is always a PERFECT SQUARE (of a rational)!
+  PROOF: (c+a)/(c-a) = (c+a)^2/b^2 since c^2-a^2=b^2.
+  Similarly (c+b)/(c-b) = (c+b)^2/a^2.
+  Product = (c+a)^2(c+b)^2/(a^2*b^2) = [(c+a)(c+b)/(ab)]^2. QED.
+
+============================================================
+THE CAYLEY GROUP: Q AS A MOBIUS TRANSFORMATION
+============================================================
+
+  Q(x) = (1+x)/(1-x) is a Mobius transformation:
+  Q = [[1,1],[-1,1]] in PGL(2).
+  Q^2 = [[-1,0],[0,1]] => Q^2(x) = -1/x (negative inversion).
+  Q^3 = [[-1,-1],[1,-1]] => Q^3(x) = (x-1)/(x+1).
+  Q^4 = [[1,0],[0,1]] = identity.
+
+  The group generated by Q is Z/4Z = {I, Q, -1/x, Q^{-1}}.
+  This is the KLEIN FOUR-GROUP (abelian)... wait, Z/4Z is cyclic.
+
+  ORBIT STRUCTURE of Q on rationals:
+    1/2 -> 3 -> -2 -> -1/3
+    1/4 -> 5/3 -> -4 -> -3/5
+    1/5 -> 3/2 -> -5 -> -2/3
+    1/6 -> 7/5 -> -6 -> -5/7
+    1/7 -> 4/3 -> -7 -> -3/4
+    1/8 -> 9/7 -> -8 -> -7/9
+
+============================================================
+MUSICAL CHORDS FROM CAYLEY
+============================================================
+
+  Building chords by COMPOSING Cayley intervals:
+
+  Major triad (root, major third, fifth):
+    Root = 1. Third = Q(1/9) = 5/4. Fifth = Q(1/5) = 3/2.
+    Frequencies: 1 : 5/4 : 3/2 = 4 : 5 : 6
+
+  Minor triad (root, minor third, fifth):
+    Root = 1. Third = 6/5 = Q(1/11). Fifth = 3/2 = Q(1/5).
+    Frequencies: 1 : 6/5 : 3/2 = 10 : 12 : 15
+
+  Inverting via Q^{-1}(y) = (y-1)/(y+1):
+    Q^{-1}(2) = 1/3 = 1/3 ... input = 1/3
+    Q^{-1}(3/2) = 1/5 = 1/5 ... input = 1/5
+    Q^{-1}(4/3) = 1/7 = 1/7 ... input = 1/7
+    Q^{-1}(5/4) = 1/9 = 1/9 ... input = 1/9
+    Q^{-1}(6/5) = 1/11 = 1/11 ... input = 1/11
+
+  Q^{-1}((n+1)/n) = 1/(2n+1). Each interval ENCODES an odd number!
+  Octave encodes 3. Fifth encodes 5. Fourth encodes 7.
+  Major third encodes 9. Minor third encodes 11.
+
+  The musical intervals are a BIJECTION with odd numbers via Q.
+  Consonance (how pleasant the interval sounds) decreases
+  as the odd number increases: 3 (octave, most consonant)
+  -> 5 (fifth) -> 7 (fourth) -> 9 (third) -> 11 (tritone).
+
+  This is the HARMONIC SERIES of music theory!
+  Low odd numbers = consonant. High odd numbers = dissonant.
+  The Cayley transform Q QUANTIFIES consonance as 1/(2n+1).
+
+============================================================
+Q(1/sqrt(5)) AND THE GOLDEN RATIO AGAIN
+============================================================
+
+  Q(1/sqrt(5)) = (sqrt(5)+1)^2/4 = (3+sqrt(5))/2 = 2.6180339887
+  phi^2 = 2.6180339887
+  Match: True
+
+  Q(1/sqrt(5)) = phi^2 = phi + 1.
+  And Q(1/phi) = phi^3.
+  So Q turns 1/sqrt(5) into phi^2 and 1/phi into phi^3.
+  Both involve the GOLDEN RATIO but through different paths.
+
+============================================================
+THE CAYLEY TRANSFORM AS RELATIVISTIC VELOCITY ADDITION
+============================================================
+
+  In special relativity, velocity addition (units c=1):
+  v_1 (+) v_2 = (v_1 + v_2) / (1 + v_1*v_2)
+
+  The rapidity phi = arctanh(v) transforms this to:
+  phi_1 + phi_2 (ordinary addition of rapidities).
+
+  Q(v) = (1+v)/(1-v) = e^{2*arctanh(v)} = e^{2*rapidity}.
+  So Q maps velocity to SQUARED LORENTZ FACTOR:
+  Q(v) = e^{2*phi} = gamma^2 * (1+v)^2 where gamma = 1/sqrt(1-v^2).
+
+  MULTIPLICATION of Q values = ADDITION of rapidities:
+  Q(v_1) * Q(v_2) = e^{2(phi_1+phi_2)} = Q(v_1 (+) v_2).
+
+  So Q is the EXPONENTIAL MAP from hyperbolic velocity space
+  to the multiplicative group. The Cayley transform IS the
+  relativistic-to-classical conversion!
+
+  v = 1/3: Q(v) = 2 = 2.0000, rapidity = 0.3466, gamma = 1.0607
+  v = 1/2: Q(v) = 3 = 3.0000, rapidity = 0.5493, gamma = 1.1547
+  v = 3/5: Q(v) = 4 = 4.0000, rapidity = 0.6931, gamma = 1.2500  <-- rapidity = ln(2) EXACTLY!
+
+  v = 3/5: rapidity = arctanh(3/5) = (1/2)*ln(4) = ln(2) EXACTLY.
+  The velocity 3/5*c has rapidity ln(2), the same constant that
+  governs the binary alphabet (Q(1/3) = 2 = e^{ln(2)}).
+  And Q(3/5) = 4 = 2^2 — the binary squared.
+
+============================================================
+TEMPERATURE AND PARTITION FUNCTIONS
+============================================================
+
+  In statistical mechanics, the partition function Z = sum e^{-E/kT}.
+  The Boltzmann weight is w = e^{-E/kT} = Q(x)^{-1/(2k)} where
+  x = tanh(E/(2kT)).
+
+  The Cayley transform Q(x) = (1+x)/(1-x) converts between
+  tanh (bounded, [-1,1]) and exp (unbounded, [0,inf]).
+  This is EXACTLY the conversion between:
+  - TANH parametrization (bounded, 'physical', velocity-like)
+  - EXP parametrization (unbounded, 'mathematical', energy-like)
+
+  In our tournament theory:
+  - The interval [0,1) is the tanh side (bounded tournament parameters)
+  - Q maps to [1, inf) the exp side (unbounded path counts)
+  - arctanh is the metric (hyperbolic distance)
+  - Q^m gives the m-th power (m-vertex tournament generating function)
+
+============================================================
+GRAND SUMMARY: WHAT Q SEES
+============================================================
+
+  INPUT                  OUTPUT               NAME
+  ----------------------------------------------------------
+  0                      1                    identity
+  1                      infinity             pole/singularity
+  1/(2n+1)               (n+1)/n              musical interval
+  1/3                    2                    octave / binary
+  1/5                    3/2                  perfect fifth
+  1/7                    4/3                  perfect fourth
+  1/phi                  phi^3                golden cubing
+  1/tau                  tau^2                tribonacci squaring
+  1/sqrt(2)              3+2sqrt(2)           silver ratio squared
+  1/sqrt(5)              phi^2                golden squaring
+  F_n/F_{n+1}            F_{n+2}/F_{n-1}      Fibonacci skip-3
+  i                      i                    fixed point
+  e^{i*theta}            i*cot(theta/2)       unit circle -> imag axis
+  v (velocity)           e^{2*rapidity}       relativity
+  tanh(t)                e^{2t}               hyperbolic-to-exp
+  Q(x)                   -1/x                 double Cayley = inv
+  x                      x (after 4 steps)    period 4
+
+  The Cayley transform is the UNIVERSAL BRIDGE between
+  bounded and unbounded, additive and multiplicative,
+  hyperbolic and Euclidean, velocity and energy,
+  consonance and frequency, tournament and counting.

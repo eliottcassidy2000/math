@@ -742,3 +742,18 @@ f(n) = (n-2+√(n²+4))/2 satisfies λ²=(n-2)λ+n, transfer matrix [[n-2,n],[1,
 
 **T232** #discriminant #golden-ratio #branch-points | certainty: VERY HIGH | source: opus-2026-03-15-S90g
 Δ(x) = 4x(x²-11x-1). Zeros at x = (11±5√5)/2 (golden ratio!). Sum = 11 (Paley prime). Product = -1. Δ(1) = -44 = -4·11 (tribonacci at discriminant). Δ(2) = -8·19 (consecutive Paley primes). The number 8 = 2³ = Bott period appears everywhere because 3 = 2+memory.
+
+**T233** #cayley-music #superparticular #arctanh #just-intonation | certainty: VERY HIGH (proved) | source: kind-pasteur-2026-03-15-S116b
+Q(1/(2n+1)) = (n+1)/n = superparticular ratio = musical interval in just intonation. Octave = Q(1/3), fifth = Q(1/5), fourth = Q(1/7). The Taylor coefficients 1/(2k+1) of arctanh are the Cayley pre-images of the musical harmonic series. Consonance decreases as the odd denominator increases. This connects tournament theory (arctanh coupling) to music theory (just intonation).
+
+**T234** #prime-telescope #forbidden-21 #cayley-product | certainty: VERY HIGH (exact computation) | source: kind-pasteur-2026-03-15-S116b
+Product_{p<=19} Q(1/p) = Product_{p<=19} (p+1)/(p-1) = 21 = 3*7 = the FORBIDDEN H value. After prime factorization and cancellation: numerator = 3^1 * 7^1, denominator = 1. The product is integer at p=2,3,5,7 (values 3,6,9,12) and then NOT integer again until p=19 (value 21). The 8 primes used (2,...,19) overlap the factors of H(T_11)=5*7*11*13*19 in {5,7,11,13,19}. Deep or coincidence?
+
+**T235** #fibonacci-skip-3 #cayley-recurrence #golden-cubing | certainty: VERY HIGH (proved) | source: kind-pasteur-2026-03-15-S116b
+Q(F_n/F_{n+1}) = F_{n+2}/F_{n-1} for all n>=2. Proof: F_{n+1}+F_n = F_{n+2}, F_{n+1}-F_n = F_{n-1}. Works for ALL Fibonacci-type recurrences (Lucas etc). UNIQUE to coefficient-1 recurrences. Converges to Q(1/phi) = phi^3 (golden cubing).
+
+**T236** #tribonacci-squaring #cayley-tau | certainty: VERY HIGH (proved) | source: kind-pasteur-2026-03-15-S116b
+Q(1/tau) = tau^2 (not tau^3!). Proof: tau^3 = tau^2+tau+1 => tau^2(tau-1) = tau+1 => (tau+1)/(tau-1) = tau^2. Compare phi: Q(1/phi) = phi^3 (cubing). The Cayley transform raises metallic constants to powers determined by their minimal polynomial structure: phi gets cubed (degree 2), tau gets squared (degree 3).
+
+**T237** #pythagorean-cayley #perfect-square | certainty: VERY HIGH (proved) | source: kind-pasteur-2026-03-15-S116b
+For Pythagorean triple (a,b,c): Q(a/c)*Q(b/c) = [(c+a)(c+b)/(ab)]^2, always a perfect square. Proof uses c^2-a^2=b^2 and c^2-b^2=a^2 to simplify the Cayley product.

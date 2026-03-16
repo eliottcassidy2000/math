@@ -1,0 +1,145 @@
+CAYLEY TRANSFORM AND LINEAR RECURRENCES
+============================================================
+
+FIBONACCI: Q(F_n/F_{n+1}) = F_{n+2}/F_{n-1}
+----------------------------------------
+
+  Q(F_2/F_3) = Q(1/2) = 3 = F_4/F_1 = 3: True
+  Q(F_3/F_4) = Q(2/3) = 5 = F_5/F_2 = 5: True
+  Q(F_4/F_5) = Q(3/5) = 4 = F_6/F_3 = 4: True
+  Q(F_5/F_6) = Q(5/8) = 13/3 = F_7/F_4 = 13/3: True
+  Q(F_6/F_7) = Q(8/13) = 21/5 = F_8/F_5 = 21/5: True
+  Q(F_7/F_8) = Q(13/21) = 17/4 = F_9/F_6 = 17/4: True
+  Q(F_8/F_9) = Q(21/34) = 55/13 = F_10/F_7 = 55/13: True
+  Q(F_9/F_10) = Q(34/55) = 89/21 = F_11/F_8 = 89/21: True
+  Q(F_10/F_11) = Q(55/89) = 72/17 = F_12/F_9 = 72/17: True
+  Q(F_11/F_12) = Q(89/144) = 233/55 = F_13/F_10 = 233/55: True
+
+  WHY shift by 3? Because Q uses addition AND subtraction:
+  Q(a/b) = (b+a)/(b-a)
+  Fibonacci: b+a = next term, b-a = previous-previous term.
+  The shift +2 in numerator and -1 in denominator gives total 3.
+
+LUCAS: Q(L_n/L_{n+1}) = ?
+----------------------------------------
+
+  Q(L_2/L_3) = Q(1/3) = 2  =? L_4/L_1 = 2: True
+  Q(L_3/L_4) = Q(3/4) = 7  =? L_5/L_2 = 7: True
+  Q(L_4/L_5) = Q(4/7) = 11/3  =? L_6/L_3 = 11/3: True
+  Q(L_5/L_6) = Q(7/11) = 9/2  =? L_7/L_4 = 9/2: True
+  Q(L_6/L_7) = Q(11/18) = 29/7  =? L_8/L_5 = 29/7: True
+  Q(L_7/L_8) = Q(18/29) = 47/11  =? L_9/L_6 = 47/11: True
+  Q(L_8/L_9) = Q(29/47) = 38/9  =? L_10/L_7 = 38/9: True
+  Q(L_9/L_10) = Q(47/76) = 123/29  =? L_11/L_8 = 123/29: True
+
+  YES! Same identity: Q(L_n/L_{n+1}) = L_{n+2}/L_{n-1}
+  This works for ANY sequence satisfying a_{n+1} = a_n + a_{n-1}.
+  PROOF: (a_{n+1} + a_n)/(a_{n+1} - a_n) = a_{n+2}/a_{n-1}. QED.
+
+GENERAL FIBONACCI-TYPE: a_{n+1} = a_n + a_{n-1}
+----------------------------------------
+
+  For ANY such sequence with a_0, a_1 > 0:
+  Q(a_n/a_{n+1}) = a_{n+2}/a_{n-1}
+
+  The Cayley transform shifts by 3 in ALL Fibonacci-type sequences.
+  This is because the recurrence relation IS the Cayley identity:
+  a_{n+2} = a_{n+1} + a_n (numerator = sum)
+  a_{n-1} = a_{n+1} - a_n (denominator = difference)
+
+TRIBONACCI: T_{n+1} = T_n + T_{n-1} + T_{n-2}
+----------------------------------------
+
+  Q(T_n/T_{n+1}) = (T_{n+1}+T_n)/(T_{n+1}-T_n)
+  T_{n+1}+T_n = T_{n+2} - T_{n-1} (from recurrence)
+  T_{n+1}-T_n = T_{n-1} + T_{n-2} (rearranging T_{n+1}=T_n+T_{n-1}+T_{n-2})
+  Wait: T_{n+1}-T_n = T_{n-1}+T_{n-2} only if T_{n+1}=T_n+T_{n-1}+T_{n-2}.
+
+  Q(T_4/T_5) = Q(1/2) = 3  =? (T_6-T_3)/(T_3+T_2) = 3: True
+  Q(T_5/T_6) = Q(2/4) = 3  =? (T_7-T_4)/(T_4+T_3) = 3: True
+  Q(T_6/T_7) = Q(4/7) = 11/3  =? (T_8-T_5)/(T_5+T_4) = 11/3: True
+  Q(T_7/T_8) = Q(7/13) = 10/3  =? (T_9-T_6)/(T_6+T_5) = 10/3: True
+  Q(T_8/T_9) = Q(13/24) = 37/11  =? (T_10-T_7)/(T_7+T_6) = 37/11: True
+  Q(T_9/T_10) = Q(24/44) = 17/5  =? (T_11-T_8)/(T_8+T_7) = 17/5: True
+  Q(T_10/T_11) = Q(44/81) = 125/37  =? (T_12-T_9)/(T_9+T_8) = 125/37: True
+  Q(T_11/T_12) = Q(81/149) = 115/34  =? (T_13-T_10)/(T_10+T_9) = 115/34: True
+
+  For tribonacci, Q(T_n/T_{n+1}) = (T_{n+2}-T_{n-1})/(T_{n-1}+T_{n-2})
+  This is more complex because the recurrence has 3 terms, not 2.
+  The 'skip' is no longer a clean index shift.
+
+PELL: P_{n+1} = 2P_n + P_{n-1}
+----------------------------------------
+
+  Q(P_n/P_{n+1}) = (P_{n+1}+P_n)/(P_{n+1}-P_n)
+  P_{n+1}+P_n = 3P_n + P_{n-1} (from recurrence)
+  P_{n+1}-P_n = P_n + P_{n-1} (from recurrence)
+  Q(P_2/P_3) = Q(1/2) = 3 = 3: True
+  Q(P_3/P_4) = Q(2/5) = 7/3 = 7/3: True
+  Q(P_4/P_5) = Q(5/12) = 17/7 = 17/7: True
+  Q(P_5/P_6) = Q(12/29) = 41/17 = 41/17: True
+  Q(P_6/P_7) = Q(29/70) = 99/41 = 99/41: True
+  Q(P_7/P_8) = Q(70/169) = 239/99 = 239/99: True
+  Q(P_8/P_9) = Q(169/408) = 577/239 = 577/239: True
+  Q(P_9/P_10) = Q(408/985) = 1393/577 = 1393/577: True
+
+  For Pell, Q(P_n/P_{n+1}) = (3P_n+P_{n-1})/(P_n+P_{n-1})
+  The ratio simplifies differently. Only Fibonacci-type (coefficient 1)
+  gives a clean index shift.
+
+============================================================
+THE FIBONACCI PROPERTY IS UNIQUE TO COEFFICIENT 1
+============================================================
+
+  For a_{n+1} = c*a_n + a_{n-1}:
+  Q(a_n/a_{n+1}) = (a_{n+1}+a_n)/(a_{n+1}-a_n)
+               = ((c+1)a_n + a_{n-1})/((c-1)a_n + a_{n-1})
+
+  This is a_{n+2}/a_{n-1} ONLY when c=1 (Fibonacci).
+  For c=1: (c+1)a_n+a_{n-1} = 2a_n+a_{n-1} = a_n+a_{n+1} = a_{n+2}.
+  And: (c-1)a_n+a_{n-1} = a_{n-1}.
+  For c>=2: the formula involves MIXED terms, no clean shift.
+
+  THEOREM: The Cayley transform gives a pure index shift
+  if and only if the recurrence has leading coefficient 1.
+  Fibonacci is the UNIQUE linear recurrence with this property.
+
+============================================================
+CAYLEY ORBIT OF FIBONACCI RATIOS
+============================================================
+
+  The 4-fold Cayley orbit of F_n/F_{n+1}:
+  F_n/F_{n+1} -> F_{n+2}/F_{n-1} -> -F_{n-1}/F_{n+2} -> -F_{n+1}/F_n -> F_n/F_{n+1}
+
+  Using Q^2(x) = -1/x:
+  Q^2(F_n/F_{n+1}) = -F_{n+1}/F_n (negative of reciprocal ratio)
+  This swaps the Fibonacci ratio with its COMPLEMENT.
+
+  Orbit of F_3/F_4 = 2/3:
+    2/3 -> 5 -> -3/2 -> -1/5 -> 2/3
+
+  Orbit of F_5/F_6 = 5/8:
+    5/8 -> 13/3 -> -8/5 -> -3/13 -> 5/8
+
+  Orbit of F_7/F_8 = 13/21:
+    13/21 -> 17/4 -> -21/13 -> -4/17 -> 13/21
+
+LIMIT: Q(1/phi) = phi^3 AND THE FIBONACCI SKIP-3
+----------------------------------------
+
+  As n->inf: F_n/F_{n+1} -> 1/phi
+  Q(1/phi) = phi^3
+  And F_{n+2}/F_{n-1} -> phi^3 (ratio of Fibonacci terms 3 apart)
+
+  More precisely: F_{n+2}/F_{n-1} = phi^3 * (1 + O(phi^{-2n}))
+  because F_n ~ phi^n/sqrt(5), so
+  F_{n+2}/F_{n-1} ~ phi^{n+2}/phi^{n-1} = phi^3.
+
+  The Fibonacci skip-3 CONVERGES to the golden cubing.
+  The integer identity (skip-3) and the algebraic identity (cubing)
+  are the SAME identity, seen at finite and infinite scales.
+
+  F_7/F_4 = 13/3 = 4.3333333333  vs phi^3 = 4.2360679775  (err = 9.73e-02)
+  F_10/F_7 = 55/13 = 4.2307692308  vs phi^3 = 4.2360679775  (err = 5.30e-03)
+  F_13/F_10 = 233/55 = 4.2363636364  vs phi^3 = 4.2360679775  (err = 2.96e-04)
+  F_16/F_13 = 987/233 = 4.2360515021  vs phi^3 = 4.2360679775  (err = 1.65e-05)

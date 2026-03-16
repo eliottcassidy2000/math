@@ -1,0 +1,128 @@
+PRIME CAYLEY TELESCOPE: PROD Q(1/p_k) = PROD (p_k+1)/(p_k-1)
+============================================================
+
+  PROD up to p=  2: 3                    =     3.000000 <-- INTEGER
+  PROD up to p=  3: 6                    =     6.000000 <-- INTEGER
+  PROD up to p=  5: 9                    =     9.000000 <-- INTEGER
+  PROD up to p=  7: 12                   =    12.000000 <-- INTEGER
+  PROD up to p= 11: 72/5                 =    14.400000
+  PROD up to p= 13: 84/5                 =    16.800000
+  PROD up to p= 17: 189/10               =    18.900000
+  PROD up to p= 19: 21                   =    21.000000 <-- 21 = 3*7 = FORBIDDEN NUMBER
+  PROD up to p= 23: 252/11               =    22.909091
+  PROD up to p= 29: 270/11               =    24.545455
+  PROD up to p= 31: 288/11               =    26.181818
+  PROD up to p= 37: 304/11               =    27.636364
+  PROD up to p= 41: 1596/55              =    29.018182
+  PROD up to p= 43: 152/5                =    30.400000
+  PROD up to p= 47: 3648/115             =    31.721739
+  PROD up to p= 53: 49248/1495           =    32.941806
+  PROD up to p= 59: 295488/8671          =    34.077730
+  PROD up to p= 61: 1526688/43355        =    35.213655
+  PROD up to p= 67: 17302464/476905      =    36.280735
+  PROD up to p= 71: 622888704/16691675   =    37.317328
+
+FACTORIZATION ANALYSIS
+----------------------------------------
+
+  PROD(p+1)/(p-1) for p=2,3,5,7,11,13,17,19
+  Numerator:   PROD(p+1) = 3*4*6*8*12*14*18*20
+             = 34836480
+  Denominator: PROD(p-1) = 1*2*4*6*10*12*16*18
+             = 1658880
+  Ratio: 34836480/1658880 = 21 (with remainder 0)
+
+TELESCOPING STRUCTURE
+----------------------------------------
+
+  Write p+1 and p-1 for each prime:
+    p= 2: (p+1)/(p-1) = 3/1
+    p= 3: (p+1)/(p-1) = 4/2
+    p= 5: (p+1)/(p-1) = 6/4
+    p= 7: (p+1)/(p-1) = 8/6
+    p=11: (p+1)/(p-1) = 12/10
+    p=13: (p+1)/(p-1) = 14/12
+    p=17: (p+1)/(p-1) = 18/16
+    p=19: (p+1)/(p-1) = 20/18
+
+  Key observation: many factors appear in BOTH numerator and denominator.
+  The massive cancellation leaves only the 'boundary' factors.
+
+  Prime factorization of numerator PROD(p+1):
+    2^12    3^5    5^1    7^1
+  Prime factorization of denominator PROD(p-1):
+    2^12    3^4    5^1
+
+  After cancellation:
+  Numerator: 3^1 7^1 = 21
+  Denominator: = 1
+  Result: 21/1 = 21
+
+GENERAL PRIME CAYLEY PRODUCT
+----------------------------------------
+
+  PROD up to p=  2:          3  *** INTEGER ***
+  PROD up to p=  3:          6  *** INTEGER ***
+  PROD up to p=  5:          9  *** INTEGER ***
+  PROD up to p=  7:         12  *** INTEGER ***
+  PROD up to p= 11:      14.400000  (denom = 5)
+  PROD up to p= 13:      16.800000  (denom = 5)
+  PROD up to p= 17:      18.900000  (denom = 10)
+  PROD up to p= 19:         21  *** INTEGER ***
+  PROD up to p= 23:      22.909091  (denom = 11)
+  PROD up to p= 29:      24.545455  (denom = 11)
+  PROD up to p= 31:      26.181818  (denom = 11)
+  PROD up to p= 37:      27.636364  (denom = 11)
+  PROD up to p= 41:      29.018182  (denom = 55)
+  PROD up to p= 43:      30.400000  (denom = 5)
+  PROD up to p= 47:      31.721739  (denom = 115)
+  PROD up to p= 53:      32.941806  (denom = 1495)
+  PROD up to p= 59:      34.077730  (denom = 8671)
+  PROD up to p= 61:      35.213655  (denom = 43355)
+  PROD up to p= 67:      36.280735  (denom = 476905)
+  PROD up to p= 71:      37.317328  (denom = 16691675)
+  PROD up to p= 73:      38.353920  (denom = 16691675)
+  PROD up to p= 79:      39.337354  (denom = 43398355)
+  PROD up to p= 83:      40.296802  (denom = 254190365)
+  PROD up to p= 89:      41.212638  (denom = 559218803)
+  PROD up to p= 97:      42.071235  (denom = 559218803)
+  PROD up to p=101:      42.912659  (denom = 13980470075)
+  PROD up to p=103:      43.754084  (denom = 1075420775)
+  PROD up to p=107:      44.579633  (denom = 56997301075)
+  PROD up to p=109:      45.405181  (denom = 1036314565)
+  PROD up to p=113:      46.215988  (denom = 1036314565)
+
+  Integer values of the prime Cayley product:
+    Up to p=2: product = 3
+    Up to p=3: product = 6
+      = 2*3
+    Up to p=5: product = 9
+      = 3*3
+    Up to p=7: product = 12
+      = 2*2*3
+    Up to p=19: product = 21
+      = 3 * 7 = the two FORBIDDEN-adjacent primes
+      = 3*7
+
+CONNECTION TO MERTENS' THEOREM
+----------------------------------------
+
+  Mertens' theorem: PROD_{p<=x} (1-1/p) ~ e^{-gamma}/ln(x)
+  where gamma = Euler-Mascheroni constant = 0.5772...
+
+  Our product: PROD_{p<=x} (p+1)/(p-1) = PROD (1+1/p)/(1-1/p)
+  = PROD(1+1/p) / PROD(1-1/p)
+  = [PROD(1+1/p)] * [ln(x) * e^gamma + O(1)]
+
+  By Mertens: PROD(1+1/p) ~ C * ln(x) as well (with different C).
+  So our product ~ C' * ln(x)^2 asymptotically.
+
+  At p=113: product/4.7274^2 = 2.067996
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\prime_telescope_21.py", line 179, in <module>
+    print(f"  The constant C' \u2248 {float(prod)/log(113)**2:.6f}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2248' in position 18: character maps to <undefined>

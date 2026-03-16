@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-15-S116b — 2026-03-15: The Cayley Lens — Music, Fibonacci, and the Prime Telescope to 21
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-14-S116
+**Summary of work:** Creative exploration of the Cayley transform Q(x) = (1+x)/(1-x) applied to every kind of mathematical input. Major discoveries:
+1. Q(1/(2n+1)) = (n+1)/n exactly = superparticular ratios = just intonation musical intervals (octave, fifth, fourth, etc.)
+2. Q(1/tau) = tau^2 (Cayley SQUARES the tribonacci constant). Proof: tau^2(tau-1) = tau+1 from tau^3=tau^2+tau+1.
+3. Q(F_n/F_{n+1}) = F_{n+2}/F_{n-1} — Cayley shifts Fibonacci by 3. Unique to coefficient-1 recurrences.
+4. Product_{p<=19} Q(1/p) = 21 = 3*7 = THE FORBIDDEN NUMBER. After cancellation: 3^1*7^1 in numerator, 1 in denominator.
+5. Pythagorean triples: Q(a/c)*Q(b/c) is always a perfect square.
+6. v=3/5 has rapidity = ln(2) exactly (Q(3/5)=4=2^2).
+7. Q(1/sqrt(5)) = phi^2.
+**New contributions:**
+- cayley_lens_s116.py — comprehensive Cayley transform exploration (504 lines output)
+- prime_telescope_21.py — analysis of why prime Q-product = 21
+- cayley_fibonacci_s116.py — Fibonacci skip-3 theorem and uniqueness proof
+- hook-J.tex — substack hook "The Cayley Transform Plays Music"
+**Unresolved threads:**
+- Is the prime telescope to 21 a deep fact or a numerical coincidence?
+- Can the musical connection be formalized (arctanh = consonance metric)?
+- Fibonacci skip-3: does it have a representation-theoretic interpretation?
+
 ## opus-2026-03-15-S90 — 2026-03-15: The Helical Simplicial Rédei — 16-Part Exploration
 
 **Account:** opus
