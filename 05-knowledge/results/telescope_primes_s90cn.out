@@ -1,0 +1,4 @@
+  File "/Users/e/Documents/GitHub/math/04-computation/telescope_primes_s90cn.py", line 1
+    (0.6n)
+       ^
+SyntaxError: invalid decimal literal
