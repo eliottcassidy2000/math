@@ -13,7 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## kind-pasteur-2026-03-16-S116n32 — 2026-03-16: Von Staudt Fixed Point and Bernoulli Chain
+## kind-pasteur-2026-03-16-S116n32 — 2026-03-16: MARATHON — Von Staudt to Tetrahedron Algorithm to Applications
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-16-S116n31 (crash recovery)
+**Summary of work:** Massive session covering p-adic formal groups, number theory, combinatorial tournament analysis, and practical applications. 15+ commits.
+
+**Key discoveries:**
+1. **Von Staudt fixed point**: 1->2->6->42->1806->1806, unique to 100k
+2. **The Grand Trichotomy**: ONE structure wearing three masks (Eisenstein/Computation/Supersingular)
+3. **Three fundamental triples**: (2,24,sqrt2), (3,8,2cos), (5,12,phi)
+4. **Exact H polynomial**: 213 terms, degree 4, long-range arcs dominate (coeff +12 vs +6)
+5. **Flip theorem**: H(transitive + flip(skip k)) = 2^(k-1)+1 for k>=2
+6. **Tetrahedron Algorithm**: {2,3,5}/{2,3,6}/{2,3,7} regime classification
+7. **tournament_H.py + tournament_toolkit.py**: Production libraries
+8. **12 application domains mapped** with specific deliverables
+
+**New contributions:** 15+ scripts, 2 production libraries, grand-trichotomy.md, supersingularity-triples.md, bernoulli-fixed-point.md, applications-roadmap.md, 6 OEIS-candidate sequences
+**Unresolved threads:** PyPI packaging, OEIS submissions, BLITZRANK integration, zero-free region characterization
+
+## kind-pasteur-2026-03-16-S116n32-original — 2026-03-16: Von Staudt Fixed Point and Bernoulli Chain
 
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-16-S116n31 (recovered from crash)
