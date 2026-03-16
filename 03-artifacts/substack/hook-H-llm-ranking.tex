@@ -1,0 +1,23 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Is ChatGPT Really Better Than Claude?\\A One-Number Test}
+\end{center}
+
+\medskip
+
+The Chatbot Arena ranks language models by pairwise human preference --- a \emph{tournament}. The number of consistent total rankings is $H(T)$. For $n$ models compared randomly: $\mathbb{E}[H] = n!/2^{n-1}$, with $\mathrm{CV} = \sqrt{2/n}$. The Z-score
+\[
+Z = \frac{H(T) - n!/2^{n-1}}{n!/2^{n-1} \cdot \sqrt{2/n}}
+\]
+measures whether the ranking is real or noise. Low $H$ (negative $Z$) means a \emph{clear hierarchy}: the ranking is statistically supported. $Z \approx 0$ means the models are essentially interchangeable.
+
+For $n = 10$ models: $\mathbb{E}[H] \approx 7{,}088$. If the arena's pairwise data gives $H < 1{,}000$, the ranking is \emph{very significant} ($Z < -4$). If $H \approx 7{,}000$, the leaderboard is noise.
+
+Nobody is currently reporting $H(T)$ for chatbot tournaments. One number would tell you whether the ranking \emph{means anything at all}.
+
+\end{document}
