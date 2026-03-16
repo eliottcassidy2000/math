@@ -1,0 +1,329 @@
+======================================================================
+PART 1: THE PERIODIC TABLE ON THE UNIT CIRCLE
+======================================================================
+
+Each element Z has Cayley address x_Z = (Z-1)/(Z+1) in [0,1).
+Map this to the unit circle: place element Z at angle θ_Z = 2π·x_Z.
+The position on the unit circle: e^{iθ_Z}.
+
+  Z Sym |      x_Z |  angle/π |       Re       Im | note
+-----------------------------------------------------------------
+  1   H |   0.0000 |   0.0000 |   1.0000   0.0000 | at 1 (real, positive)
+  2  He |   0.3333 |   0.6667 |  -0.5000   0.8660 | 
+  3  Li |   0.5000 |   1.0000 |  -1.0000   0.0000 | at -1 (ANTIPODAL to H!)
+  4  Be |   0.6000 |   1.2000 |  -0.8090  -0.5878 | 
+  5   B |   0.6667 |   1.3333 |  -0.5000  -0.8660 | 
+  6   C |   0.7143 |   1.4286 |  -0.2225  -0.9749 | near -i (PIVOT)
+  7   N |   0.7500 |   1.5000 |  -0.0000  -1.0000 | at e^{3πi/2} = -i (FIXED POINT!)
+  8   O |   0.7778 |   1.5556 |   0.1736  -0.9848 | 
+  9   F |   0.8000 |   1.6000 |   0.3090  -0.9511 | 
+ 10  Ne |   0.8182 |   1.6364 |   0.4154  -0.9096 | 
+ 11  Na |   0.8333 |   1.6667 |   0.5000  -0.8660 | at e^{5πi/3}
+ 12  Mg |   0.8462 |   1.6923 |   0.5681  -0.8230 | 
+ 13  Al |   0.8571 |   1.7143 |   0.6235  -0.7818 | 
+ 14  Si |   0.8667 |   1.7333 |   0.6691  -0.7431 | 
+ 17  Cl |   0.8889 |   1.7778 |   0.7660  -0.6428 | 
+ 19   K |   0.9000 |   1.8000 |   0.8090  -0.5878 | 
+ 26  Fe |   0.9259 |   1.8519 |   0.8936  -0.4488 | 
+ 79  Au |   0.9750 |   1.9500 |   0.9877  -0.1564 | 
+
+NITROGEN (Z=7) sits at angle 3π/2 = 270° = the position of -i!
+And -i is a FIXED POINT of the Cayley transform Q!
+
+  Q(-i) = (1+(-i))/(1-(-i)) = (1-i)/(1+i) = (1-i)²/2 = -2i/2 = -i ✓
+
+The FORBIDDEN element sits at the FIXED POINT of the monad!
+
+LITHIUM (Z=3) sits at angle π = 180° = at -1 on the unit circle.
+  -1 is where Q has its OTHER pole: Q(-1) → 0.
+  Li is ANTIPODAL to H on the unit circle.
+
+The LiH bond: from 1 (H at angle 0) to -1 (Li at angle π).
+  This is a DIAMETER of the unit circle!
+  The LiH bond spans the FULL DIAMETER of the chemical circle.
+
+======================================================================
+PART 2: ALKANES = HAMILTONIAN PATHS THROUGH THE SIMPLEX
+======================================================================
+
+The n-SIMPLEX Δ_{n-1} has n vertices, all pairwise connected = K_n.
+A tournament on K_n is an ORIENTATION of the complete graph.
+A Hamiltonian path through the tournament IS an ordering of the vertices.
+
+ALKANE ISOMERS as tournament paths:
+  The n-carbon backbone of an alkane can be arranged in different ways.
+  Each arrangement = a TREE on n vertices.
+  The number of labeled trees on n vertices = n^{n-2} (Cayley's formula!).
+  The number of Hamiltonian paths = H(T) for the tournament T.
+
+  For the TRANSITIVE tournament (total order): H = 1.
+  This corresponds to the LINEAR alkane (n-pentane, etc.).
+
+  For OTHER tournaments: H > 1.
+  These correspond to BRANCHED isomers (isopentane, neopentane, etc.).
+
+  n=2: C_2H_6 has 1 labeled trees, 2 tournaments, 2 Hamiltonian paths in K_2
+  n=3: C_3H_8 has 3 labeled trees, 8 tournaments, 6 Hamiltonian paths in K_3
+  n=4: C_4H_10 has 16 labeled trees, 64 tournaments, 24 Hamiltonian paths in K_4
+  n=5: C_5H_12 has 125 labeled trees, 1024 tournaments, 120 Hamiltonian paths in K_5
+  n=6: C_6H_14 has 1296 labeled trees, 32768 tournaments, 720 Hamiltonian paths in K_6
+  n=7: C_7H_16 has 16807 labeled trees, 2097152 tournaments, 5040 Hamiltonian paths in K_7
+
+THE SIMPLEX-TOURNAMENT BRIDGE:
+  The (n-1)-simplex K_n has C(n,2) edges.
+  Each edge can be oriented 2 ways → 2^{C(n,2)} tournaments.
+  Each tournament has H(T) Hamiltonian paths.
+  The AVERAGE H over all tournaments = n!/2^{n-1}.
+
+  The alkane C_nH_{2n+2} uses ONE specific Hamiltonian path.
+  The isomer count is related to the NUMBER OF DISTINCT PATHS
+  modulo the symmetry group (automorphisms of the tree).
+
+======================================================================
+PART 3: D_n = SYMMETRY OF CYCLO-C_nH_{2n}
+======================================================================
+
+The DIHEDRAL GROUP D_n (order 2n) is the symmetry group of the
+regular n-gon inscribed in the unit circle.
+  n rotations: r^k for k=0,...,n-1 (multiply by ω^k = e^{2πik/n}).
+  n reflections: sr^k (complex conjugation composed with rotation).
+
+CYCLOALKANE C_nH_{2n} has carbon backbone forming a regular n-gon.
+The symmetry group of the cycloalkane IS D_n!
+
+  n | D_n order |       molecule |       strain | polygon | our numbers
+--------------------------------------------------------------------------------
+  3 |         6 |   Cyclopropane |   115 kJ/mol |  triangle | 3 = dim(M)
+  4 |         8 |    Cyclobutane |   110 kJ/mol |    square | 4 = Q order
+  5 |        10 |   Cyclopentane |    26 kJ/mol |  pentagon | 5 = golden √5
+  6 |        12 |    Cyclohexane |     0 kJ/mol |   HEXAGON | 6 = PIVOT = 2·3
+  7 |        14 |   Cycloheptane |    26 kJ/mol |  heptagon | 7 = FORBIDDEN
+  8 |        16 |    Cyclooctane |    40 kJ/mol |   octagon | 8 = |D₄| = Bott
+ 10 |        20 |    Cyclodecane |    50 kJ/mol |   decagon | 10 = C(5,2)
+ 11 |        22 |  Cycloundecane |   ~50 kJ/mol | hendecagon | 11 = DISC
+ 12 |        24 |  Cyclododecane |    16 kJ/mol | dodecagon | 12 = icosa verts
+
+THE DIHEDRAL HIERARCHY:
+  D_3: cyclopropane = the TRIANGLE = the 3-cycle = β₁=1 (STRAINED)
+  D_4: cyclobutane = the SQUARE = Q⁴=Id (but strained!)
+  D_5: cyclopentane = the PENTAGON = golden ratio
+  D_6: cyclohexane = the HEXAGON = UNSTRAINED = THE PIVOT
+  D_7: cycloheptane = the HEPTAGON = first forbidden
+  D_8: cyclooctane = the OCTAGON = Bott period
+
+OUR D₄ (the Cayley group) corresponds to CYCLOBUTANE (n=4)!
+  D₄ has 8 elements = 4 rotations + 4 reflections.
+  The 4 rotations of D₄ ARE our Q⁰, Q¹, Q², Q³.
+  The 4 reflections include negation (x → -x).
+
+  But cyclobutane is STRAINED (110 kJ/mol).
+  Our D₄ theory has "strain" too: the complex eigenvalues
+  (the helix) represent the "bending" of the flat structure.
+
+======================================================================
+PART 4: REGULAR POLYGONS AND THEIR CAYLEY TRANSFORMS
+======================================================================
+
+Place the regular n-gon on the unit circle with vertices at ω^k = e^{2πik/n}.
+Apply the Cayley transform Q to each vertex: Q(ω^k) = (1+ω^k)/(1-ω^k).
+
+
+n-gon, n=3: vertices at the 3th roots of unity
+  k=0: ω^0 = 1.000, Q = ∞ (POLE)
+  k=1: ω^1 = e^{2πi·1/3}, Q = +0.0000+0.5774i, |Q|=0.5774
+  k=2: ω^2 = e^{2πi·2/3}, Q = +0.0000-0.5774i, |Q|=0.5774
+  Q-image moduli: min=0.5774, max=0.5774, ratio=1.0000
+  ALL Q-images lie on the IMAGINARY AXIS!
+
+n-gon, n=4: vertices at the 4th roots of unity
+  k=0: ω^0 = 1.000, Q = ∞ (POLE)
+  k=1: ω^1 = e^{2πi·1/4}, Q = -0.0000+1.0000i, |Q|=1.0000
+  k=2: ω^2 = e^{2πi·2/4}, Q = -0.0000+0.0000i, |Q|=0.0000
+  k=3: ω^3 = e^{2πi·3/4}, Q = +0.0000-1.0000i, |Q|=1.0000
+  Q-image moduli: min=0.0000, max=1.0000, ratio=16331239353195372.0000
+  ALL Q-images lie on the IMAGINARY AXIS!
+
+n-gon, n=5: vertices at the 5th roots of unity
+  k=0: ω^0 = 1.000, Q = ∞ (POLE)
+  k=1: ω^1 = e^{2πi·1/5}, Q = +0.0000+1.3764i, |Q|=1.3764
+  k=2: ω^2 = e^{2πi·2/5}, Q = +0.0000+0.3249i, |Q|=0.3249
+  k=3: ω^3 = e^{2πi·3/5}, Q = +0.0000-0.3249i, |Q|=0.3249
+  k=4: ω^4 = e^{2πi·4/5}, Q = -0.0000-1.3764i, |Q|=1.3764
+  Q-image moduli: min=0.3249, max=1.3764, ratio=4.2361
+  ALL Q-images lie on the IMAGINARY AXIS!
+
+n-gon, n=6: vertices at the 6th roots of unity
+  k=0: ω^0 = 1.000, Q = ∞ (POLE)
+  k=1: ω^1 = e^{2πi·1/6}, Q = -0.0000+1.7321i, |Q|=1.7321
+  k=2: ω^2 = e^{2πi·2/6}, Q = +0.0000+0.5774i, |Q|=0.5774
+  k=3: ω^3 = e^{2πi·3/6}, Q = -0.0000+0.0000i, |Q|=0.0000
+  k=4: ω^4 = e^{2πi·4/6}, Q = +0.0000-0.5774i, |Q|=0.5774
+  k=5: ω^5 = e^{2πi·5/6}, Q = -0.0000-1.7321i, |Q|=1.7321
+  Q-image moduli: min=0.0000, max=1.7321, ratio=28286536310302672.0000
+  ALL Q-images lie on the IMAGINARY AXIS!
+
+n-gon, n=7: vertices at the 7th roots of unity
+  k=0: ω^0 = 1.000, Q = ∞ (POLE)
+  k=1: ω^1 = e^{2πi·1/7}, Q = -0.0000+2.0765i, |Q|=2.0765
+  k=2: ω^2 = e^{2πi·2/7}, Q = -0.0000+0.7975i, |Q|=0.7975
+  k=3: ω^3 = e^{2πi·3/7}, Q = +0.0000+0.2282i, |Q|=0.2282
+  k=4: ω^4 = e^{2πi·4/7}, Q = +0.0000-0.2282i, |Q|=0.2282
+  k=5: ω^5 = e^{2πi·5/7}, Q = -0.0000-0.7975i, |Q|=0.7975
+  k=6: ω^6 = e^{2πi·6/7}, Q = +0.0000-2.0765i, |Q|=2.0765
+  Q-image moduli: min=0.2282, max=2.0765, ratio=9.0978
+  ALL Q-images lie on the IMAGINARY AXIS!
+
+n-gon, n=8: vertices at the 8th roots of unity
+  k=0: ω^0 = 1.000, Q = ∞ (POLE)
+  Q-image moduli: min=0.0000, max=2.4142, ratio=39427099536845480.0000
+  ALL Q-images lie on the IMAGINARY AXIS!
+
+n-gon, n=11: vertices at the 11th roots of unity
+  k=0: ω^0 = 1.000, Q = ∞ (POLE)
+  Q-image moduli: min=0.1438, max=3.4057, ratio=23.6871
+  ALL Q-images lie on the IMAGINARY AXIS!
+
+KEY OBSERVATION: Q maps the unit circle to the IMAGINARY AXIS!
+
+This is because for |z| = 1:
+  Q(z) = (1+z)/(1-z)
+  |Q(z)|² = |1+z|²/|1-z|²
+  For z = e^{iθ}: |1+z|² = 2+2cos(θ), |1-z|² = 2-2cos(θ).
+  Q(z) is PURELY IMAGINARY when z is on the unit circle (except z=±1).
+
+Actually: Q(e^{iθ}) = (1+e^{iθ})/(1-e^{iθ}) = -i·cot(θ/2).
+
+So Q maps the unit circle to the IMAGINARY AXIS via -i·cot(θ/2)!
+
+This is the CAYLEY TRANSFORM IN OPERATOR THEORY:
+  The Cayley transform maps UNITARY operators (unit circle)
+  to SELF-ADJOINT operators (real/imaginary axis).
+  Our Q maps the circle of phases to the line of measurements.
+
+For the n-gon: the vertices at ω^k map to Q(ω^k) = -i·cot(πk/n).
+These are n-1 EQUALLY SPACED points on the imaginary axis (in cot-space)!
+
+======================================================================
+PART 5: THE LiH BOND ON THE UNIT CIRCLE
+======================================================================
+
+H  (Z=1): angle 0, position = 1   on the unit circle.
+Li (Z=3): angle π, position = -1  on the unit circle.
+
+The LiH bond = the DIAMETER from 1 to -1.
+
+Q(1) = ∞ (the pole — hydrogen is at the boundary of the Cayley domain)
+Q(-1) = 0 (the zero — lithium maps to the origin)
+
+The Cayley transform maps:
+  H → ∞ (hydrogen is "infinitely fast" = at the speed of light)
+  Li → 0 (lithium is "at rest" = zero rapidity)
+
+This seems backwards! But it makes sense:
+  H (Z=1) is the LIGHTEST element = highest speed/energy per mass.
+  Li (Z=3) is the LIGHTEST metal = the "resting" reference frame.
+
+The LiH bond is a CONNECTION between:
+  ∞ (the boundary, the pole, the light cone) and 0 (the origin, rest).
+  It spans the ENTIRE Cayley line!
+
+In terms of the n-gon: LiH is a DIAMETER of the unit circle.
+The dihedral group D_2 (= Z/2 × Z/2, order 4, the Klein four-group)
+is the symmetry group of a diameter. And D_2 is a SUBGROUP of our D_4.
+
+======================================================================
+PART 6: METHANE CH₄ = THE 3-SIMPLEX ON THE UNIT SPHERE
+======================================================================
+
+METHANE: one carbon + four hydrogens in a TETRAHEDRON.
+
+The tetrahedron is the 3-SIMPLEX = K_4 = the complete graph on 4 vertices.
+It has 6 edges = C(4,2) = the number of arcs in a tournament on 4 vertices!
+
+In our theory: a tournament on 4 vertices has 2^6 = 64 possible orientations.
+METHANE corresponds to the TRANSITIVE tournament (all H atoms equivalent,
+one canonical ordering by position).
+
+THE TETRAHEDRON IN THE UNIT SPHERE:
+  Place the 4 vertices of a regular tetrahedron on the unit sphere.
+  Standard coordinates: (1,1,1), (1,-1,-1), (-1,1,-1), (-1,-1,1) (normalized).
+
+  These 4 points project to 4 points on the complex unit circle:
+  via stereographic projection from the north pole.
+
+  The DIHEDRAL GROUP of the tetrahedron:
+    Full symmetry: S_4 (order 24) = rotations + reflections.
+    Rotation subgroup: A_4 (order 12) = even permutations.
+    This is NOT a dihedral group! The tetrahedron breaks dihedral symmetry.
+
+  But the face of the tetrahedron IS a triangle = D_3 symmetry.
+  And cyclopropane C_3H_6 (the smallest cycloalkane) has D_3 symmetry.
+
+METHANE ↔ TOURNAMENT ON 4:
+  4 H atoms form a tournament under the "comparison" of their positions.
+  The tournament is transitive (H=1) because all H atoms are equivalent
+  in the tetrahedral symmetry → no 3-cycle possible.
+
+  But if we BREAK the symmetry (e.g., CHFClBr), the tournament becomes
+  non-trivial, and H > 1 (multiple orderings of the substituents).
+  The NUMBER OF ORDERINGS = H(T) = the tournament invariant!
+
+Tournaments on 4 vertices (= C-X₁X₂X₃X₄ configurations):
+  H distribution: {1: 24, 3: 16, 5: 24}
+  H=1 (transitive): 24 tournaments = 24/64 = 37.5%
+  H=3 (one 3-cycle): 16 tournaments
+  H=5 (two 3-cycles): 24 tournaments = the NEAR-TRANSITIVE!
+
+======================================================================
+PART 7: THE UNIT CIRCLE UNIFIES EVERYTHING
+======================================================================
+
+On the UNIT CIRCLE e^{iθ} for θ ∈ [0, 2π):
+
+  ELEMENTS sit at θ_Z = 2π·(Z-1)/(Z+1):
+    H at 0, Li at π, N at 3π/2 = -i (FIXED POINT!)
+
+  REGULAR n-GONS have vertices at e^{2πik/n}:
+    Triangle (n=3): cyclopropane, D₃, first cycle, β₁=1
+    Square (n=4): cyclobutane, D₄ = our Cayley group
+    Pentagon (n=5): cyclopentane, golden ratio, icosahedral
+    Hexagon (n=6): cyclohexane, PIVOT, zero strain, benzene
+    Heptagon (n=7): cycloheptane, FORBIDDEN, first hyperbolic
+
+  THE CAYLEY TRANSFORM maps the circle to the imaginary axis:
+    Q(e^{iθ}) = -i·cot(θ/2)
+    Unitary (circle) → self-adjoint (line)
+    Phases → measurements
+    Quantum states → classical observables
+
+  SIMPLICES: the n-simplex K_{n+1} is the tournament space.
+    Each simplex face is a sub-tournament.
+    A Hamiltonian path = a total order = an alkane backbone.
+    H(T) = the number of distinct molecular orderings.
+
+  THE LiH BOND = the DIAMETER (from 1 to -1):
+    Spans the entire circle.
+    Q maps it from ∞ to 0 (from boundary to center).
+    The simplest bond is the longest chord.
+
+  ALKANES C_nH_{2n+2}:
+    Linear: transitive tournament (sim_H=1, one ordering)
+    Branched: non-trivial tournament (H > 1, multiple orderings)
+    Cyclic: ring tournament (β₁=1, Möbius twist, strain energy)
+
+  THE DIHEDRAL HIERARCHY D_n:
+    D₃: triangle = 3-cycle = tournament primitive
+    D₄: square = Cayley monad = our symmetry group
+    D₅: pentagon = golden ratio = icosahedral bridge
+    D₆: hexagon = PIVOT = flat = zero strain = benzene
+    D₇: heptagon = FORBIDDEN = hyperbolic threshold
+
+  Ring strain energy is the CURVATURE of D_n:
+    Strain(5) = 26 = Strain(7) = MIRROR IMAGES across D₆!
+
+Everything meets on the unit circle:
+  elements, molecules, symmetry groups, tournaments, and the Cayley transform.
+  The circle is the GROUND STATE of the theory.
+  Departures from the circle = curvature = strain = the helix.
+
+opus-2026-03-16-S90ab: POLYGONS, SIMPLICES, DIHEDRAL GROUPS ON THE UNIT CIRCLE
