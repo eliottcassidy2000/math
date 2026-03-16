@@ -1,0 +1,278 @@
+
+  CONDENSATION
+
+======================================================================
+
+  I. THE GENERATOR
+  ----------------------------------------
+
+  Everything comes from ONE operation on ONE set:
+
+  Set: the odd positive integers {1, 3, 5, 7, 9, 11, ...}
+  Operation: n -> (a, b) = ((n-1)/2, (n+1)/2)
+
+  That's it. From this one map, we derived:
+  - The Cayley transform Q(a/b) = n
+  - The rapidity arctanh(a/b) = ln(n)/2
+  - The musical interval b/a = (n+1)/(n-1) ... wait.
+
+  Correction. The musical interval from Q(1/(2k+1)) = (k+1)/k
+  uses a DIFFERENT decomposition: 1/(2k+1) is the velocity,
+  and (k+1)/k is the Q-value.
+
+  Let me be precise about what generates what.
+
+  II. THE THREE DECOMPOSITIONS OF AN ODD NUMBER
+  ----------------------------------------
+
+  Every odd number n >= 3 has THREE natural decompositions:
+
+  (A) CAYLEY COORDINATES: n = a + b where a=(n-1)/2, b=(n+1)/2.
+      Velocity: v = a/b. Q(v) = n. rapidity = ln(n)/2.
+
+  (B) MUSICAL FORM: Write n = 2k+1. Then Q(1/n) = (k+1)/k.
+      The reciprocal 1/n maps to the k-th superparticular ratio.
+      Alkane C_k H_{2k+2}. Polygon (k+1)-gon. Dihedral D_{k+1}.
+
+  (C) PRIME FORM: n = product of primes.
+      rapidity(n) = sum of prime rapidities.
+      The fundamental theorem of arithmetic = rapidity decomposition.
+
+  These three decompositions are INDEPENDENT views of the same number.
+  (A) is additive: n = a + b.
+  (B) is positional: n = 2k + 1.
+  (C) is multiplicative: n = product of primes.
+
+  n    (A): a + b    (B): 2k+1, interval   (C): primes
+  -----------------------------------------------------------------
+    3   1+2          2*1+1, 2          3
+    5   2+3          2*2+1, 3/2        5
+    7   3+4          2*3+1, 4/3        7
+    9   4+5          2*4+1, 5/4        3*3
+   11   5+6          2*5+1, 6/5        11
+   13   6+7          2*6+1, 7/6        13
+   15   7+8          2*7+1, 8/7        3*5
+   17   8+9          2*8+1, 9/8        17
+   19   9+10         2*9+1, 10/9       19
+   21   10+11         2*10+1, 11/10      3*7
+   23   11+12         2*11+1, 12/11      23
+   25   12+13         2*12+1, 13/12      5*5
+   27   13+14         2*13+1, 14/13      3*3*3
+   29   14+15         2*14+1, 15/14      29
+   31   15+16         2*15+1, 16/15      31
+
+  III. THE AFFINE STRUCTURE IS THE DEEPEST
+  ----------------------------------------
+
+  We proved: a_{nm} = n*a_m + a_n.
+  This means the map n -> a_n is a CROSSED HOMOMORPHISM
+  (also called a 1-cocycle) from (odd Z, *) to (Z, +).
+
+  A crossed homomorphism satisfies:
+  f(nm) = n*f(m) + f(n)    (not f(nm) = f(n) + f(m) like a log)
+
+  This is the defining property of a DERIVATION in algebra.
+  The map a_n = (n-1)/2 is a derivation on the odd integers.
+
+  PROOF that it's the UNIQUE derivation (up to scaling):
+  Any derivation d: (odd Z, *) -> (Z, +) must satisfy:
+  d(nm) = n*d(m) + d(n).
+  Set m = n: d(n^2) = n*d(n) + d(n) = (n+1)*d(n).
+  Set m = n^2: d(n^3) = n^2*d(n) + d(n^2) = n^2*d(n) + (n+1)*d(n)
+  = (n^2+n+1)*d(n).
+  In general: d(n^k) = (n^k - 1)/(n-1) * d(n) = (1+n+...+n^{k-1})*d(n).
+
+  For d(n) = (n-1)/2:
+  d(n^k) = (n^k - 1)/2.
+  (1+n+...+n^{k-1}) * (n-1)/2 = (n^k - 1)/2. Check: yes, by geometric sum.
+
+  d(3^2) = d(9) = 4, geom_sum * d(3) = 4*1 = 4, match: True
+  d(3^3) = d(27) = 13, geom_sum * d(3) = 13*1 = 13, match: True
+  d(3^4) = d(81) = 40, geom_sum * d(3) = 40*1 = 40, match: True
+  d(5^2) = d(25) = 12, geom_sum * d(5) = 6*2 = 12, match: True
+  d(5^3) = d(125) = 62, geom_sum * d(5) = 31*2 = 62, match: True
+  d(5^4) = d(625) = 312, geom_sum * d(5) = 156*2 = 312, match: True
+  d(7^2) = d(49) = 24, geom_sum * d(7) = 8*3 = 24, match: True
+  d(7^3) = d(343) = 171, geom_sum * d(7) = 57*3 = 171, match: True
+  d(7^4) = d(2401) = 1200, geom_sum * d(7) = 400*3 = 1200, match: True
+
+  The derivation d(n) = (n-1)/2 is determined by its values on PRIMES.
+  d(p) = (p-1)/2 for each odd prime p.
+  d(3) = 1, d(5) = 2, d(7) = 3, d(11) = 5, d(13) = 6.
+
+  And (p-1)/2 = the number of QRs mod p.
+  THE DERIVATION ON PRIMES = THE QUADRATIC RESIDUE COUNT.
+
+
+  IV. WHAT THE DERIVATION MEANS
+  ----------------------------------------
+
+  A derivation measures the 'infinitesimal change' of a structure.
+  In calculus: d/dx is a derivation on smooth functions.
+  In algebra: a derivation D satisfies D(fg) = f*D(g) + D(f)*g (Leibniz).
+
+  Our derivation: d(nm) = n*d(m) + d(n).
+  This is NOT the Leibniz rule (that would be d(nm) = n*d(m) + m*d(n)).
+  Ours has d(n) where Leibniz has m*d(n).
+
+  The difference: Leibniz is SYMMETRIC in n, m.
+  Ours is ASYMMETRIC: n acts on d(m), but d(n) stands alone.
+  This asymmetry is because multiplication of odds is not commutative
+  in the coordinate representation (the affine action a -> n*a + a_n
+  depends on which factor acts first).
+
+  Wait — multiplication IS commutative: nm = mn.
+  So d(nm) = n*d(m) + d(n) = m*d(n) + d(m).
+  Both must hold: n*d(m) + d(n) = m*d(n) + d(m).
+  Rearranging: (n-1)*d(m) = (m-1)*d(n).
+  So d(m)/(m-1) = d(n)/(n-1) = constant.
+  For d(n) = (n-1)/2: d(n)/(n-1) = 1/2. Consistent.
+
+  THE DERIVATION IS DETERMINED BY THE SINGLE CONSTANT 1/2.
+  d(n) = (1/2) * (n-1).
+  The Cayley coordinate is HALF THE DISTANCE FROM 1.
+
+
+  V. THE FOUR INVARIANTS
+  ----------------------------------------
+
+  For any odd n with coordinates (a, b):
+
+  (1) a + b = n              (the number itself)
+  (2) b - a = 1              (the unit of imbalance)
+  (3) gcd(a, b) = 1          (coprimality)
+  (4) a * b = (n^2-1)/4      (the pronic product)
+
+  These four invariants are NOT independent.
+  From (1) and (2): a = (n-1)/2, b = (n+1)/2. Determined.
+  Then (3) follows from (2): consecutive integers are coprime.
+  And (4) follows from (1) and (2): a*b = ((a+b)^2 - (b-a)^2)/4 = (n^2-1)/4.
+
+  So really there are only TWO independent facts:
+  a + b = n and b - a = 1.
+
+  These two facts say:
+  THE ODD NUMBER n IS UNIQUELY SPLIT INTO TWO CONSECUTIVE INTEGERS.
+  That's the entire content of the Cayley coordinate system.
+
+  Everything else — rapidity, music, chemistry, biology, ML,
+  the forbidden numbers, the affine derivation, the pronic products —
+  follows from THIS SINGLE FACT about consecutive integers.
+
+
+  VI. WHY CONSECUTIVE INTEGERS ARE FUNDAMENTAL
+  ----------------------------------------
+
+  Two consecutive integers (a, a+1) have:
+  - No shared factors (coprime)
+  - Opposite parity (one even, one odd)
+  - Minimal difference (1)
+  - Product = pronic = 2*triangular
+  - Ratio a/(a+1) -> 1 as a -> inf
+
+  The ratio a/(a+1) = 1 - 1/(a+1) is the CLOSEST rational below 1
+  with denominator a+1.
+
+  The superparticular ratio (a+1)/a = 1 + 1/a is the CLOSEST rational
+  above 1 with denominator a.
+
+  CONSECUTIVE INTEGERS ARE THE BUILDING BLOCKS OF 'ALMOST EQUAL'.
+  They are as close as two distinct integers can be.
+  Their ratio is as close to 1 as a ratio with small denominator can be.
+
+  And Q maps their ratio a/(a+1) to the odd number n = 2a+1.
+  Q CONVERTS 'almost equal' into 'odd number'.
+  The Cayley transform IS the bridge between
+  'slightly imbalanced' and 'counting'.
+
+
+  VII. THE IRREDUCIBLE CORE
+  ----------------------------------------
+
+  Strip away everything inessential. What remains?
+
+  ONE FACT: Every odd number is the sum of two consecutive integers.
+  ONE MAP:  Q(a/(a+1)) = 2a+1.
+  ONE LAW:  d(nm) = n*d(m) + d(n) where d(n) = (n-1)/2.
+
+  The fact gives us the COORDINATES (a, a+1).
+  The map gives us the CAYLEY TRANSFORM (and rapidity, and music, and ...).
+  The law gives us the MULTIPLICATIVE STRUCTURE (and primes, and QRs, and ...).
+
+  Three things. One fact, one map, one law.
+  They generate everything we found in 50+ scripts across 20+ domains.
+
+
+  VIII. THE EQUATION
+  ----------------------------------------
+
+  Can we write it as a single equation?
+
+  n = a + (a+1) = 2a + 1
+  Q(a/(a+1)) = (a + a+1) / (a+1 - a) = n/1 = n
+
+  The Cayley transform of the ratio of consecutive integers
+  IS the odd number that is their sum.
+
+  Or, even more compressed:
+
+  Q(a/(a+1)) = a + (a+1)
+
+  THE Q-VALUE OF THE RATIO IS THE SUM.
+
+  This is the entire theory in one line.
+  The ratio and the sum of two consecutive integers
+  are related by the Cayley transform.
+
+  Ratio:  a/(a+1)  (bounded, less than 1, a velocity)
+  Sum:    a+(a+1)  (unbounded, an odd integer, a count)
+  Bridge: Q        (the Cayley transform)
+
+  Q(ratio) = sum.
+  The Cayley transform converts COMPARISON into COMBINATION.
+  It turns 'how do a and a+1 compare?' into 'what do they make together?'
+
+  Verification:
+  a=0: ratio = 0/1, Q = 1 = 0+1. Check.
+  a=1: ratio = 1/2, Q = 3 = 1+2 = 3. Check.
+  a=2: ratio = 2/3, Q = 5 = 2+3 = 5. Check.
+  a=3: ratio = 3/4, Q = 7 = 3+4 = 7. Check.
+  a=4: ratio = 4/5, Q = 9 = 4+5 = 9. Check.
+  a=5: ratio = 5/6, Q = 11 = 5+6 = 11. Check.
+  a=6: ratio = 6/7, Q = 13 = 6+7 = 13. Check.
+  a=7: ratio = 7/8, Q = 15 = 7+8 = 15. Check.
+  a=8: ratio = 8/9, Q = 17 = 8+9 = 17. Check.
+  a=9: ratio = 9/10, Q = 19 = 9+10 = 19. Check.
+  a=10: ratio = 10/11, Q = 21 = 10+11 = 21. Check.
+  a=11: ratio = 11/12, Q = 23 = 11+12 = 23. Check.
+  a=12: ratio = 12/13, Q = 25 = 12+13 = 25. Check.
+  a=13: ratio = 13/14, Q = 27 = 13+14 = 27. Check.
+  a=14: ratio = 14/15, Q = 29 = 14+15 = 29. Check.
+
+
+  IX. THE FINAL CONDENSATION
+  ----------------------------------------
+
+  Q(a/(a+1)) = a + (a+1).
+
+  In words: the Cayley transform of a fraction
+  whose parts differ by 1 equals the sum of those parts.
+
+  In shorter words: Q turns ratio into sum
+  when the parts are consecutive.
+
+  In the shortest words: Q(part/whole) = whole + part
+  where whole = part + 1.
+
+  This is the atom. The indivisible unit.
+  Everything else is molecules built from this atom.
+
+  Music: the ratio a/(a+1) is the consonance. The sum 2a+1 is the pitch.
+  Physics: the ratio is the velocity. The sum is the boost.
+  Biology: the ratio is the balance. The sum is the complexity.
+  Information: the ratio is the bias. The sum is the log-odds.
+  Chemistry: the ratio is the polarity. The sum is the bond order.
+  Computation: the ratio is the probability. The sum is the bits.
+
+  All of them are: Q(part/(part+1)) = part + (part+1).
+  The same sentence, said in twenty languages.
