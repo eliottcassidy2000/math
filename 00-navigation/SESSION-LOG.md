@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-16-S90ch — 2026-03-16: Marathon session — 30+ scripts from tanh to statistical insights
+
+**Account:** opus
+**Continuation of:** opus-2026-03-16-S90au
+**Summary of work:** Massive exploration session producing 30+ scripts (s90av through s90ch). Key results:
+1. **Meta-complex plane**: The Poincare disk (D,F) is the one group. Three models of one hyperbolic plane. Equation solving via arctanh linearization.
+2. **Natural numbers understood**: 12 lenses (coupling, rapidity, curvature, dimension, bits, primes, Fibonacci, S/A, Bott). Numbers as dimensions on the Bott spiral. The 8 archetypal stories.
+3. **{2,3,5,7,11}**: The minimal complete story. Five primes = five Platonic solid chapters + hyperbolic extension. Pentagon's curvature = 1/p fixed point.
+4. **Five prime chains**: Mersenne (2^k-1), Lucas (x^2-2), Chebyshev (2x^2-1), Sylvester (Euclid iterated: 42+1=43), Perrin-like (x^2+x-1, length 5). All rooted at 3.
+5. **Fibonacci-Lucas duality**: {2,3,5}=Fibonacci, {7,11}=Lucas. F and L are complementary prime sieves (79% coverage). The golden ratio as primality amplifier.
+6. **S/A master decomposition**: Everything decomposes into symmetric (cosh, Lucas, graph, even) + antisymmetric (sinh, Fibonacci, tournament, odd). A prime is a LOCKED S/A ratio.
+7. **Dihedral vs quaternion**: D2 should be V4 but IS Q8 for fermions. Bott period 8 = |D4| = |Q8|.
+8. **Base-42 compression**: Working lossless encoder/decoder. 5 revolutionary tools from the formal group.
+9. **Two ladders converge at 2**: k-nacci from below (lossy), primorials from above (lossless). Fisher metric IS Poincare metric.
+10. **7 statistical insights**: Prime density = 1/(2*arctanh), Mertens = Brownian, Chebyshev bias = hyperbolic, base-42 uniform.
+**New contributions:** ~30 scripts (s90av-s90ch), extensive results files
+**Unresolved threads:** Extend chains further, deeper algebraic topology connections, paper draft
+
 ## opus-2026-03-16-S90au — 2026-03-16: THM-227 k-nacci Mersenne Identity, Formal Group, Witt Vectors
 
 **Account:** opus
