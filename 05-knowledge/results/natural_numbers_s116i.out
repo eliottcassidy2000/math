@@ -1,0 +1,293 @@
+
+  WHAT ARE THE NATURAL NUMBERS?
+
+======================================================================
+
+  I. A NATURAL NUMBER IS A CONSECUTIVE PAIR
+  ----------------------------------------
+
+  Every odd number n = a + (a+1). The pair (a, a+1) IS n.
+  Every even number 2m = m + m. But this is NOT a consecutive pair.
+  Even numbers are pairs of EQUAL things.
+  Odd numbers are pairs of UNEQUAL things that differ by 1.
+
+  So:
+  ODD numbers = COMPARISONS (two slightly different things).
+  EVEN numbers = DUPLICATIONS (two identical things).
+
+  Every natural number is either a comparison or a duplication.
+  These are the only two things numbers CAN be.
+
+  n=1: 0+1. The comparison between nothing and something.
+  n=2: 1+1. The duplication of the unit.
+  n=3: 1+2. The comparison between unit and pair.
+  n=4: 2+2. The duplication of the pair.
+  n=5: 2+3. The comparison between pair and triple.
+  n=6: 3+3. The duplication of the triple.
+  n=7: 3+4. The comparison between triple and quadruple.
+
+  The odd numbers are the EDGES between consecutive sizes.
+  The even numbers are the NODES (the sizes themselves, doubled).
+  The natural numbers alternate: node, edge, node, edge, ...
+
+
+  II. A NATURAL NUMBER IS A RAPIDITY
+  ----------------------------------------
+
+  n has rapidity ln(n)/2.
+  The rapidity IS the number (up to a monotone transform).
+  Since ln is monotone, the ORDER of naturals = the ORDER of rapidities.
+
+  But rapidity carries MORE structure:
+  - Addition of rapidities = multiplication of numbers.
+  - Rapidity of a product = sum of rapidities of factors.
+  - Prime factorization = rapidity decomposition into basis vectors.
+
+  So a natural number IS a point on the rapidity line,
+  and its position is determined by its prime factorization.
+  The prime rapidities ln(2)/2, ln(3)/2, ln(5)/2, ... are
+  the COORDINATES of n in the rapidity vector space.
+
+  Every natural number is a FINITE integer combination of prime rapidities.
+  The naturals ARE the integer lattice in rapidity space.
+
+
+  III. A NATURAL NUMBER IS A POSITION ON THE CAYLEY HELIX
+  ----------------------------------------
+
+  Every natural number n > 1 has:
+  - Cayley address: (n-1)/(n+1)
+  - Rapidity: ln(n)/2
+  - Q-value: n
+  - Helix position: (ln(n)/2, 0) for n in [0,1),
+                    (ln(n)/2, pi/2) for n > 1 via arctanh(n)
+
+  Wait. The naturals 2, 3, 4, ... all have |value| > 1.
+  But their ADDRESSES (n-1)/(n+1) are all in (0,1).
+  So the addresses live on the ground floor of the helix (Im=0).
+  The VALUES live on the first floor (Im=pi/2).
+
+  The natural numbers are addresses on the ground floor
+  whose Q-values live on the first floor.
+
+  More precisely:
+  The ADDRESS of n = (n-1)/(n+1) is a velocity in [0,1).
+  Its RAPIDITY = arctanh((n-1)/(n+1)) = ln(n)/2.
+  The rapidity lives on the real axis of the helix.
+  The Q-VALUE n = Q(address) lives past the pole (on the next sheet).
+
+  THE NATURAL NUMBERS ARE THE SHADOWS OF HELIX POINTS
+  PROJECTED ONTO THE POSITIVE INTEGER LINE.
+  Each address on the ground floor casts a shadow (via Q)
+  onto the integer line. The shadow is the natural number.
+
+
+  IV. WHAT ADDITION IS
+  ----------------------------------------
+
+  Addition of natural numbers: n + m.
+  In rapidity: NOT rapidity(n) + rapidity(m).
+  (That would give rapidity(n*m) = multiplication, not addition.)
+
+  Addition is HARDER than multiplication in rapidity space.
+  Multiplication is the GROUP OPERATION (it adds rapidities).
+  Addition is an EXTERNAL operation that doesn't respect the group.
+
+  In the Cayley framework:
+  n + m = Q(addr_n) + Q(addr_m).
+  = (1+addr_n)/(1-addr_n) + (1+addr_m)/(1-addr_m).
+  This is NOT Q of anything simple.
+
+  Addition is the operation that the Cayley transform DOESN'T simplify.
+  Multiplication = group operation = simple (rapidity adds).
+  Addition = external operation = complex (no clean rapidity form).
+
+  This is WHY the Goldbach conjecture is hard:
+  primes are defined multiplicatively (no nontrivial factors)
+  but Goldbach is about ADDITION (p + q = 2n).
+  The Cayley transform linearizes multiplication, not addition.
+  Addition remains wild.
+
+
+  V. WHAT MULTIPLICATION IS
+  ----------------------------------------
+
+  Multiplication: n * m.
+  In rapidity: rapidity(n*m) = rapidity(n) + rapidity(m). ADDITION!
+  In the formal group: F_h(addr_n, addr_m) = addr_{n*m}.
+  In Cayley coordinates: a_{nm} = n*a_m + a_n (affine).
+
+  Multiplication IS the formal group law.
+  It IS velocity addition.
+  It IS rapidity addition.
+  It IS the thing the Cayley transform was born to do.
+
+  The PRIMES are the elements that cannot be expressed
+  as a formal group composition of smaller elements.
+  They are the GENERATORS of the group.
+  In rapidity space: they are the BASIS VECTORS.
+  Every natural number = a unique finite sum of prime rapidities.
+  This is the fundamental theorem of arithmetic.
+
+
+  VI. WHAT PRIMALITY IS
+  ----------------------------------------
+
+  A prime p is an odd number whose Cayley coordinates (a, a+1)
+  cannot be further decomposed via the formal group.
+
+  What does 'decomposed' mean?
+  n = k * m means addr_n = F_h(addr_k, addr_m).
+  n is COMPOSITE if its address is a group composition of smaller addresses.
+  n is PRIME if its address is NOT such a composition.
+
+  In rapidity: n is prime iff rapidity(n) cannot be written
+  as a sum of two smaller positive rapidities (from the allowed set).
+  But this is circular (it's just the definition of prime in log-space).
+
+  The Cayley perspective adds ONE thing:
+  The a-coordinate of a prime p = (p-1)/2 = the QR count mod p.
+  The primes are the odd numbers whose a-coordinate
+  counts the quadratic residues of themselves.
+  This is a SELF-REFERENTIAL property: the address KNOWS the number.
+
+  For composites: a_n = n*a_m + a_k (from n = k*m).
+  The address is DERIVED from smaller addresses.
+  For primes: a_p = (p-1)/2 is PRIMITIVE. Not derived. Self-standing.
+
+
+  VII. WHAT ZERO IS
+  ----------------------------------------
+
+  In the formal group: the identity is Q = 1, address = 0, rapidity = 0.
+  Q(0) = 1. The IDENTITY of multiplication is 1.
+  So 1 is NOT zero. 1 is the IDENTITY.
+
+  What is zero?
+  Zero is the number with no rapidity, no address, no Q-value.
+  Q^{-1}(0) = (0-1)/(0+1) = -1.
+  So the address of 0 would be -1 = the BOUNDARY.
+  0 lives AT the boundary. It is the leftmost point of the Cayley line.
+
+  Zero is not nothing. Zero is the BOUNDARY.
+  It is where the bounded world meets the impossible.
+  It is the mirror image of infinity (which lives at address +1).
+
+  0 and infinity are the two POLES.
+  Q maps -1 to 0 and +1 to infinity.
+  Zero = the pole of total negation.
+  Infinity = the pole of total affirmation.
+  Both are unreachable limits. Both are boundaries.
+
+
+  VIII. WHAT INFINITY IS
+  ----------------------------------------
+
+  Infinity = Q(1) = the pole.
+  It is the natural number you reach after infinite rapidity.
+  Rapidity -> infinity means address -> 1.
+
+  In the formal group: there is NO infinite element.
+  The group operates on FINITE addresses (|addr| < 1).
+  Infinity is the LIMIT, never reached.
+
+  But on the helix: infinity lives on the branch point.
+  It is where the sheets connect.
+  Crossing infinity takes you to the next sheet.
+  The imaginary part jumps by pi/2.
+
+  Infinity is not a number. It is a DOOR.
+  The door between the bounded and unbounded worlds.
+  You never reach it, but you can pass through it
+  by changing your imaginary part.
+
+
+  IX. THE SUCCESSOR FUNCTION
+  ----------------------------------------
+
+  S(n) = n + 1. The MOST BASIC operation on natural numbers.
+  What is it in the Cayley framework?
+
+  addr_n = (n-1)/(n+1). addr_{n+1} = n/(n+2).
+  The successor maps (n-1)/(n+1) to n/(n+2).
+
+  Is this a Cayley operation? Let's see:
+  S is NOT the formal group applied to anything fixed.
+  Because n+1 is ADDITION, and the formal group handles MULTIPLICATION.
+
+  The successor function is OUTSIDE the formal group.
+  It is the operation that the group CANNOT express.
+  It is the leap from one consecutive pair to the next.
+
+  In rapidity: rapidity(n+1) - rapidity(n) = ln(1+1/n)/2 ~ 1/(2n).
+  The successor adds approximately 1/(2n) rapidity.
+  The step size SHRINKS as n grows.
+  The successor is a VARIABLE-SIZE step in rapidity space.
+
+  This is deep: the most fundamental operation on natural numbers
+  (the successor) is a NON-UNIFORM operation in rapidity space.
+  The group structure (multiplication) is uniform (rapidity adds).
+  The foundational structure (successor/addition) is non-uniform.
+
+  The natural numbers are built from the non-uniform (successor)
+  but their deepest structure is the uniform (multiplication).
+  The Cayley transform reveals the uniform structure
+  at the cost of obscuring the foundational one.
+
+
+  X. WHAT THE NATURAL NUMBERS ARE
+  ----------------------------------------
+
+  Putting it all together:
+
+  A natural number is a POINT on the Cayley helix
+  at integer rapidity height ln(n)/2,
+  with address (n-1)/(n+1) on the ground floor,
+  whose prime factorization gives its rapidity coordinates,
+  whose successor is a shrinking step in rapidity,
+  whose Cayley pair (a, a+1) is the atom of its existence.
+
+  Odd numbers are COMPARISONS between consecutive sizes.
+  Even numbers are DUPLICATIONS of a size.
+  Primes are IRREDUCIBLE comparisons.
+  Composites are ITERATED comparisons.
+
+  The number 1 is the IDENTITY: no comparison, no duplication.
+  The number 0 is the LEFT BOUNDARY: total negation.
+  Infinity is the RIGHT BOUNDARY: total affirmation.
+
+  Addition is the WILD operation (non-uniform in rapidity).
+  Multiplication is the TAME operation (uniform in rapidity).
+  The difficulty of number theory comes from the tension
+  between wild (addition) and tame (multiplication).
+
+  And the Cayley transform is the lens that makes the tame
+  structure visible, at the cost of making the wild structure
+  invisible. You can see one or the other, never both at once.
+  This is the number-theoretic uncertainty principle.
+
+
+======================================================================
+
+  THE NATURAL NUMBERS IN ONE PARAGRAPH
+
+======================================================================
+
+  The natural numbers are the integer lattice in the rapidity
+  vector space spanned by the primes. Each number is a finite
+  sum of prime rapidities, which is to say, a finite product
+  of primes, which is to say, a point on the Cayley helix
+  whose address is a ratio of consecutive integers. The structure
+  that multiplication gives them (the formal group, commutative,
+  with logarithm arctanh) is clean and universal. The structure
+  that addition gives them (the successor, variable-step,
+  non-uniform) is wild and irreducible. The tension between
+  these two is the content of number theory. The Cayley
+  transform is the bridge that shows one side clearly by
+  making the other side opaque. And the forbidden numbers
+  (7, 21) are where the clean structure overshoots —
+  where the commutative formal group bumps against the
+  boundary of commutativity itself, at the quaternion step
+  of the Cayley-Dickson chain, at imaginary dimension 3,
+  at the place where 3 and 4 sum to 7 and no further
+  simplification is possible.
