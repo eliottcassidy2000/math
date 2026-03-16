@@ -1,0 +1,1217 @@
+
+========================================================================
+  1. PRIME FIBONACCI AND PRIME LUCAS NUMBERS
+========================================================================
+
+Computing Fibonacci numbers F_0 through F_50:
+
+  F_ 0 =               0  = 0
+  F_ 1 =               1  = 1
+  F_ 2 =               1  = 1
+  F_ 3 =               2  = 2 [PRIME]
+  F_ 4 =               3  = 3 [PRIME]
+  F_ 5 =               5  = 5 [PRIME]
+  F_ 6 =               8  = 2^3
+  F_ 7 =              13  = 13 [PRIME]
+  F_ 8 =              21  = 3 * 7
+  F_ 9 =              34  = 2 * 17
+  F_10 =              55  = 5 * 11
+  F_11 =              89  = 89 [PRIME]
+  F_12 =             144  = 2^4 * 3^2
+  F_13 =             233  = 233 [PRIME]
+  F_14 =             377  = 13 * 29
+  F_15 =             610  = 2 * 5 * 61
+  F_16 =             987  = 3 * 7 * 47
+  F_17 =            1597  = 1597 [PRIME]
+  F_18 =            2584  = 2^3 * 17 * 19
+  F_19 =            4181  = 37 * 113
+  F_20 =            6765  = 3 * 5 * 11 * 41
+  F_21 =           10946  = 2 * 13 * 421
+  F_22 =           17711  = 89 * 199
+  F_23 =           28657  = 28657 [PRIME]
+  F_24 =           46368  = 2^5 * 3^2 * 7 * 23
+  F_25 =           75025  = 5^2 * 3001
+  F_26 =          121393  = 233 * 521
+  F_27 =          196418  = 2 * 17 * 53 * 109
+  F_28 =          317811  = 3 * 13 * 29 * 281
+  F_29 =          514229  = 514229 [PRIME]
+  F_30 =          832040  = 2^3 * 5 * 11 * 31 * 61
+  F_43 =       433494437  = 433494437 [PRIME]
+  F_47 =      2971215073  = 2971215073 [PRIME]
+
+Prime Fibonacci numbers (index, value) for n <= 50:
+  F_3 = 2
+  F_4 = 3
+  F_5 = 5
+  F_7 = 13
+  F_11 = 89
+  F_13 = 233
+  F_17 = 1597
+  F_23 = 28657
+  F_29 = 514229
+  F_43 = 433494437
+  F_47 = 2971215073
+
+Prime Fibonacci indices: [3, 4, 5, 7, 11, 13, 17, 23, 29, 43, 47]
+Prime Fibonacci values:  [2, 3, 5, 13, 89, 233, 1597, 28657, 514229, 433494437, 2971215073]
+
+Computing Lucas numbers L_0 through L_50:
+
+  L_ 0 =               2  = 2 [PRIME]
+  L_ 1 =               1  = 1
+  L_ 2 =               3  = 3 [PRIME]
+  L_ 3 =               4  = 2^2
+  L_ 4 =               7  = 7 [PRIME]
+  L_ 5 =              11  = 11 [PRIME]
+  L_ 6 =              18  = 2 * 3^2
+  L_ 7 =              29  = 29 [PRIME]
+  L_ 8 =              47  = 47 [PRIME]
+  L_ 9 =              76  = 2^2 * 19
+  L_10 =             123  = 3 * 41
+  L_11 =             199  = 199 [PRIME]
+  L_12 =             322  = 2 * 7 * 23
+  L_13 =             521  = 521 [PRIME]
+  L_14 =             843  = 3 * 281
+  L_15 =            1364  = 2^2 * 11 * 31
+  L_16 =            2207  = 2207 [PRIME]
+  L_17 =            3571  = 3571 [PRIME]
+  L_18 =            5778  = 2 * 3^3 * 107
+  L_19 =            9349  = 9349 [PRIME]
+  L_20 =           15127  = 7 * 2161
+  L_21 =           24476  = 2^2 * 29 * 211
+  L_22 =           39603  = 3 * 43 * 307
+  L_23 =           64079  = 139 * 461
+  L_24 =          103682  = 2 * 47 * 1103
+  L_25 =          167761  = 11 * 101 * 151
+  L_26 =          271443  = 3 * 90481
+  L_27 =          439204  = 2^2 * 19 * 5779
+  L_28 =          710647  = 7^2 * 14503
+  L_29 =         1149851  = 59 * 19489
+  L_30 =         1860498  = 2 * 3^2 * 41 * 2521
+  L_31 =         3010349  = 3010349 [PRIME]
+  L_37 =        54018521  = 54018521 [PRIME]
+  L_41 =       370248451  = 370248451 [PRIME]
+  L_47 =      6643838879  = 6643838879 [PRIME]
+
+Prime Lucas numbers (index, value) for n <= 50:
+  L_0 = 2
+  L_2 = 3
+  L_4 = 7
+  L_5 = 11
+  L_7 = 29
+  L_8 = 47
+  L_11 = 199
+  L_13 = 521
+  L_16 = 2207
+  L_17 = 3571
+  L_19 = 9349
+  L_31 = 3010349
+  L_37 = 54018521
+  L_41 = 370248451
+  L_47 = 6643838879
+
+Prime Lucas indices: [0, 2, 4, 5, 7, 8, 11, 13, 16, 17, 19, 31, 37, 41, 47]
+Prime Lucas values:  [2, 3, 7, 11, 29, 47, 199, 521, 2207, 3571, 9349, 3010349, 54018521, 370248451, 6643838879]
+
+--- Connection to fundamental primes {2, 3, 5, 7, 11} ---
+
+Fundamental primes as Fibonacci numbers:
+  2 = F_3
+  3 = F_4
+  5 = F_5
+
+Fundamental primes as Lucas numbers:
+  2 = L_0
+  3 = L_2
+  7 = L_4
+  11 = L_5
+
+OBSERVATION: Lucas primes L_0=2, L_2=3, L_4=7, L_5=11
+  BUT WAIT: L_1 = 1 (not prime), L_3 = 4 (not prime)
+  Correcting: L_0=2, L_2=3, L_4=7, L_5=11 -- indices {0,2,4,5}
+  The user stated L_1=2, L_3=3, L_5=7, L_6=11 -- let me verify:
+  L_0 = 2
+  L_1 = 1
+  L_2 = 3
+  L_3 = 4
+  L_4 = 7
+  L_5 = 11
+  L_6 = 18
+  L_7 = 29
+  L_8 = 47
+  L_9 = 76
+  L_10 = 123
+  L_11 = 199
+
+CORRECTION: L_0=2, L_1=1, L_2=3, L_3=4, L_4=7, L_5=11, L_6=18
+So the claim 'L_1=2, L_3=3, L_5=7, L_6=11' uses a SHIFTED convention
+  where L_1^* = L_0 = 2, L_3^* = L_2 = 3, L_5^* = L_4 = 7, L_6^* = L_5 = 11
+This is the 1-indexed convention: L_n^{1-idx} = L_{n-1}^{0-idx}
+
+Under STANDARD 0-indexed convention:
+  2 = L_0, 3 = L_2, 7 = L_4, 11 = L_5
+  5 = F_5 (Fibonacci, not Lucas)
+  Missing from Lucas: 5 is NOT a Lucas number
+  5 appears as: F_5 = 5, and as L_0 + L_2 = 2 + 3 = 5
+
+========================================================================
+  2. THE FORBIDDEN NUMBER F_8 = 21
+========================================================================
+
+F_8 = 21 = 3 * 7
+L_8 = 47 = 47
+Is L_8 = 47 prime? True
+
+F_8 * L_8 = 21 * 47 = 987
+F_16 = 987
+Verify F_8 * L_8 = F_16: True
+
+987 = F_16 = 3 * 7 * 47
+  = 3 * 7 * 47 = F_4 * (something)?
+  F_4 = 3, 987/3 = 329 = 7 * 47
+  329 = 7 * 47
+  So 987 = 3 * 7 * 47 = F_4 * L_4 * L_8
+  Check: F_4=3, L_4=7, L_8=47: 987
+
+The chain of factorizations:
+  F_ 1 =               1 = 1
+  F_ 2 =               1 = 1
+  F_ 4 =               3 = 3
+  F_ 8 =              21 = 3 * 7
+  F_16 =             987 = 3 * 7 * 47
+  F_32 =         2178309 = 3 * 7 * 47 * 2207
+
+Identity: F_{2n} = F_n * L_n (fundamental doubling formula)
+Verification for small n:
+  F_ 2 = F_1 * L_1 = 1 * 1 = 1 = 1 [OK]
+  F_ 4 = F_2 * L_2 = 1 * 3 = 3 = 3 [OK]
+  F_ 6 = F_3 * L_3 = 2 * 4 = 8 = 8 [OK]
+  F_ 8 = F_4 * L_4 = 3 * 7 = 21 = 21 [OK]
+  F_10 = F_5 * L_5 = 5 * 11 = 55 = 55 [OK]
+  F_12 = F_6 * L_6 = 8 * 18 = 144 = 144 [OK]
+  F_14 = F_7 * L_7 = 13 * 29 = 377 = 377 [OK]
+  F_16 = F_8 * L_8 = 21 * 47 = 987 = 987 [OK]
+  F_18 = F_9 * L_9 = 34 * 76 = 2584 = 2584 [OK]
+  F_20 = F_10 * L_10 = 55 * 123 = 6765 = 6765 [OK]
+  F_22 = F_11 * L_11 = 89 * 199 = 17711 = 17711 [OK]
+  F_24 = F_12 * L_12 = 144 * 322 = 46368 = 46368 [OK]
+  F_26 = F_13 * L_13 = 233 * 521 = 121393 = 121393 [OK]
+  F_28 = F_14 * L_14 = 377 * 843 = 317811 = 317811 [OK]
+  F_30 = F_15 * L_15 = 610 * 1364 = 832040 = 832040 [OK]
+
+--- F_8 = 21: The forbidden number in context ---
+
+21 = 3 * 7 = F_4 * L_4 (by doubling formula with n=4)
+   = F_8 (8th Fibonacci)
+21 = H=21 gap: the permanently forbidden Hamiltonian count
+F_4 = 3 (fundamental prime), L_4 = 7 (fundamental prime)
+So 21 = (fundamental prime #2) * (fundamental prime #4)
+In the Lucas prime sequence: L_0=2, L_2=3, L_4=7, L_5=11
+21 = L_2 * L_4 = consecutive Lucas primes (skipping L_1, L_3 which are not prime)
+
+========================================================================
+  3. PRODUCT IDENTITY F_n * L_n = F_{2n}
+========================================================================
+
+Extended doubling chain from F_8 = 21:
+  F_4 = 3, L_4 = 7, F_8 = 21 = 21
+  F_8 = 21, L_8 = 47, F_16 = 987 = 987
+  F_16 = 987, L_16 = 2207, F_32 = 2178309
+  F_32 = 2178309 = 3 * 7 * 47 * 2207
+
+Identity: L_n^2 = 5*F_n^2 + 4*(-1)^n
+Verification:
+  n= 0: L_0^2 =        4, 5*F_0^2 + 4*(-1)^0 =        4  [OK]
+  n= 1: L_1^2 =        1, 5*F_1^2 + 4*(-1)^1 =        1  [OK]
+  n= 2: L_2^2 =        9, 5*F_2^2 + 4*(-1)^2 =        9  [OK]
+  n= 3: L_3^2 =       16, 5*F_3^2 + 4*(-1)^3 =       16  [OK]
+  n= 4: L_4^2 =       49, 5*F_4^2 + 4*(-1)^4 =       49  [OK]
+  n= 5: L_5^2 =      121, 5*F_5^2 + 4*(-1)^5 =      121  [OK]
+  n= 6: L_6^2 =      324, 5*F_6^2 + 4*(-1)^6 =      324  [OK]
+  n= 7: L_7^2 =      841, 5*F_7^2 + 4*(-1)^7 =      841  [OK]
+  n= 8: L_8^2 =     2209, 5*F_8^2 + 4*(-1)^8 =     2209  [OK]
+  n= 9: L_9^2 =     5776, 5*F_9^2 + 4*(-1)^9 =     5776  [OK]
+  n=10: L_10^2 =    15129, 5*F_10^2 + 4*(-1)^10 =    15129  [OK]
+  n=11: L_11^2 =    39601, 5*F_11^2 + 4*(-1)^11 =    39601  [OK]
+  n=12: L_12^2 =   103684, 5*F_12^2 + 4*(-1)^12 =   103684  [OK]
+  n=13: L_13^2 =   271441, 5*F_13^2 + 4*(-1)^13 =   271441  [OK]
+  n=14: L_14^2 =   710649, 5*F_14^2 + 4*(-1)^14 =   710649  [OK]
+
+Identity: L_n^2 - 5*F_n^2 = 4*(-1)^n
+At n=8: L_8^2 - 5*F_8^2 = 47^2 - 5*21^2 = 2209 - 2205 = 4
+  Check: 2209 - 5*441 = 4
+
+GCD structure: gcd(F_n, L_n)
+  gcd(F_3, L_3) = gcd(2, 4) = 2
+  gcd(F_6, L_6) = gcd(8, 18) = 2
+  gcd(F_9, L_9) = gcd(34, 76) = 2
+  gcd(F_12, L_12) = gcd(144, 322) = 2
+  gcd(F_15, L_15) = gcd(610, 1364) = 2
+  gcd(F_18, L_18) = gcd(2584, 5778) = 2
+  gcd(F_21, L_21) = gcd(10946, 24476) = 2
+  gcd(F_24, L_24) = gcd(46368, 103682) = 2
+(Most are 1 or 2 -- F_n and L_n are nearly coprime)
+
+  gcd(F_ 1, L_ 1) = gcd(     1,      1) = 1
+  gcd(F_ 2, L_ 2) = gcd(     1,      3) = 1
+  gcd(F_ 3, L_ 3) = gcd(     2,      4) = 2
+  gcd(F_ 4, L_ 4) = gcd(     3,      7) = 1
+  gcd(F_ 5, L_ 5) = gcd(     5,     11) = 1
+  gcd(F_ 6, L_ 6) = gcd(     8,     18) = 2
+  gcd(F_ 7, L_ 7) = gcd(    13,     29) = 1
+  gcd(F_ 8, L_ 8) = gcd(    21,     47) = 1
+  gcd(F_ 9, L_ 9) = gcd(    34,     76) = 2
+  gcd(F_10, L_10) = gcd(    55,    123) = 1
+  gcd(F_11, L_11) = gcd(    89,    199) = 1
+  gcd(F_12, L_12) = gcd(   144,    322) = 2
+  gcd(F_13, L_13) = gcd(   233,    521) = 1
+  gcd(F_14, L_14) = gcd(   377,    843) = 1
+  gcd(F_15, L_15) = gcd(   610,   1364) = 2
+  gcd(F_16, L_16) = gcd(   987,   2207) = 1
+  gcd(F_17, L_17) = gcd(  1597,   3571) = 1
+  gcd(F_18, L_18) = gcd(  2584,   5778) = 2
+  gcd(F_19, L_19) = gcd(  4181,   9349) = 1
+
+========================================================================
+  4. PRIME LUCAS INDICES AND NON-PRIME FACTORIZATIONS
+========================================================================
+
+Lucas numbers and primality for n = 0..40:
+  L_ 0 =            2  PRIME
+  L_ 1 =            1  1
+  L_ 2 =            3  PRIME
+  L_ 3 =            4  2^2
+  L_ 4 =            7  PRIME
+  L_ 5 =           11  PRIME
+  L_ 6 =           18  2 * 3^2
+  L_ 7 =           29  PRIME
+  L_ 8 =           47  PRIME
+  L_ 9 =           76  2^2 * 19
+  L_10 =          123  3 * 41
+  L_11 =          199  PRIME
+  L_12 =          322  2 * 7 * 23
+  L_13 =          521  PRIME
+  L_14 =          843  3 * 281
+  L_15 =         1364  2^2 * 11 * 31
+  L_16 =         2207  PRIME
+  L_17 =         3571  PRIME
+  L_18 =         5778  2 * 3^3 * 107
+  L_19 =         9349  PRIME
+  L_20 =        15127  7 * 2161
+  L_21 =        24476  2^2 * 29 * 211
+  L_22 =        39603  3 * 43 * 307
+  L_23 =        64079  139 * 461
+  L_24 =       103682  2 * 47 * 1103
+  L_25 =       167761  11 * 101 * 151
+  L_26 =       271443  3 * 90481
+  L_27 =       439204  2^2 * 19 * 5779
+  L_28 =       710647  7^2 * 14503
+  L_29 =      1149851  59 * 19489
+  L_30 =      1860498  2 * 3^2 * 41 * 2521
+  L_31 =      3010349  PRIME
+  L_32 =      4870847  1087 * 4481
+  L_33 =      7881196  2^2 * 199 * 9901
+  L_34 =     12752043  3 * 67 * 63443
+  L_35 =     20633239  11 * 29 * 71 * 911
+  L_36 =     33385282  2 * 7 * 23 * 103681
+  L_37 =     54018521  PRIME
+  L_38 =     87403803  3 * 29134601
+  L_39 =    141422324  2^2 * 79 * 521 * 859
+  L_40 =    228826127  47 * 1601 * 3041
+
+Prime Lucas indices (0-indexed): [0, 2, 4, 5, 7, 8, 11, 13, 16, 17, 19, 31, 37]
+
+Are the prime-Lucas indices themselves prime?
+  Index 0: composite/0/1
+  Index 2: prime
+  Index 4: composite/0/1
+  Index 5: prime
+  Index 7: prime
+  Index 8: composite/0/1
+  Index 11: prime
+  Index 13: prime
+  Index 16: composite/0/1
+  Index 17: prime
+  Index 19: prime
+  Index 31: prime
+  Index 37: prime
+
+OBSERVATION: L_n can only be prime if n is 0, a prime, or a power of 2.
+  (Because if d|n, d>1, d<n, then L_d | L_n when n/d is odd)
+  Known: L_n prime => n in {0,1} or n is prime or n is 2^k
+  Actually: the necessary condition is n=0 or n is prime or 2^k (for specific reasons)
+
+Divisibility: if d|n and n/d is odd, then L_d | L_n
+Checking L_d | L_n for composite n:
+  L_6 = 18: divisible by L_2 = 3
+  L_9 = 76: divisible by L_3 = 4
+  L_10 = 123: divisible by L_2 = 3
+  L_12 = 322: divisible by L_4 = 7
+  L_14 = 843: divisible by L_2 = 3
+  L_15 = 1364: divisible by L_3 = 4
+  L_18 = 5778: divisible by L_2 = 3
+  L_20 = 15127: divisible by L_4 = 7
+  L_21 = 24476: divisible by L_3 = 4
+  L_22 = 39603: divisible by L_2 = 3
+  L_24 = 103682: divisible by L_8 = 47
+  L_25 = 167761: divisible by L_5 = 11
+  L_26 = 271443: divisible by L_2 = 3
+  L_27 = 439204: divisible by L_3 = 4
+  L_28 = 710647: divisible by L_4 = 7
+
+========================================================================
+  5. ADDITIVE IDENTITIES AMONG FUNDAMENTAL PRIMES
+========================================================================
+
+Lucas recurrence identities involving fundamental primes:
+  L_5 = L_4 + L_3 = 7 + 4 = 11
+  So 11 = 7 + 4 (forbidden prime + period)
+  L_4 = L_3 + L_2 = 4 + 3 = 7
+  So 7 = 4 + 3
+  L_2 = L_1 + L_0 = 1 + 2 = 3
+  So 3 = 1 + 2
+
+Fibonacci recurrence identities:
+  F_5 = F_4 + F_3 = 3 + 2 = 5
+  So 5 = 3 + 2
+  F_8 = F_7 + F_6 = 13 + 8 = 21
+  So 21 = 13 + 8
+
+Cross-sequence identities at fundamental prime values:
+  L_0 + L_2 = 2 + 3 = 5 = F_5
+  L_2 + L_4 = 3 + 7 = 10 = 2*5 = 2*F_5
+  L_4 + L_5 = 7 + 11 = 18 = L_6
+  L_0 * L_2 = 2 * 3 = 6
+  L_2 * L_4 = 3 * 7 = 21 = F_8 (the forbidden number!)
+  L_4 * L_5 = 7 * 11 = 77 = 7 * 11
+  L_0 * L_4 = 2 * 7 = 14
+  L_0 * L_5 = 2 * 11 = 22
+  L_2 * L_5 = 3 * 11 = 33
+
+Sum of all fundamental primes: 2+3+5+7+11 = 28
+  28 = 2^2 * 7 = perfect number!
+  F_? = 28? No. But L_? = 29 (prime), F_? = 28? No, 28 is not Fibonacci.
+  28 = 4*7 = L_3 * L_4 (non-prime Lucas times prime Lucas)
+
+Product of fundamental primes: 2*3*5*7*11 = 2310
+  2310 = 2 * 3 * 5 * 7 * 11 = primorial(5)
+  Is 2310 a Fibonacci or Lucas number? F_? or L_?
+  2310 is neither Fibonacci nor Lucas.
+
+Deeper: sums of pairs of fundamental primes
+  2 + 3 = 5 = F_5, PRIME
+  2 + 5 = 7 = L_4, PRIME
+  2 + 7 = 9
+  2 + 11 = 13 = F_7, PRIME
+  3 + 5 = 8 = F_6
+  3 + 7 = 10
+  3 + 11 = 14
+  5 + 7 = 12
+  5 + 11 = 16
+  7 + 11 = 18 = L_6
+
+========================================================================
+  6. L_n/F_n RATIO -> sqrt(5) AND Q-TRANSFORM
+========================================================================
+
+Ratio L_n / F_n for small n:
+  L_ 1/F_ 1 =        1/       1 = 1.0000000000  (sqrt(5) = 2.2360679775, diff = 1.24e+00)
+  L_ 2/F_ 2 =        3/       1 = 3.0000000000  (sqrt(5) = 2.2360679775, diff = 7.64e-01)
+  L_ 3/F_ 3 =        4/       2 = 2.0000000000  (sqrt(5) = 2.2360679775, diff = 2.36e-01)
+  L_ 4/F_ 4 =        7/       3 = 2.3333333333  (sqrt(5) = 2.2360679775, diff = 9.73e-02)
+  L_ 5/F_ 5 =       11/       5 = 2.2000000000  (sqrt(5) = 2.2360679775, diff = 3.61e-02)
+  L_ 6/F_ 6 =       18/       8 = 2.2500000000  (sqrt(5) = 2.2360679775, diff = 1.39e-02)
+  L_ 7/F_ 7 =       29/      13 = 2.2307692308  (sqrt(5) = 2.2360679775, diff = 5.30e-03)
+  L_ 8/F_ 8 =       47/      21 = 2.2380952381  (sqrt(5) = 2.2360679775, diff = 2.03e-03)
+  L_ 9/F_ 9 =       76/      34 = 2.2352941176  (sqrt(5) = 2.2360679775, diff = 7.74e-04)
+  L_10/F_10 =      123/      55 = 2.2363636364  (sqrt(5) = 2.2360679775, diff = 2.96e-04)
+  L_11/F_11 =      199/      89 = 2.2359550562  (sqrt(5) = 2.2360679775, diff = 1.13e-04)
+  L_12/F_12 =      322/     144 = 2.2361111111  (sqrt(5) = 2.2360679775, diff = 4.31e-05)
+  L_13/F_13 =      521/     233 = 2.2360515021  (sqrt(5) = 2.2360679775, diff = 1.65e-05)
+  L_14/F_14 =      843/     377 = 2.2360742706  (sqrt(5) = 2.2360679775, diff = 6.29e-06)
+  L_15/F_15 =     1364/     610 = 2.2360655738  (sqrt(5) = 2.2360679775, diff = 2.40e-06)
+  L_16/F_16 =     2207/     987 = 2.2360688956  (sqrt(5) = 2.2360679775, diff = 9.18e-07)
+  L_17/F_17 =     3571/    1597 = 2.2360676268  (sqrt(5) = 2.2360679775, diff = 3.51e-07)
+  L_18/F_18 =     5778/    2584 = 2.2360681115  (sqrt(5) = 2.2360679775, diff = 1.34e-07)
+  L_19/F_19 =     9349/    4181 = 2.2360679263  (sqrt(5) = 2.2360679775, diff = 5.12e-08)
+  L_20/F_20 =    15127/    6765 = 2.2360679970  (sqrt(5) = 2.2360679775, diff = 1.95e-08)
+  L_21/F_21 =    24476/   10946 = 2.2360679700  (sqrt(5) = 2.2360679775, diff = 7.47e-09)
+  L_22/F_22 =    39603/   17711 = 2.2360679804  (sqrt(5) = 2.2360679775, diff = 2.85e-09)
+  L_23/F_23 =    64079/   28657 = 2.2360679764  (sqrt(5) = 2.2360679775, diff = 1.09e-09)
+  L_24/F_24 =   103682/   46368 = 2.2360679779  (sqrt(5) = 2.2360679775, diff = 4.16e-10)
+
+sqrt(5) = 2.236067977499790
+phi = (1+sqrt(5))/2 = 1.618033988749895
+phi^2 = phi + 1 = 2.618033988749895
+1/phi = phi - 1 = 0.618033988749895
+5/phi = 3.090169943749474 = 3.090169943749475
+sqrt(5)*phi = 3.618033988749895 = phi^2 + phi - 1? = 3.236067977499790
+
+Q-transform of 1/sqrt(5):
+  1/sqrt(5) = 0.447213595499958
+  Q(1/sqrt(5)) = (1 + 1/sqrt(5)) / (1 - 1/sqrt(5))
+            = 2.618033988749894
+  phi^2 = 2.618033988749895
+  Q(1/sqrt(5)) = phi^2? True
+
+Proof: Q(1/sqrt(5)) = (sqrt(5)+1)/(sqrt(5)-1) = (sqrt(5)+1)^2/4 = (6+2*sqrt(5))/4 = (3+sqrt(5))/2 = phi^2
+  (3+sqrt(5))/2 = 2.618033988749895
+  phi^2 = 2.618033988749895
+  Match: True
+
+Q-transform of Fibonacci ratios F_n/F_{n+1}:
+  Q(F_1/F_2) = Q(1/1) = inf,  F_3/F_0 = 2/0 = inf  Match: False
+  Q(F_2/F_3) = Q(1/2) = 3.00000000,  F_4/F_1 = 3/1 = 3.00000000  Match: True
+  Q(F_3/F_4) = Q(2/3) = 5.00000000,  F_5/F_2 = 5/1 = 5.00000000  Match: True
+  Q(F_4/F_5) = Q(3/5) = 4.00000000,  F_6/F_3 = 8/2 = 4.00000000  Match: True
+  Q(F_5/F_6) = Q(5/8) = 4.33333333,  F_7/F_4 = 13/3 = 4.33333333  Match: True
+  Q(F_6/F_7) = Q(8/13) = 4.20000000,  F_8/F_5 = 21/5 = 4.20000000  Match: True
+  Q(F_7/F_8) = Q(13/21) = 4.25000000,  F_9/F_6 = 34/8 = 4.25000000  Match: True
+  Q(F_8/F_9) = Q(21/34) = 4.23076923,  F_10/F_7 = 55/13 = 4.23076923  Match: True
+  Q(F_9/F_10) = Q(34/55) = 4.23809524,  F_11/F_8 = 89/21 = 4.23809524  Match: True
+  Q(F_10/F_11) = Q(55/89) = 4.23529412,  F_12/F_9 = 144/34 = 4.23529412  Match: True
+  Q(F_11/F_12) = Q(89/144) = 4.23636364,  F_13/F_10 = 233/55 = 4.23636364  Match: True
+  Q(F_12/F_13) = Q(144/233) = 4.23595506,  F_14/F_11 = 377/89 = 4.23595506  Match: True
+  Q(F_13/F_14) = Q(233/377) = 4.23611111,  F_15/F_12 = 610/144 = 4.23611111  Match: True
+  Q(F_14/F_15) = Q(377/610) = 4.23605150,  F_16/F_13 = 987/233 = 4.23605150  Match: True
+
+The Cayley skip-3 property: Q(F_n/F_{n+1}) = F_{n+2}/F_{n-1}
+Algebraic proof: Q(a/b) = (b+a)/(b-a). With a=F_n, b=F_{n+1}:
+  b+a = F_{n+1}+F_n = F_{n+2}
+  b-a = F_{n+1}-F_n = F_{n-1}
+  So Q(F_n/F_{n+1}) = F_{n+2}/F_{n-1}. QED (skip-3: from (n,n+1) to (n-1,n+2))
+
+========================================================================
+  7. PISANO PERIODS pi(m) FOR FUNDAMENTAL PRIMES
+========================================================================
+
+The Pisano period pi(m) is the period of F_n mod m.
+
+  pi(  2) =    3   (2 -> period 3 = 3)
+  pi(  3) =    8   (3 -> period 8 = 2^3)
+  pi(  4) =    6   (2^2 -> period 6 = 2 * 3)
+  pi(  5) =   20   (5 -> period 20 = 2^2 * 5)
+  pi(  6) =   24   (2 * 3 -> period 24 = 2^3 * 3)
+  pi(  7) =   16   (7 -> period 16 = 2^4)
+  pi(  8) =   12   (2^3 -> period 12 = 2^2 * 3)
+  pi(  9) =   24   (3^2 -> period 24 = 2^3 * 3)
+  pi( 10) =   60   (2 * 5 -> period 60 = 2^2 * 3 * 5)
+  pi( 11) =   10   (11 -> period 10 = 2 * 5)
+  pi( 12) =   24   (2^2 * 3 -> period 24 = 2^3 * 3)
+  pi( 13) =   28   (13 -> period 28 = 2^2 * 7)
+  pi( 21) =   16   (3 * 7 -> period 16 = 2^4)
+  pi( 42) =   48   (2 * 3 * 7 -> period 48 = 2^4 * 3)
+  pi( 47) =   32   (47 -> period 32 = 2^5)
+  pi( 77) =   80   (7 * 11 -> period 80 = 2^4 * 5)
+  pi( 55) =   20   (5 * 11 -> period 20 = 2^2 * 5)
+
+KEY VALUES for fundamental primes:
+  pi( 2) =   3
+    F_n mod 2: [0, 1, 1] | [0, 1, 1]...
+  pi( 3) =   8
+    F_n mod 3: [0, 1, 1, 2, 0, 2, 2, 1] | [0, 1, 1]...
+  pi( 5) =  20
+    F_n mod 5: [0, 1, 1, 2, 3, 0, 3, 3, 1, 4, 0, 4, 4, 3, 2, 0, 2, 2, 4, 1] | [0, 1, 1]...
+  pi( 7) =  16
+    F_n mod 7: [0, 1, 1, 2, 3, 5, 1, 6, 0, 6, 6, 5, 4, 2, 6, 1] | [0, 1, 1]...
+  pi(11) =  10
+    F_n mod 11: [0, 1, 1, 2, 3, 5, 8, 2, 10, 1] | [0, 1, 1]...
+  pi(13) =  28
+    F_n mod 13: [0, 1, 1, 2, 3, 5, 8, 0, 8, 8, 3, 11, 1, 12, 0, 12, 12, 11, 10, 8, 5, 0, 5, 5, 10, 2, 12, 1] | [0, 1, 1]...
+
+Pisano period relationships:
+  pi(2) = 3
+  pi(3) = 8
+  pi(5) = 20
+  pi(7) = 16
+  pi(11) = 10
+  pi(2)*pi(3) = 24, pi(6) = 24
+  lcm(pi(2),pi(3)) = 24, pi(6) = 24
+  pi(21) = 16, lcm(pi(3),pi(7)) = 16
+
+Known formula: pi(p) | p-1 if p = +-1 mod 5, pi(p) | 2(p+1) if p = +-2 mod 5
+  p= 2 = 2 mod 5: pi(2)=3, 2(p+1)=6, divides? 2(p+1)
+  p= 3 = 3 mod 5: pi(3)=8, 2(p+1)=8, divides? 2(p+1)
+  p= 5 = 0 mod 5: pi(5)=20 (special)
+  p= 7 = 2 mod 5: pi(7)=16, 2(p+1)=16, divides? 2(p+1)
+  p=11 = 1 mod 5: pi(11)=10, (p-1)=10, divides? p-1
+  p=13 = 3 mod 5: pi(13)=28, 2(p+1)=28, divides? 2(p+1)
+  p=17 = 2 mod 5: pi(17)=36, 2(p+1)=36, divides? 2(p+1)
+  p=19 = 4 mod 5: pi(19)=18, (p-1)=18, divides? p-1
+  p=23 = 3 mod 5: pi(23)=48, 2(p+1)=48, divides? 2(p+1)
+  p=29 = 4 mod 5: pi(29)=14, (p-1)=28, divides? p-1
+  p=31 = 1 mod 5: pi(31)=30, (p-1)=30, divides? p-1
+  p=37 = 2 mod 5: pi(37)=76, 2(p+1)=76, divides? 2(p+1)
+  p=41 = 1 mod 5: pi(41)=40, (p-1)=40, divides? p-1
+  p=43 = 3 mod 5: pi(43)=88, 2(p+1)=88, divides? 2(p+1)
+  p=47 = 2 mod 5: pi(47)=32, 2(p+1)=96, divides? 2(p+1)
+
+========================================================================
+  8. ENTRY POINTS alpha(m)
+========================================================================
+
+alpha(m) = smallest k > 0 such that m | F_k
+
+  alpha(   2) =    3   (F_3 = 2, F_3/2 = 1)
+  alpha(   3) =    4   (F_4 = 3, F_4/3 = 1)
+  alpha(   4) =    6   (F_6 = 8, F_6/4 = 2)
+  alpha(   5) =    5   (F_5 = 5, F_5/5 = 1)
+  alpha(   6) =   12   (F_12 = 144, F_12/6 = 24)
+  alpha(   7) =    8   (F_8 = 21, F_8/7 = 3)
+  alpha(   8) =    6   (F_6 = 8, F_6/8 = 1)
+  alpha(   9) =   12   (F_12 = 144, F_12/9 = 16)
+  alpha(  10) =   15   (F_15 = 610, F_15/10 = 61)
+  alpha(  11) =   10   (F_10 = 55, F_10/11 = 5)
+  alpha(  12) =   12   (F_12 = 144, F_12/12 = 12)
+  alpha(  13) =    7   (F_7 = 13, F_7/13 = 1)
+  alpha(  14) =   24   (F_24 = 46368, F_24/14 = 3312)
+  alpha(  15) =   20   (F_20 = 6765, F_20/15 = 451)
+  alpha(  21) =    8   (F_8 = 21, F_8/21 = 1)
+  alpha(  42) =   24   (F_24 = 46368, F_24/42 = 1104)
+  alpha(  47) =   16   (F_16 = 987, F_16/47 = 21)
+  alpha(  55) =   10   (F_10 = 55, F_10/55 = 1)
+  alpha(  77) =   40   (F_40 = 102334155, F_40/77 = 1329015)
+  alpha(  89) =   11   (F_11 = 89, F_11/89 = 1)
+  alpha( 144) =   12   (F_12 = 144, F_12/144 = 1)
+
+Fundamental primes entry points:
+  alpha( 2) = 3, pi(2) = 3, pi/alpha = 1
+  alpha( 3) = 4, pi(3) = 8, pi/alpha = 2
+  alpha( 5) = 5, pi(5) = 20, pi/alpha = 4
+  alpha( 7) = 8, pi(7) = 16, pi/alpha = 2
+  alpha(11) = 10, pi(11) = 10, pi/alpha = 1
+
+Key: alpha(p) | pi(p) always. The ratio pi(p)/alpha(p) is 1, 2, or 4.
+
+Entry points for composite numbers in our theory:
+  alpha(  6) =   12, 6 = 2 * 3, lcm of factor entry pts = 12
+  alpha( 10) =   15, 10 = 2 * 5, lcm of factor entry pts = 15
+  alpha( 14) =   24, 14 = 2 * 7, lcm of factor entry pts = 24
+  alpha( 15) =   20, 15 = 3 * 5, lcm of factor entry pts = 20
+  alpha( 21) =    8, 21 = 3 * 7, lcm of factor entry pts = 8
+  alpha( 33) =   20, 33 = 3 * 11, lcm of factor entry pts = 20
+  alpha( 42) =   24, 42 = 2 * 3 * 7, lcm of factor entry pts = 24
+  alpha( 55) =   10, 55 = 5 * 11, lcm of factor entry pts = 10
+  alpha( 77) =   40, 77 = 7 * 11, lcm of factor entry pts = 40
+
+========================================================================
+  9. WALL-SUN-SUN PRIMES AND F_{p-(p|5)} mod p^2
+========================================================================
+
+A Wall-Sun-Sun prime p satisfies p^2 | F_{p - (p|5)}.
+(p|5) is the Legendre symbol (p/5).
+No Wall-Sun-Sun primes are known. Testing our primes:
+
+  p=2: special (p=2)
+  p=  3: (p|5)=-1, F_  4 mod 3^2 = F_4 mod     9 =     3  
+  p=5: special (p=5, (p|5)=0)
+  p=  7: (p|5)=-1, F_  8 mod 7^2 = F_8 mod    49 =    21  
+  p= 11: (p|5)=+1, F_ 10 mod 11^2 = F_10 mod   121 =    55  
+  p= 13: (p|5)=-1, F_ 14 mod 13^2 = F_14 mod   169 =    39  
+  p= 17: (p|5)=-1, F_ 18 mod 17^2 = F_18 mod   289 =   272  
+  p= 19: (p|5)=+1, F_ 18 mod 19^2 = F_18 mod   361 =    57  
+  p= 23: (p|5)=-1, F_ 24 mod 23^2 = F_24 mod   529 =   345  
+  p= 29: (p|5)=+1, F_ 28 mod 29^2 = F_28 mod   841 =   754  
+  p= 31: (p|5)=+1, F_ 30 mod 31^2 = F_30 mod   961 =   775  
+  p= 37: (p|5)=-1, F_ 38 mod 37^2 = F_38 mod  1369 =   481  
+  p= 41: (p|5)=+1, F_ 40 mod 41^2 = F_40 mod  1681 =  1599  
+  p= 43: (p|5)=-1, F_ 44 mod 43^2 = F_44 mod  1849 =  1677  
+  p= 47: (p|5)=-1, F_ 48 mod 47^2 = F_48 mod  2209 =   752  
+  p= 53: (p|5)=-1, F_ 54 mod 53^2 = F_54 mod  2809 =  1484  
+  p= 59: (p|5)=+1, F_ 58 mod 59^2 = F_58 mod  3481 =   590  
+  p= 61: (p|5)=+1, F_ 60 mod 61^2 = F_60 mod  3721 =  2928  
+  p= 67: (p|5)=-1, F_ 68 mod 67^2 = F_68 mod  4489 =   469  
+  p= 71: (p|5)=+1, F_ 70 mod 71^2 = F_70 mod  5041 =  3905  
+  p= 73: (p|5)=-1, F_ 74 mod 73^2 = F_74 mod  5329 =  4234  
+  p= 79: (p|5)=+1, F_ 78 mod 79^2 = F_78 mod  6241 =  3871  
+  p= 83: (p|5)=-1, F_ 84 mod 83^2 = F_84 mod  6889 =  1743  
+  p= 89: (p|5)=+1, F_ 88 mod 89^2 = F_88 mod  7921 =   445  
+  p= 97: (p|5)=-1, F_ 98 mod 97^2 = F_98 mod  9409 =  3589  
+
+No Wall-Sun-Sun primes found up to p=97 (none known at all).
+Connection to our framework: a Wall-Sun-Sun prime would create an
+exceptionally strong Fibonacci divisibility, but none exist among our primes.
+
+========================================================================
+  10. FIBONACCI/LUCAS AT AND AROUND FUNDAMENTAL PRIMES
+========================================================================
+
+For each prime p, compute F_p, F_{p-1}, F_{p+1}, L_p and factor:
+
+  p = 2:
+    F_ 1 =            1 = 1
+    F_ 2  =            1 = 1
+    F_ 3 =            2 = 2
+    L_ 2  =            3 = 3
+    (p|5) = 1, p | F_{p-(p|5)} = p | F_1: False
+
+  p = 3:
+    F_ 2 =            1 = 1
+    F_ 3  =            2 = 2
+    F_ 4 =            3 = 3
+    L_ 3  =            4 = 2^2
+    (p|5) = -1, p | F_{p-(p|5)} = p | F_4: True
+
+  p = 5:
+    F_ 4 =            3 = 3
+    F_ 5  =            5 = 5
+    F_ 6 =            8 = 2^3
+    L_ 5  =           11 = 11
+    (p|5) = 0, p | F_{p-(p|5)} = p | F_5: True
+
+  p = 7:
+    F_ 6 =            8 = 2^3
+    F_ 7  =           13 = 13
+    F_ 8 =           21 = 3 * 7
+    L_ 7  =           29 = 29
+    (p|5) = -1, p | F_{p-(p|5)} = p | F_8: True
+
+  p = 11:
+    F_10 =           55 = 5 * 11
+    F_11  =           89 = 89
+    F_12 =          144 = 2^4 * 3^2
+    L_11  =          199 = 199
+    (p|5) = 1, p | F_{p-(p|5)} = p | F_10: True
+
+  p = 13:
+    F_12 =          144 = 2^4 * 3^2
+    F_13  =          233 = 233
+    F_14 =          377 = 13 * 29
+    L_13  =          521 = 521
+    (p|5) = -1, p | F_{p-(p|5)} = p | F_14: True
+
+  p = 17:
+    F_16 =          987 = 3 * 7 * 47
+    F_17  =         1597 = 1597
+    F_18 =         2584 = 2^3 * 17 * 19
+    L_17  =         3571 = 3571
+    (p|5) = -1, p | F_{p-(p|5)} = p | F_18: True
+
+  p = 19:
+    F_18 =         2584 = 2^3 * 17 * 19
+    F_19  =         4181 = 37 * 113
+    F_20 =         6765 = 3 * 5 * 11 * 41
+    L_19  =         9349 = 9349
+    (p|5) = 1, p | F_{p-(p|5)} = p | F_18: True
+
+  p = 23:
+    F_22 =        17711 = 89 * 199
+    F_23  =        28657 = 28657
+    F_24 =        46368 = 2^5 * 3^2 * 7 * 23
+    L_23  =        64079 = 139 * 461
+    (p|5) = -1, p | F_{p-(p|5)} = p | F_24: True
+
+  p = 29:
+    F_28 =       317811 = 3 * 13 * 29 * 281
+    F_29  =       514229 = 514229
+    F_30 =       832040 = 2^3 * 5 * 11 * 31 * 61
+    L_29  =      1149851 = 59 * 19489
+    (p|5) = 1, p | F_{p-(p|5)} = p | F_28: True
+
+  p = 31:
+    F_30 =       832040 = 2^3 * 5 * 11 * 31 * 61
+    F_31  =      1346269 = 557 * 2417
+    F_32 =      2178309 = 3 * 7 * 47 * 2207
+    L_31  =      3010349 = 3010349
+    (p|5) = 1, p | F_{p-(p|5)} = p | F_30: True
+
+
+--- Pattern analysis ---
+
+Known: for prime p != 5, p | F_{p - (p/5)}
+  p=2: 2|F_3=2 YES
+  p=3: 3|F_4=3 YES (3 = +2 mod 5, so (3|5)=-1, F_{3-(-1)}=F_4=3)
+
+Factoring F_p for fundamental primes:
+  F_2 = 1 (trivial)
+  F_3 = 2 (prime)
+  F_5 = 5 (prime, = p itself!)
+  F_7 = 13 (prime)
+  F_11 = 89 (prime)
+  F_13 = 233 (prime)
+
+ALL F_p for our fundamental primes are themselves prime!
+This is because: if p is prime, then F_p is a 'Fibonacci prime candidate'.
+Known result: if F_n is prime and n > 4, then n is prime.
+(Converse fails: F_19 = 4181 = 37*113 is composite despite 19 being prime.)
+  F_19 = 4181 = 37 * 113
+
+Is F_p prime for each prime p?
+  F_ 2 =            1  composite = 1
+  F_ 3 =            2  PRIME
+  F_ 5 =            5  PRIME
+  F_ 7 =           13  PRIME
+  F_11 =           89  PRIME
+  F_13 =          233  PRIME
+  F_17 =         1597  PRIME
+  F_19 =         4181  composite = 37 * 113
+  F_23 =        28657  PRIME
+  F_29 =       514229  PRIME
+  F_31 =      1346269  composite = 557 * 2417
+  F_37 =     24157817  composite = 73 * 149 * 2221
+  F_41 =    165580141  composite = 2789 * 59369
+  F_43 =    433494437  PRIME
+  F_47 =   2971215073  PRIME
+
+========================================================================
+  11. PYTHAGOREAN-TYPE IDENTITY: F_{n+1}^2 + F_n^2 = F_{2n+1}
+========================================================================
+
+Verification and exploration of F_{n+1}^2 + F_n^2 = F_{2n+1}:
+
+  n= 0: F_1^2 + F_0^2 = 1^2 + 0^2 = 1 + 0 = 1 = F_1 = 1 [OK]
+  n= 1: F_2^2 + F_1^2 = 1^2 + 1^2 = 1 + 1 = 2 = F_3 = 2 [OK]
+  n= 2: F_3^2 + F_2^2 = 2^2 + 1^2 = 4 + 1 = 5 = F_5 = 5 [OK]
+  n= 3: F_4^2 + F_3^2 = 3^2 + 2^2 = 9 + 4 = 13 = F_7 = 13 [OK]
+  n= 4: F_5^2 + F_4^2 = 5^2 + 3^2 = 25 + 9 = 34 = F_9 = 34 [OK]
+  n= 5: F_6^2 + F_5^2 = 8^2 + 5^2 = 64 + 25 = 89 = F_11 = 89 [OK]
+  n= 6: F_7^2 + F_6^2 = 13^2 + 8^2 = 169 + 64 = 233 = F_13 = 233 [OK]
+  n= 7: F_8^2 + F_7^2 = 21^2 + 13^2 = 441 + 169 = 610 = F_15 = 610 [OK]
+  n= 8: F_9^2 + F_8^2 = 34^2 + 21^2 = 1156 + 441 = 1597 = F_17 = 1597 [OK]
+  n= 9: F_10^2 + F_9^2 = 55^2 + 34^2 = 3025 + 1156 = 4181 = F_19 = 4181 [OK]
+  n=10: F_11^2 + F_10^2 = 89^2 + 55^2 = 7921 + 3025 = 10946 = F_21 = 10946 [OK]
+  n=11: F_12^2 + F_11^2 = 144^2 + 89^2 = 20736 + 7921 = 28657 = F_23 = 28657 [OK]
+
+--- Special cases at n=3 and n=7 ---
+
+n=3: F_4^2 + F_3^2 = 3^2 + 2^2 = 9 + 4 = 13 = F_7
+  F_7 = 13 = 13 (prime!)
+  13 = sum of squares of consecutive Fibonacci primes (2,3)
+  13 is itself a Fibonacci prime
+
+n=7: F_8^2 + F_7^2 = 21^2 + 13^2 = 441 + 169 = 610 = F_15
+  F_15 = 610 = 2 * 5 * 61
+  610 = 2 * 5 * 61
+  So (forbidden number)^2 + 13^2 = 2 * 5 * 61 = F_15
+  Note: 61 is prime, and 2*5 = 10 = product of fundamental primes
+
+n=4: F_5^2 + F_4^2 = 5^2 + 3^2 = 25 + 9 = 34 = F_9
+  F_9 = 34 = 2 * 17
+
+Related identity: F_{n+1}^2 - F_n^2 = F_{n-1}*F_{n+2}
+  n=1: F_2^2 - F_1^2 = 0, F_0*F_3 = 0, match=True
+  n=2: F_3^2 - F_2^2 = 3, F_1*F_4 = 3, match=True
+  n=3: F_4^2 - F_3^2 = 5, F_2*F_5 = 5, match=True
+  n=4: F_5^2 - F_4^2 = 16, F_3*F_6 = 16, match=True
+  n=5: F_6^2 - F_5^2 = 39, F_4*F_7 = 39, match=True
+  n=6: F_7^2 - F_6^2 = 105, F_5*F_8 = 105, match=True
+  n=7: F_8^2 - F_7^2 = 272, F_6*F_9 = 272, match=True
+  n=8: F_9^2 - F_8^2 = 715, F_7*F_10 = 715, match=True
+  n=9: F_10^2 - F_9^2 = 1869, F_8*F_11 = 1869, match=True
+
+Cassini's identity: F_{n+1}*F_{n-1} - F_n^2 = (-1)^n
+  n= 1: F_2*F_0 - F_n^2 = -1 = (-1)^1 = -1
+  n= 2: F_3*F_1 - F_n^2 = 1 = (-1)^2 = 1
+  n= 3: F_4*F_2 - F_n^2 = -1 = (-1)^3 = -1
+  n= 4: F_5*F_3 - F_n^2 = 1 = (-1)^4 = 1
+  n= 5: F_6*F_4 - F_n^2 = -1 = (-1)^5 = -1
+  n= 6: F_7*F_5 - F_n^2 = 1 = (-1)^6 = 1
+  n= 7: F_8*F_6 - F_n^2 = -1 = (-1)^7 = -1
+  n= 8: F_9*F_7 - F_n^2 = 1 = (-1)^8 = 1
+  n= 9: F_10*F_8 - F_n^2 = -1 = (-1)^9 = -1
+  n=10: F_11*F_9 - F_n^2 = 1 = (-1)^10 = 1
+  n=11: F_12*F_10 - F_n^2 = -1 = (-1)^11 = -1
+
+========================================================================
+  12. QR COUNTS OF FUNDAMENTAL PRIMES = FIBONACCI SEQUENCE
+========================================================================
+
+For prime p, the number of quadratic residues mod p (excluding 0) is (p-1)/2.
+
+  p= 3: QR count = (p-1)/2 = 1 = F_1
+  p= 5: QR count = (p-1)/2 = 2 = F_3
+  p= 7: QR count = (p-1)/2 = 3 = F_4
+  p=11: QR count = (p-1)/2 = 5 = F_5
+  p=13: QR count = (p-1)/2 = 6
+  p=17: QR count = (p-1)/2 = 8 = F_6
+  p=19: QR count = (p-1)/2 = 9
+  p=23: QR count = (p-1)/2 = 11
+  p=29: QR count = (p-1)/2 = 14
+  p=31: QR count = (p-1)/2 = 15
+
+The QR counts for {3, 5, 7, 11} are {1, 2, 3, 5} = {F_1, F_3, F_4, F_5}
+This is NOT consecutive Fibonacci! The Fibonacci numbers are:
+  F_0=0, F_1=1, F_2=1, F_3=2, F_4=3, F_5=5, F_6=8, ...
+The QR counts 1, 2, 3, 5 correspond to indices 1 (or 2), 3, 4, 5
+
+But notice: (p-1)/2 for p = 3,5,7,11 gives 1,2,3,5
+The GAPS are: 1, 1, 2 (between 1-2, 2-3, 3-5)
+These gaps are themselves 1, 1, 2 = beginning of Fibonacci!
+
+Continuation: p=13 gives QR=6 (not Fibonacci)
+  F_5=5, F_6=8. So 6 is NOT Fibonacci. The pattern breaks at p=13.
+
+Alternative interpretation: QR counts as function of PRIME INDEX:
+  pi(3)=2nd prime: QR=1
+  pi(5)=3rd prime: QR=2
+  pi(7)=4th prime: QR=3
+  pi(11)=5th prime: QR=5
+  pi(13)=6th prime: QR=6 (not Fibonacci)
+  pi(17)=7th prime: QR=8 = F_6!
+  Verify: QR(17) = (17-1)/2 = 8
+  So F_6 = 8 reappears at p=17!
+
+Checking: (p-1)/2 = F_k for some k?
+  p=  3: QR=   1 = F_1 [FIBONACCI]
+  p=  5: QR=   2 = F_3 [FIBONACCI]
+  p=  7: QR=   3 = F_4 [FIBONACCI]
+  p= 11: QR=   5 = F_5 [FIBONACCI]
+  p= 13: QR=   6 (not Fibonacci)
+  p= 17: QR=   8 = F_6 [FIBONACCI]
+  p= 19: QR=   9 (not Fibonacci)
+  p= 23: QR=  11 (not Fibonacci)
+  p= 29: QR=  14 (not Fibonacci)
+  p= 31: QR=  15 (not Fibonacci)
+  p= 37: QR=  18 (not Fibonacci)
+  p= 41: QR=  20 (not Fibonacci)
+  p= 43: QR=  21 = F_8 [FIBONACCI]
+  p= 47: QR=  23 (not Fibonacci)
+
+========================================================================
+  13. COMPREHENSIVE IDENTITY TABLE AT FUNDAMENTAL INDICES
+========================================================================
+
+Master table: n, F_n, L_n, F_n*L_n=F_{2n}, F_n/L_n, gcd(F_n,L_n)
+
+  n        F_n        L_n         F_n*L_n          F_{2n} Match   gcd        F/L
+--------------------------------------------------------------------------------
+  0          0          2               0               0    OK     2   0.000000
+  1          1          1               1               1    OK     1   1.000000
+  2          1          3               3               3    OK     1   0.333333
+  3          2          4               8               8    OK     2   0.500000
+  4          3          7              21              21    OK     1   0.428571
+  5          5         11              55              55    OK     1   0.454545
+  6          8         18             144             144    OK     2   0.444444
+  7         13         29             377             377    OK     1   0.448276
+  8         21         47             987             987    OK     1   0.446809
+  9         34         76            2584            2584    OK     2   0.447368
+ 10         55        123            6765            6765    OK     1   0.447154
+ 11         89        199           17711           17711    OK     1   0.447236
+ 12        144        322           46368           46368    OK     2   0.447205
+ 13        233        521          121393          121393    OK     1   0.447217
+ 14        377        843          317811          317811    OK     1   0.447212
+ 15        610       1364          832040          832040    OK     2   0.447214
+ 16        987       2207         2178309         2178309    OK     1   0.447213
+ 17       1597       3571         5702887         5702887    OK     1   0.447214
+ 18       2584       5778        14930352        14930352    OK     2   0.447214
+ 19       4181       9349        39088169        39088169    OK     1   0.447214
+ 20       6765      15127       102334155       102334155    OK     1   0.447214
+
+========================================================================
+  14. F_n AND L_n MODULAR STRUCTURE
+========================================================================
+
+F_n mod 21 (period should be pi(21)):
+  pi(21) = 16
+  F_n mod 21: [0, 1, 1, 2, 3, 5, 8, 13, 0, 13, 13, 5, 18, 2, 20, 1] | [0, 1, 1, 2, 3]
+
+L_n mod 21:
+  L_n mod 21: [2, 1, 3, 4, 7, 11, 18, 8, 5, 13, 18, 10, 7, 17, 3, 20] | [2, 1, 3, 4, 7]
+
+Zeros of F_n mod 21 (i.e., 21 | F_n):
+  Positions: [0, 8]
+  alpha(21) = 8
+
+F_n mod 42:
+  pi(42) = 48
+  alpha(42) = 24
+
+L_n mod p for each fundamental prime p:
+  L_n mod  2 (period <= 3): [0, 1, 1] | [0, 1, 1]
+  L_n mod  3 (period <= 8): [2, 1, 0, 1, 1, 2, 0, 2] | [2, 1, 0]
+  L_n mod  5 (period <= 20): [2, 1, 3, 4, 2, 1, 3, 4, 2, 1, 3, 4, 2, 1, 3, 4, 2, 1, 3, 4] | [2, 1, 3]
+  L_n mod  7 (period <= 16): [2, 1, 3, 4, 0, 4, 4, 1, 5, 6, 4, 3, 0, 3, 3, 6] | [2, 1, 3]
+  L_n mod 11 (period <= 10): [2, 1, 3, 4, 7, 0, 7, 7, 3, 10] | [2, 1, 3]
+
+========================================================================
+  15. 21 IN THE FIBONACCI-LUCAS LANDSCAPE
+========================================================================
+
+21 = F_8 = 3*7 = L_2 * L_4
+The index 8 = 2^3 (power of 2)
+
+All Fibonacci numbers that factor into only fundamental primes {2,3,5,7,11}:
+(i.e., 'smooth' Fibonacci numbers w.r.t. our prime set)
+  F_ 3 =          2 = 2
+  F_ 4 =          3 = 3
+  F_ 5 =          5 = 5
+  F_ 6 =          8 = 2^3
+  F_ 8 =         21 = 3 * 7
+  F_10 =         55 = 5 * 11
+  F_12 =        144 = 2^4 * 3^2
+
+All Lucas numbers that factor into only fundamental primes:
+  L_ 0 =          2 = 2
+  L_ 2 =          3 = 3
+  L_ 3 =          4 = 2^2
+  L_ 4 =          7 = 7
+  L_ 5 =         11 = 11
+  L_ 6 =         18 = 2 * 3^2
+
+Fibonacci numbers divisible by 21:
+  F_ 8 = 21 = 21 * 1
+  F_16 = 987 = 21 * 47
+  F_24 = 46368 = 21 * 2208
+  F_32 = 2178309 = 21 * 103729
+  F_40 = 102334155 = 21 * 4873055
+  F_48 = 4807526976 = 21 * 228929856
+
+Pattern: 21 | F_n iff 8 | n (since alpha(21) = 8)
+  alpha(21) = 8
+  Verification: n=8,16,24,32,40,... all divisible by 8? YES
+
+========================================================================
+  16. phi, sqrt(5), AND CONNECTIONS TO QUADRATIC RESIDUES
+========================================================================
+
+phi = (1 + sqrt(5))/2
+phi^2 = phi + 1 = (3 + sqrt(5))/2
+phi^3 = 2*phi + 1 = (4 + 2*sqrt(5))/2 = 2 + sqrt(5)
+phi^4 = 3*phi + 2 = (7 + 3*sqrt(5))/2
+phi^5 = 5*phi + 3 = (8 + 4*sqrt(5))/2... wait:
+
+phi^n = F_n * phi + F_{n-1}
+Verification:
+  phi^ 1 =        1.618034, F_1*phi + F_0 = 1*phi + 0 =        1.618034, diff = 0.00e+00
+  phi^ 2 =        2.618034, F_2*phi + F_1 = 1*phi + 1 =        2.618034, diff = 0.00e+00
+  phi^ 3 =        4.236068, F_3*phi + F_2 = 2*phi + 1 =        4.236068, diff = 0.00e+00
+  phi^ 4 =        6.854102, F_4*phi + F_3 = 3*phi + 2 =        6.854102, diff = 8.88e-16
+  phi^ 5 =       11.090170, F_5*phi + F_4 = 5*phi + 3 =       11.090170, diff = 1.78e-15
+  phi^ 6 =       17.944272, F_6*phi + F_5 = 8*phi + 5 =       17.944272, diff = 3.55e-15
+  phi^ 7 =       29.034442, F_7*phi + F_6 = 13*phi + 8 =       29.034442, diff = 7.11e-15
+  phi^ 8 =       46.978714, F_8*phi + F_7 = 21*phi + 13 =       46.978714, diff = 1.42e-14
+  phi^ 9 =       76.013156, F_9*phi + F_8 = 34*phi + 21 =       76.013156, diff = 2.84e-14
+  phi^10 =      122.991869, F_10*phi + F_9 = 55*phi + 34 =      122.991869, diff = 4.26e-14
+  phi^11 =      199.005025, F_11*phi + F_10 = 89*phi + 55 =      199.005025, diff = 5.68e-14
+
+Fibonacci representation of phi powers -- coefficients are Fibonacci!
+phi^n = F_n * phi + F_{n-1}
+So phi^8 = F_8 * phi + F_7 = 21*phi + 13
+  = 21 * 1.618034 + 13 = 46.978714
+  phi^8 = 46.978714
+
+This means the FORBIDDEN NUMBER 21 is the 'phi-coefficient' of phi^8.
+And 13 (= F_7, prime) is the constant term.
+
+The L_n connection: L_n = F_n * phi + F_n * psi ... actually:
+phi^n + psi^n = L_n (where psi = (1-sqrt(5))/2 = -1/phi)
+phi^n - psi^n = F_n * sqrt(5)
+
+So L_n is the 'cosine part' and F_n*sqrt(5) is the 'sine part' of phi^n.
+For n=8:
+  phi^8 + psi^8 = L_8 = 47 = 47
+  phi^8 - psi^8 = F_8 * sqrt(5) = 21 * sqrt(5) = 46.957428
+  Check: 47.000000 vs 47
+  Check: 46.957428 vs 46.957428
+
+========================================================================
+  17. POTENTIAL TOURNAMENT COMPUTATION SPEEDUPS VIA FIBONACCI/LUCAS
+========================================================================
+
+Question: can Fibonacci/Lucas structure speed up tournament computations?
+
+Observation 1: Matrix exponentiation
+  The transfer matrix for path counting uses repeated squaring.
+  [[1,1],[1,0]]^n = [[F_{n+1}, F_n], [F_n, F_{n-1}]]
+  Verification:
+  n=3: [[F_4,F_n],[F_n,F_2]] = [[3,2],[2,1]]
+  n=5: [[F_6,F_n],[F_n,F_4]] = [[8,5],[5,3]]
+  n=7: [[F_8,F_n],[F_n,F_6]] = [[21,13],[13,8]]
+  n=8: [[F_9,F_n],[F_n,F_7]] = [[34,21],[21,13]]
+  n=11: [[F_12,F_n],[F_n,F_10]] = [[144,89],[89,55]]
+
+Observation 2: Doubling formulas for fast computation
+  F_{2n} = F_n * (2*F_{n+1} - F_n)
+  F_{2n+1} = F_n^2 + F_{n+1}^2
+  These allow O(log n) Fibonacci computation.
+  For tournament transfer matrices, similar doubling applies!
+
+Observation 3: Eigenvalues of circulant tournament matrices
+  For Paley tournament T_p (circulant on QR set),
+  the adjacency matrix eigenvalues involve Gauss sums.
+  The transfer matrix eigenvalues are polynomials in these.
+  At p=7: eigenvalues of adjacency matrix are {3, (-1+/-sqrt(-7))/2}
+  Note: 7 = L_4 (Lucas prime) and sqrt(-7) appears in Gauss sum.
+
+Observation 4: Pisano-period batch processing
+  When computing H(T) mod p, we can use the Pisano period structure.
+  F_n mod p has period pi(p):
+    pi( 2) =   3
+    pi( 3) =   8
+    pi( 5) =  20
+    pi( 7) =  16
+    pi(11) =  10
+  If transfer matrix entries are Fibonacci-like, these periods
+  give modular reduction shortcuts.
+
+Observation 5: Binet-type closed forms for path counts
+  Just as F_n = (phi^n - psi^n)/sqrt(5),
+  the number of Hamiltonian paths through a specific structure
+  may have a similar closed form using eigenvalues.
+  For the n=7 Paley tournament with 3-fold symmetry,
+  H(T_7) = 189 = 27 * 7 = 3^3 * 7.
+  189 = 3^3 * 7
+  189 as Fibonacci? No. As Lucas? L_? = 189? NO
+
+  189 = 9 * 21 = 9 * F_8 = 3^2 * F_8
+  189 = F_8 * L_2^2 (since L_2 = 3)
+  189 = 3 * 63 = 3 * 7 * 9 = L_2 * L_4 * L_2^2 = L_2^3 * L_4
+
+========================================================================
+  18. WHERE DO TOURNAMENT CONSTANTS APPEAR IN F/L SEQUENCES?
+========================================================================
+
+Key constants from tournament theory:
+         1          = F_2, L_1  | H(T_3) = n! for n=1
+         3   = F_4, L_2, PRIME  | F_4 = L_2, H(T_3) for regular
+         5        = F_5, PRIME  | F_5, n=5 vertex count
+         7        = L_4, PRIME  | L_4, forbidden prime
+        11        = L_5, PRIME  | L_5, Paley cutoff
+        13        = F_7, PRIME  | F_7
+        21               = F_8  | F_8 = FORBIDDEN NUMBER
+        42           (not F/L)  | 2*21, 'answer to everything'
+        47        = L_8, PRIME  | L_8
+        55              = F_10  | F_10 = 5*11 = F_5*L_5
+        89       = F_11, PRIME  | F_11 (prime, F_p for p=11!)
+       189           (not F/L)  | H(T_7)
+       987              = F_16  | F_16 = F_8*L_8 = 21*47
+      2310           (not F/L)  | primorial(5) = 2*3*5*7*11
+     95095           (not F/L)  | H(T_11)
+
+89 = F_11: The 11th Fibonacci number is prime!
+  11 is our Paley cutoff, and F_11 = 89 is the largest single-digit-index Fibonacci prime.
+
+55 = F_10 = 5 * 11 = F_5 * L_5:
+  Verify: F_10 = 55, F_5 * L_5 = 5 * 11 = 55
+  But F_5 * L_5 = F_10 follows from the doubling formula!
+  55 = product of two fundamental primes (5 and 11)
+
+95095 = H(T_11):
+  95095 = 5 * 7 * 11 * 13 * 19
+  = 5 * 7 * 11 * 13 * 19
+  Contains three fundamental primes (5, 7, 11) plus 13 (= F_7) and 19
+  95095 / (5*7*11) = 247 = 13 * 19
+  95095 / 2310 = 41.1667 (not integer)
+
+========================================================================
+  19. GCD PROPERTIES: gcd(F_m, F_n) = F_{gcd(m,n)}
+========================================================================
+
+Fundamental: gcd(F_m, F_n) = F_{gcd(m,n)}
+Verification:
+  gcd(F_2, F_3) = gcd(1, 2) = 1 = F_1 = 1
+  gcd(F_2, F_4) = gcd(1, 3) = 1 = F_2 = 1
+  gcd(F_2, F_5) = gcd(1, 5) = 1 = F_1 = 1
+  gcd(F_2, F_6) = gcd(1, 8) = 1 = F_2 = 1
+  gcd(F_2, F_7) = gcd(1, 13) = 1 = F_1 = 1
+  gcd(F_2, F_8) = gcd(1, 21) = 1 = F_2 = 1
+  gcd(F_2, F_9) = gcd(1, 34) = 1 = F_1 = 1
+  gcd(F_2, F_10) = gcd(1, 55) = 1 = F_2 = 1
+  gcd(F_3, F_4) = gcd(2, 3) = 1 = F_1 = 1
+  gcd(F_3, F_5) = gcd(2, 5) = 1 = F_1 = 1
+  gcd(F_3, F_6) = gcd(2, 8) = 2 = F_3 = 2
+  gcd(F_3, F_7) = gcd(2, 13) = 1 = F_1 = 1
+  gcd(F_3, F_8) = gcd(2, 21) = 1 = F_1 = 1
+  gcd(F_3, F_9) = gcd(2, 34) = 2 = F_3 = 2
+  gcd(F_3, F_10) = gcd(2, 55) = 1 = F_1 = 1
+  gcd(F_4, F_5) = gcd(3, 5) = 1 = F_1 = 1
+  gcd(F_4, F_6) = gcd(3, 8) = 1 = F_2 = 1
+  gcd(F_4, F_7) = gcd(3, 13) = 1 = F_1 = 1
+  gcd(F_4, F_8) = gcd(3, 21) = 3 = F_4 = 3
+  gcd(F_4, F_9) = gcd(3, 34) = 1 = F_1 = 1
+  gcd(F_4, F_10) = gcd(3, 55) = 1 = F_2 = 1
+  gcd(F_5, F_6) = gcd(5, 8) = 1 = F_1 = 1
+  gcd(F_5, F_7) = gcd(5, 13) = 1 = F_1 = 1
+  gcd(F_5, F_8) = gcd(5, 21) = 1 = F_1 = 1
+  gcd(F_5, F_9) = gcd(5, 34) = 1 = F_1 = 1
+  gcd(F_5, F_10) = gcd(5, 55) = 5 = F_5 = 5
+  gcd(F_6, F_7) = gcd(8, 13) = 1 = F_1 = 1
+  gcd(F_6, F_8) = gcd(8, 21) = 1 = F_2 = 1
+  gcd(F_6, F_9) = gcd(8, 34) = 2 = F_3 = 2
+  gcd(F_6, F_10) = gcd(8, 55) = 1 = F_2 = 1
+  gcd(F_7, F_8) = gcd(13, 21) = 1 = F_1 = 1
+  gcd(F_7, F_9) = gcd(13, 34) = 1 = F_1 = 1
+  gcd(F_7, F_10) = gcd(13, 55) = 1 = F_1 = 1
+  gcd(F_8, F_9) = gcd(21, 34) = 1 = F_1 = 1
+  gcd(F_8, F_10) = gcd(21, 55) = 1 = F_2 = 1
+
+Consequence for F_8 = 21:
+  gcd(F_8, F_k) = F_{gcd(8,k)}
+  gcd(F_8, F_4) = F_4 = 3  (since gcd(8,4)=4)
+  gcd(F_8, F_6) = F_2 = 1  (since gcd(8,6)=2)
+  gcd(F_8, F_12) = F_4 = 3  (since gcd(8,12)=4)
+  gcd(F_8, F_16) = F_8 = 21 (since gcd(8,16)=8)
+
+So 21 and 3 are deeply linked: gcd(21, F_k) is either 1, 1, 3, or 21
+depending on whether gcd(8,k) is 1, 2, 4, or 8.
+
+========================================================================
+  20. SYNTHESIS: THE FIBONACCI-LUCAS-PRIME STRUCTURAL MAP
+========================================================================
+
+SUMMARY OF KEY FINDINGS:
+
+1. FUNDAMENTAL PRIMES IN LUCAS SEQUENCE (0-indexed):
+   L_0=2, L_2=3, L_4=7, L_5=11
+   These are the first four PRIME Lucas numbers
+   5 = F_5 is Fibonacci, not Lucas
+
+2. THE FORBIDDEN NUMBER:
+   21 = F_8 = 3 * 7 = L_2 * L_4
+   21 is the product of two consecutive Lucas primes (the 2nd and 3rd)
+   Its Fibonacci index 8 = 2^3 is a power of 2
+   L_8 = 47 (prime), and F_8 * L_8 = F_16 = 987 = 3 * 7 * 47
+
+3. THE GOLDEN CHAIN:
+   phi^8 = 21*phi + 13  (forbidden * golden ratio + prime)
+   F_n * L_n = F_{2n}  (doubling)
+   L_n/F_n -> sqrt(5)  (convergence)
+   Q(1/sqrt(5)) = phi^2  (Cayley transform)
+
+4. QR COUNTS:
+   QR(3,5,7,11) = (1,2,3,5) = (F_1, F_3, F_4, F_5)
+   Pattern breaks at p=13: QR=6 (not Fibonacci)
+   Resumes at p=17: QR=8 = F_6
+
+5. PISANO PERIODS for fundamental primes:
+   pi( 2) =   3
+   pi( 3) =   8
+   pi( 5) =  20
+   pi( 7) =  16
+   pi(11) =  10
+   Product pi(2)*pi(3)*pi(5)*pi(7)*pi(11) = 76800
+   LCM = 240
+
+6. ENTRY POINTS for fundamental primes:
+   alpha( 2) = 3
+   alpha( 3) = 4
+   alpha( 5) = 5
+   alpha( 7) = 8
+   alpha(11) = 10
+   alpha(21) = 8 (= alpha(3)*alpha(7)/gcd... = lcm(4,8) = 8)
+
+7. F_p IS PRIME for p in {2,3,5,7,11,13}:
+   All six fundamental+ primes yield prime Fibonacci numbers
+   First failure: F_19 = 4181 = 37 * 113
+
+8. TOURNAMENT CONNECTIONS:
+   H(T_7) = 189 = 3^3 * 7 = L_2^3 * L_4 = 9 * F_8
+   H(T_11) = 95095 = 5 * 7 * 11 * 13 * 19
+                    = F_5 * L_4 * L_5 * F_7 * 19
+   The prime 19 is NOT Fibonacci or Lucas (but F_8 + L_1 = 21 + (-1) = 20... no)
+   19 = F_? or L_?: neither
+   But: 19 = L_4 + L_6 = 7 + 18... L_6=18=18, so 7+18=25 no
+   19 = F_8 - 2 = 21 - 2 (forbidden minus smallest prime)
+
+9. DEEP IDENTITY WEB:
+   F_8 = 21 (forbidden)
+   L_8 = 47 (prime)
+   F_8 * L_8 = 987 = F_16
+   L_8^2 - 5*F_8^2 = 2209 - 2205 = 4 = (-1)^8 * 4
+   F_7^2 + F_8^2 = 169 + 441 = 610 = F_15 = 2*5*61
+   F_8^2 + F_9^2 = 441 + 1156 = 1597 = F_17 (PRIME!)
+   Verify F_17 = 1597, is_prime = True
+
+10. NO WALL-SUN-SUN PRIMES among fundamental primes (or any known prime)
+    This means p^2 never divides F_{p-(p|5)} for our primes
+    The Fibonacci divisibility by fundamental primes is 'exactly first order'
