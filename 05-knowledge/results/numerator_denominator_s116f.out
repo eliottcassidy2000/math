@@ -1,0 +1,134 @@
+
+  NUMERATOR + DENOMINATOR = THE NUMBER ITSELF
+
+======================================================================
+
+  The Cayley address of n: x_n = (n-1)/(n+1)
+
+  In reduced form (a/b with gcd(a,b)=1):
+  If n is even: gcd(n-1, n+1) = 1 (both odd). Address = (n-1)/(n+1).
+  If n is odd:  gcd(n-1, n+1) = 2 (both even). Address = (n-1)/2 / (n+1)/2.
+
+  n    address     reduced      a    b    a+b    a+b = n?
+  ------------------------------------------------------------
+    2   (1/3)     1/3          1    3     4    
+    3   (2/4)     1/2          1    2     3    YES
+    4   (3/5)     3/5          3    5     8    
+    5   (4/6)     2/3          2    3     5    YES
+    6   (5/7)     5/7          5    7    12    
+    7   (6/8)     3/4          3    4     7    YES
+    8   (7/9)     7/9          7    9    16    
+    9   (8/10)     4/5          4    5     9    YES
+   10   (9/11)     9/11         9   11    20    
+   11   (10/12)     5/6          5    6    11    YES
+   12   (11/13)     11/13        11   13    24    
+   13   (12/14)     6/7          6    7    13    YES
+   14   (13/15)     13/15        13   15    28    
+   15   (14/16)     7/8          7    8    15    YES
+   16   (15/17)     15/17        15   17    32    
+   17   (16/18)     8/9          8    9    17    YES
+   18   (17/19)     17/19        17   19    36    
+   19   (18/20)     9/10         9   10    19    YES
+   20   (19/21)     19/21        19   21    40    
+   21   (20/22)     10/11        10   11    21    YES
+   22   (21/23)     21/23        21   23    44    
+   23   (22/24)     11/12        11   12    23    YES
+   24   (23/25)     23/25        23   25    48    
+   25   (24/26)     12/13        12   13    25    YES
+   26   (25/27)     25/27        25   27    52    
+   27   (26/28)     13/14        13   14    27    YES
+   28   (27/29)     27/29        27   29    56    
+   29   (28/30)     14/15        14   15    29    YES
+   30   (29/31)     29/31        29   31    60    
+
+  IT WORKS FOR EVERY ODD n.
+
+  PROOF: If n is odd, the reduced form is (n-1)/2 over (n+1)/2.
+  Sum = (n-1)/2 + (n+1)/2 = n. QED.
+
+  For EVEN n: the address is already reduced as (n-1)/(n+1).
+  Sum = (n-1) + (n+1) = 2n, not n.
+
+  So: the Cayley address of an ODD number n has the property
+  that its reduced numerator and denominator SUM TO n.
+
+
+  THE FORBIDDEN NUMBERS
+  ----------------------------------------
+
+  n=7:  address = 6/8 = 3/4.  3 + 4 = 7. YES.
+  n=21: address = 20/22 = 10/11. 10 + 11 = 21. YES.
+
+  Both forbidden numbers are odd. Both have this property.
+  The forbidden number IS the sum of the parts of its own address.
+
+  More: for n=7, the address is 3/4.
+  3 = the curvature quantum (smallest odd cycle).
+  4 = 2^2 (the first power of 2 beyond the base).
+  The forbidden number 7 = curvature + binary square.
+
+  For n=21, the address is 10/11.
+  10 = 2*5 (the fifth even number).
+  11 = the third Paley prime.
+  The forbidden number 21 = pentagonal even + Paley prime.
+
+
+  THE DEEPER PATTERN: WHAT a AND b ARE
+  ----------------------------------------
+
+  For odd n: a = (n-1)/2, b = (n+1)/2.
+  a = the number of elements BELOW n/2.
+  b = the number of elements ABOVE n/2 (including n/2 rounded up).
+  a + b = n.
+
+  The Cayley address in reduced form is a/b = (n-1)/(n+1) * 1/1
+  = the ratio of 'below half' to 'above half'.
+
+  For a tournament on n vertices:
+  a = (n-1)/2 = the out-degree of a regular tournament vertex
+  b = (n+1)/2 = the in-degree + 1 of a regular vertex
+
+  So the Cayley address of a regular tournament size is
+  out-degree / (in-degree + 1) = the COMPETITIVENESS RATIO.
+
+
+  THE MUSICAL INTERVALS OF ODD NUMBERS
+  ----------------------------------------
+
+  The Cayley address a/b of odd n has a+b = n.
+  Q(a/b) = (a+b+b)/(b+a-a)... wait, let me just compute Q(a/b).
+  Q(a/b) = (1+a/b)/(1-a/b) = (b+a)/(b-a) = n/(b-a).
+
+  For odd n: b-a = (n+1)/2 - (n-1)/2 = 1.
+  So Q(a/b) = n/1 = n. (Of course — the address of n gives n.)
+
+  But the MUSICAL INTERVAL at the address:
+  Q(a/b) = n. So the 'interval' is n:1.
+  n=3: interval 3:1 = perfect twelfth (octave + fifth)
+  n=5: interval 5:1 = major third + two octaves
+  n=7: interval 7:1 = the 'harmonic seventh' + two octaves
+  n=11: interval 11:1 = the 'undecimal tritone' + three octaves
+
+  The FORBIDDEN numbers 7 and 21 correspond to:
+  7:1 = the seventh harmonic (the 'barbershop seventh')
+  21:1 = the twenty-first harmonic
+
+  The seventh harmonic is the FIRST harmonic that doesn't
+  fit neatly into Western tuning. It's 31 cents flat of
+  the minor seventh (9/5). It sounds 'out of tune'.
+
+  THE FORBIDDEN NUMBER 7 IS THE FIRST 'OUT OF TUNE' HARMONIC.
+
+
+  THE SELF-ENCODING PROPERTY
+  ----------------------------------------
+
+  For odd n, the Cayley address is (n-1)/2 over (n+1)/2.
+  The ADDRESS ENCODES THE NUMBER in its own numerator and denominator.
+  n = numerator + denominator.
+
+  This is SELF-REFERENCE.
+  The Cayley address of 7 is 3/4.
+  3 and 4 are the building blocks.
+  Their sum is the thing they build.
+  The 
