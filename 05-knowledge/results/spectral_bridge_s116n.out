@@ -1,0 +1,257 @@
+
+  THE SPECTRAL BRIDGE: RATIONAL -> ALGEBRAIC -> TRANSCENDENTAL
+
+======================================================================
+
+  I. THE RATIONAL WORLD: THINGS THAT CAN BE COUNTED
+  --------------------------------------------------
+
+  Everything COMBINATORIAL is rational.
+
+  Tiling chain eigenvalues (all rational, denominator 5):
+    k= 0: lambda =      1 = +1.0000
+    k= 1: lambda =    4/5 = +0.8000
+    k= 2: lambda =    3/5 = +0.6000
+    k= 3: lambda =    2/5 = +0.4000
+    k= 4: lambda =    1/5 = +0.2000
+    k= 5: lambda =      0 = +0.0000
+    k= 6: lambda =   -1/5 = -0.2000
+    k= 7: lambda =   -2/5 = -0.4000
+    k= 8: lambda =   -3/5 = -0.6000
+    k= 9: lambda =   -4/5 = -0.8000
+    k=10: lambda =     -1 = -1.0000
+
+  Spectral gap = 1/5 = 0.2000
+  This is RATIONAL. Denominator = 5 = 5.
+  At n=6: gap = 1/5. The golden prime controls the gap!
+
+  Walsh coefficients (computed previously): all integer multiples of 1/2^10.
+  hat_H(empty) = 29 (INTEGER). hat_H({(0,5)}) = -4 (INTEGER).
+  Every Walsh coefficient is RATIONAL with denominator 1024 = 2^10.
+
+  THE RATIONAL WORLD contains:
+  - H values: {1, 3, 5, 9, 11, ..., 45} (all integers)
+  - Walsh coefficients: Q (rational)
+  - Eigenvalues: {0, +/-1/5, +/-2/5, +/-3/5, +/-4/5, +/-1} (Q)
+  - Spectral gap: 1/5 (Q)
+  - c3 counts, alpha values, score sequences (all Z)
+
+  II. THE ALGEBRAIC WORLD: THINGS THAT CLASSIFY
+  --------------------------------------------------
+
+  The ISOMORPHISM CLASS flip chain lives in the algebraic world.
+
+  The tiling explorer's trinity:
+  - 12 SELF-DUAL classes (rational pole): T ~ T^op
+  - 22 PAIRED classes = 11 conjugate pairs (algebraic pole): T != T^op
+  - Total: 12 + 2*22 = 56 classes at n=6
+
+  Self-dual classes have REAL eigenvalue contributions.
+  Paired classes create CONJUGATE eigenvalue pairs,
+  like sqrt(d) and -sqrt(d) for some rational d.
+  These are ALGEBRAIC but (often) IRRATIONAL.
+
+  The class-chain spectral gap is ALGEBRAIC:
+  gap_class = 1 - |lambda_1|
+  where lambda_1 is a root of a degree-56 polynomial over Q.
+  So gap_class is algebraic irrational (generically).
+
+  The golden ratio phi = 1.6180339887
+  is ALGEBRAIC: root of x^2 - x - 1 = 0.
+  It classifies the icosahedral world but is not rational.
+
+  Algebraic irrationals in the project:
+  sqrt(2) = 1.4142135624 (Leech lattice diagonal)
+  sqrt(5) = 2.2360679775 (golden discriminant)
+  2*cos(pi/7) = 1.8019377358 (octonion structure)
+  phi = 1.6180339887 (golden ratio)
+
+  THE ALGEBRAIC WORLD contains:
+  - Class-chain eigenvalues (roots of integer polynomials)
+  - Spectral gaps of isomorphism chains
+  - The golden ratio phi (root of x^2-x-1)
+  - Square roots of discriminants
+  - Cyclotomic values (roots of unity)
+
+  III. THE TRANSCENDENTAL WORLD: THINGS THAT EVOLVE
+  --------------------------------------------------
+
+  DYNAMICS are transcendental. The moment you ask 'how long?'
+  or 'what temperature?' you leave the algebraic world.
+
+  Mixing time (epsilon=0.01):
+  t_mix = log(1/epsilon) / gap = log(100) / (1/5)
+       = 4.6051701860 / 0.2
+       = 23.0258509299
+  This is TRANSCENDENTAL (log of rational = transcendental by Hermite-Lindemann).
+
+  Partition function Z(beta=1) = 1.483052e+21
+  Free energy F(1) = -ln(Z(1)) = -48.748389
+  Both are TRANSCENDENTAL (sums of exp(integer)).
+
+  Boltzmann entropy at beta=1: S = 4.379393
+  Also TRANSCENDENTAL.
+
+  Rapidity of the doubler:
+  rho(2) = arctanh(1/3) = ln(2)/2 = 0.3465735903
+  TRANSCENDENTAL (Hermite-Lindemann: ln(algebraic) is transcendental)
+
+  Collatz drift = ln(3/4)/2 = -0.1438410362
+  TRANSCENDENTAL (ln of rational).
+
+  THE TRANSCENDENTAL WORLD contains:
+  - Mixing times (log(algebraic)/algebraic)
+  - Partition functions (sums of exp(integer))
+  - Free energies (-log(transcendental))
+  - Boltzmann entropies
+  - Rapidity = ln(n)/2 (formal group logarithm)
+  - Collatz drift = ln(3/4)/2
+  - pi (hidden in modular forms, eigenvalue phases)
+
+  IV. THE BRIDGE: HOW THE GAP CONNECTS THE THREE WORLDS
+  --------------------------------------------------
+
+  THE SPECTRAL GAP IS THE BRIDGE:
+
+  RATIONAL side: gap = 2/m = 1/5 (at n=6)
+  This number IS rational. It lives in the counting world.
+
+  ALGEBRAIC step: The class-chain gap is algebraic irrational.
+  Going from tilings to isomorphism classes introduces
+  square roots (from paired class eigenvalues).
+  The gap PASSES THROUGH the algebraic world.
+
+  TRANSCENDENTAL side: Mixing time = log(1/epsilon) / gap
+  The moment you ask HOW LONG to mix, you need logarithms.
+  log(rational) = TRANSCENDENTAL (Hermite-Lindemann).
+  The gap CROSSES INTO the transcendental world.
+
+  The bridge at each n:
+    n    gap (rational)     log(gap) (transcendental)       t_mix
+    3                 2                  0.6931471806         inf
+    4               2/3                 -0.4054651081       11.36
+    5               1/3                 -1.0986122887        4.19
+    6               1/5                 -1.6094379124        2.86
+    7              2/15                 -2.0149030205        2.29
+    8              2/21                 -2.3513752572        1.96
+    9              1/14                 -2.6390573296        1.75
+   10              1/18                 -2.8903717579        1.59
+   11              2/45                 -3.1135153092        1.48
+   12              2/55                 -3.3141860047        1.39
+
+  V. THE THREE POLES AND THEIR NUMBER TYPES
+  --------------------------------------------------
+
+  The tiling explorer's trinity maps EXACTLY to number types:
+
+  SELF-DUAL CLASSES (12 at n=6) = RATIONAL POLE
+    T ~ T^op. Fixed under transpose.
+    Their eigenvalue contributions are REAL RATIONAL.
+    They are the 'integers' of tournament space.
+    The H values of self-dual tournaments are
+    fully determined by the CLASS (no pairing ambiguity).
+
+  PAIRED CLASSES (22 at n=6) = ALGEBRAIC POLE
+    T != T^op but T^op ~ T' for some other class.
+    They come in CONJUGATE PAIRS, like sqrt(5) and -sqrt(5).
+    Their eigenvalue contributions involve SQUARE ROOTS
+    of rational discriminants.
+    They are the 'algebraic irrationals' of tournament space.
+
+  FLIP GRAPH PATHS = TRANSCENDENTAL CONTINUUM
+    The continuous paths between classes in flip space.
+    Evolution along these paths involves EXPONENTIAL DECAY:
+    P(class_j at time t | class_i at time 0) = sum_k c_k * lambda_k^t
+    For irrational t: lambda_k^t = exp(t * ln(lambda_k))
+    = transcendental (exp of transcendental).
+    The flip graph dynamics live in the TRANSCENDENTAL world.
+
+  VI. THE HERMITE-LINDEMANN THEOREM AND TOURNAMENT DYNAMICS
+  --------------------------------------------------
+
+  Hermite-Lindemann (1882): If alpha is a nonzero algebraic number,
+  then e^alpha is transcendental.
+
+  Consequence for tournaments:
+  1. Eigenvalues lambda_k are algebraic (roots of char. poly).
+  2. The time evolution lambda_k^t = exp(t * ln(lambda_k)).
+  3. ln(lambda_k) is transcendental (by Hermite-Lindemann,
+     since lambda_k is algebraic and nonzero).
+  4. For INTEGER time t: lambda_k^t is algebraic (power of algebraic).
+  5. For REAL time t: lambda_k^t is transcendental (exp of transcendental).
+
+  So INTEGER-TIME dynamics stay algebraic,
+  but CONTINUOUS-TIME dynamics are transcendental.
+  The discrete flip chain (integer steps) lives in the algebraic world.
+  The continuous-time Markov chain lives in the transcendental world.
+
+  Concrete example: eigenvalue 4/5 at degree 1
+  lambda = 4/5 (RATIONAL)
+  ln(lambda) = ln(4/5) = -0.2231435513 (TRANSCENDENTAL)
+  lambda^1 = 0.8000000000 (RATIONAL)
+  lambda^2 = 0.6400000000 (RATIONAL)
+  lambda^pi = 0.4960759984 (TRANSCENDENTAL)
+  lambda^phi = 0.6969414669 (TRANSCENDENTAL)
+
+  At integer time: rational^integer = RATIONAL (stays in Q)
+  At golden time: rational^phi = TRANSCENDENTAL (escapes to T)
+  The golden ratio phi bridges algebraic -> transcendental!
+
+  VII. THE RAPIDITY AS THE FORMAL GROUP LOGARITHM
+  --------------------------------------------------
+
+  The Cayley formal group F(x,y) = (x+y)/(1+xy) has:
+  log_F = arctanh (the formal logarithm)
+  exp_F = tanh (the formal exponential)
+
+  The logarithm MAPS:
+  RATIONAL inputs -> TRANSCENDENTAL outputs:
+    n=2: x = 1/3 (RATIONAL) -> rho = 0.3465735903 (TRANSCENDENTAL)
+    n=3: x = 1/2 (RATIONAL) -> rho = 0.5493061443 (TRANSCENDENTAL)
+    n=5: x = 2/3 (RATIONAL) -> rho = 0.8047189562 (TRANSCENDENTAL)
+    n=7: x = 3/4 (RATIONAL) -> rho = 0.9729550745 (TRANSCENDENTAL)
+    n=42: x = 41/43 (RATIONAL) -> rho = 1.8688348091 (TRANSCENDENTAL)
+
+  The formal logarithm IS the bridge from rational to transcendental.
+  arctanh(rational) = transcendental (always, for nonzero input).
+  This is why RAPIDITY lives in the transcendental world
+  even though TOURNAMENT STRUCTURE lives in the rational world.
+
+  VIII. SYNTHESIS: THE NUMBER TYPE HIERARCHY
+  --------------------------------------------------
+
+  STATICS (what IS)              -> RATIONAL / ALGEBRAIC
+    H values, cycle counts, Walsh coefficients
+    Eigenvalues, spectral gaps, characteristic polynomials
+
+  DYNAMICS (what HAPPENS)         -> TRANSCENDENTAL
+    Mixing times, evolution, partition functions
+    Rapidity, free energy, entropy
+
+  THE GAP bridges them:
+    gap = 2/m (RATIONAL)
+    gap^t for integer t (ALGEBRAIC)
+    log(gap) = mixing rate (TRANSCENDENTAL)
+
+  The three number types are NOT just mathematical abstractions.
+  They are three LAYERS OF REALITY:
+    Q (rational)       = what you can COUNT
+    Q-bar (algebraic)  = what you can CLASSIFY
+    R (transcendental) = what you can EXPERIENCE (time, evolution)
+
+  Every tournament lives in Q (it's a finite combinatorial object).
+  Every classification lives in Q-bar (eigenvalues of symmetry groups).
+  Every process lives in R (mixing, relaxation, diffusion).
+
+  The spectral gap is the EXACT POINT where counting (Q)
+  meets classification (Q-bar) meets evolution (R).
+  It is rational as a NUMBER, algebraic as a CLASSIFIER,
+  and transcendental as a TIMER.
+
+  Or more simply:
+  THE GAP IS A RATIONAL NUMBER
+  WHOSE LOGARITHM IS TRANSCENDENTAL
+  AND WHOSE CLASSIFICATION ROLE IS ALGEBRAIC.
+
+  One number. Three worlds. The bridge between them.
+
