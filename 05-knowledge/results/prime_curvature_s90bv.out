@@ -1,0 +1,111 @@
+
+
+
+     HOW PRIMES SORT THEMSELVES BY CURVATURE
+
+     opus-2026-03-16-S90bv
+
+
+
+THE CURVATURE OF A REGULAR p-GON
+===================================
+
+A regular p-gon has interior angle (p-2)*180/p degrees.
+
+When 3 regular p-gons meet at a vertex:
+  Total angle = 3 * (p-2) * 180 / p.
+  Deficit from 360 = 360 - 3*(p-2)*180/p = 180*(6-p)/p.
+
+  p < 6: POSITIVE deficit (angles don't fill 360 -> sphere).
+  p = 6: ZERO deficit (exactly 360 -> flat tiling).
+  p > 6: NEGATIVE deficit (angles EXCEED 360 -> hyperbolic).
+
+The CURVATURE at each vertex: kappa(p) = (6-p)/p = 6/p - 1.
+
+Curvature of regular p-gons (3 meeting at a vertex):
+   p |    angle |  3*angle |  deficit |      kappa |  kappa exact |       type |  prime?
+--------------------------------------------------------------------------------
+   3 |    60.00 |   180.00 |   180.00 |   1.000000 |            1 |     SPHERE |   PRIME
+   4 |    90.00 |   270.00 |    90.00 |   0.500000 |          1/2 |     SPHERE |        
+   5 |   108.00 |   324.00 |    36.00 |   0.200000 |          1/5 |     SPHERE |   PRIME
+   6 |   120.00 |   360.00 |     0.00 |   0.000000 |            0 |       FLAT |        
+   7 |   128.57 |   385.71 |   -25.71 |  -0.142857 |         -1/7 |      HYPER |   PRIME
+   8 |   135.00 |   405.00 |   -45.00 |  -0.250000 |         -1/4 |      HYPER |        
+   9 |   140.00 |   420.00 |   -60.00 |  -0.333333 |         -1/3 |      HYPER |        
+  10 |   144.00 |   432.00 |   -72.00 |  -0.400000 |         -2/5 |      HYPER |        
+  11 |   147.27 |   441.82 |   -81.82 |  -0.454545 |        -5/11 |      HYPER |   PRIME
+  12 |   150.00 |   450.00 |   -90.00 |  -0.500000 |         -1/2 |      HYPER |        
+  13 |   152.31 |   456.92 |   -96.92 |  -0.538462 |        -7/13 |      HYPER |   PRIME
+  14 |   154.29 |   462.86 |  -102.86 |  -0.571429 |         -4/7 |      HYPER |        
+  15 |   156.00 |   468.00 |  -108.00 |  -0.600000 |         -3/5 |      HYPER |        
+  16 |   157.50 |   472.50 |  -112.50 |  -0.625000 |         -5/8 |      HYPER |        
+  17 |   158.82 |   476.47 |  -116.47 |  -0.647059 |       -11/17 |      HYPER |   PRIME
+  18 |   160.00 |   480.00 |  -120.00 |  -0.666667 |         -2/3 |      HYPER |        
+  19 |   161.05 |   483.16 |  -123.16 |  -0.684211 |       -13/19 |      HYPER |   PRIME
+  20 |   162.00 |   486.00 |  -126.00 |  -0.700000 |        -7/10 |      HYPER |        
+  21 |   162.86 |   488.57 |  -128.57 |  -0.714286 |         -5/7 |      HYPER |        
+  22 |   163.64 |   490.91 |  -130.91 |  -0.727273 |        -8/11 |      HYPER |        
+  23 |   164.35 |   493.04 |  -133.04 |  -0.739130 |       -17/23 |      HYPER |   PRIME
+
+
+THE PRIMES SORTED BY CURVATURE:
+
+  p=2: kappa = (6-2)/2 = 2.       MAXIMALLY SPHERICAL.
+    The digon. Two edges. Not really a polygon, but has max curvature.
+    2 is the base. The most curved prime.
+
+  p=3: kappa = (6-3)/3 = 1.       STRONGLY SPHERICAL.
+    The triangle. The fundamental face of the tetrahedron/octahedron/icosahedron.
+    3 is structure. Strongly curved toward closure.
+
+  p=5: kappa = (6-5)/5 = 1/5.     BARELY SPHERICAL.
+    The pentagon. The face of the dodecahedron. The LAST spherical polygon.
+    5 is the boundary. Just barely curved enough to close.
+    The deficit is 36 degrees = pi/5 radians.
+
+  --- THE TRANSITION: p = 6, kappa = 0, FLAT ---
+
+  p=7: kappa = (6-7)/7 = -1/7.    BARELY HYPERBOLIC.
+    The heptagon. The forbidden polygon. The first that CANNOT close.
+    7 is the first impossible. Just barely curved toward opening.
+    The excess is 180/7 = 25.7 degrees.
+
+  p=11: kappa = (6-11)/11 = -5/11. MODERATELY HYPERBOLIC.
+    The hendecagon. The restart. Deeper into hyperbolic territory.
+
+  p=13: kappa = (6-13)/13 = -7/13. NOTE: numerator is 7!
+    The 13-gon's curvature has numerator 7 = the forbidden value.
+
+  p=17: kappa = (6-17)/17 = -11/17. Numerator is 11 = the restart.
+
+  p=19: kappa = (6-19)/19 = -13/19. Numerator is 13 = Mersenne exponent.
+
+
+THE NUMERATORS
+===============
+
+kappa(p) = (6-p)/p. The numerator is |6-p|.
+
+For primes p > 6: numerator = p - 6.
+
+  p=7:  numerator = 1.
+  p=11: numerator = 5.
+  p=13: numerator = 7.   THE FORBIDDEN VALUE!
+  p=17: numerator = 11.  THE RESTART!
+  p=19: numerator = 13.
+  p=23: numerator = 17.
+  p=29: numerator = 23.
+  p=31: numerator = 25 = 5^2.
+  p=37: numerator = 31.  MERSENNE PRIME!
+  p=43: numerator = 37.  PRIME.
+
+For large primes: kappa(p) ~ -(p-6)/p -> -1 (approaching maximum negative curvature).
+
+The CURVATURE NUMERATORS of primes p > 6 are: 1, 5, 7, 11, 13, 17, 23, 25, 31, 37, ...
+These are the numbers p - 6 for prime p.
+
+Curvature numerators |p-6| for primes:
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/prime_curvature_s90bv.py", line 117, in <module>
+    print(f"  p={p:3d}: |p-6| = {num:3d}, {'PRIME' if prime_num else f'= {dict(Fraction(num,1).limit_denominator())}'}")
+TypeError: 'Fraction' object is not iterable
