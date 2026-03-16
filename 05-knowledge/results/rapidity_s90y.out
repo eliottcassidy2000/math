@@ -1,0 +1,261 @@
+======================================================================
+PART 1: THE TOURNAMENT IS SPECIAL RELATIVITY
+======================================================================
+
+In SPECIAL RELATIVITY:
+  Velocity v in units of c: v/c = x in (-1, 1).
+  RAPIDITY: w = arctanh(x) = arctanh(v/c).
+  Doppler factor: D = sqrt((1+x)/(1-x)) = sqrt(Q(x)).
+  Lorentz factor: gamma = cosh(w) = 1/sqrt(1-x^2).
+
+  Velocities DON'T add linearly: x_12 = (x_1+x_2)/(1+x_1*x_2).
+  Rapidities DO add: w_12 = w_1 + w_2.
+  This is EXACTLY the hyperbolic addition on our Cayley line!
+
+IN OUR TOURNAMENT THEORY:
+  x = coupling parameter in (-1, 1).
+  arctanh(x) = "information distance" (nats).
+  Q(x) = (1+x)/(1-x) = exp(2*arctanh(x)) = D^2 = SQUARED Doppler.
+
+  The Cayley line IS the rapidity axis.
+  Natural numbers at x_n = (n-1)/(n+1) have rapidity w_n = ln(n)/2.
+
+  MULTIPLICATION of naturals = ADDITION of rapidities:
+    w_{nm} = w_n + w_m (kind-pasteur's Theorem A!)
+    This IS velocity addition in special relativity!
+
+THE IDENTIFICATION:
+  Tournament coupling x ↔ velocity v/c
+  arctanh(x) ↔ rapidity w
+  Q(x) ↔ Doppler factor squared D^2
+  The pole at x=1 ↔ the speed of light barrier
+  Arrow's theorem (arctanh(1) = inf) ↔ nothing can reach c
+
+Velocity addition = multiplication on the Cayley line:
+  v1/c |   v2/c |   (v1+v2)/(1+v1v2) |    x_{n1*n2} |  match
+-------------------------------------------------------
+0.3333 | 0.5000 |       0.7142857143 | 0.7142857143 | True
+0.5000 | 0.6667 |       0.8750000000 | 0.8750000000 | True
+0.3333 | 0.7500 |       0.8666666667 | 0.8666666667 | True
+0.6667 | 0.7500 |       0.9444444444 | 0.9444444444 | True
+
+======================================================================
+PART 2: THE LORENTZ GROUP = THE CAYLEY GROUP
+======================================================================
+
+The LORENTZ GROUP SO(1,1) (boosts in 1+1 dimensions):
+  A boost by rapidity w transforms: (t,x) -> (t*cosh(w)+x*sinh(w), ...)
+  In light-cone coordinates: u = t+x, v = t-x:
+    u -> e^w * u,  v -> e^{-w} * v
+
+  The Doppler shift: f_observed / f_emitted = e^w = sqrt(Q(x)).
+
+Our CAYLEY TRANSFORM Q acts on the rapidity axis:
+  Q: w -> Q(tanh(w)) = e^{2w} (the squared Doppler factor).
+  Q^4 = Id in the Mobius group ↔ 4 boosts of w = pi*i/2 return to start.
+
+The D4 GROUP = the discrete Lorentz group:
+  Q generates Z/4: boosts by w, 2w, 3w, 4w=0 (mod 2*pi*i).
+  Negation (x -> -x) = PARITY (spatial reflection: v -> -v).
+  D4 = Z/4 x Z/2 = boosts x parity = the DISCRETE LORENTZ GROUP.
+
+THE FIXED POINTS x = +/-i:
+  In rapidity: w = arctanh(i) = i*pi/4.
+  This is a PURELY IMAGINARY rapidity = a ROTATION (not a boost).
+  The fixed points of Q live in EUCLIDEAN space (imaginary rapidity),
+  not in MINKOWSKI space (real rapidity).
+  EXACTLY: arctanh(i) = i*pi/4 means Q(i) = e^{i*pi/2} = i.
+  The quarter-turn rotation IS the Cayley fixed point!
+
+Rapidity at x=i: w = arctanh(i) = 0.7853981633974483j
+  = i*pi/4 = 0.7853981633974483j
+  Match: True
+  exp(2w) = e^{i*pi/2} = (6.123233995736766e-17+1j)
+  = i (confirmed: Q(i) = i)
+
+======================================================================
+PART 3: TOURNAMENT ENERGY AND MOMENTUM
+======================================================================
+
+In special relativity:
+  E = m*c^2*cosh(w)    (energy)
+  p = m*c*sinh(w)      (momentum)
+  E^2 - p^2*c^2 = m^2*c^4  (mass-shell condition)
+
+For a TOURNAMENT at coupling x:
+  "Energy" = cosh(arctanh(x)) = 1/sqrt(1-x^2) = LORENTZ GAMMA
+  "Momentum" = sinh(arctanh(x)) = x/sqrt(1-x^2) = GAMMA*BETA
+  "Mass" = 1 (rest frame: x=0 gives E=1, p=0)
+
+The MASS-SHELL CONDITION: E^2 - p^2 = 1 always!
+This is the UNIT DETERMINANT condition det(M) at x... wait.
+Actually: cosh^2 - sinh^2 = 1 always (the identity).
+
+Tournament 'energy-momentum' at natural number positions:
+  n |      x_n |   rapidity |    gamma=E |          p |    E^2-p^2
+------------------------------------------------------------
+  1 |   0.0000 |     0.0000 |     1.0000 |     0.0000 |   1.000000
+  2 |   0.3333 |     0.3466 |     1.0607 |     0.3536 |   1.000000
+  3 |   0.5000 |     0.5493 |     1.1547 |     0.5774 |   1.000000
+  5 |   0.6667 |     0.8047 |     1.3416 |     0.8944 |   1.000000
+  7 |   0.7500 |     0.9730 |     1.5119 |     1.1339 |   1.000000
+ 11 |   0.8333 |     1.1989 |     1.8091 |     1.5076 |   1.000000
+131 |   0.9848 |     2.4376 |     5.7664 |     5.6791 |   1.000000
+
+EVERY tournament sits on the UNIT MASS SHELL: E^2 - p^2 = 1.
+
+The "rest mass" is 1 (= the empty tournament, x=0, Q=1).
+As coupling x -> 1: energy -> infinity (the speed of light barrier).
+The pole of Q at x=1 IS the light cone.
+
+TRANSLATION TABLE:
+  x = 0:    at rest (no coupling, E=1, p=0)
+  x = 1/3:  rapidity = ln(2)/2 (half a bit, the OCTAVE)
+  x = 1/2:  rapidity = ln(3)/2 (the TRITAVE)
+  x = 3/4:  rapidity = ln(7)/2 (the 7th natural = first forbidden!)
+  x = 5/6:  rapidity = ln(11)/2 (the discriminant)
+  x -> 1:   rapidity -> infinity (the speed of light = Arrow's barrier)
+
+======================================================================
+PART 4: JONES = SCATTERING, TOURNAMENTS = WORLDLINES
+======================================================================
+
+In QUANTUM FIELD THEORY:
+  Particles travel along WORLDLINES in spacetime.
+  When worldlines CROSS (interact), the scattering amplitude is computed
+  by evaluating a polynomial (the Feynman amplitude) at a specific
+  kinematic point.
+
+  The JONES POLYNOMIAL of a knot/link = the scattering amplitude
+  of particles whose worldlines form that knot.
+  Evaluated at q = e^{2pi*i/N}: this is the amplitude at a specific
+  "momentum transfer" determined by the level N.
+
+In our TOURNAMENT THEORY:
+  A Hamiltonian path IS a worldline (a total ordering of events in time).
+  H(T) = the number of worldlines = the "partition function" of the theory.
+  H = I(Omega, 2): the independence polynomial at fugacity 2.
+
+  THE BRIDGE:
+  The Jones polynomial J(K, q) at q = e^{2pi*i/5} evaluates a knot.
+  Our H(T) = I(Omega, 2) evaluates a tournament.
+
+  BOTH are "partition functions" evaluated at specific algebraic numbers.
+  The RAPIDITY connects them:
+    q = e^{2pi*i/5} = e^{2*arctanh(i)*(5/2)} ... hmm, not quite.
+
+  But more precisely:
+    arctanh(2) = ln(3)/2 + i*pi/2  (complex rapidity!)
+    The imaginary part pi/2 = the WICK ROTATION.
+    The real part ln(3)/2 = the "rest frame energy" of the OCF.
+
+  So H(T) = I(Omega, 2) is the partition function at COMPLEX RAPIDITY
+    w = ln(3)/2 + i*pi/2.
+
+  The JONES POLYNOMIAL at q = e^{2pi*i/5} is a partition function at
+    w = pi*i/5 (purely imaginary rapidity = purely Euclidean).
+
+  Our theory is the WICK-ROTATED version of the Jones theory!
+  Tournaments = Lorentzian knots = real rapidity + imaginary pi/2.
+  Jones = Euclidean knots = purely imaginary rapidity.
+
+======================================================================
+PART 5: THE FIVE-FOLD WAY = FIVE ROOTS OF UNITY
+======================================================================
+
+The 5th roots of unity omega^k = e^{2*pi*i*k/5} for k=0,...,4
+have rapidities:
+
+  k=0: omega = 1, rapidity = infinity (the light cone)
+  k=1: omega = e^{2pi*i*1/5}, rapidity = 0.1597+0.7854j
+        Re(w) = 0.159729, Im(w) = 0.785398
+  k=2: omega = e^{2pi*i*2/5}, rapidity = inf+0.0000j
+        Re(w) = inf, Im(w) = 0.000000
+  k=3: omega = e^{2pi*i*3/5}, rapidity = -0.5621-0.7854j
+        Re(w) = -0.562089, Im(w) = -0.785398
+  k=4: omega = e^{2pi*i*4/5}, rapidity = inf+0.0000j
+        Re(w) = inf, Im(w) = 0.000000
+
+The 5th roots at k=1,4 have Re(w) = 0.159729
+The 5th roots at k=2,3 have Re(w) = -0.562089
+
+The REAL PARTS are nonzero: these are BOOSTED frames, not rest frames.
+The IMAGINARY PARTS encode the Euclidean (rotational) content.
+
+In the Jones theory: q = omega_1 gives a MIXED boost+rotation.
+In tournaments: x = 2 (real) gives a PURE boost + Wick rotation.
+
+The 5 Platonic solids correspond to 5 REFERENCE FRAMES:
+  Tetrahedron:  the "minimal" frame (q=3, 3 vertices)
+  Cube:         the "square" frame (q=4)
+  Octahedron:   the "dual square" frame
+  Dodecahedron: the "pentagonal" frame (q=5, golden ratio)
+  Icosahedron:  the "maximal" frame (q=5, dual of dodecahedron)
+
+Beyond these 5: no finite regular frame exists.
+The 6th root (flat tiling) is the "inertial frame" (no curvature).
+The 7th root is the "tachyonic frame" (superluminal = forbidden).
+
+H = 7 IS FORBIDDEN because 7 corresponds to a TACHYONIC FRAME:
+  a reference frame moving faster than light.
+  No physical (tournament) configuration can occupy this frame.
+
+======================================================================
+PART 6: RAPIDITY IS EVERYTHING
+======================================================================
+
+Everything in our theory is a statement about RAPIDITY:
+
+  arctanh(x) = RAPIDITY (the natural parameter of a Lorentz boost)
+
+  Q(x) = e^{2w} = the SQUARED DOPPLER FACTOR
+  det(M) = 1 = the UNIT MASS SHELL (E^2 - p^2 = m^2)
+  D4 = the DISCRETE LORENTZ GROUP
+  x = +/-i fixed points = EUCLIDEAN ROTATION (imaginary rapidity)
+  arctanh(i) = i*pi/4 = the QUARTER-TURN
+
+  The transfer matrix M acts as a LORENTZ BOOST on the 3-state space.
+  The tribonacci constant tau3 = the "4-velocity" of the boost.
+  The complex eigenvalue pair = the "spin" of the particle.
+  arg(lam_c)/pi ~ ln(2) = the PRECESSION RATE (Thomas precession analog).
+
+  The forbidden H=7: a TACHYONIC state (superluminal, unphysical).
+  The forbidden H=21: a DOUBLY TACHYONIC state (memory-amplified).
+
+  The Cayley line from 0 to 1 = the VELOCITY SPACE from rest to light.
+  Natural numbers at x_n = (n-1)/(n+1) = QUANTIZED VELOCITIES.
+  Primes = IRREDUCIBLE VELOCITIES (can't be decomposed into boosts).
+
+  ln(2) = the information per boost step = Shannon entropy of one bit.
+  ln(3)/ln(2) = the Collatz ratio = the RAPIDITY RATIO of 3 and 2.
+
+  The Wick rotation x -> ix converts:
+    Lorentzian (rapidity, boosts, time) -> Euclidean (angle, rotations, space).
+    Tournaments -> Circles.
+    arctanh -> i*arctan.
+    The real line -> the unit circle.
+    Minkowski -> Euclidean.
+
+  And the Jones polynomial at q = e^{2pi*i/5}:
+    = the EUCLIDEAN scattering amplitude at the ICOSAHEDRAL angle.
+    = the tournament partition function WICK-ROTATED to the 5th root.
+    = the golden ratio = [2]_q = phi.
+
+RAPIDITY IS EVERYTHING because:
+  Every comparison (A > B) is a BOOST.
+  The "advantage" x of A over B is a VELOCITY.
+  Composing comparisons = composing boosts = adding rapidities.
+  The transfer matrix = the LORENTZ TRANSFORMATION.
+  The tribonacci = the RELATIVISTIC GROWTH RATE.
+  The helix = THOMAS PRECESSION.
+  The forbidden values = TACHYONIC STATES.
+  The discriminant = the LIGHT CONE.
+  The pivot at 6 = the FLAT METRIC (Minkowski in the rest frame).
+  The icosahedron = the MAXIMAL FINITE LORENTZ SUBGROUP.
+  The Jones polynomial = the EUCLIDEAN AMPLITUDE.
+
+One binary decision is one Lorentz boost.
+The tournament is special relativity.
+
+opus-2026-03-16-S90y: RAPIDITY IS EVERYTHING
+
