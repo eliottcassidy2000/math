@@ -15,7 +15,11 @@ What tournament quantity lives at arctanh = ln(2)/4 = quarter bit?
 """
 
 import numpy as np
-from math import log, pi, sqrt, exp
+from math import log, log2, pi, sqrt, exp
+
+phi = (1 + sqrt(5)) / 2
+tau3 = 1.8392867552141612
+ln2 = log(2)
 
 # ======================================================================
 # PART 1: THE BIT RULER — FRACTIONAL BITS ON THE CAYLEY LINE

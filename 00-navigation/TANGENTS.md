@@ -717,3 +717,28 @@ For even n, det(A-A^T) for tournament adjacency A is always a perfect square of 
 **T225** #3cycle-reversal #reidemeister-R3 | certainty: HIGH | source: kind-pasteur-2026-03-14-S69
 3-cycle reversal (flipping all 3 arcs of a directed 3-cycle) preserves H at n=4 but NOT at n≥5. Also preserves chi at n=4. This is a "Reidemeister R3" move for tournaments, but only a partial invariance.
 REN EMBEDDING THEOREM AND BETA_2=0: Ren proves canonical embeddings from the independence complex of the underlying undirected graph into the path independence complex of the digraph. Our beta_2=0 result (ALL tournaments, exhaustive) may follow from this embedding: if the independence complex (of the undirected graph underlying the directed cycle structure) has trivial H_2, and the embedding preserves this, then beta_2=0 for tournaments. The seesaw mechanism (THM-095) might be a consequence. Worth investigating formally.
+
+---
+
+## S90 Discoveries
+
+**T226** #simplicial-redei #sim_H #near-transitive | certainty: VERY HIGH (PROVED) | source: opus-2026-03-15-S90
+THM-220: sim_H(T) ∈ {0,1} for all tournaments on n ≥ 4 vertices. Exactly 2·n! have sim_H=1, split into n! transitive (H=1) + n! near-transitive (H=2^{n-2}+1). Near-transitive = single reversed min→max arc. Char poly: λ^{n-2}(λ²+1) - (1+λ)^{n-2}. Ω = K_{2^{n-3}} (complete graph on odd cycles). β₁ = 1 for all near-transitive (Möbius twist = portal).
+
+**T227** #cayley-monad #D4 #spectral-zeta | certainty: VERY HIGH | source: opus-2026-03-15-S90c/d
+Q(x) = (1+x)/(1-x) has order 4. Generates D₄ of order 8 with negation. Fixed points ±i. Cross-ratio of Q-orbit of 2 = 2 (the fugacity). Q⁴(M) = M on the 3×3 transfer matrix. Spectral zeta ζ_M(-3) = 7 and ζ_M(-5) = 21 = the FORBIDDEN H values! Bloch sphere connection: D₄ = Pauli group mod center.
+
+**T228** #tau-phi-clock #quasicrystal #ln2 | certainty: VERY HIGH | source: opus-2026-03-15-S90h
+arg(λ_c)/π ≈ ln(2) to 4 sig figs (NOT exact: diff 4.3×10⁻⁴). Gear ratio ≈ ln(2) between Fibonacci (φ) and tribonacci (τ₃) clocks. Period ≈ 2/ln(2). Tr(M^n) mod 8 has EXACT period 8. τ₃ carries ≈ 7/8 bit. The tribonacci clock is a quasicrystal (transcendental frequency ratio).
+
+**T229** #equidecomposability #dehn-invariant #hilbert-third | certainty: HIGH | source: opus-2026-03-15-S90k
+Tournament analog of Hilbert's third problem: β₁ as Dehn invariant. (H, β₁) gives 8 equidecomposability classes at n=5 (vs 7 from H alone). Within each class, I(Ω₃, x) is constant (verified n=5). Near-transitive = regular tetrahedron (same volume, nonzero twist, not scissors-congruent).
+
+**T230** #wick-rotation #ising #complex-temperature | certainty: HIGH | source: opus-2026-03-15-S90g/i
+arctanh(2) = log(3)/2 + iπ/2. Tournament H(T) at fugacity 2 IS the Wick-rotated partition function of a spin-1 Ising chain at complex temperature. ln(2) is the renormalized criticality: ∞ - ∞ = ln(2) as directed and undirected infinities cancel. Arrow's theorem = arctanh pole at x=1.
+
+**T231** #golden-shadow #continued-fraction #metallic-mean | certainty: VERY HIGH | source: opus-2026-03-15-S90o/p
+f(n) = (n-2+√(n²+4))/2 satisfies λ²=(n-2)λ+n, transfer matrix [[n-2,n],[1,0]]. CF = [n-2; n,n,n,...] (period 1). Unifies golden ratio (n=1), √2 (n=2), silver ratio. Pell norm: f·f'=-n. n-tribonacci family: λ³=(n-2)λ²+λ+1 has τ₃ at n=3 as the maximum memory correction point.
+
+**T232** #discriminant #golden-ratio #branch-points | certainty: VERY HIGH | source: opus-2026-03-15-S90g
+Δ(x) = 4x(x²-11x-1). Zeros at x = (11±5√5)/2 (golden ratio!). Sum = 11 (Paley prime). Product = -1. Δ(1) = -44 = -4·11 (tribonacci at discriminant). Δ(2) = -8·19 (consecutive Paley primes). The number 8 = 2³ = Bott period appears everywhere because 3 = 2+memory.

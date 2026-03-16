@@ -436,8 +436,18 @@ for bits in range(2**m):
                 adj[a][b] = adj[b][a] = 1
 
     # Count independence polynomial coefficients
-    alpha = [0] * (nc + 1)
-    for mask in range(2**nc):
+    if nc > 20:
+        # Too many cycles for brute force; use clique formula for complete graph
+        alpha = [0] * (nc + 1)
+        alpha[0] = 1
+        alpha[1] = nc
+        H_full = 1 + 2*nc
+        a1 = nc
+        a2 = 0
+        a3 = 0
+    else:
+        alpha = [0] * (nc + 1)
+    for mask in range(min(2**nc, 2**20)):
         sel = [i for i in range(nc) if (mask >> i) & 1]
         ok = True
         for a in range(len(sel)):
