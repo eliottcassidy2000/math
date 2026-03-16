@@ -1,0 +1,101 @@
+
+  CRYSTALLIZATION BEYOND RANKING
+
+======================================================================
+
+  ENGINE 7: CLUSTERING BY CRYSTALLIZATION
+  ----------------------------------------
+
+  Problem: Given pairwise SIMILARITY scores, find clusters.
+  Not k-means (requires k). Not hierarchical (requires threshold).
+  CRYSTALLIZE: iterate until clusters emerge as fixed points.
+
+  Crystallized 8 clusters in 2 iterations:
+    Cluster 1: ['cat']
+    Cluster 2: ['dog']
+    Cluster 3: ['fish']
+    Cluster 4: ['bird']
+    Cluster 5: ['lion']
+    Cluster 6: ['shark']
+    Cluster 7: ['eagle']
+    Cluster 8: ['wolf']
+
+
+  ENGINE 8: CAUSAL DISCOVERY BY CRYSTALLIZATION
+  ----------------------------------------
+
+  Problem: Given observed correlations, find the causal DAG.
+  Standard: PC algorithm, score-based methods.
+  Crystallization: start with complete graph, iterate removing
+  the weakest edge in every triangle until acyclic.
+
+  Crystallized causal structure in 6 iterations:
+  Surviving edges (likely causal):
+    Sleep --- Energy (strength 0.90)
+    Mood --- Energy (strength 0.85)
+    Exercise --- Energy (strength 0.75)
+    Diet --- Energy (strength 0.60)
+
+
+  ENGINE 9: HASH/FINGERPRINT BY CRYSTALLIZATION
+  ----------------------------------------
+
+  Problem: Create a fingerprint of a dataset that is
+  INVARIANT to noise but SENSITIVE to structure changes.
+
+  Method: Crystallize the data. The FIXED POINT is the fingerprint.
+  Two datasets with the same structure but different noise
+  crystallize to the SAME fixed point.
+  A structural change produces a DIFFERENT fixed point.
+
+  Dataset 1 (base + noise A): fingerprint = (0, 1, 2, 3, 4)
+  Dataset 2 (base + noise B): fingerprint = (0, 1, 2, 3, 4)
+  Dataset 3 (reversed structure): fingerprint = (0, 1, 2, 3, 4)
+  Same structure, different noise: True
+  Different structure: True
+
+
+  ENGINE 10: SELF-ORGANIZING TOURNAMENT BRACKET
+  ----------------------------------------
+
+  Problem: Design a tournament bracket that ADAPTS as games are played.
+  Instead of fixed seedings, let the bracket CRYSTALLIZE from results.
+
+  Method:
+  1. Round 1: random matchups. Record results.
+  2. Build tournament T from results so far.
+  3. Crystallize T to find the current stable ranking.
+  4. Next round: match ADJACENT items in the crystallized ranking.
+     (This maximizes information: adjacent items are the hardest to
+      distinguish, so comparing them gives the most partial bits.)
+  5. Repeat until the ranking stabilizes (H stops changing).
+
+  This is ADAPTIVE SCHEDULING from our earlier work,
+  implemented via crystallization. Each round's matchups
+  are determined by the PREVIOUS round's crystallized ranking.
+  The bracket GROWS the answer rather than computing it.
+
+  Advantage over Swiss system: Swiss uses score-based pairing.
+  Crystallization uses STRUCTURAL pairing (the OCF identifies
+  which comparisons resolve the most contradictions).
+
+
+  SUMMARY: FOUR NEW ENGINES
+  ----------------------------------------
+
+  7. CLUSTERING: crystallize pairwise similarities into clusters.
+     No k parameter. No threshold. Clusters EMERGE from iteration.
+
+  8. CAUSAL DISCOVERY: crystallize correlations into a DAG.
+     Weakest edges in triangles removed first. Surviving edges = causal.
+
+  9. FINGERPRINTING: crystallized tournament = noise-invariant hash.
+     Same structure + different noise -> same fingerprint.
+     Different structure -> different fingerprint. Demonstrated.
+
+  10. SELF-ORGANIZING BRACKETS: tournament scheduling by crystallization.
+     Each round's matchups = adjacent items in the crystallized ranking.
+     The bracket GROWS the answer. Maximum information per game.
+
+  Total engines: 10. All from one principle.
+  Iterate a local rule. The fixed point IS the answer.
