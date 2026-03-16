@@ -1,0 +1,221 @@
+
+======================================================================
+n = 3: REPRESENTATION THEORY
+======================================================================
+
+  Partitions of 3: 3
+  Tournament classes T(3) = 4
+  Irrep dimensions: [((3,), 1), ((2, 1), 2), ((1, 1, 1), 1)]
+  Sum of d^2 = 6 (should = 6)
+
+  Known eigenvalues and multiplicities:
+    lambda =     1, multiplicity = 1
+    lambda =  -1/3, multiplicity = 1
+  Sum of multiplicities: 2 = T(3) = 4
+
+  Number of distinct eigenvalues: 2
+  Number of partitions: 3
+  Match: False
+
+======================================================================
+n = 4: REPRESENTATION THEORY
+======================================================================
+
+  Partitions of 4: 5
+  Tournament classes T(4) = 11
+  Irrep dimensions: [((4,), 1), ((3, 1), 3), ((2, 2), 2), ((2, 1, 1), 3), ((1, 1, 1, 1), 1)]
+  Sum of d^2 = 24 (should = 24)
+
+  Known eigenvalues and multiplicities:
+    lambda =     1, multiplicity = 1
+    lambda =   1/3, multiplicity = 1
+    lambda =     0, multiplicity = 1
+    lambda =  -1/3, multiplicity = 1
+  Sum of multiplicities: 4 = T(4) = 11
+
+  Number of distinct eigenvalues: 4
+  Number of partitions: 5
+  Match: False
+
+======================================================================
+n = 5: REPRESENTATION THEORY
+======================================================================
+
+  Partitions of 5: 7
+  Tournament classes T(5) = 34
+  Irrep dimensions: [((5,), 1), ((4, 1), 4), ((3, 2), 5), ((3, 1, 1), 6), ((2, 2, 1), 5), ((2, 1, 1, 1), 4), ((1, 1, 1, 1, 1), 1)]
+  Sum of d^2 = 120 (should = 120)
+
+  Known eigenvalues and multiplicities:
+    lambda =     1, multiplicity = 1
+    lambda =   3/5, multiplicity = 1
+    lambda =   2/5, multiplicity = 1
+    lambda =   1/5, multiplicity = 4
+    lambda =     0, multiplicity = 1
+    lambda =  -1/5, multiplicity = 3
+    lambda =  -3/5, multiplicity = 1
+  Sum of multiplicities: 12 = T(5) = 34
+
+  Number of distinct eigenvalues: 7
+  Number of partitions: 7
+  Match: True
+
+  BIJECTION partition <-> eigenvalue (by dimension matching):
+    Eigenvalue multiplicities: [1, 1, 1, 4, 1, 3, 1]
+    Partition dimensions: [1, 4, 5, 6, 5, 4, 1]
+
+
+======================================================================
+THE REPRESENTATION-THEORETIC STRUCTURE
+======================================================================
+
+At n=5: 7 partitions of 5, 7 distinct eigenvalues. PERFECT MATCH.
+  Each partition lambda gives exactly ONE eigenvalue in the flip chain.
+  The multiplicity m_lambda is the dimension of the lambda-eigenspace
+  in the T(5)=12 dimensional space of class functions.
+
+The eigenvalue multiplicities (1, 1, 1, 4, 1, 3, 1) sum to 12 = T(5).
+The partition dimensions (1, 4, 5, 6, 5, 4, 1) sum to 26 != 12.
+
+So: the multiplicities are NOT the irrep dimensions.
+They are the MULTIPLICITIES m_lambda of each irrep in the tournament rep.
+
+The EIGENVALUE for partition lambda is:
+  lambda_val = (1/C(n,2)) * sum_{transpositions (ij)} chi_lambda((ij)) / d_lambda
+
+This is the NORMALIZED CHARACTER VALUE at transpositions, averaged over all arcs.
+
+For the trivial representation (n): chi((ij)) = 1 for all transpositions.
+  lambda_val = C(n,2) / C(n,2) = 1. The stationary eigenvalue.
+
+For the sign representation (1^n): chi((ij)) = -1 for all transpositions.
+  lambda_val = -C(n,2) / C(n,2) = -1... but our smallest eigenvalue is -3/5, not -1.
+  So the sign representation doesn't appear directly in the class function space
+  (it contributes to the FULL tournament space, not the isomorphism class space).
+
+The eigenvalue formula:
+  For partition lambda with d_lambda = hook_length(lambda):
+  The eigenvalue = (1/C(n,2)) * chi_lambda(transposition) / d_lambda * C(n,2)
+                 = chi_lambda((12)) / d_lambda.
+
+  chi_lambda((12)) for standard representations:
+    (n): chi = 1, d = 1. Eigenvalue = 1/1 = 1.
+    (n-1,1): chi = n-2, d = n-1. Eigenvalue = (n-2)/(n-1).
+    (n-2,2): chi = ?, d = C(n,2)-1... depends on n.
+    (1^n): chi = -1, d = 1. Eigenvalue = -1.
+
+  At n=5: chi_((4,1))((12)) = 3, d = 4. Eigenvalue = 3/4? But we expect 3/5.
+
+Hmm, the formula needs refinement. Let me think more carefully.
+
+The correct formula: the flip chain acts on CLASS FUNCTIONS, not on V_lambda directly.
+The eigenvalue of the flip chain on the m_lambda-dimensional eigenspace corresponding
+to partition lambda is:
+
+  eigenvalue = 1 - (n * (n-1)) / (2 * c_lambda)
+
+where c_lambda is related to the content polynomial of lambda.
+
+Actually, for the random transposition walk on S_n:
+  The eigenvalue for irrep lambda is: 1 - (2/C(n,2)) * (n - chi_lambda((12))/d_lambda * n) / 2
+  This is getting complex. Let me just compute it directly.
+
+For the TOURNAMENT flip chain specifically:
+  The transition operator T acts on the space of class functions.
+  T = (1/C(n,2)) * sum_{(i,j)} P_{ij}
+  where P_{ij} is the operator that flips arc (i,j).
+
+  P_{ij} acts on a tournament A as: A' where A'[i][j] = A[j][i] and A'[j][i] = A[i][j],
+  all other entries unchanged.
+
+  The eigenvalue of T on the irrep V_lambda is determined by how P_{ij} acts on V_lambda.
+  By Schur's lemma (since S_n action commutes with P_{ij}... wait, does it?):
+
+  The arc flip P_{ij} does NOT commute with arbitrary permutations sigma in S_n.
+  Specifically: sigma * P_{ij} * sigma^{-1} = P_{sigma(i),sigma(j)}.
+  So P_{ij} transforms as the PAIR representation.
+
+  The SUM T = (1/C(n,2)) * sum P_{ij} DOES commute with S_n (because it averages
+  over all pairs). So T is in the CENTER of the group algebra, and by Schur's lemma,
+  it acts as a scalar on each V_lambda.
+
+  The scalar = (1/C(n,2)) * sum_{(i,j)} tr(P_{ij} on V_lambda) / d_lambda
+             = (1/C(n,2)) * C(n,2) * tr(P_{12} on V_lambda) / d_lambda
+             = tr(P_{12} on V_lambda) / d_lambda.
+
+  So: eigenvalue_lambda = tr(P_{12} on V_lambda) / d_lambda.
+
+  P_{12} acts on tournaments by flipping the arc between vertices 1 and 2.
+  Its trace on V_lambda is the character chi_lambda evaluated at... what?
+
+  P_{12} is NOT a permutation of S_n. It's a flip of ONE ARC.
+  It's an INVOLUTION on the tournament space (P_{12}^2 = identity).
+
+  The trace of P_{12} on V_lambda can be computed from the character of
+  the S_n x Z/2Z action where Z/2Z acts by flipping one specific arc.
+
+  This is more subtle than standard representation theory of S_n alone.
+  The flip chain involves BOTH the S_n symmetry AND the Z/2 flip symmetry.
+
+  The correct framework: the wreath product S_n acting on pairs WITH the
+  Z/2 action on each pair. This is the hyperoctahedral group B_n.
+
+THE WREATH PRODUCT CONNECTION:
+  Tournaments are elements of (Z/2)^C(n,2) with S_n acting on the pairs.
+  The symmetry group is the WREATH PRODUCT S_n wreath Z/2 = B_n (the hyperoctahedral group).
+  The irreducible representations of B_n are indexed by PAIRS of partitions (alpha, beta)
+  with |alpha| + |beta| = n.
+
+  The tournament permutation representation decomposes into irreps of B_n.
+  The flip chain is an element of the center of B_n's group algebra.
+  Its eigenvalues are determined by the characters of B_n.
+
+THIS IS THE KEY: the tournament structure is governed by the
+HYPEROCTAHEDRAL GROUP B_n, not just S_n.
+
+B_n has order 2^n * n! (much larger than S_n's n!).
+Its irreps are indexed by bi-partitions (alpha, beta) with |alpha|+|beta| = n.
+The number of irreps = number of such bi-partitions.
+
+For n=5: bi-partitions (a,b) with |a|+|b|=5:
+  (5,-), (4,1), (3,2), (3,1,1), (2,2,1), (2,1,1,1), (1,1,1,1,1),
+  (4,-,1), (3,1,-,1), etc.
+
+Actually bi-partitions have |alpha|+|beta| = n where alpha and beta are each partitions.
+The count = sum_{k=0}^n p(k)*p(n-k) where p(k) = number of partitions of k.
+
+For n=5: sum p(k)*p(5-k) for k=0..5 = 1*7 + 1*5 + 2*3 + 3*2 + 5*1 + 7*1 = 7+5+6+6+5+7 = 36.
+But we only have 12 classes and 7 distinct eigenvalues...
+
+So the bi-partition framework gives MORE irreps than eigenvalues.
+The tournament space only involves SOME of the B_n irreps.
+Specifically: the ones that appear in the decomposition of (Z/2)^C(n,2) under B_n.
+
+This is getting complex. Let me just verify the connection empirically.
+
+Eigenvalue multiplicities as sequences:
+  n=3: [1, 1] (sum 2)
+  n=4: [1, 1, 1, 1] (sum 4)
+  n=5: [1, 1, 1, 4, 1, 3, 1] (sum 12)
+  n=6: [1, 1, 1, 5, 5, 10, 8, 12, 6, 4, 2, 1] (sum 56)
+
+  S_n irrep dimensions:
+    n=3: [((3,), 1), ((2, 1), 2), ((1, 1, 1), 1)]
+    n=4: [((4,), 1), ((3, 1), 3), ((2, 2), 2), ((2, 1, 1), 3), ((1, 1, 1, 1), 1)]
+    n=5: [((5,), 1), ((4, 1), 4), ((3, 2), 5), ((3, 1, 1), 6), ((2, 2, 1), 5), ((2, 1, 1, 1), 4), ((1, 1, 1, 1, 1), 1)]
+
+
+At n=5:
+  Eigenvalue multiplicities: [1, 1, 1, 4, 1, 3, 1].
+  S_5 irrep dimensions:      [1, 4, 5, 6, 5, 4, 1].
+
+  Are they related? The multiplicities DON'T equal the dimensions.
+  But: m_lambda = (1/n!) * sum chi_lambda(sigma) * 2^{c(sigma)}.
+  This is the INNER PRODUCT of chi_lambda with the tournament character.
+
+  The tournament character psi(sigma) = 2^{c(sigma)} is a specific class function.
+  m_lambda = <psi, chi_lambda> / d_lambda (the projection onto V_lambda).
+
+  This can be computed exactly from the character table of S_n.
+
+opus-2026-03-16-S90dt: REPRESENTATION THEORY OF TOURNAMENTS
