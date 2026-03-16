@@ -1,0 +1,29 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+{\Large\bfseries One Matrix, Three Constants}
+\end{center}
+
+\medskip
+
+The $3 \times 3$ matrix
+\[
+M(x) = \begin{pmatrix} 1 & 2x & 0 \\ 0 & 0 & 1 \\ 1 & x & 0 \end{pmatrix}
+\]
+encodes three fundamental constants of mathematics:
+
+\begin{itemize}
+\item At $x = 1$: the dominant eigenvalue is the \textbf{tribonacci constant} $\tau = 1.8393\ldots$, satisfying $\tau^3 = \tau^2 + \tau + 1$.
+
+\item The discriminant $\Delta(x) = 4x(x^2 - 11x - 1)$ vanishes at two exceptional points $x = 8 - 5\varphi$ and $x = 3 + 5\varphi$, where the double eigenvalue satisfies $d^2 + d - 1 = 0$ --- the \textbf{golden ratio} equation, giving $d = 1/\varphi$ and $d = -\varphi$.
+
+\item The Cayley transforms at these points multiply to $-1$: $Q(x_{\mathrm{EP}_1}) \cdot Q(x_{\mathrm{EP}_2}) = -1$, connecting to \textbf{Euler's identity} $e^{i\pi} = -1$.
+\end{itemize}
+
+Tribonacci, golden ratio, and Euler --- three pillars of mathematics --- living in one matrix that also counts Hamiltonian paths in tournaments, gives the capacity of constrained codes, and provides the simplest known $3 \times 3$ exceptional point with closed-form eigenvalue splitting.
+
+\end{document}
