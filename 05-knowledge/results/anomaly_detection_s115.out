@@ -1,0 +1,37 @@
+ANOMALY DETECTION IN PREFERENCE DATA
+============================================================
+
+n = 6 products
+E[H] = 22.5, CV = 0.577, sigma = 13.0
+
+RANDOM (no structure):
+  Mean H = 23.1, H/E[H] = 1.028
+  Std H = 12.1
+  Mean Z = 0.05
+
+MANIPULATED (product 0 forced to beat 3,4,5):
+  Mean H = 18.3, H/E[H] = 0.811
+  Std H = 11.4
+  Mean Z = -0.33
+
+SKILL-BASED (real hierarchy, skills 3.0,2.5,2.0,1.5,1.0,0.5):
+  Mean H = 15.7, H/E[H] = 0.699
+  Std H = 11.0
+  Mean Z = -0.52
+
+DETECTION:
+  Random H distribution: [1, 45], mode near E[H]=22
+  Manipulated: [1, 45]
+  Skill-based: [1, 45]
+
+  Random 5th percentile: H = 5
+  Random 95th percentile: H = 43
+  Manipulated below 5th: 10.0%
+  Skill-based below 5th: 13.2%
+
+CONCLUSION:
+  Both manipulated and skill-based produce LOW H (strong hierarchy).
+  H alone CANNOT distinguish manipulation from real skill.
+  But H can detect that SOME structure exists (H << E[H]).
+  To distinguish manipulation from skill: need the SPECTRAL
+  decomposition (which Fourier levels deviate from random).

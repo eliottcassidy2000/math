@@ -1,0 +1,79 @@
+============================================================
+EXAMPLE 1: FIFA-STYLE 5-TEAM GROUP
+============================================================
+
+Teams: Brazil > France > Japan > Germany > Costa Rica (with upset)
+H(T) = 3 Hamiltonian paths
+E[H] = 7.5 for random 5-team tournament
+CV = sqrt(2/5) = 0.632
+Z-score = -0.95
+Interpretation: Within random noise
+
+Perfect hierarchy: H=1, Z=-1.37
+Cyclic tournament: H=15, Z=1.58
+
+============================================================
+EXAMPLE 2: CHESS 6-PLAYER CANDIDATES
+============================================================
+
+Strong hierarchy with competitive middle: H=3, Z=-1.50
+E[H] = 22.5, CV = 0.577
+
+Competitive with upsets: H=13, Z=-0.73
+
+============================================================
+EXAMPLE 3: WHEN DO RANKINGS BECOME MEANINGFUL?
+============================================================
+
+For a ranking to be 'real' (Z > 2), the tournament must have
+H(T) > E[H] * (1 + 2*CV) = E[H] * (1 + 2*sqrt(2/n)).
+
+  n    E[H]          CV      Threshold H/E[H]
+  --------------------------------------------------
+    4            3.0   0.7071   2.4142
+    5            7.5   0.6325   2.2649
+    6           22.5   0.5774   2.1547
+    8          315.0   0.5000   2.0000
+   10         7087.5   0.4472   1.8944
+   16    638512875.0   0.3536   1.7071
+   20   4640392319062.5   0.3162   1.6325
+   32   122529844256906545612193792.0   0.2500   1.5000
+
+For n=32 teams: any H within 50% of E[H] is noise.
+Only H > 1.50*E[H] indicates real skill differences.
+
+============================================================
+EXAMPLE 4: LEAGUE COMPETITIVENESS INDEX
+============================================================
+
+L(T) = H(T)/E[H]: normalized Hamiltonian path count.
+  L >> 1: clear hierarchy (easy to rank)
+  L ~ 1: competitive (rankings are noise)
+  L << 1: paradoxical (many contradictions)
+
+Random 5-team tournaments (1000 samples):
+  Mean L: 1.016 (should be ~1)
+  Std L:  0.570 (should be ~0.632)
+  Min L:  0.133
+  Max L:  2.000
+  P(L > 1.5): 19.1%
+  P(L > 2.0): 0.0%
+
+============================================================
+EXAMPLE 5: PRODUCT RANKING (A/B TESTING)
+============================================================
+
+7 products compared pairwise by users.
+Each pair: which product is preferred?
+The tournament T encodes all pairwise preferences.
+
+E[H] = 78.8 for n=7
+CV = 0.535
+sigma = 42.1
+
+If your A/B test gives H = 189 (maximum possible):
+  Z = 2.62 — extremely significant ranking
+If your A/B test gives H = 79 (near random):
+  Z = 0.01 — no significant ranking
+If your A/B test gives H = 120 (moderate):
+  Z = 0.98 — moderate evidence of ranking

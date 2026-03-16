@@ -1,0 +1,90 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{booktabs}
+\pagestyle{empty}
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries Tournament Ranking: Cheat Sheet}\\[4pt]
+{\small Based on the Cayley-Delannoy Theory \hfill \texttt{cayley\_delannoy.py}}
+\end{center}
+
+\hrule\medskip
+
+\textbf{Setup.} $n$ items compared pairwise. $H(T)$ = number of consistent total rankings.
+
+\medskip
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Key Formulas}
+
+Expected value (random):
+\[ \mathbb{E}[H] = \frac{n!}{2^{n-1}} \]
+
+Coefficient of variation:
+\[ \mathrm{CV} = \sqrt{\frac{2}{n}} \]
+
+Standard deviation:
+\[ \sigma = \mathbb{E}[H] \cdot \sqrt{\frac{2}{n}} \]
+
+Z-score of observed $H$:
+\[ Z = \frac{H - \mathbb{E}[H]}{\sigma} \]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Interpretation}
+
+\begin{tabular}{@{}ll@{}}
+\toprule
+$H$ value & Meaning \\
+\midrule
+$H = 1$ & Perfect hierarchy \\
+$H \ll \mathbb{E}[H]$ & Strong structure \\
+$H \approx \mathbb{E}[H]$ & Random noise \\
+$H \gg \mathbb{E}[H]$ & Highly flexible \\
+$H = n!/2$ & Maximum (all orderings) \\
+\bottomrule
+\end{tabular}
+
+\medskip
+
+\begin{tabular}{@{}ll@{}}
+\toprule
+$Z$-score & Significance \\
+\midrule
+$Z < -2$ & Strong hierarchy \\
+$-1 < Z < 1$ & No structure \\
+$Z > 2$ & Unusually flexible \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+
+\medskip\hrule\medskip
+
+\textbf{Quick Reference Table}
+
+\begin{center}
+\begin{tabular}{@{}rrrrl@{}}
+\toprule
+$n$ & $\mathbb{E}[H]$ & CV & $\sigma$ & Significance threshold ($Z{=}2$) \\
+\midrule
+4 & 3.0 & 0.707 & 2.1 & $H < 1$ or $H > 7$ \\
+5 & 7.5 & 0.632 & 4.7 & $H < 1$ or $H > 17$ \\
+6 & 22.5 & 0.577 & 13.0 & $H < 1$ or $H > 49$ \\
+7 & 78.8 & 0.535 & 42.1 & $H < 1$ or $H > 163$ \\
+8 & 315.0 & 0.500 & 157.5 & $H < 1$ or $H > 630$ \\
+10 & 7,088 & 0.447 & 3,169 & $H < 750$ or $H > 13,425$ \\
+16 & $6.4 \times 10^8$ & 0.354 & $2.3 \times 10^8$ & Within $\pm 35\%$ of $\mathbb{E}[H]$ \\
+20 & $4.6 \times 10^{12}$ & 0.316 & $1.5 \times 10^{12}$ & Within $\pm 32\%$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip\hrule\medskip
+
+\textbf{The Math.} \ $Q(x) = (1{+}x)/(1{-}x) = \exp(2\,\mathrm{arctanh}\,x)$. \ $Q^m = 1 + 2\sum g_k(m)\,x^k$ where $g_k$ are Delannoy weights. \ $\mathrm{CV}^2 = \sum 2g_k(n{-}2k)/(n)_{2k} = 2/n + O(1/n^3)$.
+
+\medskip
+\textbf{CLI.} \ \texttt{python3 tournament\_test.py --n 7 --h 189} \ $\to$ \ $Z = +2.62$, significant.
+
+\end{document}
