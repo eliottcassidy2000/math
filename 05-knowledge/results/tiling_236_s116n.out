@@ -1,0 +1,324 @@
+
+  {2, 3, 6} STRUCTURES IN THE n=6 TILING
+
+======================================================================
+
+  Computing all 2^15 = 32768 tournaments on 6 vertices...
+
+    ...8192/32768 done
+    ...16384/32768 done
+    ...24576/32768 done
+    ...32768/32768 done
+  Done. 32768 tournaments computed.
+
+  I. H-VALUE DISTRIBUTION
+  --------------------------------------------------
+
+     H   count         %  H mod 2  H mod 3  H mod 6
+     1     720    2.197%        1        1        1
+     3     960    2.930%        1        0        3
+     5    2160    6.592%        1        2        5
+     9    2960    9.033%        1        0        3
+    11    1440    4.395%        1        2        5
+    13    1440    4.395%        1        1        1
+    15    2208    6.738%        1        0        3
+    17    1440    4.395%        1        2        5
+    19    1440    4.395%        1        1        1
+    23    2880    8.789%        1        2        5
+    25    1440    4.395%        1        1        1
+    27     480    1.465%        1        0        3
+    29    2880    8.789%        1        2        5
+    31    1440    4.395%        1        1        1
+    33    2640    8.057%        1        0        3
+    37    3600   10.986%        1        1        1
+    41     720    2.197%        1        2        5
+    43    1440    4.395%        1        1        1
+    45     480    1.465%        1        0        3
+
+  All H odd (Redei): True
+
+  H mod 3 distribution:
+    H = 0 mod 3: 9728 (29.69%)
+    H = 1 mod 3: 11520 (35.16%)
+    H = 2 mod 3: 11520 (35.16%)
+
+  H mod 6 distribution:
+    H = 1 mod 6: 11520 (35.16%)
+    H = 3 mod 6: 9728 (29.69%)
+    H = 5 mod 6: 11520 (35.16%)
+
+  II. THE OCF COMPONENTS: c3, alpha_2, AND H
+  --------------------------------------------------
+
+  Verifying OCF: H = 1 + 2*alpha_1 + 4*alpha_2 + ...
+
+    MISMATCH at bits=2: H=3, predicted=1, c3=1, a2=0
+    MISMATCH at bits=4: H=5, predicted=3, c3=2, a2=0
+    MISMATCH at bits=5: H=3, predicted=1, c3=1, a2=0
+  32048 mismatches found!
+
+  III. THE (c3, alpha_2) PHASE SPACE
+  --------------------------------------------------
+
+  (alpha_1, alpha_2) -> count, H = 1 + 2*alpha_1 + 4*alpha_2
+    a1    a2   count     H  H mod 3  H mod 6
+     0     0    1680     1        1        1
+     1     0    5040     3        0        3
+     1     1      80     7        1        1
+     2     0    7248     5        2        5
+     2     1    2640     9        0        3
+     3     0    3360     7        1        1
+     3     1    6480    11        2        5
+     3     2    3600    15        0        3
+     4     1    1680    13        1        1
+     4     2     720    17        2        5
+     4     4     240    25        1        1
+
+  IV. THE 2x3 SPLIT: BIPARTITE TOURNAMENT STRUCTURE
+  --------------------------------------------------
+
+  Split A={0,1,2}, B={3,4,5}:
+  A_cyc  B_cyc   A->B   count     avg_H
+  False  False      0      36      1.00
+  False  False      1     324      6.33
+  False  False      2    1296     13.33
+  False  False      3    3024     19.43
+  False  False      4    4536     22.90
+  False  False      5    4536     22.90
+  False  False      6    3024     19.43
+  False  False      7    1296     13.33
+  False  False      8     324      6.33
+  False  False      9      36      1.00
+  False   True      0      12      3.00
+  False   True      1     108      9.67
+  False   True      2     432     17.67
+  False   True      3    1008     24.43
+  False   True      4    1512     28.24
+  False   True      5    1512     28.24
+  False   True      6    1008     24.43
+  False   True      7     432     17.67
+  False   True      8     108      9.67
+  False   True      9      12      3.00
+   True  False      0      12      3.00
+   True  False      1     108      9.67
+   True  False      2     432     17.67
+   True  False      3    1008     24.43
+   True  False      4    1512     28.24
+   True  False      5    1512     28.24
+   True  False      6    1008     24.43
+   True  False      7     432     17.67
+   True  False      8     108      9.67
+   True  False      9      12      3.00
+   True   True      0       4      9.00
+   True   True      1      36     17.00
+   True   True      2     144     26.00
+   True   True      3     336     33.43
+   True   True      4     504     37.57
+   True   True      5     504     37.57
+   True   True      6     336     33.43
+   True   True      7     144     26.00
+   True   True      8      36     17.00
+   True   True      9       4      9.00
+
+  Tournaments with at least one disjoint 3-cycle pair: 15440/32768
+  = 47.12%
+
+  V. THE TILING TRIANGLE: 10 BITS FIXING PATH 0->1->2->3->4->5
+  --------------------------------------------------
+
+  Non-path arcs (triangular grid):
+   bit    pair   skip   row
+     1  (0,2)      2     0
+     2  (0,3)      3     1
+     3  (0,4)      4     2
+     4  (0,5)      5     3
+     6  (1,3)      2     0
+     7  (1,4)      3     1
+     8  (1,5)      4     2
+    10  (2,4)      2     0
+    11  (2,5)      3     1
+    13  (3,5)      2     0
+
+  Tournaments with canonical path 0->1->...->5: 1024
+  = 2^10 = 1024: True
+
+  VI. TILING HAMMING WEIGHT vs H
+  --------------------------------------------------
+
+   HW   count   min_H   max_H     avg_H               H values (if few)
+    0       1      17      17     17.00                            [17]
+    1      10      15      29     23.80                    [15, 23, 29]
+    2      45      15      45     29.44                     11 distinct
+    3     120      15      45     33.00                     13 distinct
+    4     210       9      45     33.91                     14 distinct
+    5     252       9      45     32.02                     16 distinct
+    6     210       9      45     27.51                     14 distinct
+    7     120       5      41     21.00                     14 distinct
+    8      45       5      37     13.44                     11 distinct
+    9      10       3      17      6.20                   [3, 5, 9, 17]
+   10       1       1       1      1.00                             [1]
+
+  Complement symmetry (HW vs 10-HW):
+    HW=0 vs HW=10: same H distribution? False
+    HW=1 vs HW=9: same H distribution? False
+    HW=2 vs HW=8: same H distribution? False
+    HW=3 vs HW=7: same H distribution? False
+    HW=4 vs HW=6: same H distribution? False
+    HW=5 vs HW=5: same H distribution? True
+
+  VII. ROW-BY-ROW CONTRIBUTIONS TO H
+  --------------------------------------------------
+
+  Row 0 (skip 2, 4 bits):
+    (0, 0, 0, 0): HW=0, avg_H=28.12, range=[15,37], count=64
+    (0, 0, 0, 1): HW=1, avg_H=30.38, range=[9,45], count=64
+    (0, 0, 1, 0): HW=1, avg_H=34.88, range=[15,45], count=64
+    (0, 0, 1, 1): HW=2, avg_H=29.62, range=[5,45], count=64
+    (0, 1, 0, 0): HW=1, avg_H=35.12, range=[19,45], count=64
+    (0, 1, 0, 1): HW=2, avg_H=31.38, range=[9,45], count=64
+    (0, 1, 1, 0): HW=2, avg_H=34.88, range=[15,45], count=64
+    (0, 1, 1, 1): HW=3, avg_H=23.62, range=[3,37], count=64
+    (1, 0, 0, 0): HW=1, avg_H=33.88, range=[15,45], count=64
+    (1, 0, 0, 1): HW=2, avg_H=29.12, range=[9,45], count=64
+    (1, 0, 1, 0): HW=2, avg_H=35.12, range=[19,45], count=64
+    (1, 0, 1, 1): HW=3, avg_H=22.88, range=[5,37], count=64
+    (1, 1, 0, 0): HW=2, avg_H=33.88, range=[15,45], count=64
+    (1, 1, 0, 1): HW=3, avg_H=23.12, range=[9,37], count=64
+    (1, 1, 1, 0): HW=3, avg_H=28.12, range=[15,37], count=64
+    (1, 1, 1, 1): HW=4, avg_H=9.88, range=[1,15], count=64
+
+  Row 1 (skip 3, 3 bits):
+    (0, 0, 0): HW=0, avg_H=25.75, range=[9,37], count=128
+    (0, 0, 1): HW=1, avg_H=28.50, range=[5,45], count=128
+    (0, 1, 0): HW=1, avg_H=32.75, range=[9,45], count=128
+    (0, 1, 1): HW=2, avg_H=29.00, range=[3,45], count=128
+    (1, 0, 0): HW=1, avg_H=31.75, range=[9,45], count=128
+    (1, 0, 1): HW=2, avg_H=29.00, range=[5,45], count=128
+    (1, 1, 0): HW=2, avg_H=32.25, range=[9,45], count=128
+    (1, 1, 1): HW=3, avg_H=23.00, range=[1,37], count=128
+
+  Row 2 (skip 4, 2 bits):
+    (0, 0): HW=0, avg_H=29.00, range=[5,45], count=256
+    (0, 1): HW=1, avg_H=29.00, range=[3,45], count=256
+    (1, 0): HW=1, avg_H=32.00, range=[5,45], count=256
+    (1, 1): HW=2, avg_H=26.00, range=[1,45], count=256
+
+  Row 3 (skip 5, 1 bits):
+    (0,): HW=0, avg_H=31.00, range=[3,45], count=512
+    (1,): HW=1, avg_H=27.00, range=[1,45], count=512
+
+  VIII. THE {2,3} INTERACTION: ROW 0 x ROW 1
+  --------------------------------------------------
+
+  Row0_HW x Row1_HW -> avg_H:
+             R1=0      R1=1      R1=2      R1=3
+  R0=0     19.50     26.83     31.00     32.00
+  R0=1     27.88     34.75     35.46     30.00
+  R0=2     29.25     34.89     33.36     24.67
+  R0=3     23.62     27.25     24.71     16.00
+  R0=4     11.00     11.83      9.50      4.00
+
+  IX. THE DIAGONAL STRUCTURE (skip-length analysis)
+  --------------------------------------------------
+
+  3-cycles by skip composition:
+  A 3-cycle {i,j,k} with i<j<k uses skip lengths (j-i, k-j, k-i).
+
+    (s1,s2,s3)     count  s1+s2=s3      triple
+  (1,1,2)      2048      True  [(0, 1, 2), (1, 2, 3), (2, 3, 4), (3, 4, 5)]
+  (1,2,3)       768      True  [(0, 1, 3), (1, 2, 4), (2, 3, 5)]
+  (1,3,4)       512      True  [(0, 1, 4), (1, 2, 5)]
+  (1,4,5)       256      True  [(0, 1, 5)]
+  (2,1,3)       768      True  [(0, 2, 3), (1, 3, 4), (2, 4, 5)]
+  (2,2,4)       512      True  [(0, 2, 4), (1, 3, 5)]
+  (2,3,5)       256      True  [(0, 2, 5)]
+  (3,1,4)       512      True  [(0, 3, 4), (1, 4, 5)]
+  (3,2,5)       256      True  [(0, 3, 5)]
+  (4,1,5)       256      True  [(0, 4, 5)]
+
+  X. THE 6 = 2*3 FACTORIZATION IN SKIP SPACE
+  --------------------------------------------------
+
+  Skip lengths: 2, 3, 4, 5
+  2 = first prime (parity)
+  3 = second prime (curvature)
+  4 = 2*2 (double parity)
+  5 = path length - 1
+
+  3-cycle skip compositions (s1+s2=s3):
+  (1,1,2): uses path arcs — NOT in tiling (path fixed)
+  (1,2,3): one path + one skip-2 + one skip-3
+  (1,3,4): one path + one skip-3 + one skip-4
+  (1,4,5): one path + one skip-4 + one skip-5
+  (2,1,3): one skip-2 + one path + one skip-3
+  (2,2,4): two skip-2 + one skip-4
+  (2,3,5): one skip-2 + one skip-3 + one skip-5
+  (3,1,4): one skip-3 + one path + one skip-4
+  (3,2,5): one skip-3 + one skip-2 + one skip-5
+
+  KEY PATTERN: The 3-cycle {i, i+2, i+5} uses skips (2,3,5).
+  2+3=5, and {2,3,5} are the first three primes!
+  This is the 'spherical' triangle of our grand trichotomy.
+
+  The 3-cycle {i, i+2, i+4} uses skips (2,2,4).
+  This is the 'parity-doubled' triangle (purely INERT).
+
+  The 3-cycle {i, i+1, i+3} uses skips (1,2,3).
+  This includes a path arc (skip 1) — the 'path-anchored' triangle.
+
+  Contribution of each skip-triple to total c3:
+    (1,1,2):   2048 / 6144 = 33.3%
+    (1,2,3):    768 / 6144 = 12.5%
+    (1,3,4):    512 / 6144 = 8.3%
+    (1,4,5):    256 / 6144 = 4.2%
+    (2,1,3):    768 / 6144 = 12.5%
+    (2,2,4):    512 / 6144 = 8.3%
+    (2,3,5):    256 / 6144 = 4.2%
+    (3,1,4):    512 / 6144 = 8.3%
+    (3,2,5):    256 / 6144 = 4.2%
+    (4,1,5):    256 / 6144 = 4.2%
+
+  XI. NEW PATTERN: FORWARD-BACKWARD PARITY BY ROW
+  --------------------------------------------------
+
+  Row parities (even=0, odd=1) and their effect on H:
+   (p0,p1,p2,p3)   count     avg_H    min    max          H mod 3 dist
+    (0, 0, 0, 0)      64     29.50      9     45    {0:20, 1:24, 2:20}
+    (0, 0, 0, 1)      64     25.50      3     45    {0:20, 1:28, 2:16}
+    (0, 0, 1, 0)      64     32.50      9     45    {0:22, 1:32, 2:10}
+    (0, 0, 1, 1)      64     28.50      5     45    {0:20, 1:28, 2:16}
+    (0, 1, 0, 0)      64     29.50      3     45    {0:12, 1:31, 2:21}
+    (0, 1, 0, 1)      64     25.50      1     45    {0:15, 1:23, 2:26}
+    (0, 1, 1, 0)      64     32.50      5     45    {0:12, 1:28, 2:24}
+    (0, 1, 1, 1)      64     28.50      3     45    {0:13, 1:33, 2:18}
+    (1, 0, 0, 0)      64     29.50     15     45    {0:10, 1:29, 2:25}
+    (1, 0, 0, 1)      64     25.50      5     45    {0:15, 1:20, 2:29}
+    (1, 0, 1, 0)      64     32.50     17     45     {0:8, 1:30, 2:26}
+    (1, 0, 1, 1)      64     28.50      9     45    {0:11, 1:34, 2:19}
+    (1, 1, 0, 0)      64     29.50      9     45    {0:18, 1:25, 2:21}
+    (1, 1, 0, 1)      64     25.50      3     43    {0:20, 1:28, 2:16}
+    (1, 1, 1, 0)      64     32.50     15     45    {0:20, 1:30, 2:14}
+    (1, 1, 1, 1)      64     28.50      9     45    {0:20, 1:25, 2:19}
+
+  Total tiling parity vs H mod 6:
+    Parity 0: H mod 6 distribution = {1: 203, 3: 128, 5: 181}
+    Parity 1: H mod 6 distribution = {1: 245, 3: 128, 5: 139}
+
+  XII. SYNTHESIS: THE {2,3,6} PATTERNS
+  --------------------------------------------------
+
+  At n=6 = 2*3:
+  1. OCF truncates at degree 2: H = 1 + c3 + 4*alpha_2 (EXACT)
+     Only two terms beyond the base: the 2-body (c3) and 2*2-body (alpha_2)
+  2. The tiling triangle has 4 rows with sizes 4,3,2,1 = 10 total
+     Row sizes sum: 4+3+2+1 = 10 = C(5,2)
+  3. Skip-2 arcs (row 0): 4 nearest-neighbor interactions
+     Skip-3 arcs (row 1): 3 next-nearest interactions
+     The 'fundamental' 3-cycle uses skips {2,3,5} — the spherical primes!
+  4. Disjoint 3-cycle pairs (alpha_2 > 0) first appear at n=6 = 2*3
+     because you need two groups of 3 = the factorization of 6
+  5. The {2,3} row interaction table shows H depends on BOTH
+     skip-2 and skip-3 arcs non-independently
+  6. Row parities create a 2^4 = 16 partition of tiling space
+     with potentially interesting H mod 3 structure
+
