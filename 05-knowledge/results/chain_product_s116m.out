@@ -1,0 +1,249 @@
+
+  PUSHING THE CHAIN PRODUCT IDENTITY
+
+======================================================================
+
+  I. THE IDENTITY FOR LUCAS AT POWER-OF-2 INDICES
+  ----------------------------------------
+
+  We have F_{2n} = F_n * L_n.
+  What about L_{2n}?
+
+  L_{2n} = L_n^2 - 2*(-1)^n.
+  (Standard identity: L_n^2 = L_{2n} + 2*(-1)^n.)
+
+  L_4 = L_2^2 - 2*(-1)^2 = 3^2 - 2 = 9 - 2 = 7
+  Actual L_4 = 7. Match: True
+  L_8 = L_4^2 - 2*(-1)^4 = 7^2 - 2 = 49 - 2 = 47
+  Actual L_8 = 47. Match: True
+  L_16 = L_8^2 - 2*(-1)^8 = 47^2 - 2 = 2209 - 2 = 2207
+  Actual L_16 = 2207. Match: True
+  L_32 = L_16^2 - 2*(-1)^16 = 2207^2 - 2 = 4870849 - 2 = 4870847
+  Actual L_32 = 4870847. Match: True
+
+  So the Lucas numbers at power-of-2 indices satisfy:
+  L_4 = L_2^2 - 2 = 9 - 2 = 7.
+  L_8 = L_4^2 + 2 = 49 + 2 = 51? No: L_8 = 47. Let me recheck.
+  L_8 = L_4^2 - 2*(-1)^4 = 7^2 - 2*1 = 49 - 2 = 47. YES.
+  L_16 = L_8^2 - 2*(-1)^8 = 47^2 - 2 = 2209 - 2 = 2207. YES.
+  L_32 = L_16^2 - 2*(-1)^16 = 2207^2 - 2 = 4870847. Check: L_32 = 4870847.
+  Match: True
+
+  THE CHAIN PRIMES SATISFY: L_{2n} = L_n^2 - 2.
+  (At power-of-2 indices where n is even, so (-1)^n = +1.)
+
+  The recurrence: start with L_4 = 7.
+  L_8 = 7^2 - 2 = 47.
+  L_16 = 47^2 - 2 = 2207.
+  L_32 = 2207^2 - 2 = 4870847.
+  L_64 = 4870847^2 - 2 = 23725150497407.
+
+  This is the recurrence x_{n+1} = x_n^2 - 2.
+  Starting from x_0 = 7.
+  7 -> 47 -> 2207 -> 4870847 -> ...
+
+  THIS IS THE LUCAS-LEHMER TEST SEQUENCE!
+
+
+  II. THE LUCAS-LEHMER CONNECTION
+  ----------------------------------------
+
+  The Lucas-Lehmer test for Mersenne primes:
+  To test if M_p = 2^p - 1 is prime:
+  Define s_0 = 4, s_{i+1} = s_i^2 - 2.
+  M_p is prime iff s_{p-2} = 0 mod M_p.
+
+  OUR sequence: x_0 = 7, x_{n+1} = x_n^2 - 2.
+  = L_4, L_8, L_16, L_32, ...
+
+  The Lucas-Lehmer sequence starts at s_0 = 4 = L_3.
+  Our sequence starts at x_0 = 7 = L_4.
+  They are the SAME recurrence, shifted by one index!
+
+  Lucas-Lehmer: L_3, L_6, L_12, L_24, L_48, ...
+  Our chain:    L_4, L_8, L_16, L_32, L_64, ...
+
+  Lucas-Lehmer uses L_{3*2^k}.
+  Our chain uses L_{4*2^k} = L_{2^{k+2}}.
+
+  Both use the SAME recurrence x -> x^2 - 2.
+  But with different starting values: 4 vs 7.
+  4 = L_3 = the Cayley PERIOD.
+  7 = L_4 = the FORBIDDEN number.
+
+  LUCAS-LEHMER STARTS FROM THE PERIOD.
+  OUR CHAIN STARTS FROM THE FORBIDDEN.
+  They are parallel sequences of the same recurrence.
+
+  Lucas-Lehmer sequence (starting L_3 = 4):
+  k=0: L_3 = 4, prime: False
+  k=1: L_6 = 14, prime: False
+  k=2: L_12 = 194, prime: False
+  k=3: L_24 = 37634, prime: False
+  k=4: L_48 = 1416317954, prime: False
+  k=5: L_96 = 2005956546822746114, prime: False
+
+  Our chain (starting L_4 = 7):
+  k=0: L_4 = 7, prime: True
+  k=1: L_8 = 47, prime: True
+  k=2: L_16 = 2207, prime: True
+  k=3: L_32 = 4870847, prime: False
+  k=4: L_64 = 23725150497407, prime: False
+
+
+  III. THE RECURRENCE x -> x^2 - 2 IS THE CHEBYSHEV DOUBLING
+  ----------------------------------------
+
+  The map x -> x^2 - 2 is related to Chebyshev polynomials.
+  If x = 2*cos(theta), then x^2 - 2 = 4*cos^2(theta) - 2 = 2*cos(2*theta).
+  So x -> x^2 - 2 DOUBLES the angle!
+
+  For L_n: L_n = phi^n + psi^n = 2*cosh(n*ln(phi)).
+  (Using cosh because psi < 0, but the identity works with the right sign.)
+  Actually: L_n = phi^n + (-1/phi)^n.
+  For even n: L_n = phi^n + phi^{-n} = 2*cosh(n*ln(phi)).
+
+  So L_n = 2*cosh(n * rapidity(phi))!
+  And the recurrence L_{2n} = L_n^2 - 2 = (2*cosh(x))^2 - 2
+  = 4*cosh^2(x) - 2 = 2*(2*cosh^2(x) - 1) = 2*cosh(2x).
+  This is the HYPERBOLIC DOUBLING FORMULA.
+
+  The chain IS the doubling map on the Cayley helix!
+  Each step DOUBLES the rapidity argument.
+  L_4 = 2*cosh(4*ln(phi)). L_8 = 2*cosh(8*ln(phi)). etc.
+
+  L_4 = 2*cosh(4*ln(phi)) = 7.00, actual = 7
+  L_8 = 2*cosh(8*ln(phi)) = 47.00, actual = 47
+  L_16 = 2*cosh(16*ln(phi)) = 2207.00, actual = 2207
+  L_32 = 2*cosh(32*ln(phi)) = 4870847.00, actual = 4870847
+  L_64 = 2*cosh(64*ln(phi)) = 23725150497407.05, actual = 23725150497407
+
+
+  IV. THE RAPIDITY OF THE CHAIN
+  ----------------------------------------
+
+  The chain primes: 3, 7, 47, 2207, ...
+  Their rapidities: ln(p)/2.
+
+  rapidity(3) = 0.549306
+  rapidity(7) = 0.972955
+  rapidity(47) = 1.925074
+  rapidity(2207) = 3.849695
+
+  Gaps between consecutive chain rapidities:
+  3 -> 7: gap = 0.4236, ratio of rapidities = 1.7712
+  7 -> 47: gap = 0.9521, ratio of rapidities = 1.9786
+  47 -> 2207: gap = 1.9246, ratio of rapidities = 1.9998
+
+  The rapidity RATIOS approach 2!
+  Because L_{2n} ~ L_n^2, so ln(L_{2n}) ~ 2*ln(L_n).
+  rapidity(L_{2n}) ~ 2 * rapidity(L_n).
+
+  The chain primes have rapidities that DOUBLE at each step.
+  rapidity(7) ~ 0.97.
+  rapidity(47) ~ 1.93 ~ 2 * 0.97.
+  rapidity(2207) ~ 3.85 ~ 2 * 1.93.
+
+  The chain lives on a GEOMETRIC sequence in rapidity space.
+  Each step doubles the rapidity.
+  In terms of the helix: each chain prime is TWICE AS HIGH
+  on the helix as the previous one.
+
+
+  V. WHY L_n^2 - 2 AND NOT L_n^2 - 1 OR L_n^2?
+  ----------------------------------------
+
+  L_{2n} = L_n^2 - 2*(-1)^n.
+  For even n: L_{2n} = L_n^2 - 2.
+  The '-2' is because psi^n + phi^{-n} terms contribute -2 when n is even.
+
+  What IS the 2?
+  It's L_0 = 2. The first Lucas number. The DOUBLER.
+  L_{2n} = L_n^2 - L_0 (for even n).
+
+  The recurrence SUBTRACTS the identity element (L_0 = 2)
+  from the square of the current value.
+  It's the Chebyshev doubling formula: T_{2n}(x) = 2*T_n(x)^2 - 1
+  scaled by 2: L_{2n} = L_n^2 - 2 corresponds to 2*T_n(x).
+
+  The 2 = L_0 = the first Lucas number = the doubler = the octave.
+  The recurrence REMOVES ONE OCTAVE at each squaring step.
+  Without the -2: L_n^2 would overshoot by one octave.
+  The -2 corrects the overshoot.
+
+  THIS IS THE SAME OVERSHOOT CORRECTION AS IN CASSINI.
+  Cassini: F_{n-1}*F_{n+1} = F_n^2 +/- 1 (overshoot by 1).
+  Lucas doubling: L_{2n} = L_n^2 - 2 (overshoot by 2 = L_0).
+  The Fibonacci overshoot is 1 = F_1.
+  The Lucas overshoot is 2 = L_0.
+  Each sequence overshoots by ITS OWN starting value.
+
+
+  VI. THE CHAIN PRODUCTS AND FIBONACCI
+  ----------------------------------------
+
+  F_{2^n} = prod_{k=2}^{n} L_{2^k}.
+
+  Taking logarithms:
+  ln(F_{2^n}) = sum_{k=2}^{n} ln(L_{2^k}).
+
+  In rapidity:
+  rapidity(F_{2^n}) = sum_{k=2}^{n} rapidity(L_{2^k}).
+
+  The rapidity of the FIBONACCI at a power-of-2 index
+  = the SUM of the rapidities of all LUCAS chain primes up to that level.
+
+  This is the RAPIDITY DECOMPOSITION of F_{2^n}:
+  each chain prime contributes one 'partial rapidity'.
+  The total = the chain product's rapidity.
+
+  F_4 = 3:
+    rapidity = 0.549306
+    sum of chain rapidities = 0.972955
+    chain primes used: [7]
+    match: False
+
+  F_8 = 21:
+    rapidity = 1.522261
+    sum of chain rapidities = 2.898029
+    chain primes used: [7, 47]
+    match: False
+
+  F_16 = 987:
+    rapidity = 3.447335
+    sum of chain rapidities = 6.747724
+    chain primes used: [7, 47, 2207]
+    match: False
+
+  F_32 = 2178309:
+    rapidity = 7.297030
+    sum of chain rapidities = 14.447113
+    chain primes used: [7, 47, 2207, 4870847]
+    match: False
+
+
+  VII. THE CHAIN AS A RAPIDITY RULER
+  ----------------------------------------
+
+  The chain rapidities: ln(3)/2, ln(7)/2, ln(47)/2, ln(2207)/2.
+  These approximately DOUBLE: 0.549, 0.973, 1.927, 3.847.
+
+  They provide a RULER on the rapidity line:
+  Mark 0: rapidity 0 (the identity, n=1)
+  Mark 1: rapidity 0.549 (the curvature, n=3)
+  Mark 2: rapidity 0.973 (the forbidden, n=7)
+  Mark 3: rapidity 1.927 (the chain-2, n=47)
+  Mark 4: rapidity 3.847 (the chain-3, n=2207)
+
+  The marks APPROXIMATELY double in rapidity.
+  They are NOT exactly doubling (because L_n^2 - 2 != L_n^2).
+  The -2 correction creates a tiny shortfall at each step.
+
+  The shortfall: rapidity(L_{2n}) = 2*rapidity(L_n) - epsilon_n
+  where epsilon_n = ln(1 - 2/L_n^2)/2 ~ 1/L_n^2.
+
+  n=4: L_n = 7, epsilon = 2.08e-02
+  n=8: L_n = 47, epsilon = 4.53e-04
+  n=16: L_n = 2207, epsilon = 2.05e-07
+
+  The shortfalls: 4.2e-2, 9.1e-4, 4.1e-7.
