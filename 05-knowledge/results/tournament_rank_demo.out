@@ -1,0 +1,62 @@
+======================================================================
+TOURNAMENT RANKING TOOLKIT — DEMO
+======================================================================
+
+--- Example 1: Clean Tournament (4 teams) ---
+  Simplicial ranking exists: True
+  Ranking: ['Alpha', 'Bravo', 'Charlie', 'Delta']
+  β₁ (anomaly): 0
+  3-cycles: 0
+  Transitivity rate: 100.0%
+
+--- Example 2: Near-Transitive (5 teams, one upset) ---
+  Simplicial ranking exists: True
+  Ranking: ['A', 'B', 'C', 'D', 'E']
+  β₁ (anomaly): 1
+  Near-transitive: True
+  3-cycles: 3
+  Alternative paths: 2^(n-2) = 8 (plus the simplicial)
+  Total H = 2^(n-2)+1 = 9
+
+--- Example 3: Rock-Paper-Scissors-Lizard-Spock (5 items) ---
+  Simplicial ranking exists: False
+  β₁ (anomaly): 1
+  3-cycles: 5
+  Transitivity rate: 50.0%
+  ⚠ TOPOLOGICAL ANOMALY DETECTED: irreducible contradiction!
+
+--- Example 4: Hypothetical League Table (6 teams) ---
+  Simplicial ranking: False
+  β₁ (anomaly): 0
+  3-cycles: 1
+  Transitivity: 95.0%
+
+======================================================================
+ENGINEERING APPLICATIONS:
+======================================================================
+
+    1. SPORTS: Detect when a league table has a "clean" ordering vs
+       irreconcilable upsets. The simplicial ranking IS the most robust
+       ranking. β₁ = 1 means no amount of tiebreaking can resolve
+       all contradictions — the season was fundamentally "twisted."
+
+    2. SEARCH/RECOMMENDATIONS: Given pairwise relevance judgments
+       (document A more relevant than B), check if a consistent
+       ranking exists. β₁ > 0 means the judgments are inconsistent
+       at a topological level — not just noisy, but structurally
+       contradictory.
+
+    3. A/B TESTING: When comparing n variants pairwise, the
+       transitivity rate measures how "clean" the data is.
+       sim_H = 1 means there's one clear winner order.
+       High c₃ means many circular preferences (Condorcet paradox).
+
+    4. PACKAGE MANAGERS: Dependency resolution can create tournaments.
+       β₁ > 0 detects circular dependencies that can't be resolved
+       by any topological sort.
+
+    5. ELECTION THEORY: The simplicial ranking is the Condorcet
+       ranking when it exists. β₁ detects when Arrow's theorem
+       "bites" — when no fair aggregation of preferences can
+       produce a consistent ordering.
+    
