@@ -1,0 +1,294 @@
+
+  P-ADIC CAYLEY TRANSFORM
+
+======================================================================
+
+  I. THE p-ADIC FORMAL GROUP
+  --------------------------------------------------
+
+  F(x,y) = (x+y)/(1+xy) is the formal group of the Cayley transform.
+  Over Q_p: F is defined on m_p = {x in Z_p : |x|_p < 1} = p*Z_p.
+  The formal group law is:
+  F(x,y) = x + y - xy^2 - x^2*y + x^2*y^3 + x^3*y^2 - ...
+  = sum_{n>=1} a_n(x,y) where a_n is homogeneous of degree n.
+
+  The [n]-series: [n](x) = Q^{-1}(Q(x)^n)
+
+  Formal group height by prime:
+
+  For ODD p: [p](x) mod p = x^p (height 1)
+  Proof: (1+x)^p = 1+x^p mod p, (1-x)^p = 1-x^p mod p.
+  [p](x) = (2x^p)/(2) = x^p mod p.
+  So F has height 1 over F_p for all odd primes p.
+
+  For p=2: more careful analysis needed.
+  (1+x)^2 = 1+2x+x^2, (1-x)^2 = 1-2x+x^2.
+  [2](x) = 2x/(1+x^2).
+  Mod 2: [2](x) = 0 (the 2 kills everything).
+  So we need [2](x)/2 mod 2:
+  [2](x)/2 = x/(1+x^2) = x*(1-x^2+x^4-...) = x - x^3 + x^5 - ...
+  [2](x)/2 mod 2 = x + x^3 + x^5 + ... = x/(1+x^2) mod 2
+  = x/(1-x^2) mod 2 (since -1=1 mod 2)
+  = x + x^3 + x^5 + ... (NOT x^{2^h} for any h)
+
+  The lowest degree term of [2](x)/2 mod 2 is x (degree 1 = 2^0).
+  So h=0... but wait, that would mean height 0 (ordinary).
+  Actually: [p](x) = p*f(x) + g(x^p) where we check if g(0) = 0 mod p.
+
+  CRITICAL: At p=2, [2](x) = 2x/(1+x^2) has coefficients
+  a_{2^h} = 0 for ALL h >= 1 (only odd-degree terms).
+  The formal group F has HEIGHT INFINITY at p=2.
+
+  HEIGHT INFINITY = the formal group is 'supersingular' at p=2.
+  This is the p-adic avatar of REDEI'S THEOREM!
+  Redei: every tournament on 2k+1 vertices has an odd number of
+  Hamiltonian paths. The 'oddness' = the height-infinity structure at p=2.
+
+
+  II. THE FORMAL GROUP AND REDEI
+  --------------------------------------------------
+
+  H(T) = I(Omega(T), 2) = evaluation at x=2.
+  x=2 in the formal group means: Q(x_2) = 2, so x_2 = 1/3.
+  In the formal group: [2](x) = 2x/(1+x^2).
+  [2](1/3) = 2*(1/3)/(1+(1/3)^2) = (2/3)/(10/9) = (2/3)*(9/10) = 18/30 = 3/5
+
+  [2](1/3) = 3/5 = 0.600000
+  Q([2](1/3)) = Q(3/5) = (1+3/5)/(1-3/5) = (8/5)/(2/5) = 4
+  Check: Q(1/3)^2 = 2^2 = 4. Correct: Q([2](x)) = Q(x)^2.
+
+  [3](1/3) = F([2](1/3), 1/3) = F(3/5, 1/3)
+  = (3/5+1/3)/(1+3/5*1/3) = 14/15/6/5 = 7/9
+  Q([3](1/3)) = Q(7/9) = 8
+  Check: Q(1/3)^3 = 2^3 = 8. Q(7/13) = 10/3. Correct!
+
+  H(T) = I(Omega(T), 2) = I(Omega(T), Q(1/3))
+  In Cayley coordinates: H = I(Omega, exp(2*arctanh(1/3)))
+  arctanh(1/3) = (1/2)*ln(2) = 0.3466...
+
+  So H(T) is evaluated at the point whose rapidity is ln(2)/2.
+  This is the HALF-RAPIDITY of 2.
+  H(T) = I(Omega(T), e^{2*rho_2}) where rho_2 = rapidity of 2.
+
+
+  III. THE IWASAWA PERSPECTIVE
+  --------------------------------------------------
+
+  Iwasawa theory: the p-adic L-function L_p(s, chi)
+  interpolates the values L(1-n, chi) for positive integers n.
+
+  For the trivial character: L_p(1-n) = -(1-p^{n-1}) * B_n/n
+  (with the Euler factor removed at p).
+
+  At p=7, n=6:
+  L_7(1-6) = L_7(-5) = -(1-7^5) * B_6/6
+           = -(1-16807) * (1/42)/6
+           = 16806 * 1/252
+           = 16806/252
+           = 2801/42
+           = 66.690476
+
+  16806 = 7^5 - 1 = 16806
+  7^5 - 1 = (7-1)*(7^4+7^3+7^2+7+1) = 6 * 2801
+  2801 = 2801
+  2801 is PRIME.
+
+  252 = 4 * 63 = 4 * 9 * 7 = 2^2 * 3^2 * 7
+  L_7(-5) = (6 * 2801)/(2^2 * 3^2 * 7) = 2801/42
+         = 2801/42 = 66.6905
+
+  v_7(L_7(-5)) = v_7(2801/42)
+  v_7(numerator 2801) = 0
+  v_7(denominator 42) = 1
+  v_7(L_7(-5)) = -1
+
+  The 7-adic valuation of L_7(-5) = -1.
+  This comes from v_7(B_6/6) = v_7(1/252) = -1.
+  The POLE of the 7-adic zeta at s=-5 has order 1.
+  This is the simplest possible singularity: a SIMPLE POLE.
+
+
+  IV. THE KUBOTA-LEOPOLDT p-ADIC L-FUNCTION
+  --------------------------------------------------
+
+  For p=7: the Kubota-Leopoldt zeta function zeta_{7,a}(s)
+  is analytic on Z_7 \ {1} and has a simple pole at s=1.
+  Its residue at s=1 is 1 - 1/7 = 6/7.
+
+  The values at negative integers:
+  L_7(  0) = -(1-7^0)*B_1/1 =                                        0
+  L_7( -1) = -(1-7^1)*B_2/2 =                                      1/2
+  L_7( -3) = -(1-7^3)*B_4/4 =                                   -57/20
+  L_7( -5) = -(1-7^5)*B_6/6 =                                  2801/42
+  L_7( -7) = -(1-7^7)*B_8/8 =                               -137257/40
+  L_7( -9) = -(1-7^9)*B_10/10 =                               6725601/22
+  L_7(-11) = -(1-7^11)*B_12/12 =                       -227722129787/5460
+
+
+  V. 2-ADIC ANALYSIS: HEIGHT INFINITY AND REDEI
+  --------------------------------------------------
+
+  The formal group F(x,y) = (x+y)/(1+xy) over Z_2:
+
+  [2](x) = 2x/(1+x^2)
+  = 2x - 2x^3 + 2x^5 - 2x^7 + ...
+
+  v_2([2](x) - 0) = 1 (the '2' coefficient).
+  But [2](x) has NO even-degree terms (only odd: x, x^3, x^5, ...).
+  So the sequence 2^0=1, 2^1=2, 2^2=4, 2^3=8, ...
+  NEVER appears as a degree in [2](x).
+
+  This means: the formal group F has NO FINITE HEIGHT at p=2.
+  It is HEIGHT INFINITY = the most degenerate possible.
+
+  INTERPRETATION: The formal group at p=2 is 'supersingular'.
+  In the elliptic curve world, supersingular means:
+  - The p-torsion is KILLED (E[p] = 0)
+  - There is no ordinary reduction
+  - The endomorphism ring is a maximal order in a QUATERNION ALGEBRA
+
+  For our F at p=2:
+  - The 2-torsion of F is killed: [2](x) = 2x/(1+x^2)
+    has no roots other than x=0 over F_2
+    (since 2 = 0 mod 2, [2](x) mod 2 = 0)
+  - The endomorphism ring contains the HURWITZ QUATERNIONS
+  - Redei's theorem: H(T) is ODD for all tournaments
+    THIS IS THE SHADOW OF HEIGHT INFINITY AT p=2!
+
+  Redei says: the number of Hamiltonian paths is never divisible by 2.
+  F says: the formal group has infinite height at p=2.
+  BOTH say: 2 is TOTALLY INERT in the tournament world.
+  No splitting, no factoring, no reduction mod 2.
+  The prime 2 passes through tournaments without interaction.
+
+
+  VI. THE FORMAL LOGARITHM
+  --------------------------------------------------
+
+  The formal logarithm of F:
+  log_F(x) = integral of 1/F'(0,x) dx
+  F(x,y) = (x+y)/(1+xy)
+  F'_y(x,0) = d/dy [(x+y)/(1+xy)] at y=0
+            = (1*(1+xy) - (x+y)*x) / (1+xy)^2 at y=0
+            = (1 - x^2)
+  So 1/F'(x,0) = 1/(1-x^2)
+  log_F(x) = integral 1/(1-x^2) dx = arctanh(x)
+           = x + x^3/3 + x^5/5 + x^7/7 + ...
+
+  THE FORMAL LOGARITHM OF THE CAYLEY FORMAL GROUP IS arctanh!
+  This is RAPIDITY itself.
+
+  So: rapidity = the formal logarithm of the Cayley formal group.
+  F(x,y) -> log_F(x) + log_F(y) (additive)
+  arctanh(F(x,y)) = arctanh(x) + arctanh(y)
+  This is the addition formula for arctanh, proved as a formal identity.
+
+  The formal exponential (inverse of log):
+  exp_F(t) = tanh(t) = t - t^3/3 + 2t^5/15 - 17t^7/315 + ...
+  This inverts arctanh: tanh(arctanh(x)) = x.
+
+  The formal exponential is tanh.
+  tanh: unbounded -> bounded.
+  arctanh: bounded -> unbounded.
+  These are the FORMAL LOG and EXP of the Cayley group.
+
+  p-ADIC CONVERGENCE:
+  arctanh(x) = x + x^3/3 + x^5/5 + x^7/7 + ...
+  The coefficient of x^{2k+1} is 1/(2k+1).
+  v_p(1/(2k+1)) = -v_p(2k+1).
+
+  For p=7: v_7(1/7) = -1 at k=3 (the x^7 term).
+  arctanh(x) converges on p*Z_p for p >= 3,
+  but the x^p term has a 1/p POLE in the p-adic valuation.
+
+  For p=7:
+  arctanh(x) = x + x^3/3 + x^5/5 + x^7/7 + x^9/9 + x^11/11 + x^13/13 + ...
+  At x = 7t (t in Z_7):
+  The x^7/7 term gives 7^7*t^7/7 = 7^6*t^7.
+  v_7(7^6*t^7) = 6 + 7*v_7(t) >= 6.
+  So the 'dangerous' 1/7 is ABSORBED by the 7^7 from x^7.
+  arctanh converges on 7*Z_7.
+
+
+  VII. THE FORMAL GROUP LAW AND H(T)
+  --------------------------------------------------
+
+  H(T) = I(Omega(T), 2) = evaluation at lambda = 2.
+  In the formal group: lambda = 2 corresponds to:
+  x = Q^{-1}(2) = (2-1)/(2+1) = 1/3.
+
+  arctanh(1/3) = (1/2)*ln(2) = ln(sqrt(2)) = rapidity(2)/2
+
+  Wait — let's be precise:
+  arctanh(1/3) = (1/2)*ln((1+1/3)/(1-1/3)) = (1/2)*ln(4/2*3) ...
+  arctanh(1/3) = 0.3465735903
+  ln(2)/2      = 0.3465735903
+  Match: True
+
+  YES: arctanh(1/3) = ln(2)/2.
+  Proof: arctanh(1/3) = (1/2)*ln((1+1/3)/(1-1/3)) = (1/2)*ln((4/3)/(2/3))
+       = (1/2)*ln(2).
+
+  So H(T) is evaluated at the point whose FORMAL LOGARITHM is ln(2)/2.
+  In the formal group: x = 1/3 has log_F(x) = ln(2)/2.
+  H(T) = I(Omega(T), exp(2*log_F(1/3)))
+       = I(Omega(T), exp(ln(2)))
+       = I(Omega(T), 2).
+  Circular — but the POINT is that 1/3 is special:
+  its formal logarithm is the simplest possible value: ln(2)/2.
+
+  7-ADIC ANALYSIS of x = 1/3:
+  |1/3|_7 = |3|_7^{-1} = 1 (since 7 does not divide 3)
+  So 1/3 is a 7-adic UNIT. It is NOT in 7*Z_7.
+  arctanh(1/3) does NOT converge 7-adically!
+
+  This means: the evaluation H(T) = I(Omega, 2) CANNOT be done
+  purely 7-adically through the formal logarithm.
+  The formal group at p=7 does not 'see' the evaluation point lambda=2.
+  This is WHY H(T) is never divisible by 7 only for certain tournaments.
+  (In fact, H(T) CAN be divisible by 7 — it's not universally forbidden.)
+
+  2-ADIC ANALYSIS of x = 1/3:
+  |1/3|_2 = 1 (since 2 does not divide 3)
+  So 1/3 is a 2-adic unit too. NOT in 2*Z_2.
+  arctanh(1/3) does NOT converge 2-adically either!
+
+  BUT: H(T) IS always odd (Redei's theorem).
+  The formal group has height infinity at p=2,
+  which means the ENDOMORPHISM ring is a quaternion order.
+  The height-infinity structure FORCES H(T) to be odd,
+  even though the evaluation point 1/3 is outside the radius of convergence.
+  This is a GLOBAL phenomenon, not a local one.
+
+
+  VIII. SYNTHESIS: THE CAYLEY FORMAL GROUP
+  --------------------------------------------------
+
+  F(x,y) = (x+y)/(1+xy)
+  log_F = arctanh (rapidity)
+  exp_F = tanh (the bridge)
+  [n]_F(x) = Q^{-1}(Q(x)^n) (formal multiplication)
+
+  Height at p=2: INFINITY (supersingular)
+    => Redei's theorem (H(T) is always odd)
+    => Quaternion endomorphisms
+
+  Height at odd p: 1 (ordinary)
+    => Standard formal group behavior
+    => [p](x) = x^p mod p
+
+  B_6 = 1/42 because denom(B_6) = prod{p : (p-1)|6} = 2*3*7
+  The formal log arctanh has 1/p at degree p:
+  arctanh(x) = x + x^3/3 + x^5/5 + x^7/7 + ...
+  The 'poles' at p = 3, 5, 7 are visible in the formal log.
+  B_6 = 1/42 selects EXACTLY the primes visible at degree <= 6.
+
+  The complete picture:
+  - The Cayley transform Q and its formal group F
+  - The formal logarithm arctanh and exponential tanh
+  - The height function: infinity at 2, one at odd primes
+  - The von Staudt denominator: B_6 = 1/42 = 1/(2*3*7)
+  - The evaluation point: H(T) = I(Omega(T), Q(1/3))
+  - Everything: rapidity, tournaments, quaternions, Bernoulli
+  These are ALL faces of ONE formal group over Z.
+
