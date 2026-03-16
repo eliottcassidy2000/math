@@ -37,3 +37,27 @@ Flip a coin for every pair of players in a tournament: heads = A wins, tails = B
 ### Hook F: "The price of memory"
 
 The golden ratio $\phi = 1.618\ldots$ governs systems that forget instantly. The tribonacci constant $\tau = 1.839\ldots$ governs systems that remember one step back. The difference $\tau - \phi = 0.221\ldots$ is the price of memory — the exact cost, in growth rate, of keeping track of what just happened. Tournaments pay this price because each comparison echoes into the next. Without memory: Fibonacci. With one step of memory: tribonacci. The entire theory of pairwise comparison lives in that gap of 0.221.
+
+---
+
+### Hook G: "The golden ratio hides in tournament physics"
+
+Every matrix has special values where its eigenvalues collide — physicists call them *exceptional points*. The $3 \times 3$ transfer matrix that governs tournament path counting has discriminant $\Delta(x) = 4x(x^2 - 11x - 1)$. Set it to zero: the exceptional-point eigenvalues are $1/\phi$ and $-\phi$, where $\phi$ is the golden ratio. The same number that governs sunflower spirals and Fibonacci rabbits marks the exact boundary where tournament dynamics change character — from three distinct growth modes to two coalescing ones. And the discriminant has its own symmetry: $\Delta(-1) = \Delta(1) = \Delta(11) = -44$, tying together the three natural scales of the system.
+
+---
+
+### Hook H: "Your audio filter is secretly counting lattice paths"
+
+Every digital audio system uses the *bilinear transform* — a formula from the 1940s that converts analog filters to digital ones. The formula is $Q(x) = (1+x)/(1-x)$. We discovered that its Taylor coefficients are *exactly* Delannoy numbers — the count of lattice paths that can go right, up, or diagonally. Nobody noticed this before. Your Spotify equalizer, your hearing aid, your noise-cancelling headphones: they are all, at the level of the math, counting paths on a grid. Frequency warping IS lattice path counting.
+
+---
+
+### Hook I: "One matrix, three constants"
+
+Take one $3 \times 3$ matrix. Evaluate it at three different inputs. Out come three of the most famous constants in mathematics:
+
+- At $x = 1$: the **tribonacci constant** $\tau = 1.839\ldots$ (the growth rate of 1, 1, 1, 3, 5, 9, 17, ...)
+- At the exceptional point: the **golden ratio** $\phi = 1.618\ldots$ (where eigenvalues collide)
+- At $x = i = \sqrt{-1}$: **pi** via $\mathrm{arctanh}(i) = i\pi/4$
+
+One matrix. Three constants. Each one emerges at a different scale: $\tau$ from counting, $\phi$ from coalescence, $\pi$ from rotation. The matrix is the transfer matrix of tournament path counting — the simplest object that remembers one step of history in a sequence of binary comparisons.

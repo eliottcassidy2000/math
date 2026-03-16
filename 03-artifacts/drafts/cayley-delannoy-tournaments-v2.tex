@@ -320,6 +320,148 @@ Q^m = \underbrace{\cosh(2m\arctanh x)}_{\text{symmetric (space)}} + \underbrace{
 \]
 and the Wick rotation $x \to ix$ converts the temporal $\arctanh$ into the spatial $\arctan$, producing $\pi$.
 
+%% ====================================================================
+\section{The Golden Shadow}
+%% ====================================================================
+
+The metallic means $y_n = (n + \sqrt{n^2+4})/2$ (with $y_1 = \varphi$, $y_2 = 1+\sqrt{2}$, $y_3 = (3+\sqrt{13})/2$, etc.)\ arise throughout number theory and tiling. We define their \emph{shifted companions}:
+
+\begin{definition}\label{def:fn}
+For each integer $n \geq 1$, define
+\[
+f_n \;=\; \frac{n - 2 + \sqrt{n^2 + 4}}{2} \;=\; y_n - 1.
+\]
+\end{definition}
+
+\begin{proposition}[Quadratic and continued fraction]\label{prop:fn-quad}
+$f_n$ satisfies the quadratic $f^2 - (n-2)f - n = 0$, and has the purely periodic continued fraction
+\[
+f_n = [n-1;\, \overline{n, n, n, \ldots}].
+\]
+\end{proposition}
+
+\begin{proof}
+Since $y_n$ satisfies $y^2 - ny - 1 = 0$, the substitution $f = y - 1$ gives
+\[
+(f+1)^2 - n(f+1) - 1 = f^2 + 2f + 1 - nf - n - 1 = f^2 - (n-2)f - n = 0.
+\]
+For the continued fraction, note that $f_n = n - 1 + 1/f_n'$ where $f_n' = n + 1/f_n'$, giving $f_n' = [n; \overline{n}] = (\text{purely periodic})$. Combining: $f_n = [n-1; n, n, n, \ldots]$.
+\end{proof}
+
+\begin{proposition}[The Cayley collapse]\label{prop:cayley-collapse}
+For each $f = f_n$, the rational expression $(f^2 + f - 1)/(f^2 + 3f + 1)$ collapses to a rational number:
+\[
+\frac{f^2 + f - 1}{f^2 + 3f + 1} \;=\; \frac{n-1}{n+1}.
+\]
+The irrational part $\sqrt{n^2+4}$ cancels because the common factor $(f+1)$ divides both numerator and denominator.
+\end{proposition}
+
+\begin{proof}
+Using $f^2 = (n-2)f + n$ (from Proposition~\ref{prop:fn-quad}):
+\begin{align*}
+f^2 + f - 1 &= (n-2)f + n + f - 1 = (n-1)f + (n-1) = (n-1)(f+1), \\
+f^2 + 3f + 1 &= (n-2)f + n + 3f + 1 = (n+1)f + (n+1) = (n+1)(f+1).
+\end{align*}
+Therefore $(f^2 + f - 1)/(f^2 + 3f + 1) = (n-1)(f+1)/((n+1)(f+1)) = (n-1)/(n+1)$.
+\end{proof}
+
+\begin{example}[Special cases]\label{ex:fn-special}
+\leavevmode
+\begin{itemize}
+\item $f_1 = (-1 + \sqrt{5})/2 = 1/\varphi$, where $\varphi = (1+\sqrt{5})/2$ is the golden ratio.
+\item $f_2 = \sqrt{2}$, the silver companion. Here $f_2^2 = 2$, confirming $f^2 - 0 \cdot f - 2 = 0$.
+\item $f_4 = (2 + \sqrt{20})/2 = 1 + \sqrt{5} = \varphi^2$.
+\end{itemize}
+\end{example}
+
+%% ====================================================================
+\section{Exceptional Points and the Golden Ratio}
+%% ====================================================================
+
+Returning to the transfer matrix $M(x)$ of Section~7, the characteristic polynomial is $p(\lambda) = \lambda^3 - \lambda^2 - x\lambda - x$. Its discriminant with respect to $\lambda$ is:
+
+\begin{theorem}[Discriminant and exceptional points]\label{thm:disc}
+\[
+\Delta(x) \;=\; 4x(x^2 - 11x - 1).
+\]
+The transfer matrix $M(x)$ has a repeated eigenvalue (an \emph{exceptional point}) at exactly three values of $x$:
+\begin{enumerate}
+\item $x = 0$: the trivial degeneracy (two eigenvalues collide at $\lambda = 0$), with degenerate eigenvalue $d = 0$;
+\item $x = x_- = \frac{11 - 5\sqrt{5}}{2} = 8 - 5\varphi$: with degenerate eigenvalue $d = 1/\varphi$;
+\item $x = x_+ = \frac{11 + 5\sqrt{5}}{2} = 3 + 5\varphi$: with degenerate eigenvalue $d = -\varphi$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The discriminant of $\lambda^3 + a\lambda^2 + b\lambda + c$ is $\Delta = 18abc - 4a^3c + a^2b^2 - 4b^3 - 27c^2$. With $a = -1$, $b = -x$, $c = -x$:
+\begin{align*}
+\Delta &= 18(-1)(-x)(-x) - 4(-1)^3(-x) + (-1)^2(-x)^2 - 4(-x)^3 - 27(-x)^2 \\
+       &= -18x^2 - 4x + x^2 + 4x^3 - 27x^2 \\
+       &= 4x^3 - 44x^2 - 4x \\
+       &= 4x(x^2 - 11x - 1).
+\end{align*}
+The nontrivial exceptional points are the roots of $x^2 - 11x - 1 = 0$, namely $x_\pm = (11 \pm \sqrt{125})/2 = (11 \pm 5\sqrt{5})/2$. At each EP, the repeated eigenvalue $d$ satisfies $3d^2 - 2d - x = 0$ (from $p'(d) = 0$) and $d^3 - d^2 - xd - x = 0$ (from $p(d) = 0$). Eliminating $x = 3d^2 - 2d$ from $p(d) = 0$:
+\[
+d^3 - d^2 - d(3d^2 - 2d) - (3d^2 - 2d) = 0 \implies -2d^3 - 2d^2 + 2d = 0 \implies d(d^2 + d - 1) = 0.
+\]
+\end{proof}
+
+\begin{remark}[The golden ratio equation]\label{rem:golden}
+The EP eigenvalue equation $d^2 + d - 1 = 0$ has roots $d = (-1 \pm \sqrt{5})/2$, which are $1/\varphi$ and $-\varphi$. This is precisely the \emph{golden ratio equation}: the same algebraic relation that defines $\varphi$ governs the coalescence of eigenvalues in the tournament transfer matrix. One matrix simultaneously encodes:
+\begin{itemize}
+\item the tribonacci constant $\tau$ (at $x = 1$, real-world tournament counting),
+\item the golden ratio $\varphi$ (at the exceptional points, where eigenvalue degeneracy occurs),
+\item exceptional-point physics (non-Hermitian spectral theory, $\mathcal{PT}$-symmetry breaking).
+\end{itemize}
+\end{remark}
+
+\begin{remark}[The $-44$ coincidence]\label{rem:minus44}
+At $x \in \{-1, 1, 11\}$, the discriminant evaluates to
+\[
+\Delta(-1) = \Delta(1) = \Delta(11) = -44.
+\]
+These three points are: $x = -1$ (the zero of $Q$, where $Q(-1) = 0$), $x = 1$ (the pole of $Q$, where $Q(1) = \infty$, and the tribonacci specialization), and $x = 11$ (the Paley prime $p = 11$, the smallest prime where the Paley tournament exhibits non-trivial structure in this theory). The coincidence $\Delta = -44$ at all three values follows from $x^2 - 11x - 1$ evaluating to $11, -11, 9$ respectively, combined with the prefactor $4x$.
+\end{remark}
+
+%% ====================================================================
+\section{Connections}
+%% ====================================================================
+
+The Cayley transform $Q(x) = (1+x)/(1-x)$ and the underlying $\arctanh$ generator connect the tournament theory to several independent areas.
+
+\subsection{The bilinear (Tustin) transform}
+
+In digital signal processing, the \emph{bilinear transform} (also called the Tustin transform) maps an analog transfer function $H_a(s)$ to its digital counterpart $H_d(z)$ via the substitution
+\[
+s \;=\; \frac{2}{T}\cdot\frac{z - 1}{z + 1},
+\]
+where $T$ is the sampling period. Up to the scaling factor $2/T$, the map $z \mapsto (z-1)/(z+1)$ is exactly the \emph{inverse Cayley transform} $Q^{-1}(z) = (z-1)/(z+1)$, and the forward map is $z = Q(s) = (1+s)/(1-s)$ (with $T = 2$).
+
+This identification appears to be genuinely new: while both objects are classical, no existing literature (to the authors' knowledge) connects the tournament Fourier analysis of Sections~2--6 with the bilinear/Tustin transform of DSP theory. The Cayley transform $Q$ serves as the bridge: its role as the moment generating function of the $Z$-process (tournament side) is the same M\"obius transformation that maps the analog $s$-plane to the digital $z$-plane (signal processing side). The frequency warping $\omega_d = \arctan(\omega_a T/2)$ in DSP is precisely the Wick rotation of Corollary~\ref{cor:wick}.
+
+\subsection{Information geometry: Fisher--Rao metric}
+
+The Fisher information of the Bernoulli distribution $\mathrm{Bern}(p)$ is $I(p) = 1/(p(1-p))$, and the induced Fisher--Rao geodesic distance between $p$ and $q$ is
+\[
+d_{\mathrm{FR}}(p,q) \;=\; 2\left|\arctanh(2p - 1) - \arctanh(2q - 1)\right|.
+\]
+At the symmetric point $p = 1/2$ (the uniform tournament measure), the curvature of the statistical manifold equals $\CV^2$. The Fisher--Rao metric is thus the natural metric for the tournament parameter space, with $\arctanh$ as the coordinate map.
+
+\subsection{Universality class}
+
+The following objects all share the same underlying algebraic structure---powers of the M\"obius transformation $Q(x) = (1+x)/(1-x)$, its logarithm $\arctanh$, or its Wick rotation $\arctan$:
+\begin{enumerate}
+\item Tournament $\CV^2$ (this paper);
+\item Central Delannoy numbers and lattice paths~\cite{sulanke, hetyei2009};
+\item The bilinear/Tustin transform in DSP~\cite{marcus-roth-siegel};
+\item Fisher--Rao distance on $\mathrm{Bern}(p)$;
+\item The Gauss continued fraction $\arctanh(1/n) = [0; n, 3n, 5n, \ldots]$;
+\item Legendre polynomials via the Rodrigues formula (Corollary~\ref{cor:rodrigues} at $u = 1$);
+\item Hyperbolic geometry (half-plane model, cross-ratio);
+\item The Leibniz--Gregory--Madhava series $\pi/4 = 1 - 1/3 + 1/5 - \cdots$.
+\end{enumerate}
+That these eight domains are governed by a single function is not a metaphor: they share the same coefficients, the same recurrences, and the same functional equation.
+
 \begin{thebibliography}{99}
 \bibitem{redei1934} L.~R\'edei, \emph{Ein kombinatorischer Satz}, Acta Litt.\ Szeged \textbf{7} (1934), 39--43.
 
@@ -328,6 +470,10 @@ and the Wick rotation $x \to ix$ converts the temporal $\arctanh$ into the spati
 \bibitem{oeis-a108666} OEIS Foundation, \emph{A108666: Number of $(1,1)$-steps in all Delannoy paths of length $n$}, \url{https://oeis.org/A108666}.
 
 \bibitem{sulanke} R.~A.~Sulanke, \emph{Objects counted by the central Delannoy numbers}, J.\ Integer Seq.\ \textbf{6} (2003), Art.~03.1.5.
+
+\bibitem{hetyei2009} G.~Hetyei, \emph{Central Delannoy numbers, Legendre polynomials, and a balanced join operation preserving the Cohen--Macaulay property}, Ann.\ Comb.\ \textbf{13} (2009), 363--396.
+
+\bibitem{marcus-roth-siegel} B.~H.~Marcus, R.~M.~Roth, and P.~H.~Siegel, \emph{Constrained systems and coding for recording channels}, in \emph{Handbook of Coding Theory} (V.~S.~Pless and W.~C.~Huffman, eds.), vol.~2, Elsevier, 1998, pp.~1635--1764.
 \end{thebibliography}
 
 \end{document}

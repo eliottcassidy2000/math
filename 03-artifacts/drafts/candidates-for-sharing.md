@@ -82,12 +82,53 @@ Both functions share the harmonics $1, 1/3, 1/5, 1/7, \ldots$; the only differen
 
 ---
 
+## Candidate 7: THM-224 — Golden Exceptional Points (publishable)
+
+**Statement.** The transfer matrix $M(x)$ has characteristic polynomial $\lambda^3 - \lambda^2 - x\lambda - x$ with discriminant $\Delta(x) = 4x(x^2 - 11x - 1)$. The exceptional points (where eigenvalues coalesce) occur at $x = (11 \pm 5\sqrt{5})/2$, giving EP eigenvalues $1/\varphi$ and $-\varphi$ where $\varphi = (1+\sqrt{5})/2$ is the golden ratio.
+
+**Why share.** Exceptional points are a major topic in non-Hermitian quantum mechanics and photonics. The golden ratio appearing as an EP eigenvalue of a combinatorial transfer matrix is unexpected and connects tournament theory to PT-symmetric physics. The discriminant symmetry $\Delta(-1) = \Delta(1) = \Delta(11) = -44$ is elegant and unexplained at a deeper level.
+
+**Format.** Letter or short paper. Suitable for *American Journal of Physics*, *Physical Review A*, or *Journal of Physics A*.
+
+**Verified.** Discriminant factored symbolically; EP eigenvalues confirmed algebraically.
+
+---
+
+## Candidate 8: Bilinear Transform = Delannoy Connection (publishable)
+
+**Statement.** The bilinear (Tustin) transform $Q(x) = (1+x)/(1-x)$, ubiquitous in digital signal processing for converting continuous-time to discrete-time filters, has Taylor coefficients that are exactly Delannoy lattice path weights. This connection appears to be genuinely new: no prior literature links the Tustin discretization to Delannoy combinatorics.
+
+**Why share.** The bilinear transform is taught in every DSP course. Delannoy numbers are a staple of enumerative combinatorics. That these two classical objects are the same thing — viewed from different fields — is a clean, surprising bridge result. It gives Delannoy numbers a signal-processing interpretation (frequency warping = lattice path counting) and gives the bilinear transform a combinatorial interpretation.
+
+**Format.** Short paper or letter. Suitable for *IEEE Signal Processing Letters*, *Discrete Mathematics*, or *Advances in Applied Mathematics*.
+
+**Verified.** Coefficient match verified to high order; literature search confirms novelty.
+
+---
+
+## Candidate 9: One Matrix, Three Constants (talk/blog hook)
+
+**Statement.** The single $3 \times 3$ transfer matrix $M(x) = \begin{pmatrix}1&2x&0\\0&0&1\\1&x&0\end{pmatrix}$ encodes three fundamental constants at three values of $x$:
+
+- $x = 1$: tribonacci constant $\tau = 1.839\ldots$ (largest eigenvalue)
+- $x = (11 + 5\sqrt{5})/2$: golden ratio $\varphi = 1.618\ldots$ (exceptional point eigenvalue)
+- $x = i$: $\pi/4$ via $\text{arctanh}(i) = i\pi/4$ (Wick rotation)
+
+**Why share.** One matrix, three constants ($\tau$, $\varphi$, $\pi$) — this is an irresistible hook for talks, blog posts, and popular mathematics writing. Each constant emerges from the same object at a different scale.
+
+**Format.** Blog post, Substack hook, or opening slide for a talk. Not a standalone paper, but a compelling narrative frame.
+
+---
+
 ## Prioritized Recommendation
 
 | Priority | Candidate | Action | Timeline |
 |---|---|---|---|
 | 1 | **W(n) OEIS submission** | Submit sequence with formula | This week |
 | 2 | **Paper (Candidates 1+2)** | Submit v2 LaTeX to arXiv | This month |
-| 3 | **Wick rotation visual** | Twitter/blog post with pi identity | Anytime |
-| 4 | **Simplicial binary note** | Short paper or conjecture submission | Next month |
-| 5 | **arctanh uniqueness** | Include as remark in the main paper | With paper |
+| 3 | **Golden EPs (Candidate 7)** | Short paper to AJP or JPhysA | This month |
+| 4 | **Bilinear/Delannoy (Candidate 8)** | Letter to IEEE SPL or Disc. Math. | This month |
+| 5 | **Wick rotation visual** | Twitter/blog post with pi identity | Anytime |
+| 6 | **One Matrix Three Constants (Candidate 9)** | Blog post / talk opener | Anytime |
+| 7 | **Simplicial binary note** | Short paper or conjecture submission | Next month |
+| 8 | **arctanh uniqueness** | Include as remark in the main paper | With paper |

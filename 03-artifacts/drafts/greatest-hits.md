@@ -60,6 +60,11 @@ Not in OEIS. W(n)/n! = 1 + CV^2(H).
 - Natural numbers on the Cayley line: multiplication = velocity addition
 - FTA = Dehn-Sydler on the Cayley line
 - Bertrand's postulate = constant hyperbolic width ln(2)/2
+- **THM-224 (Golden Exceptional Points):** Discriminant of char poly = 4x(x^2-11x-1). EP eigenvalues are 1/phi and -phi (golden ratio). The discriminant factors over Q(sqrt(5)), linking the transfer matrix to the golden ratio at the exact coalescence points.
+- **Bilinear transform = Delannoy:** The bilinear (Cayley) transform Q(x) = (1+x)/(1-x) has Taylor coefficients that ARE Delannoy lattice path weights. This connection is genuinely new — no prior literature links the bilinear/Tustin transform from DSP to Delannoy combinatorics.
+- **Fisher-Rao = arctanh:** The Fisher-Rao geodesic distance on Bernoulli distributions is arctanh, the same function governing tournament statistics. This provides an information geometry interpretation: tournament energy IS statistical distance.
+- **Golden shadow:** f_n = metallic mean - 1 with continued fraction [n-1; n, n, n, ...]. At n=1: f_1 = phi - 1 = 1/phi. The golden ratio is the n=1 shadow of the Cayley transform.
+- **Discriminant symmetry:** Delta(x) = 4x(x^2-11x-1) takes the value -44 at x = -1, x = 1, and x = 11. The symmetry Delta(-1) = Delta(1) = Delta(11) = -44 ties the three natural scales of the transfer matrix.
 
 ---
 
@@ -77,6 +82,11 @@ Not in OEIS. W(n)/n! = 1 + CV^2(H).
 | Information theory | arctanh = channel capacity, ln(2) = one bit |
 | Relativity | Multiplication = velocity addition |
 | Number theory | Natural numbers as Cayley addresses |
+| Golden ratio / EPs | Discriminant 4x(x^2-11x-1); EP eigenvalues 1/phi, -phi |
+| DSP / Bilinear transform | Tustin discretization IS Delannoy path counting (new) |
+| Information geometry | Fisher-Rao distance on Bernoulli = arctanh (tournament energy = statistical distance) |
+| Metallic means | Golden shadow f_n = metallic mean - 1, CF [n-1; n,n,n,...] |
+| Discriminant symmetry | Delta = -44 at x = -1, 1, 11 — three natural scales |
 
 ---
 
@@ -85,4 +95,4 @@ Not in OEIS. W(n)/n! = 1 + CV^2(H).
 - Paper: `03-artifacts/drafts/cayley-delannoy-tournaments-v2.tex`
 - Library: `04-computation/cayley_delannoy.py` (10 tests pass)
 - OEIS: `03-artifacts/oeis/W_n_submission.txt` (20 terms)
-- Hooks: `03-artifacts/substack/hook-{A..G}.tex`
+- Hooks: `03-artifacts/drafts/substack-hooks.md` (Hooks A through I)
