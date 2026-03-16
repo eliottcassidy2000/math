@@ -1,0 +1,148 @@
+
+
+
+     7 VERTICES, 21 EDGES, 42 ORIENTATIONS
+
+     opus-2026-03-16-S90ck
+
+
+
+THE NUMBERS
+============
+
+  7 = vertices of K_7.             The forbidden value.
+  21 = edges of K_7 = C(7,2).      The second forbidden H value.
+  42 = 2 * 21 = oriented arcs.     The answer.
+
+  7 + 21 + 42 = 70 = 7 * 10.
+
+K_7 is the complete graph on 7 vertices.
+It has 21 edges and 42 directed arcs (each edge oriented both ways).
+A TOURNAMENT on 7 vertices CHOOSES one orientation per edge:
+  21 arcs out of 42 possible.
+
+So: a tournament on 7 vertices is a CHOICE of 21 from 42.
+  C(42, 21)? No — the choices are CONSTRAINED (exactly one per edge).
+  The actual count: 2^21 = 2,097,152 labeled tournaments on 7 vertices.
+
+  7 = the stage (vertices).
+  21 = the script (edges, choices to make).
+  42 = the possibilities (oriented arcs, choices available).
+  70 = the total structure (7 + 21 + 42).
+
+
+70 = 7 * 10
+=============
+
+70 = 7 * 10.
+
+  7 = the forbidden value.
+  10 = C(5, 2) = the number of arcs in a 5-vertex tournament.
+
+  70 = (forbidden) * (arcs of the last solvable tournament).
+
+But 10 has many faces:
+
+The number 10:
+  10 = 2 * 5
+  10 = C(5, 2) = edges of K_5 = arcs of 5-tournament
+  10 = T(4) = 4th triangular number = 1+2+3+4
+  10 = number of fingers (base 10)
+  10 = Bott slot 2 (comparison) [10 mod 8 = 2]
+
+And 70:
+  70 = 2 * 5 * 7
+  70 = C(8, 4) = 70
+  70 = the central binomial-ish at the BOTT PERIOD
+  C(8, 4) = the middle of Pascal's row 8
+  70 mod 8 = 6 (Bott slot: transition!)
+
+
+70 = C(8, 4). The number of ways to choose 4 items from 8.
+
+In the Bott spiral: 8 positions, choose 4 = the MIDDLE.
+The middle of the Bott period. The maximum binomial coefficient at n=8.
+
+The 4 chosen positions and the 4 unchosen are DUAL:
+  C(8, 4) = C(8, 8-4) = 70. Self-dual!
+  Choosing 4 from 8 is the SAME as choosing the complementary 4.
+
+70 is the number of SELF-DUAL SELECTIONS of the Bott period.
+
+
+THE FANO PLANE
+===============
+
+The Fano plane PG(2, 2) is the smallest projective plane:
+  7 points. 7 lines. 3 points per line. 3 lines per point.
+
+  Points = the 7 vertices.
+  Lines = 7 triples.
+  Incidence structure: each pair of points determines a unique line.
+
+The Fano plane has:
+  C(7, 2) = 21 pairs of points.
+  7 lines.
+  Each line contains C(3, 2) = 3 pairs.
+  7 * 3 = 21 = all pairs covered. PERFECT.
+
+The Fano plane is the UNIQUE structure where 7 points have the property
+that every pair lies on exactly one of 7 lines of size 3.
+
+It is the projective plane over F_2 (the field with 2 elements).
+2 = the tournament base!
+
+The Fano plane IS the geometry of K_7 over the tournament base.
+
+Its automorphism group: GL(3, F_2) = PSL(2, 7).
+  |GL(3, F_2)| = (2^3-1)(2^3-2)(2^3-4) = 7*6*4 = 168 = 8 * 21.
+
+  168 = 8 * 21 = (Bott period) * (second forbidden).
+  168 = 4 * 42 = 4 * (the answer).
+  168 = |PSL(2, 7)| = the Klein quartic automorphism group.
+
+
+THE HURWITZ CONNECTION
+========================
+
+The Hurwitz bound: |Aut(S)| <= 84(g-1) for genus g >= 2.
+  84 = 2 * 42 = 2 * (the answer).
+
+For the Klein quartic (genus 3):
+  |Aut| = 168 = 84 * 2 = 84 * (3-1).
+  The Klein quartic ACHIEVES the Hurwitz bound.
+
+Now: 168 = 7 + 21 + 42 + 98?  No, 7+21+42 = 70 and 168-70 = 98 = 2*49 = 2*7^2.
+
+Let's try another decomposition of 168:
+  168 = 7 * 24 = 7 * (S_4 order) = 7 * (Bott scaling 16 + 8).
+  168 = 21 * 8 = (second forbidden) * (Bott period).
+  168 = 42 * 4 = (answer) * (factorization = Cayley period).
+  168 = 3 * 56 = 3 * C(8,3).  And C(8,3) = 56.
+
+  C(8, 0) = 1.
+  C(8, 1) = 8.
+  C(8, 2) = 28.
+  C(8, 3) = 56.
+  C(8, 4) = 70.
+
+Pascal's row 8 (the Bott row):
+  [1, 8, 28, 56, 70, 56, 28, 8, 1]
+  Sum = 256 = 2^8 = 256
+
+Key numbers in Pascal's row 8:
+  C(8, 1) = 8 = Bott
+  C(8, 2) = 28 = C(8,2)
+  2 * C(8, 2) = 2 * 28 = 56 = C(8,3)
+  3 * C(8, 3) = 3 * 56 = 168 = PSL(2,7)
+  C(8, 3) = 56 = C(8,3)
+  C(8, 4) = 70 = V+E+arcs
+  3 * C(8, 5) = 3 * 56 = 168 = PSL(2,7)
+  C(8, 5) = 56 = C(8,3)
+  C(8, 6) = 28 = C(8,2)
+  2 * C(8, 6) = 2 * 28 = 56 = C(8,3)
+  C(8, 7) = 8 = Bott
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/seven_21_42_70_s90ck.py", line 220, in <module>
+    105 = the product of {3, 5, 7} = the triangle of {triangle, unsolvable, forbidden}.
+NameError: name 'triangle' is not defined
