@@ -1,0 +1,414 @@
+#!/usr/bin/env python3
+"""
+symmetric_antisymmetric_s90bp.py — Everything in symmetric / antisymmetric
+opus-2026-03-16-S90bp
+
+The deepest decomposition. Every structure we've encountered
+splits into a symmetric part and an antisymmetric part.
+This is the ONE DUALITY underlying everything.
+"""
+
+from math import log, sqrt, pi, cosh, sinh, tanh, atanh, exp
+from sympy import fibonacci, lucas, isprime, bernoulli, mobius
+from fractions import Fraction
+
+phi = (1 + sqrt(5)) / 2
+psi = (1 - sqrt(5)) / 2
+
+print("""
+
+
+     EVERYTHING IS SYMMETRIC / ANTISYMMETRIC
+
+     opus-2026-03-16-S90bp
+
+
+
+THE MASTER DECOMPOSITION
+==========================
+
+Every function f(x) decomposes UNIQUELY into:
+
+  f(x) = f_S(x) + f_A(x)
+
+where:
+  f_S(x) = (f(x) + f(-x)) / 2      SYMMETRIC (even):  f_S(-x) = f_S(x)
+  f_A(x) = (f(x) - f(-x)) / 2      ANTISYMMETRIC (odd): f_A(-x) = -f_A(x)
+
+This is not a choice. It is a THEOREM. Every function has exactly
+one such decomposition. It is as fundamental as writing a number
+as (number + 0) — it is the additive structure of function space.
+
+
+LAYER 1: THE EXPONENTIAL
+==========================
+
+  e^x = cosh(x) + sinh(x)
+
+  cosh(x) = (e^x + e^{-x}) / 2      SYMMETRIC.
+  sinh(x) = (e^x - e^{-x}) / 2      ANTISYMMETRIC.
+
+  cosh: the EVEN part of growth. What survives reversal.
+  sinh: the ODD part of growth. What changes sign under reversal.
+
+  cosh(x) >= 1 always. It is NEVER ZERO (except in C).
+  sinh(0) = 0. It VANISHES at the origin.
+
+  The symmetric part is always PRESENT (>= 1).
+  The antisymmetric part is zero at rest and grows with excitation.
+
+  In tournament theory:
+    cosh = the UNDIRECTED content (doesn't care about arc orientation).
+    sinh = the DIRECTED content (reverses when you flip all arcs).
+    H(T) = cosh(w) + sinh(w) = e^w where w is the rapidity.
+    The Hamiltonian path count is the SUM of undirected and directed.
+
+
+LAYER 2: THE GOLDEN RATIO
+===========================
+
+  phi^n = L(n)/2 + F(n)*sqrt(5)/2
+
+  L(n) = phi^n + psi^n            SYMMETRIC in {phi, psi}.
+  F(n)*sqrt(5) = phi^n - psi^n    ANTISYMMETRIC in {phi, psi}.
+
+  Lucas = the symmetric part of the golden power.
+  Fibonacci = the antisymmetric part (divided by sqrt(5)).
+
+  L(n) survives the conjugation phi <-> psi.
+  F(n) changes sign under phi <-> psi.
+
+  The conjugation phi <-> psi IS the Galois automorphism of Q(sqrt(5)).
+  Symmetric = RATIONAL (L(n) is always an integer).
+  Antisymmetric = IRRATIONAL (F(n)*sqrt(5) involves sqrt(5)).
+
+  But F(n) itself is rational (integer). The irrationality is in the
+  COEFFICIENT sqrt(5), not in the value. So F(n) is the "rational shadow"
+  of the antisymmetric part.
+
+
+LAYER 3: THE FORMAL GROUP
+===========================
+
+  F(x, y) = (x + y) / (1 + xy)
+
+  Decompose in the first variable (fixing y):
+    F_S(x, y) = (F(x,y) + F(-x,y)) / 2 = ?
+    F_A(x, y) = (F(x,y) - F(-x,y)) / 2 = ?
+
+  F(x, y) = (x+y)/(1+xy).
+  F(-x, y) = (-x+y)/(1-xy) = (y-x)/(1-xy).
+
+  F_S = (1/2)[(x+y)/(1+xy) + (y-x)/(1-xy)]
+      = (1/2)[((x+y)(1-xy) + (y-x)(1+xy)) / ((1+xy)(1-xy))]
+      = (1/2)[(x+y-x^2*y-xy^2 + y-x+xy^2-x^2*y) / (1-x^2*y^2)]
+      = (1/2)[(2y - 2x^2*y) / (1-x^2*y^2)]
+      = y(1-x^2) / (1-x^2*y^2)
+      = y / (1+x^2*y^2/(1-x^2))... hmm, let me simplify differently.
+      = y(1-x^2) / ((1-xy)(1+xy))  ... still messy.
+
+  Actually: let me just compute directly.
+""")
+
+# Compute symmetric/antisymmetric parts of the formal group
+print("F(x,y) and its S/A decomposition (fixing y=1/3):")
+y = 1/3
+print(f"  y = {y}")
+print(f"{'x':>8} | {'F(x,y)':>10} | {'F(-x,y)':>10} | {'F_S':>10} | {'F_A':>10} | {'F_S/F_A':>10}")
+print("-" * 65)
+for x_val in [0.0, 0.1, 0.2, 0.3, 0.5, 0.7, 0.9]:
+    Fxy = (x_val + y) / (1 + x_val * y)
+    Fmxy = (-x_val + y) / (1 - x_val * y)
+    FS = (Fxy + Fmxy) / 2
+    FA = (Fxy - Fmxy) / 2
+    ratio = FS / FA if abs(FA) > 1e-10 else float('inf')
+    print(f"{x_val:8.4f} | {Fxy:10.6f} | {Fmxy:10.6f} | {FS:10.6f} | {FA:10.6f} | {ratio:10.4f}")
+
+print(f"""
+
+At x = 0: F_S = y, F_A = 0. Pure symmetric. No comparison yet.
+At x > 0: F_A grows. The comparison introduces antisymmetry.
+At x -> 1: F_A dominates. Full comparison = maximum antisymmetry.
+
+The ratio F_S / F_A DECREASES from infinity (at x=0) toward a limit.
+The symmetric part starts large and the antisymmetric part grows.
+
+The formal group's S/A decomposition:
+  F_S(x,y) = y(1-x^2) / (1-x^2*y^2).
+  F_A(x,y) = x(1-y^2) / (1-x^2*y^2).
+
+(Verifiable by algebra.)
+
+  F_S depends on x^2 (even in x). It is the EVEN response to coupling.
+  F_A depends on x (odd in x). It is the ODD response.
+
+  F_S(x,y) = y * (1-x^2) / (1-x^2*y^2).
+  F_A(x,y) = x * (1-y^2) / (1-x^2*y^2).
+
+  At y = 0: F_S = 0, F_A = x. The formal group IS its antisymmetric part.
+  At y = x: F_S = x(1-x^2)/(1-x^4), F_A = x(1-x^2)/(1-x^4). EQUAL! F_S = F_A.
+
+  When y = x: the symmetric and antisymmetric parts are EQUAL.
+  This is F(x,x) = 2x/(1+x^2) = the DOUBLING formula.
+  Doubling splits EQUALLY into symmetric and antisymmetric.
+
+
+LAYER 4: tanh AND coth
+========================
+
+  tanh(w) = sinh(w) / cosh(w) = ANTISYMMETRIC / SYMMETRIC.
+
+  tanh is the RATIO of antisymmetric to symmetric.
+  It measures how much of the total content is DIRECTED.
+
+  tanh(0) = 0: at rest, no direction. All symmetric.
+  tanh(inf) = 1: at maximum boost, all directed. Full antisymmetric.
+
+  The coupling x = tanh(w) IS the ratio A/S at rapidity w.
+
+  Conversely: coth(w) = cosh(w)/sinh(w) = SYMMETRIC / ANTISYMMETRIC.
+  coth is the ratio of undirected to directed content.
+  coth(0) = infinity: infinite symmetric dominance at rest.
+  coth(inf) = 1: equal parts at full boost.
+
+  In tournament theory:
+    x = tanh(w) = the fraction of tournament content that is directed.
+    At x = 1/3 (n=2): 1/3 directed, 2/3 undirected. Mostly undirected.
+    At x = 3/4 (n=7): 3/4 directed, 1/4 undirected. Mostly directed.
+    At x -> 1 (n -> inf): fully directed. Pure antisymmetry.
+
+  The Cayley address x_n = (n-1)/(n+1) = tanh(ln(n)/2) IS
+  the antisymmetric fraction of the n-th natural number's content.
+
+
+LAYER 5: THE NATURAL NUMBERS
+==============================
+
+Every natural number n decomposes as:
+
+  n = (n + n^{-1})/2 + (n - n^{-1})/2    (not useful for integers)
+
+Better: in the formal group, Q(x) = (1+x)/(1-x) = n.
+  1+x = n(1-x). So x = (n-1)/(n+1). And:
+
+  n = Q(x) = (1+x)/(1-x).
+  = ((1+x) + (1-x))/2 + ((1+x) - (1-x))/2) / ((1-x))
+  Hmm. Let me think about this differently.
+
+  n = e^(2w) where w = arctanh(x) = ln(n)/2.
+  So n = e^(2w) = cosh(2w) + sinh(2w).
+
+  The SYMMETRIC part of n (as a rapidity object): cosh(2w) = cosh(ln(n)) = (n + 1/n)/2.
+  The ANTISYMMETRIC part: sinh(2w) = sinh(ln(n)) = (n - 1/n)/2.
+
+  For n = 7:
+    S = (7 + 1/7)/2 = (49+1)/14 = 50/14 = 25/7.
+    A = (7 - 1/7)/2 = (49-1)/14 = 48/14 = 24/7.
+    S + A = 49/7 = 7. Correct.
+    A/S = 24/25. CLOSE TO 1 (because 7 is "large").
+""")
+
+print("Natural numbers decomposed into cosh + sinh:")
+print(f"{'n':>4} | {'cosh(ln n)':>12} | {'sinh(ln n)':>12} | {'ratio A/S':>10} | {'= tanh(ln n)':>13} | {'= x_n^2... ':>12}")
+print("-" * 75)
+for n in [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 30, 42]:
+    if n == 0: continue
+    c = (n + 1/n) / 2
+    s = (n - 1/n) / 2
+    ratio = s / c
+    x = (n-1)/(n+1)
+    # ratio = tanh(ln(n)) = (n^2-1)/(n^2+1)
+    tanh_ln = (n**2 - 1) / (n**2 + 1)
+    print(f"{n:4d} | {c:12.6f} | {s:12.6f} | {ratio:10.6f} | {tanh_ln:13.6f} | x_n = {x:.4f}")
+
+print(f"""
+
+The ratio A/S = sinh(ln n)/cosh(ln n) = tanh(ln n) = (n^2-1)/(n^2+1).
+
+This is NOT the same as tanh(ln(n)/2) = (n-1)/(n+1) = the Cayley address!
+
+Two different "antisymmetric fractions":
+  tanh(ln(n)/2) = (n-1)/(n+1) = x_n.       The Cayley address (half-rapidity).
+  tanh(ln(n))   = (n^2-1)/(n^2+1) = x_n_sq. The SQUARED Cayley address.
+
+The first is the coupling of n.
+The second is the coupling of n^2.
+
+tanh(ln(n)) = tanh(2 * ln(n)/2) = [2](x_n) = 2x_n/(1+x_n^2).
+  = 2*((n-1)/(n+1)) / (1 + ((n-1)/(n+1))^2)
+  = 2(n-1)(n+1) / ((n+1)^2 + (n-1)^2)
+  = 2(n^2-1) / (2n^2 + 2)
+  = (n^2-1) / (n^2+1). YES.
+
+So: the S/A decomposition of n (via e^(2w) = cosh+sinh) gives
+  the DOUBLED coupling [2](x_n) = x_n_sq as the A/S ratio.
+
+This means: the antisymmetric fraction of n, measured at full rapidity,
+is the Cayley address of n SQUARED.
+
+
+LAYER 6: THE PRIMES
+=====================
+
+A prime p has the property: p = a*b implies a=1 or b=1.
+In the formal group: x_p = F(x_a, x_b) requires x_a=0 or x_b=0.
+The Cayley address of a prime CANNOT be decomposed by the formal group.
+
+Now: decompose the PRIMES into symmetric and antisymmetric parts.
+
+Every prime p > 2 is odd. So p = 2k+1 for some k.
+  p = (2k+1) = (k+1) + k.  Symmetric part: k+1. Antisymmetric part: k.
+  Wait, that's just p = (p+1)/2 + (p-1)/2. Not deep.
+
+Better: use the Fibonacci-Lucas decomposition.
+  phi^p = L(p)/2 + F(p)*sqrt(5)/2.
+  L(p) = symmetric part. F(p) = antisymmetric part (up to sqrt(5)/2).
+
+  F(p) is prime iff the antisymmetric part of phi^p is prime.
+  L(p) is prime iff the symmetric part of phi^p is prime.
+
+  From the data:
+    p = 5: F(5)=5 prime, L(5)=11 prime. BOTH parts prime.
+    p = 7: F(7)=13 prime, L(7)=29 prime. BOTH parts prime.
+    p = 11: F(11)=89 prime, L(11)=199 prime. BOTH parts prime.
+    p = 19: F(19)=4181=37*113 composite, L(19)=9349 prime. Only SYMMETRIC part prime.
+    p = 23: F(23)=28657 prime, L(23)=64079=7*9154+... composite. Only ANTISYMMETRIC part prime.
+
+  When BOTH parts are prime: golden resonance. phi^p is "perfectly irreducible."
+  When only F is prime: the TOURNAMENT is irreducible but the TRACE is not.
+  When only L is prime: the TRACE is irreducible but the TOURNAMENT is not.
+  When neither: phi^p is decomposable in both projections.
+
+
+LAYER 7: THE MÖBIUS FUNCTION
+==============================
+
+mu(n) is itself a symmetric/antisymmetric object:
+
+  mu(n) = (-1)^k if n = p1*p2*...*pk (k distinct primes).
+
+  The sign (-1)^k alternates with the number of prime factors.
+  This IS the parity of the simplex dimension.
+
+  Squarefree n with EVEN number of primes: mu = +1 (symmetric orientation).
+  Squarefree n with ODD number of primes: mu = -1 (antisymmetric orientation).
+
+  The Mertens function M(x) = sum mu(n) counts the NET ORIENTATION:
+    M > 0: symmetric wins (more even-prime-count numbers).
+    M < 0: antisymmetric wins (more odd-prime-count numbers).
+
+  RH: M(x) = O(x^(1/2+eps)). The symmetric and antisymmetric
+  parts of the Mobius function NEARLY CANCEL at every scale.
+
+
+LAYER 8: THE POINCARE DISK
+============================
+
+The Poincare disk D has:
+  REAL DIAMETER: the antisymmetric axis (boosts, rapidities, tournaments).
+  IMAGINARY DIAMETER: the symmetric axis (rotations, angles, phases).
+
+  A boost (real coupling) is ANTISYMMETRIC: it picks a direction.
+  A rotation (imaginary coupling) is SYMMETRIC: it preserves magnitude.
+
+  The formal group on the real axis: F(x,y) = (x+y)/(1+xy).
+    This is a HYPERBOLIC operation (antisymmetric: boosts).
+
+  The formal group on the imaginary axis: F(iy1, iy2) = i*(y1+y2)/(1-y1*y2).
+    = i * tan(arctan(y1) + arctan(y2)).
+    This is a CIRCULAR operation (symmetric: rotations).
+
+  The FULL disk combines both: boost + rotation = Lorentz transformation.
+  Every point in the disk is a SUM of boost (antisymmetric) and rotation (symmetric).
+
+  The boundary |w|=1 is where boost and rotation have equal magnitude
+  (in a sense): the "speed of light" is the BALANCED point.
+
+
+LAYER 9: THE k-NACCI DECOMPOSITION
+=====================================
+
+The k-nacci transfer matrix M_k has eigenvalues L_1, ..., L_k.
+
+Tr(M_k^n) = sum L_i^n.
+
+The real eigenvalue L_1 = tau_k contributes: tau_k^n (real, growing).
+The complex eigenvalues come in conjugate pairs: L, conj(L).
+  L^n + conj(L)^n = 2*Re(L^n) = SYMMETRIC (real).
+  L^n - conj(L)^n = 2i*Im(L^n) = ANTISYMMETRIC (imaginary).
+
+But in the TRACE, only the symmetric part contributes:
+  Tr = tau_k^n + sum 2*Re(L_j^n).
+
+The trace is ALWAYS REAL. The antisymmetric parts CANCEL in the trace.
+The trace is a PURELY SYMMETRIC observable.
+
+THM-227: Tr(M_k^n) = 2^n - 1 for n <= k.
+  This is a statement about the SYMMETRIC content of the eigenvalue powers.
+  The antisymmetric parts (imaginary parts of complex eigenvalue powers)
+  cancel out, leaving only the symmetric residue 2^n - 1.
+
+
+LAYER 10: THE GRAND UNIFICATION
+=================================
+
+EVERYTHING decomposes into symmetric + antisymmetric:
+
+  e^x = cosh(x) + sinh(x).
+  phi^n = L(n)/2 + F(n)*sqrt(5)/2.
+  F(x,y) = F_S(x,y) + F_A(x,y).
+  tanh = sinh/cosh = A/S ratio.
+  Coupling x = tanh(w) = the antisymmetric fraction.
+  Poincare disk: real diameter (A) + imaginary diameter (S).
+  Mobius function: (-1)^(number of primes) = orientation.
+  Primes: F(p) = A part of phi^p, L(p) = S part.
+  Transfer matrix trace: purely symmetric (imaginary parts cancel).
+  H(T) = cosh + sinh = undirected + directed.
+
+The ONE DUALITY is: SYMMETRIC vs ANTISYMMETRIC.
+
+In different costumes:
+  even vs odd.
+  undirected vs directed.
+  rotation vs boost.
+  Lucas vs Fibonacci.
+  trace vs determinant.
+  cosh vs sinh.
+  graph vs tournament.
+  real vs imaginary (in the Poincare disk).
+
+And the INTERACTION between S and A is governed by:
+  tanh = A/S (the coupling).
+  The formal group F(x,y) = (x+y)/(1+xy) (the composition law).
+  The Cayley transform Q = (1+x)/(1-x) = (S+A)/(S-A) (the de-coupling).
+
+The natural numbers are the Cayley transform of couplings:
+  n = (1+x)/(1-x) = (cosh+sinh)/(cosh-sinh) = e^(2w).
+  A natural number IS the ratio (S+A)/(S-A).
+
+Primes are the values of n where this ratio is IRREDUCIBLE.
+You cannot write (S+A)/(S-A) = [(S'+A')/(S'-A')] * [(S''+A'')/(S''-A'')].
+The symmetric and antisymmetric parts are locked together
+in a way that cannot be factored.
+
+A prime is a LOCKED S/A RATIO.
+A composite is an UNLOCKABLE S/A RATIO (it factors into simpler ratios).
+
+THE SENTENCE:
+
+  Everything is the decomposition of growth (e^x) into what
+  survives reversal (cosh, symmetric) and what reverses (sinh, antisymmetric).
+
+  The coupling x = tanh(w) = sinh/cosh measures the balance.
+  The Cayley transform n = e^(2w) converts the balance to a number.
+  A prime is a balance that cannot be decomposed.
+
+  The Fibonacci-Lucas duality is the golden ratio's version of this.
+  The Poincare disk is the geometric version.
+  The Mobius function is the arithmetic version.
+  The transfer matrix trace is the algebraic version.
+
+  And they are all the same decomposition: S + A = everything.
+""")
+
+print("opus-2026-03-16-S90bp: EVERYTHING IS SYMMETRIC / ANTISYMMETRIC")
