@@ -1,0 +1,216 @@
+
+
+
+     GRAND SYNTHESIS: THE TANH-MERSENNE-TOURNAMENT CONNECTION
+
+                     opus-2026-03-16-S90au
+
+
+A chain of exact identities discovered in this session, each
+flowing inevitably from the previous:
+
+
+LAYER 1: THE CAYLEY TRANSFORM
+==============================
+
+    Q(x) = (1+x)/(1-x)       maps (-1,1) to (0,inf)
+    Q^{-1}(n) = (n-1)/(n+1)  the "Cayley address" of n
+
+    arctanh(x) = (1/2) ln Q(x)  the rapidity
+    tanh(w) = Q^{-1}(e^{2w})    the inverse
+
+
+LAYER 2: THE FORMAL GROUP LAW
+==============================
+
+    F(x,y) = (x+y)/(1+xy)     the tanh addition law
+
+    F(x_m, x_n) = x_{mn}       ON CAYLEY ADDRESSES, F = MULTIPLICATION
+
+    Q: ((-1,1), F) -> ((0,inf), *)   the Cayley transform is a
+                                       GROUP HOMOMORPHISM
+
+    [m](x) = tanh(m*arctanh(x))     the m-fold series: EXPONENTIATION
+
+
+LAYER 3: POWERS OF 2 ON THE CAYLEY LINE
+=========================================
+
+    x_{2^k} = (2^k - 1)/(2^k + 1)        Cayley address of 2^k
+    arctanh(x_{2^k}) = k * ln(2)/2       at rapidity k/2 bits
+    tanh(k * ln(2)/2) = (2^k-1)/(2^k+1)  equally spaced at 1/2 bit
+
+    Numerator: 2^k - 1 = MERSENNE NUMBER
+    Denominator: 2^k + 1 = FERMAT-LIKE NUMBER
+
+    These are the LATTICE POINTS of the Cayley line in half-bits.
+
+
+LAYER 4: THE k-NACCI TRANSFER MATRIX
+======================================
+
+    M_k = k x k companion matrix with first row all 1's
+    Char poly: p(x) = x^k - x^{k-1} - ... - x - 1
+    ALL coefficients = -1 (the DEFINING PROPERTY)
+
+    Augmented: (x-1)*p(x) = x^{k+1} - 2x^k + 1
+    Dominant eigenvalue: tau_k -> 2 as k -> inf
+
+
+LAYER 5: THM-227 (THE k-NACCI MERSENNE IDENTITY)
+==================================================
+
+    Tr(M_k^n) = 2^n - 1    for all 1 <= n <= k
+
+    PROVED by induction on Newton's identities:
+      t(n) = sum_{m=1}^{n-1} t(m) + n  =>  t(n) = 2^n - 1
+
+    INDEPENDENT of k (all k-nacci matrices agree in the "Newton range")
+
+    At n = k+1: Tr(M_k^{k+1}) = 2^{k+1} - k - 2 (deficit = k+1)
+
+    The TRANSITION at n = k is a phase transition:
+      Growth rate drops from 2 to tau_k.
+      The system "discovers its dimension."
+
+
+LAYER 6: THE DOMINANT EIGENVALUE IDENTITY
+==========================================
+
+    tau_k^k = 1/(2 - tau_k)
+
+    From the augmented poly: x^{k+1} - 2x^k + 1 = 0
+    Divide by x^k: x - 2 + x^{-k} = 0
+    Therefore: x^k = 1/(2-x)
+
+    At k=2: phi^2 = 1/(2-phi) = phi + 1
+    (The golden ratio identity is the k=2 case!)
+
+
+LAYER 7: THE WITT VECTOR INTERPRETATION
+=========================================
+
+    Ghost map of the big Witt ring:
+      w_n(a) = sum_{d|n} d * a_d^{n/d}
+
+    Teichmuller lift [2]: ghost = 2^n, coordinates = M(n,2)
+    Teichmuller lift [1]: ghost = 1, coordinates = delta_{n,1}
+
+    The MERSENNE Witt vector [2] - [1]:
+      ghost_n = 2^n - 1
+
+    This IS Tr(M_k^n) for the k-nacci matrix (n <= k)!
+
+    The k-nacci trace sequence = ghost components of [2]-[1].
+
+
+LAYER 8: THE NECKLACE-ORBIT CONNECTION
+=======================================
+
+    M(n,2) = necklace polynomial = binary Lyndon words of length n
+    sum_{d|n} d * M(d,2) = 2^n  (orbit counting)
+    2^n - 1 = (all binary orbits) - (fixed point)
+
+    The k-nacci trace COUNTS non-trivial binary periodic orbits.
+    The fixed point (eigenvalue 1) is removed by the augmented poly.
+
+
+LAYER 9: THE FORBIDDEN VALUES
+===============================
+
+    H = 7  = 2^3 - 1 = Tr(M_3^3) = the tribonacci forbidden value
+    H = 21 = 3 * 7 = related but NOT a Mersenne number
+
+    At odd prime k:
+      Tr(M_k^k) = 2^k - 1 is the k-nacci forbidden value
+      When 2^k-1 is prime: Mersenne prime = forbidden AND prime
+
+    The forbidden values live at the LATTICE POINTS of the Cayley line:
+      H = 7 at 3/2 bits, H = 31 at 5/2 bits, H = 127 at 7/2 bits, ...
+
+
+LAYER 10: THE MULTIPLICATIVE ORDER
+====================================
+
+    Tr(M_k^n) = 2^n - 1 = 0 mod p  iff  ord_p(2) | n
+
+    p = 7: ord_7(2) = 3, so 2^3 - 1 = 7 = 0 mod 7
+    p = 31: ord_31(2) = 5, so 2^5 - 1 = 31 = 0 mod 31
+    p = 127: ord_127(2) = 7, so 2^7 - 1 = 127 = 0 mod 127
+
+    For Mersenne primes p = 2^k - 1:
+      ord_p(2) = k (since 2^k = 1 mod p by definition)
+
+    The forbidden values are the FIRST multiples of Mersenne primes
+    in the trace sequence.
+
+
+THE THREAD:
+
+  tanh -> formal group -> multiplication -> powers of 2 -> Mersenne numbers
+  -> k-nacci traces -> Newton's identities -> all-(-1) coefficients
+  -> augmented polynomial -> Witt vectors -> necklace polynomials
+  -> periodic orbits -> forbidden H values -> back to tournaments
+
+  Everything is connected by the formal group law of tournament composition.
+  Everything follows from the number 2 (the tournament base).
+  Everything is encoded in the Cayley transform Q(x) = (1+x)/(1-x).
+
+
+THE IDENTITIES (exact, proved):
+
+  1. tanh(ln(n)/2) = (n-1)/(n+1)             [Cayley-tanh]
+  2. F(x_m, x_n) = x_{mn}                     [formal group = multiplication]
+  3. Q(F(x,y)) = Q(x) * Q(y)                  [Q is a homomorphism]
+  4. Tr(M_k^n) = 2^n - 1 for 1 <= n <= k      [THM-227]
+  5. tau_k^k = 1/(2 - tau_k)                   [augmented polynomial]
+  6. ghost_n([2]-[1]) = 2^n - 1                [Witt]
+  7. Tr(M_k^{k+1}) = 2^{k+1} - k - 2          [first departure]
+
+  Plus: phi^2 = phi + 1 is identity (5) at k = 2.
+
+
+======================================================================
+THE MERSENNE CORRESPONDENCE TABLE
+======================================================================
+
+  k |    2^k-1 |      tau_k |  Cayley addr |   rapidity |   bits |  prime? |   forbidden of
+--------------------------------------------------------------------------------
+  2 |        3 |   1.618034 |   0.23606798 |   0.240606 |  0.694 |   PRIME | 2-nacci
+  3 |        7 |   1.839287 |   0.29559774 |   0.304689 |  0.879 |   PRIME | 3-nacci
+  4 |       15 |   1.927562 |   0.31683769 |   0.328128 |  0.947 |         | 4-nacci
+  5 |       31 |   1.965948 |   0.32567940 |   0.337987 |  0.975 |   PRIME | 5-nacci
+  6 |       63 |   1.983583 |   0.32966500 |   0.342452 |  0.988 |         | 6-nacci
+  7 |      127 |   1.991964 |   0.33154280 |   0.344561 |  0.994 |   PRIME | 7-nacci
+  8 |      255 |   1.996031 |   0.33245020 |   0.345580 |  0.997 |         | 8-nacci
+  9 |      511 |   1.998029 |   0.33289515 |   0.346081 |  0.999 |         | 9-nacci
+ 10 |     1023 |   1.999019 |   0.33311518 |   0.346328 |  0.999 |         | 10-nacci
+ 11 |     2047 |   1.999510 |   0.33322452 |   0.346451 |  1.000 |         | 11-nacci
+ 12 |     4095 |   1.999756 |   0.33327900 |   0.346512 |  1.000 |         | 12-nacci
+ 13 |     8191 |   1.999878 |   0.33330618 |   0.346543 |  1.000 |   PRIME | 13-nacci
+
+
+Each row: the k-nacci forbidden value 2^k-1, the k-nacci constant tau_k,
+and its position on the Cayley line.
+
+The Cayley addresses converge to 1/3 (the address of 2).
+The rapidities converge to ln(2)/2 (half a bit).
+The bits converge to 1.
+
+The k-nacci constants form a sequence approaching 2 from below,
+and their Cayley addresses form a sequence approaching 1/3 from below.
+
+The FORBIDDEN VALUES 2^k-1 form the Mersenne sequence along the diagonal
+of the trace triangle.
+
+THE ONE SENTENCE:
+
+  The tournament number 2 generates the entire algebraic structure
+  via the formal group law F(x,y) = (x+y)/(1+xy), the k-nacci
+  transfer matrices encode this structure in dimension k, and
+  the transition from universal (Mersenne) to individual (k-nacci)
+  behavior at power k is the moment a finite-dimensional system
+  discovers its own dimension.
+
+
+opus-2026-03-16-S90au: GRAND SYNTHESIS
