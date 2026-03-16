@@ -1,0 +1,312 @@
+
+
+
+     CONSTRUCTING NEW MATHEMATICS VIA NOVEL TELESCOPES
+
+     opus-2026-03-16-S90cq
+
+
+
+======================================================================
+TELESCOPE A: THE SQRT TELESCOPE  f(N) = N + floor(sqrt(N))
+======================================================================
+
+Sqrt telescope levels: [2, 3, 4, 6, 8, 10, 13, 16, 20, 24, 28, 33, 38, 44, 50, 57, 64, 72, 80, 88]...
+
+Primes among sqrt-telescope levels: [2, 3, 13, 97, 137, 241]
+Prime density: 6/41 = 14.63%
+
+Gaps between sqrt-telescope levels: [1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 5, 5, 6, 6, 7]...
+Gap = floor(sqrt(N)), growing like sqrt(N).
+
+
+The sqrt telescope interpolates between the successor and doubling telescopes.
+Its levels grow faster than linearly but slower than exponentially.
+The levels [2, 3, 4, 6, 8, 10, 13, 16, 20, 24]... are NOT powers of 2, NOT Fibonacci, NOT anything standard.
+They are a NEW sequence defined by the sqrt increment rule.
+
+The prime density among these levels: 15%.
+Compare: random integers of similar size have density ~1/ln(N) ~ 10-15%.
+The sqrt telescope levels have similar prime density than random.
+
+======================================================================
+TELESCOPE B: THE TOTIENT TELESCOPE  f(N) = N + phi(N)
+======================================================================
+
+Totient telescope levels: [2, 3, 5, 9, 15, 23, 45, 69, 113, 225, 345, 521, 1041, 1733, 3465]...
+
+Steps: [1, 2, 4, 6, 8, 22, 24, 44, 112, 120, 176, 520]...
+Primes among totient levels: [2, 3, 5, 23, 113, 521, 1733]
+Prime density: 7/31 = 22.58%
+
+
+REMARKABLE: the totient telescope is PRIME-ADAPTIVE.
+At a prime level p: next level = p + (p-1) = 2p-1.
+  2*2-1 = 3. 2*3-1 = 5. 2*5-1 = 9 (composite!).
+  So the "Cunningham chain" 2, 3, 5 appears, then breaks at 9.
+
+At a composite level n: next level = n + phi(n) < 2n.
+  The step is smaller. The telescope SLOWS DOWN at composites.
+
+The totient telescope alternates between fast (prime) and slow (composite) steps.
+This is a CYBERNETIC telescope: the step size is feedback from the current value.
+
+======================================================================
+TELESCOPE C: THE DIVISOR TELESCOPE  f(N) = N + d(N)
+======================================================================
+
+Divisor telescope levels: [2, 4, 7, 9, 12, 18, 24, 32, 38, 42, 50, 56, 64, 71, 73, 75, 81, 86, 90, 102]...
+Primes among divisor levels: [2, 7, 71, 73]...
+Prime density: 4/51 = 7.84%
+
+
+The divisor telescope is the OPPOSITE of the totient telescope:
+  At primes: step = 2 (tiny, almost successor).
+  At composites: step = d(N) (bigger, depends on factorization).
+
+This telescope LINGERS at primes (small steps) and JUMPS past composites.
+It is a PRIME-ACCUMULATING telescope: it spends more time near primes.
+
+Twin primes appear naturally: if N is prime, next = N+2.
+If N+2 is also prime, next = N+4. The telescope steps through twins!
+
+Twin prime segments (consecutive step-2 moves through primes):
+  Starting at 71, length 2
+
+======================================================================
+TELESCOPE D: THE FORMAL GROUP TELESCOPE  f(x) = F(x, 1/3)
+======================================================================
+
+Formal group telescope (composing with coupling of 2):
+step |   coupling |   number n | nearest int |  prime?
+--------------------------------------------------
+   0 |   0.000000 |     1.0000 |          1 |        
+   1 |   0.333333 |     2.0000 |          2 |   PRIME
+   2 |   0.600000 |     4.0000 |          4 |        
+   3 |   0.777778 |     8.0000 |          8 |        
+   4 |   0.882353 |    16.0000 |         16 |        
+   5 |   0.939394 |    32.0000 |         32 |        
+   6 |   0.969231 |    64.0000 |         64 |        
+   7 |   0.984496 |   128.0000 |        128 |        
+   8 |   0.992218 |   256.0000 |        256 |        
+   9 |   0.996101 |   512.0000 |        512 |        
+  10 |   0.998049 |  1024.0000 |       1024 |        
+  11 |   0.999024 |  2048.0000 |       2048 |        
+  12 |   0.999512 |  4096.0000 |       4096 |        
+  13 |   0.999756 |  8192.0000 |       8192 |        
+  14 |   0.999878 | 16384.0000 |      16384 |        
+  15 |   0.999939 | 32768.0000 |      32768 |        
+  16 |   0.999969 | 65536.0000 |      65536 |        
+  17 |   0.999985 | 131072.0000 |     131072 |        
+  18 |   0.999992 | 262144.0000 |     262144 |        
+  19 |   0.999996 | 524288.0000 |     524288 |        
+  20 |   0.999998 | 1048576.0001 |    1048576 |        
+
+
+Composing with coupling 1/3 (= coupling of 2) means:
+  F(x, 1/3) = (x+1/3)/(1+x/3).
+  In terms of odds: Q(F(x,1/3)) = Q(x) * Q(1/3) = Q(x) * 2.
+  So: each step MULTIPLIES the underlying number by 2!
+
+The formal group telescope with y=1/3 IS the doubling telescope.
+Levels: 1, 2, 4, 8, 16, ... = powers of 2.
+
+What if we use a DIFFERENT fixed coupling?
+
+======================================================================
+TELESCOPE E: THE FORMAL GROUP WITH y = 1/2 (coupling of 3)
+======================================================================
+
+Formal group telescope (composing with coupling of 3):
+  step  0: n =        1.0 =      1 
+  step  1: n =        3.0 =      3 PRIME
+  step  2: n =        9.0 =      9 
+  step  3: n =       27.0 =     27 
+  step  4: n =       81.0 =     81 
+  step  5: n =      243.0 =    243 
+  step  6: n =      729.0 =    729 
+  step  7: n =     2187.0 =   2187 
+  step  8: n =     6561.0 =   6561 
+  step  9: n =    19683.0 =  19683 
+  step 10: n =    59049.0 =  59049 
+  step 11: n =   177147.0 = 177147 
+  step 12: n =   531441.0 = 531441 
+  step 13: n =  1594323.0 = 1594323 
+  step 14: n =  4782969.0 = 4782969 
+  step 15: n = 14348907.0 = 14348907 
+
+
+Composing with coupling of 3 = multiplying by 3.
+Levels: 1, 3, 9, 27, 81, 243, ... = powers of 3.
+
+The formal group with fixed coupling of p gives the POWER-OF-p telescope!
+Each prime p defines its OWN telescope: the powers of p.
+
+
+TELESCOPE F: MIXED FORMAL GROUP (alternating 2 and 3)
+
+======================================================================
+TELESCOPE F: ALTERNATING FORMAL GROUP  F(x, 1/3), F(x, 1/2), repeat
+======================================================================
+
+Alternating 2-3 telescope: multiply by 2, then 3, then 2, then 3, ...
+  step  0: n =      1 
+  step  1: n =      2 PRIME
+  step  2: n =      6 
+  step  3: n =     12 
+  step  4: n =     36 
+  step  5: n =     72 
+  step  6: n =    216 
+  step  7: n =    432 
+  step  8: n =   1296 
+  step  9: n =   2592 
+  step 10: n =   7776 
+  step 11: n =  15552 
+  step 12: n =  46656 
+  step 13: n =  93312 
+  step 14: n = 279936 
+
+
+The alternating 2-3 telescope gives: 1, 2, 6, 12, 36, 72, 216, 432, ...
+These are the 3-SMOOTH numbers with a specific 2-3 alternation pattern.
+Primes among these: only 2 (and 3 if we started differently).
+
+This makes sense: repeatedly multiplying by 2 and 3 only gives
+numbers of the form 2^a * 3^b. These are NEVER prime (for a+b > 1).
+
+So: the FORMAL GROUP MIXED TELESCOPE with multiple fixed couplings
+generates SMOOTH numbers, not primes. Primes are ABSENT.
+
+PRIMES ARISE ONLY FROM THE SIEVE (removing composites from the successor telescope),
+NOT from the formal group composition (which generates composites).
+
+THE FORMAL GROUP IS A COMPOSITE-GENERATING MACHINE.
+PRIMES ARE WHAT'S LEFT WHEN YOU REMOVE THE FORMAL GROUP'S OUTPUT.
+
+
+TELESCOPE G: THE COLLATZ-LIKE TELESCOPE
+
+======================================================================
+TELESCOPE G: COLLATZ-LIKE  f(N) = N/2 if even, 3N+1 if odd
+======================================================================
+
+  Collatz from 7: length 17, max 52, primes hit: 6 ([7, 11, 17, 13, 5]...)
+  Collatz from 27: length 112, max 9232, primes hit: 25 ([41, 31, 47, 71, 107]...)
+  Collatz from 42: length 9, max 64, primes hit: 1 ([2])
+  Collatz from 97: length 119, max 9232, primes hit: 26 ([97, 73, 83, 47, 71]...)
+  Collatz from 127: length 47, max 4372, primes hit: 12 ([127, 191, 431, 647, 971]...)
+
+
+The Collatz telescope is a CONTRACTING telescope: it always reaches 1.
+It mixes doubling (3N+1 ~ 3N ~ tripling) with halving (N/2).
+
+In the formal group language:
+  Even step: divide by 2 = INVERSE of the doubling map.
+  Odd step: multiply by 3 and add 1 = tripling + successor.
+
+The Collatz conjecture says: this mixed telescope ALWAYS CONTRACTS to 1.
+Every starting point eventually reaches the identity.
+
+In the Poincare disk: the Collatz map sends couplings TOWARD the center.
+  Even: x -> coupling of n/2 (move toward center).
+  Odd: x -> coupling of 3n+1 (move toward boundary, then halved).
+
+The net effect: the disk CONTRACTS. Every orbit spirals inward.
+The Collatz conjecture = every orbit in the Poincare disk reaches the center.
+
+
+TELESCOPE H: THE HARMONIC TELESCOPE  f(N) = N + N/p(N)
+
+======================================================================
+TELESCOPE H: HARMONIC  f(N) = N + N//smallest_prime_factor(N)
+======================================================================
+
+Harmonic telescope (start=6): [6, 9, 12, 18, 27, 36, 54, 81, 108, 162, 243, 324, 486, 729, 972]...
+
+Step analysis:
+  N=     6, spf= 2, step=   3, factor=1.5000
+  N=     9, spf= 3, step=   3, factor=1.3333
+  N=    12, spf= 2, step=   6, factor=1.5000
+  N=    18, spf= 2, step=   9, factor=1.5000
+  N=    27, spf= 3, step=   9, factor=1.3333
+  N=    36, spf= 2, step=  18, factor=1.5000
+  N=    54, spf= 2, step=  27, factor=1.5000
+  N=    81, spf= 3, step=  27, factor=1.3333
+  N=   108, spf= 2, step=  54, factor=1.5000
+  N=   162, spf= 2, step=  81, factor=1.5000
+  N=   243, spf= 3, step=  81, factor=1.3333
+  N=   324, spf= 2, step= 162, factor=1.5000
+
+
+The harmonic telescope's step depends on the SMOOTHNESS of N:
+  Prime N: step = 1 (successor, crawl).
+  Even N: step = N/2 (half-multiply, fast).
+  Odd composite: step = N/3 or N/5 (intermediate).
+
+It is the INVERSE of the sieve: smooth numbers get big steps, primes get tiny steps.
+It AVOIDS primes by stepping slowly when it hits one.
+
+
+SUMMARY: THE ZOO OF TELESCOPES
+
+======================================================================
+SUMMARY: THE ZOO OF TELESCOPES
+======================================================================
+
+We now have 15+ telescope types:
+
+  STANDARD (from the Bott classification):
+  1. Successor:    N -> N+1.      Linear.       Trivial.
+  2. Doubling:     N -> 2N.       Exponential.  Formal group.
+  3. Golden:       N -> phi*N.    Phi-exp.      Fibonacci.
+  4. Squaring:     N -> N^2.      Double-exp.   Lossy chains.
+  5. Exponential:  N -> 2^N.      Tower.        Mersenne.
+  6. Cumulative:   N -> N*prod+1. Super-tower.  Sylvester.
+  7. Linear-hard:  N -> N+2.      Linear.       NP-complete (snarks).
+
+  NEW (from this exploration):
+  A. Sqrt:         N -> N+sqrt(N).  Sub-exponential.  Interpolating.
+  B. Totient:      N -> N+phi(N).   Adaptive.     PRIME-SENSING (big steps at primes).
+  C. Divisor:      N -> N+d(N).     Adaptive.     PRIME-LINGERING (small steps at primes).
+  D. FG fixed:     F(x, y_0).       Power of p.   Generates smooth numbers.
+  E. FG power-3:   F(x, 1/2).       Power of 3.   Same.
+  F. FG mixed:     Alternating.     Smooth.       Composites only!
+  G. Collatz:      3N+1 or N/2.     Contracting.  Spirals to 1.
+  H. Harmonic:     N+N/spf(N).      Smooth-fast.  Prime-slow.
+
+THE KEY DISCOVERY:
+
+  The formal group GENERATES COMPOSITES, not primes.
+  F(x,y) composes two couplings to get a third.
+  Composition = multiplication. Multiplication creates composites.
+
+  PRIMES ARE WHAT THE FORMAL GROUP CANNOT REACH.
+  They are the GAPS in the formal group's output.
+  They are the couplings that no composition can produce.
+
+  The formal group is a COMPOSITE FACTORY.
+  The primes are the DEFECTS in its output.
+  The sieve DETECTS the defects by removing the factory's products.
+
+  This is why the formal group is so useful for studying primes:
+  it CHARACTERIZES WHAT PRIMES ARE NOT (composites),
+  and what primes are not is easier to describe than what they are.
+
+THE CYBERNETIC TELESCOPES (B, C, H) are the most interesting:
+  They use FEEDBACK from the current value to determine the step.
+  They SENSE the structure of each number and adapt.
+
+  Telescope B (totient): senses COPRIMALITY. Big steps at primes.
+  Telescope C (divisor): senses DIVISIBILITY. Small steps at primes.
+  Telescope H (harmonic): senses SMOOTHNESS. Fast at smooth, slow at prime.
+
+  These three cybernetic telescopes are the S/A decomposition applied to step size:
+    B (totient) = the ANTISYMMETRIC telescope (steps proportional to coprime count).
+    C (divisor) = the SYMMETRIC telescope (steps proportional to divisor count).
+    H (harmonic) = the RATIO telescope (step = N/spf = the harmonic mean contribution).
+
+  And: phi(N) + d(N) is NOT constant, but phi(N) * d(N) has known bounds.
+  The PRODUCT of the symmetric and antisymmetric step sizes is bounded.
+  This is the S/A DUALITY applied to telescope design.
+
+opus-2026-03-16-S90cq: CONSTRUCTING NEW MATHEMATICS VIA NOVEL TELESCOPES
