@@ -1,0 +1,408 @@
+THE RAPIDITY ALGEBRA: WHEN MUSICAL INTERVALS CLOSE
+============================================================
+
+  Condition: c = ab/(a+b+1) is a positive integer.
+  Equivalently: (a+b+1) | ab.
+
+STRUCTURE THEOREM
+----------------------------------------
+
+  Let d = gcd(a, a+b+1). Then d | a and d | (a+b+1).
+  Since d | a, d | (a+b+1-a) = b+1. So d | gcd(a, b+1).
+  Similarly let e = gcd(b, a+b+1). Then e | gcd(b, a+1).
+
+  (a+b+1) | ab iff (a+b+1)/gcd(a,a+b+1) | b
+  iff (a+b+1)/gcd(a,b+1) | b
+
+  So the condition depends on gcd(a, b+1) and gcd(b, a+1).
+
+  Found 160 solutions with a <= 50, b <= 200:
+
+  a    b    c    1/(2a+1) (+) 1/(2b+1) = 1/(2c+1)    gcd(a,b+1) gcd(b,a+1)
+  ---------------------------------------------------------------------------
+    2    3    1    1/  5 (+) 1/  7 = 1/  3             2         3
+    3    8    2    1/  7 (+) 1/ 17 = 1/  5             3         4
+    4    5    2    1/  9 (+) 1/ 11 = 1/  5             2         5
+    4   15    3    1/  9 (+) 1/ 31 = 1/  7             4         5
+    5    9    3    1/ 11 (+) 1/ 19 = 1/  7             5         3
+    5   24    4    1/ 11 (+) 1/ 49 = 1/  9             5         6
+    6    7    3    1/ 13 (+) 1/ 15 = 1/  7             2         7
+    6   14    4    1/ 13 (+) 1/ 29 = 1/  9             3         7
+    6   35    5    1/ 13 (+) 1/ 71 = 1/ 11             6         7
+    7   20    5    1/ 15 (+) 1/ 41 = 1/ 11             7         4
+    7   48    6    1/ 15 (+) 1/ 97 = 1/ 13             7         8
+    8    9    4    1/ 17 (+) 1/ 19 = 1/  9             2         9
+    8   15    5    1/ 17 (+) 1/ 31 = 1/ 11             8         3
+    8   27    6    1/ 17 (+) 1/ 55 = 1/ 13             4         9
+    8   63    7    1/ 17 (+) 1/127 = 1/ 15             8         9
+    9   20    6    1/ 19 (+) 1/ 41 = 1/ 13             3        10
+    9   35    7    1/ 19 (+) 1/ 71 = 1/ 15             9         5
+    9   80    8    1/ 19 (+) 1/161 = 1/ 17             9        10
+   10   11    5    1/ 21 (+) 1/ 23 = 1/ 11             2        11
+   10   44    8    1/ 21 (+) 1/ 89 = 1/ 17             5        11
+   10   99    9    1/ 21 (+) 1/199 = 1/ 19            10        11
+   11   21    7    1/ 23 (+) 1/ 43 = 1/ 15            11         3
+   11   32    8    1/ 23 (+) 1/ 65 = 1/ 17            11         4
+   11   54    9    1/ 23 (+) 1/109 = 1/ 19            11         6
+   11  120   10    1/ 23 (+) 1/241 = 1/ 21            11        12
+   12   13    6    1/ 25 (+) 1/ 27 = 1/ 13             2        13
+   12   26    8    1/ 25 (+) 1/ 53 = 1/ 17             3        13
+   12   39    9    1/ 25 (+) 1/ 79 = 1/ 19             4        13
+   12   65   10    1/ 25 (+) 1/131 = 1/ 21             6        13
+   12  143   11    1/ 25 (+) 1/287 = 1/ 23            12        13
+  ... (160 total)
+
+PATTERN ANALYSIS
+----------------------------------------
+
+  Grouped by output c:
+  c=  1 (1/  3): 1 decompositions
+           2 (+)   3  i.e. 1/5 (+) 1/7
+  c=  2 (1/  5): 2 decompositions
+           3 (+)   8  i.e. 1/7 (+) 1/17
+           4 (+)   5  i.e. 1/9 (+) 1/11
+  c=  3 (1/  7): 3 decompositions
+           4 (+)  15  i.e. 1/9 (+) 1/31
+           5 (+)   9  i.e. 1/11 (+) 1/19
+           6 (+)   7  i.e. 1/13 (+) 1/15
+  c=  4 (1/  9): 3 decompositions
+           5 (+)  24  i.e. 1/11 (+) 1/49
+           6 (+)  14  i.e. 1/13 (+) 1/29
+           8 (+)   9  i.e. 1/17 (+) 1/19
+  c=  5 (1/ 11): 4 decompositions
+           6 (+)  35  i.e. 1/13 (+) 1/71
+           7 (+)  20  i.e. 1/15 (+) 1/41
+           8 (+)  15  i.e. 1/17 (+) 1/31
+          10 (+)  11  i.e. 1/21 (+) 1/23
+  c=  6 (1/ 13): 4 decompositions
+           7 (+)  48  i.e. 1/15 (+) 1/97
+           8 (+)  27  i.e. 1/17 (+) 1/55
+           9 (+)  20  i.e. 1/19 (+) 1/41
+          12 (+)  13  i.e. 1/25 (+) 1/27
+  c=  7 (1/ 15): 4 decompositions
+           8 (+)  63  i.e. 1/17 (+) 1/127
+           9 (+)  35  i.e. 1/19 (+) 1/71
+          11 (+)  21  i.e. 1/23 (+) 1/43
+          14 (+)  15  i.e. 1/29 (+) 1/31
+  c=  8 (1/ 17): 6 decompositions
+           9 (+)  80  i.e. 1/19 (+) 1/161
+          10 (+)  44  i.e. 1/21 (+) 1/89
+          11 (+)  32  i.e. 1/23 (+) 1/65
+          12 (+)  26  i.e. 1/25 (+) 1/53
+          14 (+)  20  i.e. 1/29 (+) 1/41
+         ... 1 more
+  c=  9 (1/ 19): 6 decompositions
+          10 (+)  99  i.e. 1/21 (+) 1/199
+          11 (+)  54  i.e. 1/23 (+) 1/109
+          12 (+)  39  i.e. 1/25 (+) 1/79
+          14 (+)  27  i.e. 1/29 (+) 1/55
+          15 (+)  24  i.e. 1/31 (+) 1/49
+         ... 1 more
+  c= 10 (1/ 21): 4 decompositions
+          11 (+) 120  i.e. 1/23 (+) 1/241
+          12 (+)  65  i.e. 1/25 (+) 1/131
+          15 (+)  32  i.e. 1/31 (+) 1/65
+          20 (+)  21  i.e. 1/41 (+) 1/43
+  c= 11 (1/ 23): 6 decompositions
+          12 (+) 143  i.e. 1/25 (+) 1/287
+          13 (+)  77  i.e. 1/27 (+) 1/155
+          14 (+)  55  i.e. 1/29 (+) 1/111
+          15 (+)  44  i.e. 1/31 (+) 1/89
+          17 (+)  33  i.e. 1/35 (+) 1/67
+         ... 1 more
+  c= 12 (1/ 25): 6 decompositions
+          13 (+) 168  i.e. 1/27 (+) 1/337
+          14 (+)  90  i.e. 1/29 (+) 1/181
+          15 (+)  64  i.e. 1/31 (+) 1/129
+          16 (+)  51  i.e. 1/33 (+) 1/103
+          18 (+)  38  i.e. 1/37 (+) 1/77
+         ... 1 more
+  c= 13 (1/ 27): 4 decompositions
+          14 (+) 195  i.e. 1/29 (+) 1/391
+          15 (+) 104  i.e. 1/31 (+) 1/209
+          20 (+)  39  i.e. 1/41 (+) 1/79
+          26 (+)  27  i.e. 1/53 (+) 1/55
+  c= 14 (1/ 29): 7 decompositions
+          16 (+) 119  i.e. 1/33 (+) 1/239
+          17 (+)  84  i.e. 1/35 (+) 1/169
+          19 (+)  56  i.e. 1/39 (+) 1/113
+          20 (+)  49  i.e. 1/41 (+) 1/99
+          21 (+)  44  i.e. 1/43 (+) 1/89
+         ... 2 more
+  c= 15 (1/ 31): 9 decompositions
+          17 (+) 135  i.e. 1/35 (+) 1/271
+          18 (+)  95  i.e. 1/37 (+) 1/191
+          19 (+)  75  i.e. 1/39 (+) 1/151
+          20 (+)  63  i.e. 1/41 (+) 1/127
+          21 (+)  55  i.e. 1/43 (+) 1/111
+         ... 4 more
+
+FAMILIES OF SOLUTIONS
+----------------------------------------
+
+  FAMILY 1: CONSECUTIVE (a, b) = (k, k+1) -> c = k(k+1)/(2k+2) = k/2
+  Only works when k is even: (k, k+1, k/2)
+
+    (2, 3) -> c = 1
+    (4, 5) -> c = 2
+    (6, 7) -> c = 3
+    (8, 9) -> c = 4
+    (10, 11) -> c = 5
+    (12, 13) -> c = 6
+    (14, 15) -> c = 7
+    (16, 17) -> c = 8
+    (18, 19) -> c = 9
+
+  FAMILY 2: (a, b) where b = a^2 + a - 1
+  c = a(a^2+a-1)/(a^2+a) = a - 1 + something... checking
+
+  PARAMETRIC FAMILY: Fix a, then b = c(a+1)/(a-c) for c < a.
+  b is integer iff (a-c) | c(a+1).
+
+  a = 2:
+    c=1: b = 1*3/1 = 3  -> 1/5 (+) 1/7 = 1/3
+  a = 3:
+    c=2: b = 2*4/1 = 8  -> 1/7 (+) 1/17 = 1/5
+  a = 4:
+    c=2: b = 2*5/2 = 5  -> 1/9 (+) 1/11 = 1/5
+    c=3: b = 3*5/1 = 15  -> 1/9 (+) 1/31 = 1/7
+  a = 5:
+    c=3: b = 3*6/2 = 9  -> 1/11 (+) 1/19 = 1/7
+    c=4: b = 4*6/1 = 24  -> 1/11 (+) 1/49 = 1/9
+  a = 6:
+    c=3: b = 3*7/3 = 7  -> 1/13 (+) 1/15 = 1/7
+    c=4: b = 4*7/2 = 14  -> 1/13 (+) 1/29 = 1/9
+    c=5: b = 5*7/1 = 35  -> 1/13 (+) 1/71 = 1/11
+  a = 7:
+    c=5: b = 5*8/2 = 20  -> 1/15 (+) 1/41 = 1/11
+    c=6: b = 6*8/1 = 48  -> 1/15 (+) 1/97 = 1/13
+
+THE PALEY PRIME COMPOSITIONS
+----------------------------------------
+
+  Which compositions involve Paley primes {3, 7, 11}?
+  In our notation: 3 -> a=1 (1/3), 7 -> a=3 (1/7), 11 -> a=5 (1/11)
+
+  1/5 (+) 1/7 = 1/3   [prime(5), PALEY(7), PALEY(3)]
+  1/7 (+) 1/17 = 1/5   [PALEY(7), prime(17), prime(5)]
+  1/9 (+) 1/11 = 1/5   [9, PALEY(11), prime(5)]
+  1/9 (+) 1/31 = 1/7   [9, prime(31), PALEY(7)]
+  1/11 (+) 1/19 = 1/7   [PALEY(11), prime(19), PALEY(7)]
+  1/11 (+) 1/49 = 1/9   [PALEY(11), 49, 9]
+  1/13 (+) 1/15 = 1/7   [prime(13), 15, PALEY(7)]
+  1/13 (+) 1/29 = 1/9   [prime(13), prime(29), 9]
+  1/13 (+) 1/71 = 1/11   [prime(13), 71, PALEY(11)]
+  1/15 (+) 1/41 = 1/11   [15, prime(41), PALEY(11)]
+  1/15 (+) 1/97 = 1/13   [15, 97, prime(13)]
+  1/17 (+) 1/19 = 1/9   [prime(17), prime(19), 9]
+  1/17 (+) 1/31 = 1/11   [prime(17), prime(31), PALEY(11)]
+  1/17 (+) 1/55 = 1/13   [prime(17), 55, prime(13)]
+  1/19 (+) 1/41 = 1/13   [prime(19), prime(41), prime(13)]
+  1/19 (+) 1/71 = 1/15   [prime(19), 71, 15]
+  1/19 (+) 1/161 = 1/17   [prime(19), 161, prime(17)]
+  1/21 (+) 1/23 = 1/11   [21, prime(23), PALEY(11)]
+  1/21 (+) 1/199 = 1/19   [21, 199, prime(19)]
+  1/23 (+) 1/43 = 1/15   [prime(23), prime(43), 15]
+  1/23 (+) 1/65 = 1/17   [prime(23), 65, prime(17)]
+  1/23 (+) 1/109 = 1/19   [prime(23), 109, prime(19)]
+  1/23 (+) 1/241 = 1/21   [prime(23), 241, 21]
+  1/25 (+) 1/27 = 1/13   [25, 27, prime(13)]
+  1/25 (+) 1/79 = 1/19   [25, 79, prime(19)]
+  1/25 (+) 1/287 = 1/23   [25, 287, prime(23)]
+  1/27 (+) 1/155 = 1/23   [27, 155, prime(23)]
+  1/29 (+) 1/55 = 1/19   [prime(29), 55, prime(19)]
+  1/29 (+) 1/111 = 1/23   [prime(29), 111, prime(23)]
+  1/31 (+) 1/49 = 1/19   [prime(31), 49, prime(19)]
+  1/31 (+) 1/89 = 1/23   [prime(31), 89, prime(23)]
+  1/35 (+) 1/67 = 1/23   [35, 67, prime(23)]
+  1/37 (+) 1/39 = 1/19   [prime(37), 39, prime(19)]
+  1/45 (+) 1/47 = 1/23   [45, prime(47), prime(23)]
+
+============================================================
+THE RAPIDITY MONOID
+============================================================
+
+  The set {1/(2n+1) : n >= 1} under (+) is NOT closed.
+  But the SUBSET of compositions that ARE closed forms a structure.
+
+  The closure condition c = ab/(a+b+1) being integer means
+  the rapidity-closed triples form a PARTIAL BINARY OPERATION.
+
+  Is it associative? Check: (1/5 (+) 1/7) (+) 1/9 = 1/3 (+) 1/9 = 3/7.
+  And: 1/5 (+) (1/7 (+) 1/9) = 1/5 (+) 1/4 = ?
+  1/7 (+) 1/9 = 0.2500000000 = 1/4 = 0.2500000000? True
+  1/5 (+) 1/4 = 0.4285714286
+  = 3/7 = 0.428571
+
+  1/5 (+) 1/4 = 9/19. Is 19 odd? YES. Is (19-1)/2 = 9 an integer? YES.
+  So 1/5 (+) 1/4 = 9/19 = 1/(19/9)... not of form 1/(2c+1).
+  BUT 1/4 is NOT of the form 1/(2n+1). It's 1/4 with 4 even.
+
+  The rapidity composition IS associative (it's velocity addition).
+  But the SET {1/(2n+1)} is not closed under it.
+  The closed triples are scattered through the space.
+
+============================================================
+GRAPH STRUCTURE OF RAPIDITY COMPOSITIONS
+============================================================
+
+  Draw a directed graph: edge a -> c if there exists b with
+  1/(2a+1) (+) 1/(2b+1) = 1/(2c+1) and a <= b.
+  (So a is always the smaller component.)
+
+  Reachability from each node (up to a=15):
+    a= 2 (1/  5) -> 1(1/3)
+    a= 3 (1/  7) -> 1(1/3), 2(1/5)
+    a= 4 (1/  9) -> 2(1/5), 3(1/7)
+    a= 5 (1/ 11) -> 2(1/5), 3(1/7), 4(1/9)
+    a= 6 (1/ 13) -> 3(1/7), 4(1/9), 5(1/11)
+    a= 7 (1/ 15) -> 3(1/7), 5(1/11), 6(1/13)
+    a= 8 (1/ 17) -> 2(1/5), 4(1/9), 5(1/11), 6(1/13), 7(1/15)
+    a= 9 (1/ 19) -> 3(1/7), 4(1/9), 6(1/13), 7(1/15), 8(1/17)
+    a=10 (1/ 21) -> 5(1/11), 8(1/17), 9(1/19)
+    a=11 (1/ 23) -> 5(1/11), 7(1/15), 8(1/17), 9(1/19), 10(1/21)
+    a=12 (1/ 25) -> 6(1/13), 8(1/17), 9(1/19), 10(1/21), 11(1/23)
+    a=13 (1/ 27) -> 6(1/13), 11(1/23), 12(1/25)
+    a=14 (1/ 29) -> 4(1/9), 7(1/15), 8(1/17), 9(1/19), 11(1/23), 12(1/25), 13(1/27)
+    a=15 (1/ 31) -> 3(1/7), 5(1/11), 7(1/15), 9(1/19), 10(1/21), 11(1/23), 12(1/25), 13(1/27)
+
+============================================================
+FORBIDDEN COMPOSITION: CAN WE REACH 7 AND 21?
+============================================================
+
+  To compose to c=3 (i.e., 1/7 = the fourth):
+  Need (a-3)(b-3) = 12.
+  12 = 1*12 = 2*6 = 3*4
+  (a,b) = (4,15), (5,9), (6,7)
+    1/9 (+) 1/31 = 1/7: c = 3
+    1/11 (+) 1/19 = 1/7: c = 3
+    1/13 (+) 1/15 = 1/7: c = 3
+
+  To compose to c=10 (i.e., 1/21):
+  Need (a-10)(b-10) = 110.
+  110 = 1*110 = 2*55 = 5*22 = 10*11
+    1/23 (+) 1/241 = 1/21: c = 10
+    1/25 (+) 1/131 = 1/21: c = 10
+    1/31 (+) 1/65 = 1/21: c = 10
+    1/41 (+) 1/43 = 1/21: c = 10
+
+  GENERAL: c = ab/(a+b+1) <=> (a-c)(b-c) = c(c+1) = c^2+c
+  PROOF: ab = c(a+b+1). Then ab-ca-cb = c.
+  a(b-c) - c(b-c) = c + c^2 - c^2 = c ... hmm let me redo.
+  ab - c(a+b+1) = 0 => ab - ca - cb - c = 0
+  => a(b-c) = c(b+1) => (a-c)(b-c) = c(b+1) - c(b-c)
+  Actually: ab = ca + cb + c => ab - ca - cb + c^2 = c^2 + c
+  => (a-c)(b-c) = c^2 + c = c(c+1). QED!
+
+  So the solutions are EXACTLY the factorizations of c(c+1):
+  c(c+1) = d1 * d2 with d1 <= d2, a = c+d1, b = c+d2.
+
+  c     c(c+1)    factorizations       (a,b) pairs
+  -----------------------------------------------------------------
+    1       2     1*2->2,3
+    2       6     1*6->3,8; 2*3->4,5
+    3      12     1*12->4,15; 2*6->5,9; 3*4->6,7
+    4      20     1*20->5,24; 2*10->6,14; 4*5->8,9
+    5      30     1*30->6,35; 2*15->7,20; 3*10->8,15; 5*6->10,11
+    6      42     1*42->7,48; 2*21->8,27; 3*14->9,20; 6*7->12,13
+    7      56     1*56->8,63; 2*28->9,35; 4*14->11,21; 7*8->14,15
+    8      72     1*72->9,80; 2*36->10,44; 3*24->11,32; 4*18->12,26; 6*12->14,20; 8*9->16,17
+    9      90     1*90->10,99; 2*45->11,54; 3*30->12,39; 5*18->14,27; 6*15->15,24; 9*10->18,19
+   10     110     1*110->11,120; 2*55->12,65; 5*22->15,32; 10*11->20,21
+   11     132     1*132->12,143; 2*66->13,77; 3*44->14,55; 4*33->15,44; 6*22->17,33; 11*12->22,23
+
+  THE NUMBER OF COMPOSITIONS TO c IS tau(c(c+1))/2
+  (half the number of divisors of c(c+1), since d1 <= d2).
+
+  tau(c(c+1)) for c = 1,...,20:
+    c= 1: c(c+1) =    2, tau =   2, compositions = 1
+    c= 2: c(c+1) =    6, tau =   4, compositions = 2
+    c= 3: c(c+1) =   12, tau =   6, compositions = 3
+    c= 4: c(c+1) =   20, tau =   6, compositions = 3
+    c= 5: c(c+1) =   30, tau =   8, compositions = 4
+    c= 6: c(c+1) =   42, tau =   8, compositions = 4
+    c= 7: c(c+1) =   56, tau =   8, compositions = 4
+    c= 8: c(c+1) =   72, tau =  12, compositions = 6
+    c= 9: c(c+1) =   90, tau =  12, compositions = 6
+    c=10: c(c+1) =  110, tau =   8, compositions = 4
+    c=11: c(c+1) =  132, tau =  12, compositions = 6
+    c=12: c(c+1) =  156, tau =  12, compositions = 6
+    c=13: c(c+1) =  182, tau =   8, compositions = 4
+    c=14: c(c+1) =  210, tau =  16, compositions = 8
+    c=15: c(c+1) =  240, tau =  20, compositions = 10
+    c=16: c(c+1) =  272, tau =  10, compositions = 5
+    c=17: c(c+1) =  306, tau =  12, compositions = 6
+    c=18: c(c+1) =  342, tau =  12, compositions = 6
+    c=19: c(c+1) =  380, tau =  12, compositions = 6
+    c=20: c(c+1) =  420, tau =  24, compositions = 12
+
+  Highly composite c(c+1) give many compositions.
+  c=6: 6*7=42=2*3*7, tau=8, 4 compositions.
+  c=12: 12*13=156=4*3*13, tau=12, 6 compositions.
+
+============================================================
+RAPIDITY CHAINS: ITERATED COMPOSITIONS
+============================================================
+
+  Start with the octave 1/3 (c=1) and iterate:
+  Can we reach all 1/(2k+1) by composing with themselves?
+
+  1/3 (+) 1/3 = 3/5  (NOT of form 1/(2n+1), since 5 is odd but 3/5 != 1/k)
+  So the octave cannot even compose with itself to stay in the set!
+
+  1/5 (+) 1/5 = (2/5)/(1+1/25) = (2/5)/(26/25) = 50/130 = 5/13
+  5/13: is this 1/(2c+1)? 13/5 = 2.6. Not integer.
+
+  SELF-COMPOSITION 1/(2a+1) (+) 1/(2a+1):
+  = 2/(2a+1) / (1 + 1/(2a+1)^2)
+  = 2(2a+1) / ((2a+1)^2 + 1)
+  = (4a+2) / (4a^2+4a+2)
+  = (2a+1) / (2a^2+2a+1)
+
+  For this to be 1/(2c+1), need (2a^2+2a+1)/(2a+1) = 2c+1
+  => 2a^2+2a+1 = (2a+1)(2c+1) = 4ac+2a+2c+1
+  => 2a^2 = 4ac+2c = 2c(2a+1)
+  => c = a^2/(2a+1)
+  Integer iff (2a+1) | a^2.
+
+  gcd(a, 2a+1) = gcd(a, 1) = 1. So gcd(a^2, 2a+1) = 1.
+  Therefore (2a+1) | a^2 only if 2a+1 = 1, i.e., a = 0.
+
+  THEOREM: No musical interval can compose with itself to
+  produce another musical interval. Self-composition ALWAYS
+  leaves the set {1/(2n+1)}.
+
+  This is because gcd(a^2, 2a+1) = 1: consecutive-ish
+  numbers are always coprime. The PARITY obstruction
+  prevents self-doubling in rapidity space.
+
+============================================================
+THE c(c+1) STRUCTURE AND PRONIC NUMBERS
+============================================================
+
+  The number of ways to compose to interval c is tau(c(c+1))/2
+  where c(c+1) is a PRONIC NUMBER (product of consecutive integers).
+
+  Pronic numbers: 2, 6, 12, 20, 30, 42, 56, 72, 90, 110, 132, ...
+  = n(n+1) = 2*T_n where T_n is the n-th triangular number.
+
+  c(c+1) is ALWAYS EVEN (one of c, c+1 is even).
+  c(c+1) is NEVER a perfect square (consecutive integers can't be).
+
+  The rapidity algebra is governed by PRONIC FACTORIZATION.
+  Each factorization c(c+1) = d1*d2 gives a pair (c+d1, c+d2)
+  of musical interval indices whose relativistic composition
+  equals interval c.
+
+  For the FORBIDDEN c=3 (interval 1/7):
+  c(c+1) = 12 = 1*12 = 2*6 = 3*4
+  Pairs: (4,15), (5,9), (6,7)
+  i.e., 1/9 (+) 1/31, 1/11 (+) 1/19, 1/13 (+) 1/15 all give 1/7.
+  THREE ways to reach the threshold.
+
+  For the FORBIDDEN c=10 (interval 1/21):
+  c(c+1) = 110 = 1*110 = 2*55 = 5*22 = 10*11
+  Pairs: (11,120), (12,65), (15,32), (20,21)
+  FOUR ways to reach the forbidden number 21.
+  And 110 = 2*5*11 = the Paley primes {5, 11} times 2!
+

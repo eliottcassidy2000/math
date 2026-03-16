@@ -1,0 +1,529 @@
+RAPIDITY: THE FUNDAMENTAL QUANTITY
+============================================================
+
+  Rapidity: phi = arctanh(v) = (1/2)*ln((1+v)/(1-v)) = (1/2)*ln(Q(v))
+  Inverse:  v = tanh(phi)
+  Cayley:   Q(v) = e^{2*phi}
+
+  ADDITION of rapidities = MULTIPLICATION of Q-values
+  = COMPOSITION of velocities (relativistic addition)
+  Rapidity is the LOG of our theory. It linearizes everything.
+
+============================================================
+1. RAPIDITY OF EVERY NATURAL NUMBER
+============================================================
+
+  The Cayley address of n is x_n = (n-1)/(n+1).
+  Its rapidity is arctanh(x_n) = arctanh((n-1)/(n+1)).
+  = (1/2)*ln(n^2/(2n/(n+1))... let's compute.
+  Actually: (1+x)/(1-x) = (1+(n-1)/(n+1))/(1-(n-1)/(n+1))
+  = (2n/(n+1))/(2/(n+1)) = n. So Q(x_n) = n.
+  Therefore: rapidity of n = (1/2)*ln(n).
+
+  THE RAPIDITY OF n IS HALF ITS LOGARITHM.
+
+  n    address x_n    rapidity = ln(n)/2     e^(2*rapidity)
+  ------------------------------------------------------------
+    1     0.000000         0.000000                1.0000
+    2     0.333333         0.346574                2.0000
+    3     0.500000         0.549306                3.0000
+    4     0.600000         0.693147                4.0000
+    5     0.666667         0.804719                5.0000
+    6     0.714286         0.895880                6.0000
+    7     0.750000         0.972955                7.0000
+    8     0.777778         1.039721                8.0000
+    9     0.800000         1.098612                9.0000
+   10     0.818182         1.151293               10.0000
+   11     0.833333         1.198948               11.0000
+   12     0.846154         1.242453               12.0000
+   13     0.857143         1.282475               13.0000
+   14     0.866667         1.319529               14.0000
+   15     0.875000         1.354025               15.0000
+
+  Rapidity is LOGARITHMIC in n. The natural numbers are
+  EQUALLY SPACED on the log scale, which means their rapidities
+  form an ARITHMETIC PROGRESSION with common difference ln(r)/2
+  where r is the ratio between consecutive naturals.
+
+  Between n and n+1: delta_rapidity = ln(1+1/n)/2 ~ 1/(2n).
+  This is the HARMONIC SERIES! The rapidity gaps between
+  consecutive integers decrease harmonically.
+
+============================================================
+2. RAPIDITY OF MUSICAL INTERVALS
+============================================================
+
+  Musical interval (n+1)/n has Cayley pre-image 1/(2n+1).
+  Rapidity of the interval = arctanh(1/(2n+1))
+  = (1/2)*ln(Q(1/(2n+1))) = (1/2)*ln((n+1)/n)
+
+  Interval      Ratio   Rapidity    Cents
+  --------------------------------------------------
+  octave            2/ 1     0.346574    1200.0
+  perfect fifth     3/ 2     0.202733     702.0
+  perfect fourth    4/ 3     0.143841     498.0
+  major third       5/ 4     0.111572     386.3
+  minor third       6/ 5     0.091161     315.6
+  major second      9/ 8     0.058892     203.9
+  minor second      16/15     0.032269     111.7
+
+  The rapidity of a musical interval = (1/2)*ln(frequency ratio).
+  STACKING intervals = ADDING rapidities.
+  Fifth + fourth = octave: ln(3/2)/2 + ln(4/3)/2 = ln(2)/2. CHECK!
+  Verify: 0.202733 + 0.143841 = 0.346574 = ln(2)/2 = 0.346574
+
+  Major third + minor third = fifth:
+  0.111572 + 0.091161 = 0.202733 = ln(3/2)/2 = 0.202733
+
+  CONSONANCE = LOW RAPIDITY.
+  The most consonant intervals have the smallest rapidities.
+  Rapidity IS the measure of musical tension.
+
+============================================================
+3. RAPIDITY OF THE CONSTANTS
+============================================================
+
+  Input x          Rapidity arctanh(x)     Q(x) = e^(2*rapidity)
+  ------------------------------------------------------------
+  1/phi (golden)           0.72181774            4.236068
+  1/tau (tribonacci)       0.60937786            3.382976
+  1/e                      0.38596842            2.163953
+  1/pi                     0.32976531            1.933884
+  1/sqrt(2)                0.88137359            5.828427
+  1/sqrt(5)                0.48121183            2.618034
+  1/3 (octave)             0.34657359            2.000000
+  1/5 (fifth)              0.20273255            1.500000
+  1/7 (fourth)             0.14384104            1.333333
+  3/5 (ln2 rapidity)       0.69314718            4.000000
+  ln(2)                    0.85398805            5.517783
+  pi/4                     1.05930617            8.319585
+
+  arctanh(1/phi) = 0.7218177376
+  = (3/2)*ln(phi) = 0.7218177376
+  Match: True
+  Because Q(1/phi) = phi^3, so rapidity = ln(phi^3)/2 = (3/2)*ln(phi).
+
+  arctanh(1/tau) = 0.6093778634
+  = ln(tau) = 0.6093778634
+  Match: True
+  Because Q(1/tau) = tau^2, so rapidity = ln(tau^2)/2 = ln(tau).
+
+  THE RAPIDITY OF 1/phi IS (3/2)*ln(phi).
+  THE RAPIDITY OF 1/tau IS ln(tau).
+  The golden ratio gets a factor of 3/2 (the PERFECT FIFTH!).
+  The tribonacci gets a factor of 1 (the UNISON).
+
+  In musical terms:
+  phi-rapidity = ln(phi) transposed up a fifth
+  tau-rapidity = ln(tau) at the fundamental
+
+============================================================
+4. RAPIDITY ARITHMETIC: THE ADDITIVE STRUCTURE
+============================================================
+
+  Rapidity adds. This means we can do ARITHMETIC in rapidity space.
+
+  rapidity(2) = ln(2)/2 = 0.346574
+  rapidity(3) = ln(3)/2 = 0.549306
+  rapidity(6) = ln(6)/2 = 0.895880 = rapidity(2) + rapidity(3)
+  Verify: 0.346574 + 0.549306 = 0.895880 = 0.895880
+
+  MULTIPLICATION in Z maps to ADDITION in rapidity space.
+  This is the FUNDAMENTAL THEOREM OF ARITHMETIC restated:
+  rapidity(n) = sum of rapidity(p) over prime factors p of n.
+
+  n    rapidity(n)    = sum of prime rapidities
+  -------------------------------------------------------
+       6     0.895880   = ln(2)/2 + ln(3)/2
+      10     1.151293   = ln(2)/2 + ln(5)/2
+      12     1.242453   = ln(2)/2 + ln(2)/2 + ln(3)/2
+      15     1.354025   = ln(3)/2 + ln(5)/2
+      21     1.522261   = ln(3)/2 + ln(7)/2
+      30     1.700599   = ln(2)/2 + ln(3)/2 + ln(5)/2
+      42     1.868835   = ln(2)/2 + ln(3)/2 + ln(7)/2
+     105     2.326980   = ln(3)/2 + ln(5)/2 + ln(7)/2
+     189     2.620874   = ln(3)/2 + ln(3)/2 + ln(3)/2 + ln(7)/2
+   95095     5.731316   = ln(5)/2 + ln(7)/2 + ln(11)/2 + ln(13)/2 + ln(19)/2
+
+  RAPIDITY OF 21 = ln(3)/2 + ln(7)/2 = ln(21)/2
+  = 1.522261
+  = rapidity(curvature quantum) + rapidity(hyperbolic threshold)
+
+  RAPIDITY OF 189 = ln(3^3*7)/2 = 3*ln(3)/2 + ln(7)/2
+  = 2.620874
+  = 3*(rapidity of curvature) + rapidity of threshold
+  = THREE OCTAVES above the threshold!
+
+  RAPIDITY OF 95095 = ln(5*7*11*13*19)/2
+  = 5.731316
+  = sum of rapidities of five Paley-adjacent primes
+
+============================================================
+5. THE RAPIDITY SPECTRUM OF PRIMES
+============================================================
+
+  Each prime p has rapidity ln(p)/2.
+  The GAPS between prime rapidities:
+
+  p    rapidity    gap to next    gap * 2p
+  --------------------------------------------------
+    2    0.34657     0.202733     0.8109
+    3    0.54931     0.255413     1.5325
+    5    0.80472     0.168236     1.6824
+    7    0.97296     0.225993     3.1639
+   11    1.19895     0.083527     1.8376
+   13    1.28247     0.134132     3.4874
+   17    1.41661     0.055613     1.8908
+   19    1.47222     0.095528     3.6300
+   23    1.56775     0.115901     5.3314
+   29    1.68365     0.033346     1.9340
+   31    1.71699     0.088465     5.4849
+   37    1.80546     0.051327     3.7982
+   41    1.85679     0.023814     1.9528
+   43    1.88060     0.044474     3.8247
+   47    1.92507     0.060072     5.6468
+
+  gap * 2p approaches 2 as p -> inf (by PNT: p_{n+1}/p_n -> 1).
+  ln(p_{n+1}/p_n) ~ (p_{n+1}-p_n)/p_n ~ 2/p_n (average gap ~ ln(p)).
+
+  TWIN PRIMES in rapidity space:
+  Twin primes (p, p+2) have rapidity gap = ln(1+2/p)/2 ~ 1/p.
+    (3,5): rapidity gap = 0.25541281 ~ 1/3 = 0.33333333
+    (5,7): rapidity gap = 0.16823612 ~ 1/5 = 0.20000000
+    (11,13): rapidity gap = 0.08352704 ~ 1/11 = 0.09090909
+    (29,31): rapidity gap = 0.03334569 ~ 1/29 = 0.03448276
+    (41,43): rapidity gap = 0.02381402 ~ 1/41 = 0.02439024
+    (101,103): rapidity gap = 0.00980424 ~ 1/101 = 0.00990099
+
+  Twin primes are points that are VANISHINGLY CLOSE in rapidity space.
+  The twin prime conjecture: there are infinitely many rapidity-near pairs.
+
+============================================================
+6. RAPIDITY AND INFORMATION THEORY
+============================================================
+
+  The Fisher-Rao metric on Bernoulli distributions is ds^2 = dp^2/(p(1-p)).
+  The geodesic distance between p and q is |2*arctanh(2p-1) - 2*arctanh(2q-1)|.
+  Reparametrize: theta = 2*arctanh(2p-1), so p = (1+tanh(theta/2))/2.
+  Then ds^2 = d(theta)^2. The rapidity IS the natural parameter!
+
+  A coin with bias p has Fisher-Rao position theta = 2*arctanh(2p-1).
+  The fair coin p=1/2 has theta = 0 (origin).
+
+  Coin bias vs rapidity position:
+    p = 0.01: theta =  -4.5951
+    p = 0.10: theta =  -2.1972
+    p = 0.20: theta =  -1.3863
+    p = 0.30: theta =  -0.8473
+    p = 0.40: theta =  -0.4055
+    p = 0.50: theta =  +0.0000
+    p = 0.60: theta =  +0.4055
+    p = 0.70: theta =  +0.8473
+    p = 0.80: theta =  +1.3863
+    p = 0.90: theta =  +2.1972
+    p = 0.99: theta =  +4.5951
+
+  The rapidity of a biased coin is its distance from fairness
+  in information geometry. Maximum rapidity = certainty (p=0 or p=1).
+
+  In tournaments: each arc T[i][j] is a biased coin (0 or 1).
+  The average rapidity of a tournament's arcs measures its
+  DISTANCE FROM THE RANDOM TOURNAMENT in information space.
+
+============================================================
+7. THE RAPIDITY OF THE TRANSFER MATRIX EIGENVALUES
+============================================================
+
+  Transfer matrix M(x) char poly: lambda^3 - lambda^2 - x*lambda - x = 0
+  At x = tanh(phi), the eigenvalues live in rapidity space.
+
+  The EP eigenvalue d = 1/phi has Q(d) = Q(1/phi) = phi^3.
+  EP rapidity = arctanh(1/phi) = 0.7218177376
+  = (3/2)*ln(phi) = 0.7218177376
+
+  The tribonacci eigenvalue at x=1: lambda = tau.
+  But tau > 1, so arctanh(tau) is complex!
+  arctanh(tau) = arctanh(1.839287)
+  = (1/2)*ln((1+tau)/(tau-1))
+  = (1/2)*ln(3.382976)
+  = 0.609378
+  + i*pi/2  (because tau > 1, we're past the pole)
+
+  The tribonacci lives PAST the rapidity singularity at v=1 (speed of light).
+  Its rapidity has an imaginary part = pi/2: it's a TACHYON!
+
+  In our theory: x=1 is the pole of Q. For x < 1 (subluminal),
+  rapidity is real. For x > 1 (superluminal), rapidity gains i*pi/2.
+  The tribonacci constant tau ~ 1.839 is SUPERLUMINAL.
+  Its rapidity = ln(tau^2)/2 + i*pi/2 = ln(tau) + i*pi/2.
+
+============================================================
+8. RAPIDITY LEVELS AND THE H-SPECTRUM
+============================================================
+
+  H(T) = I(Omega(T), 2) = sum over independent sets of 2^|S|.
+  The rapidity of H: phi_H = ln(H)/2.
+
+  For the transitive tournament: H = 1, phi_H = 0 (at rest).
+  For T_3 (3-cycle): H = 3, phi_H = ln(3)/2 = 0.549
+  For T_7 (Paley): H = 189, phi_H = ln(189)/2 = 2.620
+  For T_11 (Paley): H = 95095, phi_H = ln(95095)/2 = 5.728
+
+  H-value    rapidity     notes
+  --------------------------------------------------
+       1      0.00000     transitive (at rest)
+       3      0.54931     T_3 (3-cycle)
+       5      0.80472     n=4 max
+       7      0.97296     FORBIDDEN
+       9      1.09861     n=5 Paley adjacency
+      11      1.19895     n=5
+      13      1.28247     n=5
+      15      1.35403     n=5 cyclic
+      21      1.52226     FORBIDDEN
+      45      1.90333     n=6 max
+     189      2.62087     T_7 Paley max
+     661      3.24688     n=8 max
+   95095      5.73132     T_11 Paley max
+
+  The forbidden rapidities:
+  rapidity(7)  = ln(7)/2  = 0.972955
+  rapidity(21) = ln(21)/2 = 1.522261
+  rapidity(21) - rapidity(7) = ln(3)/2 = 0.549306 = rapidity(3)
+
+  The GAP between the two forbidden rapidities is EXACTLY
+  the rapidity of 3 = the curvature quantum = one OCTAVE!
+  H=7 and H=21 are separated by exactly one octave in rapidity space.
+
+============================================================
+9. THE HARMONIC SERIES IN RAPIDITY SPACE
+============================================================
+
+  arctanh(x) = x + x^3/3 + x^5/5 + x^7/7 + ...
+  Each term x^k/k contributes rapidity x^k/k to the total.
+
+  At x = 1/(2n+1) (the musical inputs):
+  arctanh(1/(2n+1)) = sum_{j=0}^inf 1/((2j+1)*(2n+1)^{2j+1})
+  The leading term 1/(2n+1) dominates. Higher terms decay as 1/(2n+1)^3.
+
+  But for the FULL arctanh, the terms form a series of rapidities:
+  x + x^3/3 + x^5/5 + ...
+  = rapidity(fundamental) + rapidity(3rd harmonic)/3 + rapidity(5th)/5 + ...
+
+  This is a FOURIER-LIKE decomposition of rapidity into harmonics!
+  arctanh = sum of ODD HARMONICS of the rapidity.
+
+  In music: the odd harmonics 1, 3, 5, 7, ... are the overtone series
+  of a CLOSED PIPE (clarinet, organ stopped pipe).
+  Open pipes have ALL harmonics. Closed pipes have only ODD ones.
+
+  arctanh IS the closed-pipe harmonic series.
+  artanh(x) = clarinet playing note x.
+  tanh(x) = the inverse: which note produces this timbre?
+
+============================================================
+10. RAPIDITY COMPOSITION = VELOCITY ADDITION
+============================================================
+
+  v1 (+) v2 = (v1+v2)/(1+v1*v2) (Einstein velocity addition)
+  In rapidity: phi1 + phi2 (just add!)
+
+  What velocities compose to give special values?
+
+  v1 (+) v2 table (relativistic addition):
+                1/3         1/5         1/7         3/5         1/phi     
+  1/3             0.600000    0.500000    0.454545    0.777778    0.788854
+  1/5             0.500000    0.384615    0.333333    0.714286    0.728043
+  1/7             0.454545    0.333333    0.280000    0.684211    0.699162
+  3/5             0.777778    0.714286    0.684211    0.882353    0.888544
+  1/phi           0.788854    0.728043    0.699162    0.888544    0.894427
+
+  Key compositions:
+  1/3 (+) 1/5 = 0.5000000000 = 1/8 ???
+  = (8/15)/(16/15) = 1/2 EXACTLY!
+
+  THE OCTAVE VELOCITY COMPOSED WITH THE FIFTH VELOCITY
+  GIVES v = 1/2 (rapidity = arctanh(1/2) = ln(3)/2 = rapidity of 3).
+  Check: arctanh(1/3) + arctanh(1/5) = 0.5493061443
+  arctanh(1/2) = 0.5493061443
+  Match: True
+
+  1/3 (+) 1/7 = 0.4545454545
+  = (10/21)/(22/21) = 10/22 = 5/11 EXACTLY!
+  1/5 (+) 1/7 = 0.3333333333
+  = (12/35)/(36/35) = 12/36 = 1/3 EXACTLY!
+
+  1/5 (+) 1/7 = 1/3!
+  THE FIFTH COMPOSED WITH THE FOURTH GIVES THE OCTAVE.
+  This is the musical identity: fifth + fourth = octave.
+  But now it's a RELATIVISTIC velocity addition identity!
+
+  1/3 (+) 1/7 = 5/11.
+  The octave composed with the fourth gives 5/11.
+  5 and 11 are PALEY PRIMES.
+
+  GENERAL FORMULA:
+  1/(2a+1) (+) 1/(2b+1) = (2a+2b+2) / (2(2ab+a+b+1))
+  = (a+b+1) / (2ab+a+b+1)
+
+    1/3 (+) 1/5 = 1/2 = 0.500000   (verify: True)
+    1/3 (+) 1/7 = 5/11 = 0.454545   (verify: True)
+    1/5 (+) 1/7 = 1/3 = 0.333333   (verify: True)
+    1/3 (+) 1/9 = 3/7 = 0.428571   (verify: True)
+    1/5 (+) 1/9 = 7/23 = 0.304348   (verify: True)
+    1/7 (+) 1/9 = 1/4 = 0.250000   (verify: True)
+
+  When does 1/(2a+1) (+) 1/(2b+1) = 1/(2c+1) for integer c?
+  Need: (a+b+1)/(2ab+a+b+1) = 1/(2c+1)
+  => 2c+1 = (2ab+a+b+1)/(a+b+1)
+  => (2ab+a+b+1) = (2c+1)(a+b+1)
+  => 2ab+a+b+1 = 2ac+2bc+a+b+2c+1
+  => 2ab = 2c(a+b+1)
+  => c = ab/(a+b+1)
+
+  c must be a positive integer. So (a+b+1) | ab.
+  Check: a=2, b=3: c = 6/6 = 1. YES! 1/5 (+) 1/7 = 1/3.
+  Check: a=1, b=2: c = 2/4 = 1/2. NO (not integer).
+  Check: a=1, b=3: c = 3/5. NO.
+  Check: a=3, b=5: c = 15/9 = 5/3. NO.
+  Check: a=5, b=9: c = 45/15 = 3. YES! 1/11 (+) 1/19 = 1/7.
+
+  1/11 (+) 1/19 = 1/7!
+  The MINOR THIRD composed with the UNDECIMAL gives the FOURTH.
+  And 11, 19 are Paley primes; 7 is the threshold.
+
+  Verify: 1/11 (+) 1/19 = 0.1428571429 = 1/7 = 0.1428571429
+  Match: True
+
+  All rapidity-closed compositions 1/(2a+1) (+) 1/(2b+1) = 1/(2c+1):
+  (with a <= b <= 20)
+    1/5 (+) 1/7 = 1/3  (a=2, b=3, c=1)
+    1/7 (+) 1/17 = 1/5  (a=3, b=8, c=2)
+    1/9 (+) 1/11 = 1/5  (a=4, b=5, c=2)
+    1/9 (+) 1/31 = 1/7  (a=4, b=15, c=3)
+    1/11 (+) 1/19 = 1/7  (a=5, b=9, c=3)
+    1/13 (+) 1/15 = 1/7  (a=6, b=7, c=3)
+    1/13 (+) 1/29 = 1/9  (a=6, b=14, c=4)
+    1/15 (+) 1/41 = 1/11  (a=7, b=20, c=5)
+    1/17 (+) 1/19 = 1/9  (a=8, b=9, c=4)
+    1/17 (+) 1/31 = 1/11  (a=8, b=15, c=5)
+    1/19 (+) 1/41 = 1/13  (a=9, b=20, c=6)
+    1/21 (+) 1/23 = 1/11  (a=10, b=11, c=5)
+    1/25 (+) 1/27 = 1/13  (a=12, b=13, c=6)
+    1/29 (+) 1/31 = 1/15  (a=14, b=15, c=7)
+    1/29 (+) 1/41 = 1/17  (a=14, b=20, c=8)
+    1/33 (+) 1/35 = 1/17  (a=16, b=17, c=8)
+    1/37 (+) 1/39 = 1/19  (a=18, b=19, c=9)
+
+============================================================
+11. THE LORENTZ GROUP AND TOURNAMENT SYMMETRY
+============================================================
+
+  A Lorentz boost with rapidity phi acts as:
+  t' = t*cosh(phi) + x*sinh(phi)
+  x' = t*sinh(phi) + x*cosh(phi)
+
+  For rapidity phi = ln(n)/2 (the rapidity of integer n):
+  cosh(ln(n)/2) = (n + 1/n)/2 = (n^2+1)/(2n)
+  sinh(ln(n)/2) = (n - 1/n)/2 = (n^2-1)/(2n)
+
+  For n=2:
+  cosh = 5/4 = 1.2500, sinh = 3/4 = 0.7500
+  tanh = 3/5 = 0.6000 ... wait, tanh(ln(2)/2) = (2-1)/(2+1) = 1/3
+  Verify: tanh(ln(2)/2) = 0.3333333333 = 1/3
+
+  The velocity corresponding to 'being boosted by n=2' is v = 1/3.
+  Q(1/3) = 2 (the binary). The Lorentz boost by the binary
+  corresponds to velocity 1/3 = one third the speed of light.
+
+  Boost matrices for small n (in rapidity ln(n)/2):
+    n=2: cosh=1.2500, sinh=0.7500, v=tanh=0.333333 = (n-1)/(n+1)
+    n=3: cosh=1.6667, sinh=1.3333, v=tanh=0.500000 = (n-1)/(n+1)
+    n=5: cosh=2.6000, sinh=2.4000, v=tanh=0.666667 = (n-1)/(n+1)
+    n=7: cosh=3.5714, sinh=3.4286, v=tanh=0.750000 = (n-1)/(n+1)
+
+  The velocity for boost-n is (n-1)/(n+1) = the Cayley ADDRESS of n.
+  This is NOT a coincidence. It's the DEFINITION:
+  x_n = (n-1)/(n+1) = tanh(ln(n)/2).
+  The Cayley address IS the velocity. The natural number IS the boost.
+
+============================================================
+12. RAPIDITY AND THE FORBIDDEN NUMBERS
+============================================================
+
+  H = 7: rapidity = ln(7)/2 = 0.972955
+  H = 21: rapidity = ln(21)/2 = 1.522261
+
+  The gap: ln(21)/2 - ln(7)/2 = ln(3)/2 = 0.549306
+  = rapidity of 3 = one OCTAVE of musical rapidity
+
+  The SUM: ln(7)/2 + ln(21)/2 = ln(147)/2 = 2.495216
+  147 = 3 * 7^2. rapidity(7) + rapidity(21) = rapidity(147).
+
+  The average: (ln(7)+ln(21))/4 = ln(sqrt(147))/2 = 1.247608
+  sqrt(147) = 7*sqrt(3) = 12.124356
+
+  The forbidden numbers sit at rapidities ln(7)/2 and ln(7)/2 + ln(3)/2.
+  Their MIDPOINT in rapidity space is at n = sqrt(147) = 7*sqrt(3).
+  And sqrt(3) = 2*sin(60 deg) = the flat-plane scale factor.
+
+  Velocity of H=7:  v = (7-1)/(7+1) = 3/4 = 0.750000
+  Velocity of H=21: v = (21-1)/(21+1) = 10/11 = 0.909091
+
+  3/4 (+) 10/11 = ?
+  = 0.9864864865
+  = 73/74
+  Q(73/74) = (1+73/74)/(1-73/74) = 147 = 3*7^2
+  Verify: 147.0
+
+  THE FORBIDDEN VELOCITIES COMPOSED RELATIVISTICALLY GIVE 73/74,
+  WHICH HAS Q-VALUE 147 = 3*7^2 = product of forbidden factors.
+
+============================================================
+13. RAPIDITY AS HYPERBOLIC DISTANCE
+============================================================
+
+  On the Poincare disk model, the hyperbolic distance from 0 to r is:
+  d(0, r) = 2*arctanh(r) = 2*rapidity(r).
+
+  The tournament lives on the interval [0,1) which IS the Poincare radius.
+  Each tournament parameter x has hyperbolic distance 2*arctanh(x) from 0.
+
+  Hyperbolic distances of special points:
+    1/3 (octave)             : d = 0.693147 = 1.0000 * ln(2)
+    1/2                      : d = 1.098612 = 1.5850 * ln(2)
+    3/5 (ln2)                : d = 1.386294 = 2.0000 * ln(2)
+    1/phi                    : d = 1.443635 = 2.0827 * ln(2)
+    3/4 (H=7 addr)           : d = 1.945910 = 2.8074 * ln(2)
+    4/5                      : d = 2.197225 = 3.1699 * ln(2)
+    10/11 (H=21 addr)        : d = 3.044522 = 4.3923 * ln(2)
+
+  The EP (exceptional point) distance:
+  x_EP = 8 - 5*phi = -0.0901699437
+  d(0, x_EP) = 2*arctanh(x_EP) = -0.1808310441
+  = ln(Q(x_EP)) = ln(phi^3 * something)...
+  Q(x_EP) = 0.8345763534
+  ln(Q(x_EP)) = -0.1808310441
+
+============================================================
+GRAND SUMMARY: RAPIDITY IS EVERYTHING
+============================================================
+
+  DOMAIN          RAPIDITY IS                    FORMULA
+  ------------------------------------------------------------
+  Relativity      boost parameter                arctanh(v)
+  Music           consonance measure             ln(interval)/2
+  Number theory   half-logarithm                 ln(n)/2
+  Information     Fisher-Rao distance            2*arctanh(2p-1)
+  Hyperbolic      Poincare disk distance         2*arctanh(r)
+  Tournament      coupling strength              arctanh(x)
+  Transfer mat    eigenvalue log                 ln(lambda)/2
+  Fibonacci       skip-3 parameter               ln(F_{n+2}/F_{n-1})/2
+
+  All of these are the SAME arctanh, seen through different lenses.
+  Rapidity is the universal coordinate of the Cayley transform.
+  It linearizes multiplication, composition, and coupling.
+  It measures distance, consonance, and information simultaneously.
+
+  And the forbidden numbers {7, 21} are separated by exactly
+  one octave of rapidity: ln(3)/2 = the rapidity of the
+  curvature quantum. The theory's impossibilities are musical.
