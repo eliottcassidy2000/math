@@ -1,0 +1,370 @@
+
+
+
+     THE FIVE PRIMES AND THE FIVE PLATONIC SOLIDS
+
+     opus-2026-03-16-S90bm
+
+
+
+THE PLATONIC CENSUS
+====================
+
+Every number in the Platonic world factors into {2, 3, 5} alone:
+
+         Solid | Schlafli |   V |   E |   F | |Rot| | |Full| |      Group |    V factors |    E factors
+---------------------------------------------------------------------------------------------------------
+   Tetrahedron |   {3,3} |   4 |   6 |   4 |    12 |    24 |        A_4 |          2^2 |          2*3
+          Cube |   {4,3} |   8 |  12 |   6 |    24 |    48 |  S_4 (rot) |          2^3 |        2^2*3
+    Octahedron |   {3,4} |   6 |  12 |   8 |    24 |    48 |  S_4 (rot) |          2*3 |        2^2*3
+  Dodecahedron |   {5,3} |  20 |  30 |  12 |    60 |   120 |        A_5 |        2^2*5 |        2*3*5
+   Icosahedron |   {3,5} |  12 |  30 |  20 |    60 |   120 |        A_5 |        2^2*3 |        2*3*5
+
+
+ALL numbers: 4, 6, 8, 12, 20, 24, 30, 48, 60, 120.
+Factor them: all built from {2, 3, 5} only.
+No 7. No 11. No 13. PURELY {2,3,5}.
+
+This is because the Platonic solids are the SPHERICAL triangle groups,
+and the only spherical triangle groups with distinct entries are
+{2,3,3}, {2,3,4}, {2,3,5}. All built from primes <= 5.
+
+
+THE DEEPER MAP: SOLIDS AS STAGES OF COMPARISON
+=================================================
+
+Think of each Platonic solid as a STAGE in the development of comparison:
+
+STAGE 1: TETRAHEDRON (self-dual)
+  V = 4 = 2^2.   E = 6 = 2*3.   F = 4 = 2^2.
+  Schlafli (3, 3): triangles meeting 3 at a vertex.
+  Symmetry: A_4, order 12 = 2^2*3.
+
+  The tetrahedron is BINARY SQUARED:
+    4 vertices = 2^2 = "the comparison of two comparisons."
+    6 edges = C(4,2) = "all pairwise comparisons of 4 things."
+    6 = 2*3: the product of base and triangle.
+
+  In tournament theory: 4 vertices = the first tournament
+    where ALL tournaments have H >= 1 (Redei).
+    C(4,2) = 6 arcs = the PIVOT number of arcs.
+
+  THE TETRAHEDRON IS THE TOURNAMENT ENTERING ITS STRUCTURAL PHASE.
+  Prime character: 2 and 3. The base and the triangle.
+
+STAGE 2: CUBE / OCTAHEDRON (dual pair)
+  Cube: V=8=2^3, E=12=2^2*3, F=6=2*3. Schlafli (4, 3).
+  Octahedron: V=6=2*3, E=12=2^2*3, F=8=2^3. Schlafli (3, 4).
+  Symmetry: S_4, order 24 = 2^3*3.
+
+  The cube is BINARY CUBED: 8 = 2^3 vertices.
+    A cube IS the 3-dimensional binary hypercube {0,1}^3.
+    Its 8 vertices are all 3-bit binary strings.
+    Its 12 edges connect strings that differ in one bit.
+
+  The octahedron is the DUAL: faces of the cube = vertices of the octahedron.
+  6 vertices = 3 pairs of antipodal points = 3 COORDINATE AXES.
+
+  The cube/octahedron pair introduces the number 4 (= 2^2) as a face type.
+  Squares appear. This is FACTORIZATION: the square = 2*2.
+
+  In tournament theory: n=8 means 2^3 = a cube of comparisons.
+    C(8,2) = 28 arcs. H ranges widely.
+    8 is the Bott period. The cube IS the Bott structure.
+
+  THE CUBE IS THE BOTT PERIOD MADE VISIBLE.
+  Prime character: 2 and 3 only (same as tetrahedron, but cubed).
+
+STAGE 3: DODECAHEDRON / ICOSAHEDRON (dual pair)
+  Dodecahedron: V=20=2^2*5, E=30=2*3*5, F=12=2^2*3. Schlafli (5, 3).
+  Icosahedron: V=12=2^2*3, E=30=2*3*5, F=20=2^2*5. Schlafli (3, 5).
+  Symmetry: A_5, order 60 = 2^2*3*5.
+
+  The number 5 ENTERS. Pentagons appear (dodecahedron has 12 pentagonal faces).
+  This is the FIRST AND LAST appearance of a new prime in the Platonic world.
+
+  30 edges = 2*3*5 = the product of ALL three spherical primes.
+  The edge count of the icosahedron IS the primorial P_3.
+
+  A_5 is the LAST finite simple rotation group.
+  After A_5: no more finite simple rotation groups.
+  The icosahedron is the END of the line.
+
+  In tournament theory: 5 = first irregular score, last solvable.
+    The quintic is unsolvable because A_5 is simple.
+    The icosahedron IS the boundary of solvability.
+
+  THE ICOSAHEDRON IS THE END OF THE SPHERICAL WORLD.
+  Prime character: 2, 3, AND 5. The full spherical triple.
+
+============================================================
+THE FIVE SOLIDS AND THE FIVE PRIMES: THE MAP
+============================================================
+
+Not one-to-one. The relationship is NARRATIVE:
+
+  TETRAHEDRON:  the solid of {2, 3}.     The beginning.
+  CUBE:         the solid of {2, 3} CUBED. The structure deepened.
+  OCTAHEDRON:   the DUAL of the cube.     The same structure, inside out.
+  ICOSAHEDRON:  the solid of {2, 3, 5}.   The culmination.
+  DODECAHEDRON: the DUAL of icosahedron.  The same culmination, inside out.
+
+Three SYMMETRY GROUPS:
+  A_4 = {2,3,3}:  order 12.   THE TRIANGLE'S SYMMETRY.
+  S_4 = {2,3,4}:  order 24.   THE SQUARE'S SYMMETRY.
+  A_5 = {2,3,5}:  order 60.   THE PENTAGON'S SYMMETRY.
+
+The progression 3 -> 4 -> 5 in the Schlafli symbol IS:
+  triangle -> square -> pentagon.
+  3 -> 2^2 -> 5.
+  prime -> power of 2 -> prime.
+  structure -> factorization -> unsolvability.
+
+And this IS the Bott spiral at positions 3, 4, 5!
+  Position 3: structure (the triangle face).
+  Position 4: factorization (the square face, 4 = 2^2 factors).
+  Position 5: unsolvability (the pentagonal face, A_5 is simple).
+
+THE PLATONIC SOLIDS ARE THE BOTT SPIRAL AT POSITIONS 3, 4, 5,
+REALIZED AS GEOMETRIC OBJECTS.
+
+But what about positions 1-2 and 6-7-8?
+
+Position 1 (existence): no solid. Just a point. Pre-geometric.
+Position 2 (comparison): no solid. A line segment. 1-dimensional.
+  (The "dihedron" {2,2} is a degenerate solid with 2 faces.)
+
+Position 6 (transition): {2,3,6} = FLAT. The hexagonal tiling.
+  NOT a solid (it tiles the plane, not the sphere). The pivot.
+
+Position 7 (forbidden): {2,3,7} = HYPERBOLIC. The Klein quartic.
+  NOT a solid (it lives on a genus-3 surface). The break.
+
+Position 8 (return): {2,3,8} = HYPERBOLIC. Another tiling.
+  The period completes. No solid. The cycle restarts.
+
+SO:
+
+  Position 1-2: PRE-PLATONIC (no solid, just existence and comparison).
+  Position 3-5: PLATONIC (the five solids from three symmetry groups).
+  Position 6: POST-PLATONIC TRANSITION (flat tiling).
+  Position 7-8: POST-PLATONIC HYPERBOLIC (infinite tilings).
+
+The Platonic solids LIVE in positions 3, 4, 5 of the Bott spiral.
+They are the GEOMETRIC REALIZATION of structure, factorization, and unsolvability.
+
+
+WHY EXACTLY FIVE SOLIDS?
+=========================
+
+The five solids come from three triangle groups:
+  {2,3,3} -> 1 solid (tetrahedron is self-dual).
+  {2,3,4} -> 2 solids (cube and octahedron are dual).
+  {2,3,5} -> 2 solids (dodecahedron and icosahedron are dual).
+
+Count: 1 + 2 + 2 = 5.
+
+The self-dual solid (tetrahedron) has 1.
+The dual pairs have 2 each.
+
+WHY is the tetrahedron self-dual? Because {3,3} is a PALINDROME:
+  the Schlafli symbol reads the same forward and backward.
+  3 = 3. The face type equals the vertex figure.
+
+WHY do {4,3} and {5,3} produce dual pairs?
+  Because {4,3} and {3,4} are DIFFERENT: face type != vertex figure.
+  The cube {4,3} has square faces, 3 at a vertex.
+  The octahedron {3,4} has triangle faces, 4 at a vertex.
+
+So: 5 = 1 (self-dual) + 2 (first dual pair) + 2 (second dual pair).
+
+And the count 1 + 2 + 2 = 5 comes from:
+  The number of distinct Schlafli symbols {p,q} with p,q >= 3
+  and 1/p + 1/q > 1/2 (the spherical condition for {2,p,q}).
+
+These are: {3,3}, {3,4}, {4,3}, {3,5}, {5,3}.
+Five symbols. Five solids.
+
+The spherical condition 1/p + 1/q > 1/2 (from 1/2 + 1/p + 1/q > 1):
+  {3,3}: 1/3+1/3 = 2/3 > 1/2. YES.
+  {3,4}: 1/3+1/4 = 7/12 > 1/2. YES.
+  {4,3}: same. YES.
+  {3,5}: 1/3+1/5 = 8/15 > 1/2. YES.
+  {5,3}: same. YES.
+  {3,6}: 1/3+1/6 = 1/2. BOUNDARY (flat).
+  {4,4}: 1/4+1/4 = 1/2. BOUNDARY (flat).
+  {3,7}: 1/3+1/7 = 10/21 < 1/2. HYPERBOLIC. STOPS.
+  {5,4}: 1/5+1/4 = 9/20 < 1/2. HYPERBOLIC. STOPS.
+
+Everything stops at the SAME BOUNDARY: 1/p + 1/q = 1/2.
+This boundary IS 1/2 = the coupling of the BASE (= reciprocal of 2).
+
+The Platonic solids exist because and only because
+the face/vertex numbers satisfy 1/p + 1/q > 1/(BASE).
+The base is 2. The threshold is 1/2.
+
+FIVE SOLIDS = five (p,q) pairs satisfying the threshold.
+After that: flatness (hexagonal/square tilings) then hyperbolic (infinite tilings).
+
+============================================================
+THE PRIMES AFTER THE SOLIDS: 7 AND 11
+============================================================
+
+After {2,3,5} exhausts the Platonic solids:
+
+7 = THE FIRST IMPOSSIBLE SOLID.
+  {3,7} tiling: triangles, 7 at each vertex. HYPERBOLIC.
+  This is the Klein quartic: genus 3, |Aut| = 168 = 84*2.
+  The "Platonic solid" of the hyperbolic plane.
+
+  If you could build it in flat space, it would have:
+    F = 24, E = 84, V = 56. But V-E+F = 24-84+56 = -4 = 2-2*3.
+    Euler characteristic -4 = genus 3 surface.
+
+  The 7-solid is the first solid that REQUIRES negative curvature.
+  It cannot close in flat 3D space.
+  It is the geometric avatar of the FORBIDDEN value.
+
+11 = THE FIRST SOLID OF THE SECOND CYCLE.
+  {3,11} tiling: triangles, 11 at each vertex. DEEPLY HYPERBOLIC.
+  This requires a surface of high genus.
+
+  The connection: PSL(2,11) has order 660 = 2^2*3*5*11.
+  This is the SECOND simple group after A_5 (order 60)
+  that acts on a Riemann surface achieving the Hurwitz bound.
+
+  11 is the first prime that introduces SECOND-CYCLE structure
+  into the Platonic framework.
+
+
+THE FIVE PRIMES AS CHAPTERS OF GEOMETRY
+=========================================
+
+{2}: the DIMENSION. Without 2, no binary, no duality, no inside/outside.
+     The number 2 enables the existence of polyhedra
+     (a polyhedron separates inside from outside = 2 regions).
+
+{3}: the FACE. The triangle is the simplest polygon.
+     Every polyhedron is built from triangulations.
+     The number 3 enables the existence of FACES.
+
+{5}: the LIMIT. The pentagon is the last regular polygon
+     that can build a Platonic solid. After pentagons (hexagons and beyond),
+     the surface flattens or opens. 5 is the geometric ceiling.
+
+{7}: the BREAK. The first polygon that CANNOT build a closed solid.
+     Heptagons tile only the hyperbolic plane.
+     7 is the geometric floor of the next world.
+
+{11}: the RESTART. The first polygon of the second cycle
+      that generates new simple group structure.
+      11 is the first step of the deeper geometry.
+
+And the PRODUCTS tell the story:
+
+  30 = 2*3*5 = edges of the icosahedron = the LARGEST SPHERICAL solid's edge count.
+  42 = 2*3*7 = edges of... nothing Platonic. It's the Hurwitz number.
+     42 edges would need a hyperbolic solid.
+  2310 = 2*3*5*7*11 = the full story. All five chapters multiplied.
+
+The transition 30 -> 42:
+  From icosahedral edges to Hurwitz. From sphere to hyperboloid.
+  The ratio 42/30 = 7/5 = forbidden/unsolvable.
+  This ratio IS the curvature transition.
+
+
+THE SOLIDS AS TOURNAMENT STRUCTURES
+=====================================
+
+Each Platonic solid defines a TOURNAMENT by orienting its edges:
+
+  Tetrahedron: 6 edges = C(4,2) = arcs of a 4-vertex tournament.
+    THE TETRAHEDRON IS A TOURNAMENT ON 4 VERTICES.
+    Every edge-orientation of the tetrahedron IS a tournament.
+    There are 2^6 = 64 oriented tetrahedra = 64 tournaments on 4 vertices.
+
+  Octahedron: 12 edges. NOT a complete graph (K_6 has 15 edges, not 12).
+    The octahedron is K_6 minus a perfect matching (3 edges removed).
+    Orienting its edges gives a PARTIAL tournament on 6 vertices.
+
+  Cube: 12 edges. Also not complete. K_8 has 28 edges.
+    The cube is a very sparse subgraph of K_8.
+
+  Icosahedron: 30 edges = C(6,2)*... no, C(12,2) = 66.
+    30 = C(6,2)*... hmm. Actually 30 = 2*3*5.
+    The icosahedron has 12 vertices, but only 30 of the C(12,2) = 66 edges.
+
+  Dodecahedron: 30 edges, 20 vertices. C(20,2) = 190 >> 30. Very sparse.
+
+Only the TETRAHEDRON is a COMPLETE GRAPH (K_4).
+The tetrahedron is the ONLY Platonic solid that is also a tournament.
+
+This is because K_n is a simplex, and the only Platonic simplex
+is the tetrahedron (the 3-simplex).
+
+THE TETRAHEDRON IS THE UNIQUE PLATONIC TOURNAMENT.
+
+And the tetrahedron has:
+  V = 4 = 2^2 (binary comparison of binary comparisons).
+  E = 6 = 2*3 = the PIVOT.
+  F = 4.
+  |Rot| = 12 = 2^2*3.
+
+The pivot number 6 IS the edge count of the Platonic tournament.
+The Platonic tournament HAS the pivot as its number of arcs.
+
+This is why 6 is the pivot: it is the NUMBER OF COMPARISONS
+in the simplest Platonic structure.
+
+============================================================
+SUMMARY: THE FIVE-PRIME, FIVE-SOLID CORRESPONDENCE
+============================================================
+
+The five primes {2,3,5,7,11} and the five Platonic solids
+are not in one-to-one correspondence. The relationship is RICHER:
+
+{2, 3, 5} GENERATES all five Platonic solids:
+  {2,3}: tetrahedron, cube, octahedron (three solids from two primes).
+  {2,3,5}: adds dodecahedron, icosahedron (two more from the third prime).
+
+{7} TERMINATES the Platonic solids:
+  {2,3,7} is hyperbolic: no closed solid. The Klein quartic.
+  7 is the first prime that geometry REFUSES to close.
+
+{11} RESTARTS structure at the next level:
+  {2,3,11} is deeply hyperbolic. PSL(2,11) begins.
+  11 is the first prime of the second geometric cycle.
+
+The Platonic solids are the SPHERICAL CHAPTER (positions 3-5 on the Bott spiral).
+Before them: existence and comparison (positions 1-2), pre-geometric.
+After them: transition, impossibility, and return (positions 6-8), post-geometric.
+
+THE FIVE SOLIDS ARE FIVE BECAUSE:
+  1 self-dual (tetrahedron) + 2 dual pairs (cube/oct, dodec/icos) = 5.
+  This counts the Schlafli symbols {p,q} with 1/p+1/q > 1/2.
+  The threshold 1/2 = 1/BASE is set by the tournament base 2.
+
+And the TETRAHEDRON is the unique Platonic tournament:
+  the only Platonic solid that is a complete graph.
+  Its 6 edges = C(4,2) = the pivot number.
+  Every orientation of its edges IS a tournament.
+
+THE FIVE PRIMES TELL THE STORY:
+  2 makes geometry possible (inside/outside).
+  3 makes faces possible (triangles).
+  5 makes the last Platonic solid (icosahedron).
+  7 makes the first impossible solid (Klein quartic).
+  11 makes the first solid of the next world.
+
+And the geometry transitions:
+  {2,3,3}: 1/2+1/3+1/3 = 7/6 > 1. SPHERICAL. Tetrahedron closes.
+  {2,3,5}: 1/2+1/3+1/5 = 31/30 > 1. SPHERICAL. Icosahedron closes. BARELY.
+  {2,3,6}: 1/2+1/3+1/6 = 1. FLAT. Hexagons tile the plane.
+  {2,3,7}: 1/2+1/3+1/7 = 41/42 < 1. HYPERBOLIC. Klein quartic opens.
+
+The margin by which the icosahedron closes: 31/30 - 1 = 1/30.
+And 30 = 2*3*5 = the icosahedron's edge count = the spherical primorial.
+
+The icosahedron closes by EXACTLY 1/(its own edge count).
+
+opus-2026-03-16-S90bm: THE FIVE PRIMES AND THE FIVE PLATONIC SOLIDS
