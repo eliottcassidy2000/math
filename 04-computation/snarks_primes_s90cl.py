@@ -1,0 +1,298 @@
+#!/usr/bin/env python3
+"""
+snarks_primes_s90cl.py — The analogy between prime generation and snark generation
+opus-2026-03-16-S90cl
+"""
+
+from math import log, comb
+
+print("""
+
+
+     PRIME GENERATION AND SNARK GENERATION
+
+     opus-2026-03-16-S90cl
+
+
+
+THE PARALLEL
+=============
+
+PRIMES are natural numbers that resist factoring.
+SNARKS are cubic graphs that resist 3-edge-coloring.
+
+Both are defined by what they REFUSE to do.
+Both are the OBSTRUCTIONS to a clean theory.
+Both thin out but never vanish.
+
+  PRIMES                          SNARKS
+  ------                          ------
+  First: 2                        First: Petersen graph (10 vertices)
+  Operation: multiplication       Operation: 3-edge-coloring
+  "Composite": factors            "Composite": admits coloring
+  "Prime": irreducible            "Snark": irreducible
+  Density: ~ 1/ln(n)              Density: thins among cubic graphs
+  Generator: the sieve            Generator: snark constructions
+  Forbidden: none (all primes     Forbidden: planar snarks (4CT says
+    exist)                          no planar graph is a snark)
+  Infinite: Euclid                Infinite: Isaacs (1975)
+
+
+THE NUMBERS
+============
+
+The smallest snarks by vertex count:
+
+  10 vertices: Petersen graph. THE FIRST SNARK.
+    10 = 2*5 = C(5,2) = arcs of the 5-tournament.
+    15 edges. Girth 5. The MOST symmetric snark.
+
+  18 vertices: two Blanusa snarks (first and second).
+    18 = 2*3^2 = 2*9.
+
+  20 vertices: the flower snark J_5 and the double-star snark.
+    20 = 2^2*5 = 4*5.
+
+  22 vertices: the Loupekine snarks.
+    22 = 2*11. Contains the RESTART prime!
+
+  26 vertices: many snarks.
+    26 = 2*13. Contains the Mersenne exponent!
+
+  28 vertices: many snarks.
+    28 = 4*7 = 2^2*7. Contains the FORBIDDEN value!
+
+The vertex counts of the smallest snarks: 10, 18, 20, 22, 26, 28, ...
+These are ALL EVEN (cubic graphs must have even vertex count).
+
+Divide by 2: 5, 9, 10, 11, 13, 14, ...
+The ODD values: 5, 9, 11, 13 contain our key primes!
+  5 = the last solvable.
+  9 = 3^2 = structure squared.
+  11 = the restart.
+  13 = the Mersenne exponent.
+
+The smallest snark has 10 = 2*5 vertices.
+5 is the last solvable prime. The Petersen graph lives at the
+BOUNDARY OF SOLVABILITY, just as 5 does in tournament theory.
+
+
+THE PETERSEN GRAPH AND K_7
+============================
+
+The Petersen graph P:
+  10 vertices, 15 edges, 3-regular, girth 5.
+  Chromatic index 4 (needs 4 colors for edges).
+  Automorphism group: S_5 (order 120 = |A_5| * 2).
+
+K_7, the complete graph on 7 vertices:
+  7 vertices, 21 edges, 6-regular, girth 3.
+  Chromatic index 7 (needs 7 colors — the maximum for K_n with odd n).
+  Automorphism group: S_7 (order 5040 = 7!).
+
+The connection: the Petersen graph is the KNESER GRAPH K(5,2).
+  Vertices = 2-element subsets of {1,2,3,4,5}. There are C(5,2) = 10.
+  Edges: two vertices are adjacent iff their subsets are DISJOINT.
+
+  C(5,2) = 10 = vertices of Petersen = edges of K_5.
+
+  The Petersen graph's vertices ARE the edges of K_5.
+  And K_5 is the complete graph on the LAST SOLVABLE NUMBER of vertices.
+
+Now: K_7's edges are C(7,2) = 21.
+  The KNESER GRAPH K(7,2) would have 21 vertices.
+  K(7,2) is called the Kneser graph: vertices = 2-subsets of {1,...,7},
+  edges = disjoint pairs.
+
+  K(7,2) has 21 vertices. Is it a snark? Let me think...
+  K(7,2) is NOT cubic (its degree is C(5,2) = 10 for K(7,2)... actually
+  the degree of K(n,k) is C(n-k, k). For K(7,2): degree = C(5,2) = 10.
+  Not 3-regular. So NOT a snark.
+
+  But the Petersen graph K(5,2) IS 3-regular because C(3,2) = 3.
+  This only works at n=5, k=2.
+
+  THE PETERSEN GRAPH IS THE UNIQUE KNESER GRAPH THAT IS 3-REGULAR.
+  It exists because C(5-2, 2) = C(3,2) = 3.
+  This requires n-2k = 1 and k=2, giving n=5.
+
+  The Petersen graph exists BECAUSE 5 is the unique n where K(n,2) is cubic.
+  5 = the last solvable prime. The UNIQUENESS of the Petersen graph
+  comes from the uniqueness of 5 as the boundary of solvability.
+
+
+THE GENERATION ANALOGY
+========================
+
+HOW PRIMES ARE GENERATED (conceptually):
+  Start with all natural numbers > 1.
+  Remove multiples of 2 (the first sieve step).
+  Remove multiples of 3 (the second step).
+  Remove multiples of 5, 7, 11, ...
+  What survives: the primes.
+
+  Each sieve step removes a PERIODIC family.
+  The survivors are APERIODIC: the primes.
+
+HOW SNARKS ARE GENERATED:
+  Start with all cubic graphs.
+  Test each for 3-edge-colorability.
+  Remove those that ARE colorable (the "composites").
+  What survives: the snarks.
+
+  But unlike prime sieving, snark testing is HARD:
+  determining if a graph is 3-edge-colorable is NP-complete!
+  There is no efficient "sieve" for snarks.
+
+  This is the KEY DIFFERENCE:
+    PRIMALITY TESTING: polynomial time (AKS). Efficient.
+    SNARK TESTING: NP-complete. Inefficient.
+
+  Primes can be SIEVED efficiently. Snarks cannot.
+
+  In computational irreducibility terms:
+    Primes: PARTIALLY reducible (testable in poly time).
+    Snarks: FULLY irreducible (testing is NP-complete).
+
+  Snarks are MORE computationally irreducible than primes.
+
+
+THE FORMAL GROUP CONNECTION
+==============================
+
+In our framework:
+  F(x,y) = (x+y)/(1+xy) on the Poincare disk.
+  Multiplication = formal group law = F.
+  The five chains reduce primality for ~20% of primes.
+
+For snarks:
+  The "formal group" would be the DOT PRODUCT operation on edge colorings.
+  Two 3-edge-colorings compose by... well, there's no clean group law.
+  The ABSENCE of a formal group for snarks is WHY they're NP-complete.
+
+  Primes have the formal group. Snarks do NOT.
+  The formal group PARTIALLY reduces computational irreducibility.
+  Without a formal group: full irreducibility (NP-complete).
+
+THE FORMAL GROUP IS THE BOUNDARY BETWEEN TRACTABLE AND INTRACTABLE.
+
+  With formal group: primality testing is in P.
+                     20% of primes are chain-reachable.
+                     The five chains provide shortcuts.
+
+  Without formal group: snark testing is NP-complete.
+                        No chains. No shortcuts.
+                        Every snark must be tested individually.
+
+
+THE FORBIDDEN VALUES: H=7 AND THE PETERSEN GRAPH
+===================================================
+
+H = 7 is the first forbidden tournament value.
+  No tournament has exactly 7 Hamiltonian paths.
+  7 = 2^3 - 1 = the tribonacci self-examination value.
+
+The Petersen graph is the first snark.
+  No 3-edge-coloring exists for it.
+  10 = 2*5 = the "base times last solvable" value.
+
+The parallel:
+  7 is forbidden in the H-spectrum BECAUSE it is the self-examination output.
+  Petersen is forbidden in the coloring spectrum BECAUSE it is the Kneser
+  graph at the unique cubic point.
+
+  Both are forbidden for STRUCTURAL reasons, not accidental ones.
+  Both sit at boundaries (7 at the spherical/hyperbolic transition,
+  Petersen at the solvable/unsolvable Kneser boundary).
+
+
+THE SNARK SPECTRUM
+===================
+
+Known snarks by vertex count (smallest of each count):
+
+  10: 1 snark (Petersen).
+  18: 2 snarks (Blanusa).
+  20: 6 snarks.
+  22: 20 snarks.
+  24: 38 snarks.
+  26: 280 snarks.
+  28: 2900 snarks.
+  30: ~28000 snarks.
+  ...
+
+The snark count grows RAPIDLY with vertex count.
+Compare to primes: prime count grows as n/ln(n).
+
+But snarks only exist at EVEN vertex counts (cubic graphs must be even).
+And the SMALLEST snarks have girth >= 5 (short cycles make coloring easy).
+
+The snark count at 2k vertices: ~exponential in k.
+The prime count near n: ~n/ln(n) (sub-exponential).
+
+SNARKS GROW FASTER THAN PRIMES.
+This reflects their greater computational irreducibility:
+  more snarks = harder to characterize = more irreducible.
+
+
+THE UNIFIED VIEW
+==================
+
+PRIME GENERATION:                    SNARK GENERATION:
+  Object: natural number             Object: cubic graph
+  Operation: multiplication          Operation: 3-edge-coloring
+  Composite: factored                Composite: colored
+  Irreducible: prime                 Irreducible: snark
+  Testing: polynomial (P)            Testing: NP-complete
+  Formal group: F(x,y)=(x+y)/(1+xy) Formal group: NONE
+  Chain coverage: ~20% (declining)   Chain coverage: 0% (no chains)
+  First: 2 (the base)               First: Petersen (10 = 2*5)
+  Forbidden value: 7                 Forbidden structure: planarity (4CT)
+  Key theorem: PNT                   Key theorem: 4-color theorem
+
+  Density: ~ 1/ln(n)                Density: exponential growth among cubics
+  Poincare disk: center = reducible  No disk (no metric known)
+  S/A: prime = locked S/A ratio     S/A: snark = locked non-colorability
+
+  The formal group is EVERYTHING:
+    With it: primes are partially tractable. Chains exist. Shortcuts work.
+    Without it: snarks are fully intractable. No chains. No shortcuts.
+
+  THE FORMAL GROUP IS THE STRUCTURE THAT SEPARATES P FROM NP
+  (metaphorically, not literally — but the analogy is deep).
+
+  Primality: IN P because the formal group provides algebraic structure.
+  3-edge-colorability: NP-complete because no such structure exists.
+
+  The formal group F(x,y) = (x+y)/(1+xy) is the TOOL that makes
+  number theory tractable. Without it: combinatorial graph theory
+  is intractable (NP-hard).
+
+
+THE 7-21-42-70 ANALOGY FOR SNARKS
+====================================
+
+For K_7 (the complete tournament arena):
+  7 vertices, 21 edges, 42 arcs, 70 = 7+21+42 = C(8,4).
+
+For the Petersen graph (the first snark):
+  10 vertices, 15 edges, 3-regular, girth 5.
+  10 + 15 + ?
+
+  If we define "arcs" as oriented edges: 30 = 2*15.
+  10 + 15 + 30 = 55 = C(11, 2) = T(10).
+
+  55 = the 10th triangular number = C(11,2).
+  And 11 = the restart prime.
+
+  For K_7: V + E + 2E = 70 = C(8, 4). The BOTT central binomial.
+  For Petersen: V + E + 2E = 55 = C(11, 2). The RESTART triangular.
+
+  70 = C(8, 4): the Bott period chooses its middle.
+  55 = C(11, 2): the restart prime chooses its edges.
+
+  Both are binomial coefficients.
+  Both encode the "total structure" of their respective first-forbidden objects.
+""")
+
+print("opus-2026-03-16-S90cl: PRIME GENERATION AND SNARK GENERATION")
