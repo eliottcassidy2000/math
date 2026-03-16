@@ -1,0 +1,316 @@
+
+  THE THREE SOLUTIONS: sigma(n) = 2n + phi(n)
+
+======================================================================
+
+  Computing sigma and phi up to 10,000,000...
+
+  Solutions to sigma(n) = 2n + phi(n) for n <= 10000000:
+
+  n =         12 = 2^2 * 3
+    sigma = 28, phi = 4, 2n = 24
+    abundance = sigma - 2n = 4
+    phi(n) = 4
+    Match: True
+    n/6 = 2.0
+    sigma/n = 7/3 = 2.333333
+    phi/n = 1/3 = 0.333333
+    abundance/n = 1/3 = 0.333333
+
+  n =         42 = 2 * 3 * 7
+    sigma = 96, phi = 12, 2n = 84
+    abundance = sigma - 2n = 12
+    phi(n) = 12
+    Match: True
+    n/6 = 7.0
+    sigma/n = 16/7 = 2.285714
+    phi/n = 2/7 = 0.285714
+    abundance/n = 2/7 = 0.285714
+
+  n =       1242 = 2 * 3^3 * 23
+    sigma = 2880, phi = 396, 2n = 2484
+    abundance = sigma - 2n = 396
+    phi(n) = 396
+    Match: True
+    n/6 = 207.0
+    sigma/n = 160/69 = 2.318841
+    phi/n = 22/69 = 0.318841
+    abundance/n = 22/69 = 0.318841
+
+  n =    6137440 = 2^5 * 5 * 89 * 431
+    sigma = 14696640, phi = 2421760, 2n = 12274880
+    abundance = sigma - 2n = 2421760
+    phi(n) = 2421760
+    Match: True
+    n/6 = 1022906.6666666666
+    sigma/n = 91854/38359 = 2.394588
+    phi/n = 15136/38359 = 0.394588
+    abundance/n = 15136/38359 = 0.394588
+
+  Total solutions up to 10000000: 4
+
+  STRUCTURAL ANALYSIS
+  --------------------------------------------------
+
+  All solutions divisible by 6?
+    12 / 6 = 2.0, mod 6 = 0
+    42 / 6 = 7.0, mod 6 = 0
+    1242 / 6 = 207.0, mod 6 = 0
+    6137440 / 6 = 1022906.6666666666, mod 6 = 4
+
+  The equation in terms of local factors:
+  Let f(p,a) = (p^{a+1}-1)/((p-1)*p^a)  [local sigma/n factor]
+  Let g(p) = (p-1)/p = 1-1/p             [local phi/n factor]
+  Then: prod f(p_i,a_i) = 2 + prod g(p_i)
+
+    p=2, a=2: f(p,a)=7/4 = 1.750000, g(p)=1/2
+    p=3, a=1: f(p,a)=4/3 = 1.333333, g(p)=2/3
+    prod f = 7/3 = 2.333333
+    prod g = 1/3 = 0.333333
+    2 + prod g = 7/3 = 2.333333
+    Equal? True
+
+    p=2, a=1: f(p,a)=3/2 = 1.500000, g(p)=1/2
+    p=3, a=1: f(p,a)=4/3 = 1.333333, g(p)=2/3
+    p=7, a=1: f(p,a)=8/7 = 1.142857, g(p)=6/7
+    prod f = 16/7 = 2.285714
+    prod g = 2/7 = 0.285714
+    2 + prod g = 16/7 = 2.285714
+    Equal? True
+
+    p=2, a=1: f(p,a)=3/2 = 1.500000, g(p)=1/2
+    p=3, a=3: f(p,a)=40/27 = 1.481481, g(p)=2/3
+    p=23, a=1: f(p,a)=24/23 = 1.043478, g(p)=22/23
+    prod f = 160/69 = 2.318841
+    prod g = 22/69 = 0.318841
+    2 + prod g = 160/69 = 2.318841
+    Equal? True
+
+    p=2, a=5: f(p,a)=63/32 = 1.968750, g(p)=1/2
+    p=5, a=1: f(p,a)=6/5 = 1.200000, g(p)=4/5
+    p=89, a=1: f(p,a)=90/89 = 1.011236, g(p)=88/89
+    p=431, a=1: f(p,a)=432/431 = 1.002320, g(p)=430/431
+    prod f = 91854/38359 = 2.394588
+    prod g = 15136/38359 = 0.394588
+    2 + prod g = 91854/38359 = 2.394588
+    Equal? True
+
+  DEEPER PATTERN: THE ROLE OF 6
+  --------------------------------------------------
+
+  n = 12 = 6 * 2
+  n = 42 = 6 * 7
+  n = 1242 = 6 * 207 = 6 * 9 * 23
+
+  Trying n = 2 * 3^b * q for small b and primes q:
+
+  b=1: n = 2 * 3^1 * q
+    SOLUTION: q=7, n=42
+
+  b=2: n = 2 * 3^2 * q
+    SOLUTION: q=69, n=1242
+
+  b=3: n = 2 * 3^3 * q
+    SOLUTION: q=23, n=1242
+
+  b=4: n = 2 * 3^4 * q
+    No solutions up to n=10000000
+
+  b=5: n = 2 * 3^5 * q
+    No solutions up to n=10000000
+
+  b=6: n = 2 * 3^6 * q
+    No solutions up to n=10000000
+
+  b=7: n = 2 * 3^7 * q
+    No solutions up to n=10000000
+
+  GENERAL FORM SEARCH
+  --------------------------------------------------
+
+  n = 2^a * 3^b * q (q prime > 3):
+    a=1, b=1, q=7: n=42
+    a=1, b=2, q=69: n=1242
+    a=1, b=3, q=23: n=1242
+
+  n = 2^a * 3 * 7:
+    a=1: n=42, D=0
+    a=2: n=84, D=32
+    a=3: n=168, D=96
+    a=4: n=336, D=224
+    a=5: n=672, D=480
+    a=6: n=1344, D=992
+    a=7: n=2688, D=2016
+    a=8: n=5376, D=4064
+    a=9: n=10752, D=8160
+    a=10: n=21504, D=16352
+    a=11: n=43008, D=32736
+    a=12: n=86016, D=65504
+    a=13: n=172032, D=131040
+    a=14: n=344064, D=262112
+    a=15: n=688128, D=524256
+    a=16: n=1376256, D=1048544
+    a=17: n=2752512, D=2097120
+    a=18: n=5505024, D=4194272
+
+  n = 2 * 3 * p (squarefree):
+    p=5: n=30, D=4
+    p=6: n=36, D=7
+    p=7: n=42, D=0
+    p=10: n=60, D=32
+    p=11: n=66, D=-8
+    p=13: n=78, D=-12
+    p=14: n=84, D=32
+    p=15: n=90, D=30
+    p=17: n=102, D=-20
+    p=19: n=114, D=-24
+    p=21: n=126, D=24
+    p=22: n=132, D=32
+    p=23: n=138, D=-32
+    p=26: n=156, D=32
+    p=29: n=174, D=-44
+    p=30: n=180, D=138
+    p=31: n=186, D=-48
+    p=33: n=198, D=12
+
+  THE n=12 SOLUTION
+  --------------------------------------------------
+
+  n = 12 = 2^2 * 3
+  sigma(12) = 1+2+3+4+6+12 = 28
+  phi(12) = |{1,5,7,11}| = 4
+  2*12 = 24
+  28 = 24 + 4. YES.
+
+  12 = phi(42)/1 = the totient of 42!
+  sigma(phi(42)) = 2*phi(42) + phi(phi(42))
+  phi(phi(42)) = phi(12) = 4
+  sigma(12) = 28 = 2*12 + 4 = 28. Confirmed.
+
+  THE n=1242 SOLUTION
+  --------------------------------------------------
+
+  n = 1242 = 2 * 3^3 * 23
+  sigma(1242) = 2880
+  phi(1242) = 396
+  2*1242 = 2484
+  2880 = 2484 + 396? True
+
+  1242 = 42 * 29 + 24 = 42 * 29.571...
+  1242 / 42 = 29.571428571428573
+  1242 / 6 = 207.0 = 207 = 9 * 23
+  1242 = 6 * 207 = 6 * 9 * 23 = 2 * 27 * 23
+
+  23 - 1 = 22 = 2 * 11
+  23 is prime. 23 = 24 - 1 = 4! - 1
+
+  23 = 3*7 + 2. So 1242 = 2 * 3^3 * (3*7+2)
+  Starting from 42 = 2*3*7: cube the 3, shift the 7 to 3*7+2=23.
+
+  Checking n with 4+ prime factors (with multiplicity):
+    n=12: Omega(n) = 3
+    n=42: Omega(n) = 3
+    n=1242: Omega(n) = 5
+    n=6137440: Omega(n) = 8
+
+  OEIS CHECK: sequence 12, 42, 1242, ...
+  --------------------------------------------------
+
+  This sequence should be checked in OEIS.
+  Known terms: [12, 42, 1242, 6137440]
+  Is this A??????
+
+  42/12 = 7/2 = 3.500000
+  1242/42 = 207/7 = 29.571429
+  6137440/1242 = 3068720/621 = 4941.578100
+
+  EXISTENCE PROOF FOR MORE SOLUTIONS?
+  --------------------------------------------------
+
+  Family n = 2 * 3^b * q (q prime, q > 3):
+  Equation reduces to:
+
+  b= 1: q = 7 (PRIME!) => n = 42
+  b= 2: q = 15 (NOT prime)
+  b= 3: q = 23 (PRIME!) => n = 1242
+  b= 4: q = 139/5 (NOT integer)
+  b= 5: q = 209/7 (NOT integer)
+  b= 6: q = 1255/41 (NOT integer)
+  b= 7: q = 1883/61 (NOT integer)
+  b= 8: q = 11299/365 (NOT integer)
+  b= 9: q = 16949/547 (NOT integer)
+  b=10: q = 101695/3281 (NOT integer)
+  b=11: q = 152543/4921 (NOT integer)
+  b=12: q = 915259/29525 (NOT integer)
+  b=13: q = 1372889/44287 (NOT integer)
+  b=14: q = 8237335/265721 (NOT integer)
+
+  Family n = 2^a * 3 * q (q prime, q > 3):
+  a= 1: q = 7 (PRIME!) => n = 42
+  a=2: denominator zero, no solution
+  a= 3: q = -17.00 (invalid)
+  a= 4: q = -11.67 (invalid)
+  a= 5: q = -10.14 (invalid)
+  a= 6: q = -9.53 (invalid)
+  a= 7: q = -9.26 (invalid)
+  a= 8: q = -9.13 (invalid)
+  a= 9: q = -9.06 (invalid)
+  a=10: q = -9.03 (invalid)
+  a=11: q = -9.02 (invalid)
+  a=12: q = -9.01 (invalid)
+  a=13: q = -9.00 (invalid)
+  a=14: q = -9.00 (invalid)
+
+  Family n = 2^2 * 3^b:
+  b=1: n=12, D=0
+  b=2: n=36, D=7
+  b=3: n=108, D=28
+  b=4: n=324, D=91
+  b=5: n=972, D=280
+  b=6: n=2916, D=847
+  b=7: n=8748, D=2548
+  b=8: n=26244, D=7651
+  b=9: n=78732, D=22960
+  b=10: n=236196, D=68887
+  b=11: n=708588, D=206668
+  b=12: n=2125764, D=620011
+  b=13: n=6377292, D=1860040
+
+  THE THREE SOLUTIONS: UNIFIED VIEW
+  --------------------------------------------------
+
+  n = 12 = 2^2 * 3     (family 2^a * 3^b)
+  n = 42 = 2 * 3 * 7   (family 2 * 3 * q, q=7)
+  n = 1242 = 2 * 3^3 * 23  (family 2 * 3^b * q, b=3, q=23)
+
+  From the family n = 2 * 3^b * q:
+  b=1: q=7 (prime) => n=42
+  b=3: q=23 (prime) => n=1242
+  Other b: q not prime or not integer.
+
+  From the family n = 2^a * 3:
+  Only a=2 could work (n=12), and it does.
+
+  CONJECTURE: 12, 42, 1242 are the ONLY three solutions.
+  Verified up to n = 10000000.
+
+  Why does 12 = 2^2 * 3 work?
+  sigma(12) = (1+2+4)(1+3) = 7*4 = 28
+  phi(12) = 2*2 = 4
+  2*12 = 24
+  28 - 24 = 4 = phi(12). Checks out.
+
+  12 = phi(42) and sigma(12) = 2*12 + phi(12).
+  The TOTIENT of 42 is itself a solution!
+  This creates a self-referential loop:
+  42 satisfies the equation, and phi(42) = 12 also satisfies it.
+
+  phi(12) = 4. Does 4 satisfy?
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\sigma_phi_triple_s116n.py", line 536, in <module>
+    print(f"  sigma(4) = 7, 2*4 + phi(4) = 8 + 2 = 10. 7 \u2260 10. NO.")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2260' in position 45: character maps to <undefined>

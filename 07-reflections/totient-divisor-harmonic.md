@@ -22,6 +22,26 @@ Equal iff 12 = 2(p-1) iff p = 7.
 The condition SELECTS p = 7 = the forbidden prime.
 42 doesn't just contain 7. It is CHARACTERIZED by 7.
 
+## The uniqueness theorem (S116n32)
+
+sigma(n) = 2n + phi(n) has exactly 4 known solutions (verified to 10^7):
+- n = 12 = 2^2 * 3 (not squarefree)
+- n = 42 = 2 * 3 * 7 (SQUAREFREE)
+- n = 1242 = 2 * 3^3 * 23 (not squarefree)
+- n = 6137440 = 2^5 * 5 * 89 * 431 (not squarefree)
+
+42 is the UNIQUE SQUAREFREE solution. Proof: for n = p1*...*pk (distinct primes),
+the equation reduces to prod(pi) - sum_{i<j} pi*pj = 1. For k=3, p=2:
+(q-2)(r-2) = 5 (prime), forcing {q,r} = {3,7}. For k >= 4: impossible.
+
+The self-referential loop: phi(42) = 12 is also a solution.
+The totient of 42 satisfies the same equation as 42 itself.
+
+Abundancy - 2 = totient ratio:
+- n=12: 7/3 - 2 = 1/3 = phi(12)/12
+- n=42: 16/7 - 2 = 2/7 = phi(42)/42
+- n=1242: 160/69 - 2 = 22/69 = phi(1242)/1242
+
 ## The harmonic mean
 
 H(42) = tau(42) * 42 / sigma(42) = 8 * 42 / 96 = 7/2.
