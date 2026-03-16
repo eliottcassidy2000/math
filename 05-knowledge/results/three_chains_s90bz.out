@@ -1,0 +1,4 @@
+  File "/Users/e/Documents/GitHub/math/04-computation/three_chains_s90bz.py", line 153
+    (... wait, delta)
+     ^^^^^^^^
+SyntaxError: f-string: invalid syntax. Perhaps you forgot a comma?
