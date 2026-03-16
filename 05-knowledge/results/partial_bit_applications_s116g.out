@@ -1,0 +1,264 @@
+
+  PRACTICAL APPLICATIONS OF PARTIAL BIT ACCUMULATION
+
+======================================================================
+
+  1. RANKING CONFIDENCE FROM PARTIAL COMPARISONS
+  --------------------------------------------------
+
+  PROBLEM: You have n items and k < C(n,2) pairwise comparisons.
+  Not all pairs have been compared. How confident is the ranking?
+
+  INSIGHT: Each comparison is a PARTIAL BIT of ranking information.
+  A consistent comparison (A>B and B>C implies A>C) adds ~1 bit.
+  An inconsistent comparison (A>B>C>A cycle) adds 0 net bits
+  but reveals STRUCTURE (the cycle).
+
+  TOOL: Partial Bit Ranking Confidence Score
+
+  DEMO: 5 items, partial comparisons
+
+  Scenario A: Perfect hierarchy (0>1>2>3>4, all compared)
+    Coverage: 100%, Cycles: 0, Consistency: 100%, Confidence: 100%
+    Partial bits: 10.0 / 6.9 max
+
+  Scenario B: Partial, consistent (chain + shortcuts)
+    Coverage: 60%, Cycles: 0, Consistency: 100%, Confidence: 60%
+    Partial bits: 2.0 / 6.9 max
+
+  Scenario C: Complete with one 3-cycle (0>1>2>0)
+    Coverage: 100%, Cycles: 1, Consistency: 90%, Confidence: 90%
+    Partial bits: 9.0 / 6.9 max
+
+  Scenario D: Minimal chain (4 comparisons only)
+    Coverage: 40%, Cycles: 0, Consistency: 100%, Confidence: 40%
+    Partial bits: 0.0 / 6.9 max
+
+  The tool tells you:
+  - HOW MUCH of the ranking is determined (coverage)
+  - HOW CONSISTENT the data is (no cycles = high consistency)
+  - HOW CONFIDENT the ranking is (coverage * consistency)
+  - HOW MANY 'partial bits' of ranking information you have
+
+
+  2. ADAPTIVE COMPARISON SCHEDULER
+  --------------------------------------------------
+
+  PROBLEM: You need to rank n items with minimum comparisons.
+  Which pair should you compare NEXT to gain the most information?
+
+  INSIGHT: Each comparison contributes a partial bit.
+  The partial bit is LARGEST when the comparison is MAXIMALLY
+  UNCERTAIN — when we don't know who will win.
+
+  ALGORITHM:
+  1. Maintain current ranking estimate (from existing comparisons)
+  2. For each uncompared pair (i,j):
+     - Estimate P(i>j) from transitive closure
+     - Compute expected information gain = H(P) = binary entropy
+     - This is the 'partial bit value' of the comparison
+  3. Compare the pair with HIGHEST expected partial bit value
+  4. Update ranking, repeat
+
+  The information gain per comparison is maximized when
+  P(i>j) = 1/2 (fair coin), which gives 1 full bit.
+  But transitive closure often makes some pairs predictable
+  (P near 0 or 1), giving < 1 bit. The scheduler avoids these.
+
+  Expected information gain per comparison:
+  P(i>j)   H(P) bits   Rapidity    Interpretation
+  -------------------------------------------------------
+  0.01       0.0808       2.2976      near-certain, low info
+  0.10       0.4690       1.0986      near-certain, low info
+  0.20       0.7219       0.6931      moderate certainty
+  0.30       0.8813       0.4236      moderate certainty
+  0.40       0.9710       0.2027      moderate certainty
+  0.50       1.0000       0.0000      MAXIMUM INFO (fair coin)
+  0.60       0.9710       0.2027      moderate certainty
+  0.70       0.8813       0.4236      moderate certainty
+  0.80       0.7219       0.6931      moderate certainty
+  0.90       0.4690       1.0986      near-certain, low info
+  0.99       0.0808       2.2976      near-certain, low info
+
+  Comparisons near the rapidity origin (P~0.5) are most valuable.
+  Comparisons far from origin (P~0 or ~1) are nearly redundant.
+  The scheduler PRIORITIZES pairs near the center of rapidity space.
+
+
+  3. CONTRADICTION DETECTOR FOR SURVEY DATA
+  --------------------------------------------------
+
+  PROBLEM: A survey asks respondents to compare items pairwise.
+  Some responses contradict each other (A>B>C>A).
+  Which contradictions are 'real' (population-level cycles)
+  vs 'noise' (individual inconsistency)?
+
+  INSIGHT: The OCF decomposes H into independent cycle contributions.
+  alpha_1 = total cycles, alpha_2 = independent pairs, etc.
+  If alpha_1 is high but alpha_2 is low, the cycles are NOT independent
+  — they share vertices — suggesting a single confused region.
+  If alpha_2 is also high, there are MULTIPLE independent
+  contradictions — suggesting genuine population-level disagreement.
+
+  TOOL OUTPUT:
+  'Your survey has {alpha_1} pairwise contradictions.'
+  '{alpha_2} of these are independent (non-overlapping).'
+  'The contradictions cluster around items {X, Y, Z}.'
+  'Confidence in overall ranking: {confidence}%.'
+
+
+  4. OPTIMAL EXPERIMENT DESIGN VIA PARTIAL BITS
+  --------------------------------------------------
+
+  PROBLEM: Design a clinical trial comparing n treatments pairwise.
+  Budget allows k comparisons. Which k pairs to test?
+
+  INSIGHT: The total information from k comparisons is at most k bits.
+  But some comparison sets are MORE EFFICIENT because their
+  partial bits DON'T OVERLAP (independent information).
+
+  STRATEGY: Choose comparisons whose transitive closures are DISJOINT.
+  This maximizes the number of independent partial bits.
+
+  For n items, the minimum comparisons for a complete ranking = n-1
+  (a spanning path). But this gives NO redundancy (no cycle detection).
+  Adding 1 more comparison creates exactly 1 cycle-detection opportunity.
+
+  The OPTIMAL k for n items:
+  k = n-1: minimum for ranking, no contradiction detection
+  k = n: one redundant comparison, detects 1 cycle
+  k = C(n,2): all pairs, maximum information, maximum cost
+
+  n    n-1    C(n,2)   bits needed    ratio
+  --------------------------------------------------
+    3     2        3          2.6         0.77
+    4     3        6          4.6         0.65
+    5     4       10          6.9         0.58
+    6     5       15          9.5         0.53
+    7     6       21         12.3         0.49
+    8     7       28         15.3         0.46
+   10     9       45         21.8         0.41
+   15    14      105         40.3         0.35
+   20    19      190         61.1         0.31
+
+  The ratio (n-1)/bits_needed -> 0 as n grows.
+  You need MANY more comparisons than the minimum to get
+  reliable information. The partial bits from a spanning tree
+  are necessary but not sufficient.
+
+
+  5. RECOMMENDATION SYSTEM: PREFERENCE TOPOLOGY
+  --------------------------------------------------
+
+  PROBLEM: A user rates items pairwise (A vs B, B vs C, etc.).
+  Build a recommendation based on the TOPOLOGY of preferences.
+
+  INSIGHT: The user's preference tournament T has H(T) paths.
+  High H: the user has WEAK preferences (many valid orderings).
+  Low H: the user has STRONG preferences (few valid orderings).
+
+  The OCF gives alpha_1 (how many items form cycles).
+  Items in cycles are ones the user is AMBIVALENT about.
+  Items NOT in any cycle are DEFINITELY preferred in their ranking.
+
+  RECOMMENDATION:
+  - Recommend items that are DEFINITELY above unrated items
+    (transitive closure from the known comparisons)
+  - Flag items in CYCLES as 'you might also like'
+    (the user is ambivalent, so both could work)
+  - Compute confidence per item-pair: high for transitive,
+    low for cycle-adjacent, unknown for uncompared
+
+
+  6. SPORTS: SCHEDULE OPTIMIZER
+  --------------------------------------------------
+
+  PROBLEM: A league has n teams. Design a schedule that
+  determines the TRUE ranking in minimum games.
+
+  INSIGHT: Each game is a partial bit. Some games are more
+  informative than others (evenly matched teams give ~1 bit,
+  mismatched teams give ~0 bits).
+
+  ALGORITHM:
+  1. Start with estimated skill ratings (Elo, preseason polls)
+  2. Schedule games between teams with CLOSEST ratings
+     (maximum partial bit per game)
+  3. After each round, update ratings and reschedule
+  4. Stop when confidence exceeds threshold
+
+  This is ADAPTIVE SCHEDULING: the schedule changes based on results.
+  Traditional round-robin wastes games on mismatched pairs.
+  Adaptive scheduling focuses on the INFORMATIVE matchups.
+
+  Expected savings:
+  n    Round-robin   Adaptive (est.)   Savings
+  --------------------------------------------------
+    4        6             12           -100%
+    8       28             36           -29%
+   10       45             49           -9%
+   16      120             96           20%
+   20      190            129           32%
+   32      496            240           52%
+
+  For a 32-team league: 496 round-robin games vs ~240 adaptive.
+  More than 50% savings while determining the same ranking.
+
+
+  7. ML MODEL SELECTION VIA PARTIAL BITS
+  --------------------------------------------------
+
+  PROBLEM: Compare n ML models pairwise on k datasets.
+  Which model is best? How confident are we?
+
+  INSIGHT: Each dataset comparison is a partial bit.
+  Model A beats Model B on dataset d: one bit.
+  If A beats B on MOST datasets: high rapidity.
+  If results are mixed: low rapidity (uncertain).
+
+  TOOL: Model Comparison Rapidity
+  For each pair (A, B): count wins w, losses l.
+  Rapidity = arctanh((w-l)/(w+l)) = arctanh(2*(w/(w+l)) - 1).
+  = half the log-odds of A beating B.
+
+  w/total   rapidity    confidence
+  ----------------------------------------
+  0.50            0.0    uncertain
+  0.60       0.20273255405408216    uncertain
+  0.70       0.42364893019360167    moderate
+  0.80       0.6931471805599455    strong
+  0.90       1.0986122886681098    strong
+  0.95       1.4722194895832197    strong
+  1.00            inf    decisive
+
+
+  SUMMARY: FIVE BUILDABLE TOOLS
+  --------------------------------------------------
+
+  1. RANKING CONFIDENCE SCORE
+     Input: partial pairwise comparisons
+     Output: confidence %, partial bits accumulated, cycle list
+     Use: product managers, hiring, any ranking task
+
+  2. ADAPTIVE COMPARISON SCHEDULER
+     Input: items to rank, comparison budget
+     Output: which pairs to compare next (max info per comparison)
+     Use: A/B testing, clinical trials, tournament scheduling
+
+  3. CONTRADICTION DETECTOR
+     Input: survey pairwise preference data
+     Output: cycle identification, independence analysis, confidence
+     Use: market research, UX research, political polling
+
+  4. SPORTS SCHEDULE OPTIMIZER
+     Input: teams + initial ratings + game budget
+     Output: adaptive schedule maximizing ranking information
+     Use: league organizers, esports, debate tournaments
+
+  5. ML MODEL COMPARATOR
+     Input: model performance on datasets (pairwise wins/losses)
+     Output: rapidity-based confidence ranking of models
+     Use: ML practitioners, AutoML pipelines, model registries
+
+  ALL FIVE use the same math: partial bit accumulation
+  from pairwise comparisons, measured in rapidity.
