@@ -40,19 +40,6 @@ class BitTournament:
         self.bits = bits
         self._num_arcs = n * (n - 1) // 2
 
-    @staticmethod
-    def arc_index(i, j):
-        """Bit position for the arc between i and j (i < j)."""
-        # Position in upper-triangular enumeration: sum_{r=0}^{i-1} (n-1-r) + (j-i-1)
-        # But we want a static formula without n, so encode differently:
-        # Use i*(i-1)//2 + j style? No — use the canonical: i*n - i*(i+1)//2 + j - i - 1
-        # Since we need n, we'll compute it inline where needed.
-        # This static version assumes i < j and is used via _idx below.
-        return i * (i - 1) // 2 + j  # WRONG — need to depend on n
-        # Actually let's use the simple triangular index:
-        # For pair (i,j) with i<j, index = C(j,2) + i = j*(j-1)//2 + i
-        # This doesn't need n!
-
     def _idx(self, i, j):
         """Bit index for ordered pair (i,j) with i < j.
         Convention: j*(j-1)//2 + i. This gives a unique index for each pair."""
@@ -172,110 +159,9 @@ class IncrementalCrystallizer:
         # Build initial cycle set
         self._build_all_cycles()
 
-    def _arc_margin(self, a, b):
-        """Margin for arc a->b. Positive means a->b is the majority direction."""
-        i, j = min(a, b), max(a, b)
-        m = self.margins.get((i, j), 0)
-        if self.T.has_arc(i, j):
-            # Current direction is i->j
-            if a == i:
-                return m   # a->b = i->j, margin = m
-            else:
-                return -m  # a->b = j->i, but stored direction is i->j, so margin = -m
-        else:
-            # Current direction is j->i
-            if a == j:
-                return -m  # a->b = j->i, margin = -m (direction matches stored -m)
-            else:
-                return m
-
-    def _get_margin(self, a, b):
-        """Get the margin for the currently-active arc from a to b.
-        Higher margin = stronger preference for current direction."""
-        i, j = min(a, b), max(a, b)
-        base = self.margins.get((i, j), 0)
-        # base > 0 means i->j is preferred
-        if self.T.has_arc(a, b):
-            # a->b is current
-            if a < b:
-                return base  # i->j direction, margin = base
-            else:
-                return -base  # j->i direction = flipped, margin = -base
-        return 0  # shouldn't happen if a->b
-
-    def _directed_margin(self, a, b):
-        """Margin for the arc a->b. Positive if a->b is current AND preferred."""
-        i, j = min(a, b), max(a, b)
-        base = self.margins.get((i, j), 0)
-        # base > 0 means "i->j preferred", base < 0 means "j->i preferred"
-        if a < b:
-            return base  # measures how much i->j is preferred
-        else:
-            return -base  # measures how much j->i is preferred
-
-    def _cycle_weakest(self, i, j, k):
-        """For 3-cycle i->j->k->i, find the weakest arc and its margin.
-        Returns (margin, (tail, head)) for the weakest arc.
-        margin = how much the current direction is preferred (can be negative if
-        we're going against majority)."""
-        arcs = []
-        # i->j
-        arcs.append((abs(self._directed_margin(i, j)), (i, j)))
-        # j->k
-        arcs.append((abs(self._directed_margin(j, k)), (j, k)))
-        # k->i
-        arcs.append((abs(self._directed_margin(k, i)), (k, i)))
-        arcs.sort()
-        return arcs[0]  # (|margin|, (tail, head))
-
     def _build_all_cycles(self):
-        """Find all 3-cycles in the current tournament. O(n^3) — done once."""
+        """Find all 3-cycles in the current tournament. O(n^3) -- done once."""
         n = self.n
-        T = self.T
-        self.active_cycles.clear()
-        self.heap = []
-
-        for i in range(n):
-            for j in range(i + 1, n):
-                for k in range(j + 1, n):
-                    # Check all 3 possible cycle orientations for {i,j,k}
-                    # A 3-cycle on {i,j,k} exists iff all three have out-degree 1
-                    # within the triple (equivalently, not transitive).
-                    ij = T.has_arc(i, j)
-                    jk = T.has_arc(j, k)
-                    ik = T.has_arc(i, k)
-                    # Transitive iff (ij and jk and ik) or (not ij and not jk and not ik)
-                    # Wait — that's wrong. Let's just check:
-                    # out-degrees within triple:
-                    d_i = int(ij) + int(ik)
-                    d_j = int(not ij) + int(jk)
-                    d_k = int(not ik) + int(not jk)
-                    if d_i == 1 and d_j == 1 and d_k == 1:
-                        # It's a 3-cycle. Determine the direction.
-                        cycle_key = frozenset((i, j, k))
-                        self.active_cycles.add(cycle_key)
-                        # Find actual cycle direction to get weakest arc
-                        if ij and jk and not ik:
-                            # i->j->k->i
-                            self._push_cycle(i, j, k, cycle_key)
-                        elif ij and not jk and ik:
-                            # i->j, i->k, k->j => i->k->j->... wait
-                            # Actually: ij=1(i->j), jk=0(k->j), ik=1(i->k)
-                            # So arcs: i->j, k->j, i->k
-                            # d_i = ij+ik = 2, not 1. Contradiction.
-                            pass  # can't happen with d_i=1
-                        else:
-                            # The other orientation: k->j->i->k
-                            # ij=0(j->i), jk=0(k->j), ik=1(i->k): j->i->k->j
-                            if not ij and not jk and ik:
-                                self._push_cycle(j, i, k, cycle_key)
-                            elif not ij and jk and not ik:
-                                # j->i, j->k, k->i: j->k->i->j
-                                self._push_cycle(i, j, k, cycle_key)
-                                # Wait let me redo this properly
-                                pass
-
-        # Let me redo the cycle detection more carefully
         self.active_cycles.clear()
         self.heap = []
         for i in range(n):
@@ -314,20 +200,29 @@ class IncrementalCrystallizer:
             self._push_cycle(i, k, j, cycle_key)
 
     def _push_cycle(self, a, b, c, cycle_key):
-        """Push cycle a->b->c->a onto the heap with its weakest-arc margin."""
-        # Find weakest arc
+        """Push cycle a->b->c->a onto the heap with its weakest-arc margin.
+
+        Tie-breaking: when margins are equal, pick the arc with smaller
+        (tail, head) tuple. The heap key is (margin, tail, head, counter, ...)
+        so that identical-margin arcs are broken deterministically.
+        """
         arcs = [(a, b), (b, c), (c, a)]
         min_margin = float('inf')
         weakest_arc = None
         for tail, head in arcs:
             i, j = min(tail, head), max(tail, head)
             m = abs(self.margins.get((i, j), 0))
-            if m < min_margin:
+            if m < min_margin or (m == min_margin and (tail, head) < weakest_arc):
                 min_margin = m
                 weakest_arc = (tail, head)
 
         self._cycle_counter += 1
-        heapq.heappush(self.heap, (min_margin, self._cycle_counter, cycle_key, weakest_arc))
+        # Heap key: (margin, tail, head, counter, cycle_key, arc)
+        # This ensures deterministic ordering when margins tie.
+        heapq.heappush(self.heap, (
+            min_margin, weakest_arc[0], weakest_arc[1],
+            self._cycle_counter, cycle_key, weakest_arc
+        ))
 
     def _update_cycles_for_arc(self, a, b):
         """After flipping arc (a,b), update cycles involving a or b. O(n)."""
@@ -347,39 +242,104 @@ class IncrementalCrystallizer:
     def crystallize(self, max_iter=10000):
         """Run the crystallization loop.
         Returns: (final_tournament, iterations, flips_list)
+
+        Anti-cycling: each arc can be flipped at most once. After flipping,
+        it is permanently frozen. This matches the naive algorithm's behavior
+        where flipping the weakest arc once is sufficient — if a cycle remains
+        after that, its other arcs can still be flipped.
         """
         iterations = 0
         flips = []
+        flipped_arcs = set()  # arcs already flipped once — never flip again
 
         while iterations < max_iter and self.active_cycles:
             # Pop weakest cycle (lazy deletion)
             found = False
             while self.heap:
-                margin, _, cycle_key, arc = heapq.heappop(self.heap)
+                entry = heapq.heappop(self.heap)
+                margin = entry[0]
+                cycle_key = entry[4]
+                arc = entry[5]
                 if cycle_key in self.active_cycles:
-                    found = True
-                    break
+                    arc_key = (min(arc[0], arc[1]), max(arc[0], arc[1]))
+                    if arc_key not in flipped_arcs:
+                        found = True
+                        break
+                    # This cycle's weakest arc was already flipped.
+                    # The cycle might have OTHER unfrozen arcs. But since
+                    # we only stored the weakest, we need to recompute.
+                    # Remove from active and re-check if cycle still exists.
+                    self.active_cycles.discard(cycle_key)
+                    # Re-add if the cycle still exists with a different weakest arc
+                    verts = sorted(cycle_key)
+                    self._recheck_cycle_with_frozen(verts[0], verts[1], verts[2], flipped_arcs)
 
             if not found:
                 break
 
-            # Flip the weakest arc
             tail, head = arc
+            arc_key = (min(tail, head), max(tail, head))
+            flipped_arcs.add(arc_key)
+
+            # Flip the weakest arc
             self.T.flip_arc(tail, head)
             flips.append((tail, head, margin))
 
-            # Update affected cycles: all triples involving tail or head
-            # But specifically, we need triples involving the flipped arc
-            # PLUS triples involving tail with any other vertex
-            # PLUS triples involving head with any other vertex
-            # Actually, flipping (tail, head) can only affect triples containing
-            # at least one of {tail, head}. More precisely, it changes the arc
-            # between tail and head, so only triples {tail, head, v} are affected.
+            # Update affected cycles: only triples {tail, head, v} are affected
             self._update_cycles_for_arc(tail, head)
 
             iterations += 1
 
         return self.T, iterations, flips
+
+    def _recheck_cycle_with_frozen(self, i, j, k, frozen):
+        """Re-check if {i,j,k} is still a cycle and has an unfrozen arc to flip."""
+        T = self.T
+        ij = T.has_arc(i, j)
+        jk = T.has_arc(j, k)
+        ik = T.has_arc(i, k)
+
+        d_i = int(ij) + int(ik)
+        d_j = int(not ij) + int(jk)
+        d_k = int(not ik) + int(not jk)
+
+        if not (d_i == 1 and d_j == 1 and d_k == 1):
+            return  # no longer a cycle
+
+        cycle_key = frozenset((i, j, k))
+
+        # Determine arcs
+        if ij and jk and not ik:
+            arcs = [(i, j), (j, k), (k, i)]
+        else:
+            arcs = [(i, k), (k, j), (j, i)]
+
+        # Find weakest UNFROZEN arc
+        min_margin = float('inf')
+        weakest_arc = None
+        for tail, head in arcs:
+            ak = (min(tail, head), max(tail, head))
+            if ak in frozen:
+                continue
+            m = abs(self.margins.get(ak if tail < head else (head, tail), 0))
+            # Correct: always use (min, max) for margin lookup
+            mi, mj = min(tail, head), max(tail, head)
+            m = abs(self.margins.get((mi, mj), 0))
+            if m < min_margin or (m == min_margin and (tail, head) < weakest_arc):
+                min_margin = m
+                weakest_arc = (tail, head)
+
+        if weakest_arc is None:
+            # All arcs frozen — this cycle is stuck, remove it
+            self.active_cycles.discard(cycle_key)
+            return
+
+        self.active_cycles.add(cycle_key)
+        self._cycle_counter += 1
+        heapq.heappush(self.heap, (
+            min_margin, weakest_arc[0], weakest_arc[1],
+            self._cycle_counter, cycle_key, weakest_arc
+        ))
 
 
 # ============================================================
@@ -537,18 +497,22 @@ def naive_crystallize(M, margins_matrix, max_iter=10000):
     M: n*n adjacency matrix (M[i][j]=1 means i->j)
     margins_matrix: n*n matrix where margins_matrix[i][j] = vote margin for i->j
     Returns: (M, iterations, num_flips)
+
+    Includes oscillation detection: if the same arc would be flipped twice
+    in a row, freeze it and skip.
     """
     n = len(M)
     # Deep copy
     T = [row[:] for row in M]
     iterations = 0
     flips = 0
+    flipped_arcs = set()  # each arc flipped at most once
 
     while iterations < max_iter:
         # Scan ALL C(n,3) triples to find 3-cycles
         weakest = None
         weakest_margin = float('inf')
-        found = False
+        found_any_cycle = False
 
         for i in range(n):
             for j in range(n):
@@ -559,21 +523,26 @@ def naive_crystallize(M, margins_matrix, max_iter=10000):
                         continue
                     if T[j][k] == 1 and T[k][i] == 1:
                         # 3-cycle i->j->k->i
-                        found = True
+                        found_any_cycle = True
                         arcs = [(i, j), (j, k), (k, i)]
                         for a, b in arcs:
+                            arc_key = (min(a, b), max(a, b))
+                            if arc_key in flipped_arcs:
+                                continue
                             m = abs(margins_matrix[a][b])
-                            if m < weakest_margin:
+                            if m < weakest_margin or (m == weakest_margin and (a, b) < weakest):
                                 weakest_margin = m
                                 weakest = (a, b)
 
-        if not found or weakest is None:
+        if not found_any_cycle or weakest is None:
             break
 
         a, b = weakest
+        arc_key = (min(a, b), max(a, b))
+        flipped_arcs.add(arc_key)
+
         T[a][b] = 0
         T[b][a] = 1
-        # Also flip in margins? No — margins are fixed from votes.
         flips += 1
         iterations += 1
 
@@ -903,10 +872,10 @@ if __name__ == '__main__':
     print("  SECTION 5: PARALLEL CRYSTALLIZATION")
     print("  " + "-" * 50)
     print()
-    # Test with n=7 groups (simulating 7-item modules)
-    for ng in [4, 8, 16]:
-        r = benchmark_parallel(n=7, num_groups=ng)
-        print(f"  {r['num_groups']:2d} groups of n=7, {r['workers']} workers:  "
+    # Test with larger n groups to overcome process-spawn overhead
+    for n_par, ng in [(15, 8), (15, 16), (20, 8), (20, 16)]:
+        r = benchmark_parallel(n=n_par, num_groups=ng)
+        print(f"  {r['num_groups']:2d} groups of n={n_par}, {r['workers']} workers:  "
               f"seq={r['sequential_ms']:.1f}ms  par={r['parallel_ms']:.1f}ms  "
               f"speedup={r['speedup']:.2f}x")
     print()

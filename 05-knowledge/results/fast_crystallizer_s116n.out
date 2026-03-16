@@ -1,0 +1,106 @@
+
+========================================================================
+  FAST CRYSTALLIZER — BENCHMARK SUITE
+  kind-pasteur-2026-03-16-S116n
+========================================================================
+
+  SECTION 1: CORRECTNESS VERIFICATION
+  --------------------------------------------------
+
+  n= 5: 200 trials -> PASS
+         exact match: 200, tie-break diff (same cycles): 0, real mismatch: 0
+  n= 7: 200 trials -> PASS
+         exact match: 200, tie-break diff (same cycles): 0, real mismatch: 0
+  n=10:  50 trials -> PASS
+         exact match: 50, tie-break diff (same cycles): 0, real mismatch: 0
+
+  SECTION 2: MEMORY COMPARISON
+  --------------------------------------------------
+
+     n    arcs   bit_bytes   matrix_bytes   compression
+  ----  ------  ----------  -------------  ------------
+     7      21           3             49         16.3x
+    10      45           6            100         16.7x
+    15     105          14            225         16.1x
+    20     190          24            400         16.7x
+    42     861         108           1764         16.3x
+   100    4950         619          10000         16.2x
+
+  SECTION 3: CRYSTALLIZATION BENCHMARK (fast vs naive)
+  --------------------------------------------------
+
+     n  trials    naive_ms     fast_ms   speedup  naive_iters  fast_iters
+  ----  ------  ----------  ----------  --------  -----------  ----------
+     7      50       0.232       0.140      1.7x         10.2        10.2
+    10      30       2.841       0.855      3.3x         40.1        40.1
+    15      10      28.375       3.371      8.4x        104.9       104.9
+    20       5     121.103      10.083     12.0x        190.0       190.0
+
+  Detail for n=20:
+    Naive per-trial (ms): 118.3, 122.5, 123.3, 117.9, 123.4
+    Fast  per-trial (ms): 11.2, 11.0, 11.0, 8.8, 8.5
+
+  SECTION 4: BATCH MAJORITY BENCHMARK
+  --------------------------------------------------
+
+  n= 7,  50 rankers:  batch=0.100ms  naive=0.212ms  speedup=2.1x
+  n= 7, 200 rankers:  batch=0.324ms  naive=0.837ms  speedup=2.6x
+  n=10,  50 rankers:  batch=0.272ms  naive=0.464ms  speedup=1.7x
+  n=10, 200 rankers:  batch=0.903ms  naive=1.871ms  speedup=2.1x
+  n=15,  50 rankers:  batch=0.651ms  naive=1.146ms  speedup=1.8x
+  n=15, 200 rankers:  batch=2.233ms  naive=4.385ms  speedup=2.0x
+  n=20,  50 rankers:  batch=1.229ms  naive=2.005ms  speedup=1.6x
+  n=20, 200 rankers:  batch=4.071ms  naive=8.075ms  speedup=2.0x
+
+  SECTION 5: PARALLEL CRYSTALLIZATION
+  --------------------------------------------------
+
+   8 groups of n=15, 8 workers:  seq=27.8ms  par=219.4ms  speedup=0.13x
+  16 groups of n=15, 12 workers:  seq=57.2ms  par=290.8ms  speedup=0.20x
+   8 groups of n=20, 8 workers:  seq=73.6ms  par=219.1ms  speedup=0.34x
+  16 groups of n=20, 12 workers:  seq=142.8ms  par=328.9ms  speedup=0.43x
+
+  SECTION 6: SCALING ANALYSIS
+  --------------------------------------------------
+
+  Theoretical complexity:
+    Naive:  O(k * n^3)    per crystallization run
+    Fast:   O(n^3) init + O(k * n * log n)  per run
+    Batch:  O(R * n^2) -> O(R * n^2/w)  with w-bit words
+    Parallel: O(T_seq / P) for P independent groups
+
+  Observed scaling (naive):
+    n=7->10: time ratio=12.3x, n ratio=1.4x, exponent~=7.0
+    n=10->15: time ratio=10.0x, n ratio=1.5x, exponent~=5.7
+    n=15->20: time ratio=4.3x, n ratio=1.3x, exponent~=5.0
+  Observed scaling (fast):
+    n=7->10: time ratio=6.1x, n ratio=1.4x, exponent~=5.1
+    n=10->15: time ratio=3.9x, n ratio=1.5x, exponent~=3.4
+    n=15->20: time ratio=3.0x, n ratio=1.3x, exponent~=3.8
+
+  SECTION 7: API SUMMARY
+  --------------------------------------------------
+
+  BitTournament(n, bits=0)
+    .has_arc(a,b)     O(1) arc query
+    .flip_arc(a,b)    O(1) arc flip
+    .scores()         O(n^2) out-degrees
+    .random(n)        O(1) random tournament
+    .from_matrix(M)   O(n^2) convert from adjacency matrix
+    .to_matrix()      O(n^2) convert to adjacency matrix
+
+  IncrementalCrystallizer(tournament, margins)
+    .crystallize(max_iter=10000)
+    Returns: (final_tournament, iterations, flips_list)
+    Complexity: O(n^3) init + O(k * n * log n) crystallization
+
+  bitwise_majority(tournaments)
+    Merge R tournaments via majority vote. O(R * n^2 / w).
+
+  parallel_crystallize(groups, num_workers)
+    Crystallize independent groups in parallel.
+    groups: list of (BitTournament, margins) tuples
+
+========================================================================
+  BENCHMARK COMPLETE
+========================================================================
