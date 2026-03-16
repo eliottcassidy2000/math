@@ -1,0 +1,136 @@
+
+  DENSITY OF THE VON STAUDT CONVERGENT BASIN
+
+======================================================================
+
+  I. WHY ALL PRIMES CONVERGE
+  --------------------------------------------------
+
+  For prime p >= 3: divisors of p = {1, p}.
+  d+1 values: {2, p+1}.
+  2 is always prime.
+  p+1 is EVEN (since p odd), hence composite for p >= 3.
+  So vs_prod(p) = 2 for ALL primes p >= 3.
+  Then: 2 -> 6 -> 42 -> 1806.
+
+  For p=2: divisors = {1,2}. d+1 = {2,3}. vs_prod(2) = 6.
+  Then: 6 -> 42 -> 1806.
+
+  ALL PRIMES converge to 1806 in at most 5 steps.
+
+  II. WHICH COMPOSITES CONVERGE?
+  --------------------------------------------------
+
+  Convergence density up to 1000:
+    [1,   50]: 33/50 = 0.6600
+    [1,  100]: 66/100 = 0.6600
+    [1,  200]: 129/200 = 0.6450
+    [1,  500]: 321/500 = 0.6420
+    [1, 1000]: 640/1000 = 0.6400
+
+  Non-converging values up to 1000: 360
+  First 40: [4, 8, 10, 12, 16, 20, 22, 24, 28, 30, 32, 36, 40, 44, 46, 48, 50, 52, 56, 60, 64, 66, 68, 70, 72, 76, 80, 82, 84, 88, 90, 92, 96, 100, 102, 104, 108, 110, 112, 116]
+
+  Factoring first 20 non-converging values:
+       4 = 2^2                   tau=  3
+       8 = 2^3                   tau=  4
+      10 = 2 * 5                 tau=  4
+      12 = 2^2 * 3               tau=  6
+      16 = 2^4                   tau=  5
+      20 = 2^2 * 5               tau=  6
+      22 = 2 * 11                tau=  4
+      24 = 2^3 * 3               tau=  8
+      28 = 2^2 * 7               tau=  6
+      30 = 2 * 3 * 5             tau=  8
+      32 = 2^5                   tau=  6
+      36 = 2^2 * 3^2             tau=  9
+      40 = 2^3 * 5               tau=  8
+      44 = 2^2 * 11              tau=  6
+      46 = 2 * 23                tau=  4
+      48 = 2^4 * 3               tau= 10
+      50 = 2 * 5^2               tau=  6
+      52 = 2^2 * 13              tau=  6
+      56 = 2^3 * 7               tau=  8
+      60 = 2^2 * 3 * 5           tau= 12
+
+  III. WHAT DETERMINES DIVERGENCE?
+  --------------------------------------------------
+
+  Non-converging with even tau: 345/360
+  Non-converging with 4|n: 250/360 (0.694)
+  Non-converging with 6|n: 133/360 (0.369)
+  Non-converging with 8|n: 125/360 (0.347)
+  Non-converging with 10|n: 100/360 (0.278)
+  Non-converging with 12|n: 83/360 (0.231)
+
+  KEY: n=4 attracts prime 5 (since 4+1=5 is prime).
+  vs_prod(4) = 2*3*5 = 30.
+  30 has 8 divisors, attracting 5 primes: {2,3,7,11,31}.
+  vs_prod(30) = 14322. This explodes.
+
+  The trigger: if ANY divisor d of n gives d+1 = 5, i.e., 4|n,
+  then 5 enters the product, leading to much larger next values.
+  Since 5 is NOT in the Hurwitz set {2,3,7}, its presence
+  opens up new branches that never converge to 1806.
+
+  Non-converging with 4 NOT dividing n: 110
+    Values: [10, 22, 30, 46, 50, 66, 70, 82, 90, 102, 110, 126, 130, 138, 150, 154, 170, 174, 178, 190]
+
+  IV. THE COMPLETE CHARACTERIZATION
+  --------------------------------------------------
+
+  Odd non-converging values up to 1000: []
+  Total: 0
+
+  For ODD n > 1: every divisor d is odd, so d+1 is even.
+  The only even prime is 2, from d=1.
+  So vs_prod(odd n) = 2 for ALL odd n > 1.
+  => ALL odd integers converge to 1806.
+
+  For n = 2*p (p odd prime):
+  Divisors: {1, 2, p, 2p}. d+1 = {2, 3, p+1, 2p+1}.
+  p+1 even -> composite. 2p+1 may be prime (Sophie Germain).
+
+    p=  2, n=2p=   4: 2p+1=   5 (prime (SG)  ), vs_prod=      30, converges=no
+    p=  3, n=2p=   6: 2p+1=   7 (prime (SG)  ), vs_prod=      42, converges=yes
+    p=  5, n=2p=  10: 2p+1=  11 (prime (SG)  ), vs_prod=      66, converges=no
+    p=  7, n=2p=  14: 2p+1=  15 (composite   ), vs_prod=       6, converges=yes
+    p= 11, n=2p=  22: 2p+1=  23 (prime (SG)  ), vs_prod=     138, converges=no
+    p= 13, n=2p=  26: 2p+1=  27 (composite   ), vs_prod=       6, converges=yes
+    p= 17, n=2p=  34: 2p+1=  35 (composite   ), vs_prod=       6, converges=yes
+    p= 19, n=2p=  38: 2p+1=  39 (composite   ), vs_prod=       6, converges=yes
+    p= 23, n=2p=  46: 2p+1=  47 (prime (SG)  ), vs_prod=     282, converges=no
+    p= 29, n=2p=  58: 2p+1=  59 (prime (SG)  ), vs_prod=     354, converges=yes
+    p= 31, n=2p=  62: 2p+1=  63 (composite   ), vs_prod=       6, converges=yes
+    p= 37, n=2p=  74: 2p+1=  75 (composite   ), vs_prod=       6, converges=yes
+    p= 41, n=2p=  82: 2p+1=  83 (prime (SG)  ), vs_prod=     498, converges=no
+    p= 43, n=2p=  86: 2p+1=  87 (composite   ), vs_prod=       6, converges=yes
+    p= 47, n=2p=  94: 2p+1=  95 (composite   ), vs_prod=       6, converges=yes
+
+  Checking: n=58=2*29, 2*29+1=59 (prime).
+  vs_prod(58) = 354
+  vs_prod(354) = 42
+  354 -> 42 -> converges? 1
+
+  V. DENSITY SUMMARY
+  --------------------------------------------------
+
+  Up to 1000:
+    Odd converging: 500/500 = 1.0000
+    Even converging: 140/500 = 0.2800
+    Total: 640/1000 = 0.6400
+
+  Non-converging even numbers up to 200: [4, 8, 10, 12, 16, 20, 22, 24, 28, 30, 32, 36, 40, 44, 46, 48, 50, 52, 56, 60, 64, 66, 68, 70, 72, 76, 80, 82, 84, 88, 90, 92, 96, 100, 102, 104, 108, 110, 112, 116, 120, 124, 126, 128, 130, 132, 136, 138, 140, 144, 148, 150, 152, 154, 156, 160, 164, 168, 170, 172, 174, 176, 178, 180, 184, 188, 190, 192, 196, 198, 200]
+
+  With 4|n: [4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80]
+  Without 4|n: [10, 22, 30, 46, 50, 66, 70, 82, 90, 102, 110, 126, 130, 138, 150, 154, 170, 174, 178, 190]
+
+  CONJECTURE: n converges to 1806 iff the VS orbit of n
+  never encounters a value divisible by 4.
+  Equivalently: the prime 5 never enters the VS prime set along the orbit.
+
+  The density of convergent n is approximately:
+  0.640 (empirically, up to 1000)
+
+  Multiples of 4 that converge: 0/250
+
