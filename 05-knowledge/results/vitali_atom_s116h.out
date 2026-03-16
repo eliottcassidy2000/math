@@ -1,0 +1,257 @@
+
+  THE VITALI ATOM AND THE RAPIDITY INTERVAL
+
+======================================================================
+
+  I. WHAT THE VITALI CONSTRUCTION SAYS
+  ----------------------------------------
+
+  Take [0,1) with addition mod 1.
+  Define: x ~ y iff x - y is rational.
+  Each equivalence class is {x + q mod 1 : q in Q}.
+  Each class is COUNTABLE (Q is countable).
+  There are UNCOUNTABLY MANY classes (R/Q is uncountable).
+
+  The Vitali set V picks ONE element from each class.
+  V is non-measurable: it can't have a well-defined length.
+
+  WHY: If V had measure m, then the rational translates
+  V + q (mod 1) for q in Q would be disjoint and cover [0,1).
+  Sum of measures = sum of m over countably many q = countable * m.
+  This must equal 1 (total measure of [0,1)).
+  If m = 0: sum = 0, not 1. If m > 0: sum = infinity, not 1.
+  Contradiction. V is non-measurable.
+
+
+  II. THE RAPIDITY INTERVAL
+  ----------------------------------------
+
+  [0,1) is finite. Length 1.
+  But in rapidity: arctanh maps [0,1) to [0, infinity).
+  INFINITE rapidity is packed into FINITE length.
+
+  How? The rapidity metric ds = dx/(1-x^2) diverges at x=1.
+  Near x=1: ds ~ dx/(1-x) -> infinity.
+  The last epsilon of [0,1) contains INFINITE rapidity distance.
+
+  Concretely:
+  [0.90000, 1): length 0.10000, rapidity [1.47, inf)
+  [0.99000, 1): length 0.01000, rapidity [2.65, inf)
+  [0.99900, 1): length 0.00100, rapidity [3.80, inf)
+  [0.99990, 1): length 0.00010, rapidity [4.95, inf)
+  [0.99999, 1): length 0.00001, rapidity [6.10, inf)
+
+  The interval [0.99, 1) has length 0.01 but infinite rapidity.
+  The interval [0.999, 1) has length 0.001 but infinite rapidity.
+  No matter how small you make it, the interval touching 1
+  always contains INFINITE rapidity.
+
+  This is the SAME phenomenon as the Vitali construction:
+  [0,1) contains more structure than its length suggests.
+  Vitali: non-measurable subsets. Rapidity: infinite metric content.
+
+
+  III. THE ATOM
+  ----------------------------------------
+
+  Vitali atom: an equivalence class [x] = {x + q mod 1 : q in Q}.
+  Properties:
+    - Countable (enumerated by Q)
+    - Dense in [0,1) (Q is dense)
+    - Measure zero (countable set)
+    - Translates tile [0,1) perfectly
+
+  Our atom: Q(a/(a+1)) = 2a+1.
+  Properties:
+    - One pair of consecutive integers (a, a+1)
+    - Their ratio a/(a+1) is the velocity
+    - Their sum 2a+1 is the odd number
+    - Q converts ratio to sum
+
+  The Vitali atom is a COUNTABLE set.
+  Our atom is a SINGLE PAIR.
+  But both are the IRREDUCIBLE PIECE of their respective structures.
+
+  The Vitali atom can't be subdivided by rational translation.
+  Our atom can't be subdivided by the Cayley transform.
+  Both are the smallest thing that carries the full structure.
+
+
+  IV. THE DEEPER CONNECTION: INCOMMENSURABILITY
+  ----------------------------------------
+
+  The Vitali construction works because Q and R\Q are
+  INCOMMENSURABLE: rationals can't measure irrationals.
+  No rational translation maps an irrational to itself.
+
+  Our leading-digit analysis works because log10(2) is irrational:
+  binary and decimal are INCOMMENSURABLE.
+  No number of doublings exactly equals a power of 10.
+
+  The Pythagorean comma works because ln(3)/ln(2) is irrational:
+  fifths and octaves are INCOMMENSURABLE.
+  No number of fifths exactly equals a number of octaves.
+
+  ALL THREE are the same phenomenon:
+  Two natural structures on [0,1) that can't be reconciled.
+  The structures are 'dense' (get arbitrarily close)
+  but never 'commensurable' (never exactly align).
+
+  The Vitali atom is what happens when you try to pick
+  ONE representative from each dense-but-incommensurable class.
+  You need the axiom of choice. You get non-measurability.
+
+  The 3-3-4 pattern is what happens when you try to reconcile
+  TWO incommensurable structures (binary and decimal) by
+  choosing the BEST APPROXIMATION. You get a quasi-periodic
+  pattern that never exactly repeats.
+
+  The forbidden numbers are what happens when you try to realize
+  EVERY odd number as a tournament H-value.
+  The cycle structure and the bit structure are incommensurable.
+  Some bit patterns (111, 10101) can't be achieved by any cycle config.
+
+
+  V. NON-MEASURABILITY AND FORBIDDENNESS
+  ----------------------------------------
+
+  The Vitali set is non-measurable: you can't assign it a size.
+  The forbidden H-values are non-achievable: you can't build them.
+
+  Both arise from the IMPOSSIBILITY of perfect reconciliation.
+  Vitali: can't reconcile 'countable orbits' with 'total measure 1'.
+  Forbidden H: can't reconcile 'cycle intersection constraints'
+  with 'target binary pattern'.
+
+  The Vitali argument is about MEASURE.
+  The forbidden argument is about COUNTING.
+  But both use the same logic:
+
+  1. Assume the target is achievable.
+  2. Derive what the components must look like.
+  3. Show the components are mutually contradictory.
+  4. Conclude: the target is impossible.
+
+  For Vitali: if V has measure m, then m = 0 and m > 0. Contradiction.
+  For H=7: if (a1,a2) = (3,0), then a1 >= 4. Contradiction.
+
+  The structure of the proof is IDENTICAL.
+  The 'atom' that can't be measured/achieved
+  is the irreducible obstruction in both cases.
+
+
+  VI. THE RAPIDITY LINE AS A VITALI-LIKE QUOTIENT
+  ----------------------------------------
+
+  On [0,1), define x ~ y iff Q(x)/Q(y) is rational.
+  i.e., (1+x)(1-y)/((1-x)(1+y)) is rational.
+  i.e., e^{2(arctanh(x)-arctanh(y))} is rational.
+  i.e., arctanh(x) - arctanh(y) = ln(r)/2 for some rational r.
+
+  This equivalence: x and y have the same position modulo
+  rational rapidity translations.
+
+  The equivalence classes are orbits under the action of
+  RATIONAL Q-VALUES: x -> tanh(arctanh(x) + ln(r)/2).
+
+  Each class is countable (Q is countable).
+  There are uncountably many classes.
+  A Vitali-like set would pick one from each class.
+
+  The RATIONAL POINTS of [0,1) under this equivalence:
+  0 ~ tanh(ln(r)/2) = (r-1)/(r+1) for each rational r > 0.
+  So 0 is equivalent to all (r-1)/(r+1) for rational r.
+  These are exactly the CAYLEY ADDRESSES of positive rationals.
+
+  The class of 0 = {(r-1)/(r+1) : r in Q+}
+  = {0, 1/3, 1/2, 3/5, 2/3, 5/7, 3/4, 7/9, 4/5, ...}
+  = all Cayley addresses of positive rationals.
+
+  Elements of the equivalence class of 0:
+    0.027027 = addr of 19/18
+    0.028571 = addr of 18/17
+    0.030303 = addr of 17/16
+    0.032258 = addr of 16/15
+    0.034483 = addr of 15/14
+    0.037037 = addr of 14/13
+    0.040000 = addr of 13/12
+    0.043478 = addr of 12/11
+    0.047619 = addr of 11/10
+    0.052632 = addr of 10/9
+    0.055556 = addr of 19/17
+    0.058824 = addr of 9/8
+    0.062500 = addr of 17/15
+    0.066667 = addr of 8/7
+    0.071429 = addr of 15/13
+    ... (countably many)
+
+  This class is DENSE in [0,1) and has measure zero.
+  Every other equivalence class has the same properties.
+  Picking one from each class = non-measurable Vitali set.
+
+  THE RAPIDITY EQUIVALENCE ON [0,1) IS VITALI-LIKE.
+  The classes are the orbits of rational Q-value multiplication.
+  And the 'atoms' = the equivalence classes = the orbits.
+
+
+  VII. WHAT THE VITALI ATOM TEACHES ABOUT RAPIDITY
+  ----------------------------------------
+
+  The Vitali atom says: [0,1) has structure that CANNOT
+  be captured by any translation-invariant measure.
+  The structure is FINER than measure theory can see.
+
+  Rapidity says the same thing differently:
+  [0,1) has INFINITE rapidity content.
+  No finite measure can capture the rapidity structure
+  near x = 1. The last bit before the pole contains everything.
+
+  Both are saying: THE BOUNDED INTERVAL IS INFINITE.
+  Not infinite in length. Infinite in STRUCTURE.
+  Vitali: infinite in orbits (uncountably many classes).
+  Rapidity: infinite in distance (arctanh -> infinity).
+
+  And both are resolved the same way:
+  ACCEPT THAT YOU CAN'T REACH THE END.
+  Accept non-measurability (Vitali).
+  Accept the pole at x=1 (rapidity).
+  Accept the forbidden numbers (tournaments).
+
+  The atom is the thing you must accept.
+  It is the irreducible piece that can't be decomposed.
+  It is the place where 'good enough' meets 'impossible'.
+
+
+  VIII. THE ATOM IS THE PAIR (a, a+1)
+  ----------------------------------------
+
+  Strip everything away. What remains?
+
+  Two consecutive integers. a and a+1.
+  They differ by 1. They are coprime. Their product is pronic.
+  Their ratio approaches 1 as a grows.
+  Their sum is always odd.
+
+  Q converts their ratio to their sum.
+  arctanh converts their ratio to their rapidity.
+  The homomorphism f converts their ratio to their musical interval.
+
+  The pair (a, a+1) is the ATOM of all of this.
+  It is the Vitali atom of the rapidity structure:
+  the irreducible piece that generates everything else
+  through composition, multiplication, and accumulation.
+
+  You can't split a and a+1 further.
+  They are CONSECUTIVE. There is nothing between them.
+  The gap of 1 is the minimal distinction.
+  The ratio a/(a+1) is the minimal comparison.
+  The sum 2a+1 is the minimal odd number.
+
+  And tanh is the function that ACCUMULATES these atoms.
+  arctanh is the function that COUNTS them.
+  Q is the function that NAMES what they produce.
+
+  The Vitali set says: you can't measure all the atoms at once.
+  The forbidden numbers say: you can't hit every target with atoms.
+  The 'good enough' principle says: you don't need to.
+  A few atoms suffice. That is the geometry of tanh.
