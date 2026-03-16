@@ -1,0 +1,12 @@
+A000568 speed results (v2, grouped partitions):
+  T(30) = 99 digits in 0.03s
+  T(40) = 187 digits in 0.20s
+  T(50) = 305 digits in 1.21s
+  T(60) = 451 digits in 6.4s
+  T(70) = 627 digits in 29.7s
+  T(80) = 833 digits in 125.0s
+
+Formula: T(n) = (1/n!) * sum_{lambda |- n} |C_lambda| * 2^{c(lambda)}
+  c(lambda) = sum_i floor(l_i/2) + sum_{i<j} gcd(l_i, l_j)
+  Computed via grouped partition generator (size, multiplicity pairs)
+  with precomputed gcd table.
