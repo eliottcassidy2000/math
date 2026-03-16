@@ -45,8 +45,13 @@ Entry format:
 9. **Spectral Legendre excess = -s₂(n-3)** (HYP-1609): connects to THM-J
 10. Created 07-reflections/ directory with 6 philosophical reflection pieces
 11. Updated CLAUDE.md to embed meta-reflective practice in agent workflow
-**New contributions:** HYP-1603–1609, MISTAKE-027, T238–T244, 07-reflections/ directory, ladder_sequence_discoveries.py, spectral_legendre.py, thmj_spectral_connection.py, amplitude_table_check.py
-**Unresolved threads:** OEIS submission for new sequence k²+A000788(k-1); extend Paley H sequence; prove β₂=0
+**New contributions:** HYP-1603–1611, MISTAKE-027, T238–T247, 07-reflections/ directory, ladder_sequence_discoveries.py, spectral_legendre.py, thmj_spectral_connection.py, amplitude_table_check.py, walsh_audit.py, split_inert_analyzer.py
+**Context continuations (same session):**
+- **987/Amplituhedron/Chemistry reflection** (07-reflections/987-amplituhedron-chemistry.md): 987=L₂×L₄×L₈, 17-entry amplituhedron-tournament dictionary, three parallel stability conditions
+- **Cryptographic vulnerability analysis** (07-reflections/cryptographic-vulnerabilities.md): 6 vulnerability classes (HIGH: Walsh S-box attacks, QC-LDPC; MEDIUM: lattice speedup, Legendre PRF; LOW: path homology, graph hash)
+- **walsh_audit.py**: S-box security analyzer using v₂-guided Walsh analysis. Correctly differentiates AES (0.125/STRONG), random (0.249/MODERATE), weak (0.932/CRITICAL)
+- **split_inert_analyzer.py**: Full split/inert prime tool for circulant cryptanalysis. Defense rankings, Chebotarev density verification, torsion detection (∂_2 and ∂_3), QC-LDPC audit. Key finding: Paley chain complexes torsion-free at ∂_2,∂_3 (HYP-1610). BIKE-L1 smallest split q=73939, HQC-L1 smallest split q=35339.
+**Unresolved threads:** OEIS submission for k²+A000788(k-1); NumPy-accelerated torsion detection for larger Paley; PyPI packaging of tools; prove β₂=0
 
 ## opus-2026-03-15-S72d — 2026-03-15: Seesaw Identity and β₁·β₃=0 Mechanism
 
