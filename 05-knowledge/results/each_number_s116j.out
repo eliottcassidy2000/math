@@ -1,0 +1,145 @@
+
+  GETTING TO KNOW EACH NUMBER
+
+======================================================================
+
+  0
+  ------------------------------
+  Address: Q^{-1}(0) = -1 (the left boundary)
+  Rapidity: -infinity
+
+  The boundary. The left pole. The place where Q sends -1.
+  Not nothing — the EDGE of nothing. The cliff before the void.
+  Its Cayley address -1 is as far from center as +1 (infinity),
+  but in the opposite direction. 0 and infinity are TWINS.
+  Q(-x) = 1/Q(x): zero IS the reciprocal of infinity.
+  In music: silence. Not the absence of sound — the BOUNDARY of sound.
+  In probability: impossibility. The event that never happens.
+  In physics: absolute zero. Unreachable but approachable.
+
+
+  1
+  ------------------------------
+  Cayley pair: (0, 1)
+  Address: 0/2 = 0
+  Rapidity: 0
+
+  The identity. The center. Rapidity zero. Address zero.
+  Q(0) = 1. The Cayley transform of nothing is unity.
+  The pair (0, 1) — nothing and something — sums to 1.
+  The ONLY number that is neither comparison nor duplication.
+  It is the REFERENCE. Everything else is measured from 1.
+  1! = 1. 1^n = 1. log(1) = 0. The fixed point of everything.
+  In music: unison. Two notes at the same pitch.
+  In tournaments: the transitive tournament. H = 1. One path. ORDER.
+  In probability: certainty of indifference. The fair coin, from the other side.
+
+
+  2
+  ------------------------------
+  Cayley pair: (1, 2) — but 2 is even, no consecutive pair in the odd sense
+  Address: 1/3
+  Rapidity: 0.346574 = ln(2)/2 = one octave
+
+  The FIRST. The only even prime. The atom of doubling.
+  Address 1/3: the simplest non-trivial Cayley point.
+  Q(1/3) = 2. One-third of the way from center to pole gives DOUBLING.
+  Rapidity ln(2)/2 = the OCTAVE. The fundamental unit of rapidity.
+  Every 'bit' is one copy of 2. Every doubling is one octave.
+  2 is the base of binary, the base of computation, the base of life (cell division).
+  The Cayley orbit of 1/3: {1/3, 2, -3, -1/2}.
+  2's shadow is -3. 2's prerequisite is -1/2.
+  The ONLY number whose shadow (-3) is the negative of the next prime.
+  In music: the octave. The most consonant interval. The IDENTITY of pitch.
+  In the formal group: the generator. Everything is built from 2.
+
+
+  3
+  ------------------------------
+  Cayley pair: (1, 2)
+  Address: 1/2
+  Rapidity: 0.549306 = ln(3)/2
+
+  The CURVATURE QUANTUM. The smallest odd cycle.
+  Address 1/2: exactly HALF of the Cayley line.
+  Q(1/2) = 3. Halfway to the pole gives the first odd prime.
+  3 = 1 + 2. The comparison between nothing-something (1) and the first doubling (2).
+  Rapidity ln(3)/2 = one TWELFTH in music (octave + fifth).
+  The C-H stretch / C-C stretch ratio = 3. Chemistry knows 3.
+  In tournaments: the 3-cycle. Rock-paper-scissors. The simplest contradiction.
+  3 is the number of vertices of the triangle, the simplest polygon.
+  The triangle IS the curvature. Flat space has no triangles wrapping around.
+  In the formal group: F_h(1/3, 1/3) = (2/3)/(1+1/9) = (2/3)/(10/9) = 3/5 = addr_5.
+  Composing 1/3 with itself gives the address of 5. TWO is THREE in the formal group.
+  3 imaginary dimensions = quaternions. Where commutativity breaks.
+
+
+  4
+  ------------------------------
+  Cayley pair: (2, 2) — duplication
+  Address: 3/5
+  Rapidity: 0.693147 = ln(4)/2 = ln(2) = TWO octaves
+
+  The first SQUARE. 2^2. The duplication of the doubler.
+  Address 3/5: three-fifths of the way to the pole.
+  Rapidity = ln(2) = the Doppler octave velocity (v = 3/5 gives D = 2).
+  4 = 2+2. Pure duplication. No comparison. Symmetric.
+  4 = |Q^n = identity|. The PERIOD of the Cayley transform.
+  Q^4 = Id. Four steps around the orbit. Four normed division algebras.
+  4 dimensions = quaternions. 4 faces of every orbit.
+  In the Cayley-Dickson chain: 4 = dim(H), the quaternion algebra.
+  In music: Q^{-1}(4) = 3/5. The address of 4 IS the Doppler octave velocity.
+
+
+  5
+  ------------------------------
+  Cayley pair: (2, 3)
+  Address: 2/3
+  Rapidity: 0.804719
+
+  The PENTAGON. Five vertices. Five Platonic solids. Five Fermat primes (known).
+  5 = 2 + 3. The comparison between the doubler and the curvature quantum.
+  The pair (2, 3): the two smallest primes, side by side.
+  The ONLY number whose Cayley pair consists of two primes (consecutive primes 2,3).
+  Address 2/3. Q(2/3) = 5. Two-thirds of the way to the pole.
+  phi^2 = phi + 1 ~ 2.618. And sqrt(5) = 2*phi - 1.
+  5 is the PRIME OF THE GOLDEN RATIO. phi = (1+sqrt(5))/2.
+  In the Cayley-Dickson chain: 5 is the FIRST number past dim(H) = 4.
+  In tournaments: the cyclic tournament on 5 has H = 15 = 3*5.
+  H/|Aut| for Paley T_5... well, T_5 doesn't exist (5 = 1 mod 4, not 3 mod 4).
+  5 exceptional Lie groups. 5+1 structure. The Kervaire pattern.
+
+
+  6
+  ------------------------------
+  Cayley pair: (3, 3) — duplication
+  Address: 5/7
+  Rapidity: 0.895880
+
+  The first PERFECT NUMBER. 6 = 1 + 2 + 3 = 1*2*3.
+  The duplication of 3. Even. 6 = 2*3.
+  Address 5/7. Note: 5 and 7 are twin primes!
+  The Cayley address of the first perfect number has TWIN PRIME components.
+  6 = the number of edges of the tetrahedron K_4.
+  6 = the number of faces of the cube.
+  6 = FLAT. In the 5-6-7 bridge: 6 triangles per vertex = the flat plane.
+  The transition between spherical (5) and hyperbolic (7).
+  In our theory: n=6 is where the H-spectrum first has many achievable values.
+  6 is the THRESHOLD of complexity in tournaments.
+
+
+  7
+  ------------------------------
+  Cayley pair: (3, 4)
+  Address: 3/4
+  Rapidity: 0.972955
+
+  FORBIDDEN. H = 7 is impossible for any tournament.
+  7 = 3 + 4. Geometry + symmetry. Curvature + period.
+  Address 3/4 = Kleiber's allometric exponent.
+  Q(3/4) = 7. The biological scaling law IS the forbidden threshold.
+  7 = 2^3 - 1 = Mersenne prime M_3. The third Mersenne prime.
+  7 = imaginary dimension of the octonions.
+  7 = where COMMUTATIVITY BREAKS in the Cayley-Dickson chain.
+  7 triangles per vertex = the hyperbolic plane. Negative curvature.
+  The 7th harmonic is the first 'out of tune' 
