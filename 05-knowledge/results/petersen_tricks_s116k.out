@@ -1,0 +1,237 @@
+
+  PETERSEN GRAPH TRICKS
+
+======================================================================
+
+  TRICK 1: THE FRACTIONAL CHROMATIC NUMBER VIA CAYLEY
+  ----------------------------------------
+
+  For the Kneser graph K(n,k): vertices = k-subsets of [n],
+  edges between disjoint subsets.
+  Fractional chromatic number chi_f(K(n,k)) = n/k.
+
+  In Cayley: chi_f = n/k. And Q((n-2k)/(n)) = n/(2k)... hmm.
+  Actually: chi_f(K(n,k)) = n/k.
+  For Petersen K(5,2): chi_f = 5/2.
+
+  Now: 5/2 = Q(3/7). The Cayley transform of the curvature/threshold ratio.
+  Is there a GENERAL pattern?
+
+  For K(n,k): chi_f = n/k = Q((n-2k)/(n+2k))? Let's check:
+  K(3,1): chi_f = 3, Q^{-1}(3) = 1/2, Q(1/2) = 3, match: True
+  K(4,1): chi_f = 4, Q^{-1}(4) = 3/5, Q(3/5) = 4, match: True
+  K(4,2): chi_f = 2, Q^{-1}(2) = 1/3, Q(1/3) = 2, match: True
+  K(5,1): chi_f = 5, Q^{-1}(5) = 2/3, Q(2/3) = 5, match: True
+  K(5,2): chi_f = 5/2, Q^{-1}(5/2) = 3/7, Q(3/7) = 5/2, match: True
+  K(6,1): chi_f = 6, Q^{-1}(6) = 5/7, Q(5/7) = 6, match: True
+  K(6,2): chi_f = 3, Q^{-1}(3) = 1/2, Q(1/2) = 3, match: True
+  K(6,3): chi_f = 2, Q^{-1}(2) = 1/3, Q(1/3) = 2, match: True
+  K(7,1): chi_f = 7, Q^{-1}(7) = 3/4, Q(3/4) = 7, match: True
+  K(7,2): chi_f = 7/2, Q^{-1}(7/2) = 5/9, Q(5/9) = 7/2, match: True
+  K(7,3): chi_f = 7/3, Q^{-1}(7/3) = 2/5, Q(2/5) = 7/3, match: True
+  K(8,1): chi_f = 8, Q^{-1}(8) = 7/9, Q(7/9) = 8, match: True
+  K(8,2): chi_f = 4, Q^{-1}(4) = 3/5, Q(3/5) = 4, match: True
+  K(8,3): chi_f = 8/3, Q^{-1}(8/3) = 5/11, Q(5/11) = 8/3, match: True
+  K(8,4): chi_f = 2, Q^{-1}(2) = 1/3, Q(1/3) = 2, match: True
+  K(9,1): chi_f = 9, Q^{-1}(9) = 4/5, Q(4/5) = 9, match: True
+  K(9,2): chi_f = 9/2, Q^{-1}(9/2) = 7/11, Q(7/11) = 9/2, match: True
+  K(9,3): chi_f = 3, Q^{-1}(3) = 1/2, Q(1/2) = 3, match: True
+  K(9,4): chi_f = 9/4, Q^{-1}(9/4) = 5/13, Q(5/13) = 9/4, match: True
+
+  YES. The Cayley address of chi_f(K(n,k)) is always (n-k)/(n+k).
+  For Petersen K(5,2): address = 3/7. Curvature over threshold.
+  For K(7,3): address = 4/10 = 2/5. Q(2/5) = 7/3.
+  For K(7,2): address = 5/9. Q(5/9) = 7/2.
+
+  The Cayley address of the fractional chromatic number of K(n,k)
+  = (n-k)/(n+k) = the Cayley address of (n-k) relative to (n+k).
+  = the 'imbalance ratio' of the Kneser parameters.
+
+
+  TRICK 2: INDEPENDENT SETS OF THE PETERSEN GRAPH
+  ----------------------------------------
+
+  The independence number alpha(Petersen) = 4.
+  The independence polynomial I(Petersen, x):
+
+  I(Petersen, x) = 1*x^0 + 10*x^1 + 30*x^2 + 30*x^3 + 5*x^4
+
+  I(Petersen, 1) = 76 (total independent sets)
+  I(Petersen, 2) = 461
+  I(Petersen, -1) = -4
+
+  If Petersen were a conflict graph Omega(T):
+  H = I(Petersen, 2) = 461
+  Factor: 461 = 461
+
+
+  TRICK 3: PETERSEN AS A TOURNAMENT CONFLICT GRAPH?
+  ----------------------------------------
+
+  Can the Petersen graph arise as Omega(T) for some tournament T?
+  Omega(T) has vertices = directed odd cycles of T,
+  edges = pairs sharing a vertex.
+
+  The Petersen graph is vertex-transitive, 3-regular, girth 5.
+  Tournament conflict graphs at n=5: all cycles are 3-cycles or 5-cycles.
+  At n=5: max cycles = 4 (three-cycles) + 2 (five-cycles) = 6.
+  The Petersen graph has 10 vertices. That's too many for n=5.
+
+  At n=7: the max number of 3-cycles = C(7,3) - ... could be up to 14.
+  Petersen has 10 vertices. Could 10 of the 14 three-cycles form
+  a Petersen-like conflict graph? Unlikely (Petersen is 3-regular,
+  but conflict graphs of 3-cycles at n=7 have varying degree).
+
+  The Petersen graph probably does NOT arise as Omega(T).
+  But I(Petersen, 2) = {H_petersen} is the H-value it WOULD give.
+
+
+  TRICK 4: THE CAYLEY-PETERSEN IDENTITY
+  ----------------------------------------
+
+  Q(3/7) = 5/2 = chi_f(Petersen).
+  3 + 7 = 10 = |V(Petersen)|.
+  3 * 7 = 21 = FORBIDDEN H-value.
+  C(3+7, 2) = C(10, 2) = 45 = |E(K_{10})| = edges of the complete graph on Petersen's vertices.
+
+  These are not independent facts. They all flow from:
+  Petersen = K(5, 2) where 5 = Q(2/3) and 2 is the Cayley derivative.
+
+  The number 5 enters via Q: it is the image of the simplest
+  non-trivial address (2/3). Then K(5,2) builds the Petersen graph
+  by selecting 2-subsets of [5]. The parameter 2 is the Cayley
+  derivative Q'(0) = 2. So Petersen = K(Q(2/3), Q'(0)/Q'(0)).
+  = K(Q(2/3), 1)... no, K(5,2) not K(5,1).
+
+  More directly: the Petersen graph's structure constants ARE
+  the Cayley framework's fundamental numbers:
+  |V| = 10 = T_4 = the reset cost.
+  |E| = 15 = T_5 = the next triangular.
+  degree = 3 = the curvature quantum.
+  girth = 5 = the pentagon.
+  chi_f = 5/2 = Q(3/7).
+  chi = 3 (chromatic number) = the curvature quantum.
+  alpha = 4 = the Cayley period.
+  |Aut| = 120 = 5! = the factorial of the pentagon.
+
+  EVERY invariant of the Petersen graph is one of our numbers.
+
+
+  TRICK 5: USING CHORD TO PREDICT KNESER INDEPENDENCE POLYNOMIALS
+  ----------------------------------------
+
+  For K(n,k), the independence number alpha = C(n-1, k-1).
+  (An independent set in K(n,k) = k-subsets that pairwise intersect
+  = k-subsets all containing a common element = stars.)
+
+  K(4,1): alpha = C(3,0) = 1, chi_f = 4 = Q(3/5)
+  K(4,2): alpha = C(3,1) = 3, chi_f = 2 = Q(1/3)
+  K(5,1): alpha = C(4,0) = 1, chi_f = 5 = Q(2/3)
+  K(5,2): alpha = C(4,1) = 4, chi_f = 5/2 = Q(3/7)
+  K(6,1): alpha = C(5,0) = 1, chi_f = 6 = Q(5/7)
+  K(6,2): alpha = C(5,1) = 5, chi_f = 3 = Q(1/2)
+  K(6,3): alpha = C(5,2) = 10, chi_f = 2 = Q(1/3)
+  K(7,1): alpha = C(6,0) = 1, chi_f = 7 = Q(3/4)
+  K(7,2): alpha = C(6,1) = 6, chi_f = 7/2 = Q(5/9)
+  K(7,3): alpha = C(6,2) = 15, chi_f = 7/3 = Q(2/5)
+
+  The independence number alpha(K(n,k)) = C(n-1, k-1).
+  The fractional chromatic number chi_f = n/k = Q((n-k)/(n+k)).
+  Their product: alpha * chi_f = C(n-1,k-1) * n/k.
+
+  K(4,1): alpha * chi_f = 4 = 4.0. |V| = 4. Ratio |V|/(alpha*chi_f) = 1
+  K(4,2): alpha * chi_f = 6 = 6.0. |V| = 6. Ratio |V|/(alpha*chi_f) = 1
+  K(5,1): alpha * chi_f = 5 = 5.0. |V| = 5. Ratio |V|/(alpha*chi_f) = 1
+  K(5,2): alpha * chi_f = 10 = 10.0. |V| = 10. Ratio |V|/(alpha*chi_f) = 1
+  K(6,1): alpha * chi_f = 6 = 6.0. |V| = 6. Ratio |V|/(alpha*chi_f) = 1
+  K(6,2): alpha * chi_f = 15 = 15.0. |V| = 15. Ratio |V|/(alpha*chi_f) = 1
+  K(6,3): alpha * chi_f = 20 = 20.0. |V| = 20. Ratio |V|/(alpha*chi_f) = 1
+  K(7,1): alpha * chi_f = 7 = 7.0. |V| = 7. Ratio |V|/(alpha*chi_f) = 1
+  K(7,2): alpha * chi_f = 21 = 21.0. |V| = 21. Ratio |V|/(alpha*chi_f) = 1
+  K(7,3): alpha * chi_f = 35 = 35.0. |V| = 35. Ratio |V|/(alpha*chi_f) = 1
+
+  alpha * chi_f = |V| always! (This is a known identity for vertex-transitive graphs.)
+  |V| = alpha * chi_f.
+  For Petersen: 10 = 4 * 5/2. CHECK.
+
+  In Cayley terms: |V(K(n,k))| = alpha(K(n,k)) * Q((n-k)/(n+k)).
+  The vertex count = independence number * Cayley transform of the imbalance.
+
+
+  TRICK 6: THE SPECTRUM OF THE PETERSEN GRAPH
+  ----------------------------------------
+
+  The adjacency matrix eigenvalues of the Petersen graph:
+  lambda = 3 (multiplicity 1), 1 (multiplicity 5), -2 (multiplicity 4).
+
+  In our framework:
+  3 = the curvature quantum. The dominant eigenvalue.
+  1 = the identity. Multiplicity 5 = the pentagon.
+  -2 = negative doubling. Multiplicity 4 = the Cayley period.
+
+  The eigenvalues ARE our fundamental numbers: 3, 1, -2.
+  Their Cayley addresses:
+  Q^{-1}(3) = 1/2. The midpoint.
+  Q^{-1}(1) = 0. The center.
+  Q^{-1}(-2): Q(x) = -2 => (1+x)/(1-x) = -2 => 1+x = -2+2x => x = 3.
+  Address of -2 would be 3, which is > 1. On the upper sheet.
+  arctanh(3) = arctanh(1/3) + i*pi/2 = ln(2)/2 + i*pi/2.
+
+  The eigenvalue -2 lives on the UPPER SHEET of the Cayley helix!
+  Its rapidity: (ln(2)/2, pi/2). The octave, rotated by a quarter turn.
+  -2 is the SHADOW of 2 on the imaginary sheet.
+  The negative eigenvalue carries the imaginary phase of the helix.
+
+  The Petersen spectrum in rapidity:
+  lambda=3:  rapidity ln(3)/2 = 0.5493 (real, ground floor)
+  lambda=1:  rapidity 0 (the center)
+  lambda=-2: rapidity ln(2)/2 + i*pi/2 (complex, upper floor)
+
+  The spectrum lives on TWO FLOORS of the Cayley helix.
+  The positive eigenvalues on the ground floor.
+  The negative eigenvalue on the upper floor.
+  The Petersen graph SPANS the helix.
+
+
+  TRICK 7: PETERSEN AND THE FORBIDDEN
+  ----------------------------------------
+
+  The Petersen graph is the SMALLEST graph that is:
+  - Not 3-edge-colorable (obstruction to 3-coloring)
+  - A snark (bridgeless, 3-regular, non-3-edge-colorable)
+
+  3-edge-coloring fails because 3 = curvature quantum.
+  The curvature quantum OBSTRUCTS the Petersen graph
+  just as it OBSTRUCTS H=7 in tournaments.
+
+  In both cases: 3 is the source of the impossibility.
+  3 pairwise-intersecting cycles cascade at H=7.
+  3 colors can't cover the Petersen edges.
+
+  The NUMBER 3 is the fundamental obstruction.
+  It is too small to tile certain structures (Petersen, H=7)
+  but too large to be trivial (unlike 1 or 2).
+
+  3 is the curvature quantum because it is the SMALLEST
+  number that creates non-trivial topology:
+  - The smallest cycle has 3 vertices.
+  - The smallest non-planar complete graph K_{3,3} uses 3+3.
+  - The smallest non-trivial group Z_3 has 3 elements.
+  - The smallest odd prime is 3.
+
+  Everything that goes wrong in combinatorics goes wrong at 3.
+  The Petersen graph is WHERE it goes wrong for edge-coloring.
+  H=7 is WHERE it goes wrong for Hamiltonian path counts.
+  Both are obstructed by the same 3.
+
+
+  SUMMARY OF TRICKS
+  ----------------------------------------
+
+  1. chi_f(K(n,k)) = Q((n-k)/(n+k)). Fractional chromatic via Cayley.
+  2. I(Petersen, 2) = 461. Independence polynomial at tournament fugacity.
+  3. Petersen probably NOT a tournament conflict graph.
+  4. Every Petersen invariant is one of our fundamental numbers.
+  5. |V| = alpha * chi_f = alpha * Q(imbalance). Vertex-transitive identity.
+  6. Spectrum {3, 1, -2} spans two floors of the Cayley helix.
+  7. Petersen and H=7 share the same obstruction: the number 3.
