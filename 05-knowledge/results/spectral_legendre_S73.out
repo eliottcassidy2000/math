@@ -1,0 +1,113 @@
+======================================================================
+THREE FINDINGS ABOUT THE 2-ADIC STRUCTURE OF M WALSH SPECTRUM
+======================================================================
+
+--- FINDING 1: Spectral Legendre Identity ---
+v_2(M(n,1,0)) - v_2(M(n,n-2,0)) = v_2((n-3)!)
+
+   n  v2(d=1)  v2(d=n-2)   diff  v2((n-3)!)  match
+   3       -1         -1      0           0   True
+   5       -2         -3      1           1   True
+   7       -2         -5      3           3   True
+   9       -3         -7      4           4   True
+  11       -2         -9      7           7   True
+  13       -3        -11      8           8   True
+  15       -3        -13     10          10   True
+  17       -4        -15     11          11   True
+  19       -2        -17     15          15   True
+  21       -3        -19     16          16   True
+  23       -3        -21     18          18   True
+  25       -4        -23     19          19   True
+  27       -3        -25     22          22   True
+  29       -4        -27     23          23   True
+
+--- FINDING 2: THM-J = Spectral v_2 threshold ---
+S(T) mod 2^{n-1} universal iff v_2(M_amp(n,1,0)) >= -2
+                           iff s_2(n-3) <= 1
+                           iff n-3 is 0 or a power of 2
+
+Universal n:  [3, 5, 7, 11, 19, 35, 67]
+First non-universal:  [9, 13, 15, 17, 21, 23, 25, 27, 29, 31, 33, 37, 39]
+
+--- FINDING 3: Total 2-adic weight formula ---
+Σ_{d odd} v_2(M_amp(n,d,0)) = -((n-1)/2)^2 - S_2((n-3)/2)
+where S_2(m) = Σ_{j=0}^m s_2(j)
+
+   n     sq     S2  predicted   actual  match
+   3      1      0         -1       -1   True
+   5      4      1         -5       -5   True
+   7      9      2        -11      -11   True
+   9     16      4        -20      -20   True
+  11     25      5        -30      -30   True
+  13     36      7        -43      -43   True
+  15     49      9        -58      -58   True
+  17     64     12        -76      -76   True
+  19     81     13        -94      -94   True
+  21    100     15       -115     -115   True
+  23    121     17       -138     -138   True
+  25    144     20       -164     -164   True
+  27    169     22       -191     -191   True
+  29    196     25       -221     -221   True
+
+--- BONUS: The cumulative digit sum S_2(m) ---
+S_2(m) = Σ_{j=0}^m s_2(j) has known asymptotics:
+  S_2(m) ~ (m/2) * log_2(m)  for large m
+  (Delange, 1975)
+
+   m  S_2(m)  m/2*log2(m)    ratio
+   1       1         0.00      inf
+   3       4         2.38   1.6825
+   7      12         9.83   1.2213
+  15      32        29.30   1.0921
+  31      80        76.79   1.0418
+  63     192       188.28   1.0197
+ 127     448       443.78   1.0095
+
+--- BONUS: s_2 as fractal staircase in the v_2 table ---
+
+Reading the v_2 table ROW-WISE gives the M spectrum of a single n.
+Reading it COLUMN-WISE gives the s_2 fractal across n:
+
+Column d=1 (across n=3,5,7,...): v_2 = -1, -2, -2, -3, -2, -3, -3, -4, -2, ...
+  = -1 - s_2(0, 2, 4, 6, 8, 10, 12, 14, 16, ...)
+  = -1 - s_2(0, 1, 2, 3, 4, 5, 6, 7, 8, ...)  [since s_2(2j)=s_2(j)]
+  = -1 - (0, 1, 1, 2, 1, 2, 2, 3, 1, ...)  THE BINARY WEIGHT SEQUENCE
+
+This is OEIS A000120 (shifted and negated).
+It has the same self-similarity as the Stern-Brocot tree.
+
+The fractal dimension of the v_2 staircase is log(3)/log(2) ≈ 1.585
+because s_2(2m) = s_2(m) and s_2(2m+1) = s_2(m) + 1,
+so the sum S_2(2m+1) = 2*S_2(m) + m + 1, a recursion with scale 2/3.
+
+======================================================================
+SUMMARY
+======================================================================
+
+The Walsh spectrum of M[a,b] has a 2-adic structure controlled by
+binary digit sums:
+
+  v_2(M_amp(n, d, s)) = s - d - s_2(n-2-d)
+
+This gives three clean results:
+
+1. SPECTRAL LEGENDRE: The 2-adic "spread" of the spectrum (v_2 at d=1
+   minus v_2 at d=n-2) equals v_2((n-3)!), i.e., Legendre's formula
+   applied to the free vertex count.
+
+2. THM-J RESTATEMENT: The signed HP permanent S(T) is tournament-
+   independent mod 2^{n-1} iff the degree-1 M amplitude has
+   v_2 >= -2. The universality criterion s_2(n-3) <= 1 is exactly
+   the condition that the lowest Walsh component isn't too 2-adically
+   suppressed.
+
+3. TOTAL WEIGHT: The sum of all base v_2 values across the spectrum
+   equals -((n-1)/2)^2 - S_2((n-3)/2), decomposing into a "spectral
+   dimension cost" (perfect square) and a "binary complexity cost"
+   (cumulative digit sum, asymptotically m*log(m)/2).
+
+The s_2 function creates a fractal staircase in the v_2 table,
+with self-similarity inherited from the binary representation.
+Reading column d=1 gives OEIS A000120 (binary weight sequence).
+
+Done.

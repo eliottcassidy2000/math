@@ -1050,4 +1050,40 @@ The spectral T/R duality (C_T^TC_T + C_R^TC_R = n·P) and the 3/n bridge framewo
 ### Lesson
 
 When verifying at n=5 and n=6, the parameter regime (c₃ < r always) hid the failure mode. Always check at the CROSSOVER point where qualitative behavior changes. For rank arguments, the critical n is where max c₃ first exceeds r.
->>>>>>> Stashed changes
+
+---
+
+## MISTAKE-027: THM-080 Amplitude Table Wrong at n=9
+
+**Date discovered:** 2026-03-16
+**Found by:** opus-2026-03-16-S73
+**Affects:** THM-080 amplitude table (lines 156-161), not the formula itself
+
+### What was assumed
+
+The amplitude table in THM-080 listed n=9 entries as: deg 1 (s=0) = 3/2, deg 3 (s=0) = 3/8, deg 3 (s=1) = 3/4, deg 5 (s=0) = 1/16, deg 7 = 1/128.
+
+### Why it was wrong
+
+The stated formula is |hat{M}[S]| = 2^s × (n-2-|S|)!/2^{n-2}. At n=9:
+- d=1, s=0: formula gives 6!/128 = **45/8**, not 3/2
+- d=3, s=0: formula gives 4!/128 = **3/16**, not 3/8
+- d=3, s=1: formula gives 2×3/16 = **3/8**, not 3/4
+- d=5, s=0: formula gives 2!/128 = **1/64**, not 1/16
+- d=7, s=0: formula gives 0!/128 = 1/128 ✓ (only correct entry)
+
+The formula works perfectly at n=3, 5, 7 — only n=9 has errors. The d=3 and d=5 wrong values are the CORRECT formula values but with s shifted up by 1 or 2 (unrooted component miscount). The d=1 entry (3/2) doesn't correspond to any valid s value (45/8 × 2^s ≠ 3/2 for any integer s).
+
+### The correct framing
+
+The formula is correct. The table had a transcription error at n=9 only. The n=9 verification was "partial" and apparently didn't catch the table/formula mismatch. Corrected amplitude table is in THM-080.
+
+### Impact
+
+Low — the formula itself is correct and was verified computationally at n=5 (exhaustive), n=6 (exhaustive), n=7 (20/20). Only the summary table for n=9 was wrong. No downstream results depend on the specific n=9 table values.
+
+### Lesson
+
+**This is MISTAKE-013b (the original missing 2^s) echoing forward.** The 2^s correction was caught and fixed at n=7, but the n=9 table values were apparently populated from a pre-correction computation (or from hand calculation that repeated the component-counting error at higher n). Always re-derive table entries from the corrected formula rather than carrying forward values from partial computation.
+
+This is also a meta-lesson about the amplitude table itself: it was the only place in THM-080 where specific numerical values were stated without being individually verified against the formula. The formula (analytically proved) was trustworthy; the table (hand-calculated) was not.

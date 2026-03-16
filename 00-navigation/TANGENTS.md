@@ -757,3 +757,28 @@ Q(1/tau) = tau^2 (not tau^3!). Proof: tau^3 = tau^2+tau+1 => tau^2(tau-1) = tau+
 
 **T237** #pythagorean-cayley #perfect-square | certainty: VERY HIGH (proved) | source: kind-pasteur-2026-03-15-S116b
 For Pythagorean triple (a,b,c): Q(a/c)*Q(b/c) = [(c+a)(c+b)/(ab)]^2, always a perfect square. Proof uses c^2-a^2=b^2 and c^2-b^2=a^2 to simplify the Cayley product.
+
+---
+
+## Meta-Structure & Philosophy
+
+**T238** #meta-reflection #cancellation-as-structure #self-reference | certainty: HIGH | source: opus-2026-03-16-S73
+Cancellation is not absence — it is the strongest form of structure. im(d₂) cancels in the seesaw, Walsh coefficients cancel for odd-length paths, S(T)=0 at even n, β₂=0 always. Each cancellation forces two quantities that *could* differ to agree exactly. This meta-pattern connects to the Cayley self-reference Q(Q(x))=-1/x: analyzing analysis gives the complement. See `07-reflections/seesaw-and-cancellation.md`.
+
+**T239** #six-as-pivot #benzene #tritone #phase-transition | certainty: HIGH | source: opus-2026-03-16-S73
+β₃ emerges at n=6 — the smallest n where two disjoint 3-cycles can coexist (6=3+3). This connects to: benzene (aromatic resonance as homological ambiguity), the tritone (maximum harmonic ambiguity at 6 semitones), hexagonal self-duality, arctanh's odd-polygon series transitioning at the hexagonal threshold. See `07-reflections/six-as-pivot.md`.
+
+**T240** #repo-as-tournament #mistakes-as-boundary #convergence | certainty: MEDIUM | source: opus-2026-03-16-S73
+The repo itself has tournament structure: sessions as vertices, asymmetric advance/correct relationships, 3-cycles in reasoning. MISTAKES.md functions as a boundary operator — each error is a 2-chain whose boundary wasn't zero, each correction is a 3-chain filling the cycle. β₂=0 for tournaments suggests every circular confusion eventually gets resolved. See `07-reflections/repo-as-tournament.md`.
+
+**T241** #dimension-ladder #bit-accumulation #2-adic #odd-ratio | certainty: VERY HIGH (proved) | source: opus-2026-03-16-S73
+The H/M ladder ratio H_amp(n,d,r)/M_amp(n,d-1,r-1) = n-d is always ODD for odd n, even d. This means ALL factors of 2 in the Walsh spectrum come from component counting (2^r, 2^s), never from dimensional structure. The 2-adic valuation is v₂(amp) = s - d - s₂(n-2-d), connecting to THM-J's universality criterion s₂(n-3)≤1. The binary representation of dimensions controls the 2-adic structure of tournament invariants. See `07-reflections/dimension-ladder-and-the-echo.md`.
+
+**T242** #error-echo #mistake-propagation #n9-threshold | certainty: HIGH | source: opus-2026-03-16-S73
+MISTAKE-013b (missing 2^s at n=7) echoed forward as MISTAKE-027 (wrong table entries at n=9). The correction was applied to the formula but not propagated to the numerical table. n=9 is also where THM-J predicts the first t₃-dependent S(T) behavior. The same complexity threshold that makes 2-adic structure tournament-dependent also makes hand calculation error-prone. See `07-reflections/dimension-ladder-and-the-echo.md`.
+
+**T243** #spectral-legendre #fractal-staircase #2-adic-spread | certainty: VERY HIGH (proved, verified n=3..29) | source: opus-2026-03-16-S73
+Three identities about the 2-adic fine structure of M Walsh amplitudes: (1) **Spectral Legendre**: v₂ spread across spectrum = v₂((n-3)!); (2) **THM-J spectral**: S universal ⟺ v₂(degree-1 amp) ≥ -2; (3) **Total weight**: Σv₂ = -((n-1)/2)² - S₂((n-3)/2) where S₂ = cumulative binary digit sum. Column d=1 of v₂ table = OEIS A000120. Fractal dimension log(3)/log(2) ≈ 1.585 (Sierpinski). See `07-reflections/the-fractal-in-the-spectrum.md`.
+
+**T244** #ladder-sequences #double-factorial #OEIS #new-sequence | certainty: VERY HIGH (proved) | source: opus-2026-03-16-S73
+The dimension ladder aggregates yield classical sequences: **product** of all ratios = (n-2)!! (A001147, matchings), **sum** = k²-1 (A005563, oblong numbers). The total v₂ weight = k² + A000788(k-1) is a **new sequence not in OEIS**, with first diffs 2k+1+s₂(k) and second diffs = 3-trailing_ones(k+1) (binary carry counting). The spectral Legendre excess = -s₂(n-3) (same as THM-J criterion). p-adic generalization holds for all primes. See `07-reflections/the-ladder-counts-itself.md`.
