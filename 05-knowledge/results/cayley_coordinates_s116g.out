@@ -1,0 +1,412 @@
+
+  CAYLEY COORDINATES OF THE ODD NUMBERS
+  turning over every stone
+
+======================================================================
+
+  THE TABLE
+  ----------------------------------------
+
+  n     a=(n-1)/2   b=(n+1)/2   a factors       b factors       a*b
+  ---------------------------------------------------------------------------
+    3       1            2        1               2                    2 prime
+    5       2            3        2               3                    6 prime
+    7       3            4        3               2*2                 12 <-- FORBIDDEN
+    9       4            5        2*2             5                   20
+   11       5            6        5               2*3                 30 prime
+   13       6            7        2*3             7                   42 prime
+   15       7            8        7               2*2*2               56
+   17       8            9        2*2*2           3*3                 72 prime
+   19       9           10        3*3             2*5                 90 prime
+   21      10           11        2*5             11                 110 <-- FORBIDDEN
+   23      11           12        11              2*2*3              132 prime
+   25      12           13        2*2*3           13                 156
+   27      13           14        13              2*7                182
+   29      14           15        2*7             3*5                210 prime
+   31      15           16        3*5             2*2*2*2            240 prime
+   33      16           17        2*2*2*2         17                 272
+   35      17           18        17              2*3*3              306
+   37      18           19        2*3*3           19                 342 prime
+   39      19           20        19              2*2*5              380
+   41      20           21        2*2*5           3*7                420 prime
+   43      21           22        3*7             2*11               462 prime
+   45      22           23        2*11            23                 506
+   47      23           24        23              2*2*2*3            552 prime
+   49      24           25        2*2*2*3         5*5                600
+   51      25           26        5*5             2*13               650
+   53      26           27        2*13            3*3*3              702 prime
+   55      27           28        3*3*3           2*2*7              756
+   57      28           29        2*2*7           29                 812
+   59      29           30        29              2*3*5              870 prime
+   61      30           31        2*3*5           31                 930 prime
+
+
+  STONE 1: a*b = (n-1)(n+1)/4 = (n^2-1)/4
+  ----------------------------------------
+
+  For odd n, a*b = (n-1)/2 * (n+1)/2 = (n^2-1)/4.
+  This is always an integer (since n is odd, n^2-1 is divisible by 8,
+  so (n^2-1)/4 is even).
+
+  n     a*b = (n^2-1)/4
+    3        2 = 2
+    5        6 = 2*3
+    7       12 = 2*2*3
+    9       20 = 2*2*5
+   11       30 = 2*3*5
+   13       42 = 2*3*7
+   15       56 = 2*2*2*7
+   17       72 = 2*2*2*3*3
+   19       90 = 2*3*3*5
+   21      110 = 2*5*11
+   23      132 = 2*2*3*11
+   25      156 = 2*2*3*13
+   27      182 = 2*7*13
+   29      210 = 2*3*5*7
+   31      240 = 2*2*2*2*3*5
+
+  The sequence a*b: 2, 6, 12, 20, 30, 42, 56, 72, 90, 110, 132, 156, ...
+  These are the PRONIC NUMBERS! a*b = k*(k+1) where k = (n-1)/2.
+  a*b = a*(a+1) = the a-th pronic number = 2*T_a (twice triangular).
+
+  WE ALREADY SAW PRONIC NUMBERS in the rapidity composition algebra!
+  The number of rapidity decompositions of interval c = tau(c(c+1))/2.
+  And here: the Cayley coordinate product = a-th pronic number.
+
+  So the Cayley product of n = the rapidity decomposition count of a = (n-1)/2.
+
+
+  STONE 2: WHEN IS a PRIME? WHEN IS b PRIME?
+  ----------------------------------------
+
+  a = (n-1)/2 is prime iff n = 2p+1 for some prime p.
+  These n are called SAFE PRIMES (if n itself is prime too,
+  then p is a Sophie Germain prime).
+
+  b = (n+1)/2 is prime iff n = 2q-1 for some prime q.
+
+  a prime only:     [7, 11, 15, 23, 27, 35, 39, 47, 59, 63, 75, 83]
+  b prime only:     [3, 9, 13, 21, 25, 33, 37, 45, 57, 61, 73, 81]
+  BOTH a,b prime:   [5]
+  neither prime:    [17, 19, 29, 31, 41, 43, 49, 51, 53, 55, 65, 67]
+
+  When BOTH a and b are prime:
+    n=5: a=2, b=3 (twin primes shifted! b-a=1, so (a,b) are CONSECUTIVE integers, both prime? No, they can't both be prime unless one is 2.)
+
+  Wait: a and b differ by 1. Two consecutive integers can't
+  both be prime unless one of them is 2.
+  So a=2, b=3 -> n=5. Or a=prime, b=a+1=even -> b not prime (unless b=2).
+  b=2 -> a=1 -> n=3.
+
+  Correcting: for n >= 5, at most ONE of a,b is prime.
+  (Because consecutive integers > 2 can't both be prime.)
+
+  Verify: both_prime = [5]
+  Only n=5 (a=2,b=3) and n=3 (a=1,b=2). For n=3, a=1 is not prime.
+  So only n=5 has both coordinates prime (and only because 2,3 are
+  the unique pair of consecutive primes).
+
+
+  STONE 3: THE PARITY OF a
+  ----------------------------------------
+
+  n is odd. a = (n-1)/2.
+  n = 1 mod 4 => n-1 = 0 mod 4 => a even.
+  n = 3 mod 4 => n-1 = 2 mod 4 => a odd.
+
+  So the parity of a encodes n mod 4:
+  a even <=> n = 1 mod 4
+  a odd  <=> n = 3 mod 4
+
+  For tournaments: H(T) is always odd (Redei).
+  The Cayley coordinate a of an odd H-value tells us H mod 4:
+  a even => H = 1 mod 4
+  a odd  => H = 3 mod 4
+
+  The forbidden H=7: a=3 (odd) => 7 = 3 mod 4. Correct.
+  The forbidden H=21: a=10 (even) => 21 = 1 mod 4. Correct.
+
+  The two forbidden numbers have DIFFERENT parities of a!
+  7 has odd a (3). 21 has even a (10).
+  One lives in H = 3 mod 4, the other in H = 1 mod 4.
+  The forbidden numbers span BOTH residue classes mod 4.
+
+
+  STONE 4: TRIANGULAR NUMBERS AS CAYLEY PRODUCTS
+  ----------------------------------------
+
+  a*b = a*(a+1) = 2*T_a where T_a = a(a+1)/2 = triangular number.
+
+  So a*b = 2*T_a = number of edges in K_{a+1} (complete graph).
+  The Cayley coordinate product of n = edges of K_{(n+1)/2}.
+
+  For n=7: a*b = 3*4 = 12 = edges of K_4 = edges of the TETRAHEDRON.
+  For n=21: a*b = 10*11 = 110 = edges of K_11.
+  For n=11: a*b = 5*6 = 30 = edges of K_6 = edges of the OCTAHEDRON... 
+  (K_6 has 15 edges, not 30. Actually K_{a+1} = K_6 has C(6,2) = 15 edges.)
+  Wait, 2*T_a = a*(a+1) = 30, and T_5 = 15. So 2*T_5 = 30 = 2 * edges of K_6.
+
+  Let me be precise: a*b = a*(a+1) = TWICE the a-th triangular number.
+  = the number of ORDERED pairs from {1,...,a+1} = a+1 choose 2 times 2.
+
+
+  STONE 5: CAYLEY COORDINATES OF PRIMES
+  ----------------------------------------
+
+  If n is an odd prime p, what are its Cayley coordinates?
+
+  p     a=(p-1)/2    b=(p+1)/2    a factors         a*b
+  ------------------------------------------------------------
+    3       1             2         1                      2
+    5       2             3         2                      6
+    7       3             4         3                     12
+   11       5             6         5                     30
+   13       6             7         2*3                   42
+   17       8             9         2*2*2                 72
+   19       9            10         3*3                   90
+   23      11            12         11                   132
+   29      14            15         2*7                  210
+   31      15            16         3*5                  240
+   37      18            19         2*3*3                342
+   41      20            21         2*2*5                420
+   43      21            22         3*7                  462
+   47      23            24         23                   552
+
+  For prime p: a = (p-1)/2 is a VERY important number.
+  It is the number of QUADRATIC RESIDUES mod p.
+  (By Euler's criterion: the QRs mod p are exactly
+   {1^2, 2^2, ..., ((p-1)/2)^2} mod p.)
+
+  So the Cayley a-coordinate of a prime = its QR count!
+  And the Paley tournament T_p is built from QRs.
+  The Cayley address 'a/b = QR_count / NQR_count_plus_1'.
+
+
+  STONE 6: THE SUM a+b=n AS PARTITION
+  ----------------------------------------
+
+  n = a + b with b = a+1 is the UNIQUE partition of n
+  into two parts differing by exactly 1.
+
+  This is the MOST BALANCED partition of n into two parts.
+  (For even n, the most balanced is n/2 + n/2.)
+  (For odd n, the most balanced is (n-1)/2 + (n+1)/2 = a + b.)
+
+  The Cayley address IS the ratio of the most balanced partition.
+  It measures how close to 50/50 you can get.
+  For large n: a/b -> 1 (very close to balanced).
+  For n=3: a/b = 1/2 (the least balanced odd partition).
+
+  The RAPIDITY of the address = how far from balanced:
+  arctanh(a/b) = arctanh((n-1)/(n+1)) = ln(n)/2 = rapidity(n).
+  Rapidity measures the DEPARTURE FROM BALANCE.
+
+
+  STONE 7: WHAT a AND b SHARE AND DON'T SHARE
+  ----------------------------------------
+
+  gcd(a, b) = gcd(a, a+1) = 1. Always.
+  CONSECUTIVE INTEGERS ARE ALWAYS COPRIME.
+
+  So a and b share NO prime factors.
+  The factorization of n = a+b is COMPLETELY SPLIT between a and b.
+  Every prime factor of n goes to EITHER a or b, never both.
+
+  For n=15: a=7, b=8. 15=3*5. Neither 3 nor 5 divides both 7 and 8.
+  The factors of 15 are DISTRIBUTED: 15 = 7+8, 7 is prime, 8 = 2^3.
+  None of {3, 5} appear in {7} or {2^3}. They appear in the SUM, not the parts.
+
+  This means: the prime factorization of n CANNOT be read from
+  the factorizations of a and b individually.
+  It emerges ONLY from their SUM.
+  The whole is truly more than the sum of its parts.
+
+
+  STONE 8: THE CAYLEY COORDINATES OF PERFECT NUMBERS
+  ----------------------------------------
+
+  Even perfect numbers: 6, 28, 496, 8128, ...
+  These are even, so their Cayley addresses don't reduce (a+b=2n).
+  But what about their NEIGHBORS?
+
+  6 +/- 1 = 5: a=2 (2), b=3 (3)
+  6 +/- 1 = 7: a=3 (3), b=4 (2*2)
+  28 +/- 1 = 27: a=13 (13), b=14 (2*7)
+  28 +/- 1 = 29: a=14 (2*7), b=15 (3*5)
+  496 +/- 1 = 495: a=247 (13*19), b=248 (2*2*2*31)
+  496 +/- 1 = 497: a=248 (2*2*2*31), b=249 (3*83)
+  8128 +/- 1 = 8127: a=4063 (17*239), b=4064 (2*2*2*2*2*127)
+  8128 +/- 1 = 8129: a=4064 (2*2*2*2*2*127), b=4065 (3*5*271)
+
+
+  STONE 9: CAYLEY COORDINATE ARITHMETIC
+  ----------------------------------------
+
+  If n has coordinates (a, a+1) and m has coordinates (c, c+1),
+  what are the coordinates of n*m?
+
+  n*m is odd (product of odds). Its coordinates are ((nm-1)/2, (nm+1)/2).
+  = ((2a+1)(2c+1)-1)/2, ((2a+1)(2c+1)+1)/2)
+  = (4ac+2a+2c)/2, (4ac+2a+2c+2)/2)
+  = (2ac+a+c, 2ac+a+c+1)
+
+  So the a-coordinate of n*m = 2ac + a + c = 2ac + a + c.
+  = a(2c+1) + c = a*m + c
+  = a*m + (m-1)/2
+  Hmm, let me verify:
+
+  3*5 = 15: a_prod = 7, 2*1*2+1+2 = 7, match: True
+  3*7 = 21: a_prod = 10, 2*1*3+1+3 = 10, match: True
+  5*7 = 35: a_prod = 17, 2*2*3+2+3 = 17, match: True
+  3*3 = 9: a_prod = 4, 2*1*1+1+1 = 4, match: True
+  7*7 = 49: a_prod = 24, 2*3*3+3+3 = 24, match: True
+  3*21 = 63: a_prod = 31, 2*1*10+1+10 = 31, match: True
+  5*9 = 45: a_prod = 22, 2*2*4+2+4 = 22, match: True
+
+  THEOREM: The Cayley a-coordinate of n*m = 2*a_n*a_m + a_n + a_m.
+  Or: a_{nm} = (2a_n + 1)*a_m + a_n = n*a_m + a_n.
+
+  Even cleaner: a_{nm} = n*a_m + a_n.
+  The a-coordinate of a product = WEIGHTED SUM of coordinates!
+
+  a_(3*5) = a_15 = 7, n*a_m + a_n = 3*2+1 = 7, match: True
+  a_(3*7) = a_21 = 10, n*a_m + a_n = 3*3+1 = 10, match: True
+  a_(5*7) = a_35 = 17, n*a_m + a_n = 5*3+2 = 17, match: True
+  a_(3*3) = a_9 = 4, n*a_m + a_n = 3*1+1 = 4, match: True
+  a_(7*7) = a_49 = 24, n*a_m + a_n = 7*3+3 = 24, match: True
+  a_(3*21) = a_63 = 31, n*a_m + a_n = 3*10+1 = 31, match: True
+
+  PROOF: a_{nm} = (nm-1)/2 = (n(2a_m+1) - 1)/2 = (2n*a_m + n - 1)/2
+       = n*a_m + (n-1)/2 = n*a_m + a_n. QED.
+
+  This is a SEMI-DIRECT PRODUCT structure!
+  Multiplication of odd numbers acts on Cayley coordinates
+  as an AFFINE MAP: a_{nm} = n * a_m + a_n.
+  The group of odd numbers under multiplication acts on
+  the a-coordinates by affine transformations x -> n*x + a_n.
+
+
+  STONE 10: THE FORBIDDEN NUMBERS IN COORDINATE ARITHMETIC
+  ----------------------------------------
+
+  7 = 3 + 4, coordinates (3, 4).
+  21 = 7 * 3. In coordinates: a_21 = 7*a_3 + a_7 = 7*1 + 3 = 10.
+  Check: a_21 = (21-1)/2 = 10. Correct!
+
+  So 21 = 7*3 and a_21 = 7*1 + 3 = 10.
+  The a-coordinate of 21 is 7 times the a-coordinate of 3
+  plus the a-coordinate of 7.
+
+  In other words: 21's address (10/11) is built from
+  7's address (3/4) and 3's address (1/2) by the affine map.
+
+  The two forbidden numbers are RELATED by the affine coordinate map.
+  21 = 7 * 3 in the numbers.
+  10 = 7 * 1 + 3 in the coordinates.
+  The multiplication STRUCTURE of the forbidden pair
+  is reflected in the AFFINE STRUCTURE of their coordinates.
+
+
+  STONE 11: CAYLEY COORDINATES AND MODULAR ARITHMETIC
+  ----------------------------------------
+
+  a_n = (n-1)/2 mod small primes:
+
+  n    a_n   a mod 2  a mod 3  a mod 5  a mod 7
+  --------------------------------------------------
+    3     1      1        1        1        1
+    5     2      0        2        2        2
+    7     3      1        0        3        3
+    9     4      0        1        4        4
+   11     5      1        2        0        5
+   13     6      0        0        1        6
+   15     7      1        1        2        0
+   17     8      0        2        3        1
+   19     9      1        0        4        2
+   21    10      0        1        0        3
+   23    11      1        2        1        4
+   25    12      0        0        2        5
+   27    13      1        1        3        6
+   29    14      0        2        4        0
+   31    15      1        0        0        1
+   33    16      0        1        1        2
+   35    17      1        2        2        3
+   37    18      0        0        3        4
+   39    19      1        1        4        5
+   41    20      0        2        0        6
+   43    21      1        0        1        0
+
+  a_n mod 2: alternates 1,1,0,0,1,1,0,0,... (period 4, matching n mod 8)
+  a_n mod 3: cycles 1,2,0,1,2,0,... (period 6 in n)
+  a_n mod p: has period 2p in n.
+
+
+  STONE 12: THE GOLDEN COORDINATES
+  ----------------------------------------
+
+  The 'Cayley coordinates' of phi and tau (not integers, but still):
+
+  phi = 1.618034. Not odd, not integer. But:
+  a_phi = (phi-1)/2 = 1/(2*phi) = 0.309017
+  b_phi = (phi+1)/2 = phi^2/2 = 1.309017
+  a_phi + b_phi = phi. The golden ratio IS its own Cayley sum.
+
+  a_phi = 0.3090169944 = 1/(2*phi) = phi-1)/2
+  b_phi = 1.3090169944 = phi^2/2
+  a_phi * b_phi = 0.4045084972
+  (phi^2-1)/4 = 0.4045084972
+  = phi/4 = 0.4045084972
+  Hmm: a_phi * b_phi = (phi^2-1)/4 = ((phi+1)(phi-1))/4 = phi/4
+  (since phi^2-1 = phi, the defining property!)
+
+  THE CAYLEY PRODUCT OF PHI = PHI/4.
+  The golden ratio's self-similarity (phi^2 = phi+1)
+  means its Cayley product is just phi scaled by 1/4.
+
+
+  STONE 13: THE COORDINATE MAP AS A FUNCTOR
+  ----------------------------------------
+
+  The map n -> a_n = (n-1)/2 sends:
+  - Odd integers to non-negative integers
+  - Multiplication to affine maps: a_{nm} = n*a_m + a_n
+  - The identity 1 to 0: a_1 = 0
+  - The forbidden 7 to 3: a_7 = 3 (the curvature quantum)
+  - The forbidden 21 to 10: a_21 = 10 (the pentagonal number 2*5)
+
+  This map is a HOMOMORPHISM from (odd Z, *) to (Z, affine).
+  It 'linearizes' multiplicative structure into affine structure.
+  Compare: logarithm linearizes multiplication into addition.
+  This is a DISCRETE LOGARITHM-LIKE map, but affine, not linear.
+
+  The affine structure means: products don't just ADD coordinates
+  (that would be a logarithm). They SCALE and SHIFT.
+  The scaling factor IS the original number n.
+  So multiplication by n is 'multiplication by n' in coordinates too,
+  but with an additive correction a_n.
+
+  This correction a_n = (n-1)/2 is the 'logarithmic residue'
+  of the number n. It is what remains after you extract the
+  multiplicative part.
+
+
+======================================================================
+
+  WHAT THE STONES REVEAL
+
+======================================================================
+
+  1. The Cayley coordinate product a*b is always pronic = 2*triangular.
+  2. Consecutive integers a, a+1 are always coprime: the whole > parts.
+  3. For prime p: a = (p-1)/2 = number of quadratic residues mod p.
+  4. The a-coordinate encodes n mod 4: even a <=> n = 1 mod 4.
+  5. Multiplication of odds is AFFINE in coordinates: a_{nm} = n*a_m + a_n.
+  6. The forbidden numbers are affinely related: a_21 = 7*a_3 + a_7.
+  7. The golden ratio's Cayley product = phi/4 (from phi^2 = phi+1).
+  8. Only n=5 has both coordinates prime (the unique consecutive prime pair 2,3).
+  9. Every odd n is the most balanced partition of itself.
+ 10. The coordinate map is a discrete affine logarithm.
+
+  And underneath it all:
+  n = a + b, b - a = 1, gcd(a,b) = 1, a*b = pronic.
+  Four constraints. They determine everything.
