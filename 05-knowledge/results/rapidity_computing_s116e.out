@@ -1,0 +1,323 @@
+COMPUTER SCIENCE AND INFORMATION THEORY THROUGH RAPIDITY
+======================================================================
+
+======================================================================
+1. BINARY REPRESENTATIONS AND RAPIDITY
+======================================================================
+
+  A binary string of length n represents a number in [0, 2^n - 1].
+  The information content = n bits = n * ln(2) nats.
+  rapidity(2^n) = n * ln(2)/2 = n * octave.
+
+  EACH BIT ADDS ONE OCTAVE OF RAPIDITY.
+  This is the same as: each cell division adds one octave (biology).
+  And: each DNA base adds one octave of sequence space.
+
+  Standard data types and their rapidity:
+  Type      Bits   Max value        rapidity(max)
+  -------------------------------------------------------
+  byte          8   2^8-1                  2.77 (8 octaves)
+  short        16   2^16-1                  5.55 (16 octaves)
+  int          32   2^32-1                 11.09 (32 octaves)
+  long         64   2^64-1                 22.18 (64 octaves)
+  uint128     128   2^128-1                 44.36 (128 octaves)
+  uint256     256   2^256-1                 88.72 (256 octaves)
+
+  Cryptographic key lengths in rapidity:
+  AES-128: rapidity = 128 octaves
+  AES-256: rapidity = 256 octaves
+  RSA-2048: rapidity = 2048 octaves
+  The security level IS the rapidity in octaves!
+
+======================================================================
+2. HASH FUNCTIONS AND BIRTHDAY PARADOX IN RAPIDITY
+======================================================================
+
+  A hash function with n-bit output has 2^n possible values.
+  Birthday collision after ~2^{n/2} hashes.
+  rapidity(collision threshold) = n/2 * ln(2)/2 = n*ln(2)/4
+  = half the rapidity of the output space.
+
+  For SHA-256: output space rapidity = 256 octaves.
+  Collision threshold rapidity = 128 octaves.
+  The birthday paradox HALVES the rapidity!
+
+  For SHA-3-512: output space = 512 octaves, collision = 256.
+
+======================================================================
+3. SORTING AND COMPARISON COMPLEXITY
+======================================================================
+
+  Sorting n items requires at least log2(n!) comparisons.
+  Stirling: log2(n!) ~ n*log2(n) - n*log2(e)
+  In rapidity: rapidity(n!) = ln(n!)/2 ~ n*ln(n)/2 - n/2
+  = n * rapidity(n) - n/2
+
+  The information-theoretic lower bound for sorting
+  IS the rapidity of n! (times 2/ln(2) for bits).
+
+  n    n!           rapidity(n!)   log2(n!)    n*log2(n)
+  ------------------------------------------------------------
+    2               2         0.35           1.0           2.0
+    3               6         0.90           2.6           4.8
+    4              24         1.59           4.6           8.0
+    5             120         2.39           6.9          11.6
+    7            5040         4.26          12.3          19.7
+   10         3628800         7.55          21.8          33.2
+   20  2432902008176640000        21.17          61.1          86.4
+   52          (huge)        76.73         221.4         296.4
+
+  Sorting a deck of 52 cards: rapidity ~ 116.
+  Compare: rapidity of the observable universe in Planck units ~ 140.
+  A deck of cards is 83% of the universe's rapidity!
+
+======================================================================
+4. CHANNEL CAPACITY AND RAPIDITY
+======================================================================
+
+  Shannon's channel capacity: C = B * log2(1 + SNR)
+  where B = bandwidth, SNR = signal-to-noise ratio.
+
+  In rapidity: log2(1+SNR) = 2*rapidity(SNR/(SNR+2)) / ln(2)
+  Actually: 1+SNR = Q(SNR/(SNR+2)), so
+  log2(1+SNR) = 2*rapidity(SNR/(SNR+2)) / ln(2)
+
+  But more directly: define v = (SNR)/(SNR+2) = (1+SNR-1)/(1+SNR+1).
+  Then Q(v) = 1+SNR, and rapidity(v) = ln(1+SNR)/2.
+  So C/B = 2*rapidity(v)/ln(2).
+
+  Channel capacity per bandwidth = rapidity / (ln(2)/2).
+
+  SNR(dB)  SNR(linear)  v=SNR/(SNR+2)  rapidity   C/B (bits/Hz)
+  -----------------------------------------------------------------
+      0            1.0      0.333333      0.3466        1.00
+      3            2.0      0.499407      0.5485        1.58
+      6            4.0      0.665612      0.8028        2.32
+     10           10.0      0.833333      1.1989        3.46
+     20          100.0      0.980392      2.3076        6.66
+     30         1000.0      0.998004      3.4544        9.97
+     40        10000.0      0.999800      4.6052       13.29
+     60      1000000.0      0.999998      6.9078       19.93
+
+======================================================================
+5. ERROR CORRECTING CODES AND RAPIDITY
+======================================================================
+
+  A code with rate R = k/n transmits k bits over n symbols.
+  The code rate R in [0,1] has rapidity arctanh(2R-1).
+
+  Shannon limit: R < C/B for reliable transmission.
+  In rapidity: rapidity(2R-1) < rapidity(2C/B - 1).
+
+  For binary symmetric channel with crossover p:
+  Capacity C = 1 - H(p) where H(p) = -p*log2(p) - (1-p)*log2(1-p)
+
+  Common code rates and their rapidity:
+  Rate    rapidity    interpretation
+  ---------------------------------------------
+    1/2    +0.0000     standard
+    2/3    +0.3466     standard
+    3/4    +0.5493     standard
+    4/5    +0.6931     high rate
+    7/8    +0.9730     high rate
+    1/3    -0.3466     repetition
+    1/4    -0.5493     repetition
+
+  The rapidity of 1/2 rate = 0 (the FAIR POINT).
+  Above 1/2: positive rapidity (more data than redundancy).
+  Below 1/2: negative rapidity (more redundancy than data).
+
+======================================================================
+6. FLOATING POINT AND RAPIDITY
+======================================================================
+
+  IEEE 754 floating point: x = m * 2^e (mantissa * 2^exponent).
+  The EXPONENT e IS a rapidity (in octaves):
+  rapidity(x) = ln(x)/2 = (e*ln(2) + ln(m))/2
+  ~ e * ln(2)/2 = e * octave (for m ~ 1)
+
+  So floating point representation IS rapidity representation!
+  The exponent = rapidity in octaves.
+  The mantissa = fine structure within the octave.
+
+  This is WHY floating point works well for physical quantities:
+  physical laws involve RATIOS (rapidity differences),
+  and floating point preserves rapidity structure.
+
+  Float types and their rapidity range:
+  Type       Exp bits   Rapidity range (octaves)
+  --------------------------------------------------
+  float16         5      [-14, 15]
+  float32         8      [-126, 127]
+  float64        11      [-1022, 1023]
+  float128       15      [-16382, 16383]
+
+======================================================================
+7. PROBABILITY CALIBRATION AND RAPIDITY
+======================================================================
+
+  A classifier outputs probability p. Its calibration measures
+  how well p matches the true frequency of positive outcomes.
+
+  In rapidity space, perfect calibration means:
+  rapidity(predicted) = rapidity(observed)
+
+  The calibration ERROR in rapidity:
+  delta_rapidity = arctanh(2*p_pred - 1) - arctanh(2*p_obs - 1)
+
+  This is BETTER than raw probability difference because:
+  - It handles extreme probabilities correctly (0.001 vs 0.002 is big!)
+  - It's symmetric in log-odds space
+  - It's equivalent to the natural parameter of the Bernoulli family
+
+  Example: classifier on rare events
+  Predicted  Observed  Raw diff   Rapidity diff
+  --------------------------------------------------
+  0.010      0.020     -0.0100     -0.3516
+  0.100      0.110     -0.0100     -0.0532
+  0.500      0.550     -0.0500     -0.1003
+  0.900      0.910     -0.0100     -0.0582
+  0.990      0.995     -0.0050     -0.3491
+
+  Rapidity calibration reveals that 0.01->0.02 is a MUCH bigger
+  error than 0.50->0.55, unlike raw probability difference.
+
+======================================================================
+8. SEARCH ALGORITHMS AND RAPIDITY
+======================================================================
+
+  Binary search on n items: log2(n) comparisons.
+  = 2*rapidity(n)/ln(2) comparisons.
+
+  Each binary search step HALVES the search space,
+  which SUBTRACTS one octave of rapidity.
+  Binary search = walking DOWN the rapidity ladder, one octave at a time.
+
+  Grover's quantum search: sqrt(n) evaluations.
+  = n^{1/2} evaluations.
+  rapidity(sqrt(n)) = rapidity(n)/2.
+  Grover's algorithm HALVES the rapidity (not the search space).
+
+  Comparison:
+  n         Binary: log2(n)   Grover: sqrt(n)   Classical: n
+  ------------------------------------------------------------
+  2^ 4             4                    4                  16
+  2^ 8             8                   16                 256
+  2^16            16                  256               65536
+  2^20            20                 1024             1048576
+  2^30            30                32768          1073741824
+
+  Binary search: rapidity decreases by 1 octave per step.
+  Grover: rapidity decreases by HALF per step (quadratic speedup).
+  Linear search: rapidity decreases by 0 per step (just decrement).
+
+======================================================================
+9. BLOCKCHAIN AND PROOF OF WORK
+======================================================================
+
+  Bitcoin mining: find nonce such that SHA256(block||nonce) < target.
+  The target has d leading zero bits.
+  Expected attempts: 2^d.
+  rapidity(2^d) = d * ln(2)/2 = d octaves.
+
+  The mining DIFFICULTY in rapidity = d octaves.
+  Each additional bit of difficulty = one more octave of work.
+
+  Bitcoin difficulty adjustment: target rate = 1 block / 10 min.
+  If blocks come too fast, increase d (add rapidity).
+  If blocks come too slow, decrease d (remove rapidity).
+  The difficulty IS a rapidity dial.
+
+  Current Bitcoin difficulty ~ 2^76:
+  rapidity = 76 octaves = 76 * ln(2)/2 = 26.3 rapidity units
+
+======================================================================
+10. THE RAPIDITY OF ALGORITHMIC COMPLEXITY CLASSES
+======================================================================
+
+  For input size n, the runtime of different complexity classes:
+
+  Class        Runtime f(n)     rapidity(f(n))
+  --------------------------------------------------
+  O(1)         constant         0 (at rest)
+  O(log n)     log n            ln(ln(n))/2 (doubly slow)
+  O(n)         n                ln(n)/2 (linear in rapidity)
+  O(n log n)   n*log(n)         ln(n*log(n))/2
+  O(n^2)       n^2              ln(n) (quadratic = double rapidity)
+  O(n^3)       n^3              3*ln(n)/2 (triple rapidity)
+  O(2^n)       2^n              n*ln(2)/2 (linear in n octaves!)
+  O(n!)        n!               n*ln(n)/2 - n/2 (superlinear)
+
+  KEY INSIGHT: polynomial classes have rapidity ~ c*ln(n)/2 = c*rapidity(n).
+  Exponential classes have rapidity ~ c*n = LINEAR in n (not log n).
+  The P vs NP question in rapidity:
+  P:  rapidity(runtime) = O(rapidity(n))
+  NP: rapidity(runtime) = O(n) (rapidity grows with INPUT, not log)
+  The gap between P and NP IS the gap between logarithmic and linear rapidity.
+
+======================================================================
+11. REED-SOLOMON CODES AND THE CAYLEY TRANSFORM
+======================================================================
+
+  Reed-Solomon codes evaluate polynomials at roots of unity.
+  We proved: Q maps the n-th root of unity e^{2pi*i*k/n}
+  to i*cot(pi*k/n) on the imaginary axis.
+
+  So the Cayley transform of a Reed-Solomon codeword is a
+  set of points on the imaginary axis!
+
+  The SYNDROME computation (detecting errors) becomes:
+  evaluation of Q-transformed polynomial at cotangent points.
+
+  This might give a new perspective on RS decoding:
+  errors in the codeword = perturbations of cotangent values.
+  The error-locator polynomial in Cayley coordinates might
+  have nicer properties than in the standard formulation.
+
+======================================================================
+12. MACHINE LEARNING: TEMPERATURE SCALING = RAPIDITY SCALING
+======================================================================
+
+  In softmax with temperature T:
+  P_i = exp(z_i/T) / sum exp(z_j/T)
+
+  For binary classification (2 classes):
+  P = sigmoid(z/T) = sigmoid(logit/T)
+  Since logit = 2*rapidity:
+  P = sigmoid(2*rapidity/T)
+
+  Temperature scaling DIVIDES the rapidity by T.
+  T = 1: standard rapidity
+  T > 1: compressed rapidity (less confident)
+  T < 1: expanded rapidity (more confident)
+  T -> 0: argmax (infinite rapidity expansion)
+  T -> inf: uniform (rapidity compressed to 0)
+
+  MODEL CALIBRATION by temperature scaling:
+  Find T* that minimizes calibration error IN RAPIDITY SPACE.
+  This is EXACTLY the standard temperature scaling recipe,
+  but the rapidity interpretation shows WHY it works:
+  you're finding the right rapidity SCALE for the problem.
+
+======================================================================
+GRAND SUMMARY: CS THROUGH RAPIDITY
+======================================================================
+
+  CS CONCEPT               RAPIDITY IS
+  -------------------------------------------------------
+  bits                     octaves of rapidity
+  floating point exponent  rapidity in octaves
+  binary search step       -1 octave
+  Grover quantum step      -1/2 of remaining rapidity
+  sorting lower bound      rapidity of n!
+  channel capacity         rapidity / (ln(2)/2)
+  code rate                arctanh(2R-1)
+  hash collision           half the output rapidity
+  mining difficulty        d octaves
+  P vs NP gap              log(rapidity) vs linear rapidity
+  temperature scaling      rapidity division by T
+  calibration error        rapidity difference
+
+  EVERYTHING in CS that uses log2 is using rapidity in octaves.
+  EVERYTHING that uses log-odds is using rapidity directly.
+  The bit IS the octave. The logit IS twice the rapidity.

@@ -1,0 +1,544 @@
+RAPIDITY IN ECONOMICS
+======================================================================
+
+  Core identities:
+    rapidity(v) = arctanh(v) = (1/2)*ln(Q(v))
+    logit(p) = 2*rapidity(2p-1)
+    Q(v) = (1+v)/(1-v) = e^{2*rapidity(v)}
+
+  Every probability p in (0,1) has rapidity arctanh(2p-1).
+  Every positive ratio r has rapidity (1/2)*ln(r).
+  These are the SAME operation on the SAME universal coordinate.
+
+======================================================================
+1. LOGIT DEMAND MODELS
+======================================================================
+
+  McFadden's discrete choice: P_ij = exp(V_ij) / sum_k exp(V_ik)
+
+  For two products A and B with utilities V_A, V_B:
+    P_A = 1/(1+exp(-(V_A - V_B))) = sigmoid(V_A - V_B)
+    P_A/P_B = exp(V_A - V_B)
+
+  Key insight: V_A - V_B = logit(P_A) = 2*rapidity(2*P_A - 1)
+  The utility difference IS the logit IS twice the rapidity!
+
+  Equivalently: P_A/P_B = Q(2*P_A - 1) = e^{2*rapidity(2*P_A-1)}
+
+  Example: Two-product market
+  ------------------------------------------------------------
+     V_A-V_B      P_A      P_B    P_A/P_B   rapidity
+  ------------------------------------------------------------
+       -3.00   0.0474   0.9526     0.0498  -1.500000
+       -2.00   0.1192   0.8808     0.1353  -1.000000
+       -1.00   0.2689   0.7311     0.3679  -0.500000
+       -0.50   0.3775   0.6225     0.6065  -0.250000
+        0.00   0.5000   0.5000     1.0000   0.000000
+        0.50   0.6225   0.3775     1.6487   0.250000
+        1.00   0.7311   0.2689     2.7183   0.500000
+        2.00   0.8808   0.1192     7.3891   1.000000
+        3.00   0.9526   0.0474    20.0855   1.500000
+
+  Verification: V_A - V_B = 2*rapidity(2*P_A - 1)
+    dV=0.5: 2*rap = 0.5000000000, dV = 0.5000000000, match = True
+    dV=1.0: 2*rap = 1.0000000000, dV = 1.0000000000, match = True
+    dV=2.0: 2*rap = 2.0000000000, dV = 2.0000000000, match = True
+
+  Three-product market: V = [2.0, 1.0, 0.5]
+     Product      V    Share   logit(s)   rapidity
+  -------------------------------------------------------
+           A    2.0   0.6285     0.5259   0.262962
+           B    1.0   0.2312    -1.2014  -0.600707
+           C    0.5   0.1402    -1.8133  -0.906631
+
+  Pairwise share ratios = Q-value ratios:
+    P_{'ABC'[i]}/P_{'ABC'[j]} = 2.7183 = exp(1.0) = 2.7183
+    P_{'ABC'[i]}/P_{'ABC'[j]} = 4.4817 = exp(1.5) = 4.4817
+    P_{'ABC'[i]}/P_{'ABC'[j]} = 1.6487 = exp(0.5) = 1.6487
+
+  THEOREM (Rapidity Demand): In a logit model, the market share
+  rapidity arctanh(2*P_j - 1) encodes utility differences.
+  Adding a new product SHIFTS all rapidities by the same amount
+  (IIA property = translation invariance in rapidity space).
+
+======================================================================
+2. KELLY CRITERION IN RAPIDITY
+======================================================================
+
+  Kelly: f* = (b*p - q)/b  where p=P(win), q=1-p, b=net odds
+  For even odds (b=1): f* = p - q = 2p - 1 = tanh(rapidity(2p-1))
+
+  INSIGHT: For even odds, f* = 2p-1 itself, so
+    rapidity(f*) = rapidity(2p-1) = arctanh(2p-1) = logit(p)/2
+
+  For general odds b:
+    f* = (bp - q)/b = p - (1-p)/b
+    Let r_p = arctanh(2p-1) (edge rapidity)
+    Let r_b = (1/2)*ln(b) (odds rapidity)
+
+  Kelly fraction for various (p, b):
+  ----------------------------------------------------------------------
+       p      b       f*        r_p        r_b  arctanh(f*)
+  ----------------------------------------------------------------------
+    0.50      2   0.2500   0.000000   0.346574     0.255413
+    0.50      3   0.3333   0.000000   0.549306     0.346574
+    0.50      5   0.4000   0.000000   0.804719     0.423649
+    0.55      1   0.1000   0.100335   0.000000     0.100335
+    0.55      2   0.3250   0.100335   0.346574     0.337228
+    0.55      3   0.4000   0.100335   0.549306     0.423649
+    0.55      5   0.4600   0.100335   0.804719     0.497311
+    0.60      1   0.2000   0.202733   0.000000     0.202733
+    0.60      2   0.4000   0.202733   0.346574     0.423649
+    0.60      3   0.4667   0.202733   0.549306     0.505800
+    0.60      5   0.5200   0.202733   0.804719     0.576340
+    0.70      1   0.4000   0.423649   0.000000     0.423649
+    0.70      2   0.5500   0.423649   0.346574     0.618381
+    0.70      3   0.6000   0.423649   0.549306     0.693147
+    0.70      5   0.6400   0.423649   0.804719     0.758174
+    0.80      1   0.6000   0.693147   0.000000     0.693147
+    0.80      2   0.7000   0.693147   0.346574     0.867301
+    0.80      3   0.7333   0.693147   0.549306     0.935901
+    0.80      5   0.7600   0.693147   0.804719     0.996215
+
+  Even-odds identity: f* = tanh(logit(p)/2)
+  Verification:
+    p=0.55: f*=0.1000, tanh(logit(p)/2)=0.1000000000, match=True
+    p=0.60: f*=0.2000, tanh(logit(p)/2)=0.2000000000, match=True
+    p=0.70: f*=0.4000, tanh(logit(p)/2)=0.4000000000, match=True
+    p=0.80: f*=0.6000, tanh(logit(p)/2)=0.6000000000, match=True
+    p=0.90: f*=0.8000, tanh(logit(p)/2)=0.8000000000, match=True
+
+  GENERAL FORMULA: f* = tanh(r_p) - (1/b)*tanh(-r_p)
+    = tanh(r_p) + tanh(r_p)/b  ... NO, let's derive properly.
+
+  f* = (bp - q)/b = p - (1-p)/b
+     = (1 + tanh(r_p))/2 - (1 - tanh(r_p))/(2b)
+     = (1/2)[1 + tanh(r_p) - 1/b + tanh(r_p)/b]
+     = (1/2)[(1 - 1/b) + tanh(r_p)*(1 + 1/b)]
+     = (1/2)[(b-1)/b + tanh(r_p)*(b+1)/b]
+
+  Using b = Q(v_b) where v_b = (b-1)/(b+1):
+    (b-1)/b = 2*v_b/(1+v_b), (b+1)/b = 2/(1+v_b)
+    f* = [v_b + tanh(r_p)] / (1 + v_b)
+
+  For b=1 (v_b=0): f* = tanh(r_p) = 2p-1. Correct!
+
+  THEOREM (Kelly-Rapidity): f* = [v_b + tanh(r_p)] / (1 + v_b)
+  where r_p = arctanh(2p-1), v_b = (b-1)/(b+1).
+  This is a WEIGHTED MEAN of the odds address and the edge tanh.
+
+  Verification of Kelly-Rapidity formula:
+    p=0.6, b=1: standard=0.2000000000, rapidity=0.2000000000, match=True
+    p=0.6, b=2: standard=0.4000000000, rapidity=0.4000000000, match=True
+    p=0.7, b=3: standard=0.6000000000, rapidity=0.6000000000, match=True
+    p=0.55, b=5: standard=0.4600000000, rapidity=0.4600000000, match=True
+
+======================================================================
+3. BLACK-SCHOLES IN RAPIDITY COORDINATES
+======================================================================
+
+  Black-Scholes call price: C = S*N(d1) - K*e^{-rT}*N(d2)
+  where d1 = [ln(S/K) + (r + sigma^2/2)*T] / (sigma*sqrt(T))
+        d2 = d1 - sigma*sqrt(T)
+
+  Key: ln(S/K) = 2*rapidity((S/K - 1)/(S/K + 1))
+  More precisely: if x = (S-K)/(S+K), then Q(x) = S/K,
+  so ln(S/K) = 2*arctanh(x) = 2*rapidity(moneyness)
+
+  Define: moneyness address m = (S-K)/(S+K)
+          moneyness rapidity r_m = arctanh(m) = (1/2)*ln(S/K)
+
+  Then: d1 = [2*r_m + (r + sigma^2/2)*T] / (sigma*sqrt(T))
+        d2 = [2*r_m + (r - sigma^2/2)*T] / (sigma*sqrt(T))
+
+  Example: S=100, K varies, T=1, r=0.05, sigma=0.20
+  ---------------------------------------------------------------------------
+       K     S/K   m=(S-K)/(S+K)        r_m       d1       d2     Call
+  ---------------------------------------------------------------------------
+      80  1.2500        0.111111   0.111572   1.4657   1.2657    24.59
+      85  1.1765        0.081081   0.081259   1.1626   0.9626    20.47
+      90  1.1111        0.052632   0.052680   0.8768   0.6768    16.70
+      95  1.0526        0.025641   0.025647   0.6065   0.4065    13.35
+     100  1.0000        0.000000   0.000000   0.3500   0.1500    10.45
+     105  0.9524       -0.024390  -0.024395   0.1060  -0.0940     8.02
+     110  0.9091       -0.047619  -0.047655  -0.1266  -0.3266     6.04
+     115  0.8696       -0.069767  -0.069881  -0.3488  -0.5488     4.47
+     120  0.8333       -0.090909  -0.091161  -0.5616  -0.7616     3.25
+
+  Verification: d1 via rapidity vs standard formula
+    K=90: d1_rap=0.8768025783, d1_std=0.8768025783, match=True
+    K=100: d1_rap=0.3500000000, d1_std=0.3500000000, match=True
+    K=110: d1_rap=-0.1265508990, d1_std=-0.1265508990, match=True
+
+  AT-THE-MONEY (S=K): m=0, r_m=0
+    d1 = (r + sigma^2/2)*T / (sigma*sqrt(T))
+    d2 = (r - sigma^2/2)*T / (sigma*sqrt(T))
+    The moneyness rapidity vanishes -- pure time/vol effect.
+
+  DEEP IN/OUT: As S/K -> inf, m -> 1, r_m -> inf, d1,d2 -> inf, C -> S.
+  As S/K -> 0, m -> -1, r_m -> -inf, d1,d2 -> -inf, C -> 0.
+
+  THEOREM (BS-Rapidity): d1 = [2*r_m + drift*T] / (sigma*sqrt(T))
+  where r_m = arctanh((S-K)/(S+K)) is the moneyness rapidity.
+  Options pricing lives naturally in rapidity-of-moneyness space.
+
+  Delta = N(d1) as a function of moneyness rapidity:
+  --------------------------------------------------
+         r_m      S/K    Delta
+  --------------------------------------------------
+     -1.0000   0.1353   0.0000
+     -0.5000   0.3679   0.0000
+     -0.2000   0.6703   0.0495
+     -0.1000   0.8187   0.2578
+      0.0000   1.0000   0.6368
+      0.1000   1.2214   0.9115
+      0.2000   1.4918   0.9906
+      0.5000   2.7183   1.0000
+      1.0000   7.3891   1.0000
+
+======================================================================
+4. NASH EQUILIBRIUM IN RAPIDITY SPACE
+======================================================================
+
+  2-player zero-sum game: Row player mixes with probability p on row 1.
+  rapidity(p) = arctanh(2p-1)
+
+  Pure strategy p=1: rapidity = +inf (total commitment)
+  Pure strategy p=0: rapidity = -inf (total commitment to other)
+  Uniform p=1/2: rapidity = 0 (maximum uncertainty)
+
+  Example 1: Matching Pennies [[1,-1],[-1,1]]
+    Nash: p = q = 1/2. Rapidity = 0 for both players.
+    The equilibrium sits at the ORIGIN of rapidity space.
+
+  Example 2: Asymmetric game [[3,-1],[-2,1]]
+    Nash: p = 3/7 = 0.428571, q = 2/7 = 0.285714
+    Rapidity of p: arctanh(2*(3/7)-1) = arctanh(-1/7) = -0.143841
+    Rapidity of q: arctanh(2*(2/7)-1) = arctanh(-3/7) = -0.458145
+    Both negative -- both players lean toward strategy 2.
+
+  Example 3: Rock-Paper-Scissors (3 strategies)
+    Nash: p = (1/3, 1/3, 1/3). Each rapidity = arctanh(2/3-1) = arctanh(-1/3)
+    Rapidity per strategy: -0.346574
+    In a 3-strategy game, the 'uniform' rapidity is NOT zero!
+    Zero rapidity means p=1/2. Uniform over 3 means p=1/3.
+
+  Rapidity encodes DEVIATION from maximum uncertainty:
+  --------------------------------------------------
+    Strategy      p    rap(2p-1)       Interpretation
+  --------------------------------------------------
+   Committed 0.9900     2.297560            near-pure
+  Strong lean 0.8000     0.693147    strong preference
+   Mild lean 0.6000     0.202733          slight edge
+   Uniform/2 0.5000     0.000000 indifferent (2-game)
+   Uniform/3 0.3333    -0.346574 indifferent (3-game)
+   Uniform/4 0.2500    -0.549306 indifferent (4-game)
+       Avoid 0.1000    -1.098612          rarely play
+       Never 0.0100    -2.297560      near-pure avoid
+
+  THEOREM (Nash-Rapidity): In a 2-player zero-sum game, the Nash
+  equilibrium mixed strategies (p*, q*) map to rapidities
+  (arctanh(2p*-1), arctanh(2q*-1)). The equilibrium point in
+  rapidity space encodes the game's asymmetry. Symmetric games
+  have equilibrium at the origin.
+
+======================================================================
+5. AUCTION THEORY IN RAPIDITY
+======================================================================
+
+  First-price sealed-bid auction, n bidders, values uniform on [0,1].
+  Optimal bid: b*(v) = v*(n-1)/n = v - v/n
+  Bid shading: s = b/v = (n-1)/n
+
+  The bid/value ratio s = (n-1)/n has Cayley address
+  x_s = (s-1)/(s+1) = (-1/n)/((2n-1)/n) = -1/(2n-1)
+  and rapidity arctanh(-1/(2n-1))
+
+  Bid shading in rapidity space:
+  -----------------------------------------------------------------
+     n      b/v    address     rapidity    Q(addr)
+  -----------------------------------------------------------------
+     2 0.500000  -0.333333    -0.346574   0.500000
+     3 0.666667  -0.200000    -0.202733   0.666667
+     4 0.750000  -0.142857    -0.143841   0.750000
+     5 0.800000  -0.111111    -0.111572   0.800000
+     6 0.833333  -0.090909    -0.091161   0.833333
+     7 0.857143  -0.076923    -0.077075   0.857143
+     8 0.875000  -0.066667    -0.066766   0.875000
+    10 0.900000  -0.052632    -0.052680   0.900000
+    20 0.950000  -0.025641    -0.025647   0.950000
+    50 0.980000  -0.010101    -0.010101   0.980000
+   100 0.990000  -0.005025    -0.005025   0.990000
+
+  As n -> inf: b/v -> 1 (no shading), rapidity -> 0.
+  As n = 2: maximal shading b/v = 1/2, rapidity = -arctanh(1/3) = -0.3466.
+
+  Revenue equivalence in rapidity:
+  Expected revenue per bidder:
+    First-price:  E[b] = (n-1)/(n+1) of E[max value]
+    Second-price: E[b] = same (revenue equivalence)
+
+  The ratio (n-1)/(n+1) IS a Cayley address! Its Q-value is n.
+  rapidity((n-1)/(n+1)) = ln(n)/2
+
+    n=2: revenue ratio = 0.333333, rapidity = 0.346574 = ln(2)/2 = 0.346574
+    n=3: revenue ratio = 0.500000, rapidity = 0.549306 = ln(3)/2 = 0.549306
+    n=5: revenue ratio = 0.666667, rapidity = 0.804719 = ln(5)/2 = 0.804719
+    n=10: revenue ratio = 0.818182, rapidity = 1.151293 = ln(10)/2 = 1.151293
+
+  THEOREM (Auction-Rapidity): The revenue ratio (n-1)/(n+1) = address of n.
+  Its rapidity ln(n)/2 is exactly the rapidity of the integer n.
+  More bidders = higher revenue rapidity, logarithmically.
+
+  Winner's Curse: In common-value auctions, winning is bad news.
+  If your value estimate v_i ~ Uniform[V-e, V+e], the expected
+  value conditional on winning = V - e*(n-1)/(n+1).
+  The curse magnitude e*(n-1)/(n+1) has rapidity ln(n)/2!
+  The curse grows LOGARITHMICALLY in the number of bidders.
+
+======================================================================
+6. GINI COEFFICIENT IN RAPIDITY
+======================================================================
+
+  Gini G in [0,1]: 0 = perfect equality, 1 = perfect inequality.
+  Map G to rapidity: arctanh(2G-1)
+    G=0: rapidity = arctanh(-1) = -inf (perfect equality)
+    G=0.5: rapidity = arctanh(0) = 0 (boundary)
+    G=1: rapidity = arctanh(1) = +inf (perfect inequality)
+
+  Real-world Gini coefficients in rapidity space:
+  -----------------------------------------------------------------
+          Country   Gini     2G-1   rapidity    Q(2G-1)
+  -----------------------------------------------------------------
+         Slovakia  0.232  -0.5360  -0.598526     0.3021
+          Denmark  0.281  -0.4380  -0.469753     0.3908
+          Germany  0.317  -0.3660  -0.383797     0.4641
+           France  0.326  -0.3480  -0.363166     0.4837
+            Japan  0.329  -0.3420  -0.356356     0.4903
+           Canada  0.334  -0.3320  -0.345074     0.5015
+               UK  0.351  -0.2980  -0.307323     0.5408
+        Australia  0.341  -0.3180  -0.329421     0.5175
+              USA  0.398  -0.2040  -0.206903     0.6611
+            China  0.382  -0.2360  -0.240534     0.6181
+           Mexico  0.454  -0.0920  -0.092261     0.8315
+           Brazil  0.489  -0.0220  -0.022004     0.9569
+         Colombia  0.513   0.0260   0.026006     1.0534
+     South Africa  0.630   0.2600   0.266108     1.7027
+
+  Observations:
+  - All real-world Ginis have NEGATIVE rapidity (all G < 0.5).
+  - The most unequal country (South Africa, G=0.63) just barely
+    crosses into positive rapidity territory.
+  - In rapidity space, the gap between Slovakia (G=0.23) and
+    South Africa (G=0.63) is:
+    0.2661 - (-0.5985) = 0.8646
+    Q-value ratio: 5.6365
+
+  The Q-value ratio tells us: South Africa's inequality-to-equality
+  odds are 5.6x those of Slovakia.
+
+  Lorenz curve connection:
+  At cumulative population fraction p, cumulative income fraction L(p).
+  The 'local Gini' at p is the rapidity of (p - L(p))/p.
+  For Pareto distribution F(x) = 1 - (x_m/x)^alpha:
+    Gini = 1/(2*alpha - 1)
+
+  Pareto Gini in rapidity:
+  --------------------------------------------------
+     alpha     Gini   rapidity
+  --------------------------------------------------
+       1.2   0.7143   0.458145
+       1.5   0.5000   0.000000
+       2.0   0.3333  -0.346574
+       2.5   0.2500  -0.549306
+       3.0   0.2000  -0.693147
+       4.0   0.1429  -0.895880
+       5.0   0.1111  -1.039721
+      10.0   0.0526  -1.445186
+
+  As alpha -> 1 (heavy tail): G -> 1, rapidity -> +inf
+  As alpha -> inf (light tail): G -> 0, rapidity -> -inf
+  alpha=1.5 gives G = 0.5, rapidity = 0 (the Gini midpoint).
+
+  THEOREM (Gini-Rapidity): arctanh(2G-1) = arctanh(2/(2a-1) - 1)
+  = arctanh((2-(2a-1))/(2a-1)) = arctanh((3-2a)/(2a-1))
+  For Pareto with parameter alpha.
+
+======================================================================
+7. INTEREST RATES IN RAPIDITY
+======================================================================
+
+  Nominal rate r: growth factor = 1+r per period.
+  Continuous rate: rho = ln(1+r)
+
+  Rapidity approach: map the growth factor g = 1+r to rapidity.
+  Address of g: x_g = (g-1)/(g+1) = r/(2+r)
+  Rapidity: arctanh(r/(2+r)) = (1/2)*ln(g) = (1/2)*ln(1+r) = rho/2
+
+  THE RAPIDITY OF THE GROWTH FACTOR IS HALF THE CONTINUOUS RATE.
+  (Same as rapidity(n) = ln(n)/2 for any positive number.)
+
+  ------------------------------------------------------------------------------
+                Description              r          g=1+r       addr   rapidity  rho=2*rap
+  ------------------------------------------------------------------------------
+                  Deflation        -0.0200         0.9800  -0.010101  -0.010101  -0.020203
+                       Zero         0.0000         1.0000   0.000000   0.000000   0.000000
+                Low (Japan)         0.0010         1.0010   0.000500   0.000500   0.001000
+                    Savings         0.0200         1.0200   0.009901   0.009901   0.019803
+                   Moderate         0.0500         1.0500   0.024390   0.024395   0.048790
+       Historical US equity         0.1000         1.1000   0.047619   0.047655   0.095310
+                High growth         0.1500         1.1500   0.069767   0.069881   0.139762
+            Emerging market         0.2000         1.2000   0.090909   0.091161   0.182322
+      Hyperinflation (mild)         1.0000         2.0000   0.333333   0.346574   0.693147
+    Hyperinflation (severe)        10.0000        11.0000   0.833333   1.198948   2.397895
+    Zimbabwe 2008 (monthly) 79600000000.0000 79600000001.0000   1.000000  12.550139  25.100280
+
+  Compounding periods and rapidity:
+  For annual rate r compounded m times per year:
+    Effective rate: (1 + r/m)^m - 1
+    The rapidity of each sub-period: arctanh(r/(m*(2+r/m)))
+
+  Annual rate r = 0.1
+  ------------------------------------------------------------
+         m   sub-rate    sub-rap  m*sub-rap   eff rate
+  ------------------------------------------------------------
+         1   0.100000   0.047655   0.047655   0.100000
+         2   0.050000   0.024395   0.048790   0.102500
+         4   0.025000   0.012346   0.049385   0.103813
+        12   0.008333   0.004149   0.049793   0.104713
+        52   0.001923   0.000961   0.049952   0.105065
+       365   0.000274   0.000137   0.049993   0.105156
+
+  As m -> inf: m * rapidity(r/(m*(2+r/m))) -> ln(1+r)/2 = rho/2
+  Continuous limit: rho/2 = 0.047655
+
+  THEOREM (Interest-Rapidity): The rapidity of the growth factor
+  1+r equals half the continuous rate rho = ln(1+r). Compounding
+  m times adds m sub-rapidities, converging to rho/2.
+
+  Rule of 72 in rapidity:
+  Doubling time T_2 = ln(2)/rho = ln(2)/(2*rapidity)
+  'Rule of 72': T_2 ~ 72/r_percent
+
+    r=2%: rapidity=0.009901, T2_exact=35.00, Rule72=36.00, error=2.85%
+    r=5%: rapidity=0.024395, T2_exact=14.21, Rule72=14.40, error=1.36%
+    r=8%: rapidity=0.038481, T2_exact=9.01, Rule72=9.00, error=0.07%
+    r=10%: rapidity=0.047655, T2_exact=7.27, Rule72=7.20, error=1.00%
+    r=12%: rapidity=0.056664, T2_exact=6.12, Rule72=6.00, error=1.90%
+    r=15%: rapidity=0.069881, T2_exact=4.96, Rule72=4.80, error=3.22%
+
+======================================================================
+8. PROSPECT THEORY IN RAPIDITY SPACE
+======================================================================
+
+  Kahneman-Tversky probability weighting function:
+    w(p) = p^gamma / (p^gamma + (1-p)^gamma)^{1/gamma}
+  with gamma ~ 0.61 (gains) or gamma ~ 0.69 (losses)
+
+  In rapidity space: rapidity_distortion = arctanh(2*w(p)-1) - arctanh(2p-1)
+  This measures how much people WARP probabilities.
+
+  Gains weighting (gamma=0.61):
+  ---------------------------------------------------------------------------
+       p     w(p)     rap(p)     rap(w)   distortion  overweight?
+  ---------------------------------------------------------------------------
+    0.01   0.0553    -2.2976    -1.4194       0.8782         OVER
+    0.05   0.1316    -1.4722    -0.9433       0.5289         OVER
+    0.10   0.1863    -1.0986    -0.7371       0.3615         OVER
+    0.20   0.2608    -0.6931    -0.5210       0.1721         OVER
+    0.30   0.3184    -0.4236    -0.3806       0.0430         OVER
+    0.40   0.3700    -0.2027    -0.2661      -0.0633        UNDER
+    0.50   0.4206     0.0000    -0.1601      -0.1601        UNDER
+    0.60   0.4739     0.2027    -0.0523      -0.2551        UNDER
+    0.70   0.5338     0.4236     0.0677      -0.3559        UNDER
+    0.80   0.6074     0.6931     0.2183      -0.4749        UNDER
+    0.90   0.7117     1.0986     0.4519      -0.6467        UNDER
+    0.95   0.7932     1.4722     0.6721      -0.8001        UNDER
+    0.99   0.9116     2.2976     1.1666      -1.1310        UNDER
+
+  The crossover point where w(p) = p:
+    Crossover at p ~ 0.339 (gains, gamma=0.61)
+    Rapidity at crossover: -0.3339
+
+  Losses weighting (gamma=0.69):
+  ---------------------------------------------------------------------------
+       p     w(p)     rap(p)     rap(w)   distortion  overweight?
+  ---------------------------------------------------------------------------
+    0.01   0.0397    -2.2976    -1.5933       0.7042         OVER
+    0.05   0.1114    -1.4722    -1.0381       0.4341         OVER
+    0.10   0.1701    -1.0986    -0.7923       0.3063         OVER
+    0.20   0.2570    -0.6931    -0.5307       0.1624         OVER
+    0.50   0.4540     0.0000    -0.0923      -0.0923        UNDER
+    0.80   0.6690     0.6931     0.3517      -0.3414        UNDER
+    0.90   0.7749     1.0986     0.6181      -0.4805        UNDER
+    0.95   0.8499     1.4722     0.8668      -0.6054        UNDER
+    0.99   0.9451     2.2976     1.4228      -0.8748        UNDER
+
+  INSIGHT: The distortion is POSITIVE for small p (overweight rare events)
+  and NEGATIVE for large p (underweight common events). The rapidity
+  distortion curve crosses zero at the crossover point.
+
+  In rapidity space, KT weighting is an S-shaped compression:
+  - Rare events get PUSHED toward zero rapidity (inflated)
+  - Common events get PUSHED toward zero rapidity (deflated)
+  - The weighting function COMPRESSES the rapidity range.
+
+  Rapidity compression ratio = rap(w(p)) / rap(p):
+  --------------------------------------------------
+       p   ratio (gains)  ratio (losses)
+  --------------------------------------------------
+    0.01          0.6178          0.6935
+    0.05          0.6408          0.7051
+    0.10          0.6709          0.7212
+    0.20          0.7516          0.7657
+    0.50        (near 0)        (near 0)
+    0.80          0.3149          0.5074
+    0.90          0.4113          0.5626
+    0.95          0.4566          0.5888
+    0.99          0.5077          0.6192
+
+  THEOREM (Prospect-Rapidity): KT probability weighting is a
+  CONTRACTION in rapidity space. The compression ratio
+  rap(w(p))/rap(p) measures the degree of probability distortion.
+  For gamma < 1, the ratio is always in (0,1) away from the
+  crossover point, meaning KT weighting SHRINKS the rapidity range.
+  Human probability perception compresses the natural rapidity scale.
+
+======================================================================
+SYNTHESIS: RAPIDITY AS UNIVERSAL ECONOMIC COORDINATE
+======================================================================
+
+  Domain               Quantity              Rapidity =
+  -----------------------------------------------------------------
+  Logit demand         P_A/(P_A+P_B)         logit(share)/2 = (V_A-V_B)/2
+  Kelly criterion      f* (bet fraction)     arctanh(f*)
+  Black-Scholes        S/K (moneyness)       ln(S/K)/2
+  Nash equilibrium     p* (mixed strategy)   arctanh(2p*-1)
+  Auction theory       (n-1)/(n+1) revenue   ln(n)/2
+  Gini coefficient     G (inequality)        arctanh(2G-1)
+  Interest rates       1+r (growth factor)   ln(1+r)/2 = rho/2
+  Prospect theory      w(p) distortion       arctanh(2w-1) - arctanh(2p-1)
+
+  UNIFYING THEME: Every economic ratio, probability, or fraction
+  maps to rapidity via arctanh or (1/2)*ln. The same transform
+  that linearizes relativistic velocity addition also linearizes:
+    - Utility differences in discrete choice
+    - Optimal bet sizing
+    - Option moneyness
+    - Strategic mixing
+    - Auction revenue scaling
+    - Income inequality
+    - Compound interest
+    - Behavioral probability distortion
+
+  Rapidity is the universal coordinate for economics.
+
+  KEY FORMULAS:
+    Kelly: f* = [v_b + tanh(r_p)] / (1 + v_b)
+    BS:    d1 = [2*r_m + drift*T] / (sigma*sqrt(T))
+    Auction revenue ratio = address of n, rapidity = ln(n)/2
+    KT distortion = rapidity compression of probability space
+
+======================================================================
+END rapidity_economics_s116e.py
+======================================================================

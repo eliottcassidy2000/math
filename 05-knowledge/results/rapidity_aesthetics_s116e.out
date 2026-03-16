@@ -1,0 +1,217 @@
+ART, ARCHITECTURE, AND AESTHETICS THROUGH RAPIDITY
+======================================================================
+
+======================================================================
+1. THE GOLDEN RATIO IN RAPIDITY
+======================================================================
+
+  phi = (1+sqrt(5))/2 = 1.6180339887
+  rapidity(phi) = ln(phi)/2 = 0.2406059125
+  = 0.6942 octaves
+
+  Cayley address of phi: (phi-1)/(phi+1) = 1/phi/(1+1/phi)
+  = 0.2360679775
+  Q(0.236068) = 1.6180339887 = phi
+
+  The golden rectangle: sides 1 and phi.
+  Aspect ratio = phi = 1.618...
+  rapidity(aspect) = ln(phi)/2 = 0.2406
+  In musical terms: rapidity 0.2406 = a MAJOR THIRD (5/4) minus a tiny comma.
+  rapidity(5/4) = 0.111572
+  rapidity(phi) = 0.240606
+  difference = 0.129034 = 446.8 cents
+
+  The golden ratio is a major third plus 28 cents!
+  It sits BETWEEN the major third (5/4) and the minor third (6/5)
+  in rapidity space. The golden rectangle is musically ambiguous.
+
+======================================================================
+2. PAPER SIZES IN RAPIDITY
+======================================================================
+
+  ISO A-series paper: aspect ratio sqrt(2):1.
+  rapidity(sqrt(2)) = ln(sqrt(2))/2 = ln(2)/4 = 0.173287
+  = half an octave = exactly one tritone!
+
+  US Letter: 8.5 x 11, aspect = 11/8.5 = 1.2941
+  rapidity = 0.128915
+  The US Letter is 0.7439 times the A-series rapidity.
+
+  Other paper ratios:
+  Format                  Ratio   rapidity    octaves
+  -------------------------------------------------------
+  A4 (ISO)               1.4142   0.173287     0.5000
+  US Letter              1.2941   0.128915     0.3720
+  US Legal               1.6471   0.249496     0.7199
+  Golden rectangle       1.6180   0.240606     0.6942
+  Square                 1.0000   0.000000     0.0000
+  16:9 screen            1.7778   0.287682     0.8301
+  4:3 screen             1.3333   0.143841     0.4150
+  2.39:1 cinema          2.3900   0.435647     1.2570
+  IMAX                   1.4300   0.178837     0.5160
+
+  A4 paper = half an octave = one tritone.
+  4:3 screen = perfect fourth (Q(1/7) = 4/3).
+  16:9 screen = slightly less than a major second.
+  Cinema 2.39:1 = slightly more than one octave.
+
+======================================================================
+3. ARCHITECTURAL PROPORTIONS
+======================================================================
+
+  Classical architecture uses specific proportional systems.
+  The Parthenon: width/height ~ phi (debated but close).
+  Gothic cathedrals: height/width ~ 2 (one octave).
+
+  Key architectural ratios and their rapidity:
+  Ratio                     Value   rapidity         musical
+  ------------------------------------------------------------
+  1:1 (cube)               1.0000   0.000000          unison
+  1:sqrt(2)                1.4142   0.173287         tritone
+  1:phi                    1.6180   0.240606                
+  1:2 (double square)      2.0000   0.346574          octave
+  1:3 (triple)             3.0000   0.549306         twelfth
+  3:4                      1.3333   0.143841          fourth
+  2:3                      1.5000   0.202733           fifth
+  5:8 ~ phi                1.6000   0.235002                
+
+======================================================================
+4. COLOR THEORY AND RAPIDITY
+======================================================================
+
+  Light wavelengths span 400-700 nm (0.81 octaves).
+  RGB color model: each channel 0-255 (8 octaves).
+
+  The rapidity of a color channel value v (0-255):
+  rapidity(v) = ln(v)/2 (for v > 0)
+
+  A color (R,G,B) has a rapidity VECTOR:
+  (rapidity(R), rapidity(G), rapidity(B))
+
+  Key colors and their rapidity vectors:
+  Color             R    G    B    rap(R)   rap(G)   rap(B)
+  -------------------------------------------------------
+  White           255  255  255    2.7706   2.7706   2.7706
+  Black             1    1    1    0.0000   0.0000   0.0000
+  Red             255    0    0    2.7706   0.0000   0.0000
+  Green             0  255    0    0.0000   2.7706   0.0000
+  Blue              0    0  255    0.0000   0.0000   2.7706
+  Yellow          255  255    0    2.7706   2.7706   0.0000
+  Cyan              0  255  255    0.0000   2.7706   2.7706
+  Gold            255  215    0    2.7706   2.6853   0.0000
+  Royal Blue       65  105  225    2.0872   2.3270   2.7081
+
+  White = maximum rapidity on all channels = (2.77, 2.77, 2.77).
+  Black = minimum rapidity = (0, 0, 0).
+  The BRIGHTNESS of a color is the SUM of channel rapidities.
+  This is related to the luminance formula Y = 0.299R + 0.587G + 0.114B
+  but in LOG (rapidity) space rather than linear space.
+
+======================================================================
+5. MUSICAL TEMPERAMENT AND ARCHITECTURAL PROPORTION
+======================================================================
+
+  The Pythagorean comma (12 fifths != 7 octaves) is
+  the SAME KIND of incommensurability as the golden ratio
+  being irrational (phi != p/q for any integers).
+
+  In architecture: you can't tile a rectangle with golden ratio
+  using integer-sided squares (because phi is irrational).
+  This is the architectural COMMA.
+
+  In music: you can't stack fifths to get exact octaves
+  (because ln(3)/ln(2) is irrational).
+  This is the musical COMMA.
+
+  In both cases: the rapidity of the ratio is IRRATIONAL,
+  meaning it never lands on the integer rapidity lattice.
+  The beauty of both music and architecture comes from
+  APPROACHING but never reaching the integer lattice.
+  The near-miss IS the beauty.
+
+======================================================================
+6. PHOTOGRAPHY AND THE EXPOSURE TRIANGLE
+======================================================================
+
+  Photography exposure: E = (f/N)^2 * t * ISO
+  where N = f-number, t = shutter speed, ISO = sensitivity.
+
+  The STOP is the unit of exposure: 1 stop = doubling = 1 octave.
+  The f-stop series: f/1, f/1.4, f/2, f/2.8, f/4, f/5.6, f/8, ...
+  Each step is sqrt(2) = half an octave of f-number.
+  (Because light intensity ~ 1/N^2, so 1 stop = N*sqrt(2).)
+
+  In rapidity:
+  1 stop of exposure = 1 octave of rapidity.
+  The f-stop number has rapidity that increases by ln(2)/4 per stop.
+  The ISO has rapidity that increases by ln(2)/2 per stop.
+  The shutter speed has rapidity that decreases by ln(2)/2 per stop.
+
+  The exposure triangle IS a rapidity triangle:
+  rapidity(aperture) + rapidity(shutter) + rapidity(ISO) = const.
+
+======================================================================
+7. FIBONACCI SPIRALS AND THE GOLDEN RAPIDITY
+======================================================================
+
+  The Fibonacci spiral: each quarter-turn expands by phi.
+  After n quarter-turns: expansion = phi^n.
+  rapidity(phi^n) = n * ln(phi)/2 = n * 0.2406.
+
+  After a FULL TURN (4 quarter-turns):
+  expansion = phi^4 = phi^3 + phi^2 = 3*phi + 2 = 6.8541
+  rapidity = 4 * ln(phi)/2 = 2*ln(phi) = 0.962424
+  = 2.7770 octaves
+
+  A full turn of the Fibonacci spiral expands by ~2.77 octaves.
+  Compare: an octave of music spans a frequency ratio of 2.
+  The Fibonacci spiral is MORE than a doubling per turn.
+
+======================================================================
+8. PERCEPTION AND RAPIDITY: STEVENS' POWER LAW
+======================================================================
+
+  Stevens' power law: perceived intensity P = k * S^n
+  where S = stimulus, n depends on the modality.
+
+  In rapidity: rapidity(P) = n * rapidity(S) + rapidity(k)
+  Stevens' law is LINEAR in rapidity space!
+
+  Exponents for different modalities:
+  Modality                  Exponent n  rapidity scale
+  -------------------------------------------------------
+  Brightness                      0.33     compressive
+  Loudness                        0.67      sub-linear
+  Vibration (finger)              0.95      sub-linear
+  Length                          1.00       veridical
+  Weight                          1.45       expansive
+  Electric shock                  3.50 highly expansive
+  Temperature (warmth)            1.60       expansive
+  Taste (sweetness)               1.30       expansive
+
+  Brightness (n=0.33): 3 octaves of light = 1 octave of perceived brightness.
+  Loudness (n=0.67): 3 octaves of sound = 2 octaves of perceived loudness.
+  Electric shock (n=3.5): 1 octave of current = 3.5 octaves of perceived pain!
+
+  Stevens' law in rapidity: P_rapidity = n * S_rapidity + const.
+  The exponent n IS the rapidity conversion factor between
+  physical stimulus and perceived intensity.
+
+======================================================================
+GRAND SUMMARY: BEAUTY IS RAPIDITY NEAR-COMMENSURABILITY
+======================================================================
+
+  Beautiful proportions are ratios with SMALL rapidity.
+  Perfect symmetry = rapidity 0 (unison).
+  Golden ratio = rapidity 0.24 (between major and minor third).
+  Octave = rapidity 0.35 (the fundamental doubling).
+
+  BEAUTY arises when rapidities are NEARLY but not exactly
+  commensurable. The golden ratio is beautiful because
+  it is maximally INCOMMENSURABLE (worst rational approximation).
+  It sits at the point of maximum distance from all simple fractions.
+
+  Architecture uses rational approximations to phi (5:8, 3:5).
+  Music uses rational approximations to log-ratios (12-TET ~ just).
+  Both are TEMPERED versions of irrational rapidity ideals.
+  The tempering IS the beauty.

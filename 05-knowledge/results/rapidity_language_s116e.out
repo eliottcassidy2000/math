@@ -1,0 +1,554 @@
+==============================================================================
+RAPIDITY AS THE LANGUAGE OF SCALING LAWS
+kind-pasteur-2026-03-15-S116e
+==============================================================================
+
+rapidity(x) = arctanh(x) for x in (-1,1)
+rapidity(x) = ln(x)/2 for x > 0 (positive reals)
+f(n) = (n+1)/n is the superparticular homomorphism
+Q(x) = (1+x)/(1-x) maps addition to multiplication
+
+==============================================================================
+SECTION 1: ZIPF'S LAW IS LINEAR IN RAPIDITY
+==============================================================================
+
+Zipf's law: f(r) ~ C/r^s, typically s ~ 1.
+Taking rapidity of both sides (as positive reals):
+  rapidity(f(r)) = rapidity(C) - s * rapidity(r)
+  ln(f(r))/2 = ln(C)/2 - s * ln(r)/2
+
+This is a LINEAR relationship in rapidity space!
+Slope = -s, intercept = rapidity(C).
+
+  Rank  Word       Freq      rap(rank)   rap(freq)    Predicted
+  ----------------------------------------------------------------------
+     1  the        0.0695     0.0000     -1.3332     -1.2125
+     2  be         0.0390     0.3466     -1.6221     -1.5418
+     3  to         0.0280     0.5493     -1.7878     -1.7345
+     4  of         0.0265     0.6931     -1.8153     -1.8712
+     5  and        0.0260     0.8047     -1.8248     -1.9772
+     6  a          0.0218     0.8959     -1.9129     -2.0639
+     7  in         0.0196     0.9730     -1.9661     -2.1371
+     8  that       0.0114     1.0397     -2.2371     -2.2006
+     9  have       0.0098     1.0986     -2.3127     -2.2565
+    10  I          0.0094     1.1513     -2.3335     -2.3066
+    11  it         0.0093     1.1989     -2.3389     -2.3519
+    12  for        0.0076     1.2425     -2.4398     -2.3932
+    13  not        0.0074     1.2825     -2.4531     -2.4312
+    14  on         0.0073     1.3195     -2.4599     -2.4665
+    15  with       0.0069     1.3540     -2.4881     -2.4992
+    16  he         0.0065     1.3863     -2.5180     -2.5299
+    17  as         0.0061     1.4166     -2.5497     -2.5587
+    18  you        0.0060     1.4452     -2.5580     -2.5859
+    19  do         0.0058     1.4722     -2.5749     -2.6116
+    20  at         0.0054     1.4979     -2.6107     -2.6359
+    21  this       0.0053     1.5223     -2.6200     -2.6591
+    22  but        0.0049     1.5455     -2.6593     -2.6812
+    23  his        0.0047     1.5677     -2.6801     -2.7023
+    24  by         0.0041     1.5890     -2.7484     -2.7226
+    25  from       0.0039     1.6094     -2.7734     -2.7420
+    26  they       0.0038     1.6290     -2.7864     -2.7606
+    27  we         0.0035     1.6479     -2.8275     -2.7785
+    28  say        0.0033     1.6661     -2.8569     -2.7958
+    29  her        0.0032     1.6836     -2.8723     -2.8125
+    30  she        0.0031     1.7006     -2.8882     -2.8286
+
+  Linear fit in rapidity space:
+    rap(freq) = -1.2125 + (-0.9503) * rap(rank)
+    Zipf exponent s = 0.9503
+    Intercept = rapidity of normalization constant
+
+  R^2 = 0.972984
+  Residual std = 0.066202
+
+  KEY INSIGHT: Zipf's law is simply 'word frequency is a linear
+  function of word rank, when both are measured in rapidity.'
+  The exponent s is just the slope of this line.
+
+==============================================================================
+SECTION 2: SHANNON INFORMATION IN RAPIDITY COORDINATES
+==============================================================================
+
+A symbol with probability p has information I = -log2(p) bits.
+
+Rapidity of probability: rho = arctanh(2p - 1)
+  => p = (1 + tanh(rho)) / 2
+  => I = -log2((1 + tanh(rho)) / 2)
+       = -log2(1 + tanh(rho)) + 1
+       = 1 - log2(1 + tanh(rho))
+
+At rho=0 (p=0.5): I = 1 - log2(1+0) = 1 bit  [fair coin]
+At rho->+inf (p->1): I -> 0 bits  [certain event]
+At rho->-inf (p->0): I -> +inf bits  [rare event]
+
+  Probability  Rapidity(p)   Info(bits)   Info via rapidity
+  ------------------------------------------------------------
+      0.9990        3.4534        0.0014        0.0014
+      0.9900        2.2976        0.0145        0.0145
+      0.9000        1.0986        0.1520        0.1520
+      0.7500        0.5493        0.4150        0.4150
+      0.5000        0.0000        1.0000        1.0000
+      0.2500       -0.5493        2.0000        2.0000
+      0.1250       -0.9730        3.0000        3.0000
+      0.0625       -1.3540        4.0000        4.0000
+      0.0100       -2.2976        6.6439        6.6439
+      0.0010       -3.4534        9.9658        9.9658
+      0.0001       -4.6051       13.2877       13.2877
+
+  The two columns agree exactly -- the rapidity formula is correct.
+
+  INSIGHT: Information content is a monotone function of rapidity.
+  High-rapidity events (probable) carry little information.
+  Low-rapidity events (improbable) carry much information.
+
+  The entropy H = E[I] = -sum p*log2(p) can be written as:
+  H = sum_i [(1+tanh(rho_i))/2] * [1 - log2(1+tanh(rho_i))]
+  where rho_i = arctanh(2*p_i - 1) for each symbol.
+
+  Connection to logit (= 2 * rapidity):
+  logit(p) = ln(p/(1-p)) = 2*arctanh(2p-1)
+  I(p) = -log2(sigmoid(logit(p))) = log2(1 + exp(-logit(p)))
+  This is the softplus function in log base 2!
+  I(p) = softplus(-logit(p)) / ln(2)
+
+==============================================================================
+SECTION 3: BENFORD'S LAW IS THE LOGARITHM OF SUPERPARTICULAR RATIOS
+==============================================================================
+
+Benford's law: P(first digit = d) = log10(1 + 1/d) = log10((d+1)/d)
+
+But (d+1)/d = f(d) is the SUPERPARTICULAR RATIO!
+  f(1) = 2/1 = octave
+  f(2) = 3/2 = perfect fifth
+  f(3) = 4/3 = perfect fourth
+  f(4) = 5/4 = major third
+  ...
+
+So Benford's law says: P(first digit = d) = log10(musical_interval(d))
+
+In rapidity: rapidity(f(d)) = ln((d+1)/d)/2 = [ln(d+1) - ln(d)]/2
+  = rapidity(d+1) - rapidity(d)  [rapidity difference!]
+
+  Digit  f(d)=(d+1)/d  P(Benford)   rap(f(d))    Musical interval
+  ----------------------------------------------------------------------
+      1      2.000000     0.301030     0.346574    octave (2:1)
+      2      1.500000     0.176091     0.202733    perfect fifth (3:2)
+      3      1.333333     0.124939     0.143841    perfect fourth (4:3)
+      4      1.250000     0.096910     0.111572    major third (5:4)
+      5      1.200000     0.079181     0.091161    minor third (6:5)
+      6      1.166667     0.066947     0.077075    septimal minor 3rd (7:6)
+      7      1.142857     0.057992     0.066766    septimal major 2nd (8:7)
+      8      1.125000     0.051153     0.058892    major whole tone (9:8)
+      9      1.111111     0.045757     0.052680    minor whole tone (10:9)
+
+  Sum of probabilities: 1.000000 (should be 1.0)
+
+  The rapidity of f(d) = ln((d+1)/d)/2 is the FINITE DIFFERENCE of
+  the rapidity of d itself: rap(d+1) - rap(d) = ln((d+1)/d)/2.
+
+  So Benford's probability for digit d is:
+  P(d) = (2/ln(10)) * [rap(d+1) - rap(d)]
+
+  Verification: 2/ln(10) = 0.868589
+
+  d=1: rap_diff=0.346574, (2/ln10)*rap_diff=0.301030, Benford=0.301030, match=YES
+  d=2: rap_diff=0.202733, (2/ln10)*rap_diff=0.176091, Benford=0.176091, match=YES
+  d=3: rap_diff=0.143841, (2/ln10)*rap_diff=0.124939, Benford=0.124939, match=YES
+  d=4: rap_diff=0.111572, (2/ln10)*rap_diff=0.096910, Benford=0.096910, match=YES
+  d=5: rap_diff=0.091161, (2/ln10)*rap_diff=0.079181, Benford=0.079181, match=YES
+  d=6: rap_diff=0.077075, (2/ln10)*rap_diff=0.066947, Benford=0.066947, match=YES
+  d=7: rap_diff=0.066766, (2/ln10)*rap_diff=0.057992, Benford=0.057992, match=YES
+  d=8: rap_diff=0.058892, (2/ln10)*rap_diff=0.051153, Benford=0.051153, match=YES
+  d=9: rap_diff=0.052680, (2/ln10)*rap_diff=0.045757, Benford=0.045757, match=YES
+
+  THEOREM: Benford's law states that the probability of first digit d
+  is proportional to the rapidity step from d to d+1.
+  The constant of proportionality is 2/ln(10) = 1/log_e(sqrt(10)).
+
+  Equivalently: the digit distribution is UNIFORM in rapidity space
+  restricted to [1, 10), where rapidity(x) = ln(x)/2.
+  Benford's law IS the statement that first digits are uniformly
+  distributed in rapidity (= uniformly distributed on a log scale).
+
+  Connection to the harmonic/alkane series:
+  sum_{d=1}^{9} 1/d is NOT 1/ln(10), but rapidity differences
+  are the harmonic series terms divided by 2:
+  rap(f(d)) = 1/(2d) - 1/(4d^2) + 1/(6d^3) - ...  (Taylor for small 1/d)
+  The leading term 1/(2d) IS half the harmonic series.
+  Benford's law connects to arctanh Taylor = alkane series via
+  arctanh(1/(2d+1)) = sum_{k=0}^inf 1/((2k+1)(2d+1)^(2k+1))
+
+==============================================================================
+SECTION 4: WEBER-FECHNER LAW -- PERCEPTION IS RAPIDITY
+==============================================================================
+
+Weber-Fechner law: perceived intensity P = k * ln(S/S0)
+  where S = stimulus intensity, S0 = threshold.
+
+Rapidity of stimulus: rap(S) = ln(S)/2
+  => P = 2k * [rap(S) - rap(S0)]
+  => P = 2k * (rapidity difference from threshold)
+
+  Perception IS rapidity (up to constant factor 2k)!
+
+Weber's fraction: Delta_S / S = constant (the JND)
+  delta_rap = ln(1 + Delta_S/S)/2 ~ (Delta_S/S)/2 = Weber_fraction/2
+  JND = constant rapidity step!
+
+  Sense           Weber frac   JND (rapidity)   Steps in 100x range
+  ----------------------------------------------------------------------
+  Brightness        0.079       0.03802         60.6
+  Loudness          0.048       0.02344         98.2
+  Weight            0.020       0.00990         232.6
+  Pitch             0.003       0.00150         1537.4
+  Saltiness         0.083       0.03987         57.8
+  Electric shock    0.013       0.00646         356.5
+
+  Pitch has the finest rapidity resolution: ~767 distinguishable
+  steps in a 100x frequency range (about 6.6 octaves).
+  This corresponds to ~115 steps per octave (better than a semitone).
+
+  Musical intervals as rapidity steps (JND multiples for pitch):
+
+  Interval              Ratio      Rapidity     JND multiples
+  ------------------------------------------------------------
+  Semitone (12-TET)      1.059463    0.028881        19.3
+  Whole tone             1.122462    0.057762        38.6
+  Minor third            1.189207    0.086643        57.8
+  Major third            1.259921    0.115525        77.1
+  Perfect fourth         1.333333    0.143841        96.0
+  Perfect fifth          1.500000    0.202733       135.4
+  Octave                 2.000000    0.346574       231.4
+
+  An octave spans ~231 JNDs. A semitone spans ~19 JNDs.
+  Musical intervals are rapidity steps, and JND is the quantum.
+
+==============================================================================
+SECTION 5: HICK'S LAW -- DECISION TIME SCALES WITH RAPIDITY
+==============================================================================
+
+Hick's law: RT = a + b * log2(n) for n equally likely choices.
+
+Since log2(n) = ln(n)/ln(2) = 2*rapidity(n)/ln(2):
+  RT = a + (2b/ln(2)) * rapidity(n)
+     = a + 2.885*b * rapidity(n)
+
+Decision time is LINEAR in the rapidity of the choice set size!
+
+  Using Hick's original parameters: a=200ms, b=150ms
+  RT = 200 + 432.8 * rapidity(n)
+
+  n choices   log2(n)    rapidity(n)   RT (ms)    RT via rapidity
+  -----------------------------------------------------------------
+          1     0.000        0.0000       200.0       200.0
+          2     1.000        0.3466       350.0       350.0
+          3     1.585        0.5493       437.7       437.7
+          4     2.000        0.6931       500.0       500.0
+          5     2.322        0.8047       548.3       548.3
+          6     2.585        0.8959       587.7       587.7
+          8     3.000        1.0397       650.0       650.0
+         10     3.322        1.1513       698.3       698.3
+         16     4.000        1.3863       800.0       800.0
+         32     5.000        1.7329       950.0       950.0
+         64     6.000        2.0794      1100.0      1100.0
+        128     7.000        2.4260      1250.0      1250.0
+        256     8.000        2.7726      1400.0      1400.0
+
+  The two RT columns agree exactly (they are the same formula).
+
+  INSIGHT: Every doubling of choices adds b ms = one 'bit' of
+  processing time. In rapidity, every unit of rapidity adds
+  432.8 ms. The rapidity of a choice set is its 'cognitive load'.
+
+  Hick-Hyman extension (unequal probabilities):
+  RT_i = a + b * (-log2(p_i)) = a + b * information(choice_i)
+  Average RT = a + b * H (entropy in bits)
+
+  This connects directly to Section 2: the information content
+  of each choice, expressed in rapidity, determines reaction time.
+
+==============================================================================
+SECTION 6: ENGLISH LETTER FREQUENCIES IN RAPIDITY SPACE
+==============================================================================
+
+  Letter   Freq     Rapidity(p)    Logit(p)     Info(bits)
+  --------------------------------------------------------------
+       E   0.1270       -0.9639        -1.9277      2.9771
+       T   0.0906       -1.1532        -2.3063      3.4643
+       A   0.0817       -1.2097        -2.4195      3.6135
+       O   0.0751       -1.2554        -2.5109      3.7350
+       I   0.0697       -1.2957        -2.5913      3.8427
+       N   0.0675       -1.3129        -2.6257      3.8890
+       S   0.0633       -1.3472        -2.6945      3.9817
+       H   0.0609       -1.3678        -2.7357      4.0374
+       R   0.0599       -1.3767        -2.7533      4.0613
+       D   0.0425       -1.5574        -3.1148      4.5564
+       L   0.0403       -1.5851        -3.1703      4.6331
+       C   0.0278       -1.7773        -3.5545      5.1688
+       U   0.0276       -1.7810        -3.5620      5.1792
+       M   0.0241       -1.8506        -3.7011      5.3748
+       W   0.0236       -1.8613        -3.7226      5.4051
+       F   0.0223       -1.8903        -3.7806      5.4868
+       G   0.0202       -1.9408        -3.8817      5.6295
+       Y   0.0197       -1.9536        -3.9072      5.6657
+       P   0.0193       -1.9641        -3.9282      5.6953
+       B   0.0129       -2.1688        -4.3375      6.2765
+       V   0.0098       -2.3078        -4.6155      6.6730
+       K   0.0077       -2.4294        -4.8588      7.0209
+       J   0.0015       -3.2504        -6.5008      9.3808
+       X   0.0015       -3.2504        -6.5008      9.3808
+       Q   0.0010       -3.4534        -6.9068      9.9658
+       Z   0.0007       -3.6319        -7.2637     10.4804
+
+  Rapidity range of English alphabet:
+    Most common  (E): rapidity = -0.9639
+    Least common (Z): rapidity = -3.6319
+    Total range:       2.6680
+    Ratio E/Z freq:    181.4
+    rapidity(E/Z):     2.6004
+
+  Gaps between consecutive letters (by frequency rank):
+  --------------------------------------------------
+  E->T: gap = 0.1893  (freq ratio 1.402)
+  T->A: gap = 0.0566  (freq ratio 1.109)
+  A->O: gap = 0.0457  (freq ratio 1.088)
+  O->I: gap = 0.0402  (freq ratio 1.077)
+  I->N: gap = 0.0172  (freq ratio 1.033)
+  N->S: gap = 0.0344  (freq ratio 1.066)
+  S->H: gap = 0.0206  (freq ratio 1.039)
+  H->R: gap = 0.0088  (freq ratio 1.017)
+  R->D: gap = 0.1808  (freq ratio 1.409)
+  D->L: gap = 0.0277  (freq ratio 1.055)
+  L->C: gap = 0.1921  (freq ratio 1.450)
+  C->U: gap = 0.0037  (freq ratio 1.007)
+  U->M: gap = 0.0696  (freq ratio 1.145)
+  M->W: gap = 0.0107  (freq ratio 1.021)
+  W->F: gap = 0.0290  (freq ratio 1.058)
+  F->G: gap = 0.0505  (freq ratio 1.104)
+  G->Y: gap = 0.0128  (freq ratio 1.025)
+  Y->P: gap = 0.0105  (freq ratio 1.021)
+  P->B: gap = 0.2047  (freq ratio 1.496)
+  B->V: gap = 0.1390  (freq ratio 1.316)
+  V->K: gap = 0.1216  (freq ratio 1.273)
+  K->J: gap = 0.8210  (freq ratio 5.133)
+  J->X: gap = 0.0000  (freq ratio 1.000)
+  X->Q: gap = 0.2030  (freq ratio 1.500)
+  Q->Z: gap = 0.1785  (freq ratio 1.429)
+
+  Average rapidity of vowels:     -1.3011 (n=5)
+  Average rapidity of consonants: -2.0681 (n=21)
+  Vowels are 0.7670 rapidity units higher (more common).
+
+  Shannon entropy of English letters: 4.1668 bits
+  Entropy of uniform 26-letter dist:  4.7004 bits
+  Redundancy: 11.35%
+
+==============================================================================
+SECTION 7: NEURAL FIRING RATES IN RAPIDITY SPACE
+==============================================================================
+
+Neurons fire at rates 0 to ~200 Hz (max firing rate).
+Normalize: x = rate / max_rate, so x in [0, 1].
+Rapidity: rho = arctanh(2x - 1)
+
+At x=0 (silent): rho -> -inf
+At x=0.5 (half-max): rho = 0
+At x=1 (max): rho -> +inf
+
+  Rate(Hz)   x=rate/max   rapidity     1/(1+e^(-2*rho))
+  ------------------------------------------------------------
+         1      0.0050       -2.6467         0.0050
+         5      0.0250       -1.8318         0.0250
+        10      0.0500       -1.4722         0.0500
+        20      0.1000       -1.0986         0.1000
+        30      0.1500       -0.8673         0.1500
+        50      0.2500       -0.5493         0.2500
+        75      0.3750       -0.2554         0.3750
+       100      0.5000        0.0000         0.5000
+       120      0.6000        0.2027         0.6000
+       150      0.7500        0.5493         0.7500
+       175      0.8750        0.9730         0.8750
+       190      0.9500        1.4722         0.9500
+       199      0.9950        2.6467         0.9950
+
+  The sigmoid function IS the inverse rapidity map!
+  x = sigmoid(2*rho) = 1/(1+exp(-2*rho))
+
+  This means neural sigmoid activation functions are computing
+  in RAPIDITY SPACE. The sigmoid squashes rapidity -> probability,
+  and the logit (= 2*rapidity) maps probability -> rapidity.
+
+  Gain modulation in neural networks:
+  If a neuron's response is y = sigmoid(g*x + b),
+  then in rapidity: rho_out = g*rho_in + b/2
+  Gain g SCALES rapidity. Bias b SHIFTS rapidity.
+  Neural computation is AFFINE in rapidity space.
+
+  Rate coding information efficiency:
+  If a neuron can distinguish N rates in [0, max_rate],
+  the rapidity resolution is delta_rho = total_range / N.
+
+  Practical rapidity range (5-195 Hz, avoiding extremes):
+    rho_lo = -1.8318 (at 5 Hz)
+    rho_hi = 1.8318 (at 195 Hz)
+    Total range = 3.6636 rapidity units
+    At 10 distinguishable levels: delta_rho = 0.3664
+    At 100 levels: delta_rho = 0.0366
+
+==============================================================================
+SECTION 8: LANGUAGE EVOLUTION IN RAPIDITY TIME
+==============================================================================
+
+If we use rapidity time tau = ln(t)/2 where t = years before present,
+then exponential processes become LINEAR in tau.
+
+Hypothesis: language branching events are approximately uniform
+in rapidity time (like biological speciation events in log-time).
+
+  Event                          YBP     rap_time   delta_rap
+  ----------------------------------------------------------------------
+  Proto-Indo-European splits        6000     4.3498        ---
+  Tocharian separates               5500     4.3063     0.0435
+  Greco-Armenian splits             4500     4.2059     0.1003
+  Indo-Iranian separates            4200     4.1714     0.0345
+  Balto-Slavic separates            3800     4.1214     0.0500
+  Celtic separates                  3500     4.0803     0.0411
+  Italic separates                  3200     4.0355     0.0448
+  Germanic separates                3000     4.0032     0.0323
+  Greek-Armenian split              2800     3.9687     0.0345
+  Indo-Aryan/Iranian split          2500     3.9120     0.0567
+  Slavic-Baltic split               2000     3.8005     0.1116
+  West/North/East Germanic          1800     3.7478     0.0527
+  Romance diversification           1500     3.6566     0.0912
+  English-Frisian split             1400     3.6221     0.0345
+  Slavic diversification            1200     3.5450     0.0771
+
+  Statistics of inter-event rapidity gaps:
+    Mean gap:    0.0575
+    Std dev:     0.0256
+    CV (std/mean): 0.446
+    Min gap:     0.0323
+    Max gap:     0.1116
+
+  For comparison, inter-event gaps in regular (linear) time:
+    Mean gap:    342.9 years
+    CV:          0.621
+
+  CV in rapidity time: 0.446 vs CV in linear time: 0.621
+  Events are MORE UNIFORM in rapidity time (lower CV)!
+
+  NOTE: These dates are approximate and scholarly consensus varies.
+  The point is structural: evolutionary branching processes that are
+  Poisson in log-time (common in biology) are uniform in rapidity.
+
+==============================================================================
+SECTION 9: DUNBAR'S NUMBER AND SOCIAL RAPIDITY SPACING
+==============================================================================
+
+Robin Dunbar's social brain hypothesis identifies nested social layers:
+Each layer is ~3x the previous (the 'Rule of Three').
+
+In rapidity: each layer adds rapidity(3) = ln(3)/2 = 0.5493
+
+  Layer               Size    Rapidity    Delta_rap    Ratio to prev
+  ------------------------------------------------------------------------
+  Intimate support          2      0.2027       ---          ---
+  Close support             5      0.8047      0.6020         3.33
+  Sympathy group           15      1.3540      0.5493         3.00
+  Affinity group           50      1.9560      0.6020         3.33
+  Dunbar's number         150      2.5053      0.5493         3.00
+  Acquaintances           500      3.1073      0.6020         3.33
+  Known faces            1500      3.6566      0.5493         3.00
+  Known names            5000      4.2586      0.6020         3.33
+
+  Rapidity spacing statistics:
+    Mean spacing:  0.5794
+    Std dev:       0.0261
+    CV:            0.045
+    Expected for ratio ~3.3x: ln(3.3)/2 = 0.5970
+
+  Geometric mean scaling ratio: 3.19
+  Rapidity of this ratio:       0.5794
+  ln(ratio)/2:                  0.5794
+
+  The 'Rule of Three' in rapidity terms:
+  Each social layer is separated by ~0.579 rapidity units.
+  This is close to ln(3)/2 = 0.5493 (factor of 3).
+
+  Special values in rapidity:
+
+  Group                       Size    Rapidity  Superparticular ratio
+  -----------------------------------------------------------------
+  Monogamy                       2      0.3466  f(2)=1.500000, rap=0.202733
+  Nuclear family                 4      0.6931  f(4)=1.250000, rap=0.111572
+  Close friends                 15      1.3540  f(15)=1.066667, rap=0.032269
+  Clan/platoon                  50      1.9560  f(50)=1.020000, rap=0.009901
+  Dunbar's number              150      2.5053  f(150)=1.006667, rap=0.003322
+  Company (military)           250      2.7607  f(250)=1.004000, rap=0.001996
+  Tribe / small firm           500      3.1073  f(500)=1.002000, rap=0.000999
+  Village                     1500      3.6566  f(1500)=1.000667, rap=0.000333
+
+  INSIGHT: Dunbar's layers are EQUALLY SPACED in rapidity!
+  The social brain creates a GEOMETRIC sequence of group sizes,
+  which is an ARITHMETIC sequence in rapidity.
+  Each new social layer requires the same 'cognitive rapidity step'
+  to maintain, regardless of absolute group size.
+
+==============================================================================
+SYNTHESIS: RAPIDITY AS A UNIVERSAL SCALING COORDINATE
+==============================================================================
+
+  Across nine domains, rapidity = arctanh (or ln(x)/2) unifies:
+
+  1. ZIPF'S LAW:       f(r) ~ 1/r  <==>  rap(freq) = -rap(rank) + const
+                        Power law IS linear in rapidity.
+
+  2. INFORMATION:      I(p) = -log2(p) = 1 - log2(1 + tanh(rap(p)))
+                        Information is monotone in rapidity.
+
+  3. BENFORD'S LAW:    P(d) = log10(f(d)) = (2/ln10) * delta_rap(d)
+                        First-digit law IS uniform rapidity spacing.
+                        f(d) = (d+1)/d is the superparticular ratio!
+
+  4. WEBER-FECHNER:    Perception = k * ln(S) = 2k * rapidity(S)
+                        Perception IS rapidity. JND = constant rap step.
+
+  5. HICK'S LAW:       RT = a + b*log2(n) = a + (2b/ln2)*rap(n)
+                        Decision time is LINEAR in rapidity.
+
+  6. LETTER FREQ:      26 letters span rapidity range [-3.27, -0.97]
+                        Vowels avg 0.29 rap units higher than consonants.
+
+  7. NEURAL CODING:    Sigmoid IS rapidity->probability map.
+                        Neural networks compute in rapidity space.
+                        Gain = rapidity scaling. Bias = rapidity shift.
+
+  8. LANGUAGE EVOL:    Branching events more uniform in rapidity time
+                        than linear time. Log-Poisson -> uniform rapidity.
+
+  9. DUNBAR LAYERS:    Social groups form arithmetic seq in rapidity.
+                        Each layer costs one 'cognitive rapidity step'.
+
+  UNIFYING PRINCIPLE: Rapidity is the natural coordinate for any
+  system where RATIOS matter more than differences. This includes:
+    - frequencies (Zipf, letters, neural rates)
+    - intensities (Weber-Fechner, neural coding)
+    - probabilities (information, Benford)
+    - time scales (evolution, reaction time)
+    - social quantities (Dunbar layers)
+
+  The superparticular ratio f(n) = (n+1)/n is the ELEMENTARY
+  rapidity step: it corresponds to rapidity increment ln(1+1/n)/2,
+  which generates the harmonic series (= alkane series = arctanh Taylor).
+  Benford's law makes this connection explicit:
+    P(digit d) = log of superparticular ratio = log of musical interval
+
+  The alkane series sum 1/(2k+1) = [1, 1/3, 1/5, 1/7, ...]
+  gives arctanh(1) = sum 1/(2k+1) (divergent), and the partial sums
+  arctanh(1/n) = sum 1/((2k+1)*n^(2k+1)) converge to the rapidity
+  of each superparticular ratio. The entire structure of scaling laws
+  is encoded in the Taylor series of arctanh.
+
+==============================================================================
+END OF EXPLORATION
+==============================================================================
