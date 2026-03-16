@@ -1,0 +1,701 @@
+
+
+
+     THE META-COMPLEX PLANE: SEEING THE ONE GROUP
+
+     opus-2026-03-16-S90aw
+
+
+
+THE PROBLEM
+===========
+
+We have three groups that are isomorphic:
+
+  G_add = (R, +)                    "rapidities"
+  G_mul = ((0,inf), *)              "odds / natural numbers"
+  G_hyp = ((-1,1), F)              "couplings / velocities"
+
+The maps between them:
+
+  arctanh: G_hyp -> G_add           (coupling -> rapidity)
+  exp(2*-): G_add -> G_mul          (rapidity -> odds)
+  Q = (1+x)/(1-x): G_hyp -> G_mul  (coupling -> odds)
+
+Each map is a group isomorphism. The triangle commutes:
+
+     arctanh          exp(2w)
+  G_hyp ---------> G_add ---------> G_mul
+    |                                  ^
+    |              Q(x)                |
+    +----------------------------------+
+
+To "see the one group," we need a SINGLE SPACE that contains
+all three realizations simultaneously. That space is the
+META-COMPLEX PLANE.
+
+
+THE META-COMPLEX PLANE
+=======================
+
+Consider the COMPLEX NUMBERS C = R + i*R.
+
+The exponential map exp: C -> C* acts as:
+
+  exp(a + bi) = e^a * (cos(b) + i*sin(b))
+
+This simultaneously encodes:
+  - REAL PART a:  rapidity (additive, costume 1)
+  - IMAGINARY PART b: angle/phase (periodic, mod 2*pi)
+  - MODULUS e^a: magnitude (multiplicative, costume 2)
+  - ARGUMENT b: direction (circular, costume 3-like)
+
+But we want the Cayley version. Define:
+
+  z = arctanh(w) = (1/2) ln((1+w)/(1-w))
+
+where w is a COMPLEX coupling. This extends arctanh to C.
+
+For w = x + iy with |w| < 1:
+  arctanh(w) = (1/2) ln((1+w)/(1-w))
+  = (1/2) [ln|((1+w)/(1-w))| + i*arg((1+w)/(1-w))]
+
+The REAL PART of arctanh(w) is the hyperbolic rapidity.
+The IMAGINARY PART of arctanh(w) is the ANGLE.
+
+When w is REAL (w = x in (-1,1)): arctanh(x) is real. Pure rapidity.
+When w is IMAGINARY (w = iy, |y| < 1): arctanh(iy) = i*arctan(y). Pure angle.
+
+THIS IS THE KEY:
+  arctanh of a real coupling = rapidity.
+  arctanh of an imaginary coupling = i * angle.
+
+The META-COMPLEX PLANE is C with the metric |dz|^2 = |d(arctanh(w))|^2.
+In this metric:
+  - The real axis is the HYPERBOLIC line (rapidities).
+  - The imaginary axis is the CIRCULAR line (angles).
+  - The unit disk |w| < 1 is the HYPERBOLIC PLANE (Poincare disk model!).
+
+======================================================================
+Part 1: Complex arctanh — the bridge to angles
+======================================================================
+
+arctanh on the real axis (coupling -> rapidity):
+  arctanh(0.0000) = 0.000000  (rapidity, real)
+  arctanh(0.1000) = 0.100335  (rapidity, real)
+  arctanh(0.2000) = 0.202733  (rapidity, real)
+  arctanh(0.3333) = 0.346574  (rapidity, real)
+  arctanh(0.5000) = 0.549306  (rapidity, real)
+  arctanh(0.6000) = 0.693147  (rapidity, real)
+  arctanh(0.6667) = 0.804719  (rapidity, real)
+  arctanh(0.8000) = 1.098612  (rapidity, real)
+  arctanh(0.9000) = 1.472219  (rapidity, real)
+  arctanh(0.9900) = 2.646652  (rapidity, real)
+
+arctanh on the imaginary axis (i*coupling -> i*angle):
+  arctanh(0.0000i) = 0.000000 + 0.000000i  (angle = 0.00 deg)
+  arctanh(0.1000i) = 0.000000 + 0.099669i  (angle = 5.71 deg)
+  arctanh(0.2000i) = 0.000000 + 0.197396i  (angle = 11.31 deg)
+  arctanh(0.3333i) = 0.000000 + 0.321751i  (angle = 18.43 deg)
+  arctanh(0.5000i) = 0.000000 + 0.463648i  (angle = 26.57 deg)
+  arctanh(0.5774i) = 0.000000 + 0.523599i  (angle = 30.00 deg)
+  arctanh(0.8000i) = 0.000000 + 0.674741i  (angle = 38.66 deg)
+  arctanh(0.9000i) = 0.000000 + 0.732815i  (angle = 41.99 deg)
+  arctanh(0.9900i) = 0.000000 + 0.780373i  (angle = 44.71 deg)
+  arctanh(1.0000i) = 0.000000 + 0.785398i  (angle = 45.00 deg)
+
+REMARKABLE: arctanh(i*y) = i*arctan(y) exactly.
+
+The real axis through arctanh gives RAPIDITIES.
+The imaginary axis through arctanh gives ANGLES.
+
+arctanh UNIFIES hyperbolic and circular functions:
+  arctanh(x) = real rapidity         (x real)
+  arctanh(iy) = i * arctan(y)        (y real)
+  arctanh(x + iy) = rapidity + i*angle  (general)
+
+This means: a COMPLEX coupling w = x + iy has:
+  - Real part x: the hyperbolic component (boost)
+  - Imaginary part y: the circular component (rotation)
+  - arctanh(w): the complex rapidity = boost + i*rotation
+
+THE HYPERBOLIC AND CIRCULAR ARE THE REAL AND IMAGINARY PARTS
+OF THE SAME COMPLEX OPERATION: arctanh.
+
+======================================================================
+Part 2: F(w1, w2) = (w1+w2)/(1+w1*w2) on the complex plane
+======================================================================
+
+The formal group law F(w1,w2) = (w1+w2)/(1+w1*w2) extends to complex w.
+
+For complex w1, w2 with |w| < 1 (inside the unit disk):
+  F(w1,w2) is again in the unit disk (if both inputs are).
+
+This is the MOBIUS ADDITION on the Poincare disk.
+It IS the hyperbolic translation in the disk model.
+
+Key cases:
+
+  F(x, 0) = x                    (adding zero = no change)
+  F(x, x) = 2x/(1+x^2)          (doubling in hyperbolic direction)
+  F(x, -x) = 0                   (cancellation)
+  F(x, iy) = ?                   (mixing real and imaginary)
+
+F(x, iy) — mixing rapidity with rotation:
+  F(0.3333, 0.1000i) = 0.336293 + 0.088790i
+    arctanh(F) = 0.346574 + 0.099669i
+    arctanh(w1) + arctanh(w2) = 0.346574 + 0.099669i
+    match: True
+  F(0.3333, 0.5000i) = 0.405405 + 0.432432i
+    arctanh(F) = 0.346574 + 0.463648i
+    arctanh(w1) + arctanh(w2) = 0.346574 + 0.463648i
+    match: True
+  F(0.3333, 0.5774i) = 0.428571 + 0.494872i
+    arctanh(F) = 0.346574 + 0.523599i
+    arctanh(w1) + arctanh(w2) = 0.346574 + 0.523599i
+    match: True
+  F(0.5000, 0.1000i) = 0.503741 + 0.074813i
+    arctanh(F) = 0.549306 + 0.099669i
+    arctanh(w1) + arctanh(w2) = 0.549306 + 0.099669i
+    match: True
+  F(0.5000, 0.5000i) = 0.588235 + 0.352941i
+    arctanh(F) = 0.549306 + 0.463648i
+    arctanh(w1) + arctanh(w2) = 0.549306 + 0.463648i
+    match: True
+  F(0.5000, 0.5774i) = 0.615385 + 0.399704i
+    arctanh(F) = 0.549306 + 0.523599i
+    arctanh(w1) + arctanh(w2) = 0.549306 + 0.523599i
+    match: True
+
+PERFECT. F(w1,w2) = (w1+w2)/(1+w1*w2) satisfies:
+  arctanh(F(w1,w2)) = arctanh(w1) + arctanh(w2)
+
+even for COMPLEX inputs. The formal group law is the
+addition law in the META-COMPLEX PLANE.
+
+Mixing real coupling x with imaginary coupling iy:
+  arctanh(F(x, iy)) = arctanh(x) + i*arctan(y)
+                     = rapidity + i*angle.
+
+This is a BOOST followed by a ROTATION.
+Or equivalently: a Lorentz transformation.
+
+THE FORMAL GROUP LAW ON THE COMPLEX PLANE IS
+THE LORENTZ GROUP.
+
+======================================================================
+Part 3: SOLVING EQUATIONS across all three costumes
+======================================================================
+
+PROBLEM TYPE 1: Given a coupling x, find the "harmonic coupling" x_h
+such that F(x, x_h) is purely imaginary.
+
+This means: find x_h such that the boost x combined with x_h
+gives a PURE ROTATION (no net boost).
+
+Solution:
+  arctanh(F(x, x_h)) must be purely imaginary.
+  arctanh(x) + arctanh(x_h) = i*theta.
+  arctanh(x_h) = -arctanh(x) + i*theta.
+  x_h = tanh(-arctanh(x) + i*theta) = tanh(i*theta - arctanh(x)).
+
+For theta = pi/4 (45 degrees):
+  x_h = tanh(i*pi/4 - arctanh(x)).
+
+Let's compute:
+
+  x=0.0000, theta=30 deg: w_h = 0.000000 + 0.577350i, F = 0.00e+00 + 0.577350i
+  x=0.0000, theta=45 deg: w_h = 0.000000 + 1.000000i, F = 0.00e+00 + 1.000000i
+  x=0.0000, theta=60 deg: w_h = 0.000000 + 1.732051i, F = 0.00e+00 + 1.732051i
+  x=0.3333, theta=30 deg: w_h = -0.428571 + 0.494872i, F = 1.25e-16 + 0.577350i
+  x=0.3333, theta=45 deg: w_h = -0.600000 + 0.800000i, F = 1.25e-16 + 1.000000i
+  x=0.3333, theta=60 deg: w_h = -1.000000 + 1.154701i, F = 1.25e-16 + 1.732051i
+  x=0.5000, theta=30 deg: w_h = -0.615385 + 0.399704i, F = 7.40e-17 + 0.577350i
+  x=0.5000, theta=45 deg: w_h = -0.800000 + 0.600000i, F = 1.48e-16 + 1.000000i
+  x=0.5000, theta=60 deg: w_h = -1.142857 + 0.742307i, F = 4.44e-16 + 1.732051i
+  x=0.6000, theta=30 deg: w_h = -0.714286 + 0.329914i, F = 2.17e-17 + 0.577350i
+  x=0.6000, theta=45 deg: w_h = -0.882353 + 0.470588i, F = 8.67e-17 + 1.000000i
+  x=0.6000, theta=60 deg: w_h = -1.153846 + 0.532939i, F = 0.00e+00 + 1.732051i
+
+When we choose x_h correctly, F(x, x_h) is purely imaginary.
+The boost has been "cancelled" and only rotation remains.
+
+This is EXACTLY what happens in special relativity:
+a Lorentz boost combined with the right rotation gives
+a pure spatial rotation. The meta-complex plane makes
+this automatic.
+
+======================================================================
+Part 4: The one group and its three projections
+======================================================================
+
+THE ONE GROUP is the complex group:
+
+  G_meta = (D, F)
+
+where D = {w in C : |w| < 1} is the unit disk, and
+F(w1,w2) = (w1+w2)/(1+w1*w2) is the Mobius addition.
+
+This group is isomorphic to:
+
+  (C, +)   via   arctanh: D -> C   (the universal cover)
+
+The THREE REAL SUBGROUPS are:
+
+  G_hyp = G_meta restricted to the real interval (-1,1)
+          = horizontal diameter of the disk
+          costumes: couplings, velocities
+
+  G_circ = G_meta restricted to the imaginary interval (-i, i)
+           = vertical diameter of the disk
+           costumes: angles, phases, rotations
+
+  G_full = G_meta on the full disk
+           = the Poincare disk
+           costumes: Lorentz transformations, Mobius maps
+
+The three "costumes" from before (additive, multiplicative, hyperbolic)
+are all REAL SLICES of this one complex group:
+
+  G_add = {arctanh(w) : w in (-1,1)} = R  (real axis of image)
+  G_mul = {Q(w) : w in (-1,1)} = (0,inf)  (positive real axis of image)
+  G_hyp = (-1,1) with F                    (real diameter of D)
+
+But the META-COMPLEX PLANE also has:
+
+  G_circ = {arctanh(iy) : y in (-1,1)} = iR  (imaginary axis of image)
+           = {i*arctan(y)} = angles up to pi/2
+
+So we get a FOURTH costume: the circular/rotational one.
+And the full group G_meta UNIFIES all four:
+
+  REAL DIAMETER:      hyperbolic boosts     (rapidities)
+  IMAGINARY DIAMETER: circular rotations    (angles)
+  FULL DISK:          all Lorentz transf.   (general)
+
+This is the POINCARE DISK MODEL of the hyperbolic plane!
+Tournament theory lives on the real diameter.
+Rotation theory lives on the imaginary diameter.
+The full hyperbolic plane connects them.
+
+======================================================================
+Part 5: Euler's formula IS the meta-complex plane
+======================================================================
+
+Euler's formula: e^{i*theta} = cos(theta) + i*sin(theta).
+
+In the meta-complex plane:
+
+  The Cayley transform Q(w) = (1+w)/(1-w) maps the disk to the
+  right half-plane. On the boundary (unit circle), Q maps
+  e^{i*theta} to ... well, the unit circle maps to the imaginary axis:
+
+  Q(e^{i*theta}) = (1 + e^{i*theta}) / (1 - e^{i*theta})
+                 = (e^{-i*theta/2} + e^{i*theta/2}) / (e^{-i*theta/2} - e^{i*theta/2})
+                 = cos(theta/2) / (-i*sin(theta/2))
+                 * ... wait let me redo this.
+
+  Q(e^{i*theta}) = (1 + e^{i*theta}) / (1 - e^{i*theta})
+  Multiply top/bottom by e^{-i*theta/2}:
+  = (e^{-i*theta/2} + e^{i*theta/2}) / (e^{-i*theta/2} - e^{i*theta/2})
+  = 2*cos(theta/2) / (-2i*sin(theta/2))
+  = cos(theta/2) / (-i*sin(theta/2))
+  = i * cos(theta/2) / sin(theta/2)
+  = i * cot(theta/2).
+
+So Q maps the unit circle to the imaginary axis:
+  Q(e^{i*theta}) = i*cot(theta/2).
+
+And arctanh maps the unit circle to ... let's see:
+  arctanh(e^{i*theta}) = (1/2) ln(Q(e^{i*theta}))
+                       = (1/2) ln(i*cot(theta/2))
+                       = (1/2) [ln(cot(theta/2)) + i*pi/2]
+                       = (1/2)*ln(cot(theta/2)) + i*pi/4.
+
+So: on the unit circle, the IMAGINARY PART of arctanh is
+CONSTANT at pi/4 = 45 degrees! And the real part varies
+with theta.
+
+Let me verify:
+
+  theta =   30.0 deg: arctanh(e^{i*theta}) =   0.6585 + 0.7854i (Im = 0.2500*pi)
+  theta =   45.0 deg: arctanh(e^{i*theta}) =   0.4407 + 0.7854i (Im = 0.2500*pi)
+  theta =   60.0 deg: arctanh(e^{i*theta}) =   0.2747 + 0.7854i (Im = 0.2500*pi)
+  theta =   90.0 deg: arctanh(e^{i*theta}) =   0.0000 + 0.7854i (Im = 0.2500*pi)
+  theta =  120.0 deg: arctanh(e^{i*theta}) =  -0.2747 + 0.7854i (Im = 0.2500*pi)
+  theta =  135.0 deg: arctanh(e^{i*theta}) =  -0.4407 + 0.7854i (Im = 0.2500*pi)
+  theta =  150.0 deg: arctanh(e^{i*theta}) =  -0.6585 + 0.7854i (Im = 0.2500*pi)
+
+On the unit circle: Im(arctanh) = pi/4 (constant!)
+except at theta = 0 (arctanh(1) = infinity) and theta = pi (arctanh(-1) = -infinity).
+
+This means: the unit circle in the meta-complex plane is a
+HORIZONTAL LINE at height pi/4 in the arctanh image.
+
+The unit circle separates:
+  INSIDE (|w| < 1): Im(arctanh) between 0 and pi/4.
+  OUTSIDE (|w| > 1): Im(arctanh) between pi/4 and pi/2.
+  BOUNDARY (|w| = 1): Im(arctanh) = pi/4 exactly.
+
+In tournament theory:
+  The couplings x in (-1,1) map to real rapidities (Im = 0).
+  The OCF points x > 1 map to COMPLEX rapidities (Im = pi/2).
+  The unit circle is the BOUNDARY between real and complex coupling.
+
+So the meta-complex plane organizes tournament theory into:
+  REAL COUPLINGS: inside the unit disk, real axis. Standard tournaments.
+  COMPLEX COUPLINGS: outside the unit disk. Analytic continuation.
+  UNIT CIRCLE: the boundary. Phase transitions.
+
+======================================================================
+Part 6: Solving equations — n-th roots of unity
+======================================================================
+
+The equation Q(w) = n (find the coupling whose odds are n) has solution:
+  w = (n-1)/(n+1) = the Cayley address.
+
+The equation Q(w)^m = n (find the coupling whose m-th power odds are n):
+  Q(w) = n^{1/m}.
+  w = (n^{1/m} - 1)/(n^{1/m} + 1).
+
+But in the META-COMPLEX PLANE, n^{1/m} has m COMPLEX roots:
+  n^{1/m} * e^{2*pi*i*k/m}  for k = 0, 1, ..., m-1.
+
+So the equation Q(w)^m = n has m solutions in the disk:
+
+
+  Q(w)^2 = 2 has 2 solutions:
+    k=0: w =  0.17157 +  0.00000i, |w| = 0.17157, arctanh(w) =  0.17329 +  0.00000i
+    k=1: w =  5.82843 +  0.00000i, |w| = 5.82843, arctanh(w) =  0.17329 +  1.57080i
+
+  Q(w)^3 = 2 has 3 solutions:
+    k=0: w =  0.11501 +  0.00000i, |w| = 0.11501, arctanh(w) =  0.11552 +  0.00000i
+    k=1: w =  0.44249 +  1.64390i, |w| = 1.70241, arctanh(w) =  0.11552 +  1.04720i
+    k=2: w =  0.44249 + -1.64390i, |w| = 1.70241, arctanh(w) =  0.11552 + -1.04720i
+
+  Q(w)^4 = 2 has 4 solutions:
+    k=0: w =  0.08643 +  0.00000i, |w| = 0.08643, arctanh(w) =  0.08664 +  0.00000i
+    k=1: w =  0.17157 +  0.98517i, |w| = 1.00000, arctanh(w) =  0.08664 +  0.78540i
+    k=2: w = 11.57043 +  0.00000i, |w| = 11.57043, arctanh(w) =  0.08664 +  1.57080i
+    k=3: w =  0.17157 + -0.98517i, |w| = 1.00000, arctanh(w) =  0.08664 + -0.78540i
+
+  Q(w)^5 = 2 has 5 solutions:
+    k=0: w =  0.06920 +  0.00000i, |w| = 0.06920, arctanh(w) =  0.06931 +  0.00000i
+    k=1: w =  0.10547 +  0.72124i, |w| = 0.72891, arctanh(w) =  0.06931 +  0.62832i
+    k=2: w =  0.69326 +  2.93003i, |w| = 3.01093, arctanh(w) =  0.06931 +  1.25664i
+    k=3: w =  0.69326 + -2.93003i, |w| = 3.01093, arctanh(w) =  0.06931 + -1.25664i
+    k=4: w =  0.10547 + -0.72124i, |w| = 0.72891, arctanh(w) =  0.06931 + -0.62832i
+
+  Q(w)^6 = 2 has 6 solutions:
+    k=0: w =  0.05770 +  0.00000i, |w| = 0.05770, arctanh(w) =  0.05776 +  0.00000i
+    k=1: w =  0.07685 +  0.57479i, |w| = 0.57990, arctanh(w) =  0.05776 +  0.52360i
+    k=2: w =  0.22851 +  1.70921i, |w| = 1.72442, arctanh(w) =  0.05776 +  1.04720i
+    k=3: w = 17.33159 +  0.00000i, |w| = 17.33159, arctanh(w) =  0.05776 +  1.57080i
+    k=4: w =  0.22851 + -1.70921i, |w| = 1.72442, arctanh(w) =  0.05776 + -1.04720i
+    k=5: w =  0.07685 + -0.57479i, |w| = 0.57990, arctanh(w) =  0.05776 + -0.52360i
+
+The k=0 solution is REAL: the ordinary Cayley address.
+The k != 0 solutions are COMPLEX: they live off the real axis.
+
+The COMPLEX solutions form a REGULAR POLYGON in the arctanh image:
+  They are equally spaced along the imaginary axis (angle 2*pi/m apart).
+  They all have the same real part (rapidity ln(n)/(2m)).
+
+This is the META-COMPLEX version of roots of unity:
+  Instead of e^{2*pi*i*k/m} on the unit circle,
+  we have tanh(ln(n)/(2m) + i*pi*k/m) in the Poincare disk.
+
+The REAL root (k=0) is the tournament coupling.
+The COMPLEX roots (k>0) are the HARMONIC couplings:
+  they contribute to the analytic continuation of the
+  tournament partition function.
+
+======================================================================
+Part 7: Solving any equation in the one group
+======================================================================
+
+ANY equation in any of the three costumes can be solved by:
+  1. Convert to the additive costume (apply arctanh).
+  2. Solve the LINEAR equation in the additive costume.
+  3. Convert back (apply tanh).
+
+EXAMPLE 1: F(x, x) = F(x, F(x, x)) ??? Find fixed points.
+  This is: [2](x) = [3](x), i.e., tanh(2w) = tanh(3w) where w = arctanh(x).
+  So: 2w = 3w + n*pi*i for some integer n (from periodicity of tanh in C).
+  -w = n*pi*i.
+  w = -n*pi*i.
+  x = tanh(-n*pi*i) = -i*tan(n*pi) = 0 for all n.
+  Only solution: x = 0.
+
+EXAMPLE 2: F(x, a) = b. Solve for x.
+  arctanh(x) + arctanh(a) = arctanh(b).
+  arctanh(x) = arctanh(b) - arctanh(a).
+  x = tanh(arctanh(b) - arctanh(a)).
+  x = F(b, -a) = (b - a)/(1 - ab).   Done!
+
+EXAMPLE 3: [m](x) = a. Solve for x (m-th root in the formal group).
+  tanh(m * arctanh(x)) = a.
+  m * arctanh(x) = arctanh(a) + n*pi*i.
+  arctanh(x) = arctanh(a)/m + n*pi*i/m.
+  x = tanh(arctanh(a)/m + n*pi*i/m)  for n = 0, 1, ..., m-1.
+
+This gives m roots! The n=0 root is real (if a is real and |a|<1).
+The other roots are complex.
+
+EXAMPLE 3: [3](x) = 0.6 (find x such that F(x,F(x,x)) = 0.6)
+  a = 0.6 = x_4 = Cayley address of 4
+  So we seek x with [3](x) = x_4, i.e., x^3 = 4 in multiplicative costume
+  Real solution: x = 4^(1/3) in mult costume = x_{4^(1/3)} = (4^(1/3)-1)/(4^(1/3)+1)
+
+  n=0: x =   0.227024 +   0.000000i, [3](x) = 0.600000 + 0.000000i, match a=0.6: True
+  n=1: x =   0.786488 +   1.422791i, [3](x) = 0.600000 + -0.000000i, match a=0.6: True
+  n=2: x =   0.786488 +  -1.422791i, [3](x) = 0.600000 + -0.000000i, match a=0.6: True
+
+
+======================================================================
+Part 8: What IS the meta-complex plane?
+======================================================================
+
+The meta-complex plane is the POINCARE DISK D = {w in C : |w| < 1}
+equipped with the FORMAL GROUP LAW F(w1,w2) = (w1+w2)/(1+w1*w2).
+
+This is:
+  1. The HYPERBOLIC PLANE (in the Poincare disk model).
+  2. The space of LORENTZ BOOSTS + ROTATIONS (the Lorentz group).
+  3. The space of COMPLEX COUPLINGS in tournament theory.
+  4. The space of MOBIUS TRANSFORMATIONS fixing the disk.
+
+The THREE REAL GROUPS are the THREE AXES:
+  Real axis:      boosts         (rapidities)      tanh
+  Imaginary axis: rotations      (angles)           tan
+  Unit circle:    null / light    (phase transitions)  boundary
+
+The isomorphism arctanh: D -> C makes the disk into C,
+and in C, the operation is just ADDITION:
+
+  arctanh(F(w1,w2)) = arctanh(w1) + arctanh(w2).
+
+So the meta-complex plane IS C with addition, wearing the costume
+of the Poincare disk via tanh.
+
+THE POINCARE DISK IS THE ONE GROUP.
+
+It contains:
+  - The real interval (-1,1) as its horizontal diameter (couplings).
+  - The imaginary interval (-i,i) as its vertical diameter (phases).
+  - The unit circle as its boundary (speed of light / phase transitions).
+  - All complex couplings as interior points.
+
+And the EQUATION-SOLVING PRINCIPLE:
+  Convert any equation to the additive form (via arctanh).
+  Solve linearly.
+  Convert back (via tanh).
+
+This works because arctanh linearizes the group law:
+  F(a,b) = tanh(arctanh(a) + arctanh(b)).
+
+ANY formal group law can be linearized by its logarithm.
+For our F, the logarithm is arctanh.
+For the multiplicative group, the logarithm is ln.
+For the additive group, the logarithm is the identity.
+
+So: arctanh is to F what ln is to multiplication.
+And: tanh is to F what exp is to addition.
+
+THE ONE SENTENCE:
+  tanh : arctanh :: exp : ln :: the group : its logarithm.
+  And the Poincare disk D with F is the group.
+  And C with + is the logarithm.
+  And the meta-complex plane is where you see both at once.
+
+======================================================================
+Part 9: Powers of 2 as a lattice in the meta-complex plane
+======================================================================
+
+In the additive costume (C with +), the powers of 2 sit at:
+  w_k = k * ln(2)/2   for k = 0, 1, 2, ...
+
+These are EQUALLY SPACED on the real axis, at intervals ln(2)/2.
+
+In the disk costume (D with F), these become:
+  x_k = tanh(k * ln(2)/2) = (2^k - 1)/(2^k + 1)
+
+These are UNEQUALLY SPACED on the real diameter, clustering near 1.
+
+Now: what about the COMPLEX lattice?
+
+The full lattice in C is:
+  w_{j,k} = j * ln(2)/2 + i * k * pi / N
+
+for integers j, k and some chosen N (the rotational resolution).
+
+These lattice points, mapped back to the disk via tanh, give:
+
+Lattice points in the Poincare disk (N=6):
+  j   k |      Re(w)      Im(w) |  Re(tanh(w))  Im(tanh(w)) |  |tanh(w)|
+---------------------------------------------------------------------------
+  0   0 |     0.0000     0.0000 |     0.000000     0.000000 |   0.000000
+  0   1 |     0.0000     0.5236 |     0.000000     0.577350 |   0.577350
+  0   5 |     0.0000     2.6180 |     0.000000    -0.577350 |   0.577350
+  1   0 |     0.3466     0.0000 |     0.333333     0.000000 |   0.333333
+  1   1 |     0.3466     0.5236 |     0.428571     0.494872 |   0.654654
+  1   5 |     0.3466     2.6180 |     0.428571    -0.494872 |   0.654654
+  2   0 |     0.6931     0.0000 |     0.600000     0.000000 |   0.600000
+  2   1 |     0.6931     0.5236 |     0.714286     0.329914 |   0.786796
+  2   5 |     0.6931     2.6180 |     0.714286    -0.329914 |   0.786796
+  3   0 |     1.0397     0.0000 |     0.777778     0.000000 |   0.777778
+  3   1 |     1.0397     0.5236 |     0.863014     0.189814 |   0.883641
+  3   5 |     1.0397     2.6180 |     0.863014    -0.189814 |   0.883641
+  4   0 |     1.3863     0.0000 |     0.882353     0.000000 |   0.882353
+  4   1 |     1.3863     0.5236 |     0.934066     0.101512 |   0.939566
+  4   5 |     1.3863     2.6180 |     0.934066    -0.101512 |   0.939566
+
+
+The j=0 column (k varies) traces the IMAGINARY AXIS of the disk:
+  tanh(i*k*pi/N) = i*tan(k*pi/N).
+These are N-th roots of unity on the imaginary axis.
+
+The k=0 row (j varies) traces the REAL AXIS:
+  tanh(j*ln(2)/2) = (2^j-1)/(2^j+1).
+These are the Cayley addresses of powers of 2. MERSENNE NUMERATORS.
+
+The off-diagonal points (j>0, k>0) are COMPLEX couplings:
+  They represent COMBINED boost-rotation states.
+  Their moduli |tanh(w)| increase with j (closer to the boundary).
+  Their arguments rotate with k.
+
+THE FULL LATTICE in the Poincare disk is the product:
+  (half-bit rapidity lattice) x (N-fold angular lattice).
+
+This is a RECTANGULAR LATTICE in (rapidity, angle) space,
+mapped to a DISTORTED LATTICE in the Poincare disk via tanh.
+
+The distortion IS tanh: it compresses the radial direction
+(higher rapidities are closer together near the boundary)
+while preserving the angular direction at small radius.
+
+======================================================================
+Part 10: The universal zone — the faithful inner region
+======================================================================
+
+THM-227: Tr(M_k^n) = 2^n - 1 for 1 <= n <= k.
+
+In the meta-complex plane:
+  The k-nacci matrix M_k has eigenvalues in the complex plane.
+  These eigenvalues, via Cayley inverse, sit inside the Poincare disk.
+
+The UNIVERSAL ZONE is where the disk representation is FAITHFUL:
+  For n <= k, the trace = 2^n - 1, independent of k.
+  This is because the k-nacci eigenvalues, mapped to the disk,
+  occupy specific positions that conspire to give the Mersenne trace.
+
+The INDIVIDUAL ZONE is where faithfulness breaks:
+  For n > k, the k-nacci eigenvalues start "running out of room"
+  to maintain the Mersenne trace, because there are only k of them.
+
+In the meta-complex plane, this looks like:
+  - The universal zone occupies the INNER PART of the disk
+    (where tanh is approximately linear: tanh(w) ~ w for small w).
+  - The individual zone occupies the OUTER PART of the disk
+    (where tanh saturates: tanh(w) ~ 1 for large w).
+
+The TRANSITION at n = k is the point where the dominant eigenvalue
+tau_k = tanh(w_1) has rapidity w_1 large enough that
+tanh starts to noticeably differ from the identity.
+
+For the k-nacci matrix:
+  tau_k = tanh(arctanh(tau_k)) with arctanh(tau_k) = ln(tau_k/(1-??))...
+  Actually: tau_k > 1 for k >= 2, so it's OUTSIDE the disk (-1,1).
+  The eigenvalues are NOT in the coupling disk.
+  They are in the EXTENDED disk (via analytic continuation).
+
+So the meta-complex plane picture is:
+  - The k-nacci eigenvalues live OUTSIDE the unit disk
+    (on the real axis, since tau_k > 1).
+  - Their Cayley transforms Q(tau_k) = (1+tau_k)/(1-tau_k) are NEGATIVE
+    (since tau_k > 1 makes 1-tau_k < 0).
+  - The complex eigenvalues live INSIDE the unit disk
+    (since |lambda_complex| < 1 for k >= 3).
+
+The DOMINANT eigenvalue is OUTSIDE.
+The SUBDOMINANT eigenvalues are INSIDE.
+
+The universal zone is where the OUTSIDE eigenvalue
+(the dominant one, near 2) completely controls the trace.
+The individual zone is where the INSIDE eigenvalues
+(the subdominant ones, inside the disk) start to matter.
+
+THE BOUNDARY of the unit disk = |w| = 1 = the SPEED OF LIGHT.
+The dominant eigenvalue is SUPERLUMINAL (tau_k > 1).
+The subdominant eigenvalues are SUBLUMINAL (|lambda| < 1).
+
+The universal zone is SUPERLUMINAL DOMINATED.
+The individual zone is where SUBLUMINAL corrections appear.
+
+This is exactly like special relativity:
+  At high boost (large rapidity), the velocity is nearly c.
+  Corrections from subluminal components are exponentially small.
+  But after enough interactions (n > k), the subluminal components
+  accumulate and the behavior changes.
+
+Eigenvalues of M_k mapped to the meta-complex plane:
+
+  k=3: eigenvalues and their Cayley addresses:
+    L_1 =  1.83929 +  0.00000i, |L| = 1.83929, Cayley addr =  0.29560 +  0.00000i, |addr| = 0.29560, inside disk
+    L_2 = -0.41964 +  0.60629i, |L| = 0.73735, Cayley addr = -0.64780 +  1.72143i, |addr| = 1.83929, OUTSIDE disk
+    L_3 = -0.41964 + -0.60629i, |L| = 0.73735, Cayley addr = -0.64780 + -1.72143i, |addr| = 1.83929, OUTSIDE disk
+
+  k=5: eigenvalues and their Cayley addresses:
+    L_1 =  1.96595 +  0.00000i, |L| = 1.96595, Cayley addr =  0.32568 +  0.00000i, |addr| = 0.32568, inside disk
+    L_2 =  0.19538 +  0.84885i, |L| = 0.87105, Cayley addr = -0.11225 +  0.78982i, |addr| = 0.79776, inside disk
+    L_3 =  0.19538 + -0.84885i, |L| = 0.87105, Cayley addr = -0.11225 + -0.78982i, |addr| = 0.79776, inside disk
+    L_4 = -0.67835 +  0.45854i, |L| = 0.81879, Cayley addr = -1.05059 +  2.92328i, |addr| = 3.10633, OUTSIDE disk
+    L_5 = -0.67835 + -0.45854i, |L| = 0.81879, Cayley addr = -1.05059 + -2.92328i, |addr| = 3.10633, OUTSIDE disk
+
+  k=7: eigenvalues and their Cayley addresses:
+    L_1 =  1.99196 +  0.00000i, |L| = 1.99196, Cayley addr =  0.33154 +  0.00000i, |addr| = 0.33154, inside disk
+    L_2 =  0.52886 +  0.76534i, |L| = 0.93029, Cayley addr = -0.04603 +  0.52364i, |addr| = 0.52566, inside disk
+    L_3 =  0.52886 + -0.76534i, |L| = 0.93029, Cayley addr = -0.04603 + -0.52364i, |addr| = 0.52566, inside disk
+    L_4 = -0.24066 +  0.84920i, |L| = 0.88264, Cayley addr = -0.17026 +  1.30873i, |addr| = 1.31976, OUTSIDE disk
+    L_5 = -0.24066 + -0.84920i, |L| = 0.88264, Cayley addr = -0.17026 + -1.30873i, |addr| = 1.31976, OUTSIDE disk
+    L_6 = -0.78419 +  0.36005i, |L| = 0.86289, Cayley addr = -1.44948 +  4.08657i, |addr| = 4.33602, OUTSIDE disk
+    L_7 = -0.78419 + -0.36005i, |L| = 0.86289, Cayley addr = -1.44948 + -4.08657i, |addr| = 4.33602, OUTSIDE disk
+
+
+======================================================================
+THE ONE GROUP
+======================================================================
+
+The Poincare disk (D, F) with F(w1,w2) = (w1+w2)/(1+w1*w2)
+IS the one group.
+
+Its real diameter is TOURNAMENT THEORY (couplings, rapidities).
+Its imaginary diameter is ROTATION THEORY (angles, phases).
+Its interior is LORENTZ GEOMETRY (boosts + rotations).
+Its boundary is the SPEED OF LIGHT (unreachable limit).
+
+arctanh LINEARIZES it: converts the disk to the complex plane C.
+tanh CURLS it back: converts C back to the disk.
+
+To SOLVE an equation in ANY costume:
+  1. Apply arctanh (go to C with +).
+  2. Solve linearly (it's just addition in C).
+  3. Apply tanh (come back to the disk).
+
+The UNIVERSAL ZONE is where a finite matrix representation
+is faithful: Tr = 2^n - 1 (Mersenne).
+The INDIVIDUAL ZONE is where faithfulness breaks: Tr < 2^n - 1.
+The TRANSITION at n = k is the system discovering its dimension.
+
+Powers of 2 form the HALF-BIT LATTICE on the real diameter.
+Roots of unity form the ANGULAR LATTICE on the imaginary diameter.
+Together they tile the disk.
+
+e governs the SHAPE of the disk (via exp/ln).
+2 governs the LATTICE of the disk (via doubling/halving).
+Together they ARE the meta-complex plane.
+
+And the one group is: the group of ORIENTED COMPARISONS
+in the complex plane, where real = preference and imaginary = rotation.
+
+opus-2026-03-16-S90aw: THE META-COMPLEX PLANE
