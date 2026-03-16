@@ -1,0 +1,4 @@
+  File "/Users/e/Documents/GitHub/math/04-computation/ocf_partial_bit_machine_s90aj.py", line 338
+    """)
+       ^
+SyntaxError: f-string: expecting '}'
