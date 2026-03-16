@@ -1,0 +1,229 @@
+
+  SPECTRAL THEORY OF THE TOURNAMENT FLIP MARKOV CHAIN
+
+======================================================================
+
+  I. THE EIGENVALUE DENOMINATORS
+  --------------------------------------------------
+
+  Flip chain on tiling space {0,1}^m, m = C(n-1, 2).
+  Eigenvalues: lambda_k = (m - 2k)/m for k = 0, ..., m.
+
+  n= 3: m=  1, m=1, factor=1           , denom divisors=[1]
+  n= 4: m=  3, m=3, factor=3           , denom divisors=[1, 3]
+  n= 5: m=  6, m/2=3, factor=3           , denom divisors=[1, 3]
+  n= 6: m= 10, m/2=5, factor=5           , denom divisors=[1, 5]
+  n= 7: m= 15, m=15, factor=3*5         , denom divisors=[1, 3, 5, 15]
+  n= 8: m= 21, m=21, factor=3*7         , denom divisors=[1, 3, 7, 21]
+  n= 9: m= 28, m/2=14, factor=2*7         , denom divisors=[1, 2, 7, 14]
+  n=10: m= 36, m/2=18, factor=2*3*3       , denom divisors=[1, 2, 3, 6, 9, 18]
+  n=11: m= 45, m=45, factor=3*3*5       , denom divisors=[1, 3, 5, 9, 15, 45]
+  n=12: m= 55, m=55, factor=5*11        , denom divisors=[1, 5, 11, 55]
+  n=13: m= 66, m/2=33, factor=3*11        , denom divisors=[1, 3, 11, 33]
+
+  II. THE DENOMINATOR-TOURNAMENT CONNECTION
+  --------------------------------------------------
+
+  Forbidden H values: {7, 21}
+  Max H values:  {1: 1, 2: 1, 3: 3, 4: 5, 5: 15, 6: 45, 7: 189, 8: 661}
+
+  n= 3: denominators contain MAX_H {1: 1, 2: 1}
+  n= 4: denominators contain MAX_H {1: 1, 2: 1, 3: 3}
+  n= 5: denominators contain MAX_H {1: 1, 2: 1, 3: 3}
+  n= 6: denominators contain MAX_H {1: 1, 2: 1, 4: 5}
+  n= 7: denominators contain MAX_H {1: 1, 2: 1, 3: 3, 4: 5, 5: 15}
+  n= 8: denominators contain FORBIDDEN {21, 7} MAX_H {1: 1, 2: 1, 3: 3}
+  n= 9: denominators contain FORBIDDEN {7} MAX_H {1: 1, 2: 1}
+  n=10: denominators contain MAX_H {1: 1, 2: 1, 3: 3}
+  n=11: denominators contain MAX_H {1: 1, 2: 1, 3: 3, 4: 5, 5: 15, 6: 45}
+  n=12: denominators contain MAX_H {1: 1, 2: 1, 4: 5}
+  n=13: denominators contain MAX_H {1: 1, 2: 1, 3: 3}
+
+  III. WALSH-FOURIER DECOMPOSITION OF H AT n=6
+  --------------------------------------------------
+
+  Computing H for all 2^10 = 1024 tilings...
+  Mean H = 29.0
+
+  Computing Walsh-Fourier coefficients...
+  Done. 207 nonzero Walsh coefficients.
+
+  VERIFIED: Walsh reconstruction matches all 1024 values!
+
+  IV. WALSH SPECTRUM BY DEGREE
+  --------------------------------------------------
+
+  Degree  0:   1 terms, eigenvalue =      1 (denom 1), Walsh variance =   841.00, range = [+29.00, +29.00]
+  Degree  1:   8 terms, eigenvalue =    4/5 (denom 5), Walsh variance =    33.84, range = [-4.00, +0.25]
+  Degree  2:  44 terms, eigenvalue =    3/5 (denom 5), Walsh variance =    65.09, range = [-1.88, +1.75]
+  Degree  3:  73 terms, eigenvalue =    2/5 (denom 5), Walsh variance =     3.47, range = [-0.38, +0.38]
+  Degree  4:  81 terms, eigenvalue =    1/5 (denom 5), Walsh variance =     2.16, range = [-0.25, +0.25]
+
+  Total Walsh variance: 104.56
+  Var(H): 104.56
+  Parseval check: True
+
+  V. THE FIVE EIGENVALUE CLASSES (n=6, denom=5)
+  --------------------------------------------------
+
+  Eigenvalue spectrum:
+  k= 0: lambda=     1, mult=C(10,0)=   1, active=  1, power=  841.00
+  k= 1: lambda=   4/5, mult=C(10,1)=  10, active=  8, power=   33.84
+  k= 2: lambda=   3/5, mult=C(10,2)=  45, active= 44, power=   65.09
+  k= 3: lambda=   2/5, mult=C(10,3)= 120, active= 73, power=    3.47
+  k= 4: lambda=   1/5, mult=C(10,4)= 210, active= 81, power=    2.16
+  k= 5: lambda=     0, mult=C(10,5)= 252, active=  0, power=    0.00
+  k= 6: lambda=  -1/5, mult=C(10,6)= 210, active=  0, power=    0.00
+  k= 7: lambda=  -2/5, mult=C(10,7)= 120, active=  0, power=    0.00
+  k= 8: lambda=  -3/5, mult=C(10,8)=  45, active=  0, power=    0.00
+  k= 9: lambda=  -4/5, mult=C(10,9)=  10, active=  0, power=    0.00
+  k=10: lambda=    -1, mult=C(10,10)=   1, active=  0, power=    0.00
+
+  VI. MIXING TIME AND H RELAXATION
+  --------------------------------------------------
+
+  Spectral gap: 1/5 = 0.2000
+  Approximate mixing time: 5 steps
+
+  H relaxation from transitive (all-zero tiling):
+     t    E[H(Xt)]   |E[H]-mean|
+     0        1.00       28.0000
+     1        6.20       22.8000
+     2       12.20       16.8000
+     3       16.86       12.1440
+     4       20.19        8.8128
+     5       22.53        6.4685
+     6       24.19        4.8115
+     7       25.37        3.6260
+     8       26.24        2.7648
+     9       26.87        2.1294
+    10       27.35        1.6538
+    11       27.71        1.2930
+    12       27.98        1.0164
+    13       28.20        0.8023
+    14       28.36        0.6353
+    15       28.50        0.5043
+    16       28.60        0.4011
+    17       28.68        0.3195
+    18       28.75        0.2547
+    19       28.80        0.2033
+    20       28.84        0.1623
+    21       28.87        0.1297
+    22       28.90        0.1036
+    23       28.92        0.0828
+    24       28.93        0.0662
+
+  H relaxation from anti-transitive (all-one tiling):
+     t    E[H(Xt)]   |E[H]-mean|
+     0       17.00       12.0000
+     1       23.80        5.2000
+     2       28.20        0.8000
+     3       30.42        1.4240
+     4       31.35        2.3488
+     5       31.58        2.5837
+     6       31.48        2.4794
+     7       31.23        2.2264
+     8       30.92        1.9250
+     9       30.63        1.6255
+    10       30.35        1.3514
+    11       30.11        1.1116
+    12       29.91        0.9076
+    13       29.74        0.7370
+    14       29.60        0.5961
+    15       29.48        0.4808
+    16       29.39        0.3870
+    17       29.31        0.3110
+    18       29.25        0.2497
+    19       29.20        0.2002
+    20       29.16        0.1605
+    21       29.13        0.1286
+    22       29.10        0.1030
+    23       29.08        0.0824
+    24       29.07        0.0660
+
+  VII. THE DOMINANT WALSH MODES
+  --------------------------------------------------
+
+  Top 20 Walsh coefficients (by magnitude):
+  Rank   |S|      S (bits)    hat_H(S)  eigenvalue                            arcs
+     1     0    0000000000    +29.0000           1  []
+     2     1    0000000001     -4.0000         4/5  [(0, 5)]
+     3     1    1000000000     -2.0000         4/5  [(0, 2)]
+     4     1    0001000000     -2.0000         4/5  [(3, 5)]
+     5     2    0000000101     -1.8750         3/5  [(0, 4), (0, 5)]
+     6     2    0000000011     -1.8750         3/5  [(1, 5), (0, 5)]
+     7     2    1000100000     -1.7500         3/5  [(0, 2), (0, 3)]
+     8     2    0001100000     +1.7500         3/5  [(3, 5), (0, 3)]
+     9     2    1000001000     +1.7500         3/5  [(0, 2), (2, 5)]
+    10     2    0001001000     -1.7500         3/5  [(3, 5), (2, 5)]
+    11     2    0000100100     -1.7500         3/5  [(0, 3), (0, 4)]
+    12     2    0000001010     -1.7500         3/5  [(2, 5), (1, 5)]
+    13     2    1000000001     -1.7500         3/5  [(0, 2), (0, 5)]
+    14     2    0001000001     -1.7500         3/5  [(3, 5), (0, 5)]
+    15     2    0100010000     -1.6250         3/5  [(1, 3), (1, 4)]
+    16     2    0010010000     -1.6250         3/5  [(2, 4), (1, 4)]
+    17     1    0000000100     -1.6250         4/5  [(0, 4)]
+    18     2    0000010100     -1.6250         3/5  [(1, 4), (0, 4)]
+    19     1    0000000010     -1.6250         4/5  [(1, 5)]
+    20     2    0000010010     -1.6250         3/5  [(1, 4), (1, 5)]
+
+  VIII. THE DENOMINATOR STRUCTURE
+  --------------------------------------------------
+
+  Walsh power by eigenvalue denominator (n=6):
+  denom=1: power=841.00 (804.3% of variance)
+  denom=5: power=104.56 (100.0% of variance)
+
+  INTERPRETATION:
+  Denom=1 modes: lambda in {1, 0, -1}. These are the 'trivial' modes.
+    k=0 (constant): hat_H = 29.00 = mean H
+    k=5 (lambda=0): these modes are KILLED after 1 step.
+    k=10 (lambda=-1): these modes flip sign each step.
+
+  Denom=5 modes: lambda in {4/5, 3/5, 2/5, 1/5, -1/5, -2/5, -3/5, -4/5}.
+    These are the 'nontrivial' modes that decay geometrically.
+    They carry 104.6 / 104.6 = 100.0% of H's variance.
+    The denominator 5 = the GOLDEN PRIME.
+
+  IX. THE m SEQUENCE AND ITS PRIME STRUCTURE
+  --------------------------------------------------
+
+  m = C(n-1, 2) = (n-1)(n-2)/2. Odd part s determines denominators.
+
+    n     m  s=odd(m)      prime_factors(s)                      connection
+    3     1         1                     1                             m=1
+    4     3         3                     3            3 = min cycle length
+    5     6         3                     3              3 = RAMIFIED prime
+    6    10         5                     5                5 = GOLDEN prime
+    7    15        15                   3*5               15 = max H at n=5
+    8    21        21                   3*7            21 = FORBIDDEN VALUE
+    9    28         7                     7             7 = FORBIDDEN VALUE
+   10    36         9                   3*3              9 = H value at n=5
+   11    45        45                 3*3*5               45 = max H at n=6
+   12    55        55                  5*11                       55 = 5*11
+   13    66        33                  3*11             33 = H value at n=6
+
+  X. SYNTHESIS: THE GOLDEN PRIME IN THE MARKOV CHAIN
+  --------------------------------------------------
+
+  At n=6 (the PIVOT), the flip chain eigenvalue denominator is 5.
+  5 = disc(Q(phi)) = the golden prime.
+  This means: the MIXING DYNAMICS of tournament H are governed by
+  the golden prime. The nontrivial relaxation rates are k/5 for k=1,...,4.
+
+  At n=8, the denominator is 21 = 3*7 = the FORBIDDEN product.
+  At n=7, the denominator is 15 = 3*5 = {RAMIFIED}*{GOLDEN}.
+
+  The Markov chain denominator sequence (odd part of C(n-1,2)):
+  1, 3, 3, 5, 15, 21, 7, 9, 45, 55, 33, ...
+  These are NOT the tournament invariants themselves,
+  but the ARENA in which tournament dynamics plays out.
+  The prime structure of the arena determines which
+  frequencies are available for the spectral decomposition.
+
+  The grand pattern:
+  {2,3,5} = arena at n=6 (golden prime controls mixing)
+  {2,3,7} = arena at n=8 (forbidden primes control mixing)
+  The Markov chain carries the SAME prime structure as the
+  tournament theory it describes. The medium IS the message.
+
