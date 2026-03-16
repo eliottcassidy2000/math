@@ -1,0 +1,332 @@
+
+  THE DEPTH-WIDTH OBSTRUCTION
+
+======================================================================
+
+  I. DEPTH AND WIDTH IN THE OCF
+  ----------------------------------------
+
+  H = 1 + sum_{k>=1} 2^k * alpha_k
+
+  DEPTH k: the size of the independent set.
+    k=1: one cycle (depth 1)
+    k=2: two disjoint cycles (depth 2)
+    k=3: three mutually disjoint cycles (depth 3)
+
+  WIDTH alpha_k: the number of independent sets at depth k.
+    alpha_1 = total number of odd cycles
+    alpha_2 = number of disjoint cycle PAIRS
+    alpha_3 = number of disjoint cycle TRIPLES
+
+  The 'weight' 2^k means: each unit of DEPTH doubles the contribution.
+  Going one level deeper DOUBLES the payoff.
+  But going deeper requires MORE VERTICES (disjoint cycles need room).
+
+  THE OBSTRUCTION: at depth k, you need at least 3k vertices
+  (k disjoint 3-cycles). So the maximum depth at n is floor(n/3).
+
+  n    max depth    max 2^k     max H contribution from depth alone
+  ------------------------------------------------------------
+    3      1               2
+    4      1               2
+    5      1               2
+    6      2               4
+    7      2               4
+    8      2               4
+    9      3               8
+   10      3               8
+   11      3               8
+   12      4              16
+   13      4              16
+   14      4              16
+   15      5              32
+
+
+  II. THE EVEN GRAPH CONNECTION
+  ----------------------------------------
+
+  A tournament on n vertices IS an orientation of the complete
+  graph K_n. Every vertex has out-degree + in-degree = n-1.
+
+  For odd n: every vertex has even total degree n-1.
+  The UNDERLYING undirected graph (ignoring orientation)
+  is K_n, which has degree n-1 = even for odd n.
+  So for odd n: the tournament IS an even graph.
+
+  For even n: degree n-1 is odd. NOT an even graph.
+  But the COMPLEMENT (undirected K_n minus the tournament edges)
+  is also NOT even.
+
+  The key: a tournament on odd n vertices is an orientation of
+  an EULERIAN graph (every vertex has even degree => Euler circuit).
+  K_n for odd n has an Euler circuit.
+  The tournament is a way to ORIENT this Euler circuit.
+
+  Euler circuits visit every EDGE. Hamiltonian paths visit every VERTEX.
+  The tournament lives at the intersection of these two worlds.
+
+
+  III. EXHAUSTIVE DEPTH-WIDTH DATA AT n=6
+  ----------------------------------------
+
+  Enumerated 32768 tournaments on 6 vertices.
+
+  (a1, a2, a3) -> H values  [H_formula = 1+2*a1+4*a2+8*a3]
+  -----------------------------------------------------------------
+  ( 0, 0,0) -> [1]                       formula=1 EXACT
+  ( 1, 0,0) -> [3]                       formula=3 EXACT
+  ( 2, 0,0) -> [5]                       formula=5 EXACT
+  ( 2, 1,0) -> [9]                       formula=9 EXACT
+  ( 4, 0,0) -> [9]                       formula=9 EXACT
+  ( 5, 0,0) -> [11, 13, 15]              formula=11 
+  ( 6, 0,0) -> [15]                      formula=13 [off by +2 to +2] 
+  ( 6, 1,0) -> [17]                      formula=17 EXACT
+  ( 7, 0,0) -> [15]                      formula=15 EXACT
+  ( 8, 0,0) -> [17]                      formula=17 EXACT
+  ( 8, 1,0) -> [23]                      formula=21 [off by +2 to +2] 
+  ( 9, 0,0) -> [19]                      formula=19 EXACT
+  ( 9, 1,0) -> [27]                      formula=23 [off by +4 to +4] 
+  (10, 0,0) -> [25]                      formula=21 [off by +4 to +4] 
+  (10, 1,0) -> [29, 31]                  formula=25 [off by +4 to +6] 
+  (10, 2,0) -> [29, 33, 37]              formula=29 
+  (11, 0,0) -> [23]                      formula=23 EXACT
+  (11, 1,0) -> [29]                      formula=27 [off by +2 to +2] 
+  (12, 0,0) -> [33]                      formula=25 [off by +8 to +8] 
+  (12, 1,0) -> [33, 37]                  formula=29 [off by +4 to +8] 
+  (12, 2,0) -> [37]                      formula=33 [off by +4 to +4] 
+  (14, 1,0) -> [43, 45]                  formula=33 [off by +10 to +12] 
+  (14, 2,0) -> [41]                      formula=37 [off by +4 to +4] 
+  (14, 4,0) -> [45]                      formula=45 EXACT
+
+
+  IV. THE DISCREPANCY: WHY H != 1+2*a1+4*a2+8*a3
+  ----------------------------------------
+
+  At n=6, H EXCEEDS the formula 1+2*a1+4*a2+8*a3.
+  The excess comes from 5-CYCLES and HIGHER odd cycles.
+  The formula only counts 3-cycle contributions to alpha_k.
+
+  The FULL OCF counts ALL odd cycles (3, 5, 7, ...).
+  At n=6: 5-cycles first appear, contributing to alpha_1.
+  These 5-cycle contributions push H above the 3-cycle-only prediction.
+
+  The 5-cycles are HIGHER-ORDER partial bits.
+  They don't fit into the 3-cycle-based depth-width framework
+  because a 5-cycle uses 5 vertices, not 3.
+
+  At depth 1: a 5-cycle contributes 2 to H, same as a 3-cycle.
+  At depth 2: a 5-cycle + disjoint 3-cycle needs 5+3=8 vertices > 6.
+  So at n=6, 5-cycles can only contribute at depth 1.
+
+
+  V. THE DEPTH-WIDTH OBSTRUCTION FOR H=7
+  ----------------------------------------
+
+  H = 7 requires: sum_{k>=1} 2^k * alpha_k = 6.
+
+  Depth-width decompositions of 6:
+  depth 1 only: 2*alpha_1 = 6 => alpha_1 = 3
+  depth 2 only: 4*alpha_2 = 6 => alpha_2 = 3/2 (not integer!)
+  depth 1+2: 2*a1 + 4*a2 = 6 => (a1, a2) in {(3,0), (1,1)}
+  depth 3: 8*a3 = 6 => impossible
+
+  The depth-2-only option FAILS because 6 is not divisible by 4.
+  The depth-3 option FAILS because 6 < 8.
+
+  So H=7 requires EITHER:
+  (A) alpha_1 = 3, alpha_2 = 0: three cycles, all pairwise conflicting
+  (B) alpha_1 = 1, alpha_2 = 1: impossible (1 cycle can't have a disjoint pair)
+
+  Case (A) is the DEPTH-WIDTH OBSTRUCTION:
+  At depth 1, you need exactly 3 cycles.
+  At depth 2, you need exactly 0 independent pairs.
+  But 3 pairwise-intersecting 3-cycles on n vertices force
+  a COMMON VERTEX (for small n) or ADDITIONAL cycles (for large n).
+  Either way, alpha_1 >= 4, not 3. Contradiction.
+
+  The obstruction: WIDTH 3 AT DEPTH 1 IS UNSTABLE.
+  Three intersecting cycles can't stay at exactly 3.
+  They either collapse (shared vertex forces more cycles)
+  or separate (losing the pairwise intersection).
+
+
+  VI. THE STABILITY PRINCIPLE
+  ----------------------------------------
+
+  PRINCIPLE: In the OCF binary expansion, certain (depth, width)
+  configurations are UNSTABLE — they cannot be maintained because
+  the graph-theoretic constraints force transitions.
+
+  STABLE configurations: those that actually appear in the
+  exhaustive data.
+
+  At n=6, the stable (a1, a2) pairs are:
+  [(0, 0), (1, 0), (2, 0), (2, 1), (4, 0), (5, 0), (6, 0), (6, 1), (7, 0), (8, 0), (8, 1), (9, 0), (9, 1), (10, 0), (10, 1), (10, 2), (11, 0), (11, 1), (12, 0), (12, 1), (12, 2), (14, 1), (14, 2), (14, 4)]
+
+  Missing (a1, a2) pairs: [(0, 1), (0, 2), (0, 3), (0, 4), (1, 1), (1, 2), (1, 3), (1, 4), (2, 2), (2, 3), (2, 4), (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (4, 1), (4, 2), (4, 3), (4, 4), (5, 1), (5, 2), (5, 3), (5, 4), (6, 2), (6, 3), (6, 4), (7, 1), (7, 2), (7, 3), (7, 4), (8, 2), (8, 3), (8, 4), (9, 2), (9, 3), (9, 4), (10, 3), (10, 4), (11, 2), (11, 3), (11, 4), (12, 3), (12, 4), (13, 0), (13, 1), (13, 2), (13, 3), (13, 4), (14, 0), (14, 3)]
+
+  NOTABLE MISSING: (3, 1) — you can't have 3 cycles with 1 disjoint pair
+  at n=6, because 3 cycles with a disjoint pair need at least 3+3=6 vertices
+  for the pair, leaving 0 for the third cycle's disjoint vertex.
+
+
+  VII. EVEN GRAPHS, ODD CYCLES, AND THE PARITY OBSTRUCTION
+  ----------------------------------------
+
+  A tournament on n vertices has C(n,2) arcs.
+  Each vertex has out-degree + in-degree = n-1.
+  The score sequence (d_1, ..., d_n) satisfies sum d_i = C(n,2).
+
+  The PARITY of H is determined by the OCF: H is always odd.
+  This is because the 'base' contribution is 1 (the empty set),
+  and all other contributions are even (2^k * alpha_k).
+
+  But there's a DEEPER parity:
+  The number of odd cycles in T has a parity constraint.
+  For a tournament on n vertices:
+  c_3 = number of 3-cycles = C(n,3) - number of transitive triples.
+  Transitive triples = sum C(d_i, 2) (from the score sequence).
+  c_3 = C(n,3) - sum C(d_i, 2).
+
+  For a REGULAR tournament (all d_i = (n-1)/2, n odd):
+  c_3 = C(n,3) - n*C((n-1)/2, 2)
+  n=3: c_3 = 1 - 3*0 = 1
+  n=5: c_3 = 10 - 5*1 = 5
+  n=7: c_3 = 35 - 7*3 = 14
+  n=9: c_3 = 84 - 9*6 = 30
+  n=11: c_3 = 165 - 11*10 = 55
+
+  For n=7 regular: c_3 = 35 - 7*3 = 14. Always 14 3-cycles.
+  This is FORCED by the regularity. No variation possible.
+
+
+  VIII. THE BINARY EXPANSION AND CARRY PROPAGATION
+  ----------------------------------------
+
+  H = 1 + 2*a1 + 4*a2 + 8*a3 + ...
+
+  Think of this as addition in binary:
+  The '1' is bit 0.
+  2*a1 contributes a1 copies of '10' (bit 1).
+  4*a2 contributes a2 copies of '100' (bit 2).
+
+  If a1 >= 2: bit 1 'overflows' and carries into bit 2.
+  The carry: a1 = 2*q + r, contribution = 2*r at bit 1 plus 4*q at bit 2.
+  Effective: bit 1 = a1 mod 2, bit 2 += a1 // 2.
+
+  This carry propagation means:
+  H in binary = 1 + binary_expand(a1, a2, a3, ...) with carries.
+
+  H = 7 = 111 in binary.
+  Needs bit 0 = 1 (always), bit 1 = 1, bit 2 = 1.
+  bit 1 = 1 means a1 is odd.
+  bit 2 = 1 means a2 + (carry from a1) is odd.
+  If a1 = 3: bit 1 = 1 (3 mod 2 = 1), carry = 1 to bit 2.
+  Then bit 2 = a2 + 1. For bit 2 = 1: a2 + 1 = 1, so a2 = 0.
+  This gives (a1, a2) = (3, 0). But this is NOT ACHIEVABLE.
+
+  If a1 = 1: bit 1 = 1, carry = 0.
+  bit 2 = a2. For bit 2 = 1: a2 = 1.
+  This gives (a1, a2) = (1, 1). But 1 cycle can't have a disjoint pair.
+
+  BOTH paths to H = 111 in binary are blocked.
+  The carry propagation from depth 1 to depth 2 creates an
+  IMPOSSIBLE demand: either too many cycles (3) or too few (1).
+
+  THE FORBIDDEN NUMBER 7 = 111 IN BINARY IS FORBIDDEN
+  BECAUSE CARRY PROPAGATION IN THE OCF EXPANSION
+  CREATES CONTRADICTORY DEMANDS ON THE CYCLE STRUCTURE.
+
+
+  IX. H = 21 = 10101 IN BINARY
+  ----------------------------------------
+
+  21 = 10101 in binary.
+  Needs bits 0, 2, 4 to be 1.
+  bit 0 = 1 (always).
+  bit 2 = 1: requires a2 + carry from (a1) is odd.
+  bit 4 = 1: requires a4 + carry from lower levels is odd.
+
+  The carry chain through 5 bits creates a COUPLED SYSTEM
+  of parity constraints on (a1, a2, a3, a4).
+  The OCF graph constraints make certain combinations impossible.
+
+  21 has an ALTERNATING bit pattern: 1_0_1_0_1.
+  This alternation requires alpha values at even depths (0, 2, 4)
+  to contribute 1 each, with odd depths (1, 3) contributing 0.
+  The 'skip-one-depth' pattern is especially hard to achieve
+  because getting alpha_2 > 0 requires disjoint cycle pairs,
+  which need many vertices, which generate more cycles at depth 1.
+
+  7 = 111 (all ones up to bit 2)
+  21 = 10101 (alternating up to bit 4)
+  Both have the property that achieving the target bit pattern
+  requires contradictory cycle configurations.
+
+
+  X. THE LANDSCAPE: ACHIEVABLE H IN BINARY
+  ----------------------------------------
+
+  n=6: achievable H values in binary:
+     H      binary  bits set  pattern
+  --------------------------------------------------
+     1           1         1  all-ones
+     3          11         2  all-ones
+     5         101         2  palindrome
+     9        1001         2  palindrome
+    11        1011         3  
+    13        1101         3  
+    15        1111         4  all-ones
+    17       10001         2  palindrome
+    19       10011         3  
+    23       10111         4  
+    25       11001         3  
+    27       11011         4  palindrome
+    29       11101         4  
+    31       11111         5  all-ones
+    33      100001         2  palindrome
+    37      100101         3  
+    41      101001         3  
+    43      101011         4  
+    45      101101         4  palindrome
+
+  The MISSING values near 7 and 21:
+  Missing: [7, 21, 35, 39]
+
+  7 = 111: FORBIDDEN
+  21 = 10101: FORBIDDEN
+
+
+  XI. SYNTHESIS: THE DEPTH-WIDTH-CARRY OBSTRUCTION
+  ----------------------------------------
+
+  The forbidden H-values arise from THREE interacting constraints:
+
+  1. DEPTH constraint: alpha_k requires k disjoint odd cycles,
+     needing >= 3k vertices. Max depth = floor(n/3).
+
+  2. WIDTH constraint: alpha_k (width at depth k) is determined
+     by the conflict graph Omega(T). Not all widths are achievable
+     because the graph structure constrains independent set counts.
+
+  3. CARRY constraint: the binary representation of H propagates
+     carries from lower depths to higher depths. The carries create
+     coupled parity demands that the width constraints cannot satisfy.
+
+  The forbidden numbers are those where the carry chain demands
+  a width pattern that the depth constraint makes impossible.
+
+  7 = 111:   carry from depth 1 demands width 0 at depth 2,
+             but 3 pairwise-intersecting cycles can't stay at 3.
+  21 = 10101: alternating bits demand skip-depth contributions
+             that conflict with the vertex budget.
+
+  THE TOURNAMENT'S EVEN STRUCTURE (complete graph, even-degree
+  for odd n) constrains the ODD CYCLE structure (Omega),
+  which constrains the INDEPENDENT SET structure (alpha_k),
+  which constrains the BINARY DIGITS of H,
+  which determines which H-values are achievable.
+
+  Even graph -> odd cycles -> independent sets -> binary digits -> H.
+  Five levels of constraint. The forbidden numbers are where
+  all five levels conspire to block every path.
