@@ -1,0 +1,198 @@
+MUSICAL TEMPERAMENT AS RAPIDITY LINEAR ALGEBRA
+============================================================
+
+  THE RAPIDITY BASIS:
+  r_2 = ln(2)/2 = 0.3465735903  (octave)
+  r_3 = ln(3)/2 = 0.5493061443  (twelfth)
+  r_5 = ln(5)/2 = 0.8047189562
+  r_7 = ln(7)/2 = 0.9729550745
+
+IMPORTANT COMMAS (rapidity vectors close to zero)
+--------------------------------------------------
+
+  Comma                                Vector      Rapidity     Cents
+  -----------------------------------------------------------------
+  Pythagorean comma           [-19, 12, 0, 0]   +0.00677552    +23.46
+  Syntonic comma               [-4, 4, -1, 0]   +0.00621126    +21.51
+  Diesis (great)                [7, 0, -3, 0]   +0.01185826    +41.06
+  Archytas comma               [6, -2, 0, -1]   +0.00787418    +27.26
+  Septimal kleisma             [-5, 2, 2, -1]   +0.00222718     +7.71
+  Schisma                      [-15, 8, 1, 0]   +0.00056426     +1.95
+  Diaschisma                  [11, -4, -2, 0]   +0.00564700    +19.55
+  Ragisma                      [-1, -7, 4, 1]   +0.00011430     +0.40
+
+  Each comma is a VECTOR in the rapidity vector space R^primes.
+  Small commas = vectors near the KERNEL of the 'tuning map'.
+  Temperament = quotienting R^primes by the comma lattice.
+
+============================================================
+EQUAL TEMPERAMENT AS RAPIDITY QUOTIENT
+============================================================
+
+  12-TET: quotient by the Pythagorean comma [-19, 12, 0, 0].
+  Identify r_3 with (19/12)*r_2.
+  Then: fifth = r_3 - r_2 = (19/12 - 1)*r_2 = (7/12)*r_2.
+
+  In 12-TET:
+  semitone = r_2/12
+  Intervals in semitones:
+    unison          :  0 semitones = rapidity 0.000000
+    minor 2nd       :  1 semitones = rapidity 0.028881
+    major 2nd       :  2 semitones = rapidity 0.057762
+    minor 3rd       :  3 semitones = rapidity 0.086643
+    major 3rd       :  4 semitones = rapidity 0.115525
+    perfect 4th     :  5 semitones = rapidity 0.144406
+    tritone         :  6 semitones = rapidity 0.173287
+    perfect 5th     :  7 semitones = rapidity 0.202168
+    minor 6th       :  8 semitones = rapidity 0.231049
+    major 6th       :  9 semitones = rapidity 0.259930
+    minor 7th       : 10 semitones = rapidity 0.288811
+    major 7th       : 11 semitones = rapidity 0.317692
+    octave          : 12 semitones = rapidity 0.346574
+
+============================================================
+THE TOURNAMENT-MUSIC DICTIONARY
+============================================================
+
+  Every tournament quantity has a musical interpretation.
+
+  TOURNAMENT            MUSIC                    RAPIDITY
+  ------------------------------------------------------------
+  H(T) = 1             silence (no vibration)    0
+  H(T) = 3             T_3 cyclic tournament     0.549 = octave
+  H(T) = 5             n=4 max                   0.805 ~ twelfth
+  H(T) = 7             FORBIDDEN                 0.973 ~ 7th harm
+  H(T) = 9             n=5 some                  1.099 ~ 2 octaves
+  H(T) = 15            n=5 cyclic                1.354 ~ 9th harm
+  H(T) = 21            FORBIDDEN                 1.522 ~ 11th harm
+  H(T) = 189           Paley T_7 max             2.621 ~ 4th harm
+  H(T) = 95095         Paley T_11 max            5.731 ~ 8th harm
+
+  The forbidden values sit at the 7th and 11th harmonics!
+  These are the LAST harmonics before the overtone series
+  stops being 'musical' (11th harmonic = neutral fourth,
+  considered dissonant in most Western traditions).
+
+============================================================
+THE RAPIDITY OF INTERVALS BETWEEN H-VALUES
+============================================================
+
+  The rapidity RATIO between successive Paley H-values:
+
+  H(T_7)/H(T_3) = 189/3 = 63.0000
+  rapidity of ratio = 2.071567
+  = ln(189/3)/2 = 2.071567
+  = 5.9773 octaves
+
+  H(T_11)/H(T_7) = 95095/189 = 503.1481
+  rapidity of ratio = 3.110442
+  = ln(95095/189)/2 = 3.110442
+  = 8.9748 octaves
+
+============================================================
+RAPIDITY SPECTROSCOPY: THE EMISSION LINES OF TOURNAMENTS
+============================================================
+
+  Imagine each H-value as an ENERGY LEVEL.
+  Transitions between levels emit 'photons' with rapidity
+  = |rapidity(H1) - rapidity(H2)|.
+
+  At n=5, the H-spectrum is {1, 3, 5, 9, 11, 13, 15}.
+  Emission lines (rapidity differences):
+
+    H1 ->   H2   rapidity diff   octaves               musical
+  ------------------------------------------------------------
+    13 ->   15        0.071550    0.2065                      
+    11 ->   13        0.083527    0.2410                      
+     9 ->   11        0.100335    0.2895                      
+    11 ->   15        0.155077    0.4475                      
+     9 ->   13        0.183862    0.5305                      
+     3 ->    5        0.255413    0.7370                      
+     9 ->   15        0.255413    0.7370                      
+     5 ->    9        0.293893    0.8480                      
+     5 ->   11        0.394229    1.1375                      
+     5 ->   13        0.477756    1.3785                      
+     1 ->    3        0.549306    1.5850             ~ twelfth
+     3 ->    9        0.549306    1.5850             ~ twelfth
+     5 ->   15        0.549306    1.5850             ~ twelfth
+     3 ->   11        0.649641    1.8745                      
+     3 ->   13        0.733169    2.1155                      
+     1 ->    5        0.804719    2.3219                      
+     3 ->   15        0.804719    2.3219                      
+     1 ->    9        1.098612    3.1699                      
+     1 ->   11        1.198948    3.4594                      
+     1 ->   13        1.282475    3.7004                      
+     1 ->   15        1.354025    3.9069         ~ 4 octave(s)
+
+============================================================
+WHICH H-VALUE RATIOS ARE MUSICAL INTERVALS?
+============================================================
+
+  H2/H1 is a musical interval if it's a superparticular ratio (n+1)/n.
+  Q^{-1}((n+1)/n) = 1/(2n+1) = a reciprocal odd number.
+
+  n=5: H-value ratios that are superparticular:
+  n=6: H-value ratios that are superparticular:
+
+============================================================
+THE RAPIDITY CIRCLE OF FIFTHS
+============================================================
+
+  In music: the circle of fifths stacks 12 fifths to return
+  (approximately) to the starting note, off by a Pythagorean comma.
+
+  In rapidity: stacking k fifths means adding k * ln(3/2)/2.
+  After 12 fifths: 12 * ln(3/2)/2 = 7 * ln(2)/2 + comma/2
+
+  The circle of fifths in rapidity (mod octave = mod ln(2)/2):
+
+   0 fifths: rapidity =  0.00000, mod octave = 0.00000, ~ C
+   1 fifths: rapidity =  0.20273, mod octave = 0.20273, ~ G
+   2 fifths: rapidity =  0.40547, mod octave = 0.05889, ~ D
+   3 fifths: rapidity =  0.60820, mod octave = 0.26162, ~ A
+   4 fifths: rapidity =  0.81093, mod octave = 0.11778, ~ E
+   5 fifths: rapidity =  1.01366, mod octave = 0.32052, ~ B
+   6 fifths: rapidity =  1.21640, mod octave = 0.17667, ~ F#
+   7 fifths: rapidity =  1.41913, mod octave = 0.03283, ~ C#
+   8 fifths: rapidity =  1.62186, mod octave = 0.23557, ~ G#
+   9 fifths: rapidity =  1.82459, mod octave = 0.09173, ~ D#
+  10 fifths: rapidity =  2.02733, mod octave = 0.29446, ~ A#
+  11 fifths: rapidity =  2.23006, mod octave = 0.15062, ~ F
+  12 fifths: rapidity =  2.43279, mod octave = 0.00678, ~ C
+
+  After 12 fifths, the rapidity doesn't return to 0 (mod octave).
+  The excess = Pythagorean comma = 12*r_3 - 19*r_2 = 0.006776
+  This is the fundamental OBSTRUCTION to closing the circle.
+
+============================================================
+TOURNAMENT THEORY AS MUSIC THEORY: THE FULL DICTIONARY
+============================================================
+
+  MUSIC                  TOURNAMENT               FORMULA
+  ------------------------------------------------------------
+  note                   H-value                  H(T)
+  octave                 doubling H               2*H
+  interval               H-ratio                  H1/H2
+  consonance             small rapidity diff      |ln(H1/H2)|/2
+  chord                  set of tournaments       {T: H(T) in S}
+  scale                  H-spectrum at n          {H(T): T on n}
+  tuning                 choice of weights        independence poly eval
+  comma                  near-coincidence         H1/H2 ~ 1
+  circle of fifths       iterating Q(1/5)         (3/2)^k mod octave
+  Pythagorean comma      12 fifths != 7 octaves   (3/2)^12 != 2^7
+  just intonation        superparticular H-ratios (n+1)/n
+  equal temperament      regular rapidity grid    exp(k*ln(2)/24)
+  overtone series        prime factorization      H = prod p^{a_p}
+  fundamental            smallest prime factor    min prime of H
+  harmonic               prime factor             p | H
+  dissonance             large prime factor       large p | H
+
+  The FORBIDDEN H-values {7, 21} are the 4th and 6th HARMONICS
+  of the curvature quantum 3:
+  7 = the 4th harmonic in the odd series (1, 3, 5, 7)
+  21 = 3 * 7 = fundamental * 4th harmonic
+  They are DISSONANT with every achievable H-value.
+
+  In music, the 7th harmonic (Bb) and 11th harmonic (F#/4)
+  are the first 'wrong-sounding' overtones in Western tuning.
+  Our forbidden numbers are the 'wrong-sounding' path counts.

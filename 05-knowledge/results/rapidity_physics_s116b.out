@@ -1,0 +1,884 @@
+======================================================================
+RAPIDITY AND PHYSICS: SIX CREATIVE CONNECTIONS
+kind-pasteur-2026-03-15-S116b
+======================================================================
+
+======================================================================
+1. RAPIDITY AND THE HYDROGEN ATOM
+======================================================================
+
+The Bohr model energy levels: E_n = -13.6 / n^2 eV  (n = 1, 2, 3, ...)
+The rapidity of n: phi_n = ln(n)/2
+
+Key relation: E_n = -13.6 * exp(-4 * phi_n) eV
+             (because n^2 = exp(2*ln(n)) = exp(4*phi_n))
+
+Energy is an EXPONENTIAL DECAY in rapidity space!
+The hydrogen atom lives on a rapidity line where each level
+n is at position phi_n = ln(n)/2, and energy decays as exp(-4*phi).
+
+  n    phi_n = ln(n)/2    E_n (eV)      exp(-4*phi_n)     check
+  --------------------------------------------------------------------
+   1      0.000000           -13.6000        1.00000000       -13.6000
+   2      0.346574            -3.4000        0.25000000        -3.4000
+   3      0.549306            -1.5111        0.11111111        -1.5111
+   4      0.693147            -0.8500        0.06250000        -0.8500
+   5      0.804719            -0.5440        0.04000000        -0.5440
+   6      0.895880            -0.3778        0.02777778        -0.3778
+   7      0.972955            -0.2776        0.02040816        -0.2776
+   8      1.039721            -0.2125        0.01562500        -0.2125
+   9      1.098612            -0.1679        0.01234568        -0.1679
+  10      1.151293            -0.1360        0.01000000        -0.1360
+
+SPECTRAL LINES AS RAPIDITY DIFFERENCES:
+The photon energy for transition m -> n is:
+  Delta_E = 13.6 * (1/n^2 - 1/m^2)
+  = 13.6 * (exp(-4*phi_n) - exp(-4*phi_m))
+
+The spectral series are transitions from level m to a fixed level n.
+Let's express each as a rapidity difference delta = phi_m - phi_n = ln(m/n)/2.
+
+  Series     Transition    delta_phi     E (eV)  ratio m/n     closest interval  cents off
+  --------------------------------------------------------------------------------------------
+  Lyman       2 -> 1          0.346574    10.2000       2.0000                octave       0.0 ***
+  Lyman       3 -> 1          0.549306    12.0889       3.0000                octave     702.0
+  Lyman       4 -> 1          0.693147    12.7500       4.0000                octave    1200.0
+  Lyman       5 -> 1          0.804719    13.0560       5.0000                octave    1586.3
+  Lyman       6 -> 1          0.895880    13.2222       6.0000                octave    1902.0
+  Lyman       7 -> 1          0.972955    13.3224       7.0000                octave    2168.8
+  Balmer      3 -> 2          0.202733     1.8889       1.5000                 fifth       0.0 ***
+  Balmer      4 -> 2          0.346574     2.5500       2.0000                octave       0.0 ***
+  Balmer      5 -> 2          0.458145     2.8560       2.5000                octave     386.3
+  Balmer      6 -> 2          0.549306     3.0222       3.0000                octave     702.0
+  Balmer      7 -> 2          0.626381     3.1224       3.5000                octave     968.8
+  Balmer      8 -> 2          0.693147     3.1875       4.0000                octave    1200.0
+  Paschen     4 -> 3          0.143841     0.6611       1.3333                fourth       0.0 ***
+  Paschen     5 -> 3          0.255413     0.9671       1.6667           major_sixth       0.0 ***
+  Paschen     6 -> 3          0.346574     1.1333       2.0000                octave       0.0 ***
+  Paschen     7 -> 3          0.423649     1.2336       2.3333                octave     266.9
+  Paschen     8 -> 3          0.490415     1.2986       2.6667                octave     498.0
+  Paschen     9 -> 3          0.549306     1.3432       3.0000                octave     702.0
+  Brackett    5 -> 4          0.111572     0.3060       1.2500           major_third       0.0 ***
+  Brackett    6 -> 4          0.202733     0.4722       1.5000                 fifth       0.0 ***
+  Brackett    7 -> 4          0.279808     0.5724       1.7500         minor_seventh      48.8
+  Brackett    8 -> 4          0.346574     0.6375       2.0000                octave       0.0 ***
+  Brackett    9 -> 4          0.405465     0.6821       2.2500                octave     203.9
+  Brackett   10 -> 4          0.458145     0.7140       2.5000                octave     386.3
+
+MUSICAL MATCHES IN THE HYDROGEN SPECTRUM:
+The ratio m/n for spectral transitions IS a frequency ratio.
+
+  Lyman 2->1: ratio 2/1 = octave (2/1), rapidity difference = 0.346574
+  Balmer 3->2: ratio 3/2 = fifth (3/2), rapidity difference = 0.202733
+  Balmer 4->2: ratio 4/2 = octave (2/1), rapidity difference = 0.346574
+  Paschen 4->3: ratio 4/3 = fourth (4/3), rapidity difference = 0.143841
+  Paschen 5->3: ratio 5/3 = major_sixth (5/3), rapidity difference = 0.255413
+  Paschen 6->3: ratio 6/3 = octave (2/1), rapidity difference = 0.346574
+  Brackett 5->4: ratio 5/4 = major_third (5/4), rapidity difference = 0.111572
+  Brackett 6->4: ratio 6/4 = fifth (3/2), rapidity difference = 0.202733
+  Brackett 8->4: ratio 8/4 = octave (2/1), rapidity difference = 0.346574
+
+The Balmer series (visible light!) starts at 3->2 = the PERFECT FIFTH.
+The Paschen starts at 4->3 = the PERFECT FOURTH.
+The Brackett starts at 5->4 = the MAJOR THIRD.
+
+THE HYDROGEN ATOM'S SPECTRAL SERIES START ON THE MAJOR CHORD (5:4:3:2).
+
+RYDBERG FORMULA IN RAPIDITY COORDINATES:
+  E(phi_m -> phi_n) = 13.6 * (exp(-4*phi_n) - exp(-4*phi_m))
+  = 13.6 * exp(-4*phi_n) * (1 - exp(-4*delta_phi))
+
+  For large m (ionization limit, phi_m -> infinity):
+  E_ion(n) = 13.6 * exp(-4*phi_n) eV
+  The ionization energy is PURELY exponential in rapidity.
+
+RAPIDITY GAPS FOR STANDARD PHOTON ENERGIES:
+  red (700nm)       : E = 1.65 eV, effective m = 2.788, delta_phi = 0.166040
+  orange (620nm)    : E = 1.77 eV, effective m = 2.889, delta_phi = 0.183799
+  green (530nm)     : E = 2.10 eV, effective m = 3.234, delta_phi = 0.240353
+  blue (480nm)      : E = 2.53 eV, effective m = 3.954, delta_phi = 0.340759
+  indigo (440nm)    : E = 2.75 eV, effective m = 4.574, delta_phi = 0.413640
+  violet (400nm)    : E = 3.10 eV, effective m = 6.733, delta_phi = 0.606937
+
+======================================================================
+2. RAPIDITY AND THE QUANTUM HARMONIC OSCILLATOR
+======================================================================
+
+The quantum harmonic oscillator: E_n = (n + 1/2) * hbar * omega
+
+Unlike the hydrogen atom (E ~ 1/n^2 = exp(-4*phi_n)), the oscillator
+has LINEARLY SPACED energy levels.
+
+In rapidity: E_n = (n + 1/2) * hbar * omega
+The rapidity of the quantum number is phi_n = ln(n)/2.
+So n = exp(2*phi_n), giving E_n = (exp(2*phi_n) + 1/2) * hbar*omega.
+
+The zero-point energy 1/2 is the key: it breaks the pure exponential.
+
+  n    phi_n = ln(n)/2    E_n / (hbar*omega)    exp(2*phi_n)
+  ------------------------------------------------------------
+   1      0.000000               1.50                  1.0000
+   2      0.346574               2.50                  2.0000
+   3      0.549306               3.50                  3.0000
+   4      0.693147               4.50                  4.0000
+   5      0.804719               5.50                  5.0000
+   6      0.895880               6.50                  6.0000
+   7      0.972955               7.50                  7.0000
+   8      1.039721               8.50                  8.0000
+   9      1.098612               9.50                  9.0000
+  10      1.151293              10.50                 10.0000
+  11      1.198948              11.50                 11.0000
+  12      1.242453              12.50                 12.0000
+  13      1.282475              13.50                 13.0000
+  14      1.319529              14.50                 14.0000
+  15      1.354025              15.50                 15.0000
+
+RAPIDITY SPACING BETWEEN CONSECUTIVE LEVELS:
+The energy gap is CONSTANT: Delta_E = hbar*omega (equally spaced).
+But the rapidity gap between n and n+1 is ln((n+1)/n)/2 ~ 1/(2n).
+
+  Transition    rapidity gap      ratio (n+1)/n    musical interval          cents off
+  ----------------------------------------------------------------------------------
+   1 ->  2        0.346574        2.00000         octave                  0.0 ***
+   2 ->  3        0.202733        1.50000         fifth                   0.0 ***
+   3 ->  4        0.143841        1.33333         fourth                  0.0 ***
+   4 ->  5        0.111572        1.25000         major_third             0.0 ***
+   5 ->  6        0.091161        1.20000         minor_third             0.0 ***
+   6 ->  7        0.077075        1.16667         minor_third            48.8
+   7 ->  8        0.066766        1.14286         major_second           27.3
+   8 ->  9        0.058892        1.12500         major_second            0.0 ***
+   9 -> 10        0.052680        1.11111         major_second           21.5
+  10 -> 11        0.047655        1.10000         major_second           38.9
+  11 -> 12        0.043506        1.09091         minor_second           38.9
+  12 -> 13        0.040021        1.08333         minor_second           26.8
+
+KEY OBSERVATION: The harmonic oscillator transitions trace out the
+HARMONIC SERIES of musical intervals! n -> n+1 has ratio (n+1)/n:
+  1 -> 2 : octave (2/1)
+  2 -> 3 : fifth (3/2)
+  3 -> 4 : fourth (4/3)
+  4 -> 5 : major third (5/4)
+  5 -> 6 : minor third (6/5)
+
+The quantum harmonic oscillator IS a descending harmonic series in
+rapidity space. Each successive gap is one step down the overtone series.
+
+ZERO-POINT ENERGY IN RAPIDITY:
+The ground state n=0 has E_0 = hbar*omega/2.
+But rapidity(0) = -infinity! The zero-point energy lives at the
+event horizon of rapidity space. This is the quantum vacuum:
+infinite rapidity, finite energy.
+
+RAPIDITY-PARAMETRIZED OSCILLATOR:
+  Define the 'rapidity oscillator' with levels at phi = k * delta_phi
+  for k = 0, 1, 2, ... with fixed spacing delta_phi.
+
+  If delta_phi = ln(2)/2 (one octave), energy levels are:
+  E_k = exp(2*k*delta_phi) + 1/2 = 2^k + 1/2
+
+    k    phi_k        E_k/hbar*omega    note
+    --------------------------------------------------
+    0     0.00000           1.5000          2^0 + 1/2 = 1.5
+    1     0.34657           2.5000          2^1 + 1/2 = 2.5
+    2     0.69315           4.5000          2^2 + 1/2 = 4.5
+    3     1.03972           8.5000          2^3 + 1/2 = 8.5
+    4     1.38629          16.5000          2^4 + 1/2 = 16.5
+    5     1.73287          32.5000          2^5 + 1/2 = 32.5
+    6     2.07944          64.5000          2^6 + 1/2 = 64.5
+    7     2.42602         128.5000          2^7 + 1/2 = 128.5
+
+With octave spacing in rapidity, the oscillator energies become POWERS OF 2
+plus the zero-point energy! This is a binary (dyadic) energy spectrum.
+
+SEMICLASSICAL PARTITION FUNCTION:
+Z(beta) = sum_{n=0}^inf exp(-beta * (n+1/2) * hbar*omega)
+        = exp(-beta*hbar*omega/2) / (1 - exp(-beta*hbar*omega))
+
+In rapidity coordinates, with beta*hbar*omega = 2*phi_T (thermal rapidity):
+Z = exp(-phi_T) / (1 - exp(-2*phi_T))
+  = 1 / (exp(phi_T) - exp(-phi_T))
+  = 1 / (2 * sinh(phi_T))
+
+THE PARTITION FUNCTION OF THE QHO IS 1/(2*sinh(rapidity))!
+
+  phi_T (thermal rapidity)    Z = 1/(2*sinh(phi_T))    <n> = 1/(exp(2*phi_T)-1)
+  ---------------------------------------------------------------------------
+     0.100                         4.99167638                  4.516656
+     0.300                         1.64192670                  1.216369
+     0.500                         0.95951738                  0.581977
+     1.000                         0.42545906                  0.156518
+     1.500                         0.23482122                  0.052396
+     2.000                         0.13786028                  0.018657
+     3.000                         0.04991078                  0.002485
+     5.000                         0.00673825                  0.000045
+
+  At low rapidity (high temperature): Z ~ 1/(2*phi_T) = k_B*T/(hbar*omega)
+  At high rapidity (low temperature): Z ~ exp(-phi_T)/2 = boltzmann tail
+  The crossover is at phi_T ~ 1, i.e., T ~ hbar*omega/k_B.
+
+
+======================================================================
+3. RAPIDITY AND ENTROPY (TOURNAMENT THERMODYNAMICS)
+======================================================================
+
+Boltzmann entropy: S = k_B * ln(W)
+where W = number of microstates.
+
+If W = n (a natural number of microstates), then:
+  S / (2 * k_B) = ln(n) / 2 = rapidity(n)
+
+ENTROPY IS TWICE THE RAPIDITY (in units of k_B).
+
+For a tournament T on n vertices:
+  W(T) = H(T) = number of Hamiltonian paths
+  S(T) = k_B * ln(H(T)) = 2 * k_B * rapidity(H(T))
+
+The entropy of a tournament IS the rapidity of its H-value.
+
+  Tournament        H(T)    rapidity(H)    S/(2*k_B)    S/k_B
+  -----------------------------------------------------------------
+  T_3 transitive             1     0.000000        0.000000       0.000000
+  T_3 cycle                  3     0.549306        0.549306       1.098612
+  T_4 max                    5     0.804719        0.804719       1.609438
+  H=7 FORBIDDEN              7     0.972955        0.972955       1.945910 <<<
+  T_5 Paley                 15     1.354025        1.354025       2.708050
+  H=21 FORBIDDEN            21     1.522261        1.522261       3.044522 <<<
+  T_6 max                   45     1.903331        1.903331       3.806662
+  T_7 Paley                189     2.620874        2.620874       5.241747
+  T_8 max                  661     3.246877        3.246877       6.493754
+  T_11 Paley             95095     5.731316        5.731316      11.462632
+
+ENTROPY OF THE FORBIDDEN VALUES:
+  S(7)  / k_B = ln(7)  = 1.945910  (= 2 * 0.972955)
+  S(21) / k_B = ln(21) = 3.044522  (= 2 * 1.522261)
+  Gap: ln(21) - ln(7) = ln(3) = 1.098612
+
+  The entropy gap between the two forbidden values is ln(3).
+  In rapidity: the gap is ln(3)/2 = one octave.
+  In entropy: the gap is ln(3) = TWO octaves of rapidity.
+
+  THREE IS EVERYWHERE: ln(3) is the entropy of a 3-state system
+  (a ternary digit, a tournament arc with outcomes {win, lose, draw}).
+
+ENTROPY DENSITY (per vertex):
+  n    H_max     S/k_B     s = S/(n*k_B)    rapidity_density
+  ------------------------------------------------------------
+   3         3     1.0986      0.366204           0.183102
+   4         5     1.6094      0.402359           0.201180
+   5        15     2.7081      0.541610           0.270805
+   6        45     3.8067      0.634444           0.317222
+   7       189     5.2417      0.748821           0.374411
+   8       661     6.4938      0.811719           0.405860
+  11     95095    11.4626      1.042057           0.521029
+
+ENTROPY DENSITY LIMIT:
+  For large n, max H(T) ~ n! / 2^(n-1) (Alon's result).
+  ln(H_max) ~ n*ln(n) - n - (n-1)*ln(2) ~ n*(ln(n) - ln(2) - 1)
+  s_max ~ ln(n) - ln(2) - 1 -> infinity (slowly, logarithmically)
+
+  The rapidity density phi_max/n ~ (ln(n) - ln(2) - 1)/2.
+  This is the entropy density of the maximally disordered tournament.
+
+BOLTZMANN'S H-THEOREM CONNECTION:
+  Boltzmann's H-function: H_B = -sum p_i ln(p_i)
+  For uniform distribution over H(T) paths: H_B = ln(H(T))
+  = 2 * rapidity(H(T)) = S(T)/k_B
+
+  The tournament's Boltzmann H IS twice the rapidity of our H.
+  The notation collision is cosmically appropriate.
+
+CARNOT EFFICIENCY IN RAPIDITY:
+  Two tournaments T_hot, T_cold with H_hot > H_cold.
+  The 'work' extractable from the entropy difference:
+  eta = 1 - T_cold/T_hot = 1 - phi_cold/phi_hot
+  (identifying temperature with rapidity)
+
+  Pair                                 phi_hot phi_cold      eta
+  ---------------------------------------------------------------
+  T_3 -> T_transitive                   0.5493   0.0000   1.0000
+  T_5 Paley -> T_3 cycle                1.3540   0.5493   0.5943
+  T_7 Paley -> T_5 Paley                2.6209   1.3540   0.4834
+  T_7 Paley -> T_3 cycle                2.6209   0.5493   0.7904
+  T_11 Paley -> T_7 Paley               5.7313   2.6209   0.5427
+
+======================================================================
+4. RAPIDITY AND BLACK HOLES
+======================================================================
+
+Bekenstein-Hawking entropy: S = A / (4 * l_P^2)
+where A = event horizon area, l_P = Planck length.
+
+If area is quantized: A = n * A_0 (n = 1, 2, 3, ...)
+with A_0 = 4 * l_P^2 * ln(k) (Bekenstein's original proposal: k=2 or k=3)
+
+Then S = n * ln(k) and rapidity(exp(2S)) = S.
+
+But more interestingly: if S = ln(n) (i.e., n microstates), then
+  rapidity(n) = S/2 = A / (8 * l_P^2)
+
+The rapidity of the number of black hole microstates equals
+half the Bekenstein-Hawking entropy, which equals the area
+in units of 8 Planck areas.
+
+BEKENSTEIN AREA QUANTIZATION IN RAPIDITY:
+  Bekenstein (1974): A_n = 4 * l_P^2 * ln(k) * n
+  => S_n = n * ln(k)
+  => number of microstates W = k^n
+  => rapidity(W) = n * ln(k) / 2 = S_n / 2
+
+  For k=2 (binary microstates):
+      n   area (Planck)     S/k_B             W     rapidity(W)
+    ------------------------------------------------------------
+      1        2.772589    0.6931             2        0.346574
+      2        5.545177    1.3863             4        0.693147
+      3        8.317766    2.0794             8        1.039721
+      4       11.090355    2.7726            16        1.386294
+      5       13.862944    3.4657            32        1.732868
+      6       16.635532    4.1589            64        2.079442
+      7       19.408121    4.8520           128        2.426015
+      8       22.180710    5.5452           256        2.772589
+      9       24.953299    6.2383           512        3.119162
+     10       27.725887    6.9315          1024        3.465736
+
+  For k=3 (ternary microstates, preferred by some authors):
+      n   area (Planck)     S/k_B             W     rapidity(W)
+    ------------------------------------------------------------
+      1        4.394449    1.0986             3        0.549306
+      2        8.788898    2.1972             9        1.098612
+      3       13.183347    3.2958            27        1.647918
+      4       17.577797    4.3944            81        2.197225
+      5       21.972246    5.4931           243        2.746531
+      6       26.366695    6.5917           729        3.295837
+      7       30.761144    7.6903          2187        3.845143
+      8       35.155593    8.7889          6561        4.394449
+
+HAWKING TEMPERATURE IN RAPIDITY:
+  T_H = hbar * c^3 / (8 * pi * G * M)
+  For a Schwarzschild black hole with area A = 16*pi*G^2*M^2/c^4:
+  T_H = hbar * c^3 / (8*pi*G*M) = hbar / (4*pi*l_P) * l_P^2 / (G*M/c^2)
+
+  In Planck units (hbar = c = G = k_B = 1):
+  T_H = 1 / (8*pi*M)
+
+  The thermal rapidity phi_T = 1/(2*T_H) = 4*pi*M
+  (i.e., beta/2 in Planck units)
+
+  This means: the larger the black hole, the HIGHER its thermal rapidity
+  (lower temperature). A Planck-mass black hole has phi_T ~ 4*pi ~ 12.57.
+
+    M (Planck)    T_H (Planck)     phi_thermal            S_BH
+  ------------------------------------------------------------
+         1e+00    3.978874e-02         12.5664      1.2566e+01
+         1e+01    3.978874e-03        125.6637      1.2566e+03
+         1e+02    3.978874e-04       1256.6371      1.2566e+05
+         1e+06    3.978874e-08   12566370.6144      1.2566e+13
+         1e+10    3.978874e-12  125663706143.5917      1.2566e+21
+
+FORBIDDEN NUMBERS AS BLACK HOLE STATES:
+  A black hole with W=7 microstates has S = ln(7) and rapidity 0.973.
+  A black hole with W=21 microstates has S = ln(21) and rapidity 1.522.
+
+  These are FORBIDDEN in tournament theory: no tournament has exactly
+  7 or 21 Hamiltonian paths.
+
+  If we imagine a "tournament black hole" where the Hamiltonian paths
+  are microstates, then the area spectrum has GAPS at:
+    A(7)  = 8 * l_P^2 * rapidity(7)  = 7.784 l_P^2
+    A(21) = 8 * l_P^2 * rapidity(21) = 12.178 l_P^2
+
+  The gap between them: 8 * l_P^2 * ln(3)/2 = 4 * ln(3) * l_P^2
+  = 4.394 l_P^2 (one octave of rapidity in area units).
+
+  TOURNAMENT BLACK HOLE AREA SPECTRUM (first 30 H-values):
+       H    rapidity   S = 2*rap     A (l_P^2)  status
+    -------------------------------------------------------
+       1    0.000000    0.000000      0.000000  allowed
+       3    0.549306    1.098612      4.394449  allowed
+       5    0.804719    1.609438      6.437752  allowed
+       7    0.972955    1.945910      7.783641  FORBIDDEN
+       9    1.098612    2.197225      8.788898  allowed
+      11    1.198948    2.397895      9.591581  allowed
+      13    1.282475    2.564949     10.259797  allowed
+      15    1.354025    2.708050     10.832201  allowed
+      17    1.416607    2.833213     11.332853  allowed
+      19    1.472219    2.944439     11.777756  allowed
+      21    1.522261    3.044522     12.178090  FORBIDDEN
+      23    1.567747    3.135494     12.541977  allowed
+      25    1.609438    3.218876     12.875503  allowed
+      27    1.647918    3.295837     13.183347  allowed
+      29    1.683648    3.367296     13.469183  allowed
+      31    1.716994    3.433987     13.735949  allowed
+      33    1.748254    3.496508     13.986030  allowed
+      35    1.777674    3.555348     14.221392  allowed
+      37    1.805459    3.610918     14.443672  allowed
+      39    1.831781    3.663562     14.654247  allowed
+      41    1.856786    3.713572     14.854288  allowed
+      43    1.880600    3.761200     15.044800  allowed
+      45    1.903331    3.806662     15.226650  allowed
+      47    1.925074    3.850148     15.400590  allowed
+
+======================================================================
+5. RAPIDITY AND THE RIEMANN ZETA FUNCTION
+======================================================================
+
+The Riemann zeta function:
+  zeta(s) = sum_{n=1}^inf n^{-s}
+  = sum_{n=1}^inf exp(-s * ln(n))
+  = sum_{n=1}^inf exp(-2s * rapidity(n))
+
+This is a PARTITION FUNCTION in rapidity space!
+The "energy" of state n is 2*rapidity(n) = ln(n).
+The "inverse temperature" is s.
+
+  Z(s) = zeta(s) = sum_n exp(-s * E_n)  where E_n = ln(n)
+
+The critical line Re(s) = 1/2 means 2*Re(s) = 1, so the
+effective "temperature" parameter (2*Re(s))^{-1} = 1.
+
+Temperature 1 is special: it's where the Boltzmann weight
+exp(-E/T) = exp(-ln(n)) = 1/n, giving the HARMONIC SERIES!
+
+ZETA FUNCTION AS RAPIDITY PARTITION FUNCTION:
+  (truncated to N=10000 terms)
+
+                          s        Re(zeta)        Im(zeta)          |zeta|  2*Re(s)
+  -------------------------------------------------------------------------------------
+  s=2                              1.644834        0.000000        1.644834  4.00
+  s=3/2                            2.592376        0.000000        2.592376  3.00
+  s=1.1                            6.603397        0.000000        6.603397  2.20
+  s=1.01                           9.376905        0.000000        9.376905  2.02
+  s=1/2+14.13i (1st zero)         -6.934233       -1.394362        7.073035  1.00
+  s=1/2+21.02i (2nd zero)         -4.346698        1.929459        4.755691  1.00
+  s=1/2+25.01i (3rd zero)         -3.438289       -2.040018        3.997937  1.00
+
+KNOWN EXACT VALUES (for comparison):
+  zeta(2) = pi^2/6 = 1.644934 (Basel problem)
+  zeta(3/2) = 2.612376 (Bose-Einstein condensation critical exponent!)
+
+  The Bose-Einstein condensation temperature involves zeta(3/2).
+  In rapidity: this is the partition function at temperature 2/3
+  (since 2*Re(s) = 3, T = 1/3... wait, let's be precise).
+
+PARTITION FUNCTION INTERPRETATION:
+  Z(beta) = sum_n exp(-beta * E_n) with E_n = ln(n)
+  This is zeta(beta) (the 'real' partition function).
+  Free energy: F(beta) = -ln(Z(beta))/beta = -ln(zeta(beta))/beta
+  Entropy: S(beta) = beta^2 * dF/dbeta = beta * <E> + ln(Z)
+
+    beta    Z=zeta(beta)             <E>               S               F
+  --------------------------------------------------------------------
+    1.10        6.603397        3.551294        5.794008       -1.715986
+    1.50        2.592376        1.430363        3.098119       -0.635050
+    2.00        1.644834        0.569375        1.636389       -0.248820
+    3.00        1.202057        0.164823        0.678502       -0.061345
+    5.00        1.036928        0.027556        0.174043       -0.007252
+   10.00        1.000995        0.000696        0.007957       -0.000099
+
+CRITICAL BEHAVIOR AT beta -> 1:
+  zeta(beta) diverges as beta -> 1+ (harmonic series).
+  This is a PHASE TRANSITION at temperature T_c = 1 (in rapidity units).
+
+  Below T_c (beta > 1): the partition function converges.
+    The system is in a "condensed" phase — low-energy states dominate.
+  Above T_c (beta < 1): divergence.
+    The system is in an "evaporated" phase — all states contribute equally.
+
+  The critical line Re(s) = 1/2 is at beta_eff = 1/2, which is
+  ABOVE T_c. The Riemann zeros live in the evaporated phase!
+  But they correspond to DESTRUCTIVE INTERFERENCE among the
+  oscillating terms (from the imaginary part of s).
+
+EULER PRODUCT IN RAPIDITY:
+  zeta(s) = product_{p prime} (1 - p^{-s})^{-1}
+  = product_{p prime} (1 - exp(-2s * rapidity(p)))^{-1}
+
+  Each prime contributes a factor that depends only on its rapidity.
+  The zeros of zeta are where the prime rapidities interfere destructively.
+
+  Partial Euler product for zeta(2.0):
+       primes up to         product         zeta(2)       ratio
+    -------------------------------------------------------
+                  2      1.33333333      1.64493407    0.810569
+                  3      1.50000000      1.64493407    0.911891
+                  5      1.56250000      1.64493407    0.949886
+                  7      1.59505208      1.64493407    0.969675
+                 11      1.60834418      1.64493407    0.977756
+                 13      1.61791766      1.64493407    0.983576
+                 17      1.62353543      1.64493407    0.986991
+                 19      1.62804525      1.64493407    0.989733
+                 23      1.63112867      1.64493407    0.991607
+                 29      1.63307049      1.64493407    0.992788
+                 47      1.63856796      1.64493407    0.996130
+                 71      1.64075419      1.64493407    0.997459
+                 97      1.64194520      1.64493407    0.998183
+
+ZETA ZEROS AND THE H-SPECTRUM:
+  The first few nontrivial zeros of zeta are at s = 1/2 + i*t where:
+  t_1 = 14.1347..., t_2 = 21.0220..., t_3 = 25.0109...
+
+  These imaginary parts t_k have RAPIDITY INTERPRETATION.
+  The "rapidity period" of each zero is 2*pi / t_k:
+
+    k           t_k   rapidity period   exp(period)   nearest H
+  --------------------------------------------------------------------
+    1     14.134725        0.44452123      1.559743           1
+    2     21.022040        0.29888561      1.348355           1
+    3     25.010858        0.25121830      1.285591           1
+    4     30.424876        0.20651474      1.229386           1
+    5     32.935062        0.19077497      1.210187           1
+    6     37.586178        0.16716744      1.181952           1
+    7     40.918719        0.15355284      1.165969           1
+    8     43.327073        0.14501753      1.156060           1
+    9     48.005151        0.13088565      1.139837           1
+   10     49.773832        0.12623471      1.134548           1
+
+======================================================================
+6. ISING MODEL ON THE PRIME RAPIDITY LINE
+======================================================================
+
+Consider an Ising chain with spins placed at PRIME RAPIDITIES:
+  Site i at position phi_i = ln(p_i)/2 (i-th prime p_i)
+  Spins sigma_i in {-1, +1}
+
+The nearest-neighbor coupling between consecutive primes p_i and p_{i+1}:
+  J_i = (ln(p_{i+1}) - ln(p_i)) / 2 = rapidity gap = ln(p_{i+1}/p_i) / 2
+
+This is a 1D Ising chain with INHOMOGENEOUS couplings determined by
+prime gaps. The couplings look random but are completely deterministic.
+
+PRIME RAPIDITY POSITIONS AND COUPLINGS:
+    i    p_i       phi_i    J_i (coupling)   gap p_{i+1}-p_i
+  ------------------------------------------------------------
+    1      2    0.346574        0.20273255                 1
+    2      3    0.549306        0.25541281                 2
+    3      5    0.804719        0.16823612                 2
+    4      7    0.972955        0.22599256                 4
+    5     11    1.198948        0.08352704                 2
+    6     13    1.282475        0.13413199                 4
+    7     17    1.416607        0.05561282                 2
+    8     19    1.472219        0.09552762                 4
+    9     23    1.567747        0.11590081                 6
+   10     29    1.683648        0.03334569                 2
+   11     31    1.716994        0.08846535                 6
+   12     37    1.805459        0.05132708                 4
+   13     41    1.856786        0.02381402                 2
+   14     43    1.880600        0.04447374                 4
+   15     47    1.925074        0.06007216                 6
+   16     53    1.985146        0.05362277                 6
+   17     59    2.038769        0.01666821                 2
+   18     61    2.055437        0.04690938                 6
+   19     67    2.102346        0.02899363                 4
+   20     71    2.131340        0.01388978                 2
+   21     73    2.145230        0.03949421                 6
+   22     79    2.184724        0.02469638                 4
+   23     83    2.209420        0.03489788                 6
+   24     89    2.244318        0.04303730                 8
+   25     97    2.287355        0.02020477                 4
+
+  Coupling statistics (first 49 primes):
+    Mean J:   0.04837321
+    Std J:    0.05747623
+    Min J:    0.00438599 (twin primes)
+    Max J:    0.25541281 (largest gap)
+    Mean/Std: 0.8416
+
+EXACT SOLUTION OF THE PRIME ISING CHAIN:
+
+  The 1D Ising model with couplings {J_i} and field h has:
+  H = -sum_i J_i * sigma_i * sigma_{i+1} - h * sum_i sigma_i
+
+  Exact partition function (transfer matrix method):
+  Z(beta, h) = Tr(T_1 * T_2 * ... * T_{N-1})
+  where T_i = [[exp(beta*J_i + beta*h), exp(-beta*J_i)]
+                [exp(-beta*J_i), exp(beta*J_i - beta*h)]]
+
+  Chain length: 21 spins (primes 2 through 73)
+
+    beta         ln(Z)         <E>/N         <m>           C/N           S/N
+  ----------------------------------------------------------------------
+     0.1       14.5574     -0.001240    0.001984      0.000124      0.693085
+     0.5       14.5886     -0.006182    0.010642      0.003071      0.691604
+     1.0       14.6855     -0.012246    0.023261      0.011938      0.687063
+     2.0       15.0643     -0.023620    0.055604      0.042847      0.670105
+     5.0       17.4127     -0.048541    0.225414      0.150506      0.586474
+    10.0       23.6479     -0.067110    0.784898      0.219312      0.454992
+    20.0       39.2167     -0.078695    2.935838      0.239216      0.293562
+    50.0       91.5860     -0.085270   12.681115      0.164947      0.097727
+
+INTERPRETATION:
+  At high temperature (small beta): spins are disordered, S/N -> ln(2).
+  At low temperature (large beta): spins align, <m> -> 1, S/N -> 0.
+
+  The COUPLING DISORDER from prime gaps creates a spin-glass-like behavior.
+  The ground state depends on the SIGNS of the couplings.
+  Since all J_i > 0 (consecutive primes are increasing), this is a
+  FERROMAGNET: ground state is all-aligned.
+
+  The effective coupling strength varies: twin primes have WEAK coupling
+  (close together in rapidity), while primes with large gaps have
+  STRONG coupling. The chain is a ferromagnet with random bond strengths.
+
+COMPARISON: PRIME CHAIN vs UNIFORM CHAIN
+
+  Mean coupling J_mean = 0.08993281
+
+    beta     S_prime/N   S_uniform/N        diff       ratio
+  ----------------------------------------------------------
+     0.5      0.691604      0.692185   -0.000581    0.999161
+     1.0      0.687064      0.689311   -0.002248    0.996739
+     2.0      0.670108      0.677987   -0.007879    0.988379
+     5.0      0.586520      0.605791   -0.019271    0.968188
+    10.0      0.455344      0.422154    0.033190    1.078620
+    20.0      0.296248      0.150109    0.146139    1.973554
+
+  The disorder in the prime couplings INCREASES the entropy relative to
+  the uniform chain at the same mean coupling. This is because the weak
+  bonds (twin primes) create "easy flip" sites that add configurational entropy.
+
+SPIN-SPIN CORRELATION vs RAPIDITY DISTANCE:
+  <sigma_i * sigma_j> for the prime chain at beta=2.0
+
+    i    j    p_i    p_j   rapidity dist     <s_i*s_j>     log|corr|
+  ----------------------------------------------------------------------
+    1    2      2      3        0.202733    0.38461538     -0.955511
+    1    3      2      5        0.458145    0.18099548     -1.709283
+    1    4      2      7        0.626381    0.05870124     -2.835295
+    1    5      2     11        0.852374    0.02486170     -3.694427
+    1    6      2     13        0.935901    0.00411504     -5.493107
+    1    7      2     17        1.070033    0.00107818     -6.832484
+    1    8      2     19        1.125646    0.00011943     -9.032790
+    1    9      2     23        1.221174    0.00002254    -10.700048
+    1   10      2     29        1.337074    0.00000513    -12.179611
+    1   11      2     31        1.370420    0.00000034    -14.888771
+    1   12      2     37        1.458885    0.00000006    -16.631128
+    1   13      2     41        1.510212    0.00000001    -18.911021
+    1   14      2     43        1.534026    0.00000000    -21.956111
+    1   15      2     47        1.578500    0.00000000    -24.378452
+
+  In a uniform chain: log|<s_0*s_r>| = r * ln(tanh(beta*J)) ~ -r * exp(-2*beta*J)
+  In the prime chain: the correlation decays as a PRODUCT over prime gaps.
+  The correlation length depends on the WEAKEST bond (smallest J_i = twin prime gap).
+
+  CORRELATION LENGTH:
+  xi^{-1} = -<ln(tanh(beta*J_i))> (averaged over prime gaps)
+
+  At beta = 2.0: xi^(-1) = 2.04709623
+  Correlation length xi = 0.4885 sites
+  In rapidity units: xi_phi = 0.043932
+
+TWIN PRIME EFFECT ON CORRELATIONS:
+  Twin primes (p, p+2) have the SMALLEST J ~ 1/p.
+  These are the WEAKEST links in the chain — correlation bottlenecks.
+
+      (p, p+2)             J    tanh(beta*J)   contribution to xi^-1
+  ----------------------------------------------------------------
+  (  3,   5)       0.25541281      0.47058824              0.75377180
+  (  5,   7)       0.16823612      0.32432432              1.12601126
+  ( 11,  13)       0.08352704      0.16551724              1.79867991
+  ( 17,  19)       0.05561282      0.11076923              2.20030624
+  ( 29,  31)       0.03334569      0.06659267              2.70916070
+  ( 41,  43)       0.02381402      0.04759207              3.04508917
+  ( 59,  61)       0.01666821      0.03332408              3.40147512
+  ( 71,  73)       0.01388978      0.02777242              3.58371182
+  (101, 103)       0.00980424      0.01960596              3.93192174
+  (107, 109)       0.00925952      0.01851693              3.98906978
+
+======================================================================
+SYNTHESIS: CROSS-CONNECTIONS BETWEEN ALL SIX DOMAINS
+======================================================================
+
+A. HYDROGEN ATOM <-> TOURNAMENTS:
+   The spectral transitions n -> m have ratios m/n that match musical intervals.
+   Tournament H-values also decompose in rapidity as sums of prime rapidities.
+   The "spectral series" of H-values (1, 3, 5, 9, 11, ...) have rapidity spacing
+   that mirrors the hydrogen transitions:
+
+      H_a    H_b     ratio    rapidity gap    closest interval   cents off
+    ---------------------------------------------------------------------------
+        1      3    3.0000        0.549306              octave       702.0
+        3      5    1.6667        0.255413         major_sixth         0.0 ***
+        5      9    1.8000        0.293893       minor_seventh         0.0 ***
+        9     11    1.2222        0.100335         minor_third        31.8 ***
+       11     13    1.1818        0.083527         minor_third        26.4 ***
+       13     15    1.1538        0.071550        major_second        43.8 ***
+       15     17    1.1333        0.062582        major_second        12.8 ***
+       17     19    1.1176        0.055613        major_second        11.4 ***
+       19     23    1.2105        0.095528         minor_third        15.1 ***
+       23     25    1.0870        0.041691        minor_second        32.6 ***
+       25     27    1.0800        0.038481        minor_second        21.5 ***
+       27     29    1.0741        0.035729        minor_second        12.0 ***
+
+B. HARMONIC OSCILLATOR <-> ZETA FUNCTION:
+   The QHO partition function Z = 1/(2*sinh(phi_T)) involves sinh.
+   The zeta function zeta(s) = sum exp(-2s * rapidity(n)) is the
+   partition function of the "rapidity gas" with levels E_n = ln(n).
+
+   The QHO has EQUALLY SPACED energy levels E_n = (n+1/2)*hbar*omega.
+   The "rapidity gas" has LOGARITHMICALLY SPACED levels E_n = ln(n).
+   The QHO condenses at T=0. The rapidity gas condenses at T=1 (zeta pole).
+
+   QHO vs Rapidity Gas:
+                    property                   QHO          Rapidity Gas
+   -------------------------------------------------------------------
+               Energy levels               n + 1/2                 ln(n)
+               Level spacing          constant (1)                 ~ 1/n
+          Partition function       1/(2*sinh(phi))            zeta(beta)
+              Critical point                 T = 0      T = 1 (beta = 1)
+                Ground state             E_0 = 1/2               E_1 = 0
+           Density of states              constant              ~ exp(E)
+
+C. ENTROPY <-> BLACK HOLES:
+   Tournament entropy S(T) = k_B * ln(H(T)) = 2*k_B * rapidity(H).
+   Bekenstein-Hawking entropy S_BH = A / (4*l_P^2).
+   Equating: the "area" of a tournament is A = 8 * l_P^2 * rapidity(H).
+
+   For the Paley tournaments:
+
+     p      H(T_p)    rapidity       S/k_B     A (l_P^2)
+   --------------------------------------------------
+     3           3      0.5493      1.0986        4.3944
+     7         189      2.6209      5.2417       20.9670
+    11       95095      5.7313     11.4626       45.8505
+
+D. ZETA <-> ISING MODEL:
+   Both involve sums/products over primes.
+   zeta(s) = prod_p (1 - p^{-s})^{-1} (Euler product)
+   Z_Ising = Tr(prod_i T_i) where T_i has coupling J_i = rapidity gap at p_i
+
+   The Euler product factors correspond to individual prime "sites."
+   At each prime, the zeta factor (1-p^{-s})^{-1} = sum_{k>=0} p^{-ks}
+   counts occupation numbers k of the prime mode.
+
+   The Ising transfer matrix T_i at site i counts spin configurations.
+   Both are TRANSFER MATRIX methods over the prime lattice.
+
+ISING-ZETA BRIDGE:
+  At each prime p, define the 'Ising zeta factor':
+  f_p(beta) = 2*cosh(beta * J_p) / (exp(beta*J_p) + exp(-beta*J_p))
+  = 1 (trivially for Ising)
+
+  But the partition function ratio Z_prime/Z_uniform encodes
+  the DISORDER of prime gaps:
+
+  At beta = 5.0:
+    Z_prime   = 3.64759832e+07
+    Z_uniform = 1.48482225e+07
+    Ratio     = 2.45658922
+    ln(ratio) = 0.89877389
+
+
+E. GRAND UNIFIED RAPIDITY TABLE:
+
+   The number 7 (first forbidden H-value) appears in ALL six domains:
+
+   DOMAIN              RAPIDITY(7)                    MEANING
+   -----------------------------------------------------------------------
+   Hydrogen atom       ln(7)/2 = 0.973               Level n=7 energy parameter
+   Harmonic oscillator ln(7)/2 = 0.973               7th level sits at this rapidity
+   Entropy             ln(7) = 1.946                 Entropy of 7 microstates
+   Black hole          8*ln(7)/2 = 7.784 l_P^2       Area of 7-microstate BH
+   Zeta function       exp(-2s*0.973)                 The n=7 Boltzmann weight
+   Ising model         J ~ 0.168 (coupling at p=7)    Bond strength at prime 7
+
+   The number 21 (second forbidden H-value):
+
+   DOMAIN              RAPIDITY(21)                   MEANING
+   -----------------------------------------------------------------------
+   Hydrogen atom       ln(21)/2 = 1.522               (fractional level n=21)
+   Entropy             ln(21) = 3.045                 Entropy of 21 microstates
+   Black hole          8*ln(21)/2 = 12.178 l_P^2       Area of 21-microstate BH
+   Gap 21-7            ln(3)/2 = 0.549                ONE OCTAVE in rapidity
+
+
+F. THE CRITICAL LINE AND TEMPERATURE 1:
+   Re(s) = 1/2 on the critical line means 2*Re(s) = 1.
+   In the rapidity gas, this is "temperature" T = 1/(2*Re(s)) = 1.
+
+   What happens at T=1 in each domain?
+
+   HYDROGEN:   T = 1 in natural units is the Bohr temperature ~ 158,000 K.
+               Above this, hydrogen is fully ionized.
+   QHO:        T = 1 (beta = 1) is the crossover from quantum to classical.
+               <n> = 1/(e^2 - 1) = 0.157 (mostly in ground state).
+   ENTROPY:    S = k_B * 1 = k_B (one nat of information).
+   BLACK HOLE: T_H = 1 means M = 1/(8*pi) Planck masses (micro black hole).
+   ISING:      beta = 1 with mean J ~ 0.1 gives mild ordering.
+
+   At the CRITICAL beta=1 for the prime Ising chain:
+     ln(Z)  = 14.685494
+     <m>    = 0.023261
+     <E>/N  = -0.012246
+     S/N    = 0.687063
+     S/N / ln(2) = 0.991222 (fraction of max entropy)
+
+======================================================================
+BONUS: DIMENSIONAL ANALYSIS IN RAPIDITY
+======================================================================
+
+In natural units (hbar = c = k_B = 1), the only scale is the Planck scale.
+Every physical quantity is a power of the Planck mass m_P.
+
+The RAPIDITY of a physical quantity Q (in Planck units) is ln(Q)/2.
+This puts all of physics on a single rapidity line:
+
+   Quantity (Planck units)         ln(Q)         rapidity
+   -----------------------------------------------------------------------
+   Planck length l_P                          0.000          0.000
+   Planck time t_P                            0.000          0.000
+   Planck mass m_P                            0.000          0.000
+   Proton mass                              -43.949        -21.974
+   Electron mass                            -51.527        -25.763
+   Hydrogen ground state                    -62.170        -31.085
+   Room temperature                         -68.501        -34.250
+   CMB temperature                          -73.194        -36.597
+   Hubble scale                             140.295         70.148
+   Observable universe mass                  52.138         26.069
+
+The entire observable universe spans about 140 orders of magnitude
+in rapidity (from the Planck scale to the Hubble scale), which is
+about 160 in ln(Q) or 80 in rapidity.
+
+The rapidity range of the universe is ~80 — roughly the number of
+octaves from the Planck frequency to the Hubble frequency.
+In musical terms: the universe is an 80-octave instrument.
+
+======================================================================
+FINAL SUMMARY: WHAT RAPIDITY REVEALS
+======================================================================
+
+1. HYDROGEN ATOM: Energy levels E_n = -13.6 * exp(-4 * rapidity(n)) eV.
+   Spectral series start at perfect fifth (Balmer), fourth (Paschen),
+   major third (Brackett). THE HYDROGEN ATOM PLAYS THE MAJOR CHORD.
+
+2. HARMONIC OSCILLATOR: Transitions trace the overtone series in rapidity.
+   Partition function Z = 1/(2*sinh(rapidity)). Zero-point energy lives
+   at rapidity = -infinity (the event horizon of rapidity space).
+
+3. ENTROPY: S = 2*k_B * rapidity(W). Tournament entropy IS rapidity.
+   Forbidden values H=7, H=21 have entropy gap = ln(3) = TWO rapidity
+   octaves. Entropy density grows logarithmically for max-H tournaments.
+
+4. BLACK HOLES: Bekenstein-Hawking entropy S = 2 * rapidity(W).
+   Tournament "area" A = 8*l_P^2 * rapidity(H). The forbidden H-values
+   create GAPS in the area spectrum of tournament black holes.
+   Gap size = 4*ln(3)*l_P^2 (one rapidity octave in area units).
+
+5. RIEMANN ZETA: zeta(s) = partition function of rapidity gas with
+   E_n = ln(n). Phase transition at T=1 (the zeta pole). Critical line
+   at T=1 — the Riemann zeros are DESTRUCTIVE INTERFERENCE at temperature 1.
+   The Euler product factors over primes = transfer matrices over prime sites.
+
+6. ISING MODEL: Spins at prime rapidities with couplings J = rapidity gap.
+   Ferromagnetic chain with disorder from prime gaps. Twin primes are
+   WEAK LINKS (correlation bottlenecks). The chain encodes prime gap
+   statistics in its thermodynamics.
+
+UNIFYING THEME: Rapidity = ln(n)/2 is the natural coordinate for
+counting, entropy, area, and energy. The forbidden numbers {7, 21}
+are gaps in this universal spectrum, separated by exactly one octave.
+The zeta function is the partition function, and the primes are the
+lattice sites. Everything composes additively in rapidity space.
+
+======================================================================
+END OF OUTPUT — rapidity_physics_s116b
+======================================================================

@@ -1,0 +1,839 @@
+======================================================================
+RAPIDITY AND NUMBER THEORY: SEVEN EXPLORATIONS
+======================================================================
+
+======================================================================
+1. RAPIDITY AND CONTINUED FRACTIONS
+======================================================================
+
+  Continued fraction convergents and their rapidities:
+  rapidity(p_n/q_n) = ln(p_n/q_n)/2
+
+  sqrt(2) = 1.4142135624, true rapidity = 0.1732867951
+    n  p_n/q_n        rapidity       error from true    ratio_successive
+     0         1/1           0.00000000       -1.73e-01
+     1         3/2           0.20273255       +2.94e-02  -5.8849
+     2         7/5           0.16823612       -5.05e-03  -5.8301
+     3        17/12          0.17415335       +8.67e-04  -5.8285
+     4        41/29          0.17313812       -1.49e-04  -5.8284
+     5        99/70          0.17331230       +2.55e-05  -5.8284
+     6       239/169         0.17328242       -4.38e-06  -5.8284
+     7       577/408         0.17328755       +7.51e-07  -5.8284
+     8      1393/985         0.17328667       -1.29e-07  -5.8284
+     9      3363/2378        0.17328682       +2.21e-08  -5.8284
+    10      8119/5741        0.17328679       -3.79e-09  -5.8284
+    11     19601/13860       0.17328680       +6.51e-10  -5.8284
+    12     47321/33461       0.17328680       -1.12e-10  -5.8284
+    13    114243/80782       0.17328680       +1.92e-11  -5.8284
+    14    275807/195025      0.17328680       -3.29e-12  -5.8283
+
+  phi     = 1.6180339887, true rapidity = 0.2406059125
+    n  p_n/q_n        rapidity       error from true    ratio_successive
+     0         1/1           0.00000000       -2.41e-01
+     1         2/1           0.34657359       +1.06e-01  -2.2706
+     2         3/2           0.20273255       -3.79e-02  -2.7979
+     3         5/3           0.25541281       +1.48e-02  -2.5578
+     4         8/5           0.23500181       -5.60e-03  -2.6422
+     5        13/8           0.24275391       +2.15e-03  -2.6090
+     6        21/13          0.23978654       -8.19e-04  -2.6215
+     7        34/21          0.24091904       +3.13e-04  -2.6167
+     8        55/34          0.24048633       -1.20e-04  -2.6185
+     9        89/55          0.24065159       +4.57e-05  -2.6178
+    10       144/89          0.24058846       -1.74e-05  -2.6181
+    11       233/144         0.24061258       +6.66e-06  -2.6180
+    12       377/233         0.24060337       -2.55e-06  -2.6180
+    13       610/377         0.24060688       +9.72e-07  -2.6180
+    14       987/610         0.24060554       -3.71e-07  -2.6180
+
+  e       = 2.7182818285, true rapidity = 0.5000000000
+    n  p_n/q_n        rapidity       error from true    ratio_successive
+     0         2/1           0.34657359       -1.53e-01
+     1         3/1           0.54930614       +4.93e-02  -3.1117
+     2         8/3           0.49041463       -9.59e-03  -5.1439
+     3        11/4           0.50580046       +5.80e-03  -1.6525
+     4        19/7           0.49926442       -7.36e-04  -7.8855
+     5        87/32          0.50008611       +8.61e-05  -8.5426
+     6       106/39          0.49993872       -6.13e-05  -1.4052
+     7       193/71          0.50000516       +5.16e-06  -11.8846
+     8      1264/465         0.49999958       -4.15e-07  -12.4108
+     9      1457/536         0.50000032       +3.23e-07  -1.2879
+    10      2721/1001        0.49999998       -2.03e-08  -15.9164
+    11     23225/8544        0.50000000       +1.24e-09  -16.3300
+    12     25946/9545        0.50000000       -1.01e-09  -1.2234
+    13     49171/18089       0.50000000       +5.09e-11  -19.9352
+    14    517656/190435      0.50000000       -2.51e-12  -20.2765
+
+  RAPIDITY JUMPS between successive convergents:
+  delta_n = rapidity(p_{n+1}/q_{n+1}) - rapidity(p_n/q_n)
+
+  sqrt(2):
+    delta_ 0 =  +0.20273255   |delta| = 2.03e-01   1/(2*q_n*q_{n+1}) = 2.50e-01   ratio = 0.8109
+    delta_ 1 =  -0.03449644   |delta| = 3.45e-02   1/(2*q_n*q_{n+1}) = 5.00e-02   ratio = 0.6899
+    delta_ 2 =  +0.00591723   |delta| = 5.92e-03   1/(2*q_n*q_{n+1}) = 8.33e-03   ratio = 0.7101
+    delta_ 3 =  -0.00101523   |delta| = 1.02e-03   1/(2*q_n*q_{n+1}) = 1.44e-03   ratio = 0.7066
+    delta_ 4 =  +0.00017419   |delta| = 1.74e-04   1/(2*q_n*q_{n+1}) = 2.46e-04   ratio = 0.7072
+    delta_ 5 =  -0.00002989   |delta| = 2.99e-05   1/(2*q_n*q_{n+1}) = 4.23e-05   ratio = 0.7071
+    delta_ 6 =  +0.00000513   |delta| = 5.13e-06   1/(2*q_n*q_{n+1}) = 7.25e-06   ratio = 0.7071
+    delta_ 7 =  -0.00000088   |delta| = 8.80e-07   1/(2*q_n*q_{n+1}) = 1.24e-06   ratio = 0.7071
+    delta_ 8 =  +0.00000015   |delta| = 1.51e-07   1/(2*q_n*q_{n+1}) = 2.13e-07   ratio = 0.7071
+    delta_ 9 =  -0.00000003   |delta| = 2.59e-08   1/(2*q_n*q_{n+1}) = 3.66e-08   ratio = 0.7071
+    delta_10 =  +0.00000000   |delta| = 4.44e-09   1/(2*q_n*q_{n+1}) = 6.28e-09   ratio = 0.7071
+    delta_11 =  -0.00000000   |delta| = 7.62e-10   1/(2*q_n*q_{n+1}) = 1.08e-09   ratio = 0.7071
+
+  phi    :
+    delta_ 0 =  +0.34657359   |delta| = 3.47e-01   1/(2*q_n*q_{n+1}) = 5.00e-01   ratio = 0.6931
+    delta_ 1 =  -0.14384104   |delta| = 1.44e-01   1/(2*q_n*q_{n+1}) = 2.50e-01   ratio = 0.5754
+    delta_ 2 =  +0.05268026   |delta| = 5.27e-02   1/(2*q_n*q_{n+1}) = 8.33e-02   ratio = 0.6322
+    delta_ 3 =  -0.02041100   |delta| = 2.04e-02   1/(2*q_n*q_{n+1}) = 3.33e-02   ratio = 0.6123
+    delta_ 4 =  +0.00775209   |delta| = 7.75e-03   1/(2*q_n*q_{n+1}) = 1.25e-02   ratio = 0.6202
+    delta_ 5 =  -0.00296737   |delta| = 2.97e-03   1/(2*q_n*q_{n+1}) = 4.81e-03   ratio = 0.6172
+    delta_ 6 =  +0.00113250   |delta| = 1.13e-03   1/(2*q_n*q_{n+1}) = 1.83e-03   ratio = 0.6183
+    delta_ 7 =  -0.00043271   |delta| = 4.33e-04   1/(2*q_n*q_{n+1}) = 7.00e-04   ratio = 0.6179
+    delta_ 8 =  +0.00016526   |delta| = 1.65e-04   1/(2*q_n*q_{n+1}) = 2.67e-04   ratio = 0.6181
+    delta_ 9 =  -0.00006313   |delta| = 6.31e-05   1/(2*q_n*q_{n+1}) = 1.02e-04   ratio = 0.6180
+    delta_10 =  +0.00002411   |delta| = 2.41e-05   1/(2*q_n*q_{n+1}) = 3.90e-05   ratio = 0.6180
+    delta_11 =  -0.00000921   |delta| = 9.21e-06   1/(2*q_n*q_{n+1}) = 1.49e-05   ratio = 0.6180
+
+  e      :
+    delta_ 0 =  +0.20273255   |delta| = 2.03e-01   1/(2*q_n*q_{n+1}) = 5.00e-01   ratio = 0.4055
+    delta_ 1 =  -0.05889152   |delta| = 5.89e-02   1/(2*q_n*q_{n+1}) = 1.67e-01   ratio = 0.3533
+    delta_ 2 =  +0.01538583   |delta| = 1.54e-02   1/(2*q_n*q_{n+1}) = 4.17e-02   ratio = 0.3693
+    delta_ 3 =  -0.00653604   |delta| = 6.54e-03   1/(2*q_n*q_{n+1}) = 1.79e-02   ratio = 0.3660
+    delta_ 4 =  +0.00082169   |delta| = 8.22e-04   1/(2*q_n*q_{n+1}) = 2.23e-03   ratio = 0.3681
+    delta_ 5 =  -0.00014738   |delta| = 1.47e-04   1/(2*q_n*q_{n+1}) = 4.01e-04   ratio = 0.3679
+    delta_ 6 =  +0.00006643   |delta| = 6.64e-05   1/(2*q_n*q_{n+1}) = 1.81e-04   ratio = 0.3679
+    delta_ 7 =  -0.00000557   |delta| = 5.57e-06   1/(2*q_n*q_{n+1}) = 1.51e-05   ratio = 0.3679
+    delta_ 8 =  +0.00000074   |delta| = 7.38e-07   1/(2*q_n*q_{n+1}) = 2.01e-06   ratio = 0.3679
+    delta_ 9 =  -0.00000034   |delta| = 3.43e-07   1/(2*q_n*q_{n+1}) = 9.32e-07   ratio = 0.3679
+    delta_10 =  +0.00000002   |delta| = 2.15e-08   1/(2*q_n*q_{n+1}) = 5.85e-08   ratio = 0.3679
+    delta_11 =  -0.00000000   |delta| = 2.26e-09   1/(2*q_n*q_{n+1}) = 6.13e-09   ratio = 0.3679
+
+  KEY OBSERVATION: Rapidity of convergents oscillates around true value.
+  For sqrt(2): even convergents approach from below, odd from above.
+  The rapidity trajectory is a DAMPED OSCILLATION around ln(alpha)/2.
+  Damping rate governed by q_n growth: for phi, q_n = F_n (Fibonacci),
+  so delta ~ 1/F_n^2 ~ phi^{-2n}. EXPONENTIAL convergence in rapidity.
+  For e, the pattern 1,2k,1 creates a 3-periodic modulation.
+
+======================================================================
+2. RAPIDITY AND QUADRATIC RESIDUES
+======================================================================
+
+  For prime p, QRs = {a : a is a square mod p}.
+  rapidity(a) = ln(a)/2 for each residue a in {1, ..., p-1}.
+
+     p                             QRs   avg_rap(QR)  avg_rap(NQR)        diff     ratio
+  ----------------------------------------------------------------------------------------------------
+     3                             [1]      0.000000      0.346574   +0.346574       inf
+     5                          [1, 4]      0.346574      0.447940   +0.101366    1.2925
+     7                       [1, 2, 4]      0.346574      0.749968   +0.403395    2.1640
+    11                 [1, 3, 4, 5, 9]      0.629157      0.881284   +0.252127    1.4007
+    13            [1, 3, 4, 9, 10, 12]      0.789135      0.876466   +0.087331    1.1107
+    17     [1, 2, 4, 8, 9, 13, 15, 16]      0.900106      1.016885   +0.116779    1.1297
+    19  [1, 4, 5, 6, 7, 9, 11, 16, 17]      0.940796      1.081173   +0.140378    1.1492
+    23  [1, 2, 3, 4, 6, 8, 9, 12, 1...      0.907241      1.295995   +0.388754    1.4285
+    29  [1, 4, 5, 6, 7, 9, 13, 16, ...      1.186413      1.238221   +0.051807    1.0437
+    31  [1, 2, 4, 5, 7, 8, 9, 10, 1...      1.100244      1.388364   +0.288121    1.2619
+    37  [1, 3, 4, 7, 9, 10, 11, 12,...      1.298420      1.360460   +0.062039    1.0478
+    41  [1, 2, 4, 5, 8, 9, 10, 16, ...      1.331721      1.426295   +0.094575    1.0710
+    43  [1, 4, 6, 9, 10, 11, 13, 14...      1.375797      1.428296   +0.052499    1.0382
+    47  [1, 2, 3, 4, 6, 7, 8, 9, 12...      1.278396      1.611877   +0.333481    1.2609
+
+  DETAILED for Paley primes p = 3, 7, 11:
+
+  p = 3:
+    QRs  = [1]
+    NQRs = [2]
+    Product of QRs  = 1,  ln(product)/2 = 0.00000000
+    Product of NQRs = 2,  ln(product)/2 = 0.34657359
+    Sum of QR rapidities  = 0.00000000
+    Sum of NQR rapidities = 0.34657359
+    (p-1)! = 2
+    product(QR) * product(NQR) = 2 = (p-1)!? True
+    Total rapidity = ln((p-1)!)/2 = 0.34657359
+    = rapidity(QRs) + rapidity(NQRs) = 0.34657359
+
+  p = 7:
+    QRs  = [1, 2, 4]
+    NQRs = [3, 5, 6]
+    Product of QRs  = 8,  ln(product)/2 = 1.03972077
+    Product of NQRs = 90,  ln(product)/2 = 2.24990484
+    Sum of QR rapidities  = 1.03972077
+    Sum of NQR rapidities = 2.24990484
+    (p-1)! = 720
+    product(QR) * product(NQR) = 720 = (p-1)!? True
+    Total rapidity = ln((p-1)!)/2 = 3.28962561
+    = rapidity(QRs) + rapidity(NQRs) = 3.28962561
+
+  p = 11:
+    QRs  = [1, 3, 4, 5, 9]
+    NQRs = [2, 6, 7, 8, 10]
+    Product of QRs  = 540,  ln(product)/2 = 3.14578457
+    Product of NQRs = 6720,  ln(product)/2 = 4.40642172
+    Sum of QR rapidities  = 3.14578457
+    Sum of NQR rapidities = 4.40642172
+    (p-1)! = 3628800
+    product(QR) * product(NQR) = 3628800 = (p-1)!? True
+    Total rapidity = ln((p-1)!)/2 = 7.55220629
+    = rapidity(QRs) + rapidity(NQRs) = 7.55220629
+
+  ASYMPTOTIC: As p -> infinity,
+    avg rapidity of QRs  ~ (1/|QR|) * sum_{a in QR} ln(a)/2
+    avg rapidity of NQRs ~ (1/|NQR|) * sum_{a in NQR} ln(a)/2
+  Since |QR| = |NQR| = (p-1)/2 and sum_all ln(a)/2 = ln((p-1)!)/2,
+  the TOTAL sum is fixed. The question is: do QRs cluster low or high?
+
+  QR 'smallness' bias (fraction of QRs that are < p/2):
+    p=  3: 1/1 = 1.0000   ABOVE 0.5
+    p=  5: 1/2 = 0.5000   EXACT 0.5
+    p=  7: 2/3 = 0.6667   ABOVE 0.5
+    p= 11: 4/5 = 0.8000   ABOVE 0.5
+    p= 13: 3/6 = 0.5000   EXACT 0.5
+    p= 17: 4/8 = 0.5000   EXACT 0.5
+    p= 19: 6/9 = 0.6667   ABOVE 0.5
+    p= 23: 7/11 = 0.6364   ABOVE 0.5
+    p= 29: 7/14 = 0.5000   EXACT 0.5
+    p= 31: 9/15 = 0.6000   ABOVE 0.5
+    p= 37: 9/18 = 0.5000   EXACT 0.5
+    p= 41: 10/20 = 0.5000   EXACT 0.5
+    p= 43: 12/21 = 0.5714   ABOVE 0.5
+    p= 47: 14/23 = 0.6087   ABOVE 0.5
+    p= 53: 13/26 = 0.5000   EXACT 0.5
+    p= 59: 19/29 = 0.6552   ABOVE 0.5
+    p= 61: 15/30 = 0.5000   EXACT 0.5
+    p= 67: 18/33 = 0.5455   ABOVE 0.5
+    p= 71: 21/35 = 0.6000   ABOVE 0.5
+    p= 73: 18/36 = 0.5000   EXACT 0.5
+
+======================================================================
+3. RAPIDITY AND BERNOULLI NUMBERS / SPECTRAL ZETA
+======================================================================
+
+  Bernoulli numbers B_n:
+    B_ 0 =                    1   (=     1.00000000)
+    B_ 1 =                 -1/2   (=    -0.50000000)
+    B_ 2 =                  1/6   (=     0.16666667)
+    B_ 3 =                    0   (=     0.00000000)
+    B_ 4 =                -1/30   (=    -0.03333333)
+    B_ 5 =                    0   (=     0.00000000)
+    B_ 6 =                 1/42   (=     0.02380952)
+    B_ 7 =                    0   (=     0.00000000)
+    B_ 8 =                -1/30   (=    -0.03333333)
+    B_ 9 =                    0   (=     0.00000000)
+    B_10 =                 5/66   (=     0.07575758)
+    B_11 =                    0   (=     0.00000000)
+    B_12 =            -691/2730   (=    -0.25311355)
+    B_13 =                    0   (=     0.00000000)
+    B_14 =                  7/6   (=     1.16666667)
+    B_15 =                    0   (=     0.00000000)
+    B_16 =            -3617/510   (=    -7.09215686)
+
+  Riemann zeta at negative integers: zeta(-n) = -B_{n+1}/(n+1)
+
+    zeta(- 1) = -B_2/2 =           -1/12 =    -0.08333333
+    zeta(- 2) = -B_3/3 =               0 =     0.00000000
+    zeta(- 3) = -B_4/4 =           1/120 =     0.00833333
+    zeta(- 4) = -B_5/5 =               0 =     0.00000000
+    zeta(- 5) = -B_6/6 =          -1/252 =    -0.00396825
+    zeta(- 6) = -B_7/7 =               0 =     0.00000000
+    zeta(- 7) = -B_8/8 =           1/240 =     0.00416667
+    zeta(- 8) = -B_9/9 =               0 =     0.00000000
+    zeta(- 9) = -B_10/10 =          -1/132 =    -0.00757576
+    zeta(-10) = -B_11/11 =               0 =     0.00000000
+    zeta(-11) = -B_12/12 =       691/32760 =     0.02109280
+    zeta(-12) = -B_13/13 =               0 =     0.00000000
+    zeta(-13) = -B_14/14 =           -1/12 =    -0.08333333
+    zeta(-14) = -B_15/15 =               0 =     0.00000000
+
+  OUR SPECTRAL ZETA: zeta_M(s) = sum_{eigenvalues lambda_i} lambda_i^s
+  For the n=3 transfer matrix with eigenvalues {-1, -1, 1} (or similar):
+  The 'forbidden' values: zeta_M(-3) = 7, zeta_M(-5) = 21
+
+  SPECTRAL ZETA FROM SIMPLE EIGENVALUE SETS:
+
+  If eigenvalues = {1, e^phi, e^{-phi}} with phi = acosh(3)/3:
+    phi = 0.5875823913
+    e^phi = 1.7996323452
+    p_3 = 1 + 2*cosh(3*phi) = 7.0000000000 (want 7)
+    p_5 = 1 + 2*cosh(5*phi) = 19.9293666438 (want 21)
+
+  POWER SUMS via Bernoulli (Faulhaber's formula):
+  S_m(n) = 1^m + 2^m + ... + n^m
+
+     m      S_m(3)        S_m(7)         S_m(11)  S_m(3) mod 7  S_m(7) mod 21
+  --------------------------------------------------------------------------------
+     1           3            21              55            3             0
+     2           5            91             385            5             7
+     3           9           441            3025            2             0
+     4          17          2275           25333            3             7
+     5          33         12201          220825            5             0
+     6          65         67171         1978405            2            13
+     7         129        376761        18080425            3             0
+     8         257       2142595       167731333            5             7
+     9         513      12313161      1574304985            2             0
+    10        1025      71340451     14914341925            3             7
+    11        2049     415998681    142364319625            5             0
+    12        4097    2438235715   1367428536133            2            13
+
+  FORBIDDEN NUMBERS AND BERNOULLI POWER SUMS:
+    S_1(3) = 1+2+3 = 6 = 7-1
+    S_1(6) = 1+...+6 = 21
+    S_2(3) = 1+4+9 = 14 = 2*7
+    So 7 = S_1(3)+1, 21 = S_1(6) = 3*7 = T_6 (6th triangular number)
+    21 = T_6, and T_n = n(n+1)/2 via Bernoulli: -B_2 * C(n+1,2) + ...
+
+  RAPIDITY OF POWER SUMS S_m(p) for Paley primes p:
+    p = 3:
+      S_1(3) =            3,  rapidity =   0.549306
+      S_2(3) =            5,  rapidity =   0.804719
+      S_3(3) =            9,  rapidity =   1.098612
+      S_5(3) =           33,  rapidity =   1.748254
+    p = 7:
+      S_1(7) =           21,  rapidity =   1.522261
+      S_2(7) =           91,  rapidity =   2.255430
+      S_3(7) =          441,  rapidity =   3.044522
+      S_5(7) =        12201,  rapidity =   4.704637
+    p = 11:
+      S_1(11) =           55,  rapidity =   2.003667
+      S_2(11) =          385,  rapidity =   2.976622
+      S_3(11) =         3025,  rapidity =   4.007333
+      S_5(11) =       220825,  rapidity =   6.152563
+
+======================================================================
+4. COLLATZ TRAJECTORIES IN RAPIDITY SPACE
+======================================================================
+
+  Rapidity step sizes:
+    n -> n/2:    delta_rapidity = -ln(2)/2 = -0.34657359
+    n -> 3n+1:   delta_rapidity ~ +ln(3)/2 = 0.54930614 (+ correction O(1/n))
+    Combined (3n+1)/2: delta ~ ln(3/2)/2 = 0.20273255
+
+  Collatz trajectory for n = 27: 112 steps to reach 1
+    Start rapidity:   1.647918 (n=27)
+    Max rapidity:     4.565215 (n=9232 at step 77)
+    End rapidity:     0.000000 (n=1)
+    Total descent:    1.647918
+    Max excursion:    2.917297 above start
+    Up steps: 41, avg up = 0.551518
+    Down steps: 70, avg down = 0.346574
+    Ratio down/up steps: 1.7073
+    First 40 steps:
+      step   0: n=      27  rapidity=  1.647918
+      step   1: n=      82  rapidity=  2.203360  3n+1 delta=+0.555441
+      step   2: n=      41  rapidity=  1.856786  /2   delta=-0.346574
+      step   3: n=     124  rapidity=  2.410141  3n+1 delta=+0.553355
+      step   4: n=      62  rapidity=  2.063567  /2   delta=-0.346574
+      step   5: n=      31  rapidity=  1.716994  /2   delta=-0.346574
+      step   6: n=      94  rapidity=  2.271647  3n+1 delta=+0.554654
+      step   7: n=      47  rapidity=  1.925074  /2   delta=-0.346574
+      step   8: n=     142  rapidity=  2.477914  3n+1 delta=+0.552840
+      step   9: n=      71  rapidity=  2.131340  /2   delta=-0.346574
+      step  10: n=     214  rapidity=  2.682988  3n+1 delta=+0.551648
+      step  11: n=     107  rapidity=  2.336414  /2   delta=-0.346574
+      step  12: n=     322  rapidity=  2.887276  3n+1 delta=+0.550861
+      step  13: n=     161  rapidity=  2.540702  /2   delta=-0.346574
+      step  14: n=     484  rapidity=  3.091042  3n+1 delta=+0.550340
+      step  15: n=     242  rapidity=  2.744469  /2   delta=-0.346574
+      step  16: n=     121  rapidity=  2.397895  /2   delta=-0.346574
+      step  17: n=     364  rapidity=  2.948577  3n+1 delta=+0.550682
+      step  18: n=     182  rapidity=  2.602003  /2   delta=-0.346574
+      step  19: n=      91  rapidity=  2.255430  /2   delta=-0.346574
+      step  20: n=     274  rapidity=  2.806564  3n+1 delta=+0.551134
+      step  21: n=     137  rapidity=  2.459990  /2   delta=-0.346574
+      step  22: n=     412  rapidity=  3.010512  3n+1 delta=+0.550521
+      step  23: n=     206  rapidity=  2.663938  /2   delta=-0.346574
+      step  24: n=     103  rapidity=  2.317364  /2   delta=-0.346574
+      step  25: n=     310  rapidity=  2.868286  3n+1 delta=+0.550922
+      step  26: n=     155  rapidity=  2.521713  /2   delta=-0.346574
+      step  27: n=     466  rapidity=  3.072093  3n+1 delta=+0.550380
+      step  28: n=     233  rapidity=  2.725519  /2   delta=-0.346574
+      step  29: n=     700  rapidity=  3.275540  3n+1 delta=+0.550021
+      step  30: n=     350  rapidity=  2.928967  /2   delta=-0.346574
+      step  31: n=     175  rapidity=  2.582393  /2   delta=-0.346574
+      step  32: n=     526  rapidity=  3.132651  3n+1 delta=+0.550258
+      step  33: n=     263  rapidity=  2.786077  /2   delta=-0.346574
+      step  34: n=     790  rapidity=  3.336016  3n+1 delta=+0.549939
+      step  35: n=     395  rapidity=  2.989443  /2   delta=-0.346574
+      step  36: n=    1186  rapidity=  3.539171  3n+1 delta=+0.549728
+      step  37: n=     593  rapidity=  3.192597  /2   delta=-0.346574
+      step  38: n=    1780  rapidity=  3.742184  3n+1 delta=+0.549587
+      step  39: n=     890  rapidity=  3.395611  /2   delta=-0.346574
+      ... (72 more steps)
+
+  Collatz trajectory for n = 97: 119 steps to reach 1
+    Start rapidity:   2.287355 (n=97)
+    Max rapidity:     4.565215 (n=9232 at step 84)
+    End rapidity:     0.000000 (n=1)
+    Total descent:    2.287355
+    Max excursion:    2.277860 above start
+    Up steps: 43, avg up = 0.551295
+    Down steps: 75, avg down = 0.346574
+    Ratio down/up steps: 1.7442
+    First 40 steps:
+      step   0: n=      97  rapidity=  2.287355
+      step   1: n=     292  rapidity=  2.838377  3n+1 delta=+0.551021
+      step   2: n=     146  rapidity=  2.491803  /2   delta=-0.346574
+      step   3: n=      73  rapidity=  2.145230  /2   delta=-0.346574
+      step   4: n=     220  rapidity=  2.696814  3n+1 delta=+0.551584
+      step   5: n=     110  rapidity=  2.350240  /2   delta=-0.346574
+      step   6: n=      55  rapidity=  2.003667  /2   delta=-0.346574
+      step   7: n=     166  rapidity=  2.555994  3n+1 delta=+0.552327
+      step   8: n=      83  rapidity=  2.209420  /2   delta=-0.346574
+      step   9: n=     250  rapidity=  2.760730  3n+1 delta=+0.551310
+      step  10: n=     125  rapidity=  2.414157  /2   delta=-0.346574
+      step  11: n=     376  rapidity=  2.964795  3n+1 delta=+0.550638
+      step  12: n=     188  rapidity=  2.618221  /2   delta=-0.346574
+      step  13: n=      94  rapidity=  2.271647  /2   delta=-0.346574
+      step  14: n=      47  rapidity=  1.925074  /2   delta=-0.346574
+      step  15: n=     142  rapidity=  2.477914  3n+1 delta=+0.552840
+      step  16: n=      71  rapidity=  2.131340  /2   delta=-0.346574
+      step  17: n=     214  rapidity=  2.682988  3n+1 delta=+0.551648
+      step  18: n=     107  rapidity=  2.336414  /2   delta=-0.346574
+      step  19: n=     322  rapidity=  2.887276  3n+1 delta=+0.550861
+      step  20: n=     161  rapidity=  2.540702  /2   delta=-0.346574
+      step  21: n=     484  rapidity=  3.091042  3n+1 delta=+0.550340
+      step  22: n=     242  rapidity=  2.744469  /2   delta=-0.346574
+      step  23: n=     121  rapidity=  2.397895  /2   delta=-0.346574
+      step  24: n=     364  rapidity=  2.948577  3n+1 delta=+0.550682
+      step  25: n=     182  rapidity=  2.602003  /2   delta=-0.346574
+      step  26: n=      91  rapidity=  2.255430  /2   delta=-0.346574
+      step  27: n=     274  rapidity=  2.806564  3n+1 delta=+0.551134
+      step  28: n=     137  rapidity=  2.459990  /2   delta=-0.346574
+      step  29: n=     412  rapidity=  3.010512  3n+1 delta=+0.550521
+      step  30: n=     206  rapidity=  2.663938  /2   delta=-0.346574
+      step  31: n=     103  rapidity=  2.317364  /2   delta=-0.346574
+      step  32: n=     310  rapidity=  2.868286  3n+1 delta=+0.550922
+      step  33: n=     155  rapidity=  2.521713  /2   delta=-0.346574
+      step  34: n=     466  rapidity=  3.072093  3n+1 delta=+0.550380
+      step  35: n=     233  rapidity=  2.725519  /2   delta=-0.346574
+      step  36: n=     700  rapidity=  3.275540  3n+1 delta=+0.550021
+      step  37: n=     350  rapidity=  2.928967  /2   delta=-0.346574
+      step  38: n=     175  rapidity=  2.582393  /2   delta=-0.346574
+      step  39: n=     526  rapidity=  3.132651  3n+1 delta=+0.550258
+      ... (79 more steps)
+
+  Collatz trajectory for n = 871: 179 steps to reach 1
+    Start rapidity:   3.384821 (n=871)
+    Max rapidity:     6.080004 (n=190996 at step 31)
+    End rapidity:     0.000000 (n=1)
+    Total descent:    3.384821
+    Max excursion:    2.695183 above start
+    Up steps: 65, avg up = 0.550431
+    Down steps: 113, avg down = 0.346574
+    Ratio down/up steps: 1.7385
+    First 40 steps:
+      step   0: n=     871  rapidity=  3.384821
+      step   1: n=    2614  rapidity=  3.934318  3n+1 delta=+0.549497
+      step   2: n=    1307  rapidity=  3.587745  /2   delta=-0.346574
+      step   3: n=    3922  rapidity=  4.137179  3n+1 delta=+0.549434
+      step   4: n=    1961  rapidity=  3.790605  /2   delta=-0.346574
+      step   5: n=    5884  rapidity=  4.339996  3n+1 delta=+0.549391
+      step   6: n=    2942  rapidity=  3.993422  /2   delta=-0.346574
+      step   7: n=    1471  rapidity=  3.646849  /2   delta=-0.346574
+      step   8: n=    4414  rapidity=  4.196268  3n+1 delta=+0.549419
+      step   9: n=    2207  rapidity=  3.849695  /2   delta=-0.346574
+      step  10: n=    6622  rapidity=  4.399076  3n+1 delta=+0.549382
+      step  11: n=    3311  rapidity=  4.052503  /2   delta=-0.346574
+      step  12: n=    9934  rapidity=  4.601859  3n+1 delta=+0.549356
+      step  13: n=    4967  rapidity=  4.255286  /2   delta=-0.346574
+      step  14: n=   14902  rapidity=  4.804625  3n+1 delta=+0.549340
+      step  15: n=    7451  rapidity=  4.458052  /2   delta=-0.346574
+      step  16: n=   22354  rapidity=  5.007380  3n+1 delta=+0.549329
+      step  17: n=   11177  rapidity=  4.660807  /2   delta=-0.346574
+      step  18: n=   33532  rapidity=  5.210128  3n+1 delta=+0.549321
+      step  19: n=   16766  rapidity=  4.863554  /2   delta=-0.346574
+      step  20: n=    8383  rapidity=  4.516981  /2   delta=-0.346574
+      step  21: n=   25150  rapidity=  5.066307  3n+1 delta=+0.549326
+      step  22: n=   12575  rapidity=  4.719733  /2   delta=-0.346574
+      step  23: n=   37726  rapidity=  5.269052  3n+1 delta=+0.549319
+      step  24: n=   18863  rapidity=  4.922479  /2   delta=-0.346574
+      step  25: n=   56590  rapidity=  5.471794  3n+1 delta=+0.549315
+      step  26: n=   28295  rapidity=  5.125220  /2   delta=-0.346574
+      step  27: n=   84886  rapidity=  5.674532  3n+1 delta=+0.549312
+      step  28: n=   42443  rapidity=  5.327959  /2   delta=-0.346574
+      step  29: n=  127330  rapidity=  5.877269  3n+1 delta=+0.549310
+      step  30: n=   63665  rapidity=  5.530695  /2   delta=-0.346574
+      step  31: n=  190996  rapidity=  6.080004  3n+1 delta=+0.549309
+      step  32: n=   95498  rapidity=  5.733430  /2   delta=-0.346574
+      step  33: n=   47749  rapidity=  5.386857  /2   delta=-0.346574
+      step  34: n=  143248  rapidity=  5.936166  3n+1 delta=+0.549310
+      step  35: n=   71624  rapidity=  5.589593  /2   delta=-0.346574
+      step  36: n=   35812  rapidity=  5.243019  /2   delta=-0.346574
+      step  37: n=   17906  rapidity=  4.896446  /2   delta=-0.346574
+      step  38: n=    8953  rapidity=  4.549872  /2   delta=-0.346574
+      step  39: n=   26860  rapidity=  5.099197  3n+1 delta=+0.549325
+      ... (139 more steps)
+
+  Collatz trajectory for n = 6171: 262 steps to reach 1
+    Start rapidity:   4.363808 (n=6171)
+    Max rapidity:     6.895301 (n=975400 at step 78)
+    End rapidity:     0.000000 (n=1)
+    Total descent:    4.363808
+    Max excursion:    2.531493 above start
+    Up steps: 96, avg up = 0.550217
+    Down steps: 165, avg down = 0.346574
+    Ratio down/up steps: 1.7188
+    First 40 steps:
+      step   0: n=    6171  rapidity=  4.363808
+      step   1: n=   18514  rapidity=  4.913141  3n+1 delta=+0.549333
+      step   2: n=    9257  rapidity=  4.566568  /2   delta=-0.346574
+      step   3: n=   27772  rapidity=  5.115892  3n+1 delta=+0.549324
+      step   4: n=   13886  rapidity=  4.769318  /2   delta=-0.346574
+      step   5: n=    6943  rapidity=  4.422745  /2   delta=-0.346574
+      step   6: n=   20830  rapidity=  4.972075  3n+1 delta=+0.549330
+      step   7: n=   10415  rapidity=  4.625501  /2   delta=-0.346574
+      step   8: n=   31246  rapidity=  5.174823  3n+1 delta=+0.549322
+      step   9: n=   15623  rapidity=  4.828250  /2   delta=-0.346574
+      step  10: n=   46870  rapidity=  5.377567  3n+1 delta=+0.549317
+      step  11: n=   23435  rapidity=  5.030993  /2   delta=-0.346574
+      step  12: n=   70306  rapidity=  5.580306  3n+1 delta=+0.549313
+      step  13: n=   35153  rapidity=  5.233733  /2   delta=-0.346574
+      step  14: n=  105460  rapidity=  5.783044  3n+1 delta=+0.549311
+      step  15: n=   52730  rapidity=  5.436470  /2   delta=-0.346574
+      step  16: n=   26365  rapidity=  5.089896  /2   delta=-0.346574
+      step  17: n=   79096  rapidity=  5.639209  3n+1 delta=+0.549312
+      step  18: n=   39548  rapidity=  5.292635  /2   delta=-0.346574
+      step  19: n=   19774  rapidity=  4.946062  /2   delta=-0.346574
+      step  20: n=    9887  rapidity=  4.599488  /2   delta=-0.346574
+      step  21: n=   29662  rapidity=  5.148811  3n+1 delta=+0.549323
+      step  22: n=   14831  rapidity=  4.802237  /2   delta=-0.346574
+      step  23: n=   44494  rapidity=  5.351555  3n+1 delta=+0.549317
+      step  24: n=   22247  rapidity=  5.004981  /2   delta=-0.346574
+      step  25: n=   66742  rapidity=  5.554295  3n+1 delta=+0.549314
+      step  26: n=   33371  rapidity=  5.207721  /2   delta=-0.346574
+      step  27: n=  100114  rapidity=  5.757032  3n+1 delta=+0.549311
+      step  28: n=   50057  rapidity=  5.410459  /2   delta=-0.346574
+      step  29: n=  150172  rapidity=  5.959768  3n+1 delta=+0.549309
+      step  30: n=   75086  rapidity=  5.613195  /2   delta=-0.346574
+      step  31: n=   37543  rapidity=  5.266621  /2   delta=-0.346574
+      step  32: n=  112630  rapidity=  5.815932  3n+1 delta=+0.549311
+      step  33: n=   56315  rapidity=  5.469358  /2   delta=-0.346574
+      step  34: n=  168946  rapidity=  6.018667  3n+1 delta=+0.549309
+      step  35: n=   84473  rapidity=  5.672094  /2   delta=-0.346574
+      step  36: n=  253420  rapidity=  6.221402  3n+1 delta=+0.549308
+      step  37: n=  126710  rapidity=  5.874828  /2   delta=-0.346574
+      step  38: n=   63355  rapidity=  5.528255  /2   delta=-0.346574
+      step  39: n=  190066  rapidity=  6.077563  3n+1 delta=+0.549309
+      ... (222 more steps)
+
+  COLLATZ RAPIDITY DRIFT THEOREM:
+  If the trajectory visits k odd numbers in N total steps,
+  then N-k are even steps (dividing by 2), giving:
+    net rapidity change = k * ln(3)/2 - (N-k) * ln(2)/2 + corrections
+  For the trajectory to reach 1 (rapidity 0 from rapidity ln(n)/2),
+  we need: k * ln(3) < (N-k) * ln(2) + ln(n)
+  i.e., k/N < ln(2)/ln(3) + ln(n)/(N*ln(3))
+  ln(2)/ln(3) = 0.6309297536
+  So asymptotically, the fraction of odd steps must be < 0.6309...
+
+  For n=27: 41 odd steps out of 111 = 0.369369
+    Compare ln(2)/ln(3) = 0.630930
+
+======================================================================
+5. PRIME GAPS IN RAPIDITY SPACE
+======================================================================
+
+  Generated 9592 primes up to 99991.
+
+  PRIME RAPIDITY GAPS: delta_n = ln(p_{n+1})/2 - ln(p_n)/2 = ln(p_{n+1}/p_n)/2
+  Cramer bound on arithmetic gap: g_n <= C * (ln p_n)^2
+  Rapidity version: delta_n ~ g_n / (2*p_n) <= C * (ln p_n)^2 / (2*p_n)
+
+        Rapidity range   Max rap gap             At primes   Arith gap  Cramer bnd
+  --------------------------------------------------------------------------------
+  rap =   0.3466 (     2)    0.20273255  (       2,        3)           1    0.120113
+  rap =   0.5493 (     3)    0.25541281  (       3,        5)           2    0.201158
+
+  ASYMPTOTIC: rapidity gaps DECREASE as 1/p on average.
+  The rapidity prime 'density' INCREASES: d(rapidity)/dn ~ 1/(2n) for nth number,
+  and by PNT the average arithmetic gap at p is ln(p), so avg rapidity gap ~ ln(p)/(2p).
+
+  Average rapidity gap by magnitude range:
+    primes in [     2,    100): avg gap = 0.07843947, max = 0.25541281, predicted avg = 0.09366190, ratio = 0.8375
+    primes in [   100,   1000): avg gap = 0.00804753, max = 0.05839963, predicted avg = 0.00910177, ratio = 0.8842
+    primes in [  1000,  10000): avg gap = 0.00108121, max = 0.01264948, predicted avg = 0.00127425, ratio = 0.8485
+    primes in [ 10000, 100000): avg gap = 0.00013763, max = 0.00147943, predicted avg = 0.00016383, ratio = 0.8401
+
+======================================================================
+6. GOLDBACH DECOMPOSITIONS IN RAPIDITY SPACE
+======================================================================
+
+  For even n, Goldbach decompositions: n = p + q, both prime.
+  In rapidity: (rapidity(p), rapidity(q)) = (ln(p)/2, ln(q)/2).
+  Note: rapidity(p) + rapidity(q) = ln(pq)/2, NOT ln(p+q)/2 = ln(n)/2.
+  So the points do NOT lie on the line x+y = rapidity(n).
+  Instead they satisfy: e^{2x} + e^{2y} = n (the EXPONENTIAL constraint).
+
+  n = 10: 2 Goldbach decompositions
+    (   3,    7):  rap = (0.549306, 0.972955)  sum = 1.522261  vs rap(n) = 1.151293  rap(pq) = 1.522261
+    (   5,    5):  rap = (0.804719, 0.804719)  sum = 1.609438  vs rap(n) = 1.151293  rap(pq) = 1.609438
+
+  n = 20: 2 Goldbach decompositions
+    (   3,   17):  rap = (0.549306, 1.416607)  sum = 1.965913  vs rap(n) = 1.497866  rap(pq) = 1.965913
+    (   7,   13):  rap = (0.972955, 1.282475)  sum = 2.255430  vs rap(n) = 1.497866  rap(pq) = 2.255430
+
+  n = 30: 3 Goldbach decompositions
+    (   7,   23):  rap = (0.972955, 1.567747)  sum = 2.540702  vs rap(n) = 1.700599  rap(pq) = 2.540702
+    (  11,   19):  rap = (1.198948, 1.472219)  sum = 2.671167  vs rap(n) = 1.700599  rap(pq) = 2.671167
+    (  13,   17):  rap = (1.282475, 1.416607)  sum = 2.699081  vs rap(n) = 1.700599  rap(pq) = 2.699081
+
+  n = 50: 4 Goldbach decompositions
+    (   3,   47):  rap = (0.549306, 1.925074)  sum = 2.474380  vs rap(n) = 1.956012  rap(pq) = 2.474380
+    (   7,   43):  rap = (0.972955, 1.880600)  sum = 2.853555  vs rap(n) = 1.956012  rap(pq) = 2.853555
+    (  13,   37):  rap = (1.282475, 1.805459)  sum = 3.087934  vs rap(n) = 1.956012  rap(pq) = 3.087934
+    (  19,   31):  rap = (1.472219, 1.716994)  sum = 3.189213  vs rap(n) = 1.956012  rap(pq) = 3.189213
+
+  n = 100: 6 Goldbach decompositions
+    (   3,   97):  rap = (0.549306, 2.287355)  sum = 2.836662  vs rap(n) = 2.302585  rap(pq) = 2.836662
+    (  11,   89):  rap = (1.198948, 2.244318)  sum = 3.443266  vs rap(n) = 2.302585  rap(pq) = 3.443266
+    (  17,   83):  rap = (1.416607, 2.209420)  sum = 3.626027  vs rap(n) = 2.302585  rap(pq) = 3.626027
+    (  29,   71):  rap = (1.683648, 2.131340)  sum = 3.814988  vs rap(n) = 2.302585  rap(pq) = 3.814988
+    (  41,   59):  rap = (1.856786, 2.038769)  sum = 3.895555  vs rap(n) = 2.302585  rap(pq) = 3.895555
+    (  47,   53):  rap = (1.925074, 1.985146)  sum = 3.910220  vs rap(n) = 2.302585  rap(pq) = 3.910220
+
+  n = 200: 8 Goldbach decompositions
+    (   3,  197):  rap = (0.549306, 2.641602)  sum = 3.190908  vs rap(n) = 2.649159  rap(pq) = 3.190908
+    (   7,  193):  rap = (0.972955, 2.631345)  sum = 3.604300  vs rap(n) = 2.649159  rap(pq) = 3.604300
+    (  19,  181):  rap = (1.472219, 2.599249)  sum = 4.071468  vs rap(n) = 2.649159  rap(pq) = 4.071468
+    (  37,  163):  rap = (1.805459, 2.546875)  sum = 4.352334  vs rap(n) = 2.649159  rap(pq) = 4.352334
+    (  43,  157):  rap = (1.880600, 2.528123)  sum = 4.408723  vs rap(n) = 2.649159  rap(pq) = 4.408723
+    (  61,  139):  rap = (2.055437, 2.467237)  sum = 4.522674  vs rap(n) = 2.649159  rap(pq) = 4.522674
+    (  73,  127):  rap = (2.145230, 2.422094)  sum = 4.567323  vs rap(n) = 2.649159  rap(pq) = 4.567323
+    (  97,  103):  rap = (2.287355, 2.317364)  sum = 4.604720  vs rap(n) = 2.649159  rap(pq) = 4.604720
+
+  n = 1000: 28 Goldbach decompositions
+    rap(n) = 3.453878
+    rap sum range: [4.001682, 6.214446]
+    rap product range: [4.001682, 6.214446]
+    avg rap sum = 5.786994
+    (   3,  997):  rap = (0.549306, 3.452375)
+    (  17,  983):  rap = (1.416607, 3.445305)
+    (  23,  977):  rap = (1.567747, 3.442243)
+    ... and 25 more
+
+  GEOMETRIC INSIGHT:
+  The Goldbach constraint p + q = n in rapidity space is:
+    e^{2*phi_p} + e^{2*phi_q} = n
+  This is a CONVEX CURVE in (phi_p, phi_q) space.
+  At the symmetric point phi_p = phi_q: 2*e^{2*phi} = n, phi = ln(n/2)/2.
+  The decomposition (p,q) = (n/2, n/2) would have phi = ln(n/2)/2,
+  but n/2 must be prime, which is rare (only n=4).
+
+  RAPIDITY SPREAD of Goldbach decompositions:
+  (difference between most and least balanced decomposition)
+
+    n=   4:   1 decomps, spread [0.000000, 0.000000], most balanced = (2, 2)
+    n=   6:   1 decomps, spread [0.000000, 0.000000], most balanced = (3, 3)
+    n=   8:   1 decomps, spread [0.255413, 0.255413], most balanced = (3, 5)
+    n=  10:   2 decomps, spread [0.000000, 0.423649], most balanced = (5, 5)
+    n=  12:   1 decomps, spread [0.168236, 0.168236], most balanced = (5, 7)
+    n=  14:   2 decomps, spread [0.000000, 0.649641], most balanced = (7, 7)
+    n=  16:   2 decomps, spread [0.394229, 0.733169], most balanced = (5, 11)
+    n=  18:   2 decomps, spread [0.225993, 0.477756], most balanced = (7, 11)
+    n=  20:   2 decomps, spread [0.309520, 0.867301], most balanced = (7, 13)
+    n=  22:   3 decomps, spread [0.000000, 0.922913], most balanced = (11, 11)
+    n=  24:   3 decomps, spread [0.083527, 0.667501], most balanced = (11, 13)
+    n=  26:   3 decomps, spread [0.000000, 1.018441], most balanced = (13, 13)
+    n=  28:   2 decomps, spread [0.217659, 0.763028], most balanced = (11, 17)
+    n=  30:   3 decomps, spread [0.134132, 0.594792], most balanced = (13, 17)
+    n=  32:   2 decomps, spread [0.189745, 1.134342], most balanced = (13, 19)
+    n=  34:   4 decomps, spread [0.000000, 1.167687], most balanced = (17, 17)
+    n=  36:   4 decomps, spread [0.055613, 0.912275], most balanced = (17, 19)
+    n=  38:   2 decomps, spread [0.000000, 0.744039], most balanced = (19, 19)
+    n=  40:   3 decomps, spread [0.151140, 1.256153], most balanced = (17, 23)
+    n=  42:   4 decomps, spread [0.095528, 1.000740], most balanced = (19, 23)
+    n=  44:   3 decomps, spread [0.434519, 1.307480], most balanced = (13, 31)
+    n=  46:   4 decomps, spread [0.000000, 1.331294], most balanced = (23, 23)
+    n=  48:   5 decomps, spread [0.211428, 1.075881], most balanced = (19, 29)
+    n=  50:   4 decomps, spread [0.244774, 1.375768], most balanced = (19, 31)
+    n=  60:   6 decomps, spread [0.033346, 1.012191], most balanced = (29, 31)
+    n=  80:   4 decomps, spread [0.075141, 1.172275], most balanced = (37, 43)
+    n= 100:   6 decomps, spread [0.060072, 1.738049], most balanced = (47, 53)
+
+======================================================================
+7. SQRT RAPIDITY AND PERFECT SQUARE DETECTION
+======================================================================
+
+  rapidity(n) = ln(n)/2
+  rapidity(n^2) = ln(n^2)/2 = ln(n) = 2 * rapidity(n)
+  rapidity(sqrt(n)) = ln(sqrt(n))/2 = ln(n)/4 = rapidity(n)/2
+
+  PERFECT SQUARES have rapidity = 2 * rapidity(sqrt).
+  In other words, n is a perfect square iff rapidity(n) is in the set
+  {2*rapidity(k) : k >= 1} = {ln(k) : k >= 1}.
+
+  Since rapidity(n) = ln(n)/2, this means n is a perfect square iff
+  there exists integer k with ln(n)/2 = ln(k), i.e., n = k^2.
+  Tautological? Not quite -- the RAPIDITY LATTICE tells us more.
+
+  THE RAPIDITY LATTICE of perfect k-th powers:
+  rapidity(n^k) = k * rapidity(n)
+  So perfect k-th powers form a SUBLATTICE of rapidity space
+  with spacing k times the fundamental.
+
+  n     rapidity    square?  cube?  4th?    rapidity mod ln(2)   mod ln(3)
+  --------------------------------------------------------------------------------
+    1     0.000000     Y      Y      Y       0.000000        0.000000 SQ CUBE 4TH
+    2     0.346574     .      .      .       0.346574        0.346574
+    3     0.549306     .      .      .       0.549306        0.549306
+    4     0.693147     Y      .      .       0.000000        0.693147 SQ
+    5     0.804719     .      .      .       0.111572        0.804719
+    6     0.895880     .      .      .       0.202733        0.895880
+    7     0.972955     .      .      .       0.279808        0.972955
+    8     1.039721     .      Y      .       0.346574        1.039721 CUBE
+    9     1.098612     Y      .      .       0.405465        0.000000 SQ
+   10     1.151293     .      .      .       0.458145        0.052680
+   11     1.198948     .      .      .       0.505800        0.100335
+   12     1.242453     .      .      .       0.549306        0.143841
+   13     1.282475     .      .      .       0.589327        0.183862
+   14     1.319529     .      .      .       0.626381        0.220916
+   15     1.354025     .      .      .       0.660878        0.255413
+   16     1.386294     Y      .      Y       0.000000        0.287682 SQ 4TH
+   17     1.416607     .      .      .       0.030312        0.317994
+   18     1.445186     .      .      .       0.058892        0.346574
+   19     1.472219     .      .      .       0.085925        0.373607
+   20     1.497866     .      .      .       0.111572        0.399254
+   21     1.522261     .      .      .       0.135967        0.423649
+   22     1.545521     .      .      .       0.159227        0.446909
+   23     1.567747     .      .      .       0.181453        0.469135
+   24     1.589027     .      .      .       0.202733        0.490415
+   25     1.609438     Y      .      .       0.223144        0.510826 SQ
+   26     1.629048     .      .      .       0.242754        0.530436
+   27     1.647918     .      Y      .       0.261624        0.549306 CUBE
+   28     1.666102     .      .      .       0.279808        0.567490
+   29     1.683648     .      .      .       0.297354        0.585036
+   30     1.700599     .      .      .       0.314304        0.601986
+   31     1.716994     .      .      .       0.330699        0.618381
+   32     1.732868     .      .      .       0.346574        0.634256
+   33     1.748254     .      .      .       0.361959        0.649641
+   34     1.763180     .      .      .       0.376886        0.664568
+   35     1.777674     .      .      .       0.391380        0.679062
+   36     1.791759     Y      .      .       0.405465        0.693147 SQ
+   37     1.805459     .      .      .       0.419165        0.706847
+   38     1.818793     .      .      .       0.432499        0.720181
+   39     1.831781     .      .      .       0.445486        0.733169
+   40     1.844440     .      .      .       0.458145        0.745827
+
+  MULTIPLICATIVE STRUCTURE IN RAPIDITY:
+  The integers form a free abelian monoid under multiplication,
+  generated by the primes. In rapidity space, this becomes an
+  ADDITIVE monoid generated by {ln(p)/2 : p prime}.
+
+  Perfect square <=> all rapidity components even
+  Perfect cube   <=> all rapidity components divisible by 3
+  k-th power     <=> all rapidity components divisible by k
+
+  RAPIDITY ADDRESSES of project-special numbers:
+         n    rapidity  2*rapidity   in lattice?  description
+  --------------------------------------------------------------------------------
+         1    0.000000    0.000000           2^0  transitive tournament
+         3    0.549306    1.098612           3^1  3-cycle, curvature quantum
+         5    0.804719    1.609438                n=4 max H
+         7    0.972955    1.945910                FORBIDDEN
+         9    1.098612    2.197225           3^2  3^2 = first square > 1 in our theory
+        21    1.522261    3.044522                FORBIDDEN
+        42    1.868835    3.737670                2*3*7, product of first forbidden factor set
+        45    1.903331    3.806662                n=6 max H
+       147    2.495216    4.990433                3*7^2, product of forbidden velocities
+       189    2.620874    5.241747                3^3*7, Paley T_7 max H
+       661    3.246877    6.493754                n=8 max H (prime!)
+     95095    5.731316   11.462632                5*7*11*13*19, Paley T_11
+
+  RAPIDITY DISTANCES between forbidden numbers and key values:
+  (rapidity distance = ln(a/b)/2)
+
+                   3         5         7         9        21        45       189       661     95095
+         3    0.0000    0.2554    0.4236    0.5493    0.9730    1.3540    2.0716    2.6976    5.1820
+         5    0.2554    0.0000    0.1682    0.2939    0.7175    1.0986    1.8162    2.4422    4.9266
+         7    0.4236    0.1682    0.0000    0.1257    0.5493    0.9304    1.6479    2.2739    4.7584
+         9    0.5493    0.2939    0.1257    0.0000    0.4236    0.8047    1.5223    2.1483    4.6327
+        21    0.9730    0.7175    0.5493    0.4236    0.0000    0.3811    1.0986    1.7246    4.2091
+        45    1.3540    1.0986    0.9304    0.8047    0.3811    0.0000    0.7175    1.3435    3.8280
+       189    2.0716    1.8162    1.6479    1.5223    1.0986    0.7175    0.0000    0.6260    3.1104
+       661    2.6976    2.4422    2.2739    2.1483    1.7246    1.3435    0.6260    0.0000    2.4844
+     95095    5.1820    4.9266    4.7584    4.6327    4.2091    3.8280    3.1104    2.4844    0.0000
+
+  Notable rapidity distances that are exact ln(p)/2 multiples:
+    |rap(3) - rap(5)| = 0.25541281 = ln(5/3)/2
+    |rap(3) - rap(7)| = 0.42364893 = ln(7/3)/2
+    |rap(3) - rap(9)| = 0.54930614 = ln(3)/2 = rapidity(3)
+    |rap(3) - rap(21)| = 0.97295507 = ln(7)/2 = rapidity(7)
+    |rap(3) - rap(45)| = 1.35402510 = ln(15)/2 = rapidity(15)
+    |rap(3) - rap(189)| = 2.07156736 = ln(63)/2 = rapidity(63)
+    |rap(3) - rap(661)| = 2.69757078 = ln(661/3)/2
+    |rap(3) - rap(95095)| = 5.18200969 = ln(95095/3)/2
+    |rap(5) - rap(7)| = 0.16823612 = ln(7/5)/2
+    |rap(5) - rap(9)| = 0.29389333 = ln(9/5)/2
+    |rap(5) - rap(21)| = 0.71754226 = ln(21/5)/2
+    |rap(5) - rap(45)| = 1.09861229 = ln(9)/2 = rapidity(9)
+    |rap(5) - rap(189)| = 1.81615455 = ln(189/5)/2
+    |rap(5) - rap(661)| = 2.44215796 = ln(661/5)/2
+    |rap(5) - rap(95095)| = 4.92659688 = ln(19019)/2 = rapidity(19019)
+    |rap(7) - rap(9)| = 0.12565721 = ln(9/7)/2
+    |rap(7) - rap(21)| = 0.54930614 = ln(3)/2 = rapidity(3)
+    |rap(7) - rap(45)| = 0.93037617 = ln(45/7)/2
+    |rap(7) - rap(189)| = 1.64791843 = ln(27)/2 = rapidity(27)
+    |rap(7) - rap(661)| = 2.27392185 = ln(661/7)/2
+    |rap(7) - rap(95095)| = 4.75836076 = ln(13585)/2 = rapidity(13585)
+    |rap(9) - rap(21)| = 0.42364893 = ln(7/3)/2
+    |rap(9) - rap(45)| = 0.80471896 = ln(5)/2 = rapidity(5)
+    |rap(9) - rap(189)| = 1.52226122 = ln(21)/2 = rapidity(21)
+    |rap(9) - rap(661)| = 2.14826463 = ln(661/9)/2
+    |rap(9) - rap(95095)| = 4.63270355 = ln(95095/9)/2
+    |rap(21) - rap(45)| = 0.38107003 = ln(15/7)/2
+    |rap(21) - rap(189)| = 1.09861229 = ln(9)/2 = rapidity(9)
+    |rap(21) - rap(95095)| = 4.20905462 = ln(13585/3)/2
+    |rap(45) - rap(189)| = 0.71754226 = ln(21/5)/2
+    |rap(45) - rap(95095)| = 3.82798459 = ln(19019/9)/2
+
+======================================================================
+SYNTHESIS: RAPIDITY AS NUMBER-THEORETIC COORDINATE
+======================================================================
+
+  1. CONTINUED FRACTIONS: Convergent rapidities form a damped oscillation
+     around the true rapidity. The damping rate is governed by the CF
+     partial quotients: phi (all 1s) has geometric damping phi^{-2n},
+     sqrt(2) has damping (1+sqrt(2))^{-2n}, e has 3-periodic modulation.
+
+  2. QUADRATIC RESIDUES: QRs and NQRs have nearly equal average rapidity
+     (splitting of ln((p-1)!)/2 into two halves). The small bias comes from
+     the correlation between being a QR and being small. For Paley primes,
+     this bias encodes the tournament structure.
+
+  3. BERNOULLI NUMBERS: Power sums S_m(n) = sum k^m connect to Bernoulli
+     numbers via Faulhaber's formula. The forbidden 7 = S_1(3)+1 and
+     21 = S_1(6) = T_6 are triangular-number adjacent. The spectral zeta
+     zeta_M(-s) = sum lambda_i^{-s} is expressible via Newton-Bernoulli
+     when the eigenvalues come from a polynomial char equation.
+
+  4. COLLATZ: The Collatz map in rapidity space is a biased random walk
+     with drift -ln(2)/2 (even step) or +ln(3)/2 (odd step). The critical
+     ratio ln(2)/ln(3) = 0.6309... governs the fraction of odd steps.
+     For n=27 (111 steps), the rapidity trajectory shows dramatic excursions
+     before the final descent to 0.
+
+  5. PRIME GAPS: In rapidity space, prime gaps DECREASE as O(ln(p)/(2p)).
+     Cramer's conjecture translates to: max rapidity gap at rapidity R is
+     O(R^2 * e^{-2R}), which vanishes doubly-exponentially. The primes
+     become DENSE in rapidity space. Record rapidity gaps decrease monotonically
+     in the long run.
+
+  6. GOLDBACH: The Goldbach constraint p+q=n becomes e^{2x}+e^{2y}=n in
+     rapidity space -- a convex curve, not a line. The most balanced
+     decomposition (closest rapidities) corresponds to p,q near n/2.
+     The rapidity spread measures how "asymmetric" the decomposition is.
+
+  7. SQRT RAPIDITY: Perfect k-th powers form sublattices of rapidity space
+     with spacing k times the prime rapidity generators. The multiplicative
+     structure of Z becomes purely additive in rapidity. The forbidden numbers
+     7 and 21 are NOT in any power sublattice (both have rapidity that is
+     not a simple multiple of any prime rapidity).
+
+  OVERARCHING THEME: Rapidity = ln(n)/2 converts multiplicative number theory
+  into additive geometry. The fundamental theorem of arithmetic becomes:
+  every rapidity is a unique sum of prime rapidities. This is the LOG of
+  the integers, but normalized by 1/2 to match the Cayley/Lorentz structure.
+
+======================================================================
+END OF RAPIDITY NUMBER THEORY EXPLORATIONS
+======================================================================

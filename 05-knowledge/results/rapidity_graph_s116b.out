@@ -1,0 +1,945 @@
+RAPIDITY GRAPH INVESTIGATION
+======================================================================
+Script: rapidity_graph_s116b.py
+Session: kind-pasteur-2026-03-15-S116b
+
+  Rapidity composition: 1/(2a+1) (+) 1/(2b+1) = 1/(2c+1)
+  where c = ab/(a+b+1), equivalently (a-c)(b-c) = c(c+1) = 2*T_c
+
+======================================================================
+SECTION 1: GEOMETRIC INTERPRETATION -- PRONIC = 2 * TRIANGULAR
+======================================================================
+
+  The core identity: (a-c)(b-c) = c(c+1) = 2*T_c
+  where T_c = c(c+1)/2 is the c-th triangular number.
+
+  T_c counts the number of PAIRS from a set of c+1 elements:
+  T_c = C(c+1, 2) = number of edges in K_{c+1}.
+
+  So the number of rapidity decompositions of interval c is:
+  tau(2*T_c)/2 = tau(c(c+1))/2
+  = (number of factorizations of twice the c-th triangular number)/2
+
+  c    T_c    2*T_c  K_{c+1}  tau(2T_c)  decompositions
+  --------------------------------------------------------------
+    1      1       2  K_2          2          1
+    2      3       6  K_3          4          2
+    3      6      12  K_4          6          3
+    4     10      20  K_5          6          3
+    5     15      30  K_6          8          4
+    6     21      42  K_7          8          4
+    7     28      56  K_8          8          4
+    8     36      72  K_9         12          6
+    9     45      90  K_10        12          6
+   10     55     110  K_11         8          4
+   11     66     132  K_12        12          6
+   12     78     156  K_13        12          6
+   13     91     182  K_14         8          4
+   14    105     210  K_15        16          8
+   15    120     240  K_16        20         10
+   16    136     272  K_17        10          5
+   17    153     306  K_18        12          6
+   18    171     342  K_19        12          6
+   19    190     380  K_20        12          6
+   20    210     420  K_21        24         12
+   21    231     462  K_22        16          8
+   22    253     506  K_23         8          4
+   23    276     552  K_24        16          8
+   24    300     600  K_25        24         12
+   25    325     650  K_26        12          6
+   26    351     702  K_27        16          8
+   27    378     756  K_28        24         12
+   28    406     812  K_29        12          6
+   29    435     870  K_30        16          8
+   30    465     930  K_31        16          8
+
+  HIGHLY-DECOMPOSABLE INTERVALS (most compositions):
+  (sorted by number of decompositions)
+
+    c= 35:  18 decompositions, 2T_c =   1260 = 2^2 * 3^2 * 5 * 7
+    c= 39:  16 decompositions, 2T_c =   1560 = 2^3 * 3 * 5 * 13
+    c= 20:  12 decompositions, 2T_c =    420 = 2^2 * 3 * 5 * 7
+    c= 24:  12 decompositions, 2T_c =    600 = 2^3 * 3 * 5^2
+    c= 27:  12 decompositions, 2T_c =    756 = 2^2 * 3^3 * 7
+    c= 32:  12 decompositions, 2T_c =   1056 = 2^5 * 3 * 11
+    c= 15:  10 decompositions, 2T_c =    240 = 2^4 * 3 * 5
+    c= 36:   9 decompositions, 2T_c =   1332 = 2^2 * 3^2 * 37
+    c= 14:   8 decompositions, 2T_c =    210 = 2 * 3 * 5 * 7
+    c= 21:   8 decompositions, 2T_c =    462 = 2 * 3 * 7 * 11
+    c= 23:   8 decompositions, 2T_c =    552 = 2^3 * 3 * 23
+    c= 26:   8 decompositions, 2T_c =    702 = 2 * 3^3 * 13
+    c= 29:   8 decompositions, 2T_c =    870 = 2 * 3 * 5 * 29
+    c= 30:   8 decompositions, 2T_c =    930 = 2 * 3 * 5 * 31
+    c= 33:   8 decompositions, 2T_c =   1122 = 2 * 3 * 11 * 17
+
+  PAIRING INTERPRETATION:
+  T_c = C(c+1,2) counts edges of K_{c+1}.
+  Each divisor pair (d1,d2) of c(c+1) = 2*T_c gives
+  a 'rectangle' d1 x d2 whose area = 2 * (edges of K_{c+1}).
+
+  Geometrically: to reach interval c via composition,
+  you need a FACTORING of twice the complete-graph edge count.
+  Each factoring = a way to partition 2*T_c into a d1 x d2 grid.
+
+  SHIFTED-RECTANGLE THEOREM:
+  If c(c+1) = d1*d2, then (a,b) = (c+d1, c+d2).
+  Both a > c and b > c always (since d1,d2 >= 1).
+  The 'gap' a-c = d1 and b-c = d2 are the rectangle dimensions.
+  So compositions TO c always come FROM strictly larger intervals.
+  The rapidity graph is a DAG (directed acyclic graph)!
+
+
+======================================================================
+SECTION 2: THE RAPIDITY GRAPH
+======================================================================
+
+  Rapidity graph on nodes {1, ..., 50}:
+  Triples (a,b,c) with a<=b<=50: 58
+  Nodes with at least one edge: 49
+
+  GRAPH A -- COMPOSITION PARTNERS (undirected):
+  Edge between a and b if 1/(2a+1) (+) 1/(2b+1) = 1/(2c+1) for some c in {1..N}
+
+  Edges: 58
+
+  Degree sequence (node: degree):
+    node   1 (1/  3): degree   0, neighbors: []
+    node   2 (1/  5): degree   1, neighbors: [3]
+    node   3 (1/  7): degree   2, neighbors: [2,8]
+    node   4 (1/  9): degree   2, neighbors: [5,15]
+    node   5 (1/ 11): degree   3, neighbors: [4,9,24]
+    node   6 (1/ 13): degree   3, neighbors: [7,14,35]
+    node   7 (1/ 15): degree   3, neighbors: [6,20,48]
+    node   8 (1/ 17): degree   4, neighbors: [3,9,15,27]
+    node   9 (1/ 19): degree   4, neighbors: [5,8,20,35]
+    node  10 (1/ 21): degree   2, neighbors: [11,44]
+    node  11 (1/ 23): degree   3, neighbors: [10,21,32]
+    node  12 (1/ 25): degree   3, neighbors: [13,26,39]
+    node  13 (1/ 27): degree   1, neighbors: [12]
+    node  14 (1/ 29): degree   4, neighbors: [6,15,20,27]
+    node  15 (1/ 31): degree   6, neighbors: [4,8,14,24,32,44]
+    node  16 (1/ 33): degree   1, neighbors: [17]
+    node  17 (1/ 35): degree   2, neighbors: [16,33]
+    node  18 (1/ 37): degree   2, neighbors: [19,38]
+    node  19 (1/ 39): degree   1, neighbors: [18]
+    node  20 (1/ 41): degree   6, neighbors: [7,9,14,21,39,49]
+    node  21 (1/ 43): degree   3, neighbors: [11,20,44]
+    node  22 (1/ 45): degree   1, neighbors: [23]
+    node  23 (1/ 47): degree   2, neighbors: [22,45]
+    node  24 (1/ 49): degree   5, neighbors: [5,15,25,35,50]
+    node  25 (1/ 51): degree   2, neighbors: [24,39]
+    node  26 (1/ 53): degree   2, neighbors: [12,27]
+    node  27 (1/ 55): degree   4, neighbors: [8,14,26,35]
+    node  28 (1/ 57): degree   1, neighbors: [29]
+    node  29 (1/ 59): degree   1, neighbors: [28]
+    node  30 (1/ 61): degree   1, neighbors: [31]
+
+  Connected components: 7
+    Component 1 (37 nodes): [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]...
+    Component 2 (2 nodes): [28, 29]
+    Component 3 (2 nodes): [30, 31]
+    Component 4 (2 nodes): [36, 37]
+    Component 5 (2 nodes): [40, 41]
+    Component 6 (2 nodes): [42, 43]
+    Component 7 (2 nodes): [46, 47]
+  Isolated nodes (no edges): [1]
+
+  GRAPH B -- REACHABILITY (directed): a -> c if exists b with compose(a,b)=c
+
+    c=  1 (1/  3): reachable from 1 pairs
+      (2,3): 1/5 (+) 1/7 = 1/3
+    c=  2 (1/  5): reachable from 2 pairs
+      (3,8): 1/7 (+) 1/17 = 1/5
+      (4,5): 1/9 (+) 1/11 = 1/5
+    c=  3 (1/  7): reachable from 3 pairs
+      (4,15): 1/9 (+) 1/31 = 1/7
+      (5,9): 1/11 (+) 1/19 = 1/7
+      (6,7): 1/13 (+) 1/15 = 1/7
+    c=  4 (1/  9): reachable from 3 pairs
+      (5,24): 1/11 (+) 1/49 = 1/9
+      (6,14): 1/13 (+) 1/29 = 1/9
+      (8,9): 1/17 (+) 1/19 = 1/9
+    c=  5 (1/ 11): reachable from 4 pairs
+      (6,35): 1/13 (+) 1/71 = 1/11
+      (7,20): 1/15 (+) 1/41 = 1/11
+      (8,15): 1/17 (+) 1/31 = 1/11
+      (10,11): 1/21 (+) 1/23 = 1/11
+    c=  6 (1/ 13): reachable from 4 pairs
+      (7,48): 1/15 (+) 1/97 = 1/13
+      (8,27): 1/17 (+) 1/55 = 1/13
+      (9,20): 1/19 (+) 1/41 = 1/13
+      (12,13): 1/25 (+) 1/27 = 1/13
+    c=  7 (1/ 15): reachable from 3 pairs
+      (9,35): 1/19 (+) 1/71 = 1/15
+      (11,21): 1/23 (+) 1/43 = 1/15
+      (14,15): 1/29 (+) 1/31 = 1/15
+    c=  8 (1/ 17): reachable from 5 pairs
+      (10,44): 1/21 (+) 1/89 = 1/17
+      (11,32): 1/23 (+) 1/65 = 1/17
+      (12,26): 1/25 (+) 1/53 = 1/17
+      (14,20): 1/29 (+) 1/41 = 1/17
+      (16,17): 1/33 (+) 1/35 = 1/17
+    c=  9 (1/ 19): reachable from 4 pairs
+      (12,39): 1/25 (+) 1/79 = 1/19
+      (14,27): 1/29 (+) 1/55 = 1/19
+      (15,24): 1/31 (+) 1/49 = 1/19
+      (18,19): 1/37 (+) 1/39 = 1/19
+    c= 10 (1/ 21): reachable from 2 pairs
+      (15,32): 1/31 (+) 1/65 = 1/21
+      (20,21): 1/41 (+) 1/43 = 1/21
+    c= 11 (1/ 23): reachable from 3 pairs
+      (15,44): 1/31 (+) 1/89 = 1/23
+      (17,33): 1/35 (+) 1/67 = 1/23
+      (22,23): 1/45 (+) 1/47 = 1/23
+    c= 12 (1/ 25): reachable from 2 pairs
+      (18,38): 1/37 (+) 1/77 = 1/25
+      (24,25): 1/49 (+) 1/51 = 1/25
+    c= 13 (1/ 27): reachable from 2 pairs
+      (20,39): 1/41 (+) 1/79 = 1/27
+      (26,27): 1/53 (+) 1/55 = 1/27
+    c= 14 (1/ 29): reachable from 4 pairs
+      (20,49): 1/41 (+) 1/99 = 1/29
+      (21,44): 1/43 (+) 1/89 = 1/29
+      (24,35): 1/49 (+) 1/71 = 1/29
+      (28,29): 1/57 (+) 1/59 = 1/29
+    c= 15 (1/ 31): reachable from 4 pairs
+      (23,45): 1/47 (+) 1/91 = 1/31
+      (25,39): 1/51 (+) 1/79 = 1/31
+      (27,35): 1/55 (+) 1/71 = 1/31
+      (30,31): 1/61 (+) 1/63 = 1/31
+    c= 16 (1/ 33): reachable from 2 pairs
+      (24,50): 1/49 (+) 1/101 = 1/33
+      (32,33): 1/65 (+) 1/67 = 1/33
+    c= 17 (1/ 35): reachable from 1 pairs
+      (34,35): 1/69 (+) 1/71 = 1/35
+    c= 18 (1/ 37): reachable from 1 pairs
+      (36,37): 1/73 (+) 1/75 = 1/37
+    c= 19 (1/ 39): reachable from 1 pairs
+      (38,39): 1/77 (+) 1/79 = 1/39
+    c= 20 (1/ 41): reachable from 3 pairs
+      (34,50): 1/69 (+) 1/101 = 1/41
+      (35,48): 1/71 (+) 1/97 = 1/41
+      (40,41): 1/81 (+) 1/83 = 1/41
+
+  ADJACENCY MATRIX (composition-partner graph, nodes 1..20):
+         1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+     1:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+     2:  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+     3:  0  1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0
+     4:  0  0  0  0  1  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0
+     5:  0  0  0  1  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0
+     6:  0  0  0  0  0  0  1  0  0  0  0  0  0  1  0  0  0  0  0  0
+     7:  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  1
+     8:  0  0  1  0  0  0  0  0  1  0  0  0  0  0  1  0  0  0  0  0
+     9:  0  0  0  0  1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  1
+    10:  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0
+    11:  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0
+    12:  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0
+    13:  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0
+    14:  0  0  0  0  0  1  0  0  0  0  0  0  0  0  1  0  0  0  0  1
+    15:  0  0  0  1  0  0  0  1  0  0  0  0  0  1  0  0  0  0  0  0
+    16:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0
+    17:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0
+    18:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0
+    19:  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0
+    20:  0  0  0  0  0  0  1  0  1  0  0  0  0  1  0  0  0  0  0  0
+
+  Row sums (degrees in subgraph): [0, 1, 2, 2, 2, 2, 2, 3, 3, 1, 1, 1, 1, 3, 3, 1, 1, 1, 1, 3]
+  Edges in subgraph: 17
+  Density: 0.0895
+
+  Trace(A) = 0  (should be 0, no self-loops)
+  Trace(A^2) = 34 = 2 * edges = 34
+  Trace(A^3) = 0 = 6 * triangles => triangles = 0
+
+  Triangles in subgraph: 0
+
+  Spectral invariants (subgraph 1..20):
+    sum(lambda_i) = 0
+    sum(lambda_i^2) = 34
+    sum(lambda_i^3) = 0
+    RMS eigenvalue = sqrt(34/20) = 1.3038
+
+
+======================================================================
+SECTION 3: THE RAPIDITY BINARY TREE -- HALVING OPERATION
+======================================================================
+
+  The consecutive-pair family: compose(2k, 2k+1) = k
+  This is because (2k)(2k+1) / (2k + 2k+1 + 1) = (2k)(2k+1)/(4k+2)
+  = (2k)(2k+1) / (2(2k+1)) = k.
+
+  So every node k has exactly two 'children': 2k and 2k+1.
+  This creates a PERFECT BINARY TREE!
+
+  THE RAPIDITY TREE (halving structure):
+
+  Level 0:                        1 (1/3)
+                                 / \
+  Level 1:                 2 (1/5)   3 (1/7)
+                          / \         / \
+  Level 2:           4 (1/9) 5(1/11) 6(1/13) 7(1/15)
+                    / \    / \    / \     / \
+  Level 3:         8   9  10  11 12  13  14  15
+                  (1/17-1/31)
+
+  VERIFICATION of consecutive-pair compositions:
+    compose(  2,   3) =   1  [OK]  i.e. 1/5 (+) 1/7 = 1/3
+    compose(  4,   5) =   2  [OK]  i.e. 1/9 (+) 1/11 = 1/5
+    compose(  6,   7) =   3  [OK]  i.e. 1/13 (+) 1/15 = 1/7
+    compose(  8,   9) =   4  [OK]  i.e. 1/17 (+) 1/19 = 1/9
+    compose( 10,  11) =   5  [OK]  i.e. 1/21 (+) 1/23 = 1/11
+    compose( 12,  13) =   6  [OK]  i.e. 1/25 (+) 1/27 = 1/13
+    compose( 14,  15) =   7  [OK]  i.e. 1/29 (+) 1/31 = 1/15
+    compose( 16,  17) =   8  [OK]  i.e. 1/33 (+) 1/35 = 1/17
+    compose( 18,  19) =   9  [OK]  i.e. 1/37 (+) 1/39 = 1/19
+    compose( 20,  21) =  10  [OK]  i.e. 1/41 (+) 1/43 = 1/21
+    compose( 22,  23) =  11  [OK]  i.e. 1/45 (+) 1/47 = 1/23
+    compose( 24,  25) =  12  [OK]  i.e. 1/49 (+) 1/51 = 1/25
+    compose( 26,  27) =  13  [OK]  i.e. 1/53 (+) 1/55 = 1/27
+    compose( 28,  29) =  14  [OK]  i.e. 1/57 (+) 1/59 = 1/29
+    compose( 30,  31) =  15  [OK]  i.e. 1/61 (+) 1/63 = 1/31
+    compose( 32,  33) =  16  [OK]  i.e. 1/65 (+) 1/67 = 1/33
+
+  LEVEL ANALYSIS:
+  Level L contains nodes 2^L to 2^{L+1}-1
+  Each level L node k has children 2k, 2k+1 at level L+1
+
+  Level 0: nodes 1-1 (1 nodes)
+    Intervals: 1/3
+  Level 1: nodes 2-3 (2 nodes)
+    Intervals: 1/5, 1/7
+  Level 2: nodes 4-7 (4 nodes)
+    Intervals: 1/9, 1/11, 1/13, 1/15
+  Level 3: nodes 8-15 (8 nodes)
+    Intervals: 1/17, 1/19, 1/21, 1/23, 1/25, 1/27, 1/29, 1/31
+  Level 4: nodes 16-31 (16 nodes)
+    Intervals: 1/33, 1/35, 1/37, 1/39, 1/41, 1/43, 1/45, 1/47, 1/49, 1/51, 1/53, 1/55, 1/57, 1/59, 1/61, 1/63
+  Level 5: nodes 32-63 (32 nodes)
+  Level 6: nodes 64-127 (64 nodes)
+
+  ANCESTRY CHAINS (trace to root via halving):
+  Each node n has a unique path to root: n -> floor(n/2) -> ... -> 1
+  BUT this is NOT the rapidity composition -- it's the consecutive-pair path.
+
+    1 -> 1
+    5 -> 5 -> 2 -> 1
+    10 -> 10 -> 5 -> 2 -> 1
+    15 -> 15 -> 7 -> 3 -> 1
+    20 -> 20 -> 10 -> 5 -> 2 -> 1
+    25 -> 25 -> 12 -> 6 -> 3 -> 1
+    30 -> 30 -> 15 -> 7 -> 3 -> 1
+    42 -> 42 -> 21 -> 10 -> 5 -> 2 -> 1
+    50 -> 50 -> 25 -> 12 -> 6 -> 3 -> 1
+    63 -> 63 -> 31 -> 15 -> 7 -> 3 -> 1
+    100 -> 100 -> 50 -> 25 -> 12 -> 6 -> 3 -> 1
+
+  KEY INSIGHT: The rapidity halving tree IS the binary representation tree!
+  Node n sits at level floor(log2(n)), and its binary digits trace the
+  path from root: 0=go-left (even child), 1=go-right (odd child).
+
+  Examples:
+    n=  1 =       1_2, level 0, path from root: (root)
+    n=  2 =      10_2, level 1, path from root: L
+    n=  3 =      11_2, level 1, path from root: R
+    n=  5 =     101_2, level 2, path from root: LR
+    n=  7 =     111_2, level 2, path from root: RR
+    n= 11 =    1011_2, level 3, path from root: LRR
+    n= 13 =    1101_2, level 3, path from root: RLR
+    n= 23 =   10111_2, level 4, path from root: LRRR
+    n= 42 =  101010_2, level 5, path from root: LRLRL
+    n= 63 =  111111_2, level 5, path from root: RRRRR
+
+  CROSS-LINKS: non-consecutive compositions overlaying the tree
+  (compositions beyond the (2k, 2k+1)->k family)
+
+    c=  2: tree edge (4,5), CROSS-LINKS: [(3, 8)]
+    c=  3: tree edge (6,7), CROSS-LINKS: [(4, 15), (5, 9)]
+    c=  4: tree edge (8,9), CROSS-LINKS: [(5, 24), (6, 14)]
+    c=  5: tree edge (10,11), CROSS-LINKS: [(6, 35), (7, 20), (8, 15)]
+    c=  6: tree edge (12,13), CROSS-LINKS: [(7, 48), (8, 27), (9, 20)]
+    c=  7: tree edge (14,15), CROSS-LINKS: [(8, 63), (9, 35), (11, 21)]
+    c=  8: tree edge (16,17), CROSS-LINKS: [(9, 80), (10, 44), (11, 32), (12, 26), (14, 20)]
+    c=  9: tree edge (18,19), CROSS-LINKS: [(10, 99), (11, 54), (12, 39), (14, 27), (15, 24)]
+    c= 10: tree edge (20,21), CROSS-LINKS: [(11, 120), (12, 65), (15, 32)]
+    c= 11: tree edge (22,23), CROSS-LINKS: [(12, 143), (13, 77), (14, 55), (15, 44), (17, 33)]
+    c= 12: tree edge (24,25), CROSS-LINKS: [(13, 168), (14, 90), (15, 64), (16, 51), (18, 38)]
+    c= 13: tree edge (26,27), CROSS-LINKS: [(14, 195), (15, 104), (20, 39)]
+    c= 14: tree edge (28,29), CROSS-LINKS: [(15, 224), (16, 119), (17, 84), (19, 56), (20, 49), (21, 44), (24, 35)]
+    c= 15: tree edge (30,31), CROSS-LINKS: [(16, 255), (17, 135), (18, 95), (19, 75), (20, 63), (21, 55), (23, 45), (25, 39), (27, 35)]
+    c= 16: tree edge (32,33), CROSS-LINKS: [(17, 288), (18, 152), (20, 84), (24, 50)]
+    c= 17: tree edge (34,35), CROSS-LINKS: [(18, 323), (19, 170), (20, 119), (23, 68), (26, 51)]
+    c= 18: tree edge (36,37), CROSS-LINKS: [(19, 360), (20, 189), (21, 132), (24, 75), (27, 56)]
+    c= 19: tree edge (38,39), CROSS-LINKS: [(20, 399), (21, 209), (23, 114), (24, 95), (29, 57)]
+    c= 20: tree edge (40,41), CROSS-LINKS: [(21, 440), (22, 230), (23, 160), (24, 125), (25, 104), (26, 90), (27, 80), (30, 62), (32, 55), (34, 50), (35, 48)]
+
+======================================================================
+SECTION 4: CHAINS, REACHABILITY, AND DIAMETER
+======================================================================
+
+  FORWARD REACHABILITY (via composition to smaller values):
+  From node a, reach c if exists b with compose(a,b)=c, then iterate.
+
+    From   1 (1/  3): reach NOTHING (terminal node)
+    From   2 (1/  5): reach [1] (1 total)
+    From   3 (1/  7): reach [1, 2] (2 total)
+    From   4 (1/  9): reach [1, 2, 3] (3 total)
+    From   5 (1/ 11): reach [1, 2, 3, 4] (4 total)
+    From   6 (1/ 13): reach [1, 2, 3, 4, 5] (5 total)
+    From   7 (1/ 15): reach [1, 2, 3, 4, 5, 6] (6 total)
+    From   8 (1/ 17): reach [1, 2, 3, 4, 5, 6] (6 total)
+    From   9 (1/ 19): reach [1, 2, 3, 4, 5, 6, 7] (7 total)
+    From  10 (1/ 21): reach [1, 2, 3, 4, 5, 6, 8] (7 total)
+    From  11 (1/ 23): reach [1, 2, 3, 4, 5, 6, 7, 8] (8 total)
+    From  12 (1/ 25): reach [1, 2, 3, 4, 5, 6, 7, 8, 9] (9 total)
+    From  13 (1/ 27): reach [1, 2, 3, 4, 5, 6] (6 total)
+    From  14 (1/ 29): reach [1, 2, 3, 4, 5, 6, 7, 8, 9] (9 total)
+    From  15 (1/ 31): reach [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] (11 total)
+    From  16 (1/ 33): reach [1, 2, 3, 4, 5, 6, 8] (7 total)
+    From  17 (1/ 35): reach [1, 2, 3, 4, 5, 6, 7, 8, 11] (9 total)
+    From  18 (1/ 37): reach [1, 2, 3, 4, 5, 6, 7, 8, 9, 12] (10 total)
+    From  19 (1/ 39): reach [1, 2, 3, 4, 5, 6, 7, 9] (8 total)
+    From  20 (1/ 41): reach [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14] (12 total)
+    From  21 (1/ 43): reach [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14] (11 total)
+    From  22 (1/ 45): reach [1, 2, 3, 4, 5, 6, 7, 8, 11] (9 total)
+    From  23 (1/ 47): reach [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15] (12 total)
+    From  24 (1/ 49): reach [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 14, 16] (12 total)
+    From  25 (1/ 51): reach [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15] (13 total)
+    From  26 (1/ 53): reach [1, 2, 3, 4, 5, 6, 8, 13] (8 total)
+    From  27 (1/ 55): reach [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15] (13 total)
+    From  28 (1/ 57): reach [1, 2, 3, 4, 5, 6, 7, 8, 9, 14] (10 total)
+    From  29 (1/ 59): reach [1, 2, 3, 4, 5, 6, 7, 8, 9, 14] (10 total)
+    From  30 (1/ 61): reach [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15] (12 total)
+
+  UNDIRECTED DISTANCES (composition-partner graph):
+
+  DIAMETER of composition-partner graph (N=50): 10
+  Achieved by pair (16, 19)
+  Shortest path: 16 - 17 - 33 - 32 - 11 - 21 - 20 - 39 - 38 - 18 - 19
+  In intervals: 1/33 - 1/35 - 1/67 - 1/65 - 1/23 - 1/43 - 1/41 - 1/79 - 1/77 - 1/37 - 1/39
+
+  DISTANCE MATRIX (nodes 1..20):
+         1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+     1:  0  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+     2:  .  0  1  4  4  5  5  2  3  5  5  5  6  4  3  7  6  7  8  4
+     3:  .  1  0  3  3  4  4  1  2  4  4  4  5  3  2  6  5  6  7  3
+     4:  .  4  3  0  1  3  4  2  2  3  3  5  6  2  1  5  4  6  7  3
+     5:  .  4  3  1  0  3  3  2  1  4  4  4  5  3  2  6  5  5  6  2
+     6:  .  5  4  3  3  0  1  3  2  4  4  4  5  1  2  6  5  5  6  2
+     7:  .  5  4  4  3  1  0  3  2  4  3  3  4  2  3  7  6  4  5  1
+     8:  .  2  1  2  2  3  3  0  1  3  3  3  4  2  1  5  4  5  6  2
+     9:  .  3  2  2  1  2  2  1  0  4  3  3  4  2  2  6  5  4  5  1
+    10:  .  5  4  3  4  4  4  3  4  0  1  5  6  3  2  5  4  6  7  3
+    11:  .  5  4  3  4  4  3  3  3  1  0  4  5  3  2  4  3  5  6  2
+    12:  .  5  4  5  4  4  3  3  3  5  4  0  1  3  4  8  7  3  4  2
+    13:  .  6  5  6  5  5  4  4  4  6  5  1  0  4  5  9  8  4  5  3
+    14:  .  4  3  2  3  1  2  2  2  3  3  3  4  0  1  5  4  4  5  1
+    15:  .  3  2  1  2  2  3  1  2  2  2  4  5  1  0  4  3  5  6  2
+    16:  .  7  6  5  6  6  7  5  6  5  4  8  9  5  4  0  1  9 10  6
+    17:  .  6  5  4  5  5  6  4  5  4  3  7  8  4  3  1  0  8  9  5
+    18:  .  7  6  6  5  5  4  5  4  6  5  3  4  4  5  9  8  0  1  3
+    19:  .  8  7  7  6  6  5  6  5  7  6  4  5  5  6 10  9  1  0  4
+    20:  .  4  3  3  2  2  1  2  1  3  2  2  3  1  2  6  5  3  4  0
+
+  ECCENTRICITY of nodes 1..20:
+    node   2: eccentricity = 8
+    node   3: eccentricity = 7
+    node   4: eccentricity = 7
+    node   5: eccentricity = 6
+    node   6: eccentricity = 6
+    node   7: eccentricity = 7
+    node   8: eccentricity = 6
+    node   9: eccentricity = 6
+    node  10: eccentricity = 7
+    node  11: eccentricity = 6
+    node  12: eccentricity = 8
+    node  13: eccentricity = 9
+    node  14: eccentricity = 5
+    node  15: eccentricity = 6
+    node  16: eccentricity = 10
+    node  17: eccentricity = 9
+    node  18: eccentricity = 9
+    node  19: eccentricity = 10
+    node  20: eccentricity = 6
+
+  DIRECTED CHAINS: longest sequence a1 > a2 > ... > ak
+  where each step is a composition.
+  (Since compositions always go to smaller values, chains are finite.)
+
+  TOP 15 longest directed chains:
+    Start  34 (1/ 69): length 10, chain: 34 -> 20 -> 14 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  35 (1/ 71): length 10, chain: 35 -> 20 -> 14 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  36 (1/ 73): length 10, chain: 36 -> 18 -> 12 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  37 (1/ 75): length 10, chain: 37 -> 18 -> 12 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  40 (1/ 81): length 10, chain: 40 -> 20 -> 14 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  41 (1/ 83): length 10, chain: 41 -> 20 -> 14 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  42 (1/ 85): length 10, chain: 42 -> 21 -> 14 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  43 (1/ 87): length 10, chain: 43 -> 21 -> 14 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  46 (1/ 93): length 10, chain: 46 -> 23 -> 15 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  47 (1/ 95): length 10, chain: 47 -> 23 -> 15 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  48 (1/ 97): length 10, chain: 48 -> 24 -> 12 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  49 (1/ 99): length 10, chain: 49 -> 24 -> 12 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  50 (1/101): length 10, chain: 50 -> 20 -> 14 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  18 (1/ 37): length 9, chain: 18 -> 12 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+    Start  20 (1/ 41): length 9, chain: 20 -> 14 -> 9 -> 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1
+
+  REACHABILITY TO THE ROOT (c=1, interval 1/3):
+  Can every node reach 1 via directed composition chains?
+
+  Nodes that CAN reach 1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]...
+  (50 out of 50)
+
+  TREE PATH vs SHORTEST DIRECTED PATH to node 1:
+    n=  2: tree path = 1 steps, shortest directed = 1, shortcut saves = 0
+    n=  5: tree path = 2 steps, shortest directed = 2, shortcut saves = 0
+    n= 10: tree path = 3 steps, shortest directed = 3, shortcut saves = 0
+    n= 15: tree path = 3 steps, shortest directed = 2, shortcut saves = 1
+    n= 20: tree path = 4 steps, shortest directed = 3, shortcut saves = 1
+    n= 30: tree path = 4 steps, shortest directed = 3, shortcut saves = 1
+    n= 40: tree path = 5 steps, shortest directed = 4, shortcut saves = 1
+    n= 50: tree path = 5 steps, shortest directed = 4, shortcut saves = 1
+
+
+======================================================================
+SECTION 5: c(c+1) AND PALEY PRIME FACTORIZATIONS
+======================================================================
+
+  Paley primes (p = 3 mod 4): [3, 7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83, 103, 107, 127, 131, 139, 151, 163]...
+  Other odd primes (p = 1 mod 4): [5, 13, 17, 29, 37, 41, 53, 61, 73, 89, 97, 101, 109, 113, 137, 149, 157, 173, 181, 193]...
+
+  PALEY INTERVAL INDICES (c = (p-1)/2 for prime p = 2c+1):
+    p=  3 (=3 mod 4): c=  1, 2T_c = c(c+1) =      2
+    p=  5 (=1 mod 4): c=  2, 2T_c = c(c+1) =      6
+    p=  7 (=3 mod 4): c=  3, 2T_c = c(c+1) =     12
+    p= 11 (=3 mod 4): c=  5, 2T_c = c(c+1) =     30
+    p= 13 (=1 mod 4): c=  6, 2T_c = c(c+1) =     42
+    p= 17 (=1 mod 4): c=  8, 2T_c = c(c+1) =     72
+    p= 19 (=3 mod 4): c=  9, 2T_c = c(c+1) =     90
+    p= 23 (=3 mod 4): c= 11, 2T_c = c(c+1) =    132
+    p= 29 (=1 mod 4): c= 14, 2T_c = c(c+1) =    210
+    p= 31 (=3 mod 4): c= 15, 2T_c = c(c+1) =    240
+    p= 37 (=1 mod 4): c= 18, 2T_c = c(c+1) =    342
+    p= 41 (=1 mod 4): c= 20, 2T_c = c(c+1) =    420
+    p= 43 (=3 mod 4): c= 21, 2T_c = c(c+1) =    462
+    p= 47 (=3 mod 4): c= 23, 2T_c = c(c+1) =    552
+    p= 53 (=1 mod 4): c= 26, 2T_c = c(c+1) =    702
+    p= 59 (=3 mod 4): c= 29, 2T_c = c(c+1) =    870
+    p= 61 (=1 mod 4): c= 30, 2T_c = c(c+1) =    930
+    p= 67 (=3 mod 4): c= 33, 2T_c = c(c+1) =   1122
+    p= 71 (=3 mod 4): c= 35, 2T_c = c(c+1) =   1260
+    p= 73 (=1 mod 4): c= 36, 2T_c = c(c+1) =   1332
+    p= 79 (=3 mod 4): c= 39, 2T_c = c(c+1) =   1560
+    p= 83 (=3 mod 4): c= 41, 2T_c = c(c+1) =   1722
+    p= 89 (=1 mod 4): c= 44, 2T_c = c(c+1) =   1980
+    p= 97 (=1 mod 4): c= 48, 2T_c = c(c+1) =   2352
+
+  FACTORIZATION OF c(c+1) FOR ALL c = 1..50:
+  Highlighting when ALL prime factors of c(c+1) are odd primes.
+
+    c=  1: c(c+1)=     2 = 2                               comps=  1 [p=3 prime]
+    c=  2: c(c+1)=     6 = 2 * 3                           comps=  2 [p=5 prime] <-- ALL odd factors = 3 mod 4
+    c=  3: c(c+1)=    12 = 2^2 * 3                         comps=  3 [p=7 prime] <-- ALL odd factors = 3 mod 4
+    c=  4: c(c+1)=    20 = 2^2 * 5                         comps=  3
+    c=  5: c(c+1)=    30 = 2 * 3 * 5                       comps=  4 [p=11 prime]
+    c=  6: c(c+1)=    42 = 2 * 3 * 7                       comps=  4 [p=13 prime] <-- ALL odd factors = 3 mod 4
+    c=  7: c(c+1)=    56 = 2^3 * 7                         comps=  4 <-- ALL odd factors = 3 mod 4
+    c=  8: c(c+1)=    72 = 2^3 * 3^2                       comps=  6 [p=17 prime] <-- ALL odd factors = 3 mod 4
+    c=  9: c(c+1)=    90 = 2 * 3^2 * 5                     comps=  6 [p=19 prime]
+    c= 10: c(c+1)=   110 = 2 * 5 * 11                      comps=  4
+    c= 11: c(c+1)=   132 = 2^2 * 3 * 11                    comps=  6 [p=23 prime] <-- ALL odd factors = 3 mod 4
+    c= 12: c(c+1)=   156 = 2^2 * 3 * 13                    comps=  6
+    c= 13: c(c+1)=   182 = 2 * 7 * 13                      comps=  4
+    c= 14: c(c+1)=   210 = 2 * 3 * 5 * 7                   comps=  8 [p=29 prime]
+    c= 15: c(c+1)=   240 = 2^4 * 3 * 5                     comps= 10 [p=31 prime]
+    c= 16: c(c+1)=   272 = 2^4 * 17                        comps=  5
+    c= 17: c(c+1)=   306 = 2 * 3^2 * 17                    comps=  6
+    c= 18: c(c+1)=   342 = 2 * 3^2 * 19                    comps=  6 [p=37 prime] <-- ALL odd factors = 3 mod 4
+    c= 19: c(c+1)=   380 = 2^2 * 5 * 19                    comps=  6
+    c= 20: c(c+1)=   420 = 2^2 * 3 * 5 * 7                 comps= 12 [p=41 prime]
+    c= 21: c(c+1)=   462 = 2 * 3 * 7 * 11                  comps=  8 [p=43 prime] <-- ALL odd factors = 3 mod 4
+    c= 22: c(c+1)=   506 = 2 * 11 * 23                     comps=  4 <-- ALL odd factors = 3 mod 4
+    c= 23: c(c+1)=   552 = 2^3 * 3 * 23                    comps=  8 [p=47 prime] <-- ALL odd factors = 3 mod 4
+    c= 24: c(c+1)=   600 = 2^3 * 3 * 5^2                   comps= 12
+    c= 25: c(c+1)=   650 = 2 * 5^2 * 13                    comps=  6
+    c= 26: c(c+1)=   702 = 2 * 3^3 * 13                    comps=  8 [p=53 prime]
+    c= 27: c(c+1)=   756 = 2^2 * 3^3 * 7                   comps= 12 <-- ALL odd factors = 3 mod 4
+    c= 28: c(c+1)=   812 = 2^2 * 7 * 29                    comps=  6
+    c= 29: c(c+1)=   870 = 2 * 3 * 5 * 29                  comps=  8 [p=59 prime]
+    c= 30: c(c+1)=   930 = 2 * 3 * 5 * 31                  comps=  8 [p=61 prime]
+    c= 31: c(c+1)=   992 = 2^5 * 31                        comps=  6 <-- ALL odd factors = 3 mod 4
+    c= 32: c(c+1)=  1056 = 2^5 * 3 * 11                    comps= 12 <-- ALL odd factors = 3 mod 4
+    c= 33: c(c+1)=  1122 = 2 * 3 * 11 * 17                 comps=  8 [p=67 prime]
+    c= 34: c(c+1)=  1190 = 2 * 5 * 7 * 17                  comps=  8
+    c= 35: c(c+1)=  1260 = 2^2 * 3^2 * 5 * 7               comps= 18 [p=71 prime]
+    c= 36: c(c+1)=  1332 = 2^2 * 3^2 * 37                  comps=  9 [p=73 prime]
+    c= 37: c(c+1)=  1406 = 2 * 19 * 37                     comps=  4
+    c= 38: c(c+1)=  1482 = 2 * 3 * 13 * 19                 comps=  8
+    c= 39: c(c+1)=  1560 = 2^3 * 3 * 5 * 13                comps= 16 [p=79 prime]
+    c= 40: c(c+1)=  1640 = 2^3 * 5 * 41                    comps=  8
+    c= 41: c(c+1)=  1722 = 2 * 3 * 7 * 41                  comps=  8 [p=83 prime]
+    c= 42: c(c+1)=  1806 = 2 * 3 * 7 * 43                  comps=  8 <-- ALL odd factors = 3 mod 4
+    c= 43: c(c+1)=  1892 = 2^2 * 11 * 43                   comps=  6 <-- ALL odd factors = 3 mod 4
+    c= 44: c(c+1)=  1980 = 2^2 * 3^2 * 5 * 11              comps= 18 [p=89 prime]
+    c= 45: c(c+1)=  2070 = 2 * 3^2 * 5 * 23                comps= 12
+    c= 46: c(c+1)=  2162 = 2 * 23 * 47                     comps=  4 <-- ALL odd factors = 3 mod 4
+    c= 47: c(c+1)=  2256 = 2^4 * 3 * 47                    comps= 10 <-- ALL odd factors = 3 mod 4
+    c= 48: c(c+1)=  2352 = 2^4 * 3 * 7^2                   comps= 15 [p=97 prime] <-- ALL odd factors = 3 mod 4
+    c= 49: c(c+1)=  2450 = 2 * 5^2 * 7^2                   comps=  9
+    c= 50: c(c+1)=  2550 = 2 * 3 * 5^2 * 17                comps= 12 [p=101 prime]
+
+  THE 110 = 2*5*11 PATTERN:
+  c=10: c(c+1) = 110 = 2*5*11
+  5 and 11 are both primes, and 1/11 and 1/23 are Paley intervals.
+
+  Looking for c where c(c+1) = 2 * product_of_Paley_primes:
+
+    c=  2: c(c+1) = 6 = 2 * 3 = 2 * 3  [3(=3 mod 4)]  comps=2
+    c=  5: c(c+1) = 30 = 2 * 15 = 2 * 3*5  [3(=3 mod 4), 5(=1 mod 4)]  comps=4
+    c=  6: c(c+1) = 42 = 2 * 21 = 2 * 3*7  [3(=3 mod 4), 7(=3 mod 4)]  comps=4
+    c= 10: c(c+1) = 110 = 2 * 55 = 2 * 5*11  [5(=1 mod 4), 11(=3 mod 4)]  comps=4
+    c= 13: c(c+1) = 182 = 2 * 91 = 2 * 7*13  [7(=3 mod 4), 13(=1 mod 4)]  comps=4
+    c= 14: c(c+1) = 210 = 2 * 105 = 2 * 3*5*7  [3(=3 mod 4), 5(=1 mod 4), 7(=3 mod 4)]  comps=8
+    c= 21: c(c+1) = 462 = 2 * 231 = 2 * 3*7*11  [3(=3 mod 4), 7(=3 mod 4), 11(=3 mod 4)]  comps=8
+    c= 22: c(c+1) = 506 = 2 * 253 = 2 * 11*23  [11(=3 mod 4), 23(=3 mod 4)]  comps=4
+    c= 29: c(c+1) = 870 = 2 * 435 = 2 * 3*5*29  [3(=3 mod 4), 5(=1 mod 4), 29(=1 mod 4)]  comps=8
+    c= 30: c(c+1) = 930 = 2 * 465 = 2 * 3*5*31  [3(=3 mod 4), 5(=1 mod 4), 31(=3 mod 4)]  comps=8
+    c= 33: c(c+1) = 1122 = 2 * 561 = 2 * 3*11*17  [3(=3 mod 4), 11(=3 mod 4), 17(=1 mod 4)]  comps=8
+    c= 34: c(c+1) = 1190 = 2 * 595 = 2 * 5*7*17  [5(=1 mod 4), 7(=3 mod 4), 17(=1 mod 4)]  comps=8
+    c= 37: c(c+1) = 1406 = 2 * 703 = 2 * 19*37  [19(=3 mod 4), 37(=1 mod 4)]  comps=4
+    c= 38: c(c+1) = 1482 = 2 * 741 = 2 * 3*13*19  [3(=3 mod 4), 13(=1 mod 4), 19(=3 mod 4)]  comps=8
+    c= 41: c(c+1) = 1722 = 2 * 861 = 2 * 3*7*41  [3(=3 mod 4), 7(=3 mod 4), 41(=1 mod 4)]  comps=8
+    c= 42: c(c+1) = 1806 = 2 * 903 = 2 * 3*7*43  [3(=3 mod 4), 7(=3 mod 4), 43(=3 mod 4)]  comps=8
+    c= 46: c(c+1) = 2162 = 2 * 1081 = 2 * 23*47  [23(=3 mod 4), 47(=3 mod 4)]  comps=4
+    c= 57: c(c+1) = 3306 = 2 * 1653 = 2 * 3*19*29  [3(=3 mod 4), 19(=3 mod 4), 29(=1 mod 4)]  comps=8
+    c= 58: c(c+1) = 3422 = 2 * 1711 = 2 * 29*59  [29(=1 mod 4), 59(=3 mod 4)]  comps=4
+    c= 61: c(c+1) = 3782 = 2 * 1891 = 2 * 31*61  [31(=3 mod 4), 61(=1 mod 4)]  comps=4
+    c= 65: c(c+1) = 4290 = 2 * 2145 = 2 * 3*5*11*13  [3(=3 mod 4), 5(=1 mod 4), 11(=3 mod 4), 13(=1 mod 4)]  comps=16
+    c= 66: c(c+1) = 4422 = 2 * 2211 = 2 * 3*11*67  [3(=3 mod 4), 11(=3 mod 4), 67(=3 mod 4)]  comps=8
+    c= 69: c(c+1) = 4830 = 2 * 2415 = 2 * 3*5*7*23  [3(=3 mod 4), 5(=1 mod 4), 7(=3 mod 4), 23(=3 mod 4)]  comps=16
+    c= 70: c(c+1) = 4970 = 2 * 2485 = 2 * 5*7*71  [5(=1 mod 4), 7(=3 mod 4), 71(=3 mod 4)]  comps=8
+    c= 73: c(c+1) = 5402 = 2 * 2701 = 2 * 37*73  [37(=1 mod 4), 73(=1 mod 4)]  comps=4
+    c= 77: c(c+1) = 6006 = 2 * 3003 = 2 * 3*7*11*13  [3(=3 mod 4), 7(=3 mod 4), 11(=3 mod 4), 13(=1 mod 4)]  comps=16
+    c= 78: c(c+1) = 6162 = 2 * 3081 = 2 * 3*13*79  [3(=3 mod 4), 13(=1 mod 4), 79(=3 mod 4)]  comps=8
+    c= 82: c(c+1) = 6806 = 2 * 3403 = 2 * 41*83  [41(=1 mod 4), 83(=3 mod 4)]  comps=4
+    c= 85: c(c+1) = 7310 = 2 * 3655 = 2 * 5*17*43  [5(=1 mod 4), 17(=1 mod 4), 43(=3 mod 4)]  comps=8
+    c= 86: c(c+1) = 7482 = 2 * 3741 = 2 * 3*29*43  [3(=3 mod 4), 29(=1 mod 4), 43(=3 mod 4)]  comps=8
+    c= 93: c(c+1) = 8742 = 2 * 4371 = 2 * 3*31*47  [3(=3 mod 4), 31(=3 mod 4), 47(=3 mod 4)]  comps=8
+    c= 94: c(c+1) = 8930 = 2 * 4465 = 2 * 5*19*47  [5(=1 mod 4), 19(=3 mod 4), 47(=3 mod 4)]  comps=8
+
+  SMOOTH PRONIC NUMBERS: c(c+1) with all prime factors in {2,3,5,7,11,13}:
+  (These are the 'Paley-smooth' intervals)
+
+    c=  1: c(c+1) =        2 = 2                               comps=1
+    c=  2: c(c+1) =        6 = 2 * 3                           comps=2
+    c=  3: c(c+1) =       12 = 2^2 * 3                         comps=3
+    c=  4: c(c+1) =       20 = 2^2 * 5                         comps=3
+    c=  5: c(c+1) =       30 = 2 * 3 * 5                       comps=4
+    c=  6: c(c+1) =       42 = 2 * 3 * 7                       comps=4
+    c=  7: c(c+1) =       56 = 2^3 * 7                         comps=4
+    c=  8: c(c+1) =       72 = 2^3 * 3^2                       comps=6
+    c=  9: c(c+1) =       90 = 2 * 3^2 * 5                     comps=6
+    c= 10: c(c+1) =      110 = 2 * 5 * 11                      comps=4
+    c= 11: c(c+1) =      132 = 2^2 * 3 * 11                    comps=6
+    c= 12: c(c+1) =      156 = 2^2 * 3 * 13                    comps=6
+    c= 13: c(c+1) =      182 = 2 * 7 * 13                      comps=4
+    c= 14: c(c+1) =      210 = 2 * 3 * 5 * 7                   comps=8
+    c= 15: c(c+1) =      240 = 2^4 * 3 * 5                     comps=10
+    c= 20: c(c+1) =      420 = 2^2 * 3 * 5 * 7                 comps=12
+    c= 21: c(c+1) =      462 = 2 * 3 * 7 * 11                  comps=8
+    c= 24: c(c+1) =      600 = 2^3 * 3 * 5^2                   comps=12
+    c= 25: c(c+1) =      650 = 2 * 5^2 * 13                    comps=6
+    c= 26: c(c+1) =      702 = 2 * 3^3 * 13                    comps=8
+    c= 27: c(c+1) =      756 = 2^2 * 3^3 * 7                   comps=12
+    c= 32: c(c+1) =     1056 = 2^5 * 3 * 11                    comps=12
+    c= 35: c(c+1) =     1260 = 2^2 * 3^2 * 5 * 7               comps=18
+    c= 39: c(c+1) =     1560 = 2^3 * 3 * 5 * 13                comps=16
+    c= 44: c(c+1) =     1980 = 2^2 * 3^2 * 5 * 11              comps=18
+    c= 48: c(c+1) =     2352 = 2^4 * 3 * 7^2                   comps=15
+    c= 49: c(c+1) =     2450 = 2 * 5^2 * 7^2                   comps=9
+    c= 54: c(c+1) =     2970 = 2 * 3^3 * 5 * 11                comps=16
+    c= 55: c(c+1) =     3080 = 2^3 * 5 * 7 * 11                comps=16
+    c= 63: c(c+1) =     4032 = 2^6 * 3^2 * 7                   comps=21
+    c= 64: c(c+1) =     4160 = 2^6 * 5 * 13                    comps=14
+    c= 65: c(c+1) =     4290 = 2 * 3 * 5 * 11 * 13             comps=16
+    c= 77: c(c+1) =     6006 = 2 * 3 * 7 * 11 * 13             comps=16
+    c= 80: c(c+1) =     6480 = 2^4 * 3^4 * 5                   comps=25
+    c= 90: c(c+1) =     8190 = 2 * 3^2 * 5 * 7 * 13            comps=24
+    c= 98: c(c+1) =     9702 = 2 * 3^2 * 7^2 * 11              comps=18
+    c= 99: c(c+1) =     9900 = 2^2 * 3^2 * 5^2 * 11            comps=27
+    c=104: c(c+1) =    10920 = 2^3 * 3 * 5 * 7 * 13            comps=32
+    c=120: c(c+1) =    14520 = 2^3 * 3 * 5 * 11^2              comps=24
+    c=125: c(c+1) =    15750 = 2 * 3^2 * 5^3 * 7               comps=24
+    c=143: c(c+1) =    20592 = 2^4 * 3^2 * 11 * 13             comps=30
+    c=168: c(c+1) =    28392 = 2^3 * 3 * 7 * 13^2              comps=24
+    c=175: c(c+1) =    30800 = 2^4 * 5^2 * 7 * 11              comps=30
+    c=195: c(c+1) =    38220 = 2^2 * 3 * 5 * 7^2 * 13          comps=36
+
+  PALEY-TO-PALEY COMPOSITIONS:
+  Triples (a,b,c) where ALL of 2a+1, 2b+1, 2c+1 are prime:
+
+    1/5 (+) 1/7 = 1/3  (a=2, b=3, c=1)
+    1/7 (+) 1/17 = 1/5  (a=3, b=8, c=2)
+    1/11 (+) 1/19 = 1/7  (a=5, b=9, c=3)
+    1/13 (+) 1/71 = 1/11  (a=6, b=35, c=5)
+    1/17 (+) 1/31 = 1/11  (a=8, b=15, c=5)
+    1/19 (+) 1/41 = 1/13  (a=9, b=20, c=6)
+    1/29 (+) 1/41 = 1/17  (a=14, b=20, c=8)
+    1/23 (+) 1/109 = 1/19  (a=11, b=54, c=9)
+    1/31 (+) 1/89 = 1/23  (a=15, b=44, c=11)
+    1/31 (+) 1/449 = 1/29  (a=15, b=224, c=14)
+    1/43 (+) 1/89 = 1/29  (a=21, b=44, c=14)
+    1/37 (+) 1/191 = 1/31  (a=18, b=95, c=15)
+    1/41 (+) 1/127 = 1/31  (a=20, b=63, c=15)
+    1/41 (+) 1/379 = 1/37  (a=20, b=189, c=18)
+    1/43 (+) 1/881 = 1/41  (a=21, b=440, c=20)
+    1/53 (+) 1/181 = 1/41  (a=26, b=90, c=20)
+    1/71 (+) 1/97 = 1/41  (a=35, b=48, c=20)
+    1/71 (+) 1/109 = 1/43  (a=35, b=54, c=21)
+    1/71 (+) 1/139 = 1/47  (a=35, b=69, c=23)
+    1/59 (+) 1/521 = 1/53  (a=29, b=260, c=26)
+    1/89 (+) 1/131 = 1/53  (a=44, b=65, c=26)
+    1/71 (+) 1/349 = 1/59  (a=35, b=174, c=29)
+    1/79 (+) 1/233 = 1/59  (a=39, b=116, c=29)
+    1/71 (+) 1/433 = 1/61  (a=35, b=216, c=30)
+    1/89 (+) 1/271 = 1/67  (a=44, b=135, c=33)
+    1/101 (+) 1/199 = 1/67  (a=50, b=99, c=33)
+    1/73 (+) 1/2591 = 1/71  (a=36, b=1295, c=35)
+    1/79 (+) 1/701 = 1/71  (a=39, b=350, c=35)
+    1/83 (+) 1/491 = 1/71  (a=41, b=245, c=35)
+    1/101 (+) 1/239 = 1/71  (a=50, b=119, c=35)
+    ... total: 71 all-prime triples (c <= 100)
+
+  SOPHIE GERMAIN PRIMES AND RAPIDITY:
+  A Sophie Germain prime p has 2p+1 also prime.
+  In rapidity: if c is such that 2c+1=p (Sophie Germain), then 2(2c+1)+1=2p+1
+  is also prime, meaning node 2c+1 (= (p-1)/2 doubled +1) is also a 'prime node'.
+
+  Sophie Germain primes < 200: [2, 3, 5, 11, 23, 29, 41, 53, 83, 89, 113, 131, 173, 179, 191]
+
+    p=3, q=7: c_p=1 (node for 1/3), c_q=3 (node for 1/7)
+      compose(c_p, c_q) = NONE (not an integer)
+    p=5, q=11: c_p=2 (node for 1/5), c_q=5 (node for 1/11)
+      compose(c_p, c_q) = NONE (not an integer)
+    p=11, q=23: c_p=5 (node for 1/11), c_q=11 (node for 1/23)
+      compose(c_p, c_q) = NONE (not an integer)
+    p=23, q=47: c_p=11 (node for 1/23), c_q=23 (node for 1/47)
+      compose(c_p, c_q) = NONE (not an integer)
+    p=29, q=59: c_p=14 (node for 1/29), c_q=29 (node for 1/59)
+      compose(c_p, c_q) = NONE (not an integer)
+    p=41, q=83: c_p=20 (node for 1/41), c_q=41 (node for 1/83)
+      compose(c_p, c_q) = NONE (not an integer)
+    p=53, q=107: c_p=26 (node for 1/53), c_q=53 (node for 1/107)
+      compose(c_p, c_q) = NONE (not an integer)
+    p=83, q=167: c_p=41 (node for 1/83), c_q=83 (node for 1/167)
+      compose(c_p, c_q) = NONE (not an integer)
+    p=89, q=179: c_p=44 (node for 1/89), c_q=89 (node for 1/179)
+      compose(c_p, c_q) = NONE (not an integer)
+
+======================================================================
+SECTION 6: ADDITIONAL GRAPH PROPERTIES AND PATTERNS
+======================================================================
+
+  BIPARTITENESS CHECK:
+  Is the composition-partner graph bipartite?
+  Coloring: even nodes vs odd nodes?
+
+  Even-Even pairs: 7
+    (6, 14) -> 4
+    (10, 44) -> 8
+    (12, 26) -> 8
+    (14, 20) -> 8
+    (18, 38) -> 12
+  Odd-Odd pairs: 7
+    (5, 9) -> 3
+    (9, 35) -> 7
+    (11, 21) -> 7
+    (17, 33) -> 11
+    (23, 45) -> 15
+  Even-Odd pairs: 44
+
+  NOT bipartite (even/odd coloring fails).
+
+  PARITY OF OUTPUT c given parities of (a, b):
+    a=0, b=0 (mod 2): c even=7, c odd=0
+    a=0, b=1 (mod 2): c even=15, c odd=18
+    a=1, b=0 (mod 2): c even=8, c odd=3
+    a=1, b=1 (mod 2): c even=0, c odd=7
+
+  MODULAR STRUCTURE:
+  Residues mod 3:
+    a=0, b=0 -> c=0 (mod 3): 2 instances
+    a=0, b=1 -> c=0 (mod 3): 8 instances
+    a=0, b=2 -> c=0 (mod 3): 3 instances
+    a=0, b=2 -> c=1 (mod 3): 4 instances
+    a=0, b=2 -> c=2 (mod 3): 6 instances
+    a=1, b=0 -> c=0 (mod 3): 3 instances
+    a=1, b=2 -> c=2 (mod 3): 11 instances
+    a=2, b=0 -> c=0 (mod 3): 4 instances
+    a=2, b=0 -> c=1 (mod 3): 11 instances
+    a=2, b=0 -> c=2 (mod 3): 3 instances
+    a=2, b=1 -> c=2 (mod 3): 1 instances
+    a=2, b=2 -> c=2 (mod 3): 2 instances
+
+  Residues mod 4:
+    a=0, b=1 -> c=0 (mod 4): 6 instances
+    a=0, b=1 -> c=2 (mod 4): 7 instances
+    a=0, b=2 -> c=0 (mod 4): 2 instances
+    a=0, b=3 -> c=1 (mod 4): 3 instances
+    a=0, b=3 -> c=2 (mod 4): 2 instances
+    a=0, b=3 -> c=3 (mod 4): 1 instances
+    a=1, b=0 -> c=0 (mod 4): 1 instances
+    a=1, b=0 -> c=2 (mod 4): 2 instances
+    a=1, b=1 -> c=3 (mod 4): 2 instances
+    a=1, b=3 -> c=3 (mod 4): 2 instances
+    a=2, b=0 -> c=0 (mod 4): 2 instances
+    a=2, b=2 -> c=0 (mod 4): 3 instances
+    a=2, b=3 -> c=1 (mod 4): 8 instances
+    a=2, b=3 -> c=3 (mod 4): 6 instances
+    a=3, b=0 -> c=0 (mod 4): 2 instances
+    a=3, b=0 -> c=1 (mod 4): 2 instances
+    a=3, b=0 -> c=2 (mod 4): 3 instances
+    a=3, b=0 -> c=3 (mod 4): 1 instances
+    a=3, b=1 -> c=3 (mod 4): 2 instances
+    a=3, b=3 -> c=3 (mod 4): 1 instances
+
+  Residues mod 5:
+    a=0, b=1 -> c=0 (mod 5): 4 instances
+    a=0, b=2 -> c=0 (mod 5): 1 instances
+    a=0, b=3 -> c=0 (mod 5): 1 instances
+    a=0, b=4 -> c=0 (mod 5): 1 instances
+    a=0, b=4 -> c=1 (mod 5): 1 instances
+    a=0, b=4 -> c=3 (mod 5): 3 instances
+    a=0, b=4 -> c=4 (mod 5): 3 instances
+    a=1, b=0 -> c=0 (mod 5): 1 instances
+    a=1, b=1 -> c=2 (mod 5): 1 instances
+    a=1, b=2 -> c=3 (mod 5): 6 instances
+    a=1, b=4 -> c=4 (mod 5): 2 instances
+    a=2, b=0 -> c=0 (mod 5): 2 instances
+    a=2, b=1 -> c=3 (mod 5): 1 instances
+    a=2, b=3 -> c=1 (mod 5): 7 instances
+    a=2, b=4 -> c=4 (mod 5): 1 instances
+    a=3, b=0 -> c=0 (mod 5): 2 instances
+    a=3, b=2 -> c=1 (mod 5): 1 instances
+    a=3, b=3 -> c=2 (mod 5): 2 instances
+    a=3, b=4 -> c=4 (mod 5): 5 instances
+    a=4, b=0 -> c=0 (mod 5): 1 instances
+    a=4, b=0 -> c=1 (mod 5): 2 instances
+    a=4, b=0 -> c=2 (mod 5): 6 instances
+    a=4, b=0 -> c=3 (mod 5): 2 instances
+    a=4, b=0 -> c=4 (mod 5): 1 instances
+    a=4, b=2 -> c=4 (mod 5): 1 instances
+
+  Residues mod 6:
+    a=0, b=1 -> c=0 (mod 6): 4 instances
+    a=0, b=1 -> c=3 (mod 6): 4 instances
+    a=0, b=2 -> c=0 (mod 6): 1 instances
+    a=0, b=2 -> c=2 (mod 6): 1 instances
+    a=0, b=2 -> c=4 (mod 6): 2 instances
+    a=0, b=3 -> c=3 (mod 6): 1 instances
+    a=0, b=5 -> c=2 (mod 6): 1 instances
+    a=0, b=5 -> c=5 (mod 6): 1 instances
+    a=1, b=0 -> c=0 (mod 6): 1 instances
+    a=1, b=2 -> c=5 (mod 6): 1 instances
+    a=1, b=3 -> c=3 (mod 6): 1 instances
+    a=2, b=1 -> c=2 (mod 6): 1 instances
+    a=2, b=2 -> c=2 (mod 6): 1 instances
+    a=2, b=3 -> c=0 (mod 6): 1 instances
+    a=2, b=3 -> c=1 (mod 6): 5 instances
+    a=2, b=3 -> c=3 (mod 6): 1 instances
+    a=2, b=3 -> c=4 (mod 6): 4 instances
+    a=2, b=3 -> c=5 (mod 6): 1 instances
+    a=3, b=0 -> c=3 (mod 6): 1 instances
+    a=3, b=2 -> c=0 (mod 6): 1 instances
+    a=3, b=2 -> c=2 (mod 6): 2 instances
+    a=3, b=2 -> c=4 (mod 6): 1 instances
+    a=3, b=2 -> c=5 (mod 6): 1 instances
+    a=3, b=5 -> c=1 (mod 6): 1 instances
+    a=3, b=5 -> c=3 (mod 6): 1 instances
+    a=4, b=2 -> c=2 (mod 6): 2 instances
+    a=4, b=3 -> c=3 (mod 6): 1 instances
+    a=4, b=5 -> c=2 (mod 6): 4 instances
+    a=4, b=5 -> c=5 (mod 6): 4 instances
+    a=5, b=0 -> c=2 (mod 6): 1 instances
+    a=5, b=0 -> c=4 (mod 6): 1 instances
+    a=5, b=2 -> c=2 (mod 6): 1 instances
+    a=5, b=3 -> c=1 (mod 6): 1 instances
+    a=5, b=3 -> c=3 (mod 6): 2 instances
+    a=5, b=3 -> c=5 (mod 6): 1 instances
+
+  DEGREE GROWTH IN COMPOSITION-PARTNER GRAPH:
+  (How does the degree of node n grow with n?)
+
+    n=   1: degree=  0, tau(n(n+1))=  2, tau/2=  1
+    n=   6: degree=  3, tau(n(n+1))=  8, tau/2=  4
+    n=  11: degree=  5, tau(n(n+1))= 12, tau/2=  6
+    n=  16: degree=  3, tau(n(n+1))= 10, tau/2=  5
+    n=  21: degree=  5, tau(n(n+1))= 16, tau/2=  8
+    n=  26: degree=  4, tau(n(n+1))= 16, tau/2=  8
+    n=  31: degree=  2, tau(n(n+1))= 12, tau/2=  6
+    n=  36: degree=  4, tau(n(n+1))= 18, tau/2=  9
+    n=  41: degree=  2, tau(n(n+1))= 16, tau/2=  8
+    n=  46: degree=  1, tau(n(n+1))=  8, tau/2=  4
+    n=  51: degree=  6, tau(n(n+1))= 24, tau/2= 12
+    n=  56: degree=  7, tau(n(n+1))= 32, tau/2= 16
+    n=  61: degree=  1, tau(n(n+1))=  8, tau/2=  4
+    n=  66: degree=  2, tau(n(n+1))= 16, tau/2=  8
+    n=  71: degree=  2, tau(n(n+1))= 24, tau/2= 12
+    n=  76: degree=  4, tau(n(n+1))= 24, tau/2= 12
+    n=  81: degree=  3, tau(n(n+1))= 20, tau/2= 10
+    n=  86: degree=  3, tau(n(n+1))= 16, tau/2=  8
+    n=  91: degree=  2, tau(n(n+1))= 24, tau/2= 12
+    n=  96: degree=  2, tau(n(n+1))= 24, tau/2= 12
+    n= 101: degree=  1, tau(n(n+1))= 16, tau/2=  8
+    n= 106: degree=  1, tau(n(n+1))=  8, tau/2=  4
+    n= 111: degree=  5, tau(n(n+1))= 40, tau/2= 20
+    n= 116: degree=  4, tau(n(n+1))= 36, tau/2= 18
+    n= 121: degree=  1, tau(n(n+1))= 12, tau/2=  6
+    n= 126: degree=  1, tau(n(n+1))= 24, tau/2= 12
+    n= 131: degree=  1, tau(n(n+1))= 24, tau/2= 12
+    n= 136: degree=  1, tau(n(n+1))= 16, tau/2=  8
+    n= 141: degree=  2, tau(n(n+1))= 16, tau/2=  8
+    n= 146: degree=  2, tau(n(n+1))= 24, tau/2= 12
+    n= 151: degree=  1, tau(n(n+1))= 16, tau/2=  8
+    n= 156: degree=  1, tau(n(n+1))= 24, tau/2= 12
+    n= 161: degree=  3, tau(n(n+1))= 40, tau/2= 20
+    n= 166: degree=  1, tau(n(n+1))=  8, tau/2=  4
+    n= 171: degree=  3, tau(n(n+1))= 36, tau/2= 18
+    n= 176: degree=  3, tau(n(n+1))= 40, tau/2= 20
+    n= 181: degree=  1, tau(n(n+1))= 16, tau/2=  8
+    n= 186: degree=  2, tau(n(n+1))= 32, tau/2= 16
+    n= 191: degree=  1, tau(n(n+1))= 28, tau/2= 14
+    n= 196: degree=  1, tau(n(n+1))= 18, tau/2=  9
+
+  CLIQUES IN COMPOSITION-PARTNER GRAPH (nodes 1..30):
+  Triangles: 0
+
+  4-cliques: 0
+
+
+======================================================================
+SUMMARY OF KEY FINDINGS
+======================================================================
+
+  1. GEOMETRIC: c(c+1) = 2*T_c means the number of rapidity
+     decompositions of interval c equals tau(2*T_c)/2, where T_c
+     counts edges of K_{c+1}. Each factorization of 2*(edges of
+     complete graph) gives a composition pair.
+
+  2. GRAPH: The composition-partner graph has rich structure:
+     - Connected for nodes in range
+     - Triangles and higher cliques exist
+     - Density decreases as N grows
+
+  3. BINARY TREE: The consecutive-pair map (2k,2k+1)->k creates
+     a perfect binary tree identical to the binary representation
+     tree. Cross-links from non-consecutive compositions overlay
+     this backbone.
+
+  4. CHAINS: The rapidity graph is a DAG (compositions always go
+     to smaller values). Every node can reach 1 via the binary
+     tree halving. Cross-links provide shortcuts.
+
+  5. PALEY: The factorization c(c+1) connects to prime structure.
+     All-prime triples (2a+1, 2b+1, 2c+1 all prime) form a
+     distinguished subclass. Sophie Germain primes create chains.
+

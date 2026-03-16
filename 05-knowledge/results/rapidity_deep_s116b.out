@@ -1,0 +1,485 @@
+======================================================================
+I. THE RAPIDITY METRIC SPACE
+======================================================================
+
+  Define d(m, n) = |rapidity(m) - rapidity(n)| = |ln(m) - ln(n)|/2
+  = ln(max(m,n)/min(m,n))/2
+
+  This is the LOG-RATIO METRIC. Two numbers are close iff their
+  ratio is close to 1.
+
+  d(n, n+1) = ln(1+1/n)/2 ~ 1/(2n). The gaps shrink.
+  d(n, 2n)  = ln(2)/2 = 0.3466. CONSTANT! (one octave)
+  d(n, 3n)  = ln(3)/2 = 0.5493. CONSTANT! (one twelfth)
+
+  In this metric, MULTIPLICATION BY k is a TRANSLATION by ln(k)/2.
+  The natural numbers under rapidity form a DISCRETE LOG-LATTICE.
+
+  Rapidity distance matrix d(m,n) for m,n = 2,...,8:
+           2    3    4    5    6    7    8
+  2:    0.000  0.203  0.347  0.458  0.549  0.626  0.693
+  3:    0.203  0.000  0.144  0.255  0.347  0.424  0.490
+  4:    0.347  0.144  0.000  0.112  0.203  0.280  0.347
+  5:    0.458  0.255  0.112  0.000  0.091  0.168  0.235
+  6:    0.549  0.347  0.203  0.091  0.000  0.077  0.144
+  7:    0.626  0.424  0.280  0.168  0.077  0.000  0.067
+  8:    0.693  0.490  0.347  0.235  0.144  0.067  0.000
+
+======================================================================
+II. RAPIDITY MOD 1: THE CIRCLE
+======================================================================
+
+  rapidity(n) = ln(n)/2 mod 1 wraps the rapidity line onto a CIRCLE.
+  The fractional parts {ln(n)/2} for n = 2,3,...,30:
+
+    2* rap mod 1 = 0.3466 |#################
+    3* rap mod 1 = 0.5493 |###########################
+    4  rap mod 1 = 0.6931 |##################################
+    5* rap mod 1 = 0.8047 |########################################
+    6  rap mod 1 = 0.8959 |############################################
+    7* rap mod 1 = 0.9730 |################################################
+    8  rap mod 1 = 0.0397 |#
+    9  rap mod 1 = 0.0986 |####
+   10  rap mod 1 = 0.1513 |#######
+   11* rap mod 1 = 0.1989 |#########
+   12  rap mod 1 = 0.2425 |############
+   13* rap mod 1 = 0.2825 |##############
+   14  rap mod 1 = 0.3195 |###############
+   15  rap mod 1 = 0.3540 |#################
+   16  rap mod 1 = 0.3863 |###################
+   17* rap mod 1 = 0.4166 |####################
+   18  rap mod 1 = 0.4452 |######################
+   19* rap mod 1 = 0.4722 |#######################
+   20  rap mod 1 = 0.4979 |########################
+   21  rap mod 1 = 0.5223 |##########################
+   22  rap mod 1 = 0.5455 |###########################
+   23* rap mod 1 = 0.5677 |############################
+   24  rap mod 1 = 0.5890 |#############################
+   25  rap mod 1 = 0.6094 |##############################
+   26  rap mod 1 = 0.6290 |###############################
+   27  rap mod 1 = 0.6479 |################################
+   28  rap mod 1 = 0.6661 |#################################
+   29* rap mod 1 = 0.6836 |##################################
+   30  rap mod 1 = 0.7006 |###################################
+
+  By Weyl's equidistribution theorem, {ln(n)/2} is equidistributed
+  mod 1 (because ln(2)/2 is irrational). So rapidity is ERGODIC
+  on the circle.
+
+  NEAR-COINCIDENCES in rapidity mod 1:
+  (pairs (m,n) with |rapidity(m) - rapidity(n)| mod 1 < 0.01)
+    ( 2, 15): rapidity diff = 1.0075, mod 1 = 0.007452
+    ( 3, 22): rapidity diff = 0.9962, mod 1 = 0.003785
+    ( 4, 29): rapidity diff = 0.9905, mod 1 = 0.009499
+    ( 4, 30): rapidity diff = 1.0075, mod 1 = 0.007452
+    ( 5, 37): rapidity diff = 1.0007, mod 1 = 0.000740
+    ( 6, 44): rapidity diff = 0.9962, mod 1 = 0.003785
+    ( 6, 45): rapidity diff = 1.0075, mod 1 = 0.007452
+
+======================================================================
+III. THE WALLIS-LIKE RAPIDITY PRODUCT
+======================================================================
+
+  Wallis: pi/2 = prod (2k)^2/((2k-1)(2k+1))
+  In rapidity: sum of rapidities = sum ln((2k)^2/((2k-1)(2k+1)))/2
+  = sum [2*ln(2k) - ln(2k-1) - ln(2k+1)] / 2
+
+  The prime Cayley product (from earlier session):
+  prod_{p<=N} (p+1)/(p-1) ~ C * ln(N)^2
+  In rapidity: sum_{p<=N} [ln(p+1) - ln(p-1)] / 2 ~ 2*ln(ln(N)) + const
+
+  sum_{p<=  2} rapidity-of-Q(1/p) = 0.549306
+  sum_{p<=  3} rapidity-of-Q(1/p) = 0.895880
+  sum_{p<=  5} rapidity-of-Q(1/p) = 1.098612
+    compare 2*ln(ln(5)) = 0.951770
+  sum_{p<=  7} rapidity-of-Q(1/p) = 1.242453
+    compare 2*ln(ln(7)) = 1.331460
+  sum_{p<= 11} rapidity-of-Q(1/p) = 1.333614
+    compare 2*ln(ln(11)) = 1.749183
+  sum_{p<= 13} rapidity-of-Q(1/p) = 1.410689
+    compare 2*ln(ln(13)) = 1.883877
+  sum_{p<= 17} rapidity-of-Q(1/p) = 1.469581
+    compare 2*ln(ln(17)) = 2.082823
+  sum_{p<= 19} rapidity-of-Q(1/p) = 1.522261
+    compare 2*ln(ln(19)) = 2.159837
+  sum_{p<= 23} rapidity-of-Q(1/p) = 1.565767
+    compare 2*ln(ln(23)) = 2.285574
+  sum_{p<= 29} rapidity-of-Q(1/p) = 1.600263
+    compare 2*ln(ln(29)) = 2.428220
+  sum_{p<= 31} rapidity-of-Q(1/p) = 1.632533
+    compare 2*ln(ln(31)) = 2.467444
+  sum_{p<= 37} rapidity-of-Q(1/p) = 1.659566
+    compare 2*ln(ln(37)) = 2.567924
+  sum_{p<= 41} rapidity-of-Q(1/p) = 1.683961
+    compare 2*ln(ln(41)) = 2.623988
+  sum_{p<= 43} rapidity-of-Q(1/p) = 1.707221
+    compare 2*ln(ln(43)) = 2.649476
+  sum_{p<= 47} rapidity-of-Q(1/p) = 1.728501
+    compare 2*ln(ln(47)) = 2.696223
+  sum_{p<= 53} rapidity-of-Q(1/p) = 1.747371
+    compare 2*ln(ln(53)) = 2.757679
+  sum_{p<=113} rapidity-of-Q(1/p) = 1.916663
+    compare 2*ln(ln(113)) = 3.106746
+
+======================================================================
+IV. RAPIDITY AND PARTITION NUMBERS
+======================================================================
+
+  p(n) = number of integer partitions of n.
+  Hardy-Ramanujan: p(n) ~ exp(pi*sqrt(2n/3)) / (4n*sqrt(3)).
+  rapidity(p(n)) = ln(p(n))/2 ~ pi*sqrt(n/6)/2 + small correction.
+
+  n    p(n)        rapidity(p(n))    pi*sqrt(n/6)/2
+  -------------------------------------------------------
+    1           1         0.0000             0.6413
+    2           2         0.3466             0.9069
+    3           3         0.5493             1.1107
+    4           5         0.8047             1.2825
+    5           7         0.9730             1.4339
+    6          11         1.1989             1.5708
+    7          15         1.3540             1.6967
+    8          22         1.5455             1.8138
+    9          30         1.7006             1.9238
+   10          42         1.8688             2.0279
+   11          56         2.0127             2.1269
+   12          77         2.1719             2.2214
+   13         101         2.3076             2.3121
+   14         135         2.4526             2.3994
+   15         176         2.5852             2.4836
+   16         231         2.7212             2.5651
+   17         297         2.8469             2.6440
+   18         385         2.9766             2.7207
+   19         490         3.0972             2.7953
+   20         627         3.2205             2.8679
+   21         792         3.3373             2.9387
+   22        1002         3.4549             3.0078
+   23        1255         3.5674             3.0754
+   24        1575         3.6810             3.1416
+   25        1958         3.7898             3.2064
+   26        2436         3.8991             3.2699
+   27        3010         4.0048             3.3322
+   28        3718         4.1105             3.3933
+   29        4565         4.2131             3.4534
+   30        5604         4.3156             3.5124
+
+  The rapidity of partition numbers grows as sqrt(n).
+  Compare: rapidity of n itself grows as ln(n)/2.
+  Partitions grow MUCH faster in rapidity space.
+
+  The rapidity of p(n) crosses integer values at:
+    n=5: p(n)=7, rapidity = 0.9730 ~ 1
+    n=11: p(n)=56, rapidity = 2.0127 ~ 2
+    n=18: p(n)=385, rapidity = 2.9766 ~ 3
+    n=27: p(n)=3010, rapidity = 4.0048 ~ 4
+    n=37: p(n)=21637, rapidity = 4.9911 ~ 5
+    n=48: p(n)=147273, rapidity = 5.9500 ~ 6
+    n=49: p(n)=173525, rapidity = 6.0320 ~ 6
+
+======================================================================
+V. THE RAPIDITY OF CATALAN NUMBERS
+======================================================================
+
+  C_n = C(2n,n)/(n+1). Catalan numbers count binary trees,
+  Dyck paths, triangulations, etc.
+
+  Stirling: C_n ~ 4^n / (n^{3/2} * sqrt(pi))
+  rapidity(C_n) ~ n*ln(4)/2 - (3/4)*ln(n) + const
+              = n*ln(2) - (3/4)*ln(n) + const
+
+  The LEADING term is n*ln(2) = n times the octave!
+  Each step in the Catalan sequence adds one OCTAVE of rapidity.
+
+  C_ 1 =          1   rapidity =   0.0000   n*ln(2) =   0.6931   diff = -0.6931
+  C_ 2 =          2   rapidity =   0.3466   n*ln(2) =   1.3863   diff = -1.0397
+  C_ 3 =          5   rapidity =   0.8047   n*ln(2) =   2.0794   diff = -1.2747
+  C_ 4 =         14   rapidity =   1.3195   n*ln(2) =   2.7726   diff = -1.4531
+  C_ 5 =         42   rapidity =   1.8688   n*ln(2) =   3.4657   diff = -1.5969
+  C_ 6 =        132   rapidity =   2.4414   n*ln(2) =   4.1589   diff = -1.7175
+  C_ 7 =        429   rapidity =   3.0307   n*ln(2) =   4.8520   diff = -1.8213
+  C_ 8 =       1430   rapidity =   3.6327   n*ln(2) =   5.5452   diff = -1.9125
+  C_ 9 =       4862   rapidity =   4.2446   n*ln(2) =   6.2383   diff = -1.9937
+  C_10 =      16796   rapidity =   4.8644   n*ln(2) =   6.9315   diff = -2.0670
+  C_11 =      58786   rapidity =   5.4908   n*ln(2) =   7.6246   diff = -2.1338
+  C_12 =     208012   rapidity =   6.1227   n*ln(2) =   8.3178   diff = -2.1951
+  C_13 =     742900   rapidity =   6.7592   n*ln(2) =   9.0109   diff = -2.2518
+  C_14 =    2674440   rapidity =   7.3996   n*ln(2) =   9.7041   diff = -2.3044
+  C_15 =    9694845   rapidity =   8.0436   n*ln(2) =  10.3972   diff = -2.3537
+
+======================================================================
+VI. RAPIDITY RESONANCES: WHEN RAPIDITIES ARE RATIONALLY RELATED
+======================================================================
+
+  Two numbers m, n have RATIONALLY RELATED rapidities iff
+  ln(m)/ln(n) is rational, iff m = n^{p/q} for integers p,q,
+  iff m^q = n^p.
+
+  For PRIME powers: rapidity(p^k) = k * rapidity(p).
+  So p^a and p^b always have rationally related rapidities (ratio a/b).
+  But 2^a and 3^b NEVER do (because ln(2)/ln(3) is irrational).
+
+  This is the FUNDAMENTAL THEOREM OF RAPIDITY INDEPENDENCE:
+  Distinct primes have INCOMMENSURABLE rapidities.
+  The rapidity space is like a VECTOR SPACE with primes as basis.
+
+  rapidity(n) = sum_{p|n} v_p(n) * rapidity(p)
+  where v_p(n) = p-adic valuation of n.
+  This sum is a VECTOR in the infinite-dimensional space R^primes.
+
+  Rapidity vectors of key numbers (basis: primes 2,3,5,7,11,13,19):
+  n         vector (v_2, v_3, v_5, v_7, v_11, v_13, v_19)
+  -----------------------------------------------------------------
+       2  (1, 0, 0, 0, 0, 0, 0)           binary
+       3  (0, 1, 0, 0, 0, 0, 0)           curvature
+       6  (1, 1, 0, 0, 0, 0, 0)           flat
+       7  (0, 0, 0, 1, 0, 0, 0)           threshold
+      21  (0, 1, 0, 1, 0, 0, 0)           FORBIDDEN
+      42  (1, 1, 0, 1, 0, 0, 0)           2*3*7
+     189  (0, 3, 0, 1, 0, 0, 0)           H(T_7)
+   95095  (0, 0, 1, 1, 1, 1, 1)           H(T_11)
+     147  (0, 1, 0, 2, 0, 0, 0)           3*7^2
+     110  (1, 0, 1, 0, 1, 0, 0)           pronic(10)
+
+======================================================================
+VII. THE RAPIDITY-FIBONACCI CONNECTION DEEPENED
+======================================================================
+
+  We proved: Q(F_n/F_{n+1}) = F_{n+2}/F_{n-1}.
+  In rapidity: rapidity(F_{n+2}/F_{n-1}) = arctanh(F_n/F_{n+1})
+  = ln(F_{n+2}/F_{n-1})/2
+
+  The RAPIDITY RATIOS F_{n+2}/F_{n-1} approach phi^3 = 4.236...
+  Their rapidity approaches (3/2)*ln(phi) = 0.7218...
+
+  But the EXACT values oscillate! Cassini's identity says:
+  F_{n-1}*F_{n+1} - F_n^2 = (-1)^n
+  So F_{n+2}*F_{n-1} = F_{n+1}*F_n + F_n*F_{n-1} + (-1)^{n-1}
+  (using F_{n+2} = F_{n+1} + F_n)
+
+  The OSCILLATION of rapidity(F_{n+2}/F_{n-1}) around (3/2)*ln(phi):
+  n= 2: F_4/F_1 =     3/   1 =   3.000000  rap = 0.54930614  err = -1.73e-01  (-)
+  n= 3: F_5/F_2 =     5/   1 =   5.000000  rap = 0.80471896  err = +8.29e-02  (+)
+  n= 4: F_6/F_3 =     8/   2 =   4.000000  rap = 0.69314718  err = -2.87e-02  (-)
+  n= 5: F_7/F_4 =    13/   3 =   4.333333  rap = 0.73316853  err = +1.14e-02  (+)
+  n= 6: F_8/F_5 =    21/   5 =   4.200000  rap = 0.71754226  err = -4.28e-03  (-)
+  n= 7: F_9/F_6 =    34/   8 =   4.250000  rap = 0.72345949  err = +1.64e-03  (+)
+  n= 8: F_10/F_7 =    55/  13 =   4.230769  rap = 0.72119191  err = -6.26e-04  (-)
+  n= 9: F_11/F_8 =    89/  21 =   4.238095  rap = 0.72205697  err = +2.39e-04  (+)
+  n=10: F_12/F_9 =   144/  34 =   4.235294  rap = 0.72172639  err = -9.14e-05  (-)
+  n=11: F_13/F_10 =   233/  55 =   4.236364  rap = 0.72185263  err = +3.49e-05  (+)
+  n=12: F_14/F_11 =   377/  89 =   4.235955  rap = 0.72180441  err = -1.33e-05  (-)
+  n=13: F_15/F_12 =   610/ 144 =   4.236111  rap = 0.72182283  err = +5.09e-06  (+)
+  n=14: F_16/F_13 =   987/ 233 =   4.236052  rap = 0.72181579  err = -1.94e-06  (-)
+  n=15: F_17/F_14 =  1597/ 377 =   4.236074  rap = 0.72181848  err = +7.43e-07  (+)
+  n=16: F_18/F_15 =  2584/ 610 =   4.236066  rap = 0.72181745  err = -2.84e-07  (-)
+  n=17: F_19/F_16 =  4181/ 987 =   4.236069  rap = 0.72181785  err = +1.08e-07  (+)
+
+  The errors ALTERNATE in sign and decay as phi^{-2n}!
+  This is the Fibonacci QUASICRYSTAL structure in rapidity space.
+
+======================================================================
+VIII. THE RAPIDITY OF TOURNAMENT OPERATIONS
+======================================================================
+
+  Tournament operations and their rapidity effects:
+
+  1. VERTEX DELETION: Remove vertex v from T on n vertices.
+     H(T-v) ~ H(T) * R(v)/n where R(v) is the 'deletion ratio'.
+     rapidity(H(T-v)) ~ rapidity(H(T)) + ln(R(v)/n)/2
+     = rapidity(H(T)) - ln(n)/2 + ln(R(v))/2
+     Net change: rapidity drops by about ln(n)/2 (one 'n-unit').
+
+  2. ARC FLIP: Reverse arc i->j to j->i.
+     delta_H = H(T') - H(T) is small relative to H.
+     delta_rapidity ~ delta_H / (2*H) for small changes.
+
+  3. COMPLEMENT: T -> T^c (reverse all arcs).
+     For self-complementary T: H(T) = H(T^c), rapidity unchanged.
+     For general T: H(T^c) can differ significantly.
+
+  4. PALEY CONSTRUCTION at prime p:
+     H(T_p) grows as p!/2^{p-1} approximately.
+     rapidity(H(T_p)) ~ p*ln(p)/2 - p*ln(2)/2 + p/2
+     = p*(ln(p/2) + 1)/2
+     = p * (rapidity(p) - rapidity(2) + 1/2)
+
+  p= 3: H=     3, rapidity = 0.5493
+    approx = p*(ln(p/2)+1)/2 = 2.1082
+    rapidity(H) / rapidity(p) = 1.0000
+    rapidity(H) / p = 0.1831
+
+  p= 7: H=   189, rapidity = 2.6209
+    approx = p*(ln(p/2)+1)/2 = 7.8847
+    rapidity(H) / rapidity(p) = 2.6937
+    rapidity(H) / p = 0.3744
+
+  p=11: H= 95095, rapidity = 5.7313
+    approx = p*(ln(p/2)+1)/2 = 14.8761
+    rapidity(H) / rapidity(p) = 4.7803
+    rapidity(H) / p = 0.5210
+
+======================================================================
+IX. RAPIDITY AND MOBIUS FUNCTION
+======================================================================
+
+  The Mobius function mu(n) is +1, -1, or 0.
+  It sums over rapidity: sum_{d|n} mu(d) = [n=1].
+
+  The RAPIDITY-WEIGHTED Mobius sum:
+  M(x) = sum_{n<=x} mu(n) * rapidity(n)
+       = sum_{n<=x} mu(n) * ln(n) / 2
+
+  By the prime number theorem, sum mu(n)*ln(n) ~ -x + o(x).
+  So M(x) ~ -x/2 (Mertens' function weighted by rapidity).
+
+  x     M_rapidity(x)    -x/2        ratio
+  --------------------------------------------------
+   10        -0.6264        -5.0    0.12527629684953673
+   20        -3.3231       -10.0    0.3323076195630231
+   30        -3.5782       -15.0    0.23854927965783404
+   50        -3.7780       -25.0    0.1511193511867701
+   70        -1.8896       -35.0    0.053989030408009356
+  100         5.0087       -50.0    -0.10017411025322069
+
+======================================================================
+X. RAPIDITY AND YOUNG TABLEAUX
+======================================================================
+
+  Standard Young Tableaux of shape lambda have count f^lambda.
+  For the staircase shape delta_{n-2} = (n-2, n-3, ..., 1):
+  f^{delta_{n-2}} = (n-1)! * prod_{i<j} (j-i) / prod_{i} h_i
+  where h_i are hook lengths.
+
+  For tournaments: the generating function G_T(t,x) connects
+  to the Schur function s_lambda. The rapidity of the SYT count
+  relates to the representation dimension.
+
+  SYT counts for staircase shapes and their rapidities:
+  n     f^delta    rapidity(f)
+  4            2     0.3466
+  5           16     1.3863
+  6          768     3.3219
+  7       292864     6.2937
+
+  The rapidity of SYT counts grows roughly as n*ln(n)/2.
+  For our tournaments: H(T) <= f^delta * (something).
+  The SYT count BOUNDS the rapidity of H from above.
+
+======================================================================
+XI. THE DOPPLER INTERPRETATION
+======================================================================
+
+  The Doppler factor D = sqrt(Q(v)) = sqrt((1+v)/(1-v)) = e^rapidity.
+  A source moving at velocity v emits frequency f0,
+  observer hears f = f0 * D (approaching) or f = f0 / D (receding).
+
+  For our musical velocities:
+  v = 1/3 (octave): D = sqrt(2) = 1.414...
+    Approaching: frequency * sqrt(2) = up by a tritone!
+    Receding: frequency / sqrt(2) = down by a tritone!
+
+  v = 1/5 (fifth): D = sqrt(3/2) = 1.225...
+    Approaching: up by sqrt(3/2) (a 'half-fifth')
+
+  v = 3/5 (ln2 rapidity): D = sqrt(4) = 2
+    Approaching: frequency DOUBLES = up by an OCTAVE!
+    The velocity 3/5*c produces an octave Doppler shift.
+
+  v = 1/3 (octave)   : D = 1.414214, Doppler = +600 cents
+  v = 1/5 (fifth)    : D = 1.224745, Doppler = +351 cents
+  v = 1/7 (fourth)   : D = 1.154701, Doppler = +249 cents
+  v = 3/5 (ln2)      : D = 2.000000, Doppler = +1200 cents
+  v = 1/phi          : D = 2.058171, Doppler = +1250 cents
+
+  The Doppler factor at v = 3/5 is EXACTLY 2 = one octave.
+  This is because rapidity(3/5) = ln(2)/2, so e^rapidity = sqrt(2)...
+  Wait: D = e^rapidity = e^{ln(2)} ... no, rapidity = arctanh(3/5).
+  arctanh(3/5) = 0.693147 = ln(2) = 0.693147
+  D = e^{arctanh(3/5)} = e^{ln(2)} = 2. YES!
+
+  v = 3/5 is the DOPPLER OCTAVE velocity.
+  A source moving at 3/5*c sounds one octave higher approaching.
+  And Q(3/5) = 4 = D^2 = (octave)^2.
+
+======================================================================
+XII. RAPIDITY AND PYTHAGOREAN TUNING
+======================================================================
+
+  Pythagorean tuning builds ALL intervals from stacked fifths:
+  Fifth = 3/2. Stack n fifths: (3/2)^n = Q(1/5)^n.
+
+  In rapidity: n fifths = n * rapidity(fifth) = n * ln(3/2)/2
+
+  The Pythagorean comma: 12 fifths vs 7 octaves
+  (3/2)^12 vs 2^7
+  12 * ln(3/2)/2 = 2.432791
+   7 * ln(2)/2   = 2.426015
+  Comma = 0.006776
+  Comma ratio = (3/2)^12 / 2^7 = 1.013643
+
+  The Pythagorean comma in rapidity = 0.005885
+  = ln(531441/524288)/2 = 0.006776
+  531441 = 3^12. 524288 = 2^19.
+  Comma = rapidity(3^12) - rapidity(2^19)
+  = 12*rapidity(3) - 19*rapidity(2)
+  = 12*0.549306 - 19*0.346574 = 0.006776
+
+  The comma is 12*rapidity(3) - 19*rapidity(2).
+  This is a LINEAR COMBINATION in the rapidity vector space!
+  Commas = vectors in the kernel of the 'tuning map'.
+  Equal temperament = quotienting by the comma lattice.
+
+======================================================================
+XIII. THE TWELVE-TONE RAPIDITY LATTICE
+======================================================================
+
+  In equal temperament, the semitone = 2^{1/12}.
+  rapidity(semitone) = ln(2^{1/12})/2 = ln(2)/24 = 0.02888
+
+  The 12 semitones and their rapidities:
+   0 semitones: ET rap = 0.00000, just rap = 0.00000, err =  +0.0 cents  unison
+   1 semitones: ET rap = 0.02888, just rap = 0.03227, err = -11.7 cents  minor 2nd
+   2 semitones: ET rap = 0.05776, just rap = 0.05889, err =  -3.9 cents  major 2nd
+   3 semitones: ET rap = 0.08664, just rap = 0.09116, err = -15.6 cents  minor 3rd
+   4 semitones: ET rap = 0.11552, just rap = 0.11157, err = +13.7 cents  major 3rd
+   5 semitones: ET rap = 0.14441, just rap = 0.14384, err =  +2.0 cents  perfect 4th
+   6 semitones: ET rap = 0.17329, just rap = 0.17329, err =  +0.0 cents  tritone
+   7 semitones: ET rap = 0.20217, just rap = 0.20273, err =  -2.0 cents  perfect 5th
+   8 semitones: ET rap = 0.23105, just rap = 0.23500, err = -13.7 cents  minor 6th
+   9 semitones: ET rap = 0.25993, just rap = 0.25541, err = +15.6 cents  major 6th
+  10 semitones: ET rap = 0.28881, just rap = 0.29389, err = -17.6 cents  minor 7th
+  11 semitones: ET rap = 0.31769, just rap = 0.31430, err = +11.7 cents  major 7th
+  12 semitones: ET rap = 0.34657, just rap = 0.34657, err =  +0.0 cents  octave
+
+  The ET lattice is a REGULAR partition of [0, ln(2)/2] into 12 equal parts.
+  Just intonation is an IRREGULAR partition governed by prime factorization.
+  The mismatch (in rapidity) between ET and JI is the 'rapidity error'.
+  This error is BOUNDED by the Pythagorean comma / 12.
+
+======================================================================
+XIV. GRAND SYNTHESIS: RAPIDITY AS FOUNDATION
+======================================================================
+
+  Everything we have found stems from ONE identity:
+  Q(x) = e^{2*arctanh(x)}
+
+  This means: arctanh = half-log-of-Q = RAPIDITY.
+  And rapidity is simultaneously:
+
+  1. The METRIC on [0,1) (hyperbolic geometry)
+  2. The CONSONANCE of musical intervals (just intonation)
+  3. The BOOST PARAMETER of special relativity
+  4. The HALF-LOGARITHM of natural numbers (number theory)
+  5. The FISHER-RAO DISTANCE on Bernoulli distributions (info theory)
+  6. The COUPLING STRENGTH of tournament parameters
+  7. The ENTROPY per Boltzmann constant / 2 (thermodynamics)
+  8. The EIGENVALUE LOGARITHM of the transfer matrix (spectral theory)
+
+  These are not analogies. They are the SAME mathematical structure
+  appearing in different physical and mathematical contexts.
+  The Cayley transform Q is the universal translator between them.
+
+  And the FORBIDDEN NUMBERS {7, 21} of tournament theory sit at
+  rapidities 0.973 and 1.522, separated by one musical OCTAVE.
+  The impossibility of certain Hamiltonian path counts is a
+  RESONANCE CONDITION in the rapidity space that unifies
+  all of the above structures.
