@@ -1,0 +1,26 @@
+W(n) = sum_{sigma in NUD(n)} 2^{adj1(sigma)} verification
+opus-2026-03-15-S90 (independent brute-force computation)
+
+Verified values (all by brute force over all n! permutations):
+  W(1) =        1  (NUD count =     1)
+  W(2) =        2  (NUD count =     1)
+  W(3) =        8  (NUD count =     3)
+  W(4) =       32  (NUD count =    11)
+  W(5) =      158  (NUD count =    53)
+  W(6) =      928  (NUD count =   309)
+  W(7) =     6350  (NUD count =  2119)
+  W(8) =    49752  (NUD count = 16687)
+
+NOTE: S89c had W(8) = 49752 (CORRECT).
+      S112 had W(8) = 49760 (INCORRECT, off by +8).
+
+Sequence 1, 2, 8, 32, 158, 928, 6350, 49752 is NOT in OEIS (confirmed 2026-03-15).
+NUD count sequence 1, 1, 3, 11, 53, 309, 2119, 16687 IS OEIS A000255.
+
+Simplicial Rédei at n=9 (sampling, 500k random tournaments):
+  sim_H=0: 499995 (99.999%)
+  sim_H=1: 5 (0.001%)
+  sim_H>1: 0
+  Predicted: 2*9!/2^36 ≈ 0.00001056
+  Observed: 0.00001000
+  HOLDS (0 violations).
