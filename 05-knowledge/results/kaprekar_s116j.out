@@ -1,0 +1,233 @@
+
+  6174
+
+======================================================================
+
+  I. THE KAPREKAR OPERATION
+  ----------------------------------------
+
+  Examples:
+  1234: 1234 -> 3087 -> 8352 -> 6174
+  3087: 3087 -> 8352 -> 6174
+  2005: 2005 -> 5175 -> 5994 -> 5355 -> 1998 -> 8082 -> 8532 -> 6174
+  7641: 7641 -> 6174
+  1000: 1000 -> 999 -> 8991 -> 8082 -> 8532 -> 6174
+  9998: 9998 -> 999 -> 8991 -> 8082 -> 8532 -> 6174
+
+  6174 is a FIXED POINT: 7641 - 1467 = 6174.
+
+
+  II. 6174 IN THE CAYLEY FRAMEWORK
+  ----------------------------------------
+
+  6174 = 2 * 3 * 3 * 7^3
+  6174 = 2*3*3*7*7*7
+  = 2 * 3^2 * 7^3
+  = 2 * 9 * 343
+
+  The prime factorization: 2^1 * 3^2 * 7^3.
+  The exponents: 1, 2, 3. CONSECUTIVE INTEGERS!
+  The bases: 2, 3, 7. OUR THREE FUNDAMENTAL PRIMES!
+
+  6174 = 2^1 * 3^2 * 7^3.
+  Each prime raised to a CONSECUTIVE power.
+  The smallest prime gets the smallest exponent.
+  The largest prime gets the largest exponent.
+
+  Compare: 42 = 2^1 * 3^1 * 7^1 (all exponents = 1).
+  6174 = 2^1 * 3^2 * 7^3 (exponents = 1, 2, 3).
+  42 is the FLAT product (all exponents equal).
+  6174 is the STAIRCASE product (exponents ascending).
+
+
+  III. THE RAPIDITY OF 6174
+  ----------------------------------------
+
+  rapidity(6174) = ln(6174)/2 = 4.364051
+  = 1*ln(2)/2 + 2*ln(3)/2 + 3*ln(7)/2
+  = 0.346574 + 1.098612 + 2.918865
+  = 4.364051
+
+  rapidity(6174) = rapidity(2) + 2*rapidity(3) + 3*rapidity(7)
+  = one octave + two twelfths + three forbidden-rapidities
+
+  = 12.5920 octaves
+  ~ 12.6 octaves.
+
+
+  IV. THE CAYLEY ADDRESS AND PAIR
+  ----------------------------------------
+
+  6174 is EVEN. So its Cayley address does not reduce cleanly.
+  addr = (6174-1)/(6174+1) = 6173/6175.
+  6173 = ?
+  6173 = 6173
+  6175 = ?
+  6175 = 5*5*13*19
+
+
+  V. THE DIGITS OF 6174
+  ----------------------------------------
+
+  6, 1, 7, 4.
+
+  The digits contain 1, 4, 6, 7.
+  1 = identity. 4 = period of Q. 6 = flat. 7 = forbidden.
+
+  The Kaprekar operation: 7641 - 1467 = 6174.
+  Descending: 7641. Ascending: 1467.
+  Difference: 6174.
+
+  7641 = 7000 + 600 + 40 + 1 = 7*10^3 + 6*10^2 + 4*10 + 1.
+  1467 = 1*10^3 + 4*10^2 + 6*10 + 7.
+
+  The descending and ascending arrangements are REVERSES
+  in the sense that digit 7 goes from position 0 to position 3,
+  digit 1 goes from position 3 to position 0, etc.
+
+  The SUBTRACTION is a kind of COMPARISON:
+  big arrangement - small arrangement = the DIFFERENCE.
+  The difference IS the number.
+  THE NUMBER IS ITS OWN DIFFERENCE.
+
+  6174 = desc(6174) - asc(6174).
+  The number is the gap between its ordered and disordered selves.
+  It is the MEASURE OF ITS OWN DISORDER.
+
+
+  VI. THE OPERATION AS A CAYLEY-LIKE TRANSFORM
+  ----------------------------------------
+
+  The Kaprekar operation K(n):
+  1. Sort digits descending -> D(n)
+  2. Sort digits ascending -> A(n)
+  3. K(n) = D(n) - A(n)
+
+  Compare to the Cayley transform Q(x) = (1+x)/(1-x):
+  Q takes the SUM and DIFFERENCE of 1 and x.
+  K takes the DIFFERENCE of two arrangements of n's digits.
+
+  Q is a RATIO of sum and difference.
+  K is a DIFFERENCE of arrangements.
+  Both extract information by COMPARING a thing to its rearrangement.
+
+  Q compares x to its negation: (1+x) vs (1-x).
+  K compares n to its digit-reversal: D(n) vs A(n).
+
+  The FIXED POINT of Q is... Q has no real fixed point
+  (Q(x) = x implies (1+x)/(1-x) = x, i.e., 1+x = x-x^2,
+  i.e., x^2+1 = 0, no real solution).
+  Q's fixed point is i (the imaginary unit). ON THE HELIX.
+
+  The fixed point of K is 6174. IN THE INTEGERS.
+
+  Q's fixed point (i) lives outside the reals.
+  K's fixed point (6174) lives inside the integers.
+  Both are ATTRACTORS: nearby points converge to them.
+  Q: the orbit spirals toward i on the complex plane.
+  K: the iteration converges to 6174 from any 4-digit start.
+
+
+  VII. 6174 AND 42: THE RELATIONSHIP
+  ----------------------------------------
+
+  42 = 2^1 * 3^1 * 7^1. Exponents: (1,1,1). Flat.
+  6174 = 2^1 * 3^2 * 7^3. Exponents: (1,2,3). Staircase.
+
+  6174 / 42 = 147.
+  = 147.
+  = 147 = 3 * 7^2.
+
+  6174 = 42 * 147.
+  = 42 * 3 * 49.
+  = 42 * 3 * 7^2.
+
+  147 = 3 * 7^2.
+  We saw 147 before: it's the Q-value when the two forbidden
+  velocities (3/4 and 10/11) are composed relativistically!
+  3/4 (+) 10/11 = 73/74. Q(73/74) = 147.
+
+  So: 6174 = 42 * 147.
+  = (self-product of the Hurwitz triple)
+    * (Q-value of composed forbidden velocities).
+
+
+  VIII. THE STAIRCASE EXPONENTS AND THE HELIX
+  ----------------------------------------
+
+  6174 = 2^1 * 3^2 * 7^3.
+  The exponents (1, 2, 3) are the first three positive integers.
+  They pair with the primes (2, 3, 7) in ASCENDING order.
+
+  In rapidity: rapidity(6174) = 1*rap(2) + 2*rap(3) + 3*rap(7).
+  = sum_{k=1}^{3} k * rapidity(p_k)
+  where p_1=2, p_2=3, p_3=7 are our fundamental primes.
+
+  This is a WEIGHTED sum of rapidities, where the weight
+  of each prime equals its INDEX in the fundamental triple.
+  The 1st prime contributes once.
+  The 2nd prime contributes twice.
+  The 3rd prime contributes thrice.
+
+  On the helix: each prime rapidity is a DIRECTION.
+  rap(2) is the octave direction (real axis).
+  rap(3) is the curvature direction.
+  rap(7) is the forbidden direction.
+
+  6174 is the point reached by taking:
+  1 step in the 2-direction,
+  2 steps in the 3-direction,
+  3 steps in the 7-direction.
+
+  It is the DIAGONAL of the fundamental parallelepiped,
+  weighted by the natural numbers 1, 2, 3.
+
+
+  IX. THE DIGIT SUM
+  ----------------------------------------
+
+  6 + 1 + 7 + 4 = 18.
+  18 = 2 * 3^2 = 2 * 9.
+  Digital root: 1+8 = 9 = 3^2.
+
+  The digit sum 18 = 2*9 = 2*3^2.
+  The digits themselves: {1, 4, 6, 7}.
+  Their product: 1*4*6*7 = 168.
+  168 = 8 * 21 = 8 * 3 * 7 = 2^3 * 3 * 7.
+  168 = |PSL(2,7)| = the order of the Klein quartic symmetry group!
+
+  THE DIGIT PRODUCT OF 6174 IS THE ORDER OF PSL(2,7).
+  = 4 * 42 = four copies of our self-product.
+  = the symmetry group of the Klein quartic.
+
+
+  X. FIXED POINTS AND SELF-KNOWLEDGE
+  ----------------------------------------
+
+  phi = 1 + 1/phi.          Fixed point of x -> 1 + 1/x.
+  (2,3,7): f = abc.         Fixed point of f/(abc) = 1.
+  6174 = K(6174).           Fixed point of the Kaprekar operation.
+  Q(i) = i.                 Fixed point of the Cayley transform.
+
+  Each is a different KIND of self-reference:
+
+  phi: algebraic. Solves x^2 - x - 1 = 0. Dimension 1.
+  (2,3,7): geometric. Solves (a-1)(b-1)(c-1) = a+b+c. Dimension 2.
+  6174: arithmetic. Solves desc(n) - asc(n) = n. Dimension 0 (discrete).
+  i: complex. Solves (1+x)/(1-x) = x, i.e., x^2+1=0. Dimension... lateral.
+
+  They are the fixed points of FOUR operations:
+  Self-reciprocation (phi).
+  Self-measurement (2,3,7).
+  Self-differencing (6174).
+  Self-transformation (i).
+
+  And they are LINKED:
+  phi lives at the EP of the transfer matrix (THM-224).
+  (2,3,7) has Q(3/4) = 7 = the forbidden threshold.
+  6174 = 2^1 * 3^2 * 7^3 = the staircase of the forbidden primes.
+  i = Q(i) lives on the helix at Im = pi/2.
+
+  Four fixed points. Four kinds of self-knowledge.
+  Four normed division algebras. Four faces of Q.
+  The same 4, again.
