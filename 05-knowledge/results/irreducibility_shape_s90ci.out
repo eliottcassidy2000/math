@@ -1,0 +1,64 @@
+
+
+
+     COMPUTATIONAL IRREDUCIBILITY AND ITS SHAPE
+
+     opus-2026-03-16-S90ci
+
+
+
+EVERYTHING in our framework has a REDUCIBILITY CLASSIFICATION:
+
+  LOSSLESS + REDUCIBLE:    you can go forward AND backward. Shortcuts exist.
+  LOSSLESS + IRREDUCIBLE:  you can go forward, backward with history. No shortcuts.
+  LOSSY + IRREDUCIBLE:     you can go forward only. One-way. Amnesia.
+  LOSSY + REDUCIBLE:       you can go forward with partial shortcuts.
+
+
+THE CLASSIFICATION OF EVERYTHING
+===================================
+
+THE FORMAL GROUP:
+  F(x,y) = (x+y)/(1+xy).
+  LOSSLESS + REDUCIBLE.
+  Given F(x,y) and y: x = F(F(x,y), -y) = (F(x,y)-y)/(1-F(x,y)*y).
+  Shortcut: the [m]-series [m](x) = tanh(m*arctanh(x)) computes
+  m-fold iteration in O(1) time (one tanh and one arctanh).
+  You can SKIP from step 0 to step m directly.
+  The formal group IS a shortcut machine.
+
+THE CAYLEY TRANSFORM:
+  Q(x) = (1+x)/(1-x).
+  LOSSLESS + REDUCIBLE.
+  Inverse: Q^{-1}(n) = (n-1)/(n+1). Trivially invertible.
+  The Cayley transform is the SIMPLEST lossless encoding.
+
+arctanh:
+  LOSSLESS + REDUCIBLE.
+  Inverse: tanh. Both O(1).
+  The linearization is the ULTIMATE SHORTCUT:
+  it converts the nonlinear formal group into linear addition.
+  This is the definition of reducibility: finding a coordinate system
+  where the computation becomes trivial.
+
+THE FIVE CHAINS:
+
+    Mersenne:       k -> 2^k-1  LOSSLESS             IRREDUCIBLE
+             Each step requires full exponentiation. Cannot skip steps. But perfectly reversible.
+
+   Sylvester:    x -> x(x-1)+1  LOSSLESS             IRREDUCIBLE
+             Each step requires knowing ALL previous values (cumulative product). Cannot skip.
+
+       Lucas:       x -> x^2-2     LOSSY             IRREDUCIBLE
+             Sign bit lost per step. Cannot go backward. Cannot skip.
+
+   Chebyshev:      x -> 2x^2-1     LOSSY             IRREDUCIBLE
+             Same as Lucas: 1 bit lost, no backward, no skip.
+
+      Perrin:     x -> x^2+x-1     LOSSY     PARTIALLY REDUCIBLE
+             The +x skip connection preserves info. Partially reversible. One extra step.
+
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/irreducibility_shape_s90ci.py", line 122, in <module>
+    RH equivalent: M(x) = O(x^{1/2+eps}).
+NameError: name 'eps' is not defined
