@@ -1,0 +1,4 @@
+  File "/Users/e/Documents/GitHub/math/04-computation/convergence_base2_s90cg.py", line 308
+    """)
+       ^
+SyntaxError: f-string: expecting '}'
