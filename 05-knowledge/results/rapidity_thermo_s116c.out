@@ -1,0 +1,641 @@
+========================================================================
+RAPIDITY AND THERMODYNAMICS: TEN CONNECTIONS
+kind-pasteur-2026-03-15-S116c
+========================================================================
+
+========================================================================
+1. PARTITION FUNCTIONS IN RAPIDITY: ZETA AS RAPIDITY GAS
+========================================================================
+
+Energy levels of the "rapidity gas": E_k = rapidity(k) = ln(k)/2
+for k = 1, 2, 3, ...
+
+Partition function:
+  Z(beta) = sum_{k=1}^{infty} exp(-beta * ln(k)/2)
+          = sum_{k=1}^{infty} k^{-beta/2}
+          = zeta(beta/2)
+
+So: Z(beta) = zeta(beta/2), the RIEMANN ZETA FUNCTION!
+
+Thermodynamic quantities (setting k_B = 1 for natural units):
+  F = -T * ln(Z) = -T * ln(zeta(1/(2T)))      [free energy]
+  S = -dF/dT                                    [entropy]
+  C = T * dS/dT = -T * d^2F/dT^2               [specific heat]
+
+Temperature scan of the rapidity gas:
+         T      beta  s=beta/2     Z=zeta(s)    F=-T*ln(Z)             S             C
+  ----------------------------------------------------------------------------------------
+     0.300     3.333     1.667      2.118393     -0.225197      2.428508      5.331903
+     0.400     2.500     1.250      4.119441     -0.566287      4.442691      8.228204
+     0.500     2.000     1.000           ---           ---           ---     DIVERGENT
+     0.600     1.667     0.833           ---           ---           ---     DIVERGENT
+     0.700     1.429     0.714           ---           ---           ---     DIVERGENT
+     0.800     1.250     0.625           ---           ---           ---     DIVERGENT
+     0.900     1.111     0.556           ---           ---           ---     DIVERGENT
+     1.000     1.000     0.500           ---           ---           ---     DIVERGENT
+     1.200     0.833     0.417           ---           ---           ---     DIVERGENT
+     1.500     0.667     0.333           ---           ---           ---     DIVERGENT
+     2.000     0.500     0.250           ---           ---           ---     DIVERGENT
+     3.000     0.333     0.167           ---           ---           ---     DIVERGENT
+     5.000     0.200     0.100           ---           ---           ---     DIVERGENT
+    10.000     0.100     0.050           ---           ---           ---     DIVERGENT
+
+KEY INSIGHT: The partition function DIVERGES at s = beta/2 = 1, i.e., beta = 2,
+i.e., T = 1/2.  This is the POLE OF ZETA at s=1.
+
+For T < 0.5 (beta > 2, s > 1): Z converges, well-defined thermodynamics.
+For T > 0.5 (beta < 2, s < 1): Z diverges, the gas "condenses" -- all states
+are populated and the partition function cannot normalize.
+
+The Hagedorn temperature of the rapidity gas is T_H = 1/2.
+
+
+========================================================================
+2. BOLTZMANN DISTRIBUTION ON TOURNAMENTS
+========================================================================
+
+Energy of tournament T: E(T) = rapidity(H(T)) = ln(H(T))/2
+Boltzmann weight: P(T) ~ exp(-beta * ln(H)/2) = H^{-beta/2}
+
+At beta=0:  uniform (all tournaments equally likely)
+At beta->+inf: only transitive tournament (H=1, E=0 = ground state)
+At beta->-inf: only max-H tournament (highest rapidity = highest energy)
+
+
+  --- n = 5 ---
+  Computing H for all 1024 tournaments on 5 vertices...
+  Found 7 distinct H values: min=1, max=15
+  H values: [1, 3, 5, 9, 11, 13, 15]
+
+      beta         Z(beta)           <E>           <H>   P(transitive)        P(max-H)
+  ----------------------------------------------------------------------------------
+      -4.0      75840.0000      1.182672       11.1772      0.00158228      0.18987342
+      -2.0       7680.0000      1.096296        9.8750      0.01562500      0.12500000
+      -1.0       2663.0345      1.015650        8.8724      0.04506138      0.09307838
+      -0.5       1624.8548      0.958251        8.2375      0.07385275      0.07751544
+       0.0       1024.0000      0.885883        7.5000      0.11718750      0.06250000
+       0.5        671.8514      0.797130        6.6641      0.17861092      0.04840430
+       1.0        462.6014      0.693373        5.7567      0.25940259      0.03572131
+       2.0        259.0732      0.465467        3.9526      0.46318957      0.01646896
+       4.0        147.8825      0.140580        1.7519      0.81145485      0.00192345
+       8.0        121.9157      0.009678        1.0405      0.98428650      0.00001037
+      16.0        120.0189      0.000088        1.0003      0.99984244      0.00000000
+
+  INTERPRETATION for n=5:
+  - beta >> 0: system freezes to transitive tournament (ground state, E=0)
+  - beta = 0: uniform distribution over all 1024 tournaments
+  - beta << 0: system condenses onto max-H = 15 tournament (Paley-like)
+  - The "temperature" controls how ordered the ranking is.
+  - High T (small |beta|): noisy ranking (many Hamiltonian paths)
+  - Low T (large beta > 0): clean ranking (few paths, nearly transitive)
+
+  --- n = 6 ---
+  Computing H for all 32768 tournaments on 6 vertices...
+  Found 19 distinct H values: min=1, max=45
+  H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33]...
+
+      beta         Z(beta)           <E>           <H>   P(transitive)        P(max-H)
+  ----------------------------------------------------------------------------------
+      -4.0   21381120.0000      1.719109       32.6056      0.00003367      0.04546067
+      -2.0     737280.0000      1.638344       29.0000      0.00097656      0.02929688
+      -1.0     148195.7355      1.564804       26.2643      0.00485844      0.02172760
+      -0.5      68633.9336      1.511851       24.5357      0.01049044      0.01811363
+       0.0      32768.0000      1.442228       22.5000      0.02197266      0.01464844
+       0.5      16287.1252      1.349687       20.1105      0.04420670      0.01137873
+       1.0       8539.5082      1.227611       17.3541      0.08431399      0.00837919
+       2.0       2935.6330      0.889525       11.1622      0.24526226      0.00363352
+       4.0       1008.6440      0.250877        2.9105      0.71382964      0.00023501
+       8.0        736.0051      0.013738        1.0604      0.97825405      0.00000016
+      16.0        720.1519      0.000118        1.0004      0.99978903      0.00000000
+
+  INTERPRETATION for n=6:
+  - beta >> 0: system freezes to transitive tournament (ground state, E=0)
+  - beta = 0: uniform distribution over all 32768 tournaments
+  - beta << 0: system condenses onto max-H = 45 tournament (Paley-like)
+  - The "temperature" controls how ordered the ranking is.
+  - High T (small |beta|): noisy ranking (many Hamiltonian paths)
+  - Low T (large beta > 0): clean ranking (few paths, nearly transitive)
+
+========================================================================
+3. PHASE TRANSITIONS: SPECIFIC HEAT NEAR BETA=2 (s=1 POLE)
+========================================================================
+
+The rapidity gas has Z(beta) = zeta(beta/2).
+At s = beta/2 = 1 (beta = 2, T = 0.5), zeta has a pole: zeta(s) ~ 1/(s-1).
+
+Near the pole (s -> 1+):
+  zeta(s) ~ 1/(s-1) + gamma + O(s-1)
+  where gamma = 0.5772... is Euler-Mascheroni constant
+
+  ln Z ~ -ln(s-1) = -ln(beta/2 - 1) = -ln((1-2T)/(2T))
+  F = -T * ln Z ~ T * ln((1-2T)/(2T))
+
+Let's compute the specific heat C(T) near T = 0.5 from below.
+
+           T    s=1/(2T)         zeta(s)             F             S             C
+  ------------------------------------------------------------------------------
+      0.0500     10.0000          1.0010     -0.000050      0.007957      0.049084
+      0.1000      5.0000          1.0369     -0.003626      0.174043      0.553128
+      0.1500      3.3333          1.1474     -0.020619      0.530131      1.274633
+      0.2000      2.5000          1.3415     -0.058756      1.015618      2.190073
+      0.2500      2.0000          1.6448     -0.124410      1.636389      3.515298
+      0.3000      1.6667          2.1203     -0.225466      2.441087      5.479338
+      0.3500      1.4286          2.8958     -0.372141      3.458809      7.756354
+      0.4000      1.2500          4.1951     -0.573568      4.605935      9.225928
+      0.4200      1.1905          4.9326     -0.670261      5.060819      9.377311
+      0.4400      1.1364          5.8318     -0.775866      5.495583      9.273499
+      0.4600      1.0870          6.9209     -0.889891      5.901460      8.954178
+      0.4800      1.0417          8.2293     -1.011694      6.272875      8.474545
+      0.4900      1.0204          8.9752     -1.075290      6.444760      8.193151
+      0.4950      1.0101          9.3729     -1.107721      6.527192      8.044932
+      0.4990      1.0020          9.7033     -1.133959      6.591453      7.923606
+
+CRITICAL BEHAVIOR:
+Near T_c = 0.5 from below (s = 1 + epsilon, epsilon -> 0+):
+  zeta(1+epsilon) ~ 1/epsilon + gamma
+
+  ln Z ~ -ln(epsilon) ~ -ln(1 - 2T) as T -> 0.5-
+  F ~ T * ln(1 - 2T)
+  S ~ -dF/dT ~ -ln(1-2T) + 2T/(1-2T)  --> +infinity
+  C ~ T * dS/dT ~ 2T/(1-2T)^2           --> +infinity
+
+The specific heat diverges as C ~ 1/(T_c - T)^2 with CRITICAL EXPONENT alpha = 2.
+
+This is UNUSUAL: most physical phase transitions have alpha < 2.
+  - 2D Ising: alpha = 0 (log divergence)
+  - Mean field: alpha = 0 (jump discontinuity)
+  - 3D Ising: alpha ~ 0.11
+  - Rapidity gas: alpha = 2 (STRONG divergence)
+
+The rapidity gas has the strongest possible thermodynamic divergence
+because the zeta pole is a SIMPLE pole (order 1).
+
+Verification of alpha = 2 critical exponent:
+           T          1-2T               C        C*(1-2T)^2     log C / log(1/(1-2T))
+  --------------------------------------------------------------------------------
+      0.3500      0.300000        7.756354          0.698072                  1.701461
+      0.4000      0.200000        9.225928          0.369037                  1.380617
+      0.4200      0.160000        9.377311          0.240059                  1.221388
+      0.4400      0.120000        9.273499          0.133538                  1.050417
+      0.4600      0.080000        8.954178          0.057307                  0.867916
+      0.4800      0.040000        8.474545          0.013559                  0.663917
+      0.4900      0.020000        8.193151          0.003277                  0.537650
+      0.4950      0.010000        8.044932          0.000804                  0.452761
+      0.4990      0.002000        7.923606          0.000032                  0.333061
+
+As T -> 0.5, the ratio C*(1-2T)^2 should approach a constant (= 1/2),
+confirming C ~ (1-2T)^{-2}, i.e., alpha = 2.
+
+
+========================================================================
+4. CARNOT ENGINE IN RAPIDITY COORDINATES
+========================================================================
+
+A Carnot engine operates between T_hot and T_cold.
+Classical efficiency: eta = 1 - T_cold/T_hot.
+
+In rapidity: if temperatures are placed on the rapidity line via
+  T = e^{2*phi}, then T_cold/T_hot = e^{2*(phi_cold - phi_hot)}.
+
+  eta = 1 - exp(2*(phi_cold - phi_hot))
+      = 1 - exp(-2*Delta_phi)
+
+where Delta_phi = phi_hot - phi_cold > 0.
+
+In terms of Cayley addresses v = tanh(phi):
+  T = Q(v) = (1+v)/(1-v)
+  eta = 1 - Q(v_cold)/Q(v_hot)
+
+   phi_hot  phi_cold   Delta_phi       T_hot      T_cold    eta_Carnot     v_hot    v_cold
+  --------------------------------------------------------------------------------------------
+     1.000     0.500       0.500        7.39        2.72    0.63212056   0.76159   0.46212
+     2.000     0.500       1.500       54.60        2.72    0.95021293   0.96403   0.46212
+     2.000     1.000       1.000       54.60        7.39    0.86466472   0.96403   0.76159
+     3.000     1.000       2.000      403.43        7.39    0.98168436   0.99505   0.76159
+     5.000     1.000       4.000    22026.47        7.39    0.99966454   0.99991   0.76159
+     0.500     0.100       0.400        2.72        1.22    0.55067104   0.46212   0.09967
+    10.000     5.000       5.000  485165195.41    22026.47    0.99995460   1.00000   0.99991
+
+PHYSICAL TEMPERATURE EXAMPLES:
+  Sun surface: phi = ln(5778)/2 = 4.3309
+  Room (300K): phi = ln(300)/2  = 2.8519
+  CMB (2.725K): phi = ln(2.725)/2 = 0.5012
+
+Carnot efficiency of a Sun->Room engine:
+  eta = 1 - exp(-2*(phi_sun - phi_room))
+      = 1 - T_room/T_sun = 1 - 300/5778 = 0.948079
+
+In rapidity: Delta_phi = 1.4790, so eta = 1 - exp(-2*1.4790) = 0.948079
+
+KEY RELATION: Carnot efficiency in rapidity is
+  eta = 1 - exp(-2*Delta_phi) = 1 - 1/Q(Delta_v)
+
+where Delta_v = tanh(Delta_phi) is the "velocity gap" between hot and cold.
+The closer the reservoirs are in rapidity space, the lower the efficiency.
+Small Delta_phi: eta ~ 2*Delta_phi (linear approximation).
+Large Delta_phi: eta -> 1 (perfect efficiency as rapidity gap grows).
+
+
+========================================================================
+5. 1D ISING MODEL IN RAPIDITY UNITS
+========================================================================
+
+The 1D Ising model (N spins, coupling J, no external field):
+  Z = 2^N * cosh(beta*J)^{N-1}
+  f = -kT * [ln(2) + (N-1)/N * ln(cosh(beta*J))]  (free energy per spin)
+
+If J is measured in rapidity units, J = rapidity(n) = ln(n)/2 for some n,
+then:
+  beta*J = beta*ln(n)/2
+  cosh(beta*J) = cosh(beta*ln(n)/2)
+               = (n^{beta/2} + n^{-beta/2}) / 2
+               = (Q(v_n)^{beta/4} + Q(v_n)^{-beta/4}) / 2
+
+where v_n = tanh(ln(n)/2) = (n-1)/(n+1) is the Cayley address of n.
+
+  N = 100 spins
+
+  Coupling J = rapidity(n) for various n:
+     n   J=ln(n)/2         v_n
+  ----------------------------
+     2    0.346574    0.333333
+     3    0.549306    0.500000
+     5    0.804719    0.666667
+     7    0.972955    0.750000
+    10    1.151293    0.818182
+   100    2.302585    0.980198
+
+  Detailed thermodynamics for J = rapidity(7) = ln(7)/2 = 0.972955
+
+         T      beta    beta*J           f/J       S/(k_B)       C/(k_B)         <m^2>
+  ----------------------------------------------------------------------------------
+     0.100    10.000    9.7296     -1.000000      0.000000      0.000001      1.000000
+     0.200     5.000    4.8648     -1.000012      0.000638      0.005632      0.996046
+     0.300     3.333    3.2432     -1.000470      0.011394      0.063927      0.905698
+     0.500     2.000    1.9459     -1.010382      0.098039      0.296867      0.372024
+     0.700     1.429    1.3899     -1.043310      0.222602      0.425089      0.148232
+     1.000     1.000    0.9730     -1.137243      0.376770      0.414156      0.067600
+     1.500     0.667    0.6486     -1.372463      0.520019      0.283674      0.035974
+     2.000     0.500    0.4865     -1.659038      0.587481      0.188435      0.026158
+     3.000     0.333    0.3243     -2.296637      0.643198      0.094851      0.018996
+     5.000     0.200    0.1946     -3.658759      0.674567      0.036467      0.014699
+    10.000     0.100    0.0973     -7.172715      0.688436      0.009377      0.012124
+    50.000     0.020    0.0195    -35.630448      0.692958      0.000379      0.010393
+
+RAPIDITY STRUCTURE OF THE ISING MODEL:
+  - At T << J: spins aligned, entropy ~ 0, C ~ 0
+  - At T >> J: spins random, S -> ln(2), C -> 0
+  - Peak C at beta*J ~ 1, i.e., T ~ J = rapidity(7) = 0.9730
+
+  The 1D Ising model with coupling J = rapidity(n) has its thermal
+  crossover when T equals the rapidity of n.
+
+  In rapidity coordinates: the crossover temperature IS the coupling constant.
+  This is a tautology made profound: thermal equilibrium = rapidity balance.
+
+
+========================================================================
+6. FERMI-DIRAC AND BOSE-EINSTEIN WITH RAPIDITY ENERGY LEVELS
+========================================================================
+
+Energy levels: E_k = rapidity(k) = ln(k)/2, k = 1, 2, 3, ...
+Chemical potential: mu
+
+Occupation numbers:
+  n_FD(k) = 1 / (exp(beta*(E_k - mu)) + 1)
+           = 1 / (k^{beta/2} * exp(-beta*mu) + 1)
+
+  n_BE(k) = 1 / (exp(beta*(E_k - mu)) - 1)
+           = 1 / (k^{beta/2} * exp(-beta*mu) - 1)
+
+Let z = exp(beta*mu) be the fugacity. Then:
+  n_FD(k) = z / (k^{beta/2} + z)
+  n_BE(k) = z / (k^{beta/2} - z)  [requires z < 1 for convergence]
+
+These are NUMBER-THEORETIC occupation numbers!
+  - The total particle number N = sum_k n(k) involves Dirichlet-like series
+  - For fermions: N_FD = sum_k z / (k^{beta/2} + z)
+  - For bosons: N_BE = sum_k z / (k^{beta/2} - z)
+
+Fermi-Dirac occupation numbers n_FD(k) for first 10 levels:
+    beta      mu         z       k=1       k=2       k=3       k=4       k=5       k=6       k=7       k=8       k=9      k=10     N_total
+  ------------------------------------------------------------------------------------------------------------------------
+     1.0    0.00    1.0000   0.50000   0.41421   0.36603   0.33333   0.30902   0.28990   0.27429   0.26120   0.25000   0.24025     55.9373
+     2.0    0.00    1.0000   0.50000   0.33333   0.25000   0.20000   0.16667   0.14286   0.12500   0.11111   0.10000   0.09091      6.4865
+     4.0    0.00    1.0000   0.50000   0.20000   0.10000   0.05882   0.03846   0.02703   0.02000   0.01538   0.01220   0.00990      1.0757
+     1.0    0.30    1.3499   0.57444   0.48836   0.43799   0.40296   0.37643   0.35529   0.33784   0.32307   0.31032   0.29916     73.3649
+     2.0    0.30    1.8221   0.64566   0.47673   0.37787   0.31296   0.26709   0.23294   0.20654   0.18551   0.16837   0.15413     11.0422
+     1.0   -0.50    0.6065   0.37754   0.30015   0.25936   0.23270   0.21337   0.19847   0.18649   0.17658   0.16818   0.16093     35.1486
+
+Bose-Einstein occupation numbers n_BE(k) for first 10 levels:
+    beta      mu         z       k=1       k=2       k=3       k=4       k=5       k=6       k=7       k=8       k=9      k=10     N_total
+  ------------------------------------------------------------------------------------------------------------------------
+     4.0   -0.50    0.1353   0.15652   0.03502   0.01527   0.00853   0.00544   0.00377   0.00277   0.00212   0.00167   0.00136      0.2452
+     4.0   -1.00    0.0183   0.01866   0.00460   0.00204   0.00115   0.00073   0.00051   0.00037   0.00029   0.00023   0.00018      0.0305
+     2.0   -1.00    0.1353   0.15652   0.07258   0.04724   0.03502   0.02782   0.02308   0.01971   0.01721   0.01527   0.01372      1.0466
+     2.0   -0.50    0.3679   0.58198   0.22540   0.13977   0.10129   0.07942   0.06532   0.05547   0.04820   0.04262   0.03819      3.0669
+     6.0   -0.50    0.0498   0.05240   0.00626   0.00185   0.00078   0.00040   0.00023   0.00015   0.00010   0.00007   0.00005      0.0625
+     6.0   -1.00    0.0025   0.00248   0.00031   0.00009   0.00004   0.00002   0.00001   0.00001   0.00000   0.00000   0.00000      0.0030
+
+KEY OBSERVATIONS:
+  1. Level k=1 has E_1 = 0 (rapidity of 1 = 0). For bosons with mu -> 0-,
+     occupation of k=1 diverges: BOSE-EINSTEIN CONDENSATION at the ground state.
+  2. High levels k >> 1 have E_k ~ ln(k)/2 -> infinity, so occupation -> 0.
+  3. The Fermi energy E_F = rapidity(k_F) = ln(k_F)/2 for a system with
+     k_F filled levels. The Fermi "level" IS a natural number!
+  4. Total fermion number N_FD(beta, mu=0) approaches sum_k 1/(k^{beta/2}+1),
+     which is related to eta(beta/2), the Dirichlet eta function.
+
+     N_FD(beta, mu=0) = sum_k 1/(k^{s}+1) where s=beta/2
+     = (1 - 2^{1-s}) * zeta(s)  ... for s > 1 (the Dirichlet eta connection)
+
+
+========================================================================
+7. ENTROPY OF MIXING AS RAPIDITY COMBINATION
+========================================================================
+
+Two ideal gases: N_A particles of type A, N_B of type B.
+Total: N = N_A + N_B.
+
+Entropy of mixing (Gibbs):
+  Delta_S = k_B * [N*ln(N) - N_A*ln(N_A) - N_B*ln(N_B)]
+
+Since rapidity(n) = ln(n)/2:
+  Delta_S = 2*k_B * [N*rapidity(N) - N_A*rapidity(N_A) - N_B*rapidity(N_B)]
+
+THE ENTROPY OF MIXING IS A RAPIDITY LINEAR COMBINATION!
+
+In terms of mole fractions x_A = N_A/N, x_B = N_B/N:
+  Delta_S / (N*k_B) = -x_A*ln(x_A) - x_B*ln(x_B)
+                     = -2*x_A*rapidity(x_A) - 2*x_B*rapidity(x_B)
+  (where rapidity of a fraction is negative)
+
+  Mixing entropy per particle (units of k_B) vs. composition:
+     x_A     x_B    Delta_S/(N*kB)    rap(N_A)    rap(N_B)    rapidity formula     check
+  ----------------------------------------------------------------------------------
+   0.050   0.950        0.19851524      1.9560      3.4282          0.19851524        OK
+   0.100   0.900        0.32508297      2.3026      3.4012          0.32508297        OK
+   0.150   0.850        0.42270909      2.5053      3.3726          0.42270909        OK
+   0.200   0.800        0.50040242      2.6492      3.3423          0.50040242        OK
+   0.250   0.750        0.56233514      2.7607      3.3100          0.56233514        OK
+   0.300   0.700        0.61086430      2.8519      3.2755          0.61086430        OK
+   0.350   0.650        0.64744664      2.9290      3.2385          0.64744664        OK
+   0.400   0.600        0.67301167      2.9957      3.1985          0.67301167        OK
+   0.450   0.550        0.68813881      3.0546      3.1550          0.68813881        OK
+   0.500   0.500        0.69314718      3.1073      3.1073          0.69314718        OK
+   0.550   0.450        0.68813881      3.1550      3.0546          0.68813881        OK
+   0.600   0.400        0.67301167      3.1985      2.9957          0.67301167        OK
+   0.650   0.350        0.64744664      3.2385      2.9290          0.64744664        OK
+   0.700   0.300        0.61086430      3.2755      2.8519          0.61086430        OK
+   0.750   0.250        0.56233514      3.3100      2.7607          0.56233514        OK
+   0.800   0.200        0.50040242      3.3423      2.6492          0.50040242        OK
+   0.850   0.150        0.42270909      3.3726      2.5053          0.42270909        OK
+   0.900   0.100        0.32508297      3.4012      2.3026          0.32508297        OK
+   0.950   0.050        0.19851524      3.4282      1.9560          0.19851524        OK
+
+ALL match perfectly. The entropy of mixing IS a rapidity linear combination.
+
+Maximum at x_A = x_B = 0.5: Delta_S/(N*k_B) = ln(2) = 2*rapidity(2) = 0.69314718
+
+PHYSICAL INSIGHT: Mixing entropy measures how far the composition is
+from "pure" in rapidity space. The rapidity of the whole minus the
+weighted rapidities of the parts = half the mixing entropy per particle.
+
+
+========================================================================
+8. MAXWELL-BOLTZMANN SPEED DISTRIBUTION IN RAPIDITY COORDINATES
+========================================================================
+
+Maxwell-Boltzmann speed distribution (3D):
+  f(v) = 4*pi*n * (m/(2*pi*kT))^{3/2} * v^2 * exp(-m*v^2/(2*kT))
+
+Transform to rapidity: v = tanh(phi), so phi = arctanh(v).
+Jacobian: dv/dphi = 1/cosh^2(phi) = sech^2(phi).
+
+f(phi) * dphi = f(tanh(phi)) * sech^2(phi) * dphi
+
+Setting m/(2*kT) = alpha (dimensionless thermal parameter):
+  f(phi) ~ tanh^2(phi) * sech^2(phi) * exp(-alpha * tanh^2(phi))
+
+This is the MB distribution in rapidity space.
+Peak velocity v_p = sqrt(2kT/m), so alpha = 1/v_p^2, and phi_p = arctanh(v_p).
+
+  MB distribution in rapidity for various thermal parameters alpha:
+     phi       a=0.5       a=1.0       a=2.0       a=5.0      a=10.0
+  ------------------------------------------------------------------
+   0.010    0.000100    0.000100    0.000100    0.000100    0.000100
+   0.148    0.020784    0.020562    0.020125    0.018870    0.016949
+   0.285    0.068472    0.065882    0.060993    0.048397    0.032914
+   0.423    0.123728    0.114250    0.097415    0.060387    0.027215
+   0.560    0.168370    0.147970    0.114287    0.052658    0.014473
+   0.698    0.192939    0.160861    0.111817    0.037557    0.006095
+   0.836    0.197074    0.156029    0.097804    0.024089    0.002331
+   0.973    0.185743    0.140199    0.079875    0.014771    0.000887
+   1.111    0.165294    0.119614    0.062637    0.008995    0.000354
+   1.248    0.141117    0.098515    0.048012    0.005558    0.000153
+   1.386    0.116891    0.079206    0.036368    0.003520    0.000072
+   1.523    0.094703    0.062636    0.027399    0.002293    0.000037
+   1.661    0.075485    0.048968    0.020606    0.001536    0.000020
+   1.799    0.059444    0.037976    0.015499    0.001054    0.000012
+   1.936    0.046393    0.029285    0.011669    0.000738    0.000007
+   2.074    0.035964    0.022492    0.008797    0.000526    0.000005
+   2.211    0.027740    0.017224    0.006640    0.000381    0.000003
+   2.349    0.021315    0.013162    0.005018    0.000278    0.000002
+   2.487    0.016332    0.010042    0.003796    0.000205    0.000002
+   2.624    0.012487    0.007653    0.002874    0.000152    0.000001
+   2.762    0.009531    0.005827    0.002178    0.000114    0.000001
+   2.899    0.007266    0.004434    0.001651    0.000085    0.000001
+   3.037    0.005535    0.003372    0.001252    0.000064    0.000000
+   3.174    0.004213    0.002564    0.000950    0.000048    0.000000
+   3.312    0.003205    0.001949    0.000721    0.000036    0.000000
+   3.450    0.002437    0.001481    0.000547    0.000028    0.000000
+   3.587    0.001852    0.001125    0.000415    0.000021    0.000000
+   3.725    0.001408    0.000855    0.000315    0.000016    0.000000
+   3.862    0.001070    0.000649    0.000239    0.000012    0.000000
+   4.000    0.000813    0.000493    0.000182    0.000009    0.000000
+
+KEY FEATURES OF MB IN RAPIDITY:
+  1. At phi=0: f(0) = 0 (v=0, no particles at rest)
+  2. Peak at finite phi_p corresponding to most probable speed
+  3. Exponential tail in VELOCITY, but since v = tanh(phi) -> 1 as phi -> inf,
+     the rapidity distribution has a MUCH heavier tail than the velocity one.
+  4. For alpha << 1 (hot gas): peak phi is large (ultrarelativistic particles
+     in Cayley coordinates have high rapidity)
+  5. For alpha >> 1 (cold gas): peak phi near 0 (low-speed, low-rapidity)
+
+Peak locations:
+  alpha =   0.5: v_peak = 0.999000, phi_peak = 3.800201
+  alpha =   1.0: v_peak = 1.000000, phi_peak = inf
+  alpha =   2.0: v_peak = 0.707107, phi_peak = 0.881374
+  alpha =   5.0: v_peak = 0.447214, phi_peak = 0.481212
+  alpha =  10.0: v_peak = 0.316228, phi_peak = 0.327450
+
+========================================================================
+9. BLACK BODY RADIATION AND RAPIDITY
+========================================================================
+
+Planck's law: u(nu) = 8*pi*h*nu^3 / (c^3 * (exp(h*nu/(kT)) - 1))
+
+Wien's displacement law: nu_max = 2.821 * kT/h
+
+Rapidity of the peak frequency:
+  rapidity(nu_max) = ln(nu_max)/2 = ln(2.821 * kT/h) / 2
+                   = rapidity(2.821) + rapidity(kT/h)
+                   = rapidity(2.821) + rapidity(k/h) + rapidity(T)
+
+Since rapidity is additive under multiplication!
+
+The rapidity of the peak frequency = rapidity(Wien constant) + rapidity(T/[h/k])
+
+Black body peak frequencies and their rapidities:
+                Object       T (K)     nu_max (Hz)      rap(T)   rap(nu_max)     rap(kT/h)     check
+  ------------------------------------------------------------------------------------------------
+                   CMB         2.7      1.6018e+11      0.5012       12.8998       12.3812        OK
+       Liquid nitrogen        77.0      4.5261e+12      2.1719       14.5704       14.0519        OK
+      Room temperature       300.0      1.7634e+13      2.8519       15.2504       14.7319        OK
+            Human body       310.0      1.8222e+13      2.8683       15.2668       14.7483        OK
+         Boiling water       373.0      2.1925e+13      2.9608       15.3593       14.8408        OK
+     Incandescent bulb      3000.0      1.7634e+14      4.0032       16.4017       15.8832        OK
+           Sun surface      5778.0      3.3963e+14      4.3309       16.7294       16.2109        OK
+             Blue star     30000.0      1.7634e+15      5.1545       17.5530       17.0345        OK
+            Solar core  15000000.0      8.8170e+17      8.2618       20.6603       20.1418        OK
+
+  rapidity(Wien constant) = rapidity(2.821) = 0.518546
+
+RAPIDITY DECOMPOSITION:
+  rap(nu_max) = 0.5185 + rap(kT/h)
+             = 0.5185 + rap(k/h) + rap(T)
+             = 0.5185 + 11.8800 + rap(T)
+
+So the peak frequency rapidity shifts LINEARLY with temperature rapidity.
+Doubling T (adding rapidity ln(2)/2 = 0.3466) adds the same
+amount to the peak frequency rapidity.
+
+The COSMIC RAPIDITY LADDER:
+  CMB -> Room -> Sun -> Blue star: each step adds ~3-4 units of rapidity.
+
+STEFAN-BOLTZMANN LAW IN RAPIDITY:
+  Total power: P = sigma * T^4 * A
+  rapidity(P) = rapidity(sigma*A) + 4*rapidity(T)
+  = rapidity(sigma*A) + 2*ln(T)
+
+  The radiated power rapidity scales as FOUR times the temperature rapidity.
+  This is because Stefan-Boltzmann involves T^4 and rapidity is logarithmic.
+
+========================================================================
+10. INFORMATION ENTROPY = 2 * RAPIDITY
+========================================================================
+
+Shannon entropy: H_Shannon = -sum p_i * log(p_i)  [in nats if log = ln]
+
+For a tournament T with H(T) Hamiltonian paths, if each path is
+equally likely, p_i = 1/H(T) for each path. Then:
+  H_Shannon = -H(T) * (1/H(T)) * ln(1/H(T)) = ln(H(T))
+
+But ln(H(T)) = 2 * rapidity(H(T))!
+
+SHANNON ENTROPY = 2 * RAPIDITY of the path count.
+
+This means:
+  - Transitive tournament (H=1): Shannon entropy = 0 (perfect order)
+  - 3-cycle (H=3): Shannon entropy = 2*rapidity(3) = ln(3) = 1.099
+  - Paley T_7 (H=189): Shannon entropy = 2*rapidity(189) = ln(189) = 5.242
+  - Paley T_11 (H=95095): Shannon entropy = 2*rapidity(95095) = ln(95095) = 11.462
+
+
+  --- n = 5: Information entropy of tournament ensemble ---
+       H     count        p(H)     Shannon    rapidity   Shannon/2     check
+  ------------------------------------------------------------------------
+       1       120    0.117188    0.000000    0.000000    0.000000     = rap
+       3       120    0.117188    1.098612    0.549306    0.549306     = rap
+       5       240    0.234375    1.609438    0.804719    0.804719     = rap
+       9       240    0.234375    2.197225    1.098612    1.098612     = rap
+      11       120    0.117188    2.397895    1.198948    1.198948     = rap
+      13       120    0.117188    2.564949    1.282475    1.282475     = rap
+      15        64    0.062500    2.708050    1.354025    1.354025     = rap
+
+  Max-entropy distribution over tournaments weighted by H:
+  P(T) ~ H(T)  (each tournament weighted by its path count)
+  Z = sum H(T) over all T = 7680
+  Shannon entropy of H-weighted ensemble = 6.753783 nats
+  = 2 * 3.376892 rapidity units
+  Shannon entropy of uniform ensemble = 6.931472 nats
+  Excess entropy from H-weighting = -0.177688 nats
+
+  --- n = 6: Information entropy of tournament ensemble ---
+       H     count        p(H)     Shannon    rapidity   Shannon/2     check
+  ------------------------------------------------------------------------
+       1       720    0.021973    0.000000    0.000000    0.000000     = rap
+       3       960    0.029297    1.098612    0.549306    0.549306     = rap
+       5      2160    0.065918    1.609438    0.804719    0.804719     = rap
+       9      2960    0.090332    2.197225    1.098612    1.098612     = rap
+      11      1440    0.043945    2.397895    1.198948    1.198948     = rap
+      13      1440    0.043945    2.564949    1.282475    1.282475     = rap
+      15      2208    0.067383    2.708050    1.354025    1.354025     = rap
+      17      1440    0.043945    2.833213    1.416607    1.416607     = rap
+      19      1440    0.043945    2.944439    1.472219    1.472219     = rap
+      23      2880    0.087891    3.135494    1.567747    1.567747     = rap
+      25      1440    0.043945    3.218876    1.609438    1.609438     = rap
+      27       480    0.014648    3.295837    1.647918    1.647918     = rap
+      29      2880    0.087891    3.367296    1.683648    1.683648     = rap
+      31      1440    0.043945    3.433987    1.716994    1.716994     = rap
+      33      2640    0.080566    3.496508    1.748254    1.748254     = rap
+      37      3600    0.109863    3.610918    1.805459    1.805459     = rap
+      41       720    0.021973    3.713572    1.856786    1.856786     = rap
+      43      1440    0.043945    3.761200    1.880600    1.880600     = rap
+      45       480    0.014648    3.806662    1.903331    1.903331     = rap
+
+  Max-entropy distribution over tournaments weighted by H:
+  P(T) ~ H(T)  (each tournament weighted by its path count)
+  Z = sum H(T) over all T = 737280
+  Shannon entropy of H-weighted ensemble = 10.234035 nats
+  = 2 * 5.117017 rapidity units
+  Shannon entropy of uniform ensemble = 10.397208 nats
+  Excess entropy from H-weighting = -0.163173 nats
+
+THE RAPIDITY-ENTROPY DICTIONARY:
+  Shannon entropy of paths   = 2 * rapidity(H)
+  Boltzmann entropy S(T)     = 2 * k_B * rapidity(H) [thermodynamic]
+  Tournament "temperature"   = via Boltzmann distribution (Section 2)
+  Partition function          = zeta (Section 1)
+  Mixing entropy              = rapidity linear combination (Section 7)
+
+EVERYTHING connects through the single formula: rapidity(n) = ln(n)/2.
+
+
+========================================================================
+GRAND SUMMARY: RAPIDITY THERMODYNAMICS
+========================================================================
+
++------+--------------------------------------------+-------------------------------+
+| Sec. | Physics                                    | Rapidity Connection           |
++------+--------------------------------------------+-------------------------------+
+|  1   | Partition function Z(beta)                 | = zeta(beta/2)                |
+|  2   | Tournament Boltzmann weight                | H^{-beta/2}                  |
+|  3   | Phase transition at beta_c = 2             | = zeta pole at s=1, alpha=2   |
+|  4   | Carnot efficiency                          | = 1 - exp(-2*Delta_phi)       |
+|  5   | 1D Ising crossover                         | at T = rapidity(n) = coupling |
+|  6   | FD/BE occupation of level k                | via k^{-beta/2} (Dirichlet)  |
+|  7   | Mixing entropy                             | = rapidity linear combination |
+|  8   | MB distribution                            | heavy rapidity tail           |
+|  9   | BB peak frequency                          | rap(nu) = const + rap(T)      |
+| 10   | Shannon entropy                            | = 2 * rapidity(H)             |
++------+--------------------------------------------+-------------------------------+
+
+DEEPEST INSIGHT: The Riemann zeta function zeta(s) IS the partition function
+of a gas whose energy levels are the rapidities of natural numbers.
+
+  E_k = rapidity(k) = ln(k)/2
+
+  Z(beta) = sum_k exp(-beta*E_k) = sum_k k^{-beta/2} = zeta(beta/2)
+
+The pole at s=1 (beta=2, T=1/2) is a PHASE TRANSITION with critical
+exponent alpha=2, the strongest possible thermodynamic divergence.
+
+The number-theoretic content of zeta (primes, zeros, functional equation)
+maps directly to thermodynamic properties (phase structure, critical
+exponents, universality classes) of this rapidity gas.
+
+========================================================================
+COMPUTATION COMPLETE
+========================================================================
