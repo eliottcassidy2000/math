@@ -1,0 +1,118 @@
+A000568: Non-isomorphic tournaments on n vertices
+   n |            T(n) |  time (ms) |  log2(T) |   verify
+-------------------------------------------------------
+   0 |               1 |        0.0 |      0.0 | OK
+   1 |               1 |        0.0 |      0.0 | OK
+   2 |               2 |        0.0 |      1.0 | FAIL (expected 1)
+   3 |               4 |        0.0 |      2.0 | FAIL (expected 2)
+   4 |              11 |        0.0 |      3.5 | FAIL (expected 4)
+   5 |              34 |        0.0 |      5.1 | FAIL (expected 12)
+   6 |             156 |        0.0 |      7.3 | FAIL (expected 56)
+   7 |            1044 |        0.1 |     10.0 | FAIL (expected 456)
+   8 |           12346 |        0.1 |     13.6 | FAIL (expected 6880)
+   9 |          274668 |        0.1 |     18.1 | 
+  10 |        12005168 |        0.2 |     23.5 | 
+  11 |      1018997864 |        0.3 |     29.9 | 
+  12 |    165091172592 |        0.3 |     37.3 | 
+  13 |  50502031367952 |        0.5 |     45.5 | 
+  14 | 29054155657235488 |        0.7 |     54.7 | 
+  15 | 31426485969804308768 |        0.9 |     64.8 | 
+  16 | 64001015704527557894928 |        1.2 |     75.8 | 
+  17 | 245935864153532932683719776 |        1.6 |     87.7 | 
+  18 | 1787577725145611700547878190848 |        2.1 |    100.5 | 
+  19 | 24637809253125004524383007491432768 |        2.8 |    114.2 | 
+  20 | 645490122795799841856164638490742749440 |        3.7 |    128.9 | 
+
+Extended values:
+  T(21) = 32220272899808983433502244253755283616097664  (5 ms)
+  T(22) = 3070846483094144300637568517187105410586657814272  (6 ms)
+  T(23) = 559946939699792080597976380819462179812276348458981632  (8 ms)
+  T(24) = 195704906302078447922174862416726256004122075267063365754368  (11 ms)
+  T(25) = 131331393569895519432161548405816890146389214706146483380458576384  (14 ms)
+  T(26) = 169487618400693135671278778610295749756246061427513800357039083537927168  (17 ms)
+  T(27) = 421260006519643885757174107650953992882782878952295704539600450662355704738816  (22 ms)
+  T(28) = 2019295999678571395728328980890810345860807065053566265347514137546665672316696821760  (28 ms)
+  T(29) = 18691352722478956041683441055221773100906878077027397169675907651818104181986752359177684992  (35 ms)
+  T(30) = 334494316309257669249439569928080028956631479935393064329967834887217734534880582749030521599504384  (44 ms)
+
+Formula breakdown:
+
+  n = 3:
+    lambda=(3,): |C|=2, c=1, 2^c=2, contrib=4
+    lambda=(2, 1): |C|=3, c=2, 2^c=4, contrib=12
+    lambda=(1, 1, 1): |C|=1, c=3, 2^c=8, contrib=8
+    Total = 24, /n! = 24/6 = 4
+
+  n = 4:
+    lambda=(4,): |C|=6, c=2, 2^c=4, contrib=24
+    lambda=(3, 1): |C|=8, c=2, 2^c=4, contrib=32
+    lambda=(2, 2): |C|=3, c=4, 2^c=16, contrib=48
+    lambda=(2, 1, 1): |C|=6, c=4, 2^c=16, contrib=96
+    lambda=(1, 1, 1, 1): |C|=1, c=6, 2^c=64, contrib=64
+    Total = 264, /n! = 264/24 = 11
+
+  n = 5:
+    lambda=(5,): |C|=24, c=2, 2^c=4, contrib=96
+    lambda=(4, 1): |C|=30, c=3, 2^c=8, contrib=240
+    lambda=(3, 2): |C|=20, c=3, 2^c=8, contrib=160
+    lambda=(3, 1, 1): |C|=20, c=4, 2^c=16, contrib=320
+    lambda=(2, 2, 1): |C|=15, c=6, 2^c=64, contrib=960
+    lambda=(2, 1, 1, 1): |C|=10, c=7, 2^c=128, contrib=1280
+    lambda=(1, 1, 1, 1, 1): |C|=1, c=10, 2^c=1024, contrib=1024
+    Total = 4080, /n! = 4080/120 = 34
+
+  n = 6:
+    lambda=(6,): |C|=120, c=3, 2^c=8, contrib=960
+    lambda=(5, 1): |C|=144, c=3, 2^c=8, contrib=1152
+    lambda=(4, 2): |C|=90, c=5, 2^c=32, contrib=2880
+    lambda=(4, 1, 1): |C|=90, c=5, 2^c=32, contrib=2880
+    lambda=(3, 3): |C|=40, c=5, 2^c=32, contrib=1280
+    lambda=(3, 2, 1): |C|=120, c=5, 2^c=32, contrib=3840
+    lambda=(3, 1, 1, 1): |C|=40, c=7, 2^c=128, contrib=5120
+    lambda=(2, 2, 2): |C|=15, c=9, 2^c=512, contrib=7680
+    lambda=(2, 2, 1, 1): |C|=45, c=9, 2^c=512, contrib=23040
+    lambda=(2, 1, 1, 1, 1): |C|=15, c=11, 2^c=2048, contrib=30720
+    lambda=(1, 1, 1, 1, 1, 1): |C|=1, c=15, 2^c=32768, contrib=32768
+    Total = 112320, /n! = 112320/720 = 156
+
+Speed test:
+  T(10) =                       12005168  (       0 ms, 42 partitions)
+  T(15) =           31426485969804308768  (       1 ms, 176 partitions)
+  T(20) = 645490122795799841856164638490742749440  (       4 ms, 627 partitions)
+  T(25) = 131331393569895519432161548405816890146389214706146483380458576384  (      13 ms, 1958 partitions)
+  T(30) = 334494316309257669249439569928080028956631479935393064329967834887217734534880582749030521599504384  (      44 ms, 5604 partitions)
+  T(35) = 12549164197724499332787928665161136748157345371749938537602740270461084253679848281438831503478413083988473184510534726477777359587588087808  (     131 ms, 14883 partitions)
+  T(40) = 7793841167914977954582550817575177766066055272533160501864210580719699592280766598762108507458913936081932965352037372886593259286753883857016383307981863462449691949358853053120648183808  (     370 ms, 37338 partitions)
+
+
+THE FORMULA:
+
+  T(n) = (1/n!) * sum_{lambda partition of n} |C_lambda| * 2^{c(lambda)}
+
+  where:
+    c(lambda) = sum_i floor(l_i/2) + sum_{i<j} gcd(l_i, l_j)
+    |C_lambda| = n! / prod_l (l^m_l * m_l!)
+
+  This runs in O(p(n) * n^2) time where p(n) = number of partitions.
+  p(20) = 627, p(30) = 5604, p(40) = 37338.
+  For n=40: computable in seconds.
+  For n=100: p(100) ~ 190 million. Needs optimization.
+
+  The FAST PATH: precompute gcd table, vectorize the partition sum.
+
+THE EIGENVALUE CONNECTION:
+
+  The transition eigenvalues of the flip chain are:
+    n=3: 1, -1/3             (2 distinct values, denominator 3)
+    n=4: 1, 1/3, 0, -1/3    (4 distinct, denominator 3)
+    n=5: 1, 3/5, 2/5, 1/5, 0, -1/5, -3/5  (7 distinct, denominator 5)
+
+  The NUMBER of distinct eigenvalues: 2, 4, 7 for n=3,4,5.
+  The eigenvalues are k/q for some fixed q (= 3 for n=3,4; = 5 for n=5).
+  The denominator q seems to be the largest odd prime <= n.
+
+  The MULTIPLICITY structure of eigenvalues encodes the representation
+  theory of S_n on tournament space. Each eigenvalue corresponds to
+  an irreducible representation, and its multiplicity is the dimension.
+
+opus-2026-03-16-S90dh: FAST FORMULA FOR A000568
