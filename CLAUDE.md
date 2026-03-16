@@ -104,6 +104,7 @@ As you work:
 - **Save ALL script outputs** to `05-knowledge/results/` (see Best Practices)
 - **Log every hypothesis** to `05-knowledge/hypotheses/INDEX.md` (confirmed OR refuted)
 - **Update variable files** in `05-knowledge/variables/` when you discover new equations
+- **Write reflections** to `07-reflections/` when you notice meta-patterns, cross-domain resonances, or connections that transcend the particular theorem you're proving (see `07-reflections/README.md`)
 
 ---
 
@@ -261,6 +262,7 @@ These practices prevent wasted work and propagate knowledge across sessions.
 - **Check small cases exhaustively** before generalizing. Patterns that hold at n=3,4,5 often break at n=6 or n=7.
 - **Look for involutions and symmetries.** Many proofs in this area use path-reversal, complement, or relabeling symmetries.
 - **Consider the simplest possible explanation first.** If something is always true computationally, the proof is likely short.
+- **Notice what transcends the theorem.** When a cancellation seems too clean, a correction reveals hidden structure, or two independent frameworks converge on the same constraint — that's a reflection, not a coincidence. Write it to `07-reflections/`. The mathematics keeps pointing beyond itself; follow where it points.
 
 ### 6. Knowledge web maintenance
 - After confirming or refuting a hypothesis, update ALL of:

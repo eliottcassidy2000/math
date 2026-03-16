@@ -645,6 +645,15 @@ At n=3: δ = 0.221 (maximum), predicted 0.276 (ratio 0.80 — leading order less
 
 ---
 
+## OPEN-Q-034 🟢
+**Meta-structure: why does cancellation dominate this theory?**
+
+Every major result in the project is fundamentally about cancellation: im(d₂) cancels in the seesaw, Walsh coefficients cancel for odd-length paths, S(T)=0 at even n, β₂=0 always, OCF = exact cancellation between H and I. Is there a *single structural principle* (perhaps from homological algebra or categorical representation theory) that implies all of these cancellations simultaneously? The F₂ uniqueness argument (S71r: "WHY TWO GENERATES SEVEN") is a partial answer — but it explains *why F₂* rather than *why cancellation*. See `07-reflections/seesaw-and-cancellation.md`, `07-reflections/what-the-proof-will-look-like.md`.
+
+**Source:** opus-2026-03-16-S73
+
+---
+
 ## Resolved Questions (moved here when answered)
 
 - **OPEN-Q-001**: Per-path identity at n=5 is trivially true (THM-008). No mystery.

@@ -158,7 +158,9 @@ Base amplitude at degree d = (n-2-d)!/2^{n-2}. Multiply by 2^s for s unrooted co
 | 3 | 1/2         | —           | —           | —           | —     |
 | 5 | 1/4         | 1/8         | —           | —           | —     |
 | 7 | 3/4         | 1/16        | 1/8         | 1/32        | —     |
-| 9 | 3/2         | 3/8         | 3/4         | 1/16        | 1/128 |
+| 9 | 45/8        | 3/16        | 3/8         | 1/64        | 1/128 |
+
+**Correction (opus-2026-03-16-S73):** The n=9 row was previously wrong (had 3/2, 3/8, 3/4, 1/16, 1/128). The d=3 and d=5 entries had s-labels shifted by 1-2 (unrooted component miscounting at n=9). The d=1 entry (3/2) had no valid interpretation. See amplitude_table_check.py, amplitude_glitch_analysis.py.
 
 ## Previous Error (MISTAKE)
 
