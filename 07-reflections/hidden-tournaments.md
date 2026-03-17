@@ -123,6 +123,74 @@ And the three signals measure:
 
 **A/B testing + hallucination detection.** No existing A/B testing framework can detect when multiple tests produce contradictory results (Simpson's paradox / intransitive preferences). Our fast-channel detector fills this gap. This is a product that could be built TODAY with existing code.
 
+## Tier 4: The Deepest Hidden Tournaments
+
+### 14. Quantum Measurement (Basis State Competition)
+
+**Measurement collapses a superposition into one basis state.** The basis states "compete" — einselection (environment-induced superselection) is a tournament where the pointer basis "wins" against all other bases. Decoherence is the spectral gap. The "hallucination" detector would flag Schrodinger-cat states where two macroscopically different outcomes are still competing.
+
+### 15. Cache Eviction (Memory Slot Competition)
+
+**Every cache line competes to stay in cache.** LRU, LFU, and hybrid policies (W-TinyLFU, ARC) are different tournament ranking strategies. Recency = slow signal (persistent value). Frequency = medium signal (pattern). The "2-random" eviction policy LITERALLY uses a 2-item tournament. Our polynomial framework would adaptively weight recency vs frequency vs novelty — three signals from every cache access.
+
+### 16. Hiring / Interview Processes
+
+**Candidates compete pairwise through interviews.** Research confirms: "pairwise comparison data in hiring contexts is noisy and potentially inconsistent, with evaluators' biases affecting comparisons." Contrast bias = the interview tournament has intransitivity. Our hallucination detector applied to interview scores would flag when the same candidate is ranked differently depending on who they're compared against — detecting bias quantitatively.
+
+### 17. Democratic Deliberation (Argument Tournament)
+
+**In deliberation, arguments compete pairwise.** Thesis meets antithesis, synthesis emerges. The Condorcet paradox (no option beats all others) IS intransitivity in the argument tournament. Our polynomial P(z) applied to deliberation: A_0 = default status quo, A_1 = individual argument strength, A_3 = circular reasoning detection. The fast channel flags when the deliberation is going in circles.
+
+### 18. Language Evolution (Word Competition)
+
+**Words compete to fill semantic niches.** Loanwords "beat" native words when they're more expressive. Lexical replacement IS a tournament — English "beef" (French) beat "cow-meat" (English) for the cooked form. Intransitivity: word A replaces B in formal register, B replaces C in casual, but C replaces A in slang. The polynomial tracks which register "wins" at each temperature (formality level).
+
+### 19. Protein Folding (Conformation Tournament)
+
+**Each conformation competes with neighbors by energy.** The folding funnel IS the polynomial P(z) with z = 1/temperature. At high T (z near 0): all conformations equally likely. At low T (z near 1): native state wins. The spectral gap of the energy landscape controls folding speed. Misfolding = getting stuck in an intransitive pocket where local energy comparisons cycle.
+
+### 20. Dating Apps (Swipe Tournament)
+
+**Every swipe is a pairwise comparison.** The set of all swipe decisions forms a tournament per user. Tinder's algorithm IS a tournament ranking system. Intransitivity: you swipe right on A over B, right on B over C, but left on A vs C. This is REAL and common — attractiveness is multidimensional and NOT transitive. Our framework would detect which users have the most intransitive preferences (hardest to match) and route them differently.
+
+### 21. Neural Network Loss Landscape
+
+**Each parameter setting competes with neighbors by loss.** Gradient descent IS the flip chain. Saddle points = intransitive regions where no direction consistently wins. The spectral gap of the Hessian controls convergence. Our polynomial applied to training dynamics: A_1 = gradient magnitude (which direction to go), A_3 = saddle point proximity (fast channel spike = near a saddle, should increase learning rate).
+
+## The Complete Count: 21 Hidden Tournaments
+
+| # | Domain | Items | Comparisons | Our Value-Add |
+|---|--------|-------|-------------|---------------|
+| 1 | Attention mechanism | Key positions | Q·K products | Hallucination at attention level |
+| 2 | Immune system | B cells | Binding affinity | Autoimmunity detection |
+| 3 | Order book | Limit orders | Price matching | Market manipulation detection |
+| 4 | A/B testing | Variants | Test results | Cycle detection (Simpson's paradox) |
+| 5 | Loss landscape | Parameters | Loss values | Saddle point detection |
+| 6 | Protein folding | Conformations | Energy | Misfolding risk |
+| 7 | Sorting | Items | Comparisons | Partial-sort quality measure |
+| 8 | PageRank | Web pages | Links | Link spam detection |
+| 9 | Self-play RL | Agent versions | Game outcomes | Training stagnation detection |
+| 10 | Evolutionary algorithms | Individuals | Fitness | Rock-paper-scissors dynamics |
+| 11 | Recommendation | Items | User clicks | Filter bubble detection |
+| 12 | Compiler scheduling | Instructions | Pipeline slots | Bottleneck identification |
+| 13 | Drug discovery | Molecules | Binding assays | Assay-dependent results |
+| 14 | Quantum measurement | Basis states | Einselection | Cat-state detection |
+| 15 | Cache eviction | Cache lines | Access events | Adaptive eviction policy |
+| 16 | Hiring | Candidates | Interviews | Bias/inconsistency detection |
+| 17 | Deliberation | Arguments | Debate outcomes | Circular reasoning detection |
+| 18 | Language evolution | Words | Usage competition | Register-dependent ranking |
+| 19 | Protein folding | Conformations | Energy diffs | Misfolding risk at temperature |
+| 20 | Dating apps | Profiles | Swipes | Intransitive preference detection |
+| 21 | NN training | Param configs | Loss landscape | Saddle proximity / LR scheduling |
+
+## The Three Most Buildable Products
+
+**1. A/B Test Cycle Detector** — plug into any experimentation platform (Optimizely, LaunchDarkly), detect when multiple tests contradict each other. NO existing product does this. Ship in 2 weeks using existing code.
+
+**2. Interview Bias Detector** — analyze pairwise interview scores for intransitivity. Flag when interviewers rank the same candidate differently depending on comparison order. Enterprise HR product. Ship in 4 weeks.
+
+**3. Attention-Level Hallucination Monitor** — decompose transformer attention patterns into slow/medium/fast channels. Flag hallucination BEFORE the token is generated, not after. Research paper + open-source tool. Ship in 8 weeks.
+
 Sources:
 - [PLuG-Attention: Pairwise Logit Gating (ICLR 2026)](https://openreview.net/forum?id=OgVBUtsYKo)
 - [Antibody Affinity Maturation (2025)](https://www.biointron.com/antibody-industry-trends/week-4-march-2025-the-evolving-landscape-of-antibody-affinity-maturation.html)
