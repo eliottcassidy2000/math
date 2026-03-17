@@ -1,0 +1,126 @@
+================================================================================
+DEMO 1: LLM ARENA — Three channels reveal different truths
+================================================================================
+
+BoostRanker | 500 observations | 5 items
+================================================================================
+
+Rank |         Item | Combined |   Inert | Ramified |   Split |         Type
+---------------------------------------------------------------------------
+   1 |     Claude-4 |   +31.81 |  +139.0 |   +63.61 |  -18.00 |   CONSISTENT
+   2 |        GPT-5 |   +28.93 |  +116.0 |   +57.86 |   +0.71 |   CONSISTENT
+   3 |     Gemini-2 |    -1.72 |   -27.0 |    -3.45 |  -19.65 |   CONSISTENT
+   4 |    Mistral-L |   -13.59 |   -86.0 |   -27.17 |   +8.19 |   CONSISTENT
+   5 |      Llama-4 |   -45.43 |  -142.0 |   -90.86 |  +28.75 |   CONSISTENT
+
+ANOMALIES (upsets):
+  Obs #242: Llama-4 beat Gemini-2 (surprise=100%, margin=8%)
+  Obs #278: Gemini-2 beat Claude-4 (surprise=100%, margin=5%)
+  Obs #283: Llama-4 beat Gemini-2 (surprise=100%, margin=5%)
+  Obs #285: Llama-4 beat Gemini-2 (surprise=100%, margin=6%)
+  Obs #315: Gemini-2 beat GPT-5 (surprise=100%, margin=6%)
+
+TRICHOTOMY PROFILES:
+         Model | Win Rate | Avg Margin |  Surprise |       Character
+  -----------------------------------------------------------------
+      Claude-4 |     89% |     +0.355 |    -0.101 | DOMINANT
+         GPT-5 |     81% |     +0.305 |    +0.004 | DOMINANT
+      Gemini-2 |     44% |     -0.016 |    -0.093 | AVERAGE
+       Llama-4 |     17% |     -0.425 |    +0.134 | AVERAGE
+     Mistral-L |     29% |     -0.132 |    +0.040 | AVERAGE
+
+================================================================================
+DEMO 2: SPORTS — Detecting dynasties, upsets, and parity
+================================================================================
+
+BoostRanker | 65 observations | 5 items
+================================================================================
+
+Rank |         Item | Combined |   Inert | Ramified |   Split |         Type
+---------------------------------------------------------------------------
+   1 |      Dynasty |   +30.64 |   +23.0 |   +61.28 |   -2.94 |     DECISIVE
+   2 |    Contender |   +10.25 |    +6.0 |   +20.50 |   +1.53 |     DECISIVE
+   3 |      Spoiler |    -4.18 |    +1.0 |    -8.35 |   -1.41 |     DECISIVE
+   4 |   Rebuilding |   -16.51 |   -15.0 |   -33.02 |   -2.08 |     DECISIVE
+   5 |    Expansion |   -20.20 |   -15.0 |   -40.40 |   +4.90 |     DECISIVE
+
+ANOMALIES (upsets):
+  Obs #50: Expansion beat Rebuilding (surprise=100%, margin=1%)
+  Obs #47: Expansion beat Rebuilding (surprise=100%, margin=1%)
+  Obs #39: Spoiler beat Dynasty (surprise=100%, margin=25%)
+  Obs #59: Spoiler beat Contender (surprise=100%, margin=14%)
+  Obs #29: Expansion beat Rebuilding (surprise=100%, margin=1%)
+
+TRICHOTOMY INSIGHT:
+  Contender: LOW surprise (0.09/game)
+    → Predictable. You know what you're getting.
+  Spoiler: LOW surprise (0.06/game)
+    → Predictable. You know what you're getting.
+  Rebuilding: LOW surprise (0.06/game)
+    → Predictable. You know what you're getting.
+
+================================================================================
+DEMO 3: A/B/C TEST — Automatic stopping rule from spectral gap
+================================================================================
+
+  Running test... (stopping when 95% confident)
+
+  Obs   50: leader=   Control, confidence vs #2 (Variant_B): 1.0%
+  Obs  100: leader= Variant_B, confidence vs #2 (Control): 76.5%
+  Obs  150: leader= Variant_B, confidence vs #2 (Control): 100.0%
+
+  *** STOPPED at obs 150: Variant_B wins with 100.0% confidence ***
+  True rates: {'Control': 0.1, 'Variant_A': 0.12, 'Variant_B': 0.09}
+  Correct: NO
+
+================================================================================
+DEMO 4: HIRING — Detecting interviewer disagreements via cycles
+================================================================================
+
+BoostRanker | 10 observations | 4 items
+================================================================================
+
+Rank |         Item | Combined |   Inert | Ramified |   Split |         Type
+---------------------------------------------------------------------------
+   1 |        Alice |    +0.64 |    +0.0 |    +1.27 |   -2.31 | UNPREDICTABLE
+   2 |        Carol |    +0.52 |    +1.0 |    +1.04 |   +0.42 |     BALANCED
+   3 |          Bob |    +0.23 |    +1.0 |    +0.46 |   +1.98 | UNPREDICTABLE
+   4 |         Dave |    -1.39 |    -2.0 |    -2.77 |   -0.08 |     BALANCED
+
+ANOMALIES (upsets):
+  Obs #5: Carol beat Alice (surprise=92%, margin=60%)
+  Obs #9: Bob beat Alice (surprise=87%, margin=50%)
+  Obs #8: Bob beat Carol (surprise=64%, margin=50%)
+
+CYCLES DETECTED (3):
+  Bob > Carol > Alice > Bob
+  Dave > Bob > Alice > Dave
+  Dave > Bob > Carol > Dave
+
+INTERPRETATION:
+  Cycles indicate interviewer DISAGREEMENT, not candidate ambiguity.
+  The SPLIT channel score tells you which candidates are most
+  contentious (high |split|) vs consensus picks (low |split|).
+
+  Alice: CONTENTIOUS (split=-0.39) — interviewers disagree
+  Dave: CONSENSUS (split=-0.02) — interviewers agree
+  Bob: CONTENTIOUS (split=+0.40) — interviewers disagree
+  Carol: CONSENSUS (split=+0.08) — interviewers agree
+
+================================================================================
+DEMO 5: THROUGHPUT — Three channels at scale
+================================================================================
+
+   observations |  items |  time ms |    obs/sec
+  --------------------------------------------------
+         10,000 |  1,000 |     25ms |  396,336/s
+        100,000 |  5,000 |    279ms |  358,046/s
+      1,000,000 |  5,000 |   3255ms |  307,255/s
+
+================================================================================
+BoostRanker v1.0 — The Boost Trichotomy
+  INERT channel  (mod 2): who wins? → binary ranking
+  RAMIFIED channel (mod 3): by how much? → confidence
+  SPLIT channel   (mod 7): surprise? → anomaly detection
+Three truths from one comparison. 42 = 2 * 3 * 7.
+================================================================================
