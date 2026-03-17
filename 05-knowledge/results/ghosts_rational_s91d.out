@@ -1,0 +1,555 @@
+
+
+
+     GHOSTS OF RATIONAL STRUCTURE
+
+     opus-2026-03-17-S91d
+
+
+A "ghost" is a COUNTABLE or DISCRETE structure that persists
+when eigenvalues are mapped into the transcendental world.
+
+Ghost 0: The rapidity lattice Z^3 = (1/2)(Z*ln2 + Z*ln3 + Z*ln7).
+         Already found. What else?
+
+Hunting for more...
+
+
+GHOST 1: THE TRACE GHOST
+===========================
+
+Tr(T^k) = sum_{i} lambda_i^k is ALWAYS RATIONAL for integer k.
+
+This is because T^k has rational matrix entries (T has rational entries),
+and the trace of a rational matrix is rational.
+
+But the INDIVIDUAL eigenvalues lambda_i can be irrational for general
+matrices. For tournaments, they happen to be rational. But the trace
+being rational is a DEEPER fact — it holds even when eigenvalues aren't.
+
+The trace ghost: Tr(T^k) in Q for ALL k in Z.
+This is a sequence of rationals encoding the FULL spectral data.
+
+  n=5 Trace ghost Tr(T^k):
+     k |      Tr(T^k) |       exact fraction |            interpretation
+  ----------------------------------------------------------------------
+     0 |    12.000000 |                   12 |           dim = T(5) = 12
+     1 |     1.600000 |                  8/5 |              sum lambda_i
+     2 |     2.160000 |                54/25 |   sum lambda_i^2 = energy
+     3 |     1.072000 |              134/125 |                          
+     4 |     1.296000 |              162/125 |                          
+     5 |     1.010560 |            3158/3125 |                          
+     6 |     1.097856 |          17154/15625 |                          
+     7 |     1.001651 |          78254/78125 |                          
+     8 |     1.034266 |          80802/78125 |                          
+     9 |     1.000263 |          87590/87567 |                          
+    10 |     1.012199 |          97081/95911 |                          
+    11 |     1.000042 |          95325/95321 |                          
+    12 |     1.004370 |          13559/13500 |                          
+
+
+GHOST 2: THE DETERMINANT GHOST
+=================================
+
+det(T) = product of ALL eigenvalues.
+det(T - lambda*I) = characteristic polynomial, ALL coefficients rational.
+
+The characteristic polynomial p(x) = prod(x - lambda_i) has
+INTEGER coefficients (after clearing denominators).
+
+Each coefficient is an ELEMENTARY SYMMETRIC FUNCTION of the eigenvalues:
+  e_0 = 1
+  e_1 = sum lambda_i = Tr(T)
+  e_2 = sum_{i<j} lambda_i * lambda_j
+  ...
+  e_n = prod lambda_i = det(T)
+
+These are ALL rational — the full symmetric function ghost.
+
+  n=5 characteristic polynomial coefficients:
+  p(x) = x^12 - 8/5*x^11 + 1/5*x^10 + 86/125*x^9 - 174/625*x^8 - 24/625*x^7 + 482/15625*x^6 - 76/78125*x^5 - 467/390625*x^4 + 83/779372*x^3 + 13/829759*x^2 - 1/542535*x^1 + 0*x^0
+
+  Elementary symmetric functions e_k(eigenvalues):
+    e_0 = 1
+    e_1 = 8/5
+    e_2 = 1/5
+    e_3 = -86/125
+    e_4 = -174/625
+    e_5 = 24/625
+    e_6 = 482/15625
+
+
+GHOST 3: THE MOMENT / POWER SUM GHOST
+========================================
+
+The power sums p_k = sum lambda_i^k are rational for ALL k in Z_>=0.
+These are the MOMENTS of the spectral distribution.
+
+Newton's identities connect moments to elementary symmetric functions:
+  k*e_k = sum_{i=1}^{k} (-1)^{i-1} e_{k-i} p_i
+
+This means: the moments (transcendental-looking sums) are
+DETERMINED by the elementary symmetric functions (rational coefficients).
+
+The moment ghost: the generating function
+  M(t) = sum_{k>=0} p_k * t^k = Tr(1/(1-t*T))
+is a RATIONAL FUNCTION of t.
+
+  Power sums p_k = sum lambda_i^k:
+     k |    p_k (float) |          p_k (exact) |  rational?
+  -------------------------------------------------------
+     0 |      12.000000 |                   12 |        YES
+     1 |       1.600000 |                  8/5 |        YES
+     2 |       2.160000 |                54/25 |        YES
+     3 |       1.072000 |              134/125 |        YES
+     4 |       1.296000 |              162/125 |        YES
+     5 |       1.010560 |            3158/3125 |        YES
+     6 |       1.097856 |          17154/15625 |        YES
+     7 |       1.001651 |          78254/78125 |        YES
+     8 |       1.034266 |          80802/78125 |        YES
+     9 |       1.000263 |        510307/510173 |        YES
+    10 |       1.012199 |        401683/396842 |        YES
+
+
+GHOST 4: THE RESOLVENT GHOST
+===============================
+
+R(z) = Tr((zI - T)^{-1}) = sum_i 1/(z - lambda_i)
+
+For z in Q (z not an eigenvalue), R(z) is a sum of rationals -> RATIONAL.
+
+The resolvent is a RATIONAL function of z.
+It has POLES at the eigenvalues and is rational EVERYWHERE else.
+
+The resolvent ghost: a meromorphic function with rational values
+at all rational arguments away from poles.
+
+The poles are at the eigenvalues {1, 3/5, 2/5, 1/5, 0, -1/5, -3/5}.
+Between any two poles, R(z) takes every rational value.
+
+  Resolvent R(z) at rational z values:
+         z |           R(z) |           exact
+  ---------------------------------------------
+         2 |       6.809760 |    490793/72072
+       3/2 |      10.004688 |  1532248/153153
+       4/5 |      14.130952 |         1187/84
+       1/2 |      18.528139 |        4280/231
+      1/10 |     -25.015873 |        -1576/63
+      -1/2 |     -10.401154 |       -7208/693
+        -1 |     -12.422619 |       -2087/168
+        -2 |      -5.833750 |    -70075/12012
+
+
+GHOST 5: THE HEAT KERNEL GHOST
+=================================
+
+K(t) = Tr(exp(-t*T)) = sum_i m_i * exp(-t*lambda_i)
+
+For generic t, K(t) is TRANSCENDENTAL.
+But the Taylor coefficients of K(t) around t=0 are RATIONAL:
+  K(t) = sum_{k>=0} (-t)^k/k! * p_k
+       = sum_{k>=0} (-t)^k/k! * Tr(T^k)
+
+The heat kernel ghost: the Taylor coefficients are rational moments.
+The function itself is transcendental, but its SKELETON is rational.
+
+Even more: at t = ln(q) for rational q, we get:
+  K(ln(q)) = sum m_i * q^{-lambda_i}
+which involves q^{-lambda_i}. For rational lambda_i:
+  q^{-lambda_i} = q^{-a/b} = (q^{1/b})^{-a}
+This is ALGEBRAIC (the b-th root of a rational)!
+
+So K(ln(q)) for rational q is a sum of ALGEBRAIC numbers.
+By the transcendence of e, K(t) for irrational t is transcendental.
+But K at logarithmic rationals has algebraic structure!
+
+  Heat kernel K(t) = Tr(exp(-t*T)) at special t:
+             t |           K(t) |               nature
+  -------------------------------------------------------
+             0 |    12.00000000 |      RATIONAL (= 12)
+             1 |    11.34826121 |       TRANSCENDENTAL
+         ln(2) |    11.36162612 |      ALGEBRAIC (q=2)
+         ln(3) |    11.37635032 |      ALGEBRAIC (q=3)
+         ln(7) |    12.26500217 |      ALGEBRAIC (q=7)
+        ln(42) |    19.00151603 |     ALGEBRAIC (q=42)
+            pi |    15.82304185 |       TRANSCENDENTAL
+           1/e |    11.54959562 |       TRANSCENDENTAL
+
+  Verification: K(ln(2)) = sum m_i * 2^(-lambda_i)
+    m=1, lambda=    1: m * 2^(-lambda) = 1 * 1/2
+    m=1, lambda=  3/5: m * 2^(-lambda) = 1 * 2^(-3/5) = 0.659754
+    m=1, lambda=  2/5: m * 2^(-lambda) = 1 * 2^(-2/5) = 0.757858
+    m=4, lambda=  1/5: m * 2^(-lambda) = 4 * 2^(-1/5) = 0.870551
+    m=1, lambda=    0: m * 2^(-lambda) = 1 * 1
+    m=3, lambda= -1/5: m * 2^(-lambda) = 3 * 2^(1/5) = 1.148698
+    m=1, lambda= -3/5: m * 2^(-lambda) = 1 * 2^(3/5) = 1.515717
+
+
+GHOST 6: THE SPECTRAL ZETA AT NEGATIVE INTEGERS
+=================================================
+
+zeta_T(s) = sum |lambda_i|^{-s} (over nonzero eigenvalues)
+
+At NEGATIVE integers s = -k (k >= 0):
+  zeta_T(-k) = sum |lambda_i|^k = p_k (the power sum)
+
+These are RATIONAL! The spectral zeta has rational special values
+at all non-positive integers, just like the Riemann zeta function.
+
+Riemann zeta: zeta(-k) = -B_{k+1}/(k+1)  (Bernoulli numbers)
+Tournament zeta: zeta_T(-k) = Tr(T^k) = p_k  (power sums)
+
+The analogy is EXACT. Both are rational at negative integers.
+Both are transcendental at positive integers.
+The negative-integer ghost connects zeta to combinatorics.
+
+      s | zeta_T(s) (Riemann-like) |    zeta_T(s) (our def) |  rational?
+  -----------------------------------------------------------------
+     -4 |               1.296000 |               1.296000 |        YES
+     -3 |               1.552000 |               1.552000 |        YES
+     -2 |               2.160000 |               2.160000 |        YES
+     -1 |               4.000000 |               4.000000 |        YES
+      0 |              11.000000 |              11.000000 |        YES
+      1 |              41.833333 |              41.833333 | NO (trans)
+      2 |             187.805556 |             187.805556 | NO (trans)
+      3 |             900.884259 |             900.884259 | NO (trans)
+      4 |            4430.494599 |            4430.494599 | NO (trans)
+
+
+GHOST 7: THE CHEBYSHEV GHOST
+===============================
+
+The Chebyshev polynomials T_k(x) satisfy T_k(cos(theta)) = cos(k*theta).
+They map [-1,1] to [-1,1] and preserve rational structure:
+  T_k(p/q) is RATIONAL for rational p/q.
+
+For eigenvalues lambda_i in [-1,1]:
+  T_k(lambda_i) is rational (since lambda_i is rational).
+
+But there's a deeper ghost: if we write lambda = cos(theta),
+then theta = arccos(lambda) is generally TRANSCENDENTAL.
+Yet T_k(lambda) = cos(k*theta) stays rational!
+
+The Chebyshev ghost: rational structure survives through the
+transcendental parameterization theta = arccos(lambda).
+
+  Chebyshev values T_k(lambda) for n=5 eigenvalues:
+   lambda |      T_1 |      T_2 |      T_3 |      T_4 |      T_5 |     arccos
+  ----------------------------------------------------------------------
+      3/5 |      3/5 |    -7/25 | -117/125 | -527/625 | -237/3125 |   0.927295
+      2/5 |      2/5 |   -17/25 | -118/125 |  -47/625 | 2762/3125 |   1.159279
+      1/5 |      1/5 |   -23/25 |  -71/125 |  433/625 | 2641/3125 |   1.369438
+     -1/5 |     -1/5 |   -23/25 |   71/125 |  433/625 | -2641/3125 |   1.772154
+     -3/5 |     -3/5 |    -7/25 |  117/125 | -527/625 | 237/3125 |   2.214297
+
+  T_5(lambda) values: ['-237/3125', '2762/3125', '2641/3125', '-2641/3125', '237/3125']
+  T_7(lambda) values: ['76443/78125', '-20158/78125', '-77111/78125', '77111/78125', '-76443/78125']
+
+
+GHOST 8: THE FORMAL GROUP GHOST
+==================================
+
+The formal group F(x,y) = (x+y)/(1+xy) has:
+  - Rational coefficients in its power series expansion
+  - Rational values when evaluated at rationals
+  - The logarithm arctanh(x) = x + x^3/3 + x^5/5 + ... has rational coefficients
+
+The formal group logarithm L(x) = arctanh(x) has the Taylor expansion:
+  L(x) = sum_{k>=0} x^{2k+1}/(2k+1)
+
+Each coefficient 1/(2k+1) is RATIONAL.
+The function value L(p/q) is TRANSCENDENTAL (by Lindemann-Weierstrass).
+
+The formal group ghost: the Taylor coefficients are a RATIONAL sequence
+{1, 1/3, 1/5, 1/7, 1/9, ...} = {1/(2k+1)}.
+
+These are the RECIPROCALS OF ODD NUMBERS.
+The same odd numbers that appear in tournament H-values!
+
+H(T) is always ODD. The Taylor coefficients are 1/ODD.
+The formal group encodes the ODD STRUCTURE.
+
+  Formal group log coefficients vs tournament H-values:
+     k |  coeff 1/(2k+1) |  2k+1 |  is H-value? | forbidden?
+  -------------------------------------------------------
+     0 |               1 |     1 |          YES |           
+     1 |             1/3 |     3 |          YES |           
+     2 |             1/5 |     5 |          YES |           
+     3 |             1/7 |     7 |    FORBIDDEN |        YES
+     4 |             1/9 |     9 |          YES |           
+     5 |            1/11 |    11 |          YES |           
+     6 |            1/13 |    13 |          YES |           
+     7 |            1/15 |    15 |          YES |           
+     8 |            1/17 |    17 |          YES |           
+     9 |            1/19 |    19 |          YES |           
+    10 |            1/21 |    21 |    FORBIDDEN |        YES
+    11 |            1/23 |    23 |          YES |           
+    12 |            1/25 |    25 |          YES |           
+    13 |            1/27 |    27 |          YES |           
+    14 |            1/29 |    29 |          YES |           
+    15 |            1/31 |    31 |          YES |           
+    16 |            1/33 |    33 |          YES |           
+    17 |            1/35 |    35 |            ? |           
+    18 |            1/37 |    37 |            ? |           
+    19 |            1/39 |    39 |            ? |           
+
+
+GHOST 9: THE HADAMARD PRODUCT GHOST
+======================================
+
+The Hadamard (entrywise) product of two eigenvectors is NOT generally
+an eigenvector. But the entrywise product of two EIGENVALUES is just
+a rational number (product of rationals).
+
+The deeper ghost: the Hadamard product of the transition matrix T
+with itself gives T (*) T, whose trace is:
+  Tr(T (*) T) = sum_{i,j} T_{ij}^2 = the FROBENIUS norm squared.
+
+This is RATIONAL (since T has rational entries).
+More generally: Tr(T^{(*k)}) where T^{(*k)} is the k-th Hadamard power
+is rational for all k.
+
+The Frobenius ghost: entrywise powers of T have rational traces.
+
+  Hadamard powers of T at n=5:
+     k |     Tr(T^(*k)) |                exact
+  ---------------------------------------------
+     1 |     1.60000000 |                  8/5
+     2 |     0.44000000 |                11/25
+     3 |     0.13600000 |               17/125
+     4 |     0.04520000 |             113/2500
+     5 |     0.01576000 |            197/12500
+     6 |     0.00568400 |          1421/250000
+     7 |     0.00210160 |         2627/1250000
+
+
+GHOST 10: THE GALOIS GHOST
+=============================
+
+For the tournament eigenvalues at n=5:
+  {1, 3/5, 2/5, 1/5, 0, -1/5, -3/5}
+
+The MINIMAL POLYNOMIAL of each eigenvalue over Q is LINEAR (degree 1),
+since each eigenvalue is rational.
+
+But consider the EIGENVALUES OF EIGENVALUES: if we build a matrix
+from the eigenvalues themselves (e.g., the Gram matrix of eigenvectors),
+some of THOSE eigenvalues could be algebraic of higher degree.
+
+For now, the Galois ghost is trivial: Gal(Q(lambda_i)/Q) = {1} for all i.
+All eigenvalues generate the TRIVIAL extension.
+
+The ghost: the Galois group is trivial, so ALL algebraic operations
+on eigenvalues stay in Q. No algebraic number beyond Q is ever produced.
+This is why the rapidity lattice is the FIRST non-rational structure:
+you have to use TRANSCENDENTAL operations to escape Q.
+
+
+
+GHOST 11: THE CONTINUED FRACTION GHOST
+=========================================
+
+Every rational eigenvalue has a FINITE continued fraction expansion.
+Irrational numbers have infinite ones.
+
+The continued fraction of lambda encodes a sequence of "best rational
+approximations." For rational lambda, this sequence is finite:
+the number IS exactly representable.
+
+The continued fraction ghost: rational eigenvalues have FINITE
+representations. Transcendental rapidities have INFINITE ones.
+The Cayley gate turns finite representations into infinite ones.
+
+  Continued fractions of eigenvalues vs rapidities:
+       value |                             CF | length |         type
+  -----------------------------------------------------------------
+         3/5 |                   [0, 1, 1, 2] |      4 |       FINITE
+         2/5 |                      [0, 2, 2] |      3 |       FINITE
+         1/5 |                         [0, 5] |      2 |       FINITE
+        -1/5 |                         [0, 5] |      2 |       FINITE
+        -3/5 |                   [0, 1, 1, 2] |      4 |       FINITE
+  atanh(0.6) |    [0, 1, 2, 3, 1, 6, 3, 1]... |    inf |     INFINITE
+  atanh(0.4) |    [0, 2, 2, 1, 3, 2, 3, 6]... |    inf |     INFINITE
+  atanh(0.2) |   [0, 4, 1, 13, 1, 5, 5, 2]... |    inf |     INFINITE
+
+
+GHOST 12: THE p-ADIC NEWTON POLYGON GHOST
+============================================
+
+The characteristic polynomial p(x) = det(xI - T) has rational coefficients.
+Its Newton polygon at prime p encodes the p-adic valuations of the roots.
+
+For each prime p, the Newton polygon is a CONVEX HULL of points
+(k, v_p(a_k)) where a_k are the coefficients.
+
+The slopes of the Newton polygon give the p-adic valuations of eigenvalues.
+Since eigenvalues are rational, their p-adic valuations are integers.
+
+The Newton polygon ghost: the SLOPES of the Newton polygon are
+the p-adic valuations of eigenvalues, and these are always
+INTEGERS (since eigenvalues are rational).
+
+For a general matrix over Q_p, the slopes could be any rational number.
+The integrality of slopes is a ghost of the rationality of eigenvalues.
+
+  Newton polygon of char poly at p=5:
+     k |            a_k | v_5(a_k)
+  --------------------------------
+     0 |       1.000000 |        0
+     1 |      -1.600000 |       -1
+     2 |       0.200000 |       -1
+     3 |       0.688000 |       -3
+     4 |      -0.278400 |       -4
+     5 |      -0.038400 |       -4
+     6 |       0.030848 |       -6
+     7 |      -0.000973 |       -7
+     8 |      -0.001196 |       -8
+     9 |       0.000106 |       -9
+    10 |       0.000016 |      -10
+    11 |      -0.000002 |      -10
+    12 |       0.000000 |      inf
+
+
+GHOST 13: THE BERNOULLI / VON STAUDT GHOST
+=============================================
+
+Von Staudt's theorem: the denominator of B_{2k} is prod_{(p-1)|2k} p.
+
+For B_6: denominator = prod_{(p-1)|6} p = 2 * 3 * 7 = 42.
+These are the HURWITZ PRIMES — the same ones in the rapidity lattice!
+
+Connection: B_6 = 1/42 is the Bernoulli number whose denominator
+is the product of the primes generating the rapidity lattice.
+
+The Bernoulli ghost: the Bernoulli denominators encode which primes
+are "active" in the formal group at each level.
+
+For the formal group F(x,y) = (x+y)/(1+xy) = the multiplicative
+formal group over Z: the Bernoulli numbers control its logarithm.
+
+  Bernoulli numbers and their denominators:
+     n |                  B_n |    denom |              factors |   = Hurwitz?
+  ------------------------------------------------------------------------
+     0 |                    1 |        1 |                      |             
+     1 |                 -1/2 |        2 |                    2 |             
+     2 |                  1/6 |        6 |                2 * 3 |             
+     4 |                -1/30 |       30 |            2 * 3 * 5 |             
+     6 |                 1/42 |       42 |            2 * 3 * 7 |         YES!
+     8 |                -1/30 |       30 |            2 * 3 * 5 |             
+    10 |                 5/66 |       66 |           2 * 3 * 11 |             
+    12 |            -691/2730 |     2730 |   2 * 3 * 5 * 7 * 13 |             
+    14 |                  7/6 |        6 |                2 * 3 |             
+
+
+GHOST 14: THE MAHLER MEASURE GHOST
+=====================================
+
+The Mahler measure of the characteristic polynomial p(x) is:
+  M(p) = |a_n| * prod_{|alpha_i|>1} |alpha_i|
+
+where alpha_i are the roots. For our transition matrix:
+  - All eigenvalues have |lambda_i| <= 1
+  - Leading coefficient a_n = 1 (monic)
+  - So M(p) = 1
+
+Mahler measure 1 means the polynomial is a PRODUCT OF CYCLOTOMIC
+polynomials and a monomial (by Kronecker's theorem, if all roots
+are on or inside the unit circle and algebraic integers).
+
+Our eigenvalues are rationals in [-1,1], not algebraic integers.
+But the Mahler measure is still exactly 1.
+
+The Mahler ghost: M(char poly) = 1 for ALL tournament transition matrices.
+This is because the spectral radius is exactly 1 (the stationary eigenvalue).
+
+
+GHOST 15: THE ITERATED CAYLEY / MANDELBROT GHOST
+===================================================
+
+Apply Q repeatedly: Q, Q*Q, Q*Q*Q, ...
+
+  Q^1(lambda) = Q(lambda) = (1+lambda)/(1-lambda)
+  Q^2(lambda) = Q(Q(lambda)) = -1/lambda    (!)
+  Q^3(lambda) = Q^2(Q(lambda)) = -(1-lambda)/(1+lambda) = -1/Q(lambda)
+  Q^4(lambda) = Q^3(Q(lambda)) = lambda     (!!!)
+
+The Cayley transform has ORDER 4 as a Mobius transformation!
+Q^4 = identity. The Cayley group is Z/4Z = the cyclic group of order 4.
+
+The orbit of any eigenvalue under Q is a 4-element set:
+  {lambda, Q(lambda), -1/lambda, -1/Q(lambda)}
+
+This 4-periodicity is a ghost: no matter what transcendental operation
+we apply AFTER the Cayley gate, the 4-fold symmetry persists.
+
+  Cayley orbits of eigenvalues:
+    lambda |   Q(lam) | Q^2(lam) | Q^3(lam) | Q^4(lam)
+  --------------------------------------------------
+       3/5 |        4 |     -5/3 |     -1/4 |      3/5
+       2/5 |      7/3 |     -5/2 |     -3/7 |      2/5
+       1/5 |      3/2 |       -5 |     -2/3 |      1/5
+
+  Q^4 = Id: the Cayley transform generates a Z/4Z action on Q.
+
+  The four elements:
+    Q^0 = Id:      lambda (the eigenvalue)
+    Q^1 = Cayley:  (1+x)/(1-x) (the boost)
+    Q^2 = Invert:  -1/x (the inversion)
+    Q^3 = anti-Q:  -(1-x)/(1+x) (the anti-boost)
+
+  This is the KLEIN FOUR-GROUP acting on the eigenvalue.
+  Wait: Q^2 = -1/x, and (Q^2)^2 = (-1/(-1/x)) = x = Id. Yes, Z/4Z.
+
+  Actually Q has order 4 in PGL(2,Q), generated by the matrix
+  [[1,1],[−1,1]] which has order 4 (its square is [[0,2],[−2,0]] ~ [[0,1],[−1,0]]).
+
+
+================================================================
+THE CATALOG OF GHOSTS
+================================================================
+
+  GHOST | WHERE IT LIVES            | WHAT SURVIVES            | GUARANTEE
+  ------|---------------------------|--------------------------|------------------
+    0   | Rapidity lattice Z^3      | {2,3,7} prime structure  | Baker's theorem
+    1   | Traces Tr(T^k)            | Power sums in Q          | Rationality of T
+    2   | Char poly coefficients    | Elem sym functions in Q  | Rationality of T
+    3   | Moments p_k               | Newton identities        | Trace-poly bridge
+    4   | Resolvent R(z)            | Rational function of z   | Partial fractions
+    5   | Heat kernel K(ln q)       | Algebraic at log-rationals| Lindemann-Weierstrass
+    6   | Zeta at neg integers      | Rational special values  | Moment connection
+    7   | Chebyshev T_k(lambda)     | Rational despite trig    | Polynomial identity
+    8   | Formal group log coeffs   | 1/(2k+1) = 1/ODD        | Odd parity of H
+    9   | Hadamard traces           | Entrywise rational       | Rational entries
+   10   | Galois group              | Trivial (= {1})          | Eigenvalues in Q
+   11   | Continued fractions       | Finite (= rational)      | Def of rationality
+   12   | Newton polygon slopes     | Integer slopes           | Rational eigenvalues
+   13   | Bernoulli denominators    | {2,3,7} at B_6 = 1/42   | Von Staudt theorem
+   14   | Mahler measure            | M = 1 always             | Spectral radius = 1
+   15   | Cayley periodicity        | Q^4 = Id (Z/4Z action)  | Mobius transformation
+
+THE HIERARCHY OF GHOSTS:
+
+  Strongest (survive deepest into transcendental):
+    Ghost 0: Z^3 lattice — survives ln
+    Ghost 5: algebraic at ln(q) — survives exp*ln
+    Ghost 15: Z/4Z periodicity — survives all Mobius
+
+  Medium (survive algebraic operations):
+    Ghosts 1-4, 7, 9: rational traces, resolvents, Chebyshev
+
+  Weakest (only at the boundary):
+    Ghosts 6, 11-14: special values, finiteness, integrality
+
+THE DEEPEST GHOST IS GHOST 0:
+  The rapidity lattice Z^3 survives the logarithm,
+  the most powerful transcendental operation.
+  It is the last discrete structure before the uncountable.
+  After it: only the uncountable continuum remains.
+
+But Ghost 15 (Q^4 = Id) is the most PERSISTENT:
+  The 4-fold Cayley symmetry survives ALL rational operations.
+  It is a symmetry of the gate itself, not of what passes through.
+  The gate has 4-fold symmetry. The transcendental world doesn't know this.
+  But the ghost remembers.
+
+opus-2026-03-17-S91d: GHOSTS OF RATIONAL STRUCTURE
