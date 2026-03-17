@@ -1,0 +1,159 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+======================================================================
+GPT-2 OCF VALIDATION — Does tournament confidence predict accuracy?
+======================================================================
+
+Loading GPT-2 (124M)...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 3495.78it/s]
+  Loaded in 36.7s
+  Layers: 12, d_model: 768, vocab: 50257
+
+Extracting logits from layers: [0, 2, 4, 6, 8, 10, 11]
+Top-k for tournament: 8
+
+  [ 1] "The capital of France is"
+       → 'the' (p=0.085)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 4/7, entropy=6.00, gap=0.89
+
+  [ 2] "Once upon a time there was a"
+       → 'great' (p=0.040)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 3/7, entropy=7.58, gap=0.73
+
+  [ 3] "The quick brown fox jumps over the"
+       → 'fence' (p=0.068)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 3/7, entropy=6.86, gap=0.36
+
+  [ 4] "In mathematics, a tournament is a complete directed"
+       → '-' (p=0.120)
+       OCF: H=21, t3=10, conf=0.0476 [CONFUSED]
+       Layers agree: 2/7, entropy=5.61, gap=0.03
+
+  [ 5] "The president of the United States is the"
+       → 'president' (p=0.105)
+       OCF: H=5, t3=2, conf=0.2000 [CHOOSING]
+       Layers agree: 4/7, entropy=5.46, gap=0.45
+
+  [ 6] "Water freezes at zero degrees"
+       → 'C' (p=0.163)
+       OCF: H=3, t3=1, conf=0.3333 [CHOOSING]
+       Layers agree: 3/7, entropy=3.25, gap=1.41
+
+  [ 7] "Machine learning models can sometimes produce"
+       → 'a' (p=0.046)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 3/7, entropy=6.23, gap=1.51
+
+  [ 8] "The derivative of x squared is"
+       → 'the' (p=0.169)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 2/7, entropy=5.43, gap=0.20
+
+  [ 9] "She went to the store to buy some"
+       → 'food' (p=0.063)
+       OCF: H=19, t3=9, conf=0.0526 [CONFUSED]
+       Layers agree: 2/7, entropy=6.43, gap=0.02
+
+  [10] "The color of the sky is usually"
+       → 'blue' (p=0.105)
+       OCF: H=3, t3=1, conf=0.3333 [CHOOSING]
+       Layers agree: 2/7, entropy=5.13, gap=0.87
+
+  [11] "Artificial intelligence will transform"
+       → 'the' (p=0.243)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 4/7, entropy=4.48, gap=2.06
+
+  [12] "The square root of 144 is"
+       → 'the' (p=0.201)
+       OCF: H=3, t3=1, conf=0.3333 [CHOOSING]
+       Layers agree: 2/7, entropy=5.77, gap=0.36
+
+  [13] "He picked up the phone and called his"
+       → 'wife' (p=0.127)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 5/7, entropy=4.64, gap=2.70
+
+  [14] "The largest planet in our solar system is"
+       → 'about' (p=0.094)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 2/7, entropy=5.33, gap=0.09
+
+  [15] "Python is a popular programming"
+       → 'language' (p=0.989)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 4/7, entropy=0.10, gap=2.24
+
+  [16] "The theory of relativity was developed by Albert"
+       → 'Einstein' (p=0.984)
+       OCF: H=7, t3=3, conf=0.1429 [CHOOSING]
+       Layers agree: 6/7, entropy=0.16, gap=7.04
+
+  [17] "Quantum mechanics describes the behavior of"
+       → 'the' (p=0.103)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 5/7, entropy=5.23, gap=2.35
+
+  [18] "The sum of the angles in a triangle is"
+       → 'the' (p=0.211)
+       OCF: H=5, t3=2, conf=0.2000 [CHOOSING]
+       Layers agree: 4/7, entropy=4.88, gap=0.67
+
+  [19] "Natural language processing is a subfield of"
+       → 'language' (p=0.085)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 4/7, entropy=5.76, gap=3.63
+
+  [20] "The speed of light is approximately 300000"
+       → 'times' (p=0.244)
+       OCF: H=1, t3=0, conf=1.0000 [CERTAIN]
+       Layers agree: 2/7, entropy=3.56, gap=1.64
+
+======================================================================
+CORRELATION ANALYSIS
+======================================================================
+
+Pearson correlations:
+  OCF confidence vs top1_prob:     r = -0.1114
+  OCF confidence vs entropy:       r = -0.1244
+  OCF confidence vs layer_agree:   r = +0.1031
+  OCF confidence vs spectral_gap:  r = +0.0437
+  layer_agree vs top1_prob:        r = +0.4550
+  spectral_gap vs top1_prob:       r = +0.6504
+  entropy vs top1_prob:            r = +0.9162
+
+REGIME ANALYSIS:
+  CERTAIN (conf>0.5): n=12, avg_prob=0.191, avg_entropy=5.10, avg_layer_agree=0.49
+  CHOOSING (0.1<conf<0.5): n=6, avg_prob=0.295, avg_entropy=4.11, avg_layer_agree=0.50
+  CONFUSED (conf<0.1): n=2, avg_prob=0.092, avg_entropy=6.02, avg_layer_agree=0.29
+
+H DISTRIBUTION:
+  H=  1: 12 texts — The capital of France is, Once upon a time there was a, The quick brown fox jumps over
+  H=  3:  3 texts — Water freezes at zero degrees, The color of the sky is usuall, The square root of 144 is
+  H=  5:  2 texts — The president of the United St, The sum of the angles in a tri
+  H=  7:  1 texts — The theory of relativity was d
+  H= 19:  1 texts — She went to the store to buy s
+  H= 21:  1 texts — In mathematics, a tournament i
+
+======================================================================
+SUMMARY
+======================================================================
+
+KEY TEST: Does OCF confidence predict prediction quality?
+  High OCF confidence (conf >= 1.0000): avg top1_prob = 0.1912
+  Low OCF confidence  (conf <  1.0000): avg top1_prob = 0.2441
+  Difference: -0.0529
+  NO — no correlation found
+
+DOES OCF ADD INFORMATION BEYOND ENTROPY?
+  Partial correlation (OCF vs prob | entropy): r = +0.0064
+  UNCLEAR — OCF and entropy may capture similar information at this scale
+
+NOVEL FINDINGS:
+  - 8/20 texts have 3-cycles (intransitive layer disagreement)
+  - Mean t3 = 1.4 (compare: max possible = C(8,3) = 56)
+  - Layers 0 and 11 agree on top-1 in 0 of 20 cases

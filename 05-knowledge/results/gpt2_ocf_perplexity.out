@@ -1,0 +1,101 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+======================================================================
+GPT-2 OCF PERPLEXITY — Does intransitivity predict errors?
+======================================================================
+
+Loading GPT-2...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 2898.08it/s]
+  Loaded in 2.7s
+
+Text 1: "The Pythagorean theorem states that in a right-angled triang..." (51 tokens)
+  Processed 50 positions
+Text 2: "Once upon a time in a small village by the sea, there lived ..." (46 tokens)
+  Processed 45 positions
+Text 3: "In computer science, a hash table is a data structure that i..." (42 tokens)
+  Processed 41 positions
+Text 4: "The quick brown fox jumped over the lazy sleeping dog and ra..." (38 tokens)
+  Processed 37 positions
+
+Total: 173 predictions
+
+======================================================================
+1. OVERALL STATISTICS
+======================================================================
+  Accuracy (top-1): 0.1387
+  Mean entropy: 7.48
+  Mean top1_prob: 0.0465
+  Mean OCF confidence: 0.9062
+  Mean t3: 0.23
+  Fraction with t3>0: 0.1214
+  Mean layer agreement: 0.4690
+
+======================================================================
+2. OCF REGIME ANALYSIS — Does intransitivity predict errors?
+======================================================================
+
+  Regime                         |    N |    Acc | AvgProb | AvgEnt | AvgRank | LayAgr
+  --------------------------------------------------------------------------------
+  TRANSITIVE (H=1)               |  152 |  0.151 |  0.0229 |   7.45 |   520.7 |  0.477
+  MILD CYCLING (H=3-5)           |   17 |  0.059 |  0.0052 |   7.83 |   908.5 |  0.420
+  MODERATE CYCLING (H=7-15)      |    4 |  0.000 |  0.0172 |   7.17 |   622.5 |  0.357
+
+  BINARY SPLIT:
+    Transitive (H=1):  n= 152, accuracy=0.1513, avg_rank=520.7
+    Has cycles (H>1):  n=  21, accuracy=0.0476, avg_rank=854.0
+    Difference: +0.1037 (transitive = more accurate ✓)
+
+======================================================================
+3. H-VALUE DISTRIBUTION
+======================================================================
+      H | Count | Accuracy | Fraction
+  -----------------------------------
+      1 |   152 |   0.1513 |   0.8786
+      3 |     6 |   0.0000 |   0.0347
+      5 |    11 |   0.0909 |   0.0636
+      7 |     4 |   0.0000 |   0.0231
+
+======================================================================
+4. CORRELATIONS
+======================================================================
+  OCF conf vs correct:       r = +0.0957
+  t3 vs correct:             r = -0.0891
+  entropy vs correct:        r = +0.2347
+  layer_agree vs correct:    r = +0.1897
+  top1_prob vs correct:      r = +0.4727
+
+  OCF conf vs actual_prob:   r = +0.1416
+  OCF conf vs entropy:       r = -0.1064
+  OCF conf vs layer_agree:   r = +0.1295
+  t3 vs entropy:             r = +0.0761
+
+======================================================================
+5. DOES OCF ADD INFORMATION BEYOND ENTROPY?
+======================================================================
+
+  Within each entropy bin, does OCF still predict accuracy?
+  Entropy bin          |    N | Trans Acc | Cycle Acc |     Diff
+  ------------------------------------------------------------
+  [4.2, 7.3]           |   57 |    0.2308 |    0.2000 |  +0.0308
+  [7.4, 7.8]           |   57 |    0.1765 |    0.0000 |  +0.1765
+  [7.8, 8.6]           |   59 |    0.0408 |    0.0000 |  +0.0408
+
+======================================================================
+6. EXAMPLE CASES — High intransitivity (H ≥ 7)
+======================================================================
+  ✗ " boat" → " after" H=  7 t3= 3 rank= 37 p=0.0031 ent=6.68 agree=0.43
+  ✗ " data" → " structure" H=  7 t3= 3 rank=124 p=0.0009 ent=7.60 agree=0.29
+  ✗ " an" → " associ" H=  7 t3= 3 rank=2327 p=0.0001 ent=8.01 agree=0.29
+  ✗ " dog" → " and" H=  7 t3= 3 rank=  2 p=0.0646 ent=6.39 agree=0.43
+
+======================================================================
+CONCLUSION
+======================================================================
+
+  ★ POSITIVE RESULT: Transitive tournaments (all layers agree on ordering)
+    predict BETTER next tokens: 0.1513 vs 0.0476
+    OCF confidence IS a useful signal of model certainty.
+
+  QUANTITATIVE RESULT:
+    Transitive: 152 positions, accuracy=0.1513, avg_prob=0.0229
+    Intransitive: 21 positions, accuracy=0.0476, avg_prob=0.0075
