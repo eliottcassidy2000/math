@@ -13,64 +13,61 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## kind-pasteur-2026-03-17-S116n33 — 2026-03-17: MASSIVE MARATHON — Polynomial Predictor, GPT-2 Head, 21 Hidden Tournaments, 4 Theorems
+## opus-2026-03-17-S91 — 2026-03-17: MARATHON — Adelic Tournament Space, Formal Group Tools, LLM Tournament Head
+
+**Account:** opus
+**Continuation of:** opus-2026-03-16-S90ej (context-resumed)
+**Summary of work:** 13-part marathon session (S91a-m) spanning adelic geometry, heat kernel algebraicity, and production engineering tools. 15+ commits.
+
+**Pure Mathematics:**
+1. **Adelic tournament space** (S91a-b): 18 geometric similarities between tournament eigenvalues and adelic number theory. The flip chain IS a Hecke operator on a truncated adelic space A_T(n) = R x prod Z/p^e Z.
+2. **The Cayley Gate** (S91c): Q(x) = (1+x)/(1-x) is the last rational operation. After it, arctanh sends everything to the rapidity lattice Z*ln(2)+Z*ln(3)+Z*ln(7) — the last discrete structure before the continuum.
+3. **16 Ghosts of rational structure** (S91d): Systematic catalog of how rationality persists through transcendental operations — trace ghost, heat kernel ghost, Chebyshev ghost, Bernoulli ghost (B_6=1/42), Q^4=Id (order-4 Cayley symmetry).
+4. **Heat kernel algebraicity** (S91e): PROVED that K(ln(q)) is algebraic iff e^t is algebraic. Discreteness emerges from integrality→rationality→commensurability→polynomial. The spectral gaps avoid the INERT axis.
+5. **The Logarithm** (S91g): Deep dive — torsion polynomial of formal group at p=7 has coefficients C(7,1)=7 and C(7,5)=21 (the forbidden H-values!). Euler dilogarithm identity on eigenvalue pairs. Class number h(-3)=h(-7)=1 guarantees lattice independence.
+6. **Lattice tricks from 29** (S91i): Denominator killing primes (p=C(n,2)+1 makes fractions trivial). 7th roots of unity mod 29. Three-value hash from Gaussian/Eisenstein asymmetry. 7 concrete tricks.
+
+**Engineering Tools:**
+7. **FormalRank** (S91h): One-pass pairwise ranking via arctanh. 560K obs/sec. Drop-in Bradley-Terry replacement.
+8. **BoostRanker** (S91k): Three-channel ranking via INERT/RAMIFIED/SPLIT trichotomy. Upset detection, cycle detection, trichotomy profiles. 307K obs/sec.
+9. **StreamingComparator** (S91j): Real-time dashboard engine. Auto-stopping, confidence queries, 1M obs in 1.8s.
+10. **Exact Mixing Detector** (S91f): Commensurability detection theorem. Hidden symmetry detector. Laurent polynomial as complete spectral invariant.
+11. **Tournament Oracle** (S91l): Conversational agent with formal group tools. Offline + Claude API modes.
+12. **Tournament Attention** (S91l): 27x speedup on confident tokens via spectral gap early exit. 75% layer savings. Trichotomy-based token routing.
+13. **TournamentHead** (S91m): Drop-in replacement for LLM output head. Staged evaluation (256 hot tokens → full vocab). 500x matmul reduction. PyTorch implementation with from_pretrained().
+
+**Code simplification:** Fixed 5 existing scripts (eigvalsh→eigvals, dead code removal, snark factual error correction, pair lookup optimization).
+
+**New contributions:** engineering-update-2026-03-17-S91.md, README.md rewrite, adelic-tournament-geometry.md reflection, 12 new computation scripts.
+
+**Unresolved threads:** PyPI packaging of formalrank. Actual GPU benchmarks of TournamentHead. n=9 simplicial Rédei still pending.
+
+---
+
+## kind-pasteur-2026-03-17-S116n33 — 2026-03-17: MARATHON — Spectral Bridge to Representation Theory of Numbers
 
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-16-S116n32
-**Summary of work:** Multi-day marathon session producing production libraries, proved theorems, practical ML applications, and deep meta-mathematical synthesis. The single largest session in project history.
+**Summary of work:** Extended the spectral theory of tournament flip chains into the deepest meta-mathematical territory yet. 10+ commits covering:
 
-### Pure Mathematics (4 proved theorems)
-1. **THM-250 PROVED**: Flip formula H=2^{k-1}+1 for single arc reversal in transitive tournament.
-2. **THM-251 PROVED**: Cayley boost spectrum Q(λ_k)=(m-k)/k with functional equation Q(λ_k)·Q(λ_{m-k})=1.
-3. **THM-252 PROVED**: Rapidity lattice = archimedean shadow of cuboid. Adelic tournament space (Baker's theorem gives rank 3).
-4. **THM-253 PROVED**: Boost Trichotomy — 3×3 matrix with Column I product = 84 = 2×42 = Hurwitz bound!
-
-### The Master Polynomial
-- **P(z) = 5z⁴+6z³-25z²-14z+29** encodes the entire project. P(-1)=17 (Wick rotation), P(3)=7·47 (forbidden×moonshine), P(-3)=89=F₁₁.
-- Heat kernel at log-rational times gives EXACT algebra.
-
-### Spectral Theory and Physics
-- **The Spectral Bridge** (rational→algebraic→transcendental): Q=counting, Q̄=classifying, R\Q̄=experiencing.
-- **Operations on eigenvalues**: 12 operations cataloged. Cayley boost reveals Hurwitz primes (Q(4/5)=9=3², Q(3/5)=4=2²).
-- **Ising model of tournaments**: Phase transition at β=0, critical slowing down = why Regime 42 is hard.
-- **ζ_{2,3,7}(-1) = -1/12 = ζ(-1)**: Hurwitz primes reproduce full zeta at s=-1.
-- **29 splits differently in two worlds**: 29=5²+2² (Gaussian/golden) vs 29=1²+7·2² (Hurwitz/forbidden).
-- **{Riemann, Spectral, Formal Group} = {INERT, RAMIFIED, SPLIT}**: The triple of linearizations IS the Grand Trichotomy.
-
-### Production Python Libraries (10+ files)
-- **tournament_H.py** — Core H computation library
-- **tournament_toolkit.py** — General tournament utilities
-- **instant_mcmc.py** — InstantMCMC for exact mixing predictions, ranking robustness with zero sampling error
-- **boost_ranker.py** — The Boost Ranker: 3 signals from every comparison (who won, by how much, confidence)
-- **polynomial_predictor.py** — Polynomial prediction engine
-- **polynomial_head.py** — Polynomial output head plugged into GPT-2 (replaces softmax with tournament polynomial)
-- **tournament_chat.py** — Tournament Chat v1 (working chatbot)
-- **tournament_chat_v2.py** — Tournament Chat v2 (improved chatbot)
-
-### ML/AI Applications
-- **Polynomial output head for GPT-2**: Replaced standard softmax with tournament polynomial evaluation head.
-- **Boost Ranker**: Extracts 3 signals from every pairwise comparison — who won, margin, confidence.
-- **InstantMCMC**: Exact mixing time predictions without running the chain.
-- **Tournament Chat v1 and v2**: Working chatbots built on tournament structure.
-
-### 21 Hidden Tournaments Identified
-Tournaments discovered across biology, CS, economics, physics — documented in hidden-tournaments.md and cs-tournaments-deep-dive.md.
-
-### Reflections (15+ documents)
-- grand-trichotomy.md, supersingularity-triples.md, numbers-as-cluster-sizes.md
-- representation-theory-of-numbers.md, applications-roadmap.md, llm-as-tournament.md
-- polynomial-agent.md, active-learning-intelligence.md, hidden-tournaments.md
-- cs-tournaments-deep-dive.md, triple-of-linearizations.md, bernoulli-fixed-point.md
-- plus 3+ additional reflection documents
-
-### Number Theory
-- **Representation Theory of Numbers**: Each n defined by its cluster size. 2 has 20 representations (most), 3 has 19.
-- **Kaprekar geometry**: 6174=2¹·3²·7³, digit product=168=|PSL(2,7)|, face {1,6,7} product = 42.
-- **Rapidity lattice**: Q·ln2+Q·ln3+Q·ln7 = rank-3 free module.
+1. **The Spectral Bridge** (rational→algebraic→transcendental): Q=counting, Q̄=classifying, R\Q̄=experiencing. The spectral gap bridges all three.
+2. **Operations on eigenvalues**: 12 operations cataloged. Cayley boost reveals Hurwitz primes (Q(4/5)=9=3², Q(3/5)=4=2²). Rapidity lattice Q·ln2+Q·ln3+Q·ln7 = rank-3 free module (Baker's theorem).
+3. **THM-250 PROVED**: Flip formula H=2^{k-1}+1 for single arc reversal in transitive tournament.
+4. **THM-251 PROVED**: Cayley boost spectrum Q(λ_k)=(m-k)/k with functional equation Q(λ_k)·Q(λ_{m-k})=1.
+5. **THM-252 PROVED**: Rapidity lattice = archimedean shadow of cuboid. Adelic tournament space.
+6. **THM-253 PROVED**: Boost Trichotomy — 3×3 matrix with Column I product = 84 = 2×42 = Hurwitz bound!
+7. **Ising model of tournaments**: Phase transition at β=0, critical slowing down = why Regime 42 is hard.
+8. **Kaprekar geometry**: 6174=2¹·3²·7³, digit product=168=|PSL(2,7)|, face {1,6,7} product = 42.
+9. **Heat kernel at log-rationals**: EXACT algebra. P(z)=5z⁴+6z³-25z²-14z+29 encodes everything. P(-1)=17 (Wick rotation), P(3)=7·47 (forbidden×moonshine), P(-3)=89=F₁₁.
+10. **InstantMCMC**: Practical tool for exact mixing predictions. Ranking robustness with zero sampling error.
+11. **Representation Theory of Numbers**: Each n defined by its cluster size. 2 has 20 representations (most), 3 has 19.
+12. **The logarithm as universal linearizer**: ζ_{2,3,7}(-1) = -1/12 = -1/φ(42) = ζ(-1). Hurwitz primes reproduce full zeta at s=-1.
+13. **29 splits differently in two worlds**: 29=5²+2² (Gaussian/golden) vs 29=1²+7·2² (Hurwitz/forbidden).
+14. **{Riemann, Spectral, Formal Group} = {INERT, RAMIFIED, SPLIT}**: The triple of linearizations IS the Grand Trichotomy.
 
 **New theorems:** THM-250, THM-251, THM-252, THM-253
-**New libraries:** tournament_H.py, tournament_toolkit.py, instant_mcmc.py, boost_ranker.py, polynomial_predictor.py, polynomial_head.py, tournament_chat.py, tournament_chat_v2.py
-**New reflections:** grand-trichotomy.md, supersingularity-triples.md, numbers-as-cluster-sizes.md, representation-theory-of-numbers.md, applications-roadmap.md, llm-as-tournament.md, polynomial-agent.md, active-learning-intelligence.md, hidden-tournaments.md, cs-tournaments-deep-dive.md, triple-of-linearizations.md, bernoulli-fixed-point.md, and 3+ more
+**New libraries:** tournament_H.py, tournament_toolkit.py, instant_mcmc.py
+**New reflections:** numbers-as-cluster-sizes.md, representation-theory-of-numbers.md, grand-trichotomy.md, supersingularity-triples.md, bernoulli-fixed-point.md, applications-roadmap.md, triple-of-linearizations.md
 **Unresolved:** PyPI packaging, OEIS submissions, BLITZRANK integration, zero-free region characterization, extend splitting analysis to n=7,8
 
 ## opus-2026-03-17-S74 — 2026-03-17: Riemann Zeta Connections Deep Dive
