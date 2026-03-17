@@ -1,0 +1,110 @@
+============================================================
+SPECTRAL RANKER — Exact Algebraic Ranking from Comparisons
+============================================================
+
+--- DEMO 1: LLM Evaluation (5 models) ---
+
+============================================================
+SPECTRAL RANKING RESULTS
+============================================================
+
+Rank |            Item |  Score | Confidence
+---------------------------------------------
+   1 |          Claude |   1.00 |     100.0%
+   2 |           GPT-4 |   0.50 |     100.0%
+   3 |          Gemini |  -0.50 |      33.3%
+   4 |           Llama |  -0.50 |      33.3%
+   5 |         Mistral |  -0.50 |      33.3%
+
+Spectral gap:   2/5 = 0.400000
+Mixing time:    5/2 = 2.50 flips
+H (rankings):   3 consistent total orderings
+Eigenvalues:    ['1', '1/2', '-1/2', '-1/2', '-1/2']...
+
+Top leverage comparisons (flipping these changes ranking most):
+      Claude vs Gemini    : leverage = +6
+      Claude vs Llama     : leverage = +6
+      Claude vs Mistral   : leverage = +6
+       GPT-4 vs Gemini    : leverage = +2
+       GPT-4 vs Llama     : leverage = +2
+
+
+--- DEMO 2: Sports Round-Robin (4 teams) ---
+
+============================================================
+SPECTRAL RANKING RESULTS
+============================================================
+
+Rank |            Item |  Score | Confidence
+---------------------------------------------
+   1 |         Arsenal |   0.33 |      20.0%
+   2 |         Chelsea |   0.33 |      20.0%
+   3 |       Liverpool |  -0.33 |      20.0%
+   4 |         ManCity |  -0.33 |      20.0%
+
+Spectral gap:   2/3 = 0.666667
+Mixing time:    3/2 = 1.50 flips
+H (rankings):   5 consistent total orderings
+Eigenvalues:    ['1/3', '1/3', '-1/3', '-1/3']...
+
+Top leverage comparisons (flipping these changes ranking most):
+     Arsenal vs Liverpool : leverage = +0
+     Chelsea vs Liverpool : leverage = +0
+     Chelsea vs ManCity   : leverage = +0
+     Arsenal vs Chelsea   : leverage = -2
+   Liverpool vs ManCity   : leverage = -2
+
+
+--- DEMO 3: Exact Heat Kernel (algebraic) ---
+
+Heat kernel K(ln(q)) for the 5-item tournament:
+  K(ln(q)) is a Laurent polynomial in u = q^(1/10)
+
+  K(ln( 2)) = 5.4497474683  (exact: polynomial in 2^(1/10))
+  K(ln( 3)) = 6.1068360252  (exact: polynomial in 3^(1/10))
+  K(ln( 7)) = 8.4580755491  (exact: polynomial in 7^(1/10))
+  K(ln(42)) = 19.6203349690  (exact: polynomial in 42^(1/10))
+
+
+--- DEMO 4: Leverage Analysis ---
+
+Which comparison matters most for the LLM ranking?
+(A positive leverage means flipping this result INCREASES H)
+
+      Claude > Gemini    : delta_H = +6  ** HIGH LEVERAGE **
+      Claude > Llama     : delta_H = +6  ** HIGH LEVERAGE **
+      Claude > Mistral   : delta_H = +6  ** HIGH LEVERAGE **
+       GPT-4 > Gemini    : delta_H = +2  
+       GPT-4 > Llama     : delta_H = +2  
+       GPT-4 > Mistral   : delta_H = +2  
+       Llama > Gemini    : delta_H = -2  
+      Gemini > Mistral   : delta_H = -2  
+     Mistral > Llama     : delta_H = -2  
+      Claude > GPT-4     : delta_H = +0  
+
+
+--- DEMO 5: Spectral Gap Theorem (Exact) ---
+
+  n=3: gap = 4/3 = 1.333333, mixing = 3/4 = 0.75 flips, T(n) = ? classes
+  n=4: gap = 4/6 = 0.666667, mixing = 6/4 = 1.50 flips, T(n) = ? classes
+  n=5: gap = 4/10 = 0.400000, mixing = 10/4 = 2.50 flips, T(n) = ? classes
+  n=6: gap = 4/15 = 0.266667, mixing = 15/4 = 3.75 flips, T(n) = ? classes
+  n=7: gap = 4/21 = 0.190476, mixing = 21/4 = 5.25 flips, T(n) = ? classes
+  n=8: gap = 4/28 = 0.142857, mixing = 28/4 = 7.00 flips, T(n) = ? classes
+
+
+--- DEMO 6: Heat Kernel as Polynomial ---
+
+  P(u) = sum_k m_k * u^k  where u = q^(1/10):
+    u^-10  coefficient = 1
+    u^ -5  coefficient = 1
+    u^ +5  coefficient = 3
+
+  This polynomial EXACTLY encodes the heat kernel.
+  K(ln(q)) = P(q^(1/10)) for any algebraic q > 0.
+  No exp(), no ln(), no transcendental functions.
+  Just polynomial evaluation in one algebraic number.
+
+============================================================
+spectral_ranker.py — opus-2026-03-17-S91e
+============================================================
