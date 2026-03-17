@@ -1,0 +1,54 @@
+============================================================
+tournament_output_head.py — Self-test
+============================================================
+
+Test 1: OCF correctness (n=5, exhaustive)
+  OCF (3+5 cycles, disjoint pairs): 0/1024 errors
+  PASSED: OCF exactly matches Held-Karp at n=5
+
+Test 2: Transitive tournament
+  H = 1, confidence = 1.0000
+  PASSED
+
+Test 3: 3-cycle tournament
+  H = 3, confidence = 0.3333
+  PASSED
+
+Test 4: Multi-context tournament (detecting intransitivity)
+  Items: [0, 1, 2, 3, 4]
+  H = 1, confidence = 1.0000
+  t3 = 0, intransitivity = 0.0000
+  PASSED
+
+Test 5: TournamentOutputHead forward pass
+  Output shape: torch.Size([2, 10, 100])
+  Confidence range: [0.046, 0.650]
+  Spectral gap range: [0.046, 0.775]
+  PASSED
+
+Test 6: ArctanhAttention layer
+  Output shape: torch.Size([2, 10, 64])
+  Rapidity range: [-1.162, 1.132]
+  PASSED
+
+============================================================
+ALL TESTS PASSED
+============================================================
+
+MATHEMATICAL STATUS:
+  ✓ PROVED: OCF H(T) = 1 + 2α₁ + 4α₂ + ... (THM-077, Grinberg-Stanley)
+  ✓ PROVED: Walsh sparsity — O(n²) nonzero components (THM-069)
+  ✓ PROVED: arctanh linearizes formal group F(x,y)=(x+y)/(1+xy)
+  ✓ PROVED: H=1 iff tournament is transitive
+  ✓ PROVED: H is always odd (Redei's theorem)
+
+  ~ CORRECT IDEA, NEEDS VALIDATION:
+    - Multi-context logit disagreement creates real tournaments
+    - OCF confidence tracks uncertainty in LLM outputs
+    - arctanh attention produces competitive text quality
+
+  ✗ NOT CLAIMED (unlike polynomial_predictor.py):
+    - "5 coefficients encode everything" (false for n>12)
+    - "160K parameters replace 38.6M" (parameter count was wrong)
+    - "Intelligence is a degree-4 polynomial" (philosophical, not math)
+
