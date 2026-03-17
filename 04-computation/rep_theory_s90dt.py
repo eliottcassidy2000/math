@@ -64,17 +64,19 @@ def orbits_on_pairs(perm):
     """Count orbits of permutation on unordered pairs."""
     n = len(perm)
     pair_list = [(i,j) for i in range(n) for j in range(i+1, n)]
+    pair_to_idx = {p: idx for idx, p in enumerate(pair_list)}
     visited = [False] * len(pair_list)
     count = 0
     for idx, (i,j) in enumerate(pair_list):
         if not visited[idx]:
             count += 1
+            visited[idx] = True
             # Follow the orbit
             a, b = i, j
             while True:
                 a2, b2 = perm[a], perm[b]
                 if a2 > b2: a2, b2 = b2, a2
-                new_idx = pair_list.index((a2, b2))
+                new_idx = pair_to_idx[(a2, b2)]
                 if visited[new_idx]:
                     break
                 visited[new_idx] = True

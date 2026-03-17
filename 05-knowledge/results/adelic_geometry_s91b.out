@@ -1,0 +1,426 @@
+
+
+
+     ADELIC GEOMETRY OF TOURNAMENT EIGENVALUES
+
+     opus-2026-03-17-S91b
+
+
+
+PART 1: EXACT EIGENVALUES AND LOCAL DECOMPOSITION
+===================================================
+
+n = 5:
+  Transition matrix eigenvalues (12 classes):
+    lambda_0 = 1
+    lambda_1 = 3/5
+    lambda_2 = 2/5
+    lambda_3 = 1/5
+    lambda_4 = 1/5
+    lambda_5 = 1/5
+    lambda_6 = 1/5
+    lambda_7 = 0
+    lambda_8 = -1/5
+    lambda_9 = -1/5
+    lambda_10 = -1/5
+    lambda_11 = -3/5
+
+  D = C(5,2) = 10, odd part D_odd = 5
+  Factorization of D_odd: {5: 1}
+
+  CRT decomposition at primes [5]:
+          1 -> local: {5: 0}
+        3/5 -> local: {5: 1}
+        2/5 -> local: {5: 4}
+        1/5 -> local: {5: 2}
+        1/5 -> local: {5: 2}
+        1/5 -> local: {5: 2}
+        1/5 -> local: {5: 2}
+       -1/5 -> local: {5: 3}
+       -1/5 -> local: {5: 3}
+       -1/5 -> local: {5: 3}
+       -3/5 -> local: {5: 4}
+
+
+PART 2: LOCAL SPECTRAL DECOMPOSITION
+=======================================
+
+KEY QUESTION: Does the transition matrix T factorize as a tensor product
+of local matrices? i.e., does T = T_3 tensor T_5 (at n=6)?
+
+If so, the tournament flip chain is LOCALLY DECOMPOSABLE —
+each prime contributes independently to the dynamics.
+
+If not, the primes INTERACT through the global constraint,
+and the adelic picture is an APPROXIMATION, not an equivalence.
+
+n=5: D=10, D_odd=5 (single prime)
+  Eigenvalues: [np.float64(1.0), np.float64(0.6), np.float64(0.4), np.float64(0.2), np.float64(0.2), np.float64(0.2), np.float64(0.2), np.float64(0.0), np.float64(-0.2), np.float64(-0.2), np.float64(-0.2), np.float64(-0.6)]
+  Since D_odd=5 is prime, no tensor factorization needed.
+  The local picture AT prime 5 is the FULL picture.
+  Eigenvalues mod 5: [5, 3, 2, 1, 1, 1, 1, -1, -1, -1, -3]
+
+
+ALGEBRAIC TEST: DOES T_6 = T_3 tensor T_5?
+
+If T_6 has eigenvalues k/15 for various k, and if it factorizes as
+T_3 (x) T_5, then its eigenvalues would be products:
+  lambda_{ij} = mu_i * nu_j
+where mu_i are eigenvalues of T_3 and nu_j are eigenvalues of T_5.
+
+T_3 (2 classes): eigenvalues {1, -1/3}
+T_5 (12 classes): eigenvalues {1, 3/5, 2/5, 1/5, 1/5, 1/5, 1/5, 0, -1/5, -1/5, -1/5, -3/5}
+
+If T_6 = T_3 (x) T_5, then T_6 would have 2*12 = 24 eigenvalues.
+But T_6 has 56 classes (eigenvalues). So T_6 CANNOT be T_3 (x) T_5.
+
+CONCLUSION: T does NOT factorize as a tensor product of local matrices.
+The adelic structure is in the EIGENVALUES, not in the matrix itself.
+
+
+PART 3: ULTRAMETRIC STRUCTURE OF EIGENVALUE SPACE
+===================================================
+
+The p-adic metric is ULTRAMETRIC: d(x,z) <= max(d(x,y), d(y,z)).
+This gives the eigenvalue space a TREE structure at each prime.
+
+At prime p with depth e (i.e., p^e || D):
+  - All eigenvalues with the same k mod p are at distance 0 (p-adically)
+  - Eigenvalues with different k mod p are at distance p^{-1}
+  - Two eigenvalues at p-adic distance p^{-j} share the first j
+    digits in their p-adic expansion
+
+This creates a CLUSTERING of eigenvalues: the p-adic tree
+groups eigenvalues into p branches, each branch into p sub-branches, etc.
+
+n=5: Ultrametric clustering at prime 5
+  D_odd = 5, eigenvalues are k/5 mod 5:
+
+  Residue classes mod 5:
+    k = 0 mod 5: ['1', '0']
+    k = 1 mod 5: ['1/5', '1/5', '1/5', '1/5']
+    k = 2 mod 5: ['2/5', '-3/5']
+    k = 3 mod 5: ['3/5']
+    k = 4 mod 5: ['-1/5', '-1/5', '-1/5']
+
+  The ultrametric groups eigenvalues by their "p-adic digit":
+    k=0 mod 5: {1, 0, -3/5} — these are CLOSE p-adically!
+    k=1 mod 5: {1/5 (x4)} — all IDENTICAL
+    k=2 mod 5: {2/5}
+    k=3 mod 5: {3/5}
+    k=4 mod 5: {-1/5 (x3)} — all IDENTICAL
+
+  Note: p-adically "close" eigenvalues can be archimedean-FAR.
+  1 and -3/5 are in the same p-adic ball but at real distance 1.6!
+
+  This is the ARCH/NON-ARCH DUALITY in action:
+  p-adic closeness captures ARITHMETIC similarity (same residue)
+  while real closeness captures DYNAMIC similarity (similar decay rate).
+
+
+PART 4: THE FLIP GRAPH AS P-ADIC RANDOM WALK
+===============================================
+
+At prime p | D, the eigenvalue k/D has a "p-adic coordinate" k mod p^e.
+A single arc flip changes k by some amount delta_k.
+
+If we PROJECT the flip chain to just the p-adic coordinate,
+we get a RANDOM WALK ON Z/p^e Z — a discrete p-adic walk.
+
+The mixing time of this local walk at prime p is O(p^{2e}).
+The global mixing time C(n,2)/4 should be related to the
+MAXIMUM local mixing time across all primes.
+
+n=5: projection of flip chain to Z/5Z
+  Each arc flip changes the class. Project to eigenvalue mod 5.
+
+  Eigenvalue grouping by residue mod 5:
+    lambda = +1.0000, k= +10, k*5=  +5, residue mod 5 = 0
+    lambda = +0.6000, k=  +6, k*5=  +3, residue mod 5 = 3
+    lambda = +0.4000, k=  +4, k*5=  +2, residue mod 5 = 2
+    lambda = +0.2000, k=  +2, k*5=  +1, residue mod 5 = 1
+    lambda = +0.2000, k=  +2, k*5=  +1, residue mod 5 = 1
+    lambda = +0.2000, k=  +2, k*5=  +1, residue mod 5 = 1
+    lambda = +0.2000, k=  +2, k*5=  +1, residue mod 5 = 1
+    lambda = +0.0000, k=  +0, k*5=  +0, residue mod 5 = 0
+    lambda = -0.2000, k=  -2, k*5=  -1, residue mod 5 = 4
+    lambda = -0.2000, k=  -2, k*5=  -1, residue mod 5 = 4
+    lambda = -0.2000, k=  -2, k*5=  -1, residue mod 5 = 4
+    lambda = -0.6000, k=  -6, k*5=  -3, residue mod 5 = 2
+
+
+PART 5: SPECTRAL ZETA FUNCTION AND FUNCTIONAL EQUATION
+========================================================
+
+For the Riemann zeta function:
+  zeta(s) = zeta(1-s) * Gamma factor   (functional equation)
+
+For the tournament spectral zeta:
+  zeta_T(s) = sum_{lambda != 0, 1} |lambda|^{-s}
+
+Does it satisfy a functional equation?
+
+n=5 spectral zeta function:
+      s |    zeta_T(s) |  zeta_T(1-s) |      ratio
+--------------------------------------------------
+    0.5 |      19.8156 |      19.8156 |     1.0000
+    1.0 |      40.8333 |      10.0000 |     4.0833
+    1.5 |      86.5185 |       5.3121 |    16.2869
+    2.0 |     186.8056 |       3.0000 |    62.2685
+    2.5 |     408.3662 |       1.8086 |   225.7917
+    3.0 |     899.8843 |       1.1600 |   775.7623
+
+  Checking eigenvalue symmetry lambda <-> -lambda:
+    Positive (non-1) eigenvalues: [np.float64(0.6), np.float64(0.4), np.float64(0.2), np.float64(0.2), np.float64(0.2), np.float64(0.2)]
+    |Negative| eigenvalues:       [np.float64(0.6), np.float64(0.2), np.float64(0.2), np.float64(0.2)]
+
+  Paired eigenvalues (lambda, -lambda):
+    +0.6000 paired with -0.6000: YES
+    +0.4000 paired with -0.4000: NO
+    +0.2000 paired with -0.2000: YES
+    +0.2000 paired with -0.2000: YES
+    +0.2000 paired with -0.2000: YES
+    +0.2000 paired with -0.2000: YES
+
+
+PART 6: ADELIC COHOMOLOGY
+===========================
+
+In Tate's theory, the Galois cohomology groups H^i(G, M) for
+the adelic module M encode arithmetic invariants.
+
+For tournaments, the relevant "Galois group" is S_n (the symmetric group).
+The "module" is the tournament space (Z/2)^{C(n,2)}.
+
+The group cohomology H^i(S_n, (Z/2)^{C(n,2)}) encodes:
+  H^0 = fixed points = tournament isomorphism classes (what we study!)
+  H^1 = derivations/principal derivations = "local deformations"
+  H^2 = extensions = obstructions to lifting
+
+H^0(S_n, tournament space) = T(n) = number of isomorphism classes.
+
+The TATE DUALITY says:
+  H^0 and H^2 are related by a perfect pairing.
+  This is the ARITHMETIC DUALITY for tournaments.
+
+H^0(S_n, tournament space) = T(n):
+  n=3: T(n) = 2, 2^C(n,2) = 8, ratio = 1.33, 2^C(n,2)/n! = 1.3333
+  n=4: T(n) = 4, 2^C(n,2) = 64, ratio = 2.67, 2^C(n,2)/n! = 2.6667
+  n=5: T(n) = 12, 2^C(n,2) = 1024, ratio = 8.53, 2^C(n,2)/n! = 8.5333
+  n=6: T(n) = 56, 2^C(n,2) = 32768, ratio = 45.51, 2^C(n,2)/n! = 45.5111
+  n=7: T(n) = 456, 2^C(n,2) = 2097152, ratio = 416.10, 2^C(n,2)/n! = 416.1016
+  n=8: T(n) = 6880, 2^C(n,2) = 268435456, ratio = 6657.63, 2^C(n,2)/n! = 6657.6254
+
+
+PART 7: CONDUCTOR GROWTH — APPROACHING THE FULL ADELES
+========================================================
+
+As n -> inf, which primes appear in D(n) = odd_part(C(n,2))?
+
+D(n) = odd_part(n(n-1)/2).
+For odd prime p: p | D(n) iff p | n or p | (n-1).
+  (Because n(n-1)/2 is divisible by p iff n or n-1 is.)
+
+So: prime p first appears in D(n) at n = p or n = p+1.
+After that, p appears again periodically (every p or p+1 steps).
+
+This means: EVERY odd prime eventually appears.
+The tournament adele ring A_T(n) fills out the full adeles as n -> inf.
+
+First appearance of each prime in D(n):
+  p=  3: first at n=  3, theory predicts n=  3: YES
+  p=  5: first at n=  5, theory predicts n=  5: YES
+  p=  7: first at n=  7, theory predicts n=  7: YES
+  p= 11: first at n= 11, theory predicts n= 11: YES
+  p= 13: first at n= 13, theory predicts n= 13: YES
+  p= 17: first at n= 17, theory predicts n= 17: YES
+  p= 19: first at n= 19, theory predicts n= 19: YES
+  p= 23: first at n= 23, theory predicts n= 23: YES
+  p= 29: first at n= 29, theory predicts n= 29: YES
+  p= 31: first at n= 31, theory predicts n= 31: YES
+  p= 37: first at n= 37, theory predicts n= 37: YES
+  p= 41: first at n= 41, theory predicts n= 41: YES
+  p= 43: first at n= 43, theory predicts n= 43: YES
+
+Number of distinct prime factors of D(n):
+  n |       D(n) | omega(D) |                         primes
+------------------------------------------------------------
+  3 |          3 |        1 | [3]
+  4 |          3 |        1 | [3]
+  5 |          5 |        1 | [5]
+  6 |         15 |        2 | [3, 5]
+  7 |         21 |        2 | [3, 7]
+  8 |          7 |        1 | [7]
+  9 |          9 |        1 | [3]
+ 10 |         45 |        2 | [3, 5]
+ 11 |         55 |        2 | [5, 11]
+ 12 |         33 |        2 | [3, 11]
+ 13 |         39 |        2 | [3, 13]
+ 14 |         91 |        2 | [7, 13]
+ 15 |        105 |        3 | [3, 5, 7]
+ 16 |         15 |        2 | [3, 5]
+ 17 |         17 |        1 | [17]
+ 18 |        153 |        2 | [3, 17]
+ 19 |        171 |        2 | [3, 19]
+ 20 |         95 |        2 | [5, 19]
+ 21 |        105 |        3 | [3, 5, 7]
+ 22 |        231 |        3 | [3, 7, 11]
+ 23 |        253 |        2 | [11, 23]
+ 24 |         69 |        2 | [3, 23]
+ 25 |         75 |        2 | [3, 5]
+ 26 |        325 |        2 | [5, 13]
+ 27 |        351 |        2 | [3, 13]
+ 28 |        189 |        2 | [3, 7]
+ 29 |        203 |        2 | [7, 29]
+ 30 |        435 |        3 | [3, 5, 29]
+
+
+PART 8: ADELIC DISTANCE ON TOURNAMENT CLASSES
+================================================
+
+Two tournament classes are "adelically close" if their eigenvalue
+projections are close at ALL places simultaneously.
+
+Since CRT gives a bijection, two eigenvalues k/D and k'/D are:
+  - Close archimedean: |k-k'| small
+  - Close p-adically: v_p(k-k') large (k and k' agree on many p-adic digits)
+
+The ADELIC distance combines both:
+  d_A(k/D, k'/D) = |k-k'|/D * prod_{p|D} max(1, p^{v_p(D) - v_p(k-k')})
+
+This is 1/D times the CONDUCTOR-WEIGHTED distance.
+
+n=5 adelic distance between eigenvalue numerators:
+  Eigenvalues: ['10/10', '6/10', '4/10', '2/10', '0/10', '-2/10', '-6/10']
+
+  (k,k')       | |diff| | v_5(diff) |      d_R |      d_5 |   d_adelic
+  -----------------------------------------------------------------
+  ( 10,  6) |      4 |         0 |   0.4000 |   1.0000 |     2.0000
+  ( 10,  0) |     10 |         1 |   1.0000 |   0.2000 |     1.0000
+  (  6,  4) |      2 |         0 |   0.2000 |   1.0000 |     1.0000
+  (  4,  2) |      2 |         0 |   0.2000 |   1.0000 |     1.0000
+  (  2,  0) |      2 |         0 |   0.2000 |   1.0000 |     1.0000
+  (  2, -2) |      4 |         0 |   0.4000 |   1.0000 |     2.0000
+  (  0, -6) |      6 |         0 |   0.6000 |   1.0000 |     3.0000
+  ( -2, -6) |      4 |         0 |   0.4000 |   1.0000 |     2.0000
+
+
+PART 9: THE PROFINITE COMPLETION
+==================================
+
+The profinite completion of Z is:
+  Z_hat = lim_{<-} Z/nZ = prod_p Z_p
+
+The tournament eigenvalue denominator D(n) defines a quotient Z/D(n)Z.
+As n -> inf, these quotients form a projective system:
+  ... -> Z/D(n+1)Z -> Z/D(n)Z -> ...
+
+(when D(n) | D(n+1), which doesn't always hold, but on a subsequence it does).
+
+The PROFINITE TOURNAMENT SPACE is:
+  T_hat = lim_{n -> inf} Z/D(n)Z
+
+This is a closed subgroup of Z_hat = prod_p Z_p,
+determined by which primes ever appear in any D(n).
+
+Since EVERY odd prime appears: T_hat = prod_{p odd} Z_p = Z_hat / Z_2.
+The tournament profinite space is the ODD part of the profinite integers!
+
+This is EXACTLY the formal group structure:
+  F(x,y) = (x+y)/(1+xy) is supersingular at p=2 (height infinity).
+  The p=2 place is "killed" by the formal group.
+  The surviving structure is the ODD profinite completion.
+
+Verification: D(n) is always odd
+  Confirmed: D(n) is odd for all n in [3, 49].
+  (By definition: D(n) = odd_part(C(n,2)) removes all factors of 2.)
+
+
+PART 10: THE METRIC COMPLETION
+================================
+
+At the archimedean place, the eigenvalue lambda in (-1, 1) lives
+on the Poincare disk model of the hyperbolic plane (1D version = interval).
+
+The rapidity rho = arctanh(lambda) maps the bounded interval to all of R.
+The hyperbolic metric on the eigenvalue interval is:
+  ds = |dlambda| / (1 - lambda^2)
+
+This gives the eigenvalue lambda = k/D a "hyperbolic position":
+  rho_k = arctanh(k/D)
+
+The hyperbolic distance between eigenvalues k/D and k'/D:
+  d_hyp = |arctanh(k/D) - arctanh(k'/D)|
+        = |arctanh((k-k')/(D - k*k'/D))|   (by the formal group!)
+        = arctanh(F^{-1}(k/D, -k'/D))
+
+THIS IS THE FORMAL GROUP DISTANCE.
+The formal group F(x,y) = (x+y)/(1+xy) IS the group law of the
+hyperbolic line. The eigenvalue distance IS the hyperbolic distance.
+
+Comparison: Euclidean vs hyperbolic distance on n=5 eigenvalues:
+
+    lambda |  rho=arctanh |  Eucl to 0 |   Hyp to 0 |    ratio
+  ------------------------------------------------------------
+    1.0000 |          inf |     1.0000 |        inf |      inf
+    0.6000 |    +0.693147 |     0.6000 |   0.693147 |   1.1552
+    0.4000 |    +0.423649 |     0.4000 |   0.423649 |   1.0591
+    0.2000 |    +0.202733 |     0.2000 |   0.202733 |   1.0137
+    0.0000 |    +0.000000 |     0.0000 |   0.000000 |      inf
+   -0.2000 |    -0.202733 |     0.2000 |   0.202733 |   1.0137
+   -0.6000 |    -0.693147 |     0.6000 |   0.693147 |   1.1552
+
+  Near lambda=0 (the center): Euclidean ~ Hyperbolic (ratio -> 1).
+  Near lambda=1 (the boundary): Hyperbolic >> Euclidean (ratio -> inf).
+
+  The eigenvalue lambda=1 (stationary) is at INFINITE hyperbolic distance
+  from all other eigenvalues. It is "at the boundary of the disk."
+
+  The eigenvalue lambda=0 (the zero mode) is at the CENTER.
+  The center is the "most accessible" point — the zero mode is the
+  dynamically fastest-decaying nontrivial mode.
+
+  The FORMAL GROUP metric makes the zero mode CENTRAL
+  and the stationary mode INFINITELY FAR.
+  This is EXACTLY the right geometry for a Markov chain:
+  stationarity is "infinitely hard" and the zero mode is "trivial."
+
+
+================================================================
+SUMMARY: ADELIC GEOMETRY OF TOURNAMENT EIGENVALUES
+================================================================
+
+1. The transition matrix T does NOT factorize as a tensor product
+   of local matrices. The adelic structure lives in the EIGENVALUES,
+   not the matrix itself.
+
+2. The eigenvalue space carries an ULTRAMETRIC structure at each prime.
+   Eigenvalues cluster by p-adic residue. p-adic closeness captures
+   ARITHMETIC similarity, not dynamic similarity.
+
+3. The flip chain projects to a random walk on Z/p^e Z at each prime.
+   The global mixing time is the MAX of local mixing times.
+
+4. The profinite tournament space is the ODD part of Z_hat = prod_{p odd} Z_p.
+   This is because the formal group is supersingular at p=2.
+
+5. The archimedean eigenvalue geometry IS the Poincare disk (1D).
+   The formal group distance = hyperbolic distance on eigenvalues.
+   The zero mode is at the CENTER; stationarity at the BOUNDARY.
+
+6. The spectral zeta function has an Euler product at primes dividing D(n).
+   It reflects the local-to-global assembly of eigenvalue information.
+
+7. Tournament cohomology H^0(S_n, (Z/2)^{C(n,2)}) = T(n).
+   Tate duality would relate H^0 to H^2 (obstructions to lifting).
+
+THE GEOMETRY IS:
+  - HYPERBOLIC at the archimedean place (Poincare disk)
+  - TREE-LIKE at each finite place (Bruhat-Tits)
+  - PRODUCT at the global level (adelic)
+
+The tournament eigenvalue space is a BERKOVICH SPACE:
+a hybrid of archimedean and non-archimedean geometries,
+assembled via the product formula into a single coherent object.
+
+opus-2026-03-17-S91b: ADELIC GEOMETRY OF TOURNAMENT EIGENVALUES

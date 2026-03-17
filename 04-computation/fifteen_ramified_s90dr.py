@@ -5,7 +5,7 @@ opus-2026-03-16-S90dr
 """
 
 from math import comb, gcd
-from sympy import factorint, isprime, legendre_symbol
+from sympy import factorint, isprime
 
 print("""
 
@@ -179,8 +179,6 @@ n6_evals = [1, 11, 9, 7, 5, 3, 1, -1, -3, -5, -7, -9]  # numerators k in k/15
 print(f"{'k/15':>6} | {'k mod 3':>7} | {'k mod 5':>7} | {'Eisenstein':>10} | {'Golden':>10}")
 print("-" * 50)
 for k in sorted(set(n6_evals), reverse=True):
-    e_comp = k % 3 if k >= 0 else -((-k) % 3)
-    g_comp = k % 5 if k >= 0 else -((-k) % 5)
     print(f"{k:3d}/15 | {k%3:7d} | {k%5:7d} | {k%3}/3 = {k%3/3:.3f} | {k%5}/5 = {k%5/5:.3f}")
 
 print(f"""

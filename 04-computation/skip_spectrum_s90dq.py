@@ -86,7 +86,7 @@ for n in [4, 5]:
     T, nc, sizes, H_vals, self_dual = build_full_data(n)
     num_arcs = comb(n, 2)
 
-    evals_orig = sorted(np.linalg.eigvalsh(T), reverse=True)
+    evals_orig = sorted(np.linalg.eigvals(T).real, reverse=True)
     gap_orig = 1 - evals_orig[1]
 
     print(f"\n  Original eigenvalues: {[f'{e:.4f}' for e in evals_orig]}")
@@ -99,8 +99,8 @@ for n in [4, 5]:
     print(f"  {'-'*55}")
 
     for alpha in [0.0, 0.05, 0.1, 0.2, 0.5, 1.0]:
-        T_skip = (1-alpha) * T + alpha * np.eye(nc)
-        evals_skip = sorted(np.linalg.eigvalsh(T_skip), reverse=True)
+        # Eigenvalues of (1-alpha)*T + alpha*I = (1-alpha)*lambda_i + alpha
+        evals_skip = sorted([(1-alpha)*e + alpha for e in evals_orig], reverse=True)
         gap_skip = 1 - evals_skip[1]
         min_eval = evals_skip[-1]
         has_zero = any(abs(e) < 1e-10 for e in evals_skip)
@@ -124,11 +124,8 @@ for n in [4, 5]:
     # SCORE-WEIGHTED SKIP: skip based on score sequence regularity
     print(f"\n  SCORE-REGULARITY SKIP:")
     for beta in [0.05, 0.1, 0.2]:
-        # Score regularity: how close to regular (all scores = (n-1)/2)
-        target = (n-1) / 2
         alphas = []
         for ci in range(nc):
-            rep_idx = [i for i, c in enumerate([0]*len(sizes)) if False]  # skip
             # Use H-based proxy for regularity
             regularity = 1 - abs(H_vals[ci] - np.mean(H_vals)) / max(H_vals)
             alphas.append(beta * regularity)
@@ -150,8 +147,7 @@ for n in [4, 5]:
         print(f"    Critical alpha: {alpha_critical:.4f}")
         print(f"    = |min_eval| / (1 - min_eval) = {abs(min_orig):.4f} / {1-min_orig:.4f}")
 
-        T_crit = (1 - alpha_critical) * T + alpha_critical * np.eye(nc)
-        evals_crit = sorted(np.linalg.eigvalsh(T_crit), reverse=True)
+        evals_crit = sorted([(1-alpha_critical)*e + alpha_critical for e in evals_orig], reverse=True)
         gap_crit = 1 - evals_crit[1]
         print(f"    Eigenvalues at critical: {[f'{e:.4f}' for e in evals_crit]}")
         print(f"    Gap at critical: {gap_crit:.4f}")
@@ -161,9 +157,10 @@ for n in [4, 5]:
     zero_modes = [i for i, e in enumerate(evals_orig) if abs(e) < 1e-10]
     if zero_modes:
         print(f"\n  ZERO MODE DEEP ANALYSIS:")
-        evecs = np.linalg.eig(T.T)[1].real
+        eig_vals, eig_vecs = np.linalg.eig(T)
+        order = np.argsort(-eig_vals.real)
         for zm in zero_modes:
-            vec = evecs[:, np.argsort(-np.linalg.eigvalsh(T))[zm]]
+            vec = eig_vecs[:, order[zm]].real
             # Which classes are involved?
             active = [(ci, vec[ci], H_vals[ci], 'SD' if self_dual[ci] else 'P')
                       for ci in range(nc) if abs(vec[ci]) > 0.01]

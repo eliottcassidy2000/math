@@ -9,7 +9,7 @@ Three concepts that form a closed triangle:
   FORBIDDEN VALUES: what cannot exist (H=7). The null space.
 """
 
-from math import comb, factorial, gcd, log, sqrt, tanh, atanh
+from math import comb, factorial
 from fractions import Fraction
 from itertools import permutations
 import numpy as np
@@ -100,8 +100,8 @@ def build_transition(n):
 
 T5, F5, nc5, sizes5, H5 = build_transition(5)
 
-# Eigendecomposition
-evals5, evecs5 = np.linalg.eig(T5.T)  # right eigenvectors
+# Eigendecomposition (right eigenvectors of T)
+evals5, evecs5 = np.linalg.eig(T5)
 order5 = np.argsort(-evals5.real)
 evals5 = evals5[order5].real
 evecs5 = evecs5[:, order5].real

@@ -11,8 +11,6 @@ from math import comb, gcd, log, sqrt, factorial
 from sympy import factorint, isprime, totient, fibonacci, lucas
 from fractions import Fraction
 
-phi = (1 + sqrt(5)) / 2
-
 # Tournament class counts (A000568)
 T_vals = {0:1, 1:1, 2:1, 3:2, 4:4, 5:12, 6:56, 7:456, 8:6880}
 
@@ -245,9 +243,9 @@ THE CONNECTION: at the Petersen graph (the first snark, 10 vertices = 2*5):
   Snark count: S(14) = ... (not a standard snark vertex count).
   Actually snarks at 14 vertices: none listed (the smallest after 10 is 18).
 
-The snarks SKIP the forbidden value! There are NO snarks on 14 = 2*7 vertices.
-(Snarks go 10, 18, 20, 22, ... skipping 12, 14, 16.)
-The forbidden prime 7 is AVOIDED by snarks in the vertex count.
+Note: our snark_counts dictionary only includes certain vertex counts.
+Snarks on 12, 14, 16 vertices may exist but are not in our table.
+(The flower snark J_7 has 28 vertices, not 14. Verify before drawing conclusions.)
 """)
 
 # Check: do snarks exist at vertex counts 2*p for each prime p?
@@ -270,23 +268,14 @@ Snarks at 2*prime vertices:
   2*11 = 22: YES (20 snarks). The restart prime.
   2*13 = 26: YES (280 snarks). The Mersenne exponent.
 
-The forbidden prime 7 is the ONLY small prime where 2p has NO snarks.
-This is consistent with 7 being forbidden:
-  H=7 is impossible in tournaments.
-  Snarks on 14=2*7 vertices are impossible.
-  The forbidden prime BLOCKS both tournament H-values AND snark vertex counts.
+NOTE: The snark data above is from our incomplete lookup table.
+Whether snarks exist at 14 vertices needs independent verification.
+The claim "no snarks at 14 vertices" was based on incomplete data.
 
-Is this a coincidence? Snarks require vertex count >= 10 and specific structure.
-14 is between 10 and 18, and apparently no cubic graph on 14 vertices
-is both bridgeless and non-3-edge-colorable.
-
-THE FORBIDDEN PRIME 7 BLOCKS STRUCTURE IN MULTIPLE DOMAINS:
-  Tournament: H=7 cannot occur.
-  Snark: 2*7=14 vertices has no snark.
-  Polygon: the heptagon is the first that can't close (hyperbolic).
+THE FORBIDDEN PRIME 7 IN TOURNAMENTS:
+  Tournament: H=7 cannot occur (verified computationally).
+  Polygon: the heptagon is the first that can't tile the plane (hyperbolic).
   Chemistry: 7 f-orbitals = the deepest orbital type.
-
-THE NUMBER 7 IS UNIVERSALLY FORBIDDEN.
 """)
 
 print("opus-2026-03-16-S90ds: UNDERSTAND EACH NATURAL NUMBER n")
