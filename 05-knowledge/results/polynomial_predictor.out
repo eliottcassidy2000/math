@@ -1,0 +1,125 @@
+polynomial_predictor.py — Self-test
+==================================================
+
+Test 1: Transitive ranking (6 items, no cycles)
+=== Polynomial Predictor Report (6 items) ===
+
+Polynomial: P(z) = 22.50*z^0 + -1.71*z^1 + 5.26*z^2
+
+Ranking: GPT-4 > Claude > Gemini > Llama > Phi > Mistral
+Confidence: 0.038385
+Regime: 30 (solvable)
+Hallucination risk: 0.0000
+Observations: 15/15 pairs
+
+Coefficients:
+  A_0 = +22.5000  (PRIOR: mean ambiguity)
+  A_1 = -1.7062  (EVIDENCE: individual arc strength)
+  A_2 = +5.2582  (PATTERNS: pairwise correlations)
+  A_3 = +0.0000  (CONTRADICTIONS: cycle content)
+  A_4 = +0.0000  (DEEP STRUCTURE: independence)
+
+Temperature sweep:
+  T=  0.1: ambiguity = 531.2534
+  T=  0.5: ambiguity = 40.1203
+  T=  1.0: ambiguity = 26.0520
+  T=  2.0: ambiguity = 22.9615
+  T=  5.0: ambiguity = 22.3691
+  T= 10.0: ambiguity = 22.3820
+
+  PASSED: Transitive ranking correctly identified, regime 30
+
+Test 2: Ranking with a cycle (3 items)
+=== Polynomial Predictor Report (3 items) ===
+
+Polynomial: P(z) = 1.50*z^0 + 2.00*z^3
+
+Ranking: A > B > C
+Confidence: 0.285714
+Regime: 42 (FORBIDDEN)
+Hallucination risk: 1.0000
+Observations: 3/3 pairs
+
+Coefficients:
+  A_0 = +1.5000  (PRIOR: mean ambiguity)
+  A_1 = -0.0000  (EVIDENCE: individual arc strength)
+  A_2 = -0.0000  (PATTERNS: pairwise correlations)
+  A_3 = +2.0000  (CONTRADICTIONS: cycle content)
+  A_4 = +0.0000  (DEEP STRUCTURE: independence)
+
+Temperature sweep:
+  T=  0.1: ambiguity = 2001.5000
+  T=  0.5: ambiguity = 17.5000
+  T=  1.0: ambiguity = 3.5000
+  T=  2.0: ambiguity = 1.7500
+  T=  5.0: ambiguity = 1.5160
+  T= 10.0: ambiguity = 1.5020
+
+  PASSED: Cycle detected with elevated hallucination risk
+
+Test 3: Mostly transitive with one upset
+=== Polynomial Predictor Report (5 items) ===
+
+Polynomial: P(z) = 7.50*z^0 + -1.54*z^1 + 3.17*z^2
+
+Ranking: A > B > C > E > D
+Confidence: 0.109615
+Regime: 30 (solvable)
+Hallucination risk: 0.0000
+Observations: 10/10 pairs
+
+Coefficients:
+  A_0 = +7.5000  (PRIOR: mean ambiguity)
+  A_1 = -1.5425  (EVIDENCE: individual arc strength)
+  A_2 = +3.1653  (PATTERNS: pairwise correlations)
+  A_3 = +0.0000  (CONTRADICTIONS: cycle content)
+  A_4 = +0.0000  (DEEP STRUCTURE: independence)
+
+Temperature sweep:
+  T=  0.1: ambiguity = 308.6058
+  T=  0.5: ambiguity = 17.0762
+  T=  1.0: ambiguity = 9.1228
+  T=  2.0: ambiguity = 7.5201
+  T=  5.0: ambiguity = 7.3181
+  T= 10.0: ambiguity = 7.3774
+
+  PASSED: Mixed ranking with detectable upset
+
+Test 4: Observing logit vector (simulating LLM output)
+=== Polynomial Predictor Report (5 items) ===
+
+Polynomial: P(z) = 7.50*z^0 + -1.37*z^1 + 2.35*z^2
+
+Ranking: mat > sat > cat > hat > dog
+Confidence: 0.117977
+Regime: 30 (solvable)
+Hallucination risk: 0.0000
+Observations: 10/10 pairs
+
+Coefficients:
+  A_0 = +7.5000  (PRIOR: mean ambiguity)
+  A_1 = -1.3700  (EVIDENCE: individual arc strength)
+  A_2 = +2.3462  (PATTERNS: pairwise correlations)
+  A_3 = +0.0000  (CONTRADICTIONS: cycle content)
+  A_4 = +0.0000  (DEEP STRUCTURE: independence)
+
+Temperature sweep:
+  T=  0.1: ambiguity = 228.4250
+  T=  0.5: ambiguity = 14.1450
+  T=  1.0: ambiguity = 8.4763
+  T=  2.0: ambiguity = 7.4016
+  T=  5.0: ambiguity = 7.3198
+  T= 10.0: ambiguity = 7.3865
+
+  PASSED: Logit vector correctly produces ranking
+
+Test 5: Active learning recommendation
+  Next comparison to collect: ('X', 'W')
+  PASSED: Active learning provides recommendation
+
+Test 6: Surprise from expected vs unexpected result
+  Surprise if A beats D (expected): 0.0000
+  Surprise if D beats A (upset):    0.0000
+  PASSED: Surprise measurement working
+
+ALL TESTS PASSED
