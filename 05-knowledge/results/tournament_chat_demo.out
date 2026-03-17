@@ -1,0 +1,100 @@
+
+  Training Tournament Chat on built-in corpus...
+  Trained on 291 tokens, 146 unique words
+  Bigram contexts: 146
+  Trigram contexts: 263
+
+  === DEMO MODE ===
+
+============================================================
+
+  Prompt: "the cat"
+  Temperature: 0.7
+
+  [  certain] risk=0.00 |                    | P(z)=[3,-0.0,-0.0,0,0] -> chased
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> the
+  [  certain] risk=0.00 |                    | P(z)=[1000,-2.9,1.2,0,0] -> dog
+  [  certain] risk=0.00 |                    | P(z)=[2,-0.0,-0.0,0,0] -> barked
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> at
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.3,0.1,0,0] -> the
+  [  certain] risk=0.00 |                    | P(z)=[1000,-2.8,1.2,0,0] -> cat
+  [  certain] risk=0.00 |                    | P(z)=[3,-0.0,-0.0,0,0] -> hissed
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> back
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.7,0.5,0,0] -> a
+  [  certain] risk=0.00 |                    | P(z)=[2,-0.9,0.5,0,0] -> bird
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> flew
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> over
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> the
+  [  certain] risk=0.00 |                    | P(z)=[1000,-2.8,1.2,0,0] -> garden
+
+  FULL: "the cat chased the dog barked at the cat hissed back a bird flew over the garden"
+
+============================================================
+
+  Prompt: "the world is"
+  Temperature: 0.7
+
+  [  certain] risk=0.00 |                    | P(z)=[22,-1.2,0.5,0,0] -> full
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> of
+  [  certain] risk=0.00 |                    | P(z)=[79,-2.0,0.8,0,0] -> life
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> fish
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> swim
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> in
+  [  certain] risk=0.00 |                    | P(z)=[3,-1.5,0.9,0,0] -> the
+  [  certain] risk=0.00 |                    | P(z)=[1000,-3.0,1.1,0,0] -> sea
+  [  certain] risk=0.00 |                    | P(z)=[2,-0.0,-0.0,0,0] -> the
+  [  certain] risk=0.00 |                    | P(z)=[1000,-2.9,1.2,0,0] -> sea
+  [  certain] risk=0.00 |                    | P(z)=[2,-0.0,-0.0,0,0] -> is
+  [  certain] risk=0.00 |                    | P(z)=[22,-1.2,0.5,0,0] -> vast
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> and
+  [  certain] risk=0.00 |                    | P(z)=[1000,-1.7,0.6,0,0] -> deep
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> and
+
+  FULL: "the world is full of life fish swim in the sea the sea is vast and deep and"
+
+============================================================
+
+  Prompt: "questions lead"
+  Temperature: 0.7
+
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> to
+  [  certain] risk=0.00 |                    | P(z)=[3,-1.4,0.6,0,0] -> more
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> questions
+  [  certain] risk=0.00 |                    | P(z)=[2,-0.9,0.5,0,0] -> the
+  [  certain] risk=0.00 |                    | P(z)=[1000,-2.6,0.9,0,0] -> garden
+  [  certain] risk=0.00 |                    | P(z)=[3,-0.0,-0.0,0,0] -> path
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> the
+  [  certain] risk=0.00 |                    | P(z)=[1000,-3.0,1.1,0,0] -> cat
+  [  certain] risk=0.00 |                    | P(z)=[3,-0.0,-0.0,0,0] -> sat
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> on
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> the
+  [  certain] risk=0.00 |                    | P(z)=[1000,-2.9,1.1,0,0] -> garden
+  [  certain] risk=0.00 |                    | P(z)=[3,-0.0,-0.0,0,0] -> and
+  [  certain] risk=0.00 |                    | P(z)=[1000,-1.7,0.6,0,0] -> landed
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> on
+
+  FULL: "questions lead to more questions the garden path the cat sat on the garden and landed on"
+
+============================================================
+
+  Prompt: "mathematics reveals"
+  Temperature: 0.7
+
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> the
+  [  certain] risk=0.00 |                    | P(z)=[1000,-2.6,0.9,0,0] -> hidden
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> structure
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.7,0.5,0,0] -> of
+  [  certain] risk=0.00 |                    | P(z)=[79,-1.5,0.5,0,0] -> reality
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> structure
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.7,0.5,0,0] -> and
+  [  certain] risk=0.00 |                    | P(z)=[1000,-1.7,0.6,0,0] -> pattern
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> are
+  [  certain] risk=0.00 |                    | P(z)=[2,-0.9,0.5,0,0] -> everywhere
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> if
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> you
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> look
+  [  certain] risk=0.00 |                    | P(z)=[1,-0.0,-0.0,0,0] -> the
+  [  certain] risk=0.00 |                    | P(z)=[1000,-2.6,0.9,0,0] -> garden
+
+  FULL: "mathematics reveals the hidden structure of reality structure and pattern are everywhere if you look the garden"
+
