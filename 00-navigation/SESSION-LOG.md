@@ -13,6 +13,32 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-17-S74 — 2026-03-17: Riemann Zeta Connections Deep Dive
+
+**Account:** opus
+**Continuation of:** opus-2026-03-16-S73 (context-resumed)
+**Files read:** Full repo exploration (all directories), both writeups, substack hooks, all hypotheses
+**Summary of work:** Deep pure math exploration of Riemann zeta ↔ tournament connections. Identified 6 genuine connections (Von Staudt-Clausen, Kummer carries, Euler product/OCF, Gauss sums/Paley eigenvalues, Mertens/signed permanent, functional equation/complement duality). CORRECTED HYP-1618: standard ζ(-3)=1/120≠7, forbidden values come from k-nacci traces (Newton's identities). Prior session: complete writeup rewrites, 11 new Substack hooks, Egyptian fraction extensions.
+
+**New contributions:**
+- HYP-1622-1628 (7 new zeta-related hypotheses)
+- HYP-1618 CORRECTED (k-nacci traces, not Riemann zeta)
+- T250 CORRECTED, T252-T255 added (4 new tangents)
+- `07-reflections/riemann-zeta-tournament.md` (synthesis of 6 connections)
+- `04-computation/zeta_deep_dive.py` (saved from /tmp)
+- `04-computation/riemann_zeta_tournament_connections.py` (13-part analysis)
+- `05-knowledge/results/riemann_zeta_connections.out`
+- `06-writeups/formal-writeup.md` (complete rewrite, 527 lines)
+- `06-writeups/casual-writeup.md` (complete rewrite, 224 lines)
+- `03-artifacts/drafts/substack-hooks.md` (11 new hooks J-T)
+
+**Unresolved threads:**
+- Prove Paley Betti formula β_m = m(m-3)/2 via L-function eigenvalue analysis?
+- Exact limit of Tr(M_3^n)/T(n+2) → 1.617...? (HYP-1626)
+- Can the Gauss sum/Betti connection be made rigorous enough for a theorem?
+- OEIS submissions for W(n), new sequences
+- PyPI packages (mod_rank_library, tournament_tda)
+
 ## kind-pasteur-2026-03-16-S116n32 — 2026-03-16: MARATHON — Von Staudt to Tetrahedron Algorithm to Applications
 
 **Account:** kind-pasteur

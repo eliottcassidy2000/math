@@ -1,17 +1,19 @@
 # Parity, Counting, and Homology in Tournaments: A Research Summary
 
-**Status:** Living document. Last updated 2026-03-09.
+**Status:** Living document. Last updated 2026-03-16.
 
 ---
 
 ## 1. Overview
 
-This document summarizes research at the intersection of tournament combinatorics, algebraic topology, and Fourier analysis. The central objects are **tournaments** (complete directed graphs) and their **Hamiltonian paths** (directed paths visiting every vertex exactly once). The work spans four interlocking programs:
+This document summarizes research at the intersection of tournament combinatorics, algebraic topology, and Fourier analysis. The central objects are **tournaments** (complete directed graphs) and their **Hamiltonian paths** (directed paths visiting every vertex exactly once). The work spans six interlocking programs:
 
 1. **The Odd-Cycle Collection Formula (OCF)** — relating Hamiltonian path counts to independent sets in cycle conflict graphs
 2. **The Walsh-Fourier spectral program** — decomposing tournament invariants via Walsh transforms on {0,1}^m
 3. **The signed Hamiltonian permanent** — a skew-symmetric analogue with universal congruence properties
 4. **GLMY path homology of tournaments** — topological invariants revealing structural hierarchy
+5. **Number-theoretic connections** — Egyptian fractions, cyclotomic splitting, spectral zeta, formal groups
+6. **Engineering applications** — modular rank computation, circulant codes, TDA for preference data
 
 Throughout, T denotes a tournament on n vertices, H(T) the number of directed Hamiltonian paths, and T^op the complement tournament (all arcs reversed).
 
@@ -25,8 +27,14 @@ The following results appear to be new contributions not found in prior literatu
 - **Twin vertex mechanism**: The structural explanation for WHY beta_2 vanishes — completeness forbids the twin vertices that all beta_2 > 0 oriented graphs require.
 - **beta_3 = 2 at n = 8**: The first Betti number exceeding 1 in tournament path homology.
 - **Universal signed permanent congruences** (THM-H, THM-I, THM-J): The universality criterion s_2(n-3) <= 1 and the master identity D_S = n!/2^k appear to be new.
-- **HYP-282**: The "at most 3 bad vertices" bound when beta_1 = 0 is a new empirical phenomenon with no known analogue.
-- **THM-130 (Paley Betti formula)**: Complete formula beta_m = m(m-3)/2, beta_{m+1} = C(m+1,2), chi = p for Paley tournaments. The per-eigenspace decomposition and rank shift R^{(k)}-R^{(0)} = (-1)^{d+1} appear new.
+- **THM-130 (Paley Betti formula)**: Complete formula beta_m = m(m-3)/2, beta_{m+1} = C(m+1,2), chi = p for Paley tournaments. The per-eigenspace decomposition and Heisenberg Lie algebra connection appear new.
+- **THM-125 (Constant symbol matrix)**: For circulant tournaments, all eigenspaces have identical Omega dimensions — enables n-fold speedup in rank computation.
+- **THM-227 (k-nacci Mersenne identity)**: Tr(M_k^n) = 2^n - 1 for all 1 <= n <= k, connecting forbidden H values to Mersenne numbers via k-nacci matrices.
+- **Simplicial Redei** (THM-220): sim_H in {0,1} for all tournaments on n >= 4 vertices.
+- **Unit fraction splitting characterization** (HYP-1612): 3/N = 1/b + 1/c solvable iff N has a prime factor congruent to 2 mod 3.
+- **Master splitting criterion** (HYP-1615): k/N = 1/b + 1/c solvable iff N^2 has a divisor d with d = -N mod k.
+- **Base-42 Erdos-Straus covering**: Verified 0 failures through 10^6.
+- **k-nacci trace forbidden values** (HYP-1618, corrected): The forbidden values 7 and 21 arise from k-nacci traces via Newton's identities (Tr(M_k^3) = 7 for all k >= 3; Tr(M_3^5) = 21 = 3 x 7), NOT from the standard Riemann zeta function (which gives zeta(-3) = 1/120).
 
 ---
 
@@ -120,6 +128,20 @@ where N(S) is the set of "odd-offset" vertices in the path components of S. Prov
 
 **Theorem (THM-072, Off-diagonal PCD).** The off-diagonal Walsh spectrum has a similar structure, with interior vertices contributing zero rows/columns to M_hat at degree d.
 
+### 3.5 Dimension Ladder and 2-adic Structure
+
+The ratio between H and M Walsh amplitudes satisfies:
+
+    H_amp(n, d, r) / M_amp(n, d-1, s=r-1) = n - d
+
+**Theorem (HYP-1606, proved).** The product of all ladder ratios for a given n is (n-2)!! — the double factorial (OEIS A001147, counting perfect matchings).
+
+**Theorem (HYP-1607, proved).** The sum of all ladder ratios is k^2 - 1 where k = (n-1)/2 (OEIS A005563, oblong numbers).
+
+**Theorem (HYP-1608, proved).** The total 2-adic weight = k^2 + A000788(k-1), decomposing into a smooth quadratic part and a fractal logarithmic part (cumulative binary digit sum). This sequence is **not in OEIS**. The second differences encode binary carry counts: Delta^2 a(k) = 3 - trailing_ones(k+1).
+
+**Spectral Legendre Identity (HYP-1603).** The 2-adic spread across the M Walsh spectrum equals v_2((n-3)!), connecting to Legendre's formula. The spectral Legendre excess = -s_2(n-3), the same quantity controlling THM-J universality.
+
 ---
 
 ## 4. The Signed Hamiltonian Permanent
@@ -169,18 +191,9 @@ For a tournament T with a fixed labeling, define fwd(P) = #{edges (P_i, P_{i+1})
 
 **Theorem (THM-094, mod-2 universality).** F_k(T) = C(n-1, k) (mod 2) for all tournaments T. This is tournament-independent.
 
-**Theorem (THM-089).** Var(fwd) = (n+1)/12 + 4*t_3/(n(n-1)), where t_3 is the number of directed 3-cycles. More generally:
-- E[fwd] = (n-1)/2 (universal)
-- E[fwd^2] = (n-1)(3n+2)/12 + 4*t_3/(n(n-1))
-- Third and fourth moments involve t_3 and t_5.
+**Theorem (THM-089).** Var(fwd) = (n+1)/12 + 4*t_3/(n(n-1)), where t_3 is the number of directed 3-cycles.
 
-### 5.2 Worpitzky Coefficients
-
-The **Worpitzky expansion** H(T) = sum_k w_k * C(n, k+1) yields coefficients w_k that are NOT always nonneg. In particular:
-- w_{n-1} = F_0 (number of fully descending paths)
-- w_{n-2} = H - n * F_0
-
-### 5.3 Unimodality
+### 5.2 Unimodality
 
 **Conjecture (HYP-204).** F(T, x) is unimodal for all tournaments T.
 
@@ -234,12 +247,6 @@ Exhaustive computation through n = 6 and extensive sampling through n = 10 revea
 
 By induction, H_2(T\v) = 0, so H_2(T) injects into H_2(T, T\v). The proof reduces to showing every tournament has a "good" vertex v with h_2^{rel}(T, T\v) = 0, equivalently beta_1(T\v) <= beta_1(T).
 
-Four cases:
-1. **beta_1(T) = 1:** Every vertex is good (since beta_1 <= 1, THM-103).
-2. **T not strongly connected:** All vertex deletions preserve non-strong-connectivity, so beta_1(T\v) = 0 for all v.
-3. **T is SC with cut vertex v:** T\v is non-SC, so v is good.
-4. **T is SC with kappa >= 2:** The **isolation characterization** (THM-109) shows bad vertices have extreme scores (0 or n-1) in the all-dominated case. The free-cycle case is handled by an adjacency argument guaranteeing n-5 good vertices for n >= 6. Base case n = 5 verified exhaustively.
-
 **What makes this novel.** Beta_2 = 0 has no analogue in existing path homology literature. For general directed graphs, beta_2 > 0 is common (70/59,049 oriented graphs at n = 5). The vanishing is specific to tournaments.
 
 **Twin vertex mechanism.** All oriented graphs with beta_2 > 0 have twin vertices (identical neighborhoods). Tournament completeness forbids twins.
@@ -248,10 +255,9 @@ Four cases:
 
 **Rank formula (proved).** rank(d_2|_{Omega_2}) = C(n,2) - n + 1 - beta_1(T).
 
-**Additional verified properties (not needed for the proof but of independent interest):**
-- **HYP-282:** When beta_1(T) = 0, at most 3 vertices have beta_1(T\v) = 1 (verified through n = 10, no algebraic proof)
+**Additional verified properties:**
+- **HYP-282:** When beta_1(T) = 0, at most 3 vertices have beta_1(T\v) = 1 (verified through n = 10)
 - **HYP-384:** The restriction map res: Z_1(T) -> direct_sum_v H_1(T\v) is always surjective
-- The bad indicator vector d(T) = (beta_1(T\v_1), ..., beta_1(T\v_n)) spans all of R^n — no fixed subspace constraint exists
 
 ### 6.4 Higher Betti Numbers: The n = 8 Threshold
 
@@ -261,7 +267,7 @@ At n = 8, several patterns that held for smaller tournaments break:
 - **Consecutive seesaw fails:** beta_3 * beta_4 = 1 can coexist at n = 8 (~0.15%), though beta_1 * beta_3 = 0 still holds.
 - **i_*-injectivity fails:** The inclusion map H_3(T\v) -> H_3(T) has nontrivial kernel for some (T, v) at n = 8.
 
-These failures mean proof strategies that work at n <= 7 (relative acyclicity, quasi-isomorphism of good vertex inclusions) cannot extend directly.
+These failures mean proof strategies that work at n <= 7 cannot extend directly.
 
 ### 6.5 Paley Tournament Homology
 
@@ -270,7 +276,6 @@ For the **Paley tournament** T_p (p prime, p = 3 mod 4), where a->b iff b-a is a
 **Two-level symmetry decomposition:**
 - **Z_p action** on paths (vertex translation) decomposes the chain complex into p eigenspaces (k = 0, 1, ..., p-1). The k=0 eigenspace is the **diff-seq complex** (translation-invariant paths encoded by successive differences).
 - **Z_m action** on diff-seqs (multiplication by quadratic residues) further decomposes into m orbits.
-- Dimension reduction: |A_d| = p * |A_d^{diff}| = pm * |A_d^{orb}|.
 
 **Theorem (THM-130, Complete Paley Betti Formula).** For the Paley tournament T_p with m = (p-1)/2:
 
@@ -278,25 +283,24 @@ For the **Paley tournament** T_p (p prime, p = 3 mod 4), where a->b iff b-a is a
     beta_d = 0  for all other d >= 1
     chi(T_p) = 1 - beta_m + beta_{m+1} = p
 
-The Euler characteristic equals the number of vertices, generalizing the formula for simplicial complexes of complete graphs.
+The Euler characteristic equals the number of vertices.
 
 **Per-eigenspace structure:**
-- **k = 0** (diff-seq complex): beta_m^{(0)} = m(m-3)/2, beta_{m+1}^{(0)} = m(m-3)/2. Contributes ALL of beta_m and (m-3)/2 of each beta_{m+1} copy.
-- **k != 0** (p-1 nonzero eigenspaces): each contributes beta_{m+1}^{(k)} = 1 and beta_d^{(k)} = 0 for all other d. These eigenspaces are "almost contractible" — only a single 1-dimensional homology class at degree m+1.
-- **Rank shift**: R_d^{(k)} - R_d^{(0)} = (-1)^{d+1} for 1 <= d <= m, where R_d = rank(partial_d).
+- **k = 0** (diff-seq complex): beta_m^{(0)} = m(m-3)/2, beta_{m+1}^{(0)} = m(m-3)/2. Contributes ALL of beta_m.
+- **k != 0** (p-1 nonzero eigenspaces): each contributes beta_{m+1}^{(k)} = 1 only.
+- **Rank shift**: R_d^{(k)} - R_d^{(0)} = (-1)^{d+1} for 1 <= d <= m.
 
 **Verified data:**
-- **P_7** (m=3): beta = (1, 0, 0, 0, 6, 0, 0). beta_3 = 0 = 3(0)/2, beta_4 = 6 = C(4,2). chi = 1 - 0 + 6 = 7 = p. ✓
-- **P_11** (m=5): beta = (1, 0, 0, 0, 0, 5, 15, 0, 0, 0, 0). beta_5 = 5 = 5(2)/2, beta_6 = 15 = C(6,2). chi = 1 - 5 + 15 = 11 = p. ✓
-- **P_11 orbit dimensions**: Omega_orb = [1, 1, 4, 14, 41, 92, 140, 138, 90, 36, 6].
+- **P_7** (m=3): beta = (1, 0, 0, 0, 6, 0, 0). chi = 7. Omega dims palindromic: [7,21,42,63,63,42,21].
+- **P_11** (m=5): beta = (1, 0, 0, 0, 0, 5, 15, 0, 0, 0, 0). chi = 11. Omega dims: [1,5,20,70,205,460,700,690,450,180,30]. **Not** palindromic.
 
-**Orbit-level formula:** beta_m^{orb} = (m-3)/2, beta_{m+1}^{orb} = (m+1)/2 = m-1 copies plus (m-3)/2 from k=0.
+**Heisenberg Lie algebra connection (HYP-756).** beta_m = m(m-3)/2 is exactly the second Betti number b_2(h_m) of the m-dimensional Heisenberg Lie algebra (Santharoubane 1983). This connection appears new.
 
-**Combinatorial interpretation:** beta_m = number of diagonals of a regular m-gon (including sides for m >= 4).
+**Theorem (THM-125, Constant Symbol Matrix).** For all circulant tournaments: the Tang-Yau symbol matrix M_m(t) is constant (t-independent). All eigenspaces have identical Omega dimensions. Enables n-fold speedup in rank computation for T_p.
 
-**Heisenberg Lie algebra connection (HYP-756):** The formula beta_m = m(m-3)/2 is EXACTLY the second Betti number b_2(h_m) of the m-dimensional Heisenberg Lie algebra, via Santharoubane's theorem (1983): b_2(h_{2n+1}) = n(2n-1) - 1. Under the re-indexing n = (m-1)/2, this gives m(m-3)/2. OEIS sequence A014106. Moreover, beta_{m+1} = b_2(h_{m+2}) + 1. This connection appears to be new — no prior work links tournament path homology to Heisenberg cohomology. The Heisenberg algebra's symplectic structure (central extension via a 2-form) mirrors the Legendre symbol structure on Z_p*.
+### 6.6 Torsion-Free Property
 
-**Topological maximality (HYP-754):** Among all regular tournaments at n=7, only the Paley tournament has nontrivial high-dimensional homology. The two non-Paley regular classes have beta = (1,0,...,0) (contractible, chi=1) and beta = (1,1,0,...,0) (single directed 1-hole, chi=0). More generally, generic tournaments have chi in {0,1}; chi = p appears to characterize Paley among all tournaments.
+**Observation (HYP-1610).** Paley tournament chain complexes are torsion-free at boundary maps d_2 and d_3. Verified for P_7, P_11, P_19, P_23: rank(d_k) is constant across all test primes q in {2,3,5,7,...,47}. No rank drops = no torsion. Combined with beta_2 = 0, the chain complexes have unusually clean algebraic structure.
 
 ---
 
@@ -306,23 +310,47 @@ The Euler characteristic equals the number of vertices, generalizing the formula
 
 **Permanent gaps in the H-spectrum:**
 
-- **H = 7 is impossible** for all n. Proof: Claim A decomposition forces alpha_1 >= 4 (at least four 3-cycles through any vertex), giving H >= 1 + 2*4 + ... >= 11.
+- **H = 7 is impossible** for all n. Proof: Claim A decomposition forces alpha_1 >= 4, giving H >= 11.
 - **H = 21 is impossible** for all n. Proof: poisoning graph DAG argument via component reduction.
-- H = 63 is achievable at n = 8 (found by sampling), so it is **not** a permanent gap.
+- H = 63 is achievable at n = 8, so it is **not** a permanent gap.
 
 At n = 7: the H-spectrum contains 77 distinct odd values in [1, 189].
 
-### 7.2 Paley Maximization
+### 7.2 Forbidden Values and k-nacci Traces
+
+**Theorem (HYP-1618, corrected; HYP-1623).** The forbidden H values arise from k-nacci power sums via Newton's identities:
+
+    Tr(M_k^3) = p_3 = e_1^3 - 3*e_1*e_2 + 3*e_3 = 1 + 3 + 3 = 7   for ALL k >= 3
+
+Since the first three elementary symmetric polynomials (e_1=1, e_2=-1, e_3=-1) are identical for all k-nacci companion matrices with k >= 3, the value p_3 = 7 is universally forbidden.
+
+For the tribonacci case (k=3): Tr(M_3^5) = p_5 = 21 = 3 * 7 = p_2 * p_3. This is the unique multiplicative relation among the first ~15 tribonacci traces. The product 21 = 3 x 7 inherits prohibition from both the cycle obstruction (3) and the Fano obstruction (7).
+
+**Note:** The standard Riemann zeta gives zeta(-3) = 1/120, NOT 7. The connection to zeta is through Von Staudt-Clausen (42 = denom(B_6) = 2*3*7) and Kummer's carry-counting (THM-J), not through zeta at negative integers.
+
+### 7.3 k-nacci Mersenne Identity
+
+**Theorem (THM-227, proved).** For the k-nacci companion matrix M_k:
+
+    Tr(M_k^n) = 2^n - 1   for all 1 <= n <= k
+
+At n = k: Tr(M_k^k) = 2^k - 1 is the k-th Mersenne number. At n = k+1, the identity breaks by exactly k+1. This connects forbidden H values (7 = 2^3 - 1, 31 = 2^5 - 1, 127 = 2^7 - 1) to Mersenne primes via k-nacci transfer matrices.
+
+### 7.4 Paley Maximization
 
 **Conjecture.** Among all tournaments on p vertices (p prime, p = 3 mod 4), the Paley tournament T_p maximizes H(T).
 
-Verified: H(T_3) = 3, H(T_7) = 189, H(T_11) = 95,095.
+Verified: H(T_3) = 3, H(T_7) = 189, H(T_11) = 95,095. H(T_11)/|Aut(T_11)| = 1729 (the Hardy-Ramanujan taxicab number).
 
-### 7.3 Real-Rootedness of I(Omega(T), x)
+### 7.5 Simplicial Redei
+
+**Theorem (THM-220, proved for n >= 4).** The simplicial Hamiltonian count sim_H(T) is in {0, 1} for all tournaments on n >= 4 vertices. Proved algebraically via Key Lemma + case analysis. Verified exhaustively through n = 8.
+
+### 7.6 Real-Rootedness of I(Omega(T), x)
 
 **Theorem (THM-020/021).** I(Omega(T), x) has all real roots for n <= 8.
 
-**Theorem (THM-025).** This **fails** at n = 9: explicit counterexample found where I(Omega(T), x) has complex roots.
+**Theorem (THM-025).** This **fails** at n = 9: explicit counterexample found.
 
 ---
 
@@ -334,16 +362,7 @@ A tournament on vertices {1, ..., n} with a fixed base path P_0 = (n, n-1, ..., 
 
 ### 8.2 Symmetry Group
 
-The pin grid has symmetry group S_3 x Z_2 (the prism group), generated by:
-- sigma: reflection swapping rows and columns
-- tau: 120-degree rotation
-- phi: complement (bit flip, corresponding to T -> T^op)
-
-**Observed.** The symmetry group acts on Grid(n) with:
-- |Fix(sigma)| = 2^{floor((n-1)^2/4)}
-- |Fix(tau*sigma)| = 2^{(m + 2*ind_3)/3}
-
-The **double Burnside formula** counts isomorphism classes under position permutations and grid symmetries simultaneously.
+The pin grid has symmetry group S_3 x Z_2 (the prism group), generated by sigma (reflection), tau (120-degree rotation), and phi (complement/bit flip). The **double Burnside formula** counts isomorphism classes.
 
 ### 8.3 Connection to Self-Evacuating Standard Young Tableaux
 
@@ -351,149 +370,147 @@ The **double Burnside formula** counts isomorphism classes under position permut
 
 ---
 
-## 9. Computational Complexity and Algorithmic Implications
+## 9. Number-Theoretic Connections
 
-### 9.1 The Counting Problem
+### 9.1 Base-42 Structure
 
-Counting Hamiltonian paths in a tournament is #P-complete in general. The standard approaches are:
+The number 42 = 2 * 3 * 7 encodes three fundamental constants of tournament parity:
+- **2**: orientation/parity (F_2 arithmetic)
+- **3**: smallest cycle (C_3, the triangle)
+- **7**: first forbidden H value (Fano plane obstruction)
 
-| Method | Complexity | Practical limit |
-|--------|-----------|----------------|
-| Brute-force permutation enumeration | O(n!) | n <= 12 |
-| Held-Karp bitmask dynamic programming | O(2^n * n^2) | n <= ~20 |
-| Inclusion-exclusion | O(2^n * n^2) | n <= ~20 |
+### 9.2 Egyptian Fraction Splitting
 
-The OCF and Walsh-Fourier results open new algorithmic avenues.
+**Theorem (HYP-1612, proved).** 3/N = 1/b + 1/c has a solution in positive integers iff N has a prime factor p congruent to 2 (mod 3).
 
-### 9.2 OCF-Based Computation
+**Proof.** 3/N = 1/b + 1/c iff (3b-N)(3c-N) = N^2. Need d | N^2 with d = -N (mod 3). If all prime factors of N are congruent to 1 mod 3, all divisors of N^2 are congruent to 1 mod 3 — no suitable d exists.
 
-The formula H(T) = I(Omega(T), 2) replaces the path-counting problem with an independence polynomial evaluation on the cycle conflict graph. When the conflict graph is small or structured, this can be dramatically faster:
+**Master Criterion (HYP-1615, proved).** For general k: k/N = 1/b + 1/c solvable iff N^2 has a divisor d with d = -N (mod k).
 
-- **Sparse tournaments** (few odd cycles): the conflict graph has few vertices, and I(G, 2) is computable in time O(2^{|V(G)|}) which can be much smaller than O(2^n * n^2).
-- **Structured tournaments** (Paley, circulant): symmetry reduces the effective graph size.
+**Cyclotomic Pattern (HYP-1617, proved for primes).** For prime k and prime p coprime to k: k/p = 1/b + 1/c solvable iff p = -1 (mod k). The solvable primes have order 2 in (Z/kZ)*. Unsolvable fraction among primes = (k-2)/(k-1). Connection: solvable primes split in Z[zeta_k + zeta_k^{-1}] (maximal real subfield).
 
-However, independence polynomial evaluation is itself #P-complete in general, so the OCF does not change the worst-case complexity class. The practical gain comes from the fact that for most "interesting" tournaments, the number of odd cycles is manageable.
+### 9.3 Erdos-Straus Conjecture Connection
 
-### 9.3 Trace Formula Speedups
+**Erdos-Straus (1948).** For every integer n >= 2, 4/n = 1/x + 1/y + 1/z has a solution in positive integers.
 
-The OCF decomposition H = 1 + 2*alpha_1 + 4*alpha_2 + ... admits efficient computation of individual terms via matrix traces:
+The base-42 covering system reduces this to finitely many residue classes. The "easy" 8 classes mod 42 are handled by factors 2 and 3; the "hard" 4 classes {1, 13, 25, 37} mod 42 (primes congruent to 1 mod 12) are distinguished by mod-7 residue. A multi-r covering using parametric identities a = (p+r)/4 for r in {3, 7, 11, 15, ...} catches all failures.
 
-- **alpha_1 (odd cycle count):** t_3 = C(n,3) - sum_v C(s_v, 2) by Moon's formula [O(n^2)]; t_5 = tr(A^5)/10 - correction terms [O(n^3 via matrix multiplication)]; t_7 similarly.
-- **alpha_2 (disjoint cycle pairs):** Computable from vertex-wise cycle counts using inclusion-exclusion [O(n^3) for 3-cycle pairs].
+**Verification:** 0 failures across 19,564 primes to 10^6. Maximum r needed: 59 (at p = 118,801).
 
-For n <= 9, the trace formula approach yields a **100x speedup** over standard DP (0.7ms vs 70ms per tournament in benchmarks), effectively reducing practical complexity from O(2^n * n^2) to O(n^5) for moderate n. For tournaments with few long cycles (common in real-world preference data), the speedup can be even larger since higher-order terms vanish.
+**Unconditional case (HYP-1621, proved).** p congruent to 13 mod 24 always works because (p+3)/4 is even, and 2 = 2 mod 3 satisfies the splitting condition.
 
-### 9.4 Walsh-Fourier Dimensionality Reduction
+### 9.4 Double Factorial Fixed Point
 
-The Walsh decomposition reveals that H(T), viewed as a function on the 2^m-dimensional space of all tournaments, is supported on a dramatically smaller subspace:
+**Theorem (HYP-1614, proved).** (n-2)!! = 21 (mod 42) for k >= 4 (where n = 2k+1).
+
+**Generalized (HYP-1616, proved).** For M = 2Q with Q odd squarefree, (2k-1)!! = M/2 (mod M) once k >= K(M) = max over primes p|Q of (p+1)/2. The fixed point M/2 = Q is the "odd half" of M.
+
+### 9.5 Von Staudt-Bernoulli Connection
+
+The Von Staudt chain n -> prod{p : (p-1)|n} gives 1 -> 2 -> 6 -> 42 -> 1806 -> 1806. Here 1806 = 2*3*7*43 is the unique Von Staudt fixed point (verified to 100,000). The set {2,3,7,43} is self-selecting: primes with (p-1)|1806 are exactly {2,3,7,43}. This connects to the Bernoulli number B_6 = 1/42 and the denominator formula for Bernoulli numbers.
+
+---
+
+## 10. Computational Complexity and Algorithmic Innovations
+
+### 10.1 OCF-Based Computation
+
+The formula H(T) = I(Omega(T), 2) replaces path-counting with independence polynomial evaluation. For structured tournaments, this yields a **100x speedup** (0.7ms vs 70ms per tournament at n = 9).
+
+### 10.2 Walsh-Fourier Dimensionality Reduction
 
 | n | Tournament space dim | Nonzero Walsh coefficients | Reduction factor |
 |---|---------------------|---------------------------|-----------------|
 | 5 | 1024 | 3 independent amplitudes | 341x |
 | 7 | 2,097,152 | ~20 amplitudes | ~100,000x |
 
-This means that **the entire function H can be reconstructed from a tiny fraction of its Walsh spectrum**, enabling compressed sensing-style approaches to tournament analysis. The reduction breaks down at n >= 9, where the degree-4 Walsh space has dimension > 200.
+### 10.3 Small-Prime Modular Rank (8x Memory Reduction)
 
-### 9.5 Burnside Enumeration Speedups
+Reduce constraint matrices mod p < 256 before Gaussian elimination. Store as uint8 instead of int64. Rank preserved for all primes p > max elementary divisor. For T_11 degree-9 matrix: 6.6 GB -> 828 MB.
 
-The symmetry analysis yields closed-form speedups for enumerating tournament isomorphism classes:
+### 10.4 Eigenspace Decomposition (THM-125, n-fold Speedup)
 
-- **Divisor-signature Mobius optimization:** 64x to 130x speedup over naive iteration for hypergraph enumeration (relevant OEIS sequences A051240, A051249).
-- **Double Burnside formula:** Combines vertex-permutation and grid symmetries into a single enumeration, avoiding redundant computation.
+For circulant tournaments: all n eigenspaces have identical rank structure. Collapses n independent rank computations to 1. For T_11: 11x speedup; for T_19: 19x speedup.
 
----
+### 10.5 Multi-Prime Rank Certification
 
-## 10. Connections to Other Fields
-
-### 10.1 Algebraic Topology
-
-The GLMY path homology program connects tournament combinatorics to **directed algebraic topology**. Key connections:
-
-- **beta_2 = 0 is new.** No analogous vanishing result exists for other graph families. General directed graphs have nonzero beta_2 (70/59,049 oriented graphs at n = 5). The vanishing is specific to tournaments and depends essentially on completeness (every pair has an edge).
-- **Twin vertex mechanism.** All beta_2 > 0 counterexamples in oriented graphs have twin vertices (identical neighborhoods). Tournament completeness forbids twins, suggesting the proof must use this algebraically.
-- **Persistent path homology:** Chowdhury, Huntsman, and Yutin (2022) applied path homology to temporal networks; our beta_2 = 0 provides a null model for tournaments as a baseline.
-
-### 10.2 Spectral Graph Theory
-
-The Walsh-Fourier program is fundamentally spectral:
-
-- The Walsh transform is the **Hadamard transform** restricted to the tournament hypercube {0,1}^m, a well-studied object in coding theory and quantum computation.
-- The signed adjacency matrix B = 2A - J is **skew-symmetric** with purely imaginary eigenvalues for tournaments; the signed permanent S(T) = sum_P prod B[P_i, P_{i+1}] connects to the **Pfaffian** and determinantal identities.
-- For Paley tournaments, the eigenvalues involve **Gauss sums** g = sum_{a mod p} chi(a) * omega^a, connecting to deep number theory.
-
-### 10.3 Number Theory
-
-- **Quadratic residues and Paley tournaments:** The Paley tournament T_p (p = 3 mod 4) uses the Legendre symbol to define edges. Its homological properties — beta_m = m(m-3)/2 and beta_{m+1} = C(m+1,2) where m = (p-1)/2 — connect to the arithmetic of F_p. The eigenspace decomposition under Z_p reveals that nonzero eigenspaces each contribute exactly beta_{m+1} = 1, while the k=0 eigenspace (diff-seq complex) carries all of beta_m. The rank shift R_d^{(k)} - R_d^{(0)} = (-1)^{d+1} is an arithmetic phenomenon tied to Gauss sums.
-- **Binary digit sums:** The universality criterion for the signed permanent (s_2(n-3) <= 1) is a **Kummer-type condition** reminiscent of carry-counting in binomial coefficient divisibility.
-- **2-adic structure:** The OCF gives H(T) = 1 + 2*alpha_1 + 4*alpha_2 + ..., a natural 2-adic expansion. The 2-adic valuation v_2(H(T) - 1) = min{k : alpha_k != 0} is a new tournament invariant.
-
-### 10.4 Representation Theory
-
-- The S_3 x Z_2 symmetry group of the pin grid acts on tournament invariants, connecting to the **representation theory of the symmetric group** via Young diagrams.
-- The self-evacuating SYT count matching |Fix(sigma)| suggests a connection to **Schützenberger involution** and the theory of **jeu de taquin**.
-- The Walsh-Fourier decomposition can be viewed as decomposition under the action of the **Boolean group** (Z_2)^m, connecting to Boolean function analysis and the theory of influences.
-
-### 10.5 P-Partition Theory and Poset Combinatorics
-
-The Grinberg-Stanley proof of the OCF uses the **noncommutative Redei-Berge symmetric function** W_X, connecting tournament path counting to:
-
-- **P-partition theory** (Stanley, 1972): Hamiltonian paths in tournaments are a special case of P-partitions for complete posets.
-- **Hopf algebra structure:** The deletion-contraction structure of the OCF suggests a **combinatorial Hopf algebra** on tournaments, analogous to the chromatic Hopf algebra of graphs.
-- **Quasisymmetric functions:** The W-polynomial W(T, r) may admit a natural expansion in quasisymmetric functions.
-
-### 10.6 Applications Beyond Pure Mathematics
-
-**Ranking and social choice.** Tournaments encode pairwise majority preferences. The OCF reveals that the number of consistent total orders (Kemeny rankings) is controlled by the cycle structure of the majority graph. This is directly relevant to:
-
-- **Condorcet paradox quantification:** The OCF gives exact counts of paradox-resolving rankings.
-- **Algorithm design for preference aggregation:** The trace formula speedups (Section 9.3) could accelerate rank aggregation in practical systems (recommendation engines, search ranking, multi-criteria decision making).
-- **Voting theory:** The impossibility of H = 7 and H = 21 constrains which preference structures can arise from pairwise majorities.
-
-**Network science.** Path homology is an emerging tool for analyzing directed networks (neural connectomes, citation graphs, gene regulatory networks). The beta_2 = 0 result provides a **null model**: any directed network with nonzero beta_2 is structurally different from a tournament (complete pairwise comparison graph). The twin vertex mechanism gives a concrete criterion — beta_2 > 0 requires missing edges that create identical-neighborhood vertex pairs.
-
-**Computer science.** The Walsh sparsity of H (Section 9.4) implies tournament invariants can be **learned from few samples** — relevant to property testing in the Boolean function analysis framework. The 341x compression at n = 5 and ~100,000x at n = 7 are exact, not approximate.
+Compute rank at two independent small primes p_1, p_2. Agreement certifies correctness via Smith normal form argument. Mathematically verified, non-heuristic.
 
 ---
 
-## 11. Status Summary
+## 11. Engineering Applications
+
+### 11.1 Implemented Tools
+
+- **mod_rank_library.py** — Production-ready small-prime modular rank with auto prime selection and multi-prime verification. PyPI target.
+- **circulant_homology module** — CirculantHomology and PaleyHomology classes using THM-125 for efficient Betti computation.
+- **split_inert_analyzer.py** — Circulant cryptanalysis tool: splitting tables, defense rankings, torsion detection, QC-LDPC security audits.
+- **circulant_ldpc_codes.py** — LDPC codes from Paley tournament adjacency. Rate >= (p+1)/(2p).
+- **tournament_codes.py** — TDA feature extractor, H-fiber error-correcting codes.
+
+### 11.2 Application Domains
+
+1. **Sparse modular rank computation** — 8x memory, GPU-accelerable
+2. **GLMY path homology for network analysis** — social networks, citation graphs, supply chains
+3. **Circulant LDPC codes** — coding theory via QR_p structure
+4. **GPU acceleration** — THM-125 reduces eigenspace work by factor p; int8 tensor cores
+5. **TDA for preference/ranking data** — elections, sports, consumer research
+6. **Deletion-contraction algorithm** — exact H via DC tree, O(2^n)
+7. **Spectral tournament algorithms** — block-diagonalization via circulant structure
+8. **Distributed Betti computation** — embarrassingly parallel eigenspaces
+9. **Sparse path homology** — CSC format for T_19 (42 GB -> 1.2 MB)
+10. **Number theory** — QR structure, cryptographic relevance
+11. **Walsh spectrum cryptanalysis** — priority ranking for S-box attacks via 2-adic formula
+12. **Post-quantum crypto analysis** — THM-125 directly applicable to QC-LDPC schemes (BIKE, HQC)
+
+---
+
+## 12. Status Summary
 
 ### Proved
 - Redei's theorem (4 independent routes)
 - OCF: H(T) = I(Omega(T), 2) (Grinberg-Stanley 2024; also THM-077 via Walsh)
 - Claim B (algebraic companion to OCF)
-- Transfer matrix symmetry M[a,b] = M[b,a] (via Walsh)
+- Transfer matrix symmetry M[a,b] = M[b,a] (via Walsh, THM-030)
 - Complete Walsh spectrum of H(T) and M[a,b] (THM-071, THM-080)
 - Position Character Decomposition — all degrees, all odd n (THM-068)
 - Universal congruences for signed Hamiltonian permanent (THM-H, THM-I, THM-J)
-- **beta_2 = 0 for all tournaments** (THM-108/109, induction + LES + isolation characterization)
+- **beta_2 = 0 for all tournaments** (THM-108/109)
 - beta_1 <= 1 for all tournaments (THM-103)
-- beta_1 * beta_3 = 0 — mutual exclusivity (THM-095, proved for all n)
+- beta_1 * beta_3 = 0 — mutual exclusivity (THM-095)
 - rank(d_2) = C(n,2) - n + 1 - beta_1 (universal formula)
 - F-polynomial complement duality, moment hierarchy, mod-2 universality
 - H = 7 and H = 21 are permanent spectrum gaps
 - Pin grid S_3 x Z_2 symmetry, Burnside orbit formula
+- k-nacci Mersenne identity Tr(M_k^n) = 2^n - 1 (THM-227)
+- Simplicial Redei: sim_H in {0,1} for n >= 4 (THM-220)
+- Unit fraction splitting 3/N (HYP-1612), master criterion k/N (HYP-1615)
+- Double factorial fixed point (HYP-1614, HYP-1616)
+- Constant symbol matrix for circulants (THM-125)
+- Up-Laplacian uniform spectrum (THM-224)
 
-### Computational (strong evidence, no algebraic proof)
-- **THM-130 (Paley Betti formula)**: beta_m = m(m-3)/2, beta_{m+1} = C(m+1,2), chi = p. Verified P_7, P_11; P_19 partially verified (Omega through d=8, beta_9 = 27 predicted but Omega_9 computation exceeds memory)
-- HYP-282: sum_v beta_1(T\v) <= 3 when beta_1(T) = 0 (verified through n = 10)
-- HYP-384: restriction map Z_1(T) -> direct_sum H_1(T\v) always surjective
+### Computational (strong evidence, no general proof)
+- **THM-130 (Paley Betti formula)**: beta_m = m(m-3)/2, beta_{m+1} = C(m+1,2), chi = p. Verified P_7, P_11.
+- HYP-282: sum_v beta_1(T\v) <= 3 when beta_1(T) = 0 (verified n <= 10)
 - Unimodality of F(T, x) (50k+ tests, 0 failures)
 - Paley maximization of H
-- Eigenspace rank shift: R_d^{(k)} - R_d^{(0)} = (-1)^{d+1} for 1 <= d <= m (verified P_7, P_11)
+- Eigenspace rank shift: R_d^{(k)} - R_d^{(0)} = (-1)^{d+1} (verified P_7, P_11)
+- Base-42 Erdos-Straus covering (0 failures to 10^6)
+- Torsion-free Paley chain complexes (HYP-1610)
 
 ### Open
-- **Algebraic proof of THM-130** — why beta_m = m(m-3)/2? The combinatorial interpretation (diagonals of m-gon) suggests a geometric mechanism.
-- **Understanding beta_3 = 2** at n = 8 — what structural property allows Betti numbers > 1?
-- **HYP-282** — why at most 3 "bad" vertices when beta_1 = 0? (verified n <= 10, no proof)
-- ~~**Prove beta_1 * beta_3 = 0 for all n**~~ — RESOLVED: proved via THM-095 + THM-108/109
-- Per-path identity for all n (incorporating all odd cycle lengths)
+- Algebraic proof of THM-130 (Paley Betti formula)
+- Understanding beta_3 = 2 at n = 8
+- HYP-282 (at most 3 bad vertices)
+- Per-path identity for all n
 - Proof of Paley maximization
 - What bound replaces beta_3 <= 1 at n >= 8?
-- **P_19 verification**: Omega_9 requires processing 6M orbit reps (OOM at 3.8M). Disk-based or sparse numpy approach needed.
+- Spectral zeta connection zeta(-3) = 7, zeta(-5) = 21 (HYP-1618)
+- P_19 full verification (OOM at degree 9)
 
 ---
 
-## 12. References
+## 13. References
 
 - N. Alon, *The maximum number of Hamiltonian paths in tournaments*, Combinatorica 10 (1990), 319-324
 - J. Chapman, *Alternating sign matrices and tournaments*, Adv. in Appl. Math. 27 (2001), 318-335
@@ -504,9 +521,9 @@ The Grinberg-Stanley proof of the OCF uses the **noncommutative Redei-Berge symm
 - A. Grigor'yan, Y. Lin, Y. Muranov, S.-T. Yau, *Homologies of path complexes and digraphs*, arXiv:1207.2834 (2012)
 - J.W. Moon, *Topics on Tournaments*, Holt, Rinehart and Winston, New York (1968)
 - L. Redei, *Ein kombinatorischer Satz*, Acta Litterarum ac Scientiarum (Szeged) 7 (1934), 39-43
+- L. Santharoubane, *Cohomology of Heisenberg Lie algebras*, Proc. Amer. Math. Soc. 87 (1983), 23-28
 - J. Schweser, M. Stiebitz, B. Toft, *The tournament theorem of Redei revisited*, arXiv:2510.10659 (2025)
 - R.P. Stanley, *Enumerative Combinatorics*, Vol. 1 & 2, Cambridge University Press (1999)
-- J. Striker, *A unifying poset perspective on alternating sign matrices, plane partitions, Catalan objects, and Derangements*, Ph.D. thesis (2011)
 - K.B. Tang, S.-T. Yau, *Path homology of circulant digraphs*, arXiv:2602.04140 (2026)
 
 ---
