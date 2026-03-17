@@ -1,0 +1,89 @@
+============================================================
+DEMO 1: LLM CHATBOT ARENA
+============================================================
+
+Rank |                 Item |    Score |   Conf | Comps
+-------------------------------------------------------
+   1 |           Claude-3.5 |   +1.028 | 47.3% |     4
+   2 |               GPT-4o |   +0.583 | 28.3% |     4
+   3 |           Gemini-1.5 |   -0.176 |  8.8% |     4
+   4 |            Mistral-L |   -0.460 | 22.6% |     4
+   5 |            Llama-3.1 |   -0.975 | 45.2% |     4
+
+  Claude vs GPT-4o: 156-134 (coupling=0.076, evidence=0.076)
+
+  Total comparisons processed: 2900
+  Time complexity: O(m) = O(10) — ONE PASS, no iteration
+
+============================================================
+DEMO 2: PREMIER LEAGUE 2024-25 (simulated)
+============================================================
+
+Rank |                 Item |    Score |   Conf | Comps
+-------------------------------------------------------
+   1 |            Liverpool |  +10.306 | 99.7% |     5
+   2 |              Arsenal |   +7.361 | 98.1% |     5
+   3 |              ManCity |   +1.472 | 43.5% |     5
+   4 |                Villa |   -4.417 | 88.5% |     5
+   5 |              Chelsea |   -5.889 | 95.3% |     5
+   6 |                Spurs |   -8.833 | 99.3% |     5
+
+============================================================
+DEMO 3: SCALING TEST
+============================================================
+
+   n items |  m comparisons |  time (ms) | rate (comp/ms)
+  -------------------------------------------------------
+        10 |             45 |     0.06ms |          785
+        50 |            500 |     0.48ms |         1034
+       100 |           1000 |     1.03ms |          974
+       500 |           5000 |     5.11ms |          978
+      1000 |          10000 |    11.52ms |          868
+      5000 |          50000 |    62.22ms |          804
+     10000 |         100000 |   132.22ms |          756
+
+============================================================
+DEMO 4: THE FORMAL GROUP STRUCTURE
+============================================================
+
+  The ranking score is:
+    theta_i = sum_j arctanh(coupling_ij)
+            = sum_j arctanh((w_ij - w_ji)/(w_ij + w_ji))
+            = sum_j (1/2) * ln(w_ij / w_ji)
+
+  This is the FORMAL GROUP LOGARITHM applied to evidence aggregation.
+
+  Properties:
+    1. Additive: new evidence ADDS to theta (no recomputation)
+    2. Symmetric: theta_i = -theta_j for a single comparison
+    3. Transitive: indirect evidence accumulates through shared opponents
+    4. Bounded coupling: x_ij in (-1, 1), mapping to theta_ij in (-inf, inf)
+    5. Regularized: 0-loss cases handled by Laplace smoothing
+
+  Connection to tournament theory:
+    - Complete comparisons = tournament on n vertices
+    - Copeland score = sum of signs of couplings
+    - FormalRank score = sum of arctanh of couplings (MUCH more informative)
+    - The arctanh weights CLOSE matches heavily (sigmoid-like saturation)
+
+  Comparison to Bradley-Terry MLE:
+    - BT: iterative, O(n^2 * iterations), convergence not guaranteed
+    - FormalRank: one-pass, O(m), EXACT closed-form
+    - BT captures transitivity through iteration
+    - FormalRank captures DIRECT evidence only (faster, but less transitive)
+    - For complete/dense comparison graphs: results are very similar
+    - For sparse graphs: BT is more accurate, FormalRank is much faster
+
+  Additivity check:
+    First batch: A beats B 7-3. theta_A = 0.423649
+    Add batch:   A beats B 6-4. theta_A = 0.626381
+    arctanh(4/10) = 0.423649
+    arctanh(2/10) = 0.202733
+    Sum = 0.626381
+    Match: True
+    Evidence is PERFECTLY ADDITIVE. No recomputation needed.
+
+============================================================
+formalrank.py v1.0.0 — opus-2026-03-17-S91h
+One-pass ranking via formal group logarithm
+============================================================
