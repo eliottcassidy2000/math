@@ -126,9 +126,13 @@ Input: hidden_state h ∈ R^d_model
    human preferences. OCF confidence tells you exactly how many
    consistent total rankings exist. H > 1 = ranking is ambiguous.
 
-2. **Inference-time uncertainty:** Extract logits from different layers.
-   Build tournament via majority vote. OCF confidence > 0.5 = safe to
-   output. OCF confidence < 0.1 = flag for review (hallucination risk).
+2. **Inference-time uncertainty:** Extract logits from different contexts
+   (attention heads, prompt paraphrases, or MC dropout). Build tournament
+   via majority vote. OCF confidence measures ranking ambiguity.
+   **NOTE (S74b empirical finding):** Using transformer LAYERS as contexts
+   gives a NULL result — layer disagreement measures processing depth
+   (positive signal), not uncertainty. Better context sources needed:
+   attention heads within a layer, or multiple prompts.
 
 3. **Speculative decoding:** Use spectral gap to decide whether to
    accept draft tokens. Large gap = accept immediately (confident).
@@ -151,19 +155,49 @@ Tested: 0 errors on exhaustive n=5 verification (1024 tournaments).
 
 ---
 
+## Empirical Results (opus-S74b, GPT-2)
+
+**Experiment 1: Layer-based tournaments (173 token predictions)**
+- Using 7 transformer layers as "contexts" for majority-vote tournament
+- Result: **NULL** — layer disagreement does NOT predict lower accuracy
+  - Transitive (H=1): 39.0% accuracy, n=159
+  - Intransitive (H>1): 50.0% accuracy, n=14
+  - Layer disagreement measures PROCESSING DEPTH, not uncertainty
+  - When late layers change the ranking, it means MORE refinement (positive)
+- OCF diagnostics work correctly; regime classification functions
+- NOTE: Initial "positive" result was an artifact of applying ln_f twice
+  to the final hidden state (bug in transformers v5+ compatibility)
+
+**Experiment 2: Staged evaluation**
+- TournamentHead with hot-256 cache matches standard predictions (7/8)
+- One mismatch from unwarmed cache (correct after warmup)
+- Generation is coherent: "where the velocity of the object is..."
+- Hot cache needs initialization from token frequency distribution
+
+**Key insight:** The multi-context tournament approach is sound but the
+CHOICE OF CONTEXTS matters critically. Layers are NOT good contexts
+(they measure refinement, not disagreement). Better sources:
+1. Attention heads within the same layer (parallel perspectives)
+2. Multiple prompt paraphrases (sensitivity to framing)
+3. MC dropout passes (model uncertainty sampling)
+4. Chatbot Arena-style human preferences (ground truth)
+
 ## What Needs to Be Done Next
 
-1. **Empirical validation:** Does OCF confidence correlate with actual
-   hallucination in a real LLM? Run on GPT-2 / Llama and compare
-   confidence-per-token with human judgment.
+1. **Attention head disaggregation:** Extract logits from individual
+   attention heads (GPT-2 has 12 per layer). Build tournament from
+   head-level predictions. These represent genuinely different perspectives.
 
-2. **Multi-layer extraction:** Actually extract logits from different
-   transformer layers and build the tournament. This is the key experiment.
+2. **Prompt paraphrase tournaments:** For the same question, generate
+   multiple rephrasings. Build tournament from each rephrasing's top-k.
+   OCF confidence = sensitivity to framing (hallucination risk).
 
 3. **arctanh attention training:** Train a small model with ArctanhAttention
    and compare perplexity with standard softmax attention.
 
 4. **Scaling analysis:** OCF computation is O(k³) for 3-cycles. For
-   k = 32 this is fast. For k = 1000 it's slow. Need efficient
-   approximations for large k (matrix trace method: t₃ = (Tr(A³) - 3·Σ s_i(s_i-1))/6,
-   which is O(n³) and works for any n).
+   k = 32 this is fast. For k = 1000 it's slow. Use matrix trace method:
+   t₃ = Tr(A³)/3 which is O(n³) via BLAS and works for any n.
+
+5. **Hot token cache initialization:** Initialize from corpus unigram
+   frequency instead of tokens 0-255. This should enable >80% early exits.

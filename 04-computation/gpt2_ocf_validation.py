@@ -132,20 +132,21 @@ def extract_layer_logits(model, tokenizer, input_ids, layers=None):
     with torch.no_grad():
         outputs = model(input_ids, output_hidden_states=True)
         hidden_states = outputs.hidden_states  # tuple of (batch, seq_len, d_model)
+        n_layer = model.config.n_layer
 
         # Project each layer's hidden state through lm_head
+        # NOTE: In transformers v5+, hidden_states[-1] (index n_layer) is
+        # ALREADY post-ln_f. Intermediate layers need ln_f applied first.
         layer_logits = []
         for layer_idx in layers:
-            # hidden_states[0] = embedding output
-            # hidden_states[i] = output of layer i-1
-            # hidden_states[-1] = output of last layer (= what lm_head normally sees)
             hs = hidden_states[layer_idx + 1]  # +1 because index 0 is embeddings
 
-            # Apply layer norm (GPT-2 has a final layer norm)
-            hs_normed = model.transformer.ln_f(hs)
+            if layer_idx + 1 < n_layer:
+                # Intermediate layer: apply layer norm before projection
+                hs = model.transformer.ln_f(hs)
+            # else: final layer, already post-ln_f
 
-            # Project through lm_head
-            logits = model.lm_head(hs_normed)
+            logits = model.lm_head(hs)
             layer_logits.append(logits)
 
     return layer_logits, layers

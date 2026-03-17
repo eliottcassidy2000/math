@@ -1646,8 +1646,7 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1626 | **Tr(M_3^n)/T(n+2) → constant ≈ 1.617**: The ratio of tribonacci trace p_n = Tr(M_3^n) to the tribonacci number T(n+2) converges to approximately 1.617... This is NOT the golden ratio φ=1.618... but close. The limit should be expressible in terms of tribonacci roots α,β,γ as α + β^n/α^n·β + γ^n/α^n·γ → α = τ ≈ 1.839... No — the limit should be 1 + 1/α² + ... Need to derive. | OPEN (observed computationally, exact limit unknown) | zeta_deep_dive.py | opus-S74 |
 | HYP-1627 | **Euler product ↔ OCF structural analogy**: OCF: H(T) = ∏_{odd cycles C} (1 + 2·x_C) evaluated at x_C=1 per disjoint collection = 1 + 2α_1 + 4α_2 + ... Euler product: ζ(s) = ∏_p (1-p^{-s})^{-1}. Odd cycles are "primes" of tournament structure — they generate all Hamiltonian path contributions multiplicatively. The 2-adic expansion of H is the tournament analogue of the p-adic expansion of ζ. The OCF is a FINITE Euler product over cycle "primes". | CONFIRMED (structural analogy, exact) | zeta_deep_dive.py | opus-S74 |
 | HYP-1628 | **Gauss sum → Paley eigenvalues → L-functions**: Paley T_p eigenvalues are (-1±√(p*))/2 where p*=(-1)^{(p-1)/2}·p. The Gauss sum g(χ_p)=√(p*) appears in the functional equation of L(s,χ_p). Thus Paley tournament eigenvalues are direct functions of the Gauss sum. The Betti numbers, computed from these eigenvalues via homological algebra, encode information about the Dirichlet L-function at the prime p. | CONFIRMED (algebraic, exact) | zeta_deep_dive.py | opus-S74 |
-<<<<<<< Updated upstream
-| HYP-1600 | **Tr(M_k^k) = 2^k-1 for ALL k (THM-227)**: The k-nacci companion matrix trace at power k equals the k-th Mersenne number. PROVED by induction on Newton's identities. Stronger: Tr(M_k^n) = 2^n-1 for ALL 1<=n<=k (independent of k). At n=k+1, breaks by exactly k+1: Tr(M_k^{k+1}) = 2^{k+1}-k-2. Connects forbidden H values (7=2^3-1, 31=2^5-1, 127=2^7-1) to Mersenne primes via k-nacci matrices. | CONFIRMED (proved, verified k=2..19) | prove_knacci_mersenne_s90ap.py | opus-S90ap |
+| HYP-1600 | **Tr(M_k^k) = 2^k-1 for ALL k (THM-227)**: The k-nacci companion matrix trace at power k equals the k-th Mersenne number. PROVED by induction on Newton's identities. Stronger: Tr(M_k^n) = 2^n-1 for ALL 1<=n<=k (independent of k). At n=k+1, breaks by exactly k+1: Tr(M_k^{k+1}) = 2^{k+1}-k-2. **CORRECTION (opus-S74 audit):** While Tr(M_3^3)=7 coincides with the first forbidden H value, the Mersenne numbers 31, 63, 127 are ALL achievable. The Mersenne connection to forbidden values was a false extrapolation. | CONFIRMED (proved, verified k=2..19; Mersenne-forbidden link CORRECTED) | prove_knacci_mersenne_s90ap.py | opus-S90ap |
 
 ## HYP-1640: Walsh degree of H bounded by 2*floor(n/3) (S116n33)
 **Status:** OPEN (verified at n=6 where degree=4=2*2)
@@ -1669,6 +1668,17 @@ Open: does this generalize to other n? At n=7: Column I product = ?
 **Status:** VERIFIED. 29 = 5²+2² (Gaussian, golden) and 29 = 1²+7·4 (Hurwitz, forbidden).
 Open: does the mean H at each n split using the world-defining primes?
 
-=======
-| HYP-1600 | **Tr(M_k^k) = 2^k-1 for ALL k (THM-227)**: The k-nacci companion matrix trace at power k equals the k-th Mersenne number. PROVED by induction on Newton's identities. Stronger: Tr(M_k^n) = 2^n-1 for ALL 1<=n<=k (independent of k). At n=k+1, breaks by exactly k+1: Tr(M_k^{k+1}) = 2^{k+1}-k-2. **CORRECTION (opus-S74 audit):** While Tr(M_3^3)=7 coincides with the first forbidden H value, the Mersenne numbers 31, 63, 127 are ALL achievable. The Mersenne connection to forbidden values was a false extrapolation. | CONFIRMED (proved, verified k=2..19; Mersenne-forbidden link CORRECTED) | prove_knacci_mersenne_s90ap.py | opus-S90ap |
->>>>>>> Stashed changes
+## HYP-1650: Layer-based OCF predicts LLM accuracy (opus-S74b)
+**Status:** REFUTED
+**Hypothesis:** When different transformer layers disagree on top-k token ordering (creating cycles in the majority-vote tournament), the model's prediction should be less accurate.
+**Result:** NULL. With corrected ln_f handling (transformers v5+), intransitive positions had 50% accuracy vs 39% for transitive (n=14 vs n=159), but the difference is within noise (SE=0.13). Weak positive correlation t3 vs correct (r=+0.09).
+**Why it fails:** Layer disagreement measures PROCESSING DEPTH, not uncertainty. When late layers change the ranking from early layers, it means more refinement (positive signal), not confusion.
+**Better approaches:** Use attention heads within a layer, prompt paraphrases, or MC dropout as "contexts" instead of layers.
+Source: gpt2_ocf_perplexity.py
+
+## HYP-1651: Staged hot-256 early exit gives 80%+ exit rate (opus-S74b)
+**Status:** PARTIALLY CONFIRMED
+**Hypothesis:** The TournamentHead's hot-256 cache enables early exit on 80%+ of tokens, saving ~500x FLOPS.
+**Result:** With default initialization (tokens 0-255), exit rate is low (~0-12%). Needs proper cache warmup from corpus token frequency. The theoretical savings are correct (500x ratio for V=128K). The prediction match is correct (7/8 with unwarmed cache; the miss is because the correct token isn't in the hot set).
+**Next step:** Initialize hot cache from unigram distribution, then re-benchmark.
+Source: tournament_head_integrated.py

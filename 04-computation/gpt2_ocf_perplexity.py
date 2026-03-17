@@ -92,8 +92,16 @@ def tournament_from_multi_logits(logit_vectors, top_k=8):
 
 
 def extract_all_layer_logits(model, input_ids, layers):
-    """Extract logits from specified layers for ALL positions at once."""
+    """Extract logits from specified layers for ALL positions at once.
+
+    NOTE: In transformers v5+, hidden_states[-1] (= hidden_states[n_layer])
+    is ALREADY post-ln_f (same as last_hidden_state). Intermediate layers
+    (hidden_states[1] through hidden_states[n_layer-1]) are pre-ln_f.
+    So we apply ln_f to intermediates but NOT to the final layer.
+    """
     model.eval()
+    n_layer = model.config.n_layer  # 12 for GPT-2
+
     with torch.no_grad():
         outputs = model(input_ids, output_hidden_states=True)
         hidden_states = outputs.hidden_states
@@ -101,8 +109,13 @@ def extract_all_layer_logits(model, input_ids, layers):
         layer_logits = []
         for layer_idx in layers:
             hs = hidden_states[layer_idx + 1]
-            hs_normed = model.transformer.ln_f(hs)
-            logits = model.lm_head(hs_normed)
+            # hidden_states[n_layer] = last entry = post-ln_f
+            # hidden_states[1..n_layer-1] = pre-ln_f (need normalization)
+            if layer_idx + 1 < n_layer:
+                # Intermediate layer: apply ln_f before projection
+                hs = model.transformer.ln_f(hs)
+            # else: final layer, already post-ln_f
+            logits = model.lm_head(hs)
             layer_logits.append(logits[0].numpy())  # (seq_len, vocab)
 
     return layer_logits

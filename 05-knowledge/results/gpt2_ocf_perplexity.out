@@ -1,11 +1,12 @@
 /usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
   warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 ======================================================================
 GPT-2 OCF PERPLEXITY — Does intransitivity predict errors?
 ======================================================================
 
 Loading GPT-2...
-Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 2898.08it/s]
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 2491.19it/s]
   Loaded in 2.7s
 
 Text 1: "The Pythagorean theorem states that in a right-angled triang..." (51 tokens)
@@ -22,13 +23,13 @@ Total: 173 predictions
 ======================================================================
 1. OVERALL STATISTICS
 ======================================================================
-  Accuracy (top-1): 0.1387
-  Mean entropy: 7.48
-  Mean top1_prob: 0.0465
-  Mean OCF confidence: 0.9062
-  Mean t3: 0.23
-  Fraction with t3>0: 0.1214
-  Mean layer agreement: 0.4690
+  Accuracy (top-1): 0.3988
+  Mean entropy: 3.73
+  Mean top1_prob: 0.3565
+  Mean OCF confidence: 0.9395
+  Mean t3: 0.14
+  Fraction with t3>0: 0.0809
+  Mean layer agreement: 0.4946
 
 ======================================================================
 2. OCF REGIME ANALYSIS — Does intransitivity predict errors?
@@ -36,38 +37,39 @@ Total: 173 predictions
 
   Regime                         |    N |    Acc | AvgProb | AvgEnt | AvgRank | LayAgr
   --------------------------------------------------------------------------------
-  TRANSITIVE (H=1)               |  152 |  0.151 |  0.0229 |   7.45 |   520.7 |  0.477
-  MILD CYCLING (H=3-5)           |   17 |  0.059 |  0.0052 |   7.83 |   908.5 |  0.420
-  MODERATE CYCLING (H=7-15)      |    4 |  0.000 |  0.0172 |   7.17 |   622.5 |  0.357
+  TRANSITIVE (H=1)               |  159 |  0.390 |  0.2352 |   3.74 |   195.9 |  0.502
+  MILD CYCLING (H=3-5)           |   11 |  0.364 |  0.2337 |   3.78 |    16.9 |  0.429
+  MODERATE CYCLING (H=7-15)      |    3 |  1.000 |  0.4401 |   3.11 |     1.0 |  0.333
 
   BINARY SPLIT:
-    Transitive (H=1):  n= 152, accuracy=0.1513, avg_rank=520.7
-    Has cycles (H>1):  n=  21, accuracy=0.0476, avg_rank=854.0
-    Difference: +0.1037 (transitive = more accurate ✓)
+    Transitive (H=1):  n= 159, accuracy=0.3899, avg_rank=195.9
+    Has cycles (H>1):  n=  14, accuracy=0.5000, avg_rank=13.5
+    Difference: -0.1101 (unexpected!)
 
 ======================================================================
 3. H-VALUE DISTRIBUTION
 ======================================================================
       H | Count | Accuracy | Fraction
   -----------------------------------
-      1 |   152 |   0.1513 |   0.8786
-      3 |     6 |   0.0000 |   0.0347
-      5 |    11 |   0.0909 |   0.0636
-      7 |     4 |   0.0000 |   0.0231
+      1 |   159 |   0.3899 |   0.9191
+      3 |     7 |   0.5714 |   0.0405
+      5 |     4 |   0.0000 |   0.0231
+      7 |     2 |   1.0000 |   0.0116
+      9 |     1 |   1.0000 |   0.0058
 
 ======================================================================
 4. CORRELATIONS
 ======================================================================
-  OCF conf vs correct:       r = +0.0957
-  t3 vs correct:             r = -0.0891
-  entropy vs correct:        r = +0.2347
-  layer_agree vs correct:    r = +0.1897
-  top1_prob vs correct:      r = +0.4727
+  OCF conf vs correct:       r = -0.0629
+  t3 vs correct:             r = +0.0856
+  entropy vs correct:        r = +0.4708
+  layer_agree vs correct:    r = +0.0099
+  top1_prob vs correct:      r = +0.5558
 
-  OCF conf vs actual_prob:   r = +0.1416
-  OCF conf vs entropy:       r = -0.1064
-  OCF conf vs layer_agree:   r = +0.1295
-  t3 vs entropy:             r = +0.0761
+  OCF conf vs actual_prob:   r = -0.0364
+  OCF conf vs entropy:       r = +0.0135
+  OCF conf vs layer_agree:   r = +0.1449
+  t3 vs entropy:             r = -0.0057
 
 ======================================================================
 5. DOES OCF ADD INFORMATION BEYOND ENTROPY?
@@ -76,26 +78,28 @@ Total: 173 predictions
   Within each entropy bin, does OCF still predict accuracy?
   Entropy bin          |    N | Trans Acc | Cycle Acc |     Diff
   ------------------------------------------------------------
-  [4.2, 7.3]           |   57 |    0.2308 |    0.2000 |  +0.0308
-  [7.4, 7.8]           |   57 |    0.1765 |    0.0000 |  +0.1765
-  [7.8, 8.6]           |   59 |    0.0408 |    0.0000 |  +0.0408
+  [0.0, 3.0]           |   57 |    0.7255 |    0.8333 |  -0.1078
+  [3.0, 4.4]           |   57 |    0.3273 |    0.0000 |  +0.3273
+  [4.4, 8.8]           |   59 |    0.1321 |    0.3333 |  -0.2013
 
 ======================================================================
 6. EXAMPLE CASES — High intransitivity (H ≥ 7)
 ======================================================================
-  ✗ " boat" → " after" H=  7 t3= 3 rank= 37 p=0.0031 ent=6.68 agree=0.43
-  ✗ " data" → " structure" H=  7 t3= 3 rank=124 p=0.0009 ent=7.60 agree=0.29
-  ✗ " an" → " associ" H=  7 t3= 3 rank=2327 p=0.0001 ent=8.01 agree=0.29
-  ✗ " dog" → " and" H=  7 t3= 3 rank=  2 p=0.0646 ent=6.39 agree=0.43
+  ✓ " an" → " old" H=  9 t3= 4 rank=  1 p=0.2265 ent=5.19 agree=0.29
+  ✓ " data" → " structure" H=  7 t3= 3 rank=  1 p=0.7386 ent=1.52 agree=0.29
+  ✓ " dog" → " and" H=  7 t3= 3 rank=  1 p=0.3552 ent=2.62 agree=0.43
 
 ======================================================================
 CONCLUSION
 ======================================================================
 
-  ★ POSITIVE RESULT: Transitive tournaments (all layers agree on ordering)
-    predict BETTER next tokens: 0.1513 vs 0.0476
-    OCF confidence IS a useful signal of model certainty.
+  ⊘ NULL RESULT: OCF confidence does NOT predict accuracy in this setup.
+    Possible reasons:
+    1. Early layers may disagree for DIFFERENT reasons than late-layer uncertainty
+    2. Layer 0 (embeddings) may carry fundamentally different information
+    3. The tournament among 8 tokens may be too coarse
+    4. Need context-diverse prompts (paraphrases), not layer-diverse logits
 
   QUANTITATIVE RESULT:
-    Transitive: 152 positions, accuracy=0.1513, avg_prob=0.0229
-    Intransitive: 21 positions, accuracy=0.0476, avg_prob=0.0075
+    Transitive: 159 positions, accuracy=0.3899, avg_prob=0.2352
+    Intransitive: 14 positions, accuracy=0.5000, avg_prob=0.2779
