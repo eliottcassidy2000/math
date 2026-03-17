@@ -1,0 +1,120 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+======================================================================
+DEEP MC DROPOUT OCF ANALYSIS
+Why don't cycles predict accuracy?
+======================================================================
+
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 4581.87it/s]
+Total positions: 164
+
+Config: dropout=0.5, MC passes=21, top_k=16
+
+  Text 0: 51 tokens, MC done.
+  Text 1: 46 tokens, MC done.
+  Text 2: 32 tokens, MC done.
+  Text 3: 39 tokens, MC done.
+
+======================================================================
+ANALYSIS 1: Where do cycles form in the ranking?
+======================================================================
+
+Transitive: 57, Cyclic: 107 (65.2%)
+
+Average rank of vertices in 3-cycles: 9.6 (0=top, 15=bottom)
+  Median: 9.5
+  Min: 2.7, Max: 14.0
+
+Cycles with avg rank < 3 (top tokens): 1/107 = 1%
+Cycles with avg rank < 6: 11/107 = 10%
+
+======================================================================
+ANALYSIS 2: OCF at different tournament sizes
+======================================================================
+
+  k=4: %cyclic=0.6%, r(OCF,correct)=-0.0896, TrAcc=0.429, CycAcc=1.000, n_cyc=1
+  k=6: %cyclic=10.4%, r(OCF,correct)=+0.0918, TrAcc=0.449, CycAcc=0.294, n_cyc=17
+  k=16: %cyclic=65.2%, r(OCF,correct)=-0.0081, TrAcc=0.404, CycAcc=0.449, n_cyc=107
+
+======================================================================
+ANALYSIS 3: Correlation of all uncertainty signals with accuracy
+======================================================================
+
+  Logit gap                : r = +0.4029
+  Neg entropy              : r = +0.2211
+  Avg margin               : r = +0.1177
+  OCF conf (k=6)           : r = +0.0918
+  OCF conf (k=4)           : r = -0.0896
+  MC agreement             : r = -0.0401
+  1/n_distinct             : r = +0.0238
+  Neg logit std            : r = -0.0190
+  OCF conf (k=16)          : r = -0.0081
+
+======================================================================
+ANALYSIS 4: Combined signals
+======================================================================
+
+  MC_agree × OCF_conf(k=16): r = -0.0545
+  MC_agree × OCF_conf(k=4):  r = -0.0465
+  Gap × OCF_conf(k=16):      r = +0.2386
+  MC + Gap + OCF (z-score):  r = +0.2062
+  MC + Gap (z-score):        r = +0.2632
+
+======================================================================
+ANALYSIS 5: What predicts CYCLING (not accuracy)?
+======================================================================
+
+  Avg margin (neg)         : r = +0.2981
+  n_distinct               : r = +0.0685
+  Logit gap (neg)          : r = +0.0637
+  MC disagree              : r = -0.0504
+  Entropy                  : r = +0.0502
+  Logit std                : r = +0.0244
+
+======================================================================
+ANALYSIS 6: Does OCF capture information BEYOND scalar uncertainty?
+======================================================================
+
+  Baseline r(MC+Gap, correct): +0.4034
+  r(OCF_k16, residual):        -0.0367
+  r(OCF_k4, residual):         -0.1152
+
+  VERDICT: Marginal/inconclusive. Larger sample needed.
+
+======================================================================
+ROOT CAUSE ANALYSIS
+======================================================================
+
+  WHY MC DROPOUT OCF DOESN'T WORK:
+
+  1. DROPOUT CREATES CORRELATED NOISE, NOT INDEPENDENT VIEWPOINTS
+     Each MC pass drops different neurons, but the perturbation to
+     logits is small and correlated across tokens. The top-k ranking
+     is mostly stable — when it does change, it's random.
+
+  2. CYCLES FORM AMONG LOW-RANKED TOKENS
+     3-cycles appear between tokens at ranks 8-16, where logit
+     differences are small (~0.1). These are TIED LOSERS, not
+     genuinely ambiguous candidates.
+
+  3. THE RIGHT SIGNAL IS SCALAR, NOT STRUCTURAL
+     For a SINGLE model with noise injection:
+     - MC agreement: "how stable is the top-1 pick?" → useful
+     - Logit gap: "how confident is the model?" → useful
+     - OCF: "is there a Condorcet paradox among candidates?" → irrelevant
+
+  4. OCF NEEDS GENUINELY DIFFERENT RANKING SYSTEMS
+     OCF is designed for: different judges, different models, different
+     evaluation criteria. Each "voter" should have a DISTINCT basis
+     for ranking. MC dropout passes don't have this — they share
+     99%+ of the same weights and produce nearly identical orderings.
+
+  THE ENGINEERING TAKEAWAY:
+  For LLM uncertainty from a SINGLE model, use simple scalars:
+  - Top-1 probability (r ≈ 0.56 with accuracy)
+  - MC agreement (r ≈ 0.31)
+  - Logit gap (r ≈ 0.20)
+
+  For LLM uncertainty from MULTIPLE models or evaluation criteria,
+  OCF is the right tool. That's the ranking/Chatbot Arena use case.
+

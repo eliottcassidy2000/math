@@ -1,0 +1,70 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+======================================================================
+ATTENTION HEAD OCF — heads as genuinely different voters
+======================================================================
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 8321.36it/s]
+GPT-2: 12 layers, 12 heads, d_model=768, d_head=64
+
+Approach 1: Per-head logit contributions from last layer
+  Each head's attention output → ln_f → lm_head → head logits
+
+  Text 0: 51 tokens, 12 head logit vectors computed.
+  Text 1: 46 tokens, 12 head logit vectors computed.
+  Text 2: 32 tokens, 12 head logit vectors computed.
+  Text 3: 39 tokens, 12 head logit vectors computed.
+
+======================================================================
+RESULTS — 164 positions, 12 attention heads as voters
+======================================================================
+
+OCF (k=8): 0.0% cyclic, r(OCF, correct) = +0.0000
+  Transitive (H=1): n=164, acc=0.433
+
+Head agreement: r(agree, correct) = +0.0654
+1/n_distinct:   r(1/n_dist, correct) = +0.1133
+
+======================================================================
+ALL UNCERTAINTY SIGNALS vs ACCURACY
+======================================================================
+
+  Neg entropy              : r = +0.4671
+  Logit gap                : r = +0.4029
+  1/n_distinct             : r = +0.1133
+  Head agreement           : r = +0.0654
+  OCF conf (k=8)           : r = +0.0000
+
+======================================================================
+RESIDUAL ANALYSIS: Does head OCF add to logit gap?
+======================================================================
+
+  Baseline r(gap+agree, correct): +0.4029
+  r(OCF, residual):               +0.0000
+
+  NULL: Head OCF adds nothing beyond scalars.
+
+======================================================================
+COMPARISON: ATTENTION HEADS vs MC DROPOUT as OCF contexts
+======================================================================
+
+  MC Dropout (d=0.5, 21 passes, k=16):
+    - 63% cyclic, but r(OCF, correct) ≈ 0.0
+    - Cycles form among low-ranked tokens (avg rank 9.6/15)
+    - No information beyond logit gap
+
+  Attention Heads (12 heads, k=8):
+    - 0% cyclic, r(OCF, correct) = +0.0000
+    - Head agreement: r = +0.0654
+    - Logit gap baseline: r = +0.4029
+
+  INTERPRETATION:
+  Attention heads provide genuinely DIFFERENT views because each head
+  has learned to attend to different input features. If heads disagree
+  on the token ranking, it means different aspects of the context
+  point to different continuations — a real semantic uncertainty signal.
+
+  MC dropout, by contrast, just adds noise. Different dropout masks
+  produce nearly identical rankings because they share 99%+ of weights.
+

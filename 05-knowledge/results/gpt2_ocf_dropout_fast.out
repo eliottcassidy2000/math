@@ -1,0 +1,80 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+======================================================================
+FAST MC DROPOUT SWEEP — Key question: does high dropout help?
+======================================================================
+
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 2472.64it/s]
+Total positions: 95
+
+Config                    |  %t3>0 | r(OCF,c) |  r(MC,c) |  TrAcc |  CyAcc |  n_cy |  time
+-------------------------------------------------------------------------------------
+  d=0.1 mc=11 k=8         |  4.2% |  -0.0170 |  +0.1780 |  0.418 |    0.5 |     4 | 253.4s
+  d=0.2 mc=11 k=8         | 10.5% |  +0.0614 |  +0.2314 |  0.435 |    0.3 |    10 | 248.6s
+    H distribution:
+      H=    1: n= 85, acc=0.435
+      H=    3: n=  7, acc=0.143
+      H=    7: n=  2, acc=0.500
+      H=    9: n=  1, acc=1.000
+  d=0.3 mc=11 k=8         |  6.3% |  +0.0516 |  +0.1886 |  0.427 | 0.3333333333333333 |     6 | 241.6s
+    H distribution:
+      H=    1: n= 89, acc=0.427
+      H=    3: n=  5, acc=0.400
+      H=    5: n=  1, acc=0.000
+  d=0.5 mc=11 k=8         | 11.6% |  -0.0256 |  -0.0317 |  0.417 | 0.45454545454545453 |    11 | 245.6s
+    H distribution:
+      H=    1: n= 84, acc=0.417
+      H=    3: n=  9, acc=0.444
+      H=    5: n=  2, acc=0.500
+  d=0.3 mc=11 k=16        | 47.4% |  -0.0543 |  +0.1566 |  0.400 | 0.4444444444444444 |    45 | 241.5s
+    H distribution:
+      H=    1: n= 50, acc=0.400
+      H=    3: n= 20, acc=0.400
+      H=    5: n= 10, acc=0.400
+      H=    7: n=  4, acc=1.000
+      H=    9: n=  3, acc=0.333
+      H=   11: n=  3, acc=0.333
+      H=   13: n=  3, acc=0.000
+      H=   19: n=  1, acc=1.000
+      H=   25: n=  1, acc=1.000
+  d=0.5 mc=11 k=16        | 48.4% |  -0.0968 |  -0.1379 |  0.367 | 0.4782608695652174 |    46 | 243.5s
+    H distribution:
+      H=    1: n= 49, acc=0.367
+      H=    3: n= 13, acc=0.538
+      H=    5: n= 11, acc=0.545
+      H=    7: n=  6, acc=0.500
+      H=    9: n=  6, acc=0.167
+      H=   11: n=  3, acc=0.667
+      H=   13: n=  1, acc=1.000
+      H=   15: n=  3, acc=0.333
+      H=   21: n=  1, acc=0.000
+      H=   29: n=  1, acc=1.000
+      H=   39: n=  1, acc=0.000
+  d=0.5 mc=21 k=16        | 63.2% |  +0.0843 |  -0.1131 |  0.486 | 0.38333333333333336 |    60 | 462.6s
+    H distribution:
+      H=    1: n= 35, acc=0.486
+      H=    3: n= 32, acc=0.312
+      H=    5: n= 12, acc=0.583
+      H=    7: n=  5, acc=0.400
+      H=    9: n=  5, acc=0.400
+      H=   11: n=  3, acc=0.667
+      H=   13: n=  1, acc=0.000
+      H=   27: n=  2, acc=0.000
+
+======================================================================
+ANALYSIS
+======================================================================
+
+  KEY QUESTION: Does higher dropout create enough intransitivity?
+
+  If %t3>0 stays under ~10% even at dropout=0.5 with k=16,
+  then MC dropout fundamentally cannot produce enough tournament
+  diversity for OCF to work.
+
+  If %t3>0 exceeds ~20% and r(OCF,correct) becomes meaningfully
+  positive (+0.1 or more), then OCF adds real value at high dropout.
+
+  EITHER WAY: MC agreement (scalar) is always useful (r ≈ 0.2-0.3).
+  The question is whether the TOURNAMENT STRUCTURE adds anything
+  beyond the simple scalar agreement measure.
+

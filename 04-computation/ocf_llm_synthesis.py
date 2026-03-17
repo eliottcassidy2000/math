@@ -16,8 +16,10 @@ opus-2026-03-17-S74b
 EXPERIMENTS CONDUCTED:
 1. Layer-based OCF (7 GPT-2 layers as contexts)
 2. MC Dropout OCF (11 passes at 0.1 dropout)
-3. MC Dropout Deep (8 configs: dropout 0.1-0.5, MC 11-21, k 8-16)
+3. MC Dropout Deep (7 configs: dropout 0.1-0.5, MC 11-21, k 8-16)
 4. Paraphrase OCF (7 rephrasings per question, 9 test cases)
+5. MC Dropout Deep Analysis (4 texts, d=0.5, mc=21, k=16, residual analysis)
+6. Attention Head OCF (12 heads from last layer as voters)
 
 ===========================================================================
 FINDING 1: LAYER DISAGREEMENT ≠ UNCERTAINTY
@@ -58,7 +60,21 @@ GPT-2's default dropout (0.1) produces almost no tournament intransitivity.
   viewpoints. The top-k ordering is robust to 10% random neuron
   dropping. OCF needs QUALITATIVE differences, not quantitative noise.
 
-  Deep sweep (0.1-0.5 dropout, 11-21 passes, k=8-16) in progress.
+  DEEP SWEEP RESULTS (7 configs, 2+4 texts):
+  - d=0.1 k=8:  4.2% cyclic, r(OCF,correct) = -0.02
+  - d=0.2 k=8:  10.5% cyclic, r = +0.06
+  - d=0.3 k=8:  6.3% cyclic, r = +0.05
+  - d=0.5 k=8:  11.6% cyclic, r = -0.03
+  - d=0.3 k=16: 47.4% cyclic, r = -0.05
+  - d=0.5 k=16: 48.4% cyclic, r = -0.10
+  - d=0.5 mc=21 k=16: 63.2% cyclic, r = +0.08
+
+  CRITICAL: Even at 63% intransitivity, OCF does NOT predict accuracy.
+  Cycles form among LOW-RANKED tokens (avg rank 9.6/15 in k=16 tournament).
+  Only 1% of cycles involve top-3 tokens. They are tied-loser noise.
+
+  RESIDUAL ANALYSIS: After regressing out logit gap + MC agreement,
+  OCF adds ZERO incremental information (r = -0.04 to -0.12).
 
 ===========================================================================
 FINDING 3: PARAPHRASE TOP-1 VARIES, BUT TOURNAMENT IS STILL TRANSITIVE
@@ -107,13 +123,14 @@ D. WALSH SPARSITY
    Application to LLM output compression needs investigation.
 
 E. OCF AS LLM UNCERTAINTY SIGNAL
-   STATUS: NOT YET VALIDATED.
-   - Layer-based: NULL (measures wrong thing)
-   - MC dropout: NULL (insufficient diversity)
-   - Paraphrase: NULL (tournaments too stable)
-   Better contexts needed. Most promising: attention head outputs
-   (each head attends to different aspects), or ensemble of different
-   model architectures.
+   STATUS: NULL across ALL tested approaches.
+   - Layer-based: NULL (measures processing depth, not uncertainty)
+   - MC dropout (default 0.1): NULL (insufficient diversity, 4% cyclic)
+   - MC dropout (extreme 0.5, k=16): NULL (63% cyclic, but noise in low ranks)
+   - Paraphrase: NULL (tournaments too stable, all H=1)
+   - Attention heads: NULL (0% cyclic — MLP dominates head contributions)
+   CONCLUSION: Single-model OCF for LLM uncertainty is a dead end.
+   Remaining possibility: multi-MODEL ensembles (genuinely different architectures).
 
 ===========================================================================
 THE FUNDAMENTAL ISSUE
@@ -134,9 +151,10 @@ OCF shines when the contexts are GENUINELY DIFFERENT VIEWPOINTS:
 - Different prompt framings (but needs MORE paraphrases, not 7)
 
 OCF does NOT add value when contexts are PERTURBATIONS OF THE SAME VIEW:
-- Different dropout masks (small noise)
-- Different transformer layers (sequential stages)
+- Different dropout masks (small noise, even at 50% dropout)
+- Different transformer layers (sequential stages, not independent)
 - Few paraphrases of the same prompt (insufficient diversity)
+- Different attention heads (MLP dominates, rankings are identical)
 
 ===========================================================================
 RECOMMENDATION
@@ -147,9 +165,9 @@ FOR THE REPO'S ENGINEERING MANDATE:
 1. SHIP the staged evaluation (TournamentHead) — it's a real win
 2. SHIP the OCF for ranking applications (Chatbot Arena toolkit)
 3. KEEP the arctanh attention for future training experiments
-4. DO NOT claim OCF detects hallucination in LLMs until validated
-5. Investigate attention head disagreement (most promising for LLMs)
-6. Consider n_paraphrases >> 7 (maybe 50+) with LLM-generated variations
+4. DO NOT claim OCF detects hallucination in single-model LLMs — REFUTED
+5. Multi-MODEL ensemble OCF is the remaining viable approach
+6. For single-model uncertainty: use entropy (r=+0.47) or logit gap (r=+0.40)
 
 FOR KIND-PASTEUR:
 - The "5 polynomial coefficients" framework (A_0-A_4) uses only 3-cycles

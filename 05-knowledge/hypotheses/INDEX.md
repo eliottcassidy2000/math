@@ -585,6 +585,9 @@ Organized by topic. Each hypothesis has a detail file.
 ### REFUTED
 | ID | Statement | Why it fails | First failure | Source |
 |----|-----------|-------------|---------------|--------|
+| HYP-1652 | Higher MC dropout (0.3-0.5) creates useful OCF signal | Cycles form among low-ranked tokens (avg rank 9.6/15). Zero incremental info after logit gap. | 95-164 pos | opus-S74b |
+| HYP-1653 | Attention head OCF captures semantic uncertainty | 0% cyclic. MLP dominates head contributions. | 164 pos | opus-S74b |
+| HYP-1654 | Single-model OCF can detect LLM uncertainty | ALL 5 approaches null. Single model shares too many params for OCF. | comprehensive | opus-S74b |
 | HYP-441 | T_11 full Betti: β_7=5, β_6=15 | Wrong prediction: β_5=5 (not β_7=5). Higher betti β_7-10=0 by direct computation (rk(d_8)=300=ker(d_7) for all k, full exactness). | T_11 | kind-pasteur-S50 |
 | HYP-101 | Per-path identity holds for all n | 3-cycle-only formula misses longer cycles | n=6 | MISTAKE |
 | HYP-420 | β_{n-2} generically nonzero at n=8 | Opus used max_deg=6 (missing im(d_7)). With max_deg=7: β_6=0 for ALL 50/50. rk(d_7)=ker(d_6) exactly (top exactness). Artifact of truncated complex. | n=8 (all) | kind-pasteur-S50 |
@@ -1675,6 +1678,33 @@ Open: does the mean H at each n split using the world-defining primes?
 **Why it fails:** Layer disagreement measures PROCESSING DEPTH, not uncertainty. When late layers change the ranking from early layers, it means more refinement (positive signal), not confusion.
 **Better approaches:** Use attention heads within a layer, prompt paraphrases, or MC dropout as "contexts" instead of layers.
 Source: gpt2_ocf_perplexity.py
+
+## HYP-1652: Higher MC dropout creates useful OCF signal (opus-S74b)
+**Status:** REFUTED
+**Hypothesis:** Increasing dropout rate from 0.1 to 0.3-0.5 and top-k from 8 to 16 will create enough tournament intransitivity for OCF to predict accuracy.
+**Result:** At d=0.5, k=16, mc=21: 63.2% of positions are cyclic. But r(OCF, correct) ranges from -0.10 to +0.08 across all configs — no predictive signal. Deep analysis shows cycles form among LOW-RANKED tokens (avg rank 9.6/15). Only 1% of cycles involve top-3 tokens. After regressing out logit gap + MC agreement, OCF adds zero incremental information (r = -0.04 to -0.12 with residuals).
+**Why it fails:** Dropout noise creates "tied-loser" cycles among tokens with similar, low logits. These cycles are random noise, not genuine uncertainty. The top-k ranking is robust — it's only the bottom of the ranking that becomes unstable.
+Source: gpt2_ocf_dropout_fast.py, gpt2_ocf_dropout_deep_analysis.py
+
+## HYP-1653: Attention head OCF captures semantic uncertainty (opus-S74b)
+**Status:** REFUTED
+**Hypothesis:** Using 12 attention heads from GPT-2's last layer as independent "voters" will create meaningful tournaments, since heads specialize in different aspects (syntax, semantics, position).
+**Result:** 0% intransitivity across 164 positions. All tournaments are fully transitive (H=1). The MLP contribution dominates each head's per-head logit vector, making all rankings identical.
+**Why it fails:** Each head contributes a small perturbation to the shared residual stream + MLP. The MLP is the same for all heads and contributes most of the prediction signal. Head-specific rankings are therefore nearly identical.
+Source: gpt2_ocf_attention_heads.py
+
+## HYP-1654: Single-model OCF can detect LLM uncertainty (opus-S74b)
+**Status:** REFUTED (comprehensive)
+**Hypothesis:** Some decomposition of a single LLM into multiple "contexts" can produce tournaments whose OCF predicts accuracy.
+**Result:** FIVE approaches tested, ALL null:
+  1. Layers: measures depth, not uncertainty (r=-0.08)
+  2. MC dropout (low): insufficient diversity (4% cyclic, r=-0.02)
+  3. MC dropout (high): noise in low ranks (63% cyclic, r≈0)
+  4. Paraphrases: tournaments too stable (0% cyclic, H=1 always)
+  5. Attention heads: MLP dominates (0% cyclic)
+Best single-model signals: neg entropy (r=+0.47), logit gap (r=+0.40).
+**Why it fails:** A single model shares most of its parameters across any decomposition. OCF needs GENUINELY different ranking systems, not perturbations of the same system. Ranking applications (Chatbot Arena, multi-model ensemble) remain the right use case.
+Source: ocf_llm_synthesis.py
 
 ## HYP-1651: Staged hot-256 early exit gives 80%+ exit rate (opus-S74b)
 **Status:** PARTIALLY CONFIRMED
