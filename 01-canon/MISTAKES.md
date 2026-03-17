@@ -1087,3 +1087,46 @@ Low — the formula itself is correct and was verified computationally at n=5 (e
 **This is MISTAKE-013b (the original missing 2^s) echoing forward.** The 2^s correction was caught and fixed at n=7, but the n=9 table values were apparently populated from a pre-correction computation (or from hand calculation that repeated the component-counting error at higher n). Always re-derive table entries from the corrected formula rather than carrying forward values from partial computation.
 
 This is also a meta-lesson about the amplitude table itself: it was the only place in THM-080 where specific numerical values were stated without being individually verified against the formula. The formula (analytically proved) was trustworthy; the table (hand-calculated) was not.
+
+---
+
+## MISTAKE-028: Mersenne / k-nacci Numbers Falsely Claimed to Control Forbidden H Values
+
+**Date discovered:** 2026-03-17
+**Found by:** opus-2026-03-17-S74 (forbidden values audit)
+**Affects:** casual-writeup.md, formal-writeup.md, substack-hooks.md (Hook N), HYP-1600, HYP-1618 (original), HYP-1623, HYP-1624, riemann-zeta-tournament.md, multiple results files
+
+### What was assumed
+
+Multiple writeups and hypotheses claimed: "The k-nacci Mersenne identity connects forbidden H values (7 = 2^3 - 1, 31 = 2^5 - 1, 127 = 2^7 - 1) to Mersenne primes via k-nacci transfer matrices." The original HYP-1618 claimed "ζ(-3) = 7" (standard Riemann zeta). Various scripts called 31 "forbidden."
+
+### Why it was wrong
+
+1. **31 is achievable** at n=6 (tournament bits=146, verified exhaustively).
+2. **63 is achievable** at n=8 (already documented in MISTAKE-024).
+3. **127 is achievable** at n=7.
+4. The standard Riemann ζ(-3) = 1/120, NOT 7.
+5. The tribonacci trace sequence [1, 3, 7, 11, 21, 39, 71, 131, ...] contains both forbidden values (7, 21) AND achievable values (1, 3, 11, 39, 71, 131, ...). The k-nacci trace hitting 7 and 21 is a numerical coincidence, not a causal mechanism.
+
+### The correct framing
+
+**Only H=7 and H=21 are permanently forbidden** (proved: THM-029, THM-079). The actual mechanisms are:
+- H=7: 3 pairwise-conflicting cycles always force additional cycles (THM-029)
+- H=21: all OCF decompositions blocked by tournament forcing (THM-079, 464-line proof)
+
+Best characterizations of {7, 21}:
+- {7·3⁰, 7·3¹}: the 7-obstruction has nilpotency 2 (HYP-1231). 7·3² = 63 is achievable.
+- {Φ₃(2), Φ₃(4)}: third cyclotomic polynomial at even args (HYP-1317). Φ₃(6) = 43 is achievable.
+- Both have I-polynomials factoring through I(K₃, x) = (1+3x) (HYP-1315).
+
+THM-227 (k-nacci Mersenne) is a valid theorem about transfer matrices. It just doesn't characterize forbidden H values.
+
+### Impact
+
+Medium — the false claim propagated through 6+ files across multiple sessions. All have been corrected. No theorems or proofs are affected (the actual forbidden value proofs THM-029 and THM-079 are correct and don't use the Mersenne connection).
+
+### Lesson
+
+**One data point is not a pattern.** The entire false extrapolation rested on a single observation: 7 = 2³ - 1 is both a Mersenne number and forbidden. From this, it was incorrectly inferred that other Mersenne numbers (31, 127) are also forbidden. A simple check (is H=31 achieved at n=6?) would have caught this immediately.
+
+This is a variant of MISTAKE-024 (H=63 falsely claimed forbidden) — the same class of error, just with a different numerological motivation. The meta-lesson: when claiming a numerical pattern "explains" something, verify it at the NEXT case before asserting it as a principle.

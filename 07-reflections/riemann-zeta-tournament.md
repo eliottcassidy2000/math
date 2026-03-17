@@ -69,11 +69,11 @@ For the tribonacci matrix M_3, Newton's identity gives:
 
 $$p_3 = e_1^3 - 3e_1 e_2 + 3e_3 = 1 + 3 + 3 = 7$$
 
-This uses e_1 = 1, e_2 = -1, e_3 = -1 (the first three k-nacci coefficients). Crucially, these coefficients are the SAME for ALL k ≥ 3, so Tr(M_k^3) = 7 universally. This is why 7 is forbidden regardless of tournament size.
+This uses e_1 = 1, e_2 = -1, e_3 = -1 (the first three k-nacci coefficients). Crucially, these coefficients are the SAME for ALL k ≥ 3, so Tr(M_k^3) = 7 universally. The value 7 also happens to be a Mersenne number (2^3 - 1) and appears in the tribonacci trace sequence.
 
-For p_5 = 21: this is specific to the tribonacci (k=3) case, where p_5 = p_2 · p_3 = 3 × 7. This multiplicative relation is unique among the first ~15 traces. It explains why 21 = 3 × 7 inherits prohibition from both the cycle obstruction (3) and the Fano obstruction (7).
+For p_5 = 21: this is specific to the tribonacci (k=3) case, where p_5 = p_2 · p_3 = 3 × 7.
 
-The k-nacci Mersenne identity Tr(M_k^k) = 2^k - 1 then connects the entire forbidden spectrum to Mersenne numbers: 7 = 2^3 - 1, 31 = 2^5 - 1, 127 = 2^7 - 1, ...
+**Important correction (opus-S74 audit):** While the k-nacci traces *hit* both forbidden values, they do not *cause* forbiddenness. The tribonacci trace sequence [1, 3, 7, 11, 21, 39, 71, ...] contains both forbidden values (7 and 21) but also many achievable values (1, 3, 11, 39, 71, ...). The Mersenne numbers 31, 63, and 127 are all achievable H values (at n=6, 8, and 7 respectively). The actual mechanism is combinatorial: cycle-forcing for H=7 (THM-029) and OCF decomposition blocking for H=21 (THM-079). The best characterization: {7, 21} = {7·3⁰, 7·3¹} with the 7-obstruction having nilpotency 2 (HYP-1231), or equivalently {Φ₃(2), Φ₃(4)} (HYP-1317).
 
 ### 6. The Critical Strip Analogy
 

@@ -1,0 +1,62 @@
+======================================================================
+FORBIDDEN VALUE AUDIT
+======================================================================
+
+PROVED FORBIDDEN (permanent gaps):
+  H = 7   (THM-029, all n)
+  H = 21  (THM-079, all n)
+
+PROVED ACHIEVABLE (despite being k-nacci traces or Mersenne numbers):
+  H = 1   (transitive tournament, any n)
+  H = 3   (3-cycle C_3, n=3)
+  H = 11  (various tournaments, n=5)
+  H = 15  (regular tournament, n=5)     [Mersenne 2^4-1]
+  H = 31  (bits=146, n=6)               [Mersenne 2^5-1, tribonacci p_5... wait]
+  H = 39  (n=7)                         [tribonacci p_6]
+  H = 63  (n=8, transient gap at n=7)   [Mersenne 2^6-1]
+  H = 71  (n=7)                         [tribonacci p_7]
+  H = 127 (n=7)                         [Mersenne 2^7-1]
+  H = 131 (n=7)                         [tribonacci p_8]
+
+WAIT — 31 is ALSO tribonacci p_5!
+  Tribonacci: [1, 3, 7, 11, 21, 39, 71, 131, 241, ...]
+  p_1=1 ✓, p_2=3 ✓, p_3=7 ✗, p_4=11 ✓, p_5=21 ✗, p_6=39 ✓, p_7=71 ✓
+
+  So 7 = p_3 (forbidden) and 21 = p_5 (forbidden) are at ODD INDICES 3,5.
+  But p_7 = 71 (achievable) is also odd index. So odd-index alone doesn't work.
+
+  Actually: p_3 = 7, p_5 = 21. Both are forbidden. But 31 is NOT p_5!
+  31 = Tr(M_5^5) = 2^5-1 (pentanacci trace, not tribonacci).
+  In the tribonacci sequence: p_5 = 21, not 31.
+
+  Let me recheck: tribonacci recurrence p_n = p_{n-1} + p_{n-2} + p_{n-3}
+  p_1 = 1, p_2 = 3, p_3 = 7
+  p_4 = 7+3+1 = 11
+  p_5 = 11+7+3 = 21  ← THIS IS 21, not 31!
+  p_6 = 21+11+7 = 39
+  p_7 = 39+21+11 = 71
+
+  And 31 = Tr(M_5^5) is the PENTANACCI trace, not tribonacci.
+  31 is achievable. It's NOT in the tribonacci sequence at all.
+
+CORRECT NARRATIVE:
+  The tribonacci traces (k=3) are: 1, 3, 7, 11, 21, 39, 71, 131, ...
+  Of these, exactly 7 and 21 are forbidden. The rest are achievable.
+  This is NOT a coincidence but also NOT explained by the trace connection:
+  - 7 is forbidden because of cycle-forcing (THM-029)
+  - 21 is forbidden because of OCF decomposition blocking (THM-079)
+  - The k-nacci trace merely HITS these values; it doesn't CAUSE forbiddenness
+
+WHAT THM-227 ACTUALLY SHOWS:
+  Tr(M_k^n) = 2^n - 1 for 1 ≤ n ≤ k. This is about k-nacci matrices.
+  It does NOT say that 2^k-1 values are forbidden in the H-spectrum.
+  The connection "forbidden H values are Mersenne numbers" was a false
+  extrapolation from the single data point H=7 = 2^3-1 = Tr(M_3^3).
+
+BEST CHARACTERIZATION OF FORBIDDEN VALUES:
+  1. HYP-1231: {7, 21} = {7·3⁰, 7·3¹}. The 7-obstruction has nilpotency 2.
+  2. HYP-1317: {7, 21} = {Φ₃(2), Φ₃(4)}. Third cyclotomic at even args.
+  3. HYP-1315: Both have I-polynomials factoring through (1+3x).
+  4. The KEY mechanism: H=7 requires 3 pairwise-sharing cycles (impossible);
+     H=21 requires specific (α₁, i₂) decompositions (all blocked by forcing).
+

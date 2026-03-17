@@ -117,9 +117,11 @@ No tournament on any number of teams can have exactly **7** or **21** consistent
 
 The number 7 connects to the Fano plane (the smallest finite projective geometry). The number 21 = 3 * 7 combines the cycle obstruction (3) with the Fano obstruction (7).
 
-These forbidden values arise from **k-nacci traces via Newton's identities**: Tr(M_k^3) = 7 for ALL k >= 3 (the first three symmetric polynomials are the same for every k-nacci matrix), making 7 universally forbidden. Tr(M_3^5) = 21 = 3 * 7 is the unique product relation in the tribonacci trace sequence. Both appear in the arithmetic of **42 = 2 * 3 * 7** — which equals denom(B_6) by the Von Staudt-Clausen theorem, encoding the three fundamental constants of tournament parity: orientation (2), cycles (3), and prohibition (7).
+The actual mechanism is purely combinatorial: H=7 requires exactly 3 pairwise-conflicting cycles with no disjoint pair, but 3 such cycles in a tournament always force additional cycles (THM-029). H=21 requires specific (alpha_1, i_2) decompositions in the OCF, all of which are blocked by tournament forcing constraints (THM-079, a massive 464-line proof with exhaustive base case through n=8).
 
-The k-nacci Mersenne identity (THM-227) explains the pattern further: the trace of the k-nacci companion matrix at power k gives 2^k - 1 (a Mersenne number). At k = 3: Tr = 7. At k = 5: Tr = 31. These Mersenne numbers control which H values are forbidden.
+The characterization {7, 21} = {7 * 3^0, 7 * 3^1} is notable: the "7-obstruction" has nilpotency 2, meaning 7 * 3^2 = 63 becomes achievable at n=8 (HYP-1231). Both 7 and 21 are values of the third cyclotomic polynomial at even arguments: 7 = Phi_3(2), 21 = Phi_3(4) (HYP-1317). And 42 = 2 * 3 * 7 = denom(B_6) by the Von Staudt-Clausen theorem, encoding orientation (2), cycles (3), and prohibition (7).
+
+**Note:** Despite appearing in the tribonacci trace sequence and as a Mersenne number (7 = 2^3 - 1), other Mersenne numbers like 31, 63, and 127 are all achievable. The k-nacci / Mersenne connection is a numerical coincidence, not a causal explanation.
 
 ---
 

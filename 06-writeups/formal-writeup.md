@@ -334,7 +334,7 @@ For the tribonacci case (k=3): Tr(M_3^5) = p_5 = 21 = 3 * 7 = p_2 * p_3. This is
 
     Tr(M_k^n) = 2^n - 1   for all 1 <= n <= k
 
-At n = k: Tr(M_k^k) = 2^k - 1 is the k-th Mersenne number. At n = k+1, the identity breaks by exactly k+1. This connects forbidden H values (7 = 2^3 - 1, 31 = 2^5 - 1, 127 = 2^7 - 1) to Mersenne primes via k-nacci transfer matrices.
+At n = k: Tr(M_k^k) = 2^k - 1 is the k-th Mersenne number. At n = k+1, the identity breaks by exactly k+1. While Tr(M_3^3) = 7 coincides with the first forbidden H value, the Mersenne numbers 31 = 2^5 - 1, 63 = 2^6 - 1, and 127 = 2^7 - 1 are all achievable H values (at n = 6, 8, and 7 respectively). The k-nacci Mersenne identity is a result about transfer matrices, not a characterization of forbidden H values. The forbidden set {7, 21} is better characterized as {7 * 3^0, 7 * 3^1} with nilpotency 2 (HYP-1231), or as {Phi_3(2), Phi_3(4)} (HYP-1317).
 
 ### 7.4 Paley Maximization
 

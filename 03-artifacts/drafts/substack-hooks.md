@@ -50,7 +50,7 @@ Define $S(T) = \sum_P \prod B[P_i, P_{i+1}]$ where $B = 2A - J$ is skew-symmetri
 
 ### Hook N: "k-nacci traces are Mersenne numbers"
 
-For the $k$-nacci companion matrix $M_k$ (the $k \times k$ matrix with 1's on the superdiagonal and bottom row): $\mathrm{Tr}(M_k^n) = 2^n - 1$ for all $1 \leq n \leq k$. At $n = k$, this is the $k$-th Mersenne number. At $n = k+1$, the identity breaks by exactly $k+1$. Proof: induction on Newton's identities with all-$(-1)$ coefficients. This connects the forbidden H-spectrum values ($7 = 2^3 - 1$, $31 = 2^5 - 1$) to Mersenne primes via transfer matrices.
+For the $k$-nacci companion matrix $M_k$ (the $k \times k$ matrix with 1's on the superdiagonal and bottom row): $\mathrm{Tr}(M_k^n) = 2^n - 1$ for all $1 \leq n \leq k$. At $n = k$, this is the $k$-th Mersenne number. At $n = k+1$, the identity breaks by exactly $k+1$. Proof: induction on Newton's identities with all-$(-1)$ coefficients. While $\mathrm{Tr}(M_3^3) = 7$ coincides with the first forbidden tournament value, the Mersenne numbers 31, 63, 127 are all achievable — the connection to forbidden values is through the specific combinatorial mechanism of cycle-forcing, not through Mersenne numbers per se.
 
 ---
 
