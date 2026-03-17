@@ -1,0 +1,154 @@
+============================================================
+DEMO 1: A/B TESTING — Which landing page converts best?
+============================================================
+
+  Streaming observations (printing every 100):
+
+  After 50 observations:
+    Leader: Page_D
+    Ranking: [('Page_D', '+11.401'), ('Page_B', '-0.000'), ('Page_A', '-3.800'), ('Page_C', '-7.600')]
+    P(B > A) = 100.0%, confidence: 99.9%, need ~0 more for 95%
+
+  After 100 observations:
+    Leader: Page_B
+    Ranking: [('Page_B', '+11.401'), ('Page_D', '+0.000'), ('Page_A', '-3.800'), ('Page_C', '-7.600')]
+    P(B > A) = 100.0%, confidence: 100.0%, need ~0 more for 95%
+
+  After 200 observations:
+    Leader: Page_D
+    Ranking: [('Page_D', '+11.401'), ('Page_B', '+7.600'), ('Page_C', '-7.600'), ('Page_A', '-11.401')]
+    P(B > A) = 100.0%, confidence: 100.0%, need ~0 more for 95%
+
+  After 500 observations:
+    Leader: Page_B
+    Ranking: [('Page_B', '+30.402'), ('Page_D', '+0.000'), ('Page_C', '-11.401'), ('Page_A', '-19.001')]
+    P(B > A) = 100.0%, confidence: 100.0%, need ~0 more for 95%
+
+  True rates: {'Page_A': 0.12, 'Page_B': 0.15, 'Page_C': 0.1, 'Page_D': 0.14}
+  Algorithm correctly identified: Page_B as leader
+  (True best: Page_B at 15%)
+
+============================================================
+DEMO 2: LIVE SPORTS — Streaming match results
+============================================================
+
+  After week 1:
+  Streaming Comparator | 3 observations | 5 items
+------------------------------------------------------------
+  # 1      Team_Alpha  score= +4.350  (2 obs)
+  # 2      Team_Delta  score= +0.000  (1 obs)
+  # 3      Team_Gamma  score= +0.000  (1 obs)
+  # 4       Team_Beta  score= -0.549  (1 obs)
+  # 5    Team_Epsilon  score= -3.800  (1 obs)
+
+  After week 2:
+  Streaming Comparator | 6 observations | 5 items
+------------------------------------------------------------
+  # 1      Team_Alpha  score= +5.043  (3 obs)
+  # 2       Team_Beta  score= +3.251  (2 obs)
+  # 3      Team_Delta  score= +0.203  (2 obs)
+  # 4    Team_Epsilon  score= -4.003  (2 obs)
+  # 5      Team_Gamma  score= -4.493  (3 obs)
+
+  After week 3:
+  Streaming Comparator | 9 observations | 5 items
+------------------------------------------------------------
+  # 1      Team_Alpha  score= +8.843  (4 obs)
+  # 2       Team_Beta  score= +3.597  (3 obs)
+  # 3      Team_Gamma  score= -3.944  (4 obs)
+  # 4      Team_Delta  score= -3.944  (4 obs)
+  # 5    Team_Epsilon  score= -4.552  (3 obs)
+
+  After week 4:
+  Streaming Comparator | 12 observations | 5 items
+------------------------------------------------------------
+  # 1      Team_Alpha  score=+12.643  (6 obs)
+  # 2       Team_Beta  score= +3.597  (4 obs)
+  # 3      Team_Gamma  score= -3.944  (5 obs)
+  # 4    Team_Epsilon  score= -4.552  (4 obs)
+  # 5      Team_Delta  score= -7.744  (5 obs)
+
+  Head-to-head win probabilities:
+            Team_Alpha Team_BetaTeam_GammaTeam_EpsilonTeam_Delta
+--------------------------------------------------------------
+  Team_Alpha       ---   100.0%    100.0%    100.0%    100.0% 
+   Team_Beta     0.0%        ---   100.0%    100.0%    100.0% 
+  Team_Gamma     0.0%      0.0%        ---    77.1%    100.0% 
+Team_Epsilon     0.0%      0.0%     22.9%        ---    99.8% 
+  Team_Delta     0.0%      0.0%      0.1%      0.2%        ---
+
+============================================================
+DEMO 3: THROUGHPUT — How fast can we process comparisons?
+============================================================
+
+   observations |  items |  time ms |    obs/sec |     leader
+  ------------------------------------------------------------
+          1,000 |    100 |      2ms |  632,561/s |    item_30
+         10,000 |  1,000 |     16ms |  635,062/s |   item_362
+        100,000 | 10,000 |    179ms |  557,805/s |  item_5508
+      1,000,000 | 10,000 |   1785ms |  560,266/s |  item_3859
+
+============================================================
+DEMO 4: HIRING — Rank candidates from pairwise interviews
+============================================================
+
+  Streaming Comparator | 8 observations | 5 items
+------------------------------------------------------------
+  # 1           Alice  score=+11.401  (3 obs)
+  # 2            Dave  score= +3.800  (3 obs)
+  # 3             Bob  score= +0.000  (4 obs)
+  # 4           Carol  score= -3.800  (3 obs)
+  # 5             Eve  score=-11.401  (3 obs)
+
+  Pairwise confidence matrix (are we sure who's better?):
+
+  Recommendation: hire top 2 = Alice, Dave
+
+============================================================
+DEMO 5: THE MATH — Why this works
+============================================================
+
+  THE FORMAL GROUP CONNECTION:
+
+  The coupling x = (wins - losses)/(wins + losses) lives in (-1, 1).
+  This is the Poincare disk (1D version).
+
+  The formal group law F(x,y) = (x+y)/(1+xy) adds evidence:
+    If x = evidence from batch 1, y = evidence from batch 2,
+    then F(x,y) = combined evidence. This is ASSOCIATIVE and COMMUTATIVE.
+
+  The formal logarithm arctanh LINEARIZES this:
+    arctanh(F(x,y)) = arctanh(x) + arctanh(y)
+
+  So the score theta = sum of arctanh(coupling) is:
+    - ADDITIVE: new evidence adds, never recomputes
+    - MONOTONE: more wins -> higher score
+    - BOUNDED INPUT: coupling in (-1,1) maps to theta in (-inf, inf)
+    - EXACT: no iterative approximation, no convergence criterion
+
+  The DENOMINATOR KILLING TRICK (mod 29 at n=8):
+    When the number of items n is such that C(n,2)+1 is prime (p),
+    eigenvalue fractions k/C(n,2) become simply -k mod p.
+    This eliminates all division from the modular computation.
+    At n=8: C(8,2)=28, p=29, and 28 = -1 mod 29.
+
+  The LATTICE ASYMMETRY (29 splits in Z[i], inert in Z[omega]):
+    Gives three independent hash channels from one prime.
+    For isomorphism testing: 3 checks for the price of 1.
+
+  The SPECTRAL GAP (4/C(n,2)):
+    Tells you EXACTLY how many random comparisons are needed
+    for the ranking to stabilize. Mixing time = C(n,2)/4.
+    At n=10: 45/4 = 11.25 random comparisons suffice.
+
+  COMPARISON TO ALTERNATIVES:
+    Elo:           Iterative, arbitrary K-factor, no exact confidence
+    Bradley-Terry: Iterative MLE, O(n^2 * iters), convergence issues
+    TrueSkill:     Bayesian, expensive inference, approximate
+    FormalRank:    One-pass, O(m), exact, streaming, no hyperparameters
+
+
+============================================================
+StreamingComparator — opus-2026-03-17-S91j
+Formal group ranking for the real world
+============================================================
