@@ -1,0 +1,82 @@
+29 IN THE THREE LATTICES
+
+Z[omega] (hexagonal, Eisenstein):
+  29 mod 3 = 2
+  29 = 2 mod 3 => INERT (does NOT split)
+  29 remains prime in Z[omega]
+
+Z[i] (square, Gaussian):
+  29 mod 4 = 1
+  29 = 1 mod 4 => SPLITS!
+  29 = (5+2i)(5-2i) = 25+4 = 29
+  |5+2i| = sqrt(29) = 5.3851648071
+
+Z[sqrt(-7)]:
+  29 mod 7 = 1
+  Legendre symbol (-7/29):
+  (-7/29) = 1 => 29 SPLITS in Z[sqrt(-7)]
+  29 = 1^2 + 7*2^2 = 1 + 28
+
+THE POLYNOMIAL P(z)-29 = z(z-2)(5z^2+16z+7)
+  Discriminant of 5z^2+16z+7: 256-140 = 116 = 4*29
+  Roots: (-8 +/- sqrt(29))/5
+  sqrt(29) = |5+2i| in Z[i]
+  sqrt(29) = |1+2*sqrt(7)i/sqrt(1)| ... hmm
+
+THE THREE VALUES AND THEIR LATTICE BEHAVIOR
+
+-1/12:
+  12 = phi(42) = 2^2 * 3
+  NOT prime, so splitting question is for factors
+
+11:
+  11 mod 3 = 2 => INERT in Z[omega]
+  11 mod 4 = 3 => INERT in Z[i]
+  11 mod 7 = 4 => Legendre: need (11/7)=0.5714285714285714=(4/7)
+  (-7/11) = 1 => 11 SPLITS in Z[sqrt(-7)]!
+  11 is INERT in Z[omega] and Z[i], but SPLITS in Z[sqrt(-7)]
+  = inert in the 3-world and 2-world, but splits in the 7-world!
+
+ln(3):
+  ln(3) = 1.0986122887
+  TRANSCENDENTAL — does not live in any algebraic lattice
+  But: exp(ln(3)) = 3, which is RAMIFIED in Z[omega]
+
+SPLITTING TABLE:
+     Value    Z[omega] (3)    Z[i] (2)     Z[sqrt(-7)]
+     -1/12      (12=2^2*3)       (...)           (...)
+        11           INERT       INERT          SPLITS
+        29           INERT      SPLITS          SPLITS
+     ln(3)       TRANSCEND   TRANSCEND       TRANSCEND
+
+PATTERN:
+  11 is inert in BOTH 2-world and 3-world, splits only in 7-world
+  29 is inert in 3-world, splits in 2-world AND 7-world
+  ln(3) transcends all algebraic lattices
+
+  11 = the spectral count = m+1 = the most RIGID value
+  29 = the mean H = HALF-SPLIT (inert mod 3, split mod 2 and 7)
+  ln(3) = the rapidity = FULLY TRANSCENDENT
+
+IS 11 A BIT COUNT?
+  Z_T(-1) = sum of eigenvalues = m+1 = 11
+  2^{m+1} = 2^11 = 2048 = 2 * (# tilings)
+  11 = number of bits to address the SIGNED tiling space
+  Each tiling gets a + or - sign => 2*1024 = 2048 states
+  11 bits to address all signed tilings
+
+29 SPLITS IN TWO WAYS:
+  Z[i]: 29 = 5^2 + 2^2 = (5+2i)(5-2i)
+  Z[sqrt(-7)]: 29 = 1^2 + 7*2^2 = (1+2*sqrt(-7))(1-2*sqrt(-7))/1
+  29 splits as PRODUCT OF CONJUGATES in each:
+    Z[i]: (5+2i)(5-2i)
+    Z[sqrt(-7)]: (1+2*sqrt(-7))(1-2*sqrt(-7))
+
+  The two splittings USE DIFFERENT REPRESENTATIONS of 29:
+    29 = 5^2 + 1*2^2 (using primes 5 and 2)
+    29 = 1^2 + 7*2^2 (using primes 1 and 7)
+
+  5 and 7: the two primes that DEFINE the two worlds!
+    {2,3,5} world: 29 = 5^2 + 2^2 (Gaussian)
+    {2,3,7} world: 29 = 1^2 + 7*4 (Hurwitz)
+
