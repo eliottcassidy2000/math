@@ -1,0 +1,33 @@
+======================================================================
+A000568 TURBO — ODD-PART PARTITIONS ONLY
+======================================================================
+
+Verification:
+  n=0: A000568=1 OK, A000088=1 OK
+  n=1: A000568=1 OK, A000088=1 OK
+  n=2: A000568=1 OK, A000088=2 OK
+  n=3: A000568=2 OK, A000088=4 OK
+  n=4: A000568=4 OK, A000088=11 OK
+  n=5: A000568=12 OK, A000088=34 OK
+  n=6: A000568=56 OK, A000088=156 OK
+  n=7: A000568=456 OK, A000088=1044 OK
+  n=8: A000568=6880 OK, A000088=12346 OK
+
+The ODD-PART speedup (tournament vs graph formula):
+   n |   graph ms |   tourn ms | speedup | T(n) digits |  skip %
+-----------------------------------------------------------------
+  10 |      0.1ms |      0.0ms |    3.4x |           7 |   76.2%
+  15 |      0.6ms |      0.1ms |    5.7x |          20 |   84.7%
+  20 |      2.4ms |      0.3ms |    9.0x |          39 |   89.8%
+  25 |      8.2ms |      0.6ms |   13.8x |          66 |   92.7%
+  30 |     26.0ms |      1.3ms |   20.1x |          99 |   94.7%
+  35 |     74.5ms |      2.7ms |   27.4x |         140 |   96.1%
+  40 |    201.5ms |      5.5ms |   36.7x |         187 |   97.0%
+  45 |    514.9ms |     10.5ms |   48.9x |         242 |   97.7%
+  50 |   1259.3ms |     19.9ms |   63.4x |         305 |   98.2%
+  55 |   2952.1ms |     36.1ms |   81.8x |         374 |     ---
+  60 |   6683.9ms |     64.4ms |  103.8x |         451 |     ---
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/a000568_turbo.py", line 229, in <module>
+    For GRAPHS, Fix(sigma) = 2^{c(sigma)} where c counts orbits on pairs.
+NameError: name 'c' is not defined
