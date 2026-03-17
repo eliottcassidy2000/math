@@ -1,0 +1,225 @@
+
+  GETTING TRICKY WITH P(z) = 5z^4 + 6z^3 - 25z^2 - 14z + 29
+
+======================================================================
+
+  I. THE SPECIAL VALUES
+  --------------------------------------------------
+
+         z          P(z)                         meaning
+        -3            89             deep imaginary time
+        -2           -11                double imaginary
+        -1            17  Wick rotation (imaginary time)
+         0            29           infinite forward time
+       1/7    63649/2401         Hurwitz temperature q=7
+       1/5      3157/125          golden temperature q=5
+       1/3       1769/81             Cayley address of 2
+       1/2        269/16            half temperature q=2
+         1             1     zero time (H of transitive)
+         2            29             negative time q=1/2
+         3           329              deep negative time
+
+  II. THE STUNNING COINCIDENCE: P(0) = P(2) = 29
+  --------------------------------------------------
+
+  P(0) = 29 = mean H (infinite time)
+  P(2) = 29 = mean H AGAIN!
+
+  These are DIFFERENT times:
+  z=0: q->infinity, t->infinity (forward, equilibrium)
+  z=2: q=1/2, t=5*ln(1/2)=-5*ln(2) (BACKWARD time)
+
+  Running BACKWARD for 5*ln(2) steps from transitive
+  gives the SAME expected H as running forward FOREVER.
+
+  FACTORING P(z) - 29:
+  P(z) - 29 = 5z^4 + 6z^3 - 25z^2 - 14z
+            = z * (5z^3 + 6z^2 - 25z - 14)
+
+  5(2)^3 + 6(2)^2 - 25(2) - 14 = 0
+  YES, z=2 is a root!
+
+  5z^3 + 6z^2 - 25z - 14 = (z-2)(5z^2 + 16z + 7)
+  Verified: expansion matches.
+
+  5z^2 + 16z + 7 = 0
+  Discriminant = 256 - 140 = 116
+  sqrt(disc) = sqrt(116) = sqrt(4*29) = 2*sqrt(29)
+  z = (-16 +/- 2*sqrt(29)) / 10 = (-8 +/- sqrt(29)) / 5
+
+  z_+ = (-8 + sqrt(29)) / 5 = -0.5229670386
+  z_- = (-8 - sqrt(29)) / 5 = -2.6770329614
+
+  III. THE COMPLETE FACTORIZATION
+  --------------------------------------------------
+
+  P(z) = 29 + z(z-2)(5z^2 + 16z + 7)
+
+  The polynomial has mean H = 29 as its BASELINE.
+  Deviation from mean = z(z-2) * quadratic.
+
+  ROOTS of P(z) - 29:
+  z = 0 (infinite time)
+  z = 2 (backward time)
+  z = (-8+sqrt(29))/5 = -0.522967
+  z = (-8-sqrt(29))/5 = -2.677033
+
+  The irrational roots involve sqrt(29) = sqrt(MEAN H).
+  The mean H is not just a value — it's a DISCRIMINANT.
+  The field Q(sqrt(29)) controls the algebraic structure
+  of the deviation from equilibrium!
+
+  IV. P(-1) = WICK ROTATION = ANTI-TRANSITIVE
+  --------------------------------------------------
+
+  P(-1) = 5 - 6 - 25 + 14 + 29 = 17
+
+  P(-1) = 17 = H(anti-transitive) = Tribonacci at n=6
+
+  z = -1 corresponds to q = 1/(-1) = -1.
+  t = 5*ln(-1) = 5*i*pi (IMAGINARY TIME)
+
+  The WICK ROTATION of the Markov chain dynamics
+  at imaginary time t = 5*i*pi gives the anti-transitive H.
+
+  In physics, Wick rotation exchanges:
+  - Minkowski spacetime (real time) <-> Euclidean space (imaginary time)
+  - Oscillating wavefunctions <-> Decaying amplitudes
+  - Quantum mechanics <-> Statistical mechanics
+
+  In tournament space, Wick rotation exchanges:
+  - Forward evolution (z in [0,1]) <-> Backward/imaginary (z<0 or z>1)
+  - Transitive (z=1, H=1) <-> Anti-transitive (z=-1, H=17)
+  - Physical mixing <-> Analytic continuation
+
+  V. THE POLYNOMIAL AT THE HURWITZ PRIMES
+  --------------------------------------------------
+
+  P(1/2) = P(1/2) = 269/16 = 16.812500
+    = E[H after 5*ln(2) = 3.4657 random flips from transitive]
+
+  P(1/3) = P(1/3) = 1769/81 = 21.839506
+    = E[H after 5*ln(3) = 5.4931 random flips from transitive]
+
+  P(1/5) = P(1/5) = 3157/125 = 25.256000
+    = E[H after 5*ln(5) = 8.0472 random flips from transitive]
+
+  P(1/7) = P(1/7) = 63649/2401 = 26.509371
+    = E[H after 5*ln(7) = 9.7296 random flips from transitive]
+
+  P(1/42) = P(1/42) = 89158109/3111696 = 28.652577
+    = E[H after 5*ln(42) = 18.6883 random flips from transitive]
+
+  VI. THE DERIVATIVE: RATE OF MIXING
+  --------------------------------------------------
+
+  P'(z) = 20z^3 + 18z^2 - 50z - 14
+
+  P'(z) measures how fast E[H] changes with inverse temperature.
+
+  P'(0) = -14 = rate of approach to mean from infinity
+  P'(1) = -26 = rate at which transitive 'heats up'
+  P'(-1) = 34 = rate at which anti-transitive cools
+
+  P'(1) = -26: the transitive tournament GAINS 26 units of H
+  per unit of z as it begins mixing. Steep initial rise.
+
+  P'(0) = -14 = A_1 (the degree-1 Walsh mass).
+  The linear coefficient IS the initial mixing rate from equilibrium.
+
+  VII. THE ROOTS OF P ITSELF (not P-29)
+  --------------------------------------------------
+
+  Roots of P(z) = 0 (approximate):
+    z = -2.3759923905, P(z) = 2.84e-14
+    z = -2.3759923905, P(z) = 2.84e-14
+    z = 1.6016406727, P(z) = 3.55e-15
+    z = 1.6016406727, P(z) = 3.55e-15
+
+  Scanning for real roots:
+    z = -2.3759923905
+    z = -1.4655849095
+    z = 1.0399366273
+    z = 1.6016406727
+
+  VIII. THE POLYNOMIAL OVER FINITE FIELDS
+  --------------------------------------------------
+
+  P(z) mod p for primes p:
+  mod 2: P(z) = 1z^4 + 1z^2 + 1
+       roots mod 2: []
+
+  mod 3: P(z) = 2z^4 + 2z^2 + 1z + 2
+       roots mod 3: []
+
+  mod 5: P(z) = 1z^3 + 1z + 4
+       roots mod 5: []
+
+  mod 7: P(z) = 5z^4 + 6z^3 + 3z^2 + 1
+       roots mod 7: [3]
+
+  IX. THE TRICK: POLYNOMIAL INTERPOLATION OF #P-HARD
+  --------------------------------------------------
+
+  H(transitive) = P(1) = 1.  HARD to compute in general.
+  P(0) = 29 = mean H.         EASY (just the mean).
+  P(-1) = 17 = H(anti-trans).  Also one specific H value.
+  P(2) = 29 = mean H again.    Another EASY value.
+
+  The polynomial has degree 4, so 5 values determine it.
+  We get P(0)=29, P(2)=29 for FREE (they're the mean).
+  We get P(1) and P(-1) from TWO specific H computations.
+  We need ONE MORE VALUE to determine P completely.
+
+  Options for the 5th point:
+  - P(1/2) = E[H after 5*ln(2) flips]. Needs MCMC sampling.
+  - P(1/3) = E[H after 5*ln(3) flips]. Needs MCMC sampling.
+  - P(3) = E[H at backward time]. Also a specific H transform.
+
+  P(3) = 329.
+
+  If we could compute P(3) cheaply, we'd have all 5 values:
+  P(0)=29, P(1)=1, P(-1)=17, P(2)=29, P(3)=?
+  P(3) = 329
+
+  P(3) = 329 = 7 * 47
+  7 = FORBIDDEN PRIME
+  47 = a SUPERSINGULAR PRIME (divides |Monster|)
+  P(3) = (forbidden) * (moonshine)
+
+  P(-2) = -11
+  P(-2) = -11 = -(PALEY PRIME)
+  The polynomial at z=-2 gives NEGATIVE the next Paley prime!
+
+  P(-3) = 89
+  P(-3) = 89 = F_11 (11th Fibonacci number)
+  89 is prime. 11 is a supersingular prime.
+
+  X. THE POLYNOMIAL'S SECRET MESSAGES
+  --------------------------------------------------
+
+  Special evaluations of P(z) = 5z^4 + 6z^3 - 25z^2 - 14z + 29:
+
+  P(+1) =    1  H(transitive)
+  P(-1) =   17  H(anti-transitive)
+  P(+0) =   29  mean H
+  P(+2) =   29  mean H (backward)
+  P(+3) =  329  7 * 47 (forbidden * moonshine)
+  P(-2) =  -11  -11 (negative Paley prime)
+  P(-3) =   89  89 = F_11 (Fibonacci prime)
+
+  The polynomial ENCODES:
+  - Tournament structure (z=1: transitive, z=-1: anti-transitive)
+  - Equilibrium (z=0, z=2: mean)
+  - Forbidden primes (z=3: 7*47)
+  - Fibonacci numbers (z=-3: 89)
+  - Paley primes (z=-2: -11)
+
+  FIVE integers {29, -14, -25, 6, 5} generate ALL of this.
+  The #P-hard function H(T) is one evaluation of this polynomial.
+  The mean, the Fibonacci structure, the forbidden primes,
+  and the moonshine connection are OTHER evaluations of
+  the SAME polynomial.
+
+  They were always the same object, viewed at different times.
+
