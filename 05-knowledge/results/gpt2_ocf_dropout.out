@@ -1,0 +1,94 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+======================================================================
+GPT-2 OCF MC DROPOUT — Genuine uncertainty via sub-network sampling
+======================================================================
+
+Loading GPT-2...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 5209.83it/s]
+  Loaded in 2.4s
+  Dropout rate: 0.1
+
+Text 1: "The Pythagorean theorem states that in a right-angled triang..." (51 tokens)
+  Processed 50 positions, 11 MC passes each
+Text 2: "Once upon a time in a small village by the sea, there lived ..." (46 tokens)
+  Processed 45 positions, 11 MC passes each
+Text 3: "In computer science, a hash table is a data structure that i..." (42 tokens)
+  Processed 41 positions, 11 MC passes each
+Text 4: "The quick brown fox jumped over the lazy sleeping dog and ra..." (38 tokens)
+  Processed 37 positions, 11 MC passes each
+
+Total: 173 predictions × 11 MC passes
+
+======================================================================
+1. OVERALL STATISTICS
+======================================================================
+  Accuracy (top-1): 0.3988
+  Mean OCF confidence: 0.9684
+  Mean t3: 0.05
+  Fraction with t3>0: 0.0462
+  Mean MC agreement: 0.8718
+  Mean MC variance: 76.6493
+
+======================================================================
+2. OCF REGIME ANALYSIS
+======================================================================
+
+  Regime                    |    N |    Acc | AvgProb | MC_Agr |   MC_Var
+  ----------------------------------------------------------------------
+  TRANSITIVE (H=1)          |  165 |  0.394 |  0.2410 |  0.878 |  78.1334
+  MILD CYCLING (H=3-5)      |    8 |  0.500 |  0.1911 |  0.750 |  46.0400
+
+  BINARY SPLIT:
+    Transitive (H=1):  n= 165, accuracy=0.3939, mc_agree=0.878
+    Has cycles (H>1):  n=   8, accuracy=0.5000, mc_agree=0.750
+    Accuracy diff: -0.1061 (null result)
+
+======================================================================
+3. CORRELATIONS
+======================================================================
+  OCF conf vs correct:       r = -0.0399
+  t3 vs correct:             r = +0.0196
+  MC agreement vs correct:   r = +0.3120
+  MC variance vs correct:    r = +0.0022
+  entropy vs correct:        r = +0.4708
+  top1_prob vs correct:      r = +0.5558
+
+  OCF conf vs MC agreement:  r = +0.1548
+  OCF conf vs MC variance:   r = +0.1128
+  OCF conf vs entropy:       r = -0.1532
+  MC agreement vs entropy:   r = -0.4861
+
+======================================================================
+4. H DISTRIBUTION
+======================================================================
+      H | Count | Accuracy | MC_Agree
+  -----------------------------------
+      1 |   165 |   0.3939 |   0.8777
+      3 |     7 |   0.5714 |   0.7792
+      5 |     1 |   0.0000 |   0.5455
+
+======================================================================
+5. DOES MC-DROPOUT OCF ADD INFORMATION BEYOND ENTROPY?
+======================================================================
+
+  Entropy bin          |    N | Trans Acc | Cycle Acc |     Diff
+  ------------------------------------------------------------
+  [0.0, 3.0]           |   57 |    0.7321 |    1.0000 |  -0.2679
+  [3.0, 4.4]           |   57 |    0.3091 |    0.5000 |  -0.1909
+  [4.4, 8.8]           |   59 |    0.1296 |    0.4000 |  -0.2704
+
+======================================================================
+CONCLUSION
+======================================================================
+
+  ⊖ REVERSE RESULT: Intransitive MC dropout = MORE accurate
+    Transitive: 0.3939, Intransitive: 0.5000
+    MC dropout may be too mild at GPT-2's default 0.1 dropout rate.
+
+  COMPARISON OF PREDICTORS:
+    top1_prob vs correct:    r = +0.5558 (best baseline)
+    entropy vs correct:      r = +0.4708
+    MC agreement vs correct: r = +0.3120
+    OCF conf vs correct:     r = -0.0399
+    MC variance vs correct:  r = +0.0022

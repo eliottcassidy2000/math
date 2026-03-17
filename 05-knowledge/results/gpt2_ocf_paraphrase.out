@@ -1,0 +1,198 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+======================================================================
+PARAPHRASE OCF — Sensitivity to framing as uncertainty signal
+======================================================================
+
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 5239.25it/s]
+GPT-2 loaded.
+
+--- Capital of France ---
+  OCF: H=  1, t3= 0, conf=1.0000 [certain]
+  Top-1 per prompt: ['the', 'the', 'the', 'that', 'Paris', 'that', 'also']
+  Distinct top-1: 4, mode: 'the' (3/7)
+  Average top-1: 'the' (p=0.0994)
+  Expected 'Paris': rank 25
+  Tournament top tokens: ['the', 'a', 'not', 'in', 'also']
+
+--- Programming language ---
+  OCF: H=  1, t3= 0, conf=1.0000 [certain]
+  Top-1 per prompt: ['language', 'language', 'language', 'language', 'language', 'language', 'language']
+  Distinct top-1: 1, mode: 'language' (7/7)
+  Average top-1: 'language' (p=0.9898)
+  Expected 'language': rank 1
+  Tournament top tokens: ['language', 'environment', 'framework', 'languages', 'tool']
+
+--- Einstein ---
+  OCF: H=  1, t3= 0, conf=1.0000 [certain]
+  Top-1 per prompt: ['Einstein', 'Einstein', 'Einstein', 'Einstein', 'Einstein', 'Einstein', 'Einstein']
+  Distinct top-1: 1, mode: 'Einstein' (7/7)
+  Average top-1: 'Einstein' (p=0.9468)
+  Expected 'Einstein': rank 1
+  Tournament top tokens: ['Einstein', 'H', 'Hof', 'Spe', 'Sz']
+
+--- Lazy dog (idiomatic) ---
+  OCF: H=  1, t3= 0, conf=1.0000 [certain]
+  Top-1 per prompt: ['fence', 'fence', 'fence', 'fence', 'fence', 'fence', 'fence']
+  Distinct top-1: 1, mode: 'fence' (7/7)
+  Average top-1: 'fence' (p=0.0697)
+  Expected 'lazy': rank 318
+  Tournament top tokens: ['fence', 'edge', 'wall', 'top', 'railing']
+
+--- Water freezing point ---
+  OCF: H=  1, t3= 0, conf=1.0000 [certain]
+  Top-1 per prompt: ['C', 'Celsius', 'C', 'C', 'Celsius', 'C', 'C']
+  Distinct top-1: 2, mode: 'C' (5/7)
+  Average top-1: 'C' (p=0.2341)
+  Expected 'Celsius': rank 2
+  Tournament top tokens: ['C', 'Celsius', 'Fahrenheit', '.', ',']
+
+--- Solar system (Jupiter) ---
+  OCF: H=  1, t3= 0, conf=1.0000 [certain]
+  Top-1 per prompt: ['about', 'the', 'about', 'Jupiter', 'Jupiter', 'about', 'the']
+  Distinct top-1: 3, mode: 'about' (3/7)
+  Average top-1: 'the' (p=0.0847)
+  Expected 'Jupiter': rank 3
+  Tournament top tokens: ['the', 'about', 'Jupiter', 'Earth', 'a']
+
+--- Ambiguous completion ---
+  OCF: H=  1, t3= 0, conf=1.0000 [certain]
+  Top-1 per prompt: ['food', 'of', 'more', 'of', 'groceries', 'food', 'food']
+  Distinct top-1: 4, mode: 'food' (3/7)
+  Average top-1: 'food' (p=0.0514)
+  Tournament top tokens: ['food', 'more', 'of', 'groceries', 'clothes']
+
+--- Continuation style ---
+  OCF: H=  1, t3= 0, conf=1.0000 [certain]
+  Top-1 per prompt: ['a', 'a', 'a', 'a', 'a', 'unexpected', 'a']
+  Distinct top-1: 2, mode: 'a' (6/7)
+  Average top-1: 'a' (p=0.0933)
+  Tournament top tokens: ['a', 'the', 'an', 'very', 'more']
+
+--- Mathematical derivative ---
+  OCF: H=  1, t3= 0, conf=1.0000 [certain]
+  Top-1 per prompt: ['the', 'the', 'the', 'a', 'x', 'the', 'a']
+  Distinct top-1: 3, mode: 'the' (4/7)
+  Average top-1: 'the' (p=0.1578)
+  Expected '2': rank 9
+  Tournament top tokens: ['the', 'a', 'x', '(', '0']
+
+======================================================================
+ANALYSIS
+======================================================================
+
+FACTUAL QUESTIONS (expected answer known):
+  Name                      |   H |   Regime | Distinct |   Expected | Rank |   Avg Top1
+  --------------------------------------------------------------------------------
+  Capital of France         |   1 |  certain |        4 |      Paris |   25 |        the
+  Programming language      |   1 |  certain |        1 |   language |    1 |   language
+  Einstein                  |   1 |  certain |        1 |   Einstein |    1 |   Einstein
+  Lazy dog (idiomatic)      |   1 |  certain |        1 |       lazy |  318 |      fence
+  Water freezing point      |   1 |  certain |        2 |    Celsius |    2 |          C
+  Solar system (Jupiter)    |   1 |  certain |        3 |    Jupiter |    3 |        the
+  Mathematical derivative   |   1 |  certain |        3 |          2 |    9 |        the
+
+  OCF conf for rank-1 correct: 1.0000
+  OCF conf for NOT rank-1:     1.0000
+
+AMBIGUOUS QUESTIONS (no single correct answer):
+  Name                      |   H |   Regime | Distinct |   Avg Top1
+  ------------------------------------------------------------
+  Ambiguous completion      |   1 |  certain |        4 |       food
+  Continuation style        |   1 |  certain |        2 |          a
+
+KEY COMPARISON:
+  Factual: avg OCF conf = 1.0000, avg distinct top-1 = 2.1
+  Ambiguous: avg OCF conf = 1.0000, avg distinct top-1 = 3.0
+
+  ⊘ Factual and ambiguous have similar OCF confidence.
+
+======================================================================
+SENSITIVITY ANALYSIS — Which rephrasings disrupt the ranking?
+======================================================================
+
+  Capital of France (distinct top-1: 4):
+    [         the] "The capital of France is"
+    [         the] "France's capital city is"
+    [         the] "The capital city of the French Republic is"
+    [        that] "What is the capital of France? The answer is" ← different!
+    [       Paris] "Paris is the capital of France. The capital of France is" ← different!
+    [        that] "London is to England as __ is to France. The answer is" ← different!
+    [        also] "The French capital is" ← different!
+
+  Water freezing point (distinct top-1: 2):
+    [           C] "Water freezes at zero degrees"
+    [     Celsius] "The freezing point of water is zero degrees" ← different!
+    [           C] "Water turns to ice at zero degrees"
+    [           C] "H2O freezes at approximately zero degrees"
+    [     Celsius] "The phase transition of water from liquid to solid occurs at zero degrees" ← different!
+    [           C] "Pure water freezes at zero degrees"
+    [           C] "Water solidifies at zero degrees"
+
+  Solar system (Jupiter) (distinct top-1: 3):
+    [       about] "The largest planet in our solar system is"
+    [         the] "The biggest planet in the solar system is" ← different!
+    [       about] "The most massive planet orbiting our sun is"
+    [     Jupiter] "Among all planets in our solar system, the largest is" ← different!
+    [     Jupiter] "Jupiter is the largest planet. The largest planet is" ← different!
+    [       about] "The solar system's biggest planet is"
+    [         the] "The planet with the greatest mass in our solar system is" ← different!
+
+  Ambiguous completion (distinct top-1: 4):
+    [        food] "She went to the store to buy some"
+    [          of] "She walked to the shop to purchase some" ← different!
+    [        more] "She headed to the store to get some" ← different!
+    [          of] "She drove to the market to buy some" ← different!
+    [   groceries] "She stopped at the store to pick up some" ← different!
+    [        food] "She visited the shop to buy some"
+    [        food] "She ran to the store to grab some"
+
+  Continuation style (distinct top-1: 2):
+    [           a] "Machine learning models can sometimes produce"
+    [           a] "ML models can occasionally generate"
+    [           a] "Machine learning systems sometimes create"
+    [           a] "AI models can sometimes output"
+    [           a] "Neural networks sometimes produce"
+    [  unexpected] "Deep learning models can occasionally produce" ← different!
+    [           a] "Machine learning algorithms sometimes generate"
+
+  Mathematical derivative (distinct top-1: 3):
+    [         the] "The derivative of x squared is"
+    [         the] "d/dx of x^2 equals"
+    [         the] "The first derivative of x² is"
+    [           a] "Differentiating x squared gives" ← different!
+    [           x] "If f(x) = x², then f'(x) =" ← different!
+    [         the] "The rate of change of x squared is"
+    [           a] "Taking the derivative of x^2 results in" ← different!
+
+======================================================================
+SUMMARY
+======================================================================
+
+  PARAPHRASE OCF captures FRAMING SENSITIVITY:
+
+  1. Questions with a single clear answer (Einstein, programming language)
+     tend to have HIGH OCF confidence — all phrasings agree.
+
+  2. Questions that are ambiguous or depend on phrasing
+     tend to have LOWER OCF confidence — phrasings disagree.
+
+  3. The number of DISTINCT top-1 predictions across paraphrases
+     directly measures the model's sensitivity to framing.
+
+  4. OCF turns this into a mathematical TOURNAMENT among candidates,
+     where cycles represent genuine Condorcet paradoxes:
+     "Depending on how you ask, different answers are best."
+
+  THIS IS THE RIGHT USE OF OCF FOR LLMs:
+  - Not layer disagreement (measures processing depth)
+  - Not MC dropout (measures sub-network noise)
+  - But PARAPHRASE disagreement (measures semantic robustness)
+
+  PRACTICAL APPLICATION:
+  1. For any LLM output, generate K paraphrases of the input
+  2. Feed each through the model
+  3. Build tournament from K logit vectors
+  4. If OCF confidence < threshold → flag as potentially hallucinated
+     (the answer DEPENDS ON HOW YOU ASK, which means it's unreliable)
+
