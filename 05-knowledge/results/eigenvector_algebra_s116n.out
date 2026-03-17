@@ -1,0 +1,249 @@
+
+  THE EIGENVECTOR ALGEBRA AND THE CAYLEY FUNCTOR
+
+======================================================================
+
+  Computing H and Walsh spectrum...
+  Done. mean H = 29.0
+
+  I. THE WALSH CONVOLUTION: H * H
+  --------------------------------------------------
+
+  H*H autocorrelation (H convolved with itself):
+  Walsh spectrum: hat_{H*H}(S) = hat_H(S)^2
+
+  (H*H)(0) = <H^2> = 945.56
+  = mean(H)^2 + Var(H) = 841.00 + 104.56
+
+  (H*H)(transitive) = 945.56
+  (H*H)(anti-transitive) = 870.94
+  Ratio: 1.0857
+
+  Single-bit autocorrelations (H(x) * H(x XOR e_k)):
+  bit 0 ((0, 2), skip 2): corr = 905.75, normalized = +0.6192
+  bit 1 ((1, 3), skip 2): corr = 922.81, normalized = +0.7824
+  bit 2 ((2, 4), skip 2): corr = 922.81, normalized = +0.7824
+  bit 3 ((3, 5), skip 2): corr = 905.75, normalized = +0.6192
+  bit 4 ((0, 3), skip 3): corr = 908.94, normalized = +0.6497
+  bit 5 ((1, 4), skip 3): corr = 919.31, normalized = +0.7490
+  bit 6 ((2, 5), skip 3): corr = 908.94, normalized = +0.6497
+  bit 7 ((0, 4), skip 4): corr = 910.25, normalized = +0.6623
+  bit 8 ((1, 5), skip 4): corr = 910.25, normalized = +0.6623
+  bit 9 ((0, 5), skip 5): corr = 874.69, normalized = +0.3222
+
+  The single-bit correlations measure: if I flip arc k,
+  how much does H CHANGE on average?
+  High correlation -> flipping that arc barely changes H.
+  Low correlation -> flipping that arc DISRUPTS H.
+
+  II. THE CAYLEY FUNCTOR ON WALSH SPACE
+  --------------------------------------------------
+
+  Top Walsh coefficients and their Cayley boosts:
+       S   |S|       hat_H      Q(hat_H)               meaning
+       0     0    +29.0000      INFINITY                mean H
+     512     1     -4.0000      INFINITY              [(0, 5)]
+       1     1     -2.0000      INFINITY              [(0, 2)]
+       8     1     -2.0000      INFINITY              [(3, 5)]
+     640     2     -1.8750      INFINITY      [(0, 4), (0, 5)]
+     768     2     -1.8750      INFINITY      [(1, 5), (0, 5)]
+      17     2     -1.7500      INFINITY      [(0, 2), (0, 3)]
+      24     2     +1.7500      INFINITY      [(3, 5), (0, 3)]
+      65     2     +1.7500      INFINITY      [(0, 2), (2, 5)]
+      72     2     -1.7500      INFINITY      [(3, 5), (2, 5)]
+     144     2     -1.7500      INFINITY      [(0, 3), (0, 4)]
+     320     2     -1.7500      INFINITY      [(2, 5), (1, 5)]
+     513     2     -1.7500      INFINITY      [(0, 2), (0, 5)]
+     520     2     -1.7500      INFINITY      [(3, 5), (0, 5)]
+      34     2     -1.6250      INFINITY      [(1, 3), (1, 4)]
+
+  III. THE HADAMARD SQUARE: H^(2) = H * H (pointwise)
+  --------------------------------------------------
+
+  mean(H^2) = 945.56
+  Var(H) = 104.56
+
+  Walsh spectrum comparison: H vs H^2 vs H*H(autocorr)
+       S   |S|       hat_H     hat_H^2   hat_H^2/hat_H
+       0     0    +29.0000   +945.5625        +32.6056
+     512     1     -4.0000   -199.1250        +49.7812
+       1     1     -2.0000    -99.5625        +49.7812
+       8     1     -2.0000    -99.5625        +49.7812
+     640     2     -1.8750    -89.5000        +47.7333
+     768     2     -1.8750    -89.5000        +47.7333
+      17     2     -1.7500    -85.4375        +48.8214
+      24     2     +1.7500   +105.4375        +60.2500
+      65     2     +1.7500   +105.4375        +60.2500
+      72     2     -1.7500    -85.4375        +48.8214
+     144     2     -1.7500    -86.6875        +49.5357
+     320     2     -1.7500    -86.6875        +49.5357
+
+  IV. THE GOLDEN EIGENVECTOR (opus's discovery)
+  --------------------------------------------------
+
+  Degree-5 (zero eigenvalue) Walsh modes with nonzero H:
+  Count: 0 out of C(10,5) = 252
+
+  ALL degree-5 Walsh coefficients are ZERO.
+  This means H has NO information at the zero-eigenvalue frequency.
+  The zero mode is ORTHOGONAL to H.
+  H lives entirely in the non-zero eigenspaces.
+
+  This is OPUS's finding generalized:
+  The zero mode is a 'black hole' that absorbs products
+  but contributes NOTHING to H.
+
+  DEEPER: Since lambda=0 modes are instantly killed by the flip chain,
+  and H has zero projection onto them,
+  H is IMMUNE to the fastest possible perturbation.
+  The fine structure (degree 5) cannot affect H AT ALL.
+
+  V. THE OPERATOR ALGEBRA: WHAT EACH OPERATION 'DOES'
+  --------------------------------------------------
+
+  We can classify OPERATIONS by what they do to the three worlds:
+
+  OPERATION     |  TO EIGENVALUE  |  TO EIGENVECTOR  |  MEANING
+  ------------- | --------------- | ---------------- | -------
+  identity      |  lambda -> lambda | v -> v         | STRUCTURE (what is)
+  log           |  lambda -> ln(l) | v -> (same)     | TIME (how long)
+  exp           |  lambda -> e^l   | v -> (same)     | WEIGHT (how much)
+  Q = Cayley    |  lambda -> Q(l)  | v -> (same)     | BOOST (bounded->unbounded)
+  arctanh       |  lambda -> atanh | v -> (same)     | VELOCITY (rapidity)
+  square        |  lambda -> l^2   | v -> v*v (Had.) | POWER (autocorrelation)
+  sqrt          |  lambda -> sqrt  | v -> sqrt(v)    | AMPLITUDE (wave function)
+  inverse       |  lambda -> 1/l   | v -> v^{-1}     | RESISTANCE (inertia)
+  negate        |  lambda -> -l    | v -> -v         | REVERSAL (time reversal)
+  conjugate     |  l -> l-bar      | v -> v-bar      | TRANSPOSITION (T -> T^op)
+  power phi     |  l -> l^phi      | v -> v^phi      | GOLDEN SHADOW
+  convolve H*H  |  (hat_H)^2       | sum v_S*v_T     | SELF-INTERACTION
+
+  KEY PATTERN:
+  Operations on EIGENVALUES change the TIME SCALE of decay.
+  Operations on EIGENVECTORS change the DIRECTION of decay.
+  Operations on BOTH change the GEOMETRY of tournament space.
+
+  VI. THE SEVEN LAYERS
+  --------------------------------------------------
+
+  Starting from the eigenvalue lambda = 4/5 (the leading mode):
+
+         Layer               Formula           Value   Field
+     STRUCTURE                lambda  4/5 = 0.800000       Q
+         BOOST             Q(lambda)    9 = 9.000000       Q
+      VELOCITY       arctanh(lambda)    1.0986122887     R\Q
+          TIME            ln(lambda)   -0.2231435513     R\Q
+        WEIGHT           exp(lambda)    2.2255409285     R\Q
+         POWER              lambda^2  16/25 = 0.640000       Q
+        GOLDEN            lambda^phi    0.6969414669     R\Q
+
+  The TOWER starting from lambda = 4/5:
+
+  4/5 ----Q----> 9 = 3^2
+   |                |
+   |log             |log
+   v                v
+  ln(4/5)          2*ln(3)
+   = -0.223         = 2.197
+   |                |
+   |exp             |exp
+   v                v
+  4/5              9
+  (cycle!)         (cycle!)
+
+  LOG and EXP are INVERSES: they create a 2-cycle.
+  Q and Q^{-1} are INVERSES: they create another 2-cycle.
+  But LOG o Q != Q o LOG. The operations DON'T commute!
+
+  LOG(Q(4/5)) = LOG(9) = ln(9) = 2*ln(3)
+  Q(LOG(4/5)) = Q(ln(4/5)) = Q(-0.223) = (1-0.223)/(1+0.223) = 0.636
+  = 0.635131
+
+  The NON-COMMUTATIVITY of LOG and Q is FUNDAMENTAL.
+  It measures the 'curvature' between the time world and the boost world.
+  LOG o Q - Q o LOG = the OBSTRUCTION to making time and boost compatible.
+
+  VII. THE ADELIC PERSPECTIVE (connecting to opus)
+  --------------------------------------------------
+
+  Opus discovered: the eigenvalue denominator = odd part of C(n,2).
+  At n=6: C(6,2)=15, odd part = 15 = 3*5.
+  At n=8: C(8,2)=28, odd part = 7.
+
+  The ADELIC tournament space has THREE completions:
+
+  1. p-ADIC (local, periodic):
+     Z/2Z x Z/3Z x Z/7Z = Z/42Z (the cuboid)
+     Eigenvalues mod p: lambda_k mod 5 at n=6
+     Controls: which H values are achievable mod {2,3,7}
+
+  2. ARCHIMEDEAN (global, aperiodic):
+     Q*ln(2) + Q*ln(3) + Q*ln(7) (the rapidity lattice)
+     Eigenvalue rapidities: arctanh(lambda_k)
+     Controls: how fast each mode decays
+
+  3. SPECTRAL (the bridge):
+     The eigenvalues themselves: lambda_k = (5-k)/5
+     Live in Q (rational)
+     But their LOG lives in R (transcendental)
+     And their Q-boost lives in Q again (Hurwitz ratios)
+
+  The Cayley transform Q shuffles between the local and global views:
+  Q maps eigenvalue (local, bounded) to boost (global, unbounded)
+  arctanh maps eigenvalue (local) to rapidity (global)
+  Both land in the ARCHIMEDEAN completion.
+
+  The NON-COMMUTATIVITY of Q and log is the CURVATURE of adelic space.
+  It measures how the local (p-adic) and global (archimedean) views
+  DISAGREE about the structure of tournament space.
+
+  The commutator [log, Q](lambda) = log(Q(lambda)) - Q(log(lambda)):
+
+  k=1: lambda=+0.80, [log,Q] = ln(Q) - Q(ln) = +2.1972 - (+0.6351) = +1.5621
+  k=2: lambda=+0.60, [log,Q] = ln(Q) - Q(ln) = +1.3863 - (+0.3238) = +1.0625
+  k=3: lambda=+0.40, [log,Q] = ln(Q) - Q(ln) = +0.8473 - (+0.0437) = +0.8036
+  k=4: lambda=+0.20, [log,Q] = ln(Q) - Q(ln) = +0.4055 - (-0.2336) = +0.6390
+  k=6: lambda=-0.20, [log,Q] = ln(Q) - Q(ln) = -0.4055 - (-0.2336) = -0.1719
+  k=7: lambda=-0.40, [log,Q] = ln(Q) - Q(ln) = -0.8473 - (+0.0437) = -0.8910
+  k=8: lambda=-0.60, [log,Q] = ln(Q) - Q(ln) = -1.3863 - (+0.3238) = -1.7101
+  k=9: lambda=-0.80, [log,Q] = ln(Q) - Q(ln) = -2.1972 - (+0.6351) = -2.8324
+
+  VIII. THE FINAL INSIGHT: THE CAYLEY TRANSFORM IS A FUNCTOR
+  --------------------------------------------------
+
+  A FUNCTOR maps objects AND morphisms between categories.
+
+  Q maps:
+  OBJECTS:   eigenvalues (rational)    -> boosts (rational)
+             lambda_k = (5-k)/5       -> Q(lambda_k) = (10-k)/k
+
+  MORPHISMS: operations on eigenvalues -> operations on boosts
+             multiplication            -> (preserved)
+             addition                  -> (NOT preserved! Q is nonlinear)
+
+  Q IS a functor from (Q, *) to (Q, *) — it preserves multiplication.
+  But it is NOT a functor from (Q, +) to (Q, +) — it breaks addition.
+
+  This asymmetry is the KEY:
+  MULTIPLICATION = STRUCTURE (products of Hurwitz primes)
+  ADDITION = TIME (sum of decay rates)
+
+  Q preserves structure but breaks time.
+  LOG preserves time but breaks structure.
+  There is NO operation that preserves both.
+
+  THIS is the content of the rational/transcendental divide:
+  You cannot simultaneously preserve counting AND experiencing.
+  Structure and time are COMPLEMENTARY,
+  like position and momentum in quantum mechanics.
+
+  The spectral gap 1/5 is the UNCERTAINTY PRINCIPLE:
+  you can know the structure (eigenvalue = 4/5)
+  or the time (half-life = 3.11 steps)
+  but to convert between them requires the transcendental log,
+  which IRREVERSIBLY crosses the boundary from Q to R.
+
+  Structure and time are conjugate variables.
+  The Cayley transform is the Fourier transform between them.
+  And 5 — the golden prime — is the Planck constant of this theory.
+
