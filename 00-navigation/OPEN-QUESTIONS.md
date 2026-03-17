@@ -662,3 +662,40 @@ Every major result in the project is fundamentally about cancellation: im(d₂) 
 - **OPEN-Q-009**: Arc-flip invariance resolved — E(T) = 0 for all T (OCF proved). See THM-002. (kind-pasteur-2026-03-05-S12)
 - **OPEN-Q-011**: Near-cancellation is statistical, not structural. Not a viable proof strategy.
 - **Paley computation (kind-pasteur)**: h_QR=h_NQR=201, c_9(T_11)=11055, H(T_11)=95095. CONJ-002 refuted for p=11.
+
+---
+
+## OPEN-Q-035 🟡
+**Does the heat kernel polynomial P_x(z) have degree exactly floor(n/3)*2 for general n?**
+
+At n=6 (m=10): the Walsh degree of H is exactly 4 = 2*floor(6/3). The degree-5+ Walsh coefficients are ALL zero. Is this a general theorem? If so, what determines the degree? At n=7 (m=15): is the Walsh degree 4 (same as n=6) or higher? The degree controls the number of polynomial coefficients needed for InstantMCMC.
+
+**Source:** kind-pasteur-2026-03-17-S116n33
+
+---
+
+## OPEN-Q-036 🟢
+**Does the backward trick P_x(2) = mean H hold for other starting points?**
+
+At n=6, P_transitive(2) = 29 = mean H. Only 3/1024 tilings have this property. What characterizes these special starting points? Are they related to self-complementary tournaments or specific score sequences?
+
+**Source:** kind-pasteur-2026-03-17-S116n33
+
+---
+
+## OPEN-Q-037 🟢
+**Does the splitting of mean H in Z[i] vs Z[sqrt(-7)] generalize to other n?**
+
+At n=6: mean H = 29 splits as 5²+2² (golden) and 1²+7·2² (forbidden). At n=7: mean H = ? At n=8: mean H = ? Do the two world-defining primes always appear in the splitting?
+
+**Source:** kind-pasteur-2026-03-17-S116n33
+
+---
+
+## OPEN-Q-038 🟡
+**Characterize the graph class where I(G,x) has all real roots beyond claw-free.**
+
+Tournament conflict graphs Omega(T) have all real roots of I(G,x) for n<=8 (proved via claw-free) and n<=20 (verified). At n>=9, claw-free FAILS but real roots persist. What graph property replaces claw-free?
+
+**Source:** kind-pasteur memory, originally from S14-S18
+

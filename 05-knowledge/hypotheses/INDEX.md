@@ -1647,3 +1647,24 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1627 | **Euler product ↔ OCF structural analogy**: OCF: H(T) = ∏_{odd cycles C} (1 + 2·x_C) evaluated at x_C=1 per disjoint collection = 1 + 2α_1 + 4α_2 + ... Euler product: ζ(s) = ∏_p (1-p^{-s})^{-1}. Odd cycles are "primes" of tournament structure — they generate all Hamiltonian path contributions multiplicatively. The 2-adic expansion of H is the tournament analogue of the p-adic expansion of ζ. The OCF is a FINITE Euler product over cycle "primes". | CONFIRMED (structural analogy, exact) | zeta_deep_dive.py | opus-S74 |
 | HYP-1628 | **Gauss sum → Paley eigenvalues → L-functions**: Paley T_p eigenvalues are (-1±√(p*))/2 where p*=(-1)^{(p-1)/2}·p. The Gauss sum g(χ_p)=√(p*) appears in the functional equation of L(s,χ_p). Thus Paley tournament eigenvalues are direct functions of the Gauss sum. The Betti numbers, computed from these eigenvalues via homological algebra, encode information about the Dirichlet L-function at the prime p. | CONFIRMED (algebraic, exact) | zeta_deep_dive.py | opus-S74 |
 | HYP-1600 | **Tr(M_k^k) = 2^k-1 for ALL k (THM-227)**: The k-nacci companion matrix trace at power k equals the k-th Mersenne number. PROVED by induction on Newton's identities. Stronger: Tr(M_k^n) = 2^n-1 for ALL 1<=n<=k (independent of k). At n=k+1, breaks by exactly k+1: Tr(M_k^{k+1}) = 2^{k+1}-k-2. Connects forbidden H values (7=2^3-1, 31=2^5-1, 127=2^7-1) to Mersenne primes via k-nacci matrices. | CONFIRMED (proved, verified k=2..19) | prove_knacci_mersenne_s90ap.py | opus-S90ap |
+
+## HYP-1640: Walsh degree of H bounded by 2*floor(n/3) (S116n33)
+**Status:** OPEN (verified at n=6 where degree=4=2*2)
+At n=6, H has Walsh degree exactly 4. All degree-5+ Walsh coefficients are zero.
+Conjecture: for general n, the Walsh degree of H (on the canonical-path tiling space) is at most 2*floor(n/3) = the maximum number of vertex-disjoint odd cycles times 2 (for path-arc content).
+
+## HYP-1641: Cayley boost spectrum factors over Hurwitz primes at all n (S116n33)
+**Status:** PROVED for n=6 (THM-251). Functional equation Q(λ_k)·Q(λ_{m-k})=1 proved for all n.
+At n=6: all Cayley boosts are ratios of {2,3,7} only. At general n: the Cayley boosts (m-k)/k involve all primes up to m-1.
+
+## HYP-1642: Column I product of boost 3x3 matrix = 84 = Hurwitz bound (S116n33)
+**Status:** PROVED for n=6 (THM-253). Product of persistent boosts 9·4·(7/3) = 84 = 2·42.
+Open: does this generalize to other n? At n=7: Column I product = ?
+
+## HYP-1643: zeta_{2,3,7}(-1) = zeta(-1) is the UNIQUE negative integer where they agree (S116n33)
+**Status:** PARTIALLY VERIFIED. zeta_{2,3,7}(-3) ≠ zeta(-3). Conjecture: s=-1 is the only negative integer where the restricted and full zeta agree.
+
+## HYP-1644: 29 = mean H at n=6 splits in Z[i] and Z[√-7] using golden and forbidden primes (S116n33)
+**Status:** VERIFIED. 29 = 5²+2² (Gaussian, golden) and 29 = 1²+7·4 (Hurwitz, forbidden).
+Open: does the mean H at each n split using the world-defining primes?
+
