@@ -1,0 +1,198 @@
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\huggingface_hub\file_download.py:129: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\Eliott\.cache\huggingface\hub\models--gpt2. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+  === POLYNOMIAL OUTPUT HEAD — GPT-2 Replacement Test ===
+
+  Loading gpt2...
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 13069.94it/s]
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+  Original lm_head: 38,597,376 parameters
+  Polynomial head: 3,365,138 parameters
+  Reduction: 11.5x fewer parameters
+  Backbone frozen (124,439,808 params)
+
+  === TEST 1: ZERO-SHOT (no fine-tuning) ===
+
+============================================================
+
+  Prompt: "The meaning of life is"
+  Temperature: 0.8
+
+  --- ORIGINAL GPT-2 HEAD ---
+  The meaning of life is in our own body, but we also make decisions we would not have as life itself, if we
+  (720ms)
+
+  --- POLYNOMIAL HEAD ---
+  . risk=0.022|          |  Robots  . risk=0.006|          |  decide  . risk=0.022|          |  Robots  . risk=0.024|          | alks  . risk=0.006|          |  at
+  . risk=0.005|          | alks  . risk=0.011|          |  Robots  . risk=0.008|          |  Bowman  . risk=0.009|          |  Prelude  . risk=0.005|          |  Recall
+  . risk=0.006|          |  Robots  . risk=0.007|          |  Gravity  . risk=0.004|          | USA  . risk=0.004|          | ousands  . risk=0.006|          |  Maya
+  . risk=0.011|          |  Chapter  . risk=0.007|          |  Maya  . risk=0.005|          | ina  . risk=0.007|          | Safety  . risk=0.006|          |  Glock
+
+
+  Full: The meaning of life is Robots decide Robotsalks atalks Robots Bowman Prelude Recall Robots GravityUSAousands Maya Chapter MayainaSafety Glock
+  (779ms)
+
+  === COMPARISON ===
+  Original params: 38,597,376
+  Polynomial params: 3,365,138
+  Avg hallucination risk: 0.009
+  Uncertain tokens: 0/20
+  Speed: original=720ms, polynomial=779ms
+
+============================================================
+
+  Prompt: "Mathematics reveals the hidden"
+  Temperature: 0.8
+
+  --- ORIGINAL GPT-2 HEAD ---
+  Mathematics reveals the hidden nature of these processes, with an essentialist view of them becoming more complicated as new mathematical problems evolve
+  (561ms)
+
+  --- POLYNOMIAL HEAD ---
+  . risk=0.003|          |  Prelude  . risk=0.003|          |  Prelude  . risk=0.003|          |  Prelude  . risk=0.005|          |  vulnerable  . risk=0.003|          | wan
+  . risk=0.003|          |  places  . risk=0.004|          | Safety  . risk=0.006|          | ticket  . risk=0.005|          |  MM  . risk=0.009|          | asio
+  . risk=0.005|          |  126  . risk=0.007|          |  sporting  . risk=0.004|          |  126  . risk=0.003|          |  Wi  . risk=0.012|          |  overdose
+  . risk=0.003|          |  Wi  . risk=0.004|          | Safety  . risk=0.003|          |  Glock  . risk=0.007|          | ticket  . risk=0.002|          | ALE
+
+
+  Full: Mathematics reveals the hidden Prelude Prelude Prelude vulnerablewan placesSafetyticket MMasio 126 sporting 126 Wi overdose WiSafety GlockticketALE
+  (751ms)
+
+  === COMPARISON ===
+  Original params: 38,597,376
+  Polynomial params: 3,365,138
+  Avg hallucination risk: 0.005
+  Uncertain tokens: 0/20
+  Speed: original=561ms, polynomial=751ms
+
+============================================================
+
+  Prompt: "The cat sat on the"
+  Temperature: 0.8
+
+  --- ORIGINAL GPT-2 HEAD ---
+  The cat sat on the couch, where she was holding the knife. As they watched, she pulled it out and the knife
+  (559ms)
+
+  --- POLYNOMIAL HEAD ---
+  . risk=0.006|          |  blaster  . risk=0.005|          |  Glock  . risk=0.008|          |  vulnerable  . risk=0.001|          |  Gravity  . risk=0.003|          | popular
+  . risk=0.004|          | State  . risk=0.005|          |  sporting  . risk=0.003|          | plant  . risk=0.003|          |  Catholicism  . risk=0.007|          | alks
+  . risk=0.005|          | State  . risk=0.003|          |  collaborating  . risk=0.002|          |  decide  . risk=0.005|          |  vulnerable  . risk=0.002|          |  at
+  . risk=0.003|          |  Robots  . risk=0.004|          |  graphical  . risk=0.005|          |  vulnerable  . risk=0.002|          |  collaborating  . risk=0.004|          |  Fame
+
+
+  Full: The cat sat on the blaster Glock vulnerable GravitypopularState sportingplant CatholicismalksState collaborating decide vulnerable at Robots graphical vulnerable collaborating Fame
+  (762ms)
+
+  === COMPARISON ===
+  Original params: 38,597,376
+  Polynomial params: 3,365,138
+  Avg hallucination risk: 0.004
+  Uncertain tokens: 0/20
+  Speed: original=559ms, polynomial=762ms
+
+============================================================
+
+  === TEST 2: AFTER FINE-TUNING (3 epochs) ===
+
+  Fine-tuning polynomial head on 8 texts...
+  Epoch 1/3: loss = inf
+  Epoch 2/3: loss = inf
+  Epoch 3/3: loss = inf
+  Done.
+
+============================================================
+
+  Prompt: "The meaning of life is"
+  Temperature: 0.8
+
+  --- ORIGINAL GPT-2 HEAD ---
+  The meaning of life is to give yourself to others. This is not to say that you are destined to go to Heaven,
+  (585ms)
+
+  --- POLYNOMIAL HEAD ---
+  . risk=0.001|          |  aquatic  . risk=0.001|          |  Wi  . risk=0.003|          | sector  . risk=0.002|          |  tac  . risk=0.003|          |  participation
+  . risk=0.003|          |  Fei  . risk=0.002|          |  perpend  . risk=0.003|          |  vulnerable  . risk=0.001|          | rams  . risk=0.005|          |  miner
+  . risk=0.005|          |  military  . risk=0.002|          |  Aware  . risk=0.002|          | 2020  . risk=0.002|          |  Selected  . risk=0.001|          |  sued
+  . risk=0.002|          | voice  . risk=0.002|          |  settlers  . risk=0.002|          |  veget  . risk=0.004|          |  sued  . risk=0.001|          |  utilitarian
+
+
+  Full: The meaning of life is aquatic Wisector tac participation Fei perpend vulnerablerams miner military Aware2020 Selected suedvoice settlers veget sued utilitarian
+  (760ms)
+
+  === COMPARISON ===
+  Original params: 38,597,376
+  Polynomial params: 3,365,138
+  Avg hallucination risk: 0.002
+  Uncertain tokens: 0/20
+  Speed: original=585ms, polynomial=760ms
+
+============================================================
+
+  Prompt: "Mathematics reveals the hidden"
+  Temperature: 0.8
+
+  --- ORIGINAL GPT-2 HEAD ---
+  Mathematics reveals the hidden properties of polyhedral lattices
+
+A Polyhedral Dilemma
+
+The theory of density
+  (555ms)
+
+  --- POLYNOMIAL HEAD ---
+  . risk=0.001|          |  birthday  . risk=0.001|          | eling  . risk=0.001|          | bid  . risk=0.001|          | wan  . risk=0.001|          |  emancipation
+  . risk=0.001|          |  wors  . risk=0.000|          |  nonpartisan  . risk=0.001|          |  term  . risk=0.001|          |  URL  . risk=0.001|          |  CP
+  . risk=0.001|          |  Glock  . risk=0.001|          | raham  . risk=0.002|          |  th  . risk=0.002|          |  military  . risk=0.004|          |  miner
+  . risk=0.002|          | pec  . risk=0.004|          |  Selected  . risk=0.003|          | ++  . risk=0.002|          | State  . risk=0.003|          | State
+
+
+  Full: Mathematics reveals the hidden birthdayelingbidwan emancipation wors nonpartisan term URL CP Glockraham th military minerpec Selected++StateState
+  (753ms)
+
+  === COMPARISON ===
+  Original params: 38,597,376
+  Polynomial params: 3,365,138
+  Avg hallucination risk: 0.002
+  Uncertain tokens: 0/20
+  Speed: original=555ms, polynomial=753ms
+
+============================================================
+
+  Prompt: "The cat sat on the"
+  Temperature: 0.8
+
+  --- ORIGINAL GPT-2 HEAD ---
+  The cat sat on the edge of the bed, her back toward the kitchen.
+
+A thin, black hair ran down
+  (573ms)
+
+  --- POLYNOMIAL HEAD ---
+  . risk=0.003|          |  circulating  . risk=0.003|          |  107  . risk=0.001|          | ousands  . risk=0.001|          | ticket  . risk=0.001|          |  Coll
+  . risk=0.001|          |  habitat  . risk=0.001|          | ...  . risk=0.001|          |  leaping  . risk=0.001|          |  Secure  . risk=0.002|          | Hero
+  . risk=0.003|          | State  . risk=0.000|          |  flooding  . risk=0.004|          |  Incident  . risk=0.001|          |  converting  . risk=0.001|          |  rifle
+  . risk=0.000|          |  filler  . risk=0.000|          |  harmed  . risk=0.007|          | Safety  . risk=0.002|          |  Weather  . risk=0.001|          | osp
+
+
+  Full: The cat sat on the circulating 107ousandsticket Coll habitat... leaping SecureHeroState flooding Incident converting rifle filler harmedSafety Weatherosp
+  (762ms)
+
+  === COMPARISON ===
+  Original params: 38,597,376
+  Polynomial params: 3,365,138
+  Avg hallucination risk: 0.002
+  Uncertain tokens: 0/20
+  Speed: original=573ms, polynomial=762ms
+
+============================================================
+
+  === FINAL SUMMARY ===
+  Original lm_head parameters: 38,597,376
+  Polynomial head parameters: 3,365,138
+  Parameter reduction: 11.5x
+  NEW capability: hallucination risk score at every token
+  NEW capability: regime classification (certain/choosing/uncertain)
+
