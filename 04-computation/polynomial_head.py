@@ -107,7 +107,8 @@ class PolynomialOutputHead(nn.Module):
 
         # STEP 6: Build output logits
         # Scatter the top-k scores back to full vocabulary
-        logits = torch.full_like(selection_scores, float('-inf'))
+        # Use -100 instead of -inf to avoid NaN in cross-entropy
+        logits = torch.full_like(selection_scores, -100.0)
         logits.scatter_(-1, top_indices, top_scores)
 
         # STEP 7: Residual connection from original head (if available)
