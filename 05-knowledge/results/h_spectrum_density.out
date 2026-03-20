@@ -1,0 +1,120 @@
+
+======================================================================
+VERTEX ADDITION SPECTRUM FILLING
+======================================================================
+
+  n=3: max H = 3
+    New values: [1, 3]
+    Cumulative: 2 values, density = 100.0%
+    Still missing: []
+
+  n=4: max H = 5
+    New values: [5]
+    Cumulative: 3 values, density = 100.0%
+    Still missing: []
+
+  n=5: max H = 15
+    New values: [9, 11, 13, 15]
+    Cumulative: 7 values, density = 87.5%
+    Still missing: [7]
+
+  n=6: max H = 45
+    New values: [17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+    Cumulative: 19 values, density = 82.6%
+    Still missing: [7, 21, 35, 39]
+
+  n=7: max H = 189
+    New values: [35, 39, 47, 49, 51, 53, 55, 57, 59, 61, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 109, 111, 113, 115, 117, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 151, 153, 155, 157, 159, 171, 175, 189]
+    Cumulative: 77 values, density = 81.1%
+    Still missing: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+======================================================================
+ARC-FLIP INCREMENT ANALYSIS
+======================================================================
+
+  --- n=5 ---
+  Arc-flip delta distribution:
+    Delta= -12: 40 occurrences
+    Delta=  -8: 360 occurrences
+    Delta=  -6: 600 occurrences
+    Delta=  -4: 1200 occurrences
+    Delta=  -2: 1800 occurrences
+    Delta=  +0: 2240 occurrences
+    Delta=  +2: 1800 occurrences
+    Delta=  +4: 1200 occurrences
+    Delta=  +6: 600 occurrences
+    Delta=  +8: 360 occurrences
+    Delta= +12: 40 occurrences
+
+  Tournaments that can reach H+2: 720/1024 (70.3%)
+  Tournaments that can reach H-2: 664/1024 (64.8%)
+
+  Achievable H values: [1, 3, 5, 9, 11, 13, 15]
+  Odd gaps: [7]
+
+  Reachability via arc flips:
+    H=1: can_reach(H+2)=True, can_reach(H-2)=False
+    H=3: can_reach(H+2)=True, can_reach(H-2)=True
+    H=5: can_reach(H+2)=False, can_reach(H-2)=True
+    H=9: can_reach(H+2)=True, can_reach(H-2)=False
+    H=11: can_reach(H+2)=True, can_reach(H-2)=True
+    H=13: can_reach(H+2)=True, can_reach(H-2)=True
+    H=15: can_reach(H+2)=False, can_reach(H-2)=True
+
+  --- n=6 ---
+  Arc-flip delta distribution:
+    Delta= -32: 720 occurrences
+    Delta= -26: 1440 occurrences
+    Delta= -24: 3360 occurrences
+    Delta= -22: 1440 occurrences
+    Delta= -20: 2160 occurrences
+    Delta= -18: 9120 occurrences
+    Delta= -16: 7920 occurrences
+    Delta= -14: 12960 occurrences
+    Delta= -12: 12480 occurrences
+    Delta= -10: 23040 occurrences
+    Delta=  -8: 30240 occurrences
+    Delta=  -6: 31200 occurrences
+    Delta=  -4: 38160 occurrences
+    Delta=  -2: 36000 occurrences
+    Delta=  +0: 71040 occurrences
+    Delta=  +2: 36000 occurrences
+    Delta=  +4: 38160 occurrences
+    Delta=  +6: 31200 occurrences
+    Delta=  +8: 30240 occurrences
+    Delta= +10: 23040 occurrences
+    Delta= +12: 12480 occurrences
+    Delta= +14: 12960 occurrences
+    Delta= +16: 7920 occurrences
+    Delta= +18: 9120 occurrences
+    Delta= +20: 2160 occurrences
+    Delta= +22: 1440 occurrences
+    Delta= +24: 3360 occurrences
+    Delta= +26: 1440 occurrences
+    Delta= +32: 720 occurrences
+
+  Tournaments that can reach H+2: 18720/32768 (57.1%)
+  Tournaments that can reach H-2: 16368/32768 (50.0%)
+
+  Achievable H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  Odd gaps: [7, 21, 35, 39]
+
+  Reachability via arc flips:
+    H=1: can_reach(H+2)=True, can_reach(H-2)=False
+    H=3: can_reach(H+2)=True, can_reach(H-2)=True
+    H=5: can_reach(H+2)=False, can_reach(H-2)=True
+    H=9: can_reach(H+2)=True, can_reach(H-2)=False
+    H=11: can_reach(H+2)=True, can_reach(H-2)=True
+    H=13: can_reach(H+2)=True, can_reach(H-2)=True
+    H=15: can_reach(H+2)=True, can_reach(H-2)=True
+    H=17: can_reach(H+2)=True, can_reach(H-2)=True
+    H=19: can_reach(H+2)=False, can_reach(H-2)=True
+    H=23: can_reach(H+2)=True, can_reach(H-2)=False
+    H=25: can_reach(H+2)=False, can_reach(H-2)=True
+    H=27: can_reach(H+2)=True, can_reach(H-2)=False
+    H=29: can_reach(H+2)=True, can_reach(H-2)=True
+    H=31: can_reach(H+2)=True, can_reach(H-2)=True
+    H=33: can_reach(H+2)=False, can_reach(H-2)=True
+    H=37: can_reach(H+2)=False, can_reach(H-2)=False
+    H=41: can_reach(H+2)=True, can_reach(H-2)=False
+    H=43: can_reach(H+2)=True, can_reach(H-2)=True
+    H=45: can_reach(H+2)=False, can_reach(H-2)=True

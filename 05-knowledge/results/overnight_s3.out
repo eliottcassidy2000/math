@@ -1,0 +1,294 @@
+
+======================================================================
+PART D: H=7 IMPOSSIBILITY — ALGEBRAIC PROOF ATTEMPT
+======================================================================
+
+  H=7 IMPOSSIBILITY PROOF:
+
+  H = 1 + 2*alpha_1 + 4*alpha_2 + 8*alpha_3 + ... = 7
+  => alpha_1 + 2*alpha_2 + 4*alpha_3 + ... = 3
+
+  CASE 1: (alpha_1, alpha_2) = (1, 1)
+    alpha_2 >= 1 requires at least 2 cycles, but alpha_1 = 1 means only 1 cycle.
+    CONTRADICTION. IMPOSSIBLE.
+
+  CASE 2: (alpha_1, alpha_2) = (3, 0)
+    3 directed odd cycles, ALL pairwise sharing a vertex.
+    KEY LEMMA (THM-029): alpha_1=3 with i_2=0 forces a common vertex v.
+    3 three-cycles through v use v + 6 other vertices.
+    At n>=7: unused vertex x creates additional cycles => alpha_1 > 3.
+    At n<=6: 3 three-cycles through v must NOT generate extra cycles.
+    But the arcs among the 6 non-v vertices ALWAYS create at least one
+    additional cycle (5-cycle), forcing alpha_1 >= 4 => H >= 9.
+
+
+  H=7 count at n=6: 0
+  (should be 0 if H=7 is impossible)
+
+======================================================================
+PART B: H-SPECTRUM FIRST APPEARANCE (OPEN-Q-019)
+======================================================================
+
+  First appearance of odd H values in [1, 189]:
+    H=   1: first at n=3
+    H=   3: first at n=3
+    H=   5: first at n=4
+    H=   7: NEVER (forbidden)
+    H=   9: first at n=5
+    H=  11: first at n=5
+    H=  13: first at n=5
+    H=  15: first at n=5
+    H=  17: first at n=6
+    H=  19: first at n=6
+    H=  21: NEVER (forbidden)
+    H=  23: first at n=6
+    H=  25: first at n=6
+    H=  27: first at n=6
+    H=  29: first at n=6
+    H=  31: first at n=6
+    H=  33: first at n=6
+    H=  35: first at n=7
+    H=  37: first at n=6
+    H=  39: first at n=7
+    H=  41: first at n=6
+    H=  43: first at n=6
+    H=  45: first at n=6
+    H=  47: first at n=7
+    H=  49: first at n=7
+    H=  51: first at n=7
+    H=  53: first at n=7
+    H=  55: first at n=7
+    H=  57: first at n=7
+    H=  59: first at n=7
+    H=  61: first at n=7
+    H=  63: NEVER (forbidden)
+    H=  65: first at n=7
+    H=  67: first at n=7
+    H=  69: first at n=7
+    H=  71: first at n=7
+    H=  73: first at n=7
+    H=  75: first at n=7
+    H=  77: first at n=7
+    H=  79: first at n=7
+    H=  81: first at n=7
+    H=  83: first at n=7
+    H=  85: first at n=7
+    H=  87: first at n=7
+    H=  89: first at n=7
+    H=  91: first at n=7
+    H=  93: first at n=7
+    H=  95: first at n=7
+    H=  97: first at n=7
+    H=  99: first at n=7
+    H= 101: first at n=7
+    H= 103: first at n=7
+    H= 105: first at n=7
+    H= 107: NEVER (forbidden)
+    H= 109: first at n=7
+    H= 111: first at n=7
+    H= 113: first at n=7
+    H= 115: first at n=7
+    H= 117: first at n=7
+    H= 119: NEVER (forbidden)
+    H= 121: first at n=7
+    H= 123: first at n=7
+    H= 125: first at n=7
+    H= 127: first at n=7
+    H= 129: first at n=7
+    H= 131: first at n=7
+    H= 133: first at n=7
+    H= 135: first at n=7
+    H= 137: first at n=7
+    H= 139: first at n=7
+    H= 141: first at n=7
+    H= 143: first at n=7
+    H= 145: first at n=7
+    H= 147: first at n=7
+    H= 149: NEVER (forbidden)
+    H= 151: first at n=7
+    H= 153: first at n=7
+    H= 155: first at n=7
+    H= 157: first at n=7
+    H= 159: first at n=7
+    H= 161: NEVER (forbidden)
+    H= 163: NEVER (forbidden)
+    H= 165: NEVER (forbidden)
+    H= 167: NEVER (forbidden)
+    H= 169: NEVER (forbidden)
+    H= 171: first at n=7
+    H= 173: NEVER (forbidden)
+    H= 175: first at n=7
+    H= 177: NEVER (forbidden)
+    H= 179: NEVER (forbidden)
+    H= 181: NEVER (forbidden)
+    H= 183: NEVER (forbidden)
+    H= 185: NEVER (forbidden)
+    H= 187: NEVER (forbidden)
+    H= 189: first at n=7
+
+    n=3: 2 odd values in [1, 3], coverage = 2/2 = 100.0%
+
+    n=4: 3 odd values in [1, 5], coverage = 3/3 = 100.0%
+
+    n=5: 7 odd values in [1, 15], coverage = 7/8 = 87.5%
+
+    n=6: 19 odd values in [1, 45], coverage = 19/23 = 82.6%
+
+    n=7: 77 odd values in [1, 189], coverage = 77/95 = 81.1%
+
+  NEW at n=7 (not achievable at n<=6): [35, 39, 47, 49, 51, 53, 55, 57, 59, 61, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 109, 111, 113, 115, 117, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 151, 153, 155, 157, 159, 171, 175, 189]
+  Count: 58
+
+  n=6 gaps: [7, 21, 35, 39]
+  Filled at n=7: [35, 39]
+  Still missing at n=7: [7, 21]
+
+  Running Part A (H mod 2^k) and Part C (by score) — these take longer...
+======================================================================
+PART A: H MOD 2^k STRUCTURE (OPEN-Q-008)
+======================================================================
+
+  --- n=5 (N=1024) ---
+
+    H mod 4:
+      H = 1 mod 4: 720 (0.7031), expected 512 (0.5000)
+      H = 3 mod 4: 304 (0.2969), expected 512 (0.5000)
+      Max deviation from uniform: 0.4062
+
+    H mod 8:
+      H = 1 mod 8: 360 (0.3516), expected 256 (0.2500)
+      H = 3 mod 8: 240 (0.2344), expected 256 (0.2500)
+      H = 5 mod 8: 360 (0.3516), expected 256 (0.2500)
+      H = 7 mod 8: 64 (0.0625), expected 256 (0.2500)
+      Max deviation from uniform: 0.7500
+
+    H mod 16:
+      H = 1 mod 16: 120 (0.1172), expected 128 (0.1250)
+      H = 3 mod 16: 120 (0.1172), expected 128 (0.1250)
+      H = 5 mod 16: 240 (0.2344), expected 128 (0.1250)
+      H = 9 mod 16: 240 (0.2344), expected 128 (0.1250)
+      H = 11 mod 16: 120 (0.1172), expected 128 (0.1250)
+      H = 13 mod 16: 120 (0.1172), expected 128 (0.1250)
+      H = 15 mod 16: 64 (0.0625), expected 128 (0.1250)
+      Max deviation from uniform: 0.8750
+
+    H mod 32:
+      H = 1 mod 32: 120 (0.1172), expected 64 (0.0625)
+      H = 3 mod 32: 120 (0.1172), expected 64 (0.0625)
+      H = 5 mod 32: 240 (0.2344), expected 64 (0.0625)
+      H = 9 mod 32: 240 (0.2344), expected 64 (0.0625)
+      H = 11 mod 32: 120 (0.1172), expected 64 (0.0625)
+      H = 13 mod 32: 120 (0.1172), expected 64 (0.0625)
+      H = 15 mod 32: 64 (0.0625), expected 64 (0.0625)
+      Max deviation from uniform: 2.7500
+
+    H mod 4 summary: {1: 720, 3: 304}
+    H=1 mod 4 fraction: 0.7031 (alpha_1 even)
+    H=3 mod 4 fraction: 0.2969 (alpha_1 odd)
+
+    H mod 8 summary: {1: 360, 3: 240, 5: 360, 7: 64}
+    Encoding: H mod 8 = 1 + 2*(alpha_1 mod 2) + 4*(alpha_2 mod 2) mod 8
+
+  --- n=6 (N=32768) ---
+
+    H mod 4:
+      H = 1 mod 4: 20480 (0.6250), expected 16384 (0.5000)
+      H = 3 mod 4: 12288 (0.3750), expected 16384 (0.5000)
+      Max deviation from uniform: 0.2500
+
+    H mod 8:
+      H = 1 mod 8: 9920 (0.3027), expected 8192 (0.2500)
+      H = 3 mod 8: 5760 (0.1758), expected 8192 (0.2500)
+      H = 5 mod 8: 10560 (0.3223), expected 8192 (0.2500)
+      H = 7 mod 8: 6528 (0.1992), expected 8192 (0.2500)
+      Max deviation from uniform: 0.2969
+
+    H mod 16:
+      H = 1 mod 16: 4800 (0.1465), expected 4096 (0.1250)
+      H = 3 mod 16: 2400 (0.0732), expected 4096 (0.1250)
+      H = 5 mod 16: 5760 (0.1758), expected 4096 (0.1250)
+      H = 7 mod 16: 2880 (0.0879), expected 4096 (0.1250)
+      H = 9 mod 16: 5120 (0.1562), expected 4096 (0.1250)
+      H = 11 mod 16: 3360 (0.1025), expected 4096 (0.1250)
+      H = 13 mod 16: 4800 (0.1465), expected 4096 (0.1250)
+      H = 15 mod 16: 3648 (0.1113), expected 4096 (0.1250)
+      Max deviation from uniform: 0.4141
+
+    H mod 32:
+      H = 1 mod 32: 3360 (0.1025), expected 2048 (0.0625)
+      H = 3 mod 32: 960 (0.0293), expected 2048 (0.0625)
+      H = 5 mod 32: 5760 (0.1758), expected 2048 (0.0625)
+      H = 9 mod 32: 3680 (0.1123), expected 2048 (0.0625)
+      H = 11 mod 32: 2880 (0.0879), expected 2048 (0.0625)
+      H = 13 mod 32: 1920 (0.0586), expected 2048 (0.0625)
+      H = 15 mod 32: 2208 (0.0674), expected 2048 (0.0625)
+      H = 17 mod 32: 1440 (0.0439), expected 2048 (0.0625)
+      H = 19 mod 32: 1440 (0.0439), expected 2048 (0.0625)
+      H = 23 mod 32: 2880 (0.0879), expected 2048 (0.0625)
+      H = 25 mod 32: 1440 (0.0439), expected 2048 (0.0625)
+      H = 27 mod 32: 480 (0.0146), expected 2048 (0.0625)
+      H = 29 mod 32: 2880 (0.0879), expected 2048 (0.0625)
+      H = 31 mod 32: 1440 (0.0439), expected 2048 (0.0625)
+      Max deviation from uniform: 1.8125
+
+    H mod 4 summary: {1: 20480, 3: 12288}
+    H=1 mod 4 fraction: 0.6250 (alpha_1 even)
+    H=3 mod 4 fraction: 0.3750 (alpha_1 odd)
+
+    H mod 8 summary: {1: 9920, 3: 5760, 5: 10560, 7: 6528}
+    Encoding: H mod 8 = 1 + 2*(alpha_1 mod 2) + 4*(alpha_2 mod 2) mod 8
+
+  --- n=7 (N=2097152) ---
+    Progress: 500000/2097152
+    Progress: 1000000/2097152
+    Progress: 1500000/2097152
+    Progress: 2000000/2097152
+
+    H mod 4:
+      H = 1 mod 4: 1157760 (0.5521), expected 1048576 (0.5000)
+      H = 3 mod 4: 939392 (0.4479), expected 1048576 (0.5000)
+      Max deviation from uniform: 0.1041
+
+    H mod 8:
+      H = 1 mod 8: 618240 (0.2948), expected 524288 (0.2500)
+      H = 3 mod 8: 516320 (0.2462), expected 524288 (0.2500)
+      H = 5 mod 8: 539520 (0.2573), expected 524288 (0.2500)
+      H = 7 mod 8: 423072 (0.2017), expected 524288 (0.2500)
+      Max deviation from uniform: 0.1931
+
+    H mod 16:
+      H = 1 mod 16: 315840 (0.1506), expected 262144 (0.1250)
+      H = 3 mod 16: 227360 (0.1084), expected 262144 (0.1250)
+      H = 5 mod 16: 262080 (0.1250), expected 262144 (0.1250)
+      H = 7 mod 16: 216048 (0.1030), expected 262144 (0.1250)
+      H = 9 mod 16: 302400 (0.1442), expected 262144 (0.1250)
+      H = 11 mod 16: 288960 (0.1378), expected 262144 (0.1250)
+      H = 13 mod 16: 277440 (0.1323), expected 262144 (0.1250)
+      H = 15 mod 16: 207024 (0.0987), expected 262144 (0.1250)
+      Max deviation from uniform: 0.2103
+
+    H mod 32:
+      H = 1 mod 32: 174720 (0.0833), expected 131072 (0.0625)
+      H = 3 mod 32: 101360 (0.0483), expected 131072 (0.0625)
+      H = 5 mod 32: 201600 (0.0961), expected 131072 (0.0625)
+      H = 7 mod 32: 125328 (0.0598), expected 131072 (0.0625)
+      H = 9 mod 32: 157920 (0.0753), expected 131072 (0.0625)
+      H = 11 mod 32: 105840 (0.0505), expected 131072 (0.0625)
+      H = 13 mod 32: 176400 (0.0841), expected 131072 (0.0625)
+      H = 15 mod 32: 129744 (0.0619), expected 131072 (0.0625)
+      H = 17 mod 32: 141120 (0.0673), expected 131072 (0.0625)
+      H = 19 mod 32: 126000 (0.0601), expected 131072 (0.0625)
+      H = 21 mod 32: 60480 (0.0288), expected 131072 (0.0625)
+      H = 23 mod 32: 90720 (0.0433), expected 131072 (0.0625)
+      H = 25 mod 32: 144480 (0.0689), expected 131072 (0.0625)
+      H = 27 mod 32: 183120 (0.0873), expected 131072 (0.0625)
+      H = 29 mod 32: 101040 (0.0482), expected 131072 (0.0625)
+      H = 31 mod 32: 77280 (0.0368), expected 131072 (0.0625)
+      Max deviation from uniform: 0.5386
+
+    H mod 4 summary: {1: 1157760, 3: 939392}
+    H=1 mod 4 fraction: 0.5521 (alpha_1 even)
+    H=3 mod 4 fraction: 0.4479 (alpha_1 odd)
+
+    H mod 8 summary: {1: 618240, 3: 516320, 5: 539520, 7: 423072}
+    Encoding: H mod 8 = 1 + 2*(alpha_1 mod 2) + 4*(alpha_2 mod 2) mod 8
