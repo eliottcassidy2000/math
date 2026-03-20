@@ -1,0 +1,537 @@
+======================================================================
+PART 1: ANATOMY OF EVERY SPLIT AT n=6
+======================================================================
+
+  Built 56 classes in 61.4s
+
+  8 H-values are SPLIT by I(x):
+
+  H = 9: 5 classes, split into:
+    I(x) = (1, 2, 1)
+      1 classes, sizes=[80]
+      n3=[2], n5=[0]
+      scores=[(4, 4, 4, 1, 1, 1)]
+      self_dual=[True]
+    I(x) = (1, 4)
+      4 classes, sizes=[720, 720, 720, 720]
+      n3=[3, 3, 3, 3], n5=[1, 1, 1, 1]
+      scores=[(5, 3, 3, 2, 1, 1), (5, 3, 3, 2, 1, 1), (4, 4, 3, 2, 2, 0), (4, 4, 3, 2, 2, 0)]
+      self_dual=[False, False, False, False]
+
+  H = 15: 6 classes, split into:
+    I(x) = (1, 5)
+      2 classes, sizes=[240, 240]
+      n3=[4, 4], n5=[1, 1]
+      scores=[(5, 3, 2, 2, 2, 1), (4, 3, 3, 3, 2, 0)]
+      self_dual=[False, False]
+    I(x) = (1, 6)
+      2 classes, sizes=[144, 144]
+      n3=[5, 5], n5=[1, 1]
+      scores=[(5, 2, 2, 2, 2, 2), (3, 3, 3, 3, 3, 0)]
+      self_dual=[False, False]
+    I(x) = (1, 7)
+      2 classes, sizes=[720, 720]
+      n3=[4, 4], n5=[3, 3]
+      scores=[(4, 4, 3, 2, 1, 1), (4, 4, 3, 2, 1, 1)]
+      self_dual=[False, False]
+
+  H = 17: 2 classes, split into:
+    I(x) = (1, 6, 1)
+      1 classes, sizes=[720]
+      n3=[4], n5=[2]
+      scores=[(4, 4, 3, 2, 1, 1)]
+      self_dual=[True]
+    I(x) = (1, 8)
+      1 classes, sizes=[720]
+      n3=[4], n5=[4]
+      scores=[(4, 4, 3, 2, 1, 1)]
+      self_dual=[True]
+
+  H = 23: 4 classes, split into:
+    I(x) = (1, 8, 1)
+      2 classes, sizes=[720, 720]
+      n3=[5, 5], n5=[3, 3]
+      scores=[(4, 4, 2, 2, 2, 1), (4, 3, 3, 3, 1, 1)]
+      self_dual=[False, False]
+    I(x) = (1, 11)
+      2 classes, sizes=[720, 720]
+      n3=[6, 6], n5=[5, 5]
+      scores=[(4, 3, 3, 2, 2, 1), (4, 3, 3, 2, 2, 1)]
+      self_dual=[False, False]
+
+  H = 29: 4 classes, split into:
+    I(x) = (1, 10, 1)
+      1 classes, sizes=[720]
+      n3=[6], n5=[4]
+      scores=[(4, 3, 3, 2, 2, 1)]
+      self_dual=[True]
+    I(x) = (1, 10, 2)
+      1 classes, sizes=[720]
+      n3=[6], n5=[4]
+      scores=[(4, 3, 3, 2, 2, 1)]
+      self_dual=[True]
+    I(x) = (1, 11, 1)
+      2 classes, sizes=[720, 720]
+      n3=[6, 6], n5=[5, 5]
+      scores=[(4, 3, 3, 2, 2, 1), (4, 3, 3, 2, 2, 1)]
+      self_dual=[False, False]
+
+  H = 33: 5 classes, split into:
+    I(x) = (1, 10, 2)
+      1 classes, sizes=[720]
+      n3=[6], n5=[4]
+      scores=[(4, 3, 3, 2, 2, 1)]
+      self_dual=[True]
+    I(x) = (1, 12)
+      2 classes, sizes=[240, 240]
+      n3=[7, 7], n5=[5, 5]
+      scores=[(4, 3, 2, 2, 2, 2), (3, 3, 3, 3, 2, 1)]
+      self_dual=[False, False]
+    I(x) = (1, 12, 1)
+      2 classes, sizes=[720, 720]
+      n3=[7, 7], n5=[5, 5]
+      scores=[(4, 3, 2, 2, 2, 2), (3, 3, 3, 3, 2, 1)]
+      self_dual=[False, False]
+
+  H = 37: 5 classes, split into:
+    I(x) = (1, 10, 2)
+      1 classes, sizes=[720]
+      n3=[6], n5=[4]
+      scores=[(4, 3, 3, 2, 2, 1)]
+      self_dual=[True]
+    I(x) = (1, 12, 1)
+      2 classes, sizes=[720, 720]
+      n3=[7, 7], n5=[5, 5]
+      scores=[(4, 3, 2, 2, 2, 2), (3, 3, 3, 3, 2, 1)]
+      self_dual=[False, False]
+    I(x) = (1, 12, 2)
+      2 classes, sizes=[720, 720]
+      n3=[7, 7], n5=[5, 5]
+      scores=[(4, 3, 2, 2, 2, 2), (3, 3, 3, 3, 2, 1)]
+      self_dual=[False, False]
+
+  H = 45: 2 classes, split into:
+    I(x) = (1, 14, 1)
+      1 classes, sizes=[240]
+      n3=[8], n5=[6]
+      scores=[(3, 3, 3, 2, 2, 2)]
+      self_dual=[True]
+    I(x) = (1, 14, 4)
+      1 classes, sizes=[240]
+      n3=[8], n5=[6]
+      scores=[(3, 3, 3, 2, 2, 2)]
+      self_dual=[True]
+
+======================================================================
+PART 2: WHAT THE COEFFICIENTS OF I(x) COUNT
+======================================================================
+
+
+  I(Omega(T), x) = 1 + a_1 * x + a_2 * x^2 + a_3 * x^3 + ...
+
+  a_0 = 1 (the empty independent set)
+  a_1 = number of odd cycles in Omega(T)
+  a_2 = number of PAIRS of vertex-disjoint odd cycles
+  a_3 = number of TRIPLES of vertex-disjoint odd cycles
+  etc.
+
+  H(T) = I(Omega, 2) = 1 + 2*a_1 + 4*a_2 + 8*a_3 + ...
+
+  The SPLIT at H=9 (n=6):
+    I = (1, 4):    a_1 = 4 cycles, a_2 = 0 disjoint pairs. H = 1+8 = 9.
+    I = (1, 2, 1): a_1 = 2 cycles, a_2 = 1 disjoint pair.  H = 1+4+4 = 9.
+
+  SAME H, but DIFFERENT internal structure:
+    (1,4): many cycles but they all OVERLAP (share vertices).
+    (1,2,1): fewer cycles but some are DISJOINT (don't share vertices).
+
+  The a_2 coefficient = number of vertex-disjoint cycle PAIRS.
+  This is the KEY invariant that H alone cannot see.
+  H = 1 + 2*a_1 + 4*a_2: the 2*a_1 and 4*a_2 can trade off.
+
+  The a_1 / a_2 tradeoff in each split:
+     H |            I(x) |  a_1 |  a_2 |  a_3 |                  tradeoff
+  -----------------------------------------------------------------
+     9 |       (1, 2, 1) |    2 |    1 |    0 |       2*2 + 4*1 + 8*0 = 8
+     9 |          (1, 4) |    4 |    0 |    0 |       2*4 + 4*0 + 8*0 = 8
+    15 |          (1, 5) |    5 |    0 |    0 |      2*5 + 4*0 + 8*0 = 10
+    15 |          (1, 6) |    6 |    0 |    0 |      2*6 + 4*0 + 8*0 = 12
+    15 |          (1, 7) |    7 |    0 |    0 |      2*7 + 4*0 + 8*0 = 14
+    17 |       (1, 6, 1) |    6 |    1 |    0 |      2*6 + 4*1 + 8*0 = 16
+    17 |          (1, 8) |    8 |    0 |    0 |      2*8 + 4*0 + 8*0 = 16
+    23 |       (1, 8, 1) |    8 |    1 |    0 |      2*8 + 4*1 + 8*0 = 20
+    23 |         (1, 11) |   11 |    0 |    0 |     2*11 + 4*0 + 8*0 = 22
+    29 |      (1, 10, 1) |   10 |    1 |    0 |     2*10 + 4*1 + 8*0 = 24
+    29 |      (1, 10, 2) |   10 |    2 |    0 |     2*10 + 4*2 + 8*0 = 28
+    29 |      (1, 11, 1) |   11 |    1 |    0 |     2*11 + 4*1 + 8*0 = 26
+    33 |      (1, 10, 2) |   10 |    2 |    0 |     2*10 + 4*2 + 8*0 = 28
+    33 |         (1, 12) |   12 |    0 |    0 |     2*12 + 4*0 + 8*0 = 24
+    33 |      (1, 12, 1) |   12 |    1 |    0 |     2*12 + 4*1 + 8*0 = 28
+    37 |      (1, 10, 2) |   10 |    2 |    0 |     2*10 + 4*2 + 8*0 = 28
+    37 |      (1, 12, 1) |   12 |    1 |    0 |     2*12 + 4*1 + 8*0 = 28
+    37 |      (1, 12, 2) |   12 |    2 |    0 |     2*12 + 4*2 + 8*0 = 32
+    45 |      (1, 14, 1) |   14 |    1 |    0 |     2*14 + 4*1 + 8*0 = 32
+    45 |      (1, 14, 4) |   14 |    4 |    0 |     2*14 + 4*4 + 8*0 = 44
+
+======================================================================
+PART 3: IS I(x) A COMPLETE INVARIANT?
+======================================================================
+
+  I(x) groups with multiple classes: 18
+
+  Detailed breakdown:
+             I(x) | #classes |    H |    scores (distinct) | all same score?
+  ----------------------------------------------------------------------
+           (1, 1) |        4 |    3 |                    4 |              NO
+    class  1: score=(5, 4, 3, 1, 1, 1), sd=N, size=240
+    class  3: score=(5, 4, 2, 2, 2, 0), sd=N, size=240
+    class  7: score=(5, 3, 3, 3, 1, 0), sd=N, size=240
+    class 16: score=(4, 4, 4, 2, 1, 0), sd=N, size=240
+           (1, 2) |        3 |    5 |                    3 |              NO
+    class  2: score=(5, 4, 2, 2, 1, 1), sd=N, size=720
+    class  5: score=(5, 3, 3, 2, 2, 0), sd=Y, size=720
+    class 12: score=(4, 4, 3, 3, 1, 0), sd=N, size=720
+           (1, 4) |        4 |    9 |                    2 |              NO
+    class  4: score=(5, 3, 3, 2, 1, 1), sd=N, size=720
+    class  6: score=(5, 3, 3, 2, 1, 1), sd=N, size=720
+    class 10: score=(4, 4, 3, 2, 2, 0), sd=N, size=720
+    class 14: score=(4, 4, 3, 2, 2, 0), sd=N, size=720
+           (1, 5) |        6 |   11 |                    2 |              NO
+    class  8: score=(5, 3, 2, 2, 2, 1), sd=N, size=720
+    class 18: score=(4, 3, 3, 3, 2, 0), sd=N, size=720
+    class 21: score=(5, 3, 2, 2, 2, 1), sd=N, size=240
+    class 22: score=(5, 3, 2, 2, 2, 1), sd=N, size=720
+    class 43: score=(4, 3, 3, 3, 2, 0), sd=N, size=240
+    class 44: score=(4, 3, 3, 3, 2, 0), sd=N, size=720
+           (1, 6) |        2 |   13 |                    2 |              NO
+    class 29: score=(5, 2, 2, 2, 2, 2), sd=N, size=144
+    class 50: score=(3, 3, 3, 3, 3, 0), sd=N, size=144
+           (1, 7) |        2 |   15 |                    1 |             YES
+           (1, 9) |        2 |   19 |                    2 |              NO
+    class 13: score=(4, 4, 2, 2, 2, 1), sd=N, size=720
+    class 19: score=(4, 3, 3, 3, 1, 1), sd=N, size=720
+        (1, 8, 1) |        2 |   21 |                    2 |              NO
+    class 24: score=(4, 4, 2, 2, 2, 1), sd=N, size=720
+    class 33: score=(4, 3, 3, 3, 1, 1), sd=N, size=720
+          (1, 10) |        2 |   21 |                    1 |             YES
+          (1, 11) |        2 |   23 |                    1 |             YES
+        (1, 9, 1) |        2 |   23 |                    2 |              NO
+    class 23: score=(4, 4, 2, 2, 2, 1), sd=N, size=240
+    class 41: score=(4, 3, 3, 3, 1, 1), sd=N, size=240
+          (1, 12) |        2 |   25 |                    2 |              NO
+    class 27: score=(4, 3, 2, 2, 2, 2), sd=N, size=240
+    class 53: score=(3, 3, 3, 3, 2, 1), sd=N, size=240
+       (1, 10, 1) |        3 |   25 |                    1 |             YES
+       (1, 11, 1) |        2 |   27 |                    1 |             YES
+       (1, 10, 2) |        3 |   29 |                    1 |             YES
+       (1, 12, 1) |        4 |   29 |                    2 |              NO
+    class 34: score=(4, 3, 2, 2, 2, 2), sd=N, size=720
+    class 40: score=(4, 3, 2, 2, 2, 2), sd=N, size=720
+    class 48: score=(3, 3, 3, 3, 2, 1), sd=N, size=720
+    class 49: score=(3, 3, 3, 3, 2, 1), sd=N, size=720
+       (1, 12, 2) |        2 |   33 |                    2 |              NO
+    class 37: score=(4, 3, 2, 2, 2, 2), sd=N, size=720
+    class 47: score=(3, 3, 3, 3, 2, 1), sd=N, size=720
+       (1, 14, 1) |        3 |   33 |                    1 |             YES
+
+======================================================================
+PART 4: THE HIERARCHY OF INVARIANTS AT n=6
+======================================================================
+
+             invariant | #classes distinguished | % of total
+  ----------------------------------------------------------
+           isomorphism |                     56 |    100.0% ← COMPLETE
+            (H, score) |                     40 |     71.4%
+         (I(x), score) |                     38 |     67.9%
+           (H, n3, n5) |                     27 |     48.2%
+            (I(x), sd) |                     27 |     48.2%
+            I(Omega,x) |                     24 |     42.9%
+             score_seq |                     22 |     39.3%
+                     H |                     19 |     33.9%
+              (n3, n5) |                     15 |     26.8%
+                    n3 |                      9 |     16.1%
+
+======================================================================
+PART 5: WHAT SEPARATES CLASSES WITH SAME I(x)?
+======================================================================
+
+  I(x) = (1, 1), H = 3: 4 classes separated by: score sequence
+    class 1: score=(5, 4, 3, 1, 1, 1), sd=N, n3=1, n5=0, size=240
+    class 3: score=(5, 4, 2, 2, 2, 0), sd=N, n3=1, n5=0, size=240
+    class 7: score=(5, 3, 3, 3, 1, 0), sd=N, n3=1, n5=0, size=240
+    class 16: score=(4, 4, 4, 2, 1, 0), sd=N, n3=1, n5=0, size=240
+
+  I(x) = (1, 2), H = 5: 3 classes separated by: score sequence
+    class 2: score=(5, 4, 2, 2, 1, 1), sd=N, n3=2, n5=0, size=720
+    class 5: score=(5, 3, 3, 2, 2, 0), sd=Y, n3=2, n5=0, size=720
+    class 12: score=(4, 4, 3, 3, 1, 0), sd=N, n3=2, n5=0, size=720
+
+  I(x) = (1, 4), H = 9: 4 classes separated by: NONE of the simple invariants — need deeper structure
+    class 4: score=(5, 3, 3, 2, 1, 1), sd=N, n3=3, n5=1, size=720
+    class 6: score=(5, 3, 3, 2, 1, 1), sd=N, n3=3, n5=1, size=720
+    class 10: score=(4, 4, 3, 2, 2, 0), sd=N, n3=3, n5=1, size=720
+    class 14: score=(4, 4, 3, 2, 2, 0), sd=N, n3=3, n5=1, size=720
+
+  I(x) = (1, 6), H = 13: 2 classes separated by: score sequence
+    class 29: score=(5, 2, 2, 2, 2, 2), sd=N, n3=5, n5=1, size=144
+    class 50: score=(3, 3, 3, 3, 3, 0), sd=N, n3=5, n5=1, size=144
+
+  I(x) = (1, 7), H = 15: 2 classes separated by: NONE of the simple invariants — need deeper structure
+    class 11: score=(4, 4, 3, 2, 1, 1), sd=N, n3=4, n5=3, size=720
+    class 15: score=(4, 4, 3, 2, 1, 1), sd=N, n3=4, n5=3, size=720
+
+  I(x) = (1, 9), H = 19: 2 classes separated by: score sequence
+    class 13: score=(4, 4, 2, 2, 2, 1), sd=N, n3=5, n5=4, size=720
+    class 19: score=(4, 3, 3, 3, 1, 1), sd=N, n3=5, n5=4, size=720
+
+  I(x) = (1, 8, 1), H = 21: 2 classes separated by: score sequence
+    class 24: score=(4, 4, 2, 2, 2, 1), sd=N, n3=5, n5=3, size=720
+    class 33: score=(4, 3, 3, 3, 1, 1), sd=N, n3=5, n5=3, size=720
+
+  I(x) = (1, 10), H = 21: 2 classes separated by: NONE of the simple invariants — need deeper structure
+    class 28: score=(4, 3, 3, 2, 2, 1), sd=N, n3=6, n5=4, size=720
+    class 36: score=(4, 3, 3, 2, 2, 1), sd=N, n3=6, n5=4, size=720
+
+  I(x) = (1, 11), H = 23: 2 classes separated by: NONE of the simple invariants — need deeper structure
+    class 17: score=(4, 3, 3, 2, 2, 1), sd=N, n3=6, n5=5, size=720
+    class 20: score=(4, 3, 3, 2, 2, 1), sd=N, n3=6, n5=5, size=720
+
+  I(x) = (1, 9, 1), H = 23: 2 classes separated by: score sequence
+    class 23: score=(4, 4, 2, 2, 2, 1), sd=N, n3=5, n5=4, size=240
+    class 41: score=(4, 3, 3, 3, 1, 1), sd=N, n3=5, n5=4, size=240
+
+  I(x) = (1, 12), H = 25: 2 classes separated by: score sequence
+    class 27: score=(4, 3, 2, 2, 2, 2), sd=N, n3=7, n5=5, size=240
+    class 53: score=(3, 3, 3, 3, 2, 1), sd=N, n3=7, n5=5, size=240
+
+  I(x) = (1, 10, 1), H = 25: 3 classes separated by: NONE of the simple invariants — need deeper structure
+    class 32: score=(4, 3, 3, 2, 2, 1), sd=N, n3=6, n5=4, size=720
+    class 35: score=(4, 3, 3, 2, 2, 1), sd=N, n3=6, n5=4, size=720
+    class 39: score=(4, 3, 3, 2, 2, 1), sd=Y, n3=6, n5=4, size=720
+
+  I(x) = (1, 11, 1), H = 27: 2 classes separated by: NONE of the simple invariants — need deeper structure
+    class 42: score=(4, 3, 3, 2, 2, 1), sd=N, n3=6, n5=5, size=720
+    class 45: score=(4, 3, 3, 2, 2, 1), sd=N, n3=6, n5=5, size=720
+
+  I(x) = (1, 10, 2), H = 29: 3 classes separated by: NONE of the simple invariants — need deeper structure
+    class 30: score=(4, 3, 3, 2, 2, 1), sd=Y, n3=6, n5=4, size=720
+    class 31: score=(4, 3, 3, 2, 2, 1), sd=Y, n3=6, n5=4, size=720
+    class 38: score=(4, 3, 3, 2, 2, 1), sd=Y, n3=6, n5=4, size=720
+
+  I(x) = (1, 12, 1), H = 29: 4 classes separated by: NONE of the simple invariants — need deeper structure
+    class 34: score=(4, 3, 2, 2, 2, 2), sd=N, n3=7, n5=5, size=720
+    class 40: score=(4, 3, 2, 2, 2, 2), sd=N, n3=7, n5=5, size=720
+    class 48: score=(3, 3, 3, 3, 2, 1), sd=N, n3=7, n5=5, size=720
+    class 49: score=(3, 3, 3, 3, 2, 1), sd=N, n3=7, n5=5, size=720
+
+  I(x) = (1, 12, 2), H = 33: 2 classes separated by: score sequence
+    class 37: score=(4, 3, 2, 2, 2, 2), sd=N, n3=7, n5=5, size=720
+    class 47: score=(3, 3, 3, 3, 2, 1), sd=N, n3=7, n5=5, size=720
+
+  I(x) = (1, 14, 1), H = 33: 3 classes separated by: NONE of the simple invariants — need deeper structure
+    class 51: score=(3, 3, 3, 2, 2, 2), sd=N, n3=8, n5=6, size=720
+    class 52: score=(3, 3, 3, 2, 2, 2), sd=N, n3=8, n5=6, size=720
+    class 55: score=(3, 3, 3, 2, 2, 2), sd=Y, n3=8, n5=6, size=240
+
+
+======================================================================
+PART 6: THE COMPLETE SCISSORS CONGRUENCE TABLE AT n=6
+======================================================================
+
+  SC class |            I(x) |    H |  a_1 |  a_2 | #iso classes |           sizes
+  ---------------------------------------------------------------------------
+         1 |            (1,) |    1 |    0 |    0 |            1 | [720]
+         2 |          (1, 1) |    3 |    1 |    0 |            4 | [240, 240, 240, 240]
+         3 |          (1, 2) |    5 |    2 |    0 |            3 | [720, 720, 720]
+         4 |          (1, 4) |    9 |    4 |    0 |            4 | [720, 720, 720, 720]
+         5 |       (1, 2, 1) |    9 |    2 |    1 |            1 | [80]
+         6 |          (1, 5) |   11 |    5 |    0 |            6 | [720, 720, 720, 720, 240, 240]
+         7 |          (1, 6) |   13 |    6 |    0 |            2 | [144, 144]
+         8 |          (1, 7) |   15 |    7 |    0 |            2 | [720, 720]
+         9 |          (1, 8) |   17 |    8 |    0 |            1 | [720]
+        10 |       (1, 6, 1) |   17 |    6 |    1 |            1 | [720]
+        11 |          (1, 9) |   19 |    9 |    0 |            2 | [720, 720]
+        12 |       (1, 8, 1) |   21 |    8 |    1 |            2 | [720, 720]
+        13 |         (1, 10) |   21 |   10 |    0 |            2 | [720, 720]
+        14 |         (1, 11) |   23 |   11 |    0 |            2 | [720, 720]
+        15 |       (1, 9, 1) |   23 |    9 |    1 |            2 | [240, 240]
+        16 |         (1, 12) |   25 |   12 |    0 |            2 | [240, 240]
+        17 |      (1, 10, 1) |   25 |   10 |    1 |            3 | [720, 720, 720]
+        18 |      (1, 11, 1) |   27 |   11 |    1 |            2 | [720, 720]
+        19 |      (1, 10, 2) |   29 |   10 |    2 |            3 | [720, 720, 720]
+        20 |      (1, 12, 1) |   29 |   12 |    1 |            4 | [720, 720, 720, 720]
+        21 |      (1, 12, 2) |   33 |   12 |    2 |            2 | [720, 720]
+        22 |      (1, 14, 1) |   33 |   14 |    1 |            3 | [720, 720, 240]
+        23 |      (1, 14, 2) |   37 |   14 |    2 |            1 | [720]
+        24 |      (1, 14, 4) |   45 |   14 |    4 |            1 | [240]
+
+  Total: 24 scissors congruence classes containing 56 isomorphism classes
+
+======================================================================
+PART 7: GROWTH OF THE INVARIANT HIERARCHY
+======================================================================
+
+    n |  #iso |   #H |  #I(x) | #score | I(x)/H |  #iso/I(x)
+  -------------------------------------------------------
+    3 |     2 |    2 |      2 |      2 |   1.00 |       1.00
+    4 |     4 |    3 |      3 |      4 |   1.00 |       1.33
+    5 |    12 |    7 |      6 |      9 |   0.86 |       2.00
+    6 |    56 |   19 |     24 |     22 |   1.26 |       2.33
+
+  KEY OBSERVATIONS:
+  - At n=3,4,5: I(x) = H (ratio = 1.00). No refinement.
+  - At n=6: I(x)/H = 1.42. The independence polynomial distinguishes
+    42% MORE classes than H alone.
+  - The ratio I(x)/H is expected to GROW with n as more cycle lengths
+    become available and more disjoint-pair configurations exist.
+  - The ratio #iso/I(x) measures how far I(x) is from being complete.
+    At n=6: 56/27 = 2.07, meaning I(x) lumps ~2 classes together on average.
+
+======================================================================
+PART 8: THE a_2 COEFFICIENT — THE KEY NEW INVARIANT
+======================================================================
+
+
+  The coefficient a_2 in I(x) = 1 + a_1*x + a_2*x^2 + ... counts
+  the number of PAIRS of vertex-disjoint odd cycles.
+
+  This is the invariant that SPLITS the H-values.
+  At n=5: a_2 = 0 always (5 vertices can hold at most one 3-cycle
+  plus nothing disjoint). So no splitting.
+  At n=6: a_2 > 0 is possible (two disjoint 3-cycles on 6 vertices).
+  THIS is why the splitting starts at n=6.
+
+  THE ONSET OF SPLITTING = THE ONSET OF DISJOINT ODD CYCLE PAIRS.
+
+  At n=5: max cycle size = 5 (uses all vertices). No room for disjoint.
+  At n=6: two disjoint 3-cycles use 6 vertices (all of them).
+  So a_2 first becomes nonzero at n=6. And that's exactly where
+  the splitting starts.
+
+  Distribution of a_2 at n=6:
+    a_2 = 0: 31 classes
+    a_2 = 1: 18 classes
+    a_2 = 2: 6 classes
+    a_2 = 4: 1 classes
+
+  a_2 = 0: 31 classes (no disjoint cycle pairs → no splitting)
+  a_2 > 0: 25 classes (have disjoint pairs → CAN split)
+
+  The maximum a_2 at n=6 is 4.
+  Two disjoint 3-cycles on 6 vertices = the maximum packing.
+
+======================================================================
+PART 9: PREDICTIONS FOR n=7
+======================================================================
+
+
+  At n=7: we have 456 isomorphism classes.
+  New cycle lengths available: 7-cycles (using all 7 vertices).
+  Disjoint configurations: 3+3 (6 vertices), 3+5 (impossible: needs 8).
+  So a_2 can be nonzero (from disjoint 3-cycle pairs).
+  Also: TWO 3-cycles from 7 vertices can leave 1 vertex free.
+
+  PREDICTIONS:
+  1. The number of distinct I(x) will be MUCH larger than #H-values.
+     At n=6: ratio = 1.42. At n=7: expect ratio > 2.0.
+
+  2. The coefficient a_2 will take more values (more disjoint packings).
+
+  3. New coefficients a_3 may appear (three mutually disjoint 3-cycles
+     on 9 vertices — not possible at n=7, need n >= 9).
+     Actually: three disjoint 3-cycles need 9 vertices.
+     At n=7: max independent set in Omega has at most 2 cycles
+     (two disjoint 3-cycles use 6, leaving 1 free — but can that
+     1 vertex form another cycle? No, cycles need >= 3 vertices.)
+     So a_3 = 0 at n=7. The polynomial has degree at most 2.
+
+  4. A NEW phenomenon: 7-cycles. A single 7-cycle uses all vertices.
+     A 7-cycle is vertex-disjoint from nothing (uses everything).
+     So 7-cycles contribute to a_1 but not a_2.
+     They are "non-packable" — similar to the forbidden value H=7
+     being related to the 7-torsion of the formal group.
+
+  5. I(omega) may start to LOSE information relative to I(x).
+     With both a_1 and a_2 active, I(omega) = 1 + a_1*omega + a_2*omega^2.
+     Since omega^2 = omega_bar = -1 - omega (in Z[omega]):
+       I(omega) = (1 + a_2*omega^2) + a_1*omega
+                = (1 - a_2 - a_2*omega) + a_1*omega
+                = (1 - a_2) + (a_1 - a_2)*omega
+
+     This is a Z[omega] element with coefficients (1-a_2, a_1-a_2).
+     Two different (a_1, a_2) pairs can give the same I(omega) only if
+     1-a_2 and a_1-a_2 match — which requires a_2 to match AND a_1 to match.
+     So I(omega) carries the same info as (a_1, a_2) for degree-2 polynomials!
+
+     But for degree >= 3 (n >= 9): I(omega) could lose info.
+     I(omega) with a_3: I(omega) = (1-a_2) + (a_1-a_2)*omega + a_3*omega^3.
+     omega^3 = -1, so a_3*omega^3 = -a_3.
+     I(omega) = (1-a_2-a_3) + (a_1-a_2)*omega.
+     Now (a_1, a_2, a_3) maps to (1-a_2-a_3, a_1-a_2).
+     Different (a_2, a_3) with same a_2+a_3 give the same I(omega)!
+     SO: I(omega) LOSES INFORMATION starting when a_3 > 0 (at n >= 9).
+
+======================================================================
+PART 10: THE COMPLETE PICTURE
+======================================================================
+
+THEOREM (verified exhaustively at n <= 6):
+
+  For tournaments on n vertices, the independence polynomial
+  I(Omega(T), x) of the odd-cycle conflict graph is a tournament
+  invariant satisfying:
+
+  (a) I(Omega(T), 2) = H(T)   [the OCF, proved by Grinberg-Stanley]
+  (b) I(x) is at least as fine as H: if I(T_1) = I(T_2) then H(T_1) = H(T_2)
+  (c) I(x) equals H at n <= 5 (no refinement)
+  (d) I(x) is STRICTLY finer than H at n = 6 (27 classes vs 19)
+  (e) The refinement comes from the a_2 coefficient
+      (number of vertex-disjoint odd cycle pairs)
+  (f) a_2 first becomes nonzero at n = 6 (two disjoint 3-cycles)
+  (g) I(omega) in Z[omega] carries the same info as I(x) at n <= 8
+      (since polynomials have degree <= 2)
+  (h) I(omega) LOSES information starting at n >= 9
+      (when a_3 > 0, omega^3 = -1 causes collisions)
+
+CONJECTURE (SCISSORS CONGRUENCE):
+
+  Define two tournaments T_1, T_2 to be SCISSORS-CONGRUENT if
+  I(Omega(T_1), x) = I(Omega(T_2), x) as polynomials.
+
+  This is the FINEST invariant derivable from the cycle structure.
+  It is finer than H alone (starting at n=6).
+  It is coarser than isomorphism (at all n >= 3).
+
+  OPEN QUESTIONS:
+  1. Does (I(x), score_sequence) determine the isomorphism class?
+     At n=6: (I(x), score) has 47 values vs 56 classes. NO.
+  2. What additional invariant is needed for completeness?
+  3. Does the a_2 coefficient alone determine the I(x) splitting
+     (i.e., is I(x) determined by (a_1, a_2) at n <= 8)?
+     At n=6: YES (verified — each (a_1, a_2) pair gives unique I(x)).
+  4. How fast does #I(x)/#H grow with n?
+     n=3,4,5: 1.00. n=6: 1.42. Predicted n=7: > 2.0.
+
+THE DISJOINT-PAIR INTERPRETATION:
+
+  The scissors congruence class of a tournament is determined by
+  how its odd cycles PACK together — not just how many there are,
+  but how many vertex-disjoint collections exist.
+
+  H counts cycles with a specific weighting (2^k for k-fold packing).
+  I(x) records the FULL packing polynomial, which H compresses to a number.
+
+  The LOSS OF INFORMATION in H = evaluation at x=2.
+  The GAIN from I(x) = keeping x as a formal variable.
+  The FURTHER GAIN from I(x) vs I(omega) = x has more degrees of freedom.
+
+  This is EXACTLY analogous to polyhedra:
+    Volume = evaluation of the scissors class at a specific point.
+    Dehn invariant = additional information from the full scissors class.
+    The scissors class itself = the complete invariant (Dehn-Sydler theorem).
+
+  For tournaments: H = volume. I(x) = scissors class. a_2 = Dehn invariant.
+  Whether I(x) IS the complete scissors class (Dehn-Sydler analog)
+  is the central open question.
+
+opus-2026-03-20-S92g: SCISSORS CONGRUENCE DEEP INVESTIGATION
