@@ -1,0 +1,184 @@
+======================================================================
+PART 1: TRIBONACCI POWER SUMS AND FORBIDDEN VALUES
+======================================================================
+
+  Tribonacci power sums p_n = Tr(M_3^n):
+     n |          p_n | forbidden? |  = C(7,k)? |  odd?
+  --------------------------------------------------
+     1 |            1 |            |     C(7,7) |   odd
+     2 |            3 |            |            |   odd
+     3 |            7 |        YES |     C(7,1) |   odd ← FORBIDDEN!
+     4 |           11 |            |            |   odd
+     5 |           21 |        YES |     C(7,5) |   odd ← FORBIDDEN!
+     6 |           39 |            |            |   odd
+     7 |           71 |            |            |   odd
+     8 |          131 |            |            |   odd
+     9 |          241 |            |            |   odd
+    10 |          443 |            |            |   odd
+    11 |          815 |            |            |   odd
+    12 |         1499 |            |            |   odd
+    13 |         2757 |            |            |   odd
+    14 |         5071 |            |            |   odd
+    15 |         9327 |            |            |   odd
+    16 |        17155 |            |            |   odd
+    17 |        31553 |            |            |   odd
+    18 |        58035 |            |            |   odd
+    19 |       106743 |            |            |   odd
+
+  DISCOVERY:
+    p_3 = 7  = C(7,1) = the FIRST forbidden H-value.
+    p_5 = 21 = C(7,5) = the SECOND forbidden H-value.
+
+  The forbidden values are tribonacci power sums at POSITIONS 3 and 5!
+
+  Moreover: p_3 = 7 is UNIVERSAL (holds for ALL k-nacci, k ≥ 3).
+  But p_5 = 21 is SPECIFIC to the tribonacci (k = 3).
+
+  For the tetranacci (k = 4): p_5 = p_4 + p_3 + p_2 + p_1 = 15+7+3+1 = 26 ≠ 21.
+  For the pentanacci (k = 5): p_5 = Σ p_i = 15+7+3+1+1 = 27 ≠ 21.
+
+  So the TRIBONACCI is the special polynomial. k = 3 = the cycle length of
+  the fundamental tournament cycle (the directed 3-cycle).
+
+======================================================================
+PART 2: POWER SUMS FOR ALL k-NACCI FAMILIES
+======================================================================
+
+     k |  p_1 |  p_2 |  p_3 |  p_4 |   p_5 |   p_6 |   p_7 |   p_8 |    p_9
+  -----------------------------------------------------------------
+     2 |    1 |    3 |    4 |    7 |    11 |    18 |    29 |    47 |    76  ← forbidden at positions [4]
+     3 |    1 |    3 |    7 |   11 |    21 |    39 |    71 |   131 |   241  ← forbidden at positions [3, 5]
+     4 |    1 |    3 |    7 |   15 |    26 |    51 |    99 |   191 |   367  ← forbidden at positions [3]
+     5 |    1 |    3 |    7 |   15 |    31 |    57 |   113 |   223 |   439  ← forbidden at positions [3]
+     6 |    1 |    3 |    7 |   15 |    31 |    63 |   120 |   239 |   475  ← forbidden at positions [3]
+     7 |    1 |    3 |    7 |   15 |    31 |    63 |   127 |   247 |   493  ← forbidden at positions [3]
+     8 |    1 |    3 |    7 |   15 |    31 |    63 |   127 |   255 |   502  ← forbidden at positions [3]
+     9 |    1 |    3 |    7 |   15 |    31 |    63 |   127 |   255 |   511  ← forbidden at positions [3]
+
+======================================================================
+PART 3: WHY THE TRIBONACCI? IT'S THE 3-CYCLE POLYNOMIAL
+======================================================================
+
+
+  The tribonacci polynomial x³ - x² - x - 1 is the characteristic polynomial
+  of the TRANSFER MATRIX for paths through a 3-cycle.
+
+  The 3-cycle is the fundamental odd cycle in tournament theory.
+  Every odd cycle in a tournament is built from 3-cycles (by induction).
+  The OCF: H(T) = I(Omega(T), 2) sums over independent sets of odd cycles,
+  and the DOMINANT contribution comes from 3-cycles.
+
+  The tribonacci recurrence p_n = p_{n-1} + p_{n-2} + p_{n-3} encodes how
+  the 3-cycle structure propagates through the tournament as n grows.
+
+  The power sums p_n = Tr(M_3^n) count WEIGHTED closed walks of length n
+  in the 3-cycle graph. These walks interfere with the Hamiltonian path
+  structure, and the interference pattern FORBIDS H = p_3 and H = p_5.
+
+  WHY positions 3 and 5?
+  - Position 3: the FIRST time the recurrence has used all three terms.
+    p_3 = p_2 + p_1 + p_0 = 3 + 1 + 3*e_3 = 7 (using Newton's identity).
+    This is the "initialization" of the 3-cycle structure.
+
+  - Position 5: the FIRST time the recurrence "wraps around" modulo the
+    3-cycle length. 5 = 3 + 2, so p_5 involves contributions from TWO
+    complete traversals of the 3-cycle.
+    p_5 = p_4 + p_3 + p_2 = 11 + 7 + 3 = 21.
+
+  Verification via M_3 = [[1,1,1],[1,0,0],[0,1,0]]:
+    Tr(M_3^1) = 1
+    Tr(M_3^2) = 3
+    Tr(M_3^3) = 7 ← FORBIDDEN
+    Tr(M_3^4) = 11
+    Tr(M_3^5) = 21 ← FORBIDDEN
+    Tr(M_3^6) = 39
+    Tr(M_3^7) = 71
+    Tr(M_3^8) = 131
+    Tr(M_3^9) = 241
+
+======================================================================
+PART 4: THE ALGEBRAIC SOURCE — RESULTANT AND DISCRIMINANT
+======================================================================
+
+
+  The tribonacci polynomial f(x) = x³ - x² - x - 1.
+  Discriminant: disc(f) = -44.
+  |disc| = 44 = 4 × 11.
+
+  The ROOT STRUCTURE:
+    One real root: r ≈ 1.8393 (the tribonacci constant)
+    Two complex roots: r₂, r₃ ≈ -0.4196 ± 0.6063i
+
+  NORMS:
+    |r₂|² = |r₃|² = 0.4196² + 0.6063² ≈ 0.1761 + 0.3676 = 0.5437
+    Product r₂ * r₃ = |r₂|² = 0.5437... but wait, r₂*r₃ = e_3/e_1... no.
+    e_3 = r₁*r₂*r₃ = 1 (the constant term, with sign).
+    So r₁*r₂*r₃ = 1, meaning |r₂|² = 1/r₁ ≈ 1/1.8393 ≈ 0.5437. YES.
+
+  p_3 = r₁³ + r₂³ + r₃³ = 7.
+  p_5 = r₁⁵ + r₂⁵ + r₃⁵ = 21.
+
+  RATIO: p_5/p_3 = 21/7 = 3. EXACTLY THREE.
+  This means: r₁⁵/r₁³ + r₂⁵/r₂³ + r₃⁵/r₃³ ≈ 3.
+  i.e., r₁² + r₂² + r₃² = p_2 = 3. So p_5/p_3 = p_2!
+
+  IS THIS AN IDENTITY? p_5 = p_3 * p_2 for the tribonacci?
+  Check: p_5 = 21, p_3 * p_2 = 7 * 3 = 21. YES!
+
+  p_5 = 21, p_3 × p_2 = 21
+  p_5 = p_3 × p_2: True
+
+  Is p_5 = p_3 × p_2 for all k-nacci?
+    k=2: p_5=11, p_3×p_2=12, equal: False
+    k=3: p_5=21, p_3×p_2=21, equal: True
+    k=4: p_5=26, p_3×p_2=21, equal: False
+    k=5: p_5=31, p_3×p_2=21, equal: False
+    k=6: p_5=31, p_3×p_2=21, equal: False
+    k=7: p_5=31, p_3×p_2=21, equal: False
+
+  p_5 = p_3 × p_2 ONLY for k = 3 (tribonacci)!
+  This is a SPECIAL identity of the tribonacci sequence.
+  It means: 21 = 7 × 3. The second forbidden = first forbidden × p_2.
+
+======================================================================
+PART 5: NEWTON'S IDENTITY AS A MATRIX EQUATION
+======================================================================
+
+
+  Newton's identities in matrix form for the tribonacci:
+
+  [p_1]   [ 1   0   0] [e_1]   [ 1]
+  [p_2] = [ e_1  -2  0] [e_2] = [ 3]
+  [p_3]   [p_2 -p_1  3] [e_3]   [ 7]
+
+  where e_1 = 1, e_2 = -1, e_3 = 1.
+
+  The NEWTON MATRIX N:
+  N = [[1, 0, 0],
+       [1, 2, 0],
+       [3, 1, 3]]
+
+  p = N × [1, 1, 1]^T = [1, 3, 7].
+
+  (Using e_j = (-1)^{j+1} = [1, -1, 1], and adjusting signs in Newton.)
+
+  p_3 = e_1³ - 3*e_1*e_2 + 3*e_3
+      = 1³ - 3×1×(-1) + 3×1
+      = 1 + 3 + 3
+      = 7
+
+  p_5 = p_4 + p_3 + p_2 = 11 + 7 + 3 = 21
+  p_5 = 2p_3 + 2p_2 + p_1 = 14 + 6 + 1 = 21
+
+======================================================================
+PART 6: WHERE DO POWER SUMS APPEAR IN THE H-SPECTRUM?
+======================================================================
+
+       p_n |    value |               achievable at n=
+  -------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/newton_overnight_s92q.py", line 352, in <module>
+    H_by_n[n] = set(all_H(n))
+  File "/Users/e/Documents/GitHub/math/04-computation/newton_overnight_s92q.py", line 317, in all_H
+    all_perms = list(permutations(range(n)))
+UnboundLocalError: local variable 'permutations' referenced before assignment
