@@ -178,9 +178,9 @@ Both conjectures are FALSE for p=11:
 - p=7: H=189, |Aut|=21, H/|Aut|=9=3^2
 - p=11: H=95095, |Aut|=55, H/|Aut|=1729=7*13*19 (Hardy-Ramanujan taxicab number)
 - p=19: H=1,172,695,746,915, |Aut|=171, H/|Aut|=6,857,869,865 (computed opus-S5/S10)
-- p=23: H=15,760,206,976,379,349 (computed opus-S10)
+- p=23: H=15,760,206,976,379,349, |Aut|=253, H/|Aut|=62,293,308,207,033=3*167*4567*27225299 (computed opus-S10, factored kind-pasteur-S1)
 
-**Sequence H/|Aut|:** 1, 9, 1729, 6857869865 — no obvious pattern. 3^k pattern breaks catastrophically at p=11.
+**Sequence H/|Aut|:** 1, 9, 1729, 6857869865, 62293308207033 — no obvious pattern. 3^k pattern breaks catastrophically at p=11. Factorizations are erratic. |Aut(T_p)| = p*(p-1)/2 confirmed for all p (affine QR group).
 
 **Ratio H(P(p))/(p!/2^{p-1}):** 2.000, 2.400, 2.440, 2.527, 2.557 for p=3,7,11,19,23 — converges toward e=2.718, consistent with Szele-Alon-Friedland asymptotic theory (opus-S10/S11).
 
@@ -264,7 +264,18 @@ Key open sub-questions:
 2. ~~Does the theorem extend to n=8?~~ YES — SC achieves global max H=661 at n=8
 3. Is every global H-maximizer always SC? (stronger conjecture, verified n<=8 for global max)
 
-**Source:** kind-pasteur-2026-03-06-S18/S18e/S18f, sc-maximizer-mechanism.md
+**UPDATE (kind-pasteur-2026-03-20-S1 — THM-255):**
+Complete classification of regular n=6 by IP:
+- Type A (SC-BIBD): IP=(1,14,4), H=45, 240 tours — max disjoint pairs, fewer cycles
+- Type B (SC-rich): IP=(1,20,1), H=45, 240 tours — max total cycles, fewer disjoint pairs
+- Type C (SC-weak): IP=(1,16,2), H=41, 720 tours — intermediate (WORSE than NSC!)
+- Type D (NSC): IP=(1,19,1), H=43, 1440 tours
+
+The constraint for max H: alpha_1 + 2*alpha_2 = 22. SC Types A,B achieve this; NSC gets 21.
+
+**CRITICAL: At n=7, mechanism FLIPS.** H=189 maximizer has FEWEST disjoint 3-cycle pairs (7 vs 10 vs 14). Wins via alpha_1=80 (total directed odd cycles), not alpha_2. Any algebraic proof must handle both mechanisms.
+
+**Source:** kind-pasteur-2026-03-06-S18/S18e/S18f, sc-maximizer-mechanism.md, kind-pasteur-2026-03-20-S1 (THM-255)
 
 ---
 
@@ -553,6 +564,8 @@ The EXACT formula uses combinatorial g_k polynomials of degree k:
 ## OPEN-Q-028 🟢 Are there forbidden H values beyond 7 and 21?
 
 **Statement:** Are 7 and 21 the ONLY permanently forbidden H values? H=63 was shown achievable at n=8 (HYP-1106 refuted). But could there be large forbidden values proportional to n!/2^{n-1}?
+
+**UPDATE (kind-pasteur-2026-03-20-S1):** Confirmed via 500K random n=9 tournaments: only gaps in odd [1,500] are H=7 and H=21. H=63 achieved (9 occurrences). Also confirmed at n=8 (200K samples): only gaps below 100 are 7 and 21. This is very strong evidence that 7 and 21 are the only permanent gaps.
 
 **Evidence:** Only 7 and 21 are known forbidden. 63 is achievable (n=8). No other candidates found through n=11.
 

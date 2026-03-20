@@ -1,0 +1,36 @@
+======================================================================
+SC MAXIMIZER ORBIT THEOREM — n=6 REGULAR ANALYSIS
+======================================================================
+
+  Total regular n=6 tournaments: 2640
+
+  H=41: 720 tournaments
+    Has invol anti-aut: 720, No anti-aut: 0
+    comp_both values: {0: 720}
+
+  H=43: 1440 tournaments
+    Has invol anti-aut: 0, No anti-aut: 1440
+    comp_both values: {0: 1440}
+
+  H=45: 480 tournaments
+    Has invol anti-aut: 480, No anti-aut: 0
+    comp_both values: {0: 480}
+
+  --- THEOREM CHECK ---
+  comp_both=4 implies H=45?
+    0 tournaments with comp_both=4
+    H values: Counter()
+  H=45 implies comp_both=4?
+    480 tournaments with H=45
+    comp_both values: Counter({0: 480})
+
+  --- ORBIT STRUCTURE OF ANTI-AUTOMORPHISMS ---
+
+  --- DEEP: ALL 8 CYCLES FROM ORBITS? ---
+
+  ===== THEOREM SUMMARY =====
+  For regular n=6 tournaments (score 2,2,2,3,3,3):
+  - ALL tournaments have c3=8 (verified: {8})
+  - H takes values: [41, 43, 45]
+  - comp_both (# complementary pairs both cyclic):
+    comp_both=0: count=2640, H_values=[41, 43, 45], has_anti_aut=1200/2640

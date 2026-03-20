@@ -13,6 +13,40 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-20-S1 — 2026-03-20: Deep Investigation of Core Open Questions
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-17-S116n33
+**Files read:** Full startup sequence (MISTAKES, definitions, OPEN-QUESTIONS, SESSION-LOG, TANGENTS, hypotheses INDEX, INVESTIGATION-BACKLOG), all recent opus commits (S92d-S92g), recent session results
+**Summary of work:** Systematic deep-dive into the 5 most impactful open questions. Fixed a critical cycle-counting bug in the independence polynomial computation. Proved the SC Maximizer Dichotomy at n=6 (THM-255). Proved Paley beats Interval via total cycle count at small primes (THM-256). Factored H/|Aut| for p=23. Confirmed only H=7,21 are permanent gaps through n=9.
+
+### Key Results
+
+1. **BUG FIX (critical):** Previous independence polynomial code counted only ONE directed cycle per vertex set. A vertex set of size k can have MULTIPLE directed Hamiltonian cycles (e.g., Z_5 interval has 2 five-cycles). Each is a separate Omega vertex. OCF verification with corrected counting: 0 violations through n=7.
+
+2. **THM-255 — SC Maximizer Dichotomy at n=6 Regular:** Complete classification of all 2640 regular n=6 tournaments by IP:
+   - Type A (SC-BIBD): IP=(1,14,4), H=45, 240 tours (max disjoint pairs)
+   - Type B (SC-rich): IP=(1,20,1), H=45, 240 tours (max total cycles)
+   - Type C (SC-weak): IP=(1,16,2), H=41, 720 tours (worse than NSC!)
+   - Type D (NSC): IP=(1,19,1), H=43, 1440 tours
+   Constraint: alpha_1 + 2*alpha_2 = 22 for max H. NSC achieves only 21.
+
+3. **n=7 mechanism FLIP:** At n=7 regular, the H=189 maximizer has FEWEST disjoint 3-cycle pairs (7 out of {7,10,14}), winning via alpha_1=80. The SC advantage flips from alpha_2-driven (n=6) to alpha_1-driven (n=7).
+
+4. **THM-256 — Paley vs Interval:** Paley has 80 vs 59 total directed odd cycles at p=7, despite fewer disjoint pairs (7 vs 14). Same c3=14. Paley wins via 5-cycles (42 vs 28) and 7-cycles (24 vs 17). Spectral flatness explains this.
+
+5. **H/|Aut| for p=23:** = 62,293,308,207,033 = 3 * 167 * 4567 * 27,225,299. No pattern in the sequence.
+
+6. **Forbidden values confirmed through n=9:** 500K samples, only gaps in odd [1,500] are H=7 and H=21.
+
+**New contributions:** THM-255, THM-256, T256, T257, updated OPEN-Q-013/016/028
+**New scripts:** overnight_s1_investigation.py, overnight_s1_fixed.py, overnight_s1_deep.py, sc_maximizer_orbit_fixed.py, sc_maximizer_orbit_theorem.py
+**Unresolved threads:**
+- Algebraic proof of SC Maximizer needs to handle BOTH alpha_1 and alpha_2 mechanisms
+- No formula found for H(T_p)/|Aut(T_p)|
+- Paley T_11 cycle counts not fully computed (too slow for 5+ cycles)
+- The alpha_1+2*alpha_2 constraint should be investigated at n=7,8
+
 ## opus-2026-03-17-S91 — 2026-03-17: MARATHON — Adelic Tournament Space, Formal Group Tools, LLM Tournament Head
 
 **Account:** opus

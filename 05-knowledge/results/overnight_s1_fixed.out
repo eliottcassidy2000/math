@@ -1,0 +1,197 @@
+======================================================================
+PART A: VERIFY OCF WITH CORRECT CYCLE COUNTING
+======================================================================
+  n=3 (exhaustive): 8 tested, 0 violations
+  n=4 (exhaustive): 64 tested, 0 violations
+  n=5 (exhaustive): 1024 tested, 0 violations
+  n=6 (exhaustive): 32768 tested, 0 violations
+  n=7 (500 samples): 500 tested, 0 violations
+
+======================================================================
+PART B: PALEY vs INTERVAL COMPARISON
+======================================================================
+
+  p=3 (p mod 4 = 3)
+    QR = [1]
+    Interval S = [1]
+    H(Paley)    = 3, I(Omega,2) = 3, IP = [1, 1]
+    H(Interval) = 3, I(Omega,2) = 3, IP = [1, 1]
+    Paley cycles by length: {3: 1}
+    Interval cycles by length: {3: 1}
+
+  p=5 (p mod 4 = 1)
+    No Paley tournament (p = 1 mod 4)
+    H(Interval) = 15, I(Omega,2) = 15, IP = [1, 7]
+
+  p=7 (p mod 4 = 3)
+    QR = [1, 2, 4]
+    Interval S = [1, 2, 3]
+    H(Paley)    = 189, I(Omega,2) = 189, IP = [1, 80, 7]
+    H(Interval) = 175, I(Omega,2) = 175, IP = [1, 59, 14]
+    Paley cycles by length: {3: 14, 5: 42, 7: 24}
+    Interval cycles by length: {3: 14, 5: 28, 7: 17}
+    Winner: PALEY (ratio: 1.080000)
+
+======================================================================
+PART C: SC MAXIMIZER WITH CORRECT INDEPENDENCE POLYNOMIAL
+======================================================================
+
+  n=6, SC score classes: 6
+
+  Score (0, 1, 2, 3, 4, 5):
+    SC: 720 tours, max H = 1
+    NSC: 0 tours, max H = 0
+
+  Score (0, 2, 2, 3, 3, 5):
+    SC: 720 tours, max H = 5
+    NSC: 0 tours, max H = 0
+
+  Score (1, 1, 1, 4, 4, 4):
+    SC: 80 tours, max H = 9
+    NSC: 0 tours, max H = 0
+
+  Score (1, 1, 2, 3, 4, 4):
+    SC: 1440 tours, max H = 17
+    NSC: 1440 tours, max H = 15
+    Gap = 2 (SC wins)
+    SC max IP: (1, 8)
+    NSC max IP: (1, 7)
+    Difference at alpha_1: SC=8 vs NSC=7 (delta=1)
+
+  Score (1, 2, 2, 3, 3, 4):
+    SC: 2880 tours, max H = 37
+    NSC: 5760 tours, max H = 31
+    Gap = 6 (SC wins)
+    SC max IP: (1, 14, 2)
+    NSC max IP: (1, 13, 1)
+    Difference at alpha_1: SC=14 vs NSC=13 (delta=1)
+    Difference at alpha_2: SC=2 vs NSC=1 (delta=1)
+
+  Score (2, 2, 2, 3, 3, 3):
+    SC: 1200 tours, max H = 45
+    NSC: 1440 tours, max H = 43
+    Gap = 2 (SC wins)
+    SC max IP: (1, 14, 4)
+    NSC max IP: (1, 19, 1)
+    Difference at alpha_1: SC=14 vs NSC=19 (delta=-5)
+    Difference at alpha_2: SC=4 vs NSC=1 (delta=3)
+
+======================================================================
+PART D: H(T_p) / |Aut(T_p)| DEEP ANALYSIS
+======================================================================
+
+  p=3: H=3, |Aut|=3, H/|Aut|=1
+    H factored: 3
+    |Aut| factored: 3
+    H/|Aut| factored: 1
+
+  p=7: H=189, |Aut|=21, H/|Aut|=9
+    H factored: 3 * 3 * 3 * 7
+    |Aut| factored: 3 * 7
+    H/|Aut| factored: 3 * 3
+
+  p=11: H=95095, |Aut|=55, H/|Aut|=1729
+    H factored: 5 * 7 * 11 * 13 * 19
+    |Aut| factored: 5 * 11
+    H/|Aut| factored: 7 * 13 * 19
+
+  p=19: H=1172695746915, |Aut|=171, H/|Aut|=6857869865
+    H factored: 3 * 3 * 5 * 7 * 11 * 19 * 23 * 774463
+    |Aut| factored: 3 * 3 * 19
+    H/|Aut| factored: 5 * 7 * 11 * 23 * 774463
+
+  --- Arithmetic patterns ---
+
+  p=3:
+    |Aut| = 3, p*(p-1)/2 = 3, match: True
+    H/(p!) = 5.000000e-01
+    H / (p!/2^(p-1)) = 2.000000
+    H = sum 2^k * alpha_k (by OCF)
+
+  p=7:
+    |Aut| = 21, p*(p-1)/2 = 21, match: True
+    H/(p!) = 3.750000e-02
+    H / (p!/2^(p-1)) = 2.400000
+    H = sum 2^k * alpha_k (by OCF)
+
+  p=11:
+    |Aut| = 55, p*(p-1)/2 = 55, match: True
+    H/(p!) = 2.382330e-03
+    H / (p!/2^(p-1)) = 2.439506
+    H = sum 2^k * alpha_k (by OCF)
+
+  p=19:
+    |Aut| = 171, p*(p-1)/2 = 171, match: True
+    H/(p!) = 9.640304e-06
+    H / (p!/2^(p-1)) = 2.527148
+    H = sum 2^k * alpha_k (by OCF)
+
+  1729 = 12^3 + 1^3 = 1729
+  1729 = 10^3 + 9^3 = 1729
+  1729 = 7 * 13 * 19 = 1729
+  These primes are: p, p+2, p+6 for p=7? No, p=7 and we need mod structure.
+  7 = (p-4)/1, 13 = (p+2)/1, 19 = (p+8)/1 for p=11
+  Or: 7*13*19 = C(20,3) - 11? No, C(20,3) = 1140
+  Actually: p=11, primes 7,13,19 are p-4, p+2, p+8 = 2k-1 for k=4,7,10 (AP!)
+  Arithmetic progression: 4, 7, 10 (common diff 3 = (p-2)/3)
+
+  H/|Aut| for p=19: 6857869865 = 5 * 7 * 11 * 23 * 774463
+  Unique primes: [5, 7, 11, 23, 774463]
+  Differences from p=19: [-14, -12, -8, 4, 774444]
+  Differences from each other: [2, 4, 12, 774440]
+
+======================================================================
+PART E: FORBIDDEN H VALUES AT n=8 (200K samples)
+======================================================================
+  200000 random n=8 tournaments
+  H range: 1 to 661
+  Distinct H: 320
+  Gaps in odd [1,661]: 11
+
+  Gaps below H=100: [7, 21]
+  H=7: 0, H=21: 0
+  H=63: 63
+
+  H value counts (top 20):
+    H=281: 1465
+    H=345: 1406
+    H=407: 1364
+    H=239: 1301
+    H=91: 1301
+    H=351: 1291
+    H=425: 1290
+    H=267: 1284
+    H=401: 1280
+    H=293: 1268
+    H=317: 1261
+    H=219: 1201
+    H=417: 1184
+    H=229: 1181
+    H=347: 1177
+    H=375: 1175
+    H=197: 1162
+    H=129: 1155
+    H=231: 1147
+    H=275: 1136
+
+======================================================================
+PART F: SC MAXIMIZER — ALGEBRAIC ANALYSIS
+======================================================================
+
+  Score (2, 2, 2, 3, 3, 3) at n=6:
+    SC: 1200, NSC: 1440
+    SC H values: {41: 720, 45: 480}
+    NSC H values: {43: 1440}
+
+    SC max: H=45, #cycles=14, c3=8, c5=6, disjoint_pairs=4
+    NSC max: H=43, #cycles=19, c3=8, c5=11, disjoint_pairs=1
+
+    SC disjoint pairs: min=1, max=4, avg=2.2
+    NSC disjoint pairs: min=1, max=1, avg=1.0
+
+    Correlation analysis (SC):
+      H=41: avg_disjoint_pairs=2.0, avg_total_cycles=16.0
+      H=45: avg_disjoint_pairs=2.5, avg_total_cycles=17.0
+
+    Correlation analysis (NSC):
+      H=43: avg_disjoint_pairs=1.0, avg_total_cycles=19.0

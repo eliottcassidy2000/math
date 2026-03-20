@@ -1,0 +1,94 @@
+======================================================================
+PART G: SC ALPHA_2 MECHANISM — COMPLETE ANALYSIS AT n=6
+======================================================================
+
+  H=41: 720 tournaments
+    c3 values: Counter({8: 720})
+    comp_both_cyclic values: Counter({0: 720})
+
+  H=43: 1440 tournaments
+    c3 values: Counter({8: 1440})
+    comp_both_cyclic values: Counter({0: 1440})
+
+  H=45: 480 tournaments
+    c3 values: Counter({8: 480})
+    comp_both_cyclic values: Counter({0: 480})
+
+  KEY OBSERVATION:
+  For regular n=6 tournaments (score 2,2,2,3,3,3):
+  H=45: comp_both = {0}, c3 = {8}
+  H=43: comp_both = {0}, c3 = {8}
+  H=41: comp_both = {0}, c3 = {8}
+
+======================================================================
+PART H: H(T_p)/|Aut| ANALYSIS FOR p=23
+======================================================================
+  p=23: H = 15760206976379349
+  |Aut| = 253
+  H/|Aut| = 62293308207033
+  H mod |Aut| = 0 (should be 0)
+  H/|Aut| factored: 3 * 167 * 4567 * 27225299
+  Unique primes: [3, 167, 4567, 27225299]
+  H factored: 3 * 11 * 23 * 167 * 4567 * 27225299
+
+  Complete H/|Aut| table:
+  p= 3: H/|Aut| =                    1 =                                        1  primes: []
+  p= 7: H/|Aut| =                    9 =                                      3*3  primes: [3]
+  p=11: H/|Aut| =                 1729 =                                  7*13*19  primes: [7, 13, 19]
+  p=19: H/|Aut| =           6857869865 =                         5*7*11*23*774463  primes: [5, 7, 11, 23, 774463]
+  p=23: H/|Aut| =       62293308207033 =                      3*167*4567*27225299  primes: [3, 167, 4567, 27225299]
+
+  Pattern search:
+  ratio[1]/ratio[0] = 9.0000
+  ratio[2]/ratio[1] = 192.1111
+  ratio[3]/ratio[2] = 3966379.3320
+  ratio[4]/ratio[3] = 9083.4777
+
+  Does H(T_p) contain all primes up to p?
+  p=3: primes in H = [3], missing primes <= p: [2]
+  p=7: primes in H = [3, 7], missing primes <= p: [2, 5]
+  p=11: primes in H = [5, 7, 11, 13, 19], missing primes <= p: [2, 3]
+  p=19: primes in H = [3, 5, 7, 11, 19, 23, 774463], missing primes <= p: [2, 13, 17]
+  p=23: primes in H = [3, 11, 23, 167, 4567, 27225299], missing primes <= p: [2, 5, 7, 13, 17, 19]
+
+======================================================================
+PART K: SC MAXIMIZER AT n=7 — REGULAR SCORE ANALYSIS
+======================================================================
+  Found 606 regular tournaments in 500000 attempts
+
+  H=171: 397 tournaments
+    c3: {14: 397}
+    disjoint 3-cycle pairs: {10: 397}
+
+  H=175: 165 tournaments
+    c3: {14: 165}
+    disjoint 3-cycle pairs: {14: 165}
+
+  H=189: 44 tournaments
+    c3: {14: 44}
+    disjoint 3-cycle pairs: {7: 44}
+
+  Do all regular n=7 tournaments have the same c3?
+    c3 values seen: [14]
+    YES — all regular n=7 have c3=14
+
+  Skipping Part J (p=11 5-cycle counting) — too slow for this session
+  Running Part I (n=9 forbidden values) last as it's the longest...
+
+======================================================================
+PART I: FORBIDDEN H VALUES AT n=9 (500K samples)
+======================================================================
+  Progress: 100000/500000, distinct H so far: 1494
+  Progress: 200000/500000, distinct H so far: 1504
+  Progress: 300000/500000, distinct H so far: 1511
+  Progress: 400000/500000, distinct H so far: 1514
+
+  500000 random n=9 tournaments
+  H range: 1 to 3357
+  Distinct H: 1516
+  Gaps in odd [1, 500]: 2
+  Gap values: [7, 21]
+
+  H=7: 0
+  H=21: 0
+  H=63: 9

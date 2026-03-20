@@ -1,0 +1,199 @@
+======================================================================
+PART 1: SC MAXIMIZER — DEEP STRUCTURE ANALYSIS
+======================================================================
+
+--- n = 5 ---
+Score classes: 9
+Self-complementary score classes: 5
+  score (0, 1, 2, 3, 4): ALL are SC, max H=1
+  score (0, 2, 2, 2, 4): ALL are SC, max H=3
+  score (1, 1, 2, 3, 3): ALL are SC, max H=9
+  score (1, 2, 2, 2, 3): ALL are SC, max H=15
+  score (2, 2, 2, 2, 2): ALL are SC, max H=15
+  Violations: 0
+
+--- n = 6 ---
+Score classes: 22
+Self-complementary score classes: 6
+  score (0, 1, 2, 3, 4, 5): ALL are SC, max H=1
+  score (0, 2, 2, 3, 3, 5): ALL are SC, max H=5
+  score (1, 1, 2, 3, 4, 4): SC max=17, NSC max=15, gap=2
+  score (1, 2, 2, 3, 3, 4): SC max=37, NSC max=31, gap=6
+  score (1, 1, 1, 4, 4, 4): ALL are SC, max H=9
+  score (2, 2, 2, 3, 3, 3): SC max=45, NSC max=43, gap=2
+  Violations: 0
+
+--- n = 7 ---
+Score classes: 59
+Self-complementary score classes: 15
+
+======================================================================
+PART 2: PALEY vs INTERVAL H COMPARISON
+======================================================================
+
+  p=3 (= 3 mod 4)
+    QR = [1]
+    Interval = [1]
+    H(Paley) = 3
+    H(Interval) = 3
+    EQUAL (same tournament or isomorphic)
+    Interval odd cycles: {3: 0}
+    Interval I(Ω,x) = [1, 1], I(Ω,2) = 3
+
+  p=5 (≡ 1 mod 4, no Paley)
+    Interval = [1, 2]
+    H(Interval) = 15
+    Interval odd cycles: {3: 1, 5: 0}
+    Interval I(Ω,x) = [1, 6], I(Ω,2) = 13
+
+  p=7 (= 3 mod 4)
+    QR = [1, 2, 4]
+    Interval = [1, 2, 3]
+    H(Paley) = 189
+    H(Interval) = 175
+    Winner: PALEY
+    Ratio: 1.080000
+    Interval odd cycles: {3: 4, 5: 5, 7: 2}
+    Interval I(Ω,x) = [1, 36, 14], I(Ω,2) = 129
+    Paley odd cycles: {3: 4, 5: 8, 7: 3}
+    Paley I(Ω,x) = [1, 36, 7], I(Ω,2) = 101
+
+  p=11 (= 3 mod 4)
+    QR = [1, 3, 4, 5, 9]
+    Interval = [1, 2, 3, 4, 5]
+    H(Paley) = 95095
+    H(Interval) = 93027
+    Winner: PALEY
+    Ratio: 1.022230
+
+======================================================================
+PART 3: H(T_p)/|Aut(T_p)| FACTORIZATION
+======================================================================
+
+  p=3: H=3, |Aut|=3
+    H/|Aut| = 1
+    Factorization: 
+    Unique primes: []
+
+  p=7: H=189, |Aut|=21
+    H/|Aut| = 9
+    Factorization: 3 × 3
+    Unique primes: [3]
+
+  p=11: H=95095, |Aut|=55
+    H/|Aut| = 1729
+    Factorization: 7 × 13 × 19
+    Unique primes: [7, 13, 19]
+
+  p=19: H=1172695746915, |Aut|=171
+    H/|Aut| = 6857869865
+    Factorization: 5 × 7 × 11 × 23 × 774463
+    Unique primes: [5, 7, 11, 23, 774463]
+
+  H(T_3) = 3 = 3
+
+  H(T_7) = 189 = 3 × 3 × 3 × 7
+
+  H(T_11) = 95095 = 5 × 7 × 11 × 13 × 19
+
+  H(T_19) = 1172695746915 = 3 × 3 × 5 × 7 × 11 × 19 × 23 × 774463
+
+  Pattern analysis of H/|Aut| sequence:
+    p=3: H/|Aut| = 1
+      mod p: 1
+      mod (p-1): 1
+      mod (p²): 1
+    p=7: H/|Aut| = 9
+      mod p: 2
+      mod (p-1): 3
+      mod (p²): 9
+      ratio to previous: 9.0000
+    p=11: H/|Aut| = 1729
+      mod p: 2
+      mod (p-1): 9
+      mod (p²): 35
+      ratio to previous: 192.1111
+    p=19: H/|Aut| = 6857869865
+      mod p: 4
+      mod (p-1): 5
+      mod (p²): 156
+      ratio to previous: 3966379.3320
+
+======================================================================
+PART 4: FORBIDDEN H VALUES — n=8 SAMPLING
+======================================================================
+  Sampled 100000 random tournaments on 8 vertices
+  H range: 1 to 661
+  Distinct H values: 320
+  Gaps in odd values [1, 661]: 11
+  Gap values: [7, 21, 611, 615, 617, 619, 623, 625, 635, 647, 655]
+
+  H=7 count: 0
+  H=21 count: 0
+
+  H values near known permanent gaps:
+    Near H=7: [(3, 21), (5, 77), (9, 111), (11, 62)]
+    Near H=21: [(17, 88), (19, 88), (23, 156), (25, 157)]
+
+======================================================================
+PART 5: SC MAXIMIZER — ORBIT PAIRING MECHANISM
+======================================================================
+
+--- Detailed orbit analysis at n=6 ---
+  Total SC tournaments at n=6: 7040
+
+  Score (0, 1, 2, 3, 4, 5):
+    SC tournaments: 720
+    H values: [1]
+    Max H=1: c3=0, orbit_pairs=3, fixed_pts=0, orbit_3cycles=0
+
+  Score (0, 2, 2, 3, 3, 5):
+    SC tournaments: 720
+    H values: [5]
+    Max H=5: c3=2, orbit_pairs=3, fixed_pts=0, orbit_3cycles=0
+
+  Score (1, 1, 1, 4, 4, 4):
+    SC tournaments: 80
+    H values: [9]
+    Max H=9: c3=2, orbit_pairs=3, fixed_pts=0, orbit_3cycles=2
+
+  Score (1, 1, 2, 3, 4, 4):
+    SC tournaments: 1440
+    H values: [17]
+    Max H=17: c3=4, orbit_pairs=3, fixed_pts=0, orbit_3cycles=0
+
+  Score (1, 2, 2, 3, 3, 4):
+    SC tournaments: 2880
+    H values: [29, 33, 37]
+    Max H=37: c3=6, orbit_pairs=3, fixed_pts=0, orbit_3cycles=0
+    H=29: c3=6, orbit_pairs=3, orbit_3cycles=4
+    H=33: c3=6, orbit_pairs=3, orbit_3cycles=4
+
+  Score (2, 2, 2, 3, 3, 3):
+    SC tournaments: 1200
+    H values: [41, 45]
+    Max H=45: c3=8, orbit_pairs=3, fixed_pts=0, orbit_3cycles=4
+    H=41: c3=8, orbit_pairs=3, orbit_3cycles=4
+
+--- SC vs NSC comparison at n=6 ---
+
+  Score (1, 1, 2, 3, 4, 4):
+    SC: 1440 tours, max H=17, max a1=8, max a2=1
+    NSC: 1440 tours, max H=15, max a1=7, max a2=0
+    Gap: SC - NSC = 2
+    SC IP dist: {(1, 8): 720, (1, 6, 1): 720}
+    NSC IP dist: {(1, 7): 1440}
+
+  Score (1, 2, 2, 3, 3, 4):
+    SC: 2880 tours, max H=37, max a1=10, max a2=2
+    NSC: 5760 tours, max H=31, max a1=11, max a2=1
+    Gap: SC - NSC = 6
+    SC IP dist: {(1, 10, 2): 2160, (1, 10, 1): 720}
+    NSC IP dist: {(1, 11): 1440, (1, 10): 1440, (1, 10, 1): 1440, (1, 11, 1): 1440}
+
+  Score (2, 2, 2, 3, 3, 3):
+    SC: 1200 tours, max H=45, max a1=14, max a2=4
+    NSC: 1440 tours, max H=43, max a1=14, max a2=1
+    Gap: SC - NSC = 2
+    SC IP dist: {(1, 14, 2): 720, (1, 14, 4): 240, (1, 14, 1): 240}
+    NSC IP dist: {(1, 14, 1): 1440}

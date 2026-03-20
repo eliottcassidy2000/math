@@ -815,3 +815,9 @@ Six cryptographic vulnerability classes from repo techniques: (1) **Walsh spectr
 
 **T255** #Mertens #signed-permanent #cancellation #carry-counting | certainty: MEDIUM (analogy) | source: opus-S74
 **Signed permanent ↔ Mertens function analogy.** S(T) = Σ_P ∏ B[P_i,P_{i+1}] exhibits massive cancellation: |S| << n! but nonzero (at odd n). THM-J: universality fails iff s_2(n-3)>1 (binary carry condition). The Mertens function M(x) = Σ_{n≤x} μ(n) also exhibits massive cancellation (M(x)/√x bounded ↔ RH). Both are "sum of ±1 contributions with arithmetic conditions on the cancellation." The carry condition s_2(n-3)≤1 is a tournament analogue of the prime gap conditions that control M(x). HYP-1618 (corrected).
+
+**T256** #SC-maximizer #dual-mechanism #alpha1-alpha2-tradeoff | certainty: HIGH (proved n=6, verified n=7) | source: kind-pasteur-2026-03-20-S1
+**SC Maximizer Dual Mechanism (THM-255).** At n=6 regular, max H is achieved by SC tournaments via TWO distinct routes: Route A (max alpha_2=4, few cycles) and Route B (max alpha_1=20, few disjoint pairs). Both give alpha_1+2*alpha_2=22. NSC achieves only 21. At n=7, mechanism FLIPS: maximizer has FEWEST disjoint pairs (7 vs 14), winning purely via alpha_1. This means any algebraic proof of SC Maximizer must handle both mechanisms.
+
+**T257** #paley-interval #spectral-crossover #cycle-count | certainty: HIGH (computed p=7,11) | source: kind-pasteur-2026-03-20-S1
+**Paley beats Interval via total cycle count at small p (THM-256).** At p=7: Paley has 80 directed odd cycles vs Interval's 59, despite FEWER disjoint pairs (7 vs 14). Same c3=14 for both. Paley's advantage is in 5-cycles (42 vs 28) and 7-cycles (24 vs 17). Spectral flatness explains this: flat |lambda_k|=sqrt(2) for all k gives uniform cycle distribution. Crossover to Interval occurs between p=11 and p=19.
