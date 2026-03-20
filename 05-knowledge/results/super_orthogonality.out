@@ -1,0 +1,139 @@
+======================================================================
+PART A: WALSH AMPLITUDE UNIVERSALITY (THM-076)
+======================================================================
+
+  n=5, m=10
+  Non-zero Walsh coefficients by Hamming weight:
+    hw=0: 1 coeffs, |values| = {np.float64(7.5)}, signs = Counter({1: 1})
+    hw=2: 30 coeffs, |values| = {np.float64(0.75)}, signs = Counter({-1: 20, 1: 10})
+    hw=4: 60 coeffs, |values| = {np.float64(0.125)}, signs = Counter({1: 34, -1: 26})
+
+  THM-076 prediction check:
+  n=5, 2^(n-1) = 16
+  hw=0: H_hat[0] = 7.500000, expected = 7.500000, match: True
+  hw=2: |coeffs| = {np.float64(0.75)}, expected = 0.750000
+  hw=4: |coeffs| = {np.float64(0.125)}
+    r=1 prediction: 0.125000
+    r=2 prediction: 0.250000
+
+  Walsh support overlap:
+    Both H and c3 non-zero: 31
+    Only H non-zero: 60
+    Only c3 non-zero: 0
+
+======================================================================
+PART B: ORTHOGONALITY BETWEEN TOURNAMENT INVARIANTS
+======================================================================
+
+  Correlation matrix (n=5):
+                         H          c3      writhe   score_var
+             H      1.0000      0.9733      0.0000     -0.9733
+            c3      0.9733      1.0000      0.0000     -1.0000
+        writhe      0.0000      0.0000      1.0000     -0.0000
+     score_var     -0.9733     -1.0000     -0.0000      1.0000
+
+  Exact orthogonality tests:
+    <H, writhe> = 0.0000000000 (should be EXACTLY 0)
+    <c3, writhe> = 0.0000000000 (should be EXACTLY 0)
+    <score_var, writhe> = -0.0000000000
+
+  Deeper orthogonality tests:
+    <c5_dir, c3> = 960.0000
+    <c5_dir, writhe> = 0.0000
+    corr(c5_dir, c3) = 0.816497
+
+    H - 1 - 2*c3 = 2*c5_dir? max|diff| = 0.0
+    YES! At n=5, H = 1 + 2*(c3 + c5_dir) EXACTLY (alpha_2=0)
+
+  Walsh support analysis:
+    c3 Walsh support: 31 indices
+    c5_dir Walsh support: 91 indices
+    Overlap: 31 indices
+    c3 Hamming weights: {0: 1, 2: 30}
+    c5_dir Hamming weights: {0: 1, 2: 30, 4: 60}
+
+======================================================================
+PART C: TOURNAMENT = BASIS FOR so(n) (HYP-786)
+======================================================================
+
+  --- n=3 ---
+  dim(so(3)) = 3
+  Bracket test: 3 basis elements, 27 Jacobi tests
+  Killing form diagonal: {-2}
+  Expected: -2 (= -2*(n-2))
+  Match: True
+  INTERPRETATION: Tournament on 3 vertices = choice of orientation
+  for the 3 generators of so(3). ALL tournaments give the SAME
+  abstract Lie algebra, just with different signed basis elements.
+
+  --- n=4 ---
+  dim(so(4)) = 6
+  Bracket test: 6 basis elements, 125 Jacobi tests
+  Killing form diagonal: {-4}
+  Expected: -4 (= -2*(n-2))
+  Match: True
+  INTERPRETATION: Tournament on 4 vertices = choice of orientation
+  for the 6 generators of so(4). ALL tournaments give the SAME
+  abstract Lie algebra, just with different signed basis elements.
+
+  --- n=5 ---
+  dim(so(5)) = 10
+  Bracket test: 10 basis elements, 125 Jacobi tests
+  Killing form diagonal: {-6}
+  Expected: -6 (= -2*(n-2))
+  Match: True
+  INTERPRETATION: Tournament on 5 vertices = choice of orientation
+  for the 10 generators of so(5). ALL tournaments give the SAME
+  abstract Lie algebra, just with different signed basis elements.
+
+======================================================================
+PART D: SUPER ORTHOGONALITY — ENTANGLEMENT OF LEVELS
+======================================================================
+
+  LEVEL 0 (Statistical):
+  H is complement-symmetric: H(T) = H(T^op) for all T
+  Any antisymmetric function f (f(T^op) = -f(T)) is orthogonal to H
+
+  LEVEL 1 (Walsh):
+  H Walsh support: 91 even-weight, 0 odd-weight
+  H is purely even-weight: True
+
+  LEVEL 2 (Algebraic):
+  THM-076: Walsh amplitudes depend ONLY on (r, k) of the monomial S
+  This is forced by C(m,j) * j! * (m-j)! = m! (constant-term identity)
+  Distinct |Walsh amplitudes| for H: 3
+    |hat{H}| = 0.125000: 60 monomials
+    |hat{H}| = 0.750000: 30 monomials
+    |hat{H}| = 7.500000: 1 monomials
+
+  LEVEL 3 (Homological):
+  beta_2 = 0 for ALL tournaments (THM-108)
+  This means: dim(ker d_2) = dim(im d_3) EXACTLY for all T
+  The 2-boundary space saturates the 2-cycle space
+
+  LEVEL 4 (Super Orthogonality):
+  The four levels are NOT independent. Entanglements:
+
+  [L0 <-> L1]: Complement symmetry (L0) forces Walsh parity (L1)
+    H(T) = H(T^op) implies hat{H}[S] = 0 for odd-weight S
+
+  [L1 <-> L2]: Walsh parity (L1) + OCF (L2) forces amplitude formula
+    The factorization H = I(Omega,2) decomposes in Walsh space
+    Each degree contributes 2^r*(n-2k)!/2^(n-1) independently
+
+  [L2 <-> L3]: OCF (L2) + path homology (L3) are DUAL
+    H = I(Omega,2) counts cycle-disjoint collections
+    beta_2 = 0 means 2-cycles are all boundaries of 3-chains
+    Both are manifestations of: odd cycles generate the structure
+
+  [L0 <-> L3]: Complement symmetry (L0) forces beta_2=0 (L3)?
+    OPEN: Does H(T)=H(T^op) imply beta_2(T)=0?
+    Tournament-specific: beta_2=0 uses completeness, not just symmetry
+
+  ENTANGLEMENT MEASURE:
+  Walsh parameters (non-zero coefficients): 91
+  OCF parameters (alpha_k values): 2
+  Combined effective parameters: 2 (OCF is more efficient)
+  Redundancy ratio: 91 / 2 = 45.5
+  This 46x redundancy IS the super orthogonality:
+  the Walsh coefficients are 46x over-determined by OCF
