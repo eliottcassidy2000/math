@@ -1,0 +1,112 @@
+
+======================================================================
+PART B: DELETION INCREMENT ANALYSIS (OPEN-Q-028)
+======================================================================
+
+  --- Adding vertex to n=3 to get n=4 ---
+  H(T')=1: deltas = [0, 2, 4]
+  H(T')=3: deltas = [0, 2]
+
+  Achievable odd H values at n=4: 3
+  Missing odd values in [1, 5]: []
+  Widest range: T' with H=1, deltas span 4, range [1, 5]
+
+  --- Adding vertex to n=4 to get n=5 ---
+  H(T')=1: deltas = [0, 2, 4, 8, 10]
+  H(T')=3: deltas = [0, 2, 6, 10, 12]
+  H(T')=5: deltas = [0, 4, 6, 8, 10]
+
+  Achievable odd H values at n=5: 7
+  Missing odd values in [1, 15]: [7]
+  Widest range: T' with H=3, deltas span 12, range [3, 15]
+
+  --- Adding vertex to n=5 to get n=6 ---
+  H(T')=1: deltas = [0, 2, 4, 8, 10, 14, 16, 18, 22]
+  H(T')=3: deltas = [0, 2, 6, 10, 12, 14, 20, 22, 24, 26, 30]
+  H(T')=5: deltas = [0, 4, 6, 8, 10, 12, 14, 18, 20, 24, 26, 28, 32]
+  H(T')=9: deltas = [0, 6, 8, 10, 14, 16, 18, 20, 22, 24, 28, 32, 34]
+  H(T')=11: deltas = [0, 8, 12, 14, 18, 22, 26, 30, 32, 34]
+  H(T')=13: deltas = [0, 10, 12, 16, 18, 20, 24, 30, 32]
+  H(T')=15: deltas = [0, 12, 16, 18, 22, 26, 28]
+
+  Achievable odd H values at n=6: 19
+  Missing odd values in [1, 45]: [7, 21, 35, 39]
+  Widest range: T' with H=9, deltas span 34, range [9, 43]
+
+======================================================================
+PART C: WHY EXACTLY 7 AND 21 ARE FORBIDDEN
+======================================================================
+
+  Checking achievability of (alpha_1, alpha_2) pairs:
+  H=23 achievable at n<=6
+  H=25 achievable at n<=6
+  H=23 achievable at n=7(sampled)
+  H=25 achievable at n=7(sampled)
+
+  STRUCTURAL ANALYSIS:
+  H = 1 + 2*S where S = alpha_1 + 2*alpha_2 + 4*alpha_3 + ...
+  For H to be forbidden, ALL decompositions of S must be blocked.
+
+  H=7:  S=3. Decomps: (3,0) [blocked: alpha_1=3 + no disjoint => c5 forces more]
+               (1,1) [impossible: alpha_2=1 needs alpha_1>=2]
+
+  H=21: S=10. Decomps: (10,0),(8,1),(6,2),(4,3),(2,4),(0,5)
+               ALL blocked by independent arguments (THM-079)
+
+  H=23: S=11. Decomps: (11,0),(9,1),(7,2),(5,3),(3,4),(1,5)
+               (11,0) IS achievable at n=7 (many tournaments)
+
+  PATTERN: S=3 and S=10 are the ONLY values where ALL decompositions
+  are simultaneously blocked. For S >= 11, the number of decompositions
+  grows, and at least one is always achievable for large enough n.
+
+  CONJECTURE: 7 and 21 are the only forbidden H values because
+  they are the only values where every (alpha_1, alpha_2, ...) decomposition
+  is independently blocked by a structural constraint.
+
+  Running Part A (Walsh degree at n=7) — this takes ~5-10 min...
+======================================================================
+PART A: WALSH DEGREE OF H AT n=7
+======================================================================
+  n=7, m=21, N=2^21=2097152
+  Computing H for all 2097152 tournaments...
+    Progress: 500000/2097152 (23.8%)
+    Progress: 1000000/2097152 (47.7%)
+    Progress: 1500000/2097152 (71.5%)
+    Progress: 2000000/2097152 (95.4%)
+  H computed. Range: 1 to 189
+  Mean H = 78.7500 (expected 78.7500)
+  Computing Walsh transform...
+
+  Walsh coefficients by Hamming weight:
+    hw=0: 1 nonzero coefficients, max|val| = 78.750000
+    hw=2: 105 nonzero coefficients, max|val| = 3.750000
+    hw=4: 1890 nonzero coefficients, max|val| = 0.375000
+    hw=6: 2520 nonzero coefficients, max|val| = 0.031250
+
+  ===== WALSH DEGREE OF H AT n=7: 6 =====
+  Walsh degree INCREASES to 6 at n=7!
+  New degree-6 Walsh contributions appear at n=7
+
+  Even-weight nonzero: 4516
+  Odd-weight nonzero: 0
+  H is purely even-weight: True
+
+  Distinct |Walsh amplitudes|: 5
+    |hat{H}| = 0.03125000: 2520 monomials
+    |hat{H}| = 0.18750000: 1260 monomials
+    |hat{H}| = 0.37500000: 630 monomials
+    |hat{H}| = 3.75000000: 105 monomials
+    |hat{H}| = 78.75000000: 1 monomials
+
+  THM-076 predictions:
+    r=1, k=0: predicted |hat{H}| = 157.50000000
+    r=2, k=0: predicted |hat{H}| = 315.00000000
+    r=3, k=0: predicted |hat{H}| = 630.00000000
+    r=1, k=1: predicted |hat{H}| = 3.75000000
+    r=2, k=1: predicted |hat{H}| = 7.50000000
+    r=3, k=1: predicted |hat{H}| = 15.00000000
+    r=1, k=2: predicted |hat{H}| = 0.18750000
+    r=2, k=2: predicted |hat{H}| = 0.37500000
+    r=3, k=2: predicted |hat{H}| = 0.75000000
+    r=1, k=3: predicted |hat{H}| = 0.03125000

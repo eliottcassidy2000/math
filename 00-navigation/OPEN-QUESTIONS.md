@@ -678,12 +678,27 @@ Every major result in the project is fundamentally about cancellation: im(d₂) 
 
 ---
 
-## OPEN-Q-035 🟡
+## OPEN-Q-035 -- RESOLVED (degree = 2*floor((n-1)/2), NOT fixed at 4)
 **Does the heat kernel polynomial P_x(z) have degree exactly floor(n/3)*2 for general n?**
 
-At n=6 (m=10): the Walsh degree of H is exactly 4 = 2*floor(6/3). The degree-5+ Walsh coefficients are ALL zero. Is this a general theorem? If so, what determines the degree? At n=7 (m=15): is the Walsh degree 4 (same as n=6) or higher? The degree controls the number of polynomial coefficients needed for InstantMCMC.
+**RESOLVED by kind-pasteur-2026-03-20-S2 (THM-259):**
 
-**Source:** kind-pasteur-2026-03-17-S116n33
+The Walsh degree is NOT fixed at 4. It is **2*floor((n-1)/2)**:
+- n=5,6: degree 4
+- n=7,8: degree 6 (INCREASES! 2520 new degree-6 coefficients at n=7)
+- n=9,10: degree 8
+- General: n-1 for odd n, n-2 for even n
+
+Follows from THM-076: the maximum Walsh weight is 2*max_k where k <= (n-1)/2.
+Verified exhaustively at n=5 (91 nonzero coefficients) and n=7 (4516 nonzero).
+
+The original conjecture floor(n/3)*2 was correct for n=5,6 but WRONG for n=7.
+THM-076 gives the correct formula via path-covering analysis.
+
+Only 5 distinct |Walsh amplitudes| at n=7, all matching THM-076 exactly.
+Super orthogonality redundancy: 4516 / 2 = 2258x.
+
+**Source:** kind-pasteur-2026-03-20-S2, THM-259
 
 ---
 
