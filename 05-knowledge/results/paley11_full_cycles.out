@@ -1,0 +1,46 @@
+Computing full directed cycle structure for Paley T_11...
+  3-cycles: 55 directed cycles on 55 vertex sets (avg 1.00 per set)
+  5-cycles: 594 directed cycles on 352 vertex sets (avg 1.69 per set)
+  7-cycles: 3960 directed cycles on 330 vertex sets (avg 12.00 per set)
+  9-cycles: 11055 directed cycles on 55 vertex sets (avg 201.00 per set)
+  11-cycles: 5505 directed cycles on 1 vertex sets (avg 5505.00 per set)
+
+  Total directed odd cycles: 21169
+  By length: {3: 55, 5: 594, 7: 3960, 9: 11055, 11: 5505}
+
+  Computing alpha vector...
+  alpha = [1, 21169, 10879, 1155]
+  I(Omega, 2) = 95095
+  Expected H = 95095
+  Match: True
+
+
+Computing for Interval T_11...
+  3-cycles: 55 directed cycles on 55 vertex sets (avg 1.00 per set)
+  5-cycles: 484 directed cycles on 407 vertex sets (avg 1.19 per set)
+  7-cycles: 3399 directed cycles on 330 vertex sets (avg 10.30 per set)
+  9-cycles: 9350 directed cycles on 55 vertex sets (avg 170.00 per set)
+  11-cycles: 5109 directed cycles on 1 vertex sets (avg 5109.00 per set)
+
+  Total directed odd cycles: 18397
+  By length: {3: 55, 5: 484, 7: 3399, 9: 9350, 11: 5109}
+  alpha = [1, 18397, 11110, 1474]
+  I(Omega, 2) = 93027
+  Expected H = 93027
+  Match: True
+
+
+============================================================
+COMPARISON: Paley vs Interval at p=11
+============================================================
+                              Paley     Interval      Ratio
+  3-cycles:                 55           55      1.000
+  5-cycles:                594          484      1.227
+  7-cycles:               3960         3399      1.165
+  9-cycles:              11055         9350      1.182
+  11-cycles:               5505         5109      1.078
+                 Total        21169        18397      1.151
+               alpha_1        21169        18397
+               alpha_2        10879        11110
+               alpha_3         1155         1474
+                     H        95095        93027   1.022230

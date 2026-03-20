@@ -1,0 +1,47 @@
+======================================================================
+ALPHA_1 + 2*ALPHA_2 CONSTRAINT ANALYSIS
+======================================================================
+
+--- n=5 ---
+  score (0, 1, 2, 3, 4) (SC=True): max H=1, IP=[1], a1+2*a2=0, weighted_sum=0
+  score (0, 1, 3, 3, 3) (SC=False): max H=3, IP=[1, 1], a1+2*a2=1, weighted_sum=2
+  score (0, 2, 2, 2, 4) (SC=True): max H=3, IP=[1, 1], a1+2*a2=1, weighted_sum=2
+  score (0, 2, 2, 3, 3) (SC=False): max H=5, IP=[1, 2], a1+2*a2=2, weighted_sum=4
+  score (1, 1, 1, 3, 4) (SC=False): max H=3, IP=[1, 1], a1+2*a2=1, weighted_sum=2
+  score (1, 1, 2, 2, 4) (SC=False): max H=5, IP=[1, 2], a1+2*a2=2, weighted_sum=4
+  score (1, 1, 2, 3, 3) (SC=True): max H=9, IP=[1, 4], a1+2*a2=4, weighted_sum=8
+  score (1, 2, 2, 2, 3) (SC=True): max H=15, IP=[1, 7], a1+2*a2=7, weighted_sum=14
+  score (2, 2, 2, 2, 2) (SC=True): max H=15, IP=[1, 7], a1+2*a2=7, weighted_sum=14
+
+--- n=6 ALL SCORE CLASSES ---
+  22 score classes
+  score (0, 1, 2, 3, 4, 5) (SC=True): max H=1, IP=[1], a1+2*a2=0
+  score (0, 1, 2, 4, 4, 4) (SC=False): max H=3, IP=[1, 1], a1+2*a2=1
+  score (0, 1, 3, 3, 3, 5) (SC=False): max H=3, IP=[1, 1], a1+2*a2=1
+  score (0, 1, 3, 3, 4, 4) (SC=False): max H=5, IP=[1, 2], a1+2*a2=2
+  score (0, 2, 2, 2, 4, 5) (SC=False): max H=3, IP=[1, 1], a1+2*a2=1
+  score (0, 2, 2, 3, 3, 5) (SC=True): max H=5, IP=[1, 2], a1+2*a2=2
+  score (0, 2, 2, 3, 4, 4) (SC=False): max H=9, IP=[1, 4], a1+2*a2=4
+  score (0, 2, 3, 3, 3, 4) (SC=False): max H=15, IP=[1, 7], a1+2*a2=7
+  score (0, 3, 3, 3, 3, 3) (SC=False): max H=15, IP=[1, 7], a1+2*a2=7
+  score (1, 1, 1, 3, 4, 5) (SC=False): max H=3, IP=[1, 1], a1+2*a2=1
+  score (1, 1, 1, 4, 4, 4) (SC=True): max H=9, IP=[1, 2, 1], a1+2*a2=4
+  score (1, 1, 2, 2, 4, 5) (SC=False): max H=5, IP=[1, 2], a1+2*a2=2
+  score (1, 1, 2, 3, 3, 5) (SC=False): max H=9, IP=[1, 4], a1+2*a2=4
+  score (1, 1, 2, 3, 4, 4) (SC=True): max H=17, IP=[1, 8], a1+2*a2=8
+  score (1, 1, 3, 3, 3, 4) (SC=False): max H=27, IP=[1, 11, 1], a1+2*a2=13
+  score (1, 2, 2, 2, 3, 5) (SC=False): max H=15, IP=[1, 7], a1+2*a2=7
+  score (1, 2, 2, 2, 4, 4) (SC=False): max H=27, IP=[1, 11, 1], a1+2*a2=13
+  score (1, 2, 2, 3, 3, 4) (SC=True): max H=37, IP=[1, 14, 2], a1+2*a2=18
+  score (1, 2, 3, 3, 3, 3) (SC=False): max H=37, IP=[1, 14, 2], a1+2*a2=18
+  score (2, 2, 2, 2, 2, 5) (SC=False): max H=15, IP=[1, 7], a1+2*a2=7
+  score (2, 2, 2, 2, 3, 4) (SC=False): max H=37, IP=[1, 16, 1], a1+2*a2=18
+  score (2, 2, 2, 3, 3, 3) (SC=True): max H=45, IP=[1, 14, 4], a1+2*a2=22
+
+--- SC SCORE CLASSES: Is max alpha_1+2*alpha_2 always from SC? ---
+  score (0, 1, 2, 3, 4, 5): max H=1, IP=[1], a1+2*a2=0
+  score (0, 2, 2, 3, 3, 5): max H=5, IP=[1, 2], a1+2*a2=2
+  score (1, 1, 1, 4, 4, 4): max H=9, IP=[1, 2, 1], a1+2*a2=4
+  score (1, 1, 2, 3, 4, 4): max H=17, IP=[1, 8], a1+2*a2=8
+  score (1, 2, 2, 3, 3, 4): max H=37, IP=[1, 14, 2], a1+2*a2=18
+  score (2, 2, 2, 3, 3, 3): see THM-255 for complete analysis
