@@ -1,0 +1,110 @@
+======================================================================
+COMPUTING P(n) VIA BURNSIDE BY CYCLE TYPE
+======================================================================
+
+  --- n=1 ---
+    partition [1]: N=1, fix=1, c_T=1, contribution=1
+
+    P(1) = 1
+    T(1) = 1
+    n*T(n) = 1
+    Deficit = n*T(n) - P(n) = 0
+
+  --- n=2 ---
+    partition [1, 1]: N=1, fix=2, c_T=2, contribution=4
+
+    P(2) = 2
+    T(2) = 1
+    n*T(n) = 2
+    Deficit = n*T(n) - P(n) = 0
+
+  --- n=3 ---
+    partition [1, 1, 1]: N=1, fix=3, c_T=8, contribution=24
+
+    P(3) = 4
+    T(3) = 2
+    n*T(n) = 6
+    Deficit = n*T(n) - P(n) = 2
+    2*C(2*0,0) = 2
+    Formula: n*T(n) - 2*C(2(n-3),n-3) = 4
+    Match: True
+
+  --- n=4 ---
+    partition [3, 1]: N=8, fix=1, c_T=4, contribution=32
+    partition [1, 1, 1, 1]: N=1, fix=4, c_T=64, contribution=256
+
+    P(4) = 12
+    T(4) = 4
+    n*T(n) = 16
+    Deficit = n*T(n) - P(n) = 4
+    2*C(2*1,1) = 4
+    Formula: n*T(n) - 2*C(2(n-3),n-3) = 12
+    Match: True
+
+  --- n=5 ---
+    partition [3, 1, 1]: N=20, fix=2, c_T=16, contribution=640
+    partition [1, 1, 1, 1, 1]: N=1, fix=5, c_T=1024, contribution=5120
+
+    P(5) = 48
+    T(5) = 12
+    n*T(n) = 60
+    Deficit = n*T(n) - P(n) = 12
+    2*C(2*2,2) = 12
+    Formula: n*T(n) - 2*C(2(n-3),n-3) = 48
+    Match: True
+
+  --- n=6 ---
+    partition [5, 1]: N=144, fix=1, c_T=8, contribution=1152
+    partition [3, 1, 1, 1]: N=40, fix=3, c_T=128, contribution=15360
+    partition [1, 1, 1, 1, 1, 1]: N=1, fix=6, c_T=32768, contribution=196608
+
+    P(6) = 296
+    T(6) = 56
+    n*T(n) = 336
+    Deficit = n*T(n) - P(n) = 40
+    2*C(2*3,3) = 40
+    Formula: n*T(n) - 2*C(2(n-3),n-3) = 296
+    Match: True
+
+  --- n=7 ---
+    partition [5, 1, 1]: N=504, fix=2, c_T=32, contribution=32256
+    partition [3, 3, 1]: N=280, fix=1, c_T=128, contribution=35840
+    partition [3, 1, 1, 1, 1]: N=70, fix=4, c_T=2048, contribution=573440
+    partition [1, 1, 1, 1, 1, 1, 1]: N=1, fix=7, c_T=2097152, contribution=14680064
+
+    P(7) = 3040
+    T(7) = 456
+    n*T(n) = 3192
+    Deficit = n*T(n) - P(n) = 152
+    2*C(2*4,4) = 140
+    Formula: n*T(n) - 2*C(2(n-3),n-3) = 3052
+    Match: False
+
+  --- n=8 ---
+    partition [7, 1]: N=5760, fix=1, c_T=16, contribution=92160
+    partition [5, 1, 1, 1]: N=1344, fix=3, c_T=256, contribution=1032192
+    partition [3, 3, 1, 1]: N=1120, fix=2, c_T=1024, contribution=2293760
+    partition [3, 1, 1, 1, 1, 1]: N=112, fix=5, c_T=65536, contribution=36700160
+    partition [1, 1, 1, 1, 1, 1, 1, 1]: N=1, fix=8, c_T=268435456, contribution=2147483648
+
+    P(8) = 54256
+    T(8) = 6880
+    n*T(n) = 55040
+    Deficit = n*T(n) - P(n) = 784
+    2*C(2*5,5) = 504
+    Formula: n*T(n) - 2*C(2(n-3),n-3) = 54536
+    Match: False
+
+  ============================================================
+  SUMMARY
+  ============================================================
+
+     n     T(n)     P(n)   n*T(n)     D(n) 2C(2k,k)  Formula
+     1        1        1        1        0        0        1  Y
+     2        1        2        2        0        0        2  Y
+     3        2        4        6        2        2        4  Y
+     4        4       12       16        4        4       12  Y
+     5       12       48       60       12       12       48  Y
+     6       56      296      336       40       40      296  Y
+     7      456     3040     3192      152      140     3052  N
+     8     6880    54256    55040      784      504    54536  N
