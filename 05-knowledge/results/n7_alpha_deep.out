@@ -1,0 +1,62 @@
+======================================================================
+n=7 REGULAR TOURNAMENT ALPHA ANALYSIS
+======================================================================
+  Found H=171 representative (bits=1316657) in 373 attempts
+  Found H=175 representative (bits=1712924) in 377 attempts
+  Found H=189 representative (bits=586963) in 5470 attempts
+
+  --- H=171 ---
+  Directed cycles by length: {3: 14, 5: 36, 7: 15}
+  Total directed cycles (alpha_1): 65
+  Disjoint pairs (alpha_2): 10
+  S = alpha_1 + 2*alpha_2 = 85
+  H = 1 + 2*S = 171
+  Verification: True
+    3-cycles: 14 on 14/35 sets (40.0%), avg 1.00/set
+    5-cycles: 36 on 21/21 sets (100.0%), avg 1.71/set
+    7-cycles: 15 on 1/1 sets (100.0%), avg 15.00/set
+
+  --- H=175 ---
+  Directed cycles by length: {3: 14, 5: 28, 7: 17}
+  Total directed cycles (alpha_1): 59
+  Disjoint pairs (alpha_2): 14
+  S = alpha_1 + 2*alpha_2 = 87
+  H = 1 + 2*S = 175
+  Verification: True
+    3-cycles: 14 on 14/35 sets (40.0%), avg 1.00/set
+    5-cycles: 28 on 21/21 sets (100.0%), avg 1.33/set
+    7-cycles: 17 on 1/1 sets (100.0%), avg 17.00/set
+
+  --- H=189 ---
+  Directed cycles by length: {3: 14, 5: 42, 7: 24}
+  Total directed cycles (alpha_1): 80
+  Disjoint pairs (alpha_2): 7
+  S = alpha_1 + 2*alpha_2 = 94
+  H = 1 + 2*S = 189
+  Verification: True
+    3-cycles: 14 on 14/35 sets (40.0%), avg 1.00/set
+    5-cycles: 42 on 21/21 sets (100.0%), avg 2.00/set
+    7-cycles: 24 on 1/1 sets (100.0%), avg 24.00/set
+
+
+  ===== KEY QUESTION: WHY MORE CYCLES FOR BIBD? =====
+  At n=7, the 3 classes all have c3=14 (same # 3-cycle vertex sets).
+  The difference is in 5-cycles and 7-cycles.
+  BIBD has MORE 5-cycles per 5-vertex subset because its
+  3-cycle distribution is more UNIFORM across vertex pairs.
+  This creates more regular sub-tournaments on 5 vertices,
+  which have more Hamiltonian cycles (H_5 is maximized by regularity).
+
+  5-vertex subtournament analysis:
+
+    H=171: 5-vertex sub-tournament H distribution: {9: 3, 11: 6, 13: 6, 15: 6}
+    Score distribution: {(1, 1, 2, 3, 3): 3, (1, 2, 2, 2, 3): 15, (2, 2, 2, 2, 2): 3}
+    Average H_5 = 12.43
+
+    H=175: 5-vertex sub-tournament H distribution: {9: 7, 11: 7, 15: 7}
+    Score distribution: {(1, 1, 2, 3, 3): 7, (1, 2, 2, 2, 3): 7, (2, 2, 2, 2, 2): 7}
+    Average H_5 = 11.67
+
+    H=189: 5-vertex sub-tournament H distribution: {13: 21}
+    Score distribution: {(1, 2, 2, 2, 3): 21}
+    Average H_5 = 13.00
