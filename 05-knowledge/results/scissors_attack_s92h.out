@@ -1,0 +1,402 @@
+======================================================================
+ATTACKING THE CENTRAL OPEN PROBLEM
+======================================================================
+
+Built 56 classes in 61.6s
+
+HARD CASES: 13 groups of classes with same I(x) AND same score
+
+======================================================================
+ATTACK 1: PER-VERTEX CYCLE COUNTS
+======================================================================
+
+
+For each vertex v, count how many 3-cycles pass through v.
+This gives a per-vertex profile that the global n3 count misses.
+
+Example: n3=3 could mean:
+  (a) Three cycles sharing one common vertex: profile = (3, 1, 1, 1, 1, 1)
+  (b) Three cycles in a chain: profile = (2, 2, 2, 1, 1, 1)
+  (c) Three independent cycles: impossible at n=6 (would need 9 vertices)
+
+  I=(1, 4), score=(5, 3, 3, 2, 1, 1), H=9: 2 classes
+    class 4: vcp3=(3, 3, 1, 1, 1, 0), vcp5=(1, 1, 1, 1, 1, 0)
+    class 6: vcp3=(3, 2, 2, 1, 1, 0), vcp5=(1, 1, 1, 1, 1, 0)
+    Separated by vertex-cycle profile: YES
+
+  I=(1, 4), score=(4, 4, 3, 2, 2, 0), H=9: 2 classes
+    class 10: vcp3=(3, 3, 1, 1, 1, 0), vcp5=(1, 1, 1, 1, 1, 0)
+    class 14: vcp3=(3, 2, 2, 1, 1, 0), vcp5=(1, 1, 1, 1, 1, 0)
+    Separated by vertex-cycle profile: YES
+
+  I=(1, 5), score=(5, 3, 2, 2, 2, 1), H=11: 3 classes
+    class 8: vcp3=(4, 2, 2, 2, 2, 0), vcp5=(1, 1, 1, 1, 1, 0)
+    class 21: vcp3=(3, 3, 2, 2, 2, 0), vcp5=(1, 1, 1, 1, 1, 0)
+    class 22: vcp3=(3, 3, 2, 2, 2, 0), vcp5=(1, 1, 1, 1, 1, 0)
+    Separated by vertex-cycle profile: NO
+
+  I=(1, 5), score=(4, 3, 3, 3, 2, 0), H=11: 3 classes
+    class 18: vcp3=(4, 2, 2, 2, 2, 0), vcp5=(1, 1, 1, 1, 1, 0)
+    class 43: vcp3=(3, 3, 2, 2, 2, 0), vcp5=(1, 1, 1, 1, 1, 0)
+    class 44: vcp3=(3, 3, 2, 2, 2, 0), vcp5=(1, 1, 1, 1, 1, 0)
+    Separated by vertex-cycle profile: NO
+
+  I=(1, 7), score=(4, 4, 3, 2, 1, 1), H=15: 2 classes
+    class 11: vcp3=(4, 3, 2, 1, 1, 1), vcp5=(3, 3, 3, 2, 2, 2)
+    class 15: vcp3=(4, 3, 2, 1, 1, 1), vcp5=(3, 3, 3, 2, 2, 2)
+    Separated by vertex-cycle profile: NO
+
+  I=(1, 11), score=(4, 3, 3, 2, 2, 1), H=23: 2 classes
+    class 17: vcp3=(6, 3, 3, 2, 2, 2), vcp5=(5, 4, 4, 4, 4, 4)
+    class 20: vcp3=(6, 3, 3, 2, 2, 2), vcp5=(5, 4, 4, 4, 4, 4)
+    Separated by vertex-cycle profile: NO
+
+  I=(1, 10), score=(4, 3, 3, 2, 2, 1), H=25: 2 classes
+    class 28: vcp3=(5, 4, 3, 2, 2, 2), vcp5=(4, 4, 3, 3, 3, 3)
+    class 36: vcp3=(5, 4, 3, 2, 2, 2), vcp5=(4, 4, 3, 3, 3, 3)
+    Separated by vertex-cycle profile: NO
+
+  I=(1, 10, 2), score=(4, 3, 3, 2, 2, 1), H=37: 3 classes
+    class 30: vcp3=(4, 4, 3, 3, 2, 2), vcp5=(4, 4, 3, 3, 3, 3)
+    class 31: vcp3=(4, 4, 3, 3, 2, 2), vcp5=(4, 4, 3, 3, 3, 3)
+    class 38: vcp3=(4, 4, 3, 3, 2, 2), vcp5=(4, 4, 3, 3, 3, 3)
+    Separated by vertex-cycle profile: NO
+
+  I=(1, 10, 1), score=(4, 3, 3, 2, 2, 1), H=31: 3 classes
+    class 32: vcp3=(4, 4, 3, 3, 2, 2), vcp5=(4, 4, 3, 3, 3, 3)
+    class 35: vcp3=(4, 4, 3, 3, 2, 2), vcp5=(4, 4, 3, 3, 3, 3)
+    class 39: vcp3=(4, 4, 3, 3, 2, 2), vcp5=(4, 4, 3, 3, 3, 3)
+    Separated by vertex-cycle profile: NO
+
+  I=(1, 12, 1), score=(4, 3, 2, 2, 2, 2), H=37: 2 classes
+    class 34: vcp3=(5, 4, 3, 3, 3, 3), vcp5=(5, 4, 4, 4, 4, 4)
+    class 40: vcp3=(5, 4, 4, 3, 3, 2), vcp5=(5, 4, 4, 4, 4, 4)
+    Separated by vertex-cycle profile: YES
+
+  I=(1, 12, 1), score=(3, 3, 3, 3, 2, 1), H=33: 2 classes
+    class 48: vcp3=(5, 4, 4, 3, 3, 2), vcp5=(5, 4, 4, 4, 4, 4)
+    class 49: vcp3=(5, 4, 3, 3, 3, 3), vcp5=(5, 4, 4, 4, 4, 4)
+    Separated by vertex-cycle profile: YES
+
+  I=(1, 11, 1), score=(4, 3, 3, 2, 2, 1), H=29: 2 classes
+    class 42: vcp3=(5, 3, 3, 3, 2, 2), vcp5=(5, 4, 4, 4, 4, 4)
+    class 45: vcp3=(5, 3, 3, 3, 2, 2), vcp5=(5, 4, 4, 4, 4, 4)
+    Separated by vertex-cycle profile: NO
+
+  I=(1, 14, 1), score=(3, 3, 3, 2, 2, 2), H=43: 3 classes
+    class 51: vcp3=(5, 4, 4, 4, 4, 3), vcp5=(5, 5, 5, 5, 5, 5)
+    class 52: vcp3=(5, 4, 4, 4, 4, 3), vcp5=(5, 5, 5, 5, 5, 5)
+    class 55: vcp3=(4, 4, 4, 4, 4, 4), vcp5=(5, 5, 5, 5, 5, 5)
+    Separated by vertex-cycle profile: NO
+
+  ATTACK 1 RESULT: 4/13 hard cases resolved
+
+======================================================================
+ATTACK 2: ADJACENCY MATRIX EIGENVALUES
+======================================================================
+
+
+The adjacency matrix eigenvalues are a complete invariant for
+"spectral equivalence" but NOT for isomorphism in general.
+However, they might separate our hard cases.
+
+  I=(1, 4), H=9: 2 classes
+    class 4: spectrum=(np.float64(1.71939284), np.float64(0.0), np.float64(-0.37820167))...
+    class 6: spectrum=(np.float64(1.65930207), np.float64(0.0), np.float64(-0.35863201))...
+    Separated by spectrum: YES
+
+  I=(1, 4), H=9: 2 classes
+    class 10: spectrum=(np.float64(1.71939284), np.float64(0.0), np.float64(-0.37820167))...
+    class 14: spectrum=(np.float64(1.65930207), np.float64(0.0), np.float64(-0.35863201))...
+    Separated by spectrum: YES
+
+  I=(1, 5), H=11: 3 classes
+    class 8: spectrum=(np.float64(1.86039944), np.float64(0.0), np.float64(-0.45943797))...
+    class 21: spectrum=(np.float64(1.86370653), np.float64(0.0), np.float64(-0.43185326))...
+    class 22: spectrum=(np.float64(1.83928676), np.float64(0.0), np.float64(-0.41964338))...
+    Separated by spectrum: YES
+
+  I=(1, 5), H=11: 3 classes
+    class 18: spectrum=(np.float64(1.86039944), np.float64(0.0), np.float64(-0.45943797))...
+    class 43: spectrum=(np.float64(1.86370653), np.float64(0.0), np.float64(-0.43185326))...
+    class 44: spectrum=(np.float64(1.83928676), np.float64(0.0), np.float64(-0.41964338))...
+    Separated by spectrum: YES
+
+  I=(1, 7), H=15: 2 classes
+    class 11: spectrum=(np.float64(1.91701001), np.float64(-0.28801264), np.float64(-0.28801264))...
+    class 15: spectrum=(np.float64(1.91701001), np.float64(-0.28801264), np.float64(-0.28801264))...
+    Separated by spectrum: NO
+
+  I=(1, 11), H=23: 2 classes
+    class 17: spectrum=(np.float64(2.23236053), np.float64(-0.40624112), np.float64(-0.40624112))...
+    class 20: spectrum=(np.float64(2.23236053), np.float64(-0.40624112), np.float64(-0.40624112))...
+    Separated by spectrum: NO
+
+  I=(1, 10), H=25: 2 classes
+    class 28: spectrum=(np.float64(2.1977689), np.float64(-0.38667121), np.float64(-0.38667121))...
+    class 36: spectrum=(np.float64(2.1977689), np.float64(-0.38667121), np.float64(-0.38667121))...
+    Separated by spectrum: NO
+
+  I=(1, 10, 2), H=37: 3 classes
+    class 30: spectrum=(np.float64(2.22606336), np.float64(-0.36965611), np.float64(-0.36965611))...
+    class 31: spectrum=(np.float64(2.1977689), np.float64(-0.38667121), np.float64(-0.38667121))...
+    class 38: spectrum=(np.float64(2.16726423), np.float64(-0.34028577), np.float64(-0.34028577))...
+    Separated by spectrum: YES
+
+  I=(1, 10, 1), H=31: 3 classes
+    class 32: spectrum=(np.float64(2.18338411), np.float64(-0.35514183), np.float64(-0.41412114))...
+    class 35: spectrum=(np.float64(2.18338411), np.float64(-0.35514183), np.float64(-0.41412114))...
+    class 39: spectrum=(np.float64(2.16512836), np.float64(-0.19813608), np.float64(-0.48349614))...
+    Separated by spectrum: NO
+
+  I=(1, 12, 1), H=37: 2 classes
+    class 34: spectrum=(np.float64(2.31346181), np.float64(-0.4375909), np.float64(-0.45818591))...
+    class 40: spectrum=(np.float64(2.31229804), np.float64(-0.44881918), np.float64(-0.44881918))...
+    Separated by spectrum: YES
+
+  I=(1, 12, 1), H=33: 2 classes
+    class 48: spectrum=(np.float64(2.31229804), np.float64(-0.44881918), np.float64(-0.44881918))...
+    class 49: spectrum=(np.float64(2.31346181), np.float64(-0.4375909), np.float64(-0.45818591))...
+    Separated by spectrum: YES
+
+  I=(1, 11, 1), H=29: 2 classes
+    class 42: spectrum=(np.float64(2.1977689), np.float64(-0.38667121), np.float64(-0.38667121))...
+    class 45: spectrum=(np.float64(2.1977689), np.float64(-0.38667121), np.float64(-0.38667121))...
+    Separated by spectrum: NO
+
+  I=(1, 14, 1), H=43: 3 classes
+    class 51: spectrum=(np.float64(2.42567057), np.float64(-0.47279071), np.float64(-0.47279071))...
+    class 52: spectrum=(np.float64(2.42567057), np.float64(-0.47279071), np.float64(-0.47279071))...
+    class 55: spectrum=(np.float64(2.41421356), np.float64(-0.41421356), np.float64(-0.5))...
+    Separated by spectrum: NO
+
+  ATTACK 2 RESULT: 7/13 hard cases resolved
+
+======================================================================
+ATTACK 3: CYCLE OVERLAP GRAPH
+======================================================================
+
+
+Omega(T) has edges between cycles that share vertices.
+But HOW MANY vertices do they share? And in what pattern?
+
+The overlap graph: vertices = odd cycles, edge weight = |shared vertices|.
+The sorted weight sequence is an invariant.
+
+  I=(1, 4), H=9: 2 classes
+    class 4: overlap=(3, 3, 3, 2, 2, 2)...
+    class 6: overlap=(3, 3, 3, 2, 2, 1)...
+    Separated by overlap: YES
+
+  I=(1, 4), H=9: 2 classes
+    class 10: overlap=(3, 3, 3, 2, 2, 2)...
+    class 14: overlap=(3, 3, 3, 2, 2, 1)...
+    Separated by overlap: YES
+
+  I=(1, 5), H=11: 3 classes
+    class 8: overlap=(3, 3, 3, 3, 2, 2)...
+    class 21: overlap=(3, 3, 3, 3, 2, 2)...
+    class 22: overlap=(3, 3, 3, 3, 2, 2)...
+    Separated by overlap: NO
+
+  I=(1, 5), H=11: 3 classes
+    class 18: overlap=(3, 3, 3, 3, 2, 2)...
+    class 43: overlap=(3, 3, 3, 3, 2, 2)...
+    class 44: overlap=(3, 3, 3, 3, 2, 2)...
+    Separated by overlap: NO
+
+  I=(1, 12, 1), H=37: 2 classes
+    class 34: overlap=(4, 4, 4, 4, 4, 4)...
+    class 40: overlap=(4, 4, 4, 4, 4, 4)...
+    Separated by overlap: YES
+
+  I=(1, 12, 1), H=33: 2 classes
+    class 48: overlap=(4, 4, 4, 4, 4, 4)...
+    class 49: overlap=(4, 4, 4, 4, 4, 4)...
+    Separated by overlap: YES
+
+  I=(1, 14, 1), H=43: 3 classes
+    class 51: overlap=(4, 4, 4, 4, 4, 4)...
+    class 52: overlap=(4, 4, 4, 4, 4, 4)...
+    class 55: overlap=(4, 4, 4, 4, 4, 4)...
+    Separated by overlap: NO
+
+  ATTACK 3 RESULT: 4/13 hard cases resolved
+
+======================================================================
+ATTACK 4: COMBINED INVARIANT
+======================================================================
+
+  56 isomorphism classes
+  50 distinct combined invariants
+  Combined invariant is NOT complete (6 collisions)
+
+  Remaining collisions:
+    2 classes share ALL invariants:
+      class 11: H=15, score=(4, 4, 3, 2, 1, 1), n3=4, n5=3
+      class 15: H=15, score=(4, 4, 3, 2, 1, 1), n3=4, n5=3
+    2 classes share ALL invariants:
+      class 17: H=23, score=(4, 3, 3, 2, 2, 1), n3=6, n5=5
+      class 20: H=23, score=(4, 3, 3, 2, 2, 1), n3=6, n5=5
+    2 classes share ALL invariants:
+      class 28: H=25, score=(4, 3, 3, 2, 2, 1), n3=6, n5=4
+      class 36: H=25, score=(4, 3, 3, 2, 2, 1), n3=6, n5=4
+    2 classes share ALL invariants:
+      class 32: H=31, score=(4, 3, 3, 2, 2, 1), n3=6, n5=4
+      class 35: H=31, score=(4, 3, 3, 2, 2, 1), n3=6, n5=4
+    2 classes share ALL invariants:
+      class 42: H=29, score=(4, 3, 3, 2, 2, 1), n3=6, n5=5
+      class 45: H=29, score=(4, 3, 3, 2, 2, 1), n3=6, n5=5
+    2 classes share ALL invariants:
+      class 51: H=43, score=(3, 3, 3, 2, 2, 2), n3=8, n5=6
+      class 52: H=43, score=(3, 3, 3, 2, 2, 2), n3=8, n5=6
+
+======================================================================
+ATTACK 5: TRANSPOSE PAIRING STRUCTURE
+======================================================================
+
+
+Every tournament T has a transpose T^op (reverse all arcs).
+H(T) = H(T^op) always. If T ≅ T^op, T is self-dual.
+
+For non-self-dual tournaments, T and T^op form a PAIR.
+These pairs always share the same I(x).
+Could the collision groups simply be {T, T^op} pairs?
+
+  Collision analysis via transpose pairing:
+    classes [11, 15]: transposes = [15, 11], TRANSPOSE PAIR
+    classes [17, 20]: transposes = [20, 17], TRANSPOSE PAIR
+    classes [28, 36]: transposes = [36, 28], TRANSPOSE PAIR
+    classes [32, 35]: transposes = [35, 32], TRANSPOSE PAIR
+    classes [42, 45]: transposes = [45, 42], TRANSPOSE PAIR
+    classes [51, 52]: transposes = [52, 51], TRANSPOSE PAIR
+
+======================================================================
+ATTACK 6: SKEW-ADJACENCY MATRIX SPECTRUM
+======================================================================
+
+
+The skew-adjacency matrix S[i][j] = A[i][j] - A[j][i] is ANTISYMMETRIC.
+S has purely imaginary eigenvalues (or zero).
+The eigenvalues come in ±pairs.
+The PFAFFIAN of S is related to H(T).
+
+S captures orientation information that the symmetric adjacency spectrum might miss.
+
+  ATTACK 6 RESULT: 6/13 hard cases resolved by skew spectrum
+  With skew spectrum added: 50 distinct / 56 total
+  Still 6 collisions
+
+
+======================================================================
+SUMMARY: PROGRESS ON THE CENTRAL OPEN PROBLEM
+======================================================================
+
+INVARIANT                    | #CLASSES DISTINGUISHED | COMPLETE?
+-----------------------------------------------------------------
+H alone                      | 19 / 56                | NO
+I(Omega, x)                  | 24 / 56                | NO
+Score sequence                | 22 / 56                | NO
+(I(x), score)                | 38 / 56                | NO
+Adjacency spectrum            | 27 / 56                | NO
+Skew-adjacency spectrum       | 6 / 56                | NO
+Vertex-cycle profile          | 25 / 56                | NO
+Combined (all above)          | 50 / 56                | NO
+
+
+  Even the combined invariant has collisions.
+  The remaining classes are truly hard to separate.
+  Need DEEPER structural invariants.
+
+  STUBBORN COLLISION: classes [11, 15]
+    class 11:
+      [0, 0, 1, 0, 0, 1]
+      [1, 0, 0, 0, 0, 0]
+      [0, 1, 0, 0, 0, 0]
+      [1, 1, 1, 0, 0, 0]
+      [1, 1, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+    class 15:
+      [0, 0, 1, 1, 0, 1]
+      [1, 0, 0, 0, 0, 0]
+      [0, 1, 0, 0, 0, 0]
+      [0, 1, 1, 0, 0, 0]
+      [1, 1, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+  STUBBORN COLLISION: classes [17, 20]
+    class 17:
+      [0, 0, 0, 0, 1, 1]
+      [1, 0, 0, 0, 0, 0]
+      [1, 1, 0, 0, 0, 0]
+      [1, 1, 1, 0, 0, 0]
+      [0, 1, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+    class 20:
+      [0, 0, 0, 1, 1, 1]
+      [1, 0, 0, 0, 0, 0]
+      [1, 1, 0, 0, 0, 0]
+      [0, 1, 1, 0, 0, 0]
+      [0, 1, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+  STUBBORN COLLISION: classes [28, 36]
+    class 28:
+      [0, 1, 0, 0, 1, 1]
+      [0, 0, 0, 1, 0, 0]
+      [1, 1, 0, 0, 0, 0]
+      [1, 0, 1, 0, 0, 0]
+      [0, 1, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+    class 36:
+      [0, 0, 1, 1, 0, 1]
+      [1, 0, 0, 0, 1, 0]
+      [0, 1, 0, 0, 0, 0]
+      [0, 1, 1, 0, 0, 0]
+      [1, 0, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+  STUBBORN COLLISION: classes [32, 35]
+    class 32:
+      [0, 0, 1, 0, 0, 1]
+      [1, 0, 0, 0, 1, 0]
+      [0, 1, 0, 0, 0, 0]
+      [1, 1, 1, 0, 0, 0]
+      [1, 0, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+    class 35:
+      [0, 1, 0, 1, 0, 1]
+      [0, 0, 0, 0, 1, 0]
+      [1, 1, 0, 0, 0, 0]
+      [0, 1, 1, 0, 0, 0]
+      [1, 0, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+  STUBBORN COLLISION: classes [42, 45]
+    class 42:
+      [0, 1, 0, 0, 0, 1]
+      [0, 0, 1, 0, 1, 0]
+      [1, 0, 0, 0, 0, 0]
+      [1, 1, 1, 0, 0, 0]
+      [1, 0, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+    class 45:
+      [0, 1, 0, 1, 0, 1]
+      [0, 0, 1, 0, 1, 0]
+      [1, 0, 0, 0, 0, 0]
+      [0, 1, 1, 0, 0, 0]
+      [1, 0, 1, 1, 0, 0]
+      [0, 1, 1, 1, 1, 0]
+  STUBBORN COLLISION: classes [51, 52]
+    class 51:
+      [0, 0, 0, 0, 1, 1]
+      [1, 0, 0, 1, 0, 1]
+      [1, 1, 0, 0, 0, 0]
+      [1, 0, 1, 0, 0, 0]
+      [0, 1, 1, 1, 0, 0]
+      [0, 0, 1, 1, 1, 0]
+    class 52:
+      [0, 1, 0, 0, 1, 1]
+      [0, 0, 0, 1, 0, 1]
+      [1, 1, 0, 0, 0, 0]
+      [1, 0, 1, 0, 0, 0]
+      [0, 1, 1, 1, 0, 0]
+      [0, 0, 1, 1, 1, 0]
+
+opus-2026-03-20-S92h: ATTACKING THE CENTRAL OPEN PROBLEM
