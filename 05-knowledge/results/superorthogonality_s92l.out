@@ -1,0 +1,266 @@
+======================================================================
+PART 1: T(n) mod n — A TOURNAMENT PRIMALITY TEST?
+======================================================================
+
+     n | prime |            T(n) | T(n) mod n | T(n) mod n²
+  -------------------------------------------------------
+     2 |   YES |               1 |          1 |           1 ←
+     3 |   YES |               2 |          2 |           2 ←
+     4 |       |               4 |          0 |           4
+     5 |   YES |              12 |          2 |          12 ←
+     6 |       |              56 |          2 |          20
+     7 |   YES |             456 |          1 |          15 ←
+     8 |       |            6880 |          0 |          32
+     9 |       |          191536 |          7 |          52
+    10 |       |         9733056 |          6 |          56
+    11 |   YES |       903753248 |          2 |          13 ←
+    12 |       |    154108311168 |          0 |          48
+    13 |   YES |  48542114686912 |          2 |          93 ←
+    14 |       | 28401423719122304 |          4 |          88
+    15 |       | 31021002160355166848 |          8 |          98
+    16 |       | 63530415842308265100288 |          0 |           0
+    17 |   YES | 244912778438520759443245824 |          2 |          53 ←
+    18 |       | 1783398846284777975419600287232 |          4 |          40
+    19 |   YES | 24605641171260376770598003978281472 |          3 |         345 ←
+    20 |       | 645022068557873570931850526424042500096 |         16 |          96
+    21 |       | 32207364031661175384456332260036660040346624 |          9 |           9
+    22 |       | 3070169883150468336193188889176239554269865953280 |          0 |         308
+    23 |   YES | 559879382429394075397997876821117309031348506639435776 |         15 |         383 ←
+    24 |       | 195692027657521876084316842660833482785173437775365039898624 |          0 |         192
+    25 |       | 131326696677895002131450257709457767457170027052967027982788816896 |         21 |          21
+
+======================================================================
+PART 2: THE p-CYCLE TERM IN THE BURNSIDE SUM
+======================================================================
+
+
+For the partition λ = (p) (a single p-cycle):
+  |C_{(p)}| = (p-1)!
+  c(λ) = floor(p/2) = (p-1)/2  (since p is odd)
+  Contribution = (p-1)! × 2^{(p-1)/2}
+  Normalized: (p-1)! × 2^{(p-1)/2} / p! = 2^{(p-1)/2} / p
+
+By Wilson's theorem: (p-1)! ≡ -1 mod p.
+By Euler's criterion: 2^{(p-1)/2} ≡ (2|p) mod p (Legendre symbol).
+  (2|p) = +1 if p ≡ ±1 mod 8
+  (2|p) = -1 if p ≡ ±3 mod 8
+
+So the p-cycle contributes -(2|p)/p to T(p) modulo integers.
+
+     p | (p-1)/2 |  2^((p-1)/2) | 2^.. mod p | (2|p) | p mod 8
+  -------------------------------------------------------
+     3 |       1 |            2 |          2 |    -1 |       3
+     5 |       2 |            4 |          4 |    -1 |       5
+     7 |       3 |            8 |          1 |     1 |       7
+    11 |       5 |           32 |         10 |    -1 |       3
+    13 |       6 |           64 |         12 |    -1 |       5
+    17 |       8 |          256 |          1 |     1 |       1
+    19 |       9 |          512 |         18 |    -1 |       3
+    23 |      11 |         2048 |          1 |     1 |       7
+    29 |      14 |        16384 |         28 |    -1 |       5
+    31 |      15 |        32768 |          1 |     1 |       7
+    37 |      18 |       262144 |         36 |    -1 |       5
+    41 |      20 |      1048576 |          1 |     1 |       1
+    43 |      21 |      2097152 |         42 |    -1 |       3
+
+======================================================================
+PART 3: T(p) × p mod p² (WILSON-TOURNAMENT INTERACTION)
+======================================================================
+
+
+T(p) × p! = Σ_{odd λ ⊢ p} |C_λ| × 2^{c(λ)}
+
+Taking mod p²:
+  The (p) term: (p-1)! × 2^{(p-1)/2} ≡ -2^{(p-1)/2} mod p (Wilson)
+  For mod p²: need (p-1)! mod p² (Wolstenholme's theorem for p≥5):
+    (p-1)! ≡ -1 mod p²  if p is a Wolstenholme prime (only p=16843, 2124679 known)
+    (p-1)! ≡ -1 + k*p mod p²  for most primes
+
+Other terms: partitions with all parts < p contribute smaller powers.
+
+     p |         T(p) |         T(p)*p |  T(p)*p mod p² |  (p-1)! mod p²
+  -----------------------------------------------------------------
+     3 |            2 |              6 |              6 |              2
+     5 |           12 |             60 |             10 |             24
+     7 |          456 |           3192 |              7 |             34
+    11 |    903753248 |     9941285728 |             22 |             10
+    13 | 48542114686912 | 631047490929856 |             26 |            168
+    17 | 244912778438520759443245824 | 4163517233454852910535179008 |             34 |             84
+    19 | 24605641171260376770598003978281472 | 467507182253947158641362075587347968 |             57 |             37
+    23 | 559879382429394075397997876821117309031348506639435776 | 12877225795876063734153951166885698107721015652707022848 |            345 |            183
+
+======================================================================
+PART 4: EIGENVALUE DENOMINATOR AND PRIMALITY
+======================================================================
+
+
+The eigenvalue denominator D(n) = odd_part(C(n,2)) = odd_part(n(n-1)/2).
+
+For prime p: D(p) = p × odd_part((p-1)/2).
+  The factor p appears IRREDUCIBLY in D.
+  No smaller factor of D is divisible by p.
+  p FIRST APPEARS as a prime factor of D at n=p.
+
+For composite n=ab: D(n) = n × ... but n = ab is REDUCIBLE.
+  The factors a and b appeared EARLIER (at n=a and n=b).
+
+THE SPECTRAL PRIMALITY TEST:
+  n is prime iff n divides D(n) but n does NOT divide D(k) for any k < n.
+  Equivalently: n is prime iff n is a NEW prime factor in D(n).
+
+     n | prime |       D(n) | n | D(n) | new factor |       test
+  -------------------------------------------------------
+     3 |   YES |          3 |      YES |        YES |      PRIME
+     4 |       |          3 |          |            |  COMPOSITE
+     5 |   YES |          5 |      YES |        YES |      PRIME
+     6 |       |         15 |          |            |  COMPOSITE
+     7 |   YES |         21 |      YES |        YES |      PRIME
+     8 |       |          7 |          |            |  COMPOSITE
+     9 |       |          9 |      YES |            |  COMPOSITE
+    10 |       |         45 |          |            |  COMPOSITE
+    11 |   YES |         55 |      YES |        YES |      PRIME
+    12 |       |         33 |          |            |  COMPOSITE
+    13 |   YES |         39 |      YES |        YES |      PRIME
+    14 |       |         91 |          |            |  COMPOSITE
+    15 |       |        105 |      YES |            |  COMPOSITE
+    16 |       |         15 |          |            |  COMPOSITE
+    17 |   YES |         17 |      YES |        YES |      PRIME
+    18 |       |        153 |          |            |  COMPOSITE
+    19 |   YES |        171 |      YES |        YES |      PRIME
+    20 |       |         95 |          |            |  COMPOSITE
+    21 |       |        105 |      YES |            |  COMPOSITE
+    22 |       |        231 |          |            |  COMPOSITE
+    23 |   YES |        253 |      YES |        YES |      PRIME
+    24 |       |         69 |          |            |  COMPOSITE
+    25 |       |         75 |      YES |            |  COMPOSITE
+    26 |       |        325 |          |            |  COMPOSITE
+    27 |       |        351 |      YES |            |  COMPOSITE
+    28 |       |        189 |          |            |  COMPOSITE
+    29 |   YES |        203 |      YES |        YES |      PRIME
+
+======================================================================
+PART 5: H(T_p) AS A FUNCTION OF p
+======================================================================
+
+
+For the Paley tournament T_p (p prime, p ≡ 3 mod 4):
+  H(T_p) = the number of Hamiltonian paths.
+
+Known values:
+  p=3:  H = 3
+  p=7:  H = 189
+  p=11: H = 95095 (from earlier computation)
+
+The ratio H(T_p) / (p!/2^{p-1}):
+  This measures how close H is to the upper bound.
+  For random tournaments: H ≈ p!/2^{p-1} (each path has prob 1/2^{p-1}).
+  Paley should achieve close to this (regular → balanced → many paths).
+
+     p |     H(T_p) |   p!/2^(p-1) |    ratio |      H/p
+  --------------------------------------------------
+     3 |          3 |          1.5 |   2.0000 |      1.0
+     7 |        189 |         78.8 |   2.4000 |     27.0
+
+======================================================================
+PART 6: SUPERORTHOGONALITY IN THE OCF
+======================================================================
+
+
+ORTHOGONALITY: Two cycles C_1, C_2 are "orthogonal" if they share no vertices.
+  Their contributions to H are INDEPENDENT: they add 4 (not 2+2) to H.
+
+SUPERORTHOGONALITY: A collection {C_1, ..., C_k} is "superorthogonal" if
+  the cycles are MUTUALLY vertex-disjoint (k-wise, not just pairwise).
+  Their contribution to H is 2^k (not k × 2).
+
+The independence polynomial I(Omega, x) counts superorthogonal collections:
+  a_k = #{collections of k mutually disjoint odd cycles}
+
+For the Paley tournament T_p:
+  a_1 = total directed odd cycles (many, ~p² scale)
+  a_2 = disjoint pairs (few, ~p scale)
+  a_k = 0 for k ≥ 3 when p ≤ 8 (need n ≥ 9 for three disjoint 3-cycles)
+
+SUPERORTHOGONALITY RATIO: R(T) = a_2 / C(a_1, 2)
+  = (actual disjoint pairs) / (possible pairs if all were disjoint)
+  Measures how "superorthogonal" the cycle collection is.
+  R = 0: all cycles overlap (maximum correlation)
+  R = 1: all pairs are disjoint (perfect superorthogonality)
+
+  Paley T_7: a_1 = 80, a_2 = 7
+  Superorthogonality ratio R = 7 / C(80, 2) = 7 / 3160 = 0.002215
+
+  R is VERY SMALL: only 0.222% of cycle pairs are disjoint.
+  The Paley tournament is maximally CORRELATED, not superorthogonal!
+  This is WHY it maximizes H: correlation means 2*a_1 >> 4*a_2.
+
+======================================================================
+PART 7: CAN TOURNAMENTS DETECT PRIMES?
+======================================================================
+
+  T(n) mod n for n = 2..25:
+     n | T(n) mod n | prime |              pattern
+  ------------------------------------------------
+     2 |          1 |   YES |           prime, ≡ 1
+     3 |          2 |   YES | ≡ 2 (prime pattern?)
+     4 |          0 |       |       ≡ 0 (n | T(n))
+     5 |          2 |   YES | ≡ 2 (prime pattern?)
+     6 |          2 |       |       composite, ≡ 2
+     7 |          1 |   YES |           prime, ≡ 1
+     8 |          0 |       |       ≡ 0 (n | T(n))
+     9 |          7 |       |       composite, ≡ 7
+    10 |          6 |       |       composite, ≡ 6
+    11 |          2 |   YES | ≡ 2 (prime pattern?)
+    12 |          0 |       |       ≡ 0 (n | T(n))
+    13 |          2 |   YES | ≡ 2 (prime pattern?)
+    14 |          4 |       |       composite, ≡ 4
+    15 |          8 |       |       composite, ≡ 8
+    16 |          0 |       |       ≡ 0 (n | T(n))
+    17 |          2 |   YES | ≡ 2 (prime pattern?)
+    18 |          4 |       |       composite, ≡ 4
+    19 |          3 |   YES |           prime, ≡ 3
+    20 |         16 |       |      composite, ≡ 16
+    21 |          9 |       |       composite, ≡ 9
+    22 |          0 |       |       ≡ 0 (n | T(n))
+    23 |         15 |   YES |          prime, ≡ 15
+    24 |          0 |       |       ≡ 0 (n | T(n))
+    25 |         21 |       |      composite, ≡ 21
+
+  Analysis:
+    n | T(n) cases: [4, 8, 12, 16, 22, 24]
+    Of these, composite: [4, 8, 12, 16, 22, 24]
+    No prime p has p | T(p) in this range!
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/superorthogonality_s92l.py", line 382, in <module>
+    which contributes 2^{C(n,2)}/n! regardless of primality.
+NameError: name 'C' is not defined
+  This is the OPPOSITE of superorthogonality.
+
+FINDING 4: The tournament-prime connection is INDIRECT.
+  We cannot count primes by counting tournaments, because:
+  - T(n) uses ALL odd-part partitions, not just the p-cycle.
+  - The p-cycle contribution is ~2^((p-1)/2)/p, which is exponentially large.
+  - Other partitions contribute comparable amounts.
+  - The total T(n) is dominated by the identity partition (1^n),
+    which contributes 2^(C(n,2))/n! regardless of primality.
+
+WHAT DOES WORK:
+
+  The FORMAL GROUP connects primes to tournaments via Gauss sums.
+  The Paley tournament T_p has eigenvalues involving g(χ) = √p* (Gauss sum).
+  This connects tournament spectral theory to L-functions at p.
+
+  The SPECTRAL GAP 4/C(p,2) = 8/(p(p-1)) at prime p involves ONLY p.
+  At composite n=ab: the gap 8/(ab(ab-1)) involves the factors a, b.
+
+  The CONDUCTOR D(p) = p × odd_part((p-1)/2) has p as an irreducible factor.
+  The conductor carries the PRIME FACTORIZATION of n.
+
+  So: tournaments don't COUNT primes, but they ENCODE prime structure
+  in their spectral data. The eigenvalue denominator IS the factorization.
+  The Gauss sum IS the prime's contribution to the L-function.
+  The formal group IS the multiplicative structure of the integers.
+
+  Tournaments are a MIRROR of arithmetic, not a shortcut past it.
+
+opus-2026-03-20-S92l: SUPERORTHOGONALITY AND TOURNAMENT-PRIME CORRESPONDENCE
