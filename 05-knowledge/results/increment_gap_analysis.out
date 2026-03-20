@@ -1,0 +1,485 @@
+======================================================================
+INCREMENT GAP ANALYSIS — WHY 7 AND 21 ARE FORBIDDEN
+======================================================================
+
+============================================================
+  n = 5
+============================================================
+
+  H values at n=5: 7 odd values in [1, 15]
+  Missing: [7]
+
+  --- WHY H=7 IS FORBIDDEN ---
+    From H'=1: need delta=6, MISSING (closest: 4<gap>8)
+    From H'=3: need delta=4, MISSING (closest: 2<gap>6)
+    From H'=5: need delta=2, MISSING (closest: 0<gap>4)
+
+  Delta gap structure:
+    H'=1: gaps in deltas: [(4, 8, 4)]
+    H'=3: gaps in deltas: [(2, 6, 4), (6, 10, 4)]
+    H'=5: gaps in deltas: [(0, 4, 4)]
+
+============================================================
+  n = 6
+============================================================
+
+  H values at n=6: 19 odd values in [1, 45]
+  Missing: [7, 21, 35, 39]
+
+  --- WHY H=7 IS FORBIDDEN ---
+    From H'=1: need delta=6, MISSING (closest: 4<gap>8)
+    From H'=3: need delta=4, MISSING (closest: 2<gap>6)
+    From H'=5: need delta=2, MISSING (closest: 0<gap>4)
+
+  --- WHY H=21 IS FORBIDDEN ---
+    From H'=1: need delta=20, MISSING (closest: 18<gap>22)
+    From H'=3: need delta=18, MISSING (closest: 14<gap>20)
+    From H'=5: need delta=16, MISSING (closest: 14<gap>18)
+    From H'=9: need delta=12, MISSING (closest: 10<gap>14)
+    From H'=11: need delta=10, MISSING (closest: 8<gap>12)
+    From H'=13: need delta=8, MISSING (closest: 0<gap>10)
+    From H'=15: need delta=6, MISSING (closest: 0<gap>12)
+
+  --- WHY H=35 IS FORBIDDEN ---
+    From H'=1: need delta=34, MISSING (closest: 22<gap>None)
+    From H'=3: need delta=32, MISSING (closest: 30<gap>None)
+    From H'=5: need delta=30, MISSING (closest: 28<gap>32)
+    From H'=9: need delta=26, MISSING (closest: 24<gap>28)
+    From H'=11: need delta=24, MISSING (closest: 22<gap>26)
+    From H'=13: need delta=22, MISSING (closest: 20<gap>24)
+    From H'=15: need delta=20, MISSING (closest: 18<gap>22)
+
+  --- WHY H=39 IS FORBIDDEN ---
+    From H'=1: need delta=38, MISSING (closest: 22<gap>None)
+    From H'=3: need delta=36, MISSING (closest: 30<gap>None)
+    From H'=5: need delta=34, MISSING (closest: 32<gap>None)
+    From H'=9: need delta=30, MISSING (closest: 28<gap>32)
+    From H'=11: need delta=28, MISSING (closest: 26<gap>30)
+    From H'=13: need delta=26, MISSING (closest: 24<gap>30)
+    From H'=15: need delta=24, MISSING (closest: 22<gap>26)
+
+  Delta gap structure:
+    H'=1: gaps in deltas: [(4, 8, 4), (10, 14, 4), (18, 22, 4)]
+    H'=3: gaps in deltas: [(2, 6, 4), (6, 10, 4), (14, 20, 6), (26, 30, 4)]
+    H'=5: gaps in deltas: [(0, 4, 4), (14, 18, 4), (20, 24, 4), (28, 32, 4)]
+    H'=9: gaps in deltas: [(0, 6, 6), (10, 14, 4), (24, 28, 4), (28, 32, 4)]
+    H'=11: gaps in deltas: [(0, 8, 8), (8, 12, 4), (14, 18, 4), (18, 22, 4), (22, 26, 4), (26, 30, 4)]
+    H'=13: gaps in deltas: [(0, 10, 10), (12, 16, 4), (20, 24, 4), (24, 30, 6)]
+    H'=15: gaps in deltas: [(0, 12, 12), (12, 16, 4), (18, 22, 4), (22, 26, 4)]
+
+============================================================
+  n = 7
+============================================================
+
+  H values at n=7: 77 odd values in [1, 189]
+  Missing: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+
+  --- WHY H=7 IS FORBIDDEN ---
+    From H'=1: need delta=6, MISSING (closest: 4<gap>8)
+    From H'=3: need delta=4, MISSING (closest: 2<gap>6)
+    From H'=5: need delta=2, MISSING (closest: 0<gap>4)
+
+  --- WHY H=21 IS FORBIDDEN ---
+    From H'=1: need delta=20, MISSING (closest: 18<gap>22)
+    From H'=3: need delta=18, MISSING (closest: 14<gap>20)
+    From H'=5: need delta=16, MISSING (closest: 14<gap>18)
+    From H'=9: need delta=12, MISSING (closest: 10<gap>14)
+    From H'=11: need delta=10, MISSING (closest: 8<gap>12)
+    From H'=13: need delta=8, MISSING (closest: 0<gap>10)
+    From H'=15: need delta=6, MISSING (closest: 0<gap>10)
+    From H'=17: need delta=4, MISSING (closest: 0<gap>10)
+    From H'=19: need delta=2, MISSING (closest: 0<gap>12)
+
+  --- WHY H=63 IS FORBIDDEN ---
+    From H'=1: need delta=62, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=60, MISSING (closest: 56<gap>62)
+    From H'=5: need delta=58, MISSING (closest: 54<gap>60)
+    From H'=9: need delta=54, MISSING (closest: 52<gap>56)
+    From H'=11: need delta=52, MISSING (closest: 48<gap>54)
+    From H'=13: need delta=50, MISSING (closest: 48<gap>52)
+    From H'=15: need delta=48, MISSING (closest: 44<gap>50)
+    From H'=17: need delta=46, MISSING (closest: 42<gap>48)
+    From H'=19: need delta=44, MISSING (closest: 40<gap>46)
+    From H'=23: need delta=40, MISSING (closest: 38<gap>42)
+    From H'=25: need delta=38, MISSING (closest: 36<gap>40)
+    From H'=27: need delta=36, MISSING (closest: 30<gap>38)
+    From H'=29: need delta=34, MISSING (closest: 30<gap>36)
+    From H'=31: need delta=32, MISSING (closest: 28<gap>34)
+    From H'=33: need delta=30, MISSING (closest: 26<gap>32)
+    From H'=37: need delta=26, MISSING (closest: 0<gap>28)
+    From H'=41: need delta=22, MISSING (closest: 0<gap>42)
+    From H'=43: need delta=20, MISSING (closest: 0<gap>46)
+    From H'=45: need delta=18, MISSING (closest: 0<gap>48)
+
+  --- WHY H=107 IS FORBIDDEN ---
+    From H'=1: need delta=106, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=104, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=102, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=98, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=96, MISSING (closest: 94<gap>98)
+    From H'=13: need delta=94, MISSING (closest: 90<gap>96)
+    From H'=15: need delta=92, MISSING (closest: 88<gap>94)
+    From H'=17: need delta=90, MISSING (closest: 88<gap>92)
+    From H'=19: need delta=88, MISSING (closest: 86<gap>90)
+    From H'=23: need delta=84, MISSING (closest: 82<gap>86)
+    From H'=25: need delta=82, MISSING (closest: 78<gap>84)
+    From H'=27: need delta=80, MISSING (closest: 74<gap>82)
+    From H'=29: need delta=78, MISSING (closest: 74<gap>80)
+    From H'=31: need delta=76, MISSING (closest: 74<gap>78)
+    From H'=33: need delta=74, MISSING (closest: 72<gap>76)
+    From H'=37: need delta=70, MISSING (closest: 68<gap>72)
+    From H'=41: need delta=66, MISSING (closest: 64<gap>68)
+    From H'=43: need delta=64, MISSING (closest: 62<gap>66)
+    From H'=45: need delta=62, MISSING (closest: 50<gap>64)
+
+  --- WHY H=119 IS FORBIDDEN ---
+    From H'=1: need delta=118, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=116, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=114, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=110, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=108, MISSING (closest: 100<gap>110)
+    From H'=13: need delta=106, MISSING (closest: 104<gap>110)
+    From H'=15: need delta=104, MISSING (closest: 102<gap>106)
+    From H'=17: need delta=102, MISSING (closest: 100<gap>106)
+    From H'=19: need delta=100, MISSING (closest: 98<gap>104)
+    From H'=23: need delta=96, MISSING (closest: 94<gap>98)
+    From H'=25: need delta=94, MISSING (closest: 92<gap>98)
+    From H'=27: need delta=92, MISSING (closest: 90<gap>96)
+    From H'=29: need delta=90, MISSING (closest: 88<gap>94)
+    From H'=31: need delta=88, MISSING (closest: 86<gap>92)
+    From H'=33: need delta=86, MISSING (closest: 84<gap>88)
+    From H'=37: need delta=82, MISSING (closest: 80<gap>84)
+    From H'=41: need delta=78, MISSING (closest: 72<gap>80)
+    From H'=43: need delta=76, MISSING (closest: 74<gap>78)
+    From H'=45: need delta=74, MISSING (closest: 66<gap>78)
+
+  --- WHY H=149 IS FORBIDDEN ---
+    From H'=1: need delta=148, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=146, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=144, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=140, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=138, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=136, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=134, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=132, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=130, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=126, MISSING (closest: 122<gap>128)
+    From H'=25: need delta=124, MISSING (closest: 114<gap>126)
+    From H'=27: need delta=122, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=120, MISSING (closest: 118<gap>122)
+    From H'=31: need delta=118, MISSING (closest: 112<gap>122)
+    From H'=33: need delta=116, MISSING (closest: 112<gap>118)
+    From H'=37: need delta=112, MISSING (closest: 108<gap>114)
+    From H'=41: need delta=108, MISSING (closest: 106<gap>110)
+    From H'=43: need delta=106, MISSING (closest: 104<gap>108)
+    From H'=45: need delta=104, MISSING (closest: 100<gap>106)
+
+  --- WHY H=161 IS FORBIDDEN ---
+    From H'=1: need delta=160, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=158, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=156, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=152, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=150, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=148, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=146, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=144, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=142, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=138, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=136, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=134, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=132, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=130, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=128, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=124, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=120, MISSING (closest: 118<gap>134)
+    From H'=43: need delta=118, MISSING (closest: 116<gap>128)
+    From H'=45: need delta=116, MISSING (closest: 114<gap>126)
+
+  --- WHY H=163 IS FORBIDDEN ---
+    From H'=1: need delta=162, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=160, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=158, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=154, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=152, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=150, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=148, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=146, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=144, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=140, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=138, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=136, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=134, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=132, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=130, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=126, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=122, MISSING (closest: 118<gap>134)
+    From H'=43: need delta=120, MISSING (closest: 116<gap>128)
+    From H'=45: need delta=118, MISSING (closest: 114<gap>126)
+
+  --- WHY H=165 IS FORBIDDEN ---
+    From H'=1: need delta=164, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=162, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=160, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=156, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=154, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=152, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=150, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=148, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=146, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=142, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=140, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=138, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=136, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=134, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=132, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=128, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=124, MISSING (closest: 118<gap>134)
+    From H'=43: need delta=122, MISSING (closest: 116<gap>128)
+    From H'=45: need delta=120, MISSING (closest: 114<gap>126)
+
+  --- WHY H=167 IS FORBIDDEN ---
+    From H'=1: need delta=166, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=164, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=162, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=158, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=156, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=154, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=152, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=150, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=148, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=144, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=142, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=140, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=138, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=136, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=134, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=130, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=126, MISSING (closest: 118<gap>134)
+    From H'=43: need delta=124, MISSING (closest: 116<gap>128)
+    From H'=45: need delta=122, MISSING (closest: 114<gap>126)
+
+  --- WHY H=169 IS FORBIDDEN ---
+    From H'=1: need delta=168, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=166, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=164, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=160, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=158, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=156, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=154, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=152, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=150, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=146, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=144, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=142, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=140, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=138, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=136, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=132, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=128, MISSING (closest: 118<gap>134)
+    From H'=43: need delta=126, MISSING (closest: 116<gap>128)
+    From H'=45: need delta=124, MISSING (closest: 114<gap>126)
+
+  --- WHY H=173 IS FORBIDDEN ---
+    From H'=1: need delta=172, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=170, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=168, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=164, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=162, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=160, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=158, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=156, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=154, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=150, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=148, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=146, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=144, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=142, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=140, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=136, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=132, MISSING (closest: 118<gap>134)
+    From H'=43: need delta=130, MISSING (closest: 128<gap>None)
+    From H'=45: need delta=128, MISSING (closest: 126<gap>144)
+
+  --- WHY H=177 IS FORBIDDEN ---
+    From H'=1: need delta=176, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=174, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=172, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=168, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=166, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=164, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=162, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=160, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=158, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=154, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=152, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=150, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=148, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=146, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=144, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=140, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=136, MISSING (closest: 134<gap>None)
+    From H'=43: need delta=134, MISSING (closest: 128<gap>None)
+    From H'=45: need delta=132, MISSING (closest: 126<gap>144)
+
+  --- WHY H=179 IS FORBIDDEN ---
+    From H'=1: need delta=178, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=176, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=174, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=170, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=168, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=166, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=164, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=162, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=160, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=156, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=154, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=152, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=150, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=148, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=146, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=142, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=138, MISSING (closest: 134<gap>None)
+    From H'=43: need delta=136, MISSING (closest: 128<gap>None)
+    From H'=45: need delta=134, MISSING (closest: 126<gap>144)
+
+  --- WHY H=181 IS FORBIDDEN ---
+    From H'=1: need delta=180, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=178, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=176, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=172, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=170, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=168, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=166, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=164, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=162, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=158, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=156, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=154, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=152, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=150, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=148, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=144, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=140, MISSING (closest: 134<gap>None)
+    From H'=43: need delta=138, MISSING (closest: 128<gap>None)
+    From H'=45: need delta=136, MISSING (closest: 126<gap>144)
+
+  --- WHY H=183 IS FORBIDDEN ---
+    From H'=1: need delta=182, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=180, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=178, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=174, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=172, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=170, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=168, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=166, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=164, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=160, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=158, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=156, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=154, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=152, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=150, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=146, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=142, MISSING (closest: 134<gap>None)
+    From H'=43: need delta=140, MISSING (closest: 128<gap>None)
+    From H'=45: need delta=138, MISSING (closest: 126<gap>144)
+
+  --- WHY H=185 IS FORBIDDEN ---
+    From H'=1: need delta=184, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=182, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=180, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=176, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=174, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=172, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=170, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=168, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=166, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=162, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=160, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=158, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=156, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=154, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=152, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=148, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=144, MISSING (closest: 134<gap>None)
+    From H'=43: need delta=142, MISSING (closest: 128<gap>None)
+    From H'=45: need delta=140, MISSING (closest: 126<gap>144)
+
+  --- WHY H=187 IS FORBIDDEN ---
+    From H'=1: need delta=186, MISSING (closest: 50<gap>None)
+    From H'=3: need delta=184, MISSING (closest: 66<gap>None)
+    From H'=5: need delta=182, MISSING (closest: 86<gap>None)
+    From H'=9: need delta=178, MISSING (closest: 94<gap>None)
+    From H'=11: need delta=176, MISSING (closest: 110<gap>None)
+    From H'=13: need delta=174, MISSING (closest: 110<gap>None)
+    From H'=15: need delta=172, MISSING (closest: 120<gap>None)
+    From H'=17: need delta=170, MISSING (closest: 112<gap>None)
+    From H'=19: need delta=168, MISSING (closest: 114<gap>None)
+    From H'=23: need delta=164, MISSING (closest: 128<gap>None)
+    From H'=25: need delta=162, MISSING (closest: 126<gap>None)
+    From H'=27: need delta=160, MISSING (closest: 108<gap>None)
+    From H'=29: need delta=158, MISSING (closest: 130<gap>None)
+    From H'=31: need delta=156, MISSING (closest: 122<gap>None)
+    From H'=33: need delta=154, MISSING (closest: 126<gap>None)
+    From H'=37: need delta=150, MISSING (closest: 122<gap>None)
+    From H'=41: need delta=146, MISSING (closest: 134<gap>None)
+    From H'=43: need delta=144, MISSING (closest: 128<gap>None)
+    From H'=45: need delta=142, MISSING (closest: 126<gap>144)
+
+  Delta gap structure:
+    H'=1: gaps in deltas: [(4, 8, 4), (10, 14, 4), (18, 22, 4), (26, 30, 4), (32, 36, 4), (38, 44, 6), (46, 50, 4)]
+    H'=3: gaps in deltas: [(2, 6, 4), (6, 10, 4), (14, 20, 6), (26, 30, 4), (32, 38, 6), (42, 46, 4), (50, 54, 4), (56, 62, 6), (62, 66, 4)]
+    H'=5: gaps in deltas: [(0, 4, 4), (14, 18, 4), (20, 24, 4), (32, 36, 4), (36, 40, 4), (40, 44, 4), (54, 60, 6), (78, 86, 8)]
+    H'=9: gaps in deltas: [(0, 6, 6), (10, 14, 4), (24, 28, 4), (36, 40, 4), (46, 50, 4), (52, 56, 4), (68, 72, 4), (76, 80, 4)]
+    H'=11: gaps in deltas: [(0, 8, 8), (8, 12, 4), (14, 18, 4), (18, 22, 4), (26, 30, 4), (34, 40, 6), (42, 48, 6), (48, 54, 6), (56, 62, 6), (64, 70, 6), (72, 80, 8), (86, 92, 6), (94, 98, 4), (100, 110, 10)]
+    H'=13: gaps in deltas: [(0, 10, 10), (12, 16, 4), (20, 24, 4), (24, 28, 4), (32, 36, 4), (36, 48, 12), (48, 52, 4), (52, 56, 4), (58, 62, 4), (64, 68, 4), (70, 74, 4), (86, 90, 4), (90, 96, 6), (104, 110, 6)]
+    H'=15: gaps in deltas: [(0, 10, 10), (22, 26, 4), (30, 34, 4), (44, 50, 6), (50, 54, 4), (62, 66, 4), (68, 74, 6), (76, 82, 6), (88, 94, 6), (102, 106, 4), (108, 114, 6), (114, 120, 6)]
+    H'=17: gaps in deltas: [(0, 10, 10), (18, 22, 4), (24, 30, 6), (36, 40, 4), (42, 48, 6), (54, 58, 4), (60, 64, 4), (70, 74, 4), (76, 80, 4), (80, 84, 4), (84, 88, 4), (88, 92, 4), (94, 98, 4), (100, 106, 6), (106, 112, 6)]
+    H'=19: gaps in deltas: [(0, 12, 12), (20, 24, 4), (26, 30, 4), (40, 46, 6), (54, 58, 4), (60, 64, 4), (64, 70, 6), (72, 76, 4), (76, 82, 6), (86, 90, 4), (90, 98, 8), (98, 104, 6), (106, 112, 6)]
+    H'=23: gaps in deltas: [(0, 14, 14), (38, 42, 4), (60, 66, 6), (82, 86, 4), (94, 98, 4), (100, 106, 6), (110, 114, 4), (114, 122, 8), (122, 128, 6)]
+    H'=25: gaps in deltas: [(0, 18, 18), (20, 24, 4), (24, 28, 4), (30, 34, 4), (36, 40, 4), (42, 48, 6), (58, 64, 6), (72, 76, 4), (78, 84, 6), (92, 98, 6), (98, 104, 6), (110, 114, 4), (114, 126, 12)]
+    H'=27: gaps in deltas: [(0, 18, 18), (18, 24, 6), (24, 28, 4), (30, 38, 8), (38, 42, 4), (44, 48, 4), (52, 62, 10), (66, 74, 8), (74, 82, 8), (84, 88, 4), (90, 96, 6), (96, 104, 8), (104, 108, 4)]
+    H'=29: gaps in deltas: [(0, 20, 20), (22, 26, 4), (26, 30, 4), (30, 36, 6), (54, 60, 6), (74, 80, 6), (88, 94, 6), (94, 98, 4), (118, 122, 4), (122, 130, 8)]
+    H'=31: gaps in deltas: [(0, 22, 22), (24, 28, 4), (28, 34, 6), (50, 56, 6), (74, 78, 4), (86, 92, 6), (92, 96, 4), (98, 102, 4), (112, 122, 10)]
+    H'=33: gaps in deltas: [(0, 24, 24), (26, 32, 6), (46, 50, 4), (52, 56, 4), (72, 76, 4), (84, 88, 4), (90, 96, 6), (112, 118, 6)]
+    H'=37: gaps in deltas: [(0, 28, 28), (28, 32, 4), (32, 36, 4), (46, 52, 6), (68, 72, 4), (80, 84, 4), (108, 114, 6)]
+    H'=41: gaps in deltas: [(0, 42, 42), (42, 48, 6), (48, 60, 12), (60, 64, 4), (64, 68, 4), (72, 80, 8), (84, 90, 6), (96, 106, 10), (106, 110, 4), (110, 114, 4), (118, 134, 16)]
+    H'=43: gaps in deltas: [(0, 46, 46), (48, 58, 10), (58, 62, 4), (62, 66, 4), (68, 72, 4), (74, 78, 4), (78, 82, 4), (82, 86, 4), (100, 104, 4), (104, 108, 4), (112, 116, 4), (116, 128, 12)]
+    H'=45: gaps in deltas: [(0, 48, 48), (50, 64, 14), (66, 78, 12), (78, 84, 6), (86, 90, 4), (96, 100, 4), (100, 106, 6), (108, 114, 6), (114, 126, 12), (126, 144, 18)]
+
+
+======================================================================
+DELTA VIA OCF: Delta(T,v) = 2 * sum_C mu(C)
+======================================================================
+
+  n=5: Delta = 2 * c3(v) (all mu=1 at n<=5)
+  c3(v) -> delta mapping:
+    c3(v)=0: deltas = [0], expected 2*c3(v) = 0
+    c3(v)=1: deltas = [2, 4], expected 2*c3(v) = 2
+    c3(v)=2: deltas = [4, 6, 8, 10], expected 2*c3(v) = 4
+    c3(v)=3: deltas = [8, 10, 12], expected 2*c3(v) = 6
+    c3(v)=4: deltas = [10], expected 2*c3(v) = 8
+
+  Including 5-cycles through v:
+    c3v=0, c5v=0: delta = 0 = 2*(0+0) EXACT
+    c3v=1, c5v=0: delta = 2 = 2*(1+0) EXACT
+    c3v=1, c5v=1: delta = 4 = 2*(1+1) EXACT
+    c3v=2, c5v=0: delta = 4 = 2*(2+0) EXACT
+    c3v=2, c5v=1: delta = 6 = 2*(2+1) EXACT
+    c3v=2, c5v=2: delta = 8 = 2*(2+2) EXACT
+    c3v=2, c5v=3: delta = 10 = 2*(2+3) EXACT
+    c3v=3, c5v=1: delta = 8 = 2*(3+1) EXACT
+    c3v=3, c5v=2: delta = 10 = 2*(3+2) EXACT
+    c3v=3, c5v=3: delta = 12 = 2*(3+3) EXACT
+    c3v=4, c5v=1: delta = 10 = 2*(4+1) EXACT
+
+  Total mismatches: 0
+  CONFIRMED: Delta(T,v) = 2 * (c3(v) + c5(v)) at n=5
+  This is OCF: Delta = 2 * sum_{C ni v} mu(C) with all mu=1
+
+  From transitive T_4 (H'=1):
+  Available deltas = [0, 1, 2, 3, 4]
+  For Delta=6: need c3(v)+c5(v)=3
+  But from transitive T_4, the achievable (c3v, c5v) pairs determine
+  which deltas are possible. If (c3v+c5v)=3 is not achievable,
+  then H=7 is blocked from this direction.
