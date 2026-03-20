@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-20-S2 — 2026-03-20: Creative Open Problem Investigation (continued)
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-20-S1
+**Summary:** THM-259 (Walsh degree = 2*floor((n-1)/2), RESOLVES OPEN-Q-035), increment gap mechanism for forbidden H, super orthogonality framework, Chebyshev sieve, PTBW connections
+**New theorems:** THM-259
+**Key finding:** Walsh degree INCREASES to 6 at n=7 (not fixed at 4). H=7 blockade has universal period-4 gap structure across all n.
+
 ## kind-pasteur-2026-03-20-S1 — 2026-03-20: Deep Investigation of Core Open Questions
 
 **Account:** kind-pasteur
