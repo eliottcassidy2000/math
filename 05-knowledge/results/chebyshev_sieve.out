@@ -1,0 +1,208 @@
+======================================================================
+PART 1: CHEBYSHEV FORMULA FOR PALEY CYCLE COUNTS
+======================================================================
+
+  --- Paley T_7 ---
+  x_0 = -1/sqrt(8) = -0.35355339
+  |z|^2 = (p+1)/4 = 2.0000
+  arg(z) = pi - arctan(sqrt(7)) = 1.93216345
+
+     m        T_m(x0)        Re(z^m)          tr(A^m)       c_m=tr/m      known   ok
+     3       0.883883         2.5000            42.00          14.00         14    Y
+     5      -0.972272        -5.5000           210.00          42.00         42    Y
+     7       0.574524         6.5000          2226.00         318.00         24    *
+
+  Chebyshev formula matches direct computation: True
+
+  --- Paley T_11 ---
+  x_0 = -1/sqrt(12) = -0.28867513
+  |z|^2 = (p+1)/4 = 3.0000
+  arg(z) = pi - arctan(sqrt(11)) = 1.86363910
+
+     m        T_m(x0)        Re(z^m)          tr(A^m)       c_m=tr/m      known   ok
+     3       0.769800         4.0000           165.00          55.00         55    Y
+     5      -0.994325       -15.5000          2970.00         594.00        594    Y
+     7       0.887409        41.5000         78540.00       11220.00       3960    *
+     9      -0.484689       -68.0000       1952445.00      216938.33      11055    *
+    11      -0.079594       -33.5000      48827790.00     4438890.00       5505    *
+
+  Chebyshev formula matches direct computation: True
+
+  --- Paley T_19 ---
+  x_0 = -1/sqrt(20) = -0.22360680
+  |z|^2 = (p+1)/4 = 5.0000
+  arg(z) = pi - arctan(sqrt(19)) = 1.79630973
+
+     m        T_m(x0)        Re(z^m)          tr(A^m)       c_m=tr/m      known   ok
+     3       0.626099         7.0000           855.00         285.00          ?     
+     5      -0.903371       -50.5000         58140.00       11628.00          ?     
+     7       0.999970       279.5000       4788000.00      684000.00          ?     
+     9      -0.896574     -1253.0000     387397935.00    43044215.00          ?     
+    11       0.613863      4289.5000   31381136820.00  2852830620.00          ?     
+    13      -0.208380     -7280.5000 2541865697280.00 195528130560.00          ?     
+    15      -0.238779    -41713.0000 205891131343815.00 13726075422921.00          ?     
+    17       0.638183    557429.5000 16677181709700300.00 981010688805900.00          ?     
+    19      -0.909949  -3974040.5000 1350851717601459200.00 71097458821129432.00          ?     
+
+  Chebyshev formula matches direct computation: True
+
+  --- Paley T_23 ---
+  x_0 = -1/sqrt(24) = -0.20412415
+  |z|^2 = (p+1)/4 = 6.0000
+  arg(z) = pi - arctan(sqrt(23)) = 1.77636526
+
+     m        T_m(x0)        Re(z^m)          tr(A^m)       c_m=tr/m      known   ok
+     3       0.578352         8.5000          1518.00         506.00          ?     
+     5      -0.856187       -75.5000        159390.00       31878.00          ?     
+     7       0.991325       524.5000      19498710.00     2785530.00          ?     
+     9      -0.961242     -3051.5000    2357880558.00   261986728.67          ?     
+    11       0.770952     14684.5000  285311993670.00 25937453970.00          ?     
+    13      -0.452170    -51675.5000 34522711007070.00 2655593154390.00          ?     
+    15       0.058026     39788.5000 4177248170290998.00 278483211352733.19          ?     
+    17       0.345789   1422644.5000 505447028530591936.00 29732178148858348.00          ?     
+    19      -0.691972 -17081475.5000 61159090448038756352.00 3218899497265197568.00          ?     
+    21       0.922827 136681028.5000 7400249944261167939584.00 352392854488627019776.00          ?     
+    23      -0.999877 -888558195.5000 895430243255217765220352.00 38931749706748601040896.00          ?     
+
+  Chebyshev formula matches direct computation: False
+
+======================================================================
+PART 2: CHEBYSHEV BOUNDS ON H(T_p)
+======================================================================
+
+  --- p=7 ---
+  x_0 = -0.353553, |x_0| = 0.353553 < 1
+  |z| = 1.4142, lambda_0 = 3.0
+  sum |z|^m (m=3,5,...,7) = 19.80
+  sum lam0^m = 2.46e+03
+  Ratio nontrivial/trivial = 0.048349
+  Actual sum Re(z^m) = 3.5000
+  Bound = 19.7990
+  Cancellation ratio = 0.1768
+  The Chebyshev oscillation causes 82.3% cancellation
+  Szele bound: H <= 2.14e+02
+  H/(p!/2^(p-1)) ratio for convergence to e
+
+  --- p=11 ---
+  x_0 = -0.288675, |x_0| = 0.288675 < 1
+  |z| = 1.7321, lambda_0 = 5.0
+  sum |z|^m (m=3,5,...,11) = 628.73
+  sum lam0^m = 5.09e+07
+  Ratio nontrivial/trivial = 0.000124
+  Actual sum Re(z^m) = -71.5000
+  Bound = 628.7344
+  Cancellation ratio = 0.1137
+  The Chebyshev oscillation causes 88.6% cancellation
+  Szele bound: H <= 1.06e+05
+  H/(p!/2^(p-1)) ratio for convergence to e
+
+  --- p=19 ---
+  x_0 = -0.223607, |x_0| = 0.223607 < 1
+  |z| = 2.2361, lambda_0 = 9.0
+  sum |z|^m (m=3,5,...,19) = 5459147.54
+  sum lam0^m = 1.37e+18
+  Ratio nontrivial/trivial = 0.000000
+  Actual sum Re(z^m) = -3462332.0000
+  Bound = 5459147.5406
+  Cancellation ratio = 0.6342
+  The Chebyshev oscillation causes 36.6% cancellation
+  Szele bound: H <= 1.26e+12
+  H/(p!/2^(p-1)) ratio for convergence to e
+
+  --- p=23 ---
+  x_0 = -0.204124, |x_0| = 0.204124 < 1
+  |z| = 2.4495, lambda_0 = 11.0
+  sum |z|^m (m=3,5,...,23) = 1066401197.92
+  sum lam0^m = 9.03e+23
+  Ratio nontrivial/trivial = 0.000000
+  Actual sum Re(z^m) = -767535794.5000
+  Bound = 1066401197.9213
+  Cancellation ratio = 0.7197
+  The Chebyshev oscillation causes 28.0% cancellation
+  Szele bound: H <= 1.68e+16
+  H/(p!/2^(p-1)) ratio for convergence to e
+
+  --- p=43 ---
+  x_0 = -0.150756, |x_0| = 0.150756 < 1
+  |z| = 3.3166, lambda_0 = 21.0
+  sum |z|^m (m=3,5,...,43) = 26998237661948045950976.00
+  sum lam0^m = 7.18e+56
+  Ratio nontrivial/trivial = 0.000000
+  Actual sum Re(z^m) = 5564785848337381195776.0000
+  Bound = 26998237661948045950976.0000
+  Cancellation ratio = 0.2061
+  The Chebyshev oscillation causes 79.4% cancellation
+  Szele bound: H <= 3.73e+40
+  H/(p!/2^(p-1)) ratio for convergence to e
+
+======================================================================
+PART 3: THE CHEBYSHEV SIEVE FOR I(Omega, 2)
+======================================================================
+
+  The Chebyshev sieve operates at two levels:
+
+  LEVEL 1 (Spectral): For circulant tournaments, the eigenvalues
+  involve Gauss sums whose powers are controlled by Chebyshev T_m.
+  This bounds individual cycle counts c_m via |T_m(x_0)| <= 1.
+
+  LEVEL 2 (Combinatorial): The OCF I(Omega, 2) = sum alpha_k * 2^k
+  acts as a generating function sieve. The alpha_k count vertex-disjoint
+  cycle collections, and the 2^k weighting creates exponential sensitivity
+  to the independence structure of the conflict graph.
+
+  The COMBINATION of Levels 1 and 2 gives:
+  H(T_p) = I(Omega, 2) is controlled by sum_k alpha_k(T_p) * 2^k
+  where alpha_k is bounded by Chebyshev-type cycle counting.
+
+  p=7: Chebyshev bound on alpha_1 (total directed odd cycles):
+    c_3 = 14.0 (Chebyshev: T_3(-0.3536) = 0.883883)
+    c_5 = 42.0 (Chebyshev: T_5(-0.3536) = -0.972272)
+    sum c_m for m<=5: 56.0
+    Known alpha_1 = 80 (includes c7_dir = 24 beyond trace formula)
+
+  p=11: Chebyshev bound on alpha_1 (total directed odd cycles):
+    c_3 = 55.0 (Chebyshev: T_3(-0.2887) = 0.769800)
+    c_5 = 594.0 (Chebyshev: T_5(-0.2887) = -0.994325)
+    sum c_m for m<=5: 649.0
+    Known alpha_1 = 21169
+
+======================================================================
+PART 4: CHEBYSHEV AND THE TRACE ALTERNATION THEOREM (THM-136)
+======================================================================
+
+  Chebyshev sign pattern at x_0 = -1/sqrt(p+1):
+     p        x_0          T_3          T_5          T_7          T_9         T_11
+     7  -0.353553     0.883883    -0.972272     0.574524     0.110485    -0.740252
+                        (+)           (-)           (+)           (+)           (-)    
+    11  -0.288675     0.769800    -0.994325     0.887409    -0.484689    -0.079594
+                        (+)           (-)           (+)           (-)           (-)    
+    19  -0.223607     0.626099    -0.903371     0.999970    -0.896574     0.613863
+                        (+)           (-)           (+)           (-)           (+)    
+    23  -0.204124     0.578352    -0.856187     0.991325    -0.961242     0.770952
+                        (+)           (-)           (+)           (-)           (+)    
+    43  -0.150756     0.438562    -0.686499     0.872027    -0.978280     0.995598
+                        (+)           (-)           (+)           (-)           (+)    
+    67  -0.121268     0.356670    -0.571092     0.751920    -0.888517     0.972849
+                        (+)           (-)           (+)           (-)           (+)    
+
+  Expected sign pattern from THM-136: +, -, +, -, +, ...
+  (For the PALEY non-trivial eigenvalue contribution)
+
+  Verification: sign(T_m(x_0)) matches (-1)^{(m+1)/2}?
+  p=7: ALL MATCH
+  p=11: MISMATCH at m=11
+  p=19: MISMATCH at m=15
+  p=23: MISMATCH at m=17
+  p=43: ALL MATCH
+
+======================================================================
+PART 5: CHEBYSHEV SIEVE AS SUPER ORTHOGONALITY
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\chebyshev_sieve.py", line 415, in <module>
+    part5()
+    ~~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\chebyshev_sieve.py", line 378, in part5
+    - Recurrence: T_{m+1} = 2x*T_m - T_{m-1}
+                     ^
+NameError: name 'm' is not defined
