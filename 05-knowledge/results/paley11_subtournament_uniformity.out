@@ -1,0 +1,62 @@
+
+============================================================
+  Paley T_11 (p=11)
+============================================================
+
+  5-vertex sub-tournaments (462 total):
+    Distinct H values: 5
+    Distinct score sequences: 5
+    Average H: 10.24
+    H distribution: {5: 110, 9: 110, 11: 55, 13: 110, 15: 77}
+    Variance(H): 12.56
+    StdDev(H): 3.54
+    CV(H) = StdDev/Mean: 34.6%
+
+  7-vertex sub-tournaments (330 total):
+    Distinct H values: 4
+    Distinct score sequences: 5
+    Average H: 132.33
+    H distribution: {115: 110, 127: 55, 143: 110, 151: 55}
+    Variance(H): 200.89
+    StdDev(H): 14.17
+    CV(H) = StdDev/Mean: 10.7%
+
+  9-vertex sub-tournaments (55 total):
+    Distinct H values: 1
+    Average H: 2879.00
+    Variance(H): 0.00, CV: 0.0%
+    H distribution: {2879: 55}
+
+============================================================
+  Interval T_11 (p=11)
+============================================================
+
+  5-vertex sub-tournaments (462 total):
+    Distinct H values: 4
+    Distinct score sequences: 4
+    Average H: 9.76
+    H distribution: {1: 55, 9: 165, 11: 165, 15: 77}
+    Variance(H): 14.47
+    StdDev(H): 3.80
+    CV(H) = StdDev/Mean: 39.0%
+
+  7-vertex sub-tournaments (330 total):
+    Distinct H values: 8
+    Distinct score sequences: 7
+    Average H: 122.27
+    H distribution: {33: 11, 47: 22, 51: 11, 105: 77, 123: 77, 137: 11, 151: 77, 175: 44}
+    Variance(H): 1452.93
+    StdDev(H): 38.12
+    CV(H) = StdDev/Mean: 31.2%
+
+  9-vertex sub-tournaments (55 total):
+    Distinct H values: 5
+    Average H: 2669.80
+    Variance(H): 172437.76, CV: 15.6%
+    H distribution: {2125: 11, 2339: 11, 2635: 11, 2983: 11, 3267: 11}
+
+============================================================
+  UNIFORMITY COMPARISON SUMMARY
+============================================================
+  If Paley's sub-tournaments are MORE uniform (lower CV)
+  than Interval's, this confirms the BIBD uniformity mechanism.
