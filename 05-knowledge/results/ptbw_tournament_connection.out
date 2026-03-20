@@ -1,0 +1,169 @@
+======================================================================
+PART 1: CLASS NUMBER h(-p) vs H(T_p)
+======================================================================
+
+     p    h(-p)               H(T_p)              H/h       H/(h*p!)   L(1,chi)
+     3        1                    3             3.00   5.000000e-01   1.813799
+     7        1                  189           189.00   3.750000e-02   1.187410
+    11        1                95095         95095.00   2.382330e-03   0.947226
+    19        1        1172695746915 1172695746915.00   9.640304e-06   0.720731
+    23        3                    ?                ?              ?   1.965202
+    31        3                    ?                ?              ?   1.692740
+    43        1                    ?                ?              ?   0.479088
+    47        5                    ?                ?              ?   2.291242
+    59        3                    ?                ?              ?   1.227002
+    67        1                    ?                ?              ?   0.383807
+    71        7                    ?                ?              ?   2.609869
+    79        5                    ?                ?              ?   1.767284
+    83        3                    ?                ?              ?   1.034504
+
+  Key observations:
+  p=3: h(-p)=1, |Aut|=3, H=3
+    H/|Aut| = 1
+    H/h = 3.0000
+    |Aut|/h = 3.0000
+    h * |Aut| = 3
+    H / (h * |Aut|) = 1.000000
+  p=7: h(-p)=1, |Aut|=21, H=189
+    H/|Aut| = 9
+    H/h = 189.0000
+    |Aut|/h = 21.0000
+    h * |Aut| = 21
+    H / (h * |Aut|) = 9.000000
+  p=11: h(-p)=1, |Aut|=55, H=95095
+    H/|Aut| = 1729
+    H/h = 95095.0000
+    |Aut|/h = 55.0000
+    h * |Aut| = 55
+    H / (h * |Aut|) = 1729.000000
+  p=19: h(-p)=1, |Aut|=171, H=1172695746915
+    H/|Aut| = 6857869865
+    H/h = 1172695746915.0000
+    |Aut|/h = 171.0000
+    h * |Aut| = 171
+    H / (h * |Aut|) = 6857869865.000000
+
+======================================================================
+PART 2: L-FUNCTION VALUES AND PALEY EIGENVALUE PRODUCTS
+======================================================================
+
+  p=3:
+    det(A) = lambda_0 * prod lambda_k = 1.0000e+00
+    prod_{k=1}^{p-1} lambda_k = ((1+p)/4)^((p-1)/2) = 1.0000e+00
+    L(1, chi) = 1.813799
+    h(-p) = 1
+    tr(A) = 0.0 (should be 0)
+
+  p=7:
+    det(A) = lambda_0 * prod lambda_k = 2.4000e+01
+    prod_{k=1}^{p-1} lambda_k = ((1+p)/4)^((p-1)/2) = 8.0000e+00
+    L(1, chi) = 1.187410
+    h(-p) = 1
+    tr(A) = 0.0 (should be 0)
+
+  p=11:
+    det(A) = lambda_0 * prod lambda_k = 1.2150e+03
+    prod_{k=1}^{p-1} lambda_k = ((1+p)/4)^((p-1)/2) = 2.4300e+02
+    L(1, chi) = 0.947226
+    h(-p) = 1
+    tr(A) = 0.0 (should be 0)
+
+  p=19:
+    det(A) = lambda_0 * prod lambda_k = 1.7578e+07
+    prod_{k=1}^{p-1} lambda_k = ((1+p)/4)^((p-1)/2) = 1.9531e+06
+    L(1, chi) = 0.720731
+    h(-p) = 1
+    tr(A) = 0.0 (should be 0)
+
+  p=23:
+    det(A) = lambda_0 * prod lambda_k = 3.9908e+09
+    prod_{k=1}^{p-1} lambda_k = ((1+p)/4)^((p-1)/2) = 3.6280e+08
+    L(1, chi) = 1.965202
+    h(-p) = 3
+    tr(A) = 0.0 (should be 0)
+
+  Does L(1, chi) relate to H(T_p)?
+  p=3: H*2^(p-1)/p! = 2.000000, L(1,chi) = 1.813799, ratio = 1.102658
+  p=7: H*2^(p-1)/p! = 2.400000, L(1,chi) = 1.187410, ratio = 2.021205
+  p=11: H*2^(p-1)/p! = 2.439506, L(1,chi) = 0.947226, ratio = 2.575422
+  p=19: H*2^(p-1)/p! = 2.527148, L(1,chi) = 0.720731, ratio = 3.506369
+
+======================================================================
+PART 3: PTBW VARIANCE SIEVE FOR TOURNAMENT CYCLES
+======================================================================
+
+  Probability that random k-vertex tournament is Hamiltonian-cyclic:
+    k=3: Pr = 0.2500
+    k=5: (too complex for simple formula)
+    k=7: (too complex for simple formula)
+    k=9: (too complex for simple formula)
+    k=11: (too complex for simple formula)
+
+  PTBW SIEVE ANALOG:
+  Let X_T = number of 3-vertex subsets of T that are cyclic (= c3(T))
+  E[X_T] = C(n,3) * Pr[cyclic 3-vertex] = C(n,3) / 4
+  Var[X_T] can be computed from the covariance of 3-cycle indicators
+
+  By Chebyshev's inequality:
+  Pr[|X_T - E[X_T]| > t] <= Var[X_T] / t^2
+
+  This bounds the fraction of tournaments with 'abnormal' cycle counts.
+
+  n=5: E[c3] = 2.50 = 5/2
+    Independent-approx Var[c3] = 1.88
+
+  n=7: E[c3] = 8.75 = 35/4
+    Independent-approx Var[c3] = 6.56
+
+  n=11: E[c3] = 41.25 = 165/4
+    Independent-approx Var[c3] = 30.94
+
+  For regular tournaments (score (n-1)/2):
+    p=3: c3 = 1, C(3,3) = 1, c3/C(p,3) = 1.0000 = 1
+    p=7: c3 = 14, C(7,3) = 35, c3/C(p,3) = 0.4000 = 2/5
+    p=11: c3 = 55, C(11,3) = 165, c3/C(p,3) = 0.3333 = 1/3
+    p=19: c3 = 285, C(19,3) = 969, c3/C(p,3) = 0.2941 = 5/17
+    p=23: c3 = 506, C(23,3) = 1771, c3/C(p,3) = 0.2857 = 2/7
+
+======================================================================
+PART 4: l-TORSION, CLASS GROUPS, AND TOURNAMENT STRUCTURE
+======================================================================
+
+  Class groups of Q(sqrt(-p)) for Paley primes:
+  p=  3: h(-p) =      1, Cl[2]=1, H(T_p) =                    3
+  p=  7: h(-p) =      1, Cl[2]=1, H(T_p) =                  189
+  p= 11: h(-p) =      1, Cl[2]=1, H(T_p) =                95095
+  p= 19: h(-p) =      1, Cl[2]=1, H(T_p) =        1172695746915
+  p= 23: h(-p) =      3, Cl[2]=1, H(T_p) =                    ?
+  p= 31: h(-p) =      3, Cl[2]=1, H(T_p) =                    ?
+  p= 43: h(-p) =      1, Cl[2]=1, H(T_p) =                    ?
+  p= 47: h(-p) =      5, Cl[2]=1, H(T_p) =                    ?
+  p= 59: h(-p) =      3, Cl[2]=1, H(T_p) =                    ?
+  p= 67: h(-p) =      1, Cl[2]=1, H(T_p) =                    ?
+
+  Does h(-p) divide H(T_p)?
+  p=3: h=1, H=3, h|H? True, H/h = 3
+  p=7: h=1, H=189, h|H? True, H/h = 189
+  p=11: h=1, H=95095, h|H? True, H/h = 95095
+  p=19: h=1, H=1172695746915, h|H? True, H/h = 1172695746915
+
+  Gauss sum connection:
+  Paley eigenvalue: lambda_k = (-1 + chi(k)*i*sqrt(p))/2
+  Class number: h(-p) = sqrt(p)/pi * L(1, chi)
+  Both use the SAME Legendre symbol chi = (./p)
+
+  The tournament H(T_p) sums over ALL paths, which involves
+  products of eigenvalues (via the transfer matrix). These
+  products are Gauss sum products, which are Jacobi sums.
+  Jacobi sums are related to higher moments of L-functions.
+
+  PTBW bound the l-torsion Cl[l] using effective Chebotarev
+  to count small split primes. For tournaments, the analogous
+  question is: how many small odd cycles does T_p have?
+  Our Chebyshev sieve (via T_m polynomials) answers exactly this.
+
+  THE SYNTHESIS:
+  PTBW: Chebotarev density => enough small split primes => Cl[l] bound
+  Tournament: Chebyshev T_m => cycle count control => H(T_p) structure
+  Both use the SAME arithmetic (Legendre symbols, Gauss sums)
+  applied to DIFFERENT counting problems.
