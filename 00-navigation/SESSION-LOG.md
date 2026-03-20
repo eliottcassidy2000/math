@@ -13,6 +13,13 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-20-S3 — 2026-03-20: H mod 2^k, arc-flip graph, H-spectrum density
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-20-S2
+**Summary:** H mod 2^k structure at n=7 (biased, approaching uniform), arc-flip graph reveals H=7,21 as isolated vertices, H-spectrum first appearance table, OCF delta verified at n=5
+**Key findings:** H=7 and H=21 are ISOLATED in the arc-flip graph (no single arc flip connects neighboring H values to 7 or 21). H mod 4 distribution biased 55/45 at n=7. 58 new H values first appear at n=7.
+
 ## kind-pasteur-2026-03-20-S2 — 2026-03-20: Creative Open Problem Investigation (continued)
 
 **Account:** kind-pasteur
