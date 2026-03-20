@@ -1,0 +1,131 @@
+======================================================================
+PERSPECTIVE -> CLASS MAP: n=5 -> n+1=6
+======================================================================
+
+  n=5: 12 classes, 48 perspectives (rooted types)
+  Building n=6 class table...
+  n=6: 56 classes
+
+  Computing extension map...
+
+  ============================================================
+  EXTENSION MAP ANALYSIS
+  ============================================================
+
+  Perspectives and their reachable classes:
+    RT[ 0]      (0, 1, 2, 3, 4) v_score=0 | reaches 21 classes: H=1, H=3, H=5, H=3, H=9, H=5, H=9, H=3, H=11, H=17, H=9, H=15, H=5, H=19, H=9, H=15, H=3, H=23, H=11, H=19, H=23
+    RT[ 1]      (0, 1, 2, 3, 4) v_score=1 | reaches 21 classes: H=1, H=3, H=5, H=3, H=9, H=5, H=9, H=3, H=11, H=17, H=9, H=15, H=5, H=19, H=9, H=15, H=3, H=23, H=11, H=19, H=23
+    RT[ 2]      (0, 1, 2, 3, 4) v_score=2 | reaches 21 classes: H=1, H=3, H=5, H=3, H=9, H=5, H=9, H=3, H=11, H=17, H=9, H=15, H=5, H=19, H=9, H=15, H=3, H=23, H=11, H=19, H=23
+    RT[ 3]      (0, 1, 2, 3, 4) v_score=3 | reaches 21 classes: H=1, H=3, H=5, H=3, H=9, H=5, H=9, H=3, H=11, H=17, H=9, H=15, H=5, H=19, H=9, H=15, H=3, H=23, H=11, H=19, H=23
+    RT[ 4]      (0, 1, 2, 3, 4) v_score=4 | reaches 21 classes: H=1, H=3, H=5, H=3, H=9, H=5, H=9, H=3, H=11, H=17, H=9, H=15, H=5, H=19, H=9, H=15, H=3, H=23, H=11, H=19, H=23
+    RT[ 5]      (1, 1, 1, 3, 4) v_score=1 | reaches 13 classes: H=3, H=5, H=3, H=9, H=15, H=15, H=13, H=27, H=23, H=17, H=9, H=33, H=25
+    RT[ 6]      (1, 1, 1, 3, 4) v_score=3 | reaches 13 classes: H=3, H=5, H=3, H=9, H=15, H=15, H=13, H=27, H=23, H=17, H=9, H=33, H=25
+    RT[ 7]      (1, 1, 1, 3, 4) v_score=4 | reaches 13 classes: H=3, H=5, H=3, H=9, H=15, H=15, H=13, H=27, H=23, H=17, H=9, H=33, H=25
+    RT[ 8]      (1, 1, 2, 2, 4) v_score=1 | reaches 23 classes: H=5, H=9, H=5, H=9, H=11, H=19, H=15, H=15, H=13, H=23, H=17, H=15, H=37, H=33, H=31, H=23, H=37, H=31, H=25, H=37, H=29, H=29, H=33
+    RT[ 9]      (1, 1, 2, 2, 4) v_score=1 | reaches 23 classes: H=5, H=9, H=5, H=9, H=11, H=19, H=15, H=15, H=13, H=23, H=17, H=15, H=37, H=33, H=31, H=23, H=37, H=31, H=25, H=37, H=29, H=29, H=33
+    RT[10]      (1, 1, 2, 2, 4) v_score=2 | reaches 23 classes: H=5, H=9, H=5, H=9, H=11, H=19, H=15, H=15, H=13, H=23, H=17, H=15, H=37, H=33, H=31, H=23, H=37, H=31, H=25, H=37, H=29, H=29, H=33
+    RT[11]      (1, 1, 2, 2, 4) v_score=2 | reaches 23 classes: H=5, H=9, H=5, H=9, H=11, H=19, H=15, H=15, H=13, H=23, H=17, H=15, H=37, H=33, H=31, H=23, H=37, H=31, H=25, H=37, H=29, H=29, H=33
+    RT[12]      (1, 1, 2, 2, 4) v_score=4 | reaches 23 classes: H=5, H=9, H=5, H=9, H=11, H=19, H=15, H=15, H=13, H=23, H=17, H=15, H=37, H=33, H=31, H=23, H=37, H=31, H=25, H=37, H=29, H=29, H=33
+    RT[13]      (0, 2, 2, 2, 4) v_score=2 | reaches 13 classes: H=3, H=5, H=9, H=3, H=9, H=15, H=13, H=27, H=27, H=29, H=15, H=13, H=29
+    RT[14]      (0, 2, 2, 2, 4) v_score=0 | reaches 13 classes: H=3, H=5, H=9, H=3, H=9, H=15, H=13, H=27, H=27, H=29, H=15, H=13, H=29
+    RT[15]      (0, 2, 2, 2, 4) v_score=4 | reaches 13 classes: H=3, H=5, H=9, H=3, H=9, H=15, H=13, H=27, H=27, H=29, H=15, H=13, H=29
+    RT[16]      (1, 1, 2, 3, 3) v_score=1 | reaches 24 classes: H=9, H=17, H=9, H=15, H=19, H=15, H=23, H=19, H=23, H=27, H=23, H=25, H=37, H=33, H=23, H=25, H=37, H=33, H=27, H=29, H=29, H=41, H=37, H=33
+    RT[17]      (1, 1, 2, 3, 3) v_score=1 | reaches 24 classes: H=9, H=17, H=9, H=15, H=19, H=15, H=23, H=19, H=23, H=27, H=23, H=25, H=37, H=33, H=23, H=25, H=37, H=33, H=27, H=29, H=29, H=41, H=37, H=33
+    RT[18]      (1, 1, 2, 3, 3) v_score=2 | reaches 24 classes: H=9, H=17, H=9, H=15, H=19, H=15, H=23, H=19, H=23, H=27, H=23, H=25, H=37, H=33, H=23, H=25, H=37, H=33, H=27, H=29, H=29, H=41, H=37, H=33
+    RT[19]      (1, 1, 2, 3, 3) v_score=3 | reaches 24 classes: H=9, H=17, H=9, H=15, H=19, H=15, H=23, H=19, H=23, H=27, H=23, H=25, H=37, H=33, H=23, H=25, H=37, H=33, H=27, H=29, H=29, H=41, H=37, H=33
+    RT[20]      (1, 1, 2, 3, 3) v_score=3 | reaches 24 classes: H=9, H=17, H=9, H=15, H=19, H=15, H=23, H=19, H=23, H=27, H=23, H=25, H=37, H=33, H=23, H=25, H=37, H=33, H=27, H=29, H=29, H=41, H=37, H=33
+    RT[21]      (0, 2, 2, 3, 3) v_score=2 | reaches 23 classes: H=5, H=9, H=15, H=5, H=9, H=11, H=19, H=23, H=17, H=25, H=37, H=33, H=31, H=23, H=31, H=29, H=29, H=15, H=13, H=37, H=33, H=37, H=15
+    RT[22]      (0, 2, 2, 3, 3) v_score=0 | reaches 23 classes: H=5, H=9, H=15, H=5, H=9, H=11, H=19, H=23, H=17, H=25, H=37, H=33, H=31, H=23, H=31, H=29, H=29, H=15, H=13, H=37, H=33, H=37, H=15
+    RT[23]      (0, 2, 2, 3, 3) v_score=2 | reaches 23 classes: H=5, H=9, H=15, H=5, H=9, H=11, H=19, H=23, H=17, H=25, H=37, H=33, H=31, H=23, H=31, H=29, H=29, H=15, H=13, H=37, H=33, H=37, H=15
+    RT[24]      (0, 2, 2, 3, 3) v_score=3 | reaches 23 classes: H=5, H=9, H=15, H=5, H=9, H=11, H=19, H=23, H=17, H=25, H=37, H=33, H=31, H=23, H=31, H=29, H=29, H=15, H=13, H=37, H=33, H=37, H=15
+    RT[25]      (0, 2, 2, 3, 3) v_score=3 | reaches 23 classes: H=5, H=9, H=15, H=5, H=9, H=11, H=19, H=23, H=17, H=25, H=37, H=33, H=31, H=23, H=31, H=29, H=29, H=15, H=13, H=37, H=33, H=37, H=15
+    RT[26]      (1, 1, 2, 3, 3) v_score=2 | reaches 21 classes: H=9, H=15, H=19, H=9, H=15, H=19, H=23, H=17, H=31, H=23, H=37, H=31, H=29, H=29, H=33, H=29, H=29, H=33, H=37, H=43, H=43
+    RT[27]      (1, 1, 2, 3, 3) v_score=1 | reaches 21 classes: H=9, H=15, H=19, H=9, H=15, H=19, H=23, H=17, H=31, H=23, H=37, H=31, H=29, H=29, H=33, H=29, H=29, H=33, H=37, H=43, H=43
+    RT[28]      (1, 1, 2, 3, 3) v_score=1 | reaches 21 classes: H=9, H=15, H=19, H=9, H=15, H=19, H=23, H=17, H=31, H=23, H=37, H=31, H=29, H=29, H=33, H=29, H=29, H=33, H=37, H=43, H=43
+    RT[29]      (1, 1, 2, 3, 3) v_score=3 | reaches 21 classes: H=9, H=15, H=19, H=9, H=15, H=19, H=23, H=17, H=31, H=23, H=37, H=31, H=29, H=29, H=33, H=29, H=29, H=33, H=37, H=43, H=43
+    RT[30]      (1, 1, 2, 3, 3) v_score=3 | reaches 21 classes: H=9, H=15, H=19, H=9, H=15, H=19, H=23, H=17, H=31, H=23, H=37, H=31, H=29, H=29, H=33, H=29, H=29, H=33, H=37, H=43, H=43
+    RT[31]      (0, 1, 3, 3, 3) v_score=3 | reaches 13 classes: H=3, H=5, H=9, H=15, H=3, H=17, H=9, H=23, H=25, H=27, H=15, H=13, H=33
+    RT[32]      (0, 1, 3, 3, 3) v_score=0 | reaches 13 classes: H=3, H=5, H=9, H=15, H=3, H=17, H=9, H=23, H=25, H=27, H=15, H=13, H=33
+    RT[33]      (0, 1, 3, 3, 3) v_score=1 | reaches 13 classes: H=3, H=5, H=9, H=15, H=3, H=17, H=9, H=23, H=25, H=27, H=15, H=13, H=33
+    RT[34]      (1, 2, 2, 2, 3) v_score=2 | reaches 23 classes: H=11, H=19, H=23, H=11, H=19, H=23, H=33, H=25, H=37, H=25, H=37, H=29, H=33, H=29, H=29, H=41, H=37, H=33, H=37, H=43, H=43, H=33, H=45
+    RT[35]      (1, 2, 2, 2, 3) v_score=1 | reaches 23 classes: H=11, H=19, H=23, H=11, H=19, H=23, H=33, H=25, H=37, H=25, H=37, H=29, H=33, H=29, H=29, H=41, H=37, H=33, H=37, H=43, H=43, H=33, H=45
+    RT[36]      (1, 2, 2, 2, 3) v_score=2 | reaches 23 classes: H=11, H=19, H=23, H=11, H=19, H=23, H=33, H=25, H=37, H=25, H=37, H=29, H=33, H=29, H=29, H=41, H=37, H=33, H=37, H=43, H=43, H=33, H=45
+    RT[37]      (1, 2, 2, 2, 3) v_score=2 | reaches 23 classes: H=11, H=19, H=23, H=11, H=19, H=23, H=33, H=25, H=37, H=25, H=37, H=29, H=33, H=29, H=29, H=41, H=37, H=33, H=37, H=43, H=43, H=33, H=45
+    RT[38]      (1, 2, 2, 2, 3) v_score=3 | reaches 23 classes: H=11, H=19, H=23, H=11, H=19, H=23, H=33, H=25, H=37, H=25, H=37, H=29, H=33, H=29, H=29, H=41, H=37, H=33, H=37, H=43, H=43, H=33, H=45
+    RT[39]      (1, 2, 2, 2, 3) v_score=1 | reaches 13 classes: H=15, H=27, H=33, H=37, H=31, H=37, H=31, H=27, H=15, H=37, H=43, H=43, H=33
+    RT[40]      (1, 2, 2, 2, 3) v_score=2 | reaches 13 classes: H=15, H=27, H=33, H=37, H=31, H=37, H=31, H=27, H=15, H=37, H=43, H=43, H=33
+    RT[41]      (1, 2, 2, 2, 3) v_score=3 | reaches 13 classes: H=15, H=27, H=33, H=37, H=31, H=37, H=31, H=27, H=15, H=37, H=43, H=43, H=33
+    RT[42]      (1, 2, 2, 2, 3) v_score=2 | reaches 21 classes: H=13, H=23, H=25, H=33, H=31, H=23, H=37, H=31, H=25, H=37, H=29, H=33, H=29, H=13, H=29, H=37, H=33, H=37, H=43, H=43, H=45
+    RT[43]      (1, 2, 2, 2, 3) v_score=1 | reaches 21 classes: H=13, H=23, H=25, H=33, H=31, H=23, H=37, H=31, H=25, H=37, H=29, H=33, H=29, H=13, H=29, H=37, H=33, H=37, H=43, H=43, H=45
+    RT[44]      (1, 2, 2, 2, 3) v_score=2 | reaches 21 classes: H=13, H=23, H=25, H=33, H=31, H=23, H=37, H=31, H=25, H=37, H=29, H=33, H=29, H=13, H=29, H=37, H=33, H=37, H=43, H=43, H=45
+    RT[45]      (1, 2, 2, 2, 3) v_score=2 | reaches 21 classes: H=13, H=23, H=25, H=33, H=31, H=23, H=37, H=31, H=25, H=37, H=29, H=33, H=29, H=13, H=29, H=37, H=33, H=37, H=43, H=43, H=45
+    RT[46]      (1, 2, 2, 2, 3) v_score=3 | reaches 21 classes: H=13, H=23, H=25, H=33, H=31, H=23, H=37, H=31, H=25, H=37, H=29, H=33, H=29, H=13, H=29, H=37, H=33, H=37, H=43, H=43, H=45
+    RT[47]      (2, 2, 2, 2, 2) v_score=2 | reaches 7 classes: H=15, H=33, H=41, H=33, H=15, H=43, H=43
+
+  Classes and their parent perspectives:
+    CLS[ 0]       (0, 1, 2, 3, 4, 5) H=  1 | 5 parents <<<
+    CLS[ 1]       (1, 1, 1, 3, 4, 5) H=  3 | 8 parents <<<
+    CLS[ 2]       (1, 1, 2, 2, 4, 5) H=  5 | 13 parents <<<
+    CLS[ 3]       (0, 2, 2, 2, 4, 5) H=  3 | 11 parents <<<
+    CLS[ 4]       (1, 1, 2, 3, 3, 5) H=  9 | 15 parents <<<
+    CLS[ 5]       (0, 2, 2, 3, 3, 5) H=  5 | 18 parents <<<
+    CLS[ 6]       (1, 1, 2, 3, 3, 5) H=  9 | 21 parents <<<
+    CLS[ 7]       (0, 1, 3, 3, 3, 5) H=  3 | 11 parents <<<
+    CLS[ 8]       (1, 2, 2, 2, 3, 5) H= 11 | 15 parents <<<
+    CLS[ 9]       (1, 1, 2, 3, 4, 4) H= 17 | 10 parents <<<
+    CLS[10]       (0, 2, 2, 3, 4, 4) H=  9 | 15 parents <<<
+    CLS[11]       (1, 1, 2, 3, 4, 4) H= 15 | 23 parents <<<
+    CLS[12]       (0, 1, 3, 3, 4, 4) H=  5 | 13 parents <<<
+    CLS[13]       (1, 2, 2, 2, 4, 4) H= 19 | 25 parents <<<
+    CLS[14]       (0, 2, 2, 3, 4, 4) H=  9 | 21 parents <<<
+    CLS[15]       (1, 1, 2, 3, 4, 4) H= 15 | 23 parents <<<
+    CLS[16]       (0, 1, 2, 4, 4, 4) H=  3 | 8 parents <<<
+    CLS[17]       (1, 2, 2, 3, 3, 4) H= 23 | 15 parents <<<
+    CLS[18]       (0, 2, 3, 3, 3, 4) H= 11 | 15 parents <<<
+    CLS[19]       (1, 1, 3, 3, 3, 4) H= 19 | 25 parents <<<
+    CLS[20]       (1, 2, 2, 3, 3, 4) H= 23 | 15 parents <<<
+    CLS[21]       (1, 2, 2, 2, 3, 5) H= 15 | 14 parents <<<
+    CLS[22]       (1, 2, 2, 2, 3, 5) H= 13 | 16 parents <<<
+    CLS[23]       (1, 2, 2, 2, 4, 4) H= 27 | 14 parents <<<
+    CLS[24]       (1, 2, 2, 2, 4, 4) H= 23 | 28 parents <<<
+    CLS[25]       (1, 1, 2, 3, 4, 4) H= 17 | 21 parents <<<
+    CLS[26]       (1, 1, 1, 4, 4, 4) H=  9 | 6 parents <<<
+    CLS[27]       (2, 2, 2, 2, 3, 4) H= 33 | 11 parents <<<
+    CLS[28]       (1, 2, 2, 3, 3, 4) H= 25 | 23 parents <<<
+    CLS[29]       (2, 2, 2, 2, 2, 5) H= 15 | 6 parents <<<
+    CLS[30]       (1, 2, 2, 3, 3, 4) H= 37 | 18 parents <<<
+    CLS[31]       (1, 2, 2, 3, 3, 4) H= 33 | 20 parents <<<
+    CLS[32]       (1, 2, 2, 3, 3, 4) H= 31 | 23 parents <<<
+    CLS[33]       (1, 1, 3, 3, 3, 4) H= 23 | 28 parents <<<
+    CLS[34]       (2, 2, 2, 2, 3, 4) H= 37 | 23 parents <<<
+    CLS[35]       (1, 2, 2, 3, 3, 4) H= 31 | 23 parents <<<
+    CLS[36]       (1, 2, 2, 3, 3, 4) H= 25 | 23 parents <<<
+    CLS[37]       (2, 2, 2, 2, 3, 4) H= 37 | 20 parents <<<
+    CLS[38]       (1, 2, 2, 3, 3, 4) H= 29 | 20 parents <<<
+    CLS[39]       (1, 2, 2, 3, 3, 4) H= 29 | 20 parents <<<
+    CLS[40]       (2, 2, 2, 2, 3, 4) H= 33 | 26 parents <<<
+    CLS[41]       (1, 1, 3, 3, 3, 4) H= 27 | 14 parents <<<
+    CLS[42]       (1, 2, 2, 3, 3, 4) H= 29 | 23 parents <<<
+    CLS[43]       (0, 2, 3, 3, 3, 4) H= 15 | 14 parents <<<
+    CLS[44]       (0, 2, 3, 3, 3, 4) H= 13 | 16 parents <<<
+    CLS[45]       (1, 2, 2, 3, 3, 4) H= 29 | 23 parents <<<
+    CLS[46]       (2, 2, 2, 3, 3, 3) H= 41 | 11 parents <<<
+    CLS[47]       (1, 2, 3, 3, 3, 3) H= 37 | 20 parents <<<
+    CLS[48]       (1, 2, 3, 3, 3, 3) H= 33 | 26 parents <<<
+    CLS[49]       (1, 2, 3, 3, 3, 3) H= 37 | 23 parents <<<
+    CLS[50]       (0, 3, 3, 3, 3, 3) H= 15 | 6 parents <<<
+    CLS[51]       (2, 2, 2, 3, 3, 3) H= 43 | 19 parents <<<
+    CLS[52]       (2, 2, 2, 3, 3, 3) H= 43 | 19 parents <<<
+    CLS[53]       (1, 2, 3, 3, 3, 3) H= 33 | 11 parents <<<
+    CLS[54]       (2, 2, 2, 3, 3, 3) H= 45 | 5 parents <<<
+    CLS[55]       (2, 2, 2, 3, 3, 3) H= 45 | 5 parents <<<
+
+  Summary:
+    Perspectives: 48
+    Classes: 56
+    Deficit: 8
+    Classes with 1 parent: 0
+    Classes with 2+ parents: 56
+    Classes with 0 parents: 0
+    Parent count distribution: Counter({23: 10, 15: 6, 11: 5, 20: 5, 14: 4, 5: 3, 21: 3, 6: 3, 8: 2, 13: 2, 18: 2, 25: 2, 16: 2, 28: 2, 26: 2, 19: 2, 10: 1})
+    Reach count distribution: Counter({21: 15, 23: 15, 13: 12, 24: 5, 7: 1})
