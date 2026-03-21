@@ -1,0 +1,208 @@
+======================================================================
+THE UNIVERSALITY OF k-PERIODICITY
+======================================================================
+
+  ============================================================
+  GRAPHS: min_cycle = 2 → expect 2-periodicity
+  ============================================================
+
+    n   T_G(n)     P_G(n)     D_G(n)        D/2
+    1        1          1          0          0
+    2        2          2          2          1
+    3        4          6          6          3
+    4       11         20         24         12
+    5       34         90         80         40
+    6      156        544        392        196
+    7     1044       5096       2212       1106
+    8    12346      79264      19504       9752
+
+  Depth decomposition:
+  n=2: D1=2.00  
+  n=3: D1=6.00  
+  n=4: D1=16.00  D2=8.00  
+  n=5: D1=41.33  D2=38.67  
+  n=6: D1=138.67  D2=189.33  D3=64.00  
+  n=7: D1=714.13  D2=948.53  D3=549.33  
+  n=8: D1=6648.89  D2=6782.22  D3=4707.56  D4=1365.33  
+
+  ============================================================
+  GRAPHS: PERIODICITY ANALYSIS (min_cycle = 2)
+  ============================================================
+
+  Tower predictions (level d exact for n <= 2*(d+1)-1 = 2d+1):
+    Level 0: exact for n <= 1
+    Level 1: exact for n <= 3
+    Level 2: exact for n <= 5
+    Level 3: exact for n <= 7
+    Level 4: exact for n <= 9
+    n=1 < min_cycle=2: D=0? YES (D=0)
+
+  ============================================================
+  TOURNAMENTS: min_cycle = 3 → known 3-periodicity
+  ============================================================
+
+    n     T(n)       P(n)       D(n)
+    1        1          1          0
+    2        1          2          0
+    3        2          4          2
+    4        4         12          4
+    5       12         48         12
+    6       56        296         40
+    7      456       3040        152
+    8     6880      54256        784
+
+  ============================================================
+  TOURNAMENTS: PERIODICITY ANALYSIS (min_cycle = 3)
+  ============================================================
+
+  Tower predictions (level d exact for n <= 3*(d+1)-1 = 3d+2):
+    Level 0: exact for n <= 2
+    Level 1: exact for n <= 5
+    Level 2: exact for n <= 8
+    Level 3: exact for n <= 11
+    Level 4: exact for n <= 14
+    n=1 < min_cycle=3: D=0? YES (D=0)
+    n=2 < min_cycle=3: D=0? YES (D=0)
+
+  ============================================================
+  CREATIVE: WHAT HAS 5-PERIODICITY?
+  ============================================================
+
+  For k-periodicity, we need structures where the minimum order of
+  a non-identity automorphism is k. In tournaments, Moon's theorem
+  forces all automorphisms to have odd order, making min_order = 3.
+
+  To get 5-periodicity, we need min_order = 5. Possibilities:
+
+  1. PRIME-ORDER TOURNAMENTS (hypothetical):
+     A "5-tournament" on vertex set Z_5: complete directed graph
+     where the automorphism group is restricted to elements of order
+     1 or 5 (i.e., Z_5 or trivial).
+     This would require: no automorphism of order 3.
+     Paley T_7 has |Aut| = 21 = 3*7, which includes order-3 elements.
+     We need tournaments where |Aut| is a power of 5 or trivial.
+
+  2. PENTAGRAPH ORIENTATIONS:
+     Consider the complete graph K_n with edges grouped into pentagons
+     (5-cycles). Orient each pentagon consistently. The automorphism
+     group of such a structure might have min_order = 5.
+
+  3. THE ODD-PRIME FILTER:
+     In tournaments, even cycles are killed (c_T = 0).
+     What if we also kill 3-cycles? Then min_order = 5.
+     This would require: arcs reversed by any 3-cycle automorphism
+     must be contradictory.
+     A "3-free tournament" has no order-3 automorphism.
+     These are tournaments where |Aut| is coprime to 3.
+     The deficit for 3-free tournaments would have 5-periodicity!
+
+  4. QUANDLE COLORINGS:
+     A quandle is a self-distributive algebraic structure.
+     The fundamental quandle of a knot has automorphisms related
+     to the knot group. For torus knots T(5,q), the quandle
+     automorphisms have order 5, giving 5-periodicity.
+
+  5. DESIGNS / STEINER SYSTEMS:
+     A Steiner system S(2, 5, n) has blocks of size 5.
+     The automorphism group acts on blocks, and the minimum
+     non-trivial cycle on blocks has length related to 5.
+     The "rooted Steiner system" count might have 5-periodicity.
+
+  THE GENERAL PRINCIPLE:
+  k-periodicity in the tower of approximations occurs when the
+  SMALLEST BUILDING BLOCK has size k. In tournaments, the building
+  block is the 3-cycle. In graphs, the building block is the edge (2-swap).
+  In 5-uniform structures, the building block has size 5.
+
+  This is fundamentally about the CHEEGER CONSTANT:
+  - k-periodicity means the expansion bottleneck has scale k
+  - Larger k = fewer symmetries = better expansion = sparser correction
+  - The "ideal" structure has k = infinity (no symmetries at all)
+
+
+  ============================================================
+  THE PRIME HIERARCHY OF PERIODICITIES
+  ============================================================
+
+  p=2: GRAPHS           | Level d exact for n <= 2d+1
+       Every partition contributes. Densest correction.
+       The "easiest" symmetry — transpositions are cheap.
+
+  p=3: TOURNAMENTS       | Level d exact for n <= 3d+2
+       Only odd partitions contribute. Sparser correction.
+       3-cycles are the "cheapest" tournament symmetry.
+       The FILTER: even cycles kill tournaments.
+
+  p=5: ???-STRUCTURES    | Level d exact for n <= 5d+4
+       Only 5-smooth partitions contribute. Very sparse.
+       The FILTER: 2-cycles AND 3-cycles are killed.
+
+  p=7: ????-STRUCTURES   | Level d exact for n <= 7d+6
+       Even sparser. Only 7-smooth odd partitions.
+
+  GENERAL p: Level d exact for n <= pd + (p-1)
+       Only partitions into parts divisible by p contribute.
+
+  THE DREAM: p = infinity (no symmetries at all)
+       D(n) = 0 for all n. P(n) = n*T(n) exactly.
+       This is the "generic" or "rigid" case.
+
+  CONNECTION TO NUMBER THEORY:
+  The prime hierarchy is exactly the TOWER OF SIEVING:
+  - Sieve by 2: removes even-order symmetries (graph → tournament filter)
+  - Sieve by 3: removes 3-order symmetries
+  - Sieve by 5: removes 5-order symmetries
+  - ...
+  Each sieve level removes a class of symmetries and increases
+  the periodicity of the approximation tower.
+
+  This is the CHEBYSHEV SIEVE applied to automorphism groups:
+  just as Chebyshev sieves primes from integers,
+  we sieve cycle types from permutation groups.
+
+  THE EULER PRODUCT ANALOGY:
+  The deficit generating function should factor as an Euler product
+  over odd primes, each encoding a cycle-length contribution.
+  This is a multiplicative structure for the automorphism correction!
+
+
+  ============================================================
+  PRIME-FILTERED TOURNAMENT COUNT
+  ============================================================
+  n=1: prime filter makes no difference (all contributing parts are prime)
+  n=2: prime filter makes no difference (all contributing parts are prime)
+  n=3: prime filter makes no difference (all contributing parts are prime)
+  n=4: prime filter makes no difference (all contributing parts are prime)
+  n=5: prime filter makes no difference (all contributing parts are prime)
+  n=6: prime filter makes no difference (all contributing parts are prime)
+  n=7: prime filter makes no difference (all contributing parts are prime)
+  n=8: prime filter makes no difference (all contributing parts are prime)
+  n=9: T_all=191536, T difference from prime filter: 1, P difference: 0
+  n=10: T_all=9733056, T difference from prime filter: 3, P difference: 3
+
+  KEY FINDING: For n <= 8, ALL contributing odd partitions have only
+  prime parts (1, 3, 5, 7). The first composite odd part is 9,
+  which first appears at n=9. So the prime filter has NO EFFECT
+  for n <= 8 — the prime hierarchy IS the full hierarchy at small n.
+
+  At n=9: partition (9) has a COMPOSITE (non-prime) odd part 9=3^2.
+  But wait — 9 IS not prime. So the prime filter would REMOVE the
+  (9) contribution, changing D(9) slightly.
+
+  This means: for n <= 8, the tournament tower IS the prime tower.
+  The hierarchy 3, 5, 7 of increasing periodicity IS the prime sequence.
+
+
+  ======================================================================
+  COMPARISON: GRAPH vs TOURNAMENT TOWERS
+  ======================================================================
+
+    n      T_G        P_G      D_G |      T_T        P_T      D_T
+    1        1          1        0 |        1          1        0
+    2        2          2        2 |        1          2        0
+    3        4          6        6 |        2          4        2
+    4       11         20       24 |        4         12        4
+    5       34         90       80 |       12         48       12
+    6      156        544      392 |       56        296       40
+    7     1044       5096     2212 |      456       3040      152
+    8    12346      79264    19504 |     6880      54256      784
