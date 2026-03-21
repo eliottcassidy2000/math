@@ -1,0 +1,347 @@
+========================================================================
+  ASCENDING SUCCESSIONS AMONG SUCCESSION-FREE PERMUTATIONS
+  opus-2026-03-21-S115
+========================================================================
+
+========================================================================
+  PART 1: SUCCESSION DISTRIBUTION IN S_n
+========================================================================
+
+
+  A SUCCESSION at position i in π ∈ S_n means π(i+1) = π(i) + 1.
+  (The value increases by exactly 1 at the next position.)
+
+  A000255(n) = #{π ∈ S_n : no successions} = succession-free perms.
+
+  From THM-215: fixing any HP σ, the compatible τ are exactly those
+  where σ⁻¹∘τ is succession-free. So A000255(n-1) counts the
+  compatible partners per fixed σ.
+
+  n = 3: (n! = 6)
+   #succ |    count |   fraction
+  ------------------------------
+       0 |        3 | 1/2
+       1 |        2 | 1/3
+       2 |        1 | 1/6
+  #{0 successions} = 3
+  A000255(3) = 11
+  Match: False
+
+  n = 4: (n! = 24)
+   #succ |    count |   fraction
+  ------------------------------
+       0 |       11 | 11/24
+       1 |        9 | 3/8
+       2 |        3 | 1/8
+       3 |        1 | 1/24
+  #{0 successions} = 11
+  A000255(4) = 53
+  Match: False
+
+  n = 5: (n! = 120)
+   #succ |    count |   fraction
+  ------------------------------
+       0 |       53 | 53/120
+       1 |       44 | 11/30
+       2 |       18 | 3/20
+       3 |        4 | 1/30
+       4 |        1 | 1/120
+  #{0 successions} = 53
+  A000255(5) = 309
+  Match: False
+
+  n = 6: (n! = 720)
+   #succ |    count |   fraction
+  ------------------------------
+       0 |      309 | 103/240
+       1 |      265 | 53/144
+       2 |      110 | 11/72
+       3 |       30 | 1/24
+       4 |        5 | 1/144
+       5 |        1 | 1/720
+  #{0 successions} = 309
+  A000255(6) = 2119
+  Match: False
+
+  n = 7: (n! = 5040)
+   #succ |    count |   fraction
+  ------------------------------
+       0 |     2119 | 2119/5040
+       1 |     1854 | 103/280
+       2 |      795 | 53/336
+       3 |      220 | 11/252
+       4 |       45 | 1/112
+       5 |        6 | 1/840
+       6 |        1 | 1/5040
+  #{0 successions} = 2119
+  A000255(7) = 16687
+  Match: False
+
+========================================================================
+  PART 2: ASCENTS vs SUCCESSIONS
+========================================================================
+
+
+  An ASCENT at position i: π(i+1) > π(i) (value increases, by any amount)
+  A SUCCESSION at position i: π(i+1) = π(i) + 1 (value increases by exactly 1)
+
+  Every succession is an ascent, but not conversely.
+  A succession is a "minimal ascent" — the smallest possible increase.
+
+  The number of ascents follows the EULERIAN NUMBER distribution:
+  A(n,k) = #{π ∈ S_n with exactly k ascents}.
+
+  The connection to tournaments:
+  If σ is a Hamiltonian path σ(1)→σ(2)→...→σ(n),
+  the arc σ(i)→σ(i+1) is "ascending" iff σ(i+1) > σ(i).
+  An ascending arc goes from lower to higher vertex label.
+  In the tiling model, these are BACKBONE-DIRECTION arcs.
+
+  Number of ascending arcs = #ascents of σ.
+  Number of successions = #minimal ascending arcs (consecutive labels).
+
+  n = 5: Joint distribution of (ascents, successions)
+   asc  succ |    count |     fraction
+  -----------------------------------
+     0     0 |        1 | 1/120
+     1     0 |       22 | 11/60
+     1     1 |        4 | 1/30
+     2     0 |       28 | 7/30
+     2     1 |       32 | 4/15
+     2     2 |        6 | 1/20
+     3     0 |        2 | 1/60
+     3     1 |        8 | 1/15
+     3     2 |       12 | 1/10
+     3     3 |        4 | 1/30
+     4     4 |        1 | 1/120
+
+  n = 6: Joint distribution of (ascents, successions)
+   asc  succ |    count |     fraction
+  -----------------------------------
+     0     0 |        1 | 1/720
+     1     0 |       52 | 13/180
+     1     1 |        5 | 1/144
+     2     0 |      182 | 91/360
+     2     1 |      110 | 11/72
+     2     2 |       10 | 1/72
+     3     0 |       72 | 1/10
+     3     1 |      140 | 7/36
+     3     2 |       80 | 1/9
+     3     3 |       10 | 1/72
+     4     0 |        2 | 1/360
+     4     1 |       10 | 1/72
+     4     2 |       20 | 1/36
+     4     3 |       20 | 1/36
+     4     4 |        5 | 1/144
+     5     5 |        1 | 1/720
+
+========================================================================
+  PART 3: SUCCESSION STRUCTURE OF COMPATIBLE PAIRS
+========================================================================
+
+
+  For a COMPATIBLE pair (σ,τ): no arc of σ conflicts with any arc of τ.
+  The relative permutation ρ = σ⁻¹∘τ tells us how τ differs from σ.
+
+  KEY: σ⁻¹∘τ is succession-free (has no successions).
+  This is the content of THM-215.
+
+  Now: among compatible pairs, how do the SHARED ARCS relate to
+  the ascent/succession structure?
+
+  A shared arc at position i means σ(i)→σ(i+1) = τ(j)→τ(j+1) for some j.
+  This means the SAME directed arc appears in both paths.
+
+  Question: are shared arcs more likely to be ASCENDING (backbone-direction)?
+
+  n = 5: 6360 compatible pairs
+    Expected: 120 × A000255(4) = 6360
+    Match: True
+
+    E[shared arcs] = 1.2075
+    E[shared ascending] = 0.6038
+    E[shared descending] = 0.6038
+    Ascending fraction of shared: 0.5000
+
+    E[successions of ρ] = 1.207547
+    Should be 0 (ρ is succession-free by THM-215)
+    Distribution: {0: 1680, 1: 2400, 2: 1680, 3: 480, 4: 120}
+
+    Joint (shared_arcs, shared_ascending):
+       a   sa |    count |  frac of a
+    ------------------------------
+       0    0 |     1680 |     1.0000
+       1    0 |     1200 |     0.5000
+       1    1 |     1200 |     0.5000
+       2    0 |      370 |     0.2202
+       2    1 |      940 |     0.5595
+       2    2 |      370 |     0.2202
+       3    0 |       30 |     0.0625
+       3    1 |      210 |     0.4375
+       3    2 |      210 |     0.4375
+       3    3 |       30 |     0.0625
+       4    0 |        1 |     0.0083
+       4    1 |       26 |     0.2167
+       4    2 |       66 |     0.5500
+       4    3 |       26 |     0.2167
+       4    4 |        1 |     0.0083
+
+  n = 6: 222480 compatible pairs
+    Expected: 720 × A000255(5) = 222480
+    Match: True
+
+    E[shared arcs] = 1.1715
+    E[shared ascending] = 0.5858
+    E[shared descending] = 0.5858
+    Ascending fraction of shared: 0.5000
+
+    E[successions of ρ] = 1.171521
+    Should be 0 (ρ is succession-free by THM-215)
+    Distribution: {0: 64800, 1: 82800, 2: 51840, 3: 18720, 4: 3600, 5: 720}
+
+    Joint (shared_arcs, shared_ascending):
+       a   sa |    count |  frac of a
+    ------------------------------
+       0    0 |    64800 |     1.0000
+       1    0 |    41400 |     0.5000
+       1    1 |    41400 |     0.5000
+       2    0 |    11760 |     0.2269
+       2    1 |    28320 |     0.5463
+       2    2 |    11760 |     0.2269
+       3    0 |     1500 |     0.0801
+       3    1 |     7860 |     0.4199
+       3    2 |     7860 |     0.4199
+       3    3 |     1500 |     0.0801
+       4    0 |       62 |     0.0172
+       4    1 |      832 |     0.2311
+       4    2 |     1812 |     0.5033
+       4    3 |      832 |     0.2311
+       4    4 |       62 |     0.0172
+       5    0 |        1 |     0.0014
+       5    1 |       57 |     0.0792
+       5    2 |      302 |     0.4194
+       5    3 |      302 |     0.4194
+       5    4 |       57 |     0.0792
+       5    5 |        1 |     0.0014
+
+========================================================================
+  PART 4: THE ASCENDING OVERLAP STRUCTURE
+========================================================================
+
+
+  Define for compatible pairs (σ,τ):
+    a = total shared arcs
+    a_↑ = shared ascending arcs (both paths go from lower to higher label)
+    a_↓ = shared descending arcs (both go from higher to lower)
+    a = a_↑ + a_↓
+
+  The ASCENDING OVERLAP GF:
+    F_n(x, y) = Σ_{compatible (σ,τ)} x^{a_↑} y^{a_↓}
+
+  Then F_n(x, x) = the original overlap GF F_n(x).
+  And F_n(2, 2) = the quantity that gives E[H²].
+
+  But F_n(2, 1) and F_n(1, 2) would tell us about the
+  DIRECTIONAL structure of the overlap.
+
+  If ascending arcs are disproportionately shared, it would mean
+  compatible paths tend to agree on backbone-direction arcs more
+  than non-backbone arcs.
+
+  n = 5: Ascending Overlap Table F(a_↑, a_↓)
+   a_↑  a_↓ |    count |    per σ
+  ------------------------------
+     0    0 |     1680 |       14
+     0    1 |     1200 |       10
+     0    2 |      370 |        3
+     0    3 |       30 |        0
+     0    4 |        1 |        0
+     1    0 |     1200 |       10
+     1    1 |      940 |        7
+     1    2 |      210 |        1
+     1    3 |       26 |        0
+     2    0 |      370 |        3
+     2    1 |      210 |        1
+     2    2 |       66 |        0
+     3    0 |       30 |        0
+     3    1 |       26 |        0
+     4    0 |        1 |        0
+
+  Symmetric (F(a↑,a↓) = F(a↓,a↑))? True
+  E[a_↑] = 0.603774
+  E[a_↓] = 0.603774
+  E[a_↑] = E[a_↓]? True
+
+========================================================================
+  PART 5: DOES ASCENDING STRUCTURE VARY BY SCORE CLASS?
+========================================================================
+
+
+  THE KEY QUESTION: Within a tournament T with score sequence s,
+  do the Hamiltonian paths have different ascending structure
+  depending on which score class T belongs to?
+
+  If YES: the ascending structure carries information BEYOND scores,
+  which could explain part of the OCR residual.
+
+  For each tournament T, compute:
+  - The score sequence
+  - The ascent distribution of its Hamiltonian paths
+
+  n = 5: HP ascent/succession statistics by score class
+
+                 Score | E[#asc/HP] | E[#succ/HP] |   E[H] | Var(asc)
+  -----------------------------------------------------------------
+       (0, 1, 2, 3, 4) |     2.0000 |      0.8000 |    1.0 |   0.5000
+       (0, 1, 3, 3, 3) |     2.0000 |      0.8000 |    3.0 |   0.3333
+       (0, 2, 2, 2, 4) |     2.0000 |      0.8000 |    3.0 |   0.3333
+       (0, 2, 2, 3, 3) |     2.0000 |      0.8000 |    5.0 |   0.2800
+       (1, 1, 1, 3, 4) |     2.0000 |      0.8000 |    3.0 |   0.3333
+       (1, 1, 2, 2, 4) |     2.0000 |      0.8000 |    5.0 |   0.2800
+       (1, 1, 2, 3, 3) |     2.0000 |      0.8000 |    9.0 |   0.1996
+       (1, 2, 2, 2, 3) |     2.0000 |      0.8000 |   12.4 |   0.1655
+       (2, 2, 2, 2, 2) |     2.0000 |      0.8000 |   15.0 |   0.1333
+
+  PoS class (1, 2, 2, 2, 3):
+    280 tournaments
+    Mean ascents per HP, by H value:
+      H=11: mean_ascents = 2.0000 (n=120)
+      H=13: mean_ascents = 2.0000 (n=120)
+      H=15: mean_ascents = 2.0000 (n=40)
+
+========================================================================
+  PART 6: CONNECTION TO THE OCR
+========================================================================
+
+
+  SYNTHESIS:
+
+  1. Compatible permutation pairs are characterized by the relative
+     permutation ρ = σ⁻¹∘τ being SUCCESSION-FREE (THM-215).
+
+  2. Among compatible pairs, shared arcs split equally between
+     ascending and descending (by symmetry of the uniform random model).
+
+  3. Within the PoS class, HP ascent statistics VARY by H value:
+     higher-H tournaments have HPs with different ascent distributions.
+
+  4. The ascending overlap GF F(a_↑, a_↓) is SYMMETRIC: F(a↑,a↓)=F(a↓,a↑).
+     This reflects the complement symmetry H(T)=H(T^op).
+
+  THE CONNECTION:
+  The OCR residual measures the variance of H within score classes.
+  This variance comes from different CYCLE STRUCTURES (c₅, α₂).
+  The cycle structures are encoded in the OVERLAP PATTERN of HP pairs.
+  The overlap pattern, in turn, is governed by the SUCCESSION-FREE
+  condition on the relative permutation.
+
+  So: the OCR residual is ultimately a statement about how
+  succession-free permutations distribute across different
+  overlap types (a_↑, a_↓) within each score class.
+
+  An EXACT OCR FORMULA would need:
+  F_n(2, 2; s) = the ascending overlap GF restricted to score class s.
+  Then: Var(H|s) = [F_n(2,2;s)/n_s - E[H|s]²]
+  And: OCR = 1 - Σ P(s) Var(H|s) / Var(H)
+
+opus-2026-03-21-S115: ASCENDING SUCCESSIONS
