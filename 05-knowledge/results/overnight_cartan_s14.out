@@ -1,0 +1,194 @@
+======================================================================
+PART A: THE n=9 CRITICAL TEST
+======================================================================
+d = (9-3)/4 = 1.5 => NO DRT exists at n=9
+All regular tournaments have [A,S]=0 (Cartan decoupled)
+But spectral flatness VARIES
+
+Circulant regular tournaments on Z_9:
+             conn      H    tr(S^4)      tr(S^6)  DRT   |comm|           |eig| mags
+     (1, 7, 6, 5)   3357        936       -14760    N   0.0000 [np.float64(0.0), np.float64(1.732), np.float64(2.207), np.float64(3.1), np.float64(4.303)]
+     (8, 7, 3, 5)   3357        936       -14760    N   0.0000 [np.float64(0.0), np.float64(1.732), np.float64(2.207), np.float64(3.1), np.float64(4.303)]
+     (1, 2, 3, 5)   3357        936       -14760    N   0.0000 [np.float64(0.0), np.float64(1.732), np.float64(2.207), np.float64(3.1), np.float64(4.303)]
+     (8, 7, 6, 4)   3357        936       -14760    N   0.0000 [np.float64(0.0), np.float64(1.732), np.float64(2.207), np.float64(3.1), np.float64(4.303)]
+     (1, 2, 6, 4)   3357        936       -14760    N   0.0000 [np.float64(0.0), np.float64(1.732), np.float64(2.207), np.float64(3.1), np.float64(4.303)]
+     (8, 2, 3, 4)   3357        936       -14760    N   0.0000 [np.float64(0.0), np.float64(1.732), np.float64(2.207), np.float64(3.1), np.float64(4.303)]
+     (8, 7, 6, 5)   3267       2088       -66600    N   0.0000 [np.float64(0.0), np.float64(0.364), np.float64(0.839), np.float64(1.732), np.float64(5.671)]
+     (1, 2, 6, 5)   3267       2088       -66600    N   0.0000 [np.float64(0.0), np.float64(0.364), np.float64(0.839), np.float64(1.732), np.float64(5.671)]
+     (1, 7, 3, 5)   3267       2088       -66600    N   0.0000 [np.float64(0.0), np.float64(0.364), np.float64(0.839), np.float64(1.732), np.float64(5.671)]
+     (8, 2, 6, 4)   3267       2088       -66600    N   0.0000 [np.float64(0.0), np.float64(0.364), np.float64(0.839), np.float64(1.732), np.float64(5.671)]
+     (8, 7, 3, 4)   3267       2088       -66600    N   0.0000 [np.float64(0.0), np.float64(0.364), np.float64(0.839), np.float64(1.732), np.float64(5.671)]
+     (1, 2, 3, 4)   3267       2088       -66600    N   0.0000 [np.float64(0.0), np.float64(0.364), np.float64(0.839), np.float64(1.732), np.float64(5.671)]
+     (8, 2, 6, 5)   3159       1512       -39528    N   0.0000 [np.float64(0.0), np.float64(1.732), np.float64(5.196)]
+     (8, 2, 3, 5)   3159       1512       -39528    N   0.0000 [np.float64(0.0), np.float64(1.732), np.float64(5.196)]
+     (1, 7, 6, 4)   3159       1512       -39528    N   0.0000 [np.float64(0.0), np.float64(1.732), np.float64(5.196)]
+     (1, 7, 3, 4)   3159       1512       -39528    N   0.0000 [np.float64(0.0), np.float64(1.732), np.float64(5.196)]
+
+  Max H = 3357 at conn = [(1, 7, 6, 5), (8, 7, 3, 5), (1, 2, 3, 5), (8, 7, 6, 4), (1, 2, 6, 4), (8, 2, 3, 4)]
+  Min tr(S^4) = 936.0 at conn = [(1, 7, 6, 5), (8, 7, 3, 5), (1, 2, 3, 5), (8, 7, 6, 4), (1, 2, 6, 4), (8, 2, 3, 4)]
+  SPECTRAL FLATNESS PRINCIPLE: HOLDS
+
+  Random regular tournaments (50 samples):
+       H  count   mean tr(S^4)                range
+    3357      3          936.0 [936, 936]
+    3303      3         1128.0 [1128, 1128]
+    3299      6         1000.0 [1000, 1000]
+    3297      6         1128.0 [1128, 1128]
+    3281      3         1064.0 [1064, 1064]
+    3279      4         1320.0 [1320, 1320]
+    3275      8         1064.0 [1064, 1064]
+    3267      2         2088.0 [2088, 2088]
+    3255     10         1454.4 [1128, 1576]
+    3249      5         1320.0 [1320, 1320]
+
+======================================================================
+PART B: LIE GROUP STRUCTURE — exp(t * S_T)
+======================================================================
+
+n = 7:
+  H=189: PERIODIC, omega=2.6458, period=2.3748
+         det(exp(pi*S/omega_max)) = 1.000000 (=1 for SO(n))
+  H=175: QUASI-PERIODIC, freqs=[np.float64(0.4816), np.float64(1.254), np.float64(4.3813)], ratios=[np.float64(2.6038), np.float64(9.0974)]
+         det(exp(pi*S/omega_max)) = 1.000000 (=1 for SO(n))
+  H=171: QUASI-PERIODIC, freqs=[np.float64(0.2679), np.float64(2.6458), np.float64(3.7321)], ratios=[np.float64(9.8761), np.float64(13.9309)]
+         det(exp(pi*S/omega_max)) = 1.000000 (=1 for SO(n))
+
+n = 9:
+  H=3357: QUASI-PERIODIC, freqs=[np.float64(1.7321), np.float64(2.2072), np.float64(3.1001), np.float64(4.3032)], ratios=[np.float64(1.2743), np.float64(1.7898), np.float64(2.4844)]
+         det(exp(pi*S/omega_max)) = 1.000000 (=1 for SO(n))
+  H=3267: QUASI-PERIODIC, freqs=[np.float64(0.364), np.float64(0.8391), np.float64(1.7321), np.float64(5.6713)], ratios=[np.float64(2.3052), np.float64(4.7585), np.float64(15.5805)]
+         det(exp(pi*S/omega_max)) = 1.000000 (=1 for SO(n))
+  H=3159: PERIODIC, freqs=[np.float64(1.7321), np.float64(5.1962)], ratios=[np.float64(2.9999)]
+         det(exp(pi*S/omega_max)) = 1.000000 (=1 for SO(n))
+
+======================================================================
+PART C: BCH TOURNAMENT COMPOSITION
+======================================================================
+
+n=5: Composing pairs of regular tournaments
+  24 regular tournaments found
+
+  Ghost 13 ([S1,S2] is symmetric): FAILS (4/45)
+  Corr(Hamming_distance, ||[S1,S2]||) = -0.0720
+
+  Sample pairs:
+    H1   H2  dist  ||[S1,S2]||
+    15   15     3       5.6569
+    15   15     3       5.6569
+    15   15     4       6.9282
+    15   15     3       5.6569
+    15   15     5       0.0000
+    15   15     6       6.9282
+    15   15     3       5.6569
+    15   15     4       6.9282
+    15   15     6       6.9282
+    15   15     4       6.9282
+
+======================================================================
+PART D: GRAND TRICHOTOMY VERIFICATION
+======================================================================
+
+n=5:
+  Parity (INERT/p=2): H odd for 1024/1024 = 100.0%  REDEI CONFIRMED
+
+  Cycle structure (RAMIFIED/p=3):
+  c_3 mod 3 distribution:
+    c3 = 0 mod 3: 360 tournaments, mean H = 6.3
+    c3 = 1 mod 3: 400 tournaments, mean H = 9.6
+    c3 = 2 mod 3: 264 tournaments, mean H = 5.9
+
+  Self-knowledge (SPLIT/p=7):
+  H mod 7 distribution:
+    H = 1 mod 7: 184 tournaments (18.0%)
+    H = 2 mod 7: 240 tournaments (23.4%)
+    H = 3 mod 7: 120 tournaments (11.7%)
+    H = 4 mod 7: 120 tournaments (11.7%)
+    H = 5 mod 7: 240 tournaments (23.4%)
+    H = 6 mod 7: 120 tournaments (11.7%)
+  H=7 is FORBIDDEN at n=5
+
+n=7:
+  Parity (INERT/p=2): H odd for 50000/50000 = 100.0%  REDEI CONFIRMED
+
+  Cycle structure (RAMIFIED/p=3):
+  c_3 mod 3 distribution:
+    c3 = 0 mod 3: 17523 tournaments, mean H = 81.8
+    c3 = 1 mod 3: 17351 tournaments, mean H = 79.1
+    c3 = 2 mod 3: 15126 tournaments, mean H = 75.2
+
+  Self-knowledge (SPLIT/p=7):
+  H mod 7 distribution:
+    H = 0 mod 7: 5470 tournaments (10.9%)
+    H = 1 mod 7: 5439 tournaments (10.9%)
+    H = 2 mod 7: 7852 tournaments (15.7%)
+    H = 3 mod 7: 7383 tournaments (14.8%)
+    H = 4 mod 7: 8257 tournaments (16.5%)
+    H = 5 mod 7: 8576 tournaments (17.2%)
+    H = 6 mod 7: 7023 tournaments (14.0%)
+  H=7 is FORBIDDEN at n=7
+
+======================================================================
+PART E: COMMUTATOR-SPECTRAL-H TRIANGLE (n=5)
+======================================================================
+
+  Pairwise correlations (1024 tournaments):
+    Corr(H, tr(S^4))     = 0.0000
+    Corr(H, ||[A,S]||^2) = -0.9733
+    Corr(tr(S^4), ||[A,S]||^2) = 0.0000
+
+  Within score classes:
+      S2  count      H range        tr(S^4) range  corr(H,tr4)
+     0.0     24 [ 15,  15] [    180,     180]          nan
+     2.0    280 [ 11,  15] [    116,     180]      -0.8839
+     4.0    240 [  9,   9] [    116,     180]          nan
+     6.0    240 [  5,   5] [    116,     116]          nan
+     8.0    120 [  3,   3] [    116,     116]          nan
+    10.0    120 [  1,   1] [    180,     180]          nan
+
+======================================================================
+PART F: SPECTRAL FLATNESS INDEX (n=5)
+======================================================================
+
+  Correlation(H, F) = -0.0000
+  (Positive means: flatter spectrum => more H)
+  F in [0.4, 0.5): n=  384, mean H=    7.5, max H=   15
+  F in [0.6, 0.7): n=  640, mean H=    7.5, max H=   15
+
+======================================================================
+PART E: COMMUTATOR-SPECTRAL-H TRIANGLE (n=7)
+======================================================================
+
+  Pairwise correlations (30000 tournaments):
+    Corr(H, tr(S^4))     = 0.0017
+    Corr(H, ||[A,S]||^2) = -0.9571
+    Corr(tr(S^4), ||[A,S]||^2) = -0.0054
+
+  Within score classes:
+      S2  count      H range        tr(S^4) range  corr(H,tr4)
+     0.0     48 [171, 189] [    294,     742]      -0.2149
+     2.0   1006 [147, 159] [    358,     742]      -0.2516
+     4.0   3366 [121, 145] [    358,     742]      -0.4359
+     6.0   3451 [ 99, 135] [    294,     742]      -0.4676
+     8.0   5529 [ 69, 135] [    358,     614]      -0.4704
+    10.0   4067 [ 51, 123] [    294,     742]      -0.4544
+    12.0   3959 [ 41,  93] [    294,     742]      -0.1710
+    14.0   2652 [ 33,  69] [    358,     614]       0.2060
+    16.0   2586 [ 23,  51] [    358,     614]      -0.0110
+    18.0   1285 [ 15,  33] [    358,     742]       0.2632
+    20.0   1097 [ 11,  17] [    422,     614]       0.3129
+    22.0    485 [  9,  15] [    422,     550]      -0.6588
+    24.0    290 [  5,   9] [    486,     550]      -1.0000
+    26.0    116 [  3,   3] [    614,     614]          nan
+    28.0     63 [  1,   1] [    742,     742]          nan
+
+======================================================================
+PART F: SPECTRAL FLATNESS INDEX (n=7)
+======================================================================
+
+  Correlation(H, F) = -0.0015
+  (Positive means: flatter spectrum => more H)
+  F in [0.3, 0.4): n=  650, mean H=   79.5, max H=  175
+  F in [0.4, 0.5): n= 6108, mean H=   78.8, max H=  159
+  F in [0.5, 0.6): n=18497, mean H=   78.9, max H=  171
+  F in [0.7, 0.8): n= 4517, mean H=   78.8, max H=  159
+  F in [0.8, 0.9): n=  228, mean H=   80.7, max H=  189

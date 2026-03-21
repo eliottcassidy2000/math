@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-21-S14 — 2026-03-21: Overnight Cartan unification — two-parameter H formula, n=9 spectral flatness, Lie group analysis
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-21-S13 + opus-S94/S95 (parallel discoveries)
+**Summary:** Unified three independently discovered principles (spectral flatness S13, Cartan decoupling S94/95, Grand Trichotomy S94) into a single two-parameter H-prediction formula. Six-part investigation at n=5,7,9.
+**Key results:**
+1. **n=9 Spectral Flatness CONFIRMED**: min tr(S^4) = 936 <=> max H = 3357 among circulant regulars. Principle holds BEYOND DRT (d=1.5 not integer at n=9).
+2. **Two-parameter H formula**: H ~ f(S_2, tr(S^4)). Score regularity explains 96% (corr=-0.957). Spectral kurtosis explains 44% of residual within score classes.
+3. **Periodicity does NOT predict max H at n=9**: H-maximizer is quasi-periodic (4 incommensurate frequencies). A periodic tournament (freq ratio=3) has LOWER H.
+4. **Ghost 13 corrected**: [anti, anti] = anti (NOT sym). Ghost 13 is [anti, sym] = sym. BCH of two tournaments stays in tournament sector.
+5. **Grand Trichotomy verified**: H always odd (p=2), H=7 forbidden (p=7), c_3 mod 3 biases H (p=3). All confirmed exhaustively.
+6. **H mod 7 non-uniform**: H=0 mod 7 underrepresented at 10.9% vs expected 14.3%.
+**New scripts:** overnight_cartan_s14.py
+**New reflection:** two-parameter-H-formula.md
+**Unresolved:** Full regression model for two-parameter formula, n=11 test, GPT-2 attention two-parameter analysis
+
 ## opus-2026-03-21-S95b — 2026-03-21: Deep repo scour — missed connections, crystal phase, rapidity lattice n=6
 
 **Account:** opus
