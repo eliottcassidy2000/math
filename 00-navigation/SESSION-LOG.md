@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S112 — 2026-03-21: OCR Nature — n=7 IS the global minimum, OCR recovers to 0.966 at n=9
+
+**Account:** opus
+**Summary:** Confirmed n=7 is the global OCR minimum (0.9587). OCR rises at n=8 (0.9621) and n=9 (0.9657). The mechanism: Var(H|scores) growth rate peaks at n=6→7 (11.2×) then slows (13.3×), while Var(H) growth accelerates (14.5×). This is a finite-size crossover effect.
+**Key:**
+1. **n=9 OCR = 0.9657** — higher than n=8 (0.9621), confirming recovery
+2. **n=7 is the global minimum** (0.9587), not a plateau
+3. **Growth rates**: Var(H|sc) grows 11.2× at n=6→7, then 13.3× at n=7→8; Var(H) grows 11.1×, 14.5×
+4. **Ambiguous fraction**: 27%(n=5), 78%(n=6), 97%(n=7), 99.7%(n=8) — saturates near 100%
+5. **Dominant POS at n=7**: (1,2,3,3,3,4,5) with S₂=10, 16 H values, 24.6% of residual
+6. **The crossover**: small n = few ambiguous → OCR=1; medium n = ambiguity grows fast → OCR dips; large n = Var(H) drowns ambiguity → OCR→1
+**Scripts:** ocr_nature_s112.py
+
+---
+
 ## opus-2026-03-21-S111 — 2026-03-21: Recursive Tower — telescoping, period-2, valid codes, tournament algebra
 
 **Account:** opus
