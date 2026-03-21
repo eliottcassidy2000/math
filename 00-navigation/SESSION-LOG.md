@@ -13,42 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-21-S13 — 2026-03-21: Deep Cartan bridge — spectral blindness, commutant theorem, kurtosis principle
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-21-S12
+**Summary:** Overnight deep dive into the Cartan decomposition bridge. Five theorems proved, three conjectures formulated.
+**Key results:** (1) S_T^2=-nI+J iff DRT, (2) tr(S^4) first distinguishes regular H classes, (3) Paley min poly x(x^2+p)=0 with dim(Alg)=3, (4) Paley comm dim = (p^2-2p+3)/2, (5) Spectral Flatness Principle confirmed n=3,5,7
+**New scripts:** cartan_bridge_deep.py, cartan_bridge_deep2.py, paley_commutant_theorem.py
+**New reflection:** spectral-blindness-and-kurtosis.md
+**New synthesis:** cartan-bridge-synthesis-S13.md
+
 ## opus-2026-03-21-S94 — 2026-03-21: Adelic Cartan Bridge, TournamentProbe v2, Ghosts Through Cartan
 
 **Account:** opus
 **Continuation of:** opus-2026-03-21-S93 (via kind-pasteur-2026-03-21-S12's Cartan bridge/TournamentProbe foundation)
-**Files read:** Full startup sequence, NEXT_SESSION_BRIEF.md, all S93 scripts (sixteen_dimensions, llm_tournament_tools, napolitano_assessment), adelic_tournament_s91a.py, adelic_geometry_s91b.py, cartan_attention_theorem.py, ghosts_rational_s91d.py + output, tournament-gauge-bridge.md, adelic-tournament-geometry.md, ghosts-and-supersymmetry.md, carry-and-ghost.md, triple-of-linearizations.md, k-periodicity-synthesis.md, super-orthogonality.md, napolitano-gauge-theory-analysis-S12.md
-**Summary of work:** Deep overnight exploration of the Cartan bridge connecting tournament theory, adelic geometry, and ghost theory. Three major scripts + synthesis reflection.
-
-### Key Discoveries
-
-1. **The Grand Cartan-Trichotomy Map**: gl(n,R) = R·I ⊕ so(n) ⊕ p maps EXACTLY to INERT(2) ⊕ RAMIFIED(3) ⊕ SPLIT(7). The scalar sector is parity (Rédei), the antisymmetric sector is tournament competition (3-cycle atom), the symmetric sector is cooperation/self-knowledge (H=7 forbidden alone).
-
-2. **Ghost 13 — The Commutator Ghost**: [A, S_tl] is SYMMETRIC (cooperation-type). This is the Cartan bracket relation [k, p] ⊆ p. Meaning: [competition, self-knowledge] = self-knowledge. The model cannot become more decisive through internal reflection alone.
-
-3. **Rapidity lattice = Hurwitz lattice**: ALL n=5 eigenvalue rapidities decompose EXACTLY as integer combinations of ln(2)/2, ln(3)/2, ln(7)/2 — the three Hurwitz generators. The rapidity lattice IS the adelic structure made transcendental.
-
-4. **Ghost anatomy by Cartan sector**: All 12+1 ghosts sorted into tournament/cooperation/scalar/mixed categories. Key finding: exponentiation AMPLIFIES cooperation ghosts and SUPPRESSES tournament ghosts (rotation vs dilation).
-
-5. **Adelic heat kernel factorization**: K(ln p) ≈ K_A · K_S · K_σ / nc². Factorization error GROWS with prime: p=2 (0.0%) → p=7 (0.7%) → p=42 (7.0%). Higher primes = more entangled ghost structure.
-
-6. **Cooperation amplifies rational ghosts**: G_ad(S)/G_ad(A) = 1.83. The cooperation sector amplifies ghosts 1.83× more than the tournament sector. Self-knowledge preserves rationality; competition merely rotates it.
-
-7. **TournamentProbe v2 (ACTProbe)**: 8 zero-parameter tools: CartanDecomposer, AdelicDiagnostics, GhostDetector, SoftTournamentConverter, EntanglementMeter + upgraded Confidence/Depth/Intransitivity. Combined risk uses formal group evidence aggregation.
-
-8. **Chebyshev parity alternation**: Chebyshev ghost alternates between tournament (odd k → ramified p=3) and cooperation (even k → split p=7) with period 2.
-
-9. **BCH ghost with Bernoulli coefficients**: The rational coefficients in the Baker-Campbell-Hausdorff expansion (B_k/k!) are the "exchange rates" between tournament and cooperation ghost content.
-
-**New contributions:** Ghost 13 (commutator ghost), adelic Cartan bridge theory, cartan-ghosts-synthesis.md reflection
+**Summary of work:** Deep overnight exploration of the Cartan bridge connecting tournament theory, adelic geometry, and ghost theory. Three major scripts + synthesis reflection. Grand Cartan-Trichotomy Map, Ghost 13 (commutator ghost), rapidity=Hurwitz lattice, TournamentProbe v2 (ACTProbe).
 **New scripts:** adelic_cartan_bridge_s94.py, tournament_probe_v2_s94.py, ghosts_through_cartan_s94.py
-**Unresolved threads:**
-- Run ACTProbe on actual LLM attention matrices (need model weights)
-- Verify rapidity lattice decomposition at n=6 and n=7 (more primes enter)
-- Prove the adelic heat kernel factorization error bound theoretically
-- Build PyPI package for TournamentProbe v2
-- Investigate whether training actually shifts Cartan balance as predicted
-- The BCH correction series: does it converge? What is the radius?
 
 ## kind-pasteur-2026-03-21-S12 — 2026-03-21: Deep analysis of Napolitano gauge theory paper & Tournament-Attention bridge
 

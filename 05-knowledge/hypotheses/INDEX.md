@@ -1738,3 +1738,25 @@ Source: cartan_attention_theorem.py
 **What:** The transitivity of any regular tournament on n vertices is 3(n-3)/(4(n-2)). This equals 2/3 uniquely at n=11.
 **Proof:** 3(n-3)/(4(n-2)) = 2/3 => 9(n-3) = 8(n-2) => n = 11.
 Source: phase_transition_universality.py
+
+## HYP-1710: Spectral Flatness Principle — min tr(S^4) => max H (kind-pasteur-S13)
+**Status:** CONFIRMED n=3,5,7
+**Hypothesis:** Among regular tournaments on n vertices, the one with minimum tr(S_T^4) (flattest eigenvalue distribution = minimum kurtosis) achieves maximum H.
+**Evidence:** At n=7: Paley has tr(S^4)=294 (min), H=189 (max). Type B has 742, H=175. Type C has 486, H=171. Confirmed at n=3,5 exhaustively.
+**Why:** Spectral flatness = all eigenvalue magnitudes equal = DRT = maximum cycle overlap structure = maximum alpha_1 (OCF) = maximum H. The eigenvalue kurtosis is a proxy for the departure from doubly regular structure.
+Source: cartan_bridge_deep2.py
+
+## HYP-1711: Paley commutant maximality (kind-pasteur-S13)
+**Status:** OPEN (partial evidence)
+**Hypothesis:** Among all n-vertex tournaments, the Paley tournament T_p has the largest dim(Comm(S_T)).
+**Formula:** dim(Comm(S_{T_p})) = (p^2-2p+3)/2, verified p=3,7,11.
+**Evidence:** At n=7, Paley comm=19 vs generic comm=7. At n=5, ALL tournaments have comm=5 (no distinction; n=5 has p=1 mod 4, no Paley tournament).
+**Test needed:** Check at n=9 (no Paley, since 9 is not prime) and n=11 (Paley exists).
+Source: paley_commutant_theorem.py
+
+## HYP-1712: Trained attention has lower spectral diversity than random (kind-pasteur-S13)
+**Status:** OPEN
+**Hypothesis:** Training shifts attention matrices toward lower spectral diversity (more structured, Paley-like) in the antisymmetric sector.
+**Rationale:** If training imposes directional structure, eigenspaces should merge (reducing diversity). Paley (min diversity=2) is the theoretical limit.
+**Test:** Extract attention from trained vs untrained GPT-2, compare antisymmetric spectral diversity per head.
+Source: cartan_bridge_deep2.py

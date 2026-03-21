@@ -1,0 +1,137 @@
+======================================================================
+INVESTIGATION A: DISTINGUISHING POWER OF S_T^k (n=7)
+======================================================================
+
+Regular tournament classes:
+  H=171: 1680 tournaments
+  H=175: 720 tournaments
+  H=189: 240 tournaments
+
+Power traces by H class:
+    k         H=171         H=175         H=189   distinct?
+    1           0.0           0.0           0.0          no
+    2         -42.0         -42.0         -42.0          no
+    3           0.0           0.0           0.0          no
+    4         486.0         742.0         294.0         YES
+    5           0.0           0.0           0.0          no
+    6       -6090.0      -14154.0       -2058.0         YES
+    7           0.0           0.0           0.0          no
+    8       80070.0      271558.0       14406.0         YES
+    9           0.0           0.0           0.0          no
+   10    -1081962.0    -5212522.0     -100842.0         YES
+   11           0.0           0.0           0.0          no
+   12    14836902.0   100057510.0      705894.0         YES
+   13           0.0           0.0           0.0          no
+   14  -205021194.0  -1920670346.0    -4941258.0         YES
+
+Full matrix signature by H class (using sorted eigenvalues of S^k):
+  k=3: DIFFERENT
+    H=171: (np.float64(0.0), np.float64(0.02), np.float64(0.02), np.float64(18.52), np.float64(18.52), np.float64(51.98), np.float64(51.98))
+    H=175: (np.float64(0.0), np.float64(0.11), np.float64(0.11), np.float64(1.97), np.float64(1.97), np.float64(84.1), np.float64(84.1))
+    H=189: (np.float64(0.0), np.float64(18.52), np.float64(18.52), np.float64(18.52), np.float64(18.52), np.float64(18.52), np.float64(18.52))
+
+Off-diagonal uniqueness of S^k by H class:
+  k=1: all same
+  k=2: 3 distinct off-diagonal patterns -- FIRST DISTINCTION!
+    H=171: unique off-diag values = [np.float64(-3.0), np.float64(1.0), np.float64(5.0)]
+    H=175: unique off-diag values = [np.float64(-3.0), np.float64(1.0), np.float64(5.0)]
+    H=189: unique off-diag values = [np.float64(1.0)]
+
+======================================================================
+INVESTIGATION B: S_T^2 UNIVERSALITY FOR REGULAR TOURNAMENTS
+======================================================================
+
+n=3: d_expected = 0.0 (integer)
+  Regular tournaments: 2
+  With S^2 = -nI+J (DRT): 2 (100.0%)
+  DRT H values: [3]
+  *** ALL regular n=3 tournaments are DRT! ***
+
+n=5: d_expected = 0.5 (NOT integer)
+  Regular tournaments: 24
+  With S^2 = -nI+J (DRT): 0 (0.0%)
+  Non-DRT H values: [15]
+  *** NO regular n=5 tournaments are DRT ***
+
+n=7: d_expected = 1.0 (integer)
+  Regular tournaments: 2640
+  With S^2 = -nI+J (DRT): 240 (9.1%)
+  DRT H values: [189]
+  Non-DRT H values: [171, 175]
+
+n=9: too many tournaments (68719476736), skipping
+
+======================================================================
+INVESTIGATION C: ALGEBRA DIMENSION OF S_T (n=7)
+======================================================================
+
+Algebra dimension by H class:
+  H=171: dim(Alg(S_T)) = [np.int64(7)] (1680 tournaments)
+  H=175: dim(Alg(S_T)) = [np.int64(7)] (720 tournaments)
+  H=189: dim(Alg(S_T)) = [np.int64(3)] (240 tournaments)
+
+Minimal polynomial degree by H class:
+  H=171: min poly degree = [7]
+  H=175: min poly degree = [7]
+  H=189: min poly degree = [3]
+
+Minimal polynomial coefficients (representative per class):
+
+  H=171:
+    Eigenvalues: -0.000 (0.000+0.268i) (0.000+-0.268i) (0.000+2.646i) (0.000+-2.646i) (0.000+3.732i) (0.000+-3.732i) 
+    Char poly coefficients: [ 1. -0. 21. -0. 99. -0.  7.  0.]
+    S^3 + 7*S = 0? error = 8.0000 (NO
+    Min poly: x^3 + 0.00*x^2 + 11.57*x + 0.00
+
+  H=175:
+    Eigenvalues: -0.000 (-0.000+0.482i) (-0.000+-0.482i) (0.000+1.254i) (0.000+-1.254i) (-0.000+4.381i) (-0.000+-4.381i) 
+    Char poly coefficients: [ 1.  0. 21. -0. 35.  0.  7.  0.]
+    S^3 + 7*S = 0? error = 16.0000 (NO
+    Min poly: x^3 + -0.00*x^2 + 17.67*x + -0.00
+
+  H=189:
+    Eigenvalues: 0.000 (-0.000+2.646i) (-0.000+-2.646i) (-0.000+2.646i) (-0.000+-2.646i) (-0.000+2.646i) (-0.000+-2.646i) 
+    Char poly coefficients: [  1.   0.  21.   0. 147.   0. 343.  -0.]
+    S^3 + 7*S = 0? error = 0.0000 (YES
+
+======================================================================
+INVESTIGATION D: WHAT DISTINGUISHES H CLASSES? (n=7)
+======================================================================
+
+H class characteristics:
+      H  count    c3    c5  comm_dim    tr(S^4)    tr(S^6)
+    171   1680    14    36         7      486.0    -6090.0
+    175    720    14    28         7      742.0   -14154.0
+    189    240    14    42        19      294.0    -2058.0
+
+Cycle counts are the DISCRIMINANT between iso-spectral classes.
+Since tr(S^k) is the same for all (same eigenvalues),
+the distinction must come from the eigenvector structure,
+which is captured by the non-trace invariants of S^k.
+
+======================================================================
+INVESTIGATION E: ATTENTION ALGEBRA DIMENSIONS
+======================================================================
+
+n = 5:
+  Random attention (100 trials):
+    Anti spectral diversity: mean=3.0, range=[3, 3]
+    Sym spectral diversity:  mean=5.0, range=[5, 5]
+
+n = 7:
+  Random attention (100 trials):
+    Anti spectral diversity: mean=4.0, range=[4, 4]
+    Sym spectral diversity:  mean=7.0, range=[6, 7]
+  Paley T_7 attention:
+    Anti spectral diversity: 2 (values: [np.float64(0.0), np.float64(0.441)])
+    Sym spectral diversity:  2 (values: [np.float64(0.1667), np.float64(1.0)])
+    Paley has MINIMAL spectral diversity = MAXIMAL symmetry
+
+n = 11:
+  Random attention (100 trials):
+    Anti spectral diversity: mean=6.0, range=[6, 6]
+    Sym spectral diversity:  mean=11.0, range=[10, 11]
+  Paley T_11 attention:
+    Anti spectral diversity: 2 (values: [np.float64(0.0), np.float64(0.3317)])
+    Sym spectral diversity:  2 (values: [np.float64(0.1), np.float64(1.0)])
+    Paley has MINIMAL spectral diversity = MAXIMAL symmetry

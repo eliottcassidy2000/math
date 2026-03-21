@@ -1,0 +1,32 @@
+=== n=5 FULL ANALYSIS ===
+  H  comm  count
+    1    5    120
+    3    5    120
+    5    5    240
+    9    5    240
+   11    5    120
+   13    5    120
+   15    5     64
+
+=== n=7 REGULAR REPRESENTATIVES ===
+H= 175: comm_dim=  7, tr(S^4)=   742.0
+  eigenvalues: -0.000 +0.482i -0.482i +1.254i -1.254i +4.381i -4.381i 
+H= 171: comm_dim=  7, tr(S^4)=   486.0
+  eigenvalues: -0.000 +0.268i -0.268i +2.646i -2.646i +3.732i -3.732i 
+H= 189: comm_dim= 19, tr(S^4)=   294.0
+  eigenvalues: +0.000 +2.646i -2.646i +2.646i -2.646i +2.646i -2.646i 
+
+=== PALEY COMMUTANT FORMULA ===
+p= 3: comm=   3, formula=   3, match=True
+p= 7: comm=  19, formula=  19, match=True
+p=11: comm=  51, formula=  51, match=True
+
+=== SPECTRAL FLATNESS ===
+Among regular n=7:
+  H=189 (Paley): eigenvalues all |lambda|=sqrt(7)=2.646
+    -> tr(S^4) = 294 = MINIMUM kurtosis
+  H=175: three distinct magnitudes -> tr(S^4) = 742
+  H=171: three distinct magnitudes -> tr(S^4) = 486
+
+SPECTRAL FLATNESS PRINCIPLE: min kurtosis <=> max H for regular
+This is CONFIRMED at n=3, 5, 7
