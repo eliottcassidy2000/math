@@ -13,6 +13,40 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S105 — 2026-03-21: OCR formula hunt — exact mechanism, Var(H) sequence, c₅ variance
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S103 + S104 (parallel agent found exact fractions)
+**Files read:** rigorous_ocr_s103.out, exact_ocr_formula_s104.out, hidden_orthogonal_invariants_s98.out
+**Summary of work:** Rigorous hunt for an exact OCR formula. Identified the exact mechanism of the OCR residual, verified computationally, and mapped the path toward a closed-form expression.
+
+### Key Findings (all rigorously verified)
+
+1. **The OCR Decomposition Theorem (exact at n=5)**:
+   ```
+   1 - OCR(n) = 4 · Var(c₅ + c₇ + ... | scores) / Var(H)
+   ```
+   Because H = 1 + 2(c₃ + c₅ + ...) and c₃ is determined by scores, the residual is entirely from higher cycle count variance. At n=5 this simplifies to 4·Var(c₅|scores)/Var(H).
+
+2. **c₃ is constant within score classes** — confirmed for ALL n=5 score classes. This means c₃ = C(n+1,3)/4 - S₂/2 is the exact score-determined part.
+
+3. **The c₅ distribution within the ambiguous class (1,2,2,2,3)**: c₅=1 (120 tours, H=11), c₅=2 (120 tours, H=13), c₅=3 (40 tours, H=15). E[c₅]=12/7, Var(c₅)=24/49. And 4·Var(c₅) = 96/49 = Var(H|sc) exactly.
+
+4. **Factored exact residuals**:
+   - 1-OCR(5) = 4/133 = 2²/(7·19). The 19 comes from Var(H)=285/16=3·5·19/16. The 7 comes from class size 280=2³·5·7.
+   - 1-OCR(6) = 19673/480480 = (103·191)/(2⁵·3·5·7·11·13)
+
+5. **Var(H) sequence**: 3/4, 3, 285/16, 585/4 for n=3,4,5,6. Ratio grows: 4.0, 5.9, 8.2.
+
+6. **The scaling question remains open**: Does Σ Var(c_k|scores) grow slower than Var(H)? The c₅ term is polynomial (bounded by C(n,5)²) while Var(H) grows factorially, suggesting convergence. But the SUM over all odd k might not be bounded.
+
+**New contributions:** ocr_formula_hunt_s105.py
+**Unresolved threads:**
+- Compute Var(c₅|scores) at n=6 and compare to total Var(H|scores) = 59019/9856
+- The fraction of Var(H|scores) coming from c₅ vs c₇ vs α₂ at n=6
+- Can Var(H) be expressed as a simple function of n? (The sequence 3/4, 3, 285/16, 585/4 needs an OEIS check)
+- The overlap structure N(k) computation was wrong in Part 2 — need to fix
+
 ## opus-2026-03-21-S103 — 2026-03-21: HONEST ASSESSMENT — rigorous OCR + devil's advocate critique
 
 **Account:** opus
