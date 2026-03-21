@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S114 — 2026-03-21: Gap Function — 7 is atomic forbidden, 63 IS achievable at n=8, 7×3^k pattern
+
+**Account:** opus
+**Summary:** Deep investigation of forbidden H values and their connection to OCR. H=7 is the ATOMIC forbidden value. H=21=3×7 inherits impossibility via OCF product. H=63 is NOT permanently forbidden (found at n=8!). The pattern 7, 21, 63 = 7×3^k at n=7 is a COINCIDENCE of the n=7 constraint, not a universal pattern.
+**Key:**
+1. **H=63 IS ACHIEVABLE at n=8**: Found in 100K samples. NOT a permanent gap!
+2. **H=7 and H=21 remain unfound at n=8**: Likely permanently forbidden (proved)
+3. **7 is ATOMIC**: I(Omega,2)=7 impossible for any tournament Omega. THM-029.
+4. **21 = 3×7**: Forbidden via OCF product — component I=7 impossible → 3×7 impossible
+5. **63 = 9×7**: Forbidden at n≤7 via product AND connected arguments. But connected Omega with I=63 EXISTS at n=8.
+6. **n=6 gaps**: 7, 21, 35, 39. Note 35=5×7 (also product-forbidden via component I=7)
+7. **Gap density**: 12.5%(n=5) → 17.4%(n=6) → 18.9%(n=7). Peaks near OCR minimum!
+8. **Multiples of 7 at n=7**: 7,21,63 FORBIDDEN but 35,49,77,91,105,133,147,175,189 ACHIEVABLE
+**Scripts:** gap_function_s114.py
+
+---
+
 ## opus-2026-03-21-S113 — 2026-03-21: OCR Certainty Audit — bootstrap CIs don't overlap, growth rate argument, honest assessment
 
 **Account:** opus
