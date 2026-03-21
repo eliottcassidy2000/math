@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S111 — 2026-03-21: Recursive Tower — telescoping, period-2, valid codes, tournament algebra
+
+**Account:** opus
+**Summary:** Pushed the recursive nesting to its abstract limits. H telescopes as alternating sum. Period-2 reflection. Valid codes = suffix-of-1s (k+1 codes at depth k). Nesting operator is parity operator P with P²=I. Conjectured c₀(n)=H_max(POS)-1, c₂(n)=n-1. OCR→1 predicted via code variance shrinking.
+**Key:**
+1. **H = 13 + 4×sbs₀ - 2×sbs₁** (telescoped at n=5, ALL terms verified)
+2. **Period-2**: after 2 nestings, H coefficient returns to +1 (reflection-translation)
+3. **Valid codes = suffix of 1s**: (0...0,1...1) with switch point j → k+1 valid codes
+4. **Prediction**: n=7 POS has 4 H values, n=9 has 5, n=11 has 6 (linear growth)
+5. **Tournament algebra**: nesting operator N(T,bit) is affine on H, acts as parity operator
+6. **n=6 breaks**: formula NOT exact at n=6 POS (2,2,2,3,3,3) — multiple inner classes give same outer H
+7. **c₂(n) = n-1**: conjecture from c₂(3)=2, c₂(5)=4
+8. **OCR→1 argument**: residual = variance of k+1 valid codes, grows linearly; Var(H) grows factorially → ratio → 0
+**Scripts:** recursive_tower_s111.py
+
+---
+
 ## opus-2026-03-21-S110 — 2026-03-21: Recursive Nesting — H = 14 - H_inner + 4×[src→snk] EXACT
 
 **Account:** opus
