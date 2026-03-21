@@ -1,0 +1,98 @@
+ACT-Probe — Adelic Cartan Tournament Probe
+opus-2026-03-21-S95
+
+============================================================
+  ACT-PROBE: Paley T_7 adjacency (7×7)
+============================================================
+
+  Cartan decomposition:
+    Tournament (antisymmetric): 0.5000
+    Cooperation (sym traceless): 0.5000
+    Scalar:                      0.0000
+    σ = Tr/n:                    0.0000
+
+  Cartan entanglement:
+    ||[A,S]||² = 0.000000
+    κ (relative) = 0.000000
+
+  Tournament structure:
+    Score sequence: (3, 3, 3, 3, 3, 3, 3)
+    S₂ (irregularity): 0.00
+    Regular: YES
+    H = 189 (odd ✓)
+    c₃ = 14
+    Transitive: NO
+
+  Ghost invariants:
+    Eigenvalues: ['3.0000', '-0.5000', '-0.5000', '-0.5000', '-0.5000', '-0.5000']
+    Rapidities: ['-0.5493', '-0.5493', '-0.5493', '-0.5493', '-0.5493', '-0.5493']
+
+  Grand Trichotomy:
+    INERT  (p=2): H=189, H mod 2 = 1 (ODD ✓)
+    RAMIFIED (p=3): c3=14, H mod 3 = 0
+    SPLIT  (p=7): H mod 7 = 0
+
+============================================================
+  ACT-PROBE: Random softmax attention (8×8) (8×8)
+============================================================
+
+  Cartan decomposition:
+    Tournament (antisymmetric): 0.0956
+    Cooperation (sym traceless): 0.8214
+    Scalar:                      0.0830
+    σ = Tr/n:                    0.1358
+
+  Cartan entanglement:
+    ||[A,S]||² = 0.073854
+    κ (relative) = 0.297569
+
+  Tournament structure:
+    Score sequence: (2, 2, 2, 3, 4, 4, 5, 6)
+    S₂ (irregularity): 16.00
+    Regular: NO
+    H = 245 (odd ✓)
+    c₃ = 13
+    Transitive: NO
+
+  Ghost invariants:
+    Eigenvalues: ['1.0000', '0.3298', '0.3298', '0.1580', '-0.0162', '-0.0162']
+    Rapidities: ['17.1259', '0.3425', '0.3425', '0.1593', '-0.0162', '-0.0162']
+
+  Grand Trichotomy:
+    INERT  (p=2): H=245, H mod 2 = 1 (ODD ✓)
+    RAMIFIED (p=3): c3=13, H mod 3 = 2
+    SPLIT  (p=7): H mod 7 = 0
+
+============================================================
+  ACT-PROBE: Transitive tournament T_5 (5×5)
+============================================================
+
+  Cartan decomposition:
+    Tournament (antisymmetric): 0.5000
+    Cooperation (sym traceless): 0.5000
+    Scalar:                      0.0000
+    σ = Tr/n:                    0.0000
+
+  Cartan entanglement:
+    ||[A,S]||² = 25.000000
+    κ (relative) = 1.000000
+
+  Tournament structure:
+    Score sequence: (0, 1, 2, 3, 4)
+    S₂ (irregularity): 10.00
+    Regular: NO
+    H = 1 (odd ✓)
+    c₃ = 0
+    Transitive: YES
+
+  Ghost invariants:
+    Eigenvalues: ['0.0000', '0.0000', '0.0000', '0.0000', '0.0000']
+    Rapidities: ['0.0000', '0.0000', '0.0000', '0.0000', '0.0000']
+
+  Grand Trichotomy:
+    INERT  (p=2): H=1, H mod 2 = 1 (ODD ✓)
+    RAMIFIED (p=3): c3=0, H mod 3 = 1
+    SPLIT  (p=7): H mod 7 = 1
+
+
+All tests passed. ACT-Probe ready for use.

@@ -1,0 +1,196 @@
+========================================================================
+  GPT-2 CARTAN TOURNAMENT PROBE
+  opus-2026-03-21-S95
+========================================================================
+
+--- Loading GPT-2 small ---
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 3026.31it/s]
+  Model: GPT-2 small (12 layers, 12 heads, d_model=768)
+  Testing on 5 sentences
+
+========================================================================
+  PART 1: ATTENTION CARTAN DECOMPOSITION BY LAYER AND HEAD
+========================================================================
+
+Sentence 0: "The cat sat on the mat and looked at the dog...." (12 tokens)
+
+Sentence 1: "Mathematical proofs require careful reasoning and ..." (12 tokens)
+
+Sentence 2: "One plus one equals two, and two plus two equals f..." (13 tokens)
+
+Sentence 3: "The quick brown fox jumps over the lazy dog near t..." (13 tokens)
+
+Sentence 4: "In tournament theory, every pair of vertices has e..." (15 tokens)
+
+
+========================================================================
+  PART 2: GLOBAL STATISTICS
+========================================================================
+
+  Total attention matrices analyzed: 720
+
+  Cartan fractions (mean ± std):
+    Tournament (antisymmetric): 0.4010 ± 0.0840
+    Cooperation (sym traceless): 0.5193 ± 0.0791
+    Scalar:                      0.0797 ± 0.1585
+
+  Commutator ||[A,S]||² (mean): 23.475923
+  H (tournament HP count): mean=1.0, min=1, max=1, median=1
+
+  --- Random softmax attention baseline ---
+  Random anti_frac (n=12): 0.2267 ± 0.0402
+  GPT-2  anti_frac:              0.4010 ± 0.0840
+
+  SHIFT: GPT-2 - Random = +0.1743
+  → Training INCREASES tournament (antisymmetric) energy!
+
+
+========================================================================
+  PART 3: CARTAN FRACTIONS BY LAYER
+========================================================================
+
+  Layer     anti      sym   scalar   ||[A,S]||²   H_mean
+      0   0.2360   0.3934   0.3706     1.479462      1.0
+      1   0.3400   0.4959   0.1640     6.124206      1.0
+      2   0.3827   0.5245   0.0928     7.710450      1.0
+      3   0.4112   0.5334   0.0554    16.816803      1.0
+      4   0.4087   0.5188   0.0725    18.845014      1.0
+      5   0.4343   0.5423   0.0233    31.720581      1.0
+      6   0.4321   0.5419   0.0260    28.678885      1.0
+      7   0.4418   0.5412   0.0170    36.966198      1.0
+      8   0.4349   0.5399   0.0252    29.230869      1.0
+      9   0.4453   0.5386   0.0161    41.313914      1.0
+     10   0.4429   0.5384   0.0187    37.077388      1.0
+     11   0.4018   0.5236   0.0746    25.747304      1.0
+
+
+========================================================================
+  PART 4: CARTAN FRACTIONS BY HEAD (averaged across layers)
+========================================================================
+
+   Head     anti      sym   scalar
+      0   0.4092   0.5378   0.0531
+      1   0.3999   0.4962   0.1038
+      2   0.4193   0.5369   0.0438
+      3   0.3838   0.5074   0.1088
+      4   0.4028   0.5203   0.0769
+      5   0.3882   0.5048   0.1070
+      6   0.4212   0.5377   0.0411
+      7   0.3839   0.5049   0.1112
+      8   0.3901   0.5282   0.0817
+      9   0.4266   0.5405   0.0329
+     10   0.3910   0.5136   0.0954
+     11   0.3957   0.5038   0.1005
+
+
+========================================================================
+  PART 5: TOURNAMENT INVARIANTS OF ATTENTION PATTERNS
+========================================================================
+
+  S₂ (Landau irregularity) by layer:
+  Layer    S₂_mean     S₂_std   reg_frac
+      0     186.00      50.13      0.000
+      1     186.00      50.13      0.000
+      2     186.00      50.13      0.000
+      3     186.00      50.13      0.000
+      4     186.00      50.13      0.000
+      5     186.00      50.13      0.000
+      6     186.00      50.13      0.000
+      7     186.00      50.13      0.000
+      8     186.00      50.13      0.000
+      9     186.00      50.13      0.000
+     10     186.00      50.13      0.000
+     11     186.00      50.13      0.000
+
+
+========================================================================
+  PART 6: HOW REGULAR ARE GPT-2 ATTENTION TOURNAMENTS?
+========================================================================
+
+  n = 12 tokens
+  S₂ range: [0, 143.0] (regular to transitive)
+  GPT-2 S₂ mean: 186.00
+  GPT-2 S₂ median: 182.00
+  Random S₂ (uniform tournament): 33.00 (expected)
+  Random S₂ (softmax attention): 28.28 ± 11.77
+
+
+========================================================================
+  PART 7: H(T_attention) — HAMILTONIAN PATH COUNTS
+========================================================================
+
+  Total attention tournaments with H computed: 288
+  H values: min=1, max=1, mean=1.0
+  H distribution:
+    H=     1:  288 (100.0%)
+
+  Rédei's theorem (H always odd): VERIFIED ✓
+
+
+========================================================================
+  PART 8: ATTENTION SHARPNESS AND TOURNAMENT STRUCTURE
+========================================================================
+
+  The key question: does sharper attention (lower entropy) produce
+  more tournament-like structure?
+
+  We measure "sharpness" by the entropy of each attention row.
+  Lower entropy = sharper = more tournament-like (one token dominates).
+
+  Layer  0: entropy↔anti_frac corr = +0.9016
+  Layer  5: entropy↔anti_frac corr = -0.9671
+  Layer 11: entropy↔anti_frac corr = -0.7821
+
+
+========================================================================
+  PART 9: THE KEY FINDING — TRAINED vs RANDOM CARTAN BALANCE
+========================================================================
+
+  Layer  GPT2_anti  Rand_anti    Shift       Direction
+      0     0.2360     0.2278  +0.0082      MORE TOURN
+      1     0.3400     0.2296  +0.1105      MORE TOURN
+      2     0.3827     0.2274  +0.1553      MORE TOURN
+      3     0.4112     0.2252  +0.1859      MORE TOURN
+      4     0.4087     0.2329  +0.1758      MORE TOURN
+      5     0.4343     0.2270  +0.2074      MORE TOURN
+      6     0.4321     0.2300  +0.2022      MORE TOURN
+      7     0.4418     0.2255  +0.2163      MORE TOURN
+      8     0.4349     0.2305  +0.2044      MORE TOURN
+      9     0.4453     0.2261  +0.2192      MORE TOURN
+     10     0.4429     0.2269  +0.2160      MORE TOURN
+     11     0.4018     0.2272  +0.1746      MORE TOURN
+
+
+========================================================================
+  SYNTHESIS: THE CARTAN BRIDGE IN GPT-2
+========================================================================
+
+  GPT-2 ATTENTION CARTAN BALANCE:
+    Tournament (antisymmetric): 0.4010
+    Cooperation (sym traceless): 0.5193
+    Scalar:                      0.0797
+
+  This tells us:
+  1. How much of the attention computation is DIRECTED (tournament-like)
+  2. How much is UNDIRECTED similarity (symmetric)
+  3. How much is uniform baseline (scalar)
+
+  The TOURNAMENT SECTOR is where our mathematical machinery applies:
+  - OCF: H(T) = I(Omega(T), 2) for the thresholded attention tournament
+  - Path homology: beta_k detects topological features of directed attention
+  - Spectral theory: eigenvalues of B_T reveal rotation structure
+
+  All of these are PARAMETER-FREE invariants that characterize LLM computation
+  from pure mathematics alone.
+
+  LAYER GRADIENT:
+    Early (0-3):  0.3425
+    Middle (4-7): 0.4292
+    Late (8-11):  0.4312
+    → GRADIENT: tournament energy INCREASES through layers
+
+Done. opus-2026-03-21-S95
