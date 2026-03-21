@@ -13,6 +13,36 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S97 — 2026-03-21: 5 Platonic solids, golden ratio, G₂⊂so(7), the five-fold way
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S96
+**Files read:** Startup sequence, five-and-ten.md, ghosts-and-supersymmetry.md, grand-trichotomy.md, representation-theory-of-numbers.md, numbers-as-cluster-sizes.md, seven-simplices.md, lie_tournament_bridge.py, deep_numerology.py
+**Summary of work:** Deep overnight investigation of the 5 Platonic solids, the number 5, and their connections to tournament theory, the Cartan bridge, and Lie groups.
+
+### Key Discoveries
+
+1. **T(5) = 12 = V(icosahedron)**: The number of tournament isomorphism classes at n=5 equals the number of vertices of the icosahedron. The flip graph on these 12 classes has V=12, E=30 — the SAME (V,E) pair as the icosahedron, though with different degree sequence.
+
+2. **Platonic Coxeter sequence**: The three 3D Platonic symmetry families have Coxeter numbers h = 4, 6, 10 = 2·{2, 3, 5}. The three primes index the three symmetry types. Our tournaments live in B₃ = so(7) (cube/octahedron type, h=6=2·3).
+
+3. **G₂ ⊂ so(7) with codimension 7**: The exceptional Lie group G₂ (dim 14, automorphisms of octonions) lives INSIDE the tournament Lie algebra so(7) (dim 21). The codimension is 7 — the number of tournament vertices. The 7 "non-exceptional" directions correspond to the 7 vertices.
+
+4. **Golden rapidity is transcendentally independent**: ρ_φ = arctanh(1/φ) = (3/2)ln(φ) CANNOT be expressed as a Z-combination of {ln2, ln3, ln5, ln7}/2. The golden ratio generates a genuinely new transcendental direction, independent of the Hurwitz primes.
+
+5. **The (2,3,5) ↔ (2,3,7) bridge**: Curvature 1/2+1/3+1/p transitions from spherical (p=5) through flat (p=6=2·3) to hyperbolic (p=7). The shared infrastructure {2,3}=6 is the critical flat point. Both worlds inherit the same parity and curvature; they differ only in the third prime.
+
+6. **C₅ is NOT DRT** (correction): The cyclic tournament on 5 vertices does NOT satisfy S²=-5I+J. Its eigenvalues are ±i·tan(π/5) and ±i·tan(2π/5), NOT all ±i√5. Spectral flatness requires Paley structure, which needs p≡3 mod 4.
+
+7. **The five-fold way**: 5 appears in five fundamental roles: Boundary (n=5 = last trivial), Content (φ fills the skeleton), Icosahedron (T(5)=V(icos)), Exceptional (5 Lie groups, G₂⊂so(7)), Spectral (Coxeter h=2·5).
+
+**New contributions:** platonic_five_s97.py, five-as-bridge.md reflection
+**Unresolved threads:**
+- Is the flip graph on 12 classes isomorphic to some known graph? (Same V,E as icosahedron but different degrees)
+- G₂'s role inside so(7) for tournament invariants — does it constrain H?
+- The golden direction: does ln(φ) appear in any tournament eigenvalue?
+- Prove T(n) counts relate to Platonic solid vertex counts for other n
+
 ## opus-2026-03-21-S96 — 2026-03-21: Spectral flatness + Lie groups — the equivalence cycle
 
 **Account:** opus
