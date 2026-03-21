@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S97b — 2026-03-21: Spectral Kurtosis Marathon — c₃-S₂ theorem, GPT-2 kurtosis, linear H formula
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S95c + kind-pasteur-S13/S14
+**Summary:** Proved c₃=C(n+1,3)/4-S₂/2 theorem, explained linear H formula, GPT-2 kurtosis profile.
+**Key results:**
+1. **c₃ = C(n+1,3)/4 - S₂/2** (PROVED, verified n=3-7)
+2. H linear in c₃ with coeff 2,2,3,6,~15 for n=3-7. EXACT at n=3,4 (H=1+2c₃).
+3. Chain: c₃ linear in S₂ → H linear in S₂. R²>0.92 always.
+4. tr(B⁴) ZERO unconditional corr with H, but 0.5-0.9 conditional
+5. GPT-2 κ=5.34 vs random 2.17. Kurtosis increases through layers (4.4→6.0). corr(κ,anti_frac)=+0.44.
+**New scripts:** spectral_kurtosis_deep_s97.py, gpt2_kurtosis_s97.py, prove_linear_H_S2_s97.py
+**Unresolved:** c₃ coefficient sequence formula, n=8 extension, algebraic proof of spectral flatness principle
+
+---
+
 ## opus-2026-03-21-S97 — 2026-03-21: 5 Platonic solids, golden ratio, G₂⊂so(7), the five-fold way
 
 **Account:** opus

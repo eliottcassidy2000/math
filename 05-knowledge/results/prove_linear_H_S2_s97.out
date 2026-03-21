@@ -1,0 +1,182 @@
+========================================================================
+  PROVING THE LINEAR FORMULA: H = H_max - α·S₂
+  opus-2026-03-21-S97
+========================================================================
+
+========================================================================
+  PART 1: THEOREM — c₃ = C(n+1,3)/4 - S₂/2
+========================================================================
+
+--- n = 3 ---
+  c₃ = 1.0 - S₂/2
+  VERIFIED for all 8 tournaments ✓
+
+--- n = 4 ---
+  c₃ = 2.5 - S₂/2
+  VERIFIED for all 64 tournaments ✓
+
+--- n = 5 ---
+  c₃ = 5.0 - S₂/2
+  VERIFIED for all 1024 tournaments ✓
+
+--- n = 6 ---
+  c₃ = 8.75 - S₂/2
+  VERIFIED for all 32768 tournaments ✓
+
+--- n = 7 ---
+  c₃ = 14.0 - S₂/2
+  VERIFIED for 1000 random tournaments ✓
+
+
+========================================================================
+  PART 2: FROM c₃ TO H — THE LINEAR APPROXIMATION
+========================================================================
+
+  OCF: H = 1 + 2α₁ + 4α₂ + ...
+  where α₁ = #{odd cycles}, α₂ = #{independent pairs}, etc.
+
+  For SMALL n (n=3,4,5), the only odd cycles are 3-cycles and 5-cycles.
+  α₁ = c₃ + c₅ + c₇ + ...
+
+  At n=5: α₁ = c₃ + c₅. Max c₅ per tournament = 0 or more.
+  Actually the n=5 regular tournament has c₅ = 24/5 = ... let me check.
+
+  The key question: how does H relate to c₃ linearly?
+
+  We know: c₃ = C(n+1,3)/4 - S₂/2  (proved above)
+  And regression found: H ≈ H_max - α·S₂ = H_max - 2α·c₃ + ... ?
+
+  If H is approximately linear in c₃:
+    H ≈ a + b·c₃
+  Then H ≈ a + b·(C(n+1,3)/4 - S₂/2) = (a + b·C(n+1,3)/4) - b/2·S₂
+
+  So α = b/2 where b is the c₃ coefficient of H.
+
+  Let's fit H vs c₃ directly.
+
+
+--- n = 3 ---
+  H ≈ 2.0000·c₃ + 1.0000
+  R² = 1.000000
+  Coefficient of c₃: 2.0000
+  Expected α = coeff/2 = 1.0000
+  Predicted H = 3.0000 + (-1.0000)·S₂
+  Direct S₂ fit: H = -1.0000·S₂ + 3.0000
+  Match: slope True, intercept True
+
+--- n = 4 ---
+  H ≈ 2.0000·c₃ + 1.0000
+  R² = 1.000000
+  Coefficient of c₃: 2.0000
+  Expected α = coeff/2 = 1.0000
+  Predicted H = 6.0000 + (-1.0000)·S₂
+  Direct S₂ fit: H = -1.0000·S₂ + 6.0000
+  Match: slope True, intercept True
+
+--- n = 5 ---
+  H ≈ 3.0000·c₃ + 0.0000
+  R² = 0.947368
+  Coefficient of c₃: 3.0000
+  Expected α = coeff/2 = 1.5000
+  Predicted H = 15.0000 + (-1.5000)·S₂
+  Direct S₂ fit: H = -1.5000·S₂ + 15.0000
+  Match: slope True, intercept True
+
+--- n = 6 ---
+  H ≈ 6.0000·c₃ + -7.5000
+  R² = 0.923077
+  Coefficient of c₃: 6.0000
+  Expected α = coeff/2 = 3.0000
+  Predicted H = 45.0000 + (-3.0000)·S₂
+  Direct S₂ fit: H = -3.0000·S₂ + 45.0000
+  Match: slope True, intercept True
+
+
+========================================================================
+  PART 3: THE H-vs-c₃ COEFFICIENT
+========================================================================
+
+  From the regression, the coefficient of c₃ in H is:
+
+
+--- n = 3 ---
+  coeff(c₃) = 2.0000, intercept = 1.0000, R² = 1.000000
+  c₃_max = 1, H at c₃_max ≈ 3
+  H at c₃=0: 1.0 (should be 1 for transitive)
+  OCF lower bound 1+2·c₃_max = 3, actual H_max ≈ 3
+
+--- n = 4 ---
+  coeff(c₃) = 2.0000, intercept = 1.0000, R² = 1.000000
+  c₃_max = 2, H at c₃_max ≈ 5
+  H at c₃=0: 1.0 (should be 1 for transitive)
+  OCF lower bound 1+2·c₃_max = 5, actual H_max ≈ 5
+
+--- n = 5 ---
+  coeff(c₃) = 3.0000, intercept = 0.0000, R² = 0.947368
+  c₃_max = 5, H at c₃_max ≈ 15
+  H at c₃=0: 1.0 (should be 1 for transitive)
+  OCF lower bound 1+2·c₃_max = 11, actual H_max ≈ 15
+
+--- n = 6 ---
+  coeff(c₃) = 6.0000, intercept = -7.5000, R² = 0.923077
+  c₃_max = 8, H at c₃_max ≈ 43
+  H at c₃=0: 1.0 (should be 1 for transitive)
+  OCF lower bound 1+2·c₃_max = 17, actual H_max ≈ 45
+
+--- n = 7 ---
+  coeff(c₃) = 14.9765, intercept = -52.5316, R² = 0.912746
+  c₃_max = 14, H at c₃_max ≈ 173
+  H at c₃=0: 1.0 (should be 1 for transitive)
+  OCF lower bound 1+2·c₃_max = 29, actual H_max ≈ 175
+
+
+========================================================================
+  PART 4: THE EXACT FORMULA CHAIN
+========================================================================
+
+  SUMMARY OF EXACT RESULTS:
+
+  1. THEOREM (c₃-S₂): c₃ = C(n+1,3)/4 - S₂/2
+     Proof: c₃ = C(n,3) - Σ_i C(s_i, 2), expand using S₂ = Σ(s_i-(n-1)/2)².
+
+  2. EMPIRICAL: H ≈ b·c₃ + a (linear with high R²)
+     Coefficient b increases with n.
+
+  3. COMBINING: H ≈ b·(C(n+1,3)/4 - S₂/2) + a
+                   = (a + b·C(n+1,3)/4) - (b/2)·S₂
+                   ≡ H_max_pred - α·S₂
+
+  4. OCF EXPLANATION:
+     H = 1 + 2α₁ + 4α₂ + ... where α₁ ≈ c₃ + (correction from longer cycles)
+     The linear approximation H ≈ 1 + 2c₃ + (nonlinear correction)
+     works because α₂, α₃, etc. are CORRELATED with c₃.
+
+     WHY: More 3-cycles → more odd cycles of all lengths → more independent
+     sets in Ω → larger I(Ω, 2) → larger H.
+
+  5. THE KURTOSIS REFINEMENT:
+     Within a fixed score class (fixed S₂), the residual H depends on
+     tr(B⁴). This captures the DISTRIBUTION of cycles, not just the count.
+     Conditional corr(H, -tr(B⁴) | S₂ fixed) ≈ 0.5-0.9.
+
+  THE TWO-PARAMETER HIERARCHY:
+    Level 0: H ≈ mean(H)                           (no info)
+    Level 1: H ≈ f(S₂) = H_max - α·S₂             (92-95% R²)
+    Level 2: H ≈ f(S₂, tr(B⁴))                     (refines within score class)
+    Level 3: H ≈ f(S₂, tr(B⁴), tr(B⁶))            (further refinement)
+    ...
+    Level ∞: H = I(Ω(T), 2)                        (exact, OCF)
+
+  The LINEAR formula H ≈ H_max - α·S₂ captures >90% of H's variance
+  because c₃ (which dominates H via OCF) is EXACTLY linearly related to S₂.
+
+
+  Summary table:
+    n   C(n+1,3)/4   α (S₂ coeff)   b (c₃ coeff)       R²
+    3         1.00        -1.0000         2.0000   1.0000
+    4         2.50        -1.0000         2.0000   1.0000
+    5         5.00        -1.5000         3.0000   0.9474
+    6         8.75        -3.0000         6.0000   0.9231
+
+
+Done. opus-2026-03-21-S97

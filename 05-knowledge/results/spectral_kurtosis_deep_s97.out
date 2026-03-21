@@ -44,3 +44,319 @@
     Range: [0.8839, 0.8839]
 
 --- n = 6 ---
+  32768 tournaments analyzed
+
+  Pearson correlations with H:
+    corr(H, -S₂)     = +0.9608  (Landau irregularity)
+    corr(H, -tr(B⁴)) = +0.0000  (spectral kurtosis)
+    corr(H, -κ_spec) = -0.0000  (normalized kurtosis)
+    corr(H, c₃)      = +0.9608  (3-cycle count)
+
+  Spearman rank correlations:
+    ρ(H, -S₂)     = +0.9731
+    ρ(H, -tr(B⁴)) = -0.0049
+    ρ(H, -κ_spec) = -0.0049
+
+  Two-parameter regression: H ~ a·S₂ + b·tr(B⁴) + c
+    a = -3.000000
+    b = -0.000000
+    c = 45.0000
+    R² = 0.923077
+
+  Three-parameter: H ~ a·S₂ + b·tr(B⁴) + c·tr(B⁶) + d
+    R² = 0.923077  (improvement: -0.000000)
+
+  S₂-only: H ~ a·S₂ + b
+    R² = 0.923077
+    Adding tr(B⁴) improves R² by 0.000000
+
+  c₃-only: R² = 0.923077
+
+  Conditional corr(H, -tr(B⁴) | score seq fixed):
+    Mean: 0.4974
+    Median: 0.5345
+    Range: [-0.2294, 0.8839]
+
+--- n = 7 ---
+  5000 tournaments analyzed
+
+  Pearson correlations with H:
+    corr(H, -S₂)     = +0.9554  (Landau irregularity)
+    corr(H, -tr(B⁴)) = +0.0203  (spectral kurtosis)
+    corr(H, -κ_spec) = +0.0203  (normalized kurtosis)
+    corr(H, c₃)      = +0.9554  (3-cycle count)
+
+  Spearman rank correlations:
+    ρ(H, -S₂)     = +0.9707
+    ρ(H, -tr(B⁴)) = +0.0102
+    ρ(H, -κ_spec) = +0.0102
+
+  Two-parameter regression: H ~ a·S₂ + b·tr(B⁴) + c
+    a = -7.490318
+    b = 0.004249
+    c = 155.1976
+    R² = 0.912822
+
+  Three-parameter: H ~ a·S₂ + b·tr(B⁴) + c·tr(B⁶) + d
+    R² = 0.912822  (improvement: 0.000000)
+
+  S₂-only: H ~ a·S₂ + b
+    R² = 0.912746
+    Adding tr(B⁴) improves R² by 0.000076
+
+  c₃-only: R² = 0.912746
+
+
+========================================================================
+  PART 2: WHAT DETERMINES tr(B⁴)?
+========================================================================
+
+  tr(B⁴) = ||B²||_F² = Σ_{i,j} (B²[i,j])²
+
+  B²[i,j] for i≠j counts (with sign) the number of 2-paths between i,j.
+  Specifically: B²[i,j] = #{k: both agree on k} - #{k: they disagree on k}
+  where "agree" means both beat k or both lose to k.
+
+  For the DIAGONAL: B²[i,i] = -(n-1) always.
+
+  So tr(B⁴) = n(n-1)² + Σ_{i≠j} (B²[i,j])².
+
+  The off-diagonal part Σ_{i≠j}(B²[i,j])² depends on the tournament.
+
+  QUESTION: Is tr(B⁴) determined by (c3, score_sequence)?
+
+
+--- n = 5: what determines tr(B⁴)? ---
+  c3=3, scores=(1, 1, 2, 3, 3): tr(B⁴) ∈ [116, 180]
+  c3=4, scores=(1, 2, 2, 2, 3): tr(B⁴) ∈ [116, 180]
+  tr(B⁴) is determined by (c3, score_sequence): NO
+  tr(B⁴) determined by score_sequence alone: False
+  tr(B⁴) determined by c3 alone: False
+
+--- n = 6: what determines tr(B⁴)? ---
+  tr(B⁴) is determined by (c3, score_sequence): NO
+  tr(B⁴) determined by score_sequence alone: False
+  tr(B⁴) determined by c3 alone: False
+
+
+========================================================================
+  PART 3: DERIVING tr(B⁴) FROM TOURNAMENT INVARIANTS
+========================================================================
+
+  tr(B⁴) = Σ_i (B²)²[i,i] + Σ_{i≠j} (B²[i,j])²
+  But (B²)[i,i] = -(n-1) for all i, so diagonal contributes n(n-1)².
+
+  Off-diagonal: B²[i,j] = Σ_{k≠i,j} B[i,k]·B[k,j] for i≠j.
+
+  B[i,k]·B[k,j] =
+    +1 if (i→k AND k→j) OR (k→i AND j→k) — "aligned through k"
+    -1 if (i→k AND j→k) OR (k→i AND k→j) — "anti-aligned through k"
+
+  So B²[i,j] = #{aligned k} - #{anti-aligned k}
+
+  Define a(i,j) = #{aligned} and d(i,j) = #{anti-aligned}.
+  Then B²[i,j] = a(i,j) - d(i,j), and a(i,j) + d(i,j) = n-2.
+  So B²[i,j] = 2·a(i,j) - (n-2).
+
+  The off-diagonal sum is:
+  Σ_{i≠j}(B²[i,j])² = Σ_{i≠j}(2a(i,j)-(n-2))²
+
+  Now a(i,j) = #{k≠i,j: i→k→j or j→k→i}
+             = w(i,j) + w(j,i) [from S95c notation]
+
+  And we showed in S95c that w(i,j)+w(j,i) is NOT determined by
+  score sequence alone.
+
+  But Σ_{i≠j} a(i,j)² might have a cleaner form.
+
+  Let's check: is Σ_{i≠j} a(i,j)² determined by (c3, scores)?
+
+
+--- n = 5: sum of a(i,j)² ---
+     H   c3                score        Σa²
+     1    0      (0, 1, 2, 3, 4)       [40]
+     3    1      (0, 1, 3, 3, 3)       [36]
+     3    1      (0, 2, 2, 2, 4)       [36]
+     3    1      (1, 1, 1, 3, 4)       [36]
+     5    2      (0, 2, 2, 3, 3)       [48]
+     5    2      (1, 1, 2, 2, 4)       [48]
+     9    3      (1, 1, 2, 3, 3)   [60, 76]
+    11    4      (1, 2, 2, 2, 3)       [88]
+    13    4      (1, 2, 2, 2, 3)       [72]
+    15    4      (1, 2, 2, 2, 3)       [72]
+    15    5      (2, 2, 2, 2, 2)      [100]
+
+
+========================================================================
+  PART 4: WHY DOES SPECTRAL FLATNESS MAXIMIZE H?
+========================================================================
+
+  THEOREM ATTEMPT:
+
+  H(T) = I(Ω(T), 2) where Ω is the conflict graph on odd cycles.
+  I(Ω, 2) = Σ_k α_k · 2^k where α_k = #{independent sets of size k}.
+
+  To maximize H, we need to maximize Σ α_k · 2^k.
+  This is maximized when Ω has the most independent sets.
+
+  Ω has many independent sets when:
+  (a) Ω has many vertices (many odd cycles) — this is c3 + c5 + ...
+  (b) Ω has few edges (cycles rarely share vertices)
+
+  For REGULAR tournaments:
+  - All vertices have equal out-degree (n-1)/2
+  - This distributes 3-cycles as uniformly as possible
+  - The conflict graph Ω should have the most uniform structure
+
+  For SPECTRALLY FLAT regular tournaments (Paley):
+  - Eigenvalues of B are all ±i√n with equal multiplicity
+  - This means B² = -nI + J (doubly regular condition)
+  - Equivalently: for ALL pairs (i,j), the number of common successors
+    is exactly (n-3)/4 (when n ≡ 3 mod 4)
+
+  This DOUBLE REGULARITY means:
+  - Every vertex is in exactly the same number of 3-cycles
+  - Every PAIR of 3-cycles shares vertices in a predictable pattern
+  - The conflict graph Ω is itself highly regular
+
+  A regular conflict graph has the most independent sets among all
+  graphs with the same number of vertices and edges (this is related
+  to the Kahn-Galvin-Tetali theorem for regular bipartite graphs).
+
+  So: spectral flatness → doubly regular → regular Ω → max indep. sets → max H.
+
+  Let's verify the chain computationally.
+
+
+--- n = 7: verifying the chain ---
+  Paley T_7: H=189, c3=14
+  Doubly regular (B² = -nI + J): True
+  B²[0,1] = 1.0 (should be 1 for DRT)
+  All off-diagonal = 1: True
+  a(0,1) = 3.0 (#{aligned k})
+  a(0,2) = 3.0 (#{aligned k})
+  a(1,2) = 3.0 (#{aligned k})
+  3-cycles per vertex: [6, 6, 6, 6, 6, 6, 6]
+  All equal: True
+
+
+========================================================================
+  PART 5: HOW MANY SPECTRAL MOMENTS DETERMINE H?
+========================================================================
+
+--- n = 5 ---
+  Moments up to tr(B^4): 2 classes, 2 ambiguous, max H-values per class: 5
+  Moments up to tr(B^6): 2 classes, 2 ambiguous, max H-values per class: 5
+  Moments up to tr(B^8): 2 classes, 2 ambiguous, max H-values per class: 5
+  Moments up to tr(B^10): 2 classes, 2 ambiguous, max H-values per class: 5
+
+--- n = 6 ---
+  Moments up to tr(B^4): 5 classes, 5 ambiguous, max H-values per class: 8
+  Moments up to tr(B^6): 6 classes, 6 ambiguous, max H-values per class: 8
+  Moments up to tr(B^8): 6 classes, 6 ambiguous, max H-values per class: 8
+  Moments up to tr(B^10): 6 classes, 6 ambiguous, max H-values per class: 8
+
+
+========================================================================
+  PART 6: UNIFIED CARTAN-KURTOSIS FORMULA
+========================================================================
+
+  The two-parameter model has:
+    Parameter 1: S₂ = ||[A_anti, A_sym]||² × 2/n (Cartan COUPLING)
+    Parameter 2: tr(B⁴) (spectral KURTOSIS within tournament sector)
+
+  S₂ measures the BETWEEN-SECTOR entanglement (how much the tournament
+  mode couples to the cooperation mode).
+
+  tr(B⁴) measures the WITHIN-SECTOR non-uniformity (how unevenly
+  distributed the tournament's eigenvalues are).
+
+  UNIFIED FORMULA:
+    H ≈ H_max(n) - α·(between-sector entanglement) - β·(within-sector kurtosis)
+
+  where H_max(n) is the maximum H for tournaments on n vertices.
+
+  Let's fit this and compute the coefficients.
+
+
+--- n = 5 ---
+  H ≈ 15.00 - 15.00·(S₂/S₂_max) - -0.00·(trB⁴_norm)
+  R² = 0.947368
+  H_max = 15, H_mean = 7.5
+  Intercept ≈ H_max = 15.00 vs actual 15
+
+  Variance decomposition:
+    S₂ alone:    R² = 0.947368
+    tr(B⁴) alone: R² = 0.000000
+    Combined:    R² = 0.947368
+    S₂ share:    100.0%
+
+--- n = 6 ---
+  H ≈ 45.00 - 52.50·(S₂/S₂_max) - -0.00·(trB⁴_norm)
+  R² = 0.923077
+  H_max = 45, H_mean = 22.5
+  Intercept ≈ H_max = 45.00 vs actual 45
+
+  Variance decomposition:
+    S₂ alone:    R² = 0.923077
+    tr(B⁴) alone: R² = 0.000000
+    Combined:    R² = 0.923077
+    S₂ share:    100.0%
+
+--- n = 7 ---
+  H ≈ 156.45 - 209.73·(S₂/S₂_max) - -1.90·(trB⁴_norm)
+  R² = 0.912822
+  H_max = 175, H_mean = 78.0
+  Intercept ≈ H_max = 156.45 vs actual 175
+
+  Variance decomposition:
+    S₂ alone:    R² = 0.912746
+    tr(B⁴) alone: R² = 0.000413
+    Combined:    R² = 0.912822
+    S₂ share:    100.0%
+
+
+========================================================================
+  PART 7: SPECTRAL KURTOSIS ENGINEERING APPLICATIONS
+========================================================================
+
+  APPLICATION: Given pairwise comparison data, the spectral kurtosis
+  of the resulting tournament tells us about the QUALITY of the ranking.
+
+  Low kurtosis (flat spectrum) → well-balanced competition, many paths
+  High kurtosis (peaked spectrum) → dominated competition, few paths
+
+  This applies to:
+  - Sports leagues: low kurtosis = competitive league, high = dominated
+  - Election preferences: low = many viable orderings, high = clear winner
+  - LLM attention: low = balanced reasoning, high = focused attention
+  - Consumer choice: low = product parity, high = brand dominance
+
+
+  Demo: n=7 tournament scenarios
+                   Scenario      H     S₂   tr(B⁴)        κ
+   Transitive (total order)      1   28.0      742   2.9444
+       Paley T_7 (balanced)    189    0.0      294   1.1667
+            Near-transitive      1   28.0      742   2.9444
+                     Random     55   14.0      422   1.6746
+
+  INTERPRETATION:
+  - Transitive has MAXIMUM kurtosis (one total order, H=1)
+  - Paley has MINIMUM kurtosis (maximally balanced, H=189)
+  - Near-transitive perturbs slightly (still mostly ordered)
+  - Random falls between
+
+  For a RANKING QUALITY metric:
+    Quality(T) = 1 - κ(T)/κ_max
+  where κ_max = kurtosis of transitive tournament.
+
+  Quality = 1 means maximally balanced (Paley-like)
+  Quality = 0 means total order (transitive)
+
+   Transitive (total order): Quality = 0.0000
+       Paley T_7 (balanced): Quality = 0.6038
+            Near-transitive: Quality = 0.0000
+                     Random: Quality = 0.4313
+
+
+Done. opus-2026-03-21-S97
