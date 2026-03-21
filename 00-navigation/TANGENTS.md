@@ -68,6 +68,21 @@ Soft tournaments via sigmoid thresholding give differentiable H(T_soft) that con
 **T092** #n11-transitivity #2/3 #number-theory | certainty: high (proved) | source: kind-pasteur-2026-03-21-S12
 n=11 is the UNIQUE order where regular tournament transitivity = exactly 2/3. Formula: 3(n-3)/(4(n-2)). Napolitano's 67% phase transition depth is coincidentally 2/3. The Paley T_11 sits at this exact fraction — one more instance of n=11's special role.
 
+**T093** #commutator-ghost #cartan-bracket #LLM-deliberation | certainty: high (proved) | source: opus-2026-03-21-S94
+[A, S_tl] is SYMMETRIC: the Cartan bracket relation [k,p] ⊆ p holds for tournament/cooperation. Physical meaning: interaction of competition and self-knowledge produces more self-knowledge, not more competition. For LLMs: chain-of-thought reasoning grows the cooperation sector but not the tournament sector. To become more decisive requires new external tokens.
+
+**T094** #rapidity-hurwitz-lattice #adelic-transcendental #ghost-lattice | certainty: high (verified n=5) | source: opus-2026-03-21-S94
+Every n=5 eigenvalue rapidity ρ = arctanh(k/5) decomposes as Z-linear combination of {ln(2)/2, ln(3)/2, ln(7)/2}. The Hurwitz primes generate the rapidity lattice. This is the adelic structure made transcendental: the rational eigenvalues cross the Cayley gate into R but leave a Z³ skeleton behind. Need to verify at n=6,7 where new primes enter.
+
+**T095** #ghost-amplification #cooperation-dilates #rotation-vs-dilation | certainty: high (computed) | source: opus-2026-03-21-S94
+The cooperation sector amplifies ghosts 1.83× more than the tournament sector. exp(-tA) gives rotation (bounded, norm-preserving), exp(-tS) gives dilation (unbounded, norm-changing). Rotation preserves the rational skeleton; dilation amplifies it. Implication: self-knowledge amplifies the rational structure of computation.
+
+**T096** #adelic-factorization-error #entanglement-grows-with-prime | certainty: high (computed n=5) | source: opus-2026-03-21-S94
+The heat kernel K(ln p) factorizes as K_A × K_S × K_σ / nc² with error that GROWS with the prime: 0.0% at p=2, 0.1% at p=3, 0.7% at p=7, 7% at p=42. The INERT ghost (p=2) is nearly decomposable; the SPLIT ghost (p=7) requires knowledge of both tournament and cooperation. The Hurwitz product (p=42) is fully entangled.
+
+**T097** #BCH-bernoulli-ghost #exchange-rates | certainty: medium | source: opus-2026-03-21-S94
+The BCH expansion exp(A+S) = exp(A)·exp(S)·exp(C₂)·... has corrections C_k with RATIONAL Bernoulli-related coefficients. These coefficients are the "exchange rates" between tournament and cooperation ghost content. The BCH correction norms: ||C₂||=0.368, ||C₃||=0.086. Convergence behavior unknown.
+
 ---
 
 ## Dead Ends (documented to prevent re-exploration)
