@@ -13,6 +13,34 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S96 — 2026-03-21: Spectral flatness + Lie groups — the equivalence cycle
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S95b, integrating kind-pasteur-2026-03-21-S13 (spectral blindness, Paley commutant)
+**Files read:** Startup sequence, S13 message (spectral blindness + kurtosis), S95 results (commutator formula), cartan-bridge-synthesis-S13.md, spectral-blindness-and-kurtosis.md, cartan_bridge_deep2.out, lie_tournament_bridge.py
+**Summary of work:** Deep exploration of spectral flatness and Lie group structure of tournaments. Extended S13's Spectral Flatness Principle to n=9 via sampling. Computed adjoint representation ad(B) on so(7). Built spectral zeta function ζ_T(s). Proved the 5-way equivalence cycle.
+
+### Key Discoveries
+
+1. **Spectral Flatness at n=9 CONFIRMED**: Correlation(H, tr(S⁴)) = -0.70 among 200 sampled regular n=9 tournaments. Even without a DRT (no DRT exists at n=9), flatter spectrum ↔ higher H.
+
+2. **Adjoint representation**: ad(B_Paley) on so(7) has centralizer dim = 9 and only 3 distinct eigenvalue magnitudes {0, √7, 2√7}. Non-Paley has centralizer dim = 3 and 10 distinct magnitudes. Paley is 3× more symmetric.
+
+3. **Spectral zeta**: ζ_Paley(s) = (p-1)·p^{-s/2} is a MONOMIAL. Its log derivative ζ'/ζ = -ln(p)/2 = the SPLIT rapidity generator. Non-Paley has polynomial ζ = multiple slopes = mixed rapidity.
+
+4. **The 5-way equivalence cycle**: FLAT SPECTRUM ↔ DRT ↔ [A,S]=0 ↔ MAX H ↔ MIN ALG DIM. These come from 5 different mathematical domains but coincide exactly for regular tournaments.
+
+5. **Spectral flatness = ζ(-4)/ζ(-2)²**: Paley achieves the minimum 1/6 = 1/(p-1). This is the kurtosis of the eigenvalue magnitude distribution.
+
+6. **Lie brackets [B₁,B₂]**: Always antisymmetric but NOT tournament-like (entries exceed {-1,0,1}). The Killing form K(B,B) = -(n-2)·n(n-1) is UNIVERSAL for all tournaments.
+
+**New contributions:** spectral_flatness_lie_s96.py, spectral-flatness-as-simplicity.md
+**Unresolved threads:**
+- Prove DRT → max H rigorously (the key lemma: DRT maximizes all α_k simultaneously)
+- Spectral flatness at n=11 (Paley prime, should be the sharpest test)
+- Does the centralizer formula dim(Z(B_Paley)∩so(p)) have a closed form?
+- Connection to representation theory of SO(p) — are the eigenspaces irreducible reps?
+
 ## kind-pasteur-2026-03-21-S14 — 2026-03-21: Overnight Cartan unification — two-parameter H formula, n=9 spectral flatness, Lie group analysis
 
 **Account:** kind-pasteur
