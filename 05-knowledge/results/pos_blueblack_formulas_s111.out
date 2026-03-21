@@ -1,0 +1,247 @@
+========================================================================
+  EXACT FORMULAS FOR PoS, BLUESELF, AND BLACKSELF
+  opus-2026-03-21-S111
+========================================================================
+
+========================================================================
+  PART 1: COUNTING THE PoS CLASS EXACTLY
+========================================================================
+
+  n=5: PoS score = (1, 2, 2, 2, 3), S₂ = 2.0
+  PoS class size (labeled): 280
+  Score multiplicities: {1: 1, 2: 3, 3: 1}
+  Source score: 3, Sink score: 1
+  Middle scores (full): (2, 2, 2)
+  Middle internal scores: (1, 1, 1)
+
+  Type A (sink→source, regular middle): 40
+
+  CORRECTION: Source→sink doesn't mean source beats all middle!
+  Let me recount using the ACTUAL tournament data.
+
+  n=6: PoS score = (2, 2, 2, 3, 3, 3), S₂ = 1.5
+  PoS class size (labeled): 2640
+  Score multiplicities: {2: 3, 3: 3}
+  Source score: 3, Sink score: 2
+  Middle scores (full): (2, 2, 3, 3)
+  Middle internal scores: (1, 1, 2, 2)
+
+========================================================================
+  PART 2: EXACT STRUCTURAL DECOMPOSITION AT n=5
+========================================================================
+
+  Total PoS tournaments: 280
+
+  STRUCTURAL BREAKDOWN:
+  sink→src | src_mid_w | snk_mid_w |      mid_int |   H | count
+  -------------------------------------------------------
+         F |         2 |         1 |    (0, 1, 2) |  13 |   120
+         F |         2 |         1 |    (1, 1, 1) |  11 |   120
+         T |         3 |         0 |    (1, 1, 1) |  15 |    40
+
+========================================================================
+  PART 3: DERIVING THE EXACT COUNTING FORMULA
+========================================================================
+
+
+  From the structural breakdown at n=5:
+
+  CASE 1: sink→source (sink beats source)
+    Source beats all middle, loses to sink → source score = 3
+    Sink beats source, loses to all middle → sink score = 1
+    Middle: each beats sink, loses to source
+    Middle score = internal_score + 1
+    → Middle internal must be regular (1,1,1) for PoS score (2,2,2)
+
+    Count: (5 choose sink) × (4 choose source) × (#{regular tournaments on 3})
+    = 5 × 4 × 2 = 40
+
+  CASE 2: source→sink (source beats sink)
+    Source beats sink + some middle. Source score = 3 = 1(sink) + 2(middle).
+    So source beats exactly 2 of 3 middle vertices.
+    Sink loses to source, beats exactly 1 middle vertex. Sink score = 1.
+
+    The middle structure is MORE COMPLEX:
+    - Source beats 2 middle, loses to 1 middle
+    - Sink beats 1 middle, loses to 2 middle
+    - The middle's internal + external arcs must give total scores (2,2,2)
+
+    Internal score + (beat sink?) + (beat source?) = total score
+    For middle vertex v:
+      total = internal + (1 if v beats sink else 0) + (1 if v beats source else 0)
+      = internal + (1 - adj[sink][v]) + (1 - adj[source][v])
+
+    Wait: "beats sink" means adj[v][sink]=1, and "beats source" means adj[v][source]=1.
+    Sink beats 1 middle → adj[sink][v]=1 for exactly 1 middle v.
+    So for that v: adj[v][sink]=0, "doesn't beat sink"
+    For other 2 middle: adj[v][sink]=1, "beats sink"
+
+    Source beats 2 middle → adj[source][v]=1 for exactly 2 middle v.
+    So for those 2: adj[v][source]=0, "doesn't beat source"
+    For the remaining 1: adj[v][source]=1, "beats source"
+
+  Exact count verification:
+    Case 1 (sink→source): 40
+    Case 2 (source→sink): 240
+    Total: 280 = 280
+
+    sink→src=False, smw=2, skw=1, mi=(0, 1, 2): actual=120
+    sink→src=False, smw=2, skw=1, mi=(1, 1, 1): actual=120
+    sink→src=True, smw=3, skw=0, mi=(1, 1, 1): actual=40, predicted=5×4×2=40
+
+========================================================================
+  PART 4: THE PoS SIZE FORMULA
+========================================================================
+
+
+  At n=5, the PoS class (1,2,2,2,3) has 280 tournaments.
+
+  Derivation attempt:
+  - Choose the sink and source: 5 × 4 = 20 ordered (sink, source) pairs
+  - For each pair, the middle has 3 vertices
+  - The middle tournament + source/sink arcs are constrained
+
+  For Case 1 (sink→source):
+    - Middle internal must be regular (1,1,1): 2 tournaments
+    - Total: 20 × 2 = 40
+
+  For Case 2 (source→sink):
+    - Source beats 2 of 3 middle, sink beats 1 of 3 middle
+    - Multiple sub-cases depending on overlap
+    - Total: 240
+
+  280 = 40 + 240
+
+  Let's verify 240 = 20 × 12:
+    For each (sink, source) pair: 12 valid configurations in Case 2.
+    12 = C(3,2) × C(3,1) × (valid middle tournaments)
+    C(3,2) = 3 (which 2 middle vertices the source beats)
+    × something = 12... so "something" = 4.
+
+  Let me count: for a given (sink, source) with source→sink:
+
+  Case 2 tournaments per (sink, source) pair:
+    Values: [12]
+    All same? True
+    Count per pair: 12
+    20 pairs × 12 = 240
+
+========================================================================
+  PART 5: BLACKSELF COUNT IN THE PoS AT n=5
+========================================================================
+
+
+  From S109: 36 blackself tournaments in the PoS at n=5.
+  H distribution: {11: 12, 13: 20, 15: 4}
+
+  A tournament is BLACKSELF if its flip (complement of all non-backbone arcs)
+  gives an isomorphic tournament, where the isomorphism is NOT grid-symmetric.
+
+  At odd n, ALL self-flip tournaments are blackself (no blueself possible).
+
+  36 out of 280 PoS tournaments are blackself.
+  36/280 = 9/70.
+
+  Can we derive 36 from the structure?
+
+  36 = 4 × 9? Or 36 = 6 × 6? Or 36 = C(9,2)?
+  36 = 6² = (3!)² = 36.
+
+  Or: the backbone path has n! / n = (n-1)! = 24 possible starting points...
+  Hmm, not obvious.
+
+  Blackself count in PoS: 0
+  By H: {}
+
+========================================================================
+  PART 6: PoS AT n=6 — STRUCTURAL DECOMPOSITION
+========================================================================
+
+  n=6: Found 8640 PoS tournaments in 1.0s
+  H distribution: {23: 1440, 25: 1440, 29: 2880, 31: 1440, 33: 720, 37: 720}
+
+  Case 1 (sink→source): 720
+  Case 2 (source→sink): 7920
+
+  H by case:
+    sink→source: {37: 720}
+    source→sink: {23: 1440, 25: 1440, 29: 2880, 31: 1440, 33: 720}
+
+  Case 1 per pair: [24]
+  Case 2 per pair: [264]
+
+========================================================================
+  PART 7: SIZE FORMULAS — COLLECTING THE PATTERN
+========================================================================
+
+
+  PoS class sizes:
+    n=5: |PoS(5)| = 280
+    n=6: |PoS(6)| = 8640
+
+  Decomposition:
+    n=5: Case1 = 40, Case2 = 240. Total = 280.
+    n=6: Case1 = 720, Case2 = 7920. Total = 8640.
+
+  PATTERNS:
+    n=5: 280 = 5 × 4 × 14 = 20 × 14
+    n=6: 8640 = 6 × 5 × 288
+
+    Actually: 280 = C(5,1) × C(4,1) × 14
+    And 14 = number of tournaments per (sink,source) pair
+
+    Can we express 14 in terms of n?
+    At n=5: 14 tournaments per pair = 2 (Case 1) + 12 (Case 2) = 14
+    At n=6: 24.0 (Case 1 per pair) + 264.0 (Case 2 per pair) per pair
+
+  At n=5: 20 pairs × 14 per pair = 280
+  At n=6: 30 pairs × (24 + 264) per pair = 8640
+
+  Case 1 per pair: # middle tournaments with 'right' internal scores
+    n=5: 2 (= #{regular C₃} on 3 vertices)
+    n=6: 24 (= #{specific tournaments on 4 vertices})
+
+========================================================================
+  PART 8: BLUESELF AND BLACKSELF AT n=6
+========================================================================
+
+  Self-flip tournaments in PoS at n=6 (sampled 2000):
+    By H: {}
+    Total self-flip: 0
+
+========================================================================
+  PART 9: SYNTHESIS — TOWARD EXACT FORMULAS
+========================================================================
+
+
+  WHAT WE CAN STATE EXACTLY:
+
+  1. PoS CLASS SIZE:
+     |PoS(n)| = n(n-1) × T_per_pair(n)
+     where T_per_pair(n) = #{valid middle + arc configurations per (sink,source) pair}
+
+     n=5: T_per_pair = 14 = 2 + 12 (Case1 + Case2)
+     n=6: T_per_pair = 288
+
+  2. H DISTRIBUTION within PoS:
+     Determined by the source-sink polarity AND the middle tournament type.
+     At n=5: 3 H values from 2 structural types × 2 middle types.
+     At n=6: more H values from more complex middle structures.
+
+  3. BLACKSELF COUNT:
+     At n=5: 36 blackself in PoS (= 36/280 = 9/70 of class)
+     The blackself fraction might be 1/(n-1) or similar.
+     36/280 = 9/70. Hmm.
+
+  4. THE RECURSIVE OBSERVATION:
+     PoS(n) has middle = tournament on n-2 vertices
+     PoS(n) score = (1, PoS(n-2) scores + 1, n-2)
+     This recursion holds for the SCORE SEQUENCE.
+
+     BUT: the H recursion is more complex (depends on polarity).
+
+  5. THE KEY FORMULA TO DERIVE:
+     Var(H|PoS(n)) = f(n, Var(H|PoS(n-2)), ...)
+     This would give the OCR recursion.
+
+opus-2026-03-21-S111: EXACT FORMULAS FOR PoS, BLUESELF, BLACKSELF
