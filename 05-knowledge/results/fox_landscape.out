@@ -1,0 +1,190 @@
+======================================================================
+THE FOX'S LANDSCAPE: S(y,k) = 2^y - y^k
+======================================================================
+
+  EXACT factorial gaps: 2^y = y^k + b!
+    y=  1, k= 1: 2^1 = 1^1 + 1! (2 = 1 + 1)
+    y=  2, k= 1: 2^2 = 2^1 + 2! (4 = 2 + 2)
+    y=  1, k= 2: 2^1 = 1^2 + 1! (2 = 1 + 1)
+    y=  1, k= 3: 2^1 = 1^3 + 1! (2 = 1 + 1)
+    y= 10, k= 3: 2^10 = 10^3 + 4! (1024 = 1000 + 24)
+    y=  1, k= 4: 2^1 = 1^4 + 1! (2 = 1 + 1)
+    y=  1, k= 5: 2^1 = 1^5 + 1! (2 = 1 + 1)
+    y=  1, k= 6: 2^1 = 1^6 + 1! (2 = 1 + 1)
+    y=  1, k= 7: 2^1 = 1^7 + 1! (2 = 1 + 1)
+    y=  1, k= 8: 2^1 = 1^8 + 1! (2 = 1 + 1)
+    y=  1, k= 9: 2^1 = 1^9 + 1! (2 = 1 + 1)
+    y=  1, k=10: 2^1 = 1^10 + 1! (2 = 1 + 1)
+    y=  1, k=11: 2^1 = 1^11 + 1! (2 = 1 + 1)
+
+  Near-misses (within 0.5% and gap > 100):
+    y= 11, k= 3: 2^11 - 11^3 = 717, nearest 6! = 720, off by +3 (0.418%)
+
+======================================================================
+THE SPINE: Exact solutions of 2^y = y^k
+======================================================================
+
+  Exact solutions (y, k) where 2^y = y^k:
+    m=  1: y = 2^1 = 2, k = 2^1/1 = 2
+           Verify: 2^2 = 2^2 = 4
+    m=  2: y = 2^2 = 4, k = 2^2/2 = 2
+           Verify: 4^2 = 2^4 = 16
+    m=  4: y = 2^4 = 16, k = 2^4/4 = 4
+           Verify: 16^4 = 2^16 = 65536
+    m=  8: y = 2^8 = 256, k = 2^8/8 = 32
+           Verify: 256^32 = 2^256 = 115792089237316195423570985008687907853269984665640564039457584007913129639936
+    m= 16: y = 2^16 = 65536, k = 2^16/16 = 4096
+
+  The spine is the TETRATION staircase: y = 2, 4, 16, 256, 65536, ...
+  These are 2^^j = 2, 4, 16, 65536, ... (tower of 2s, j times)
+
+  Between spine points, 2^y - y^k oscillates. The tower equation
+  2^y = y^3 + 4! lives between spine points y=4 (k=2) and y=16 (k=4).
+
+  At k=3 (between spine exponents 2 and 4): the "midpoint" behavior
+  produces a gap that happens to be 4! at y=10.
+
+
+======================================================================
+BETWEEN THE SPINE: y=4 (k=2) to y=16 (k=4)
+======================================================================
+
+  k=2: 2^y vs y^2
+    y=  1: 2^1 - 1^2 =            1  = 1!
+    y=  2: 2^2 - 2^2 =            0
+    y=  3: 2^3 - 3^2 =           -1  = -1!
+    y=  4: 2^4 - 4^2 =            0
+    y=  5: 2^5 - 5^2 =            7
+    y=  6: 2^6 - 6^2 =           28
+    y=  7: 2^7 - 7^2 =           79
+    y=  8: 2^8 - 8^2 =          192
+    y=  9: 2^9 - 9^2 =          431
+    y= 10: 2^10 - 10^2 =          924
+    y= 11: 2^11 - 11^2 =         1927
+    y= 12: 2^12 - 12^2 =         3952
+    y= 13: 2^13 - 13^2 =         8023
+    y= 14: 2^14 - 14^2 =        16188
+    y= 15: 2^15 - 15^2 =        32543
+
+  k=3: 2^y vs y^3
+    y=  1: 2^1 - 1^3 =            1  = 1!
+    y=  2: 2^2 - 2^3 =           -4
+    y=  3: 2^3 - 3^3 =          -19
+    y=  4: 2^4 - 4^3 =          -48
+    y=  5: 2^5 - 5^3 =          -93
+    y=  6: 2^6 - 6^3 =         -152
+    y=  7: 2^7 - 7^3 =         -215
+    y=  8: 2^8 - 8^3 =         -256
+    y=  9: 2^9 - 9^3 =         -217
+    y= 10: 2^10 - 10^3 =           24  = 4!
+    y= 11: 2^11 - 11^3 =          717
+    y= 12: 2^12 - 12^3 =         2368
+    y= 13: 2^13 - 13^3 =         5995
+    y= 14: 2^14 - 14^3 =        13640
+    y= 15: 2^15 - 15^3 =        29393
+
+  k=4: 2^y vs y^4
+    y=  1: 2^1 - 1^4 =            1  = 1!
+    y=  2: 2^2 - 2^4 =          -12
+    y=  3: 2^3 - 3^4 =          -73
+    y=  4: 2^4 - 4^4 =         -240
+    y=  5: 2^5 - 5^4 =         -593
+    y=  6: 2^6 - 6^4 =        -1232
+    y=  7: 2^7 - 7^4 =        -2273
+    y=  8: 2^8 - 8^4 =        -3840
+    y=  9: 2^9 - 9^4 =        -6049
+    y= 10: 2^10 - 10^4 =        -8976
+    y= 11: 2^11 - 11^4 =       -12593
+    y= 12: 2^12 - 12^4 =       -16640
+    y= 13: 2^13 - 13^4 =       -20369
+    y= 14: 2^14 - 14^4 =       -22032
+    y= 15: 2^15 - 15^4 =       -17857
+
+======================================================================
+THE FOX'S QUESTION: What generates BOTH y=10 and y=11?
+======================================================================
+
+  Gamma^{-1}(717) ≈ 5.997770
+  So Gamma(5.997770 + 1) ≈ 717.0000
+
+  f(10) = 5
+  f(11) = 5.997770
+  f(11) - f(10) = 0.997770
+  Almost exactly 2! The slope is ≈ 2.
+
+  Testing: 2^y = y^3 + Gamma(2y - 15)
+    y=8: 2^8=256, y^3+Gamma(1)=512+1=513, error=-257
+    y=9: 2^9=512, y^3+Gamma(3)=729+2=731, error=-219
+    y=10: 2^10=1024, y^3+Gamma(5)=1000+24=1024, error=0
+    y=11: 2^11=2048, y^3+Gamma(7)=1331+720=2051, error=-3
+    y=12: 2^12=4096, y^3+Gamma(9)=1728+40320=42048, error=-37952
+    y=13: 2^13=8192, y^3+Gamma(11)=2197+3628800=3630997, error=-3622805
+    y=14: 2^14=16384, y^3+Gamma(13)=2744+479001600=479004344, error=-478987960
+
+  The error 3 at y=11:
+  2^11 - 11^3 - 6! = 2048 - 1331 - 720 = -3
+  = -3
+
+  What IS 3 here?
+  3 = 11 - 8 = y - 2^3
+  3 = min(y-1, y-2, ...) such that 2^y = y^3 + (2y-15)! - something
+  Or simply: 717 = 3 * 239, where 239 is prime.
+
+  The fox says: maybe 3 is just 3. Not everything is meaningful.
+
+  Full error landscape: 2^y - y^3 - Gamma(2y-15)
+    y=8: arg=1, error = -257.0
+    y=9: arg=3, error = -219.0
+    y=10: arg=5, error = 0.0
+    y=11: arg=7, error = -3.0
+    y=12: arg=9, error = -37952.0
+    y=13: arg=11, error = -3622805.0
+    y=14: arg=13, error = -478987960.0
+    y=15: arg=15, error = -87178261807.0
+    y=16: arg=17, error = -20922789826560.0
+    y=17: arg=19, error = -6402373705601841.0
+    y=18: arg=21, error = -2432902008176383488.0
+    y=19: arg=23, error = -1124000727777607155712.0
+
+======================================================================
+WHAT THE FOX SEES
+======================================================================
+
+  The hedgehog says: "2^10 = 10^3 + 4! is THE identity."
+
+  The fox says: "That's one point on a vast surface.
+  The surface S(y,k) = 2^y - y^k has:
+
+  1. A SPINE of exact zeros at y = 2, 4, 16, 256, ...
+     (the tetration staircase, where 2^y = y^k exactly)
+
+  2. FACTORIAL CONTOURS where S = b! (our tower equation)
+     Only one non-trivial hit at (y=10, k=3, b=4).
+
+  3. NEAR-MISS CONTOURS where S ≈ b!
+     At (y=11, k=3): S = 717 ≈ 720 = 6! (off by 3)
+     At (y=1, k=any): S = 1 = 1! (trivial)
+
+  4. OTHER LANDMARKS we haven't looked for:
+     - When is S a perfect power?
+     - When is S a binomial coefficient?
+     - When is S a Fibonacci number?
+     - When is S a primorial?
+
+  The hedgehog-equation 2^y = y^(x+1) + (x+2)! is the FACTORIAL CONTOUR
+  of the surface. It's beautiful but it's one curve on a rich landscape."
+
+  Let me look for other landmarks:
+
+  Perfect powers on the k=3 slice:
+
+  Binomial coefficients on the k=3 slice:
+    y=10: 2^10 - 10^3 = 24 = C(24,1)
+    y=10: 2^10 - 10^3 = 24 = C(24,23)
+
+  Fibonacci numbers on the k=3 slice:
+    y=1: 2^1 - 1^3 = 1 (Fibonacci)
+
+  Triangular numbers on the k=3 slice:
+    y=1: 2^1 - 1^3 = 1 = T(1) = 1*2/2
+    y=13: 2^13 - 13^3 = 5995 = T(109) = 109*110/2
