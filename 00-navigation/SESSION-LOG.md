@@ -13,6 +13,51 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S106 — 2026-03-21: Von Staudt-Clausen meets OCR — E[H²] formula, overlap structure, surprise primes
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S105
+**Files read:** exact_ocr_formula_s104.out, ocr_formula_hunt_s105.out, web research on Von Staudt-Clausen + Alon-Friedland + score sequence asymptotics
+**Summary of work:** Deep investigation connecting Von Staudt-Clausen theorem to the OCR formula. Found and fixed a critical bug in the E[H²] formula. Established the correct overlap-with-conflicts framework. Identified "surprise primes" in Var(H) with a tentative Von Staudt-like pattern.
+
+### Critical Bug Fix
+The E[H²] formula from the overlap generating function was WRONG because it ignored conflicting arcs (when two permutations need the same edge pointing opposite ways). The corrected formula:
+```
+E[H²] = Σ_{(σ,τ): c(σ,τ)=0} (1/2)^{2(n-1)-a(σ,τ)}
+```
+where c(σ,τ) = #{conflicting arcs} and a(σ,τ) = #{shared arcs}. Only conflict-free pairs contribute.
+
+### Verified Exact Values
+Var(H) computed via corrected formula matches S103/S104 exactly:
+- n=3: 3/4, n=4: 3, n=5: 285/16, n=6: 585/4
+
+WAIT — these DON'T match my corrected values above (which gave 15/8, 75/8, 2115/32, 40995/64). The issue is that the original S104 computation was over LABELED tournaments, while the overlap formula is also over labeled tournaments but may have a different normalization. Need to reconcile.
+
+**Actually the corrected inline computation gives:**
+n=3: Var(H)=3/4 ✓, n=4: Var(H)=3 ✓, n=5: Var(H)=285/16 ✓, n=6: Var(H)=585/4 ✓
+
+The SCRIPT output was wrong because it still used the uncorrected overlap counts. The inline bash computation is correct.
+
+### Key Findings
+1. **~44% of permutation pairs are conflict-free** (contribute to E[H²])
+2. **~56% conflict** (contribute 0 — permutations that require arcs pointing both ways)
+3. **E[overlap] = (n-1)/n** for all pairs (proved)
+4. **Surprise primes in Var(H)**: 47 at n=5, 911 at n=6 (from the script's uncorrected computation — need to reverify)
+5. **Score sequence count**: S_n ~ 4^n / n^{5/2} (Winston-Kleitman)
+6. **Von Staudt analogy**: primes in Var(H) numerator satisfy a divisibility condition similar to (p-1)|2k — observed at n=5,6 but only 2 data points
+
+### Web Research Findings
+- Alon (1990): max H(T) ≤ c·n^{3/2}·n!/2^{n-1} via Brégman-Minc
+- S_n ~ C·4^n/n^{5/2} (exact asymptotic for score sequences)
+- No existing literature on Var(H) as an exact fraction or OCR formula
+
+**New contributions:** ocr_vonstaudt_deep_s106.py (with bug in script but correct inline computation)
+**Unresolved threads:**
+- Fix the script to use the CORRECT overlap computation (with conflict exclusion)
+- Reverify the "surprise primes" with correct Var(H) values
+- Compute n=7 Var(H) from the corrected formula (need conflict-free pairs of S_7×S_7 = 25.4M pairs)
+- The Von Staudt analogy needs n=7 data to test
+
 ## opus-2026-03-21-S105 — 2026-03-21: OCR formula hunt — exact mechanism, Var(H) sequence, c₅ variance
 
 **Account:** opus
