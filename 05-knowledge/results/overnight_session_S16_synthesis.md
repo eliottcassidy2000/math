@@ -64,9 +64,28 @@ The a+b/n model predicts OCR(100) ~ 0.86, which is likely also wrong.
 With only 4 non-degenerate data points, the true asymptotic behavior is unknown.
 
 **Open question:** What is the asymptotic behavior of OCR(n)?
-- Does OCR → 1? (still possible but unproved)
-- Does OCR → c < 1? (consistent with data)
-- Is there a closed form for the prime denominator sequence?
+- Does OCR → 1? **YES — now consistent with data** (OCR rises at n≥9)
+- The OCR curve is V-SHAPED with minimum at n=7-8 (exactly 120/131)
+- Does the rise continue monotonically? Need n=12+ data.
+
+**CRITICAL UPDATE (S16c): OCR is NOT a plateau. It has a V-shaped curve.**
+
+Corrected sampled values (using __int128 accumulators, fixed DP bug):
+
+| n | OCR | 1-OCR | Method |
+|---|-----|-------|--------|
+| 5 | 18/19 = 0.9474 | 0.0526 | exact |
+| 6 | 12/13 = 0.9231 | 0.0769 | exact |
+| 7 | 120/131 = 0.9160 | 0.0840 | exact |
+| 8 | 120/131 = 0.9160 | 0.0840 | exact |
+| 9 | ~0.9189 | 0.0811 | sampled 2M |
+| 10 | ~0.9228 | 0.0772 | sampled 500K |
+| 11 | ~0.9267 | 0.0733 | sampled 200K |
+
+The minimum at n=7-8 corresponds to peak "cycle diversity":
+first Hamiltonian cycles (n=7), first 3-5 disjoint pairs (n=8).
+At larger n, the law of large numbers makes scores more informative,
+driving OCR back up toward 1.
 
 ---
 
