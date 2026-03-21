@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S115 — 2026-03-21: Curvature-Gaps-OCR Synthesis — three faces of 7, tau conservation law, g(2)=1 is Rédei
+
+**Account:** opus
+**Summary:** Unified the curvature classifier g(x)=x³-x²-x-1 with the forbidden values and the OCR minimum. The number 7 has three faces: tournament order (n=7), atomic forbidden value (H=7), and Mersenne prime at fugacity (2³-1). The "+1 quantum" g(2)=1 is the source of Rédei's theorem, the gaps, and the OCR residual. The tau conservation law τ+1/τ³=2 decomposes H into smooth (tribonacci) and correction (Rédei) parts.
+**Key:**
+1. g(φ)=-1 (spherical), g(τ)=0 (flat), g(2)=+1 (hyperbolic) — verified exactly
+2. g(2)=1 IS Rédei's theorem: 2³=2²+2+1+1, the "+1" forces H odd
+3. Forbidden H=7 exists ONLY at x=2, NOT at x=τ: I(Ω,τ)=6.52 is achievable
+4. H=189=3³×7: Paley T_7 achieves 7×27 via CONNECTED Ω despite product-7 being impossible
+5. τ+1/τ³=2 (conservation): H=I(Ω,τ)+correction, correction ≈ 8% of I(Ω,τ)
+6. (1-OCR)×ln(n) ≈ 0.07 — tentative scaling, but constant c varies
+7. Triple resonance at n=7: order=7, atom=7, C(7,2)=3×7 — maximizes complexity
+
+---
+
 ## opus-2026-03-21-S114 — 2026-03-21: Gap Function — 7 is atomic forbidden, 63 IS achievable at n=8, 7×3^k pattern
 
 **Account:** opus
