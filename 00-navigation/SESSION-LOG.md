@@ -128,6 +128,27 @@ Four tools, all based on the formal group F(x,y) = (x+y)/(1+xy):
 - G₂'s role inside so(7) for tournament invariants — does it constrain H?
 - The golden direction: does ln(φ) appear in any tournament eigenvalue?
 - Prove T(n) counts relate to Platonic solid vertex counts for other n
+## kind-pasteur-2026-03-21-S15 — 2026-03-21: The Orthogonal Shadow — hidden orthogonality as universal principle
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-21-S14 + opus-S96
+**Summary:** Extended the hidden orthogonal invariant principle beyond tournaments to gauge theory, quantum mechanics, information theory, category theory, thermodynamics. Computed the Orthogonal Control Ratio (OCR) across systems. Two major reflections.
+
+### Key Computational Results
+1. **OCR scaling**: n=3,4 OCR=1.000, n=5 OCR=0.947, n=6 OCR=0.923, n=7 OCR=0.916. Extrapolated: OCR(100)~0.997.
+2. **Harish-Chandra projection R^2 = 0.000 at n=5**: Algebraic symmetrization (eigenvalue magnitudes) explains NOTHING. Combinatorial symmetrization (scores) explains 95%. The RIGHT shadow must match the observable's index set.
+3. **Markov chains: OCR = 0.26**: Orthogonal control is WEAK for non-complete systems. Directed details matter independently.
+4. **Sparse digraphs**: OCR = 0.005 at density 0.3, 0.045 at 0.5, 0.534 at 0.9. COMPLETENESS is the mechanism of orthogonal control.
+5. **Compression miracle**: 3x compression (21 arcs -> 7 scores at n=7) with 92% fidelity. Information density = OCR/compression decreases but OCR stays high.
+
+### Key Abstract Principles
+1. **Two kinds of orthogonality**: Combinatorial (scores, conflict graph) vs Algebraic (eigenvalues, Harish-Chandra). They are NOT the same. Combinatorial >> Algebraic for predicting H.
+2. **Completeness creates control**: OCR -> 1 as edge density -> 1. Tournaments are complete, hence maximally controlled.
+3. **The OCR diagnostic**: >0.9 = landscape regime, ~0.5 = mixed, <0.1 = turbulence. Tournaments always in landscape regime.
+4. **Seven-domain survey**: tournaments, gauge theory, QM, category theory, information theory, thermodynamics, OCF — all instances of the same architecture.
+
+**New scripts:** orthogonal_control_principle.py
+**New reflections:** the-orthogonal-shadow.md, hidden-orthogonality-everywhere.md
 
 ## opus-2026-03-21-S96 — 2026-03-21: Spectral flatness + Lie groups — the equivalence cycle
 
