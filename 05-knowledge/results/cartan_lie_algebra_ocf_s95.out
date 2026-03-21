@@ -1,0 +1,289 @@
+========================================================================
+  THE LIE ALGEBRA OF TOURNAMENTS AND OCF
+  opus-2026-03-21-S95
+========================================================================
+
+========================================================================
+  PART 1: KILLING FORM K(B_T, B_T) AND TOURNAMENT INVARIANTS
+========================================================================
+
+  For so(n), the Killing form is K(X, Y) = (n-2) * Tr(X·Y).
+
+  For a tournament T with B = A - A^T:
+    K(B, B) = (n-2) * Tr(B²) = (n-2) * (-n(n-1)) = -(n-2)*n*(n-1)
+
+  This is CONSTANT for all tournaments!
+
+  But the Killing form of B with ITSELF is not the only invariant.
+  Consider K(B, B^(2k+1)) which involves higher Casimir-like invariants.
+
+  Actually, for so(n), the independent Casimir invariants are:
+    C_k = Tr(B^{2k}) for k = 1, 2, ..., floor(n/2)
+  (Only even powers give nonzero traces for skew matrices.)
+
+  We already showed that Tr(B²) is constant but Tr(B⁴) varies.
+  Let's compute ALL Casimir invariants for small n.
+
+
+--- n = 3 ---
+  Casimir invariants: Tr(B²), Tr(B⁴), ..., Tr(B^2)
+  Number of distinct Casimir tuples: 1
+                        Casimirs |                       H values | count
+                           (-6,) | H=[1, 3], c3=[0, 1] | 8
+
+--- n = 4 ---
+  Casimir invariants: Tr(B²), Tr(B⁴), ..., Tr(B^4)
+  Number of distinct Casimir tuples: 2
+                        Casimirs |                       H values | count
+                       (-12, 36) | H=[3], c3=[1] | 16
+                       (-12, 68) | H=[1, 5], c3=[0, 2] | 48
+
+--- n = 5 ---
+  Casimir invariants: Tr(B²), Tr(B⁴), ..., Tr(B^4)
+  Number of distinct Casimir tuples: 2
+                        Casimirs |                       H values | count
+                      (-20, 116) | H=[3, 5, 9, 13, 15], c3=[1, 2, 3, 4] | 640
+                      (-20, 180) | H=[1, 9, 11, 15], c3=[0, 3, 4, 5] | 384
+
+--- n = 6 ---
+  Casimir invariants: Tr(B²), Tr(B⁴), ..., Tr(B^6)
+  Number of distinct Casimir tuples: 6
+                        Casimirs |                       H values | count
+               (-30, 198, -1566) | H=[9, 15, 29], c3=[2, 4, 6] | 1280
+               (-30, 198, -1374) | H=[13, 17, 31, 45], c3=[4, 6, 8] | 3840
+               (-30, 230, -1950) | H=[9, 15, 23, 37], c3=[3, 5, 7] | 4608
+               (-30, 262, -2526) | H=[5, 11, 15, 25, 29, 33, 37, 43], c3=[2, 4, 6, 8] | 11520
+               (-30, 294, -3294) | H=[3, 9, 19, 27, 33, 37], c3=[1, 3, 5, 7] | 7680
+               (-30, 390, -5406) | H=[1, 17, 23, 41, 45], c3=[0, 4, 6, 8] | 3840
+
+
+========================================================================
+  PART 2: DO CASIMIR INVARIANTS DETERMINE H?
+========================================================================
+
+--- n = 3 ---
+  H determined by Casimir tuple: False
+    Casimirs (-6,): H ∈ [1, 3]
+
+--- n = 4 ---
+  H determined by Casimir tuple: False
+    Casimirs (-12, 68): H ∈ [1, 5]
+
+--- n = 5 ---
+  H determined by Casimir tuple: False
+    Casimirs (-20, 116): H ∈ [3, 5, 9, 13, 15]
+    Casimirs (-20, 180): H ∈ [1, 9, 11, 15]
+
+--- n = 6 ---
+  H determined by Casimir tuple: False
+    Casimirs (-30, 198, -1566): H ∈ [9, 15, 29]
+    Casimirs (-30, 198, -1374): H ∈ [13, 17, 31, 45]
+    Casimirs (-30, 230, -1950): H ∈ [9, 15, 23, 37]
+    Casimirs (-30, 262, -2526): H ∈ [5, 11, 15, 25, 29, 33, 37, 43]
+    Casimirs (-30, 294, -3294): H ∈ [3, 9, 19, 27, 33, 37]
+    Casimirs (-30, 390, -5406): H ∈ [1, 17, 23, 41, 45]
+
+
+========================================================================
+  PART 3: TOURNAMENTS AS LATTICE POINTS IN so(n)
+========================================================================
+
+  The standard basis of so(n) consists of matrices E_{ij} - E_{ji}
+  for i < j, where E_{ij} has a 1 at position (i,j) and 0 elsewhere.
+
+  A tournament T corresponds to the element:
+    B_T = Σ_{i<j} ε_{ij}(T) · (E_{ij} - E_{ji})
+  where ε_{ij}(T) = +1 if i→j and -1 if j→i.
+
+  So B_T is a VERTEX of the hypercube {±1}^{C(n,2)} embedded in so(n).
+
+  KEY OBSERVATION: The 2^{C(n,2)} tournaments form a discrete subset
+  of so(n) — the "tournament lattice." They are the vertices of a
+  C(n,2)-dimensional hypercube inscribed in so(n).
+
+  The centroid of this hypercube is 0 (the zero matrix).
+  Each tournament B_T has ||B_T||² = n(n-1) (constant radius).
+  So tournaments lie on a SPHERE in so(n).
+
+  H(T) is a function on this sphere/hypercube.
+
+  QUESTION: What is H as a function on so(n)?
+  H(B_T) counts Hamiltonian paths. Can we extend H to a polynomial on so(n)?
+
+
+--- n = 3 ---
+  dim(so(3)) = 3
+  Number of tournaments = 2^3 = 8
+  Tournament variables: ε_{ij} for i<j, total 3
+  Walsh degrees present in H: even only (complement symmetry)
+  H = sum over n! permutations of product of (n-1) factors
+  Each factor has degree 1 in Walsh variables
+  H has Walsh degree at most n-1
+
+--- n = 4 ---
+  dim(so(4)) = 6
+  Number of tournaments = 2^6 = 64
+  Tournament variables: ε_{ij} for i<j, total 6
+  Walsh degrees present in H: even only (complement symmetry)
+  H = sum over n! permutations of product of (n-1) factors
+  Each factor has degree 1 in Walsh variables
+  H has Walsh degree at most n-1
+
+--- n = 5 ---
+  dim(so(5)) = 10
+  Number of tournaments = 2^10 = 1024
+  Tournament variables: ε_{ij} for i<j, total 10
+  Walsh degrees present in H: even only (complement symmetry)
+  H = sum over n! permutations of product of (n-1) factors
+  Each factor has degree 1 in Walsh variables
+  H has Walsh degree at most n-1
+
+
+========================================================================
+  PART 4: OCF IN LIE ALGEBRA TERMS
+========================================================================
+
+  OCF states: H(T) = I(Ω(T), 2) = Σ_k α_k · 2^k
+
+  where α_k = number of independent sets of size k in Ω(T).
+
+  In Lie algebra terms:
+  - T is a vertex of the hypercube {±1}^m ⊂ so(n)
+  - Ω(T) is the conflict graph of directed odd cycles in T
+  - Two cycles conflict iff they share a vertex
+  - I(Ω, 2) is the hard-core lattice gas partition function at fugacity 2
+
+  KEY OBSERVATION:
+  Odd cycles of T correspond to CLOSED PATHS in the directed graph.
+  In so(n) terms, a k-cycle C = (v_1, ..., v_k, v_1) with all v_i→v_{i+1}
+  corresponds to the product:
+    ε_{v_1 v_2} · ε_{v_2 v_3} · ... · ε_{v_k v_1}
+
+  But this is exactly a TRACE in so(n)!
+  Specifically, for the standard representation:
+    Tr(B_{v_1 v_2} · B_{v_2 v_3} · ... · B_{v_k v_1})
+  where B_{ij} = E_{ij} - E_{ji}.
+
+  Wait, this isn't quite right. Let me be more careful.
+
+  For a 3-cycle {a,b,c} with a→b→c→a:
+  The indicator function is T[a][b]·T[b][c]·T[c][a].
+  In terms of ε: = ((1+ε_{ab})/2) · ((1+ε_{bc})/2) · ((1-ε_{ac})/2)
+  (assuming a<b<c; ε_{ac} appears with minus because c→a = -ε_{ac}).
+
+  Actually, this is getting complicated because of the orientation.
+  The key point is:
+
+  CYCLE DETECTION IS A POLYNOMIAL ON THE TOURNAMENT LATTICE.
+
+  And the CONFLICT GRAPH Ω(T) is determined by the OVERLAP STRUCTURE
+  of these cycles.
+
+  OCF says: the COUNTING function H is equal to a WEIGHTED SUM over
+  independent sets of cycles.
+
+  This is analogous to the CLUSTER EXPANSION in statistical mechanics,
+  where the partition function equals a sum over compatible configurations.
+
+  In Lie algebra terms:
+    H = Σ_{independent cycle sets S} 2^{|S|}
+    = the generating function for non-conflicting cycle collections
+    evaluated at fugacity 2.
+
+  The fugacity 2 is special because:
+    2 = dim(kernel of ∂_1 for the tournament chain complex at p=2)
+    2 = the "defect" of the Rédei parity constraint
+    2 = 1 + 1 where 1 = each cycle contributes ±1 to H mod 2
+
+
+========================================================================
+  PART 5: WHY H = 1 FOR GPT-2 ATTENTION TOURNAMENTS
+========================================================================
+
+  FINDING: ALL GPT-2 attention tournaments are TRANSITIVE (H = 1).
+
+  EXPLANATION:
+  The attention matrix A[i,j] = P(token j | context up to token i)
+  has CAUSAL MASKING: A[i,j] = 0 for j > i (cannot attend to future).
+
+  With causal masking, the attention matrix is LOWER TRIANGULAR.
+  Therefore:
+    For i < j: A[i,j] = 0 < A[j,i] (since A[j,i] ≥ 0 with some mass)
+
+  So the thresholded tournament always has j→i for i < j.
+  This is EXACTLY the transitive tournament!
+
+  H(transitive) = 1: there is exactly one Hamiltonian path
+  (n → n-1 → ... → 1), corresponding to reading order.
+
+  CONCLUSION: The H = 1 finding is an ARTIFACT of causal masking.
+  It tells us nothing interesting about the tournament structure.
+
+  To get non-trivial tournaments from attention, we need to either:
+  1. Use the BIDIRECTIONAL attention (e.g., BERT) instead of GPT-2
+  2. Use only the NON-CAUSAL part of the attention (mask out the
+     triangular constraint)
+  3. Compare attention between different positions excluding the
+     causal bias
+  4. Use cross-attention from encoder-decoder models
+
+  Let's verify this hypothesis.
+
+  Verification: causal attention creates transitive tournament
+
+  n=5: H=1, c3=0, scores=(0, 1, 2, 3, 4)
+        Transitive: True
+  n=5 (no mask): H=9, c3=3, scores=(1, 1, 2, 3, 3)
+  n=8: H=1, c3=0, scores=(0, 1, 2, 3, 4, 5, 6, 7)
+        Transitive: True
+  n=8 (no mask): H=97, c3=10, scores=(0, 3, 3, 3, 4, 4, 5, 6)
+  n=12: H=1, c3=0, scores=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+        Transitive: True
+  n=12 (no mask): H=227705, c3=56, scores=(2, 3, 4, 5, 6, 6, 6, 6, 7, 7, 7, 7)
+
+  CONFIRMED: Causal masking → transitive tournament → H = 1.
+
+  For the Cartan bridge to be meaningful for LLMs, we should:
+  1. Use the SYMMETRIC part of attention (which varies between tokens)
+  2. OR use bidirectional models (BERT, etc.)
+  3. OR extract the "tournament signal" from the non-diagonal part
+     of the Cartan decomposition, ignoring the causal bias.
+
+
+========================================================================
+  PART 6: NON-CAUSAL TOURNAMENT — SUBTRACTING POSITION BIAS
+========================================================================
+
+  IDEA: The causal mask creates a position-dependent bias.
+  If we SUBTRACT the expected causal attention pattern (proportional
+  to a lower-triangular matrix), the residual may have non-trivial
+  tournament structure.
+
+  Alternatively: look at the ANTISYMMETRIC part of the attention
+  matrix A_anti = (A - A^T)/2. For causal attention:
+  - Lower triangle: A[j,i] for j > i (nonzero)
+  - Upper triangle: A[i,j] for j > i (zero due to mask)
+  - A_anti[i,j] = (A[i,j] - A[j,i])/2 = -A[j,i]/2 for i < j (always negative)
+
+  So A_anti has ALL negative entries in the upper triangle.
+  This means the tournament is ALWAYS i←j for i < j (reverse reading order).
+
+  To get interesting structure, we need to look at the RESIDUAL
+  after subtracting the causal pattern, or use bidirectional attention.
+
+  Let's instead analyze the attention matrix WITHIN the lower triangle:
+  For rows j1 > j2 > 0, compare A[j1, 0] vs A[j2, 0]:
+  does token j1 attend to token 0 more or less than j2 does?
+  This gives a tournament on the "attending" tokens.
+
+  Loading GPT-2 for non-causal analysis...
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 2526.31it/s]
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 3104.95it/s]
