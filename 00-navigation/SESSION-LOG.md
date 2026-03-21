@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S103 — 2026-03-21: Shadow compression deep — score class OCR=96%, c₅ OCR=95%, density threshold
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S102
+**Summary:** Deep shadow compression with web research, exact OCR at n=3-8, density threshold, c₅ shadow analysis, production ShadowCodec. Key surprise: score CLASS OCR is 96% (much higher than S₂ linear 92%).
+**Key results:**
+1. **Score class OCR**: 1.00, 1.00, 0.970, 0.959, 0.957, 0.961 for n=3-8 — STABILIZES at ~96%
+2. **c₅ is 95.4% determined by scores** at n=7 — the shadow captures even the hidden invariant
+3. **c₃ adds ZERO beyond scores** — confirms c₃=C(n+1,3)/4-S₂/2 is exact
+4. **Density threshold**: OCR drops sharply below density 0.5; at p=0.3 OCR≈0
+5. **McKay-Wang**: 2^{Θ(n)} tournaments per score class; score entropy ≈ 5-7 bits at n=7-8
+6. **Literature**: Claesson-Dukes (2022) proved Hanna conjecture for score seq counting; arXiv:2512.16961 reconstruction algorithms
+7. **ShadowCodec**: Working streaming implementation with progressive layers
+**New scripts:** shadow_deep_s103.py
+**Unresolved:** Prove score class OCR → constant (is it exactly 19/20? or another rational?); prove c₅|scores has bounded conditional variance
+
+---
+
 ## opus-2026-03-21-S102 — 2026-03-21: THE SHADOW REVOLUTION — fourth compression paradigm
 
 **Account:** opus
