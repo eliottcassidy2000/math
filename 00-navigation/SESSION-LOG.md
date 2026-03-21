@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S109 — 2026-03-21: HP Overlap ↔ Blueself — H=15 escapes POS, blackself is rare, σ-fixed HPs vanish
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S108
+**Summary:** Deep investigation of how HP overlap within the POS relates to blueself/blackself. Discovered H=15 flips OUTSIDE the POS to the regular class, σ-fixed HPs = 0 for all classes, and blackself is only 12.9% of POS tournaments.
+**Key results:**
+1. **H=15 flips to regular (2,2,2,2,2)**: leaves POS entirely → NOT blackself
+2. **Blackself rare**: 36/280 = 12.9% of POS. 244/280 are non-selfflip.
+3. **σ-fixed HPs = 0**: no HP invariant under the flip isomorphism (for any class)
+4. **Blackself σ cycles**: H=11 has σ=(5-cycle), H=13 has σ=(3,1,1)
+5. **HP overlap matrix**: H=15 highest within-class overlap (1.85), H=11 lowest (0.90)
+6. **Shared HPs with flip**: 0 or 1 (backbone only). Most POS tournaments share 0 HPs with flip.
+7. **The OCR mechanism**: blackself classes stay in score class under flip, H=15 escapes. Scores can't distinguish the stayers (blackself) from each other.
+**Scripts:** pos_hp_overlap_blueself_s109.py
+**Unresolved:** Extend to n=6 even (where blueself exists). Do blueself tournaments have σ-fixed HPs? What is the HP overlap structure of the n=6 POS?
+
+---
+
 ## opus-2026-03-21-S108 — 2026-03-21: POS Universe — arc-flip path, middle subtournament, automorphism mixing
 
 **Account:** opus
