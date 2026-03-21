@@ -1,0 +1,139 @@
+============================================================
+TEST: Is the forbidden cascade 7 -> 21 structural?
+============================================================
+
+  Multiples of 7:
+    7 x 1 = 7  : FORBIDDEN (proved)
+    7 x 3 = 21 : FORBIDDEN (proved)
+    7 x 5 = 35 : ACHIEVABLE at n=7
+    7 x 7 = 49 : ACHIEVABLE at n=7
+    7 x 9 = 63 : ACHIEVABLE at n=8
+
+  Multiples of 21:
+    21 x 2 = 42 : ACHIEVABLE at n=6 (not forbidden!)
+    21 x 3 = 63 : ACHIEVABLE at n=8
+
+  VERDICT: The factor 21/7 = 3 is COINCIDENTAL.
+  The forbidden cascade 7 -> 21 -> 42 has NO structural basis.
+  7 and 21 are forbidden for INDEPENDENT reasons:
+    H=7: alpha_1=3 + i_2=0 forces common vertex -> extra cycles
+    H=21: six independent (alpha_1, alpha_2) blocking mechanisms
+  These proofs share NO common structure.
+
+  Alpha sum analysis:
+  S=3 (H=7): decomps (3,0),(1,1). BOTH blocked -> H=7 forbidden
+  S=4 (H=9): decomp (4,0) achievable -> H=9 NOT forbidden
+  S=10 (H=21): all 6 decomps blocked -> H=21 forbidden
+  S=11 (H=23): decomp (11,0) achievable -> H=23 NOT forbidden
+
+  So the forbidden S values are exactly {3, 10}.
+  Is 10 = 3 * something? 10/3 = 3.33... NOT integer.
+  Is there a pattern in {3, 10}? 
+  3 = C(3,2), 10 = C(5,2). Triangular numbers!
+  C(3,2)=3, C(5,2)=10. Next: C(7,2)=21. Is S=21 forbidden?
+  H = 1 + 2*21 = 43. Is H=43 forbidden?
+  H=43 IS achievable at n=6! So S=C(7,2)=21 is NOT forbidden.
+  Pattern C(odd,2) FAILS at the third term.
+  VERDICT: {3, 10} has no known generating pattern.
+
+
+============================================================
+TEST: Does D_graph/D_tournament converge?
+============================================================
+
+    n      D_G      D_T      Ratio
+    3        6        2     3.0000
+    4       24        4     6.0000
+    5       80       12     6.6667
+    6      392       40     9.8000
+    7     2212      152    14.5526
+    8    19504      784    24.8776
+
+  The ratio is NOT converging to 25.
+  It's GROWING: 3, 6, 6.67, 9.8, 14.6, 24.9
+  This is roughly doubling every 2 steps.
+  Suggests ratio ~ 2^{(n-3)/2} or similar exponential growth.
+
+  Ratio growth factors:
+    n=4: ratio/prev = 2.0000
+    n=5: ratio/prev = 1.1111
+    n=6: ratio/prev = 1.4700
+    n=7: ratio/prev = 1.4850
+    n=8: ratio/prev = 1.7095
+
+  VERDICT: D_G/D_T grows roughly as 2^n, NOT converging to 25.
+  The claim 'ratio ~ 25' was a SNAPSHOT at n=8, not a limit.
+
+
+============================================================
+TEST: 2^10 = 10^3 + 4! tournament interpretation
+============================================================
+
+  Actual decomposition:
+    |Aut|=1: 840 (trivial automorphism)
+    |Aut|=3: 160 (Z_3 symmetry)
+    |Aut|=5: 24  (Z_5 symmetry)
+    Total: 1024 = 2^10
+
+  Claimed: 1024 = 1000 (generic) + 24 (max symmetric)
+  Reality: 1024 = 840 + 160 + 24
+  The split 1000 + 24 does NOT correspond to any natural partition.
+  840 + 160 = 1000 only by coincidence (840 + 160 = 1000? YES!)
+
+  Wait: 840 + 160 = 1000. So 1000 = trivial + Z_3-symmetric!
+  This IS a natural partition: 1000 = |Aut|-non-5 tournaments.
+  The identity becomes: (|Aut|!=5 count) + (|Aut|=5 count) = 2^m
+  Which is trivially: ALL = (not-Z_5) + (Z_5)
+  The 'miracle' is: not-Z_5 count = m^3 = C(n,2)^3
+
+  Is (2^m - n!/n) = m^3 at m=C(n,2)?
+  n=2: 2^1-1 = 1, m^3 = 1, equal: True
+  n=3: 2^3-2 = 6, m^3 = 27, equal: False
+  n=4: 2^6-6 = 58, m^3 = 216, equal: False
+  n=5: 2^10-24 = 1000, m^3 = 1000, equal: True
+  n=6: 2^15-120 = 32648, m^3 = 3375, equal: False
+  n=7: 2^21-720 = 2096432, m^3 = 9261, equal: False
+
+  n=5 is the ONLY case where 2^m - (n-1)! = m^3.
+  This is the same as 2^m = m^3 + (n-1)!, just restated.
+  The 'natural partition' interpretation (non-Z_5 + Z_5) is valid
+  but the fact that non-Z_5 = m^3 is still a NUMERICAL COINCIDENCE
+  special to n=5 (and n=2).
+
+
+============================================================
+FINAL SUMMARY: STRUCTURAL vs COINCIDENTAL
+============================================================
+
+  STRUCTURAL (proved, generalizes):
+    - k-periodicity of the tower (k=2 graphs, k=3 tournaments)
+    - Layer decomposition D = D_1 + D_2 + D_3 + ...
+    - Each level adds k exact terms
+    - delta(n) → 0 super-exponentially
+    - Only odd-cycle permutations contribute (Moon's theorem)
+    - At n=5: exactly 24 = 4! tournaments have Z_5 symmetry (one iso class)
+
+  COINCIDENTAL (specific to small n, doesn't generalize):
+    - 2^10 = 10^3 + 4! (only at n=2 and n=5)
+    - D/2 = C(2k,k) (only for n <= 6)
+    - P(n) = T(n+1) (only for n <= 4)
+    - 21 = 7 x 3 (7 x 5 = 35 IS achievable, so the multiplication by 3 is accidental)
+    - D_G/D_T ~ 25 (actually grows as ~2^n, not constant)
+
+  SUGGESTIVE BUT UNGROUNDED (interesting analogy, no proof):
+    - The hierarchy 2, 3, 7, 43 as a connected tower
+    - Non-integer periodicities (phi, e, pi)
+    - Euler product structure of D(n)
+    - Cheeger-periodicity product
+    - 42 as the "ground level" of a cascade
+
+  THE LESSON:
+  The k-periodicity principle and layer decomposition are GENUINE
+  mathematics with exact proofs. The numerical coincidences at
+  small n are BEAUTIFUL but FINITE phenomena that break when tested
+  further. The project's history (MISTAKES 6, 24, 28) shows that
+  these finite coincidences are common and seductive but ultimately
+  accidental. The structural truth (the tower, the layers, the
+  3-periodicity) is BETTER than the coincidences because it
+  holds for ALL n.
+
