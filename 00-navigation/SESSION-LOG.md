@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S113 — 2026-03-21: OCR Certainty Audit — bootstrap CIs don't overlap, growth rate argument, honest assessment
+
+**Account:** opus
+**Summary:** Rigorous audit of OCR recovery claims. Bootstrap CIs: n=7∈[.9577,.9595], n=8∈[.9613,.9630], n=9∈[.9648,.9672] — NON-OVERLAPPING. The ordering n=7<n=8<n=9 is statistically significant. But OCR→1 remains unproven. Key risk: c₅/c₃→∞ means higher cycles dominate, possibly limiting OCR below 1.
+**Certainty levels:**
+1. n=7 is global minimum: **HIGH (>95%)** — bootstrap CIs confirm, exact n=6 data consistent
+2. Monotone increase after n=7: **MEDIUM-HIGH (75-85%)** — growth rate Var(H)∼n²/4 > Var(H|sc)∼13× for n>7
+3. OCR → 1 as n→∞: **MEDIUM (60-75%)** — unproven; c₅/c₃→∞ is a risk
+4. No even/odd zigzag: **LOW-MEDIUM (50-60%)** — too few data points
+
+**Key caveat:** OCR at n=8+ is likely UNDERESTIMATED — rare score classes not yet sampled would increase OCR. Score class count still growing at N=100K.
+**Scripts:** ocr_certainty_s113.py
+
+---
+
 ## opus-2026-03-21-S112 — 2026-03-21: OCR Nature — n=7 IS the global minimum, OCR recovers to 0.966 at n=9
 
 **Account:** opus
