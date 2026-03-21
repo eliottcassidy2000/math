@@ -1,0 +1,164 @@
+======================================================================
+SECOND-ORDER LAYER STRUCTURE
+======================================================================
+
+  Layers by depth (number of cycle components):
+
+  === DEPTH 1 (products of 1 odd primes) ===
+    n=3: depth-1 total = 2.0000
+    n=4: depth-1 total = 4.0000
+    n=5: depth-1 total = 12.0000
+    n=6: depth-1 total = 29.3333
+    n=7: depth-1 total = 109.3333
+    n=8: depth-1 total = 604.8000
+    n=9: depth-1 total = 6044.0889
+    n=10: depth-1 total = 107731.6063
+
+  === DEPTH 2 (products of 2 odd primes) ===
+    n=6: depth-2 total = 10.6667
+    n=7: depth-2 total = 42.6667
+    n=8: depth-2 total = 179.2000
+    n=9: depth-2 total = 944.3556
+    n=10: depth-2 total = 7535.9492
+
+  === DEPTH 3 (products of 3 odd primes) ===
+    n=9: depth-3 total = 227.5556
+    n=10: depth-3 total = 1820.4444
+
+  === DEPTH 4 (products of 4 odd primes) ===
+
+  ======================================================================
+  DEPTH DECOMPOSITION
+  ======================================================================
+
+  D(n) = D1(n) + D2(n) + D3(n) + ...
+  where Dd(n) = sum over odd partitions with d parts > 1
+
+    n           D1           D2           D3      D_total     D_actual
+    3       2.0000       0.0000       0.0000       2.0000       2.0000
+    4       4.0000       0.0000       0.0000       4.0000       4.0000
+    5      12.0000       0.0000       0.0000      12.0000      12.0000
+    6      29.3333      10.6667       0.0000      40.0000      40.0000
+    7     109.3333      42.6667       0.0000     152.0000     152.0000
+    8     604.8000     179.2000       0.0000     784.0000     784.0000
+    9    6044.0889     944.3556     227.5556    7216.0000    7216.0000
+   10  107731.6063    7535.9492    1820.4444  117088.0000  117088.0000
+
+  ======================================================================
+  THE TOWER OF APPROXIMATIONS
+  ======================================================================
+
+  Level 0: P(n) ~ n*T(n)                    [exact for n <= 2]
+  Level 1: P(n) ~ n*T(n) - D1(n)            [better approximation]
+  Level 2: P(n) ~ n*T(n) - D1(n) - D2(n)    [even better]
+  Level 3: P(n) ~ n*T(n) - D1(n) - D2(n) - D3(n)  [exact for n <= ???]
+
+  Each level adds corrections from the next depth of odd partitions.
+
+  Level 0 (P = nT): exact for n <= 2
+  Level 1 (P = nT - D1): when does D2 first become nonzero?
+    D2 first nonzero at n=6 (layer (3,3))
+    So Level 1 is exact for n <= 5
+  Level 2 (P = nT - D1 - D2): when does D3 first become nonzero?
+    D3 first nonzero at n=9 (layer (3,3,3))
+    So Level 2 is exact for n <= 8
+  Level 3 (P = nT - D1 - D2 - D3): D4 first at n=12 ((3,3,3,3))
+    So Level 3 is exact for n <= 11
+
+  GENERAL: Level d is exact for n <= 3d+2
+  (because the (d+1)-th depth requires d+1 three-cycles, needing n >= 3(d+1))
+
+   Level    Exact for  First error at
+       0       n <= 2           n = 3
+       1       n <= 5           n = 6
+       2       n <= 8           n = 9
+       3      n <= 11          n = 12
+
+  ======================================================================
+  CHEEGER-LAYER CONNECTION
+  ======================================================================
+
+  Layer contribution as fraction of P(n):
+
+  Bottleneck analysis: smallest layer / D(n)
+  n=3: smallest layer = (3,) with 2.0000, ratio = 1.000000
+  n=4: smallest layer = (3,) with 4.0000, ratio = 1.000000
+  n=5: smallest layer = (5,) with 4.0000, ratio = 0.333333
+  n=6: smallest layer = (5,) with 8.0000, ratio = 0.200000
+  n=7: smallest layer = (7,) with 8.0000, ratio = 0.052632
+  n=8: smallest layer = (5, 3) with 8.5333, ratio = 0.010884
+  n=9: smallest layer = (9,) with 16.0000, ratio = 0.002217
+  n=10: smallest layer = (7, 3) with 15.2381, ratio = 0.000130
+
+  ======================================================================
+  RENORMALIZATION: THE TOWER OF DEFICITS
+  ======================================================================
+
+  D^(0)(n) = D(n):
+    n=3: 2
+    n=4: 4
+    n=5: 12
+    n=6: 40
+    n=7: 152
+    n=8: 784
+    n=9: 7216
+    n=10: 117088
+
+  D^(1)(n) = D/2 - C(2k,k)  [excess]:
+    n=3: 0
+    n=4: 0
+    n=5: 0
+    n=6: 0
+    n=7: 6
+    n=8: 140
+    n=9: 2684
+    n=10: 55112
+
+  E sequence: [0, 0, 0, 0, 6, 140, 2684, 55112]
+  Ratios: 23.33, 19.17, 20.53, 
+
+  E(n) vs depth-2+ contributions:
+  n=6: D1/2=14.67, D2/2=5.33, D3/2=0.00, C(2k,k)=20, E_computed=0.00, E_actual=0
+  n=7: D1/2=54.67, D2/2=21.33, D3/2=0.00, C(2k,k)=70, E_computed=6.00, E_actual=6
+  n=8: D1/2=302.40, D2/2=89.60, D3/2=0.00, C(2k,k)=252, E_computed=140.00, E_actual=140
+  n=9: D1/2=3022.04, D2/2=472.18, D3/2=113.78, C(2k,k)=924, E_computed=2684.00, E_actual=2684
+  n=10: D1/2=53865.80, D2/2=3767.97, D3/2=910.22, C(2k,k)=3432, E_computed=55112.00, E_actual=55112
+
+  ======================================================================
+  FINAL SYNTHESIS: THE RENORMALIZATION GROUP STRUCTURE
+  ======================================================================
+
+  The rooted tournament count P(n) has a RENORMALIZATION GROUP structure:
+
+  SCALE 0: P(n) = n * T(n)    [all classes contribute n perspectives]
+           Error: D(n) = n*T(n) - P(n)
+           Error vanishes: n <= 2
+
+  SCALE 1: D(n)/2 = C(2k,k)   [central binomial = "random walk on layers"]
+           Error: E(n) = D(n)/2 - C(2k,k)
+           Error vanishes: n <= 6
+
+  SCALE 2: E(n) = ???          [next correction formula]
+           Error: ???
+           Error vanishes: n <= ???
+
+  The DEPTH d of the dominant odd partition determines the SCALE:
+  - Scale 0 uses depth-0 (identity) → exact for n <= 2
+  - Scale 1 uses depth-1 (single cycles) → exact for n <= 5
+  - Scale 2 uses depth-2 (double cycles) → exact for n <= 8
+  - Scale d uses depth-d → exact for n <= 3d+2
+
+  Each scale adds 3 more exact terms (because the smallest new partition
+  at depth d+1 is (3^(d+1)), which first appears at n=3(d+1)).
+
+  THE CHEEGER CONNECTION:
+  The Cheeger constant of the perspective graph at each scale measures
+  the "bottleneck" of the remaining error. As we descend scales:
+  - Scale 0: Cheeger ~ 1 (uniform expansion)
+  - Scale 1: Cheeger decreases (single-cycle symmetries create bottlenecks)
+  - Scale 2: Cheeger further decreases (compound symmetries)
+
+  The LIMIT of the renormalization flow is the complete decomposition
+  D(n) = exact sum over all odd partitions, which converges because
+  each layer is exponentially suppressed relative to n*T(n).
+
