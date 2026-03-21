@@ -13,6 +13,38 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S99 — 2026-03-21: Practical applications — tournament-toolkit Python package
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S98
+**Files read:** Startup sequence, applications-roadmap.md, applications-ranked-S92.md, formalrank.py, cycle_detector_s92b.py, tournament_toolkit.py
+**Summary of work:** Built a pip-installable Python package `tournament-toolkit` with four production-quality tools. All demos passing. Zero parameters, zero training, zero calibration.
+
+### Package: tournament-toolkit v0.1.0
+
+Four tools, all based on the formal group F(x,y) = (x+y)/(1+xy):
+
+1. **FormalRank** — One-pass O(m) ranking from pairwise comparisons. Uses arctanh for additive evidence aggregation. Includes ambiguity measurement (H value), most-informative-comparison finder. Demo: LLM arena ranking.
+
+2. **CycleDetector** — Streaming intransitivity/fraud detection. O(1) per edge. Detects 3-cycles in real time. suspects() uses formal group cancellation signature (high count + zero score = suspicious). Demo: wash trading ring detection.
+
+3. **CartanProbe** — AI confidence diagnostics. Decomposes any matrix into tournament (competition) + cooperation (self-knowledge) via Cartan decomposition. Outputs CONFIDENT / UNCERTAIN / RISKY / HALLUCINATION_LIKELY. Demo: attention matrix analysis.
+
+4. **SpectralAnalyzer** — Tournament quality assessment. Spectral flatness, kurtosis, DRT detection, algebra dimension, Landau irregularity. Demo: Paley T₇ vs transitive tournament comparison.
+
+### Demo Results
+- LLM arena: Claude > GPT-4o > Gemini > Llama, H=1 (transitive), most informative = Claude vs GPT-4o
+- Fraud: Shell corps detected with anomaly=1.00, net_score=0.00 (perfect cancellation)
+- AI confidence: Near-transitive head = UNCERTAIN, cyclic head = HALLUCINATION_LIKELY
+- Quality: Paley T₇ = flatness 1.000, DRT ✓, dim(Alg)=3. Transitive = flatness 0.173, S₂=28.
+
+**New contributions:** tournament_toolkit/ package (ranking.py, cycles.py, cartan.py, spectral.py, setup.py, README.md, examples/demo.py)
+**Unresolved threads:**
+- PyPI publication
+- Add tournament_toolkit to CI/CD with pytest
+- Integration with actual GPT-2 attention extraction
+- Web demo / interactive visualization
+
 ## opus-2026-03-21-S98b — 2026-03-21: Hidden Orthogonal Invariants — eigenvector analysis, permanent connection
 
 **Account:** opus
