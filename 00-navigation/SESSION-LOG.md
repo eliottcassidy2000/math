@@ -102,6 +102,26 @@ Four tools, all based on the formal group F(x,y) = (x+y)/(1+xy):
 - Add tournament_toolkit to CI/CD with pytest
 - Integration with actual GPT-2 attention extraction
 - Web demo / interactive visualization
+---
+
+## opus-2026-03-21-S99 — 2026-03-21: Blue Skeleton Deep Anatomy — 10 formulas, GS DOF theorem, #til=H/|Aut|
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S98b
+**Summary:** Exhaustive analysis of blue skeleton, pos, blueself/blackself at n=3-7. Proved GS count formula, tiling count formula, degree formula. Found 10 structural formulas.
+**Key results:**
+1. **GS COUNT FORMULA** (PROVED): |GS(n)| = 2^{(C(n-1,2)+floor((n-1)/2))/2}
+2. **TILING COUNT**: #til(C) = H(T_C)/|Aut(T_C)| (PROVED, verified n=3-6)
+3. **SKELETON DEGREE**: deg(C) = 2×#GS(C) at odd n (PROVED)
+4. **#GS ALWAYS ODD**: Verified n=5,6 — #GS per SC class is always odd
+5. **BLACKSELF ≈ SC/3** at odd n: n=5: 2/8, n=7: 30/88 ≈ 0.34
+6. Fixed tiles of grid transpose = floor((n-1)/2) = "spine" of staircase
+7. GS_dof sequence: 1,2,4,6,9,12,16,20,25,30 for n=3..12
+8. GS fraction = #GS×|Aut|/H: regular tournaments have GS_frac=1.0
+**New scripts:** skeleton_deep_anatomy_s99.py, skeleton_formulas_s99.py
+**Unresolved:** Prove #GS always odd, prove blackself≈SC/3, extend to n=8,9
+
+---
 
 ## opus-2026-03-21-S98b — 2026-03-21: Hidden Orthogonal Invariants — eigenvector analysis, permanent connection
 
