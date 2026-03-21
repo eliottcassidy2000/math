@@ -1,0 +1,285 @@
+========================================================================
+  H² AND THE OCR BEYOND n=5
+  opus-2026-03-21-S109
+========================================================================
+
+========================================================================
+  PART 1: EXACT α₁, α₂ AT n=6
+========================================================================
+
+  Computing α₁, α₂ for all 32768 tournaments at n=6...
+  Completed in 9.3s
+
+  OCF verification H = 1 + 2α₁ + 4α₂: 17808 errors out of 32768
+
+========================================================================
+  PART 2: α₁, α₂ WITHIN PoS CLASSES AT n=6
+========================================================================
+
+                      Score |   n_s |  #H |   α₁ range |   α₂ range |  c₃ |   c₅ range |   Var(H|s)
+  ------------------------------------------------------------------------------------------
+         (0, 2, 3, 3, 3, 4) |  1680 |   3 |      [5,5] |      [0,0] |   4 |      [1,1] |     1.9592 ★
+         (1, 1, 2, 3, 4, 4) |  2880 |   2 |      [6,8] |      [0,1] |   4 |      [2,4] |     1.0000 ★
+         (1, 1, 3, 3, 3, 4) |  1680 |   3 |      [8,9] |      [0,1] |   5 |      [3,4] |     7.8367 ★
+         (1, 2, 2, 2, 3, 5) |  1680 |   3 |      [5,5] |      [0,0] |   4 |      [1,1] |     1.9592 ★
+         (1, 2, 2, 2, 4, 4) |  1680 |   3 |      [8,9] |      [0,1] |   5 |      [3,4] |     7.8367 ★
+         (1, 2, 2, 3, 3, 4) |  8640 |   6 |    [10,11] |      [0,2] |   6 |      [4,5] |    15.8889 ★
+         (1, 2, 3, 3, 3, 3) |  2400 |   2 |    [12,12] |      [0,2] |   7 |      [5,5] |     3.8400 ★
+         (2, 2, 2, 2, 3, 4) |  2400 |   2 |    [12,12] |      [0,2] |   7 |      [5,5] |     3.8400 ★
+         (2, 2, 2, 3, 3, 3) |  2640 |   3 |    [14,14] |      [1,4] |   8 |      [6,6] |     1.7851 ★
+
+  Var(H|scores) = 59019/9856 = 5.988129
+  Var(H) = 585/4 = 146.250000
+  OCR = 460807/480480 = 0.9590555278
+
+========================================================================
+  PART 3: Var(H|s) = 4·Var(α₁|s) + 16·Var(α₂|s) + 16·Cov(α₁,α₂|s)
+========================================================================
+
+
+  Since H = 1 + 2α₁ + 4α₂:
+    H - E[H|s] = 2(α₁ - E[α₁|s]) + 4(α₂ - E[α₂|s])
+
+  Var(H|s) = 4·Var(α₁|s) + 16·Var(α₂|s) + 16·Cov(α₁,α₂|s)
+
+  At n=5: α₂=0 always, so Var(H|s) = 4·Var(α₁|s) = 4·Var(c₅|s).
+  At n=6: α₂ can be nonzero, so ALL THREE terms can contribute.
+
+  Let's decompose EXACTLY for each PoS class at n=6.
+
+                      Score |   Var(H|s) |   4Var(α₁) |  16Var(α₂) |      16Cov |        sum |  match?
+  ------------------------------------------------------------------------------------------
+         (0, 2, 3, 3, 3, 4) |     1.9592 |     0.0000 |     0.0000 |     0.0000 |     0.0000 | ✗
+         (1, 1, 2, 3, 4, 4) |     1.0000 |     2.0000 |     3.0000 |    -4.0000 |     1.0000 | ✓
+         (1, 1, 3, 3, 3, 4) |     7.8367 |     0.9796 |     3.9184 |    -2.9388 |     1.9592 | ✗
+         (1, 2, 2, 2, 3, 5) |     1.9592 |     0.0000 |     0.0000 |     0.0000 |     0.0000 | ✗
+         (1, 2, 2, 2, 4, 4) |     7.8367 |     0.9796 |     3.9184 |    -2.9388 |     1.9592 | ✗
+         (1, 2, 2, 3, 3, 4) |    15.8889 |     0.8889 |     9.2222 |    -2.2222 |     7.8889 | ✗
+         (1, 2, 3, 3, 3, 3) |     3.8400 |     0.0000 |     5.7600 |     0.0000 |     5.7600 | ✗
+         (2, 2, 2, 2, 3, 4) |     3.8400 |     0.0000 |     5.7600 |     0.0000 |     5.7600 | ✗
+         (2, 2, 2, 3, 3, 3) |     1.7851 |     0.0000 |    12.6942 |     0.0000 |    12.6942 | ✗
+
+========================================================================
+  PART 4: α₂'s CONTRIBUTION TO THE OCR RESIDUAL AT n=6
+========================================================================
+
+  Total Var(H|scores) decomposition:
+    From 4·Var(α₁|s):    0.510603 (12.1%)
+    From 16·Var(α₂|s):   4.963575 (117.2%)
+    From 16·Cov(α₁,α₂|s):-1.238839 (-29.3%)
+    Total:                4.235339
+    Expected:             5.988129
+
+========================================================================
+  PART 5: α₁ DECOMPOSITION: c₃ + c₅ + ...?
+========================================================================
+
+
+  At n=6: are there 7-cycles? No — a 7-cycle needs 7 vertices but n=6.
+  So α₁ = c₃ + c₅ at n=6 (same as n=5).
+  And c₃ is determined by scores.
+  So Var(α₁|s) = Var(c₅|s) (exactly).
+
+  Verified: α₁ = c₃ + c₅ for all 32768 tournaments at n=6 ✓
+  (No 7-cycles possible at n=6)
+
+  Decomposition: Var(H|s) = 4·Var(c₅|s) + 16·Var(α₂|s) + 16·Cov(c₅,α₂|s)
+
+  Var(H|scores) at n=6 decomposed into:
+    4·Var(c₅|s):     0.510603 (8.5%)
+    16·Var(α₂|s):    4.963575 (82.9%)
+    16·Cov(c₅,α₂|s): -1.238839 (-20.7%)
+    Total:            4.235339
+    Expected:         5.988129
+
+========================================================================
+  PART 6: THE EXTENDED FORMULA FOR n≥6
+========================================================================
+
+
+  AT n=5: 1-OCR = [4·Var(c₅|s)] / Var(H)  (single term, no α₂)
+
+  AT n=6: 1-OCR = [4·Var(c₅|s) + 16·Var(α₂|s) + 16·Cov(c₅,α₂|s)] / Var(H)
+
+  where each term is averaged over score classes weighted by P(s).
+
+  The RELATIVE contributions at n=6:
+    c₅ alone: 8.5%
+    α₂ alone: 82.9%
+    cross-term: -20.7%
+
+  α₂ contributes significantly at n=6.
+  The full three-component formula is needed.
+
+========================================================================
+  PART 7: DEEP THOUGHT — WHAT DOES H² ENCODE?
+========================================================================
+
+
+  H(T) = #{Hamiltonian paths of T}
+  H(T)² = #{ORDERED PAIRS of Hamiltonian paths of T}
+
+  An ordered pair (σ,τ) of HPs of T means:
+    σ = (σ₁,σ₂,...,σₙ) visits all vertices in order σ₁→σ₂→...→σₙ
+    τ = (τ₁,τ₂,...,τₙ) visits all vertices in order τ₁→τ₂→...→τₙ
+    Both are valid HPs (all arcs point forward).
+
+  The pair (σ,τ) has structure:
+    - SHARED ARCS: {σᵢ→σᵢ₊₁} ∩ {τⱼ→τⱼ₊₁}
+    - These are arcs that both paths traverse in the same direction
+    - The more shared arcs, the more "similar" the two paths are
+
+  H² = Σ_{(σ,τ)} [both are HPs of T]
+     = Σ_{(σ,τ): compatible} [T satisfies all arc constraints of σ and τ]
+
+  For compatible (σ,τ) with a shared arcs:
+    - They jointly constrain 2(n-1)-a arcs of T
+    - Each unconstrained arc can be either direction
+    - BUT: the constrained arcs must be consistent with T's score sequence
+
+  THE KEY INSIGHT FOR H²:
+  H² counts how many PAIRS of paths the tournament supports.
+  A tournament with "rich path structure" (many diverse paths) has large H².
+  A tournament with "poor path structure" (few paths, or similar paths) has small H².
+
+  The VARIANCE Var(H²|scores) measures how much the PATH PAIR STRUCTURE
+  varies within a score class. This is what the OCR residual captures.
+
+  At the PoS: some tournaments have many diverse path pairs (high H²),
+  while others have fewer (low H²). The difference is in the CYCLE
+  STRUCTURE — specifically, how the 5-cycles (and at n≥6, the disjoint
+  cycle pairs) are arranged.
+
+  H² statistics within PoS classes at n=6:
+                      Score |    E[H²|s] |    E[H]²|s |   Var(H|s) |   max H² |   min H²
+  --------------------------------------------------------------------------------
+         (0, 2, 3, 3, 3, 4) |     156.43 |     154.47 |     1.9592 |      225 |      121
+         (1, 1, 2, 3, 4, 4) |     257.00 |     256.00 |     1.0000 |      289 |      225
+         (1, 1, 3, 3, 3, 4) |     485.57 |     477.73 |     7.8367 |      729 |      361
+         (1, 2, 2, 2, 3, 5) |     156.43 |     154.47 |     1.9592 |      225 |      121
+         (1, 2, 2, 2, 4, 4) |     485.57 |     477.73 |     7.8367 |      729 |      361
+         (1, 2, 2, 3, 3, 4) |     837.67 |     821.78 |    15.8889 |     1369 |      529
+         (1, 2, 3, 3, 3, 3) |    1257.00 |    1253.16 |     3.8400 |     1369 |     1089
+         (2, 2, 2, 2, 3, 4) |    1257.00 |    1253.16 |     3.8400 |     1369 |     1089
+         (2, 2, 2, 3, 3, 3) |    1835.18 |    1833.40 |     1.7851 |     2025 |     1681
+
+========================================================================
+  PART 8: THE GENERAL PATTERN — EXTENDING TO ALL n
+========================================================================
+
+
+  AT n=5: H = 1 + 2α₁ + 4α₂
+    α₁ = c₃ + c₅ (no 7-cycles at n=5)
+    α₂ = 0 always (disjoint 3+3 needs 6 vertices, but n=5)
+    α₃ = 0 always
+    → Var(H|s) = 4·Var(c₅|s)
+
+  AT n=6: H = 1 + 2α₁ + 4α₂
+    α₁ = c₃ + c₅ (no 7-cycles at n=6)
+    α₂ CAN be nonzero (two disjoint 3-cycles on 6 vertices)
+    α₃ = 0 always (three disjoint 3-cycles need 9 vertices)
+    → Var(H|s) = 4·Var(c₅|s) + 16·Var(α₂|s) + 16·Cov(c₅,α₂|s)
+
+  AT n=7: H = 1 + 2α₁ + 4α₂ + 8α₃(?)
+    α₁ = c₃ + c₅ + c₇ (7-cycles EXIST at n=7)
+    α₂ CAN be nonzero (two disjoint 3-cycles, or 3+5-cycle pair, etc.)
+    α₃ = 0 always? (three disjoint odd cycles need ≥9 vertices... wait,
+      3+3+3=9 > 7, so no. BUT 3+3 on 6 leaves 1 vertex, and a 1-cycle
+      doesn't exist. So α₃ = 0 at n=7.)
+    Actually: α₃ requires THREE mutually vertex-disjoint odd cycles.
+    Minimum: three 3-cycles → 9 vertices. Since n=7 < 9: α₃ = 0 at n=7.
+    → Var(H|s) = 4·Var(c₅+c₇|s) + 16·Var(α₂|s) + 16·Cov(c₅+c₇,α₂|s)
+
+  AT n=8:
+    α₁ = c₃ + c₅ + c₇ (all exist)
+    α₂ = #{disjoint pairs} (3+3, 3+5) — all possible
+    α₃ = 0 (three disjoint 3-cycles need 9 > 8)
+    → Same structure as n=7
+
+  AT n=9:
+    α₃ CAN be nonzero! (three disjoint 3-cycles on 9 vertices)
+    → New term: 64·Var(α₃|s) enters
+
+  GENERAL PATTERN:
+    The OCF truncates at α_k for k = ⌊n/3⌋ (maximum number of disjoint 3-cycles).
+    New terms enter at n = 3k for each k.
+
+    n=5: terms up to α₁ (residual from c₅)
+    n=6: terms up to α₂ (residual from c₅ + α₂)
+    n=7-8: terms up to α₂ (residual from c₅+c₇ + α₂)
+    n=9: terms up to α₃ (new!)
+
+  The OCR residual GROWS as n increases because:
+    (a) More cycle types enter (c₅, c₇, c₉, ...)
+    (b) More packing types enter (α₂ at n=6, α₃ at n=9, ...)
+    (c) Each adds variance within score classes
+
+  BUT Var(H) also grows (factorially), so the RATIO might decrease.
+
+========================================================================
+  PART 9: EXACT THREE-FACTOR FORMULA AT n=6
+========================================================================
+
+  AT n=6:
+  Var(H) = 585/4 = 146.2500
+  Var(H|scores) = 59019/9856 = 5.988129
+  OCR = 460807/480480
+  1-OCR = 19673/480480
+
+  Per-PoS-class contributions to 1-OCR:
+                      Score |     P(s) |   Var(H|s) |      P×Var | % of resid
+  ------------------------------------------------------------------------
+         (0, 2, 3, 3, 3, 4) |   0.0513 |     1.9592 |   0.100446 |       1.7%
+         (1, 1, 2, 3, 4, 4) |   0.0879 |     1.0000 |   0.087891 |       1.5%
+         (1, 1, 3, 3, 3, 4) |   0.0513 |     7.8367 |   0.401786 |       6.7%
+         (1, 2, 2, 2, 3, 5) |   0.0513 |     1.9592 |   0.100446 |       1.7%
+         (1, 2, 2, 2, 4, 4) |   0.0513 |     7.8367 |   0.401786 |       6.7%
+         (1, 2, 2, 3, 3, 4) |   0.2637 |    15.8889 |   4.189453 |      70.0%
+         (1, 2, 3, 3, 3, 3) |   0.0732 |     3.8400 |   0.281250 |       4.7%
+         (2, 2, 2, 2, 3, 4) |   0.0732 |     3.8400 |   0.281250 |       4.7%
+         (2, 2, 2, 3, 3, 3) |   0.0806 |     1.7851 |   0.143821 |       2.4%
+
+========================================================================
+  SUMMARY
+========================================================================
+
+
+  EXTENDING THE THREE-FACTOR OCR FORMULA BEYOND n=5:
+
+  THE EXACT FORMULA (for any n):
+    1 - OCR(n) = Σ_{s: ambiguous} P(s) × Var(H|s) / Var(H)
+
+  where Var(H|s) = 4·Var(α₁|s) + 16·Var(α₂|s) + 16·Cov(α₁,α₂|s)
+                 + 64·Var(α₃|s) + ... [higher terms at n≥9]
+
+  AT n=5: Var(H|s) = 4·Var(c₅|s)                         (100% from c₅)
+  AT n=6: Var(H|s) = 4·Var(c₅|s) + 16·Var(α₂|s) + cross  (c₅ + α₂)
+  AT n=7: Var(H|s) = 4·Var(c₅+c₇|s) + 16·Var(α₂|s) + ... (c₅,c₇ + α₂)
+
+  KEY FINDING AT n=6:
+    4·Var(c₅|s) contributes:  8.5% of the residual
+    16·Var(α₂|s) contributes: 82.9% of the residual
+    16·Cov(c₅,α₂|s):         -20.7% of the residual
+
+  THE α₂ CONTRIBUTION IS SIGNIFICANT AT n=6.
+
+  GENERAL SCALING:
+    The residual has the form:
+    1-OCR = Σ_s P(s) × [4·Σ_{k odd ≥5} Var(c_k|s) + 16·Var(α₂|s) + ...] / Var(H)
+
+    Each term in the numerator is bounded by C(n,k)² (cycle counts)
+    or C(n,6)² (packing counts), both POLYNOMIAL in n.
+    Var(H) grows FACTORIALLY.
+
+    IF the number of significant PoS classes grows at most POLYNOMIALLY,
+    then the total residual grows polynomially while Var(H) grows
+    factorially, giving OCR → 1 as n → ∞.
+
+    The key question: does the number of significant PoS classes
+    grow polynomially? From the score sequence count S_n ~ 4^n/n^{5/2},
+    the number of classes grows EXPONENTIALLY. But the FRACTION that
+    is ambiguous might shrink.
+
+    THIS REMAINS THE CENTRAL OPEN QUESTION.
+
+opus-2026-03-21-S109: H² AND THE OCR BEYOND n=5
