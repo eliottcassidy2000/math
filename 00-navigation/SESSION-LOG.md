@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S110 — 2026-03-21: Recursive Nesting — H = 14 - H_inner + 4×[src→snk] EXACT
+
+**Account:** opus
+**Summary:** EXACT formula H(POS,n=5) = 14 - H_inner + 4×[src→snk]. Anti-correlation: more inner HPs → fewer outer. OCR residual driven by inner diversity at n-2.
+**Key:** 280/280 verified. Inner transitive→H=13; 3-cycle+snk→src→H=11; 3-cycle+src→snk→H=15. n=6 POS: inner on 4 vertices, R²=0.71.
+
+---
+
 ## opus-2026-03-21-S109 — 2026-03-21: HP Overlap ↔ Blueself — H=15 escapes POS, blackself is rare, σ-fixed HPs vanish
 
 **Account:** opus
