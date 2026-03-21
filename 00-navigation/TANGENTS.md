@@ -57,6 +57,19 @@ The Q-Lemma uses a fixed-point-free involution on two-block path decompositions.
 
 ---
 
+## Engineering & Cross-Domain
+
+**T090** #tournament-attention #LLM-probe #Cartan | certainty: medium | source: kind-pasteur-2026-03-21-S12
+Tournament structure in transformer attention: threshold attention matrices -> tournaments -> apply OCF, path homology, spectral theory. Cartan decomposition gl(n,R) = so(n) + p + R bridges our tournament theory to Napolitano-style gauge frameworks. Random softmax attention is 72% symmetric ("dark"), only 19% antisymmetric ("tournament"). Does training increase tournament structure? See INV-180.
+
+**T091** #soft-OCF #differentiable-tournament #training-loss | certainty: low | source: kind-pasteur-2026-03-21-S12
+Soft tournaments via sigmoid thresholding give differentiable H(T_soft) that converges to hard H as tau->0. Could be used as regularizer in transformer training to encourage Paley-like attention. OCF identity H=I(Omega,2) might have a soft analog. See INV-182.
+
+**T092** #n11-transitivity #2/3 #number-theory | certainty: high (proved) | source: kind-pasteur-2026-03-21-S12
+n=11 is the UNIQUE order where regular tournament transitivity = exactly 2/3. Formula: 3(n-3)/(4(n-2)). Napolitano's 67% phase transition depth is coincidentally 2/3. The Paley T_11 sits at this exact fraction — one more instance of n=11's special role.
+
+---
+
 ## Dead Ends (documented to prevent re-exploration)
 
 **T016** #dead-end #cycle-bijection #arc-reversal | certainty: high (confirmed dead end) | source: file.txt

@@ -1,0 +1,37 @@
+SOFT TOURNAMENT BRIDGE
+============================================================
+
+Paley T_7 attention matrix (row-normalized):
+  Hard H(T_7) = 189
+
+Soft H at varying temperature:
+  tau=10.000: soft H = 78.77 (ratio to hard: 0.4168)
+  tau= 1.000: soft H = 80.91 (ratio to hard: 0.4281)
+  tau= 0.500: soft H = 87.08 (ratio to hard: 0.4607)
+  tau= 0.100: soft H = 169.12 (ratio to hard: 0.8948)
+  tau= 0.050: soft H = 188.20 (ratio to hard: 0.9958)
+  tau= 0.010: soft H = 189.00 (ratio to hard: 1.0000)
+  tau= 0.001: soft H = 189.00 (ratio to hard: 1.0000)
+
+As tau -> 0, soft H converges to hard H = 189
+This makes tournament invariants DIFFERENTIABLE probes!
+
+
+TOURNAMENT PROFILE COMPARISON
+============================================================
+
+Name                           H   c3  trans score_var   reg  anti_E
+---------------------------------------------------------------------------
+Paley T_7                    189   14  0.600     0.000     Y   0.500
+Transitive T_7                 1    0  1.000     4.000     N   0.500
+Random T_7 #1                 55    7  0.800     2.000     N   0.500
+Random T_7 #2                 91   10  0.714     1.143     N   0.500
+Random T_7 #3                 79    9  0.743     1.429     N   0.500
+Random T_7 #4                 91    9  0.743     1.429     N   0.500
+Random T_7 #5                 89   10  0.714     1.143     N   0.500
+Attn-Tournament #1            49    7  0.800     2.000     N   0.500
+Attn-Tournament #2           139   12  0.657     0.571     N   0.500
+Attn-Tournament #3            75    9  0.743     1.429     N   0.500
+
+Key: H=Hamiltonian paths, c3=directed 3-cycles, trans=transitivity, anti_E=Cartan antisymmetric energy
+Paley T_7 has MAXIMUM H=189 among ALL 7-vertex tournaments

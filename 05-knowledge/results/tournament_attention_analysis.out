@@ -1,0 +1,139 @@
+Tournament Attention Analysis
+Connecting tournament theory to transformer attention patterns
+Based on analysis of Napolitano (2026) paper
+
+
+============================================================
+KILLING FORM COMPARISON: so(n) vs gl(n,R)
+============================================================
+
+n = 3:
+  so(3): dim = 3, Killing eigenvalue = -2, signature = (0, 3, 0)
+  gl(3,R): dim = 9, Killing signature on sl = (5, 3, 1)
+  'Active' (negative) = 3 = dim(so(3)) = 3: MATCH
+  'Dark' (positive) = 5, null = 1
+  Napolitano ratio: dark/active = 5/3 = 1.667
+
+n = 5:
+  so(5): dim = 10, Killing eigenvalue = -6, signature = (0, 10, 0)
+  gl(5,R): dim = 25, Killing signature on sl = (14, 10, 1)
+  'Active' (negative) = 10 = dim(so(5)) = 10: MATCH
+  'Dark' (positive) = 14, null = 1
+  Napolitano ratio: dark/active = 14/10 = 1.400
+
+n = 7:
+  so(7): dim = 21, Killing eigenvalue = -10, signature = (0, 21, 0)
+  gl(7,R): dim = 49, Killing signature on sl = (27, 21, 1)
+  'Active' (negative) = 21 = dim(so(7)) = 21: MATCH
+  'Dark' (positive) = 27, null = 1
+  Napolitano ratio: dark/active = 27/21 = 1.286
+
+n = 11:
+  so(11): dim = 55, Killing eigenvalue = -18, signature = (0, 55, 0)
+  gl(11,R): dim = 121, Killing signature on sl = (65, 55, 1)
+  'Active' (negative) = 55 = dim(so(11)) = 55: MATCH
+  'Dark' (positive) = 65, null = 1
+  Napolitano ratio: dark/active = 65/55 = 1.182
+
+
+############################################################
+# TOURNAMENT ANALYSIS OF ATTENTION PATTERNS
+############################################################
+
+============================================================
+ATTENTION TOURNAMENT ANALYSIS: Paley T_7 attention
+============================================================
+Token count (tournament size): n = 7
+Score sequence: [np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]
+Regular: True
+H(T) = 189
+
+Cartan decomposition of attention matrix:
+  ||A_anti|| / ||A|| = 0.5000  (tournament/'active' fraction)
+  ||A_sym||  / ||A|| = 0.5000  (similarity/'dark' fraction)
+  Dimensions: active=21, dark=27, null=1
+
+Odd cycle analysis:
+  Total directed odd cycles: 80
+    3-cycles: 14
+    5-cycles: 42
+    7-cycles: 24
+  Conflict graph too large (80 vertices) for independence polynomial
+
+Transitivity index: 0.6000 (21/35 transitive triples)
+
+============================================================
+ATTENTION TOURNAMENT ANALYSIS: Transitive attention (n=7)
+============================================================
+Token count (tournament size): n = 7
+Score sequence: [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6)]
+Regular: False
+H(T) = 1
+
+Cartan decomposition of attention matrix:
+  ||A_anti|| / ||A|| = 0.5000  (tournament/'active' fraction)
+  ||A_sym||  / ||A|| = 0.5000  (similarity/'dark' fraction)
+  Dimensions: active=21, dark=27, null=1
+
+Odd cycle analysis:
+  Total directed odd cycles: 0
+  I(Omega(T), 2) = 1
+  OCF VERIFIED: H(T) = I(Omega(T), 2) = 1 [OK]
+
+Transitivity index: 1.0000 (35/35 transitive triples)
+
+============================================================
+ATTENTION TOURNAMENT ANALYSIS: Random attention (n=7)
+============================================================
+Token count (tournament size): n = 7
+Score sequence: [np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4), np.int64(5)]
+Regular: False
+H(T) = 81
+
+Cartan decomposition of attention matrix:
+  ||A_anti|| / ||A|| = 0.2048  (tournament/'active' fraction)
+  ||A_sym||  / ||A|| = 0.7230  (similarity/'dark' fraction)
+  Dimensions: active=21, dark=27, null=1
+
+Odd cycle analysis:
+  Total directed odd cycles: 32
+    3-cycles: 10
+    5-cycles: 18
+    7-cycles: 4
+  Conflict graph too large (32 vertices) for independence polynomial
+
+Transitivity index: 0.7143 (25/35 transitive triples)
+
+============================================================
+COMPARATIVE CARTAN DECOMPOSITION ANALYSIS
+============================================================
+n = 7, 100 random attention matrices
+
+Random attention anti-fraction:
+  Mean:   0.1851
+  Std:    0.0536
+  Min:    0.0819
+  Max:    0.3020
+
+Paley T_7 attention anti-fraction: 0.5000
+  (dark fraction: 0.5000)
+
+Transitive attention anti-fraction: 0.5000
+  (dark fraction: 0.5000)
+
+--- KEY FINDING ---
+Paley has SIGNIFICANTLY MORE tournament structure than random
+
+
+############################################################
+# SCALING ANALYSIS: Cartan decomposition vs n
+############################################################
+n= 3: anti_fraction = 0.0923 ± 0.0484  (active_dims=3, dark_dims=5, ratio=1.67)
+n= 5: anti_fraction = 0.1656 ± 0.0633  (active_dims=10, dark_dims=14, ratio=1.40)
+n= 7: anti_fraction = 0.1900 ± 0.0568  (active_dims=21, dark_dims=27, ratio=1.29)
+n=11: anti_fraction = 0.2265 ± 0.0431  (active_dims=55, dark_dims=65, ratio=1.18)
+n=13: anti_fraction = 0.2431 ± 0.0428  (active_dims=78, dark_dims=90, ratio=1.15)
+n=17: anti_fraction = 0.2515 ± 0.0322  (active_dims=136, dark_dims=152, ratio=1.12)
+
+
+Done. Results should be saved to 05-knowledge/results/tournament_attention_analysis.out

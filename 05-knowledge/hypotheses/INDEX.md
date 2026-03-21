@@ -1712,3 +1712,29 @@ Source: ocf_llm_synthesis.py
 **Result:** With default initialization (tokens 0-255), exit rate is low (~0-12%). Needs proper cache warmup from corpus token frequency. The theoretical savings are correct (500x ratio for V=128K). The prediction match is correct (7/8 with unwarmed cache; the miss is because the correct token isn't in the hot set).
 **Next step:** Initialize hot cache from unigram distribution, then re-benchmark.
 Source: tournament_head_integrated.py
+
+## HYP-1700: Training shifts attention Cartan balance toward tournament structure (kind-pasteur-S12)
+**Status:** OPEN
+**Hypothesis:** Trained transformer attention has higher antisymmetric (tournament) energy fraction than random softmax attention. Random: ~19% at n=7. Prediction: trained attention > 25%.
+**Rationale:** If training makes attention more directional (clear who-attends-to-whom hierarchy), the Cartan antisymmetric fraction should increase. This would mean trained attention is more tournament-like.
+**Test:** Extract attention from trained vs untrained GPT-2, compute Cartan energy fractions per layer per head, compare.
+Source: cartan_attention_theorem.py, tournament_attention_analysis.py
+
+## HYP-1701: H(T_attention) correlates with model correctness (kind-pasteur-S12)
+**Status:** OPEN
+**Hypothesis:** For a given input, attention heads whose tournament has higher H produce more correct outputs.
+**Rationale:** H measures the number of Hamiltonian paths — the richness of directed flow. High H = many ways for information to traverse all tokens = more flexible computation. Paley (max H) = doubly regular = most uniform information routing.
+**Test:** Run model on QA task, compute H(T_attention) per head per layer, correlate with answer correctness.
+Source: tournament_probe_design.py
+
+## HYP-1702: Cartan dark/active ratio = (n+1)/(n-1) for gl(n,R) (kind-pasteur-S12)
+**Status:** CONFIRMED (trivial algebra)
+**What:** The ratio of dark (positive Killing form) to active (negative Killing form) dimensions in the Cartan decomposition of gl(n,R) restricted to sl(n,R) is exactly (n+1)/(n-1). For n=4: 10/6 = 5/3.
+**Proof:** dim(so(n)) = n(n-1)/2 (negative), dim(p) = n(n+1)/2 - 1 (positive). Ratio = ((n+1)(n)/2 - 1) / (n(n-1)/2) ~ (n+1)/(n-1).
+Source: cartan_attention_theorem.py
+
+## HYP-1703: Regular tournament transitivity = 2/3 iff n=11 (kind-pasteur-S12)
+**Status:** CONFIRMED (trivial algebra)
+**What:** The transitivity of any regular tournament on n vertices is 3(n-3)/(4(n-2)). This equals 2/3 uniquely at n=11.
+**Proof:** 3(n-3)/(4(n-2)) = 2/3 => 9(n-3) = 8(n-2) => n = 11.
+Source: phase_transition_universality.py

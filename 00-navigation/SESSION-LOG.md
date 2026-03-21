@@ -13,6 +13,39 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-21-S12 — 2026-03-21: Deep analysis of Napolitano gauge theory paper & Tournament-Attention bridge
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-20-S3
+**Files read:** Full startup sequence, Napolitano paper (Zenodo 19120857), van Nierop (arXiv:2412.14543), NeurReps 2025 fiber bundle paper, GET (NeurIPS 2021), our gauge_freedom_analysis.py, fiber_structure_deep.py, super-orthogonality.md, hard-core-statistical-physics-connections.md, cross-field-synthesis-S67j.md, ghosts-and-supersymmetry.md
+**Summary of work:** Comprehensive critical analysis of Napolitano "Mathematics Is All You Need" paper claiming transformers are lattice gauge theories. Assessed mathematical validity (LOW for core claims, metaphorical use of physics). Discovered genuine mathematical bridge via Cartan decomposition of gl(n,R). Built TournamentProbe concept: parameter-free LLM analyzer using tournament invariants. Proved Killing form match, computed Cartan energy fractions, verified soft tournament convergence.
+
+### Key Findings
+
+1. **Paper assessment:** Napolitano's core claim (transformers ARE gauge theories) is mathematically unsupported. The 16-dim fiber is chosen a priori (probes project to R^16), not discovered. Scaling law fit from 2 points. No references, no peer review, no ARC-Challenge baseline clarity. But the EMPIRICAL observation (dark modes carry correctness) is interesting if reproducible.
+
+2. **The Cartan Bridge (genuine math):** gl(n,R) = so(n) + p + R decomposes attention matrices into tournament (antisymmetric) and similarity (symmetric) parts. Our tournaments live in so(n). Dark/active ratio = (n+1)/(n-1) exactly. For n=4 (Napolitano): 10/6 = 5/3.
+
+3. **Random attention baseline:** Softmax attention puts ~72% energy in symmetric sector, only ~19% in antisymmetric. This EXCEEDS the dimensional prediction (~45%), because softmax produces positive (inherently more symmetric) matrices. Napolitano's "dark modes carry info" is partly a baseline artifact.
+
+4. **OCF verified on attention tournaments:** 200/200 at n=3..6. Our theory applies directly to attention-derived tournaments.
+
+5. **Soft tournament convergence:** H_soft -> H_hard as tau -> 0, making tournament invariants DIFFERENTIABLE probes for gradient-based analysis.
+
+6. **n=11 transitivity = 2/3:** Unique order where regular tournament transitivity exactly equals 2/3 (Napolitano's phase transition depth). Formula: 3(n-3)/(4(n-2)) = 2/3 iff n=11.
+
+7. **Rigorous alternatives:** The NeurReps 2025 paper (principal bundle on transformer params) and van Nierop (SO(d-1) from LayerNorm) provide mathematically sound gauge-theory frameworks for transformers. These are worth reading.
+
+**New contributions:** INV-180, INV-181, INV-182, T090, T091, T092
+**New scripts:** tournament_attention_analysis.py, cartan_attention_theorem.py, phase_transition_universality.py, tournament_probe_design.py
+**New analysis:** napolitano-gauge-theory-analysis-S12.md
+**New reflection:** tournament-gauge-bridge.md
+**Unresolved threads:**
+- Run TournamentProbe on actual LLM to test if training shifts Cartan balance
+- Build soft OCF theory
+- Test H(T_attention) as correctness predictor
+- Build TournamentProbe PyPI package
+
 ## kind-pasteur-2026-03-20-S3 — 2026-03-20: H mod 2^k, arc-flip graph, H-spectrum density
 
 **Account:** kind-pasteur

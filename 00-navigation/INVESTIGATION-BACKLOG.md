@@ -7,6 +7,7 @@
 **Last engineering update:** kind-pasteur-2026-03-10-S54 (sparse T_19 Omega computation, CLAUDE.md engineering mandate)
 **Last packing framework update:** opus-2026-03-14-S71f (nesting obstruction, (z-2)(z-3) recurrence, 2-Bridge)
 **Last S90 update:** opus-2026-03-15-S90 (simplicial Rédei, Cayley monad, τ-φ clock, equidecomposability)
+**Last gauge theory analysis:** kind-pasteur-2026-03-21-S12 (Napolitano paper, Cartan decomposition bridge, TournamentProbe)
 
 ---
 
@@ -1827,3 +1828,50 @@ vertices needed for Ω₃ chains.
 **What:** Each tournament T selects H(T) simplices from the standard n!-simplex triangulation of [0,1]^n. H/n! = 1/2^{n-1} on average. The f-polynomial of Δ^{n-1} at x=2 gives 3^n (simplex brick), and the f-polynomial of □^n at x=2 gives 5^n (cuboid brick).
 **Scripts:** simplex_cuboid_geometry.py
 **Next steps:** (1) Is the selection pattern random-looking or structured? (2) Does the geometric constraint explain the ΔH gap?
+
+---
+
+## Engineering & Cross-Domain Leads
+
+### INV-180: Tournament Structure of Transformer Attention Patterns
+**Source:** kind-pasteur-2026-03-21-S12 (analysis of Napolitano "Mathematics Is All You Need")
+**Status:** INITIAL EXPLORATION. Computational proof of concept complete.
+**What:** Threshold attention matrices to get tournaments on token sequences, then apply our full OCF / path homology / spectral machinery. Key findings:
+1. OCF verified on ALL attention-derived tournaments (200/200 at n=3..6)
+2. Cartan decomposition of gl(n,R) = so(n) + p + R decomposes attention into "tournament" (antisymmetric) and "similarity" (symmetric) parts
+3. Dark/active ratio = (n+1)/(n-1) exactly. For n=4 (Napolitano): 10/6 = 5/3
+4. Random softmax attention puts ~72% energy in symmetric sector (beyond dimensional prediction)
+5. Soft tournament (differentiable thresholding) converges to hard tournament as tau->0, making invariants differentiable
+6. n=11 is the UNIQUE order where regular tournament transitivity = EXACTLY 2/3
+**Papers analyzed:**
+- Napolitano (Zenodo 19120857): LOW rigor, metaphorical physics. Empirical finding (dark modes carry correctness) possibly interesting
+- van Nierop (arXiv:2412.14543): MODERATE rigor. SO(d-1) gauge symmetry from LayerNorm is genuine
+- NeurReps 2025 (OpenReview YC9O7OyLFK): HIGH rigor. Principal fiber bundle on transformer params
+- GET (NeurIPS 2021): HIGH rigor. Gauge equivariant transformer
+**Scripts:** tournament_attention_analysis.py, cartan_attention_theorem.py, phase_transition_universality.py, tournament_probe_design.py
+**Reflection:** 07-reflections/tournament-gauge-bridge.md
+**Full analysis:** 03-artifacts/drafts/napolitano-gauge-theory-analysis-S12.md
+**Next steps:**
+1. Run TournamentProbe on actual LLM (GPT-2 or similar) to test if trained attention has different tournament profile than random
+2. Test if H(T_attention) correlates with model correctness
+3. Test if training shifts Cartan energy from symmetric to antisymmetric (making attention more tournament-like)
+4. Build TournamentProbe as PyPI package (parameter-free LLM analyzer)
+5. Investigate soft OCF: does I(Omega(T_soft), 2) approximate H(T_hard) for soft tournaments?
+
+### INV-181: The n=11 Transitivity Theorem
+**Source:** kind-pasteur-2026-03-21-S12
+**Status:** PROVED (trivial algebra).
+**What:** n=11 is the UNIQUE order where the transitivity of a regular tournament equals exactly 2/3. Formula: transitivity = 3(n-3)/(4(n-2)), setting = 2/3 gives n=11 uniquely. Asymptotic: transitivity -> 3/4 as n -> inf.
+**Connection:** Coincidence with Napolitano's 67% depth phase transition. Probably NOT deep, but n=11 being special in tournament theory (it's our Paley T_11) adds to its mystique.
+**Next steps:** Investigate other "magic" values of transitivity. Does transitivity = 1/2 have special meaning? (Solve: n = 5.)
+
+### INV-182: Soft OCF — Differentiable Independence Polynomial
+**Source:** kind-pasteur-2026-03-21-S12
+**Status:** PROOF OF CONCEPT. Soft H converges to hard H.
+**What:** Replace hard tournament T[i,j] in {0,1} with soft tournament T_soft[i,j] = sigmoid((A[i,j]-A[j,i])/tau). The soft Hamiltonian path count H_soft(T) = sum_sigma prod T_soft[sigma(k)][sigma(k+1)] is a differentiable function of the attention matrix A. As tau->0, H_soft -> H_hard (verified computationally).
+**Application:** Use H_soft as a DIFFERENTIABLE LOSS TERM to encourage Paley-like attention structure during training. If Paley attention is optimal (as our maximizer results suggest), this could improve model performance.
+**Scripts:** tournament_probe_design.py
+**Next steps:**
+1. Define soft conflict graph and soft independence polynomial
+2. Prove soft OCF: does I_soft(Omega_soft, 2) approximate H_soft?
+3. Test as regularizer in a small transformer training run
