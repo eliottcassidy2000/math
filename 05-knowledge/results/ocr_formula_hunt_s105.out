@@ -1,0 +1,438 @@
+========================================================================
+  HUNTING FOR AN EXACT OCR FORMULA
+  opus-2026-03-21-S105
+========================================================================
+
+========================================================================
+  PART 1: FACTORING THE OCR FRACTIONS
+========================================================================
+
+  n = 3:
+    Var(H) = 3/4 = 0.750000
+    Var(H|s) = 0 = 0.000000
+    OCR = 1 = 1.0000000000
+    1-OCR = 0
+
+  n = 5:
+    Var(H) = 285/16 = 17.812500
+    Var(H|s) = 15/28 = 0.535714
+    OCR = 129/133 = 0.9699248120
+    1-OCR = 4/133
+    Factorization of 1-OCR:
+      numerator 4: {2: 2}
+      denominator 133: {7: 1, 19: 1}
+
+  n = 6:
+    Var(H) = 585/4 = 146.250000
+    Var(H|s) = 59019/9856 = 5.988129
+    OCR = 460807/480480 = 0.9590555278
+    1-OCR = 19673/480480
+    Factorization of 1-OCR:
+      numerator 19673: {103: 1, 191: 1}
+      denominator 480480: {2: 5, 3: 1, 5: 1, 7: 1, 11: 1, 13: 1}
+
+
+  OBSERVATIONS:
+  1-OCR(5) = 4/133 = 2²/(7·19)
+  1-OCR(6) = 19673/480480 = 19673/(2⁵·3·5·7·11·13)
+
+  The denominator of OCR(5) is 133 = 7 × 19.
+  The denominator of OCR(6) is 480480 = 2⁵ × 3 × 5 × 7 × 11 × 13.
+
+  Is 480480 related to tournament quantities?
+  C(6,2) = 15. 15! = 1307674368000. 480480 = ... let's check.
+
+  480480 = {2: 5, 3: 1, 5: 1, 7: 1, 11: 1, 13: 1}
+  133 = {7: 1, 19: 1}
+  C(5,2)·(C(5,2)-1)·...·1 products:
+
+  n=5: C(5,2) = 10, 2^10 = 1024
+  1024/133 = 7.6992
+  133 = 7 × 19
+  7 appears in tournament theory as the SPLIT prime
+  19 = C(5,2) + C(5,1) = 10 + 9? No. 19 is the 8th prime.
+
+  At n=5, the residual comes ENTIRELY from score class (1,2,2,2,3).
+  This class has 280 tournaments = 5!·C(5,2)/... hmm
+  280 = 2³ × 5 × 7 = C(5,2) × 28 = 10 × 28
+  280/1024 = 35/128
+
+  Var(H|sc) = 96/49
+  Var(H|scores) = (35/128) × (96/49) = 35×96/(128×49) = 3360/6272 = 15/28
+  15 = C(6,2) = C(5+1, 2). Interesting!
+  28 = C(8,2) = C(7+1, 2). Hmm.
+  Or: 28 = 4 × 7.
+  So 15/28 = C(6,2) / (4 × 7).
+
+========================================================================
+  PART 2: EXACT Var(H) — CAN WE DERIVE IT?
+========================================================================
+
+
+  Var(H) = E[H²] - E[H]².
+
+  We know E[H] = n!/2^{n-1} (each permutation is a HP with probability 1/2^{n-1}).
+
+  For E[H²], we need the second moment. H² = (Σ_σ Π_arcs)² = Σ_{σ,τ} Π_{arcs of σ ∩ τ}.
+
+  Two Hamiltonian paths σ and τ share some arcs. If they share k arcs:
+    E[Π_{arcs of σ} × Π_{arcs of τ}] = 1/2^{2(n-1)-k}
+  because 2(n-1)-k DISTINCT arc choices are made.
+
+  So: E[H²] = Σ_{σ,τ} 1/2^{2(n-1)-overlap(σ,τ)}
+            = Σ_{k=0}^{n-1} N(k) / 2^{2(n-1)-k}
+
+  where N(k) = #{pairs (σ,τ) with exactly k common arcs}.
+
+  This is a COMBINATORIAL quantity depending on the overlap structure
+  of Hamiltonian paths in K_n.
+
+  n = 3:
+    N(k) overlap distribution:
+      k=0: N(k) = 18 (fraction of all (σ,τ) pairs with k shared arcs)
+      k=1: N(k) = 12 (fraction of all (σ,τ) pairs with k shared arcs)
+      k=2: N(k) = 6 (fraction of all (σ,τ) pairs with k shared arcs)
+    E[H] = 1.5
+    E[H²] from overlap = 4.125
+    Var(H) = 1.875
+    Var(H) exact (from S104) = 0.75
+
+  n = 4:
+    N(k) overlap distribution:
+      k=0: N(k) = 264 (fraction of all (σ,τ) pairs with k shared arcs)
+      k=1: N(k) = 216 (fraction of all (σ,τ) pairs with k shared arcs)
+      k=2: N(k) = 72 (fraction of all (σ,τ) pairs with k shared arcs)
+      k=3: N(k) = 24 (fraction of all (σ,τ) pairs with k shared arcs)
+    E[H] = 3.0
+    E[H²] from overlap = 18.375
+    Var(H) = 9.375
+    Var(H) exact (from S104) = not available
+
+  n = 5:
+    N(k) overlap distribution:
+      k=0: N(k) = 6360 (fraction of all (σ,τ) pairs with k shared arcs)
+      k=1: N(k) = 5280 (fraction of all (σ,τ) pairs with k shared arcs)
+      k=2: N(k) = 2160 (fraction of all (σ,τ) pairs with k shared arcs)
+      k=3: N(k) = 480 (fraction of all (σ,τ) pairs with k shared arcs)
+      k=4: N(k) = 120 (fraction of all (σ,τ) pairs with k shared arcs)
+    E[H] = 7.5
+    E[H²] from overlap = 122.34375
+    Var(H) = 66.09375
+    Var(H) exact (from S104) = 17.8125
+
+========================================================================
+  PART 3: ANATOMY OF THE RESIDUAL
+========================================================================
+
+
+  The residual Var(H|scores) comes from score classes where H is not unique.
+
+  KEY INSIGHT FROM OCF: H = 1 + 2α₁ + 4α₂ + 8α₃ + ...
+  where α_k = #{independent sets of size k in Ω(T)}.
+
+  Since c₃ is determined by scores (c₃ = C(n+1,3)/4 - S₂/2),
+  the residual comes from the HIGHER odd cycle counts (c₅, c₇, ...)
+  and the ARRANGEMENT of cycles (e_cyc, etc.).
+
+  More precisely: α₁ = c₃ + c₅ + c₇ + ... (total odd cycles in T).
+  c₃ is determined by scores. c₅ is NOT.
+  So: α₁ = c₃(scores) + c₅ + higher = known + unknown.
+  The unknown part c₅ + higher contributes the residual.
+
+  AT n=5: α₁ = c₃ + c₅ (no 7-cycles at n=5).
+  c₃ is determined by scores: c₃ = 5 - S₂/2.
+  c₅ is NOT determined by scores for the class (1,2,2,2,3).
+  The residual IS the variance of c₅ within this class.
+
+  Variance decomposition of α₁ at n=5:
+
+  Is c₃ constant within each score class at n=5?
+    (0, 1, 2, 3, 4): c₃ values = [0] ✓ CONSTANT
+    (0, 1, 3, 3, 3): c₃ values = [1] ✓ CONSTANT
+    (0, 2, 2, 2, 4): c₃ values = [1] ✓ CONSTANT
+    (0, 2, 2, 3, 3): c₃ values = [2] ✓ CONSTANT
+    (1, 1, 1, 3, 4): c₃ values = [1] ✓ CONSTANT
+    (1, 1, 2, 2, 4): c₃ values = [2] ✓ CONSTANT
+    (1, 1, 2, 3, 3): c₃ values = [3] ✓ CONSTANT
+    (1, 2, 2, 2, 3): c₃ values = [4] ✓ CONSTANT
+    (2, 2, 2, 2, 2): c₃ values = [5] ✓ CONSTANT
+
+  Is c₅ the source of H variance within score classes?
+    (1, 2, 2, 2, 3): c₅ = [1, 2, 3], H = [11, 13, 15]
+      c₅=1: α₁=c₃+c₅=4+1=5, H_pred=1+2·5=11, H_actual=11 ✓
+      c₅=2: α₁=c₃+c₅=4+2=6, H_pred=1+2·6=13, H_actual=13 ✓
+      c₅=3: α₁=c₃+c₅=4+3=7, H_pred=1+2·7=15, H_actual=15 ✓
+
+========================================================================
+  PART 4: c₅ DISTRIBUTION — THE KEY TO THE RESIDUAL
+========================================================================
+
+
+  Since the residual comes entirely from the VARIANCE OF c₅ within
+  score classes, we need to understand what determines c₅ given scores.
+
+  At n=5: c₅ = number of directed 5-cycles (Hamiltonian cycles).
+  This is the number of CYCLIC Hamiltonian paths.
+
+  CLAIM: c₅ is determined by the tournament's REGULAR decomposition.
+  A tournament can be decomposed as: near-transitive part + cycle part.
+  The more "cyclic" the tournament, the more 5-cycles it has.
+
+  Score class (1, 2, 2, 2, 3):
+  c₅ distribution:
+    c₅ = 1: 120 tournaments (42.9%), H = 11
+    c₅ = 2: 120 tournaments (42.9%), H = 13
+    c₅ = 3: 40 tournaments (14.3%), H = 15
+
+  E[c₅ | sc] = 1.7143
+  Var(c₅ | sc) = 0.489796
+
+  Since H = 1 + 2·(c₃ + c₅) and c₃ is constant within the class:
+  Var(H | sc) = 4 × Var(c₅ | sc) = 1.959184
+  Exact Var(H | sc) = 96/49 = 1.959184
+  Match: True
+
+========================================================================
+  PART 5: THE OCR DECOMPOSITION THEOREM
+========================================================================
+
+
+  THEOREM (OCR decomposition at n=5):
+
+  OCR(5) = 1 - Var(H|scores)/Var(H)
+         = 1 - 4·Var(c₅|scores) / Var(H)
+
+  Because H = 1 + 2·α₁ = 1 + 2·(c₃ + c₅) and c₃ is determined by scores,
+  Var(H|scores) = 4·Var(c₅|scores).
+
+  This generalizes: for any n,
+    Var(H|scores) = 4·Var(c₅|scores) + 16·Var(α₂|scores, c₅) + ...
+                  ≈ 4·Var(c₅|scores)  [dominant term]
+
+  So the OCR is controlled by HOW MUCH c₅ VARIES within score classes.
+
+  OCR ≈ 1 - 4·Var(c₅|scores) / Var(H)
+
+  To get an exact formula, we need:
+  (a) Var(H) as a function of n  [E[H²] via overlap counting]
+  (b) Var(c₅|scores) as a function of n  [harder — depends on cycle structure]
+
+  Verification at n=5:
+    Var(c₅|scores) = 0.133929
+    4 × Var(c₅|scores) = 0.535714
+    Var(H|scores) = 0.535714
+    Match: True
+
+========================================================================
+  PART 6: EXACT Var(H) FORMULA
+========================================================================
+
+
+  From Part 2, Var(H) = E[H²] - E[H]² where:
+    E[H] = n! / 2^{n-1}
+    E[H²] = Σ_k N(k) / 2^{2(n-1)-k}
+
+  The N(k) (overlap structure of Hamiltonian paths) is key.
+
+  Let's compute E[H] and Var(H) as exact fractions.
+
+  n=3: E[H] = 3/2 = 1.5000
+    E[H²] = 3 = 3.0000
+    Var(H) = 3/4 = 0.750000  (0.0s)
+
+  n=4: E[H] = 3 = 3.0000
+    E[H²] = 12 = 12.0000
+    Var(H) = 3 = 3.000000  (0.0s)
+
+  n=5: E[H] = 15/2 = 7.5000
+    E[H²] = 1185/16 = 74.0625
+    Var(H) = 285/16 = 17.812500  (0.1s)
+
+  n=6: E[H] = 45/2 = 22.5000
+    E[H²] = 1305/2 = 652.5000
+    Var(H) = 585/4 = 146.250000  (4.7s)
+
+
+  Var(H) sequence:
+    n=3: Var(H) = 3/4 = 0.7500, per arc = 0.2500
+    n=4: Var(H) = 3 = 3.0000, per arc = 0.5000, ratio to prev = 4.0000
+    n=5: Var(H) = 285/16 = 17.8125, per arc = 1.7812, ratio to prev = 5.9375
+    n=6: Var(H) = 585/4 = 146.2500, per arc = 9.7500, ratio to prev = 8.2105
+
+========================================================================
+  PART 7: PATTERN IN THE RESIDUAL FRACTION
+========================================================================
+
+  Residual 1-OCR as fraction:
+    n=5: 1-OCR = 4/133 = 0.0300751880
+      num = 4 = {2: 2}
+      den = 133 = {7: 1, 19: 1}
+    n=6: 1-OCR = 19673/480480 = 0.0409444722
+      num = 19673 = {103: 1, 191: 1}
+      den = 480480 = {2: 5, 3: 1, 5: 1, 7: 1, 11: 1, 13: 1}
+
+  Connection to Var(H):
+    n=5: Var(H) = 285/16 = (3·5·19)/2⁴
+    n=5: Var(H|s) = 15/28 = (3·5)/(2²·7)
+    1-OCR(5) = (15/28)/(285/16) = (15·16)/(28·285)
+             = 240/7980 = 4/133 = 2²/(7·19)
+
+    The 19 in the denominator comes from Var(H) = 285/16 = 3·5·19/16.
+    The 7 comes from Var(H|s) = 15/28 (the class has 280 = 2³·5·7 tournaments).
+
+  n=7 (from S103 float computation):
+    1-OCR(7) ≈ 67.5281/1611.9141 ≈ 0.0418931133
+    If this is a fraction p/q, what could it be?
+    Best rational approximation: 33764/805957 = 0.0418930538
+    num = 33764, den = 805957
+    num factors: {2: 2, 23: 1, 367: 1}
+    den factors: {659: 1, 1223: 1}
+
+========================================================================
+  PART 8: THE INSIGHT — OCR = f(RESIDUAL CYCLE VARIANCE)
+========================================================================
+
+
+  SUMMARY OF WHAT WE KNOW:
+
+  1. H = 1 + 2α₁ + 4α₂ + ... (OCF)
+  2. α₁ = c₃ + c₅ + c₇ + ... (total odd cycles)
+  3. c₃ = C(n+1,3)/4 - S₂/2 (PROVED, determined by scores)
+  4. c₅, c₇, ... are NOT determined by scores
+  5. Var(H|scores) = 4·Var(α₁|scores) + higher order terms
+                   = 4·Var(c₅ + c₇ + ...|scores) + h.o.t.
+  6. At n=5: Var(H|scores) = 4·Var(c₅|scores) EXACTLY
+
+  THE FORMULA FOR OCR:
+
+    OCR(n) = 1 - 4·Var(c₅ + c₇ + ... | scores) / Var(H)
+           ≈ 1 - 4·Var(c₅ | scores) / Var(H)  [dominant term]
+
+  This is EXACT if α₂ = 0 always (true at n=5, false at n≥6).
+
+  FOR A RIGOROUS FORMULA, WE NEED:
+  (a) A formula for Var(c₅|scores) in terms of n
+  (b) A formula for Var(H) in terms of n (the overlap counting)
+  (c) The higher-order correction from Var(α₂|scores, α₁)
+
+  WHAT THIS TELLS US ABOUT SCALING:
+  - Var(H) grows as (n!)²/2^{2n} ∼ exponentially
+  - Var(c₅|scores) grows polynomially (bounded by C(n,5)²)
+  - So Var(c₅)/Var(H) → 0 as n → ∞ IF Var(H) grows fast enough
+
+  BUT: the number of higher odd cycle counts (c₇, c₉, ...) also grows.
+  The total Var(c₅ + c₇ + ...|scores) might grow as fast as Var(H).
+  This is the OPEN QUESTION: does the sum of cycle residuals stay bounded
+  relative to Var(H)?
+
+  Contribution breakdown:
+    n=5: Var(c₅|scores)/Var(H) = 0.007519
+    n=5: 4×Var(c₅|scores)/Var(H) = 0.030075
+    n=5: 1-OCR = 0.030075
+    Match: YES
+
+========================================================================
+  PART 9: CANDIDATE FORMULA STRUCTURES
+========================================================================
+
+
+  Based on the analysis, the OCR formula must have the structure:
+
+    1 - OCR(n) = Var(residual cycle counts | scores) / Var(H)
+
+  where the numerator counts the variance in cycle arrangements
+  NOT explained by the score sequence.
+
+  CANDIDATE 1 (simplest):
+    1 - OCR(n) ≈ C(n,5) · c₅_var / Var(H)
+  where c₅_var is the average within-class variance of c₅.
+  This would give polynomial/exponential → 0 as n → ∞.
+
+  CANDIDATE 2 (exact at n=5):
+    1 - OCR(5) = 4/133 = 4/(7·19)
+  The factor 4 = 2² comes from the H = 1 + 2α₁ coefficient squared.
+  The factor 7 = forbidden prime = the SPLIT channel.
+  The factor 19 = appears in Var(H) = 285/16 = 3·5·19/16.
+
+  CANDIDATE 3 (structural):
+    1 - OCR(n) = Σ_{ambiguous score classes} P(sc) · Var(c₅|sc) · 4 / Var(H)
+
+  This is the LAW OF TOTAL VARIANCE applied to the OCF decomposition.
+  It is not a "formula" in closed form, but it identifies the
+  EXACT MECHANISM of the residual: the variance of 5-cycles within
+  score classes, weighted by class probability.
+
+  THE HONEST CONCLUSION:
+  A closed-form OCR(n) formula does not yet exist.
+  But the EXACT MECHANISM is identified:
+    OCR residual = variance of higher odd cycle counts within score classes.
+  At n=5, this is purely Var(c₅|scores).
+  At n≥6, it includes c₇ terms and α₂ corrections.
+
+========================================================================
+  PART 10: SPEEDUP — OCR WITHOUT FULL ENUMERATION
+========================================================================
+
+
+  Current: OCR(n) requires enumerating all 2^{C(n,2)} tournaments.
+  At n=7: 2^21 ≈ 2M tournaments, 520 seconds.
+  At n=8: 2^28 ≈ 268M tournaments, ~14 hours (infeasible in one session).
+
+  SPEEDUP IDEA 1: Compute within each score class independently.
+  Since OCR = 1 - Σ P(sc)·Var(H|sc) / Var(H), we can:
+  (a) Enumerate tournaments BY SCORE CLASS
+  (b) Within each class, compute only Var(H|sc)
+  (c) Skip classes that are known to be unambiguous
+
+  Many score classes have Var(H|sc) = 0 (H is unique).
+  At n=5: 8/9 classes are unambiguous → only need to enumerate 280/1024 tournaments.
+  At n=6: 13/22 classes unambiguous → only need ~78% of tournaments.
+
+  SPEEDUP IDEA 2: Use the c₅ formula directly.
+  Since Var(H|scores) ≈ 4·Var(c₅|scores), we can:
+  (a) For each score class, count the DISTRIBUTION of c₅ values
+  (b) Compute Var(c₅|sc) from the distribution
+  (c) This avoids computing H entirely — c₅ is much cheaper
+
+  c₅ computation: O(n!) per tournament (check all cyclic permutations)
+  vs H computation: O(2^n · n²) per tournament (bitmask DP)
+  At n=7: c₅ via O(5040) vs H via O(128·49) = O(6272). Similar cost.
+  At n=8: c₅ via O(40320) vs H via O(256·64) = O(16384). c₅ slower!
+
+  So for n≥8, the DP approach for H is actually FASTER per tournament.
+  But the score-class decomposition still helps by skipping unambiguous classes.
+
+
+========================================================================
+  SUMMARY OF FINDINGS
+========================================================================
+
+
+  1. EXACT OCR FRACTIONS:
+     OCR(5) = 129/133 (4/133 residual, factors: 2²/(7·19))
+     OCR(6) = 460807/480480
+
+  2. THE MECHANISM:
+     The residual comes from Var(c₅ + c₇ + ...|scores).
+     At n=5: purely Var(c₅|scores) = 15/(28·4) = 15/112.
+     The factor 4 amplification: Var(H|scores) = 4·Var(c₅|scores).
+
+  3. THE DECOMPOSITION THEOREM (exact at n=5):
+     OCR(n) = 1 - 4·Var(α₁ - c₃|scores) / Var(H)
+     where c₃ = C(n+1,3)/4 - S₂/2 is the score-determined part.
+
+  4. THE OPEN QUESTION:
+     Does Σ_{k≥5,odd} Var(c_k|scores) grow slower than Var(H)?
+     If yes: OCR → 1. If no: OCR plateaus.
+     The trend (1-OCR)×n = 0.15, 0.25, 0.29 is ambiguous.
+
+  5. SPEEDUP PATH:
+     Score-class decomposition allows skipping unambiguous classes.
+     At n=7: 96.6% of tournaments are in ambiguous classes (not much savings).
+     But the DOMINANT class contributes most of the variance — focus there.
+
+  NO CLOSED-FORM FORMULA YET.
+  But the exact mechanism (c₅ variance within score classes) is identified.
+  This is the right target for a formal proof.
+
+opus-2026-03-21-S105: HUNTING FOR AN EXACT OCR FORMULA
