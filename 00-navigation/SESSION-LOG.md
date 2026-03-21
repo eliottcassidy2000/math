@@ -13,9 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-<<<<<<< HEAD
+## opus-2026-03-21-S108 — 2026-03-21: POS Universe — arc-flip path, middle subtournament, automorphism mixing
+
+**Account:** opus
+**Summary:** POS at n=5 has PATH arc-flip graph (H=11↔13↔15), middle sub-tournament determines c₅, OCR residual = cost of |Aut|-mixing (1 vs 3).
+**Key:** 280=240+40 decomposition, c₅ mod |Aut|=0 always, Hamming distances are random, fiber ratio 3:3:1.
+
+---
+
 ## kind-pasteur-2026-03-21-S16 — 2026-03-21: OCR Exact Rationality — 18/19, 12/13, 120/131
-=======
+
 ## opus-2026-03-21-S107 — 2026-03-21: H² Deep — overlap-conflict verified, total variance decomposition, skeleton H² fraction
 
 **Account:** opus
@@ -36,7 +43,6 @@ Entry format:
 ---
 
 ## opus-2026-03-21-S106 — 2026-03-21: Von Staudt-Clausen meets OCR — E[H²] formula, overlap structure, surprise primes
->>>>>>> d1bc1abc (opus-2026-03-21-S107: session close — H² deep, overlap-conflict verified, total variance exact)
 
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-21-S15
