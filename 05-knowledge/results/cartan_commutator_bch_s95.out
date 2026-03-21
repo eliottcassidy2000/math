@@ -1,0 +1,421 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+========================================================================
+  CARTAN COMMUTATOR AND BCH ANALYSIS
+  opus-2026-03-21-S95
+========================================================================
+
+========================================================================
+  PART 1: COMMUTATOR [A_anti, A_sym] FOR TOURNAMENT ADJACENCY
+========================================================================
+
+  For tournament adjacency A (entries 0,1):
+    A_anti = B/2 = (A - A^T)/2
+    A_sym_tl = (A + A^T)/2 - (n-1)/(2n)*I = (J - I)/2 - (n-1)/(2n)*I
+             = J/2 - (2n-1)/(2n)*I   (CONSTANT for all tournaments!)
+
+  So [A_anti, A_sym_tl] = [B/2, (J-I)/2 - (n-1)/(2n)*I]
+                        = [B/2, (J-I)/2]   (scalar commutes with everything)
+                        = (1/4)[B, J-I]
+                        = (1/4)[B, J]       (since [B, I] = 0)
+                        = (1/4)(BJ - JB)
+
+  BJ[i,j] = sum_k B[i,k]*1 = sum_k B[i,k] = sum_{k!=i} B[i,k]
+  But B[i,k] = +1 if i->k, -1 if k->i. So sum_k B[i,k] = s_i - (n-1-s_i)
+  = 2*s_i - (n-1), where s_i = out-degree of vertex i.
+
+  So BJ[i,j] = 2*s_i - (n-1) for ALL j. (Constant row.)
+  Similarly JB[i,j] = sum_k B[k,j] = 2*pred(j) - (n-1) = -(2*s_j - (n-1)) = (n-1) - 2*s_j.
+
+  Wait: sum_k B[k,j] = sum_{k!=j} (A[k,j] - A[j,k]) = in_j - out_j = (n-1-s_j) - s_j
+  = (n-1) - 2*s_j.
+
+  So JB[i,j] = (n-1) - 2*s_j.
+
+  Therefore:
+    [B, J][i,j] = BJ[i,j] - JB[i,j] = (2*s_i - (n-1)) - ((n-1) - 2*s_j)
+                = 2*s_i + 2*s_j - 2*(n-1)
+                = 2*(s_i + s_j - (n-1))
+
+  And [A_anti, A_sym_tl] = (1/4) * [B, J] has entries:
+    [A_anti, A_sym_tl][i,j] = (s_i + s_j - (n-1)) / 2
+
+  THIS IS A RANK-2 MATRIX! It's (s + c)/2 where s = score vector and c is a constant.
+  Specifically: [A_anti, A_sym_tl] = (1/2)(s*1^T + 1*s^T - (n-1)*J)
+  where s = (s_1, ..., s_n) is the score vector.
+
+  Wait, let me be more careful:
+  [A_anti, A_sym_tl][i,j] = (s_i + s_j - (n-1)) / 2
+
+  Define d_i = s_i - (n-1)/2 (the deviation from the mean score).
+  Then [A_anti, A_sym_tl][i,j] = (d_i + d_j) / ... hmm
+
+  s_i + s_j - (n-1) = (s_i - (n-1)/2) + (s_j - (n-1)/2) = d_i + d_j
+
+  So [A_anti, A_sym_tl][i,j] = (d_i + d_j) / 2
+
+  This is a RANK-2 MATRIX (it's d*1^T + 1*d^T, divided by 2).
+  Its Frobenius norm squared:
+  ||[A_anti, A_sym_tl]||_F^2 = (1/4) * sum_{i,j} (d_i + d_j)^2
+  = (1/4) * (n * sum d_i^2 + 2*(sum d_i)^2 + n * sum d_j^2)
+  = (1/4) * (2n * Var + 2*(sum d_i)^2 ...
+
+  Actually sum d_i = 0 (since sum s_i = C(n,2) and sum (n-1)/2 = n(n-1)/2 = C(n,2)).
+
+  So sum_{i,j} (d_i + d_j)^2 = sum_{i,j} d_i^2 + 2*sum_{i,j} d_i*d_j + sum_{i,j} d_j^2
+  = n * sum d_i^2 + 2*(sum d_i)*(sum d_j) + n * sum d_j^2
+  = 2n * sum d_i^2 + 0 = 2n * sigma_s^2 * n = 2n * S2
+
+  where S2 = sum d_i^2 = Landau's second-order statistic.
+
+  So ||[A_anti, A_sym_tl]||_F^2 = (1/4) * 2n * S2 = n*S2/2
+
+  where S2 = sum_i (s_i - (n-1)/2)^2 = sum s_i^2 - n*(n-1)^2/4.
+
+  Let me verify this.
+
+
+--- n = 3 ---
+  ||[A_anti, A_sym_tl]||² = n·S₂/2 verified: ALL MATCH ✓ (8 tournaments)
+     H   c3                score   ||[A,S]||²       n·S₂/2       S₂
+     1    0            (0, 1, 2)       3.0000       3.0000     2.00
+     3    1            (1, 1, 1)       0.0000       0.0000     0.00
+
+--- n = 4 ---
+  ||[A_anti, A_sym_tl]||² = n·S₂/2 verified: ALL MATCH ✓ (64 tournaments)
+     H   c3                score   ||[A,S]||²       n·S₂/2       S₂
+     1    0         (0, 1, 2, 3)      10.0000      10.0000     5.00
+     3    1         (0, 2, 2, 2)       6.0000       6.0000     3.00
+     3    1         (1, 1, 1, 3)       6.0000       6.0000     3.00
+     5    2         (1, 1, 2, 2)       2.0000       2.0000     1.00
+
+--- n = 5 ---
+  ||[A_anti, A_sym_tl]||² = n·S₂/2 verified: ALL MATCH ✓ (1024 tournaments)
+     H   c3                score   ||[A,S]||²       n·S₂/2       S₂
+     1    0      (0, 1, 2, 3, 4)      25.0000      25.0000    10.00
+     3    1      (0, 1, 3, 3, 3)      20.0000      20.0000     8.00
+     3    1      (0, 2, 2, 2, 4)      20.0000      20.0000     8.00
+     3    1      (1, 1, 1, 3, 4)      20.0000      20.0000     8.00
+     5    2      (0, 2, 2, 3, 3)      15.0000      15.0000     6.00
+     5    2      (1, 1, 2, 2, 4)      15.0000      15.0000     6.00
+     9    3      (1, 1, 2, 3, 3)      10.0000      10.0000     4.00
+    11    4      (1, 2, 2, 2, 3)       5.0000       5.0000     2.00
+    13    4      (1, 2, 2, 2, 3)       5.0000       5.0000     2.00
+    15    4      (1, 2, 2, 2, 3)       5.0000       5.0000     2.00
+    15    5      (2, 2, 2, 2, 2)       0.0000       0.0000     0.00
+
+--- n = 6 ---
+  ||[A_anti, A_sym_tl]||² = n·S₂/2 verified: ALL MATCH ✓ (32768 tournaments)
+
+
+========================================================================
+  THEOREM: COMMUTATOR OF CARTAN SECTORS FOR TOURNAMENT ADJACENCY
+========================================================================
+
+  THEOREM (Cartan Commutator Formula):
+
+  Let T be a tournament on n vertices with adjacency matrix A and
+  score sequence (s_1, ..., s_n). Let d_i = s_i - (n-1)/2.
+
+  Define S₂ = Σᵢ dᵢ² (the Landau irregularity statistic).
+
+  Then in the Cartan decomposition A = A_anti + A_sym_tl + σI:
+
+    [A_anti, A_sym_tl][i,j] = (dᵢ + dⱼ) / 2
+
+    ||[A_anti, A_sym_tl]||²_F = n · S₂ / 2
+
+  Proof:
+    A_anti = B/2 where B = A - A^T (skew-adjacency).
+    A_sym_tl = (J-I)/2 - σI (constant for all tournaments).
+    [B/2, (J-I)/2 - σI] = (1/4)[B, J] since [B, I] = [B, σI] = 0.
+    BJ has (i,j)-entry = Σ_k B[i,k] = 2sᵢ - (n-1).
+    JB has (i,j)-entry = Σ_k B[k,j] = (n-1) - 2sⱼ.
+    [B,J][i,j] = 2(sᵢ + sⱼ - (n-1)) = 2(dᵢ + dⱼ).
+    [A_anti, A_sym_tl][i,j] = (dᵢ + dⱼ)/2. ✓
+
+    ||·||² = (1/4)Σᵢⱼ(dᵢ+dⱼ)² = (1/4)(2n·Σdᵢ² + 2(Σdᵢ)²)
+    Since Σdᵢ = 0: = (1/4)(2n·S₂) = n·S₂/2. ∎
+
+  COROLLARIES:
+
+  1. [A_anti, A_sym_tl] = 0 iff S₂ = 0 iff the tournament is REGULAR
+     (all scores equal = (n-1)/2, only possible at odd n).
+     THE CARTAN SECTORS COMMUTE IFF THE TOURNAMENT IS REGULAR.
+
+  2. The commutator is MAXIMIZED for the transitive tournament where
+     S₂ = n(n²-1)/12 (the maximum of Landau's statistic).
+
+  3. The commutator has rank at most 2 (it's d·1^T + 1·d^T, scaled).
+     Rank = 0 iff regular; rank = 1 iff d is proportional to 1 (impossible
+     since Σdᵢ=0, so impossible if d≠0); rank = 2 generically.
+
+  4. For EVEN n, no tournament is regular, so the commutator is ALWAYS
+     nonzero: the Cartan sectors are always entangled.
+
+  5. For ODD n, Paley tournaments T_p are regular (all scores = (p-1)/2),
+     so their Cartan sectors COMMUTE. This is consistent with Paley being
+     "maximally symmetric."
+
+  Verification — Paley T_7:
+  Quadratic residues mod 7: [1, 2, 4]
+  Scores: [3 3 3 3 3 3 3]
+  S₂ = 0.0
+  Regular: True
+  ||[A_anti, A_sym_tl]||² = 0.0000000000
+  Sectors commute: True
+
+
+========================================================================
+  PART 3: BCH EXPANSION AT n=3
+========================================================================
+
+  For the cyclic tournament C₃ (1->2->3->1), B is:
+    B = [[0, 1, -1], [-1, 0, 1], [1, -1, 0]]
+
+  This is the generator of rotations around (1,1,1)/√3 in R³.
+  eigenvalues: 0, ±i√3.
+
+  exp(tB) = I + sin(√3·t)/√3 · B + (1-cos(√3·t))/3 · B²
+
+  (Rodrigues' rotation formula for so(3).)
+
+  For the transitive tournament T₃ (1->2, 1->3, 2->3):
+    B = [[0, 1, 1], [-1, 0, 1], [-1, -1, 0]]
+  eigenvalues: 0, ±i√3 (SAME eigenvalues!)
+
+  In fact, ALL tournaments on 3 vertices have the SAME eigenvalue spectrum
+  for B: {0, ±i√3}. This is because ||B||² = n(n-1) = 6, and for n=3
+  with eigenvalues 0, ±iθ: 2θ² = 6, so θ = √3.
+
+  Cyclic C₃: B =
+    [ 0  1 -1]
+    [-1  0  1]
+    [ 1 -1  0]
+
+  Transitive T₃: B =
+    [0 1 1]
+    [-1  0  1]
+    [-1 -1  0]
+
+  C₃ eigenvalues: [1.7320508075688779, 0.0, -1.7320508075688779]
+  T₃ eigenvalues: [1.7320508075688779, 0.0, -1.7320508075688779]
+  t=0.1000: Rodrigues error = 2.22e-16
+  t=0.5000: Rodrigues error = 2.22e-16
+  t=1.0000: Rodrigues error = 2.22e-16
+  t=0.6931: Rodrigues error = 1.11e-16
+  t=1.0986: Rodrigues error = 2.91e-16
+
+
+========================================================================
+  PART 4: BCH FOR FULL ADJACENCY exp(A) DECOMPOSITION
+========================================================================
+
+  A = B/2 + (J-I)/2  where B is skew and (J-I)/2 is symmetric.
+
+  BCH: exp(X+Y) = exp(X) exp(Y) exp(-[X,Y]/2) exp(higher order...)
+
+  Let X = t·B/2 (tournament) and Y = t·(J-I)/2 (cooperation).
+
+  [X, Y] = (t²/4)[B, J-I] = (t²/4)[B, J]  (since [B,I]=0)
+
+  From PART 2: [B, J][i,j] = 2(sᵢ + sⱼ - (n-1)).
+
+  So [X, Y][i,j] = (t²/2)(sᵢ + sⱼ - (n-1)) = t² · (dᵢ + dⱼ).
+
+  For REGULAR tournaments (dᵢ = 0 ∀i): [X, Y] = 0.
+  Then exp(A) = exp(X) · exp(Y) EXACTLY.
+  The tournament and cooperation modes are COMPLETELY DECOUPLED.
+
+  For non-regular tournaments: [X, Y] ≠ 0 and higher BCH terms matter.
+
+  Let's verify by comparing exp(tA) with exp(tX)·exp(tY) at n=3,5.
+
+
+  cyclic C₃ (n=3):
+    Scores: [1 1 1], S₂=0.0, Regular: True
+    t=0.1: BCH₀ err=2.22e-16, BCH₁ err=2.22e-16 ← EXACT
+    t=0.5: BCH₀ err=2.22e-16, BCH₁ err=2.22e-16 ← EXACT
+    t=1.0: BCH₀ err=4.44e-16, BCH₁ err=4.44e-16 ← EXACT
+
+  transitive T₃ (n=3):
+    Scores: [2 1 0], S₂=2.0, Regular: False
+    t=0.1: BCH₀ err=5.16e-03, BCH₁ err=7.82e-04
+    t=0.5: BCH₀ err=1.44e-01, BCH₁ err=1.21e-01
+    t=1.0: BCH₀ err=6.22e-01, BCH₁ err=1.43e+00
+
+  Paley T₅ (n=5):
+    Scores: [2 2 2 2 2], S₂=0.0, Regular: True
+    t=0.1: BCH₀ err=0.00e+00, BCH₁ err=0.00e+00 ← EXACT
+    t=0.5: BCH₀ err=0.00e+00, BCH₁ err=0.00e+00 ← EXACT
+    t=1.0: BCH₀ err=0.00e+00, BCH₁ err=0.00e+00 ← EXACT
+
+
+========================================================================
+  PART 5: CARTAN ENTANGLEMENT RATIO κ = ||[A,S]||/(||A||·||S||)
+========================================================================
+
+  For tournament adjacency:
+    ||[A_anti, A_sym_tl]||² = n·S₂/2
+    ||A_anti||² = n(n-1)/4
+    ||A_sym_tl||² = ... let's compute this.
+
+  A_sym_tl = (J-I)/2 - σ·I where σ = (n-1)/(2n).
+  A_sym_tl[i,j] = 1/2 for i≠j, and (1/2 - σ) = 1/(2n) for i=j.
+
+  Wait: A_sym = (A+A^T)/2 = (J-I)/2. So A_sym[i,j] = 1/2 for i≠j, 0 diagonal.
+  σ = (n-1)/(2n).
+  A_sym_tl = A_sym - σI.
+  A_sym_tl[i,j] = 1/2 for i≠j, -(n-1)/(2n) for i=j.
+  Wait: A_sym_tl[i,i] = 0 - σ = -(n-1)/(2n).
+  A_sym_tl[i,j] = 1/2 for i≠j.
+
+  ||A_sym_tl||² = n*(n-1)²/(4n²) + n(n-1)/4 = (n-1)²/(4n) + n(n-1)/4
+                = (n-1)/(4) * ((n-1)/n + n) = (n-1)/(4) * (n²+n-1)/n
+                Hmm, let me just compute directly.
+
+  n= 3: ||A||²=1.50, ||S_tl||²=1.83, κ_max=1.090909, κ_max·simple = 13.090909
+  n= 4: ||A||²=3.00, ||S_tl||²=3.56, κ_max=0.935673, κ_max·simple = 11.228070
+  n= 5: ||A||²=5.00, ||S_tl||²=5.80, κ_max=0.862069, κ_max·simple = 10.344828
+  n= 6: ||A||²=7.50, ||S_tl||²=8.54, κ_max=0.819512, κ_max·simple = 9.834146
+  n= 7: ||A||²=10.50, ||S_tl||²=11.79, κ_max=0.791919, κ_max·simple = 9.503030
+  n= 8: ||A||²=14.00, ||S_tl||²=15.53, κ_max=0.772636, κ_max·simple = 9.271630
+  n= 9: ||A||²=18.00, ||S_tl||²=19.78, κ_max=0.758427, κ_max·simple = 9.101124
+  n=10: ||A||²=22.50, ||S_tl||²=24.52, κ_max=0.747537, κ_max·simple = 8.970438
+
+  EXACT FORMULA for κ:
+
+  κ = ||[A_anti, A_sym_tl]||² / (||A_anti||² · ||A_sym_tl||²)
+
+  Numerator: n·S₂/2
+  ||A_anti||² = n(n-1)/4
+  ||A_sym_tl||² = n*(n-1)²/(4n²) + n(n-1)/4 = (n-1)/(4n) * (n-1+n²) = (n-1)(n²+n-1)/(4n)
+
+  Wait, let me recompute:
+  ||A_sym_tl||² = n * ((n-1)/(2n))² + n(n-1) * (1/2)²
+                = (n-1)²/(4n) + n(n-1)/4
+                = (n-1)/(4) * ((n-1)/n + n)
+                = (n-1)/(4n) * (n-1 + n²)
+                = (n-1)(n²+n-1)/(4n)
+
+  For the transitive tournament: S₂ = n(n²-1)/12
+  κ_trans = (n · n(n²-1)/12 / 2) / (n(n-1)/4 · (n-1)(n²+n-1)/(4n))
+          = n²(n²-1) / 24 / (n(n-1)²(n²+n-1) / (16n))
+          = n²(n²-1) / 24 · 16n / (n(n-1)²(n²+n-1))
+          = 16n²(n+1)(n-1) / (24 · n · (n-1)² · (n²+n-1))
+          = 16n(n+1) / (24(n-1)(n²+n-1))
+          = 2n(n+1) / (3(n-1)(n²+n-1))
+
+  n= 3: κ_predicted = 0.36363636, κ_actual = 1.09090909, match: ✗
+  n= 4: κ_predicted = 0.23391813, κ_actual = 0.93567251, match: ✗
+  n= 5: κ_predicted = 0.17241379, κ_actual = 0.86206897, match: ✗
+  n= 6: κ_predicted = 0.13658537, κ_actual = 0.81951220, match: ✗
+  n= 7: κ_predicted = 0.11313131, κ_actual = 0.79191919, match: ✗
+  n= 8: κ_predicted = 0.09657948, κ_actual = 0.77263581, match: ✗
+  n= 9: κ_predicted = 0.08426966, κ_actual = 0.75842697, match: ✗
+  n=10: κ_predicted = 0.07475365, κ_actual = 0.74753653, match: ✗
+  n=11: κ_predicted = 0.06717557, κ_actual = 0.73893130, match: ✗
+  n=12: κ_predicted = 0.06099707, κ_actual = 0.73196481, match: ✗
+  n=13: κ_predicted = 0.05586249, κ_actual = 0.72621240, match: ✗
+  n=14: κ_predicted = 0.05152742, κ_actual = 0.72138388, match: ✗
+
+
+========================================================================
+  PART 6: CARTAN STRUCTURE OF A² — DEEPER ANALYSIS
+========================================================================
+
+  A² has zero trace and zero scalar. Its Cartan split:
+    (A²)_anti = (A² - (A²)^T)/2   [varies by tournament]
+    (A²)_sym  = (A² + (A²)^T)/2   [varies by tournament]
+
+  Q1: Is (A²)_sym determined by the score sequence?
+  Q2: Is (A²)_anti related to c₃?
+  Q3: What's the commutator [(A²)_anti, (A²)_sym]?
+
+  Key relation: A² + (A^T)² = A² + (J-I-A)² ... let me expand.
+  A^T = J - I - A (since A + A^T = J - I).
+  (A^T)² = (J-I-A)² = (J-I)² - (J-I)A - A(J-I) + A²
+
+  (J-I)² = J² - 2J + I = nJ - 2J + I = (n-2)J + I
+  (J-I)A = (nJ-2J+I)... hmm, (J-I)A[i,j] = sum_k (J-I)[i,k]*A[k,j]
+         = sum_{k!=i} A[k,j] = (n-1-s_j) - (1-A[i,j]) = (n-2-s_j+A[i,j])
+  Wait: sum_{k!=i} A[k,j] = (in-degree of j) - (1 if i->j, 0 otherwise... no)
+
+  sum_{k=0}^{n-1} A[k,j] = in_j = n-1-s_j (where s_j = out-degree).
+  So sum_{k!=i} A[k,j] = (n-1-s_j) - A[i,j].
+  (J-I)A[i,j] = (n-1-s_j) - A[i,j].
+
+  Similarly: A(J-I)[i,j] = sum_k A[i,k]*(J-I)[k,j] = sum_{k!=j} A[i,k]
+  = s_i - A[i,j].
+
+  So (A^T)² = (n-2)J + I - ((n-1-s_j)-A[i,j]) - (s_i-A[i,j]) + A²
+            = (n-2)J + I - n + 1 + s_j + A[i,j] - s_i + A[i,j] + A²
+  Hmm, this is getting messy with mixed indices. Let me just work matrix-wise.
+
+  (A²)_sym = (A² + (A^T)²)/2
+
+  Key identity: A + A^T = J - I
+  So A^T = J - I - A
+  (A^T)² = (J-I)² - (J-I)A - A(J-I) + A²
+          = (n-2)J + I - (J-I)A - A(J-I) + A²
+
+  (A²)_sym = (A² + (A^T)²)/2 = A² + ((n-2)J + I)/2 - ((J-I)A + A(J-I))/2
+  Hmm, let me just verify numerically what (A²)_sym depends on.
+
+
+--- n = 5: checking what determines (A²)_sym ---
+  Score (0, 1, 2, 3, 4): 60 distinct (A²)_sym matrices (out of 120 tournaments)
+  Score (0, 1, 3, 3, 3): 20 distinct (A²)_sym matrices (out of 40 tournaments)
+  Score (0, 2, 2, 2, 4): 10 distinct (A²)_sym matrices (out of 40 tournaments)
+  Score (0, 2, 2, 3, 3): 60 distinct (A²)_sym matrices (out of 120 tournaments)
+  Score (1, 1, 1, 3, 4): 20 distinct (A²)_sym matrices (out of 40 tournaments)
+  Score (1, 1, 2, 2, 4): 60 distinct (A²)_sym matrices (out of 120 tournaments)
+  Score (1, 1, 2, 3, 3): 90 distinct (A²)_sym matrices (out of 240 tournaments)
+  Score (1, 2, 2, 2, 3): 100 distinct (A²)_sym matrices (out of 280 tournaments)
+  Score (2, 2, 2, 2, 2): 12 distinct (A²)_sym matrices (out of 24 tournaments)
+
+
+========================================================================
+  PART 7: EXACT FORMULA FOR (A²)_sym AND (A²)_anti
+========================================================================
+
+  (A²)[i,j] = #{k : i->k->j}   for i≠j
+  ((A^T)²)[i,j] = #{k : i<-k<-j} = #{k : j->k->i}   for i≠j
+
+  (A²)_sym[i,j] = (#{k : i->k->j} + #{k : j->k->i}) / 2  for i≠j
+  (A²)_anti[i,j] = (#{k : i->k->j} - #{k : j->k->i}) / 2  for i≠j
+
+  For i≠j, define:
+    w(i,j) = #{k≠i,j : i->k AND k->j}
+
+  Then A²[i,j] = w(i,j) and (A^T)²[i,j] = w(j,i).
+
+  (A²)_sym[i,j] = (w(i,j) + w(j,i)) / 2
+  (A²)_anti[i,j] = (w(i,j) - w(j,i)) / 2
+
+  Now, the total w(i,j) + w(j,i) counts k≠i,j such that:
+    (i->k AND k->j) OR (j->k AND k->i)
+  i.e., k is a "2-witness" that i and j are connected through k.
+
+  The difference w(i,j) - w(j,i) = #{k: i->k->j} - #{k: j->k->i}
+  = the net directional dominance of i over j through 2-step paths.
+
+
+--- n = 5: checking w(i,j)+w(j,i) ---
+  32 constant, 10 variable (w(i,j)+w(j,i) by score pair)
+
+  Checking w(i,j)+w(j,i) vs arcs:
+  Scores: [3 2 2 2 1]
+    (0,1) i->j: w+w'=2, s_i+s_j=5
+    (0,2) i->j: w+w'=2, s_i+s_j=5
+    (0,3) i->j: w+w'=2, s_i+s_j=5
+    (0,4) j->i: w+w'=3, s_i+s_j=4
+    (1,2) j->i: w+w'=1, s_i+s_j=4
+    (1,3) i->j: w+w'=1, s_i+s_j=4
+    (1,4) i->j: w+w'=2, s_i+s_j=3
+    (2,3) j->i: w+w'=1, s_i+s_j=4
+    (2,4) i->j: w+w'=2, s_i+s_j=3
+    (3,4) i->j: w+w'=2, s_i+s_j=3
+
+
+Done. opus-2026-03-21-S95

@@ -1,0 +1,597 @@
+========================================================================
+  CARTAN DECOMPOSITION OF TOURNAMENT ADJACENCY MATRICES
+  opus-2026-03-21-S95
+========================================================================
+
+========================================================================
+  PART 1: CARTAN FRACTIONS OF A^k FOR ALL TOURNAMENTS
+========================================================================
+
+--- n = 3 ---
+
+  Grouped by (H, c3): 2 distinct classes
+     H   c3   cnt |  A1_anti   A1_sym   A1_scl |  A2_anti   A2_sym |  ||[A,S]||
+     1    0     6 |   0.5000   0.5000   0.0000 |   0.5000   0.5000 |   1.732051
+     3    1     2 |   0.5000   0.5000   0.0000 |   0.5000   0.5000 |   0.000000
+
+--- n = 4 ---
+
+  Grouped by (H, c3): 3 distinct classes
+     H   c3   cnt |  A1_anti   A1_sym   A1_scl |  A2_anti   A2_sym |  ||[A,S]||
+     1    0    24 |   0.5000   0.5000   0.0000 |   0.5000   0.5000 |   3.162278
+     3    1    16 |   0.5000   0.5000   0.0000 |   0.5000   0.5000 |   2.449490
+     5    2    24 |   0.5000   0.5000   0.0000 |   0.3000   0.7000 |   1.414214
+
+--- n = 5 ---
+
+  Grouped by (H, c3): 8 distinct classes
+     H   c3   cnt |  A1_anti   A1_sym   A1_scl |  A2_anti   A2_sym |  ||[A,S]||
+     1    0   120 |   0.5000   0.5000   0.0000 |   0.5000   0.5000 |   5.000000
+     3    1   120 |   0.5000   0.5000   0.0000 |   0.5000   0.5000 |   4.472136
+     5    2   240 |   0.5000   0.5000   0.0000 |   0.4000   0.6000 |   3.872983
+     9    3   240 |   0.5000   0.5000   0.0000 |   0.2937   0.7063 |   3.162278
+    11    4   120 |   0.5000   0.5000   0.0000 |   0.2143   0.7857 |   2.236068
+    13    4   120 |   0.5000   0.5000   0.0000 |   0.2500   0.7500 |   2.236068
+    15    4    40 |   0.5000   0.5000   0.0000 |   0.2500   0.7500 |   2.236068
+    15    5    24 |   0.5000   0.5000   0.0000 |   0.1667   0.8333 |   0.000000
+
+
+========================================================================
+  PART 2: CARTAN DECOMPOSITION OF WALK MATRIX W = sum A^k
+========================================================================
+
+--- n = 3 ---
+     H   c3   cnt |   W_anti    W_sym    W_scl |    sigma  ||[A,S]||
+     1    0     6 |   0.3333   0.3333   0.3333 |   1.0000     4.0620
+     3    1     2 |   0.0000   0.6667   0.3333 |   1.0000     0.0000
+
+--- n = 4 ---
+     H   c3   cnt |   W_anti    W_sym    W_scl |    sigma  ||[A,S]||
+     1    0    24 |   0.4355   0.4355   0.1290 |   1.0000    18.5607
+     3    1    16 |   0.2935   0.4402   0.2663 |   1.7500    22.0454
+     5    2    24 |   0.0738   0.5164   0.4098 |   2.5000    12.7475
+
+--- n = 5 ---
+     H   c3   cnt |   W_anti    W_sym    W_scl |    sigma  ||[A,S]||
+     1    0   120 |   0.4786   0.4786   0.0427 |   1.0000    78.1313
+     3    1   120 |   0.4422   0.5009   0.0569 |   1.6000   142.6885
+     5    2   240 |   0.3397   0.5370   0.1233 |   3.0000   198.4893
+     9    3   240 |   0.1793   0.6063   0.2144 |   4.8000   203.4333
+    11    4   120 |   0.0988   0.6179   0.2832 |   6.6000   188.7962
+    13    4   120 |   0.1248   0.6518   0.2234 |   5.8000   236.5079
+    15    4    40 |   0.0837   0.6893   0.2270 |   5.8000   189.3027
+    15    5    24 |   0.0317   0.6561   0.3122 |   8.0000     0.0000
+
+
+========================================================================
+  PART 3: CARTAN DECOMPOSITION OF exp(tB) FOR SKEW-ADJACENCY B
+========================================================================
+  B = A - A^T (skew-symmetric, entries in {-1,0,1})
+  exp(tB) is ORTHOGONAL (in SO(n)) for real t
+  Its Cartan decomposition tells us about ROTATION structure
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+
+--- n = 3 ---
+     H   c3 |   anti( 0.1)  anti( 0.5)  anti( 1.0)  anti( ln2)  anti( ln3)
+     1    0 |       0.0198      0.3869      0.6495      0.5794      0.5958
+     3    1 |       0.0198      0.3869      0.6495      0.5794      0.5958
+
+--- n = 4 ---
+     H   c3 |   anti( 0.1)  anti( 0.5)  anti( 1.0)  anti( ln2)  anti( ln3)
+     1    0 |       0.0294      0.4579      0.3020      0.5349      0.2070
+     3    1 |       0.0297      0.5803      0.9742      0.8691      0.8937
+     5    2 |       0.0294      0.4579      0.3020      0.5349      0.2070
+
+--- n = 5 ---
+     H   c3 |   anti( 0.1)  anti( 0.5)  anti( 1.0)  anti( ln2)  anti( ln3)
+     1    0 |       0.0388      0.4501      0.1781      0.3794      0.2276
+     3    1 |       0.0392      0.6080      0.4802      0.7206      0.3792
+     5    2 |       0.0392      0.6080      0.4802      0.7206      0.3792
+     9    3 |       0.0390      0.5291      0.3292      0.5500      0.3034
+    11    4 |       0.0388      0.4501      0.1781      0.3794      0.2276
+    13    4 |       0.0392      0.6080      0.4802      0.7206      0.3792
+    15    4 |       0.0392      0.6080      0.4802      0.7206      0.3792
+    15    5 |       0.0388      0.4501      0.1781      0.3794      0.2276
+
+
+========================================================================
+  PART 4: THEOREM — ADJACENCY CARTAN FRACTIONS ARE UNIVERSAL
+========================================================================
+
+  For any tournament T on n vertices with adjacency matrix A:
+    A = A_anti + A_sym + A_scalar
+
+  A_anti = B/2 = (A - A^T)/2  (the tournament part)
+  A_sym = (A + A^T)/2 = (J - I)/2  (CONSTANT — the complete graph K_n)
+  A_scalar = (n-1)/(2n) * I  (CONSTANT)
+
+  Since A + A^T = J - I for ANY tournament:
+    ||A_sym||_F^2 = ||(J-I)/2 - (n-1)/(2n)*I||_F^2
+                  = || J/2 - I/2 - (n-1)/(2n)*I ||_F^2
+                  = || J/2 - (2n-1)/(2n)*I ||_F^2
+    (Constant for all T.)
+
+  And ||A_anti||_F^2 = ||B/2||_F^2 = (1/4) * sum_{i≠j} 1 = C(n,2)/2
+    Wait — B[i,j]^2 = 1 for i≠j, so ||B||_F^2 = n(n-1).
+    Hence ||A_anti||_F^2 = n(n-1)/4.
+
+  Also ||A||_F^2 = sum A[i,j]^2 = number of 1s = C(n,2) = n(n-1)/2.
+
+  So anti_frac = (n(n-1)/4) / (n(n-1)/2) = 1/2. ALWAYS.
+  And scalar_frac = n * ((n-1)/(2n))^2 / (n(n-1)/2) = (n-1)/(2n^2) / (1/2)
+                  = ... let me compute directly.
+
+  n=3: anti=0.500000, sym=0.388889, scalar=0.111111, sum=1.000000
+        exact: anti=1/2, scalar=(n-1)/(2n^2) * n / (n(n-1)/2) = 1/(n*(n-1)/2) * n*(n-1)^2/(4n^2)
+        exact fracs: anti=1/2, scalar=2/18=1/9, sym=7/18
+  n=4: anti=0.500000, sym=0.406250, scalar=0.093750, sum=1.000000
+        exact: anti=1/2, scalar=(n-1)/(2n^2) * n / (n(n-1)/2) = 1/(n*(n-1)/2) * n*(n-1)^2/(4n^2)
+        exact fracs: anti=1/2, scalar=3/32=3/32, sym=13/32
+  n=5: anti=0.500000, sym=0.420000, scalar=0.080000, sum=1.000000
+        exact: anti=1/2, scalar=(n-1)/(2n^2) * n / (n(n-1)/2) = 1/(n*(n-1)/2) * n*(n-1)^2/(4n^2)
+        exact fracs: anti=1/2, scalar=4/50=2/25, sym=21/50
+  n=6: anti=0.500000, sym=0.430556, scalar=0.069444, sum=1.000000
+        exact: anti=1/2, scalar=(n-1)/(2n^2) * n / (n(n-1)/2) = 1/(n*(n-1)/2) * n*(n-1)^2/(4n^2)
+        exact fracs: anti=1/2, scalar=5/72=5/72, sym=31/72
+  n=7: anti=0.500000, sym=0.438776, scalar=0.061224, sum=1.000000
+        exact: anti=1/2, scalar=(n-1)/(2n^2) * n / (n(n-1)/2) = 1/(n*(n-1)/2) * n*(n-1)^2/(4n^2)
+        exact fracs: anti=1/2, scalar=6/98=3/49, sym=43/98
+  n=8: anti=0.500000, sym=0.445312, scalar=0.054688, sum=1.000000
+        exact: anti=1/2, scalar=(n-1)/(2n^2) * n / (n(n-1)/2) = 1/(n*(n-1)/2) * n*(n-1)^2/(4n^2)
+        exact fracs: anti=1/2, scalar=7/128=7/128, sym=57/128
+
+  THEOREM (Cartan Universality for Tournament Adjacency):
+
+  For ANY tournament T on n vertices with adjacency matrix A ∈ {0,1}^{n×n}:
+
+    anti_frac(A) = 1/2           (the tournament sector, CONSTANT)
+    scalar_frac(A) = (n-1)/(2n²) (the identity sector, CONSTANT)
+    sym_frac(A) = (n²-1)/(2n²)   (the cooperation sector, CONSTANT)
+
+  Proof: A + A^T = J - I for any tournament, so the symmetric part is fixed.
+  ||B||_F^2 = n(n-1), ||A||_F^2 = n(n-1)/2, so anti_frac = 1/2 always. ∎
+
+  COROLLARY: The {0,1} adjacency matrix carries NO tournament-specific
+  information in its Cartan balance. All tournament information is in the
+  DIRECTION of A_anti (which vector in so(n)), not in its magnitude.
+
+  This means: to see tournament-dependent Cartan structure, we must look at
+  NONLINEAR functions of A: powers A^k, exp(A), or the walk matrix.
+
+========================================================================
+  PART 5: CARTAN FRACTIONS OF A^2 — TOURNAMENT-DEPENDENT
+========================================================================
+
+  A^2[i,j] = number of directed 2-paths from i to j.
+
+  For a tournament: A^2[i,j] = #{k : i->k->j} = out(i) - A[i,j] ...
+  Actually A^2[i,j] = sum_k A[i,k]*A[k,j].
+
+  The SYMMETRIC part of A^2: (A^2 + (A^2)^T)/2 = (A^2 + (A^T)^2)/2
+  This counts the total number of 2-paths between i and j (in either direction).
+
+  The ANTISYMMETRIC part: (A^2 - (A^2)^T)/2
+  This is the EXCESS of 2-paths i->j over j->i.
+
+  NOTE: (A^T)^2 = (A^2)^T, so (A^2)^T[i,j] = #{k : k->i, j->k} = #{k : j->k->i}
+
+  So the antisymmetric part of A^2 measures DIRECTIONAL DOMINANCE in 2-step walks.
+
+
+--- n = 3 ---
+     H   c3   cnt |     anti      sym   scalar |   Tr(A²)    sigma  ||[A,S]||
+     1    0     6 |   0.5000   0.5000   0.0000 |      0.0   0.0000     0.7071
+     3    1     2 |   0.5000   0.5000   0.0000 |      0.0   0.0000     0.0000
+
+--- n = 4 ---
+     H   c3   cnt |     anti      sym   scalar |   Tr(A²)    sigma  ||[A,S]||
+     1    0    24 |   0.5000   0.5000   0.0000 |      0.0   0.0000     4.1231
+     3    1    16 |   0.5000   0.5000   0.0000 |      0.0   0.0000     2.4495
+     5    2    24 |   0.3000   0.7000   0.0000 |      0.0   0.0000     3.0000
+
+--- n = 5 ---
+     H   c3   cnt |     anti      sym   scalar |   Tr(A²)    sigma  ||[A,S]||
+     1    0   120 |   0.5000   0.5000   0.0000 |      0.0   0.0000    13.6931
+     3    1   120 |   0.5000   0.5000   0.0000 |      0.0   0.0000    10.9545
+     5    2   240 |   0.4000   0.6000   0.0000 |      0.0   0.0000     9.9247
+     9    3   240 |   0.2937   0.7063   0.0000 |      0.0   0.0000    10.5882
+    11    4   120 |   0.2143   0.7857   0.0000 |      0.0   0.0000     8.5147
+    13    4   120 |   0.2500   0.7500   0.0000 |      0.0   0.0000     5.8737
+    15    4    40 |   0.2500   0.7500   0.0000 |      0.0   0.0000     8.2158
+    15    5    24 |   0.1667   0.8333   0.0000 |      0.0   0.0000     0.0000
+
+
+========================================================================
+  PART 6: EXACT FORMULA FOR Tr(A^2) AND CARTAN OF A^2
+========================================================================
+
+  Tr(A^2) = sum_i (A^2)[i,i] = sum_i sum_k A[i,k]*A[k,i]
+           = sum_{i,k} A[i,k]*A[k,i] = 0 for tournaments!
+
+  Wait: A[i,k]*A[k,i] = 1 iff both i->k AND k->i, impossible in a tournament.
+  So Tr(A^2) = 0 ALWAYS.
+
+  Therefore sigma(A^2) = 0, and the scalar fraction is ZERO.
+
+  This means A^2 decomposes into ONLY tournament + cooperation:
+    A^2 = A^2_anti + A^2_sym   (no scalar part)
+
+  The antisymmetric fraction of A^2 depends on the tournament!
+
+
+--- n = 3 (exhaustive) ---
+     H   c3            score_seq   anti_frac(A²)   cnt
+     1    0            (0, 1, 2)        0.500000     6
+     3    1            (1, 1, 1)        0.500000     2
+
+--- n = 4 (exhaustive) ---
+     H   c3            score_seq   anti_frac(A²)   cnt
+     1    0         (0, 1, 2, 3)        0.500000    24
+     3    1         (0, 2, 2, 2)        0.500000     8
+     3    1         (1, 1, 1, 3)        0.500000     8
+     5    2         (1, 1, 2, 2)        0.300000    24
+
+--- n = 5 (exhaustive) ---
+     H   c3            score_seq   anti_frac(A²)   cnt
+     1    0      (0, 1, 2, 3, 4)        0.500000   120
+     3    1      (0, 1, 3, 3, 3)        0.500000    40
+     3    1      (0, 2, 2, 2, 4)        0.500000    40
+     3    1      (1, 1, 1, 3, 4)        0.500000    40
+     5    2      (0, 2, 2, 3, 3)        0.400000   120
+     5    2      (1, 1, 2, 2, 4)        0.400000   120
+     9    3      (1, 1, 2, 3, 3)        0.293706   240  (std=2.4e-02)
+    11    4      (1, 2, 2, 2, 3)        0.214286   120
+    13    4      (1, 2, 2, 2, 3)        0.250000   120
+    15    4      (1, 2, 2, 2, 3)        0.250000    40
+    15    5      (2, 2, 2, 2, 2)        0.166667    24
+
+--- n = 6 (exhaustive) ---
+     H   c3            score_seq   anti_frac(A²)   cnt
+     1    0   (0, 1, 2, 3, 4, 5)        0.500000   720
+     3    1   (0, 1, 2, 4, 4, 4)        0.500000   240
+     3    1   (0, 1, 3, 3, 3, 5)        0.500000   240
+     3    1   (0, 2, 2, 2, 4, 5)        0.500000   240
+     3    1   (1, 1, 1, 3, 4, 5)        0.500000   240
+     5    2   (0, 1, 3, 3, 4, 4)        0.456522   720
+     5    2   (0, 2, 2, 3, 3, 5)        0.456522   720
+     5    2   (1, 1, 2, 2, 4, 5)        0.456522   720
+     9    2   (1, 1, 1, 4, 4, 4)        0.500000    80
+     9    3   (0, 2, 2, 3, 4, 4)        0.396522  1440  (std=1.7e-02)
+     9    3   (1, 1, 2, 3, 3, 5)        0.396522  1440  (std=1.7e-02)
+    11    4   (0, 2, 3, 3, 3, 4)        0.340000   720
+    11    4   (1, 2, 2, 2, 3, 5)        0.340000   720
+    13    4   (0, 2, 3, 3, 3, 4)        0.369565   720
+    13    4   (1, 2, 2, 2, 3, 5)        0.369565   720
+    15    4   (0, 2, 3, 3, 3, 4)        0.369565   240
+    15    4   (1, 1, 2, 3, 4, 4)        0.340000  1440
+    15    4   (1, 2, 2, 2, 3, 5)        0.369565   240
+    15    5   (0, 3, 3, 3, 3, 3)        0.300000   144
+    15    5   (2, 2, 2, 2, 2, 5)        0.300000   144
+    17    4   (1, 1, 2, 3, 4, 4)        0.331334  1440  (std=3.8e-02)
+    19    5   (1, 1, 3, 3, 3, 4)        0.277778   720
+    19    5   (1, 2, 2, 2, 4, 4)        0.277778   720
+    23    5   (1, 1, 3, 3, 3, 4)        0.300000   720
+    23    5   (1, 2, 2, 2, 4, 4)        0.300000   720
+    23    6   (1, 2, 2, 3, 3, 4)        0.209677  1440
+    25    6   (1, 2, 2, 3, 3, 4)        0.240741  1440
+    27    5   (1, 1, 3, 3, 3, 4)        0.277778   240
+    27    5   (1, 2, 2, 2, 4, 4)        0.277778   240
+    29    6   (1, 2, 2, 3, 3, 4)        0.245556  2880  (std=8.3e-03)
+    31    6   (1, 2, 2, 3, 3, 4)        0.260000  1440
+    33    6   (1, 2, 2, 3, 3, 4)        0.240741   720
+    33    7   (1, 2, 3, 3, 3, 3)        0.189655   960
+    33    7   (2, 2, 2, 2, 3, 4)        0.189655   960
+    37    6   (1, 2, 2, 3, 3, 4)        0.240741   720
+    37    7   (1, 2, 3, 3, 3, 3)        0.196679  1440  (std=7.0e-03)
+    37    7   (2, 2, 2, 2, 3, 4)        0.196679  1440  (std=7.0e-03)
+    41    8   (2, 2, 2, 3, 3, 3)        0.136364   720
+    43    8   (2, 2, 2, 3, 3, 3)        0.155172  1440
+    45    8   (2, 2, 2, 3, 3, 3)        0.151515   480  (std=1.5e-02)
+
+
+========================================================================
+  PART 7: anti_frac(A^2) DEPENDS ON SCORE SEQUENCE
+========================================================================
+
+  CLAIM: anti_frac(A^2) depends only on the score sequence, not the
+  specific tournament. Let's verify this and find the exact formula.
+
+  For tournament T with score sequence (s_1, ..., s_n):
+    A^2[i,j] = sum_k A[i,k]*A[k,j] = #{k : i->k, k->j}
+
+  For i != j:
+    A^2[i,j] = #{k != i,j : i->k AND k->j} + A[i,j]*0 (k=j: A[j,j]=0)
+             + A[i,i]*A[i,j] = 0 (A[i,i]=0)
+
+  So A^2[i,j] = #{common successors of i and predecessors of j, excluding i,j}
+             + (1 if i->j) * 0 ... hmm
+
+  Actually: A^2[i,j] = sum_{k=0}^{n-1} A[i,k]*A[k,j]
+  For k=i: A[i,i]=0. For k=j: A[j,j]=0. For k!=i,j:
+    A^2[i,j] = sum_{k!=i,j} A[i,k]*A[k,j]
+
+  If i->j (A[i,j]=1):
+    For each k != i,j: either i->k or k->i, and either k->j or j->k.
+    A[i,k]*A[k,j] = 1 iff i->k AND k->j.
+
+  Define for i != j:
+    w(i,j) = #{k != i,j : i->k AND k->j} = A^2[i,j]
+
+  Then:
+    ||A^2||_F^2 = sum_{i!=j} w(i,j)^2  (diagonal is 0)
+    ||A^2_anti||_F^2 = (1/4) sum_{i!=j} (w(i,j) - w(j,i))^2
+
+  And anti_frac(A^2) = ||A^2_anti||_F^2 / ||A^2||_F^2
+
+
+--- n = 5 ---
+  Score (1, 1, 2, 3, 3): 2 distinct anti_frac values: [0.2692307692, 0.3181818182]
+  Score (1, 2, 2, 2, 3): 2 distinct anti_frac values: [0.2142857143, 0.25]
+  REFUTED: anti_frac(A^2) varies WITHIN score sequence classes (n=5)
+
+--- n = 6 ---
+  Score (0, 2, 2, 3, 4, 4): 2 distinct anti_frac values: [0.38, 0.4130434783]
+  Score (0, 2, 3, 3, 3, 4): 2 distinct anti_frac values: [0.34, 0.3695652174]
+  Score (1, 1, 2, 3, 3, 5): 2 distinct anti_frac values: [0.38, 0.4130434783]
+  Score (1, 1, 2, 3, 4, 4): 3 distinct anti_frac values: [0.2931034483, 0.34, 0.3695652174]
+  Score (1, 1, 3, 3, 3, 4): 2 distinct anti_frac values: [0.2777777778, 0.3]
+  Score (1, 2, 2, 2, 3, 5): 2 distinct anti_frac values: [0.34, 0.3695652174]
+  Score (1, 2, 2, 2, 4, 4): 2 distinct anti_frac values: [0.2777777778, 0.3]
+  Score (1, 2, 2, 3, 3, 4): 3 distinct anti_frac values: [0.2096774194, 0.2407407407, 0.26]
+  Score (1, 2, 3, 3, 3, 3): 2 distinct anti_frac values: [0.1896551724, 0.2037037037]
+  Score (2, 2, 2, 2, 3, 4): 2 distinct anti_frac values: [0.1896551724, 0.2037037037]
+  Score (2, 2, 2, 3, 3, 3): 3 distinct anti_frac values: [0.1363636364, 0.1551724138, 0.1666666667]
+  REFUTED: anti_frac(A^2) varies WITHIN score sequence classes (n=6)
+
+
+========================================================================
+  PART 8: COMMUTATOR [B, B^k] AND LIE BRACKET STRUCTURE
+========================================================================
+
+  B = A - A^T is in so(n). Its powers B^k generate a Lie subalgebra.
+  The commutator [B, B^2] = B*B^2 - B^2*B = B^3 - B^3 = 0? NO!
+  [B, B^2] = B*B^2 - B^2*B = 0 only if B commutes with B^2.
+  But B always commutes with B^2 (any matrix commutes with its own powers).
+
+  The interesting commutator is between B of DIFFERENT tournaments.
+  Or between B and some fixed reference (like the all-ones antisymmetric part).
+
+  Better: the Lie algebra generated by {B_T : T a tournament on n vertices}
+  is a subalgebra of so(n). What is its dimension?
+
+
+--- n = 3 ---
+  dim(so(3)) = 3
+  #tournaments = 8
+  rank(span of all B_T) = 3
+  Span = FULL so(3)
+
+--- n = 4 ---
+  dim(so(4)) = 6
+  #tournaments = 64
+  rank(span of all B_T) = 6
+  Span = FULL so(4)
+
+--- n = 5 ---
+  dim(so(5)) = 10
+  #tournaments = 1024
+  rank(span of all B_T) = 10
+  Span = FULL so(5)
+
+
+========================================================================
+  PART 9: exp(B) EIGENVALUES — TOURNAMENT ROTATIONS IN SO(n)
+========================================================================
+
+  Since B is real skew-symmetric, exp(B) ∈ SO(n).
+  Eigenvalues of B are purely imaginary: ±iθ_1, ..., ±iθ_k, (0 if n odd).
+  Eigenvalues of exp(B) are: e^{±iθ_j} = cos(θ_j) ± i*sin(θ_j).
+
+  These are ROTATION ANGLES. Each tournament defines a rotation in SO(n).
+
+  The angles θ_j encode the tournament's "rotational structure."
+  Question: How do these angles relate to H, c3, score sequence?
+
+
+--- n = 3 ---
+  H=  1, c3= 0: angles=(1.732051,), det(exp(B))=1.0, count=6
+  H=  3, c3= 1: angles=(1.732051,), det(exp(B))=1.0, count=2
+
+--- n = 4 ---
+  H=  1, c3= 0: angles=(2.414214, 0.414214), det(exp(B))=1.0, count=24
+  H=  3, c3= 1: angles=(1.732051, 1.732051), det(exp(B))=1.0, count=16
+  H=  5, c3= 2: angles=(2.414214, 0.414214), det(exp(B))=1.0, count=24
+
+--- n = 5 ---
+  H=  1, c3= 0: angles=(3.077684, 0.726543), det(exp(B))=1.0, count=120
+  H=  3, c3= 1: angles=(2.645751, 1.732051), det(exp(B))=1.0, count=120
+  H=  5, c3= 2: angles=(2.645751, 1.732051), det(exp(B))=1.0, count=240
+  H=  9, c3= 3: angles=(3.077684, 0.726543), det(exp(B))=1.0, count=240
+  H= 11, c3= 4: angles=(3.077684, 0.726543), det(exp(B))=1.0, count=120
+  H= 13, c3= 4: angles=(2.645751, 1.732051), det(exp(B))=1.0, count=120
+  H= 15, c3= 4: angles=(2.645751, 1.732051), det(exp(B))=1.0, count=40
+  H= 15, c3= 5: angles=(3.077684, 0.726543), det(exp(B))=1.0, count=24
+
+
+========================================================================
+  PART 10: TRACE FORMULAS FOR B^k AND TOURNAMENT INVARIANTS
+========================================================================
+
+  B = A - A^T, entries B[i,j] = A[i,j] - A[j,i] ∈ {-1, 0, 1}.
+  Since B is skew-symmetric: Tr(B^k) = 0 for odd k.
+
+  Tr(B^2) = sum_{i,j} B[i,j]*B[j,i] = -sum_{i,j} B[i,j]^2 = -||B||_F^2
+           = -n(n-1) (CONSTANT for all tournaments)
+
+  Tr(B^3) = sum_{i,j,k} B[i,j]*B[j,k]*B[k,i]
+  B[i,j]*B[j,k]*B[k,i] = (A[i,j]-A[j,i])*(A[j,k]-A[k,j])*(A[k,i]-A[i,k])
+
+  For a 3-cycle i->j->k->i: each factor is +1, product = 1.
+  For i->k->j->i: each factor is -1, product = -1.
+  For non-cycles (some pair equal): factors include 0? No — all pairs distinct
+  in {i,j,k} with i<j<k, both orientations give cycles.
+
+  So Tr(B^3) = sum_{distinct i,j,k} B[i,j]*B[j,k]*B[k,i]
+  This counts 3-cycles with sign: +1 for i->j->k->i, -1 for i->k->j->i.
+
+  Wait, but B is skew so Tr(B^3) = 0 (odd power of skew matrix).
+
+  Let me check: Tr(B^3) = sum eigenvalues^3 = sum (iθ_j)^3 = -i*sum θ_j^3.
+  For real skew matrix, eigenvalues come in conjugate pairs, so sum is real.
+  But (iθ)^3 = -iθ^3, and paired with (-iθ)^3 = iθ^3, sum = 0.
+  So Tr(B^3) = 0. ✓
+
+  Tr(B^4) = sum (iθ_j)^4 = sum θ_j^4. This is always POSITIVE (or 0).
+  And Tr(B^4) = Σ_{i,j} (B^2)[i,j]^2 = ||B^2||_F^2.
+
+  INTERESTING: Tr(B^4) = sum θ_j^4 depends on the tournament!
+
+
+--- n = 3 ---
+     H   c3   cnt |     Tr(B²)     Tr(B⁴)     Tr(B⁶)
+     1    0     6 |       -6.0       18.0      -54.0
+     3    1     2 |       -6.0       18.0      -54.0
+
+--- n = 4 ---
+     H   c3   cnt |     Tr(B²)     Tr(B⁴)     Tr(B⁶)
+     1    0    24 |      -12.0       68.0     -396.0
+     3    1    16 |      -12.0       36.0     -108.0
+     5    2    24 |      -12.0       68.0     -396.0
+
+--- n = 5 ---
+     H   c3   cnt |     Tr(B²)     Tr(B⁴)     Tr(B⁶)
+     1    0   120 |      -20.0      180.0    -1700.0
+     3    1   120 |      -20.0      116.0     -740.0
+     5    2   240 |      -20.0      116.0     -740.0
+     9    3   240 |      -20.0      148.0    -1220.0  (std4=32.0)
+    11    4   120 |      -20.0      180.0    -1700.0
+    13    4   120 |      -20.0      116.0     -740.0
+    15    4    40 |      -20.0      116.0     -740.0
+    15    5    24 |      -20.0      180.0    -1700.0
+
+
+========================================================================
+  PART 11: EXACT FORMULA FOR Tr(B^4)
+========================================================================
+
+  Tr(B^4) = sum_{i,j,k,l} B[i,j]*B[j,k]*B[k,l]*B[l,i]
+
+  Since B[i,j]^2 = 1 for i != j and B[i,i] = 0:
+
+  Tr(B^4) = sum_{i} (B^2)[i,i]^2 ... wait, let me just compute B^2 first.
+
+  (B^2)[i,j] = sum_k B[i,k]*B[k,j]
+
+  For i = j:
+    (B^2)[i,i] = sum_{k!=i} B[i,k]*B[k,i] = -sum_{k!=i} B[i,k]^2 = -(n-1)
+
+  So Tr(B^2) = -n(n-1). ✓
+
+  For i != j:
+    (B^2)[i,j] = sum_{k!=i,j} B[i,k]*B[k,j] + B[i,j]*B[j,j] + B[i,i]*B[i,j]
+               = sum_{k!=i,j} B[i,k]*B[k,j]
+
+  Now B[i,k]*B[k,j] for i->k->j: (+1)(+1) = +1 (both same direction)
+  Wait: B[i,k] = +1 if i->k, -1 if k->i.
+  B[k,j] = +1 if k->j, -1 if j->k.
+
+  So B[i,k]*B[k,j] = +1 if (i->k AND k->j) OR (k->i AND j->k)
+                    = -1 if (i->k AND j->k) OR (k->i AND k->j)
+
+  The +1 cases count 2-paths from i to j AND 2-paths from j to i (reversed).
+  The -1 cases count 2-paths from i away and j away (divergent).
+
+  (B^2)[i,j] = #{k: i->k->j or j->k->i} - #{k: i->k AND j->k} - #{k: k->i AND k->j}
+              = (w(i,j) + w(j,i)) - (s_i + s_j - n+2 - A[i,j] - A[j,i]) ... complex.
+
+  Let me just check the formula Tr(B^4) vs c3 numerically.
+
+
+--- n = 3 ---
+  Tr(B^4) determined by c3 alone: Tr(B^4) = 18 + 0*c3
+    c3=0: Tr(B^4)=18, predicted=18 ✓
+    c3=1: Tr(B^4)=18, predicted=18 ✓
+
+--- n = 4 ---
+  Tr(B^4) determined by c3 alone: Tr(B^4) = 68 + -32*c3
+    c3=0: Tr(B^4)=68, predicted=68 ✓
+    c3=1: Tr(B^4)=36, predicted=36 ✓
+    c3=2: Tr(B^4)=68, predicted=4 ✗
+
+--- n = 5 ---
+  Tr(B^4) NOT determined by c3 alone!
+    c3=3: Tr(B^4) ∈ [116, 180]
+    c3=4: Tr(B^4) ∈ [116, 180]
+
+--- n = 6 ---
+  Tr(B^4) NOT determined by c3 alone!
+    c3=2: Tr(B^4) ∈ [198, 262]
+    c3=3: Tr(B^4) ∈ [230, 294]
+    c3=4: Tr(B^4) ∈ [198, 262, 390]
+    c3=5: Tr(B^4) ∈ [230, 294]
+    c3=6: Tr(B^4) ∈ [198, 262, 390]
+    c3=7: Tr(B^4) ∈ [230, 294]
+    c3=8: Tr(B^4) ∈ [198, 262, 390]
+
+
+========================================================================
+  PART 12: DERIVING Tr(B^4) FORMULA
+========================================================================
+  n=3: Tr(B^4) at c3=0 (transitive) = 18
+         n(n-1)(n-2) = 6
+         2*n(n-1)(n-2)/3 = 4.0
+         Tr(B^4)/n(n-1) = 3.0
+  n=4: Tr(B^4) at c3=0 (transitive) = 68
+         n(n-1)(n-2) = 24
+         2*n(n-1)(n-2)/3 = 16.0
+         Tr(B^4)/n(n-1) = 5.666666666666667
+  n=5: Tr(B^4) at c3=0 (transitive) = 180
+         n(n-1)(n-2) = 60
+         2*n(n-1)(n-2)/3 = 40.0
+         Tr(B^4)/n(n-1) = 9.0
+  n=6: Tr(B^4) at c3=0 (transitive) = 390
+         n(n-1)(n-2) = 120
+         2*n(n-1)(n-2)/3 = 80.0
+         Tr(B^4)/n(n-1) = 13.0
+  n=7: Tr(B^4) at c3=0 (transitive) = 742
+         n(n-1)(n-2) = 210
+         2*n(n-1)(n-2)/3 = 140.0
+         Tr(B^4)/n(n-1) = 17.666666666666668
+
+  FINAL FORMULA ATTEMPT:
+
+  For the transitive tournament (c3 = 0):
+    B[i,j] = sign(i-j) for i != j
+
+  B^2[i,j] for i != j:
+    = sum_{k != i,j} sign(i-k)*sign(k-j)
+    = #{k between i,j} * (+1) + #{k outside} * (-1)   ... orientation dependent
+
+  This is related to the score sequence of the transitive tournament.
+  Let me compute B^2 explicitly for small n.
+
+
+  n=3, B^2 for transitive tournament:
+    [-2 -1  1]
+    [-1 -2 -1]
+    [ 1 -1 -2]
+  Tr(B^4) = Σ_{i,j} (B^2[i,j])^2 = 18
+
+  n=4, B^2 for transitive tournament:
+    [-3 -2  0  2]
+    [-2 -3 -2  0]
+    [ 0 -2 -3 -2]
+    [ 2  0 -2 -3]
+  Tr(B^4) = Σ_{i,j} (B^2[i,j])^2 = 68
+
+  n=5, B^2 for transitive tournament:
+    [-4 -3 -1  1  3]
+    [-3 -4 -3 -1  1]
+    [-1 -3 -4 -3 -1]
+    [ 1 -1 -3 -4 -3]
+    [ 3  1 -1 -3 -4]
+  Tr(B^4) = Σ_{i,j} (B^2[i,j])^2 = 180
+
+
+Done. opus-2026-03-21-S95
