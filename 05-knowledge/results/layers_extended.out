@@ -1,0 +1,192 @@
+======================================================================
+EXTENDED LAYER ANALYSIS — P(n) for n up to 10
+======================================================================
+  n=1: T=1, P=1, D=0
+  n=2: T=1, P=2, D=0
+  n=3: T=2, P=4, D=2
+  n=4: T=4, P=12, D=4
+  n=5: T=12, P=48, D=12
+  n=6: T=56, P=296, D=40
+  n=7: T=456, P=3040, D=152
+  n=8: T=6880, P=54256, D=784
+  n=9: T=191536, P=1716608, D=7216
+  n=10: T=9733056, P=97213472, D=117088
+
+  ================================================================================
+  COMPLETE P(n) TABLE
+  ================================================================================
+
+    n       T(n)         P(n)       D(n)        D/2    C(2k,k)     Excess
+    1          1            1          0          0          0          0 ok
+    2          1            2          0          0          0          0 ok
+    3          2            4          2          1          1          0 ok
+    4          4           12          4          2          2          0 ok
+    5         12           48         12          6          6          0 ok
+    6         56          296         40         20         20          0 ok
+    7        456         3040        152         76         70          6 ok
+    8       6880        54256        784        392        252        140 ok
+    9     191536      1716608       7216       3608        924       2684 ok
+   10    9733056     97213472     117088      58544       3432      55112 ok
+
+  ================================================================================
+  LAYER CONTRIBUTIONS
+  ================================================================================
+
+  Layer (3,) (activates at n=3):
+    n=3:         2.0000
+    n=4:         4.0000
+    n=5:         8.0000
+    n=6:        21.3333
+    n=7:        85.3333
+    n=8:       546.1333
+    n=9:      5825.4222
+    n=10:    106522.0063
+
+  Layer (5,) (activates at n=5):
+    n=5:         4.0000
+    n=6:         8.0000
+    n=7:        16.0000
+    n=8:        42.6667
+    n=9:       170.6667
+    n=10:      1092.2667
+
+  Layer (3, 3) (activates at n=6):
+    n=6:        10.6667
+    n=7:        42.6667
+    n=8:       170.6667
+    n=9:       910.2222
+    n=10:      7281.7778
+
+  Layer (7,) (activates at n=7):
+    n=7:         8.0000
+    n=8:        16.0000
+    n=9:        32.0000
+    n=10:        85.3333
+
+  Layer (5, 3) (activates at n=8):
+    n=8:         8.5333
+    n=9:        34.1333
+    n=10:       136.5333
+
+  Layer (9,) (activates at n=9):
+    n=9:        16.0000
+    n=10:        32.0000
+
+  Layer (3, 3, 3) (activates at n=9):
+    n=9:       227.5556
+    n=10:      1820.4444
+
+  Layer (5, 5) (activates at n=10):
+    n=10:       102.4000
+
+  Layer (7, 3) (activates at n=10):
+    n=10:        15.2381
+
+  ================================================================================
+  THE EXCESS SEQUENCE E(n) = D(n)/2 - C(2(n-3), n-3)
+  ================================================================================
+  E(3) = 0
+  E(4) = 0
+  E(5) = 0
+  E(6) = 0
+  E(7) = 6
+  E(8) = 140
+  E(9) = 2684
+  E(10) = 55112
+
+  Excess sequence: [0, 0, 0, 0, 6, 140, 2684, 55112]
+
+  Excess ratios:
+  E(8)/E(7) = 140/6 = 23.3333
+  E(9)/E(8) = 2684/140 = 19.1714
+  E(10)/E(9) = 55112/2684 = 20.5335
+
+  ================================================================================
+  CHEEGER CONSTANT OF TOURNAMENT SPACE
+  ================================================================================
+
+  The tournament arc-flip graph is the m-hypercube {0,1}^m, m = C(n,2).
+  Cheeger constant h(Q_m) = 1 (each hyperplane cut removes 2^{m-1} edges
+  from 2^m vertices, giving boundary/volume = 1).
+
+  The QUOTIENT by S_n symmetry changes the Cheeger constant.
+  The quotient graph has T(n) vertices (iso classes) with edges
+  between classes connected by arc flips.
+
+  KEY INSIGHT: P(n) = sum of vertex orbits relates to the Cheeger
+  constant via the WEIGHTED expansion:
+
+  h_weighted = min_S sum_{v in boundary(S)} (1/|Aut(v)|) / sum_{v in S} (1/|Aut(v)|)
+
+  The automorphism-weighted expansion measures how well the
+  "perspective space" is connected. P(n) is the total weight
+  of all vertices in this space.
+
+  For the ROOTED tournament graph (P(n) vertices):
+  each edge in the quotient graph lifts to O(n) edges in the rooted graph,
+  so the Cheeger constant of the rooted graph is approximately
+  h_rooted ~ h_quotient * n.
+
+  ================================================================================
+  SELF-SIMILARITY: Does P(n) / n! approach a limit?
+  ================================================================================
+
+  n=2: P/n! = 1.00000000, T/n! = 0.5000000000, log(P)/log(n!) = 1.000000
+  n=3: P/n! = 0.66666667, T/n! = 0.3333333333, log(P)/log(n!) = 0.773706
+  n=4: P/n! = 0.50000000, T/n! = 0.1666666667, log(P)/log(n!) = 0.781896
+  n=5: P/n! = 0.40000000, T/n! = 0.1000000000, log(P)/log(n!) = 0.808607
+  n=6: P/n! = 0.41111111, T/n! = 0.0777777778, log(P)/log(n!) = 0.864895
+  n=7: P/n! = 0.60317460, T/n! = 0.0904761905, log(P)/log(n!) = 0.940699
+  n=8: P/n! = 1.34563492, T/n! = 0.1706349206, log(P)/log(n!) = 1.027994
+  n=9: P/n! = 4.73051146, T/n! = 0.5278218695, log(P)/log(n!) = 1.121392
+  n=10: P/n! = 26.78942681, T/n! = 2.6821693122, log(P)/log(n!) = 1.217685
+
+  P(n) / (n * T(n)):
+  n=1: P/(nT) = 1.00000000 = 1 - D/(nT) = 1 - 0.00000000
+  n=2: P/(nT) = 1.00000000 = 1 - D/(nT) = 1 - 0.00000000
+  n=3: P/(nT) = 0.66666667 = 1 - D/(nT) = 1 - 0.33333333
+  n=4: P/(nT) = 0.75000000 = 1 - D/(nT) = 1 - 0.25000000
+  n=5: P/(nT) = 0.80000000 = 1 - D/(nT) = 1 - 0.20000000
+  n=6: P/(nT) = 0.88095238 = 1 - D/(nT) = 1 - 0.11904762
+  n=7: P/(nT) = 0.95238095 = 1 - D/(nT) = 1 - 0.04761905
+  n=8: P/(nT) = 0.98575581 = 1 - D/(nT) = 1 - 0.01424419
+  n=9: P/(nT) = 0.99581396 = 1 - D/(nT) = 1 - 0.00418604
+  n=10: P/(nT) = 0.99879701 = 1 - D/(nT) = 1 - 0.00120299
+
+  ================================================================================
+  THE BIG PICTURE: P(n) AS A MULTI-SCALE EXPANSION
+  ================================================================================
+
+  P(n) = n*T(n) * [1 - delta(n)]
+
+  where delta(n) = D(n) / (n*T(n)) is the "automorphism fraction."
+
+  delta(n) measures what fraction of (vertex, class) pairs are
+  redundant due to automorphisms. As n grows:
+
+  delta(n) -> 0  (most tournaments have trivial Aut)
+
+  But the RATE of approach has the layer structure:
+  delta(n) ~ D_3(n)/(n*T(n)) + D_5(n)/(n*T(n)) + ...
+
+  Each layer decays at a different rate, creating the multi-scale
+  structure we observe.
+
+  The dominant layer D_3 ~ 2^{C(n-2,2)} / (n-3)! grows as
+  2^{n^2/2} / n!, while n*T(n) grows as n * 2^{C(n,2)} / n!
+  (Burnside's lemma, dominated by identity permutation).
+
+  So delta(n) ~ 2^{C(n-2,2)} / (n * 2^{C(n,2)} / n!)
+  = n! * 2^{C(n-2,2) - C(n,2)} / n
+  = (n-1)! * 2^{-C(n,2) + C(n-2,2)}
+  = (n-1)! * 2^{-(2n-3)}
+
+  Since C(n,2) - C(n-2,2) = (n-1) + (n-2) = 2n-3.
+
+  So delta(n) ~ (n-1)! / 2^{2n-3} -> 0 super-exponentially.
+
+  This SUPER-EXPONENTIAL decay of the automorphism correction
+  is why the near-formula works so well: each layer decays
+  faster than the previous, and the total correction D(n) is
+  dominated by finitely many layers at any given n.
+
