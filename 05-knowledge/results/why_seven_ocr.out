@@ -1,0 +1,156 @@
+========================================================================
+  WHY DOES OCR STABILIZE AT n=7?
+  kind-pasteur-2026-03-21-S16c
+========================================================================
+
+========================================================================
+  PART 1: Var(S2) for random tournaments
+========================================================================
+
+  n=3 (exact):
+    E[S2] = 6.000000 (theory: 1.500000)
+    Var(S2) = 12
+    Theory n(n-1)(n-3)/8 = 0.000000
+    Match: False
+
+  n=4 (exact):
+    E[S2] = 12.000000 (theory: 3.000000)
+    Var(S2) = 48
+    Theory n(n-1)(n-3)/8 = 1.500000
+    Match: False
+
+  n=5 (exact):
+    E[S2] = 20.000000 (theory: 5.000000)
+    Var(S2) = 120
+    Theory n(n-1)(n-3)/8 = 5.000000
+    Match: False
+
+  n=6 (exact):
+    E[S2] = 30.000000 (theory: 7.500000)
+    Var(S2) = 240
+    Theory n(n-1)(n-3)/8 = 11.250000
+    Match: False
+
+  n=7 (sampled):
+    E[S2] = 10.489720 (theory: 10.500000)
+    Var(S2) = 26.0099
+    Theory n(n-1)(n-3)/8 = 21.000000
+
+  n=8 (sampled):
+    E[S2] = 14.017260 (theory: 14.000000)
+    Var(S2) = 42.2213
+    Theory n(n-1)(n-3)/8 = 35.000000
+
+========================================================================
+  PART 2: Exact moments as functions of n
+========================================================================
+
+  E[H] pattern:
+    n=3: E[H] = 3/2 = 1.500000
+    n=4: E[H] = 3 = 3.000000
+    n=5: E[H] = 15/2 = 7.500000
+    n=6: E[H] = 45/2 = 22.500000
+    n=7: E[H] = 315/4 = 78.750000
+    n=8: E[H] = 315 = 315.000000
+
+  Var(H) scaled pattern:
+    n=3: Var(H)/E[H]^2 = 1/3 = 0.33333333
+    n=4: Var(H)/E[H]^2 = 1/3 = 0.33333333
+    n=5: Var(H)/E[H]^2 = 19/60 = 0.31666667
+    n=6: Var(H)/E[H]^2 = 13/45 = 0.28888889
+    n=7: Var(H)/E[H]^2 = 131/504 = 0.25992063
+    n=8: Var(H)/E[H]^2 = 131/560 = 0.23392857
+
+  Coefficient of variation CV(H):
+    n=3: CV^2(H) = 1/3 = 0.33333333, CV = 0.577350
+    n=4: CV^2(H) = 1/3 = 0.33333333, CV = 0.577350
+    n=5: CV^2(H) = 19/60 = 0.31666667, CV = 0.562731
+    n=6: CV^2(H) = 13/45 = 0.28888889, CV = 0.537484
+    n=7: CV^2(H) = 131/504 = 0.25992063, CV = 0.509824
+    n=8: CV^2(H) = 131/560 = 0.23392857, CV = 0.483662
+
+========================================================================
+  PART 3: Cov(H, S2) pattern
+========================================================================
+
+  Cov(H, S2):
+    n=4: Cov = -3
+    n=5: Cov = -45/4
+    n=6: Cov = -45
+    n=7: Cov = -1575/8
+
+  Cov(H,S2) / E[H]:
+    n=4: -1 = -1.000000
+    n=5: -3/2 = -1.500000
+    n=6: -2 = -2.000000
+    n=7: -5/2 = -2.500000
+
+  -Cov / (E[H] * n(n-1)/4):
+    n=4: 1/3 = 0.333333
+    n=5: 3/10 = 0.300000
+    n=6: 4/15 = 0.266667
+    n=7: 5/21 = 0.238095
+
+========================================================================
+  PART 4: Decomposing R^2 = Cov^2 / (Var_S2 * Var_H)
+========================================================================
+
+  n=5: R^2 = 18/19
+    Cov^2 = 2025/16
+    Var_S2 * Var_H = 4275/32
+    Denominator - Numerator = 225/32
+    This is Var_S2 * Var_eps_conditional
+
+  n=6: R^2 = 12/13
+    Cov^2 = 2025
+    Var_S2 * Var_H = 8775/4
+    Denominator - Numerator = 675/4
+    This is Var_S2 * Var_eps_conditional
+
+  n=7: R^2 = 120/131
+    Cov^2 = 2480625/64
+    Var_S2 * Var_H = 21664125/512
+    Denominator - Numerator = 1819125/512
+    This is Var_S2 * Var_eps_conditional
+
+========================================================================
+  PART 5: What IS 131?
+========================================================================
+  E[H^2](n=8) = 1958985/16
+  Var(H)(n=8) = 371385/16 = 371385/16
+
+  371385 = 3 * 3 * 3 * 3 * 5 * 7 * 131
+
+  131 in various expressions:
+    2^7 + 3 = 131
+    2^7 + 2 + 1 = 131
+    C(7,3)*4 - 5 = 135
+    C(7,2)*6 + 5 = 131
+    *** C(7,2)*6 + 5 = 21*6 + 5 = 131 ***
+
+  Testing C(n,2)*6 + 5:
+    n=5: C(n,2)*6+5 = 65  (actual denom: 19, False)
+    n=6: C(n,2)*6+5 = 95  (actual denom: 13, False)
+    n=7: C(n,2)*6+5 = 131  (actual denom: 131, True)
+    n=8: C(n,2)*6+5 = 173  (actual denom: 131, False)
+
+  Other attempts:
+
+  KEY OBSERVATION:
+  131 = 6*C(7,2) + 5 = 6*21 + 5
+  But also: 19 ≠ 6*C(5,2) + 5 = 65
+  So this is NOT a universal formula.
+
+  The denominators 19, 13, 131 may not come from a simple formula of n.
+  They come from the ARITHMETIC of the permutation pair overlap structure,
+  which depends on n in a complex way.
+
+  The key structural question: why does the SAME prime (131)
+  appear in Var(H) at both n=7 and n=8?
+
+  HYPOTHESIS: At n >= 7, the permutation pair overlap distribution
+  f(n, a) has a STABLE shape, and the resulting Var(H) always
+  contains 131 as its largest prime factor.
+
+  This would mean OCR = 120/131 for ALL n >= 7.
+  The n=9, 10, 11 samplers will test this.
