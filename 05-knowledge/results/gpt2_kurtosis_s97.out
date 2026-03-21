@@ -1,0 +1,133 @@
+========================================================================
+  GPT-2 SPECTRAL KURTOSIS ANALYSIS
+  opus-2026-03-21-S97
+========================================================================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+The following generation flags are not valid and may be ignored: ['output_attentions']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 5144.55it/s]
+  Model: GPT-2 small, 5 sentences
+
+========================================================================
+  PART 1: SPECTRAL KURTOSIS BY LAYER AND HEAD
+========================================================================
+
+Layer   κ_mean    κ_std     anti   θ_spread    θ_max
+    0   4.3233   1.2348   0.2360   0.599737 0.611546
+    1   5.0939   1.1590   0.3400   0.861589 0.873229
+    2   3.8290   1.6691   0.3827   0.861001 0.881705
+    3   4.4023   1.7935   0.4112   1.042807 1.065463
+    4   4.9941   1.5426   0.4087   1.124456 1.149982
+    5   5.6826   1.0398   0.4343   1.306118 1.318049
+    6   5.7424   1.0409   0.4321   1.280114 1.291114
+    7   5.9415   0.9025   0.4418   1.382637 1.392531
+    8   5.9006   0.8514   0.4349   1.313570 1.320566
+    9   6.1640   0.7297   0.4453   1.444272 1.449236
+   10   6.1486   0.6669   0.4429   1.414002 1.417854
+   11   5.8236   1.0929   0.4018   1.215457 1.221925
+
+ Head   κ_mean    κ_std     anti
+    0   4.8922   1.3525   0.4092
+    1   5.7220   1.1737   0.3999
+    2   5.2032   1.7551   0.4193
+    3   5.0465   1.3025   0.3838
+    4   5.4945   1.3627   0.4028
+    5   5.4771   1.3239   0.3882
+    6   5.6290   1.2456   0.4212
+    7   4.9452   1.5390   0.3839
+    8   4.8928   1.5509   0.3901
+    9   5.6318   1.3072   0.4266
+   10   5.7955   0.9114   0.3910
+   11   5.3161   1.5296   0.3957
+
+========================================================================
+  PART 4: TRAINED vs RANDOM SPECTRAL KURTOSIS
+========================================================================
+
+  Random κ (n=12): 2.1690 ± 0.3071
+  GPT-2 κ:              5.3372 ± 1.4149
+  Shift: +3.1682
+  → GPT-2 has HIGHER kurtosis (more peaked spectrum)
+  → Attention is MORE FOCUSED than random (concentrates on fewer tokens)
+
+========================================================================
+  PART 5: KURTOSIS GRADIENT ACROSS LAYERS
+========================================================================
+  Early layers (0-3):  κ = 4.4121
+  Middle layers (4-7): κ = 5.5902
+  Late layers (8-11):  κ = 6.0092
+  → Kurtosis INCREASES through layers (early balanced → late focused)
+  → Later layers develop more focused attention
+
+========================================================================
+  PART 6: KURTOSIS × ANTI_FRAC INTERACTION
+========================================================================
+  corr(κ, anti_frac) = +0.4357
+  → Higher kurtosis ↔ more tournament energy
+  → Focused attention is MORE directional
+
+  Per-layer corr(κ, anti_frac):
+    Layer  0: +0.2748
+    Layer  1: +0.3106
+    Layer  2: +0.3741
+    Layer  3: +0.7265
+    Layer  4: +0.0707
+    Layer  5: +0.7292
+    Layer  6: +0.6631
+    Layer  7: +0.6170
+    Layer  8: +0.6426
+    Layer  9: +0.7525
+    Layer 10: +0.6161
+    Layer 11: +0.8985
+
+========================================================================
+  PART 7: RANKING QUALITY OF ATTENTION
+========================================================================
+
+  For each attention head, the thresholded tournament has a "ranking quality":
+    Quality = 1 - κ(T)/κ_max
+
+  Quality ≈ 1: Paley-like balanced attention (many alternative orderings)
+  Quality ≈ 0: Transitive focused attention (one dominant ordering)
+
+  Layer Quality_mean  Quality_std
+      0       0.4236       0.1646
+      1       0.3208       0.1545
+      2       0.4895       0.2225
+      3       0.4130       0.2391
+      4       0.3341       0.2057
+      5       0.2423       0.1386
+      6       0.2343       0.1388
+      7       0.2078       0.1203
+      8       0.2132       0.1135
+      9       0.1781       0.0973
+     10       0.1802       0.0889
+     11       0.2235       0.1457
+
+========================================================================
+  SYNTHESIS: SPECTRAL KURTOSIS IN THE CARTAN BRIDGE
+========================================================================
+
+  GPT-2 SPECTRAL KURTOSIS PROFILE:
+
+  1. OVERALL: GPT-2 κ = 5.3372 vs Random κ = 2.1690
+     → Higher than random
+
+  2. GRADIENT: Early κ = 4.4121 → Late κ = 6.0092
+     → Increasing through layers
+
+  3. Combined with S95c findings:
+     - anti_frac increases through layers (0.34 → 0.43)
+     - kurtosis increases through layers
+
+  INTERPRETATION:
+  The spectral kurtosis complements the Cartan fraction.
+  Together they give a 2D FINGERPRINT of each attention head:
+    (anti_frac, kurtosis) = (how tournament-like, how focused)
+
+  Four quadrants:
+    HIGH anti_frac + LOW kurtosis = "Balanced Reasoner" (Paley-like)
+    HIGH anti_frac + HIGH kurtosis = "Focused Decider" (decisive)
+    LOW anti_frac + LOW kurtosis = "Symmetric Cooperator" (undirected)
+    LOW anti_frac + HIGH kurtosis = "Degenerate" (neither directed nor balanced)
+
+Done. opus-2026-03-21-S97

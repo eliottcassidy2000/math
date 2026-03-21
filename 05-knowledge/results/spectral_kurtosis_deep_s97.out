@@ -1,0 +1,46 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+========================================================================
+  SPECTRAL KURTOSIS DEEP INVESTIGATION
+  opus-2026-03-21-S97
+========================================================================
+
+========================================================================
+  PART 1: TWO-PARAMETER H FORMULA — ALL TOURNAMENTS
+========================================================================
+
+--- n = 5 ---
+  1024 tournaments analyzed
+
+  Pearson correlations with H:
+    corr(H, -S₂)     = +0.9733  (Landau irregularity)
+    corr(H, -tr(B⁴)) = +0.0000  (spectral kurtosis)
+    corr(H, -κ_spec) = +0.0000  (normalized kurtosis)
+    corr(H, c₃)      = +0.9733  (3-cycle count)
+
+  Spearman rank correlations:
+    ρ(H, -S₂)     = +0.9903
+    ρ(H, -tr(B⁴)) = +0.0000
+    ρ(H, -κ_spec) = +0.0000
+
+  Two-parameter regression: H ~ a·S₂ + b·tr(B⁴) + c
+    a = -1.500000
+    b = 0.000000
+    c = 15.0000
+    R² = 0.947368
+
+  Three-parameter: H ~ a·S₂ + b·tr(B⁴) + c·tr(B⁶) + d
+    R² = 0.947368  (improvement: -0.000000)
+
+  S₂-only: H ~ a·S₂ + b
+    R² = 0.947368
+    Adding tr(B⁴) improves R² by 0.000000
+
+  c₃-only: R² = 0.947368
+
+  Conditional corr(H, -tr(B⁴) | score seq fixed):
+    Mean: 0.8839
+    Median: 0.8839
+    Range: [0.8839, 0.8839]
+
+--- n = 6 ---
