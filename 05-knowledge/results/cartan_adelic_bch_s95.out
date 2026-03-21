@@ -1,0 +1,314 @@
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+========================================================================
+  ADELIC PRODUCT FORMULA AND HEAT KERNEL BCH
+  opus-2026-03-21-S95
+========================================================================
+
+========================================================================
+  PART A: ADELIC CARTAN PRODUCT FORMULA
+========================================================================
+
+  For the tournament adjacency A, the Cartan fractions are:
+    anti_frac = 1/2 (CONSTANT)
+    sym_frac = (n²-1)/(2n²)
+    scalar_frac = (n-1)/(2n²)
+
+  These are UNIVERSAL — so the adelic product is trivially constant.
+  There's no variation between tournaments at the adjacency level.
+
+  For the A^2 matrix (2-step walks), the fractions vary.
+  Let's define the adelic product for A^2:
+
+  At the archimedean place:
+    r_∞ = anti_frac(A^2) = ||antisym(A²)||² / ||A²||²
+
+  At each prime p dividing the conductor D = odd_part(sum of A^2 entries):
+    Reduce A^2 mod p, compute Frobenius norms of parts.
+
+  Question: does r_∞ × Π r_p = constant?
+
+  Actually, the "adelic product formula" |x|_∞ · Π |x|_p = 1
+  applies to ELEMENTS of Q, not to matrices. The Cartan fraction
+  is not an element of Q — it's a ratio of norms.
+
+  Let's instead look at whether the DETERMINANT of A^2 satisfies
+  a product formula, or whether Tr(A^{2k}) mod p gives useful info.
+
+
+--- n = 3: determinants of A² ---
+     H   c3                        det(A²)
+     1    0                            [0]
+     3    1                            [1]
+
+--- n = 4: determinants of A² ---
+     H   c3                        det(A²)
+     1    0                            [0]
+     3    1                            [0]
+     5    2                            [1]
+
+--- n = 5: determinants of A² ---
+     H   c3                        det(A²)
+     1    0                            [0]
+     3    1                            [0]
+     5    2                            [0]
+     9    3                            [1]
+    11    4                            [1]
+    13    4                            [4]
+    15    4                            [9]
+    15    5                            [4]
+
+
+========================================================================
+  PART A2: CHARACTERISTIC POLYNOMIAL OF B² MOD PRIMES
+========================================================================
+
+  B² is symmetric with integer entries. Its characteristic polynomial
+  χ(B², λ) has integer coefficients.
+
+  Reducing mod p gives χ(B², λ) mod p ∈ F_p[λ].
+  The factorization pattern of χ mod p is an invariant.
+
+  For the transitive tournament T_n, B² has a specific pattern.
+  We can check if different tournaments give different χ mod p.
+
+
+--- n = 5: char poly of B² mod primes ---
+     H   c3 #distinct char polys
+     1    0                    1  (rep: (1, 20, 110, 100, 25, 0))
+     3    1                    1  (rep: (1, 20, 142, 420, 441, 0))
+     5    2                    1  (rep: (1, 20, 142, 420, 441, 0))
+     9    3                    2  (rep: (1, 20, 110, 100, 25, 0))
+    11    4                    1  (rep: (1, 20, 110, 100, 25, 0))
+    13    4                    1  (rep: (1, 20, 142, 420, 441, 0))
+    15    4                    1  (rep: (1, 20, 142, 420, 441, 0))
+    15    5                    1  (rep: (1, 20, 110, 100, 25, 0))
+
+
+========================================================================
+  PART B: EXACT BCH EXPANSION FOR TOURNAMENT ADJACENCY
+========================================================================
+
+  A = B/2 + (J-I)/2 where B is skew-symmetric and (J-I)/2 is symmetric.
+
+  For REGULAR tournaments (Paley), [B, J] = 0, so
+    exp(tA) = exp(t·B/2) · exp(t·(J-I)/2)
+  exactly.
+
+  For non-regular tournaments, we need BCH corrections:
+    exp(t(X+Y)) = exp(tX) · exp(tY) · exp(Z₂) · exp(Z₃) · ...
+  where Z₂ = -t²/2 · [X,Y], Z₃ involves [X,[X,Y]] and [Y,[X,Y]], etc.
+
+  We proved that [B/2, (J-I)/2] = (1/4)[B,J] has entries
+  [B,J][i,j] = 2(d_i + d_j) where d_i = s_i - (n-1)/2.
+
+  So Z₂ = -t²/2 · (1/4)[B,J] = -t²/8 · [B,J].
+
+  The question is: how quickly do the BCH corrections converge?
+  And do they have tournament-theoretic meaning?
+
+
+--- n = 3: BCH convergence ---
+     H   c3     S₂ |       BCH₀       BCH₁       BCH₂
+     1    0    2.0 |   6.22e-01   1.43e+00   1.18e+00
+     3    1    0.0 |   4.44e-16   4.44e-16   4.44e-16  ← regular
+
+--- n = 4: BCH convergence ---
+     H   c3     S₂ |       BCH₀       BCH₁       BCH₂
+     1    0    5.0 |   1.19e+00   5.20e+00   5.04e+00
+     3    1    3.0 |   1.28e+00   2.43e+00   2.06e+00
+     5    2    1.0 |   6.53e-01   1.21e+00   9.81e-01
+
+--- n = 5: BCH convergence ---
+     H   c3     S₂ |       BCH₀       BCH₁       BCH₂
+     1    0   10.0 |   1.96e+00   1.73e+01   2.01e+01
+     3    1    8.0 |   2.09e+00   1.16e+01   1.14e+01
+     5    2    6.0 |   2.19e+00   9.52e+00   8.67e+00
+     9    3    4.0 |   1.60e+00   5.72e+00   5.21e+00
+    11    4    2.0 |   1.07e+00   3.90e+00   2.73e+00
+    13    4    2.0 |   1.27e+00   4.25e+00   2.97e+00
+    15    4    2.0 |   1.32e+00   5.12e+00   4.42e+00
+    15    5    0.0 |   7.86e-16   7.86e-16   7.86e-16  ← regular
+
+
+========================================================================
+  PART B2: BCH CORRECTION NORMS AS TOURNAMENT INVARIANTS
+========================================================================
+
+  THEOREM: The BCH₀ error ||exp(A) - exp(B/2)·exp((J-I)/2)|| depends
+  on the score sequence through S₂.
+
+  Specifically:
+  ||Z₂||_F = (1/8)||[B,J]||_F = (1/8)·√(8n·S₂) = √(n·S₂/8)
+
+  This follows from ||[B,J]||_F² = 8n·S₂ (proved earlier: factor 4
+  from the 1/4 scaling cancels in the double application).
+
+  Wait, let me recompute: [B/2, (J-I)/2] has ||·||² = n·S₂/2.
+  Z₂ = -t²/2 · [B/2, (J-I)/2], so ||Z₂||_F = t²/2 · √(n·S₂/2).
+
+  At t=1: ||Z₂||_F = √(n·S₂/2) / 2 = √(n·S₂) / (2√2).
+
+  So the first BCH correction is PROPORTIONAL to √(n·S₂).
+  For the transitive tournament: S₂ = n(n²-1)/12.
+  ||Z₂||_trans ∝ √(n²(n²-1)/12) = n√((n²-1)/12).
+
+  For the regular tournament: S₂ = 0, so Z₂ = 0 and BCH is exact. ✓
+
+  Verification: ||Z₂||_F vs √(n·S₂/2)/2
+
+  n=3:
+    H=1: ||Z₂||=0.866025, predicted=0.866025, match=True
+
+  n=4:
+    H=1: ||Z₂||=1.581139, predicted=1.581139, match=True
+
+  n=5:
+    H=1: ||Z₂||=2.500000, predicted=2.500000, match=True
+
+
+========================================================================
+  PART B3: HEAT KERNEL Tr(exp(tA)) AND CARTAN DECOMPOSITION
+========================================================================
+
+  K(t) = Tr(exp(tA)) = Σ_i exp(t·λ_i) where λ_i are eigenvalues of A.
+
+  For the tournament adjacency A (integer matrix):
+    Eigenvalues are algebraic (but generally not rational).
+    A = (B + J - I)/2, so λ_i(A) = (λ_i(B) + λ_i(J-I))/2?
+    NO — A = B/2 + (J-I)/2 but B and (J-I) don't commute in general.
+
+  For REGULAR tournaments (Paley), they DO commute, so:
+    Eigenvalues of A = eigenvalues of B/2 + eigenvalues of (J-I)/2
+    = (±iθ_k/2) + ((n-1)/2 or -1/2)
+
+  Wait — for regular tournaments, the eigenvectors of B align with
+  those of J-I? Let me check.
+
+  For B = A - A^T (regular tournament): B·1 = 0 (row sums zero)
+  And (J-I)·1 = (n-1)·1. So 1 is an eigenvector of both.
+
+  For the other eigenvectors of J-I (which are orthogonal to 1,
+  with eigenvalue -1): do they align with B's eigenvectors?
+
+  For CIRCULANT regular tournaments (like Paley T_p), YES — they
+  share Fourier eigenvectors.
+
+
+  Paley T_5:
+    A eigenvalues: ['2.0000+0.0000j', '0.6180+0.0000j', '0.6180+0.0000j', '-1.6180+0.0000j', '-1.6180+0.0000j']
+    B/2 eigenvalues: ['0.0000+0.0000j', '0.0000+0.0000j', '0.0000+0.0000j', '0.0000+0.0000j', '0.0000+0.0000j']
+    sym eigenvalues: ['2.0000', '0.6180', '0.6180', '-1.6180', '-1.6180']
+    DFT of first row of A: ['2.0000+0.0000j', '0.6180+0.0000j', '-1.6180+0.0000j', '-1.6180+0.0000j', '0.6180+0.0000j']
+    DFT of first row of B/2: ['0.0000+0.0000j', '0.0000+0.0000j', '0.0000+0.0000j', '0.0000+0.0000j', '0.0000+0.0000j']
+    DFT of first row of sym: ['2.0000', '0.6180', '-1.6180', '-1.6180', '0.6180']
+    B/2 + sym DFT: ['2.0000+0.0000j', '0.6180+0.0000j', '-1.6180+0.0000j', '-1.6180+0.0000j', '0.6180+0.0000j']
+    DFT(A) = DFT(B/2) + DFT(sym): True
+
+    Heat kernel K(t) = Tr(exp(tA)):
+      t=0.1000: K=5.0501, K_B=5.0000, K_sym=5.0501, K_B*K_sym/n=5.0501
+      t=0.5000: K=6.3330, K_B=5.0000, K_sym=6.3330, K_B*K_sym/n=6.3330
+      t=1.0000: K=11.4962, K_B=5.0000, K_sym=11.4962, K_B*K_sym/n=11.4962
+      t=0.6931: K=7.7211, K_B=5.0000, K_sym=7.7211, K_B*K_sym/n=7.7211
+      t=1.0986: K=13.2818, K_B=5.0000, K_sym=13.2818, K_B*K_sym/n=13.2818
+
+  Paley T_7:
+    A eigenvalues: ['3.0000+0.0000j', '-0.5000+1.3229j', '-0.5000+1.3229j', '-0.5000-1.3229j', '-0.5000-1.3229j', '-0.5000+1.3229j', '-0.5000-1.3229j']
+    B/2 eigenvalues: ['0.0000+0.0000j', '0.0000+0.6614j', '0.0000-0.6614j', '-0.0000+0.6614j', '-0.0000-0.6614j', '-0.0000+0.6614j', '-0.0000-0.6614j']
+    sym eigenvalues: ['3.0000', '-0.5000', '-0.5000', '-0.5000', '-0.5000', '-0.5000', '-0.5000']
+    DFT of first row of A: ['3.0000+0.0000j', '-0.5000-1.3229j', '-0.5000-1.3229j', '-0.5000+1.3229j', '-0.5000-1.3229j', '-0.5000+1.3229j', '-0.5000+1.3229j']
+    DFT of first row of B/2: ['0.0000+0.0000j', '0.0000-1.3229j', '0.0000-1.3229j', '0.0000+1.3229j', '0.0000-1.3229j', '0.0000+1.3229j', '0.0000+1.3229j']
+    DFT of first row of sym: ['3.0000', '-0.5000', '-0.5000', '-0.5000', '-0.5000', '-0.5000', '-0.5000']
+    B/2 + sym DFT: ['3.0000+0.0000j', '-0.5000-1.3229j', '-0.5000-1.3229j', '-0.5000+1.3229j', '-0.5000-1.3229j', '-0.5000+1.3229j', '-0.5000+1.3229j']
+    DFT(A) = DFT(B/2) + DFT(sym): True
+
+    Heat kernel K(t) = Tr(exp(tA)):
+      t=0.1000: K=7.0074, K_B=6.9869, K_sym=7.0572, K_B*K_sym/n=7.0440
+      t=0.5000: K=8.1690, K_B=6.6749, K_sym=9.1545, K_B*K_sym/n=8.7293
+      t=1.0000: K=20.9786, K_B=5.7347, K_sym=23.7247, K_B*K_sym/n=19.4362
+      t=0.6931: K=10.5806, K_B=6.3804, K_sym=12.2426, K_B*K_sym/n=11.1589
+      t=1.0986: K=27.4060, K_B=5.4844, K_sym=30.4641, K_B*K_sym/n=23.8681
+
+
+========================================================================
+  PART B4: EXACT HEAT KERNEL FOR PALEY TOURNAMENTS
+========================================================================
+
+  For a circulant tournament T_p with adjacency A, the eigenvalues are:
+    λ_k = Σ_j A[0,j] · ω^{jk}  where ω = e^{2πi/p}
+
+  For Paley T_p: A[0,j] = 1 iff j is a QR mod p.
+  So λ_k = Σ_{j ∈ QR} ω^{jk} = Gauss sum type expression.
+
+  For k ≠ 0: λ_k = (χ(k)·√p - 1) / 2 where χ = Legendre symbol,
+  if we're careful about conventions.
+
+  Actually: Σ_{j ∈ QR} ω^{jk} is a partial Gauss sum.
+  For Paley T_p: QR = {1², 2², ..., ((p-1)/2)²} mod p.
+
+  By the standard result:
+    Σ_{j=1}^{p-1} (j/p) · ω^{jk} = (k/p) · g(p)
+  where g(p) = Σ_{j=1}^{p-1} (j/p) · ω^j is the Gauss sum.
+  g(p) = √p for p ≡ 1 (mod 4), i√p for p ≡ 3 (mod 4).
+
+  And Σ_{j ∈ QR} ω^{jk} = (1/2)(Σ_{j=1}^{p-1}(1+(j/p))·ω^{jk} - 1)
+  Hmm, this needs care. Let me just verify numerically.
+
+
+  T_5: eigenvalues of A:
+    k=0: λ = 2.000000 +0.000000j
+    k=1: λ = 0.618034 +0.000000j
+    k=2: λ = -1.618034 +0.000000j
+    k=3: λ = -1.618034 +0.000000j
+    k=4: λ = 0.618034 -0.000000j
+  K(ln2) = Σ exp(ln2·λ_k) = Σ 2^λ_k:
+    K(ln2) = 7.721123
+    T_5 eigenvalues: λ_0 = (p-1)/2 = 2,
+    λ_k for k=1,...,4 involve Gauss sum g(5) = √5
+    K(ln2) = 2^2 + 4·2^0.6180 · cos(...)
+
+  T_7: eigenvalues of A:
+    k=0: λ = 3.000000 +0.000000j
+    k=1: λ = -0.500000 +1.322876j
+    k=2: λ = -0.500000 +1.322876j
+    k=3: λ = -0.500000 -1.322876j
+    k=4: λ = -0.500000 +1.322876j
+    k=5: λ = -0.500000 -1.322876j
+    k=6: λ = -0.500000 -1.322876j
+  K(ln2) = Σ exp(ln2·λ_k) = Σ 2^λ_k:
+    K(ln2) = 10.580569
+
+  T_11: eigenvalues of A:
+    k=0: λ = 5.000000 +0.000000j
+    k=1: λ = -0.500000 +1.658312j
+    k=2: λ = -0.500000 -1.658312j
+    k=3: λ = -0.500000 +1.658312j
+    k=4: λ = -0.500000 +1.658312j
+    k=5: λ = -0.500000 +1.658312j
+    k=6: λ = -0.500000 -1.658312j
+    k=7: λ = -0.500000 -1.658312j
+    k=8: λ = -0.500000 -1.658312j
+    k=9: λ = -0.500000 +1.658312j
+    k=10: λ = -0.500000 -1.658312j
+  K(ln2) = Σ exp(ln2·λ_k) = Σ 2^λ_k:
+    K(ln2) = 34.891962
+
+  T_13: eigenvalues of A:
+    k=0: λ = 6.000000 +0.000000j
+    k=1: λ = 1.302776 -0.000000j
+    k=2: λ = -2.302776 +0.000000j
+    k=3: λ = 1.302776 -0.000000j
+    k=4: λ = 1.302776 -0.000000j
+    k=5: λ = -2.302776 +0.000000j
+    k=6: λ = -2.302776 +0.000000j
+    k=7: λ = -2.302776 +0.000000j
+    k=8: λ = -2.302776 +0.000000j
+    k=9: λ = 1.302776 -0.000000j
+    k=10: λ = 1.302776 -0.000000j
+    k=11: λ = -2.302776 +0.000000j
+    k=12: λ = 1.302776 -0.000000j
+  K(ln2) = Σ exp(ln2·λ_k) = Σ 2^λ_k:
+    K(ln2) = 80.018221
+
+
+Done. opus-2026-03-21-S95

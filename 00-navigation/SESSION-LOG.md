@@ -29,6 +29,38 @@ Entry format:
 **New reflection:** two-parameter-H-formula.md
 **Unresolved:** Full regression model for two-parameter formula, n=11 test, GPT-2 attention two-parameter analysis
 
+---
+
+## opus-2026-03-21-S95c — 2026-03-21: MARATHON — Cartan Bridge Deep Investigation
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S95b
+**Summary of work:** Overnight marathon on the Cartan bridge — both pure mathematics and engineering applications. 8 major investigations completed.
+
+**Pure Mathematics:**
+1. **Cartan Universality Theorem**: For ANY tournament adjacency A, Cartan fractions are CONSTANT: anti=1/2, scalar=(n-1)/(2n^2), sym=(n^2-1)/(2n^2). All tournament info is in the DIRECTION within so(n), not magnitude.
+2. **Cartan Commutator Formula (PROVED)**: [A_anti, A_sym_tl][i,j] = (d_i+d_j)/2 where d_i = score_i - (n-1)/2. Norm: ||[A,S]||^2 = n*S_2/2 (Landau irregularity). Key corollary: Cartan sectors commute IFF tournament is regular (Paley!).
+3. **BCH Factorization**: exp(A) = exp(B/2)*exp((J-I)/2) is EXACT for regular tournaments. For non-regular: first correction proportional to sqrt(n*S_2). BCH series diverges at t=1 for large S_2.
+4. **Lie Algebra Analysis**: Casimir invariants do NOT determine H. Only 2 distinct Casimir tuples at n=5. Tournaments are hypercube vertices on sphere in so(n). Tournament skew-adjacencies span ALL of so(n).
+5. **Grand Trichotomy Honest Assessment**: {2,3,7} -> {scalar, tournament, cooperation} is a USEFUL METAPHOR but NOT a theorem. Rapidity primes {2,3,7} appear for all n>=5 (not special). 7 MISSING from rapidity primes at n=7! c3 determines H mod 3 only for n<=4.
+6. **anti_frac(A^2)**: Tournament-dependent, decreases with cycle count. NOT determined by score sequence. The cooperation fraction of A^2 increases from 0.5 (transitive) to 0.83 (regular) at n=5.
+7. **Paley eigenvalue surprise**: T_5 has B/2 eigenvalues ALL ZERO — tournament is entirely in symmetric sector. T_7 has complex eigenvalues from Gauss sum sqrt(7). DFT decomposition verified exactly.
+
+**Engineering:**
+8. **GPT-2 Cartan Probe** (first real test of tournament theory on LLM):
+   - Training shifts anti_frac from 0.23 (random) to 0.40 (trained) — MASSIVE +0.17 shift
+   - Layer gradient: early 0.34 -> middle 0.43 -> late 0.43
+   - ALL attention tournaments are transitive (H=1) — explained as causal masking artifact
+   - KL-divergence profiles show non-trivial structure: layers 3,5,7 have H=9,3,33
+   - Entropy-tournament correlation FLIPS between layers 0 and 5+
+9. **ACT-Probe Module**: Parameter-free LLM diagnostic tool with cartan_decompose(), tournament_from_matrix(), ghost_invariants(), trichotomy_diagnosis(), probe_report(). Self-tested on Paley T_7, random attention, transitive T_5.
+
+**New scripts:** cartan_tournament_adjacency_s95.py, cartan_commutator_bch_s95.py, gpt2_cartan_probe_s95.py, act_probe.py, cartan_lie_algebra_ocf_s95.py, grand_trichotomy_rigor_s95.py, cartan_adelic_bch_s95.py
+**New contributions:** 7 result files in 05-knowledge/results/
+**Unresolved threads:** BERT bidirectional analysis (non-causal tournaments), PyPI packaging of ACT-Probe, deeper analysis of KL-divergence tournament structure across more sentences/models
+
+---
+
 ## opus-2026-03-21-S95b — 2026-03-21: Deep repo scour — missed connections, crystal phase, rapidity lattice n=6
 
 **Account:** opus
