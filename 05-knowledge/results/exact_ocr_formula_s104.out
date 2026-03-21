@@ -1,0 +1,373 @@
+========================================================================
+  EXACT OCR FORMULA FROM FIRST PRINCIPLES
+  opus-2026-03-21-S104
+========================================================================
+
+========================================================================
+  PART 1: EXACT VARIANCE DECOMPOSITION
+========================================================================
+
+--- n = 3 ---
+  N = 8
+  E[H] = 3/2 = 1.500000
+  Var(H) = 3/4 = 0.750000
+  Var(H|scores) = 0 = 0.000000
+  OCR = 1 = 1.00000000
+  1 - OCR = 0 = 0.00000000
+
+  Score class decomposition of residual:
+                      score  count                  H values   Var_within      Contrib
+
+--- n = 4 ---
+  N = 64
+  E[H] = 3 = 3.000000
+  Var(H) = 3 = 3.000000
+  Var(H|scores) = 0 = 0.000000
+  OCR = 1 = 1.00000000
+  1 - OCR = 0 = 0.00000000
+
+  Score class decomposition of residual:
+                      score  count                  H values   Var_within      Contrib
+
+--- n = 5 ---
+  N = 1024
+  E[H] = 15/2 = 7.500000
+  Var(H) = 285/16 = 17.812500
+  Var(H|scores) = 15/28 = 0.535714
+  OCR = 129/133 = 0.96992481
+  1 - OCR = 4/133 = 0.03007519
+
+  Score class decomposition of residual:
+                      score  count                  H values   Var_within      Contrib
+            (1, 2, 2, 2, 3)    280              [11, 13, 15]       1.9592     0.535714
+
+--- n = 6 ---
+  N = 32768
+  E[H] = 45/2 = 22.500000
+  Var(H) = 585/4 = 146.250000
+  Var(H|scores) = 59019/9856 = 5.988129
+  OCR = 460807/480480 = 0.95905553
+  1 - OCR = 19673/480480 = 0.04094447
+
+  Score class decomposition of residual:
+                      score  count                  H values   Var_within      Contrib
+         (0, 2, 3, 3, 3, 4)   1680              [11, 13, 15]       1.9592     0.100446
+         (1, 1, 2, 3, 4, 4)   2880                  [15, 17]       1.0000     0.087891
+         (1, 1, 3, 3, 3, 4)   1680              [19, 23, 27]       7.8367     0.401786
+         (1, 2, 2, 2, 3, 5)   1680              [11, 13, 15]       1.9592     0.100446
+         (1, 2, 2, 2, 4, 4)   1680              [19, 23, 27]       7.8367     0.401786
+         (1, 2, 2, 3, 3, 4)   8640  [23, 25, 29, 31, 33, 37]      15.8889     4.189453
+         (1, 2, 3, 3, 3, 3)   2400                  [33, 37]       3.8400     0.281250
+         (2, 2, 2, 2, 3, 4)   2400                  [33, 37]       3.8400     0.281250
+         (2, 2, 2, 3, 3, 3)   2640              [41, 43, 45]       1.7851     0.143821
+
+--- n = 7: skipping (too large for exhaustive) ---
+
+
+========================================================================
+  PART 2: OCR AS EXACT FRACTIONS
+========================================================================
+
+  Exact OCR fractions:
+  n=3: OCR = 1
+        = 1.0000000000
+        Var(H) = 3/4
+        Var(H|scores) = 0
+        1-OCR = 0
+  n=4: OCR = 1
+        = 1.0000000000
+        Var(H) = 3
+        Var(H|scores) = 0
+        1-OCR = 0
+  n=5: OCR = 129/133
+        = 0.9699248120
+        Var(H) = 285/16
+        Var(H|scores) = 15/28
+        1-OCR = 4/133
+  n=6: OCR = 460807/480480
+        = 0.9590555278
+        Var(H) = 585/4
+        Var(H|scores) = 59019/9856
+        1-OCR = 19673/480480
+
+
+========================================================================
+  PART 3: RESIDUAL FRACTION ANALYSIS
+========================================================================
+
+  The residual 1 - OCR as exact fraction:
+  n=3: 1-OCR = 0
+  n=4: 1-OCR = 0
+  n=5: 1-OCR = 4/133
+        = 15/28 / 285/16
+        = 0.535714 / 17.812500
+  n=6: 1-OCR = 19673/480480
+        = 59019/9856 / 585/4
+        = 5.988129 / 146.250000
+
+
+========================================================================
+  PART 4: WHY THE RESIDUAL EXISTS — OCF ANALYSIS
+========================================================================
+
+  The residual comes from score classes with multiple H values.
+
+  At n=5: only class (1,2,2,2,3) with H ∈ {11, 13, 15}.
+  At n=6: multiple classes have H spread.
+
+  From S98b: within (1,2,2,2,3), H is determined by c₅:
+    c₅=1 → H=11 (120 tournaments)
+    c₅=2 → H=13 (120 tournaments)
+    c₅=3 → H=15 (40 tournaments)
+
+  The residual Var(H|scores) at n=5 comes entirely from this class.
+
+  The 280 tournaments in class (1,2,2,2,3) have:
+    E[H|sc] = (120*11 + 120*13 + 40*15) / 280
+            = (1320 + 1560 + 600) / 280 = 3480/280 = 87/7
+    E[H²|sc] = (120*121 + 120*169 + 40*225) / 280
+             = (14520 + 20280 + 9000) / 280 = 43800/280 = 1095/7
+    Var(H|sc) = 1095/7 - (87/7)² = 1095/7 - 7569/49
+             = 7665/49 - 7569/49 = 96/49
+
+  Contribution to Var(H|scores):
+    P(sc=(1,2,2,2,3)) * Var(H|sc) = (280/1024) * (96/49)
+    = 280*96 / (1024*49) = 26880/50176 = 420/784 = 15/28
+
+  Total Var(H|scores) at n=5 = 15/28 (if this is the only contributor)
+  Var(H) at n=5 = 285/16
+
+  1 - OCR = (15/28) / (285/16) = (15*16) / (28*285) = 240/7980 = 2/66.5?
+  Let me compute exactly...
+
+
+  n=5, class (1, 2, 2, 2, 3):
+    Count: 280
+    H=11: 120 tournaments
+    H=13: 120 tournaments
+    H=15: 40 tournaments
+    E[H|sc] = 87/7 = 12.428571
+    Var(H|sc) = 96/49 = 1.959184
+    Contribution = 35/128 × 96/49 = 15/28
+    = 0.535714
+
+    Total Var(H|scores) = 15/28
+    From this class: 15/28
+    Match: True
+
+    Var(H) = 285/16
+    OCR = 1 - 15/28/285/16 = 129/133
+    OCR = 129/133
+
+
+========================================================================
+  PART 5: COMPLETE H DISTRIBUTION BY SCORE CLASS
+========================================================================
+
+--- n = 5 ---
+                      score  count                       H values     E[H]      Var
+            (0, 1, 2, 3, 4)    120                            [1]     1.00     0.00
+            (0, 1, 3, 3, 3)     40                            [3]     3.00     0.00
+            (0, 2, 2, 2, 4)     40                            [3]     3.00     0.00
+            (0, 2, 2, 3, 3)    120                            [5]     5.00     0.00
+            (1, 1, 1, 3, 4)     40                            [3]     3.00     0.00
+            (1, 1, 2, 2, 4)    120                            [5]     5.00     0.00
+            (1, 1, 2, 3, 3)    240                            [9]     9.00     0.00
+            (1, 2, 2, 2, 3)    280                   [11, 13, 15]    12.43     1.96 ***
+            (2, 2, 2, 2, 2)     24                           [15]    15.00     0.00
+
+--- n = 6 ---
+                      score  count                       H values     E[H]      Var
+         (0, 1, 2, 3, 4, 5)    720                            [1]     1.00     0.00
+         (0, 1, 2, 4, 4, 4)    240                            [3]     3.00     0.00
+         (0, 1, 3, 3, 3, 5)    240                            [3]     3.00     0.00
+         (0, 1, 3, 3, 4, 4)    720                            [5]     5.00     0.00
+         (0, 2, 2, 2, 4, 5)    240                            [3]     3.00     0.00
+         (0, 2, 2, 3, 3, 5)    720                            [5]     5.00     0.00
+         (0, 2, 2, 3, 4, 4)   1440                            [9]     9.00     0.00
+         (0, 2, 3, 3, 3, 4)   1680                   [11, 13, 15]    12.43     1.96 ***
+         (0, 3, 3, 3, 3, 3)    144                           [15]    15.00     0.00
+         (1, 1, 1, 3, 4, 5)    240                            [3]     3.00     0.00
+         (1, 1, 1, 4, 4, 4)     80                            [9]     9.00     0.00
+         (1, 1, 2, 2, 4, 5)    720                            [5]     5.00     0.00
+         (1, 1, 2, 3, 3, 5)   1440                            [9]     9.00     0.00
+         (1, 1, 2, 3, 4, 4)   2880                       [15, 17]    16.00     1.00 ***
+         (1, 1, 3, 3, 3, 4)   1680                   [19, 23, 27]    21.86     7.84 ***
+         (1, 2, 2, 2, 3, 5)   1680                   [11, 13, 15]    12.43     1.96 ***
+         (1, 2, 2, 2, 4, 4)   1680                   [19, 23, 27]    21.86     7.84 ***
+         (1, 2, 2, 3, 3, 4)   8640       [23, 25, 29, 31, 33, 37]    28.67    15.89 ***
+         (1, 2, 3, 3, 3, 3)   2400                       [33, 37]    35.40     3.84 ***
+         (2, 2, 2, 2, 2, 5)    144                           [15]    15.00     0.00
+         (2, 2, 2, 2, 3, 4)   2400                       [33, 37]    35.40     3.84 ***
+         (2, 2, 2, 3, 3, 3)   2640                   [41, 43, 45]    42.82     1.79 ***
+
+
+========================================================================
+  PART 6: CONNECTING OCR RESIDUAL TO SKELETON STRUCTURE
+========================================================================
+
+--- n = 5: Ambiguous class analysis ---
+
+  Within score (1,2,2,2,3), the three H values correspond to:
+
+  H=11 (120 tournaments): c₅=1, e_cyc=8, BLACKSELF
+  H=13 (120 tournaments): c₅=2, e_cyc=9, BLACKSELF
+  H=15 (40 tournaments):  c₅=3, e_cyc=10, NOT blackself
+
+  KEY OBSERVATION: The two BLACKSELF classes account for 240/280 = 6/7
+  of the ambiguous class. They have H=11 and H=13.
+  The non-blackself class has H=15 with only 40/280 = 1/7 of the class.
+
+  HYPOTHESIS: Blackself classes contribute disproportionately to the OCR residual
+  because they have unusual c₅ counts.
+
+  THE SKELETON CONNECTION:
+  The blackself classes (H=11, H=13) are connected to each other in the
+  skeleton via GS flips. The non-blackself class (H=15) is the one with
+  3 GS tilings but only 5 total tilings (|Aut|=3).
+
+  The c₅ count distinguishes them:
+  c₅ = 1 ↔ H = 11  [fewest 5-cycles → fewest "extra" paths]
+  c₅ = 2 ↔ H = 13  [middle]
+  c₅ = 3 ↔ H = 15  [most 5-cycles → most extra paths → highest H]
+
+  And |Aut| differs:
+  H=11: |Aut|=1  (generic, 120 tilings)
+  H=13: |Aut|=1  (generic, 120 tilings)
+  H=15: |Aut|=3  (3-fold symmetry, only 40 tilings despite higher H)
+
+  THIS IS THE KEY: Higher symmetry (|Aut|) correlates with higher H
+  WITHIN the same score class. The most symmetric tournament has the
+  most Hamiltonian paths, but the fewest tiling representations.
+
+========================================================================
+  PART 7: TOWARD AN EXACT Var(H|SCORES) FORMULA
+========================================================================
+
+  n=5, class (1,2,2,2,3):
+    E[c₅] = 12/7 = 1.714286
+    Var(c₅) = 24/49 = 0.489796
+    Var(H|sc) = 4·Var(c₅) = 96/49 = 1.959184
+    Check: 96/49 = 96/49? True
+
+  SO: Var(H|scores) at n=5 = P(sc=(1,2,2,2,3)) × 4·Var(c₅|sc=(1,2,2,2,3))
+                            = (280/1024) × 4 × (24/49)
+                            = (280 × 96) / (1024 × 49)
+                            = 15/28
+                            = 0.535714
+
+  And OCR = 1 - 15/28 / 285/16
+
+  Let me simplify...
+
+  Var(H|scores) = 15/28
+  Var(H) = 285/16
+  Ratio = 4/133
+  OCR = 129/133
+
+
+========================================================================
+  PART 8: WHAT DRIVES THE AMBIGUITY? — THE ROLE OF |Aut|
+========================================================================
+
+  Within the ambiguous class (1,2,2,2,3) at n=5:
+
+  c₅=1 → H=11, |Aut|=1, #til=11, #GS=3
+  c₅=2 → H=13, |Aut|=1, #til=13, #GS=3
+  c₅=3 → H=15, |Aut|=3, #til=5,  #GS=1
+
+  The c₅=3 class is the MOST SYMMETRIC (|Aut|=3) and has the HIGHEST H.
+
+  THEOREM (at n=5): Within the ambiguous score class, the tournament with
+  the highest automorphism group has the highest H.
+
+  Is this a general principle? Let me check at n=6.
+
+  Score (0, 2, 3, 3, 3, 4): H values = {11: 720, 13: 720, 15: 240}
+  Score (1, 1, 2, 3, 4, 4): H values = {15: 1440, 17: 1440}
+  Score (1, 1, 3, 3, 3, 4): H values = {19: 720, 23: 720, 27: 240}
+  Score (1, 2, 2, 2, 3, 5): H values = {11: 720, 13: 720, 15: 240}
+  Score (1, 2, 2, 2, 4, 4): H values = {19: 720, 23: 720, 27: 240}
+  Score (1, 2, 2, 3, 3, 4): H values = {23: 1440, 25: 1440, 29: 2880, 31: 1440, 33: 720, 37: 720}
+  Score (1, 2, 3, 3, 3, 3): H values = {33: 960, 37: 1440}
+  Score (2, 2, 2, 2, 3, 4): H values = {33: 960, 37: 1440}
+  Score (2, 2, 2, 3, 3, 3): H values = {41: 720, 43: 1440, 45: 480}
+
+  KEY INSIGHT: The ambiguous score classes at n=6 have MORE H values
+  than at n=5. This is because longer odd cycles (5-cycles, 7-cycles
+  at n≥7) create more variation within each score class.
+
+  The OCR residual measures EXACTLY this variation.
+  It is driven by the DIVERSITY of cycle structures compatible with
+  a given score sequence.
+
+========================================================================
+  PART 9: EXACT FORMULA FOR Var(H|SCORES)
+========================================================================
+
+  CLAIM: Var(H|scores) = (4/total) × Σ_s n_s × Var(c₅|s)
+
+  where the sum is over ambiguous score classes s, n_s = |score class s|,
+  and Var(c₅|s) = variance of c₅ within score class s.
+
+  At n=5: only one ambiguous class, so
+    Var(H|scores) = (280/1024) × 4 × Var(c₅|(1,2,2,2,3))
+
+  MORE GENERALLY: H = 1 + 2α₁ + 4α₂ + ...
+  α₁ = c₃ + c₅ + ...
+  Since c₃ is determined by scores: Var(α₁|scores) = Var(c₅ + c₇ + ...|scores)
+  And Var(H|scores) ≈ 4 × Var(α₁|scores) (if α₂ is approximately determined by α₁)
+
+  This gives:
+    Var(H|scores) ≈ 4 × Var(c₅|scores)   (at n=5 where c₇=0)
+
+  For general n:
+    Var(H|scores) ≈ 4 × Var(c₅ + c₇ + ... | scores)
+
+  And the OCR residual:
+    1 - OCR ≈ 4 × Var(c₅ + c₇ + ... | scores) / Var(H)
+
+  Since Var(H) ≈ 4 × Var(α₁) (the coefficient 4 comes from H ≈ 1+2α₁):
+    Wait: Var(H) ≈ 4 × Var(α₁) since H ≈ 1 + 2α₁.
+    (Ignoring higher OCF terms.)
+
+    1 - OCR ≈ 4 × Var(c₅|scores) / (4 × Var(α₁))
+            = Var(c₅|scores) / Var(c₃ + c₅)
+            ≈ Var(c₅|scores) / (Var(c₃) + Var(c₅) + 2Cov(c₃,c₅))
+
+  Since c₃ is determined by scores: Var(c₃|scores) = 0.
+  So Var(c₃) = Var(E[c₃|scores]) = Var(c₃) (no simplification).
+
+  But: Var(α₁) = Var(c₃) + Var(c₅) + Var(c₇) + ... + cross terms
+
+  The OCR measures what fraction of the TOTAL variance of α₁
+  is explained by c₃ (via scores).
+
+  1 - OCR ≈ [Var(c₅|scores) + Var(c₇|scores) + ...] / Var(α₁)
+
+  At n=5: 1-OCR = Var(c₅|sc) / Var(α₁) (only c₃ and c₅ at n=5)
+
+
+  n=5: Var(α₁) = 285/64 = 4.453125
+  4×Var(α₁) = 285/16 = 17.812500
+  Var(H) = 285/16 = 17.812500
+  4×Var(α₁) = Var(H)? True
+
+  From S98b: H = 1 + 2α₁ at n=5 (α₂=0 always). So Var(H) = 4×Var(α₁).
+
+  n=5 exact cycle statistics:
+    E[c₃] = 5/2
+    E[c₅] = 3/4
+    Var(c₃) = 15/8
+    Var(c₅) = 45/64
+    Cov(c₃,c₅) = 15/16
+    Var(α₁) = Var(c₃)+Var(c₅)+2Cov = 285/64
+    Should equal: 285/64
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/exact_ocr_formula_s104.py", line 644, in <module>
+    sc = score_seq(list(all_tournaments(n))[0] if False else None, n)
+  File "/home/e/Documents/claude/math/04-computation/exact_ocr_formula_s104.py", line 67, in score_seq
+    return tuple(sorted(sum(A[i]) for i in range(n)))
+  File "/home/e/Documents/claude/math/04-computation/exact_ocr_formula_s104.py", line 67, in <genexpr>
+    return tuple(sorted(sum(A[i]) for i in range(n)))
+TypeError: 'NoneType' object is not subscriptable

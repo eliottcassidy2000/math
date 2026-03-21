@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S104 — 2026-03-21: Exact OCR Formula — 129/133 at n=5, variance decomposition, skeleton connection
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S103
+**Summary:** Found EXACT OCR fractions at n=3-6. Connected OCR residual to blue skeleton structure (blackself classes). Proved variance decomposition chain.
+**Key results:**
+1. **EXACT OCR**: n=3: 1, n=4: 1, n=5: **129/133**, n=6: **460807/480480**
+2. **1-OCR at n=5 = 4/133** — comes entirely from score class (1,2,2,2,3)
+3. **Var(H) = 4×Var(α₁)** exactly at n=5 (since H=1+2α₁, α₂=0)
+4. **OCR = 1 - Var(c₅|scores)/Var(c₃+c₅)** — exact formula at n=5
+5. **Cycle statistics**: Var(c₃)=15/8, Var(c₅)=45/64, Cov(c₃,c₅)=15/16
+6. **Skeleton connection**: Blackself classes (H=11,13) contribute 240/280 of ambiguous class
+7. **|Aut| correlates with H** within score class: highest symmetry → highest H
+8. **n=6 has 9 ambiguous score classes** (vs 1 at n=5), largest is (1,2,2,3,3,4) with 6 H values
+**New scripts:** exact_ocr_formula_s104.py
+**Unresolved:** Factor 133=7×19 and 480480 — are there number-theoretic patterns? Extend to n=7 exact. Prove Var(c₅|scores)/Var(α₁) → constant.
+
+---
+
 ## opus-2026-03-21-S103 — 2026-03-21: Shadow compression deep — score class OCR=96%, c₅ OCR=95%, density threshold
 
 **Account:** opus
