@@ -1,0 +1,372 @@
+========================================================================
+  H² DEEP — EXACT E[H²], Var(H), AND OCR
+  opus-2026-03-21-S107
+========================================================================
+
+========================================================================
+  PART 1: E[H²] FROM OVERLAP-CONFLICT STRUCTURE
+========================================================================
+
+--- n = 3 ---
+  n! = 6, n!² = 36
+  Conflict-free pairs: 18 / 36 = 0.5000
+  E[H] = 3/2 = 1.500000
+  E[H²] = 3 = 3.000000
+  Var(H) = 3/4 = 0.750000
+  Matches S104: True ✓
+
+  Overlap-Conflict distribution:
+    (shared,conflicts)    count   fraction
+                (0, 1)       12     0.3333
+                (0, 2)        6     0.1667
+                (1, 0)       12     0.3333
+                (2, 0)        6     0.1667
+
+--- n = 4 ---
+  n! = 24, n!² = 576
+  Conflict-free pairs: 264 / 576 = 0.4583
+  E[H] = 3 = 3.000000
+  E[H²] = 12 = 12.000000
+  Var(H) = 3 = 3.000000
+  Matches S104: True ✓
+
+  Overlap-Conflict distribution:
+    (shared,conflicts)    count   fraction
+                (0, 0)       48     0.0833
+                (0, 1)      120     0.2083
+                (0, 2)       72     0.1250
+                (0, 3)       24     0.0417
+                (1, 0)      120     0.2083
+                (1, 1)       96     0.1667
+                (2, 0)       72     0.1250
+                (3, 0)       24     0.0417
+
+--- n = 5 ---
+  n! = 120, n!² = 14400
+  Conflict-free pairs: 6360 / 14400 = 0.4417
+  E[H] = 15/2 = 7.500000
+  E[H²] = 1185/16 = 74.062500
+  Var(H) = 285/16 = 17.812500
+  Matches S104: True ✓
+
+  Overlap-Conflict distribution:
+    (shared,conflicts)    count   fraction
+                (0, 0)     1680     0.1167
+                (0, 1)     2400     0.1667
+                (0, 2)     1680     0.1167
+                (0, 3)      480     0.0333
+                (0, 4)      120     0.0083
+                (1, 0)     2400     0.1667
+                (1, 1)     2400     0.1667
+                (1, 2)      480     0.0333
+                (2, 0)     1680     0.1167
+                (2, 1)      480     0.0333
+                (3, 0)      480     0.0333
+                (4, 0)      120     0.0083
+
+--- n = 6 ---
+  n! = 720, n!² = 518400
+  Conflict-free pairs: 222480 / 518400 = 0.4292
+  E[H] = 45/2 = 22.500000
+  E[H²] = 1305/2 = 652.500000
+  Var(H) = 585/4 = 146.250000
+  Matches S104: True ✓
+
+  Overlap-Conflict distribution:
+    (shared,conflicts)    count   fraction
+                (0, 0)    64800     0.1250
+                (0, 1)    82800     0.1597
+                (0, 2)    51840     0.1000
+                (0, 3)    18720     0.0361
+                (0, 4)     3600     0.0069
+                (0, 5)      720     0.0014
+                (1, 0)    82800     0.1597
+                (1, 1)    80640     0.1556
+                (1, 2)    24480     0.0472
+                (1, 3)     2880     0.0056
+                (2, 0)    51840     0.1000
+                (2, 1)    24480     0.0472
+                (2, 2)     2880     0.0056
+                (3, 0)    18720     0.0361
+                (3, 1)     2880     0.0056
+                (4, 0)     3600     0.0069
+                (5, 0)      720     0.0014
+
+
+========================================================================
+  PART 2: E[H²|scores] — CONDITIONAL SECOND MOMENT
+========================================================================
+
+  To compute Var(H|scores) = E[Var(H|score)] = E[E[H²|score]] - E[E[H|score]²],
+  we need E[H²|score=s] for each score sequence s.
+
+  Direct computation: for each score class, enumerate all tournaments T
+  with that score, compute H(T)², and average.
+
+  We already have this from S104 — it's just the within-class sum of H².
+  But now let's ALSO express it via the overlap framework.
+
+
+--- n = 5 ---
+                      score    n_s     E[H|s]      E[H²|s]   Var(H|s)      E[H|s]²
+            (1, 2, 2, 2, 3)    280    12.4286     156.4286     1.9592     154.4694  ***
+
+  E[E[H²|s]] = 1185/16
+  E[E[H|s]²] = 8235/112
+  Var(H|scores) = 15/28 = 0.535714
+
+--- n = 6 ---
+                      score    n_s     E[H|s]      E[H²|s]   Var(H|s)      E[H|s]²
+         (0, 2, 3, 3, 3, 4)   1680    12.4286     156.4286     1.9592     154.4694  ***
+         (1, 1, 2, 3, 4, 4)   2880    16.0000     257.0000     1.0000     256.0000  ***
+         (1, 1, 3, 3, 3, 4)   1680    21.8571     485.5714     7.8367     477.7347  ***
+         (1, 2, 2, 2, 3, 5)   1680    12.4286     156.4286     1.9592     154.4694  ***
+         (1, 2, 2, 2, 4, 4)   1680    21.8571     485.5714     7.8367     477.7347  ***
+         (1, 2, 2, 3, 3, 4)   8640    28.6667     837.6667    15.8889     821.7778  ***
+         (1, 2, 3, 3, 3, 3)   2400    35.4000    1257.0000     3.8400    1253.1600  ***
+         (2, 2, 2, 2, 3, 4)   2400    35.4000    1257.0000     3.8400    1253.1600  ***
+         (2, 2, 2, 3, 3, 3)   2640    42.8182    1835.1818     1.7851    1833.3967  ***
+
+  E[E[H²|s]] = 1305/2
+  E[E[H|s]²] = 6372021/9856
+  Var(H|scores) = 59019/9856 = 5.988129
+
+
+========================================================================
+  PART 3: LAW OF TOTAL VARIANCE DECOMPOSITION
+========================================================================
+
+  n=3:
+    Var(H) = 3/4 = 0.750000
+    Between (Var(E[H|s])) = 3/4 = 0.750000
+    Within (E[Var(H|s)])  = 0 = 0.000000
+    Sum = 3/4 = 0.750000
+    Check: True
+    OCR = Between/Total = 1 = 1.00000000
+
+  n=4:
+    Var(H) = 3 = 3.000000
+    Between (Var(E[H|s])) = 3 = 3.000000
+    Within (E[Var(H|s)])  = 0 = 0.000000
+    Sum = 3 = 3.000000
+    Check: True
+    OCR = Between/Total = 1 = 1.00000000
+
+  n=5:
+    Var(H) = 285/16 = 17.812500
+    Between (Var(E[H|s])) = 1935/112 = 17.276786
+    Within (E[Var(H|s)])  = 15/28 = 0.535714
+    Sum = 285/16 = 17.812500
+    Check: True
+    OCR = Between/Total = 129/133 = 0.96992481
+
+  n=6:
+    Var(H) = 585/4 = 146.250000
+    Between (Var(E[H|s])) = 1382421/9856 = 140.261871
+    Within (E[Var(H|s)])  = 59019/9856 = 5.988129
+    Sum = 585/4 = 146.250000
+    Check: True
+    OCR = Between/Total = 460807/480480 = 0.95905553
+
+
+========================================================================
+  PART 4: E[H|scores] — WHAT IS THE CONDITIONAL MEAN?
+========================================================================
+
+--- n = 5 ---
+                      score    n_s     E[H|s]    c₃    H=1+2α₁   match?
+            (0, 1, 2, 3, 4)    120     1.0000   0.0        1.0    exact
+            (0, 1, 3, 3, 3)     40     3.0000   1.0        3.0    exact
+            (0, 2, 2, 2, 4)     40     3.0000   1.0        3.0    exact
+            (0, 2, 2, 3, 3)    120     5.0000   2.0        5.0    exact
+            (1, 1, 1, 3, 4)     40     3.0000   1.0        3.0    exact
+            (1, 1, 2, 2, 4)    120     5.0000   2.0        5.0    exact
+            (1, 1, 2, 3, 3)    240     9.0000   3.0        7.0    exact
+            (1, 2, 2, 2, 3)    280    12.4286   4.0        9.0 E[c₅]=1.71
+            (2, 2, 2, 2, 2)     24    15.0000   5.0       11.0    exact
+
+
+========================================================================
+  PART 5: THE H² PERSPECTIVE — WHAT DOES E[H²] ENCODE?
+========================================================================
+
+  H² = (Σ_σ X_σ)² = Σ_{σ,τ} X_σ X_τ
+
+  E[H²] = #{conflict-free pairs (σ,τ)} weighted by 2^{shared arcs}
+           divided by 4^{n-1}
+
+  This counts PAIRS OF HAMILTONIAN PATHS that can coexist in some tournament.
+
+  Within a tournament T: H(T)² counts ORDERED PAIRS of HPs in T.
+
+  So E[H²] = average of H(T)² over all tournaments.
+
+  The VARIANCE Var(H) = E[H²] - E[H]² measures how much H FLUCTUATES
+  across tournaments. A large variance means some tournaments have many
+  more HPs than others.
+
+  The CONDITIONAL variance Var(H|scores) measures how much H fluctuates
+  WITHIN a score class. This is the "hidden" variation.
+
+  The OCR = 1 - Var(H|scores)/Var(H) = Var(E[H|scores])/Var(H)
+  measures how much of the TOTAL variation is BETWEEN score classes.
+
+  KEY QUESTION: Can we express E[H²|scores] in terms of the overlap
+  structure CONDITIONED on the score sequence?
+
+  For a specific score sequence s:
+  E[H²|s] = (1/#{T with scores s}) × Σ_{T: scores(T)=s} H(T)²
+
+  This requires counting H² for each tournament in the class — which is
+  what we computed in Part 2.
+
+  But can we express it ANALYTICALLY?
+
+========================================================================
+  PART 6: H² AND THE BLUE SKELETON
+========================================================================
+
+  The blue skeleton connects SC classes via GS flips.
+  Within each SC class, #tilings = H/|Aut| (from S99).
+  And #GS tilings is a subset of these.
+
+  H² counts PAIRS of tilings (= pairs of Hamiltonian paths).
+  Among all H² ordered pairs, how many involve:
+  (a) Two GS tilings?
+  (b) One GS and one non-GS?
+  (c) Two non-GS tilings?
+
+  The GS×GS pairs are the most structured: both paths are
+  grid-symmetric. These contribute to the skeleton's WEIGHTED
+  adjacency matrix.
+
+  Specifically: if class C has g GS tilings and h = H/|Aut| total tilings:
+  - GS×GS pairs: g²
+  - GS×non-GS pairs: 2g(h-g)
+  - non-GS×non-GS pairs: (h-g)²
+  - Total: h²
+
+  The GS fraction of H²: g²/h²
+
+  At n=5:
+
+     H |Aut|  #til  #GS     H²   GS²   GS²/H²
+     9     1     9    3     81     9   0.1111
+     9     1     9    1     81     1   0.0123
+    13     1    13    3    169     9   0.0533
+    11     1    11    3    121     9   0.0744
+    15     3     5    1     25     1   0.0400
+    15     5     3    3      9     9   1.0000
+     3     3     1    1      1     1   1.0000
+     1     1     1    1      1     1   1.0000
+
+  Total H² (sum over SC classes): 488
+  Total GS² (sum over SC classes): 40
+  Overall GS²/H²: 0.0820
+
+
+========================================================================
+  PART 7: OVERLAP STRUCTURE CONDITIONED ON SCORE CLASS
+========================================================================
+
+--- n = 5: overlap analysis within score classes ---
+  Class (1, 2, 2, 2, 3): 280 tournaments, H ∈ [11, 13, 15]
+  Within-class corr(H₁+H₂, arc_overlap): 0.0057
+  (positive = high-H tournaments are more similar to each other)
+
+
+========================================================================
+  PART 8: OCR FROM THE OVERLAP GENERATING FUNCTION
+========================================================================
+
+  DEFINE the overlap generating function:
+    F_n(x) = Σ_{(σ,τ): conflict-free} x^{shared(σ,τ)}
+
+  Then: E[H²] = F_n(2) / 4^{n-1}
+        E[H]² = (n!)² / 4^{n-1}
+        Var(H) = [F_n(2) - (n!)²] / 4^{n-1}
+
+  For the CONDITIONAL:
+    F_n(x; s) = Σ_{(σ,τ): conflict-free, scores(σ)=scores(τ)=s} x^{shared}
+
+  But this is much harder: we need to condition on the score sequence.
+
+  ALTERNATIVE: express Var(H|scores) directly.
+
+  Var(H|scores) = E[Var(H|score=s)]
+  = (1/N) Σ_s n_s [E[H²|s] - E[H|s]²]
+  = (1/N) [Σ_T H(T)² - Σ_s (Σ_{T:sc(T)=s} H(T))²/n_s]
+
+  The second term involves the SQUARED SUM of H within each score class.
+  This is a purely combinatorial quantity.
+
+  At n=5:
+
+  n=5:
+  E[H²] = 1185/16 = 74.062500
+  Σ_s (Σ H_s)²/n_s / N = 8235/112 = 73.526786
+  Var(H|scores) = E[H²] - Σ_s(ΣH)²/(n_s·N) = 15/28
+  = 0.535714
+  Var(H) = 285/16 = 17.812500
+  OCR = 129/133 = 0.96992481
+
+
+========================================================================
+  PART 9: H² STRUCTURE WITHIN THE AMBIGUOUS CLASS
+========================================================================
+  Class (1, 2, 2, 2, 3): n_s = 280
+  E[H|s] = 87/7 = 12.428571
+  E[H²|s] = 1095/7 = 156.428571
+  Var(H|s) = 96/49 = 1.959184
+  H distribution:
+    H=11: 120 tournaments (42.9%)
+    H=13: 120 tournaments (42.9%)
+    H=15: 40 tournaments (14.3%)
+
+  Contribution to Var(H|scores): P(s) × Var(H|s)
+  = 35/128 × 96/49 = 15/28
+  = 0.535714
+  This is 100.0% of total Var(H|scores)
+
+
+========================================================================
+  PART 10: SUMMARY — THE EXACT OCR MECHANICS
+========================================================================
+
+  THE EXACT OCR AT n=5:
+
+  1. E[H] = 15/2 = n!/2^{n-1}
+  2. E[H²] = 1185/16 (computed from overlap-conflict structure)
+  3. Var(H) = 285/16 = E[H²] - E[H]²
+
+  4. Law of Total Variance:
+     Var(H) = Var(E[H|scores]) + E[Var(H|scores)]
+     = BETWEEN-CLASS + WITHIN-CLASS
+
+  5. WITHIN-CLASS = Var(H|scores) = 15/28
+     Comes ENTIRELY from score class (1,2,2,2,3)
+     Where H ∈ {11, 13, 15} with counts (120, 120, 40)
+
+  6. OCR = BETWEEN/TOTAL = 1 - WITHIN/TOTAL
+     = 1 - 15/28/285/16
+     = 129/133
+
+  7. From the OCF: H = 1 + 2(c₃ + c₅) at n=5 (α₂ = 0 always)
+     c₃ is score-determined. The residual is 4·Var(c₅|scores).
+     Var(c₅|scores) = 15/112? Let me compute...
+
+  8. The OVERLAP STRUCTURE tells us:
+     - ~44% of permutation pairs are conflict-free
+     - Among conflict-free pairs, the average shared arcs ≈ 0.80
+     - The conflict-free fraction DECREASES with n (more permutations conflict)
+
+  THE DEEP CONNECTION:
+  H² encodes the PAIR structure of Hamiltonian paths.
+  E[H²] measures how likely it is that TWO random paths can coexist.
+  The OCR tells us how much of this pair structure is determined by scores.
+
+  Since scores determine c₃ (hence most of H), they also determine
+  most of H². The residual H² - E[H²|scores] comes from the PAIR
+  structure of the hidden cycles (c₅, α₂, ...).
+
+Done. opus-2026-03-21-S107

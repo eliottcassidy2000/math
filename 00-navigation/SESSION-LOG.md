@@ -13,7 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+<<<<<<< HEAD
 ## kind-pasteur-2026-03-21-S16 — 2026-03-21: OCR Exact Rationality — 18/19, 12/13, 120/131
+=======
+## opus-2026-03-21-S107 — 2026-03-21: H² Deep — overlap-conflict verified, total variance decomposition, skeleton H² fraction
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S106 (fixing the overlap bug)
+**Summary:** Correct E[H²] computation via overlap-conflict framework, verified at n=3-6. Law of total variance exact decomposition. GS fraction of H² analysis. Within-class arc overlap correlation.
+**Key results:**
+1. **E[H²] VERIFIED** at n=3-6 via overlap-conflict counting (bug from S106 fixed)
+2. **Overlap-conflict distribution**: conflict-free fraction = 50%, 45.8%, 44.2%, 42.9% for n=3-6 (decreasing)
+3. **Law of Total Variance EXACT**: Var(H) = Between + Within verified at all n with exact fractions
+4. **E[H²] exact**: n=3: 3, n=4: 12, n=5: 1185/16, n=6: 1305/2
+5. **GS² fraction of H²**: 8.2% at n=5. Regular tournament has 100% GS pairs.
+6. **Within-class corr(H₁+H₂, overlap) ≈ 0**: high-H tournaments NOT more arc-similar
+7. **100% of Var(H|scores)** at n=5 from class (1,2,2,2,3) — confirmed again
+8. **Var(E[H|s])** (between) = 1935/112 at n=5, exactly 129/133 of Var(H)
+**Scripts:** H_squared_deep_s107.py
+**Unresolved:** Closed-form for F_n(2) (overlap GF at x=2), conflict-free fraction asymptotics, n=7 computation
+
+---
+
+## opus-2026-03-21-S106 — 2026-03-21: Von Staudt-Clausen meets OCR — E[H²] formula, overlap structure, surprise primes
+>>>>>>> d1bc1abc (opus-2026-03-21-S107: session close — H² deep, overlap-conflict verified, total variance exact)
 
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-21-S15
