@@ -13,6 +13,34 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S98 — 2026-03-21: The N-Fold Ways — self-referential numbers and the Bott boundary
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S97
+**Files read:** Startup sequence, representation-theory-of-numbers.md, numbers-as-cluster-sizes.md, grand-trichotomy.md, five-and-ten.md, ghosts-and-supersymmetry.md
+**Summary of work:** Extended the five-fold way to ALL key numbers. Built comprehensive "N-fold way" for numbers 1-8, 12, 21, 42, and others. Discovered the self-referential range and the Bott boundary.
+
+### Key Discoveries
+
+1. **The self-referential range {1,...,8}**: Every number from 1 to 8 has exactly N independent structural roles. After 8, the self-referential property breaks (9 has 4 roles, not 9). This range = one Bott period.
+
+2. **Character assignments**: 1=STABILITY, 2=DUALITY, 3=STRUCTURE, 4=DIMENSION, 5=RECURSION, 6=TRANSITION, 7=OBSTRUCTION, 8=PERIODICITY. A complete narrative cycle: fix→split→classify→embed→recurse→transition→obstruct→return.
+
+3. **The Gödel connection**: After 8, no number can fully describe its own role. This is a mathematical version of incompleteness: the self-description capacity is bounded by the Bott period (topology), not by arithmetic (which is unbounded).
+
+4. **Representation density landscape**: roles(n)/n = 1 for n≤8, then decays. Secondary peaks at highly composite numbers (12, 42). Large primes have density O(log p / p).
+
+5. **42's six-fold way**: Cuboid, Hurwitz bound, Bernoulli, Catalan C₅, Cartan triple, "The Answer." Every role involves all three Hurwitz primes simultaneously.
+
+6. **21's four-fold way**: Second forbidden value, supersymmetric shift, |Aut(T₇)|, dim(so(7)). The number 21 = 3×7 is a "double ghost" — the identity with BOTH curvature and position removed.
+
+**New contributions:** n_fold_ways_s98.py, n-fold-self-reference.md reflection
+**Unresolved threads:**
+- Prove the self-referential range = Bott period rigorously
+- Does the self-referential property extend to other frameworks beyond tournaments?
+- The representation density as a function of prime factorization
+- Is there a GENERATING FUNCTION for the N-fold way counts?
+
 ## opus-2026-03-21-S97b — 2026-03-21: Spectral Kurtosis Marathon — c₃-S₂ theorem, GPT-2 kurtosis, linear H formula
 
 **Account:** opus
