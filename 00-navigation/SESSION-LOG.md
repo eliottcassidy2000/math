@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S98b — 2026-03-21: Hidden Orthogonal Invariants — eigenvector analysis, permanent connection
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S97b
+**Summary:** Hidden invariant at n=5 is c₅ (5.26% of Var(H)). Walk matrix distinguishes cospectral tournaments. Spectral blindness ↔ permanent complexity.
+**Key:** c₅ = 5-cycle count; (c₃,e_cyc) determines H exactly at n=5; rank(W)=5 for H=11, 3 for H=13,15; v^T A v independent of tournament
+**Scripts:** hidden_orthogonal_invariants_s98.py, eigenvector_invariant_s98.py
+
+---
+
 ## opus-2026-03-21-S98 — 2026-03-21: The N-Fold Ways — self-referential numbers and the Bott boundary
 
 **Account:** opus
