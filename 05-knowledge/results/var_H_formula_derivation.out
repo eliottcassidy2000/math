@@ -1,0 +1,168 @@
+
+============================================================
+  n = 3
+============================================================
+  (agree, conflict) distribution:
+    agree=0, conflict=1: count=12
+    agree=0, conflict=2: count=6
+    agree=1, conflict=0: count=12
+    agree=2, conflict=0: count=6
+
+  f(3, a) for compatible pairs:
+    f(3, 1) =         12, 2^1*f =           24
+    f(3, 2) =          6, 2^2*f =           24
+
+  E[H^2] = 48 / 16 = 3
+  E[H] = 3/2
+  Var(H) = 3/4
+  Var(H) = 3/4
+  Numerator factors: [3]
+
+  Compatible pair count: 18 / 36
+  = 1/2
+
+============================================================
+  n = 4
+============================================================
+  (agree, conflict) distribution:
+    agree=0, conflict=0: count=48
+    agree=0, conflict=1: count=120
+    agree=0, conflict=2: count=72
+    agree=0, conflict=3: count=24
+    agree=1, conflict=0: count=120
+    agree=1, conflict=1: count=96
+    agree=2, conflict=0: count=72
+    agree=3, conflict=0: count=24
+
+  f(4, a) for compatible pairs:
+    f(4, 0) =         48, 2^0*f =           48
+    f(4, 1) =        120, 2^1*f =          240
+    f(4, 2) =         72, 2^2*f =          288
+    f(4, 3) =         24, 2^3*f =          192
+
+  E[H^2] = 768 / 64 = 12
+  E[H] = 3
+  Var(H) = 3
+  Var(H) = 3/1
+  Numerator factors: [3]
+
+  Compatible pair count: 264 / 576
+  = 11/24
+
+============================================================
+  n = 5
+============================================================
+  (agree, conflict) distribution:
+    agree=0, conflict=0: count=1680
+    agree=0, conflict=1: count=2400
+    agree=0, conflict=2: count=1680
+    agree=0, conflict=3: count=480
+    agree=0, conflict=4: count=120
+    agree=1, conflict=0: count=2400
+    agree=1, conflict=1: count=2400
+    agree=1, conflict=2: count=480
+    agree=2, conflict=0: count=1680
+    agree=2, conflict=1: count=480
+    agree=3, conflict=0: count=480
+    agree=4, conflict=0: count=120
+
+  f(5, a) for compatible pairs:
+    f(5, 0) =       1680, 2^0*f =         1680
+    f(5, 1) =       2400, 2^1*f =         4800
+    f(5, 2) =       1680, 2^2*f =         6720
+    f(5, 3) =        480, 2^3*f =         3840
+    f(5, 4) =        120, 2^4*f =         1920
+
+  E[H^2] = 18960 / 256 = 1185/16
+  E[H] = 15/2
+  Var(H) = 285/16
+  Var(H) = 285/16
+  Numerator factors: [3, 5, 19]
+
+  Compatible pair count: 6360 / 14400
+  = 53/120
+
+============================================================
+  n = 6
+============================================================
+  (agree, conflict) distribution:
+    agree=0, conflict=0: count=64800
+    agree=0, conflict=1: count=82800
+    agree=0, conflict=2: count=51840
+    agree=0, conflict=3: count=18720
+    agree=0, conflict=4: count=3600
+    agree=0, conflict=5: count=720
+    agree=1, conflict=0: count=82800
+    agree=1, conflict=1: count=80640
+    agree=1, conflict=2: count=24480
+    agree=1, conflict=3: count=2880
+    agree=2, conflict=0: count=51840
+    agree=2, conflict=1: count=24480
+    agree=2, conflict=2: count=2880
+    agree=3, conflict=0: count=18720
+    agree=3, conflict=1: count=2880
+    agree=4, conflict=0: count=3600
+    agree=5, conflict=0: count=720
+
+  f(6, a) for compatible pairs:
+    f(6, 0) =      64800, 2^0*f =        64800
+    f(6, 1) =      82800, 2^1*f =       165600
+    f(6, 2) =      51840, 2^2*f =       207360
+    f(6, 3) =      18720, 2^3*f =       149760
+    f(6, 4) =       3600, 2^4*f =        57600
+    f(6, 5) =        720, 2^5*f =        23040
+
+  E[H^2] = 668160 / 1024 = 1305/2
+  E[H] = 45/2
+  Var(H) = 585/4
+  Var(H) = 585/4
+  Numerator factors: [3, 3, 5, 13]
+
+  Compatible pair count: 222480 / 518400
+  = 103/240
+
+============================================================
+  n = 7
+============================================================
+  (agree, conflict) distribution:
+    agree=0, conflict=0: count=3255840
+    agree=0, conflict=1: count=3981600
+    agree=0, conflict=2: count=2353680
+    agree=0, conflict=3: count=846720
+    agree=0, conflict=4: count=206640
+    agree=0, conflict=5: count=30240
+    agree=0, conflict=6: count=5040
+    agree=1, conflict=0: count=3981600
+    agree=1, conflict=1: count=3709440
+    agree=1, conflict=2: count=1391040
+    agree=1, conflict=3: count=241920
+    agree=1, conflict=4: count=20160
+    agree=2, conflict=0: count=2353680
+    agree=2, conflict=1: count=1391040
+    agree=2, conflict=2: count=241920
+    agree=2, conflict=3: count=20160
+    agree=3, conflict=0: count=846720
+    agree=3, conflict=1: count=241920
+    agree=3, conflict=2: count=20160
+    agree=4, conflict=0: count=206640
+    agree=4, conflict=1: count=20160
+    agree=5, conflict=0: count=30240
+    agree=6, conflict=0: count=5040
+
+  f(7, a) for compatible pairs:
+    f(7, 0) =    3255840, 2^0*f =      3255840
+    f(7, 1) =    3981600, 2^1*f =      7963200
+    f(7, 2) =    2353680, 2^2*f =      9414720
+    f(7, 3) =     846720, 2^3*f =      6773760
+    f(7, 4) =     206640, 2^4*f =      3306240
+    f(7, 5) =      30240, 2^5*f =       967680
+    f(7, 6) =       5040, 2^6*f =       322560
+
+  E[H^2] = 32004000 / 4096 = 1000125/128
+  E[H] = 315/4
+  Var(H) = 206325/128
+  Var(H) = 206325/128
+  Numerator factors: [3, 3, 5, 5, 7, 131]
+
+  Compatible pair count: 10679760 / 25401600
+  = 2119/5040

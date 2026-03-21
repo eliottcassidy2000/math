@@ -1,0 +1,105 @@
+========================================================================
+  OCR EXACT RATIONAL INVESTIGATION
+  kind-pasteur-2026-03-21-S16
+========================================================================
+
+========================================================================
+  EXACT ANALYSIS AT n=5
+========================================================================
+  m = 10, total tournaments = 1024
+  sum(H) = 7680
+  sum(S2) = 5120
+  sum(H^2) = 75840
+  sum(S2^2) = 33280
+  sum(H*S2) = 26880
+
+  R^2(S2, H) = 18 / 19
+  1 - R^2 = 1 / 19
+  OCR = 0.9473684211
+
+  Mean H = 15/2 = 7.500000
+  Expected random = 5! / 2^4 = 7
+
+  R^2(c3, H) = 18 / 19
+  (Should equal R^2(S2, H) since S2 = -2c3 + const)
+
+  Residual = H - (1+2c3):
+  sum(res) = 1536
+  Var(res)*N^2 = 2949120
+  Var(res)/Var(H) = 3/19
+
+  Directed 5-cycle count c5d:
+    sum(c5d) = 768
+    c5d values: [0, 1, 2, 3]
+    Correlation(res, c5d):
+    R^2(residual, c5d) = 1 = 1.000000
+    EXACT: residual = 2*c5d!
+
+  Computing full alpha_1, alpha_2 for 5...
+  OCF H = 1 + 2*alpha1 + 4*alpha2 EXACT at n=5! (0 mismatches)
+  alpha1 - c3 (= directed 5-cycles at n=5):
+    values: [0, 1, 2, 3]
+  CONFIRMED: residual = 2*(alpha1-c3) + 4*alpha2 EXACTLY
+
+  FINAL DECOMPOSITION:
+  H = 1 + 2*c3 + 2*(alpha1-c3) + 4*alpha2 + ...
+      = [score-determined] + [5-cycle excess] + [disjoint pairs] + ...
+  R^2(c3, H) = 18/19 = 0.9473684211
+  1 - R^2 = 1/19 = 0.0526315789
+
+========================================================================
+  EXACT ANALYSIS AT n=6
+========================================================================
+  m = 15, total tournaments = 32768
+  sum(H) = 737280
+  sum(S2) = 229376
+  sum(H^2) = 21381120
+  sum(S2^2) = 2097152
+  sum(H*S2) = 3686400
+
+  R^2(S2, H) = 12 / 13
+  1 - R^2 = 1 / 13
+  OCR = 0.9230769231
+
+  Mean H = 45/2 = 22.500000
+  Expected random = 6! / 2^5 = 22
+
+  R^2(c3, H) = 12 / 13
+  (Should equal R^2(S2, H) since S2 = -2c3 + const)
+
+  Residual = H - (1+2c3):
+  sum(res) = 376832
+  Var(res)*N^2 = 76504104960
+  Var(res)/Var(H) = 19/39
+
+  Computing full alpha_1, alpha_2 for 6...
+  OCF H = 1 + 2*alpha1 + 4*alpha2 EXACT at n=6! (0 mismatches)
+  alpha1 - c3 (= directed 5-cycles at n=6):
+    values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
+  CONFIRMED: residual = 2*(alpha1-c3) + 4*alpha2 EXACTLY
+
+  FINAL DECOMPOSITION:
+  H = 1 + 2*c3 + 2*(alpha1-c3) + 4*alpha2 + ...
+      = [score-determined] + [5-cycle excess] + [disjoint pairs] + ...
+  R^2(c3, H) = 12/13 = 0.9230769231
+  1 - R^2 = 1/13 = 0.0769230769
+
+========================================================================
+  SUMMARY: THE EXACT OCR SEQUENCE
+========================================================================
+
+  n=3: OCR = 1 = 1/1
+  n=4: OCR = 1 = 1/1
+  n=5: OCR = 18/19
+  n=6: OCR = 12/13
+  n=7: OCR = ? (need exact computation)
+  n=8: OCR = ? (need exact or high-precision sampling)
+
+  Denominators: 1, 1, 19, 13, ?, ?
+  Numerators:   1, 1, 18, 12, ?, ?
+
+  19 = 2*C(5,2) - 1 = 2*10 - 1
+  13 = C(6,2) - 2 = 15 - 2
+  Or: 19 = 4*5-1, 13 = 2*7-1
+  Or: 1-OCR = 1/19, 1/13
+  Differences of denominators: 13-19 = -6 = -C(4,2)

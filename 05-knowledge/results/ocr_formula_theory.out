@@ -1,0 +1,177 @@
+========================================================================
+  OCR FORMULA: THEORETICAL DERIVATION
+  kind-pasteur-2026-03-21-S16
+========================================================================
+
+========================================================================
+  n = 3
+========================================================================
+  E[H] = 3/2 = 1.500000
+  E[c3] = 1/4 = 0.250000
+  Var(H) = 3/4 = 0.750000
+  Var(c3) = 3/16 = 0.187500
+  Cov(H, c3) = 3/8 = 0.375000
+  R^2(c3, H) = 1
+
+  Test: Cov(H, c3) = 2*Var(c3)?
+    2*Var(c3) = 3/8
+    Cov(H,c3) = 3/8
+    Equal: True
+
+  CONFIRMED: epsilon is uncorrelated with c3!
+  R^2 = 4*Var(c3) / Var(H) = 1
+  Var(epsilon) = Var(H) - 4*Var(c3) = 0
+  Var(epsilon)/Var(H) = 0
+
+  epsilon = H - 1 - 2*c3:
+    E[eps] = 0
+    Var(eps) = 0
+    Cov(eps, c3) = 0 (should be 0)
+
+  Theoretical E[c3] = C(n,3)/4 = 1/4
+  Match: True
+
+  Theoretical Var(c3):
+    n_triples = 1
+    edge-sharing pairs = 0
+    Var(c3) = 1*3/16 + 2*0*3/16
+            = 3/16 = 0.187500
+    Actual:   3/16 = 0.187500
+    Match: True
+
+========================================================================
+  n = 4
+========================================================================
+  E[H] = 3 = 3.000000
+  E[c3] = 1 = 1.000000
+  Var(H) = 3 = 3.000000
+  Var(c3) = 3/4 = 0.750000
+  Cov(H, c3) = 3/2 = 1.500000
+  R^2(c3, H) = 1
+
+  Test: Cov(H, c3) = 2*Var(c3)?
+    2*Var(c3) = 3/2
+    Cov(H,c3) = 3/2
+    Equal: True
+
+  CONFIRMED: epsilon is uncorrelated with c3!
+  R^2 = 4*Var(c3) / Var(H) = 1
+  Var(epsilon) = Var(H) - 4*Var(c3) = 0
+  Var(epsilon)/Var(H) = 0
+
+  epsilon = H - 1 - 2*c3:
+    E[eps] = 0
+    Var(eps) = 0
+    Cov(eps, c3) = 0 (should be 0)
+
+  Theoretical E[c3] = C(n,3)/4 = 1
+  Match: True
+
+  Theoretical Var(c3):
+    n_triples = 4
+    edge-sharing pairs = 6
+    Var(c3) = 4*3/16 + 2*6*3/16
+            = 3 = 3.000000
+    Actual:   3/4 = 0.750000
+    Match: False
+
+========================================================================
+  n = 5
+========================================================================
+  E[H] = 15/2 = 7.500000
+  E[c3] = 5/2 = 2.500000
+  Var(H) = 285/16 = 17.812500
+  Var(c3) = 15/8 = 1.875000
+  Cov(H, c3) = 45/8 = 5.625000
+  R^2(c3, H) = 18/19
+
+  Test: Cov(H, c3) = 2*Var(c3)?
+    2*Var(c3) = 15/4
+    Cov(H,c3) = 45/8
+    Equal: False
+    Difference: 15/8
+
+  Theoretical E[c3] = C(n,3)/4 = 5/2
+  Match: True
+
+  Theoretical Var(c3):
+    n_triples = 10
+    edge-sharing pairs = 30
+    Var(c3) = 10*3/16 + 2*30*3/16
+            = 105/8 = 13.125000
+    Actual:   15/8 = 1.875000
+    Match: False
+
+========================================================================
+  n = 6
+========================================================================
+  E[H] = 45/2 = 22.500000
+  E[c3] = 5 = 5.000000
+  Var(H) = 585/4 = 146.250000
+  Var(c3) = 15/4 = 3.750000
+  Cov(H, c3) = 45/2 = 22.500000
+  R^2(c3, H) = 12/13
+
+  Test: Cov(H, c3) = 2*Var(c3)?
+    2*Var(c3) = 15/2
+    Cov(H,c3) = 45/2
+    Equal: False
+    Difference: 15
+
+  Theoretical E[c3] = C(n,3)/4 = 5
+  Match: True
+
+  Theoretical Var(c3):
+    n_triples = 20
+    edge-sharing pairs = 90
+    Var(c3) = 20*3/16 + 2*90*3/16
+            = 75/2 = 37.500000
+    Actual:   15/4 = 3.750000
+    Match: False
+
+========================================================================
+  KEY FORMULA: Var(c3) = 3*(C(n,3) + 2*C(n,2)*C(n-2,2)) / 16
+========================================================================
+
+  n=3: Var(c3) = 3/16, 4*Var(c3) = 3/4
+    Inner formula: 1, 3/16 * inner = 3/16
+    Match: True
+  n=4: Var(c3) = 3, 4*Var(c3) = 12
+    Inner formula: 16, 3/16 * inner = 3
+    Match: True
+  n=5: Var(c3) = 105/8, 4*Var(c3) = 105/2
+    Inner formula: 70, 3/16 * inner = 105/8
+    Match: True
+  n=6: Var(c3) = 75/2, 4*Var(c3) = 150
+    Inner formula: 200, 3/16 * inner = 75/2
+    Match: True
+  n=7: Var(c3) = 1365/16, 4*Var(c3) = 1365/4
+    Inner formula: 455, 3/16 * inner = 1365/16
+    Match: True
+  n=8: Var(c3) = 168, 4*Var(c3) = 672
+    Inner formula: 896, 3/16 * inner = 168
+    Match: True
+  n=9: Var(c3) = 1197/4, 4*Var(c3) = 1197
+    Inner formula: 1596, 3/16 * inner = 1197/4
+    Match: True
+
+========================================================================
+  COMPUTING Var(H) FOR RANDOM TOURNAMENTS
+========================================================================
+
+  n=3: E[H] = 3/2, Var(H) = 3/4
+    4*Var(c3) = 3/4
+    R^2 = 4*Var(c3)/Var(H) = 1
+
+  n=4: E[H] = 3, Var(H) = 3
+    4*Var(c3) = 12
+    R^2 = 4*Var(c3)/Var(H) = 4
+
+  n=5: E[H] = 15/2, Var(H) = 285/16
+    4*Var(c3) = 105/2
+    R^2 = 4*Var(c3)/Var(H) = 56/19
+
+  n=6: E[H] = 45/2, Var(H) = 585/4
+    4*Var(c3) = 150
+    R^2 = 4*Var(c3)/Var(H) = 40/39
+

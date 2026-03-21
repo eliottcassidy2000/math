@@ -1,0 +1,29 @@
+OCR(7) EXACT COMPUTATION
+Enumerating all 2097152 tournaments on 7 vertices...
+
+  1048576/2097152 (50.0%)
+
+Done. Results:
+
+  sum(H)    = 165150720
+  sum(S2)   = 22020096
+  sum(H^2)  = 16386048000
+  sum(S2^2) = 286261248
+  sum(H*S2) = 1321205760
+
+  N*Cov(H,S2) = -865865406873600
+  N^2*Var(S2) = 115448720916480
+  N^2*Var(H)  = 7089273018777600
+
+  R^2(S2, H) = 0.916030534351
+  1 - R^2    = 0.083969465649
+
+  Mean H = 165150720 / 2097152 = 78.750000
+  Expected = 7!/2^6 = 78
+
+  H spectrum gaps in [1..50]: 7 21
+
+  Max H tournament count: H=189 -> 240 tournaments
+  H=171 -> 1680, H=175 -> 720
+
+  Regular tournament H distribution:

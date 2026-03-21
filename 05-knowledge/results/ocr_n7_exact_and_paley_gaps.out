@@ -1,0 +1,92 @@
+========================================================================
+  INVESTIGATION 1: OCR(7) EXACT
+========================================================================
+  Enumerating all 2,097,152 tournaments on n=7 vertices...
+    500,000/2,097,152 (23.8%) elapsed 106s, remaining ~339s
+    1,000,000/2,097,152 (47.7%) elapsed 214s, remaining ~235s
+    1,500,000/2,097,152 (71.5%) elapsed 321s, remaining ~128s
+    2,000,000/2,097,152 (95.4%) elapsed 429s, remaining ~21s
+  Done in 449.5s (4665 tournaments/sec)
+
+  EXACT R^2(S2, H) = 120 / 131
+  1 - R^2 = 11 / 131
+  OCR(7) = 0.916030534351
+
+  Mean H = 315/4 = 78.750000
+  Expected random = 78
+
+  THE EXACT OCR SEQUENCE:
+  n=3: OCR = 1/1
+  n=4: OCR = 1/1
+  n=5: OCR = 18/19
+  n=6: OCR = 12/13
+  n=7: OCR = 120/131
+
+  Denominators: [1, 1, 19, 13, 131]
+  1-OCR denominators: [1, 1, 19, 13, 131]
+
+  Pattern checks for denominator sequence:
+  1-OCR(7) = 11/131
+
+========================================================================
+  INVESTIGATION 2: PERMANENT GAPS VIA OCF DECOMPOSITION
+========================================================================
+
+  H=7 requires a1+2a2+4a3+...=3
+  Possible (a1,a2): (3,0), (1,1)
+  H=21 requires a1+2a2+4a3+...=10
+  Possible: (10,0), (8,1), (6,2), (4,3), (2,4), (0,5)
+
+  Computing (alpha_1, alpha_2) distribution at n=7...
+  (Using score-class sampling for speed)
+  Re-scanning for c3-H distribution...
+
+  c3 -> H distribution (showing H values near 7 and 21):
+    c3=  0: H in [1, 1], 1 distinct values
+    c3=  1: H in [3, 3], 1 distinct values
+    c3=  2: H in [5, 9], 2 distinct values
+    c3=  3: H in [9, 15], 2 distinct values
+    c3=  4: H in [11, 17], 4 distinct values
+    c3=  5: H in [15, 33], 8 distinct values
+    c3=  6: H in [23, 51], 10 distinct values
+    c3=  7: H in [33, 69], 11 distinct values
+    c3=  8: H in [41, 93], 18 distinct values
+    c3=  9: H in [51, 123], 18 distinct values
+    c3= 10: H in [69, 135], 17 distinct values
+    c3= 11: H in [99, 135], 13 distinct values
+    c3= 12: H in [121, 145], 12 distinct values
+    c3= 13: H in [147, 159], 6 distinct values
+    c3= 14: H in [171, 189], 3 distinct values
+
+  Full H spectrum at n=7 (confirming gaps):
+  77 distinct H values
+  Gaps in [1..50]: 7 21 
+
+========================================================================
+  INVESTIGATION 3: PALEY MAXIMIZER ANALYSIS
+========================================================================
+
+  Max H at n=7: 189
+  Number of max-H tournaments: 240
+  H(Paley T_7) = 189
+  Paley achieves max: True
+  Paley scores: (3, 3, 3, 3, 3, 3, 3)
+  Paley c3: 14
+
+  Regular tournaments (all scores 3): 2640
+  Regular H distribution: {175: 720, 171: 1680, 189: 240}
+  Paley ratio: 240 / 2640 = 0.0909 of regular tournaments achieve max H
+
+========================================================================
+  SYNTHESIS: THE OCR FORMULA
+========================================================================
+
+  THEORETICAL E[H^2] COMPUTATION:
+  E[H^2] = sum_{sigma,tau in S_n} 2^{-|E(sigma) union E(tau)|}
+  where E(sigma) = arcs used by permutation sigma as a HP
+
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\ocr_n7_exact_and_paley_gaps.py", line 330, in <module>
+    perms = list(permutations(range(n_th)))
+                 ^^^^^^^^^^^^
+NameError: name 'permutations' is not defined
