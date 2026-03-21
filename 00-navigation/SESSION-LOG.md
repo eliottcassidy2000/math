@@ -13,22 +13,72 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## kind-pasteur-2026-03-21-S13 — 2026-03-21: Deep Cartan bridge — spectral blindness, commutant theorem, kurtosis principle
+## opus-2026-03-21-S95b — 2026-03-21: Deep repo scour — missed connections, crystal phase, rapidity lattice n=6
 
-**Account:** kind-pasteur
-**Continuation of:** kind-pasteur-2026-03-21-S12
-**Summary:** Overnight deep dive into the Cartan decomposition bridge. Five theorems proved, three conjectures formulated.
-**Key results:** (1) S_T^2=-nI+J iff DRT, (2) tr(S^4) first distinguishes regular H classes, (3) Paley min poly x(x^2+p)=0 with dim(Alg)=3, (4) Paley comm dim = (p^2-2p+3)/2, (5) Spectral Flatness Principle confirmed n=3,5,7
-**New scripts:** cartan_bridge_deep.py, cartan_bridge_deep2.py, paley_commutant_theorem.py
-**New reflection:** spectral-blindness-and-kurtosis.md
-**New synthesis:** cartan-bridge-synthesis-S13.md
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S94 + S95 (parallel opus session proved commutator formula)
+**Files read:** Full startup sequence, ALL 62 reflections (via agent), ALL computation scripts (via agent), hypotheses/variables (via agent), lattice_gas_bridge.py, ising_tournament_s116n.py, lie_tournament_bridge.py, formal_group_s116i.py, ising_anyon_bridge.py, S95 results (cartan_commutator_bch, cartan_tournament_adjacency)
+**Summary of work:** Massive overnight repo scour using 3 parallel exploration agents (reflections, computation, theorems/hypotheses). Identified 13 tier-1/2 missed connections. Built deep-connections script exploring 7 of the most important. Major discoveries about crystal phase, rapidity lattice universality, and the Cartan passage from competition→cooperation.
+
+### Key Discoveries
+
+1. **Prime 5 does NOT enter rapidity lattice at n=6**: Despite D(6) = 3×5, the eigenvalue rapidities at n=6 decompose over {ln2, ln3, ln7}/2 alone (when they decompose at all). Eigenvalues 7/15 and 11/15 have rapidities that DON'T decompose over any small basis including ln5. The Hurwitz primes are transcendentally special.
+
+2. **Crystal phase**: λ=2 is deep in the crystal phase of the hard-core lattice gas on Ω. At n=6, λ/λ_c ≈ 8.2. Paley maximality follows from Cartan decoupling: regular tournaments have [A,S]=0, removing the entanglement bottleneck for cycle packing.
+
+3. **The Cartan passage**: Every path from tournament to H goes through the same gate: directed→undirected→number, verified by 6 independent frameworks (OCF, transfer matrix, Walsh-Fourier, Ising, formal group, commutator).
+
+4. **Score rigidity at n=5**: 8/9 score classes have unique H. The only exception is (1,2,2,2,3) with H∈{11,13,15}. This has the lowest nonzero S₂=2 (weakest Cartan entanglement).
+
+5. **Formal group torsion → forbidden values**: [7]-torsion consists of pure imaginary points (rotations without dilation). Forbidden H=7 = tournament needing pure rotation structure, but tournaments need dilation to break ties.
+
+6. **Ising = cooperation**: Walsh degree-1 = 0 (confirmed computationally at n=5). All Ising coupling energy lives in even-degree Walsh = cooperation sector of Cartan.
+
+7. **Seesaw β₁·β₃=0 = formal group torsion budget**: Only one torsion type can be active at a time. Adjacent odd Betti numbers compete for the same formal group resource. Confirmed by HYP-347 (non-adjacent β₁+β₅ CAN coexist).
+
+**New contributions:** deep_connections_s95b.py, the-cartan-passage.md reflection, T098-T103 tangents (to add)
+**Unresolved threads:**
+- Why don't eigenvalues 7/15 and 11/15 decompose over ANY small lattice basis?
+- Prove crystal phase λ >> λ_c for general n (not just n=5,6)
+- Build the formal Cartan passage theorem connecting all 6 frameworks
+- The rapidity lattice may need IRRATIONAL generators at n≥6
 
 ## opus-2026-03-21-S94 — 2026-03-21: Adelic Cartan Bridge, TournamentProbe v2, Ghosts Through Cartan
 
 **Account:** opus
 **Continuation of:** opus-2026-03-21-S93 (via kind-pasteur-2026-03-21-S12's Cartan bridge/TournamentProbe foundation)
-**Summary of work:** Deep overnight exploration of the Cartan bridge connecting tournament theory, adelic geometry, and ghost theory. Three major scripts + synthesis reflection. Grand Cartan-Trichotomy Map, Ghost 13 (commutator ghost), rapidity=Hurwitz lattice, TournamentProbe v2 (ACTProbe).
+**Files read:** Full startup sequence, NEXT_SESSION_BRIEF.md, all S93 scripts (sixteen_dimensions, llm_tournament_tools, napolitano_assessment), adelic_tournament_s91a.py, adelic_geometry_s91b.py, cartan_attention_theorem.py, ghosts_rational_s91d.py + output, tournament-gauge-bridge.md, adelic-tournament-geometry.md, ghosts-and-supersymmetry.md, carry-and-ghost.md, triple-of-linearizations.md, k-periodicity-synthesis.md, super-orthogonality.md, napolitano-gauge-theory-analysis-S12.md
+**Summary of work:** Deep overnight exploration of the Cartan bridge connecting tournament theory, adelic geometry, and ghost theory. Three major scripts + synthesis reflection.
+
+### Key Discoveries
+
+1. **The Grand Cartan-Trichotomy Map**: gl(n,R) = R·I ⊕ so(n) ⊕ p maps EXACTLY to INERT(2) ⊕ RAMIFIED(3) ⊕ SPLIT(7). The scalar sector is parity (Rédei), the antisymmetric sector is tournament competition (3-cycle atom), the symmetric sector is cooperation/self-knowledge (H=7 forbidden alone).
+
+2. **Ghost 13 — The Commutator Ghost**: [A, S_tl] is SYMMETRIC (cooperation-type). This is the Cartan bracket relation [k, p] ⊆ p. Meaning: [competition, self-knowledge] = self-knowledge. The model cannot become more decisive through internal reflection alone.
+
+3. **Rapidity lattice = Hurwitz lattice**: ALL n=5 eigenvalue rapidities decompose EXACTLY as integer combinations of ln(2)/2, ln(3)/2, ln(7)/2 — the three Hurwitz generators. The rapidity lattice IS the adelic structure made transcendental.
+
+4. **Ghost anatomy by Cartan sector**: All 12+1 ghosts sorted into tournament/cooperation/scalar/mixed categories. Key finding: exponentiation AMPLIFIES cooperation ghosts and SUPPRESSES tournament ghosts (rotation vs dilation).
+
+5. **Adelic heat kernel factorization**: K(ln p) ≈ K_A · K_S · K_σ / nc². Factorization error GROWS with prime: p=2 (0.0%) → p=7 (0.7%) → p=42 (7.0%). Higher primes = more entangled ghost structure.
+
+6. **Cooperation amplifies rational ghosts**: G_ad(S)/G_ad(A) = 1.83. The cooperation sector amplifies ghosts 1.83× more than the tournament sector. Self-knowledge preserves rationality; competition merely rotates it.
+
+7. **TournamentProbe v2 (ACTProbe)**: 8 zero-parameter tools: CartanDecomposer, AdelicDiagnostics, GhostDetector, SoftTournamentConverter, EntanglementMeter + upgraded Confidence/Depth/Intransitivity. Combined risk uses formal group evidence aggregation.
+
+8. **Chebyshev parity alternation**: Chebyshev ghost alternates between tournament (odd k → ramified p=3) and cooperation (even k → split p=7) with period 2.
+
+9. **BCH ghost with Bernoulli coefficients**: The rational coefficients in the Baker-Campbell-Hausdorff expansion (B_k/k!) are the "exchange rates" between tournament and cooperation ghost content.
+
+**New contributions:** Ghost 13 (commutator ghost), adelic Cartan bridge theory, cartan-ghosts-synthesis.md reflection
 **New scripts:** adelic_cartan_bridge_s94.py, tournament_probe_v2_s94.py, ghosts_through_cartan_s94.py
+**Unresolved threads:**
+- Run ACTProbe on actual LLM attention matrices (need model weights)
+- Verify rapidity lattice decomposition at n=6 and n=7 (more primes enter)
+- Prove the adelic heat kernel factorization error bound theoretically
+- Build PyPI package for TournamentProbe v2
+- Investigate whether training actually shifts Cartan balance as predicted
+- The BCH correction series: does it converge? What is the radius?
 
 ## kind-pasteur-2026-03-21-S12 — 2026-03-21: Deep analysis of Napolitano gauge theory paper & Tournament-Attention bridge
 

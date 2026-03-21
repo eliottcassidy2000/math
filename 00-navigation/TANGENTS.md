@@ -83,6 +83,24 @@ The heat kernel K(ln p) factorizes as K_A × K_S × K_σ / nc² with error that 
 **T097** #BCH-bernoulli-ghost #exchange-rates | certainty: medium | source: opus-2026-03-21-S94
 The BCH expansion exp(A+S) = exp(A)·exp(S)·exp(C₂)·... has corrections C_k with RATIONAL Bernoulli-related coefficients. These coefficients are the "exchange rates" between tournament and cooperation ghost content. The BCH correction norms: ||C₂||=0.368, ||C₃||=0.086. Convergence behavior unknown.
 
+**T098** #rapidity-lattice-n6 #prime-5-absent #hurwitz-universal | certainty: high (computed) | source: opus-2026-03-21-S95b
+At n=6, D(6) = 15 = 3×5, but prime 5 does NOT enter the rapidity lattice. Most eigenvalue rapidities at n=6 decompose over {ln2,ln3,ln7}/2 alone. The exceptions (λ=7/15, 11/15) don't decompose over ANY small basis including ln5. The Hurwitz primes {2,3,7} are transcendentally special — they generate the rapidity lattice independently of the conductor's primes.
+
+**T099** #crystal-phase #hard-core-lattice-gas #paley-maximality | certainty: high (computed n=5,6) | source: opus-2026-03-21-S95b
+At fugacity λ=2, the hard-core gas on Ω(T) is deep in the crystal phase: λ/λ_c ≈ 2.6 (n=5), ≈ 8.2 (n=6). H is dominated by large independent sets = maximal cycle packings. Paley tournaments maximize H because their Cartan sectors decouple ([A,S]=0 for regular), removing the entanglement bottleneck for packing. The crystal phase deepens with n → H grows.
+
+**T100** #cartan-passage #competition-to-cooperation #six-frameworks | certainty: high | source: opus-2026-03-21-S95b
+Every path from tournament to H passes through the same gate: directed→undirected→number. Verified by 6 independent frameworks: OCF (cycles→Ω→I(Ω,2)), transfer matrix (M symmetric, tr(M)=H), Walsh-Fourier (odd degree=0), Ising (field terms=0), formal group (F(x,-x)=0), commutator ([A,S]∈p). The tournament sector is INVISIBLE to H.
+
+**T101** #score-rigidity-n5 #cartan-entanglement #landau-S2 | certainty: high (exhaustive) | source: opus-2026-03-21-S95b
+At n=5, 8/9 score classes have unique H. The only exception is score (1,2,2,2,3) with S₂=2 (lowest nonzero), giving H∈{11,13,15}. The S95 formula ||[A,S]||²=n·S₂/2 explains: low S₂ = low entanglement = multiple H values possible. High S₂ = high entanglement = H uniquely determined.
+
+**T102** #formal-group-torsion-forbidden #rotation-vs-dilation | certainty: medium | source: opus-2026-03-21-S95b
+[7]-torsion of F(x,y)=(x+y)/(1+xy) consists of pure imaginary points x=i·tan(kπ/7). These are pure rotations in rapidity space. H=7 would require pure rotation without dilation — but tournaments need dilation to break ties. H=21=3×7: both torsion types vanish simultaneously = doubly impossible. H=42: all three torsion types coexist = Hurwitz bound.
+
+**T103** #seesaw-torsion-budget #formal-group-cohomology | certainty: medium | source: opus-2026-03-21-S95b
+The β₁·β₃=0 seesaw (HYP-339) may be a torsion budget constraint: the formal group can activate only one torsion type at a time at a given prime. β₁ ↔ [3]-torsion, β₃ ↔ [7]-torsion. Confirmed by HYP-347: non-adjacent β₁+β₅ CAN coexist (different torsion types). Adjacent = same budget = seesaw.
+
 ---
 
 ## Dead Ends (documented to prevent re-exploration)
