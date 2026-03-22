@@ -13,6 +13,37 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S188-S210 MARATHON — 2026-03-22: Next Session Brief
+
+**NEXT SESSION SHOULD:**
+1. Pull from kind-pasteur (S20bo-S20bp+ for latest practical ideas)
+2. Extend the 10-lens G_5 framework PRACTICALLY: build tools, libraries, ranking algorithms
+3. Key practical targets:
+   - CD diagnostic CLI tool (input: n, p, c → output: CD level, method, accuracy)
+   - Tournament ranking library with Pochhammer-calibrated quality bounds
+   - Quaternion attention head implementation (75% savings, validated concept)
+   - STS-based comparison scheduling optimizer
+   - Tournament JPEG integration with kind-pasteur's codec
+4. Submit new OEIS sequences: fiber components (3,18,117,1018), isolated tournaments (2,16,64,368)
+5. Test STS-H_max conjecture at n=9 by trying ALL orientations of AG(2,3)
+6. Extend G_n computation to n=6 with all 10 lens invariants
+
+**KEY DISCOVERIES THIS MARATHON (S188-S210):**
+- H_max(7) = 189 = Fano = QR_7 = octonion multiplication (S194, S206)
+- f(n) = (1/2)_{n-2}/(n-2)! = Pochhammer (S196), π emerges (S197)
+- 13 hidden circles (S198), deep Buffon (S199)
+- Z/2Z synthesis with kind-pasteur (S200)
+- G_5 planar with icosahedral f-vector (S201)
+- Permutohedron = score polytope, 4-level hierarchy (S202)
+- Interchange graph: Q_I not complete, G_5+ non-planar (S203-S204)
+- 24-cell = regular tournaments, D_4 triality (S205)
+- CD ladder as universal diagnostic (S206-S207)
+- Steiner triple systems: STS-H_max fails at n=9 (S208)
+- Jensen unifies everything: Schur concavity, phase transitions (S209)
+- G_5 through 10 lenses: the Rosetta Stone (S210)
+
+---
+
 ## opus-2026-03-22-S204 — 2026-03-22: Platonic Solids and Creative Interchange
 
 **Account:** opus
