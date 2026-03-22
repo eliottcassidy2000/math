@@ -1,0 +1,176 @@
+========================================================================
+  TOWARD PROVING SRCP DETERMINES H
+  kind-pasteur-2026-03-21-S19
+========================================================================
+
+========================================================================
+  PART 1: ANATOMY OF n=6 FAILURES
+========================================================================
+
+  Found 3 failure profiles.
+
+  Profile: [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2]
+  H values: [13, 17], gap = 4
+
+    H = 13:
+      c3 count = 4, c5 count = 1
+      |V(Omega)| = 5, |E(Omega)| = 10
+      alpha = {0: 1, 1: 5}
+      alpha_2 = 0
+      OCF check: I(Omega,2) = 11 (should be 13)
+      c5 profile (sorted): [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      3-cycle vertex sets: [{0, 1, 3}, {0, 2, 4}, {0, 3, 4}, {1, 2, 3}]
+      5-cycle vertex sets: [{0, 1, 2, 3, 4}]
+
+    H = 17:
+      c3 count = 4, c5 count = 2
+      |V(Omega)| = 6, |E(Omega)| = 14
+      alpha = {0: 1, 1: 6, 2: 1}
+      alpha_2 = 1
+      OCF check: I(Omega,2) = 17 (should be 17)
+      c5 profile (sorted): [0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2]
+      3-cycle vertex sets: [{0, 1, 3}, {0, 3, 5}, {0, 4, 5}, {1, 2, 3}]
+      5-cycle vertex sets: [{0, 1, 2, 3, 5}, {0, 1, 3, 4, 5}]
+
+  Profile: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3]
+  H values: [25, 29], gap = 4
+
+    H = 25:
+      c3 count = 6, c5 count = 4
+      |V(Omega)| = 10, |E(Omega)| = 45
+      alpha = {0: 1, 1: 10}
+      alpha_2 = 0
+      OCF check: I(Omega,2) = 21 (should be 25)
+      c5 profile (sorted): [2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4]
+      3-cycle vertex sets: [{0, 1, 3}, {0, 2, 4}, {0, 2, 5}, {0, 3, 4}, {0, 3, 5}, {1, 2, 3}]
+      5-cycle vertex sets: [{0, 1, 2, 3, 4}, {0, 1, 2, 3, 5}, {0, 1, 3, 4, 5}, {0, 2, 3, 4, 5}]
+
+    H = 29:
+      c3 count = 6, c5 count = 5
+      |V(Omega)| = 11, |E(Omega)| = 54
+      alpha = {0: 1, 1: 11, 2: 1}
+      alpha_2 = 1
+      OCF check: I(Omega,2) = 27 (should be 29)
+      c5 profile (sorted): [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4]
+      3-cycle vertex sets: [{0, 1, 2}, {0, 1, 4}, {0, 2, 5}, {0, 3, 5}, {0, 4, 5}, {1, 3, 4}]
+      5-cycle vertex sets: [{0, 1, 2, 3, 4}, {0, 1, 2, 3, 5}, {0, 1, 2, 4, 5}, {0, 1, 3, 4, 5}, {0, 2, 3, 4, 5}]
+
+  Profile: [0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3]
+  H values: [33, 37], gap = 4
+
+    H = 33:
+      c3 count = 7, c5 count = 5
+      |V(Omega)| = 12, |E(Omega)| = 65
+      alpha = {0: 1, 1: 12, 2: 1}
+      alpha_2 = 1
+      OCF check: I(Omega,2) = 29 (should be 33)
+      c5 profile (sorted): [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4]
+      3-cycle vertex sets: [{0, 1, 3}, {0, 1, 5}, {0, 2, 3}, {0, 2, 4}, {0, 2, 5}, {1, 2, 4}, {1, 3, 4}]
+      5-cycle vertex sets: [{0, 1, 2, 3, 4}, {0, 1, 2, 3, 5}, {0, 1, 2, 4, 5}, {0, 1, 3, 4, 5}, {0, 2, 3, 4, 5}]
+
+    H = 37:
+      c3 count = 7, c5 count = 5
+      |V(Omega)| = 12, |E(Omega)| = 64
+      alpha = {0: 1, 1: 12, 2: 2}
+      alpha_2 = 2
+      OCF check: I(Omega,2) = 33 (should be 37)
+      c5 profile (sorted): [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4]
+      3-cycle vertex sets: [{0, 1, 5}, {0, 2, 4}, {0, 2, 5}, {0, 3, 4}, {0, 3, 5}, {1, 2, 4}, {1, 3, 4}]
+      5-cycle vertex sets: [{0, 1, 2, 3, 4}, {0, 1, 2, 3, 5}, {0, 1, 2, 4, 5}, {0, 1, 3, 4, 5}, {0, 2, 3, 4, 5}]
+
+========================================================================
+  PART 2: WHAT EXACTLY DIFFERS?
+========================================================================
+
+  Profile: [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2], H_low=13, H_high=17
+    c3 vertex sets match: False
+    c5 vertex sets: low has 1, high has 2
+    5-cycles in HIGH but not LOW: [{0, 1, 2, 3, 5}, {0, 1, 3, 4, 5}]
+    5-cycles in LOW but not HIGH: [{0, 1, 2, 3, 4}]
+    Number of arc flips between representatives: 3
+    Flipped arcs: [(0, 2), (0, 4), (0, 5)]
+
+  Profile: [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3], H_low=25, H_high=29
+    c3 vertex sets match: False
+    c5 vertex sets: low has 4, high has 5
+    5-cycles in HIGH but not LOW: [{0, 1, 2, 4, 5}]
+    5-cycles in LOW but not HIGH: []
+    Number of arc flips between representatives: 4
+    Flipped arcs: [(0, 4), (1, 2), (1, 3), (1, 4)]
+
+  Profile: [0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3], H_low=33, H_high=37
+    c3 vertex sets match: False
+    c5 vertex sets: low has 5, high has 5
+    Number of arc flips between representatives: 1
+    Flipped arcs: [(0, 3)]
+
+========================================================================
+  PART 3: DOES (c3,c5) DETERMINE OMEGA?
+========================================================================
+
+  Number of distinct (c3,c5) profiles: 31
+  Profiles with multiple Omega signatures: 1
+  Profiles with multiple H values: 1
+
+  (c3,c5) does NOT determine Omega! But does it still determine H?
+    Profile has 2 distinct Omegas, H values: [33, 37]
+
+========================================================================
+  PART 4: WHAT IS THE MINIMAL INVARIANT THAT DETERMINES H?
+========================================================================
+
+  Does the FULL independence polynomial I(Omega, x) determine H at n=6?
+  (Trivially yes: H = I(Omega, 2). But does the POLYNOMIAL determine the EVALUATION?)
+  Obviously yes. So the question is: does the SRCP determine I(Omega, x)?
+
+  Does (alpha_1, alpha_2) determine H at n=6? False
+    (alpha_1=5, alpha_2=0): H in [11, 13, 15]
+    (alpha_1=10, alpha_2=1): H in [29, 31]
+    (alpha_1=10, alpha_2=2): H in [29, 33, 37]
+    (alpha_1=12, alpha_2=1): H in [33, 37]
+    (alpha_1=14, alpha_2=1): H in [43, 45]
+
+  Does the full independence polynomial determine H? Always yes (H = I(Omega, 2)).
+  So the chain is: SRCP -> ? -> I(Omega, x) -> H.
+  Question 1: Does SRCP determine I(Omega, x)?
+  Question 2: What intermediate invariant does SRCP determine?
+
+========================================================================
+  SUMMARY: THE PROOF LANDSCAPE
+========================================================================
+
+  THE CHAIN: SRCP -> ? -> Omega -> I(Omega, x) -> H = I(Omega, 2)
+
+  WHAT WE KNOW:
+  1. c3-only SRCP determines alpha_1 (total 3-cycle count) at all n.
+     PROOF: alpha_1 = (1/3) * sum of c3 profile.
+  2. c3-only SRCP does NOT determine alpha_2 at n >= 6.
+     PROOF: the 3 failure profiles at n=6 (gap = 4 = one alpha_2).
+  3. (c3, c5) SRCP determines H at n=5, n=6 (exhaustive), n=7 (sampled).
+  4. The gap is always 4 = 2^2 at n=6: exactly one alpha_2 difference.
+
+  WHAT WE NEED TO PROVE:
+  A. (c3, c5) SRCP determines alpha_2 at n=6.
+     WHY: alpha_2 = number of vertex-disjoint cycle pairs.
+     The 5-cycle count per arc captures enough cycle overlap info
+     to distinguish alpha_2 values.
+
+  B. More generally: the full SRCP (c3, c5, ..., c_{n-2}) determines
+     the independence polynomial I(Omega, x), hence H.
+
+  PROOF STRATEGY:
+  Step 1: Show that the SRCP determines the DEGREE SEQUENCE of Omega.
+  Step 2: Show that for tournament conflict graphs, the degree sequence
+          determines the independence polynomial (this is special to
+          tournament Omega, not true for general graphs).
+  Step 3: Or alternatively, show that the SRCP determines Omega itself
+          (up to isomorphism), which trivially determines I(Omega, x).
+
+  THE KEY INSIGHT FROM THE n=6 ANATOMY:
+  The two tournaments with the same c3 profile but different H have
+  DIFFERENT 5-cycle vertex sets. The 5-cycle that appears in the
+  high-H tournament but not the low-H tournament is the one that
+  creates an additional INDEPENDENT pair in Omega (alpha_2 += 1).
+  Adding (c3, c5) per arc captures this because the extra 5-cycle
+  changes the c5 count on the arcs it passes through.
+
