@@ -1,0 +1,106 @@
+========================================================================
+  GRAY CODE TRAVERSAL OF TOURNAMENT SPACE
+========================================================================
+
+  n=3: m=3 arcs, 8 tournaments
+
+  H sequence along Gray code: [1, 1, 1, 3, 1, 1, 3, 1]
+  Deltas: [0, 0, 2, -2, 0, 2, -2]
+
+  H DISTRIBUTION along Gray code:
+    H=  1:     6 times  ######
+    H=  3:     2 times  ##
+
+  DELTA DISTRIBUTION (H change per arc flip):
+    delta=  -2:     2 times
+    delta=  +0:     3 times
+    delta=  +2:     2 times
+
+  Max H = 3 at step 3/8
+  Min H = 1 at step 0/8
+  All H odd: True (Redei)
+  All deltas even: True
+  Max |delta| = 2
+  Mean |delta| = 1.14
+  Autocorrelation (lag 1): -0.4286
+  (High autocorrelation = locality preservation)
+
+  n=4: m=6 arcs, 64 tournaments
+
+
+  H DISTRIBUTION along Gray code:
+    H=  1:    24 times  ########################
+    H=  3:    16 times  ################
+    H=  5:    24 times  ########################
+
+  DELTA DISTRIBUTION (H change per arc flip):
+    delta=  -4:     3 times
+    delta=  -2:    16 times
+    delta=  +0:    25 times
+    delta=  +2:    16 times
+    delta=  +4:     3 times
+
+  Max H = 5 at step 4/64
+  Min H = 1 at step 0/64
+  All H odd: True (Redei)
+  All deltas even: True
+  Max |delta| = 4
+  Mean |delta| = 1.40
+  Autocorrelation (lag 1): 0.4021
+  (High autocorrelation = locality preservation)
+
+  n=5: m=10 arcs, 1024 tournaments
+
+
+  H DISTRIBUTION along Gray code:
+    H=  1:   120 times  ########################################################################################################################
+    H=  3:   120 times  ########################################################################################################################
+    H=  5:   240 times  ################################################################################################################################################################################################################################################
+    H=  9:   240 times  ################################################################################################################################################################################################################################################
+    H= 11:   120 times  ########################################################################################################################
+    H= 13:   120 times  ########################################################################################################################
+    H= 15:    64 times  ################################################################
+
+  DELTA DISTRIBUTION (H change per arc flip):
+    delta= -12:     3 times
+    delta=  -8:    31 times
+    delta=  -6:    56 times
+    delta=  -4:   116 times
+    delta=  -2:   186 times
+    delta=  +0:   239 times
+    delta=  +2:   186 times
+    delta=  +4:   116 times
+    delta=  +6:    56 times
+    delta=  +8:    31 times
+    delta= +12:     3 times
+
+  Max H = 15 at step 48/1024
+  Min H = 1 at step 0/1024
+  All H odd: True (Redei)
+  All deltas even: True
+  Max |delta| = 12
+  Mean |delta| = 2.85
+  Autocorrelation (lag 1): 0.6128
+  (High autocorrelation = locality preservation)
+
+========================================================================
+  KEY FINDINGS
+========================================================================
+
+  1. ALL deltas are EVEN (Redei: H always odd, flip preserves parity mod 2)
+  2. The Gray code has HIGH autocorrelation (nearby = similar H)
+  3. The delta distribution reveals the arc-flip spectrum of H
+  4. Max |delta| grows with n but is bounded
+
+  THE PRACTICAL APPLICATION:
+  To enumerate ALL tournaments and compute H for each:
+    Brute force: compute H from scratch for each. O(n^2 * 2^n) per tournament.
+    Gray code: compute H once, then UPDATE via arc-flip delta.
+    If delta can be computed in O(n^k) for k < n:
+      Total: O(2^m * n^k) instead of O(2^m * n^2 * 2^n).
+      Savings: factor of n^2 * 2^n / n^k.
+
+  The arc-flip delta = H(T/e) - H(T'/e') where e is the flipped arc.
+  Computing H(T/e) for the contracted tournament takes O((n-1)^2 * 2^{n-1}).
+  This is 4x faster than computing H from scratch.
+  Over all 2^m steps: total savings of ~4x.
