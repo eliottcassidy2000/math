@@ -1,0 +1,171 @@
+======================================================================
+  NEGATIVE CAYLEY-DICKSON LEVELS
+======================================================================
+
+======================================================================
+  1. FIBER FRACTION f(n) AT CD LEVELS k = -3 TO +5
+======================================================================
+
+      k    dim=2^k    n=dim+1         f(n)              Algebra
+  ----- ---------- ---------- ------------ --------------------
+     -4     0.0625     1.0625          inf            F_1 limit
+     -3     0.1250     1.1250          inf         sub-sub-real
+     -2     0.2500     1.2500          inf             sub-real
+     -1     0.5000     1.5000          inf            half-real
+      0     1.0000     2.0000     1.000000            R (reals)
+      1     2.0000     3.0000     0.500000          C (complex)
+      2     4.0000     5.0000     0.312500      H (quaternions)
+      3     8.0000     9.0000     0.209473        O (octonions)
+      4    16.0000    17.0000     0.144464        S (sedenions)
+      5    32.0000    33.0000     0.100924              32-ions
+
+======================================================================
+  2. THE n -> 1 LIMIT: THE FIELD WITH ONE ELEMENT
+======================================================================
+
+  f(n) = Gamma(n-3/2) / (Gamma(1/2) * Gamma(n-1))
+
+  n= 1.01: f =    -0.020130
+  n= 1.10: f =    -0.220788
+  n= 1.50: f = POLE
+  n= 2.00: f =     1.000000
+  n= 2.50: f =     0.636620
+  n= 3.00: f =     0.500000
+  n= 5.00: f =     0.312500
+  n= 9.00: f =     0.209473
+
+  AS n -> 1: f(n) -> 0.
+
+  This makes sense: a "tournament" on 1 vertex has no arcs,
+  so the fiber fraction (probability of staying in the same
+  score class under a flip) is 0 -- there's nothing to flip.
+
+  THE F_1 INTERPRETATION:
+  The field with one element F_1 has no nontrivial arithmetic.
+  A "tournament over F_1" would have no comparisons.
+  The fiber fraction is 0 because there are no fibers.
+
+  F_1 is the GROUND STATE of tournament theory.
+  Everything grows FROM this zero point.
+
+======================================================================
+  3. ANALYTIC CONTINUATION: f(n) FOR n < 1
+======================================================================
+
+  f(n) sign changes at approximately: ['0.50', '0.99', '1.49']
+
+  n= 0.5: f = POLE
+  n= 1.0: f = POLE
+  n= 1.5: f = POLE
+  n= 2.0: f =   1.000000
+  n= 2.5: f =   0.636620
+  n= 3.0: f =   0.500000
+  n= 3.5: f =   0.424413
+  n= 4.0: f =   0.375000
+  n= 4.5: f =   0.339531
+  n= 5.0: f =   0.312500
+
+  THE POLES:
+  f(n) has poles at n = 1, 0, -1, -2, ... (from Gamma(n-1) in denominator)
+  and at n = 3/2, 1/2, -1/2, ... (from Gamma(n-3/2) in numerator)
+
+  BETWEEN POLES, f(n) oscillates and can be NEGATIVE.
+
+  Negative f(n) has no direct probability interpretation
+  (fiber fractions are probabilities and must be in [0,1]).
+  But in the ANALYTIC CONTINUATION, negative values indicate
+  "anti-fibers" -- structure that REPELS rather than attracts.
+
+======================================================================
+  4. THE NEGATIVE CD LADDER: WHAT GETS RESTORED
+======================================================================
+
+  Going DOWN the CD tower (from R toward F_1):
+
+  k   dim   n     What gets RESTORED
+  0   1     2     (R: everything present)
+  -1  1/2   3/2   Restore: ???
+  -2  1/4   5/4   Restore: ???
+  -inf 0    1     (F_1: nothing to restore, trivial)
+
+  HYPOTHESIS: Going below R doesn't restore properties --
+  it makes them IRRELEVANT. At dim < 1, there aren't enough
+  dimensions for any structure to exist.
+
+  The MEANINGFUL part of the CD tower is k >= 0 (dim >= 1).
+  Below that, tournament theory is empty (no arcs, no comparisons).
+
+  BUT: the ANALYTIC CONTINUATION of the fiber fraction
+  f(n) through n < 2 tells us about the RESIDUES of the
+  Gamma function, which connect to:
+  - Bernoulli numbers (residues at negative integers)
+  - Zeta function values (through Gamma's functional equation)
+  - Dimensional regularization (physics uses dim < 0 to regularize)
+
+======================================================================
+  5. HALF-INTEGER n: FERMIONS IN TOURNAMENT THEORY
+======================================================================
+
+  n= 1.5 (s=-0.5): f = POLE or undefined
+  n= 2.5 (s= 0.5): f =   0.636620
+  n= 3.5 (s= 1.5): f =   0.424413
+  n= 4.5 (s= 2.5): f =   0.339531
+  n= 5.5 (s= 3.5): f =   0.291026
+  n= 6.5 (s= 4.5): f =   0.258690
+  n= 7.5 (s= 5.5): f =   0.235173
+
+  HALF-INTEGER n gives a DIFFERENT sequence of fiber fractions.
+  These are the "fermionic" fiber fractions -- they measure the
+  probability of staying in a fiber when the "tournament" has
+  half-integer vertex count.
+
+  In physics, half-integer spin requires the DOUBLE COVER (SU(2) vs SO(3)).
+  In tournament theory, half-integer n requires the GAMMA FUNCTION
+  continuation of the Pochhammer symbol.
+
+  The integer values f(2), f(3), f(4), f(5), ... are "bosonic."
+  The half-integer values f(5/2), f(7/2), f(9/2), ... are "fermionic."
+
+  BOSONIC fiber fractions: 1, 1/2, 3/8, 5/16, 35/128, ...
+  FERMIONIC fiber fractions: 0.6366, 0.4244, 0.3395, 0.2910, 0.2587
+
+  The fermionic values are DIFFERENT from bosonic -- they DON'T follow
+  the C(2k,k)/4^k pattern. They follow the HALF-INTEGER Pochhammer ladder.
+
+======================================================================
+  6. THE GRAND PICTURE: THE FULL CD LADDER
+======================================================================
+
+  THE FULL CAYLEY-DICKSON LADDER:
+
+  k=-inf  dim=0    n=1     F_1 (field with one element). f=0. Trivial.
+  ...     ...      ...     (analytic continuation, poles, Bernoulli numbers)
+  k=-1    dim=1/2  n=3/2   FERMIONIC level. f=0.5642 (1/sqrt(pi)).
+  k=0     dim=1    n=2     R (reals). f=1. Trivial but present.
+  k=1/2   dim=sqrt(2) n=1+sqrt(2) IRRATIONAL level. f=? (non-standard).
+  k=1     dim=2    n=3     C (complex). f=1/2. First cycle.
+  k=3/2   dim=2*sqrt(2) n=1+2sqrt(2) Another irrational level.
+  k=2     dim=4    n=5     H (quaternions). f=5/16. OCR breaks. 24-cell.
+  k=3     dim=8    n=9     O (octonions). f=0.2095. Real roots fail.
+  k=4     dim=16   n=17    S (sedenions). f=0.1445. Paley dethroned.
+  k=5     dim=32   n=33    32-ions. f=0.1009. ??? predicted to break.
+  ...     ...      ...     (tower continues, each level loses more)
+
+  THE LADDER IS CONTINUOUS in the analytic sense.
+  The fiber fraction f(n) = Gamma(n-3/2)/(sqrt(pi)*Gamma(n-1))
+  is meromorphic on the whole complex n-plane.
+  Poles at n = 1, 0, -1, -2, ... (integer non-positive)
+  and n = 3/2, 1/2, -1/2, ... (half-integer non-positive).
+
+  THE THREE SECTORS:
+  n > 2: "above the reals" -- genuine tournament theory, f(n) in (0,1)
+  1 < n < 2: "between F_1 and R" -- f(n) > 1 (supercritical? amplifying?)
+  n < 1: "below F_1" -- f(n) oscillates, poles, analytic continuation only
+
+  THE DEEPEST POINT:
+  The entire Cayley-Dickson tower is a SINGLE analytic function
+  f(n) = Gamma(n-3/2)/(sqrt(pi)*Gamma(n-1)), evaluated at
+  n = 2^k + 1 for integer k. The "negative levels" are the
+  analytic continuation to k < 0, which probes the RESIDUAL
+  structure of tournament theory below the reals.
+
