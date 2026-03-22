@@ -1,11 +1,9 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: tournament-toolkit
 Version: 0.1.0
 Summary: Mathematical tools for ranking, fraud detection, and AI diagnostics based on tournament theory
 Home-page: https://github.com/eliottcassidy2000/math
 Author: Tournament Theory Research Project
-License: UNKNOWN
-Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
 Classifier: Intended Audience :: Science/Research
 Classifier: Topic :: Scientific/Engineering :: Mathematics
@@ -13,10 +11,21 @@ Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.20
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
 
 # tournament-toolkit
 
-Mathematical tools for ranking, fraud detection, and AI diagnostics — all based on tournament theory.
+Mathematical tools for ranking, fraud detection, and AI diagnostics â€” all based on tournament theory.
 
 ## Install
 
@@ -49,7 +58,7 @@ from tournament_toolkit import CycleDetector
 detector = CycleDetector()
 detector.observe("TraderA", "TraderB")  # A sells to B
 detector.observe("TraderB", "TraderC")  # B sells to C
-detector.observe("TraderC", "TraderA")  # C sells to A — cycle!
+detector.observe("TraderC", "TraderA")  # C sells to A â€” cycle!
 
 print(detector.summary())
 print(detector.suspects())  # Who's in the wash trading ring?
@@ -89,16 +98,14 @@ All tools are built on the **formal group law** F(x,y) = (x+y)/(1+xy):
 - **FormalRank** uses arctanh (the formal group logarithm) to convert multiplicative evidence into additive scores
 - **CycleDetector** uses F(x,-x) = 0 (evidence cancellation detects circular patterns)
 - **CartanProbe** decomposes matrices into competition (antisymmetric) + cooperation (symmetric) via the Cartan decomposition of gl(n,R)
-- **SpectralAnalyzer** uses eigenvalue flatness — Paley tournaments (flattest spectrum) maximize Hamiltonian paths
+- **SpectralAnalyzer** uses eigenvalue flatness â€” Paley tournaments (flattest spectrum) maximize Hamiltonian paths
 
 **Zero parameters. Zero training. Zero calibration.**
 
 ## Key Theorems Behind the Tools
 
 - **Redei's theorem**: Every tournament has an odd number of Hamiltonian paths
-- **OCF (Grinberg-Stanley)**: H(T) = I(Omega(T), 2) — path count = independence polynomial at fugacity 2
-- **Spectral flatness principle**: Flat eigenvalue spectrum ↔ doubly regular ↔ maximum H
+- **OCF (Grinberg-Stanley)**: H(T) = I(Omega(T), 2) â€” path count = independence polynomial at fugacity 2
+- **Spectral flatness principle**: Flat eigenvalue spectrum â†” doubly regular â†” maximum H
 - **Cartan commutator formula**: ||[A,S]||^2 = n * S_2 / 2 (Landau irregularity controls sector coupling)
 - **Ghost 13**: [competition, self-knowledge] = self-knowledge (the Cartan bracket relation)
-
-
