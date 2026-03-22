@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S144 — 2026-03-21: The Harmonic Transformer
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S143
+**Summary:** Synthesized harmonic series framework with kind-pasteur's transformer/LLM work (S18u-x). A transformer IS a harmonic analyzer: the CD tower provides basis functions (R,C,H,O,S), attention provides weights (softmax), partition function Z provides norm. Attention IS a Boltzmann partition function with temperature √d. The 2/3 ratio (dim(so(4))/dim(p) = perfect fifth = order(S)/order(ST)) appears in Cartan decomposition, Napolitano depth, quaternion parameter savings (67%), and T₁₁ transitivity. 7 testable predictions with honest confidence levels: (1) binary-thresholded attention preserves ~97% (HIGH), (2) antisymmetric attention correlates with causal quality (HIGH, arXiv:2502.10927 supports), (3) quaternion coupling saves 75% (VALIDATED), (4) head-pair coupling saves 50% (MEDIUM, MEA supports), (5) sedenion layer gives 16× (EMERGING), (6) antisym/sym ratio shifts at 2/3 depth (MEDIUM), (7) attention SVD follows 1/k spectrum (SPECULATIVE). Complete 20-entry harmonic-tournament-transformer dictionary.
+**New contributions:** harmonic_transformer_s144.py
+**Unresolved threads:** Implement attention thresholding test, measure antisymmetric ratio vs depth in real models, compare octonion head coupling to MEA
+
+---
+
 ## opus-2026-03-21-S143 — 2026-03-21: The Harmonic Series and the Tournament Tower
 
 **Account:** opus
