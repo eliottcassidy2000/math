@@ -1,0 +1,76 @@
+H AS FREE ENERGY: log H = sum of log-distances from x=2 to each root
+
+ENERGY LEVELS (one root per polynomial, n=5):
+  alpha_1=  1: root= -1.0000, E= -1.0986, H=    3, logH=  1.0986
+  alpha_1=  2: root= -0.5000, E= -0.9163, H=    5, logH=  1.6094
+  alpha_1=  3: root= -0.3333, E= -0.8473, H=    7, logH=  1.9459
+  alpha_1=  4: root= -0.2500, E= -0.8109, H=    9, logH=  2.1972
+  alpha_1=  5: root= -0.2000, E= -0.7885, H=   11, logH=  2.3979
+  alpha_1=  6: root= -0.1667, E= -0.7732, H=   13, logH=  2.5649
+  alpha_1= 10: root= -0.1000, E= -0.7419, H=   21, logH=  3.0445
+  alpha_1= 20: root= -0.0500, E= -0.7178, H=   41, logH=  3.7136
+  alpha_1=100: root= -0.0100, E= -0.6981, H=  201, logH=  5.3033
+
+ENERGY BANDWIDTH: [-1.0986, -0.6931] = width 0.405465 = log(3/2)
+  log(3/2) = 0.405465 nats = 0.584963 bits
+  3/2 = reciprocal of 2/3 = the modular group generator ratio
+
+RIEMANN SURFACE DISTANCES (from log(2) to log(root)):
+   alpha     root    |2-r|     Riem      amp
+       1  -1.0000   3.0000   3.2172   1.0724
+       2  -0.5000   2.5000   3.4339   1.3735
+       4  -0.2500   2.2500   3.7675   1.6744
+       5  -0.2000   2.2000   3.8951   1.7705
+       6  -0.1667   2.1667   4.0055   1.8487
+      10  -0.1000   2.1000   4.3410   2.0671
+      50  -0.0200   2.0200   5.5747   2.7597
+     100  -0.0100   2.0100   6.1597   3.0645
+
+AMPLIFICATION LIMIT: a*Riem / (2a+1) -> pi/2 = 1.570796 as a->inf
+
+CORRECTION: amplification grows as sqrt(log(a)^2 + pi^2)/2, not pi/2.
+The helix amplification is UNBOUNDED as alpha_1 -> inf.
+
+TWO REGIMES:
+  Small alpha_1: Riemann distance ~ pi (dominated by the branch cut)
+  Large alpha_1: Riemann distance ~ log(alpha_1) (dominated by magnitude)
+  Crossover: when log(alpha_1) ~ pi, i.e., alpha_1 ~ e^pi = 23.1
+  e^pi = 23.1406 ~ 23. The crossover is at alpha_1 ~ 23.
+  23 = |BT| - 1 = the moonshine number!
+
+THE MOONSHINE CROSSOVER:
+  At alpha_1 = 23: log(23) = 3.1355, pi = 3.1416
+  log(23)/pi = 0.9981 ~ 1. The crossover point.
+  23 = |BT| - 1 = umbral moonshine count.
+
+  Below 23 cycles: the TOPOLOGY of the complex plane (branch cut)
+  controls the Riemann distance. This is the modular regime.
+  Above 23 cycles: the MAGNITUDE of the roots controls.
+  This is the classical (non-modular) regime.
+
+CONCAVITY OF log H:
+  d^2(log H)/dr_i^2 = -1/(2-r_i)^2 < 0 for all r_i < 2.
+  log H is CONCAVE in each root position.
+  CONSEQUENCE: among all polynomials with the same degree and
+  leading coefficient, H is maximized when roots are as close
+  to x=2 as possible (least negative).
+
+  For tournament Omega: roots r_i = -1/m_i where m_i are related
+  to the sizes of maximal cliques in Omega.
+  Smaller cliques (smaller m_i) -> roots closer to 0 -> farther from 2
+  -> LOWER H. Larger cliques -> roots closer to 0... hmm.
+
+EXPONENTIAL GROWTH:
+  Each new root (new alpha_k coefficient) multiplies H by > 2.
+  d roots -> H > alpha_d * 2^d.
+  For floor(n/3) roots: H > alpha_d * 2^{floor(n/3)}.
+  This gives a LOWER BOUND on H from the polynomial degree alone.
+
+  n=3: degree=1, lower bound 2^1 = 2
+  n=4: degree=1, lower bound 2^1 = 2
+  n=5: degree=1, lower bound 2^1 = 2
+  n=6: degree=2, lower bound 2^2 = 4
+  n=7: degree=2, lower bound 2^2 = 4
+  n=8: degree=2, lower bound 2^2 = 4
+  n=9: degree=3, lower bound 2^3 = 8
+  n=10: degree=3, lower bound 2^3 = 8
