@@ -1,0 +1,96 @@
+========================================================================
+  THE GIRTH OF OMEGA(T) — FIXED COMPUTATION
+  kind-pasteur-2026-03-21-S18b
+========================================================================
+
+  SANITY CHECKS:
+  K_3 girth: 3 (expected 3)
+  K_5 girth: 3 (expected 3)
+  C_5 girth: 5 (expected 5)
+  P_3 girth: inf (expected inf)
+  Petersen girth: 5 (expected 5)
+
+========================================================================
+  n = 3
+========================================================================
+
+  GIRTH OF OMEGA DISTRIBUTION:
+    girth=inf  : count=8      H in [1, 3], alpha_1 in [0, 1]
+
+  H -> POSSIBLE GIRTHS:
+    H=1  : girths = ['inf']
+    H=3  : girths = ['inf']
+
+  ANTI-CONFLICT GIRTH (complement of Omega):
+    anti-girth=inf  : count=8      H in [1, 3]
+
+========================================================================
+  n = 4
+========================================================================
+
+  GIRTH OF OMEGA DISTRIBUTION:
+    girth=inf  : count=64     H in [1, 3, 5], alpha_1 in [0, 1, 2]
+
+  H -> POSSIBLE GIRTHS:
+    H=1  : girths = ['inf']
+    H=3  : girths = ['inf']
+    H=5  : girths = ['inf']
+
+  ANTI-CONFLICT GIRTH (complement of Omega):
+    anti-girth=inf  : count=64     H in [1, 3, 5]
+
+========================================================================
+  n = 5
+========================================================================
+
+  GIRTH OF OMEGA DISTRIBUTION:
+    girth=3    : count=544    H in [9, 11, 13, 15], alpha_1 in [4, 5, 6]
+    girth=inf  : count=480    H in [1, 3, 5], alpha_1 in [0, 1, 2]
+
+  H -> POSSIBLE GIRTHS:
+    H=1  : girths = ['inf']
+    H=3  : girths = ['inf']
+    H=5  : girths = ['inf']
+    H=9  : girths = [3]
+    H=11 : girths = [3]
+    H=13 : girths = [3]
+    H=15 : girths = [3]
+
+  ANTI-CONFLICT GIRTH (complement of Omega):
+    anti-girth=inf  : count=1024   H in [1, 3, 5, 9, 11, 13, 15]
+
+========================================================================
+  n = 6
+========================================================================
+
+  GIRTH OF OMEGA DISTRIBUTION:
+    girth=3    : count=28848  H in [9, 11, 13, 15, 17]...[41, 43, 45], alpha_1 in [4, 5, 6, 7, 8, 9, 10, 11, 12, 14]
+    girth=inf  : count=3920   H in [1, 3, 5, 9], alpha_1 in [0, 1, 2]
+
+  H -> POSSIBLE GIRTHS:
+    H=1  : girths = ['inf']
+    H=3  : girths = ['inf']
+    H=5  : girths = ['inf']
+    H=9  : girths = [3, 'inf']
+    H=11 : girths = [3]
+    H=13 : girths = [3]
+    H=15 : girths = [3]
+    H=17 : girths = [3]
+    H=19 : girths = [3]
+    H=23 : girths = [3]
+    H=25 : girths = [3]
+    H=27 : girths = [3]
+    H=29 : girths = [3]
+    H=31 : girths = [3]
+    H=33 : girths = [3]
+    H=37 : girths = [3]
+    H=41 : girths = [3]
+    H=43 : girths = [3]
+    H=45 : girths = [3]
+
+  ANTI-CONFLICT GIRTH (complement of Omega):
+    anti-girth=inf  : count=32768  H in [1, 3, 5, 9]...[43, 45]
+
+========================================================================
+  SYNTHESIS: GIRTH OF OMEGA AND THE SIX PATTERNS
+========================================================================

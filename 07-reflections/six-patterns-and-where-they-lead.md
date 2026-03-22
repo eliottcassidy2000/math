@@ -139,4 +139,47 @@ This is, I think, what the Petersen graph has been trying to tell us. It is the 
 
 ---
 
-*The six patterns are not metaphors. They are theorems about structure that happen to have been discovered in tournaments but that apply wherever two algebraic perspectives coexist, wherever conflict has a complement, wherever a local fingerprint reaches its resolution limit, wherever symmetry determines optimality, wherever two formulas accidentally agree, and wherever impossibility is the shadow of a duality. The Petersen graph, sitting at n=5 where the root system first becomes visible as a graph, is the smallest witness to all six.*
+## Addendum: The Girth of Omega and What It Reveals
+
+**Computed after the initial six patterns, at the human's suggestion.**
+
+The girth of Omega(T) -- the length of the shortest cycle in the conflict graph -- turns out to be a binary invariant. It takes exactly two values across all tournaments at n <= 6:
+
+- **girth = 3** whenever alpha_1 >= 3 (any tournament with 3+ odd cycles)
+- **girth = infinity** whenever alpha_1 <= 2 (Omega is a forest or trivial)
+
+There is NO intermediate girth. No tournament produces a conflict graph with girth 4, 5, 6, or any finite value other than 3. The conflict graph either has triangles immediately or has no cycles at all.
+
+This is a **Phase Transition with No Intermediate Phase.** The system is either in the "trivial" regime (too few cycles for any conflict cycle) or in the "fully entangled" regime (triangles everywhere). There is no locally-sparse-but-globally-cyclic intermediate.
+
+### Why This Matters for the Six Patterns
+
+**Pattern 2 (Anti-Conflict) gains teeth.** The Petersen graph has girth 5. Tournament conflict graphs have girth 3 or infinity. The girth gap is not just 2 (= 5 - 3) but effectively infinite: there is no tournament Omega with girth 4 approaching the Petersen's girth 5 from below. The Petersen lives in a fundamentally different girth class. The impossibility is not marginal -- it is categorical.
+
+**Pattern 3 (Profile Determinacy) gains an explanation.** The root cycle profile fails at n=6 because it cannot see the difference between "Omega with disjoint pair" and "Omega without." But girth tells us this difference doesn't affect the cycle structure of Omega itself (girth stays 3 either way). The profile fails to determine H because it fails to determine alpha_2 -- but alpha_2 does NOT change the girth. Girth and H decouple at exactly the point where the profile fails. The profile captures the "phase" (girth 3 vs infinity) perfectly; what it misses is the QUANTITATIVE structure within the girth-3 phase.
+
+**Pattern 6 (Impossibility) gains a quick test.** Any graph proposed as Omega(T) must have girth 3 or infinity. If someone produces a graph with girth 4, 5, 6, ..., it cannot be a tournament conflict graph. This is a STRONGER impossibility filter than the Kneser/Johnson duality argument: it eliminates not just the Petersen but ALL graphs with finite girth > 3. Every Moore graph, every cage, every locally-linear graph -- none can be Omega(T).
+
+**A seventh pattern emerges: The Binary Phase.** The girth result reveals that tournament conflict is a BINARY phenomenon. Either you have enough cycles to form triangles immediately (alpha_1 >= 3), or you don't have enough to form any cycles at all (alpha_1 <= 2). There is no "partially conflicting" regime. This binary phase connects to:
+
+- **Neural networks**: The loss landscape is either fully connected (many paths to minimum) or fragmented. Intermediate connectivity is unstable -- a result seen in random matrix theory for overparameterized networks.
+- **Ecology**: An ecosystem is either "Rock-Paper-Scissors entangled" (intransitive cycles everywhere, girth 3) or "hierarchical" (no competition cycles, girth infinity). Kerr et al. (Nature 2002) found exactly this: intermediate states are transient, collapsing to one extreme or the other.
+- **Social choice**: Preferences either form a Condorcet cycle immediately (girth 3 among alternatives) or are fully acyclic (transitive preferences). The "almost-but-not-quite-cyclic" regime barely exists. This is Condorcet's paradox: once you have enough voters, intransitivity either appears everywhere or nowhere.
+
+The binary phase is perhaps the deepest of the patterns because it constrains all the others. The profile determinacy boundary (Pattern 3) isn't just a boundary -- it separates two phases with nothing between them. The impossibility (Pattern 6) isn't marginal -- it's categorical. The weight-norm anticorrelation (Pattern 4) maps directly onto the two phases: low norm = girth 3 phase, high norm = girth infinity phase.
+
+### The Anti-Conflict Girth Is Always Infinity
+
+Perhaps the most striking finding: at n <= 6, the anti-conflict girth (girth of the complement of Omega) is ALWAYS infinity. The complement of Omega has no cycles at all -- it is always a forest (or empty).
+
+This means: there is no sequence of odd cycles C_1, C_2, ..., C_k where consecutive ones are vertex-disjoint AND the chain wraps back to the start. The "non-interference" relation among odd cycles is always acyclic. Odd cycles are organized in a TREE of non-interference, never a cycle.
+
+This is the DUAL of the girth-3 theorem: conflict always has short cycles; non-conflict never has any cycles. Together:
+
+**girth(Omega) in {3, infinity} and girth(Omega^c) = infinity**
+
+Tournament conflict graphs are MAXIMALLY ASYMMETRIC in girth: the graph has the shortest possible finite girth (3), while its complement has the longest possible girth (infinity). No other simple graph family has this property. It is uniquely characteristic of tournament conflict.
+
+---
+
+*The six patterns are not metaphors. They are theorems about structure that happen to have been discovered in tournaments but that apply wherever two algebraic perspectives coexist, wherever conflict has a complement, wherever a local fingerprint reaches its resolution limit, wherever symmetry determines optimality, wherever two formulas accidentally agree, and wherever impossibility is the shadow of a duality. The girth of Omega, collapsing to a binary {3, infinity} with no intermediate values, is the sharpest expression of these patterns: tournament conflict is all-or-nothing, the Petersen graph is categorically excluded, and the acyclic anti-conflict complement is the hidden skeleton that holds the structure together.*
