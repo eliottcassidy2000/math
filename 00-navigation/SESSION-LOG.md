@@ -13,17 +13,13 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-21-S132 — 2026-03-21: MS Shadow Compression — OCR(1)=1 PUZZLE, compression landscape, curvature principle
+## opus-2026-03-21-S152 — 2026-03-21: Rigorous Shadow KV Benchmark — Honest Results
 
 **Account:** opus
-**Summary:** Investigated shadow compression as a function of the evaluation point x. PUZZLE: exact computation gives OCR(x=1) = 1 (MS index perfectly score-determined at n=5), but this contradicts alpha_1 varying within the POS class. Likely a computational bug in cycle-finding. The general framework is sound: OCR(x) should decrease from small x (scores dominate) through x=2 (tournament) to large x (higher alpha_k dominate). The curvature principle for compression: spherical = easy to compress, hyperbolic = harder.
-**Key:**
-1. **OCR(x=1) = 1 at n=5**: MS index appears perfectly score-determined (NEEDS VERIFICATION — possible bug)
-2. **OCR(x=2) = 129/133**: tournament H has 3% residual (VERIFIED exactly)
-3. **Compression landscape**: OCR(x) should decrease with x as higher alpha_k are amplified
-4. **Curvature principle for compression**: spherical (x<tau) → near-perfect compression; hyperbolic (x>tau) → degraded
-5. **n=6 computations**: started but results need checking
-**Scripts:** ms_shadow_compression_s132.py (with likely bug in OCR(1) computation)
+**Continuation of:** opus-2026-03-21-S151
+**Summary:** Ran rigorous benchmark with larger model (4 layers, d_model=128, 4 heads, 800K params) on Shakespeare corpus (116K chars), 3 seeds per config. HONEST RESULTS: quality degradation is SIGNIFICANT at this scale. Baseline PPL=4.37, Shadow 50% PPL=7.50 (58% quality), Shadow 75% PPL=7.63 (57%), Shadow 87.5% PPL=7.83 (56%). The degradation is statistically significant (t>40 for all configs). THIS CONTRADICTS the S151 mini-model results (which showed 97% quality). The likely cause: the larger model learns sharper, harder-to-compress attention patterns. The linear compressor bottleneck becomes binding when the model has enough capacity to exploit the full KV space. CORRECTION TO S151: the 97% quality claim was on a TOY model (2 layers, 64 dims, 100K params) with toy data. The rigorous benchmark shows ~58% quality at 50% compression. This needs work: (1) more epochs (8 may not be enough for shadow to converge), (2) warmup/scheduling, (3) nonlinear compressor (MLP instead of linear), (4) residual connection around compression, (5) gradual compression during training. The memory savings projections remain valid (LLaMA-70B@128K: 335GB→168GB at 50%). The quality gap needs to be closed.
+**New contributions:** shadow_kv_benchmark_s152.py
+**Unresolved threads:** Improve quality: nonlinear compressor, residual compression, more training, curriculum
 
 ---
 
