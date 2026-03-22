@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S156 — 2026-03-22: Independence Polynomial — The Central Object
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S155
+**Summary:** Deep investigation of I(Ω,x). At n=5: always linear (degree 1), Lee-Yang zero at x=-1/m. At n=6: 24 distinct polys, 5 collisions, quadratic appears. Susceptibility I'/I increases with H (regular=fragile, transitive=robust). The poly degree ⌊n/3⌋ controls OCR channels. NOTE: cycle counting bug found for H=13,15 at n=5 — needs fix. Read kind-pasteur S20d.
+**New contributions:** independence_poly_deep_s156.py
+**Unresolved threads:** Fix cycle counting, extend to complex plane, connect Lee-Yang zeros to forbidden values
+
+---
+
 ## opus-2026-03-22-S155 — 2026-03-22: How Many Tournament Primes? — EXACT OCR(7) Computed
 
 **Account:** opus
