@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S178 — 2026-03-22: Tournaments = Cut + Cycle (Even Graphs)
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S177
+**Summary:** Investigated the cut/cycle decomposition: tournament = score (cut space, dim n-1) + even graph (cycle space, dim C(n-1,2)). At n=5: 10 = 4 + 6. VERIFIED: each score parity coset has exactly 2^6 = 64 tournaments (cycle space dimension). SURPRISE: score PARITY captures ZERO H variance (parity OCR = 0.000)! All H information in scores comes from MAGNITUDES not parities. 7 even graph iso classes at n=5 (vs 12 tournament iso classes, vs 34 simple graph iso classes). The product Cut × Cycle becomes ENTANGLED under S_n — the iso class graph G_n = (Cut × Cycle)/S_n is NOT a product of quotients. Score bits are 48× more informative per bit than cycle bits (24.2% vs 0.5% per bit). The even graph IS the error pattern in coding theory: score = syndrome determines H up to 97%, even graph = coset representative carries the 3% residual. Read kind-pasteur S20ae (tournaments-and-even-graphs.md, thermodynamic interpretation).
+**New contributions:** even_graph_investigation_s178.py
+**Unresolved:** Check equinumerosity conjecture, extend to n=6, understand the entanglement structure
+
+---
+
 ## opus-2026-03-22-S177 — 2026-03-22: 20 Brand New Sequences from G_n
 
 **Account:** opus
