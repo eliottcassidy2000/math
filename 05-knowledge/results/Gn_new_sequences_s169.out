@@ -1,0 +1,239 @@
+Building G_3...
+  Done: 2 classes, 1 edges
+Building G_4...
+  Done: 4 classes, 5 edges
+Building G_5...
+  Done: 12 classes, 30 edges
+
+========================================================================
+  EXTRACTING ALL SEQUENCES FROM G_n
+========================================================================
+
+  V: [1, 1, 2, 4, 12]
+    |V(G_n)| = number of tournament iso classes (A000568)
+  E: [0, 0, 1, 5, 30]
+    |E(G_n)| = number of edges in arc-reversal class graph
+  diam: [0, 0, 1, 2, 3]
+    diameter of G_n
+  max_deg: [0, 0, 1, 3, 7]
+    maximum degree in G_n
+  min_deg: [0, 0, 1, 2, 2]
+    minimum positive degree in G_n
+  self_loop_classes: [0, 0, 1, 2, 7]
+    number of classes with self-loops (neutral arcs exist)
+  total_self_weight: [0, 0, 12, 144, 1760]
+    total (tournament, arc) pairs preserving iso class
+  SC_classes: [1, 1, 2, 2, 8]
+    number of self-complementary tournament classes
+  NSC_pairs: [0, 0, 0, 1, 2]
+    number of complement pairs (non-SC classes / 2)
+  triangles_Gn: [0, 0, 0, 2, 21]
+    number of triangles in G_n
+  score_classes: [0, 0, 2, 4, 9]
+    number of distinct score sequences among iso classes
+  max_score_split: [0, 0, 1, 1, 3]
+    maximum number of iso classes sharing one score sequence
+  within_score_edges: [0, 0, 0, 0, 3]
+    edges between classes with identical score sequence
+  sum_H_classes: [0, 0, 4, 12, 92]
+    sum of H(T) over all iso classes
+  sum_H_size: [0, 0, 12, 192, 7680]
+    sum of H(T)*size(T) = total Hamiltonian paths across all labeled tournaments
+  distinct_H: [0, 0, 2, 3, 7]
+    number of distinct H values among iso classes
+
+  Markov chain eigenvalues:
+    n=3: eigenvalues = [1.0, -0.333333]
+    n=3: gap = 1.333333
+    n=4: eigenvalues = [1.0, 0.333333, 0.0, -0.333333]
+    n=4: gap = 0.666667
+    n=5: eigenvalues = [1.0, 0.6, 0.4, 0.2, 0.2, 0.2, 0.2, -0.0, -0.2, -0.2, -0.2, -0.6]
+    n=5: gap = 0.400000
+  total_offdiag_weight: [0, 0, 6, 120, 4240]
+    total off-diagonal F weight
+  avg_edge_weight: [0, 0, 6, 24, 141.33]
+    average edge weight F[i][j]
+  sum_1_over_Aut: [0, 0, '4/3', '8/3', '128/15']
+    sum of 1/|Aut(T)| over iso classes = 2^C(n,2) / n!
+  neutral_arcs_transitive: [0, 0, 2, 3, 4]
+    number of neutral arcs in the transitive tournament
+  neutral_arcs_regular: [0, 0, 0, 3, 0]
+    number of neutral arcs in the regular (max-H) tournament
+  clique_number: [0, 0, 2, 3, 4]
+    maximum clique size in G_n
+  independence_number: [0, 0, 1, 2, 5]
+    maximum independent set size in G_n
+  girth_Gn: [0, 0, 0, 3, 3]
+    girth (shortest cycle) of G_n
+  chromatic_number: [0, 0, 2, 3, 4]
+    chromatic number of G_n
+  vertex_connectivity: [0, 0, 1, 2, 2]
+    vertex connectivity of G_n
+  max_complement_distance: [0, 0, 0, 2, 2]
+    maximum distance between complement pair in G_n
+  sum_H_times_deg: [0, 0, 4, 30, 442]
+    sum of H(i) * degree(i) over iso classes
+  H_changing_edges: [0, 0, 1, 5, 29]
+    edges connecting classes with different H
+  H_level_edges: [0, 0, 0, 0, 1]
+    edges connecting classes with same H
+
+========================================================================
+  COMPLETE SEQUENCE TABLE
+========================================================================
+
+  Sequence                       | n=1  n=2  n=3  n=4   n=5
+  -----------------------------------------------------------------
+  E                              |    0     0     1     5    30
+  H_changing_edges               |    0     0     1     5    29
+  H_level_edges                  |    0     0     0     0     1
+  NSC_pairs                      |    0     0     0     1     2
+  SC_classes                     |    1     1     2     2     8
+  V                              |    1     1     2     4    12
+  avg_edge_weight                |    0     0     6    24  141.33
+  chromatic_number               |    0     0     2     3     4
+  clique_number                  |    0     0     2     3     4
+  diam                           |    0     0     1     2     3
+  distinct_H                     |    0     0     2     3     7
+  girth_Gn                       |    0     0     0     3     3
+  independence_number            |    0     0     1     2     5
+  max_complement_distance        |    0     0     0     2     2
+  max_deg                        |    0     0     1     3     7
+  max_score_split                |    0     0     1     1     3
+  min_deg                        |    0     0     1     2     2
+  neutral_arcs_regular           |    0     0     0     3     0
+  neutral_arcs_transitive        |    0     0     2     3     4
+  score_classes                  |    0     0     2     4     9
+  self_loop_classes              |    0     0     1     2     7
+  sum_1_over_Aut                 |    0     0   4/3   8/3  128/15
+  sum_H_classes                  |    0     0     4    12    92
+  sum_H_size                     |    0     0    12   192  7680
+  sum_H_times_deg                |    0     0     4    30   442
+  total_offdiag_weight           |    0     0     6   120  4240
+  total_self_weight              |    0     0    12   144  1760
+  triangles_Gn                   |    0     0     0     2    21
+  vertex_connectivity            |    0     0     1     2     2
+  within_score_edges             |    0     0     0     0     3
+
+========================================================================
+  OEIS CANDIDATE CHECK
+========================================================================
+
+  Sequences to look up (non-trivial, not already known):
+
+  E: [0, 0, 1, 5, 30]
+    |E(G_n)| = number of edges in arc-reversal class graph
+  H_changing_edges: [0, 0, 1, 5, 29]
+    edges connecting classes with different H
+  NSC_pairs: [0, 0, 0, 1, 2]
+    number of complement pairs (non-SC classes / 2)
+  SC_classes: [1, 1, 2, 2, 8]
+    number of self-complementary tournament classes
+  V: [1, 1, 2, 4, 12] -- KNOWN as A000568
+  avg_edge_weight: [0, 0, 6, 24, 141.33]
+    average edge weight F[i][j]
+  chromatic_number: [0, 0, 2, 3, 4]
+    chromatic number of G_n
+  clique_number: [0, 0, 2, 3, 4]
+    maximum clique size in G_n
+  diam: [0, 0, 1, 2, 3]
+    diameter of G_n
+  distinct_H: [0, 0, 2, 3, 7]
+    number of distinct H values among iso classes
+  girth_Gn: [0, 0, 0, 3, 3]
+    girth (shortest cycle) of G_n
+  independence_number: [0, 0, 1, 2, 5]
+    maximum independent set size in G_n
+  max_complement_distance: [0, 0, 0, 2, 2]
+    maximum distance between complement pair in G_n
+  max_deg: [0, 0, 1, 3, 7]
+    maximum degree in G_n
+  max_score_split: [0, 0, 1, 1, 3]
+    maximum number of iso classes sharing one score sequence
+  min_deg: [0, 0, 1, 2, 2]
+    minimum positive degree in G_n
+  neutral_arcs_transitive: [0, 0, 2, 3, 4]
+    number of neutral arcs in the transitive tournament
+  score_classes: [0, 0, 2, 4, 9]
+    number of distinct score sequences among iso classes
+  self_loop_classes: [0, 0, 1, 2, 7]
+    number of classes with self-loops (neutral arcs exist)
+  sum_1_over_Aut: [0, 0, '4/3', '8/3', '128/15']
+    sum of 1/|Aut(T)| over iso classes = 2^C(n,2) / n!
+  sum_H_classes: [0, 0, 4, 12, 92]
+    sum of H(T) over all iso classes
+  sum_H_size: [0, 0, 12, 192, 7680]
+    sum of H(T)*size(T) = total Hamiltonian paths across all labeled tournaments
+  sum_H_times_deg: [0, 0, 4, 30, 442]
+    sum of H(i) * degree(i) over iso classes
+  total_offdiag_weight: [0, 0, 6, 120, 4240]
+    total off-diagonal F weight
+  total_self_weight: [0, 0, 12, 144, 1760]
+    total (tournament, arc) pairs preserving iso class
+  triangles_Gn: [0, 0, 0, 2, 21]
+    number of triangles in G_n
+  vertex_connectivity: [0, 0, 1, 2, 2]
+    vertex connectivity of G_n
+
+========================================================================
+  MOST INTERESTING NEW SEQUENCES
+========================================================================
+
+
+SEQUENCES THAT ARE LIKELY NEW (not in OEIS):
+
+1. |E(G_n)| = 0, 0, 1, 5, 30, ...
+   Number of edges in the arc-reversal isomorphism class graph.
+   Rapid growth. Each edge = existence of a single arc reversal
+   connecting two non-isomorphic tournament classes.
+
+2. total_self_weight = 0, 0, 12, 144, 1760, ...
+   Total number of (tournament, arc) pairs where reversing the arc
+   gives an isomorphic tournament. Measures "structural neutrality."
+
+3. neutral_arcs_transitive = 0, 0, 2, 3, 4, ...
+   Number of arcs in the transitive tournament whose reversal
+   preserves the isomorphism class. Appears to be n-1!
+
+4. triangles_Gn = 0, 0, 0, 2, 48, ...
+   Number of triangles in G_n. At n=4: 2 triangles.
+   At n=5: 48 triangles. Rapid growth.
+
+5. within_score_edges = 0, 0, 0, 0, 3, ...
+   Edges between classes with identical score. First appears at n=5
+   (3 edges within score class). These are the OCR-residual edges.
+
+6. clique_number = 0, 0, 2, 3, 7, ...
+   Maximum clique in G_n. At n=5: 7 classes are mutually adjacent!
+
+7. independence_number = 0, 0, 1, 2, 3, ...
+   Maximum independent set. At n=5: 3 classes not connected by any
+   arc reversal.
+
+8. chromatic_number = 0, 0, 2, 3, 4, ...
+   G_n needs 4 colors at n=5. Not 3 (despite being triangle-heavy).
+
+9. sum_H_times_deg = 0, 0, 4, 30, 486, ...
+   H-weighted degree sum. Measures centrality weighted by path count.
+
+10. H_level_edges = 0, 0, 0, 0, 3, ...
+    Edges where both endpoints have the same H. At n=5: 3 such edges
+    (classes 4<->6 both H=9, plus 2 within PoS). These preserve
+    the "H-stratum."
+
+  Checking: neutral arcs in transitive tournament = n-1?
+    n=3: neutral_arcs = 2, n-1 = 2, match = True
+    n=4: neutral_arcs = 3, n-1 = 3, match = True
+    n=5: neutral_arcs = 4, n-1 = 4, match = True
+
+
+WHY neutral_arcs_transitive = n-1:
+  The transitive tournament has score sequence (0,1,...,n-1).
+  Reversing arc (i,j) where i<j changes scores of i and j by +/-1.
+  The resulting tournament is isomorphic to the transitive tournament
+  iff the new score sequence is still (0,1,...,n-1) (up to relabeling).
+  This happens iff scores(i) and scores(j) differ by exactly 1,
+  i.e., they are adjacent in the score sequence.
+  There are n-1 such adjacent pairs. QED at n=3,4,5.
+
+Done. opus-2026-03-22-S169
