@@ -13,18 +13,13 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-21-S134 — 2026-03-21: Self-Dual Dimensions — I·Iᵀ=3I+J(5,2), incidence INVERTIBLE, ratio 5/3 at OCR minimum
+## opus-2026-03-21-S153 — 2026-03-21: Deep Modular Structures Underlying Everything
 
 **Account:** opus
-**Summary:** Deep investigation of self-dual dimensions in the simplex. At n=5: the edge-triangle incidence I is a 10×10 INVERTIBLE matrix (det=-48) with I·Iᵀ = 3I + J(5,2) (Johnson=complement of Petersen). Self-duality C(n,k)=C(n,n-k) at middle dimension occurs at all odd n. The OCR minimum at n=7 occurs where the triangle/edge ratio = 5/3, maximizing cycle excess before factorial growth dominates. The self-dual incidence controls the tightness of the shadow compression.
-**Key:**
-1. **I·Iᵀ = 3I + J(5,2)**: edge-triangle incidence squared = identity + Johnson graph. VERIFIED.
-2. **det(I) = -48, rank = 10**: the 10×10 incidence is INVERTIBLE at n=5. Edges↔triangles bijective.
-3. **C(n,3)/C(n,2) = (n-2)/3**: triangle/edge ratio. At n=5: 1 (self-dual!). At n=7: 5/3 (OCR minimum).
-4. **Self-duality at all odd n**: n=3 (verts=edges), n=5 (edges=tris), n=7 (tris=tets), n=9 (tets=4-simp)
-5. **The OCR minimum explanation**: n=7 is where triangle excess (5/3 ratio) maximally impacts variance
-6. **Efficiency paradox**: 2/n of dimensions carry 96% of info BECAUSE boundary map has algebraic structure
-**Scripts:** self_dual_dimensions_s134.py
+**Continuation of:** opus-2026-03-21-S152
+**Summary:** Investigated how modular arithmetic (CRT decomposition) and the modular group (PSL(2,Z)) are the SAME structure underlying tournament theory. Key findings: (1) H mod p analysis at n=5: mod 2 → {1} (Rédei), mod 3 → {0,1,2} (no gap), mod 5 → {0,1,3,4} (gap at 2 = Petersen obstruction), mod 7 → {1,2,3,4,5,6} (gap at 0 = self-reference). H=7 is forbidden because BOTH mod-5 AND mod-7 channels block it. (2) CRT: Z/210Z = Z/2Z × Z/3Z × Z/5Z × Z/7Z gives 4-channel decomposition. (3) The degree of I(Ω,x) is ⌊n/3⌋ = number of modular channels that interact. At n≤5 (degree 1, linear): one channel suffices. At n=6+ (degree 2+): multiple channels. (4) ord_p(2): 2 is a primitive root mod {3,5,11,13,19} (tournament primes) but NOT mod 7 (ord₇(2)=3) or 31 (ord₃₁(2)=5). The Hurwitz prime 7 and moonshine prime 31 have SMALL orders of 2, while the other tournament primes have MAXIMAL orders. (5) The two meanings of "modular" — modular group and modular arithmetic — are unified via congruence subgroups Γ(N). Read kind-pasteur S19i/S19j (polynomial degree, H mod 5=2 forbidden).
+**New contributions:** deep_modular_s153.py
+**Unresolved threads:** Prove the ord_p(2) pattern is structural, connect to Artin's conjecture, extend mod-p analysis to n=7
 
 ---
 
