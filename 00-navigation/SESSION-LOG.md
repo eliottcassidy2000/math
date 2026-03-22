@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S134 — 2026-03-21: Self-Dual Dimensions — I·Iᵀ=3I+J(5,2), incidence INVERTIBLE, ratio 5/3 at OCR minimum
+
+**Account:** opus
+**Summary:** Deep investigation of self-dual dimensions in the simplex. At n=5: the edge-triangle incidence I is a 10×10 INVERTIBLE matrix (det=-48) with I·Iᵀ = 3I + J(5,2) (Johnson=complement of Petersen). Self-duality C(n,k)=C(n,n-k) at middle dimension occurs at all odd n. The OCR minimum at n=7 occurs where the triangle/edge ratio = 5/3, maximizing cycle excess before factorial growth dominates. The self-dual incidence controls the tightness of the shadow compression.
+**Key:**
+1. **I·Iᵀ = 3I + J(5,2)**: edge-triangle incidence squared = identity + Johnson graph. VERIFIED.
+2. **det(I) = -48, rank = 10**: the 10×10 incidence is INVERTIBLE at n=5. Edges↔triangles bijective.
+3. **C(n,3)/C(n,2) = (n-2)/3**: triangle/edge ratio. At n=5: 1 (self-dual!). At n=7: 5/3 (OCR minimum).
+4. **Self-duality at all odd n**: n=3 (verts=edges), n=5 (edges=tris), n=7 (tris=tets), n=9 (tets=4-simp)
+5. **The OCR minimum explanation**: n=7 is where triangle excess (5/3 ratio) maximally impacts variance
+6. **Efficiency paradox**: 2/n of dimensions carry 96% of info BECAUSE boundary map has algebraic structure
+**Scripts:** self_dual_dimensions_s134.py
+
+---
+
 ## opus-2026-03-21-S133 — 2026-03-21: Simplex Dimensions — score=coboundary, 2/n dims carry 96% info, efficiency grows linearly
 
 **Account:** opus
