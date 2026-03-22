@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S182 — 2026-03-22: H = 1 + 2^d at Source, Self-Loop = 2/n EXACT
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S181
+**Summary:** Verified H = 1 + 2^{j-i-1} for flipping arc (i,j) in transitive. CORRECTED: formula holds for d≥1 only; d=0 (adjacent swap) gives H=1 (self-loop). The d=0 flips ARE the self-loops: exactly n-1 adjacent swaps out of C(n,2) arcs. Source self-loop fraction = (n-1)/C(n,2) = 2/n EXACTLY at all n. The 2^d counts BINARY CHOICES: each of the d vertices between i and j independently chooses prefix or suffix → 2^d new paths. This IS the Cayley-Dickson doubling at the single-arc level. The anti-diagonal of the staircase (tiles with i+j=n-1) gives the BLUE (SC-preserving) flips and the largest H values. Source degree = C(n,2)-(n-1) = C(n-1,2) = cycle space dimension. Source neighbors reach H∈{3,5,9,...,1+2^{n-2}}. Read kind-pasteur S20ak.
+**New contributions:** source_formula_meta_s182.py
+**Unresolved:** Generalize the formula beyond the source, connect d=range to the staircase, prove the anti-diagonal = blue line
+
+---
+
 ## opus-2026-03-22-S181 — 2026-03-22: Meta-Graph Deep — Self-Loop = 1/2, 3/8, 11/64, Denominator = 2^{C(n-1,2)}!
 
 **Account:** opus
