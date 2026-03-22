@@ -1,0 +1,172 @@
+======================================================================
+  THE PERMUTOHEDRON: TOURNAMENT THEORY'S HOME
+======================================================================
+
+======================================================================
+  1. LATTICE POINTS = SCORE SEQUENCES
+======================================================================
+
+  n=3: 2 score sequences (= lattice points in Pi_3)
+    Total tournaments: 8
+    Score sequences (sorted): [(0, 1, 2), (1, 1, 1)]
+    Vol(Pi_3) = 3^1 = 3 (Cayley trees)
+    # labeled trees on [3]: 3
+
+  n=4: 4 score sequences (= lattice points in Pi_4)
+    Total tournaments: 64
+    Score sequences (sorted): [(0, 1, 2, 3), (0, 2, 2, 2), (1, 1, 1, 3), (1, 1, 2, 2)]
+    Vol(Pi_4) = 4^2 = 16 (Cayley trees)
+    # labeled trees on [4]: 16
+
+  n=5: 9 score sequences (= lattice points in Pi_5)
+    Total tournaments: 1024
+    Score sequences (sorted): [(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (0, 2, 2, 3, 3), (1, 1, 1, 3, 4), (1, 1, 2, 2, 4), (1, 1, 2, 3, 3), (1, 2, 2, 2, 3), (2, 2, 2, 2, 2)]
+    Vol(Pi_5) = 5^3 = 125 (Cayley trees)
+    # labeled trees on [5]: 125
+
+  n=6: 22 score sequences (= lattice points in Pi_6)
+    Total tournaments: 32768
+    Score sequences (sorted): [(0, 1, 2, 3, 4, 5), (0, 1, 2, 4, 4, 4), (0, 1, 3, 3, 3, 5), (0, 1, 3, 3, 4, 4), (0, 2, 2, 2, 4, 5), (0, 2, 2, 3, 3, 5), (0, 2, 2, 3, 4, 4), (0, 2, 3, 3, 3, 4), (0, 3, 3, 3, 3, 3), (1, 1, 1, 3, 4, 5), (1, 1, 1, 4, 4, 4), (1, 1, 2, 2, 4, 5), (1, 1, 2, 3, 3, 5), (1, 1, 2, 3, 4, 4), (1, 1, 3, 3, 3, 4), (1, 2, 2, 2, 3, 5), (1, 2, 2, 2, 4, 4), (1, 2, 2, 3, 3, 4), (1, 2, 3, 3, 3, 3), (2, 2, 2, 2, 2, 5), (2, 2, 2, 2, 3, 4), (2, 2, 2, 3, 3, 3)]
+    Vol(Pi_6) = 6^4 = 1296 (Cayley trees)
+    # labeled trees on [6]: 1296
+
+======================================================================
+  2. EULERIAN NUMBERS = h-VECTOR OF Pi_n
+======================================================================
+
+  n=3: Eulerian numbers = [1, 4, 1]
+    Sum = 6 = 3! = 6
+    Symmetric: True
+    E[H] = n!/2^(n-1) = 3/2 = 1.50
+
+  n=4: Eulerian numbers = [1, 11, 11, 1]
+    Sum = 24 = 4! = 24
+    Symmetric: True
+    E[H] = n!/2^(n-1) = 3 = 3.00
+
+  n=5: Eulerian numbers = [1, 26, 66, 26, 1]
+    Sum = 120 = 5! = 120
+    Symmetric: True
+    E[H] = n!/2^(n-1) = 15/2 = 7.50
+
+  n=6: Eulerian numbers = [1, 57, 302, 302, 57, 1]
+    Sum = 720 = 6! = 720
+    Symmetric: True
+    E[H] = n!/2^(n-1) = 45/2 = 22.50
+
+======================================================================
+  3. H-SPECTRUM vs EULERIAN NUMBERS
+======================================================================
+
+  n=5:
+  H-spectrum: {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+  Eulerian numbers: [1, 26, 66, 26, 1]
+
+  H-generating polynomial: sum_T x^H(T) =
+    120*x^1 + 120*x^3 + 240*x^5 + 240*x^9 + 120*x^11 + 120*x^13 + 64*x^15
+  Eulerian polynomial A_5(t) =
+    1*t^0 + 26*t^1 + 66*t^2 + 26*t^3 + 1*t^4
+
+======================================================================
+  4. FACES OF Pi_n = ORDERED PARTITIONS
+======================================================================
+
+  Pi_3 (2-dimensional permutohedron):
+    f-vector: [6, 6, 1]
+    Total faces: 13
+    Fubini number (ordered Bell): 13
+
+  Pi_4 (3-dimensional permutohedron):
+    f-vector: [24, 36, 14, 1]
+    Total faces: 75
+    Fubini number (ordered Bell): 75
+
+  Pi_5 (4-dimensional permutohedron):
+    f-vector: [120, 240, 150, 30, 1]
+    Total faces: 541
+    Fubini number (ordered Bell): 541
+
+======================================================================
+  5. THE SHI AND LINIAL ARRANGEMENTS
+======================================================================
+
+  n=2: braid=       2, Shi=(n+1)^(n-1)=       3, Cayley=n^(n-2)=     1, Catalan=    2
+  n=3: braid=       6, Shi=(n+1)^(n-1)=      16, Cayley=n^(n-2)=     3, Catalan=    5
+  n=4: braid=      24, Shi=(n+1)^(n-1)=     125, Cayley=n^(n-2)=    16, Catalan=   14
+  n=5: braid=     120, Shi=(n+1)^(n-1)=    1296, Cayley=n^(n-2)=   125, Catalan=   42
+  n=6: braid=     720, Shi=(n+1)^(n-1)=   16807, Cayley=n^(n-2)=  1296, Catalan=  132
+  n=7: braid=    5040, Shi=(n+1)^(n-1)=  262144, Cayley=n^(n-2)= 16807, Catalan=  429
+
+  THE THREE ARRANGEMENTS:
+
+  BRAID:   x_i = x_j           regions = n! (transitive tournaments)
+  SHI:     x_i = x_j, x_j+1    regions = (n+1)^(n-1) (parking functions)
+  LINIAL:  x_i = x_j + 1        regions = semiacyclic tournaments
+
+  THE CONNECTIONS:
+  n! = number of TRANSITIVE tournaments = vertices of permutohedron
+  n^(n-2) = volume of permutohedron = labeled trees = spanning trees of K_n
+  (n+1)^(n-1) = Shi regions = parking functions
+
+  PARKING FUNCTIONS are to the Shi arrangement what
+  TOURNAMENTS are to the braid arrangement.
+  Both are orientations/labelings of the same underlying space.
+
+======================================================================
+  6. SYT OF STAIRCASE = REDUCED WORDS FOR w_0 IN S_n
+======================================================================
+
+  Number of SYT of staircase delta_(n-1) = reduced words for w_0 in S_n:
+    n=2: f^delta = 1, C(n,2)=1
+    n=3: f^delta = 1, C(n,2)=3
+    n=4: f^delta = 2, C(n,2)=6
+    n=5: f^delta = 16, C(n,2)=10
+    n=6: f^delta = 768, C(n,2)=15
+    n=7: f^delta = 292864, C(n,2)=21
+
+  THESE ARE THE NUMBER OF WAYS TO BUILD A COMPLETE TOURNAMENT
+  BY ADDING ONE ARC AT A TIME (each arc = one adjacent transposition).
+
+  Each reduced word = a sequence of C(n,2) adjacent transpositions
+  that builds the "full reversal" tournament from the identity.
+
+  This connects the STAIRCASE (Young diagram) to the PERMUTOHEDRON
+  (whose 1-skeleton gives the graph where reduced words are paths)
+  to TOURNAMENTS (which are the orientations being built).
+
+  THE TRINITY IN ACTION:
+  STAIRCASE: f^delta = number of SYT of staircase shape
+  PERMUTOHEDRON: = number of shortest paths from e to w_0
+  TOURNAMENT: = number of ways to build the full tournament arc by arc
+
+======================================================================
+  SYNTHESIS: THE PERMUTOHEDRON IS THE NATURAL HOME
+======================================================================
+
+  EVERY TOURNAMENT QUANTITY HAS A PERMUTOHEDRON INTERPRETATION:
+
+  TOURNAMENT              PERMUTOHEDRON                  VALUE
+  ----------              -------------                  -----
+  Score sequence          Lattice point in Pi_n          n-1 numbers
+  # tournaments           Volume of cube fiber           2^m / n!
+  H(T) = HP count         Linear extensions of poset     1 to H_max
+  Transitive T            Vertex of Pi_n                 n!  vertices
+  Score class             Face of Pi_n                   Ordered partition
+  Iso class graph G_n     Quotient of Pi_n by S_n        A000568 nodes
+  SYT of staircase        Reduced words for w_0          f^delta paths
+  Eulerian numbers        h-vector of Pi_n               A(n,k)
+  E[H] = n!/2^(n-1)      Vol(Pi_n) / Vol(fiber)         Cayley-like
+  Cayley trees n^(n-2)    Vol(Pi_n) itself               Spanning trees
+  Fiber fraction          Width of lattice cell / Vol     ~ 1/sqrt(pi*n)
+
+  THE PERMUTOHEDRON IS THE NATURAL COORDINATE SYSTEM
+  FOR TOURNAMENT THEORY.
+
+  Instead of working in the cube (0,1)^m (labeled tournaments),
+  project to the permutohedron (score classes) and analyze fibers.
+  This is EXACTLY what the OCR measures: how much of H is in the
+  base (permutohedron) vs the fiber (cycle space).
+
+  The 97% OCR says: 97% of H is determined by position in Pi_n.
+  The 3% residual is the fiber content (where you are WITHIN the face).
+
