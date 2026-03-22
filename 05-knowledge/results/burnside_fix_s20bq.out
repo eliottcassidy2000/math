@@ -1,0 +1,44 @@
+======================================================================
+  FIXING THE BURNSIDE DISCREPANCY
+======================================================================
+
+======================================================================
+  THE CORRECT FORMULA
+======================================================================
+
+  n=3: brute_force=2, formula=2, A000568=2
+  n=4: brute_force=4, formula=5, A000568=4
+  n=5: brute_force=12, formula=15, A000568=12
+  n=6: brute_force=56, formula=66, A000568=56
+
+  THE FIX: The tournament Burnside formula is NOT 2^(pair-orbits).
+  It is 2^(pair-orbits with even sign-flip count), with the whole
+  contribution being 0 if ANY pair-orbit has odd sign-flip count.
+
+  The sign flip occurs when sigma REVERSES the canonical ordering
+  of a pair's endpoints: sigma(a) > sigma(b) when a < b.
+
+  GRAPH vs TOURNAMENT:
+  Graphs:      Fix(sigma) = 2^(pair-orbits)  [always 2 choices per orbit]
+  Tournaments: Fix(sigma) = 2^(even-orbits) * 0^(any odd orbit)
+
+  The tournaments have FEWER fixed points per permutation because
+  ODD pair-orbits contribute 0 instead of 2.
+  This is why A000568 < A000088 at every n >= 3.
+
+======================================================================
+  WHICH PERMUTATIONS HAVE ODD PAIR-ORBITS?
+======================================================================
+
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\burnside_fix_s20bq.py", line 216, in <module>
+    for partition in sorted(set(tuple(sorted(Counter(
+                            ~~~^^^^^^^^^^^^^^^^^^^^^^
+        [len([j for j in range(n) if perm[j] == ((j+k) % n) for k in range(n)] ) for j in range(1)]).elements(), reverse=True))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        for perm in permutations(range(n)))):
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\burnside_fix_s20bq.py", line 217, in <genexpr>
+    [len([j for j in range(n) if perm[j] == ((j+k) % n) for k in range(n)] ) for j in range(1)]).elements(), reverse=True))
+                                                ^
+UnboundLocalError: cannot access local variable 'k' where it is not associated with a value
