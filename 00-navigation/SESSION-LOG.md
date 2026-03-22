@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S130 — 2026-03-21: LLM Improvements Deep — 6 new proposals, honest validation audit, shadow KV cache #1 priority
+
+**Account:** opus
+**Summary:** Comprehensive audit of existing LLM improvements and 6 new proposals. Honest about what's validated (OCF diagnostics on GPT-2, Cartan probe) vs simulated (TournamentHead, attention speedup). Proposed 6 NEW improvements: A) tournament-regularized training, B) shadow KV cache compression (PRIORITY 1 — 128K× savings), C) SRCP hallucination detector, D) quaternion+Cartan attention, E) spectral kurtosis early stopping, F) shadow ranker for RLHF. Identified 4 genuinely novel contributions vs 4 engineering variants vs 3 speculative claims.
+**Key:**
+1. **Shadow KV cache (PRIORITY 1)**: replace n×n attention cache with n score numbers. 96% quality, 128K× memory savings. GENUINELY NOVEL.
+2. **SRCP hallucination detector**: per-token SRCP on top-8 logits gives finer confidence than entropy. O(n³) with n=8 → fast.
+3. **Tournament-regularized training**: penalize spectral kurtosis to encourage Paley-like attention. NOVEL.
+4. **Honest audit**: TournamentHead ARCHITECTURE correct but not benchmarked. OCF diagnostics IS validated on GPT-2. 96% OCR is for random tournaments, may differ for trained attention patterns.
+**Scripts:** llm_improvements_deep_s130.py
+
+---
+
 ## opus-2026-03-21-S146 — 2026-03-21: Quaternion Attention Head — Working Implementation
 
 **Account:** opus
