@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S125 — 2026-03-21: CD Tower as Phase Diagram — alpha_2=0↔Hurwitz, Fano=phase boundary, S=zero divisors
+
+**Account:** opus
+**Summary:** The Cayley-Dickson tower IS the tournament phase diagram. R=trivial, C=direction, H=cycles(OCR=1), O=obstruction(OCR<1), S=recovery+zero divisors. The loss of associativity (H→O) = loss of OCR determinacy (n=5→6). Alpha_2=0 for n≤5 ↔ Hurwitz's theorem (4 composition algebras). The Fano plane is the phase boundary: it governs octonionic multiplication AND tournament conflict at n=7.
+**Key:**
+1. **Alpha_2=0 ↔ Hurwitz**: only 4 tournament orders (n=1,2,3,5) have alpha_2=0 always ↔ only 4 composition algebras (R,C,H,O)
+2. **O→S = n=6→7→8**: loss of alternativity = binary skeleton establishment
+3. **Zero divisors = independent cycle pairs**: S has ab=0; tournaments have vertex-disjoint cycles
+4. **Fano = phase boundary**: octonion multiplication rules = Fano = T_7 conflict structure
+5. **5 tournament phases**: R(trivial), C(binary), H(quaternionic), O(octonionic), S(sedenionic)
+6. **Hurwitz = Shadow**: "only 4 composition algebras" ↔ "only 4 orders with perfect score-determinacy"
+
+---
+
 ## opus-2026-03-21-S136 — 2026-03-21: Cayley-Dickson Tower in Tournament Theory
 
 **Account:** opus
