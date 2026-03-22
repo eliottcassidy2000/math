@@ -1809,3 +1809,29 @@ Source: the-binary-skeleton.md
 **Hypothesis:** n=6 is the universal Ramsey threshold for tournament structure: the order at which Kneser girth drops from 5 to 3, beta_3 first appears, per-path identity first fails, alpha_2 first becomes possible, and interval graph property first fails. All these co-occur at n=6 because R(3,3)=6.
 **Evidence:** K(5,2) girth=5 vs K(6,2) girth=3. beta_3 onset at n=6. Per-path failure at n=6. alpha_2>0 first at n=6. Omega disconnected first at n=6. The common mechanism: 6 vertices is the minimum for 2 disjoint triangles (= 2*3), which is the Ramsey condition.
 Source: the-binary-skeleton.md
+
+## HYP-1720: OCF is Greene's theorem for tournaments (kind-pasteur-S18c)
+**Status:** OPEN (structural parallel, not yet a formal theorem)
+**Hypothesis:** The OCF identity H = I(Omega, 2) is the tournament analogue of Greene's theorem (1976), which says the weight enumerator of a linear code equals a specialization of the Tutte polynomial of the associated matroid. Both say: "a counting function on a structured binary object = a graph polynomial at a specific evaluation point."
+**Evidence:** Both involve binary strings (codewords / tournaments), both have linear syndromes (parity checks / score sequences), both have partition functions (weight enumerator / independence polynomial), both evaluate at specific points (field-dependent / x=2).
+**Test:** Formalize the matroid structure of tournament score classes. Show that I(Omega, x) is a specialization of a Tutte-type polynomial on this matroid.
+Source: tournaments-as-codes.md
+
+## HYP-1721: min_c3 = 0 vs 1 is perfect H discriminant at n=5 (opus-S127, kind-pasteur-S18c)
+**Status:** CONFIRMED at n=5 (exhaustive)
+**Hypothesis:** At n=5, min_c3(T) = min over arcs of 3-cycle count through that arc takes exactly two values: 0 (H in [1,13], 960 tournaments) and 1 (H=15, 64 tournaments). The tournaments where every arc participates in a 3-cycle are EXACTLY the regular tournaments with maximum H.
+**Evidence:** Exhaustive computation by opus-S127. min_c3=1 iff regular iff H=max.
+**Interpretation:** min_c3 is the tournament's "minimum distance" — the weakest link in the cycle structure.
+Source: stabilizer_tournament_bridge_s127.out, tournaments-as-codes.md
+
+## HYP-1722: Regular tournaments = kernel of syndrome map = perfect codes (kind-pasteur-S18c)
+**Status:** OPEN (structural identification)
+**Hypothesis:** Regular tournaments (score = (n-1)/2 for all vertices) form the "zero-syndrome code" of the tournament encoding. They are the kernel of the score map, the objects with maximum H, and the tournament analogue of perfect codes. Paley tournaments within this class are the analogue of algebraically constructed optimal codes (BCH, Reed-Muller, QR codes).
+**Evidence:** Regular tournaments maximize H (Paley maximizer conjecture). They have zero weight in the A_{n-1} lattice. min_c3 >= 1 (at n=5). SRCP maximally uniform.
+Source: tournaments-as-codes.md
+
+## HYP-1723: I(J(5,2), 2) = 81 = 3^4 is a unique perfect-power phenomenon (opus-S128, kind-pasteur-S18c)
+**Status:** CONFIRMED at n=5 (computed)
+**Hypothesis:** The independence polynomial of the Johnson graph J(5,2) at x=2 equals 81 = 3^4 = (tournament atom)^(Cayley period). This perfect-power structure occurs ONLY at n=5 and is the tournament analogue of a self-dual code having a weight enumerator with special factorization.
+**Evidence:** opus-S128 computation. I(J(5,2), 2) = 81. At other n, the values are not perfect powers.
+Source: tournaments-as-codes.md

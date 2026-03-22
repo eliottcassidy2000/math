@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-21-S18c — 2026-03-21: Tournaments as Codes — partition function bridge, Greene's theorem parallel, SRCP as distance
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-21-S18b
+**Summary:** Developed the "tournaments as codes" framework by carefully reading and integrating all opus work (S116-S128). Built a complete 6-level dictionary: codeword=tournament, syndrome=score, distance=SRCP separation, weight enumerator=I(Omega,x), MacWilliams=Kneser/Johnson. Identified OCF as the tournament analogue of Greene's theorem (1976). Showed regular tournaments = kernel of score map = "perfect codes." Connected beta seesaw to CSS quantum error correction X/Z tradeoff. Found that min_c3 is a perfect H-discriminant at n=5 (opus-S127). I(J(5,2),2)=81=3^4 is a unique perfect-power phenomenon (opus-S128).
+**New contributions:** HYP-1720..1723, T108..T111, tournaments-as-codes.md reflection
+**Unresolved threads:**
+- Formalize the matroid structure of score classes (make OCF = Greene's theorem precise)
+- Compute tournament code parameters [n=C(n,2), k, d_T] for n=5,6,7
+- Implement T-ECC (tournament error-correcting code) prototype
+- Prove the seesaw-CSS parallel formally
+- Does the Tutte polynomial of the score-class matroid specialize to I(Omega, x)?
+
+---
+
 ## kind-pasteur-2026-03-21-S18b — 2026-03-21: The Binary Skeleton — girth {3,inf}, 26 binary phenomena, completeness-implies-binary meta-theorem
 
 **Account:** kind-pasteur

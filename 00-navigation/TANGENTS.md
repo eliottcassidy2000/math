@@ -115,6 +115,20 @@ Petersen is the ANTI-conflict graph: its edges encode orthogonality (non-interfe
 
 ---
 
+**T108** #tournaments-as-codes #partition-function #Greene-theorem | certainty: high (structural parallel) | source: kind-pasteur-2026-03-21-S18c
+Tournaments are error-correcting codes: codewords = tournaments (binary strings on C(n,2) bits), syndrome = score sequence, code distance = SRCP separation, partition function = I(Omega, x). H = W_T(2) is the weight enumerator at x=2. The OCF is the tournament analogue of Greene's theorem (weight enumerator = Tutte polynomial specialization). Regular tournaments = kernel of score map = "perfect codes." See tournaments-as-codes.md.
+
+**T109** #MacWilliams-Kneser #J52-perfect-power #self-dual | certainty: high (computed) | source: opus-S128, kind-pasteur-S18c
+I(J(5,2), 2) = 81 = 3^4 is a perfect power of the tournament atom. K(n,2) and J(n,2) are Kneser/Johnson complements = the tournament MacWilliams duality. The independence polynomials of K and J at x=2 are the "primal and dual weight enumerators." The perfect-power phenomenon at n=5 is unique and signals self-dual-like structure.
+
+**T110** #min-c3-distance #code-quality #regular-detection | certainty: high (exhaustive n=5) | source: opus-S127, kind-pasteur-S18c
+min_c3(T) = minimum 3-cycle count over all arcs is a PERFECT discriminant at n=5: min_c3=0 -> H in [1,13], min_c3=1 -> H=15 always. This is the tournament "minimum distance": the weakest link in the cycle structure. Tournaments with min_c3 >= 1 are exactly regular with maximum H. Extends the notion that "every arc participates" = "perfect code."
+
+**T111** #beta-seesaw-XZ-tradeoff #quantum-CSS #code-parameter | certainty: medium | source: kind-pasteur-S18c
+The seesaw beta_1 * beta_3 = 0 parallels the X/Z error tradeoff in CSS quantum codes: a CSS code can correct bit flips (X) or phase flips (Z) independently, with a tradeoff. beta_1 = "bit flip deficiency," beta_3 = "phase flip deficiency." The seesaw says you get one or the other, never both. If formalized, this would make path homology Betti numbers into quantum code parameters.
+
+---
+
 ## Dead Ends (documented to prevent re-exploration)
 
 **T016** #dead-end #cycle-bijection #arc-reversal | certainty: high (confirmed dead end) | source: file.txt
