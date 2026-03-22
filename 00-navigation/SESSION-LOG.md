@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S164 — 2026-03-22: Staircase Young Diagrams and Source-Sink Embedding
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S163
+**Summary:** Unified staircase Young diagrams, source-sink decomposition, and recursive H formula. Pin grid IS δ_{n-1} (staircase partition (n-1,n-2,...,1)). Hook lengths ALL ODD verified through n=7. Scores = row sums of pin grid. Source-sink = boundary rows of staircase. TYPE A FORMULA VERIFIED: H = 2·H_mid + 2n-1 is EXACT for all 40 sink→source PoS tournaments at n=5 (40/40). TYPE B is DIFFERENT: formula gives wrong predictions (Δ=+2 and Δ=-4). Recursive boundary stripping: C(n,2)→~1 bit remaining in ⌊(n-2)/2⌋ levels. Hook length formula gives f^{δ_k} = standard Young tableaux count. This connects to Hamiltonian paths as linear extensions. The staircase IS the shape of tournament space; the source-sink decomposition IS the peeling of this shape's boundary; the recursion H=2H_mid+2n-1 IS the self-similar structure of the {3,∞} tessellation in representation theory. Read kind-pasteur S20n/S20o (source-sink at n=6, recursive embedding).
+**New contributions:** staircase_source_sink_s164.py
+**Unresolved threads:** Prove Type A formula for general n, find Type B formula, connect hook lengths to tournament invariants, RSK correspondence
+
+---
+
 ## opus-2026-03-22-S163 — 2026-03-22: Arc-Flip Compressor V2 — Tournament-Informed Compression
 
 **Account:** opus
