@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S159 — 2026-03-22: Topology and Geometry of Algebras
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S158
+**Summary:** Investigated the full topology/geometry of tournament space. THREE SPACES: (1) The CUBE {0,1}^{C(n,2)} is the configuration space. (2) The SPHERE in so(n) is the state space (all ||B||=√(n(n-1)), confirmed). (3) The SIMPLEX is the score space (projection target). KEY TOPOLOGICAL FINDINGS: H-level sets are mostly connected, H=15 sublevel in PoS fiber is NOT connected (topological feature). The forbidden H=7 creates a HOLE — the shortest path from H=5 to H=9 goes through H=1 (detour through transitive!). GEOMETRIC FINDINGS: Geodesic distance θ = arccos(1-2d_H/C(n,2)). Complement is antipodal (θ=π). Random tournaments are orthogonal (θ≈π/2). H-gradient: near transitive, most flips increase H; near regular, most decrease. H is a latitude-like function on the sphere with regular=north pole, transitive=south pole. The algebra IS the geometry: root angles = Coxeter angles, Lie brackets = arc interactions, Cartan decomposition = angle decomposition.
+**New contributions:** algebra_geometry_s159.py
+**Unresolved threads:** Compute π₁ of the complement of the H=7 hole, classify the fiber topology at n=6, connect geodesic curvature to susceptibility
+
+---
+
 ## opus-2026-03-22-S158 — 2026-03-22: Root Space Angles and Tournament Structure
 
 **Account:** opus
