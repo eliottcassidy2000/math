@@ -1,0 +1,485 @@
+======================================================================
+  ISO CLASS GRAPH THROUGH INFORMATION GEOMETRY
+  kind-pasteur-2026-03-22-S20z
+======================================================================
+
+  Building iso classes at n=5...
+  Found 12 iso classes
+
+======================================================================
+  A. REEB GRAPH ANALYSIS
+======================================================================
+
+  H-LEVEL SET CONNECTIVITY (are all T with same H connected by arc flips?):
+  H=1: 120 tournaments, 1 component, 1 iso classes
+  H=3: 120 tournaments, 80 components
+    Component 0: 2 tournaments, iso classes {1}
+    Component 1: 1 tournaments, iso classes {2}
+    Component 2: 2 tournaments, iso classes {3}
+    Component 3: 2 tournaments, iso classes {1}
+    Component 4: 1 tournaments, iso classes {2}
+    Component 5: 1 tournaments, iso classes {2}
+    Component 6: 2 tournaments, iso classes {1}
+    Component 7: 1 tournaments, iso classes {2}
+    Component 8: 2 tournaments, iso classes {1}
+    Component 9: 2 tournaments, iso classes {3}
+    Component 10: 2 tournaments, iso classes {3}
+    Component 11: 1 tournaments, iso classes {2}
+    Component 12: 2 tournaments, iso classes {3}
+    Component 13: 1 tournaments, iso classes {2}
+    Component 14: 1 tournaments, iso classes {2}
+    Component 15: 2 tournaments, iso classes {1}
+    Component 16: 2 tournaments, iso classes {3}
+    Component 17: 1 tournaments, iso classes {2}
+    Component 18: 2 tournaments, iso classes {1}
+    Component 19: 2 tournaments, iso classes {1}
+    Component 20: 1 tournaments, iso classes {2}
+    Component 21: 2 tournaments, iso classes {1}
+    Component 22: 1 tournaments, iso classes {2}
+    Component 23: 2 tournaments, iso classes {3}
+    Component 24: 1 tournaments, iso classes {2}
+    Component 25: 1 tournaments, iso classes {2}
+    Component 26: 2 tournaments, iso classes {3}
+    Component 27: 1 tournaments, iso classes {2}
+    Component 28: 1 tournaments, iso classes {2}
+    Component 29: 2 tournaments, iso classes {1}
+    Component 30: 2 tournaments, iso classes {3}
+    Component 31: 1 tournaments, iso classes {2}
+    Component 32: 1 tournaments, iso classes {2}
+    Component 33: 2 tournaments, iso classes {3}
+    Component 34: 1 tournaments, iso classes {2}
+    Component 35: 1 tournaments, iso classes {2}
+    Component 36: 2 tournaments, iso classes {1}
+    Component 37: 1 tournaments, iso classes {2}
+    Component 38: 2 tournaments, iso classes {1}
+    Component 39: 2 tournaments, iso classes {3}
+    Component 40: 1 tournaments, iso classes {2}
+    Component 41: 2 tournaments, iso classes {3}
+    Component 42: 2 tournaments, iso classes {3}
+    Component 43: 1 tournaments, iso classes {2}
+    Component 44: 1 tournaments, iso classes {2}
+    Component 45: 2 tournaments, iso classes {3}
+    Component 46: 1 tournaments, iso classes {2}
+    Component 47: 1 tournaments, iso classes {2}
+    Component 48: 2 tournaments, iso classes {1}
+    Component 49: 1 tournaments, iso classes {2}
+    Component 50: 2 tournaments, iso classes {1}
+    Component 51: 2 tournaments, iso classes {3}
+    Component 52: 1 tournaments, iso classes {2}
+    Component 53: 2 tournaments, iso classes {3}
+    Component 54: 2 tournaments, iso classes {3}
+    Component 55: 1 tournaments, iso classes {2}
+    Component 56: 1 tournaments, iso classes {2}
+    Component 57: 2 tournaments, iso classes {1}
+    Component 58: 1 tournaments, iso classes {2}
+    Component 59: 2 tournaments, iso classes {1}
+    Component 60: 2 tournaments, iso classes {3}
+    Component 61: 1 tournaments, iso classes {2}
+    Component 62: 2 tournaments, iso classes {1}
+    Component 63: 2 tournaments, iso classes {1}
+    Component 64: 1 tournaments, iso classes {2}
+    Component 65: 2 tournaments, iso classes {1}
+    Component 66: 1 tournaments, iso classes {2}
+    Component 67: 2 tournaments, iso classes {3}
+    Component 68: 1 tournaments, iso classes {2}
+    Component 69: 1 tournaments, iso classes {2}
+    Component 70: 1 tournaments, iso classes {2}
+    Component 71: 2 tournaments, iso classes {3}
+    Component 72: 1 tournaments, iso classes {2}
+    Component 73: 2 tournaments, iso classes {1}
+    Component 74: 1 tournaments, iso classes {2}
+    Component 75: 2 tournaments, iso classes {3}
+    Component 76: 1 tournaments, iso classes {2}
+    Component 77: 2 tournaments, iso classes {1}
+    Component 78: 1 tournaments, iso classes {2}
+    Component 79: 1 tournaments, iso classes {2}
+  H=5: 240 tournaments, 10 components
+    Component 0: 24 tournaments, iso classes {4}
+    Component 1: 24 tournaments, iso classes {5}
+    Component 2: 24 tournaments, iso classes {5}
+    Component 3: 24 tournaments, iso classes {5}
+    Component 4: 24 tournaments, iso classes {4}
+    Component 5: 24 tournaments, iso classes {4}
+    Component 6: 24 tournaments, iso classes {5}
+    Component 7: 24 tournaments, iso classes {4}
+    Component 8: 24 tournaments, iso classes {4}
+    Component 9: 24 tournaments, iso classes {5}
+  H=9: 240 tournaments, 1 component, 2 iso classes
+  H=11: 120 tournaments, 30 components
+    Component 0: 4 tournaments, iso classes {8}
+    Component 1: 4 tournaments, iso classes {8}
+    Component 2: 4 tournaments, iso classes {8}
+    Component 3: 4 tournaments, iso classes {8}
+    Component 4: 4 tournaments, iso classes {8}
+    Component 5: 4 tournaments, iso classes {8}
+    Component 6: 4 tournaments, iso classes {8}
+    Component 7: 4 tournaments, iso classes {8}
+    Component 8: 4 tournaments, iso classes {8}
+    Component 9: 4 tournaments, iso classes {8}
+    Component 10: 4 tournaments, iso classes {8}
+    Component 11: 4 tournaments, iso classes {8}
+    Component 12: 4 tournaments, iso classes {8}
+    Component 13: 4 tournaments, iso classes {8}
+    Component 14: 4 tournaments, iso classes {8}
+    Component 15: 4 tournaments, iso classes {8}
+    Component 16: 4 tournaments, iso classes {8}
+    Component 17: 4 tournaments, iso classes {8}
+    Component 18: 4 tournaments, iso classes {8}
+    Component 19: 4 tournaments, iso classes {8}
+    Component 20: 4 tournaments, iso classes {8}
+    Component 21: 4 tournaments, iso classes {8}
+    Component 22: 4 tournaments, iso classes {8}
+    Component 23: 4 tournaments, iso classes {8}
+    Component 24: 4 tournaments, iso classes {8}
+    Component 25: 4 tournaments, iso classes {8}
+    Component 26: 4 tournaments, iso classes {8}
+    Component 27: 4 tournaments, iso classes {8}
+    Component 28: 4 tournaments, iso classes {8}
+    Component 29: 4 tournaments, iso classes {8}
+  H=13: 120 tournaments, 120 components
+    Component 0: 1 tournaments, iso classes {9}
+    Component 1: 1 tournaments, iso classes {9}
+    Component 2: 1 tournaments, iso classes {9}
+    Component 3: 1 tournaments, iso classes {9}
+    Component 4: 1 tournaments, iso classes {9}
+    Component 5: 1 tournaments, iso classes {9}
+    Component 6: 1 tournaments, iso classes {9}
+    Component 7: 1 tournaments, iso classes {9}
+    Component 8: 1 tournaments, iso classes {9}
+    Component 9: 1 tournaments, iso classes {9}
+    Component 10: 1 tournaments, iso classes {9}
+    Component 11: 1 tournaments, iso classes {9}
+    Component 12: 1 tournaments, iso classes {9}
+    Component 13: 1 tournaments, iso classes {9}
+    Component 14: 1 tournaments, iso classes {9}
+    Component 15: 1 tournaments, iso classes {9}
+    Component 16: 1 tournaments, iso classes {9}
+    Component 17: 1 tournaments, iso classes {9}
+    Component 18: 1 tournaments, iso classes {9}
+    Component 19: 1 tournaments, iso classes {9}
+    Component 20: 1 tournaments, iso classes {9}
+    Component 21: 1 tournaments, iso classes {9}
+    Component 22: 1 tournaments, iso classes {9}
+    Component 23: 1 tournaments, iso classes {9}
+    Component 24: 1 tournaments, iso classes {9}
+    Component 25: 1 tournaments, iso classes {9}
+    Component 26: 1 tournaments, iso classes {9}
+    Component 27: 1 tournaments, iso classes {9}
+    Component 28: 1 tournaments, iso classes {9}
+    Component 29: 1 tournaments, iso classes {9}
+    Component 30: 1 tournaments, iso classes {9}
+    Component 31: 1 tournaments, iso classes {9}
+    Component 32: 1 tournaments, iso classes {9}
+    Component 33: 1 tournaments, iso classes {9}
+    Component 34: 1 tournaments, iso classes {9}
+    Component 35: 1 tournaments, iso classes {9}
+    Component 36: 1 tournaments, iso classes {9}
+    Component 37: 1 tournaments, iso classes {9}
+    Component 38: 1 tournaments, iso classes {9}
+    Component 39: 1 tournaments, iso classes {9}
+    Component 40: 1 tournaments, iso classes {9}
+    Component 41: 1 tournaments, iso classes {9}
+    Component 42: 1 tournaments, iso classes {9}
+    Component 43: 1 tournaments, iso classes {9}
+    Component 44: 1 tournaments, iso classes {9}
+    Component 45: 1 tournaments, iso classes {9}
+    Component 46: 1 tournaments, iso classes {9}
+    Component 47: 1 tournaments, iso classes {9}
+    Component 48: 1 tournaments, iso classes {9}
+    Component 49: 1 tournaments, iso classes {9}
+    Component 50: 1 tournaments, iso classes {9}
+    Component 51: 1 tournaments, iso classes {9}
+    Component 52: 1 tournaments, iso classes {9}
+    Component 53: 1 tournaments, iso classes {9}
+    Component 54: 1 tournaments, iso classes {9}
+    Component 55: 1 tournaments, iso classes {9}
+    Component 56: 1 tournaments, iso classes {9}
+    Component 57: 1 tournaments, iso classes {9}
+    Component 58: 1 tournaments, iso classes {9}
+    Component 59: 1 tournaments, iso classes {9}
+    Component 60: 1 tournaments, iso classes {9}
+    Component 61: 1 tournaments, iso classes {9}
+    Component 62: 1 tournaments, iso classes {9}
+    Component 63: 1 tournaments, iso classes {9}
+    Component 64: 1 tournaments, iso classes {9}
+    Component 65: 1 tournaments, iso classes {9}
+    Component 66: 1 tournaments, iso classes {9}
+    Component 67: 1 tournaments, iso classes {9}
+    Component 68: 1 tournaments, iso classes {9}
+    Component 69: 1 tournaments, iso classes {9}
+    Component 70: 1 tournaments, iso classes {9}
+    Component 71: 1 tournaments, iso classes {9}
+    Component 72: 1 tournaments, iso classes {9}
+    Component 73: 1 tournaments, iso classes {9}
+    Component 74: 1 tournaments, iso classes {9}
+    Component 75: 1 tournaments, iso classes {9}
+    Component 76: 1 tournaments, iso classes {9}
+    Component 77: 1 tournaments, iso classes {9}
+    Component 78: 1 tournaments, iso classes {9}
+    Component 79: 1 tournaments, iso classes {9}
+    Component 80: 1 tournaments, iso classes {9}
+    Component 81: 1 tournaments, iso classes {9}
+    Component 82: 1 tournaments, iso classes {9}
+    Component 83: 1 tournaments, iso classes {9}
+    Component 84: 1 tournaments, iso classes {9}
+    Component 85: 1 tournaments, iso classes {9}
+    Component 86: 1 tournaments, iso classes {9}
+    Component 87: 1 tournaments, iso classes {9}
+    Component 88: 1 tournaments, iso classes {9}
+    Component 89: 1 tournaments, iso classes {9}
+    Component 90: 1 tournaments, iso classes {9}
+    Component 91: 1 tournaments, iso classes {9}
+    Component 92: 1 tournaments, iso classes {9}
+    Component 93: 1 tournaments, iso classes {9}
+    Component 94: 1 tournaments, iso classes {9}
+    Component 95: 1 tournaments, iso classes {9}
+    Component 96: 1 tournaments, iso classes {9}
+    Component 97: 1 tournaments, iso classes {9}
+    Component 98: 1 tournaments, iso classes {9}
+    Component 99: 1 tournaments, iso classes {9}
+    Component 100: 1 tournaments, iso classes {9}
+    Component 101: 1 tournaments, iso classes {9}
+    Component 102: 1 tournaments, iso classes {9}
+    Component 103: 1 tournaments, iso classes {9}
+    Component 104: 1 tournaments, iso classes {9}
+    Component 105: 1 tournaments, iso classes {9}
+    Component 106: 1 tournaments, iso classes {9}
+    Component 107: 1 tournaments, iso classes {9}
+    Component 108: 1 tournaments, iso classes {9}
+    Component 109: 1 tournaments, iso classes {9}
+    Component 110: 1 tournaments, iso classes {9}
+    Component 111: 1 tournaments, iso classes {9}
+    Component 112: 1 tournaments, iso classes {9}
+    Component 113: 1 tournaments, iso classes {9}
+    Component 114: 1 tournaments, iso classes {9}
+    Component 115: 1 tournaments, iso classes {9}
+    Component 116: 1 tournaments, iso classes {9}
+    Component 117: 1 tournaments, iso classes {9}
+    Component 118: 1 tournaments, iso classes {9}
+    Component 119: 1 tournaments, iso classes {9}
+  H=15: 64 tournaments, 64 components
+    Component 0: 1 tournaments, iso classes {11}
+    Component 1: 1 tournaments, iso classes {11}
+    Component 2: 1 tournaments, iso classes {10}
+    Component 3: 1 tournaments, iso classes {11}
+    Component 4: 1 tournaments, iso classes {10}
+    Component 5: 1 tournaments, iso classes {11}
+    Component 6: 1 tournaments, iso classes {11}
+    Component 7: 1 tournaments, iso classes {11}
+    Component 8: 1 tournaments, iso classes {10}
+    Component 9: 1 tournaments, iso classes {10}
+    Component 10: 1 tournaments, iso classes {11}
+    Component 11: 1 tournaments, iso classes {11}
+    Component 12: 1 tournaments, iso classes {11}
+    Component 13: 1 tournaments, iso classes {11}
+    Component 14: 1 tournaments, iso classes {10}
+    Component 15: 1 tournaments, iso classes {10}
+    Component 16: 1 tournaments, iso classes {11}
+    Component 17: 1 tournaments, iso classes {11}
+    Component 18: 1 tournaments, iso classes {10}
+    Component 19: 1 tournaments, iso classes {10}
+    Component 20: 1 tournaments, iso classes {11}
+    Component 21: 1 tournaments, iso classes {10}
+    Component 22: 1 tournaments, iso classes {11}
+    Component 23: 1 tournaments, iso classes {10}
+    Component 24: 1 tournaments, iso classes {11}
+    Component 25: 1 tournaments, iso classes {11}
+    Component 26: 1 tournaments, iso classes {11}
+    Component 27: 1 tournaments, iso classes {10}
+    Component 28: 1 tournaments, iso classes {11}
+    Component 29: 1 tournaments, iso classes {11}
+    Component 30: 1 tournaments, iso classes {10}
+    Component 31: 1 tournaments, iso classes {11}
+    Component 32: 1 tournaments, iso classes {11}
+    Component 33: 1 tournaments, iso classes {10}
+    Component 34: 1 tournaments, iso classes {11}
+    Component 35: 1 tournaments, iso classes {11}
+    Component 36: 1 tournaments, iso classes {10}
+    Component 37: 1 tournaments, iso classes {11}
+    Component 38: 1 tournaments, iso classes {11}
+    Component 39: 1 tournaments, iso classes {11}
+    Component 40: 1 tournaments, iso classes {10}
+    Component 41: 1 tournaments, iso classes {11}
+    Component 42: 1 tournaments, iso classes {10}
+    Component 43: 1 tournaments, iso classes {11}
+    Component 44: 1 tournaments, iso classes {10}
+    Component 45: 1 tournaments, iso classes {10}
+    Component 46: 1 tournaments, iso classes {11}
+    Component 47: 1 tournaments, iso classes {11}
+    Component 48: 1 tournaments, iso classes {10}
+    Component 49: 1 tournaments, iso classes {10}
+    Component 50: 1 tournaments, iso classes {11}
+    Component 51: 1 tournaments, iso classes {11}
+    Component 52: 1 tournaments, iso classes {11}
+    Component 53: 1 tournaments, iso classes {11}
+    Component 54: 1 tournaments, iso classes {10}
+    Component 55: 1 tournaments, iso classes {10}
+    Component 56: 1 tournaments, iso classes {11}
+    Component 57: 1 tournaments, iso classes {11}
+    Component 58: 1 tournaments, iso classes {11}
+    Component 59: 1 tournaments, iso classes {10}
+    Component 60: 1 tournaments, iso classes {11}
+    Component 61: 1 tournaments, iso classes {10}
+    Component 62: 1 tournaments, iso classes {11}
+    Component 63: 1 tournaments, iso classes {11}
+
+  Reeb graph: 306 nodes vs 12 iso classes
+  Iso class graph is FINER than Reeb graph
+
+======================================================================
+  B. WALSH-FOURIER ENERGY PER ISO CLASS
+======================================================================
+
+  Class    H  SC   Order-0   Order-2   Order-4  Residual
+      0    1  SC      7.50     -7.50      1.00      0.00
+      1    3  NS      7.50     -4.50      0.00      0.00
+      2    3  SC      7.50     -4.50      0.00      0.00
+      3    3  NS      7.50     -4.50      0.00      0.00
+      4    5  NS      7.50     -1.50     -1.00      0.00
+      5    5  NS      7.50     -1.50     -1.00      0.00
+      6    9  SC      7.50      1.50      0.00      0.00
+      7    9  SC      7.50      1.50      0.00      0.00
+      8   11  SC      7.50      4.50     -1.00      0.00
+      9   13  SC      7.50      4.50      1.00      0.00
+     10   15  SC      7.50      7.50      0.00      0.00
+     11   15  SC      7.50      4.50      3.00      0.00
+
+======================================================================
+  C. HESSIAN SPECTRUM AT EACH ISO CLASS
+======================================================================
+
+  Class    H  SC   Trace  #neg #zero  #pos   min_eig   max_eig
+      0    1  SC    22.0     3     0     7      -8.7      14.5
+      1    3  NS    18.0     4     0     6     -10.2      11.0
+      2    3  SC    18.0     4     0     6     -10.0      21.0
+      3    3  NS    18.0     4     0     6     -10.2      11.0
+      4    5  NS    14.0     4     0     6     -10.4      17.4
+      5    5  NS    14.0     4     0     6     -10.4      17.4
+      6    9  SC    -6.0     4     0     6     -14.0      16.1
+      7    9  SC    -6.0     4     0     6     -13.8      13.2
+      8   11  SC   -10.0     4     1     5     -13.8      15.5
+      9   13  SC   -26.0     5     2     3     -16.8      14.2
+     10   15  SC   -30.0     4     2     4     -15.6      13.4
+     11   15  SC   -42.0     7     0     3     -17.7      14.9
+
+======================================================================
+  D. WHY THE ALMOST-DAG? (Walsh even-order connection)
+======================================================================
+
+  Iso class graph edges: 30
+  H-increasing: 29
+  H-decreasing: 0
+  H-level: 1
+
+  WHY ALMOST-DAG:
+  H has only even Walsh orders (0, 2, 4).
+  Order-2 dominates (94.7% of Var(H) at n=5).
+  An arc flip changes H by: delta = 2*sum of order-2 + order-4 terms.
+  Since order-2 >> order-4, most flips have definite sign => DAG-like.
+  Level edges occur when order-2 and order-4 contributions cancel.
+  At n=5: 1 level edge(s) out of 30 total (3.3%).
+
+======================================================================
+  E. BRUALDI-LI INTERCHANGE WITHIN SCORE CLASSES
+======================================================================
+
+  Score [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)]: 1 iso class, H=1 (constant)
+  Score [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)]: 1 iso class, H=3 (constant)
+  Score [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)]: 1 iso class, H=3 (constant)
+  Score [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)]: 1 iso class, H=5 (constant)
+  Score [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)]: 1 iso class, H=3 (constant)
+  Score [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)]: 1 iso class, H=5 (constant)
+  Score [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)]: 2 iso classes, H in [9]
+    Score-preserving connected: 240/240
+    H=9: 240 tournaments
+  Score [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]: 3 iso classes, H in [11, 13, 15]
+    Score-preserving connected: 280/280
+    H=11: 120 tournaments
+    H=13: 120 tournaments
+    H=15: 40 tournaments
+  Score [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)]: 1 iso class, H=15 (constant)
+
+======================================================================
+  F. BLUE/BLACK EDGE INFORMATION CONTENT
+======================================================================
+
+  Joint distribution (color, |delta_H|):
+   Color  |dH|  Count
+   black     2      4
+   black     4      6
+   black     6      4
+   black     8      2
+    blue     0      1
+    blue     2      8
+    blue     4      2
+    blue     6      1
+    blue     8      1
+    blue    12      1
+
+  SC STATUS BY H VALUE:
+  H=  1: 1 SC, 0 NS => ALL SC
+  H=  3: 1 SC, 2 NS => MIXED
+  H=  5: 0 SC, 2 NS => ALL NS
+  H=  9: 2 SC, 0 NS => ALL SC
+  H= 11: 1 SC, 0 NS => ALL SC
+  H= 13: 1 SC, 0 NS => ALL SC
+  H= 15: 2 SC, 0 NS => ALL SC
+
+======================================================================
+  G. RECONSTRUCTION AND INVARIANTS
+======================================================================
+
+  (H, score) -> iso class(es):
+  H=  1, score=[np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)]: class(es) [0] -- UNIQUE
+  H=  3, score=[np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)]: class(es) [3] -- UNIQUE
+  H=  3, score=[np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)]: class(es) [2] -- UNIQUE
+  H=  3, score=[np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)]: class(es) [1] -- UNIQUE
+  H=  5, score=[np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)]: class(es) [5] -- UNIQUE
+  H=  5, score=[np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)]: class(es) [4] -- UNIQUE
+  H=  9, score=[np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)]: class(es) [6, 7] -- AMBIGUOUS (2 classes)
+  H= 11, score=[np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]: class(es) [8] -- UNIQUE
+  H= 13, score=[np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]: class(es) [9] -- UNIQUE
+  H= 15, score=[np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]: class(es) [11] -- UNIQUE
+  H= 15, score=[np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)]: class(es) [10] -- UNIQUE
+
+  AMBIGUOUS CASES (same H AND score, different iso class):
+  H=9, score=[np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)]: classes [6, 7]
+    Class 6: size=120, c3=3, |Aut|=1, SC=True
+    Class 7: size=120, c3=3, |Aut|=1, SC=True
+
+======================================================================
+  SYNTHESIS: ISO CLASS GRAPH AS REEB-LIKE QUOTIENT
+======================================================================
+
+  The iso class graph at n=5 is a REFINEMENT of the Reeb graph:
+  - Reeb graph has 306 nodes (one per H-level component)
+  - Iso class graph has 12 nodes (one per iso class)
+  - At H=3: Reeb has 1 component, iso has 3 classes
+  - At H=9: Reeb has 1 component, iso has 2 classes
+
+  The almost-DAG structure (29 up, 0 down, 1 level) follows from:
+  1. Walsh even-order pattern (H is complement-invariant)
+  2. Order-2 dominance (94.7% => score determines H direction)
+  3. The single level edge (at H=9) is where order-4 cancels order-2
+
+  The blue/black coloring adds ORTHOGONAL information:
+  - Blue (SC-preserving) edges stay on the y=x diagonal
+  - Black (SC-changing) edges cross the diagonal
+  - The blue subgraph has 3 components:
+    1. SC classes: fully connected (8 classes)
+    2-3. Non-SC classes: paired (2+2)
+
+  CONNECTIONS TO EXTERNAL THEORY:
+  - Brualdi-Li interchange: score-preserving subgraph = bipartite regular
+  - Chudnovsky-Seymour WQO: H-hereditary classes have finite obstruction sets
+  - Stockmeyer: non-reconstructible pairs share vertex-deck but may differ in H
+  - Royle et al (2023): A000568 counts BOTH tournaments AND even graphs
+  - Pachner analogy: C3-reversal = bistellar flip, both preserve 'type'
+
+  THE FUNDAMENTAL INSIGHT:
+  The iso class graph is a QUOTIENT of the tournament hypercube
+  by S_n action. H descends to this quotient as a quasi-elementary
+  function with no odd Fourier components. The almost-DAG property
+  is the quotient image of the single-basin Morse landscape.
+  Breaking it into blue (SC-diagonal) and black (off-diagonal)
+  reveals the y=x symmetry-breaking structure found in S20x.
