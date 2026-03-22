@@ -1,0 +1,143 @@
+======================================================================
+  BEYOND NATURAL BASES: THE GAMMA(1/b)^b LANDSCAPE
+======================================================================
+
+======================================================================
+  1. GAMMA(1/b)^b FOR ALL POSITIVE REAL b
+======================================================================
+
+         b   Gamma(1/b)   Gamma(1/b)^b      log            interpretation
+    0.5000     1.000000         1.0000   0.0000                sub-binary
+    1.0000     1.000000         1.0000   0.0000           unary (trivial)
+    1.6180     1.449230         1.8227   0.6003              golden ratio
+    2.0000     1.772454         3.1416   1.1447      BINARY = TOURNAMENTS
+    2.7183     2.417885        11.0227   2.4000            Euler's number
+    3.0000     2.678939        19.2260   2.9563                   TERNARY
+    3.1416     2.811298        25.7207   3.2473                 pi itself
+    4.0000     3.625610       172.7923   5.1521                quaternary
+    5.0000     4.590844      2039.2128   7.6203                   quinary
+    7.0000     6.548063    516166.6210  13.1542                 septenary
+   10.0000     9.513508 6073048362.4079  22.5271                   decimal
+   12.0000    11.499428 5347058615736.8975  29.3076                duodecimal
+  100.0000    99.432585      ~10^199.8 459.9480                 centenary
+  1000.0000   999.423772     ~10^2999.7 6907.1789                 millenary
+
+======================================================================
+  2. WHERE IS THE MINIMUM OF Gamma(1/b)^b?
+======================================================================
+
+  Minimum of Gamma(1/b)^b:
+    b_min = 0.7175
+    Gamma(1/b_min)^b_min = 0.918024
+    For comparison: pi = 3.141593
+    Refined: b_min = 0.726468, value = 0.91792354
+    e = 2.718282
+    b_min / e = 0.267253
+    b_min is NOT close to e
+
+======================================================================
+  3. THE LIMITS: b -> 0, b -> 1, b -> infinity
+======================================================================
+
+  b -> 1: Gamma(1)^1 = 1.000000
+  b=     1: Gamma(1/b) = 1.0000, Gamma(1/b)/b = 1.0000
+  b=     2: Gamma(1/b) = 1.7725, Gamma(1/b)/b = 0.8862
+  b=     5: Gamma(1/b) = 4.5908, Gamma(1/b)/b = 0.9182
+  b=    10: Gamma(1/b) = 9.5135, Gamma(1/b)/b = 0.9514
+  b=    50: Gamma(1/b) = 49.4422, Gamma(1/b)/b = 0.9888
+  b=   100: Gamma(1/b) = 99.4326, Gamma(1/b)/b = 0.9943
+
+  Gamma(1/b)/b -> 1 as b -> inf (since Gamma(x) ~ 1/x near 0)
+  So Gamma(1/b)^b ~ b^b -> infinity
+
+======================================================================
+  4. FRACTIONAL b: WHAT IS A phi-ARY TOURNAMENT?
+======================================================================
+
+  At integer b, a b-ary tournament assigns one of b outcomes to each pair.
+  At fractional b, there is no literal "b-ary tournament."
+  But the FIBER FRACTION f_{1/b}(k) = (1/b)_k / k! is well-defined for all b > 0.
+
+  The GF (1-x)^{-1/b} is an ANALYTIC FUNCTION of b.
+  It interpolates smoothly between integer values.
+
+  PHYSICAL INTERPRETATION of fractional b:
+  A system with b = 1.5 "outcomes per comparison" could be:
+  - A MIXED system: some pairs binary, some ternary (average 1.5)
+  - A PROBABILISTIC system: each comparison has ~1.5 effective outcomes
+    (e.g., 50% chance of binary, 50% chance of ternary)
+  - A FRACTIONAL ENTROPY system: log2(b) bits per comparison
+
+  For b = phi = 1.618034 (golden ratio):
+  - Fiber fraction at k=1: f = 1/phi = 0.618034 = phi - 1 = 1/phi
+  - The golden ratio fiber fraction IS 1/phi = the golden ratio complement!
+  - Gamma(1/phi)^phi = 1.822743
+  - This is the "golden pi" -- the generalized circle constant for
+    a comparison system with phi effective outcomes.
+
+  GOLDEN RATIO FIBER FRACTIONS (b = phi = 1.6180):
+    k=0: f_phi = 1.000000, f_binary = 1.000000, ratio = 1.0000
+    k=1: f_phi = 0.618034, f_binary = 0.500000, ratio = 1.2361
+    k=2: f_phi = 0.500000, f_binary = 0.375000, ratio = 1.3333
+    k=3: f_phi = 0.436339, f_binary = 0.312500, ratio = 1.3963
+    k=4: f_phi = 0.394672, f_binary = 0.273438, ratio = 1.4434
+    k=5: f_phi = 0.364522, f_binary = 0.246094, ratio = 1.4812
+    k=6: f_phi = 0.341316, f_binary = 0.225586, ratio = 1.5130
+    k=7: f_phi = 0.322692, f_binary = 0.209473, ratio = 1.5405
+
+======================================================================
+  5. COMPLEX b: THE FULL ANALYTIC CONTINUATION
+======================================================================
+
+  Gamma(1/b)^b at special complex b:
+    b = 2:      3.141593 (= pi)
+    b = 2+0i:   3.141593
+
+  THE PRIME GENERALIZED PIs:
+    b= 2: Gamma(1/2)^2 =         3.1416, log =   1.1447
+    b= 3: Gamma(1/3)^3 =        19.2260, log =   2.9563
+    b= 5: Gamma(1/5)^5 =      2039.2128, log =   7.6203
+    b= 7: Gamma(1/7)^7 =    516166.6210, log =  13.1542
+    b=11: Gamma(1/11)^11 = 172089532959.2991, log =  25.8713
+    b=13: Gamma(1/13)^13 = 180750380636081.3438, log =  32.8281
+    b=17: Gamma(1/17)^17 = 486835446396093071360.0000, log =  47.6345
+    b=19: Gamma(1/19)^19 = 1158699709979449716899840.0000, log =  55.4093
+    b=23: Gamma(1/23)^23 = 12141411305084168667585847492608.0000, log =  71.5742
+
+======================================================================
+  6. SPECIAL VALUES AND IDENTITIES
+======================================================================
+
+  Gamma(1/2) = sqrt(pi) = 1.772454
+  Gamma(1/3) = 2.678939
+  Gamma(1/4) = 3.625610
+
+  GENERALIZED PIs:
+    Gamma(1/2)^2 = pi = 3.141593
+    Gamma(1/3)^3 = 19.225969
+    Gamma(1/4)^4 = 172.792266
+
+  RATIOS Gamma(1/b)^b / Gamma(1/(b-1))^(b-1):
+    b=3: ratio = 6.119816
+    b=4: ratio = 8.987441
+    b=5: ratio = 11.801528
+    b=6: ratio = 14.586282
+    b=7: ratio = 17.353328
+    b=8: ratio = 20.108889
+    b=9: ratio = 22.856587
+    b=10: ratio = 25.598668
+    b=11: ratio = 28.336598
+
+======================================================================
+  7. THE ASYMPTOTICS: b -> infinity
+======================================================================
+
+  b=   10: Gamma(1/b)^b = 6.0730e+09, b^b*e^{-gamma} = 5.6146e+09, ratio = 1.081654
+  b=   20: Gamma(1/b)^b = 6.1285e+25, b^b*e^{-gamma} = 5.8873e+25, ratio = 1.040971
+  b=   50: Gamma(1/b)^b = 5.0687e+84, b^b*e^{-gamma} = 4.9868e+84, ratio = 1.016425
+  b=  100: Gamma(1/b)^b = 5.6607e+199, b^b*e^{-gamma} = 5.6146e+199, ratio = 1.008218
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\beyond_natural_base_s20bd.py", line 295, in <module>
+    actual = g**b
+             ~^^~
+OverflowError: (34, 'Result too large')
