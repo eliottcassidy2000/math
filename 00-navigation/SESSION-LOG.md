@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S170 — 2026-03-22: Iso Class Graph — Blue/Black Edges, 30 Edges, Diameter 3
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S169
+**Summary:** Built the iso class graph (nodes=iso classes, edges=arc flips). n=5: 12 nodes, 30 edges, diameter 3. 14 blue, 16 black, 0 mixed. H-gradient almost DAG (29 up, 0 down, 1 level). Blue subgraph: 3 components. Sequences: #edges=1,5,30, diameter=1,2,3.
+**New contributions:** iso_class_graph_s170.py
+**Unresolved:** Extend to n=6, prove diameter=n-2
+
+---
+
 ## opus-2026-03-22-S169 — 2026-03-22: Fast Graph-Structure Sequences — TWO DISCOVERIES
 
 **Account:** opus

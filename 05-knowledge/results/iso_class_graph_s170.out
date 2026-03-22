@@ -1,0 +1,129 @@
+========================================================================
+  THE ISOMORPHISM CLASS GRAPH
+  opus-2026-03-22-S170
+========================================================================
+
+PART 1: BUILD THE ISO CLASS GRAPH AT n=5
+------------------------------------------------------------
+
+  12 isomorphism classes at n=5
+
+   ID    H   SC            scores   size
+  ───  ───  ───  ────────────────  ─────
+    0    1    Y   (0, 1, 2, 3, 4)    120
+    1    3    N   (0, 1, 3, 3, 3)     40
+    2    3    Y   (0, 2, 2, 2, 4)     40
+    3    3    N   (1, 1, 1, 3, 4)     40
+    4    5    N   (0, 2, 2, 3, 3)    120
+    5    5    N   (1, 1, 2, 2, 4)    120
+    6    9    Y   (1, 1, 2, 3, 3)    120
+    7    9    Y   (1, 1, 2, 3, 3)    120
+    8   11    Y   (1, 2, 2, 2, 3)    120
+    9   13    Y   (1, 2, 2, 2, 3)    120
+   10   15    Y   (1, 2, 2, 2, 3)     40
+   11   15    Y   (2, 2, 2, 2, 2)     24
+
+PART 2: EDGES OF THE ISO CLASS GRAPH
+------------------------------------------------------------
+
+  Total edges between distinct iso classes: 30
+  Pure blue (SC-preserving): 14
+  Pure black (SC-changing): 16
+  Mixed (both types of flip exist): 0
+
+PART 3: ADJACENCY LIST OF THE ISO CLASS GRAPH
+------------------------------------------------------------
+
+  Class  0 (H= 1,SC): neighbors = 1(B), 2(B), 3(B), 4(B), 5(B), 6(B)
+  Class  1 (H= 3,NS): neighbors = 0(B), 4(B), 7(B)
+  Class  2 (H= 3,SC): neighbors = 0(B), 4(B), 5(B), 10(B)
+  Class  3 (H= 3,NS): neighbors = 0(B), 5(B), 7(B)
+  Class  4 (H= 5,NS): neighbors = 0(B), 1(B), 2(B), 6(B), 7(B), 8(B), 9(B)
+  Class  5 (H= 5,NS): neighbors = 0(B), 2(B), 3(B), 6(B), 7(B), 8(B), 9(B)
+  Class  6 (H= 9,SC): neighbors = 0(B), 4(B), 5(B), 7(B), 8(B), 10(B)
+  Class  7 (H= 9,SC): neighbors = 1(B), 3(B), 4(B), 5(B), 6(B), 8(B), 9(B)
+  Class  8 (H=11,SC): neighbors = 4(B), 5(B), 6(B), 7(B), 9(B), 11(B)
+  Class  9 (H=13,SC): neighbors = 4(B), 5(B), 7(B), 8(B), 10(B), 11(B)
+  Class 10 (H=15,SC): neighbors = 2(B), 6(B), 9(B)
+  Class 11 (H=15,SC): neighbors = 8(B), 9(B)
+
+PART 4: GRAPH INVARIANTS OF THE ISO CLASS GRAPH
+------------------------------------------------------------
+
+  Nodes: 12
+  Edges: 30
+  Blue edges: 14
+  Black edges: 16
+  Mixed edges: 0
+  Degree sequence: [2, 3, 3, 3, 4, 6, 6, 6, 6, 7, 7, 7]
+  Min degree: 2
+  Max degree: 7
+  Average degree: 5.00
+
+  Connected: True
+  Diameter: 3
+
+PART 5: THE BLUE SUBGRAPH (SC-preserving edges only)
+------------------------------------------------------------
+
+  SC classes: [0, 2, 6, 7, 8, 9, 10, 11] (8 classes)
+  Non-SC classes: [1, 3, 4, 5] (4 classes)
+
+  Blue subgraph connected components: 3
+    Component 0: 8 classes, H=[1, 3, 9, 11, 13, 15], SC=8
+    Component 1: 2 classes, H=[3, 5], SC=0
+    Component 2: 2 classes, H=[3, 5], SC=0
+
+PART 6: H-GRADIENT STRUCTURE
+------------------------------------------------------------
+
+  H-increasing edges: 29
+  H-decreasing edges: 0
+  H-level edges (same H): 1
+
+  H-LEVEL EDGES (critical for understanding topology):
+    6(SC)—7(SC) at H=9, color=BLUE
+
+PART 7: SEQUENCES FROM THE ISO CLASS GRAPH
+------------------------------------------------------------
+
+  ISO CLASS GRAPH SEQUENCES:
+
+  n=3: 2 classes, 1 edges, diameter=1, degrees=[1, 1]
+  n=4: 4 classes, 5 edges, diameter=2, degrees=[2, 2, 3, 3]
+  n=5: 12 classes, 30 edges, diameter=3, degrees=[2, 3, 3, 3, 4, 6, 6, 6, 6, 7, 7, 7]
+
+  SEQUENCES:
+    #iso_classes(n):    (A000568 related) = 1, 1, 2, 4, 12, ...
+    #edges in flip graph: computed above
+    diameter:           computed above
+
+
+========================================================================
+  SUMMARY
+========================================================================
+
+
+  THE ISO CLASS GRAPH AT n=5:
+
+  12 nodes (isomorphism classes)
+  30 edges (arc flip connections)
+  14 pure blue, 16 pure black, 0 mixed
+  Connected: True
+  Diameter: 3
+
+  H-gradient: 29 up, 0 down, 1 level edges
+  The graph has a clear H-gradient from H=1 (bottom) to H=15 (top).
+  Level edges exist at H=3 (3 classes), H=5 (2 classes), H=15 (2 classes).
+
+  The BLUE SUBGRAPH (SC-preserving flips) has 3 components.
+  SC classes: 8 out of 12.
+
+  NEW SEQUENCES:
+    #edges in iso flip graph: n=3: ?, n=4: ?, n=5: 30
+    diameter of iso flip graph
+    #blue edges, #black edges, #mixed edges
+    #connected components of blue subgraph
+    chromatic number of iso flip graph
+
+opus-2026-03-22-S170
