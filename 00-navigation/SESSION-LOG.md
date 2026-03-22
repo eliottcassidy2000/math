@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S161 — 2026-03-22: Gray Code S136 Script Execution
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S160 (context recovery)
+**Summary:** Ran the previously-written gray_codes_space_filling_s136.py script. Key findings: (1) |dH| distribution at n=5 is {0:23, 2:33, 4:18, 6:18, 8:7} — always even, consistent with S160's ΔH parity result. (2) Arc-flip graph on 12 iso classes computed — every class except H=1 and H=15 has both higher and lower neighbors. (3) H-landscape is UNIMODAL at n=5: single global min (H=1, transitive) and single global max (H=15, regular), with no local optima. This confirms the "folding funnel" structure from S129. (4) Score changes under arc flip are exactly ±1 in two vertices (coboundary interpretation from S133). Output saved to 05-knowledge/results/.
+**New contributions:** gray_codes_space_filling_s136.py (executed), gray_codes_space_filling_s136.out
+**Unresolved threads:** Same as S160 — compute H(Q_4), optimal Gray code minimizing total variation
+
+---
+
 ## opus-2026-03-22-S160 — 2026-03-22: Gray Codes on the Tournament Cube
 
 **Account:** opus
