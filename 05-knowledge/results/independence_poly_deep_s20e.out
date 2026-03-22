@@ -1,0 +1,106 @@
+========================================================================
+  INDEPENDENCE POLYNOMIAL: DEEP INVARIANTS
+  kind-pasteur-2026-03-22-S20e
+========================================================================
+
+n=5: 6 distinct independence polynomials
+
+  I(x) = 1
+    H = [1], degree = 0, count = 120
+    H from roots: 1 (check: True)
+    Mahler measure: 1.0000
+    log-concave: True, palindromic: False
+
+  I(x) = 1 + 1x
+    H = [3], degree = 1, count = 120
+    roots: [-1.0000]
+    H from roots: 3 (check: True)
+    Mahler measure: 1.0000
+    log-concave: True, palindromic: False
+
+  I(x) = 1 + 2x
+    H = [5], degree = 1, count = 240
+    roots: [-0.5000]
+    H from roots: 5 (check: True)
+    Mahler measure: 2.0000
+    log-concave: True, palindromic: False
+
+  I(x) = 1 + 4x
+    H = [9], degree = 1, count = 240
+    roots: [-0.2500]
+    H from roots: 9 (check: True)
+    Mahler measure: 4.0000
+    log-concave: True, palindromic: False
+
+  I(x) = 1 + 5x
+    H = [11, 13, 15], degree = 1, count = 280
+    roots: [-0.2000]
+    H from roots: 11 (check: True)
+    Mahler measure: 5.0000
+    log-concave: True, palindromic: False
+
+  I(x) = 1 + 6x
+    H = [15], degree = 1, count = 24
+    roots: [-0.1667]
+    H from roots: 13 (check: False)
+    Mahler measure: 6.0000
+    log-concave: True, palindromic: False
+
+========================================================================
+  THE RECIPROCAL POLYNOMIAL AND FUNCTIONAL EQUATION
+========================================================================
+
+For any polynomial I(x) of degree d:
+  I*(x) = x^d * I(1/x) = the reciprocal polynomial.
+
+If I(x) = I*(x): the polynomial is PALINDROMIC (self-reciprocal).
+This means: the roots come in pairs (r, 1/r).
+
+For tournament Omega at n=5: I(x) = 1 + alpha_1 * x (degree 1).
+  I*(x) = x * I(1/x) = x * (1 + alpha_1/x) = x + alpha_1.
+  I(x) = I*(x) iff 1 = alpha_1 and alpha_1 = 1. Only for alpha_1 = 1 (H=3).
+
+For general Omega: palindromic I(x) would mean alpha_k = alpha_{d-k}.
+  alpha_0 = alpha_d: 1 = alpha_d (the max independent set count).
+  This happens when the independence number = 1, i.e., the graph is complete!
+  A complete conflict graph means ALL cycles pairwise conflict.
+  At n=5: alpha_2=0, so the only palindromic case is degree 1 with alpha_1=1.
+
+========================================================================
+  GROWTH RATE: I(x+1)/I(x)
+========================================================================
+
+Growth rate I(2)/I(1) = H/sigma:
+  [1]: H/sigma = 1/1 = 1.0000
+  [1, 1]: H/sigma = 3/2 = 1.5000
+  [1, 2]: H/sigma = 5/3 = 1.6667
+  [1, 4]: H/sigma = 9/5 = 1.8000
+  [1, 5]: H/sigma = 11/6 = 1.8333
+  [1, 6]: H/sigma = 15/7 = 2.1429
+
+The ratio H/sigma measures how much the partition function GROWS
+from the chemistry point (x=1) to the tournament point (x=2).
+Higher growth = the polynomial amplifies more from x=1 to x=2.
+This is the INFORMATION GAIN from moving up the dimension axis.
+
+========================================================================
+  CONVEXITY: I''(2)/I(2)
+========================================================================
+
+  [1]: I''(2)/I(2) = 0.0000
+  [1, 1]: I''(2)/I(2) = 0.0000
+  [1, 2]: I''(2)/I(2) = 0.0000
+  [1, 4]: I''(2)/I(2) = 0.0000
+  [1, 5]: I''(2)/I(2) = 0.0000
+  [1, 6]: I''(2)/I(2) = 0.0000
+
+The curvature I''(2)/I(2) measures how QUICKLY the polynomial
+changes near x=2. High curvature = sensitive to perturbation.
+This is related to the VARIANCE of the particle number in the
+hard-core gas: Var(N) = x^2 * I''(x)/I(x) + x * I'(x)/I(x)
+                       - (x * I'(x)/I(x))^2.
+
+========================================================================
+  n=6: ROOT SPLITTING AT THE PETERSEN THRESHOLD
+========================================================================
+
