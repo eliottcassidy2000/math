@@ -13,17 +13,13 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-21-S125 — 2026-03-21: CD Tower as Phase Diagram — alpha_2=0↔Hurwitz, Fano=phase boundary, S=zero divisors
+## opus-2026-03-21-S137 — 2026-03-21: Vitali Atom Meets the Cayley-Dickson Tower
 
 **Account:** opus
-**Summary:** The Cayley-Dickson tower IS the tournament phase diagram. R=trivial, C=direction, H=cycles(OCR=1), O=obstruction(OCR<1), S=recovery+zero divisors. The loss of associativity (H→O) = loss of OCR determinacy (n=5→6). Alpha_2=0 for n≤5 ↔ Hurwitz's theorem (4 composition algebras). The Fano plane is the phase boundary: it governs octonionic multiplication AND tournament conflict at n=7.
-**Key:**
-1. **Alpha_2=0 ↔ Hurwitz**: only 4 tournament orders (n=1,2,3,5) have alpha_2=0 always ↔ only 4 composition algebras (R,C,H,O)
-2. **O→S = n=6→7→8**: loss of alternativity = binary skeleton establishment
-3. **Zero divisors = independent cycle pairs**: S has ab=0; tournaments have vertex-disjoint cycles
-4. **Fano = phase boundary**: octonion multiplication rules = Fano = T_7 conflict structure
-5. **5 tournament phases**: R(trivial), C(binary), H(quaternionic), O(octonionic), S(sedenionic)
-6. **Hurwitz = Shadow**: "only 4 composition algebras" ↔ "only 4 orders with perfect score-determinacy"
+**Continuation of:** opus-2026-03-21-S136
+**Summary:** Grand unification of Vitali atom, Cayley-Dickson tower, and tournament measurement hierarchy. Key: the sigma-algebra filtration σ(score)⊂σ(λ)⊂σ(λ,σ)⊂σ(A) IS the CD tower R⊂C⊂H⊂O⊂S. Each level reveals one more odd-cycle length. The Vitali atom IS the CD doubling map — it preserves the lower level and changes the upper. The two-channel formula δH=2·dc₇+4·δi₂ has CD coefficients 2¹,2² because H=Σα_k·2^k (the independence polynomial at x=2=CD base). VERIFIED: lambda determines H at BOTH n=5 AND n=6 (zero variation), confirming Vitali atoms only matter at n≥7 (where 7-cycles first appear = octonion level). Non-measurability (Vitali) = zero divisors (sedenion) = forbidden H values = OCR residual. The witness matrix rank-3 diff = 3 generators of octonion doubling = dim(F₂³).
+**New contributions:** vitali_cayley_dickson_s137.py
+**Unresolved threads:** Verify Vitali non-trivial at n=7 (needs exhaustive or large sample), formalize the CD doubling operator on tournaments, connect witness matrix rank to F₂³ structure explicitly
 
 ---
 
