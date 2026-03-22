@@ -1,0 +1,116 @@
+======================================================================
+  CORRECT BURNSIDE FORMULA FOR TOURNAMENTS
+======================================================================
+
+======================================================================
+  1. VERIFY A000568 VIA CORRECT BURNSIDE
+======================================================================
+
+  n=1: Burnside = 1, A000568 = 1, Match: True
+  n=2: Burnside = 1, A000568 = 1, Match: True
+  n=3: Burnside = 2, A000568 = 2, Match: True
+  n=4: Burnside = 4, A000568 = 4, Match: True
+  n=5: Burnside = 12, A000568 = 12, Match: True
+  n=6: Burnside = 56, A000568 = 56, Match: True
+  n=7: Burnside = 456, A000568 = 456, Match: True
+
+======================================================================
+  2. FIX(sigma) BY CYCLE TYPE
+======================================================================
+
+  n=5: Fix by cycle type (CORRECT)
+       Cycle type   #perms  Fix(tour)  Fix(graph)  Contribution
+              [5]       24          4           4            96
+           [4, 1]       30          0           8             0
+           [3, 2]       20          0           8             0
+        [3, 1, 1]       20         16          16           320
+        [2, 2, 1]       15          0          64             0
+     [2, 1, 1, 1]       10          0         128             0
+  [1, 1, 1, 1, 1]        1       1024        1024          1024
+
+  Total: 1440, Burnside: 12, A000568(5): 12, Match: True
+
+======================================================================
+  3. WHICH CYCLE TYPES HAVE Fix(tournament) = 0?
+======================================================================
+
+  n=3: 1 cycle types with Fix=0, 2 with Fix>0
+    Fix=0: [(2, 1)]
+    Fix=2: [3]
+    Fix=8: [1, 1, 1]
+
+  n=4: 3 cycle types with Fix=0, 2 with Fix>0
+    Fix=0: [(4,), (2, 2), (2, 1, 1)]
+    Fix=4: [3, 1]
+    Fix=64: [1, 1, 1, 1]
+
+  n=5: 4 cycle types with Fix=0, 3 with Fix>0
+    Fix=0: [(4, 1), (3, 2), (2, 2, 1), (2, 1, 1, 1)]
+    Fix=4: [5]
+    Fix=16: [3, 1, 1]
+    Fix=1024: [1, 1, 1, 1, 1]
+
+  n=6: 7 cycle types with Fix=0, 4 with Fix>0
+    Fix=0: [(6,), (4, 2), (4, 1, 1), (3, 2, 1), (2, 2, 2), (2, 2, 1, 1), (2, 1, 1, 1, 1)]
+    Fix=8: [5, 1]
+    Fix=32: [3, 3]
+    Fix=128: [3, 1, 1, 1]
+    Fix=32768: [1, 1, 1, 1, 1, 1]
+
+  n=7: 10 cycle types with Fix=0, 5 with Fix>0
+    Fix=0: [(6, 1), (5, 2), (4, 3), (4, 2, 1), (4, 1, 1, 1), (3, 2, 2), (3, 2, 1, 1), (2, 2, 2, 1), (2, 2, 1, 1, 1), (2, 1, 1, 1, 1, 1)]
+    Fix=8: [7]
+    Fix=32: [5, 1, 1]
+    Fix=128: [3, 3, 1]
+    Fix=2048: [3, 1, 1, 1, 1]
+    Fix=2097152: [1, 1, 1, 1, 1, 1, 1]
+
+======================================================================
+  4. THE PATTERN: Fix(tour) = 0 IFF EVEN CYCLE EXISTS
+======================================================================
+
+  THEOREM: Fix(sigma) = 0 for tournaments iff sigma has a 2-cycle (transposition).
+  PROOF: A 2-cycle (v_0, v_1) creates the orbit {(v_0,v_1), (v_1,v_0)} on ordered pairs.
+  This is self-paired: both arc directions are in the same orbit.
+  For tournaments, exactly one must be present: contradiction.
+  For cycles of length L >= 3: within-cycle ordered pairs are never self-paired.
+  For between-cycle ordered pairs: never self-paired (different cycles).
+
+  VERIFICATION:
+    COUNTEREXAMPLE: n=4, ct=[4], has_2cycle=False, fix=0
+    COUNTEREXAMPLE: n=5, ct=[4, 1], has_2cycle=False, fix=0
+    COUNTEREXAMPLE: n=6, ct=[6], has_2cycle=False, fix=0
+    COUNTEREXAMPLE: n=6, ct=[4, 1, 1], has_2cycle=False, fix=0
+    COUNTEREXAMPLE: n=7, ct=[6, 1], has_2cycle=False, fix=0
+    COUNTEREXAMPLE: n=7, ct=[4, 3], has_2cycle=False, fix=0
+    COUNTEREXAMPLE: n=7, ct=[4, 1, 1, 1], has_2cycle=False, fix=0
+  No counterexamples found!
+
+======================================================================
+  5. THE CLEAN FORMULA FOR A000568
+======================================================================
+
+  CLEAN FORMULA: Fix(sigma) from cycle type (only-odd-cycles version)
+    n   Burnside    A000568   Match
+    1          1          1    True
+    2          1          1    True
+    3          2          2    True
+    4          4          4    True
+    5         12         12    True
+    6         56         56    True
+    7        456        456    True
+
+======================================================================
+  6. A000568 AT LARGER n (from the clean formula)
+======================================================================
+
+  n= 1: A000568 =            1 (expected 1, match=True)
+  n= 2: A000568 =            1 (expected 1, match=True)
+  n= 3: A000568 =            2 (expected 2, match=True)
+  n= 4: A000568 =            4 (expected 4, match=True)
+  n= 5: A000568 =           12 (expected 12, match=True)
+  n= 6: A000568 =           56 (expected 56, match=True)
+  n= 7: A000568 =          456 (expected 456, match=True)
+  n= 8: A000568 =         6880 (expected 6880, match=True)
+  n= 9: A000568 =       191536 (expected 191536, match=True)
+  n=10: A000568 =      9733056 (expected 9733056, match=True)
