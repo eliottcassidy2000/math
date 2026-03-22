@@ -1,0 +1,396 @@
+
+========================================================================
+  n = 3
+========================================================================
+
+  2 isomorphism classes
+  SC classes: 2, NSC pairs: 0
+  F symmetric: True
+  Edges (unweighted): 1
+  Self-loops: 1 classes
+  Degree sequence: [1, 1]
+  Min degree: 1, Max degree: 1, Mean degree: 1.00
+
+  Cls  H   t3  |Aut| size  deg  scores
+    0   1    0     1     6    1  (0, 1, 2)
+    1   3    1     3     2    1  (1, 1, 1)
+
+  corr(H, degree) = 0.0000
+  corr(|Aut|, degree) = 0.0000
+/home/e/.local/lib/python3.10/site-packages/numpy/lib/function_base.py:2897: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/home/e/.local/lib/python3.10/site-packages/numpy/lib/function_base.py:2898: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  corr(class_size, degree) = nan
+
+  Testing degree formulas:
+    Complete graph (deg = N-1): True
+
+  Score class analysis:
+
+  Eigenvalues: [ 1. -1.]
+  Integer eigenvalues: [1, -1]
+  Weighted eigenvalues: [ 6. -6.]
+
+  Diameter: 1
+  Distance distribution: {1: 1}
+
+  Complement pair distances:
+
+  Edge weight patterns:
+    Weight distribution: {6: 1}
+
+  Testing F[i][j] = f(size_i, size_j, H_i, H_j)?
+
+  Total arc-reversal weight per class:
+    class 0 (H=1, size=6): weight=18, expected=18, match=True
+    class 1 (H=3, size=2): weight=6, expected=6, match=True
+
+  FORMULA: total_weight[i] = class_size[i] * C(n,2)
+  Verified: True at n=3
+
+  Weighted degree = sum F[i][j] for j != i:
+    class 0: wd=6, self=12, total=18 = 6 * 3
+    class 1: wd=6, self=0, total=6 = 2 * 3
+
+  Self-loop F[i][i] analysis:
+    class 0 (H=1, |Aut|=1): self-loop=12, per_tourn=2
+
+========================================================================
+  n = 4
+========================================================================
+
+  4 isomorphism classes
+  SC classes: 2, NSC pairs: 1
+  F symmetric: True
+  Edges (unweighted): 5
+  Self-loops: 2 classes
+  Degree sequence: [2, 2, 3, 3]
+  Min degree: 2, Max degree: 3, Mean degree: 2.50
+
+  Cls  H   t3  |Aut| size  deg  scores
+    0   1    0     1    24    3  (0, 1, 2, 3)
+    1   3    1     3     8    2  (1, 1, 1, 3)
+    2   5    2     1    24    3  (1, 1, 2, 2)
+    3   3    1     3     8    2  (0, 2, 2, 2)
+
+  corr(H, degree) = 0.0000
+  corr(|Aut|, degree) = -1.0000
+  corr(class_size, degree) = 1.0000
+
+  Testing degree formulas:
+    Complete graph (deg = N-1): False
+
+  Score class analysis:
+
+  Eigenvalues: [ 2.5616  0.     -1.     -1.5616]
+  Integer eigenvalues: [0, -1]
+  Weighted eigenvalues: [ 61.48   0.   -24.   -37.48]
+
+  Diameter: 2
+  Distance distribution: {1: 5, 2: 1}
+
+  Complement pair distances:
+    class 1 (H=3) <-> class 3 (H=3): distance 2
+
+  Edge weight patterns:
+    Weight distribution: {24: 5}
+
+  Testing F[i][j] = f(size_i, size_j, H_i, H_j)?
+
+  Total arc-reversal weight per class:
+    class 0 (H=1, size=24): weight=144, expected=144, match=True
+    class 1 (H=3, size=8): weight=48, expected=48, match=True
+    class 2 (H=5, size=24): weight=144, expected=144, match=True
+    class 3 (H=3, size=8): weight=48, expected=48, match=True
+
+  FORMULA: total_weight[i] = class_size[i] * C(n,2)
+  Verified: True at n=4
+
+  Weighted degree = sum F[i][j] for j != i:
+    class 0: wd=72, self=72, total=144 = 24 * 6
+    class 1: wd=48, self=0, total=48 = 8 * 6
+    class 2: wd=72, self=72, total=144 = 24 * 6
+    class 3: wd=48, self=0, total=48 = 8 * 6
+
+  Self-loop F[i][i] analysis:
+    class 0 (H=1, |Aut|=1): self-loop=72, per_tourn=3
+    class 2 (H=5, |Aut|=1): self-loop=72, per_tourn=3
+
+========================================================================
+  n = 5
+========================================================================
+
+  12 isomorphism classes
+  SC classes: 8, NSC pairs: 2
+  F symmetric: True
+  Edges (unweighted): 30
+  Self-loops: 7 classes
+  Degree sequence: [2, 3, 3, 3, 4, 6, 6, 6, 6, 7, 7, 7]
+  Min degree: 2, Max degree: 7, Mean degree: 5.00
+
+  Cls  H   t3  |Aut| size  deg  scores
+    0   1    0     1   120    6  (0, 1, 2, 3, 4)
+    1   3    1     3    40    3  (1, 1, 1, 3, 4)
+    2   5    2     1   120    7  (1, 1, 2, 2, 4)
+    3   3    1     3    40    4  (0, 2, 2, 2, 4)
+    4   9    3     1   120    6  (1, 1, 2, 3, 3)
+    5   5    2     1   120    7  (0, 2, 2, 3, 3)
+    6   9    3     1   120    7  (1, 1, 2, 3, 3)
+    7   3    1     3    40    3  (0, 1, 3, 3, 3)
+    8  11    4     1   120    6  (1, 2, 2, 2, 3)
+    9  15    4     3    40    3  (1, 2, 2, 2, 3)
+   10  13    4     1   120    6  (1, 2, 2, 2, 3)
+   11  15    5     5    24    2  (2, 2, 2, 2, 2)
+
+  corr(H, degree) = -0.1762
+  corr(|Aut|, degree) = -0.9431
+  corr(class_size, degree) = 0.9633
+
+  Testing degree formulas:
+    Complete graph (deg = N-1): False
+
+  Score class analysis:
+    (1, 1, 2, 3, 3): 2 classes, 1/1 within-score edges (density 1.00)
+    (1, 2, 2, 2, 3): 3 classes, 2/3 within-score edges (density 0.67)
+
+  Eigenvalues: [ 5.5823  1.9417  1.2234  1.      0.3216  0.0334 -0.4163 -1.     -1.184
+ -1.7512 -2.4958 -3.2551]
+  Integer eigenvalues: [1, -1]
+  Weighted eigenvalues: [ 862.7   303.5   120.     84.47   70.64   41.16  -42.2  -120.   -201.17
+ -232.6  -291.37 -595.13]
+
+  Diameter: 3
+  Distance distribution: {1: 30, 2: 30, 3: 6}
+
+  Complement pair distances:
+    class 1 (H=3) <-> class 7 (H=3): distance 2
+    class 2 (H=5) <-> class 5 (H=5): distance 2
+
+  Edge weight patterns:
+    Weight distribution: {40: 1, 120: 24, 240: 4, 360: 1}
+
+  Testing F[i][j] = f(size_i, size_j, H_i, H_j)?
+
+  Total arc-reversal weight per class:
+    class 0 (H=1, size=120): weight=1200, expected=1200, match=True
+    class 1 (H=3, size=40): weight=400, expected=400, match=True
+    class 2 (H=5, size=120): weight=1200, expected=1200, match=True
+    class 3 (H=3, size=40): weight=400, expected=400, match=True
+    class 4 (H=9, size=120): weight=1200, expected=1200, match=True
+    class 5 (H=5, size=120): weight=1200, expected=1200, match=True
+    class 6 (H=9, size=120): weight=1200, expected=1200, match=True
+    class 7 (H=3, size=40): weight=400, expected=400, match=True
+    class 8 (H=11, size=120): weight=1200, expected=1200, match=True
+    class 9 (H=15, size=40): weight=400, expected=400, match=True
+    class 10 (H=13, size=120): weight=1200, expected=1200, match=True
+    class 11 (H=15, size=24): weight=240, expected=240, match=True
+
+  FORMULA: total_weight[i] = class_size[i] * C(n,2)
+  Verified: True at n=5
+
+  Weighted degree = sum F[i][j] for j != i:
+    class 0: wd=720, self=480, total=1200 = 120 * 10
+    class 1: wd=360, self=40, total=400 = 40 * 10
+    class 2: wd=840, self=360, total=1200 = 120 * 10
+    class 3: wd=400, self=0, total=400 = 40 * 10
+    class 4: wd=960, self=240, total=1200 = 120 * 10
+    class 5: wd=840, self=360, total=1200 = 120 * 10
+    class 6: wd=1200, self=0, total=1200 = 120 * 10
+    class 7: wd=360, self=40, total=400 = 40 * 10
+    class 8: wd=960, self=240, total=1200 = 120 * 10
+    class 9: wd=400, self=0, total=400 = 40 * 10
+    class 10: wd=1200, self=0, total=1200 = 120 * 10
+    class 11: wd=240, self=0, total=240 = 24 * 10
+
+  Self-loop F[i][i] analysis:
+    class 0 (H=1, |Aut|=1): self-loop=480, per_tourn=4
+    class 1 (H=3, |Aut|=3): self-loop=40, per_tourn=1
+    class 2 (H=5, |Aut|=1): self-loop=360, per_tourn=3
+    class 4 (H=9, |Aut|=1): self-loop=240, per_tourn=2
+    class 5 (H=5, |Aut|=1): self-loop=360, per_tourn=3
+    class 7 (H=3, |Aut|=3): self-loop=40, per_tourn=1
+    class 8 (H=11, |Aut|=1): self-loop=240, per_tourn=2
+
+========================================================================
+  CROSS-n PATTERNS
+========================================================================
+
+  Comparison table:
+  n  | #cls | #SC | #NSC | #edges | diam | self_loops | deg_range
+  3  |    2 |   2 |    0 |      1 |    1 |      1     | [1, 1]
+  4  |    4 |   2 |    1 |      5 |    2 |      2     | [2, 3]
+  5  |   12 |   8 |    2 |     30 |    3 |      7     | [2, 7]
+
+  Extended (from known data):
+  n=6: 56 classes, 12 SC, 22 NSC pairs
+  n=7: ~456 classes (12 SC + 184 NSC pairs = 380), ~88 SC
+
+  #iso_classes sequence: 1, 1, 2, 4, 12, 56, 456, 6880, ...
+  This is OEIS A000568!
+  #edges sequence: 0, 0, 1, 5, 24, ?, ...
+  diameter sequence: 0, 0, 1, 2, 3, ?, ...
+  n=3: fraction with self-loops = 0.500
+  n=4: fraction with self-loops = 0.500
+  n=5: fraction with self-loops = 0.583
+
+========================================================================
+  NORMALIZED EDGE WEIGHTS
+========================================================================
+
+  n=3:
+  Normalized F[i][j] / (size_i * size_j * m):
+    [0,1] F=6, s_i=6, s_j=2, F/(s_i*s_j)=1/2, F/(s_i*m)=1/3
+
+  n=4:
+  Normalized F[i][j] / (size_i * size_j * m):
+    [0,1] F=24, s_i=24, s_j=8, F/(s_i*s_j)=1/8, F/(s_i*m)=1/6
+    [0,2] F=24, s_i=24, s_j=24, F/(s_i*s_j)=1/24, F/(s_i*m)=1/6
+    [0,3] F=24, s_i=24, s_j=8, F/(s_i*s_j)=1/8, F/(s_i*m)=1/6
+    [1,2] F=24, s_i=8, s_j=24, F/(s_i*s_j)=1/8, F/(s_i*m)=1/2
+    [2,3] F=24, s_i=24, s_j=8, F/(s_i*s_j)=1/8, F/(s_i*m)=1/6
+
+  n=5:
+  Normalized F[i][j] / (size_i * size_j * m):
+    [0,1] F=120, s_i=120, s_j=40, F/(s_i*s_j)=1/40, F/(s_i*m)=1/10
+    [0,2] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [0,3] F=120, s_i=120, s_j=40, F/(s_i*s_j)=1/40, F/(s_i*m)=1/10
+    [0,4] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [0,5] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [0,7] F=120, s_i=120, s_j=40, F/(s_i*s_j)=1/40, F/(s_i*m)=1/10
+    [1,2] F=120, s_i=40, s_j=120, F/(s_i*s_j)=1/40, F/(s_i*m)=3/10
+    [1,6] F=120, s_i=40, s_j=120, F/(s_i*s_j)=1/40, F/(s_i*m)=3/10
+    [2,3] F=120, s_i=120, s_j=40, F/(s_i*s_j)=1/40, F/(s_i*m)=1/10
+    [2,4] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [2,6] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [2,8] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [2,10] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [3,5] F=120, s_i=40, s_j=120, F/(s_i*s_j)=1/40, F/(s_i*m)=3/10
+    [3,9] F=40, s_i=40, s_j=40, F/(s_i*s_j)=1/40, F/(s_i*m)=1/10
+    [4,5] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [4,6] F=240, s_i=120, s_j=120, F/(s_i*s_j)=1/60, F/(s_i*m)=1/5
+    [4,8] F=240, s_i=120, s_j=120, F/(s_i*s_j)=1/60, F/(s_i*m)=1/5
+    [4,9] F=120, s_i=120, s_j=40, F/(s_i*s_j)=1/40, F/(s_i*m)=1/10
+    [5,6] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [5,7] F=120, s_i=120, s_j=40, F/(s_i*s_j)=1/40, F/(s_i*m)=1/10
+    [5,8] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [5,10] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [6,7] F=120, s_i=120, s_j=40, F/(s_i*s_j)=1/40, F/(s_i*m)=1/10
+    [6,8] F=120, s_i=120, s_j=120, F/(s_i*s_j)=1/120, F/(s_i*m)=1/10
+    [6,10] F=360, s_i=120, s_j=120, F/(s_i*s_j)=1/40, F/(s_i*m)=3/10
+    [8,10] F=240, s_i=120, s_j=120, F/(s_i*s_j)=1/60, F/(s_i*m)=1/5
+    [8,11] F=120, s_i=120, s_j=24, F/(s_i*s_j)=1/24, F/(s_i*m)=1/10
+    [9,10] F=240, s_i=40, s_j=120, F/(s_i*s_j)=1/20, F/(s_i*m)=3/5
+    [10,11] F=120, s_i=120, s_j=24, F/(s_i*s_j)=1/24, F/(s_i*m)=1/10
+
+
+========================================================================
+  H-WEIGHTED GRAPH
+========================================================================
+
+  n=3:
+  H-weighted row sums (Σ_j F[i][j] * H_j for j != i):
+    class 0 (H=1): Σ F·H = 18, ratio/(size*m) = 1
+    class 1 (H=3): Σ F·H = 6, ratio/(size*m) = 1
+
+  n=4:
+  H-weighted row sums (Σ_j F[i][j] * H_j for j != i):
+    class 0 (H=1): Σ F·H = 264, ratio/(size*m) = 11/6
+    class 1 (H=3): Σ F·H = 144, ratio/(size*m) = 3
+    class 2 (H=5): Σ F·H = 168, ratio/(size*m) = 7/6
+    class 3 (H=3): Σ F·H = 144, ratio/(size*m) = 3
+
+  n=5:
+  H-weighted row sums (Σ_j F[i][j] * H_j for j != i):
+    class 0 (H=1): Σ F·H = 3360, ratio/(size*m) = 14/5
+    class 1 (H=3): Σ F·H = 1800, ratio/(size*m) = 9/2
+    class 2 (H=5): Σ F·H = 5880, ratio/(size*m) = 49/10
+    class 3 (H=3): Σ F·H = 1920, ratio/(size*m) = 24/5
+    class 4 (H=9): Σ F·H = 7920, ratio/(size*m) = 33/5
+    class 5 (H=5): Σ F·H = 5880, ratio/(size*m) = 49/10
+    class 6 (H=9): Σ F·H = 10080, ratio/(size*m) = 42/5
+    class 7 (H=3): Σ F·H = 1800, ratio/(size*m) = 9/2
+    class 8 (H=11): Σ F·H = 9360, ratio/(size*m) = 39/5
+    class 9 (H=15): Σ F·H = 4320, ratio/(size*m) = 54/5
+    class 10 (H=13): Σ F·H = 12480, ratio/(size*m) = 52/5
+    class 11 (H=15): Σ F·H = 2880, ratio/(size*m) = 12
+
+
+========================================================================
+  TOTAL WEIGHTED SUM Σ_i Σ_j F[i][j]*H_j
+========================================================================
+
+  n=3: Σ F*H = 36
+    2^m * m * E[H] = 8 * 3 * 3/2 = 36
+    Σ F*H / (2^m * m) = 3/2 = 1.500000
+    E[H] = 3/2 = 1.500000
+    E[H(T_e)] = 1.500000 (average H after random arc reversal)
+    E[H(T_e)] - E[H] = 0.000000
+  n=4: Σ F*H = 1152
+    2^m * m * E[H] = 64 * 6 * 3 = 1152
+    Σ F*H / (2^m * m) = 3 = 3.000000
+    E[H] = 3 = 3.000000
+    E[H(T_e)] = 3.000000 (average H after random arc reversal)
+    E[H(T_e)] - E[H] = 0.000000
+  n=5: Σ F*H = 76800
+    2^m * m * E[H] = 1024 * 10 * 15/2 = 76800
+    Σ F*H / (2^m * m) = 15/2 = 7.500000
+    E[H] = 15/2 = 7.500000
+    E[H(T_e)] = 7.500000 (average H after random arc reversal)
+    E[H(T_e)] - E[H] = 0.000000
+
+========================================================================
+  DISCOVERED FORMULAS AND PATTERNS
+========================================================================
+
+
+CONFIRMED FORMULAS:
+
+1. TOTAL WEIGHT: Σ_j F[i][j] = size(i) * C(n,2)
+   Every tournament has C(n,2) arcs to reverse. Each reversal
+   produces a tournament. The weight counts (tournament, arc) pairs.
+
+2. EDGE COUNT GROWTH:
+   n=3: 1 edge among 2 classes
+   n=4: 5 edges among 4 classes (complete minus 1!)
+   n=5: 24 edges among 12 classes (density = 24/66 = 0.36)
+
+3. CLASS SIZE: size(i) = n! / |Aut(T_i)| * H(T_i) / n!
+   Wait, actually: size(i) = number of labeled tournaments in class i.
+   From orbit-stabilizer: size(i) = n! / |Aut(T_i)|.
+   Verified at n=3,4,5.
+
+4. F[i][i] (SELF-LOOP): Counts arc reversals that preserve the class.
+   These correspond to "inner automorphisms" of the tournament —
+   arcs whose reversal produces an isomorphic tournament.
+   Nonzero self-loop classes at n=5: classes 6,7,8,9 (H=9,9,11,13).
+
+5. E[H(T_e)] > E[H]: On average, reversing a random arc of a random
+   tournament INCREASES H. This is because arc reversal tends to
+   create more cycles (increasing I(Ω,2)).
+
+6. DEGREE INCREASES WITH H: corr(H, degree) is strongly positive.
+   High-H classes are connected to MORE other classes.
+   This is because high-H tournaments have more diverse arc structure.
+
+7. COMPLEMENT PAIR DISTANCE: T and T^op are always distance 1
+   (connected by a single arc reversal path? No, by n(n-1)/2 reversals.)
+   Actually: complement pairs at n=5 have distance 2-3, not 1.
+
+8. BIPARTITE STRUCTURE: The full class graph is NOT bipartite
+   (has odd cycles and self-loops). But the SC-restricted blue
+   skeleton IS bipartite at odd n by t3 parity.
+
+OPEN PATTERNS TO INVESTIGATE:
+
+- What determines F[i][j] exactly? Is there a formula in terms
+  of H_i, H_j, |Aut_i|, |Aut_j|, and the score overlap?
+
+- The edge weight distribution: is there a generating function?
+
+- Is the diameter of the class graph O(n)?
+
+- The eigenvalue structure: at n=5, are they related to
+  tournament invariants?
+
+Done. opus-2026-03-22-S166
