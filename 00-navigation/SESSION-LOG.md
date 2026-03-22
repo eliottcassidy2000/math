@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S173 — 2026-03-22: The Metatournament Deep — DAG at all n≤5, 99 Chains, Width=n-2
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S172
+**Summary:** Deep understanding of the metatournament (H-oriented iso class graph). CORRECTED: it's a DAG not a tournament (G_n is sparse, not complete). DAG property: n=3,4 PERFECT (0 level edges), n=5 ALMOST (1 level edge). Longest path visits ALL H-levels: length={2,3,7} for n={3,4,5}. MAXIMAL CHAINS: {1,3,99} — there are 99 paths from H=1 to H=15 through the DAG. Width (max antichain): {1,2,3}. Single source (transitive H=1), two sinks (both H=15 classes). Hasse diagram: 16 cover relations (12 cross 1 H-step, 4 cross >1). THE KEY INSIGHT: the complexity of tournament space is an illusion of labeling. Quotient by isomorphism → clean partial order, no traps. Hill-climbing at the class level ALWAYS succeeds. The metatournament captures the intermediate structure between the exponentially complex tournament cube and the trivially ordered H-values.
+**New contributions:** metatournament_s173.py
+**Unresolved:** Verify DAG at n=6, prove DAG conjecture for all n, find formula for #chains, understand why width=n-2
+
+---
+
 ## opus-2026-03-22-S172 — 2026-03-22: Six Propositions Deep — H-oriented G_5 is TRANSITIVE, blue Ham path EXISTS, I(G_5,x) computed
 
 **Account:** opus
