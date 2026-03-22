@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S145 — 2026-03-21: Protein Folding — Rigorous Investigation
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S144
+**Summary:** Rigorous investigation of protein folding connections. Separated REAL from SUGGESTIVE from WRONG. REAL: both proteins (Potts model Z=Σexp(-H)) and tournaments (H=I(Ω,2)) use partition functions — this IS the connection. HP folding is NP-complete (proven). AlphaFold uses triangle constraints (the tournament atom). Quaternion attention saves 75% (validated). SUGGESTIVE: 3.6=18/5=h(E₇)/F₁ may encode deeper structure. Cotranslational folding may be non-associative (CD level 3). Folding barrier L^{2/3} involves same exponent as dim(so)/dim(p). WRONG: contact maps are NOT tournaments (sparse, not complete). The 2/3 Ramachandran ratio is approximate. Misfolding ≠ sedenion zero divisors (analogy, not identity). PSL(2,Z) doesn't demonstrably govern folding. 5 concrete testable predictions: quaternion Evoformer, binary DCA threshold, antisymmetric triangle update for multi-domain, folding pathways as directed paths, helix period as positional encoding. Read kind-pasteur S18y, web research on Potts/DCA/AlphaFold/Levinthal.
+**New contributions:** protein_folding_rigorous_s145.py
+**Unresolved threads:** Implement quaternion Evoformer, test binary DCA, compute directed path counts in contact DAGs
+
+---
+
 ## opus-2026-03-21-S144 — 2026-03-21: The Harmonic Transformer
 
 **Account:** opus
