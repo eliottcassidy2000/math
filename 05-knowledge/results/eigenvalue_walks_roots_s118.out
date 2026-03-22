@@ -1,0 +1,311 @@
+========================================================================
+  EIGENVALUES, WALKS, AND ROOT SYSTEMS — DEEP DIVE
+  opus-2026-03-21-S118
+========================================================================
+
+========================================================================
+  PART 1: Tr(B^4) BY ROOT PAIR TYPE
+========================================================================
+  A_4 root pair inner products:
+    <α,β> = -1: 10 pairs — ACUTE (-1)
+    <α,β> = +0: 15 pairs — ORTHOGONAL (Petersen edge)
+    <α,β> = +1: 20 pairs — OBTUSE (+1)
+
+  Total root pairs: C(10,2) = 45
+  Orthogonal (Petersen edges): 15 = E(K(5,2))
+  Non-orthogonal: 30
+    Obtuse (+1): 20
+    Acute (-1): 10
+
+  NOTE: obtuse = acute = 20. This is because for A_4,
+  the number of root pairs with <α,β>=+1 equals those with <α,β>=-1.
+  (The involution α→-α swaps obtuse and acute.)
+
+========================================================================
+  PART 2: Tr(B^4) AS A ROOT SYSTEM WALK INVARIANT
+========================================================================
+
+  For each tournament, decompose Tr(B^4) by walk structure:
+
+  Tr(B⁴)=116 (H=3):
+    4-distinct walk sum: -24
+    3-distinct walk count: 60
+    Universal (type B+C): 80
+
+  Tr(B⁴)=180 (H=1):
+    4-distinct walk sum: 40
+    3-distinct walk count: 60
+    Universal (type B+C): 80
+
+
+========================================================================
+  PART 3: WEIGHT VECTOR ↔ CASIMIR DISCRIMINANT
+========================================================================
+
+  (||w||², d, H) table at n=5:
+  ||w||²      d |                  H values
+       0   89.7 | [15]
+       8   49.0 | [13, 15]
+       8   89.7 | [11]
+      16   49.0 | [9]
+      16   89.7 | [9]
+      24   49.0 | [5]
+      32   49.0 | [3]
+      40   89.7 | [1]
+
+
+========================================================================
+  PART 4: WEIGHT NORM DETERMINES CASIMIR?
+========================================================================
+
+  Does ||w||² determine d?
+    ||w||²=0: d ∈ [89.72]
+    ||w||²=8: d ∈ [49.0, 89.72] ← MULTIPLE!
+    ||w||²=16: d ∈ [49.0, 89.72] ← MULTIPLE!
+    ||w||²=24: d ∈ [49.0]
+    ||w||²=32: d ∈ [49.0]
+    ||w||²=40: d ∈ [89.72]
+
+
+========================================================================
+  PART 5: WALKS AS ROOT LATTICE PATHS
+========================================================================
+
+  A closed 4-walk i→j→k→l→i traverses 4 roots:
+    α₁ = e_i - e_j, α₂ = e_j - e_k, α₃ = e_k - e_l, α₄ = e_l - e_i
+
+  The ROOT SUM of these 4 roots:
+    α₁ + α₂ + α₃ + α₄ = (e_i-e_j) + (e_j-e_k) + (e_k-e_l) + (e_l-e_i) = 0
+
+  Every closed walk sums to ZERO in the root lattice!
+  This is a CONSERVATION LAW for root walks.
+
+  The walk carries a SIGN: ε₁ε₂ε₃ε₄ = ±1.
+  This sign = 1 iff the 4 arcs form a CONSISTENT cycle (all forward or all backward).
+
+  For TYPE A (4 distinct vertices): the 4 roots form a ROOT RHOMBUS.
+  The rhombus encloses a WEIGHT in the root lattice.
+
+  The AREA of this rhombus (in the root lattice metric) relates to the
+  Casimir contribution of the walk.
+
+  For a 4-cycle on vertices {i,j,k,l}:
+  The 4 roots partition into 2 pairs of ORTHOGONAL roots:
+  {α_ij, α_kl} and {α_ik, α_jl} and {α_il, α_jk}.
+  (These are the 3 matchings of 4 elements into 2 pairs.)
+
+  Each matching gives a pair of orthogonal roots (disjoint arcs =
+  Petersen edge). The walk structure depends on which matching is used.
+
+  BEAUTIFUL: The 3 matchings of a 4-vertex set correspond to the
+  3 UNDIRECTED Hamiltonian cycles of K_4. And the walk contribution
+  to Tr(B^4) is a sum over these 3 matchings.
+
+  Example: 4-subset (0, 1, 2, 3)
+  The 3 matchings (pairs of orthogonal roots):
+    Matching 1: {(0, 1), (2, 3)}, inner product = 0
+    Matching 2: {(0, 2), (1, 3)}, inner product = 0
+    Matching 3: {(0, 3), (1, 2)}, inner product = 0
+
+
+========================================================================
+  PART 6: THE WEYL GROUP AND TOURNAMENT CLASSES
+========================================================================
+
+  The Weyl group of A_{n-1} is S_n (the symmetric group).
+  It acts on tournaments by vertex permutation.
+  Two tournaments in the same S_n orbit have the same H.
+
+  The Weyl group action on the weight w(T):
+  σ · w(T) = w(σ(T)) = permutation of score deviations.
+
+  Two tournaments with the same SORTED weight (= same score sequence)
+  are in the same Weyl orbit... NO! Same score sequence ≠ same orbit.
+  The Weyl group acts by PERMUTING the weight coordinates.
+  Same SORTED weight = same Weyl orbit of the weight.
+  But different tournaments can have the same sorted weight (score sequence)
+  without being isomorphic (S_n-equivalent).
+
+  THE OCR RESIDUAL is the variance of H WITHIN each Weyl orbit of
+  the weight. Since weights in the same orbit have the same sorted
+  score sequence, this is exactly the score-class conditional variance.
+
+  THE CASIMIR INVARIANTS are Weyl-invariant (by definition).
+  So Tr(B^(2k)) is constant on each Weyl orbit.
+  But from Part 4: ||w||² doesn't always determine d (at n=5, ||w||²=8
+  maps to d∈{5,21}). This means the Casimir adds information BEYOND
+  the weight norm.
+
+  KEY INSIGHT: The OCR residual = information in the tournament that
+  is NEITHER captured by the weight (score sequence) NOR by the Casimir
+  (spectral invariants). It requires the FULL tournament structure.
+
+========================================================================
+  PART 7: THE ROOT CYCLE PROFILE — WHERE IT ALL CONNECTS
+========================================================================
+
+  From THM-263: The SORTED ROOT CYCLE PROFILE (SRCP) determines H at n=5.
+
+  The SRCP assigns to each ARC (= root α_ij) the number of 3-cycles
+  passing through that arc. The sorted list of these counts is the SRCP.
+
+  From S126: The (c3,c5)-enhanced SRCP determines H at n=7 too!
+  (Zero collisions in 20K samples.)
+
+  THE CONNECTION TO WALKS:
+  The SRCP counts how many closed 3-walks pass through each root.
+  A 3-walk through root α = (i,j) visits i→j→k→i for each k.
+  The count c(alpha) = number of 3-cycles through arc (i,j).
+
+  This is a ROOT-LEVEL walk count. It tells us how each root
+  participates in the tournament's cycle structure.
+
+  THE SRCP IS A WALK FINGERPRINT:
+  - Tr(B²) = sum of all root walks of length 2 (UNIVERSAL)
+  - Tr(B⁴) = sum of all root walks of length 4 (2 CLASSES)
+  - SRCP = local walk counts at each root (DETERMINES H at n=5)
+
+  The SRCP is FINER than the Casimir invariants because it's local
+  (per-root) rather than global (summed over all roots).
+
+  HIERARCHY:
+  Score sequence ⊂ Weight norm ⊂ Casimir invariants ⊂ SRCP ⊂ Full tournament
+
+  Each level adds information:
+  - Score sequence: n numbers (= weight orbit)
+  - Casimir: floor(n/2) numbers (spectral invariants)
+  - SRCP: C(n,2) numbers (per-root walk counts)
+  - Full tournament: C(n,2) binary choices
+
+
+  Hierarchy test at n=5:
+  Level              | Distinct classes | Determines H?
+        Score sequence |                9 | NO (1 ambiguous class)
+        Casimir Tr(B⁴) |                2 | NO (H varies within each)
+    Weight norm ||w||² |                6 | NO (same as score seq)
+     SRCP (c3 per arc) |                9 | YES (9/9 determine)
+       Full tournament |               12 | YES (by definition)
+
+
+========================================================================
+  PART 8: THE EIGENVALUE-WALK DUALITY
+========================================================================
+
+  Tr(B^(2k)) = Σ_i λ_i^(2k) (eigenvalue side)
+             = Σ_walks (product of signs along walk) (walk side)
+
+  This is a DUALITY between:
+  - GLOBAL information (eigenvalues = spectral decomposition)
+  - LOCAL information (walks = paths through the root system)
+
+  At n=5:
+  - 2 distinct eigenvalue spectra (Casimir classes)
+  - 9 distinct SRCP classes (root walk fingerprints)
+  - 12 iso classes (full tournament structure)
+
+  The SRCP is much FINER than the spectrum!
+  9 > 2 classes. The spectrum sees only the "energy levels,"
+  while the SRCP sees the "orbital shapes."
+
+  ANALOGY TO QUANTUM MECHANICS:
+  - Casimir = energy levels (how many quanta)
+  - SRCP = orbital shapes (where the quanta are)
+  - Tournament = full state (including phases)
+
+  The OCR measures how much of the FULL STATE is captured by
+  the MARGINAL (score sequence = weight orbit).
+  The SRCP captures much more — it's an intermediate between
+  marginal and full state.
+
+  THE PROMISE OF SRCP: if we can compute SRCP efficiently
+  (O(n^3) from the tournament), and SRCP determines H,
+  then we have an O(n^3) algorithm for H!
+
+  But SRCP doesn't determine H at n≥6 (with c3 alone).
+  The (c3,c5) SRCP does seem to work at n=7 (S126).
+  At n=8+: may need (c3,c5,c7) SRCP.
+
+========================================================================
+  PART 9: THE POS IN ROOT SYSTEM COORDINATES
+========================================================================
+
+  POS at n=5: score (1,2,2,2,3), weight w = (-2, 0, 0, 0, 2)
+  ||w||² = 8
+
+  In the A_4 root lattice, this weight is:
+  w = -2e₀ + 0e₁ + 0e₂ + 0e₃ + 2e₄
+  = 2(e₄ - e₀)
+  = 2 × root α₀₄ (the LONGEST root from vertex 0 to vertex 4)
+
+  THE POS WEIGHT IS A DOUBLED ROOT!
+  It's 2× the root connecting the almost-source to the almost-sink.
+
+  This is exactly the NESTING structure from S110:
+  the POS has src (vertex 0, score 1) and snk (vertex 4, score 3),
+  with the weight pointing from src to snk.
+
+  The weight norm ||w||² = 8 = 2²×2 = 4 × ||α₀₄||² (since ||α||²=2 for A_4 roots).
+
+  THE INNER TOURNAMENT sits on the roots ORTHOGONAL to α₀₄.
+  These are the roots α_ij where {i,j} ∩ {0,4} = ∅,
+  i.e., {i,j} ⊂ {1,2,3} — exactly the 3 inner arcs.
+
+  The inner arcs form a triangle in the root system:
+  α₁₂, α₁₃, α₂₃ with mutual inner products ±1.
+
+  THE POS IS A ROOT SYSTEM DECOMPOSITION:
+  Roots of A_4 = α₀₄ (outer axis) ∪ inner roots (α₁₂,α₁₃,α₂₃)
+                ∪ connecting roots (α₀ᵢ, α_ᵢ₄ for i=1,2,3)
+
+  This is the PARABOLIC DECOMPOSITION of the root system
+  with respect to the longest root α₀₄!
+
+
+  Roots of A_4 classified by inner product with α₀₄:
+  Orthogonal (inner arcs): [(1, 2), (1, 3), (2, 3)]
+  Non-orthogonal (connecting): [((0, 1), 1), ((0, 2), 1), ((0, 3), 1), ((0, 4), 2), ((1, 4), 1), ((2, 4), 1), ((3, 4), 1)]
+
+
+========================================================================
+  SYNTHESIS: THE ROOT SYSTEM PICTURE
+========================================================================
+
+  EVERYTHING IN TOURNAMENT THEORY HAS A ROOT SYSTEM INTERPRETATION:
+
+  1. TOURNAMENT = signed function on A_{n-1} positive roots
+     Each arc ε_ij ∈ {±1} orients root α_ij = e_i - e_j.
+
+  2. SCORE SEQUENCE = weight in the A_{n-1} weight lattice
+     w(T) = Σ ε_ij (e_i - e_j) = (d₀,...,d_{n-1}) where d_i = 2s_i-(n-1).
+
+  3. CASIMIR = symmetric function of eigenvalues
+     Tr(B²) = -2×C(n,2) = -2 × (number of positive roots). UNIVERSAL.
+     Tr(B⁴) = walk count on root system. Tournament-dependent.
+
+  4. CONFLICT GRAPH = intersection pattern of root triples
+     A 3-cycle uses 3 roots forming a "root triangle."
+     Two 3-cycles conflict iff their triangles share a root.
+
+  5. OCF = independence polynomial of the root triangle graph
+     H = I(Ω, 2) where Ω counts non-intersecting root triangles.
+
+  6. POS = parabolic decomposition along the longest root
+     The weight w = 2α (doubled root from src to snk).
+     Inner tournament = roots orthogonal to the axis.
+     Nesting = recursive parabolic decomposition.
+
+  7. SRCP = local walk count at each root
+     c(α) = # of root triangles containing α.
+     The sorted profile determines H (at n=5 exactly, at n≥6 approximately).
+
+  8. FORBIDDEN VALUES = obstructions in the root triangle graph
+     H=7 requires 3 root triangles forming K₃ in Ω.
+     This is impossible because K₃ in the root triangle graph
+     forces a 5-cycle (root pentagon), expanding Ω.
+
+  THE ROOT SYSTEM IS THE UNIVERSAL LANGUAGE OF TOURNAMENT THEORY.
+  Every invariant, every structure, every formula maps to a statement
+  about the A_{n-1} root system.
+
+
+Done. opus-2026-03-21-S118

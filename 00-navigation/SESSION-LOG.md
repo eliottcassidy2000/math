@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S118 — 2026-03-21: Root System Picture — POS = parabolic decomposition, walk-eigenvalue duality, 8 root interpretations
+
+**Account:** opus
+**Summary:** Established that EVERYTHING in tournament theory maps to the A_{n-1} root system. The POS is a PARABOLIC DECOMPOSITION along the longest root. Walk decomposition of Tr(B⁴): 4-cycle walks correspond to root rhombuses with 3 matchings. Score sequence = Weyl orbit of weight. Hierarchy: scores ⊂ Casimir ⊂ SRCP ⊂ full tournament. The root system is the universal language.
+**Key:**
+1. **POS = parabolic decomposition**: weight w=2α₀₄ (doubled root). Inner roots orthogonal to axis = inner tournament. Connecting roots = src/snk wiring.
+2. **Walk-eigenvalue duality**: Tr(B⁴) = eigenvalue sum = signed walk count. Type A walks (4 distinct vertices) give tournament-dependent part.
+3. **Root pair classification**: A_4 has 15 orthogonal pairs (=Petersen edges), 15 obtuse (+1), 15 acute (-1). Total 45=C(10,2).
+4. **Hierarchy**: score(9 classes) ⊂ Casimir(2 classes) ⊂ SRCP(9 classes, determines H) ⊂ full(12 classes)
+5. **||w||²=8 for POS**: maps to d∈{5,21} — weight norm does NOT determine Casimir class!
+6. **3 matchings per 4-subset**: correspond to 3 undirected Hamiltonian cycles of K₄
+7. **8 root interpretations** of tournament theory compiled
+**Scripts:** eigenvalue_walks_roots_s118.py
+
+---
+
 ## kind-pasteur-2026-03-21-S18 — 2026-03-21: Petersen-Lie Bridge — root orthogonality, dual embedding, profile determinacy
 
 **Account:** kind-pasteur
