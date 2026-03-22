@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S119 — 2026-03-21: Girth of Omega — Kneser girth transition, Petersen=5 forces α₂=0
+
+**Account:** opus
+**Summary:** Investigated girth of the conflict graph Ω and its connection to Petersen, forbidden values, and the OCR. Key insight: Kneser girth transition K(5,2)→K(6,2) (5→3) COINCIDES with emergence of α₂>0 and the OCR residual. Petersen girth 5 forces Ω to be either trivial or triangle-rich — no middle ground. BUG: girth computation has error (reports 2 instead of 3), needs fix.
+**Key:**
+1. **Kneser girth transition**: K(5,2) girth=5 → K(6,2) girth=3. Exactly where α₂ emerges!
+2. **Petersen girth=5 forces dichotomy**: Ω is either empty/trivial (low H) or triangle-rich (high H). No intermediate girth exists at n=5.
+3. **H=7 requires girth(Ω)=3**: 3 all-conflicting cycles = triangle in Ω. But this forces α₁≥4 (THM-029).
+4. **corr(H, |V(Ω)|) = +0.96**: number of cycles strongly predicts H (not surprising from OCF)
+5. **The skip**: H values jump from 5→9 at n=5, mirroring the girth skip ∞→3 (no girth 4-5 tournaments)
+6. **COMPUTATIONAL BUG**: BFS girth reports 2 (multi-edge artifact). Need to fix for correct girth values.
+**Scripts:** girth_omega_s119.py (with bug)
+
+---
+
 ## opus-2026-03-21-S118 — 2026-03-21: Root System Picture — POS = parabolic decomposition, walk-eigenvalue duality, 8 root interpretations
 
 **Account:** opus
