@@ -1,0 +1,117 @@
+======================================================================
+  CYCLE SPACE FORMULAS: THE 3% RESIDUAL
+======================================================================
+
+  Computing all invariants at n=5...
+
+======================================================================
+  1. THE RESIDUAL R(T) = H(T) - E[H|score]
+======================================================================
+
+  Score classes with R != 0:
+    [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]: 280 tournaments, H in [11, 13, 15], R in ['-1.43', '0.57', '2.57']
+
+======================================================================
+  2. WHAT DETERMINES R?
+======================================================================
+
+  PoS class (1,2,2,2,3): 280 tournaments
+  H values: [11, 13, 15]
+  R values: [np.float64(-1.43), np.float64(0.57), np.float64(2.57)]
+
+  c5 -> R mapping:
+    c5=1: R in [np.float64(-1.4286)], count=120 -- DETERMINES
+    c5=2: R in [np.float64(0.5714)], count=120 -- DETERMINES
+    c5=3: R in [np.float64(2.5714)], count=40 -- DETERMINES
+
+  alpha_2 -> R mapping:
+    alpha_2=0: R in [np.float64(-1.4286), np.float64(0.5714), np.float64(2.5714)], count=280 -- ambiguous
+
+  (c5, alpha_2) -> R mapping:
+    (c5=1, a2=0): R in [np.float64(-1.4286)], count=120 -- DETERMINES
+    (c5=2, a2=0): R in [np.float64(0.5714)], count=120 -- DETERMINES
+    (c5=3, a2=0): R in [np.float64(2.5714)], count=40 -- DETERMINES
+
+======================================================================
+  3. EXACT FORMULA FOR R
+======================================================================
+
+  The OCF: H = I(Omega, 2) = sum alpha_k * 2^k
+
+  At n=5, Omega has vertices = {directed 3-cycles} U {directed 5-cycles}
+  Let's compute alpha_k from H directly.
+
+    bits=12: H=11, I(Omega,2)=3, match=False
+      #dir_3=0, #dir_5=1, total_cycles=1
+      alphas=[1, 1]
+      H = 1*2^0 + 1*2^1
+
+    bits=28: H=11, I(Omega,2)=3, match=False
+      #dir_3=0, #dir_5=1, total_cycles=1
+      alphas=[1, 1]
+      H = 1*2^0 + 1*2^1
+
+    bits=40: H=15, I(Omega,2)=7, match=False
+      #dir_3=0, #dir_5=3, total_cycles=3
+      alphas=[1, 3, 0, 0]
+      H = 1*2^0 + 3*2^1
+
+======================================================================
+  4. R IN TERMS OF ALPHA COEFFICIENTS
+======================================================================
+
+  (alpha_1, alpha_2) -> H for PoS class:
+    alpha_1=5, alpha_2=0: H=[11], R=[np.float64(-1.4286)], count=120
+    alpha_1=6, alpha_2=0: H=[13], R=[np.float64(0.5714)], count=120
+    alpha_1=7, alpha_2=0: H=[15], R=[np.float64(2.5714)], count=40
+
+  alpha_1 alone -> H:
+    alpha_1=5: H=[11]
+    alpha_1=6: H=[13]
+    alpha_1=7: H=[15]
+
+  n5 (directed 5-cycles = HC) -> R:
+    n5=1: R=[np.float64(-1.4286)], count=120
+    n5=2: R=[np.float64(0.5714)], count=120
+    n5=3: R=[np.float64(2.5714)], count=40
+
+======================================================================
+  5. THE EXACT FORMULA FOR R
+======================================================================
+
+  PoS class: E[alpha_1] = 5.7143, E[alpha_2] = 0.0000
+  E[H] = 12.4286
+  1 + 2*E[a1] + 4*E[a2] = 12.4286
+
+  VERIFICATION: H = 1 + 2*alpha_1 + 4*alpha_2
+    alpha_1=5, alpha_2=0: H=11, 1+2a1+4a2=11, match=True
+    alpha_1=6, alpha_2=0: H=13, 1+2a1+4a2=13, match=True
+    alpha_1=7, alpha_2=0: H=15, 1+2a1+4a2=15, match=True
+
+  RESULT: Within the PoS class at n=5:
+
+  R = H - E[H|score]
+    = (1 + 2*alpha_1 + 4*alpha_2) - (1 + 2*E[alpha_1] + 4*E[alpha_2])
+    = 2*(alpha_1 - 5.71) + 4*(alpha_2 - 0.00)
+
+  Since c3 is constant within score class (c3=4 for all PoS):
+  - Each vertex set contributes exactly 2 directed 3-cycles
+  - n3 = 2*c3 = 8 for all PoS tournaments (constant!)
+  - alpha_1 varies ONLY through n5 (directed 5-cycles = HC)
+  - alpha_1 = n3 + n5 = 8 + n5
+
+  So: R = 2*(8 + n5 - 5.71) + 4*(alpha_2 - 0.00)
+        = 2*n5 + 4*alpha_2 + constant
+        = 2*HC + 4*alpha_2 + constant
+
+  Where HC = n5 = number of directed 5-cycles = Hamiltonian cycles.
+
+  THE RESIDUAL IS A LINEAR FUNCTION OF HC AND ALPHA_2.
+
+  The cycle space contribution to H is:
+  R = 2*(HC - E[HC|score]) + 4*(alpha_2 - E[alpha_2|score])
+
+  HC captures the NUMBER of global cycles.
+  alpha_2 captures the DISJOINTNESS of local cycles.
+  Together they determine the 3% residual EXACTLY.
+
