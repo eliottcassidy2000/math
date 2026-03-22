@@ -1,0 +1,35 @@
+========================================================================
+  ARC-FLIP COMPRESSOR V2: TOURNAMENT-INFORMED COMPRESSION
+  opus-2026-03-22-S163
+========================================================================
+
+BENCHMARK: COMPRESSION ON DIFFERENT DATA TYPES
+------------------------------------------------------------
+
+  Data type                          n       raw      comp    ratio   savings    upsets       ok
+  ──────────────────────────────  ────  ────────  ────────  ───────  ────────  ────────  ───────
+  Random walk (1 flip/step)       n= 8  raw=   400B  comp=   156B  ratio=0.390  savings=61%  upsets=28.6%  lossless=True
+  Random walk (3 flips/step)      n= 8  raw=   400B  comp=   300B  ratio=0.750  savings=25%  upsets=28.6%  lossless=True
+  Slowly evolving                 n= 8  raw=   400B  comp=    61B  ratio=0.152  savings=85%  upsets=28.6%  lossless=True
+  Near-transitive (2 upsets)      n= 8  raw=   400B  comp=   327B  ratio=0.818  savings=18%  upsets=7.1%  lossless=True
+  Near-transitive (5 upsets)      n= 8  raw=   400B  comp=   553B  ratio=1.383  savings=-38%  upsets=14.3%  lossless=True
+  IID random                      n= 8  raw=   400B  comp=   539B  ratio=1.347  savings=-35%  upsets=28.6%  lossless=True
+
+  Random walk (1 flip/step)       n=15  raw=  1400B  comp=   216B  ratio=0.154  savings=85%  upsets=13.3%  lossless=True
+  Near-transitive (5 upsets)      n=15  raw=  1400B  comp=   876B  ratio=0.626  savings=37%  upsets=3.8%  lossless=True
+  IID random                      n=15  raw=  1400B  comp=   864B  ratio=0.617  savings=38%  upsets=13.3%  lossless=True
+
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/arc_flip_compressor_v2.py", line 357, in <module>
+    benchmark(n, "Random walk (1 flip/step)", lambda n,m,i: gen_random_walk(n,m,i,1))
+  File "/Users/e/Documents/GitHub/math/04-computation/arc_flip_compressor_v2.py", line 282, in benchmark
+    compressed = comp.compress_sequence(sequence)
+  File "/Users/e/Documents/GitHub/math/04-computation/arc_flip_compressor_v2.py", line 229, in compress_sequence
+    pred_data, n_upsets = self.compress_predictive(bit_sequence[0])
+  File "/Users/e/Documents/GitHub/math/04-computation/arc_flip_compressor_v2.py", line 197, in compress_predictive
+    residual_data = self.compress_diff(bits, pred_bits)
+  File "/Users/e/Documents/GitHub/math/04-computation/arc_flip_compressor_v2.py", line 142, in compress_diff
+    encoded = bytes([n_flips]) + b''.join(
+  File "/Users/e/Documents/GitHub/math/04-computation/arc_flip_compressor_v2.py", line 143, in <genexpr>
+    p.to_bytes(1, 'little') for p in positions
+OverflowError: int too big to convert
