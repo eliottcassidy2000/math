@@ -1,0 +1,96 @@
+======================================================================
+  COMPETITIVE PROGRAMMING ALGORITHMS FROM TOURNAMENT THEORY
+======================================================================
+
+======================================================================
+  BENCHMARK 1: Directed 3-Cycle Counting
+======================================================================
+
+  n=   10: c3=      33, fast=0.000014s, brute=0.000018s, speedup=1x, match=True
+  n=   50: c3=    4818, fast=0.000018s, brute=0.001669s, speedup=92x, match=True
+  n=  100: c3=   40307, fast=0.000076s, brute=0.015390s, speedup=202x, match=True
+  n=  500: c3= 5174448, fast=0.001392s, brute=too slow
+  n= 1000: c3=41530194, fast=0.003830s, brute=too slow
+
+======================================================================
+  BENCHMARK 2: Second Largest Element
+======================================================================
+
+  n=    8: comps=9 (optimal=9), naive=13, savings=30.8%, correct=True
+  n=   16: comps=18 (optimal=18), naive=29, savings=37.9%, correct=True
+  n=   64: comps=68 (optimal=68), naive=125, savings=45.6%, correct=True
+  n=  256: comps=262 (optimal=262), naive=509, savings=48.5%, correct=True
+  n= 1024: comps=1032 (optimal=1032), naive=2045, savings=49.5%, correct=True
+
+======================================================================
+  BENCHMARK 3: Tournament Classification
+======================================================================
+
+  Transitive (n=7): transitive, c3=0, H_est=1
+  Regular (n=7): regular, c3=14, H_est=29, var=0.00
+  Random (n=7): general, c3=12, scores=[2, 2, 3, 3, 3, 4, 4]
+
+======================================================================
+  BENCHMARK 4: Hamiltonian Path Construction
+======================================================================
+
+  n=   10: time=0.0000s, valid=True
+  n=  100: time=0.0001s, valid=True
+  n= 1000: time=0.0008s, valid=True
+  n= 5000: time=0.0100s, valid=True
+
+======================================================================
+  BENCHMARK 5: Staircase Comparison Schedule
+======================================================================
+
+  n=  5: total=  10 comparisons
+    50% info:    3 comparisons (70% savings)
+    90% info:    8 comparisons (20% savings)
+    99% info:   10 comparisons (0% savings)
+  n= 10: total=  45 comparisons
+    50% info:    3 comparisons (93% savings)
+    90% info:   15 comparisons (67% savings)
+    99% info:   36 comparisons (20% savings)
+  n= 20: total= 190 comparisons
+    50% info:    3 comparisons (98% savings)
+    90% info:   17 comparisons (91% savings)
+    99% info:   47 comparisons (75% savings)
+  n= 50: total=1225 comparisons
+    50% info:    3 comparisons (100% savings)
+    90% info:   17 comparisons (99% savings)
+    99% info:   47 comparisons (96% savings)
+
+======================================================================
+  COMPETITIVE PROGRAMMING PROBLEM TYPE GUIDE
+======================================================================
+
+  PROBLEM TYPE                    ALGORITHM              TIME     VERSUS
+  ----------------------------- ---------------------- -------- ----------
+  "Count 3-cycles in tournament" c3 = C(n,3)-sum C(s,2) O(n)    O(n^3) std
+  "Find Hamiltonian path"        Incremental insertion   O(n^2)  O(n!) back
+  "Does HP exist in tournament?" YES (Redei)            O(1)    O(2^n) DP
+  "Find 2nd largest"             Tournament tree         n+logn  2n-3 naive
+  "Find min AND max"             Pair comparison         3n/2    2n naive
+  "Sort n=5 elements"            Ford-Johnson            7       up to 10
+  "Rank with budget"             Staircase schedule      varies  all C(n,2)
+
+  CODEFORCES TAGS where these apply:
+  - "graphs" + "tournaments"
+  - "combinatorics" + "counting"
+  - "greedy" + "sortings"
+  - "implementation" + "math"
+  - "interactive" (comparison queries)
+
+  LEETCODE PROBLEMS:
+  - #215 Kth Largest Element (tournament tree variant)
+  - #857 Minimum Cost to Hire K Workers (ranking/comparison)
+  - #1383 Maximum Performance of a Team (tournament scheduling)
+  - #887 Super Egg Drop (staircase dimension = eggs)
+  - Interactive problems with comparison queries
+
+  THE KEY INSIGHT FOR COMPETITIVE PROGRAMMING:
+  If the problem involves a TOURNAMENT (directed complete graph),
+  use the score-based O(n) formulas. Most contestants will use O(n^3).
+  If the problem involves COMPARISONS with a budget, use the
+  staircase schedule. Most contestants will use uniform sampling.
+
