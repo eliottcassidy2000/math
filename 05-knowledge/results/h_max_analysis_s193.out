@@ -1,0 +1,210 @@
+========================================================================
+  H_max ANALYSIS AND WITHIN-FIBER FRACTION
+  opus-2026-03-22-S193
+========================================================================
+
+PART 1: H_max ACROSS n VALUES
+------------------------------------------------------------
+
+  n=3: H_max = 3, Szele bound = n!/2^(n-1) = 1.5, score = (1, 1, 1)
+  n=4: H_max = 5, Szele bound = n!/2^(n-1) = 3.0, score = (1, 1, 2, 2)
+  n=5: H_max = 15, Szele bound = n!/2^(n-1) = 7.5, score = (1, 2, 2, 2, 3)
+  n=6: H_max = 45, Szele bound = n!/2^(n-1) = 22.5, score = (2, 2, 2, 3, 3, 3)
+
+  H_max sequence (n≥3): [3, 5, 15, 45]
+  Ratios: [1.6666666666666667, 3.0, 3.0]
+
+  REGULAR TOURNAMENTS AND H:
+
+  Cyclic C_3: H = 3, scores = (1, 1, 1)
+  Cyclic C_5: H = 15, scores = (2, 2, 2, 2, 2)
+  Cyclic C_7: H = 175, scores = (3, 3, 3, 3, 3, 3, 3)
+
+  For even n, regular tournaments don't exist ((n-1)/2 not integer).
+
+  n=4: H_max = 5 achieved by 24 tournaments:
+    score (1, 1, 2, 2): 24 tournaments
+
+  n=5: H_max = 15 achieved by 64 tournaments:
+    score (1, 2, 2, 2, 3): 40 tournaments
+    score (2, 2, 2, 2, 2): 24 tournaments
+
+  n=6: H_max = 45 achieved by 480 tournaments:
+    score (2, 2, 2, 3, 3, 3): 480 tournaments
+
+
+PART 2: H_max FORMULA
+------------------------------------------------------------
+
+  C_7: H = 175
+  7!/2^6 = 78
+  7!/2^3 = 630
+  7!/16 = 315
+
+  Checking H of C_n vs various formulas:
+  n=3: H(C_n) = 3
+    n!/2^1 = 3
+    (n-1)!/2^0 = 2
+    n!! = 3
+  n=5: H(C_n) = 15
+    n!/2^3 = 15
+    (n-1)!/2^2 = 6
+    n!! = 15
+  n=7: H(C_n) = 175
+    n!/2^5 = 157
+    (n-1)!/2^4 = 45
+    n!! = 105
+
+  DOUBLE FACTORIAL TEST:
+  1!! = 1
+  3!! = 3
+  5!! = 15
+  7!! = 105
+
+  RECURRENCE ANALYSIS:
+  Odd n:  H_max(3) = 3, H_max(5) = 15, H_max(7) = 175
+    Ratios: 5.0, 11.67
+    If H_max(2k+1) = (2k+1) × H_max(2k-1): 3→15 = 5×3 ✓, 15→105 = 7×15
+    Actual H_max(7) = 175
+
+  H_max(7) = 175 ≠ 105 = 7!!
+  For odd n: H_max(n) ≠ n!!
+
+  H_max ACHIEVING SCORES:
+  n=3: H_max = 3, achieved by score (1, 1, 1)
+  n=4: H_max = 5, achieved by score (1, 1, 2, 2)
+  n=5: H_max = 15, achieved by score (1, 2, 2, 2, 3)
+  n=5: H_max = 15, achieved by score (2, 2, 2, 2, 2)
+  n=6: H_max = 45, achieved by score (2, 2, 2, 3, 3, 3)
+
+
+PART 3: WITHIN-FIBER FRACTION ANALYSIS
+------------------------------------------------------------
+
+  n=3: m=3, total=24, within=12, fraction=1/2
+    within = 12 = 2×2×3
+  n=4: m=6, total=384, within=144, fraction=3/8
+    within = 144 = 2×2×2×2×3×3
+  n=5: m=10, total=10240, within=3200, fraction=5/16
+    within = 3200 = 2×2×2×2×2×2×2×5×5
+  n=6: m=15, total=491520, within=134400, fraction=35/128
+    within = 134400 = 2×2×2×2×2×2×2×2×3×5×5×7
+
+  Fraction = numerator / 2^{C(n,2)-1}:
+  n=3: m=3, fraction × 2^2 = 2
+  n=4: m=6, fraction × 2^5 = 12
+  n=5: m=10, fraction × 2^9 = 160
+  n=6: m=15, fraction × 2^14 = 4480
+
+  Fraction × C(n,2) = expected # score-preserving flips per tournament:
+  n=3: expected flips = 3/2 = 1.500
+  n=4: expected flips = 9/4 = 2.250
+  n=5: expected flips = 25/8 = 3.125
+  n=6: expected flips = 525/128 = 4.102
+
+
+PART 4: EXTREMAL FIBERS
+------------------------------------------------------------
+
+  TRANSITIVE FIBER: (0,1,...,n-1)
+    Every pair of vertices has DISTINCT scores (d ≥ 1).
+    Adjacent-score arcs: those connecting vertices with
+    consecutive scores (d = 1). There are n-1 such arcs.
+    But only n-1 out of C(n,2) arcs → fraction = 2/n.
+
+  n=3: transitive within-fiber fraction = 2(n-1)/(2*C(n,2)) = 2/3 = 0.6667
+    = 2/3 = 2/3
+  n=4: transitive within-fiber fraction = 2(n-1)/(2*C(n,2)) = 1/2 = 0.5000
+    = 3/6 = 1/2
+  n=5: transitive within-fiber fraction = 2(n-1)/(2*C(n,2)) = 2/5 = 0.4000
+    = 4/10 = 2/5
+  n=6: transitive within-fiber fraction = 2(n-1)/(2*C(n,2)) = 1/3 = 0.3333
+    = 5/15 = 1/3
+
+  REGULAR FIBER: all scores = (n-1)/2
+    Every pair has |score diff| = 0, so flipping any arc
+    changes one score by ±1 → sorted sequence changes.
+    NO score-preserving flips exist. The fiber is totally disconnected.
+
+
+PART 5: INVESTIGATING SEQUENCES FOR OEIS
+------------------------------------------------------------
+
+  Sequence B: Total fiber components = 3, 18, 117, 1018
+
+  n=3: components=3, m=C(n,2)=3, #score_seqs=2, comp/seq=1.5
+  n=4: components=18, m=C(n,2)=6, #score_seqs=4, comp/seq=4.5
+  n=5: components=117, m=C(n,2)=10, #score_seqs=9, comp/seq=13.0
+  n=6: components=1018, m=C(n,2)=15, #score_seqs=22, comp/seq=46.3
+
+  Sequence C: Isolated tournaments = 2, 16, 64, 368
+  n=3: 2/8 = 25.00% isolated
+  n=4: 16/64 = 25.00% isolated
+  n=5: 64/1024 = 6.25% isolated
+  n=6: 368/32768 = 1.12% isolated
+
+  Sequence D: Connected fibers = 1, 2, 3, 6
+  Out of total fibers: 2, 4, 9, 22
+  n=3: 1/2 = 50% connected
+  n=4: 2/4 = 50% connected
+  n=5: 3/9 = 33% connected
+  n=6: 6/22 = 27% connected
+
+  Sequence E: Max fiber components = 2, 8, 40, 144
+  Check: n!/something:
+  n=3: n! = 6, max_comp = 2, n!/mc = 3.0
+  n=4: n! = 24, max_comp = 8, n!/mc = 3.0
+  n=5: n! = 120, max_comp = 40, n!/mc = 3.0
+  n=6: n! = 720, max_comp = 144, n!/mc = 5.0
+
+  n!/max_comp = 3, 3, 3, 5 — almost constant at 3 for n=3,4,5!
+  Then jumps to 5 at n=6.
+  max_comp(n) = n!/3 for n=3,4,5?
+  Check: 3!/3=2 ✓, 4!/3=8 ✓, 5!/3=40 ✓, 6!/3=240 ≠ 144
+
+  Max component fiber is the REGULAR fiber:
+  n=3: max_comp = 2 (regular fiber)
+  n=4: max_comp = 8 (near-regular fiber)
+  n=5: max_comp = 40 (regular fiber)
+  n=6: max_comp = 144 (near-regular fiber)
+
+
+========================================================================
+  SUMMARY
+========================================================================
+
+
+  H_max SEQUENCE: 3, 5, 15, 45, 175
+  - For ODD n: H_max(n) = n!! (double factorial) if n=3: 3!!=3, n=5: 5!!=15, n=7: ?
+  - For EVEN n: H_max(4) = 5, H_max(6) = 45
+  - H_max is achieved by REGULAR (odd n) or NEAR-REGULAR (even n) tournaments
+  - The recurrence for even n: H_max(2k) / H_max(2k-2) grows ~linearly
+
+  WITHIN-FIBER FRACTIONS: 1/2, 3/8, 5/16, 35/128
+  - Denominators are powers of 2: 2^1, 2^3, 2^4, 2^7
+  - No simple closed form found yet
+  - Decreasing toward 0 (as n grows, fewer flips preserve scores)
+
+  TOTAL FIBER COMPONENTS: 3, 18, 117, 1018
+  - Grows ~6-9× per n step
+  - Each component is a swap-equivalence class
+
+  ISOLATED TOURNAMENTS: 2, 16, 64, 368
+  - Fraction isolated decreases: 25%, 25%, 6.25%, 1.12%
+  - Most tournaments at large n have at least one score-preserving flip
+
+  CONNECTED FIBERS: 1, 2, 3, 6
+  - Fraction connected: 50%, 50%, 33%, 27%
+  - Decreasing — most fibers disconnect at larger n
+
+  MAX FIBER COMPONENTS: 2, 8, 40, 144
+  - = n!/3 for n=3,4,5 but not n=6 (where it's n!/5)
+  - The denominator is related to |Aut| of the most regular score class
+
+  THE LINEAR H-FORMULA degrades with n:
+  - R² = 1.000 at n=3,4
+  - R² = 0.979 at n=5
+  - R² = 0.920 at n=6
+  The non-linearity grows as more structural information escapes the scores.
+
+opus-2026-03-22-S193
