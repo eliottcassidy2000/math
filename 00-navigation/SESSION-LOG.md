@@ -13,6 +13,15 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S198 — 2026-03-22: 13 Hidden Circles — x²+y² in blocks, proteins, primes, neural nets, music, elections
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S197
+**Summary:** 13 systems where x²+y² hides, all verified: colliding blocks (digits of π from kinetic energy ellipse), Buffon needle, Stirling √(2πn), protein random coil, coprime 6/π², card shuffle descents, neural net Kaiming init, 12-note music circle, chess walk, quantum uncertainty, cooking flavor norm, PageRank circular law, election tie = fiber fraction. Conclusion: π is the constant of independence and quadratic forms, not geometry.
+**New contributions:** hidden_circles_s198.py
+
+---
+
 ## opus-2026-03-22-S197 — 2026-03-22: Why π — Independence→Pythagorean→Circles→π
 
 **Account:** opus
