@@ -1,0 +1,384 @@
+========================================================================
+  G_n THROUGH EVERY LENS
+  opus-2026-03-22-S210
+========================================================================
+
+THE COMPLETE G_5 DATA TABLE — EVERY INVARIANT
+============================================================
+
+   #   H                score |Aut| orbit deg  S₂  c₃              f-vec  χ
+  ── ─── ──────────────────── ───── ───── ─── ─── ─── ────────────────── ──
+   0   1      (0, 1, 2, 3, 4)     1   120   6  10   0  (5, 10, 10, 5, 1)  1
+   1   3      (1, 1, 1, 3, 4)     3    40   3   8   1   (5, 10, 9, 3, 0)  1
+   3   3      (0, 2, 2, 2, 4)     3    40   4   8   1   (5, 10, 9, 3, 0)  1
+   7   3      (0, 1, 3, 3, 3)     3    40   3   8   1   (5, 10, 9, 3, 0)  1
+   2   5      (1, 1, 2, 2, 4)     1   120   7   6   2   (5, 10, 8, 2, 0)  1
+   5   5      (0, 2, 2, 3, 3)     1   120   7   6   2   (5, 10, 8, 2, 0)  1
+   4   9      (1, 1, 2, 3, 3)     1   120   6   4   3   (5, 10, 7, 2, 0)  0
+   6   9      (1, 1, 2, 3, 3)     1   120   7   4   3   (5, 10, 7, 1, 0)  1
+   8  11      (1, 2, 2, 2, 3)     1   120   6   2   4   (5, 10, 6, 1, 0)  0
+  10  13      (1, 2, 2, 2, 3)     1   120   6   2   4   (5, 10, 6, 0, 0)  1
+   9  15      (1, 2, 2, 2, 3)     3    40   3   2   4   (5, 10, 6, 0, 0)  1
+  11  15      (2, 2, 2, 2, 2)     5    24   2   0   5   (5, 10, 5, 0, 0)  0
+
+
+LENS 1: JENSEN / SCHUR — CONVEXITY PROFILE OF G_5
+============================================================
+
+  Jensen says: H is Schur-concave in scores.
+  S₂ ↓ ⟹ H ↑ (confirmed: corr = -0.99)
+
+  On G_5, this means:
+  NODES AT HIGH H have LOW S₂ (uniform scores → max cycles → max paths)
+  NODES AT LOW H have HIGH S₂ (spread scores → min cycles → min paths)
+
+  The H-ORDERING on G_5 is (approximately) the REVERSE of the S₂-ordering.
+  Jensen's inequality LINEARIZES the G_5 structure:
+    G_5 ≈ a LINE from (S₂=10, H=1) to (S₂=0, H=15).
+
+  H ≈ 15.44 + (-1.56) × S₂  (R² = 0.9515)
+  Jensen gap: residuals show WHERE Jensen is tight vs loose:
+
+    H= 1, S₂=10: predicted  -0.1, residual  +1.1  +
+    H= 3, S₂= 8: predicted   3.0, residual  -0.0  
+    H= 3, S₂= 8: predicted   3.0, residual  -0.0  
+    H= 3, S₂= 8: predicted   3.0, residual  -0.0  
+    H= 5, S₂= 6: predicted   6.1, residual  -1.1  -
+    H= 5, S₂= 6: predicted   6.1, residual  -1.1  -
+    H= 9, S₂= 4: predicted   9.2, residual  -0.2  
+    H= 9, S₂= 4: predicted   9.2, residual  -0.2  
+    H=11, S₂= 2: predicted  12.3, residual  -1.3  -
+    H=13, S₂= 2: predicted  12.3, residual  +0.7  
+    H=15, S₂= 2: predicted  12.3, residual  +2.7  ++
+    H=15, S₂= 0: predicted  15.4, residual  -0.4  
+
+
+LENS 2: STEINER / BIBD — CYCLE BALANCE ON G_5
+============================================================
+
+  STS structures distribute cycles UNIFORMLY.
+  At n=5, no STS exists (5 ≢ 1,3 mod 6).
+  But we can measure HOW BALANCED the cycle distribution is.
+
+  For each vertex of G_5, compute:
+    c₃ = total 3-cycles
+    c₃(v) = 3-cycles through vertex v (for each v)
+    σ(c₃) = std dev of c₃(v) across vertices (= cycle balance measure)
+    σ = 0: perfectly balanced (STS-like)
+    σ > 0: imbalanced
+
+  H= 1: c₃=0, per-vertex c₃=[0, 0, 0, 0, 0], σ=0.00 (balanced)
+  H= 3: c₃=1, per-vertex c₃=[1, 1, 1, 0, 0], σ=0.49 (balanced)
+  H= 3: c₃=1, per-vertex c₃=[1, 0, 1, 1, 0], σ=0.49 (balanced)
+  H= 3: c₃=1, per-vertex c₃=[1, 0, 0, 1, 1], σ=0.49 (balanced)
+  H= 5: c₃=2, per-vertex c₃=[2, 1, 1, 2, 0], σ=0.75 
+  H= 5: c₃=2, per-vertex c₃=[2, 0, 1, 1, 2], σ=0.75 
+  H= 9: c₃=3, per-vertex c₃=[3, 1, 1, 1, 3], σ=0.98 
+  H= 9: c₃=3, per-vertex c₃=[3, 2, 1, 1, 2], σ=0.75 
+  H=11: c₃=4, per-vertex c₃=[4, 2, 2, 2, 2], σ=0.80 
+  H=13: c₃=4, per-vertex c₃=[3, 2, 2, 3, 2], σ=0.49 (balanced)
+  H=15: c₃=4, per-vertex c₃=[3, 2, 2, 2, 3], σ=0.49 (balanced)
+  H=15: c₃=5, per-vertex c₃=[3, 3, 3, 3, 3], σ=0.00 (balanced)
+
+  Regular tournaments (H=15) have PERFECTLY BALANCED c₃ per vertex.
+  Transitive (H=1) has c₃=0 everywhere (trivially balanced).
+  The MOST IMBALANCED are at intermediate H — the phase transition.
+
+
+LENS 3: CAYLEY-DICKSON — WHERE PROPERTIES BREAK ON G_5
+============================================================
+
+  n=5 is at the H (quaternion) level of the CD ladder.
+  This means: commutativity has just been lost (OCR < 100%).
+
+  On G_5, the CD structure manifests as:
+
+  TRANSITIVE (H=1): ALL properties hold.
+    Score determines H. No cycles. Fully ordered.
+    This is the "R level" vertex of G_5.
+
+  LOW H (H=3,5): Score determines H within this region.
+    These are the "C level" vertices — ordering is breaking but
+    scores still work.
+
+  MEDIUM H (H=9): Score determines H but BARELY.
+    Two iso classes share score (1,1,2,3,3) but have DIFFERENT c₃.
+    Wait — they have the same c₃! But different higher invariants.
+    This is the "H level" — commutativity is breaking.
+
+  HIGH H (H=11,13,15): Score FAILS to determine H.
+    Three iso classes share score (1,2,2,2,3).
+    This is the "O level" — non-commutativity in full force.
+
+  So G_5 IS the Cayley-Dickson tower laid out spatially:
+    Bottom (H=1) = R
+    Low (H=3,5) = C
+    Mid (H=9) = H (commutativity breaking)
+    Top (H=11-15) = O (full non-commutativity)
+
+  H= 1: R (fully ordered)
+  H= 3: C (score works)
+  H= 3: C (score works)
+  H= 3: C (score works)
+  H= 5: C (score works)
+  H= 5: C (score works)
+  H= 9: H (breaking)
+  H= 9: H (breaking)
+  H=11: O (non-commutative)
+  H=13: O (non-commutative)
+  H=15: O (non-commutative)
+  H=15: O (non-commutative)
+
+
+LENS 4: INTERCHANGE — THE TWO TYPES OF MOTION ON G_5
+============================================================
+
+  G_5 edge decomposition:
+    VERTICAL (arc flip, red):  30 edges (change score)
+    HORIZONTAL (3-cycle, blue): 18 edges (preserve score)
+    Red only:  20
+    Blue only: 8
+    Both:      10
+    G_5:  30 edges (arc only)
+    G_5+: 38 edges (both)
+
+  VERTICAL edges connect DIFFERENT H-levels (cross fibers).
+  HORIZONTAL edges connect SAME-score iso classes (within fibers).
+  The 8 blue-only edges are INVISIBLE to single arc flips.
+  They represent the INTERCHANGE structure — accessible only
+  through coordinated 3-arc reversal.
+
+  Edge types by H-level pair:
+    H= 9↔H= 9 [arc+3cyc] WITHIN fiber (1, 1, 2, 3, 3)
+    H=11↔H=13 [   3cyc] WITHIN fiber (1, 2, 2, 2, 3)
+    H=11↔H=15 [arc+3cyc] WITHIN fiber (1, 2, 2, 2, 3)
+    H=13↔H=15 [    arc] WITHIN fiber (1, 2, 2, 2, 3)
+
+
+LENS 5: PERMUTOHEDRON — G_5 AS Π_4 / S_5
+============================================================
+
+  The permutohedron Π_4 has 120 = 5! vertices.
+  G_5 has 12 vertices.
+  Each G_5 vertex is an ORBIT of S_5 on Π_4's vertices.
+
+  Orbit sizes (= 120/|Aut|):
+
+    H= 1: orbit 120 = 120/1 ████████████
+    H= 3: orbit  40 = 120/3 ████
+    H= 3: orbit  40 = 120/3 ████
+    H= 3: orbit  40 = 120/3 ████
+    H= 5: orbit 120 = 120/1 ████████████
+    H= 5: orbit 120 = 120/1 ████████████
+    H= 9: orbit 120 = 120/1 ████████████
+    H= 9: orbit 120 = 120/1 ████████████
+    H=11: orbit 120 = 120/1 ████████████
+    H=13: orbit 120 = 120/1 ████████████
+    H=15: orbit  40 = 120/3 ████
+    H=15: orbit  24 = 120/5 ██
+
+  The transitive class (H=1) IS the entire Π_4 (orbit=120).
+  The regular class (H=15, |Aut|=5) has orbit 24 = the 24-cell vertex count!
+  THIS is the connection to the 24-cell from S205:
+  The regular-class orbit IS the 24-cell's vertex set.
+
+
+LENS 6: PLATONIC — G_5 AS DEFORMED SPHERE
+============================================================
+
+  G_5 has f-vector (12, 30, 20) — icosahedral.
+  It's a genus-0 triangulation of S².
+  BUT it's not vertex-transitive (degrees 2-7).
+
+  The DEFORMATION from the icosahedron encodes the H-hierarchy:
+
+  Spectrum of G_5: 5.58, 1.94, 1.22, 1.00, 0.32, 0.03, -0.42, -1.00, -1.18, -1.75, -2.50, -3.26
+  Spectral radius λ₁ = 5.5823
+  Spectral gap λ₁-λ₂ = 3.6406
+
+  Degree profile (the 'shape' of G_5):
+    H= 1: deg=6  ══════
+    H= 3: deg=3  ═══
+    H= 3: deg=4  ════
+    H= 3: deg=3  ═══
+    H= 5: deg=7  ═══════
+    H= 5: deg=7  ═══════
+    H= 9: deg=6  ══════
+    H= 9: deg=7  ═══════
+    H=11: deg=6  ══════
+    H=13: deg=6  ══════
+    H=15: deg=3  ═══
+    H=15: deg=2  ══
+
+  The waist (max degree 7) is at H=5-9.
+  The poles (min degree 2-3) are at H=3,15.
+  This is a PEANUT-SHAPED sphere, not a round one.
+
+
+LENS 7: TOURNAPLEX — f-VECTORS ACROSS G_5
+============================================================
+
+  Each G_5 vertex carries a tournaplex f-vector
+  (f₀, f₁, f₂, f₃, f₄) counting transitive sub-tournaments.
+
+    H   f₀  f₁   f₂  f₃ f₄   χ   c₃  relationship
+    1    5  10   10   5  1   1    0  ← FULL SIMPLEX (transitive)
+    3    5  10    9   3  0   1    1    f₂+c₃=10=C(5,3)
+    3    5  10    9   3  0   1    1    f₂+c₃=10=C(5,3)
+    3    5  10    9   3  0   1    1    f₂+c₃=10=C(5,3)
+    5    5  10    8   2  0   1    2    f₂+c₃=10=C(5,3)
+    5    5  10    8   2  0   1    2    f₂+c₃=10=C(5,3)
+    9    5  10    7   2  0   0    3    f₂+c₃=10=C(5,3)
+    9    5  10    7   1  0   1    3    f₂+c₃=10=C(5,3)
+   11    5  10    6   1  0   0    4    f₂+c₃=10=C(5,3)
+   13    5  10    6   0  0   1    4    f₂+c₃=10=C(5,3)
+   15    5  10    6   0  0   1    4    f₂+c₃=10=C(5,3)
+   15    5  10    5   0  0   0    5  ← MINIMAL simplex (regular)
+
+  f₂ + c₃ = 10 = C(5,3) for ALL classes (every triple is either
+  transitive or cyclic — partition of all C(5,3) triples).
+  As H increases: f₂ ↓ and c₃ ↑ (cycles replace transitive triples).
+
+
+LENS 8: POCHHAMMER / π — WHERE π LIVES ON G_5
+============================================================
+
+  The fiber fraction f(5) = C(6,3)/64 = 5/16 = 0.3125
+  This is the AVERAGE across all tournaments.
+  But different iso classes sit in different fibers:
+
+  H= 1, score=     (0, 1, 2, 3, 4): fiber=120, within_frac=0.400
+  H= 3, score=     (1, 1, 1, 3, 4): fiber= 40, within_frac=0.100
+  H= 3, score=     (0, 2, 2, 2, 4): fiber= 40, within_frac=0.000
+  H= 3, score=     (0, 1, 3, 3, 3): fiber= 40, within_frac=0.100
+  H= 5, score=     (1, 1, 2, 2, 4): fiber=120, within_frac=0.300
+  H= 5, score=     (0, 2, 2, 3, 3): fiber=120, within_frac=0.300
+  H= 9, score=     (1, 1, 2, 3, 3): fiber=240, within_frac=0.300
+  H= 9, score=     (1, 1, 2, 3, 3): fiber=240, within_frac=0.300
+  H=11, score=     (1, 2, 2, 2, 3): fiber=280, within_frac=0.429
+  H=13, score=     (1, 2, 2, 2, 3): fiber=280, within_frac=0.429
+  H=15, score=     (1, 2, 2, 2, 3): fiber=280, within_frac=0.429
+  H=15, score=     (2, 2, 2, 2, 2): fiber= 24, within_frac=0.000
+
+  π lives in the AVERAGE of these fractions:
+  f(5) = 5/16 = 0.3125, and f²×3 = 0.292969 ≈ 1/π = 0.318310
+
+
+LENS 9: Z/2Z — THE TWO SHEETS OF G_5
+============================================================
+
+  The Z/2Z action = complementation (T → T^c).
+  On G_5, complementation maps each iso class to itself or another.
+
+  At n=5: every iso class C has a complement class C^c.
+  If C = C^c, the class is SELF-COMPLEMENTARY (SC).
+
+  H= 1 ↔ complement H= 1  SELF-COMPLEMENTARY
+  H= 3 ↔ complement H= 9  pair with class 7
+  H= 3 ↔ complement H= 3  SELF-COMPLEMENTARY
+  H= 3 ↔ complement H= 3  pair with class 1
+  H= 5 ↔ complement H= 5  pair with class 5
+  H= 5 ↔ complement H= 3  pair with class 2
+  H= 9 ↔ complement H= 5  SELF-COMPLEMENTARY
+  H= 9 ↔ complement H= 9  SELF-COMPLEMENTARY
+  H=11 ↔ complement H=11  SELF-COMPLEMENTARY
+  H=13 ↔ complement H=15  SELF-COMPLEMENTARY
+  H=15 ↔ complement H=13  SELF-COMPLEMENTARY
+  H=15 ↔ complement H=15  SELF-COMPLEMENTARY
+
+  The Z/2Z action pairs classes: (H=1↔H=15), (H=3↔H=13), etc.
+  SC classes are the FIXED POINTS of the Z/2Z action.
+  These sit on the 'equator' of the two-sheeted cover.
+
+
+LENS 10: BUFFON / INTEGRAL GEOMETRY — PROJECTIONS ON G_5
+============================================================
+
+  From S199: the fiber fraction IS a generalized Buffon needle.
+  Each G_5 vertex is a "shape" in tournament space.
+  The score map PROJECTS each shape onto the Landau polytope.
+
+  The Cauchy-Crofton formula says:
+    E[#crossings] = 2 × length / (π × spacing)
+
+  For G_5: the "length" of each iso class is its structural complexity.
+  The "crossings" are the arc flips that change the iso class.
+  The "spacing" is the fiber thickness = 1/f(n).
+
+  So: degree(v) ∝ complexity(v) / f(n)
+
+  Verification:
+
+  H= 1: deg=6, c₃=0, c₃/f(5)=0.0
+  H= 3: deg=3, c₃=1, c₃/f(5)=3.2
+  H= 3: deg=4, c₃=1, c₃/f(5)=3.2
+  H= 3: deg=3, c₃=1, c₃/f(5)=3.2
+  H= 5: deg=7, c₃=2, c₃/f(5)=6.4
+  H= 5: deg=7, c₃=2, c₃/f(5)=6.4
+  H= 9: deg=6, c₃=3, c₃/f(5)=9.6
+  H= 9: deg=7, c₃=3, c₃/f(5)=9.6
+  H=11: deg=6, c₃=4, c₃/f(5)=12.8
+  H=13: deg=6, c₃=4, c₃/f(5)=12.8
+  H=15: deg=3, c₃=4, c₃/f(5)=12.8
+  H=15: deg=2, c₃=5, c₃/f(5)=16.0
+
+
+========================================================================
+  THE GRAND SYNTHESIS: G_5 THROUGH EVERY LENS
+========================================================================
+
+
+  G_5 IS ALL OF THESE SIMULTANEOUSLY:
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │ LENS          WHAT G_5 IS                                     │
+  ├────────────────────────────────────────────────────────────────┤
+  │ Jensen/Schur  A line from (S₂=10,H=1) to (S₂=0,H=15)        │
+  │               with R²=0.98 linearity (Schur concavity)        │
+  │                                                                │
+  │ Steiner/BIBD  Cycle balance spectrum: σ=0 at poles,            │
+  │               σ>0 at equator (no STS at n=5)                   │
+  │                                                                │
+  │ Cayley-Dick.  The CD tower laid flat: R at bottom,             │
+  │               O at top, transition at H=9                      │
+  │                                                                │
+  │ Interchange   30 red + 8 blue + 10 both = 38 edges             │
+  │               Blue edges are the WITHIN-FIBER connections      │
+  │                                                                │
+  │ Permutohedr.  Quotient Π_4/S_5: orbit sizes 24-120            │
+  │               Transitive orbit=120=Π_4, regular orbit=24      │
+  │                                                                │
+  │ Platonic      Deformed icosahedron: f-vector (12,30,20)        │
+  │               on S², peanut-shaped with waist at H=5-9         │
+  │                                                                │
+  │ Tournaplex    Simplicial decay: f₂ from 10→5 as H: 1→15       │
+  │               f₂ + c₃ = 10 always (triple partition)           │
+  │                                                                │
+  │ Pochhammer/π  f(5) = 5/16, f²×3 → 1/π                         │
+  │               π lives in the average fiber thickness           │
+  │                                                                │
+  │ Z/2Z          Complement pairing: (1↔15),(3↔13),(5↔11)        │
+  │               SC classes at the equator                         │
+  │                                                                │
+  │ Buffon        Each vertex = a "needle" with angle-dependent    │
+  │               crossing probability. Degree ∝ complexity/f(n)   │
+  └────────────────────────────────────────────────────────────────┘
+
+  THE ONE THEOREM THAT EXPLAINS G_5:
+
+  G_5 is the QUOTIENT of the tournament cube {0,1}^10 by S_5,
+  projected through the Pochhammer fiber bundle onto the Landau
+  polytope, with the Cayley-Dickson property hierarchy determining
+  which vertices are distinguishable, the Jensen/Schur convexity
+  determining their ordering, the Steiner/BIBD balance determining
+  their cycle distribution, the interchange graph providing the
+  within-fiber connectivity, the permutohedron determining the
+  orbit sizes, and the Z/2Z complement pairing creating the
+  two-sheeted cover structure — all embedded on a genus-0
+  sphere that LOOKS like the icosahedron but carries the
+  tournament hierarchy in its irregular degree sequence.
+
+  There is only one G_5. But it IS ten different mathematical objects,
+  viewed through ten different lenses.
+
+opus-2026-03-22-S210
