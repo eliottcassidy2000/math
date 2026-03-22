@@ -1,0 +1,181 @@
+======================================================================
+  THE SIXTH PLATONIC SOLID: THE 24-CELL IN TOURNAMENT THEORY
+======================================================================
+
+======================================================================
+  1. THE SIX 4D REGULAR POLYTOPES
+======================================================================
+
+  In 4D, there are SIX regular polytopes:
+
+  Name          Schlafli    V     E     F    Cells  Dual
+  5-cell        (3,3,3)     5    10    10     5     self
+  8-cell        (4,3,3)    16    32    24     8     16-cell
+  16-cell       (3,3,4)     8    24    32    16     8-cell
+  24-cell       (3,4,3)    24    96    96    24     SELF
+  120-cell      (5,3,3)   600  1200   720   120    600-cell
+  600-cell      (3,3,5)   120   720  1200   600    120-cell
+
+  The 24-cell is UNIQUE:
+  - Self-dual (like the tetrahedron in 3D)
+  - Exists ONLY in 4D (no 3D or 5D+ analog)
+  - 24 octahedral cells
+  - Vertex figure is a CUBE (!)
+  - Symmetry group: order 1152 = 2^7 * 3^2
+
+  In 5D+: only simplex, hypercube, cross-polytope survive.
+  The "exceptional" polytopes (24-cell, 120-cell, 600-cell)
+  are specific to dimensions 3 and 4.
+
+======================================================================
+  2. THE NUMBER 24 IN TOURNAMENT THEORY
+======================================================================
+
+  Regular tournaments on n=5 vertices: 24
+  24-cell vertices: 24
+  MATCH: True
+
+  OTHER OCCURRENCES OF 24:
+    4! = 24 (number of labeled tournaments on 4 vertices)
+    Ramanujan's tau(2) = -24 (the Ramanujan tau function)
+    24 = order of the binary tetrahedral group 2T
+    24 = kissing number in 4D (densest packing)
+    24 = hours in a day (not mathematical but universal)
+
+======================================================================
+  3. SELF-DUALITY = SELF-COMPLEMENTARITY
+======================================================================
+
+  Regular tournaments at n=5: 24
+  Of which are SC: 24
+  SC fraction of regular: 24/24 = 1.0000
+
+  Total SC tournaments at n=5: 704
+  Total tournaments at n=5: 1024
+  SC fraction: 704/1024 = 0.6875
+
+======================================================================
+  4. THE SIX LEVELS OF TOURNAMENT STRUCTURE
+======================================================================
+
+  The five levels from S20bh mapped to 3D Platonic solids.
+  The SIXTH level (4D only) maps to the 24-cell:
+
+  Level  3D Solid       4D Solid         Tournament Meaning
+  -----  ----------     ----------       ------------------
+  0      Tetrahedron    5-cell           The tournament object (K_n)
+  1      Cube           8-cell           The tournament space (hypercube)
+  2      Octahedron     16-cell          The arc space (dual)
+  3      Icosahedron    600-cell         The quotient (G_n on sphere)
+  4      Dodecahedron   120-cell         The dual quotient (faces of G_n)
+  5      ---            24-CELL          THE SELF-DUAL STRUCTURE
+
+  The 24-cell level has NO 3D analog.
+  It is the SELF-COMPLEMENTARY structure:
+  - SC tournaments are self-dual (T ~ T^complement)
+  - The 24-cell is self-dual (24-cell = dual of 24-cell)
+  - Both are FIXED POINTS of the duality involution
+
+  This is why SC tournaments form a "4th-dimensional" structure
+  that can't be fully understood in the 3D Platonic framework.
+  The SC structure lives in a HIGHER dimension of tournament theory.
+
+======================================================================
+  5. THE 24-CELL'S COORDINATES
+======================================================================
+
+  The 24 vertices of the 24-cell are the 24 ROOTS OF D_4.
+  D_4 is the root system of so(8) (the 4D rotation group).
+
+  D_4 has a special property: TRIALITY.
+  The three 8-dimensional representations of so(8) are:
+    - Vector representation (8v)
+    - Positive spinor (8s+)
+    - Negative spinor (8s-)
+  Triality permutes these three representations.
+  The Dynkin diagram of D_4 has a THREE-FOLD symmetry:
+      o
+      |
+  o - o - o
+  (The central node connects to three outer nodes equally.)
+
+  THE TOURNAMENT CONNECTION:
+  D_4 roots = 24 = regular tournaments on 5 vertices.
+  D_4 triality = THREE-FOLD symmetry.
+  Regular tournaments on 5 vertices have |Aut| = 5 (cyclic group).
+  24/5 = 4.8... not clean. But 24 = 4! = |S_4|.
+
+  24 regular tournaments on n=5: 1 iso class(es)
+  Each class has 24/1 = 24 labeled tournaments
+  |Aut| = n! / class_size = 120/24 = 5
+
+======================================================================
+  6. THE DIMENSION PATTERN: WHY 4D IS SPECIAL
+======================================================================
+
+  Regular polytopes by dimension:
+    dim 2: infinitely many (regular b-gons for all b >= 3)
+    dim 3: 5 (Platonic solids)
+    dim 4: 6 (Platonic + 24-cell)
+    dim 5+: 3 (simplex, hypercube, cross-polytope)
+
+  Exceptional polytopes (beyond simplex/cube/cross-polytope):
+    dim 3: 2 exceptional (dodecahedron, icosahedron) -- pentagonal symmetry
+    dim 4: 3 exceptional (24-cell, 120-cell, 600-cell) -- octahedral + pentagonal
+    dim 5+: 0 exceptional
+
+  TOURNAMENT DIMENSIONS:
+    C(n,2)=3  (n=3): 2 classes (trivial)
+    C(n,2)=6  (n=4): 4 classes (all score-determined)
+    C(n,2)=10 (n=5): 12 classes (G_5 = sphere, 3D Platonic)
+    C(n,2)=15 (n=6): 56 classes (alpha_2 onset, 4D regime?)
+    C(n,2)=21 (n=7): 456 classes (5D+ regime)
+
+  IF the pattern holds:
+    n=5 (dim 10): 5 Platonic levels + 0 exceptional = 3D analog
+    n=6 (dim 15): 5 Platonic levels + 1 exceptional (alpha_2) = 4D analog
+    n=7+ (dim 21+): 3 universal levels only = 5D+ analog
+
+  THE 24-CELL LEVEL = ALPHA_2 AT n=6!
+  The onset of disjoint cycle pairs at n=6 is the
+  tournament analog of the 24-cell appearing in 4D.
+  Both are 'extra' structure that exists ONLY at a specific
+  dimensionality and disappears in higher dimensions.
+
+======================================================================
+  SYNTHESIS
+======================================================================
+
+  THE 24-CELL IN TOURNAMENT THEORY:
+
+  1. Its 24 vertices = the 24 regular tournaments on 5 vertices.
+
+  2. Its self-duality = the self-complementary (SC) structure.
+     SC tournaments are "self-dual" under complementation.
+     The 24-cell is "self-dual" under polarity.
+
+  3. Its D_4 root system = the so(8) triality.
+     D_4 has a unique three-fold symmetry (triality).
+     Tournament theory has a three-fold decomposition:
+     H = cut space (score) + cycle space (even graph) + interaction.
+
+  4. Its appearance only in 4D = the alpha_2 onset at n=6.
+     The 24-cell doesn't exist in 3D or 5D+.
+     Alpha_2 (disjoint cycle pairs) doesn't exist at n<=5 or in the n->inf limit.
+     Both are "extra structure" at a specific dimensionality.
+
+  5. Its 1152 symmetries = ?
+     1152 = 2^7 * 3^2.
+     In tournament theory: 2^7 = 128 (self-loops at n=5?),
+     3^2 = 9 (score sequences at n=5?).
+     1152 = 128 * 9. Coincidence?
+
+  THE HIERARCHY COMPLETED:
+
+  dim 2 (polygons):  infinitely many bases b -> fiber fraction (1-x)^(-1/b)
+  dim 3 (Platonic):  5 levels of tournament structure at n=5
+  dim 4 (+ 24-cell): 6th level = alpha_2 / SC structure at n=6
+  dim 5+ (universal): 3 surviving levels at n=7+ (simplex/cube/cross)
+
+  Tournament theory RECAPITULATES the dimensional hierarchy of regular polytopes.
+
