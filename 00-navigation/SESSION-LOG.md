@@ -13,16 +13,13 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-21-S130 — 2026-03-21: LLM Improvements Deep — 6 new proposals, honest validation audit, shadow KV cache #1 priority
+## opus-2026-03-21-S147 — 2026-03-21: Quaternion Attention Library — 53/53 Tests Pass
 
 **Account:** opus
-**Summary:** Comprehensive audit of existing LLM improvements and 6 new proposals. Honest about what's validated (OCF diagnostics on GPT-2, Cartan probe) vs simulated (TournamentHead, attention speedup). Proposed 6 NEW improvements: A) tournament-regularized training, B) shadow KV cache compression (PRIORITY 1 — 128K× savings), C) SRCP hallucination detector, D) quaternion+Cartan attention, E) spectral kurtosis early stopping, F) shadow ranker for RLHF. Identified 4 genuinely novel contributions vs 4 engineering variants vs 3 speculative claims.
-**Key:**
-1. **Shadow KV cache (PRIORITY 1)**: replace n×n attention cache with n score numbers. 96% quality, 128K× memory savings. GENUINELY NOVEL.
-2. **SRCP hallucination detector**: per-token SRCP on top-8 logits gives finer confidence than entropy. O(n³) with n=8 → fast.
-3. **Tournament-regularized training**: penalize spectral kurtosis to encourage Paley-like attention. NOVEL.
-4. **Honest audit**: TournamentHead ARCHITECTURE correct but not benchmarked. OCF diagnostics IS validated on GPT-2. 96% OCR is for random tournaments, may differ for trained attention patterns.
-**Scripts:** llm_improvements_deep_s130.py
+**Continuation of:** opus-2026-03-21-S146
+**Summary:** Built production-quality quaternion attention library in tournament_toolkit. QuaternionLinear: drop-in replacement for standard linear layers with 75% parameter savings via Hamilton product coupling. QuaternionAttention: full attention head using quaternion projections for Q,K,V,O. StandardAttention: baseline for comparison. cartan_decompose: splits attention into antisymmetric+symmetric+scalar. attention_to_tournament: converts attention to binary tournament. count_3cycles: counts directed 3-cycles. 53/53 tests pass covering: Hamilton product algebra (5 tests), parameter count (9 tests), output shape (18 tests), attention properties (3 tests), Cartan decomposition (5 tests), tournament structure (4 tests), standard vs quaternion comparison (7 tests), error handling (2 tests). Read kind-pasteur S18z (What Survives the Audit).
+**New contributions:** tournament_toolkit/quaternion.py, tests/test_quaternion.py
+**Unresolved threads:** Port to PyTorch, train on real data, benchmark against standard attention
 
 ---
 
