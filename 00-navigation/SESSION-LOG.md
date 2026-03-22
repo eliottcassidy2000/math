@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S154 — 2026-03-22: Finding ALL Tournament Primes
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S153
+**Summary:** Computed EXACT rational OCR at n=5 AND n=6, factored all denominators. KEY RESULTS: (1) OCR(5) = 129/133 (denom primes: {7,19}). (2) OCR(6) = 460807/480480 (denom primes: {2,3,5,7,11,13}). NEW: 480480 = 2⁵×3×5×7×11×13 contains ALL known tournament primes except 19! (3) Two independent definitions (OCR denoms, Paley H factors) give the SAME SET: {3,5,7,11,13,19}. (4) The intersection of ALL 5 candidate definitions is {7,13,19} = factors of 1729. (5) Tournament primes form a GRADED HIERARCHY: Tier 0 (base): 2. Tier 1 (atom): 3. Tier 2 (boundary): 5. Tier 3 (forbidden): 7. Tier 4 (surprise): 13. Tier 5 (OCR): 19. Tier 6 (moonshine): 31. (6) The exceptional tournament primes {7,13,19,31} are FINITE (from 5 exceptional Lie algebras). The classical primes {2,3,5,11,...} are INFINITE (grow with n). (7) Var(H) denominators at n≤6 contain ONLY powers of 2 — the nontrivial primes come from the OCR ratio, not individual variances. (8) 1-OCR(6) = 19673/480480, numerator = 103×191 (both prime, neither previously known).
+**New contributions:** tournament_primes_s154.py
+**Unresolved threads:** Compute OCR(7) to find new primes, prove 480480 structure, investigate 103 and 191 as new tournament primes
+
+---
+
 ## opus-2026-03-21-S153 — 2026-03-21: Deep Modular Structures Underlying Everything
 
 **Account:** opus
