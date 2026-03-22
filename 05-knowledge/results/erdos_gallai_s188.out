@@ -1,0 +1,289 @@
+========================================================================
+  ERDŐS-GALLAI AND LANDAU IN TOURNAMENT THEORY
+  opus-2026-03-22-S188
+========================================================================
+
+PART 1: LANDAU'S THEOREM
+------------------------------------------------------------
+
+  Landau's theorem: sequence (s₁ ≤ ... ≤ sₙ) is a tournament score iff
+    Σ{i=1}^k s_i ≥ C(k,2) for k=1..n, with Σ s_i = C(n,2)
+
+  n=2: 1 valid score sequences, C(n,2)=1
+    (0, 1)
+
+  n=3: 2 valid score sequences, C(n,2)=3
+    (0, 1, 2)
+    (1, 1, 1)
+
+  n=4: 4 valid score sequences, C(n,2)=6
+    (0, 1, 2, 3)
+    (0, 2, 2, 2)
+    (1, 1, 1, 3)
+    (1, 1, 2, 2)
+
+  n=5: 9 valid score sequences, C(n,2)=10
+    (0, 1, 2, 3, 4)
+    (0, 1, 3, 3, 3)
+    (0, 2, 2, 2, 4)
+    (0, 2, 2, 3, 3)
+    (1, 1, 1, 3, 4)
+    (1, 1, 2, 2, 4)
+    (1, 1, 2, 3, 3)
+    (1, 2, 2, 2, 3)
+    (2, 2, 2, 2, 2)
+
+  n=6: 22 valid score sequences, C(n,2)=15
+    (0, 1, 2, 3, 4, 5)
+    (0, 1, 2, 4, 4, 4)
+    (0, 1, 3, 3, 3, 5)
+    (0, 1, 3, 3, 4, 4)
+    (0, 2, 2, 2, 4, 5)
+    (0, 2, 2, 3, 3, 5)
+    (0, 2, 2, 3, 4, 4)
+    (0, 2, 3, 3, 3, 4)
+    (0, 3, 3, 3, 3, 3)
+    (1, 1, 1, 3, 4, 5)
+    (1, 1, 1, 4, 4, 4)
+    (1, 1, 2, 2, 4, 5)
+    (1, 1, 2, 3, 3, 5)
+    (1, 1, 2, 3, 4, 4)
+    (1, 1, 3, 3, 3, 4)
+    (1, 2, 2, 2, 3, 5)
+    (1, 2, 2, 2, 4, 4)
+    (1, 2, 2, 3, 3, 4)
+    (1, 2, 3, 3, 3, 3)
+    (2, 2, 2, 2, 2, 5)
+    (2, 2, 2, 2, 3, 4)
+    (2, 2, 2, 3, 3, 3)
+
+  n=7: 59 valid score sequences, C(n,2)=21
+
+  n=8: 167 valid score sequences, C(n,2)=28
+
+  Score sequence counts: [1, 2, 4, 9, 22, 59, 167]
+  = A000571: 1, 2, 4, 9, 22, 59, 167
+
+
+PART 2: THE LANDAU POLYTOPE
+------------------------------------------------------------
+
+  The set of valid score sequences forms a POLYTOPE in R^n:
+    P_n = {s ∈ Z^n : s sorted, Σs = C(n,2), Landau conditions}
+
+  The VERTICES of this polytope are the extreme score sequences.
+  The INTERIOR points are the "generic" score sequences.
+
+  At n=5:
+    Vertices of P_5: (0,1,2,3,4) and (2,2,2,2,2)
+    These are the TRANSITIVE and REGULAR score sequences.
+    Everything else is "between" these extremes.
+
+  The Landau polytope IS the score simplex from S174.
+  Its integer points = the valid score sequences.
+  The number of integer points = A000571(n).
+
+  SCORE SEQUENCES AT n=5 WITH DISTANCE FROM REGULAR:
+             score    S₂  dist_to_reg     H range
+  ────────────────  ────  ───────────  ──────────
+   (0, 1, 2, 3, 4)    30            6  ~1
+   (0, 1, 3, 3, 3)    28            6  ~3
+   (0, 2, 2, 2, 4)    28            4  ~3
+   (0, 2, 2, 3, 3)    26            4  ~5
+   (1, 1, 1, 3, 4)    28            6  ~3
+   (1, 1, 2, 2, 4)    26            4  ~5
+   (1, 1, 2, 3, 3)    24            4  ~7
+   (1, 2, 2, 2, 3)    22            2  ~9
+   (2, 2, 2, 2, 2)    20            0  ~11
+
+
+PART 3: ERDŐS-GALLAI ON G_n's OWN DEGREE SEQUENCE
+------------------------------------------------------------
+
+  G_3 degree sequence: [1, 1]
+    Erdős-Gallai valid: True
+    Sum = 2 (must be even: True)
+    Max degree = 1, min = 1
+
+  G_4 degree sequence: [3, 3, 2, 2]
+    Erdős-Gallai valid: True
+    Sum = 10 (must be even: True)
+    Max degree = 3, min = 2
+
+  G_5 degree sequence: [7, 7, 7, 6, 6, 6, 6, 4, 3, 3, 3, 2]
+    Erdős-Gallai valid: True
+    Sum = 60 (must be even: True)
+    Max degree = 7, min = 2
+
+
+PART 4: THE DEEP CONNECTION
+------------------------------------------------------------
+
+  Landau conditions on TOURNAMENT SCORES control which
+  VERTICES exist in G_n (each vertex = one score class or iso class).
+
+  Erdős-Gallai conditions on G_n's DEGREE SEQUENCE control
+  which EDGES can exist.
+
+  TOGETHER they constrain the entire meta-graph G_n.
+
+  THE PARALLEL:
+
+  TOURNAMENT LEVEL:
+    Landau: which score sequences are valid?
+    Answer: those satisfying Σ_{i=1}^k s_i ≥ C(k,2).
+    This is a CONVEX polytope condition.
+
+  META-GRAPH LEVEL:
+    Erdős-Gallai: which degree sequences for G_n are valid?
+    Answer: those satisfying the EG conditions.
+    G_n's degree sequence IS graphic (it comes from a real graph).
+
+  THE HIERARCHY:
+    Level 0: Landau conditions → valid tournaments → nodes of G_n
+    Level 1: Flip structure → edges of G_n
+    Level 2: Erdős-Gallai → G_n's degree sequence is consistent
+
+  Each level constrains the next. Landau determines the nodes;
+  the flip structure determines the edges; EG verifies consistency.
+
+
+PART 5: LANDAU GAPS — FORBIDDEN SCORE SEQUENCES
+------------------------------------------------------------
+
+  WHICH PARTITIONS OF C(n,2) INTO n PARTS FAIL LANDAU?
+
+  n=3: 2 partitions, 2 valid (Landau), 0 invalid
+
+  n=4: 5 partitions, 4 valid (Landau), 1 invalid
+    INVALID: (0, 0, 3, 3) — fails at k=2: Σ={sum(p_sorted[:k])} < C(2,2)=1
+
+  n=5: 12 partitions, 9 valid (Landau), 3 invalid
+    INVALID: (0, 0, 2, 4, 4) — fails at k=2: Σ={sum(p_sorted[:k])} < C(2,2)=1
+    INVALID: (0, 0, 3, 3, 4) — fails at k=2: Σ={sum(p_sorted[:k])} < C(2,2)=1
+    INVALID: (0, 1, 1, 4, 4) — fails at k=3: Σ={sum(p_sorted[:k])} < C(3,2)=3
+
+  n=6: 32 partitions, 22 valid (Landau), 10 invalid
+
+
+PART 6: SCORE SEQUENCES AS CODES
+------------------------------------------------------------
+
+  The Landau conditions define a LINEAR CODE over Z:
+    {s ∈ Z^n : s sorted, Σs = C(n,2), Σ_{i=1}^k s_i ≥ C(k,2) ∀k}
+
+  This is a POLYTOPE CODE: the codewords are the integer lattice
+  points inside the Landau polytope P_n.
+
+  The CODE RATE = log₂(#codewords) / n:
+    n=3: log₂(2)/3 = 0.33 bits/symbol
+    n=4: log₂(4)/4 = 0.50 bits/symbol
+    n=5: log₂(9)/5 = 0.63 bits/symbol
+    n=6: log₂(22)/6 = 0.74 bits/symbol
+    n=7: log₂(59)/7 = 0.84 bits/symbol
+
+  The rate INCREASES with n → the Landau polytope becomes
+  RELATIVELY LARGER as n grows (fewer constraints binding).
+
+  The MINIMUM DISTANCE of this code:
+  Two score sequences differ by at least one score value.
+  Min distance = minimum L₁ distance between valid sequences.
+
+  n=3: 2 codewords, rate = 0.333 bits/symbol
+  n=4: 4 codewords, rate = 0.500 bits/symbol
+  n=5: 9 codewords, rate = 0.634 bits/symbol
+  n=6: 22 codewords, rate = 0.743 bits/symbol
+  n=7: 59 codewords, rate = 0.840 bits/symbol
+
+  n=3: min L₁ distance between score sequences = 2
+  n=4: min L₁ distance between score sequences = 2
+  n=5: min L₁ distance between score sequences = 2
+  n=6: min L₁ distance between score sequences = 2
+
+
+PART 7: WHAT ERDŐS-GALLAI PREDICTS FOR G_n
+------------------------------------------------------------
+
+  For a graph on N vertices with degree sequence d₁ ≥ ... ≥ d_N:
+    EG condition: Σ_{i=1}^k d_i ≤ k(k-1) + Σ_{i=k+1}^N min(d_i, k)
+
+  For G_n, the degree sequence encodes how CONNECTED each iso class is.
+  HIGH degree → many structural transitions available.
+  LOW degree → few transitions → structurally "rigid."
+
+  THE DEGREE SEQUENCE OF G_n IS A TOURNAMENT INVARIANT:
+    It's determined by the tournament structure (iso classes + flip graph).
+    It satisfies EG (it's a real graph).
+    Its shape tells us about the TOPOLOGY of tournament space.
+
+  PREDICTIONS FROM THE DEGREE SEQUENCE:
+    Degree sequence of G_5: [7,7,7,6,6,6,6,4,3,3,3,2]
+    Sum = 60 = 2 × 30 (30 edges).
+    Mean degree = 5.0.
+    The sequence is UNIMODAL: most classes have degree 6-7,
+    a few have degree 2-3 (the high-symmetry extremes).
+
+  G_5 degree sequence: [7, 7, 7, 6, 6, 6, 6, 4, 3, 3, 3, 2]
+  Sorted scores of G_5's degree-tournament would need Landau check.
+
+  DEGREE vs |Aut| at n=5:
+    H  |Aut|   size  degree  size×degree
+  ───  ─────  ─────  ──────  ───────────
+    1      1    120       6          720
+    3      3     40       3          120
+    3      3     40       4          160
+    3      3     40       3          120
+    5      1    120       7          840
+    5      1    120       7          840
+    9      1    120       6          720
+    9      1    120       7          840
+   11      1    120       6          720
+   13      1    120       6          720
+   15      3     40       3          120
+   15      5     24       2           48
+
+  NOTE: size × degree is ROUGHLY proportional to class_size × C(n,2)
+  because total outgoing transitions = size × C(n,2) (each tournament
+  has C(n,2) possible flips), and degree = # distinct external classes reached.
+
+
+========================================================================
+  SUMMARY: ERDŐS-GALLAI AND LANDAU UNIFIED
+========================================================================
+
+
+  TWO THEOREMS, ONE FRAMEWORK:
+
+  LANDAU (tournaments):
+    Characterizes valid score sequences.
+    Controls which NODES exist in G_n.
+    A000571(n) = number of valid score sequences.
+    The Landau polytope is a convex body in R^n.
+    Rate: 0.63 bits/symbol at n=5.
+
+  ERDŐS-GALLAI (graphs):
+    Characterizes valid degree sequences.
+    Applied to G_n: verifies its degree sequence is consistent.
+    G_n's degree sequence: [7, 7, 7, 6, 6, 6, 6, 4, 3, 3, 3, 2]
+    The degree sequence encodes the topology of tournament space.
+
+  THE HIERARCHY:
+    Landau → valid scores → nodes of G_n → degree sequence → Erdős-Gallai
+    Each level constrains the next.
+
+  THE CODE-THEORETIC VIEW:
+    Score sequences = codewords of the Landau code.
+    Tournaments = messages in the tournament code.
+    Syndrome = score sequence (Landau codeword).
+    The OCR (97%) = syndrome decoding success rate.
+
+  FOR G_n:
+    The degree of a class ≈ C(n,2) × (1 - self-loop fraction) / (# neighbors)
+    High |Aut| → high self-loop → low degree (formula from S182: 2/n at source)
+    Low |Aut| → low self-loop → high degree
+
+  THE LANDAU POLYTOPE IS THE "CONFIGURATION SPACE" OF G_n's NODES.
+  The Erdős-Gallai conditions are the "CONSISTENCY CHECK" on G_n's edges.
+  Together they define the FEASIBLE REGION for the meta-graph.
+
+opus-2026-03-22-S188
