@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S157 — 2026-03-22: Sequences, Formulas, OCR Structure
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S156
+**Summary:** Verified exact H formula and correction structure. H=1+n(n-1)(2n-1)/6-S₂ EXACT at n≤4 (0 errors). At n=5: correction=2c₅. Distribution: {0:480,+2:360,+4:144,+6:40}. Sequences: E[H]=n!/2^{n-1}, H_max={1,3,5,15,45,189}, base={2,6,15,31,56,92}=pyramidal+1, #H_values={1,2,3,7,19,77}, #forbidden={0,0,0,1,4,18}, OCR_denom={1,1,133,480480}. Decomposition: H=[Eisenstein:1+Σk²-S₂]+[5-cycle:2c₅]+[packing:4α₂+...]. Read S20e/S20f.
+**New contributions:** sequences_formulas_s157.py
+**Unresolved threads:** Compute c₅ directly, extend to n=6, OEIS search
+
+---
+
 ## opus-2026-03-22-S156 — 2026-03-22: Independence Polynomial — The Central Object
 
 **Account:** opus
