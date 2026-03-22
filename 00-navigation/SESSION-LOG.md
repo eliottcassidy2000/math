@@ -13,6 +13,15 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S204 — 2026-03-22: Platonic Solids and Creative Interchange
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S203
+**Summary:** Pulled kind-pasteur S20bc-S20bg (ternary tournaments, Γ(1/b)^b landscape, polygon-simplex-staircase trinity, G_5≠icosahedron confirmation, permutohedron deep). Built 10-part investigation: (1) G_5 complete structure with spectrum. (2) Adjacency spectrum: G_5 λ₁=5.58 vs icosahedron 5.00 — G_5 is MORE connected. (3) Dual of G_5 has dodecahedral f-vector (20,30,12). (4) G_3=segment, G_4=K_4 minus edge. (5) All 5 Platonic solids mapped: n=3 tournament cube IS the Platonic cube (8V,12E,6F). (6) Tournament cube at n=3: hexagonal cross-section = permutohedron, body diagonal connects two 3-cycles. (7) Creative k-cycle interchange: 5-cycle flip at n=5 = complement = Z/2Z from S200. (8) Degree-H profile: waist at H=5-9 (deg 6-7), poles at H=1,15 (deg 2-6). (9) G_5 is the icosahedron's DEFORMED twin — same f-vector, irregular degrees encode H-hierarchy. (10) **G_5+ is NON-PLANAR** (38 edges > 3V-6=30): 3-cycle interchange breaks planarity, spectral radius jumps to 6.80.
+**New contributions:** platonic_interchange_s204.py
+
+---
+
 ## opus-2026-03-22-S203 — 2026-03-22: Interchange Graph → Meta-Graph G_n
 
 **Account:** opus
