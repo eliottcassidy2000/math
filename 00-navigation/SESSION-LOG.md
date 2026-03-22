@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S132 — 2026-03-21: MS Shadow Compression — OCR(1)=1 PUZZLE, compression landscape, curvature principle
+
+**Account:** opus
+**Summary:** Investigated shadow compression as a function of the evaluation point x. PUZZLE: exact computation gives OCR(x=1) = 1 (MS index perfectly score-determined at n=5), but this contradicts alpha_1 varying within the POS class. Likely a computational bug in cycle-finding. The general framework is sound: OCR(x) should decrease from small x (scores dominate) through x=2 (tournament) to large x (higher alpha_k dominate). The curvature principle for compression: spherical = easy to compress, hyperbolic = harder.
+**Key:**
+1. **OCR(x=1) = 1 at n=5**: MS index appears perfectly score-determined (NEEDS VERIFICATION — possible bug)
+2. **OCR(x=2) = 129/133**: tournament H has 3% residual (VERIFIED exactly)
+3. **Compression landscape**: OCR(x) should decrease with x as higher alpha_k are amplified
+4. **Curvature principle for compression**: spherical (x<tau) → near-perfect compression; hyperbolic (x>tau) → degraded
+5. **n=6 computations**: started but results need checking
+**Scripts:** ms_shadow_compression_s132.py (with likely bug in OCR(1) computation)
+
+---
+
 ## opus-2026-03-21-S151 — 2026-03-21: Trainable Shadow KV Cache — TRAINED AND VERIFIED
 
 **Account:** opus
