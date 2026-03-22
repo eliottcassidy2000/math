@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S146 — 2026-03-21: Quaternion Attention Head — Working Implementation
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S145
+**Summary:** Built a working NumPy implementation of a quaternion attention head. Hamilton product verified (ij=k, jk=i, ki=j, i²=-1). Quaternion linear layer: splits input into 4 components, applies Hamilton product coupling. Parameter savings: 75% per head (exact, configuration-independent). For d_model=768, d_head=64: standard=196608 params → quaternion=49152, savings=147456 per head. Cartan decomposition of attention matrix computed: anti/sym ratio varies (0.25 standard, 0.085 quaternion). Tournament 3-cycle count of thresholded attention: standard ≈ 0.275 fraction (near random 0.25), quaternion = 0 (highly transitive — Hamilton coupling creates more ordered attention). Full PyTorch implementation sketch provided (QuaternionLinear as drop-in for nn.Linear). Read kind-pasteur S18z (What Survives the Audit — 4 high-leverage actions).
+**New contributions:** quaternion_attention_s146.py
+**Unresolved threads:** Train PyTorch quaternion transformer, benchmark perplexity, extend to octonionic head coupling
+
+---
+
 ## opus-2026-03-21-S145 — 2026-03-21: Protein Folding — Rigorous Investigation
 
 **Account:** opus
