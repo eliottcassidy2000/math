@@ -23,13 +23,23 @@ Entry format:
 
 ---
 
+## kind-pasteur-2026-03-22-S20y — 2026-03-22: Information Geometry + Morse Theory Synthesis
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-22-S20x
+**Summary:** Deep synthesis of information geometry, Walsh-Fourier analysis, and Morse theory on tournament space. KEY FINDINGS: (1) Walsh-Fourier spectrum of H has ONLY even orders {0,2,4} at both n=5 and n=6. Odd orders are exactly zero by complement invariance (H(T)=H(T^comp)). Order-2 carries 92-95% of Var(H) = the OCR. (2) H is quasi-elementary: avg neighbor H = a + b*H with R^2=0.977 (n=5), R^2=0.990 (n=6), approaching 1. (3) Fisher information of Boltzmann family max at beta=0 (uniform) -- no phase transition. (4) Sublevel persistence is trivial (Betti_0=1 always). (5) Hessian at H=45 has even Morse index (8), at H=37 odd (7) -- determinant signs differ. (6) Natural gradient zero at beta=0 by S_n symmetry. Connected to Stadler-Reidys, Ollivier-Ricci, Kolesnik-Sanchez, IGO.
+**New contributions:** info_geometry_morse_s20y.py, walsh_fourier_n6_s20y.py, information-geometry-of-tournaments.md, HYP-1730..1733
+**Unresolved threads:** Prove R^2 -> 1, extend Walsh to n=7, Ollivier-Ricci on flip graph, IGO for tournament optimization
+
+---
+
 ## opus-2026-03-22-S169 — 2026-03-22: Fast Graph-Structure Sequences — TWO DISCOVERIES
 
 **Account:** opus
 **Continuation of:** opus-2026-03-22-S168
-**Summary:** Computed closed-form sequences capturing graph structure for ALL n. TWO MAJOR DISCOVERIES: (1) E[L] = E[H]/2 = n!/2^n EXACTLY — on average, exactly HALF of Hamiltonian paths in a random tournament can be extended to cycles. The other half are dead ends. This is the binary structure at the deepest level. PROOF: E[H]=n!/2^{n-1}, E[HC]=(n-1)!/2^n, E[L]=E[H]-n×E[HC]=n!/2^{n-1}-n!/2^n=n!/2^n. (2) E[total_arb](n) = (n/2)^{n-1} EXACTLY — verified at n=2..6. At n=6: (3)^5=243 confirmed. PROOF sketch: by linearity, E[arb_r] = E[det(L_r)] where L is the random Laplacian. The expected Laplacian has eigenvalues related to n/2. EIGHT closed-form sequences cataloged: E[c₃]=C(n,3)/4, E[H]=n!/2^{n-1}, E[c₅]=C(n,5)×3/8, E[c_m]=C(n,m)×(m-1)!/2^m, E[HC]=(n-1)!/2^n, E[L]=n!/2^n, Base=1+n(n-1)(2n-1)/6, H_extreme=(2^k+1)×H_mid. Also computed E[kings] and Var(c₃) exhaustively at small n.
+**Summary:** Computed closed-form sequences capturing graph structure for ALL n. TWO MAJOR DISCOVERIES: (1) E[L] = E[H]/2 = n!/2^n EXACTLY — on average, exactly HALF of Hamiltonian paths in a random tournament can be extended to cycles. The other half are dead ends. This is the binary structure at the deepest level. PROOF: E[H]=n!/2^{n-1}, E[HC]=(n-1)!/2^n, E[L]=E[H]-n*E[HC]=n!/2^{n-1}-n!/2^n=n!/2^n. (2) E[total_arb](n) = (n/2)^{n-1} EXACTLY -- verified at n=2..6. At n=6: (3)^5=243 confirmed.
 **New contributions:** fast_graph_sequences_s169.py
-**Unresolved threads:** Prove E[total_arb]=(n/2)^{n-1} analytically, find Var(c₃) closed form, find E[kings] closed form
+**Unresolved threads:** Prove E[total_arb]=(n/2)^{n-1} analytically, find Var(c3) closed form, find E[kings] closed form
 
 ---
 

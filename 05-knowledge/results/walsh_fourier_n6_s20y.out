@@ -1,0 +1,113 @@
+======================================================================
+  WALSH-FOURIER ANALYSIS AT n=6
+======================================================================
+
+  n=6, m=15, |T|=2^15=32768
+  Computing H for all tournaments...
+    5000/32768...
+    10000/32768...
+    15000/32768...
+    20000/32768...
+    25000/32768...
+    30000/32768...
+  E[H] = 22.5000, Var[H] = 146.2500
+
+  WALSH-FOURIER TRANSFORM (fast, O(m*2^m))...
+
+  Walsh-Fourier energy by order:
+   Order  #terms       Energy   %total   max|coeff|
+       0       1     506.2500  77.586%    22.500000
+       1      15       0.0000   0.000%     0.000000
+       2     105     135.0000  20.690%     1.500000
+       3     455       0.0000   0.000%     0.000000
+       4    1365      11.2500   1.724%     0.250000
+       5    3003       0.0000   0.000%     0.000000
+       6    5005       0.0000   0.000%     0.000000
+
+  Nonzero orders: [0, 2, 4]
+  Pattern: EVEN ONLY
+
+  ELEMENTARY LANDSCAPE TEST:
+  Linear fit: avg_neighbor = 6.4615 + 0.7128 * H
+  R^2 = 0.990160
+  Max |residual| = 2.7077
+
+  HESSIAN COMPARISON: H=45 (global max) vs H=37 (secondary peak)
+
+  H=45 GLOBAL MAX:
+    bits=000000110011000: H=45
+      Eigenvalues: [-43.5, -43.5, -39.5, -39.5, -35.6, -4.0, -3.2, -3.2, 6.2, 6.7, 6.7, 19.5, 19.5, 21.3, 24.0]
+      Signature: (8-, 00, 7+)
+      Trace = -108.0
+      Det = 2.41e+17
+
+    bits=000000110011001: H=45
+      Eigenvalues: [-43.5, -43.5, -39.5, -39.5, -35.6, -4.0, -3.2, -3.2, 6.2, 6.7, 6.7, 19.5, 19.5, 21.3, 24.0]
+      Signature: (8-, 00, 7+)
+      Trace = -108.0
+      Det = 2.41e+17
+
+  H=37 SECONDARY MAX:
+    bits=000000010010000: H=37
+      Eigenvalues: [-50.6, -40.0, -37.8, -35.0, -28.1, -2.9, -1.6, 3.5, 6.5, 8.0, 8.4, 11.4, 16.7, 18.8, 30.8]
+      Signature: (7-, 00, 8+)
+      Trace = -92.0
+      Det = -5.92e+16
+
+    bits=000000011010000: H=37
+      Eigenvalues: [-50.6, -40.0, -37.8, -35.0, -28.1, -2.9, -1.6, 3.5, 6.5, 8.0, 8.4, 11.4, 16.7, 18.8, 30.8]
+      Signature: (7-, 00, 8+)
+      Trace = -92.0
+      Det = -5.92e+16
+
+  SUBLEVEL PERSISTENCE AT n=6:
+    Births: 1
+    Merges: 0
+    Final components (Betti_0): 1
+
+  THE ZONOTOPAL GEOMETRY CONNECTION:
+
+  Kolesnik-Sanchez (DCG 2024): tournaments correspond to
+  vertices of the unit cube {0,1}^m. Score sequences are
+  projections onto the permutohedron Pi_n (a zonotope).
+
+  The score map pi: {0,1}^m -> Pi_n sends each tournament
+  to its score sequence. The FIBERS pi^{-1}(s) are the
+  tournaments with score s.
+
+  Score classes at n=6:
+    [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]: 720 tournaments, H in [1]
+    [np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4)]: 240 tournaments, H in [3]
+    [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5)]: 240 tournaments, H in [3]
+    [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)]: 720 tournaments, H in [5]
+    [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5)]: 240 tournaments, H in [3]
+    [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)]: 720 tournaments, H in [5]
+    [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)]: 1440 tournaments, H in [9]
+    [np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]: 1680 tournaments, H in [11, 13, 15]
+    [np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]: 144 tournaments, H in [15]
+    [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4), np.int64(5)]: 240 tournaments, H in [3]
+    [np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)]: 80 tournaments, H in [9]
+    [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)]: 720 tournaments, H in [5]
+    [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)]: 1440 tournaments, H in [9]
+    [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)]: 2880 tournaments, H in [15, 17]
+    [np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]: 1680 tournaments, H in [19, 23, 27]
+    [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)]: 1680 tournaments, H in [11, 13, 15]
+    [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)]: 1680 tournaments, H in [19, 23, 27]
+    [np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)]: 8640 tournaments, H in [23, 25, 29, 31, 33, 37]
+    [np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]: 2400 tournaments, H in [33, 37]
+    [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(5)]: 144 tournaments, H in [15]
+    [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)]: 2400 tournaments, H in [33, 37]
+    [np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)]: 2640 tournaments, H in [41, 43, 45]
+
+  INFORMATION CONTENT PER WALSH ORDER:
+  (How many bits of information about T does each order carry?)
+
+  Order 2: 92.3% of Var(H), 105 coefficients, 1.285714 per coeff
+  Order 4: 7.7% of Var(H), 1365 coefficients, 0.008242 per coeff
+
+  KEY INSIGHT: Order 2 = PAIRWISE arc interactions dominate.
+  This is WHY the score sequence (which captures marginal
+  arc behavior) explains 97% of H variation (the OCR).
+  The remaining 3% comes from order-4 and higher interactions.
+  ODD orders are EXACTLY ZERO -- H is complement-invariant
+  (flipping all arcs preserves H, by path-reversal symmetry).

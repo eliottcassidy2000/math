@@ -1873,3 +1873,23 @@ Source: modular_tournament_s18e.py, coxeter_three_infinity_s131.out
 **Status:** CONFIRMED (algebraic identity + structural interpretation)
 **Hypothesis:** The gap function g(x) = x^3 - x^2 - x - 1 evaluated at the three characteristic constants (golden ratio, tribonacci, fugacity) gives {-1, 0, +1} = {spherical, Euclidean, hyperbolic}. Tournament theory at x=2 is one quantum (g=+1) into the hyperbolic regime. This single quantum is the source of Redei parity, forbidden H=7, and the binary skeleton.
 Source: modular_tournament_s18e.py, opus-S115/S131
+
+## HYP-1730: Walsh-Fourier spectrum of H has ONLY even orders (kind-pasteur-S20y)
+**Status:** CONFIRMED (n=5 and n=6 exhaustive, complement invariance proves it for all n)
+**Hypothesis:** The Walsh-Fourier decomposition of H on {0,1}^{C(n,2)} has exactly zero energy at every odd order. Only orders 0, 2, 4 have nonzero energy (verified n=5,6). The even-only pattern follows from H(T)=H(T^complement) since the complement map acts as (-1)^{|S|} on Walsh coefficient S. Order-2 carries 92-95% of Var(H), explaining the OCR.
+Source: info_geometry_morse_s20y.py, walsh_fourier_n6_s20y.py
+
+## HYP-1731: H landscape is quasi-elementary with R^2 -> 1 (kind-pasteur-S20y)
+**Status:** OPEN (verified n=5 R^2=0.977, n=6 R^2=0.990, increasing)
+**Hypothesis:** H is an asymptotically elementary landscape on the tournament m-cube. The avg-neighbor linear fit avg_nb = a + b*H has R^2 increasing toward 1 as n grows. If true, the H-landscape becomes smoother and gradient ascent becomes more efficient at larger n.
+Source: info_geometry_morse_s20y.py, walsh_fourier_n6_s20y.py
+
+## HYP-1732: Morse landscape phase transition at n=6 (kind-pasteur-S20x/S20y)
+**Status:** CONFIRMED (exhaustive n=3..6)
+**Hypothesis:** H on the tournament hypercube has a unique global maximum value at n<=5 (single-basin), but acquires non-global local maxima starting at n=6 (H=37 secondary peak with 720 tournaments, all SC). The Morse index of the global max (8, even) differs in parity from the secondary max (7, odd). Basin trapping is by flat plateau (barrier=0), not valley.
+Source: morse_deep_s20x.py, walsh_fourier_n6_s20y.py
+
+## HYP-1733: Sublevel persistence of H is trivial for all n (kind-pasteur-S20y)
+**Status:** OPEN (verified n=5 and n=6: Betti_0 = 1 at every threshold)
+**Hypothesis:** The sublevel set {T : H(T) <= h} is connected for every threshold h, at every n. Equivalently, H has trivial persistent homology (no long-lived features). If true, the H-landscape has no topological barriers at any scale.
+Source: info_geometry_morse_s20y.py, walsh_fourier_n6_s20y.py
