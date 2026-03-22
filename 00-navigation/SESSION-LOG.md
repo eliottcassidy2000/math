@@ -60,6 +60,13 @@ Entry format:
 **Summary:** Systematic computation of 13 integer sequences from tournament theory. VERIFIED at n=2..6 exhaustively. KEY SEQUENCES (potentially new to OEIS): (1) #distinct_H(n) = 1,1,2,3,7,19 (n=2..7: +77 from S155). (2) #forbidden_H(n) = 0,0,0,0,1,4 (n=2..7: +18). (3) #tournaments_at_H_max(n) = 2,2,24,64,480. (4) OCR_denominators = 1,1,133,480480 (contains tournament primes). (5) W(n) = 1,2,8,32,158,928,6350,49752 (confirmed NOT in OEIS from memory). KNOWN SEQUENCES confirmed: Σ_T H(T) = n!×2^{C(n,2)-n+1}, H_max related to A000568, #score_seqs = A000571, f^{δ_k} = A005118. The #distinct_H and #forbidden sequences are STRONG candidates for OEIS submission. Also: staircase hook products computed, PoS ambiguity sequence = 1,1,1,3,6 (how many H values the most ambiguous score class has). Read kind-pasteur S20p/S20q (tiling recursion, transfer matrix).
 **New contributions:** new_sequences_s165.py
 **Unresolved threads:** Extend to n=7 (need optimized code), submit new sequences to OEIS, prove formulas for #distinct_H and #forbidden
+## opus-2026-03-22-S165 — 2026-03-22: Deep Understanding of PoS, Blueself, Blackself, Blue Skeleton
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S164
+**Summary:** Deep investigation of the graph-like structures (PoS, blueself, blackself, blue skeleton). Reconstructed the blue skeleton at n=5 from scratch: 8 SC classes, 8 edges, bipartite by t3 parity, connected, diameter 4, girth 4, spectrum symmetric {+/-4.83, +/-2, +/-2, +/-0.83}. IDENTIFIED THE BLUE SKELETON AS: a quotient flip graph Q_k / S_n with edges from the antipodal map, analogous to the associahedron skeleton but for tournament tilings. Found 5 known mathematical analogues: (1) Associahedron/Stasheff polytope, (2) Bruhat order on S_n, (3) Ryser's 3-cycle reversal graph, (4) Kneser graph K(n,2), (5) Inversion walk Markov chain (arXiv:2603.01368). KEY INSIGHTS: Blueself = MANIFEST symmetry (visible in staircase y=x), blackself = HIDDEN symmetry (requires non-trivial vertex relabeling). PoS = EQUATOR of tournament space where scores are most balanced and ambiguity is maximal. The flip scatter matrix F[i][j] is symmetric (proved), the full flip graph on all 12 classes is connected with diameter 3. Blackself concentrates at H=13 (17%) more than H=15 (10%) because regular tournaments have too much existing symmetry for the anti-automorphism to fit.
+**New contributions:** pos_skeleton_deep_s165.py + output
+**Unresolved threads:** Compute skeleton at n=7, prove the skeleton is the 1-skeleton of a polytope, connect to associahedron theory
 
 ---
 
