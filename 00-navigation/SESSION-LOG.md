@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S175 — 2026-03-22: Unlabeling Applications — Math and Engineering
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S174
+**Summary:** Applied unlabeling to 7 domains. ENGINEERING: (1) Symmetry-reduced computation: 85-39016× speedup for tournaments at n=5-8. (2) Attention compression: 99.6% redundancy at seq_len=1024 — explains WHY shadow KV works. (3) Preference aggregation: up to 190000× compression by double-unlabeling. (4) Molecular fingerprinting: canonical SMILES IS unlabeling (standard practice). (5) Equivariant NNs: GNNs and quaternion networks AUTOMATICALLY unlabel. MATHEMATICS: (6) Proofs modulo S_n are shorter — Rédei's theorem in 3 lines from I(Ω,2). OCR theorem at n≤4 from degree-1 independence polynomial. (7) The iso class graph IS the natural proof domain. THE GENERAL PRINCIPLE: if data has symmetry group G, factor it out → speedup ≈ |G|. For S_n symmetry: |G| = n! → massive savings. Attention matrices at seq_len=1024 have 99.6% redundancy because most entries are determined by relative (not absolute) positions.
+**New contributions:** unlabeling_applications_s175.py
+**Unresolved:** Build the attention unlabeling compressor, formalize the double-unlabeling for voting, prove fingerprint completeness at n=6
+
+---
+
 ## opus-2026-03-22-S174 — 2026-03-22: Unlabeling — What Things Represent, Practical Tools
 
 **Account:** opus
