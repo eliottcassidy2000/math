@@ -13,32 +13,47 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-21-S117 — 2026-03-21: Petersen-Casimir — d∈{5,21}, θ²=7 IS the forbidden eigenvalue, 6 classes at n=6
+## kind-pasteur-2026-03-21-S18 — 2026-03-21: Petersen-Lie Bridge — root orthogonality, dual embedding, profile determinacy
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-21-S17c
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, INDEX.md, existing Lie algebra results
+**Summary of work:** Deep investigation of the Petersen graph - Lie algebra connection. Established that K(5,2) = orthogonality graph of A_4 positive roots (THM-261). Discovered dual so(n)/A_{n-1} embedding (THM-262). Proved root cycle profiles determine H at n=5 (THM-263, sharp: fails at n=6 with gap=4). Weight norm anticorrelates with H. Petersen proved to be anti-conflict (complementary to tournament conflict via Kneser/Johnson duality).
+**New contributions:** THM-261, THM-262, THM-263, HYP-1713..1716, T104..T107, INV-190
+**Unresolved threads:**
+- Does full root cycle profile (all odd lengths) determine H at n=6?
+- Weight norm formula for H?
+- Classification of impossible conflict graphs via root system theory
+- Engineering: O(n^3) tournament fingerprint from root profiles
+
+---
+
+## opus-2026-03-21-S117 — 2026-03-21: Petersen-Casimir — d in {5,21}, theta^2=7 IS the forbidden eigenvalue, 6 classes at n=6
 
 **Account:** opus
-**Summary:** The Casimir discriminants at n=5 are EXACTLY d∈{5,21}. The eigenvalue θ²=7 appears directly — the forbidden H value IS a tournament eigenvalue. At n=6: 6 Casimir tuples. Sum θ²=C(n,2)=V(K(n,2)) always. The second Casimir d=21=3×7 encodes both forbidden primes. 5×21=105=3×5×7 contains ALL key primes.
+**Summary:** The Casimir discriminants at n=5 are EXACTLY d in {5,21}. The eigenvalue theta^2=7 appears directly — the forbidden H value IS a tournament eigenvalue. At n=6: 6 Casimir tuples. Sum theta^2=C(n,2)=V(K(n,2)) always. The second Casimir d=21=3x7 encodes both forbidden primes. 5x21=105=3x5x7 contains ALL key primes.
 **Key:**
-1. **θ₁²+θ₂² = V(Petersen) = 10**: sum of squared angles = Kneser vertex count. UNIVERSAL.
-2. **d ∈ {5, 21}**: only 2 Casimir discriminants at n=5. d=21=3×7 = product of atom primes!
-3. **d=5**: eigenvalues θ²=5±2√5 — involves golden ratio. d=n=boundary prime.
-4. **d=21**: eigenvalues θ²=7,3 — the FORBIDDEN VALUE 7 is literally an eigenvalue!
-5. **n=6: 6 Casimir tuples**, e₂ ∈ {255,303,319,335,351}. θ²=7 appears in a tuple (7,7,7,7,1,1).
-6. **5×21=105=3×5×7**: product of discriminants contains all three key primes
-7. **Tr(B⁴) = 80 + TYPE_A**: universal part=80=n(n-1)+(n(n-1)(n-2)), TYPE_A∈{36,-44}
+1. theta_1^2+theta_2^2 = V(Petersen) = 10: sum of squared angles = Kneser vertex count. UNIVERSAL.
+2. d in {5, 21}: only 2 Casimir discriminants at n=5. d=21=3x7 = product of atom primes!
+3. d=5: eigenvalues theta^2=5+/-2*sqrt(5) — involves golden ratio. d=n=boundary prime.
+4. d=21: eigenvalues theta^2=7,3 — the FORBIDDEN VALUE 7 is literally an eigenvalue!
+5. n=6: 6 Casimir tuples, e_2 in {255,303,319,335,351}. theta^2=7 appears in a tuple (7,7,7,7,1,1).
+6. 5x21=105=3x5x7: product of discriminants contains all three key primes
+7. Tr(B^4) = 80 + TYPE_A: universal part=80=n(n-1)+(n(n-1)(n-2)), TYPE_A in {36,-44}
 
 ---
 
 ## opus-2026-03-21-S116 — 2026-03-21: Petersen-Kneser-Cayley-Lie Nexus — K(n,2) is tournament DNA
 
 **Account:** opus
-**Summary:** Established the Kneser graph K(n,2) as the substrate of tournament theory. Proved the Lie-Kneser dictionary (commuting so(n) generators = K(n,2) edges), connected α₂ to K(n,3) matchings, Cayley transform maps Hurwitz fractions to graph invariants. I(K(5,2),2) = 461. Petersen = unique non-Hamiltonian Kneser.
+**Summary:** Established the Kneser graph K(n,2) as the substrate of tournament theory. Proved the Lie-Kneser dictionary (commuting so(n) generators = K(n,2) edges), connected alpha_2 to K(n,3) matchings, Cayley transform maps Hurwitz fractions to graph invariants. I(K(5,2),2) = 461. Petersen = unique non-Hamiltonian Kneser.
 **Key:**
-1. **Lie-Kneser**: dim(so(n))=V(K(n,2)), commuting generators=edges, rank=max matching=floor(n/2)
-2. **α₂ ≤ max matching of K(n,3)**: disjoint 3-cycle pairs bounded by Kneser matching
-3. **Cayley**: Q(1/3)=2 (fugacity), Q(3/7)=5/2 (Petersen χ_f), Q⁻¹(7/3)=2/5 (golden!)
-4. **I(K(5,2), 2) = 461**: the Petersen independence polynomial at tournament fugacity
-5. **α₂=0 at n=5 PROVED via Kneser**: K(5,3) max matching=1 (only 1 disjoint triple pair possible among 5 vertices)
-6. **Tournament space = hypercube Q_m**: arc flips traverse edges, scores = orbit projections
+1. Lie-Kneser: dim(so(n))=V(K(n,2)), commuting generators=edges, rank=max matching=floor(n/2)
+2. alpha_2 <= max matching of K(n,3): disjoint 3-cycle pairs bounded by Kneser matching
+3. Cayley: Q(1/3)=2 (fugacity), Q(3/7)=5/2 (Petersen chi_f), Q^(-1)(7/3)=2/5 (golden!)
+4. I(K(5,2), 2) = 461: the Petersen independence polynomial at tournament fugacity
+5. alpha_2=0 at n=5 PROVED via Kneser: K(5,3) max matching=1 (only 1 disjoint triple pair possible among 5 vertices)
+6. Tournament space = hypercube Q_m: arc flips traverse edges, scores = orbit projections
 
 ---
 

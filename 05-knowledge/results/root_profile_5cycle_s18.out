@@ -1,0 +1,58 @@
+========================================================================
+  ROOT PROFILE + 5-CYCLE RESOLUTION TEST (n=6)
+  kind-pasteur-2026-03-21-S18
+========================================================================
+
+  Failure profiles: 3
+    [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2] -> H in [13, 17]
+    [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3] -> H in [25, 29]
+    [0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3] -> H in [33, 37]
+
+  Detailed analysis of failure cases:
+
+  Profile [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2], H in [13, 17]:
+    H=13: alpha={0: 1, 1: 5}, c3=4, c5=1, OCF check: False
+    H=17: alpha={0: 1, 1: 6, 2: 1}, c3=4, c5=2, OCF check: True
+
+  Profile [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3], H in [25, 29]:
+    H=25: alpha={0: 1, 1: 10}, c3=6, c5=4, OCF check: False
+    H=29: alpha={0: 1, 1: 11, 2: 1}, c3=6, c5=5, OCF check: False
+
+  Profile [0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3], H in [33, 37]:
+    H=33: alpha={0: 1, 1: 12, 2: 1}, c3=7, c5=5, OCF check: False
+    H=37: alpha={0: 1, 1: 12, 2: 2}, c3=7, c5=5, OCF check: False
+
+========================================================================
+  TEST: (profile, c5) DETERMINES H?
+========================================================================
+
+  (profile, c5) classes: 31
+  Determines H: False
+  Remaining failures: 1
+    profile_sum=21, c5=5: H in [33, 37]
+
+  Bonus: does score sequence determine 3-cycle root profile?
+  Score sequences with multiple profiles: 11 / 22
+
+========================================================================
+  SYNTHESIS
+========================================================================
+
+  At n=5: 3-cycle root profile determines H. (THEOREM)
+  At n=6: 3-cycle root profile has 3 failures (H gap = 4 each).
+          The gap is EXACTLY one alpha_2 contribution.
+          Adding c5 (5-cycle count) should resolve.
+  At n=7: 3-cycle root profile fails heavily (51/149).
+          Need full odd-cycle structure.
+
+  ROOT SYSTEM INTERPRETATION:
+  The 3-cycle root profile encodes how the signed roots of A_{n-1}
+  participate in triangular cycles. This captures alpha_1 perfectly
+  but misses alpha_2 (vertex-disjoint cycle pairs) which first require
+  5-cycles or 6+ vertices.
+
+  The full root profile (all odd cycle lengths) should determine H
+  via OCF, since H = I(Omega, 2) depends ONLY on the independence
+  polynomial of the conflict graph, which is determined by the
+  full cycle structure.
+

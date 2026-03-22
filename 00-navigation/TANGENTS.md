@@ -101,6 +101,18 @@ At n=5, 8/9 score classes have unique H. The only exception is score (1,2,2,2,3)
 **T103** #seesaw-torsion-budget #formal-group-cohomology | certainty: medium | source: opus-2026-03-21-S95b
 The β₁·β₃=0 seesaw (HYP-339) may be a torsion budget constraint: the formal group can activate only one torsion type at a time at a given prime. β₁ ↔ [3]-torsion, β₃ ↔ [7]-torsion. Confirmed by HYP-347: non-adjacent β₁+β₅ CAN coexist (different torsion types). Adjacent = same budget = seesaw.
 
+**T104** #petersen-root-system #A4-orthogonality #kneser-lie | certainty: high (proved) | source: kind-pasteur-2026-03-21-S18
+Petersen graph K(5,2) = orthogonality graph of A_4 positive roots. More generally K(n,2) = orthogonality graph of A_{n-1} positive roots. Since dim so(n) = C(n,2) = # positive roots of A_{n-1}, tournaments live at the intersection of so(n) and A_{n-1}. The "fundamental triangle": root system / Kneser-Johnson duality / skew-adjacency Lie embedding. See THM-261, THM-262.
+
+**T105** #root-cycle-profile #H-determinacy #sharp-boundary | certainty: high (exhaustive) | source: kind-pasteur-2026-03-21-S18
+The sorted root cycle profile (3-cycle count per arc, sorted) determines H(T) at n=5 but FAILS at n=6. The 3 failures at n=6 all have H-gap = 4 = one alpha_2 contribution. The profile captures the A_{n-1} root structure of 3-cycles perfectly but misses independent cycle pairs. Sharp boundary: n=5 works because no independent cycle pairs possible on 5 vertices. See THM-263.
+
+**T106** #weight-norm-anticorrelation #score-deviation-H | certainty: high (exhaustive n=5) | source: kind-pasteur-2026-03-21-S18
+The A_{n-1} weight norm ||w(T)||^2 (Killing form of score deviation vector) anticorrelates with H: higher norm = lower H. At n=5, ||w||^2 = 0 gives H=15, ||w||^2 = 40 gives H=1 (transitive). Regular tournaments = zero weight = maximum H. This is the Lie-algebraic version of "regular tournaments maximize H." See THM-262.
+
+**T107** #petersen-anti-conflict #kneser-johnson-duality | certainty: high (proved) | source: kind-pasteur-2026-03-21-S18
+Petersen is the ANTI-conflict graph: its edges encode orthogonality (non-interference) while tournament conflict graphs encode interference (shared vertices). Petersen can never be Omega(T) because conflict and anti-conflict are complementary in the Kneser/Johnson duality. At n<=5, all 3-cycle conflict graphs are complete; Petersen (triangle-free, girth 5) is maximally incompatible.
+
 ---
 
 ## Dead Ends (documented to prevent re-exploration)

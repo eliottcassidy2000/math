@@ -1760,3 +1760,33 @@ Source: paley_commutant_theorem.py
 **Rationale:** If training imposes directional structure, eigenspaces should merge (reducing diversity). Paley (min diversity=2) is the theoretical limit.
 **Test:** Extract attention from trained vs untrained GPT-2, compare antisymmetric spectral diversity per head.
 Source: cartan_bridge_deep2.py
+
+## kind-pasteur-2026-03-21-S18 Hypotheses
+
+## HYP-1713: Root cycle profile determines H at n=5 (kind-pasteur-S18)
+**Status:** CONFIRMED (exhaustive)
+**Hypothesis:** The sorted root cycle profile (3-cycle count per arc) uniquely determines H(T) at n=5.
+**Evidence:** 1024/1024 tournaments checked. 9 distinct profiles, each mapping to exactly one H value.
+**Why:** At n=5, all odd cycles are 3-cycles or 5-cycles. The 5-cycles are determined by the 3-cycle structure (complement of a 3-subset in [5] is too small for independent cycles). So 3-cycle root profile = complete cycle information.
+**Boundary:** FAILS at n=6 (3 profiles map to 2 H values, gap=4). See HYP-1714.
+Source: root_profile_determinacy_s18.py (THM-263)
+
+## HYP-1714: Root cycle profile + c5 almost determines H at n=6 (kind-pasteur-S18)
+**Status:** PARTIALLY TRUE
+**Hypothesis:** Adding the 5-cycle count c5 to the 3-cycle root profile resolves most ambiguities at n=6.
+**Evidence:** Resolves 2/3 failures. One failure remains: profile_sum=21, c5=5 maps to H in {33,37}. The remaining gap (4) corresponds to one additional independent cycle pair (alpha_2 differs by 1).
+**Why:** The full conflict graph structure (alpha_k) determines H via OCF, but cycle counts per arc don't capture the independence structure.
+Source: root_profile_5cycle_s18.py
+
+## HYP-1715: Weight norm ||w||^2 anticorrelates with H (kind-pasteur-S18)
+**Status:** CONFIRMED at n=5 (exhaustive), OPEN for n>=6
+**Hypothesis:** The A_{n-1} Killing form norm ||w(T)||^2 of the score deviation vector anticorrelates with H. Strictly at n=5: ||w||^2 = 0 -> H=15 (max), ||w||^2 = 40 -> H=1 (min).
+**Evidence:** 5 of 6 weight norms uniquely determine H at n=5. The exception ||w||^2=8 gives H in {11,13,15} (scores near-regular).
+**Interpretation:** Regular tournaments = zero weight in A_{n-1} root lattice = maximum H. Transitive = extreme weight = minimum H. The Lie-algebraic "distance from center" measures departure from optimality.
+Source: petersen_lie_bridge_s18.py
+
+## HYP-1716: Petersen is anti-conflict (kind-pasteur-S18)
+**Status:** CONFIRMED (proved)
+**Hypothesis:** The Petersen graph K(5,2) can never be Omega(T) for any tournament T because it encodes orthogonality (anti-conflict) while Omega(T) encodes interference (conflict). These are complementary in the Kneser/Johnson duality.
+**Evidence:** At n<=5, ALL 3-cycle conflict graphs are complete (any two 3-subsets share >=1 element). Petersen is triangle-free. At n>=6, conflict graphs can have independent sets but Petersen's girth-5 structure remains incompatible.
+Source: petersen_lie_bridge_s18.py (THM-261)

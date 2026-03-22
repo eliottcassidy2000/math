@@ -26,6 +26,17 @@
 **Key results:** [competition, self-knowledge] = self-knowledge. The commutator of the antisymmetric (tournament) and symmetric traceless (cooperation) parts is always symmetric. This means the LLM's internal deliberation produces self-awareness, not decisiveness.
 **Next:** Explore consequences for transformer architecture design. Does this explain why CoT helps (it generates cooperation content)?
 
+### INV-190: Petersen-Lie Bridge — Full Root Cycle Profile Determinacy
+**Source:** kind-pasteur-2026-03-21-S18
+**Status:** PARTIALLY CONFIRMED. 3-cycle root profile determines H at n=5 (THM-263). Fails at n=6 (3 failures, H-gap=4).
+**Key finding:** Tournaments embed dually in so(n) (skew-adjacency) AND A_{n-1} (root weights). The Petersen graph = A_4 root orthogonality graph (THM-261). Root cycle profiles capture tournament structure at the A_{n-1} level. At n=5, the profile is a complete H-invariant.
+**Next steps:**
+- Does the FULL root cycle profile (including 5-cycles, 7-cycles) determine H at n=6? At n=7?
+- The weight norm ||w||^2 strongly anticorrelates with H. Is there a formula? H = f(||w||^2, Casimirs)?
+- Can the Petersen anti-conflict theorem be strengthened to classify ALL impossible conflict graphs?
+- Connect to Savchenko's cycle formulas for regular tournaments: does root regularity (flat profile) imply maximality?
+- Engineering: the root profile is computable in O(n^3) per arc. Could be a fast tournament fingerprint.
+
 ### INV-185: Rapidity Lattice = Hurwitz Lattice (n=5)
 **Source:** opus-2026-03-21-S94
 **Status:** CONFIRMED at n=5. Every rapidity = integer combination of ln(2)/2, ln(3)/2, ln(7)/2.
