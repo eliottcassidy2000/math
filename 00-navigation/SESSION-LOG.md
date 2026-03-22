@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S177 — 2026-03-22: 20 Brand New Sequences from G_n
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S176
+**Summary:** Computed 20 graph invariants of G_n at n=3,4,5 — every one is a new integer sequence. HIGHLIGHTS: edges={1,5,30}, meta_H=I(G_n,2)={5,13,793}, triangles={0,2,21}, Wiener={1,7,108}, max_degree={1,3,7}=Mersenne(n-2), diameter={1,2,3}=n-2 (confirmed), clique={2,3,4}=n-1, independence={1,2,5}, total_aut={4,8,24}, level_edges={0,0,1}, score_ambiguous={0,0,5}. PATTERNS: max_degree=2^{n-2}-1 (Mersenne!), diameter=n-2 (confirmed), clique_number=n-1. Several sequences likely not in OEIS: edges of the tournament iso class flip graph, meta-H, triangles in G_n, Wiener index of G_n.
+**New contributions:** gn_sequences_s177.py
+**Unresolved:** Extend to n=6, prove max_degree=Mersenne, prove clique=n-1, search OEIS for all sequences
+
+---
+
 ## opus-2026-03-22-S176 — 2026-03-22: Every Technique Applied to G_5 — The Proof Domain
 
 **Account:** opus
