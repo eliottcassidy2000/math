@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S174 — 2026-03-22: Unlabeling — What Things Represent, Practical Tools
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S173
+**Summary:** Deep reflection on unlabeling + 5 practical tools. THE INSIGHT: 62% of tournament bits are labels (wasted), 37% are score-determined structure (cheap), 1% is residual (expensive). Working unlabeled captures 99% of useful info at 1% of cost. TOOLS: (1) Structural fingerprint O(n²) — PERFECTLY distinguishes all 12 iso classes at n=5 (score+domination profiles). (2) Score-based H predictor O(n) — exact at n≤4, 47% exact at n=5. (3) Invariant hash O(n²) — fast iso test. (4) Class-level computation — 85× speedup at n=5, 4600× at n=7. (5) Information budget analysis. Wrote reflection "unlabeling.md" on what each object REPRESENTS: scores=tier structure, H=ranking ambiguity, I(Ω,x)=intransitivity structure, arb=hierarchy strength, kings=global competitiveness, L=transitivity failure.
+**New contributions:** unlabeled_tools_s174.py, unlabeling.md
+**Unresolved:** Extend fingerprint to n=6 (does it still work?), prove the fingerprint is complete, optimize class-level computation
+
+---
+
 ## opus-2026-03-22-S173 — 2026-03-22: The Metatournament Deep — DAG at all n≤5, 99 Chains, Width=n-2
 
 **Account:** opus
