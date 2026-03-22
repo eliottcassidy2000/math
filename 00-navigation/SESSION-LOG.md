@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S1 — 2026-03-22: Three Modular Structures Unified — CRT × PSL(2,Z) × Eisenstein/cusp all from I(Omega,2)
+
+**Account:** opus
+**Summary:** Unified the three modular structures underlying tournament theory. (1) MODULAR ARITHMETIC: CRT decomposition of H, tournament primes as channels, H mod p obstructions. (2) MODULAR GROUP: complement (S²=1) + vertex addition (T^inf) generate tournament symmetries, three orbifold points. (3) MODULAR FORMS: H = Eisenstein + cusp (OCR = Eisenstein fraction = 96%), q-expansion = OCF at q=2, Hecke operators = score conditioning. All three are aspects of I(Omega,x) at x=2. ord_p(2) distinguishes primitive-root primes (tournament primes) from non-primitive (exceptional). X_0(p) genus controls OCR denominator structure.
+**Key:**
+1. **Three structures unified**: CRT, PSL(2,Z), and Eisenstein/cusp all from I(Omega, 2)
+2. **H = Eisenstein + cusp**: E[H|score] + residual. OCR = Eisenstein fraction.
+3. **Hecke operators = score conditioning**: [S_s] projects onto score class s
+4. **q-expansion at q=2**: H = 1 + 2*alpha_1 + 4*alpha_2 + ... (DIVERGENT regime!)
+5. **Conductor**: 42 always divides. Additional primes enter with n (5 at n=5, 11,13 at n=6).
+6. **X_0(p) genus**: {7,13}=genus 0, {19}=genus 1 (elliptic!), {31}=genus 2. Higher genus = deeper hidden structure.
+7. **ord_p(2)**: 2 is primitive root mod {3,5,11,13,19} but NOT mod {7,31}. Hurwitz and moonshine primes have small orders.
+8. **Tournament modularity**: discrete analog of classical modularity on the tournament hypercube
+**Scripts:** deep_modular_s135.py
+
+---
+
 ## opus-2026-03-22-S154 — 2026-03-22: Finding ALL Tournament Primes
 
 **Account:** opus
