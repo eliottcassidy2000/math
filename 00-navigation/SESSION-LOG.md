@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S169 — 2026-03-22: Fast Graph-Structure Sequences — TWO DISCOVERIES
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S168
+**Summary:** Computed closed-form sequences capturing graph structure for ALL n. TWO MAJOR DISCOVERIES: (1) E[L] = E[H]/2 = n!/2^n EXACTLY — on average, exactly HALF of Hamiltonian paths in a random tournament can be extended to cycles. The other half are dead ends. This is the binary structure at the deepest level. PROOF: E[H]=n!/2^{n-1}, E[HC]=(n-1)!/2^n, E[L]=E[H]-n×E[HC]=n!/2^{n-1}-n!/2^n=n!/2^n. (2) E[total_arb](n) = (n/2)^{n-1} EXACTLY — verified at n=2..6. At n=6: (3)^5=243 confirmed. PROOF sketch: by linearity, E[arb_r] = E[det(L_r)] where L is the random Laplacian. The expected Laplacian has eigenvalues related to n/2. EIGHT closed-form sequences cataloged: E[c₃]=C(n,3)/4, E[H]=n!/2^{n-1}, E[c₅]=C(n,5)×3/8, E[c_m]=C(n,m)×(m-1)!/2^m, E[HC]=(n-1)!/2^n, E[L]=n!/2^n, Base=1+n(n-1)(2n-1)/6, H_extreme=(2^k+1)×H_mid. Also computed E[kings] and Var(c₃) exhaustively at small n.
+**New contributions:** fast_graph_sequences_s169.py
+**Unresolved threads:** Prove E[total_arb]=(n/2)^{n-1} analytically, find Var(c₃) closed form, find E[kings] closed form
+
+---
+
 ## opus-2026-03-22-S168 — 2026-03-22: PoS/Blueself/Blackself Through Three Axes
 
 **Account:** opus
