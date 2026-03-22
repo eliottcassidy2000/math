@@ -1,0 +1,90 @@
+======================================================================
+  TOURNAMENT JPEG: LOSSY COMPRESSION VIA THE STAIRCASE
+======================================================================
+
+======================================================================
+  BENCHMARK: COMPRESSION QUALITY AT n=5
+======================================================================
+
+           Method Bits stored  Compression  Mean |ΔH|   Max |ΔH|   ΔH=0 %
+         Q1_score         4.0         2.5x       2.69         10    45.5%
+            Q3_d2         6.0         1.7x       3.47         14    27.5%
+            Q3_d3         3.0         3.3x       4.74         14    16.5%
+
+======================================================================
+  SCALING: COMPRESSION QUALITY AT n=6,7
+======================================================================
+
+  n=6: m=15 total bits
+    Q1 (scores):     5 bits (3.0x compression), mean|ΔH|=9.10, max=34, exact=14%
+    Q3 (range>=3): 6 bits (2.5x compression), mean|ΔH|=13.44, max=38, exact=8%
+  n=7: m=21 total bits
+    Q1 (scores):     6 bits (3.5x compression), mean|ΔH|=38.36, max=116, exact=3%
+    Q3 (range>=3): 10 bits (2.1x compression), mean|ΔH|=40.64, max=112, exact=1%
+
+======================================================================
+  THE TOURNAMENT JPEG ANALOGY
+======================================================================
+
+  JPEG                          TOURNAMENT JPEG
+  --------------------------    --------------------------
+  Image pixels (NxN)            Tournament arcs (C(n,2))
+  DCT transform                 Walsh-Hadamard transform
+  Low frequencies = structure   Order 0+2 = scores (94%)
+  High frequencies = detail     Order 4+ = cycle structure (6%)
+  Quantize: drop high freq      Quantize: drop high Walsh orders
+  Encode: Huffman/arithmetic    Encode: score sequence
+  Quality 90%: small file       Quality 94%: n-1 bits
+  Quality 100%: lossless        Quality 100%: C(n,2) bits
+
+  THE KEY DIFFERENCE:
+  In JPEG, you lose visual detail (edges, textures).
+  In Tournament JPEG, you lose CYCLE STRUCTURE.
+  The ranking (who beats whom in aggregate) is preserved.
+  The specific cycles (A>B>C>A) are lost.
+
+  WHAT'S PRESERVED AT EACH QUALITY:
+  Q1 (score-only, 94%):
+    - Who has the most wins (Copeland ranking)
+    - The overall hierarchy
+    - LOST: specific upset patterns, cycles
+  Q3 (high-range, ~98%):
+    - Top vs bottom matchups
+    - The Hamiltonian cycle structure
+    - LOST: adjacent-rank matchup details
+  Q4 (Walsh order 2, 94.7%):
+    - All pairwise statistics
+    - Score sequence exactly
+    - LOST: 3-cycle and 5-cycle details
+
+  APPLICATIONS:
+  1. STREAMING SPORTS: Broadcast only the score sequence during
+     the tournament. Viewers can reconstruct the likely bracket.
+     Compression: 50x at n=100 teams.
+
+  2. RANKING DATABASES: Store millions of rankings as score sequences.
+     Each takes n-1 numbers instead of C(n,2) bits.
+     Compression: O(n) vs O(n^2). Massive for large n.
+
+  3. ATTENTION MATRIX COMPRESSION: In transformers, store only the
+     "attention scores" (row sums of the attention matrix).
+     Reconstruct the full attention matrix approximately.
+     Savings: O(n) vs O(n^2) per layer.
+
+  4. SOCIAL NETWORK COMPRESSION: A directed social network
+     (who follows whom) can be lossy-compressed to degree sequences.
+     Preserves the "influence" (degree) of each user.
+     LOST: specific follow relationships.
+
+======================================================================
+  COMPRESSION RATIO TABLE
+======================================================================
+
+      n   C(n,2)  Q1 bits  Q1 ratio  Q3 bits  Q3 ratio
+      5       10        4      2.5x        6      1.7x
+     10       45        9      5.0x       15      3.0x
+     20      190       19     10.0x       55      3.5x
+     50     1225       49     25.0x      325      3.8x
+    100     4950       99     50.0x     1275      3.9x
+    500   124750      499    250.0x    31375      4.0x
+   1000   499500      999    500.0x   125250      4.0x
