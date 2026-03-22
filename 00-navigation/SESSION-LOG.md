@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S150 — 2026-03-21: Shadow Compression for Arbitrary Data — Honest Assessment
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S149
+**Summary:** Investigated whether the shadow principle generalizes to arbitrary compression. HONEST ANSWER: the shadow IS PCA/SVD with a tournament-theory interpretation. It doesn't invent new math — it interprets existing math. Benchmarked on 5 data types: low-rank data compresses 94.4% (shadow works great), smooth signals 80.1% (good), random Gaussian 0% (can't compress — no structure), sparse 0.9% (marginal), random tournaments 0% (bits are iid — the OCR operates at a HIGHER level than raw bit PCA). KEY INSIGHT: tournament OCR captures 97% because score→H is a MEANINGFUL projection, but PCA on raw tournament bits doesn't see this because the relationship is NONLINEAR (goes through the independence polynomial). Shadow compression works when: (1) data is low-rank, (2) locally correlated, (3) pairwise statistics sufficient. Fails on: random data, sparse data, iid binary. Shadow + quantization composes: on KV-like data (structured), shadow k=8 achieves 8% of original, shadow+Q8 achieves 2%. The genuine value-add is the INTERPRETATION: OCR as explained variance, multi-scale stack as harmonic series, coding theory giving capacity bounds.
+**New contributions:** shadow_compression_general_s150.py
+**Unresolved threads:** Nonlinear shadow (autoencoder), tournament-aware compression that uses score→H directly
+
+---
+
 ## opus-2026-03-21-S149 — 2026-03-21: Shadow-Based KV Cache Compression — 16/16 Tests Pass
 
 **Account:** opus
