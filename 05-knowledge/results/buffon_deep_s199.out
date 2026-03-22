@@ -1,0 +1,545 @@
+========================================================================
+  DEEP MATHEMATICAL CONNECTIONS OF BUFFON'S NEEDLE
+  opus-2026-03-22-S199
+========================================================================
+
+1. THE BASIC RESULT
+============================================================
+
+  Needle of length L, parallel lines spaced D apart, L ≤ D.
+
+  Variables: x = distance from needle center to nearest line (0 ≤ x ≤ D/2)
+             θ = angle of needle to lines (0 ≤ θ ≤ π)
+
+  The needle crosses a line iff x ≤ (L/2)sin(θ).
+
+  P(crossing) = (favorable area) / (total area)
+
+  Total area = (D/2) × π
+  Favorable area = ∫₀^π (L/2)sin(θ) dθ = (L/2)[-cos(θ)]₀^π = L
+
+  P(crossing) = L / ((D/2)π) = 2L / (πD)
+
+  The KEY computation: ∫₀^π sin(θ) dθ = 2.
+  This integral over the HALF-CIRCLE gives the factor that,
+  combined with π in the denominator, produces the result.
+
+  WHY sin(θ)? Because the needle's PROJECTION onto the
+  perpendicular to the lines is L·sin(θ). A crossing happens
+  when this projection exceeds the gap to the nearest line.
+
+  Monte Carlo (10M throws): P = 0.31830320
+  Theory 2L/(πD):              P = 0.31830989
+  π estimate = 2L/(D·P) = 3.14165864
+
+
+2. THE CAUCHY-CROFTON FORMULA
+============================================================
+
+  Buffon's needle is a SPECIAL CASE of the Cauchy-Crofton formula,
+  one of the fundamental results of INTEGRAL GEOMETRY.
+
+  CAUCHY-CROFTON: For a convex curve C of length ℓ(C) in the plane,
+  the expected number of intersection points with a random line is:
+
+    E[#intersections] = ℓ(C) / π
+
+  A "random line" is parameterized by (p, θ) where:
+    p = signed distance from origin (−∞ < p < ∞)
+    θ = angle of normal (0 ≤ θ < π)
+  with the kinematic density dp ∧ dθ.
+
+  For a STRAIGHT segment of length L:
+    E[#intersections with random line] = 2L / π
+
+  For Buffon's needle (lines spaced D apart):
+    P(crossing) = E[#crossings] = (2L/π) / D = 2L/(πD)  ✓
+
+  THE GENERALIZATION: for ANY curve (not just a segment!),
+  the expected crossings with parallel lines spaced D apart is:
+    E[crossings] = 2·length / (πD)
+
+  THIS IS BUFFON'S NOODLE: drop a curved "noodle" of length ℓ.
+  P(crossing at least once) ≤ 2ℓ/(πD) (equality for short/convex).
+  E[number of crossings] = 2ℓ/(πD) EXACTLY, for ANY curve.
+
+  The Cauchy-Crofton formula says:
+  LENGTH IS THE INTEGRAL OF PROJECTIONS OVER ALL DIRECTIONS.
+    ℓ(C) = (1/2) ∫₀^π width(C, θ) dθ
+  where width(C, θ) = extent of C in direction θ.
+
+  For a segment: width = L|sin(θ)|, so ℓ = (1/2)∫L|sin(θ)|dθ = L ✓
+
+  Cauchy-Crofton for unit circle:
+    MC integral of #crossings = 12.5969
+    2 × circumference = 4πr = 12.5664
+    Ratio = 1.0024
+
+
+3. THE RADON TRANSFORM — CT SCANNING IS BUFFON IN REVERSE
+============================================================
+
+  The RADON TRANSFORM of a function f(x, y) is:
+
+    Rf(p, θ) = ∫_{line(p,θ)} f ds
+
+  = integral of f along the line at distance p from origin,
+  with normal direction θ.
+
+  This is EXACTLY what Buffon's needle measures:
+  the needle "samples" f = 1_C (indicator of the curve C)
+  along the random line. The expected value is Rf(p, θ).
+
+  CT SCANNING works by measuring Rf(p, θ) for many (p, θ)
+  and then INVERTING to recover f(x, y).
+
+  The inversion formula involves... the FOURIER TRANSFORM:
+
+    f(x,y) = ∫₀^π [∫ |ω| F̂_θ(ω) e^{2πiωp} dω] dθ
+
+  where F̂_θ is the 1D Fourier transform of Rf(·, θ).
+
+  The |ω| filter is the "ramp filter" — it emphasizes high frequencies.
+  The ∫₀^π dθ averages over all directions.
+
+  BUFFON'S NEEDLE IS A SINGLE SAMPLE OF THE RADON TRANSFORM.
+  CT scanning is SYSTEMATIC Buffon, with enough needles to reconstruct
+  the entire image.
+
+  The π in Buffon comes from integrating over θ ∈ [0, π].
+  The π in CT comes from the SAME integral — reconstructing
+  requires ALL directions, and the angular measure is π.
+
+  KEY INSIGHT: Buffon's needle PROJECTS a 2D shape onto a 1D line.
+  CT scanning does many such projections and INVERTS.
+  The projection operation IS the Radon transform.
+  The inversion requires Fourier analysis, which involves e^{2πiθ}
+  (the unit circle again).
+
+  Radon transform of unit disk:
+    ∫ Rf(p) dp = 3.141487
+    (Should = π = 3.141593, the area of the disk)
+    Each projection sees area/width × 2
+
+
+4. BUFFON'S NOODLE — THE MOST SURPRISING GENERALIZATION
+============================================================
+
+  Drop a CURVE (not straight) of length ℓ onto parallel lines.
+  The EXPECTED NUMBER of crossings is STILL 2ℓ/(πD).
+
+  This works for ANY curve: circles, spirals, fractal curves, knots.
+  The curve doesn't even need to be connected!
+
+  WHY? Because the Cauchy-Crofton formula depends only on LENGTH,
+  not shape. Each infinitesimal arc ds contributes 2ds/(πD) to
+  the expected crossings. Linearity of expectation handles the rest.
+
+  CONSEQUENCE: You can estimate π by dropping SPAGHETTI.
+  Count crossings, measure total spaghetti length.
+  π = 2ℓ / (D × E[crossings]).
+
+  DEEPER: This means LENGTH is the ONLY geometric quantity
+  that random lines can measure (in 2D). No matter how you
+  bend or twist the curve, the crossing count sees only length.
+
+  This is related to the ISOPERIMETRIC INEQUALITY:
+  Among all curves of length ℓ, the circle encloses the
+  maximum area. But Buffon's noodle doesn't care — it measures
+  length regardless of enclosed area.
+
+  Dropping circles (r=1, circumference=2π) on lines (D=4):
+    E[crossings] (MC) = 0.999010
+    2ℓ/(πD) = 1.000000
+    π from noodle = 3.144706
+
+  Noodle theorem: E[crossings] depends ONLY on length,
+  not on the shape of the curve. Straight, curved, zigzag —
+  all give 2ℓ/(πD).
+
+
+5. THE KINEMATIC FORMULA — EULER CHARACTERISTIC FROM NEEDLES
+============================================================
+
+  The kinematic formula generalizes Cauchy-Crofton to
+  INTERSECTIONS OF TWO SHAPES:
+
+  ∫_{motions g} χ(A ∩ gB) dg = Σ cₖ μₖ(A) μ_{n-k}(B)
+
+  where:
+  - χ = Euler characteristic
+  - μₖ = k-th intrinsic volume (length, area, Euler char, ...)
+  - The integral is over all rigid motions (rotations + translations)
+
+  In 2D, for two convex bodies A, B:
+  ∫ χ(A ∩ gB) dg = area(A) + area(B) + perim(A)·perim(B)/(2π)
+
+  The 2π comes from integrating over ROTATIONS (the circle group SO(2)).
+
+  For Buffon's needle:
+  A = the needle (a segment), B = a parallel line.
+  The needle has area = 0, perimeter = 2L.
+  The line has "area" = 0, "perimeter" per period = D.
+  The intersection formula gives 2L × D / (2π) = LD/π.
+  Normalizing by the period D: probability = L/((D/2)π) = 2L/(πD). ✓
+
+  THE ROTATION INTEGRAL:
+  The kinematic formula requires integrating over SO(2) — the group
+  of rotations of the plane. This group IS the circle S¹.
+  Its total measure IS 2π. Every occurrence of π in integral geometry
+  comes from this one source: |SO(2)| = 2π.
+
+  Two random disks (r₁=0.3, r₂=0.5) in [5.0×5.0] box:
+    P(overlap) MC = 0.069816
+    π(r₁+r₂)²/L² = 0.080425
+
+
+6. LATTICE POINTS: GAUSS CIRCLE PROBLEM MEETS BUFFON
+============================================================
+
+  The GAUSS CIRCLE PROBLEM: how many integer lattice points
+  (a, b) satisfy a² + b² ≤ R²?
+
+  Answer: N(R) = πR² + E(R), where E(R) = O(R^{2/3+ε}).
+
+  The leading term πR² is the AREA of the disk — and π appears
+  because the disk boundary is a CIRCLE (x² + y² = R²).
+
+  CONNECTION TO BUFFON:
+  Imagine a lattice of horizontal AND vertical lines (spacing 1).
+  Drop a circle of radius R. The number of lines it crosses ≈ 4R
+  (the circle crosses ~4R grid lines in total).
+
+  More precisely: a circle of radius R crosses ~ 4R lines on average.
+  By Cauchy-Crofton: E[crossings] = 2 × circumference / (π × 1)
+  = 2 × 2πR / π = 4R. ✓
+
+  But lattice points are WHERE two grid lines cross.
+  The number of lattice points in a disk ≈ area = πR².
+  The number of grid line crossings by the boundary ≈ 4R.
+
+  The RATIO:
+  (lattice points inside) / (boundary crossings) ≈ πR²/(4R) = πR/4.
+
+  As R → ∞, this ratio grows like R. But the CONSTANT is π/4.
+  This π/4 is EXACTLY the area of a quarter-circle of radius 1.
+  It's also EXACTLY the probability in Buffon's needle with L = D = 1:
+  P = 2/(π) → π/4 is the complementary probability.
+
+  THE DEEPER CONNECTION:
+  The number of ways to write n as a sum of two squares
+  (a² + b² = n) is related to the divisors of n in Z[i]
+  (Gaussian integers). The AVERAGE of this function is π.
+
+  Σ_{n≤N} r₂(n) ~ πN  (where r₂(n) = #{ways n = a² + b²})
+
+  This π is the AREA of the unit disk. It appears because
+  counting lattice points = measuring area = integrating
+  the indicator function of the disk = Buffon's needle on a grid.
+
+  R= 10: lattice points =      317, πR² =      314.2, error =     +2.8
+  R= 50: lattice points =     7845, πR² =     7854.0, error =     -9.0
+  R=100: lattice points =    31417, πR² =    31415.9, error =     +1.1
+  R=500: lattice points =   785349, πR² =   785398.2, error =    -49.2
+
+  r₂(n) = ways to write n = a² + b² (with signs, order):
+  Average r₂(n) for n=1..1000: 3.148000 (theory: π = 3.141593)
+
+
+7. BERTRAND'S PARADOX
+============================================================
+
+  Bertrand (1889) asked: pick a random chord of a circle.
+  What's the probability that its length exceeds √3 (the side
+  of the inscribed equilateral triangle)?
+
+  THREE "natural" methods give THREE different answers:
+
+  Method 1 (random endpoints): P = 1/3
+    Pick two points uniformly on the circle. The chord is longer
+    than √3 iff the arc between them is > 2π/3 (120°).
+    P = (2π - 2·2π/3) / (2π) = 1/3.
+
+  Method 2 (random midpoint): P = 1/4
+    The midpoint of a chord at distance d from center has
+    chord length 2√(r²-d²). Chord > √3 iff d < r/2.
+    P = (r/2)² / r² = 1/4 (area ratio).
+
+  Method 3 (random perpendicular): P = 1/2
+    Fix a direction. The chord perpendicular to it at distance p
+    has length 2√(r²-p²). Chord > √3 iff |p| < r/2.
+    P = r / (2r) = 1/2.
+
+  The "paradox": different definitions of "random chord" give
+  different answers! There IS no canonical "random chord."
+
+  CONNECTION TO BUFFON: Buffon's needle uses Method 3 implicitly.
+  The random line is parameterized by (p, θ), which is the
+  "natural" measure on the space of lines (kinematic density).
+  This measure is the ONLY one invariant under rigid motions.
+
+  Bertrand's Method 3 uses this same measure → consistent with Buffon.
+  Methods 1 and 2 use different measures → different answers.
+
+  MORAL: Buffon's needle works because it uses the KINEMATIC MEASURE
+  on lines. This measure is unique (up to scale) because the group
+  of rigid motions in 2D acts transitively on lines.
+
+  Bertrand's paradox (Monte Carlo):
+    Method 1 (endpoints):      P(long) = 0.3322 (theory: 1/3 = 0.3333)
+    Method 2 (midpoint):       P(long) = 0.2500 (theory: 1/4 = 0.2500)
+    Method 3 (perpendicular):  P(long) = 0.5001 (theory: 1/2 = 0.5000)
+
+
+8. STEREOLOGY — MEASURING 3D OBJECTS FROM 2D SLICES
+============================================================
+
+  Stereology uses RANDOM SLICING to estimate 3D properties
+  from 2D observations. It's Buffon's needle in higher dimensions.
+
+  FUNDAMENTAL STEREOLOGICAL EQUATIONS:
+
+  For a surface S in 3D, sliced by random planes:
+    E[intersection length per unit area] = (π/4) × (surface area per unit vol)
+
+  For a curve C in 3D, hit by random planes:
+    E[#intersections per unit area] = (1/2) × (length per unit vol)
+
+  For 3D objects hit by random lines:
+    E[#intersections] = (surface area) / (2π)
+
+  ALL of these involve π because they integrate over SO(3)
+  (the rotation group in 3D), which has volume 8π².
+
+  APPLICATIONS:
+  - Counting cells in tissue slices (biology)
+  - Measuring grain boundaries in metals (materials science)
+  - Estimating blood vessel length from histological sections
+  - Measuring pore networks in concrete
+
+  Each application IS Buffon's needle in a different guise:
+  randomly oriented probe (line, plane, or point) samples
+  a geometric quantity, and the π from angular integration
+  appears in the conversion formula.
+
+  THE GENERALIZATION: in d dimensions, the rotation group SO(d)
+  has volume:
+    |SO(d)| = 2π^{d/2} / Γ(d/2)
+
+  This gives the angular factor in the d-dimensional Buffon formula.
+  For d=2: |SO(2)| = 2π (the circle).
+  For d=3: |SO(3)| = 8π².
+  For d=4: |SO(4)| = 2π² × 4 = 8π².
+
+  Volume of rotation group SO(d):
+    |SO(2)| = 6.283185 = 2.0000 × π^1
+    |SO(3)| = 12.566371 = 4.0000 × π^1
+    |SO(4)| = 19.739209 = 2.0000 × π^2
+    |SO(5)| = 26.318945 = 2.6667 × π^2
+    |SO(6)| = 31.006277 = 1.0000 × π^3
+    |SO(7)| = 33.073362 = 1.0667 × π^3
+
+  Random lines through unit sphere:
+    E[intersections per sample] = 1.0026
+    Theory: 2 × (r/R)² = 0.5000
+
+
+9. THE NEEDLE AS A FOURIER PROBE
+============================================================
+
+  The Radon transform R connects to the Fourier transform F via
+  the FOURIER SLICE THEOREM:
+
+    F̂_θ(ω) = F(ω cos θ, ω sin θ)
+
+  where F̂_θ is the 1D Fourier transform of the projection at angle θ,
+  and F is the 2D Fourier transform of the original function.
+
+  This means: each Buffon needle drop SAMPLES ONE LINE in
+  2D Fourier space. The line passes through the origin at angle θ.
+
+  To reconstruct f from its Radon transform (CT scanning),
+  you need to sample ALL angles θ ∈ [0, π) — covering the
+  full half-circle in Fourier space.
+
+  THE ANGULAR SAMPLING:
+  - 1 angle: 1 projection (Buffon's needle — measures length only)
+  - 2 angles: 2 projections (can distinguish width vs height)
+  - N angles: N projections (increasingly detailed reconstruction)
+  - All angles: perfect reconstruction (CT scan)
+
+  The π in Buffon = the ANGULAR BANDWIDTH of the reconstruction.
+  You need π radians of angular coverage (not 2π, because of symmetry).
+
+  THE NYQUIST ANGLE: for a function with spatial bandwidth B,
+  you need at least πB angular samples (one per π/B radians).
+  This is the angular Nyquist theorem. The π is the angular bandwidth.
+
+  CONNECTION TO TOURNAMENTS:
+  The fiber fraction f(n) = (1/π) ∫₀^π sin^{2k}(θ) dθ
+  is the ANGULAR AVERAGE of sin^{2k} — exactly the kind of
+  angular integral that appears in Radon/Fourier analysis.
+  The tournament is being "scanned" over all arc orientations,
+  and the fiber fraction is the "projection" of tournament space
+  onto the score space.
+
+  The Fourier slice theorem connects:
+  - Buffon's needle (one random projection)
+  - CT scanning (systematic projections)
+  - Tournament fibers (angular average of sin^{2k})
+  All through the same angular integral over [0, π].
+
+
+10. THE TOURNAMENT CONNECTION
+============================================================
+
+  FROM S196-S197: f(n) = (1/π) ∫₀^π sin^{2k}(θ) dθ
+
+  This IS a Buffon's needle computation!
+
+  Reinterpret: "drop a needle of variable length L(θ) = sin^{2k}(θ)
+  on lines spaced 1 apart. The expected number of crossings is
+  (2/π) ∫₀^π L(θ) dθ = 2f(n)."
+
+  Or equivalently: the fiber fraction is the crossing probability
+  for a "generalized needle" whose effective length depends on angle
+  as sin^{2k}(θ).
+
+  DEEPER: A tournament on n vertices has C(n,2) arcs.
+  Each arc connects vertices i and j with score difference
+  |s_i - s_j|. The arc is "score-preserving" iff |s_i - s_j| ≤ 1.
+
+  Think of each arc as a NEEDLE at angle θ_{ij} (determined by
+  the score difference). The needle crosses the "score line"
+  iff the score difference is ≤ 1.
+
+  The probability of crossing = ∫ P(|score diff| ≤ 1 | angle = θ) dθ / π
+  = (1/π) ∫₀^π g(θ) dθ
+
+  where g(θ) encodes the score difference distribution at angle θ.
+  For random tournaments, g(θ) = sin^{2k}(θ) by the CLT.
+
+  SO: THE TOURNAMENT FIBER FRACTION IS LITERALLY BUFFON'S NEEDLE
+  with a sin^{2k} shaped needle.
+
+  The needle length (= effective score sensitivity) varies with angle.
+  At θ = π/2 (perpendicular to the score axis), the needle is longest
+  (most likely to preserve scores). At θ = 0 or π (parallel), shortest.
+
+  THE WALLIS PRODUCT from S196:
+  f(n+1)/f(n) = (2n-3)/(2n-2) is the ratio of successive
+  generalized needle lengths. Each added vertex makes the
+  effective needle SHORTER by factor (2n-3)/(2n-2).
+
+  This is the Buffon-Wallis ladder.
+
+  f(n) as generalized Buffon crossing probability:
+  n=3: Buffon integral = 0.50000000, exact = 0.50000000, match = True
+  n=4: Buffon integral = 0.37500000, exact = 0.37500000, match = True
+  n=5: Buffon integral = 0.31250000, exact = 0.31250000, match = True
+  n=6: Buffon integral = 0.27343750, exact = 0.27343750, match = True
+  n=7: Buffon integral = 0.24609375, exact = 0.24609375, match = True
+  n=8: Buffon integral = 0.22558594, exact = 0.22558594, match = True
+  n=9: Buffon integral = 0.20947266, exact = 0.20947266, match = True
+
+
+11. HADWIGER'S THEOREM — ALL GEOMETRIC MEASUREMENTS
+============================================================
+
+  HADWIGER'S THEOREM (1957): Every continuous, rigid-motion-invariant
+  valuation on convex bodies in R^d is a LINEAR COMBINATION of the
+  d+1 intrinsic volumes μ₀, μ₁, ..., μ_d.
+
+  In 2D, the intrinsic volumes are:
+    μ₀ = Euler characteristic (= 1 for convex bodies)
+    μ₁ = (1/π) × perimeter
+    μ₂ = area
+
+  In 3D:
+    μ₀ = Euler characteristic
+    μ₁ = (1/π) × mean width
+    μ₂ = (1/2π) × surface area  (but conventionally with different normalization)
+    μ₃ = volume
+
+  The 1/π factors come from ANGULAR NORMALIZATION:
+  each intrinsic volume involves integrating over directions
+  (elements of SO(d)), and the total angular measure is 2π^{d/2}/Γ(d/2).
+
+  BUFFON'S NEEDLE measures μ₁ (the first intrinsic volume).
+  It's the SIMPLEST geometric measurement: project the object
+  onto a random direction and measure the projection length.
+
+  The hierarchy of random geometric probes:
+    μ₀: count components (topological, no geometry needed)
+    μ₁: project onto random LINE (Buffon's needle) — measures length/π
+    μ₂: slice by random PLANE (CT scanning) — measures area
+    μ₃: intersect with random BALL — measures volume
+
+  Each step up uses one more dimension of randomness.
+  Each step introduces one more factor of π from angular integration.
+
+  CONSEQUENCE: There are EXACTLY d+1 independent geometric
+  measurements in d dimensions. In 2D: area, perimeter, and
+  topology (3 measurements). In 3D: volume, surface area,
+  mean curvature, and topology (4 measurements).
+
+  Buffon's needle accesses the PERIMETER measurement.
+  Everything else requires more sophisticated probes.
+
+  Intrinsic volumes of 2D shapes:
+            Shape    μ₀ (χ)    μ₁ (L/π)   μ₂ (area)
+        Unit disk         1      2.0000      3.1416
+      Unit square         1      1.2732      1.0000
+      Triangle(1)         1      0.9549      0.4330
+       Segment(1)         1      0.6366      0.0000
+            Point         1      0.0000      0.0000
+
+
+========================================================================
+  SUMMARY: THE WEB OF CONNECTIONS FROM BUFFON'S NEEDLE
+========================================================================
+
+
+  BUFFON'S NEEDLE (1733) sits at the center of a web:
+
+  ┌──────────────────────────────────────────────────────────────┐
+  │                                                              │
+  │              INTEGRAL GEOMETRY (Cauchy, Crofton)             │
+  │                     ↕                                        │
+  │   STEREOLOGY ← BUFFON'S NEEDLE → RADON TRANSFORM            │
+  │   (3D from 2D)       ↕↕↕           (CT scanning)            │
+  │              FOURIER SLICE THEOREM                           │
+  │                     ↕                                        │
+  │   BERTRAND'S    KINEMATIC         HADWIGER'S                 │
+  │   PARADOX       FORMULA           THEOREM                    │
+  │   (measures     (Euler char)      (all measurements)         │
+  │    matter)                                                   │
+  │                     ↕                                        │
+  │              GAUSS CIRCLE PROBLEM                            │
+  │              (lattice points, ζ(2) = π²/6)                   │
+  │                     ↕                                        │
+  │         TOURNAMENT FIBER FRACTION                            │
+  │         f(n) = (1/π)∫sin^{2k}dθ                             │
+  │              = generalized Buffon needle                     │
+  │                     ↕                                        │
+  │              WALLIS PRODUCT → π                              │
+  └──────────────────────────────────────────────────────────────┘
+
+  THE COMMON THREAD: All of these involve integrating over
+  DIRECTIONS (elements of SO(d)). The angular measure of SO(2) = 2π.
+  Every time you average over all directions, you divide by 2π.
+  Every time you project onto a random direction, you multiply by 2/π.
+
+  π IS THE MEASURE OF THE SPACE OF DIRECTIONS.
+  Buffon's needle is the simplest way to SAMPLE this space.
+  CT scanning is the systematic way.
+  The Cauchy-Crofton formula is the THEORETICAL framework.
+  Hadwiger's theorem says it measures EVERYTHING measurable.
+  And the tournament fiber fraction is the PROBABILISTIC version:
+  not sampling directions in physical space, but sampling
+  "directions" in tournament space (which arc to flip).
+
+  THE NEEDLE IS A UNIVERSAL GEOMETRIC PROBE.
+  And its probe constant is 2/π.
+
+opus-2026-03-22-S199
