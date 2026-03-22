@@ -1,0 +1,350 @@
+
+========================================================================
+  PART 1: PREFERENCE AGGREGATION
+========================================================================
+
+  SCENARIO: 5 candidates {A, B, C, D, E} in a round-robin evaluation.
+  Each pair is compared; majority determines the arc direction.
+
+  Tournament:
+    A beats: B, C, D (score = 3)
+    B beats: C, E (score = 2)
+    C beats: D, E (score = 2)
+    D beats: B, E (score = 2)
+    E beats: A (score = 1)
+
+  H (consistent rankings) = 15 out of 5! = 120 total
+  Fraction consistent: 12.5%
+  Landau irregularity S_2 = 2.0
+  3-cycle count = 4 (out of C(5,3) = 10 triples)
+
+  KEMENY OPTIMAL RANKING (minimizes disagreements):
+    1. A (score = 3)
+    2. B (score = 2)
+    3. C (score = 2)
+    4. D (score = 2)
+    5. E (score = 1)
+  Kemeny distance = 2 (out of C(5,2) = 10 arcs)
+
+  COPELAND RANKING (by win count):
+    1. A (score = 3)
+    2. B (score = 2)
+    3. C (score = 2)
+    4. D (score = 2)
+    5. E (score = 1)
+
+  ARC SENSITIVITY (dH when arc is reversed):
+  Positive = reversing this result INCREASES consistency
+  Negative = reversing this result DECREASES consistency
+    E beats A: dH = -12 (H would become 3)
+    B beats C: dH = -6 (H would become 9)
+    C beats D: dH = -6 (H would become 9)
+    D beats B: dH = -6 (H would become 9)
+    A beats B: dH = -2 (H would become 13)
+
+  THE MOST CRITICAL ARC: reversing it changes H the most.
+  E -> A: |dH| = 12
+  This is the most 'controversial' comparison result.
+
+========================================================================
+  PART 2: CONSENSUS MEASUREMENT
+========================================================================
+
+  Three metrics for 'how much consensus':
+
+  1. CONSISTENCY RATIO: H/n! = 15/120 = 0.1250
+     Interpretation: 12.5% of all possible rankings are
+     consistent with the pairwise results.
+
+  2. NORMALIZED H: (H - 1) / (15 - 1) = 1.0000
+     0 = perfectly transitive (clear hierarchy)
+     1 = maximally cyclic (no clear winner)
+
+  3. LANDAU IRREGULARITY S_2 = 2.0
+     S_2 = 0 means perfectly balanced (regular tournament)
+     S_2 = 10.0 means perfectly hierarchical (transitive)
+     Current: 20.0% of the way from balanced to hierarchical
+
+  4. SCORE DETERMINATION (OCR):
+     At n=5, scores determine 97.0% of H variance (OCR = 0.970).
+     The remaining 3%% comes from the CYCLE STRUCTURE.
+     If two tournaments have the same scores but different H,
+     the one with more directed 3-cycles has higher H.
+
+========================================================================
+  PART 3: MANIPULATION DETECTION
+========================================================================
+
+  The MEAN REVERSION property of G_n provides a manipulation test.
+
+  Expected H for random tournament: E[H] = 5!/2^4 = 7.50
+  Observed H = 15
+  Deviation: H - E[H] = 7.50
+
+  Z-score: (H - E[H]) / std(H) = (15.0 - 7.50) / 3.59 = 2.09
+
+  WARNING: H is > 2 standard deviations from expected.
+  This tournament may have unusual structure.
+  HIGH H suggests: many cycles, competitive balance,
+  possibly STRATEGIC VOTING (voters creating cycles to prevent
+  any single candidate from being Condorcet winner).
+
+  NEUTRAL ARCS: 0 / 10 arcs can be reversed without changing H.
+  Every comparison result matters — the tournament is 'taut'.
+
+========================================================================
+  PART 4: RANKING STABILITY
+========================================================================
+
+  How sensitive is the ranking to changing ONE comparison result?
+
+  Top 5 most disruptive arc reversals:
+    Reverse A beats C: dH=-2, Kendall tau=3, new: C > A > D > B > E
+    Reverse A beats D: dH=-2, Kendall tau=3, new: D > A > B > C > E
+    Reverse B beats E: dH=-2, Kendall tau=3, new: A > C > D > E > B
+    Reverse C beats E: dH=-2, Kendall tau=3, new: A > D > B > E > C
+    Reverse B beats C: dH=-6, Kendall tau=2, new: A > C > D > B > E
+
+  Average Kendall tau change: 1.80 (out of C(5,2) = 10 max)
+  Maximum Kendall tau change: 3
+  STABILITY SCORE: 82.0% (higher = more robust ranking)
+
+========================================================================
+  PART 5: SPORTS ROUND-ROBIN ANALYSIS
+========================================================================
+
+  SCENARIO: 6-team round-robin league season.
+
+  STANDINGS:
+    1. Lions (4-1)
+    2. Tigers (3-2)
+    3. Bears (3-2)
+    4. Eagles (2-3)
+    5. Sharks (2-3)
+    6. Wolves (1-4)
+
+  TOURNAMENT METRICS:
+    H (consistent standings) = 31 out of 6! = 720
+    Consistency ratio: 4.31%
+    Expected H (random): 22.5
+    Deviation: H - E[H] = 8.5
+    3-cycles: 6 (upset triangles)
+    Landau S_2 = 5.5 (higher = clearer hierarchy)
+
+  SCORE DETERMINATION:
+    Win counts determine ~96%% of H variance at n=6 (OCR=0.959).
+    The remaining 4%% = cycle structure beyond win counts.
+    Two teams with the same record may differ by STRENGTH OF SCHEDULE.
+
+  UPSET ANALYSIS (arcs contradicting the score-based ranking):
+    UPSET: Tigers (record 3-2) beat Lions (record 4-1)
+    UPSET: Sharks (record 2-3) beat Tigers (record 3-2)
+    UPSET: Wolves (record 1-4) beat Bears (record 3-2)
+
+========================================================================
+  PART 6: ELECTION ANALYSIS
+========================================================================
+
+  CONDORCET PARADOX DETECTION
+
+  A CONDORCET WINNER exists iff some vertex has score n-1 = 4.
+  In our example: A has score 4.
+  Condorcet winner: NONE (Condorcet paradox!)
+  H = 15, 3-cycles = 4
+
+  THE CONDORCET PARADOX occurs when there is NO candidate who
+  beats all others. This creates CYCLES in the majority preferences.
+  H measures how many total orderings are consistent with these cycles.
+  High H = many cycles = strong paradox = no clear winner.
+
+  P(Condorcet winner) for random 5-candidate election:
+    Asymptotic formula: 0.6667
+    Exact (from our data): can be computed from the iso class table
+    Exact P(Condorcet winner) at n=5: 320/1024 = 0.312500
+
+========================================================================
+  PART 7: H AS A RANKING QUALITY METRIC
+========================================================================
+
+
+  THE KEY INSIGHT: H(T) measures the AMBIGUITY of the pairwise data.
+
+  H = 1 (transitive): There is exactly ONE consistent ranking.
+       The pairwise results give a PERFECT linear order.
+       This is the BEST case for aggregation — no ambiguity.
+
+  H = n!/2^{n-1} (expected for random): No meaningful structure.
+       The pairwise data is essentially random.
+       Aggregation is meaningless.
+
+  H = H_max (regular): MAXIMUM ambiguity.
+       Many rankings are equally consistent.
+       This is the WORST case for aggregation.
+
+  THE H-QUALITY SCORE:
+       Q = 1 - (H - 1) / (H_max - 1)
+       Q = 1 means perfect transitivity
+       Q = 0 means maximum ambiguity
+
+  H =  1 (transitive): Q = 1.000
+  H =  5 (moderate): Q = 0.714
+  H =  9 (competitive): Q = 0.429
+  H = 15 (maximally cyclic): Q = 0.000
+
+  APPLICATION: In hiring committees, grant panels, or product reviews:
+  - Compute pairwise preferences from panelists
+  - Build the majority tournament T
+  - Compute H(T) and the quality score Q
+  - If Q is high: the panel has clear consensus, trust the ranking
+  - If Q is low: the panel disagrees fundamentally, need discussion
+  - The OCR tells you: how much of the disagreement is from
+    individual quality differences (scores) vs genuine preference cycles
+
+
+========================================================================
+  PART 8: PRODUCTION API DESIGN
+========================================================================
+
+
+class TournamentAnalyzer:
+    '''Production API for preference aggregation using tournament theory.'''
+
+    def __init__(self, n_candidates):
+        self.n = n_candidates
+        self.A = [[0]*n_candidates for _ in range(n_candidates)]
+
+    def add_comparison(self, winner, loser):
+        '''Record that winner beats loser.'''
+        self.A[winner][loser] = 1
+
+    def from_vote_matrix(self, votes):
+        '''Build from pairwise vote counts (majority wins).'''
+        for i in range(self.n):
+            for j in range(self.n):
+                if i != j and votes[i][j] > votes[j][i]:
+                    self.A[i][j] = 1
+
+    def consistency_count(self):
+        '''H(T) = number of consistent total rankings.'''
+        return count_hp(self.A, self.n)
+
+    def quality_score(self):
+        '''Q in [0,1]: 1 = perfect hierarchy, 0 = max ambiguity.'''
+        H = self.consistency_count()
+        # H_max depends on n; use formula or lookup
+        H_max_approx = factorial(self.n) / 2**(self.n - 1)  # E[H] as proxy
+        return max(0, 1 - (H - 1) / max(H_max_approx - 1, 1))
+
+    def copeland_ranking(self):
+        '''Ranking by win count (Copeland scores).'''
+        scores = score_sequence(self.A, self.n)
+        return sorted(range(self.n), key=lambda i: -scores[i])
+
+    def kemeny_ranking(self):
+        '''Optimal ranking minimizing disagreements (exact, small n only).'''
+        return best_kemeny_ranking(self.A, self.n)
+
+    def critical_comparisons(self, top_k=5):
+        '''Find the most impactful comparisons to recheck.'''
+        sens, H = arc_sensitivity(self.A, self.n)
+        sorted_arcs = sorted(sens.items(), key=lambda x: -abs(x[1]))
+        return sorted_arcs[:top_k]
+
+    def condorcet_winner(self):
+        '''Find Condorcet winner if one exists, else None.'''
+        scores = score_sequence(self.A, self.n)
+        for i in range(self.n):
+            if scores[i] == self.n - 1:
+                return i
+        return None
+
+    def upset_fraction(self):
+        '''Fraction of arcs inconsistent with score-based ranking.'''
+        scores = score_sequence(self.A, self.n)
+        upsets = 0
+        for i in range(self.n):
+            for j in range(self.n):
+                if i != j and self.A[i][j] and scores[i] < scores[j]:
+                    upsets += 1
+        return upsets / (self.n * (self.n - 1))
+
+    def stability_score(self):
+        '''Fraction of comparisons whose reversal preserves the Kemeny ranking.'''
+        perm_base, _ = self.kemeny_ranking()
+        stable = 0; total = 0
+        for i in range(self.n):
+            for j in range(self.n):
+                if i != j and self.A[i][j]:
+                    A2 = [row[:] for row in self.A]
+                    A2[i][j] = 0; A2[j][i] = 1
+                    perm2, _ = best_kemeny_ranking(A2, self.n)
+                    if list(perm2) == list(perm_base):
+                        stable += 1
+                    total += 1
+        return stable / total if total > 0 else 1.0
+
+USAGE:
+  analyzer = TournamentAnalyzer(5)
+  analyzer.add_comparison(0, 1)  # candidate 0 beats candidate 1
+  analyzer.add_comparison(0, 2)
+  ...
+  H = analyzer.consistency_count()
+  Q = analyzer.quality_score()
+  ranking = analyzer.copeland_ranking()
+  critical = analyzer.critical_comparisons()
+
+APPLICATIONS:
+  - HIRING: Compare candidates pairwise, find consensus ranking
+  - SPORTS: Analyze round-robin results, detect upsets
+  - ML: Compare models pairwise (A/B tests), aggregate into ranking
+  - ELECTIONS: Detect Condorcet paradox, measure consensus quality
+  - PRODUCT DESIGN: Rank features by pairwise preference data
+  - SEARCH ENGINES: Aggregate pairwise relevance judgments
+
+
+========================================================================
+  SYNTHESIS: TOURNAMENT THEORY IN PRACTICE
+========================================================================
+
+
+THE CORE VALUE PROPOSITION:
+
+Tournament theory provides EXACT formulas for preference aggregation
+that go beyond simple vote counting:
+
+1. H(T) = I(Omega, 2) gives the EXACT number of consistent rankings.
+   No other method provides this. Standard methods (Copeland, Borda)
+   give A ranking but don't tell you HOW MANY rankings are equally good.
+
+2. The OCR (97% at n=5, 96% at n=6) tells you that WIN COUNTS
+   determine almost everything. The cycle structure contributes only 3-4%.
+   This justifies using simple score-based rankings in practice:
+   they capture 96-97% of the information.
+
+3. The MEAN REVERSION property of G_n tells you that:
+   - Extremely structured results (low H) are UNSTABLE —
+     small changes push toward more ambiguity
+   - Extremely cyclic results (high H) are also UNSTABLE —
+     small changes push toward more structure
+   - The equilibrium is at E[H] = n!/2^{n-1}
+
+4. The ARC SENSITIVITY profile identifies CRITICAL COMPARISONS:
+   which pairwise results, if changed, would most affect the consensus.
+   This guides where to invest in additional data collection.
+
+5. The CONDORCET PARADOX probability (measurable from H and cycle count)
+   tells you whether a clear winner even EXISTS in the pairwise data.
+
+COMPETITIVE ADVANTAGES OVER EXISTING METHODS:
+  - Kemeny: NP-hard to compute. Tournament theory provides QUALITY METRICS
+    that indicate when Kemeny is needed vs when Copeland suffices.
+  - Elo: sequential, assumes transitivity. Tournament theory handles cycles.
+  - PageRank: works on directed graphs but doesn't count consistent orderings.
+  - Bradley-Terry: parametric model. Tournament theory is non-parametric.
+
+THE PUNCHLINE: A tournament IS a preference relation.
+H(T) = I(Omega, 2) IS the preference aggregation formula.
+The OCR IS the quality metric.
+G_n IS the dynamics of preference change.
+
+Done. opus-2026-03-22-S168
