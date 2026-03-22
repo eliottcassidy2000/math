@@ -13,50 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## kind-pasteur-2026-03-21-S18e — 2026-03-21: The Modular Tournament — {2,3,5}/{2,3,7}/{2,3,inf} unification, 1729 bridge
-
-**Account:** kind-pasteur
-**Summary:** Integrated opus-S120 ({2,3,7}) and opus-S131 ({3,inf}) with alphabet/code/skeleton framework. Three triangle groups control three aspects: {2,3,5}=what's easy, {2,3,7}=what's forbidden, {2,3,inf}=what's possible. Three orbifold points = cycle origin (j=0), self-complementary (j=1728), transitive cusp (j=inf). 1729 = j(i)+1 = 7*13*19 (tournament primes). Delta_T=(H-1)/2 is base-2 cycle packing. g(phi)=-1, g(tau)=0, g(2)=+1 classifies the three regimes.
-**New contributions:** HYP-1726..1729, the-modular-tournament.md, modular_tournament_s18e.py
-
----
-
-## opus-2026-03-21-S131 — 2026-03-21: The {3,inf} Coxeter Structure — gap function, modular group, binary skeleton synthesis
-## kind-pasteur-2026-03-21-S18d — 2026-03-21: The Tournament Alphabet — q-tournament family, even-alphabet parity law, forbidden values are q-specific
----
-
-## opus-2026-03-21-S121 — 2026-03-21: Tutte Polynomial Bridge — F(T,1)=I(Ω,2)=H, 3-level web, partition function unification
+## opus-2026-03-21-S132 — 2026-03-21: Tutte polynomials and the tournament alphabet
 
 **Account:** opus
-**Summary:** Merged Tutte polynomials into the tournament framework. Built the 3-level polynomial web: Level 0 (tournament), Level 1 (F, W, I), Level 2 (B-polynomial, Tutte, multivariate), Level 3 (curvature g, Eulerian A_n). Connected to kind-pasteur S18c's coding theory parallel. Computed F(T,x) and I(Ω,x) at multiple evaluations. Key finding: H = I(Ω,2) IS a multivariate Tutte specialization (via clique polynomial of complement). Proposed the "tournament Tutte polynomial" P(T;x,y) as open challenge.
-**Key:**
-1. **F(T,1) = I(Ω,2) = H**: descent polynomial at 1 = independence polynomial at 2. Different polynomials, same evaluation.
-2. **I(Ω,-1)**: the Euler characteristic of the independence complex. Takes value 1 for transitive, varies for others.
-3. **F(T,-1) = 1 for all odd-n tournaments**: the signed path count is universal (complement involution).
-4. **H IS a multivariate Tutte specialization**: I(G,x) = clique polynomial of complement(G), which specializes from multivariate Tutte.
-5. **The B-polynomial** (arXiv:1610.01839): directed Tutte generalization. The conjectured master: B(T)→I(Ω)→H.
-6. **3-level polynomial web**: tournament → polynomial invariants → Tutte-like → universal classifiers
-7. **Open challenge**: find P(T;x,y) with P(T;1,y)=F(T,y) and P(T;x,2)=I(Ω(T),x)
-**Scripts:** tutte_polynomial_bridge_s121.py
-
----
-
-## kind-pasteur-2026-03-21-S18c — 2026-03-21: Tournaments as Codes — partition function bridge, Greene's theorem parallel, SRCP as distance
-
-**Account:** kind-pasteur
-**Continuation of:** kind-pasteur-2026-03-21-S18c
-**Summary:** Deep exploration of what it means for a mathematical object to "have an alphabet." Identified three nested alphabets: binary arc alphabet, cycle alphabet, fugacity alphabet. The evaluation point x=2 is the alphabet, forced by the k-nacci universality tau+tau^{-3}=2. Defined the q-tournament H_q(T)=I(Omega,q) and computed exhaustively at n=5. DISCOVERED the even-alphabet parity law (HYP-1724): I(Omega,q) is always odd iff q is even. This proves Redei parity is a trivial consequence of alpha_0=1 at even evaluation points; the DEEP content is the OCF itself. Found that forbidden values are alphabet-specific (gap={4} at q=1, gap={7} at q=2). Connected to chromatic polynomials, Jones polynomials, Ehrhart polynomials, formal groups as other "alphabeted" structures. Proposed the "alphabet = canonical evaluation point" principle for all partition-function-bearing mathematical objects.
-**New contributions:** HYP-1724..1725, T108..T111 (from S18c), the-tournament-alphabet.md, q_tournament_alphabet_s18d.py
+**Continuation of:** opus-2026-03-21-S131
+**Summary:** Merged Tutte polynomials and coding theory alphabet into the {3,∞} framework. Key discoveries: (1) H = 1+2|Ω| at n=5 where |Ω| counts ALL directed odd cycles — Ω is always complete at n=5 by pigeonhole. (2) The alphabet size q=2 IS the fugacity λ=2 — evaluating I(Ω,q) counts q-ary weightings. (3) The Tutte polynomial of Ω (using only 3-cycle vertex sets) FAILS to determine H because it misses 5-cycle structure. (4) Three-level Tutte hierarchy: T(K_n) background, T(Ω) conflict, I(Ω,x)+SRCP complete. (5) At n=5, c₃=4 for all three H values {11,13,15} in score (1,2,2,2,3) — only c₅ distinguishes them (1,2,3 five-cycles respectively). (6) Alphabet-fugacity-curvature triangle unified: q=λ=2, g(2)=+1.
+**New contributions:** tutte_alphabet_s132.py, tutte_alphabet_deep_s132.py
 **Unresolved threads:**
-- Prove even-alphabet law for all n (should be immediate from the alpha_0=1 argument)
-- What is the forbidden value at q=4? Does the gap pattern generalize?
-- The tau-decomposition correction is larger than expected for regular tournaments — investigate
-- Can we define a "chromatic tournament number" analogous to chromatic number?
-- Formalize the Ehrhart polynomial of the tournament score polytope
+- Extend all-directed-odd-cycle analysis to n=6,7
+- Does I(Ω_directed, x) as a full polynomial determine H beyond n=5?
+- Compute the multivariate Tutte polynomial (Sokal) for tournaments
+- Is there a ribbon graph / Bollobás-Riordan extension that captures everything?
 
 ---
 
-## kind-pasteur-2026-03-21-S18c — 2026-03-21: Tournaments as Codes — partition function bridge, Greene's theorem parallel, SRCP as distance
+## opus-2026-03-21-S131 — 2026-03-21: The {3,∞} Coxeter Structure — gap function, modular group, binary skeleton synthesis
 
 **Account:** opus
 **Continuation of:** opus-2026-03-21-S130 (context overflow, rebuilt)
