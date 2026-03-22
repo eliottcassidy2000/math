@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S168 — 2026-03-22: PoS/Blueself/Blackself Through Three Axes
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S167
+**Summary:** Deep investigation of PoS, blueself (SC), blackself through the three-axis framework. NEW SEQUENCES: blueself count = 8,48,704,7040 (n=3..6). At n=3: ALL 8 tournaments are blueself (100%). Fraction drops: 100%→75%→68.8%→21.5%. Blueself mean arb = 8.27 vs blackself 6.80 (SC tournaments are more tree-rich). Total arborescences by H: H=1→24, H=11→48 (unique), H=13→49=7² (unique!), H=15→{49,55}. PoS class (1,2,2,2,3) decomposes into 6+ subgroups by (H, SC, kings, L, HC). At PoS with H=15: SC tournaments have HC=3, L=0 (T→S extreme), non-SC have HC=2, L=5 (regular). 10 distinct (H,kings,SC) triples. SC-achievable H = {3,5,9,11,13,15}. H=1 is blackself-only (transitive is never SC at odd n). Key finding: total_arb=49=7² at H=13 (the unique kings=4 class) — the forbidden prime squared appears as an arborescence count!
+**New contributions:** pos_blueself_deep_s168.py
+**Unresolved threads:** Prove total_arb=49 at H=13, extend blueself sequence, investigate why SC→higher arb, connect to staircase structure
+
+---
+
 ## opus-2026-03-22-S167 — 2026-03-22: Blue Skeleton — Arborescences, Kings, L, Three Independent Axes
 
 **Account:** opus
