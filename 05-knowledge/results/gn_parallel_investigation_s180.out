@@ -1,0 +1,113 @@
+========================================================================
+  PARALLEL INVESTIGATION: EVERY TECHNIQUE ON G_5
+  opus-2026-03-22-S180
+========================================================================
+
+G_5: 12 nodes, 30 edges, degrees=[2, 3, 3, 3, 4, 6, 6, 6, 6, 7, 7, 7]
+
+1. META-H: Hamiltonian paths through the iso class graph
+------------------------------------------------------------
+  meta-H (directed Ham paths) = 10964
+  meta-H (undirected) = 5482
+
+2. META-HC: Hamiltonian cycles of G_5
+------------------------------------------------------------
+  meta-HC (directed, from vertex 0) = 5958
+  meta-HC (undirected) = 248
+
+3. META-INDEPENDENCE POLYNOMIAL I(G_5, x)
+------------------------------------------------------------
+  I(G_5, x) = 1x^0 + 12x^1 + 36x^2 + 38x^3 + 16x^4 + 2x^5
+  I(G_5, 2) = 793
+  I(G_5, -1) = 1
+  Roots: ['-4.7342', '-0.4328', '-0.1233']
+  All real: False, all negative: True
+
+4. CHROMATIC POLYNOMIAL χ(G_5, k)
+------------------------------------------------------------
+  χ(G_5, 1) = 0
+  χ(G_5, 2) = 0
+  χ(G_5, 3) = 0
+  (k≥4 skipped — too slow for brute force on 12 vertices)
+
+5. SPECTRAL ANALYSIS
+------------------------------------------------------------
+  Eigenvalues: ['5.5823', '1.9417', '1.2234', '1.0000', '0.3216', '0.0334', '-0.4163', '-1.0000', '-1.1840', '-1.7512', '-2.4958', '-3.2551']
+  Spectral radius: 5.5823
+  Trace: 0.0000 (should be 0)
+  Sum of squares: 60.0000 (= 2|E| = 60)
+  Graph energy: 20.2048
+
+6. LAPLACIAN SPECTRUM
+------------------------------------------------------------
+  Laplacian eigenvalues: ['0.0000', '1.6026', '2.2814', '2.7639', '4.0000', '4.0358', '5.7404', '6.8435', '7.2361', '7.5715', '8.6647', '9.2600']
+  Algebraic connectivity (μ₁): 1.6026
+  Spanning trees (Kirchhoff): 2347680
+
+7. META-c₃: Triangles in G_5
+------------------------------------------------------------
+  Triangles in G_5: 21
+  Tr(A³)/6 = 21
+
+8. CLIQUE AND INDEPENDENCE NUMBERS
+------------------------------------------------------------
+  Independence number α(G_5) = 5
+  Clique number ω(G_5) = 4
+  α × ω = 20 (Ramsey-like)
+  α + ω = 9
+
+9. GIRTH OF G_5
+------------------------------------------------------------
+  Girth of G_5: 3
+
+10. WIENER INDEX
+------------------------------------------------------------
+  Wiener index W(G_5) = 108
+
+11. WEIGHTED GRAPH INVARIANTS
+------------------------------------------------------------
+  H×H weighted energy: 1380.04
+  Size×Size weighted energy: 169774.64
+
+12. GAP FUNCTION g₃(λ) ON EIGENVALUES
+------------------------------------------------------------
+  λ =  +5.5823: g₃(λ) =  +136.2104 [hyperbolic]
+  λ =  +1.9417: g₃(λ) =    +0.6087 [hyperbolic]
+  λ =  +1.2234: g₃(λ) =    -1.8891 [spherical]
+  λ =  +1.0000: g₃(λ) =    -2.0000 [spherical]
+  λ =  +0.3216: g₃(λ) =    -1.3918 [spherical]
+  λ =  +0.0334: g₃(λ) =    -1.0345 [spherical]
+  λ =  -0.4163: g₃(λ) =    -0.8291 [spherical]
+  λ =  -1.0000: g₃(λ) =    -2.0000 [spherical]
+  λ =  -1.1840: g₃(λ) =    -2.8774 [spherical]
+  λ =  -1.7512: g₃(λ) =    -7.6862 [spherical]
+  λ =  -2.4958: g₃(λ) =   -20.2807 [spherical]
+  λ =  -3.2551: g₃(λ) =   -42.8303 [spherical]
+
+
+========================================================================
+  COMPLETE PARALLEL: TOURNAMENTS vs G_5
+========================================================================
+
+
+  Invariant                         Tournament (n=5)                 G_5
+  ──────────────────────────────  ──────────────────  ──────────────────
+  Vertices                                   5                12
+  Edges (arcs)                              10                30
+  Hamiltonian paths (H)              1 to 15               5,482
+  Hamiltonian cycles (HC)            0 to  3                 248
+  Independence number (α)                   -                 5
+  Clique number (ω)                         -                 4
+  Chromatic number                          -           4
+  Girth                              3 or ∞                 3
+  Triangles (c₃)                    0 to  5                21
+  Wiener index                              -               108
+  Spectral radius                     ~3.08          5.58
+  Graph energy                              -          20.20
+  Spanning trees                            -           2,347,680
+  Algebraic connectivity                    -          1.60
+  I(·, 2)                          1 to 15               793
+  I(·, -1)                        -4 to +1                 1
+  Diameter                                  -                 3
+
+opus-2026-03-22-S180

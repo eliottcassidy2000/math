@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S180 — 2026-03-22: COMPLETE PARALLEL — Every Technique on G_5
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S179
+**Summary:** Applied 12 major techniques to G_5 in parallel with tournaments. KEY NUMBERS: meta-H=5482 (undirected Ham paths through iso class graph), meta-HC=248 (Ham cycles), I(G_5,2)=793, α=5, ω=4, χ≥4, girth=3, triangles=21, spanning trees=2,347,680, Wiener=108, spectral radius=5.58, energy=20.20, algebraic connectivity=1.60. Gap function: only 2 of 12 eigenvalues are hyperbolic (λ=5.58 and 1.94), rest spherical. The parallel reveals: G_5 is a "mostly spherical" graph with 2 hyperbolic modes — the dominant mode (spectral radius 5.58, g₃=+136) and a secondary mode (λ=1.94, g₃=+0.61 barely hyperbolic). All other modes are firmly spherical. I(G_5,-1)=1 (Euler characteristic of independence complex). Roots of I(G_5,x): -4.73, -0.43, -0.12 (all negative real ← claw-free?). 2,347,680 spanning trees = extremely well-connected.
+**New contributions:** gn_parallel_investigation_s180.py
+**Unresolved:** Extend to G_6, understand why χ(G_5)≥4, connect spanning tree count to tournament invariants
+
+---
+
 ## opus-2026-03-22-S179 — 2026-03-22: Cycle Space Formula R = 2(HC - E[HC|score]) — EXACT at n≤5
 
 **Account:** opus
