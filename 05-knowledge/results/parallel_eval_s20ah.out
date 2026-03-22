@@ -1,0 +1,77 @@
+======================================================================
+  PARALLEL EVALUATION: TOURNAMENT T_5 vs ISO CLASS GRAPH G_5
+======================================================================
+
+  Building G_5 from tournament iso classes at n=5...
+  G_5: 12 vertices, 30 undirected edges
+  T_5 (regular): H = 15
+
+======================================================================
+  PARALLEL EVALUATION TABLE
+======================================================================
+
+                  Invariant |        T_5 (regular) |      G_5 (iso class) | Interpretation
+  --------------------------+----------------------+----------------------+-------------------------------
+               Vertices (n) |                    5 |                   12 | T has 5 players; G has 12 iso classes
+               Edges (arcs) |                   10 |                   30 | T has 10 arcs; G has 30 undirected edges
+                    Density |                  1.0 |  0.45454545454545453 | T is complete (1.0); G is sparse
+           Score/Degree seq | (np.int64(2), np.int | (np.int64(2), np.int | 
+              H (Ham paths) |                   15 |                10964 | 
+            HC (Ham cycles) |                    2 |                  232 | 
+               L = H - n*HC |                    5 |                 8180 | 
+              c3 (3-cycles) |                    5 |                   42 | Directed 3-cycles in digraph
+         Strongly connected |                 True |                 True | 
+                      Kings |                    5 |                    6 | Vertices reaching all others in <=2 steps
+     Arborescences (root=0) |                   11 |              2347680 | Directed spanning trees
+            Spectral radius |               2.0000 |               5.5823 | Largest |eigenvalue|
+         Eigenvalues (real) | ['2.00', '-0.50', '- | ['5.58', '1.94', '1. | 
+        Independence number |                    1 |                    5 | Max set with no arcs between
+                    I(G, 2) |                   11 |                  793 | Independence polynomial at x=2
+             I(G, x) coeffs |   [1, 5, 0, 0, 0, 0] | [1, 12, 36, 38, 16,  | 
+   Chromatic # (undirected) |                    5 | <=5 (G_5 has max deg | 
+                   Diameter |                    2 |                    3 | 
+           Girth (directed) |                    3 |                    2 | Shortest directed cycle
+
+======================================================================
+  WHAT THE PARALLEL EVALUATION TEACHES
+======================================================================
+
+  T_5: H = 15, I(Omega(T_5), 2) = ... (need conflict graph)
+  G_5: H = 10964, I(G_5, 2) = 793
+  Note: I(G_5, 2) counts independent sets of ISO CLASSES weighted by 2^k
+
+  OCF CHECK ON G_5 AS DIGRAPH:
+  G_5 is a bidirected graph (each undirected edge = 2 directed arcs)
+  H(G_5) = 10964 (directed Hamiltonian paths in the bidirected graph)
+  This counts paths that can go in either direction along each edge.
+
+  KEY RATIOS:
+  H(G_5) / H(T_5) = 10964 / 15 = 730.93
+  H(G_5) / 12! = 10964 / 479001600 = 2.288928e-05
+  H(T_5) / 5! = 15 / 120 = 0.1250
+
+  E[H] at n=12 (random tournament) = 233887.5
+  H(G_5) / E[H](12) = 0.0469
+  G_5 has FEWER Ham paths than a random 12-tournament
+
+  INDEPENDENCE POLYNOMIALS:
+  I(T_5, x) = 1x^0 + 5x^1
+  I(G_5, x) = 1x^0 + 12x^1 + 36x^2 + 38x^3 + 16x^4 + 2x^5
+  I(T_5, 2) = 11
+  I(G_5, 2) = 793
+  I(T_5, x) has all real roots: True
+  I(G_5, x) has all real roots: False
+
+  SUMMARY OF PARALLELS AND CONTRASTS:
+  T_5 is a tournament (complete, directed, n=5)
+  G_5 is a graph (sparse, undirected->bidirected, n=12)
+
+  T_5: H=15 (max possible). Regular. Strongly connected.
+  G_5: H=10964. Degree sequence [np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(6), np.int64(6), np.int64(6), np.int64(6), np.int64(7), np.int64(7), np.int64(7)].
+        Connected: True. Kings: 6.
+
+  THE DEEP PARALLEL:
+  T_5 is the MAXIMIZER within 5-tournaments.
+  G_5 is the STRUCTURE of the space of 5-tournaments.
+  Evaluating G_5 with tournament invariants tells us
+  about the TOPOLOGY of tournament space itself.
