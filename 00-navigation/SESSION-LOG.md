@@ -13,6 +13,33 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S188-S195 — 2026-03-22: Erdős-Gallai/Landau Deep Merger — Score Fiber Bundle, H_max=A038375
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S187
+**Summary:** Marathon session merging Erdős-Gallai and Landau theorems into the G_n investigation. 8 scripts (S188-S195):
+
+**S188:** Erdős-Gallai/Landau basic merger. Landau conditions characterize valid score sequences (A000571: 1,2,4,9,22,59,167). Erdős-Gallai applied to G_n's own degree sequence [7,7,7,6,6,6,6,4,3,3,3,2]. Score sequences as polytope codes with increasing rate.
+
+**S189:** Deep Landau polytope. Slack analysis (transitive=boundary, regular=interior). Majorization lattice with cover relations. **CORRELATION(S₂, mean H) = -0.9895** — score variance almost perfectly predicts H. Strong score sequences (Fulkerson): 33% at n=5.
+
+**S190:** Score fiber bundle. H ≈ 15 - 1.5×S₂ (R²=0.98 at n=5). Only 31% of arc flips preserve scores. Most fibers DISCONNECTED. (1,2,2,2,3) is the only multi-iso-class fiber at n=5.
+
+**S191:** Why fibers disconnect. Score-preserving flips require |score_i - score_j| ≤ 1. Regular fiber TOTALLY disconnected (no flips possible). Within-fiber fractions: **1/2, 3/8, 5/16** (exact). Total fiber components: **3, 18, 117**. H exactly linear in S₂ at n≤4.
+
+**S192:** Extended to n=6. Within-fiber = **35/128**. Components = **1018**. H_max(6) = 45. Connected fibers: 1,2,3,6. Max fiber components: 2,8,40,144. Isolated tournaments: 2,16,64,368. R²=0.92 at n=6.
+
+**S193:** H_max analysis. Cyclic C₇ gives H=175 but NOT H_max. Verified Szele bound ~2× tight.
+
+**S194:** EXHAUSTIVE n=7 search (2M tournaments, 504s). **H_max(7) = 189** (all achievers are regular). C₇ gives only 175.
+
+**S195:** OEIS verification. **H_max = A038375** (known sequence: 1,1,3,5,15,45,189,661,...). Total components **3,18,117,1018 NOT IN OEIS** — new sequence candidate. Isolated tournaments 2,16,64,368 also new.
+
+**New contributions:** erdos_gallai_s188.py, landau_deep_s189.py, score_fiber_s190.py, fiber_connectivity_s191.py, swap_sequences_s192.py, h_max_analysis_s193.py, h_max_n7_s194.py, oeis_check_s195.py
+**Unresolved:** Submit new sequences to OEIS. Verify max_comp matches A074092 at n=7. Extend within-fiber fraction formula. Prove Schur concavity of H rigorously. Extend components to n=7.
+
+---
+
 ## opus-2026-03-22-S187 — 2026-03-22: Maximum Entropy Tournaments and the Critical Point
 
 **Account:** opus
