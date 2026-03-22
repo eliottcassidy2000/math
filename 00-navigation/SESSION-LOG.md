@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S135 — 2026-03-21: Classical vs Exceptional Lie Algebras in Tournament Theory
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S134
+**Summary:** Deep investigation of the classical/exceptional divide in Lie algebras as it manifests in tournament theory. Read kind-pasteur S18g/S18h (the +1 identity, Bernoulli-Coxeter chain). Key discoveries: (1) dim(X) = rank(X)×(h(X)+1) for ALL simple Lie algebras — a known identity since |Φ⁺|=rank·h/2. (2) The REAL distinction: h+1 is PRIME for all 5 exceptionals (7,13,13,19,31) but often composite for classicals. (3) dim(E₇) = 133 = OCR denom at n=5; so 1-OCR = 4/dim(E₇). (4) Classical primes {3,5,11} control constructive structure (atoms, boundaries, Paley); exceptional primes {7,13,19,31} control obstructive structure (forbidden values, OCR, moonshine). (5) Freudenthal magic square: exceptional algebras = octonion column, octonions = Fano plane = Paley T₇. (6) Tournament periodic table: 7 periods alternating classical/exceptional. (7) E₇ positive roots: |Φ⁺(E₇)|=63=7×9=(forbidden)×(atom²).
+**New contributions:** classical_exceptional_s135.py
+**Unresolved threads:** Exact OCR at n=6 to test dim(exceptional) prediction, tournament vertex algebra, connect D₄ triality to n=4 structure
+
+---
+
 ## opus-2026-03-21-S134 — 2026-03-21: Monstrous Moonshine and Tournament Theory
 
 **Account:** opus
