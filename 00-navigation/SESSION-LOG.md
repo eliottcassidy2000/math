@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S116 — 2026-03-21: Petersen-Kneser-Cayley-Lie Nexus — K(n,2) is tournament DNA
+
+**Account:** opus
+**Summary:** Established the Kneser graph K(n,2) as the substrate of tournament theory. Proved the Lie-Kneser dictionary (commuting so(n) generators = K(n,2) edges), connected α₂ to K(n,3) matchings, Cayley transform maps Hurwitz fractions to graph invariants. I(K(5,2),2) = 461. Petersen = unique non-Hamiltonian Kneser.
+**Key:**
+1. **Lie-Kneser**: dim(so(n))=V(K(n,2)), commuting generators=edges, rank=max matching=floor(n/2)
+2. **α₂ ≤ max matching of K(n,3)**: disjoint 3-cycle pairs bounded by Kneser matching
+3. **Cayley**: Q(1/3)=2 (fugacity), Q(3/7)=5/2 (Petersen χ_f), Q⁻¹(7/3)=2/5 (golden!)
+4. **I(K(5,2), 2) = 461**: the Petersen independence polynomial at tournament fugacity
+5. **α₂=0 at n=5 PROVED via Kneser**: K(5,3) max matching=1 (only 1 disjoint triple pair possible among 5 vertices)
+6. **Tournament space = hypercube Q_m**: arc flips traverse edges, scores = orbit projections
+
+---
+
 ## opus-2026-03-21-S115 — 2026-03-21: Curvature-Gaps-OCR Synthesis — three faces of 7, tau conservation law, g(2)=1 is Rédei
 
 **Account:** opus
