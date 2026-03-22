@@ -1,0 +1,229 @@
+=================================================================
+  ARC FLIP GEOMETRY OF TOURNAMENT SPACE
+=================================================================
+
+  n=4: ARC FLIP DELTA DISTRIBUTION
+  Total flips: 5 distinct deltas
+   delta    count        %
+      -4       24    6.25%
+      -2       96   25.00%
+      +0      144   37.50%
+      +2       96   25.00%
+      +4       24    6.25%
+
+  Possible deltas: [-4, -2, 0, 2, 4]
+  All even: True
+  GCD of nonzero deltas: 2
+  Missing even deltas in [-4, 4]: []
+
+  DELTA BY ARC POSITION:
+    arc (0,1): deltas = [-4, -2, 0, 2, 4]
+    arc (0,2): deltas = [-4, -2, 0, 2, 4]
+    arc (0,3): deltas = [-4, -2, 0, 2, 4]
+    arc (1,2): deltas = [-4, -2, 0, 2, 4]
+    arc (1,3): deltas = [-4, -2, 0, 2, 4]
+    arc (2,3): deltas = [-4, -2, 0, 2, 4]
+
+  n=5: ARC FLIP DELTA DISTRIBUTION
+  Total flips: 11 distinct deltas
+   delta    count        %
+     -12       40    0.39%
+      -8      360    3.52%
+      -6      600    5.86%
+      -4     1200   11.72%
+      -2     1800   17.58%
+      +0     2240   21.88%
+      +2     1800   17.58%
+      +4     1200   11.72%
+      +6      600    5.86%
+      +8      360    3.52%
+     +12       40    0.39%
+
+  Possible deltas: [-12, -8, -6, -4, -2, 0, 2, 4, 6, 8, 12]
+  All even: True
+  GCD of nonzero deltas: 2
+  Missing even deltas in [-12, 12]: [-10, 10]
+
+  DELTA BY ARC POSITION:
+    arc (0,1): deltas = [-12, -8, -6, -4, -2, 0, 2, 4, 6, 8, 12]
+    arc (0,2): deltas = [-12, -8, -6, -4, -2, 0, 2, 4, 6, 8, 12]
+    arc (0,3): deltas = [-12, -8, -6, -4, -2, 0, 2, 4, 6, 8, 12]
+    arc (0,4): deltas = [-12, -8, -6, -4, -2, 0, 2, 4, 6, 8, 12]
+    arc (1,2): deltas = [-12, -8, -6, -4, -2, 0, 2, 4, 6, 8, 12]
+    arc (1,3): deltas = [-12, -8, -6, -4, -2, 0, 2, 4, 6, 8, 12]
+    arc (1,4): deltas = [-12, -8, -6, -4, -2, 0, 2, 4, 6, 8, 12]
+    arc (2,3): deltas = [-12, -8, -6, -4, -2, 0, 2, 4, 6, 8, 12]
+    arc (2,4): deltas = [-12, -8, -6, -4, -2, 0, 2, 4, 6, 8, 12]
+    arc (3,4): deltas = [-12, -8, -6, -4, -2, 0, 2, 4, 6, 8, 12]
+
+=================================================================
+  THE ARC FLIP DELTA FORMULA
+=================================================================
+
+  VERIFICATION AT n=4:
+  T: H = 3
+    flip (0->1): delta=+2, DC: H(T/e)=3, H(T'/e')=1, diff=+2, match=True
+    flip (0->2): delta=+2, DC: H(T/e)=3, H(T'/e')=1, diff=+2, match=True
+    flip (0->3): delta=+2, DC: H(T/e)=3, H(T'/e')=1, diff=+2, match=True
+    flip (1->2): delta=-2, DC: H(T/e)=0, H(T'/e')=2, diff=-2, match=True
+    flip (2->3): delta=-2, DC: H(T/e)=0, H(T'/e')=2, diff=-2, match=True
+    flip (3->1): delta=-2, DC: H(T/e)=0, H(T'/e')=2, diff=-2, match=True
+
+  3. LEVEL SET STRUCTURE (n=5)
+
+     H  count  avg_same   avg_up  avg_down local_max local_min
+     1    120      4.00     6.00      0.00         0       120
+     3    120      0.67     6.33      3.00         0         0
+     5    240      3.00     4.00      3.00         0         0
+     9    240      3.00     3.50      3.50         0         0
+    11    120      2.00     3.00      5.00         0         0
+    13    120      0.00     3.00      7.00         0         0
+    15     64      0.00     0.00     10.00        64         0
+
+  4. GRADIENT FLOW: BASINS OF ATTRACTION
+
+  Number of local maxima: 64
+  Basin sizes:
+    peak H=15, basin size=27
+    peak H=15, basin size=27
+    peak H=15, basin size=27
+    peak H=15, basin size=27
+    peak H=15, basin size=27
+    peak H=15, basin size=27
+    peak H=15, basin size=24
+    peak H=15, basin size=24
+    peak H=15, basin size=24
+    peak H=15, basin size=24
+    peak H=15, basin size=24
+    peak H=15, basin size=24
+    peak H=15, basin size=21
+    peak H=15, basin size=21
+    peak H=15, basin size=21
+    peak H=15, basin size=21
+    peak H=15, basin size=20
+    peak H=15, basin size=20
+    peak H=15, basin size=20
+    peak H=15, basin size=20
+    peak H=15, basin size=20
+    peak H=15, basin size=20
+    peak H=15, basin size=17
+    peak H=15, basin size=17
+    peak H=15, basin size=17
+    peak H=15, basin size=17
+    peak H=15, basin size=17
+    peak H=15, basin size=17
+    peak H=15, basin size=17
+    peak H=15, basin size=17
+    peak H=15, basin size=16
+    peak H=15, basin size=16
+    peak H=15, basin size=16
+    peak H=15, basin size=16
+    peak H=15, basin size=15
+    peak H=15, basin size=15
+    peak H=15, basin size=14
+    peak H=15, basin size=14
+    peak H=15, basin size=14
+    peak H=15, basin size=14
+    peak H=15, basin size=11
+    peak H=15, basin size=11
+    peak H=15, basin size=11
+    peak H=15, basin size=11
+    peak H=15, basin size=11
+    peak H=15, basin size=11
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+    peak H=15, basin size=9
+
+  Local maxima SC status:
+    H=15, basin=27, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=27, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=27, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=27, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=27, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=27, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=24, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=24, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=24, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=24, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=24, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=24, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=21, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=21, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=21, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=21, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=20, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=20, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=20, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=20, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=20, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=20, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=17, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=17, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=17, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=17, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=17, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=17, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=17, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=17, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=16, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=16, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=16, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=16, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=15, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=15, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=14, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=14, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=14, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=14, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=11, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=11, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=11, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=11, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=11, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=11, SC=True, score=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+    H=15, basin=9, SC=True, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))
+
+  5. MORSE THEORY: CRITICAL POINTS OF H
+
+  Local maxima: 64
+  Local minima: 120
+  Saddle points: 840
+  Euler characteristic (max - saddle + min): -656
+
+  Tournament space = 10-cube = Z_2^10
+  Vertices: 1024
+  Edges (arc flips): 5120
+  Note: H is a MORSE FUNCTION on the 10-cube
+  with 64 maxima, 120 minima, 840 saddles

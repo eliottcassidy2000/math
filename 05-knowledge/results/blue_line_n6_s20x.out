@@ -1,0 +1,150 @@
+=================================================================
+  BLUE LINE SKELETON: n=6 EXTENSION
+=================================================================
+
+  Computing n=6 (32768 tournaments)...
+  SC check: 6! = 720 permutations per tournament
+    processed 5000/32768...
+    processed 10000/32768...
+    processed 15000/32768...
+    processed 20000/32768...
+    processed 25000/32768...
+    processed 30000/32768...
+  Done. 7040 SC tournaments out of 32768 total.
+
+  1. H-SPECTRUM: SC vs NON-SC
+
+     H    SC#   NSC#         type
+     1    720      0      SC-ONLY
+     3      0    960     NSC-ONLY
+     5    720   1440       SHARED
+     9     80   2880       SHARED
+    11      0   1440     NSC-ONLY
+    13      0   1440     NSC-ONLY
+    15      0   2208     NSC-ONLY
+    17   1440      0      SC-ONLY
+    19      0   1440     NSC-ONLY
+    23      0   2880     NSC-ONLY
+    25      0   1440     NSC-ONLY
+    27      0    480     NSC-ONLY
+    29   1440   1440       SHARED
+    31      0   1440     NSC-ONLY
+    33    720   1920       SHARED
+    37    720   2880       SHARED
+    41    720      0      SC-ONLY
+    43      0   1440     NSC-ONLY
+    45    480      0      SC-ONLY
+
+  2. (H, HC, L) BY SC STATUS
+
+     H   HC    L    SC#   NSC#
+     1    0    1    720      0
+     3    0    3      0    960
+     5    0    5    720   1440
+     9    0    9     80   2880
+    11    0   11      0   1440
+    13    0   13      0   1440
+    15    0   15      0    768
+    15    1    9      0   1440
+    17    1   11   1440      0
+    19    1   13      0   1440
+    23    1   17      0   1440
+    23    2   11      0   1440
+    25    2   13      0   1440
+    27    3    9      0    480
+    29    2   17    720      0
+    29    3   11    720   1440
+    31    3   13      0   1440
+    33    3   15      0   1920
+    33    4    9    720      0
+    37    4   13      0   2880
+    37    5    7    720      0
+    41    4   17    720      0
+    43    5   13      0   1440
+    45    5   15    480      0
+
+  3. ARBORESCENCE STRUCTURE
+
+  Total arb values: 105 distinct (range [0, 181])
+  Missing arb values: [14, 23, 25, 27, 34, 51, 53, 69, 75, 77, 79, 81, 82, 86, 87, 91, 92, 97, 98, 103, 106, 109, 110, 111, 115, 118, 119, 121, 123, 124]...
+  SC-only arb values: [1, 6, 50, 66, 78, 89, 102, 114, 150]
+  NSC-only arb values: [2, 3, 5, 8, 9, 11, 13, 15, 17, 21, 22, 26, 29, 31, 32, 33, 35, 38, 39, 40]
+
+  4. KINGS: SC vs NON-SC
+
+  kings=1: SC(1440, avg H=3.0), NSC(4704, avg H=8.9)
+  kings=3: SC(2480, avg H=22.9), NSC(9120, avg H=16.6)
+  kings=4: SC(1440, avg H=31.0), NSC(6480, avg H=28.1)
+  kings=5: SC(1440, avg H=39.0), NSC(3984, avg H=32.0)
+  kings=6: SC(240, avg H=45.0), NSC(1440, avg H=43.0)
+
+  5. SCORE CLASSES ON THE BLUE LINE
+
+  [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]: SC(720) H=[1], HC=[0]
+  [np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4)]: NSC-only(240) H=[3]
+  [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5)]: NSC-only(240) H=[3]
+  [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)]: NSC-only(720) H=[5]
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5)]: NSC-only(240) H=[3]
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)]: SC(720) H=[5], HC=[0]
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)]: NSC-only(1440) H=[9]
+  [np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]: NSC-only(1680) H=[11, 13, 15]
+  [np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]: NSC-only(144) H=[15]
+  [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4), np.int64(5)]: NSC-only(240) H=[3]
+  [np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)]: SC(80) H=[9], HC=[0]
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)]: NSC-only(720) H=[5]
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)]: NSC-only(1440) H=[9]
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)]: SC(1440) H=[17], HC=[1]
+  [np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]: NSC-only(1680) H=[19, 23, 27]
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)]: NSC-only(1680) H=[11, 13, 15]
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)]: NSC-only(1680) H=[19, 23, 27]
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)]: SC(2880) H=[29, 33, 37], HC=[2, 3, 4, 5]
+  [np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]: NSC-only(2400) H=[33, 37]
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(5)]: NSC-only(144) H=[15]
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)]: NSC-only(2400) H=[33, 37]
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)]: SC(1200) H=[41, 45], HC=[4, 5]
+
+  6. SYMMETRY-BREAKING PHASE TRANSITION
+
+  SC max H: H=45, HC=5, L=15, arb=36, kings=3, score=(np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3))
+  SC max tournament adjacency:
+    000011
+    100011
+    110000
+    111000
+    001100
+    001110
+
+  Effect of SINGLE ARC FLIP from SC max:
+       arc  H_new   dH HC_new L_new arb_new  still_SC
+  (0->4):     37   -8      4    13      18     False
+  (0->5):     29  -16      3    11       6      True
+  (1->0):     45   +0      5    15      72      True
+  (1->4):     41   -4      4    17      48      True
+  (1->5):     37   -8      4    13      48     False
+  (2->0):     37   -8      4    13      54     False
+  (2->1):     29  -16      3    11      24      True
+  (3->0):     41   -4      4    17      66      True
+  (3->1):     37   -8      4    13      24     False
+  (3->2):     45   +0      5    15      36      True
+  (4->2):     37   -8      4    13      30     False
+  (4->3):     29  -16      3    11      24      True
+  (5->2):     41   -4      4    17      30      True
+  (5->3):     37   -8      4    13      24     False
+  (5->4):     45   +0      5    15      36      True
+
+  7. GLOBAL SUMMARY
+
+  Global H range: [1, 45]
+  SC H range: [1, 45]
+  NSC H range: [3, 43]
+  SC count: 7040 (21.5%)
+  NSC count: 25728 (78.5%)
+
+  SC-exclusive H values: [1, 17, 41, 45]
+  NSC-exclusive H values: [3, 11, 13, 15, 19, 23, 25, 27, 31, 43]
+  Shared H values: [5, 9, 29, 33, 37]
+
+  SC HC values: [0, 1, 2, 3, 4, 5]
+  NSC HC values: [0, 1, 2, 3, 4, 5]
+
+  Forbidden odd H values: [7, 21, 35, 39]

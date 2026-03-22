@@ -33,6 +33,16 @@ Entry format:
 
 ---
 
+## kind-pasteur-2026-03-22-S20x — 2026-03-22: Blue Line Skeleton + Morse Theory of H
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-22-S20w
+**Summary:** Extended the creative metrics investigation (arborescences, kings, L, HC) to the SC vs non-SC comparison ("blue line skeleton"). Then discovered H as a Morse function on the tournament hypercube. KEY FINDINGS: (1) SC tournaments span full H range at n=5,6 while NSC is constrained. SC=68.8% at n=5, drops to 21.5% at n=6. (2) At n=5, NSC has HC=0 ALWAYS. At n=6, NSC achieves HC up to 5. (3) H is a perfect Morse function on the m-cube: at n=5, 64 local maxima ALL at H=15 (all SC), 120 local minima at H=1 (transitive). Every gradient ascent reaches the global max. (4) PHASE TRANSITION AT n=6: first non-global local maxima at H=37 (720 tournaments, score [1,2,2,3,3,4], all SC). Global max H=45 has 480 tournaments. Barrier height=0 (plateau trapping only). 89.4% of random starts reach H=45 via steepest ascent. (5) Arc-flip delta=+-10 (the Petersen number) is MISSING at n=5 but PRESENT at n=6. The forbidden delta pattern changes with n. (6) Deletion-contraction verified for arc-flip deltas: delta = H(T/e) - H(T'/e'). (7) The "symmetry-breaking principle": breaking SC converts linear paths (L) into Hamiltonian cycles (HC) while preserving total H = n*HC + L.
+**New contributions:** blue_line_skeleton_s20x.py, blue_line_n6_s20x.py, arc_flip_geometry_s20x.py, delta_gap_s20x.py, morse_deep_s20x.py, the-blue-line-morse-theory.md (reflection)
+**Unresolved threads:** Extend Morse analysis to n=7 (needs sampling), prove single-basin property at n=5 algebraically, find the exact n where the Morse landscape becomes multi-modal for the first time (appears to be n=6), characterize the H=37 secondary peak structure
+
+---
+
 ## opus-2026-03-22-S166 — 2026-03-22: Faster Formulas — 8 Computation Levels, HC Decomposition Verified
 
 **Account:** opus
