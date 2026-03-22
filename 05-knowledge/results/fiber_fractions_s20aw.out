@@ -1,0 +1,230 @@
+======================================================================
+  FIBER FRACTIONS: EXACT ARITHMETIC OF SCORE FIBERS
+======================================================================
+
+======================================================================
+  n = 3
+======================================================================
+
+  Total tournaments: 8
+  Score sequences: 2
+  Within-fiber flip fraction: 12/24 = 1/2 = 0.500000
+
+                      Score   Size       Frac  #H-vals      H range   Mean H  Within%
+  [np.int64(0), np.int64(1), np.int64(2)]      6        3/4        1            1      1.0    66.7%
+  [np.int64(1), np.int64(1), np.int64(1)]      2        1/4        1            3      3.0     0.0%
+
+  FIBER SIZE FORMULA:
+    [np.int64(0), np.int64(1), np.int64(2)]: size=6, mult_coeff=6, per_assign=1
+    [np.int64(1), np.int64(1), np.int64(1)]: size=2, mult_coeff=1, per_assign=2
+
+  S2 -> FIBER SIZE:
+    S2-C(n,2)=0: 1 score seq(s), total size=2
+    S2-C(n,2)=2: 1 score seq(s), total size=6
+
+  CROSS-FIBER TRANSITION MATRIX:
+  (Fraction of flips from fiber s that land in fiber s')
+
+  Transition fractions (rows = source fiber, cols = dest fiber):
+     src\dst [np.int64(0), np.int64(1), np.int64(2)] [np.int64(1), np.int64(1), np.int64(1)]
+  [np.int64(0), np.int64(1), np.int64(2)]          2/3          1/3
+  [np.int64(1), np.int64(1), np.int64(1)]            1            0
+
+  WITHIN-FIBER FRACTION: 1/2
+
+======================================================================
+  n = 4
+======================================================================
+
+  Total tournaments: 64
+  Score sequences: 4
+  Within-fiber flip fraction: 144/384 = 3/8 = 0.375000
+
+                      Score   Size       Frac  #H-vals      H range   Mean H  Within%
+  [np.int64(0), np.int64(1), np.int64(2), np.int64(3)]     24        3/8        1            1      1.0    50.0%
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(2)]      8        1/8        1            3      3.0     0.0%
+  [np.int64(1), np.int64(1), np.int64(1), np.int64(3)]      8        1/8        1            3      3.0     0.0%
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(2)]     24        3/8        1            5      5.0    50.0%
+
+  FIBER SIZE FORMULA:
+    [np.int64(0), np.int64(1), np.int64(2), np.int64(3)]: size=24, mult_coeff=24, per_assign=1
+    [np.int64(0), np.int64(2), np.int64(2), np.int64(2)]: size=8, mult_coeff=4, per_assign=2
+    [np.int64(1), np.int64(1), np.int64(1), np.int64(3)]: size=8, mult_coeff=4, per_assign=2
+    [np.int64(1), np.int64(1), np.int64(2), np.int64(2)]: size=24, mult_coeff=6, per_assign=4
+
+  S2 -> FIBER SIZE:
+    S2-C(n,2)=4: 1 score seq(s), total size=24
+    S2-C(n,2)=6: 2 score seq(s), total size=16
+    S2-C(n,2)=8: 1 score seq(s), total size=24
+
+  CROSS-FIBER TRANSITION MATRIX:
+  (Fraction of flips from fiber s that land in fiber s')
+
+  Transition fractions (rows = source fiber, cols = dest fiber):
+     src\dst [np.int64(0), np.int64(1), np.int64(2), np.int64(3)] [np.int64(0), np.int64(2), np.int64(2), np.int64(2)] [np.int64(1), np.int64(1), np.int64(1), np.int64(3)] [np.int64(1), np.int64(1), np.int64(2), np.int64(2)]
+  [np.int64(0), np.int64(1), np.int64(2), np.int64(3)]          1/2          1/6          1/6          1/6
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(2)]          1/2            0            0          1/2
+  [np.int64(1), np.int64(1), np.int64(1), np.int64(3)]          1/2            0            0          1/2
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(2)]          1/6          1/6          1/6          1/2
+
+  WITHIN-FIBER FRACTION: 3/8
+
+======================================================================
+  n = 5
+======================================================================
+
+  Total tournaments: 1024
+  Score sequences: 9
+  Within-fiber flip fraction: 3200/10240 = 5/16 = 0.312500
+
+                      Score   Size       Frac  #H-vals      H range   Mean H  Within%
+  [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)]    120     15/128        1            1      1.0    40.0%
+  [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)]     40      5/128        1            3      3.0    10.0%
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)]     40      5/128        1            3      3.0     0.0%
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)]    120     15/128        1            5      5.0    30.0%
+  [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)]     40      5/128        1            3      3.0    10.0%
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)]    120     15/128        1            5      5.0    30.0%
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)]    240      15/64        1            9      9.0    30.0%
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]    280     35/128        3      [11,15]     12.4    42.9%
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)]     24      3/128        1           15     15.0     0.0%
+
+  FIBER SIZE FORMULA:
+    [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)]: size=120, mult_coeff=120, per_assign=1
+    [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)]: size=40, mult_coeff=20, per_assign=2
+    [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)]: size=40, mult_coeff=20, per_assign=2
+    [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)]: size=120, mult_coeff=30, per_assign=4
+    [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)]: size=40, mult_coeff=20, per_assign=2
+    [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)]: size=120, mult_coeff=30, per_assign=4
+    [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)]: size=240, mult_coeff=30, per_assign=8
+    [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]: size=280, mult_coeff=20, per_assign=14
+    [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)]: size=24, mult_coeff=1, per_assign=24
+
+  S2 -> FIBER SIZE:
+    S2-C(n,2)=10: 1 score seq(s), total size=24
+    S2-C(n,2)=12: 1 score seq(s), total size=280
+    S2-C(n,2)=14: 1 score seq(s), total size=240
+    S2-C(n,2)=16: 2 score seq(s), total size=240
+    S2-C(n,2)=18: 3 score seq(s), total size=120
+    S2-C(n,2)=20: 1 score seq(s), total size=120
+
+  CROSS-FIBER TRANSITION MATRIX:
+  (Fraction of flips from fiber s that land in fiber s')
+
+  Transition fractions (rows = source fiber, cols = dest fiber):
+     src\dst [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)] [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)] [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)] [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)] [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)] [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)] [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)] [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)] [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)]
+  [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)]          2/5         1/10         1/10         1/10         1/10         1/10         1/10            0            0
+  [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)]         3/10         1/10            0         3/10            0            0         3/10            0            0
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)]         3/10            0            0         3/10            0         3/10            0         1/10            0
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)]         1/10         1/10         1/10         3/10            0            0          1/5          1/5            0
+  [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)]         3/10            0            0            0         1/10         3/10         3/10            0            0
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)]         1/10            0         1/10            0         1/10         3/10          1/5          1/5            0
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)]         1/20         1/20            0         1/10         1/20         1/10         3/10         7/20            0
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]            0            0         1/70         3/35            0         3/35         3/10          3/7         3/35
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)]            0            0            0            0            0            0            0            1            0
+
+  WITHIN-FIBER FRACTION: 5/16
+
+======================================================================
+  n = 6
+======================================================================
+
+  Total tournaments: 32768
+  Score sequences: 22
+  Within-fiber flip fraction: 134400/491520 = 35/128 = 0.273438
+
+                      Score   Size       Frac  #H-vals      H range   Mean H  Within%
+  [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]    720    45/2048        1            1      1.0    33.3%
+  [np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4)]    240    15/2048        1            3      3.0    13.3%
+  [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5)]    240    15/2048        1            3      3.0     6.7%
+  [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)]    720    45/2048        1            5      5.0    26.7%
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5)]    240    15/2048        1            3      3.0     6.7%
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)]    720    45/2048        1            5      5.0    20.0%
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)]   1440    45/1024        1            9      9.0    20.0%
+  [np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]   1680   105/2048        3      [11,15]     12.4    28.6%
+  [np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]    144     9/2048        1           15     15.0     0.0%
+  [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4), np.int64(5)]    240    15/2048        1            3      3.0    13.3%
+  [np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)]     80     5/2048        1            9      9.0     0.0%
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)]    720    45/2048        1            5      5.0    26.7%
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)]   1440    45/1024        1            9      9.0    20.0%
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)]   2880     45/512        2      [15,17]     16.0    25.0%
+  [np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]   1680   105/2048        3      [19,27]     21.9    14.3%
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)]   1680   105/2048        3      [11,15]     12.4    28.6%
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)]   1680   105/2048        3      [19,27]     21.9    14.3%
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)]   8640    135/512        6      [23,37]     28.7    37.2%
+  [np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]   2400    75/1024        2      [33,37]     35.4    22.7%
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(5)]    144     9/2048        1           15     15.0     0.0%
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)]   2400    75/1024        2      [33,37]     35.4    22.7%
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)]   2640   165/2048        3      [41,45]     42.8    40.0%
+
+  FIBER SIZE FORMULA:
+    [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]: size=720, mult_coeff=720, per_assign=1
+    [np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4)]: size=240, mult_coeff=120, per_assign=2
+    [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5)]: size=240, mult_coeff=120, per_assign=2
+    [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)]: size=720, mult_coeff=180, per_assign=4
+    [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5)]: size=240, mult_coeff=120, per_assign=2
+    [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)]: size=720, mult_coeff=180, per_assign=4
+    [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)]: size=1440, mult_coeff=180, per_assign=8
+    [np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]: size=1680, mult_coeff=120, per_assign=14
+    [np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]: size=144, mult_coeff=6, per_assign=24
+    [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4), np.int64(5)]: size=240, mult_coeff=120, per_assign=2
+    [np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)]: size=80, mult_coeff=20, per_assign=4
+    [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)]: size=720, mult_coeff=180, per_assign=4
+    [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)]: size=1440, mult_coeff=180, per_assign=8
+    [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)]: size=2880, mult_coeff=180, per_assign=16
+    [np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]: size=1680, mult_coeff=60, per_assign=28
+    [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)]: size=1680, mult_coeff=120, per_assign=14
+    [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)]: size=1680, mult_coeff=60, per_assign=28
+    [np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)]: size=8640, mult_coeff=180, per_assign=48
+    [np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]: size=2400, mult_coeff=30, per_assign=80
+    [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(5)]: size=144, mult_coeff=6, per_assign=24
+    [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)]: size=2400, mult_coeff=30, per_assign=80
+    [np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)]: size=2640, mult_coeff=20, per_assign=132
+
+  S2 -> FIBER SIZE:
+    S2-C(n,2)=24: 1 score seq(s), total size=2640
+    S2-C(n,2)=26: 2 score seq(s), total size=4800
+    S2-C(n,2)=28: 1 score seq(s), total size=8640
+    S2-C(n,2)=30: 4 score seq(s), total size=3648
+    S2-C(n,2)=32: 3 score seq(s), total size=6240
+    S2-C(n,2)=34: 2 score seq(s), total size=2880
+    S2-C(n,2)=36: 4 score seq(s), total size=2240
+    S2-C(n,2)=38: 4 score seq(s), total size=960
+    S2-C(n,2)=40: 1 score seq(s), total size=720
+
+  CROSS-FIBER TRANSITION MATRIX:
+  (Fraction of flips from fiber s that land in fiber s')
+
+  Transition fractions (rows = source fiber, cols = dest fiber):
+     src\dst [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)] [np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4)] [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5)] [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)] [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5)] [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)] [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)] [np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)] [np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)] [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4), np.int64(5)] [np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)] [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)] [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)] [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)] [np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)] [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)] [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)] [np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)] [np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)] [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(5)] [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)] [np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)]
+  [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]          1/3         1/15         1/15         1/15         1/15         1/15         1/15            0            0         1/15            0         1/15         1/15         1/15            0            0            0            0            0            0            0            0
+  [np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4)]          1/5         2/15            0          1/5            0            0          1/5            0            0            0         1/15            0            0          1/5            0            0            0            0            0            0            0            0
+  [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5)]          1/5            0         1/15          1/5            0          1/5            0         1/15            0            0            0            0          1/5            0         1/15            0            0            0            0            0            0            0
+  [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)]         1/15         1/15         1/15         4/15            0            0         2/15         2/15            0            0            0            0            0         2/15         2/15            0            0            0            0            0            0            0
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5)]          1/5            0            0            0         1/15          1/5          1/5            0            0            0            0          1/5            0            0            0         1/15         1/15            0            0            0            0            0
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)]         1/15            0         1/15            0         1/15          1/5         2/15         2/15            0            0            0            0         2/15            0            0         2/15            0         1/15            0            0            0            0
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)]         1/30         1/30            0         1/15         1/30         1/15          1/5         7/30            0            0            0            0            0         2/15            0            0         1/15         2/15            0            0            0            0
+  [np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]            0            0        1/105         2/35            0         2/35          1/5          2/7         2/35            0            0            0            0            0         1/15            0            0          1/5         1/15            0            0            0
+  [np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]            0            0            0            0            0            0            0          2/3            0            0            0            0            0            0            0            0            0            0          1/3            0            0            0
+  [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4), np.int64(5)]          1/5            0            0            0            0            0            0            0            0         2/15         1/15          1/5          1/5          1/5            0            0            0            0            0            0            0            0
+  [np.int64(1), np.int64(1), np.int64(1), np.int64(4), np.int64(4), np.int64(4)]            0          1/5            0            0            0            0            0            0            0          1/5            0            0            0          3/5            0            0            0            0            0            0            0            0
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)]         1/15            0            0            0         1/15            0            0            0            0         1/15            0         4/15         2/15         2/15            0         2/15         2/15            0            0            0            0            0
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)]         1/30            0         1/30            0            0         1/15            0            0            0         1/30            0         1/15          1/5         2/15         1/15         7/30            0         2/15            0            0            0            0
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)]         1/60         1/60            0         1/30            0            0         1/15            0            0         1/60         1/60         1/30         1/15          1/4         7/60            0         7/60          1/4            0            0            0            0
+  [np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(4)]            0            0        1/105         2/35            0            0            0         1/15            0            0            0            0         2/35          1/5          1/7            0            0        12/35       13/105            0            0            0
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(5)]            0            0            0            0        1/105         2/35            0            0            0            0            0         2/35          1/5            0            0          2/7         1/15          1/5            0         2/35         1/15            0
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(4)]            0            0            0            0        1/105            0         2/35            0            0            0            0         2/35            0          1/5            0         1/15          1/7        12/35            0            0       13/105            0
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)]            0            0            0            0            0        1/180         1/45        7/180            0            0            0            0         1/45         1/12         1/15        7/180         1/15       67/180          1/9            0          1/9       11/180
+  [np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)]            0            0            0            0            0            0            0        7/150         1/50            0            0            0            0            0       13/150            0            0          2/5        17/75            0            0        11/50
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(5)]            0            0            0            0            0            0            0            0            0            0            0            0            0            0            0          2/3            0            0            0            0          1/3            0
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)]            0            0            0            0            0            0            0            0            0            0            0            0            0            0            0        7/150       13/150          2/5            0         1/50        17/75        11/50
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)]            0            0            0            0            0            0            0            0            0            0            0            0            0            0            0            0            0          1/5          1/5            0          1/5          2/5
+
+  WITHIN-FIBER FRACTION: 35/128
+
+======================================================================
+  WITHIN-FIBER FRACTION SEQUENCE
+======================================================================
+
+  n=3: within-fiber fraction = 1/2
+  n=4: within-fiber fraction = 3/8
+  n=5: within-fiber fraction = 5/16
