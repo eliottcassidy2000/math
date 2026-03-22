@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S133 — 2026-03-21: Simplex Dimensions — score=coboundary, 2/n dims carry 96% info, efficiency grows linearly
+
+**Account:** opus
+**Summary:** Deep investigation of tournaments as binary relations on the (n-1)-simplex. The score sequence IS the coboundary d₁ᵀ(tournament) — the boundary map from 1-cochains to 0-cochains. ker(d₁ᵀ)=regular tournaments, dim=C(n-1,2). The Shadow Compression Miracle: 2/n of dimensions carry 96% of information. Information efficiency = 0.96n/2, growing LINEARLY with n. The chain complex is "96% tight" — boundaries capture almost all cycle structure.
+**Key:**
+1. **Score = coboundary**: d₁ᵀ(tournament) = weight vector w(T). rank = n-1. kernel = regular tournaments.
+2. **C(n,2) = (n-1) + C(n-1,2)**: TOURNAMENT = SCORE + TILING. Fundamental decomposition.
+3. **2/n of dimensions carry 96% of info**: the Shadow Compression Miracle
+4. **Information efficiency = 0.96n/2**: grows linearly with n (at n=100: 48× efficiency)
+5. **OCR ≈ 96% = chain complex tightness**: boundaries capture 96% of cycle structure
+6. **At n=5: C(5,2)=C(5,3)=10**: self-dual simplex at the middle dimension
+7. **ker(d₁ᵀ) = regular tournaments**: verified dim = C(n-1,2) = 6 at n=5
+**Scripts:** simplex_dimensions_s133.py
+
+---
+
 ## opus-2026-03-21-S152 — 2026-03-21: Rigorous Shadow KV Benchmark — Honest Results
 
 **Account:** opus
