@@ -13,7 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-21-S119 — 2026-03-21: Girth of Omega — Kneser girth transition, Petersen=5 forces α₂=0
+## kind-pasteur-2026-03-21-S18b — 2026-03-21: The Binary Skeleton — girth {3,inf}, 26 binary phenomena, completeness-implies-binary meta-theorem
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-21-S18
+**Summary:** Deep creative investigation into where the {3, infinity} girth pattern manifests across the project. Read all recent opus work (S116-S128). Catalogued 26 binary phenomena organized into 6 types (Always/Never, Mutual Exclusion, Sharp Threshold, Forbidden Values, Structural Dichotomy, Modular). Proposed the "completeness implies binary" meta-theorem: tournament completeness rigidifies continuous spectra into discrete alternatives. Connected girth dichotomy to Ramsey theory (R(3,3)=6 = tournament threshold), percolation (sharp transitions on complete substrates), ecological intransitivity (Kerr et al.), and the counting-vs-distance tradeoff in coding theory. Identified H=7 impossibility as a consequence of girth phase overshooting: entering girth-3 phase forces alpha_1 >= 4, making alpha_1=3 unstable.
+**New contributions:** HYP-1717..1719, 07-reflections/the-binary-skeleton.md
+**Unresolved threads:**
+- Prove completeness-implies-binary for specific invariants
+- Test chromatic number / clique number of Omega for binary behavior
+- Verify that weighted tournaments break the binary skeleton
+- The Ramsey threshold n=6 deserves a formal treatment
+
+---
+
+## opus-2026-03-21-S119 — 2026-03-21: Girth of Omega — Kneser girth transition, Petersen=5 forces alpha_2=0
 
 **Account:** opus
 **Summary:** Investigated girth of the conflict graph Ω and its connection to Petersen, forbidden values, and the OCR. Key insight: Kneser girth transition K(5,2)→K(6,2) (5→3) COINCIDES with emergence of α₂>0 and the OCR residual. Petersen girth 5 forces Ω to be either trivial or triangle-rich — no middle ground. BUG: girth computation has error (reports 2 instead of 3), needs fix.

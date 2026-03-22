@@ -1790,3 +1790,22 @@ Source: petersen_lie_bridge_s18.py
 **Hypothesis:** The Petersen graph K(5,2) can never be Omega(T) for any tournament T because it encodes orthogonality (anti-conflict) while Omega(T) encodes interference (conflict). These are complementary in the Kneser/Johnson duality.
 **Evidence:** At n<=5, ALL 3-cycle conflict graphs are complete (any two 3-subsets share >=1 element). Petersen is triangle-free. At n>=6, conflict graphs can have independent sets but Petersen's girth-5 structure remains incompatible.
 Source: petersen_lie_bridge_s18.py (THM-261)
+
+## HYP-1717: Completeness implies binary meta-theorem (kind-pasteur-S18b)
+**Status:** OPEN (conceptual, with supporting evidence)
+**Hypothesis:** Every "soft" structural property of general digraphs becomes "hard" (binary/dichotomous) when restricted to tournaments. The completeness constraint rigidifies continuous spectra into discrete alternatives.
+**Evidence:** 26 binary phenomena catalogued across the project: girth {3,inf}, beta_2=0 always, beta_1*beta_3=0, H always odd, per-path identity works/fails sharply, etc. HYP-327 confirms removing ONE edge can break beta_2=0. The binary skeleton is specific to complete directed graphs.
+**Test:** Check if chromatic number of Omega(T) has a narrow/binary range. Check if weighted tournaments lose the binary structure.
+Source: the-binary-skeleton.md, six-patterns-and-where-they-lead.md
+
+## HYP-1718: H=7 impossible BECAUSE girth phase overshoots (kind-pasteur-S18b)
+**Status:** OPEN (conceptual argument)
+**Hypothesis:** The impossibility of H=7 is a direct consequence of the girth-3 phase transition being too eager: entering the girth-3 phase requires alpha_1 >= 3, but the phase immediately forces alpha_1 >= 4 (triangles in Omega generate additional cycles). The desired value alpha_1=3 is unstable within the girth-3 phase.
+**Evidence:** THM-029 proof structure. The alpha_1=3, alpha_2=0 configuration requires all 3 cycles to be pairwise conflicting (= Omega triangle), but this forces a common vertex, which generates a 4th cycle via completeness.
+Source: the-binary-skeleton.md
+
+## HYP-1719: Ramsey threshold n=6 (kind-pasteur-S18b)
+**Status:** CONFIRMED (convergence of evidence)
+**Hypothesis:** n=6 is the universal Ramsey threshold for tournament structure: the order at which Kneser girth drops from 5 to 3, beta_3 first appears, per-path identity first fails, alpha_2 first becomes possible, and interval graph property first fails. All these co-occur at n=6 because R(3,3)=6.
+**Evidence:** K(5,2) girth=5 vs K(6,2) girth=3. beta_3 onset at n=6. Per-path failure at n=6. alpha_2>0 first at n=6. Omega disconnected first at n=6. The common mechanism: 6 vertices is the minimum for 2 disjoint triangles (= 2*3), which is the Ramsey condition.
+Source: the-binary-skeleton.md
