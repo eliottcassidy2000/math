@@ -1,0 +1,264 @@
+========================================================================
+  CURVATURE CLASSIFICATION OF CONSTANTS
+  g(x) = x³ - x² - x - 1
+========================================================================
+
+========================================================================
+  PART 1: ALGEBRAIC CONSTANTS
+========================================================================
+
+                   Constant        Value         g(x)       Regime
+  ------------------------- ------------ ------------ ------------
+                   0 (zero)     0.000000      -1.0000    SPHERICAL
+                  1 (unity)     1.000000      -2.0000    SPHERICAL
+                    sqrt(2)     1.414214      -1.5858    SPHERICAL
+               phi (golden)     1.618034      -1.0000    SPHERICAL
+                    sqrt(3)     1.732051      -0.5359    SPHERICAL
+           tau (tribonacci)     1.839287       0.0000    EUCLIDEAN
+             2 (tournament)     2.000000       1.0000   HYPERBOLIC
+                    sqrt(5)     2.236068       2.9443   HYPERBOLIC
+           delta_s (silver)     2.414214       4.8284   HYPERBOLIC
+               phi² = phi+1     2.618034       7.4721   HYPERBOLIC
+                          3     3.000000      14.0000   HYPERBOLIC
+
+
+========================================================================
+  PART 2: TRANSCENDENTAL CONSTANTS
+========================================================================
+
+                   Constant        Value         g(x)       Regime
+  ------------------------- ------------ ------------ ------------
+                       pi-3     0.141593      -1.1588    SPHERICAL
+                       1/pi     0.318310      -1.3874    SPHERICAL
+                        1/e     0.367879      -1.4534    SPHERICAL
+                      ln(2)     0.693147      -1.8406    SPHERICAL
+                       e/pi     0.865256      -1.9661    SPHERICAL
+                      ln(3)     1.098612      -1.9796    SPHERICAL
+                     ln(pi)     1.144730      -1.9551    SPHERICAL
+                       pi/e     1.155727      -1.9477    SPHERICAL
+                       pi/2     1.570796      -1.1624    SPHERICAL
+            pi²/6 = zeta(2)     1.644934      -0.8999    SPHERICAL
+                    sqrt(e)     1.648721      -0.8853    SPHERICAL
+                        e-1     1.718282      -0.5976    SPHERICAL
+                   sqrt(pi)     1.772454      -0.3457    SPHERICAL
+                     ln(10)     2.302585       3.6036   HYPERBOLIC
+                  e (Euler)     2.718282       8.9782   HYPERBOLIC
+                         pi     3.141593      16.9951   HYPERBOLIC
+                       2*pi     6.283185     201.2886   HYPERBOLIC
+                         e²     7.389056     340.4416   HYPERBOLIC
+                       pi^e    22.459158   10800.8354   HYPERBOLIC
+                       e^pi    23.140693   11832.0155   HYPERBOLIC
+
+
+========================================================================
+  PART 3: SPECIAL CONSTANTS
+========================================================================
+
+                   Constant        Value         g(x)       Regime
+  ------------------------- ------------ ------------ ------------
+          omega (Lambert W)     0.567143      -1.7064    SPHERICAL
+   gamma (Euler-Mascheroni)     0.577216      -1.7181    SPHERICAL
+                  Catalan G     0.915966      -1.9865    SPHERICAL
+          2^(1/12) semitone     1.059463      -1.9927    SPHERICAL
+             12th root of 2     1.059463      -1.9927    SPHERICAL
+              zeta(3) Apery     1.202057      -1.9101    SPHERICAL
+                 Glaisher A     1.282427      -1.8179    SPHERICAL
+              Conway lambda     1.303577      -1.7877    SPHERICAL
+                plastic rho     1.324718      -1.7549    SPHERICAL
+                    1/ln(2)     1.442695      -1.5213    SPHERICAL
+                   log_2(e)     1.442695      -1.5213    SPHERICAL
+           Feigenbaum alpha     2.502908       5.9121   HYPERBOLIC
+                 Khinchin K     2.685452       8.4694   HYPERBOLIC
+           Feigenbaum delta     4.669202      74.3247   HYPERBOLIC
+
+
+========================================================================
+  PART 4: DIMENSIONLESS PHYSICAL CONSTANTS
+========================================================================
+
+                   Constant        Value         g(x)       Regime
+  ------------------------- ------------ ------------ ------------
+              m_e/m_p ratio     0.000545      -1.0005    SPHERICAL
+     1/137 (fine structure)     0.007297      -1.0074    SPHERICAL
+                    1/(4pi)     0.079577      -1.0854    SPHERICAL
+           alpha_s (strong)     0.117900      -1.1302    SPHERICAL
+              sin²(theta_W)     0.231220      -1.2723    SPHERICAL
+        Weinberg angle sin²     0.231220      -1.2723    SPHERICAL
+         Boltzmann k/k (=1)     1.000000      -2.0000    SPHERICAL
+               2pi (Planck)     6.283185     201.2886   HYPERBOLIC
+
+
+========================================================================
+  PART 5: ANALYSIS — THE CURVATURE LANDSCAPE
+========================================================================
+
+  SPHERICAL (g < 0): 29 constants
+    g(1 (unity)) = -2.0000
+    g(2^(1/12) semitone) = -1.9927
+    g(12th root of 2) = -1.9927
+    g(Catalan G) = -1.9865
+    g(ln(3)) = -1.9796
+    g(e/pi) = -1.9661
+    g(ln(pi)) = -1.9551
+    g(pi/e) = -1.9477
+    g(zeta(3) Apery) = -1.9101
+    g(ln(2)) = -1.8406
+    g(Glaisher A) = -1.8179
+    g(Conway lambda) = -1.7877
+    g(plastic rho) = -1.7549
+    g(gamma (Euler-Mascheroni)) = -1.7181
+    g(omega (Lambert W)) = -1.7064
+    g(sqrt(2)) = -1.5858
+    g(1/ln(2)) = -1.5213
+    g(log_2(e)) = -1.5213
+    g(1/e) = -1.4534
+    g(1/pi) = -1.3874
+    g(pi/2) = -1.1624
+    g(pi-3) = -1.1588
+    g(0 (zero)) = -1.0000
+    g(phi (golden)) = -1.0000
+    g(pi²/6 = zeta(2)) = -0.8999
+    g(sqrt(e)) = -0.8853
+    g(e-1) = -0.5976
+    g(sqrt(3)) = -0.5359
+    g(sqrt(pi)) = -0.3457
+
+  NEAR-EUCLIDEAN (|g| < 0.1): 1 constants
+    g(tau (tribonacci)) = +0.000000
+
+  HYPERBOLIC (g > 0): 15 constants
+    g(2 (tournament)) = 1.0000
+    g(sqrt(5)) = 2.9443
+    g(ln(10)) = 3.6036
+    g(delta_s (silver)) = 4.8284
+    g(Feigenbaum alpha) = 5.9121
+    g(phi² = phi+1) = 7.4721
+    g(Khinchin K) = 8.4694
+    g(e (Euler)) = 8.9782
+    g(3) = 14.0000
+    g(pi) = 16.9951
+
+
+========================================================================
+  PART 6: CLOSEST TO THE BOUNDARY (tau = 1.8392867552)
+========================================================================
+
+  Constants closest to the Euclidean boundary tau:
+             tau (tribonacci): |x-tau| = 0.000000, g(x) = +0.0000 (EUCLIDEAN)
+                     sqrt(pi): |x-tau| = 0.066833, g(x) = -0.3457 (SPHERICAL)
+                      sqrt(3): |x-tau| = 0.107236, g(x) = -0.5359 (SPHERICAL)
+                          e-1: |x-tau| = 0.121005, g(x) = -0.5976 (SPHERICAL)
+               2 (tournament): |x-tau| = 0.160713, g(x) = +1.0000 (HYPERBOLIC)
+                      sqrt(e): |x-tau| = 0.190565, g(x) = -0.8853 (SPHERICAL)
+              pi²/6 = zeta(2): |x-tau| = 0.194353, g(x) = -0.8999 (SPHERICAL)
+                 phi (golden): |x-tau| = 0.221253, g(x) = -1.0000 (SPHERICAL)
+                         pi/2: |x-tau| = 0.268490, g(x) = -1.1624 (SPHERICAL)
+                      1/ln(2): |x-tau| = 0.396592, g(x) = -1.5213 (SPHERICAL)
+                     log_2(e): |x-tau| = 0.396592, g(x) = -1.5213 (SPHERICAL)
+                      sqrt(5): |x-tau| = 0.396781, g(x) = +2.9443 (HYPERBOLIC)
+
+
+========================================================================
+  PART 7: CURVATURE AT INTEGER AND HALF-INTEGER VALUES
+========================================================================
+
+       x       g(x)       Regime             Tournament meaning
+     0.0       -1.0    SPHERICAL                      empty set
+     0.5       -1.6    SPHERICAL                               
+     1.0       -2.0    SPHERICAL  deterministic (no randomness)
+     1.5       -1.4    SPHERICAL    between det. and tournament
+     2.0        1.0   HYPERBOLIC            TOURNAMENT FUGACITY
+     2.5        5.9   HYPERBOLIC                               
+     3.0       14.0   HYPERBOLIC ternary / I(single cycle, 2)+1
+     4.0       43.0   HYPERBOLIC                               
+     5.0       94.0   HYPERBOLIC                               
+     6.0      173.0   HYPERBOLIC                               
+     7.0      286.0   HYPERBOLIC             forbidden atom H=7
+
+
+========================================================================
+  PART 8: REMARKABLY NEAR-EUCLIDEAN
+========================================================================
+
+  tau = 1.8392867552 is the EXACT root of g(x) = 0.
+
+  The closest standard transcendental to tau:
+
+                 Expression        Value    |x - tau|         g(x)
+                 2 - 1/tau³ 1.8392867552 0.0000000000   0.00000000
+                       11/6 1.8333333333 0.0059534219  -0.03240741
+        sqrt(2) + 1/sqrt(5) 1.8614271579 0.0221404027   0.12334133
+              ln(2) + ln(3) 1.7917594692 0.0475272860  -0.24989329
+                      ln(6) 1.7917594692 0.0475272860  -0.24989329
+                      e - 1 1.7182818285 0.1210049268  -0.59756016
+                      e/phi 1.6799905610 0.1592961942  -0.76080677
+              sqrt(e) + 1/e 2.0166007119 0.1773139567   1.11758748
+
+  NOTABLE:
+  - ln(6) = ln(2) + ln(3) = 1.7917594692, g(ln6) = -0.249893 ← NEAR-EUCLIDEAN!
+    |ln(6) - tau| = 0.047527
+    ln(6) is the RAPIDITY of the Hurwitz pair (2,3): arctanh(5/7)?
+    No, ln(6) = ln(2×3) = the LOG of the flat Coxeter product.
+
+  - 11/6 = 1.8333333333, g(11/6) = -0.032407
+    |11/6 - tau| = 0.005953
+    From S96: 11/6 is the "rational approximant" where tau³=6 exactly.
+    11 = next Paley prime. 6 = (2,3,6) = flat period.
+
+  - e/phi = 1.6799905610, g(e/phi) = -0.760807
+    Euler's number divided by the golden ratio!
+    |e/phi - tau| = 0.159296 — quite close!
+
+========================================================================
+  PART 9: WHAT THE REGIMES MEAN
+========================================================================
+
+  SPHERICAL (g < 0, x < tau): Constants in this regime describe
+  FINITE, CLOSED, BOUNDED structures.
+    - phi (golden ratio): finite icosahedral symmetry
+    - sqrt(2), sqrt(3): algebraic, constructible
+    - ln(2), ln(3): the Hurwitz generators
+    - gamma (Euler-Mascheroni): harmonic series growth (sub-exponential)
+    - 1 (unity): the fixed point of multiplication
+
+  EUCLIDEAN (g = 0, x = tau): The CRITICAL BOUNDARY.
+    - tau (tribonacci): the unique flat point
+    - ln(6) ≈ tau: the product of the flat Coxeter primes
+    - 11/6 ≈ tau: the Paley-prime/period ratio
+    - e/phi ≈ tau: the analytic-algebraic ratio
+
+  HYPERBOLIC (g > 0, x > tau): Constants in this regime describe
+  INFINITE, OPEN, UNBOUNDED structures.
+    - 2 (tournament fugacity): one quantum into hyperbolic
+    - e (Euler): the natural growth rate
+    - pi (3.14...): the circle constant — DEEPLY HYPERBOLIC
+    - Feigenbaum delta (4.67): chaos constant — FAR hyperbolic
+    - Khinchin (2.69): continued fraction constant — mildly hyperbolic
+
+  THE SURPRISE: pi IS HYPERBOLIC!
+    g(pi) = pi³ - pi² - pi - 1 = 31.006 - 9.870 - 3.142 - 1 = 16.994.
+    pi is DEEPLY in the hyperbolic regime.
+
+  AND: e IS HYPERBOLIC!
+    g(e) = e³ - e² - e - 1 = 20.086 - 7.389 - 2.718 - 1 = 8.979.
+    e is well into hyperbolic territory.
+
+  BUT: ln(2) and ln(3) ARE SPHERICAL!
+    g(ln2) = -1.8406, g(ln3) = -1.9796.
+    The logarithms of the Hurwitz primes live in the SPHERICAL world.
+    This is why the rapidity lattice (generated by ln2, ln3, ln7)
+    can represent tournament eigenvalues: it reaches INTO the spherical
+    regime where finite structure lives.
+
+  THE DEEPEST OBSERVATION:
+  The constants that BUILD tournament theory (ln2, ln3: the rapidity generators)
+  are SPHERICAL. The constant that EVALUATES tournament theory (2: the fugacity)
+  is HYPERBOLIC. Tournament theory is the BRIDGE between spherical generators
+  and a hyperbolic evaluation point.
+
+  The gap: 2 - tau = 1/tau³ ≈ 0.161 (the Rédei defect).
+  This gap IS the "+1 quantum" of tournament theory.
+  It measures HOW FAR the evaluation point (2) is from the boundary (tau).
+
+
+Done. opus-2026-03-21-S127

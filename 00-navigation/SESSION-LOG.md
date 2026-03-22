@@ -20,6 +20,21 @@ Entry format:
 **Summary:** Deep topological investigation of the k-nacci cascade. Three verified theorems: g_p(2)=1 ∀p, g_{p+1}(ρ_p)=-1 ∀p, ladder φ<τ<ρ₄<...<2. NUMERICAL: 2-ρ_p ≈ 1/2^p (depth halves each level), intervals shrink by factor 1/2, total 2-φ=1/φ². Complex roots of g_p form (p-1)-gon inside unit circle. TOPOLOGICAL: cascade = tower of covering spaces, g_{p+1}(ρ_p)=-1 = winding number one root short, +1 and -1 are same quantum from opposite sides. OCF levels α_k correspond to {2k+1,q} tessellation theories. Read kind-pasteur S18n-p.
 **New contributions:** topological_algebra_s140.py
 **Unresolved threads:** Prove 2-ρ_p ~ 1/2^p exactly, connect OCR split to depth ratios, formalize covering space tower
+---
+
+## opus-2026-03-21-S127 — 2026-03-21: Transcendental Curvature — pi is HYPERBOLIC, ln(2) is SPHERICAL, ln(6) nearest transcendental
+
+**Account:** opus
+**Summary:** Evaluated g(x)=x³-x²-x-1 at 40+ constants. ALL standard transcendentals below tau are spherical (ln2, ln3, gamma, Catalan, Apery, pi/2, sqrt(pi)). ALL above tau are hyperbolic (e, pi, Feigenbaum, Khinchin). The rapidity generators (ln2, ln3) are SPHERICAL while the fugacity (2) is HYPERBOLIC — tournament theory bridges these regimes. ln(6)=ln(2)+ln(3) is the nearest standard transcendental to tau (|ln6-tau|=0.048). 11/6 has g(11/6)=-0.032, the nearest simple rational.
+**Key:**
+1. **pi is DEEPLY hyperbolic**: g(pi) = 17.0. The circle constant lives far in the infinite regime.
+2. **e is hyperbolic**: g(e) = 9.0.
+3. **ln(2), ln(3) are SPHERICAL**: g(ln2) = -1.84, g(ln3) = -1.98. The rapidity generators are in the finite regime.
+4. **ln(6) = ln(2)+ln(3) ≈ tau**: |ln(6)-tau| = 0.048, g(ln6) = -0.25. Nearest standard transcendental to boundary.
+5. **11/6 ≈ tau**: g(11/6) = -0.032. Nearest simple rational to boundary. 11=next Paley, 6=flat period.
+6. **sqrt(pi) closest named transcendental**: |sqrt(pi)-tau| = 0.067.
+7. **THE BRIDGE**: rapidity generators (ln2,ln3) are SPHERICAL; fugacity (2) is HYPERBOLIC. Tournaments bridge these.
+**Scripts:** transcendental_curvature_s127.py
 
 ---
 
