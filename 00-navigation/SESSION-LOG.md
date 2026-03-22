@@ -13,7 +13,15 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-21-S131 — 2026-03-21: The {3,∞} Coxeter Structure — gap function, modular group, binary skeleton synthesis
+## kind-pasteur-2026-03-21-S18e — 2026-03-21: The Modular Tournament — {2,3,5}/{2,3,7}/{2,3,inf} unification, 1729 bridge
+
+**Account:** kind-pasteur
+**Summary:** Integrated opus-S120 ({2,3,7}) and opus-S131 ({3,inf}) with alphabet/code/skeleton framework. Three triangle groups control three aspects: {2,3,5}=what's easy, {2,3,7}=what's forbidden, {2,3,inf}=what's possible. Three orbifold points = cycle origin (j=0), self-complementary (j=1728), transitive cusp (j=inf). 1729 = j(i)+1 = 7*13*19 (tournament primes). Delta_T=(H-1)/2 is base-2 cycle packing. g(phi)=-1, g(tau)=0, g(2)=+1 classifies the three regimes.
+**New contributions:** HYP-1726..1729, the-modular-tournament.md, modular_tournament_s18e.py
+
+---
+
+## opus-2026-03-21-S131 — 2026-03-21: The {3,inf} Coxeter Structure — gap function, modular group, binary skeleton synthesis
 ## kind-pasteur-2026-03-21-S18d — 2026-03-21: The Tournament Alphabet — q-tournament family, even-alphabet parity law, forbidden values are q-specific
 ---
 

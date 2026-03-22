@@ -1847,3 +1847,24 @@ Source: q_tournament_alphabet_s18d.py
 **Status:** CONFIRMED at n=5 (exhaustive)
 **Hypothesis:** The set of forbidden (unachievable) values of I(Omega(T), q) depends on q. At q=1: gap = {4}. At q=2: gap = {7}. At q=3: many gaps (sparse spectrum). The forbidden structure is an intrinsic property of the (tournament, alphabet) pair, not of the tournament alone.
 Source: q_tournament_alphabet_s18d.py
+
+## HYP-1726: Tournament discriminant Delta_T = (H-1)/2 has base-2 expansion from cycle packing (kind-pasteur-S18e)
+**Status:** CONFIRMED (immediate from OCF + Redei)
+**Hypothesis:** Delta_T = (H-1)/2 = alpha_1 + 2*alpha_2 + 4*alpha_3 + ... is a non-negative integer whose binary digits encode the parity of each level of the cycle packing hierarchy. Delta = 0 iff transitive. The gap Delta=3 (binary 11) corresponds to the forbidden H=7.
+Source: modular_tournament_s18e.py
+
+## HYP-1727: 1729 = j(i) + g(2) = 7 * 13 * 19 bridges modular forms to tournament primes (kind-pasteur-S18e)
+**Status:** VERIFIED (numerical identity)
+**Hypothesis:** 1729 = 1728 + 1 = j(i) + 1 = 12^3 + 1^3 = 10^3 + 9^3 = 7 * 13 * 19. Each factor is a tournament prime: 7 (forbidden H), 13 (OCR denominator at n=6), 19 (OCR factor at n=5). The taxicab representations use tournament-significant numbers: j-invariant + Redei quantum, Petersen^3 + CS-boundary^3.
+**Caution:** Could be numerological coincidence rather than structural. Needs deeper investigation to determine if the factorization 7*13*19 is forced by the modular structure or accidental.
+Source: modular_tournament_s18e.py
+
+## HYP-1728: OCR = Eisenstein/Total in modular decomposition (kind-pasteur-S18e)
+**Status:** OPEN (structural analogy, extends opus-S131)
+**Hypothesis:** The variance decomposition Var(H) = Var(E[H|score]) + E[Var(H|score)] parallels the modular form decomposition M_k = E_k + S_k (Eisenstein + cusp). The OCR = Eisenstein fraction. The residual 1-OCR is the "cuspidal" part. Opus-S131 predicted OCR denominators factor into primes p with X_0(p) genus <= 1.
+Source: modular_tournament_s18e.py, coxeter_three_infinity_s131.out
+
+## HYP-1729: g(phi)=-1, g(tau)=0, g(2)=+1 classifies tournament theory as {2,3,inf} hyperbolic (kind-pasteur-S18e)
+**Status:** CONFIRMED (algebraic identity + structural interpretation)
+**Hypothesis:** The gap function g(x) = x^3 - x^2 - x - 1 evaluated at the three characteristic constants (golden ratio, tribonacci, fugacity) gives {-1, 0, +1} = {spherical, Euclidean, hyperbolic}. Tournament theory at x=2 is one quantum (g=+1) into the hyperbolic regime. This single quantum is the source of Redei parity, forbidden H=7, and the binary skeleton.
+Source: modular_tournament_s18e.py, opus-S115/S131
