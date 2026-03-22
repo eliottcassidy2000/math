@@ -1,0 +1,493 @@
+========================================================================
+  THE PERMUTOHEDRON IN TOURNAMENT THEORY
+  opus-2026-03-22-S202
+========================================================================
+
+CHAPTER 1: THE PERMUTOHEDRON Π_{n-1}
+============================================================
+
+  The permutohedron Π_{n-1} = conv{σ(0,1,...,n-1) : σ ∈ S_n}.
+
+  It lives in the hyperplane Σ x_i = 0+1+...+(n-1) = C(n,2).
+  So Π_{n-1} has dimension n-1 (in R^n, constrained to this hyperplane).
+
+  Its f-vector (number of faces of each dimension) is given by
+  the ORDERED STIRLING NUMBERS:
+    f_k = # ordered set partitions of [n] into n-k blocks
+        = Σ_{j=0}^{k} (-1)^j C(k,j) (k+1-j)^n  (by inclusion-exclusion)
+
+  Or equivalently: the face lattice of Π_{n-1} is isomorphic to
+  the lattice of ordered set partitions of [n].
+
+  Π_1 (n=2, dim=1):
+    f-vector: [2]
+    Vertices: 2 = 2!
+    Euler char: 2 (should be 1 + (-1)^1)
+
+  Π_2 (n=3, dim=2):
+    f-vector: [6, 6, 1]
+    Vertices: 6 = 3!
+    Edges: 6
+    2-faces: 1
+    Euler char: 1 (should be 1 + (-1)^2)
+
+  Π_3 (n=4, dim=3):
+    f-vector: [24, 36, 14, 1]
+    Vertices: 24 = 4!
+    Edges: 36
+    2-faces: 14
+    Euler char: 1 (should be 1 + (-1)^3)
+
+  Π_4 (n=5, dim=4):
+    f-vector: [120, 240, 150, 30, 1]
+    Vertices: 120 = 5!
+    Edges: 240
+    2-faces: 150
+    Euler char: 1 (should be 1 + (-1)^4)
+
+
+CHAPTER 2: THE SCORE MAP — CUBE → PERMUTOHEDRON
+============================================================
+
+  The SCORE MAP is the linear map:
+    s: {0,1}^{C(n,2)} → R^n
+    s(T)_i = Σ_{j≠i} T_{ij}
+
+  It sends the tournament cube to the permutohedron:
+    s({0,1}^{C(n,2)}) = Π_{n-1} ∩ Z^n  (the integer points!)
+
+  The fibers s^{-1}(score) are the SCORE CLASSES:
+    all tournaments with the same (unsorted) score vector.
+
+  The SORTED score gives the partition-type of the score vector.
+  Each sorted score = one lattice point in the permutohedron.
+  The total number of lattice points = A000571(n) = # score sequences.
+
+  VERIFICATION: count score vectors vs permutohedron lattice points.
+
+  n=3: 8 tournaments → 7 unsorted scores, 2 sorted scores (A000571)
+  n=4: 64 tournaments → 38 unsorted scores, 4 sorted scores (A000571)
+  n=5: 1024 tournaments → 291 unsorted scores, 9 sorted scores (A000571)
+  n=6: 32768 tournaments → 2932 unsorted scores, 22 sorted scores (A000571)
+
+
+CHAPTER 3: WEAK BRUHAT ORDER ON S_n
+============================================================
+
+  The WEAK BRUHAT ORDER on the symmetric group S_n:
+    σ ≤ τ iff τ = σ × s_{i_1} × ... × s_{i_k} with ℓ(τ) = ℓ(σ) + k
+
+  where s_i = (i, i+1) are adjacent transpositions and ℓ(σ) is the
+  number of inversions.
+
+  The HASSE DIAGRAM of the weak Bruhat order IS the 1-skeleton
+  of the permutohedron Π_{n-1}.
+
+  Two permutations are connected by an edge iff they differ by
+  a SINGLE adjacent transposition.
+
+  FOR TOURNAMENTS:
+  A transitive tournament corresponds to a permutation (total order).
+  An adjacent transposition flips the arc between two consecutively-
+  ranked vertices.
+
+  So: the Hasse diagram of the weak Bruhat order IS the flip graph
+  on the TRANSITIVE FIBER (all tournaments with score (0,1,...,n-1)).
+
+  This means: the transitive fiber IS the permutohedron Π_{n-1}!
+  Its vertices are the n! labelings of the transitive tournament.
+  Its edges are the n-1 possible adjacent-transposition flips.
+
+  The NUMBER OF INVERSIONS ℓ(σ) equals the number of arcs that
+  disagree with the identity permutation = Kendall tau distance.
+
+  Weak Bruhat order on S_4:
+    Vertices: 24 = 4!
+    Edges: 36
+    Expected edges: 4! × (n-1) / 2 = 36
+    Inversion distribution: 0:1 1:3 2:5 3:6 4:5 5:3 6:1 
+    (This is the Mahonian distribution = coefficients of [n]_q!)
+
+
+CHAPTER 4: GRAPHICAL ZONOTOPE Z(K_n) = PERMUTOHEDRON
+============================================================
+
+  The GRAPHICAL ZONOTOPE of a graph G is the Minkowski sum:
+    Z(G) = Σ_{(i,j) ∈ E(G)} [e_i, e_j]
+
+  where [e_i, e_j] is the line segment from e_i to e_j.
+
+  For G = K_n (complete graph):
+    Z(K_n) = Σ_{1≤i<j≤n} [e_i, e_j]
+           = Π_{n-1}  (the permutohedron!)
+
+  This is the Minkowski sum of C(n,2) line segments, one for each edge.
+  Each segment corresponds to ONE ARC of the tournament.
+
+  A TOURNAMENT is a choice of ENDPOINT for each segment:
+    For edge (i,j): choose e_i (i beats j) or e_j (j beats i).
+    The resulting point is the SCORE VECTOR.
+
+  This is why the score map sends the cube to the zonotope:
+    s: {0,1}^{C(n,2)} → Z(K_n) = Π_{n-1}
+    s(T) = Σ_{(i,j)} T_{ij} × e_i + (1-T_{ij}) × e_j
+
+  The ZONOTOPE TILING:
+  A zonotope can be tiled by parallelotopes (Shephard, 1974).
+  For Z(K_n), the tiles are indexed by ACYCLIC ORIENTATIONS of K_n,
+  i.e., by TRANSITIVE TOURNAMENTS (= permutations).
+
+  There are n! tiles, one for each permutation.
+  Each tile is a parallelotope with edges along the direction vectors.
+
+  THIS IS THE SAME as the simplex decomposition of the cube:
+  [0,1]^n decomposes into n! simplices (one per permutation),
+  and Z(K_n) inherits this decomposition.
+
+  Π_2 (n=3): 6 vertices = hexagon
+  Vertices: [(0, 1, 2), (0, 2, 1), (1, 0, 2), (1, 2, 0), (2, 0, 1), (2, 1, 0)]
+  Edges: 6 (hexagon has 6 edges ✓)
+
+  Π_3 (n=4): 24 vertices, 36 edges
+  This is the TRUNCATED OCTAHEDRON.
+  Known: 24 vertices, 36 edges, 14 faces (8 hexagons + 6 squares)
+
+
+CHAPTER 5: FIBERS — TOURNAMENTS OVER EACH LATTICE POINT
+============================================================
+
+  Each lattice point in Π_{n-1} is a score vector.
+  The FIBER over this point = all tournaments with that score.
+
+  For the UNSORTED score vector v = (v_0, ..., v_{n-1}):
+    fiber(v) = {T : score(T) = v}
+
+  For the SORTED score vector s = sort(v):
+    fiber(s) = {T : sort(score(T)) = s} = ∪_{permutations σ} fiber(σ(s))
+
+  The fiber sizes were computed in S190.
+  Now we can visualize WHERE each fiber sits in the permutohedron.
+
+  n=3: 7 unsorted score vectors, 2 sorted
+        unsorted score  #tournaments              H values
+             (0, 1, 2)             1                   [1]
+             (0, 2, 1)             1                   [1]
+             (1, 0, 2)             1                   [1]
+             (1, 1, 1)             2                   [3]
+             (1, 2, 0)             1                   [1]
+             (2, 0, 1)             1                   [1]
+             (2, 1, 0)             1                   [1]
+
+  n=4: 38 unsorted score vectors, 4 sorted
+        unsorted score  #tournaments              H values
+          (0, 1, 2, 3)             1                   [1]
+          (0, 1, 3, 2)             1                   [1]
+          (0, 2, 1, 3)             1                   [1]
+          (0, 2, 2, 2)             2                   [3]
+          (0, 2, 3, 1)             1                   [1]
+          (0, 3, 1, 2)             1                   [1]
+          (0, 3, 2, 1)             1                   [1]
+          (1, 0, 2, 3)             1                   [1]
+          (1, 0, 3, 2)             1                   [1]
+          (1, 1, 1, 3)             2                   [3]
+          (1, 1, 2, 2)             4                   [5]
+          (1, 1, 3, 1)             2                   [3]
+          (1, 2, 0, 3)             1                   [1]
+          (1, 2, 1, 2)             4                   [5]
+          (1, 2, 2, 1)             4                   [5]
+          (1, 2, 3, 0)             1                   [1]
+          (1, 3, 0, 2)             1                   [1]
+          (1, 3, 1, 1)             2                   [3]
+          (1, 3, 2, 0)             1                   [1]
+          (2, 0, 1, 3)             1                   [1]
+          (2, 0, 2, 2)             2                   [3]
+          (2, 0, 3, 1)             1                   [1]
+          (2, 1, 0, 3)             1                   [1]
+          (2, 1, 1, 2)             4                   [5]
+          (2, 1, 2, 1)             4                   [5]
+          (2, 1, 3, 0)             1                   [1]
+          (2, 2, 0, 2)             2                   [3]
+          (2, 2, 1, 1)             4                   [5]
+          (2, 2, 2, 0)             2                   [3]
+          (2, 3, 0, 1)             1                   [1]
+          (2, 3, 1, 0)             1                   [1]
+          (3, 0, 1, 2)             1                   [1]
+          (3, 0, 2, 1)             1                   [1]
+          (3, 1, 0, 2)             1                   [1]
+          (3, 1, 1, 1)             2                   [3]
+          (3, 1, 2, 0)             1                   [1]
+          (3, 2, 0, 1)             1                   [1]
+          (3, 2, 1, 0)             1                   [1]
+
+  n=5: 291 unsorted score vectors, 9 sorted
+
+
+CHAPTER 6: HOW G_n RELATES TO THE PERMUTOHEDRON
+============================================================
+
+  We have THREE graphs on tournaments:
+
+  1. THE TOURNAMENT CUBE (labeled flip graph):
+     Vertices: 2^{C(n,2)} labeled tournaments
+     Edges: arc flips (Hamming distance 1)
+     This is the C(n,2)-dimensional hypercube.
+
+  2. THE PERMUTOHEDRON Π_{n-1} (transitive fiber):
+     Vertices: n! transitive tournaments = permutations
+     Edges: adjacent transpositions (weak Bruhat)
+     This lives INSIDE the tournament cube as a subgraph.
+
+  3. THE META-GRAPH G_n (isomorphism class graph):
+     Vertices: iso classes (quotient by S_n)
+     Edges: structural arc flips
+     This is the cube MODULO S_n.
+
+  THE RELATIONSHIPS:
+    Tournament cube ⊃ Permutohedron (as subgraph of transitive fiber)
+    Tournament cube → G_n (quotient by S_n)
+    Permutohedron → transitive vertex in G_n (collapses to one point!)
+
+  So: the entire permutohedron Π_{n-1} with its n! vertices
+  collapses to a SINGLE VERTEX of G_n: the transitive class.
+
+  THE FIBERS:
+  Each vertex of G_n is an iso class C.
+  The PREIMAGE of C in the tournament cube is an ORBIT of S_n.
+  This orbit has size n!/|Aut(C)|.
+
+  For the transitive class: orbit size = n!/1 = n! (the entire permutohedron).
+  For the regular class (odd n): orbit size = n!/n = (n-1)!.
+
+  THE PERMUTOHEDRON IS THE LARGEST ORBIT.
+
+  n=3: 2 iso classes
+    size=    6 = 3!/1, |Aut|=1, H=1, score=(0, 1, 2)
+    size=    2 = 3!/3, |Aut|=3, H=3, score=(1, 1, 1)
+
+  n=4: 4 iso classes
+    size=   24 = 4!/1, |Aut|=1, H=1, score=(0, 1, 2, 3)
+    size=   24 = 4!/1, |Aut|=1, H=5, score=(1, 1, 2, 2)
+    size=    8 = 4!/3, |Aut|=3, H=3, score=(1, 1, 1, 3)
+    size=    8 = 4!/3, |Aut|=3, H=3, score=(0, 2, 2, 2)
+
+  n=5: 12 iso classes
+    size=  120 = 5!/1, |Aut|=1, H=1, score=(0, 1, 2, 3, 4)
+    size=  120 = 5!/1, |Aut|=1, H=5, score=(1, 1, 2, 2, 4)
+    size=  120 = 5!/1, |Aut|=1, H=9, score=(1, 1, 2, 3, 3)
+    size=  120 = 5!/1, |Aut|=1, H=5, score=(0, 2, 2, 3, 3)
+    size=  120 = 5!/1, |Aut|=1, H=9, score=(1, 1, 2, 3, 3)
+    size=  120 = 5!/1, |Aut|=1, H=11, score=(1, 2, 2, 2, 3)
+    size=  120 = 5!/1, |Aut|=1, H=13, score=(1, 2, 2, 2, 3)
+    size=   40 = 5!/3, |Aut|=3, H=3, score=(1, 1, 1, 3, 4)
+    size=   40 = 5!/3, |Aut|=3, H=3, score=(0, 2, 2, 2, 4)
+    size=   40 = 5!/3, |Aut|=3, H=3, score=(0, 1, 3, 3, 3)
+    size=   40 = 5!/3, |Aut|=3, H=15, score=(1, 2, 2, 2, 3)
+    size=   24 = 5!/5, |Aut|=5, H=15, score=(2, 2, 2, 2, 2)
+
+
+CHAPTER 7: FACES OF THE PERMUTOHEDRON
+============================================================
+
+  A k-face of Π_{n-1} corresponds to an ORDERED PARTITION of [n]
+  into n-k non-empty blocks: [n] = B_1 | B_2 | ... | B_{n-k}.
+
+  The vertices of this face are all permutations consistent with
+  the partial ordering: elements of B_1 come first, then B_2, etc.
+
+  EXAMPLES AT n=4:
+    - 0-faces (vertices): 4! = 24 ordered partitions into 4 singletons
+    - 1-faces (edges): ordered partitions into 3 blocks (one pair merged)
+    - 2-faces: ordered partitions into 2 blocks
+      - Hexagonal faces: partition {a,b,c}|{d} (3+1 = C(3,2)=3 edges → hexagon)
+      - Square faces: partition {a,b}|{c,d} (2×2 = 4 edges → square)
+
+  The permutohedron Π_3 has:
+    14 faces = 8 hexagons + 6 squares
+    These correspond to:
+      8 hexagons = C(4,3) × 2 = 8 ordered partitions of type (3,1)
+      6 squares = C(4,2) = 6 ordered partitions of type (2,2)
+      Total: 14 faces ✓
+
+  TOURNAMENT INTERPRETATION:
+  An ordered partition B_1 | B_2 | ... | B_k means:
+  "All vertices in B_1 lose to all vertices in B_2,
+   all in B_2 lose to all in B_3, etc."
+  Within each block, the relative ordering is undetermined.
+
+  This is a PARTIAL TOURNAMENT: determined between blocks,
+  free within blocks. The face of the permutohedron corresponds
+  to the set of all completions of this partial tournament.
+
+  THE PARTIAL ORDER ON FACES:
+  Coarsening the partition (merging blocks) → going to a higher-dim face.
+  Refining the partition (splitting blocks) → going to a lower-dim face.
+  The finest partition (all singletons) = vertex = complete tournament.
+  The coarsest partition (one block [n]) = the entire permutohedron.
+
+  Face types of Π_3 (n=4):
+    3-faces: 1 (ordered partitions into 1 blocks)
+    2-faces: 14 (ordered partitions into 2 blocks)
+    1-faces: 36 (ordered partitions into 3 blocks)
+    0-faces: 24 (ordered partitions into 4 blocks)
+
+
+CHAPTER 8: LANDAU'S THEOREM = LATTICE POINT ENUMERATION
+============================================================
+
+  LANDAU'S THEOREM (1953): A sequence s = (s_1 ≤ ... ≤ s_n) is
+  a valid tournament score sequence iff:
+    Σ_{i=1}^k s_i ≥ C(k,2) for all k = 1, ..., n
+    with equality at k = n.
+
+  GEOMETRIC INTERPRETATION (Rado, 1967):
+  These conditions define the lattice points inside the PERMUTOHEDRON.
+
+  The permutohedron Π_{n-1} is bounded by the hyperplanes:
+    Σ_{i ∈ S} x_i ≥ C(|S|, 2) for all subsets S ⊂ [n]
+
+  For SORTED sequences, only the prefix sums matter:
+    Σ_{i=1}^k x_i ≥ C(k, 2)
+
+  These are exactly Landau's conditions!
+
+  So: A000571(n) = # sorted lattice points in Π_{n-1}
+      = # lattice points in Π_{n-1} / (orbits of S_n on lattice points)
+
+  THE EHRHART POLYNOMIAL:
+  The number of lattice points in tΠ_{n-1} (dilated permutohedron)
+  is a polynomial in t. For t=1, it counts score sequences.
+  The Ehrhart polynomial of Π_{n-1} is related to Eulerian polynomials.
+
+  n=3: 2 sorted scores, 2 Landau sequences, match=True
+  n=4: 4 sorted scores, 4 Landau sequences, match=True
+  n=5: 9 sorted scores, 9 Landau sequences, match=True
+  n=6: 22 sorted scores, 22 Landau sequences, match=True
+
+
+CHAPTER 9: EULERIAN NUMBERS = h-VECTOR OF Π_{n-1}
+============================================================
+
+  The EULERIAN NUMBER A(n, k) counts permutations of [n]
+  with exactly k descents (positions where σ(i) > σ(i+1)).
+
+  The Eulerian numbers are the h-VECTOR of the permutohedron:
+    h_k(Π_{n-1}) = A(n, k)
+
+  This means: the Eulerian polynomial
+    A_n(t) = Σ_{k=0}^{n-1} A(n,k) t^k
+
+  encodes the combinatorial type of the permutohedron.
+
+  FOR TOURNAMENTS:
+  A descent in a permutation σ at position i means σ(i) > σ(i+1).
+  In the corresponding transitive tournament, this means vertex σ(i)
+  beats vertex σ(i+1) but σ(i) has higher rank — so the arc goes
+  "downward" in the ranking.
+
+  The number of descents = number of "downward" arcs along the
+  Hamiltonian path defined by σ.
+
+  FROM S198: descent statistics → CLT → Gaussian → π.
+  The Eulerian numbers approach a Gaussian as n → ∞,
+  which is WHY π appears in the permutohedron's volume.
+
+  VOLUME OF Π_{n-1}:
+    Vol(Π_{n-1}) = n^{n-2} × Vol(standard simplex)
+                 = n^{n-2} / (n-1)!
+
+  The factor n^{n-2} is the number of LABELED TREES on n vertices
+  (Cayley's formula). This connects to:
+  - Spanning trees of K_n
+  - Parking functions
+  - The Tutte polynomial T_{K_n}(1,1) = n^{n-2}
+
+  The permutohedron volume involves NO π — it's purely integer.
+  π enters only through the ASYMPTOTIC DISTRIBUTION of the
+  Eulerian numbers (CLT on descents).
+
+  Eulerian numbers A(3, k) = h-vector of Π_2:
+    [1, 4, 1]
+    Sum = 6 = 3!
+    Palindromic: True
+
+  Eulerian numbers A(4, k) = h-vector of Π_3:
+    [1, 11, 11, 1]
+    Sum = 24 = 4!
+    Palindromic: True
+
+  Eulerian numbers A(5, k) = h-vector of Π_4:
+    [1, 26, 66, 26, 1]
+    Sum = 120 = 5!
+    Palindromic: True
+
+  Eulerian numbers A(6, k) = h-vector of Π_5:
+    [1, 57, 302, 302, 57, 1]
+    Sum = 720 = 6!
+    Palindromic: True
+
+
+CHAPTER 10: THE COMPLETE PICTURE
+============================================================
+
+  HIERARCHY OF POLYTOPES IN TOURNAMENT THEORY:
+
+  LEVEL 3: Tournament cube {0,1}^{C(n,2)}
+    Dimension: C(n,2)
+    Vertices: 2^{C(n,2)} (all labeled tournaments)
+    Contains: everything
+
+  LEVEL 2: Permutohedron Π_{n-1} (= graphical zonotope Z(K_n))
+    Dimension: n-1
+    Vertices: n! (transitive tournaments = permutations)
+    Lives in: the image of the score map from Level 3
+    h-vector: Eulerian numbers A(n, k)
+    Volume: n^{n-2} / (n-1)!
+
+  LEVEL 1: Landau polytope P_n (sorted score sequences)
+    Dimension: n-2 (one less due to sorting)
+    Integer points: A000571(n) (score sequences)
+    Lives in: the sorted projection of Π_{n-1}
+
+  LEVEL 0: Meta-graph G_n (isomorphism classes)
+    Dimension: ??? (it's a graph, not a polytope)
+    Vertices: A000568(n) (iso classes)
+    Lives in: the quotient of Level 3 by S_n
+    G_5 is PLANAR (S201 discovery)
+
+  THE MAPS:
+    Level 3 →{score} Level 2 →{sort} Level 1 →{iso class} Level 0
+
+  Each map is many-to-one:
+    score: 2^{C(n,2)} → n! (fiber = score-preserving relabelings)
+    sort: n! → A000571(n) (fiber = S_n orbits on score vectors)
+    iso class: lattice pts → A000568(n) (fiber = multiple score seqs per class)
+
+   n        Cube       Π_n    Landau     G_n
+  ──  ──────────  ────────  ────────  ──────
+   3           8         6         2       2
+   4          64        24         4       4
+   5        1024       120         9      12
+   6       32768       720        22      56
+
+
+  COMPRESSION RATIOS:
+    n=5: Cube(1024) →8× Π(120) →13× Landau(9) →0.8 G_n(12)
+
+  NOTE: G_n has MORE nodes than Landau at n=5 (12 > 9)
+  because iso classes CAN distinguish tournaments with the SAME score.
+  The map Landau → G_n is NOT a compression — it EXPANDS.
+  Multiple iso classes can share a score sequence.
+
+  THE FIBER FRACTION from S196:
+    f(n) = C(2k,k)/4^k measures the probability of staying in
+    the SAME score class under a random flip.
+    This is the probability of staying on the SAME face of Π_5
+    when you perturb one edge orientation.
+
+
+========================================================================
+  THE PERMUTOHEDRON IS THE BRIDGE BETWEEN
+  THE TOURNAMENT CUBE AND THE META-GRAPH G_n
+========================================================================
+
+opus-2026-03-22-S202
