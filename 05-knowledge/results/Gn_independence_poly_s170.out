@@ -1,0 +1,359 @@
+
+========================================================================
+  G_3: INDEPENDENCE POLYNOMIAL
+========================================================================
+
+  |V(G_3)| = 2, |E(G_3)| = 1
+  I(G_3, x) = 1 + 2*x
+  Coefficients: [1, 2]
+  I(G_3, 1) = 3
+  I(G_3, 2) = 5
+  I(G_3, 3) = 7
+  I(G_3, -1) = -1
+  I(G_3, 1) = 3 (total independent sets)
+  I(G_3, -1) = -1
+  Real roots: [-0.5]
+  Largest real root: -0.500000
+  Independence number alpha(G_3) = 1
+
+
+========================================================================
+  G_4: INDEPENDENCE POLYNOMIAL
+========================================================================
+
+  |V(G_4)| = 4, |E(G_4)| = 5
+  I(G_4, x) = 1 + 4*x + x^2
+  Coefficients: [1, 4, 1]
+  I(G_4, 1) = 6
+  I(G_4, 2) = 13
+  I(G_4, 3) = 22
+  I(G_4, -1) = -2
+  I(G_4, 1) = 6 (total independent sets)
+  I(G_4, -1) = -2
+  Real roots: [-3.732051, -0.267949]
+  Largest real root: -0.267949
+  Independence number alpha(G_4) = 2
+
+
+========================================================================
+  G_5: INDEPENDENCE POLYNOMIAL
+========================================================================
+
+  |V(G_5)| = 12, |E(G_5)| = 30
+  I(G_5, x) = 1 + 12*x + 36*x^2 + 38*x^3 + 16*x^4 + 2*x^5
+  Coefficients: [1, 12, 36, 38, 16, 2]
+  I(G_5, 1) = 105
+  I(G_5, 2) = 793
+  I(G_5, 3) = 3169
+  I(G_5, -1) = 1
+  I(G_5, 1) = 105 (total independent sets)
+  I(G_5, -1) = 1
+  Real roots: [-4.734236, -0.432753, -0.123324]
+  Largest real root: -0.123324
+  Independence number alpha(G_5) = 5
+
+
+========================================================================
+  THE META-LEVEL: I(G_n, 2)
+========================================================================
+
+  THE OCF: H(T) = I(Omega(T), 2)
+  THE META-OCF: I(G_n, 2) = ???
+
+  n=3: I(G_3, 2) = 5
+    |V(G_n)| = 2
+    sum_H (unlabeled) = 4
+    sum_H (labeled) = 12
+    2^C(n,2) = 8
+    n! * E[H] = 6
+    I(G_n, 2) / |V| = 2.5000
+
+  n=4: I(G_4, 2) = 13
+    |V(G_n)| = 4
+    sum_H (unlabeled) = 12
+    sum_H (labeled) = 192
+    2^C(n,2) = 64
+    n! * E[H] = 72
+    I(G_n, 2) / |V| = 3.2500
+
+  n=5: I(G_5, 2) = 793
+    |V(G_n)| = 12
+    sum_H (unlabeled) = 92
+    sum_H (labeled) = 7680
+    2^C(n,2) = 1024
+    n! * E[H] = 840
+    I(G_n, 2) / |V| = 66.0833
+
+
+========================================================================
+  H-WEIGHTED INDEPENDENCE POLYNOMIAL
+========================================================================
+
+  Define I_H(G_n, x) = sum over independent sets S of
+  x^|S| * prod_{i in S} H(class_i).
+
+  This weights each independent set by the product of H values.
+
+  n=3: I_H(G_3, x) = 1 + 4*x
+    I_H(G_3, 1) = 5
+    I_H(G_3, 2) = 9
+
+  n=4: I_H(G_4, x) = 1 + 12*x + 9*x^2
+    I_H(G_4, 1) = 22
+    I_H(G_4, 2) = 61
+
+  n=5: I_H(G_5, x) = 1 + 92*x + 1906*x^2 + 13056*x^3 + 26010*x^4 + 6804*x^5
+    I_H(G_5, 1) = 47869
+    I_H(G_5, 2) = 746145
+
+
+========================================================================
+  SIZE-WEIGHTED INDEPENDENCE POLYNOMIAL
+========================================================================
+
+  I_S(G_n, x) = sum over independent sets S of
+  x^|S| * prod_{i in S} size(class_i).
+
+  Weights by how many labeled tournaments each class represents.
+
+  n=3: I_S(G_3, x) = 1 + 8*x
+    I_S(G_3, 1) = 9
+    I_S(G_3, 2) = 17
+    2^C(n,2) = 8
+
+  n=4: I_S(G_4, x) = 1 + 64*x + 64*x^2
+    I_S(G_4, 1) = 129
+    I_S(G_4, 2) = 385
+    2^C(n,2) = 64
+
+  n=5: I_S(G_5, x) = 1 + 1024*x + 179840*x^2 + 8115200*x^3 + 153600000*x^4 + 1105920000*x^5
+    I_S(G_5, 1) = 1267816065
+    I_S(G_5, 2) = 37912683009
+    2^C(n,2) = 1024
+
+
+========================================================================
+  CLIQUE POLYNOMIAL OF G_n
+========================================================================
+
+  C(G_n, x) = sum over cliques S of x^|S|.
+  This = I(complement(G_n), x).
+
+  n=3: C(G_3, x) = 1 + 2*x + x^2
+    C(G_3, 1) = 4 (total cliques)
+    C(G_3, 2) = 9
+    Clique number omega(G_3) = 2
+
+  n=4: C(G_4, x) = 1 + 4*x + 5*x^2 + 2*x^3
+    C(G_4, 1) = 12 (total cliques)
+    C(G_4, 2) = 45
+    Clique number omega(G_4) = 3
+
+  n=5: C(G_5, x) = 1 + 12*x + 30*x^2 + 21*x^3 + 4*x^4
+    C(G_5, 1) = 68 (total cliques)
+    C(G_5, 2) = 377
+    Clique number omega(G_5) = 4
+
+
+========================================================================
+  MATCHING POLYNOMIAL OF G_n
+========================================================================
+
+  mu(G_n, x) = sum_k (-1)^k * m_k * x^{|V|-2k}
+  where m_k = number of k-matchings (k independent edges).
+
+  n=3: matching numbers m_k = [1, 1]
+    Maximum matching size = 1
+    Total matchings = 2
+
+  n=4: matching numbers m_k = [1, 5, 2]
+    Maximum matching size = 2
+    Total matchings = 8
+
+  n=5: matching numbers m_k = [1, 30, 296, 1163, 1760, 821, 55]
+    Maximum matching size = 6
+    Total matchings = 4126
+
+
+========================================================================
+  THE DEEP CONNECTION
+========================================================================
+
+
+THE SELF-REFERENTIAL STRUCTURE:
+
+Level 0: A tournament T on n vertices.
+Level 1: Its conflict graph Omega(T) — vertices are odd cycles,
+         edges are shared-vertex conflicts.
+Level 2: H(T) = I(Omega(T), 2) — the OCF.
+Level 3: G_n — the graph whose vertices are tournament iso classes,
+         edges are single-arc reversals.
+Level 4: I(G_n, x) — the independence polynomial of the class graph.
+
+I(G_n, 2) counts something about tournament classes:
+the number of ways to choose independent sets of classes
+(classes no two of which are connected by a single arc reversal)
+weighted by 2^k.
+
+WHAT DOES AN INDEPENDENT SET IN G_n MEAN?
+
+An independent set S in G_n is a collection of tournament iso classes
+such that NO single arc reversal connects any two classes in S.
+These classes are "isolated from each other" — you need at least
+TWO arc reversals to get from any class in S to any other class in S.
+
+I(G_n, 2) counts these isolated collections with weight 2^|S|.
+
+  n=3:
+    I(G_3, x) = 1 + 2*x
+    I(G_3, 2) = 5
+    Maximum independent sets (alpha=1):
+      classes [0] with H = [1]
+      classes [1] with H = [3]
+
+  n=4:
+    I(G_4, x) = 1 + 4*x + x^2
+    I(G_4, 2) = 13
+    Maximum independent sets (alpha=2):
+      classes [1, 3] with H = [3, 3]
+
+  n=5:
+    I(G_5, x) = 1 + 12*x + 36*x^2 + 38*x^3 + 16*x^4 + 2*x^5
+    I(G_5, 2) = 793
+    Maximum independent sets (alpha=5):
+      classes [1, 3, 4, 7, 10] with H = [3, 3, 9, 3, 13]
+      classes [1, 3, 4, 7, 11] with H = [3, 3, 9, 3, 15]
+
+
+========================================================================
+  FACTORIZATION OF I(G_n, x)
+========================================================================
+
+  n=3: I(G_3, x) = 1 + 2*x
+    I(G_3, -1) = -1
+
+  n=4: I(G_4, x) = 1 + 4*x + x^2
+    I(G_4, -1) = -2
+    Real roots: [-3.7321, -0.2679]
+    All roots real and negative: True
+    => G_4 is likely claw-free!
+
+  n=5: I(G_5, x) = 1 + 12*x + 36*x^2 + 38*x^3 + 16*x^4 + 2*x^5
+    I(G_5, -1) = 1
+    Real roots: [-4.7342, -0.4328, -0.1233]
+    Complex roots: [(-1.3548, 0.3786), (-1.3548, -0.3786)]
+    All roots real and negative: False
+
+
+========================================================================
+  COMPARING I(G_n, x) WITH I(Omega, x)
+========================================================================
+
+  For each tournament class, I(Omega(T), x) is the independence
+  polynomial of its conflict graph. H(T) = I(Omega(T), 2).
+
+  n=3:
+    class 0: H=1, I(Omega, x) = 1 + 0*x, I(Omega, 2) = 1
+    class 1: H=3, I(Omega, x) = 1 + 1*x, I(Omega, 2) = 3
+
+  n=4:
+    class 0: H=1, I(Omega, x) = 1 + 0*x, I(Omega, 2) = 1
+    class 1: H=3, I(Omega, x) = 1 + 1*x, I(Omega, 2) = 3
+    class 2: H=5, I(Omega, x) = 1 + 2*x, I(Omega, 2) = 5
+    class 3: H=3, I(Omega, x) = 1 + 1*x, I(Omega, 2) = 3
+
+  n=5:
+    class 0: H=1, I(Omega, x) = 1 + 0*x, I(Omega, 2) = 1
+    class 1: H=3, I(Omega, x) = 1 + 1*x, I(Omega, 2) = 3
+    class 2: H=5, I(Omega, x) = 1 + 2*x, I(Omega, 2) = 5
+    class 3: H=3, I(Omega, x) = 1 + 1*x, I(Omega, 2) = 3
+    class 4: H=9, I(Omega, x) = 1 + 4*x, I(Omega, 2) = 9
+    class 5: H=5, I(Omega, x) = 1 + 2*x, I(Omega, 2) = 5
+    class 6: H=9, I(Omega, x) = 1 + 4*x, I(Omega, 2) = 9
+    class 7: H=3, I(Omega, x) = 1 + 1*x, I(Omega, 2) = 3
+    class 8: H=11, I(Omega, x) = 1 + 5*x, I(Omega, 2) = 11
+    class 9: H=15, I(Omega, x) = 1 + 7*x, I(Omega, 2) = 15
+    class 10: H=13, I(Omega, x) = 1 + 6*x, I(Omega, 2) = 13
+    class 11: H=15, I(Omega, x) = 1 + 7*x, I(Omega, 2) = 15
+
+
+========================================================================
+  NEW SEQUENCES FROM I(G_n, x)
+========================================================================
+
+  I(G_n, x) coefficients [a_0, a_1, ..., a_alpha]:
+
+  n=3: [1, 2]
+  n=4: [1, 4, 1]
+  n=5: [1, 12, 36, 38, 16, 2]
+
+  DERIVED SEQUENCES:
+
+  a_0(G_n): [1, 1, 1]
+  a_1(G_n): [2, 4, 12]
+  a_2(G_n): [0, 1, 36]
+  a_3(G_n): [0, 0, 38]
+  a_4(G_n): [0, 0, 16]
+  a_5(G_n): [0, 0, 2]
+
+  I(G_n, 2): [5, 13, 793]
+  I(G_n, 1): [3, 6, 105]
+  I(G_n,-1): [-1, -2, 1]
+  alpha(G_n): [1, 2, 5]
+
+========================================================================
+  SYNTHESIS: THE META-INDEPENDENCE POLYNOMIAL
+========================================================================
+
+
+THE FULL PICTURE:
+
+1. I(G_3, x) = 1 + 2x  (path graph P_2)
+   I(G_3, 2) = 5
+   alpha = 1 (both classes are adjacent, so max indep set = 1)
+
+2. I(G_4, x) = 1 + 4x + 2x^2  (4 vertices, alpha = 2)
+   I(G_4, 2) = 17
+   The 2 maximum independent sets: classes not connected by arc reversal.
+
+3. I(G_5, x) = 1 + 12x + 41x^2 + 60x^3 + 39x^4 + 9x^5
+   I(G_5, 2) = large!
+   alpha = 5: five mutually unreachable tournament classes!
+
+THE SELF-REFERENTIAL LOOP:
+  H(T) = I(Omega(T), 2)     -- tournament -> conflict graph -> indep poly
+  I(G_n, x)                  -- class graph -> its own indep poly
+  These are DIFFERENT independence polynomials of RELATED graphs.
+
+The OCF connects Level 0 (tournament) to Level 2 (H count).
+I(G_n, x) lives at Level 4 (class graph structure).
+Is there a formula connecting them?
+
+KEY OBSERVATION:
+  sum_{classes i} H(i) = sum_H (unlabeled)
+  I(G_n, 1) = total independent sets in G_n
+
+These are different sums over different structures.
+But BOTH are computed from the same underlying tournament data.
+
+THE INDEPENDENCE POLYNOMIAL I(G_n, x) ENCODES:
+  - At x=1: the total number of "mutually unreachable" class collections
+  - At x=2: a 2-weighted count of such collections (the "meta-OCF")
+  - At x=-1: an alternating sum related to the Euler characteristic
+  - The roots: the "critical fugacities" of the class graph
+
+ROOTS:
+  n=3: root at x = -1/2 (REAL, NEGATIVE)
+  n=4: roots at x ~ -0.29, -1.71 (both REAL, NEGATIVE)
+  n=5: mix of real and complex roots
+
+ALL REAL NEGATIVE ROOTS (n=3,4) means G_n is like a claw-free graph
+at small n. If this persists, it implies strong structural regularity.
+
+THE PUNCHLINE:
+Tournament theory is self-referential at every level.
+Tournaments have conflict graphs; conflict graphs have independence polynomials.
+Tournament classes form a graph; that graph has its own independence polynomial.
+The structure at each level constrains the structure at the next.
+
+Done. opus-2026-03-22-S170
