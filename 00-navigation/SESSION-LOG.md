@@ -13,6 +13,15 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S202 — 2026-03-22: Permutohedron Merger — The Bridge Between Tournament Cube and G_n
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S201
+**Summary:** 10-chapter investigation merging the permutohedron into tournament theory. (1) f-vector of Π_{n-1}: [6,6,1] hexagon, [24,36,14,1] truncated octahedron, [120,240,150,30,1]. Euler chars verified. (2) Score map sends cube {0,1}^{C(n,2)} to permutohedron Π_{n-1}: 1024→291 unsorted→9 sorted at n=5. (3) Weak Bruhat order = permutohedron skeleton: 36 edges at n=4 matching exactly. Inversion distribution = Mahonian = q-factorial coefficients. (4) Z(K_n) = Π_{n-1}: graphical zonotope = Minkowski sum of C(n,2) edge segments = permutohedron, verified Π_2 = hexagon. (5) Fiber structure over unsorted score vectors verified. At n=4: transitive scores have 1 tournament each, near-regular have 2-4. (6) Permutohedron ⊂ tournament cube collapses to single vertex of G_n. Orbit size = n!/|Aut|. Transitive orbit = n! = largest. (7) Faces = ordered partitions = partial tournaments. 14 faces of Π_3 = 8 hexagons + 6 squares = ordered partitions into 2 blocks. (8) **Landau = lattice point enumeration in Π_{n-1}** — verified exactly n=3-6, matching A000571. Rado's 1967 geometric interpretation. (9) **Eulerian numbers = h-vector**: A(n,k) palindromic at all n, sum = n!. Volume = n^{n-2}/(n-1)! = Cayley's labeled trees. (10) 4-level hierarchy: Cube(2^{C(n,2)}) → Π(n!) → Landau(A000571) → G_n(A000568). G_n EXPANDS from Landau at n=5 (12 > 9).
+**New contributions:** permutohedron_s202.py
+
+---
+
 ## opus-2026-03-22-S201 — 2026-03-22: Polygon-Simplex-Tournament Trinity
 
 **Account:** opus
