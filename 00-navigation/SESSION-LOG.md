@@ -13,6 +13,15 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S203 — 2026-03-22: Interchange Graph → Meta-Graph G_n
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S202
+**Summary:** Extended the permutohedron framework to connect the Brualdi-Li interchange graph to G_n. THREE graph levels: arc-flip hypercube, interchange graph I(s), meta-graph G_n. KEY DISCOVERIES: (1) Quotient interchange Q_I is NOT complete — within (1,2,2,2,3) fiber, H=11↔H=13 and H=11↔H=15 but H=13↛H=15. (2) Enriched G_5+ has 38 edges: 20 red-only (arc flip), 8 blue-only (3-cycle), 10 both. The 8 blue-only edges are unreachable by single arc flips. (3) corr(c₃, H) = 0.9754 — 3-cycle count almost perfectly predicts H. Since c₃ = C(n,3) - Σ C(s_i,2) = linear in S₂_raw, and H ≈ linear in S₂, we get c₃ ≈ linear in H. (4) Brualdi-Li degree formula verified exactly for all 9 score sequences. (5) At n=4, no cross-class interchange edges exist (each score determines unique iso class). (6) Triple fibration theorem: vertical=arc-flip, horizontal=3-cycle, G_n=quotient. The interchange graph IS the missing piece explaining why high-c₃ fibers have multiple iso classes.
+**New contributions:** interchange_metagraph_s203.py
+
+---
+
 ## opus-2026-03-22-S202 — 2026-03-22: Permutohedron Merger — The Bridge Between Tournament Cube and G_n
 
 **Account:** opus
