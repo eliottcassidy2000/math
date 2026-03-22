@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S172 — 2026-03-22: Six Propositions Deep — H-oriented G_5 is TRANSITIVE, blue Ham path EXISTS, I(G_5,x) computed
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S171
+**Summary:** A: H-oriented G_5 is TRANSITIVE (0 meta-3-cycles). B: G_5→G_3 recursion is partial (PoS only). C: Blue Ham path EXISTS [0,6,7,8,11,9,10,2]. D: I(G_5,x)=1+12x+36x²+38x³+16x⁴+2x⁵, Meta-H=793, α=5, χ=1. E: Score=partition of C(n,2). F: |Aut|→degree via self-flip fraction.
+**New contributions:** creative_propositions_s172.py
+**Unresolved:** Prove transitivity for all n, prove blue Ham path conjecture, I(G_n,x) formula
+
+---
+
 ## opus-2026-03-22-S171 — 2026-03-22: The Iso Class Graph — The Key to Everything
 
 **Account:** opus

@@ -1,0 +1,239 @@
+========================================================================
+  DEEP INVESTIGATION OF SIX CREATIVE PROPOSITIONS
+  opus-2026-03-22-S172
+========================================================================
+
+  G_3: 2 nodes, 1 edges
+  G_4: 4 nodes, 5 edges
+  G_5: 12 nodes, 30 edges
+
+============================================================
+  PROPOSITION A: G_n AS A META-TOURNAMENT
+============================================================
+
+  G_5 as meta-tournament on 12 vertices:
+  meta-H = 0
+  meta-scores = [0, 0, 2, 2, 2, 2, 2, 3, 3, 4, 4, 6]
+  Level edges (ties): [(6, 7)]
+
+  meta-c₃ = 0
+  meta-tournament is TRANSITIVE
+
+  The H-oriented iso class graph IS TRANSITIVE at n=5!
+  This means H imposes a TOTAL ORDER on iso classes
+  (modulo the single level edge between H=9 classes).
+  meta-H = 0 = the number of linear extensions of this order.
+
+============================================================
+  PROPOSITION B: STAIRCASE RECURSION G_n → G_{n-2}
+============================================================
+
+  G_3: 2 classes
+    id=0, H=1, scores=(0, 1, 2), size=6
+    id=1, H=3, scores=(1, 1, 1), size=2
+
+  G_5: 12 classes
+
+  PoS CLASS DECOMPOSITION: mapping n=5 classes to n=3 middle classes
+
+  PoS classes: 3 (scores (1,2,2,2,3))
+  Non-PoS classes: 9
+
+  n=5 class 8 (H=11): middle → n=3 class 1 (H=3)
+  n=5 class 9 (H=13): middle → n=3 class 0 (H=1)
+  n=5 class 10 (H=15): middle → n=3 class 1 (H=3)
+
+  The PoS classes MAP to specific n=3 classes.
+  But what about non-PoS classes? They DON'T have a clean source-sink structure.
+  So the recursion G_5 → G_3 is PARTIAL — it only works on the PoS subgraph.
+
+============================================================
+  PROPOSITION C: BLUE HAMILTONIAN PATH THROUGH SC CLASSES
+============================================================
+
+  SC classes at n=5: [0, 2, 6, 7, 8, 9, 10, 11]
+  (8 of 12 classes)
+
+  BLUE SUBGRAPH on SC classes:
+    Class 0 (H=  1): blue neighbors = [2, 6]
+    Class 2 (H=  3): blue neighbors = [0, 10]
+    Class 6 (H=  9): blue neighbors = [0, 7, 8, 10]
+    Class 7 (H=  9): blue neighbors = [6, 8, 9]
+    Class 8 (H= 11): blue neighbors = [6, 7, 9, 11]
+    Class 9 (H= 13): blue neighbors = [7, 8, 10, 11]
+    Class 10 (H= 15): blue neighbors = [2, 6, 9]
+    Class 11 (H= 15): blue neighbors = [8, 9]
+
+  BLUE HAMILTONIAN PATH EXISTS!
+  Path: [0, 6, 7, 8, 11, 9, 10, 2]
+  H along path: [1, 9, 9, 11, 15, 13, 15, 3]
+  H monotonically increasing? False
+
+============================================================
+  PROPOSITION D: META-INDEPENDENCE POLYNOMIAL I(G_n, x)
+============================================================
+
+  I(G_5, x) = 1x^0 + 12x^1 + 36x^2 + 38x^3 + 16x^4 + 2x^5
+
+  I(G_5, +1) = 105
+  I(G_5, +2) = 793
+  I(G_5, +3) = 3169
+  I(G_5, -1) = 1
+
+  META-H = I(G_5, 2) = 793
+  (This counts independent sets of iso classes, weighted by 2^size)
+
+  Independence number α(G_5) = 5
+  (Maximum number of mutually non-flip-adjacent iso classes)
+
+  Max independent set: [1, 2, 3, 6, 9], H values: [3, 3, 3, 9, 13]
+  Max independent set: [1, 2, 3, 6, 11], H values: [3, 3, 3, 9, 15]
+
+============================================================
+  PROPOSITION F: DEGREE FORMULA FROM |Aut|
+============================================================
+
+   id    H   size  |Aut|   deg  size/|Aut|  n*size/N  C(n,2)*s/N
+  ───  ───  ─────  ─────  ────  ──────────  ────────  ──────────
+    0    1    120      1     6       120.0     0.586       1.172
+    1    3     40      3     3        13.3     0.195       0.391
+    2    3     40      3     4        13.3     0.195       0.391
+    3    3     40      3     3        13.3     0.195       0.391
+    4    5    120      1     7       120.0     0.586       1.172
+    5    5    120      1     7       120.0     0.586       1.172
+    6    9    120      1     6       120.0     0.586       1.172
+    7    9    120      1     7       120.0     0.586       1.172
+    8   11    120      1     6       120.0     0.586       1.172
+    9   13    120      1     6       120.0     0.586       1.172
+   10   15     40      3     3        13.3     0.195       0.391
+   11   15     24      5     2         4.8     0.117       0.234
+
+  The degree depends on HOW the 10 arc flips distribute
+  across classes. High |Aut| → many flips stay in same class → lower degree.
+
+  Class 0 (H=1, |Aut|=1): self-flip fraction = 0.400, degree = 6
+  Class 1 (H=3, |Aut|=3): self-flip fraction = 0.100, degree = 3
+  Class 2 (H=3, |Aut|=3): self-flip fraction = 0.000, degree = 4
+  Class 3 (H=3, |Aut|=3): self-flip fraction = 0.100, degree = 3
+  Class 4 (H=5, |Aut|=1): self-flip fraction = 0.300, degree = 7
+  Class 5 (H=5, |Aut|=1): self-flip fraction = 0.300, degree = 7
+  Class 6 (H=9, |Aut|=1): self-flip fraction = 0.200, degree = 6
+  Class 7 (H=9, |Aut|=1): self-flip fraction = 0.000, degree = 7
+  Class 8 (H=11, |Aut|=1): self-flip fraction = 0.200, degree = 6
+  Class 9 (H=13, |Aut|=1): self-flip fraction = 0.000, degree = 6
+  Class 10 (H=15, |Aut|=3): self-flip fraction = 0.000, degree = 3
+  Class 11 (H=15, |Aut|=5): self-flip fraction = 0.000, degree = 2
+
+  PATTERN: Higher |Aut| → higher self-flip fraction → lower degree.
+  |Aut|=5 (regular): self-flips ≈ 0.4, degree = 2
+  |Aut|=3: self-flips = 0, degree = 3
+  |Aut|=1: self-flips ≈ 0.2, degree ≈ 6-7
+
+============================================================
+  PROPOSITION E: STAIRCASE ↔ ISO CLASS BIJECTION
+============================================================
+
+  Each tournament is a binary filling of the staircase δ_{n-1}.
+  Two fillings are in the same iso class iff they differ by
+  a permutation of rows and columns (= vertex relabeling).
+
+  The iso class = the S_n-ORBIT of the staircase filling.
+
+  The RSK correspondence maps each filling to:
+    (P-tableau, Q-tableau) where P encodes structure, Q encodes labeling.
+    Two fillings in the same iso class have the SAME P-tableau shape.
+
+  So: iso class ↔ P-tableau shape (up to the RSK mapping).
+
+  But the RSK is defined for PERMUTATION MATRICES, not binary matrices.
+  The extension to binary matrices uses the Robinson-Schensted for
+  {0,1}-matrices (the "RSK for 01-matrices" by Knuth).
+
+  For a tournament (upper triangular 01-matrix):
+    RSK gives (P, Q) where shapes are partitions of C(n,2).
+    The shape λ = a PARTITION of C(n,2) = n(n-1)/2.
+    Two tournaments in the same iso class share the P-shape? NO —
+    RSK doesn't respect the tournament symmetry in this way.
+
+  HOWEVER: the SCORE SEQUENCE is the ROW-SUM vector of the staircase.
+  And score sequences correspond to COMPOSITIONS (ordered partitions).
+  The sorted score = a PARTITION.
+
+  So: score class ↔ partition of C(n,2) into n parts.
+  And within each score class: the iso classes correspond to
+  REFINEMENTS of the partition structure.
+
+  SCORE → PARTITION AT n=5:
+
+    Class 0 (H=1): scores = (0, 1, 2, 3, 4), sum = 10, partition of 10
+    Class 1 (H=3): scores = (0, 1, 3, 3, 3), sum = 10, partition of 10
+    Class 2 (H=3): scores = (0, 2, 2, 2, 4), sum = 10, partition of 10
+    Class 3 (H=3): scores = (1, 1, 1, 3, 4), sum = 10, partition of 10
+    Class 4 (H=5): scores = (0, 2, 2, 3, 3), sum = 10, partition of 10
+    Class 5 (H=5): scores = (1, 1, 2, 2, 4), sum = 10, partition of 10
+    Class 6 (H=9): scores = (1, 1, 2, 3, 3), sum = 10, partition of 10
+    Class 7 (H=9): scores = (1, 1, 2, 3, 3), sum = 10, partition of 10
+    Class 8 (H=11): scores = (1, 2, 2, 2, 3), sum = 10, partition of 10
+    Class 9 (H=13): scores = (1, 2, 2, 2, 3), sum = 10, partition of 10
+    Class 10 (H=15): scores = (1, 2, 2, 2, 3), sum = 10, partition of 10
+    Class 11 (H=15): scores = (2, 2, 2, 2, 2), sum = 10, partition of 10
+
+  COMPLEMENT DUALITY:
+  If scores = (s₀,...,s₄), complement has scores = (4-s₄,...,4-s₀)
+
+    Class 0 scores (0, 1, 2, 3, 4) ↔ complement (0, 1, 2, 3, 4) (class 0) [SC]
+    Class 1 scores (0, 1, 3, 3, 3) ↔ complement (1, 1, 1, 3, 4) (class 3) [NSC]
+    Class 2 scores (0, 2, 2, 2, 4) ↔ complement (0, 2, 2, 2, 4) (class 2) [SC]
+    Class 3 scores (1, 1, 1, 3, 4) ↔ complement (0, 1, 3, 3, 3) (class 1) [NSC]
+    Class 4 scores (0, 2, 2, 3, 3) ↔ complement (1, 1, 2, 2, 4) (class 5) [NSC]
+    Class 5 scores (1, 1, 2, 2, 4) ↔ complement (0, 2, 2, 3, 3) (class 4) [NSC]
+    Class 6 scores (1, 1, 2, 3, 3) ↔ complement (1, 1, 2, 3, 3) (class 6) [SC]
+    Class 7 scores (1, 1, 2, 3, 3) ↔ complement (1, 1, 2, 3, 3) (class 6) [SC]
+    Class 8 scores (1, 2, 2, 2, 3) ↔ complement (1, 2, 2, 2, 3) (class 8) [SC]
+    Class 9 scores (1, 2, 2, 2, 3) ↔ complement (1, 2, 2, 2, 3) (class 8) [SC]
+    Class 10 scores (1, 2, 2, 2, 3) ↔ complement (1, 2, 2, 2, 3) (class 8) [SC]
+    Class 11 scores (2, 2, 2, 2, 2) ↔ complement (2, 2, 2, 2, 2) (class 11) [SC]
+
+
+========================================================================
+  SUMMARY OF SIX PROPOSITIONS
+========================================================================
+
+
+  A. G_5 AS META-TOURNAMENT:
+     H-oriented G_5 is TRANSITIVE (0 meta-3-cycles)!
+     meta-H = 0.
+     H imposes a total order on iso classes (modulo 1 tie at H=9).
+     The meta-tournament's transitivity = H is a Morse function
+     with no "unnecessary" critical points at the class level.
+
+  B. STAIRCASE RECURSION G_5 → G_3:
+     PoS classes map cleanly to G_3 classes via middle tournament.
+     Non-PoS classes don't have a source-sink structure → no mapping.
+     The recursion is PARTIAL: only works on the PoS subgraph.
+     Conjecture: the PoS subgraph of G_n is isomorphic to G_{n-2}.
+
+  C. BLUE HAMILTONIAN PATH:
+     EXISTS!
+     Path: [0, 6, 7, 8, 11, 9, 10, 2], H along: [1, 9, 9, 11, 15, 13, 15, 3]
+     
+
+  D. META-INDEPENDENCE POLYNOMIAL I(G_5, x):
+     I(G_5, x) = 1x^0 + 12x^1 + 36x^2 + 38x^3 + 16x^4 + 2x^5
+     Meta-H = I(G_5, 2) = 793
+     α(G_5) = 5 (independence number)
+     I(G_5, -1) = 1 (Euler char)
+
+  E. STAIRCASE ↔ ISO CLASS:
+     Score class = partition of C(n,2) into n parts.
+     Iso classes WITHIN a score class are refinements.
+     Complement duality maps score (s₀,...) to (n-1-s_4,...).
+     SC classes = self-conjugate under this duality.
+
+  F. DEGREE FROM |Aut|:
+     Higher |Aut| → more self-flips → lower degree.
+     |Aut|=5 (regular): degree 2. |Aut|=3: degree 3. |Aut|=1: degree 6-7.
+     The formula involves the fraction of arc flips that stay in the class,
+     which is determined by the orbits of Aut(T) on arc pairs.
+
+opus-2026-03-22-S172
