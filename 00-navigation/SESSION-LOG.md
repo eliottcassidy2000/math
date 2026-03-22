@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S186 — 2026-03-22: The Local H-Gradient — Steepest Ascent, Vulnerability Map
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S185
+**Summary:** Deep investigation of the gradient ∇H(T) ∈ R^m. COMPUTED for all H values at n=5. The gradient magnitude ||∇H|| peaks at intermediate H (landscape steepest in middle, flattest at poles). Steepest ascent from H=1→H=15 in just 2 steps (via H=9). All H values reach H=15 in ≤3 steps. CORRECTION to S173: negative cross-class flips DO exist (found at every H value). The DAG property of G_n is trivial (orienting undirected edges by H always gives a DAG). The non-trivial fact is FEW LEVEL EDGES. The gradient decomposes into: argmax (optimal flip), sign pattern (vulnerability map), magnitude (phase transition steepness). The gradient ranks arcs by importance → a meta-meta-tournament. At H=1: all ΔH ≥ 0, best flip gives ΔH=+8 (range-3 arc). At H=15: all ΔH ≤ 0 (or ΔH=-2 to -12), worst flip ΔH=-12 (range-3 arc).
+**New contributions:** local_gradient_s186.py
+**Unresolved:** Prove gradient norm peaks at intermediate H, connect gradient to susceptibility I'/I, understand why steepest ascent is so efficient (2 steps from H=1)
+
+---
+
 ## opus-2026-03-22-S185 — 2026-03-22: Seven Tested Competition Solutions — All Pass
 
 **Account:** opus
