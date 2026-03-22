@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S158 — 2026-03-22: Root Space Angles and Tournament Structure
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S157
+**Summary:** Investigated the angles between roots in the A_{n-1} root system and their tournament meaning. Three key angles: 60° (cooperative, share vertex same role → score structure → Eisenstein), 90° (independent, disjoint arcs → Petersen graph, verified 15 edges ✓), 120° (conflicting, share vertex opposite role → 3-cycle pairs → cycles). 3-cycle = triple of roots at mutual 120° (the hexagonal angle, PROVED). The 120° fraction is MONOTONICALLY INCREASING with H (verified at n=5). The Cartan decomposition IS the angle decomposition: so(n)=120° sector, p=60° sector, R·I=0° sector. The energy bandwidth log(3/2) from S20h = log(cos(60°)/|cos(120°)|) = the log of the cooperative/conflicting cosine ratio. The angle spectrum (count_60°, count_90°, count_120°) almost determines H but has collisions at H=11,13,15 (the PoS class). Root space angle counts among all 10 positive roots of A_4: 60°:90°:120° = 30:15:30. Read kind-pasteur S20g (Tr(A³)/3 formula), S20h (log-helix, bandwidth log(3/2), moonshine crossover e^π=23).
+**New contributions:** root_space_angles_s158.py
+**Unresolved threads:** Prove the monotonicity theorem for 120° fraction, connect angle spectrum to SRCP, extend to n=6
+
+---
+
 ## opus-2026-03-22-S157 — 2026-03-22: Sequences, Formulas, OCR Structure
 
 **Account:** opus
