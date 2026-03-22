@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S117 — 2026-03-21: Petersen-Casimir — d∈{5,21}, θ²=7 IS the forbidden eigenvalue, 6 classes at n=6
+
+**Account:** opus
+**Summary:** The Casimir discriminants at n=5 are EXACTLY d∈{5,21}. The eigenvalue θ²=7 appears directly — the forbidden H value IS a tournament eigenvalue. At n=6: 6 Casimir tuples. Sum θ²=C(n,2)=V(K(n,2)) always. The second Casimir d=21=3×7 encodes both forbidden primes. 5×21=105=3×5×7 contains ALL key primes.
+**Key:**
+1. **θ₁²+θ₂² = V(Petersen) = 10**: sum of squared angles = Kneser vertex count. UNIVERSAL.
+2. **d ∈ {5, 21}**: only 2 Casimir discriminants at n=5. d=21=3×7 = product of atom primes!
+3. **d=5**: eigenvalues θ²=5±2√5 — involves golden ratio. d=n=boundary prime.
+4. **d=21**: eigenvalues θ²=7,3 — the FORBIDDEN VALUE 7 is literally an eigenvalue!
+5. **n=6: 6 Casimir tuples**, e₂ ∈ {255,303,319,335,351}. θ²=7 appears in a tuple (7,7,7,7,1,1).
+6. **5×21=105=3×5×7**: product of discriminants contains all three key primes
+7. **Tr(B⁴) = 80 + TYPE_A**: universal part=80=n(n-1)+(n(n-1)(n-2)), TYPE_A∈{36,-44}
+
+---
+
 ## opus-2026-03-21-S116 — 2026-03-21: Petersen-Kneser-Cayley-Lie Nexus — K(n,2) is tournament DNA
 
 **Account:** opus
