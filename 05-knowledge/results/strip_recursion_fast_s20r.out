@@ -1,0 +1,98 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\strip_recursion_fast_s20r.py:176: SyntaxWarning: invalid escape sequence '\S'
+  E[a,b] = #{paths from ? to a using S} * #{paths from b to ? using V\S\{a}}
+========================================================================
+  VERTEX INSERTION FORMULA FOR H
+========================================================================
+
+  H(T + v) = H(T) + 2 * sum_P #TypeII(v, P)
+
+  where the sum is over all Hamiltonian paths P of T,
+  and #TypeII(v, P) counts positions j where P[j]->v and v does NOT beat P[j+1].
+
+  This is the EXACT INCREMENTAL FORMULA for adding one vertex.
+
+  To use it: we need the CONSECUTIVE PAIR STATISTICS of T's HP set:
+    E[a,b] = number of HP of T containing the consecutive pair (a,b).
+
+  Then: sum_P #TypeII = sum_{a: v beats a, b: b beats v} E[a,b]
+       = sum_{a: sig[a]=1} sum_{b: sig[b]=0} E[a,b]
+
+  The matrix E has size n x n and can be computed in O(n^2 * 2^n)
+  (same as the full DP). But once computed, adding vertex v takes O(n^2).
+
+  STRIP RECURSION USING E:
+  1. Start with T on n=2 (one arc). E is trivial: E[1,0] = 1 (or E[0,1]).
+  2. Add vertex 3: compute new E from old E. O(n^2) per vertex.
+  3. Repeat until all vertices added.
+
+  TOTAL: O(n * n^2) = O(n^3) PER TOURNAMENT... IF we can update E in O(n^2).
+
+  CAN WE UPDATE E? When we add vertex v:
+  - New HP in T+v either use v as start/end or insert v in the middle.
+  - The consecutive pairs in new HP are:
+    (v, first_of_old_suffix) for paths starting at v
+    (last_of_old_prefix, v) for paths ending at v
+    (a, v) and (v, b) for paths with v inserted between old pair (a, b)
+    Plus all old consecutive pairs NOT involving the insertion point.
+
+  This UPDATE involves the old E matrix plus insertion combinatorics.
+  The insertion point depends on the signature of v.
+
+COMPUTING E MATRIX AT n=3,4,5:
+
+  n=3: H=3, #HP=3
+  E matrix (consecutive pair counts):
+          0    1    2
+     0    0    2    0
+     1    0    0    2
+     2    2    0    0
+  sum(E) = 6, H*(n-1) = 6, match = True
+  E symmetric: False
+  E row sums: [2 2 2]
+  E col sums: [2 2 2]
+    E[0,:].sum() = 2, H - paths_ending_at_0 = 2, match = True
+    E[1,:].sum() = 2, H - paths_ending_at_1 = 2, match = True
+    E[2,:].sum() = 2, H - paths_ending_at_2 = 2, match = True
+
+  n=4: H=5, #HP=5
+  E matrix (consecutive pair counts):
+          0    1    2    3
+     0    0    3    1    0
+     1    0    0    3    1
+     2    0    0    0    3
+     3    4    0    0    0
+  sum(E) = 15, H*(n-1) = 15, match = True
+  E symmetric: False
+  E row sums: [4 4 3 4]
+  E col sums: [4 3 4 4]
+    E[0,:].sum() = 4, H - paths_ending_at_0 = 4, match = True
+    E[1,:].sum() = 4, H - paths_ending_at_1 = 4, match = True
+    E[2,:].sum() = 3, H - paths_ending_at_2 = 3, match = True
+    E[3,:].sum() = 4, H - paths_ending_at_3 = 4, match = True
+
+  n=5: H=9, #HP=9
+  E matrix (consecutive pair counts):
+          0    1    2    3    4
+     0    0    5    2    1    0
+     1    0    0    5    2    1
+     2    0    0    0    5    2
+     3    0    0    0    0    5
+     4    8    0    0    0    0
+  sum(E) = 36, H*(n-1) = 36, match = True
+  E symmetric: False
+  E row sums: [8 8 7 5 8]
+  E col sums: [8 5 7 8 8]
+    E[0,:].sum() = 8, H - paths_ending_at_0 = 8, match = True
+    E[1,:].sum() = 8, H - paths_ending_at_1 = 8, match = True
+    E[2,:].sum() = 7, H - paths_ending_at_2 = 7, match = True
+    E[3,:].sum() = 5, H - paths_ending_at_3 = 5, match = True
+    E[4,:].sum() = 8, H - paths_ending_at_4 = 8, match = True
+
+VERIFIED: sum(E) = H*(n-1). E[a,:].sum() = H - #{HP ending at a}.
+
+THE VERTEX INSERTION FORMULA:
+
+  H(T+v) = H(T) + 2 * sum_{a: v->a, b: b->v} E[a,b]
+
+  This computes H(T+v) from E and the signature of v in O(n^2).
+  If E can be updated incrementally, total = O(n^3) per tournament.
