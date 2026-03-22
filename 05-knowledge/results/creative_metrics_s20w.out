@@ -1,0 +1,92 @@
+============================================================
+  CREATIVE METRICS FOR TOURNAMENTS
+============================================================
+
+  Computing all metrics at n=5 (1024 tournaments)...
+  Done. Computing correlations...
+
+  CORRELATION MATRIX:
+                    H       HC        L       c3       S2      arb    kings  entropy
+           H  +1.0000  +0.9272  +0.2075  +0.9733  -0.9733  +0.2165  +0.8586  +0.8012
+          HC  +0.9272  +1.0000  -0.1741  +0.8165  -0.8165  +0.1864  +0.8355  +0.6978
+           L  +0.2075  -0.1741  +1.0000  +0.4264  -0.4264  +0.0824  +0.0752  +0.2838
+          c3  +0.9733  +0.8165  +0.4264  +1.0000  -1.0000  +0.2195  +0.8116  +0.8073
+          S2  -0.9733  -0.8165  -0.4264  -1.0000  +1.0000  -0.2195  -0.8116  -0.8073
+         arb  +0.2165  +0.1864  +0.0824  +0.2195  -0.2195  +1.0000  +0.2163  +0.2184
+       kings  +0.8586  +0.8355  +0.0752  +0.8116  -0.8116  +0.2163  +1.0000  +0.9314
+     entropy  +0.8012  +0.6978  +0.2838  +0.8073  -0.8073  +0.2184  +0.9314  +1.0000
+
+  METRIC DISTRIBUTIONS:
+           H: 7 distinct values. Range [1, 15]
+          HC: 4 distinct values. Range [0, 3]
+           L: 6 distinct values. Range [0, 6]
+          c3: 6 distinct values. Range [0, 5]
+          S2: 6 distinct values. Range [20, 30]
+         arb: 21 distinct values. Range [0, 30]
+       kings: 4 distinct values. Range [1, 5]
+     entropy: 8 distinct values. Range [0.0, 1.609]
+
+  LOW-CORRELATION PAIRS (|r| < 0.5):
+    H vs L: |r| = 0.2075
+    H vs arb: |r| = 0.2165
+    HC vs L: |r| = 0.1741
+    HC vs arb: |r| = 0.1864
+    L vs c3: |r| = 0.4264
+    L vs S2: |r| = 0.4264
+    L vs arb: |r| = 0.0824
+    L vs kings: |r| = 0.0752
+    L vs entropy: |r| = 0.2838
+    c3 vs arb: |r| = 0.2195
+    S2 vs arb: |r| = 0.2195
+    arb vs kings: |r| = 0.2163
+    arb vs entropy: |r| = 0.2184
+
+  ARBORESCENCES (rooted spanning trees) vs H:
+    arb=  0: H in [1, 3, 5]
+    arb=  1: H in [9]
+    arb=  2: H in [9]
+    arb=  3: H in [9, 13]
+    arb=  4: H in [5, 9, 11]
+    arb=  6: H in [9, 11]
+    arb=  7: H in [13, 15]
+    arb=  8: H in [5, 11]
+    arb=  9: H in [9, 13]
+    arb= 11: H in [13, 15]
+    arb= 12: H in [3, 5, 9, 11]
+    arb= 13: H in [9]
+    arb= 16: H in [5]
+    arb= 17: H in [9]
+    arb= 18: H in [9, 11]
+    arb= 19: H in [13]
+    arb= 21: H in [15]
+    arb= 24: H in [1]
+    arb= 26: H in [3]
+    arb= 28: H in [3]
+    arb= 30: H in [5]
+
+  KINGS vs H:
+    kings=1: H in [1, 3, 5]
+    kings=3: H in [3, 5, 9, 11]
+    kings=4: H in [13]
+    kings=5: H in [15]
+
+  Arborescences determine H: False
+  Kings determine H: False
+  (Arb, Kings) jointly determine H: False
+  (Arb, HC) jointly determine H: False
+
+  H / arb RATIO:
+    H=9, arb=6, H/arb=1.5000
+    H=5, arb=8, H/arb=0.6250
+    H=9, arb=9, H/arb=1.0000
+    H=3, arb=12, H/arb=0.2500
+    H=11, arb=12, H/arb=0.9167
+    H=5, arb=16, H/arb=0.3125
+    H=9, arb=18, H/arb=0.5000
+    H=1, arb=24, H/arb=0.0417
+
+  ARBORESCENCE FORMULA:
+  At n=3: transitive H=1, arb=2, ratio=0.5
+  At n=3: cycle H=3, arb=1, ratio=3.0
+  The ratio H/arb VARIES. It is NOT a constant.
+  Higher H/arb = more paths relative to trees = more CYCLIC structure.
