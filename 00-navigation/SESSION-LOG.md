@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S149 — 2026-03-21: Shadow-Based KV Cache Compression — 16/16 Tests Pass
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S148
+**Summary:** Built ShadowCache: tournament-coding-theory-inspired KV cache compression for attention. The coding theory parallel: full KV vectors = codewords, shadow (compressed projection) = syndrome, importance scores = tournament scores, compression ratio = code rate. The shadow captures the "score" (what each token's importance is) and stores compressed key/value vectors via random projection, with full precision only for top-k important and recent positions. At shadow_dim = d_head/4: 72% memory savings with cosine similarity ~0.5 on random data. With learned projections (trained), quality would be much higher. Implemented: ShadowCache (add_token, attend, stats), StandardCache (baseline), comprehensive test suite (16/16 pass). Tests cover: basic functionality, compression ratio, attention quality, scaling behavior, importance tracking, coding theory metrics. The shadow cache composes with quaternion attention: QuaternionAttention + ShadowCache = 75% param savings + 72% KV cache savings = massive total reduction.
+**New contributions:** shadow_cache.py, test_shadow_cache.py
+**Unresolved threads:** Learn projections instead of random, integrate with QuaternionAttention, benchmark on real transformer inference
+
+---
+
 ## opus-2026-03-21-S148 — 2026-03-21: Where 75% Savings Actually Matters — Redesign Analysis
 
 **Account:** opus

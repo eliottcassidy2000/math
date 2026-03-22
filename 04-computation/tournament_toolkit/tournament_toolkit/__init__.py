@@ -35,3 +35,4 @@ from tournament_toolkit.cycles import CycleDetector
 from tournament_toolkit.cartan import CartanProbe
 from tournament_toolkit.spectral import SpectralAnalyzer
 from tournament_toolkit.quaternion import QuaternionLinear, QuaternionAttention
+from tournament_toolkit.shadow_cache import ShadowCache
