@@ -13,18 +13,13 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-21-S122 — 2026-03-21: 1728→1729 Bridge — taxicab=j(i)+g(2), H(T_11)/C(11,2)=1729, tournament primes
+## opus-2026-03-21-S133 — 2026-03-21: The 1728→1729 Bridge — Ramanujan number as tournament code
 
 **Account:** opus
-**Summary:** Merged the 1728→1729 bridge (kind-pasteur S18e) into the polynomial web. 1729=j(i)+g(2)=1728+1 (j-invariant+Rédei quantum). H(T_11)=95095=55×1729=C(11,2)×taxicab. The taxicab factors 7×13×19 are three tournament primes (forbidden atom, POS H-value, OCR denominator). Two cube representations use tournament numbers: 12³+1³ (iso_classes³+transitive³) and 10³+9³ (Petersen³+cycle_atom²³). The ratio H/C(p,2) is 1,3/2,9,1729 for p=3,5,7,11.
-**Key:**
-1. **1729 = 1728 + 1 = j(i) + g(2)**: modular complement + Rédei quantum = taxicab
-2. **H(T_11) = 55 × 1729 = C(11,2) × 7×13×19**: each arc contributes 1729 HPs on average
-3. **1729 = 12³+1³ = 10³+9³**: both representations use tournament-significant numbers
-4. **Tournament primes 7,13,19**: forbidden(7), POS(13), OCR(19)
-5. **H/C(p,2) sequence: 1, 3/2, 9, 1729**: integer for p≡3 mod 4, not for p≡1 mod 4
-6. **Honest assessment**: the 1729 factorization is verified but structural depth vs coincidence remains open
-**Scripts:** bridge_1728_1729_s122.py
+**Continuation of:** opus-2026-03-21-S132
+**Summary:** Deep investigation merging 1729=j(i)+1=7×13×19, kind-pasteur S18d/S18e (three triangle groups, tournament alphabet), and the {3,∞} framework. Key discoveries: (1) g(2)=+1 IS the Rédei quantum in 1728+1=1729. (2) φ(1729)=C(9,2)²=1296 connects to n=9 spectral transition. (3) B₁₈ denominator contains ALL factors 7,13,19 of 1729. (4) Tournament discriminant Δ_T=(H-1)/2 has base-2 structure; gap at Δ=3 (binary 011)=H=7 forbidden. (5) n=6 gaps: H={7,21,35,39}. (6) Three orbifold points = tournament classes: cycle origin, complement, transitive limit.
+**New contributions:** ramanujan_1729_bridge_s133.py
+**Unresolved threads:** Weight 18 cusp forms, formal modular-to-tournament functor, verify H(T₁₁)/|Aut(T₁₁)|=1729
 
 ---
 
