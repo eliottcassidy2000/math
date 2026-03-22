@@ -20,6 +20,13 @@ Entry format:
 **Summary:** A: H-oriented G_5 is TRANSITIVE (0 meta-3-cycles). B: G_5→G_3 recursion is partial (PoS only). C: Blue Ham path EXISTS [0,6,7,8,11,9,10,2]. D: I(G_5,x)=1+12x+36x²+38x³+16x⁴+2x⁵, Meta-H=793, α=5, χ=1. E: Score=partition of C(n,2). F: |Aut|→degree via self-flip fraction.
 **New contributions:** creative_propositions_s172.py
 **Unresolved:** Prove transitivity for all n, prove blue Ham path conjecture, I(G_n,x) formula
+## opus-2026-03-22-S167 — 2026-03-22: G_n for All n — 6 Universal Theorems, Spectral Gap = 2/n
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S166
+**Summary:** Comprehensive analysis of G_n for general n. PROVED 6 universal theorems. KEY DISCOVERY: Markov chain eigenvalues at n=5 are ALL multiples of 1/5. Spectral gap = 2/n at n=4,5. Mean reversion slope b ~ 1-2/n. Neutral arc fraction: 1/2, 3/8, 11/64. Score L1=2 necessary but not sufficient for adjacency (73% at n=5). Edge density decreasing: 1, 5/6, 5/11.
+**New contributions:** Gn_general_s167.py + output
+**Unresolved threads:** Prove spectral gap = 2/n for all n, verify at n=6
 
 ---
 
