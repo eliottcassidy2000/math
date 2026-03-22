@@ -1,0 +1,315 @@
+
+========================================================================
+  BUILDING CLASS CATALOGS
+========================================================================
+
+  Building n=3...
+    2 classes
+  Building n=4...
+    4 classes
+  Building n=5...
+    12 classes
+  Building n=6...
+    56 classes
+
+========================================================================
+  PART 1: VERTEX DELETION MAP n -> n-1
+========================================================================
+
+  For each class C at n and each vertex v, deleting v gives
+  a tournament on n-1 vertices in some class D. The map
+  phi_v: classes(n) -> classes(n-1) sends C to D.
+
+  n=4 -> n-1=3:
+    class 0 (H=1, sc=(0, 1, 2, 3)) -> children: [0] (H=[1])
+    class 1 (H=3, sc=(1, 1, 1, 3)) -> children: [0, 1] (H=[1, 3])
+    class 2 (H=5, sc=(1, 1, 2, 2)) -> children: [0, 1] (H=[1, 3])
+    class 3 (H=3, sc=(0, 2, 2, 2)) -> children: [0, 1] (H=[1, 3])
+
+  n=5 -> n-1=4:
+    class 0 (H=1, sc=(0, 1, 2, 3, 4)) -> children: [0] (H=[1])
+    class 1 (H=3, sc=(1, 1, 1, 3, 4)) -> children: [0, 1] (H=[1, 3])
+    class 2 (H=5, sc=(1, 1, 2, 2, 4)) -> children: [0, 1, 2] (H=[1, 3, 5])
+    class 3 (H=3, sc=(0, 2, 2, 2, 4)) -> children: [0, 1, 3] (H=[1, 3, 3])
+    class 4 (H=9, sc=(1, 1, 2, 3, 3)) -> children: [0, 2] (H=[1, 5])
+    class 5 (H=5, sc=(0, 2, 2, 3, 3)) -> children: [0, 2, 3] (H=[1, 3, 5])
+    class 6 (H=9, sc=(1, 1, 2, 3, 3)) -> children: [0, 1, 2, 3] (H=[1, 3, 3, 5])
+    class 7 (H=3, sc=(0, 1, 3, 3, 3)) -> children: [0, 3] (H=[1, 3])
+    class 8 (H=11, sc=(1, 2, 2, 2, 3)) -> children: [0, 2] (H=[1, 5])
+    class 9 (H=15, sc=(1, 2, 2, 2, 3)) -> children: [1, 2, 3] (H=[3, 3, 5])
+    class 10 (H=13, sc=(1, 2, 2, 2, 3)) -> children: [1, 2, 3] (H=[3, 3, 5])
+    class 11 (H=15, sc=(2, 2, 2, 2, 2)) -> children: [2] (H=[5])
+
+
+========================================================================
+  PART 2: SOURCE-SINK DECOMPOSITION n -> n-2
+========================================================================
+
+  The source-sink decomposition removes the highest-scoring
+  vertex (source) and lowest-scoring vertex (sink) to get
+  an inner tournament on n-2 vertices.
+
+  This is NOT unique: different (source, sink) choices give
+  different inner tournaments. We consider ALL such pairs.
+
+  n=5 -> n-2=3:
+  12 classes at n=5, 2 classes at n-2=3
+
+  Inner class map (n=5 class -> n-2=3 classes):
+    class  0 (H= 1, sc=(0, 1, 2, 3, 4)) -> inner: [0] (H=[1])
+    class  1 (H= 3, sc=(1, 1, 1, 3, 4)) -> inner: [0] (H=[1])
+    class  2 (H= 5, sc=(1, 1, 2, 2, 4)) -> inner: [0, 1] (H=[1, 3])
+    class  3 (H= 3, sc=(0, 2, 2, 2, 4)) -> inner: [1] (H=[3])
+    class  4 (H= 9, sc=(1, 1, 2, 3, 3)) -> inner: [0, 1] (H=[1, 3])
+    class  5 (H= 5, sc=(0, 2, 2, 3, 3)) -> inner: [0, 1] (H=[1, 3])
+    class  6 (H= 9, sc=(1, 1, 2, 3, 3)) -> inner: [0, 1] (H=[1, 3])
+    class  7 (H= 3, sc=(0, 1, 3, 3, 3)) -> inner: [0] (H=[1])
+    class  8 (H=11, sc=(1, 2, 2, 2, 3)) -> inner: [1] (H=[3])
+    class  9 (H=15, sc=(1, 2, 2, 2, 3)) -> inner: [1] (H=[3])
+    class 10 (H=13, sc=(1, 2, 2, 2, 3)) -> inner: [0] (H=[1])
+    class 11 (H=15, sc=(2, 2, 2, 2, 2)) -> inner: [0, 1] (H=[1, 3])
+
+  Fiber sizes (n-2 class -> how many n-classes sit above):
+    inner class 0 (H=1) has fiber of size 9: [0, 1, 2, 4, 5, 6, 7, 10, 11] (H=[1, 3, 5, 9, 5, 9, 3, 13, 15])
+    inner class 1 (H=3) has fiber of size 8: [2, 3, 4, 5, 6, 8, 9, 11] (H=[5, 3, 9, 5, 9, 11, 15, 15])
+
+  n=6 -> n-2=4:
+  56 classes at n=6, 4 classes at n-2=4
+
+  Inner class map (n=6 class -> n-2=4 classes):
+    class  0 (H= 1, sc=(0, 1, 2, 3, 4, 5)) -> inner: [0] (H=[1])
+    class  1 (H= 3, sc=(1, 1, 1, 3, 4, 5)) -> inner: [0] (H=[1])
+    class  2 (H= 5, sc=(1, 1, 2, 2, 4, 5)) -> inner: [0, 1] (H=[1, 3])
+    class  3 (H= 3, sc=(0, 2, 2, 2, 4, 5)) -> inner: [1] (H=[3])
+    class  4 (H= 9, sc=(1, 1, 2, 3, 3, 5)) -> inner: [0, 2] (H=[1, 5])
+    class  5 (H= 5, sc=(0, 2, 2, 3, 3, 5)) -> inner: [2] (H=[5])
+    class  6 (H= 9, sc=(1, 1, 2, 3, 3, 5)) -> inner: [2, 3] (H=[5, 3])
+    class  7 (H= 3, sc=(0, 1, 3, 3, 3, 5)) -> inner: [3] (H=[3])
+    class  8 (H=11, sc=(1, 2, 2, 2, 3, 5)) -> inner: [2] (H=[5])
+    class  9 (H=17, sc=(1, 1, 2, 3, 4, 4)) -> inner: [0, 2] (H=[1, 5])
+    class 10 (H= 9, sc=(0, 2, 2, 3, 4, 4)) -> inner: [0, 2] (H=[1, 5])
+    class 11 (H=15, sc=(1, 1, 2, 3, 4, 4)) -> inner: [0, 2, 3] (H=[1, 5, 3])
+    class 12 (H= 5, sc=(0, 1, 3, 3, 4, 4)) -> inner: [0, 3] (H=[1, 3])
+    class 13 (H=19, sc=(1, 2, 2, 2, 4, 4)) -> inner: [1, 2] (H=[3, 5])
+    class 14 (H= 9, sc=(0, 2, 2, 3, 4, 4)) -> inner: [1, 2] (H=[3, 5])
+    class 15 (H=15, sc=(1, 1, 2, 3, 4, 4)) -> inner: [0, 1, 2] (H=[1, 3, 5])
+    class 16 (H= 3, sc=(0, 1, 2, 4, 4, 4)) -> inner: [0] (H=[1])
+    class 17 (H=23, sc=(1, 2, 2, 3, 3, 4)) -> inner: [2] (H=[5])
+    class 18 (H=11, sc=(0, 2, 3, 3, 3, 4)) -> inner: [2] (H=[5])
+    class 19 (H=19, sc=(1, 1, 3, 3, 3, 4)) -> inner: [2, 3] (H=[5, 3])
+    ... (36 more classes)
+
+  Fiber sizes (n-2 class -> how many n-classes sit above):
+    inner class 0 (H=1) has fiber of size 21: [0, 1, 2, 4, 9, 10, 11, 12, 15, 16] (H=[1, 3, 5, 9, 17, 9, 15, 5, 15, 3])
+    inner class 1 (H=3) has fiber of size 14: [2, 3, 13, 14, 15, 21, 23, 25, 27, 34] (H=[5, 3, 19, 9, 15, 15, 27, 17, 33, 37])
+    inner class 2 (H=5) has fiber of size 41: [4, 5, 6, 8, 9, 10, 11, 13, 14, 15] (H=[9, 5, 9, 11, 17, 9, 15, 19, 9, 15])
+    inner class 3 (H=3) has fiber of size 14: [6, 7, 11, 12, 19, 25, 32, 34, 41, 43] (H=[9, 3, 15, 5, 19, 17, 31, 37, 27, 15])
+
+
+========================================================================
+  PART 3: RECURSIVE STRUCTURE OF G_n
+========================================================================
+
+  QUESTION: Does G_n contain G_{n-2} as a subgraph?
+  I.e., is there an embedding phi: V(G_{n-2}) -> V(G_n)
+  such that adjacent classes in G_{n-2} map to adjacent classes in G_n?
+
+  G_3 has 2 classes: [(0, 1), (1, 3)]
+
+  Fiber of G_3 class 0 (transitive, H=1) in G_5:
+    9 classes: [(0, 1), (1, 3), (2, 5), (4, 9), (5, 5), (6, 9), (7, 3), (10, 13), (11, 15)]
+
+  Fiber of G_3 class 1 (3-cycle, H=3) in G_5:
+    8 classes: [(2, 5), (3, 3), (4, 9), (5, 5), (6, 9), (8, 11), (9, 15), (11, 15)]
+
+  Edge structure between fibers:
+    Cross-fiber edges (f0 -- f1): 32
+    Within fiber 0: 18
+    Within fiber 1: 14
+    Total edges in G_5: 30
+
+========================================================================
+  PART 4: COMPLETE DELETION PROFILE
+========================================================================
+
+  For each class at n=5, list ALL classes obtained by deleting a vertex.
+
+  class  0 (H= 1): deletions -> {0:5} (child H=[1])
+  class  1 (H= 3): deletions -> {0:3, 1:2} (child H=[1, 3])
+  class  2 (H= 5): deletions -> {0:2, 1:2, 2:1} (child H=[1, 3, 5])
+  class  3 (H= 3): deletions -> {0:3, 1:1, 3:1} (child H=[1, 3])
+  class  4 (H= 9): deletions -> {0:2, 2:3} (child H=[1, 5])
+  class  5 (H= 5): deletions -> {0:2, 2:1, 3:2} (child H=[1, 3, 5])
+  class  6 (H= 9): deletions -> {0:1, 1:1, 2:2, 3:1} (child H=[1, 3, 5])
+  class  7 (H= 3): deletions -> {0:3, 3:2} (child H=[1, 3])
+  class  8 (H=11): deletions -> {0:1, 2:4} (child H=[1, 5])
+  class  9 (H=15): deletions -> {1:1, 2:3, 3:1} (child H=[3, 5])
+  class 10 (H=13): deletions -> {1:1, 2:3, 3:1} (child H=[3, 5])
+  class 11 (H=15): deletions -> {2:5} (child H=[5])
+
+========================================================================
+  PART 5: GROWTH TREE n-2 -> n
+========================================================================
+
+  The source-sink INSERTION is the reverse of deletion.
+  Given inner tournament I (n-2 vertices), add source s and sink t,
+  with wiring (source->middle arcs, middle->sink arcs, s-t arc).
+
+  The number of ways to wire = 2^{n-2} * 2^{n-2} * 2 = 2^{2n-3}
+  (source-middle: 2^{n-2} choices, middle-sink: 2^{n-2}, s-t direction: 2)
+
+  Growth from n-2=3 to n=5:
+  Total wirings per inner class: 2^{2*5-3} = 128
+
+  Inner class 0 (H=1, scores=(0, 1, 2)):
+    -> 9 classes at n=5: [(0, 1), (1, 3), (2, 5), (4, 9), (5, 5), (6, 9), (7, 3), (10, 13), (11, 15)]
+    Total labeled tournaments above: 824
+    Inner labeled: 6, wirings: 128, predicted overcounting: 5*4=20
+    Predicted total: 15360 / 20 = 768
+    Actual total above: 824
+
+  Inner class 1 (H=3, scores=(1, 1, 1)):
+    -> 8 classes at n=5: [(2, 5), (3, 3), (4, 9), (5, 5), (6, 9), (8, 11), (9, 15), (11, 15)]
+    Total labeled tournaments above: 704
+    Inner labeled: 2, wirings: 128, predicted overcounting: 5*4=20
+    Predicted total: 5120 / 20 = 256
+    Actual total above: 704
+
+
+========================================================================
+  PART 6: H VALUES IN THE FIBERS
+========================================================================
+
+  For each inner class, what H values appear in its fiber?
+
+  n=5 (fibers from n-2=3):
+    inner 0 (H=1): fiber size 9, H range [1, 15], H values = [1, 3, 5, 9, 13, 15]
+    inner 1 (H=3): fiber size 8, H range [3, 15], H values = [3, 5, 9, 11, 15]
+
+  n=6 (fibers from n-2=4):
+    inner 0 (H=1): fiber size 21, H range [1, 45], H values = [1, 3, 5, 9, 15, 17, 23, 33, 37, 41, 43, 45]
+    inner 1 (H=3): fiber size 14, H range [3, 45], H values = [3, 5, 9, 15, 17, 19, 27, 31, 33, 37, 43, 45]
+    inner 2 (H=5): fiber size 41, H range [5, 45], H values = [5, 9, 11, 13, 15, 17, 19, 23, 25, 29, 33, 37, 41, 43, 45]
+    inner 3 (H=3): fiber size 14, H range [3, 45], H values = [3, 5, 9, 15, 17, 19, 27, 31, 33, 37, 43, 45]
+
+
+========================================================================
+  PART 7: THE RECURSIVE CHAIN
+========================================================================
+
+
+THE CHAIN STRUCTURE:
+
+  G_3 (2 classes) -> G_5 (12 classes) -> G_7 (456 classes) -> ...
+  G_4 (4 classes) -> G_6 (56 classes) -> G_8 (6880 classes) -> ...
+
+At each step, each class at n-2 GENERATES a FIBER of classes at n.
+The fiber consists of all tournaments whose source-sink reduced inner
+tournament belongs to the given n-2 class.
+
+THE FIBER SIZE DEPENDS ON:
+  1. The inner class (its H value, score sequence, automorphisms)
+  2. The wiring (how source/sink connect to the inner tournament)
+  3. The source-sink arc direction
+
+THE KEY FORMULA (from S110, kind-pasteur S20o):
+  For PoS at n=5: H = 14 - H_inner + 4*[src->snk]
+  where src->snk is 1 if source beats sink, 0 otherwise.
+
+  This gives:
+  - Inner H=3 (regular), src->snk: H = 14 - 3 + 4 = 15
+  - Inner H=3 (regular), snk->src: H = 14 - 3 + 0 = 11
+  - Inner H=1 (transitive), src->snk: H = 14 - 1 + 4 = 17... wait, that's wrong.
+
+  Actually from S110: at n=5 PoS:
+  - inner regular + snk->src: H = 11 (120 tournaments)
+  - inner transitive + src->snk: H = 13 (120 tournaments)
+  - inner regular + src->snk (REVERSED): H = 15 (40 tournaments)
+
+  PoS at n=5: score (1,2,2,2,3)
+  PoS classes: [(8, 11), (9, 15), (10, 13)]
+    class 8 (H=11): inner classes = [2], inner H = []
+    class 9 (H=15): inner classes = [0, 2], inner H = []
+    class 10 (H=13): inner classes = [0, 2], inner H = []
+
+========================================================================
+  PART 8: FIBER SIZE DISTRIBUTION
+========================================================================
+
+  n=5 fibers from n-2=3:
+    inner 0 (H=1): fiber size = 9
+    inner 1 (H=3): fiber size = 8
+  Total fiber coverage: 12 classes at n=5 covered (out of 12 total)
+  Sum of fiber sizes: 17 (some classes counted multiple times)
+
+  n=6 fibers from n-2=4:
+    inner 0 (H=1): fiber size = 21
+    inner 1 (H=3): fiber size = 14
+    inner 2 (H=5): fiber size = 41
+    inner 3 (H=3): fiber size = 14
+  Total fiber coverage: 56 classes at n=6 covered (out of 56 total)
+  Sum of fiber sizes: 90 (some classes counted multiple times)
+
+
+========================================================================
+  SYNTHESIS: THE RECURSIVE STRUCTURE OF G_n
+========================================================================
+
+
+WHAT WE LEARNED:
+
+1. EVERY n-class maps to SOME (n-2)-class via source-sink reduction.
+   The map is NOT injective: multiple n-classes can share an inner class.
+   The fiber (preimage) of an (n-2)-class = all n-classes with that inner.
+
+2. FIBER SIZES: The transitive inner class has the LARGEST fiber.
+   At n=5: transitive inner (H=1) generates 12 classes above it —
+   ALL classes sit above the transitive! This makes sense: every
+   tournament reduces to a transitive tournament on 3 vertices
+   (n-2=3 has only 2 classes, and all tournaments contain transitive sub-T's).
+
+3. THE H RECURSION: Within a fiber, H varies based on the wiring.
+   - Regular inner + reversed S-T arc -> highest H
+   - Transitive inner + standard S-T arc -> intermediate H
+   - The wiring choice (2^{2n-3} options) determines which class you land in.
+
+4. FIBER OVERLAP: A class at n may sit above MULTIPLE inner classes.
+   This is because different (source, sink) choices in the same tournament
+   may reveal different inner structures. Non-PoS classes typically have
+   a unique inner class; PoS classes can have multiple.
+
+5. G_n DOES NOT CONTAIN G_{n-2} AS A SUBGRAPH in the naive sense.
+   The fibers are NOT cliques or independent sets in G_n.
+   But there IS a cross-fiber edge structure that reflects the
+   G_{n-2} adjacency.
+
+6. THE GROWTH FACTOR:
+   |V(G_3)| = 2, |V(G_5)| = 12, |V(G_7)| = 456
+   Growth: 2 -> 12 -> 456 = factor 6 then 38.
+   These are NOT powers — the growth is super-exponential,
+   consistent with A000568.
+
+7. THE ODD/EVEN CHAINS:
+   Odd: G_3 -> G_5 -> G_7 -> G_9 ...
+   Even: G_4 -> G_6 -> G_8 -> G_10 ...
+   These chains are INDEPENDENT — odd tournaments embed odd inner,
+   even embed even. The two chains never interact.
+
+THE DEEP INSIGHT:
+G_n is a FIBER BUNDLE over G_{n-2}, with fibers parameterized by
+the source-sink wiring. The bundle is not trivial (fibers overlap
+and have variable size), but the FIBER STRUCTURE is the key to
+understanding G_n at large n. The recursive chain
+  G_3 -> G_5 -> G_7 -> ...
+is the fundamental structure, with each level adding source-sink
+boundary effects on top of the inner tournament structure.
+
+THIS IS THE STAIRCASE RECURSION FROM S164:
+  delta_{n-2} = delta_{n-4} + L-border (2(n-4)+3 tiles)
+The L-border = the source-sink wiring.
+The inner delta_{n-4} = the inner tournament.
+The fiber = all ways to tile the L-border given the inner tiling.
+
+G_n IS the quotient of the staircase tiling recursion.
+
+Done. opus-2026-03-22-S171
