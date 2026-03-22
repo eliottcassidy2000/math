@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S167 — 2026-03-22: Blue Skeleton — Arborescences, Kings, L, Three Independent Axes
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S166
+**Summary:** Deep investigation of tournament structure through arborescences, kings, and L. THREE INDEPENDENT AXES discovered: (1) H/c₃/S₂ (cycle axis, 68.2% variance), (2) arb (tree axis, 28.3% variance, r=0.22 with H!), (3) L (linear residual, 3.1%). PCA confirms: 3 components capture 99.6% of all 7-metric variance. The (H,arb,L) triple has 35 distinct values — FINER than 12 iso classes. Kings determine H UNIQUELY at top: kings=4→H=13, kings=5→H=15. Transitive tournament arb=[0,0,0,0,24] (all trees from source, total=24=4!). H=15 PoS: arb=[7,7,7,7,21] (total=49=7²). The blue skeleton = gradient of H on the tournament sphere: transitive is the minimum (gradient outward), regular is the maximum (gradient inward). Arc sensitivities computed: at H=1, all flips increase H by +2; at H=15, some decrease by -4. Read kind-pasteur S20w (arb uncorrelated with H, kings determine top, 7 new invariants).
+**New contributions:** blue_skeleton_arb_kings_s167.py
+**Unresolved threads:** Prove arb independence from H theoretically, extend to n=6, connect arb to staircase structure, prove total_arb(regular) = perfect square
+
+---
+
 ## opus-2026-03-22-S166 — 2026-03-22: Faster Formulas — 8 Computation Levels, HC Decomposition Verified
 
 **Account:** opus
