@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S162 — 2026-03-22: Five Practical Tools from Tournament Geometry
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S160
+**Summary:** Built 5 practical tools from tournament cube geometry: (1) TournamentHillClimber: finds H_max in ~1-3 steps from random start (greedy arc flipping). At n=6: H=45 in 3 steps. (2) ArcFlipCompressor: lossless diff-encoding of tournament sequences. Single-flip sequences compress ~7× at n=10. At n=100: ~400× theoretical. Verified lossless. (3) RankingStabilityAnalyzer: computes min/max/mean |ΔH| per flip. PoS class tournaments (H=13,15) are ROBUST (min|ΔH|=2). Others have min|ΔH|=0 (some neutral flips exist). (4) PairwiseAnomalyDetector: compares tournament to best-fit transitive ordering, ranks anomalous arcs by H-impact. (5) TournamentFingerprint: 7-number compact identifier (H, S₂, scores, c₃, H mod 7, H mod 5). O(n) for n≤4. All tools use the same foundation: H=I(Ω,2), ΔH from THM-082, OCR=97%, Gray code locality. Read kind-pasteur S20m (fast engine, n=6 in 5.8s, ΔH=±10 never observed at n=5).
+**New contributions:** practical_creative_s161.py
+**Unresolved threads:** Fix stability metric, add to tournament_toolkit, benchmark on real data
+
+---
+
 ## opus-2026-03-22-S161 — 2026-03-22: Gray Code S136 Script Execution
 
 **Account:** opus
