@@ -1,0 +1,177 @@
+======================================================================
+  META-GRAPH G_6: FULL WEIGHTED EVALUATION
+======================================================================
+
+  Step 1: Building iso classes at n=6 (32768 tournaments)...
+    2000/32768 (122/s, ETA 252s)...
+    4000/32768 (122/s, ETA 236s)...
+    6000/32768 (121/s, ETA 221s)...
+    8000/32768 (123/s, ETA 201s)...
+    10000/32768 (122/s, ETA 186s)...
+    12000/32768 (122/s, ETA 171s)...
+    14000/32768 (122/s, ETA 154s)...
+    16000/32768 (122/s, ETA 138s)...
+    18000/32768 (122/s, ETA 121s)...
+    20000/32768 (122/s, ETA 105s)...
+    22000/32768 (121/s, ETA 89s)...
+    24000/32768 (121/s, ETA 73s)...
+    26000/32768 (120/s, ETA 56s)...
+    28000/32768 (120/s, ETA 40s)...
+    30000/32768 (120/s, ETA 23s)...
+    32000/32768 (121/s, ETA 6s)...
+
+  56 iso classes found in 270.8s
+
+  Step 2: Building weighted adjacency matrix...
+    5000/32768...
+    10000/32768...
+    15000/32768...
+    20000/32768...
+    25000/32768...
+    30000/32768...
+  Weight matrix computed in 0.3s
+
+======================================================================
+  G_6 BASIC PROPERTIES
+======================================================================
+
+  Vertices: 56
+  Edges (undir): 290
+  Density: 0.1883
+  Degree sequence: min=3, max=14, mean=10.4
+  Degree distribution:
+    deg=3: 3 classes
+    deg=4: 1 classes
+    deg=5: 3 classes
+    deg=6: 6 classes
+    deg=7: 2 classes
+    deg=10: 2 classes
+    deg=11: 12 classes
+    deg=12: 7 classes
+    deg=13: 14 classes
+    deg=14: 6 classes
+
+======================================================================
+  H-GRADIENT STRUCTURE
+======================================================================
+
+  H-increasing edges: 275
+  H-decreasing edges: 0
+  H-level edges: 15
+  DAG? ALMOST
+
+  Level edges (same H, adjacent classes):
+    class 9 -- class 10 at H=9, sizes=(720,720), scores=([np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)],[np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)])
+    class 11 -- class 12 at H=9, sizes=(720,720), scores=([np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)],[np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)])
+    class 21 -- class 22 at H=15, sizes=(720,720), scores=([np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)],[np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)])
+    class 27 -- class 28 at H=23, sizes=(720,720), scores=([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)],[np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)])
+    class 31 -- class 32 at H=25, sizes=(720,720), scores=([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)],[np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)])
+    class 35 -- class 37 at H=29, sizes=(720,720), scores=([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)],[np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)])
+    class 35 -- class 38 at H=29, sizes=(720,720), scores=([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)],[np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)])
+    class 37 -- class 38 at H=29, sizes=(720,720), scores=([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)],[np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)])
+    class 46 -- class 47 at H=37, sizes=(720,720), scores=([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)],[np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)])
+    class 46 -- class 48 at H=37, sizes=(720,720), scores=([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)],[np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)])
+    class 46 -- class 49 at H=37, sizes=(720,720), scores=([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)],[np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)])
+    class 46 -- class 50 at H=37, sizes=(720,720), scores=([np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(4)],[np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)])
+    class 47 -- class 48 at H=37, sizes=(720,720), scores=([np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)],[np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(4)])
+    class 49 -- class 50 at H=37, sizes=(720,720), scores=([np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)],[np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(3)])
+    class 52 -- class 53 at H=43, sizes=(720,720), scores=([np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)],[np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(3)])
+
+======================================================================
+  WEIGHT MATRIX ANALYSIS
+======================================================================
+
+  Weight symmetric (W[i,j] = W[j,i])? True (0 asymmetric pairs)
+  Class 0: size=720, total_out_weight=7200, expected(size*m)=10800, match=False
+  Class 1: size=240, total_out_weight=3120, expected(size*m)=3600, match=False
+  Class 2: size=240, total_out_weight=3360, expected(size*m)=3600, match=False
+  Class 3: size=240, total_out_weight=3360, expected(size*m)=3600, match=False
+  Class 4: size=240, total_out_weight=3120, expected(size*m)=3600, match=False
+
+  Heaviest edges (top 15):
+    (52,53): weight=5760, H=(43,43), sizes=(720,720)
+    (12,16): weight=4320, H=(9,13), sizes=(720,720)
+    (10,15): weight=4320, H=(9,13), sizes=(720,720)
+    (49,50): weight=2880, H=(37,37), sizes=(720,720)
+    (47,48): weight=2880, H=(37,37), sizes=(720,720)
+    (45,52): weight=2880, H=(33,43), sizes=(720,720)
+    (45,51): weight=2880, H=(33,41), sizes=(720,720)
+    (44,53): weight=2880, H=(33,43), sizes=(720,720)
+    (44,51): weight=2880, H=(33,41), sizes=(720,720)
+    (43,46): weight=2880, H=(33,37), sizes=(720,720)
+    (40,50): weight=2880, H=(31,37), sizes=(720,720)
+    (39,47): weight=2880, H=(31,37), sizes=(720,720)
+    (37,38): weight=2880, H=(29,29), sizes=(720,720)
+    (36,40): weight=2880, H=(29,31), sizes=(720,720)
+    (36,39): weight=2880, H=(29,31), sizes=(720,720)
+
+  Lightest nonzero edges (bottom 10):
+    (1,8): weight=480, H=(3,9)
+    (2,19): weight=480, H=(3,15)
+    (2,33): weight=480, H=(3,27)
+    (3,20): weight=480, H=(3,15)
+    (3,34): weight=480, H=(3,27)
+    (4,8): weight=480, H=(3,9)
+    (19,33): weight=480, H=(15,27)
+    (19,41): weight=480, H=(15,33)
+    (20,34): weight=480, H=(15,27)
+    (20,42): weight=480, H=(15,33)
+
+======================================================================
+  H-LEVEL STRUCTURE
+======================================================================
+
+     H #classes                          sizes                                   scores
+     1        1                          [720] [(np.int64(0), np.int64(1), np.int64(2),
+     3        4           [240, 240, 240, 240] [(np.int64(0), np.int64(1), np.int64(2),
+     5        3                [720, 720, 720] [(np.int64(1), np.int64(1), np.int64(2),
+     9        5       [80, 720, 720, 720, 720] [(np.int64(1), np.int64(1), np.int64(1),
+    11        2                     [720, 720] [(np.int64(1), np.int64(2), np.int64(2),
+    13        2                     [720, 720] [(np.int64(1), np.int64(2), np.int64(2),
+    15        6 [144, 144, 240, 240, 720, 720] [(np.int64(1), np.int64(1), np.int64(2),
+    17        2                     [720, 720] [(np.int64(1), np.int64(1), np.int64(2),
+    19        2                     [720, 720] [(np.int64(1), np.int64(1), np.int64(3),
+    23        4           [720, 720, 720, 720] [(np.int64(1), np.int64(1), np.int64(3),
+    25        2                     [720, 720] [(np.int64(1), np.int64(2), np.int64(2),
+    27        2                     [240, 240] [(np.int64(1), np.int64(1), np.int64(3),
+    29        4           [720, 720, 720, 720] [(np.int64(1), np.int64(2), np.int64(2),
+    31        2                     [720, 720] [(np.int64(1), np.int64(2), np.int64(2),
+    33        5      [240, 240, 720, 720, 720] [(np.int64(2), np.int64(2), np.int64(2),
+    37        5      [720, 720, 720, 720, 720] [(np.int64(1), np.int64(2), np.int64(2),
+    41        1                          [720] [(np.int64(2), np.int64(2), np.int64(2),
+    43        2                     [720, 720] [(np.int64(2), np.int64(2), np.int64(2),
+    45        2                     [240, 240] [(np.int64(2), np.int64(2), np.int64(2),
+
+======================================================================
+  CHAINS FROM H_min TO H_max
+======================================================================
+
+  H_min = 1 (1 source classes)
+  H_max = 45 (2 sink classes)
+  Maximal chains (source->sink): 292510
+  Longest chain: 15 edges
+  Number of H-levels: 19
+  Width (max antichain): 6 (at H=15)
+
+======================================================================
+  COMPARISON: G_5 vs G_6
+======================================================================
+
+                   Property       G_5 (n=5)       G_6 (n=6)      Ratio
+  ------------------------- --------------- --------------- ----------
+                   Vertices              12              56       4.67
+                      Edges              30             290       9.67
+                    Density          0.4545 0.18831168831168832       0.41
+                   H-levels               7              19       2.71
+                      Width               3               6       2.00
+                    Sources               1               1       1.00
+                      Sinks               2               2       1.00
+                     Chains              99          292510    2954.65
+                Level edges               1              15      15.00
+                 Max degree               7              14       2.00
+
+  GROWTH PATTERNS:
+  Vertices: 12 -> 56 (x4.7) [A000568 growth]
+  Edges: 30 -> 290 (x9.7)
+  Chains: 99 -> 292510 (x2954.6)
+  Width: 3 -> 6 (x2.0)
