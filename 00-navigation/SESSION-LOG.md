@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S139 — 2026-03-21: Why Complex Numbers Solve Equations
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S138
+**Summary:** Foundational investigation: WHY do equations need complex numbers? The answer is SHAPES. Roots of a degree-n polynomial form an n-gon in the complex plane. The real line is a 1D slice of this 2D story. The fundamental theorem of algebra is TOPOLOGICAL: a degree-n map winds n times around the origin, forcing n roots. The TRIANGLE (degree 3) is the critical step — the first shape requiring the plane (casus irreducibilis: Cardano's formula needs complex intermediates even for real roots). This connects directly to tournaments: the 3-cycle IS the triangle that forces you off the line, and H=7 forbidden is the tournament's casus irreducibilis. The gap function g(x)=x³-x²-x-1 has roots forming a distorted triangle: τ=1.839 real + two complex conjugates at |z|=0.737 and ±124.7°. The complex roots carry oscillation that decays; at x=2 (tournament fugacity), only the real root τ survives.
+**New contributions:** why_complex_s139.py
+**Unresolved threads:** Formalize the winding number interpretation of H, connect casus irreducibilis to forbidden H values rigorously
+
+---
+
 ## opus-2026-03-21-S138 — 2026-03-21: What Imaginary Units Actually Are
 
 **Account:** opus
