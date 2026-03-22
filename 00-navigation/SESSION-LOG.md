@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S179 — 2026-03-22: Cycle Space Formula R = 2(HC - E[HC|score]) — EXACT at n≤5
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S178
+**Summary:** Verified the cycle space formula R = 2×(HC - E[HC|score]) at n=3,4,5,6. EXACT at n=3 (8/8), n=4 (64/64), n=5 (1024/1024). FAILS at n=6 (25680/32768 errors). The formula connects all decompositions: within each score class, H = 2×HC + const, so L = a - (n-2)×HC. At n=5 PoS class: L = 9 - 3×HC (verified: HC=1→L=6, HC=2→L=3, HC=3→L=0). The formula fails at n=6 because α₂ > 0: the residual needs both HC AND independent cycle pair count. Error at n=6 takes rational values suggesting R = 2×ΔHC + 4×Δα₂. The cycle space formula proves: the OCR residual IS the Hamiltonian cycle fluctuation at n≤5. The even graph determines HC, HC determines R, R IS the 3% residual. Read kind-pasteur S20af.
+**New contributions:** cycle_space_formula_s179.py
+**Unresolved:** Extend formula to n=6 with α₂ correction, prove the formula for all n where α₂=0, search for the general formula R = Σ 2^k × Δα_k
+
+---
+
 ## opus-2026-03-22-S178 — 2026-03-22: Tournaments = Cut + Cycle (Even Graphs)
 
 **Account:** opus

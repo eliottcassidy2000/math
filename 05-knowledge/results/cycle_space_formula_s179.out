@@ -1,0 +1,115 @@
+========================================================================
+  THE CYCLE SPACE FORMULA: R = 2(HC - E[HC|score])
+  opus-2026-03-22-S179
+========================================================================
+
+VERIFICATION AT n=5
+------------------------------------------------------------
+
+             score   E[H|s]  E[HC|s]      H values     HC values
+  ────────────────  ───────  ───────  ────────────  ────────────
+   (0, 1, 2, 3, 4)     1.00     0.00           [1]           [0]
+   (0, 1, 3, 3, 3)     3.00     0.00           [3]           [0]
+   (0, 2, 2, 2, 4)     3.00     0.00           [3]           [0]
+   (0, 2, 2, 3, 3)     5.00     0.00           [5]           [0]
+   (1, 1, 1, 3, 4)     3.00     0.00           [3]           [0]
+   (1, 1, 2, 2, 4)     5.00     0.00           [5]           [0]
+   (1, 1, 2, 3, 3)     9.00     1.00           [9]           [1]
+   (1, 2, 2, 2, 3)    12.43     1.71  [11, 13, 15]     [1, 2, 3]
+   (2, 2, 2, 2, 2)    15.00     2.00          [15]           [2]
+
+  VERIFICATION: R = H - E[H|score] vs 2*(HC - E[HC|score])
+
+  Verified 1024 tournaments: 0 errors
+  *** R = 2*(HC - E[HC|score]) EXACT AT n=5 ***
+
+  VERIFICATION AT n=3:
+    8 tournaments: 0 errors → EXACT ✓
+
+  VERIFICATION AT n=4:
+    64 tournaments: 0 errors → EXACT ✓
+
+  VERIFICATION AT n=6:
+    32768 tournaments: 25680 errors → FAILS (25680 errors)
+
+
+========================================================================
+  WHAT THE FORMULA MEANS
+========================================================================
+
+
+  THE EXACT FORMULA: R(T) = 2 × (HC(T) - E[HC|score(T)])
+
+  This says: the part of H that scores CAN'T predict
+  is EXACTLY twice the deviation of Hamiltonian cycles
+  from their score-conditioned mean.
+
+  EQUIVALENTLY:
+    H(T) = E[H|score(T)] + 2 × (HC(T) - E[HC|score(T)])
+
+  Which simplifies to:
+    H(T) = E[H|score(T)] + 2×HC(T) - 2×E[HC|score(T)]
+
+  Since E[H|score] - 2×E[HC|score] is a CONSTANT within each score class:
+    H(T) = constant(score) + 2×HC(T)
+
+  So WITHIN each score class: H and HC differ by a constant!
+  H = 2×HC + const(score)
+
+  Since H = n×HC + L (from the H=nHC+L decomposition):
+    n×HC + L = 2×HC + const
+    (n-2)×HC + L = const
+    L = const - (n-2)×HC
+
+  At n=5: L = const - 3×HC
+
+  So L and HC are LINEARLY RELATED within each score class!
+  L = a - 3×HC where a depends on the score.
+
+  THIS IS WHY:
+  - Within the PoS class: HC=1→L=6, HC=2→L=3, HC=3→L=0
+    L = 9 - 3×HC ✓ (a=9 for the PoS class)
+
+  - The formula connects the three decompositions:
+    H = score part + cycle part (cut/cycle)
+    H = n×HC + L (cyclic/linear)
+    H = 1 + 2α₁ + 4α₂ + ... (independence polynomial)
+
+  And ALL of them are connected by:
+    R = 2×(HC - E[HC|score])
+    L = const - (n-2)×HC
+
+  THE CYCLE SPACE IS THE HAMILTONIAN CYCLE COUNT.
+  The even graph determines HC, which determines R, which IS the 3% residual.
+
+  VERIFY: L = a - 3×HC within each score class at n=5:
+
+   (0, 1, 2, 3, 4): HC=0, L=1 (single value)
+   (0, 1, 3, 3, 3): HC=0, L=3 (single value)
+   (0, 2, 2, 2, 4): HC=0, L=3 (single value)
+   (0, 2, 2, 3, 3): HC=0, L=5 (single value)
+   (1, 1, 1, 3, 4): HC=0, L=3 (single value)
+   (1, 1, 2, 2, 4): HC=0, L=5 (single value)
+   (1, 1, 2, 3, 3): HC=1, L=4 (single value)
+   (1, 2, 2, 2, 3): HC→L = [(1, 6), (2, 3), (3, 0)], a = {9}
+    ✓ L = 9 - 3×HC (linear)
+   (2, 2, 2, 2, 2): HC=2, L=5 (single value)
+
+  The formula FAILS at n=6 with 25680 errors.
+  The residual at n=6 has contributions beyond HC.
+  Error distribution (R_actual - R_predicted):
+    Δ = -2.3333: 2880 tournaments
+    Δ = -1.4286: 2880 tournaments
+    Δ = -1.2000: 1920 tournaments
+    Δ = -1.0000: 1440 tournaments
+    Δ = -0.3636: 2160 tournaments
+    Δ = -0.3333: 2160 tournaments
+    Δ = +0.5714: 2880 tournaments
+    Δ = +0.8000: 2880 tournaments
+    Δ = +1.0000: 1440 tournaments
+    Δ = +1.6364: 480 tournaments
+    Δ = +1.6667: 2880 tournaments
+    Δ = +2.5714: 960 tournaments
+    Δ = +3.6667: 720 tournaments
+
+opus-2026-03-22-S179
