@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S142 — 2026-03-21: Half-Steps Orthogonal to {-1,0,1}
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S141
+**Summary:** Deep investigation of half-steps as orthogonal to the integer classification {-1,0,+1}. THE ANSWER: half-steps are PHASE, whole steps are SIGN, and phase ⊥ sign. The fourth roots of unity {1,i,-1,-i} decompose into whole steps {1,-1} (real) and half-steps {i,-i} (imaginary), perpendicular on the unit circle. i²=-1 means "two half-steps = one sign change." In tournament theory: OCR captures the sign part (97%), residual is the phase part (3%). H decomposes as trend (A·τⁿ, the real root = sign) + oscillation (2Re(B·z₂ⁿ), the complex roots = phase). Score = sign, SRCP = sign + phase. The complex roots of g_3 at |z|=0.737, angle ±124.7° carry the oscillatory content orthogonal to the {-1,0,+1} classification. Verified: oscillation is ~30% of trend at small n, decays exponentially. The musical half-step 2^{1/12} arises because 12 = LCM(3,4) = the resolution that captures both the tournament atom (3) and the doubling quantum (4). Read kind-pasteur S18t (2/3 ratio), S18u (honest assessment).
+**New contributions:** half_steps_s142.py
+**Unresolved threads:** Formalize the sign/phase decomposition of tournament invariants, connect the Pythagorean comma to the OCR residual
+
+---
+
 ## opus-2026-03-21-S141 — 2026-03-21: The Pseudo-Doubling — 2, √, and log
 
 **Account:** opus
