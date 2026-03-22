@@ -1,0 +1,248 @@
+======================================================================
+  THE SOURCE'S BLUE LINE: TILING-TO-ISO-CLASS MAP
+======================================================================
+
+======================================================================
+  n = 3
+======================================================================
+
+  Transitive tournament: class 0, H=1, SC=True, size=6
+
+  Single arc flips from transitive (bits=0):
+         arc  new_class  new_H new_SC class_size    color
+  (0->1):          0      1   True          6     BLUE
+  (0->2):          1      3   True          2     BLUE
+  (1->2):          0      1   True          6     BLUE
+
+  Distinct neighbor classes: 2
+  Blue (SC-preserving) neighbor classes: [0, 1]
+  Black (SC-changing) neighbor classes: []
+  # Blue neighbors: 2
+  # Black neighbors: 0
+
+  Flips per neighbor class:
+    Class 0: 2 flips, H=1, size=6, SC=True, score=[np.int64(0), np.int64(1), np.int64(2)], color=BLUE
+    Class 1: 1 flips, H=3, size=2, SC=True, score=[np.int64(1), np.int64(1), np.int64(1)], color=BLUE
+
+  1 + 2^(n-2) = 3
+
+  All neighbor class sizes: [2, 6]
+  n! = 6
+  n!/2 = 3
+
+  Reachability fractions (flips from trans / class size):
+    Class 0: 2/6 = 0.3333, color=BLUE
+    Class 1: 1/2 = 0.5000, color=BLUE
+
+  STAIRCASE TILING VIEW:
+  Base path arcs: [(0, 1), (1, 2)] (2 arcs, fixed)
+  Non-base arcs (tiles): [(0, 2)] (1 = C(n-1,2) tiles)
+  C(n-1,2) = 1
+    arc (0, 1): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+    arc (0, 2): TILE, -> class 1 (H=3, SC=True, color=BLUE)
+    arc (1, 2): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+
+======================================================================
+  n = 4
+======================================================================
+
+  Transitive tournament: class 0, H=1, SC=True, size=24
+
+  Single arc flips from transitive (bits=0):
+         arc  new_class  new_H new_SC class_size    color
+  (0->1):          0      1   True         24     BLUE
+  (0->2):          1      3  False          8    BLACK
+  (0->3):          3      5   True         24     BLUE
+  (1->2):          0      1   True         24     BLUE
+  (1->3):          2      3  False          8    BLACK
+  (2->3):          0      1   True         24     BLUE
+
+  Distinct neighbor classes: 4
+  Blue (SC-preserving) neighbor classes: [0, 3]
+  Black (SC-changing) neighbor classes: [1, 2]
+  # Blue neighbors: 2
+  # Black neighbors: 2
+
+  Flips per neighbor class:
+    Class 0: 3 flips, H=1, size=24, SC=True, score=[np.int64(0), np.int64(1), np.int64(2), np.int64(3)], color=BLUE
+    Class 1: 1 flips, H=3, size=8, SC=False, score=[np.int64(1), np.int64(1), np.int64(1), np.int64(3)], color=BLACK
+    Class 2: 1 flips, H=3, size=8, SC=False, score=[np.int64(0), np.int64(2), np.int64(2), np.int64(2)], color=BLACK
+    Class 3: 1 flips, H=5, size=24, SC=True, score=[np.int64(1), np.int64(1), np.int64(2), np.int64(2)], color=BLUE
+
+  1 + 2^(n-2) = 5
+
+  All neighbor class sizes: [8, 24]
+  n! = 24
+  n!/2 = 12
+
+  Reachability fractions (flips from trans / class size):
+    Class 0: 3/24 = 0.1250, color=BLUE
+    Class 1: 1/8 = 0.1250, color=BLACK
+    Class 2: 1/8 = 0.1250, color=BLACK
+    Class 3: 1/24 = 0.0417, color=BLUE
+
+  STAIRCASE TILING VIEW:
+  Base path arcs: [(0, 1), (1, 2), (2, 3)] (3 arcs, fixed)
+  Non-base arcs (tiles): [(0, 2), (0, 3), (1, 3)] (3 = C(n-1,2) tiles)
+  C(n-1,2) = 3
+    arc (0, 1): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+    arc (0, 2): TILE, -> class 1 (H=3, SC=False, color=BLACK)
+    arc (0, 3): TILE, -> class 3 (H=5, SC=True, color=BLUE)
+    arc (1, 2): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+    arc (1, 3): TILE, -> class 2 (H=3, SC=False, color=BLACK)
+    arc (2, 3): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+
+======================================================================
+  n = 5
+======================================================================
+
+  Transitive tournament: class 0, H=1, SC=True, size=120
+
+  Single arc flips from transitive (bits=0):
+         arc  new_class  new_H new_SC class_size    color
+  (0->1):          0      1   True        120     BLUE
+  (0->2):          1      3  False         40    BLACK
+  (0->3):          4      5  False        120    BLACK
+  (0->4):          6      9   True        120     BLUE
+  (1->2):          0      1   True        120     BLUE
+  (1->3):          2      3   True         40     BLUE
+  (1->4):          5      5  False        120    BLACK
+  (2->3):          0      1   True        120     BLUE
+  (2->4):          3      3  False         40    BLACK
+  (3->4):          0      1   True        120     BLUE
+
+  Distinct neighbor classes: 7
+  Blue (SC-preserving) neighbor classes: [0, 2, 6]
+  Black (SC-changing) neighbor classes: [1, 3, 4, 5]
+  # Blue neighbors: 3
+  # Black neighbors: 4
+
+  Flips per neighbor class:
+    Class 0: 4 flips, H=1, size=120, SC=True, score=[np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)], color=BLUE
+    Class 1: 1 flips, H=3, size=40, SC=False, score=[np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)], color=BLACK
+    Class 2: 1 flips, H=3, size=40, SC=True, score=[np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)], color=BLUE
+    Class 3: 1 flips, H=3, size=40, SC=False, score=[np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)], color=BLACK
+    Class 4: 1 flips, H=5, size=120, SC=False, score=[np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)], color=BLACK
+    Class 5: 1 flips, H=5, size=120, SC=False, score=[np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)], color=BLACK
+    Class 6: 1 flips, H=9, size=120, SC=True, score=[np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)], color=BLUE
+
+  1 + 2^(n-2) = 9
+
+  All neighbor class sizes: [40, 120]
+  n! = 120
+  n!/2 = 60
+
+  Reachability fractions (flips from trans / class size):
+    Class 0: 4/120 = 0.0333, color=BLUE
+    Class 1: 1/40 = 0.0250, color=BLACK
+    Class 2: 1/40 = 0.0250, color=BLUE
+    Class 3: 1/40 = 0.0250, color=BLACK
+    Class 4: 1/120 = 0.0083, color=BLACK
+    Class 5: 1/120 = 0.0083, color=BLACK
+    Class 6: 1/120 = 0.0083, color=BLUE
+
+  STAIRCASE TILING VIEW:
+  Base path arcs: [(0, 1), (1, 2), (2, 3), (3, 4)] (4 arcs, fixed)
+  Non-base arcs (tiles): [(0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 4)] (6 = C(n-1,2) tiles)
+  C(n-1,2) = 6
+    arc (0, 1): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+    arc (0, 2): TILE, -> class 1 (H=3, SC=False, color=BLACK)
+    arc (0, 3): TILE, -> class 4 (H=5, SC=False, color=BLACK)
+    arc (0, 4): TILE, -> class 6 (H=9, SC=True, color=BLUE)
+    arc (1, 2): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+    arc (1, 3): TILE, -> class 2 (H=3, SC=True, color=BLUE)
+    arc (1, 4): TILE, -> class 5 (H=5, SC=False, color=BLACK)
+    arc (2, 3): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+    arc (2, 4): TILE, -> class 3 (H=3, SC=False, color=BLACK)
+    arc (3, 4): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+
+======================================================================
+  n = 6
+======================================================================
+
+  Transitive tournament: class 0, H=1, SC=True, size=720
+
+  Single arc flips from transitive (bits=0):
+         arc  new_class  new_H new_SC class_size    color
+  (0->1):          0      1   True        720     BLUE
+  (0->2):          1      3  False        240    BLACK
+  (0->3):          5      5  False        720    BLACK
+  (0->4):          9      9  False        720    BLACK
+  (0->5):         23     17   True        720     BLUE
+  (1->2):          0      1   True        720     BLUE
+  (1->3):          2      3  False        240    BLACK
+  (1->4):          6      5   True        720     BLUE
+  (1->5):         11      9  False        720    BLACK
+  (2->3):          0      1   True        720     BLUE
+  (2->4):          3      3  False        240    BLACK
+  (2->5):          7      5  False        720    BLACK
+  (3->4):          0      1   True        720     BLUE
+  (3->5):          4      3  False        240    BLACK
+  (4->5):          0      1   True        720     BLUE
+
+  Distinct neighbor classes: 11
+  Blue (SC-preserving) neighbor classes: [0, 6, 23]
+  Black (SC-changing) neighbor classes: [1, 2, 3, 4, 5, 7, 9, 11]
+  # Blue neighbors: 3
+  # Black neighbors: 8
+
+  Flips per neighbor class:
+    Class 0: 5 flips, H=1, size=720, SC=True, score=[np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)], color=BLUE
+    Class 1: 1 flips, H=3, size=240, SC=False, score=[np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4), np.int64(5)], color=BLACK
+    Class 2: 1 flips, H=3, size=240, SC=False, score=[np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4), np.int64(5)], color=BLACK
+    Class 3: 1 flips, H=3, size=240, SC=False, score=[np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(5)], color=BLACK
+    Class 4: 1 flips, H=3, size=240, SC=False, score=[np.int64(0), np.int64(1), np.int64(2), np.int64(4), np.int64(4), np.int64(4)], color=BLACK
+    Class 5: 1 flips, H=5, size=720, SC=False, score=[np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4), np.int64(5)], color=BLACK
+    Class 6: 1 flips, H=5, size=720, SC=True, score=[np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(5)], color=BLUE
+    Class 7: 1 flips, H=5, size=720, SC=False, score=[np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(4)], color=BLACK
+    Class 9: 1 flips, H=9, size=720, SC=False, score=[np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(5)], color=BLACK
+    Class 11: 1 flips, H=9, size=720, SC=False, score=[np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(4), np.int64(4)], color=BLACK
+    Class 23: 1 flips, H=17, size=720, SC=True, score=[np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(4)], color=BLUE
+
+  1 + 2^(n-2) = 17
+
+  All neighbor class sizes: [240, 720]
+  n! = 720
+  n!/2 = 360
+
+  Reachability fractions (flips from trans / class size):
+    Class 0: 5/720 = 0.0069, color=BLUE
+    Class 1: 1/240 = 0.0042, color=BLACK
+    Class 2: 1/240 = 0.0042, color=BLACK
+    Class 3: 1/240 = 0.0042, color=BLACK
+    Class 4: 1/240 = 0.0042, color=BLACK
+    Class 5: 1/720 = 0.0014, color=BLACK
+    Class 6: 1/720 = 0.0014, color=BLUE
+    Class 7: 1/720 = 0.0014, color=BLACK
+    Class 9: 1/720 = 0.0014, color=BLACK
+    Class 11: 1/720 = 0.0014, color=BLACK
+    Class 23: 1/720 = 0.0014, color=BLUE
+
+  STAIRCASE TILING VIEW:
+  Base path arcs: [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)] (5 arcs, fixed)
+  Non-base arcs (tiles): [(0, 2), (0, 3), (0, 4), (0, 5), (1, 3), (1, 4), (1, 5), (2, 4), (2, 5), (3, 5)] (10 = C(n-1,2) tiles)
+  C(n-1,2) = 10
+    arc (0, 1): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+    arc (0, 2): TILE, -> class 1 (H=3, SC=False, color=BLACK)
+    arc (0, 3): TILE, -> class 5 (H=5, SC=False, color=BLACK)
+    arc (0, 4): TILE, -> class 9 (H=9, SC=False, color=BLACK)
+    arc (0, 5): TILE, -> class 23 (H=17, SC=True, color=BLUE)
+    arc (1, 2): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+    arc (1, 3): TILE, -> class 2 (H=3, SC=False, color=BLACK)
+    arc (1, 4): TILE, -> class 6 (H=5, SC=True, color=BLUE)
+    arc (1, 5): TILE, -> class 11 (H=9, SC=False, color=BLACK)
+    arc (2, 3): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+    arc (2, 4): TILE, -> class 3 (H=3, SC=False, color=BLACK)
+    arc (2, 5): TILE, -> class 7 (H=5, SC=False, color=BLACK)
+    arc (3, 4): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+    arc (3, 5): TILE, -> class 4 (H=3, SC=False, color=BLACK)
+    arc (4, 5): BASE, -> class 0 (H=1, SC=True, color=BLUE)
+
+======================================================================
+  SUMMARY: THE BLUE LINE FROM THE SOURCE
+======================================================================
+
+  n=3: 1+2^(n-2) = 3
+  n=4: 1+2^(n-2) = 5
+  n=5: 1+2^(n-2) = 9
+  n=6: 1+2^(n-2) = 17
