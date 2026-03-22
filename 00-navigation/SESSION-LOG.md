@@ -20,6 +20,20 @@ Entry format:
 **Summary:** Deep investigation merging monstrous moonshine with tournament theory. Read kind-pasteur S18f (Tessellation capstone). Key discoveries: (1) Tournament primes 7,13,19 are ALL supersingular primes (divide |M|), so 1729 divides |M|. (2) |M| has exactly 15 = C(6,2) distinct prime factors — the Ramsey threshold arc count. (3) Leech lattice norm-4 vectors: 196560 = 240 × 7 × 13 × 9 = E₈_roots × forbidden × surprise × atom². (4) 7+13+19 = 39 is itself a temporary forbidden H at n=6. (5) Prediction: ALL OCR denominators factor into supersingular primes (verified at n=5). (6) Tournament "McKay equation": H = 1 + 2|Ω| parallels 196884 = 1 + 196883. (7) Full moonshine↔tournament dictionary: V♮↔independence complex, j↔I(Ω,x), Hecke↔score conditioning.
 **New contributions:** monstrous_moonshine_s134.py
 **Unresolved threads:** Verify OCR denom at n=7 factors into supersingular primes, construct tournament vertex algebra, test genus-0 for tournament Hauptmoduln
+---
+
+## opus-2026-03-21-S123 — 2026-03-21: TOURNAMENT MOONSHINE — "+1" pattern, baby moonshine for PSL(2,7), VOA parallel
+
+**Account:** opus
+**Summary:** Merged monstrous moonshine into the tournament framework. The "+1" pattern (196884=196883+1 in moonshine, 1729=1728+1 in tournaments) is the same structural phenomenon: modular = algebraic + trivial. Proposed "tournament moonshine" as a baby moonshine for PSL(2,7)=168, analogous to Mathieu moonshine for M₂₄. The tournament algebra (nesting operator, period-2 property) has VOA-like structure. j-coefficient 196884 = 12 × 16407 (divisible by T(5)=12).
+**Key:**
+1. **The "+1" pattern**: moonshine 196884=196883+1, tournaments 1729=1728+1. Both: modular = algebraic + trivial.
+2. **Tournament moonshine for PSL(2,7)**: 168 = |PSL(2,7)| vs |M| = 8e53. Baby moonshine.
+3. **VOA parallel**: tournament nesting = state-field correspondence, transitive = vacuum, g(x) = Virasoro
+4. **196884 mod 12 = 0**: the j-coefficient is divisible by T(5) = 12 (iso class count at n=5)
+5. **Tournament discriminant Delta_T = (H-1)/2**: cusp analog (vanishes at transitive, positive elsewhere)
+6. **Honest**: 744 has no obvious tournament interpretation. The connection is structural, not numerical.
+**Scripts:** moonshine_tournament_s123.py
 
 ---
 
