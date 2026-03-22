@@ -1,0 +1,328 @@
+========================================================================
+  WHAT IMAGINARY UNITS ACTUALLY ARE
+  opus-2026-03-21-S138
+========================================================================
+
+PART 1: WHAT e² = -1 MEANS
+------------------------------------------------------------
+
+  An imaginary unit e satisfies e² = -1.
+
+  This is NOT mysterious. It means:
+
+  APPLYING e TWICE NEGATES.
+
+  If you think of e as an OPERATION (a transformation),
+  then doing it twice gives you the OPPOSITE of where you started.
+
+  In C: multiplying by i rotates the plane by 90°.
+        Doing it twice rotates by 180° = negation.
+        That's ALL that i² = -1 says: half of negation.
+
+  In H: multiplying by i, j, or k EACH rotates in a different
+        plane of 4D space by 90°. Each is "half a negation"
+        in its own plane.
+
+  The REAL CONTENT of e² = -1 is:
+
+    e is a SQUARE ROOT OF NEGATION.
+
+  Negation is the simplest nontrivial operation (order 2).
+  An imaginary unit is its SQUARE ROOT (order 4).
+  That's why i⁴ = (i²)² = (-1)² = 1: four applications
+  of the half-negation return to the identity.
+
+
+PART 2: HOW IMAGINARY UNITS MULTIPLY — THE 3-CYCLE
+------------------------------------------------------------
+
+  In the QUATERNIONS, the three imaginary units i, j, k satisfy:
+
+    ij = k,   jk = i,   ki = j     (CYCLIC: i → j → k → i)
+    ji = -k,  kj = -i,  ik = -j    (ANTI-CYCLIC: reverse = negate)
+
+  The cyclic rule ij = k, jk = i, ki = j IS a directed 3-cycle.
+  The direction determines the sign of the product.
+
+  Going WITH the cycle: product is POSITIVE.
+  Going AGAINST the cycle: product is NEGATIVE.
+
+  This is EXACTLY how a tournament 3-cycle works:
+    a → b → c → a   (directed cycle)
+    Going with: a beats b, b beats c, c beats a
+    Going against: each relation is reversed
+
+  BUT THERE IS A CRUCIAL DIFFERENCE:
+
+  In quaternions: ij = +k and ji = -k. BOTH products EXIST.
+    The sign tells you the DIRECTION along the cycle.
+
+  In tournaments: a→b is an ARC. b→a is the OPPOSITE arc.
+    They can't BOTH exist. One or the other, never both.
+
+  So the tournament 3-cycle is the ABSOLUTE VALUE of the
+  quaternion product rule. Tournaments see the CYCLE STRUCTURE
+  (which triples form a cycle) but not the SIGN (which direction).
+
+  The sign IS the imaginary unit. The cycle IS the tournament.
+  The imaginary unit ADDS the sign to the cycle.
+
+  QUATERNION MULTIPLICATION TABLE:
+
+        1     i     j     k
+  1    +1    +i    +j    +k  
+  i    +i    -1    +k    -j  
+  j    +j    -k    -1    +i  
+  k    +k    +j    -i    -1  
+
+  THE DIRECTED 3-CYCLE: i → j → k → i
+    ij = +k  (WITH the cycle)
+    ji = -k  (AGAINST the cycle)
+    The SIGN encodes the DIRECTION.
+
+
+PART 3: THE SEVEN OCTONION IMAGINARY UNITS
+------------------------------------------------------------
+
+  The octonions O have 7 imaginary units e₁, ..., e₇.
+  Each satisfies eᵢ² = -1.
+
+  Their multiplication is governed by the FANO PLANE PG(2,F₂):
+  7 points, 7 lines, 3 points per line, 3 lines per point.
+
+  Each Fano line {a, b, c} gives a DIRECTED 3-CYCLE:
+    eₐ · eᵦ = eᶜ  (with the cycle)
+    eᵦ · eₐ = -eᶜ (against the cycle)
+
+  FANO LINES (= directed 3-cycles of imaginary units):
+    Line 1: {e1, e2, e4} → e1·e2 = e4
+    Line 2: {e2, e3, e5} → e2·e3 = e5
+    Line 3: {e3, e4, e6} → e3·e4 = e6
+    Line 4: {e4, e5, e7} → e4·e5 = e7
+    Line 5: {e5, e6, e1} → e5·e6 = e1
+    Line 6: {e6, e7, e2} → e6·e7 = e2
+    Line 7: {e7, e1, e3} → e7·e1 = e3
+
+  WHAT MAKES OCTONIONS NON-ASSOCIATIVE:
+    In quaternions: i(jk) = i·i = -1 = (ij)k = k·k = -1 ✓
+    In octonions: e₁(e₂·e₃) ≠ (e₁·e₂)·e₃ for some triples
+    because the Fano plane doesn't have a CONSISTENT global order.
+
+  A quaternionic subalgebra (one Fano line) IS associative.
+  But TWO DIFFERENT Fano lines INTERFERE: the order of operations
+  matters because there's no consistent way to parenthesize.
+
+  This is EXACTLY the tournament situation:
+  One 3-cycle is fine (associative within the triple).
+  Two 3-cycles that SHARE A VERTEX create interference
+  (the shared vertex sees conflicting orderings).
+  This is the CONFLICT GRAPH Ω(T).
+
+
+PART 4: WHAT AN IMAGINARY UNIT DOES TO A TOURNAMENT
+------------------------------------------------------------
+
+  An imaginary unit e satisfies e² = -1.
+  It is a HALF-NEGATION: a 90° rotation.
+
+  In tournament theory, NEGATION is COMPLEMENTATION:
+    T^c = the tournament with all arcs reversed.
+    (T^c)^c = T  (negation squared = identity)
+    H(T^c) = H(T)  (negation preserves H)
+
+  So the tournament complement T → T^c is multiplication by -1.
+
+  QUESTION: Is there a tournament operation that is "half" of complement?
+  An operation σ such that σ(σ(T)) = T^c?
+
+  This would be the TOURNAMENT IMAGINARY UNIT.
+
+  For it to exist: σ² = complement, σ⁴ = identity.
+  The operation σ has ORDER 4, just like i (since i⁴ = 1).
+
+  CANDIDATE: The Vitali atom!
+    The Vitali atom reverses 4 arcs.
+    Applying it again reverses 4 more arcs.
+    After two applications: 8 arcs reversed... but C(n,2) total arcs.
+    This is NOT complement unless 8 = C(n,2), i.e. n=4 only.
+
+  So the Vitali atom is NOT literally σ² = complement.
+  But it IS a square root of SOMETHING:
+
+  At n=4: C(4,2) = 6 arcs.
+  Complement reverses all 6 arcs.
+  A 'half-complement' reverses 3 arcs.
+
+  PROBLEM: A fixed set of arc reversals squares to identity,
+  not complement. A 'tournament imaginary unit' cannot be
+  a simple arc-reversal operation.
+
+  BUT: rotation by 90° in the COMPLEX PLANE is not a flip.
+  It's a ROTATION. The tournament analogue of 90° rotation
+  is a cyclic relabeling that acts on the VERTEX SET:
+
+  At n=4: the cyclic permutation σ = (0 1 2 3) has ORDER 4.
+  σ⁴ = identity, σ² = (0 2)(1 3) (swap pairs).
+  This is ORDER 4 — the same order as the imaginary unit i.
+
+  Example at n=4:
+    T:      H = 3
+    σ(T):   H = 3
+    σ²(T):  H = 3
+    T^c:    H = 3
+
+
+PART 5: THE REAL MEANING — ROTATION VS REFLECTION
+------------------------------------------------------------
+
+  The DEEP answer to "what is an imaginary unit":
+
+  An imaginary unit is a ROTATION, not a REFLECTION.
+
+  REFLECTION (order 2): negation, complement, swap.
+    T → T^c  (reverse all arcs)
+    (-1)     (negate)
+    Applying twice: identity.
+
+  ROTATION (order 4): quarter-turn, imaginary unit.
+    i: rotate 90° in a plane
+    Applying twice: 180° rotation = negation = -1
+    Applying four times: 360° = identity
+
+  The DIFFERENCE:
+    Reflections COMMUTE (all reflections form Z/2 or products thereof)
+    Rotations DON'T commute in general (SO(n) is non-abelian for n≥3)
+
+  In tournaments:
+    COMPLEMENT T → T^c is a REFLECTION (order 2, commutes with everything)
+    A 3-CYCLE is a ROTATION of order 3 (NOT order 4!)
+
+  This is the KEY DISCREPANCY: tournament 3-cycles have order 3,
+  but imaginary units have order 4.
+
+  HOW THEY RELATE:
+  The QUATERNION imaginary unit i has i⁴ = 1 and i² = -1.
+  The CYCLIC PERMUTATION (0 1 2) has order 3.
+
+  They're related through the COVERING MAP:
+    The quaternion group Q₈ = {±1, ±i, ±j, ±k} has order 8.
+    The rotation group of the tetrahedron has order 12.
+    The DOUBLE COVER of the rotation group IS the quaternion group:
+      SO(3) → Q₈/±1
+
+  The "±" (the sign) is what the imaginary unit adds.
+  The UNSIGNED rotation (the 3-cycle) is the tournament.
+  The SIGNED rotation (the imaginary unit) is the algebra.
+
+  TOURNAMENTS SEE THE UNSIGNED PART.
+  IMAGINARY UNITS CARRY THE SIGN.
+
+  This is why:
+    7 = dim(O) - 1: the 7 unsigned rotations (Fano lines)
+    8 = dim(O):     the 7 signed rotations + 1 identity
+    The forbidden H = 7 is the UNSIGNED count.
+    The tournament space at n=3 has 8 = SIGNED count.
+
+
+PART 6: THE SIGN IS THE ARC DIRECTION
+------------------------------------------------------------
+
+  In quaternions: ij = +k, ji = -k.
+  The SIGN distinguishes the two orderings of a pair.
+
+  In tournaments: arc (i→j) vs arc (j→i).
+  The DIRECTION distinguishes the two orderings of a pair.
+
+  These are THE SAME THING seen differently:
+    Sign ±1 ↔ arc direction (forward/backward)
+    Product eᵢeⱼ ↔ arc (i,j) in the tournament
+    POSITIVE product ↔ arc goes WITH the Fano line's orientation
+    NEGATIVE product ↔ arc goes AGAINST the Fano line's orientation
+
+  So a tournament IS an assignment of SIGNS to the imaginary unit products.
+  Each arc (i,j) chooses: does eᵢeⱼ = +eₖ or -eₖ?
+
+  A tournament on n=3 with 3 arcs IS an assignment of 3 signs
+  to the 3 products ij, jk, ki of a quaternionic triple.
+  There are 2³ = 8 sign assignments = 8 tournaments.
+
+  A tournament on n=7 with 21 arcs IS an assignment of signs
+  to the products of the 7 octonion imaginary units.
+  But there are only 7 independent products (one per Fano line),
+  plus 14 = 21 - 7 products involving pairs NOT on the same line.
+
+  THE CRITICAL POINT: only 7 of the 21 products are INDEPENDENT
+  (determined by the Fano structure). The other 14 are DERIVED
+  from the 7 via the octonion multiplication rule.
+
+  A tournament on 7 vertices makes 21 INDEPENDENT binary choices.
+  The octonion multiplication table makes only 7 independent choices.
+  The tournament has 21 - 7 = 14 EXTRA degrees of freedom
+  beyond the octonionic structure.
+
+  This is WHY the Fano plane embeds in Paley T₇ but doesn't
+  determine it: the Fano gives 7 of 21 arc directions;
+  the remaining 14 are additional tournament structure.
+
+  At n=7: 21 arcs, 7 Fano lines, 14 extra degrees of freedom
+  Ratio: 7/21 = 0.333 = 1/3
+  The Fano structure determines 1/3 of the tournament!
+  The remaining 2/3 is non-octonionic structure.
+
+
+========================================================================
+  PART 7: WHAT IMAGINARY UNITS ARE, FOR TOURNAMENTS
+========================================================================
+
+
+  An imaginary unit is a SIGNED ROTATION.
+
+  It has two components:
+    1. A ROTATION (order 3 for quaternions, order 7 for octonions)
+       This is the 3-CYCLE in tournament theory.
+    2. A SIGN (±1)
+       This is the ARC DIRECTION in tournament theory.
+
+  The imaginary unit COMBINES the cycle structure with the sign:
+    eᵢeⱼ = ±eₖ means: arcs i→j and j→k compose to give ±(arc i→k)
+    The ± encodes whether the composition follows or opposes the cycle.
+
+  A TOURNAMENT is an assignment of signs to ALL pairs.
+  An OCTONION is an assignment of signs to the 7 Fano-line pairs.
+
+  The tournament has MORE information than the octonion:
+    21 signs (all pairs) vs 7 signs (Fano lines only).
+    The extra 14 signs are the non-octonionic content.
+
+  The OCF says: H = I(Ω, 2) counts independent sets of cycles.
+  Each cycle IS a signed rotation (an imaginary unit product).
+  The independence polynomial counts how many COMPATIBLE signed
+  rotations can coexist.
+
+  AT THE DEEPEST LEVEL:
+
+  The imaginary unit is NOT a "number."
+  It is a HALF-NEGATION: an operation that, applied twice, reverses.
+
+  In tournament theory:
+    The complement T^c is FULL negation (reverse everything).
+    The 3-cycle is a THIRD of negation (rotate 120°, not 90°).
+    There is NO natural "half-negation" in tournaments
+    because 3-cycles have ODD order (3), not EVEN order (4).
+
+  This is WHY tournament theory is TYPE {3,∞} and not {4,∞}:
+    The face is a TRIANGLE (order 3), not a SQUARE (order 4).
+    The imaginary unit lives in the SQUARE world (order 4).
+    Tournaments live in the TRIANGLE world (order 3).
+
+  The Cayley-Dickson tower connects them through the COVERING:
+    Triangle rotations (3-cycles) COVER quaternion rotations
+    via the binary polyhedral groups (double covers).
+    The ± sign that the imaginary unit carries is the KERNEL
+    of this covering map.
+
+  The tournament sees the rotation but not the sign.
+  The algebra sees both. The sign is the imaginary unit.
+  The gap between them is the OCR residual.
+
+opus-2026-03-21-S138

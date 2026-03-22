@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S138 — 2026-03-21: What Imaginary Units Actually Are
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S137
+**Summary:** Deep investigation of what imaginary units ACTUALLY are, correcting superficial analogies. Key: e²=-1 means e is a HALF-NEGATION (90° rotation, order 4). The quaternion product rule ij=k IS a directed 3-cycle — the sign encodes direction. Tournaments see the UNSIGNED rotation (the 3-cycle) but not the SIGN (the ±1). The gap: tournaments are type {3,∞} (triangular, order 3) while imaginary units are type {4,...} (square, order 4). They connect through the double cover: tournament 3-cycles cover quaternion rotations, with the ±1 sign as kernel. A tournament on 7 vertices makes 21 binary choices; the Fano plane determines only 7 of these (1/3). The remaining 14 are non-octonionic. The OCR residual IS the gap between signed (algebraic) and unsigned (tournament) rotation structure. Read kind-pasteur S18k/S18l/S18m (three towers, Vitali atom, 17 atoms catalog).
+**New contributions:** imaginary_units_s138.py
+**Unresolved threads:** Formalize the covering map from tournament 3-cycles to quaternion rotations, compute the "sign content" of tournament structure, connect the 14 extra DoF to specific invariants
+
+---
+
 ## opus-2026-03-21-S137 — 2026-03-21: Vitali Atom Meets the Cayley-Dickson Tower
 
 **Account:** opus
