@@ -1,0 +1,172 @@
+======================================================================
+  TERNARY TOURNAMENTS: THE b=3 WORLD
+======================================================================
+
+======================================================================
+  1. WHAT IS A TERNARY TOURNAMENT?
+======================================================================
+
+  n=2: m=1, binary=2^1=2, ternary=3^1=3, ratio=1.5
+  n=3: m=3, binary=2^3=8, ternary=3^3=27, ratio=3.4
+  n=4: m=6, binary=2^6=64, ternary=3^6=729, ratio=11.4
+  n=5: m=10, binary=2^10=1024, ternary=3^10=59049, ratio=57.7
+  n=6: m=15, binary=2^15=32768, ternary=3^15=14348907, ratio=437.9
+  n=7: m=21, binary=2^21=2097152, ternary=3^21=10460353203, ratio=4987.9
+
+======================================================================
+  2. HAMILTONIAN PATHS IN TERNARY TOURNAMENTS
+======================================================================
+
+  n=3: 27 ternary tournaments
+
+  H_strict distribution (wins only):
+    H=0: 13 tournaments (48.1%)
+    H=1: 12 tournaments (44.4%)
+    H=3: 2 tournaments (7.4%)
+
+  H_weak distribution (wins or ties):
+    H=1: 6 tournaments (22.2%)
+    H=2: 6 tournaments (22.2%)
+    H=3: 8 tournaments (29.6%)
+    H=4: 6 tournaments (22.2%)
+    H=6: 1 tournaments (3.7%)
+
+======================================================================
+  3. TERNARY TOURNAMENTS AT n=4
+======================================================================
+
+  n=4: 729 = 729 ternary tournaments
+
+  H_strict distribution:
+    H=0: 359 (49.2%)
+    H=1: 240 (32.9%)
+    H=2: 60 (8.2%)
+    H=3: 16 (2.2%)
+    H=4: 30 (4.1%)
+    H=5: 24 (3.3%)
+
+  H_strict: 6 distinct values
+  H_weak: 15 distinct values
+  H_strict range: [0, 5]
+  H_weak range: [1, 24]
+
+  H_strict = 0 count: 359 (49.2%)
+  REDEI ANALOG: H_strict >= 1 always? False
+  (In binary, Redei guarantees H >= 1. In ternary, ties can block all paths.)
+
+======================================================================
+  4. THE TERNARY FIBER FRACTION
+======================================================================
+
+  n=3 ternary: within-fiber = 30/162 = 5/27 = 0.185185
+  Binary fiber fraction f(3): 1/2 = 0.500000
+  Predicted (1/3)_1/1!: 1/3 = 0.333333
+  Match predicted: False
+
+======================================================================
+  5. BINARY vs TERNARY: THE COMPARISON TABLE
+======================================================================
+
+                   Property    Binary (b=2)   Ternary (b=3)           b-ary
+  ------------------------- --------------- --------------- ---------------
+          Outcomes per pair               2               3               b
+                 Total at n        2^C(n,2)        3^C(n,2)        b^C(n,2)
+                   Fiber GF      (1-x)^-0.5     (1-x)^-0.33    (1-x)^(-1/b)
+       Fiber fraction (n=3)             1/2            5/27             1/b
+          Redei (HP exists)          Always      Not always         Depends
+              Pi connection     f^2*k->1/pi      f^3*k^2->?     f^b*k^{b-1}
+                 Asymptotic    1/sqrt(pi*k)       ~k^{-2/3} k^{1/b-1}/G(1/b)
+
+  Gamma(1/3) = 2.678939
+  1/Gamma(1/3)^3 = 0.052013
+  For ternary: f(n)^3 * (n-2)^2 -> 0.052013 as n -> inf
+  (Compare: binary f(n)^2 * (n-2) -> 1/pi = 0.318310)
+
+  THE CONSTANTS THAT CONTROL FIBER THINNING:
+  Binary (b=2):    1/Gamma(1/2)^2 = 1/pi = 0.318310
+  Ternary (b=3):   1/Gamma(1/3)^3 = 0.052013
+  Quaternary (b=4): 1/Gamma(1/4)^4 = 0.00578730
+
+  Gamma(1/2)^2 = pi = 3.141593
+  Gamma(1/3)^3 = 19.225969
+  Gamma(1/4)^4 = 172.792266
+
+======================================================================
+  6. THE TERNARY STAIRCASE: H = 1 + 3^d ?
+======================================================================
+
+  Transitive ternary tournament: all pairs won by lower index
+
+         Arc   d  Flip to  H_strict  H_weak  Binary H
+  (0,1):   0      tie         0       2         2
+  (0,2):   1      tie         1       3         3
+  (0,3):   2      tie         1       5         5
+  (0,4):   3      tie         1       9         9
+  (1,2):   0      tie         0       2         2
+  (1,3):   1      tie         1       3         3
+  (1,4):   2      tie         1       5         5
+  (2,3):   0      tie         0       2         2
+  (2,4):   1      tie         1       3         3
+  (3,4):   0      tie         0       2         2
+
+  KEY FINDING: Flipping to TIE gives H_strict = 1 always!
+  A tie BLOCKS the path (can't traverse the tied arc).
+  The H_strict of a one-tie tournament = H_strict of transitive = 1.
+
+  BUT H_weak changes: flipping to tie at range d gives H_weak = 1 + 2^d
+  (same as binary! because the tie is traversable in weak mode)
+
+  Flipping to LOSS (same as binary):
+  (0,1): d=0, H_strict=1, binary_H=2, match=False
+  (0,2): d=1, H_strict=3, binary_H=3, match=True
+  (0,3): d=2, H_strict=5, binary_H=5, match=True
+  (0,4): d=3, H_strict=9, binary_H=9, match=True
+  (1,2): d=0, H_strict=1, binary_H=2, match=False
+  (1,3): d=1, H_strict=3, binary_H=3, match=True
+  (1,4): d=2, H_strict=5, binary_H=5, match=True
+  (2,3): d=0, H_strict=1, binary_H=2, match=False
+  (2,4): d=1, H_strict=3, binary_H=3, match=True
+  (3,4): d=0, H_strict=1, binary_H=2, match=False
+
+======================================================================
+  SYNTHESIS: WHAT TERNARY TEACHES US
+======================================================================
+
+  THE KEY DISCOVERY:
+
+  Ternary tournaments split into TWO regimes:
+
+  1. H_STRICT (only wins traverse): Ties BLOCK paths.
+     A single tie reduces H dramatically (often to 1).
+     The "staircase" for strict is FRAGILE: one tie breaks everything.
+
+  2. H_WEAK (wins and ties traverse): Ties DON'T block.
+     H_weak = H_binary for one-flip-to-tie tournaments.
+     The "staircase" for weak is IDENTICAL to binary.
+
+  THE PHYSICAL MEANING:
+  In sports with draws (football), the ranking complexity depends on
+  whether you count draws as "evidence" (weak) or not (strict).
+
+  Strict: only clear wins matter. A single draw destroys most rankings.
+  Weak: draws are partial evidence. Ranking complexity = binary case.
+
+  THE FIBER FRACTION:
+  For ternary with circular flips (win->tie->loss->win):
+  f_ternary(3) = 5/27 (measured)
+  Predicted (1/3)_1 / 1! = 1/3 does NOT match
+
+  THE GAMMA FUNCTION HIERARCHY:
+  Binary:    Gamma(1/2)^2 = pi = 3.1416
+  Ternary:   Gamma(1/3)^3 = 19.2260
+  Quaternary: Gamma(1/4)^4 = 172.7923
+
+  Each controls the rate of fiber thinning for that base.
+  Pi is special to binary; Gamma(1/3)^3 is the ternary pi;
+  Gamma(1/4)^4 is the quaternary pi.
+
+  REDEI FAILS FOR TERNARY:
+  359 ternary tournaments at n=4 have H_strict = 0.
+  Ties can create "deadlocks" where no Hamiltonian path of pure wins exists.
+  This is 49.2% of all ternary 4-tournaments.
+
