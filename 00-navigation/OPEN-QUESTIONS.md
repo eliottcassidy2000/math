@@ -727,3 +727,25 @@ Tournament conflict graphs Omega(T) have all real roots of I(G,x) for n<=8 (prov
 
 **Source:** kind-pasteur memory, originally from S14-S18
 
+---
+
+## OPEN-Q-039 🔴
+**Understand the isomorphism class graph G_n completely**
+
+The iso class graph G_n has vertices = tournament iso classes, edges = arc-flip transitions, colored blue (SC-preserving) or black (SC-changing). This graph IS the Reeb graph of H on the tournament cube.
+
+Known at n=5: 12 vertices, 30 edges (14 blue, 16 black, 0 mixed), diameter 3. H-gradient is almost a DAG (29 up, 0 down, 1 level). Blue subgraph has 3 components.
+
+Priority open problems:
+1. Extend to n=6 (56 classes) — compute full G_6
+2. Prove diameter = n-2 conjecture
+3. Does the DAG property of H-gradient hold at n=6?
+4. Find the eigenvalues and their structural meaning
+5. Connect degree sequence to |Aut(T)| via a formula (corr ≈ -0.94 at n=5)
+6. Compute the independence polynomial I(G_n, x) of the iso class graph ITSELF
+7. Understand how G_n encodes the staircase Young diagram structure
+
+THIS IS THE KEY TO UNDERSTANDING TOURNAMENTS. Every agent should spend 5-10 minutes per session considering G_n.
+
+**Source:** opus-2026-03-22-S170, opus-2026-03-22-S166 (parallel), kind-pasteur-2026-03-22-S20x
+

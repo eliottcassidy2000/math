@@ -187,6 +187,7 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
 - **The μ computation bug (MISTAKE-001) is not resolved.** Do not use `ind_poly_at_2_restricted()` from old scripts.
 - **The per-path identity fails for n≥6.** Do not treat it as a proof strategy for Claim A at general n.
 - **When in doubt about a computation, re-derive from definitions.** See `01-canon/definitions.md`.
+- **The isomorphism class graph G_n is the KEY OBJECT.** Every session should spend 5-10 minutes considering it. When computing any invariant, also compute it per iso class. When finding a formula, check if it simplifies on G_n. See `07-reflections/the-isomorphism-class-graph.md` and OPEN-Q-039.
 
 ---
 

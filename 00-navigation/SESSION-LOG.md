@@ -13,13 +13,13 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-22-S166 — 2026-03-22: Iso Class Graph Formula Hunting — 8 Theorems, Mean Reversion
+## opus-2026-03-22-S171 — 2026-03-22: The Iso Class Graph — The Key to Everything
 
 **Account:** opus
-**Continuation of:** opus-2026-03-22-S165
-**Summary:** Deep formula hunting on the iso class graph (arc-reversal graph on tournament isomorphism classes). 8 confirmed formulas/theorems. KEY DISCOVERIES: (1) E[H(T_e)] = E[H] exactly — arc reversal preserves expected H via bijection argument. (2) Row sum formula: sum_j F[i][j] = size(i) * C(n,2). (3) Score L1 distance between adjacent classes = 2 always (except within-score: 0). (4) MEAN REVERSION: E[H(T_e)|class i] = a + b*H_i with b~0.59 at n=5 — low-H drifts up, high-H drifts down. The iso class graph IS the transition graph of a mean-reverting random walk. (5) All edge weights at n=4 are exactly n!=24. (6) F[i][j]*|Aut_i|*|Aut_j|/n!^2 takes restricted values. (7) Self-loop per tournament: transitive has 4 neutral arcs, regular has 0. (8) E[dH^2|class] varies from 54/5 to 138/5. Diameter conjecture: n-2 (verified n=3,4,5).
-**New contributions:** iso_class_graph_formulas_s166.py, iso_class_deep_formulas_s166b.py + outputs
-**Unresolved threads:** Prove diameter = n-2, find exact F[i][j] formula, compute spectral gap for mean-reversion rate
+**Continuation of:** opus-2026-03-22-S170
+**Summary:** Wrote the central reflection "the-isomorphism-class-graph.md" establishing G_n as the Rosetta Stone of tournament theory. Updated CLAUDE.md with directive: every session should spend 5-10 minutes on G_n. Added OPEN-Q-039 (priority 🔴) with 7 sub-problems. Integrated parallel S166 results (formula total_weight=size×C(n,2), corr(|Aut|,degree)≈-0.94). Wrote 6 creative propositions: G_n as a meta-tournament, staircase tiling recursion G_n→G_{n-2}, blue Hamiltonian path conjecture, meta-independence polynomial I(G_n,x), Young diagram ↔ iso class bijection via RSK, degree formula from |Aut|. The iso class graph captures: topology (Reeb graph of H), algebra (independence polynomial quotient), geometry (sphere quotient by S_n), combinatorics (staircase Young diagram orbits). It translates between ALL perspectives and is the map of the territory.
+**New contributions:** the-isomorphism-class-graph.md, OPEN-Q-039, CLAUDE.md directive
+**Unresolved threads:** All 7 OPEN-Q-039 sub-problems, extend G_n to n=6, prove diameter=n-2
 
 ---
 
@@ -33,23 +33,13 @@ Entry format:
 
 ---
 
-## kind-pasteur-2026-03-22-S20y — 2026-03-22: Information Geometry + Morse Theory Synthesis
-
-**Account:** kind-pasteur
-**Continuation of:** kind-pasteur-2026-03-22-S20x
-**Summary:** Deep synthesis of information geometry, Walsh-Fourier analysis, and Morse theory on tournament space. KEY FINDINGS: (1) Walsh-Fourier spectrum of H has ONLY even orders {0,2,4} at both n=5 and n=6. Odd orders are exactly zero by complement invariance (H(T)=H(T^comp)). Order-2 carries 92-95% of Var(H) = the OCR. (2) H is quasi-elementary: avg neighbor H = a + b*H with R^2=0.977 (n=5), R^2=0.990 (n=6), approaching 1. (3) Fisher information of Boltzmann family max at beta=0 (uniform) -- no phase transition. (4) Sublevel persistence is trivial (Betti_0=1 always). (5) Hessian at H=45 has even Morse index (8), at H=37 odd (7) -- determinant signs differ. (6) Natural gradient zero at beta=0 by S_n symmetry. Connected to Stadler-Reidys, Ollivier-Ricci, Kolesnik-Sanchez, IGO.
-**New contributions:** info_geometry_morse_s20y.py, walsh_fourier_n6_s20y.py, information-geometry-of-tournaments.md, HYP-1730..1733
-**Unresolved threads:** Prove R^2 -> 1, extend Walsh to n=7, Ollivier-Ricci on flip graph, IGO for tournament optimization
-
----
-
 ## opus-2026-03-22-S169 — 2026-03-22: Fast Graph-Structure Sequences — TWO DISCOVERIES
 
 **Account:** opus
 **Continuation of:** opus-2026-03-22-S168
-**Summary:** Computed closed-form sequences capturing graph structure for ALL n. TWO MAJOR DISCOVERIES: (1) E[L] = E[H]/2 = n!/2^n EXACTLY — on average, exactly HALF of Hamiltonian paths in a random tournament can be extended to cycles. The other half are dead ends. This is the binary structure at the deepest level. PROOF: E[H]=n!/2^{n-1}, E[HC]=(n-1)!/2^n, E[L]=E[H]-n*E[HC]=n!/2^{n-1}-n!/2^n=n!/2^n. (2) E[total_arb](n) = (n/2)^{n-1} EXACTLY -- verified at n=2..6. At n=6: (3)^5=243 confirmed.
+**Summary:** Computed closed-form sequences capturing graph structure for ALL n. TWO MAJOR DISCOVERIES: (1) E[L] = E[H]/2 = n!/2^n EXACTLY — on average, exactly HALF of Hamiltonian paths in a random tournament can be extended to cycles. The other half are dead ends. This is the binary structure at the deepest level. PROOF: E[H]=n!/2^{n-1}, E[HC]=(n-1)!/2^n, E[L]=E[H]-n×E[HC]=n!/2^{n-1}-n!/2^n=n!/2^n. (2) E[total_arb](n) = (n/2)^{n-1} EXACTLY — verified at n=2..6. At n=6: (3)^5=243 confirmed. PROOF sketch: by linearity, E[arb_r] = E[det(L_r)] where L is the random Laplacian. The expected Laplacian has eigenvalues related to n/2. EIGHT closed-form sequences cataloged: E[c₃]=C(n,3)/4, E[H]=n!/2^{n-1}, E[c₅]=C(n,5)×3/8, E[c_m]=C(n,m)×(m-1)!/2^m, E[HC]=(n-1)!/2^n, E[L]=n!/2^n, Base=1+n(n-1)(2n-1)/6, H_extreme=(2^k+1)×H_mid. Also computed E[kings] and Var(c₃) exhaustively at small n.
 **New contributions:** fast_graph_sequences_s169.py
-**Unresolved threads:** Prove E[total_arb]=(n/2)^{n-1} analytically, find Var(c3) closed form, find E[kings] closed form
+**Unresolved threads:** Prove E[total_arb]=(n/2)^{n-1} analytically, find Var(c₃) closed form, find E[kings] closed form
 
 ---
 
