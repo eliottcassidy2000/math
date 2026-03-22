@@ -1,0 +1,65 @@
+======================================================================
+  IS G_5 THE ICOSAHEDRON?
+======================================================================
+
+  G_5: 12 vertices, 30 edges
+
+  TEST 1: DEGREE SEQUENCE
+  G_5 degrees: [np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(6), np.int64(6), np.int64(6), np.int64(6), np.int64(7), np.int64(7), np.int64(7)]
+  Icosahedron: all degrees = 5 (5-regular)
+  G_5 is 5-regular: False
+  RESULT: MISMATCH
+
+  TEST 2: DIAMETER
+  G_5 diameter: 3
+  Icosahedron diameter: 3
+  RESULT: MATCH
+
+  TEST 3: GIRTH
+  G_5 girth: 3
+  Icosahedron girth: 3
+  RESULT: MATCH
+  G_5 triangles: 21
+  Icosahedron triangles: 20
+  RESULT: MISMATCH
+
+  TEST 4: EIGENVALUE SPECTRUM
+  G_5 eigenvalues: ['5.5823', '1.9417', '1.2234', '1.0000', '0.3216', '0.0334', '-0.4163', '-1.0000', '-1.1840', '-1.7512', '-2.4958', '-3.2551']
+
+  G_5 spectrum: [np.float64(5.582284186690585), np.float64(1.9417044862797253), np.float64(1.2233611480638569), np.float64(0.9999999999999993), np.float64(0.3216186135441838), np.float64(0.03343935550720374), np.float64(-0.41628586851932214), np.float64(-0.9999999999999976), np.float64(-1.183959965524113), np.float64(-1.7512210486991082), np.float64(-2.4958477595769466), np.float64(-3.255093147766071)]
+  Sum (=trace): -0.000000 (should be 0)
+  Max eigenvalue: 5.5823 (should be 5 for 5-regular)
+  Max eigenvalue = 5.5823: NOT 5-regular!
+
+  TEST 5: REGULARITY CHECK
+  All degrees equal: False
+  Degree set: [np.int64(2), np.int64(3), np.int64(4), np.int64(6), np.int64(7)]
+    Class 0 (H=1): degree 6
+    Class 1 (H=3): degree 3
+    Class 2 (H=3): degree 4
+    Class 3 (H=3): degree 3
+    Class 4 (H=5): degree 7
+    Class 5 (H=5): degree 7
+    Class 6 (H=9): degree 6
+    Class 7 (H=9): degree 7
+    Class 8 (H=11): degree 6
+    Class 9 (H=13): degree 6
+    Class 10 (H=15): degree 3
+    Class 11 (H=15): degree 2
+
+======================================================================
+  CONCLUSION
+======================================================================
+
+  G_5 is NOT the icosahedron.
+  Vertices: 12 (need 12): OK
+  Edges: 30 (need 30): OK
+  Girth: 3 (need 3): OK
+  Diameter: 3 (need 3): OK
+  5-regular: False
+  G_5 is NOT 5-regular. The icosahedron IS 5-regular.
+  Therefore G_5 CANNOT be the icosahedron.
+  G_5 has degrees [np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(4), np.int64(6), np.int64(6), np.int64(6), np.int64(6), np.int64(7), np.int64(7), np.int64(7)], which is IRREGULAR.
+  But it shares the f-vector (12, 30, 20) with the icosahedron
+  because both are genus-0 triangulations of the sphere with
+  V=12, E=30, F=20 satisfying Euler's formula V-E+F=2.
