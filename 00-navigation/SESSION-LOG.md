@@ -25,6 +25,20 @@ Entry format:
 - Implement T-ECC (tournament error-correcting code) prototype
 - Prove the seesaw-CSS parallel formally
 - Does the Tutte polynomial of the score-class matroid specialize to I(Omega, x)?
+---
+
+## opus-2026-03-21-S120 — 2026-03-21: Coxeter (2,3,7) Universe — Fano plane EMBEDS in Paley T_7, Klein quartic bridge, 42=defect
+
+**Account:** opus
+**Summary:** Connected Coxeter (2,3,7) triangle group to tournament theory. VERIFIED: 7 Fano plane lines embed as directed 3-cycles in Paley T_7 (all forward, all pairwise sharing 1 vertex). Klein quartic |Aut|=168=8×|Aut(Paley T_7)|. Defect 1/42 × 42 = g(2) = 1 (Rédei quantum = 42 hyperbolic triangles). Binary skeleton (S18b) = tournament manifestation of spherical-hyperbolic phase transition.
+**Key:**
+1. **FANO EMBEDS IN Ω(T_7)**: 7 lines {i,i+1,i+3} mod 7 are ALL directed 3-cycles in Paley T_7. All pairwise share 1 vertex. VERIFIED.
+2. **168/21 = 8 = 2³**: |PSL(2,7)| / |Aut(Paley T_7)| = the parity cube
+3. **Defect 1/42**: the (2,3,7) fundamental triangle has area π/42. Rédei quantum g(2)=1=42×(1/42).
+4. **H=189 = 7×27**: Paley max. 168+189=357=3×7×17. 168/189=(2/3)³.
+5. **Binary skeleton = Coxeter phase transition**: the 26 binary phenomena arise because tournaments are ONE quantum into hyperbolic territory
+6. **Schwarz table**: (2,3,5)=spherical=120=|A_5|, (2,3,6)=flat, (2,3,7)=hyperbolic=168=|PSL(2,7)|
+**Scripts:** coxeter_hyperbolic_s120.py
 
 ---
 
