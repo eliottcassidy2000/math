@@ -47,6 +47,11 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-346 | beta_4>0 requires self-complementary score sequence | ALL 25 beta_4>0 cases at n=8 (2000 samples) have SC scores. Very strong constraint | kind-pasteur-S45 |
 | HYP-347 | beta_1+beta_5 coexistence at n=8 | Found 1/2000: betti=[1,1,0,0,0,1,0,0], scores=(3,3,3,3,4,4,4,4), c3=20, chi=-1. Extremely rare | kind-pasteur-S45 |
 | HYP-348 | beta_3+beta_4 coexistence rate ~0.15% at n=8 | 3/2000 with profile [1,0,0,1,1,0,0,0]. All have SC scores | kind-pasteur-S45 |
+| HYP-400 | Symmetric tilings of delta_k = Fix(evac) = 2^{m^2} for n=2m+1 | Verified k=1,3,5. Growth diagram mechanism. | opus-S164 |
+| HYP-401 | RSK(T) and RSK(T^op) always have same shape | Verified n=3,4,5 (100%). Follows from generalized RSK transpose symmetry. | opus-S164 |
+| HYP-402 | RSK shape (4,3,2,1) = delta_4 appears only at H >= 9 | 0% at H=1,3,5; 1.7% at H=9; 10% at H=11; 6.7% at H=13; 9.4% at H=15 | opus-S164 |
+| HYP-403 | Vandermonde(scores) = 0 for all non-transitive tournaments at n=5 | Only H=1 (transitive) has Vdm=288; all others have score collision | opus-S164 |
+| HYP-404 | Arc sensitivity universal over all tournaments | S_n 2-transitivity proof. Broken by base path in tiling model. | opus-S164 |
 | HYP-349 | rank(d_4) gap = ker(d_3) - rank(d_4) is always 0 or 1 | Exhaustive n=6 (32448 gap=0, 320 gap=1). Sampled n=7 (925/75), n=8 (255/45). Equivalent to beta_3 in {0,1} | kind-pasteur-S46 |
 | HYP-350 | Good vertex existence for beta_3: exists v with beta_3(T\v)=0 when beta_3(T)>0 | TRUE when beta_3>0. But FAILS unconditionally: Paley T_7 has beta_3=0 with NO good vertex (240 counterexamples at n=7). Good vertex holds for non-Paley n=7 (exhaustive) | kind-pasteur-S46, corrected opus-S53 |
 | HYP-351 | dim H_3(T,T\v) <= 1 for ALL tournaments T and ALL vertices v | **REFUTED at n=8** (HYP-401): dim=2 for all-good beta_3=2 tournaments. Exhaustive n=6: ALL 1920 pairs dim=1. n=7: dim in {0,1}. FAILS n>=8 | kind-pasteur-S46, REFUTED kind-pasteur-S49 |

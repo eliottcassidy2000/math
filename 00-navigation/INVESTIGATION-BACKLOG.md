@@ -9,10 +9,35 @@
 **Last S90 update:** opus-2026-03-15-S90 (simplicial Rédei, Cayley monad, τ-φ clock, equidecomposability)
 **Last gauge theory analysis:** kind-pasteur-2026-03-21-S12 (Napolitano paper, Cartan decomposition bridge, TournamentProbe)
 **Last Cartan-Adelic-Ghost update:** opus-2026-03-21-S94 (adelic Cartan bridge, Ghost 13, ACTProbe v2)
+**Last staircase Young diagram update:** opus-2026-03-22-S164 (hooks, RSK, growth diagrams, 2^{m^2} theorem)
 
 ---
 
 ## Priority A: Key structural questions (OCF PROVED by Grinberg-Stanley)
+
+### INV-200: Staircase Young Diagram — The Tournament DNA
+**Source:** opus-2026-03-22-S164
+**Status:** ESTABLISHED. Major structural framework.
+**Key results:**
+- Hook formula: h(i,j) = 2(k-i-j)-1, all odd, depends only on source vertex
+- Hook product = prod_{m=1}^k (2m-1)^{k-m+1}
+- v_2(f^delta) = v_2(m!) since all hooks odd (parallels Redei's theorem)
+- RSK shape is complement-invariant (verified n=3,4,5)
+- Self-conjugate RSK shape delta_4 = (4,3,2,1) appears only at high H
+**Next:** Prove RSK-H correlation algebraically. Connect hook structure to OCR formula.
+
+### INV-201: 2^{m^2} Theorem — Symmetric Tilings = Self-Evacuating SYT
+**Source:** opus-2026-03-22-S164, OPEN-Q-007
+**Status:** VERIFIED at k=1,3,5. Needs algebraic proof.
+**Key result:** Number of y=x symmetric tilings of delta_k equals Fix(evac) = 2^{m^2} for n=2m+1.
+**Mechanism:** Growth diagrams on the staircase unify binary tilings, RSK, and evacuation.
+**Next:** Prove via growth diagram theory. This would resolve OPEN-Q-007.
+
+### INV-202: Staircase Transfer Matrix
+**Source:** kind-pasteur S20p, opus-2026-03-22-S164
+**Status:** COMPUTED at n=5,6.
+**Key insight:** delta_k decomposes as delta_{k-2} + L-border (2k+3 tiles, correcting S20p's 2k-1). The hypotenuse interface encodes the n->n-2 recursion.
+**Next:** Compute eigenvalues of transfer matrix at n=7. Connect to H_max recursion.
 
 ### INV-183: Adelic Cartan Bridge — gl(n) = INERT ⊕ RAMIFIED ⊕ SPLIT
 **Source:** opus-2026-03-21-S94
