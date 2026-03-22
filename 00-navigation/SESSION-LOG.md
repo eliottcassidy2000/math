@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S196 — 2026-03-22: Pochhammer Merger — f(n)=(1/2)_{n-2}/(n-2)! Unifies Tournament Space
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S195
+**Summary:** Pulled from kind-pasteur S20aw/S20ax who discovered the exact fiber fraction formula. Merged Pochhammer symbols into our fiber bundle framework. Verified f(n) = C(2k,k)/4^k = (1/2)_k/k! = (2k-1)!!/(2k)!! ten different ways: Pochhammer symbol, central binomial coefficient, double factorial ratio, Beta function Γ(k+1/2)/(√π×k!), sine moment (1/π)∫sin^{2k}dt, Wallis product connection (f²×k → 1/π), Catalan bridge f=(k+1)Cat(k)/4^k, hypergeometric ₁F₀(1/2;;x), Pochhammer ladder f(n+1)/f(n)=(2n-3)/(2n-2), random walk return probability. Practical: compression bound shows only 1/√(πn) of tournament information is structural (94.4% is scores at n=100). Tournament-based π estimator. Expected O(n^{3/2}/√π) preserving flips per tournament. Connected kind-pasteur's tournament JPEG 50× compression to theoretical optimality.
+**New contributions:** pochhammer_merge_s196.py
+**Unresolved:** Connect Pochhammer to H_max sequence. Prove self-loop numerators 1,3,11,79 formula. Explore a-parameterized fibers for a≠1/2.
+
+---
+
 ## opus-2026-03-22-S188-S195 — 2026-03-22: Erdős-Gallai/Landau Deep Merger — Score Fiber Bundle, H_max=A038375
 
 **Account:** opus
