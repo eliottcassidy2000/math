@@ -1835,3 +1835,15 @@ Source: tournaments-as-codes.md
 **Hypothesis:** The independence polynomial of the Johnson graph J(5,2) at x=2 equals 81 = 3^4 = (tournament atom)^(Cayley period). This perfect-power structure occurs ONLY at n=5 and is the tournament analogue of a self-dual code having a weight enumerator with special factorization.
 **Evidence:** opus-S128 computation. I(J(5,2), 2) = 81. At other n, the values are not perfect powers.
 Source: tournaments-as-codes.md
+
+## HYP-1724: Even-alphabet parity law: I(Omega, q) always odd iff q even (kind-pasteur-S18d)
+**Status:** CONFIRMED at n=5 (exhaustive), n=6 (sampled)
+**Hypothesis:** I(Omega(T), q) is always odd (for all tournaments T) if and only if q is a positive even integer.
+**Proof:** If q is even, then q^k is even for k>=1, so I(Omega,q) = alpha_0 + sum_{k>=1} alpha_k * q^k = 1 + (even) = odd. If q is odd, then q^k is odd, and I(Omega,q) = 1 + sum alpha_k (mod 2), which can be even when sum alpha_k is odd.
+**Implication:** Redei parity (H always odd) is a COROLLARY of the even-alphabet law + OCF. The deep content of Redei is the OCF identity H=I(Omega,2), not the parity itself. Parity comes for free from alpha_0=1 at any even evaluation point.
+Source: q_tournament_alphabet_s18d.py
+
+## HYP-1725: Forbidden values are alphabet-specific (kind-pasteur-S18d)
+**Status:** CONFIRMED at n=5 (exhaustive)
+**Hypothesis:** The set of forbidden (unachievable) values of I(Omega(T), q) depends on q. At q=1: gap = {4}. At q=2: gap = {7}. At q=3: many gaps (sparse spectrum). The forbidden structure is an intrinsic property of the (tournament, alphabet) pair, not of the tournament alone.
+Source: q_tournament_alphabet_s18d.py

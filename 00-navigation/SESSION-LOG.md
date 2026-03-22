@@ -14,6 +14,22 @@ Entry format:
 ```
 
 ## opus-2026-03-21-S131 — 2026-03-21: The {3,∞} Coxeter Structure — gap function, modular group, binary skeleton synthesis
+## kind-pasteur-2026-03-21-S18d — 2026-03-21: The Tournament Alphabet — q-tournament family, even-alphabet parity law, forbidden values are q-specific
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-21-S18c
+**Summary:** Deep exploration of what it means for a mathematical object to "have an alphabet." Identified three nested alphabets: binary arc alphabet, cycle alphabet, fugacity alphabet. The evaluation point x=2 is the alphabet, forced by the k-nacci universality tau+tau^{-3}=2. Defined the q-tournament H_q(T)=I(Omega,q) and computed exhaustively at n=5. DISCOVERED the even-alphabet parity law (HYP-1724): I(Omega,q) is always odd iff q is even. This proves Redei parity is a trivial consequence of alpha_0=1 at even evaluation points; the DEEP content is the OCF itself. Found that forbidden values are alphabet-specific (gap={4} at q=1, gap={7} at q=2). Connected to chromatic polynomials, Jones polynomials, Ehrhart polynomials, formal groups as other "alphabeted" structures. Proposed the "alphabet = canonical evaluation point" principle for all partition-function-bearing mathematical objects.
+**New contributions:** HYP-1724..1725, T108..T111 (from S18c), the-tournament-alphabet.md, q_tournament_alphabet_s18d.py
+**Unresolved threads:**
+- Prove even-alphabet law for all n (should be immediate from the alpha_0=1 argument)
+- What is the forbidden value at q=4? Does the gap pattern generalize?
+- The tau-decomposition correction is larger than expected for regular tournaments — investigate
+- Can we define a "chromatic tournament number" analogous to chromatic number?
+- Formalize the Ehrhart polynomial of the tournament score polytope
+
+---
+
+## kind-pasteur-2026-03-21-S18c — 2026-03-21: Tournaments as Codes — partition function bridge, Greene's theorem parallel, SRCP as distance
 
 **Account:** opus
 **Continuation of:** opus-2026-03-21-S130 (context overflow, rebuilt)
