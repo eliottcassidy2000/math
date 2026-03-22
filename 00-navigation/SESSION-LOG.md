@@ -13,6 +13,15 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S199 — 2026-03-22: Deep Buffon — Integral Geometry Web from Needle to Tournament
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S198
+**Summary:** 11-chapter investigation of Buffon's needle connections. (1) Basic: P=2L/(πD) from ∫sin(θ)dθ=2, verified to 8 digits. (2) Cauchy-Crofton: E[#intersections]=ℓ(C)/π, verified for unit circle. (3) Radon transform: CT scanning IS systematic Buffon; needle=single Radon sample; Fourier slice theorem connects both. (4) Buffon's noodle: E[crossings]=2ℓ/(πD) for ANY curve shape — estimate π with spaghetti. (5) Kinematic formula: ∫χ(A∩gB)dg involves |SO(2)|=2π; Buffon is the L=0 case. (6) Gauss circle problem: avg r₂(n)=π verified (3.148 for n≤1000); lattice points ≈ πR². (7) Bertrand's paradox: three methods give 1/3, 1/4, 1/2 — all verified; only kinematic measure (Method 3) is motion-invariant = Buffon's choice. (8) Stereology: Buffon in higher dimensions, SO(d) volumes. (9) Fourier probe: each needle samples one line in 2D Fourier space; CT needs all θ∈[0,π). (10) Tournament connection: f(n)=(1/π)∫sin^{2k}dθ IS generalized Buffon with sin^{2k} needle profile — exact match verified. (11) Hadwiger: only d+1 independent measurements in d dimensions; Buffon measures μ₁ (perimeter/π). Key insight: π = measure of the space of directions = |SO(2)|/2.
+**New contributions:** buffon_deep_s199.py
+
+---
+
 ## opus-2026-03-22-S198 — 2026-03-22: 13 Hidden Circles — x²+y² in blocks, proteins, primes, neural nets, music, elections
 
 **Account:** opus
