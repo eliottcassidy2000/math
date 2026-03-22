@@ -20,6 +20,20 @@ Entry format:
 **Summary:** Honest engineering analysis of where QuaternionLinear's 75% savings create real impact. KEY FINDINGS: (1) Attention-only savings = ~25% total (attention is 33% of params). (2) Full quaternion (attention + FFN) = 75% everywhere = 4× reduction = 7B→1.7B. (3) THE REAL OPPORTUNITY is edge deployment: 3B→12B on a phone (the quality jump from toy to tool). (4) KV cache savings at 128K context: LLaMA-70B from 80GB to 20GB. (5) COMPOSABLE with quantization: quaternion fp16 (25%) + 4-bit quant (25%) = 6.25% of original = LLaMA-7B in 800MB on a Raspberry Pi. (6) Non-LLM applications: vision (ResNet 25.6M→19M), recommendation (100GB→25GB embedding tables), speech (Whisper on-device), robotics, GNNs, AlphaFold. (7) 5-phase implementation roadmap from PyTorch module to foundation model. HONEST: FLOPs are roughly the same (16 small matmuls ≈ 1 large one). The savings are in MEMORY, not compute. Competition: 4-bit quantization achieves similar memory savings but lossily. Quaternion is structural (lossless) and COMPOSES with quantization.
 **New contributions:** quaternion_redesign_s148.py
 **Unresolved threads:** Port to PyTorch, train QuaternionGPT-2, test quaternion+quantization composition
+---
+
+## opus-2026-03-21-S131 — 2026-03-21: Merrifield-Simmons Bridge — I(K₃,2)=7 FORBIDDEN, F₅(2)=21 FORBIDDEN, MS=spherical tournament
+
+**Account:** opus
+**Summary:** Deep investigation of the Merrifield-Simmons index as the "spherical tournament." I(Ω,1)=MS index (chemistry), I(Ω,2)=H (tournaments). I(K₃,2)=7 gives THM-029 in one line. F₅(2)=21 connects path graph to second forbidden value. Forbidden values ONLY at x≥2 (hyperbolic) — no gaps at x=1 (spherical). H/sigma ratio between 1 and 2 for all n=5 tournaments. The MS index lives in Eden; tournaments are one quantum outside.
+**Key:**
+1. **I(K₃,2) = 7 = FORBIDDEN**: complete graph on 3 vertices at fugacity 2 gives the atomic forbidden value. THM-029 in one line.
+2. **F₅(2) = 21 = FORBIDDEN**: Fibonacci polynomial at x=2 gives the second forbidden value. P₃ cannot be Ω(T).
+3. **No forbidden values at x=1**: the MS world (spherical) has no gaps. Gaps emerge only at x>τ.
+4. **H/sigma ∈ [1, 2)**: the ratio I(Ω,2)/I(Ω,1) measures hyperbolicity amplification.
+5. **Fibonacci at x=2**: 1,3,5,11,21,43,85,... The forbidden 21 is IN this sequence.
+6. **Hosoya index**: Z(Ω) counts conflicting cycle pairings (competition count).
+**Scripts:** merrifield_simmons_s131.py
 
 ---
 
