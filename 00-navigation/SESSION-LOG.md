@@ -13,20 +13,13 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-22-S1 — 2026-03-22: Three Modular Structures Unified — CRT × PSL(2,Z) × Eisenstein/cusp all from I(Omega,2)
+## opus-2026-03-22-S155 — 2026-03-22: How Many Tournament Primes? — EXACT OCR(7) Computed
 
 **Account:** opus
-**Summary:** Unified the three modular structures underlying tournament theory. (1) MODULAR ARITHMETIC: CRT decomposition of H, tournament primes as channels, H mod p obstructions. (2) MODULAR GROUP: complement (S²=1) + vertex addition (T^inf) generate tournament symmetries, three orbifold points. (3) MODULAR FORMS: H = Eisenstein + cusp (OCR = Eisenstein fraction = 96%), q-expansion = OCF at q=2, Hecke operators = score conditioning. All three are aspects of I(Omega,x) at x=2. ord_p(2) distinguishes primitive-root primes (tournament primes) from non-primitive (exceptional). X_0(p) genus controls OCR denominator structure.
-**Key:**
-1. **Three structures unified**: CRT, PSL(2,Z), and Eisenstein/cusp all from I(Omega, 2)
-2. **H = Eisenstein + cusp**: E[H|score] + residual. OCR = Eisenstein fraction.
-3. **Hecke operators = score conditioning**: [S_s] projects onto score class s
-4. **q-expansion at q=2**: H = 1 + 2*alpha_1 + 4*alpha_2 + ... (DIVERGENT regime!)
-5. **Conductor**: 42 always divides. Additional primes enter with n (5 at n=5, 11,13 at n=6).
-6. **X_0(p) genus**: {7,13}=genus 0, {19}=genus 1 (elliptic!), {31}=genus 2. Higher genus = deeper hidden structure.
-7. **ord_p(2)**: 2 is primitive root mod {3,5,11,13,19} but NOT mod {7,31}. Hurwitz and moonshine primes have small orders.
-8. **Tournament modularity**: discrete analog of classical modularity on the tournament hypercube
-**Scripts:** deep_modular_s135.py
+**Continuation of:** opus-2026-03-22-S154
+**Summary:** Computed EXACT OCR at n=7 by exhaustive enumeration of ALL 2,097,152 tournaments (540 seconds). OCR(7) = 2157601171380589308259/2251942069593500275200 ≈ 0.9581. Denominator = 2⁹×3×5²×11×17×19×41×43×53×89×109×131×139 (13 distinct primes). 8 NEW primes enter at n=7: {17,41,43,53,89,109,131,139}. CRITICALLY: 7 and 13 are ABSENT from OCR(7) denominator (they were at n=5,6 but not n=7). And the SUPERSINGULAR PREDICTION FAILS: primes 43,53,89,109,131,139 are NOT supersingular (don't divide |Monster|). So the moonshine connection to OCR denominators is DISPROVED. The answer to "how many tournament primes?": INFINITE if defined as OCR denom primes (grows rapidly with n). FINITE if defined structurally: core {7,13,19} (1729), inner ring {2,3,5,7,11,13,19,31}. The large primes (89,109,131,139) are likely "accidental" — they arise from specific score class sizes at n=7, not from deep structure. Other n=7 findings: 77 distinct H values, 18 forbidden (including permanent {7,21} and temporary gaps). H=35 and H=39 are now achievable (no longer forbidden). OCR drops from 0.970 (n=5) to 0.958 (n=6,7).
+**New contributions:** tournament_primes_complete_s155.py
+**Unresolved threads:** Understand WHY 7 and 13 leave the OCR denom at n=7, understand the large primes structurally, investigate whether the "accidental" primes have a pattern
 
 ---
 
