@@ -1,0 +1,55 @@
+========================================================================
+  H_max AT n=7: EXHAUSTIVE SEARCH
+  opus-2026-03-22-S194
+========================================================================
+
+  n=7, m=21, total tournaments = 2,097,152
+  Searching for H_max...
+
+  5% done (104,857/2,097,152), current best H = 189, elapsed = 24s, ETA = 464s
+  10% done (209,714/2,097,152), current best H = 189, elapsed = 50s, ETA = 448s
+  15% done (314,571/2,097,152), current best H = 189, elapsed = 75s, ETA = 422s
+  20% done (419,428/2,097,152), current best H = 189, elapsed = 99s, ETA = 398s
+  25% done (524,285/2,097,152), current best H = 189, elapsed = 125s, ETA = 374s
+  30% done (629,142/2,097,152), current best H = 189, elapsed = 151s, ETA = 351s
+  35% done (733,999/2,097,152), current best H = 189, elapsed = 177s, ETA = 329s
+  40% done (838,856/2,097,152), current best H = 189, elapsed = 202s, ETA = 303s
+  45% done (943,713/2,097,152), current best H = 189, elapsed = 227s, ETA = 278s
+  50% done (1,048,570/2,097,152), current best H = 189, elapsed = 252s, ETA = 252s
+  55% done (1,153,427/2,097,152), current best H = 189, elapsed = 277s, ETA = 227s
+  60% done (1,258,284/2,097,152), current best H = 189, elapsed = 302s, ETA = 201s
+  65% done (1,363,141/2,097,152), current best H = 189, elapsed = 327s, ETA = 176s
+  70% done (1,467,998/2,097,152), current best H = 189, elapsed = 354s, ETA = 152s
+  75% done (1,572,855/2,097,152), current best H = 189, elapsed = 380s, ETA = 127s
+  80% done (1,677,712/2,097,152), current best H = 189, elapsed = 405s, ETA = 101s
+  85% done (1,782,569/2,097,152), current best H = 189, elapsed = 430s, ETA = 76s
+  90% done (1,887,426/2,097,152), current best H = 189, elapsed = 455s, ETA = 51s
+  95% done (1,992,283/2,097,152), current best H = 189, elapsed = 480s, ETA = 25s
+  100% done (2,097,140/2,097,152), current best H = 189, elapsed = 504s, ETA = 0s
+
+  DONE in 504.4s (4158 tournaments/sec)
+
+  H_max(7) = 189
+  Achieved by 240 labeled tournaments
+
+    bits=85298, score = (3, 3, 3, 3, 3, 3, 3)
+    bits=85609, score = (3, 3, 3, 3, 3, 3, 3)
+    bits=87281, score = (3, 3, 3, 3, 3, 3, 3)
+    bits=87590, score = (3, 3, 3, 3, 3, 3, 3)
+    bits=91306, score = (3, 3, 3, 3, 3, 3, 3)
+    bits=91493, score = (3, 3, 3, 3, 3, 3, 3)
+    bits=140596, score = (3, 3, 3, 3, 3, 3, 3)
+    bits=140969, score = (3, 3, 3, 3, 3, 3, 3)
+    bits=152180, score = (3, 3, 3, 3, 3, 3, 3)
+    bits=153235, score = (3, 3, 3, 3, 3, 3, 3)
+
+  Score sequences achieving H_max(7) = 189:
+    (3, 3, 3, 3, 3, 3, 3): 240 tournaments
+
+  H_max sequence (n=3..7): 3, 5, 15, 45, 189
+  Looking for OEIS match: 3, 5, 15, 45, 189
+
+  H(C_7) = 175
+  C_7 does NOT achieve H_max(7)! H(C_7) = 175 < 189
+
+opus-2026-03-22-S194
