@@ -1,0 +1,47 @@
+========================================================================
+  THE STRIP TRANSFER MATRIX FOR STAIRCASE TILINGS
+========================================================================
+
+  n=5: STRIP-BY-STRIP ANALYSIS
+
+  Inner configurations (strip 2 + strip 3): 8
+
+        Inner (s2, s3)                    H values over strip 4    avg H
+                (0, 0)                     1x1 3x1 5x2 9x3 11x1     6.50
+                (0, 1)                    3x1 5x3 9x1 13x2 15x1     8.50
+                (0, 2)                   5x1 9x1 11x3 13x2 15x1    11.00
+                (0, 3)                   5x1 9x4 11x1 13x1 15x1    10.00
+                (1, 0)                        3x1 9x3 13x3 15x1    10.50
+                (1, 1)                   5x1 9x1 11x2 13x2 15x2    11.50
+                (1, 2)                   5x1 9x1 11x2 13x2 15x2    11.50
+                (1, 3)                        5x1 9x4 11x2 13x1     9.50
+
+  TRANSFER MATRIX (inner state -> H distribution over outer strip):
+
+  H values: [1, 3, 5, 9, 11, 13, 15]
+
+         Inner H= 1 H= 3 H= 5 H= 9 H=11 H=13 H=15   E[H]
+        (0, 0)    1    1    2    3    1    0    0    6.5
+        (0, 1)    0    1    3    1    0    2    1    8.5
+        (0, 2)    0    0    1    1    3    2    1   11.0
+        (0, 3)    0    0    1    4    1    1    1   10.0
+        (1, 0)    0    1    0    3    0    3    1   10.5
+        (1, 1)    0    0    1    1    2    2    2   11.5
+        (1, 2)    0    0    1    1    2    2    2   11.5
+        (1, 3)    0    0    1    4    2    1    0    9.5
+
+  y=x SYMMETRY CHECK:
+    (0, 0) <-> (1, 3): H match = False
+    (0, 1) <-> (1, 2): H match = False
+    (0, 2) <-> (1, 1): H match = False
+    (0, 3) <-> (1, 0): H match = False
+    (1, 0) <-> (0, 3): H match = False
+    (1, 1) <-> (0, 2): H match = False
+    (1, 2) <-> (0, 1): H match = False
+    (1, 3) <-> (0, 0): H match = False
+
+  The y=x symmetric inner states (self-complementary inner):
+
+  No inner state is y=x self-symmetric (complement has no fixed points).
+  Self-complementary tournaments require PAIRS of symmetric inner states.
+  The SC condition involves the FULL tiling, not just the inner part.
