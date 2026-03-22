@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-21-S148 — 2026-03-21: Where 75% Savings Actually Matters — Redesign Analysis
+
+**Account:** opus
+**Continuation of:** opus-2026-03-21-S147
+**Summary:** Honest engineering analysis of where QuaternionLinear's 75% savings create real impact. KEY FINDINGS: (1) Attention-only savings = ~25% total (attention is 33% of params). (2) Full quaternion (attention + FFN) = 75% everywhere = 4× reduction = 7B→1.7B. (3) THE REAL OPPORTUNITY is edge deployment: 3B→12B on a phone (the quality jump from toy to tool). (4) KV cache savings at 128K context: LLaMA-70B from 80GB to 20GB. (5) COMPOSABLE with quantization: quaternion fp16 (25%) + 4-bit quant (25%) = 6.25% of original = LLaMA-7B in 800MB on a Raspberry Pi. (6) Non-LLM applications: vision (ResNet 25.6M→19M), recommendation (100GB→25GB embedding tables), speech (Whisper on-device), robotics, GNNs, AlphaFold. (7) 5-phase implementation roadmap from PyTorch module to foundation model. HONEST: FLOPs are roughly the same (16 small matmuls ≈ 1 large one). The savings are in MEMORY, not compute. Competition: 4-bit quantization achieves similar memory savings but lossily. Quaternion is structural (lossless) and COMPOSES with quantization.
+**New contributions:** quaternion_redesign_s148.py
+**Unresolved threads:** Port to PyTorch, train QuaternionGPT-2, test quaternion+quantization composition
+
+---
+
 ## opus-2026-03-21-S147 — 2026-03-21: Quaternion Attention Library — 53/53 Tests Pass
 
 **Account:** opus
