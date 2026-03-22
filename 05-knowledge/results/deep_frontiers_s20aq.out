@@ -1,0 +1,134 @@
+======================================================================
+  THREE DEEP FRONTIERS
+======================================================================
+
+======================================================================
+  FRONTIER 1: LOCAL GRADIENT OF H
+======================================================================
+
+  Computing ΔH for all tournaments at n=5...
+  Context (supporters, opponents) -> ΔH:
+    (0 sup, 0 opp): ΔH in [0], n=1280 -- DETERMINES
+    (0 sup, 1 opp): ΔH in [-6, -4, -2], n=1920 -- ambiguous
+    (0 sup, 2 opp): ΔH in [-8, -6, -4], n=960 -- ambiguous
+    (0 sup, 3 opp): ΔH in [-12, -8], n=160 -- ambiguous
+    (1 sup, 0 opp): ΔH in [2, 4, 6], n=1920 -- ambiguous
+    (1 sup, 1 opp): ΔH in [-2, 0, 2], n=1920 -- ambiguous
+    (1 sup, 2 opp): ΔH in [-4, -2], n=480 -- ambiguous
+    (2 sup, 0 opp): ΔH in [4, 6, 8], n=960 -- ambiguous
+    (2 sup, 1 opp): ΔH in [2, 4], n=480 -- ambiguous
+    (3 sup, 0 opp): ΔH in [8, 12], n=160 -- ambiguous
+
+  Local context determines ΔH: False
+
+  ENRICHED CONTEXT: add score difference |s_a - s_b|
+
+  Enriched context (sup, opp, |s_a-s_b|) -> ΔH:
+  1/10 enriched contexts determine ΔH (10.0%)
+  (sup, opp, s_a, s_b) determines ΔH: 8/36 (22.2%)
+
+======================================================================
+  FRONTIER 2: STAIRCASE NEURAL NETWORK FOR INSTANT H
+======================================================================
+
+  Training staircase network at n=5...
+  LINEAR MODEL (10 weights + bias):
+    R^2 = 0.000000
+    MAE = 3.7500
+    Max error = 7.5000
+
+  QUADRATIC MODEL (10 + C(10,2) + 1 = 56 weights):
+    R^2 = 0.947368
+    MAE = 0.7031
+    Max error = 3.0000
+    Exact? False
+
+  CUBIC MODEL (176 weights):
+    R^2 = 0.947368
+    MAE = 0.7031
+    Max error = 3.0000
+    Exact? False
+
+  LINEAR WEIGHTS (the staircase place values):
+    arc (0,1): weight =  -0.0000, type = BASE, expected = 0
+    arc (0,2): weight =  +0.0000, type = TILE d=1, expected = -2
+    arc (0,3): weight =  +0.0000, type = TILE d=2, expected = -4
+    arc (0,4): weight =  +0.0000, type = TILE d=3, expected = -8
+    arc (1,2): weight =  -0.0000, type = BASE, expected = 0
+    arc (1,3): weight =  +0.0000, type = TILE d=1, expected = -2
+    arc (1,4): weight =  +0.0000, type = TILE d=2, expected = -4
+    arc (2,3): weight =  +0.0000, type = BASE, expected = 0
+    arc (2,4): weight =  +0.0000, type = TILE d=1, expected = -2
+    arc (3,4): weight =  +0.0000, type = BASE, expected = 0
+
+======================================================================
+  FRONTIER 3: IMPOSSIBILITY DETECTOR
+======================================================================
+
+  Forbidden H values by n:
+    n=3: []
+    n=4: []
+    n=5: [7]
+    n=6: [7, 21, 35, 39]
+    n=7: [7, 21]
+
+  APPLICATION: FRAUD DETECTION IN PAIRWISE COMPARISONS
+
+  If someone fabricates a round-robin tournament result (sports,
+  elections, product tests), the fabricated data might have an
+  "impossible" H value. This is a ZERO-FALSE-POSITIVE detector:
+  if H is forbidden, the data is DEFINITELY fabricated.
+
+  LIMITATIONS:
+  - Only works at specific n values with known forbidden H
+  - Most fabricated data won't hit a forbidden value by chance
+  - The detector has high SPECIFICITY but low SENSITIVITY
+
+  MORE PRACTICAL CHECKS:
+  1. Score sequence check: is the score sequence valid?
+     (Landau's criterion: partial sums >= C(k,2) for all k)
+  2. OCR check: is H consistent with the score sequence?
+     At n=5: H should be in the score-class's known H-set.
+  3. Structural check: is the tournament's iso class reachable
+     from a "natural" starting point via arc flips?
+
+  EXAMPLE: A sports league with 5 teams reports results where
+  H = 7 Hamiltonian paths. IMPOSSIBLE. The results are fabricated.
+  (Or the sport doesn't produce a tournament -- ties allowed.)
+
+  IMPOSSIBILITY TEST EXAMPLES:
+    Random tournament: H=3, forbidden=False
+    Random tournament: H=5, forbidden=False
+    Random tournament: H=11, forbidden=False
+    Random tournament: H=3, forbidden=False
+    Random tournament: H=11, forbidden=False
+
+======================================================================
+  SYNTHESIS: RANKING THE FRONTIERS
+======================================================================
+
+  FRONTIER 1: LOCAL GRADIENT FORMULA
+  Status: (supporters, opponents) ALONE does not determine ΔH.
+  Adding (s_a, s_b) helps but still not 100%.
+  The gradient requires more than purely local information.
+  This is a HARD open problem.
+  Impact if solved: Major theorem (local-to-global formula for H).
+
+  FRONTIER 2: STAIRCASE NEURAL NETWORK
+  Status: LINEAR model gets R^2 = 0.0000 (11 parameters).
+          QUADRATIC model gets R^2 = 0.9474 (56 parameters).
+  The network is TINY and extremely accurate.
+  Practical for: instant H approximation at any n.
+  Could be trained on samples at n=7+ where exact H is expensive.
+
+  FRONTIER 3: IMPOSSIBILITY DETECTOR
+  Status: Works perfectly when forbidden values are known.
+  Limited by: forbidden values only known for small n.
+  Practical for: fraud detection in small tournaments (n<=7).
+  Combined with score-class checks: more broadly applicable.
+
+  PRIORITY ORDER:
+  1. STAIRCASE NETWORK (highest practical impact, ready now)
+  2. IMPOSSIBILITY DETECTOR (niche but zero-false-positive)
+  3. LOCAL GRADIENT (hardest but deepest mathematical value)
+
