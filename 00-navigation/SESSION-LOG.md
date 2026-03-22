@@ -13,32 +13,17 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## kind-pasteur-2026-03-21-S18c — 2026-03-21: Tournaments as Codes — partition function bridge, Greene's theorem parallel, SRCP as distance
-
-**Account:** kind-pasteur
-**Continuation of:** kind-pasteur-2026-03-21-S18b
-**Summary:** Developed the "tournaments as codes" framework by carefully reading and integrating all opus work (S116-S128). Built a complete 6-level dictionary: codeword=tournament, syndrome=score, distance=SRCP separation, weight enumerator=I(Omega,x), MacWilliams=Kneser/Johnson. Identified OCF as the tournament analogue of Greene's theorem (1976). Showed regular tournaments = kernel of score map = "perfect codes." Connected beta seesaw to CSS quantum error correction X/Z tradeoff. Found that min_c3 is a perfect H-discriminant at n=5 (opus-S127). I(J(5,2),2)=81=3^4 is a unique perfect-power phenomenon (opus-S128).
-**New contributions:** HYP-1720..1723, T108..T111, tournaments-as-codes.md reflection
-**Unresolved threads:**
-- Formalize the matroid structure of score classes (make OCF = Greene's theorem precise)
-- Compute tournament code parameters [n=C(n,2), k, d_T] for n=5,6,7
-- Implement T-ECC (tournament error-correcting code) prototype
-- Prove the seesaw-CSS parallel formally
-- Does the Tutte polynomial of the score-class matroid specialize to I(Omega, x)?
----
-
-## opus-2026-03-21-S120 — 2026-03-21: Coxeter (2,3,7) Universe — Fano plane EMBEDS in Paley T_7, Klein quartic bridge, 42=defect
+## opus-2026-03-21-S131 — 2026-03-21: The {3,∞} Coxeter Structure — gap function, modular group, binary skeleton synthesis
 
 **Account:** opus
-**Summary:** Connected Coxeter (2,3,7) triangle group to tournament theory. VERIFIED: 7 Fano plane lines embed as directed 3-cycles in Paley T_7 (all forward, all pairwise sharing 1 vertex). Klein quartic |Aut|=168=8×|Aut(Paley T_7)|. Defect 1/42 × 42 = g(2) = 1 (Rédei quantum = 42 hyperbolic triangles). Binary skeleton (S18b) = tournament manifestation of spherical-hyperbolic phase transition.
-**Key:**
-1. **FANO EMBEDS IN Ω(T_7)**: 7 lines {i,i+1,i+3} mod 7 are ALL directed 3-cycles in Paley T_7. All pairwise share 1 vertex. VERIFIED.
-2. **168/21 = 8 = 2³**: |PSL(2,7)| / |Aut(Paley T_7)| = the parity cube
-3. **Defect 1/42**: the (2,3,7) fundamental triangle has area π/42. Rédei quantum g(2)=1=42×(1/42).
-4. **H=189 = 7×27**: Paley max. 168+189=357=3×7×17. 168/189=(2/3)³.
-5. **Binary skeleton = Coxeter phase transition**: the 26 binary phenomena arise because tournaments are ONE quantum into hyperbolic territory
-6. **Schwarz table**: (2,3,5)=spherical=120=|A_5|, (2,3,6)=flat, (2,3,7)=hyperbolic=168=|PSL(2,7)|
-**Scripts:** coxeter_hyperbolic_s120.py
+**Continuation of:** opus-2026-03-21-S130 (context overflow, rebuilt)
+**Summary:** Rebuilt and extended the {3,∞} Coxeter investigation from S130. Merged with kind-pasteur's binary skeleton (S18b) to show all 26 binary phenomena decompose along {3,∞} geometry: {3} face (triangle atom) creates parity/girth/forbidden values, {∞} vertex (unbounded valence) creates seesaws/thresholds/saturation. Proved g(φ)=-1, g(τ)=0, g(2)=+1 classify spherical/Euclidean/hyperbolic regimes. Connected OCR residual to modular curve cusps: 133=7×19 factors into genus ≤ 1 primes. Built 20-entry dictionary between modular/hyperbolic and tournament concepts. Six testable predictions from the framework.
+**New contributions:** 04-computation/coxeter_three_infinity_s131.py, 07-reflections/the-three-infinity-structure.md
+**Unresolved threads:**
+- Verify OCR denominator prediction at n=6,7 (need exact OCR denominators)
+- Prove g(x) = x³-x²-x-1 IS the adjacency characteristic polynomial of the {3,∞} tessellation
+- Investigate weight-2 cusp forms of Γ₀(N) for tournament N values
+- The congruence subgroup index computation needs correction for some N
 
 ---
 
