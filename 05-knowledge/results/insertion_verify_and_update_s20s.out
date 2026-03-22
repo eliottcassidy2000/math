@@ -1,0 +1,111 @@
+========================================================================
+  VERTEX INSERTION: VERIFICATION AND E-UPDATE
+========================================================================
+
+  PART 1: VERIFY AT n=4 -> n=5
+  Base tournament (n=4): H=3
+    MISMATCH: sig=[1, 0, 0, 0], actual=15, pred=0
+    MISMATCH: sig=[0, 1, 0, 0], actual=5, pred=7
+    MISMATCH: sig=[1, 1, 0, 0], actual=13, pred=3
+    MISMATCH: sig=[0, 0, 1, 0], actual=5, pred=7
+    MISMATCH: sig=[1, 0, 1, 0], actual=13, pred=3
+    MISMATCH: sig=[0, 1, 1, 0], actual=5, pred=9
+    MISMATCH: sig=[1, 1, 1, 0], actual=9, pred=4
+    MISMATCH: sig=[0, 0, 0, 1], actual=5, pred=7
+    MISMATCH: sig=[1, 0, 0, 1], actual=13, pred=3
+    MISMATCH: sig=[0, 1, 0, 1], actual=5, pred=9
+    MISMATCH: sig=[1, 1, 0, 1], actual=9, pred=4
+    MISMATCH: sig=[0, 0, 1, 1], actual=5, pred=9
+    MISMATCH: sig=[1, 0, 1, 1], actual=9, pred=4
+    MISMATCH: sig=[0, 1, 1, 1], actual=3, pred=9
+  Verified: 2/16 correct
+
+  PART 2: VERIFY AT n=5 -> n=6
+  Verified: 26/320 correct (10 base tournaments x 32 sigs)
+
+  PART 3: DERIVING THE E-UPDATE
+
+
+  When vertex v is added to T (n vertices) to get T' (n+1 vertices):
+
+  HP of T' come from three sources:
+
+  SOURCE A: v is the START. HP = v -> b -> (HP of T from b to end).
+    For each b with v->b: each HP of T starting at b gives an HP of T'.
+    New consecutive pairs: (v, b) for each such HP.
+    Old consecutive pairs: all pairs in the suffix HP (unchanged).
+
+  SOURCE B: v is the END. HP = (HP of T from start to a) -> a -> v.
+    For each a with a->v: each HP of T ending at a gives an HP of T'.
+    New consecutive pairs: (a, v) for each such HP.
+    Old consecutive pairs: all pairs in the prefix HP (unchanged).
+
+  SOURCE C: v is in the MIDDLE. HP = (prefix -> a -> v -> b -> suffix).
+    For each pair (a,b) with a->v and v->b:
+    each HP of T containing consecutive pair (a,b) gives an HP of T'.
+    The pair (a,b) is REPLACED by two pairs (a,v) and (v,b).
+    All other consecutive pairs are unchanged.
+
+  E-UPDATE FORMULA:
+
+  E'[x, y] for x, y in {0,...,n} (the new vertex v has index n):
+
+  Case 1: x != v AND y != v (old pair):
+    E'[x, y] = E[x, y]                          (from sources A, B: unchanged pairs)
+              - sum_{a->v, v->y: x precedes a in HP} correction
+              Wait: this is wrong. Source C REMOVES the pair (a,b) and adds (a,v), (v,b).
+              So the old pair (a,b) is counted E[a,b] times in source C.
+              But only the fraction where x precedes a... no.
+
+  Actually: in Source C, for each HP containing (a,b), the pair (a,b) is SPLIT.
+  So (a,b) appears in E'... let me think again.
+
+  In Source A (v starts): the HP of T' is v, b, p_2, ..., p_n.
+    Consecutive pairs: (v, b), (b, p_2), (p_2, p_3), ..., (p_{n-1}, p_n).
+    The pairs (b, p_2), ..., (p_{n-1}, p_n) are the same as in the original HP of T
+    starting at b. So these pairs contribute to E' exactly as they do in E, but
+    only for HP starting at b.
+
+  In Source B (v ends): the HP of T' is p_1, p_2, ..., p_{n-1}, a, v.
+    Pairs: (p_1, p_2), ..., (p_{n-1}, a), (a, v).
+    The pairs (p_1, p_2), ..., (p_{n-1}, a) are from the original HP ending at a.
+
+  In Source C (v in middle): the HP of T' is ..., c, a, v, b, d, ...
+    where the original HP had ..., c, a, b, d, ...
+    Pairs: ..., (c, a), (a, v), (v, b), (b, d), ...
+    The pair (a, b) is REMOVED, replaced by (a, v) and (v, b).
+    All other pairs (including (c, a) and (b, d)) are UNCHANGED.
+
+  COMPUTING E' FOR n=3 -> n=4:
+
+  Base tournament (cycle-3): H=3
+  M3 = [[0, 0, 1], [1, 0, 0], [0, 1, 0]]
+  E3 = [[0, 2, 0], [0, 0, 2], [2, 0, 0]]
+  Paths: [(0, 1, 2), (1, 2, 0), (2, 0, 1)]
+
+  Adding v=3 with signature [1, 0, 1]
+  H(T+v) = 5, predicted = 5, match = True
+
+  New paths: [(0, 1, 3, 2), (1, 3, 2, 0), (2, 0, 1, 3), (3, 0, 1, 2), (3, 2, 0, 1)]
+
+  E4 (actual):
+  [[0, 4, 0, 0], [0, 0, 1, 3], [3, 0, 0, 0], [1, 0, 3, 0]]
+
+  Source A paths: [(3, 0, 1, 2), (3, 2, 0, 1)]
+  Source B paths: [(2, 0, 1, 3)]
+  Source C paths: [(0, 1, 3, 2), (1, 3, 2, 0)]
+  Total new: 5, expected: 5
+  Match: True
+
+  E4 (derived from path decomposition):
+  [[0, 4, 0, 0], [0, 0, 1, 3], [3, 0, 0, 0], [1, 0, 3, 0]]
+  Match actual: True
+
+  E-UPDATE VERIFICATION (term by term):
+
+  E4[0,1] = 4: A=2, B=1, C=1
+  E4[1,2] = 1: A=1, B=0, C=0
+  E4[1,3] = 3: A=0, B=1, C=2
+  E4[2,0] = 3: A=1, B=1, C=1
+  E4[3,0] = 1: A=1, B=0, C=0
+  E4[3,2] = 3: A=1, B=0, C=2
