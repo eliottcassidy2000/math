@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S176 — 2026-03-22: Every Technique Applied to G_5 — The Proof Domain
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S175
+**Summary:** Applied ALL 9 major techniques from the repo to G_5. RESULTS: (1) I(G_5,x)=1+12x+36x²+38x³+16x⁴+2x⁵, meta-H=793, α=5, χ=1. (2) Cartan: symmetric→trivial, but H-weighted adjacency is 100% antisymmetric (pure DAG). (3) Class-level OCR=58.3% (much lower than tournament-level 97% — scores are less informative at the class level). (4) Gap function: largest eigenvalue λ₀=5.58 is deeply hyperbolic (g₃=+136). (5) Susceptibility χ=I'/I at x=2 computed. (6) DAG: 1 source (H=1), 2 sinks (H=15), max out-degree=6 at source. (7) Random walk: mixing in ~few steps, stationary∝degree. (8) Moments: weighted E[H]=7.5, unweighted=8.5 (rare classes pull up). (9) Laplacian: algebraic connectivity=1.60 (well-connected), Fiedler partition splits G_5 into low-H ({1,3,3,3,5,5,9,9,15}, mean 5.9) and high-H ({11,13,15}, mean 13.0). THE INSIGHT: every technique is CLEANER and SIMPLER on G_5. The independence polynomial has degree 5 (not ⌊n/3⌋). The Cartan is pure DAG. The OCR is a simple counting problem on 12 classes. Working at the class level is not just faster — it's clearer.
+**New contributions:** iso_class_proof_domain_s176.py
+**Unresolved:** Extend all techniques to G_6, prove class-level OCR formula, connect Fiedler partition to PoS structure
+
+---
+
 ## opus-2026-03-22-S175 — 2026-03-22: Unlabeling Applications — Math and Engineering
 
 **Account:** opus
