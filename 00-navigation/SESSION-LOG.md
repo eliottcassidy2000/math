@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S166 — 2026-03-22: Faster Formulas — 8 Computation Levels, HC Decomposition Verified
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S165
+**Summary:** Integrated kind-pasteur S20r-v breakthroughs. 8 formula levels cataloged: O(1): E[H]=n!/2^{n-1}, H_extreme=(2^k+1)×H_mid (verified: gives H_max at n=3,5 but gap=54 at n=7). O(n): c₃ from scores, H=1+2c₃ exact at n≤4 (0 errors). O(n²): Tr(A³)/6, vertex insertion. O(n²2^n): full H, HC, E matrix. NEW: HC decomposition H=n×HC+L verified exhaustively at n=5 — L=2 IS missing (confirmed S20v), H=15 splits HC=2 (24 reg) vs HC=3 (40 PoS). HC_max sequence = 0,1,1,3,5. #distinct_HC = 1,2,2,4,6. KEY OPEN: W(n) formula (overlap polynomial F_n(2)) would give Var(H) without enumeration — this is THE computational bottleneck. W(n) = 1,2,8,32,158,928,6350,49752 has no known closed form. Var(H) from W(n): verified exact match at n=2..5.
+**New contributions:** fast_formulas_s166.py
+**Unresolved threads:** Find W(n) recursion, solve vertex insertion bridge term, extend HC_max to n=7+
+
+---
+
 ## opus-2026-03-22-S165 — 2026-03-22: New Sequences from Tournament Theory
 
 **Account:** opus

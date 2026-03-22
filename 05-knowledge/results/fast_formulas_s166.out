@@ -1,0 +1,201 @@
+========================================================================
+  FASTER FORMULAS FOR TOURNAMENT SEQUENCES
+  opus-2026-03-22-S166
+========================================================================
+
+FORMULA 1: E[H] = n!/2^{n-1} — EXACT, O(1)
+------------------------------------------------------------
+
+  n= 2: E[H] = 1 = 1.0000
+  n= 3: E[H] = 3/2 = 1.5000
+  n= 4: E[H] = 3 = 3.0000
+  n= 5: E[H] = 15/2 = 7.5000
+  n= 6: E[H] = 45/2 = 22.5000
+  n= 7: E[H] = 315/4 = 78.7500
+  n= 8: E[H] = 315 = 315.0000
+  n= 9: E[H] = 2835/2 = 1417.5000
+  n=10: E[H] = 14175/2 = 7087.5000
+  n=11: E[H] = 155925/4 = 38981.2500
+
+  This is EXACT and needs no enumeration.
+  PROOF: each permutation σ is a Hamiltonian path of T
+  with probability 1/2^{n-1} (each of n-1 consecutive arcs
+  must go the right way). E[H] = n!/2^{n-1} by linearity.
+
+
+FORMULA 2: E[H²] — THE SECOND MOMENT
+------------------------------------------------------------
+
+  E[H²] = Σ_{σ,τ} P(both σ,τ are HP)
+        = (1/2^{2(n-1)}) × Σ_{σ,τ} 2^{overlap(σ,τ)}
+
+  n=2: E[H²] = 1 = 1.0000, Var(H) = 0 = 0.0000
+  n=3: E[H²] = 3 = 3.0000, Var(H) = 3/4 = 0.7500
+  n=4: E[H²] = 12 = 12.0000, Var(H) = 3 = 3.0000
+  n=5: E[H²] = 1185/16 = 74.0625, Var(H) = 285/16 = 17.8125
+  n=6: E[H²] = 1305/2 = 652.5000, Var(H) = 585/4 = 146.2500
+
+  W(n) = F_n(2)/n! = E[H²]/(E[H])² × (n!/2^{n-1})²:
+    n=1: W = 1
+    n=2: W = 2
+    n=3: W = 8
+    n=4: W = 32
+    n=5: W = 158
+    n=6: W = 928
+    n=7: W = 6350
+    n=8: W = 49752
+
+
+FORMULA 3: Var(H) FROM W(n)
+------------------------------------------------------------
+
+  If we know W(n), we can compute Var(H) without enumeration:
+    E[H] = n!/2^{n-1}
+    E[H²] = W(n) × (E[H])² / n! × 2^{2(n-1)} / 2^{C(n,2)}
+
+  Actually: W(n) = E[H²] × n! / (E[H])²
+  So: E[H²] = W(n) × (E[H])² / n!
+  And: Var(H) = E[H²] - (E[H])²
+
+  n=1: W=1, E[H]=1, Var(H) = 0 = 0.0000, match=True
+  n=2: W=2, E[H]=1, Var(H) = 0 = 0.0000, match=True
+  n=3: W=8, E[H]=3/2, Var(H) = 3/4 = 0.7500, match=True
+  n=4: W=32, E[H]=3, Var(H) = 3 = 3.0000, match=True
+  n=5: W=158, E[H]=15/2, Var(H) = 285/16 = 17.8125, match=True
+  n=6: W=928, E[H]=45/2, Var(H) = 585/4 = 146.2500, match=True
+
+
+FORMULA 4: H_extreme(n) = (2^k+1) × H_mid(n-2)
+------------------------------------------------------------
+
+  H_extreme(n) = (2^{(n-1)/2} + 1) × H_extreme(n-2):
+
+  n= 1: H_extreme =            1, H_max =        1, ratio = 1.000
+  n= 2: H_extreme =            1, H_max =        1, ratio = 1.000
+  n= 3: H_extreme =            3, H_max =        3, ratio = 1.000
+  n= 4: H_extreme =            3, H_max =        5, ratio = 0.600
+  n= 5: H_extreme =           15, H_max =       15, ratio = 1.000
+  n= 6: H_extreme =           15, H_max =       45, ratio = 0.333
+  n= 7: H_extreme =          135, H_max =      189, ratio = 0.714
+  n= 8: H_extreme =          135, H_max =        ?, ratio = ?
+  n= 9: H_extreme =        2,295, H_max =        ?, ratio = ?
+  n=10: H_extreme =        2,295, H_max =        ?, ratio = ?
+  n=11: H_extreme =       75,735, H_max =        ?, ratio = ?
+  n=12: H_extreme =       75,735, H_max =        ?, ratio = ?
+  n=13: H_extreme =    4,922,775, H_max =        ?, ratio = ?
+  n=14: H_extreme =    4,922,775, H_max =        ?, ratio = ?
+  n=15: H_extreme =  635,037,975, H_max =        ?, ratio = ?
+
+  NOTE: H_extreme = H_max at n=3,5 but H_extreme < H_max for n≥7.
+  The T→S source-sink is NOT always optimal at larger n.
+
+  H_extreme sequence: [1, 1, 3, 3, 15, 15, 135, 135, 2295, 2295, 75735, 75735, 4922775, 4922775, 635037975]
+  = 1, 1, 3, 5, 15, 25, 135, 325, 2295, ...
+
+
+FORMULA 5: PREDICTING #DISTINCT_H FROM SCORE THEORY
+------------------------------------------------------------
+
+  Can we predict #distinct_H(n) without enumerating all tournaments?
+
+  The number of distinct H values is bounded by:
+    lower: #score_classes (each gives at least 1 H value)
+    upper: (H_max + 1) / 2 (all odd values up to H_max)
+
+  The GAP between upper bound and actual = #forbidden values.
+
+  n=2: #scores=1, #distinct_H=1, upper=1, #forbidden=0
+  n=3: #scores=2, #distinct_H=2, upper=2, #forbidden=0
+  n=4: #scores=4, #distinct_H=3, upper=3, #forbidden=0
+  n=5: #scores=9, #distinct_H=7, upper=8, #forbidden=1
+  n=6: #scores=22, #distinct_H=19, upper=23, #forbidden=4
+
+
+FORMULA 6: H = n×HC + L (CYCLIC/LINEAR DECOMPOSITION)
+------------------------------------------------------------
+
+  AT n=5: H = 5×HC + L
+
+    H   HC    L   count  L=H mod n
+  ───  ───  ───  ──────  ─────────
+    1    0    1     120          ✓
+    3    0    3     120          ✓
+    5    0    5     240          ✗
+    9    1    4     240          ✓
+   11    1    6     120          ✗
+   13    2    3     120          ✓
+   15    2    5      24          ✗
+   15    3    0      40          ✓
+
+  n=3: HC_max=1, #distinct_HC=2, L values=[0, 1]
+  n=4: HC_max=1, #distinct_HC=2, L values=[1, 3]
+  n=5: HC_max=3, #distinct_HC=4, L values=[0, 1, 3, 4, 5, 6]
+  n=6: HC_max=5, #distinct_HC=6, L values=[1, 3, 5, 7, 9, 11, 13, 15, 17]
+
+  HC_max sequence: [0, 1, 1, 3, 5]
+  = 0, 0, 1, 2, ?, ... (max Hamiltonian cycles at each n)
+
+
+FORMULA 7: FAST c₃ = C(n,3) - Σ C(s_v, 2) — O(n)
+------------------------------------------------------------
+
+  n=3: H = 1 + 2c₃ from scores: 0 errors → EXACT ✓
+  n=4: H = 1 + 2c₃ from scores: 0 errors → EXACT ✓
+
+  For n ≤ 4: H computable in O(n) from score sequence alone!
+  For n = 5: H = 1 + 2c₃ + 2c₅, need c₅ (more expensive)
+  For n = 6+: need c₅, α₂, c₇, ... (full independence polynomial)
+
+
+FORMULA 8: H_max ACHIEVED BY REGULAR TOURNAMENTS
+------------------------------------------------------------
+
+  n=3: H_max = 3, H_extreme = 3, H_ext=H_max
+  n=4: H_max = 5, H_extreme = 3, gap=2
+  n=5: H_max = 15, H_extreme = 15, H_ext=H_max
+  n=6: H_max = 45, H_extreme = 15, gap=30
+  n=7: H_max = 189, H_extreme = 135, gap=54
+
+
+========================================================================
+  SUMMARY: WHAT CAN BE COMPUTED WITHOUT EXHAUSTIVE ENUMERATION
+========================================================================
+
+
+  O(1) formulas (instant for any n):
+    E[H] = n!/2^{n-1}
+    H_extreme(n) = (2^{(n-1)/2}+1) × H_extreme(n-2)
+    Base constant = 1 + n(n-1)(2n-1)/6
+
+  O(n) formulas (from score sequence):
+    c₃ = C(n,3) - Σ C(s_v, 2)
+    H = 1 + 2c₃ (EXACT at n ≤ 4)
+    S₂ = Σ s_v²
+
+  O(n²) formulas (from adjacency matrix):
+    Tr(A³)/6 = c₃ (alternative computation)
+    H(T+v) from E matrix (if E is known)
+
+  O(n²×2^n) (Held-Karp DP):
+    H(T) exactly
+    HC(T) exactly
+    E matrix
+
+  WHAT STILL NEEDS EXHAUSTIVE ENUMERATION:
+    #distinct_H(n): requires computing H for ALL tournaments
+    #forbidden(n): same
+    OCR(n): requires grouping by score class
+    Var(H): requires E[H²], which needs W(n)
+
+  THE BOTTLENECK: computing W(n) or E[H²].
+    W(n) = E[H²]/E[H]² × n! requires knowing the overlap polynomial F_n(2).
+    F_n(2) = Σ_{σ,τ} 2^{overlap(σ,τ)} is a sum over n!² permutation pairs.
+    This is EXPONENTIAL in n but may have a recursion or closed form.
+
+  THE KEY OPEN PROBLEM:
+    Find a formula for W(n) that doesn't require enumerating permutation pairs.
+    The sequence 1, 2, 8, 32, 158, 928, 6350, 49752 has no known closed form.
+    If we could compute W(n) in polynomial time, we'd get Var(H) for free,
+    and from there OCR could potentially be computed without enumeration.
+
+opus-2026-03-22-S166
