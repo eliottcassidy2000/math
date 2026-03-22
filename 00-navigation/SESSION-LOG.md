@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S197 — 2026-03-22: Why π — Independence→Pythagorean→Circles→π
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S196
+**Summary:** Deep investigation of WHY π appears in tournament fiber fractions. Traced through 11 chapters: π in circles (circumference/diameter), π in the Gaussian (∫e^{-x²}=√π via polar coords), π in random walks (return prob C(2k,k)/4^k ~ 1/√(πk)), the tournament→random walk correspondence, the common root in rotational symmetry of x²+y²=r², the circle hidden in the 2D walk (f²×k → 1/π), sine moments (f = (1/π)∫sin^{2k}dt), the Pythagorean root (additive variances = sum of squares), information-theoretic view (structural bits ~ n^{3/2}/(2√π)), four faces of π. THE DEEPEST INSIGHT: π is the signature of INDEPENDENCE. Additive variances (Var(ΣXᵢ) = ΣVar(Xᵢ)) IS the probabilistic Pythagorean theorem. CLT converts this to Gaussian. Gaussian normalization uses circular symmetry of e^{-r²}. So π in tournaments and π in circles are LITERALLY the same angular integral ∫dθ = 2π. Monte Carlo verified. Reflection written to 07-reflections/why-pi.md.
+**New contributions:** why_pi_s197.py, 07-reflections/why-pi.md
+**Unresolved:** Explore non-independent tournament models (correlated flips) where π does NOT appear. Connect to curvature — what "geometry" does tournament space have?
+
+---
+
 ## opus-2026-03-22-S196 — 2026-03-22: Pochhammer Merger — f(n)=(1/2)_{n-2}/(n-2)! Unifies Tournament Space
 
 **Account:** opus
