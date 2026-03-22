@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S187 — 2026-03-22: Maximum Entropy Tournaments and the Critical Point
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S186
+**Summary:** Computed 5 entropy measures for all 12 iso classes at n=5. SURPRISE: max SCORE entropy = H=1 (transitive, all distinct scores → max diversity). Max ARC entropy = H=15 regular (all arcs equally important). Max ENDPOINT entropy = H=15 (both classes). Max GRADIENT NORM = H=15 PoS class (16.61 — most fragile). The regular tournament has ZERO score entropy (all scores identical) but MAXIMUM arc/endpoint entropy. ENTROPY-CONNECTIVITY TRADEOFF: high-entropy (H=15) classes have LOW degree in G_n (2 neighbors). Intermediate-H classes have HIGH degree (7 neighbors). The CRITICAL POINT (max connectivity, max gradient) is at INTERMEDIATE H — the PoS region. The PoS class IS the critical point of tournament space: most sensitive, most connected, where the OCR residual lives.
+**New contributions:** max_entropy_s187.py
+**Unresolved:** Prove entropy-connectivity tradeoff, extend to n=6, connect to thermodynamic framework
+
+---
+
 ## opus-2026-03-22-S186 — 2026-03-22: The Local H-Gradient — Steepest Ascent, Vulnerability Map
 
 **Account:** opus
