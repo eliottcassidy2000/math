@@ -13,6 +13,15 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S201 — 2026-03-22: Polygon-Simplex-Tournament Trinity
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S200
+**Summary:** 10-chapter investigation of how regular polygons, simplices, Young diagrams, and meta-graphs are all manifestations of the same structure. (1) Tournament = oriented (n-1)-simplex: n vertices + C(n,2) directed edges, face lattice carries sub-tournament structure. (2) Cyclic tournament C_n = regular n-gon: Aut=C_n (rotations only, reflections reverse arcs), C_n maximizes H at n=3,5 but NOT n=7. 3-cycle fraction: 1.00, 0.50, 0.40. (3) Staircase δ_{n-1} = upper triangle = polygon diagonal decomposition: diagonal d has n-1-d boxes with value 2^d, encoding binary number system. (4) Tournament polytope: Landau polytope maps to simplex, transitive=vertex, regular=barycenter. (5) **G_5 IS PLANAR**: exactly at threshold 3V-6=30=E, has 20 faces with avg size 3.0, 21 triangles — it's a triangulation of the SPHERE. (6) Sub-tournament census by simplex face. (7) D_n vs Aut(C_n): reflections → complement, only rotations are automorphisms. (8) Tournament cube = oriented hypercube {0,1}^{C(n,2)}, G_n = quotient by S_n, compression 4×→4599× for n=3→7. (9) Polygon diagonals = staircase diagonals with exponential 2^d hierarchy. (10) G_n planarity and dual graph structure.
+**New contributions:** polygon_tournament_s201.py
+
+---
+
 ## opus-2026-03-22-S200 — 2026-03-22: Z/2Z Synthesis — Merging kind-pasteur's Two-Sheeted Cover with Buffon
 
 **Account:** opus
