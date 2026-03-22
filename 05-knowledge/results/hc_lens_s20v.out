@@ -1,0 +1,99 @@
+============================================================
+  SEEING EVERYTHING THROUGH THE HC LENS
+============================================================
+
+  1. FORBIDDEN H=7 THROUGH HC LENS
+
+  H values and their HC distributions:
+    H=  1: HC in [0], L in [1]
+    H=  3: HC in [0], L in [3]
+    H=  5: HC in [0], L in [5]
+    H=  9: HC in [1], L in [4]
+    H= 11: HC in [1], L in [6]
+    H= 13: HC in [2], L in [3]
+    H= 15: HC in [2, 3], L in [5, 0]
+
+  If H=7 existed: HC in {0, 1}. L in {7, 2}.
+  H=5 has HC=0 always (L=5). H=9 has HC=1 always (L=4).
+  H=7 (if it existed) would need HC=0 (L=7>5=H for n=5?)
+  Wait: L = H - n*HC. If HC=0: L=7. If HC=1: L=2.
+  L=7 means 7 linear (non-cyclic) HP. Possible in principle.
+  L=2 means 1 cycle (giving 5 HP) + 2 extra linear HP.
+
+  THE HC CONSTRAINT ON H=7:
+  If HC=1: need 1 Ham cycle + 2 extra HP not in any cycle.
+  If HC=0: need 7 linear HP with no closeable cycle.
+  NEITHER is inherently impossible from the HC structure alone.
+  The impossibility must come from the CYCLE STRUCTURE (alpha_1=3 overshoot).
+
+  2. SCORE DETERMINATION OF HC
+
+  Score class -> (H values, HC values):
+    [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]: H=[11, 13, 15] (AMBIGUOUS), HC=[1, 2, 3] (AMBIGUOUS)
+
+  OCR for H: 0.969925 (96.99%)
+  OCR for HC: 0.809524 (80.95%)
+  HC is LESS score-determined than H!
+
+  3. STRONG CONNECTIVITY AND HC
+
+  SC=True: count=544, avg HC=1.41, max HC=3, HC=0: 0.0%
+  SC=False: count=480, avg HC=0.00, max HC=0, HC=0: 100.0%
+
+  HC=0 AND strongly connected: 0 (should be 0 by Moon)
+  HC>0 AND NOT strongly connected: 0 (should be 0)
+  Moon's theorem verified: HC>0 <=> strongly connected: True
+
+  4. ALGEBRAIC FORMULA FOR HC
+
+  n=4 HC analysis:
+    scores=[np.int64(0), np.int64(1), np.int64(2), np.int64(3)], c3=0: HC in [0]
+    scores=[np.int64(0), np.int64(2), np.int64(2), np.int64(2)], c3=1: HC in [0]
+    scores=[np.int64(1), np.int64(1), np.int64(1), np.int64(3)], c3=1: HC in [0]
+    scores=[np.int64(1), np.int64(1), np.int64(2), np.int64(2)], c3=2: HC in [1]
+
+  5. FULL (H, HC) DISTRIBUTION AT n=5
+
+     H   HC    L  count   c3 range   SC?
+     1    0    1    120        [0] [False]
+     3    0    3    120        [1] [False]
+     5    0    5    240        [2] [False]
+     9    1    4    240        [3] [True]
+    11    1    6    120        [4] [True]
+    13    2    3    120        [4] [True]
+    15    2    5     24        [5] [True]
+    15    3    0     40        [4] [True]
+
+  6. L = H - n*HC AS AN INVARIANT
+
+  L distribution at n=5:
+    L=0: 40 tournaments (3.9%)
+    L=1: 120 tournaments (11.7%)
+    L=3: 240 tournaments (23.4%)
+    L=4: 240 tournaments (23.4%)
+    L=5: 264 tournaments (25.8%)
+    L=6: 120 tournaments (11.7%)
+
+  L values: [0, 1, 3, 4, 5, 6]
+  All L odd: False
+  L = 0 count: 40
+
+  L=0 tournaments (every HP in a cycle):
+    H=15, HC=3, scores=(np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)), c3=4
+    Total L=0: 40 tournaments
+    H values with L=0: [15]
+
+  7. CORRELATIONS
+
+         H vs c3: +0.9733
+         H vs S2: -0.9733
+         H vs HC: +0.9272
+        HC vs c3: +0.8165
+        HC vs S2: -0.8165
+         L vs S2: -0.4264
+          H vs L: +0.2075
+         HC vs L: -0.1741
+
+  KEY: HC correlates VERY strongly with H (as expected).
+  But L has a DIFFERENT correlation structure than H or HC.
+  L vs S2 tells us: how much of the NON-CYCLIC part is score-determined?
