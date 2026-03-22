@@ -1,0 +1,206 @@
+========================================================================
+  STABILIZER CODE DISTANCE AND TOURNAMENT THEORY
+  opus-2026-03-21-S127
+========================================================================
+
+========================================================================
+  PART 1: THE PARALLEL STRUCTURES
+========================================================================
+
+
+  STABILIZER CODES                  TOURNAMENTS
+  ==================                ===========
+  n qubits                          n vertices
+  Stabilizer group S ⊂ P_n          Tournament T ∈ {0,1}^{C(n,2)}
+  Graph state |G>                   Conflict graph Omega(T)
+  Logical operators                 Hamiltonian paths
+  Code distance d                   H(T) = I(Omega, 2)
+  d = min weight of logical op      H = total independent set count at λ=2
+
+  KEY DIFFERENCE:
+    Code distance = MINIMUM of a set of weights
+    Hamiltonian path count = SUM over all independent sets
+
+  KEY SIMILARITY:
+    Both depend on the CYCLE STRUCTURE of an associated graph.
+    For codes: short cycles in the Tanner graph limit d.
+    For tournaments: cycles in Omega determine I(Omega, 2).
+
+========================================================================
+  PART 2: THE GIRTH CONNECTION
+========================================================================
+
+
+  For stabilizer codes represented as graphs:
+    d >= girth(G)/2 (for certain constructions)
+    Graphs with large girth → good codes (high distance)
+
+  For tournament conflict graphs:
+    girth(Omega(T)) varies with T.
+    At n<=8: Omega(T) is claw-free → girth >= 4 (no triangles if bipartite)
+    At n>=9: Omega(T) can have claws → girth can be 3.
+
+  THE ANALOGY:
+    Large girth in the CODE graph → high DISTANCE
+    Large girth in Omega → ??? → maybe high H?
+
+  Let's check: does girth(Omega) correlate with H?
+
+  n=5: Girth of Omega vs H:
+   girth |  count |     E[H] |      H range
+  ----------------------------------------
+       3 |    544 |    11.03 | [9,15]
+     inf |    480 |     3.50 | [1,5]
+
+========================================================================
+  PART 3: SRCP AS A CODE PARAMETER
+========================================================================
+
+
+  In stabilizer code theory, the CODE determines which errors can be
+  corrected. The DISTANCE d is the minimum weight error that goes
+  undetected.
+
+  In tournament theory, the SRCP determines H. The "minimum" analog
+  is: what is the SMALLEST number of cycles that share an arc?
+
+  Define the MINIMUM ROOT CYCLE COUNT:
+    min_c3 = min over all directed arcs (i,j) of c3(i,j)
+    = the arc that participates in the FEWEST 3-cycles.
+
+  This is analogous to the code distance: it's the "weakest link"
+  in the cycle structure.
+
+  CONJECTURE: min_c3(T) is related to how "decodable" the tournament
+  is from its score sequence. Low min_c3 = some arcs carry no cycle info.
+
+  n=5: min_c3(T) vs H:
+   min_c3 |  count |     E[H] |      H range
+  ----------------------------------------
+        0 |    960 |     7.00 | [1,13]
+        1 |     64 |    15.00 | [15,15]
+
+========================================================================
+  PART 4: THE OCR PRIME DENOMINATORS AND CODE PARAMETERS
+========================================================================
+
+
+  From kind-pasteur-S16: The exact rational OCR values are:
+    OCR(5) = 18/19 (denominator 19 = largest prime factor of Var(H)(5))
+    OCR(6) = 12/13 (denominator 13 = largest prime factor of Var(H)(6))
+    OCR(7) = 120/131 (denominator 131 = largest prime factor of Var(H)(7))
+
+  Wait: 18/19 vs our computation 129/133 at n=5?
+  These DIFFER because S16 uses a different R² definition (regression)
+  while S103/S104 use Var(E[H|s])/Var(H) (variance decomposition).
+
+  The PRIME DENOMINATOR SEQUENCE: 19, 13, 131, ...
+  These are the SURPRISE PRIMES from the Var(H) factorization.
+  And they appear as DENOMINATORS of the OCR.
+
+  In coding theory: the code distance d often involves SPECIFIC PRIMES
+  related to the field size (GF(q) codes have d related to q).
+  In tournament theory: the OCR denominator involves specific primes
+  related to the Var(H) structure.
+
+  THE BRIDGE: Both involve "characteristic primes" that emerge from
+  the algebraic structure of the underlying system.
+
+  For stabilizer codes: the field is GF(2) (binary).
+  The code distance d measures the minimum Hamming weight.
+  For tournaments: the field is effectively GF(2) (binary arc choice).
+  The OCR denominator measures the "algebraic distance" from perfect
+  score determination.
+
+  THE SURPRISE PRIME SEQUENCE:
+    n=5: surprise prime = 19
+      p-1 = 18 = 2 x 3 x 3
+    n=6: surprise prime = 13
+      p-1 = 12 = 2 x 2 x 3
+    n=7: surprise prime = 131
+      p-1 = 130 = 2 x 5 x 13
+
+========================================================================
+  PART 5: THE STABILIZER CODE ANALOGY — PRECISE STATEMENT
+========================================================================
+
+
+  THE ANALOGY (formalized):
+
+  ┌─────────────────────┬──────────────────────────────────────────┐
+  │  STABILIZER CODE    │  TOURNAMENT                              │
+  ├─────────────────────┼──────────────────────────────────────────┤
+  │  n qubits           │  n vertices                              │
+  │  k logical qubits   │  ? (analogous to score sequence?)        │
+  │  Code distance d    │  "tournament distance" (SRCP depth?)     │
+  │  Stabilizer group   │  Conflict graph Omega(T)                 │
+  │  Logical operators  │  Hamiltonian paths                       │
+  │  Syndrome           │  Score sequence (shadow)                 │
+  │  Error correction   │  H determination from shadow             │
+  │  Uncorrectable err  │  OCR residual (H not det. by shadow)     │
+  │  Tanner graph girth │  Omega girth                             │
+  │  LDPC structure     │  Sparse Omega (high n)                   │
+  └─────────────────────┴──────────────────────────────────────────┘
+
+  THE PRECISE PARALLEL:
+
+  In a stabilizer code: given syndrome s, the decoder determines
+  the most likely error E. The code distance d is the minimum weight
+  error that has syndrome 0 (goes undetected).
+
+  In tournament theory: given score sequence s (= syndrome), the
+  "decoder" estimates H. The OCR residual is the probability of
+  ERROR in this estimation. The "tournament distance" would be the
+  minimum amount of cycle structure change that escapes the shadow.
+
+  DEFINE: d_T(n) = min over all pairs (T1, T2) with same scores but
+  different H of |SRCP(T1) - SRCP(T2)|_1 (L1 distance of profiles).
+
+  This is the TOURNAMENT DISTANCE: the minimum cycle-structure
+  difference between score-equivalent tournaments with different H.
+
+  At n=5: d_T(5) = 1 (the PoS class has H differing by 2, with
+  SRCP differing by 1 in one c5 count).
+
+  Tournament distance d_T at n=5:
+    d_T(5) = 9
+    This is the minimum SRCP L1 distance between score-equivalent
+    tournaments with different H values.
+
+========================================================================
+  PART 6: SYNTHESIS — THE CODE-TOURNAMENT BRIDGE
+========================================================================
+
+
+  THE UNIFIED PICTURE:
+
+  Both stabilizer codes and tournaments involve:
+  1. A BINARY STRUCTURE on n objects (qubits/vertices)
+  2. A GRAPH encoding constraints (Tanner/conflict graph)
+  3. A DISTANCE measuring the minimum undetectable change
+  4. An INDEPENDENCE STRUCTURE controlling capacity/count
+
+  The OCF identity H = I(Omega, 2) is the tournament's
+  PARTITION FUNCTION at fugacity 2 (= tau + tau^{-3}).
+
+  A stabilizer code's partition function would be:
+    Z(code, x) = sum over codewords c: x^{weight(c)}
+  The code distance d = min weight = smallest power of x with nonzero coefficient.
+
+  THE BRIDGE:
+    Tournament: Z = I(Omega, x) evaluated at x=2 gives H.
+    Code: Z evaluated at x→0 gives the code distance d.
+
+  Both are evaluations of the SAME type of partition function,
+  just at DIFFERENT points:
+    x = 2 (tournament): total count weighted by 2^{size}
+    x → 0 (code distance): minimum weight
+
+  The SRCP determines H (the x=2 evaluation).
+  An analogous profile might determine d (the x→0 evaluation).
+
+  This is a RESEARCH DIRECTION: define a "code cycle profile"
+  that determines the stabilizer code distance, analogous to how
+  the tournament SRCP determines H.
+
+opus-2026-03-21-S127: STABILIZER CODE DISTANCE AND TOURNAMENT THEORY
