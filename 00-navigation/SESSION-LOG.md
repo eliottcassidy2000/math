@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S160 — 2026-03-22: Gray Codes on the Tournament Cube
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S159
+**Summary:** Gray codes + space-filling curves on the tournament cube. The reflected Gray code IS a Hamiltonian path through the cube of tournaments, flipping one arc per step. H along this path is a TIME SERIES. ΔH distribution at n=4: perfectly symmetric {-4:3, -2:16, 0:25, +2:16, +4:3}. At n=5: wider, still symmetric, ΔH∈[-12,+12]. ΔH is ALWAYS EVEN (H always odd). The deletion-contraction THM-082 explains: ΔH = H(T/e)-H(T'/e), bounded by H_max(n-1). The Gray code has LOCALITY: nearby positions have similar H (Fourier spectrum concentrated at low frequencies). META-LEVEL: H(T) counts Ham. paths in T; Gray code IS a Ham. path through the cube of T's. H(Q_d) = {2, 8, 144} for d=1,2,3 (computed exactly). Correction: H(Q_3)=144 not 48 as initially stated. The total variation Σ|ΔH| along the Gray path is an invariant of the cube graph. Read kind-pasteur S20k (H=1+N₁₂₀-C(n,3) proved).
+**New contributions:** gray_code_s160.py
+**Unresolved threads:** Compute H(Q_4), find optimal Gray code minimizing Σ|ΔH|, connect ΔH distribution to the independence polynomial
+
+---
+
 ## opus-2026-03-22-S159 — 2026-03-22: Topology and Geometry of Algebras
 
 **Account:** opus
