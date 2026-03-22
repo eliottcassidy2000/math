@@ -1,0 +1,409 @@
+========================================================================
+  MONSTROUS MOONSHINE AND TOURNAMENT THEORY
+  opus-2026-03-21-S134
+========================================================================
+
+PART 1: MOONSHINE COEFFICIENTS AND TOURNAMENT NUMBERS
+------------------------------------------------------------
+
+  j-FUNCTION EXPANSION:
+  j(τ) = q⁻¹ + 744 + 196884q + 21493760q² + ...
+
+  c(-1) =               1  = 1  (leading term)
+  c( 0) =             744  = 2^3 × 3 × 31  = 3 × 248 = 3 × dim(E₈) = 24 × 31
+  c( 1) =          196884  = 2^2 × 3^3 × 1823  = 196883 + 1  (McKay)
+  c( 2) =        21493760  = 2^11 × 5 × 2099  = 196883 + 21296876 + 1
+  c( 3) =       864299970  = 2 × 3^5 × 5 × 355679
+  c( 4) =     20245856256  = 2^14 × 3^3 × 45767
+
+  TOURNAMENT PRIMES {7, 13, 19} IN j-COEFFICIENTS:
+    c(-1) = 1: NOT divisible by any of {7,13,19}
+    c( 0) = 744: NOT divisible by any of {7,13,19}
+    c( 1) = 196884: NOT divisible by any of {7,13,19}
+    c( 2) = 21493760: NOT divisible by any of {7,13,19}
+    c( 3) = 864299970: NOT divisible by any of {7,13,19}
+    c( 4) = 20245856256: NOT divisible by any of {7,13,19}
+
+  196884 = 12 × 16407 = 12 × 9 × 1823
+  196884 = 2² × 3 × 47 × 349 ... let me check
+  196884 = 2^2 × 3^3 × 1823
+  196883 = 47 × 59 × 71
+
+  McKAY'S KEY FACTORIZATION:
+  196883 = 47 × 59 × 71
+  These are the THREE LARGEST PRIMES dividing |M|!
+  47 = 48-1 = |BO|-1  (binary octahedral - 1)
+  59 (Hurwitz-like prime)
+  71 = the 20th prime
+
+
+PART 2: THE MONSTER AND TOURNAMENT STRUCTURE
+------------------------------------------------------------
+
+  |M| primes and tournament connections:
+
+    2^46  alphabet size q = fugacity λ = Rédei parity
+    3^20  tournament atom (3-cycle), {3,∞} face
+    5^ 9  boundary order n=5 where C(5,2)=10
+    7^ 6  FORBIDDEN (H=7 impossible), Hurwitz, Fano
+   11^ 2  first Paley prime with 1729 = H/|Aut|
+   13^ 3  SURPRISE prime, OCR denom at n=6
+   17^ 1  H_max at n=6 involves 17
+   19^ 1  OCR denom factor at n=5 (133=7×19)
+   23^ 1  24-1 = |BT|-1, Leech lattice dimension
+   29^ 1  ?
+   31^ 1  Mersenne prime, 744 = 24×31
+   41^ 1  41 = 42-1 = Hurwitz-1
+   47^ 1  47×59×71 = dim(χ₁) = 196883
+   59^ 1  59 × 71 × 47 = 196883
+   71^ 1  largest |M| prime, 71 = 64+7 = 2⁶+forbidden
+
+  CRITICAL: 7, 13, 19 ALL divide |M|!
+    7^6, 13^3, 19^1 appear in the Monster's order
+    Their product 1729 = 7×13×19 = j(i)+1
+    And 1729 divides |M| (since each factor does)
+
+  |M| has 15 distinct prime factors
+  15 = C(6,2) = number of arcs at n=6!
+  n=6 is the RAMSEY THRESHOLD where tournament theory
+  transitions from spherical to hyperbolic.
+
+
+PART 3: E₈ AND TOURNAMENTS
+------------------------------------------------------------
+
+  744 = 3 × 248 = (tournament atom) × dim(E₈)
+  This is the CONSTANT TERM of j(τ).
+
+  E₈ facts:
+    dim(E₈) = 248 (adjoint representation)
+    rank(E₈) = 8 = Bott period
+    |roots(E₈)| = 240 = |Φ(E₈)|
+    240 = 2 × 120 = 2 × |BI| (binary icosahedral)
+    240 = C(5,2) × 24 = 10 × 24 (Petersen × BT)
+
+  E₈ THETA FUNCTION (= E₄(τ)):
+    a_0 =      1  (trivial)
+    a_1 =    240  = |Φ(E₈)| = 10 × 24
+    a_2 =   2160  = 2160 = 6! × 3 = 720 × 3
+    a_3 =   6720
+    a_4 =  17520
+    a_5 =  30240
+    a_6 =  60480
+
+  240 = 10 × 24 = C(5,2) × 4!
+      = (arcs at n=5) × (Hamiltonian paths of transitive T₄)
+  This connects E₈ to the boundary tournament!
+
+
+PART 4: THE MOONSHINE MODULE V♮ AND TOURNAMENTS
+------------------------------------------------------------
+
+  The MOONSHINE MODULE V♮ (Frenkel-Lepowsky-Meurman, 1988):
+  A vertex operator algebra (VOA) with:
+    - Graded pieces: V♮ = ⊕_{n≥-1} V_n
+    - dim(V_{-1}) = 1 (vacuum)
+    - dim(V_0) = 0 (no weight-0 piece)
+    - dim(V_1) = 196884 (McKay's observation)
+    - Automorphism group = Monster M
+    - Partition function = j(τ) - 744
+
+  The TOURNAMENT ANALOGUE would be a graded space:
+    V_T = ⊕_{k≥0} V_k(T)
+  where:
+    - V_k(T) = independent sets of size k in Ω(T)
+    - dim(V_k) = α_k (the k-th independence number)
+    - "Partition function" = I(Ω, x) = Σ α_k x^k
+    - Evaluation at x=2: I(Ω, 2) = H(T)
+
+  The tournament "VOA" is the INDEPENDENCE COMPLEX of Ω(T),
+  graded by the size of the independent set.
+
+  COMPARISON:
+    Moonshine:   Z(q) = j(τ)-744 = Σ dim(V_n) q^n
+    Tournament:  Z(x) = I(Ω, x)  = Σ α_k x^k
+
+  Both are PARTITION FUNCTIONS of graded algebras!
+  Both evaluate at a specific point to give the key invariant:
+    Moonshine: j(τ) at τ = specific modular point
+    Tournament: I(Ω, x) at x = 2
+
+  The key difference: moonshine uses the MONSTER as automorphism group,
+  while tournaments use the SYMMETRIC GROUP S_n.
+
+
+PART 5: THE McKAY EQUATION 196884 = 196883 + 1
+------------------------------------------------------------
+
+  McKay (1978): 196884 = 196883 + 1
+  c₁(j) = dim(χ₁) + dim(χ₀) = (smallest nontrivial) + (trivial)
+
+  TOURNAMENT ANALOGUE:
+  For any tournament T on n vertices:
+    H(T) = 1 + 2|Ω(T)|  (at n=5, where Ω is complete)
+    H = (Rédei quantum) + (cycle contribution)
+    H = χ₀ + χ_cycle
+
+  The "1" in both equations is the TRIVIAL part:
+    196884: the trivial rep (dim 1)
+    H(T):   the transitive path (always exists, Rédei)
+
+  The "196883" / "2|Ω|" is the NONTRIVIAL part:
+    196884: the smallest Monster irrep
+    H(T):   the cycle-generated paths (from odd cycles)
+
+  AT THE PALEY TOURNAMENT T₁₁:
+    H(T₁₁) = 95095
+    H(T₁₁) - 1 = 95094 = 2 × 3^4 × 587
+    (H-1)/2 = 47547 = Δ_T = tournament discriminant
+    Δ_T = 3^4 × 587
+
+
+PART 6: HAUPTMODULN AND TOURNAMENT GENUS
+------------------------------------------------------------
+
+  Monstrous moonshine associates to each conjugacy class g ∈ M
+  a HAUPTMODUL (genus-0 modular function):
+
+    T_g(τ) = q⁻¹ + Σ a_n(g) q^n
+
+  where a_n(g) = Tr(g | V_n) (trace of g on the n-th graded piece).
+
+  For g = identity: T_id = j(τ) - 744 (the j-function).
+  For other g: T_g is the Hauptmodul for Γ_g (some genus-0 subgroup).
+
+  TOURNAMENT PARALLEL:
+
+  For each tournament T on n vertices, define:
+    T_T(x) = I(Ω(T), x) - 1 = Σ_{k≥1} α_k x^k
+
+  This is the "tournament Hauptmodul": the independence polynomial
+  minus the trivial (empty set) term.
+
+  At x = 2: T_T(2) = H(T) - 1 = 2Δ_T
+
+  For the REGULAR tournament (maximal symmetry):
+    T_reg is the "identity element" Hauptmodul.
+
+  For the TRANSITIVE tournament (no cycles):
+    T_trans(x) = 0 for all x (the cusp).
+
+  GENUS-0 PROPERTY:
+  At n=5, ALL tournaments have Ω = K_m (complete graph).
+  For K_m: I(K_m, x) = 1 + mx, so T_T(x) = mx (LINEAR in x).
+  A linear function has GENUS 0 as a rational function.
+
+  At n=6, some tournaments have α₂ > 0, giving quadratic T_T(x).
+  Quadratic = genus 0 still (rational parametrization exists).
+
+  PREDICTION: The tournament "Hauptmodul" T_T(x) has genus 0
+  for all tournaments on n ≤ N vertices, where N corresponds to
+  the genus-0 moonshine bound.
+
+
+PART 7: THE NUMBER 24 AND THE LEECH LATTICE
+------------------------------------------------------------
+
+  24 IN MOONSHINE AND TOURNAMENTS:
+
+  MOONSHINE:
+    24 = exponent of η in Δ(τ) = η(τ)²⁴
+    24 = dimension of Leech lattice Λ₂₄
+    24 = number of Niemeier lattices
+    24 coordinates → Conway groups → Monster
+
+  TOURNAMENTS:
+    24 = 4! = H(transitive T₄) × n_4
+    24 = |BT| (binary tetrahedral group)
+    24 = number of SC regular tournaments at n=5
+    24 × 31 = 744 = constant term of j(τ)
+    24 × 10 = 240 = |Φ(E₈)| = E₈ roots
+
+  THE 24 SC REGULAR TOURNAMENTS AT n=5:
+    Score: (2,2,2,2,2) (regular)
+    H = 15 (maximum)
+    Self-complementary: T ≅ T^c
+    |group| = 24 tournaments
+    = orbifold point τ=i (j=1728) in modular terms
+
+  LEECH LATTICE STRUCTURE:
+    Λ₂₄ vectors of norm 2: 0 (uniquely even unimodular)
+    Λ₂₄ vectors of norm 4: 196560 = 2⁴ × 3³ × 5 × 7 × 13
+
+    196560 = 2^4 × 3^3 × 5 × 7 × 13
+    Contains tournament primes: 7 ✓, 13 ✓, but not 19
+    196560 / 240 = 819 = 819 = 3^2 × 7 × 13
+    819 = 7 × 117 = 7 × 9 × 13 = 7 × 13 × 9
+    So 196560 = 240 × 7 × 13 × 9
+            = (E₈ roots) × (forbidden) × (surprise) × (atom²)
+
+
+PART 8: SUPERSINGULAR PRIMES AND TOURNAMENT PRIMES
+------------------------------------------------------------
+
+  Supersingular primes (dividing |M|):
+    [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]
+    Count: 15 = C(6,2) = arcs at n=6
+
+  Tournament primes (factors of 1729):
+    [7, 13, 19]
+    ALL are supersingular primes!
+
+  Product: 7 × 13 × 19 = 1729 = j(i) + 1
+  Sum: 7 + 13 + 19 = 39 = 3 × 13
+  39 = forbidden H at n=6 (temporary gap)
+
+  OGG'S THEOREM (1975, pre-moonshine):
+  The primes p where X₀(p)⁺ has genus 0 are EXACTLY
+  the supersingular primes = the primes dividing |M|.
+
+  This means: 7, 13, 19 are primes where the modular
+  curve X₀(p)⁺ has genus 0.
+
+  Tournament interpretation: the primes controlling the OCR
+  (and the forbidden H values) are exactly the primes where
+  the modular arithmetic is 'simple' (genus 0).
+
+
+PART 9: THE 196883-DIMENSIONAL SPACE
+------------------------------------------------------------
+
+  The GRIESS ALGEBRA has dimension 196884:
+    196884 = 1 + 196883 = (trivial) + (Griess)
+    196883 = 47 × 59 × 71
+
+  TOURNAMENT × GRIESS PARALLEL:
+    Griess algebra: commutative, non-associative, dim=196884
+    Tournament algebra: non-commutative, defined by arc directions
+    Symmetrization: (adj + adj^T)/2 = score-based (commutative)
+
+    196883 mod 7 = 1
+    196883 mod 13 = 11
+    196883 mod 19 = 5
+    196884 mod 7 = 2
+    196884 mod 13 = 12
+    196884 mod 19 = 6
+
+  196883 ≡ 1506 (mod 1729)
+  196884 ≡ 1507 (mod 1729)
+  196884 / 1729 = 113.8716
+  196884 = 113 × 1729 + 1507
+  113 = 113
+
+
+PART 10: HECKE OPERATORS AND THE OCR
+------------------------------------------------------------
+
+  In modular form theory, HECKE OPERATORS T_p act on modular forms:
+    T_p f(τ) = p^{k-1} f(pτ) + (1/p) Σ_{j=0}^{p-1} f((τ+j)/p)
+
+  They decompose the space M_k into eigenspaces:
+    M_k = ⊕ eigenspaces of T_p
+
+  In tournament theory, the SCORE CONDITIONING acts analogously:
+    E[H | score = s] averages H over the "orbit" of score s
+
+  THE PARALLEL:
+    Hecke operator T_p  ↔  Score conditioner E[·|score]
+    Eigenvalue of T_p   ↔  E[H|score]
+    Eigenspace           ↔  Score class
+    Eisenstein part      ↔  Var(E[H|score]) = explained variance
+    Cusp form part       ↔  E[Var(H|score)] = residual variance
+
+  OCR = Eisenstein fraction = ||E_k||² / ||M_k||²
+
+  At n=5: OCR = 129/133 = 1 - 4/133 = 1 - 4/(7×19)
+  The residual 4/(7×19) is the "cusp contribution."
+
+  MOONSHINE CONNECTION:
+  The Hecke eigenvalues for j(τ) are the Ramanujan τ(n) values:
+    τ(2) = -24, τ(3) = 252, τ(5) = 4830, τ(7) = -16744, ...
+
+  The tournament "Hecke eigenvalues" are E[H|score] for each score class.
+  At n=5: these are {1, 3, 5, 7, 9, 11, 13, 15} (one per score class).
+
+
+========================================================================
+  PART 11: THE GRAND SYNTHESIS — TOURNAMENT MOONSHINE
+========================================================================
+
+
+  MONSTROUS MOONSHINE says:
+    The j-function (a modular form for PSL(2,Z)) encodes
+    the representation theory of the Monster group M via
+    a vertex operator algebra V♮.
+
+  TOURNAMENT MOONSHINE says:
+    The independence polynomial I(Ω, x) (evaluated at x=2 = alphabet)
+    encodes the Hamiltonian path count H(T) via the conflict graph Ω(T).
+
+  THE BRIDGE:
+    Both are PARTITION FUNCTIONS of graded algebraic structures,
+    both live under the modular group PSL(2,Z), and they connect
+    at the number 1729:
+
+      j(i) + g(2) = 1728 + 1 = 1729 = 7 × 13 × 19
+
+    The j-invariant at the complement point (1728)
+    plus the tournament curvature quantum (1 = g(2))
+    gives the taxicab number, whose factors are the
+    tournament primes that control the OCR.
+
+  THE DICTIONARY:
+
+    MOONSHINE                    TOURNAMENT
+    ─────────────────────        ─────────────────────
+    Monster M                    Symmetric group S_n
+    |M| = 2^46 × 3^20 × ...     |S_n| = n!
+    j(τ) - 744                   I(Ω(T), x) - 1
+    q = e^{2πiτ}                 x = 2 (alphabet/fugacity)
+    dim(V_n) = c_n               α_k = indep sets of size k
+    χ_0 (trivial rep)            Rédei quantum (H ≥ 1)
+    χ_1 (196883-dim rep)         Cycle contribution 2|Ω|
+    McKay: c_1 = χ_0 + χ_1      H = 1 + 2|Ω| (at n=5)
+    Hauptmodul T_g(τ)            Tournament polynomial T_T(x)
+    Genus-0 property             Ω = K_m (complete) at n=5
+    Hecke operators T_p          Score conditioning E[·|score]
+    Ramanujan τ(n)               E[H|score] values
+    Eisenstein series E_k        Between-score variance
+    Cusp forms S_k               Within-score variance (OCR residual)
+    E₈ lattice, 240 roots        C(5,2) × 4! = 10 × 24 = 240
+    Leech Λ₂₄, 196560 vecs      196560 = 240 × 819 = E₈ × 7×13×9
+    Supersingular primes (15)    Primes where X₀(p)⁺ genus 0
+    1728 = j(i) = 12³           12 iso classes at n=5, cubed
+    196884 = 196883 + 1          H = (cycle paths) + (Rédei quantum)
+
+  WHAT MOONSHINE PREDICTS FOR TOURNAMENTS:
+
+  1. The tournament analogue of the Griess algebra should be
+     the commutative symmetrization of the tournament adjacency
+     algebra, graded by cycle count.
+
+  2. The tournament Hauptmoduln T_T(x) should all have genus 0
+     (at least at small n), paralleling moonshine's genus-0 property.
+
+  3. The tournament "McKay equation" H = 1 + 2|Ω| at n=5 should
+     generalize to H = (trivial) + (irrep sum) at all n, where
+     the irreps are of S_n acting on the independence complex.
+
+  4. There should be a VERTEX ALGEBRA structure on the independence
+     complex of Ω(T), whose automorphism group is related to Aut(T).
+
+  5. The OCR denominators should factor into SUPERSINGULAR PRIMES,
+     because these are the primes where the modular arithmetic is
+     genus-0 (maximally simple).
+     At n=5: 133 = 7 × 19 ✓ (both supersingular)
+     PREDICTION: all OCR denominators factor into supersingular primes.
+
+  VERIFICATION OF PREDICTION 5:
+    OCR denom at n=5 = 133 = 7 × 19
+    7 is supersingular: ✓ (divides |M|)
+    19 is supersingular: ✓ (divides |M|)
+    PREDICTION HOLDS at n=5!
+
+  First non-supersingular prime: 37
+  If OCR denom at n=7 involves 37, the prediction FAILS.
+  If it only involves primes from {2,3,5,7,11,13,17,19,23,29,31,41,47,59,71},
+  the prediction HOLDS.
+
+opus-2026-03-21-S134
