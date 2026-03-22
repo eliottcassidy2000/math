@@ -1,0 +1,118 @@
+============================================================
+  DEMO 1: LLM ARENA RANKING
+============================================================
+
+============================================================
+  PAIRWISE RANKING REPORT
+============================================================
+
+  Items: 5, Comparisons: 10/10 (100%)
+
+  RANKING:
+    1. GPT-4o (wins: 3)
+    2. Claude-3.5 (wins: 3)
+    3. Gemini-Pro (wins: 3)
+    4. Llama-3 (wins: 1)
+    5. Mistral (wins: 0)
+
+  QUALITY METRICS:
+    Consistent rankings (H): 3
+    Quality score (Q): 0.86  [1=clear, 0=ambiguous]
+    Condorcet winner: NONE (paradox!)
+    Directed 3-cycles: 1
+    Upsets: 0
+
+  MOST CRITICAL COMPARISONS:
+    GPT-4o > Mistral: impact = 6 (destabilizing)
+    Claude-3.5 > Mistral: impact = 6 (destabilizing)
+    Gemini-Pro > Mistral: impact = 6 (destabilizing)
+
+============================================================
+
+============================================================
+  DEMO 2: HIRING COMMITTEE
+============================================================
+
+============================================================
+  PAIRWISE RANKING REPORT
+============================================================
+
+  Items: 4, Comparisons: 6/6 (100%)
+
+  RANKING:
+    1. Alice (wins: 3)
+    2. Bob (wins: 2)
+    3. Carol (wins: 1)
+    4. Dave (wins: 0)
+
+  QUALITY METRICS:
+    Consistent rankings (H): 1
+    Quality score (Q): 1.00  [1=clear, 0=ambiguous]
+    Condorcet winner: Alice
+    Directed 3-cycles: 0
+    Upsets: 0
+
+  MOST CRITICAL COMPARISONS:
+    Alice > Dave: impact = 4 (destabilizing)
+    Alice > Carol: impact = 2 (destabilizing)
+    Bob > Dave: impact = 2 (destabilizing)
+
+============================================================
+  This is a TRANSITIVE tournament (H=1). Perfect consensus!
+  The committee unanimously agrees: Alice > Bob > Carol > Dave.
+
+============================================================
+  DEMO 3: SPORTS LEAGUE (WITH UPSETS)
+============================================================
+
+============================================================
+  PAIRWISE RANKING REPORT
+============================================================
+
+  Items: 5, Comparisons: 10/10 (100%)
+
+  RANKING:
+    1. Lions (wins: 3)
+    2. Tigers (wins: 2)
+    3. Bears (wins: 2)
+    4. Eagles (wins: 2)
+    5. Sharks (wins: 1)
+
+  QUALITY METRICS:
+    Consistent rankings (H): 13
+    Quality score (Q): 0.14  [1=clear, 0=ambiguous]
+    Condorcet winner: NONE (paradox!)
+    Directed 3-cycles: 4
+    Upsets: 2
+
+  MOST CRITICAL COMPARISONS:
+    Tigers > Lions: impact = 8 (stabilizing)
+    Sharks > Bears: impact = 8 (stabilizing)
+    Bears > Tigers: impact = 4 (stabilizing)
+
+  UPSETS (lower-ranked beat higher-ranked):
+    Tigers (2 wins) beat Lions (3 wins)
+    Sharks (1 wins) beat Bears (2 wins)
+
+============================================================
+  Stability score: 80.0% (top team stays #1 under 80% of arc reversals)
+
+============================================================
+  SCALABILITY NOTE
+============================================================
+
+  The H computation is O(2^n * n^2) via Hamiltonian path DP.
+  Practical limits:
+    n <= 15: instant (< 1 second)
+    n <= 20: feasible (< 1 minute)
+    n <= 25: possible with optimization (< 1 hour)
+    n > 25: use Copeland ranking + approximate Q score
+
+  For large n, the Copeland ranking captures 96-97%% of the
+  information (OCR theorem). The quality score Q can be
+  approximated from the score sequence alone.
+
+  APPROXIMATE Q FOR LARGE n:
+    Q_approx = 1 - c3 / C(n,3)
+    where c3 = number of 3-cycles (computable in O(n^3))
+    This captures the dominant source of ranking ambiguity.
