@@ -20,6 +20,19 @@ Entry format:
 **Summary:** Deep foundational investigation of WHY 2 is fundamental. The pseudo-doubling: squaring IS doubling in the multiplicative world, and the logarithm converts between them (log(x²)=2·log(x)). The √ is the half-step: √2 = 2^{1/2} is "halfway between 1 and 2" multiplicatively. The irrationality of √2 IS the incommensurability of the additive and multiplicative worlds. The deepest reason 2 appears everywhere: |∂([0,1])| = 2. The boundary of the unit interval has 2 points. Binary choice = boundary choice. Tournament arcs = boundary orientations. Cayley-Dickson = adjoining the other boundary point. The k-nacci cascade halves by 1/2 because halving IS the inverse boundary operation. Read kind-pasteur S18q/S18r (dimension axis, 30+ constants mapped, √ as dimensional projector). Verified: D(x²) ≈ 2·D(x) on the k-nacci ladder (squaring doubles dimension).
 **New contributions:** pseudo_doubling_s141.py
 **Unresolved threads:** Formalize D(x) as a dimension function, connect ∂([0,1]) = {0,1} to Stiefel-Whitney classes, explore base-3 and base-5 analogues
+---
+
+## opus-2026-03-21-S128 — 2026-03-21: Pseudo-Doubling — ln/sqrt/2 triangle, all inverses spherical, OCR layers = Cartan rank
+
+**Account:** opus
+**Summary:** The number 2 has three faces in tournament theory (choice, fugacity, growth) connected by ln and sqrt. ALL inverses of 2 (sqrt(2), ln(2), log_2(2)=1) are SPHERICAL — 2 is the unique integer at the spherical-hyperbolic interface. The pseudo-doubling zone [sqrt(tau), tau] contains phi, sqrt(3), sqrt(pi). OCF doubling layers (powers of 2) = Cartan rank. The OCR residual 4/133 = fugacity²/dim(E₇) = two layers of pseudo-doubling. 2 IS the phase transition of the integers.
+**Key:**
+1. **All inverses of 2 are SPHERICAL**: sqrt(2), ln(2), log₂(2)=1 all have g<0
+2. **2 = unique integer at the interface**: g(1)=-2, g(2)=+1, g(3)=+14
+3. **Pseudo-doubling zone**: [sqrt(tau), tau] = [1.356, 1.839] contains phi, sqrt(3)
+4. **OCF layers = Cartan rank**: floor(n/2) independent rotation planes = floor(n/2) doubling layers
+5. **Conservation as pseudo-doubling**: tau + 1/tau³ = 2, multiplicative defect 2/tau = 1.087
+6. **OCR = squared quantum**: 4/133 = 2²/dim(E₇)
 
 ---
 
