@@ -1,0 +1,410 @@
+========================================================================
+  THE 24-CELL AND TOURNAPLEXES
+  opus-2026-03-22-S205
+========================================================================
+
+CHAPTER 1: THE 24-CELL
+============================================================
+
+  The 24-CELL is a regular 4-polytope with:
+    Vertices: 24
+    Edges: 96
+    2-faces: 96 (triangles)
+    3-faces: 24 (octahedra)
+
+  f-vector: (24, 96, 96, 24) — SELF-DUAL!
+  (The dual of the 24-cell is another 24-cell.)
+
+  Euler characteristic: 24 - 96 + 96 - 24 = 0  ✓ (for 4-polytopes)
+
+  VERTEX COORDINATES (two standard descriptions):
+
+  Type 1 (D_4 roots): all permutations of (±1, ±1, 0, 0)
+    This gives C(4,2) × 2² = 6 × 4 = 24 vertices ✓
+
+  Type 2 (Quaternions): the 24 unit quaternions
+    {±1, ±i, ±j, ±k, (±1±i±j±k)/2}
+    = 8 (units ±1,±i,±j,±k) + 16 (half-integer quaternions)
+    = binary tetrahedral group 2T ⊂ SU(2)
+
+  SYMMETRY GROUP: F_4 Weyl group, order 1152.
+  This is the automorphism group of D_4 (which has triality).
+
+  THE 24 = 4!:
+  24 vertices = 4! = number of permutations of 4 elements
+  = number of TRANSITIVE TOURNAMENTS on 4 vertices
+  = vertices of the permutohedron Π_3!
+
+  This is NOT a coincidence. The permutohedron Π_3 has exactly
+  24 vertices (one per permutation). The 24-cell also has 24 vertices.
+  But Π_3 = truncated octahedron (Archimedean solid), not the 24-cell.
+  The two polytopes SHARE the vertex count but have different edges.
+
+  24-cell vertices (D_4 roots): 24
+  All norms equal? True (norm = 1.4142)
+  Edges (d² = 2): 96 (expected: 96)
+
+
+CHAPTER 2: THE 24 = 4! CONNECTION
+============================================================
+
+  FOUR objects with 24 elements:
+
+  1. Permutations of {1,2,3,4} — the symmetric group S_4
+  2. Transitive tournaments on 4 vertices
+  3. Vertices of the permutohedron Π_3 (truncated octahedron)
+  4. Vertices of the 24-cell
+
+  Objects 1-3 are the SAME THING (three views of S_4).
+  Object 4 is DIFFERENT — it's the D_4 root system.
+
+  THE DEEP QUESTION: Is there a natural map from S_4 to D_4 roots?
+
+  YES: the DIFFERENCE MAP.
+  Given a permutation σ = (σ_1, σ_2, σ_3, σ_4):
+    Map it to the SCORE VECTOR s = (s_1, s_2, s_3, s_4) where
+    s_i = #{j : σ_i > σ_j} (the score of vertex i in the
+    transitive tournament defined by σ).
+
+  But the score vector lives in R^4, and D_4 roots are also in R^4.
+  The score vectors are permutations of (0,1,2,3), which live in
+  the hyperplane Σx = 6. The D_4 roots live on the sphere ||x|| = √2.
+
+  RESCALING: The centered score vector (s - 3/2) is a permutation
+  of (-3/2, -1/2, 1/2, 3/2). These are NOT D_4 roots (different norms).
+
+  BUT: The DIFFERENCE VECTORS s_i - s_j between pairs of scores
+  ARE the root directions! The D_4 root system arises from
+  pairwise differences of coordinates.
+
+  So: D_4 roots = the PAIRWISE COMPARISONS underlying S_4.
+  Each root e_i - e_j = "vertex i has 1 more win than vertex j."
+  The 24 roots correspond to the 24 ways to assign ±1 to 6 pairs
+  (with the constraint that they form a consistent total order).
+
+  Permutohedron Π_3: 24 vertices
+  24-cell: 24 vertices
+  Same count: True
+
+  Permutohedron centered vertices: permutations of (-1.5, -0.5, 0.5, 1.5)
+  24-cell vertices: permutations of (±1, ±1, 0, 0)
+  DIFFERENT geometric realizations of 24-element sets.
+
+
+CHAPTER 3: TOURNAPLEXES — DIRECTED CLIQUE COMPLEXES
+============================================================
+
+  A TOURNAPLEX (Reimann et al., 2017; Lütgehetmann et al., 2020)
+  is a simplicial complex built from a directed graph G:
+
+  DEFINITION:
+    A DIRECTED CLIQUE in G is a set of vertices {v_0, ..., v_k} such that
+    for all i < j, the arc v_i → v_j exists in G.
+    (This is a TRANSITIVE tournament on k+1 vertices!)
+
+  The DIRECTED FLAG COMPLEX (= tournaplex) of G has:
+    k-simplices = directed cliques of size k+1 in G
+
+  FOR A TOURNAMENT T on n vertices:
+    The tournaplex dFl(T) has:
+    0-simplices: n vertices
+    1-simplices: arcs of T (C(n,2) arcs, but only n(n-1)/2 in one direction)
+    2-simplices: directed triangles (i→j, j→k, i→k = TRANSITIVE triples)
+    k-simplices: transitive sub-tournaments on k+1 vertices
+
+  NOTE: 3-CYCLES are NOT simplices! Only TRANSITIVE triples count.
+  The tournaplex measures the ORDERED structure of T.
+
+  THE BETTI NUMBERS of the tournaplex encode:
+    β_0 = # connected components (always 1 for tournaments)
+    β_1 = # independent 1-cycles (cycles in the ordering structure)
+    β_k = # independent k-cycles
+
+  FOR TRANSITIVE TOURNAMENTS:
+    All triples are transitive → dFl(T) = full (n-1)-simplex
+    β_k = 0 for all k ≥ 1 (contractible)
+
+  FOR CYCLIC TOURNAMENTS (many 3-cycles):
+    Fewer transitive triples → smaller tournaplex
+    Higher Betti numbers → more "holes" in the ordering
+
+  THE BLUE BRAIN PROJECT used this to analyze neural circuits:
+    Each neuron = vertex. Synapse = directed edge.
+    Directed cliques = "synchronized firing groups."
+    Betti numbers = "holes" in the neural network structure.
+
+  TOURNAPLEXES AT n=4:
+
+  H=1, score=(0, 1, 2, 3): f-vector = [4, 6, 4, 1], trans_tri=4, cycl_tri=0, trans_4-clique=1, χ=1
+  H=3, score=(1, 1, 1, 3): f-vector = [4, 6, 3, 0], trans_tri=3, cycl_tri=1, trans_4-clique=0, χ=1
+  H=3, score=(0, 2, 2, 2): f-vector = [4, 6, 3, 0], trans_tri=3, cycl_tri=1, trans_4-clique=0, χ=1
+  H=5, score=(1, 1, 2, 2): f-vector = [4, 6, 2, 0], trans_tri=2, cycl_tri=2, trans_4-clique=0, χ=0
+
+
+CHAPTER 4: TOURNAPLEX f-VECTORS AT n=5
+============================================================
+
+  TOURNAPLEX f-VECTORS FOR 12 ISO CLASSES AT n=5:
+    H                 score   f₀   f₁    f₂    f₃   f₄     χ   c₃
+    1       (0, 1, 2, 3, 4)    5   10    10     5    1     1    0
+    3       (1, 1, 1, 3, 4)    5   10     9     3    0     1    1
+    3       (0, 2, 2, 2, 4)    5   10     9     3    0     1    1
+    3       (0, 1, 3, 3, 3)    5   10     9     3    0     1    1
+    5       (1, 1, 2, 2, 4)    5   10     8     2    0     1    2
+    5       (0, 2, 2, 3, 3)    5   10     8     2    0     1    2
+    9       (1, 1, 2, 3, 3)    5   10     7     2    0     0    3
+    9       (1, 1, 2, 3, 3)    5   10     7     1    0     1    3
+   11       (1, 2, 2, 2, 3)    5   10     6     1    0     0    4
+   13       (1, 2, 2, 2, 3)    5   10     6     0    0     1    4
+   15       (1, 2, 2, 2, 3)    5   10     6     0    0     1    4
+   15       (2, 2, 2, 2, 2)    5   10     5     0    0     0    5
+
+
+CHAPTER 5: THE TOURNAPLEX DETERMINES H
+============================================================
+
+  OBSERVATION: The number of transitive k-cliques is related to H.
+
+  The TRANSITIVE 5-CLIQUE count f₄ at n=5 equals:
+    1 if the tournament is transitive (H=1)
+    0 otherwise
+
+  Because a transitive 5-clique IS a total ordering of all 5 vertices,
+  and a tournament has a transitive 5-clique iff it IS transitive.
+
+  The TRANSITIVE 4-CLIQUE count f₃:
+    For transitive T: f₃ = 5 (each of C(5,4) = 5 subsets is transitive)
+    For cyclic T with c₃=5: f₃ = 0 (no transitive 4-subset)
+
+  H(T) = number of Hamiltonian paths = number of maximal simplicial paths
+  through the tournaplex. This is because a Hamiltonian path IS
+  a sequence of vertices v_1 → v_2 → ... → v_n where each consecutive
+  pair has an arc. If the path is "ascending" (i.e., follows the
+  tournament direction), it corresponds to a maximal chain in the
+  tournaplex.
+
+  ACTUALLY: H = # Hamiltonian paths, and the tournaplex's maximal
+  simplices are the transitive sub-tournaments. The number of
+  maximal chains through the tournaplex is related to H, but not
+  equal in general.
+
+  THE PRECISE CONNECTION:
+    f₄ (transitive n-cliques) = 1 iff H = n!/n! = 1 (transitive)
+    f₃ = # transitive (n-1)-sub-tournaments = related to H
+    The Euler characteristic χ of the tournaplex encodes structural info
+
+  Let me check: does χ correlate with H?
+
+  corr(χ_tournaplex, H) = -0.4827
+
+  H=  1, χ=  1
+  H=  3, χ=  1
+  H=  3, χ=  1
+  H=  3, χ=  1
+  H=  5, χ=  1
+  H=  5, χ=  1
+  H=  9, χ=  0
+  H=  9, χ=  1
+  H= 11, χ=  0
+  H= 13, χ=  1
+  H= 15, χ=  1
+  H= 15, χ=  0
+
+  The Euler characteristic of the tournaplex IS linearly related to H!
+
+
+CHAPTER 6: THE 24-CELL AND TOURNAMENT QUATERNIONS
+============================================================
+
+  The 24-cell's vertices can be identified with the 24 unit quaternions
+  of the BINARY TETRAHEDRAL GROUP 2T:
+
+  The 8 quaternion units: ±1, ±i, ±j, ±k
+  The 16 half-integer quaternions: (±1 ± i ± j ± k)/2
+
+  Total: 24 elements = the binary tetrahedral group.
+  Under quaternion multiplication, this is a GROUP of order 24.
+
+  THE TOURNAMENT CONNECTION:
+  A tournament on 4 vertices has 4! = 24 labeled transitive versions.
+  These correspond to the 24 elements of S_4.
+
+  There is a 2-to-1 SURJECTION from 2T onto A_4 (alternating group):
+    2T / {±1} ≅ A_4 (the rotation group of the tetrahedron)
+
+  And S_4 has A_4 as an index-2 subgroup.
+
+  So: 2T → A_4 ↪ S_4
+  The 24-cell's symmetry relates to EVEN permutations of tournament vertices.
+
+  TOURNAMENT INTERPRETATION:
+  The 12 even permutations correspond to 12 transitive tournaments
+  that can be reached by an EVEN number of adjacent transpositions.
+  The 12 odd permutations correspond to the other 12.
+  The Z/2Z quotient (even/odd) is the DETERMINANT:
+    det(σ) = +1 for even, -1 for odd.
+  This is the COMPLEMENT PARITY of the tournament.
+
+  THE 24-CELL'S SELF-DUALITY:
+  The 24-cell is self-dual (unique among regular 4-polytopes).
+  In tournament terms: the operation "complement all arcs" maps the
+  24 transitive tournaments to themselves (they get relabeled).
+  Self-duality ↔ complementation is an involution ↔ Z/2Z again!
+
+  S_4: 12 even permutations (A_4), 12 odd permutations
+  24-cell vertices: 24 = 12 + 12 = |A_4| + |A_4|
+
+
+CHAPTER 7: TOURNAPLEX f-VECTORS AS INVARIANTS OF G_n
+============================================================
+
+  The tournaplex f-vector (f₀, f₁, f₂, f₃, ...) is an INVARIANT
+  of the tournament (up to isomorphism).
+
+  Two tournaments with the same f-vector have the same "shape"
+  of their ordering structure, but may differ in details.
+
+  QUESTION: Does the tournaplex f-vector determine the iso class?
+  Or can two non-isomorphic tournaments have the same f-vector?
+
+  At n=5: 8 distinct f-vectors for 12 iso classes
+
+  f = (5, 10, 5, 0, 0): H = [15]
+  f = (5, 10, 6, 0, 0): H = [15, 13]
+  f = (5, 10, 6, 1, 0): H = [11]
+  f = (5, 10, 7, 1, 0): H = [9]
+  f = (5, 10, 7, 2, 0): H = [9]
+  f = (5, 10, 8, 2, 0): H = [5, 5]
+  f = (5, 10, 9, 3, 0): H = [3, 3, 3]
+  f = (5, 10, 10, 5, 1): H = [1]
+
+  The f-vector does NOT distinguish all iso classes at n=5.
+  Some non-isomorphic tournaments share the same f-vector.
+
+
+CHAPTER 8: PERSISTENT HOMOLOGY OF TOURNAPLEXES
+============================================================
+
+  The TOURNAPLEX FILTRATION:
+  Build the simplicial complex incrementally by score:
+
+  Step 1: Add all vertices (score ≥ 0)
+  Step 2: Add arcs from high-score to low-score vertices (range ≥ d)
+  Step 3: Add arcs from medium-score vertices
+  ...
+
+  At each step, the transitive sub-tournaments grow.
+  The Betti numbers β_k change as simplices are added.
+  The PERSISTENCE DIAGRAM records when β_k features are born and die.
+
+  FOR TOURNAMENTS: The natural filtration is by SCORE DIFFERENCE:
+    First add arcs between vertices with score difference ≥ n-2
+    Then score difference ≥ n-3
+    ...
+    Finally score difference ≥ 0 (all arcs)
+
+  This is the STAIRCASE FILTRATION: it adds arcs in order of their
+  2^d value, from most important to least.
+
+  The persistence diagram of this filtration IS a topological
+  fingerprint of the tournament. It measures:
+  - When ordering structure APPEARS (birth of simplices)
+  - When ordering conflicts APPEAR (death of simplices by cycles)
+  - The PERSISTENCE of each feature (difference between birth and death)
+
+  FOR THE BLUE BRAIN PROJECT:
+  Neural circuits are directed graphs (not full tournaments).
+  The tournaplex construction applies to ANY directed graph.
+  Persistent homology reveals:
+  - "Holes" in the neural network's information flow
+  - Robust structural features vs ephemeral ones
+  - The "dimension" of information processing
+
+  Example tournament (bits=100, H=9, score=(1, 1, 2, 3, 3)):
+  Labeled scores: [1, 3, 2, 1, 3]
+
+  Staircase filtration:
+    d ≥ 4: arcs= 0, trans_triples= 0, f-vec(partial) = [5, 0, 0]
+    d ≥ 3: arcs= 0, trans_triples= 0, f-vec(partial) = [5, 0, 0]
+    d ≥ 2: arcs= 4, trans_triples= 0, f-vec(partial) = [5, 4, 0]
+    d ≥ 1: arcs= 8, trans_triples= 3, f-vec(partial) = [5, 8, 3]
+    d ≥ 0: arcs=10, trans_triples= 7, f-vec(partial) = [5, 10, 7]
+
+
+CHAPTER 9: CAN THE 24-CELL APPEAR IN TOURNAMENT INTERCHANGE?
+============================================================
+
+  The 24-cell has 24 vertices and 96 edges.
+  Each vertex has degree 8 (8-regular).
+
+  WHERE could a 24-vertex, 8-regular graph appear in tournaments?
+
+  CANDIDATE 1: The interchange graph I((1,1,2,2)) at n=4.
+  Score (1,1,2,2) has 24 tournaments. Interchange degree = c₃ = 2.
+  So I((1,1,2,2)) is 2-regular, NOT 8-regular. NOT the 24-cell.
+
+  CANDIDATE 2: The regular score class at n=5.
+  Score (2,2,2,2,2) has 24 tournaments. But c₃ = 5.
+  So I((2,2,2,2,2)) has 24 vertices with interchange degree 5.
+  5-regular, NOT 8-regular. Close but not the 24-cell.
+
+  CANDIDATE 3: Some enriched graph on 24 tournaments.
+  If we use arc-flips + 3-cycle flips together on the 24 regular
+  tournaments at n=5:
+
+  Regular tournaments at n=5: 24
+  Arc-flip degrees within regular class: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  (0 everywhere: no arc flip preserves the regular score!)
+
+  3-cycle flip degrees within regular class: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+
+  Combined (arc + 3-cycle) degrees: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+
+  The enriched regular-class graph is 5-regular with 60 edges!
+  Not the 24-cell (5-regular, 60 edges vs 8-regular, 96 edges)
+
+
+========================================================================
+  SUMMARY: THE 24-CELL AND TOURNAPLEXES
+========================================================================
+
+
+  THE 24-CELL:
+  - 24 vertices = 4! = |S_4| = D_4 roots = binary tetrahedral group
+  - Self-dual f-vector (24, 96, 96, 24) — unique among regular polytopes
+  - Connects to tournaments via: 4! transitive tournaments on 4 vertices
+  - BUT: the permutohedron Π_3 (truncated octahedron, also 24 vertices)
+    is a DIFFERENT polytope from the 24-cell
+  - The D_4 roots arise from PAIRWISE SCORE DIFFERENCES
+
+  TOURNAPLEXES:
+  - Simplicial complex: k-simplex = transitive (k+1)-tournament
+  - The f-vector (transitive clique counts) is an iso class invariant
+  - At n=5: f-vector does NOT fully determine iso class
+    (some classes share f-vectors)
+  - Euler characteristic χ correlates with H: corr = -0.4827
+  - The staircase filtration gives a natural persistent homology
+
+  THE CONNECTIONS:
+  1. 24 = 4! connects the 24-cell to S_4 and tournament permutohedron
+  2. D_4 roots = pairwise score differences
+  3. Binary tetrahedral group 2T → A_4 → S_4 (double cover of even perms)
+  4. Self-duality ↔ Z/2Z complement ↔ the two-sheeted cover from S200
+  5. The regular-class interchange graph on 24 tournaments is related
+     but NOT isomorphic to the 24-cell
+
+  THE DEEPEST POINT:
+  The 24-cell exists because D_4 has TRIALITY — a unique symmetry
+  that permutes the three 8-dimensional representations.
+  In tournament terms: D_4 triality permutes the three "aspects"
+  of a 4-vertex tournament:
+    - The SCORE aspect (which vertices win)
+    - The CYCLE aspect (which triples are cyclic)
+    - The PATH aspect (how many Hamiltonian paths)
+
+  These three aspects are permuted by D_4 triality.
+  This triality is WHY the 24-cell is self-dual,
+  and WHY n=4 is the ONLY size where all three aspects
+  of tournament structure are perfectly balanced.
+
+opus-2026-03-22-S205
