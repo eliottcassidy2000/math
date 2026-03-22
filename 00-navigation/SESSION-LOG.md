@@ -13,19 +13,13 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-21-S124 — 2026-03-21: Freudenthal Magic Square — 1-OCR=dim(H)/dim(E₇)=4/133, R-row diffs=h+1 primes
+## opus-2026-03-21-S136 — 2026-03-21: Cayley-Dickson Tower in Tournament Theory
 
 **Account:** opus
-**Summary:** Merged the Freudenthal magic square into the tournament framework. The quaternion row {21,35,66,133} contains the key tournament numbers. 1-OCR(n=5) = 4/133 = dim(H)/dim(E₇) = quaternion/exceptional ratio! R-row differences {5,13,31} are EXACTLY h+1 for G₂, F₄, E₈. O-row difference 55=C(11,2)=dim(so(11)). |Phi+(E₇)|=63=7×9=second forbidden H. The magic square IS a map of tournament structural complexity.
-**Key:**
-1. **1-OCR = dim(H)/dim(E₇) = 4/133**: OCR residual = quaternion/E₇ ratio
-2. **R-row diffs = {5,13,31}**: exactly h+1 for G₂, F₄, E₈!
-3. **H-row diffs = {14,31,67}**: 14 = dim(G₂) = c₃(Paley T₇)
-4. **O-row diff 55 = C(11,2)**: connects to H(T₁₁)=55×1729
-5. **|Phi+(E₇)| = 63 = 7×9**: second forbidden H value at n≤7
-6. **H-row sum = 255 = 2⁸-1**: Mersenne number
-7. **Tournament magic square reinterpretation**: triv/binary/cycle/Fano
-**Scripts:** freudenthal_tournament_s124.py
+**Continuation of:** opus-2026-03-21-S135
+**Summary:** Cayley-Dickson construction R→C→H→O→S→P mapped to tournaments. Property loss: ordering→commutativity→associativity→division→power-assoc = transitivity→cycles→antisymmetry→3-cycles→forbidden H. The 3-cycle IS non-associativity (a>b,b>c⇏a>c). H=7 forbidden = sedenion zero divisor. 8 tournaments at n=3 = dim(O). 7=dim(O)-1=Fano=h(G₂)+1=Hurwitz=forbidden H (five views of one fact). H=21=3×7 = compound zero divisor at pathion level (dim 32). H(T^c)=H(T) verified all n≤5 (alternativity holds). The exceptional tower G₂→E₈ tracks primes from the octonionic Cayley-Dickson mechanism.
+**New contributions:** cayley_dickson_tower_s136.py
+**Unresolved threads:** Formalize tournament composition non-associativity, sedenion zero divisor ↔ forbidden configuration, tournament octonion algebra
 
 ---
 
