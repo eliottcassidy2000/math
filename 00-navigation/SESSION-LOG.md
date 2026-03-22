@@ -20,6 +20,21 @@ Entry format:
 **Summary:** Deep investigation of what imaginary units ACTUALLY are, correcting superficial analogies. Key: e²=-1 means e is a HALF-NEGATION (90° rotation, order 4). The quaternion product rule ij=k IS a directed 3-cycle — the sign encodes direction. Tournaments see the UNSIGNED rotation (the 3-cycle) but not the SIGN (the ±1). The gap: tournaments are type {3,∞} (triangular, order 3) while imaginary units are type {4,...} (square, order 4). They connect through the double cover: tournament 3-cycles cover quaternion rotations, with the ±1 sign as kernel. A tournament on 7 vertices makes 21 binary choices; the Fano plane determines only 7 of these (1/3). The remaining 14 are non-octonionic. The OCR residual IS the gap between signed (algebraic) and unsigned (tournament) rotation structure. Read kind-pasteur S18k/S18l/S18m (three towers, Vitali atom, 17 atoms catalog).
 **New contributions:** imaginary_units_s138.py
 **Unresolved threads:** Formalize the covering map from tournament 3-cycles to quaternion rotations, compute the "sign content" of tournament structure, connect the 14 extra DoF to specific invariants
+---
+
+## opus-2026-03-21-S126 — 2026-03-21: Imaginary Units — arcs ARE i²=-1, 3-cycle=quaternion mult, c₅=pentagonal imaginary
+
+**Account:** opus
+**Summary:** Deep investigation of what imaginary units ARE for tournaments. Each arc E_{ij} satisfies E²=-(E_ii+E_jj): it squares to negation in its plane — literally i²=-1. The Lie bracket [E_01,E_12]=E_02 IS quaternion multiplication ij=k. The 3-cycle is the QUATERNIONIC SUBSYSTEM. c₃ counts quaternionic triples; c₅ counts pentagonal imaginary structures. The OCR residual = pentagonal content invisible to quaternionic shadow. exp(B) is the tournament's rotation; flat spectrum (Paley) = uniform rotation = max H.
+**Key:**
+1. **E_{ij}² = -(E_ii+E_jj)**: each arc squares to negation in its plane. VERIFIED.
+2. **[E_{ij},E_{jk}]=E_{ik}**: Lie bracket = quaternion multiplication. VERIFIED.
+3. **3-cycle = quaternionic triple**: ij=k in quaternions ↔ [E_01,E_12]=E_02 in so(n)
+4. **c₅ = pentagonal imaginary**: the hidden invariant is the FIRST non-quaternionic structure
+5. **All tournaments on the imaginary sphere**: ||B||²=n(n-1) = constant. Only DIRECTION varies.
+6. **exp(B) is the tournament rotation**: flat angles (Paley) → max H, peaked angles → min H
+7. **H = number of independent imaginary configurations at fugacity 2**
+**Scripts:** imaginary_units_s126.py (partial — has runtime error in regular T_5 section)
 
 ---
 
