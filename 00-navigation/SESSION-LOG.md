@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S166 — 2026-03-22: Iso Class Graph Formula Hunting — 8 Theorems, Mean Reversion
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S165
+**Summary:** Deep formula hunting on the iso class graph (arc-reversal graph on tournament isomorphism classes). 8 confirmed formulas/theorems. KEY DISCOVERIES: (1) E[H(T_e)] = E[H] exactly — arc reversal preserves expected H via bijection argument. (2) Row sum formula: sum_j F[i][j] = size(i) * C(n,2). (3) Score L1 distance between adjacent classes = 2 always (except within-score: 0). (4) MEAN REVERSION: E[H(T_e)|class i] = a + b*H_i with b~0.59 at n=5 — low-H drifts up, high-H drifts down. The iso class graph IS the transition graph of a mean-reverting random walk. (5) All edge weights at n=4 are exactly n!=24. (6) F[i][j]*|Aut_i|*|Aut_j|/n!^2 takes restricted values. (7) Self-loop per tournament: transitive has 4 neutral arcs, regular has 0. (8) E[dH^2|class] varies from 54/5 to 138/5. Diameter conjecture: n-2 (verified n=3,4,5).
+**New contributions:** iso_class_graph_formulas_s166.py, iso_class_deep_formulas_s166b.py + outputs
+**Unresolved threads:** Prove diameter = n-2, find exact F[i][j] formula, compute spectral gap for mean-reversion rate
+
+---
+
 ## opus-2026-03-22-S170 — 2026-03-22: Iso Class Graph — Blue/Black Edges, 30 Edges, Diameter 3
 
 **Account:** opus
