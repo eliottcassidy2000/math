@@ -13,6 +13,16 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S181 — 2026-03-22: Meta-Graph Deep — Self-Loop = 1/2, 3/8, 11/64, Denominator = 2^{C(n-1,2)}!
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S180
+**Summary:** Integrated kind-pasteur G_6 data (56 nodes, 290 edges, 292K chains). EXACT SELF-LOOP FRACTIONS: n=3: 1/2, n=4: 3/8, n=5: 11/64. DISCOVERY: the denominator is 2^{C(n-1,2)} = the number of even graphs! (2^1, 2^3, 2^6). Numerators: 1, 3, 11. Growth laws tabulated with ratios. Width=n-2 REFUTED (width(6)=6≠4). Max degree: exact Mersenne at n=3,4,5 but off by 1 at n=6 (14 vs 15). Three conjectures CONFIRMED (unique source, zero H-down, super-exp chains). Three REFUTED (width, Mersenne max-deg, sinks=2). Level edge fraction: 0%, 0%, 3.3%, 5.2% — the class-level OCR residual. Self-loop ratio to 1/n: {1.5, 1.5, 0.86, 0.46} — decreases faster than 1/n.
+**New contributions:** meta_graph_deep_s181.py
+**Unresolved:** Prove denominator = 2^{C(n-1,2)} for self-loop fraction, find formula for numerators 1,3,11,?, compute at n=6
+
+---
+
 ## opus-2026-03-22-S180 — 2026-03-22: COMPLETE PARALLEL — Every Technique on G_5
 
 **Account:** opus
