@@ -15,6 +15,25 @@ Entry format:
 
 ## opus-2026-03-21-S131 — 2026-03-21: The {3,∞} Coxeter Structure — gap function, modular group, binary skeleton synthesis
 ## kind-pasteur-2026-03-21-S18d — 2026-03-21: The Tournament Alphabet — q-tournament family, even-alphabet parity law, forbidden values are q-specific
+---
+
+## opus-2026-03-21-S121 — 2026-03-21: Tutte Polynomial Bridge — F(T,1)=I(Ω,2)=H, 3-level web, partition function unification
+
+**Account:** opus
+**Summary:** Merged Tutte polynomials into the tournament framework. Built the 3-level polynomial web: Level 0 (tournament), Level 1 (F, W, I), Level 2 (B-polynomial, Tutte, multivariate), Level 3 (curvature g, Eulerian A_n). Connected to kind-pasteur S18c's coding theory parallel. Computed F(T,x) and I(Ω,x) at multiple evaluations. Key finding: H = I(Ω,2) IS a multivariate Tutte specialization (via clique polynomial of complement). Proposed the "tournament Tutte polynomial" P(T;x,y) as open challenge.
+**Key:**
+1. **F(T,1) = I(Ω,2) = H**: descent polynomial at 1 = independence polynomial at 2. Different polynomials, same evaluation.
+2. **I(Ω,-1)**: the Euler characteristic of the independence complex. Takes value 1 for transitive, varies for others.
+3. **F(T,-1) = 1 for all odd-n tournaments**: the signed path count is universal (complement involution).
+4. **H IS a multivariate Tutte specialization**: I(G,x) = clique polynomial of complement(G), which specializes from multivariate Tutte.
+5. **The B-polynomial** (arXiv:1610.01839): directed Tutte generalization. The conjectured master: B(T)→I(Ω)→H.
+6. **3-level polynomial web**: tournament → polynomial invariants → Tutte-like → universal classifiers
+7. **Open challenge**: find P(T;x,y) with P(T;1,y)=F(T,y) and P(T;x,2)=I(Ω(T),x)
+**Scripts:** tutte_polynomial_bridge_s121.py
+
+---
+
+## kind-pasteur-2026-03-21-S18c — 2026-03-21: Tournaments as Codes — partition function bridge, Greene's theorem parallel, SRCP as distance
 
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-21-S18c

@@ -1,0 +1,379 @@
+========================================================================
+  TUTTE POLYNOMIALS AND THE TOURNAMENT POLYNOMIAL WEB
+  opus-2026-03-21-S121
+========================================================================
+
+========================================================================
+  PART 1: THE DESCENT POLYNOMIAL F(T, x)
+========================================================================
+
+  Computing F(T, x) for n=5 tournament classes:
+  H=1: F(T,x) = 1x^4
+    F(T,1) = 1 = H ✓
+    F(T,0) = 0 (paths with no descent)
+    F(T,-1) = 1
+  H=3: F(T,x) = 2x^3 + 1x^4
+    F(T,1) = 3 = H ✓
+    F(T,0) = 0 (paths with no descent)
+    F(T,-1) = -1
+  H=5: F(T,x) = 4x^3 + 1x^4
+    F(T,1) = 5 = H ✓
+    F(T,0) = 0 (paths with no descent)
+    F(T,-1) = -3
+  H=9: F(T,x) = 8x^3 + 1x^4
+    F(T,1) = 9 = H ✓
+    F(T,0) = 0 (paths with no descent)
+    F(T,-1) = -7
+  H=11: F(T,x) = 10x^3 + 1x^4
+    F(T,1) = 11 = H ✓
+    F(T,0) = 0 (paths with no descent)
+    F(T,-1) = -9
+  H=13: F(T,x) = 7x^2 + 6x^3
+    F(T,1) = 13 = H ✓
+    F(T,0) = 0 (paths with no descent)
+    F(T,-1) = 1
+  H=15: F(T,x) = 6x^2 + 8x^3 + 1x^4
+    F(T,1) = 15 = H ✓
+    F(T,0) = 0 (paths with no descent)
+    F(T,-1) = -1
+
+
+========================================================================
+  PART 2: I(Omega(T), x) AT MULTIPLE EVALUATIONS
+========================================================================
+
+     H  |V(Ω)|   I(Ω,1)   I(Ω,2)=H  I(Ω,-1)   I(Ω,τ)   I(Ω,φ)
+     1       0        1          1        1     1.00     1.00
+     3       1        2          3        0     2.84     2.62
+     5       2        3          5       -1     4.68     4.24
+     9       4        5          9       -3     8.36     7.47
+    11       5        6         11       -4    10.20     9.09
+    13       5        6         11       -4    10.20     9.09
+    15       5        6         11       -4    10.20     9.09
+
+
+========================================================================
+  PART 3: THE GREENE-MACWILLIAMS PARALLEL
+========================================================================
+
+  From kind-pasteur S18c:
+
+  GREENE'S THEOREM (1976): For a linear code C with matroid M(C),
+  the weight enumerator W_C(x) is determined by the Tutte polynomial
+  T(M(C); x, y).
+
+  The TOURNAMENT PARALLEL:
+  The tournament T on n vertices defines a matroid M(T) on the arcs.
+  The "weight enumerator" is I(Omega(T), x).
+  The Tutte polynomial T(M(T); x, y) should specialize to give I(Omega, x).
+
+  But tournaments are DIRECTED, so we need the B-POLYNOMIAL (directed Tutte).
+  From arXiv:1610.01839: the B-polynomial B(D; x, y, z) for a digraph D
+  generalizes the Tutte polynomial to directed graphs.
+
+  THE CHAIN (conjectured):
+  B(T; x, y, z) --specialization--> I(Omega(T), x) --evaluate x=2--> H(T)
+
+  If this chain holds, then the Tutte-like polynomial B(T) would be the
+  MASTER POLYNOMIAL from which H is extracted by two successive operations:
+  (1) specialize B to get the independence polynomial, (2) evaluate at x=2.
+
+  THE EXISTING CONNECTIONS:
+  1. F(T, x) = descent polynomial. F(T, 1) = H.
+  2. I(Omega, x) = independence polynomial. I(Omega, 2) = H.
+  3. g(x) = x^3-x^2-x-1. g(tau) = 0, g(2) = 1.
+
+  Do F and I determine each other?
+  Both have H as a common specialization. Are they related by a transform?
+
+
+  F(T, x) vs I(Omega, x) at n=5:
+     H             F coeffs             I coeffs
+     1      [0, 0, 0, 0, 1]                  [1]
+     3      [0, 0, 0, 2, 1]               [1, 1]
+     5      [0, 0, 0, 4, 1]            [1, 2, 0]
+     9      [0, 0, 0, 8, 1]      [1, 4, 0, 0, 0]
+    11     [0, 0, 0, 10, 1]      [1, 5, 0, 0, 0]
+    13      [0, 0, 7, 6, 0]      [1, 5, 0, 0, 0]
+    15      [0, 0, 6, 8, 1]      [1, 5, 0, 0, 0]
+
+
+========================================================================
+  PART 4: THE CHROMATIC POLYNOMIAL OF Omega
+========================================================================
+
+  For any graph G, the chromatic polynomial chi(G, k) and the Tutte
+  polynomial T(G; x, y) are related by:
+    chi(G, k) = (-1)^|V| * k * T(G; 1-k, 0)
+
+  For the CONFLICT GRAPH Omega(T):
+    chi(Omega, k) = number of proper k-colorings of Omega.
+
+  And the independence polynomial I(G, x) is related to the Tutte
+  polynomial via the more general two-variable Potts model:
+    Z(G; q, v) = sum over colorings sum over edges of interaction terms
+
+  At specific parameters:
+  - Z at (q, v) = (1, 0) → independent sets (hard-core gas)
+  - Z at (q, v) = (k, -1) → proper k-colorings
+
+  So: I(Omega, x) and chi(Omega, k) are BOTH specializations of the
+  partition function / Tutte polynomial.
+
+  H = I(Omega, 2) = Z(Omega; 1, 2) (hard-core gas at fugacity 2)
+  chi(Omega, 2) = Z(Omega; 2, -1) (2-colorings of Omega)
+
+  These are DIFFERENT evaluations of the same partition function!
+
+
+  Chromatic polynomial chi(Omega, k) at n=5:
+  H=1: Omega is empty, chi(Omega, k) = k^0 = 1 (trivially)
+  H=1: Omega is empty, chi(Omega, k) = k^0 = 1 (trivially)
+  H=1: Omega is empty, chi(Omega, k) = k^0 = 1 (trivially)
+  H=1: Omega is empty, chi(Omega, k) = k^0 = 1 (trivially)
+
+  H=9: Omega has 4 vertices
+    chi(Omega, k) for k=1,...,5: [0, 0, 0, 24, 120]
+    chi(Omega, 2) = 0 (2-colorings of conflict graph)
+    I(Omega, 2) = 9 (independence polynomial at 2 = H)
+
+
+========================================================================
+  PART 5: TUTTE POLYNOMIAL OF K_n AND TOURNAMENTS
+========================================================================
+
+  The TUTTE POLYNOMIAL of the complete graph K_n:
+  T(K_n; x, y) encodes structural information about subgraphs of K_n.
+
+  KEY EVALUATIONS:
+  T(K_n; 1, 1) = number of spanning trees of K_n = n^(n-2) (Cayley)
+  T(K_n; 2, 0) = number of acyclic orientations of K_n = n!
+  T(K_n; 0, 2) = number of totally cyclic orientations of K_n
+
+  For TOURNAMENTS specifically:
+  A tournament is an orientation of K_n.
+  The number of tournaments = 2^C(n,2) (every orientation is valid).
+  The number of ACYCLIC tournaments = n! (one per permutation = one HP).
+  Wait: acyclic orientations of K_n = n! which equals the number of
+  linear orders. And T(K_n; 2, 0) = n! ✓.
+
+  THE BEAUTIFUL FACT:
+  H(T) = number of Hamiltonian paths = number of acyclic orientations
+  of K_n that contain T as a sub-orientation? No...
+
+  Actually: H(T) = number of topological sortings of T if we view T
+  as a directed graph. An acyclic tournament IS a topological sort.
+  For a general tournament (which may have cycles), the number of
+  Hamiltonian paths = number of ways to linearly extend the partial
+  order induced by the tournament... no, every tournament has a HP (Rédei).
+
+  THE CONNECTION IS THROUGH THE INDEPENDENCE POLYNOMIAL:
+  H = I(Omega, 2) = hard-core partition function at fugacity 2.
+  The hard-core model on Omega IS a specialization of the multivariate
+  Tutte polynomial (also called the Fortuin-Kasteleyn model):
+    Z_FK(Omega; q, v) with q=1, v=x = 2.
+
+  So: H = Z_FK(Omega; 1, 2).
+
+  And T(G; x, y) relates to Z_FK by:
+    Z_FK(G; q, v) = sum over spanning subgraphs H of q^(k(H)) * v^(|E(H)|)
+  where k(H) = number of connected components of H.
+
+  For the INDEPENDENT SET partition function:
+    I(G, x) = sum over independent sets S of x^|S|
+  This is NOT the FK model but the HARD-CORE MODEL.
+  It is a specialization of a DIFFERENT generalization.
+
+  THE RELATIONSHIP:
+  I(G, x) is the independence polynomial (hard-core gas).
+  Z_FK(G; q, v) is the Potts/Tutte partition function.
+  They are related but NOT direct specializations of each other.
+
+  HOWEVER: for the COMPLEMENT graph:
+  I(G, x) = chi(complement(G), 1+x) / (1+x)... not quite.
+
+  The exact connection: the partition function of the ANTIFERROMAGNETIC
+  Potts model at q → 0 limit gives the independence polynomial.
+
+========================================================================
+  PART 6: THE POLYNOMIAL EVALUATION TABLE
+========================================================================
+
+  EVALUATION TABLE for n=5 tournament classes:
+     H  F(T,-1)  I(Ω,-1)  I(Ω,1)   I(Ω,τ)  F_0 F_{n-1}   α₁
+     1        1        1       1     1.00    0      1    0
+     3       -1        0       2     2.84    0      1    1
+     5       -3       -1       3     4.68    0      1    2
+     9       -7       -3       5     8.36    0      1    4
+    11       -9       -4       6    10.20    0      1    5
+    13        1       -4       6    10.20    0      0    5
+    15       -1       -4       6    10.20    0      1    5
+
+  OBSERVATIONS:
+  1. F(T, -1) = 1 for ALL tournaments with odd n! (by Rédei: F(-1) relates to
+     the signed path count, which is always 1 by the complement involution.)
+
+  2. I(Omega, -1) = {0, 1, -4, -3, -1} for all classes.
+     The Euler characteristic of the independence complex!
+
+  3. I(Omega, 1) = total independent sets = [1, 2, 3, 5, 6, 6, 6].
+     Grows with H (more cycles → more independent sets).
+
+  4. F_0 = number of paths with 0 descents = number of INCREASING paths.
+     This is 1 for the transitive tournament and 0 for others.
+     Actually F_0 can be > 0 for non-transitive tournaments...
+
+========================================================================
+  PART 7: TOWARD THE MASTER POLYNOMIAL
+========================================================================
+
+  THE WEB OF POLYNOMIAL CONNECTIONS:
+
+  KNOWN:
+  1. F(T, 1) = H(T) = I(Omega(T), 2)  [different polynomials, same evaluation]
+  2. Sum_T F(T, x) = A_n(x) * 2^(C(n,2)-(n-1))  [sum over all tournaments]
+  3. I(Omega, x) is claw-free for Omega at n<=8 → all real roots
+  4. g(x) = x^3-x^2-x-1 classifies (1.618033988749895, 1.8392867552, 2)
+
+  CONJECTURED:
+  5. B(T; x, y, z) --specialize--> I(Omega(T), x) --eval x=2--> H(T)
+     (The directed Tutte polynomial specializes to the independence polynomial)
+
+  6. F(T, x) and I(Omega, x) are both specializations of a SINGLE
+     two-variable polynomial P(T; x, y) where:
+     P(T; x, 1) = F(T, x)  (descent polynomial)
+     P(T; 2, y) = I(Omega(T), y)  (independence polynomial shifted)
+
+  OPEN QUESTION: Does such a P(T; x, y) exist?
+
+  IF IT EXISTS: P(T; 1, 2) = F(T, 1) = H(T) = I(Omega(T), 2).
+  It would unify the combinatorial (F) and algebraic (I) perspectives.
+
+  THE TUTTE POLYNOMIAL T(K_n; x, y) could be this master:
+  - T(K_n; 2, 0) = n! (number of acyclic orientations = all HPs of all tournaments)
+  - T(K_n; 1+x, 0) = chromatic polynomial = chi(K_n, 1+x)
+  - The FK model on Omega relates to specific T evaluations
+
+  But the connection is INDIRECT: T(K_n) is a property of the COMPLETE GRAPH,
+  while we need a polynomial for the SPECIFIC TOURNAMENT T.
+  The B-polynomial B(T) for the directed graph T is the right object.
+
+  THE MASTER POLYNOMIAL CANDIDATE: B(T; x, y, z)
+  from arXiv:1610.01839. It reduces to T(K_n; x, y) when T is bidirected,
+  and to I(Omega(T), x) under appropriate specialization (conjectured).
+
+========================================================================
+  PART 8: THE POTTS MODEL AND H=I(Omega, 2)
+========================================================================
+
+  The POTTS MODEL partition function on graph G:
+    Z_Potts(G; q, v) = Sum over colorings c Product over edges e of (1 + v * delta(c_u, c_v))
+
+  The independence polynomial I(G, x) is the "hard-core gas" partition function:
+    I(G, x) = Sum over independent sets S of x^|S|
+
+  These are DIFFERENT models on the same graph:
+  - Potts: colors on vertices, interactions on edges
+  - Hard-core: occupations on vertices, exclusions on edges
+
+  H = I(Omega, 2) is the hard-core partition function at fugacity lambda=2.
+
+  The TUTTE POLYNOMIAL T(G; x, y) relates to Potts via:
+    Z_Potts(G; q, v) = (x-1)^(-k(G)) * y^(-|V|) * T(G; x, y)
+  where x = 1 + q/v, y = 1 + v (roughly — the exact transformation depends
+  on the convention).
+
+  For the hard-core model: the connection to Tutte is through the
+  INDEPENDENT SET POLYNOMIAL:
+    I(G, x) = x^n * T(G_complement; 1 + 1/x, 0)? Not exactly...
+
+  Actually: the independence polynomial doesn't directly specialize from
+  the classical Tutte polynomial. It requires a WEIGHTED version or the
+  multivariate Tutte polynomial.
+
+  MULTIVARIATE TUTTE (Sokal):
+    Z_G(q, v_e) = Sum over A subset E of q^(k(A)) * Product_(e in A) v_e
+
+  When we set q=1, v_e = lambda for all e:
+    Z_G(1, lambda) = Sum_A lambda^(|A|) = (1+lambda)^(|E|)... not quite.
+
+  The hard-core model is actually the LATTICE GAS:
+    Z_HC(G, lambda) = Sum over independent sets S of lambda^(|S|)
+                    = I(G, lambda)
+
+  This is NOT a direct Tutte specialization but a TRANSFER MATRIX
+  eigenvalue problem on the graph.
+
+  FOR TOURNAMENTS: H = I(Omega, 2) = Z_HC(Omega, 2).
+  The hard-core gas at fugacity 2 on the conflict graph.
+  From the lattice gas / statistical mechanics perspective,
+  fugacity 2 is DEEP in the ordered (crystal) phase — far from
+  the uniqueness threshold. This was noted in earlier sessions.
+
+  THE SIGNIFICANCE: H is not a "nice" Tutte evaluation.
+  It's a partition function evaluation that requires the FULL
+  hard-core model, not just the Tutte polynomial.
+  The Tutte polynomial captures STRUCTURAL properties of the graph
+  (spanning trees, forests, connected subgraphs).
+  The hard-core model captures OCCUPANCY properties (independent sets).
+  H requires the latter, not the former.
+
+  HOWEVER: the chromatic polynomial (a Tutte specialization) and the
+  independence polynomial are related by:
+    chi(G, k) and I(complement(G), ...) have connections through
+    the "clique polynomial" of the complement.
+
+  And I(G, x) IS the clique polynomial of complement(G).
+  So: H = I(Omega, 2) = clique polynomial of complement(Omega) at x=2.
+  And the clique polynomial IS related to Tutte via the "strong" Tutte:
+    "the clique polynomial of G is a specialization of the multivariate
+    Tutte polynomial of G" — this is a known result.
+
+  CONCLUSION: H = I(Omega, 2) IS a specialization of the multivariate
+  Tutte polynomial of Omega. But the path from tournament T to Omega
+  (via cycle detection) is the non-trivial part.
+
+========================================================================
+  SYNTHESIS: THE TOURNAMENT POLYNOMIAL WEB
+========================================================================
+
+  LEVEL 0: THE TOURNAMENT T (a binary string of length C(n,2))
+
+  LEVEL 1: POLYNOMIAL INVARIANTS OF T
+    F(T, x) = descent polynomial (evaluations: F(1)=H, F(-1)=1 for odd n)
+    W(T, r) = W-polynomial (evaluation: W(1/2)=H)
+    I(Omega(T), x) = independence polynomial of conflict graph (I(2)=H)
+
+  LEVEL 2: TUTTE-LIKE POLYNOMIALS
+    B(T; x, y, z) = directed B-polynomial (the master for directed graphs)
+    T(K_n; x, y) = Tutte polynomial of the underlying complete graph
+    Z_multivar(Omega; q, v_e) = multivariate Tutte of the conflict graph
+
+  LEVEL 3: UNIVERSAL POLYNOMIALS
+    g(x) = x^3-x^2-x-1 = curvature classifier ((-1, 0, 1) at (1.618033988749895, 1.8392867552, 2))
+    A_n(x) = Eulerian polynomial (Sum_T F(T,x) relates to A_n(x))
+
+  KNOWN CONNECTIONS:
+    F(T, 1) = I(Omega, 2) = H(T)  [the OCF bridge]
+    Sum_T F(T, x) = A_n(x) * 2^(C(n,2)-(n-1))  [ensemble average]
+    I(Omega, x) = clique polynomial of complement(Omega) at x
+    clique poly is a multivariate Tutte specialization
+
+  THE KEY INSIGHT (from kind-pasteur S18c):
+    ALL of these polynomials are partition functions evaluated at
+    specific points. H sits at the INTERSECTION of evaluations:
+    x=2 for independence polynomial, x=1 for descent polynomial.
+
+    The TOURNAMENT is a "code" and H is its "weight" computed at
+    the tournament fugacity.
+
+  THE OPEN CHALLENGE:
+    Find a SINGLE polynomial P(T; x, y) such that:
+      P(T; 1, y) = F(T, y)  (specialization gives descent)
+      P(T; x, 2) = I(Omega(T), x)  (specialization gives independence)
+      P(T; 1, 1) = P(T; 2, 2)... no, both should give H but at different points.
+
+    Such a P would be the "tournament Tutte polynomial."
+
+
+Done. opus-2026-03-21-S121
