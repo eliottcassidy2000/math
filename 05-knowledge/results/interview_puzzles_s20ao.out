@@ -1,0 +1,245 @@
+======================================================================
+  INTERVIEW PUZZLES THROUGH THE STAIRCASE LENS
+======================================================================
+
+======================================================================
+  PUZZLE 1: Find the second largest of n elements
+  (Google, Amazon, Microsoft -- n + ceil(log2(n)) - 2 comparisons)
+======================================================================
+
+  KNOWN OPTIMAL: Tournament tree. n-1 comparisons to find max,
+  then ceil(log2(n))-1 to find 2nd among losers to the max.
+  Total: n + ceil(log2(n)) - 2.
+
+  THE STAIRCASE VIEW:
+  This IS a tournament! The knockout bracket builds a tournament.
+  The max = the vertex with score n-1 in the bracket.
+  The second-largest MUST have lost directly to the max (it beat
+  everyone else). The max faced ceil(log2(n)) opponents.
+
+  H = 1 + 2^d says: The most informative comparison is between
+  the most distant items. The tournament bracket does exactly this:
+  in the final round, the two "most proven" items compete.
+
+  THE CONNECTION: The n + ceil(log2(n)) - 2 formula decomposes as:
+  - (n-1) comparisons to build the tournament = Hamiltonian path cost
+  - ceil(log2(n))-1 = cost of resolving the max's "loser bracket"
+
+  The staircase tells us this is optimal because:
+  - Each round of the tournament produces range-1 comparisons (value 2)
+  - The final round produces range-O(n) comparison (value 2^O(n))
+  - The total information = sum of 2^d over all comparisons = H(bracket)
+
+  STAIRCASE SCHEDULE vs TOURNAMENT BRACKET:
+
+  n=    8: bracket=9, naive=13, savings=30.8%
+  n=   16: bracket=18, naive=29, savings=37.9%
+  n=   64: bracket=68, naive=125, savings=45.6%
+  n= 1024: bracket=1032, naive=2045, savings=49.5%
+
+======================================================================
+  PUZZLE 2: 25 horses, find top 3 (Google -- 7 races)
+======================================================================
+
+  KNOWN OPTIMAL: 5 group races + 1 "finals" + 1 "playoffs" = 7.
+
+  THE STAIRCASE VIEW:
+  Each race of 5 horses is a TOURNAMENT on 5 vertices.
+  The first 5 races build 5 independent tournaments.
+  Race 6 (finals) compares the 5 GROUP WINNERS.
+  Race 7 (playoffs) resolves the 2nd and 3rd place.
+
+  WHY 7 AND NOT FEWER?
+  Information-theoretic: Each race has 5! = 120 possible orderings,
+  so each race provides log2(120) = 6.9 bits of ordering info.
+  We need to identify the top 3 out of 25: C(25,3) * 3! = 13,800
+  possible (ordered) top-3 outcomes. log2(13800) = 13.75 bits.
+  Lower bound: ceil(13.75 / 6.9) = 2 races? That's too few.
+  But races only compare 5 horses at a time (not arbitrary pairs).
+
+  STAIRCASE INSIGHT:
+  The finals race (race 6) is the HIGHEST-RANGE comparison:
+  it compares the 5 group winners (which are maximally separated).
+  This is the anti-diagonal tile of the staircase -- worth 2^(5-2) = 8
+  per comparison, the most informative possible.
+
+  Races 1-5 are LOW-RANGE: they compare within groups (range 1-4).
+  The staircase says: do the high-range comparison FIRST.
+  But we can't -- we need to identify group winners before racing them.
+
+  THE 7-RACE SCHEDULE IS STAIRCASE-OPTIMAL given the constraint
+  that races compare exactly 5 horses at a time.
+
+
+======================================================================
+  PUZZLE 3: Sort 5 elements in 7 comparisons (information-optimal)
+======================================================================
+
+  KNOWN OPTIMAL: 7 comparisons. ceil(log2(5!)) = ceil(log2(120)) = 7.
+
+  THE STAIRCASE VIEW:
+  The Ford-Johnson algorithm achieves 7 comparisons for n=5.
+  Can we derive it from the staircase?
+
+  STAIRCASE SCHEDULE for sorting:
+  The key insight: sorting = determining the COMPLETE TOURNAMENT.
+  A sorted order = transitive tournament.
+  H(transitive) = 1. We need to reach H=1 from unknown.
+
+  Information per comparison: depends on RANGE.
+  - First comparison (random pair): expected range ~2, value ~4.
+  - Each comparison HALVES the uncertainty about one pair's order.
+
+  FORD-JOHNSON for n=5:
+  Step 1: Compare (a,b) and (c,d) -- 2 comparisons.
+    Now: a>b and c>d (or vice versa). Two pairs resolved.
+  Step 2: Compare a and c (the two "winners") -- 1 comparison.
+    Now we have a chain a>b and a>c>d (say a is max).
+  Step 3: Insert b into the chain (c, d) -- 2 comparisons (binary search).
+  Step 4: Insert e into the chain of 4 -- 2 comparisons (binary search).
+  Total: 2 + 1 + 2 + 2 = 7.
+
+  STAIRCASE ANALYSIS:
+  Step 2 (compare the two winners) is the HIGHEST-RANGE comparison.
+  It separates the overall max from the runner-up.
+  This is the anti-diagonal tile: range = 3, value = 2^3 = 8.
+  It carries 8/22 = 36% of the total staircase information!
+
+  The staircase says: do step 2 EARLY (high range first).
+  Ford-Johnson does it at comparison 3 of 7 -- reasonably early.
+
+  VERIFICATION: 7 comparisons produce 2^7 = 128 outcomes.
+  5! = 120 possible orderings. 128 >= 120. Tight fit (only 8 wasted).
+
+
+======================================================================
+  PUZZLE 4: 8 balls, find the heaviest (balance -- 2 weighings)
+======================================================================
+
+  KNOWN OPTIMAL: 2 weighings. 3^2 = 9 >= 8.
+
+  THE STAIRCASE CONNECTION:
+  A balance scale is a TERNARY comparison (not binary):
+  (left heavy, balanced, right heavy). Each weighing has 3 outcomes.
+
+  The staircase framework generalizes: in a TERNARY system,
+  the place value of a comparison at range d is 3^d (not 2^d).
+  Information per weighing: log2(3) = 1.585 bits.
+
+  For 8 balls: log2(8) / log2(3) = 3/1.585 = 1.89 weighings.
+  Ceil(1.89) = 2. EXACT.
+
+  The balance scale is the staircase in BASE 3.
+  - Binary comparisons: information = 2^d
+  - Ternary comparisons (balance): information = 3^d
+  - The "range" d is how many items are being distinguished.
+
+  GENERALIZATION: For n balls, find the heaviest in
+  ceil(log_3(n)) weighings. This matches the known optimum.
+
+  THE STAIRCASE GENERALIZES:
+  Base-b comparisons have place value b^d.
+  Binary (pairwise): b=2. Balance scale: b=3.
+  In general: ceil(log_b(n)) comparisons to find the extremum.
+
+
+======================================================================
+  PUZZLE 5: 2 eggs, 100 floors (Google -- 14 drops)
+======================================================================
+
+  KNOWN OPTIMAL: 14 drops. x(x+1)/2 >= 100, x=14.
+
+  THE STAIRCASE CONNECTION:
+  The egg problem is a SEQUENTIAL comparison problem with
+  DESTRUCTIVE testing (breaking an egg limits future capacity).
+
+  First egg: like RANGE COMPARISONS. Each drop tests a "range"
+  of floors. Drop from floor 14: range = 14 (distinguishes 14 floors).
+  Drop from floor 14+13=27: range = 13 (distinguishes 13 more).
+  And so on: 14 + 13 + 12 + ... + 1 = 14*15/2 = 105 >= 100.
+
+  Second egg: like ADJACENT COMPARISONS. After first egg breaks,
+  test floors one by one (range 1, value 2 each).
+
+  THE STAIRCASE SCHEDULE FOR 2 EGGS:
+  First egg drops form a DECREASING sequence of ranges: 14, 13, 12, ...
+  This is the REVERSE staircase! High range first, decreasing.
+  The total capacity = x(x+1)/2 = triangular number.
+
+  For k eggs and n floors: optimal = min x such that C(x, k) >= n.
+  For k=2: C(x, 2) = x(x-1)/2 >= n.
+  For k=3: C(x, 3) = x(x-1)(x-2)/6 >= n.
+
+  THE STAIRCASE DIMENSION:
+  k eggs correspond to a k-dimensional staircase!
+  1 egg: linear search (1D, x drops for x floors)
+  2 eggs: triangular search (2D staircase, x drops for x(x+1)/2 floors)
+  3 eggs: tetrahedral search (3D staircase, x drops for C(x+2,3) floors)
+
+  THIS IS THE PASCAL TRIANGLE / BINOMIAL COEFFICIENT CONNECTION.
+  The egg problem is the staircase in higher dimensions!
+
+  1 egg(s), 10 floors: 10 drops (capacity 10)
+  1 egg(s), 100 floors: 100 drops (capacity 100)
+  1 egg(s), 1000 floors: 1000 drops (capacity 1000)
+  2 egg(s), 10 floors: 4 drops (capacity 10)
+  2 egg(s), 100 floors: 14 drops (capacity 105)
+  2 egg(s), 1000 floors: 45 drops (capacity 1035)
+  3 egg(s), 10 floors: 4 drops (capacity 14)
+  3 egg(s), 100 floors: 9 drops (capacity 129)
+  3 egg(s), 1000 floors: 19 drops (capacity 1159)
+  4 egg(s), 10 floors: 4 drops (capacity 15)
+  4 egg(s), 100 floors: 8 drops (capacity 162)
+  4 egg(s), 1000 floors: 13 drops (capacity 1092)
+
+======================================================================
+  THE STAIRCASE AS UNIVERSAL FRAMEWORK FOR COMPARISON PUZZLES
+======================================================================
+
+  Every comparison puzzle reduces to: "Given limited tests, maximize
+  information gained about an unknown ordering."
+
+  The staircase tells us:
+  1. RANGE DETERMINES VALUE: higher-range comparisons are exponentially
+     more informative.
+  2. THE OPTIMAL SCHEDULE: compare extremes first, work inward.
+  3. THE CAPACITY FORMULA: sum_d (n-1-d) * b^d where b is the base
+     (2 for binary, 3 for ternary/balance).
+  4. THE EGG GENERALIZATION: k destructive tests correspond to
+     k-dimensional staircases (binomial coefficients).
+
+  PUZZLE        | STAIRCASE INTERPRETATION
+  --------------|------------------------------------------
+  2nd largest   | Tournament bracket = staircase on winners
+  25 horses     | 5-way races = 5-ary staircase
+  Sort n=5      | Build transitive tournament in 7 steps
+  8 balls       | Ternary staircase (base 3), 2 levels
+  12 coins      | Ternary staircase with sign uncertainty
+  2 eggs        | 2D staircase (triangular numbers)
+  Nuts & bolts  | Cross-type staircase (rows vs columns)
+  Poisoned wine | Parallel binary staircase (log2 rats)
+
+  THE COMMON PRINCIPLE: The staircase geometry of the comparison
+  space determines the minimum number of tests. The optimal strategy
+  always fills the staircase from the highest range (anti-diagonal)
+  downward, because high-range comparisons carry exponentially more
+  information.
+
+  PRODUCT IDEA: A UNIVERSAL COMPARISON OPTIMIZER that takes:
+  - Number of items
+  - Comparison type (binary, ternary, k-ary)
+  - Number of "destructive" resources (eggs, rats, etc.)
+  - Constraints (can only compare 5 at a time, etc.)
+  And outputs:
+  - Optimal comparison schedule
+  - Information gained per step
+  - Total steps needed
+  - Which specific comparisons to make
+
+  This is a REAL TOOL that would help with:
+  - A/B test scheduling
+  - Clinical trial design
+  - Sports bracket optimization
+  - Search result ranking
+  - Any pairwise decision problem
+
