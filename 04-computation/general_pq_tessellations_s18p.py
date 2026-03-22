@@ -1,0 +1,468 @@
+#!/usr/bin/env python3
+"""
+general_pq_tessellations_s18p.py -- kind-pasteur-2026-03-21-S18p
+
+WHAT DO {4,q} AND {5,q} TESSELLATIONS CORRESPOND TO?
+
+{3,q}: face = triangle = 3-cycle. TOURNAMENT THEORY (oriented K_n).
+{4,q}: face = square = 4-cycle. What structure has 4-cycles as atoms?
+{5,q}: face = pentagon = 5-cycle. What has 5-cycles as atoms?
+{p,q}: face = p-gon = p-cycle. General theory.
+
+The k-nacci identity rho_k + rho_k^{-k} = 2 works for ALL k.
+So each {p,q} tessellation has its own fugacity evaluation,
+its own gap function, its own tower of primes.
+
+Author: kind-pasteur-2026-03-21-S18p
+"""
+
+import sys
+from math import sqrt, log, comb
+
+sys.stdout.reconfigure(line_buffering=True)
+
+def is_prime(n):
+    if n < 2: return False
+    if n < 4: return True
+    if n % 2 == 0 or n % 3 == 0: return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i+2) == 0: return False
+        i += 6
+    return True
+
+# k-nacci roots
+def knacci_root(k, tol=1e-12):
+    """Dominant root of x^k = x^{k-1} + ... + x + 1."""
+    x = 2.0 - 0.5**(k-1)  # initial guess near 2
+    for _ in range(100):
+        f = x**k - sum(x**j for j in range(k))
+        fp = k*x**(k-1) - sum(j*x**(j-1) for j in range(1, k))
+        x = x - f/fp
+    return x
+
+print("=" * 72)
+print("  THE {p, q} TESSELLATION TABLE")
+print("  kind-pasteur-2026-03-21-S18p")
+print("=" * 72)
+
+# ========================================================================
+# PART 1: THE GAP FUNCTION FOR EACH p
+# ========================================================================
+print("\n" + "=" * 72)
+print("  PART 1: THE p-NACCI HIERARCHY")
+print("=" * 72)
+
+print("""
+  For face type p, the relevant recurrence is the p-nacci:
+    x^p = x^{p-1} + x^{p-2} + ... + x + 1
+
+  The dominant root rho_p satisfies rho_p + rho_p^{-p} = 2.
+  The gap function is g_p(x) = x^p - x^{p-1} - ... - x - 1.
+
+  g_p(rho_p) = 0 (the Euclidean boundary)
+  g_p(2) = 2^p - 2^{p-1} - ... - 2 - 1 = 2^p - (2^p - 1) = 1
+
+  REMARKABLE: g_p(2) = 1 for ALL p!
+
+  This means: the evaluation point x = 2 places EVERY {p,q} theory
+  exactly one quantum into the hyperbolic regime, regardless of p.
+  The "+1" is UNIVERSAL across all face types.
+""")
+
+for p in range(2, 10):
+    rho = knacci_root(p)
+    g_rho = rho**p - sum(rho**j for j in range(p))
+    g_2 = 2**p - sum(2**j for j in range(p))
+    # Golden ratio for p=2
+    if p == 2:
+        special = f"phi = {rho:.6f}"
+    elif p == 3:
+        special = f"tau = {rho:.6f}"
+    else:
+        special = f"rho_{p} = {rho:.6f}"
+
+    print(f"  p={p}: {special}, g_p(rho_p) = {g_rho:.1e}, g_p(2) = {g_2}")
+
+print("""
+  g_p(2) = 1 for ALL p >= 2.
+
+  PROOF: g_p(2) = 2^p - (2^{p-1} + 2^{p-2} + ... + 2 + 1)
+                = 2^p - (2^p - 1)
+                = 1.
+
+  This is the GEOMETRIC SERIES IDENTITY: sum_{j=0}^{p-1} 2^j = 2^p - 1.
+
+  THE DEEPEST VERSION OF THE +1:
+  The Redei quantum g(2) = 1 is not specific to tournaments (p=3).
+  It holds for ALL p. The +1 is the gap between the GEOMETRIC SUM
+  (2^p - 1) and the next POWER OF 2 (2^p).
+
+  In terms of the Cayley-Dickson tower:
+  2^p = the dimension of the p-th CD algebra
+  2^p - 1 = the sum of all lower dimensions (the Mersenne number)
+  g_p(2) = 1 = the gap between the algebra and its history
+
+  The +1 IS the gap between an algebra and the sum of all algebras below it.
+""")
+
+# ========================================================================
+# PART 2: WHAT EACH {p,q} TESSELLATION CORRESPONDS TO
+# ========================================================================
+print("\n" + "=" * 72)
+print("  PART 2: THE MATHEMATICAL OBJECTS FOR EACH p")
+print("=" * 72)
+
+print("""
+  {2, q}: FACE = DIGON (2-gon). Two edges connecting two vertices.
+    Mathematical object: SIGNED GRAPH (each edge has +/- sign).
+    The "2-cycle" is just a pair of opposite edges.
+    Conflict: two signed edges share an endpoint.
+    This is ISING MODEL territory: binary spins on vertices.
+    The gap function: g_2(x) = x^2 - x - 1 = 0 at x = phi (golden ratio).
+    g_2(2) = 4 - 2 - 1 = 1.
+    Evaluation at x=2: the Fibonacci/golden ratio theory.
+
+  {3, q}: FACE = TRIANGLE (3-gon). Three vertices, three directed edges.
+    Mathematical object: TOURNAMENT (oriented K_n).
+    The "3-cycle" is the directed triangle.
+    Conflict: two 3-cycles share a vertex.
+    This is our TOURNAMENT THEORY.
+    The gap function: g_3(x) = x^3 - x^2 - x - 1 = 0 at x = tau.
+    g_3(2) = 8 - 4 - 2 - 1 = 1.
+    Evaluation at x=2: the tribonacci/tournament theory.
+
+  {4, q}: FACE = SQUARE (4-gon). Four vertices, four directed edges.
+    Mathematical object: ORIENTED BIPARTITE GRAPH on K_{n,n}?
+    Or: SIGNED PERMUTATION (each 4-cycle = transposition composed with sign).
+    The "4-cycle" is a directed square.
+    The minimum even cycle. This is where COMMUTATIVITY is tested:
+    a->b->c->d->a is a 4-cycle; if we also have a->d->c->b->a, that's
+    the reverse. Commutativity of the path composition.
+    g_4(x) = x^4 - x^3 - x^2 - x - 1 = 0 at x = rho_4 = 1.9276...
+    g_4(2) = 16 - 8 - 4 - 2 - 1 = 1.
+
+  {5, q}: FACE = PENTAGON (5-gon). Five vertices, five directed edges.
+    Mathematical object: ORIENTED PETERSEN-TYPE structure?
+    The Petersen graph has girth 5 (the {5,q} face!).
+    A {5,q} theory would be the theory of PETERSEN-TYPE structures:
+    graphs where the atom is the 5-cycle.
+    g_5(x) = x^5 - x^4 - x^3 - x^2 - x - 1 = 0 at x = rho_5 = 1.9659...
+    g_5(2) = 32 - 16 - 8 - 4 - 2 - 1 = 1.
+
+  {6, q}: FACE = HEXAGON (6-gon).
+    Mathematical object: HONEYCOMB structures. Carbon chemistry (benzene).
+    The hexagonal lattice. Graphene.
+    g_6(2) = 64 - 32 - 16 - 8 - 4 - 2 - 1 = 1.
+
+  {7, q}: FACE = HEPTAGON (7-gon).
+    Mathematical object: structures with 7-cycles as atoms.
+    7 = the forbidden prime. A {7,q} theory would be a theory where
+    the atom IS the forbidden value.
+    g_7(2) = 128 - 64 - 32 - 16 - 8 - 4 - 2 - 1 = 1.
+""")
+
+# ========================================================================
+# PART 3: THE {4,q} THEORY — WHAT IS IT?
+# ========================================================================
+print("\n" + "=" * 72)
+print("  PART 3: THE {4,q} THEORY")
+print("=" * 72)
+
+print("""
+  The {4,q} tessellation has SQUARE faces meeting q at each vertex.
+
+  SPHERICAL: {4,3} = cube (the only Platonic solid with square faces).
+  EUCLIDEAN: {4,4} = square tiling (the only flat regular square tiling).
+  HYPERBOLIC: {4,5}, {4,6}, ..., {4,inf} = hyperbolic square tilings.
+
+  WHAT MATHEMATICAL OBJECT HAS 4-CYCLES AS ITS ATOM?
+
+  CANDIDATE 1: BIPARTITE TOURNAMENTS
+    A bipartite tournament is an orientation of the complete bipartite
+    graph K_{m,n}. Every directed cycle in K_{m,n} has EVEN length
+    (since bipartite graphs have only even cycles). The minimum cycle
+    is a 4-CYCLE (not 3).
+
+    So: {4,q} = BIPARTITE TOURNAMENT THEORY.
+
+    The independence polynomial of the bipartite conflict graph
+    (4-cycles as vertices, shared vertices as edges) evaluated at
+    x = 2 would give a "bipartite H" count.
+
+    The gap function g_4(x) = x^4 - x^3 - x^2 - x - 1.
+    g_4(phi) = phi^4 - phi^3 - phi^2 - phi - 1
+             = (phi^2+phi) - (phi^2+phi-1) - (phi+1) - phi - 1
+    Let me compute numerically.
+""")
+
+phi = (1 + sqrt(5)) / 2
+rho4 = knacci_root(4)
+print(f"  phi = {phi:.6f}, rho_4 = {rho4:.6f}")
+print(f"  g_4(phi) = {phi**4 - phi**3 - phi**2 - phi - 1:.6f}")
+print(f"  g_4(rho_4) = {rho4**4 - rho4**3 - rho4**2 - rho4 - 1:.1e}")
+print(f"  g_4(2) = {2**4 - 2**3 - 2**2 - 2 - 1}")
+
+print("""
+  CANDIDATE 2: MATRIX PERMANENTS
+    The permanent of a 0-1 matrix counts perfect matchings.
+    A bipartite graph has cycles of minimum length 4.
+    The permanent is the bipartite analogue of H(T):
+    it counts "bipartite Hamiltonian paths" (perfect matchings).
+
+    Van der Waerden's conjecture (proved by Falikman-Egorychev):
+    the permanent of a doubly stochastic matrix is minimized by
+    the all-1/n matrix (the "regular bipartite tournament").
+
+    This is the {4,q} analogue of "Paley tournaments maximize H":
+    the most uniform bipartite structure minimizes the permanent.
+    (The direction is REVERSED: regular maximizes H in {3,q},
+    regular minimizes permanent in {4,q}. This is the difference
+    between odd-cycle and even-cycle theories.)
+
+  CANDIDATE 3: GRAPH COLORING
+    A graph is 2-colorable (bipartite) iff it has no odd cycles.
+    So the {4,q} theory is the theory of 2-COLORABLE structures:
+    the complement of tournament theory!
+
+    Tournament: odd cycles are the atoms. {3,q}.
+    Bipartite: even cycles are the atoms. {4,q}.
+    These are DUAL theories. The {3,q} ↔ {4,q} duality is the
+    odd/even duality, the signed/unsigned duality, the
+    tournament/bipartite duality.
+""")
+
+# ========================================================================
+# PART 4: THE {5,q} THEORY — THE PETERSEN THEORY
+# ========================================================================
+print("\n" + "=" * 72)
+print("  PART 4: THE {5,q} THEORY — PETERSEN THEORY")
+print("=" * 72)
+
+print("""
+  The {5,q} tessellation has PENTAGONAL faces.
+
+  SPHERICAL: {5,3} = dodecahedron (12 pentagonal faces, A_5 symmetry).
+  EUCLIDEAN: NONE (1/5 + 1/q = 1/2 has no integer solution).
+  HYPERBOLIC: {5,4}, {5,5}, ..., {5,inf} = hyperbolic pentagonal tilings.
+
+  WHAT MATHEMATICAL OBJECT HAS 5-CYCLES AS ITS ATOM?
+
+  THE PETERSEN GRAPH K(5,2) has girth 5.
+  The {5,q} theory is the theory of KNESER-TYPE structures:
+  graphs where the minimum cycle is a 5-cycle.
+
+  In tournament theory, 5-cycles appear as the SECOND layer of the OCF:
+  alpha_2 counts independent pairs that can include 5-cycles.
+  The profile determinacy failure at n=6 (H gap = 4) is exactly
+  where 5-cycle structure becomes independent of 3-cycle structure.
+
+  So the {5,q} theory is the theory of the OCR RESIDUAL:
+  the part of tournament structure that 3-cycles can't see.
+  The 3% at n=5 (OCR = 97%) is {5,q} content.
+
+  THE {5,q} GAP FUNCTION:
+  g_5(x) = x^5 - x^4 - x^3 - x^2 - x - 1
+""")
+
+rho5 = knacci_root(5)
+print(f"  rho_5 = {rho5:.6f} (pentanacci constant)")
+print(f"  g_5(phi) = {phi**5 - phi**4 - phi**3 - phi**2 - phi - 1:.6f}")
+print(f"  g_5(tau) = {knacci_root(3)**5 - knacci_root(3)**4 - knacci_root(3)**3 - knacci_root(3)**2 - knacci_root(3) - 1:.6f}")
+print(f"  g_5(2) = {2**5 - 2**4 - 2**3 - 2**2 - 2 - 1}")
+
+print("""
+  g_5(phi) < 0 (phi is deep in the spherical regime of {5,q})
+  g_5(tau) < 0 (tau is still spherical for {5,q}!)
+  g_5(2) = 1 (2 is one quantum into hyperbolic for ALL p)
+
+  This means: at the tournament evaluation point x=2, the {5,q}
+  theory is ALSO one quantum into hyperbolic. The +1 is universal.
+  But at the tribonacci point tau, the {5,q} theory is still
+  SPHERICAL (closed, finite). Tournament theory ({3,q} at x=tau)
+  is Euclidean, but Petersen theory ({5,q} at x=tau) is spherical.
+  The 5-cycle theory is SIMPLER than the 3-cycle theory at the
+  tribonacci evaluation point.
+""")
+
+# ========================================================================
+# PART 5: THE p-HIERARCHY
+# ========================================================================
+print("\n" + "=" * 72)
+print("  PART 5: THE COMPLETE p-HIERARCHY")
+print("=" * 72)
+
+print("""
+  Each face type p defines a theory. The theories are NESTED:
+
+  p=2: Ising model (signed graphs, Fibonacci)
+       CONTAINS all even-cycle structure.
+       Evaluation: golden ratio phi = rho_2.
+       Spherical/Euclidean boundary: phi.
+
+  p=3: Tournament theory (oriented complete graphs, tribonacci)
+       CONTAINS all odd-cycle structure.
+       Evaluation: tribonacci tau = rho_3.
+       Spherical/Euclidean boundary: tau.
+
+  p=4: Bipartite tournament theory (oriented complete bipartite, tetranacci)
+       REFINES p=2 by focusing on 4-cycles specifically.
+       Evaluation: tetranacci rho_4.
+       Spherical/Euclidean boundary: rho_4.
+
+  p=5: Petersen/Kneser theory (5-cycle structures, pentanacci)
+       REFINES p=3 by focusing on 5-cycles specifically.
+       This IS the OCR residual theory.
+       Evaluation: pentanacci rho_5.
+       Spherical/Euclidean boundary: rho_5.
+
+  p=7: Forbidden value theory (7-cycle structures, heptanacci)
+       The face IS the forbidden prime.
+       This IS the theory of what can't happen.
+
+  THE NESTING:
+  {2,q} contains {4,q} contains {6,q} contains ... (even hierarchy)
+  {3,q} contains {5,q} contains {7,q} contains ... (odd hierarchy)
+
+  The odd hierarchy {3} -> {5} -> {7} -> ... IS the tower of tournament
+  complexity: 3-cycles (alpha_1) -> 5-cycles (alpha_2 correction) ->
+  7-cycles (alpha_3 correction) -> ...
+
+  The OCF at x=2:
+  H = 1 + 2*alpha_1 + 4*alpha_2 + 8*alpha_3 + ...
+
+  alpha_1 comes from the {3,q} theory (3-cycles)
+  alpha_2 comes from the {5,q} theory (5-cycles + independent 3-cycle pairs)
+  alpha_3 comes from the {7,q} theory (7-cycles + higher structures)
+
+  Each level of the OCF corresponds to a face type in the tessellation
+  hierarchy! The SRCP determines H precisely when it captures enough
+  of this hierarchy.
+""")
+
+# ========================================================================
+# PART 6: THE {p,q} TABLE
+# ========================================================================
+print("\n" + "=" * 72)
+print("  PART 6: THE GRAND TABLE")
+print("=" * 72)
+
+print("""
+  p  rho_p      g_p(phi)  g_p(tau)  g_p(2)  Sphere q<=  Object
+  -- ---------- --------- --------- ------- ----------- -------""")
+
+for p in range(2, 12):
+    rho = knacci_root(p)
+    gp_phi = sum((-1 if j < p else 1) * phi**(p-j) if j < p else -1 for j in range(p+1))
+    gp_phi = phi**p - sum(phi**j for j in range(p))
+    gp_tau = knacci_root(3)**p - sum(knacci_root(3)**j for j in range(p))
+    gp_2 = 2**p - sum(2**j for j in range(p))
+
+    # Max spherical q: 1/p + 1/q > 1/2, so q < 2p/(p-2)
+    if p > 2:
+        max_sph_q = int(2*p/(p-2))
+        if 1.0/p + 1.0/max_sph_q <= 0.5:
+            max_sph_q -= 1
+    else:
+        max_sph_q = 999  # {2,q} is always spherical for finite q... no.
+        # 1/2 + 1/q > 1/2 always for q >= 1. So all {2,q} are spherical.
+        max_sph_q = "inf"
+
+    objects = {
+        2: "Ising/signed graphs",
+        3: "TOURNAMENTS",
+        4: "bipartite tournaments",
+        5: "Petersen/Kneser (OCR residual)",
+        6: "honeycomb/graphene",
+        7: "FORBIDDEN VALUE theory",
+        8: "octonionic structures?",
+        9: "9-cycle = 3^2 obstruction",
+        10: "Petersen-vertex structures",
+        11: "Paley-prime structures",
+    }
+    obj = objects.get(p, "?")
+
+    print(f"  {p:>2d} {rho:>10.6f} {gp_phi:>9.4f} {gp_tau:>9.4f} {gp_2:>7d} {str(max_sph_q):>11s} {obj}")
+
+# ========================================================================
+# PART 7: THE {3,q} ↔ {4,q} DUALITY
+# ========================================================================
+print("\n" + "=" * 72)
+print("  PART 7: ODD/EVEN DUALITY")
+print("=" * 72)
+
+print("""
+  THE FUNDAMENTAL DUALITY:
+
+  {3,q} theory (tournaments) studies ODD cycles.
+  {4,q} theory (bipartite tournaments) studies EVEN cycles.
+
+  In a tournament: every cycle has ODD length (because the underlying
+  graph K_n has odd cycles, and directed cycles in tournaments always
+  have odd length by Redei's theorem applied to subtournaments).
+
+  WAIT — that's not true. Directed cycles in tournaments can have
+  any length >= 3, including even lengths (4-cycles, 6-cycles, etc.).
+
+  But the OCF only involves ODD cycles:
+  H = I(Omega, 2) where Omega = conflict graph of ODD directed cycles.
+
+  The EVEN cycles of a tournament are invisible to the OCF.
+  They form a "shadow theory" — the {4,q} content of the tournament
+  that H does not see.
+
+  WHAT DO EVEN CYCLES CONTROL?
+  - The permanent of the adjacency matrix involves even cycles
+  - The determinant det(A) = sum over permutations with sign
+  - The Pfaffian Pf(A - A^T) involves even-length perfect matchings
+  - The Pfaffian IS the {4,q} content!
+
+  So: H = I(Omega_odd, 2) is the {3,q} content.
+      Pf = sum over even matchings is the {4,q} content.
+      Together they give the full tournament structure.
+
+  THE ODD/EVEN DECOMPOSITION:
+  Tournament = {3,q} theory (H, odd cycles, OCF) + {4,q} theory (Pf, even cycles, matchings)
+
+  This is the same decomposition as:
+  gl(n) = so(n) + symmetric part
+  = antisymmetric (odd) + symmetric (even)
+  = tournament sector + cooperation sector (Cartan decomposition!)
+
+  The {3,q} theory is the TOURNAMENT SECTOR.
+  The {4,q} theory is the COOPERATION SECTOR.
+  Their interaction is the CARTAN BRACKET [k,p] subset p.
+""")
+
+# ========================================================================
+# SUMMARY
+# ========================================================================
+print("\n" + "=" * 72)
+print("  SUMMARY")
+print("=" * 72)
+print("""
+  1. g_p(2) = 1 for ALL p >= 2. The +1 is UNIVERSAL.
+     Every face type places its theory one quantum into hyperbolic
+     at the evaluation point x=2. The Redei quantum transcends
+     tournament theory — it is a property of the number 2 itself.
+
+  2. {3,q} = tournament theory (odd cycles, H, OCF).
+     {4,q} = bipartite tournament theory (even cycles, Pf, matchings).
+     {5,q} = Petersen/OCR residual theory (5-cycles, alpha_2).
+     {7,q} = forbidden value theory (the face IS the obstruction prime).
+
+  3. The odd hierarchy {3} -> {5} -> {7} -> ... IS the OCF:
+     alpha_1 from {3,q}, alpha_2 from {5,q}, alpha_3 from {7,q}.
+     Each level of the independence polynomial corresponds to a
+     face type in the tessellation hierarchy.
+
+  4. The {3,q} ↔ {4,q} duality IS the Cartan decomposition:
+     tournament sector (antisymmetric/odd) + cooperation sector (symmetric/even).
+     H sees the odd part. Pfaffian sees the even part.
+
+  5. The Petersen graph has girth 5 because it IS a {5,q} object.
+     It lives at the intersection of {3,q} (tournament theory, where
+     it is the anti-conflict graph) and {5,q} (its own theory, where
+     it is the atom). The Petersen is the BRIDGE between odd-cycle
+     and 5-cycle theories.
+""")
