@@ -20,6 +20,21 @@ Entry format:
 **Summary:** Synthesized harmonic series framework with kind-pasteur's transformer/LLM work (S18u-x). A transformer IS a harmonic analyzer: the CD tower provides basis functions (R,C,H,O,S), attention provides weights (softmax), partition function Z provides norm. Attention IS a Boltzmann partition function with temperature √d. The 2/3 ratio (dim(so(4))/dim(p) = perfect fifth = order(S)/order(ST)) appears in Cartan decomposition, Napolitano depth, quaternion parameter savings (67%), and T₁₁ transitivity. 7 testable predictions with honest confidence levels: (1) binary-thresholded attention preserves ~97% (HIGH), (2) antisymmetric attention correlates with causal quality (HIGH, arXiv:2502.10927 supports), (3) quaternion coupling saves 75% (VALIDATED), (4) head-pair coupling saves 50% (MEDIUM, MEA supports), (5) sedenion layer gives 16× (EMERGING), (6) antisym/sym ratio shifts at 2/3 depth (MEDIUM), (7) attention SVD follows 1/k spectrum (SPECULATIVE). Complete 20-entry harmonic-tournament-transformer dictionary.
 **New contributions:** harmonic_transformer_s144.py
 **Unresolved threads:** Implement attention thresholding test, measure antisymmetric ratio vs depth in real models, compare octonion head coupling to MEA
+---
+
+## opus-2026-03-21-S129 — 2026-03-21: Protein-Quantum-Tournament — 64 codons=2^C(4,2), 41/42=defect, helix≈2τ, Steane=Fano
+
+**Account:** opus
+**Summary:** Deep creative synthesis of protein folding, quantum circuits, and tournaments. The genetic code has 64=2^C(4,2) codons = tournament space at n=4. Redundancy 41/42 = (2,3,7) defect! Helix pitch 3.6≈2τ. Steane [[7,1,3]] code = Fano plane = T₇ cycle structure. The folding funnel IS the OCR. Levinthal's paradox = "why is OCR so high?" The universal thesis: any complete pairwise system is 96% determined by marginals.
+**Key:**
+1. **64 codons = 2^C(4,2)**: genetic code size = tournament space at n=4!
+2. **41/42 = Hurwitz defect**: 64 - 20 - 3 = 41 redundant codons, 41/42 = (2,3,7) sum
+3. **Helix pitch 3.6 ≈ 2τ**: alpha helix residues per turn ≈ 2 × tribonacci constant
+4. **Steane [[7,1,3]] = Fano = Paley T₇**: quantum error code IS the tournament conflict structure
+5. **Folding funnel = OCR**: local info captures most of global structure in BOTH systems
+6. **Levinthal's paradox = "why is OCR high?"**: completeness forces marginals to be informative
+7. **Universal prediction**: any complete pairwise system is ~96% marginal-determined
+**Scripts:** protein_quantum_tournament_s129.py
 
 ---
 
