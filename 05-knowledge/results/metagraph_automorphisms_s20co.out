@@ -1,0 +1,185 @@
+================================================================================
+  AUTOMORPHISMS AND SYMMETRIES OF G_n/Z_2
+  kind-pasteur-2026-03-23-S20co
+================================================================================
+
+################################################################################
+  n = 3
+################################################################################
+  G_3/Z_2: V=2, E=1
+
+  --- Automorphisms ---
+  |Aut(G_3/Z_2)| = 2
+  Number of vertex orbits: 1
+  Orbit sizes: [2]
+  Vertex-transitive: True
+    Orbit 0: size=2, H=[1, 3], SC=2/2
+  Number of edge orbits: 1
+  Edge-transitive: True
+
+  --- Walk Counts (closed walks of length k) ---
+  w(k) for k=0..12: [2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2]
+  w(0)=2=V, w(2)=2=2E=2, w(3)=0=6*tri=0
+
+  --- Resistance Distances ---
+  Total resistance (Kirchhoff index / V): 0.5000
+  Max resistance: 1.0000
+  Min resistance (non-zero): 1.0000
+  Avg resistance: 1.0000
+
+  --- Ollivier-Ricci Curvature (alpha=0.5) ---
+  min kappa = 1.0000
+  max kappa = 1.0000
+  avg kappa = 1.0000
+  #positive: 1
+  #negative: 0
+  #zero: 0
+  Total Ollivier curvature: 1.0000
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\lib\_function_base_impl.py:3057: RuntimeWarning: Degrees of freedom <= 0 for slice
+  c = cov(x, y, rowvar, dtype=dtype)
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\lib\_function_base_impl.py:2914: RuntimeWarning: divide by zero encountered in divide
+  c *= np.true_divide(1, fact)
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\lib\_function_base_impl.py:2914: RuntimeWarning: invalid value encountered in multiply
+  c *= np.true_divide(1, fact)
+  corr(Forman, Ollivier): nan
+
+  Time: 0.0s
+
+################################################################################
+  n = 4
+################################################################################
+  G_4/Z_2: V=3, E=3
+
+  --- Automorphisms ---
+  |Aut(G_4/Z_2)| = 6
+  Number of vertex orbits: 1
+  Orbit sizes: [3]
+  Vertex-transitive: True
+    Orbit 0: size=3, H=[1, 3, 5], SC=2/3
+  Number of edge orbits: 1
+  Edge-transitive: True
+
+  --- Walk Counts (closed walks of length k) ---
+  w(k) for k=0..12: [3, 0, 6, 6, 18, 30, 66, 126, 258, 510, 1026, 2046, 4098]
+  w(0)=3=V, w(2)=6=2E=6, w(3)=6=6*tri=6
+
+  --- Resistance Distances ---
+  Total resistance (Kirchhoff index / V): 0.6667
+  Max resistance: 0.6667
+  Min resistance (non-zero): 0.6667
+  Avg resistance: 0.6667
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  corr(graph_dist, resistance_dist): nan
+
+  --- Ollivier-Ricci Curvature (alpha=0.5) ---
+  min kappa = 0.7500
+  max kappa = 0.7500
+  avg kappa = 0.7500
+  #positive: 3
+  #negative: 0
+  #zero: 0
+  Total Ollivier curvature: 2.2500
+  corr(Forman, Ollivier): nan
+
+  Time: 0.0s
+
+################################################################################
+  n = 5
+################################################################################
+  G_5/Z_2: V=10, E=21
+
+  --- Automorphisms ---
+  |Aut(G_5/Z_2)| = 0
+  Number of vertex orbits: 10
+  Orbit sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  Vertex-transitive: False
+    Orbit 0: size=1, H=[1], SC=1/1
+    Orbit 1: size=1, H=[3], SC=0/1
+    Orbit 2: size=1, H=[5], SC=0/1
+    Orbit 3: size=1, H=[3], SC=1/1
+    Orbit 4: size=1, H=[9], SC=1/1
+    Orbit 5: size=1, H=[15], SC=1/1
+    Orbit 6: size=1, H=[13], SC=1/1
+    Orbit 7: size=1, H=[11], SC=1/1
+    Orbit 8: size=1, H=[15], SC=1/1
+    Orbit 9: size=1, H=[9], SC=1/1
+  Number of edge orbits: 21
+  Edge-transitive: False
+
+  --- Walk Counts (closed walks of length k) ---
+  w(k) for k=0..12: [10, 0, 42, 72, 566, 1940, 10674, 44604, 220334, 983376, 4673732, 21366840, 100075886]
+  w(0)=10=V, w(2)=42=2E=42, w(3)=72=6*tri=72
+
+  --- Resistance Distances ---
+  Total resistance (Kirchhoff index / V): 2.5818
+  Max resistance: 1.0706
+  Min resistance (non-zero): 0.3092
+  Avg resistance: 0.5737
+  corr(graph_dist, resistance_dist): 0.8340
+
+  --- Ollivier-Ricci Curvature (alpha=0.5) ---
+  min kappa = 0.1000
+  max kappa = 0.5000
+  avg kappa = 0.2580
+  #positive: 21
+  #negative: 0
+  #zero: 0
+  Total Ollivier curvature: 5.4179
+  corr(Forman, Ollivier): 0.6168
+
+  Time: 0.3s
+
+################################################################################
+  n = 6
+################################################################################
+  G_6/Z_2: V=34, E=143
+
+  --- Automorphisms ---
+    V=34 too large for brute-force automorphism search
+
+  --- Walk Counts (closed walks of length k) ---
+  w(k) for k=0..12: [34, 0, 286, 834, 12150, 88150, 941692, 8545908, 85395926, 818564856, 8049858086, 78280252996, 766690482432]
+  w(0)=34=V, w(2)=286=2E=286, w(3)=834=6*tri=834
+
+  --- Resistance Distances ---
+  Total resistance (Kirchhoff index / V): 5.4834
+  Max resistance: 1.0200
+  Min resistance (non-zero): 0.1526
+  Avg resistance: 0.3323
+  corr(graph_dist, resistance_dist): 0.6187
+
+  --- Ollivier-Ricci Curvature (alpha=0.5) ---
+  min kappa = -0.0641
+  max kappa = 0.3864
+  avg kappa = 0.1267
+  #positive: 131
+  #negative: 7
+  #zero: 5
+  Total Ollivier curvature: 18.1166
+  corr(Forman, Ollivier): 0.7067
+
+  Time: 24.7s
+
+
+================================================================================
+  SUMMARY: SYMMETRY STRUCTURE
+================================================================================
+
+  n  |Aut|  vertex_orbits  edge_orbits  vtx_trans  edge_trans
+  3    ?       ?              ?            ?          ?
+  4    ?       ?              ?            ?          ?
+  5    ?       ?              ?            ?          ?
+  6    ?       ?              ?            ?          ?
+  (filled in from computation above)
+
+  CURVATURE COMPARISON:
+  n  Forman_avg  Ollivier_avg  corr(F,O)
+  3     ?           ?            ?
+  4     ?           ?            ?
+  5     ?           ?            ?
+  6     ?           ?            ?
+
+  DONE.
