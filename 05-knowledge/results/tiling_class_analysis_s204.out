@@ -1,0 +1,361 @@
+
+========================================================================
+  n = 3: TILING-CLASS STRUCTURE
+========================================================================
+
+  Total tilings: 2^1 = 2
+  Iso classes: 2
+
+  TILING COUNTS PER CLASS:
+  Sorted: [1, 1]
+  Sum: 2 = 2^1 = 2
+  Min: 1, Max: 1, Mean: 1.00, Median: 1
+
+  VERIFICATION: tiling_count = H/|Aut|
+  All match: True
+
+  FLIP MATCHING:
+  Self-flip pairs (same class): 0
+  Cross-flip pairs (different class): 1
+  Total pairs: 1 = 2^1 / 2 = 1
+
+  CLASS TABLE:
+  cls   H     |Aut|  #tiling  self_fl  cross  flip_targets
+  0     3     3      1        0        1      {1: 1}
+  1     1     1      1        0        1      {0: 1}
+
+  TILING COUNT SORTED BY H:
+  [(1, 1), (3, 1)]
+  Tiling count sequence: [1, 1]
+
+  DEGREE = #{distinct target classes via flip}:
+    class 0 (H=3, 1 tilings): flip-degree = 1, targets = [(1, 1)]
+    class 1 (H=1, 1 tilings): flip-degree = 1, targets = [(0, 3)]
+
+  TILING WEIGHT ON EDGES:
+    (0,1) H=(3,1) tilings=(1,1) weight=1 w/min=1
+
+  TILING-DEGREE vs H:
+    H= 1: 1 tilings, 0 self-flip, 1 cross-flip -> 1 targets
+    H= 3: 1 tilings, 0 self-flip, 1 cross-flip -> 1 targets
+
+
+========================================================================
+  n = 4: TILING-CLASS STRUCTURE
+========================================================================
+
+  Total tilings: 2^3 = 8
+  Iso classes: 4
+
+  TILING COUNTS PER CLASS:
+  Sorted: [1, 1, 1, 5]
+  Sum: 8 = 2^3 = 8
+  Min: 1, Max: 5, Mean: 2.00, Median: 1
+
+  VERIFICATION: tiling_count = H/|Aut|
+  All match: True
+
+  FLIP MATCHING:
+  Self-flip pairs (same class): 1
+  Cross-flip pairs (different class): 3
+  Total pairs: 4 = 2^3 / 2 = 4
+
+  CLASS TABLE:
+  cls   H     |Aut|  #tiling  self_fl  cross  flip_targets
+  0     5     1      5        1        3      {1: 1, 2: 1, 3: 1}
+  1     3     3      1        0        1      {0: 1}
+  2     3     3      1        0        1      {0: 1}
+  3     1     1      1        0        1      {0: 1}
+
+  TILING COUNT SORTED BY H:
+  [(1, 1), (3, 1), (3, 1), (5, 5)]
+  Tiling count sequence: [1, 1, 1, 5]
+
+  DEGREE = #{distinct target classes via flip}:
+    class 0 (H=5, 5 tilings): flip-degree = 3, targets = [(3, 1), (1, 3), (2, 3)]
+    class 1 (H=3, 1 tilings): flip-degree = 1, targets = [(0, 5)]
+    class 2 (H=3, 1 tilings): flip-degree = 1, targets = [(0, 5)]
+    class 3 (H=1, 1 tilings): flip-degree = 1, targets = [(0, 5)]
+
+  TILING WEIGHT ON EDGES:
+    (0,1) H=(5,3) tilings=(5,1) weight=1 w/min=1
+    (0,2) H=(5,3) tilings=(5,1) weight=1 w/min=1
+    (0,3) H=(5,1) tilings=(5,1) weight=1 w/min=1
+
+  TILING-DEGREE vs H:
+    H= 1: 1 tilings, 0 self-flip, 1 cross-flip -> 1 targets
+    H= 3: 1 tilings, 0 self-flip, 1 cross-flip -> 1 targets
+    H= 3: 1 tilings, 0 self-flip, 1 cross-flip -> 1 targets
+    H= 5: 5 tilings, 2 self-flip, 3 cross-flip -> 3 targets
+
+
+========================================================================
+  n = 5: TILING-CLASS STRUCTURE
+========================================================================
+
+  Total tilings: 2^6 = 64
+  Iso classes: 12
+
+  TILING COUNTS PER CLASS:
+  Sorted: [1, 1, 1, 1, 3, 5, 5, 5, 9, 9, 11, 13]
+  Sum: 64 = 2^6 = 64
+  Min: 1, Max: 13, Mean: 5.33, Median: 5
+
+  VERIFICATION: tiling_count = H/|Aut|
+  All match: True
+
+  FLIP MATCHING:
+  Self-flip pairs (same class): 4
+  Cross-flip pairs (different class): 28
+  Total pairs: 32 = 2^6 / 2 = 32
+
+  CLASS TABLE:
+  cls   H     |Aut|  #tiling  self_fl  cross  flip_targets
+  0     9     1      9        0        9      {1: 2, 2: 1, 3: 1, 4: 1, 5: 2, 8: 1, 11:
+  1     9     1      9        0        9      {0: 2, 2: 2, 3: 1, 4: 1, 7: 1, 8: 1, 10:
+  2     13    1      13       2        9      {0: 1, 1: 2, 3: 2, 4: 1, 6: 1, 8: 1, 9: 
+  3     11    1      11       2        7      {0: 1, 1: 1, 2: 2, 4: 1, 6: 1, 8: 1}
+  4     5     1      5        0        5      {0: 1, 1: 1, 2: 1, 3: 1, 5: 1}
+  5     15    3      5        0        5      {0: 2, 4: 1, 6: 1, 8: 1}
+  6     15    5      3        0        3      {2: 1, 3: 1, 5: 1}
+  7     3     3      1        0        1      {1: 1}
+  8     5     1      5        0        5      {0: 1, 1: 1, 2: 1, 3: 1, 5: 1}
+  9     3     3      1        0        1      {2: 1}
+  10    3     3      1        0        1      {1: 1}
+  11    1     1      1        0        1      {0: 1}
+
+  TILING COUNT SORTED BY H:
+  [(1, 1), (3, 1), (3, 1), (3, 1), (5, 5), (5, 5), (9, 9), (9, 9), (11, 11), (13, 13), (15, 5), (15, 3)]
+  Tiling count sequence: [1, 1, 1, 1, 5, 5, 9, 9, 11, 13, 5, 3]
+
+  DEGREE = #{distinct target classes via flip}:
+    class 0 (H=9, 9 tilings): flip-degree = 7, targets = [(11, 1), (4, 5), (8, 5), (1, 9), (3, 11), (2, 13), (5, 15)]
+    class 1 (H=9, 9 tilings): flip-degree = 7, targets = [(7, 3), (10, 3), (4, 5), (8, 5), (0, 9), (3, 11), (2, 13)]
+    class 2 (H=13, 13 tilings): flip-degree = 7, targets = [(9, 3), (4, 5), (8, 5), (0, 9), (1, 9), (3, 11), (6, 15)]
+    class 3 (H=11, 11 tilings): flip-degree = 6, targets = [(4, 5), (8, 5), (0, 9), (1, 9), (2, 13), (6, 15)]
+    class 4 (H=5, 5 tilings): flip-degree = 5, targets = [(0, 9), (1, 9), (3, 11), (2, 13), (5, 15)]
+    class 5 (H=15, 5 tilings): flip-degree = 4, targets = [(8, 5), (4, 5), (0, 9), (6, 15)]
+    class 6 (H=15, 3 tilings): flip-degree = 3, targets = [(3, 11), (2, 13), (5, 15)]
+    class 7 (H=3, 1 tilings): flip-degree = 1, targets = [(1, 9)]
+    class 8 (H=5, 5 tilings): flip-degree = 5, targets = [(0, 9), (1, 9), (3, 11), (2, 13), (5, 15)]
+    class 9 (H=3, 1 tilings): flip-degree = 1, targets = [(2, 13)]
+    class 10 (H=3, 1 tilings): flip-degree = 1, targets = [(1, 9)]
+    class 11 (H=1, 1 tilings): flip-degree = 1, targets = [(0, 9)]
+
+  TILING WEIGHT ON EDGES:
+    (0,1) H=(9,9) tilings=(9,9) weight=2 w/min=2/9
+    (0,2) H=(9,13) tilings=(9,13) weight=1 w/min=1/9
+    (0,3) H=(9,11) tilings=(9,11) weight=1 w/min=1/9
+    (0,4) H=(9,5) tilings=(9,5) weight=1 w/min=1/5
+    (0,5) H=(9,15) tilings=(9,5) weight=2 w/min=2/5
+    (0,8) H=(9,5) tilings=(9,5) weight=1 w/min=1/5
+    (0,11) H=(9,1) tilings=(9,1) weight=1 w/min=1
+    (1,2) H=(9,13) tilings=(9,13) weight=2 w/min=2/9
+    (1,3) H=(9,11) tilings=(9,11) weight=1 w/min=1/9
+    (1,4) H=(9,5) tilings=(9,5) weight=1 w/min=1/5
+    (1,7) H=(9,3) tilings=(9,1) weight=1 w/min=1
+    (1,8) H=(9,5) tilings=(9,5) weight=1 w/min=1/5
+    (1,10) H=(9,3) tilings=(9,1) weight=1 w/min=1
+    (2,3) H=(13,11) tilings=(13,11) weight=2 w/min=2/11
+    (2,4) H=(13,5) tilings=(13,5) weight=1 w/min=1/5
+    (2,6) H=(13,15) tilings=(13,3) weight=1 w/min=1/3
+    (2,8) H=(13,5) tilings=(13,5) weight=1 w/min=1/5
+    (2,9) H=(13,3) tilings=(13,1) weight=1 w/min=1
+    (3,4) H=(11,5) tilings=(11,5) weight=1 w/min=1/5
+    (3,6) H=(11,15) tilings=(11,3) weight=1 w/min=1/3
+    (3,8) H=(11,5) tilings=(11,5) weight=1 w/min=1/5
+    (4,5) H=(5,15) tilings=(5,5) weight=1 w/min=1/5
+    (5,6) H=(15,15) tilings=(5,3) weight=1 w/min=1/3
+    (5,8) H=(15,5) tilings=(5,5) weight=1 w/min=1/5
+
+  TILING-DEGREE vs H:
+    H= 1: 1 tilings, 0 self-flip, 1 cross-flip -> 1 targets
+    H= 3: 1 tilings, 0 self-flip, 1 cross-flip -> 1 targets
+    H= 3: 1 tilings, 0 self-flip, 1 cross-flip -> 1 targets
+    H= 3: 1 tilings, 0 self-flip, 1 cross-flip -> 1 targets
+    H= 5: 5 tilings, 0 self-flip, 5 cross-flip -> 5 targets
+    H= 5: 5 tilings, 0 self-flip, 5 cross-flip -> 5 targets
+    H= 9: 9 tilings, 0 self-flip, 9 cross-flip -> 7 targets
+    H= 9: 9 tilings, 0 self-flip, 9 cross-flip -> 7 targets
+    H=11: 11 tilings, 4 self-flip, 7 cross-flip -> 6 targets
+    H=13: 13 tilings, 4 self-flip, 9 cross-flip -> 7 targets
+    H=15: 5 tilings, 0 self-flip, 5 cross-flip -> 4 targets
+    H=15: 3 tilings, 0 self-flip, 3 cross-flip -> 3 targets
+
+
+========================================================================
+  CROSS-n PATTERNS IN TILING COUNTS
+========================================================================
+
+
+  TILING COUNT SEQUENCES (sorted by H):
+
+  n=3: [1, 1]                                    (H = 1, 3)
+  n=4: [1, 1, 1, 5]                              (H = 1, 3, 3, 5)
+  n=5: [1, 1, 1, 1, 5, 5, 9, 9, 11, 13, 5, 3]   (H sorted)
+
+  PATTERNS IN TILING COUNTS:
+  1. The TRANSITIVE class always has 1 tiling.
+  2. Classes with |Aut|=3 have H/3 tilings (always integer since 3|H).
+  3. Classes with |Aut|=5 have H/5 tilings (regular at n=5: 15/5=3).
+  4. Generic classes (|Aut|=1) have #tilings = H.
+
+  THE TILING COUNT SEQUENCE IS:
+  - Sorted by H: a non-decreasing sequence (mostly)
+  - But JUMPS occur when |Aut| changes
+
+  THE SELF-FLIP FRACTION:
+  = fraction of tilings whose flip partner is in the same class
+  = measure of "class stability" under flip
+
+  Self-flip fraction per class:
+  - Classes with 1 tiling: self-flip iff flip(tiling) is in same class
+    This requires the tiling AND its complement to be in the same class
+    = the class is "blueself" or "blackself"
+  - Classes with many tilings: self-flip is common (many tilings, some pair up)
+
+
+========================================================================
+  THE TOTAL TILING WEIGHT
+========================================================================
+
+  Total flip pairs = 2^m / 2 = 2^{m-1}.
+
+  n=3: 2^{m-1} = 1 = 0 self + 1 cross
+    Self fraction: 0
+    This = 1 - (2*|E_tiling_flip|) / 2^m
+
+  n=4: 2^{m-1} = 4 = 1 self + 3 cross
+    Self fraction: 1/4
+    This = 1 - (2*|E_tiling_flip|) / 2^m
+
+  n=5: 2^{m-1} = 32 = 4 self + 28 cross
+    Self fraction: 1/8
+    This = 1 - (2*|E_tiling_flip|) / 2^m
+
+
+========================================================================
+  THE TILING COUNT DISTRIBUTION
+========================================================================
+
+  n=3: tiling count distribution:
+    1 tilings: 2 classes (100.0%)
+    Distinct tiling counts: 1
+    Sorted: [1, 1]
+    Sum: 2 = 2^1
+
+  n=4: tiling count distribution:
+    1 tilings: 3 classes (75.0%)
+    5 tilings: 1 classes (25.0%)
+    Distinct tiling counts: 2
+    Sorted: [1, 1, 1, 5]
+    Sum: 8 = 2^3
+
+  n=5: tiling count distribution:
+    1 tilings: 4 classes (33.3%)
+    3 tilings: 1 classes (8.3%)
+    5 tilings: 3 classes (25.0%)
+    9 tilings: 2 classes (16.7%)
+    11 tilings: 1 classes (8.3%)
+    13 tilings: 1 classes (8.3%)
+    Distinct tiling counts: 6
+    Sorted: [1, 1, 1, 1, 3, 5, 5, 5, 9, 9, 11, 13]
+    Sum: 64 = 2^6
+
+
+========================================================================
+  THE FLIP GRAPH ON TILINGS
+========================================================================
+
+
+  The FLIP GRAPH on tilings is a PERFECT MATCHING on 2^m nodes.
+  Every tiling pairs with exactly one other.
+
+  The INDUCED GRAPH on iso classes: weight = #{tiling pairs connecting them}.
+  This IS the G_n graph with weights from the tiling model.
+
+  KEY STRUCTURAL FACT:
+  Each class C has tiling_count(C) = H(C)/|Aut(C)| tilings.
+  Of these, some flip to the same class (self-flip), others cross.
+  self_flip(C) = #{tilings in C whose flip is also in C}
+  cross_flip(C) = tiling_count(C) - self_flip(C)
+
+  DEGREE: degree(C) = #{distinct classes reached by cross-flips from C}
+  WEIGHT: weight(C,D) = #{tilings in C whose flip is in D}
+
+  The weight is ALWAYS <= min(tiling_count(C), tiling_count(D)).
+  From S202: for small-tiling classes (1-2 tilings), weight = min exactly.
+
+
+========================================================================
+  SYNTHESIS: THE TILING PERSPECTIVE ON G_n
+========================================================================
+
+
+  THE META-GRAPH FROM THE TILING PERSPECTIVE:
+
+  LEVEL 1: THE TILING SPACE
+    2^m tilings, each a binary string of length m = C(n-1,2).
+    A PERFECT MATCHING: every tiling paired with its bit-complement.
+    The matching partitions 2^m tilings into 2^{m-1} pairs.
+
+  LEVEL 2: THE ISO CLASS PARTITION
+    The 2^m tilings partition into nc = A000568(n) iso classes.
+    Class C has |C| = H(C)/|Aut(C)| tilings.
+    Sum of all |C| = 2^m.
+
+  LEVEL 3: THE FLIP MATCHING ON CLASSES
+    Each tiling pair either:
+    (a) Both in same class -> SELF-FLIP (contributes to class stability)
+    (b) In different classes -> CROSS-FLIP (contributes to G_n edge)
+
+    Self-flip count: sum_C floor(|C|_self/2)
+    Cross-flip count: 2^{m-1} - self_flip
+
+  LEVEL 4: THE WEIGHTED CLASS GRAPH
+    Vertices = iso classes
+    Edge (C,D) exists iff some tiling in C flips to D
+    Weight = #{such tiling pairs}
+    Total weight = cross-flip count
+
+  THE TILING COUNT IS THE "MASS" OF EACH NODE:
+    Heavy nodes (large H/|Aut|) have more tilings -> more flip partners
+    -> more connections -> higher degree.
+    Light nodes (H=1 or large |Aut|) have few tilings -> degree 1.
+
+  THE PERFECT MATCHING CONSTRAINT:
+    Every tiling has exactly one partner. This means:
+    sum over all edges of weight(C,D) + sum_C self_flip(C) = 2^{m-1}
+    This is a GLOBAL CONSERVATION LAW on the graph.
+
+  THE TILING COUNT DETERMINES EVERYTHING:
+    Given the tiling counts {|C| = H(C)/|Aut(C)|} and the flip matching,
+    the entire G_n structure is determined. The tiling counts are
+    themselves determined by H and |Aut|, which are class invariants.
+
+  OPEN QUESTION:
+    Can we predict the DEGREE of each class from its tiling count alone?
+    From S195: deg(transitive) = C(n-1,2) = m.
+    The transitive has 1 tiling and degree = m (the maximum!).
+    So: small tiling count does NOT mean small degree.
+    In fact: the TRANSITIVE (1 tiling) has the HIGHEST degree
+    among classes with |Aut|=1 (since it has m non-neutral arcs,
+    each leading to a distinct class).
+
+  THE PARADOX:
+    More tilings -> more total flip partners -> more WEIGHT.
+    But NOT necessarily more DISTINCT targets.
+    A class with 100 tilings might flip 50 pairs to class A
+    and 50 to class B -> degree only 2, despite high weight.
+    A class with 1 tiling flips that 1 tiling to some class -> degree 1.
+    UNLESS the tiling is the transitive (|Aut|=1 forces all arcs distinct)
+    then the ARC-REVERSAL degree (not flip-degree) = C(n-1,2).
+
+  RESOLUTION: The FLIP DEGREE (from the tiling model) and the
+  ARC-REVERSAL DEGREE (from G_n) are DIFFERENT quantities.
+  - Flip degree of transitive = 1 (one flip partner, one target class)
+  - Arc-reversal degree of transitive = C(n-1,2) (many arc reversals)
+  The tiling-flip is a GLOBAL operation (complement ALL non-base arcs).
+  Arc reversal is a LOCAL operation (flip ONE arc).
+
+Done. opus-2026-03-23-S204
