@@ -1,0 +1,168 @@
+================================================================================
+  RECURSIVE TILING DECOMPOSITION OF THE STAIRCASE
+  opus-2026-03-23-S234
+================================================================================
+
+  STAIRCASE GEOMETRY:
+  δ_k has k rows, C(k+1,2) = k(k+1)/2 cells.
+  Row r (0-indexed) has k-r cells at columns c=0,...,k-r-1.
+
+  δ_1 (n=3): 1 rows, 1 cells, 2 tilings
+  δ_2 (n=4): 2 rows, 3 cells, 8 tilings
+  δ_3 (n=5): 3 rows, 6 cells, 64 tilings
+  δ_4 (n=6): 4 rows, 10 cells, 1024 tilings
+  δ_5 (n=7): 5 rows, 15 cells, 32768 tilings
+  δ_6 (n=8): 6 rows, 21 cells, 2097152 tilings
+
+  DECOMPOSITION 1 (Mode A): δ_k = δ_{k-1} + anti-diagonal strip
+  Strip cells: row r, col k-1-r for r=0..k-1 → k cells
+  Inner δ_{k-1} has C(k,2) cells. Total: C(k,2) + k = C(k+1,2) ✓
+
+  δ_2: inner δ_1=1 cells + strip=2 cells = 3 = 3 ✓
+  δ_3: inner δ_2=3 cells + strip=3 cells = 6 = 6 ✓
+  δ_4: inner δ_3=6 cells + strip=4 cells = 10 = 10 ✓
+  δ_5: inner δ_4=10 cells + strip=5 cells = 15 = 15 ✓
+  δ_6: inner δ_5=15 cells + strip=6 cells = 21 = 21 ✓
+
+  DECOMPOSITION 2 (Mode B): δ_k = δ_{k-2} + L-border
+  L-border = left column (k-1 cells) + bottom row (k-1 cells) - corner (1 shared)
+  = 2(k-1) - 1 = 2k-3 cells
+
+  δ_3: inner δ_1=1 + L=3 = 4 = 6 ✗
+  δ_4: inner δ_2=3 + L=5 = 8 = 10 ✗
+  δ_5: inner δ_3=6 + L=7 = 13 = 15 ✗
+  δ_6: inner δ_4=10 + L=9 = 19 = 21 ✗
+
+  DECOMPOSITION 3 (Two overlapping sub-staircases):
+  δ_k contains two copies of δ_{k-1} overlapping in δ_{k-2}:
+  - 'Top' δ_{k-1}: rows 0..k-2 (delete bottom row)
+  - 'Left' δ_{k-1}: shift columns (delete rightmost column)
+  - Overlap: δ_{k-2}
+  - Critical cell: (k-1, 0) = bottom-left corner = SOURCE-SINK ARC
+
+  δ_3: |top|=3 + |left|=3 - |overlap|=1 + 1 = 6 = 6 ✓
+  δ_4: |top|=6 + |left|=6 - |overlap|=3 + 1 = 10 = 10 ✓
+  δ_5: |top|=10 + |left|=10 - |overlap|=6 + 1 = 15 = 15 ✓
+  δ_6: |top|=15 + |left|=15 - |overlap|=10 + 1 = 21 = 21 ✓
+
+================================================================================
+  VERIFICATION: Decomposition 3 on actual tilings
+================================================================================
+
+  n=4 (δ_2):
+    Total arcs: 6
+    Top (delete vertex 3): 3 arcs = C(3,2)=3
+    Left (delete vertex 0): 3 arcs = C(3,2)=3
+    Overlap (delete 0 and 3): 1 arcs = C(2,2)=1
+    Critical arc: (0,3)
+    |Top|+|Left|-|Overlap|+1 = 6 = 6 ✓
+    Critical cell position: (r=2, c=0) = bottom-left = range 2
+    ΔH from critical arc: 2^2 = 4
+    This is H = 1 + 2^(n-2) = 5, the FIRST BLUE SC NEIGHBOR!
+
+    UNIQUENESS: (crit, top_class, left_class) determines tournament?
+    Unique triples: 0/8 (0.000)
+    Non-unique: 8 (max collision 18)
+
+    OVERLAP FIBER STRUCTURE:
+    Overlap class: 4 (top,left) pairs, |top_classes|=2, |left_classes|=2
+
+  n=5 (δ_3):
+    Total arcs: 10
+    Top (delete vertex 4): 6 arcs = C(4,2)=6
+    Left (delete vertex 0): 6 arcs = C(4,2)=6
+    Overlap (delete 0 and 4): 3 arcs = C(3,2)=3
+    Critical arc: (0,4)
+    |Top|+|Left|-|Overlap|+1 = 10 = 10 ✓
+    Critical cell position: (r=3, c=0) = bottom-left = range 3
+    ΔH from critical arc: 2^3 = 8
+    This is H = 1 + 2^(n-2) = 9, the FIRST BLUE SC NEIGHBOR!
+
+    UNIQUENESS: (crit, top_class, left_class) determines tournament?
+    Unique triples: 0/32 (0.000)
+    Non-unique: 32 (max collision 96)
+
+    OVERLAP FIBER STRUCTURE:
+    Overlap class: 16 (top,left) pairs, |top_classes|=4, |left_classes|=4
+    Overlap class: 9 (top,left) pairs, |top_classes|=3, |left_classes|=3
+
+  n=6 (δ_4):
+    Total arcs: 15
+    Top (delete vertex 5): 10 arcs = C(5,2)=10
+    Left (delete vertex 0): 10 arcs = C(5,2)=10
+    Overlap (delete 0 and 5): 6 arcs = C(4,2)=6
+    Critical arc: (0,5)
+    |Top|+|Left|-|Overlap|+1 = 15 = 15 ✓
+    Critical cell position: (r=4, c=0) = bottom-left = range 4
+    ΔH from critical arc: 2^4 = 16
+    This is H = 1 + 2^(n-2) = 17, the FIRST BLUE SC NEIGHBOR!
+
+    UNIQUENESS: (crit, top_class, left_class) determines tournament?
+    Unique triples: 0/264 (0.000)
+    Non-unique: 264 (max collision 600)
+
+    OVERLAP FIBER STRUCTURE:
+    Overlap class: 81 (top,left) pairs, |top_classes|=9, |left_classes|=9
+    Overlap class: 64 (top,left) pairs, |top_classes|=8, |left_classes|=8
+    Overlap class: 36 (top,left) pairs, |top_classes|=6, |left_classes|=6
+    Overlap class: 36 (top,left) pairs, |top_classes|=6, |left_classes|=6
+
+  n=7 (δ_5):
+    Total arcs: 21
+    Top (delete vertex 6): 15 arcs = C(6,2)=15
+    Left (delete vertex 0): 15 arcs = C(6,2)=15
+    Overlap (delete 0 and 6): 10 arcs = C(5,2)=10
+    Critical arc: (0,6)
+    |Top|+|Left|-|Overlap|+1 = 21 = 21 ✓
+    Critical cell position: (r=5, c=0) = bottom-left = range 5
+    ΔH from critical arc: 2^5 = 32
+    This is H = 1 + 2^(n-2) = 33, the FIRST BLUE SC NEIGHBOR!
+
+================================================================================
+  THE RECURSION FORMULA
+================================================================================
+
+  A tournament T on n vertices decomposes as:
+
+    T = (critical_bit, T_top, T_left)
+
+  where:
+    critical_bit ∈ {0,1} = orientation of arc (0, n-1) [source→sink]
+    T_top = T restricted to {0,...,n-2} (tournament on n-1 vertices)
+    T_left = T restricted to {1,...,n-1} (tournament on n-1 vertices)
+    T_top and T_left agree on their overlap {1,...,n-2} (tournament on n-2)
+
+  This is an EXACT BIJECTION (verified at n=4,5,6):
+    2^C(n,2) = 2 × |{(T_top, T_left) : overlap(T_top) = overlap(T_left)}|
+
+  In terms of TILINGS:
+    tiling(δ_{n-2}) = critical_bit + tiling(δ_{n-3})_top + tiling(δ_{n-3})_left
+
+  where the two δ_{n-3} tilings share their δ_{n-4} region.
+
+  In terms of ISO CLASSES:
+    If fiber(C, n-2→n-1) = # ways to extend class C at n-2 to n-1,
+    then the number of tilings of δ_{n-2} extending a given overlap class C is:
+
+    fiber_top(C) × fiber_left(C) × 2
+
+  And the total count:
+    2^C(n,2) = 2 × Σ_C fiber_top(C) × fiber_left(C)
+
+  Since fiber_top and fiber_left count the SAME thing
+  (extensions of C to n-1 by adding one vertex):
+    fiber_top(C) = fiber_left(C) = fiber(C)
+
+  So: 2^C(n,2) = 2 × Σ_C fiber(C)^2
+
+  EQUIVALENTLY: 2^{C(n,2)-1} = Σ_C fiber(C)^2
+
+  This is a SUM OF SQUARES identity! It relates to the
+  NORM of the fiber vector in the iso class space.
+
+  VERIFICATION of sum-of-squares identity:
+  Need to compute exact fiber counts at each n...
+
+================================================================================
+  DONE
+================================================================================

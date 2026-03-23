@@ -1,0 +1,72 @@
+================================================================================
+  RECURSIVE TILING DECOMPOSITION OF THE STAIRCASE
+  opus-2026-03-23-S234
+================================================================================
+
+  STAIRCASE GEOMETRY:
+  δ_k has k rows, C(k+1,2) = k(k+1)/2 cells.
+  Row r (0-indexed) has k-r cells at columns c=0,...,k-r-1.
+
+  δ_1 (n=3): 1 rows, 1 cells, 2 tilings
+  δ_2 (n=4): 2 rows, 3 cells, 8 tilings
+  δ_3 (n=5): 3 rows, 6 cells, 64 tilings
+  δ_4 (n=6): 4 rows, 10 cells, 1024 tilings
+  δ_5 (n=7): 5 rows, 15 cells, 32768 tilings
+  δ_6 (n=8): 6 rows, 21 cells, 2097152 tilings
+
+  DECOMPOSITION 1 (Mode A): δ_k = δ_{k-1} + anti-diagonal strip
+  Strip cells: row r, col k-1-r for r=0..k-1 → k cells
+  Inner δ_{k-1} has C(k,2) cells. Total: C(k,2) + k = C(k+1,2) ✓
+
+  δ_2: inner δ_1=1 cells + strip=2 cells = 3 = 3 ✓
+  δ_3: inner δ_2=3 cells + strip=3 cells = 6 = 6 ✓
+  δ_4: inner δ_3=6 cells + strip=4 cells = 10 = 10 ✓
+  δ_5: inner δ_4=10 cells + strip=5 cells = 15 = 15 ✓
+  δ_6: inner δ_5=15 cells + strip=6 cells = 21 = 21 ✓
+
+  DECOMPOSITION 2 (Mode B): δ_k = δ_{k-2} + L-border
+  L-border = left column (k-1 cells) + bottom row (k-1 cells) - corner (1 shared)
+  = 2(k-1) - 1 = 2k-3 cells
+
+  δ_3: inner δ_1=1 + L=3 = 4 = 6 ✗
+  δ_4: inner δ_2=3 + L=5 = 8 = 10 ✗
+  δ_5: inner δ_3=6 + L=7 = 13 = 15 ✗
+  δ_6: inner δ_4=10 + L=9 = 19 = 21 ✗
+
+  DECOMPOSITION 3 (Two overlapping sub-staircases):
+  δ_k contains two copies of δ_{k-1} overlapping in δ_{k-2}:
+  - 'Top' δ_{k-1}: rows 0..k-2 (delete bottom row)
+  - 'Left' δ_{k-1}: shift columns (delete rightmost column)
+  - Overlap: δ_{k-2}
+  - Critical cell: (k-1, 0) = bottom-left corner = SOURCE-SINK ARC
+
+  δ_3: |top|=3 + |left|=3 - |overlap|=1 + 1 = 6 = 6 ✓
+  δ_4: |top|=6 + |left|=6 - |overlap|=3 + 1 = 10 = 10 ✓
+  δ_5: |top|=10 + |left|=10 - |overlap|=6 + 1 = 15 = 15 ✓
+  δ_6: |top|=15 + |left|=15 - |overlap|=10 + 1 = 21 = 21 ✓
+
+================================================================================
+  VERIFICATION: Decomposition 3 on actual tilings
+================================================================================
+
+  n=4 (δ_2):
+    Total arcs: 6
+    Top (delete vertex 3): 3 arcs = C(3,2)=3
+    Left (delete vertex 0): 3 arcs = C(3,2)=3
+    Overlap (delete 0 and 3): 1 arcs = C(2,2)=1
+    Critical arc: (0,3)
+    |Top|+|Left|-|Overlap|+1 = 6 = 6 ✓
+    Critical cell position: (r=2, c=0) = bottom-left = range 2
+    ΔH from critical arc: 2^2 = 4
+    This is H = 1 + 2^(n-2) = 5, the FIRST BLUE SC NEIGHBOR!
+
+    UNIQUENESS: (crit, top_class, left_class) determines tournament?
+    Unique triples: 0/8 (0.000)
+    Non-unique: 8 (max collision 18)
+
+    OVERLAP FIBER STRUCTURE:
+    Overlap class: 4 (top,left) pairs, |top_classes|=2, |left_classes|=2
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/gn_recursive_tiling_s234.py", line 264, in <module>
+    print(f"    ({time.time()-t0:.1f}s)")
+NameError: name 't0' is not defined
