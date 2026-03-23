@@ -19,11 +19,12 @@ This graph captures the TOPOLOGY of tournament space at its coarsest meaningful 
 
 ## What We Know (Computationally Verified)
 
-| n | Vertices | Edges | Blue | Black | Diameter | Self-loops |
-|---|----------|-------|------|-------|----------|------------|
-| 3 | 2 | 1 | ? | ? | 1 | 1 |
-| 4 | 4 | 5 | ? | ? | 2 | 2 |
-| 5 | 12 | 30 | 14 | 16 | 3 | 7 |
+| n | Vertices | Edges | Blue | Black | SC↔SC | NS↔NS | SC↔NS | Diameter | Self-loops | SC-free NS |
+|---|----------|-------|------|-------|-------|-------|-------|----------|------------|------------|
+| 3 | 2 | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 |
+| 4 | 4 | 5 | 1 | 4 | 1 | 0 | 4 | 2 | 2 | 0 |
+| 5 | 12 | 30 | 14 | 16 | 12 | 2 | 16 | 3 | 7 | 0 |
+| 6 | 56 | 290 | 200 | 90 | 13 | 187 | 90 | ? | 30 | 8 |
 
 ### Confirmed Formulas
 - **total_weight[i] = class_size[i] × C(n,2)** — each tournament contributes C(n,2) transitions
@@ -33,6 +34,15 @@ This graph captures the TOPOLOGY of tournament space at its coarsest meaningful 
 - **Eigenvalues include ±1** at every n (from complement symmetry)
 - **E[L] = E[H]/2 = n!/2^n** (exactly half of paths close)
 - **E[total_arb] = (n/2)^{n-1}** (average arborescences)
+
+### Blue/Black Structure (S211)
+- **Blue fraction ≈ random model**: b/(b+k) ≈ (|same_type|-1)/(|V|-1) at every n
+- **Complement symmetry**: blue(i) = blue(comp(i)), black(i) = black(comp(i)) exactly
+- **SC backbone is sparse**: genus = 0,0,5,2 at n=3,4,5,6 (drops as SC fraction drops)
+- **"black=2" universality**: at n=6, 26/44 NS classes touch exactly 2 SC classes
+- **SC-free NS classes**: 8 at n=6 (including palindromic-score classes!)
+- **→SC weight quantization**: each tournament sends 0,2,4, or 6 arcs to SC classes
+- See `07-reflections/gn-blue-black-structure.md` for complete analysis
 
 ---
 

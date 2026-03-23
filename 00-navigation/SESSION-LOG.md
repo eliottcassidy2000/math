@@ -13,6 +13,34 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S211 — 2026-03-22
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S210 (marathon)
+**Files read:** definitions.md, MISTAKES.md, the-isomorphism-class-graph.md, SESSION-LOG.md, OPEN-QUESTIONS.md, iso_class_graph_s170.py, meta_graph_n6_s20ai.py
+**Summary of work:** Complete blue/black degree analysis of G_n for n=3,4,5,6. Computed the exact number of blue (SC-preserving) and black (SC-changing) edges connecting to every isomorphism class at every n. Discovered 7 major patterns.
+**New contributions:**
+- gn_blue_black_degrees_s211.py — full computation for n=3..6
+- gn_blue_black_patterns_s211.py — 10-part pattern analysis
+- gn_black_structure_s211.py — directed weights, NS bridge analysis
+- gn_blue_black_n7_sample_s211.py — n=7 sampling (partial)
+- 07-reflections/gn-blue-black-structure.md — comprehensive synthesis
+**Key discoveries:**
+1. Blue fraction matches RANDOM MODEL: b/(b+k) ≈ (|same_type|-1)/(|V|-1) at all n
+2. Complement pairs have IDENTICAL (blue, black) degrees (exact theorem)
+3. SC classes are sparse hubs: low blue (1-3), high black (up to 10) at n=6
+4. "black=2 universality": most NS classes touch exactly 2 SC classes
+5. SC backbone is nearly a TREE: genus drops from 5 (n=5) to 2 (n=6)
+6. 8 SC-free NS classes at n=6 (including palindromic-score classes 31,32!)
+7. Directed →SC weight quantized in multiples of 2 arcs per tournament
+**Unresolved threads:**
+- n=7 full computation still running
+- Why does SC backbone genus peak at n=5?
+- Is "black=2 universality" a theorem?
+- Why are palindromic NS classes 31,32 unreachable from SC?
+
+---
+
 ## opus-2026-03-22-S188-S210 MARATHON — 2026-03-22: Next Session Brief
 
 **NEXT SESSION SHOULD:**
