@@ -1,0 +1,32 @@
+======================================================================
+  FAST self_wt COMPUTATION AT n=7
+======================================================================
+  Enumerating all 2097152 tournaments...
+    200000/2097152 (15771/s, ETA 120s) twins=135388 fp_self=1010670
+    400000/2097152 (15527/s, ETA 109s) twins=282392 fp_self=2015202
+    600000/2097152 (15498/s, ETA 97s) twins=401268 fp_self=3069206
+    800000/2097152 (15472/s, ETA 84s) twins=520784 fp_self=4150438
+    1000000/2097152 (15466/s, ETA 71s) twins=646476 fp_self=5184664
+    1200000/2097152 (15481/s, ETA 58s) twins=787752 fp_self=6191544
+    1400000/2097152 (15474/s, ETA 45s) twins=917572 fp_self=7232436
+    1600000/2097152 (15470/s, ETA 32s) twins=1038080 fp_self=8303560
+    1800000/2097152 (15477/s, ETA 19s) twins=1167548 fp_self=9334816
+    2000000/2097152 (15479/s, ETA 6s) twins=1306232 fp_self=10357414
+
+  Done in 135.4s
+
+  RESULTS:
+  Total twin-pair self-flips: 1376256
+  Predicted twins: 1376256
+  Match: True
+
+  Total (score,c3)-matched self-flips: 10838016
+  Predicted self_wt: 1527456
+  Non-twin (score,c3) matches: 9461760
+  Predicted NTE(7): 151200
+
+  NTE measured (approx): 9461760
+  NTE predicted: 151200
+  NTE match: False
+  Difference: 9310560
+  (Positive = false positives from score/c3 collisions)

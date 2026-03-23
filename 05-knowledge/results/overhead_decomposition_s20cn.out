@@ -1,0 +1,109 @@
+======================================================================
+  OVERHEAD DECOMPOSITION: T_n - 2|E_n| = SL + MW
+  kind-pasteur-2026-03-22-S20cn
+======================================================================
+
+======================================================================
+  n = 3
+======================================================================
+
+  N = 2 iso classes
+  T_n = 4 transition orbits
+  |E| = 1 edges
+  2|E| = 2
+  overhead = T - 2|E| = 2
+    SL (self-loop orbits) = 2
+    MW (multi-weight)     = 0
+    SL + MW = 2
+  Check: T = SL + 2E + MW = 4 (should be 4)
+
+  Breakdown by |Aut|:
+    |Aut|=1: 1 classes, SL=2, MW=0
+    |Aut|=3: 1 classes, SL=0, MW=0
+
+  Self-loop analysis:
+    SL_n / V_n = 1.0000
+    MW_n / V_n = 0.0000
+    SL_n / T_n = 0.5000
+    MW_n / T_n = 0.0000
+
+======================================================================
+  n = 4
+======================================================================
+
+  N = 4 iso classes
+  T_n = 16 transition orbits
+  |E| = 5 edges
+  2|E| = 10
+  overhead = T - 2|E| = 6
+    SL (self-loop orbits) = 6
+    MW (multi-weight)     = 0
+    SL + MW = 6
+  Check: T = SL + 2E + MW = 16 (should be 16)
+
+  Breakdown by |Aut|:
+    |Aut|=1: 2 classes, SL=6, MW=0
+    |Aut|=3: 2 classes, SL=0, MW=0
+
+  Self-loop analysis:
+    SL_n / V_n = 1.5000
+    MW_n / V_n = 0.0000
+    SL_n / T_n = 0.3750
+    MW_n / T_n = 0.0000
+
+======================================================================
+  n = 5
+======================================================================
+
+  N = 12 iso classes
+  T_n = 88 transition orbits
+  |E| = 30 edges
+  2|E| = 60
+  overhead = T - 2|E| = 28
+    SL (self-loop orbits) = 16
+    MW (multi-weight)     = 12
+    SL + MW = 28
+  Check: T = SL + 2E + MW = 88 (should be 88)
+
+  Breakdown by |Aut|:
+    |Aut|=1: 7 classes, SL=14, MW=11
+    |Aut|=3: 4 classes, SL=2, MW=1
+    |Aut|=5: 1 classes, SL=0, MW=0
+
+  Self-loop analysis:
+    SL_n / V_n = 1.3333
+    MW_n / V_n = 1.0000
+    SL_n / T_n = 0.1818
+    MW_n / T_n = 0.1364
+
+======================================================================
+  n = 6
+======================================================================
+
+  N = 56 iso classes
+  T_n = 704 transition orbits
+  |E| = 290 edges
+  2|E| = 580
+  overhead = T - 2|E| = 124
+    SL (self-loop orbits) = 58
+    MW (multi-weight)     = 66
+    SL + MW = 124
+  Check: T = SL + 2E + MW = 704 (should be 704)
+
+  Breakdown by |Aut|:
+    |Aut|=1: 41 classes, SL=49, MW=64
+    |Aut|=3: 12 classes, SL=9, MW=2
+    |Aut|=5: 2 classes, SL=0, MW=0
+    |Aut|=9: 1 classes, SL=0, MW=0
+
+  Self-loop analysis:
+    SL_n / V_n = 1.0357
+    MW_n / V_n = 1.1786
+    SL_n / T_n = 0.0824
+    MW_n / T_n = 0.0938
+
+======================================================================
+  SUMMARY TABLE
+======================================================================
+
+    n      V   m      T    |E|    OH   SL    MW    SL/V    MW/V

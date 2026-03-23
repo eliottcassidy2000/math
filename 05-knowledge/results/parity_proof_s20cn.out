@@ -1,0 +1,38 @@
+======================================================================
+  PARITY ANALYSIS: T_n and SL_n must have same parity
+======================================================================
+
+    n          T_n T_n%2  SL_twin  SL%2  Parity Match
+    3            4     0        2     0            OK (known=2)
+    4           16     0        6     0            OK (known=6)
+    5           88     0       16     0            OK (known=16)
+    6          704     0       58     0            OK (known=58)
+    7         8912     0      326     0            OK
+    8       188288     0     3145     1  *** FAIL ***
+    9      6847200     0    54676     0            OK
+   10    437069312     0  1718498     0            OK
+   11  49674860096     0 97222922     0            OK
+   12 10169189235712     0 9937807879     1  *** FAIL ***
+   13 3786065734484352     0 1849103735018     0            OK
+   14 2584485140200024064     0 631027553265681     1  *** FAIL ***
+   15 3257188815249086506240     0 397616229928982784     0            OK
+
+  THEOREM: F_n = T_n - SL_n is always even.
+  Proof: The flip involution Phi(T,e) = (T+e, e) pairs cross-orbits.
+
+  CONSEQUENCE: If our SL formula gives wrong parity,
+  either the NTE recurrence or the twin formula is incomplete.
+
+  At n=8: T=188288 (even), SL_formula=3145 (odd) -> PARITY VIOLATION!
+  This means the twin formula for Fix_SL(sigma) is INCOMPLETE at n=8.
+  There must be additional non-twin self-flips at sigma-fixed arcs.
+
+  The first cycle type with TWO 3-cycles is [3,3,1,1] at n=8.
+  Non-twin self-flips may arise from automorphisms that exchange
+  the two 3-cycles while swapping the fixed points.
+
+  CORRECTION ANALYSIS for n=8:
+    T_8 = 188288, SL_twin = 3145
+    T - SL_twin = 185143 (parity: odd)
+    Need SL correction of at least 1 (must be odd)
+    True SL_8 >= 3146
