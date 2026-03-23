@@ -1,0 +1,249 @@
+================================================================================
+  TILINGS + BLUE/BLACK CORRELATIONS
+  opus-2026-03-23-S226
+================================================================================
+
+================================================================================
+  n = 3
+================================================================================
+  V=2, E_blue=1, E_black=0
+
+  TILINGS (= H / |Aut|) for SC nodes (sorted by H):
+    H=    1 |Aut|=  1 Tilings=     1 blue_d= 1 black_d= 0
+    H=    3 |Aut|=  3 Tilings=     1 blue_d= 1 black_d= 0
+
+  Total tilings: SC=2, NS=0, all=2
+
+  SC BLUE SUBGRAPH: V=2, E=1
+    Is a TREE: YES ✓ (E = V-1 = 1)
+
+  TRANSITIVE (H=1) BLUE SC NEIGHBORS:
+    H=3, ΔH=2, 2^(n-2)=2, = 2^(n-2) ✓
+
+  TILING SUM ALONG EDGES:
+    All: min=2, max=2, avg=2.0
+    Blue: min=2, max=2, avg=2.0
+
+  TILING ENERGY (Σ T(a)×T(b) over edges):
+    All: 1
+    Blue: 1
+    Black: 0
+
+  DISTINCT TILING VALUES: 1
+    [1]
+
+  n=3 done (0.0s)
+
+================================================================================
+  n = 4
+================================================================================
+  V=3, E_blue=1, E_black=2
+
+  TILINGS (= H / |Aut|) for SC nodes (sorted by H):
+    H=    1 |Aut|=  1 Tilings=     1 blue_d= 1 black_d= 1
+    H=    5 |Aut|=  1 Tilings=     5 blue_d= 1 black_d= 1
+
+  Total tilings: SC=6, NS=1, all=7
+
+  SC BLUE SUBGRAPH: V=2, E=1
+    Is a TREE: YES ✓ (E = V-1 = 1)
+
+  TRANSITIVE (H=1) BLUE SC NEIGHBORS:
+    H=5, ΔH=4, 2^(n-2)=4, = 2^(n-2) ✓
+
+  TILING SUM ALONG EDGES:
+    All: min=2, max=6, avg=4.7
+    Blue: min=6, max=6, avg=6.0
+    Black: min=2, max=6, avg=4.0
+
+  TILING ENERGY (Σ T(a)×T(b) over edges):
+    All: 11
+    Blue: 5
+    Black: 6
+
+  DISTINCT TILING VALUES: 2
+    [1, 5]
+
+  n=4 done (0.0s)
+
+================================================================================
+  n = 5
+================================================================================
+  V=10, E_blue=13, E_black=8
+
+  TILINGS (= H / |Aut|) for SC nodes (sorted by H):
+    H=    1 |Aut|=  1 Tilings=     1 blue_d= 2 black_d= 2
+    H=    3 |Aut|=  3 Tilings=     1 blue_d= 2 black_d= 1
+    H=    9 |Aut|=  1 Tilings=     9 blue_d= 4 black_d= 1
+    H=    9 |Aut|=  1 Tilings=     9 blue_d= 3 black_d= 2
+    H=   11 |Aut|=  1 Tilings=    11 blue_d= 4 black_d= 1
+    H=   13 |Aut|=  1 Tilings=    13 blue_d= 4 black_d= 1
+    H=   15 |Aut|=  3 Tilings=     5 blue_d= 3 black_d= 0
+    H=   15 |Aut|=  5 Tilings=     3 blue_d= 2 black_d= 0
+
+  Total tilings: SC=52, NS=6, all=58
+
+  SC BLUE SUBGRAPH: V=8, E=12
+    Is a TREE: NO ✗ (E = V-1 = 7)
+
+  TRANSITIVE (H=1) BLUE SC NEIGHBORS:
+    H=3, ΔH=2, 2^(n-2)=8, 
+    H=9, ΔH=8, 2^(n-2)=8, = 2^(n-2) ✓
+
+  CORRELATIONS:
+    corr(Tilings, blue_deg)  = 0.8353
+    corr(Tilings, black_deg) = -0.0993
+    corr(Tilings, total_deg) = 0.5492
+    corr(Tilings, H)         = 0.5653
+
+  TILING SUM ALONG EDGES:
+    All: min=2, max=24, avg=13.1
+    Blue: min=2, max=24, avg=14.6
+    Black: min=2, max=18, avg=10.8
+
+  TILING ENERGY (Σ T(a)×T(b) over edges):
+    All: 971
+    Blue: 741
+    Black: 230
+
+  DISTINCT TILING VALUES: 6
+    [1, 3, 5, 9, 11, 13]
+
+  n=5 done (0.2s)
+
+================================================================================
+  n = 6
+================================================================================
+  V=34, E_blue=98, E_black=45
+
+  TILINGS (= H / |Aut|) for SC nodes (sorted by H):
+    H=    1 |Aut|=  1 Tilings=     1 blue_d= 2 black_d= 4
+    H=    5 |Aut|=  1 Tilings=     5 blue_d= 2 black_d= 5
+    H=    9 |Aut|=  9 Tilings=     1 blue_d= 1 black_d= 1
+    H=   17 |Aut|=  1 Tilings=    17 blue_d= 2 black_d= 5
+    H=   17 |Aut|=  1 Tilings=    17 blue_d= 3 black_d= 4
+    H=   29 |Aut|=  1 Tilings=    29 blue_d= 3 black_d= 5
+    H=   29 |Aut|=  1 Tilings=    29 blue_d= 2 black_d= 5
+    H=   33 |Aut|=  1 Tilings=    33 blue_d= 3 black_d= 5
+    H=   37 |Aut|=  1 Tilings=    37 blue_d= 3 black_d= 4
+    H=   41 |Aut|=  1 Tilings=    41 blue_d= 2 black_d= 4
+    H=   45 |Aut|=  3 Tilings=    15 blue_d= 2 black_d= 1
+    H=   45 |Aut|=  3 Tilings=    15 blue_d= 1 black_d= 2
+
+  Total tilings: SC=240, NS=392, all=632
+
+  SC BLUE SUBGRAPH: V=12, E=13
+    Is a TREE: NO ✗ (E = V-1 = 11)
+
+  TRANSITIVE (H=1) BLUE SC NEIGHBORS:
+    H=5, ΔH=4, 2^(n-2)=16, 
+    H=17, ΔH=16, 2^(n-2)=16, = 2^(n-2) ✓
+
+  CORRELATIONS:
+    corr(Tilings, blue_deg)  = 0.1948
+    corr(Tilings, black_deg) = 0.3870
+    corr(Tilings, total_deg) = 0.3986
+    corr(Tilings, H)         = 0.7900
+
+  TILING SUM ALONG EDGES:
+    All: min=2, max=84, avg=41.0
+    Blue: min=6, max=80, avg=40.0
+    Black: min=2, max=84, avg=43.2
+
+  TILING ENERGY (Σ T(a)×T(b) over edges):
+    All: 71015
+    Blue: 45104
+    Black: 25911
+
+  DISTINCT TILING VALUES: 17
+    [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 29, 31, 33, 37, 41, 43]
+
+  n=6 done (59.6s)
+
+================================================================================
+  n = 7
+================================================================================
+  V=272, E_blue=1573, E_black=550
+
+  TILINGS (= H / |Aut|) for SC nodes (sorted by H):
+
+  Total tilings: SC=7308, NS=12730, all=20038
+
+  SC BLUE SUBGRAPH: V=88, E=174
+    Is a TREE: NO ✗ (E = V-1 = 87)
+
+  TRANSITIVE (H=1) BLUE SC NEIGHBORS:
+    H=3, ΔH=2, 2^(n-2)=32, 
+    H=9, ΔH=8, 2^(n-2)=32, 
+    H=33, ΔH=32, 2^(n-2)=32, = 2^(n-2) ✓
+
+  CORRELATIONS:
+    corr(Tilings, blue_deg)  = 0.0129
+    corr(Tilings, black_deg) = 0.4406
+    corr(Tilings, total_deg) = 0.2475
+    corr(Tilings, H)         = 0.8559
+
+  TILING SUM ALONG EDGES:
+    All: min=2, max=318, avg=154.3
+    Blue: min=2, max=318, avg=147.9
+    Black: min=2, max=312, avg=172.4
+
+  TILING ENERGY (Σ T(a)×T(b) over edges):
+    All: 15262741
+    Blue: 10379597
+    Black: 4883144
+
+  DISTINCT TILING VALUES: 74
+    First 10: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23]
+    Last 10: [139, 141, 143, 145, 147, 151, 153, 155, 157, 159]
+
+  n=7 done (4.4s)
+
+================================================================================
+  n = 8
+================================================================================
+  V=3528, E_blue=43656, E_black=1894
+
+  TILINGS (= H / |Aut|) for SC nodes (sorted by H):
+
+  Total tilings: SC=61480, NS=1040912, all=1102392
+
+  SC BLUE SUBGRAPH: V=176, E=319
+    Is a TREE: NO ✗ (E = V-1 = 175)
+
+  TRANSITIVE (H=1) BLUE SC NEIGHBORS:
+    H=5, ΔH=4, 2^(n-2)=64, 
+    H=17, ΔH=16, 2^(n-2)=64, 
+    H=65, ΔH=64, 2^(n-2)=64, = 2^(n-2) ✓
+
+  CORRELATIONS:
+    corr(Tilings, blue_deg)  = 0.0560
+    corr(Tilings, black_deg) = 0.0928
+    corr(Tilings, total_deg) = 0.1379
+    corr(Tilings, H)         = 1.0000
+
+  TILING ENERGY (Σ T(a)×T(b) over edges):
+    All: 5422383560
+    Blue: 5143760892
+    Black: 278622668
+
+  DISTINCT TILING VALUES: 320
+    First 10: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23]
+    Last 10: [639, 641, 643, 645, 649, 651, 653, 657, 659, 661]
+
+  n=8 done (179.3s)
+
+================================================================================
+  CROSS-n TILING SEQUENCES
+================================================================================
+
+  Transitive tilings: always 1 (H=1, |Aut|=1)
+
+  H_max and its tilings:
+    n=3: H_max=3, |Aut|=3, Tilings=1, SC=True
+    n=4: H_max=5, |Aut|=1, Tilings=5, SC=True
+    n=5: H_max=15, |Aut|=3, Tilings=5, SC=True
+    n=5: H_max=15, |Aut|=5, Tilings=3, SC=True
+    n=6: H_max=45, |Aut|=3, Tilings=15, SC=True
+    n=6: H_max=45, |Aut|=3, Tilings=15, SC=True
+    n=7: H_max=189, |Aut|=21, Tilings=9, SC=True
