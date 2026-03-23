@@ -1,0 +1,369 @@
+================================================================================
+  THE PRINCIPAL LINE OF SYMMETRY IN G_n/Z_2
+  kind-pasteur-2026-03-23-S20cp
+================================================================================
+
+
+################################################################################
+  n = 3
+################################################################################
+  G_3/Z_2: V=2, E=1, SC=2, blue=1, black=0 (0.0s)
+
+======================================================================
+  PRINCIPAL LINE OF G_3/Z_2
+======================================================================
+
+  TRANSITIVE CLASS: mid=0, H=1, score=(0, 1, 2), sc=True, |Aut|=1, size=6
+  Blue neighbors: [1]
+  Black neighbors: []
+
+  SC vertices: [0, 1]
+
+  SC BLUE SPINE (BFS tree from transitive):
+  Spine size: 2 vertices
+  Max depth: 1
+    [0] H=  1 score=(0, 1, 2) c3=0 |Aut|=1 (root)  children=[1]
+      [1] H=  3 score=(1, 1, 1) c3=1 |Aut|=3 <- 0  children=[]
+
+  PRINCIPAL AXIS (longest blue path from transitive):
+  Length: 2 vertices, 1 edges
+  Path: [0, 1]
+  H along path: [1, 3]
+  Scores along path:
+    [0] mid=0 H=  1 score=(0, 1, 2) c3=0 |Aut|=1
+    [1] mid=1 H=  3 score=(1, 1, 1) c3=1 |Aut|=3
+
+  PERPENDICULAR STRUCTURE (vertices grouped by axis position and distance):
+
+  BILATERAL ANALYSIS:
+
+  SCORE PROFILE ALONG PRINCIPAL AXIS:
+    [0] H=  1 score=(0, 1, 2) var=0.67 ent=1.585 c3=0
+    [1] H=  3 score=(1, 1, 1) var=0.00 ent=-0.000 c3=1
+
+  EDGE PATTERN ALONG PRINCIPAL AXIS:
+    [0]->[1]: H 1->3 (Delta=+2), common_nbrs=0 (on_axis=0, off=0)
+
+  BLACK EDGES FROM AXIS VERTICES:
+
+  SCORE STAIRCASE ALONG AXIS:
+    [ 0] H=  1 (0, 1, 2) |.|#|
+    [ 1] H=  3 (1, 1, 1) |||||
+
+  MIRROR ANALYSIS (non-axis classes):
+  Classes with mirror: 0
+  Classes without mirror: 0
+
+
+
+################################################################################
+  n = 4
+################################################################################
+  G_4/Z_2: V=3, E=3, SC=2, blue=1, black=2 (0.0s)
+
+======================================================================
+  PRINCIPAL LINE OF G_4/Z_2
+======================================================================
+
+  TRANSITIVE CLASS: mid=0, H=1, score=(0, 1, 2, 3), sc=True, |Aut|=1, size=24
+  Blue neighbors: [2]
+  Black neighbors: [1]
+
+  SC vertices: [0, 2]
+
+  SC BLUE SPINE (BFS tree from transitive):
+  Spine size: 2 vertices
+  Max depth: 1
+    [0] H=  1 score=(0, 1, 2, 3) c3=0 |Aut|=1 (root)  children=[2]
+      [2] H=  5 score=(1, 1, 2, 2) c3=2 |Aut|=1 <- 0  children=[]
+
+  PRINCIPAL AXIS (longest blue path from transitive):
+  Length: 2 vertices, 1 edges
+  Path: [0, 2]
+  H along path: [1, 5]
+  Scores along path:
+    [0] mid=0 H=  1 score=(0, 1, 2, 3) c3=0 |Aut|=1
+    [1] mid=2 H=  5 score=(1, 1, 2, 2) c3=2 |Aut|=1
+
+  PERPENDICULAR STRUCTURE (vertices grouped by axis position and distance):
+  Axis[0] H=  1:   d=1: 1(H=3,NS)
+
+  BILATERAL ANALYSIS:
+    Axis[0] H=1: 1 branches (SC=0, NS=1), above=1, below=0, level=0
+      Branch H values: [3]
+
+  SCORE PROFILE ALONG PRINCIPAL AXIS:
+    [0] H=  1 score=(0, 1, 2, 3) var=1.25 ent=2.000 c3=0
+    [1] H=  5 score=(1, 1, 2, 2) var=0.25 ent=1.000 c3=2
+
+  EDGE PATTERN ALONG PRINCIPAL AXIS:
+    [0]->[1]: H 1->5 (Delta=+4), common_nbrs=1 (on_axis=0, off=1)
+
+  BLACK EDGES FROM AXIS VERTICES:
+    Axis[0] H=  1: 1 black -> 1(H=3,NS,off)
+    Axis[1] H=  5: 1 black -> 1(H=3,NS,off)
+
+  SCORE STAIRCASE ALONG AXIS:
+    [ 0] H=  1 (0, 1, 2, 3) |..##|
+    [ 1] H=  5 (1, 1, 2, 2) |..##|
+
+  MIRROR ANALYSIS (non-axis classes):
+  Classes with mirror: 0
+  Classes without mirror: 1
+  Mirror fraction: 0.000
+
+
+################################################################################
+  n = 5
+################################################################################
+  G_5/Z_2: V=10, E=21, SC=8, blue=13, black=8 (0.3s)
+
+======================================================================
+  PRINCIPAL LINE OF G_5/Z_2
+======================================================================
+
+  TRANSITIVE CLASS: mid=0, H=1, score=(0, 1, 2, 3, 4), sc=True, |Aut|=1, size=120
+  Blue neighbors: [3, 4]
+  Black neighbors: [1, 2]
+
+  SC vertices: [0, 3, 4, 5, 6, 7, 8, 9]
+
+  SC BLUE SPINE (BFS tree from transitive):
+  Spine size: 8 vertices
+  Max depth: 3
+    [0] H=  1 score=(0, 1, 2, 3, 4) c3=0 |Aut|=1 (root)  children=[3, 4]
+      [3] H=  3 score=(0, 2, 2, 2, 4) c3=1 |Aut|=0 <- 0  children=[5]
+      [4] H=  9 score=(1, 1, 2, 3, 3) c3=3 |Aut|=1 <- 0  children=[9, 7]
+        [5] H= 15 score=(1, 2, 2, 2, 3) c3=4 |Aut|=3 <- 3  children=[6]
+        [9] H=  9 score=(1, 1, 2, 3, 3) c3=3 |Aut|=0 <- 4  children=[]
+        [7] H= 11 score=(1, 2, 2, 2, 3) c3=4 |Aut|=0 <- 4  children=[8]
+          [6] H= 13 score=(1, 2, 2, 2, 3) c3=4 |Aut|=0 <- 5  children=[]
+          [8] H= 15 score=(2, 2, 2, 2, 2) c3=5 |Aut|=5 <- 7  children=[]
+
+  PRINCIPAL AXIS (longest blue path from transitive):
+  Length: 8 vertices, 7 edges
+  Path: [0, 4, 9, 7, 8, 6, 5, 3]
+  H along path: [1, 9, 9, 11, 15, 13, 15, 3]
+  Scores along path:
+    [0] mid=0 H=  1 score=(0, 1, 2, 3, 4) c3=0 |Aut|=1
+    [1] mid=4 H=  9 score=(1, 1, 2, 3, 3) c3=3 |Aut|=1
+    [2] mid=9 H=  9 score=(1, 1, 2, 3, 3) c3=3 |Aut|=0
+    [3] mid=7 H= 11 score=(1, 2, 2, 2, 3) c3=4 |Aut|=0
+    [4] mid=8 H= 15 score=(2, 2, 2, 2, 2) c3=5 |Aut|=5
+    [5] mid=6 H= 13 score=(1, 2, 2, 2, 3) c3=4 |Aut|=0
+    [6] mid=5 H= 15 score=(1, 2, 2, 2, 3) c3=4 |Aut|=3
+    [7] mid=3 H=  3 score=(0, 2, 2, 2, 4) c3=1 |Aut|=0
+
+  PERPENDICULAR STRUCTURE (vertices grouped by axis position and distance):
+  Axis[0] H=  1:   d=1: 1(H=3,NS), 2(H=5,NS)
+
+  BILATERAL ANALYSIS:
+    Axis[0] H=1: 2 branches (SC=0, NS=2), above=2, below=0, level=0
+      Branch H values: [3, 5]
+
+  SCORE PROFILE ALONG PRINCIPAL AXIS:
+    [0] H=  1 score=(0, 1, 2, 3, 4) var=2.00 ent=2.322 c3=0
+    [1] H=  9 score=(1, 1, 2, 3, 3) var=0.80 ent=1.522 c3=3
+    [2] H=  9 score=(1, 1, 2, 3, 3) var=0.80 ent=1.522 c3=3
+    [3] H= 11 score=(1, 2, 2, 2, 3) var=0.40 ent=1.371 c3=4
+    [4] H= 15 score=(2, 2, 2, 2, 2) var=0.00 ent=-0.000 c3=5
+    [5] H= 13 score=(1, 2, 2, 2, 3) var=0.40 ent=1.371 c3=4
+    [6] H= 15 score=(1, 2, 2, 2, 3) var=0.40 ent=1.371 c3=4
+    [7] H=  3 score=(0, 2, 2, 2, 4) var=1.60 ent=1.371 c3=1
+
+  EDGE PATTERN ALONG PRINCIPAL AXIS:
+    [0]->[1]: H 1->9 (Delta=+8), common_nbrs=1 (on_axis=0, off=1)
+    [1]->[2]: H 9->9 (Delta=+0), common_nbrs=2 (on_axis=1, off=1)
+    [2]->[3]: H 9->11 (Delta=+2), common_nbrs=3 (on_axis=2, off=1)
+    [3]->[4]: H 11->15 (Delta=+4), common_nbrs=1 (on_axis=1, off=0)
+    [4]->[5]: H 15->13 (Delta=-2), common_nbrs=1 (on_axis=1, off=0)
+    [5]->[6]: H 13->15 (Delta=+2), common_nbrs=0 (on_axis=0, off=0)
+    [6]->[7]: H 15->3 (Delta=-12), common_nbrs=0 (on_axis=0, off=0)
+
+  BLACK EDGES FROM AXIS VERTICES:
+    Axis[0] H=  1: 2 black -> 1(H=3,NS,off), 2(H=5,NS,off)
+    Axis[1] H=  9: 1 black -> 2(H=5,NS,off)
+    Axis[2] H=  9: 2 black -> 1(H=3,NS,off), 2(H=5,NS,off)
+    Axis[3] H= 11: 1 black -> 2(H=5,NS,off)
+    Axis[5] H= 13: 1 black -> 2(H=5,NS,off)
+    Axis[7] H=  3: 1 black -> 2(H=5,NS,off)
+
+  SCORE STAIRCASE ALONG AXIS:
+    [ 0] H=  1 (0, 1, 2, 3, 4) |..|##|
+    [ 1] H=  9 (1, 1, 2, 3, 3) |..|##|
+    [ 2] H=  9 (1, 1, 2, 3, 3) |..|##|
+    [ 3] H= 11 (1, 2, 2, 2, 3) |.|||#|
+    [ 4] H= 15 (2, 2, 2, 2, 2) |||||||
+    [ 5] H= 13 (1, 2, 2, 2, 3) |.|||#|
+    [ 6] H= 15 (1, 2, 2, 2, 3) |.|||#|
+    [ 7] H=  3 (0, 2, 2, 2, 4) |.|||#|
+
+  MIRROR ANALYSIS (non-axis classes):
+  Classes with mirror: 0
+  Classes without mirror: 2
+  Mirror fraction: 0.000
+
+
+################################################################################
+  n = 6
+################################################################################
+  G_6/Z_2: V=34, E=143, SC=12, blue=98, black=45 (22.7s)
+
+======================================================================
+  PRINCIPAL LINE OF G_6/Z_2
+======================================================================
+
+  TRANSITIVE CLASS: mid=0, H=1, score=(0, 1, 2, 3, 4, 5), sc=True, |Aut|=1, size=720
+  Blue neighbors: [6, 11]
+  Black neighbors: [1, 2, 3, 4]
+
+  SC vertices: [0, 6, 11, 14, 19, 23, 27, 28, 30, 31, 32, 33]
+
+  SC BLUE SPINE (BFS tree from transitive):
+  Spine size: 12 vertices
+  Max depth: 7
+    [0] H=  1 score=(0, 1, 2, 3, 4, 5) c3=0 |Aut|=1 (root)  children=[11, 6]
+      [11] H= 17 score=(1, 1, 2, 3, 4, 4) c3=4 |Aut|=1 <- 0  children=[14]
+      [6] H=  5 score=(0, 2, 2, 3, 3, 5) c3=2 |Aut|=0 <- 0  children=[]
+        [14] H= 37 score=(1, 2, 2, 3, 3, 4) c3=6 |Aut|=1 <- 11  children=[19]
+          [19] H= 33 score=(1, 2, 2, 3, 3, 4) c3=6 |Aut|=0 <- 14  children=[31, 23]
+            [31] H= 29 score=(1, 2, 2, 3, 3, 4) c3=6 |Aut|=0 <- 19  children=[33, 28]
+            [23] H= 41 score=(2, 2, 2, 3, 3, 3) c3=8 |Aut|=1 <- 19  children=[]
+              [33] H= 45 score=(2, 2, 2, 3, 3, 3) c3=8 |Aut|=0 <- 31  children=[]
+              [28] H= 17 score=(1, 1, 2, 3, 4, 4) c3=4 |Aut|=0 <- 31  children=[27, 30]
+                [27] H=  9 score=(1, 1, 1, 4, 4, 4) c3=2 |Aut|=0 <- 28  children=[]
+                [30] H= 29 score=(1, 2, 2, 3, 3, 4) c3=6 |Aut|=0 <- 28  children=[32]
+                  [32] H= 45 score=(2, 2, 2, 3, 3, 3) c3=8 |Aut|=0 <- 30  children=[]
+
+  PRINCIPAL AXIS (longest blue path from transitive):
+  Length: 10 vertices, 9 edges
+  Path: [0, 6, 14, 19, 23, 33, 31, 28, 30, 32]
+  H along path: [1, 5, 37, 33, 41, 45, 29, 17, 29, 45]
+  Scores along path:
+    [0] mid=0 H=  1 score=(0, 1, 2, 3, 4, 5) c3=0 |Aut|=1
+    [1] mid=6 H=  5 score=(0, 2, 2, 3, 3, 5) c3=2 |Aut|=0
+    [2] mid=14 H= 37 score=(1, 2, 2, 3, 3, 4) c3=6 |Aut|=1
+    [3] mid=19 H= 33 score=(1, 2, 2, 3, 3, 4) c3=6 |Aut|=0
+    [4] mid=23 H= 41 score=(2, 2, 2, 3, 3, 3) c3=8 |Aut|=1
+    [5] mid=33 H= 45 score=(2, 2, 2, 3, 3, 3) c3=8 |Aut|=0
+    [6] mid=31 H= 29 score=(1, 2, 2, 3, 3, 4) c3=6 |Aut|=0
+    [7] mid=28 H= 17 score=(1, 1, 2, 3, 4, 4) c3=4 |Aut|=0
+    [8] mid=30 H= 29 score=(1, 2, 2, 3, 3, 4) c3=6 |Aut|=0
+    [9] mid=32 H= 45 score=(2, 2, 2, 3, 3, 3) c3=8 |Aut|=0
+
+  PERPENDICULAR STRUCTURE (vertices grouped by axis position and distance):
+  Axis[0] H=  1:   d=1: 1(H=3,NS), 3(H=3,NS), 2(H=5,NS), 4(H=9,NS), 11(H=17,SC)  d=2: 5(H=15,NS)
+  Axis[1] H=  5:   d=1: 10(H=9,NS), 8(H=11,NS), 7(H=13,NS)  d=2: 9(H=15,NS), 29(H=25,NS)
+  Axis[2] H= 37:   d=1: 12(H=27,NS), 21(H=31,NS), 15(H=37,NS), 16(H=37,NS)  d=2: 13(H=33,NS)
+  Axis[3] H= 33:   d=1: 17(H=23,NS), 22(H=29,NS)
+  Axis[4] H= 41:   d=1: 20(H=23,NS), 26(H=33,NS), 24(H=43,NS)
+  Axis[7] H= 17:   d=1: 27(H=9,SC), 25(H=15,NS)
+  Axis[8] H= 29:   d=1: 18(H=19,NS)
+
+  BILATERAL ANALYSIS:
+    Axis[0] H=1: 6 branches (SC=1, NS=5), above=6, below=0, level=0
+      Branch H values: [3, 3, 5, 9, 15, 17]
+    Axis[1] H=5: 5 branches (SC=0, NS=5), above=5, below=0, level=0
+      Branch H values: [9, 11, 13, 15, 25]
+    Axis[2] H=37: 5 branches (SC=0, NS=5), above=0, below=3, level=2
+      Branch H values: [27, 31, 33, 37, 37]
+    Axis[3] H=33: 2 branches (SC=0, NS=2), above=0, below=2, level=0
+      Branch H values: [23, 29]
+    Axis[4] H=41: 3 branches (SC=0, NS=3), above=1, below=2, level=0
+      Branch H values: [23, 33, 43]
+    Axis[7] H=17: 2 branches (SC=1, NS=1), above=0, below=2, level=0
+      Branch H values: [9, 15]
+    Axis[8] H=29: 1 branches (SC=0, NS=1), above=0, below=1, level=0
+      Branch H values: [19]
+
+  SCORE PROFILE ALONG PRINCIPAL AXIS:
+    [0] H=  1 score=(0, 1, 2, 3, 4, 5) var=2.92 ent=2.585 c3=0
+    [1] H=  5 score=(0, 2, 2, 3, 3, 5) var=2.25 ent=1.918 c3=2
+    [2] H= 37 score=(1, 2, 2, 3, 3, 4) var=0.92 ent=1.918 c3=6
+    [3] H= 33 score=(1, 2, 2, 3, 3, 4) var=0.92 ent=1.918 c3=6
+    [4] H= 41 score=(2, 2, 2, 3, 3, 3) var=0.25 ent=1.000 c3=8
+    [5] H= 45 score=(2, 2, 2, 3, 3, 3) var=0.25 ent=1.000 c3=8
+    [6] H= 29 score=(1, 2, 2, 3, 3, 4) var=0.92 ent=1.918 c3=6
+    [7] H= 17 score=(1, 1, 2, 3, 4, 4) var=1.58 ent=1.918 c3=4
+    [8] H= 29 score=(1, 2, 2, 3, 3, 4) var=0.92 ent=1.918 c3=6
+    [9] H= 45 score=(2, 2, 2, 3, 3, 3) var=0.25 ent=1.000 c3=8
+
+  EDGE PATTERN ALONG PRINCIPAL AXIS:
+    [0]->[1]: H 1->5 (Delta=+4), common_nbrs=2 (on_axis=0, off=2)
+    [1]->[2]: H 5->37 (Delta=+32), common_nbrs=0 (on_axis=0, off=0)
+    [2]->[3]: H 37->33 (Delta=-4), common_nbrs=2 (on_axis=0, off=2)
+    [3]->[4]: H 33->41 (Delta=+8), common_nbrs=1 (on_axis=0, off=1)
+    [4]->[5]: H 41->45 (Delta=+4), common_nbrs=1 (on_axis=0, off=1)
+    [5]->[6]: H 45->29 (Delta=-16), common_nbrs=1 (on_axis=0, off=1)
+    [6]->[7]: H 29->17 (Delta=-12), common_nbrs=1 (on_axis=0, off=1)
+    [7]->[8]: H 17->29 (Delta=+12), common_nbrs=0 (on_axis=0, off=0)
+    [8]->[9]: H 29->45 (Delta=+16), common_nbrs=0 (on_axis=0, off=0)
+
+  BLACK EDGES FROM AXIS VERTICES:
+    Axis[0] H=  1: 4 black -> 1(H=3,NS,off), 3(H=3,NS,off), 2(H=5,NS,off), 4(H=9,NS,off)
+    Axis[1] H=  5: 5 black -> 3(H=3,NS,off), 4(H=9,NS,off), 10(H=9,NS,off), 8(H=11,NS,off), 7(H=13,NS,off)
+    Axis[2] H= 37: 4 black -> 12(H=27,NS,off), 21(H=31,NS,off), 16(H=37,NS,off), 15(H=37,NS,off)
+    Axis[3] H= 33: 5 black -> 4(H=9,NS,off), 17(H=23,NS,off), 22(H=29,NS,off), 21(H=31,NS,off), 16(H=37,NS,off)
+    Axis[4] H= 41: 4 black -> 20(H=23,NS,off), 26(H=33,NS,off), 16(H=37,NS,off), 24(H=43,NS,off)
+    Axis[5] H= 45: 1 black -> 16(H=37,NS,off)
+    Axis[6] H= 29: 5 black -> 8(H=11,NS,off), 17(H=23,NS,off), 22(H=29,NS,off), 26(H=33,NS,off), 16(H=37,NS,off)
+    Axis[7] H= 17: 4 black -> 2(H=5,NS,off), 10(H=9,NS,off), 25(H=15,NS,off), 17(H=23,NS,off)
+    Axis[8] H= 29: 5 black -> 7(H=13,NS,off), 18(H=19,NS,off), 21(H=31,NS,off), 26(H=33,NS,off), 16(H=37,NS,off)
+    Axis[9] H= 45: 2 black -> 15(H=37,NS,off), 24(H=43,NS,off)
+
+  SCORE STAIRCASE ALONG AXIS:
+    [ 0] H=  1 (0, 1, 2, 3, 4, 5) |...###|
+    [ 1] H=  5 (0, 2, 2, 3, 3, 5) |...###|
+    [ 2] H= 37 (1, 2, 2, 3, 3, 4) |...###|
+    [ 3] H= 33 (1, 2, 2, 3, 3, 4) |...###|
+    [ 4] H= 41 (2, 2, 2, 3, 3, 3) |...###|
+    [ 5] H= 45 (2, 2, 2, 3, 3, 3) |...###|
+    [ 6] H= 29 (1, 2, 2, 3, 3, 4) |...###|
+    [ 7] H= 17 (1, 1, 2, 3, 4, 4) |...###|
+    [ 8] H= 29 (1, 2, 2, 3, 3, 4) |...###|
+    [ 9] H= 45 (2, 2, 2, 3, 3, 3) |...###|
+
+  MIRROR ANALYSIS (non-axis classes):
+  Classes with mirror: 4
+  Classes without mirror: 20
+  Mirror fraction: 0.167
+
+
+================================================================================
+  CROSS-n COMPARISON
+================================================================================
+
+  PRINCIPAL AXIS PROPERTIES:
+    n  |axis|  max_depth         H_range                                   axis_H
+    3       2          1           [1,3]                                   [1, 3]
+    4       2          1           [1,5]                                   [1, 5]
+    5       8          3           [1,3]             [1, 9, 9, 11, 15, 13, 15, 3]
+    6      10          7          [1,45]   [1, 5, 37, 33, 41, 45, 29, 17, 29, 45]
+
+  SPINE SIZE vs SC COUNT:
+  n=3: spine=2 SC vertices reachable from transitive via blue
+  n=4: spine=2 SC vertices reachable from transitive via blue
+  n=5: spine=8 SC vertices reachable from transitive via blue
+  n=6: spine=12 SC vertices reachable from transitive via blue
+
+  BILATERAL BALANCE (above/below/level counts at each axis position):
+  n=3: [(0, 0, 0), (0, 0, 0)]
+  n=4: [(1, 0, 0), (0, 0, 0)]
+  n=5: [(2, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0)]
+  n=6: [(6, 0, 0), (5, 0, 0), (0, 3, 2), (0, 2, 0), (1, 2, 0), (0, 0, 0), (0, 0, 0), (0, 2, 0), (0, 1, 0), (0, 0, 0)]
+
+  MIRROR SYMMETRY:
+  n=3: 0/0 classes have mirror (0.000)
+  n=4: 0/1 classes have mirror (0.000)
+  n=5: 0/2 classes have mirror (0.000)
+  n=6: 4/24 classes have mirror (0.167)
+
+  H-PROFILE SEQUENCES ALONG PRINCIPAL AXIS:
+  n=3: H = [1, 3], Delta_H = [2]
+  n=4: H = [1, 5], Delta_H = [4]
+  n=5: H = [1, 9, 9, 11, 15, 13, 15, 3], Delta_H = [8, 0, 2, 4, -2, 2, -12]
+  n=6: H = [1, 5, 37, 33, 41, 45, 29, 17, 29, 45], Delta_H = [4, 32, -4, 8, 4, -16, -12, 12, 16]
+
+
+  DONE.
+================================================================================
