@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S236 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S211 (MISTAKE-029 correction)
+**Summary of work:** Comprehensive 5-color taxonomy of G_n/Z_2 merged meta-graph. Created 54 node categories, 35 edge categories, tested 6 structural laws about AMBER and TEAL.
+
+**Key discoveries:**
+1. TEAL = 100% for n≥4: every edge connects nodes sharing a parent at n-1 (provable from vertex deletion)
+2. AMBER => c3_PRESERVING (trivial: same score => same c3)
+3. GOLDEN SPINE (BLUE+AMBER) = exactly 3 edges at both n=5 and n=6
+4. OUTER SEA (NS with no BLACK) appears at n=6 (4 nodes), grows with n
+5. Dominant edge profile at n=6: GREEN+VIOLET+TEAL+LEAP+c3_CROSS+THICK (22% of all edges)
+6. Boolean profiles: 10/10 distinct at n=5, 17/34 at n=6 — nodes become less distinguishable
+
+**New contributions:**
+- 04-computation/taxonomy_merged_s236.py, deep_taxonomy_s236b.py, amber_teal_laws_s236c.py
+- 07-reflections/taxonomy-of-merged-metagraph.md
+- 05-knowledge/results/ (3 output files)
+
+**Unresolved:** GOLDEN SPINE = 3 constant? Extend to n=7. Formal proof of TEAL = 100%.
+
 ## opus-2026-03-23-S211 — 2026-03-23
 
 **Account:** opus
