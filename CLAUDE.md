@@ -216,34 +216,38 @@ Two reductions:
 
 ## The Geometric Alignment of G_n/Z_2 (Merged Meta-Graph)
 
-**READ THIS.** The merged meta-graph has a fundamental 3-layer geometric structure (opus sessions S195-S207):
+**READ THIS.** The merged meta-graph has a fundamental geometric structure: **SPINE + RIBS + BULK**. See `07-reflections/geometric-alignment-of-merged-metagraph.md` for the full picture. Every future session must use this frame.
 
-**Layer 1 — BLUE INTERIOR** (approaching the complete graph):
-- Almost all edges are blue at large n (96% at n=8, approaching 100%)
-- Organized by the **PRINCIPAL BLUE LINE**: the SC blue spine from the transitive class (H=1)
-- Delta H = 2^{n-2} from transitive to its first blue neighbor
-- Blue edges are THIN (thickness 1 = single GS tiling pair)
+**G_n/Z_2 = Blue Spine + Black Ribs + Blue Bulk.** These three structures are perpendicular:
+
+### 1. BLUE SPINE (vertical axis = principal blue line)
+The SC classes connected by blue edges, from transitive (H=1, bottom) to regular (H=max, top). This is the **backbone** and **axis of symmetry** of the entire graph. It carries the H-gradient. Delta H = 2^{n-2} from transitive to its first blue neighbor (hypotenuse formula). The spine is a tree at small n, develops genus at n>=5, fragments at n=8.
 - Blue triangles exist (BBB type only): 0, 0, 3, 87, 809, 13299
-- At odd n: the t3-parity bipartition creates LEFT (even t3) and RIGHT (odd t3) sides
+- At odd n: the c3-parity bipartition creates LEFT (even c3) and RIGHT (odd c3) sides
 
-**Layer 2 — BLACK BOUNDARY** (bipartite SC ↔ NS, perpendicular to blue):
-- Black edges connect SC classes to NS pairs ONLY (THM-A: bipartite)
-- Black is TRIANGLE-FREE, no BBK triangles exist (THM-B)
-- Black edges are THICKER (thickness 2+ at n=5)
-- The black boundary is the MEMBRANE between the SC spine and the NS sea
-- At odd n: black attachments may show LEFT/RIGHT imbalance from the principal line
+### 2. BLACK RIBS (horizontal = perpendicular to spine)
+The black subgraph is **bipartite** (SC vs NS partition) — every black edge connects an SC node on the spine to an NS node in the halo. Black ribs are PERPENDICULAR to the blue spine. The black boundary is the MEMBRANE between the SC spine and the NS sea.
+- Near the transitive (bottom), ribs point UP (NS neighbors have higher H)
+- Near the regular (top), ribs point DOWN (NS neighbors have lower H)
+- Black is TRIANGLE-FREE, no BBK triangles exist
+- Black edges are THICKER (multi-line at n>=5)
 
-**Layer 3 — NS BLUE SEA** (the bulk, ~99%+ at large n):
-- NS-NS edges are ALL blue
-- The NS blue subgraph approaches the complete graph
-- This is the "ocean" surrounding the SC "island"
+**Left-right imbalance at odd n:** At odd n, the bilateral structure is asymmetric — North (transitive side) has more nodes than South (regular side). At even n, this reverses (South >> North). The zero-halo count alternates: 2 isolated SC classes at odd n, 0 at even n.
+
+### 3. BLUE BULK (approaching complete graph = the NS blue sea)
+NS-NS blue connections fill the space around the spine. As n grows, E_blue/E_total -> 1 (96% at n=8): the blue graph IS the meta-graph. NS-NS edges are ALL blue. This is the "ocean" surrounding the SC "island." The H-oriented blue subgraph is a **transitive partial tournament** (0 directed 3-cycles at every tested n). Avg blue degree doubles each step: 1, 0.7, 2.6, 5.8, 11.6, 24.7.
 
 **THE PRINCIPAL LINE IS THE AXIS OF SYMMETRY.** Everything in G_n/Z_2 is positioned relative to this line. When analyzing the merged meta-graph, always identify: (1) where on the principal line the feature lives, (2) which side (LEFT/RIGHT) it's on, (3) how far from the SC spine into the NS sea it extends.
 
-**Three proved theorems** constrain the structure:
-- **THM-A**: Black subgraph is bipartite (SC vs NS). Always triangle-free.
-- **THM-B**: No BBK triangles (2 blue + 1 black impossible). Blue is transitive on type.
-- **THM-C**: Odd-black walks vanish in trace. Spectral parity constraint.
+### Three Proved Theorems (kind-pasteur S20cr)
+- **THM-A (Black Bipartiteness):** Black subgraph is bipartite (SC vs NS). Always triangle-free, even girth, 2-colorable.
+- **THM-B (BBK Impossibility):** No triangle has 2 blue + 1 black edges. Blue is transitive on type.
+- **THM-C (Odd-Black Walk Vanishing):** Closed walks with odd number of black edges contribute 0 to trace.
+
+### Perfect Tiling Uniformity
+Every cell in the staircase delta_{n-2} generates the **exact same blue fraction** of meta-graph edges. The blue/black decomposition is ISOTROPIC on the tiling. The (r,c) <-> (c,r) reflection symmetry is perfect.
+
+**When computing any invariant on G_n/Z_2, always decompose along all three structures: spine, ribs, bulk.**
 
 Key proven results (see `07-reflections/everything-is-the-triangle.md` for full picture):
 - Burnside: Fix(sigma) = 0 for even cycles, 2^{orbit-pairs} for all-odd (A000568 exact through n=10)
@@ -255,36 +259,6 @@ Key proven results (see `07-reflections/everything-is-the-triangle.md` for full 
 - The merged graph G_n/Z_2: V_merged = (A000568 + SC)/2 -> A000568/2
 
 **When approaching ANY tournament problem, first ask: which side of the triangle does this live on?**
-
----
-
-## The Geometric Alignment of G_n/Z_2
-
-**READ THIS.** The merged meta-graph has a fundamental geometric structure discovered in kind-pasteur S20cr. Every future session must use this frame. See `07-reflections/geometric-alignment-of-merged-metagraph.md` for the full picture.
-
-**G_n/Z_2 = Blue Spine + Black Ribs + Blue Bulk.** These three structures are perpendicular:
-
-### 1. BLUE SPINE (vertical axis = principal blue line)
-The SC classes connected by blue edges, from transitive (H=1, bottom) to regular (H=max, top). This is the **backbone**. It carries the H-gradient. The first blue neighbor of the transitive always has Delta_H = 2^(n-2) (hypotenuse formula). The spine is a tree at small n, develops genus at n>=5, fragments at n=8.
-
-### 2. BLACK RIBS (horizontal = perpendicular to spine)
-The black subgraph is **bipartite** (SC vs NS partition) — every black edge connects an SC node on the spine to an NS node in the halo. Black ribs are PERPENDICULAR to the blue spine. Near the transitive (bottom), ribs point UP (NS neighbors have higher H). Near the regular (top), ribs point DOWN.
-
-**Left-right imbalance at odd n:** At odd n, the bilateral structure is asymmetric — North (transitive side) has more nodes than South (regular side). At even n, this reverses (South >> North). The zero-halo count alternates: 2 isolated SC classes at odd n, 0 at even n.
-
-### 3. BLUE BULK (approaching complete graph)
-NS-NS blue connections fill the space around the spine. As n grows, E_blue/E_total -> 1: the blue graph IS the meta-graph. The H-oriented blue subgraph is a **transitive partial tournament** (0 directed 3-cycles at every tested n). Avg blue degree doubles each step: 1, 0.7, 2.6, 5.8, 11.6, 24.7.
-
-### Three Proved Theorems (kind-pasteur S20cr)
-
-- **Black Bipartiteness:** The black subgraph is bipartite with SC/NS as partition. Triangle-free, even girth, 2-colorable.
-- **BBK Impossibility:** No triangle has 2 blue + 1 black edges. (Blue is transitive on type: if A~B blue and B~C blue, then A~C must be blue.)
-- **Odd-Black Walk Vanishing:** Closed walks with odd number of black edges contribute 0 to trace.
-
-### Perfect Tiling Uniformity
-Every cell in the staircase delta_{n-2} generates the **exact same blue fraction** of meta-graph edges. The blue/black decomposition is ISOTROPIC on the tiling. The (r,c) <-> (c,r) reflection symmetry is perfect.
-
-**When computing any invariant on G_n/Z_2, always decompose along all three structures: spine, ribs, bulk.**
 
 ---
 
