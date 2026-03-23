@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S244 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S242
+**Summary of work:** Recursive tiling decomposition of SL_orbits. Decomposed labeled self-loops F(n) into 4 staircase regions (bottom/top/overlap/apex). Integrated kind-pasteur's SL_orbits(9)=47889.
+
+**Key results:**
+1. F(n) = 2*bottom(n) + overlap(n) + apex(n), with bottom=top (complement symmetry)
+2. At n=5: F=880 = 2(264) + 264 + 88. At n=6: F=18960 = 2(5056) + 7584 + 1264.
+3. F_overlap/F(n-2) = 44 (n=5), 105 (n=6) — NOT a simple scaling
+4. g(n) = SL_orbits/(n-2)! matches partial exponential sum at n=3,4 ONLY
+5. No clean recurrence for SL_orbits found — the correction term grows super-linearly
+6. The recursive tree: T(n) = bottom(n-1) ∪ top(n-1) ∪ {apex}, overlap = grid(n-2)
+
+**New scripts:** recursive_sl_s244.py
+**Unresolved:** SL_orbits recurrence remains open. The 4-region decomposition doesn't yield a clean recursion because S_n mixes the regions.
+
 ## opus-2026-03-23-S242 — 2026-03-23
 
 **Account:** opus
