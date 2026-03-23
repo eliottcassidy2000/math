@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-23-S20cp — 2026-03-23
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-23-S20co
+**Summary of work:** Deep structural analysis of the "principal line of symmetry" in G_n/Z_2.
+**Key discoveries:**
+1. **SC blue spine is a TREE** at every n (edges = SC - 1)
+2. **Transitive blue degree sequence: 1, 1, 2, 2, 3** for n=3..7
+3. **Delta H = 2^(n-2)**: H-jump to "big" blue neighbor follows 2, 4, 8, 16, 32
+4. **Score variance decreases** along axis from transitive to regular
+5. **Three branches at n=7**: main trunk (to Paley, depth ~9), secondary (H=33), leaf (H=3)
+6. **NS classes create bilateral ribs** via black edges, pointing UP near transitive, DOWN near regular
+7. **The principal axis IS the vertical leg of the triangle delta_{n-2}**
+**New contributions:** principal_line_s20cp.py, principal_line_n7_s20cp.py, principal_line_n7_fast_s20cp.py, 07-reflections/principal-line-of-symmetry.md
+**Unresolved:** n=7 full perpendicular analysis, is SC blue always a tree?, bilateral balance limit
+
+---
+
 ## kind-pasteur-2026-03-23-S20co — 2026-03-23
 
 **Account:** kind-pasteur
