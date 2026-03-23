@@ -1,0 +1,128 @@
+======================================================================
+  THE SOURCE'S BLUE LINE: DEEP STRUCTURE
+======================================================================
+
+======================================================================
+  n = 3
+======================================================================
+
+  Transitive class: H=1, size=6, SC=True
+
+  BLUE NEIGHBORS of transitive (single arc flip, SC-preserving):
+         Arc   Type  Range     H  ClassSize   SC  Color
+  (0,2):   TILE      1     3          2 True   BLUE
+
+  BLUE NEIGHBOR CLASSES (distinct, excluding self):
+    Range 1: H=3, class_size=2, |Aut|=3, arc=(0, 2)
+
+  TILINGS (base-path [0, 1, 2]) mapping to blue neighbor classes:
+    Range 1: H=3, tilings=1, 1+2^range=3, match=False
+
+  ANTI-DIAGONAL (max range d=1):
+    H = 1 + 2^1 = 3
+    Class size = 2
+    Expected 'tilings' = 1 + 2^(n-2) = 3
+
+======================================================================
+  n = 4
+======================================================================
+
+  Transitive class: H=1, size=24, SC=True
+
+  BLUE NEIGHBORS of transitive (single arc flip, SC-preserving):
+         Arc   Type  Range     H  ClassSize   SC  Color
+  (0,2):   TILE      1     3          8 False  BLACK
+  (0,3):   TILE      2     5         24 True   BLUE
+  (1,3):   TILE      1     3          8 False  BLACK
+
+  BLUE NEIGHBOR CLASSES (distinct, excluding self):
+    Range 2: H=5, class_size=24, |Aut|=1, arc=(0, 3)
+
+  TILINGS (base-path [0, 1, 2, 3]) mapping to blue neighbor classes:
+    Range 2: H=5, tilings=5, 1+2^range=5, match=True
+
+  ANTI-DIAGONAL (max range d=2):
+    H = 1 + 2^2 = 5
+    Class size = 24
+    Expected 'tilings' = 1 + 2^(n-2) = 5
+
+======================================================================
+  n = 5
+======================================================================
+
+  Transitive class: H=1, size=120, SC=True
+
+  BLUE NEIGHBORS of transitive (single arc flip, SC-preserving):
+         Arc   Type  Range     H  ClassSize   SC  Color
+  (0,2):   TILE      1     3         40 False  BLACK
+  (0,3):   TILE      2     5        120 False  BLACK
+  (0,4):   TILE      3     9        120 True   BLUE
+  (1,3):   TILE      1     3         40 True   BLUE
+  (1,4):   TILE      2     5        120 False  BLACK
+  (2,4):   TILE      1     3         40 False  BLACK
+
+  BLUE NEIGHBOR CLASSES (distinct, excluding self):
+    Range 1: H=3, class_size=40, |Aut|=3, arc=(1, 3)
+    Range 3: H=9, class_size=120, |Aut|=1, arc=(0, 4)
+
+  TILINGS (base-path [0, 1, 2, 3, 4]) mapping to blue neighbor classes:
+    Range 1: H=3, tilings=1, 1+2^range=3, match=False
+    Range 3: H=9, tilings=9, 1+2^range=9, match=True
+
+  ANTI-DIAGONAL (max range d=3):
+    H = 1 + 2^3 = 9
+    Class size = 120
+    Expected 'tilings' = 1 + 2^(n-2) = 9
+
+======================================================================
+  n = 6
+======================================================================
+
+  Transitive class: H=1, size=720, SC=True
+
+  BLUE NEIGHBORS of transitive (single arc flip, SC-preserving):
+         Arc   Type  Range     H  ClassSize   SC  Color
+  (0,2):   TILE      1     3        240 False  BLACK
+  (0,3):   TILE      2     5        720 False  BLACK
+  (0,4):   TILE      3     9        720 False  BLACK
+  (0,5):   TILE      4    17        720 True   BLUE
+  (1,3):   TILE      1     3        240 False  BLACK
+  (1,4):   TILE      2     5        720 True   BLUE
+  (1,5):   TILE      3     9        720 False  BLACK
+  (2,4):   TILE      1     3        240 False  BLACK
+  (2,5):   TILE      2     5        720 False  BLACK
+  (3,5):   TILE      1     3        240 False  BLACK
+
+  BLUE NEIGHBOR CLASSES (distinct, excluding self):
+    Range 2: H=5, class_size=720, |Aut|=1, arc=(1, 4)
+    Range 4: H=17, class_size=720, |Aut|=1, arc=(0, 5)
+
+  TILINGS (base-path [0, 1, 2, 3, 4, 5]) mapping to blue neighbor classes:
+    Range 2: H=5, tilings=5, 1+2^range=5, match=True
+    Range 4: H=17, tilings=17, 1+2^range=17, match=True
+
+  ANTI-DIAGONAL (max range d=4):
+    H = 1 + 2^4 = 17
+    Class size = 720
+    Expected 'tilings' = 1 + 2^(n-2) = 17
+
+======================================================================
+  SYNTHESIS
+======================================================================
+
+  THE SOURCE'S BLUE LINE STRUCTURE:
+
+  From the transitive tournament, each non-base arc flip gives a
+  tournament with H = 1 + 2^d (where d = range of the flipped arc).
+
+  The BLUE flips (SC-preserving) go to specific classes.
+  The number of TILINGS mapping to each blue neighbor class
+  should tell us about the class's internal structure.
+
+  The key observation: the anti-diagonal flip (maximum range d = n-2)
+  always gives a BLUE neighbor with H = 1 + 2^(n-2).
+
+  The number of tilings mapping to this class from the fixed base path
+  reveals the TILING MULTIPLICITY of each iso class -- how many
+  different base-path representations lead to the same iso class.
+
