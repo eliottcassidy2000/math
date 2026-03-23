@@ -1,0 +1,96 @@
+
+========================================================================
+  ESSENTIAL 1-CYCLES AT n=5
+========================================================================
+
+  V=10, E=21, T=12
+  rank(∂_1) = 9, nullity(∂_1) = 12
+  rank(∂_2) = 10
+  β_1 = nullity(∂_1) - rank(∂_2) = 12 - 10 = 2
+
+  Spanning tree has 9 edges
+  Non-tree edges: 12 (= fundamental cycles)
+
+  FUNDAMENTAL CYCLES:
+    C0 (length 3): 1(H=3,NS) → 0(H=1,SC) → 2(H=5,NS)
+    C1 (length 3): 2(H=5,NS) → 0(H=1,SC) → 3(H=3,SC)
+    C2 (length 3): 2(H=5,NS) → 0(H=1,SC) → 4(H=9,SC)
+    C3 (length 4): 2(H=5,NS) → 0(H=1,SC) → 1(H=3,NS) → 5(H=9,SC)
+    C4 (length 4): 4(H=9,SC) → 0(H=1,SC) → 1(H=3,NS) → 5(H=9,SC)
+    C5 (length 4): 4(H=9,SC) → 0(H=1,SC) → 2(H=5,NS) → 6(H=11,SC)
+    C6 (length 4): 4(H=9,SC) → 0(H=1,SC) → 3(H=3,SC) → 7(H=15,SC)
+    C7 (length 5): 5(H=9,SC) → 1(H=3,NS) → 0(H=1,SC) → 2(H=5,NS) → 6(H=11,SC)
+    C8 (length 5): 5(H=9,SC) → 1(H=3,NS) → 0(H=1,SC) → 2(H=5,NS) → 8(H=13,SC)
+    C9 (length 3): 6(H=11,SC) → 2(H=5,NS) → 8(H=13,SC)
+    C10 (length 5): 7(H=15,SC) → 3(H=3,SC) → 0(H=1,SC) → 2(H=5,NS) → 8(H=13,SC)
+    C11 (length 4): 8(H=13,SC) → 2(H=5,NS) → 6(H=11,SC) → 9(H=15,SC)
+
+  TESTING WHICH CYCLES ARE BOUNDARIES:
+    C0: BOUNDARY (residual=1.18e-15)
+    C1: BOUNDARY (residual=1.61e-15)
+    C2: BOUNDARY (residual=1.68e-15)
+    C3: BOUNDARY (residual=1.48e-15)
+    C4: BOUNDARY (residual=2.79e-15)
+    C5: BOUNDARY (residual=2.84e-15)
+    C6: ESSENTIAL (residual=1.68e+00)
+    C7: BOUNDARY (residual=2.06e-15)
+    C8: BOUNDARY (residual=2.02e-15)
+    C9: BOUNDARY (residual=1.56e-15)
+    C10: ESSENTIAL (residual=1.72e+00)
+    C11: BOUNDARY (residual=2.39e-15)
+
+  ESSENTIAL CYCLES (not boundaries): 2
+    C6: 4(H=9) → 0(H=1) → 3(H=3) → 7(H=15)
+      Non-tree edge: (4, 7) (H=9,15)
+    C10: 7(H=15) → 3(H=3) → 0(H=1) → 2(H=5) → 8(H=13)
+      Non-tree edge: (7, 8) (H=15,13)
+
+========================================================================
+  CYCLE ANALYSIS
+========================================================================
+
+  The 2 essential cycles generate H_1(Δ(G_5/Z_2)).
+
+  Cycle C6:
+    Vertices: [4, 0, 3, 7]
+    H values: [9, 1, 3, 15]
+    H range: [1, 15]
+    SC nodes: 4, NS nodes: 0
+    dH along cycle: [8, 2, 12, 6]
+
+  Cycle C10:
+    Vertices: [7, 3, 0, 2, 8]
+    H values: [15, 3, 1, 5, 13]
+    H range: [1, 15]
+    SC nodes: 4, NS nodes: 1
+    dH along cycle: [12, 2, 4, 8, 2]
+
+
+========================================================================
+  THE TOPOLOGICAL OBSTRUCTION
+========================================================================
+
+
+  The essential 1-cycles represent TOPOLOGICAL OBSTRUCTIONS in
+  tournament space. They are loops in the meta-graph that cannot
+  be "filled in" by any collection of triangles.
+
+  This means: there exist paths through tournament iso classes
+  that form IRREDUCIBLE LOOPS — sequences of single-arc-reversals
+  that return to the starting class but whose "interior" cannot
+  be tiled by triangles (3-cliques in the meta-graph).
+
+  At n=5, there are EXACTLY 2 independent such obstructions.
+  At n=6, there are 15 — a dramatic increase.
+
+  These essential cycles might correspond to:
+  - Score sequence barriers (tournaments with same H but unreachable
+    via triangle-filling paths)
+  - SC/NS boundary phenomena (cycles crossing the bipartition)
+  - H-gradient reversals (cycles that go up-down-up-down)
+
+  The 2-cycles (β_2 = 7 at n=6) are even more mysterious:
+  they represent "hollow spheres" in the clique complex — 2D surfaces
+  that cannot be filled by any 3D body (collection of K_4 subgraphs).
+
+Done. opus-2026-03-23-S241b
