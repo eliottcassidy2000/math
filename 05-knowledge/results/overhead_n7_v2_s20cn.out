@@ -3,3 +3,43 @@
 ======================================================================
 
   Phase 1: fingerprinting 2097152 tournaments...
+    200000/2097152 (2076/s, ETA 914s, 387 groups)
+    400000/2097152 (2080/s, ETA 816s, 387 groups)
+    600000/2097152 (2065/s, ETA 725s, 387 groups)
+    800000/2097152 (2049/s, ETA 633s, 387 groups)
+    1000000/2097152 (2050/s, ETA 535s, 387 groups)
+    1200000/2097152 (2055/s, ETA 437s, 387 groups)
+    1400000/2097152 (2054/s, ETA 339s, 387 groups)
+    1600000/2097152 (2049/s, ETA 243s, 387 groups)
+    1800000/2097152 (2049/s, ETA 145s, 387 groups)
+    2000000/2097152 (2051/s, ETA 47s, 387 groups)
+  Phase 1 done: 387 groups in 1021.4s
+
+  Phase 2: assigning classes...
+  Valid class sizes (odd |Aut|): [16, 48, 80, 112, 144, 240, 336, 560, 720, 1008, 1680, 5040]
+    50/387 groups processed, 50 classes, 7 split
+    100/387 groups processed, 100 classes, 16 split
+    150/387 groups processed, 150 classes, 31 split
+    200/387 groups processed, 200 classes, 42 split
+    250/387 groups processed, 250 classes, 46 split
+    300/387 groups processed, 300 classes, 53 split
+    350/387 groups processed, 350 classes, 64 split
+  Phase 2 done: 388 classes (68 splits) in 122.8s
+
+  Phase 3: arc orbit decomposition for 388 classes...
+    100/388 classes processed
+    200/388 classes processed
+    300/388 classes processed
+  Phase 3 done in 1.2s
+
+======================================================================
+  RESULTS n=7
+======================================================================
+  V = 388, T = 7494, E = 3280
+  OH = T - 2E = 934
+  SL = 295
+  MW = 639
+  Check: SL+2E+MW = 7494 (should be 7494)
+  Predicted SL = 326, Match: False
+  Predicted MW = 414, Match: False
+  Total time: 1145.4s

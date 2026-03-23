@@ -167,6 +167,83 @@ This confirms: at the iso class level, the number of 3-cycles almost completely 
 
 ---
 
+## Late-Breaking Discoveries (from n=7 computation)
+
+### 11. Diameter Conjecture REFUTED at n=7
+
+The earlier conjecture diam(G_n) = n-2 holds for n=3,4,5,6 but **FAILS at n=7**:
+
+| n | diam(G_n) | n-2 | match? |
+|---|-----------|-----|--------|
+| 3 | 1 | 1 | YES |
+| 4 | 2 | 2 | YES |
+| 5 | 3 | 3 | YES |
+| 6 | 4 | 4 | YES |
+| 7 | **7** | 5 | **NO** |
+
+The diameter JUMPS from following n-2 to equaling n itself. The same happens for G_n/Z_2: diam = 1, 1, 3, 4, **7**.
+
+### 12. Chromatic Number Pattern: chi(G_n/Z_2) = n-1
+
+The chromatic number of the merged graph follows a clean pattern:
+
+| n | chi(G_n/Z_2) | n-1 |
+|---|-------------|-----|
+| 3 | 2 | 2 |
+| 4 | 3 | 3 |
+| 5 | 4 | 4 |
+| 6 | 5 | 5 |
+
+**Conjecture: chi(G_n/Z_2) = n-1 for all n.**
+
+If true, this means the merged tournament meta-graph always needs exactly n-1 colors. This connects to the fact that the staircase delta_{n-2} has n-2 strips, and perhaps the chromatic number reflects a strip-based coloring obstruction.
+
+### 13. Blue Subgraph Dichotomy
+
+At n=7, the blue subgraph of G_7/Z_2 splits into exactly **2 components**:
+- Component 1: 184 NS vertices (dense blue connections)
+- Component 2: 88 SC vertices (exactly the SC count)
+
+This means: **no SC vertex is blue-adjacent to any NS vertex in the merged graph at n=7**. The SC backbone and NS bulk are completely separated by blue edges. Black edges are the only bridge.
+
+### 14. Ollivier-Ricci Curvature Phase Transition
+
+The Ollivier curvature (optimal transport based) transitions from all-positive to partially-negative between n=5 and n=6:
+
+| n | min kappa | max kappa | avg kappa | #negative |
+|---|-----------|-----------|-----------|-----------|
+| 3 | 1.000 | 1.000 | 1.000 | 0 |
+| 4 | 0.750 | 0.750 | 0.750 | 0 |
+| 5 | 0.100 | 0.500 | 0.258 | 0 |
+| 6 | -0.064 | 0.386 | 0.127 | 7 |
+
+The corr(Forman, Ollivier) = 0.71 at n=6 shows the two curvature notions agree reasonably well. Both detect the same geometric phase transition.
+
+### 15. Automorphism Collapse
+
+| n | |Aut(G_n/Z_2)| | vertex-transitive | edge-transitive |
+|---|----------------|-------------------|-----------------|
+| 3 | 2 | YES | YES |
+| 4 | 6 | YES | YES |
+| 5 | 1 | NO | NO |
+| 6 | ? | ? | ? |
+
+The merged graph transitions from highly symmetric (complete graphs K_2, K_3 at n=3,4) to **completely asymmetric** (trivial automorphism group) at n=5. This sudden symmetry breaking mirrors the Betti number onset at n=5.
+
+### 16. Level Edge Explosion
+
+The number of H-level edges in G_n grows super-exponentially:
+
+| n | level edges (G_n) | level edges (G_n/Z_2) |
+|---|-------------------|-----------------------|
+| 3 | 0 | 0 |
+| 4 | 0 | 0 |
+| 5 | 1 | 1 |
+| 6 | 15 | 5 |
+| 7 | 136 | 71 |
+
+Ratio: 15/1 = 15 at n=6, 136/15 = 9.1 at n=7. These level edges are where the H-landscape is "flat" — pairs of iso classes connected by an arc flip with identical H.
+
 ## New OEIS-Candidate Sequences
 
 1. **E(G_n)** = 1, 5, 30, 290, 4086, 91161 — edges of tournament iso class graph

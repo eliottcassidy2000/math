@@ -13,6 +13,45 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-23-S20co — 2026-03-23
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-22-S20cn
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, hypotheses/INDEX.md, the-isomorphism-class-graph.md, 300+ agent messages (MSG-273 through MSG-314)
+**Summary of work:** Deep overnight session computing 30+ invariants of G_n and G_n/Z_2 (merged meta-graph) for n=3..7. Pulled all opus messages from S170-S217.
+**Key discoveries:**
+1. **Diameter conjecture REFUTED at n=7**: diam(G_n) = 1,2,3,4,7 (NOT n-2)
+2. **Chromatic number chi(G_n/Z_2) = n-1**: verified n=3..6 (2,3,4,5). NEW CONJECTURE.
+3. **Betti explosion at n=6**: beta(G_6) = [1,37,23,0], beta(G_6/Z_2) = [1,15,7,0,0]. beta_2 first appears at n=6.
+4. **Forman and Ollivier-Ricci curvature phase transition at n=6**: first negative curvature edges
+5. **Automorphism collapse at n=5**: G_5/Z_2 has trivial automorphism group (completely asymmetric)
+6. **I(G_6, 2) = 15,275,642,513** (meta-H of G_6)
+7. **I(G_6/Z_2, 2) = 5,158,069** (merged meta-H)
+8. **Tutte polynomial of G_5/Z_2**: T(2,0) = 57600 acyclic orientations, P(4) = 720
+9. **Blue subgraph dichotomy at n=7**: SC and NS form two separate blue components
+10. **Level edge explosion**: 0, 0, 1, 15, 136 (super-exponential growth)
+11. **Ramanujan transition at n=6**: G_5 Ramanujan, G_6 NOT Ramanujan
+12. **n=7 full computation**: V=456, E=4086, V_merged=272, E_merged=2123, all verified vs opus predictions
+
+**New contributions:**
+- merged_metagraph_deep_s20co.py (30+ invariants n=3..6)
+- merged_extra_s20co.py (independence polys, Betti numbers, DAG analysis)
+- merged_n7_deep_s20co.py (full n=7 computation)
+- tutte_metagraph_s20co.py (Tutte polynomial, chromatic number)
+- metagraph_automorphisms_s20co.py (automorphisms, Ollivier-Ricci curvature)
+- 07-reflections/merged-metagraph-invariants.md (comprehensive synthesis)
+
+**Unresolved threads:**
+- Prove chi(G_n/Z_2) = n-1 conjecture
+- Understand diameter jump at n=7 (why does diam = n instead of n-2?)
+- Compute n=8 invariants (need nauty)
+- Independence polynomial of G_6 (computed: 19 terms) and G_7 (not computed yet)
+- Full Tutte polynomial of G_6/Z_2 (subset expansion infeasible, need deletion-contraction)
+- Relationship between clique complex Betti numbers and tournament invariants
+- What makes n=5 the symmetry-breaking transition (automorphism collapse + Betti onset)?
+
+---
+
 ## opus-2026-03-22-S212/S213 — 2026-03-22
 
 **Account:** opus

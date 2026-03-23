@@ -1893,3 +1893,33 @@ Source: morse_deep_s20x.py, walsh_fourier_n6_s20y.py
 **Status:** OPEN (verified n=5 and n=6: Betti_0 = 1 at every threshold)
 **Hypothesis:** The sublevel set {T : H(T) <= h} is connected for every threshold h, at every n. Equivalently, H has trivial persistent homology (no long-lived features). If true, the H-landscape has no topological barriers at any scale.
 Source: info_geometry_morse_s20y.py, walsh_fourier_n6_s20y.py
+
+## HYP-1734: chi(G_n/Z_2) = n-1 (kind-pasteur-S20co)
+**Status:** OPEN (verified n=3..6)
+**Hypothesis:** The chromatic number of the merged tournament meta-graph G_n/Z_2 equals n-1 for all n >= 3. Verified: chi = 2, 3, 4, 5 for n = 3, 4, 5, 6. G_3/Z_2 = K_2 (chi=2), G_4/Z_2 = K_3 (chi=3), G_5/Z_2 has P(4)=720 (chi=4), G_6/Z_2 has P(4)=0 and P(5)=150,307,680 (chi=5).
+Source: tutte_metagraph_s20co.py
+
+## HYP-1735: diam(G_n) = n-2 REFUTED at n=7 (kind-pasteur-S20co)
+**Status:** REFUTED
+**Hypothesis:** diam(G_n) = n-2 for all n. Holds n=3..6 (diam = 1, 2, 3, 4). FAILS at n=7: diam(G_7) = 7, not 5. The diameter jumps to n instead of n-2. Similarly diam(G_7/Z_2) = 7.
+Source: merged_n7_deep_s20co.py
+
+## HYP-1736: Betti number explosion at n=6 (kind-pasteur-S20co)
+**Status:** CONFIRMED (exhaustive n=3..6)
+**Hypothesis:** The clique complex of G_n develops nontrivial beta_2 at n=6. beta(G_6) = [1, 37, 23, 0], beta(G_6/Z_2) = [1, 15, 7, 0, 0]. Growth from n=5: beta_1 jumps 2->37. beta_2 first appears at n=6. chi(G_6) = -13, chi(G_6/Z_2) = -7.
+Source: merged_extra_s20co.py
+
+## HYP-1737: Aut(G_n/Z_2) trivial for n >= 5 (kind-pasteur-S20co)
+**Status:** OPEN (confirmed n=5)
+**Hypothesis:** Aut(G_n/Z_2) is trivial for n >= 5. At n=3: |Aut|=2, n=4: |Aut|=6. At n=5: |Aut|=1. Sudden symmetry breaking coincides with onset of beta_1.
+Source: metagraph_automorphisms_s20co.py
+
+## HYP-1738: Ollivier curvature transition at n=6 (kind-pasteur-S20co)
+**Status:** CONFIRMED (n=3..6)
+**Hypothesis:** Ollivier-Ricci curvature of G_n/Z_2 transitions from all-positive to partially-negative at n=6. 7 edges with negative curvature at n=6 (min kappa = -0.064). Coincides with Ramanujan loss and Betti explosion.
+Source: metagraph_automorphisms_s20co.py
+
+## HYP-1739: Blue subgraph SC/NS dichotomy (kind-pasteur-S20co)
+**Status:** CONFIRMED (n=6,7)
+**Hypothesis:** In G_n/Z_2, the blue subgraph has exactly 2 components for n >= 6: one NS and one SC. At n=7: 184 (NS) and 88 (SC). SC and NS are completely separated by blue edges.
+Source: merged_extra_s20co.py, merged_n7_deep_s20co.py

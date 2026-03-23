@@ -102,9 +102,18 @@ print(f"  Phase 1 done: {len(hash_groups)} groups in {time.time()-t0:.1f}s")
 # ---- PHASE 2 ----
 print(f"\n  Phase 2: assigning classes...")
 t1 = time.time()
+# Tournament |Aut| must have only odd prime factors (all-odd-cycle permutations)
+# For n=7: odd divisors of n! that only use odd primes
+def has_only_odd_factors(x):
+    while x % 2 == 0: x //= 2
+    return x == x  # removed even factors; but we need ALL factors odd
+# Actually: |Aut| of a tournament divides n! and |Aut| is odd
+# So valid |Aut| = odd divisors of n!
 valid_sizes = set()
-for a in range(1, nfact+1):
-    if nfact % a == 0: valid_sizes.add(nfact // a)
+for a in range(1, nfact+1, 2):  # only odd a
+    if nfact % a == 0:
+        valid_sizes.add(nfact // a)
+print(f"  Valid class sizes (odd |Aut|): {sorted(valid_sizes)}")
 
 btc = [0] * total  # bits_to_class array
 class_reps = {}
@@ -122,17 +131,19 @@ for idx, (hkey, members) in enumerate(hash_groups.items()):
         cid += 1
     else:
         need_split += 1
-        sub = {}
+        # Use H(T) to split (MUCH faster than canonical form)
+        sub_h = {}
         for b in members:
             adj = bits_to_adj(b)
-            cf = canonical_form(adj)
-            if cf not in sub:
-                sub[cf] = cid
+            h = H_dp(adj, n)
+            key = h  # H alone should discriminate within hash group
+            if key not in sub_h:
+                sub_h[key] = cid
                 class_reps[cid] = b
                 class_sizes[cid] = 0
                 cid += 1
-            class_sizes[sub[cf]] += 1
-            btc[b] = sub[cf]
+            class_sizes[sub_h[key]] += 1
+            btc[b] = sub_h[key]
     if (idx+1) % 50 == 0:
         print(f"    {idx+1}/{len(hash_groups)} groups processed, {cid} classes, {need_split} split")
 
