@@ -1,0 +1,291 @@
+================================================================================
+  THE BLUE SUBGRAPH AS AN EMERGING TOURNAMENT
+  kind-pasteur-2026-03-23-S20cr
+================================================================================
+
+################################################################################
+  n = 3
+################################################################################
+  Built n=3: V_merged=2, E_total=1, E_blue=1, E_black=0 [0.0s]
+
+  --- APPROACH TO COMPLETENESS ---
+    V_merged = 2
+    E_blue = 1
+    C(V,2) = 1
+    Blue density E_blue/C(V,2) = 1.0000
+    Total density E_total/C(V,2) = 1.0000
+    Blue fraction E_blue/E_total = 1.0000
+    Missing blue edges = 0
+    Avg blue degree = 1.00 (vs complete: 1)
+
+  --- H-ORIENTED META-TOURNAMENT ---
+    Oriented edges: 1
+    Level edges (same H, blue): 0
+    Missing edges (no blue): 0
+    Total pairs: 1 = 1 + 0 + 0
+    Tournament completeness: 1/1 = 1.0000
+    Directed 3-cycles: 0
+    TRANSITIVE (DAG)
+    Meta-tournament scores: min=0, max=1, median=1
+    Full score sequence: [0, 1]
+    Distinct scores: 2
+    Score variance: 0.25
+
+  --- COMPARISON WITH TOURNAMENTS ON 2 VERTICES ---
+    A000568(2) = 1 non-iso tournaments on 2 vertices
+    Complete tournament: 1 directed edges
+    Meta-tournament: 1 directed edges (100.0% complete)
+
+  --- MISSING BLUE EDGES (non-adjacent in blue) ---
+    Missing blue pairs: 0
+
+  --- BLUE GRAPH PROPERTIES ---
+    Blue degree sequence: min=1, max=1, avg=1.0
+    SC blue degree: avg=1.0, range [1,1]
+
+################################################################################
+  n = 4
+################################################################################
+  Built n=4: V_merged=3, E_total=3, E_blue=1, E_black=2 [0.0s]
+
+  --- APPROACH TO COMPLETENESS ---
+    V_merged = 3
+    E_blue = 1
+    C(V,2) = 3
+    Blue density E_blue/C(V,2) = 0.3333
+    Total density E_total/C(V,2) = 1.0000
+    Blue fraction E_blue/E_total = 0.3333
+    Missing blue edges = 2
+    Avg blue degree = 0.67 (vs complete: 2)
+
+  --- H-ORIENTED META-TOURNAMENT ---
+    Oriented edges: 1
+    Level edges (same H, blue): 0
+    Missing edges (no blue): 2
+    Total pairs: 3 = 1 + 0 + 2
+    Tournament completeness: 1/3 = 0.3333
+    Directed 3-cycles: 0
+    TRANSITIVE (DAG)
+    Meta-tournament scores: min=0, max=1, median=0
+    Full score sequence: [0, 0, 1]
+    Distinct scores: 2
+    Score variance: 0.22
+
+  --- COMPARISON WITH TOURNAMENTS ON 3 VERTICES ---
+    A000568(3) = 2 non-iso tournaments on 3 vertices
+    Complete tournament: 3 directed edges
+    Meta-tournament: 1 directed edges (33.3% complete)
+
+  --- MISSING BLUE EDGES (non-adjacent in blue) ---
+    Missing blue pairs: 2
+    Missing SC-SC: 0
+    Missing NS-NS: 0
+    Missing SC-NS: 2 (these are impossible — would be black)
+    Blue-connected pairs: 1
+    H-difference: min=4, max=4, avg=4.0
+
+  --- BLUE GRAPH PROPERTIES ---
+    Blue degree sequence: min=0, max=1, avg=0.7
+    SC blue degree: avg=1.0, range [1,1]
+    NS blue degree: avg=0.0, range [0,0]
+
+################################################################################
+  n = 5
+################################################################################
+  Built n=5: V_merged=10, E_total=21, E_blue=13, E_black=8 [0.2s]
+
+  --- APPROACH TO COMPLETENESS ---
+    V_merged = 10
+    E_blue = 13
+    C(V,2) = 45
+    Blue density E_blue/C(V,2) = 0.2889
+    Total density E_total/C(V,2) = 0.4667
+    Blue fraction E_blue/E_total = 0.6190
+    Missing blue edges = 32
+    Avg blue degree = 2.60 (vs complete: 9)
+
+  --- H-ORIENTED META-TOURNAMENT ---
+    Oriented edges: 12
+    Level edges (same H, blue): 1
+    Missing edges (no blue): 32
+    Total pairs: 45 = 12 + 1 + 32
+    Tournament completeness: 12/45 = 0.2667
+    Directed 3-cycles: 0
+    TRANSITIVE (DAG)
+    Meta-tournament scores: min=0, max=3, median=1
+    Full score sequence: [0, 0, 0, 1, 1, 1, 2, 2, 2, 3]
+    Distinct scores: 4
+    Score variance: 0.96
+
+  --- COMPARISON WITH TOURNAMENTS ON 10 VERTICES ---
+    A000568(10) = 9733056 non-iso tournaments on 10 vertices
+    Complete tournament: 45 directed edges
+    Meta-tournament: 12 directed edges (26.7% complete)
+
+  --- MISSING BLUE EDGES (non-adjacent in blue) ---
+    Missing blue pairs: 32
+    Missing SC-SC: 16
+    Missing NS-NS: 0
+    Missing SC-NS: 16 (these are impossible — would be black)
+    Same-type missing pairs: 16
+    H-difference: min=0, max=14, avg=7.9
+    Blue-connected pairs: 13
+    H-difference: min=0, max=12, avg=3.7
+
+  --- BLUE GRAPH PROPERTIES ---
+    Blue degree sequence: min=1, max=4, avg=2.6
+    SC blue degree: avg=3.0, range [2,4]
+    NS blue degree: avg=1.0, range [1,1]
+
+################################################################################
+  n = 6
+################################################################################
+  Built n=6: V_merged=34, E_total=143, E_blue=98, E_black=45 [21.9s]
+
+  --- APPROACH TO COMPLETENESS ---
+    V_merged = 34
+    E_blue = 98
+    C(V,2) = 561
+    Blue density E_blue/C(V,2) = 0.1747
+    Total density E_total/C(V,2) = 0.2549
+    Blue fraction E_blue/E_total = 0.6853
+    Missing blue edges = 463
+    Avg blue degree = 5.76 (vs complete: 33)
+
+  --- H-ORIENTED META-TOURNAMENT ---
+    Oriented edges: 96
+    Level edges (same H, blue): 2
+    Missing edges (no blue): 463
+    Total pairs: 561 = 96 + 2 + 463
+    Tournament completeness: 96/561 = 0.1711
+    Directed 3-cycles: 0
+    TRANSITIVE (DAG)
+    Meta-tournament scores: min=0, max=7, median=3
+    Distinct scores: 8
+    Score variance: 4.50
+
+  --- COMPARISON WITH TOURNAMENTS ON 34 VERTICES ---
+    A000568(34) not precomputed
+    Complete tournament: 561 directed edges
+    Meta-tournament: 96 directed edges (17.1% complete)
+
+  --- MISSING BLUE EDGES (non-adjacent in blue) ---
+    Missing blue pairs: 463
+    Missing SC-SC: 53
+    Missing NS-NS: 146
+    Missing SC-NS: 264 (these are impossible — would be black)
+    Same-type missing pairs: 199
+    H-difference: min=0, max=44, avg=17.6
+    Blue-connected pairs: 98
+    H-difference: min=0, max=32, avg=9.5
+
+  --- BLUE GRAPH PROPERTIES ---
+    Blue degree sequence: min=1, max=11, avg=5.8
+    SC blue degree: avg=2.2, range [1,3]
+    NS blue degree: avg=7.7, range [3,11]
+
+
+================================================================================
+  CROSS-n SYNTHESIS: APPROACH TO TOURNAMENT COMPLETENESS
+================================================================================
+
+    n    V_m   E_blue     C(V,2)   blu_dens   tot_dens   blu_frac   avg_bdeg    V-1
+  --------------------------------------------------------------------------------
+    3      2        1          1     1.0000     1.0000     1.0000       1.00      1
+    4      3        1          3     0.3333     1.0000     0.3333       0.67      2
+    5     10       13         45     0.2889     0.4667     0.6190       2.60      9
+    6     34       98        561     0.1747     0.2549     0.6853       5.76     33
+    7    272     1573      36856   0.042680   0.057603     0.7409      11.57    271
+    8   3528    43656    6221628   0.007017   0.007321     0.9584      24.75   3527
+
+
+================================================================================
+  KEY INSIGHT: TWO RATES OF APPROACH
+================================================================================
+
+  There are TWO senses in which the blue subgraph approaches a "tournament":
+
+  (A) FRACTION: E_blue/E_total -> 1
+      Among edges that EXIST in G_n/Z_2, almost all are blue.
+      Sequence: 1.000, 0.333, 0.619, 0.685, 0.741, 0.958
+      This converges to 1 because SC classes become negligible (NS/V -> 1)
+      and NS nodes connect almost exclusively by blue edges.
+
+  (B) DENSITY: E_blue/C(V,2) -> 0
+      The blue graph is SPARSE relative to the complete graph.
+      Sequence: 1.000, 0.333, 0.289, 0.175, 0.043, 0.007
+      This decreases because V_merged grows much faster than E_blue.
+
+  So the blue graph simultaneously becomes:
+  - MORE DOMINANT (as a fraction of all meta-edges)
+  - MORE SPARSE (relative to completeness)
+
+  The AVG BLUE DEGREE tells the real story:
+  Sequence: 1.00, 0.67, 2.60, 5.76, 11.57, 24.74
+  This is INCREASING, roughly doubling each step.
+  The ratio avg_degree/(V-1) = blue_density -> 0, but slowly.
+
+
+================================================================================
+  THE META-TOURNAMENT: H-ORIENTED BLUE GRAPH
+================================================================================
+
+  Since G_n/Z_2 is a DAG under H (0 downhill edges), the H-oriented
+  blue subgraph is a TRANSITIVE partial tournament.
+
+  A transitive tournament on V vertices has exactly ONE Hamiltonian path.
+  The meta-tournament has:
+    - V_merged vertices (iso classes modulo complement)
+    - Edges oriented by H: higher H "wins"
+    - Missing edges where blue doesn't connect
+
+  This partial tournament is SPARSE but carries key information:
+  - Its score sequence is the H-rank distribution
+  - Its connected components are the blue components (SC + NS separate)
+  - Its reachability (transitive closure) defines the H-dominance order
+
+  THE DEEP ANALOGY:
+  At each n, the meta-graph G_n/Z_2 is itself a "tournament landscape"
+  describing how n-vertex tournaments relate to each other via arc flips.
+  As n grows, this landscape becomes increasingly dominated by blue
+  (within-type) connections, making it more tournament-like.
+
+  V_merged values: 2, 3, 10, 34, 272, 3528, ...
+  These are the "effective sizes" of the tournament landscape.
+  The sequence grows as ~A000568(n)/2 = 2^{C(n,2)-1}/n!
+
+
+================================================================================
+  V_MERGED vs A000568 (TOURNAMENT COUNTS)
+================================================================================
+
+    n   A000568(n)    SC(n)   V_merged    A000568/2    ratio
+  ------------------------------------------------------------
+    3            2        2          2          1.0   2.0000
+    4            4        2          3          2.0   1.5000
+    5           12        8         10          6.0   1.6667
+    6           56       12         34         28.0   1.2143
+    7          456       88        272        228.0   1.1930
+    8         6880      176       3528       3440.0   1.0256
+
+  V_merged = (A000568 + SC) / 2 converges to A000568/2 as SC/A000568 -> 0.
+  SC fraction: 1.00, 0.50, 0.67, 0.21, 0.19, 0.026
+  SC becomes negligible for large n, so V_merged ~ A000568(n)/2.
+
+  The "tournament of tournaments" has half the classes (complement identification).
+
+
+================================================================================
+  WHICH TOURNAMENT SIZE HAS ~V_MERGED VERTICES?
+================================================================================
+
+  For each n, what k has A000568(k) closest to V_merged(n)?
+  n=3: V_merged=2, closest A000568(3)=2 (diff=0)
+  n=4: V_merged=3, closest A000568(3)=2 (diff=1)
+  n=5: V_merged=10, closest A000568(5)=12 (diff=2)
+  n=6: V_merged=34, closest A000568(5)=12 (diff=22)
+  n=7: V_merged=272, closest A000568(7)=456 (diff=184)
+  n=8: V_merged=3528, closest A000568(7)=456 (diff=3072)
+
+  DONE.
+================================================================================
