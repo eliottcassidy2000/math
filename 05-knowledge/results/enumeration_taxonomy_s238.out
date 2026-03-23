@@ -1,0 +1,248 @@
+
+========================================================================
+  ENUMERATION TAXONOMY AT n=5
+========================================================================
+
+  NEW NODE CATEGORIES (n=5, V_merged=10):
+
+  H mod 2:
+    H ≡ 0 (mod 2): 0 nodes
+    H ≡ 1 (mod 2): 10 nodes
+
+  H mod 4:
+    H ≡ 1 (mod 4): 5 nodes
+    H ≡ 3 (mod 4): 5 nodes
+
+  Fiber = H / |Aut| (verified for SC):
+
+  Fiber values (n!/|Aut|):
+    fiber=24: 1 nodes
+    fiber=40: 3 nodes
+    fiber=120: 6 nodes
+
+  Score variance classes:
+    svar=0.00 (c3=5): 1 nodes
+    svar=0.40 (c3=4): 3 nodes
+    svar=0.80 (c3=3): 2 nodes
+    svar=1.20 (c3=2): 1 nodes
+    svar=1.60 (c3=1): 2 nodes
+    svar=2.00 (c3=0): 1 nodes
+
+  Distance pairs (dist_trans, dist_reg):
+    (d_T=0, d_R=3): 1 nodes, sum=3
+    (d_T=1, d_R=2): 2 nodes, sum=3
+    (d_T=1, d_R=3): 2 nodes, sum=4
+    (d_T=2, d_R=1): 2 nodes, sum=3
+    (d_T=2, d_R=2): 2 nodes, sum=4
+    (d_T=3, d_R=0): 1 nodes, sum=3
+
+  Triangle count per node:
+    tri=0: 1 nodes
+    tri=1: 2 nodes
+    tri=2: 1 nodes
+    tri=3: 1 nodes
+    tri=4: 2 nodes
+    tri=6: 2 nodes
+    tri=9: 1 nodes
+  Total triangles: 12
+
+  H mod 8 (hypotenuse quantum):
+    H ≡ 1 (mod 8): 3 nodes
+    H ≡ 3 (mod 8): 3 nodes
+    H ≡ 5 (mod 8): 2 nodes
+    H ≡ 7 (mod 8): 2 nodes
+
+  Degree parity:
+    Even degree: 2, Odd degree: 8
+
+========================================================================
+  NEW EDGE CATEGORIES (n=5, E=21)
+========================================================================
+
+  In triangle: 18, NOT in triangle: 3
+
+  Thickness in units of n!=120:
+    w/n! = 2/3: 1 edges
+    w/n! = 2: 6 edges
+    w/n! = 4: 13 edges
+    w/n! = 6: 1 edges
+
+  Fiber product edge categories (fiber_i * fiber_j):
+    fiber_prod=1600: 1 edges
+    fiber_prod=2880: 2 edges
+    fiber_prod=4800: 7 edges
+    fiber_prod=14400: 11 edges
+
+  Distance-from-transitive sum:
+    d_T(i)+d_T(j)=1: 4 edges
+    d_T(i)+d_T(j)=2: 3 edges
+    d_T(i)+d_T(j)=3: 8 edges
+    d_T(i)+d_T(j)=4: 4 edges
+    d_T(i)+d_T(j)=5: 2 edges
+
+  H-sum parity (H_i + H_j mod 2):
+    Even: 21, Odd: 0
+
+  dH mod 4:
+    dH ≡ 0 (mod 4): 9 edges
+    dH ≡ 2 (mod 4): 12 edges
+
+========================================================================
+  FORMULA SEARCH (n=5)
+========================================================================
+
+  H odd: 10, H even: 0 (V_merged=10)
+  SC: 8, NS: 2
+  BLUE=12, BLACK=8, GREEN=1
+  Total edge thickness: 8480
+  Self-loop thickness: 1760
+  Total = edge + self: 10240 (should be 2^m * m = 10240)
+  CHECK: 2^m * m = 10240, SL + sum(w) = 10240, match = True
+  AMBER: 3/21 = 14.3%
+
+  Avg thickness by type:
+    BLUE:  4160/12 = 346.7
+    BLACK: 3840/8 = 480.0
+    GREEN: 480/1 = 480.0
+    AMBER: 1440/3 = 480.0
+    VIOLET: 7040/18 = 391.1
+
+========================================================================
+  ENUMERATION TAXONOMY AT n=6
+========================================================================
+
+  NEW NODE CATEGORIES (n=6, V_merged=34):
+
+  H mod 2:
+    H ≡ 0 (mod 2): 0 nodes
+    H ≡ 1 (mod 2): 34 nodes
+
+  H mod 4:
+    H ≡ 1 (mod 4): 22 nodes
+    H ≡ 3 (mod 4): 12 nodes
+
+  Fiber = H / |Aut| (verified for SC):
+
+  Fiber values (n!/|Aut|):
+    fiber=80: 1 nodes
+    fiber=144: 1 nodes
+    fiber=240: 7 nodes
+    fiber=720: 25 nodes
+
+  Score variance classes:
+    svar=0.25 (c3=8): 4 nodes
+    svar=0.58 (c3=7): 4 nodes
+    svar=0.92 (c3=6): 8 nodes
+    svar=1.25 (c3=5): 4 nodes
+    svar=1.58 (c3=4): 6 nodes
+    svar=1.92 (c3=3): 2 nodes
+    svar=2.25 (c3=2): 3 nodes
+    svar=2.58 (c3=1): 2 nodes
+    svar=2.92 (c3=0): 1 nodes
+
+  Distance pairs (dist_trans, dist_reg):
+    (d_T=0, d_R=4): 1 nodes, sum=4
+    (d_T=1, d_R=3): 3 nodes, sum=4
+    (d_T=1, d_R=4): 3 nodes, sum=5
+    (d_T=2, d_R=2): 4 nodes, sum=4
+    (d_T=2, d_R=3): 9 nodes, sum=5
+    (d_T=3, d_R=1): 2 nodes, sum=4
+    (d_T=3, d_R=2): 7 nodes, sum=5
+    (d_T=3, d_R=3): 2 nodes, sum=6
+    (d_T=4, d_R=0): 1 nodes, sum=4
+    (d_T=4, d_R=1): 1 nodes, sum=5
+    (d_T=4, d_R=3): 1 nodes, sum=7
+
+  Triangle count per node:
+    tri=0: 1 nodes
+    tri=1: 2 nodes
+    tri=2: 3 nodes
+    tri=3: 1 nodes
+    tri=4: 1 nodes
+    tri=5: 3 nodes
+    tri=6: 3 nodes
+    tri=7: 1 nodes
+    tri=8: 1 nodes
+    tri=11: 2 nodes
+    tri=12: 1 nodes
+    tri=15: 1 nodes
+    tri=16: 3 nodes
+    tri=18: 1 nodes
+    tri=21: 1 nodes
+    tri=23: 4 nodes
+    tri=24: 1 nodes
+    tri=25: 2 nodes
+    tri=26: 2 nodes
+  Total triangles: 139
+
+  H mod 16 (hypotenuse quantum):
+    H ≡ 1 (mod 16): 6 nodes
+    H ≡ 3 (mod 16): 3 nodes
+    H ≡ 5 (mod 16): 5 nodes
+    H ≡ 7 (mod 16): 2 nodes
+    H ≡ 9 (mod 16): 5 nodes
+    H ≡ 11 (mod 16): 3 nodes
+    H ≡ 13 (mod 16): 6 nodes
+    H ≡ 15 (mod 16): 4 nodes
+
+  Degree parity:
+    Even degree: 12, Odd degree: 22
+
+========================================================================
+  NEW EDGE CATEGORIES (n=6, E=143)
+========================================================================
+
+  In triangle: 130, NOT in triangle: 13
+
+  Thickness in units of n!=720:
+    w/n! = 4/3: 6 edges
+    w/n! = 2: 10 edges
+    w/n! = 4: 110 edges
+    w/n! = 8: 15 edges
+    w/n! = 12: 2 edges
+
+  Fiber product edge categories (fiber_i * fiber_j):
+    fiber_prod=19200: 1 edges
+    fiber_prod=57600: 6 edges
+    fiber_prod=103680: 3 edges
+    fiber_prod=172800: 25 edges
+    fiber_prod=518400: 108 edges
+
+  Distance-from-transitive sum:
+    d_T(i)+d_T(j)=1: 6 edges
+    d_T(i)+d_T(j)=2: 6 edges
+    d_T(i)+d_T(j)=3: 29 edges
+    d_T(i)+d_T(j)=4: 22 edges
+    d_T(i)+d_T(j)=5: 44 edges
+    d_T(i)+d_T(j)=6: 22 edges
+    d_T(i)+d_T(j)=7: 13 edges
+    d_T(i)+d_T(j)=8: 1 edges
+
+  H-sum parity (H_i + H_j mod 2):
+    Even: 143, Odd: 0
+
+  dH mod 4:
+    dH ≡ 0 (mod 4): 71 edges
+    dH ≡ 2 (mod 4): 72 edges
+
+========================================================================
+  FORMULA SEARCH (n=6)
+========================================================================
+
+  H odd: 34, H even: 0 (V_merged=34)
+  SC: 12, NS: 22
+  BLUE=13, BLACK=45, GREEN=85
+  Total edge thickness: 440640
+  Self-loop thickness: 37920
+  Total = edge + self: 478560 (should be 2^m * m = 491520)
+  CHECK: 2^m * m = 491520, SL + sum(w) = 478560, match = False
+  AMBER: 25/143 = 17.5%
+
+  Avg thickness by type:
+    BLUE:  23040/13 = 1772.3
+    BLACK: 136320/45 = 3029.3
+    GREEN: 281280/85 = 3309.2
+    AMBER: 83520/25 = 3340.8
+    VIOLET: 357120/118 = 3026.4
+
+Done. opus-2026-03-23-S238
