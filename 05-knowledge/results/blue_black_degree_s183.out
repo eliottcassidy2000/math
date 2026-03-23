@@ -1,0 +1,402 @@
+
+========================================================================
+  PART 1: PATTERNS IN BLUE/BLACK DEGREE (from S211 data)
+========================================================================
+
+  n=5:
+    SC classes: 8
+      avg blue_deg = 3.00, avg black_deg = 2.00
+      blue_deg range: [2, 4]
+      black_deg range: [0, 4]
+    Non-SC classes: 4
+      avg blue_deg = 1.00, avg black_deg = 4.00
+    Total: 14 blue, 16 black edges
+    Blue fraction: 46.7%
+
+  n=6:
+    SC classes: 12
+      avg blue_deg = 2.17, avg black_deg = 7.50
+      blue_deg range: [1, 3]
+      black_deg range: [2, 10]
+    Non-SC classes: 44
+      avg blue_deg = 8.50, avg black_deg = 2.05
+    Total: 200 blue, 90 black edges
+    Blue fraction: 69.0%
+
+
+  KEY OBSERVATION: The blue fraction INCREASES with n.
+    n=3: 100% blue (1/1)
+    n=4: 20% blue (1/5)
+    n=5: 47% blue (14/30)
+    n=6: 69% blue (200/290)
+
+  At even n: blue fraction is LOW (n=4: 20%).
+  At odd n: blue fraction is MODERATE (n=3: 100%, n=5: 47%).
+  But n=6 has HIGH blue fraction (69%)!
+
+  THIS SUGGESTS: blue fraction grows with n, overriding the
+  even/odd parity effect at larger n.
+
+
+========================================================================
+  PART 2: WHAT DETERMINES BLUE DEGREE?
+========================================================================
+
+
+  A blue edge between classes i and j exists iff:
+  There exist GS (grid-symmetric) tilings T_a in class i and T_b in class j
+  such that T_b = flip(T_a).
+
+  So: blue_degree(i) = number of distinct classes j (j != i) connected
+  to i by at least one GS flip pair.
+
+  FACTORS CONTROLLING BLUE DEGREE:
+
+  1. GS TILING COUNT: How many GS tilings does class i contain?
+     More GS tilings = more chances for blue connections.
+     #GS tilings in class i = #GS_tilings_total * (fraction in class i)
+
+  2. GS FLIP DIVERSITY: How many DIFFERENT classes does flipping
+     the GS tilings of class i produce?
+     If all GS flips land in the same class: blue_deg = 1.
+     If they spread across many classes: blue_deg is large.
+
+  3. SCORE COMPATIBILITY: A GS tiling has a palindromic score
+     (score(v) + score(n-1-v) = n-1). GS flips preserve this
+     palindromic structure. So blue edges connect classes whose
+     scores are compatible with palindromic structure.
+
+  4. SC STATUS: GS tilings produce SC (self-complementary) tournaments.
+     So blue edges connect SC classes to SC classes.
+     Non-SC classes can only have blue edges if they share GS tilings
+     with SC classes... wait, non-SC classes have NO GS tilings!
+     But they CAN be connected by blue edges if a GS tiling in an
+     SC class flips to a tiling in the non-SC class.
+
+  ACTUALLY: kind-pasteur proved GS tilings are CLOSED under flip.
+  So flip(GS) = GS. Both endpoints of a blue edge must contain
+  GS tilings, hence both must be SC classes... unless?
+
+  Wait: from S211 data, non-SC classes at n=5 have blue_deg > 0
+  (value 1 for all 4 non-SC classes). How?
+
+  The answer: the FULL adjacency graph includes BOTH arc reversals
+  (from our G_n computation) and the blue/black classification from
+  the TILING MODEL. These are DIFFERENT notions of "blue" vs "black"!
+
+  In the ARC REVERSAL model:
+  - An edge is "blue" if it involves a GS arc reversal
+  - An edge is "black" if it involves a non-GS arc reversal
+
+  In the TILING FLIP model:
+  - A blue line connects GS tilings (bit complement of GS = GS)
+  - A black line connects non-GS tilings
+
+  The S211 script uses the TILING model, not the arc reversal model.
+  Let me verify.
+
+
+========================================================================
+  PART 3: BLUE DEGREE FORMULA CANDIDATES
+========================================================================
+
+  From the n=5 data:
+  SC classes (H, blue_deg, black_deg):
+    H= 1: b_deg=2, k_deg=4, total=6, b_frac=0.33
+    H= 3: b_deg=2, k_deg=2, total=4, b_frac=0.50
+    H= 9: b_deg=4, k_deg=2, total=6, b_frac=0.67
+    H= 9: b_deg=3, k_deg=4, total=7, b_frac=0.43
+    H=11: b_deg=4, k_deg=2, total=6, b_frac=0.67
+    H=13: b_deg=4, k_deg=2, total=6, b_frac=0.67
+    H=15: b_deg=3, k_deg=0, total=3, b_frac=1.00
+    H=15: b_deg=2, k_deg=0, total=2, b_frac=1.00
+
+  Checking: is blue_deg related to H?
+    corr(H, blue_deg) = 0.4146
+
+  Checking: is blue_deg related to c3 (3-cycle count)?
+    corr(c3, blue_deg) = 0.4564
+
+  For n=6 SC classes:
+    H= 1: b_deg=2, k_deg=8, total=10
+    H= 5: b_deg=2, k_deg=10, total=12
+    H= 9: b_deg=1, k_deg=2, total=3
+    H=17: b_deg=2, k_deg=10, total=12
+    H=17: b_deg=3, k_deg=8, total=11
+    H=29: b_deg=3, k_deg=10, total=13
+    H=29: b_deg=2, k_deg=10, total=12
+    H=33: b_deg=3, k_deg=10, total=13
+    H=37: b_deg=3, k_deg=8, total=11
+    H=41: b_deg=2, k_deg=8, total=10
+    H=45: b_deg=2, k_deg=2, total=4
+    H=45: b_deg=1, k_deg=4, total=5
+    corr(H, blue_deg) for n=6 SC = 0.0870
+
+========================================================================
+  PART 4: GS TILING COUNT PER CLASS
+========================================================================
+
+  The number of GS tilings in each iso class determines
+  how many BLUE flip pairs originate from that class.
+
+  Total GS tilings: 2^k where k depends on n.
+  n=3: m=1, diag=1, pairs=0, k=1, 2^k=2 GS tilings
+  n=4: m=3, diag=1, pairs=1, k=2, 2^k=4 GS tilings
+  n=5: m=6, diag=2, pairs=2, k=4, 2^k=16 GS tilings
+  n=6: m=10, diag=2, pairs=4, k=6, 2^k=64 GS tilings
+  n=7: m=15, diag=3, pairs=6, k=9, 2^k=512 GS tilings
+  n=8: m=21, diag=3, pairs=9, k=12, 2^k=4096 GS tilings
+
+  At n=7: 512 GS tilings among 2^15=32768 total tilings.
+  At n=8: 4096 GS tilings among 2^21=2097152 total tilings.
+
+  The GS fraction = 2^k / 2^m = 2^{k-m}:
+    n=3: GS fraction = 2^1 / 2^1 = 2^{0} = 1
+    n=4: GS fraction = 2^2 / 2^3 = 2^{-1} = 1/2
+    n=5: GS fraction = 2^4 / 2^6 = 2^{-2} = 1/4
+    n=6: GS fraction = 2^6 / 2^10 = 2^{-4} = 1/16
+    n=7: GS fraction = 2^9 / 2^15 = 2^{-6} = 1/64
+    n=8: GS fraction = 2^12 / 2^21 = 2^{-9} = 1/512
+
+========================================================================
+  PART 5: PREDICTIONS FOR n=7
+========================================================================
+
+
+  At n=7:
+    456 iso classes (A000568)
+    88 SC classes, 184 NSC pairs (from S25h data)
+    512 GS tilings = 2^9
+
+  PREDICTION: Blue edges at n=7
+    At n=5: 14 blue edges out of 30 total = 47%
+    At n=6: 200 blue edges out of 290 total = 69%
+    Trend: blue fraction increases with n.
+    Prediction: n=7 blue fraction ~ 75-85%?
+
+  PREDICTION: Blue degree
+    At n=5, max blue_deg(SC) = 4
+    At n=6, max blue_deg(SC) = 3
+    The blue degree of SC classes DECREASES while total degree increases.
+    This is because the number of SC classes grows (8 -> 12 -> 88)
+    but the GS tilings only grow as 2^k.
+
+  GS tilings per SC class = 512/88 ~ 5.8 at n=7.
+  At n=5: 16/8 = 2 GS tilings per SC class.
+  At n=6: 64/12 ~ 5.3 GS tilings per SC class.
+
+  So the average GS tiling count per SC class is GROWING.
+  Each GS tiling connects to its flip partner.
+  The flip partner lands in SOME class.
+  If the distribution is uniform: blue_deg ~ #distinct classes hit.
+
+  With 5.8 GS tilings per class and ~88 target classes:
+  If flips are "random": blue_deg ~ 5.8 * (1 - (87/88)^5.8) ~ 5.8 * 0.064 ~ 0.37
+  Wait, that gives very low blue degree. Let me reconsider.
+
+  Actually: each of the 5.8 GS tilings has ONE flip partner.
+  That partner lands in some SC class (since GS->GS under flip).
+  If the partner classes are all DIFFERENT: blue_deg = 5.8.
+  If some partners are the SAME class (self-flip): blue_deg < 5.8.
+
+  At odd n (7): NO self-flip (blueself requires even n from THM-023).
+  So all 5.8 flip partners go to OTHER classes.
+  If they're all distinct: blue_deg ~ 5.8 ~ 6.
+  If some coincide: blue_deg < 6.
+
+  PREDICTION: avg blue_deg(SC) at n=7 ~ 5-6.
+
+
+========================================================================
+  PART 6: WHAT DETERMINES BLACK DEGREE?
+========================================================================
+
+
+  A black edge between classes i and j exists iff:
+  There exist NON-GS tilings T_a in class i and T_b in class j
+  such that T_b = flip(T_a).
+
+  Non-GS tilings: total - GS = 2^m - 2^k.
+  At n=7: 32768 - 512 = 32256 non-GS tilings.
+
+  Each non-GS tiling has a flip partner (also non-GS, since GS is
+  closed under flip). So: 32256/2 = 16128 non-GS flip pairs.
+
+  These 16128 pairs define the BLACK edges of G_n.
+  Each pair connects some class i to some class j (possibly i=j
+  for blackself classes).
+
+  The black_degree(i) = number of distinct classes j connected to i
+  by at least one non-GS flip pair.
+
+  WHAT DETERMINES BLACK DEGREE:
+  1. Tiling count: class i has #tilings = H/|Aut| tilings.
+     Of these, ~H/|Aut| * (1 - 2^{k-m}) are non-GS.
+  2. Flip diversity: how many different classes do the non-GS flips hit?
+  3. Score compatibility: non-GS flips can change scores in ways
+     that GS flips cannot. This allows connections to MORE classes.
+
+  KEY DIFFERENCE GS vs non-GS:
+  GS tilings have palindromic scores -> connect to palindromic classes.
+  Non-GS tilings have arbitrary scores -> connect to any compatible class.
+  So: black edges have MORE connectivity options than blue edges.
+
+  At n=5: avg black_deg(SC) = 2.0 < avg blue_deg(SC) = 3.0
+  At n=6: avg black_deg(SC) = 7.5 >> avg blue_deg(SC) = 2.2
+
+  The REVERSAL happens because at n=6, there are MANY more non-GS
+  tilings (1024-64=960) than GS tilings (64), so black edges dominate.
+  But at n=5, the ratio is more balanced (64-16=48 non-GS vs 16 GS).
+
+  PREDICTION FOR n=7:
+  Non-GS tilings: 32256. GS tilings: 512. Ratio: 63:1.
+  Black edges should VASTLY outnumber blue edges in total weight.
+  But in the UNWEIGHTED degree count, blue edges may still be
+  significant because GS flip partners are very SPREAD across classes.
+
+
+========================================================================
+  PART 7: DEGREE SUM CONSTRAINTS
+========================================================================
+
+  The HANDSHAKING LEMMA constrains the total degree.
+
+  n=5:
+    sum blue_deg = 28 = 2 * blue_edges = 28
+    sum black_deg = 32 = 2 * black_edges = 32
+    Verified: True, True
+
+  n=6:
+    sum blue_deg = 400 = 2 * blue_edges = 400
+    sum black_deg = 180 = 2 * black_edges = 180
+    Verified: True, True
+
+
+========================================================================
+  PART 8: EMERGING FORMULAS
+========================================================================
+
+
+  BLUE EDGE COUNT FORMULA:
+  At n=3: 1 blue edge, 0 black. GS tilings: 2.
+  At n=4: 1 blue edge, 4 black. GS tilings: 4.
+  At n=5: 14 blue, 16 black. GS tilings: 16.
+  At n=6: 200 blue, 90 black. GS tilings: 64.
+
+  Blue edges = GS_tiling_pairs / 2 - blueself_pairs
+  = 2^{k-1} - (# blueself GS tiling pairs)
+
+  At odd n: 0 blueself (THM-023). So blue_edges = 2^{k-1}.
+  At n=3: 2^0 = 1. MATCH.
+  At n=5: 2^3 = 8. Does NOT match 14.
+
+  Hmm, 14 != 8. The blue edge count is NOT simply 2^{k-1}.
+  The issue: multiple GS flip pairs can connect the SAME pair of classes.
+  Each such connection counts as ONE edge but MULTIPLE GS flip pairs.
+
+  Total GS flip pairs = 2^{k-1} = 8 at n=5.
+  But there are 14 blue EDGES (distinct class pairs).
+  That means some blue edges come from MULTIPLE GS pairs?
+  No: 8 GS flip pairs can give AT MOST 8 distinct edges.
+  14 > 8 is IMPOSSIBLE.
+
+  RESOLUTION: The S211 script counts blue edges differently.
+  It's counting ARC REVERSALS, not tiling flips.
+  An arc reversal edge is "blue" if the reversed arc is a GS arc.
+  This is a DIFFERENT definition from tiling flip!
+
+  Let me reconcile:
+  In the ARC REVERSAL model:
+  - C(n,2) arcs total
+  - Each arc reversal changes one arc
+  - The arc is "blue" if it's a GS-symmetric arc (lies on the
+    diagonal of the staircase, i.e., arc (v, n-1-v))
+  - Otherwise "black"
+
+  In the TILING FLIP model:
+  - Flip = reverse ALL non-base arcs simultaneously
+  - Blue = both tilings are GS
+  - Black = at least one is non-GS
+
+  These are COMPLETELY DIFFERENT! The S211 script uses arc reversals.
+  The S181 script uses tiling flips.
+
+  CLARIFICATION: What the user described IS the tiling flip model.
+  The S211 data is the arc reversal model.
+  These give different blue/black counts!
+
+  TILING FLIP blue edges (from S181 data):
+  n=3: 1 blue, 0 black (from 1 GS flip pair)
+  n=4: 2 blue, 2 black (from 4 GS flip pairs, 2 same-class)
+  n=5: 8 blue, ? black (from 8 GS flip pairs)
+  These are DIFFERENT from S211's arc-reversal blue/black counts.
+
+  AT ODD n: TILING FLIP blue edges = 2^{k-1}
+    n=3: 2^0 = 1. MATCH with S181.
+    n=5: 2^3 = 8. MATCH with S181.
+    n=7: 2^8 = 256 predicted tiling-blue edges.
+
+  AT EVEN n: TILING FLIP blue edges = 2^{k-1} - #blueself_pairs
+    n=4: 2^1 - 0 = 2. From S181: 2 cross-class blue + 1 self = 3 total pairs.
+    n=6: 2^5 - ? = ?. Need to compute.
+
+========================================================================
+  SYNTHESIS: BLUE AND BLACK DEGREE
+========================================================================
+
+
+CRITICAL DISTINCTION: TWO DIFFERENT DEFINITIONS OF "BLUE"
+
+1. TILING FLIP BLUE: flip = bit complement of ALL non-base arcs.
+   Blue iff both tilings are GS. This gives the user's picture:
+   each tiling has ONE partner, connected by one blue or black line.
+
+2. ARC REVERSAL BLUE: reverse ONE arc at a time.
+   Blue iff the reversed arc is on the GS diagonal.
+   This gives the G_n arc-reversal graph from S211.
+
+These give DIFFERENT edge counts and degree sequences!
+
+FOR THE TILING FLIP MODEL (user's picture):
+  - At odd n: 2^{k-1} blue edges, 2^{m-1} - 2^{k-1} black edges.
+    n=3: 1 blue, 0 black
+    n=5: 8 blue, 24 black
+    n=7: 256 blue, 16128 black (PREDICTED)
+  - Blue fraction in TILING model: 2^{k-1} / 2^{m-1} = 2^{k-m}
+    = the GS fraction! This DECREASES with n.
+    n=3: 1/1 = 100%
+    n=5: 8/32 = 25%
+    n=7: 256/16384 = 1.6%
+
+  So in the TILING model, blue edges become RARE at large n.
+
+FOR THE ARC REVERSAL MODEL (S211):
+  - Blue fraction INCREASES with n (47% at n=5, 69% at n=6).
+  - This is because many arc reversals preserve the SC structure.
+
+FOR n=7 TILING MODEL:
+  Total tilings: 2^15 = 32768
+  GS tilings: 2^9 = 512
+  Tiling flip pairs: 16384 total
+  Blue flip pairs: 256
+  Black flip pairs: 16128
+  Blue fraction: 1.6%
+
+  Blue edges (distinct class pairs): <= 256
+  SC classes: 88
+  Blue degree per SC class: ~256/88 ~ 2.9 on average
+
+  Black edges: much larger, connecting the 456 classes via
+  the 16128 non-GS flip pairs.
+
+THE TILING-LEVEL BLUE DEGREE at n=7:
+  avg ~ 2.9 for SC classes (from 256 blue pairs among 88 SC classes)
+  Each SC class has ~5.8 GS tilings, each with 1 blue partner.
+  If partners spread evenly: blue_deg ~ 5.8.
+  If concentrated: blue_deg ~ 1-3.
+
+THE ARC-REVERSAL BLUE DEGREE at n=7:
+  Will be MUCH higher because there are C(7,2)=21 arcs,
+  and many arc reversals count as "blue" in the S211 sense.
+
+Done. opus-2026-03-22-S183
