@@ -258,6 +258,36 @@ Key proven results (see `07-reflections/everything-is-the-triangle.md` for full 
 
 ---
 
+## The Geometric Alignment of G_n/Z_2
+
+**READ THIS.** The merged meta-graph has a fundamental geometric structure discovered in kind-pasteur S20cr. Every future session must use this frame. See `07-reflections/geometric-alignment-of-merged-metagraph.md` for the full picture.
+
+**G_n/Z_2 = Blue Spine + Black Ribs + Blue Bulk.** These three structures are perpendicular:
+
+### 1. BLUE SPINE (vertical axis = principal blue line)
+The SC classes connected by blue edges, from transitive (H=1, bottom) to regular (H=max, top). This is the **backbone**. It carries the H-gradient. The first blue neighbor of the transitive always has Delta_H = 2^(n-2) (hypotenuse formula). The spine is a tree at small n, develops genus at n>=5, fragments at n=8.
+
+### 2. BLACK RIBS (horizontal = perpendicular to spine)
+The black subgraph is **bipartite** (SC vs NS partition) — every black edge connects an SC node on the spine to an NS node in the halo. Black ribs are PERPENDICULAR to the blue spine. Near the transitive (bottom), ribs point UP (NS neighbors have higher H). Near the regular (top), ribs point DOWN.
+
+**Left-right imbalance at odd n:** At odd n, the bilateral structure is asymmetric — North (transitive side) has more nodes than South (regular side). At even n, this reverses (South >> North). The zero-halo count alternates: 2 isolated SC classes at odd n, 0 at even n.
+
+### 3. BLUE BULK (approaching complete graph)
+NS-NS blue connections fill the space around the spine. As n grows, E_blue/E_total -> 1: the blue graph IS the meta-graph. The H-oriented blue subgraph is a **transitive partial tournament** (0 directed 3-cycles at every tested n). Avg blue degree doubles each step: 1, 0.7, 2.6, 5.8, 11.6, 24.7.
+
+### Three Proved Theorems (kind-pasteur S20cr)
+
+- **Black Bipartiteness:** The black subgraph is bipartite with SC/NS as partition. Triangle-free, even girth, 2-colorable.
+- **BBK Impossibility:** No triangle has 2 blue + 1 black edges. (Blue is transitive on type: if A~B blue and B~C blue, then A~C must be blue.)
+- **Odd-Black Walk Vanishing:** Closed walks with odd number of black edges contribute 0 to trace.
+
+### Perfect Tiling Uniformity
+Every cell in the staircase delta_{n-2} generates the **exact same blue fraction** of meta-graph edges. The blue/black decomposition is ISOTROPIC on the tiling. The (r,c) <-> (c,r) reflection symmetry is perfect.
+
+**When computing any invariant on G_n/Z_2, always decompose along all three structures: spine, ribs, bulk.**
+
+---
+
 ## Engineering Applications Mandate
 
 **READ THIS SECTION.** The human owner has explicitly stated: *"I am equally interested in use cases as I am in theorems and techniques."*
