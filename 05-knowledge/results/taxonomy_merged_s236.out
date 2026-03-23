@@ -1,0 +1,409 @@
+
+========================================================================
+  COMPREHENSIVE TAXONOMY AT n=5
+========================================================================
+
+
+========================================================================
+  NODE CATEGORIES (n=5, V_merged=10)
+========================================================================
+
+  mid | SC   | H   | H_zone  | c3_par | rigid | self | deg | B | K | G | A | T | lvl | #par | score
+  ------------------------------------------------------------------------------------------------------------------------
+  0   | SC   | 1   | FLOOR   | EVEN   | RIGID | LOOP | 4   | 2 | 2 | 0 | 0 | 4 | 1 | 1 | (0, 1, 2, 3, 4)
+  1   | NS   | 3   | BULK    | ODD    | SYM   | LOOP | 3   | 0 | 2 | 1 | 0 | 3 | 2 | 2 | (1, 1, 1, 3, 4)
+  3   | SC   | 3   | BULK    | ODD    | SYM   | -    | 3   | 2 | 1 | 0 | 0 | 3 | 2 | 3 | (0, 2, 2, 2, 4)
+  2   | NS   | 5   | BULK    | EVEN   | RIGID | LOOP | 7   | 0 | 6 | 1 | 0 | 7 | 1 | 3 | (1, 1, 2, 2, 4)
+  4   | SC   | 9   | BULK    | ODD    | RIGID | LOOP | 5   | 4 | 1 | 0 | 1 | 5 | 2 | 2 | (1, 1, 2, 3, 3)
+  5   | SC   | 9   | BULK    | ODD    | RIGID | -    | 5   | 3 | 2 | 0 | 1 | 5 | 2 | 4 | (1, 1, 2, 3, 3)
+  6   | SC   | 11  | BULK    | EVEN   | RIGID | LOOP | 5   | 4 | 1 | 0 | 1 | 5 | 1 | 2 | (1, 2, 2, 2, 3)
+  8   | SC   | 13  | BULK    | EVEN   | RIGID | -    | 5   | 4 | 1 | 0 | 2 | 5 | 1 | 3 | (1, 2, 2, 2, 3)
+  7   | SC   | 15  | CEILING | EVEN   | SYM   | -    | 3   | 3 | 0 | 0 | 1 | 3 | 2 | 3 | (1, 2, 2, 2, 3)
+  9   | SC   | 15  | CEILING | ODD    | SYM   | -    | 2   | 2 | 0 | 0 | 0 | 2 | 2 | 1 | (2, 2, 2, 2, 2)
+
+========================================================================
+  NODE CATEGORY COUNTS (n=5)
+========================================================================
+
+  SC                            : 8 / 10 (80.0%)
+  NS                            : 2 / 10 (20.0%)
+  RIGID (|Aut|=1)               : 6 / 10 (60.0%)
+  SYMMETRIC (|Aut|>1)           : 4 / 10 (40.0%)
+  HAS_SELF_LOOP                 : 5 / 10 (50.0%)
+  NO_SELF_LOOP                  : 5 / 10 (50.0%)
+  c3_EVEN                       : 5 / 10 (50.0%)
+  c3_ODD                        : 5 / 10 (50.0%)
+  FLOOR (H=min)                 : 1 / 10 (10.0%)
+  CEILING (H=max)               : 2 / 10 (20.0%)
+  BULK                          : 7 / 10 (70.0%)
+  HAS_BLUE_EDGE                 : 8 / 10 (80.0%)
+  NO_BLUE_EDGE                  : 2 / 10 (20.0%)
+  HAS_BLACK_EDGE                : 8 / 10 (80.0%)
+  NO_BLACK_EDGE                 : 2 / 10 (20.0%)
+  HAS_GREEN_EDGE                : 2 / 10 (20.0%)
+  NO_GREEN_EDGE                 : 8 / 10 (80.0%)
+  HAS_AMBER_EDGE                : 5 / 10 (50.0%)
+  NO_AMBER_EDGE                 : 5 / 10 (50.0%)
+  HAS_TEAL_EDGE                 : 10 / 10 (100.0%)
+  NO_TEAL_EDGE                  : 0 / 10 (0.0%)
+  UNIQUE_SCORE                  : 5 / 10 (50.0%)
+  SHARED_SCORE                  : 5 / 10 (50.0%)
+  SINGLETON_LEVEL (unique H)    : 4 / 10 (40.0%)
+  MULTI_LEVEL (shared H)        : 6 / 10 (60.0%)
+  SINGLE_PARENT                 : 2 / 10 (20.0%)
+  MULTI_PARENT                  : 8 / 10 (80.0%)
+
+========================================================================
+  EDGE CATEGORIES (n=5, E_merged=21)
+========================================================================
+
+  BLUE (SC↔SC)                       : 12 / 21 (57.1%)
+  BLACK (SC↔NS)                      : 8 / 21 (38.1%)
+  GREEN (NS↔NS)                      : 1 / 21 (4.8%)
+  AMBER (same score)                 : 3 / 21 (14.3%)
+  VIOLET (diff score)                : 18 / 21 (85.7%)
+  TEAL (same parent)                 : 21 / 21 (100.0%)
+  MAGENTA (diff parent)              : 0 / 21 (0.0%)
+  STEP (|dH|=2)                      : 9 / 21 (42.9%)
+  LEAP (|dH|>2)                      : 11 / 21 (52.4%)
+  LEVEL (dH=0)                       : 1 / 21 (4.8%)
+  c3_CROSSING (parity flip)          : 14 / 21 (66.7%)
+  c3_PRESERVING                      : 7 / 21 (33.3%)
+  AUT_CHANGE                         : 9 / 21 (42.9%)
+  AUT_PRESERVE                       : 12 / 21 (57.1%)
+  THIN (thickness ≤ n!)              : 7 / 21 (33.3%)
+  THICK (thickness > n!)             : 14 / 21 (66.7%)
+
+========================================================================
+  CROSS-TABULATIONS (n=5)
+========================================================================
+
+  SC-type vs Score:
+    BLUE  : AMBER=3, VIOLET=9, total=12, AMBER%=25.0%
+    BLACK : AMBER=0, VIOLET=8, total=8, AMBER%=0.0%
+    GREEN : AMBER=0, VIOLET=1, total=1, AMBER%=0.0%
+
+  SC-type vs Fiber:
+    BLUE  : TEAL=12, MAGENTA=0, total=12, TEAL%=100.0%
+    BLACK : TEAL=8, MAGENTA=0, total=8, TEAL%=100.0%
+    GREEN : TEAL=1, MAGENTA=0, total=1, TEAL%=100.0%
+
+  Score vs Fiber:
+    AMBER+TEAL=3, AMBER+MAGENTA=0, VIOLET+TEAL=18, VIOLET+MAGENTA=0
+
+  SC-type vs dH:
+    BLUE + STEP: 6
+    BLUE + LEAP: 5
+    BLUE + LEVEL: 1
+    BLACK + STEP: 2
+    BLACK + LEAP: 6
+    GREEN + STEP: 1
+
+  c3 crossing vs SC-type:
+    BLUE  : CROSSING=9, PRESERVING=3, cross%=75.0%
+    BLACK : CROSSING=4, PRESERVING=4, cross%=50.0%
+    GREEN : CROSSING=1, PRESERVING=0, cross%=100.0%
+
+========================================================================
+  COMPOUND NODE CATEGORIES (n=5)
+========================================================================
+
+  SC + RIGID                         : 5 / 10 (50.0%)
+  SC + SYMMETRIC                     : 3 / 10 (30.0%)
+  NS + RIGID                         : 1 / 10 (10.0%)
+  NS + SYMMETRIC                     : 1 / 10 (10.0%)
+  SC + HAS_SELF_LOOP                 : 3 / 10 (30.0%)
+  NS + HAS_SELF_LOOP                 : 2 / 10 (20.0%)
+  SC + NO_GREEN                      : 8 / 10 (80.0%)
+  NS + NO_BLUE                       : 2 / 10 (20.0%)
+  SC + HAS_AMBER                     : 5 / 10 (50.0%)
+  SC + c3_EVEN                       : 4 / 10 (40.0%)
+  SC + c3_ODD                        : 4 / 10 (40.0%)
+  CEILING + SC                       : 2 / 10 (20.0%)
+  FLOOR + SC                         : 1 / 10 (10.0%)
+  SC + NO_BLACK (isolated SC)        : 2 / 10 (20.0%)
+  SINGLETON_H + SC                   : 3 / 10 (30.0%)
+  SINGLE_PARENT + SC                 : 2 / 10 (20.0%)
+  HAS_TEAL + HAS_AMBER               : 5 / 10 (50.0%)
+  MAX_DEGREE                         : 1 / 10 (10.0%)
+  MIN_DEGREE                         : 1 / 10 (10.0%)
+
+========================================================================
+  COMPOUND EDGE CATEGORIES (n=5)
+========================================================================
+
+  BLUE + AMBER (SC↔SC, same score)             : 3 / 21 (14.3%)
+  BLUE + VIOLET (SC↔SC, diff score)            : 9 / 21 (42.9%)
+  BLUE + TEAL (SC↔SC, same parent)             : 12 / 21 (57.1%)
+  BLACK + TEAL                                 : 8 / 21 (38.1%)
+  GREEN + TEAL                                 : 1 / 21 (4.8%)
+  AMBER + TEAL (same score + same parent)      : 3 / 21 (14.3%)
+  AMBER + LEVEL (same score + same H)          : 1 / 21 (4.8%)
+  STEP + c3_PRESERVING                         : 2 / 21 (9.5%)
+  THIN + BLUE                                  : 7 / 21 (33.3%)
+  THICK + GREEN                                : 1 / 21 (4.8%)
+  LEAP + c3_CROSSING                           : 7 / 21 (33.3%)
+
+========================================================================
+  BOOLEAN NODE PROFILES (n=5)
+========================================================================
+
+  10 distinct boolean profiles out of 10 nodes:
+
+    1 nodes: SC, RIGID, LOOP, BLUE, BLACK, TEAL, c3_EVEN
+    1 nodes: LOOP, BLACK, GREEN, TEAL
+    1 nodes: RIGID, LOOP, BLACK, GREEN, TEAL, c3_EVEN
+    1 nodes: SC, BLUE, BLACK, TEAL
+    1 nodes: SC, RIGID, LOOP, BLUE, BLACK, AMBER, TEAL
+    1 nodes: SC, RIGID, BLUE, BLACK, AMBER, TEAL
+    1 nodes: SC, RIGID, LOOP, BLUE, BLACK, AMBER, TEAL, c3_EVEN
+    1 nodes: SC, BLUE, AMBER, TEAL, c3_EVEN
+    1 nodes: SC, RIGID, BLUE, BLACK, AMBER, TEAL, c3_EVEN
+    1 nodes: SC, BLUE, TEAL
+
+========================================================================
+  BOOLEAN EDGE PROFILES (n=5)
+========================================================================
+
+  14 distinct edge profiles out of 21 edges:
+
+      3 edges: BLACK + VIOLET + TEAL + LEAP + THICK
+      2 edges: BLUE + VIOLET + TEAL + LEAP + c3_CROSS
+      2 edges: BLUE + VIOLET + TEAL + STEP + c3_CROSS + AUT_CHANGE
+      2 edges: BLACK + VIOLET + TEAL + LEAP + c3_CROSS + THICK
+      2 edges: BLACK + VIOLET + TEAL + STEP + c3_CROSS + AUT_CHANGE + THICK
+      2 edges: BLUE + VIOLET + TEAL + LEAP + c3_CROSS + AUT_CHANGE
+      1 edges: BLUE + VIOLET + TEAL + STEP + c3_CROSS + THICK
+      1 edges: BLUE + AMBER + TEAL + STEP + THICK
+      1 edges: BLUE + AMBER + TEAL + LEVEL + THICK
+      1 edges: BLUE + VIOLET + TEAL + STEP + c3_CROSS
+      1 edges: GREEN + VIOLET + TEAL + STEP + c3_CROSS + AUT_CHANGE + THICK
+      1 edges: BLACK + VIOLET + TEAL + LEAP + AUT_CHANGE + THICK
+      1 edges: BLUE + VIOLET + TEAL + LEAP + c3_CROSS + THICK
+      1 edges: BLUE + AMBER + TEAL + STEP + AUT_CHANGE + THICK
+
+========================================================================
+  COMPREHENSIVE TAXONOMY AT n=6
+========================================================================
+
+
+========================================================================
+  NODE CATEGORIES (n=6, V_merged=34)
+========================================================================
+
+  mid | SC   | H   | H_zone  | c3_par | rigid | self | deg | B | K | G | A | T | lvl | #par | score
+  ------------------------------------------------------------------------------------------------------------------------
+  0   | SC   | 1   | FLOOR   | EVEN   | RIGID | LOOP | 6   | 2 | 4 | 0 | 0 | 6 | 1 | 1 | (0, 1, 2, 3, 4, 5)
+  1   | NS   | 3   | BULK    | ODD    | SYM   | LOOP | 5   | 0 | 2 | 3 | 0 | 5 | 2 | 2 | (1, 1, 1, 3, 4, 5)
+  3   | NS   | 3   | BULK    | ODD    | SYM   | LOOP | 6   | 0 | 2 | 4 | 0 | 6 | 2 | 3 | (0, 2, 2, 2, 4, 5)
+  2   | NS   | 5   | BULK    | EVEN   | RIGID | LOOP | 11  | 0 | 2 | 9 | 0 | 11 | 2 | 3 | (1, 1, 2, 2, 4, 5)
+  5   | SC   | 5   | BULK    | EVEN   | RIGID | LOOP | 7   | 2 | 5 | 0 | 0 | 7 | 2 | 4 | (0, 2, 2, 3, 3, 5)
+  4   | NS   | 9   | BULK    | ODD    | RIGID | LOOP | 11  | 0 | 4 | 7 | 1 | 11 | 3 | 3 | (1, 1, 2, 3, 3, 5)
+  6   | NS   | 9   | BULK    | ODD    | RIGID | -    | 12  | 0 | 2 | 10 | 1 | 12 | 3 | 5 | (1, 1, 2, 3, 3, 5)
+  17  | SC   | 9   | BULK    | EVEN   | SYM   | -    | 2   | 1 | 1 | 0 | 0 | 2 | 3 | 2 | (1, 1, 1, 4, 4, 4)
+  7   | NS   | 11  | BULK    | EVEN   | RIGID | LOOP | 11  | 0 | 2 | 9 | 1 | 11 | 1 | 3 | (1, 2, 2, 2, 3, 5)
+  13  | NS   | 13  | BULK    | EVEN   | RIGID | -    | 11  | 0 | 2 | 9 | 2 | 11 | 1 | 4 | (1, 2, 2, 2, 3, 5)
+  9   | NS   | 15  | BULK    | EVEN   | RIGID | LOOP | 11  | 0 | 2 | 9 | 2 | 11 | 3 | 5 | (1, 1, 2, 3, 4, 4)
+  12  | NS   | 15  | BULK    | EVEN   | SYM   | -    | 6   | 0 | 0 | 6 | 1 | 6 | 3 | 4 | (1, 2, 2, 2, 3, 5)
+  20  | NS   | 15  | BULK    | ODD    | SYM   | -    | 3   | 0 | 0 | 3 | 0 | 3 | 3 | 2 | (2, 2, 2, 2, 2, 5)
+  8   | SC   | 17  | BULK    | EVEN   | RIGID | LOOP | 7   | 2 | 5 | 0 | 1 | 7 | 2 | 2 | (1, 1, 2, 3, 4, 4)
+  16  | SC   | 17  | BULK    | EVEN   | RIGID | -    | 7   | 3 | 4 | 0 | 1 | 7 | 2 | 5 | (1, 1, 2, 3, 4, 4)
+  10  | NS   | 19  | BULK    | ODD    | RIGID | LOOP | 12  | 0 | 2 | 10 | 1 | 12 | 1 | 5 | (1, 2, 2, 2, 4, 4)
+  11  | NS   | 23  | BULK    | EVEN   | RIGID | LOOP | 10  | 0 | 2 | 8 | 2 | 10 | 2 | 3 | (1, 2, 2, 3, 3, 4)
+  15  | NS   | 23  | BULK    | ODD    | RIGID | -    | 13  | 0 | 3 | 10 | 2 | 13 | 2 | 6 | (1, 2, 2, 2, 4, 4)
+  19  | NS   | 25  | BULK    | EVEN   | RIGID | LOOP | 11  | 0 | 0 | 11 | 2 | 11 | 1 | 5 | (1, 2, 2, 3, 3, 4)
+  14  | NS   | 27  | BULK    | ODD    | SYM   | -    | 7   | 0 | 2 | 5 | 1 | 7 | 1 | 4 | (1, 2, 2, 2, 4, 4)
+  26  | SC   | 29  | BULK    | EVEN   | RIGID | LOOP | 8   | 3 | 5 | 0 | 2 | 8 | 3 | 4 | (1, 2, 2, 3, 3, 4)
+  27  | SC   | 29  | BULK    | EVEN   | RIGID | -    | 7   | 2 | 5 | 0 | 1 | 7 | 3 | 4 | (1, 2, 2, 3, 3, 4)
+  29  | NS   | 29  | BULK    | EVEN   | RIGID | -    | 13  | 0 | 2 | 11 | 4 | 13 | 3 | 5 | (1, 2, 2, 3, 3, 4)
+  23  | NS   | 31  | BULK    | EVEN   | RIGID | -    | 11  | 0 | 3 | 8 | 5 | 11 | 1 | 5 | (1, 2, 2, 3, 3, 4)
+  18  | NS   | 33  | BULK    | ODD    | SYM   | LOOP | 6   | 0 | 0 | 6 | 1 | 6 | 3 | 3 | (2, 2, 2, 2, 3, 4)
+  22  | SC   | 33  | BULK    | EVEN   | RIGID | LOOP | 8   | 3 | 5 | 0 | 4 | 8 | 3 | 4 | (1, 2, 2, 3, 3, 4)
+  28  | NS   | 33  | BULK    | ODD    | RIGID | -    | 12  | 0 | 3 | 9 | 2 | 12 | 3 | 6 | (2, 2, 2, 2, 3, 4)
+  21  | SC   | 37  | BULK    | EVEN   | RIGID | LOOP | 7   | 3 | 4 | 0 | 2 | 7 | 3 | 4 | (1, 2, 2, 3, 3, 4)
+  24  | NS   | 37  | BULK    | ODD    | RIGID | -    | 11  | 0 | 2 | 9 | 3 | 11 | 3 | 5 | (2, 2, 2, 2, 3, 4)
+  25  | NS   | 37  | BULK    | ODD    | RIGID | LOOP | 13  | 0 | 6 | 7 | 2 | 13 | 3 | 4 | (2, 2, 2, 2, 3, 4)
+  30  | SC   | 41  | BULK    | EVEN   | RIGID | LOOP | 6   | 2 | 4 | 0 | 2 | 6 | 1 | 3 | (2, 2, 2, 3, 3, 3)
+  31  | NS   | 43  | BULK    | EVEN   | RIGID | -    | 9   | 0 | 2 | 7 | 2 | 9 | 1 | 5 | (2, 2, 2, 3, 3, 3)
+  32  | SC   | 45  | CEILING | EVEN   | SYM   | LOOP | 3   | 2 | 1 | 0 | 1 | 3 | 2 | 1 | (2, 2, 2, 3, 3, 3)
+  33  | SC   | 45  | CEILING | EVEN   | SYM   | -    | 3   | 1 | 2 | 0 | 1 | 3 | 2 | 1 | (2, 2, 2, 3, 3, 3)
+
+========================================================================
+  NODE CATEGORY COUNTS (n=6)
+========================================================================
+
+  SC                            : 12 / 34 (35.3%)
+  NS                            : 22 / 34 (64.7%)
+  RIGID (|Aut|=1)               : 25 / 34 (73.5%)
+  SYMMETRIC (|Aut|>1)           : 9 / 34 (26.5%)
+  HAS_SELF_LOOP                 : 19 / 34 (55.9%)
+  NO_SELF_LOOP                  : 15 / 34 (44.1%)
+  c3_EVEN                       : 22 / 34 (64.7%)
+  c3_ODD                        : 12 / 34 (35.3%)
+  FLOOR (H=min)                 : 1 / 34 (2.9%)
+  CEILING (H=max)               : 2 / 34 (5.9%)
+  BULK                          : 31 / 34 (91.2%)
+  HAS_BLUE_EDGE                 : 12 / 34 (35.3%)
+  NO_BLUE_EDGE                  : 22 / 34 (64.7%)
+  HAS_BLACK_EDGE                : 30 / 34 (88.2%)
+  NO_BLACK_EDGE                 : 4 / 34 (11.8%)
+  HAS_GREEN_EDGE                : 22 / 34 (64.7%)
+  NO_GREEN_EDGE                 : 12 / 34 (35.3%)
+  HAS_AMBER_EDGE                : 27 / 34 (79.4%)
+  NO_AMBER_EDGE                 : 7 / 34 (20.6%)
+  HAS_TEAL_EDGE                 : 34 / 34 (100.0%)
+  NO_TEAL_EDGE                  : 0 / 34 (0.0%)
+  UNIQUE_SCORE                  : 7 / 34 (20.6%)
+  SHARED_SCORE                  : 27 / 34 (79.4%)
+  SINGLETON_LEVEL (unique H)    : 9 / 34 (26.5%)
+  MULTI_LEVEL (shared H)        : 25 / 34 (73.5%)
+  SINGLE_PARENT                 : 3 / 34 (8.8%)
+  MULTI_PARENT                  : 31 / 34 (91.2%)
+
+========================================================================
+  EDGE CATEGORIES (n=6, E_merged=143)
+========================================================================
+
+  BLUE (SC↔SC)                       : 13 / 143 (9.1%)
+  BLACK (SC↔NS)                      : 45 / 143 (31.5%)
+  GREEN (NS↔NS)                      : 85 / 143 (59.4%)
+  AMBER (same score)                 : 25 / 143 (17.5%)
+  VIOLET (diff score)                : 118 / 143 (82.5%)
+  TEAL (same parent)                 : 143 / 143 (100.0%)
+  MAGENTA (diff parent)              : 0 / 143 (0.0%)
+  STEP (|dH|=2)                      : 21 / 143 (14.7%)
+  LEAP (|dH|>2)                      : 117 / 143 (81.8%)
+  LEVEL (dH=0)                       : 5 / 143 (3.5%)
+  c3_CROSSING (parity flip)          : 75 / 143 (52.4%)
+  c3_PRESERVING                      : 68 / 143 (47.6%)
+  AUT_CHANGE                         : 30 / 143 (21.0%)
+  AUT_PRESERVE                       : 113 / 143 (79.0%)
+  THIN (thickness ≤ n!)              : 16 / 143 (11.2%)
+  THICK (thickness > n!)             : 127 / 143 (88.8%)
+
+========================================================================
+  CROSS-TABULATIONS (n=6)
+========================================================================
+
+  SC-type vs Score:
+    BLUE  : AMBER=3, VIOLET=10, total=13, AMBER%=23.1%
+    BLACK : AMBER=9, VIOLET=36, total=45, AMBER%=20.0%
+    GREEN : AMBER=13, VIOLET=72, total=85, AMBER%=15.3%
+
+  SC-type vs Fiber:
+    BLUE  : TEAL=13, MAGENTA=0, total=13, TEAL%=100.0%
+    BLACK : TEAL=45, MAGENTA=0, total=45, TEAL%=100.0%
+    GREEN : TEAL=85, MAGENTA=0, total=85, TEAL%=100.0%
+
+  Score vs Fiber:
+    AMBER+TEAL=25, AMBER+MAGENTA=0, VIOLET+TEAL=118, VIOLET+MAGENTA=0
+
+  SC-type vs dH:
+    BLUE + LEAP: 13
+    BLACK + STEP: 10
+    BLACK + LEAP: 32
+    BLACK + LEVEL: 3
+    GREEN + STEP: 11
+    GREEN + LEAP: 72
+    GREEN + LEVEL: 2
+
+  c3 crossing vs SC-type:
+    BLUE  : CROSSING=0, PRESERVING=13, cross%=0.0%
+    BLACK : CROSSING=28, PRESERVING=17, cross%=62.2%
+    GREEN : CROSSING=47, PRESERVING=38, cross%=55.3%
+
+========================================================================
+  COMPOUND NODE CATEGORIES (n=6)
+========================================================================
+
+  SC + RIGID                         : 9 / 34 (26.5%)
+  SC + SYMMETRIC                     : 3 / 34 (8.8%)
+  NS + RIGID                         : 16 / 34 (47.1%)
+  NS + SYMMETRIC                     : 6 / 34 (17.6%)
+  SC + HAS_SELF_LOOP                 : 8 / 34 (23.5%)
+  NS + HAS_SELF_LOOP                 : 11 / 34 (32.4%)
+  SC + NO_GREEN                      : 12 / 34 (35.3%)
+  NS + NO_BLUE                       : 22 / 34 (64.7%)
+  SC + HAS_AMBER                     : 9 / 34 (26.5%)
+  NS + HAS_AMBER                     : 18 / 34 (52.9%)
+  SC + c3_EVEN                       : 12 / 34 (35.3%)
+  CEILING + SC                       : 2 / 34 (5.9%)
+  FLOOR + SC                         : 1 / 34 (2.9%)
+  SINGLETON_H + SC                   : 2 / 34 (5.9%)
+  SINGLE_PARENT + SC                 : 3 / 34 (8.8%)
+  HAS_TEAL + HAS_AMBER               : 27 / 34 (79.4%)
+  MAX_DEGREE                         : 3 / 34 (8.8%)
+  MIN_DEGREE                         : 1 / 34 (2.9%)
+
+========================================================================
+  COMPOUND EDGE CATEGORIES (n=6)
+========================================================================
+
+  BLUE + AMBER (SC↔SC, same score)             : 3 / 143 (2.1%)
+  BLUE + VIOLET (SC↔SC, diff score)            : 10 / 143 (7.0%)
+  BLUE + TEAL (SC↔SC, same parent)             : 13 / 143 (9.1%)
+  BLACK + AMBER                                : 9 / 143 (6.3%)
+  BLACK + TEAL                                 : 45 / 143 (31.5%)
+  GREEN + AMBER                                : 13 / 143 (9.1%)
+  GREEN + TEAL                                 : 85 / 143 (59.4%)
+  AMBER + TEAL (same score + same parent)      : 25 / 143 (17.5%)
+  AMBER + LEVEL (same score + same H)          : 3 / 143 (2.1%)
+  LEVEL + c3_CROSSING                          : 2 / 143 (1.4%)
+  STEP + c3_PRESERVING                         : 10 / 143 (7.0%)
+  THIN + BLUE                                  : 10 / 143 (7.0%)
+  THICK + GREEN                                : 80 / 143 (55.9%)
+  LEAP + c3_CROSSING                           : 62 / 143 (43.4%)
+  LEAP + AMBER                                 : 12 / 143 (8.4%)
+
+========================================================================
+  BOOLEAN NODE PROFILES (n=6)
+========================================================================
+
+  17 distinct boolean profiles out of 34 nodes:
+
+    5 nodes: SC, RIGID, LOOP, BLUE, BLACK, AMBER, TEAL, c3_EVEN
+    4 nodes: RIGID, BLACK, GREEN, AMBER, TEAL
+    4 nodes: RIGID, BLACK, GREEN, AMBER, TEAL, c3_EVEN
+    3 nodes: RIGID, LOOP, BLACK, GREEN, AMBER, TEAL
+    3 nodes: RIGID, LOOP, BLACK, GREEN, AMBER, TEAL, c3_EVEN
+    2 nodes: SC, RIGID, LOOP, BLUE, BLACK, TEAL, c3_EVEN
+    2 nodes: LOOP, BLACK, GREEN, TEAL
+    2 nodes: SC, RIGID, BLUE, BLACK, AMBER, TEAL, c3_EVEN
+    1 nodes: RIGID, LOOP, BLACK, GREEN, TEAL, c3_EVEN
+    1 nodes: GREEN, AMBER, TEAL, c3_EVEN
+    1 nodes: BLACK, GREEN, AMBER, TEAL
+    1 nodes: SC, BLUE, BLACK, TEAL, c3_EVEN
+    1 nodes: LOOP, GREEN, AMBER, TEAL
+    1 nodes: RIGID, LOOP, GREEN, AMBER, TEAL, c3_EVEN
+    1 nodes: GREEN, TEAL
+    1 nodes: SC, LOOP, BLUE, BLACK, AMBER, TEAL, c3_EVEN
+    1 nodes: SC, BLUE, BLACK, AMBER, TEAL, c3_EVEN
+
+========================================================================
+  BOOLEAN EDGE PROFILES (n=6)
+========================================================================
+
+  30 distinct edge profiles out of 143 edges:
+
+     31 edges: GREEN + VIOLET + TEAL + LEAP + c3_CROSS + THICK
+     19 edges: GREEN + VIOLET + TEAL + LEAP + THICK
+     17 edges: BLACK + VIOLET + TEAL + LEAP + c3_CROSS + THICK
+      8 edges: BLACK + VIOLET + TEAL + LEAP + THICK
+      6 edges: GREEN + VIOLET + TEAL + LEAP + c3_CROSS + AUT_CHANGE + THICK
+      5 edges: BLACK + AMBER + TEAL + STEP + THICK
+      5 edges: BLUE + VIOLET + TEAL + LEAP
+      5 edges: GREEN + AMBER + TEAL + LEAP + THICK
+      4 edges: BLACK + VIOLET + TEAL + LEAP + c3_CROSS + AUT_CHANGE + THICK
+      4 edges: GREEN + VIOLET + TEAL + LEAP + AUT_CHANGE + THICK
+      4 edges: GREEN + VIOLET + TEAL + STEP + c3_CROSS + AUT_CHANGE + THICK
+      3 edges: BLUE + VIOLET + TEAL + LEAP + AUT_CHANGE
+      3 edges: GREEN + VIOLET + TEAL + LEAP + c3_CROSS
+      3 edges: GREEN + AMBER + TEAL + STEP + THICK
+      3 edges: BLACK + VIOLET + TEAL + STEP + c3_CROSS + AUT_CHANGE + THICK
+      3 edges: GREEN + VIOLET + TEAL + STEP + c3_CROSS + THICK
+      2 edges: GREEN + AMBER + TEAL + LEAP + AUT_CHANGE + THICK
+      2 edges: BLUE + VIOLET + TEAL + LEAP + THICK
+      2 edges: BLACK + VIOLET + TEAL + LEVEL + c3_CROSS + THICK
+      2 edges: GREEN + AMBER + TEAL + LEVEL + THICK
+
+Done. opus-2026-03-23-S236
