@@ -1,0 +1,133 @@
+
+========================================================================
+  PARENT TREE ANALYSIS AT n=5
+========================================================================
+
+  G_5: 12 classes, G_4: 4 classes, G_3: 2 classes
+
+  DELETION TREE (n=5 -> n=4 -> n=3):
+
+  class  0 (H= 1): n=4 parents = {0:5} (H=[1])
+                    n=3 grandparents = {0:20}
+  class  1 (H= 3): n=4 parents = {0:3, 1:2} (H=[1, 3])
+                    n=3 grandparents = {0:18, 1:2}
+  class  2 (H= 5): n=4 parents = {0:2, 1:2, 2:1} (H=[1, 3, 5])
+                    n=3 grandparents = {0:16, 1:4}
+  class  3 (H= 3): n=4 parents = {0:3, 1:1, 3:1} (H=[1, 3])
+                    n=3 grandparents = {0:18, 1:2}
+  class  4 (H= 9): n=4 parents = {0:2, 2:3} (H=[1, 5])
+                    n=3 grandparents = {0:14, 1:6}
+  class  5 (H= 5): n=4 parents = {0:2, 2:1, 3:2} (H=[1, 3, 5])
+                    n=3 grandparents = {0:16, 1:4}
+  class  6 (H= 9): n=4 parents = {0:1, 1:1, 2:2, 3:1} (H=[1, 3, 5])
+                    n=3 grandparents = {0:14, 1:6}
+  class  7 (H= 3): n=4 parents = {0:3, 3:2} (H=[1, 3])
+                    n=3 grandparents = {0:18, 1:2}
+  class  8 (H=11): n=4 parents = {0:1, 2:4} (H=[1, 5])
+                    n=3 grandparents = {0:12, 1:8}
+  class  9 (H=15): n=4 parents = {1:1, 2:3, 3:1} (H=[3, 5])
+                    n=3 grandparents = {0:12, 1:8}
+  class 10 (H=13): n=4 parents = {1:1, 2:3, 3:1} (H=[3, 5])
+                    n=3 grandparents = {0:12, 1:8}
+  class 11 (H=15): n=4 parents = {2:5} (H=[5])
+                    n=3 grandparents = {0:10, 1:10}
+
+========================================================================
+  PARENTS AND ARC-REVERSAL EDGES
+========================================================================
+
+
+  KEY INSIGHT: Reversing arc (a,b) in tournament T changes the
+  DELETION PROFILE at vertices a and b:
+  - Deleting vertex a: arc (a,b) disappears, T_(-a) is the same
+    whether (a,b) or (b,a). So parent at vertex a is UNCHANGED.
+    Wait: that's wrong. Deleting a removes ALL arcs incident to a,
+    including (a,b). So the sub-tournament T-a doesn't involve arc (a,b) at all.
+    Reversing (a,b) has NO EFFECT on T-a.
+    But it DOES affect T-b (arc (a,b) is incident to b but NOT removed).
+    Wait: deleting b removes ALL arcs incident to b. So T-b also
+    doesn't involve (a,b) directly... WAIT.
+
+  CORRECTION: Deleting vertex v removes ALL arcs to/from v.
+  Reversing arc (a,b) changes:
+  - T-v for v != a and v != b: NO CHANGE (arc (a,b) is still there, direction flipped)
+  - T-a: arc (a,b) is removed (since a is deleted). The rest is unchanged.
+    So T-a is the SAME before and after reversing (a,b).
+  - T-b: arc (a,b) is removed (since b is deleted). Same: T-b is UNCHANGED.
+
+  WAIT: that can't be right. T-v for v != a, v != b DOES change:
+  the sub-tournament on vertices {0,...,n-1} \ {v} includes both a and b.
+  The arc between a and b in this sub-tournament is (a,b) before and (b,a) after.
+  So: T-v CHANGES when (a,b) is reversed, for all v != a and v != b.
+  T-a and T-b do NOT change (since the reversed arc is removed with the deleted vertex).
+
+  THEREFORE: Reversing arc (a,b) changes the parent at vertex v
+  for ALL v != a and v != b (that's n-2 parents).
+  The parents at a and b are UNCHANGED.
+
+  This means: arc reversal at (a,b) affects (n-2) of the n parent classes.
+  The 2 unchanged parents are at the endpoints of the reversed arc.
+
+  VERIFICATION at n=5:
+
+  Transitive tournament, original parents: [0, 0, 0, 0, 0]
+  (All the same class because transitive is highly symmetric)
+
+  After reversing arc (0,1), parents: [0, 0, 0, 0, 0]
+  Changed at vertices: []
+  Unchanged at vertices: [0, 1, 2, 3, 4]
+  (Should be unchanged at 0 and 1, changed at 2,3,4)
+
+========================================================================
+  THE PARENT PROFILE DETERMINES EDGE TARGETS
+========================================================================
+
+
+  When we reverse arc (a,b) in tournament T:
+  - The NEW tournament T' has a DIFFERENT deletion profile
+  - Specifically: the parent at vertex v (v != a, v != b) changes
+    because arc (a,b) flips direction in the sub-tournament T-v
+
+  The NEW class of T' is determined by ALL the arc changes.
+  But the PARENT PROFILE of T' tells us which n=4 classes appear.
+
+  TWO arc reversals (a,b) and (c,d) produce the SAME target class
+  iff the resulting tournaments are isomorphic. This happens when:
+  - The "affected" parents (n-2 of them) change in the same way
+  - There exists a relabeling sending one reversal to the other
+
+  THE COLLISION CONDITION:
+  Arcs (a,b) and (c,d) COLLIDE (= same target class) iff:
+  there exists sigma in S_n with:
+    sigma(a) = c, sigma(b) = d, AND sigma is an automorphism of T_(-{a,b,c,d})
+
+  For |Aut(T)| = 1 (generic): sigma must map EVERYTHING correctly.
+  This is very restrictive, so collisions are RARE for generic T.
+  Hence D/T -> 0 as generic classes dominate.
+
+  For |Aut(T)| > 1: the automorphism creates MANDATORY collisions.
+  If sigma(a)=a, sigma(b)=c: then arcs (a,b) and (a,c) collide.
+  This happens when b and c are in the same Aut-orbit.
+  Number of such collisions = sum over Aut-orbits of C(orbit_size, 2).
+
+  AUT-ORBIT COLLISIONS at n=5:
+
+  class  0 (H= 1, |Aut|=1): 10 orbits, 4 self, 6 collisions, targets={0: 4, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 7: 1}
+  class  1 (H= 3, |Aut|=3): 4 orbits, 1 self, 0 collisions, targets={0: 1, 2: 1, 6: 1, 1: 1}
+  class  2 (H= 5, |Aut|=1): 10 orbits, 3 self, 3 collisions, targets={0: 1, 3: 1, 2: 3, 1: 1, 8: 1, 10: 1, 6: 1, 4: 1}
+  class  3 (H= 3, |Aut|=3): 4 orbits, 0 self, 0 collisions, targets={2: 1, 0: 1, 5: 1, 9: 1}
+  class  4 (H= 9, |Aut|=1): 10 orbits, 2 self, 3 collisions, targets={0: 1, 5: 1, 6: 2, 4: 2, 8: 2, 9: 1, 2: 1}
+  class  5 (H= 5, |Aut|=1): 10 orbits, 3 self, 3 collisions, targets={4: 1, 0: 1, 7: 1, 6: 1, 5: 3, 10: 1, 8: 1, 3: 1}
+  class  6 (H= 9, |Aut|=1): 10 orbits, 0 self, 4 collisions, targets={4: 2, 1: 1, 7: 1, 5: 1, 10: 3, 8: 1, 2: 1}
+  class  7 (H= 3, |Aut|=3): 4 orbits, 1 self, 0 collisions, targets={6: 1, 5: 1, 0: 1, 7: 1}
+  class  8 (H=11, |Aut|=1): 10 orbits, 2 self, 3 collisions, targets={4: 2, 2: 1, 5: 1, 8: 2, 10: 2, 6: 1, 11: 1}
+  class  9 (H=15, |Aut|=3): 4 orbits, 0 self, 1 collisions, targets={3: 1, 10: 2, 4: 1}
+  class 10 (H=13, |Aut|=1): 10 orbits, 0 self, 5 collisions, targets={9: 2, 2: 1, 5: 1, 6: 3, 8: 2, 11: 1}
+  class 11 (H=15, |Aut|=5): 2 orbits, 0 self, 0 collisions, targets={8: 1, 10: 1}
+
+  Total collisions (sum over classes): 28
+  Total self-loop orbits: 16
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/parent_tree_degeneracy_s209.py", line 348, in <module>
+    print("  Expected D = %d" % (T[2] - 2*E[2]))
+NameError: name 'T' is not defined
