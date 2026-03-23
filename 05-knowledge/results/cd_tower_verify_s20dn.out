@@ -1,0 +1,56 @@
+================================================================================
+  CAYLEY-DICKSON TOWER: GEOMETRIC VERIFICATION
+  kind-pasteur-2026-03-23-S20dn
+================================================================================
+
+############################################################
+  1. REGULAR TOURNAMENTS AT n=5
+############################################################
+  Found 24 labeled regular tournaments on 5 vertices
+  Expected: 24 (the Hurwitz quaternions)
+  VERIFIED: 24 regular tournaments = 24 Hurwitz quaternions
+  All self-complementary? True
+  Iso classes among regular: 1
+  H values: {15}
+  All H=15 (the maximum at n=5): True
+
+############################################################
+  2. ADJACENCY IN THE 24-CELL
+############################################################
+  Pairs of regular tournaments differing by 1 arc: 0
+  24-cell has 96 edges. Match? NO (0 vs 96)
+
+  Hamming distance distribution between the 24 regular tournaments:
+    d=3: 60 pairs
+    d=4: 60 pairs
+    d=5: 24 pairs
+    d=6: 60 pairs
+    d=7: 60 pairs
+    d=10: 12 pairs
+
+  Degrees in 1-arc-flip graph: Counter({0: 24})
+  Average degree: 0.0
+
+############################################################
+  3. D_4 ROOT SYSTEM CONNECTION
+############################################################
+  Inner product distribution between 24 regular vectors in {+1,-1}^10:
+    <v_i, v_j> = -10 (Hamming d=10): 12 pairs
+    <v_i, v_j> =  -4 (Hamming d=7): 60 pairs
+    <v_i, v_j> =  -2 (Hamming d=6): 60 pairs
+    <v_i, v_j> =   0 (Hamming d=5): 24 pairs
+    <v_i, v_j> =   2 (Hamming d=4): 60 pairs
+    <v_i, v_j> =   4 (Hamming d=3): 60 pairs
+
+############################################################
+  4. MODE B DESCENT: n=5 -> n=3 (H -> C)
+############################################################
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\cd_tower_verify_s20dn.py", line 226, in <module>
+    cn = canon(inner)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\cd_tower_verify_s20dn.py", line 47, in canon
+    s = ''.join(str(A[p[i]][p[j]]) for i in range(n) for j in range(n))
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\cd_tower_verify_s20dn.py", line 47, in <genexpr>
+    s = ''.join(str(A[p[i]][p[j]]) for i in range(n) for j in range(n))
+                    ~~~~~~~^^^^^^
+IndexError: list index out of range
