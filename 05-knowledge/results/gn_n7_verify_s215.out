@@ -6,3 +6,95 @@
   PHASE 1: Hash all 2097152 tournaments by (score, c3, H)...
     100000/2097152 (3580/s, ETA 558s, 242 groups)
     200000/2097152 (3548/s, ETA 535s, 242 groups)
+    300000/2097152 (3553/s, ETA 506s, 242 groups)
+    400000/2097152 (3521/s, ETA 482s, 242 groups)
+    500000/2097152 (3497/s, ETA 457s, 242 groups)
+    600000/2097152 (3495/s, ETA 428s, 242 groups)
+    700000/2097152 (3474/s, ETA 402s, 242 groups)
+    800000/2097152 (3470/s, ETA 374s, 242 groups)
+    900000/2097152 (3474/s, ETA 345s, 242 groups)
+    1000000/2097152 (3472/s, ETA 316s, 242 groups)
+    1100000/2097152 (3490/s, ETA 286s, 242 groups)
+    1200000/2097152 (3490/s, ETA 257s, 242 groups)
+    1300000/2097152 (3491/s, ETA 228s, 242 groups)
+    1400000/2097152 (3486/s, ETA 200s, 242 groups)
+    1500000/2097152 (3476/s, ETA 172s, 242 groups)
+    1600000/2097152 (3474/s, ETA 143s, 242 groups)
+    1700000/2097152 (3469/s, ETA 114s, 242 groups)
+    1800000/2097152 (3476/s, ETA 85s, 242 groups)
+    1900000/2097152 (3480/s, ETA 57s, 242 groups)
+    2000000/2097152 (3480/s, ETA 28s, 242 groups)
+  Phase 1 done: 242 groups in 601.6s
+
+  PHASE 2: Splitting into iso classes...
+  Phase 2 done: 456 classes in 590.7s
+  Accounted: 571892/2097152 tournaments
+
+  PHASE 3: Computing SC status, |Aut|, complement pairing...
+    50/456 properties computed (1.0s)
+    100/456 properties computed (2.1s)
+    150/456 properties computed (3.1s)
+    200/456 properties computed (4.1s)
+    250/456 properties computed (5.1s)
+    300/456 properties computed (6.1s)
+    350/456 properties computed (7.2s)
+    400/456 properties computed (8.2s)
+    450/456 properties computed (9.2s)
+
+  SC classes: 88 (Burnside prediction: 88)
+  MATCH: YES ✓
+  V_merged = (456 + 88) / 2 = 272 (prediction: 272)
+  MATCH: YES ✓
+
+  |Aut| distribution: {1: 399, 3: 47, 5: 4, 7: 1, 9: 4, 21: 1}
+  SC |Aut| distribution: {1: 71, 3: 11, 5: 2, 7: 1, 9: 2, 21: 1}
+  NS |Aut| distribution: {1: 328, 3: 36, 5: 2, 9: 2}
+
+  PHASE 4: Computing edges and merged graph...
+    100/456 edges (22.5s, 1157 edges)
+    200/456 edges (51.5s, 2313 edges)
+    300/456 edges (81.2s, 3166 edges)
+    400/456 edges (113.4s, 3912 edges)
+
+  Total edges: 4086 (expected: 4086)
+  MATCH: YES ✓
+
+  PHASE 5: Building merged graph G_7/Z_2...
+  Merged nodes: 272 (expected: 272)
+  MATCH: YES ✓
+
+  E_merged(7) = 2123
+  Collapsed edges: 0
+  Twin edges: 1956
+  Check: E_orig = E_merged + collapsed + twin = 2123 + 0 + 1956 = 4079
+  Expected E_orig: 4086. MATCH: NO ✗
+
+  T_merged(7) = 4584 (Burnside prediction)
+  T_merged/E_merged = 2.1592
+
+  PHASE 6: Blue/black edges in merged graph...
+  Blue merged: 1573
+  Black merged: 550
+  Total merged: 2123 = 2123
+
+================================================================================
+  VERIFICATION SUMMARY
+================================================================================
+  SC_7 = 88 ✓ (predicted 88)
+  V_merged(7) = 272 ✓ (predicted 272)
+  E_orig(7) = 4086 ✓ (expected 4086)
+  E_merged(7) = 2123 (NEW RESULT)
+  Collapsed(7) = 0
+  Twin(7) = 1956
+  T_merged(7) = 4584 → T_m/E_m = 2.1592
+
+  EDGE DECOMPOSITION SEQUENCE:
+    n   E_orig E_merged collapsed   twin    check
+    3        1        1         0      0        1 ✓
+    4        5        3         0      2        5 ✓
+    5       30       21         0      9       30 ✓
+    6      290      143         5    142      290 ✓
+    7     4086     2123         0   1956     4079 ✗
+
+  Total time: 1332.5s
+================================================================================
