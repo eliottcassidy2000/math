@@ -1,0 +1,299 @@
+================================================================================
+  FIBER ALGEBRA: TILINGS AND THE METAGRAPH
+  opus-2026-03-23-S233
+================================================================================
+
+================================================================================
+  n = 3
+================================================================================
+  V_merged=2, E_merged=1, m=3
+
+  TILING SUMS:
+    Σ_all_classes Tilings(C) = 2
+    2^C(n-1,2) = 2^1 = 2
+    MATCH: YES ✓
+
+    Σ_merged Tilings = 2
+    Σ_SC Tilings = 2
+    Σ_NS Tilings = 0
+    2^(C(n-1,2)-1) = 1
+    (2^(C(n-1,2)) + SC_tilings) / 2 = 4
+    Merged formula: 2
+    = (2^C(n-1,2) + SC_tilings_all) / 2 = (2 + 2) / 2 = 2
+
+  H SUMS:
+    Σ H = 4
+    Σ H (SC) = 4
+    Σ H (NS) = 0
+    Σ H² = 10
+    avg H = 2.00
+
+  TILING-WEIGHTED EDGE SUMS:
+    Σ T(a)×T(b) = 1
+    Σ T(a)×T(b) (blue) = 1
+    Σ T(a)×T(b) (black) = 0
+    Σ (T(a)+T(b)) = 2
+    avg T(a)×T(b) = 1.00
+    avg (T(a)+T(b)) = 2.00
+    Random model Σ T×T: 1
+    Actual/Random ratio: 1.0000
+
+  KEY RATIOS:
+    Σ_merged T / E = 2.0000
+    (Σ_merged T)^2 / (mid × E) = 2.0000
+    E × avg_T^2 / Σ T×T = 1.0000
+
+  n=3 done (0.0s)
+
+================================================================================
+  n = 4
+================================================================================
+  V_merged=3, E_merged=3, m=6
+
+  TILING SUMS:
+    Σ_all_classes Tilings(C) = 8
+    2^C(n-1,2) = 2^3 = 8
+    MATCH: YES ✓
+
+    Σ_merged Tilings = 7
+    Σ_SC Tilings = 6
+    Σ_NS Tilings = 1
+    2^(C(n-1,2)-1) = 4
+    (2^(C(n-1,2)) + SC_tilings) / 2 = 14
+    Merged formula: 7
+    = (2^C(n-1,2) + SC_tilings_all) / 2 = (8 + 6) / 2 = 7
+
+  H SUMS:
+    Σ H = 9
+    Σ H (SC) = 6
+    Σ H (NS) = 3
+    Σ H² = 35
+    avg H = 3.00
+
+  TILING-WEIGHTED EDGE SUMS:
+    Σ T(a)×T(b) = 11
+    Σ T(a)×T(b) (blue) = 5
+    Σ T(a)×T(b) (black) = 6
+    Σ (T(a)+T(b)) = 14
+    avg T(a)×T(b) = 3.67
+    avg (T(a)+T(b)) = 4.67
+    Random model Σ T×T: 16
+    Actual/Random ratio: 0.6735
+
+  KEY RATIOS:
+    Σ_merged T / E = 2.3333
+    (Σ_merged T)^2 / (mid × E) = 5.4444
+    E × avg_T^2 / Σ T×T = 1.4848
+
+  n=4 done (0.0s)
+
+================================================================================
+  n = 5
+================================================================================
+  V_merged=10, E_merged=21, m=10
+
+  TILING SUMS:
+    Σ_all_classes Tilings(C) = 64
+    2^C(n-1,2) = 2^6 = 64
+    MATCH: YES ✓
+
+    Σ_merged Tilings = 58
+    Σ_SC Tilings = 52
+    Σ_NS Tilings = 6
+    2^(C(n-1,2)-1) = 32
+    (2^(C(n-1,2)) + SC_tilings) / 2 = 116
+    Merged formula: 58
+    = (2^C(n-1,2) + SC_tilings_all) / 2 = (64 + 52) / 2 = 58
+
+  H SUMS:
+    Σ H = 84
+    Σ H (SC) = 76
+    Σ H (NS) = 8
+    Σ H² = 946
+    avg H = 8.40
+
+  TILING-WEIGHTED EDGE SUMS:
+    Σ T(a)×T(b) = 971
+    Σ T(a)×T(b) (blue) = 741
+    Σ T(a)×T(b) (black) = 230
+    Σ (T(a)+T(b)) = 276
+    avg T(a)×T(b) = 46.24
+    avg (T(a)+T(b)) = 13.14
+    Random model Σ T×T: 706
+    Actual/Random ratio: 1.3745
+
+  DEGREE-TILING PRODUCTS:
+    Σ deg(v)×T(v) = 276
+    Σ blue_deg(v)×T(v) = 190
+    2×Σ T×T over edges = 2×971
+    CHECK: Σ(T(a)+T(b)) = 276, Σ deg×T = 276, MATCH ✓
+
+  KEY RATIOS:
+    Σ_merged T / E = 2.7619
+    (Σ_merged T)^2 / (mid × E) = 16.0190
+    E × avg_T^2 / Σ T×T = 0.7275
+
+  n=5 done (0.2s)
+
+================================================================================
+  n = 6
+================================================================================
+  V_merged=34, E_merged=143, m=15
+
+  TILING SUMS:
+    Σ_all_classes Tilings(C) = 1024
+    2^C(n-1,2) = 2^10 = 1024
+    MATCH: YES ✓
+
+    Σ_merged Tilings = 632
+    Σ_SC Tilings = 240
+    Σ_NS Tilings = 392
+    2^(C(n-1,2)-1) = 512
+    (2^(C(n-1,2)) + SC_tilings) / 2 = 1264
+    Merged formula: 632
+    = (2^C(n-1,2) + SC_tilings_all) / 2 = (1024 + 240) / 2 = 632
+
+  H SUMS:
+    Σ H = 766
+    Σ H (SC) = 308
+    Σ H (NS) = 458
+    Σ H² = 23066
+    avg H = 22.53
+
+  TILING-WEIGHTED EDGE SUMS:
+    Σ T(a)×T(b) = 71015
+    Σ T(a)×T(b) (blue) = 45104
+    Σ T(a)×T(b) (black) = 25911
+    Σ (T(a)+T(b)) = 5866
+    avg T(a)×T(b) = 496.61
+    avg (T(a)+T(b)) = 41.02
+    Random model Σ T×T: 49410
+    Actual/Random ratio: 1.4373
+
+  DEGREE-TILING PRODUCTS:
+    Σ deg(v)×T(v) = 5866
+    Σ blue_deg(v)×T(v) = 3922
+    2×Σ T×T over edges = 2×71015
+    CHECK: Σ(T(a)+T(b)) = 5866, Σ deg×T = 5866, MATCH ✓
+
+  KEY RATIOS:
+    Σ_merged T / E = 4.4196
+    (Σ_merged T)^2 / (mid × E) = 82.1522
+    E × avg_T^2 / Σ T×T = 0.6958
+
+  n=6 done (59.4s)
+
+================================================================================
+  n = 7
+================================================================================
+  V_merged=272, E_merged=2123, m=21
+
+  TILING SUMS:
+    Σ_all_classes Tilings(C) = 35180
+    2^C(n-1,2) = 2^15 = 32768
+    MATCH: NO ✗
+
+    Σ_merged Tilings = 21894
+    Σ_SC Tilings = 8608
+    Σ_NS Tilings = 13286
+    2^(C(n-1,2)-1) = 16384
+    (2^(C(n-1,2)) + SC_tilings) / 2 = 41376
+    Merged formula: 21894
+    = (2^C(n-1,2) + SC_tilings_all) / 2 = (35180 + 8608) / 2 = 21894
+
+  H SUMS:
+    Σ H = 21894
+    Σ H (SC) = 8608
+    Σ H (NS) = 13286
+    Σ H² = 2275912
+    avg H = 80.49
+
+  TILING-WEIGHTED EDGE SUMS:
+    Σ T(a)×T(b) = 16159911
+    Σ T(a)×T(b) (blue) = 10976081
+    Σ T(a)×T(b) (black) = 5183830
+    Σ (T(a)+T(b)) = 338734
+    avg T(a)×T(b) = 7611.83
+    avg (T(a)+T(b)) = 159.55
+    Random model Σ T×T: 13755058
+    Actual/Random ratio: 1.1748
+
+  DEGREE-TILING PRODUCTS:
+    Σ deg(v)×T(v) = 338734
+    Σ blue_deg(v)×T(v) = 240594
+    2×Σ T×T over edges = 2×16159911
+    CHECK: Σ(T(a)+T(b)) = 338734, Σ deg×T = 338734, MATCH ✓
+
+  KEY RATIOS:
+    Σ_merged T / E = 10.3128
+    (Σ_merged T)^2 / (mid × E) = 830.1017
+    E × avg_T^2 / Σ T×T = 0.8512
+
+  n=7 done (3.4s)
+
+================================================================================
+  n = 8
+================================================================================
+  V_merged=3528, E_merged=45550, m=28
+
+  TILING SUMS:
+    Σ_all_classes Tilings(C) = 2143304
+    2^C(n-1,2) = 2^21 = 2097152
+    MATCH: NO ✗
+
+    Σ_merged Tilings = 1102392
+    Σ_SC Tilings = 61480
+    Σ_NS Tilings = 1040912
+    2^(C(n-1,2)-1) = 1048576
+    (2^(C(n-1,2)) + SC_tilings) / 2 = 2158632
+    Merged formula: 1102392
+    = (2^C(n-1,2) + SC_tilings_all) / 2 = (2143304 + 61480) / 2 = 1102392
+
+  H SUMS:
+    Σ H = 1102392
+    Σ H (SC) = 61480
+    Σ H (NS) = 1040912
+    Σ H² = 429010352
+    avg H = 312.47
+
+  TILING-WEIGHTED EDGE SUMS:
+    Σ T(a)×T(b) = 5422383560
+    Σ T(a)×T(b) (blue) = 5143760892
+    Σ T(a)×T(b) (black) = 278622668
+    Σ (T(a)+T(b)) = 28767962
+    avg T(a)×T(b) = 119042.45
+    avg (T(a)+T(b)) = 631.57
+    Random model Σ T×T: 4447370738
+    Actual/Random ratio: 1.2192
+
+  DEGREE-TILING PRODUCTS:
+    Σ deg(v)×T(v) = 28767962
+    Σ blue_deg(v)×T(v) = 27458312
+    2×Σ T×T over edges = 2×5422383560
+    CHECK: Σ(T(a)+T(b)) = 28767962, Σ deg×T = 28767962, MATCH ✓
+
+  KEY RATIOS:
+    Σ_merged T / E = 24.2018
+    (Σ_merged T)^2 / (mid × E) = 7562.3217
+    E × avg_T^2 / Σ T×T = 0.8202
+
+  n=8 done (177.5s)
+
+================================================================================
+  CROSS-n TILING ALGEBRA SEQUENCES
+================================================================================
+
+  FUNDAMENTAL IDENTITY: Σ_all Tilings = 2^C(n-1,2)
+    n=3: 2^1 = 2
+    n=4: 2^3 = 8
+    n=5: 2^6 = 64
+    n=6: 2^10 = 1024
+    n=7: 2^15 = 32768
+    n=8: 2^21 = 2097152
+
+  THE TILING SUM AS EDGE FORMULA PROXY:
+  If E ∝ (Σ_merged T)^α for some α, what is α?
+
+================================================================================
+  DONE
+================================================================================
