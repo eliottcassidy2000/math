@@ -1,0 +1,22 @@
+================================================================================
+  COMPUTING |E(G_7)| EFFICIENTLY
+  opus-2026-03-22-S212
+================================================================================
+  n=7, m=21, |tournaments|=2097152
+
+  PHASE 1: Computing fingerprints for all 2097152 tournaments...
+    50000/2097152 (1377/s, ETA 1487s, 386 groups so far)
+    100000/2097152 (1343/s, ETA 1487s, 387 groups so far)
+    150000/2097152 (1339/s, ETA 1454s, 387 groups so far)
+    200000/2097152 (1330/s, ETA 1426s, 387 groups so far)
+    250000/2097152 (1323/s, ETA 1396s, 387 groups so far)
+    300000/2097152 (1330/s, ETA 1351s, 387 groups so far)
+    350000/2097152 (1329/s, ETA 1314s, 387 groups so far)
+    400000/2097152 (1333/s, ETA 1273s, 387 groups so far)
+    450000/2097152 (1324/s, ETA 1244s, 387 groups so far)
+    500000/2097152 (1324/s, ETA 1206s, 387 groups so far)
+    550000/2097152 (1326/s, ETA 1167s, 387 groups so far)
+    600000/2097152 (1322/s, ETA 1133s, 387 groups so far)
+    650000/2097152 (1318/s, ETA 1098s, 387 groups so far)
+    700000/2097152 (1314/s, ETA 1063s, 387 groups so far)
+    750000/2097152 (1311/s, ETA 1027s, 387 groups so far)
