@@ -1,0 +1,208 @@
+================================================================================
+  BBK TRIANGLE IMPOSSIBILITY + BKK STRUCTURE ANALYSIS
+  kind-pasteur-2026-03-23-S20cr
+================================================================================
+
+================================================================================
+  THEOREM: BBK = 0 (two blue + one black triangle IMPOSSIBLE)
+================================================================================
+
+  PROOF by type contradiction:
+
+  In G_n/Z_2, every edge is either BLUE (same SC-type) or BLACK (different SC-type).
+
+  Consider a triangle (A, B, C) with edges AB, BC, AC.
+  Suppose AB = blue and BC = blue.
+  Then: type(A) = type(B) and type(B) = type(C)
+  => type(A) = type(C) [transitivity of equality]
+  => AC must be BLUE (same type)
+
+  Therefore it is impossible for AB=blue, BC=blue, AC=black.
+
+  Equivalently: BBK = 0 for ALL n.
+
+  This is an EXACT theorem, not a conjecture. It follows purely from
+  the definition of blue/black edge coloring by SC-type.
+
+  COROLLARY: Triangle decomposition simplifies to:
+    #tri(C) = #tri(BBB) + #tri(BKK)
+
+  since KKK = 0 (black bipartite, THM-A) and BBK = 0 (this theorem).
+
+
+================================================================================
+  BKK TRIANGLE STRUCTURE
+================================================================================
+
+  BKK triangles have edges: AB=blue, BC=black, AC=black.
+  This means: type(A)=type(C) [from AB=blue... wait, no]
+
+  Actually:
+    Edges AB=black, BC=black, AC=blue.
+    AB black => type(A)!=type(B)
+    BC black => type(B)!=type(C)
+    AC blue => type(A)=type(C)
+
+  So B has different type from A and C, while A,C have same type.
+
+  If A,C are SC: B is NS. Triangle = SC-NS-SC with blue edge between two SC nodes.
+  If A,C are NS: B is SC. Triangle = NS-SC-NS with blue edge between two NS nodes.
+
+  Both are structurally possible. Let's count which types appear.
+
+  Built n=3: V=2, E=1 [0.0s]
+
+  n=3: BKK=0
+    SC-NS-SC (NS is bridge): 0
+    NS-SC-NS (SC is bridge): 0
+  Built n=4: V=3, E=3 [0.0s]
+
+  n=4: BKK=1
+    SC-NS-SC (NS is bridge): 1
+    NS-SC-NS (SC is bridge): 0
+    Details:
+      Blue edge: (0, 2), Center: 1, H: (1, 3, 5), Types: ['SC', 'NS', 'SC']
+  Built n=5: V=10, E=21 [0.3s]
+
+  n=5: BKK=9
+    SC-NS-SC (NS is bridge): 7
+    NS-SC-NS (SC is bridge): 2
+    Details:
+      Blue edge: (1, 2), Center: 0, H: (3, 1, 5), Types: ['NS', 'SC', 'NS']
+      Blue edge: (0, 3), Center: 2, H: (1, 5, 3), Types: ['SC', 'NS', 'SC']
+      Blue edge: (0, 4), Center: 2, H: (1, 5, 9), Types: ['SC', 'NS', 'SC']
+      Blue edge: (1, 2), Center: 9, H: (3, 9, 5), Types: ['NS', 'SC', 'NS']
+      Blue edge: (4, 7), Center: 2, H: (9, 5, 11), Types: ['SC', 'NS', 'SC']
+      Blue edge: (4, 9), Center: 2, H: (9, 5, 9), Types: ['SC', 'NS', 'SC']
+      Blue edge: (6, 7), Center: 2, H: (13, 5, 11), Types: ['SC', 'NS', 'SC']
+      Blue edge: (6, 9), Center: 2, H: (13, 5, 9), Types: ['SC', 'NS', 'SC']
+      Blue edge: (7, 9), Center: 2, H: (11, 5, 9), Types: ['SC', 'NS', 'SC']
+  Built n=6: V=34, E=143 [22.0s]
+
+  n=6: BKK=52
+    SC-NS-SC (NS is bridge): 13
+    NS-SC-NS (SC is bridge): 39
+
+
+================================================================================
+  WALK ORTHOGONALITY ANALYSIS
+================================================================================
+
+  OBSERVATION: tr(A_B * A_K) = 0 at all tested n.
+
+  This equals sum_{v,w} A_B[v,w] * A_K[v,w] since both matrices are symmetric.
+  Since every edge is either blue or black (not both), A_B[v,w]*A_K[v,w]=0
+  for all (v,w). Therefore tr(A_B * A_K) = 0 TRIVIALLY.
+
+  More interesting: ALL odd-blue-count walk terms vanish at k=3.
+  tr(BBK) = tr(BKB) = tr(KBB) = 0.
+
+  This is equivalent to BBK triangles = 0 (for the diagonal terms)
+  PLUS the statement that there are no length-3 closed walks using
+  exactly 2 blue + 1 black edge in any order.
+
+  tr(BBK) = sum_v (A_B^2 * A_K)[v,v] = sum_v sum_w A_B^2[v,w]*A_K[w,v]
+  = sum_v sum_w (#blue 2-walks v->w) * (black edge w->v)
+
+  This counts: how many ways can you go from v via 2 blue edges to w,
+  then return via 1 black edge? If this is 0, it means:
+  for every v with a black neighbor w, there is NO blue 2-walk from v to w.
+
+  This follows from type analysis:
+    v has a black edge to w => type(v) != type(w)
+    A blue 2-walk v->u->w requires type(v)=type(u) and type(u)=type(w)
+    => type(v)=type(w), contradiction.
+
+  Therefore tr(BBK) = 0 for ALL n, and similarly tr(BKB) = tr(KBB) = 0.
+
+  GENERAL THEOREM: For any walk of length k, if the walk uses an ODD
+  number of black edges, then the diagonal contribution (closed walk
+  starting and ending at the same vertex) is... NOT necessarily zero.
+
+  Let's check k=4: BBKK, BKBK, BKKB, KBBK, KBKB, KKBB
+  These all use 2 blue + 2 black. Even number of each. Should be nonzero.
+
+  What about BBBK (3 blue, 1 black)?
+
+  Built n=4: V=3, E=3 [0.0s]
+
+  n=4: k=4 walk decomposition by #blue edges:
+    0 blue, 4 black: 8
+    1 blue, 3 black: 0
+    2 blue, 2 black: 8
+    3 blue, 1 black: 0
+    4 blue, 0 black: 2
+    Total: 18, actual: 18, match: YES
+    Odd-blue-count terms: 0 (ZERO!)
+  Built n=5: V=10, E=21 [0.2s]
+
+  n=5: k=4 walk decomposition by #blue edges:
+    0 blue, 4 black: 96
+    1 blue, 3 black: 0
+    2 blue, 2 black: 296
+    3 blue, 1 black: 0
+    4 blue, 0 black: 174
+    Total: 566, actual: 566, match: YES
+    Odd-blue-count terms: 0 (ZERO!)
+  Built n=6: V=34, E=143 [25.0s]
+
+  n=6: k=4 walk decomposition by #blue edges:
+    0 blue, 4 black: 642
+    1 blue, 3 black: 0
+    2 blue, 2 black: 5000
+    3 blue, 1 black: 0
+    4 blue, 0 black: 6508
+    Total: 12150, actual: 12150, match: YES
+    Odd-blue-count terms: 0 (ZERO!)
+
+
+================================================================================
+  MASTER THEOREM: ODD-BLUE WALK VANISHING
+================================================================================
+
+  CONJECTURE (verified n=3..6, k=2,3,4):
+
+  For closed walks of ANY length k in G_n/Z_2, the contribution from
+  walks with an ODD number of blue edges is ZERO.
+
+  Equivalently: sum over all words w in {B,K}^k with odd #B of
+  tr(product of A_B and A_K in order w) = 0.
+
+  PROOF SKETCH:
+  Each vertex v has a type t(v) in {SC, NS}. A blue edge preserves type
+  (t(u)=t(v)) and a black edge flips type (t(u)!=t(v)).
+
+  A closed walk v -> w1 -> w2 -> ... -> wk -> v must return to the same
+  type as the starting vertex. Each blue edge preserves type (contributes
+  +0 to the type change count) and each black edge flips type (contributes
+  +1). For the walk to be closed, the total number of type flips must be EVEN.
+
+  But the number of type flips = number of black edges in the walk.
+  So closed walks must use an EVEN number of black edges.
+
+  Equivalently, closed walks use an EVEN number of blue edges (since k - #black = #blue,
+  and k and #black have the same parity).
+
+  Wait — that's not quite right. k - even = even iff k is even.
+  For odd k: #black even => #blue = k - #black is odd.
+  For even k: #black even => #blue = k - #black is even.
+
+  So for ODD k, closed walks have ODD #blue (not zero contribution).
+  For EVEN k, closed walks have EVEN #blue.
+
+  At k=3 (odd): #black must be even (0 or 2), so #blue must be odd (3 or 1).
+  BBB is fine (#blue=3, odd). BKK has #blue=1 (odd), also fine.
+  BBK has #blue=2 (even) — but #black=1 (odd) => NOT a valid closed walk.
+
+  This means tr(BBK) = 0 because no closed walk of length 3 can have
+  exactly 1 black edge (which would be odd, violating the type constraint).
+
+  GENERAL STATEMENT:
+  tr(product of A_B^{b_i} and A_K^{k_i}) = 0 whenever the total number
+  of K factors is ODD.
+
+  This is because closed walks must use an even number of type-flipping (black) edges.
+
+
+  DONE.
+================================================================================

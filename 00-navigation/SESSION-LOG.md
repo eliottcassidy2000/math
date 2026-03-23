@@ -13,6 +13,41 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-23-S20cr — 2026-03-23
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-23-S20cq (three_view engine), opus-S218-S225 (pulled findings)
+**Summary of work:** Deep three-view analysis of G_n/Z_2, extending S20cq with new analyses pulled from opus S218-S225. Proved 3 theorems, made 4 structural discoveries.
+**Key discoveries:**
+1. **THM-A: Black Bipartiteness PROVED** — black subgraph is bipartite (SC vs NS partition). Triangle-free, even girth, 2-colorable.
+2. **THM-B: BBK Triangle Impossibility PROVED** — no triangle has 2 blue + 1 black edges. Proof: blue is transitive on type (type(A)=type(B) and type(B)=type(C) => type(A)=type(C) => edge AC must be blue).
+3. **THM-C: Odd-Black Walk Vanishing PROVED** — closed walks with odd #black edges contribute 0. Proof: returning to start requires even #type-flips.
+4. **Rugged H-landscape** — path to Paley (H=189) at n=7 requires downhill step H=93->85 at node 101. Greedy climber traps at H=123 (dead-end leaf).
+5. **Triangle decomposition**: #tri(C) = #tri(BBB) + #tri(BKK). Sequences BBB: 0,0,3,87; BKK: 0,1,9,52.
+6. **SC blue spine NOT always tree**: genus 5 at n=5, genus 2 at n=6 (was tree at n=3,4)
+7. **50.6% of n=7 tree edges downhill**: more parent->child edges decrease H than increase it
+8. **All BKK triangles are SC-NS-SC or NS-SC-NS bridges**: center vertex has opposite type from the blue-connected pair
+9. **First blue neighbor Delta_H = 2^(n-2) CONFIRMED at n=7** (H=33 = 1 + 32)
+10. **Spectral radius ratio rho(C)/(rho(B)+rho(K)) stabilizes near 0.8**: 1.000, 0.828, 0.788, 0.802
+
+**New contributions:**
+- 04-computation/three_view_deep_s20cr.py (deep analysis n=3..6 with 8 new analyses)
+- 04-computation/bbk_investigation_s20cr.py (BBK impossibility proof + walk orthogonality)
+- 04-computation/n7_path_analysis_s20cr.py (n=7 principal path from cached BFS tree)
+- 05-knowledge/results/three_view_deep_s20cr.out
+- 05-knowledge/results/bbk_investigation_s20cr.out
+- 05-knowledge/results/n7_path_analysis_s20cr.out
+
+**Unresolved threads:**
+- Extend three-view to n=7,8 (needs gentourng or long enumeration)
+- BKK triangle formula — is there a closed form for BKK count?
+- Does the SC blue spine genus oscillate? Sequence: 0,0,5,2,? (at n=7 with 87 edges in spine of 88 nodes)
+- Energy ratio E(C)/(E(B)+E(K)) is DECREASING: 1.000, 0.828, 0.767, 0.723 — limiting value?
+- Does the rugged landscape pattern persist? At n=8 is the path to max-H also non-monotone?
+- Walk cross-terms: can we get closed forms for the mixed walk counts?
+
+---
+
 ## kind-pasteur-2026-03-23-S20cp — 2026-03-23
 
 **Account:** kind-pasteur

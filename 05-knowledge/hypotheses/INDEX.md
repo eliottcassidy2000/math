@@ -52,6 +52,12 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-402 | RSK shape (4,3,2,1) = delta_4 appears only at H >= 9 | 0% at H=1,3,5; 1.7% at H=9; 10% at H=11; 6.7% at H=13; 9.4% at H=15 | opus-S164 |
 | HYP-403 | Vandermonde(scores) = 0 for all non-transitive tournaments at n=5 | Only H=1 (transitive) has Vdm=288; all others have score collision | opus-S164 |
 | HYP-404 | Arc sensitivity universal over all tournaments | S_n 2-transitivity proof. Broken by base path in tiling model. | opus-S164 |
+| HYP-405 | Black subgraph of G_n/Z_2 is bipartite (SC vs NS partition) | PROVED: black edges only cross SC/NS boundary by definition. Exhaustive n=3..6. Implies triangle-free, even girth, chi<=2. | kind-pasteur-S20cr |
+| HYP-406 | BBK triangles impossible in G_n/Z_2 | PROVED: blue transitivity on type. If A~B blue and B~C blue then type(A)=type(C), so A~C blue not black. n=3..6 exhaustive. | kind-pasteur-S20cr |
+| HYP-407 | Odd-black walk vanishing: closed walks with odd #black edges contribute 0 | PROVED: each black edge flips SC/NS type; returning to start requires even #flips. Verified k=2,3,4 at n=3..6. | kind-pasteur-S20cr |
+| HYP-408 | Triangle decomposition: #tri(C) = #tri(BBB) + #tri(BKK) exactly | CONFIRMED: follows from HYP-405 (KKK=0) + HYP-406 (BBK=0). Sequences BBB: 0,0,3,87; BKK: 0,1,9,52. | kind-pasteur-S20cr |
+| HYP-409 | Path from transitive to Paley is non-monotone in H at n=7 | CONFIRMED: requires downhill step H=93->85 at node 101->102. Greedy path traps at H=123 (dead-end leaf). | kind-pasteur-S20cr |
+| HYP-410 | SC blue spine genus sequence: 0, 0, 5, 2 for n=3..6 | CONFIRMED: tree at n=3,4; genus 5 at n=5; genus 2 at n=6. NOT always a tree (corrects earlier claim). | kind-pasteur-S20cr |
 | HYP-349 | rank(d_4) gap = ker(d_3) - rank(d_4) is always 0 or 1 | Exhaustive n=6 (32448 gap=0, 320 gap=1). Sampled n=7 (925/75), n=8 (255/45). Equivalent to beta_3 in {0,1} | kind-pasteur-S46 |
 | HYP-350 | Good vertex existence for beta_3: exists v with beta_3(T\v)=0 when beta_3(T)>0 | TRUE when beta_3>0. But FAILS unconditionally: Paley T_7 has beta_3=0 with NO good vertex (240 counterexamples at n=7). Good vertex holds for non-Paley n=7 (exhaustive) | kind-pasteur-S46, corrected opus-S53 |
 | HYP-351 | dim H_3(T,T\v) <= 1 for ALL tournaments T and ALL vertices v | **REFUTED at n=8** (HYP-401): dim=2 for all-good beta_3=2 tournaments. Exhaustive n=6: ALL 1920 pairs dim=1. n=7: dim in {0,1}. FAILS n>=8 | kind-pasteur-S46, REFUTED kind-pasteur-S49 |

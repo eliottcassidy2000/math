@@ -1,0 +1,364 @@
+================================================================================
+  THREE-VIEW INVARIANT ENGINE FOR G_n/Z_2
+  Blue | Black | Combined — always all three
+  kind-pasteur-2026-03-23-S20cq
+================================================================================
+
+################################################################################
+  n = 3
+################################################################################
+  G_3/Z_2: V=2 E=1 (blue=1 black=0 mixed=0) [0.0s]
+
+  --- Blue view ---
+  E=1  deg=[1,1]  avg_deg=1.00
+  components=1  sizes=[2]
+  rho=1.0000  energy=2.0000  lam2=2.0000
+  triangles=0  omega=2  alpha=1
+  diameter=1  wiener=1  avg_dist=1.0000
+  clustering=0.0000  Forman_avg=2.000  Forman_total=2
+  I(2)=5  I(x)=[1, 2]
+  spanning_trees=1
+  Kirchhoff=1.0000
+
+  --- Black view ---
+  E=0  deg=[0,0]  avg_deg=0.00
+  components=2  sizes=[1, 1]
+  rho=0.0000  energy=0.0000  lam2=0.0000
+  triangles=0  omega=1  alpha=2
+  diameter=0  wiener=0  avg_dist=0.0000
+  clustering=0.0000  Forman_avg=0.000  Forman_total=0
+  I(2)=9  I(x)=[1, 2, 1]
+
+  --- Combined view ---
+  E=1  deg=[1,1]  avg_deg=1.00
+  components=1  sizes=[2]
+  rho=1.0000  energy=2.0000  lam2=2.0000
+  triangles=0  omega=2  alpha=1
+  diameter=1  wiener=1  avg_dist=1.0000
+  clustering=0.0000  Forman_avg=2.000  Forman_total=2
+  I(2)=5  I(x)=[1, 2]
+  spanning_trees=1
+  Kirchhoff=1.0000
+
+  FORMULA DISCOVERY (n=3):
+  Invariant                       Blue      Black   Combined |        B+K        B*K |        Relation
+  -----------------------------------------------------------------------------------------------
+  E (edges)                          1          0          1 |          1            |         C = B+K
+  deg_sum                            2          0          2 |          2            |         C = B+K
+  deg_max                            1          0          1 |          1            |         C = B+K
+  deg_avg                       1.0000     0.0000     1.0000 |     1.0000     0.0000 |         C = B+K
+  triangles                          0          0          0 |          0            |         C = B+K
+  spectral_radius               1.0000     0.0000     1.0000 |     1.0000     0.0000 |         C = B+K
+  graph_energy                  2.0000     0.0000     2.0000 |     2.0000     0.0000 |         C = B+K
+  alg_connectivity              2.0000     0.0000     2.0000 |     2.0000     0.0000 |         C = B+K
+  omega (clique)                     2          1          2 |          3            |         C = B*K
+  alpha (indep)                      1          2          1 |          3            |                
+  num_components                     1          2          1 |          3            |                
+  diameter                           1          0          1 |          1            |         C = B+K
+  wiener                             1          0          1 |          1            |         C = B+K
+  avg_clustering                     0          0          0 |          0            |         C = B+K
+  forman_total                       2          0          2 |          2            |                
+
+################################################################################
+  n = 4
+################################################################################
+  G_4/Z_2: V=3 E=3 (blue=1 black=2 mixed=0) [0.0s]
+
+  --- Blue view ---
+  E=1  deg=[0,1]  avg_deg=0.67
+  components=2  sizes=[2, 1]
+  rho=1.0000  energy=2.0000  lam2=0.0000
+  triangles=0  omega=2  alpha=2
+  diameter=1  wiener=1  avg_dist=1.0000
+  clustering=0.0000  Forman_avg=2.000  Forman_total=2
+  I(2)=15  I(x)=[1, 3, 2]
+  Kirchhoff=1.5000
+
+  --- Black view ---
+  E=2  deg=[1,2]  avg_deg=1.33
+  components=1  sizes=[3]
+  rho=1.4142  energy=2.8284  lam2=1.0000
+  triangles=0  omega=2  alpha=2
+  diameter=2  wiener=4  avg_dist=1.3333
+  clustering=0.0000  Forman_avg=1.000  Forman_total=2
+  I(2)=11  I(x)=[1, 3, 1]
+  spanning_trees=1
+  Kirchhoff=4.0000
+
+  --- Combined view ---
+  E=3  deg=[2,2]  avg_deg=2.00
+  components=1  sizes=[3]
+  rho=2.0000  energy=4.0000  lam2=3.0000
+  triangles=1  omega=3  alpha=1
+  diameter=1  wiener=3  avg_dist=1.0000
+  clustering=1.0000  Forman_avg=3.000  Forman_total=9
+  I(2)=7  I(x)=[1, 3]
+  spanning_trees=3
+  Kirchhoff=2.0000
+
+  FORMULA DISCOVERY (n=4):
+  Invariant                       Blue      Black   Combined |        B+K        B*K |        Relation
+  -----------------------------------------------------------------------------------------------
+  E (edges)                          1          2          3 |          3            |         C = B+K
+  deg_sum                            2          4          6 |          6            |         C = B+K
+  deg_max                            1          2          2 |          3            |         C = B*K
+  deg_avg                       0.6667     1.3333     2.0000 |     2.0000     0.8889 |         C = B+K
+  triangles                          0          0          1 |          0            |                
+  spectral_radius               1.0000     1.4142     2.0000 |     2.4142     1.4142 |  C ~ 0.83*(B+K)
+  graph_energy                  2.0000     2.8284     4.0000 |     4.8284     5.6569 |  C ~ 0.83*(B+K)
+  alg_connectivity              0.0000     1.0000     3.0000 |     1.0000     0.0000 |  C ~ 3.00*(B+K)
+  omega (clique)                     2          2          3 |          4            |                
+  alpha (indep)                      2          2          1 |          4            |                
+  num_components                     2          1          1 |          3            |                
+  diameter                           1          2          1 |          3            |                
+  wiener                             1          4          3 |          5            |                
+  avg_clustering                0.0000     0.0000     1.0000 |     0.0000     0.0000 |                
+  forman_total                       2          2          9 |          4            |                
+
+################################################################################
+  n = 5
+################################################################################
+  G_5/Z_2: V=10 E=21 (blue=13 black=8 mixed=0) [0.3s]
+
+  --- Blue view ---
+  E=13  deg=[1,4]  avg_deg=2.60
+  components=2  sizes=[8, 2]
+  rho=3.2786  energy=13.3183  lam2=-0.0000
+  triangles=3  omega=3  alpha=5
+  diameter=3  wiener=50  avg_dist=1.7241
+  clustering=0.3333  Forman_avg=-0.077  Forman_total=-1
+  I(2)=805  I(x)=[1, 10, 32, 40, 17, 2]
+  Kirchhoff=35.1626
+
+  --- Black view ---
+  E=8  deg=[0,6]  avg_deg=1.60
+  components=3  sizes=[8, 1, 1]
+  rho=2.6131  energy=7.3910  lam2=0.0000
+  triangles=0  omega=2  alpha=8
+  diameter=3  wiener=52  avg_dist=1.8571
+  clustering=0.0000  Forman_avg=-2.500  Forman_total=-20
+  I(2)=8073  I(x)=[1, 10, 37, 74, 91, 71, 34, 9, 1]
+  Kirchhoff=53.7500
+
+  --- Combined view ---
+  E=21  deg=[2,7]  avg_deg=4.20
+  components=1  sizes=[10]
+  rho=4.6405  energy=15.8821  lam2=1.4298
+  triangles=12  omega=4  alpha=4
+  diameter=3  wiener=73  avg_dist=1.6222
+  clustering=0.4929  Forman_avg=-0.190  Forman_total=-4
+  I(2)=301  I(x)=[1, 10, 24, 17, 3]
+  spanning_trees=32159
+  Kirchhoff=25.8183
+
+  FORMULA DISCOVERY (n=5):
+  Invariant                       Blue      Black   Combined |        B+K        B*K |        Relation
+  -----------------------------------------------------------------------------------------------
+  E (edges)                         13          8         21 |         21            |         C = B+K
+  deg_sum                           26         16         42 |         42            |         C = B+K
+  deg_max                            4          6          7 |         10            |                
+  deg_avg                       2.6000     1.6000     4.2000 |     4.2000     4.1600 |         C = B+K
+  triangles                          3          0         12 |          3            |     C = 4*(B+K)
+  spectral_radius               3.2786     2.6131     4.6405 |     5.8917     8.5673 |  C ~ 0.79*(B+K)
+  graph_energy                 13.3183     7.3910    15.8821 |    20.7093    98.4357 |  C ~ 0.77*(B+K)
+  alg_connectivity             -0.0000     0.0000     1.4298 |    -0.0000    -0.0000 |                
+  omega (clique)                     3          2          4 |          5            |                
+  alpha (indep)                      5          8          4 |         13            |                
+  num_components                     2          3          1 |          5            |                
+  diameter                           3          3          3 |          6            |                
+  wiener                            50         52         73 |        102            |                
+  avg_clustering                0.3333     0.0000     0.4929 |     0.3333     0.0000 |  C ~ 1.48*(B+K)
+  forman_total                      -1        -20         -4 |        -21            |                
+
+################################################################################
+  n = 6
+################################################################################
+  G_6/Z_2: V=34 E=143 (blue=98 black=45 mixed=0) [24.8s]
+
+  --- Blue view ---
+  E=98  deg=[1,11]  avg_deg=5.76
+  components=2  sizes=[22, 12]
+  rho=8.5076  energy=59.4856  lam2=0.0000
+  triangles=87  omega=4  alpha=4
+  diameter=7  wiener=608  avg_dist=2.0471
+  clustering=0.2891  Forman_avg=-3.276  Forman_total=-321
+  I(2)=1689081  I(x)=[1, 34, 463, 3411, 15292, 44225]
+  Kirchhoff=589.8811
+
+  --- Black view ---
+  E=45  deg=[0,6]  avg_deg=2.65
+  components=5  sizes=[30, 1, 1, 1, 1]
+  rho=3.6855  energy=41.7964  lam2=-0.0000
+  triangles=0  omega=2  alpha=4
+  diameter=8  wiener=1380  avg_dist=3.1724
+  clustering=0.0000  Forman_avg=-3.244  Forman_total=-146
+  I(2)=4398117  I(x)=[1, 34, 516, 4662, 28218, 122100]
+  Kirchhoff=668.0059
+
+  --- Combined view ---
+  E=143  deg=[2,13]  avg_deg=8.41
+  components=1  sizes=[34]
+  rho=9.7796  energy=73.2087  lam2=1.4662
+  triangles=139  omega=4  alpha=4
+  diameter=4  wiener=1138  avg_dist=2.0285
+  clustering=0.3307  Forman_avg=-6.455  Forman_total=-923
+  I(2)=657013  I(x)=[1, 34, 418, 2499, 8211, 15747]
+  Kirchhoff=186.4372
+
+  FORMULA DISCOVERY (n=6):
+  Invariant                       Blue      Black   Combined |        B+K        B*K |        Relation
+  -----------------------------------------------------------------------------------------------
+  E (edges)                         98         45        143 |        143            |         C = B+K
+  deg_sum                          196         90        286 |        286            |         C = B+K
+  deg_max                           11          6         13 |         17            |                
+  deg_avg                       5.7647     2.6471     8.4118 |     8.4118    15.2595 |         C = B+K
+  triangles                         87          0        139 |         87            |                
+  spectral_radius               8.5076     3.6855     9.7796 |    12.1931    31.3550 |  C ~ 0.80*(B+K)
+  graph_energy                 59.4856    41.7964    73.2087 |   101.2819  2486.2812 |  C ~ 0.72*(B+K)
+  alg_connectivity              0.0000    -0.0000     1.4662 |    -0.0000    -0.0000 |                
+  omega (clique)                     4          2          4 |          6            |                
+  alpha (indep)                      4          4          4 |          8            |                
+  num_components                     2          5          1 |          7            |                
+  diameter                           7          8          4 |         15            |                
+  wiener                           608       1380       1138 |       1988            |                
+  avg_clustering                0.2891     0.0000     0.3307 |     0.2891     0.0000 |  C ~ 1.14*(B+K)
+  forman_total                    -321       -146       -923 |       -467            |                
+
+
+================================================================================
+  MASTER THREE-VIEW SEQUENCE TABLE
+================================================================================
+
+  E:
+          Blue: 1, 1, 13, 98
+         Black: 0, 2, 8, 45
+      Combined: 1, 3, 21, 143
+
+  triangles:
+          Blue: 0, 0, 3, 87
+         Black: 0, 0, 0, 0
+      Combined: 0, 1, 12, 139
+
+  omega:
+          Blue: 2, 2, 3, 4
+         Black: 1, 2, 2, 2
+      Combined: 2, 3, 4, 4
+
+  alpha:
+          Blue: 1, 2, 5, 4
+         Black: 2, 2, 8, 4
+      Combined: 1, 1, 4, 4
+
+  diameter:
+          Blue: 1, 1, 3, 7
+         Black: 0, 2, 3, 8
+      Combined: 1, 1, 3, 4
+
+  num_components:
+          Blue: 1, 2, 2, 2
+         Black: 2, 1, 3, 5
+      Combined: 1, 1, 1, 1
+
+  spectral_radius:
+          Blue: 1.000, 1.000, 3.279, 8.508
+         Black: 0.000, 1.414, 2.613, 3.686
+      Combined: 1.000, 2.000, 4.641, 9.780
+
+  graph_energy:
+          Blue: 2.000, 2.000, 13.318, 59.486
+         Black: 0.000, 2.828, 7.391, 41.796
+      Combined: 2.000, 4.000, 15.882, 73.209
+
+  alg_connectivity:
+          Blue: 2.000, 0.000, -0.000, 0.000
+         Black: 0.000, 1.000, 0.000, -0.000
+      Combined: 2.000, 3.000, 1.430, 1.466
+
+  wiener:
+          Blue: 1, 1, 50, 608
+         Black: 0, 4, 52, 1380
+      Combined: 1, 3, 73, 1138
+
+  forman_total:
+          Blue: 2, 2, -1, -321
+         Black: 0, 2, -20, -146
+      Combined: 2, 9, -4, -923
+
+  avg_clustering:
+          Blue: 0, 0, 0.333, 0.289
+         Black: 0, 0.000, 0.000, 0.000
+      Combined: 0, 1.000, 0.493, 0.331
+
+  I(2) (meta-H):
+          Blue: 5, 15, 805, 1689081
+         Black: 9, 11, 8073, 4398117
+      Combined: 5, 7, 301, 657013
+
+  Closed walks w(k) for k=0..6:
+          Blue n=3: [2, 0, 2, 0, 2, 0, 2]
+          Blue n=4: [3, 0, 2, 0, 2, 0, 2]
+          Blue n=5: [10, 0, 26, 18, 174, 270, 1556]
+          Blue n=6: [34, 0, 196, 522, 6508, 43110, 397816]
+         Black n=3: [2, 0, 0, 0, 0, 0, 0]
+         Black n=4: [3, 0, 4, 0, 8, 0, 16]
+         Black n=5: [10, 0, 16, 0, 96, 0, 640]
+         Black n=6: [34, 0, 90, 0, 642, 0, 6468]
+      Combined n=3: [2, 0, 2, 0, 2, 0, 2]
+      Combined n=4: [3, 0, 6, 6, 18, 30, 66]
+      Combined n=5: [10, 0, 42, 72, 566, 1940, 10674]
+      Combined n=6: [34, 0, 286, 834, 12150, 88150, 941692]
+
+
+================================================================================
+  UNIVERSAL CROSS-VIEW RELATIONSHIPS
+================================================================================
+
+  Testing: C = B + K ? (edge additivity)
+    n=3: B=1, K=0, C=1 -> C=B+K? YES
+    n=4: B=1, K=2, C=3 -> C=B+K? YES
+    n=5: B=13, K=8, C=21 -> C=B+K? YES
+    n=6: B=98, K=45, C=143 -> C=B+K? YES
+
+  Testing: C = B + K ? (triangle additivity)
+    n=3: B=0, K=0, C=0, mixed_tri=0
+    n=4: B=0, K=0, C=1, mixed_tri=1
+    n=5: B=3, K=0, C=12, mixed_tri=9
+    n=6: B=87, K=0, C=139, mixed_tri=52
+
+  Testing: deg_combined = deg_blue + deg_black ? (vertex by vertex)
+    n=3: deg_C = deg_B + deg_K for ALL vertices? True
+    n=4: deg_C = deg_B + deg_K for ALL vertices? True
+    n=5: deg_C = deg_B + deg_K for ALL vertices? True
+    n=6: deg_C = deg_B + deg_K for ALL vertices? True
+
+  Testing: A_combined = A_blue + A_black ? (matrix additivity)
+    n=3: A_C = A_B + A_K? True
+    n=4: A_C = A_B + A_K? True
+    n=5: A_C = A_B + A_K? True
+    n=6: A_C = A_B + A_K? True
+
+  Spectral decomposition: spec(C) vs spec(B) + spec(K)?
+    n=3: tr: B=0.0 K=0.0 C=0.0 (all ~0)
+           energy: B=2.00 K=0.00 C=2.00 B+K=2.00 SUB-additive
+    n=4: tr: B=0.0 K=0.0 C=-0.0 (all ~0)
+           energy: B=2.00 K=2.83 C=4.00 B+K=4.83 SUPER-additive
+    n=5: tr: B=-0.0 K=-0.0 C=0.0 (all ~0)
+           energy: B=13.32 K=7.39 C=15.88 B+K=20.71 SUPER-additive
+    n=6: tr: B=0.0 K=-0.0 C=-0.0 (all ~0)
+           energy: B=59.49 K=41.80 C=73.21 B+K=101.28 SUPER-additive
+
+  Blue/Black edge ratio:
+    n=3: B/K = 1/0 = inf
+    n=4: B/K = 1/2 = 0.500
+    n=5: B/K = 13/8 = 1.625
+    n=6: B/K = 98/45 = 2.178
+
+  Kirchhoff index relationship:
+    n=3: B=1.0  K=?  C=1.0
+    n=4: B=1.5  K=4.0  C=2.0
+    n=5: B=35.16255605381167  K=53.75000000000001  C=25.818277931527724
+    n=6: B=589.8811262417112  K=668.0059153947398  C=186.43716268270504
+
+
+  DONE.
+================================================================================
