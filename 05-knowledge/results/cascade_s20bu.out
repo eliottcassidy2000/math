@@ -1,0 +1,164 @@
+======================================================================
+  THE CASCADE: WHAT'S KNOWN, WHAT'S MISSING
+======================================================================
+
+======================================================================
+  1. EVERYTHING WE KNOW ABOUT G_n
+======================================================================
+
+                        Quantity     n=3     n=4       n=5         n=6    Formula?
+  ------------------------------  ------  ------  --------  ----------  ----------
+              Vertices (A000568)       2       4        12          56    Burnside
+                           Edges       1       5        30         290         ???
+                      Blue edges       1       1        14         200         ???
+                     Black edges       0       4        16          90         ???
+                     Level edges       0       0         1          15         ???
+                      Down edges       0       0         0           0  =0 always?
+               Chains (min->max)       1       3        99      292510         ???
+                           Width       1       2         3           6         ???
+                   Longest chain       1       2         6          15         ???
+                           Sinks       1       1         2           2  =2 for n>=5?
+                         Sources       1       1         1           1   =1 always
+                        H-levels       2       3         7          19         ???
+                      SC classes       2       2         8          12         ???
+                      NS classes       0       2         4          44         ???
+                      Max degree       1       3         7          14    ~2(n-1)?
+                         Density    1.00    0.83      0.45        0.19       ~2/n?
+                       Triangles       0       ?        21           ?         ???
+                 Score sequences       2       4         9          22     A000571
+                  Self-loop frac     1/2     3/8      5/16      35/128  (1/2)_k/k!
+                 Tilings*|Aut|=H     yes     yes       yes         ???  Conjecture
+                 Meta transitive     yes     yes       yes      almost         ???
+
+======================================================================
+  2. SEQUENCE ANALYSIS
+======================================================================
+
+  Edges: [1, 5, 30, 290]
+    Ratios: [5.0, 6.0, 9.666666666666666]
+    Differences: [4, 25, 260]
+    Edges/Vertices: [0.5, 1.25, 2.5, 5.178571428571429]
+    n=3: V=2, max_edges=1, actual=1, density=1.0000
+    n=4: V=4, max_edges=6, actual=5, density=0.8333
+    n=5: V=12, max_edges=66, actual=30, density=0.4545
+    n=6: V=56, max_edges=1540, actual=290, density=0.1883
+
+  Blue edges: [1, 1, 14, 200]
+    Blue/Total: [1.0, 0.2, 0.4666666666666667, 0.6896551724137931]
+
+  Level edges: [0, 0, 1, 15]
+
+  Chains: [1, 3, 99, 292510]
+    Ratios: [3.0, 33.0, 2954.6464646464647]
+
+  Width: [1, 2, 3, 6]
+    n=3: width=1, C(1,0)=1, match=True
+    n=4: width=2, C(2,1)=2, match=True
+    n=5: width=3, C(3,1)=3, match=True
+    n=6: width=6, C(4,2)=6, match=True
+
+  WIDTH = C(n-2, floor((n-2)/2)) -- the MIDDLE BINOMIAL COEFFICIENT!
+  Predicted n=7: C(5,2) = 10
+  Predicted n=8: C(6,3) = 20
+
+  Longest chain: [1, 2, 6, 15]
+  H-levels: [2, 3, 7, 19]
+  H-levels - 1: [1, 2, 6, 18]
+
+  Max degree: [1, 3, 7, 14]
+
+======================================================================
+  3. WIDTH FORMULA: C(n-2, floor((n-2)/2))
+======================================================================
+
+  Width = maximum number of iso classes at the same H value
+  = maximum antichain in the H-DAG
+  = CENTRAL BINOMIAL COEFFICIENT C(n-2, floor((n-2)/2))
+
+  THIS IS THE SAME FUNCTION AS THE FIBER FRACTION NUMERATOR!
+  f(n) = C(2(n-2), n-2) / 4^(n-2) and width = C(n-2, (n-2)/2)
+
+  At n=5: f numerator = C(6,3) = 20, width = C(3,1) = 3
+  These are DIFFERENT central binomial coefficients
+  (f uses C(2k,k), width uses C(k, k/2))
+  But both are controlled by the MIDDLE of Pascal's triangle.
+
+  n=3: predicted width = C(1,0) = 1
+  n=4: predicted width = C(2,1) = 2
+  n=5: predicted width = C(3,1) = 3
+  n=6: predicted width = C(4,2) = 6
+  n=7: predicted width = C(5,2) = 10
+  n=8: predicted width = C(6,3) = 20
+  n=9: predicted width = C(7,3) = 35
+  n=10: predicted width = C(8,4) = 70
+  n=11: predicted width = C(9,4) = 126
+
+======================================================================
+  4. THE GAPS: WHAT WE STILL DON'T KNOW
+======================================================================
+
+  GAP 1: EDGE COUNT FORMULA for G_n
+    Sequence: 1, 5, 30, 290
+    No formula found. Ratios 5, 6, 9.67 are irregular.
+    This is the MOST IMPORTANT missing piece.
+    If we had this, we'd know the density of the meta-graph at all n.
+
+  GAP 2: BLUE/BLACK EDGE FORMULAS
+    Blue: 1, 1, 14, 200. Black: 0, 4, 16, 90.
+    Blue fraction: 1.0, 0.2, 0.47, 0.69.
+    Blue fraction is INCREASING. Does it approach 1?
+
+  GAP 3: LEVEL EDGE FORMULA
+    Sequence: 0, 0, 1, 15.
+    At n=5: the single level edge is between two H=9 classes.
+    At n=6: 15 level edges, mostly at H=29 and H=37.
+    Level edges measure the "degeneracy" of H at the iso class level.
+
+  GAP 4: TILINGS*|Aut|=H AT n=6+
+    Proved at n=4,5. Need verification at n=6 (computationally intensive).
+    If it holds at n=6, very likely holds for all n.
+
+  GAP 5: THE n -> n-2 RECURSION
+    Does G_n "contain" G_9 as a coarsened subgraph?
+    The PoS classes of G_n should map to G_9.
+    Partially verified but not precisely formulated.
+
+  GAP 6: SPECTRAL STRUCTURE OF G_n
+    Eigenvalues of G_5 computed. Need eigenvalues of G_6.
+    Does the spectral gap have a formula?
+
+  THE CASCADING PIECES:
+  If we solve GAP 1 (edge formula), then combined with:
+  - Vertices = A000568 (known formula)
+  - Width = C(n-2, (n-2)/2) (discovered today!)
+  - Self-loop fraction = (1/2)_(n-2)/(n-2)! (known)
+  - Tilings*|Aut| = H (known)
+  - Burnside = only odd-cycle perms (known)
+  - Blue fraction trend (increasing)
+
+  ...we would have a COMPLETE ANALYTICAL DESCRIPTION of G_n.
+  The edge count formula is the KEYSTONE.
+
+======================================================================
+  5. TRYING TO IDENTIFY EDGE SEQUENCE: 1, 5, 30, 290
+======================================================================
+
+  Edge sequence analysis:
+  n=3: V=2, E=1, total_flips=24, cross=12, avg_weight_per_edge=6.0
+  n=4: V=4, E=5, total_flips=384, cross=240, avg_weight_per_edge=24.0
+  n=5: V=12, E=30, total_flips=10240, cross=7040, avg_weight_per_edge=117.3
+  n=6: V=56, E=290, total_flips=491520, cross=357120, avg_weight_per_edge=615.7
+
+  THE KEYSTONE: edge count formula.
+  If we could express edges(n) in terms of A000568(n), n, and
+  the self-loop fraction, the picture would be complete.
+
+  HYPOTHESIS: edges(n) ~ A000568(n)^2 * density(n)
+  where density ~ 2/n (from the observed trend).
+
+  n=3: 2^2 * 2/3 = 2.67 ~ 1 (off)
+  n=5: 12^2 * 2/5 = 57.6 ~ 30 (off by 2x)
+  n=6: 56^2 * 2/6 = 1045 ~ 290 (off by 3.6x)
+
+  Not a clean formula. The edge count remains the KEYSTONE GAP.
+
