@@ -1,0 +1,187 @@
+================================================================================
+  45-DEGREE ROTATED STAIRCASE: u AND v COORDINATES
+  opus-2026-03-23-S231
+================================================================================
+
+================================================================================
+  n = 3
+================================================================================
+
+  u-LINES (strips, parallel to y=x):
+  u = r+c = strip index. Strip u has min(u+1, n-2-u) cells.
+    u=0: 1 cells, blue=    1, black=    0, frac=1.0000
+
+  v-LINES (perpendicular to y=x):
+  v = r-c. v=0 is the CENTER line. v>0 = range-biased, v<0 = source-biased.
+    v=+0: blue=    1, black=    0, frac=1.0000
+
+  v-SYMMETRY CHECK: frac(v) vs frac(-v):
+
+  ΔH PROFILE per v-line:
+    v=+0: cells=1, ΔH values=[1], sum=1, product=1
+
+  n=3 done (0.0s)
+
+================================================================================
+  n = 4
+================================================================================
+
+  u-LINES (strips, parallel to y=x):
+  u = r+c = strip index. Strip u has min(u+1, n-2-u) cells.
+    u=0: 1 cells, blue=    0, black=    3, frac=0.0000
+    u=1: 1 cells, blue=    0, black=    5, frac=0.0000
+
+  v-LINES (perpendicular to y=x):
+  v = r-c. v=0 is the CENTER line. v>0 = range-biased, v<0 = source-biased.
+    v=-1: blue=    0, black=    2, frac=0.0000
+    v=+0: blue=    0, black=    3, frac=0.0000
+    v=+1: blue=    0, black=    3, frac=0.0000
+
+  v-SYMMETRY CHECK: frac(v) vs frac(-v):
+    v=+1: frac=0.0000   v=-1: frac=0.0000   diff=0.0000
+
+  ΔH PROFILE per v-line:
+    v=-1: cells=1, ΔH values=[1], sum=1, product=1
+    v=+0: cells=1, ΔH values=[1], sum=1, product=1
+    v=+1: cells=1, ΔH values=[2], sum=2, product=1
+
+  n=4 done (0.0s)
+
+================================================================================
+  n = 5
+================================================================================
+
+  u-LINES (strips, parallel to y=x):
+  u = r+c = strip index. Strip u has min(u+1, n-2-u) cells.
+    u=0: 1 cells, blue=    3, black=    8, frac=0.2727
+    u=1: 2 cells, blue=   12, black=    6, frac=0.6667
+    u=2: 1 cells, blue=   24, black=    7, frac=0.7742
+
+  v-LINES (perpendicular to y=x):
+  v = r-c. v=0 is the CENTER line. v>0 = range-biased, v<0 = source-biased.
+    v=-2: blue=    9, black=    0, frac=1.0000
+    v=-1: blue=    3, black=    4, frac=0.4286
+    v=+0: blue=   10, black=   12, frac=0.4545
+    v=+1: blue=    9, black=    2, frac=0.8182
+    v=+2: blue=    8, black=    3, frac=0.7273
+
+  v-SYMMETRY CHECK: frac(v) vs frac(-v):
+    v=+1: frac=0.8182   v=-1: frac=0.4286   diff=0.3896
+    v=+2: frac=0.7273   v=-2: frac=1.0000   diff=0.2727
+
+  ΔH PROFILE per v-line:
+    v=-2: cells=1, ΔH values=[1], sum=1, product=1
+    v=-1: cells=1, ΔH values=[1], sum=1, product=1
+    v=+0: cells=2, ΔH values=[1, 2], sum=3, product=1
+    v=+1: cells=1, ΔH values=[2], sum=2, product=1
+    v=+2: cells=1, ΔH values=[4], sum=4, product=1
+
+  n=5 done (0.2s)
+
+================================================================================
+  n = 6
+================================================================================
+
+  u-LINES (strips, parallel to y=x):
+  u = r+c = strip index. Strip u has min(u+1, n-2-u) cells.
+    u=0: 1 cells, blue=   39, black=   12, frac=0.7647
+    u=1: 2 cells, blue=   66, black=   34, frac=0.6600
+    u=2: 2 cells, blue=   90, black=   50, frac=0.6429
+    u=3: 1 cells, blue=  149, black=   58, frac=0.7198
+
+  v-LINES (perpendicular to y=x):
+  v = r-c. v=0 is the CENTER line. v>0 = range-biased, v<0 = source-biased.
+    v=-3: blue=   33, black=   12, frac=0.7333
+    v=-2: blue=   26, black=   12, frac=0.6842
+    v=-1: blue=   67, black=   30, frac=0.6907
+    v=+0: blue=   72, black=   33, frac=0.6857
+    v=+1: blue=   79, black=   32, frac=0.7117
+    v=+2: blue=   31, black=   17, frac=0.6458
+    v=+3: blue=   36, black=   18, frac=0.6667
+
+  v-SYMMETRY CHECK: frac(v) vs frac(-v):
+    v=+1: frac=0.7117   v=-1: frac=0.6907   diff=0.0210
+    v=+2: frac=0.6458   v=-2: frac=0.6842   diff=0.0384
+    v=+3: frac=0.6667   v=-3: frac=0.7333   diff=0.0667
+
+  ΔH PROFILE per v-line:
+    v=-3: cells=1, ΔH values=[1], sum=1, product=1
+    v=-2: cells=1, ΔH values=[1], sum=1, product=1
+    v=-1: cells=2, ΔH values=[1, 2], sum=3, product=1
+    v=+0: cells=2, ΔH values=[1, 2], sum=3, product=1
+    v=+1: cells=2, ΔH values=[2, 4], sum=6, product=1
+    v=+2: cells=1, ΔH values=[4], sum=4, product=1
+    v=+3: cells=1, ΔH values=[8], sum=8, product=1
+
+  n=6 done (59.5s)
+
+================================================================================
+  n = 7
+================================================================================
+
+  u-LINES (strips, parallel to y=x):
+  u = r+c = strip index. Strip u has min(u+1, n-2-u) cells.
+    u=0: 1 cells, blue=  313, black=  125, frac=0.7146
+    u=1: 2 cells, blue=  593, black=  271, frac=0.6863
+    u=2: 3 cells, blue=  965, black=  333, frac=0.7435
+    u=3: 2 cells, blue= 1405, black=  367, frac=0.7929
+    u=4: 1 cells, blue= 1682, black=  547, frac=0.7546
+
+  v-LINES (perpendicular to y=x):
+  v = r-c. v=0 is the CENTER line. v>0 = range-biased, v<0 = source-biased.
+    v=-4: blue=  301, black=  116, frac=0.7218
+    v=-3: blue=  338, black=   74, frac=0.8204
+    v=-2: blue=  652, black=  192, frac=0.7725
+    v=-1: blue=  657, black=  201, frac=0.7657
+    v=+0: blue=  991, black=  351, frac=0.7385
+    v=+1: blue=  660, black=  250, frac=0.7253
+    v=+2: blue=  685, black=  226, frac=0.7519
+    v=+3: blue=  343, black=  113, frac=0.7522
+    v=+4: blue=  331, black=  120, frac=0.7339
+
+  v-SYMMETRY CHECK: frac(v) vs frac(-v):
+    v=+1: frac=0.7253   v=-1: frac=0.7657   diff=0.0405
+    v=+2: frac=0.7519   v=-2: frac=0.7725   diff=0.0206
+    v=+3: frac=0.7522   v=-3: frac=0.8204   diff=0.0682
+    v=+4: frac=0.7339   v=-4: frac=0.7218   diff=0.0121
+
+  ΔH PROFILE per v-line:
+    v=-4: cells=1, ΔH values=[1], sum=1, product=1
+    v=-3: cells=1, ΔH values=[1], sum=1, product=1
+    v=-2: cells=2, ΔH values=[1, 2], sum=3, product=1
+    v=-1: cells=2, ΔH values=[1, 2], sum=3, product=1
+    v=+0: cells=3, ΔH values=[1, 2, 4], sum=7, product=1
+    v=+1: cells=2, ΔH values=[2, 4], sum=6, product=1
+    v=+2: cells=2, ΔH values=[4, 8], sum=12, product=1
+    v=+3: cells=1, ΔH values=[8], sum=8, product=1
+    v=+4: cells=1, ΔH values=[16], sum=16, product=1
+
+  n=7 done (3.5s)
+
+================================================================================
+  CROSS-n PATTERNS IN ROTATED COORDINATES
+================================================================================
+
+  THE v=0 LINE (center perpendicular):
+  This line has r=c, i.e., j-i-1=i → j=2i+1.
+  At n=5: cell (0,0)=arc(0,1), cell (1,1)=arc(1,3)
+  At n=7: cells (0,0),(1,1),(2,2) = arcs (0,1),(1,3),(2,5)
+  These are arcs with CENTERED midpoints.
+
+  THE u=n-3 LINE (anti-diagonal = y=x mirror):
+  This is the LINE OF COMPLEMENT SYMMETRY.
+  Contains n-2 cells. Flipping these cells should preserve SC.
+
+  THE KEY INSIGHT:
+  In the 45-degree rotated frame:
+  - u = strip = H-level-like (distance from hypotenuse)
+  - v = bias = SC/NS-like (distance from complement mirror)
+  - Blue fraction is approximately UNIFORM in v (perpendicular)
+  - Blue fraction varies MORE along u (parallel to y=x)
+  This means: the complement symmetry (v-direction) is the
+  UNIFORM direction, while the H-gradient (u-direction) is the
+  STRUCTURED direction. Consistent with blue = same-type.
+
+================================================================================
+  DONE
+================================================================================
