@@ -1,0 +1,387 @@
+
+========================================================================
+  PART 1: EVERYTHING THAT HAPPENS AT n=8
+========================================================================
+
+
+  THE n=8 TRANSITION CATALOG:
+
+  STRUCTURAL (in G_n):
+  1. SC backbone disconnects into 7 components [opus S220]
+  2. SC fraction drops to 2.56% (from 19.3% at n=7)
+  3. Blueself first exists (even n, THM-023)
+  4. t3 parity PRESERVED under GS flip (even n -> not bipartite)
+  5. Transfer matrix tr(M) = 0 (even n)
+
+  HOMOLOGICAL (in tournaments):
+  6. beta_5 first nonzero (~0.2% of tournaments)
+  7. alpha_3 first possible (three disjoint odd cycles)
+  8. c_7 (7-cycle count) first needed to distinguish iso classes
+
+  ALGEBRAIC:
+  9. n=8 = dimension of octonions, n=9 = 2^3+1 = octonionic tournament level
+  10. Bott periodicity pi_n(O) completes at period 8 -> n=9
+  11. The Fano plane (7 lines) embeds in Paley T_7 [verified, S120]
+
+  NUMERICAL:
+  12. V(8) = 6880, SC(8) = 176
+  13. E(8) = 91161
+  14. T(8) = 188288
+  15. Width(8) = C(6,3) = 20
+  16. Score sequences: A000571(8) = 59
+
+
+========================================================================
+  PART 2: WHY 7 COMPONENTS IN THE SC BACKBONE AT n=8?
+========================================================================
+
+
+  The SC backbone has 176 SC classes at n=8.
+  It disconnects into 7 components.
+
+  IS 7 RELATED TO THE FORBIDDEN H=7?
+  At n=8, H=7 is still forbidden (it's forbidden for ALL n).
+  The forbidden gap at H=7 might create a "hole" in the backbone
+  that separates components.
+
+  IS 7 RELATED TO THE FANO PLANE?
+  The Fano plane has 7 lines and 7 points.
+  The Fano plane embeds in the Paley tournament T_7 as 7 directed 3-cycles.
+  The Paley T_7 is SC, so it's on the backbone of G_7.
+  At n=8: the Paley T_7 structure may influence the backbone connectivity
+  through the recursive G_8 -> G_6 fiber bundle.
+
+  IS 7 RELATED TO THE BOTT PERIOD?
+  Bott periodicity: pi_{n+8}(O) = pi_n(O).
+  The homotopy groups of O repeat with period 8.
+  At n=8: one full Bott period completes.
+  The 7 NONTRIVIAL groups in one Bott period:
+  pi_0(O) = Z, pi_1 = Z/2, pi_2 = 0, pi_3 = Z,
+  pi_4 = 0, pi_5 = 0, pi_6 = 0, pi_7 = Z
+  That's 3 nontrivial groups (Z, Z/2, Z) in the standard period.
+  NOT 7. So the connection is not direct.
+
+  MOST LIKELY EXPLANATION:
+  The 7 components arise from the SCORE STRUCTURE at n=8.
+  With 59 score sequences and only 176 SC classes,
+  some score regions have no SC classes at all,
+  creating "gaps" that disconnect the backbone.
+
+  The number 7 may be: 8 score-parity regions minus 1 gap.
+  Or: the 7 nontrivial orbits of Z/8Z on some structure.
+
+
+========================================================================
+  PART 3: SC BACKBONE COMPONENT ANALYSIS
+========================================================================
+
+  From opus S220: SC backbone at n=8 has 7 components.
+
+  Component sizes: need to determine from the data.
+
+  At n=8: SC tournaments have palindromic scores.
+  Score sum = C(8,2) = 28. Each pair sums to 7.
+  Sorted scores: (a, b, c, d, 7-d, 7-c, 7-b, 7-a)
+  where 0 <= a <= b <= c <= d <= 3 (since d <= 7-d => d <= 3.5 => d <= 3).
+
+  Palindromic score sequences at n=8: 35
+
+    (0, 0, 0, 0, 7, 7, 7, 7) (S2 = 98.0)
+    (0, 0, 0, 1, 6, 7, 7, 7) (S2 = 86.0)
+    (0, 0, 0, 2, 5, 7, 7, 7) (S2 = 78.0)
+    (0, 0, 0, 3, 4, 7, 7, 7) (S2 = 74.0)
+    (0, 0, 1, 1, 6, 6, 7, 7) (S2 = 74.0)
+    (0, 0, 1, 2, 5, 6, 7, 7) (S2 = 66.0)
+    (0, 0, 1, 3, 4, 6, 7, 7) (S2 = 62.0)
+    (0, 0, 2, 2, 5, 5, 7, 7) (S2 = 58.0)
+    (0, 0, 2, 3, 4, 5, 7, 7) (S2 = 54.0)
+    (0, 0, 3, 3, 4, 4, 7, 7) (S2 = 50.0)
+    (0, 1, 1, 1, 6, 6, 6, 7) (S2 = 62.0)
+    (0, 1, 1, 2, 5, 6, 6, 7) (S2 = 54.0)
+    (0, 1, 1, 3, 4, 6, 6, 7) (S2 = 50.0)
+    (0, 1, 2, 2, 5, 5, 6, 7) (S2 = 46.0)
+    (0, 1, 2, 3, 4, 5, 6, 7) (S2 = 42.0)
+    (0, 1, 3, 3, 4, 4, 6, 7) (S2 = 38.0)
+    (0, 2, 2, 2, 5, 5, 5, 7) (S2 = 38.0)
+    (0, 2, 2, 3, 4, 5, 5, 7) (S2 = 34.0)
+    (0, 2, 3, 3, 4, 4, 5, 7) (S2 = 30.0)
+    (0, 3, 3, 3, 4, 4, 4, 7) (S2 = 26.0)
+    (1, 1, 1, 1, 6, 6, 6, 6) (S2 = 50.0)
+    (1, 1, 1, 2, 5, 6, 6, 6) (S2 = 42.0)
+    (1, 1, 1, 3, 4, 6, 6, 6) (S2 = 38.0)
+    (1, 1, 2, 2, 5, 5, 6, 6) (S2 = 34.0)
+    (1, 1, 2, 3, 4, 5, 6, 6) (S2 = 30.0)
+    (1, 1, 3, 3, 4, 4, 6, 6) (S2 = 26.0)
+    (1, 2, 2, 2, 5, 5, 5, 6) (S2 = 26.0)
+    (1, 2, 2, 3, 4, 5, 5, 6) (S2 = 22.0)
+    (1, 2, 3, 3, 4, 4, 5, 6) (S2 = 18.0)
+    (1, 3, 3, 3, 4, 4, 4, 6) (S2 = 14.0)
+    (2, 2, 2, 2, 5, 5, 5, 5) (S2 = 18.0)
+    (2, 2, 2, 3, 4, 5, 5, 5) (S2 = 14.0)
+    (2, 2, 3, 3, 4, 4, 5, 5) (S2 = 10.0)
+    (2, 3, 3, 3, 4, 4, 4, 5) (S2 = 6.0)
+    (3, 3, 3, 3, 4, 4, 4, 4) (S2 = 2.0)
+
+  OBSERVATION: There are 35 palindromic score sequences at n=8.
+  The 176 SC classes distribute among these 35 score sequences.
+
+  The SC backbone CONNECTIVITY depends on whether
+  two SC classes with L1-distance 2 in score can be
+  connected by an arc reversal that PRESERVES the SC property.
+
+  If score gap creates a bottleneck (no SC class bridges two
+  score regions), the backbone disconnects.
+
+
+========================================================================
+  PART 4: n=9 — THE OCTONIONIC LEVEL
+========================================================================
+
+
+  n=9 = 2^3 + 1 is the OCTONIONIC LEVEL of the Cayley-Dickson tower.
+
+  At n=9:
+    V = 191536 (iso classes)
+    SC = 2752 (1.44% of V)
+    m = 36 arcs
+    E ~ 3,380,751 (computed via nauty, opus S217)
+
+  THE OCTONIONIC PROPERTY LOSS:
+  At n=9: ASSOCIATIVITY is lost.
+  In tournament terms: I(Omega(T), x) first has COMPLEX ROOTS.
+  Before n=9: all roots of I(Omega, x) are real and negative.
+  At n=9: some conflict graphs have non-real roots.
+
+  THE SC BACKBONE AT n=9:
+  SC(9) = 2752. SC fraction = 1.44%.
+  Since n=9 is ODD:
+  - The SC backbone is bipartite by t3 parity
+  - No blueself (odd n)
+  - The backbone MIGHT reconnect!
+    (because t3-parity bipartition guarantees cross-connections)
+
+  PREDICTION: SC backbone at n=9 is CONNECTED.
+  Reason: at odd n, the t3-parity bipartition gives a 2-coloring,
+  and every SC class has at least 1 GS flip partner in the other
+  color. As long as GS flips connect different classes (guaranteed
+  at odd n by THM-023: no blueself), the backbone stays connected.
+
+  This means: the disconnection at n=8 is TEMPORARY.
+  The backbone reconnects at n=9.
+  The even-n disconnection is a PARITY EFFECT.
+
+
+========================================================================
+  PART 5: THE EVEN/ODD PARITY PATTERN
+========================================================================
+
+  SC backbone connectivity by parity:
+
+  ODD n:  n=3(C), n=5(C), n=7(C), n=9(?)
+  EVEN n: n=4(C), n=6(C), n=8(D!)
+
+  C = connected, D = disconnected.
+
+
+  WHY EVEN n DISCONNECTS FIRST:
+  At even n:
+  - t3 parity is PRESERVED under GS flip (not reversed)
+  - This allows SC self-loops (blueself)
+  - But also means NO FORCED CROSS-CONNECTIONS
+  - The backbone can develop "islands" of same-t3-parity SC classes
+
+  At odd n:
+  - t3 parity is REVERSED under GS flip (THM-060)
+  - Every GS flip CROSSES the bipartition
+  - This FORCES connections between the two sides
+  - The backbone can't disconnect unless one side is empty
+
+  THE CRITICAL QUESTION: Can the backbone disconnect at odd n?
+  If BOTH sides of the t3-bipartition have at least one SC class,
+  and every SC class has at least one GS tiling, then the backbone
+  is connected (every class connects to the other side).
+
+  At odd n: the number of GS tilings is 2^k where k = (m + (n-1)/2)/2.
+  At n=9: k = (36 + 4)/2 = 20. So 2^20 = 1,048,576 GS tilings
+  among 2752 SC classes = ~381 GS tilings per SC class.
+  With this many tilings, every SC class has MANY GS flip partners.
+  The backbone is VERY likely to remain connected.
+
+  PREDICTION: SC backbone is connected at ALL odd n.
+  Disconnection is an EVEN-n phenomenon only.
+
+
+========================================================================
+  PART 6: IS 7 THE FANO PLANE?
+========================================================================
+
+
+  The number 7 appears in THREE places at n=8:
+
+  1. SC backbone has 7 components
+  2. H=7 is forbidden (for all n)
+  3. The Fano plane has 7 lines and 7 points
+
+  ARE THESE CONNECTED?
+
+  THE FANO PLANE AND TOURNAMENTS:
+  From opus S120: the Fano plane embeds in the Paley tournament T_7
+  as 7 directed 3-cycles. Each line of the Fano plane = one 3-cycle.
+
+  At n=8: the Paley T_7 is a SUB-TOURNAMENT of every T on 8 vertices
+  that contains a 7-vertex regular sub-tournament.
+
+  The 7 COMPONENTS might correspond to 7 "types" of SC tournaments
+  at n=8, distinguished by which Fano-plane structure their
+  7-vertex sub-tournament has.
+
+  BUT: this is speculative. The actual 7 might come from the
+  SCORE STRUCTURE (7 palindromic score types that have SC classes
+  between them but no SC classes bridging them).
+
+  A MORE LIKELY EXPLANATION:
+  At n=8: the SC classes split into groups by their INNER structure
+  (the G_6 class of their n-2 reduction). There are 56 classes at n=6,
+  12 of which are SC. The 7 components at n=8 might correspond to
+  7 of the 12 SC classes at n=6 that are "reachable" as inner tournaments
+  from n=8 SC classes.
+
+  Actually: 12 SC classes at n=6 give at most 12 possible inner types.
+  But the 7 components arise from the CONNECTIVITY structure.
+  Some n=6 SC inner types may share n=8 SC classes in the same component.
+
+  SC(8) = 176 (verified)
+  SC(6) = 12 (inner tournament level)
+  7 components / 12 inner SC types = 0.58 components per type
+
+
+========================================================================
+  PART 7: IS THE STRUCTURE FRACTAL?
+========================================================================
+
+
+  The user's intuition: "is everything mod 8? for each loop around
+  the 8-clock, is it a 7-way fractal?"
+
+  THE SELF-SIMILAR STRUCTURE:
+  G_n contains G_{n-2} via the source-sink fiber bundle.
+  So: G_8 fibers over G_6, G_6 over G_4, G_4 over G_2.
+
+  At each level:
+    G_4: 4 classes (2 SC, 1 NSC pair)
+    G_6: 56 classes (12 SC, 22 NSC pairs)
+    G_8: 6880 classes (176 SC, 3352 NSC pairs)
+
+  The GROWTH:
+    G_4 -> G_6: factor ~14 (= 56/4)
+    G_6 -> G_8: factor ~123 (= 6880/56)
+
+  The SC GROWTH:
+    SC(4) -> SC(6): factor 6 (= 12/2)
+    SC(6) -> SC(8): factor ~15 (= 176/12)
+
+  NOT a simple fractal. The growth rate itself grows.
+
+  THE 7 COMPONENTS:
+  If the 7 components at n=8 each "look like" a smaller meta-graph,
+  then the structure IS self-similar in some sense.
+
+  PREDICTION: Each of the 7 components at n=8 has approximately
+  176/7 ~ 25 SC classes. They're not all the same size
+  (the data from S220 says sizes are [x1, x2, ..., x7]).
+
+  THE MOD-8 QUESTION:
+  Tournament properties reset modulo 8 in the Cayley-Dickson sense:
+    n=3 (R): first cycles
+    n=5 (C): first score ambiguity
+    n=9 (O): first complex roots
+    n=17 (S): first Paley non-optimality
+    n=33 (?): ???
+
+  But 3, 5, 9, 17, 33 = 2^k + 1. NOT modular.
+  The CD tower is EXPONENTIAL, not periodic.
+
+  HOWEVER: the Bott periodicity IS periodic (period 8).
+  And the homotopy groups pi_k(O) repeat with period 8.
+  So: some properties of tournaments MIGHT be periodic mod 8.
+
+  WHICH PROPERTIES ARE MOD-8 PERIODIC?
+  - Even/odd parity (period 2): many properties alternate
+  - Blueself existence (period 2): even n only
+  - SC backbone connectivity: connected at odd n, disconnects at even n >= 8
+
+  CONJECTURE: The SC backbone component count at even n follows
+  a pattern related to the homotopy groups of O:
+    n=4: 1 component
+    n=6: 1 component
+    n=8: 7 components
+    n=10: ? components
+    n=12: ? components
+
+  If the pattern is pi_k(O)-related:
+  n=8 -> k=0: pi_0(O) = Z -> 7 components? (Z has rank 1, not 7)
+  This doesn't work directly.
+
+
+========================================================================
+  PART 8: THE DEGENERACY AT n=8
+========================================================================
+
+  Degeneracy (T - 2E): [2, 6, 28, 124, 740, 5966, 85698]
+
+  Ratios:
+    deg(4)/deg(3) = 3.0000
+    deg(5)/deg(4) = 4.6667
+    deg(6)/deg(5) = 4.4286
+    deg(7)/deg(6) = 5.9677
+    deg(8)/deg(7) = 8.0622
+    deg(9)/deg(8) = 14.3644
+
+  deg(n) / V(n):
+    n=3: deg/V = 1.0000
+    n=4: deg/V = 1.5000
+    n=5: deg/V = 2.3333
+    n=6: deg/V = 2.2143
+    n=7: deg/V = 1.6228
+    n=8: deg/V = 0.8672
+    n=9: deg/V = 0.4474
+
+  deg/V sequence: 1.00, 1.50, 2.33, 2.21, 1.62, 0.87, 0.45
+
+  This PEAKS at n=5 and then DECREASES!
+  The degeneracy per class is falling — meaning each class
+  has fewer "redundant" arc-orbits.
+
+  At large n: deg/V -> 0 (since deg/T -> 0 and T/(V*m) -> 1).
+  The degeneracy becomes negligible compared to T.
+
+
+========================================================================
+  PART 9: PALINDROMIC SCORES AND SC COMPONENTS
+========================================================================
+
+  At even n: SC tournaments have palindromic scores.
+  Two SC classes are SC-backbone adjacent only if their
+  scores differ by L1 = 0 or 2 AND both are SC.
+
+  Palindromic score sequences at n=8: 35
+
+  Score-adjacent palindromic pairs (L1=2): 60
+
+  Score adjacency graph on 35 palindromic sequences:
+  1 components
+
+  The score graph is connected.
+  The 7 SC backbone components must arise from a FINER
+  obstruction than just score adjacency.
+  Some palindromic score pairs may have NO SC class pair
+  actually connected by an arc reversal.
+
+========================================================================
+  SYNTHESIS: THE n=8 TRANSITION
+========================================================================
+
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/n8_transition_deep_s198.py", line 521, in <module>
+    print("""
+TypeError: not enough arguments for format string
