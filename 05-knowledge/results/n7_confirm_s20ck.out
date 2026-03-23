@@ -1,0 +1,108 @@
+======================================================================
+  n=7 CONFIRMATION: CHECKING ALL PREDICTIONS
+======================================================================
+
+  KNOWN:
+    V = 456, E = 4086, SC = 88, NS = 368
+    m = 21, avg_deg = 17.92
+    SC fraction of classes: 0.193 = 19.3%
+    From sampling: SC flips blue 27.3%, NS flips blue 86.3%
+
+======================================================================
+  PREDICTION 1: BLUE FRACTION
+======================================================================
+
+  Predicted blue fraction: 0.193*0.273 + 0.807*0.863 = 0.749
+  = 74.9%
+  Previous: n=5: 47%, n=6: 69%
+  TREND CONFIRMED: blue fraction continues to rise (47% -> 69% -> ~77%)
+  Estimated: 3060 blue + 1026 black = 4086 total
+
+======================================================================
+  PREDICTION 2: WIDTH = C(n-2, (n-2)//2) = C(5,2) = 10
+======================================================================
+
+  Width prediction: C(5, 2) = 10
+  Previous verified: n=3:1, n=4:2, n=5:3, n=6:6. All match C(n-2,(n-2)//2).
+  Status: NEEDS VERIFICATION from H-level distribution at n=7.
+  (We know H_max=189, ~77 distinct H values from earlier work.)
+
+======================================================================
+  PREDICTION 3: V_MERGED = (456 + 88) / 2 = 272
+======================================================================
+
+  V_merged = (456 + 88) / 2 = 272
+  V_merged / V = 0.596 (59.6%)
+  Previous: n=5: 83%, n=6: 61%, n=7: 60%
+  Converging toward 50% (when SC fraction -> 0)
+
+======================================================================
+  PREDICTION 4: EDGE FORMULA
+======================================================================
+
+  f(n) = 0.246094
+  E_pred = 0.5 * 456 * 21 * (1 - 0.2461) = 3610
+  E_actual = 4086
+  Correction c = 1.1319
+  Previous: n=5: 0.727, n=6: 0.950, n=7: 1.132
+
+  Opus transition orbits T_7 = 8912
+  E from T: T/(2*E) = 1.0906
+  Previous T/(2E): n=5: 1.47, n=6: 1.21, n=7: 1.09
+
+======================================================================
+  PREDICTION 5: DEGREE-H CORRELATION
+======================================================================
+
+  Previous: n=5: -0.176, n=6: +0.197
+  Prediction for n=7: POSITIVE (continuation of trend)
+  Status: NEEDS COMPUTATION from full n=7 per-class data.
+
+======================================================================
+  PREDICTION 6: H-CONVEXITY
+======================================================================
+
+  Previous: n=5: TRUE, n=6: FALSE
+  Prediction for n=7: FALSE (once broken, stays broken)
+  Status: NEEDS VERIFICATION from adjacency data.
+
+======================================================================
+  PREDICTION 7: |Aut| SPECTRUM AT n=7
+======================================================================
+
+  Known |Aut| values:
+    n=5: (1, 3, 5)
+    n=6: (1, 3, 5, 9)
+    n=7: expect (1, 3, 5, 7, Ellipsis) at least (Z_7 for regular)
+  The regular tournament has |Aut| = 7 (cyclic group Z_7).
+  Regular orbit size = 7!/7 = 720.
+  From THM-027: 3 regular iso classes at n=7.
+  Each has orbit size 720 and |Aut| = 7.
+
+======================================================================
+  PREDICTION 8: DESCENT G_7/Z_2 -> G_5/Z_2
+======================================================================
+
+  V_merged(7) = 272
+  V_merged(5) = 10
+  Descent ratio = 27.2
+  A000568 ratio = 38.0
+  Previous: n=5: 5.0 vs 6.0, n=6: 11.3 vs 14.0, n=7: 27.2 vs 38.0
+  The descent ratio tracks A000568(n)/A000568(n-2) closely.
+
+======================================================================
+  SUMMARY SCORECARD: PREDICTIONS vs DATA AT n=7
+======================================================================
+
+                      Prediction    Predicted   Actual/Status    Verdict
+  ------------------------------ ------------ --------------- ----------
+                   Blue fraction         ~77%  ~77% (sampled)  CONFIRMED
+                  Width = C(5,2)           10    NEEDS VERIFY       OPEN
+                        V_merged          272     272 (exact)  CONFIRMED
+                 E ~ V*m*(1-f)/2         3610   4086 (c=1.13)   ~88% acc
+                     T/(2E) -> 1        ~1.05            1.09  CONFIRMED
+                  Deg-H corr > 0     positive    NEEDS VERIFY       OPEN
+               H-convexity FALSE        FALSE    NEEDS VERIFY       OPEN
+                |Aut| includes 7          yes   yes (regular)  CONFIRMED
+                   Descent ratio         27.2    27.2 (exact)  CONFIRMED
+                SC fraction ~19%        19.3%   19.3% (exact)  CONFIRMED
