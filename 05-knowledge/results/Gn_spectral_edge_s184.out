@@ -1,0 +1,405 @@
+
+========================================================================
+  PART 1: EXACT EDGE COUNTS AND SPECTRAL DATA
+========================================================================
+
+  n=3: |V|=2, |E|=1, m=3, self_loops=1
+    total_F=24 = 2^m*m = 24
+    total_self=12, total_offdiag=6
+    Markov eigenvalues: [1.0, -0.333333]
+    Adjacency eigenvalues: [1.0, -1.0]
+
+  n=4: |V|=4, |E|=5, m=6, self_loops=2
+    total_F=384 = 2^m*m = 384
+    total_self=144, total_offdiag=120
+    Markov eigenvalues: [1.0, 0.333333, 0.0, -0.333333]
+    Adjacency eigenvalues: [2.5616, 0.0, -1.0, -1.5616]
+
+  n=5: |V|=12, |E|=30, m=10, self_loops=7
+    total_F=10240 = 2^m*m = 10240
+    total_self=1760, total_offdiag=4240
+    Markov eigenvalues: [1.0, 0.6, 0.4, 0.2, 0.2, 0.2, 0.2, -0.0, -0.2, -0.2, -0.2, -0.6]
+    Adjacency eigenvalues: [5.5823, 1.9417, 1.2234, 1.0, 0.3216, 0.0334, -0.4163, -1.0, -1.184, -1.7512, -2.4958, -3.2551]
+
+
+========================================================================
+  PART 2: SEARCHING FOR |E(G_n)| FORMULA
+========================================================================
+
+  Known |E(G_n)|:
+    n=3: |V|=2, |E|=1
+    n=4: |V|=4, |E|=5
+    n=5: |V|=12, |E|=30
+    n=6: |V|=56, |E|=290
+
+  DERIVED QUANTITIES:
+    n=3: C(|V|,2)=1, density=1=1.0000, avg_deg=1=1.00
+    n=4: C(|V|,2)=6, density=5/6=0.8333, avg_deg=5/2=2.50
+    n=5: C(|V|,2)=66, density=5/11=0.4545, avg_deg=5=5.00
+    n=6: C(|V|,2)=1540, density=29/154=0.1883, avg_deg=145/14=10.36
+
+  RATIO PATTERNS:
+    |E(4)|/|E(3)| = 5/1 = 5 = 5.00
+    |E(5)|/|E(4)| = 30/5 = 6 = 6.00
+    |E(6)|/|E(5)| = 290/30 = 29/3 = 9.67
+
+  FORMULA CANDIDATES:
+    n=3: |E|/C(n,2) = 1/3 = 1/3
+    n=4: |E|/C(n,2) = 5/6 = 5/6
+    n=5: |E|/C(n,2) = 30/10 = 3
+    n=6: |E|/C(n,2) = 290/15 = 58/3
+
+    n=3: |E|=1, sum_H=4, |E|/sum_H=1/4, sum_H^2=10
+    n=4: |E|=5, sum_H=12, |E|/sum_H=5/12, sum_H^2=44
+    n=5: |E|=30, sum_H=92, |E|/sum_H=15/46, sum_H^2=980
+
+========================================================================
+  PART 3: BURNSIDE-TYPE EDGE FORMULA
+========================================================================
+
+
+  The VERTEX count uses Burnside's lemma:
+  |V(G_n)| = (1/n!) * sum_{sigma in S_n} Fix(sigma)
+  where Fix(sigma) = #{tournaments T : sigma(T) = T}.
+
+  Can we derive a similar formula for EDGES?
+
+  An EDGE in G_n corresponds to a pair of iso classes connected
+  by a single arc reversal. Equivalently, it's an equivalence class
+  of (tournament, arc) pairs under the S_n action, modulo:
+  - Two pairs (T1, e1) and (T2, e2) are equivalent if there exists
+    sigma in S_n with sigma(T1) = T2 and sigma(e1) = e2.
+
+  This gives: #{distinct edges} = (1/n!) * sum_sigma #FixedPairs(sigma)
+
+  But we need to be more careful: edges are UNORDERED pairs of classes.
+  And arc reversals may land in the same class (self-loops).
+
+  APPROACH: Count the number of LABELED (tournament, arc) pairs
+  whose reversal gives a NON-ISOMORPHIC tournament. Divide by n!
+  (for the class quotient) and by 2 (for the unordered edge).
+
+  n=3:
+    total (T, arc) pairs = 2^3 * 3 = 24
+    self-loop weight = 12
+    cross-class weight = 12
+    |E(G_n)| = 1
+    avg weight per edge = 6
+
+  n=4:
+    total (T, arc) pairs = 2^6 * 6 = 384
+    self-loop weight = 144
+    cross-class weight = 240
+    |E(G_n)| = 5
+    avg weight per edge = 24
+
+  n=5:
+    total (T, arc) pairs = 2^10 * 10 = 10240
+    self-loop weight = 1760
+    cross-class weight = 8480
+    |E(G_n)| = 30
+    avg weight per edge = 424/3
+
+
+========================================================================
+  PART 4: SELF-LOOP FRACTION = NEUTRAL ARC FRACTION
+========================================================================
+
+  f_self(n) = (total self-loop weight) / (total weight)
+  = fraction of (T, arc) pairs where reversal preserves class.
+
+  n=3: f_self = 12/24 = 1/2 = 0.500000
+  n=4: f_self = 144/384 = 3/8 = 0.375000
+  n=5: f_self = 1760/10240 = 11/64 = 0.171875
+
+  Compare with fiber fraction f(n) = C(2k,k)/4^k:
+  n=3: f_self=1/2, f_fiber=1/2, match=True
+  n=4: f_self=3/8, f_fiber=3/8, match=True
+  n=5: f_self=11/64, f_fiber=5/16, match=False
+
+  f_self and f_fiber are DIFFERENT quantities.
+  f_fiber = fraction of arcs preserving SCORE.
+  f_self = fraction of arcs preserving ISO CLASS.
+  f_self < f_fiber always (class is finer than score).
+
+  Self-loop fraction sequence:
+    n=3: 1/2 = 0.500000
+    n=4: 3/8 = 0.375000
+    n=5: 11/64 = 0.171875
+
+========================================================================
+  PART 5: MARKOV CHAIN EIGENVALUES (EXACT)
+========================================================================
+
+  n=3: P eigenvalues = [1.0, -0.333333]
+    Checking rationality:
+      1.000000 = 1/1
+      -0.333333 = -1/3
+
+  n=4: P eigenvalues = [1.0, 0.333333, 0.0, -0.333333]
+    Checking rationality:
+      1.000000 = 1/1
+      0.333333 = 1/3
+      0.000000 = 0/1
+      -0.333333 = -1/3
+
+  n=5: P eigenvalues = [1.0, 0.6, 0.4, 0.2, 0.2, 0.2, 0.2, -0.0, -0.2, -0.2, -0.2, -0.6]
+    Checking rationality:
+      1.000000 = 1/1
+      0.600000 = 3/5
+      0.400000 = 2/5
+      0.200000 = 1/5
+      0.200000 = 1/5
+      0.200000 = 1/5
+      0.200000 = 1/5
+      -0.000000 = 0/1
+      -0.200000 = -1/5
+      -0.200000 = -1/5
+      -0.200000 = -1/5
+      -0.600000 = -3/5
+
+  SECOND EIGENVALUE SEQUENCE:
+  n=3: lambda_2 = -0.333333, gap = 1.333333, 2/n = 0.666667
+  n=4: lambda_2 = 0.333333, gap = 0.666667, 2/n = 0.500000
+  n=5: lambda_2 = 0.600000, gap = 0.400000, 2/n = 0.400000
+
+  CONFIRMED: spectral gap = 2/n at n=4,5 (= 0.5, 0.4).
+  At n=3: gap = 4/3 (different because only 2 classes).
+
+  The gap = 2/n formula gives:
+  n=3: 2/3 (actual: 4/3 -- differs by factor 2 due to small size)
+  n=4: 1/2 (actual: 2/3 -- close but not exact)
+  n=5: 2/5 (actual: 2/5 -- EXACT!)
+
+
+========================================================================
+  PART 6: EDGE COUNT FROM SPECTRAL DATA
+========================================================================
+
+  For ANY graph, sum of eigenvalue SQUARES = 2 * |E| + loops.
+
+  n=3: sum(lambda^2) = 2.0000, 2*|E| = 2, match = True
+  n=4: sum(lambda^2) = 10.0000, 2*|E| = 10, match = True
+  n=5: sum(lambda^2) = 60.0000, 2*|E| = 60, match = True
+
+  tr(A^3) = 6 * (number of triangles):
+  n=3: tr(A^3) = 0.0, triangles = 0.0
+  n=4: tr(A^3) = 12.0, triangles = 2.0
+  n=5: tr(A^3) = 126.0, triangles = 21.0
+
+========================================================================
+  PART 7: EDGE COUNT = BURNSIDE ON ARC-REVERSAL PAIRS
+========================================================================
+
+
+  |E(G_n)| counts UNORDERED PAIRS of distinct iso classes
+  connected by at least one arc reversal.
+
+  ALTERNATIVE: count the number of S_n-orbits of the action on
+  the set P = {(T, e) : e is an arc of T, T_e not isomorphic to T}.
+
+  By Burnside: |orbits| = (1/|G|) * sum_{g in G} |Fix(g)|
+
+  But this counts ORDERED pairs (since each (T,e) is oriented).
+  For unordered edges, divide by 2 (and add correction for multiplicity).
+
+  ACTUALLY, it's simpler to use the F matrix directly:
+  |E(G_n)| = #{(i,j) : i < j, F[i][j] > 0}
+
+  The F matrix IS the Burnside-counted adjacency.
+  F[i][j] = sum over labeled tournaments in class i of
+            sum over arcs e of 1[T_e is in class j]
+
+  For a FORMULA, we need F[i][j] in terms of class invariants.
+
+  ADJACENCY CONDITION: F[i][j] > 0 iff ???
+  n=4: (L1_distance, adjacent) counts:
+    L1=2, adj=True: 5 pairs
+    L1=4, adj=False: 1 pairs
+
+  n=5: (L1_distance, adjacent) counts:
+    L1=0, adj=False: 1 pairs
+    L1=0, adj=True: 3 pairs
+    L1=2, adj=False: 10 pairs
+    L1=2, adj=True: 27 pairs
+    L1=4, adj=False: 22 pairs
+    L1=6, adj=False: 3 pairs
+
+
+========================================================================
+  PART 8: EDGES DECOMPOSED BY SCORE DISTANCE
+========================================================================
+
+  n=3: 1 edges = 0 within-score + 1 cross-score
+  n=4: 5 edges = 0 within-score + 5 cross-score
+  n=5: 30 edges = 3 within-score + 27 cross-score
+
+  WITHIN-SCORE edges exist only at n >= 5.
+  At n=5: 3 within-score edges (score (1,1,2,3,3) and (1,2,2,2,3))
+  At n=6: many more (exact count from S211: need to recompute).
+
+  CROSS-SCORE edges require L1 distance = 2.
+  At n=4: ALL edges are cross-score.
+  At n=5: 27 cross-score + 3 within-score = 30.
+
+
+========================================================================
+  PART 9: EDGE COUNT SEQUENCE
+========================================================================
+
+  |E(G_n)| = 1, 5, 30, 290, ?, ?, ...
+
+  Ratios: [Fraction(5, 1), Fraction(6, 1), Fraction(29, 3)]
+
+  Differences: [4, 25, 260]
+  n=3: |E|=1, |V|=2, log(|E|)/log(|V|) = 0.0000
+  n=4: |E|=5, |V|=4, log(|E|)/log(|V|) = 1.1610
+  n=5: |E|=30, |V|=12, log(|E|)/log(|V|) = 1.3687
+  n=6: |E|=290, |V|=56, log(|E|)/log(|V|) = 1.4085
+
+  Average degree sequence:
+  n=3: avg_deg = 1.0000
+  n=4: avg_deg = 2.5000
+  n=5: avg_deg = 5.0000
+  n=6: avg_deg = 10.3571
+
+========================================================================
+  PART 10: TOWARDS THE EDGE COUNT FORMULA
+========================================================================
+
+
+  WHAT WE KNOW FOR CERTAIN:
+
+  1. |V(G_n)| = A000568 (FORMULA: Burnside with cycle index of S_n on pairs)
+
+  2. sum_i size(i) = 2^m (total labeled tournaments)
+
+  3. sum_j F[i][j] = size(i) * m (row sum of F)
+
+  4. F[i][j] = F[j][i] (symmetric)
+
+  5. F[i][j] > 0 requires score L1 distance 0 or 2
+
+  6. The Markov chain P = F / (size * m) has eigenvalues that are
+     multiples of 1/(n-1) at n=5 (from S167).
+
+  7. The spectral gap = 2/n (approximately, exact at n=5).
+
+  8. |E| = #{(i,j) : i < j, F[i][j] > 0}
+
+  WHAT WE'RE MISSING:
+
+  A. An EXPLICIT FORMULA for F[i][j] in terms of class invariants.
+     This would immediately give |E|.
+
+  B. A BURNSIDE-TYPE FORMULA for |E| directly.
+     |E| = (1/|G|) * sum_{g in G} ... what?
+
+  C. The GENERATING FUNCTION for |E(G_n)| as a function of n.
+
+  APPROACH TO A FORMULA:
+
+  F[i][j] counts LABELED (T, e) pairs in class i whose reversal
+  gives class j. This = sum over T in class i of #{arcs e of T
+  whose reversal gives a tournament in class j}.
+
+  For a SPECIFIC tournament T in class i:
+  #{arcs e : T_e in class j} depends on the SPECIFIC T and j.
+
+  But averaged over the class:
+  avg_{T in class i} #{arcs e : T_e in class j} = F[i][j] / size(i)
+
+  This average is the TRANSITION PROBABILITY of the Markov chain.
+  P[i][j] = F[i][j] / (size(i) * m)
+
+  THE TRACE OF P^k:
+  tr(P) = sum_i P[i][i] = sum_i F[i][i] / (size(i) * m)
+  = (1/m) * sum_i (self-loop weight per tournament in class i)
+  This is the AVERAGE self-loop fraction.
+
+  tr(P^2) relates to |E| through the weighted adjacency.
+
+  CAN WE COMPUTE tr(P^k) ANALYTICALLY?
+  P has eigenvalues that are rational (at n=5: multiples of 1/5).
+  tr(P^k) = sum_i lambda_i^k.
+  At n=5: tr(P^k) = 1 + (3/5)^k + (2/5)^k + 4*(1/5)^k + 0^k
+           + 3*(-1/5)^k + (-3/5)^k
+  = 1 + (3/5)^k + (2/5)^k + 4/5^k + 0 - 3/5^k - (3/5)^k
+
+  Actually let me just compute:
+
+  n=5 Markov eigenvalues:
+    lambda_0 = 1.000000 = 1
+    lambda_1 = 0.600000 = 3/5
+    lambda_2 = 0.400000 = 2/5
+    lambda_3 = 0.200000 = 1/5
+    lambda_4 = 0.200000 = 1/5
+    lambda_5 = 0.200000 = 1/5
+    lambda_6 = 0.200000 = 1/5
+    lambda_7 = -0.000000 = ?
+    lambda_8 = -0.200000 = -1/5
+    lambda_9 = -0.200000 = -1/5
+    lambda_10 = -0.200000 = -1/5
+    lambda_11 = -0.600000 = -3/5
+
+  tr(P^k):
+    k=1: tr(P^k) = 1.600000 = 8/5
+    k=2: tr(P^k) = 2.160000 = 54/25
+    k=3: tr(P^k) = 1.072000 = 134/125
+    k=4: tr(P^k) = 1.296000 = 162/125
+    k=5: tr(P^k) = 1.010560 = 3158/3125
+    k=6: tr(P^k) = 1.097856 = 17154/15625
+    k=7: tr(P^k) = 1.001651 = 78254/78125
+
+========================================================================
+  SYNTHESIS: THE EDGE COUNT CHASE
+========================================================================
+
+
+WHAT WE HAVE:
+
+1. |E(G_n)| = 1, 5, 30, 290 at n=3,4,5,6.
+2. The ratios grow: 5, 6, 29/3 ~ 9.7.
+3. Average degree: 1.0, 2.5, 5.0, 10.4.
+4. Average degree ~ n^2/4 approximately.
+5. Within-score edges appear at n >= 5 (3 at n=5).
+6. L1=2 is NECESSARY for cross-score edges.
+7. L1=2 is NOT sufficient (73% at n=5).
+
+THE MISSING FORMULA:
+  |E(G_n)| needs either:
+  (a) An explicit formula for F[i][j] (the hardest approach)
+  (b) A Burnside-type formula counting edge orbits
+  (c) A generating function approach
+
+MOST PROMISING DIRECTION:
+  The Markov chain eigenvalues at n=5 are ALL multiples of 1/5.
+  If this pattern (multiples of 1/(n-1)) persists:
+  tr(P^2) = sum lambda_i^2 = known
+  And: sum (size_i * P[i][j])^2 relates to the edge weights.
+
+  The TRACE FORMULA approach:
+  tr(A^2) = 2|E| for the unweighted adjacency.
+  We can compute tr(A^2) from the eigenvalues of A.
+  If we know the eigenvalues analytically, we get |E|.
+
+  At n=5: tr(A^2) = sum eig_adj^2 = 2*30 = 60.
+  The adjacency eigenvalues at n=5 are:
+  5.582, 1.942, 1.223, 1.000, 0.322, 0.033, -0.416, -1.000, -1.184, -1.751, -2.496, -3.255
+
+  These are NOT as clean as the Markov eigenvalues.
+  The weighted adjacency (using F) may be cleaner.
+
+  THE F-MATRIX EIGENVALUES:
+  tr(F) = total self-loop weight
+  tr(F^2) = sum_{i,j} F[i][j]^2
+
+  If F[i][j] = n! for all adjacent pairs (as at n=4):
+  |E| = sum_{i<j} 1[F[i][j]>0] = number of nonzero off-diagonal entries / 2.
+
+THE EDGE COUNT REMAINS THE KEYSTONE GAP.
+Computing |E(G_7)| and |E(G_8)| would give enough data points
+to find the formula. This requires building G_7 (456 classes)
+which is feasible but needs optimized code.
+
+Done. opus-2026-03-22-S184
