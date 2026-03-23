@@ -190,17 +190,21 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
 - **The isomorphism class graph G_n is the KEY OBJECT.** Every session should spend 5-10 minutes considering it. When computing any invariant, also compute it per iso class. When finding a formula, check if it simplifies on G_n. See `07-reflections/the-isomorphism-class-graph.md` and OPEN-Q-039.
 - **The MERGED metagraph G_n/Z_2 is the PRIMARY object.** Complement symmetry factored out. V_merged = (A000568+SC)/2. See `07-reflections/merged-metagraph-invariants.md`.
 - **BLUE and BLACK — STRICT DEFINITION** (matches `tournament-tiling-explorer.html` EXACTLY):
-  - **BLUE** = a flip-edge between two tilings where **BOTH** are grid-symmetric (`isGridSym`). Grid-symmetric means the tiling is invariant under the reversal map `(x,y) -> (n-y+1, n-x+1)`.
-  - **BLACK** = a flip-edge where **at least one** tiling is NOT grid-symmetric.
-  - **RED** = connects transpose-paired iso classes (complement relationship, not an arc flip).
-  - These are TILING-LEVEL properties. A single iso class may have both blue and black edges.
+  - A **LINE** = one (tiling, complement-tiling) pair. The explorer draws these.
+  - A **BLUE LINE** = a line where the tiling is grid-symmetric (`isGridSym`): invariant under `(x,y) -> (n-y+1, n-x+1)`. Since `isGridSym(flip(t)) == isGridSym(t)`, both endpoints are always the same color. Every line is exactly blue or black.
+  - A **BLACK LINE** = a line where the tiling is NOT grid-symmetric.
+  - **RED** = connects transpose-paired iso classes (not a tiling line).
+  - An **EDGE** in the metagraph = a connection from a single-tile flip (NOT a complement flip). Edges are made of many lines. Lines and edges are DIFFERENT concepts.
+  - A **PURE BLUE** class = all tilings grid-symmetric. A **PURE BLACK** class = no tilings grid-symmetric. **MIXED** = both.
+  - **VERIFIED n=3..7**: transpose-self classes are NEVER pure black (always pure blue or mixed). Non-transpose-self classes are ALWAYS pure black. Grid-sym fraction = exactly 2^{-(n-2)}.
   - The staircase is oriented with **right angle at bottom-left**, tiles labeled (x,y) with x=upper vertex, y=lower vertex.
-  - **LEGACY WARNING:** Sessions S211-S231 used "blue" and "black" differently (for class-level SC-type preservation). When reading old results: old-"blue" meant "SC-SC or NS-NS edge" and old-"black" meant "SC-NS edge". These are NOT the explorer's blue/black. Use the class-level terms below instead.
+  - **LEGACY WARNING:** Sessions S211-S231 used "blue/black" for SC-type preservation at the class level. This is DIFFERENT. See spine/ribs/sea below.
 - **CLASS-LEVEL EDGE TYPES** (separate from blue/black, use these descriptive names):
   - **SC-SC** edges (the spine): both endpoints are self-complementary classes.
   - **SC-NS** edges (the ribs): one SC, one NS endpoint. Bipartite, triangle-free.
   - **NS-NS** edges (the sea/bulk): both endpoints non-self-complementary. Dominates at large n.
   - These are properties of the MERGED iso classes, not of individual tilings.
+  - In the merged graph: pure-black node count = 0, 1, 2, 22, 184 for n=3..7.
   - The old "blue" ≈ SC-SC + NS-NS; the old "black" = SC-NS.
 - **GEOMETRIC ALIGNMENT of G_n/Z_2:** The merged metagraph has three perpendicular structures:
   - The **PRINCIPAL LINE** runs from the transitive class (H=1) through the SC backbone. The transitive's "big" SC neighbor is at H = 2^(n-2)+1.
