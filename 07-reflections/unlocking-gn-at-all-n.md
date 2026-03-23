@@ -53,8 +53,8 @@ where m_{(n)} = V_n, m_{(n-1,1)} ~ V_n*(n-2), m_{(n-2,2)} ~ V_n*n(n-3)/2.
 | Blue edges | 1, 1, 13, 98, 1573, 43656 | No formula |
 | Black edges | 0, 2, 8, 45, 550, 1894 | No formula |
 | SC spine genus | 0, 0, 5, 2, 87, 150 | No formula |
-| Principal odd path | 1, 3, 15, 123 | Diverges from H_max at n>=6 |
-| Principal even path | 1, 5, 37, 389 | Diverges from H_max at n>=6 |
+| Principal odd path | 1, 3, 15, 123, 1656, 36987 | **= OEIS A113077** (tournament sequence tree!) |
+| Principal even path | 1, 5, 37, 389, 5413, 94085 | **= OEIS A368322** (EGF = exp(2x)/(4-3exp(x))) |
 | Self-loops SL_n | 12, 144, 1760, 50880 | No formula |
 
 ---
