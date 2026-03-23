@@ -1,0 +1,173 @@
+================================================================================
+  THE y=x DIAGONAL: TILING-LEVEL BLUE/BLACK STRUCTURE
+  opus-2026-03-23-S230
+================================================================================
+
+================================================================================
+  n = 3
+================================================================================
+
+  STAIRCASE δ_1 GRID (1 rows):
+  Cell format: B/K (blue/black line count)
+  Anti-diagonal cells marked with [*]
+
+    r=0:   1/  0[*] 
+
+  ANTI-DIAGONAL vs OFF-DIAGONAL:
+    Anti-diagonal: blue=1, black=0, blue_frac=1.0000
+
+    Total:         blue=1, black=0, blue_frac=1.0000
+
+  BLUE FRACTION BY ROW (r = range - 1):
+    r=0 (1 cells): blue=    1, black=    0, frac=1.0000
+
+  BLUE FRACTION BY COLUMN (c = source vertex):
+    c=0 (1 cells): blue=    1, black=    0, frac=1.0000
+
+  BLUE FRACTION UNIFORMITY:
+    min=1.0000, max=1.0000, std=0.000000
+    UNIFORM: YES ✓
+
+  n=3 done (0.0s)
+
+================================================================================
+  n = 4
+================================================================================
+
+  STAIRCASE δ_2 GRID (2 rows):
+  Cell format: B/K (blue/black line count)
+  Anti-diagonal cells marked with [*]
+
+    r=0:   0/  3      0/  2[*] 
+    r=1:   0/  3[*] 
+
+  ANTI-DIAGONAL vs OFF-DIAGONAL:
+    Anti-diagonal: blue=0, black=5, blue_frac=0.0000
+    Off-diagonal:  blue=0, black=3, blue_frac=0.0000
+    Total:         blue=0, black=8, blue_frac=0.0000
+
+  BLUE FRACTION BY ROW (r = range - 1):
+    r=0 (2 cells): blue=    0, black=    5, frac=0.0000
+    r=1 (1 cells): blue=    0, black=    3, frac=0.0000
+
+  BLUE FRACTION BY COLUMN (c = source vertex):
+    c=0 (2 cells): blue=    0, black=    6, frac=0.0000
+    c=1 (1 cells): blue=    0, black=    2, frac=0.0000
+
+  BLUE FRACTION UNIFORMITY:
+    min=0.0000, max=0.0000, std=0.000000
+    UNIFORM: YES ✓
+
+  n=4 done (0.0s)
+
+================================================================================
+  n = 5
+================================================================================
+
+  STAIRCASE δ_3 GRID (3 rows):
+  Cell format: B/K (blue/black line count)
+  Anti-diagonal cells marked with [*]
+
+    r=0:   3/  8      3/  4      9/  0[*] 
+    r=1:   9/  2      7/  4[*] 
+    r=2:   8/  3[*] 
+
+  ANTI-DIAGONAL vs OFF-DIAGONAL:
+    Anti-diagonal: blue=24, black=7, blue_frac=0.7742
+    Off-diagonal:  blue=15, black=14, blue_frac=0.5172
+    Total:         blue=39, black=21, blue_frac=0.6500
+
+  BLUE FRACTION BY ROW (r = range - 1):
+    r=0 (3 cells): blue=   15, black=   12, frac=0.5556
+    r=1 (2 cells): blue=   16, black=    6, frac=0.7273
+    r=2 (1 cells): blue=    8, black=    3, frac=0.7273
+
+  BLUE FRACTION BY COLUMN (c = source vertex):
+    c=0 (3 cells): blue=   20, black=   13, frac=0.6061
+    c=1 (2 cells): blue=   10, black=    8, frac=0.5556
+    c=2 (1 cells): blue=    9, black=    0, frac=1.0000
+
+  BLUE FRACTION UNIFORMITY:
+    min=0.2727, max=1.0000, std=0.240922
+    UNIFORM: NO ✗
+
+  n=5 done (0.2s)
+
+================================================================================
+  n = 6
+================================================================================
+
+  STAIRCASE δ_4 GRID (4 rows):
+  Cell format: B/K (blue/black line count)
+  Anti-diagonal cells marked with [*]
+
+    r=0:  39/ 12     31/ 14     26/ 12     33/ 12[*] 
+    r=1:  35/ 20     33/ 21     36/ 16[*] 
+    r=2:  31/ 17     44/ 12[*] 
+    r=3:  36/ 18[*] 
+
+  ANTI-DIAGONAL vs OFF-DIAGONAL:
+    Anti-diagonal: blue=149, black=58, blue_frac=0.7198
+    Off-diagonal:  blue=195, black=96, blue_frac=0.6701
+    Total:         blue=344, black=154, blue_frac=0.6908
+
+  BLUE FRACTION BY ROW (r = range - 1):
+    r=0 (4 cells): blue=  129, black=   50, frac=0.7207
+    r=1 (3 cells): blue=  104, black=   57, frac=0.6460
+    r=2 (2 cells): blue=   75, black=   29, frac=0.7212
+    r=3 (1 cells): blue=   36, black=   18, frac=0.6667
+
+  BLUE FRACTION BY COLUMN (c = source vertex):
+    c=0 (4 cells): blue=  141, black=   67, frac=0.6779
+    c=1 (3 cells): blue=  108, black=   47, frac=0.6968
+    c=2 (2 cells): blue=   62, black=   28, frac=0.6889
+    c=3 (1 cells): blue=   33, black=   12, frac=0.7333
+
+  BLUE FRACTION UNIFORMITY:
+    min=0.6111, max=0.7857, std=0.053148
+    UNIFORM: NO ✗
+
+  n=6 done (60.3s)
+
+================================================================================
+  n = 7
+================================================================================
+
+  STAIRCASE δ_5 GRID (5 rows):
+  Cell format: B/K (blue/black line count)
+  Anti-diagonal cells marked with [*]
+
+    r=0: 313/125    286/124    301/ 92    338/ 74    301/116[*] 
+    r=1: 307/147    327/123    371/ 77    351/100[*] 
+    r=2: 337/118    353/103    351/103[*] 
+    r=3: 343/113    348/108[*] 
+    r=4: 331/120[*] 
+
+  ANTI-DIAGONAL vs OFF-DIAGONAL:
+    Anti-diagonal: blue=1682, black=547, blue_frac=0.7546
+    Off-diagonal:  blue=3276, black=1096, blue_frac=0.7493
+    Total:         blue=4958, black=1643, blue_frac=0.7511
+
+  BLUE FRACTION BY ROW (r = range - 1):
+    r=0 (5 cells): blue= 1539, black=  531, frac=0.7435
+    r=1 (4 cells): blue= 1356, black=  447, frac=0.7521
+    r=2 (3 cells): blue= 1041, black=  324, frac=0.7626
+    r=3 (2 cells): blue=  691, black=  221, frac=0.7577
+    r=4 (1 cells): blue=  331, black=  120, frac=0.7339
+
+  BLUE FRACTION BY COLUMN (c = source vertex):
+    c=0 (5 cells): blue= 1631, black=  623, frac=0.7236
+    c=1 (4 cells): blue= 1314, black=  458, frac=0.7415
+    c=2 (3 cells): blue= 1023, black=  272, frac=0.7900
+    c=3 (2 cells): blue=  689, black=  174, frac=0.7984
+    c=4 (1 cells): blue=  301, black=  116, frac=0.7218
+
+  BLUE FRACTION UNIFORMITY:
+    min=0.6762, max=0.8281, std=0.040429
+    UNIFORM: NO ✗
+
+  n=7 done (3.5s)
+
+================================================================================
+  DONE
+================================================================================
