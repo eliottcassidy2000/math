@@ -1,0 +1,152 @@
+================================================================================
+  RIB ASYMMETRY: HOW BLACK HANGS OFF THE SPINE
+  opus-2026-03-23-S237
+================================================================================
+
+================================================================================
+  n = 3 (ODD)
+================================================================================
+  GLOBAL RIB ASYMMETRY:
+    ↑ above: 0, ↓ below: 0, = level: 0
+
+
+    LOW H (≤2): 1 SC nodes, ↑0 ↓0 =0
+    HIGH H (>2): 1 SC nodes, ↑0 ↓0 =0
+
+    PATTERN: Low-H SC nodes have ribs mostly pointing DOWN
+             High-H SC nodes have ribs mostly pointing DOWN
+
+    Avg score palindrome deviation of NS neighbors: 0.000
+
+  (0.0s)
+
+================================================================================
+  n = 4 (EVEN)
+================================================================================
+  GLOBAL RIB ASYMMETRY:
+    ↑ above: 1, ↓ below: 1, = level: 0
+    Imbalance: +0 (0.000)
+
+    LOW H (≤3): 1 SC nodes, ↑1 ↓0 =0
+    HIGH H (>3): 1 SC nodes, ↑0 ↓1 =0
+
+    PATTERN: Low-H SC nodes have ribs mostly pointing UP
+             High-H SC nodes have ribs mostly pointing DOWN
+
+    NS neighbor c3 PARITY: even=0, odd=2
+    c3 parity bias: 0.000
+
+    Avg score palindrome deviation of NS neighbors: 2.000
+
+    NS H-distribution around center H=3:
+    Above: 0, Below: 0, At: 1
+    NS H-asymmetry: +0
+
+  (0.0s)
+
+================================================================================
+  n = 5 (ODD)
+================================================================================
+  GLOBAL RIB ASYMMETRY:
+    ↑ above: 3, ↓ below: 5, = level: 0
+    Imbalance: -2 (-0.250)
+
+    LOW H (≤8): 2 SC nodes, ↑3 ↓0 =0
+    HIGH H (>8): 6 SC nodes, ↑0 ↓5 =0
+
+    PATTERN: Low-H SC nodes have ribs mostly pointing UP
+             High-H SC nodes have ribs mostly pointing DOWN
+
+    NS neighbor c3 PARITY: even=6, odd=2
+    c3 parity bias: 0.750
+
+    Avg score palindrome deviation of NS neighbors: 1.375
+
+    NS H-distribution around center H=8:
+    Above: 0, Below: 2, At: 0
+    NS H-asymmetry: -2
+
+  (0.2s)
+
+================================================================================
+  n = 6 (EVEN)
+================================================================================
+  GLOBAL RIB ASYMMETRY:
+    ↑ above: 19, ↓ below: 23, = level: 3
+    Imbalance: -4 (-0.089)
+
+    LOW H (≤23): 5 SC nodes, ↑12 ↓7 =0
+    HIGH H (>23): 7 SC nodes, ↑7 ↓16 =3
+
+    PATTERN: Low-H SC nodes have ribs mostly pointing UP
+             High-H SC nodes have ribs mostly pointing DOWN
+
+    NS neighbor c3 PARITY: even=17, odd=28
+    c3 parity bias: 0.378
+
+    Avg score palindrome deviation of NS neighbors: 1.550
+
+    NS H-distribution around center H=23:
+    Above: 9, Below: 11, At: 2
+    NS H-asymmetry: -2
+
+  (59.6s)
+
+================================================================================
+  n = 7 (ODD)
+================================================================================
+  GLOBAL RIB ASYMMETRY:
+    ↑ above: 215, ↓ below: 318, = level: 17
+    Imbalance: -103 (-0.187)
+
+    LOW H (≤95): 41 SC nodes, ↑175 ↓115 =9
+    HIGH H (>95): 47 SC nodes, ↑40 ↓203 =8
+
+    PATTERN: Low-H SC nodes have ribs mostly pointing UP
+             High-H SC nodes have ribs mostly pointing DOWN
+
+    NS neighbor c3 PARITY: even=292, odd=258
+    c3 parity bias: 0.531
+
+    Avg score palindrome deviation of NS neighbors: 1.111
+
+    NS H-distribution around center H=95:
+    Above: 56, Below: 126, At: 2
+    NS H-asymmetry: -70
+
+  (3.4s)
+
+================================================================================
+  n = 8 (EVEN)
+================================================================================
+  GLOBAL RIB ASYMMETRY:
+    ↑ above: 874, ↓ below: 997, = level: 23
+    Imbalance: -123 (-0.065)
+
+    LOW H (≤331): 74 SC nodes, ↑493 ↓296 =5
+    HIGH H (>331): 102 SC nodes, ↑381 ↓701 =18
+
+    PATTERN: Low-H SC nodes have ribs mostly pointing UP
+             High-H SC nodes have ribs mostly pointing DOWN
+
+    NS neighbor c3 PARITY: even=898, odd=996
+    c3 parity bias: 0.474
+
+    Avg score palindrome deviation of NS neighbors: 1.378
+
+    NS H-distribution around center H=331:
+    Above: 1534, Below: 1810, At: 8
+    NS H-asymmetry: -276
+
+  (177.8s)
+
+================================================================================
+  CROSS-n RIB ASYMMETRY PATTERN
+================================================================================
+
+    n parity    ↑up  ↓down  =lvl   imbal   ratio
+    3    ODD      0      0     0      +0  +0.000
+    4   EVEN      1      1     0      +0  +0.000
+    5    ODD      3      5     0      -2  -0.250
+    6   EVEN     19     23     3      -4  -0.089
+    7    ODD    215    318    17    -103  -0.187
