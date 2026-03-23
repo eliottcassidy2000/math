@@ -1,0 +1,82 @@
+======================================================================
+  G_7 MERGED META-GRAPH: ANALYTICAL PREDICTIONS
+======================================================================
+
+======================================================================
+  1. SC ISO CLASS COUNT
+======================================================================
+
+  ESTIMATES FOR n=7:
+  Total iso classes: 456
+  Total edges: 4086
+  SC=100: NS_pairs=178, V_merged=278
+  SC=150: NS_pairs=153, V_merged=303
+  SC=200: NS_pairs=128, V_merged=328
+  SC=240: NS_pairs=108, V_merged=348
+  SC=300: NS_pairs=78, V_merged=378
+
+======================================================================
+  2. PREDICTIONS FOR G_7/Z_2
+======================================================================
+
+  BEST ESTIMATE (SC ~ 240):
+    V_merged = 348
+    E_merged ~ 2003
+    Blue ~ 3146 (77%)
+    Black ~ 940
+    Collapsed ~ 40
+    Twin ~ 2043
+    Density ~ 0.0332
+
+======================================================================
+  3. THE RECURSIVE PATTERN: G_n/Z_2 -> G_(n-2)/Z_2
+======================================================================
+
+  Descent: G_7/Z_2 (348 nodes) -> G_5/Z_2 (10 nodes)
+  Ratio: 34.8x
+  Compare: G_6/Z_2 (34 nodes) -> G_4/Z_2 (3 nodes)
+  Ratio: 11.3x
+  G_5/Z_2 (10 nodes) -> G_3/Z_2 (2 nodes)
+  Ratio: 5.0x
+
+  Descent ratios: 5.0, 11.3, ~34.8
+  A000568 ratios: 6.0, 14.0, 38.0
+  Close match: the descent ratio ~ A000568(n)/A000568(n-2)
+
+======================================================================
+  4. THE BLUE FRACTION TREND
+======================================================================
+
+    n   Blue   Total   Blue%  SC frac
+    3      1       1  100.0%  100.0%
+    4      1       5   20.0%   50.0%
+    5     14      30   46.7%   66.7%
+    6    200     290   69.0%   21.4%
+    7   3146    4086   77.0%     ~53%
+
+  THE BLUE FRACTION TREND:
+    n=3: 100% (all SC, all blue)
+    n=4: 20% (first NS classes, black dominates)
+    n=5: 47% (more SC, blue recovers)
+    n=6: 69% (NS-NS blue dominates)
+    n=7: ~77% (NS-NS continues to grow)
+    n->inf: ~100% (almost all NS, almost all blue)
+
+  The blue fraction -> 1 because:
+  1. SC fraction of classes -> 0
+  2. NS-NS connections are BLUE by definition
+  3. The only black edges connect SC to NS (rare) or NS-to-complement-NS
+  4. As NS dominates, blue dominates
+
+  THE MERGED GRAPH at large n is ALMOST ENTIRELY ONE COLOR (blue).
+  Black edges become the RARE structural features connecting the
+  thin SC spine to the massive NS bulk.
+
+======================================================================
+  5. WIDTH AT n=7: PREDICTION C(5,2) = 10
+======================================================================
+
+  Width prediction for n=7: C(5, 2) = 10
+  Previous verified: n=3:C(1,0)=1, n=4:C(2,1)=2, n=5:C(3,1)=3, n=6:C(4,2)=6
+  Need H-level distribution at n=7 to verify.
+  The prediction of 10 would mean the widest H-level has exactly 10 classes.
