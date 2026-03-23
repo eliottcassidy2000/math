@@ -1,0 +1,145 @@
+======================================================================
+  THE COMPLEMENT-MERGED META-GRAPH G_n / Z_2
+======================================================================
+
+======================================================================
+  n = 3
+======================================================================
+
+  Original: 2 iso classes (2 SC + 0 NS)
+  Merged: 2 nodes (2 SC + 0 merged NS pairs)
+  Formula: (2 + 2) / 2 = 2.0
+
+  Original G_n: 1 edges = 1 blue + 0 black
+  Merged G_n/Z_2: 1 edges = 1 blue + 0 black
+  Collapsed edges (self-loops in merged): 0
+  Check: 1 + 0 = 1 vs original 1
+
+  BLUE/BLACK DECOMPOSITION:
+    Original: 1 blue + 0 black = 1
+    Merged:   1 blue + 0 black = 1
+    Collapsed: 0
+
+  MERGED DEGREE SEQUENCE:
+    node   0 (     SC, H=  1): degree 1
+    node   1 (     SC, H=  3): degree 1
+
+  SIMPLICITY COMPARISON:
+    Original: V=2, E=1, density=1.0000
+    Merged:   V=2, E=1, density=1.0000
+    Blue fraction original: 1/1 = 1.000
+    Blue fraction merged:   1/1 = 1.000
+
+======================================================================
+  n = 4
+======================================================================
+
+  Original: 4 iso classes (2 SC + 2 NS)
+  Merged: 3 nodes (2 SC + 1 merged NS pairs)
+  Formula: (4 + 2) / 2 = 3.0
+
+  Original G_n: 5 edges = 1 blue + 4 black
+  Merged G_n/Z_2: 3 edges = 1 blue + 2 black
+  Collapsed edges (self-loops in merged): 0
+  Check: 3 + 0 = 3 vs original 5
+
+  BLUE/BLACK DECOMPOSITION:
+    Original: 1 blue + 4 black = 5
+    Merged:   1 blue + 2 black = 3
+    Collapsed: 0
+
+  MERGED DEGREE SEQUENCE:
+    node   0 (     SC, H=  1): degree 2
+    node   1 (NS-pair, H=  3): degree 2
+    node   3 (     SC, H=  5): degree 2
+
+  SIMPLICITY COMPARISON:
+    Original: V=4, E=5, density=0.8333
+    Merged:   V=3, E=3, density=1.0000
+    Blue fraction original: 1/5 = 0.200
+    Blue fraction merged:   1/3 = 0.333
+
+======================================================================
+  n = 5
+======================================================================
+
+  Original: 12 iso classes (8 SC + 4 NS)
+  Merged: 10 nodes (8 SC + 2 merged NS pairs)
+  Formula: (12 + 8) / 2 = 10.0
+
+  Original G_n: 30 edges = 14 blue + 16 black
+  Merged G_n/Z_2: 21 edges = 13 blue + 8 black
+  Collapsed edges (self-loops in merged): 0
+  Check: 21 + 0 = 21 vs original 30
+
+  BLUE/BLACK DECOMPOSITION:
+    Original: 14 blue + 16 black = 30
+    Merged:   13 blue + 8 black = 21
+    Collapsed: 0
+
+  MERGED DEGREE SEQUENCE:
+    node   0 (     SC, H=  1): degree 4
+    node   1 (NS-pair, H=  3): degree 3
+    node   2 (     SC, H=  3): degree 3
+    node   4 (NS-pair, H=  5): degree 7
+    node   6 (     SC, H=  9): degree 5
+    node   7 (     SC, H=  9): degree 5
+    node   8 (     SC, H= 11): degree 5
+    node   9 (     SC, H= 13): degree 5
+    node  10 (     SC, H= 15): degree 3
+    node  11 (     SC, H= 15): degree 2
+
+  SIMPLICITY COMPARISON:
+    Original: V=12, E=30, density=0.4545
+    Merged:   V=10, E=21, density=0.4667
+    Blue fraction original: 14/30 = 0.467
+    Blue fraction merged:   13/21 = 0.619
+
+======================================================================
+  n = 6
+======================================================================
+
+  Original: 56 iso classes (12 SC + 44 NS)
+  Merged: 34 nodes (12 SC + 22 merged NS pairs)
+  Formula: (56 + 12) / 2 = 34.0
+
+  Original G_n: 290 edges = 200 blue + 90 black
+  Merged G_n/Z_2: 143 edges = 98 blue + 45 black
+  Collapsed edges (self-loops in merged): 5
+  Check: 143 + 5 = 148 vs original 290
+
+  BLUE/BLACK DECOMPOSITION:
+    Original: 200 blue + 90 black = 290
+    Merged:   98 blue + 45 black = 143
+    Collapsed: 5
+
+  MERGED DEGREE SEQUENCE:
+
+  SIMPLICITY COMPARISON:
+    Original: V=56, E=290, density=0.1883
+    Merged:   V=34, E=143, density=0.2549
+    Blue fraction original: 200/290 = 0.690
+    Blue fraction merged:   98/143 = 0.685
+
+======================================================================
+  SYNTHESIS: THE COMPLEMENT-MERGED PICTURE
+======================================================================
+
+  THE MERGED GRAPH G_n/Z_2 has:
+    Vertices = (A000568(n) + SC_count(n)) / 2
+    Edges = blue_edges + black_edges - collapsed_edges
+
+  After merging complement pairs:
+  1. SC nodes and merged-NS nodes are BOTH "self-inverse"
+  2. Blue edges connect same-type nodes (SC-SC or merged-merged)
+  3. Black edges connect different-type nodes (SC-merged or merged-merged cross)
+  4. Some original edges COLLAPSE into self-loops (edges within a complement pair)
+
+  The blue/black split is cleaner in the merged graph because
+  each node is now self-inverse, removing the asymmetry between
+  SC and NS classes.
+
+  EDGE COUNT = BLUE + BLACK + COLLAPSED:
+  This decomposition separates the edge count into three parts,
+  each potentially having a cleaner formula than the total.
+
