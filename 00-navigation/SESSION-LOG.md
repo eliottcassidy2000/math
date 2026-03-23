@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S249 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S248
+**Summary of work:** Identified arc neutrality as THE missing piece. Computed exact neutrality fractions. Found new sequence 1,3,11,79. Disproved fiber fraction = arc neutrality for n≥5.
+
+**Key discoveries:**
+1. Arc neutrality fraction f(n) = Tr(F)/(2^m × m) = 1/2, 3/8, 11/64, 79/1024
+2. Denominator always = 2^{C(n-1,2)}
+3. Numerator sequence 1, 3, 11, 79 is NOT in OEIS (genuinely new)
+4. The fiber fraction C(2k,k)/4^k ≠ arc neutrality for n≥5 (matches n=3,4 only)
+5. E = T/2 - Tr(F)/(2n!) works at n=3,4 but fails at n=5,6
+6. The correction involves non-identity Burnside terms from odd-cycle permutations
+
+**The formula chain:** f(n) → Tr(F) → SL_arc → gap_orbits → E(G_n)
+**The bottleneck:** Burnside corrections at steps 2-3 involve tournament-specific structure.
+**If we crack 1, 3, 11, 79, ... → we have E at all n.**
+
 ## opus-2026-03-23-S248 — 2026-03-23
 
 **Account:** opus
