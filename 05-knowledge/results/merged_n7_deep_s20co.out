@@ -1,0 +1,165 @@
+================================================================================
+  DEEP ANALYSIS OF G_7 AND G_7/Z_2
+  kind-pasteur-2026-03-23-S20co
+================================================================================
+  n=7, m=21, |tournaments|=2097152
+
+  PHASE 1: Hashing all 2097152 tournaments...
+    100000/2097152 (82s, ETA 1643s, 388 groups)
+    200000/2097152 (167s, ETA 1580s, 388 groups)
+    300000/2097152 (244s, ETA 1462s, 388 groups)
+    400000/2097152 (321s, ETA 1360s, 388 groups)
+    500000/2097152 (401s, ETA 1280s, 388 groups)
+    600000/2097152 (482s, ETA 1202s, 388 groups)
+    700000/2097152 (568s, ETA 1134s, 388 groups)
+    800000/2097152 (655s, ETA 1062s, 388 groups)
+    900000/2097152 (739s, ETA 982s, 388 groups)
+    1000000/2097152 (823s, ETA 903s, 388 groups)
+    1100000/2097152 (904s, ETA 820s, 388 groups)
+    1200000/2097152 (989s, ETA 739s, 388 groups)
+    1300000/2097152 (1072s, ETA 657s, 388 groups)
+    1400000/2097152 (1158s, ETA 576s, 388 groups)
+    1500000/2097152 (1245s, ETA 496s, 388 groups)
+    1600000/2097152 (1330s, ETA 413s, 388 groups)
+    1700000/2097152 (1416s, ETA 331s, 388 groups)
+    1800000/2097152 (1498s, ETA 247s, 388 groups)
+    1900000/2097152 (1582s, ETA 164s, 388 groups)
+    2000000/2097152 (1666s, ETA 81s, 388 groups)
+  Phase 1 done: 388 hash groups in 1745s
+  Ambiguous groups (multiple iso classes): 68
+
+  PHASE 2: Building iso classes...
+  |V(G_7)| = 456 (expected 456)
+  Phase 2 done in 247.2s
+
+  PHASE 3: SC and complement pairing...
+  SC classes: 88 (expected 88)
+  V_merged = 272 (expected 272)
+  Phase 3 done in 0.1s
+
+  PHASE 4: Computing edges...
+    100/456 (0.0s, 1146 edges)
+    200/456 (0.0s, 2227 edges)
+    300/456 (0.0s, 3148 edges)
+    400/456 (0.0s, 3873 edges)
+
+  Representative-only edges: 4086
+  Expected: 4086
+
+  |E(G_7)| = 4086 (expected 4086, blue=2986, black=1100)
+  Self-loops: 201
+  Phase 4 done in 0.0s
+
+  PHASE 5: Building merged graph G_7/Z_2...
+  V_merged = 272
+  E_merged = 2123, collapsed = 0, twin = 1963
+  Check: 2123+0+1963 = 4086 = 4086
+  Colors: blue=1573, black=550, mixed=0
+
+  Computing G_7 invariants...
+
+  ============================================================
+  INVARIANTS OF G_7 (V=456, E=4086)
+  ============================================================
+  Degree: min=1, max=21, avg=17.921
+  Density: 0.039387
+  Spectral radius: 19.064838
+  Spectral gap: 4.951843
+  Graph energy: 1510.764134
+  Estrada index: 192239083.423178
+  Top 10 eigenvalues: [19.0648, 14.1130, 12.1868, 10.9157, 10.7229, 10.3758, 10.1468, 9.4459, 9.4370, 9.3473]
+  Algebraic connectivity: 0.895844
+  Laplacian spectral radius: 33.072419
+  Kirchhoff index: 14245.0908
+  log(spanning trees): 1274.9497
+  Diameter: 7
+  Wiener index: 299783
+  Avg distance: 2.8898
+  Triangles: 1986
+  Avg clustering: 0.090361
+  Forman-Ricci: min=-38, max=-6, avg=-29.1527, total=-119118
+  Degree entropy: 2.8907 bits
+  Betweenness: max=644.8095, avg=429.9189
+  Ramanujan: False (ratio=1.7154)
+  H-gradient: uphill=2988, downhill=962, level=136
+  DAG: False
+  H levels: 77
+  H range: [1, 189]
+
+  Computing G_7/Z_2 invariants...
+
+  ============================================================
+  INVARIANTS OF G_7/Z_2 (V=272, E=2123)
+  ============================================================
+  Degree: min=1, max=21, avg=15.610
+  Density: 0.057603
+  Spectral radius: 17.617104
+  Spectral gap: 4.865015
+  Graph energy: 819.992477
+  Estrada index: 45189787.408806
+  Top 10 eigenvalues: [17.6171, 12.7521, 9.8096, 9.4722, 9.4121, 9.2423, 8.2347, 7.2943, 7.1255, 7.0782]
+  Algebraic connectivity: 0.849304
+  Laplacian spectral radius: 30.903619
+  Kirchhoff index: 6400.5325
+  log(spanning trees): 709.7979
+  Diameter: 7
+  Wiener index: 102246
+  Avg distance: 2.7742
+  Triangles: 1159
+  Avg clustering: 0.110816
+  Forman-Ricci: min=-38, max=-3, avg=-25.4560, total=-54043
+  Degree entropy: 3.2948 bits
+  Betweenness: max=476.0742, avg=240.4044
+  Ramanujan: False (ratio=1.6681)
+  H-gradient: uphill=1633, downhill=419, level=71
+  DAG: False
+  H levels: 77
+  H range: [1, 189]
+
+  BLUE/BLACK SUBGRAPH ANALYSIS OF G_7/Z_2
+  --------------------------------------------------
+  Blue subgraph: 2 components, sizes [184, 88]
+  Black subgraph: 33 components, sizes [240, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  Blue degree: min=1, max=21, avg=11.57
+  Black degree: min=0, max=9, avg=4.04
+  SC merged vertices: 88, NS merged vertices: 184
+  SC blue degree: mean=3.95, range=[1,8]
+  SC black degree: mean=6.25, range=[0,9]
+  NS blue degree: mean=15.21, range=[4,21]
+  NS black degree: mean=2.99, range=[0,9]
+
+  DEGREE-H CORRELATION ON G_7/Z_2
+  --------------------------------------------------
+  corr(H, degree) = -0.0518
+  corr(c3, degree) = 0.0550
+  corr(c3, H) = 0.9515
+  corr(|Aut|, degree) = -0.5503
+  Top 10 by deg*H:
+    1. mid=252 H=139 deg=21 c3=12 sc=False aut=1
+    2. mid=255 H=153 deg=19 c3=13 sc=False aut=1
+    3. mid=251 H=135 deg=21 c3=12 sc=False aut=1
+    4. mid=227 H=131 deg=21 c3=12 sc=False aut=1
+    5. mid=222 H=137 deg=20 c3=12 sc=False aut=1
+    6. mid=234 H=151 deg=18 c3=13 sc=False aut=1
+    7. mid=237 H=133 deg=20 c3=12 sc=False aut=1
+    8. mid=235 H=139 deg=19 c3=12 sc=False aut=1
+    9. mid=185 H=131 deg=20 c3=12 sc=False aut=1
+    10. mid=220 H=131 deg=20 c3=12 sc=False aut=1
+
+
+  ============================================================
+  SUMMARY FOR n=7
+  ============================================================
+  G_7: V=456, E=4086, diameter=7, triangles=1986
+  G_7/Z_2: V=272, E=2123, diameter=7, triangles=1159
+  SC=88, collapsed=0, twin=1963
+  Blue merged=1573, Black merged=550, Mixed=0
+  Spectral radius G_7: 19.0648
+  Spectral radius G_7/Z_2: 17.6171
+  Algebraic connectivity G_7: 0.8958
+  Algebraic connectivity G_7/Z_2: 0.8493
+  Graph energy G_7: 1510.7641
+  Graph energy G_7/Z_2: 819.9925
+
+  Total runtime: 2279s
+================================================================================
