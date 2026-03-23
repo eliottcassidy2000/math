@@ -1,0 +1,60 @@
+
+========================================================================
+  COMPLETE 3-WAY ORBIT DECOMPOSITION
+========================================================================
+
+  n  | edge_orb | E    | SL_edge | multi | SL_A | SL_B=(n-2)!
+  ---|----------|------|---------|-------|------|--------
+  3  |       3  |    1 |       2 |     0 |    1 |    1
+  4  |      10  |    5 |       5 |     0 |    3 |    2
+  5  |      50  |   30 |      14 |     6 |    8 |    6
+  n=3: T/2=2, E+multi+SL_A=1+0+1=2, match=True
+  n=4: T/2=8, E+multi+SL_A=5+0+3=8, match=True
+  n=5: T/2=44, E+multi+SL_A=30+6+8=44, match=True
+
+========================================================================
+  THE THREE SEQUENCES
+========================================================================
+
+  The D_orbits sequence (= multi + SL_edge = edge_orbits - E):
+    n=3: D_orbits = 2
+    n=4: D_orbits = 5
+    n=5: D_orbits = 20
+    n=6: D_orbits = 86
+    n=7: D_orbits = 490
+    n=8: D_orbits = 3703
+
+  D_orbits = [2, 5, 20, 86, 490, 3703]
+
+  Multi-edge orbit counts:
+    n=3: multi = D_orbits(2) - SL_edge(2) = 0
+    n=4: multi = D_orbits(5) - SL_edge(5) = 0
+    n=5: multi = D_orbits(20) - SL_edge(14) = 6
+
+========================================================================
+  WHAT ARE THE 6 MULTI-EDGES AT n=5?
+========================================================================
+
+  Class pairs with multiple edge orbits (at n=5):
+
+    {0, 0}: 4 orbits (SELF-LOOP)
+    {1, 1}: 1 orbits (SELF-LOOP)
+    {2, 2}: 2 orbits (SELF-LOOP)
+    {4, 4}: 2 orbits (SELF-LOOP)
+    {4, 6}: 2 orbits (MULTI-EDGE, 1 extra)
+    {4, 8}: 2 orbits (MULTI-EDGE, 1 extra)
+    {5, 5}: 2 orbits (SELF-LOOP)
+    {6, 10}: 3 orbits (MULTI-EDGE, 2 extra)
+    {7, 7}: 1 orbits (SELF-LOOP)
+    {8, 8}: 2 orbits (SELF-LOOP)
+    {8, 10}: 2 orbits (MULTI-EDGE, 1 extra)
+    {9, 10}: 2 orbits (MULTI-EDGE, 1 extra)
+
+  Summary:
+    Total edge orbits: 50
+    Self-loop orbits: 14
+    Simple cross (= E): 30
+    Multi-edge orbits: 6
+    Check: 14 + 30 + 6 = 50 (should be 50)
+
+Done. opus-2026-03-23-S245b

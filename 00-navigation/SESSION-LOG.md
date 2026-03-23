@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S245 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S244
+**Summary of work:** Complete 3-way orbit decomposition of edge_orbits. Devil's advocate agent launched. Found: Case B = (n-2)! is ENTIRELY self-loops.
+
+**Key results:**
+1. edge_orbits = simple_cross + multi_cross + self_loop = 30 + 6 + 14 = 50 at n=5
+2. Case B = (n-2)! contributes ONLY self-loops (E_B = 0 verified n=3,4,5)
+3. SL_B = (n-2)! exactly: every Case B orbit is a self-loop
+4. Multi-edges concentrate near class 10 (H=19, NS) — 3 of 6 multi-edges involve it
+5. N(n) sequence (self-reversible at fixed arc): 4, 24, 176, 2528
+6. F_labeled = C(n,2) * N(n) / 2 verified exactly n=3..6
+7. Devil's advocate audit launched (still running)
+
+**NAMING CLARIFICATION (important for future agents):**
+- "SL_orbits" in the edge formula = D_orbits = edge_orbits - E = multi + self_loops
+- "SL_edge" = actual self-loop edge orbits (Burnside on {T, T^e} with T ≅ T^e)
+- These are DIFFERENT: D_orbits = 20 at n=5, SL_edge = 14 at n=5
+
+**New scripts:** pair_stabilizer_sl_s245.py, multi_edge_decomposition_s245b.py
+
 ## opus-2026-03-23-S244 — 2026-03-23
 
 **Account:** opus
