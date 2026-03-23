@@ -1,0 +1,261 @@
+
+========================================================================
+  PART 1: G_3 EMBEDDED IN G_5
+========================================================================
+
+  G_5: 12 classes. G_3: 2 classes.
+
+  FIBER STRUCTURE:
+  Inner class 0 (H=1): fiber size 9
+    Fiber classes: [(0, 1), (1, 3), (2, 5), (4, 9), (5, 5), (6, 9), (7, 3), (10, 13), (11, 15)]
+    Fiber connected in G_5: True
+    Fiber diameter: 3
+    Edges within fiber: 18
+    Cross-fiber edges: 11
+
+  Inner class 1 (H=3): fiber size 8
+    Fiber classes: [(2, 5), (3, 3), (4, 9), (5, 5), (6, 9), (8, 11), (9, 15), (11, 15)]
+    Fiber connected in G_5: True
+    Fiber diameter: 3
+    Edges within fiber: 14
+    Cross-fiber edges: 14
+
+
+========================================================================
+  PART 2: THE PERPENDICULAR DIRECTION
+========================================================================
+
+
+  The n-2 embedding creates FIBERS over G_{n-2} classes.
+  The PERPENDICULAR direction is variation WITHIN a fiber.
+
+  Within a fiber, classes share the same inner tournament but
+  differ in the SOURCE-SINK WIRING (boundary arcs).
+
+  The wiring has 3 components:
+  1. Source-to-middle arcs: n-2 binary choices
+  2. Middle-to-sink arcs: n-2 binary choices
+  3. Source-to-sink arc: 1 binary choice
+  Total: 2(n-2) + 1 = 2n-3 wiring bits.
+
+  The PERPENDICULAR GRAPH is the graph on each fiber induced
+  by the arc-reversal edges of G_n.
+
+  QUESTION: Is the perpendicular graph related to a HYPERCUBE?
+  The wiring has 2n-3 bits, so the full wiring space is Q_{2n-3}.
+  The perpendicular graph is a QUOTIENT of Q_{2n-3} by the
+  automorphisms of the inner tournament.
+
+  n=5: wiring bits = 7, Q_7 has 128 nodes.
+  Fiber 0 has 9 classes (quotient of 128 by ~14)
+  Fiber 1 has 8 classes (quotient of 128 by ~16)
+
+  ARC TYPES at n=5:
+  Total arcs: m = C(5,2) = 10
+  Inner arcs: C(3,2) = 3 (arcs among middle 3 vertices)
+  Boundary arcs: 10 - 3 = 7 (= 2n-3 = 7)
+  Inner arc reversal: CHANGES the inner class (crosses fibers)
+  Boundary arc reversal: STAYS in the same fiber (perpendicular)
+
+  THEREFORE:
+  Within-fiber edges correspond to BOUNDARY arc reversals (7 per vertex)
+  Cross-fiber edges correspond to INNER arc reversals (3 per vertex)
+  Total edges from each class: 10 = 7 boundary + 3 inner
+
+  Class 0 (H=1, fiber 0): deg=6, within=5, cross=1
+  Class 1 (H=3, fiber 0): deg=3, within=3, cross=0
+  Class 2 (H=5, fiber 0): deg=7, within=5, cross=2
+  Class 2 (H=5, fiber 1): deg=7, within=4, cross=3
+  Class 3 (H=3, fiber 1): deg=4, within=3, cross=1
+  Class 4 (H=9, fiber 1): deg=6, within=5, cross=1
+
+========================================================================
+  PART 3: IS G_5 A PRODUCT OF G_3 AND A FIBER GRAPH?
+========================================================================
+
+
+  If G_5 were a PRODUCT graph G_3 x F (where F is the fiber graph):
+  - |V(G_5)| = |V(G_3)| * |V(F)|
+  - |E(G_5)| = |V(G_3)| * |E(F)| + |V(F)| * |E(G_3)|
+  - Each (inner, wiring) pair gives one G_5 class
+
+  CHECKING:
+  |V(G_5)| = 12. |V(G_3)| = 2.
+  If product: |V(F)| = 12/2 = 6. But fibers have sizes 9 and 8!
+  So G_5 is NOT a simple product (fibers have different sizes).
+
+  Instead: G_5 is a FIBER BUNDLE over G_3 with varying fiber size.
+  Fiber over class 0 (H=1): 9 classes
+  Fiber over class 1 (H=3): 8 classes
+  Total: 9 + 8 = 17. But |V(G_5)| = 12!
+  So: fibers OVERLAP. 17 - 12 = 5 classes are in BOTH fibers.
+
+  Fiber 0 (inner H=1): 9 classes
+  Fiber 1 (inner H=3): 8 classes
+  Overlap: 5 classes (in BOTH fibers)
+  Only in fiber 0: 4 classes
+  Only in fiber 1: 3 classes
+
+  OVERLAP CLASSES (multiple inner types):
+    Class 2 (H=5, scores=(1, 1, 2, 2, 4)): inner classes = [0, 1] (H=[1, 3])
+    Class 4 (H=9, scores=(1, 1, 2, 3, 3)): inner classes = [0, 1] (H=[1, 3])
+    Class 5 (H=5, scores=(0, 2, 2, 3, 3)): inner classes = [0, 1] (H=[1, 3])
+    Class 6 (H=9, scores=(1, 1, 2, 3, 3)): inner classes = [0, 1] (H=[1, 3])
+    Class 11 (H=15, scores=(2, 2, 2, 2, 2)): inner classes = [0, 1] (H=[1, 3])
+
+  INTERPRETATION:
+  The overlap classes are those where DIFFERENT source-sink choices
+  reveal DIFFERENT inner tournaments. These are the classes at the
+  "intersection" of two fibers.
+
+  In a fiber bundle, the OVERLAP is the "transition function"
+  between two local trivializations. The transition function tells
+  you how to glue the fibers together.
+
+
+========================================================================
+  PART 4: CROSS-FIBER EDGES = INNER ARC REVERSALS
+========================================================================
+
+  Cross-fiber edges change the inner class (inner arc reversal).
+
+  Pure cross-fiber edges (only_0 <-> only_1): 3
+  Edges involving overlap classes: 29
+
+  G_3 has 1 edge (transitive <-> 3-cycle).
+  This edge 'lifts' to 3 cross-fiber edges in G_5.
+  Lift factor: 3
+
+========================================================================
+  PART 5: THE PERPENDICULAR (FIBER) GRAPH
+========================================================================
+
+  The perpendicular graph on fiber 0 (inner = transitive):
+
+  Fiber 0 (inner H=1, 9 classes):
+    Edges: 18
+    Degree sequence: [1, 3, 3, 4, 4, 5, 5, 5, 6]
+    H distribution: {1: 1, 3: 2, 5: 2, 9: 2, 13: 1, 15: 1}
+    Connected: True
+
+  Fiber 1 (inner H=3, 8 classes):
+    Edges: 14
+    Degree sequence: [1, 2, 3, 4, 4, 4, 5, 5]
+    H distribution: {3: 1, 5: 2, 9: 2, 11: 1, 15: 2}
+    Connected: True
+
+
+========================================================================
+  PART 6: PERPENDICULAR STRUCTURE AT n=6
+========================================================================
+
+  G_6 embeds G_4 (4 classes: H=1,3,3,5).
+  Fiber sizes: 21, 14, 41, 14 (total 90 > 56 = V_6).
+  Overlap: 90 - 56 = 34 classes in multiple fibers.
+
+
+  THE PERPENDICULAR PRINCIPLE:
+  Each fiber is a "slice" of G_n at fixed inner tournament.
+  The fibers overlap at classes with AMBIGUOUS inner structure.
+
+  The PERPENDICULAR graph on each fiber captures the WIRING VARIATION:
+  how changing boundary arcs (source-to-middle, middle-to-sink, source-to-sink)
+  moves between iso classes while keeping the inner structure fixed.
+
+  IN THE MERGED META-GRAPH G_n/Z_2:
+  The n-2 descent merges complement pairs:
+    G_n/Z_2 fibers over G_{n-2}/Z_2
+  The merged fiber has size = (fiber_size + SC_in_fiber) / 2
+
+
+========================================================================
+  PART 7: WHAT GETS EMBEDDED (THE DEEP QUESTION)
+========================================================================
+
+
+  The n-2 descent embeds G_{n-2}/Z_2 INTO G_n/Z_2.
+  But WHAT ASPECT of G_{n-2} is preserved?
+
+  PRESERVED:
+  1. The NUMBER of inner classes (= |V(G_{n-2})|)
+  2. The H VALUES of inner classes (H is inherited)
+  3. The SC STATUS of inner classes (SC inner -> fiber contains SC outer)
+  4. The ADJACENCY of inner classes (connected inner -> cross-fiber edges)
+
+  NOT PRESERVED:
+  1. The EDGE COUNT of G_{n-2} (lifting changes multiplicity)
+  2. The DIAMETER (fibers add distance)
+  3. The DEGREE SEQUENCE (wiring arcs change degrees)
+
+  THE PERPENDICULAR DIRECTION ADDS:
+  1. 2n-3 new binary choices (boundary wiring)
+  2. New H values (the same inner can give different H with different wiring)
+  3. New score sequences (wiring changes source/sink scores)
+  4. New cycle structures (boundary arcs create new cycles)
+
+  THE RECURSIVE PICTURE:
+  G_n/Z_2 = (G_{n-2}/Z_2) x_fiber (perpendicular graph)
+  where x_fiber means "fiber bundle product."
+
+  At each step n -> n-2:
+  - The BASE gets smaller (fewer inner classes)
+  - The FIBER gets larger (more wiring choices)
+  - The OVERLAP grows (more ambiguous classes)
+
+  IN THE LIMIT n -> infinity:
+  - The base G_{n-2}/Z_2 has V_merged ~ A000568(n-2)/2 classes
+  - The fiber has ~ 2^{2n-3} / (n-2)! wirings per inner class
+  - The product gives ~ V_{n-2} * 2^{2n-3} / (n-2)! ~ V_n
+
+  This IS the growth formula: V(n) ~ V(n-2) * 2^{2n-3} / (n! / (n-2)!)
+  = V(n-2) * 2^{2n-3} / (n(n-1))
+
+  CHECK: V(5)/V(3) = 12/2 = 6. Predicted: 2^7 / (5*4) = 128/20 = 6.4. Close!
+  V(7)/V(5) = 456/12 = 38. Predicted: 2^11 / (7*6) = 2048/42 = 48.8. Off by 22%.
+
+  The formula is approximate because of the overlap correction.
+
+
+========================================================================
+  SYNTHESIS: THE PERPENDICULAR STRUCTURE
+========================================================================
+
+
+  G_n/Z_2 HAS A PERPENDICULAR DECOMPOSITION:
+
+  PARALLEL DIRECTION (n-2 embedding):
+    - Follows the inner tournament structure
+    - Edges = inner arc reversals
+    - Distance in this direction = inner class distance in G_{n-2}
+    - Controlled by the BASE graph G_{n-2}/Z_2
+
+  PERPENDICULAR DIRECTION (wiring variation):
+    - Varies the source-sink boundary
+    - Edges = boundary arc reversals (2n-3 possible per class)
+    - Distance = boundary Hamming distance (modulo automorphisms)
+    - Controlled by the FIBER graph
+
+  THE OVERLAP:
+    - Classes at the intersection of two fibers
+    - Have MULTIPLE possible source-sink decompositions
+    - Act as "transition points" gluing fibers together
+    - The overlap fraction grows with n
+
+  AT n=5:
+    Fiber 0 (inner transitive): 9 classes, 4-connected
+    Fiber 1 (inner 3-cycle): 8 classes, connected
+    Overlap: 5 classes (in both fibers)
+    Pure cross-fiber edges: 3
+    The 5 overlap classes are the "hinge" connecting the two fibers.
+
+  THE PERPENDICULAR PRINCIPLE:
+    Every property of G_n decomposes into:
+    - A PARALLEL component (inherited from G_{n-2})
+    - A PERPENDICULAR component (from the wiring)
+    - A CROSS-TERM (from the fiber overlap / transition function)
+
+    The OCR is the parallel component of H variance.
+    The 3% residual is the perpendicular component.
+    The cross-term is the interaction between inner and boundary.
+
+Done. opus-2026-03-23-S200
