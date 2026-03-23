@@ -1,0 +1,218 @@
+================================================================================
+  EDGE THICKNESS DECOMPOSITION: T_n = SL_n + sum(thickness)
+  kind-pasteur-2026-03-23-S20cs
+================================================================================
+
+################################################################################
+  n = 3
+################################################################################
+
+  n=3: V_merged=2, 2 iso classes [0.0s]
+  Total (tournament, arc) transitions: 24
+    = 8 tournaments x 3 arcs
+  Self-loops (stay in same merged class): 12
+  Cross-transitions (change merged class): 12
+  Edges (distinct pairs): 1
+
+  EDGE THICKNESS DISTRIBUTION:
+    thickness=12: 1 edges (1 blue, 0 black)
+
+  VERIFICATION:
+    self_loops + sum(thickness) = 12 + 12 = 24
+    total (T,arc) pairs = 24
+    Match? YES
+
+  PER-CLASS SELF-LOOP ANALYSIS:
+     mid    H  SC |Aut|   size     SL  SL/size  SL/(size*m)
+       0    1   Y     1      6     12      2.0       0.6667
+       1    3   Y     3      2      0      0.0       0.0000
+
+  KEY RATIOS:
+    E (edges) = 1
+    SL (self-loops) = 12
+    Total transitions = 24
+    Avg thickness = 12.0000
+    SL / total = 0.5000
+    (total - SL) / (2*E) = 6.0000
+
+    Blue edges: 1, avg thickness = 12.00, min=12, max=12
+
+    SC self-loop fraction: 12/24 = 0.5000
+
+
+################################################################################
+  n = 4
+################################################################################
+
+  n=4: V_merged=3, 4 iso classes [0.0s]
+  Total (tournament, arc) transitions: 384
+    = 64 tournaments x 6 arcs
+  Self-loops (stay in same merged class): 144
+  Cross-transitions (change merged class): 240
+  Edges (distinct pairs): 3
+
+  EDGE THICKNESS DISTRIBUTION:
+    thickness=48: 1 edges (1 blue, 0 black)
+    thickness=96: 2 edges (0 blue, 2 black)
+
+  VERIFICATION:
+    self_loops + sum(thickness) = 144 + 240 = 384
+    total (T,arc) pairs = 384
+    Match? YES
+
+  PER-CLASS SELF-LOOP ANALYSIS:
+     mid    H  SC |Aut|   size     SL  SL/size  SL/(size*m)
+       0    1   Y     1     24     72      3.0       0.5000
+       1    3   N     3      8      0      0.0       0.0000
+       2    5   Y     1     24     72      3.0       0.5000
+
+  KEY RATIOS:
+    E (edges) = 3
+    SL (self-loops) = 144
+    Total transitions = 384
+    Avg thickness = 80.0000
+    SL / total = 0.3750
+    (total - SL) / (2*E) = 40.0000
+
+    Blue edges: 1, avg thickness = 48.00, min=48, max=48
+    Black edges: 2, avg thickness = 96.00, min=96, max=96
+
+    SC self-loop fraction: 144/288 = 0.5000
+    NS self-loop fraction: 0/48 = 0.0000
+
+################################################################################
+  n = 5
+################################################################################
+
+  n=5: V_merged=10, 12 iso classes [0.3s]
+  Total (tournament, arc) transitions: 10240
+    = 1024 tournaments x 10 arcs
+  Self-loops (stay in same merged class): 1760
+  Cross-transitions (change merged class): 8480
+  Edges (distinct pairs): 21
+
+  EDGE THICKNESS DISTRIBUTION:
+    thickness=80: 1 edges (1 blue, 0 black)
+    thickness=240: 6 edges (6 blue, 0 black)
+    thickness=480: 13 edges (5 blue, 8 black)
+    thickness=720: 1 edges (1 blue, 0 black)
+
+  VERIFICATION:
+    self_loops + sum(thickness) = 1760 + 8480 = 10240
+    total (T,arc) pairs = 10240
+    Match? YES
+
+  PER-CLASS SELF-LOOP ANALYSIS:
+     mid    H  SC |Aut|   size     SL  SL/size  SL/(size*m)
+       0    1   Y     1    120    480      4.0       0.4000
+       1    3   N     3     40     80      2.0       0.2000
+       2    5   N     1    120    720      6.0       0.6000
+       3    3   Y     3     40      0      0.0       0.0000
+       4    9   Y     1    120    240      2.0       0.2000
+       5   15   Y     3     40      0      0.0       0.0000
+       6   13   Y     1    120      0      0.0       0.0000
+       7   11   Y     1    120    240      2.0       0.2000
+       8   15   Y     5     24      0      0.0       0.0000
+       9    9   Y     1    120      0      0.0       0.0000
+
+  KEY RATIOS:
+    E (edges) = 21
+    SL (self-loops) = 1760
+    Total transitions = 10240
+    Avg thickness = 403.8095
+    SL / total = 0.1719
+    (total - SL) / (2*E) = 201.9048
+
+    Blue edges: 13, avg thickness = 356.92, min=80, max=720
+    Black edges: 8, avg thickness = 480.00, min=480, max=480
+
+    SC self-loop fraction: 960/7040 = 0.1364
+    NS self-loop fraction: 800/1600 = 0.5000
+
+################################################################################
+  n = 6
+################################################################################
+
+  n=6: V_merged=34, 56 iso classes [22.0s]
+  Total (tournament, arc) transitions: 491520
+    = 32768 tournaments x 15 arcs
+  Self-loops (stay in same merged class): 50880
+  Cross-transitions (change merged class): 440640
+  Edges (distinct pairs): 143
+
+  EDGE THICKNESS DISTRIBUTION:
+    thickness=960: 6 edges (5 blue, 1 black)
+    thickness=1440: 10 edges (10 blue, 0 black)
+    thickness=2880: 110 edges (69 blue, 41 black)
+    thickness=5760: 15 edges (12 blue, 3 black)
+    thickness=8640: 2 edges (2 blue, 0 black)
+
+  VERIFICATION:
+    self_loops + sum(thickness) = 50880 + 440640 = 491520
+    total (T,arc) pairs = 491520
+    Match? YES
+
+  PER-CLASS SELF-LOOP ANALYSIS:
+     mid    H  SC |Aut|   size     SL  SL/size  SL/(size*m)
+       0    1   Y     1    720   3600      5.0       0.3333
+       6    5   Y     1    720   2160      3.0       0.2000
+      11   17   Y     1    720   2160      3.0       0.2000
+      14   37   Y     1    720   2160      3.0       0.2000
+      19   33   Y     1    720    720      1.0       0.0667
+      23   41   Y     1    720   2160      3.0       0.2000
+      27    9   Y     9     80      0      0.0       0.0000
+      28   17   Y     1    720      0      0.0       0.0000
+      30   29   Y     1    720      0      0.0       0.0000
+      31   29   Y     1    720    720      1.0       0.0667
+      32   45   Y     3    240      0      0.0       0.0000
+      33   45   Y     3    240    720      3.0       0.2000
+
+  KEY RATIOS:
+    E (edges) = 143
+    SL (self-loops) = 50880
+    Total transitions = 491520
+    Avg thickness = 3081.3986
+    SL / total = 0.1035
+    (total - SL) / (2*E) = 1540.6993
+
+    Blue edges: 98, avg thickness = 3105.31, min=960, max=8640
+    Black edges: 45, avg thickness = 3029.33, min=960, max=5760
+
+    SC self-loop fraction: 14400/105600 = 0.1364
+    NS self-loop fraction: 36480/192960 = 0.1891
+
+
+================================================================================
+  CROSS-n SYNTHESIS
+================================================================================
+
+    n    V_m      E       SL      total   SL/tot   avg_th  (tot-SL)/2E
+  ----------------------------------------------------------------------
+    3      2      1       12         24   0.5000    12.00       6.0000
+    4      3      3      144        384   0.3750    80.00      40.0000
+    5     10     21     1760      10240   0.1719   403.81     201.9048
+    6     34    143    50880     491520   0.1035  3081.40    1540.6993
+
+  Self-loop sequence SL_n: 12, 144, 1760, 50880
+  Edge sequence E_n: 1, 3, 21, 143
+
+  SL_n / (2^m * m): 0.500000, 0.375000, 0.171875, 0.103516
+  SL per tournament: 1.50, 2.25, 1.72, 1.55
+  (should be ~neutral arcs = n-1 for transitive, varies for others)
+
+  THICKNESS DISTRIBUTION SUMMARY:
+    n=3: {12: 1}
+    n=4: {48: 1, 96: 2}
+    n=5: {80: 1, 240: 6, 480: 13, 720: 1}
+    n=6: {960: 6, 1440: 10, 2880: 110, 5760: 15, 8640: 2}
+
+  avg_thickness / 2: 6.0000, 40.0000, 201.9048, 1540.6993
+
+  CHECK: E = (total - SL) / avg_thickness ?
+    n=3: predicted E = 1.0, actual E = 1  EXACT
+    n=4: predicted E = 3.0, actual E = 3  EXACT
+    n=5: predicted E = 21.0, actual E = 21  EXACT
+    n=6: predicted E = 143.0, actual E = 143  EXACT
+
+  DONE.
+================================================================================
