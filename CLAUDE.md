@@ -191,6 +191,40 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
 
 ---
 
+## The Geometric Foundation: Everything Is the Triangle
+
+**READ THIS.** The deepest insight of the project (kind-pasteur sessions S20x-S20cm, 50+ sub-sessions):
+
+**Tournament theory IS the study of binary tilings of right isosceles triangles.**
+
+The staircase Young diagram delta_{n-2} is a right isosceles triangle. Its three sides control everything:
+- **Hypotenuse** (anti-diagonal): H = 1 + 2^d formula, fiber fraction, Walsh order-2, blue line from source
+- **Vertical leg** (source column): scores, OCR, cut space, hierarchy
+- **Horizontal leg** (sink row): complement, SC/NS distinction, anti-hierarchy
+
+Four constants emerge from the triangle:
+- **sqrt(2)**: hypotenuse/leg ratio -> pseudo-doubling ratio 2 - 1/(n-2)
+- **pi**: Wallis integral from fiber fraction f(n) = (1/2)_{n-2}/(n-2)! ~ 1/sqrt(pi*n)
+- **e**: Gamma function growth in Burnside/Stirling
+- **gamma** (Euler-Mascheroni): asymptotic correction in Gamma(1/b)^b ~ b^b * e^{-gamma}
+
+Two reductions:
+- **Mode A** (hypotenuse removal, n -> n-1): fast time scale, vertex insertion, H = 1 + 2^d
+- **Mode B** (both legs removal, n -> n-2): slow time scale, Cayley-Dickson descent, meta-graph recursion
+
+Key proven results (see `07-reflections/everything-is-the-triangle.md` for full picture):
+- Burnside: Fix(sigma) = 0 for even cycles, 2^{orbit-pairs} for all-odd (A000568 exact through n=10)
+- Fiber fraction: f(n) = (1/2)_{n-2}/(n-2)!, GF = (1-x)^{-1/2} (two-sheeted branched cover)
+- Width of G_n: C(n-2, floor((n-2)/2)) (verified n=3..6)
+- Tilings * |Aut| = H for every iso class (orbit-stabilizer on tiling fibration)
+- The meta-graph G_n is a DAG under H-gradient (0 downhill edges, verified n=3..7)
+- Cayley-Dickson tower: R(n=2)->C(n=3)->H(n=5)->O(n=9)->S(n=17), each level loses a property
+- The merged graph G_n/Z_2: V_merged = (A000568 + SC)/2 -> A000568/2
+
+**When approaching ANY tournament problem, first ask: which side of the triangle does this live on?**
+
+---
+
 ## Engineering Applications Mandate
 
 **READ THIS SECTION.** The human owner has explicitly stated: *"I am equally interested in use cases as I am in theorems and techniques."*
