@@ -1,0 +1,195 @@
+================================================================================
+  PERPENDICULAR BLACK STRUCTURE + BILATERAL IMBALANCE
+  opus-2026-03-23-S229
+================================================================================
+
+================================================================================
+  n = 3
+================================================================================
+  Principal path: 2 nodes, H=[1, 3]
+
+  NS RIBS PER PRINCIPAL NODE:
+    [0] H=   1: 0 ribs (↑0 above, ↓0 below, =0 level)
+    [1] H=   3: 0 ribs (↑0 above, ↓0 below, =0 level)
+
+  BILATERAL IMBALANCE (ribs from principal line):
+    Above axis: 0, Below: 0, Level: 0
+    Imbalance: 0 (BALANCED)
+
+
+  NS BLUE COMPLETENESS:
+    NS nodes: 0, NS-NS blue edges: 0
+    NS blue density: 0.000000
+    Fraction toward K_0: 0.0000
+
+  SC BLUE COMPLETENESS:
+    SC nodes: 2, SC-SC blue edges: 1
+    SC blue density: 1.000000
+
+  n=3 done (0.0s)
+
+================================================================================
+  n = 4
+================================================================================
+  Principal path: 2 nodes, H=[1, 5]
+
+  NS RIBS PER PRINCIPAL NODE:
+    [0] H=   1: 1 ribs (↑1 above, ↓0 below, =0 level)
+    [1] H=   5: 1 ribs (↑0 above, ↓1 below, =0 level)
+
+  BILATERAL IMBALANCE (ribs from principal line):
+    Above axis: 1, Below: 1, Level: 0
+    Imbalance: 0 (BALANCED)
+    Imbalance ratio: 0.0000
+
+  PERPENDICULAR DEPTH (NS distance from axis):
+    min=1, max=1, avg=1.00
+    Distribution: {1: 1}
+
+  NS BLUE COMPLETENESS:
+    NS nodes: 1, NS-NS blue edges: 0
+    NS blue density: 0.000000
+    Fraction toward K_1: 0.0000
+
+  SC BLUE COMPLETENESS:
+    SC nodes: 2, SC-SC blue edges: 1
+    SC blue density: 1.000000
+
+  n=4 done (0.0s)
+
+================================================================================
+  n = 5
+================================================================================
+  Principal path: 3 nodes, H=[1, 3, 15]
+
+  NS RIBS PER PRINCIPAL NODE:
+    [0] H=   1: 2 ribs (↑2 above, ↓0 below, =0 level)
+    [1] H=   3: 1 ribs (↑1 above, ↓0 below, =0 level)
+    [2] H=  15: 0 ribs (↑0 above, ↓0 below, =0 level)
+
+  BILATERAL IMBALANCE (ribs from principal line):
+    Above axis: 3, Below: 0, Level: 0
+    Imbalance: 3 (MORE ABOVE)
+    Imbalance ratio: 1.0000
+
+  PERPENDICULAR DEPTH (NS distance from axis):
+    min=1, max=1, avg=1.00
+    Distribution: {1: 2}
+
+  NS BLUE COMPLETENESS:
+    NS nodes: 2, NS-NS blue edges: 1
+    NS blue density: 1.000000
+    Fraction toward K_2: 1.0000
+
+  SC BLUE COMPLETENESS:
+    SC nodes: 8, SC-SC blue edges: 12
+    SC blue density: 0.428571
+
+  n=5 done (0.2s)
+
+================================================================================
+  n = 6
+================================================================================
+  Principal path: 3 nodes, H=[1, 5, 37]
+
+  NS RIBS PER PRINCIPAL NODE:
+    [0] H=   1: 4 ribs (↑4 above, ↓0 below, =0 level)
+    [1] H=   5: 5 ribs (↑4 above, ↓1 below, =0 level)
+    [2] H=  37: 4 ribs (↑0 above, ↓2 below, =2 level)
+
+  BILATERAL IMBALANCE (ribs from principal line):
+    Above axis: 8, Below: 3, Level: 2
+    Imbalance: 5 (MORE ABOVE)
+    Imbalance ratio: 0.4545
+
+  PERPENDICULAR DEPTH (NS distance from axis):
+    min=1, max=2, avg=1.50
+    Distribution: {1: 11, 2: 11}
+
+  NS BLUE COMPLETENESS:
+    NS nodes: 22, NS-NS blue edges: 85
+    NS blue density: 0.367965
+    Fraction toward K_22: 0.3680
+
+  SC BLUE COMPLETENESS:
+    SC nodes: 12, SC-SC blue edges: 13
+    SC blue density: 0.196970
+
+  n=6 done (59.7s)
+
+================================================================================
+  n = 7
+================================================================================
+  Principal path: 4 nodes, H=[1, 3, 15, 123]
+
+  NS RIBS PER PRINCIPAL NODE:
+    [0] H=   1: 6 ribs (↑6 above, ↓0 below, =0 level)
+    [1] H=   3: 3 ribs (↑3 above, ↓0 below, =0 level)
+    [2] H=  15: 3 ribs (↑3 above, ↓0 below, =0 level)
+    [3] H= 123: 2 ribs (↑0 above, ↓1 below, =1 level)
+
+  BILATERAL IMBALANCE (ribs from principal line):
+    Above axis: 12, Below: 1, Level: 1
+    Imbalance: 11 (MORE ABOVE)
+    Imbalance ratio: 0.8462
+
+  PERPENDICULAR DEPTH (NS distance from axis):
+    min=1, max=4, avg=2.79
+    Distribution: {1: 12, 2: 48, 3: 90, 4: 34}
+
+  NS BLUE COMPLETENESS:
+    NS nodes: 184, NS-NS blue edges: 1399
+    NS blue density: 0.083096
+    Fraction toward K_184: 0.0831
+
+  SC BLUE COMPLETENESS:
+    SC nodes: 88, SC-SC blue edges: 174
+    SC blue density: 0.045455
+
+  n=7 done (3.5s)
+
+================================================================================
+  n = 8
+================================================================================
+  Principal path: 4 nodes, H=[1, 5, 37, 389]
+
+  NS RIBS PER PRINCIPAL NODE:
+    [0] H=   1: 9 ribs (↑9 above, ↓0 below, =0 level)
+    [1] H=   5: 10 ribs (↑9 above, ↓1 below, =0 level)
+    [2] H=  37: 10 ribs (↑6 above, ↓2 below, =2 level)
+    [3] H= 389: 9 ribs (↑5 above, ↓4 below, =0 level)
+
+  BILATERAL IMBALANCE (ribs from principal line):
+    Above axis: 29, Below: 7, Level: 2
+    Imbalance: 22 (MORE ABOVE)
+    Imbalance ratio: 0.6111
+
+  PERPENDICULAR DEPTH (NS distance from axis):
+    min=1, max=6, avg=3.71
+    Distribution: {1: 35, 2: 262, 3: 944, 4: 1517, 5: 590, 6: 4}
+
+  NS BLUE COMPLETENESS:
+    NS nodes: 3352, NS-NS blue edges: 43337
+    NS blue density: 0.007716
+    Fraction toward K_3352: 0.0077
+
+  SC BLUE COMPLETENESS:
+    SC nodes: 176, SC-SC blue edges: 319
+    SC blue density: 0.020714
+
+  n=8 done (183.5s)
+
+================================================================================
+  CROSS-n BILATERAL SUMMARY
+================================================================================
+
+  THE FUNDAMENTAL GEOMETRY:
+  The merged metagraph has a PRINCIPAL BLUE LINE as its spine.
+  BLUE edges form the body (approaching completeness on NS nodes).
+  BLACK edges attach PERPENDICULARLY, creating ribs from SC to NS.
+  At odd n: the black ribs are IMBALANCED (more point upward).
+  At even n: the black ribs tend toward BALANCE.
+
+================================================================================
+  DONE
+================================================================================
