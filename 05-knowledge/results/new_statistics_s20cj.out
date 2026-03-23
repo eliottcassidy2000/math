@@ -1,0 +1,139 @@
+======================================================================
+  NEW STATISTICS FOR G_n
+======================================================================
+
+======================================================================
+  n = 5
+======================================================================
+
+  STAT 1: H-LEVEL DISTRIBUTION (shape of the DAG)
+    H=  1: # (1)
+    H=  3: ### (3)
+    H=  5: ## (2)
+    H=  9: ## (2)
+    H= 11: # (1)
+    H= 13: # (1)
+    H= 15: ## (2)
+  Shape: 7 levels, max width 3 at level 1
+  Skewness (0=bottom, 1=top): 0.167
+  Widths: [1, 3, 2, 2, 1, 1, 2]
+
+  STAT 2: DEGREE DISTRIBUTION
+    deg= 2: # (1)
+    deg= 3: ### (3)
+    deg= 4: # (1)
+    deg= 6: #### (4)
+    deg= 7: ### (3)
+
+  STAT 3: BLUE RATIO = blue_deg / total_deg
+  SC classes: avg blue ratio = 0.658 (range [0.33, 1.00])
+  NS classes: avg blue ratio = 0.238 (range [0.14, 0.33])
+
+  STAT 4: CANONICAL COORDINATES
+    H alone determines class: False
+    (H, score) determines class: False
+    (H, |Aut|) determines class: False
+    (H, score, |Aut|) determines class: False
+    (H, degree) determines class: False
+    (H, score, degree) determines class: True
+    (score, c3) determines class: False
+    (H, blue_deg, black_deg) determines class: False
+
+    MINIMAL DETERMINING PAIRS:
+
+  STAT 5: H-GAP DISTRIBUTION
+  H values: [1, 3, 5, 9, 11, 13, 15]
+  Gaps: [2, 2, 4, 2, 2, 2]
+  Gap distribution: {2: 5, 4: 1}
+  All gaps even: True
+
+  STAT 6: |Aut| SPECTRUM
+    |Aut|=1: 7 classes (58.3%)
+    |Aut|=3: 4 classes (33.3%)
+    |Aut|=5: 1 classes (8.3%)
+
+  STAT 7: EFFECTIVE DIMENSION
+  Spectral dimension (90% energy): 12
+  Top 5 eigenvalues: ['5.58', '1.94', '1.22', '1.00', '0.32']
+
+======================================================================
+  n = 6
+======================================================================
+
+  STAT 1: H-LEVEL DISTRIBUTION (shape of the DAG)
+  Shape: 19 levels, max width 6 at level 6
+  Skewness (0=bottom, 1=top): 0.333
+  Widths: [1, 4, 3, 5, 2, 2, 6, 2, 2, 4, 2, 2, 4, 2, 5, 5, 1, 2, 2]
+
+  STAT 2: DEGREE DISTRIBUTION
+    deg= 3: ### (3)
+    deg= 4: # (1)
+    deg= 5: ### (3)
+    deg= 6: ###### (6)
+    deg= 7: ## (2)
+    deg=10: ## (2)
+    deg=11: ############ (12)
+    deg=12: ####### (7)
+    deg=13: ############## (14)
+    deg=14: ###### (6)
+
+  STAT 3: BLUE RATIO = blue_deg / total_deg
+  SC classes: avg blue ratio = 0.245 (range [0.17, 0.50])
+  NS classes: avg blue ratio = 0.810 (range [0.54, 1.00])
+
+  STAT 4: CANONICAL COORDINATES
+    H alone determines class: False
+    (H, score) determines class: False
+    (H, |Aut|) determines class: False
+    (H, score, |Aut|) determines class: False
+    (H, degree) determines class: False
+    (H, score, degree) determines class: False
+    (score, c3) determines class: False
+    (H, blue_deg, black_deg) determines class: False
+
+    MINIMAL DETERMINING PAIRS:
+
+  STAT 5: H-GAP DISTRIBUTION
+  H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  Gaps: [2, 2, 4, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 2, 4, 4, 2, 2]
+  Gap distribution: {2: 14, 4: 4}
+  All gaps even: True
+
+  STAT 6: |Aut| SPECTRUM
+    |Aut|=1: 41 classes (73.2%)
+    |Aut|=3: 12 classes (21.4%)
+    |Aut|=5: 2 classes (3.6%)
+    |Aut|=9: 1 classes (1.8%)
+
+  STAT 7: EFFECTIVE DIMENSION
+  Spectral dimension (90% energy): 55
+  Top 5 eigenvalues: ['11.67', '6.79', '5.01', '4.34', '4.25']
+
+======================================================================
+  SYNTHESIS: THE MOST USEFUL NEW STATISTICS
+======================================================================
+
+  THE 5 MOST INFORMATIVE NEW STATISTICS:
+
+  1. H-LEVEL DISTRIBUTION (shape of DAG):
+     Reveals whether G_n is "diamond" (wide middle) or "pyramid" (wide bottom).
+     At n=5: peaked at bottom (H=3, skew=0.17). At n=6: peaked at 33% of max.
+     The peak RISES with n.
+
+  2. BLUE RATIO per class:
+     SC classes: low blue ratio (SC is rare, most neighbors are NS = black)
+     NS classes: high blue ratio (NS is common, most neighbors are NS = blue)
+     The blue ratio DETERMINES SC status at n=6 (clean separation).
+
+  3. CANONICAL COORDINATES:
+     The minimal set of invariants that uniquely identifies each class.
+     Reveals the "intrinsic dimension" of tournament type space.
+
+  4. H-GAP DISTRIBUTION:
+     All gaps are even (Redei). The gap pattern reveals forbidden values.
+     Large gaps = topological obstructions in tournament space.
+
+  5. SPECTRAL DIMENSION:
+     The number of eigenvectors needed to capture 90% of G_n's structure.
+     This is the "effective dimension" of the meta-graph.
+
