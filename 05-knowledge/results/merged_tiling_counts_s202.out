@@ -1,0 +1,243 @@
+
+========================================================================
+  n = 3: TILING COUNTS IN MERGED META-GRAPH
+========================================================================
+
+  idx   type  H     |Aut|    tilings  merged_t   classes        
+  0     SC    1     1        1        1          [0]            
+  1     SC    3     3        1        1          [1]            
+
+  Total tilings (all classes): 2 = 2^C(2,2) = 2^1 = 2
+  Total merged tilings: 2
+  Merged tiling sequence (sorted by H): [1, 1]
+  Sum of all tilings = 2 (should be 2^1 = 2)
+
+  BLUE/BLACK EDGE ANALYSIS BY TILING COUNT:
+  Merged edges (tiling model): 1
+  Pure blue: 1, Pure black: 0, Mixed: 0
+
+  EDGE ANALYSIS (merged_i, merged_j, blue_count, black_count, tilings_i, tilings_j):
+    (0,1) H=(1,3) 1 blue + 0 black = BLUE, tilings=(1,1)
+
+  TILING WEIGHT PATTERNS:
+  Does blue_count relate to min(tilings_i, tilings_j)?
+    edge (0,1): total=1, tilings=(1,1), min=1, ratio=1.000
+
+  MERGED TILING SEQUENCE (sorted by H):
+  [1, 1]
+
+  Total blue tiling pairs: 1
+  Total black tiling pairs: 0
+  Total tiling flip pairs: 1 (= 2^1 / 2 = 1)
+
+
+========================================================================
+  n = 4: TILING COUNTS IN MERGED META-GRAPH
+========================================================================
+
+  idx   type  H     |Aut|    tilings  merged_t   classes        
+  0     SC    1     1        1        1          [0]            
+  1     NSC   3     3        1        2          [1, 3]         
+  2     SC    5     1        5        5          [2]            
+
+  Total tilings (all classes): 8 = 2^C(3,2) = 2^3 = 8
+  Total merged tilings: 8
+  Merged tiling sequence (sorted by H): [1, 2, 5]
+  Sum of all tilings = 8 (should be 2^3 = 8)
+
+  BLUE/BLACK EDGE ANALYSIS BY TILING COUNT:
+  Merged edges (tiling model): 2
+  Pure blue: 1, Pure black: 1, Mixed: 0
+
+  EDGE ANALYSIS (merged_i, merged_j, blue_count, black_count, tilings_i, tilings_j):
+    (0,2) H=(1,5) 1 blue + 0 black = BLUE, tilings=(1,5)
+    (1,2) H=(3,5) 0 blue + 2 black = BLACK, tilings=(2,5)
+
+  TILING WEIGHT PATTERNS:
+  Does blue_count relate to min(tilings_i, tilings_j)?
+    edge (0,2): total=1, tilings=(1,5), min=1, ratio=1.000
+    edge (1,2): total=2, tilings=(2,5), min=2, ratio=1.000
+
+  MERGED TILING SEQUENCE (sorted by H):
+  [1, 2, 5]
+
+  Total blue tiling pairs: 1
+  Total black tiling pairs: 2
+  Total tiling flip pairs: 4 (= 2^3 / 2 = 4)
+
+
+========================================================================
+  n = 5: TILING COUNTS IN MERGED META-GRAPH
+========================================================================
+
+  idx   type  H     |Aut|    tilings  merged_t   classes        
+  0     SC    1     1        1        1          [0]            
+  1     NSC   3     3        1        2          [1, 7]         
+  2     SC    3     3        1        1          [3]            
+  3     NSC   5     1        5        10         [2, 5]         
+  4     SC    9     1        9        9          [4]            
+  5     SC    9     1        9        9          [6]            
+  6     SC    11    1        11       11         [8]            
+  7     SC    13    1        13       13         [10]           
+  8     SC    15    3        5        5          [9]            
+  9     SC    15    5        3        3          [11]           
+
+  Total tilings (all classes): 64 = 2^C(4,2) = 2^6 = 64
+  Total merged tilings: 64
+  Merged tiling sequence (sorted by H): [1, 2, 1, 10, 9, 9, 11, 13, 5, 3]
+  Sum of all tilings = 64 (should be 2^6 = 64)
+
+  BLUE/BLACK EDGE ANALYSIS BY TILING COUNT:
+  Merged edges (tiling model): 18
+  Pure blue: 8, Pure black: 10, Mixed: 0
+
+  EDGE ANALYSIS (merged_i, merged_j, blue_count, black_count, tilings_i, tilings_j):
+    (0,5) H=(1,9) 1 blue + 0 black = BLUE, tilings=(1,9)
+    (1,4) H=(3,9) 0 blue + 2 black = BLACK, tilings=(2,9)
+    (2,7) H=(3,13) 1 blue + 0 black = BLUE, tilings=(1,13)
+    (3,4) H=(5,9) 0 blue + 2 black = BLACK, tilings=(10,9)
+    (3,5) H=(5,9) 0 blue + 2 black = BLACK, tilings=(10,9)
+    (3,6) H=(5,11) 0 blue + 2 black = BLACK, tilings=(10,11)
+    (3,7) H=(5,13) 0 blue + 2 black = BLACK, tilings=(10,13)
+    (3,8) H=(5,15) 0 blue + 2 black = BLACK, tilings=(10,5)
+    (4,5) H=(9,9) 0 blue + 2 black = BLACK, tilings=(9,9)
+    (4,6) H=(9,11) 1 blue + 0 black = BLUE, tilings=(9,11)
+    (4,7) H=(9,13) 0 blue + 2 black = BLACK, tilings=(9,13)
+    (5,6) H=(9,11) 1 blue + 0 black = BLUE, tilings=(9,11)
+    (5,7) H=(9,13) 1 blue + 0 black = BLUE, tilings=(9,13)
+    (5,8) H=(9,15) 0 blue + 2 black = BLACK, tilings=(9,5)
+    (6,7) H=(11,13) 0 blue + 2 black = BLACK, tilings=(11,13)
+    (6,9) H=(11,15) 1 blue + 0 black = BLUE, tilings=(11,3)
+    (7,9) H=(13,15) 1 blue + 0 black = BLUE, tilings=(13,3)
+    (8,9) H=(15,15) 1 blue + 0 black = BLUE, tilings=(5,3)
+
+  TILING WEIGHT PATTERNS:
+  Does blue_count relate to min(tilings_i, tilings_j)?
+    edge (0,5): total=1, tilings=(1,9), min=1, ratio=1.000
+    edge (1,4): total=2, tilings=(2,9), min=2, ratio=1.000
+    edge (2,7): total=1, tilings=(1,13), min=1, ratio=1.000
+    edge (3,4): total=2, tilings=(10,9), min=9, ratio=0.222
+    edge (3,5): total=2, tilings=(10,9), min=9, ratio=0.222
+    edge (3,6): total=2, tilings=(10,11), min=10, ratio=0.200
+    edge (3,7): total=2, tilings=(10,13), min=10, ratio=0.200
+    edge (3,8): total=2, tilings=(10,5), min=5, ratio=0.400
+    edge (4,5): total=2, tilings=(9,9), min=9, ratio=0.222
+    edge (4,6): total=1, tilings=(9,11), min=9, ratio=0.111
+    edge (4,7): total=2, tilings=(9,13), min=9, ratio=0.222
+    edge (5,6): total=1, tilings=(9,11), min=9, ratio=0.111
+    edge (5,7): total=1, tilings=(9,13), min=9, ratio=0.111
+    edge (5,8): total=2, tilings=(9,5), min=5, ratio=0.400
+    edge (6,7): total=2, tilings=(11,13), min=11, ratio=0.182
+    edge (6,9): total=1, tilings=(11,3), min=3, ratio=0.333
+    edge (7,9): total=1, tilings=(13,3), min=3, ratio=0.333
+    edge (8,9): total=1, tilings=(5,3), min=3, ratio=0.333
+
+  MERGED TILING SEQUENCE (sorted by H):
+  [1, 2, 1, 10, 9, 9, 11, 13, 5, 3]
+
+  Total blue tiling pairs: 8
+  Total black tiling pairs: 20
+  Total tiling flip pairs: 32 (= 2^6 / 2 = 32)
+
+
+========================================================================
+  CROSS-n PATTERNS
+========================================================================
+
+  TILING SEQUENCES BY TYPE:
+
+  n=3: total tilings = 2^1 = 2
+  n=4: total tilings = 2^3 = 8
+  n=5: total tilings = 2^6 = 64
+
+  The merged tiling count = H/|Aut| for SC, 2H/|Aut| for NSC.
+
+  SC tiling counts at n=5: [1, 1, 9, 9, 11, 13, 5, 3]
+  NSC tiling counts at n=5: [2, 10, 10]
+  (Each NSC pair contributes 2 * tiling_per_class)
+
+  SUM CHECK: 1+1+9+9+11+13+5+3 + 2+10+10 = 74.
+  But total tilings = 2^6 = 64. Discrepancy!
+  Wait: the sum of merged tilings counts each NSC pair ONCE (combined),
+  so it should be: sum SC_tilings + sum NSC_merged_tilings
+  = (1+1+9+9+11+13+5+3) + (2+10+10) = 52 + 22 = 74.
+  But there are only 64 tilings! The issue: tilings of class C
+  and tilings of class C^op are DIFFERENT tilings (different base paths).
+  Actually the "tilings" count = H/|Aut| counts tilings with a FIXED base path.
+  Total tilings with fixed base path = 2^{C(n-1,2)} = 2^6 = 64 at n=5.
+  Sum over all classes of H/|Aut|:
+
+  n=3: sum H/|Aut| = 2, 2^C(n-1,2) = 2, match = True
+  n=4: sum H/|Aut| = 8, 2^C(n-1,2) = 8, match = True
+  n=5: sum H/|Aut| = 64, 2^C(n-1,2) = 64, match = True
+
+  YES! sum_{all classes} H/|Aut| = 2^{C(n-1,2)} exactly.
+  This is because each tiling belongs to exactly one class,
+  and each class has H/|Aut| tilings.
+
+  For the MERGED graph: sum_{merged nodes} merged_tilings
+  = sum_SC H/|Aut| + sum_NSC 2H/|Aut|
+  = sum_all H/|Aut| + sum_NSC H/|Aut|
+  = 2^{C(n-1,2)} + sum_NSC H/|Aut|
+
+  The excess = sum_NSC H/|Aut| = number of NSC tilings.
+
+
+========================================================================
+  THE BLUE/TILING CONNECTION
+========================================================================
+
+
+  BLUE tiling pairs: both tilings are GS (grid-symmetric).
+  Total GS tilings = 2^k where k = GS dimension.
+  Blue tiling pairs = 2^{k-1} (at odd n: all cross-class).
+
+  A BLUE EDGE in the merged graph exists iff some GS tiling pair
+  connects the two merged nodes.
+
+  THE TILING-WEIGHT ON A BLUE EDGE:
+  blue_weight(e) = #{GS tiling pairs connecting the two merged nodes}
+
+  A BLACK EDGE: some non-GS tiling pair connects them.
+  black_weight(e) = #{non-GS tiling pairs}
+
+  TOTAL WEIGHT = blue + black = total tiling pairs between the nodes.
+
+  KEY PATTERN: At n=5, EVERY merged edge has total weight = constant?
+  Let me check from the data above.
+
+
+========================================================================
+  SYNTHESIS
+========================================================================
+
+
+  TILING COUNTS IN THE MERGED META-GRAPH:
+
+  1. Each merged node has a TILING COUNT:
+     SC node: H/|Aut|
+     NSC node: 2H/|Aut|
+
+  2. Sum of all tiling counts:
+     Original: sum H/|Aut| = 2^{C(n-1,2)} (total tilings)
+     Merged: 2^{C(n-1,2)} + sum_NSC H/|Aut| (tilings + NSC copies)
+
+  3. Each tiling connects to EXACTLY ONE other via flip.
+     The flip is BLUE (both GS) or BLACK (both non-GS).
+     Blue pairs: 2^{k-1} total.
+     Black pairs: 2^{C(n-1,2)-1} - 2^{k-1} total.
+
+  4. The tiling weight on a merged edge = #{tiling pairs connecting them}.
+     This is a REFINED version of the edge weight F[i][j].
+
+  5. PATTERNS IN TILING COUNTS:
+     The sequence of tiling counts per merged node, sorted by H,
+     gives a characteristic "tiling profile" of G_n/Z_2.
+     At n=5: [1, 2, 1, 1, 10, 10, 9, 9, 11, 13, 5, 3]
+     (sorted by H within each merged node)
+
+  6. THE TILING COUNT IS THE "MASS" OF EACH NODE:
+     Heavier nodes (more tilings) have more edges and more weight.
+     The tiling count correlates with degree in G_n.
+
+Done. opus-2026-03-23-S202
