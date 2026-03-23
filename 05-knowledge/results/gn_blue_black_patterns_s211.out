@@ -1,0 +1,460 @@
+================================================================================
+  DEEP PATTERN ANALYSIS: Blue/Black Degrees in G_n
+  opus-2026-03-22-S211
+================================================================================
+
+  n=3: 2 classes, 1 blue + 0 black = 1 edges (0.0s)
+
+  n=4: 4 classes, 1 blue + 4 black = 5 edges (0.0s)
+
+  n=5: 12 classes, 14 blue + 16 black = 30 edges (0.3s)
+
+  n=6: 56 classes, 200 blue + 90 black = 290 edges (60.8s)
+
+================================================================================
+  ANALYSIS 1: SC STATUS INVERTS BLUE/BLACK ROLES
+================================================================================
+
+  n=3: 2 SC + 0 NS = 2 classes
+    SC class  0 (H=  1): connects to 1 SC class(es), 0 NS class(es)
+    SC class  1 (H=  3): connects to 1 SC class(es), 0 NS class(es)
+
+  n=4: 2 SC + 2 NS = 4 classes
+    SC class  0 (H=  1): connects to 1 SC class(es), 2 NS class(es)
+    SC class  3 (H=  5): connects to 1 SC class(es), 2 NS class(es)
+    NS class  1 (H=  3): connects to 0 NS class(es), 2 SC class(es)
+    NS class  2 (H=  3): connects to 0 NS class(es), 2 SC class(es)
+
+  n=5: 8 SC + 4 NS = 12 classes
+    SC class  0 (H=  1): connects to 2 SC class(es), 4 NS class(es)
+    SC class  2 (H=  3): connects to 2 SC class(es), 2 NS class(es)
+    SC class  6 (H=  9): connects to 4 SC class(es), 2 NS class(es)
+    SC class  7 (H=  9): connects to 3 SC class(es), 4 NS class(es)
+    SC class  8 (H= 11): connects to 4 SC class(es), 2 NS class(es)
+    SC class  9 (H= 13): connects to 4 SC class(es), 2 NS class(es)
+    SC class 10 (H= 15): connects to 3 SC class(es), 0 NS class(es)
+    SC class 11 (H= 15): connects to 2 SC class(es), 0 NS class(es)
+    NS class  1 (H=  3): connects to 1 NS class(es), 2 SC class(es)
+    NS class  3 (H=  3): connects to 1 NS class(es), 2 SC class(es)
+    NS class  4 (H=  5): connects to 1 NS class(es), 6 SC class(es)
+    NS class  5 (H=  5): connects to 1 NS class(es), 6 SC class(es)
+
+  n=6: 12 SC + 44 NS = 56 classes
+    SC class  0 (H=  1): connects to 2 SC class(es), 8 NS class(es)
+    SC class  6 (H=  5): connects to 2 SC class(es), 10 NS class(es)
+    SC class 10 (H=  9): connects to 1 SC class(es), 2 NS class(es)
+    SC class 23 (H= 17): connects to 2 SC class(es), 10 NS class(es)
+    SC class 24 (H= 17): connects to 3 SC class(es), 8 NS class(es)
+    SC class 35 (H= 29): connects to 3 SC class(es), 10 NS class(es)
+    SC class 36 (H= 29): connects to 2 SC class(es), 10 NS class(es)
+    SC class 41 (H= 33): connects to 3 SC class(es), 10 NS class(es)
+    SC class 46 (H= 37): connects to 3 SC class(es), 8 NS class(es)
+    SC class 51 (H= 41): connects to 2 SC class(es), 8 NS class(es)
+    SC class 54 (H= 45): connects to 2 SC class(es), 2 NS class(es)
+    SC class 55 (H= 45): connects to 1 SC class(es), 4 NS class(es)
+
+================================================================================
+  ANALYSIS 2: THE SC↔SC SUBGRAPH (blue edges between SC classes)
+================================================================================
+
+  n=3: SC classes = [0, 1]
+    SC  0 (H=  1): SC-neighbors = [1(H=3)]
+    SC  1 (H=  3): SC-neighbors = [0(H=1)]
+    Total SC↔SC edges: 1
+    SC↔SC density: 1/1 = 1.000
+
+  n=4: SC classes = [0, 3]
+    SC  0 (H=  1): SC-neighbors = [3(H=5)]
+    SC  3 (H=  5): SC-neighbors = [0(H=1)]
+    Total SC↔SC edges: 1
+    SC↔SC density: 1/1 = 1.000
+
+  n=5: SC classes = [0, 2, 6, 7, 8, 9, 10, 11]
+    SC  0 (H=  1): SC-neighbors = [2(H=3), 6(H=9)]
+    SC  2 (H=  3): SC-neighbors = [0(H=1), 10(H=15)]
+    SC  6 (H=  9): SC-neighbors = [0(H=1), 7(H=9), 8(H=11), 10(H=15)]
+    SC  7 (H=  9): SC-neighbors = [6(H=9), 8(H=11), 9(H=13)]
+    SC  8 (H= 11): SC-neighbors = [6(H=9), 7(H=9), 9(H=13), 11(H=15)]
+    SC  9 (H= 13): SC-neighbors = [7(H=9), 8(H=11), 10(H=15), 11(H=15)]
+    SC 10 (H= 15): SC-neighbors = [2(H=3), 6(H=9), 9(H=13)]
+    SC 11 (H= 15): SC-neighbors = [8(H=11), 9(H=13)]
+    Total SC↔SC edges: 12
+    SC↔SC density: 12/28 = 0.429
+
+  n=6: SC classes = [0, 6, 10, 23, 24, 35, 36, 41, 46, 51, 54, 55]
+    SC  0 (H=  1): SC-neighbors = [6(H=5), 23(H=17)]
+    SC  6 (H=  5): SC-neighbors = [0(H=1), 46(H=37)]
+    SC 10 (H=  9): SC-neighbors = [24(H=17)]
+    SC 23 (H= 17): SC-neighbors = [0(H=1), 46(H=37)]
+    SC 24 (H= 17): SC-neighbors = [10(H=9), 35(H=29), 36(H=29)]
+    SC 35 (H= 29): SC-neighbors = [24(H=17), 41(H=33), 54(H=45)]
+    SC 36 (H= 29): SC-neighbors = [24(H=17), 55(H=45)]
+    SC 41 (H= 33): SC-neighbors = [35(H=29), 46(H=37), 51(H=41)]
+    SC 46 (H= 37): SC-neighbors = [6(H=5), 23(H=17), 41(H=33)]
+    SC 51 (H= 41): SC-neighbors = [41(H=33), 54(H=45)]
+    SC 54 (H= 45): SC-neighbors = [35(H=29), 51(H=41)]
+    SC 55 (H= 45): SC-neighbors = [36(H=29)]
+    Total SC↔SC edges: 13
+    SC↔SC density: 13/66 = 0.197
+
+================================================================================
+  ANALYSIS 3: NS→SC CONNECTIVITY (black degree of NS classes)
+================================================================================
+
+  n=3: no NS classes
+
+  n=4: NS classes' black_deg (= # SC neighbors):
+    values: [2, 2]
+    distribution: {2: 2}
+
+  n=5: NS classes' black_deg (= # SC neighbors):
+    values: [2, 2, 6, 6]
+    distribution: {2: 2, 6: 2}
+
+  n=6: NS classes' black_deg (= # SC neighbors):
+    values: [0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 6, 6]
+    distribution: {2: 26, 4: 2, 0: 8, 3: 6, 6: 2}
+    SC-free NS classes (black=0): [17, 18, 21, 22, 31, 32, 42, 44]
+      class 17: H=15, scores=(0, 2, 3, 3, 3, 4), |Aut|=3, c3=4
+      class 18: H=15, scores=(0, 3, 3, 3, 3, 3), |Aut|=5, c3=5
+      class 21: H=15, scores=(1, 2, 2, 2, 3, 5), |Aut|=3, c3=4
+      class 22: H=15, scores=(2, 2, 2, 2, 2, 5), |Aut|=5, c3=5
+      class 31: H=25, scores=(1, 2, 2, 3, 3, 4), |Aut|=1, c3=6
+      class 32: H=25, scores=(1, 2, 2, 3, 3, 4), |Aut|=1, c3=6
+      class 42: H=33, scores=(1, 2, 3, 3, 3, 3), |Aut|=3, c3=7
+      class 44: H=33, scores=(2, 2, 2, 2, 3, 4), |Aut|=3, c3=7
+
+================================================================================
+  ANALYSIS 4: TOTAL DEGREE FORMULA SEARCH
+================================================================================
+
+  n=3, m=3, n!=6:
+     ID    H  SC |Aut|   |C|  deg C(n,2)-1  n-1 n!/(|Aut|*deg)  |C|/deg
+      0    1  SC     1     6    1        2    2         6.0000   6.0000
+      1    3  SC     3     2    1        2    2         2.0000   2.0000
+
+  n=4, m=6, n!=24:
+     ID    H  SC |Aut|   |C|  deg C(n,2)-1  n-1 n!/(|Aut|*deg)  |C|/deg
+      0    1  SC     1    24    3        5    3         8.0000   8.0000
+      1    3  NS     3     8    2        5    3         4.0000   4.0000
+      2    3  NS     3     8    2        5    3         4.0000   4.0000
+      3    5  SC     1    24    3        5    3         8.0000   8.0000
+
+  n=5, m=10, n!=120:
+     ID    H  SC |Aut|   |C|  deg C(n,2)-1  n-1 n!/(|Aut|*deg)  |C|/deg
+      0    1  SC     1   120    6        9    4        20.0000  20.0000
+      1    3  NS     3    40    3        9    4        13.3333  13.3333
+      2    3  SC     3    40    4        9    4        10.0000  10.0000
+      3    3  NS     3    40    3        9    4        13.3333  13.3333
+      4    5  NS     1   120    7        9    4        17.1429  17.1429
+      5    5  NS     1   120    7        9    4        17.1429  17.1429
+      6    9  SC     1   120    6        9    4        20.0000  20.0000
+      7    9  SC     1   120    7        9    4        17.1429  17.1429
+      8   11  SC     1   120    6        9    4        20.0000  20.0000
+      9   13  SC     1   120    6        9    4        20.0000  20.0000
+     10   15  SC     3    40    3        9    4        13.3333  13.3333
+     11   15  SC     5    24    2        9    4        12.0000  12.0000
+
+  n=6, m=15, n!=720:
+     ID    H  SC |Aut|   |C|  deg C(n,2)-1  n-1 n!/(|Aut|*deg)  |C|/deg
+      0    1  SC     1   720   10       14    5        72.0000  72.0000
+      1    3  NS     3   240    5       14    5        48.0000  48.0000
+      2    3  NS     3   240    6       14    5        40.0000  40.0000
+      3    3  NS     3   240    6       14    5        40.0000  40.0000
+      4    3  NS     3   240    5       14    5        48.0000  48.0000
+      5    5  NS     1   720   11       14    5        65.4545  65.4545
+      6    5  SC     1   720   12       14    5        60.0000  60.0000
+      7    5  NS     1   720   11       14    5        65.4545  65.4545
+      8    9  NS     1   720   11       14    5        65.4545  65.4545
+      9    9  NS     1   720   12       14    5        60.0000  60.0000
+     10    9  SC     9    80    3       14    5        26.6667  26.6667
+     11    9  NS     1   720   11       14    5        65.4545  65.4545
+     12    9  NS     1   720   12       14    5        60.0000  60.0000
+     13   11  NS     1   720   11       14    5        65.4545  65.4545
+     14   11  NS     1   720   11       14    5        65.4545  65.4545
+     15   13  NS     1   720   11       14    5        65.4545  65.4545
+     16   13  NS     1   720   11       14    5        65.4545  65.4545
+     17   15  NS     3   240    6       14    5        40.0000  40.0000
+     18   15  NS     5   144    3       14    5        48.0000  48.0000
+     19   15  NS     1   720   13       14    5        55.3846  55.3846
+     20   15  NS     1   720   13       14    5        55.3846  55.3846
+     21   15  NS     3   240    6       14    5        40.0000  40.0000
+     22   15  NS     5   144    3       14    5        48.0000  48.0000
+     23   17  SC     1   720   12       14    5        60.0000  60.0000
+     24   17  SC     1   720   11       14    5        65.4545  65.4545
+     25   19  NS     1   720   14       14    5        51.4286  51.4286
+     26   19  NS     1   720   14       14    5        51.4286  51.4286
+     27   23  NS     1   720   14       14    5        51.4286  51.4286
+     28   23  NS     1   720   14       14    5        51.4286  51.4286
+     29   23  NS     1   720   12       14    5        60.0000  60.0000
+     30   23  NS     1   720   12       14    5        60.0000  60.0000
+     31   25  NS     1   720   13       14    5        55.3846  55.3846
+     32   25  NS     1   720   13       14    5        55.3846  55.3846
+     33   27  NS     3   240    7       14    5        34.2857  34.2857
+     34   27  NS     3   240    7       14    5        34.2857  34.2857
+     35   29  SC     1   720   13       14    5        55.3846  55.3846
+     36   29  SC     1   720   12       14    5        60.0000  60.0000
+     37   29  NS     1   720   14       14    5        51.4286  51.4286
+     38   29  NS     1   720   14       14    5        51.4286  51.4286
+     39   31  NS     1   720   13       14    5        55.3846  55.3846
+     40   31  NS     1   720   13       14    5        55.3846  55.3846
+     41   33  SC     1   720   13       14    5        55.3846  55.3846
+     42   33  NS     3   240    6       14    5        40.0000  40.0000
+     43   33  NS     1   720   13       14    5        55.3846  55.3846
+     44   33  NS     3   240    6       14    5        40.0000  40.0000
+     45   33  NS     1   720   13       14    5        55.3846  55.3846
+     46   37  SC     1   720   11       14    5        65.4545  65.4545
+     47   37  NS     1   720   13       14    5        55.3846  55.3846
+     48   37  NS     1   720   13       14    5        55.3846  55.3846
+     49   37  NS     1   720   13       14    5        55.3846  55.3846
+     50   37  NS     1   720   13       14    5        55.3846  55.3846
+     51   41  SC     1   720   10       14    5        72.0000  72.0000
+     52   43  NS     1   720   11       14    5        65.4545  65.4545
+     53   43  NS     1   720   11       14    5        65.4545  65.4545
+     54   45  SC     3   240    4       14    5        60.0000  60.0000
+     55   45  SC     3   240    5       14    5        48.0000  48.0000
+
+================================================================================
+  ANALYSIS 5: BLUE FRACTION b/(b+k)
+================================================================================
+
+  n=3: 2 SC + 0 NS = 2
+    Random model prediction:
+      SC blue fraction = (|SC|-1)/(|V|-1) = 1/1 = 1.0000
+      NS blue fraction = (|NS|-1)/(|V|-1) = -1/1 = -1.0000
+    Actual SC blue fractions: ['1.000', '1.000']
+    Actual SC mean blue fraction: 1.0000
+
+  n=4: 2 SC + 2 NS = 4
+    Random model prediction:
+      SC blue fraction = (|SC|-1)/(|V|-1) = 1/3 = 0.3333
+      NS blue fraction = (|NS|-1)/(|V|-1) = 1/3 = 0.3333
+    Actual SC blue fractions: ['0.333', '0.333']
+    Actual SC mean blue fraction: 0.3333
+    Actual NS blue fractions: min=0.000, max=0.000, mean=0.0000
+
+  n=5: 8 SC + 4 NS = 12
+    Random model prediction:
+      SC blue fraction = (|SC|-1)/(|V|-1) = 7/11 = 0.6364
+      NS blue fraction = (|NS|-1)/(|V|-1) = 3/11 = 0.2727
+    Actual SC blue fractions: ['0.333', '0.429', '0.500', '0.667', '0.667', '0.667', '1.000', '1.000']
+    Actual SC mean blue fraction: 0.6577
+    Actual NS blue fractions: min=0.143, max=0.333, mean=0.2381
+
+  n=6: 12 SC + 44 NS = 56
+    Random model prediction:
+      SC blue fraction = (|SC|-1)/(|V|-1) = 11/55 = 0.2000
+      NS blue fraction = (|NS|-1)/(|V|-1) = 43/55 = 0.7818
+    Actual SC blue fractions: ['0.167', '0.167', '0.167', '0.200', '0.200', '0.200', '0.231', '0.231', '0.273', '0.273', '0.333', '0.500']
+    Actual SC mean blue fraction: 0.2450
+    Actual NS blue fractions: min=0.538, max=1.000, mean=0.8103
+
+================================================================================
+  ANALYSIS 6: SELF-LOOPS vs BLUE/BLACK
+================================================================================
+
+  n=3:
+    Classes WITH self-loop (1): [0]
+    Classes WITHOUT self-loop (1): [1]
+    Self-loop classes: avg_blue=1.00, avg_black=0.00
+    No-self-loop classes: avg_blue=1.00, avg_black=0.00
+
+  n=4:
+    Classes WITH self-loop (2): [0, 3]
+    Classes WITHOUT self-loop (2): [1, 2]
+    Self-loop classes: avg_blue=1.00, avg_black=2.00
+    No-self-loop classes: avg_blue=0.00, avg_black=2.00
+
+  n=5:
+    Classes WITH self-loop (7): [0, 1, 3, 4, 5, 6, 8]
+    Classes WITHOUT self-loop (5): [2, 7, 9, 10, 11]
+    Self-loop classes: avg_blue=2.00, avg_black=3.43
+    No-self-loop classes: avg_blue=2.80, avg_black=1.60
+
+  n=6:
+    Classes WITH self-loop (30): [0, 1, 2, 3, 4, 5, 6, 7, 8, 11, 13, 14, 19, 20, 23, 25, 26, 29, 30, 31, 32, 35, 41, 42, 44, 46, 47, 50, 51, 54]
+    Classes WITHOUT self-loop (26): [9, 10, 12, 15, 16, 17, 18, 21, 22, 24, 27, 28, 33, 34, 36, 37, 38, 39, 40, 43, 45, 48, 49, 52, 53, 55]
+    Self-loop classes: avg_blue=6.70, avg_black=3.80
+    No-self-loop classes: avg_blue=7.65, avg_black=2.54
+
+================================================================================
+  ANALYSIS 7: BLUE/BLACK BY H-LEVEL
+================================================================================
+
+  n=3:
+    H=  1: SC(1,0)
+    H=  3: SC(1,0)
+
+  n=4:
+    H=  1: SC(1,2)
+    H=  3: NS(0,2), NS(0,2)
+    H=  5: SC(1,2)
+
+  n=5:
+    H=  1: SC(2,4)
+    H=  3: NS(1,2), SC(2,2), NS(1,2)
+    H=  5: NS(1,6), NS(1,6)
+    H=  9: SC(4,2), SC(3,4)
+    H= 11: SC(4,2)
+    H= 13: SC(4,2)
+    H= 15: SC(3,0), SC(2,0)
+
+  n=6:
+    H=  1: SC(2,8)
+    H=  3: NS(3,2), NS(4,2), NS(4,2), NS(3,2)
+    H=  5: NS(9,2), SC(2,10), NS(9,2)
+    H=  9: NS(7,4), NS(10,2), SC(1,2), NS(7,4), NS(10,2)
+    H= 11: NS(9,2), NS(9,2)
+    H= 13: NS(9,2), NS(9,2)
+    H= 15: NS(6,0), NS(3,0), NS(11,2), NS(11,2), NS(6,0), NS(3,0)
+    H= 17: SC(2,10), SC(3,8)
+    H= 19: NS(12,2), NS(12,2)
+    H= 23: NS(11,3), NS(11,3), NS(10,2), NS(10,2)
+    H= 25: NS(13,0), NS(13,0)
+    H= 27: NS(5,2), NS(5,2)
+    H= 29: SC(3,10), SC(2,10), NS(12,2), NS(12,2)
+    H= 31: NS(10,3), NS(10,3)
+    H= 33: SC(3,10), NS(6,0), NS(10,3), NS(6,0), NS(10,3)
+    H= 37: SC(3,8), NS(7,6), NS(11,2), NS(11,2), NS(7,6)
+    H= 41: SC(2,8)
+    H= 43: NS(9,2), NS(9,2)
+    H= 45: SC(2,2), SC(1,4)
+
+================================================================================
+  ANALYSIS 8: COMPLEMENT PAIRING WITH H SYMMETRY
+================================================================================
+
+  n=3:
+    H range: [1, 3]
+    H center: 2.0
+     0↔ 0: H=(  1,  1)  blue=(1,1)  black=(0,0)  |Aut|=(1,1)  SC SELF-COMP
+     1↔ 1: H=(  3,  3)  blue=(1,1)  black=(0,0)  |Aut|=(3,3)  SC SELF-COMP
+
+  n=4:
+    H range: [1, 5]
+    H center: 3.0
+     0↔ 0: H=(  1,  1)  blue=(1,1)  black=(2,2)  |Aut|=(1,1)  SC SELF-COMP
+     1↔ 2: H=(  3,  3)  blue=(0,0)  black=(2,2)  |Aut|=(3,3)  NS paired
+     3↔ 3: H=(  5,  5)  blue=(1,1)  black=(2,2)  |Aut|=(1,1)  SC SELF-COMP
+
+  n=5:
+    H range: [1, 15]
+    H center: 8.0
+     0↔ 0: H=(  1,  1)  blue=(2,2)  black=(4,4)  |Aut|=(1,1)  SC SELF-COMP
+     1↔ 3: H=(  3,  3)  blue=(1,1)  black=(2,2)  |Aut|=(3,3)  NS paired
+     2↔ 2: H=(  3,  3)  blue=(2,2)  black=(2,2)  |Aut|=(3,3)  SC SELF-COMP
+     4↔ 5: H=(  5,  5)  blue=(1,1)  black=(6,6)  |Aut|=(1,1)  NS paired
+     6↔ 6: H=(  9,  9)  blue=(4,4)  black=(2,2)  |Aut|=(1,1)  SC SELF-COMP
+     7↔ 7: H=(  9,  9)  blue=(3,3)  black=(4,4)  |Aut|=(1,1)  SC SELF-COMP
+     8↔ 8: H=( 11, 11)  blue=(4,4)  black=(2,2)  |Aut|=(1,1)  SC SELF-COMP
+     9↔ 9: H=( 13, 13)  blue=(4,4)  black=(2,2)  |Aut|=(1,1)  SC SELF-COMP
+    10↔10: H=( 15, 15)  blue=(3,3)  black=(0,0)  |Aut|=(3,3)  SC SELF-COMP
+    11↔11: H=( 15, 15)  blue=(2,2)  black=(0,0)  |Aut|=(5,5)  SC SELF-COMP
+
+  n=6:
+    H range: [1, 45]
+    H center: 23.0
+     0↔ 0: H=(  1,  1)  blue=(2,2)  black=(8,8)  |Aut|=(1,1)  SC SELF-COMP
+     1↔ 4: H=(  3,  3)  blue=(3,3)  black=(2,2)  |Aut|=(3,3)  NS paired
+     2↔ 3: H=(  3,  3)  blue=(4,4)  black=(2,2)  |Aut|=(3,3)  NS paired
+     5↔ 7: H=(  5,  5)  blue=(9,9)  black=(2,2)  |Aut|=(1,1)  NS paired
+     6↔ 6: H=(  5,  5)  blue=(2,2)  black=(10,10)  |Aut|=(1,1)  SC SELF-COMP
+     8↔11: H=(  9,  9)  blue=(7,7)  black=(4,4)  |Aut|=(1,1)  NS paired
+     9↔12: H=(  9,  9)  blue=(10,10)  black=(2,2)  |Aut|=(1,1)  NS paired
+    10↔10: H=(  9,  9)  blue=(1,1)  black=(2,2)  |Aut|=(9,9)  SC SELF-COMP
+    13↔14: H=( 11, 11)  blue=(9,9)  black=(2,2)  |Aut|=(1,1)  NS paired
+    15↔16: H=( 13, 13)  blue=(9,9)  black=(2,2)  |Aut|=(1,1)  NS paired
+    17↔21: H=( 15, 15)  blue=(6,6)  black=(0,0)  |Aut|=(3,3)  NS paired
+    18↔22: H=( 15, 15)  blue=(3,3)  black=(0,0)  |Aut|=(5,5)  NS paired
+    19↔20: H=( 15, 15)  blue=(11,11)  black=(2,2)  |Aut|=(1,1)  NS paired
+    23↔23: H=( 17, 17)  blue=(2,2)  black=(10,10)  |Aut|=(1,1)  SC SELF-COMP
+    24↔24: H=( 17, 17)  blue=(3,3)  black=(8,8)  |Aut|=(1,1)  SC SELF-COMP
+    25↔26: H=( 19, 19)  blue=(12,12)  black=(2,2)  |Aut|=(1,1)  NS paired
+    27↔28: H=( 23, 23)  blue=(11,11)  black=(3,3)  |Aut|=(1,1)  NS paired
+    29↔30: H=( 23, 23)  blue=(10,10)  black=(2,2)  |Aut|=(1,1)  NS paired
+    31↔32: H=( 25, 25)  blue=(13,13)  black=(0,0)  |Aut|=(1,1)  NS paired
+    33↔34: H=( 27, 27)  blue=(5,5)  black=(2,2)  |Aut|=(3,3)  NS paired
+    35↔35: H=( 29, 29)  blue=(3,3)  black=(10,10)  |Aut|=(1,1)  SC SELF-COMP
+    36↔36: H=( 29, 29)  blue=(2,2)  black=(10,10)  |Aut|=(1,1)  SC SELF-COMP
+    37↔38: H=( 29, 29)  blue=(12,12)  black=(2,2)  |Aut|=(1,1)  NS paired
+    39↔40: H=( 31, 31)  blue=(10,10)  black=(3,3)  |Aut|=(1,1)  NS paired
+    41↔41: H=( 33, 33)  blue=(3,3)  black=(10,10)  |Aut|=(1,1)  SC SELF-COMP
+    42↔44: H=( 33, 33)  blue=(6,6)  black=(0,0)  |Aut|=(3,3)  NS paired
+    43↔45: H=( 33, 33)  blue=(10,10)  black=(3,3)  |Aut|=(1,1)  NS paired
+    46↔46: H=( 37, 37)  blue=(3,3)  black=(8,8)  |Aut|=(1,1)  SC SELF-COMP
+    47↔50: H=( 37, 37)  blue=(7,7)  black=(6,6)  |Aut|=(1,1)  NS paired
+    48↔49: H=( 37, 37)  blue=(11,11)  black=(2,2)  |Aut|=(1,1)  NS paired
+    51↔51: H=( 41, 41)  blue=(2,2)  black=(8,8)  |Aut|=(1,1)  SC SELF-COMP
+    52↔53: H=( 43, 43)  blue=(9,9)  black=(2,2)  |Aut|=(1,1)  NS paired
+    54↔54: H=( 45, 45)  blue=(2,2)  black=(2,2)  |Aut|=(3,3)  SC SELF-COMP
+    55↔55: H=( 45, 45)  blue=(1,1)  black=(4,4)  |Aut|=(3,3)  SC SELF-COMP
+
+================================================================================
+  ANALYSIS 9: DEGREE SEQUENCES
+================================================================================
+
+  n=3 (2 classes):
+    Total deg: [1, 1]
+    Blue deg:  [1, 1]
+    Black deg: [0, 0]
+    Sum(total_deg) = 2×|E| = 2 = 2×1
+    Sum(blue_deg)  = 2×|blue| = 2 = 2×1
+    Sum(black_deg) = 2×|black| = 0 = 2×0
+
+  n=4 (4 classes):
+    Total deg: [2, 2, 3, 3]
+    Blue deg:  [0, 0, 1, 1]
+    Black deg: [2, 2, 2, 2]
+    Sum(total_deg) = 2×|E| = 10 = 2×5
+    Sum(blue_deg)  = 2×|blue| = 2 = 2×1
+    Sum(black_deg) = 2×|black| = 8 = 2×4
+
+  n=5 (12 classes):
+    Total deg: [2, 3, 3, 3, 4, 6, 6, 6, 6, 7, 7, 7]
+    Blue deg:  [1, 1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 4]
+    Black deg: [0, 0, 2, 2, 2, 2, 2, 2, 4, 4, 6, 6]
+    Sum(total_deg) = 2×|E| = 60 = 2×30
+    Sum(blue_deg)  = 2×|blue| = 28 = 2×14
+    Sum(black_deg) = 2×|black| = 32 = 2×16
+
+  n=6 (56 classes):
+    Total deg: [3, 3, 3, 4, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14]
+    Blue deg:  [1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13]
+    Black deg: [0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 6, 6, 8, 8, 8, 8, 10, 10, 10, 10, 10]
+    Sum(total_deg) = 2×|E| = 580 = 2×290
+    Sum(blue_deg)  = 2×|blue| = 400 = 2×200
+    Sum(black_deg) = 2×|black| = 180 = 2×90
+
+================================================================================
+  ANALYSIS 10: NS→SC NEIGHBORS AT n=6
+================================================================================
+  SC  0 (H=  1): 8 NS neighbors = [1, 2, 3, 4, 5, 7, 8, 11]
+  SC  6 (H=  5): 10 NS neighbors = [2, 3, 8, 9, 11, 12, 13, 14, 15, 16]
+  SC 10 (H=  9): 2 NS neighbors = [1, 4]
+  SC 23 (H= 17): 10 NS neighbors = [8, 11, 19, 20, 25, 26, 29, 30, 33, 34]
+  SC 24 (H= 17): 8 NS neighbors = [5, 7, 9, 12, 19, 20, 27, 28]
+  SC 35 (H= 29): 10 NS neighbors = [13, 14, 27, 28, 37, 38, 43, 45, 47, 50]
+  SC 36 (H= 29): 10 NS neighbors = [15, 16, 25, 26, 39, 40, 43, 45, 47, 50]
+  SC 41 (H= 33): 10 NS neighbors = [8, 11, 27, 28, 37, 38, 39, 40, 47, 50]
+  SC 46 (H= 37): 8 NS neighbors = [33, 34, 39, 40, 47, 48, 49, 50]
+  SC 51 (H= 41): 8 NS neighbors = [29, 30, 43, 45, 47, 50, 52, 53]
+  SC 54 (H= 45): 2 NS neighbors = [47, 50]
+  SC 55 (H= 45): 4 NS neighbors = [48, 49, 52, 53]
+
+  SC↔SC adjacency:
+    SC  0 (H= 45): SC neighbors = [6, 23]
+    SC  6 (H= 45): SC neighbors = [0, 46]
+    SC 10 (H= 45): SC neighbors = [24]
+    SC 23 (H= 45): SC neighbors = [0, 46]
+    SC 24 (H= 45): SC neighbors = [10, 35, 36]
+    SC 35 (H= 45): SC neighbors = [24, 41, 54]
+    SC 36 (H= 45): SC neighbors = [24, 55]
+    SC 41 (H= 45): SC neighbors = [35, 46, 51]
+    SC 46 (H= 45): SC neighbors = [6, 23, 41]
+    SC 51 (H= 45): SC neighbors = [41, 54]
+    SC 54 (H= 45): SC neighbors = [35, 51]
+    SC 55 (H= 45): SC neighbors = [36]
+
+================================================================================
+  DONE
+================================================================================
