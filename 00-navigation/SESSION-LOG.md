@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S250 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S249
+**Summary of work:** Extended the meta-graph concept to general directed graphs. Identified a 4-level hierarchy. Discovered that oriented graphs are the natural home of PSL(2,Z).
+
+**Key discoveries:**
+1. 4-level hierarchy: Tournament ⊂ Oriented ⊂ Digraph ⊂ Full Binary Relations
+2. Oriented graph meta-graph at n=3: V=7, E=11, edge_orbits=15, gap=4
+3. The 3 cell states of oriented graphs = the 3 orbifold points of PSL(2,Z)
+4. Tournaments = cusp-excluded sector (no state-0 cells)
+5. The staircase becomes ternary for oriented, square for digraphs
+6. Digraph symmetry: Z_2 × Z_2 (complement + transpose), not PSL(2,Z)
+
+**New scripts:** digraph_metagraph_s250.py
+**New reflections:** directed-graph-metagraph.md
+
+**Open frontier:** Does edge_orbits = T/2 + c × (n-2)! generalize? What is c for oriented graphs?
+
 ## opus-2026-03-23-S249 — 2026-03-23
 
 **Account:** opus

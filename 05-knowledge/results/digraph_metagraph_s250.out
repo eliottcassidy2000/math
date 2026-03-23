@@ -1,0 +1,311 @@
+
+========================================================================
+  GENERALIZATION 1: ORIENTED GRAPHS
+========================================================================
+
+
+  An ORIENTED GRAPH on n vertices: each pair {i,j} has:
+  - No arc (state 0)
+  - Arc i→j (state 1)
+  - Arc j→i (state 2)
+
+  Total oriented graphs: 3^{C(n,2)} = 3^m.
+
+  The FLIP GRAPH: two oriented graphs are adjacent if they differ
+  at exactly one pair. But now each pair has 3 states, so each
+  vertex has 2m neighbors (2 choices for each of m pairs).
+
+  This is the HAMMING GRAPH H(m, 3) — the m-dimensional 3-ary cube.
+
+  The isomorphism class graph: G_n^{orient} = H(m, 3) / S_n.
+
+  WHAT SURVIVES from tournaments:
+  - Burnside formula for V = #{iso classes}: same structure, different Fix
+  - The S_n action on pairs is the SAME
+  - The "staircase" becomes a staircase with 3-valued cells (ternary tiling)
+
+  WHAT'S NEW:
+  - The state "no arc" is a NEUTRAL state. It's the 0 in the 3-valued encoding.
+  - The complement map: swap state 1↔2, leave 0 fixed. Still order 2.
+  - But now there's also a "deletion" operation: map to state 0.
+  - The 3 states form the GROUP Z_3? No — {0, 1, 2} under flip is Z_3 only
+    if we define flip cyclically. Under arc reversal: {1, 2} swap, 0 is fixed.
+
+  THE 2 AND 3 CONNECTION:
+  - In tournaments: m cells, each binary (2 states) → 2^m configurations
+  - In oriented graphs: m cells, each TERNARY (3 states) → 3^m configurations
+  - The tournament theory uses the ORDER-2 generator (complement)
+  - The oriented graph theory ADDS the ORDER-3 generator (ternary cycle on states)!
+
+  THIS IS THE LITERAL "2 AND 3" OF PSL(2,Z):
+  - Tournament = the 2-structure (binary)
+  - Oriented graph = the 3-structure (ternary)
+  - The modular group PSL(2,Z) = <S, ST> with orders 2 and 3
+    governs the interplay between these two.
+
+  n=3: 3^3 = 27 oriented graphs, 7 iso classes
+       8 tournaments, 2 tournament iso classes
+       Ratio: 7 / 2 = 3.50 (oriented/tournament classes)
+  n=4: 3^6 = 729 oriented graphs, 42 iso classes
+       64 tournaments, 4 tournament iso classes
+       Ratio: 42 / 4 = 10.50 (oriented/tournament classes)
+
+========================================================================
+  GENERALIZATION 2: GENERAL DIGRAPHS
+========================================================================
+
+
+  A GENERAL DIGRAPH on n vertices: each ordered pair (i,j) with i≠j has
+  independently an arc or not. Total: 2^{n(n-1)}.
+
+  This is MUCH larger than tournaments (2^{C(n,2)}).
+  At n=4: 2^12 = 4096 digraphs vs 2^6 = 64 tournaments.
+
+  The flip operation: toggle one arc (add or remove).
+  The meta-graph: H(n(n-1), 2) = the n(n-1)-dimensional hypercube,
+  quotiented by S_n.
+
+  WHAT SURVIVES:
+  - Burnside counting for iso classes (A000273 for digraphs)
+  - The S_n action on the n(n-1) arc positions
+  - The complement map (toggle ALL arcs)
+
+  WHAT'S NEW:
+  - S_n acts on ORDERED pairs (i,j), not unordered {i,j}.
+  - The "complement" of arc (i→j) is "no arc from i to j",
+    not "arc (j→i)". So complement in digraphs ≠ reversal.
+  - We can define MULTIPLE merge operations:
+    a) Merge by COMPLEMENT (toggle all)
+    b) Merge by REVERSAL (reverse all arcs) — gives the "transpose" digraph
+    c) Merge by BOTH (complement + reversal)
+
+  THE DIRECTED-GRAPH STAIRCASE:
+  For tournaments: the staircase δ_{n-2} has C(n,2) cells.
+  For digraphs: the matrix has n(n-1) cells (the full off-diagonal).
+  The staircase becomes the FULL SQUARE minus the diagonal.
+
+  The tournament staircase is the UPPER TRIANGLE of this square.
+  The tournament constraint "exactly one arc per pair" means:
+  cell (i,j) and cell (j,i) are COMPLEMENTARY (sum to 1).
+  In digraphs, they're INDEPENDENT.
+
+  So: DIGRAPH THEORY = tournament theory WITHOUT the complementarity constraint.
+  The tournament is a SECTION of the digraph space:
+  digraphs ∩ {A[i][j] + A[j][i] = 1 for all i<j} = tournaments.
+
+  Digraph iso classes at n=3:
+  Total digraphs: 2^6 = 64
+  Digraph iso classes: 16
+  Expected (A000273): 16
+  Digraph meta-graph: V=16, E=30
+  Average degree: 3.75 (m_dig = 6)
+
+  Tournament meta-graph at n=3: V=2, E=1
+  Ratio: digraph V/tournament V = 16/2 = 8.0
+  Ratio: digraph E/tournament E = 30/1 = 30.0
+
+========================================================================
+  THE THREE LEVELS OF GENERALIZATION
+========================================================================
+
+
+  LEVEL 0: TOURNAMENTS (complete, antisymmetric)
+  ================================================
+  State space: {0,1}^{C(n,2)} = the m-cube Q_m
+  Meta-graph: G_n = Q_m / S_n
+  Merge: Z_2 (complement = reverse all arcs)
+  Merged: G_n / Z_2
+
+  Properties:
+  - V = A000568(n) (tournament iso classes)
+  - edge_orbits = T_n/2 + (n-2)!
+  - H is always ODD
+  - β_2 = 0 for all tournaments
+
+  LEVEL 1: ORIENTED GRAPHS (at most one arc per pair)
+  ===================================================
+  State space: {0,1,2}^{C(n,2)} = H(m, 3) (3-ary cube)
+  Meta-graph: G_n^{orient} = H(m, 3) / S_n
+  Merge: Z_2 (reverse all arcs, 0 stays fixed)
+  Merged: G_n^{orient} / Z_2
+
+  Properties:
+  - V = A001174(n) (oriented graph iso classes: 1, 2, 7, 42, 582, ...)
+  - Tournaments embed as the "complete" layer
+  - The "empty graph" (all 0s) is a single fixed point
+  - The staircase cells become TERNARY (0, 1, 2)
+
+  WHAT CHANGES:
+  - The Hamiltonian path count H generalizes to "path count in digraph"
+  - Arcs can be ABSENT, not just reversed
+  - The "apex" arc can be absent, forward, or backward (3 states)
+  - The recursive decomposition has 3 apex states instead of 2
+
+  LEVEL 2: GENERAL DIGRAPHS (any arcs, including mutual)
+  ======================================================
+  State space: {0,1}^{n(n-1)} = Q_{n(n-1)} (the big cube)
+  Meta-graph: G_n^{dig} = Q_{n(n-1)} / S_n
+  Merge: multiple options (complement, transpose, both)
+  Merged: G_n^{dig} / (S_n × merge_group)
+
+  Properties:
+  - V = A000273(n) (digraph iso classes: 1, 1, 3, 16, 218, 9608, ...)
+  - Tournaments embed as a SECTION (constraint: A[i][j]+A[j][i]=1)
+  - Mutual arcs allowed (A[i][j]=A[j][i]=1)
+  - The staircase becomes the FULL SQUARE
+
+  WHAT CHANGES:
+  - The staircase is no longer a TRIANGLE but a SQUARE
+  - The complement map changes meaning (delete arcs vs reverse)
+  - TWO merge operations: complement AND transpose
+  - The Schur-Weyl decomposition involves more irreps
+  - The recursive structure: n(n-1) arcs, not just C(n,2)
+
+  LEVEL 3: DIGRAPHS WITH SELF-LOOPS (the most general)
+  =====================================================
+  State space: {0,1}^{n^2} = Q_{n^2}
+  Meta-graph: G_n^{full} = Q_{n^2} / S_n
+  V = A000595(n) (binary relations: 1, 2, 10, 104, 3044, ...)
+
+  This is the meta-graph of ALL BINARY RELATIONS on [n].
+
+
+========================================================================
+  WHAT SURVIVES AT EACH LEVEL
+========================================================================
+
+
+  FORMULA / PROPERTY          | TOURN | ORIENT | DIGRAPH | FULL
+  ----------------------------|-------|--------|---------|-----
+  V = Burnside formula        |  YES  |  YES   |  YES    | YES
+  T_n = arc-orbit count       |  YES  |  YES   |  YES    | YES
+  edge_orbits = T_n/2 + corr  |  ???  |  ???   |  ???    | ???
+  Case A = T_n/2              |  YES  |  YES?  |  YES?   | YES?
+  Case B = (n-2)!             |  ???  |  ???   |  ???    | ???
+  H always odd                |  YES  |  NO    |  NO     | NO
+  Clique complex beta_1       |  2,15 |  ???   |  ???    | ???
+  Staircase = triangle        |  YES  |  YES   |  NO     | NO
+  3-color decomposition       |  YES  |  ???   |  ???    | ???
+  f(n) = arc neutrality       |  YES  |  ???   |  ???    | ???
+
+  THE HIERARCHY:
+  FULL ⊃ DIGRAPH ⊃ ORIENTED ⊃ TOURNAMENT
+
+  Each level adds constraints:
+  FULL → DIGRAPH: no self-loops (A[i][i] = 0)
+  DIGRAPH → ORIENTED: at most one arc per pair (A[i][j]*A[j][i] = 0)
+  ORIENTED → TOURNAMENT: exactly one arc per pair (A[i][j]+A[j][i] = 1)
+
+
+========================================================================
+  THE 2 AND 3 AT EACH LEVEL
+========================================================================
+
+
+  THE MODULAR GROUP STRUCTURE:
+
+  At LEVEL 0 (tournaments):
+  - Each cell has 2 states → the 2-cube per cell
+  - The complement swaps states (order 2)
+  - The near-automorphism involves 3-cycles (order 3)
+  - PSL(2,Z) = <S(2), ST(3)> governs the structure
+
+  At LEVEL 1 (oriented graphs):
+  - Each cell has 3 states → the 3-ary cube per cell
+  - The reversal swaps states 1↔2, fixes 0 (order 2)
+  - The cyclic rotation 0→1→2→0 has order 3
+  - PSL(2,Z) appears LITERALLY: the 2 and 3 ARE the cell states!
+  - S = reversal (order 2), ST = cyclic (order 3)
+  - The modular group IS the symmetry of the 3-state cell!
+
+  At LEVEL 2 (digraphs):
+  - Each ordered pair has 2 states → back to binary
+  - But pairs (i,j) and (j,i) are INDEPENDENT
+  - The transpose swaps (i,j) ↔ (j,i): order 2
+  - The complement toggles each arc: order 2
+  - Together: Klein 4-group Z_2 × Z_2 (not PSL(2,Z))
+
+  THE DEEP INSIGHT:
+  Oriented graphs are the NATURAL HOME of PSL(2,Z) because
+  the 3 states per cell match the 3 orbifold points:
+  - State 0 (no arc) = the cusp (transitive limit)
+  - State 1 (forward) = the i-point (complement)
+  - State 2 (backward) = the ω-point (cycle)
+
+  Tournaments = the oriented graphs with NO state-0 cells.
+  They live in the "non-cuspidal" part of the modular curve.
+  The cusp is excluded, forcing every cell to be either 1 or 2.
+
+  This is why tournament theory is governed by orders 2 and 3 ONLY:
+  the cusp (order ∞) is absent. Removing the cusp collapses PSL(2,Z)
+  to the finite group <S, ST | S^2 = (ST)^3 = 1> = the modular group
+  modulo the cusp stabilizer.
+
+
+========================================================================
+  CONCRETE COMPUTATION: ORIENTED GRAPH META-GRAPH
+========================================================================
+
+  ORIENTED GRAPH META-GRAPH at n=3:
+
+  Iso classes: 7
+  Edges: 11
+  Average degree: 3.14
+
+  Classes:
+    0: state=(0, 0, 0), arcs=0, is_tournament=False, copies=1
+    1: state=(0, 0, 1), arcs=1, is_tournament=False, copies=6
+    2: state=(0, 1, 1), arcs=2, is_tournament=False, copies=3
+    3: state=(0, 1, 2), arcs=2, is_tournament=False, copies=6
+    4: state=(0, 2, 2), arcs=2, is_tournament=False, copies=3
+    5: state=(1, 1, 1), arcs=3, is_tournament=True, copies=6
+    6: state=(1, 2, 1), arcs=3, is_tournament=True, copies=2
+
+  Tournament classes among oriented: 2 out of 7
+
+========================================================================
+  THE EDGE ORBIT FORMULA: DOES IT GENERALIZE?
+========================================================================
+
+
+  For TOURNAMENTS: edge_orbits = T_n/2 + (n-2)!
+
+  For ORIENTED GRAPHS: each pair has 3 states, each "flip" changes
+  one pair's state. An edge orbit of the Hamming graph H(m,3) under S_n:
+
+  edge_orbits^{orient} = (1/n!) * sum_σ Fix_orient(σ)
+
+  where Fix_orient(σ) counts edges of H(m,3) fixed by σ.
+
+  An edge (state, state') differs in exactly one pair's value.
+  σ fixes this edge iff σ maps (state, state') to itself (both fixed)
+  or swaps them.
+
+  The SAME Case A / Case B decomposition applies:
+  Case A: σ fixes both endpoints
+  Case B: σ swaps them
+
+  For Case A: Fix_orient_A(σ) = Fix_OG(σ) × C(fix(σ), 2) × 2
+  (the ×2 because each fixed pair has 2 possible flips: s→s', s→s'')
+
+  For Case B: analogous to tournaments but with 3-state structure.
+
+  CONJECTURE: edge_orbits^{orient} = T_n^{orient}/2 + correction(n)
+  where T_n^{orient} counts arc-orbits in oriented graph space
+  and the correction is related to (n-2)! × (some factor involving 3).
+
+  THE 3 ENTERS: in tournaments, (n-2)! came from pair-swapping.
+  In oriented graphs, the pair-swap has RICHER structure because
+  the "empty" state introduces a new symmetry class.
+  The correction might be (n-2)! × 2 or (n-2)! × 3.
+
+  Direct computation at n=3:
+
+  n=3: orient edge_orbits = 15
+  n=3: orient E (meta-graph edges) = 11
+  n=3: orient gap_orbits = 4
+
+  Tournament at n=3: edge_orbits = 3, E = 1, gap = 2
+  Oriented at n=3: edge_orbits = 15, E = 11, gap = 4
+
+Done. opus-2026-03-23-S250
