@@ -1,0 +1,527 @@
+================================================================================
+  DEEP INVARIANT ANALYSIS OF G_n AND G_n/Z_2
+  kind-pasteur-2026-03-23-S20co
+================================================================================
+
+
+
+################################################################################
+  n = 3
+################################################################################
+
+======================================================================
+  BUILDING G_3
+======================================================================
+  n=3, m=3, |tournaments|=8
+  |V(G_3)| = 2 iso classes (0.0s)
+  SC classes: 2
+  |E(G_3)| = 1 (blue=1, black=0)
+  Self-loops: 1
+  Build time: 0.0s
+
+  ============================================================
+  INVARIANTS OF G_3 (V=2, E=1)
+  ============================================================
+  Degree: min=1, max=1, avg=1.000
+  Density: 1.000000
+  Spectral radius: 1.000000
+  Spectral gap: 2.000000
+  Graph energy: 2.000000
+  Spectrum: [1.0000, -1.0000]
+  Estrada index: 3.086161
+  Algebraic connectivity (lam2): 2.000000
+  Laplacian spectral radius: 2.000000
+  Normalized algebraic connectivity: 2.000000
+  Kirchhoff index: 1.000000
+  Spanning trees: 1
+  Connected: True
+  Diameter: 1
+  Wiener index: 1
+  Avg distance: 0.5000
+  Girth: inf
+  Triangles: 0
+  Avg clustering coefficient: 0.000000
+  Clique number: 2
+  Independence number: 1
+  I(x) coefficients: [1, 2]
+  I(2) = 5 (meta-H)
+  I(-1) = -1 (Euler char of indep complex)
+  Chromatic number (greedy upper bound): 2
+  Forman-Ricci: min=2, max=2, avg=2.0000, total=2
+  Degree distribution entropy: -0.0000 bits
+  Betweenness centrality: max=0.0000, avg=0.0000
+    Clique complex: max_dim=1, simplices=3
+  Clique complex Betti numbers: [np.int64(1), 0]
+  Euler characteristic: 1
+  Ramanujan: False (|lam2|/2sqrt(d-1) = inf)
+
+  BUILDING G_3/Z_2 (merged graph)
+  V_merged = 2 (= (2 + 2)/2 = 2)
+  E_merged = 1, collapsed = 0, twin = 0
+  Check: 1 + 0 + 0 = 1 = 1 YES
+  Merged colors: blue=1, black=0, mixed=0
+
+  ============================================================
+  INVARIANTS OF G_3/Z_2 (V=2, E=1)
+  ============================================================
+  Degree: min=1, max=1, avg=1.000
+  Density: 1.000000
+  Spectral radius: 1.000000
+  Spectral gap: 2.000000
+  Graph energy: 2.000000
+  Spectrum: [1.0000, -1.0000]
+  Estrada index: 3.086161
+  Algebraic connectivity (lam2): 2.000000
+  Laplacian spectral radius: 2.000000
+  Normalized algebraic connectivity: 2.000000
+  Kirchhoff index: 1.000000
+  Spanning trees: 1
+  Connected: True
+  Diameter: 1
+  Wiener index: 1
+  Avg distance: 0.5000
+  Girth: inf
+  Triangles: 0
+  Avg clustering coefficient: 0.000000
+  Clique number: 2
+  Independence number: 1
+  I(x) coefficients: [1, 2]
+  I(2) = 5 (meta-H)
+  I(-1) = -1 (Euler char of indep complex)
+  Chromatic number (greedy upper bound): 2
+  Forman-Ricci: min=2, max=2, avg=2.0000, total=2
+  Degree distribution entropy: -0.0000 bits
+  Betweenness centrality: max=0.0000, avg=0.0000
+    Clique complex: max_dim=1, simplices=3
+  Clique complex Betti numbers: [np.int64(1), 0]
+  Euler characteristic: 1
+  Ramanujan: False (|lam2|/2sqrt(d-1) = inf)
+
+  H-WEIGHTED METRICS FOR G_3/Z_2
+  --------------------------------------------------
+  Uphill: 1, Downhill: 0, Level: 0
+  DAG (0 level edges): True
+  Avg |DeltaH| per edge: 2.0000
+  Max |DeltaH| per edge: 2
+  H-weighted algebraic connectivity: 0.270671
+  Most H-central vertex: 1 (H=3, deg=1, H*deg=3)
+  Number of distinct H values: 2
+  H level set sizes: {np.int64(1): 1, np.int64(3): 1}
+
+
+################################################################################
+  n = 4
+################################################################################
+
+======================================================================
+  BUILDING G_4
+======================================================================
+  n=4, m=6, |tournaments|=64
+  |V(G_4)| = 4 iso classes (0.0s)
+  SC classes: 2
+  |E(G_4)| = 5 (blue=1, black=4)
+  Self-loops: 2
+  Build time: 0.0s
+
+  ============================================================
+  INVARIANTS OF G_4 (V=4, E=5)
+  ============================================================
+  Degree: min=2, max=3, avg=2.500
+  Density: 0.833333
+  Spectral radius: 2.561553
+  Spectral gap: 2.561553
+  Graph energy: 5.123106
+  Spectrum: [2.5616, 0.0000, -1.0000, -1.5616]
+  Estrada index: 14.533609
+  Algebraic connectivity (lam2): 2.000000
+  Laplacian spectral radius: 4.000000
+  Normalized algebraic connectivity: 1.000000
+  Kirchhoff index: 4.000000
+  Spanning trees: 8
+  Connected: True
+  Diameter: 2
+  Wiener index: 7
+  Avg distance: 0.8750
+  Girth: 3
+  Triangles: 2
+  Avg clustering coefficient: 0.833333
+  Clique number: 3
+  Independence number: 2
+  I(x) coefficients: [1, 4, 1]
+  I(2) = 13 (meta-H)
+  I(-1) = -2 (Euler char of indep complex)
+  Chromatic number (greedy upper bound): 3
+  Cheeger constant (h): 1.500000
+  Cheeger bounds: 1.0000 <= h <= 4.0000
+  Forman-Ricci: min=2, max=4, avg=2.4000, total=12
+  Degree distribution entropy: 1.0000 bits
+  Betweenness centrality: max=0.5000, avg=0.2500
+    Clique complex: max_dim=2, simplices=11
+  Clique complex Betti numbers: [np.int64(1), 0, 0]
+  Euler characteristic: 1
+  Ramanujan: True (|lam2|/2sqrt(d-1) = 0.6375)
+
+  BUILDING G_4/Z_2 (merged graph)
+  V_merged = 3 (= (4 + 2)/2 = 3)
+  E_merged = 3, collapsed = 0, twin = 2
+  Check: 3 + 0 + 2 = 5 = 5 YES
+  Merged colors: blue=1, black=2, mixed=0
+
+  ============================================================
+  INVARIANTS OF G_4/Z_2 (V=3, E=3)
+  ============================================================
+  Degree: min=2, max=2, avg=2.000
+  Density: 1.000000
+  Spectral radius: 2.000000
+  Spectral gap: 3.000000
+  Graph energy: 4.000000
+  Spectrum: [2.0000, -1.0000, -1.0000]
+  Estrada index: 8.124815
+  Algebraic connectivity (lam2): 3.000000
+  Laplacian spectral radius: 3.000000
+  Normalized algebraic connectivity: 1.500000
+  Kirchhoff index: 2.000000
+  Spanning trees: 3
+  Connected: True
+  Diameter: 1
+  Wiener index: 3
+  Avg distance: 0.6667
+  Girth: 3
+  Triangles: 1
+  Avg clustering coefficient: 1.000000
+  Clique number: 3
+  Independence number: 1
+  I(x) coefficients: [1, 3]
+  I(2) = 7 (meta-H)
+  I(-1) = -2 (Euler char of indep complex)
+  Chromatic number (greedy upper bound): 3
+  Cheeger constant (h): 2.000000
+  Cheeger bounds: 1.5000 <= h <= 4.2426
+  Forman-Ricci: min=3, max=3, avg=3.0000, total=9
+  Degree distribution entropy: -0.0000 bits
+  Betweenness centrality: max=0.0000, avg=0.0000
+    Clique complex: max_dim=2, simplices=7
+  Clique complex Betti numbers: [np.int64(1), 0, 0]
+  Euler characteristic: 1
+  Ramanujan: True (|lam2|/2sqrt(d-1) = 0.5000)
+
+  H-WEIGHTED METRICS FOR G_4/Z_2
+  --------------------------------------------------
+  Uphill: 3, Downhill: 0, Level: 0
+  DAG (0 level edges): True
+  Avg |DeltaH| per edge: 2.6667
+  Max |DeltaH| per edge: 4
+  H-weighted algebraic connectivity: 0.466508
+  Most H-central vertex: 2 (H=5, deg=2, H*deg=10)
+  Number of distinct H values: 3
+  H level set sizes: {np.int64(1): 1, np.int64(3): 1, np.int64(5): 1}
+
+
+################################################################################
+  n = 5
+################################################################################
+
+======================================================================
+  BUILDING G_5
+======================================================================
+  n=5, m=10, |tournaments|=1024
+  |V(G_5)| = 12 iso classes (0.0s)
+  SC classes: 8
+  |E(G_5)| = 30 (blue=14, black=16)
+  Self-loops: 7
+  Build time: 0.3s
+
+  ============================================================
+  INVARIANTS OF G_5 (V=12, E=30)
+  ============================================================
+  Degree: min=2, max=7, avg=5.000
+  Density: 0.454545
+  Spectral radius: 5.582284
+  Spectral gap: 3.640580
+  Graph energy: 20.204816
+  Spectrum: [5.5823, 1.9417, 1.2234, 1.0000, 0.3216, 0.0334, -0.4163, -1.0000, -1.1840, -1.7512...]
+  Estrada index: 282.806631
+  Algebraic connectivity (lam2): 1.602589
+  Laplacian spectral radius: 9.260028
+  Normalized algebraic connectivity: 0.532178
+  Kirchhoff index: 32.830778
+  Spanning trees: 2347680
+  Connected: True
+  Diameter: 3
+  Wiener index: 108
+  Avg distance: 1.5000
+  Girth: 3
+  Triangles: 21
+  Avg clustering coefficient: 0.488889
+  Clique number: 4
+  Independence number: 5
+  I(x) coefficients: [1, 12, 36, 38, 16, 2]
+  I(2) = 793 (meta-H)
+  I(-1) = 1 (Euler char of indep complex)
+  Chromatic number (greedy upper bound): 4
+  Cheeger constant (h): 1.833333
+  Cheeger bounds: 0.8013 <= h <= 5.4479
+  Forman-Ricci: min=-5, max=4, avg=-0.9667, total=-29
+  Degree distribution entropy: 2.1258 bits
+  Betweenness centrality: max=6.9048, avg=3.5000
+    Clique complex: max_dim=3, simplices=67
+  Clique complex Betti numbers: [np.int64(1), 2, 0, 0]
+  Euler characteristic: -1
+  Ramanujan: True (|lam2|/2sqrt(d-1) = 0.8138)
+
+  BUILDING G_5/Z_2 (merged graph)
+  V_merged = 10 (= (12 + 8)/2 = 10)
+  E_merged = 21, collapsed = 0, twin = 9
+  Check: 21 + 0 + 9 = 30 = 30 YES
+  Merged colors: blue=13, black=8, mixed=0
+
+  ============================================================
+  INVARIANTS OF G_5/Z_2 (V=10, E=21)
+  ============================================================
+  Degree: min=2, max=7, avg=4.200
+  Density: 0.466667
+  Spectral radius: 4.640500
+  Spectral gap: 2.788934
+  Graph energy: 15.882145
+  Spectrum: [4.6405, 1.8516, 1.1112, 0.3378, -0.0000, -0.5265, -1.1697, -1.5328, -1.8119, -2.9001]
+  Estrada index: 116.741166
+  Algebraic connectivity (lam2): 1.429814
+  Laplacian spectral radius: 8.232013
+  Normalized algebraic connectivity: 0.480275
+  Kirchhoff index: 25.818278
+  Spanning trees: 32159
+  Connected: True
+  Diameter: 3
+  Wiener index: 73
+  Avg distance: 1.4600
+  Girth: 3
+  Triangles: 12
+  Avg clustering coefficient: 0.492857
+  Clique number: 4
+  Independence number: 4
+  I(x) coefficients: [1, 10, 24, 17, 3]
+  I(2) = 301 (meta-H)
+  I(-1) = 1 (Euler char of indep complex)
+  Chromatic number (greedy upper bound): 4
+  Cheeger constant (h): 1.600000
+  Cheeger bounds: 0.7149 <= h <= 4.8519
+  Forman-Ricci: min=-4, max=4, avg=-0.1905, total=-4
+  Degree distribution entropy: 2.0464 bits
+  Betweenness centrality: max=9.0119, avg=2.8000
+    Clique complex: max_dim=3, simplices=45
+  Clique complex Betti numbers: [np.int64(1), 2, 0, 0]
+  Euler characteristic: -1
+  Ramanujan: True (|lam2|/2sqrt(d-1) = 0.8106)
+
+  H-WEIGHTED METRICS FOR G_5/Z_2
+  --------------------------------------------------
+  Uphill: 15, Downhill: 5, Level: 1
+  DAG (0 level edges): False
+  Avg |DeltaH| per edge: 4.0000
+  Max |DeltaH| per edge: 12
+  H-weighted algebraic connectivity: 0.510759
+  Most H-central vertex: 6 (H=13, deg=5, H*deg=65)
+  Number of distinct H values: 7
+  H level set sizes: {np.int64(1): 1, np.int64(3): 2, np.int64(5): 1, np.int64(9): 2, np.int64(11): 1, np.int64(13): 1, np.int64(15): 2}
+    H=3: 2 vertices, 2 distinct scores
+    H=9: 2 vertices, 1 distinct scores
+    H=15: 2 vertices, 2 distinct scores
+
+
+################################################################################
+  n = 6
+################################################################################
+
+======================================================================
+  BUILDING G_6
+======================================================================
+  n=6, m=15, |tournaments|=32768
+  |V(G_6)| = 56 iso classes (1.3s)
+  SC classes: 12
+  |E(G_6)| = 290 (blue=200, black=90)
+  Self-loops: 30
+  Build time: 21.8s
+
+  ============================================================
+  INVARIANTS OF G_6 (V=56, E=290)
+  ============================================================
+  Degree: min=3, max=14, avg=10.357
+  Density: 0.188312
+  Spectral radius: 11.669710
+  Spectral gap: 4.875981
+  Graph energy: 137.389377
+  Spectrum: [11.6697, 6.7937, 5.0107, 4.3434, 4.2505, 4.0101, 3.9047, 3.7065, 3.3185, 3.0558...]
+  Estrada index: 118438.857229
+  Algebraic connectivity (lam2): 1.960390
+  Laplacian spectral radius: 19.015198
+  Normalized algebraic connectivity: 0.317112
+  Kirchhoff index: 396.234320
+  Spanning trees: 3526864181675079444113195138083079092281720610750464
+  Connected: True
+  Diameter: 4
+  Wiener index: 3314
+  Avg distance: 2.1135
+  Girth: 3
+  Triangles: 248
+  Avg clustering coefficient: 0.249260
+  Clique number: 3
+  Independence number: 3
+  Forman-Ricci: min=-21, max=-2, avg=-11.1793, total=-3242
+  Degree distribution entropy: 2.9412 bits
+  Betweenness centrality: max=55.4774, avg=31.6786
+  Ramanujan: False (|lam2|/2sqrt(d-1) = 1.1105)
+
+  BUILDING G_6/Z_2 (merged graph)
+  V_merged = 34 (= (56 + 12)/2 = 34)
+  E_merged = 143, collapsed = 5, twin = 142
+  Check: 143 + 5 + 142 = 290 = 290 YES
+  Merged colors: blue=98, black=45, mixed=0
+
+  ============================================================
+  INVARIANTS OF G_6/Z_2 (V=34, E=143)
+  ============================================================
+  Degree: min=2, max=13, avg=8.412
+  Density: 0.254902
+  Spectral radius: 9.779592
+  Spectral gap: 4.288787
+  Graph energy: 73.208743
+  Spectrum: [9.7796, 5.4908, 3.4413, 3.2637, 2.9464, 2.6095, 1.9959, 1.7725, 1.4540, 1.1676...]
+  Estrada index: 18037.093965
+  Algebraic connectivity (lam2): 1.466202
+  Laplacian spectral radius: 16.579490
+  Normalized algebraic connectivity: 0.331215
+  Kirchhoff index: 186.437163
+  Spanning trees: 1842533057725250474430431232
+  Connected: True
+  Diameter: 4
+  Wiener index: 1138
+  Avg distance: 1.9689
+  Girth: 3
+  Triangles: 139
+  Avg clustering coefficient: 0.330730
+  Clique number: 4
+  Independence number: 4
+  Chromatic number (greedy upper bound): 6
+  Cheeger constant (h): 2.000000
+  Cheeger bounds: 0.7331 <= h <= 6.9726
+  Forman-Ricci: min=-16, max=5, avg=-6.4545, total=-923
+  Degree distribution entropy: 3.1056 bits
+  Betweenness centrality: max=37.3986, avg=16.9706
+  Ramanujan: False (|lam2|/2sqrt(d-1) = 1.0084)
+
+  H-WEIGHTED METRICS FOR G_6/Z_2
+  --------------------------------------------------
+  Uphill: 96, Downhill: 42, Level: 5
+  DAG (0 level edges): False
+  Avg |DeltaH| per edge: 8.5315
+  Max |DeltaH| per edge: 32
+  H-weighted algebraic connectivity: 0.733169
+  Most H-central vertex: 16 (H=37, deg=13, H*deg=481)
+  Number of distinct H values: 19
+  H level set sizes: {np.int64(1): 1, np.int64(3): 2, np.int64(5): 2, np.int64(9): 3, np.int64(11): 1, np.int64(13): 1, np.int64(15): 3, np.int64(17): 2, np.int64(19): 1, np.int64(23): 2, np.int64(25): 1, np.int64(27): 1, np.int64(29): 3, np.int64(31): 1, np.int64(33): 3, np.int64(37): 3, np.int64(41): 1, np.int64(43): 1, np.int64(45): 2}
+    H=3: 2 vertices, 2 distinct scores
+    H=5: 2 vertices, 2 distinct scores
+    H=9: 3 vertices, 2 distinct scores
+    H=15: 3 vertices, 3 distinct scores
+    H=17: 2 vertices, 1 distinct scores
+    H=23: 2 vertices, 2 distinct scores
+    H=29: 3 vertices, 1 distinct scores
+    H=33: 3 vertices, 3 distinct scores
+    H=37: 3 vertices, 2 distinct scores
+    H=45: 2 vertices, 1 distinct scores
+
+
+================================================================================
+  MASTER SUMMARY TABLE
+================================================================================
+
+  --- G_n SEQUENCES ---
+  Invariant                             n=3        n=4        n=5        n=6
+  ----------------------------------------------------------------------
+  V                                       2          4         12         56
+  E                                       1          5         30        290
+  density                            1.0000     0.8333     0.4545     0.1883
+  diameter                                1          2          3          4
+  girth                                 inf          3          3          3
+  triangles                               0          2         21        248
+  spectral_radius                    1.0000     2.5616     5.5823    11.6697
+  graph_energy                       2.0000     5.1231    20.2048   137.3894
+  algebraic_connectivity             2.0000     2.0000     1.6026     1.9604
+  kirchhoff_index                    1.0000     4.0000    32.8308   396.2343
+  spanning_trees                          1          8    2347680 3526864181675079444113195138083079092281720610750464
+  avg_clustering                          0     0.8333     0.4889     0.2493
+  estrada_index                      3.0862    14.5336   282.8066 118438.8572
+  wiener_index                            1          7        108       3314
+  avg_distance                       0.5000     0.8750     1.5000     2.1135
+  forman_avg                         2.0000     2.4000    -0.9667   -11.1793
+  degree_entropy                    -0.0000     1.0000     2.1258     2.9412
+  avg_betweenness                    0.0000     0.2500     3.5000    31.6786
+
+  --- G_n/Z_2 SEQUENCES ---
+  Invariant                             n=3        n=4        n=5        n=6
+  ----------------------------------------------------------------------
+  V                                       2          3         10         34
+  E                                       1          3         21        143
+  density                            1.0000     1.0000     0.4667     0.2549
+  diameter                                1          1          3          4
+  girth                                 inf          3          3          3
+  triangles                               0          1         12        139
+  spectral_radius                    1.0000     2.0000     4.6405     9.7796
+  graph_energy                       2.0000     4.0000    15.8821    73.2087
+  algebraic_connectivity             2.0000     3.0000     1.4298     1.4662
+  kirchhoff_index                    1.0000     2.0000    25.8183   186.4372
+  spanning_trees                          1          3      32159 1842533057725250474430431232
+  avg_clustering                          0     1.0000     0.4929     0.3307
+  estrada_index                      3.0862     8.1248   116.7412 18037.0940
+  wiener_index                            1          3         73       1138
+  avg_distance                       0.5000     0.6667     1.4600     1.9689
+  forman_avg                         2.0000     3.0000    -0.1905    -6.4545
+  degree_entropy                    -0.0000    -0.0000     2.0464     3.1056
+  avg_betweenness                    0.0000     0.0000     2.8000    16.9706
+
+  --- EXTRA INVARIANTS G_n/Z_2 ---
+  clique_number                  2:3:4:4
+  independence_number            1:1:4:4
+  chromatic_greedy               2:3:4:6
+  cheeger_constant               ?:2.0000:1.6000:2.0000
+  ramanujan_ratio                inf:0.5000:0.8106:1.0084
+
+  --- INDEPENDENCE POLYNOMIALS ---
+  I(G_3, x) = [1, 2]  |  I(2)=5, I(-1)=-1
+  I(G_4, x) = [1, 4, 1]  |  I(2)=13, I(-1)=-2
+  I(G_5, x) = [1, 12, 36, 38, 16, 2]  |  I(2)=793, I(-1)=1
+  I(G_6, x) = []  |  I(2)=?, I(-1)=?
+  I(G_3/Z_2, x) = [1, 2]  |  I(2)=5, I(-1)=-1
+  I(G_4/Z_2, x) = [1, 3]  |  I(2)=7, I(-1)=-2
+  I(G_5/Z_2, x) = [1, 10, 24, 17, 3]  |  I(2)=301, I(-1)=1
+  I(G_6/Z_2, x) = []  |  I(2)=?, I(-1)=?
+
+  --- CLIQUE COMPLEX BETTI NUMBERS ---
+  beta(G_3) = [np.int64(1), 0]  |  chi = 1
+  beta(G_4) = [np.int64(1), 0, 0]  |  chi = 1
+  beta(G_5) = [np.int64(1), 2, 0, 0]  |  chi = -1
+  beta(G_6) = ?  |  chi = ?
+  beta(G_3/Z_2) = [np.int64(1), 0]  |  chi = 1
+  beta(G_4/Z_2) = [np.int64(1), 0, 0]  |  chi = 1
+  beta(G_5/Z_2) = [np.int64(1), 2, 0, 0]  |  chi = -1
+  beta(G_6/Z_2) = ?  |  chi = ?
+
+  --- ADJACENCY SPECTRA (rounded to 3 decimal places) ---
+  spec(G_3) = [1.000, -1.000]
+  spec(G_4) = [2.562, 0.000, -1.000, -1.562]
+  spec(G_5) = [5.582, 1.942, 1.223, 1.000, 0.322, 0.033, -0.416, -1.000, -1.184, -1.751, -2.496, -3.255]
+  spec(G_6) = [11.670, 6.794, 5.011, 4.343, 4.251, 4.010, 3.905, 3.706, 3.318, 3.056, 2.780, 2.621, 2.058, 1.765, 1.704]
+  spec(G_3/Z_2) = [1.000, -1.000]
+  spec(G_4/Z_2) = [2.000, -1.000, -1.000]
+  spec(G_5/Z_2) = [4.641, 1.852, 1.111, 0.338, -0.000, -0.527, -1.170, -1.533, -1.812, -2.900]
+  spec(G_6/Z_2) = [9.780, 5.491, 3.441, 3.264, 2.946, 2.609, 1.996, 1.772, 1.454, 1.168, 0.898, 0.737, 0.548, 0.323, 0.177]
+
+  --- H-GRADIENT ON G_n/Z_2 ---
+  n=3: ^1 v0 ->0  DAG=True  levels=2
+  n=4: ^3 v0 ->0  DAG=True  levels=3
+  n=5: ^15 v5 ->1  DAG=False  levels=7
+  n=6: ^96 v42 ->5  DAG=False  levels=19
+
+
+  DONE. Total time: see individual timings above.
+================================================================================
