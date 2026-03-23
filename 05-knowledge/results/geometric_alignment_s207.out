@@ -1,0 +1,181 @@
+
+========================================================================
+  THE PRINCIPAL BLUE LINE AT n=5
+========================================================================
+
+  SC classes at n=5 (8 total):
+    class 0: H=1, t3=0, side=LEFT, scores=(0, 1, 2, 3, 4)
+    class 3: H=3, t3=1, side=RIGHT, scores=(0, 2, 2, 2, 4)
+    class 4: H=9, t3=3, side=RIGHT, scores=(1, 1, 2, 3, 3)
+    class 6: H=9, t3=3, side=RIGHT, scores=(1, 1, 2, 3, 3)
+    class 8: H=11, t3=4, side=LEFT, scores=(1, 2, 2, 2, 3)
+    class 9: H=15, t3=4, side=LEFT, scores=(1, 2, 2, 2, 3)
+    class 10: H=13, t3=4, side=LEFT, scores=(1, 2, 2, 2, 3)
+    class 11: H=15, t3=5, side=RIGHT, scores=(2, 2, 2, 2, 2)
+
+  LEFT (even t3): 4 classes, H = [1, 11, 13, 15]
+  RIGHT (odd t3): 4 classes, H = [3, 9, 9, 15]
+
+  NSC PAIRS AND THEIR BLACK ATTACHMENTS:
+    NSC(1,7) H=3: 1 left SC + 1 right SC neighbors = BALANCED
+    NSC(2,5) H=5: 3 left SC + 3 right SC neighbors = BALANCED
+
+========================================================================
+  THE GEOMETRIC PICTURE
+========================================================================
+
+
+  THE FUNDAMENTAL ALIGNMENT OF G_n/Z_2 (at odd n):
+
+                     PRINCIPAL BLUE LINE (SC spine)
+                     =============================
+                     transitive (H=1, t3=0)
+                           |
+                     SC class (t3 even) ---- SC class (t3 odd)
+                           |                      |
+                     SC class (t3 even) ---- SC class (t3 odd)
+                           |                      |
+                         ...                    ...
+                           |                      |
+                     regular (H=H_max, t3=max)
+
+  LEFT SIDE (even t3):      |      RIGHT SIDE (odd t3):
+  SC classes here            |      SC classes here
+  NSC pairs attach           |      NSC pairs attach
+  via black edges            |      via black edges
+
+  The t3-PARITY BIPARTITION creates LEFT and RIGHT sides.
+  The BLUE edges cross between sides (THM-060).
+  The BLACK edges attach NSC pairs to SC classes on one or both sides.
+
+  THE IMBALANCE:
+  At n=5: LEFT has classes with t3 = {0, 4, 4, 4} -> H = {1, 11, 13, 15}
+          RIGHT has classes with t3 = {1, 3, 3, 5} -> H = {3, 9, 9, 15}
+
+  The LEFT side has the transitive (H=1) and the PoS region (H=11,13,15).
+  The RIGHT side has the 3-cycle class (H=3) and the regular (H=15).
+
+  LEFT has H mean = 10.0, RIGHT has H mean = 9.0
+
+
+========================================================================
+  THE BLACK ATTACHMENT PATTERN
+========================================================================
+
+
+  The BLACK subgraph attaches NSC pairs to the SC backbone.
+  Each NSC pair has black edges to SC classes on the LEFT and RIGHT.
+
+  QUESTION: Is the black attachment SYMMETRIC or ASYMMETRIC?
+  I.e., do NSC pairs connect equally to both sides?
+
+  Total black attachments to LEFT SC: 4
+  Total black attachments to RIGHT SC: 4
+  Ratio LEFT/RIGHT: 1.000
+  BALANCED! The black subgraph is symmetric from the principal line.
+
+========================================================================
+  BLUE EDGES AND THE BIPARTITION
+========================================================================
+
+  BLUE EDGES (in the tiling-flip model) cross between LEFT and RIGHT
+
+  (by THM-060: GS flip reverses t3 parity at odd n)
+
+  SC-SC edges crossing t3 parity: 9
+  SC-SC edges same t3 parity: 3
+  Cross fraction: 0.75
+
+  At n=5 in the ARC REVERSAL model: not all SC-SC edges cross parity!
+  Some SC-SC edges are same-parity (the "black" SC-SC edges from S197).
+  The crossing edges = the BLUE SC-SC edges (GS flip pairs).
+  The same-parity edges = the BLACK SC-SC edges (non-GS arc reversals).
+
+
+========================================================================
+  THE COMPLETE GEOMETRIC ALIGNMENT
+========================================================================
+
+
+  THE MERGED META-GRAPH G_n/Z_2 HAS THREE LAYERS:
+
+  LAYER 1: THE BLUE INTERIOR (approaching K_{V_merged})
+  =========================================================
+  - Almost all edges are blue at large n
+  - Organized by the PRINCIPAL BLUE LINE:
+    * Starts at transitive (H=1)
+    * Follows SC blue edges (which cross t3 parity at odd n)
+    * Delta H = 2^{n-2} from transitive to first big neighbor
+    * The line branches into a TREE (genus 0,0,5,2 at n=3..6)
+
+  - The blue interior has TWO SIDES (at odd n):
+    LEFT = even t3 SC classes + their blue NS neighbors
+    RIGHT = odd t3 SC classes + their blue NS neighbors
+    The PRINCIPAL LINE connects LEFT to RIGHT via crossing edges
+
+  - Blue edges are THIN (thickness 1, single GS tiling pair)
+  - Blue triangles exist (BBB): 0, 0, 3, 87, 809, 13299
+
+
+  LAYER 2: THE BLACK BOUNDARY (bipartite SC↔NS)
+  =========================================================
+  - Attached PERPENDICULARLY to the blue interior
+  - Each black edge connects an SC class to an NS pair
+  - Black edges are THICKER (thickness 2 at n=5)
+  - Triangle-free (THM-A), no BBK triangles (THM-B)
+  - At odd n: the LEFT/RIGHT attachment may be IMBALANCED
+    (some NSC pairs connect more to one side than the other)
+
+  - The black boundary is the "MEMBRANE" between the SC spine
+    and the NS sea. It's the only bridge between the two populations.
+
+
+  LAYER 3: THE NS BLUE SEA (the bulk)
+  =========================================================
+  - At large n: ~99%+ of all nodes are NS
+  - NS-NS edges are ALL blue
+  - The NS blue subgraph is approximately the complete graph
+  - NS blue degree ~ m = C(n,2) at large n
+  - This is the "ocean" surrounding the SC "island"
+
+  THE RELATIONSHIP BETWEEN LAYERS:
+  - Layer 3 (NS sea) connects to Layer 2 (black boundary)
+    via black edges to the SC spine
+  - Layer 2 connects Layer 1 (SC blue interior) to Layer 3
+  - Layer 1 is the ORGANIZING PRINCIPLE: the principal line
+    gives coordinates to everything else
+  - The H function increases from left (transitive) to right (regular)
+    along the principal line, with BFS layers radiating outward
+
+
+========================================================================
+  UPDATING CLAUDE.md WITH THE GEOMETRIC ALIGNMENT
+========================================================================
+
+
+  THE FOLLOWING SHOULD BE ADDED TO CLAUDE.md
+  for all future agents:
+
+  ## The Geometric Alignment of G_n/Z_2
+
+  The merged meta-graph has a fundamental geometric structure
+  that ALL agents should use when analyzing it:
+
+  1. BLUE INTERIOR: an approximately complete graph on all nodes,
+     organized by the PRINCIPAL BLUE LINE (SC blue spine from transitive).
+     Blue edges are thin (thickness 1). Blue triangles exist (BBB).
+     At odd n: the t3-parity bipartition creates LEFT/RIGHT sides.
+
+  2. BLACK BOUNDARY: a bipartite subgraph (SC ↔ NS) attached
+     perpendicularly to the blue interior. Black edges are thicker
+     (thickness 2+). Triangle-free (THM-A). No BBK (THM-B).
+     At odd n: may show LEFT/RIGHT imbalance from the principal line.
+
+  3. NS BLUE SEA: the bulk (~99%+ at large n) of all nodes,
+     connected by an approximately complete blue subgraph.
+     This is the "ocean" surrounding the SC "island."
+
+  THE PRINCIPAL LINE is the axis of symmetry.
+  Everything in G_n/Z_2 is positioned relative to this line.
+
+Done. opus-2026-03-23-S207

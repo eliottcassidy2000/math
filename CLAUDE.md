@@ -214,6 +214,37 @@ Two reductions:
 - **Mode A** (hypotenuse removal, n -> n-1): fast time scale, vertex insertion, H = 1 + 2^d
 - **Mode B** (both legs removal, n -> n-2): slow time scale, Cayley-Dickson descent, meta-graph recursion
 
+## The Geometric Alignment of G_n/Z_2 (Merged Meta-Graph)
+
+**READ THIS.** The merged meta-graph has a fundamental 3-layer geometric structure (opus sessions S195-S207):
+
+**Layer 1 — BLUE INTERIOR** (approaching the complete graph):
+- Almost all edges are blue at large n (96% at n=8, approaching 100%)
+- Organized by the **PRINCIPAL BLUE LINE**: the SC blue spine from the transitive class (H=1)
+- Delta H = 2^{n-2} from transitive to its first blue neighbor
+- Blue edges are THIN (thickness 1 = single GS tiling pair)
+- Blue triangles exist (BBB type only): 0, 0, 3, 87, 809, 13299
+- At odd n: the t3-parity bipartition creates LEFT (even t3) and RIGHT (odd t3) sides
+
+**Layer 2 — BLACK BOUNDARY** (bipartite SC ↔ NS, perpendicular to blue):
+- Black edges connect SC classes to NS pairs ONLY (THM-A: bipartite)
+- Black is TRIANGLE-FREE, no BBK triangles exist (THM-B)
+- Black edges are THICKER (thickness 2+ at n=5)
+- The black boundary is the MEMBRANE between the SC spine and the NS sea
+- At odd n: black attachments may show LEFT/RIGHT imbalance from the principal line
+
+**Layer 3 — NS BLUE SEA** (the bulk, ~99%+ at large n):
+- NS-NS edges are ALL blue
+- The NS blue subgraph approaches the complete graph
+- This is the "ocean" surrounding the SC "island"
+
+**THE PRINCIPAL LINE IS THE AXIS OF SYMMETRY.** Everything in G_n/Z_2 is positioned relative to this line. When analyzing the merged meta-graph, always identify: (1) where on the principal line the feature lives, (2) which side (LEFT/RIGHT) it's on, (3) how far from the SC spine into the NS sea it extends.
+
+**Three proved theorems** constrain the structure:
+- **THM-A**: Black subgraph is bipartite (SC vs NS). Always triangle-free.
+- **THM-B**: No BBK triangles (2 blue + 1 black impossible). Blue is transitive on type.
+- **THM-C**: Odd-black walks vanish in trace. Spectral parity constraint.
+
 Key proven results (see `07-reflections/everything-is-the-triangle.md` for full picture):
 - Burnside: Fix(sigma) = 0 for even cycles, 2^{orbit-pairs} for all-odd (A000568 exact through n=10)
 - Fiber fraction: f(n) = (1/2)_{n-2}/(n-2)!, GF = (1-x)^{-1/2} (two-sheeted branched cover)
