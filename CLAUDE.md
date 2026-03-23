@@ -189,22 +189,24 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
 - **When in doubt about a computation, re-derive from definitions.** See `01-canon/definitions.md`.
 - **The isomorphism class graph G_n is the KEY OBJECT.** Every session should spend 5-10 minutes considering it. When computing any invariant, also compute it per iso class. When finding a formula, check if it simplifies on G_n. See `07-reflections/the-isomorphism-class-graph.md` and OPEN-Q-039.
 - **The MERGED metagraph G_n/Z_2 is the PRIMARY object.** Complement symmetry factored out. V_merged = (A000568+SC)/2. See `07-reflections/merged-metagraph-invariants.md`.
-- **EDGE COLOR CONVENTION** (3-color system for G_n/Z_2, 2-color for explorer tilings):
-  - **BLUE** = SC-SC edges in the merged metagraph (the SC backbone/spine).
-  - **BLACK** = SC-NS edges (cross-type, bipartite, always triangle-free). The "ribs."
-  - **GREEN** = NS-NS edges (the dominant bulk at large n, 96% at n=8).
-  - In the **explorer** (`tournament-tiling-explorer.html`): "blue" = grid-symmetric flip pairs (both tilings have reversal anti-automorphism), "black" = asymmetric flip pairs. "red" = complement pairing. Explorer "blue" ~ our BLUE; explorer "black" ~ our BLACK + GREEN.
-  - **WARNING:** Earlier sessions (S211-S231) used "blue" for same-type (BLUE + GREEN combined) and "black" for cross-type (BLACK only). When reading old results, old-"blue" = new-BLUE + new-GREEN; old-"black" = new-BLACK.
-  - **ALWAYS analyze in FOUR views:** (1) BLUE (SC-SC), (2) BLACK (SC-NS), (3) GREEN (NS-NS), (4) COMBINED.
-  - The staircase is oriented with **right angle at bottom-left**, tiles labeled (x,y) with x=upper vertex, y=lower vertex (as in explorer).
-- **GEOMETRIC ALIGNMENT of G_n/Z_2:** The merged metagraph has a fundamental geometric structure:
-  - The **PRINCIPAL LINE** runs from the transitive class (H=1) through the SC backbone, defining the vertical axis. The transitive's "big" SC neighbor is at H = 2^(n-2)+1 (verified n=3..8).
-  - The **BLUE SUBGRAPH** (SC↔SC only, as in explorer) is a SPARSE SKELETON on SC nodes with avg degree ~3-4. NS nodes are isolated. Density → 0. It is the principal spine.
-  - The merged metagraph approaches an **m-regular expander** (avg_deg → m = C(n,2), but density → 0 because V_merged grows exponentially). It is simple and locally dense but globally sparse. NOT approaching a complete graph.
-  - The **BLACK SUBGRAPH** (SC-NS) attaches **perpendicularly** to the principal line. It is bipartite (SC vs NS), triangle-free, and always connected.
-  - **No triangle has 2 same-type + 1 cross-type edges** (same-type is transitive on SC-type). Triangles decompose as BBB + GGG + BGG-type only (no BBG, BBK, GGK, or KKK).
-  - At **odd n**, the BLACK subgraph is left-right IMBALANCED relative to the principal line. At **even n**, it tends toward symmetry.
-  - **Every analysis** should be oriented relative to this principal line: distance from the axis, which side of it, and how BLUE/BLACK/GREEN edges flow.
+- **BLUE and BLACK — STRICT DEFINITION** (matches `tournament-tiling-explorer.html` EXACTLY):
+  - **BLUE** = a flip-edge between two tilings where **BOTH** are grid-symmetric (`isGridSym`). Grid-symmetric means the tiling is invariant under the reversal map `(x,y) -> (n-y+1, n-x+1)`.
+  - **BLACK** = a flip-edge where **at least one** tiling is NOT grid-symmetric.
+  - **RED** = connects transpose-paired iso classes (complement relationship, not an arc flip).
+  - These are TILING-LEVEL properties. A single iso class may have both blue and black edges.
+  - The staircase is oriented with **right angle at bottom-left**, tiles labeled (x,y) with x=upper vertex, y=lower vertex.
+  - **LEGACY WARNING:** Sessions S211-S231 used "blue" and "black" differently (for class-level SC-type preservation). When reading old results: old-"blue" meant "SC-SC or NS-NS edge" and old-"black" meant "SC-NS edge". These are NOT the explorer's blue/black. Use the class-level terms below instead.
+- **CLASS-LEVEL EDGE TYPES** (separate from blue/black, use these descriptive names):
+  - **SC-SC** edges (the spine): both endpoints are self-complementary classes.
+  - **SC-NS** edges (the ribs): one SC, one NS endpoint. Bipartite, triangle-free.
+  - **NS-NS** edges (the sea/bulk): both endpoints non-self-complementary. Dominates at large n.
+  - These are properties of the MERGED iso classes, not of individual tilings.
+  - The old "blue" ≈ SC-SC + NS-NS; the old "black" = SC-NS.
+- **GEOMETRIC ALIGNMENT of G_n/Z_2:** The merged metagraph has three perpendicular structures:
+  - The **PRINCIPAL LINE** runs from the transitive class (H=1) through the SC backbone. The transitive's "big" SC neighbor is at H = 2^(n-2)+1.
+  - The **SPINE** (SC-SC edges) is a sparse skeleton. The **RIBS** (SC-NS edges) attach perpendicularly, bipartite and triangle-free. The **SEA** (NS-NS edges) is the dominant bulk (96% at n=8).
+  - At **odd n**, the ribs are left-right IMBALANCED. At **even n**, more symmetric.
+  - **Every analysis** should be oriented relative to the principal line.
 
 ---
 
@@ -233,40 +235,30 @@ Two reductions:
 
 **READ THIS.** The merged meta-graph has a fundamental geometric structure: **SPINE + RIBS + BULK**. See `07-reflections/geometric-alignment-of-merged-metagraph.md` for the full picture. Every future session must use this frame.
 
-**G_n/Z_2 = SC Spine + Cross-Type Ribs + Within-Type Bulk.** These three structures are perpendicular. (NOTE: "within-type" = SC-SC or NS-NS edges; "cross-type" = SC-NS edges. The terms "blue/black" are reserved for the tiling-level grid-symmetry concept from the explorer.)
+**G_n/Z_2 = SPINE + RIBS + SEA.** Three perpendicular structures:
 
-### 1. SC SPINE (vertical axis = principal line)
-The SC classes connected by within-type edges, from transitive (H=1, bottom) to regular (H=max, top). This is the **backbone** and **axis of symmetry** of the entire graph. It carries the H-gradient. Delta H = 2^{n-2} from transitive to its first SC neighbor (hypotenuse formula). The spine is a tree at small n, develops genus at n>=5, fragments at n=8.
-- Within-type triangles (all-same-type) only: 0, 0, 3, 87, 809, 13299
-- At odd n: the c3-parity bipartition creates LEFT (even c3) and RIGHT (odd c3) sides
+### 1. SPINE (SC-SC edges, vertical axis = principal line)
+SC classes connected by SC-SC edges, from transitive (H=1) to regular (H=max). The backbone. Carries the H-gradient. Delta H = 2^{n-2} from transitive to first SC neighbor. Tree at small n, develops genus at n>=5, fragments at n=8.
 
-### 2. CROSS-TYPE RIBS (horizontal = perpendicular to spine)
-The cross-type subgraph is **bipartite** (SC vs NS partition) — every cross-type edge connects an SC node on the spine to an NS node in the halo. Ribs are PERPENDICULAR to the SC spine. The cross-type boundary is the MEMBRANE between the SC spine and the NS sea.
-- Near the transitive (bottom), ribs point UP (NS neighbors have higher H)
-- Near the regular (top), ribs point DOWN (NS neighbors have lower H)
-- Cross-type subgraph is TRIANGLE-FREE (bipartite), no 2-within-1-cross triangles exist
-- Cross-type edges are THICKER (multi-line at n>=5)
+### 2. RIBS (SC-NS edges, perpendicular to spine)
+SC-NS edges are **bipartite** (SC vs NS) and always triangle-free. Near transitive: ribs point UP. Near regular: ribs point DOWN. At odd n: left-right IMBALANCED. Zero-halo alternation: 2 at odd n, 0 at even n.
 
-**Left-right imbalance at odd n:** At odd n, the bilateral structure is asymmetric — North (transitive side) has more nodes than South (regular side). At even n, this reverses (South >> North). The zero-halo count alternates: 2 isolated SC classes at odd n, 0 at even n.
-
-### 3. WITHIN-TYPE BULK (approaching complete graph = the NS sea)
-NS-NS within-type connections fill the space around the spine. As n grows, within-type/total -> 1 (96% at n=8): the within-type graph IS the meta-graph. NS-NS edges are ALL within-type. This is the "ocean" surrounding the SC "island." The H-oriented within-type subgraph is a **transitive partial tournament** (0 directed 3-cycles). Avg within-type degree doubles each step: 1, 0.7, 2.6, 5.8, 11.6, 24.7.
-
-**THE PRINCIPAL LINE IS THE AXIS OF SYMMETRY.** Everything in G_n/Z_2 is positioned relative to this line.
+### 3. SEA (NS-NS edges, the bulk)
+NS-NS connections dominate at large n (96% at n=8). The H-oriented NS-NS subgraph is a transitive partial tournament.
 
 ### Three Proved Theorems (kind-pasteur S20cr)
-These theorems use "within-type" (SC-SC or NS-NS) and "cross-type" (SC-NS) at the class level:
-- **THM-A (Cross-Type Bipartiteness):** Cross-type subgraph is bipartite (SC vs NS). Always triangle-free.
-- **THM-B (Type Transitivity):** No triangle has 2 within-type + 1 cross-type edges. Within-type is transitive on SC-type.
-- **THM-C (Odd-Cross Walk Vanishing):** Closed walks with odd number of cross-type edges contribute 0 to trace.
+At the class level (SC-SC / SC-NS / NS-NS classification):
+- **THM-A:** SC-NS subgraph is bipartite. Always triangle-free.
+- **THM-B:** No triangle has 2 same-type + 1 SC-NS edges. Same-type is transitive on SC-type.
+- **THM-C:** Closed walks with odd number of SC-NS edges contribute 0 to trace.
 
 ### Recursive Tiling Decomposition (kind-pasteur S20cv-cw)
-The staircase decomposes into 4 regions: **overlap** (the n-2 sub-staircase), **bottom wiring** (vertex 0's connections), **top wiring** (vertex n-1's connections), and **apex** (the single arc between vertices 0 and n-1). The overlap generates the most within-type edges; the apex generates the most cross-type. See `07-reflections/unlocking-gn-at-all-n.md`.
+The staircase decomposes into: **overlap** (n-2 sub-staircase), **bottom wiring** (vertex 0), **top wiring** (vertex n-1), and **apex** (arc between vertices 0 and n-1). See `07-reflections/unlocking-gn-at-all-n.md`.
 
-### Perfect Tiling Cell Uniformity
-In the FULL arc-flip model (flipping any of C(n,2) arcs), every cell generates the **exact same within-type fraction**. BUT in the TILING model (fixed base path, C(n-1,2) tiles), the cells are NON-uniform: overlap tiles are bluer than apex tiles.
+### Tiling Cell Properties
+In the FULL arc-flip model, every cell generates the same SC-NS fraction (isotropy). In the TILING model (fixed base path), overlap tiles generate the most same-type edges; apex tiles generate the most SC-NS.
 
-**When computing any invariant on G_n/Z_2, always decompose along all three structures: spine, ribs, bulk.**
+**When computing any invariant on G_n/Z_2, always decompose along spine, ribs, sea.**
 
 Key proven results (see `07-reflections/everything-is-the-triangle.md` for full picture):
 - Burnside: Fix(sigma) = 0 for even cycles, 2^{orbit-pairs} for all-odd (A000568 exact through n=10)
