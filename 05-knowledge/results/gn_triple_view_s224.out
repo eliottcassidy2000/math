@@ -1,0 +1,235 @@
+================================================================================
+  TRIPLE-VIEW ANALYSIS: BLUE / BLACK / COMBINED
+  opus-2026-03-23-S224
+================================================================================
+
+================================================================================
+  n = 3
+================================================================================
+  V=2 (2 SC + 0 NS), built in 0.0s
+
+                METRIC       BLUE      BLACK   COMBINED
+  ──────────────────── ────────── ────────── ──────────
+                     E          1          0          1
+              V_active          2          ?          2
+            components          1          ?          1
+               deg_min          1          ?          1
+               deg_max          1          ?          1
+               density     1.0000          ?     1.0000
+              diameter          1          ?          1
+             triangles          0          ?          0
+           level_edges          0          ?          0
+            h_changing          1          ?          1
+
+  Blue components: 1 SC-only + 0 NS-only + 0 mixed + 0 isolated
+
+  DEGREE COMPARISON per node type:
+    SC nodes (2):
+      blue_deg: avg=1.00, range=[1,1]
+      black_deg: avg=0.00, range=[0,0]
+      total_deg: avg=1.00, range=[1,1]
+      blue/total: 1.0000
+
+================================================================================
+  n = 4
+================================================================================
+  V=3 (2 SC + 1 NS), built in 0.0s
+
+                METRIC       BLUE      BLACK   COMBINED
+  ──────────────────── ────────── ────────── ──────────
+                     E          1          2          3
+              V_active          2          3          3
+            components          1          1          1
+               deg_min          1          1          2
+               deg_max          1          2          2
+               density     1.0000     0.6667     1.0000
+              diameter          1          2          1
+             triangles          0          0          1
+           level_edges          0          0          0
+            h_changing          1          2          3
+
+  Blue components: 1 SC-only + 0 NS-only + 0 mixed + 1 isolated
+
+  DEGREE COMPARISON per node type:
+    SC nodes (2):
+      blue_deg: avg=1.00, range=[1,1]
+      black_deg: avg=1.00, range=[1,1]
+      total_deg: avg=2.00, range=[2,2]
+      blue/total: 0.5000
+    NS nodes (1):
+      blue_deg: avg=0.00, range=[0,0]
+      black_deg: avg=2.00, range=[2,2]
+      total_deg: avg=2.00, range=[2,2]
+      blue/total: 0.0000
+
+================================================================================
+  n = 5
+================================================================================
+  V=10 (8 SC + 2 NS), built in 0.2s
+
+                METRIC       BLUE      BLACK   COMBINED
+  ──────────────────── ────────── ────────── ──────────
+                     E         13          8         21
+              V_active         10          8         10
+            components          2          1          1
+               deg_min          1          1          2
+               deg_max          4          6          7
+               density     0.2889     0.2857     0.4667
+              diameter          3          3          3
+             triangles          3          0         12
+           level_edges          1          0          1
+            h_changing         12          8         20
+
+  Blue components: 1 SC-only + 1 NS-only + 0 mixed + 0 isolated
+
+  DEGREE COMPARISON per node type:
+    SC nodes (8):
+      blue_deg: avg=3.00, range=[2,4]
+      black_deg: avg=1.00, range=[0,2]
+      total_deg: avg=4.00, range=[2,5]
+      blue/total: 0.7500
+    NS nodes (2):
+      blue_deg: avg=1.00, range=[1,1]
+      black_deg: avg=4.00, range=[2,6]
+      total_deg: avg=5.00, range=[3,7]
+      blue/total: 0.2000
+
+================================================================================
+  n = 6
+================================================================================
+  V=34 (12 SC + 22 NS), built in 59.4s
+
+                METRIC       BLUE      BLACK   COMBINED
+  ──────────────────── ────────── ────────── ──────────
+                     E         98         45        143
+              V_active         34         30         34
+            components          2          1          1
+               deg_min          1          1          2
+               deg_max         11          6         13
+               density     0.1747     0.1034     0.2549
+              diameter          7          8          4
+             triangles         87          0        139
+           level_edges          2          3          5
+            h_changing         96         42        138
+
+  Blue components: 1 SC-only + 1 NS-only + 0 mixed + 0 isolated
+
+  DEGREE COMPARISON per node type:
+    SC nodes (12):
+      blue_deg: avg=2.17, range=[1,3]
+      black_deg: avg=3.75, range=[1,5]
+      total_deg: avg=5.92, range=[2,8]
+      blue/total: 0.3662
+    NS nodes (22):
+      blue_deg: avg=7.73, range=[3,11]
+      black_deg: avg=2.05, range=[0,6]
+      total_deg: avg=9.77, range=[3,13]
+      blue/total: 0.7907
+
+================================================================================
+  n = 7
+================================================================================
+  V=272 (88 SC + 184 NS), built in 3.5s
+
+                METRIC       BLUE      BLACK   COMBINED
+  ──────────────────── ────────── ────────── ──────────
+                     E       1573        550       2123
+              V_active        272        240        272
+            components          2          1          1
+               deg_min          1          1          1
+               deg_max         21          9         21
+               density     0.0427     0.0192     0.0576
+              diameter         13          9          7
+             triangles        809          0       1159
+           level_edges         54         17         71
+            h_changing       1519        533       2052
+
+  Blue components: 1 SC-only + 1 NS-only + 0 mixed + 0 isolated
+
+  DEGREE COMPARISON per node type:
+    SC nodes (88):
+      blue_deg: avg=3.95, range=[1,8]
+      black_deg: avg=6.25, range=[0,9]
+      total_deg: avg=10.20, range=[1,12]
+      blue/total: 0.3875
+    NS nodes (184):
+      blue_deg: avg=15.21, range=[4,21]
+      black_deg: avg=2.99, range=[0,9]
+      total_deg: avg=18.20, range=[4,21]
+      blue/total: 0.8357
+
+================================================================================
+  n = 8
+================================================================================
+  V=3528 (176 SC + 3352 NS), built in 179.6s
+
+                METRIC       BLUE      BLACK   COMBINED
+  ──────────────────── ────────── ────────── ──────────
+                     E      43656       1894      45550
+              V_active       3528       1022       3528
+            components          8          1          1
+               deg_min          1          2          2
+               deg_max         28         12         28
+               density     0.0070     0.0036     0.0073
+              diameter          0          0          0
+             triangles      13299          0      14184
+           level_edges        508         23        531
+            h_changing      43148       1871      45019
+
+  Blue components: 7 SC-only + 1 NS-only + 0 mixed + 0 isolated
+
+  DEGREE COMPARISON per node type:
+    SC nodes (176):
+      blue_deg: avg=3.62, range=[1,6]
+      black_deg: avg=10.76, range=[3,12]
+      total_deg: avg=14.39, range=[4,16]
+      blue/total: 0.2520
+    NS nodes (3352):
+      blue_deg: avg=25.86, range=[2,28]
+      black_deg: avg=0.57, range=[0,6]
+      total_deg: avg=26.42, range=[2,28]
+      blue/total: 0.9786
+
+================================================================================
+  CROSS-n TRIPLE-VIEW SEQUENCES
+================================================================================
+
+  BLUE:
+                  E: 1, 1, 13, 98, 1573, 43656
+         components: 1, 1, 2, 2, 2, 8
+            deg_max: 1, 1, 4, 11, 21, 28
+            density: 1.0000, 1.0000, 0.2889, 0.1747, 0.0427, 0.0070
+           diameter: 1, 1, 3, 7, 13, 0
+          triangles: 0, 0, 3, 87, 809, 13299
+        level_edges: 0, 0, 1, 2, 54, 508
+
+  BLACK:
+                  E: 0, 2, 8, 45, 550, 1894
+         components: ?, 1, 1, 1, 1, 1
+            deg_max: ?, 2, 6, 6, 9, 12
+            density: ?, 0.6667, 0.2857, 0.1034, 0.0192, 0.0036
+           diameter: ?, 2, 3, 8, 9, 0
+          triangles: ?, 0, 0, 0, 0, 0
+        level_edges: ?, 0, 0, 3, 17, 23
+
+  COMBINED:
+                  E: 1, 3, 21, 143, 2123, 45550
+         components: 1, 1, 1, 1, 1, 1
+            deg_max: 1, 2, 7, 13, 21, 28
+            density: 1.0000, 1.0000, 0.4667, 0.2549, 0.0576, 0.0073
+           diameter: 1, 1, 3, 4, 7, 0
+          triangles: 0, 1, 12, 139, 1159, 14184
+        level_edges: 0, 0, 1, 5, 71, 531
+
+  BLUE COMPONENT STRUCTURE:
+      n SC_comp NS_comp  mixed isolated
+      3       1       0      0        0
+      4       1       0      0        1
+      5       1       1      0        0
+      6       1       1      0        0
+      7       1       1      0        0
+      8       7       1      0        0
+
+================================================================================
+  DONE
+================================================================================

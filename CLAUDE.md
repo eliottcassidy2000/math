@@ -188,6 +188,8 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
 - **The per-path identity fails for n≥6.** Do not treat it as a proof strategy for Claim A at general n.
 - **When in doubt about a computation, re-derive from definitions.** See `01-canon/definitions.md`.
 - **The isomorphism class graph G_n is the KEY OBJECT.** Every session should spend 5-10 minutes considering it. When computing any invariant, also compute it per iso class. When finding a formula, check if it simplifies on G_n. See `07-reflections/the-isomorphism-class-graph.md` and OPEN-Q-039.
+- **The MERGED metagraph G_n/Z_2 is the PRIMARY object.** Complement symmetry factored out. V_merged = (A000568+SC)/2. See `07-reflections/merged-metagraph-invariants.md`.
+- **ALWAYS analyze in THREE simultaneous views:** (1) BLUE subgraph (SC-preserving edges only), (2) BLACK subgraph (SC-changing edges only), (3) COMBINED (all edges). Never compute invariants on only one view — all three reveal different structure. Blue = orientation-preserving, Black = orientation-reversing. The blue subgraph splits into SC and NS components at n≥7. The black subgraph is the SC-NS bridge.
 
 ---
 
