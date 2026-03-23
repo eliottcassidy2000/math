@@ -1,0 +1,89 @@
+================================================================================
+  NODE PROFILING AT n=7 (2^15 = 32768 tilings)
+  kind-pasteur-2026-03-23-S20db
+================================================================================
+
+  PHASE 1: Hashing 32768 tilings...
+    5000/32768 (1s)
+    10000/32768 (3s)
+    15000/32768 (4s)
+    20000/32768 (5s)
+    25000/32768 (6s)
+    30000/32768 (7s)
+  Phase 1 done: 242 hash groups in 8s
+
+  PHASE 2: Canonicalizing within groups...
+  Phase 2 done: 456 iso classes in 6s
+  fiber = H/|Aut| mismatches: 0/456
+
+  PHASE 3: Building merged graph...
+  V_merged = 272 in 0s
+
+  PHASE 4: Computing edges...
+    5000/32768 (0s)
+    10000/32768 (0s)
+    15000/32768 (0s)
+    20000/32768 (0s)
+    25000/32768 (0s)
+    30000/32768 (0s)
+  2123 edges in 0s
+
+================================================================================
+  n=7: V=272, E=2123
+================================================================================
+
+  SC nodes: 88, NS nodes: 184
+  Spine (SC-SC): 174, Ribs (SC-NS): 550, Sea (NS-NS): 1399
+  Explorer: BLUE=0, BLACK=1587, MIXED=536
+
+  --- HYPOTHESIS TESTS ---
+  H1: corr(c3, score_var) = -1.000000 PERFECT!
+  H2: (H, spine_deg) unique? 209/272 unique (63 collisions)
+      (H, deg, spine_deg) unique? 226/272 unique (46 collisions)
+  H3: SC sea_deg=0? YES
+      NS spine_deg=0? YES
+  H4: corr(H, self_loops_per_fiber) = -0.168
+  H5: Grid-sym fraction = 512/32768 = 0.0156
+      SC: 111/7308 = 0.0152
+      NS: 401/25460 = 0.0158
+  H6: fiber = H/|Aut| verified: 88/272
+
+  --- KEY CORRELATIONS ---
+               H vs c3          : r = +0.9515
+               H vs score_var   : r = -0.9515
+              c3 vs score_var   : r = -1.0000
+             deg vs sea_deg     : r = +0.8751
+       spine_deg vs sea_deg     : r = -0.8559
+
+  --- DEGREE DISTRIBUTION ---
+   deg  count
+     1      1
+     3      3
+     4      4
+     5      3
+     6      3
+     7      7
+     8      3
+     9      4
+    10     13
+    11     25
+    12     42
+    16      5
+    17     10
+    18     12
+    19     59
+    20     56
+    21     22
+
+  Avg degree: 15.61
+  Max degree: 21
+  Min degree: 1
+
+  AMBER (score-preserving) edges: 393/2123 = 18.5%
+  STEP (dH=2) edges: 125/2123 = 5.9%
+  LEVEL (dH=0) edges: 71/2123 = 3.3%
+
+  Total time: 15s
+
+  DONE.
+================================================================================
