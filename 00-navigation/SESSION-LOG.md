@@ -13,11 +13,11 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## opus-2026-03-22-S212 — 2026-03-22
+## opus-2026-03-22-S212/S213 — 2026-03-22
 
 **Account:** opus
 **Continuation of:** opus-2026-03-22-S211
-**Summary of work:** Extended G_n edge computation to n=7, developed Burnside-based analytical framework for edge counting.
+**Summary of work:** Extended G_n edge computation to n=7, developed Burnside-based analytical framework for edge counting, attempted n=8 in C.
 **Key discoveries:**
 1. **|E(G_7)| = 4086** (5th term of the new OEIS sequence 1, 5, 30, 290, 4086)
 2. **Transition orbit formula**: T_n = (1/n!) Σ_σ Fix(σ)×C(f(σ),2) — computable at any n via Burnside
@@ -26,8 +26,10 @@ Entry format:
 5. **T/E ratio**: 4.0, 3.2, 2.93, 2.43, 2.18 — converging toward 2
 6. **All 6 sequences NOT IN OEIS** — candidates for submission
 7. Extended T_n computation to n=13 via Burnside (no enumeration needed)
-**New contributions:** gn_edge_formula_s212.py, gn_edge_burnside_s212.py, gn_edge_theory_s212.py, gn_edges_n7_fast_s212.py
-**Unresolved:** n=8 computation (needs C code, 6880 classes), exact formula for SL_orbits and extra orbits
+8. **n=8 C code written** but hash (score,c3) too coarse — found only 506/6880 classes
+9. **n=8 prediction**: |E(G_8)| ≈ 90,000 ± 5,000 (consensus of 4 extrapolation methods)
+**New contributions:** gn_edge_formula_s212.py, gn_edge_burnside_s212.py, gn_edge_theory_s212.py, gn_edges_n7_fast_s212.py, gn_edges_n8_full.c
+**Unresolved:** n=8 exact (needs H in hash — ~30min C computation), exact formula for SL_orbits and X_n
 
 ---
 
