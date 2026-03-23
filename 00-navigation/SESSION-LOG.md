@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-22-S212 — 2026-03-22
+
+**Account:** opus
+**Continuation of:** opus-2026-03-22-S211
+**Summary of work:** Extended G_n edge computation to n=7, developed Burnside-based analytical framework for edge counting.
+**Key discoveries:**
+1. **|E(G_7)| = 4086** (5th term of the new OEIS sequence 1, 5, 30, 290, 4086)
+2. **Transition orbit formula**: T_n = (1/n!) Σ_σ Fix(σ)×C(f(σ),2) — computable at any n via Burnside
+3. **T_n/V_n → m**: the deficit D_n = V_n×m - T_n → 0 relative to V_n
+4. **Edge formula**: |E| = (T_n - SL_orbits - extra)/2, exact at n≤5
+5. **T/E ratio**: 4.0, 3.2, 2.93, 2.43, 2.18 — converging toward 2
+6. **All 6 sequences NOT IN OEIS** — candidates for submission
+7. Extended T_n computation to n=13 via Burnside (no enumeration needed)
+**New contributions:** gn_edge_formula_s212.py, gn_edge_burnside_s212.py, gn_edge_theory_s212.py, gn_edges_n7_fast_s212.py
+**Unresolved:** n=8 computation (needs C code, 6880 classes), exact formula for SL_orbits and extra orbits
+
+---
+
 ## opus-2026-03-22-S211 — 2026-03-22
 
 **Account:** opus

@@ -6,3 +6,33 @@ Phase 1: hash all tournaments...
   1000000/2097152 (1293/s)
   1200000/2097152 (1296/s)
   1400000/2097152 (1296/s)
+  1600000/2097152 (1292/s)
+  1800000/2097152 (1292/s)
+  2000000/2097152 (1293/s)
+Phase 1 done: 387 groups in 1619.7s
+Phase 2: smart class identification...
+Phase 2 done: 456 classes in 249.2s
+Phase 3: computing edges for 456 classes...
+  100/456 (8.6/s, 1146 edges)
+  200/456 (7.5/s, 2227 edges)
+  300/456 (7.4/s, 3147 edges)
+  400/456 (7.3/s, 3873 edges)
+Phase 3 done in 62.8s
+
+RESULTS G_7:
+  Vertices: 456
+  EDGES: 4086
+  Self-loops: 201
+  Sum degrees: 8172 = 2 * 4086 = 8172
+  avg_deg: 17.92
+  |E|/|V|: 8.9605
+  density: 0.039387
+  T_7/|E|: 2.1811
+
+THE SEQUENCE |E(G_n)|:
+  n=3: 1
+  n=4: 5
+  n=5: 30
+  n=6: 290
+  n=7: 4086
+Total time: 1931.7s
