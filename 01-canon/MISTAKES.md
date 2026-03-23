@@ -1169,3 +1169,32 @@ E(n) must be computed directly from the meta-graph adjacency (F matrix), not fro
 
 ### Lesson
 When a formula passes at small n, always verify at the next n where new phenomena emerge. At n≤5, every class has SL + excess = D (a coincidence), so the formula appeared correct. At n=6, the coincidence breaks. **Integer division can mask off-by-one errors**: at n=3, (T-D)/2 = 3/2 = 1.5, which rounded to 1 via `//` and happened to match E=1.
+
+---
+
+## MISTAKE-030: "SL_orbits" is a misnomer — it includes multi-edge orbits, not just self-loops
+
+**Date discovered:** 2026-03-23
+**Found by:** Devil's advocate audit (opus-2026-03-23-S246), confirmed by opus-S245
+**Affects:** burnside_edge_verify_s242.py, recursive_sl_s244.py, all scripts using "SL_orbits"
+
+### What was assumed
+The quantity "SL_orbits" = edge_orbits - E(G_n) was treated as counting self-loop edge orbits (orbits where both endpoints are in the same iso class).
+
+### Why it was wrong
+"SL_orbits" actually counts ALL non-simple-edge orbits: self-loop orbits PLUS multi-edge orbits (additional orbits connecting already-connected class pairs). At n=5: true self-loop edge orbits = 14, but "SL_orbits" = 20. The difference of 6 is multi-edge orbits.
+
+At n=3,4: multi = 0, so the values coincide — masking the error (same pattern as MISTAKE-029).
+
+### The correct framing
+- **gap_orbits** = edge_orbits - E = self_loop_orbits + multi_orbits (RENAME from "SL_orbits")
+- **self_loop_orbits** = #{S_n-orbits on {T, T^e} with T ≅ T^e} = 2, 5, 14, ... (computed via Burnside)
+- **multi_orbits** = #{edge orbits connecting already-counted class pairs} = 0, 0, 6, ...
+
+### Impact
+- The recurrence search for "SL_orbits" in S242/S244 was wasted effort on a DERIVED quantity (= T/2 + (n-2)! - E). Any pattern found is just a pattern in E in disguise.
+- The formula edge_orbits = T/2 + (n-2)! is CORRECT and independently valuable.
+- Future work should target E(G_n) directly, not the gap.
+
+### Lesson
+**Name quantities precisely.** "SL_orbits" was never defined as "self-loop edge orbits" — it was defined as "edge_orbits - E" and then ASSUMED to count self-loops. The assumption failed at n=5. Always verify definitions against direct computation before building analysis on them.
