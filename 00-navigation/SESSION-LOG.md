@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S247 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S245
+**Summary of work:** Integrated devil's advocate audit (2 corrections, 4 confirmations). Synthesized 8 practical applications connecting pure math to engineering.
+
+**Audit results (from S246):**
+1. E(9) = 3380751 CONFIRMED (nauty-computed, not formula-derived)
+2. Rename SL_orbits → gap_orbits ACCEPTED
+3. Case A/B proof has gap but formula verified exact at n=3..6
+4. Blue 3/4 fraction applies to within-type, not SC-SC BLUE
+
+**8 practical applications:**
+1. Tournament fingerprinting via (H, score, spine_deg) — instant classification
+2. Optimal querying using staircase geometry (apex-first = binary search)
+3. Voting fragility map (self-loop = robust, multi-edge = fragile)
+4. Progressive lossy compression via recursive tiling
+5. TDA on meta-graph clique complex (persistent homology, β_1=2,15)
+6. Near-automorphism detection for interchangeable pairs
+7. Resource estimation via edge_orbits formula
+8. Divide-and-conquer algorithms from recursive tiling
+
+**New scripts:** practical_synthesis_s247.py
+
 ## opus-2026-03-23-S245 — 2026-03-23
 
 **Account:** opus
