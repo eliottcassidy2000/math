@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S240 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S238
+**Summary of work:** Deep quotientope investigation. Computed clique complex homology: β_1 = 2, 15 and β_2 = 0, 7 at n=5,6. Found the 2 essential cycles generating H_1. Proved G_n is NOT a polytope skeleton.
+
+**Key discoveries:**
+1. G_n = Q_m / S_n: the orbit graph of the m-cube under S_n on pair coordinates
+2. Clique complex Betti numbers: β = (1,2,0,0) at n=5, (1,15,7,0,0) at n=6
+3. Essential cycles traverse full H-range [1,H_max], pass through transitive
+4. NOT a polytope: h-vector has negative entries, β_1 > 0, connectivity only 2
+5. Graph genus ≥ 8 at n=6 (far from planar)
+6. The quotientope analogy: similar to Pilaud-Santos but fundamentally different
+7. Clique number ω = 4 at n=5, 5 at n=6 (growing)
+
+**New scripts:** quotientope_investigation_s240.py, clique_topology_s241.py, essential_cycles_s241b.py
+**New reflections:** quotientope-and-clique-complex.md
+
 ## opus-2026-03-23-S238 — 2026-03-23
 
 **Account:** opus
