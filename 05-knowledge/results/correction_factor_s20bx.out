@@ -1,0 +1,85 @@
+======================================================================
+  THE CORRECTION FACTOR
+======================================================================
+
+======================================================================
+  1. EXACT CORRECTION FACTORS c(n) = E_actual / E_approx
+======================================================================
+
+    n     V    m     f(n)  E_approx  E_actual     c(n)      1-c
+    3     2    3   0.5000       1.5         1   0.6667   0.3333
+    4     4    6   0.3750       7.5         5   0.6667   0.3333
+    5    12   10   0.3125      41.2        30   0.7273   0.2727
+    6    56   15   0.2734     305.2       290   0.9503   0.0497
+
+======================================================================
+  2. THE COLLISION MODEL
+======================================================================
+
+  UNIFORM COLLISION MODEL:
+    n   m(1-f)   V-1   D_pred  D_actual    Ratio
+    3     1.50     1     1.00      1.00   1.0000
+    4     3.75     3     2.34      2.50   1.0665
+    5     6.88    11     5.29      5.00   0.9456
+    6    10.90    55     9.97     10.36   1.0390
+
+======================================================================
+  3. IMPROVED FORMULAS
+======================================================================
+
+  DUPLICATE RATE:
+  n=3: D=1.00, cross_per_class=1.50, dups=0.50, dup_rate=0.3333
+  n=4: D=2.50, cross_per_class=3.75, dups=1.25, dup_rate=0.3333
+  n=5: D=5.00, cross_per_class=6.88, dups=1.88, dup_rate=0.2727
+  n=6: D=10.36, cross_per_class=10.90, dups=0.54, dup_rate=0.0497
+
+======================================================================
+  4. THE ASYMPTOTIC EDGE FORMULA
+======================================================================
+
+  E(n) ~ (1/2) * A000568(n) * C(n,2) * (1 - f(n)) * (1 - epsilon(n))
+
+  where:
+    A000568(n) = tournament iso class count (from Burnside)
+    C(n,2) = number of arcs
+    f(n) = (1/2)_{n-2} / (n-2)! = self-loop fraction
+    epsilon(n) = duplicate neighbor rate -> 0 as n -> inf
+
+  ASYMPTOTICALLY: E(n) ~ (1/2) * A000568(n) * C(n,2) * (1 - f(n))
+
+  Since A000568(n) ~ 2^{C(n,2)} / n! and f(n) ~ 1/sqrt(pi*(n-2)):
+
+  E(n) ~ 2^{C(n,2)-1} * C(n,2) * (1 - 1/sqrt(pi*(n-2))) / n!
+
+  n=7: V=456, m=21, f=0.2461, E_pred ~ 3610
+  n=8: V=6880, m=28, f=0.2256, E_pred ~ 74592
+  n=9: V=191536, m=36, f=0.2095, E_pred ~ 2725460
+  n=10: V=9733056, m=45, f=0.1964, E_pred ~ 175987631
+
+======================================================================
+  5. ORBIT-STABILIZER APPROACH TO EXACT EDGE COUNT
+======================================================================
+
+  KEY INSIGHT: For |Aut(T)|=1 classes, are there duplicate neighbors?
+
+  Duplicate: two arcs e1 != e2 such that flip(T, e1) ~ flip(T, e2).
+  This requires a permutation sigma with sigma(flip(T,e1)) = flip(T,e2).
+  sigma maps T to something that agrees with T on all arcs except e1 and e2.
+
+  For |Aut|=1: this sigma is NOT an automorphism of T.
+  It's a "double-flip near-automorphism" -- fixes T except at e1 and e2.
+
+  Equivalently: T and sigma(T) differ in exactly 2 arcs (e1 and sigma^(-1)(e2)).
+  This is a HAMMING-2 neighbor in the hypercube.
+
+  So: duplicate neighbors occur iff T has a HAMMING-2 neighbor that is isomorphic.
+  This is related to the |Aut| of the FLIPPED tournament, not T itself.
+
+  CONCLUSION: The duplicate rate depends on the DENSITY of the iso class
+  in the Hamming-2 neighborhood of T. At large n, Hamming-2 neighbors are
+  exponentially rare relative to total classes, so duplicates vanish.
+
+  VERIFICATION: Hamming-2 iso-neighbors at n=5
+  Hamming-2 same-class fraction: 5520/46080 = 0.119792
+  This is the probability that a Hamming-2 perturbation stays in the same class.
+  Compare with Hamming-1 (self-loop) fraction: 0.171875
