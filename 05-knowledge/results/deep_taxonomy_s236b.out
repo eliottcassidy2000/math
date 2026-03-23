@@ -1,0 +1,139 @@
+
+========================================================================
+  DEEP TAXONOMY AT n=5
+========================================================================
+
+  DEEP NODE CATEGORIES (n=5):
+
+  SPINE                                   :  8 / 10 ( 80.0%)
+  INNER_HALO                              :  2 / 10 ( 20.0%)
+  ISOLATED_SC                             :  2 / 10 ( 20.0%)
+  CONNECTED_SC                            :  6 / 10 ( 60.0%)
+  CONNECTED_NS                            :  2 / 10 ( 20.0%)
+  BRIDGE (SC w/ blue+black)               :  6 / 10 ( 60.0%)
+  GRADIENT=SOURCE (more uphill)           :  4 / 10 ( 40.0%)
+  GRADIENT=SINK (more downhill)           :  4 / 10 ( 40.0%)
+  GRADIENT=BALANCED                       :  2 / 10 ( 20.0%)
+  HAS_LEVEL_NEIGHBOR                      :  2 / 10 ( 20.0%)
+  AMBER_ISOLATED (amber_deg = 0)          :  5 / 10 ( 50.0%)
+  SELF_LOOP                               :  5 / 10 ( 50.0%)
+  Q1_LOW degree                           :  4 / 10 ( 40.0%)
+  Q2_MED degree                           :  5 / 10 ( 50.0%)
+  Q4_TOP degree                           :  1 / 10 ( 10.0%)
+  SC + SELF_LOOP                          :  3 / 10 ( 30.0%)
+  SC + SOURCE gradient                    :  2 / 10 ( 20.0%)
+  SC + SINK gradient                      :  4 / 10 ( 40.0%)
+  NS + SOURCE gradient                    :  2 / 10 ( 20.0%)
+
+========================================================================
+  DEEPER EDGE CATEGORIES (n=5)
+========================================================================
+
+  THIN                                    :  1 / 21 (  4.8%)
+  MEDIUM                                  : 19 / 21 ( 90.5%)
+  HEAVY                                   :  1 / 21 (  4.8%)
+  UPHILL                                  : 18 / 21 ( 85.7%)
+  DOWNHILL                                :  2 / 21 (  9.5%)
+  LEVEL                                   :  1 / 21 (  4.8%)
+  SAME_ZONE                               : 13 / 21 ( 61.9%)
+  CROSS_ZONE                              :  8 / 21 ( 38.1%)
+  GRADIENT_ALIGNED                        :  3 / 21 ( 14.3%)
+  GOLDEN SPINE (BLUE+AMBER)               :  3 / 21 ( 14.3%)
+  FIBER DEGENERATE (TEAL+LEVEL)           :  1 / 21 (  4.8%)
+  PURE LEAP (dH ≥ 8)                      :  3 / 21 ( 14.3%)
+  MICRO STEP (dH = 2)                     :  9 / 21 ( 42.9%)
+  AMBER + c3_PRESERVE                     :  3 / 21 ( 14.3%)
+
+========================================================================
+  GRAND TAXONOMY SUMMARY (n=5)
+========================================================================
+
+  TOTAL NODE CATEGORIES DEFINED: ~54
+  TOTAL EDGE CATEGORIES DEFINED: ~35
+  V_merged = 10, E_merged = 21
+
+  MOST BALANCED SPLITS (closest to 50/50):
+    c3_EVEN                                 : 5/10 = 50.0% (balance=1.00)
+    SELF_LOOP                               : 5/10 = 50.0% (balance=1.00)
+    SELF_LOOP                               : 5/10 = 50.0% (balance=1.00)
+    Q2_MED degree                           : 5/10 = 50.0% (balance=1.00)
+    HAS_AMBER                               : 5/10 = 50.0% (balance=1.00)
+    AMBER_ISOLATED (amber_deg = 0)          : 5/10 = 50.0% (balance=1.00)
+    RIGID                                   : 6/10 = 60.0% (balance=0.80)
+    CONNECTED_SC                            : 6/10 = 60.0% (balance=0.80)
+    BRIDGE (SC w/ blue+black)               : 6/10 = 60.0% (balance=0.80)
+    SC + SINK gradient                      : 4/10 = 40.0% (balance=0.80)
+
+========================================================================
+  DEEP TAXONOMY AT n=6
+========================================================================
+
+  DEEP NODE CATEGORIES (n=6):
+
+  SPINE                                   : 12 / 34 ( 35.3%)
+  INNER_HALO                              : 18 / 34 ( 52.9%)
+  OUTER_SEA                               :  4 / 34 ( 11.8%)
+  CONNECTED_SC                            : 12 / 34 ( 35.3%)
+  ISOLATED_NS                             :  4 / 34 ( 11.8%)
+  CONNECTED_NS                            : 18 / 34 ( 52.9%)
+  BRIDGE (SC w/ blue+black)               : 12 / 34 ( 35.3%)
+  GRADIENT=SOURCE (more uphill)           : 16 / 34 ( 47.1%)
+  GRADIENT=SINK (more downhill)           : 15 / 34 ( 44.1%)
+  GRADIENT=BALANCED                       :  3 / 34 (  8.8%)
+  HAS_LEVEL_NEIGHBOR                      :  7 / 34 ( 20.6%)
+  AMBER_HUB (amber_deg ≥ 3)               :  4 / 34 ( 11.8%)
+  AMBER_ISOLATED (amber_deg = 0)          :  7 / 34 ( 20.6%)
+  SELF_LOOP                               : 19 / 34 ( 55.9%)
+  Q1_LOW degree                           : 10 / 34 ( 29.4%)
+  Q2_MED degree                           :  8 / 34 ( 23.5%)
+  Q3_HIGH degree                          : 10 / 34 ( 29.4%)
+  Q4_TOP degree                           :  6 / 34 ( 17.6%)
+  SC + SELF_LOOP                          :  8 / 34 ( 23.5%)
+  NS + OUTER_SEA                          :  4 / 34 ( 11.8%)
+  SC + SOURCE gradient                    :  5 / 34 ( 14.7%)
+  SC + SINK gradient                      :  6 / 34 ( 17.6%)
+  NS + SOURCE gradient                    : 11 / 34 ( 32.4%)
+  NS + SINK gradient                      :  9 / 34 ( 26.5%)
+  AMBER_HUB + SC                          :  1 / 34 (  2.9%)
+  AMBER_HUB + NS                          :  3 / 34 (  8.8%)
+
+========================================================================
+  DEEPER EDGE CATEGORIES (n=6)
+========================================================================
+
+  MEDIUM                                  : 126 / 143 ( 88.1%)
+  HEAVY                                   : 17 / 143 ( 11.9%)
+  UPHILL                                  : 116 / 143 ( 81.1%)
+  DOWNHILL                                : 22 / 143 ( 15.4%)
+  LEVEL                                   :  5 / 143 (  3.5%)
+  SAME_ZONE                               : 76 / 143 ( 53.1%)
+  CROSS_ZONE                              : 67 / 143 ( 46.9%)
+  GRADIENT_ALIGNED                        : 39 / 143 ( 27.3%)
+  GOLDEN SPINE (BLUE+AMBER)               :  3 / 143 (  2.1%)
+  FIBER DEGENERATE (TEAL+LEVEL)           :  5 / 143 (  3.5%)
+  PURE LEAP (dH ≥ 8)                      : 74 / 143 ( 51.7%)
+  MICRO STEP (dH = 2)                     : 21 / 143 ( 14.7%)
+  GREEN + HEAVY (NS sea bulk)             : 14 / 143 (  9.8%)
+  AMBER + c3_PRESERVE                     : 25 / 143 ( 17.5%)
+
+========================================================================
+  GRAND TAXONOMY SUMMARY (n=6)
+========================================================================
+
+  TOTAL NODE CATEGORIES DEFINED: ~54
+  TOTAL EDGE CATEGORIES DEFINED: ~35
+  V_merged = 34, E_merged = 143
+
+  MOST BALANCED SPLITS (closest to 50/50):
+    INNER_HALO                              : 18/34 = 52.9% (balance=0.94)
+    CONNECTED_NS                            : 18/34 = 52.9% (balance=0.94)
+    GRADIENT=SOURCE (more uphill)           : 16/34 = 47.1% (balance=0.94)
+    SELF_LOOP                               : 19/34 = 55.9% (balance=0.88)
+    SELF_LOOP                               : 19/34 = 55.9% (balance=0.88)
+    GRADIENT=SINK (more downhill)           : 15/34 = 44.1% (balance=0.88)
+    SPINE                                   : 12/34 = 35.3% (balance=0.71)
+    SC                                      : 12/34 = 35.3% (balance=0.71)
+    HAS_BLUE                                : 12/34 = 35.3% (balance=0.71)
+    CONNECTED_SC                            : 12/34 = 35.3% (balance=0.71)
+
+Done. opus-2026-03-23-S236b
