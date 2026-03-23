@@ -1,0 +1,162 @@
+================================================================================
+  ALL EDGE LABELINGS OF G_n/Z_2
+  kind-pasteur-2026-03-23-S20cz
+================================================================================
+
+################################################################################
+  n = 5
+################################################################################
+  V_merged = 10, 12 iso classes, built in 0.0s
+  Edges: 21
+
+  --- CROSS-TABULATION: Explorer color vs SC-type ---
+              SC-SC    SC-NS    NS-NS    total
+     BLACK        8        3        1       12
+     MIXED        4        5        0        9
+     total       12        8        1       21
+
+  --- CROSS-TABULATION: Explorer color vs dH class ---
+               step     leap    level
+     BLACK        7        5        0
+     MIXED        2        6        1
+
+  --- CROSS-TABULATION: Explorer color vs score change ---
+               same     diff
+     BLACK        1       11
+     MIXED        2        7
+
+  --- CROSS-TABULATION: SC-type vs dH class ---
+               step     leap    level
+     SC-SC        6        5        1
+     SC-NS        2        6        0
+     NS-NS        1        0        0
+
+  --- CROSS-TABULATION: SC-type vs score change ---
+               same     diff
+     SC-SC        3        9
+     SC-NS        0        8
+     NS-NS        0        1
+
+  --- CROSS-TABULATION: SC-type vs fiber (same parent at n-1) ---
+             same_p   diff_p
+     SC-SC        7        5
+     SC-NS        2        6
+     NS-NS        0        1
+
+  --- CROSS-TABULATION: Explorer color vs region (dominant) ---
+              apex  bottom overlap     top
+     BLACK       4       2       2       4
+     MIXED       2       4       0       3
+
+  --- Delta-H DISTRIBUTION ---
+    dH  count       %
+     0      1     4.8%
+     2      9    42.9%
+     4      5    23.8%
+     6      3    14.3%
+     8      2     9.5%
+    12      1     4.8%
+
+  SCORE-PRESERVING (AMBER) edges: 3/21 = 14.3%
+  SCORE-CHANGING (VIOLET) edges: 18/21 = 85.7%
+  Same-score edge examples:
+    (4,9): H=9,9 score=(1, 1, 2, 3, 3) c3=3,3
+    (5,6): H=15,13 score=(1, 2, 2, 2, 3) c3=4,4
+    (6,7): H=13,11 score=(1, 2, 2, 2, 3) c3=4,4
+
+  INTRA-FIBER (TEAL, same parent) edges: 9/21 = 42.9%
+  INTER-FIBER (MAGENTA, diff parent) edges: 12/21 = 57.1%
+
+  EDGE LABELING SUMMARY:
+  Labeling                                      Categories               Counts
+  ---------------------------------------------------------------------------
+  Explorer (blue/black)                   BLUE/BLACK/MIXED               0/12/9
+  SC-type (spine/ribs/sea)               SC-SC/SC-NS/NS-NS               12/8/1
+  dH (step/leap/level)                     step/leap/level               9/11/1
+  Score (amber/violet)                           same/diff                 3/18
+  Fiber (teal/magenta)                         intra/inter                 9/12
+
+################################################################################
+  n = 6
+################################################################################
+  V_merged = 34, 56 iso classes, built in 0.1s
+  Edges: 143
+
+  --- CROSS-TABULATION: Explorer color vs SC-type ---
+              SC-SC    SC-NS    NS-NS    total
+      BLUE        1        0        0        1
+     BLACK        8       32       64      104
+     MIXED        4       13       21       38
+     total       13       45       85      143
+
+  --- CROSS-TABULATION: Explorer color vs dH class ---
+               step     leap    level
+      BLUE        0        1        0
+     BLACK       12       89        3
+     MIXED        9       27        2
+
+  --- CROSS-TABULATION: Explorer color vs score change ---
+               same     diff
+      BLUE        0        1
+     BLACK       13       91
+     MIXED        9       29
+
+  --- CROSS-TABULATION: SC-type vs dH class ---
+               step     leap    level
+     SC-SC        0       13        0
+     SC-NS       10       32        3
+     NS-NS       11       72        2
+
+  --- CROSS-TABULATION: SC-type vs score change ---
+               same     diff
+     SC-SC        3       10
+     SC-NS        9       36
+     NS-NS       10       75
+
+  --- CROSS-TABULATION: SC-type vs fiber (same parent at n-1) ---
+             same_p   diff_p
+     SC-SC        2       11
+     SC-NS       13       32
+     NS-NS       16       69
+
+  --- CROSS-TABULATION: Explorer color vs region (dominant) ---
+              apex  bottom overlap     top
+      BLUE       0       0       1       0
+     BLACK      11      24      40      29
+     MIXED       0       6      21      11
+
+  --- Delta-H DISTRIBUTION ---
+    dH  count       %
+     0      5     3.5%
+     2     21    14.7%
+     4     24    16.8%
+     6     19    13.3%
+     8     19    13.3%
+    10     14     9.8%
+    12     10     7.0%
+    14      9     6.3%
+    16      7     4.9%
+    18      7     4.9%
+    20      2     1.4%
+    22      1     0.7%
+    24      3     2.1%
+    26      1     0.7%
+    32      1     0.7%
+
+  SCORE-PRESERVING (AMBER) edges: 22/143 = 15.4%
+  SCORE-CHANGING (VIOLET) edges: 121/143 = 84.6%
+
+  INTRA-FIBER (TEAL, same parent) edges: 31/143 = 21.7%
+  INTER-FIBER (MAGENTA, diff parent) edges: 112/143 = 78.3%
+
+  EDGE LABELING SUMMARY:
+  Labeling                                      Categories               Counts
+  ---------------------------------------------------------------------------
+  Explorer (blue/black)                   BLUE/BLACK/MIXED             1/104/38
+  SC-type (spine/ribs/sea)               SC-SC/SC-NS/NS-NS             13/45/85
+  dH (step/leap/level)                     step/leap/level             21/117/5
+  Score (amber/violet)                           same/diff               22/121
+  Fiber (teal/magenta)                         intra/inter               31/112
+
+  DONE.
+================================================================================
