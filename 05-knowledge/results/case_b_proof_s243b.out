@@ -1,0 +1,40 @@
+
+========================================================================
+  DETAILED FIX_B COUNTING
+========================================================================
+
+  n=3: total_count = 12, n!*(n-2)! = 6, ratio = 2.0000
+    Direct Fix_B sum = 6
+    Expected (n!*(n-2)!) = 6
+    total_count / direct = 2.0000
+
+  n=4: total_count = 192, n!*(n-2)! = 48, ratio = 4.0000
+    Direct Fix_B sum = 48
+    Expected (n!*(n-2)!) = 48
+    total_count / direct = 4.0000
+
+  n=5: total_count = 3840, n!*(n-2)! = 720, ratio = 5.3333
+    Direct Fix_B sum = 720
+    Expected (n!*(n-2)!) = 720
+    total_count / direct = 5.3333
+
+
+========================================================================
+  THE PROOF STATUS
+========================================================================
+
+
+  CASE A: PROVED. Case A = T_n/2 by Burnside on (T, arc) pairs.
+
+  CASE B: The formula Case B = (n-2)! is VERIFIED at n=3,4,5.
+  The proof would show: sum_σ Fix_B(σ) = n! × (n-2)!
+
+  The counting argument above gives a product formula for the
+  number of tournaments T compatible with each (a,b,τ).
+  Summing over all (a,b) and τ should give n! × (n-2)!.
+
+  If the total from the counting formula matches direct computation,
+  the proof reduces to summing 2^{1+(n-2)+orbits(τ)} over all
+  pairs and τ, which is a cycle-index computation.
+
+Done. opus-2026-03-23-S243b
