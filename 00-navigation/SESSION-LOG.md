@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S238 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S236
+**Summary of work:** Extended taxonomy with creative new categorizations. Compiled 10+ new sequences. Key: avg_degree/m → 1, E_merged/E → 1/2, H always odd, dH mod 4 balanced.
+
+**New scripts:** enumeration_taxonomy_s238.py, formula_pursuit_s238b.py
+
 ## opus-2026-03-23-S236 — 2026-03-23
 
 **Account:** opus
