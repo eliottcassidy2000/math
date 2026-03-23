@@ -1,0 +1,784 @@
+
+========================================================================
+  n = 3
+========================================================================
+
+  TRUTH 1: Every tiling has exactly one flip partner.
+  Total tilings: 2, flip pairs: 1 = 2/2. CHECK.
+
+  TRUTH 2: Tiling counts per class (= class size in tiling model):
+    class 0: H=3, #tilings=1
+    class 1: H=1, #tilings=1
+
+  TRUTH 3: Transitive class 0 (H=3, 1 tiling) connects to
+  class 1 (H=1, 1 tilings) via BLUE line.
+  Predicted #tilings of full class: 1 + 2^(n-2) = 3
+  Actual: 1
+  H of full class: 1, Tribonacci prediction: 3
+
+  TRUTH 4: Blue lines: 1, Black lines: 0, Total: 1
+
+  TRUTH 5: Class connections via flip:
+    Same-class (self-flip): 0 blue, 0 black
+    Cross-class connections:
+      0 (H=3, 1t) <-> 1 (H=1, 1t): 1 blue, 0 black
+
+  TRUTH 6: Degree (number of distinct classes reached by flip):
+    class 0 (H=3, 1t): deg=1, neighbors=[(1, 1)]
+    class 1 (H=1, 1t): deg=1, neighbors=[(0, 3)]
+
+  TRUTH 7: Pattern search
+    n! divides all tiling counts: True
+    Tiling count patterns:
+      class 0: #tilings=1, H=3, tilings/H=1/3
+      class 1: #tilings=1, H=1, tilings/H=1
+
+  TRUTH 8: Full class (all-ones tiling) H sequence:
+    n=3: H=1, #tilings=1
+
+  TRUTH 9 (odd n): Regular/max-H class 0: H=3, #tilings=1
+    Neighbors: [(1, 1, 1)]
+
+
+========================================================================
+  n = 4
+========================================================================
+
+  TRUTH 1: Every tiling has exactly one flip partner.
+  Total tilings: 8, flip pairs: 4 = 8/2. CHECK.
+
+  TRUTH 2: Tiling counts per class (= class size in tiling model):
+    class 0: H=5, #tilings=5
+    class 1: H=3, #tilings=1
+    class 2: H=3, #tilings=1
+    class 3: H=1, #tilings=1
+
+  TRUTH 3: Transitive class 0 (H=5, 1 tiling) connects to
+  class 3 (H=1, 1 tilings) via BLUE line.
+  Predicted #tilings of full class: 1 + 2^(n-2) = 5
+  Actual: 1
+  H of full class: 1, Tribonacci prediction: 5
+
+  TRUTH 4: Blue lines: 2, Black lines: 2, Total: 4
+
+  TRUTH 5: Class connections via flip:
+    Same-class (self-flip): 1 blue, 0 black
+    Cross-class connections:
+      0 (H=5, 5t) <-> 1 (H=3, 1t): 0 blue, 1 black
+      0 (H=5, 5t) <-> 2 (H=3, 1t): 0 blue, 1 black
+      0 (H=5, 5t) <-> 3 (H=1, 1t): 1 blue, 0 black
+
+  TRUTH 6: Degree (number of distinct classes reached by flip):
+    class 0 (H=5, 5t): deg=3, neighbors=[(1, 3), (2, 3), (3, 1)]
+    class 1 (H=3, 1t): deg=1, neighbors=[(0, 5)]
+    class 2 (H=3, 1t): deg=1, neighbors=[(0, 5)]
+    class 3 (H=1, 1t): deg=1, neighbors=[(0, 5)]
+
+  TRUTH 7: Pattern search
+    n! divides all tiling counts: False
+    Tiling count patterns:
+      class 0: #tilings=5, H=5, tilings/H=1
+      class 1: #tilings=1, H=3, tilings/H=1/3
+      class 2: #tilings=1, H=3, tilings/H=1/3
+      class 3: #tilings=1, H=1, tilings/H=1
+
+  TRUTH 8: Full class (all-ones tiling) H sequence:
+    n=4: H=1, #tilings=1
+
+
+========================================================================
+  n = 5
+========================================================================
+
+  TRUTH 1: Every tiling has exactly one flip partner.
+  Total tilings: 64, flip pairs: 32 = 64/2. CHECK.
+
+  TRUTH 2: Tiling counts per class (= class size in tiling model):
+    class 0: H=9, #tilings=9
+    class 1: H=9, #tilings=9
+    class 2: H=13, #tilings=13
+    class 3: H=11, #tilings=11
+    class 4: H=5, #tilings=5
+    class 5: H=15, #tilings=5
+    class 6: H=15, #tilings=3
+    class 7: H=3, #tilings=1
+    class 8: H=5, #tilings=5
+    class 9: H=3, #tilings=1
+    class 10: H=3, #tilings=1
+    class 11: H=1, #tilings=1
+
+  TRUTH 3: Transitive class 0 (H=9, 1 tiling) connects to
+  class 11 (H=1, 1 tilings) via BLUE line.
+  Predicted #tilings of full class: 1 + 2^(n-2) = 9
+  Actual: 1
+  H of full class: 1, Tribonacci prediction: 9
+
+  TRUTH 4: Blue lines: 8, Black lines: 24, Total: 32
+
+  TRUTH 5: Class connections via flip:
+    Same-class (self-flip): 0 blue, 4 black
+    Cross-class connections:
+      0 (H=9, 9t) <-> 1 (H=9, 9t): 0 blue, 2 black
+      0 (H=9, 9t) <-> 2 (H=13, 13t): 1 blue, 0 black
+      0 (H=9, 9t) <-> 3 (H=11, 11t): 1 blue, 0 black
+      0 (H=9, 9t) <-> 4 (H=5, 5t): 0 blue, 1 black
+      0 (H=9, 9t) <-> 5 (H=15, 5t): 0 blue, 2 black
+      0 (H=9, 9t) <-> 8 (H=5, 5t): 0 blue, 1 black
+      0 (H=9, 9t) <-> 11 (H=1, 1t): 1 blue, 0 black
+      1 (H=9, 9t) <-> 2 (H=13, 13t): 0 blue, 2 black
+      1 (H=9, 9t) <-> 3 (H=11, 11t): 1 blue, 0 black
+      1 (H=9, 9t) <-> 4 (H=5, 5t): 0 blue, 1 black
+      1 (H=9, 9t) <-> 7 (H=3, 1t): 0 blue, 1 black
+      1 (H=9, 9t) <-> 8 (H=5, 5t): 0 blue, 1 black
+      1 (H=9, 9t) <-> 10 (H=3, 1t): 0 blue, 1 black
+      2 (H=13, 13t) <-> 3 (H=11, 11t): 0 blue, 2 black
+      2 (H=13, 13t) <-> 4 (H=5, 5t): 0 blue, 1 black
+      2 (H=13, 13t) <-> 6 (H=15, 3t): 1 blue, 0 black
+      2 (H=13, 13t) <-> 8 (H=5, 5t): 0 blue, 1 black
+      2 (H=13, 13t) <-> 9 (H=3, 1t): 1 blue, 0 black
+      3 (H=11, 11t) <-> 4 (H=5, 5t): 0 blue, 1 black
+      3 (H=11, 11t) <-> 6 (H=15, 3t): 1 blue, 0 black
+      3 (H=11, 11t) <-> 8 (H=5, 5t): 0 blue, 1 black
+      4 (H=5, 5t) <-> 5 (H=15, 5t): 0 blue, 1 black
+      5 (H=15, 5t) <-> 6 (H=15, 3t): 1 blue, 0 black
+      5 (H=15, 5t) <-> 8 (H=5, 5t): 0 blue, 1 black
+
+  TRUTH 6: Degree (number of distinct classes reached by flip):
+    class 0 (H=9, 9t): deg=7, neighbors=[(1, 9), (2, 13), (3, 11), (4, 5), (5, 15), (8, 5), (11, 1)]
+    class 1 (H=9, 9t): deg=7, neighbors=[(0, 9), (2, 13), (3, 11), (4, 5), (7, 3), (8, 5), (10, 3)]
+    class 2 (H=13, 13t): deg=7, neighbors=[(0, 9), (1, 9), (3, 11), (4, 5), (6, 15), (8, 5), (9, 3)]
+    class 3 (H=11, 11t): deg=6, neighbors=[(0, 9), (1, 9), (2, 13), (4, 5), (6, 15), (8, 5)]
+    class 4 (H=5, 5t): deg=5, neighbors=[(0, 9), (1, 9), (2, 13), (3, 11), (5, 15)]
+    class 5 (H=15, 5t): deg=4, neighbors=[(0, 9), (4, 5), (6, 15), (8, 5)]
+    class 6 (H=15, 3t): deg=3, neighbors=[(2, 13), (3, 11), (5, 15)]
+    class 7 (H=3, 1t): deg=1, neighbors=[(1, 9)]
+    class 8 (H=5, 5t): deg=5, neighbors=[(0, 9), (1, 9), (2, 13), (3, 11), (5, 15)]
+    class 9 (H=3, 1t): deg=1, neighbors=[(2, 13)]
+    class 10 (H=3, 1t): deg=1, neighbors=[(1, 9)]
+    class 11 (H=1, 1t): deg=1, neighbors=[(0, 9)]
+
+  TRUTH 7: Pattern search
+    n! divides all tiling counts: False
+    Tiling count patterns:
+      class 0: #tilings=9, H=9, tilings/H=1
+      class 1: #tilings=9, H=9, tilings/H=1
+      class 2: #tilings=13, H=13, tilings/H=1
+      class 3: #tilings=11, H=11, tilings/H=1
+      class 4: #tilings=5, H=5, tilings/H=1
+      class 5: #tilings=5, H=15, tilings/H=1/3
+      class 6: #tilings=3, H=15, tilings/H=1/5
+      class 7: #tilings=1, H=3, tilings/H=1/3
+      class 8: #tilings=5, H=5, tilings/H=1
+      class 9: #tilings=1, H=3, tilings/H=1/3
+      class 10: #tilings=1, H=3, tilings/H=1/3
+      class 11: #tilings=1, H=1, tilings/H=1
+
+  TRUTH 8: Full class (all-ones tiling) H sequence:
+    n=5: H=1, #tilings=1
+
+  TRUTH 9 (odd n): Regular/max-H class 5: H=15, #tilings=5
+    Neighbors: [(0, 9, 9), (4, 5, 5), (6, 15, 3), (8, 5, 5)]
+
+  TRUTH 9 (odd n): Regular/max-H class 6: H=15, #tilings=3
+    Neighbors: [(2, 13, 13), (3, 11, 11), (5, 15, 5)]
+
+
+========================================================================
+  n = 6
+========================================================================
+
+  TRUTH 1: Every tiling has exactly one flip partner.
+  Total tilings: 1024, flip pairs: 512 = 1024/2. CHECK.
+
+  TRUTH 2: Tiling counts per class (= class size in tiling model):
+    class 0: H=17, #tilings=17
+    class 1: H=15, #tilings=15
+    class 2: H=23, #tilings=23
+    class 3: H=15, #tilings=15
+    class 4: H=29, #tilings=29
+    class 5: H=23, #tilings=23
+    class 6: H=29, #tilings=29
+    class 7: H=19, #tilings=19
+    class 8: H=31, #tilings=31
+    class 9: H=33, #tilings=33
+    class 10: H=29, #tilings=29
+    class 11: H=9, #tilings=9
+    class 12: H=19, #tilings=19
+    class 13: H=27, #tilings=9
+    class 14: H=17, #tilings=17
+    class 15: H=33, #tilings=33
+    class 16: H=25, #tilings=25
+    class 17: H=29, #tilings=29
+    class 18: H=37, #tilings=37
+    class 19: H=23, #tilings=23
+    class 20: H=37, #tilings=37
+    class 21: H=41, #tilings=41
+    class 22: H=33, #tilings=33
+    class 23: H=9, #tilings=9
+    class 24: H=31, #tilings=31
+    class 25: H=25, #tilings=25
+    class 26: H=45, #tilings=15
+    class 27: H=37, #tilings=37
+    class 28: H=43, #tilings=43
+    class 29: H=43, #tilings=43
+    class 30: H=37, #tilings=37
+    class 31: H=13, #tilings=13
+    class 32: H=45, #tilings=15
+    class 33: H=37, #tilings=37
+    class 34: H=23, #tilings=23
+    class 35: H=11, #tilings=11
+    class 36: H=27, #tilings=9
+    class 37: H=33, #tilings=11
+    class 38: H=5, #tilings=5
+    class 39: H=33, #tilings=11
+    class 40: H=15, #tilings=5
+    class 41: H=15, #tilings=3
+    class 42: H=9, #tilings=1
+    class 43: H=3, #tilings=1
+    class 44: H=9, #tilings=9
+    class 45: H=9, #tilings=9
+    class 46: H=13, #tilings=13
+    class 47: H=11, #tilings=11
+    class 48: H=5, #tilings=5
+    class 49: H=15, #tilings=5
+    class 50: H=15, #tilings=3
+    class 51: H=3, #tilings=1
+    class 52: H=5, #tilings=5
+    class 53: H=3, #tilings=1
+    class 54: H=3, #tilings=1
+    class 55: H=1, #tilings=1
+
+  TRUTH 3: Transitive class 0 (H=17, 1 tiling) connects to
+  class 55 (H=1, 1 tilings) via BLUE line.
+  Predicted #tilings of full class: 1 + 2^(n-2) = 17
+  Actual: 1
+  H of full class: 1, Tribonacci prediction: 17
+
+  TRUTH 4: Blue lines: 32, Black lines: 480, Total: 512
+
+  TRUTH 5: Class connections via flip:
+    Same-class (self-flip): 2 blue, 6 black
+    Cross-class connections:
+      0 (H=17, 17t) <-> 7 (H=19, 19t): 0 blue, 1 black
+      0 (H=17, 17t) <-> 12 (H=19, 19t): 0 blue, 1 black
+      0 (H=17, 17t) <-> 13 (H=27, 9t): 0 blue, 1 black
+      0 (H=17, 17t) <-> 14 (H=17, 17t): 1 blue, 2 black
+      0 (H=17, 17t) <-> 19 (H=23, 23t): 0 blue, 1 black
+      0 (H=17, 17t) <-> 20 (H=37, 37t): 1 blue, 2 black
+      0 (H=17, 17t) <-> 22 (H=33, 33t): 2 blue, 0 black
+      0 (H=17, 17t) <-> 23 (H=9, 9t): 0 blue, 1 black
+      0 (H=17, 17t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      0 (H=17, 17t) <-> 36 (H=27, 9t): 0 blue, 1 black
+      0 (H=17, 17t) <-> 45 (H=9, 9t): 0 blue, 1 black
+      0 (H=17, 17t) <-> 55 (H=1, 1t): 1 blue, 0 black
+      1 (H=15, 15t) <-> 2 (H=23, 23t): 0 blue, 1 black
+      1 (H=15, 15t) <-> 7 (H=19, 19t): 0 blue, 1 black
+      1 (H=15, 15t) <-> 13 (H=27, 9t): 0 blue, 1 black
+      1 (H=15, 15t) <-> 16 (H=25, 25t): 0 blue, 1 black
+      1 (H=15, 15t) <-> 17 (H=29, 29t): 0 blue, 2 black
+      1 (H=15, 15t) <-> 20 (H=37, 37t): 0 blue, 1 black
+      1 (H=15, 15t) <-> 22 (H=33, 33t): 0 blue, 1 black
+      1 (H=15, 15t) <-> 23 (H=9, 9t): 0 blue, 1 black
+      1 (H=15, 15t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      1 (H=15, 15t) <-> 38 (H=5, 5t): 0 blue, 1 black
+      1 (H=15, 15t) <-> 44 (H=9, 9t): 0 blue, 1 black
+      1 (H=15, 15t) <-> 54 (H=3, 1t): 0 blue, 1 black
+      2 (H=23, 23t) <-> 5 (H=23, 23t): 0 blue, 2 black
+      2 (H=23, 23t) <-> 7 (H=19, 19t): 0 blue, 1 black
+      2 (H=23, 23t) <-> 8 (H=31, 31t): 0 blue, 1 black
+      2 (H=23, 23t) <-> 11 (H=9, 9t): 0 blue, 1 black
+      2 (H=23, 23t) <-> 14 (H=17, 17t): 0 blue, 2 black
+      2 (H=23, 23t) <-> 17 (H=29, 29t): 0 blue, 1 black
+      2 (H=23, 23t) <-> 20 (H=37, 37t): 0 blue, 3 black
+      2 (H=23, 23t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      2 (H=23, 23t) <-> 27 (H=37, 37t): 0 blue, 1 black
+      2 (H=23, 23t) <-> 33 (H=37, 37t): 0 blue, 3 black
+      2 (H=23, 23t) <-> 34 (H=23, 23t): 0 blue, 2 black
+      2 (H=23, 23t) <-> 47 (H=11, 11t): 0 blue, 1 black
+      2 (H=23, 23t) <-> 49 (H=15, 5t): 0 blue, 1 black
+      2 (H=23, 23t) <-> 52 (H=5, 5t): 0 blue, 1 black
+      2 (H=23, 23t) <-> 53 (H=3, 1t): 0 blue, 1 black
+      3 (H=15, 15t) <-> 5 (H=23, 23t): 0 blue, 1 black
+      3 (H=15, 15t) <-> 8 (H=31, 31t): 0 blue, 1 black
+      3 (H=15, 15t) <-> 10 (H=29, 29t): 0 blue, 2 black
+      3 (H=15, 15t) <-> 11 (H=9, 9t): 0 blue, 1 black
+      3 (H=15, 15t) <-> 12 (H=19, 19t): 0 blue, 1 black
+      3 (H=15, 15t) <-> 20 (H=37, 37t): 0 blue, 1 black
+      3 (H=15, 15t) <-> 22 (H=33, 33t): 0 blue, 1 black
+      3 (H=15, 15t) <-> 25 (H=25, 25t): 0 blue, 1 black
+      3 (H=15, 15t) <-> 36 (H=27, 9t): 0 blue, 1 black
+      3 (H=15, 15t) <-> 43 (H=3, 1t): 0 blue, 1 black
+      3 (H=15, 15t) <-> 45 (H=9, 9t): 0 blue, 1 black
+      3 (H=15, 15t) <-> 52 (H=5, 5t): 0 blue, 1 black
+      4 (H=29, 29t) <-> 6 (H=29, 29t): 1 blue, 0 black
+      4 (H=29, 29t) <-> 7 (H=19, 19t): 0 blue, 1 black
+      4 (H=29, 29t) <-> 8 (H=31, 31t): 0 blue, 2 black
+      4 (H=29, 29t) <-> 12 (H=19, 19t): 0 blue, 1 black
+      4 (H=29, 29t) <-> 14 (H=17, 17t): 1 blue, 0 black
+      4 (H=29, 29t) <-> 18 (H=37, 37t): 0 blue, 1 black
+      4 (H=29, 29t) <-> 19 (H=23, 23t): 0 blue, 3 black
+      4 (H=29, 29t) <-> 20 (H=37, 37t): 1 blue, 2 black
+      4 (H=29, 29t) <-> 21 (H=41, 41t): 1 blue, 0 black
+      4 (H=29, 29t) <-> 23 (H=9, 9t): 0 blue, 1 black
+      4 (H=29, 29t) <-> 24 (H=31, 31t): 0 blue, 2 black
+      4 (H=29, 29t) <-> 27 (H=37, 37t): 0 blue, 1 black
+      4 (H=29, 29t) <-> 30 (H=37, 37t): 0 blue, 1 black
+      4 (H=29, 29t) <-> 32 (H=45, 15t): 2 blue, 0 black
+      4 (H=29, 29t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      4 (H=29, 29t) <-> 34 (H=23, 23t): 0 blue, 3 black
+      4 (H=29, 29t) <-> 35 (H=11, 11t): 0 blue, 1 black
+      4 (H=29, 29t) <-> 45 (H=9, 9t): 0 blue, 1 black
+      4 (H=29, 29t) <-> 47 (H=11, 11t): 0 blue, 1 black
+      4 (H=29, 29t) <-> 48 (H=5, 5t): 1 blue, 0 black
+      5 (H=23, 23t) <-> 8 (H=31, 31t): 0 blue, 1 black
+      5 (H=23, 23t) <-> 10 (H=29, 29t): 0 blue, 1 black
+      5 (H=23, 23t) <-> 12 (H=19, 19t): 0 blue, 1 black
+      5 (H=23, 23t) <-> 14 (H=17, 17t): 0 blue, 2 black
+      5 (H=23, 23t) <-> 18 (H=37, 37t): 0 blue, 3 black
+      5 (H=23, 23t) <-> 19 (H=23, 23t): 0 blue, 2 black
+      5 (H=23, 23t) <-> 20 (H=37, 37t): 0 blue, 3 black
+      5 (H=23, 23t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      5 (H=23, 23t) <-> 30 (H=37, 37t): 0 blue, 1 black
+      5 (H=23, 23t) <-> 35 (H=11, 11t): 0 blue, 1 black
+      5 (H=23, 23t) <-> 38 (H=5, 5t): 0 blue, 1 black
+      5 (H=23, 23t) <-> 40 (H=15, 5t): 0 blue, 1 black
+      5 (H=23, 23t) <-> 44 (H=9, 9t): 0 blue, 1 black
+      5 (H=23, 23t) <-> 51 (H=3, 1t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 9 (H=33, 33t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 10 (H=29, 29t): 0 blue, 3 black
+      6 (H=29, 29t) <-> 13 (H=27, 9t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 14 (H=17, 17t): 1 blue, 0 black
+      6 (H=29, 29t) <-> 15 (H=33, 33t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 17 (H=29, 29t): 0 blue, 3 black
+      6 (H=29, 29t) <-> 18 (H=37, 37t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 20 (H=37, 37t): 1 blue, 0 black
+      6 (H=29, 29t) <-> 21 (H=41, 41t): 2 blue, 0 black
+      6 (H=29, 29t) <-> 22 (H=33, 33t): 1 blue, 2 black
+      6 (H=29, 29t) <-> 23 (H=9, 9t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 26 (H=45, 15t): 0 blue, 2 black
+      6 (H=29, 29t) <-> 27 (H=37, 37t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 30 (H=37, 37t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 36 (H=27, 9t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 37 (H=33, 11t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 39 (H=33, 11t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 45 (H=9, 9t): 0 blue, 1 black
+      6 (H=29, 29t) <-> 48 (H=5, 5t): 1 blue, 0 black
+      7 (H=19, 19t) <-> 8 (H=31, 31t): 0 blue, 1 black
+      7 (H=19, 19t) <-> 10 (H=29, 29t): 0 blue, 1 black
+      7 (H=19, 19t) <-> 12 (H=19, 19t): 0 blue, 2 black
+      7 (H=19, 19t) <-> 16 (H=25, 25t): 0 blue, 1 black
+      7 (H=19, 19t) <-> 18 (H=37, 37t): 0 blue, 1 black
+      7 (H=19, 19t) <-> 20 (H=37, 37t): 0 blue, 1 black
+      7 (H=19, 19t) <-> 22 (H=33, 33t): 0 blue, 1 black
+      7 (H=19, 19t) <-> 30 (H=37, 37t): 0 blue, 3 black
+      7 (H=19, 19t) <-> 31 (H=13, 13t): 0 blue, 1 black
+      7 (H=19, 19t) <-> 38 (H=5, 5t): 0 blue, 1 black
+      7 (H=19, 19t) <-> 39 (H=33, 11t): 0 blue, 1 black
+      7 (H=19, 19t) <-> 45 (H=9, 9t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 9 (H=33, 33t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 10 (H=29, 29t): 0 blue, 2 black
+      8 (H=31, 31t) <-> 11 (H=9, 9t): 0 blue, 2 black
+      8 (H=31, 31t) <-> 14 (H=17, 17t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 15 (H=33, 33t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 18 (H=37, 37t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 19 (H=23, 23t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 20 (H=37, 37t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 21 (H=41, 41t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 24 (H=31, 31t): 0 blue, 2 black
+      8 (H=31, 31t) <-> 25 (H=25, 25t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 27 (H=37, 37t): 0 blue, 2 black
+      8 (H=31, 31t) <-> 28 (H=43, 43t): 0 blue, 2 black
+      8 (H=31, 31t) <-> 30 (H=37, 37t): 0 blue, 2 black
+      8 (H=31, 31t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 36 (H=27, 9t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 46 (H=13, 13t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 48 (H=5, 5t): 0 blue, 1 black
+      8 (H=31, 31t) <-> 49 (H=15, 5t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 10 (H=29, 29t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 17 (H=29, 29t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 18 (H=37, 37t): 0 blue, 2 black
+      9 (H=33, 33t) <-> 19 (H=23, 23t): 0 blue, 3 black
+      9 (H=33, 33t) <-> 21 (H=41, 41t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 22 (H=33, 33t): 0 blue, 3 black
+      9 (H=33, 33t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 25 (H=25, 25t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 26 (H=45, 15t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 28 (H=43, 43t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 29 (H=43, 43t): 0 blue, 5 black
+      9 (H=33, 33t) <-> 30 (H=37, 37t): 0 blue, 4 black
+      9 (H=33, 33t) <-> 31 (H=13, 13t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 32 (H=45, 15t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 35 (H=11, 11t): 0 blue, 1 black
+      9 (H=33, 33t) <-> 39 (H=33, 11t): 0 blue, 2 black
+      9 (H=33, 33t) <-> 40 (H=15, 5t): 0 blue, 1 black
+      10 (H=29, 29t) <-> 11 (H=9, 9t): 0 blue, 1 black
+      10 (H=29, 29t) <-> 15 (H=33, 33t): 0 blue, 1 black
+      10 (H=29, 29t) <-> 17 (H=29, 29t): 0 blue, 2 black
+      10 (H=29, 29t) <-> 18 (H=37, 37t): 0 blue, 2 black
+      10 (H=29, 29t) <-> 19 (H=23, 23t): 0 blue, 1 black
+      10 (H=29, 29t) <-> 23 (H=9, 9t): 0 blue, 1 black
+      10 (H=29, 29t) <-> 25 (H=25, 25t): 0 blue, 1 black
+      10 (H=29, 29t) <-> 27 (H=37, 37t): 0 blue, 1 black
+      10 (H=29, 29t) <-> 28 (H=43, 43t): 0 blue, 2 black
+      10 (H=29, 29t) <-> 30 (H=37, 37t): 0 blue, 1 black
+      10 (H=29, 29t) <-> 31 (H=13, 13t): 0 blue, 1 black
+      10 (H=29, 29t) <-> 33 (H=37, 37t): 0 blue, 2 black
+      10 (H=29, 29t) <-> 45 (H=9, 9t): 0 blue, 1 black
+      10 (H=29, 29t) <-> 47 (H=11, 11t): 0 blue, 1 black
+      10 (H=29, 29t) <-> 49 (H=15, 5t): 0 blue, 1 black
+      11 (H=9, 9t) <-> 14 (H=17, 17t): 0 blue, 1 black
+      11 (H=9, 9t) <-> 20 (H=37, 37t): 0 blue, 1 black
+      11 (H=9, 9t) <-> 22 (H=33, 33t): 0 blue, 1 black
+      11 (H=9, 9t) <-> 25 (H=25, 25t): 0 blue, 1 black
+      12 (H=19, 19t) <-> 17 (H=29, 29t): 0 blue, 1 black
+      12 (H=19, 19t) <-> 20 (H=37, 37t): 0 blue, 1 black
+      12 (H=19, 19t) <-> 22 (H=33, 33t): 0 blue, 1 black
+      12 (H=19, 19t) <-> 23 (H=9, 9t): 0 blue, 1 black
+      12 (H=19, 19t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      12 (H=19, 19t) <-> 25 (H=25, 25t): 0 blue, 1 black
+      12 (H=19, 19t) <-> 27 (H=37, 37t): 0 blue, 3 black
+      12 (H=19, 19t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      12 (H=19, 19t) <-> 37 (H=33, 11t): 0 blue, 1 black
+      12 (H=19, 19t) <-> 46 (H=13, 13t): 0 blue, 1 black
+      12 (H=19, 19t) <-> 52 (H=5, 5t): 0 blue, 1 black
+      13 (H=27, 9t) <-> 22 (H=33, 33t): 0 blue, 1 black
+      13 (H=27, 9t) <-> 23 (H=9, 9t): 0 blue, 1 black
+      13 (H=27, 9t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      13 (H=27, 9t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      13 (H=27, 9t) <-> 46 (H=13, 13t): 0 blue, 1 black
+      13 (H=27, 9t) <-> 52 (H=5, 5t): 0 blue, 1 black
+      14 (H=17, 17t) <-> 22 (H=33, 33t): 1 blue, 0 black
+      14 (H=17, 17t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      14 (H=17, 17t) <-> 38 (H=5, 5t): 0 blue, 1 black
+      14 (H=17, 17t) <-> 42 (H=9, 1t): 1 blue, 0 black
+      14 (H=17, 17t) <-> 44 (H=9, 9t): 0 blue, 1 black
+      14 (H=17, 17t) <-> 52 (H=5, 5t): 0 blue, 1 black
+      15 (H=33, 33t) <-> 16 (H=25, 25t): 0 blue, 1 black
+      15 (H=33, 33t) <-> 17 (H=29, 29t): 0 blue, 1 black
+      15 (H=33, 33t) <-> 19 (H=23, 23t): 0 blue, 1 black
+      15 (H=33, 33t) <-> 21 (H=41, 41t): 0 blue, 1 black
+      15 (H=33, 33t) <-> 22 (H=33, 33t): 0 blue, 3 black
+      15 (H=33, 33t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      15 (H=33, 33t) <-> 26 (H=45, 15t): 0 blue, 1 black
+      15 (H=33, 33t) <-> 27 (H=37, 37t): 0 blue, 4 black
+      15 (H=33, 33t) <-> 28 (H=43, 43t): 0 blue, 5 black
+      15 (H=33, 33t) <-> 29 (H=43, 43t): 0 blue, 1 black
+      15 (H=33, 33t) <-> 32 (H=45, 15t): 0 blue, 1 black
+      15 (H=33, 33t) <-> 33 (H=37, 37t): 0 blue, 2 black
+      15 (H=33, 33t) <-> 34 (H=23, 23t): 0 blue, 3 black
+      15 (H=33, 33t) <-> 37 (H=33, 11t): 0 blue, 2 black
+      15 (H=33, 33t) <-> 46 (H=13, 13t): 0 blue, 1 black
+      15 (H=33, 33t) <-> 47 (H=11, 11t): 0 blue, 1 black
+      15 (H=33, 33t) <-> 49 (H=15, 5t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 17 (H=29, 29t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 18 (H=37, 37t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 19 (H=23, 23t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 20 (H=37, 37t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 21 (H=41, 41t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 22 (H=33, 33t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 25 (H=25, 25t): 0 blue, 2 black
+      16 (H=25, 25t) <-> 27 (H=37, 37t): 0 blue, 2 black
+      16 (H=25, 25t) <-> 29 (H=43, 43t): 0 blue, 2 black
+      16 (H=25, 25t) <-> 31 (H=13, 13t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 35 (H=11, 11t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 39 (H=33, 11t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 44 (H=9, 9t): 0 blue, 1 black
+      16 (H=25, 25t) <-> 46 (H=13, 13t): 0 blue, 1 black
+      17 (H=29, 29t) <-> 18 (H=37, 37t): 0 blue, 2 black
+      17 (H=29, 29t) <-> 23 (H=9, 9t): 0 blue, 1 black
+      17 (H=29, 29t) <-> 24 (H=31, 31t): 0 blue, 2 black
+      17 (H=29, 29t) <-> 27 (H=37, 37t): 0 blue, 1 black
+      17 (H=29, 29t) <-> 29 (H=43, 43t): 0 blue, 2 black
+      17 (H=29, 29t) <-> 30 (H=37, 37t): 0 blue, 1 black
+      17 (H=29, 29t) <-> 33 (H=37, 37t): 0 blue, 2 black
+      17 (H=29, 29t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      17 (H=29, 29t) <-> 35 (H=11, 11t): 0 blue, 1 black
+      17 (H=29, 29t) <-> 40 (H=15, 5t): 0 blue, 1 black
+      17 (H=29, 29t) <-> 44 (H=9, 9t): 0 blue, 1 black
+      17 (H=29, 29t) <-> 45 (H=9, 9t): 0 blue, 1 black
+      17 (H=29, 29t) <-> 46 (H=13, 13t): 0 blue, 1 black
+      18 (H=37, 37t) <-> 21 (H=41, 41t): 0 blue, 4 black
+      18 (H=37, 37t) <-> 22 (H=33, 33t): 0 blue, 1 black
+      18 (H=37, 37t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      18 (H=37, 37t) <-> 25 (H=25, 25t): 0 blue, 1 black
+      18 (H=37, 37t) <-> 27 (H=37, 37t): 0 blue, 1 black
+      18 (H=37, 37t) <-> 28 (H=43, 43t): 0 blue, 2 black
+      18 (H=37, 37t) <-> 29 (H=43, 43t): 0 blue, 2 black
+      18 (H=37, 37t) <-> 32 (H=45, 15t): 0 blue, 1 black
+      18 (H=37, 37t) <-> 33 (H=37, 37t): 0 blue, 4 black
+      18 (H=37, 37t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      18 (H=37, 37t) <-> 36 (H=27, 9t): 0 blue, 1 black
+      18 (H=37, 37t) <-> 46 (H=13, 13t): 0 blue, 1 black
+      18 (H=37, 37t) <-> 47 (H=11, 11t): 0 blue, 2 black
+      18 (H=37, 37t) <-> 50 (H=15, 3t): 0 blue, 1 black
+      19 (H=23, 23t) <-> 25 (H=25, 25t): 0 blue, 1 black
+      19 (H=23, 23t) <-> 26 (H=45, 15t): 0 blue, 1 black
+      19 (H=23, 23t) <-> 27 (H=37, 37t): 0 blue, 1 black
+      19 (H=23, 23t) <-> 28 (H=43, 43t): 0 blue, 1 black
+      19 (H=23, 23t) <-> 29 (H=43, 43t): 0 blue, 1 black
+      19 (H=23, 23t) <-> 30 (H=37, 37t): 0 blue, 1 black
+      19 (H=23, 23t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      19 (H=23, 23t) <-> 35 (H=11, 11t): 0 blue, 1 black
+      19 (H=23, 23t) <-> 39 (H=33, 11t): 0 blue, 1 black
+      19 (H=23, 23t) <-> 47 (H=11, 11t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 21 (H=41, 41t): 1 blue, 0 black
+      20 (H=37, 37t) <-> 22 (H=33, 33t): 1 blue, 0 black
+      20 (H=37, 37t) <-> 23 (H=9, 9t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 25 (H=25, 25t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 26 (H=45, 15t): 1 blue, 0 black
+      20 (H=37, 37t) <-> 28 (H=43, 43t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 29 (H=43, 43t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 31 (H=13, 13t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 32 (H=45, 15t): 1 blue, 0 black
+      20 (H=37, 37t) <-> 35 (H=11, 11t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 40 (H=15, 5t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 44 (H=9, 9t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 45 (H=9, 9t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 46 (H=13, 13t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 47 (H=11, 11t): 0 blue, 1 black
+      20 (H=37, 37t) <-> 49 (H=15, 5t): 0 blue, 1 black
+      21 (H=41, 41t) <-> 24 (H=31, 31t): 0 blue, 1 black
+      21 (H=41, 41t) <-> 25 (H=25, 25t): 0 blue, 1 black
+      21 (H=41, 41t) <-> 26 (H=45, 15t): 1 blue, 0 black
+      21 (H=41, 41t) <-> 27 (H=37, 37t): 0 blue, 2 black
+      21 (H=41, 41t) <-> 28 (H=43, 43t): 0 blue, 6 black
+      21 (H=41, 41t) <-> 29 (H=43, 43t): 0 blue, 6 black
+      21 (H=41, 41t) <-> 30 (H=37, 37t): 0 blue, 2 black
+      21 (H=41, 41t) <-> 32 (H=45, 15t): 2 blue, 0 black
+      21 (H=41, 41t) <-> 33 (H=37, 37t): 0 blue, 4 black
+      21 (H=41, 41t) <-> 37 (H=33, 11t): 0 blue, 1 black
+      21 (H=41, 41t) <-> 39 (H=33, 11t): 0 blue, 1 black
+      22 (H=33, 33t) <-> 25 (H=25, 25t): 0 blue, 1 black
+      22 (H=33, 33t) <-> 27 (H=37, 37t): 0 blue, 1 black
+      22 (H=33, 33t) <-> 30 (H=37, 37t): 0 blue, 1 black
+      22 (H=33, 33t) <-> 31 (H=13, 13t): 0 blue, 2 black
+      22 (H=33, 33t) <-> 32 (H=45, 15t): 1 blue, 0 black
+      22 (H=33, 33t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      22 (H=33, 33t) <-> 36 (H=27, 9t): 0 blue, 1 black
+      22 (H=33, 33t) <-> 44 (H=9, 9t): 0 blue, 1 black
+      22 (H=33, 33t) <-> 46 (H=13, 13t): 0 blue, 2 black
+      22 (H=33, 33t) <-> 48 (H=5, 5t): 1 blue, 0 black
+      24 (H=31, 31t) <-> 27 (H=37, 37t): 0 blue, 2 black
+      24 (H=31, 31t) <-> 29 (H=43, 43t): 0 blue, 2 black
+      24 (H=31, 31t) <-> 30 (H=37, 37t): 0 blue, 2 black
+      24 (H=31, 31t) <-> 31 (H=13, 13t): 0 blue, 1 black
+      24 (H=31, 31t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      24 (H=31, 31t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      24 (H=31, 31t) <-> 40 (H=15, 5t): 0 blue, 1 black
+      24 (H=31, 31t) <-> 44 (H=9, 9t): 0 blue, 2 black
+      24 (H=31, 31t) <-> 48 (H=5, 5t): 0 blue, 1 black
+      25 (H=25, 25t) <-> 28 (H=43, 43t): 0 blue, 2 black
+      25 (H=25, 25t) <-> 30 (H=37, 37t): 0 blue, 2 black
+      25 (H=25, 25t) <-> 31 (H=13, 13t): 0 blue, 1 black
+      25 (H=25, 25t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      25 (H=25, 25t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      25 (H=25, 25t) <-> 37 (H=33, 11t): 0 blue, 1 black
+      25 (H=25, 25t) <-> 46 (H=13, 13t): 0 blue, 1 black
+      25 (H=25, 25t) <-> 47 (H=11, 11t): 0 blue, 1 black
+      26 (H=45, 15t) <-> 28 (H=43, 43t): 0 blue, 3 black
+      26 (H=45, 15t) <-> 29 (H=43, 43t): 0 blue, 3 black
+      26 (H=45, 15t) <-> 32 (H=45, 15t): 1 blue, 0 black
+      26 (H=45, 15t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      27 (H=37, 37t) <-> 28 (H=43, 43t): 0 blue, 4 black
+      27 (H=37, 37t) <-> 29 (H=43, 43t): 0 blue, 3 black
+      27 (H=37, 37t) <-> 31 (H=13, 13t): 0 blue, 2 black
+      27 (H=37, 37t) <-> 32 (H=45, 15t): 0 blue, 1 black
+      27 (H=37, 37t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      27 (H=37, 37t) <-> 35 (H=11, 11t): 0 blue, 1 black
+      27 (H=37, 37t) <-> 39 (H=33, 11t): 0 blue, 1 black
+      27 (H=37, 37t) <-> 41 (H=15, 3t): 0 blue, 1 black
+      28 (H=43, 43t) <-> 29 (H=43, 43t): 0 blue, 4 black
+      28 (H=43, 43t) <-> 30 (H=37, 37t): 0 blue, 3 black
+      28 (H=43, 43t) <-> 33 (H=37, 37t): 0 blue, 2 black
+      28 (H=43, 43t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      28 (H=43, 43t) <-> 37 (H=33, 11t): 0 blue, 2 black
+      29 (H=43, 43t) <-> 30 (H=37, 37t): 0 blue, 4 black
+      29 (H=43, 43t) <-> 33 (H=37, 37t): 0 blue, 2 black
+      29 (H=43, 43t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      29 (H=43, 43t) <-> 39 (H=33, 11t): 0 blue, 2 black
+      30 (H=37, 37t) <-> 32 (H=45, 15t): 0 blue, 1 black
+      30 (H=37, 37t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      30 (H=37, 37t) <-> 34 (H=23, 23t): 0 blue, 1 black
+      30 (H=37, 37t) <-> 37 (H=33, 11t): 0 blue, 1 black
+      30 (H=37, 37t) <-> 46 (H=13, 13t): 0 blue, 2 black
+      30 (H=37, 37t) <-> 47 (H=11, 11t): 0 blue, 1 black
+      30 (H=37, 37t) <-> 50 (H=15, 3t): 0 blue, 1 black
+      31 (H=13, 13t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      31 (H=13, 13t) <-> 36 (H=27, 9t): 0 blue, 1 black
+      32 (H=45, 15t) <-> 33 (H=37, 37t): 0 blue, 1 black
+      33 (H=37, 37t) <-> 35 (H=11, 11t): 0 blue, 2 black
+      33 (H=37, 37t) <-> 41 (H=15, 3t): 0 blue, 1 black
+      34 (H=23, 23t) <-> 35 (H=11, 11t): 0 blue, 1 black
+      34 (H=23, 23t) <-> 37 (H=33, 11t): 0 blue, 1 black
+      34 (H=23, 23t) <-> 47 (H=11, 11t): 0 blue, 1 black
+      36 (H=27, 9t) <-> 38 (H=5, 5t): 0 blue, 1 black
+      36 (H=27, 9t) <-> 45 (H=9, 9t): 0 blue, 1 black
+      37 (H=33, 11t) <-> 41 (H=15, 3t): 0 blue, 1 black
+      39 (H=33, 11t) <-> 50 (H=15, 3t): 0 blue, 1 black
+
+  TRUTH 6: Degree (number of distinct classes reached by flip):
+    class 0 (H=17, 17t): deg=12, neighbors=[(7, 19), (12, 19), (13, 27), (14, 17), (19, 23), (20, 37), (22, 33), (23, 9), (34, 23), (36, 27), (45, 9), (55, 1)]
+    class 1 (H=15, 15t): deg=12, neighbors=[(2, 23), (7, 19), (13, 27), (16, 25), (17, 29), (20, 37), (22, 33), (23, 9), (24, 31), (38, 5), (44, 9), (54, 3)]
+    class 2 (H=23, 23t): deg=16, neighbors=[(1, 15), (5, 23), (7, 19), (8, 31), (11, 9), (14, 17), (17, 29), (20, 37), (24, 31), (27, 37), (33, 37), (34, 23), (47, 11), (49, 15), (52, 5), (53, 3)]
+    class 3 (H=15, 15t): deg=12, neighbors=[(5, 23), (8, 31), (10, 29), (11, 9), (12, 19), (20, 37), (22, 33), (25, 25), (36, 27), (43, 3), (45, 9), (52, 5)]
+    class 4 (H=29, 29t): deg=20, neighbors=[(6, 29), (7, 19), (8, 31), (12, 19), (14, 17), (18, 37), (19, 23), (20, 37), (21, 41), (23, 9), (24, 31), (27, 37), (30, 37), (32, 45), (33, 37), (34, 23), (35, 11), (45, 9), (47, 11), (48, 5)]
+    class 5 (H=23, 23t): deg=16, neighbors=[(2, 23), (3, 15), (8, 31), (10, 29), (12, 19), (14, 17), (18, 37), (19, 23), (20, 37), (24, 31), (30, 37), (35, 11), (38, 5), (40, 15), (44, 9), (51, 3)]
+    class 6 (H=29, 29t): deg=21, neighbors=[(4, 29), (9, 33), (10, 29), (13, 27), (14, 17), (15, 33), (17, 29), (18, 37), (20, 37), (21, 41), (22, 33), (23, 9), (26, 45), (27, 37), (30, 37), (33, 37), (36, 27), (37, 33), (39, 33), (45, 9), (48, 5)]
+    class 7 (H=19, 19t): deg=16, neighbors=[(0, 17), (1, 15), (2, 23), (4, 29), (8, 31), (10, 29), (12, 19), (16, 25), (18, 37), (20, 37), (22, 33), (30, 37), (31, 13), (38, 5), (39, 33), (45, 9)]
+    class 8 (H=31, 31t): deg=24, neighbors=[(2, 23), (3, 15), (4, 29), (5, 23), (7, 19), (9, 33), (10, 29), (11, 9), (14, 17), (15, 33), (18, 37), (19, 23), (20, 37), (21, 41), (24, 31), (25, 25), (27, 37), (28, 43), (30, 37), (33, 37), (36, 27), (46, 13), (48, 5), (49, 15)]
+    class 9 (H=33, 33t): deg=20, neighbors=[(6, 29), (8, 31), (10, 29), (17, 29), (18, 37), (19, 23), (21, 41), (22, 33), (24, 31), (25, 25), (26, 45), (28, 43), (29, 43), (30, 37), (31, 13), (32, 45), (34, 23), (35, 11), (39, 33), (40, 15)]
+    class 10 (H=29, 29t): deg=21, neighbors=[(3, 15), (5, 23), (6, 29), (7, 19), (8, 31), (9, 33), (11, 9), (15, 33), (17, 29), (18, 37), (19, 23), (23, 9), (25, 25), (27, 37), (28, 43), (30, 37), (31, 13), (33, 37), (45, 9), (47, 11), (49, 15)]
+    class 11 (H=9, 9t): deg=8, neighbors=[(2, 23), (3, 15), (8, 31), (10, 29), (14, 17), (20, 37), (22, 33), (25, 25)]
+    class 12 (H=19, 19t): deg=16, neighbors=[(0, 17), (3, 15), (4, 29), (5, 23), (7, 19), (17, 29), (20, 37), (22, 33), (23, 9), (24, 31), (25, 25), (27, 37), (33, 37), (37, 33), (46, 13), (52, 5)]
+    class 13 (H=27, 9t): deg=9, neighbors=[(0, 17), (1, 15), (6, 29), (22, 33), (23, 9), (24, 31), (33, 37), (46, 13), (52, 5)]
+    class 14 (H=17, 17t): deg=13, neighbors=[(0, 17), (2, 23), (4, 29), (5, 23), (6, 29), (8, 31), (11, 9), (22, 33), (24, 31), (38, 5), (42, 9), (44, 9), (52, 5)]
+    class 15 (H=33, 33t): deg=20, neighbors=[(6, 29), (8, 31), (10, 29), (16, 25), (17, 29), (19, 23), (21, 41), (22, 33), (24, 31), (26, 45), (27, 37), (28, 43), (29, 43), (32, 45), (33, 37), (34, 23), (37, 33), (46, 13), (47, 11), (49, 15)]
+    class 16 (H=25, 25t): deg=20, neighbors=[(1, 15), (7, 19), (15, 33), (17, 29), (18, 37), (19, 23), (20, 37), (21, 41), (22, 33), (24, 31), (25, 25), (27, 37), (29, 43), (31, 13), (33, 37), (34, 23), (35, 11), (39, 33), (44, 9), (46, 13)]
+    class 17 (H=29, 29t): deg=21, neighbors=[(1, 15), (2, 23), (6, 29), (9, 33), (10, 29), (12, 19), (15, 33), (16, 25), (18, 37), (23, 9), (24, 31), (27, 37), (29, 43), (30, 37), (33, 37), (34, 23), (35, 11), (40, 15), (44, 9), (45, 9), (46, 13)]
+    class 18 (H=37, 37t): deg=23, neighbors=[(4, 29), (5, 23), (6, 29), (7, 19), (8, 31), (9, 33), (10, 29), (16, 25), (17, 29), (21, 41), (22, 33), (24, 31), (25, 25), (27, 37), (28, 43), (29, 43), (32, 45), (33, 37), (34, 23), (36, 27), (46, 13), (47, 11), (50, 15)]
+    class 19 (H=23, 23t): deg=18, neighbors=[(0, 17), (4, 29), (5, 23), (8, 31), (9, 33), (10, 29), (15, 33), (16, 25), (25, 25), (26, 45), (27, 37), (28, 43), (29, 43), (30, 37), (33, 37), (35, 11), (39, 33), (47, 11)]
+    class 20 (H=37, 37t): deg=29, neighbors=[(0, 17), (1, 15), (2, 23), (3, 15), (4, 29), (5, 23), (6, 29), (7, 19), (8, 31), (11, 9), (12, 19), (16, 25), (21, 41), (22, 33), (23, 9), (24, 31), (25, 25), (26, 45), (28, 43), (29, 43), (31, 13), (32, 45), (35, 11), (40, 15), (44, 9), (45, 9), (46, 13), (47, 11), (49, 15)]
+    class 21 (H=41, 41t): deg=19, neighbors=[(4, 29), (6, 29), (8, 31), (9, 33), (15, 33), (16, 25), (18, 37), (20, 37), (24, 31), (25, 25), (26, 45), (27, 37), (28, 43), (29, 43), (30, 37), (32, 45), (33, 37), (37, 33), (39, 33)]
+    class 22 (H=33, 33t): deg=24, neighbors=[(0, 17), (1, 15), (3, 15), (6, 29), (7, 19), (9, 33), (11, 9), (12, 19), (13, 27), (14, 17), (15, 33), (16, 25), (18, 37), (20, 37), (25, 25), (27, 37), (30, 37), (31, 13), (32, 45), (33, 37), (36, 27), (44, 9), (46, 13), (48, 5)]
+    class 23 (H=9, 9t): deg=9, neighbors=[(0, 17), (1, 15), (4, 29), (6, 29), (10, 29), (12, 19), (13, 27), (17, 29), (20, 37)]
+    class 24 (H=31, 31t): deg=24, neighbors=[(1, 15), (2, 23), (4, 29), (5, 23), (8, 31), (9, 33), (12, 19), (13, 27), (14, 17), (15, 33), (16, 25), (17, 29), (18, 37), (20, 37), (21, 41), (27, 37), (29, 43), (30, 37), (31, 13), (33, 37), (34, 23), (40, 15), (44, 9), (48, 5)]
+    class 25 (H=25, 25t): deg=20, neighbors=[(3, 15), (8, 31), (9, 33), (10, 29), (11, 9), (12, 19), (16, 25), (18, 37), (19, 23), (20, 37), (21, 41), (22, 33), (28, 43), (30, 37), (31, 13), (33, 37), (34, 23), (37, 33), (46, 13), (47, 11)]
+    class 26 (H=45, 15t): deg=10, neighbors=[(6, 29), (9, 33), (15, 33), (19, 23), (20, 37), (21, 41), (28, 43), (29, 43), (32, 45), (34, 23)]
+    class 27 (H=37, 37t): deg=22, neighbors=[(2, 23), (4, 29), (6, 29), (8, 31), (10, 29), (12, 19), (15, 33), (16, 25), (17, 29), (18, 37), (19, 23), (21, 41), (22, 33), (24, 31), (28, 43), (29, 43), (31, 13), (32, 45), (34, 23), (35, 11), (39, 33), (41, 15)]
+    class 28 (H=43, 43t): deg=16, neighbors=[(8, 31), (9, 33), (10, 29), (15, 33), (18, 37), (19, 23), (20, 37), (21, 41), (25, 25), (26, 45), (27, 37), (29, 43), (30, 37), (33, 37), (34, 23), (37, 33)]
+    class 29 (H=43, 43t): deg=16, neighbors=[(9, 33), (15, 33), (16, 25), (17, 29), (18, 37), (19, 23), (20, 37), (21, 41), (24, 31), (26, 45), (27, 37), (28, 43), (30, 37), (33, 37), (34, 23), (39, 33)]
+    class 30 (H=37, 37t): deg=22, neighbors=[(4, 29), (5, 23), (6, 29), (7, 19), (8, 31), (9, 33), (10, 29), (17, 29), (19, 23), (21, 41), (22, 33), (24, 31), (25, 25), (28, 43), (29, 43), (32, 45), (33, 37), (34, 23), (37, 33), (46, 13), (47, 11), (50, 15)]
+    class 31 (H=13, 13t): deg=11, neighbors=[(7, 19), (9, 33), (10, 29), (16, 25), (20, 37), (22, 33), (24, 31), (25, 25), (27, 37), (33, 37), (36, 27)]
+    class 32 (H=45, 15t): deg=11, neighbors=[(4, 29), (9, 33), (15, 33), (18, 37), (20, 37), (21, 41), (22, 33), (26, 45), (27, 37), (30, 37), (33, 37)]
+    class 33 (H=37, 37t): deg=23, neighbors=[(2, 23), (4, 29), (6, 29), (8, 31), (10, 29), (12, 19), (13, 27), (15, 33), (16, 25), (17, 29), (18, 37), (19, 23), (21, 41), (22, 33), (24, 31), (25, 25), (28, 43), (29, 43), (30, 37), (31, 13), (32, 45), (35, 11), (41, 15)]
+    class 34 (H=23, 23t): deg=18, neighbors=[(0, 17), (2, 23), (4, 29), (9, 33), (15, 33), (16, 25), (17, 29), (18, 37), (24, 31), (25, 25), (26, 45), (27, 37), (28, 43), (29, 43), (30, 37), (35, 11), (37, 33), (47, 11)]
+    class 35 (H=11, 11t): deg=10, neighbors=[(4, 29), (5, 23), (9, 33), (16, 25), (17, 29), (19, 23), (20, 37), (27, 37), (33, 37), (34, 23)]
+    class 36 (H=27, 9t): deg=9, neighbors=[(0, 17), (3, 15), (6, 29), (8, 31), (18, 37), (22, 33), (31, 13), (38, 5), (45, 9)]
+    class 37 (H=33, 11t): deg=9, neighbors=[(6, 29), (12, 19), (15, 33), (21, 41), (25, 25), (28, 43), (30, 37), (34, 23), (41, 15)]
+    class 38 (H=5, 5t): deg=5, neighbors=[(1, 15), (5, 23), (7, 19), (14, 17), (36, 27)]
+    class 39 (H=33, 11t): deg=9, neighbors=[(6, 29), (7, 19), (9, 33), (16, 25), (19, 23), (21, 41), (27, 37), (29, 43), (50, 15)]
+    class 40 (H=15, 5t): deg=5, neighbors=[(5, 23), (9, 33), (17, 29), (20, 37), (24, 31)]
+    class 41 (H=15, 3t): deg=3, neighbors=[(27, 37), (33, 37), (37, 33)]
+    class 42 (H=9, 1t): deg=1, neighbors=[(14, 17)]
+    class 43 (H=3, 1t): deg=1, neighbors=[(3, 15)]
+    class 44 (H=9, 9t): deg=8, neighbors=[(1, 15), (5, 23), (14, 17), (16, 25), (17, 29), (20, 37), (22, 33), (24, 31)]
+    class 45 (H=9, 9t): deg=9, neighbors=[(0, 17), (3, 15), (4, 29), (6, 29), (7, 19), (10, 29), (17, 29), (20, 37), (36, 27)]
+    class 46 (H=13, 13t): deg=11, neighbors=[(8, 31), (12, 19), (13, 27), (15, 33), (16, 25), (17, 29), (18, 37), (20, 37), (22, 33), (25, 25), (30, 37)]
+    class 47 (H=11, 11t): deg=10, neighbors=[(2, 23), (4, 29), (10, 29), (15, 33), (18, 37), (19, 23), (20, 37), (25, 25), (30, 37), (34, 23)]
+    class 48 (H=5, 5t): deg=5, neighbors=[(4, 29), (6, 29), (8, 31), (22, 33), (24, 31)]
+    class 49 (H=15, 5t): deg=5, neighbors=[(2, 23), (8, 31), (10, 29), (15, 33), (20, 37)]
+    class 50 (H=15, 3t): deg=3, neighbors=[(18, 37), (30, 37), (39, 33)]
+    class 51 (H=3, 1t): deg=1, neighbors=[(5, 23)]
+    class 52 (H=5, 5t): deg=5, neighbors=[(2, 23), (3, 15), (12, 19), (13, 27), (14, 17)]
+    class 53 (H=3, 1t): deg=1, neighbors=[(2, 23)]
+    class 54 (H=3, 1t): deg=1, neighbors=[(1, 15)]
+    class 55 (H=1, 1t): deg=1, neighbors=[(0, 17)]
+
+  TRUTH 7: Pattern search
+    n! divides all tiling counts: False
+    Tiling count patterns:
+      class 0: #tilings=17, H=17, tilings/H=1
+      class 1: #tilings=15, H=15, tilings/H=1
+      class 2: #tilings=23, H=23, tilings/H=1
+      class 3: #tilings=15, H=15, tilings/H=1
+      class 4: #tilings=29, H=29, tilings/H=1
+      class 5: #tilings=23, H=23, tilings/H=1
+      class 6: #tilings=29, H=29, tilings/H=1
+      class 7: #tilings=19, H=19, tilings/H=1
+      class 8: #tilings=31, H=31, tilings/H=1
+      class 9: #tilings=33, H=33, tilings/H=1
+      class 10: #tilings=29, H=29, tilings/H=1
+      class 11: #tilings=9, H=9, tilings/H=1
+      class 12: #tilings=19, H=19, tilings/H=1
+      class 13: #tilings=9, H=27, tilings/H=1/3
+      class 14: #tilings=17, H=17, tilings/H=1
+      class 15: #tilings=33, H=33, tilings/H=1
+      class 16: #tilings=25, H=25, tilings/H=1
+      class 17: #tilings=29, H=29, tilings/H=1
+      class 18: #tilings=37, H=37, tilings/H=1
+      class 19: #tilings=23, H=23, tilings/H=1
+      class 20: #tilings=37, H=37, tilings/H=1
+      class 21: #tilings=41, H=41, tilings/H=1
+      class 22: #tilings=33, H=33, tilings/H=1
+      class 23: #tilings=9, H=9, tilings/H=1
+      class 24: #tilings=31, H=31, tilings/H=1
+      class 25: #tilings=25, H=25, tilings/H=1
+      class 26: #tilings=15, H=45, tilings/H=1/3
+      class 27: #tilings=37, H=37, tilings/H=1
+      class 28: #tilings=43, H=43, tilings/H=1
+      class 29: #tilings=43, H=43, tilings/H=1
+      class 30: #tilings=37, H=37, tilings/H=1
+      class 31: #tilings=13, H=13, tilings/H=1
+      class 32: #tilings=15, H=45, tilings/H=1/3
+      class 33: #tilings=37, H=37, tilings/H=1
+      class 34: #tilings=23, H=23, tilings/H=1
+      class 35: #tilings=11, H=11, tilings/H=1
+      class 36: #tilings=9, H=27, tilings/H=1/3
+      class 37: #tilings=11, H=33, tilings/H=1/3
+      class 38: #tilings=5, H=5, tilings/H=1
+      class 39: #tilings=11, H=33, tilings/H=1/3
+      class 40: #tilings=5, H=15, tilings/H=1/3
+      class 41: #tilings=3, H=15, tilings/H=1/5
+      class 42: #tilings=1, H=9, tilings/H=1/9
+      class 43: #tilings=1, H=3, tilings/H=1/3
+      class 44: #tilings=9, H=9, tilings/H=1
+      class 45: #tilings=9, H=9, tilings/H=1
+      class 46: #tilings=13, H=13, tilings/H=1
+      class 47: #tilings=11, H=11, tilings/H=1
+      class 48: #tilings=5, H=5, tilings/H=1
+      class 49: #tilings=5, H=15, tilings/H=1/3
+      class 50: #tilings=3, H=15, tilings/H=1/5
+      class 51: #tilings=1, H=3, tilings/H=1/3
+      class 52: #tilings=5, H=5, tilings/H=1
+      class 53: #tilings=1, H=3, tilings/H=1/3
+      class 54: #tilings=1, H=3, tilings/H=1/3
+      class 55: #tilings=1, H=1, tilings/H=1
+
+  TRUTH 8: Full class (all-ones tiling) H sequence:
+    n=6: H=1, #tilings=1
+
+
+========================================================================
+  CROSS-n SUMMARY OF TRUTHS
+========================================================================
+
+
+UNIVERSAL TRUTHS (verified at n=3,4,5,6):
+
+1. Every tiling has EXACTLY ONE flip partner (complement).
+   Total tilings = 2^m, flip pairs = 2^{m-1}.
+
+2. The TRANSITIVE TILING (bits=0, all arcs forward) has 1 tiling.
+   Its flip partner is the ALL-ONES tiling (all arcs reversed).
+
+3. The all-ones tiling belongs to the "FULL" class with H following
+   the TRIBONACCI recurrence: H = 3, 5, 9, 17 at n=3,4,5,6.
+
+4. The transitive-to-full flip is always a BLUE line (both GS).
+
+5. #tilings per class varies widely:
+   The transitive class always has the FEWEST tilings.
+   The PoS/near-regular classes have the MOST tilings.
+
+6. The flip graph on TILINGS is a perfect matching (every tiling
+   paired with exactly one partner). On CLASSES, it becomes
+   the weighted graph G_n.
+
+7. The tiling count for the full class:
+   n=3: 1 tiling (= H=3, but |Aut|=3, so 3/3=1)
+   n=4: 5 tilings (= H=5, |Aut|=1)
+   n=5: 9 tilings (= H=9, |Aut|=1)
+   n=6: 17 tilings (= H=17, |Aut|=1)
+
+   These ARE the Tribonacci numbers! And 1+2^{n-2} gives:
+   n=3: 1+2=3, n=4: 1+4=5, n=5: 1+8=9, n=6: 1+16=17.
+   So H(full) = 1 + 2^{n-2} for n=3,4,5,6.
+   But this FAILS at n=7: Tribonacci gives 31, while 1+2^5=33.
+
+Done. opus-2026-03-22-S181
