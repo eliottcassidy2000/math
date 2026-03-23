@@ -1,0 +1,57 @@
+================================================================================
+  SAMPLING G_7: Blue/Black Flip Fractions
+  opus-2026-03-22-S211
+================================================================================
+
+  METHOD 1: Random sampling of flips
+  n=7, m=21, |tournaments|=2097152
+    100/500 done (10.4s)
+    200/500 done (20.7s)
+    300/500 done (31.0s)
+    400/500 done (41.3s)
+    500/500 done (51.7s)
+
+  Results from 500 random (tournament, arc flip) pairs:
+    SC tournaments sampled: 77
+    NS tournaments sampled: 423
+    Same-class flips: 24
+
+    SC→SC (blue): 21/77 = 0.2727
+    SC→NS (black): 56/77 = 0.7273
+    NS→NS (blue): 365/423 = 0.8629
+    NS→SC (black): 58/423 = 0.1371
+
+    SC fraction in sample: 0.1540
+    NS fraction in sample: 0.8460
+
+  METHOD 2: Systematic edge sampling for n=7
+  Use hash-based pre-grouping to speed up iso class identification
+
+  Computing invariants for ALL 2097152 tournaments at n=7...
+  (This will take a while...)
+    100000/2097152 (4109/s, ETA 486s)
+    200000/2097152 (4044/s, ETA 469s)
+    300000/2097152 (4043/s, ETA 444s)
+    400000/2097152 (4048/s, ETA 419s)
+    500000/2097152 (4014/s, ETA 398s)
+    600000/2097152 (4009/s, ETA 373s)
+    700000/2097152 (3979/s, ETA 351s)
+    800000/2097152 (3965/s, ETA 327s)
+    900000/2097152 (3970/s, ETA 302s)
+    1000000/2097152 (3962/s, ETA 277s)
+    1100000/2097152 (3978/s, ETA 251s)
+    1200000/2097152 (3975/s, ETA 226s)
+    1300000/2097152 (3975/s, ETA 201s)
+    1400000/2097152 (3970/s, ETA 176s)
+    1500000/2097152 (3958/s, ETA 151s)
+    1600000/2097152 (3956/s, ETA 126s)
+    1700000/2097152 (3951/s, ETA 101s)
+    1800000/2097152 (3958/s, ETA 75s)
+    1900000/2097152 (3961/s, ETA 50s)
+    2000000/2097152 (3961/s, ETA 25s)
+  Pass 1 done in 528.6s
+  242 distinct hash groups
+  Hash group size distribution: {240: 1, 560: 4, 720: 1, 1008: 4, 1680: 29, 3360: 3, 5040: 96, 6720: 10, 10080: 49, 15120: 16, 16800: 1, 20160: 10, 25200: 6, 26880: 1, 30240: 9, 35280: 1, 40320: 1}
+    WARNING: Large hash group (5040 members), skipping full canon check
+    WARNING: Large hash group (1680 members), skipping full canon check
+    WARNING: Large hash group (5040 members), skipping full canon check

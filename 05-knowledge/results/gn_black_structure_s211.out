@@ -1,0 +1,373 @@
+================================================================================
+  BLACK DEGREE STRUCTURE IN G_n
+  opus-2026-03-22-S211
+================================================================================
+  n=3: done (0.0s)
+  n=4: done (0.0s)
+  n=5: done (0.3s)
+  n=6: done (62.1s)
+
+================================================================================
+  WHAT DETERMINES BLACK DEGREE?
+================================================================================
+
+  n=4: 2 SC, 2 NS classes
+
+    NS classes with their black (SC) neighbors:
+     ID    H               scores |Aut|  c3 black                   SC neighbors
+      1    3         (0, 2, 2, 2)     3   1     2 0(H=1), 3(H=5)
+      2    3         (1, 1, 1, 3)     3   1     2 0(H=1), 3(H=5)
+
+    Checking score-based predictors of black_deg:
+    class  1: var_s=0.75  imbal=2  palin=N  black=2
+    class  2: var_s=0.75  imbal=2  palin=N  black=2
+
+  n=5: 8 SC, 4 NS classes
+
+    NS classes with their black (SC) neighbors:
+     ID    H               scores |Aut|  c3 black                   SC neighbors
+      1    3      (0, 1, 3, 3, 3)     3   1     2 0(H=1), 7(H=9)
+      3    3      (1, 1, 1, 3, 4)     3   1     2 0(H=1), 7(H=9)
+      4    5      (0, 2, 2, 3, 3)     1   2     6 0(H=1), 2(H=3), 6(H=9), 7(H=9), 8(H=11), 9(H=13)
+      5    5      (1, 1, 2, 2, 4)     1   2     6 0(H=1), 2(H=3), 6(H=9), 7(H=9), 8(H=11), 9(H=13)
+
+    Checking score-based predictors of black_deg:
+    class  1: var_s=1.60  imbal=3  palin=N  black=2
+    class  3: var_s=1.60  imbal=3  palin=N  black=2
+    class  4: var_s=1.20  imbal=3  palin=N  black=6
+    class  5: var_s=1.20  imbal=3  palin=N  black=6
+
+  n=6: 12 SC, 44 NS classes
+
+    NS classes with their black (SC) neighbors:
+     ID    H               scores |Aut|  c3 black                   SC neighbors
+      1    3   (0, 1, 2, 4, 4, 4)     3   1     2 0(H=1), 10(H=9)
+      2    3   (0, 1, 3, 3, 3, 5)     3   1     2 0(H=1), 6(H=5)
+      3    3   (0, 2, 2, 2, 4, 5)     3   1     2 0(H=1), 6(H=5)
+      4    3   (1, 1, 1, 3, 4, 5)     3   1     2 0(H=1), 10(H=9)
+      5    5   (0, 1, 3, 3, 4, 4)     1   2     2 0(H=1), 24(H=17)
+      7    5   (1, 1, 2, 2, 4, 5)     1   2     2 0(H=1), 24(H=17)
+      8    9   (0, 2, 2, 3, 4, 4)     1   3     4 0(H=1), 6(H=5), 23(H=17), 41(H=33)
+      9    9   (0, 2, 2, 3, 4, 4)     1   3     2 6(H=5), 24(H=17)
+     11    9   (1, 1, 2, 3, 3, 5)     1   3     4 0(H=1), 6(H=5), 23(H=17), 41(H=33)
+     12    9   (1, 1, 2, 3, 3, 5)     1   3     2 6(H=5), 24(H=17)
+     13   11   (0, 2, 3, 3, 3, 4)     1   4     2 6(H=5), 35(H=29)
+     14   11   (1, 2, 2, 2, 3, 5)     1   4     2 6(H=5), 35(H=29)
+     15   13   (0, 2, 3, 3, 3, 4)     1   4     2 6(H=5), 36(H=29)
+     16   13   (1, 2, 2, 2, 3, 5)     1   4     2 6(H=5), 36(H=29)
+     17   15   (0, 2, 3, 3, 3, 4)     3   4     0 
+     18   15   (0, 3, 3, 3, 3, 3)     5   5     0 
+     19   15   (1, 1, 2, 3, 4, 4)     1   4     2 23(H=17), 24(H=17)
+     20   15   (1, 1, 2, 3, 4, 4)     1   4     2 23(H=17), 24(H=17)
+     21   15   (1, 2, 2, 2, 3, 5)     3   4     0 
+     22   15   (2, 2, 2, 2, 2, 5)     5   5     0 
+     25   19   (1, 1, 3, 3, 3, 4)     1   5     2 23(H=17), 36(H=29)
+     26   19   (1, 2, 2, 2, 4, 4)     1   5     2 23(H=17), 36(H=29)
+     27   23   (1, 1, 3, 3, 3, 4)     1   5     3 24(H=17), 35(H=29), 41(H=33)
+     28   23   (1, 2, 2, 2, 4, 4)     1   5     3 24(H=17), 35(H=29), 41(H=33)
+     29   23   (1, 2, 2, 3, 3, 4)     1   6     2 23(H=17), 51(H=41)
+     30   23   (1, 2, 2, 3, 3, 4)     1   6     2 23(H=17), 51(H=41)
+     31   25   (1, 2, 2, 3, 3, 4)     1   6     0 
+     32   25   (1, 2, 2, 3, 3, 4)     1   6     0 
+     33   27   (1, 1, 3, 3, 3, 4)     3   5     2 23(H=17), 46(H=37)
+     34   27   (1, 2, 2, 2, 4, 4)     3   5     2 23(H=17), 46(H=37)
+     37   29   (1, 2, 2, 3, 3, 4)     1   6     2 35(H=29), 41(H=33)
+     38   29   (1, 2, 2, 3, 3, 4)     1   6     2 35(H=29), 41(H=33)
+     39   31   (1, 2, 2, 3, 3, 4)     1   6     3 36(H=29), 41(H=33), 46(H=37)
+     40   31   (1, 2, 2, 3, 3, 4)     1   6     3 36(H=29), 41(H=33), 46(H=37)
+     42   33   (1, 2, 3, 3, 3, 3)     3   7     0 
+     43   33   (1, 2, 3, 3, 3, 3)     1   7     3 35(H=29), 36(H=29), 51(H=41)
+     44   33   (2, 2, 2, 2, 3, 4)     3   7     0 
+     45   33   (2, 2, 2, 2, 3, 4)     1   7     3 35(H=29), 36(H=29), 51(H=41)
+     47   37   (1, 2, 3, 3, 3, 3)     1   7     6 35(H=29), 36(H=29), 41(H=33), 46(H=37), 51(H=41), 54(H=45)
+     48   37   (1, 2, 3, 3, 3, 3)     1   7     2 46(H=37), 55(H=45)
+     49   37   (2, 2, 2, 2, 3, 4)     1   7     2 46(H=37), 55(H=45)
+     50   37   (2, 2, 2, 2, 3, 4)     1   7     6 35(H=29), 36(H=29), 41(H=33), 46(H=37), 51(H=41), 54(H=45)
+     52   43   (2, 2, 2, 3, 3, 3)     1   8     2 51(H=41), 55(H=45)
+     53   43   (2, 2, 2, 3, 3, 3)     1   8     2 51(H=41), 55(H=45)
+
+    Checking score-based predictors of black_deg:
+    class  1: var_s=2.58  imbal=4  palin=N  black=2
+    class  2: var_s=2.58  imbal=5  palin=N  black=2
+    class  3: var_s=2.58  imbal=5  palin=N  black=2
+    class  4: var_s=2.58  imbal=4  palin=N  black=2
+    class  5: var_s=2.25  imbal=4  palin=N  black=2
+    class  7: var_s=2.25  imbal=4  palin=N  black=2
+    class  8: var_s=1.92  imbal=4  palin=N  black=4
+    class  9: var_s=1.92  imbal=4  palin=N  black=2
+    class 11: var_s=1.92  imbal=4  palin=N  black=4
+    class 12: var_s=1.92  imbal=4  palin=N  black=2
+    class 13: var_s=1.58  imbal=4  palin=N  black=2
+    class 14: var_s=1.58  imbal=4  palin=N  black=2
+    class 15: var_s=1.58  imbal=4  palin=N  black=2
+    class 16: var_s=1.58  imbal=4  palin=N  black=2
+    class 17: var_s=1.58  imbal=4  palin=N  black=0
+    class 18: var_s=1.25  imbal=3  palin=N  black=0
+    class 19: var_s=1.58  imbal=3  palin=Y  black=2
+    class 20: var_s=1.58  imbal=3  palin=Y  black=2
+    class 21: var_s=1.58  imbal=4  palin=N  black=0
+    class 22: var_s=1.25  imbal=3  palin=N  black=0
+    class 25: var_s=1.25  imbal=3  palin=N  black=2
+    class 26: var_s=1.25  imbal=3  palin=N  black=2
+    class 27: var_s=1.25  imbal=3  palin=N  black=3
+    class 28: var_s=1.25  imbal=3  palin=N  black=3
+    class 29: var_s=0.92  imbal=3  palin=Y  black=2
+    class 30: var_s=0.92  imbal=3  palin=Y  black=2
+    class 31: var_s=0.92  imbal=3  palin=Y  black=0
+    class 32: var_s=0.92  imbal=3  palin=Y  black=0
+    class 33: var_s=1.25  imbal=3  palin=N  black=2
+    class 34: var_s=1.25  imbal=3  palin=N  black=2
+    class 37: var_s=0.92  imbal=3  palin=Y  black=2
+    class 38: var_s=0.92  imbal=3  palin=Y  black=2
+    class 39: var_s=0.92  imbal=3  palin=Y  black=3
+    class 40: var_s=0.92  imbal=3  palin=Y  black=3
+    class 42: var_s=0.58  imbal=2  palin=N  black=0
+    class 43: var_s=0.58  imbal=2  palin=N  black=3
+    class 44: var_s=0.58  imbal=2  palin=N  black=0
+    class 45: var_s=0.58  imbal=2  palin=N  black=3
+    class 47: var_s=0.58  imbal=2  palin=N  black=6
+    class 48: var_s=0.58  imbal=2  palin=N  black=2
+    class 49: var_s=0.58  imbal=2  palin=N  black=2
+    class 50: var_s=0.58  imbal=2  palin=N  black=6
+    class 52: var_s=0.25  imbal=1  palin=Y  black=2
+    class 53: var_s=0.25  imbal=1  palin=Y  black=2
+
+================================================================================
+  SCORE PALINDROMICITY AND BLACK DEGREE
+================================================================================
+
+  n=3:
+     0 H=  1  SC scores=           (0, 1, 2) PALIN b= 1 k= 0
+     1 H=  3  SC scores=           (1, 1, 1) PALIN b= 1 k= 0
+
+  n=4:
+     0 H=  1  SC scores=        (0, 1, 2, 3) PALIN b= 1 k= 2
+     1 H=  3  NS scores=        (0, 2, 2, 2)       b= 0 k= 2
+     2 H=  3  NS scores=        (1, 1, 1, 3)       b= 0 k= 2
+     3 H=  5  SC scores=        (1, 1, 2, 2) PALIN b= 1 k= 2
+
+  n=5:
+     0 H=  1  SC scores=     (0, 1, 2, 3, 4) PALIN b= 2 k= 4
+     1 H=  3  NS scores=     (0, 1, 3, 3, 3)       b= 1 k= 2
+     2 H=  3  SC scores=     (0, 2, 2, 2, 4) PALIN b= 2 k= 2
+     3 H=  3  NS scores=     (1, 1, 1, 3, 4)       b= 1 k= 2
+     4 H=  5  NS scores=     (0, 2, 2, 3, 3)       b= 1 k= 6
+     5 H=  5  NS scores=     (1, 1, 2, 2, 4)       b= 1 k= 6
+     6 H=  9  SC scores=     (1, 1, 2, 3, 3) PALIN b= 4 k= 2
+     7 H=  9  SC scores=     (1, 1, 2, 3, 3) PALIN b= 3 k= 4
+     8 H= 11  SC scores=     (1, 2, 2, 2, 3) PALIN b= 4 k= 2
+     9 H= 13  SC scores=     (1, 2, 2, 2, 3) PALIN b= 4 k= 2
+    10 H= 15  SC scores=     (1, 2, 2, 2, 3) PALIN b= 3 k= 0
+    11 H= 15  SC scores=     (2, 2, 2, 2, 2) PALIN b= 2 k= 0
+
+  n=6:
+     0 H=  1  SC scores=  (0, 1, 2, 3, 4, 5) PALIN b= 2 k= 8
+     1 H=  3  NS scores=  (0, 1, 2, 4, 4, 4)       b= 3 k= 2
+     2 H=  3  NS scores=  (0, 1, 3, 3, 3, 5)       b= 4 k= 2
+     3 H=  3  NS scores=  (0, 2, 2, 2, 4, 5)       b= 4 k= 2
+     4 H=  3  NS scores=  (1, 1, 1, 3, 4, 5)       b= 3 k= 2
+     5 H=  5  NS scores=  (0, 1, 3, 3, 4, 4)       b= 9 k= 2
+     6 H=  5  SC scores=  (0, 2, 2, 3, 3, 5) PALIN b= 2 k=10
+     7 H=  5  NS scores=  (1, 1, 2, 2, 4, 5)       b= 9 k= 2
+     8 H=  9  NS scores=  (0, 2, 2, 3, 4, 4)       b= 7 k= 4
+     9 H=  9  NS scores=  (0, 2, 2, 3, 4, 4)       b=10 k= 2
+    10 H=  9  SC scores=  (1, 1, 1, 4, 4, 4) PALIN b= 1 k= 2
+    11 H=  9  NS scores=  (1, 1, 2, 3, 3, 5)       b= 7 k= 4
+    12 H=  9  NS scores=  (1, 1, 2, 3, 3, 5)       b=10 k= 2
+    13 H= 11  NS scores=  (0, 2, 3, 3, 3, 4)       b= 9 k= 2
+    14 H= 11  NS scores=  (1, 2, 2, 2, 3, 5)       b= 9 k= 2
+    15 H= 13  NS scores=  (0, 2, 3, 3, 3, 4)       b= 9 k= 2
+    16 H= 13  NS scores=  (1, 2, 2, 2, 3, 5)       b= 9 k= 2
+    17 H= 15  NS scores=  (0, 2, 3, 3, 3, 4)       b= 6 k= 0
+    18 H= 15  NS scores=  (0, 3, 3, 3, 3, 3)       b= 3 k= 0
+    19 H= 15  NS scores=  (1, 1, 2, 3, 4, 4) PALIN b=11 k= 2
+    20 H= 15  NS scores=  (1, 1, 2, 3, 4, 4) PALIN b=11 k= 2
+    21 H= 15  NS scores=  (1, 2, 2, 2, 3, 5)       b= 6 k= 0
+    22 H= 15  NS scores=  (2, 2, 2, 2, 2, 5)       b= 3 k= 0
+    23 H= 17  SC scores=  (1, 1, 2, 3, 4, 4) PALIN b= 2 k=10
+    24 H= 17  SC scores=  (1, 1, 2, 3, 4, 4) PALIN b= 3 k= 8
+    25 H= 19  NS scores=  (1, 1, 3, 3, 3, 4)       b=12 k= 2
+    26 H= 19  NS scores=  (1, 2, 2, 2, 4, 4)       b=12 k= 2
+    27 H= 23  NS scores=  (1, 1, 3, 3, 3, 4)       b=11 k= 3
+    28 H= 23  NS scores=  (1, 2, 2, 2, 4, 4)       b=11 k= 3
+    29 H= 23  NS scores=  (1, 2, 2, 3, 3, 4) PALIN b=10 k= 2
+    30 H= 23  NS scores=  (1, 2, 2, 3, 3, 4) PALIN b=10 k= 2
+    31 H= 25  NS scores=  (1, 2, 2, 3, 3, 4) PALIN b=13 k= 0
+    32 H= 25  NS scores=  (1, 2, 2, 3, 3, 4) PALIN b=13 k= 0
+    33 H= 27  NS scores=  (1, 1, 3, 3, 3, 4)       b= 5 k= 2
+    34 H= 27  NS scores=  (1, 2, 2, 2, 4, 4)       b= 5 k= 2
+    35 H= 29  SC scores=  (1, 2, 2, 3, 3, 4) PALIN b= 3 k=10
+    36 H= 29  SC scores=  (1, 2, 2, 3, 3, 4) PALIN b= 2 k=10
+    37 H= 29  NS scores=  (1, 2, 2, 3, 3, 4) PALIN b=12 k= 2
+    38 H= 29  NS scores=  (1, 2, 2, 3, 3, 4) PALIN b=12 k= 2
+    39 H= 31  NS scores=  (1, 2, 2, 3, 3, 4) PALIN b=10 k= 3
+    40 H= 31  NS scores=  (1, 2, 2, 3, 3, 4) PALIN b=10 k= 3
+    41 H= 33  SC scores=  (1, 2, 2, 3, 3, 4) PALIN b= 3 k=10
+    42 H= 33  NS scores=  (1, 2, 3, 3, 3, 3)       b= 6 k= 0
+    43 H= 33  NS scores=  (1, 2, 3, 3, 3, 3)       b=10 k= 3
+    44 H= 33  NS scores=  (2, 2, 2, 2, 3, 4)       b= 6 k= 0
+    45 H= 33  NS scores=  (2, 2, 2, 2, 3, 4)       b=10 k= 3
+    46 H= 37  SC scores=  (1, 2, 2, 3, 3, 4) PALIN b= 3 k= 8
+    47 H= 37  NS scores=  (1, 2, 3, 3, 3, 3)       b= 7 k= 6
+    48 H= 37  NS scores=  (1, 2, 3, 3, 3, 3)       b=11 k= 2
+    49 H= 37  NS scores=  (2, 2, 2, 2, 3, 4)       b=11 k= 2
+    50 H= 37  NS scores=  (2, 2, 2, 2, 3, 4)       b= 7 k= 6
+    51 H= 41  SC scores=  (2, 2, 2, 3, 3, 3) PALIN b= 2 k= 8
+    52 H= 43  NS scores=  (2, 2, 2, 3, 3, 3) PALIN b= 9 k= 2
+    53 H= 43  NS scores=  (2, 2, 2, 3, 3, 3) PALIN b= 9 k= 2
+    54 H= 45  SC scores=  (2, 2, 2, 3, 3, 3) PALIN b= 2 k= 2
+    55 H= 45  SC scores=  (2, 2, 2, 3, 3, 3) PALIN b= 1 k= 4
+
+================================================================================
+  DIRECTED WEIGHTS: NS→SC TRANSITIONS
+================================================================================
+
+  n=5:
+    NS  1 (H=  3, |C|=  40): total=   400  →SC=  240(0.600)  →NS=  120(0.300)  self=  40(0.100)
+    NS  3 (H=  3, |C|=  40): total=   400  →SC=  240(0.600)  →NS=  120(0.300)  self=  40(0.100)
+    NS  4 (H=  5, |C|= 120): total=  1200  →SC=  720(0.600)  →NS=  120(0.100)  self= 360(0.300)
+    NS  5 (H=  5, |C|= 120): total=  1200  →SC=  720(0.600)  →NS=  120(0.100)  self= 360(0.300)
+
+  SC classes:
+    SC  0 (H=  1, |C|= 120): total=  1200  →SC=  240(0.200)  →NS=  480(0.400)  self= 480(0.400)
+    SC  2 (H=  3, |C|=  40): total=   400  →SC=  160(0.400)  →NS=  240(0.600)  self=   0(0.000)
+    SC  6 (H=  9, |C|= 120): total=  1200  →SC=  720(0.600)  →NS=  240(0.200)  self= 240(0.200)
+    SC  7 (H=  9, |C|= 120): total=  1200  →SC=  720(0.600)  →NS=  480(0.400)  self=   0(0.000)
+    SC  8 (H= 11, |C|= 120): total=  1200  →SC=  720(0.600)  →NS=  240(0.200)  self= 240(0.200)
+    SC  9 (H= 13, |C|= 120): total=  1200  →SC=  960(0.800)  →NS=  240(0.200)  self=   0(0.000)
+    SC 10 (H= 15, |C|=  40): total=   400  →SC=  400(1.000)  →NS=    0(0.000)  self=   0(0.000)
+    SC 11 (H= 15, |C|=  24): total=   240  →SC=  240(1.000)  →NS=    0(0.000)  self=   0(0.000)
+
+  n=6:
+    NS  1 (H=  3, |C|= 240): total=  3600  →SC=  960(0.267)  →NS= 2160(0.600)  self= 480(0.133)
+    NS  2 (H=  3, |C|= 240): total=  3600  →SC= 1440(0.400)  →NS= 1920(0.533)  self= 240(0.067)
+    NS  3 (H=  3, |C|= 240): total=  3600  →SC= 1440(0.400)  →NS= 1920(0.533)  self= 240(0.067)
+    NS  4 (H=  3, |C|= 240): total=  3600  →SC=  960(0.267)  →NS= 2160(0.600)  self= 480(0.133)
+    NS  5 (H=  5, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 6480(0.600)  self=2880(0.267)
+    NS  7 (H=  5, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 6480(0.600)  self=2880(0.267)
+    NS  8 (H=  9, |C|= 720): total= 10800  →SC= 2880(0.267)  →NS= 6480(0.600)  self=1440(0.133)
+    NS  9 (H=  9, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 9360(0.867)  self=   0(0.000)
+    NS 11 (H=  9, |C|= 720): total= 10800  →SC= 2880(0.267)  →NS= 6480(0.600)  self=1440(0.133)
+    NS 12 (H=  9, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 9360(0.867)  self=   0(0.000)
+    NS 13 (H= 11, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 7920(0.733)  self=1440(0.133)
+    NS 14 (H= 11, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 7920(0.733)  self=1440(0.133)
+    NS 15 (H= 13, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 9360(0.867)  self=   0(0.000)
+    NS 16 (H= 13, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 9360(0.867)  self=   0(0.000)
+    NS 17 (H= 15, |C|= 240): total=  3600  →SC=    0(0.000)  →NS= 3600(1.000)  self=   0(0.000)
+    NS 18 (H= 15, |C|= 144): total=  2160  →SC=    0(0.000)  →NS= 2160(1.000)  self=   0(0.000)
+    NS 19 (H= 15, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 8640(0.800)  self= 720(0.067)
+    NS 20 (H= 15, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 8640(0.800)  self= 720(0.067)
+    NS 21 (H= 15, |C|= 240): total=  3600  →SC=    0(0.000)  →NS= 3600(1.000)  self=   0(0.000)
+    NS 22 (H= 15, |C|= 144): total=  2160  →SC=    0(0.000)  →NS= 2160(1.000)  self=   0(0.000)
+    NS 25 (H= 19, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 8640(0.800)  self= 720(0.067)
+    NS 26 (H= 19, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 8640(0.800)  self= 720(0.067)
+    NS 27 (H= 23, |C|= 720): total= 10800  →SC= 2880(0.267)  →NS= 7920(0.733)  self=   0(0.000)
+    NS 28 (H= 23, |C|= 720): total= 10800  →SC= 2880(0.267)  →NS= 7920(0.733)  self=   0(0.000)
+    NS 29 (H= 23, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 7200(0.667)  self=2160(0.200)
+    NS 30 (H= 23, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 7200(0.667)  self=2160(0.200)
+    NS 31 (H= 25, |C|= 720): total= 10800  →SC=    0(0.000)  →NS=10080(0.933)  self= 720(0.067)
+    NS 32 (H= 25, |C|= 720): total= 10800  →SC=    0(0.000)  →NS=10080(0.933)  self= 720(0.067)
+    NS 33 (H= 27, |C|= 240): total=  3600  →SC= 1440(0.400)  →NS= 2160(0.600)  self=   0(0.000)
+    NS 34 (H= 27, |C|= 240): total=  3600  →SC= 1440(0.400)  →NS= 2160(0.600)  self=   0(0.000)
+    NS 37 (H= 29, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 9360(0.867)  self=   0(0.000)
+    NS 38 (H= 29, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 9360(0.867)  self=   0(0.000)
+    NS 39 (H= 31, |C|= 720): total= 10800  →SC= 2880(0.267)  →NS= 7920(0.733)  self=   0(0.000)
+    NS 40 (H= 31, |C|= 720): total= 10800  →SC= 2880(0.267)  →NS= 7920(0.733)  self=   0(0.000)
+    NS 42 (H= 33, |C|= 240): total=  3600  →SC=    0(0.000)  →NS= 3360(0.933)  self= 240(0.067)
+    NS 43 (H= 33, |C|= 720): total= 10800  →SC= 2880(0.267)  →NS= 7920(0.733)  self=   0(0.000)
+    NS 44 (H= 33, |C|= 240): total=  3600  →SC=    0(0.000)  →NS= 3360(0.933)  self= 240(0.067)
+    NS 45 (H= 33, |C|= 720): total= 10800  →SC= 2880(0.267)  →NS= 7920(0.733)  self=   0(0.000)
+    NS 47 (H= 37, |C|= 720): total= 10800  →SC= 4320(0.400)  →NS= 5760(0.533)  self= 720(0.067)
+    NS 48 (H= 37, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 9360(0.867)  self=   0(0.000)
+    NS 49 (H= 37, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 9360(0.867)  self=   0(0.000)
+    NS 50 (H= 37, |C|= 720): total= 10800  →SC= 4320(0.400)  →NS= 5760(0.533)  self= 720(0.067)
+    NS 52 (H= 43, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 9360(0.867)  self=   0(0.000)
+    NS 53 (H= 43, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 9360(0.867)  self=   0(0.000)
+
+  SC classes:
+    SC  0 (H=  1, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 5760(0.533)  self=3600(0.333)
+    SC  6 (H=  5, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 7200(0.667)  self=2160(0.200)
+    SC 10 (H=  9, |C|=  80): total=  1200  →SC=  720(0.600)  →NS=  480(0.400)  self=   0(0.000)
+    SC 23 (H= 17, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 7200(0.667)  self=2160(0.200)
+    SC 24 (H= 17, |C|= 720): total= 10800  →SC= 3600(0.333)  →NS= 7200(0.667)  self=   0(0.000)
+    SC 35 (H= 29, |C|= 720): total= 10800  →SC= 2880(0.267)  →NS= 7200(0.667)  self= 720(0.067)
+    SC 36 (H= 29, |C|= 720): total= 10800  →SC= 2160(0.200)  →NS= 8640(0.800)  self=   0(0.000)
+    SC 41 (H= 33, |C|= 720): total= 10800  →SC= 2880(0.267)  →NS= 7200(0.667)  self= 720(0.067)
+    SC 46 (H= 37, |C|= 720): total= 10800  →SC= 2880(0.267)  →NS= 5760(0.533)  self=2160(0.200)
+    SC 51 (H= 41, |C|= 720): total= 10800  →SC= 1440(0.133)  →NS= 7200(0.667)  self=2160(0.200)
+    SC 54 (H= 45, |C|= 240): total=  3600  →SC= 1440(0.400)  →NS= 1440(0.400)  self= 720(0.200)
+    SC 55 (H= 45, |C|= 240): total=  3600  →SC=  720(0.200)  →NS= 2880(0.800)  self=   0(0.000)
+
+================================================================================
+  NS CLASSES AS BRIDGES BETWEEN SC CLASSES
+================================================================================
+
+  n=5:
+    NS  1 (H=  3): black=2, bridges [0, 7]
+    NS  3 (H=  3): black=2, bridges [0, 7]
+    NS  4 (H=  5): black=6, bridges [0, 2, 6, 7, 8, 9]
+    NS  5 (H=  5): black=6, bridges [0, 2, 6, 7, 8, 9]
+
+  n=6: (showing only NS classes with black_deg > 0)
+
+  n=6:
+    NS  1 (H=  3): black=2, bridges [0, 10]
+    NS  2 (H=  3): black=2, bridges [0, 6]
+    NS  3 (H=  3): black=2, bridges [0, 6]
+    NS  4 (H=  3): black=2, bridges [0, 10]
+    NS  5 (H=  5): black=2, bridges [0, 24]
+    NS  7 (H=  5): black=2, bridges [0, 24]
+    NS  8 (H=  9): black=4, bridges [0, 6, 23, 41]
+    NS  9 (H=  9): black=2, bridges [6, 24]
+    NS 11 (H=  9): black=4, bridges [0, 6, 23, 41]
+    NS 12 (H=  9): black=2, bridges [6, 24]
+    NS 13 (H= 11): black=2, bridges [6, 35]
+    NS 14 (H= 11): black=2, bridges [6, 35]
+    NS 15 (H= 13): black=2, bridges [6, 36]
+    NS 16 (H= 13): black=2, bridges [6, 36]
+    NS 19 (H= 15): black=2, bridges [23, 24]
+    NS 20 (H= 15): black=2, bridges [23, 24]
+    NS 25 (H= 19): black=2, bridges [23, 36]
+    NS 26 (H= 19): black=2, bridges [23, 36]
+    NS 27 (H= 23): black=3, bridges [24, 35, 41]
+    NS 28 (H= 23): black=3, bridges [24, 35, 41]
+    NS 29 (H= 23): black=2, bridges [23, 51]
+    NS 30 (H= 23): black=2, bridges [23, 51]
+    NS 33 (H= 27): black=2, bridges [23, 46]
+    NS 34 (H= 27): black=2, bridges [23, 46]
+    NS 37 (H= 29): black=2, bridges [35, 41]
+    NS 38 (H= 29): black=2, bridges [35, 41]
+    NS 39 (H= 31): black=3, bridges [36, 41, 46]
+    NS 40 (H= 31): black=3, bridges [36, 41, 46]
+    NS 43 (H= 33): black=3, bridges [35, 36, 51]
+    NS 45 (H= 33): black=3, bridges [35, 36, 51]
+    NS 47 (H= 37): black=6, bridges [35, 36, 41, 46, 51, 54]
+    NS 48 (H= 37): black=2, bridges [46, 55]
+    NS 49 (H= 37): black=2, bridges [46, 55]
+    NS 50 (H= 37): black=6, bridges [35, 36, 41, 46, 51, 54]
+    NS 52 (H= 43): black=2, bridges [51, 55]
+    NS 53 (H= 43): black=2, bridges [51, 55]
+
+================================================================================
+  SEQUENCES FOR OEIS/PATTERN SEARCH
+================================================================================
+
+  Blue edges:   n=3,4,5,6 →  [1, 1, 14, 200]
+  Black edges:  n=3,4,5,6 →  [0, 4, 16, 90]
+  Total edges:  n=3,4,5,6 →  [1, 5, 30, 290]
+  SC-SC edges:  n=3,4,5,6 → [1, 1, 12, 13]
+  NS-NS edges:  n=3,4,5,6 → [0, 0, 2, 187]
+  SC blue_deg (min,max,avg): [(1, 1, 1.0), (1, 1, 1.0), (2, 4, 3.0), (1, 3, 2.1666666666666665)]
+  NS blue_deg (min,max,avg): [None, (0, 0, 0.0), (1, 1, 1.0), (3, 13, 8.5)]
+  SC black_deg (min,max,avg): [(0, 0, 0.0), (2, 2, 2.0), (0, 4, 2.0), (2, 10, 7.5)]
+  NS black_deg (min,max,avg): [None, (2, 2, 2.0), (2, 6, 4.0), (0, 6, 2.0454545454545454)]
+
+  SC backbone: (vertices, edges, genus = E-V+1)
+    n=3: V=2, E=1, genus=0
+    n=4: V=2, E=1, genus=0
+    n=5: V=8, E=12, genus=5
+    n=6: V=12, E=13, genus=2
+
+================================================================================
+  DONE
+================================================================================
