@@ -1,0 +1,250 @@
+
+========================================================================
+  PART 1: THE CUBE FRAMEWORK
+========================================================================
+
+
+  THE KEY INSIGHT: G_n = Q_m / S_n
+
+  The arc-reversal graph on LABELED tournaments is the m-cube Q_m:
+  - Vertices: 2^m binary strings (tournament orientations)
+  - Edges: pairs differing in exactly 1 bit (one arc reversal)
+  - m = C(n,2) = number of edge pairs
+
+  Q_m properties:
+    Vertices: 2^m
+    Edges: m * 2^{m-1}
+    k-faces: C(m,k) * 2^{m-k}  (each k-face is a k-subcube)
+    f-vector: (2^m, m*2^{m-1}, C(m,2)*2^{m-2}, ...)
+
+  The isomorphism class graph G_n = Q_m / S_n:
+    Vertices: 2^m / n! * (correction for non-trivial stabilizers) = A000568(n)
+    Edges: E(n) = our sequence 1, 5, 30, 290, 4086, 91161
+
+  S_n acts on Q_m by permuting the m coordinates (pair labels).
+  The action preserves the cube structure.
+
+  n=3: m=3, |Q_m|=8, m*2^{m-1}=12, n!=6, A000568=2
+  n=4: m=6, |Q_m|=64, m*2^{m-1}=192, n!=24, A000568=4
+  n=5: m=10, |Q_m|=1024, m*2^{m-1}=5120, n!=120, A000568=12
+  n=6: m=15, |Q_m|=32768, m*2^{m-1}=245760, n!=720, A000568=56
+  n=7: m=21, |Q_m|=2097152, m*2^{m-1}=22020096, n!=5040, A000568=456
+  n=8: m=28, |Q_m|=268435456, m*2^{m-1}=3758096384, n!=40320, A000568=6880
+
+========================================================================
+  PART 2: CLIQUE COMPLEX OF G_n/Z_2
+========================================================================
+
+  n=5: V_merged=10, E_merged=21
+  Maximal clique sizes: {3: 5, 4: 2, 2: 3}
+  Number of maximal cliques: 10
+  Clique number (max clique size): 4
+  f-vector (faces): [10, 21, 12, 2]
+    f_0 (vertices) = 10
+    f_1 (edges) = 21
+    f_2 (triangles) = 12
+    f_3 (K_4s) = 2
+    f_4 (K_5s) = 0
+  Euler characteristic (truncated): -1
+
+  Compare with Q_10 f-vector:
+    f_0: G_n/Z_2 = 10, Q_10 = 1024, ratio = 0.009766
+    f_1: G_n/Z_2 = 21, Q_10 = 5120, ratio = 0.004102
+    f_2: G_n/Z_2 = 12, Q_10 = 11520, ratio = 0.001042
+    f_3: G_n/Z_2 = 2, Q_10 = 15360, ratio = 0.000130
+    f_4: G_n/Z_2 = 0, Q_10 = 13440, ratio = 0.000000
+
+  Degree stats: min=2, max=7, avg=4.20
+  Vertex connectivity >= 2
+  (For d-polytope, need >= d by Balinski's theorem)
+
+  n=6: V_merged=34, E_merged=143
+  Maximal clique sizes: {3: 40, 2: 13, 4: 33, 5: 1}
+  Number of maximal cliques: 87
+  Clique number (max clique size): 5
+  f-vector (faces): [34, 143, 139, 38, 1]
+    f_0 (vertices) = 34
+    f_1 (edges) = 143
+    f_2 (triangles) = 139
+    f_3 (K_4s) = 38
+    f_4 (K_5s) = 1
+  Euler characteristic (truncated): -7
+
+  Compare with Q_15 f-vector:
+    f_0: G_n/Z_2 = 34, Q_15 = 32768, ratio = 0.001038
+    f_1: G_n/Z_2 = 143, Q_15 = 245760, ratio = 0.000582
+    f_2: G_n/Z_2 = 139, Q_15 = 860160, ratio = 0.000162
+    f_3: G_n/Z_2 = 38, Q_15 = 1863680, ratio = 0.000020
+    f_4: G_n/Z_2 = 1, Q_15 = 2795520, ratio = 0.000000
+
+  Degree stats: min=2, max=13, avg=8.41
+  Vertex connectivity >= 2
+  (For d-polytope, need >= d by Balinski's theorem)
+
+
+========================================================================
+  PART 3: THE H-LATTICE STRUCTURE
+========================================================================
+
+  H-DAG at n=5:
+  Merged nodes by H:
+    mid=0 H=1: up=[1, 2, 3, 4] down=[] level=[]
+    mid=1 H=3: up=[2, 5] down=[0] level=[]
+    mid=3 H=3: up=[2, 7] down=[0] level=[]
+    mid=2 H=5: up=[4, 5, 6, 8] down=[0, 1, 3] level=[]
+    mid=4 H=9: up=[6, 7] down=[0, 2] level=[5]
+    mid=5 H=9: up=[6, 8] down=[1, 2] level=[4]
+    mid=6 H=11: up=[8, 9] down=[2, 4, 5] level=[]
+    mid=8 H=13: up=[7, 9] down=[2, 5, 6] level=[]
+    mid=7 H=15: up=[] down=[3, 4, 8] level=[]
+    mid=9 H=15: up=[] down=[6, 8] level=[]
+
+  Reachability matrix (can node i reach node j via H-increasing path):
+    mid=0 H=1 reaches: [1, 3, 2, 4, 5, 6, 8, 7, 9]
+    mid=1 H=3 reaches: [2, 4, 5, 6, 8, 7, 9]
+    mid=3 H=3 reaches: [2, 4, 5, 6, 8, 7, 9]
+    mid=2 H=5 reaches: [4, 5, 6, 8, 7, 9]
+    mid=4 H=9 reaches: [6, 8, 7, 9]
+    mid=5 H=9 reaches: [6, 8, 7, 9]
+    mid=6 H=11 reaches: [8, 7, 9]
+    mid=8 H=13 reaches: [7, 9]
+    mid=7 H=15 reaches: []
+    mid=9 H=15 reaches: []
+  FAIL: join not unique for (mid=0 H=1, mid=1 H=3): min_ub=[(7, 15), (9, 15)]
+
+  H-DAG at n=5 is a lattice: False
+
+========================================================================
+  PART 4: QUOTIENTOPE SPECTRUM POSITION
+========================================================================
+
+
+  THE QUOTIENTOPE SPECTRUM (Pilaud-Santos):
+
+  PERMUTOHEDRON Π_n ← (weak order on S_n, n! vertices)
+    |
+    | lattice congruences contract edges
+    |
+  ASSOCIAHEDRON ← (sylvester congruence, Catalan number vertices)
+    |
+    | more contractions
+    |
+  m-CUBE Q_m ← (boolean congruence, 2^m vertices, m = n-1 for cubes)
+    |
+    | identity on cube
+    |
+  Q_m
+
+  OUR CONSTRUCTION:
+  Q_{C(n,2)} (the tournament cube)
+    |
+    | quotient by S_n action on coordinates
+    |
+  G_n (iso class graph, A000568 vertices)
+    |
+    | quotient by complement (Z_2 bit-flip)
+    |
+  G_n / Z_2 (merged meta-graph)
+
+  G_n is NOT a quotientope in the Pilaud-Santos sense because:
+  1. It's a quotient of Q_m, not of the permutohedron Π_n
+  2. The S_n action on pairs is NOT a lattice congruence
+  3. G_n has fewer vertices than ANY quotientope of S_n (which has ≥ n+1)
+
+  HOWEVER, the CUBE Q_m is a polytope, and G_n is its orbit graph.
+  The orbit polytope (convex hull of orbit representatives) IS a polytope,
+  and G_n might be its 1-skeleton.
+
+  THE ANALOGY:
+  Quotientope         | Our construction
+  --------------------|------------------
+  Weak order on S_n   | Q_m = tournament cube
+  Lattice congruence  | S_n × Z_2 group action
+  Contraction         | Orbit identification
+  Quotient lattice    | Orbit graph G_n/Z_2
+  Polytope            | ??? (is G_n/Z_2 polytopal?)
+
+  THE KEY QUESTION:
+  Is G_n/Z_2 the 1-skeleton of a polytope?
+  If so, what polytope? What are its higher faces?
+
+
+========================================================================
+  PART 5: SUBCUBE STRUCTURE
+========================================================================
+
+  n=5: distinct 4-element faces (squares) in G_n: 32
+  Proper squares (≥4 edges among 4 vertices): 32
+  Degenerate (some edges missing): 0
+  Of which are K_4 (complete): 2
+
+========================================================================
+  PART 6: THE TOURNAMENT POLYTOPE
+========================================================================
+
+
+  THE TOURNAMENT POLYTOPE P_n:
+  Convex hull of all tournament adjacency vectors in R^m.
+
+  Each tournament T gives a 0/1 vector x_T ∈ {0,1}^m:
+    x_T[k] = A[i][j] where (i,j) = pairs[k]
+
+  P_n = conv(x_T : T tournament on n vertices)
+
+  Since x_T + x_{T^c} = (1,1,...,1) (complement flips all bits),
+  P_n is centrally symmetric about (1/2, ..., 1/2).
+
+  P_n is a SUBSET of the m-cube [0,1]^m.
+
+  The ORBIT POLYTOPE: conv(one representative per iso class)
+  This is the tournament polytope modulo S_n.
+
+  KEY FACT: The orbit polytope has V(n) = A000568 vertices
+  (one per iso class). Its 1-skeleton should relate to G_n.
+
+  DIMENSION of P_n:
+  For n≥3, P_n is full-dimensional (dim m = C(n,2)):
+  The m edge orientations are "almost" independent (the only constraint
+  is that they form a tournament, but since ALL 2^m orientations are
+  tournaments, the polytope is the entire m-cube).
+
+  Wait — EVERY 0/1 vector in {0,1}^m IS a tournament adjacency vector!
+  (Given any orientation of all C(n,2) pairs, we get a tournament.)
+
+  So P_n = the m-cube! Its orbit polytope is Q_m / S_n.
+
+  THE ORBIT POLYTOPE has dimension:
+  dim = m - dim(fixed subspace of S_n action)
+  The S_n action on R^m permutes coordinates.
+  Fixed subspace: vectors invariant under all permutations.
+  The only invariant vector is the all-ones vector (and scalar multiples).
+  Actually, the orbits of {pairs} under S_n have sizes:
+  there are just a few types of pairs... no, all pairs are in the same S_n orbit.
+  So the fixed subspace is 1-dimensional (the all-ones direction).
+  Orbit polytope dimension = m - 1.
+
+  Hmm, that's not quite right. The orbit polytope lives in R^m / S_n
+  which is not a subspace of R^m. Let me think about this differently.
+
+  The NUMBER OF ORBITS of S_n on the m coordinates is:
+  #{orbits of pairs {i,j} under S_n} = 1 (since S_n acts transitively on pairs).
+  So the orbit of any coordinate is the entire set of m coordinates.
+  This means the "type" of a tournament is determined by:
+  the multiset of values on each orbit.
+  Since there's only 1 orbit, the type is just the number of 1s = sum of out-degrees / 2.
+  Wait, that gives only the score sum, which is always m = C(n,2).
+
+  No — the S_n action permutes pairs, but the ORBIT POLYTOPE uses the
+  orbit-counting coordinates. The coordinates of the orbit polytope
+  are the sums over each orbit.
+
+  Since all pairs are in one orbit, the orbit polytope has just 1 coordinate:
+  the total number of 1s = sum of out-degrees = m (constant for all tournaments!).
+  This collapses everything to a single point — clearly wrong.
+
+  The issue: I'm confusing the orbit polytope with something else.
+
+  The correct object: G_n is NOT a polytope quotient in the standard sense.
+  It's the orbit GRAPH (adjacency pattern among orbits), not the orbit polytope.
+
+Done. opus-2026-03-23-S240
