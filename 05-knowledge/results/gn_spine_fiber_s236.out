@@ -1,0 +1,185 @@
+================================================================================
+  THE BLUE SPINE: SC-SC EDGES + TILING FIBERS
+  opus-2026-03-23-S236
+================================================================================
+
+================================================================================
+  n = 3
+================================================================================
+  SPINE: V_SC=2, E_SC=1, density=1.0000
+
+   mid     H |Aut|  Tilings spine_d  ribs                score
+     0     1     1        1       1     0            (0, 1, 2)
+     1     3     3        1       1     0            (1, 1, 1)
+
+  SPINE DEGREE: min=1, max=1, avg=1.00
+  RIB COUNT: min=0, max=0, avg=0.00
+  TILINGS: min=1, max=1, avg=1.00, sum=2
+
+  ALONG SPINE EDGES:
+    Σ T(a)×T(b) = 1
+    avg T(a)×T(b) = 1.00
+    avg |ΔH| = 2.00
+
+  TOTAL SC INFLUENCE (spine_deg + ribs): 2
+  avg SC total degree: 1.00
+
+  (0.0s)
+
+================================================================================
+  n = 4
+================================================================================
+  SPINE: V_SC=2, E_SC=1, density=1.0000
+
+   mid     H |Aut|  Tilings spine_d  ribs                score
+     0     1     1        1       1     1         (0, 1, 2, 3)
+     2     5     1        5       1     1         (1, 1, 2, 2)
+
+  SPINE DEGREE: min=1, max=1, avg=1.00
+  RIB COUNT: min=1, max=1, avg=1.00
+  TILINGS: min=1, max=5, avg=3.00, sum=6
+
+  ALONG SPINE EDGES:
+    Σ T(a)×T(b) = 5
+    avg T(a)×T(b) = 5.00
+    avg |ΔH| = 4.00
+
+  TOTAL SC INFLUENCE (spine_deg + ribs): 4
+  avg SC total degree: 2.00
+
+  (0.0s)
+
+================================================================================
+  n = 5
+================================================================================
+  SPINE: V_SC=8, E_SC=12, density=0.4286
+
+   mid     H |Aut|  Tilings spine_d  ribs                score
+     0     1     1        1       2     2      (0, 1, 2, 3, 4)
+     3     3     3        1       2     1      (0, 2, 2, 2, 4)
+     4     9     1        9       4     1      (1, 1, 2, 3, 3)
+     5     9     1        9       3     2      (1, 1, 2, 3, 3)
+     6    11     1       11       4     1      (1, 2, 2, 2, 3)
+     8    13     1       13       4     1      (1, 2, 2, 2, 3)
+     7    15     3        5       3     0      (1, 2, 2, 2, 3)
+     9    15     5        3       2     0      (2, 2, 2, 2, 2)
+
+  SPINE DEGREE: min=2, max=4, avg=3.00
+  RIB COUNT: min=0, max=2, avg=1.00
+  TILINGS: min=1, max=13, avg=6.50, sum=52
+
+  CORRELATIONS ON SPINE:
+    corr(Tilings, spine_deg)  = 0.9333
+    corr(Tilings, ribs)       = 0.0816
+    corr(Tilings, H)          = 0.4857
+    corr(spine_deg, ribs)     = 0.0000
+
+  ALONG SPINE EDGES:
+    Σ T(a)×T(b) = 736
+    avg T(a)×T(b) = 61.33
+    avg |ΔH| = 3.83
+
+  TOTAL SC INFLUENCE (spine_deg + ribs): 32
+  avg SC total degree: 4.00
+
+  (0.2s)
+
+================================================================================
+  n = 6
+================================================================================
+  SPINE: V_SC=12, E_SC=13, density=0.1970
+
+   mid     H |Aut|  Tilings spine_d  ribs                score
+     0     1     1        1       2     4   (0, 1, 2, 3, 4, 5)
+     5     5     1        5       2     5   (0, 2, 2, 3, 3, 5)
+    17     9     9        1       1     1   (1, 1, 1, 4, 4, 4)
+     8    17     1       17       2     5   (1, 1, 2, 3, 4, 4)
+    16    17     1       17       3     4   (1, 1, 2, 3, 4, 4)
+    26    29     1       29       3     5   (1, 2, 2, 3, 3, 4)
+    27    29     1       29       2     5   (1, 2, 2, 3, 3, 4)
+    22    33     1       33       3     5   (1, 2, 2, 3, 3, 4)
+    21    37     1       37       3     4   (1, 2, 2, 3, 3, 4)
+    30    41     1       41       2     4   (2, 2, 2, 3, 3, 3)
+    32    45     3       15       2     1   (2, 2, 2, 3, 3, 3)
+    33    45     3       15       1     2   (2, 2, 2, 3, 3, 3)
+
+  SPINE DEGREE: min=1, max=3, avg=2.17
+  RIB COUNT: min=1, max=5, avg=3.75
+  TILINGS: min=1, max=41, avg=20.00, sum=240
+
+  CORRELATIONS ON SPINE:
+    corr(Tilings, spine_deg)  = 0.5532
+    corr(Tilings, ribs)       = 0.4070
+    corr(Tilings, H)          = 0.6923
+    corr(spine_deg, ribs)     = 0.6149
+
+  ALONG SPINE EDGES:
+    Σ T(a)×T(b) = 6855
+    avg T(a)×T(b) = 527.31
+    avg |ΔH| = 12.00
+
+  TOTAL SC INFLUENCE (spine_deg + ribs): 71
+  avg SC total degree: 5.92
+
+  (59.7s)
+
+================================================================================
+  n = 7
+================================================================================
+  SPINE: V_SC=88, E_SC=174, density=0.0455
+
+  SPINE DEGREE: min=1, max=8, avg=3.95
+  RIB COUNT: min=0, max=9, avg=6.25
+  TILINGS: min=1, max=189, avg=97.82, sum=8608
+
+  CORRELATIONS ON SPINE:
+    corr(Tilings, spine_deg)  = 0.3955
+    corr(Tilings, ribs)       = -0.2733
+    corr(Tilings, H)          = 1.0000
+    corr(spine_deg, ribs)     = -0.0365
+
+  ALONG SPINE EDGES:
+    Σ T(a)×T(b) = 2194868
+    avg T(a)×T(b) = 12614.18
+    avg |ΔH| = 25.71
+
+  TOTAL SC INFLUENCE (spine_deg + ribs): 898
+  avg SC total degree: 10.20
+
+  (3.4s)
+
+================================================================================
+  n = 8
+================================================================================
+  SPINE: V_SC=176, E_SC=319, density=0.0207
+
+  SPINE DEGREE: min=1, max=6, avg=3.62
+  RIB COUNT: min=3, max=12, avg=10.76
+  TILINGS: min=1, max=661, avg=349.32, sum=61480
+
+  CORRELATIONS ON SPINE:
+    corr(Tilings, spine_deg)  = 0.0948
+    corr(Tilings, ribs)       = 0.0716
+    corr(Tilings, H)          = 1.0000
+    corr(spine_deg, ribs)     = 0.4060
+
+  ALONG SPINE EDGES:
+    Σ T(a)×T(b) = 47334967
+    avg T(a)×T(b) = 148385.48
+    avg |ΔH| = 101.52
+
+  TOTAL SC INFLUENCE (spine_deg + ribs): 2532
+  avg SC total degree: 14.39
+
+  (177.6s)
+
+================================================================================
+  CROSS-n SPINE SEQUENCES
+================================================================================
+
+    n  V_SC  E_SC  genus  avg_sd  avg_rib    Σ_til
+    3     2     1      0    1.00     0.00        2
+    4     2     1      0    1.00     1.00        6
+    5     8    12      5    3.00     1.00       52
+    6    12    13      2    2.17     3.75      240
+    7    88   174     87    3.95     6.25     8608
