@@ -199,7 +199,8 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
   - The staircase is oriented with **right angle at bottom-left**, tiles labeled (x,y) with x=upper vertex, y=lower vertex (as in explorer).
 - **GEOMETRIC ALIGNMENT of G_n/Z_2:** The merged metagraph has a fundamental geometric structure:
   - The **PRINCIPAL LINE** runs from the transitive class (H=1) through the SC backbone, defining the vertical axis. The transitive's "big" SC neighbor is at H = 2^(n-2)+1 (verified n=3..8).
-  - The **BLUE + GREEN SUBGRAPH** (SC-SC + NS-NS) approaches a complete graph on V_merged nodes — it is the "body" of the metagraph, with the principal line as its spine.
+  - The **BLUE SUBGRAPH** (SC↔SC only, as in explorer) is a SPARSE SKELETON on SC nodes with avg degree ~3-4. NS nodes are isolated. Density → 0. It is the principal spine.
+  - The merged metagraph approaches an **m-regular expander** (avg_deg → m = C(n,2), but density → 0 because V_merged grows exponentially). It is simple and locally dense but globally sparse. NOT approaching a complete graph.
   - The **BLACK SUBGRAPH** (SC-NS) attaches **perpendicularly** to the principal line. It is bipartite (SC vs NS), triangle-free, and always connected.
   - **No triangle has 2 same-type + 1 cross-type edges** (same-type is transitive on SC-type). Triangles decompose as BBB + GGG + BGG-type only (no BBG, BBK, GGK, or KKK).
   - At **odd n**, the BLACK subgraph is left-right IMBALANCED relative to the principal line. At **even n**, it tends toward symmetry.
