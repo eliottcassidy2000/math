@@ -1,0 +1,75 @@
+
+========================================================================
+  CLIQUE COMPLEX TOPOLOGY AT n=5
+========================================================================
+
+  f-vector: [10, 21, 12, 2]
+  Dimension of clique complex: 3
+  Euler characteristic: -1
+  h-vector: [1, 6, -3, -4, 2]
+  h-vector non-negative: False
+
+  COMPUTING HOMOLOGY:
+  Boundary matrix ranks:
+    ∂_1: (10, 21), rank = 9
+    ∂_2: (21, 12), rank = 10
+    ∂_3: (12, 2), rank = 2
+    ∂_4: (0, 0), rank = 0
+
+  BETTI NUMBERS (reduced homology of clique complex):
+    β_0 = 1
+    β_1 = 2
+    β_2 = 0
+    β_3 = 0
+  χ check: -1 (should be -1)
+
+  GRAPH GENUS:
+    V=10, E=21
+    Lower bound on genus: g ≥ (E - 3V + 6) / 6 = (21 - 30 + 6) / 6 = -0.5
+    Minimum genus ≥ 0
+
+  COMPLEMENT GRAPH:
+    E(G_bar) = C(10,2) - 21 = 24
+    Density of G: 0.4667
+    Density of G_bar: 0.5333
+    Independence number α(G) = 4
+    Clique number ω(G) = 4
+    Ramsey bound: α + ω ≥ ... (comparing with R(k,l))
+    Chromatic number ≥ V/α = 10/4 = 3
+
+
+========================================================================
+  CLIQUE COMPLEX TOPOLOGY AT n=6
+========================================================================
+
+  f-vector: [34, 143, 139, 38, 1]
+  Dimension of clique complex: 4
+  Euler characteristic: -7
+  h-vector: [1, 29, 17, -96, 58, -8]
+  h-vector non-negative: False
+
+  COMPUTING HOMOLOGY:
+  Boundary matrix ranks:
+    ∂_1: (34, 143), rank = 33
+    ∂_2: (143, 139), rank = 95
+    ∂_3: (139, 38), rank = 37
+    ∂_4: (38, 1), rank = 1
+    ∂_5: (0, 0), rank = 0
+
+  BETTI NUMBERS (reduced homology of clique complex):
+    β_0 = 1
+    β_1 = 15
+    β_2 = 7
+    β_3 = 0
+    β_4 = 0
+  χ check: -7 (should be -7)
+
+  GRAPH GENUS:
+    V=34, E=143
+    Lower bound on genus: g ≥ (E - 3V + 6) / 6 = (143 - 102 + 6) / 6 = 7.8
+    Minimum genus ≥ 8
+
+  COMPLEMENT GRAPH:
+    E(G_bar) = C(34,2) - 143 = 418
+    Density of G: 0.2549
+    Density of G_bar: 0.7451
