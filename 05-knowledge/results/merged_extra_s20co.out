@@ -1,0 +1,327 @@
+================================================================================
+  EXTRA COMPUTATIONS FOR MERGED META-GRAPH
+  kind-pasteur-2026-03-23-S20co
+================================================================================
+
+################################################################################
+  n = 3
+################################################################################
+  Built in 0.0s
+
+  --- Independence Polynomial of G_3 ---
+  I(G_3, x) = [1, 2]
+  I(G_3, 2) = 5 (meta-H)
+  I(G_3, -1) = -1 (Euler char)
+
+  --- Independence Polynomial of G_3/Z_2 ---
+  I(G_3/Z_2, x) = [1, 2]
+  I(G_3/Z_2, 2) = 5 (meta-H)
+  I(G_3/Z_2, -1) = -1 (Euler char)
+
+  --- Clique Complex Betti Numbers of G_3 ---
+    Clique complex f-vector: [2, 1]
+  beta(G_3) = [np.int64(1), 0]
+  chi(G_3) = 1
+
+  --- Clique Complex Betti Numbers of G_3/Z_2 ---
+    Clique complex f-vector: [2, 1]
+  beta(G_3/Z_2) = [np.int64(1), 0]
+  chi(G_3/Z_2) = 1
+
+  H-GRADIENT ANALYSIS OF G_3 (ORIGINAL)
+  --------------------------------------------------
+  Uphill: 1, Downhill: 0, Level: 0
+  DAG: True
+  H levels: 2: [1, 3]
+  Longest H-increasing chain: 2
+  Max width (vertices at same H): 1
+  H-monotone Hamiltonian paths: 1
+
+  BLUE/BLACK SUBGRAPH ANALYSIS OF G_3/Z_2
+  --------------------------------------------------
+  Blue edges: 1, Black edges: 0, Mixed: 0
+  Blue subgraph: 1 components, sizes [2]
+  Black subgraph: 2 components, sizes [1, 1]
+  Blue spectral radius: 1.0000
+  Blue density: 1.000000, Black density: 0.000000
+  SC merged vertices: 2, NS merged vertices: 0
+  SC blue degree: mean=1.00, range=[1,1]
+  SC black degree: mean=0.00, range=[0,0]
+
+  CENTRALITY-INVARIANT CORRELATION ON G_3/Z_2
+  --------------------------------------------------
+  Top 5 by deg*H:
+    1. mid=1 H=3 deg=1 c3=1 sc=True score=(1, 1, 1)
+    2. mid=0 H=1 deg=1 c3=0 sc=True score=(0, 1, 2)
+
+################################################################################
+  n = 4
+################################################################################
+  Built in 0.0s
+
+  --- Independence Polynomial of G_4 ---
+  I(G_4, x) = [1, 4, 1]
+  I(G_4, 2) = 13 (meta-H)
+  I(G_4, -1) = -2 (Euler char)
+
+  --- Independence Polynomial of G_4/Z_2 ---
+  I(G_4/Z_2, x) = [1, 3]
+  I(G_4/Z_2, 2) = 7 (meta-H)
+  I(G_4/Z_2, -1) = -2 (Euler char)
+
+  --- Clique Complex Betti Numbers of G_4 ---
+    Clique complex f-vector: [4, 5, 2]
+  beta(G_4) = [np.int64(1), 0, 0]
+  chi(G_4) = 1
+
+  --- Clique Complex Betti Numbers of G_4/Z_2 ---
+    Clique complex f-vector: [3, 3, 1]
+  beta(G_4/Z_2) = [np.int64(1), 0, 0]
+  chi(G_4/Z_2) = 1
+
+  H-GRADIENT ANALYSIS OF G_4 (ORIGINAL)
+  --------------------------------------------------
+  Uphill: 4, Downhill: 1, Level: 0
+  DAG: True
+  H levels: 3: [1, 3, 5]
+  Longest H-increasing chain: 3
+  Max width (vertices at same H): 2
+  H-monotone Hamiltonian paths: 0
+
+  BLUE/BLACK SUBGRAPH ANALYSIS OF G_4/Z_2
+  --------------------------------------------------
+  Blue edges: 1, Black edges: 2, Mixed: 0
+  Blue subgraph: 2 components, sizes [2, 1]
+  Black subgraph: 1 components, sizes [3]
+  Blue spectral radius: 1.0000
+  Black spectral radius: 1.4142
+  Blue density: 0.333333, Black density: 0.666667
+  SC merged vertices: 2, NS merged vertices: 1
+  SC blue degree: mean=1.00, range=[1,1]
+  NS blue degree: mean=0.00, range=[0,0]
+  SC black degree: mean=1.00, range=[1,1]
+  NS black degree: mean=2.00, range=[2,2]
+
+  CENTRALITY-INVARIANT CORRELATION ON G_4/Z_2
+  --------------------------------------------------
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+  corr(H, degree) = nan
+  corr(c3, degree) = nan
+  corr(c3, H) = 1.0000
+  corr(|Aut|, degree) = nan
+  corr(eigenvector_centrality, H) = 0.0000
+  Top 5 by deg*H:
+    1. mid=2 H=5 deg=2 c3=2 sc=True score=(1, 1, 2, 2)
+    2. mid=1 H=3 deg=2 c3=1 sc=False score=(0, 2, 2, 2)
+    3. mid=0 H=1 deg=2 c3=0 sc=True score=(0, 1, 2, 3)
+
+################################################################################
+  n = 5
+################################################################################
+  Built in 0.2s
+
+  --- Independence Polynomial of G_5 ---
+  I(G_5, x) = [1, 12, 36, 38, 16, 2]
+  I(G_5, 2) = 793 (meta-H)
+  I(G_5, -1) = 1 (Euler char)
+
+  --- Independence Polynomial of G_5/Z_2 ---
+  I(G_5/Z_2, x) = [1, 10, 24, 17, 3]
+  I(G_5/Z_2, 2) = 301 (meta-H)
+  I(G_5/Z_2, -1) = 1 (Euler char)
+
+  --- Clique Complex Betti Numbers of G_5 ---
+    Clique complex f-vector: [12, 30, 21, 4]
+  beta(G_5) = [np.int64(1), 2, 0, 0]
+  chi(G_5) = -1
+
+  --- Clique Complex Betti Numbers of G_5/Z_2 ---
+    Clique complex f-vector: [10, 21, 12, 2]
+  beta(G_5/Z_2) = [np.int64(1), 2, 0, 0]
+  chi(G_5/Z_2) = -1
+
+  H-GRADIENT ANALYSIS OF G_5 (ORIGINAL)
+  --------------------------------------------------
+  Uphill: 22, Downhill: 7, Level: 1
+  DAG: False
+  Level edges:
+    (4,11) at H=9 | SC=(True,True) | scores=((1, 1, 2, 3, 3),(1, 1, 2, 3, 3))
+  H levels: 7: [1, 3, 5, 9, 11, 13, 15]
+  Longest H-increasing chain: 7
+  Max width (vertices at same H): 3
+  H-monotone Hamiltonian paths: 0
+
+  BLUE/BLACK SUBGRAPH ANALYSIS OF G_5/Z_2
+  --------------------------------------------------
+  Blue edges: 13, Black edges: 8, Mixed: 0
+  Blue subgraph: 2 components, sizes [8, 2]
+  Black subgraph: 3 components, sizes [8, 1, 1]
+  Blue spectral radius: 3.2786
+  Black spectral radius: 2.6131
+  Blue density: 0.288889, Black density: 0.177778
+  SC merged vertices: 8, NS merged vertices: 2
+  SC blue degree: mean=3.00, range=[2,4]
+  NS blue degree: mean=1.00, range=[1,1]
+  SC black degree: mean=1.00, range=[0,2]
+  NS black degree: mean=4.00, range=[2,6]
+
+  CENTRALITY-INVARIANT CORRELATION ON G_5/Z_2
+  --------------------------------------------------
+  corr(H, degree) = -0.1573
+  corr(c3, degree) = -0.0644
+  corr(c3, H) = 0.9748
+  corr(|Aut|, degree) = -0.6202
+  corr(eigenvector_centrality, H) = -0.1678
+  Top 5 by deg*H:
+    1. mid=6 H=13 deg=5 c3=4 sc=True score=(1, 2, 2, 2, 3)
+    2. mid=7 H=11 deg=5 c3=4 sc=True score=(1, 2, 2, 2, 3)
+    3. mid=4 H=9 deg=5 c3=3 sc=True score=(1, 1, 2, 3, 3)
+    4. mid=5 H=15 deg=3 c3=4 sc=True score=(1, 2, 2, 2, 3)
+    5. mid=9 H=9 deg=5 c3=3 sc=True score=(1, 1, 2, 3, 3)
+
+################################################################################
+  n = 6
+################################################################################
+  Built in 21.8s
+
+  --- Independence Polynomial of G_6 ---
+  I(G_6, x) = [1, 56, 1250, 14839, 105464, 478747, 1444574, 2973403, 4247735, 4265018, 3047302, 1578414, 612217, 186036, 45638, 8790, 1211, 103, 4]
+  I(G_6, 2) = 15275642513 (meta-H)
+  I(G_6, -1) = -10 (Euler char)
+
+  --- Independence Polynomial of G_6/Z_2 ---
+  I(G_6/Z_2, x) = [1, 34, 418, 2499, 8211, 15747, 18043, 12265, 4739, 942, 77, 1]
+  I(G_6/Z_2, 2) = 5158069 (meta-H)
+  I(G_6/Z_2, -1) = 1 (Euler char)
+
+  --- Clique Complex Betti Numbers of G_6 ---
+    Clique complex f-vector: [56, 290, 248, 27]
+  beta(G_6) = [np.int64(1), 37, 23, 0]
+  chi(G_6) = -13
+
+  --- Clique Complex Betti Numbers of G_6/Z_2 ---
+    Clique complex f-vector: [34, 143, 139, 38, 1]
+  beta(G_6/Z_2) = [np.int64(1), 15, 7, 0, 0]
+  chi(G_6/Z_2) = -7
+
+  H-GRADIENT ANALYSIS OF G_6 (ORIGINAL)
+  --------------------------------------------------
+  Uphill: 182, Downhill: 93, Level: 15
+  DAG: False
+  Level edges:
+    (29,52) at H=43 | SC=(False,False) | scores=((2, 2, 2, 3, 3, 3),(2, 2, 2, 3, 3, 3))
+    (15,16) at H=37 | SC=(True,False) | scores=((1, 2, 2, 3, 3, 4),(1, 2, 3, 3, 3, 3))
+    (31,42) at H=15 | SC=(False,False) | scores=((1, 1, 2, 3, 4, 4),(1, 1, 2, 3, 4, 4))
+    (16,17) at H=37 | SC=(False,False) | scores=((1, 2, 3, 3, 3, 3),(1, 2, 3, 3, 3, 3))
+    (19,43) at H=9 | SC=(False,False) | scores=((1, 1, 2, 3, 3, 5),(1, 1, 2, 3, 3, 5))
+    (4,11) at H=9 | SC=(False,False) | scores=((0, 2, 2, 3, 4, 4),(0, 2, 2, 3, 4, 4))
+    (46,49) at H=29 | SC=(False,True) | scores=((1, 2, 2, 3, 3, 4),(1, 2, 2, 3, 3, 4))
+    (15,36) at H=37 | SC=(True,False) | scores=((1, 2, 2, 3, 3, 4),(2, 2, 2, 2, 3, 4))
+    (26,49) at H=29 | SC=(False,True) | scores=((1, 2, 2, 3, 3, 4),(1, 2, 2, 3, 3, 4))
+    (23,50) at H=23 | SC=(False,False) | scores=((1, 2, 2, 3, 3, 4),(1, 2, 2, 3, 3, 4))
+    (36,37) at H=37 | SC=(False,False) | scores=((2, 2, 2, 2, 3, 4),(2, 2, 2, 2, 3, 4))
+    (15,17) at H=37 | SC=(True,False) | scores=((1, 2, 2, 3, 3, 4),(1, 2, 3, 3, 3, 3))
+    (15,37) at H=37 | SC=(True,False) | scores=((1, 2, 2, 3, 3, 4),(2, 2, 2, 2, 3, 4))
+    (47,51) at H=25 | SC=(False,False) | scores=((1, 2, 2, 3, 3, 4),(1, 2, 2, 3, 3, 4))
+    (26,46) at H=29 | SC=(False,False) | scores=((1, 2, 2, 3, 3, 4),(1, 2, 2, 3, 3, 4))
+  H levels: 19: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  Longest H-increasing chain: 16
+  Max width (vertices at same H): 6
+
+  BLUE/BLACK SUBGRAPH ANALYSIS OF G_6/Z_2
+  --------------------------------------------------
+  Blue edges: 98, Black edges: 45, Mixed: 0
+  Blue subgraph: 2 components, sizes [22, 12]
+  Black subgraph: 5 components, sizes [30, 1, 1, 1, 1]
+  Blue spectral radius: 8.5076
+  Black spectral radius: 3.6855
+  Blue density: 0.174688, Black density: 0.080214
+  SC merged vertices: 12, NS merged vertices: 22
+  SC blue degree: mean=2.17, range=[1,3]
+  NS blue degree: mean=7.73, range=[3,11]
+  SC black degree: mean=3.75, range=[1,5]
+  NS black degree: mean=2.05, range=[0,6]
+
+  CENTRALITY-INVARIANT CORRELATION ON G_6/Z_2
+  --------------------------------------------------
+  corr(H, degree) = -0.0038
+  corr(c3, degree) = 0.0978
+  corr(c3, H) = 0.9598
+  corr(|Aut|, degree) = -0.2207
+  corr(eigenvector_centrality, H) = 0.0724
+  Top 5 by deg*H:
+    1. mid=16 H=37 deg=13 c3=7 sc=False score=(1, 2, 3, 3, 3, 3)
+    2. mid=15 H=37 deg=11 c3=7 sc=False score=(1, 2, 3, 3, 3, 3)
+    3. mid=26 H=33 deg=12 c3=7 sc=False score=(2, 2, 2, 2, 3, 4)
+    4. mid=24 H=43 deg=9 c3=8 sc=False score=(2, 2, 2, 3, 3, 3)
+    5. mid=22 H=29 deg=13 c3=6 sc=False score=(1, 2, 2, 3, 3, 4)
+
+
+================================================================================
+  COMPLETE SEQUENCE CATALOG
+================================================================================
+
+NEW SEQUENCES (first computed here, check against OEIS):
+
+=== G_n sequences (n=3,4,5,6) ===
+V(G_n) = 2, 4, 12, 56                  [A000568 - known]
+E(G_n) = 1, 5, 30, 290                 [check OEIS]
+self_loops(G_n) = 1, 2, 7, 30          [check OEIS]
+triangles(G_n) = 0, 2, 21, 248         [check OEIS]
+diameter(G_n) = 1, 2, 3, 4             [check OEIS - matches n-2!]
+girth(G_n) = inf, 3, 3, 3              [trivial]
+spanning_trees(G_n) = 1, 8, 2347680, ? [check OEIS]
+Wiener(G_n) = 1, 7, 108, 3314          [check OEIS]
+I(G_n, 2) = 5, 13, 793, ?              [NEW meta-H]
+I(G_n, -1) = -1, -2, 1, ?              [NEW Euler char]
+
+=== G_n/Z_2 sequences (n=3,4,5,6) ===
+V(G_n/Z_2) = 2, 3, 10, 34             [= (A000568 + SC)/2]
+E(G_n/Z_2) = 1, 3, 21, 143            [check OEIS]
+collapsed = 0, 0, 0, 5                 [check OEIS]
+twin = 0, 2, 9, 142                    [check OEIS]
+triangles(G_n/Z_2) = 0, 1, 12, 139    [check OEIS]
+diameter(G_n/Z_2) = 1, 1, 3, 4        [check OEIS]
+spanning_trees(G_n/Z_2) = 1, 3, 32159, ?  [check OEIS]
+Wiener(G_n/Z_2) = 1, 3, 73, 1138      [check OEIS]
+I(G_n/Z_2, 2) = 5, 7, 301, ?          [NEW merged meta-H]
+I(G_n/Z_2, -1) = -1, -2, 1, ?         [NEW Euler char]
+blue_merged = 1, 1, 13, 98             [check OEIS]
+black_merged = 0, 2, 8, 45             [check OEIS]
+
+=== Spectral sequences ===
+spectral_radius(G_n) = 1.00, 2.56, 5.58, 11.67
+spectral_radius(G_n/Z_2) = 1.00, 2.00, 4.64, 9.78
+alg_conn(G_n) = 2.00, 2.00, 1.60, 1.96
+alg_conn(G_n/Z_2) = 2.00, 3.00, 1.43, 1.47
+graph_energy(G_n) = 2.0, 5.1, 20.2, 137.4
+graph_energy(G_n/Z_2) = 2.0, 4.0, 15.9, 73.2
+Estrada(G_n) = 3.1, 14.5, 282.8, 118439
+Estrada(G_n/Z_2) = 3.1, 8.1, 116.7, 18037
+
+=== Topological sequences ===
+beta_0 always = 1 (connected)
+beta_1(G_n) = 0, 0, 2, ?
+beta_1(G_n/Z_2) = 0, 0, 2, ?
+chi(clique_cmplx G_n) = 1, 1, -1, ?
+chi(clique_cmplx G_n/Z_2) = 1, 1, -1, ?
+
+=== Curvature sequences ===
+Forman_avg(G_n) = 2.0, 2.4, -0.97, -11.18
+Forman_avg(G_n/Z_2) = 2.0, 3.0, -0.19, -6.45
+Forman_total(G_n) = 2, 12, -29, -3242
+Forman_total(G_n/Z_2) = 2, 9, -4, -923
+
+=== Key findings ===
+1. diameter(G_n) = n-2 CONFIRMED for n=3..6 (CONJECTURE from earlier)
+2. G_n/Z_2 is NOT a DAG at n>=5 (downhill edges appear)
+3. G_n is NOT a DAG at n>=5 (but uphill >> downhill)
+4. beta_1 = 2 appears at n=5 for BOTH G_n and G_n/Z_2
+5. Forman curvature goes negative at n=5 (graph becomes hyperbolic)
+6. Ramanujan property: G_4 YES, G_5 YES, G_6 NO (transition at n=6)
+
+
+  DONE.
