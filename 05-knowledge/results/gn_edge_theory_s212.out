@@ -1,0 +1,141 @@
+================================================================================
+  EXACT THEORY FOR T_n AND |E(G_n)|
+  opus-2026-03-22-S212
+================================================================================
+
+  EXACT: T_n = V_n × m - D_n
+------------------------------------------------------------
+  n= 3: V=           2, m=  3, Vm=             6, T=             4, D=Vm-T=           2
+  n= 4: V=           4, m=  6, Vm=            24, T=            16, D=Vm-T=           8
+  n= 5: V=          12, m= 10, Vm=           120, T=            88, D=Vm-T=          32
+  n= 6: V=          56, m= 15, Vm=           840, T=           704, D=Vm-T=         136
+  n= 7: V=         456, m= 21, Vm=          9576, T=          8912, D=Vm-T=         664
+  n= 8: V=        6880, m= 28, Vm=        192640, T=        188288, D=Vm-T=        4352
+  n= 9: V=      191536, m= 36, Vm=       6895296, T=       6847200, D=Vm-T=       48096
+  n=10: V=     9733056, m= 45, Vm=     437987520, T=     437069312, D=Vm-T=      918208
+  n=11: V=   903753248, m= 55, Vm=   49706428640, T=   49674860096, D=Vm-T=    31568544
+  n=12: V=154108311168, m= 66, Vm=10171148537088, T=10169189235712, D=Vm-T=  1959301376
+  n=13: V=48542114686912, m= 78, Vm=3786284945579136, T=3786065734484352, D=Vm-T=219211094784
+
+  DEFICIT D_n = V_n × m - T_n
+------------------------------------------------------------
+  D_n sequence: [2, 8, 32, 136, 664, 4352, 48096, 918208, 31568544, 1959301376, 219211094784]
+  D_n / V_n: [1.0, 2.0, 2.6666666666666665, 2.4285714285714284, 1.456140350877193, 0.6325581395348837, 0.25110684153370644, 0.09433912637510768, 0.03493049023044839, 0.012713794351195521, 0.0045158950366681085]
+
+  D_n / V_n (should approach something?):
+  n= 3: D/V = 1.000000, m-D/V = 2.000000
+  n= 4: D/V = 2.000000, m-D/V = 4.000000
+  n= 5: D/V = 2.666667, m-D/V = 7.333333
+  n= 6: D/V = 2.428571, m-D/V = 12.571429
+  n= 7: D/V = 1.456140, m-D/V = 19.543860
+  n= 8: D/V = 0.632558, m-D/V = 27.367442
+  n= 9: D/V = 0.251107, m-D/V = 35.748893
+  n=10: D/V = 0.094339, m-D/V = 44.905661
+  n=11: D/V = 0.034930, m-D/V = 54.965070
+  n=12: D/V = 0.012714, m-D/V = 65.987286
+  n=13: D/V = 0.004516, m-D/V = 77.995484
+
+  BREAKDOWN of D_n contribution by cycle type:
+------------------------------------------------------------
+
+  n=3:
+                     [3]: ct=     2, Fix=     2, f=0, C(f,2)=  0, m-C(f,2)=  3, v_contrib=0.6667, d_contrib=2.0000
+               [1, 1, 1]: ct=     1, Fix=     8, f=3, C(f,2)=  3, m-C(f,2)=  0, v_contrib=1.3333, d_contrib=0.0000
+
+  n=4:
+                  [3, 1]: ct=     8, Fix=     4, f=1, C(f,2)=  0, m-C(f,2)=  6, v_contrib=1.3333, d_contrib=8.0000
+            [1, 1, 1, 1]: ct=     1, Fix=    64, f=4, C(f,2)=  6, m-C(f,2)=  0, v_contrib=2.6667, d_contrib=0.0000
+
+  n=5:
+                     [5]: ct=    24, Fix=     4, f=0, C(f,2)=  0, m-C(f,2)= 10, v_contrib=0.8000, d_contrib=8.0000
+               [3, 1, 1]: ct=    20, Fix=    16, f=2, C(f,2)=  1, m-C(f,2)=  9, v_contrib=2.6667, d_contrib=24.0000
+         [1, 1, 1, 1, 1]: ct=     1, Fix=  1024, f=5, C(f,2)= 10, m-C(f,2)=  0, v_contrib=8.5333, d_contrib=0.0000
+
+  n=6:
+                  [5, 1]: ct=   144, Fix=     8, f=1, C(f,2)=  0, m-C(f,2)= 15, v_contrib=1.6000, d_contrib=24.0000
+                  [3, 3]: ct=    40, Fix=    32, f=0, C(f,2)=  0, m-C(f,2)= 15, v_contrib=1.7778, d_contrib=26.6667
+            [3, 1, 1, 1]: ct=    40, Fix=   128, f=3, C(f,2)=  3, m-C(f,2)= 12, v_contrib=7.1111, d_contrib=85.3333
+      [1, 1, 1, 1, 1, 1]: ct=     1, Fix= 32768, f=6, C(f,2)= 15, m-C(f,2)=  0, v_contrib=45.5111, d_contrib=0.0000
+
+  n=7:
+                     [7]: ct=   720, Fix=     8, f=0, C(f,2)=  0, m-C(f,2)= 21, v_contrib=1.1429, d_contrib=24.0000
+               [5, 1, 1]: ct=   504, Fix=    32, f=2, C(f,2)=  1, m-C(f,2)= 20, v_contrib=3.2000, d_contrib=64.0000
+               [3, 3, 1]: ct=   280, Fix=   128, f=1, C(f,2)=  0, m-C(f,2)= 21, v_contrib=7.1111, d_contrib=149.3333
+         [3, 1, 1, 1, 1]: ct=    70, Fix=  2048, f=4, C(f,2)=  6, m-C(f,2)= 15, v_contrib=28.4444, d_contrib=426.6667
+    [1, 1, 1, 1, 1, 1, 1]: ct=     1, Fix=2097152, f=7, C(f,2)= 21, m-C(f,2)=  0, v_contrib=416.1016, d_contrib=0.0000
+
+  n=8:
+                  [7, 1]: ct=  5760, Fix=    16, f=1, C(f,2)=  0, m-C(f,2)= 28, v_contrib=2.2857, d_contrib=64.0000
+                  [5, 3]: ct=  2688, Fix=    16, f=0, C(f,2)=  0, m-C(f,2)= 28, v_contrib=1.0667, d_contrib=29.8667
+            [5, 1, 1, 1]: ct=  1344, Fix=   256, f=3, C(f,2)=  3, m-C(f,2)= 25, v_contrib=8.5333, d_contrib=213.3333
+            [3, 3, 1, 1]: ct=  1120, Fix=  1024, f=2, C(f,2)=  1, m-C(f,2)= 27, v_contrib=28.4444, d_contrib=768.0000
+      [3, 1, 1, 1, 1, 1]: ct=   112, Fix= 65536, f=5, C(f,2)= 10, m-C(f,2)= 18, v_contrib=182.0444, d_contrib=3276.8000
+    [1, 1, 1, 1, 1, 1, 1, 1]: ct=     1, Fix=268435456, f=8, C(f,2)= 28, m-C(f,2)=  0, v_contrib=6657.6254, d_contrib=0.0000
+
+  KEY INSIGHT:
+  D_n = (1/n!) × Σ_{σ≠id, all-odd-cycles} ct(σ) × Fix(σ) × (m - C(f(σ),2))
+  The deficit measures how much non-trivial automorphisms reduce connectivity.
+
+  EXACT D_n formula:
+  n= 3: D_n =            2, check D_vals =            2, ✓
+  n= 4: D_n =            8, check D_vals =            8, ✓
+  n= 5: D_n =           32, check D_vals =           32, ✓
+  n= 6: D_n =          136, check D_vals =          136, ✓
+  n= 7: D_n =          664, check D_vals =          664, ✓
+  n= 8: D_n =         4352, check D_vals =         4352, ✓
+  n= 9: D_n =        48096, check D_vals =        48096, ✓
+  n=10: D_n =       918208, check D_vals =       918208, ✓
+  n=11: D_n =     31568544, check D_vals =     31568544, ✓
+  n=12: D_n =   1959301376, check D_vals =   1959301376, ✓
+  n=13: D_n = 219211094784, check D_vals = 219211094784, ✓
+
+  RELATIONSHIP TABLE: T_n, D_n, V_n, |E|
+------------------------------------------------------------
+    n        V    m        T        D    |E|     T-2E   D/(T-2E)  SL_w/n!
+    3        2    3        4        2      1        2     1.0000     2.00
+    4        4    6       16        8      5        6     1.3333     6.00
+    5       12   10       88       32     30       28     1.1429    14.67
+    6       56   15      704      136    290      124     1.0968    52.67
+
+  T - 2|E| sequence: [2, 6, 28, 124]
+
+  EXACT self-loop orbits:
+  n=3: SL_orbits=2, cross_orbits=2, |E|=1, cross/E=2.0000, extra_orbits=0 (edges with multi-weight)
+  n=4: SL_orbits=6, cross_orbits=10, |E|=5, cross/E=2.0000, extra_orbits=0 (edges with multi-weight)
+  n=5: SL_orbits=16, cross_orbits=72, |E|=30, cross/E=2.4000, extra_orbits=12 (edges with multi-weight)
+
+  EDGE FORMULA: |E| = (T - SL_orbits) / 2 - extra/2
+  where extra = edges with weight > n!
+
+  VERIFICATION at n=3,4:
+  n=3: (T-SL)/2 = (4-2)/2 = 1, actual=1 ✓
+  n=4: (T-SL)/2 = (16-6)/2 = 5, actual=5 ✓
+
+  At n=5: (T-SL)/2 = (88-16)/2 = 36, but |E|=30. Deficit: 6 edges with 3 orbits.
+  (88-16-12)/2 = 30 ✓ (12 extra orbits from multi-weight edges)
+
+  SUMMARY:
+  T_n = (1/n!) Σ_σ Fix(σ) × C(f(σ), 2)  — computable for all n
+  V_n = (1/n!) Σ_σ Fix(σ)                 — computable for all n
+  D_n = V_n × m - T_n                     — the 'deficit'
+  SL_orbits: known at n≤5, need computation at n≥6
+  |E| = (T - SL_orbits) / 2 at n=3,4 (no multi-weight)
+  |E| = (T - SL_orbits - extra) / 2 at n≥5
+  The 'extra' term grows with n — this is the hard part.
+
+  EXTENDED DATA:
+    n= 3: V=             2, T=               4, m=  3, D=             2
+    n= 4: V=             4, T=              16, m=  6, D=             8
+    n= 5: V=            12, T=              88, m= 10, D=            32
+    n= 6: V=            56, T=             704, m= 15, D=           136
+    n= 7: V=           456, T=            8912, m= 21, D=           664
+    n= 8: V=          6880, T=          188288, m= 28, D=          4352
+    n= 9: V=        191536, T=         6847200, m= 36, D=         48096
+    n=10: V=       9733056, T=       437069312, m= 45, D=        918208
+    n=11: V=     903753248, T=     49674860096, m= 55, D=      31568544
+    n=12: V=  154108311168, T=  10169189235712, m= 66, D=    1959301376
+    n=13: V=48542114686912, T=3786065734484352, m= 78, D=  219211094784
+
+================================================================================
+  DONE
+================================================================================
