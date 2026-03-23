@@ -1,0 +1,668 @@
+================================================================================
+  EXACT EXPLORER REPLICATION
+  kind-pasteur-2026-03-23-S20de
+================================================================================
+
+######################################################################
+
+  n=3: 2 iso classes, 2 merged classes
+  2 tilings, 1 tiles
+  Total flip-pair lines: 1
+  BLUE lines: 1
+  BLACK lines: 0
+  Grid-sym tilings: 2/2
+
+  PER-CLASS BREAKDOWN:
+   idx fiber   gs  blue black ts         type merged
+     0     1    1     1     0  Y    PURE BLUE    0
+     1     1    1     1     0  Y    PURE BLUE    1
+
+  SUMMARY:
+    PURE BLUE classes: 2
+    PURE BLACK classes: 0
+    MIXED classes: 0
+    Transpose-self (SC analog): 2
+    PURE BLUE that are transpose-self: 2
+    PURE BLUE that are NOT transpose-self: 0
+    RED pairs (transpose, different class): 0
+    Time: 0.0s
+
+######################################################################
+
+  n=4: 4 iso classes, 3 merged classes
+  8 tilings, 3 tiles
+  Total flip-pair lines: 4
+  BLUE lines: 2
+  BLACK lines: 2
+  Grid-sym tilings: 4/8
+
+  PER-CLASS BREAKDOWN:
+   idx fiber   gs  blue black ts         type merged
+     0     1    1     1     0  Y    PURE BLUE    0
+     1     1    0     0     1  N   PURE BLACK    1
+     2     5    3     2     2  Y    MIXED 3/5    2
+     3     1    0     0     1  N   PURE BLACK    1
+
+  SUMMARY:
+    PURE BLUE classes: 1
+    PURE BLACK classes: 2
+    MIXED classes: 1
+    Transpose-self (SC analog): 2
+    PURE BLUE that are transpose-self: 1
+    PURE BLUE that are NOT transpose-self: 0
+    RED pairs (transpose, different class): 1
+    Time: 0.0s
+
+######################################################################
+
+  n=5: 12 iso classes, 10 merged classes
+  64 tilings, 6 tiles
+  Total flip-pair lines: 32
+  BLUE lines: 8
+  BLACK lines: 24
+  Grid-sym tilings: 16/64
+
+  PER-CLASS BREAKDOWN:
+   idx fiber   gs  blue black ts         type merged
+     0     1    1     1     0  Y    PURE BLUE    0
+     1     1    0     0     1  N   PURE BLACK    1
+     2     5    0     0     5  N   PURE BLACK    2
+     3     1    1     1     0  Y    PURE BLUE    3
+     4     9    1     1     8  Y    MIXED 1/9    4
+     5     5    0     0     5  N   PURE BLACK    2
+     6     9    3     3     6  Y    MIXED 3/9    5
+     7     1    0     0     1  N   PURE BLACK    1
+     8    11    3     3     6  Y   MIXED 3/11    6
+     9     5    1     1     4  Y    MIXED 1/5    7
+    10    13    3     3     8  Y   MIXED 3/13    8
+    11     3    3     3     0  Y    PURE BLUE    9
+
+  SUMMARY:
+    PURE BLUE classes: 3
+    PURE BLACK classes: 4
+    MIXED classes: 5
+    Transpose-self (SC analog): 8
+    PURE BLUE that are transpose-self: 3
+    PURE BLUE that are NOT transpose-self: 0
+    RED pairs (transpose, different class): 2
+    Time: 0.0s
+
+######################################################################
+
+  n=6: 56 iso classes, 34 merged classes
+  1024 tilings, 10 tiles
+  Total flip-pair lines: 512
+  BLUE lines: 32
+  BLACK lines: 480
+  Grid-sym tilings: 64/1024
+
+  PER-CLASS BREAKDOWN:
+   idx fiber   gs  blue black ts         type merged
+     0     1    1     1     0  Y    PURE BLUE    0
+     1     1    0     0     1  N   PURE BLACK    1
+     2     5    0     0     5  N   PURE BLACK    2
+     3     1    0     0     1  N   PURE BLACK    3
+     4     9    0     0     9  N   PURE BLACK    4
+     5     5    3     3     2  Y    MIXED 3/5    5
+     6     9    0     0     9  N   PURE BLACK    6
+     7     1    0     0     1  N   PURE BLACK    3
+     8    11    0     0    11  N   PURE BLACK    7
+     9     5    0     0     5  N   PURE BLACK    8
+    10    13    0     0    13  N   PURE BLACK    9
+    11     3    0     0     3  N   PURE BLACK   10
+    12    17    5     5    12  Y   MIXED 5/17   11
+    13     9    0     0     9  N   PURE BLACK    4
+    14    15    0     0    14  N   PURE BLACK   12
+    15     5    0     0     5  N   PURE BLACK    2
+    16    19    0     0    19  N   PURE BLACK   13
+    17     9    0     0     9  N   PURE BLACK    6
+    18    15    0     0    14  N   PURE BLACK   12
+    19     1    0     0     1  N   PURE BLACK    1
+    20     9    0     0     9  N   PURE BLACK   14
+    21    23    0     0    23  N   PURE BLACK   15
+    22    17    5     5    12  Y   MIXED 5/17   16
+    23     1    1     1     0  Y    PURE BLUE   17
+    24    23    0     0    23  N   PURE BLACK   18
+    25    11    0     0    11  N   PURE BLACK    7
+    26    19    0     0    19  N   PURE BLACK   13
+    27    23    0     0    23  N   PURE BLACK   18
+    28    11    0     0    11  N   PURE BLACK   19
+    29    25    0     0    24  N   PURE BLACK   20
+    30    37    7     7    30  Y   MIXED 7/37   21
+    31    33    7     7    26  Y   MIXED 7/33   22
+    32    31    0     0    31  N   PURE BLACK   23
+    33    23    0     0    23  N   PURE BLACK   15
+    34     9    0     0     9  N   PURE BLACK   14
+    35    29    0     0    29  N   PURE BLACK   24
+    36     5    0     0     5  N   PURE BLACK    8
+    37    13    0     0    13  N   PURE BLACK    9
+    38    37    0     0    37  N   PURE BLACK   25
+    39    31    0     0    31  N   PURE BLACK   23
+    40    25    0     0    24  N   PURE BLACK   20
+    41    29    0     0    29  N   PURE BLACK   24
+    42    37    0     0    37  N   PURE BLACK   26
+    43    29    7     7    22  Y   MIXED 7/29   27
+    44    29    7     7    22  Y   MIXED 7/29   28
+    45    33    0     0    33  N   PURE BLACK   29
+    46    41    9     8    32  Y   MIXED 9/41   30
+    47    37    0     0    37  N   PURE BLACK   26
+    48    33    0     0    33  N   PURE BLACK   29
+    49    37    0     0    37  N   PURE BLACK   25
+    50     3    0     0     3  N   PURE BLACK   10
+    51    43    0     0    42  N   PURE BLACK   31
+    52    43    0     0    42  N   PURE BLACK   31
+    53    11    0     0    11  N   PURE BLACK   19
+    54    15    9     8     6  Y   MIXED 9/15   32
+    55    15    3     3    12  Y   MIXED 3/15   33
+
+  SUMMARY:
+    PURE BLUE classes: 2
+    PURE BLACK classes: 44
+    MIXED classes: 10
+    Transpose-self (SC analog): 12
+    PURE BLUE that are transpose-self: 2
+    PURE BLUE that are NOT transpose-self: 0
+    RED pairs (transpose, different class): 22
+    Time: 2.5s
+
+######################################################################
+    5000/32768 (111s)
+    10000/32768 (222s)
+    15000/32768 (333s)
+    20000/32768 (444s)
+    25000/32768 (555s)
+    30000/32768 (665s)
+
+  n=7: 456 iso classes, 272 merged classes
+  32768 tilings, 15 tiles
+  Total flip-pair lines: 16384
+  BLUE lines: 256
+  BLACK lines: 16128
+  Grid-sym tilings: 512/32768
+
+  PER-CLASS BREAKDOWN:
+   idx fiber   gs  blue black ts         type merged
+     0     1    1     1     0  Y    PURE BLUE    0
+     1     1    0     0     1  N   PURE BLACK    1
+     2     5    0     0     5  N   PURE BLACK    2
+     3     1    0     0     1  N   PURE BLACK    3
+     4     9    0     0     9  N   PURE BLACK    4
+     5     5    0     0     5  N   PURE BLACK    5
+     6     9    0     0     9  N   PURE BLACK    6
+     7     1    1     1     0  Y    PURE BLUE    7
+     8    11    0     0    11  N   PURE BLACK    8
+     9     5    0     0     5  N   PURE BLACK    9
+    10    13    0     0    13  N   PURE BLACK   10
+    11     3    0     0     3  N   PURE BLACK   11
+    12    17    0     0    17  N   PURE BLACK   12
+    13     9    1     1     8  Y    MIXED 1/9   13
+    14    15    0     0    15  N   PURE BLACK   14
+    15     5    0     0     5  N   PURE BLACK    5
+    16    19    0     0    19  N   PURE BLACK   15
+    17     9    3     3     6  Y    MIXED 3/9   16
+    18    15    0     0    15  N   PURE BLACK   17
+    19     1    0     0     1  N   PURE BLACK    3
+    20     9    0     0     9  N   PURE BLACK   18
+    21    23    0     0    23  N   PURE BLACK   19
+    22    17    0     0    17  N   PURE BLACK   20
+    23     1    0     0     1  N   PURE BLACK   21
+    24    23    0     0    23  N   PURE BLACK   22
+    25    11    3     3     8  Y   MIXED 3/11   23
+    26    19    0     0    19  N   PURE BLACK   24
+    27    23    0     0    23  N   PURE BLACK   25
+    28    11    0     0    11  N   PURE BLACK   26
+    29    25    0     0    25  N   PURE BLACK   27
+    30    37    0     0    37  N   PURE BLACK   28
+    31    33    0     0    33  N   PURE BLACK   29
+    32    31    0     0    31  N   PURE BLACK   30
+    33    23    0     0    23  N   PURE BLACK   31
+    34     9    0     0     9  N   PURE BLACK   32
+    35    29    0     0    29  N   PURE BLACK   33
+    36     5    1     1     4  Y    MIXED 1/5   34
+    37    13    3     3    10  Y   MIXED 3/13   35
+    38    37    0     0    37  N   PURE BLACK   36
+    39    31    0     0    31  N   PURE BLACK   37
+    40    25    0     0    25  N   PURE BLACK   38
+    41    29    0     0    29  N   PURE BLACK   39
+    42    37    0     0    37  N   PURE BLACK   40
+    43    29    0     0    29  N   PURE BLACK   41
+    44    29    0     0    29  N   PURE BLACK   42
+    45    33    0     0    33  N   PURE BLACK   43
+    46    41    0     0    41  N   PURE BLACK   44
+    47    37    0     0    37  N   PURE BLACK   45
+    48    33    0     0    33  N   PURE BLACK   46
+    49    37    0     0    37  N   PURE BLACK   47
+    50     3    3     3     0  Y    PURE BLUE   48
+    51    43    0     0    43  N   PURE BLACK   49
+    52    43    0     0    43  N   PURE BLACK   50
+    53    11    0     0    11  N   PURE BLACK   51
+    54    15    0     0    15  N   PURE BLACK   52
+    55    15    0     0    15  N   PURE BLACK   53
+    56    33    1     1    32  Y   MIXED 1/33   54
+    57    17    0     0    17  N   PURE BLACK   12
+    58    27    0     0    27  N   PURE BLACK   55
+    59     9    0     0     9  N   PURE BLACK    4
+    60    33    0     0    33  N   PURE BLACK   56
+    61    15    0     0    15  N   PURE BLACK   17
+    62    25    5     5    20  Y   MIXED 5/25   57
+    63     5    0     0     5  N   PURE BLACK    2
+    64    17    0     0    17  N   PURE BLACK   58
+    65    41    0     0    41  N   PURE BLACK   59
+    66    29    0     0    29  N   PURE BLACK   60
+    67     5    0     0     5  N   PURE BLACK   61
+    68    39    0     0    39  N   PURE BLACK   62
+    69    19    0     0    19  N   PURE BLACK   24
+    70    31    5     5    26  Y   MIXED 5/31   63
+    71     9    0     0     9  N   PURE BLACK    6
+    72    37    0     0    37  N   PURE BLACK   64
+    73    15    0     0    15  N   PURE BLACK   14
+    74    27    0     0    27  N   PURE BLACK   55
+    75     1    0     0     1  N   PURE BLACK    1
+    76    19    0     0    19  N   PURE BLACK   65
+    77    43    0     0    43  N   PURE BLACK   66
+    78    27    3     3    24  Y   MIXED 3/27   67
+    79     1    1     1     0  Y    PURE BLUE   68
+    80    69    0     0    69  N   PURE BLACK   69
+    81    59    0     0    59  N   PURE BLACK   70
+    82    55    0     0    55  N   PURE BLACK   71
+    83    41    5     5    36  Y   MIXED 5/41   72
+    84    17    1     1    16  Y   MIXED 1/17   73
+    85    51    0     0    51  N   PURE BLACK   74
+    86     9    0     0     9  N   PURE BLACK   32
+    87    23    0     0    23  N   PURE BLACK   31
+    88    65    0     0    65  N   PURE BLACK   75
+    89    53    0     0    53  N   PURE BLACK   76
+    90    45    0     0    45  N   PURE BLACK   77
+    91    29    0     0    29  N   PURE BLACK   60
+    92    49    0     0    49  N   PURE BLACK   78
+    93    17    0     0    17  N   PURE BLACK   20
+    94    65    0     0    65  N   PURE BLACK   79
+    95    51    0     0    51  N   PURE BLACK   80
+    96    49    0     0    49  N   PURE BLACK   81
+    97    31    5     5    26  Y   MIXED 5/31   82
+    98    57    0     0    57  N   PURE BLACK   83
+    99    41    0     0    41  N   PURE BLACK   84
+   100    35    0     0    35  N   PURE BLACK   85
+   101     5    0     0     5  N   PURE BLACK   61
+   102    15    0     0    15  N   PURE BLACK   86
+   103     1    0     0     1  N   PURE BLACK   21
+   104    47    0     0    47  N   PURE BLACK   87
+   105    23    0     0    23  N   PURE BLACK   25
+   106    37    0     0    37  N   PURE BLACK   64
+   107    11    0     0    11  N   PURE BLACK    8
+   108    45    7     7    38  Y   MIXED 7/45   88
+   109    19    0     0    19  N   PURE BLACK   15
+   110    33    0     0    33  N   PURE BLACK   56
+   111    23    0     0    23  N   PURE BLACK   89
+   112    53    0     0    53  N   PURE BLACK   90
+   113    35    0     0    35  N   PURE BLACK   85
+   114    51    7     7    44  Y   MIXED 7/51   91
+   115    23    0     0    23  N   PURE BLACK   22
+   116    39    0     0    39  N   PURE BLACK   62
+   117    47    0     0    47  N   PURE BLACK   87
+   118    23    0     0    23  N   PURE BLACK   92
+   119    49    0     0    49  N   PURE BLACK   93
+   120    91    0     0    91  N   PURE BLACK   94
+   121    73    0     0    73  N   PURE BLACK   95
+   122    67    0     0    66  N   PURE BLACK   96
+   123    45    0     0    45  N   PURE BLACK   77
+   124    23    0     0    23  N   PURE BLACK   97
+   125    65    0     0    65  N   PURE BLACK   98
+   126    11    0     0    11  N   PURE BLACK   51
+   127    25    0     0    25  N   PURE BLACK   38
+   128    79    0     0    79  N   PURE BLACK   99
+   129    59    0     0    59  N   PURE BLACK  100
+   130    49    5     5    44  Y   MIXED 5/49  101
+   131    59    0     0    59  N   PURE BLACK  102
+   132    81    0     0    81  N   PURE BLACK  103
+   133    59    0     0    59  N   PURE BLACK  104
+   134    55    0     0    55  N   PURE BLACK  105
+   135    65    0     0    65  N   PURE BLACK  106
+   136    93    1     1    92  Y   MIXED 1/93  107
+   137    85    7     7    78  Y   MIXED 7/85  108
+   138    73    0     0    73  N   PURE BLACK  109
+   139    59    0     0    59  N   PURE BLACK   70
+   140    69    0     0    69  N   PURE BLACK   69
+   141    71    0     0    71  N   PURE BLACK  110
+   142    37    0     0    37  N   PURE BLACK   28
+   143    33    0     0    33  N   PURE BLACK   29
+   144    89    0     0    89  N   PURE BLACK  111
+   145    77    0     0    77  N   PURE BLACK  112
+   146    59    0     0    59  N   PURE BLACK  100
+   147    41    0     0    41  N   PURE BLACK   59
+   148    71    0     0    71  N   PURE BLACK  113
+   149    69    5     5    64  Y   MIXED 5/69  114
+   150    31    0     0    31  N   PURE BLACK   37
+   151    23    0     0    23  N   PURE BLACK   19
+   152    93    3     3    90  Y   MIXED 3/93  115
+   153    91    0     0    91  N   PURE BLACK  116
+   154    77    0     0    77  N   PURE BLACK  112
+   155    69    0     0    69  N   PURE BLACK  117
+   156    17    0     0    17  N   PURE BLACK   58
+   157    59    0     0    59  N   PURE BLACK  102
+   158     9    0     0     9  N   PURE BLACK   18
+   159    29    0     0    29  N   PURE BLACK   39
+   160    77    0     0    77  N   PURE BLACK  118
+   161    71    0     0    71  N   PURE BLACK  119
+   162    53    0     0    53  N   PURE BLACK   76
+   163    41    0     0    41  N   PURE BLACK   84
+   164    15    0     0    15  N   PURE BLACK   86
+   165    49    0     0    49  N   PURE BLACK   78
+   166     5    0     0     5  N   PURE BLACK    9
+   167    13    0     0    13  N   PURE BLACK   10
+   168   103    0     0   103  N   PURE BLACK  120
+   169    91    0     0    91  N   PURE BLACK  121
+   170    73    0     0    73  N   PURE BLACK  122
+   171    55    0     0    55  N   PURE BLACK   71
+   172    79    0     0    79  N   PURE BLACK  123
+   173    79    5     5    74  Y   MIXED 5/79  124
+   174    37    0     0    37  N   PURE BLACK   47
+   175    31    0     0    31  N   PURE BLACK   30
+   176    89    0     0    89  N   PURE BLACK  125
+   177    73    0     0    73  N   PURE BLACK  109
+   178    49    0     0    49  N   PURE BLACK   93
+   179    75    0     0    75  N   PURE BLACK  126
+   180    71    0     0    71  N   PURE BLACK  110
+   181    25    0     0    25  N   PURE BLACK   27
+   182   101    0     0   101  N   PURE BLACK  127
+   183    95    0     0    95  N   PURE BLACK  128
+   184    77    7     7    70  Y   MIXED 7/77  129
+   185    65    7     7    58  Y   MIXED 7/65  130
+   186    65    0     0    65  N   PURE BLACK   98
+   187    29    0     0    29  N   PURE BLACK   33
+   188    75    0     0    74  N   PURE BLACK  131
+   189    65    3     3    62  Y   MIXED 3/65  132
+   190    43    0     0    43  N   PURE BLACK   66
+   191    51    0     0    51  N   PURE BLACK   74
+   192   111    3     3   108  Y  MIXED 3/111  133
+   193   109    0     0   109  N   PURE BLACK  134
+   194    91    0     0    91  N   PURE BLACK  121
+   195    81    0     0    81  N   PURE BLACK  135
+   196    77    0     0    77  N   PURE BLACK  136
+   197    37    0     0    37  N   PURE BLACK   45
+   198   103    0     0   103  N   PURE BLACK  137
+   199    97    0     0    97  N   PURE BLACK  138
+   200    73    0     0    73  N   PURE BLACK   95
+   201    59    0     0    59  N   PURE BLACK  104
+   202    75    0     0    75  N   PURE BLACK  126
+   203    29    0     0    29  N   PURE BLACK   41
+   204    97    0     0    97  N   PURE BLACK  139
+   205    81    7     7    74  Y   MIXED 7/81  140
+   206    73    0     0    73  N   PURE BLACK  141
+   207    51    0     0    51  N   PURE BLACK   80
+   208   109    0     0   109  N   PURE BLACK  142
+   209   103    0     0   103  N   PURE BLACK  143
+   210    81    0     0    81  N   PURE BLACK  144
+   211    67    0     0    67  N   PURE BLACK  145
+   212    77    7     7    70  Y   MIXED 7/77  146
+   213    29    0     0    29  N   PURE BLACK   42
+   214    91    0     0    91  N   PURE BLACK  147
+   215    81    0     0    81  N   PURE BLACK  148
+   216    53    0     0    53  N   PURE BLACK   90
+   217    71    0     0    71  N   PURE BLACK  113
+   218    89    0     0    89  N   PURE BLACK  149
+   219    69    0     0    69  N   PURE BLACK  117
+   220    55    0     0    55  N   PURE BLACK  105
+   221    41    1     1    40  Y   MIXED 1/41  150
+   222    37    7     7    30  Y   MIXED 7/37  151
+   223   117    0     0   117  N   PURE BLACK  152
+   224    99    0     0    99  N   PURE BLACK  153
+   225   117    3     3   114  Y  MIXED 3/117  154
+   226   115    0     0   115  N   PURE BLACK  155
+   227    99    0     0    99  N   PURE BLACK  153
+   228    91    5     5    86  Y   MIXED 5/91  156
+   229   101    0     0   101  N   PURE BLACK  157
+   230    77    0     0    77  N   PURE BLACK  118
+   231   113    0     0   113  N   PURE BLACK  158
+   232   103    0     0   103  N   PURE BLACK  159
+   233    87    7     7    80  Y   MIXED 7/87  160
+   234    71    0     0    71  N   PURE BLACK  119
+   235   109    0     0   109  N   PURE BLACK  161
+   236   103    0     0   103  N   PURE BLACK  162
+   237   101    0     0   101  N   PURE BLACK  163
+   238    81    0     0    81  N   PURE BLACK  144
+   239    81    0     0    81  N   PURE BLACK  164
+   240    69    5     5    64  Y   MIXED 5/69  165
+   241    77    0     0    77  N   PURE BLACK  166
+   242    49    0     0    49  N   PURE BLACK   81
+   243    25    0     0    25  N   PURE BLACK  167
+   244    97    0     0    97  N   PURE BLACK  168
+   245    83    0     0    83  N   PURE BLACK  169
+   246    61    7     7    54  Y   MIXED 7/61  170
+   247    93    0     0    93  N   PURE BLACK  171
+   248    67    0     0    67  N   PURE BLACK  145
+   249    65    5     5    60  Y   MIXED 5/65  172
+   250   101    0     0   101  N   PURE BLACK  173
+   251    81    0     0    81  N   PURE BLACK  135
+   252    67    5     5    62  Y   MIXED 5/67  174
+   253    83    7     7    76  Y   MIXED 7/83  175
+   254    79    0     0    79  N   PURE BLACK  123
+   255    33    0     0    33  N   PURE BLACK   46
+   256    83    0     0    83  N   PURE BLACK  176
+   257    77    0     0    77  N   PURE BLACK  136
+   258   101    0     0   101  N   PURE BLACK  177
+   259    89    0     0    89  N   PURE BLACK  178
+   260    73    0     0    73  N   PURE BLACK  122
+   261    23    0     0    23  N   PURE BLACK   97
+   262    67    5     5    62  Y   MIXED 5/67  179
+   263   121    0     0   121  N   PURE BLACK  180
+   264   111    0     0   111  N   PURE BLACK  181
+   265    93    7     7    86  Y   MIXED 7/93  182
+   266    75    7     7    68  Y   MIXED 7/75  183
+   267   105    0     0   105  N   PURE BLACK  184
+   268    91    0     0    91  N   PURE BLACK  185
+   269    67    0     0    66  N   PURE BLACK   96
+   270   109    0     0   109  N   PURE BLACK  186
+   271    95    0     0    95  N   PURE BLACK  187
+   272    73    0     0    73  N   PURE BLACK  141
+   273    83    0     0    83  N   PURE BLACK  188
+   274    41    0     0    41  N   PURE BLACK  189
+   275    33    7     7    26  Y   MIXED 7/33  190
+   276   111    0     0   111  N   PURE BLACK  191
+   277    81    0     0    81  N   PURE BLACK  164
+   278   123    0     0   123  N   PURE BLACK  192
+   279   111    0     0   111  N   PURE BLACK  193
+   280    95    7     7    88  Y   MIXED 7/95  194
+   281    77    0     0    77  N   PURE BLACK  166
+   282    89    0     0    89  N   PURE BLACK  195
+   283   111    0     0   111  N   PURE BLACK  196
+   284    91    0     0    91  N   PURE BLACK  197
+   285    75    0     0    74  N   PURE BLACK  131
+   286   109    0     0   109  N   PURE BLACK  198
+   287    93    0     0    93  N   PURE BLACK  199
+   288    71    7     7    64  Y   MIXED 7/71  200
+   289    89    0     0    89  N   PURE BLACK  201
+   290    27    3     3    24  Y   MIXED 3/27  202
+   291   129    0     0   129  N   PURE BLACK  203
+   292   113    0     0   113  N   PURE BLACK  204
+   293   115    0     0   115  N   PURE BLACK  205
+   294    89    0     0    89  N   PURE BLACK  206
+   295    91    0     0    91  N   PURE BLACK  207
+   296   105    7     7    98  Y  MIXED 7/105  208
+   297    97    0     0    97  N   PURE BLACK  139
+   298    83    0     0    83  N   PURE BLACK  188
+   299    65    0     0    65  N   PURE BLACK   79
+   300    83    0     0    83  N   PURE BLACK  176
+   301    89    0     0    89  N   PURE BLACK  125
+   302    41    0     0    41  N   PURE BLACK   44
+   303    37    0     0    37  N   PURE BLACK   40
+   304   105    7     7    98  Y  MIXED 7/105  209
+   305    91    0     0    91  N   PURE BLACK  116
+   306    65    0     0    65  N   PURE BLACK  106
+   307    89    0     0    89  N   PURE BLACK  149
+   308    89    0     0    89  N   PURE BLACK  111
+   309    33    0     0    33  N   PURE BLACK   43
+   310   109    0     0   108  N   PURE BLACK  210
+   311   109    0     0   109  N   PURE BLACK  211
+   312    91    0     0    91  N   PURE BLACK  147
+   313    81    0     0    81  N   PURE BLACK  148
+   314    79    0     0    79  N   PURE BLACK   99
+   315    37    0     0    37  N   PURE BLACK   36
+   316    89    0     0    89  N   PURE BLACK  206
+   317    83    0     0    83  N   PURE BLACK  169
+   318    57    0     0    57  N   PURE BLACK   83
+   319    65    0     0    65  N   PURE BLACK   75
+   320     3    0     0     3  N   PURE BLACK   11
+   321   123    7     7   116  Y  MIXED 7/123  212
+   322   109    0     0   109  N   PURE BLACK  134
+   323   101    0     0   101  N   PURE BLACK  173
+   324   103    0     0   103  N   PURE BLACK  120
+   325   121    0     0   121  N   PURE BLACK  213
+   326   115    0     0   115  N   PURE BLACK  214
+   327    81    0     0    81  N   PURE BLACK  103
+   328    91    0     0    91  N   PURE BLACK   94
+   329   133    0     0   133  N   PURE BLACK  215
+   330   131    0     0   131  N   PURE BLACK  216
+   331   105    0     0   105  N   PURE BLACK  184
+   332    91    0     0    91  N   PURE BLACK  185
+   333    89    0     0    89  N   PURE BLACK  178
+   334   101    0     0   101  N   PURE BLACK  177
+   335    43    0     0    43  N   PURE BLACK   50
+   336    43    0     0    43  N   PURE BLACK   49
+   337   125    9     9   114  Y  MIXED 9/125  217
+   338   117    9     9   108  Y  MIXED 9/117  218
+   339    95    0     0    95  N   PURE BLACK  128
+   340   101    0     0   101  N   PURE BLACK  127
+   341   115    0     0   115  N   PURE BLACK  214
+   342   121    0     0   121  N   PURE BLACK  213
+   343   103    0     0   103  N   PURE BLACK  137
+   344    97    0     0    97  N   PURE BLACK  138
+   345    23    0     0    23  N   PURE BLACK   92
+   346    11    0     0    11  N   PURE BLACK   26
+   347    89    0     0    89  N   PURE BLACK  201
+   348    89    0     0    89  N   PURE BLACK  195
+   349    19    0     0    19  N   PURE BLACK   65
+   350   131    0     0   131  N   PURE BLACK  219
+   351   123    0     0   123  N   PURE BLACK  220
+   352    93    0     0    93  N   PURE BLACK  171
+   353   101    0     0   101  N   PURE BLACK  163
+   354   109    0     0   109  N   PURE BLACK  211
+   355   109    0     0   108  N   PURE BLACK  210
+   356    23    0     0    23  N   PURE BLACK   89
+   357    45    7     7    38  Y   MIXED 7/45  221
+   358    41    0     0    41  N   PURE BLACK  189
+   359   131    0     0   131  N   PURE BLACK  222
+   360   109    0     0   109  N   PURE BLACK  161
+   361   137    0     0   137  N   PURE BLACK  223
+   362   137    0     0   136  N   PURE BLACK  224
+   363   113    0     0   113  N   PURE BLACK  204
+   364   103    0     0   103  N   PURE BLACK  159
+   365   129    0     0   129  N   PURE BLACK  225
+   366   117    5     5   110  Y  MIXED 5/117  226
+   367   131    0     0   131  N   PURE BLACK  227
+   368   123    0     0   122  N   PURE BLACK  228
+   369   117    0     0   116  N   PURE BLACK  229
+   370   129    9     9   120  Y  MIXED 9/129  230
+   371    97    0     0    97  N   PURE BLACK  168
+   372   101    0     0   101  N   PURE BLACK  157
+   373    91    0     0    91  N   PURE BLACK  207
+   374    91    0     0    91  N   PURE BLACK  197
+   375   115    7     7   108  Y  MIXED 7/115  231
+   376   117    0     0   116  N   PURE BLACK  229
+   377    11    3     3     8  Y   MIXED 3/11  232
+   378    25    0     0    25  N   PURE BLACK  167
+   379   137    7     7   130  Y  MIXED 7/137  233
+   380   109    0     0   109  N   PURE BLACK  186
+   381    95    0     0    95  N   PURE BLACK  187
+   382    15    0     0    15  N   PURE BLACK   52
+   383   131    0     0   131  N   PURE BLACK  219
+   384   123    0     0   123  N   PURE BLACK  220
+   385   103    0     0   103  N   PURE BLACK  143
+   386   109    0     0   109  N   PURE BLACK  142
+   387   151    9     9   142  Y  MIXED 9/151  234
+   388   145    9     9   136  Y  MIXED 9/145  235
+   389   111    0     0   111  N   PURE BLACK  181
+   390   121    0     0   121  N   PURE BLACK  180
+   391   131    0     0   131  N   PURE BLACK  216
+   392   133    0     0   133  N   PURE BLACK  215
+   393    53    7     7    46  Y   MIXED 7/53  236
+   394   151    0     0   150  N   PURE BLACK  237
+   395   139    0     0   138  N   PURE BLACK  238
+   396   135    0     0   135  N   PURE BLACK  239
+   397   133    0     0   131  N   PURE BLACK  240
+   398   137    0     0   137  N   PURE BLACK  223
+   399   123    0     0   123  N   PURE BLACK  192
+   400   143    5     5   138  Y  MIXED 5/143  241
+   401   117    0     0   117  N   PURE BLACK  152
+   402   141    5     5   136  Y  MIXED 5/141  242
+   403   139    9     9   130  Y  MIXED 9/139  243
+   404   129    0     0   129  N   PURE BLACK  203
+   405   115    0     0   115  N   PURE BLACK  155
+   406   133    0     0   131  N   PURE BLACK  240
+   407   135    0     0   135  N   PURE BLACK  239
+   408   141    7     7   132  Y  MIXED 7/141  244
+   409   143    0     0   142  N   PURE BLACK  245
+   410   143    0     0   142  N   PURE BLACK  245
+   411    45    1     1    44  Y   MIXED 1/45  246
+   412   123    0     0   122  N   PURE BLACK  228
+   413   137    0     0   136  N   PURE BLACK  224
+   414   113    0     0   113  N   PURE BLACK  158
+   415   109    0     0   109  N   PURE BLACK  198
+   416    93    0     0    93  N   PURE BLACK  199
+   417   131    0     0   131  N   PURE BLACK  222
+   418   135    0     0   135  N   PURE BLACK  247
+   419   133    7     7   124  Y  MIXED 7/133  248
+   420   139    7     7   132  Y  MIXED 7/139  249
+   421    43    7     7    36  Y   MIXED 7/43  250
+   422   111    0     0   111  N   PURE BLACK  196
+   423   111    0     0   111  N   PURE BLACK  191
+   424   111    0     0   111  N   PURE BLACK  193
+   425   103    0     0   103  N   PURE BLACK  162
+   426    15    0     0    15  N   PURE BLACK   53
+   427   139    0     0   138  N   PURE BLACK  238
+   428   139    0     0   137  N   PURE BLACK  251
+   429   127    5     5   122  Y  MIXED 5/127  252
+   430   131    0     0   131  N   PURE BLACK  227
+   431   135    9     9   126  Y  MIXED 9/135  253
+   432   129    9     9   120  Y  MIXED 9/129  254
+   433   141    7     7   134  Y  MIXED 7/141  255
+   434   139    0     0   137  N   PURE BLACK  251
+   435   135    0     0   135  N   PURE BLACK  247
+   436   145    7     7   138  Y  MIXED 7/145  256
+   437   129    0     0   129  N   PURE BLACK  225
+   438   137    9     9   128  Y  MIXED 9/137  257
+   439   133    9     9   124  Y  MIXED 9/133  258
+   440   115    0     0   115  N   PURE BLACK  205
+   441   155    7     7   148  Y  MIXED 7/155  259
+   442   151    9     9   142  Y  MIXED 9/151  260
+   443   153    0     0   153  N   PURE BLACK  261
+   444   147    9     9   136  Y  MIXED 9/147  262
+   445   159    7     7   152  Y  MIXED 7/159  263
+   446   159    7     7   152  Y  MIXED 7/159  264
+   447   151    9     9   140  Y  MIXED 9/151  265
+   448   153    0     0   153  N   PURE BLACK  261
+   449   159    9     9   146  Y  MIXED 9/159  266
+   450   151    0     0   150  N   PURE BLACK  237
+   451   153    9     9   142  Y  MIXED 9/153  267
+   452   157    9     9   148  Y  MIXED 9/157  268
+   453    25    9     9    16  Y   MIXED 9/25  269
+   454    57    9     9    48  Y   MIXED 9/57  270
+   455     9    3     3     6  Y    MIXED 3/9  271
+
+  SUMMARY:
+    PURE BLUE classes: 4
+    PURE BLACK classes: 368
+    MIXED classes: 84
+    Transpose-self (SC analog): 88
+    PURE BLUE that are transpose-self: 4
+    PURE BLUE that are NOT transpose-self: 0
+    RED pairs (transpose, different class): 184
+    Time: 726.8s
+
+
+======================================================================
+  CROSS-n SUMMARY
+======================================================================
+    n  classes   merged   PB  PBk  Mix  blue_L black_L  gs_frac
+    3        2        2    2    0    0       1       0   1.0000
+    4        4        3    1    2    1       2       2   0.5000
+    5       12       10    3    4    5       8      24   0.2500
+    6       56       34    2   44   10      32     480   0.0625
+    7      456      272    4  368   84     256   16128   0.0156
+
+  PURE BLUE class count sequence: [2, 1, 3, 2, 4]
+  PURE BLACK class count sequence: [0, 2, 4, 44, 368]
+  MIXED class count sequence: [0, 1, 5, 10, 84]
+
+  DONE.
+================================================================================
