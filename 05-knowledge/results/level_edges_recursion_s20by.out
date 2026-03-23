@@ -1,0 +1,82 @@
+======================================================================
+  CLOSING TWO GAPS: LEVEL EDGES + n->n-2 RECURSION
+======================================================================
+
+======================================================================
+  GAP 3: LEVEL EDGE ANALYSIS
+======================================================================
+
+  n=5: 1 level edges
+    (6,7): H=9, sizes=(120,120)
+  Level edges occur at H values: [9]
+    H=9: 2 classes, 1 level edges
+
+  n=6: 15 level edges
+    (8,9): H=9, sizes=(720,720)
+    (10,11): H=9, sizes=(720,720)
+    (17,18): H=15, sizes=(720,720)
+    (27,28): H=23, sizes=(720,720)
+    (31,32): H=25, sizes=(720,720)
+    (35,37): H=29, sizes=(720,720)
+    (35,38): H=29, sizes=(720,720)
+    (37,38): H=29, sizes=(720,720)
+    (46,47): H=37, sizes=(720,720)
+    (46,48): H=37, sizes=(720,720)
+    (46,49): H=37, sizes=(720,720)
+    (46,50): H=37, sizes=(720,720)
+    (47,48): H=37, sizes=(720,720)
+    (49,50): H=37, sizes=(720,720)
+    (52,53): H=43, sizes=(720,720)
+  Level edges occur at H values: [9, 15, 23, 25, 29, 37, 43]
+    H=9: 5 classes, 2 level edges
+    H=15: 6 classes, 1 level edges
+    H=23: 4 classes, 1 level edges
+    H=25: 2 classes, 1 level edges
+    H=29: 4 classes, 3 level edges
+    H=37: 5 classes, 6 level edges
+    H=43: 2 classes, 1 level edges
+
+======================================================================
+  GAP 5: THE n -> n-2 RECURSION
+======================================================================
+
+  n=5: PoS class (1,2,2,2,3) has 3 iso classes
+    Class 8: H=11, size=120
+      Source=1(score 1), Sink=4(score 3)
+      Middle vertices: [0, 2, 3], scores: [np.int64(2), np.int64(2), np.int64(2)]
+      Middle tournament H = 3
+      Middle canonical: (np.int8(0), np.int8(0), np.int8(1), np.int8(1), np.int8(0), np.int8(0), np.int8(0), np.int8(1), np.int8(0))...
+    Class 9: H=15, size=40
+      Source=0(score 1), Sink=4(score 3)
+      Middle vertices: [1, 2, 3], scores: [np.int64(2), np.int64(2), np.int64(2)]
+      Middle tournament H = 3
+      Middle canonical: (np.int8(0), np.int8(0), np.int8(1), np.int8(1), np.int8(0), np.int8(0), np.int8(0), np.int8(1), np.int8(0))...
+    Class 10: H=13, size=120
+      Source=1(score 1), Sink=4(score 3)
+      Middle vertices: [0, 2, 3], scores: [np.int64(2), np.int64(2), np.int64(2)]
+      Middle tournament H = 1
+      Middle canonical: (np.int8(0), np.int8(0), np.int8(0), np.int8(1), np.int8(0), np.int8(0), np.int8(1), np.int8(1), np.int8(0))...
+
+  n=3 iso classes:
+    H=1, size=6
+    H=3, size=2
+
+  THE RECURSION:
+  PoS iso classes at n=5 map to iso classes at n=3 via "remove source and sink."
+  - PoS class with H=11 -> middle H=?
+  - PoS class with H=13 -> middle H=?
+  - PoS class with H=15 -> middle H=?
+
+  If H_mid determines the PoS H: we have a FORMULA connecting levels.
+  The source-sink embedding formula: H_n = (2^k + 1) * H_3
+  where k = (n-1)/2 = 2 at n=5. So H_5 = 5 * H_3.
+  H_3 = 1: H_5 = 5. H_3 = 3: H_5 = 15.
+  But PoS has H = 11, 13, 15 -- not just 5 and 15.
+  So the recursion is NOT just multiplication by 2^k+1.
+
+  The CORRECTION: the source-sink formula works for the T->S extreme
+  (sink beats source), giving H = (2^k+1)*H_mid = 5*H_mid.
+  For S->T (source beats sink): H = 2*H_mid + 2n-1 (different formula).
+  The intermediate cases (PoS with source-sink in various configurations)
+  give H values between these extremes.
+
