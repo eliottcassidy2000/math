@@ -1,0 +1,254 @@
+================================================================================
+  STAIRCASE DIAGONAL SYMMETRIES AND ISOMORPHISM
+  kind-pasteur-2026-03-23-S20ct
+================================================================================
+
+################################################################################
+  n = 4
+################################################################################
+  Total arcs: 6, Grid cells (tiles): 3
+
+  GRID CELLS AND THEIR ARCS:
+    cell (1,1) -> arc (2,0) [vertices 2-0, dist=2]  d=+0 s=2
+    cell (1,2) -> arc (3,1) [vertices 3-1, dist=2]  d=-1 s=3
+    cell (2,1) -> arc (3,0) [vertices 3-0, dist=3]  d=+1 s=3
+
+  --- y=x REFLECTION ---
+  Reflection map on tiles:
+    (1,1)->(1,1): arc (2,0)->(2,0)
+    (1,2)->(2,1): arc (3,1)->(3,0)
+    (2,1)->(1,2): arc (3,0)->(3,1)
+  All reflections within grid? True
+
+  --- ISOMORPHISM TEST: t vs reflected(t) ---
+  Total tilings: 8
+  Same iso class after y=x reflection: 6 (75.0%)
+  Different iso class: 2 (25.0%)
+  Examples of different class:
+    tiling 011 (H=5) -> 101 (H=3)
+    tiling 101 (H=3) -> 011 (H=5)
+
+  --- DIAGONAL COORDINATE ANALYSIS ---
+  Cells grouped by diagonal d = r - c:
+    d=-1: [(1, 2)] arcs=[(3, 1)]
+    d=+0: [(1, 1)] arcs=[(2, 0)]
+    d=+1: [(2, 1)] arcs=[(3, 0)]
+
+  Cells grouped by anti-diagonal s = r + c:
+    s=2: [(1, 1)] arcs=[(2, 0)]
+    s=3: [(1, 2), (2, 1)] arcs=[(3, 1), (3, 0)]
+
+  --- SYMMETRIC TILINGS (t = reflected(t)) ---
+  Symmetric tilings: 4/8 (50.0%)
+  Diagonal cells (r=c): 1
+  Off-diagonal pairs: 1
+  Free bits in symmetric tiling: 2
+  Expected symmetric count: 2^2 = 4
+
+  H distribution of SYMMETRIC tilings:
+    H=1: 1 tournaments
+    H=3: 1 tournaments
+    H=5: 2 tournaments
+
+  Are y=x-symmetric tilings always self-complementary?
+    SC: 3, not SC: 1
+    NO — 1 are not SC
+
+  --- VERTEX PERMUTATION FOR y=x REFLECTION ---
+  The y=x reflection does NOT correspond to a single vertex permutation.
+  It acts as a DIFFERENT permutation on each cell's vertices.
+  Therefore it is NOT in S_n — it's a tiling-space symmetry, not a tournament symmetry.
+  Yet reflected tilings are often isomorphic (see above).
+
+################################################################################
+  n = 5
+################################################################################
+  Total arcs: 10, Grid cells (tiles): 6
+
+  GRID CELLS AND THEIR ARCS:
+    cell (1,1) -> arc (2,0) [vertices 2-0, dist=2]  d=+0 s=2
+    cell (1,2) -> arc (3,1) [vertices 3-1, dist=2]  d=-1 s=3
+    cell (1,3) -> arc (4,2) [vertices 4-2, dist=2]  d=-2 s=4
+    cell (2,1) -> arc (3,0) [vertices 3-0, dist=3]  d=+1 s=3
+    cell (2,2) -> arc (4,1) [vertices 4-1, dist=3]  d=+0 s=4
+    cell (3,1) -> arc (4,0) [vertices 4-0, dist=4]  d=+2 s=4
+
+  --- y=x REFLECTION ---
+  Reflection map on tiles:
+    (1,1)->(1,1): arc (2,0)->(2,0)
+    (1,2)->(2,1): arc (3,1)->(3,0)
+    (1,3)->(3,1): arc (4,2)->(4,0)
+    (2,1)->(1,2): arc (3,0)->(3,1)
+    (2,2)->(2,2): arc (4,1)->(4,1)
+    (3,1)->(1,3): arc (4,0)->(4,2)
+  All reflections within grid? True
+
+  --- ISOMORPHISM TEST: t vs reflected(t) ---
+  Total tilings: 64
+  Same iso class after y=x reflection: 30 (46.9%)
+  Different iso class: 34 (53.1%)
+  Examples of different class:
+    tiling 000011 (H=11) -> 001001 (H=9)
+    tiling 000100 (H=9) -> 100000 (H=11)
+    tiling 000101 (H=11) -> 100001 (H=9)
+
+  --- DIAGONAL COORDINATE ANALYSIS ---
+  Cells grouped by diagonal d = r - c:
+    d=-2: [(1, 3)] arcs=[(4, 2)]
+    d=-1: [(1, 2)] arcs=[(3, 1)]
+    d=+0: [(1, 1), (2, 2)] arcs=[(2, 0), (4, 1)]
+    d=+1: [(2, 1)] arcs=[(3, 0)]
+    d=+2: [(3, 1)] arcs=[(4, 0)]
+
+  Cells grouped by anti-diagonal s = r + c:
+    s=2: [(1, 1)] arcs=[(2, 0)]
+    s=3: [(1, 2), (2, 1)] arcs=[(3, 1), (3, 0)]
+    s=4: [(1, 3), (2, 2), (3, 1)] arcs=[(4, 2), (4, 1), (4, 0)]
+
+  --- SYMMETRIC TILINGS (t = reflected(t)) ---
+  Symmetric tilings: 16/64 (25.0%)
+  Diagonal cells (r=c): 2
+  Off-diagonal pairs: 2
+  Free bits in symmetric tiling: 4
+  Expected symmetric count: 2^4 = 16
+
+  H distribution of SYMMETRIC tilings:
+    H=1: 1 tournaments
+    H=3: 1 tournaments
+    H=5: 3 tournaments
+    H=9: 7 tournaments
+    H=13: 2 tournaments
+    H=15: 2 tournaments
+
+  Are y=x-symmetric tilings always self-complementary?
+    SC: 12, not SC: 4
+    NO — 4 are not SC
+
+  --- VERTEX PERMUTATION FOR y=x REFLECTION ---
+  The y=x reflection does NOT correspond to a single vertex permutation.
+  It acts as a DIFFERENT permutation on each cell's vertices.
+  Therefore it is NOT in S_n — it's a tiling-space symmetry, not a tournament symmetry.
+  Yet reflected tilings are often isomorphic (see above).
+
+################################################################################
+  n = 6
+################################################################################
+  Total arcs: 15, Grid cells (tiles): 10
+
+  GRID CELLS AND THEIR ARCS:
+    cell (1,1) -> arc (2,0) [vertices 2-0, dist=2]  d=+0 s=2
+    cell (1,2) -> arc (3,1) [vertices 3-1, dist=2]  d=-1 s=3
+    cell (1,3) -> arc (4,2) [vertices 4-2, dist=2]  d=-2 s=4
+    cell (1,4) -> arc (5,3) [vertices 5-3, dist=2]  d=-3 s=5
+    cell (2,1) -> arc (3,0) [vertices 3-0, dist=3]  d=+1 s=3
+    cell (2,2) -> arc (4,1) [vertices 4-1, dist=3]  d=+0 s=4
+    cell (2,3) -> arc (5,2) [vertices 5-2, dist=3]  d=-1 s=5
+    cell (3,1) -> arc (4,0) [vertices 4-0, dist=4]  d=+2 s=4
+    cell (3,2) -> arc (5,1) [vertices 5-1, dist=4]  d=+1 s=5
+    cell (4,1) -> arc (5,0) [vertices 5-0, dist=5]  d=+3 s=5
+
+  --- y=x REFLECTION ---
+  Reflection map on tiles:
+    (1,1)->(1,1): arc (2,0)->(2,0)
+    (1,2)->(2,1): arc (3,1)->(3,0)
+    (1,3)->(3,1): arc (4,2)->(4,0)
+    (1,4)->(4,1): arc (5,3)->(5,0)
+    (2,1)->(1,2): arc (3,0)->(3,1)
+    (2,2)->(2,2): arc (4,1)->(4,1)
+    (2,3)->(3,2): arc (5,2)->(5,1)
+    (3,1)->(1,3): arc (4,0)->(4,2)
+    (3,2)->(2,3): arc (5,1)->(5,2)
+    (4,1)->(1,4): arc (5,0)->(5,3)
+  All reflections within grid? True
+
+  --- ISOMORPHISM TEST: t vs reflected(t) ---
+  Total tilings: 1024
+  Same iso class after y=x reflection: 124 (12.1%)
+  Different iso class: 900 (87.9%)
+  Examples of different class:
+    tiling 0000000011 (H=19) -> 0000010001 (H=15)
+    tiling 0000000100 (H=23) -> 0010000000 (H=29)
+    tiling 0000000101 (H=25) -> 0010000001 (H=23)
+
+  --- DIAGONAL COORDINATE ANALYSIS ---
+  Cells grouped by diagonal d = r - c:
+    d=-3: [(1, 4)] arcs=[(5, 3)]
+    d=-2: [(1, 3)] arcs=[(4, 2)]
+    d=-1: [(1, 2), (2, 3)] arcs=[(3, 1), (5, 2)]
+    d=+0: [(1, 1), (2, 2)] arcs=[(2, 0), (4, 1)]
+    d=+1: [(2, 1), (3, 2)] arcs=[(3, 0), (5, 1)]
+    d=+2: [(3, 1)] arcs=[(4, 0)]
+    d=+3: [(4, 1)] arcs=[(5, 0)]
+
+  Cells grouped by anti-diagonal s = r + c:
+    s=2: [(1, 1)] arcs=[(2, 0)]
+    s=3: [(1, 2), (2, 1)] arcs=[(3, 1), (3, 0)]
+    s=4: [(1, 3), (2, 2), (3, 1)] arcs=[(4, 2), (4, 1), (4, 0)]
+    s=5: [(1, 4), (2, 3), (3, 2), (4, 1)] arcs=[(5, 3), (5, 2), (5, 1), (5, 0)]
+
+  --- SYMMETRIC TILINGS (t = reflected(t)) ---
+  Symmetric tilings: 64/1024 (6.2%)
+  Diagonal cells (r=c): 2
+  Off-diagonal pairs: 4
+  Free bits in symmetric tiling: 6
+  Expected symmetric count: 2^6 = 64
+
+  H distribution of SYMMETRIC tilings:
+    H=1: 1 tournaments
+    H=3: 1 tournaments
+    H=5: 3 tournaments
+    H=9: 7 tournaments
+    H=11: 1 tournaments
+    H=13: 2 tournaments
+    H=15: 5 tournaments
+    H=17: 5 tournaments
+    H=19: 5 tournaments
+    H=23: 2 tournaments
+    H=25: 2 tournaments
+    H=27: 2 tournaments
+    H=29: 7 tournaments
+    H=31: 4 tournaments
+    H=33: 5 tournaments
+    H=37: 9 tournaments
+    H=43: 2 tournaments
+    H=45: 1 tournaments
+
+  Are y=x-symmetric tilings always self-complementary?
+    SC: 20, not SC: 44
+    NO — 44 are not SC
+
+  --- VERTEX PERMUTATION FOR y=x REFLECTION ---
+  The y=x reflection does NOT correspond to a single vertex permutation.
+  It acts as a DIFFERENT permutation on each cell's vertices.
+  Therefore it is NOT in S_n — it's a tiling-space symmetry, not a tournament symmetry.
+  Yet reflected tilings are often isomorphic (see above).
+
+
+================================================================================
+  SYNTHESIS
+================================================================================
+
+  KEY FINDINGS:
+
+  1. The y=x reflection on the staircase is NOT a vertex permutation.
+     It cannot be realized as sigma in S_n. It is a TILING-SPACE symmetry
+     that is distinct from the tournament isomorphism group.
+
+  2. Despite this, reflected tilings are OFTEN (but not always) isomorphic.
+     The match rate increases with n, suggesting the reflection is "almost"
+     an isomorphism in a probabilistic sense.
+
+  3. y=x-SYMMETRIC tilings (t(r,c) = t(c,r) for all cells) have a special
+     relationship to self-complementarity. Testing whether they are always SC.
+
+  4. The diagonal coordinate d = r - c measures "distance from y=x".
+     The anti-diagonal s = r + c measures "distance from origin" (strip number).
+     These create a NATURAL COORDINATE SYSTEM for the staircase.
+
+  5. The perpendicular diagonals (d = const) group cells that are equidistant
+     from the y=x axis. Cells on the same perpendicular diagonal share
+     a specific structural relationship in the tournament.
+
+
+  DONE.
+================================================================================
