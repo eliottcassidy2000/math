@@ -1,0 +1,87 @@
+================================================================================
+  G_8 VIA NAUTY: |E(G_8)|, SC_8, MERGED GRAPH
+  opus-2026-03-22-S216
+================================================================================
+
+  PHASE 1: Reading tournaments from gentourng n=8...
+  Read 6880 tournaments in 0.015s
+
+  PHASE 2: Computing invariants for 6880 classes...
+    500/6880 (0.4s)
+    1000/6880 (0.9s)
+    1500/6880 (1.4s)
+    2000/6880 (2.0s)
+    2500/6880 (2.6s)
+    3000/6880 (3.0s)
+    3500/6880 (3.5s)
+    4000/6880 (4.0s)
+    4500/6880 (4.6s)
+    5000/6880 (5.1s)
+    5500/6880 (5.7s)
+    6000/6880 (6.1s)
+    6500/6880 (6.6s)
+  Phase 2 done in 7.1s
+  Hash groups: 2413
+  Ambiguous groups (>1 class): 1378
+
+  PHASE 3: SC status and complement pairing...
+  SC classes: 176 (Burnside prediction: 176)
+  MATCH: YES ✓
+  V_merged = (6880 + 176) / 2 = 3528 (prediction: 3528)
+  MATCH: YES ✓
+
+  PHASE 4: Computing edges...
+    500/6880 (11.1s, ETA 142s, 10381 edges)
+    1000/6880 (23.6s, ETA 139s, 19201 edges)
+    1500/6880 (38.1s, ETA 137s, 29283 edges)
+    2000/6880 (52.0s, ETA 127s, 37610 edges)
+    2500/6880 (65.9s, ETA 115s, 44451 edges)
+    3000/6880 (78.9s, ETA 102s, 53580 edges)
+    3500/6880 (91.4s, ETA 88s, 60673 edges)
+    4000/6880 (105.9s, ETA 76s, 66435 edges)
+    4500/6880 (121.8s, ETA 64s, 73671 edges)
+    5000/6880 (135.5s, ETA 51s, 80054 edges)
+    5500/6880 (149.5s, ETA 38s, 83468 edges)
+    6000/6880 (162.2s, ETA 24s, 86903 edges)
+    6500/6880 (174.6s, ETA 10s, 89758 edges)
+  Phase 4 done in 187.5s
+
+  PHASE 5: Building merged graph...
+
+================================================================================
+  RESULTS: G_8
+================================================================================
+  Vertices: 6880
+  EDGES: 91161
+  Self-loops: 2279
+  avg_deg: 26.50
+  SC classes: 176
+  V_merged: 3528
+  E_merged: 45550
+  Collapsed: 232
+  Twin: 45379
+
+  Burnside predictions:
+    T_8 = 188288
+    T_8 / E = 2.0654
+    T_8 / (2*E) = 1.0327
+
+  *** THE SEQUENCE |E(G_n)| ***
+  n=3: |V|=    2,  |E|=      1
+  n=4: |V|=    4,  |E|=      5
+  n=5: |V|=   12,  |E|=     30
+  n=6: |V|=   56,  |E|=    290
+  n=7: |V|=  456,  |E|=   4086
+  n=8: |V|= 6880,  |E|= 91161
+
+  EDGE DECOMPOSITION:
+    n   E_orig E_merged collapsed   twin
+    3        1        1         0      0
+    4        5        3         0      2
+    5       30       21         0      9
+    6      290      143         5    142
+    7     4086     2123         0   1963
+    8    91161    45550       232  45379
+
+  Total time: 196.8s
+================================================================================
