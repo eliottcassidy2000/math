@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S248 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S247
+**Summary of work:** Connected edge orbit formula to PSL(2,Z) generators. The 2 and 3 appear as Case A (order-2 complement) and Case B (order-3 near-automorphism). Integrated devil's advocate audit. Logged MISTAKE-030.
+
+**Key discoveries:**
+1. edge_orbits = T_n/2 + (n-2)! decomposes as ORDER-2 + ORDER-3 contributions
+2. At n=3: Case A = 2, Case B = 1, Total = 3 (the fundamental 2:1 ratio of PSL(2,Z) generators)
+3. At n=5: Case B has TWO cycle types — (1,1,1,2) with 640 fixes and (2,3) with 80 fixes
+4. The 3-cycle type (2,3) IS the order-3 generator literally appearing in Burnside
+5. B/(A+B) → 0 as n→∞: binary overwhelms ternary, but at n=3 the ratio is exact 2:1
+6. MISTAKE-030 logged: SL_orbits was a misnomer (includes multi-edges, renamed gap_orbits)
+7. Devil's advocate confirmed E(9)=3380751 via nauty provenance
+
+**New scripts:** two_three_edge_orbits_s248.py, practical_synthesis_s247.py
+**New reflection themes:** The formula is the SUM of the binary structure and the ternary correction.
+
 ## opus-2026-03-23-S247 — 2026-03-23
 
 **Account:** opus
