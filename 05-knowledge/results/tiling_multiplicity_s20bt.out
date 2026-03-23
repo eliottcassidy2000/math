@@ -1,0 +1,112 @@
+======================================================================
+  H = TILING MULTIPLICITY? TESTING FOR ALL ISO CLASSES
+======================================================================
+
+======================================================================
+  n = 4
+======================================================================
+
+   Class     H  Tilings  ClassSize  H=Tilings?    Ratio
+       0     1        1         24        True   1.0000
+       1     3        1          8       False   0.3333
+       2     3        1          8       False   0.3333
+       3     5        5         24        True   1.0000
+
+  H = tiling count for ALL classes: False
+
+  MISMATCHES (H != tiling count):
+    Class 1: H=3, tilings=1, diff=-2
+    Class 2: H=3, tilings=1, diff=-2
+
+  Total tilings: 8
+  Sum of H/class: 8
+  These should be equal: True
+
+  RELATIONSHIP: tiling_count vs H vs class_size
+   Class     H  Tilings   Size  |Aut|    T/H  T*|Aut|
+       0     1        1     24      1  1.000        1
+       1     3        1      8      3  0.333        3
+       2     3        1      8      3  0.333        3
+       3     5        5     24      1  1.000        5
+
+======================================================================
+  n = 5
+======================================================================
+
+   Class     H  Tilings  ClassSize  H=Tilings?    Ratio
+       0     1        1        120        True   1.0000
+       1     3        1         40       False   0.3333
+       2     3        1         40       False   0.3333
+       3     3        1         40       False   0.3333
+       4     5        5        120        True   1.0000
+       5     5        5        120        True   1.0000
+       6     9        9        120        True   1.0000
+       7     9        9        120        True   1.0000
+       8    11       11        120        True   1.0000
+       9    13       13        120        True   1.0000
+      10    15        5         40       False   0.3333
+      11    15        3         24       False   0.2000
+
+  H = tiling count for ALL classes: False
+
+  MISMATCHES (H != tiling count):
+    Class 1: H=3, tilings=1, diff=-2
+    Class 2: H=3, tilings=1, diff=-2
+    Class 3: H=3, tilings=1, diff=-2
+    Class 10: H=15, tilings=5, diff=-10
+    Class 11: H=15, tilings=3, diff=-12
+
+  Total tilings: 64
+  Sum of H/class: 64
+  These should be equal: True
+
+  RELATIONSHIP: tiling_count vs H vs class_size
+   Class     H  Tilings   Size  |Aut|    T/H  T*|Aut|
+       0     1        1    120      1  1.000        1
+       1     3        1     40      3  0.333        3
+       2     3        1     40      3  0.333        3
+       3     3        1     40      3  0.333        3
+       4     5        5    120      1  1.000        5
+       5     5        5    120      1  1.000        5
+       6     9        9    120      1  1.000        9
+       7     9        9    120      1  1.000        9
+       8    11       11    120      1  1.000       11
+       9    13       13    120      1  1.000       13
+      10    15        5     40      3  0.333       15
+      11    15        3     24      5  0.200       15
+
+======================================================================
+  SYNTHESIS
+======================================================================
+
+  THE QUESTION: Does H(T) = number of tilings mapping to iso class of T?
+
+  AT n=4: Check each class.
+  AT n=5: Check each class.
+
+  If H = tiling multiplicity for ALL classes:
+    Then H has a direct combinatorial interpretation as a FIBER COUNT.
+    The map (tilings) -> (iso classes) is a fibration, and H(T) = |fiber(T)|.
+
+  If H != tiling multiplicity for some classes:
+    Then the relationship is more subtle -- H = tiling count only
+    for SPECIFIC classes (like the single-tile blue neighbors).
+    The general relationship involves the base path choice.
+
+  THE KEY: each tiling uses a SPECIFIC base path (0->1->...->n-1).
+  Different base paths give different tiling-to-class maps.
+  The TOTAL over all n! base paths should give: n! * H / something.
+
+  Specifically: each labeled tournament appears as a tiling for exactly
+  (n-1)! base paths (since the base path is a Hamiltonian path of the
+  transitive tournament, and each starts at a different vertex).
+  Wait: the base path is fixed as 0->1->...->n-1.
+  A different base path would be a different Hamiltonian path.
+  The transitive tournament has exactly 1 Hamiltonian path: 0->1->...->n-1.
+  So the tiling model with THIS base path gives each tournament exactly ONCE
+  if the tournament contains the path 0->1->...->n-1 as a Hamiltonian subpath.
+
+  But NOT every tournament contains this specific HP!
+  Tournaments that DON'T have 0->1->...->n-1 as an HP can't be reached
+  from ANY tiling with this base path.
+
