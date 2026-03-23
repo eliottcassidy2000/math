@@ -1,0 +1,331 @@
+================================================================================
+  FORBIDDEN H VALUES + MERGED METAGRAPH INTEGRATION
+  opus-2026-03-23-S227
+================================================================================
+
+================================================================================
+  n = 3
+================================================================================
+  V=2, E_blue=1, E_black=0
+  H range: [1, 3]
+  H values present: 2/2 = 1.000
+  H gaps: []
+
+  EDGE JUMPS OVER FORBIDDEN H VALUES:
+    Edges jumping over H=7: 0/1
+    Edges jumping over H=21: 0/1
+    Edges jumping over any gap: 0/1
+
+    BLUE edge ΔH: min=2, max=2, avg=2.0
+    ALL edge ΔH: min=2, max=2, avg=2.0
+
+    ΔH distribution (top 10):
+      ΔH=   2:     1 edges (blue=1, black=0)
+
+    Level edges (ΔH=0): blue=0, black=0, total=0
+
+  THE H=7 GAP (conflict-graph triangle impossibility):
+    H=7 is ACHIEVABLE at n=3 (not a gap)
+
+  ΔH=2 EDGES (smallest jumps): 1 (blue=1, black=0)
+
+  H MULTIPLICITY (nodes per H level):
+    Distribution of multiplicities: {1: 2}
+
+    SC-only H-levels: 2
+    NS-only H-levels: 0
+    Mixed H-levels: 0
+
+  H mod 4 STRUCTURE:
+    H mod 4 distribution: {1: 1, 3: 1}
+    H mod 8 distribution: {1: 1, 3: 1}
+
+  n=3 done (0.0s)
+
+================================================================================
+  n = 4
+================================================================================
+  V=3, E_blue=1, E_black=2
+  H range: [1, 5]
+  H values present: 3/3 = 1.000
+  H gaps: []
+
+  EDGE JUMPS OVER FORBIDDEN H VALUES:
+    Edges jumping over H=7: 0/3
+    Edges jumping over H=21: 0/3
+    Edges jumping over any gap: 0/3
+
+    BLUE edge ΔH: min=4, max=4, avg=4.0
+    BLACK edge ΔH: min=2, max=2, avg=2.0
+    ALL edge ΔH: min=2, max=4, avg=2.7
+
+    ΔH distribution (top 10):
+      ΔH=   2:     2 edges (blue=0, black=2)
+      ΔH=   4:     1 edges (blue=1, black=0)
+
+    Level edges (ΔH=0): blue=0, black=0, total=0
+
+  THE H=7 GAP (conflict-graph triangle impossibility):
+    H=7 is ACHIEVABLE at n=4 (not a gap)
+
+  ΔH=2 EDGES (smallest jumps): 2 (blue=0, black=2)
+
+  H MULTIPLICITY (nodes per H level):
+    Distribution of multiplicities: {1: 3}
+
+    SC-only H-levels: 2
+    NS-only H-levels: 1
+    Mixed H-levels: 0
+
+  H mod 4 STRUCTURE:
+    H mod 4 distribution: {1: 2, 3: 1}
+    H mod 8 distribution: {1: 1, 3: 1, 5: 1}
+
+  n=4 done (0.0s)
+
+================================================================================
+  n = 5
+================================================================================
+  V=10, E_blue=13, E_black=8
+  H range: [1, 15]
+  H values present: 7/8 = 0.875
+  H gaps: [7]
+
+  EDGE JUMPS OVER FORBIDDEN H VALUES:
+    Edges jumping over H=7: 7/21
+    Edges jumping over H=21: 0/21
+    Edges jumping over any gap: 7/21
+
+    BLUE edge ΔH: min=0, max=12, avg=3.7
+    BLACK edge ΔH: min=2, max=8, avg=4.5
+    ALL edge ΔH: min=0, max=12, avg=4.0
+
+    ΔH distribution (top 10):
+      ΔH=   2:     9 edges (blue=7, black=2)
+      ΔH=   4:     5 edges (blue=2, black=3)
+      ΔH=   6:     3 edges (blue=1, black=2)
+      ΔH=   8:     2 edges (blue=1, black=1)
+      ΔH=  12:     1 edges (blue=1, black=0)
+      ΔH=   0:     1 edges (blue=1, black=0)
+
+    Level edges (ΔH=0): blue=1, black=0, total=1
+
+  THE H=7 GAP (conflict-graph triangle impossibility):
+    H=7 is FORBIDDEN at n=5
+    Edges bridging the H=7 gap: 7
+      3 ↔ 15 (BLUE, SC=True/True)
+      5 ↔ 9 (BLACK, SC=False/True)
+      5 ↔ 13 (BLACK, SC=False/True)
+      5 ↔ 9 (BLACK, SC=False/True)
+      1 ↔ 9 (BLUE, SC=True/True)
+
+  ΔH=2 EDGES (smallest jumps): 9 (blue=7, black=2)
+
+  H MULTIPLICITY (nodes per H level):
+    Distribution of multiplicities: {1: 4, 2: 3}
+
+    SC-only H-levels: 5
+    NS-only H-levels: 1
+    Mixed H-levels: 1
+
+  H mod 4 STRUCTURE:
+    H mod 4 distribution: {1: 5, 3: 5}
+    H mod 8 distribution: {1: 3, 3: 3, 5: 2, 7: 2}
+
+  n=5 done (0.2s)
+
+================================================================================
+  n = 6
+================================================================================
+  V=34, E_blue=98, E_black=45
+  H range: [1, 45]
+  H values present: 19/23 = 0.826
+  H gaps: [7, 21, 35, 39]
+
+  EDGE JUMPS OVER FORBIDDEN H VALUES:
+    Edges jumping over H=7: 21/143
+    Edges jumping over H=21: 38/143
+    Edges jumping over any gap: 86/143
+
+    BLUE edge ΔH: min=0, max=32, avg=9.5
+    BLACK edge ΔH: min=0, max=24, avg=6.4
+    ALL edge ΔH: min=0, max=32, avg=8.5
+
+    ΔH distribution (top 10):
+      ΔH=   4:    24 edges (blue=16, black=8)
+      ΔH=   2:    21 edges (blue=11, black=10)
+      ΔH=   8:    19 edges (blue=10, black=9)
+      ΔH=   6:    19 edges (blue=13, black=6)
+      ΔH=  10:    14 edges (blue=10, black=4)
+      ΔH=  12:    10 edges (blue=9, black=1)
+      ΔH=  14:     9 edges (blue=9, black=0)
+      ΔH=  18:     7 edges (blue=5, black=2)
+      ΔH=  16:     7 edges (blue=6, black=1)
+      ΔH=   0:     5 edges (blue=2, black=3)
+
+    Level edges (ΔH=0): blue=2, black=3, total=5
+
+  THE H=7 GAP (conflict-graph triangle impossibility):
+    H=7 is FORBIDDEN at n=6
+    Edges bridging the H=7 gap: 21
+      3 ↔ 9 (BLUE, SC=False/False)
+      5 ↔ 9 (BLUE, SC=False/False)
+      5 ↔ 37 (BLUE, SC=True/True)
+      3 ↔ 9 (BLACK, SC=False/True)
+      5 ↔ 11 (BLACK, SC=True/False)
+
+  ΔH=2 EDGES (smallest jumps): 21 (blue=11, black=10)
+
+  H MULTIPLICITY (nodes per H level):
+    Distribution of multiplicities: {1: 9, 2: 5, 3: 5}
+
+    SC-only H-levels: 4
+    NS-only H-levels: 10
+    Mixed H-levels: 5
+
+  H mod 4 STRUCTURE:
+    H mod 4 distribution: {1: 22, 3: 12}
+    H mod 8 distribution: {1: 11, 3: 6, 5: 11, 7: 6}
+
+  n=6 done (59.6s)
+
+================================================================================
+  n = 7
+================================================================================
+  V=272, E_blue=1573, E_black=550
+  H range: [1, 189]
+  H values present: 77/95 = 0.811
+  H gaps: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+
+  EDGE JUMPS OVER FORBIDDEN H VALUES:
+    Edges jumping over H=7: 47/2123
+    Edges jumping over H=21: 155/2123
+    Edges jumping over any gap: 1136/2123
+
+    BLUE edge ΔH: min=0, max=120, avg=21.8
+    BLACK edge ΔH: min=0, max=84, avg=19.4
+    ALL edge ΔH: min=0, max=120, avg=21.2
+
+    ΔH distribution (top 10):
+      ΔH=   6:   157 edges (blue=114, black=43)
+      ΔH=  12:   131 edges (blue=90, black=41)
+      ΔH=   4:   127 edges (blue=95, black=32)
+      ΔH=   8:   126 edges (blue=89, black=37)
+      ΔH=   2:   125 edges (blue=95, black=30)
+      ΔH=  18:   123 edges (blue=88, black=35)
+      ΔH=  14:   113 edges (blue=85, black=28)
+      ΔH=  10:    99 edges (blue=83, black=16)
+      ΔH=  20:    98 edges (blue=73, black=25)
+      ΔH=  24:    95 edges (blue=64, black=31)
+
+    Level edges (ΔH=0): blue=54, black=17, total=71
+
+  THE H=7 GAP (conflict-graph triangle impossibility):
+    H=7 is FORBIDDEN at n=7
+    Edges bridging the H=7 gap: 47
+      5 ↔ 19 (BLUE, SC=False/False)
+      5 ↔ 15 (BLUE, SC=False/False)
+      3 ↔ 15 (BLUE, SC=False/False)
+      13 ↔ 5 (BLUE, SC=False/False)
+      3 ↔ 15 (BLUE, SC=False/False)
+
+  ΔH=2 EDGES (smallest jumps): 125 (blue=95, black=30)
+
+  H MULTIPLICITY (nodes per H level):
+    Distribution of multiplicities: {1: 15, 2: 13, 3: 9, 4: 18, 5: 8, 6: 7, 7: 6, 8: 1}
+
+    SC-only H-levels: 15
+    NS-only H-levels: 23
+    Mixed H-levels: 39
+
+  H mod 4 STRUCTURE:
+    H mod 4 distribution: {1: 145, 3: 127}
+    H mod 8 distribution: {1: 76, 3: 68, 5: 69, 7: 59}
+
+  n=7 done (3.5s)
+
+================================================================================
+  n = 8
+================================================================================
+  V=3528, E_blue=43656, E_black=1894
+  H range: [1, 661]
+  H values present: 320/331 = 0.967
+  H gaps: [7, 21, 611, 615, 617, 619, 623, 625, 635, 647, 655]
+
+  EDGE JUMPS OVER FORBIDDEN H VALUES:
+    Edges jumping over H=7: 86/45550
+    Edges jumping over H=21: 379/45550
+    Edges jumping over any gap: 1290/45550
+
+    BLUE edge ΔH: min=0, max=432, avg=66.9
+    BLACK edge ΔH: min=0, max=288, avg=57.0
+    ALL edge ΔH: min=0, max=432, avg=66.4
+
+    ΔH distribution (top 10):
+      ΔH=   6:  1134 edges (blue=1073, black=61)
+      ΔH=  14:  1031 edges (blue=986, black=45)
+      ΔH=   4:  1021 edges (blue=964, black=57)
+      ΔH=  18:   999 edges (blue=963, black=36)
+      ΔH=  12:   997 edges (blue=960, black=37)
+      ΔH=   8:   997 edges (blue=968, black=29)
+      ΔH=  10:   969 edges (blue=917, black=52)
+      ΔH=  20:   933 edges (blue=889, black=44)
+      ΔH=   2:   925 edges (blue=877, black=48)
+      ΔH=  24:   898 edges (blue=856, black=42)
+
+    Level edges (ΔH=0): blue=508, black=23, total=531
+
+  THE H=7 GAP (conflict-graph triangle impossibility):
+    H=7 is FORBIDDEN at n=8
+    Edges bridging the H=7 gap: 86
+      9 ↔ 5 (BLUE, SC=False/False)
+      3 ↔ 51 (BLUE, SC=False/False)
+      5 ↔ 11 (BLUE, SC=False/False)
+      3 ↔ 9 (BLUE, SC=False/False)
+      3 ↔ 15 (BLUE, SC=False/False)
+
+  ΔH=2 EDGES (smallest jumps): 925 (blue=877, black=48)
+
+  H MULTIPLICITY (nodes per H level):
+    Distribution of multiplicities: {1: 11, 2: 11, 3: 8, 4: 13, 5: 14, 6: 17, 7: 14, 8: 19, 9: 21, 10: 26, 11: 17, 12: 23, 13: 15, 14: 23, 15: 20, 16: 13, 17: 11, 18: 16, 19: 6, 20: 7, 21: 7, 22: 3, 23: 3, 24: 1, 25: 1}
+
+    SC-only H-levels: 4
+    NS-only H-levels: 216
+    Mixed H-levels: 100
+
+  H mod 4 STRUCTURE:
+    H mod 4 distribution: {1: 1874, 3: 1654}
+    H mod 8 distribution: {1: 953, 3: 846, 5: 921, 7: 808}
+
+  n=8 done (181.8s)
+
+================================================================================
+  CROSS-n FORBIDDEN VALUE INTEGRATION
+================================================================================
+
+  THE TWO PERMANENT GAPS: H=7 and H=21
+  These create 'missing floors' in the metagraph DAG.
+  H=7 gap (from conflict-graph triangle impossibility):
+    alpha_1=3, alpha_2=0 → H=1+6+0=7 requires 3 pairwise-conflicting
+    odd cycles, but any 3 such cycles must share a vertex, forcing a
+    4th cycle → alpha_1≥4 → H≥9. The 'triangle' in Omega is impossible.
+  H=21 gap: 21=1+2×10 or 1+2×8+4×1 etc — all decompositions impossible.
+
+  IMPACT ON METAGRAPH:
+  - At n=5: the gap at H=7 forces edges from H=5 to skip to H=9
+    This is the ONLY ΔH=4 edge forced by a gap.
+  - At n=6: gaps at 7,21,35,39 create multiple forced jumps
+  - At n≥8: only H=7 and H=21 persist as permanent gaps
+  - Transient gaps (filled at larger n) cause temporary distortions
+
+  THE CONFLICT-GRAPH TRIANGLE IMPOSSIBILITY:
+  - 3 pairwise vertex-sharing odd cycles cannot have alpha_2=0
+  - This is the 'BBK triangle' constraint on Omega(T)
+  - It propagates to: H=7 forbidden, H=21 forbidden (via component analysis)
+  - It explains the ΔH=2^(n-2) jump: the transitive class (alpha_1=0)
+    connects to the first SC class with alpha_1>0, and the gap structure
+    forces specific H values to be the first achievable.
+
+================================================================================
+  DONE
+================================================================================
