@@ -1,0 +1,61 @@
+  Generated 40320 permutations
+
+Phase 1: Enumerating 268435456 tournaments...
+  10000000/268435456 (4026340/s, ETA 64s, 167 groups)
+  20000000/268435456 (3969602/s, ETA 63s, 167 groups)
+  30000000/268435456 (3935505/s, ETA 61s, 167 groups)
+  40000000/268435456 (3934237/s, ETA 58s, 167 groups)
+  50000000/268435456 (3924010/s, ETA 56s, 167 groups)
+  60000000/268435456 (3910270/s, ETA 53s, 167 groups)
+  70000000/268435456 (3898726/s, ETA 51s, 167 groups)
+  80000000/268435456 (3895000/s, ETA 48s, 167 groups)
+  90000000/268435456 (3887964/s, ETA 46s, 167 groups)
+  100000000/268435456 (3877237/s, ETA 43s, 167 groups)
+  110000000/268435456 (3874076/s, ETA 41s, 167 groups)
+  120000000/268435456 (3868939/s, ETA 38s, 167 groups)
+  130000000/268435456 (3861907/s, ETA 36s, 167 groups)
+  140000000/268435456 (3863139/s, ETA 33s, 167 groups)
+  150000000/268435456 (3863298/s, ETA 31s, 167 groups)
+  160000000/268435456 (3860675/s, ETA 28s, 167 groups)
+  170000000/268435456 (3857941/s, ETA 26s, 167 groups)
+  180000000/268435456 (3857640/s, ETA 23s, 167 groups)
+  190000000/268435456 (3855386/s, ETA 20s, 167 groups)
+  200000000/268435456 (3850233/s, ETA 18s, 167 groups)
+  210000000/268435456 (3848987/s, ETA 15s, 167 groups)
+  220000000/268435456 (3847135/s, ETA 13s, 167 groups)
+  230000000/268435456 (3845993/s, ETA 10s, 167 groups)
+  240000000/268435456 (3844522/s, ETA 7s, 167 groups)
+  250000000/268435456 (3842533/s, ETA 5s, 167 groups)
+  260000000/268435456 (3840694/s, ETA 2s, 167 groups)
+Phase 1 done: 167 hash groups in 69.9s
+  Size distribution: <=10:0 <=100:0 <=1K:0 <=10K:12 <=50K:25 <=100K:16 >100K:114
+
+Phase 2: Splitting hash groups into iso classes...
+Phase 2 done: 506 classes in 1.7s (expected 6880)
+
+Phase 3: Computing edges for 506 classes...
+  500/506 classes (37.7s, 1516 edges)
+
+========================================
+RESULTS: G_8
+========================================
+  Vertices: 506
+  EDGES: 1526
+  Self-loop classes: 285
+  Sum of degrees: 3240 (should ≈ 2 × 1526 = 3052)
+  avg_deg: 6.40
+  |E|/|V|: 3.0158
+
+THE SEQUENCE |E(G_n)|:
+  n=3: 1
+  n=4: 5
+  n=5: 30
+  n=6: 290
+  n=7: 4086
+  n=8: 1526
+
+Timing:
+  Phase 1: 69.9s
+  Phase 2: 1.7s
+  Phase 3: 38.0s
+  Total: 109.6s
