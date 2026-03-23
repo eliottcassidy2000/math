@@ -1,0 +1,240 @@
+
+========================================================================
+  ALL KNOWN EXACT META-GRAPH SEQUENCES
+========================================================================
+
+  THE CORRECTED META-GRAPH SEQUENCES
+
+  n  | V     | T      | E     | G=T-2E | SL   | excess
+  ---|-------|--------|-------|--------|------|--------
+  3  |     2 |      4 |     1 |     2  |    2 |     0
+  4  |     4 |     16 |     5 |     6  |    6 |     0
+  5  |    12 |     88 |    30 |    28  |   16 |    12
+  6  |    56 |    704 |   290 |   124  |   58 |    66
+  7  |   456 |   8912 |  4086 |   740  |  324 |   416
+  8  |  6880 | 188288 | 91161 |  5966  |  ??? |   ???
+
+  n  | D     | S_2    | S_2/T  | D/V   | G/T
+  ---|-------|--------|--------|-------|------
+  3  |     1 |      6 | 1.5000 | 0.500 | 0.5000
+  4  |     6 |     28 | 1.7500 | 1.500 | 0.3750
+  5  |    28 |    144 | 1.6364 | 2.333 | 0.3182
+  6  |   122 |    948 | 1.3466 | 2.179 | 0.1761
+  7  |   632 |  10176 | 1.1418 | 1.386 | 0.0830
+
+========================================================================
+  CORRECTED S_2 vs WRONG S_2
+========================================================================
+
+  n  | S_2_correct | S_2_wrong | difference
+  ---|-------------|-----------|----------
+  3  |          6  |         8 | 2
+  4  |         28  |        28 | 0
+  5  |        144  |       144 | 0
+  6  |        948  |       952 | 4
+  7  |      10176  |     10392 | 216
+
+  At n=3,4,5: the wrong formula gives the same answer (coincidence).
+  At n=6: off by 4 (952 vs 948).
+  At n=7: off by 216 (10392 vs 10176).
+  The discrepancy grows rapidly.
+
+
+========================================================================
+  SL SEQUENCE ANALYSIS
+========================================================================
+
+  SL sequence: [2, 6, 16, 58, 324]
+
+  SL/V (avg self-loops per class):
+  n=3: SL/V = 2/2 = 1
+  n=4: SL/V = 6/4 = 3/2
+  n=5: SL/V = 16/12 = 4/3
+  n=6: SL/V = 58/56 = 29/28
+  n=7: SL/V = 324/456 = 27/38
+
+  SL/m (fraction of arcs that self-loop, per tournament):
+
+  Consecutive ratios SL(n+1)/SL(n):
+  SL(4)/SL(3) = 6/2 = 3.0000
+  SL(5)/SL(4) = 16/6 = 2.6667
+  SL(6)/SL(5) = 58/16 = 3.6250
+  SL(7)/SL(6) = 324/58 = 5.5862
+
+  SL factorizations:
+  n=3: SL=2 = 2
+  n=4: SL=6 = 2 * 3
+  n=5: SL=16 = 2 * 2 * 2 * 2
+  n=6: SL=58 = 2 * 29
+  n=7: SL=324 = 2 * 2 * 3 * 3 * 3 * 3
+
+  SL / (n-1)!:
+  n=3: SL/(n-1)! = 2/2 = 1
+  n=4: SL/(n-1)! = 6/6 = 1
+  n=5: SL/(n-1)! = 16/24 = 2/3
+  n=6: SL/(n-1)! = 58/120 = 29/60
+  n=7: SL/(n-1)! = 324/720 = 9/20
+
+========================================================================
+  EXCESS SEQUENCE ANALYSIS
+========================================================================
+
+  excess sequence: [0, 0, 12, 66, 416]
+
+  excess factorizations:
+  n=3: excess=0
+  n=4: excess=0
+  n=5: excess=12 = 2 * 2 * 3
+  n=6: excess=66 = 2 * 3 * 11
+  n=7: excess=416 = 2 * 2 * 2 * 2 * 2 * 13
+
+  excess/E (fraction of edges with multi-edges):
+  n=3: excess/E = 0
+  n=4: excess/E = 0
+  n=5: excess/E = 12/30 = 2/5
+  n=6: excess/E = 66/290 = 33/145
+  n=7: excess/E = 416/4086 = 208/2043
+
+========================================================================
+  THE GAP SEQUENCE G(n) = SL + excess
+========================================================================
+
+  G = [2, 6, 28, 124, 740, 5966]
+
+  G/(n-1)! ratios:
+  n=3: G/(n-1)! = 1 = 1.000000
+  n=4: G/(n-1)! = 1 = 1.000000
+  n=5: G/(n-1)! = 7/6 = 1.166667
+  n=6: G/(n-1)! = 31/30 = 1.033333
+  n=7: G/(n-1)! = 37/36 = 1.027778
+  n=8: G/(n-1)! = 2983/2520 = 1.183730
+
+  G/(n-1)! - 1:
+  n=3: 0 = 0.000000
+  n=4: 0 = 0.000000
+  n=5: 1/6 = 0.166667
+  n=6: 1/30 = 0.033333
+  n=7: 1/36 = 0.027778
+  n=8: 463/2520 = 0.183730
+
+  G/n!:
+  n=3: 1/3 = 0.333333
+  n=4: 1/4 = 0.250000
+  n=5: 7/30 = 0.233333
+  n=6: 31/180 = 0.172222
+  n=7: 37/252 = 0.146825
+  n=8: 2983/20160 = 0.147966
+
+========================================================================
+  BURNSIDE INTERPRETATION OF SL
+========================================================================
+
+
+  SL = total self-loop arc-orbits
+     = #{(class C, arc-orbit O of C) : reversing O gives back class C}
+
+  Burnside form:
+  SL = (1/n!) * sum_{sigma in S_n} #{(T, e) : sigma(T)=T, sigma(e)=e, T_e ~ T}
+
+  The condition T_e ~ T means: reversing arc e in T gives a tournament
+  isomorphic to T itself. Call this a "SELF-REVERSIBLE arc."
+
+  For sigma = identity: every (T, e) where T_e ~ T contributes.
+  #{self-reversible arcs across all T} = (1/n!) * [main term] + corrections.
+
+  COUNTING SELF-REVERSIBLE ARCS:
+  For a tournament T, arc e=(a->b) is self-reversible iff:
+  exists tau in S_n with tau(T_e) = T.
+  Equivalently: tau reverses the arc e back and maps everything else correctly.
+  So tau maps (b,a) to some arc consistent with T.
+
+  This is a FIXED-POINT condition: T_e = tau^{-1}(T), so
+  tau is a "near-automorphism" that fixes T except at edge {a,b}.
+
+  SIMPLER: e is self-reversible iff T and T_e are isomorphic.
+  This means the UNLABELED tournament doesn't change when we flip one arc.
+  The set of self-reversible arcs gives the SELF-ADJACENCY of the class
+  in the meta-graph.
+
+
+========================================================================
+  THE KEY OBSERVATION: SL AND LEVEL EDGES
+========================================================================
+
+
+  Self-reversible arcs are arcs connecting vertices at the "same level"
+  in the tournament structure. Reversing such an arc doesn't change
+  the iso class because the reversal is "internal" — it permutes
+  equivalent arcs without changing the overall shape.
+
+  At n=3: in the transitive tournament 0->1->2 (with 0->2):
+  - Reverse (0,1): get 1->0, still transitive (top/bottom vertices swap roles).
+    This is a SELF-LOOP: H doesn't change. The arc (0,1) connects vertices
+    of score 2 and 1 — their roles are "equivalent" under some relabeling.
+  - Reverse (0,2): get 3-cycle. NOT self-reversible.
+  - Reverse (1,2): get transitive (bottom/middle swap). SELF-LOOP.
+
+  So the 2 self-reversible arcs are (0,1) and (1,2) — the "consecutive" arcs.
+  The 1 non-self-reversible arc is (0,2) — the "skip" arc.
+
+  PATTERN: Self-reversible arcs are those whose reversal only
+  "shuffles" equivalent substructure.
+
+  AT LARGE n: As tournaments get more "generic," fewer arcs are
+  self-reversible (most reversals change the iso class).
+  SL/T -> 0 confirms this.
+
+  SL/T (fraction of orbits that are self-loops):
+  n=3: SL/T = 2/4 = 1/2 = 0.5000
+  n=4: SL/T = 6/16 = 3/8 = 0.3750
+  n=5: SL/T = 16/88 = 2/11 = 0.1818
+  n=6: SL/T = 58/704 = 29/352 = 0.0824
+  n=7: SL/T = 324/8912 = 81/2228 = 0.0364
+
+========================================================================
+  FINAL CORRECTED PICTURE
+========================================================================
+
+
+  THE META-GRAPH G_n HAS:
+
+  V(n) = iso classes (A000568)
+  T(n) = total arc-orbits = V * m at large n (Burnside, EXACT)
+  E(n) = undirected edges in simple graph (COMPUTED, no closed form)
+  G(n) = T - 2E = self-loops + multi-edge excess
+  SL(n) = self-loop orbits
+  excess(n) = directed multi-edge excess
+
+  KNOWN SEQUENCES:
+  V:      2,    4,     12,     56,    456,    6880,   191536
+  T:      4,   16,     88,    704,   8912,  188288,  6847200
+  E:      1,    5,     30,    290,   4086,   91161
+  G:      2,    6,     28,    124,    740,    5966,    85698
+  SL:     2,    6,     16,     58,    324
+  excess: 0,    0,     12,     66,    416
+  D:      1,    6,     28,    122,    632
+  S_2:    6,   28,    144,    948,  10176
+
+  KEY RELATIONS:
+  T = 2E + G                    (definition)
+  G = SL + excess               (definition)
+  D = (S_2 - T) / 2             (exact)
+  S_2 = T + 2D                  (exact)
+  E ≠ (T - D) / 2               (WRONG, see MISTAKE-029)
+  E = (T - SL - excess) / 2     (correct, requires orbit data)
+  E ~ T/2 as n → ∞              (asymptotic, since G/T → 0)
+
+  THE OPEN PROBLEM:
+  Can G(n), SL(n), or excess(n) be computed from Burnside theory
+  without building the full meta-graph?
+
+  STATUS OF E(9):
+  The value E(9) = 3380751 appears in several scripts.
+  If computed from T and D via wrong formula: INVALID.
+  If computed from direct adjacency: VALID.
+  Need to verify source. G(9) = T-2E = 6847200-6761502 = 85698.
+  (If E=3380751, G=6847200-6761502=85698.)
+  Actually 2*3380751 = 6761502. T-6761502 = 85698. Consistent with G sequence.
+  But is this E correct? Unclear without verification.
+
+Done. opus-2026-03-23-S213

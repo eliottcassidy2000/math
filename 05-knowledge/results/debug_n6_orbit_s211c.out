@@ -1,0 +1,136 @@
+Class 0 (|Aut|=1, size=720, H=0): 15 orbits, D=10
+  mult: {0: 5, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 7: 1, 9: 1, 10: 1, 12: 1, 16: 1}
+  orbit sizes: Counter({1: 15})
+Class 1 (|Aut|=3, size=240, H=0): 7 orbits, D=1
+  mult: {0: 1, 2: 1, 6: 1, 1: 2, 11: 1, 26: 1}
+  orbit sizes: Counter({3: 4, 1: 3})
+Class 2 (|Aut|=1, size=720, H=0): 15 orbits, D=6
+  mult: {0: 1, 3: 1, 2: 4, 1: 1, 8: 1, 22: 1, 6: 1, 4: 1, 13: 1, 24: 1, 25: 1, 15: 1}
+  orbit sizes: Counter({1: 15})
+Class 4 (|Aut|=1, size=720, H=0): 15 orbits, D=3
+  mult: {0: 1, 5: 1, 6: 2, 4: 2, 8: 2, 21: 1, 2: 1, 17: 1, 31: 1, 33: 1, 15: 1, 9: 1}
+  orbit sizes: Counter({1: 15})
+Class 5 (|Aut|=1, size=720, H=0): 15 orbits, D=3
+  mult: {4: 1, 0: 1, 7: 1, 6: 1, 5: 3, 22: 1, 8: 1, 3: 1, 18: 1, 30: 1, 44: 1, 14: 1, 10: 1}
+  orbit sizes: Counter({1: 15})
+Class 6 (|Aut|=1, size=720, H=0): 15 orbits, D=4
+  mult: {4: 2, 1: 1, 7: 1, 5: 1, 22: 3, 8: 1, 2: 1, 19: 1, 42: 1, 32: 1, 25: 1, 11: 1}
+  orbit sizes: Counter({1: 15})
+Class 8 (|Aut|=1, size=720, H=0): 15 orbits, D=3
+  mult: {4: 2, 2: 1, 5: 1, 8: 2, 22: 2, 6: 1, 29: 1, 20: 1, 37: 1, 38: 1, 36: 1, 13: 1}
+  orbit sizes: Counter({1: 15})
+Class 9 (|Aut|=1, size=720, H=0): 15 orbits, D=3
+  mult: {0: 1, 10: 1, 11: 1, 9: 3, 13: 1, 23: 1, 17: 1, 30: 1, 41: 1, 20: 1, 19: 1, 15: 1, 4: 1}
+  orbit sizes: Counter({1: 15})
+Class 10 (|Aut|=1, size=720, H=0): 15 orbits, D=3
+  mult: {9: 1, 0: 1, 12: 1, 11: 1, 14: 2, 24: 1, 10: 2, 18: 2, 31: 1, 43: 1, 20: 1, 5: 1}
+  orbit sizes: Counter({1: 15})
+Class 11 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {9: 1, 1: 1, 12: 1, 10: 1, 15: 1, 24: 1, 13: 1, 19: 1, 32: 1, 42: 1, 11: 1, 28: 2, 25: 1, 6: 1}
+  orbit sizes: Counter({1: 15})
+Class 12 (|Aut|=1, size=720, H=0): 15 orbits, D=6
+  mult: {11: 1, 10: 1, 0: 1, 12: 4, 16: 1, 25: 1, 14: 1, 33: 1, 44: 1, 19: 1, 18: 1, 7: 1}
+  orbit sizes: Counter({1: 15})
+Class 14 (|Aut|=1, size=720, H=0): 15 orbits, D=4
+  mult: {13: 1, 10: 2, 3: 1, 16: 1, 15: 1, 25: 1, 12: 1, 35: 1, 44: 3, 18: 1, 45: 1, 5: 1}
+  orbit sizes: Counter({1: 15})
+Class 15 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {13: 1, 11: 1, 2: 1, 16: 1, 14: 1, 25: 1, 15: 1, 9: 1, 36: 2, 45: 1, 19: 1, 35: 1, 33: 1, 4: 1}
+  orbit sizes: Counter({1: 15})
+Class 16 (|Aut|=3, size=240, H=0): 7 orbits, D=1
+  mult: {15: 1, 14: 1, 12: 1, 0: 1, 16: 2, 26: 1}
+  orbit sizes: Counter({3: 4, 1: 3})
+Class 17 (|Aut|=1, size=720, H=0): 15 orbits, D=3
+  mult: {9: 1, 4: 1, 18: 1, 19: 1, 17: 3, 20: 1, 27: 1, 37: 1, 42: 1, 13: 1, 46: 1, 48: 1, 36: 1}
+  orbit sizes: Counter({1: 15})
+Class 18 (|Aut|=1, size=720, H=0): 15 orbits, D=3
+  mult: {17: 1, 10: 2, 5: 1, 12: 1, 19: 1, 28: 1, 18: 2, 38: 1, 44: 2, 14: 1, 47: 1, 50: 1}
+  orbit sizes: Counter({1: 15})
+Class 20 (|Aut|=1, size=720, H=0): 15 orbits, D=3
+  mult: {17: 1, 13: 1, 8: 1, 10: 1, 9: 1, 20: 3, 28: 1, 19: 1, 40: 1, 45: 1, 46: 1, 47: 1, 53: 1}
+  orbit sizes: Counter({1: 15})
+Class 21 (|Aut|=3, size=240, H=0): 7 orbits, D=1
+  mult: {3: 1, 22: 2, 4: 1, 27: 1, 35: 1, 23: 1}
+  orbit sizes: Counter({3: 4, 1: 3})
+Class 22 (|Aut|=1, size=720, H=0): 15 orbits, D=5
+  mult: {21: 2, 2: 1, 5: 1, 6: 3, 8: 2, 29: 1, 28: 1, 34: 1, 39: 1, 45: 1, 24: 1}
+  orbit sizes: Counter({1: 15})
+Class 24 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {23: 1, 2: 1, 10: 1, 25: 2, 13: 1, 11: 1, 28: 1, 37: 1, 32: 1, 31: 1, 40: 1, 38: 1, 35: 1, 22: 1}
+  orbit sizes: Counter({1: 15})
+Class 25 (|Aut|=1, size=720, H=0): 15 orbits, D=4
+  mult: {24: 2, 2: 1, 12: 1, 14: 1, 26: 1, 15: 1, 11: 1, 38: 2, 39: 2, 33: 2, 6: 1}
+  orbit sizes: Counter({1: 15})
+Class 28 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {27: 1, 24: 1, 22: 1, 18: 1, 11: 2, 20: 1, 19: 1, 40: 1, 36: 1, 35: 1, 52: 1, 48: 1, 49: 1, 28: 1}
+  orbit sizes: Counter({1: 15})
+Class 30 (|Aut|=1, size=720, H=0): 15 orbits, D=4
+  mult: {5: 1, 31: 2, 9: 1, 32: 1, 41: 1, 34: 1, 30: 3, 37: 1, 23: 1, 47: 1, 49: 1, 35: 1}
+  orbit sizes: Counter({1: 15})
+Class 31 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {30: 2, 4: 1, 10: 1, 33: 1, 42: 1, 35: 1, 37: 1, 31: 1, 38: 1, 32: 1, 24: 1, 46: 1, 47: 1, 45: 1}
+  orbit sizes: Counter({1: 15})
+Class 32 (|Aut|=1, size=720, H=0): 15 orbits, D=2
+  mult: {30: 1, 6: 1, 33: 1, 11: 1, 43: 1, 36: 1, 31: 1, 34: 2, 39: 2, 24: 1, 49: 1, 52: 1, 42: 1}
+  orbit sizes: Counter({1: 15})
+Class 33 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {32: 1, 31: 1, 4: 1, 12: 1, 44: 1, 15: 1, 38: 1, 35: 1, 25: 2, 36: 1, 48: 1, 47: 1, 19: 1, 41: 1}
+  orbit sizes: Counter({1: 15})
+Class 34 (|Aut|=1, size=720, H=0): 15 orbits, D=2
+  mult: {30: 1, 22: 1, 35: 1, 13: 1, 36: 1, 42: 1, 32: 2, 40: 1, 37: 2, 27: 1, 52: 1, 55: 1, 51: 1}
+  orbit sizes: Counter({1: 15})
+Class 35 (|Aut|=1, size=720, H=0): 15 orbits, D=2
+  mult: {34: 1, 31: 1, 21: 1, 14: 1, 15: 1, 45: 1, 39: 2, 33: 1, 24: 1, 28: 1, 51: 1, 49: 2, 30: 1}
+  orbit sizes: Counter({1: 15})
+Class 36 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {34: 1, 32: 1, 8: 1, 15: 2, 44: 1, 33: 1, 36: 1, 13: 1, 40: 1, 28: 1, 53: 1, 51: 1, 48: 1, 17: 1}
+  orbit sizes: Counter({1: 15})
+Class 37 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {30: 1, 8: 1, 38: 1, 17: 1, 39: 1, 42: 1, 40: 1, 34: 2, 37: 1, 31: 1, 24: 1, 54: 1, 51: 1, 46: 1}
+  orbit sizes: Counter({1: 15})
+Class 38 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {37: 1, 31: 1, 8: 1, 18: 1, 25: 2, 45: 1, 24: 1, 40: 1, 38: 1, 33: 1, 54: 1, 48: 1, 42: 1, 47: 1}
+  orbit sizes: Counter({1: 15})
+Class 39 (|Aut|=1, size=720, H=0): 15 orbits, D=3
+  mult: {37: 1, 32: 2, 22: 1, 25: 2, 19: 1, 44: 1, 13: 1, 35: 2, 40: 1, 47: 1, 55: 1, 48: 1}
+  orbit sizes: Counter({1: 15})
+Class 40 (|Aut|=1, size=720, H=0): 15 orbits, D=2
+  mult: {37: 1, 34: 1, 29: 1, 24: 1, 20: 1, 13: 1, 45: 1, 36: 1, 39: 1, 38: 1, 28: 1, 46: 2, 52: 2}
+  orbit sizes: Counter({1: 15})
+Class 42 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {41: 1, 6: 1, 31: 1, 11: 1, 44: 1, 45: 2, 17: 1, 37: 1, 34: 1, 13: 1, 48: 1, 52: 1, 38: 1, 32: 1}
+  orbit sizes: Counter({1: 15})
+Class 43 (|Aut|=3, size=240, H=0): 7 orbits, D=1
+  mult: {41: 1, 7: 1, 44: 2, 32: 1, 10: 1, 53: 1}
+  orbit sizes: Counter({3: 4, 1: 3})
+Class 44 (|Aut|=1, size=720, H=0): 15 orbits, D=5
+  mult: {43: 2, 42: 1, 5: 1, 33: 1, 12: 1, 14: 3, 18: 2, 39: 1, 36: 1, 50: 1, 49: 1}
+  orbit sizes: Counter({1: 15})
+Class 45 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {42: 2, 22: 1, 35: 1, 15: 1, 14: 1, 19: 1, 38: 1, 23: 1, 40: 1, 20: 1, 49: 1, 51: 1, 47: 1, 31: 1}
+  orbit sizes: Counter({1: 15})
+Class 46 (|Aut|=1, size=720, H=0): 15 orbits, D=5
+  mult: {20: 1, 31: 1, 47: 1, 17: 1, 48: 2, 46: 3, 51: 1, 54: 1, 52: 1, 40: 2, 37: 1}
+  orbit sizes: Counter({1: 15})
+Class 47 (|Aut|=1, size=720, H=0): 15 orbits, D=1
+  mult: {46: 1, 20: 1, 30: 1, 18: 1, 33: 1, 49: 2, 31: 1, 52: 1, 47: 1, 54: 1, 45: 1, 48: 1, 39: 1, 38: 1}
+  orbit sizes: Counter({1: 15})
+Class 48 (|Aut|=1, size=720, H=0): 15 orbits, D=2
+  mult: {46: 2, 28: 1, 42: 1, 33: 1, 19: 1, 50: 1, 17: 1, 49: 1, 47: 1, 51: 2, 36: 1, 38: 1, 39: 1}
+  orbit sizes: Counter({1: 15})
+Class 49 (|Aut|=1, size=720, H=0): 15 orbits, D=2
+  mult: {48: 1, 28: 1, 32: 1, 47: 2, 19: 1, 44: 1, 30: 1, 53: 1, 52: 1, 55: 1, 35: 2, 51: 1, 45: 1}
+  orbit sizes: Counter({1: 15})
+Class 51 (|Aut|=1, size=720, H=0): 15 orbits, D=7
+  mult: {45: 1, 35: 1, 52: 4, 46: 1, 27: 1, 49: 1, 36: 1, 48: 2, 37: 1, 55: 1, 34: 1}
+  orbit sizes: Counter({1: 15})
+Class 52 (|Aut|=1, size=720, H=0): 15 orbits, D=7
+  mult: {51: 4, 40: 2, 34: 1, 47: 1, 28: 1, 32: 1, 53: 1, 42: 1, 49: 1, 46: 1, 55: 1}
+  orbit sizes: Counter({1: 15})
+
+Total D from orbit method:
+D_total = 122 (should be 124, T-2E = 704-580 = 124)
+E = (T-D)/2 = (704-122)/2 = 291
+
+Verifying orbits for classes with |Aut| > 1:
+Verification complete.

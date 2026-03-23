@@ -1,0 +1,123 @@
+
+========================================================================
+  Tr(F) AND SL AT n=3..6
+========================================================================
+
+  n=3:
+    nc=2, Tr(F)=12, n!=6
+    Tr(F)/n! = 12/6 = 2.0000
+    SL = 2
+    Non-id correction = SL*n! - Tr(F) = 2*6 - 12 = 0
+    SL - Tr(F)/n! = 0.0000
+    Top self-loop classes:
+      class 0: arcs_to_self=2, |Aut|=1, size=6
+
+  n=4:
+    nc=4, Tr(F)=144, n!=24
+    Tr(F)/n! = 144/24 = 6.0000
+    SL = 6
+    Non-id correction = SL*n! - Tr(F) = 6*24 - 144 = 0
+    SL - Tr(F)/n! = 0.0000
+    Top self-loop classes:
+      class 0: arcs_to_self=3, |Aut|=1, size=24
+      class 2: arcs_to_self=3, |Aut|=1, size=24
+
+  n=5:
+    nc=12, Tr(F)=1760, n!=120
+    Tr(F)/n! = 1760/120 = 14.6667
+    SL = 16
+    Non-id correction = SL*n! - Tr(F) = 16*120 - 1760 = 160
+    SL - Tr(F)/n! = 1.3333
+    Top self-loop classes:
+      class 0: arcs_to_self=4, |Aut|=1, size=120
+      class 2: arcs_to_self=3, |Aut|=1, size=120
+      class 5: arcs_to_self=3, |Aut|=1, size=120
+      class 4: arcs_to_self=2, |Aut|=1, size=120
+      class 8: arcs_to_self=2, |Aut|=1, size=120
+
+  n=6:
+    nc=56, Tr(F)=37920, n!=720
+    Tr(F)/n! = 37920/720 = 52.6667
+    SL = 58
+    Non-id correction = SL*n! - Tr(F) = 58*720 - 37920 = 3840
+    SL - Tr(F)/n! = 5.3333
+    Top self-loop classes:
+      class 0: arcs_to_self=5, |Aut|=1, size=720
+      class 2: arcs_to_self=4, |Aut|=1, size=720
+      class 12: arcs_to_self=4, |Aut|=1, size=720
+      class 5: arcs_to_self=3, |Aut|=1, size=720
+      class 9: arcs_to_self=3, |Aut|=1, size=720
+
+
+========================================================================
+  SELF-REVERSIBLE ARC FRACTION
+========================================================================
+
+  Self-reversible fraction = Tr(F) / (2^m * m):
+
+  n=3: Tr(F)=12, total=(2^3)*3=24, fraction=0.500000
+  n=4: Tr(F)=144, total=(2^6)*6=384, fraction=0.375000
+  n=5: Tr(F)=1760, total=(2^10)*10=10240, fraction=0.171875
+  n=6: Tr(F)=37920, total=(2^15)*15=491520, fraction=0.077148
+
+========================================================================
+  Tr(F) SEQUENCE
+========================================================================
+
+  Tr(F) values: [12, 144, 1760, 37920]
+  n=3: correction = 0 (= SL*n! - Tr(F))
+  n=4: correction = 0 (= SL*n! - Tr(F))
+  n=5: correction = 160 (= SL*n! - Tr(F))
+  n=6: correction = 3840 (= SL*n! - Tr(F))
+
+
+========================================================================
+  THE NATURE OF THE CORRECTION
+========================================================================
+
+
+  The Burnside correction comes from non-identity sigma with ≥2 fixed points
+  AND odd cycle lengths (cycle types containing only odd cycles and ≥2 fixed points).
+
+  Even cycles CANNOT contribute because sigma-swapping 2 vertices means
+  the edge between them has no consistent orientation.
+
+  So the only contributing cycle types are those with:
+  - All odd cycles (including 1-cycles for fixed points)
+  - At least 2 fixed points (1-cycles)
+
+  At n=3: only type (1,1,1) = identity. No corrections.
+  At n=4: type (1,1,1,1) = identity. Type (1,1,2) has a 2-cycle, excluded.
+          Type (1,3) has 1 fixed point, not enough. No corrections.
+  At n=5: types with all odd cycles AND ≥2 fixed pts:
+          (1,1,1,1,1) = identity (already counted)
+          (1,1,3) = 2 fixed + 3-cycle. CONTRIBUTES.
+          Correction = 160.
+  At n=6: (1,1,1,1,1,1) = identity
+          (1,1,1,3) = 3 fixed + 3-cycle
+          (1,1,1,1,... but all cycle lengths odd)
+          (1,1,1,3): yes, CONTRIBUTES.
+          (3,3): 0 fixed, excluded.
+          (1,5): 1 fixed, excluded.
+          Correction = 3840.
+
+  So the correction at n comes from cycle types (1^k, c_1, c_2, ...)
+  where k ≥ 2 and all c_i are ODD and > 1.
+
+  At n=5: only (1,1,3). 20 permutations. Average contribution: 160/20 = 8.
+  At n=6: only (1,1,1,3). 40 permutations. Average: 3840/40 = 96.
+
+  CONJECTURE: The correction is computable from the number of
+  "sigma-fixed self-reversible arcs" for each contributing cycle type.
+  This involves tournaments on the fixed-point subset that are
+  extendable to sigma-fixed tournaments on all n vertices.
+
+  n=3: contributing types: [((1, 1, 1), 1)]
+  n=4: contributing types: [((1, 1, 1, 1), 1)]
+  n=5: contributing types: [('1^2 + 3-cycle', 20), ((1, 1, 1, 1, 1), 1)]
+  n=6: contributing types: [('1^3 + 3-cycle', 40), ((1, 1, 1, 1, 1, 1), 1)]
+  n=7: contributing types: [('1^2 + 5-cycle', 504), ('1^4 + 3-cycle', 70), ((1, 1, 1, 1, 1, 1, 1), 1)]
+  n=8: contributing types: [('1^3 + 5-cycle', 1344), ('1^5 + 3-cycle', 112), ((1, 1, 1, 1, 1, 1, 1, 1), 1)]
+  n=9: contributing types: [('1^2 + 7-cycle', 25920), ('1^4 + 5-cycle', 3024), ('1^6 + 3-cycle', 168), ((1, 1, 1, 1, 1, 1, 1, 1, 1), 1)]
+
+Done. opus-2026-03-23-S215

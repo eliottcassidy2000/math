@@ -1,0 +1,28 @@
+n=6, m=15, 2^m=32768
+nc = 56 classes
+
+METHOD 1 (F-matrix adjacency):
+  Undirected edges (no self-loops): 290
+  Classes with self-loops: 30
+
+METHOD 2 (direct labeled enumeration):
+  Undirected edges (no self-loops): 290
+
+METHOD 3 (orbit-based):
+  T = 704 (should be 704)
+  D = 122
+  E = (T-D)/2 = 291
+  Distinct edges from orbits = 290
+
+COMPARISON:
+  Method 1 (F-matrix adj): E = 290
+  Method 2 (direct enum):  E = 290
+  Method 3 (orbit formula): E = 291
+  Method 3 (orbit set):    E = 290
+
+  Methods 1,2 AGREE: E = 290
+  Method 3 DISAGREES by 1
+
+  Investigating orbit-formula discrepancy...
+
+Done.

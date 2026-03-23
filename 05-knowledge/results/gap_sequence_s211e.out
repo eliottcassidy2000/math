@@ -1,0 +1,182 @@
+
+========================================================================
+  THE GAP SEQUENCE G(n) = T(n) - 2*E(n)
+========================================================================
+
+  G(n) = SL(n) + excess_cross(n)
+  G(n) measures self-loops and multi-edge excess
+
+  n=3: G=2, T=4, E=1, V=2
+        G/T=0.500000, G/V=1.0000, G/E=2.000000
+  n=4: G=6, T=16, E=5, V=4
+        G/T=0.375000, G/V=1.5000, G/E=1.200000
+  n=5: G=28, T=88, E=30, V=12
+        G/T=0.318182, G/V=2.3333, G/E=0.933333
+  n=6: G=124, T=704, E=290, V=56
+        G/T=0.176136, G/V=2.2143, G/E=0.427586
+  n=7: G=740, T=8912, E=4086, V=456
+        G/T=0.083034, G/V=1.6228, G/E=0.181106
+  n=8: G=5966, T=188288, E=91161, V=6880
+        G/T=0.031686, G/V=0.8672, G/E=0.065445
+  n=9: G=85698, T=6847200, E=3380751, V=191536
+        G/T=0.012516, G/V=0.4474, G/E=0.025349
+
+========================================================================
+  FACTORIZATIONS
+========================================================================
+
+  n=3: G=2 = 2
+  n=4: G=6 = 2 * 3
+  n=5: G=28 = 2 * 2 * 7
+  n=6: G=124 = 2 * 2 * 31
+  n=7: G=740 = 2 * 2 * 5 * 37
+  n=8: G=5966 = 2 * 19 * 157
+  n=9: G=85698 = 2 * 3 * 3 * 3 * 3 * 23 * 23
+
+========================================================================
+  RATIOS AND PATTERNS
+========================================================================
+
+  G sequence: [2, 6, 28, 124, 740, 5966, 85698]
+
+  Consecutive ratios G(n+1)/G(n):
+  G(4)/G(3) = 6/2 = 3.0000
+  G(5)/G(4) = 28/6 = 4.6667
+  G(6)/G(5) = 124/28 = 4.4286
+  G(7)/G(6) = 740/124 = 5.9677
+  G(8)/G(7) = 5966/740 = 8.0622
+  G(9)/G(8) = 85698/5966 = 14.3644
+
+  G(n) / n!:
+  n=3: G/3! = 2/6 = 1/3
+  n=4: G/4! = 6/24 = 1/4
+  n=5: G/5! = 28/120 = 7/30
+  n=6: G/6! = 124/720 = 31/180
+  n=7: G/7! = 740/5040 = 37/252
+  n=8: G/8! = 5966/40320 = 2983/20160
+  n=9: G/9! = 85698/362880 = 529/2240
+
+  G(n) / C(n,2):
+  n=3: G/m = 2/3 = 2/3
+  n=4: G/m = 6/6 = 1
+  n=5: G/m = 28/10 = 14/5
+  n=6: G/m = 124/15 = 124/15
+  n=7: G/m = 740/21 = 740/21
+  n=8: G/m = 5966/28 = 2983/14
+  n=9: G/m = 85698/36 = 4761/2
+
+  G(n) / 2^{n-1}:
+  n=3: G/2^{n-1} = 2/4 = 1/2
+  n=4: G/2^{n-1} = 6/8 = 3/4
+  n=5: G/2^{n-1} = 28/16 = 7/4
+  n=6: G/2^{n-1} = 124/32 = 31/8
+  n=7: G/2^{n-1} = 740/64 = 185/16
+  n=8: G/2^{n-1} = 5966/128 = 2983/64
+  n=9: G/2^{n-1} = 85698/256 = 42849/128
+
+========================================================================
+  G(n) vs KNOWN SEQUENCES
+========================================================================
+
+  Testing: is G(n) = c * something_nice(n)?
+  G(n)/2: [1, 3, 14, 62, 370, 2983, 42849]
+
+  G(n)/2 = 1, 3, 14, 62, 370, 2983, 42849
+  Checking if this matches known sequences...
+
+  G(n) - 2*G(n-1):
+  n=4: 6 - 2*2 = 2
+  n=5: 28 - 2*6 = 16
+  n=6: 124 - 2*28 = 68
+  n=7: 740 - 2*124 = 492
+  n=8: 5966 - 2*740 = 4486
+  n=9: 85698 - 2*5966 = 73766
+
+  G(n) - n*G(n-1):
+  n=4: 6 - 4*2 = -2
+  n=5: 28 - 5*6 = -2
+  n=6: 124 - 6*28 = -44
+  n=7: 740 - 7*124 = -128
+  n=8: 5966 - 8*740 = 46
+  n=9: 85698 - 9*5966 = 32004
+
+  G(n) - (n-1)*G(n-1):
+  n=4: 6 - 3*2 = 0
+  n=5: 28 - 4*6 = 4
+  n=6: 124 - 5*28 = -16
+  n=7: 740 - 6*124 = -4
+  n=8: 5966 - 7*740 = 786
+  n=9: 85698 - 8*5966 = 37970
+
+  G(n) / (n-1)!:
+  n=3: 2/2 = 1
+  n=4: 6/6 = 1
+  n=5: 28/24 = 7/6
+  n=6: 124/120 = 31/30
+  n=7: 740/720 = 37/36
+  n=8: 5966/5040 = 2983/2520
+  n=9: 85698/40320 = 4761/2240
+
+========================================================================
+  SL AND EXCESS DECOMPOSITION
+========================================================================
+
+  n  | G=T-2E | SL  | excess | SL/G  | excess/G
+  ---|--------|-----|--------|-------|----------
+  3  |     2  |   2 |     0  | 1.000 | 0.000
+  4  |     6  |   6 |     0  | 1.000 | 0.000
+  5  |    28  |  16 |    12  | 0.571 | 0.429
+  6  |   124  |  58 |    66  | 0.468 | 0.532
+
+  SL dominates at small n, but excess grows faster.
+  At n=6: excess > SL (66 > 58).
+  Prediction: at large n, excess dominates (multi-edges proliferate
+  faster than self-loops as classes increase).
+
+  SL sequence: 2, 6, 16, 58
+  SL/V: [Fraction(1, 1), Fraction(3, 2), Fraction(4, 3), Fraction(29, 28)]
+  SL factored: 2=2, 6=2*3, 16=2^4, 58=2*29
+  excess sequence: 0, 0, 12, 66
+  excess factored: 0, 0, 12=4*3, 66=2*3*11
+
+========================================================================
+  THE BIG PICTURE
+========================================================================
+
+
+  THE META-GRAPH EDGE COUNT E(n) CANNOT be computed from T(n) and D(n) alone.
+
+  The correct formula is: E = (T - SL - excess) / 2
+
+  Where:
+  SL(n) = total self-loop arc-orbits (arcs reversing to the same class)
+  excess(n) = total cross-orbit excess (multi-edges beyond 1 per direction)
+
+  Both SL and excess require ORBIT-LEVEL information about the meta-graph.
+  They cannot be derived from aggregate statistics like T, D, or S_2.
+
+  THE GAP G(n) = T(n) - 2E(n) = SL(n) + excess(n):
+  n:   3    4     5      6      7       8         9
+  G:   2    6    28    124    740    5966     85698
+  G/T: .50  .38   .32    .18    .08     .03       .01
+
+  ASYMPTOTICALLY: G/T → 0, so E ~ T/2 at large n.
+  The meta-graph becomes increasingly "simple" (few multi-edges, few self-loops).
+
+  FOR EXACT E(n): must compute the meta-graph adjacency (F matrix)
+  at each n, which requires canonical form computation.
+  Known exact: E(3..8) = 1, 5, 30, 290, 4086, 91161.
+
+  THE BURNSIDE APPROACH gives T(n) exactly at any n.
+  But T only gives an UPPER BOUND: E ≤ T/2.
+  The gap G = T - 2E requires additional information.
+
+  OPEN QUESTION: Is there a cycle-index formula for G(n)?
+  G counts a specific defect in the meta-graph structure.
+  It may be expressible as a Burnside sum over (tournament, arc) pairs
+  with additional constraints (arc maps to same class, or same directed edge).
+
+  G sequence: 2, 6, 28, 124, 740, 5966, 85698
+  Not immediately recognizable. Need OEIS lookup.
+
+Done. opus-2026-03-23-S211e

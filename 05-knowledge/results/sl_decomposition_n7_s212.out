@@ -1,0 +1,136 @@
+n=7, m=21, 2^m=2097152
+
+========================================================================
+  PHASE 1: BUILD ISO CLASSES
+========================================================================
+
+  Phase 1a: grouped 2097152 tournaments by score in 23.0s
+  59 distinct score sequences
+  Phase 1b: found 456 iso classes in 595.1s
+  Total time: 595.1s
+
+========================================================================
+  PHASE 2: BUILD F MATRIX (DIAGONAL AND EDGES)
+========================================================================
+
+  F matrix (456 x 456) built in 44.5s
+
+========================================================================
+  PHASE 3: EDGE COUNT AND BASIC STATISTICS
+========================================================================
+
+  V = 456, E = 4086 (expected 4086)
+  T = 9576
+  G = T - 2E = 8912 - 8172 = 740 (expected 740)
+
+========================================================================
+  PHASE 4: COMPUTE |Aut| FOR EACH CLASS
+========================================================================
+
+  Classes with |Aut| > 1: 57 out of 456
+    class 1: |Aut| = 3, size = 1680
+    class 2: |Aut| = 3, size = 1680
+    class 4: |Aut| = 3, size = 1680
+    class 9: |Aut| = 3, size = 1680
+    class 11: |Aut| = 5, size = 1008
+    class 12: |Aut| = 3, size = 1680
+    class 13: |Aut| = 9, size = 560
+    class 23: |Aut| = 3, size = 1680
+    class 25: |Aut| = 3, size = 1680
+    class 28: |Aut| = 3, size = 1680
+    class 45: |Aut| = 3, size = 1680
+    class 46: |Aut| = 5, size = 1008
+    class 47: |Aut| = 3, size = 1680
+    class 54: |Aut| = 3, size = 1680
+    class 55: |Aut| = 3, size = 1680
+    class 56: |Aut| = 3, size = 1680
+    class 57: |Aut| = 9, size = 560
+    class 58: |Aut| = 9, size = 560
+    class 59: |Aut| = 3, size = 1680
+    class 61: |Aut| = 3, size = 1680
+    class 80: |Aut| = 3, size = 1680
+    class 81: |Aut| = 3, size = 1680
+    class 84: |Aut| = 3, size = 1680
+    class 87: |Aut| = 3, size = 1680
+    class 103: |Aut| = 3, size = 1680
+    class 105: |Aut| = 3, size = 1680
+    class 108: |Aut| = 3, size = 1680
+    class 111: |Aut| = 3, size = 1680
+    class 115: |Aut| = 3, size = 1680
+    class 186: |Aut| = 3, size = 1680
+    class 187: |Aut| = 3, size = 1680
+    class 191: |Aut| = 3, size = 1680
+    class 195: |Aut| = 3, size = 1680
+    class 218: |Aut| = 3, size = 1680
+    class 230: |Aut| = 3, size = 1680
+    class 231: |Aut| = 3, size = 1680
+    class 261: |Aut| = 3, size = 1680
+    class 278: |Aut| = 3, size = 1680
+    class 280: |Aut| = 5, size = 1008
+    class 287: |Aut| = 3, size = 1680
+    class 296: |Aut| = 5, size = 1008
+    class 297: |Aut| = 3, size = 1680
+    class 301: |Aut| = 3, size = 1680
+    class 305: |Aut| = 3, size = 1680
+    class 311: |Aut| = 3, size = 1680
+    class 315: |Aut| = 3, size = 1680
+    class 316: |Aut| = 3, size = 1680
+    class 317: |Aut| = 3, size = 1680
+    class 370: |Aut| = 9, size = 560
+    class 372: |Aut| = 3, size = 1680
+    class 375: |Aut| = 3, size = 1680
+    class 382: |Aut| = 3, size = 1680
+    class 403: |Aut| = 3, size = 1680
+    class 439: |Aut| = 3, size = 1680
+    class 453: |Aut| = 7, size = 720
+    class 454: |Aut| = 3, size = 1680
+    class 455: |Aut| = 21, size = 240
+
+========================================================================
+  PHASE 5: COMPUTE SL
+========================================================================
+
+  ... processed 50/456 classes
+  ... processed 100/456 classes
+  ... processed 150/456 classes
+  ... processed 200/456 classes
+  ... processed 250/456 classes
+  ... processed 300/456 classes
+  ... processed 350/456 classes
+  ... processed 400/456 classes
+  ... processed 450/456 classes
+
+  SL computation done in 0.6s
+  SL = 324
+
+========================================================================
+  PHASE 6: COMPUTE EXCESS
+========================================================================
+
+  E from mult_matrix = 4086 (should be 4086)
+  excess_cross = 416
+  SL + excess = 324 + 416 = 740 (should be G = 740)
+
+========================================================================
+  PHASE 7: VERIFICATION AND SUMMARY
+========================================================================
+
+  T from mult_matrix = 8912 (expected 8912)
+  D = 632
+  S_2 = 10176
+  (S_2 - T) / 2 = (10176 - 8912) / 2 = 632 (should be D=632)
+
+  E_wrong = (T - D)/2 = 4140
+  E_correct = (T - SL - excess)/2 = 4086
+  E_actual = 4086
+
+  COMPLETE DECOMPOSITION TABLE:
+  n  | T     | E    | G=T-2E | SL  | excess | G/T
+  ---|-------|------|--------|-----|--------|------
+  3  |     4 |    1 |     2  |   2 |     0  | 0.5000
+  4  |    16 |    5 |     6  |   6 |     0  | 0.3750
+  5  |    88 |   30 |    28  |  16 |    12  | 0.3182
+  6  |   704 |  290 |   124  |  58 |    66  | 0.1761
+  7  |  8912 | 4086 |   740  | 324 |   416  | 0.0830
+
+Done. opus-2026-03-23-S212

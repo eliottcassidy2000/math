@@ -1,0 +1,119 @@
+
+========================================================================
+  COMPLETE ANALYSIS: n=3,4,5,6
+========================================================================
+
+  n=3 (V=2):
+    T=4 = SL(2) + cross(2)
+    E=1 (from F-matrix adjacency)
+    D=1 = D_self(1) + D_cross(0)
+    S_2=6 = S2_self(4) + S2_cross(2)
+    excess_cross=0 (directed orbits beyond 2 per edge)
+
+    E_naive = (T-D)/2 = 1  (WRONG?)
+    E_correct = (T - SL - excess)/2 = 1
+    E_formula2 = (3T-S2)/4 = 1
+    actual E = 1
+    Match naive: True, Match correct: True
+    SL=2, D_self=1, SL-2*D_self=0
+    SL + excess - D = 2 + 0 - 1 = 1 (should be 0 if E=(T-D)/2 worked)
+
+  n=4 (V=4):
+    T=16 = SL(6) + cross(10)
+    E=5 (from F-matrix adjacency)
+    D=6 = D_self(6) + D_cross(0)
+    S_2=28 = S2_self(18) + S2_cross(10)
+    excess_cross=0 (directed orbits beyond 2 per edge)
+
+    E_naive = (T-D)/2 = 5  (WRONG?)
+    E_correct = (T - SL - excess)/2 = 5
+    E_formula2 = (3T-S2)/4 = 5
+    actual E = 5
+    Match naive: True, Match correct: True
+    SL=6, D_self=6, SL-2*D_self=-6
+    SL + excess - D = 6 + 0 - 6 = 0 (should be 0 if E=(T-D)/2 worked)
+
+  n=5 (V=12):
+    T=88 = SL(16) + cross(72)
+    E=30 (from F-matrix adjacency)
+    D=28 = D_self(14) + D_cross(14)
+    S_2=144 = S2_self(44) + S2_cross(100)
+    excess_cross=12 (directed orbits beyond 2 per edge)
+
+    E_naive = (T-D)/2 = 30  (WRONG?)
+    E_correct = (T - SL - excess)/2 = 30
+    E_formula2 = (3T-S2)/4 = 30
+    actual E = 30
+    Match naive: True, Match correct: True
+    SL=16, D_self=14, SL-2*D_self=-12
+    SL + excess - D = 16 + 12 - 28 = 0 (should be 0 if E=(T-D)/2 worked)
+
+  n=6 (V=56):
+    T=704 = SL(58) + cross(646)
+    E=290 (from F-matrix adjacency)
+    D=122 = D_self(46) + D_cross(76)
+    S_2=948 = S2_self(150) + S2_cross(798)
+    excess_cross=66 (directed orbits beyond 2 per edge)
+
+    E_naive = (T-D)/2 = 291  (WRONG?)
+    E_correct = (T - SL - excess)/2 = 290
+    E_formula2 = (3T-S2)/4 = 291
+    actual E = 290
+    Match naive: False, Match correct: True
+    SL=58, D_self=46, SL-2*D_self=-34
+    SL + excess - D = 58 + 66 - 122 = 2 (should be 0 if E=(T-D)/2 worked)
+
+
+========================================================================
+  THE CORRECTED FORMULA
+========================================================================
+
+
+  THE FORMULA E = (T - D) / 2 IS WRONG.
+
+  It fails at n=6 (and actually at n=3 too, masked by integer division).
+
+  The correct decomposition:
+  T = SL + 2*E + excess_cross
+  where:
+    SL = sum_C mult(C -> C) = self-loop orbits
+    excess_cross = sum_{{C,D}} (mult(C->D) + mult(D->C) - 2) for C≠D connected
+                 = cross_total - 2*E
+
+  So: E = (T - SL - excess_cross) / 2
+
+  Both SL and excess_cross require computing orbit targets, not just counts.
+  There is no closed-form expression for E from T and D alone.
+
+
+========================================================================
+  CAN WE COMPUTE SL FROM BURNSIDE?
+========================================================================
+
+  n=3: 1/2 classes have |Aut| > 1
+  n=4: 2/4 classes have |Aut| > 1
+  n=5: 5/12 classes have |Aut| > 1
+  n=6: 15/56 classes have |Aut| > 1
+
+========================================================================
+  THE EDGE FORMULA: WHAT WE CAN COMPUTE
+========================================================================
+
+  n=3: T-2E = 2 = SL(2) + excess(0), (T-2E)/T = 0.5000
+  n=4: T-2E = 6 = SL(6) + excess(0), (T-2E)/T = 0.3750
+  n=5: T-2E = 28 = SL(16) + excess(12), (T-2E)/T = 0.3182
+  n=6: T-2E = 124 = SL(58) + excess(66), (T-2E)/T = 0.1761
+
+  At higher n (from known T and E):
+  n=3: T-2E = 2, (T-2E)/T = 0.500000
+  n=4: T-2E = 6, (T-2E)/T = 0.375000
+  n=5: T-2E = 28, (T-2E)/T = 0.318182
+  n=6: T-2E = 124, (T-2E)/T = 0.176136
+  n=7: T-2E = 740, (T-2E)/T = 0.083034
+  n=8: T-2E = 5966, (T-2E)/T = 0.031686
+  n=9: T-2E = 85698, (T-2E)/T = 0.012516
+
+  T-2E = SL + excess_cross. This sum DECREASES relative to T.
+  So E ~ T/2 becomes exact at large n.
+
+Done. opus-2026-03-23-S211d

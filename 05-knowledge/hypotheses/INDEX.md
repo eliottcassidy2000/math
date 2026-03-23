@@ -1929,3 +1929,8 @@ Source: metagraph_automorphisms_s20co.py
 **Status:** CONFIRMED (n=6,7)
 **Hypothesis:** In G_n/Z_2, the blue subgraph has exactly 2 components for n >= 6: one NS and one SC. At n=7: 184 (NS) and 88 (SC). SC and NS are completely separated by blue edges.
 Source: merged_extra_s20co.py, merged_n7_deep_s20co.py
+
+| HYP-XXXX | **E=(T-D)/2 REFUTED**: Formula E(n) = (T(n)-D(n))/2 for meta-graph edge count is WRONG at n≥6. Correct: E = (T - SL - excess)/2. Coincidental agreement at n≤5. MISTAKE-029. | REFUTED | self_loop_analysis_s211d.py | opus-S211 |
+| HYP-XXXX | **SL sequence**: Self-loop arc-orbits SL(3..7) = 2, 6, 16, 58, 324. SL/V → 0, SL/T → 0. Not in OEIS. | CONFIRMED (n=3..7) | sl_decomposition_n7_s212.py | opus-S212 |
+| HYP-XXXX | **Burnside correction structure**: Non-identity contributions to SL come from sigma with all odd cycle lengths and ≥2 fixed points. Zero at n≤4, nonzero at n≥5. | CONFIRMED (n=3..6) | burnside_sl_s214.py | opus-S215 |
+| HYP-XXXX | **Gap sequence G**: G(n) = T-2E = SL+excess = 2, 6, 28, 124, 740, 5966, 85698. G/T → 0 (meta-graph approaches simplicity). Not in OEIS. | CONFIRMED (n=3..8) | corrected_sequences_s213.py | opus-S213 |

@@ -1,0 +1,174 @@
+
+========================================================================
+  VALIDATING FORMULA AT n=3,4,5
+========================================================================
+
+  n=3 (nc=2, 0.0s):
+    T = 4, S_2 = 6, D = 1
+    E = (T-D)/2 = 1
+    E = (3T-S2)/4 = 1
+    Expected E = 1, match = True
+    Expected T = 4, match = True
+
+  n=4 (nc=4, 0.0s):
+    T = 16, S_2 = 28, D = 6
+    E = (T-D)/2 = 5
+    E = (3T-S2)/4 = 5
+    Expected E = 5, match = True
+    Expected T = 16, match = True
+
+  n=5 (nc=12, 1.1s):
+    T = 88, S_2 = 144, D = 28
+    E = (T-D)/2 = 30
+    E = (3T-S2)/4 = 30
+    Expected E = 30, match = True
+    Expected T = 88, match = True
+
+
+========================================================================
+  EXTENDING TO n=6
+========================================================================
+
+  n=6, m=15, 2^m=32768 tournaments
+  Building iso classes...
+  Found 56 iso classes in 3.6s
+  Building F matrix...
+  F matrix built in 0.5s
+  Computing automorphisms and arc-orbits...
+  Automorphisms done in 0.1s
+
+  n=6 RESULTS:
+    V = 56 (iso classes)
+    T = 704 (arc-orbits)
+    S_2 = 948
+    D = (S_2 - T)/2 = 122
+    E = (T - D)/2 = 291
+    E = (3T - S_2)/4 = 291
+    Direct edge count = 320
+    Expected V = 56, match = True
+    Expected T = 704, match = True
+    Expected E = 290, match = False
+    Time: 4.2s total
+
+========================================================================
+  DEGENERACY PROFILE AT n=6
+========================================================================
+
+  Multiplicity distribution across all (source, target) pairs:
+    mult=1: 537 pairs
+    mult=2: 58 pairs
+    mult=3: 10 pairs
+    mult=4: 4 pairs
+    mult=5: 1 pairs
+
+  Total (source, target) pairs with mult>0: 610
+  Total arc-orbits: 704
+  Pairs with mult>=2 (contributing to degeneracy): 73
+
+  Classes with self-loops: 30 / 56
+  Total self-loop orbits: 58
+
+========================================================================
+  PARENT TREE ANALYSIS AT n=6
+========================================================================
+
+  For each n=6 class, vertex-deleting gives 6 sub-tournaments on 5 vertices.
+  The multiset of their iso classes = the PARENT PROFILE.
+
+  Distinct parent profiles: 52
+  (Each profile is a sorted tuple of n=5 class ids)
+
+    Profile (0, 4, 4, 8, 8, 8): 2 classes (H=[23, 23])
+    Profile (2, 5, 6, 6, 9, 10): 2 classes (H=[31, 31])
+    Profile (3, 4, 6, 6, 8, 10): 2 classes (H=[29, 29])
+    Profile (6, 8, 9, 10, 10, 11): 2 classes (H=[43, 43])
+    Profile (0, 0, 0, 0, 0, 0): 1 classes (H=[1])
+    Profile (0, 0, 0, 1, 1, 1): 1 classes (H=[3])
+    Profile (0, 0, 1, 1, 2, 2): 1 classes (H=[5])
+    Profile (0, 0, 0, 1, 3, 3): 1 classes (H=[3])
+    Profile (0, 0, 2, 2, 2, 4): 1 classes (H=[9])
+    Profile (0, 0, 2, 3, 3, 5): 1 classes (H=[5])
+
+========================================================================
+  VERTEX DELETION PARENT TREE: n=5 -> n=6
+========================================================================
+
+  Parent-child edges from n=5 to n=6:
+    n=5 class 0 -> 21 children at n=6
+    n=5 class 1 -> 13 children at n=6
+    n=5 class 2 -> 23 children at n=6
+    n=5 class 3 -> 13 children at n=6
+    n=5 class 4 -> 24 children at n=6
+    n=5 class 5 -> 23 children at n=6
+    n=5 class 6 -> 21 children at n=6
+    n=5 class 7 -> 13 children at n=6
+    n=5 class 8 -> 23 children at n=6
+    n=5 class 9 -> 13 children at n=6
+    n=5 class 10 -> 21 children at n=6
+    n=5 class 11 -> 7 children at n=6
+
+  Total parent-child edges: 215
+  Average children per n=5 class: 17.9
+  Average parents per n=6 class: 1.3
+
+========================================================================
+  S_2 SEQUENCE ANALYSIS
+========================================================================
+
+  S_2 comparison:
+  n=3: direct=8, reverse=8, match=True
+  n=4: direct=28, reverse=28, match=True
+  n=5: direct=144, reverse=144, match=True
+  n=6: direct=948, reverse=952, match=False
+
+  S_2 SEQUENCE (n=3..9, from 3T-4E):
+  n=3: S_2=8, T=4, V=2, S_2/V=4.00, S_2/T=2.0000, (S_2-T)/(2V)=1.0000
+  n=4: S_2=28, T=16, V=4, S_2/V=7.00, S_2/T=1.7500, (S_2-T)/(2V)=1.5000
+  n=5: S_2=144, T=88, V=12, S_2/V=12.00, S_2/T=1.6364, (S_2-T)/(2V)=2.3333
+  n=6: S_2=952, T=704, V=56, S_2/V=17.00, S_2/T=1.3523, (S_2-T)/(2V)=2.2143
+  n=7: S_2=10392, T=8912, V=456, S_2/V=22.79, S_2/T=1.1661, (S_2-T)/(2V)=1.6228
+  n=8: S_2=200220, T=188288, V=6880, S_2/V=29.10, S_2/T=1.0634, (S_2-T)/(2V)=0.8672
+  n=9: S_2=7018596, T=6847200, V=191536, S_2/V=36.64, S_2/T=1.0250, (S_2-T)/(2V)=0.4474
+
+  D/V = average degeneracy per class:
+  n=3: D=2, D/V=1.0000
+  n=4: D=6, D/V=1.5000
+  n=5: D=28, D/V=2.3333
+  n=6: D=124, D/V=2.2143
+  n=7: D=740, D/V=1.6228
+  n=8: D=5966, D/V=0.8672
+  n=9: D=85698, D/V=0.4474
+
+========================================================================
+  DEGREE DISTRIBUTIONS AT n=6
+========================================================================
+
+  Degree distribution in G_6:
+    degree 3: 3 classes
+    degree 5: 2 classes
+    degree 6: 4 classes
+    degree 7: 6 classes
+    degree 11: 7 classes
+    degree 12: 10 classes
+    degree 13: 10 classes
+    degree 14: 12 classes
+    degree 15: 2 classes
+
+  min=3, max=15, mean=10.89
+  2E/V = 10.39 (should match mean degree)
+
+========================================================================
+  COMPLETE RESULTS TABLE
+========================================================================
+
+  n  |  V  |   T   |  S_2  |  D  |  E  | S_2/T | D/V
+  ---|-----|-------|-------|-----|-----|-------|------
+  3  | 2 | 4 | 8 | 2 | 1 | 2.0000 | 1.0000
+  4  | 4 | 16 | 28 | 6 | 5 | 1.7500 | 1.5000
+  5  | 12 | 88 | 144 | 28 | 30 | 1.6364 | 2.3333
+  6  | 56 | 704 | 952 | 124 | 290 | 1.3523 | 2.2143
+  7  | 456 | 8912 | 10392 | 740 | 4086 | 1.1661 | 1.6228
+  8  | 6880 | 188288 | 200220 | 5966 | 91161 | 1.0634 | 0.8672
+  9  | 191536 | 6847200 | 7018596 | 85698 | 3380751 | 1.0250 | 0.4474
+
+Done. opus-2026-03-23-S211

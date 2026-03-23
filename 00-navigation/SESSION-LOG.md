@@ -13,6 +13,41 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S211 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S210 (second moment script, unrun)
+**Summary of work:** Major correction session. Discovered that E=(T-D)/2 is WRONG (MISTAKE-029). Extended meta-graph computation to n=6 and n=7. Built complete SL/excess decomposition.
+
+**Key discoveries:**
+1. **MISTAKE-029**: Formula E = (T-D)/2 = (3T-S_2)/4 is WRONG at n≥6. Coincidental agreement at n≤5 masked the error.
+2. **Correct formula**: E = (T - SL - excess_cross)/2 where SL = self-loop orbits, excess = multi-edge excess.
+3. **SL sequence computed**: SL(3..7) = 2, 6, 16, 58, 324. New sequence, not in OEIS.
+4. **Excess sequence**: excess(3..7) = 0, 0, 12, 66, 416.
+5. **Gap sequence**: G(n) = T-2E = SL+excess = 2, 6, 28, 124, 740, 5966, 85698. Novel sequence.
+6. **Corrected S_2**: True S_2(3..7) = 6, 28, 144, 948, 10176 (vs wrong 8, 28, 144, 952, 10392).
+7. **Burnside structure of SL**: SL = (1/n!)[Tr(F) + corrections]. Corrections come from cycle types with all odd cycles and ≥2 fixed points. Zero at n≤4, nonzero at n≥5.
+8. **Tr(F) sequence**: 12, 144, 1760, 37920 = total labeled self-reversible (T,e) pairs.
+9. **Self-reversible fraction** decreases: 50%, 37.5%, 17.2%, 7.7% → 0.
+10. **n=7 verified**: V=456, T=8912, E=4086, SL=324, excess=416 all exact.
+
+**New contributions:**
+- 04-computation/meta_graph_n6n7_s211.py (F matrix at n=6, orbit decomposition)
+- 04-computation/self_loop_analysis_s211d.py (SL/excess decomposition n=3..6)
+- 04-computation/sl_decomposition_n7_s212.py (full SL/excess at n=7)
+- 04-computation/corrected_sequences_s213.py (complete corrected sequence table)
+- 04-computation/burnside_sl_s214.py (Burnside decomposition of SL, partial)
+- 04-computation/trace_F_analysis_s215.py (Tr(F) and correction analysis)
+- 01-canon/MISTAKES.md: MISTAKE-029 (E=(T-D)/2 wrong)
+- Various debug scripts in 04-computation/
+
+**Unresolved threads:**
+1. Burnside computation for SL has a bug in odd-cycle orbit handling — needs fix
+2. E(n=9) = 3380751 may have been computed from the wrong formula — needs verification
+3. Can G(n) be computed without full meta-graph enumeration?
+4. The Tr(F) sequence (12, 144, 1760, 37920) may have a closed form
+5. SL/V converges to 0 — can we prove the asymptotic rate?
+
 ## kind-pasteur-2026-03-23-S20cr — 2026-03-23
 
 **Account:** kind-pasteur

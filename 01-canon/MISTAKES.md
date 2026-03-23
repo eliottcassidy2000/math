@@ -1130,3 +1130,42 @@ Medium — the false claim propagated through 6+ files across multiple sessions.
 **One data point is not a pattern.** The entire false extrapolation rested on a single observation: 7 = 2³ - 1 is both a Mersenne number and forbidden. From this, it was incorrectly inferred that other Mersenne numbers (31, 127) are also forbidden. A simple check (is H=31 achieved at n=6?) would have caught this immediately.
 
 This is a variant of MISTAKE-024 (H=63 falsely claimed forbidden) — the same class of error, just with a different numerological motivation. The meta-lesson: when claiming a numerical pattern "explains" something, verify it at the NEXT case before asserting it as a principle.
+
+---
+
+## MISTAKE-029: Formula E = (T - D)/2 is WRONG for the meta-graph edge count
+
+**Date discovered:** 2026-03-23
+**Found by:** opus-2026-03-23-S211
+**Affects:** degeneracy_second_moment_s210.py, all claims that E = (3T - S_2)/4
+
+### What was assumed
+The meta-graph edge count formula E = (T - D)/2 was claimed in S210, where T = total arc-orbits and D = sum C(mult(C→D), 2) is the degeneracy. The derived formula E = (3T - S_2)/4 was presented as the "keystone" edge count formula, and the reverse-engineered S_2 sequence was reported as new.
+
+### Why it was wrong
+The formula ignores **self-loop orbits** and **directed multi-edge excess**. The correct decomposition is:
+
+T = SL + 2E + excess_cross
+
+where:
+- SL = sum_C mult(C→C) = total self-loop arc-orbits
+- excess_cross = sum_{{C,D}} (mult(C→D) + mult(D→C) - 2) for connected C≠D
+
+So: **E = (T - SL - excess_cross) / 2**, NOT (T - D) / 2.
+
+At n=3,4,5: the formula happened to give correct answers because SL + excess = D exactly (coincidence). At n=6: SL + excess = 58 + 66 = 124, but D = 122, so E_wrong = 291 ≠ E_actual = 290.
+
+The "reverse-engineered" S_2 values for n≥6 were derived from this wrong formula and are therefore incorrect. The actual S_2 at n=6 is 948, not 952.
+
+### The correct framing
+E(n) must be computed directly from the meta-graph adjacency (F matrix), not from aggregate orbit statistics. There is no known closed-form expression for E(n) in terms of T, D, or S_2. The quantities T(n) and S_2(n) give orbit-level statistics but cannot determine which pairs of classes are actually adjacent.
+
+### Impact
+- The "keystone formula" E = (3T - S_2)/4 is invalid
+- The S_2 sequence 8, 28, 144, 952, 10392, 200220, 7018596 from S210 is wrong at n≥6
+- The correct S_2 at n=6 is 948 (from direct orbit computation)
+- The gap sequence G(n) = T - 2E = 2, 6, 28, 124, 740, 5966, 85698 IS correct and novel
+- All independently computed E values (E(3..8) = 1, 5, 30, 290, 4086, 91161) remain valid
+
+### Lesson
+When a formula passes at small n, always verify at the next n where new phenomena emerge. At n≤5, every class has SL + excess = D (a coincidence), so the formula appeared correct. At n=6, the coincidence breaks. **Integer division can mask off-by-one errors**: at n=3, (T-D)/2 = 3/2 = 1.5, which rounded to 1 via `//` and happened to match E=1.
