@@ -1,0 +1,271 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\recursive_tiling_s20cv.py:15: SyntaxWarning: invalid escape sequence '\('
+  T on n vertices = T\(n-1) \u222a T\0 \u222a {arc(0, n-1)}
+================================================================================
+  RECURSIVE TILING DECOMPOSITION
+  delta_{n-2} = bottom(n-1) U top(n-1) U {apex}
+  kind-pasteur-2026-03-23-S20cv
+================================================================================
+
+################################################################################
+  n = 4
+################################################################################
+
+  Grid(n=4): 3 cells = C(3,2) = 3
+  Bottom (Grid(3)): 1 cells = C(2,2) = 1
+  Top (Grid(3) shifted): 1 cells = C(2,2) = 1
+  Overlap (Grid(2)): 0 cells = C(1,2) = 0
+  Apex: (2,1) = arc (3, 0) (vertices 0 and 3)
+  Bottom-only (column c=1, not apex): 1 cells
+  Top-only (strip s=n-1, not apex): 1 cells
+
+  Inclusion-exclusion: |B|+|T|-|O|+1 = 1+1-0+1 = 3 = m=3 OK
+  Partition: |B_only|+|overlap|+|T_only|+1 = 1+0+1+1 = 3 = m=3 OK
+
+  STAIRCASE VISUALIZATION (B=bottom-only, O=overlap, T=top-only, A=apex):
+  r=1:  B T
+        1 2
+
+  --- RECURSIVE H DECOMPOSITION ---
+    Apex=0 (4 tilings): avg H = 5.00
+    Apex=1 (4 tilings): avg H = 3.00
+    Overall avg H = 4.00
+    Total sum H = 32 (= n! = 24 ? NO)
+    sum H^2/|Aut| would be: sum of H(tiling)... let me compute
+    Actually sum_tilings H = 32
+    All H odd (Redei)? 8/8 = 100%
+
+  --- APEX AND HAMILTONIAN CYCLES ---
+    Apex=0 (vertex 0 beats vertex 3): P_0 closes into cycle: 4 tilings
+    Apex=1 (vertex 3 beats vertex 0): P_0 does NOT close: 4 tilings
+    Avg H when P_0-cycle exists: 5.00
+    Avg H when P_0-cycle absent: 3.00
+
+  --- H RECURSION: T = T\(n-1) + T\0 + apex ---
+    Checking: H(T) = H(T\(n-1)) + H(T\0) when apex closes P_0
+    (This would be the tiling recursion)
+    tb=000: H=5, H_bot=3, H_top=3, H_mid=1, H_bot+H_top-H_mid=5, diff=+0, apex=0
+    tb=001: H=5, H_bot=1, H_top=3, H_mid=1, H_bot+H_top-H_mid=3, diff=+2, apex=0
+    tb=010: H=5, H_bot=3, H_top=1, H_mid=1, H_bot+H_top-H_mid=3, diff=+2, apex=0
+    tb=011: H=5, H_bot=1, H_top=1, H_mid=1, H_bot+H_top-H_mid=1, diff=+4, apex=0
+    tb=100: H=5, H_bot=3, H_top=3, H_mid=1, H_bot+H_top-H_mid=5, diff=+0, apex=1
+    tb=101: H=3, H_bot=1, H_top=3, H_mid=1, H_bot+H_top-H_mid=3, diff=+0, apex=1
+    tb=110: H=3, H_bot=3, H_top=1, H_mid=1, H_bot+H_top-H_mid=3, diff=+0, apex=1
+    tb=111: H=1, H_bot=1, H_top=1, H_mid=1, H_bot+H_top-H_mid=1, diff=+0, apex=1
+
+    FULL CORRECTION ANALYSIS:
+      diff  apex  count
+        +0     0      1
+        +0     1      4
+        +2     0      2
+        +4     0      1
+
+    Summary:
+      Apex=0: corrections = [0, 2, 4], avg = 2.00
+      Apex=1: corrections = [0], avg = 0.00
+
+################################################################################
+  n = 5
+################################################################################
+
+  Grid(n=5): 6 cells = C(4,2) = 6
+  Bottom (Grid(4)): 3 cells = C(3,2) = 3
+  Top (Grid(4) shifted): 3 cells = C(3,2) = 3
+  Overlap (Grid(3)): 1 cells = C(2,2) = 1
+  Apex: (3,1) = arc (4, 0) (vertices 0 and 4)
+  Bottom-only (column c=1, not apex): 2 cells
+  Top-only (strip s=n-1, not apex): 2 cells
+
+  Inclusion-exclusion: |B|+|T|-|O|+1 = 3+3-1+1 = 6 = m=6 OK
+  Partition: |B_only|+|overlap|+|T_only|+1 = 2+1+2+1 = 6 = m=6 OK
+
+  STAIRCASE VISUALIZATION (B=bottom-only, O=overlap, T=top-only, A=apex):
+  r=2:  B T
+  r=1:  B O T
+        1 2 3
+
+  --- RECURSIVE H DECOMPOSITION ---
+    Apex=0 (32 tilings): avg H = 11.88
+    Apex=1 (32 tilings): avg H = 7.88
+    Overall avg H = 9.88
+    Total sum H = 632 (= n! = 120 ? NO)
+    sum H^2/|Aut| would be: sum of H(tiling)... let me compute
+    Actually sum_tilings H = 632
+    All H odd (Redei)? 64/64 = 100%
+
+  --- APEX AND HAMILTONIAN CYCLES ---
+    Apex=0 (vertex 0 beats vertex 4): P_0 closes into cycle: 32 tilings
+    Apex=1 (vertex 4 beats vertex 0): P_0 does NOT close: 32 tilings
+    Avg H when P_0-cycle exists: 11.88
+    Avg H when P_0-cycle absent: 7.88
+
+  --- H RECURSION: T = T\(n-1) + T\0 + apex ---
+    Checking: H(T) = H(T\(n-1)) + H(T\0) when apex closes P_0
+    (This would be the tiling recursion)
+    tb=000000: H=9, H_bot=5, H_top=5, H_mid=3, H_bot+H_top-H_mid=7, diff=+2, apex=0
+    tb=000001: H=9, H_bot=5, H_top=5, H_mid=3, H_bot+H_top-H_mid=7, diff=+2, apex=0
+    tb=000010: H=13, H_bot=5, H_top=5, H_mid=1, H_bot+H_top-H_mid=9, diff=+4, apex=0
+    tb=000011: H=11, H_bot=5, H_top=5, H_mid=1, H_bot+H_top-H_mid=9, diff=+2, apex=0
+    tb=000100: H=9, H_bot=5, H_top=5, H_mid=3, H_bot+H_top-H_mid=7, diff=+2, apex=0
+    tb=000101: H=11, H_bot=5, H_top=5, H_mid=3, H_bot+H_top-H_mid=7, diff=+4, apex=0
+    tb=000110: H=11, H_bot=5, H_top=5, H_mid=1, H_bot+H_top-H_mid=9, diff=+2, apex=0
+    tb=000111: H=15, H_bot=5, H_top=5, H_mid=1, H_bot+H_top-H_mid=9, diff=+6, apex=0
+    tb=001000: H=13, H_bot=5, H_top=5, H_mid=3, H_bot+H_top-H_mid=7, diff=+6, apex=0
+    tb=001001: H=9, H_bot=3, H_top=5, H_mid=3, H_bot+H_top-H_mid=5, diff=+4, apex=0
+    tb=101001: H=5, H_bot=3, H_top=5, H_mid=3, H_bot+H_top-H_mid=5, diff=+0, apex=1
+    tb=101011: H=5, H_bot=1, H_top=5, H_mid=1, H_bot+H_top-H_mid=5, diff=+0, apex=1
+    tb=101101: H=5, H_bot=3, H_top=5, H_mid=3, H_bot+H_top-H_mid=5, diff=+0, apex=1
+    tb=101111: H=5, H_bot=1, H_top=5, H_mid=1, H_bot+H_top-H_mid=5, diff=+0, apex=1
+    tb=110100: H=5, H_bot=5, H_top=3, H_mid=3, H_bot+H_top-H_mid=5, diff=+0, apex=1
+    tb=110101: H=5, H_bot=5, H_top=3, H_mid=3, H_bot+H_top-H_mid=5, diff=+0, apex=1
+    tb=110110: H=5, H_bot=5, H_top=1, H_mid=1, H_bot+H_top-H_mid=5, diff=+0, apex=1
+    tb=110111: H=5, H_bot=5, H_top=1, H_mid=1, H_bot+H_top-H_mid=5, diff=+0, apex=1
+    tb=111001: H=5, H_bot=3, H_top=5, H_mid=3, H_bot+H_top-H_mid=5, diff=+0, apex=1
+    tb=111011: H=3, H_bot=1, H_top=3, H_mid=1, H_bot+H_top-H_mid=3, diff=+0, apex=1
+    tb=111100: H=5, H_bot=5, H_top=3, H_mid=3, H_bot+H_top-H_mid=5, diff=+0, apex=1
+    tb=111101: H=3, H_bot=3, H_top=3, H_mid=3, H_bot+H_top-H_mid=3, diff=+0, apex=1
+    tb=111110: H=3, H_bot=3, H_top=1, H_mid=1, H_bot+H_top-H_mid=3, diff=+0, apex=1
+    tb=111111: H=1, H_bot=1, H_top=1, H_mid=1, H_bot+H_top-H_mid=1, diff=+0, apex=1
+
+    FULL CORRECTION ANALYSIS:
+      diff  apex  count
+        +0     1     14
+        +2     0      5
+        +2     1      9
+        +4     0      6
+        +4     1      6
+        +6     0      9
+        +6     1      3
+        +8     0     11
+       +12     0      1
+
+    Summary:
+      Apex=0: corrections = [2, 4, 6, 8, 12], avg = 5.88
+      Apex=1: corrections = [0, 2, 4, 6], avg = 1.88
+
+################################################################################
+  n = 6
+################################################################################
+
+  Grid(n=6): 10 cells = C(5,2) = 10
+  Bottom (Grid(5)): 6 cells = C(4,2) = 6
+  Top (Grid(5) shifted): 6 cells = C(4,2) = 6
+  Overlap (Grid(4)): 3 cells = C(3,2) = 3
+  Apex: (4,1) = arc (5, 0) (vertices 0 and 5)
+  Bottom-only (column c=1, not apex): 3 cells
+  Top-only (strip s=n-1, not apex): 3 cells
+
+  Inclusion-exclusion: |B|+|T|-|O|+1 = 6+6-3+1 = 10 = m=10 OK
+  Partition: |B_only|+|overlap|+|T_only|+1 = 3+3+3+1 = 10 = m=10 OK
+
+  STAIRCASE VISUALIZATION (B=bottom-only, O=overlap, T=top-only, A=apex):
+  r=3:  B T
+  r=2:  B O T
+  r=1:  B O O T
+        1 2 3 4
+
+  --- RECURSIVE H DECOMPOSITION ---
+    Apex=0 (512 tilings): avg H = 33.00
+    Apex=1 (512 tilings): avg H = 25.00
+    Overall avg H = 29.00
+    Total sum H = 29696 (= n! = 720 ? NO)
+    sum H^2/|Aut| would be: sum of H(tiling)... let me compute
+    Actually sum_tilings H = 29696
+    All H odd (Redei)? 1024/1024 = 100%
+
+  --- APEX AND HAMILTONIAN CYCLES ---
+    Apex=0 (vertex 0 beats vertex 5): P_0 closes into cycle: 512 tilings
+    Apex=1 (vertex 5 beats vertex 0): P_0 does NOT close: 512 tilings
+    Avg H when P_0-cycle exists: 33.00
+    Avg H when P_0-cycle absent: 25.00
+
+  --- H RECURSION: T = T\(n-1) + T\0 + apex ---
+    Checking: H(T) = H(T\(n-1)) + H(T\0) when apex closes P_0
+    (This would be the tiling recursion)
+    tb=0000000000: H=17, H_bot=9, H_top=9, H_mid=5, H_bot+H_top-H_mid=13, diff=+4, apex=0
+    tb=0000000001: H=15, H_bot=9, H_top=9, H_mid=5, H_bot+H_top-H_mid=13, diff=+2, apex=0
+    tb=0000000010: H=23, H_bot=13, H_top=9, H_mid=5, H_bot+H_top-H_mid=17, diff=+6, apex=0
+    tb=0000000011: H=19, H_bot=11, H_top=9, H_mid=5, H_bot+H_top-H_mid=15, diff=+4, apex=0
+    tb=0000000100: H=23, H_bot=9, H_top=13, H_mid=5, H_bot+H_top-H_mid=17, diff=+6, apex=0
+    tb=0000000101: H=25, H_bot=11, H_top=13, H_mid=5, H_bot+H_top-H_mid=19, diff=+6, apex=0
+    tb=0000000110: H=29, H_bot=11, H_top=11, H_mid=5, H_bot+H_top-H_mid=17, diff=+12, apex=0
+    tb=0000000111: H=33, H_bot=15, H_top=11, H_mid=5, H_bot+H_top-H_mid=21, diff=+12, apex=0
+    tb=0000001000: H=15, H_bot=9, H_top=9, H_mid=5, H_bot+H_top-H_mid=13, diff=+2, apex=0
+    tb=0000001001: H=17, H_bot=9, H_top=9, H_mid=5, H_bot+H_top-H_mid=13, diff=+4, apex=0
+
+    FULL CORRECTION ANALYSIS:
+      diff  apex  count
+        +0     1    120
+        +2     0      4
+        +2     1      8
+        +4     0     12
+        +4     1     40
+        +6     0     20
+        +6     1     44
+        +8     0     17
+        +8     1     57
+       +10     0     22
+       +10     1     34
+       +12     0     38
+       +12     1     47
+       +14     0     60
+       +14     1     42
+       +16     0     52
+       +16     1     20
+       +18     0     84
+       +18     1     42
+       +20     0     49
+       +20     1     27
+       +22     0     64
+       +22     1     14
+       +24     0     58
+       +24     1     13
+       +26     0     18
+       +28     0      9
+       +28     1      4
+       +32     0      5
+
+    Summary:
+      Apex=0: corrections = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 32], avg = 17.25
+      Apex=1: corrections = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 28], avg = 9.25
+
+################################################################################
+  n = 7
+################################################################################
+
+  Grid(n=7): 15 cells = C(6,2) = 15
+  Bottom (Grid(6)): 10 cells = C(5,2) = 10
+  Top (Grid(6) shifted): 10 cells = C(5,2) = 10
+  Overlap (Grid(5)): 6 cells = C(4,2) = 6
+  Apex: (5,1) = arc (6, 0) (vertices 0 and 6)
+  Bottom-only (column c=1, not apex): 4 cells
+  Top-only (strip s=n-1, not apex): 4 cells
+
+  Inclusion-exclusion: |B|+|T|-|O|+1 = 10+10-6+1 = 15 = m=15 OK
+  Partition: |B_only|+|overlap|+|T_only|+1 = 4+6+4+1 = 15 = m=15 OK
+
+  STAIRCASE VISUALIZATION (B=bottom-only, O=overlap, T=top-only, A=apex):
+  r=4:  B T
+  r=3:  B O T
+  r=2:  B O O T
+  r=1:  B O O O T
+        1 2 3 4 5
+
+
+================================================================================
+  THE RECURSIVE IDENTITIES
+================================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\recursive_tiling_s20cv.py", line 350, in <module>
+    print("""
+    ~~~~~^^^^
+      STAIRCASE DECOMPOSITION:
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<29 lines>...
+      that controls Hamiltonian cycle existence.
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """)
+    ^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2229' in position 266: character maps to <undefined>
