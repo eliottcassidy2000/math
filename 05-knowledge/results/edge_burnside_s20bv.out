@@ -1,0 +1,108 @@
+======================================================================
+  EDGE COUNT VIA DEGREE DECOMPOSITION
+======================================================================
+
+======================================================================
+  n = 3
+======================================================================
+
+   Class    H   Size  |Aut|  ArcOrb  SelfOrb  CrossOrb  Degree
+       0    1      6      1       3        2         1       1
+       1    3      2      3       1        0         1       1
+
+  Total degree: 2
+  Edges = total_degree / 2 = 1
+  Expected: 1
+  Match: True
+
+  ARC ORBIT ANALYSIS:
+    Class 0: |Aut|=1, arc_orbits=?, m/|Aut|=3.0
+    Class 1: |Aut|=3, arc_orbits=?, m/|Aut|=1.0
+
+======================================================================
+  n = 4
+======================================================================
+
+   Class    H   Size  |Aut|  ArcOrb  SelfOrb  CrossOrb  Degree
+       0    1     24      1       6        3         3       3
+       1    3      8      3       2        0         2       2
+       2    3      8      3       2        0         2       2
+       3    5     24      1       6        3         3       3
+
+  Total degree: 10
+  Edges = total_degree / 2 = 5
+  Expected: 5
+  Match: True
+
+  ARC ORBIT ANALYSIS:
+    Class 0: |Aut|=1, arc_orbits=?, m/|Aut|=6.0
+    Class 1: |Aut|=3, arc_orbits=?, m/|Aut|=2.0
+    Class 2: |Aut|=3, arc_orbits=?, m/|Aut|=2.0
+    Class 3: |Aut|=1, arc_orbits=?, m/|Aut|=6.0
+
+======================================================================
+  n = 5
+======================================================================
+
+   Class    H   Size  |Aut|  ArcOrb  SelfOrb  CrossOrb  Degree
+       0    1    120      1      10        4         6       6
+       1    3     40      3       4        1         3       3
+       2    3     40      3       4        0         4       4
+       3    3     40      3       4        1         3       3
+       4    5    120      1      10        3         7       7
+       5    5    120      1      10        3         7       7
+       6    9    120      1      10        2         8       6
+       7    9    120      1      10        0        10       7
+       8   11    120      1      10        2         8       6
+       9   13    120      1      10        0        10       6
+      10   15     40      3       4        0         4       3
+      11   15     24      5       2        0         2       2
+
+  Total degree: 60
+  Edges = total_degree / 2 = 30
+  Expected: 30
+  Match: True
+
+  ARC ORBIT ANALYSIS:
+    Class 0: |Aut|=1, arc_orbits=?, m/|Aut|=10.0
+    Class 1: |Aut|=3, arc_orbits=?, m/|Aut|=3.3
+    Class 2: |Aut|=3, arc_orbits=?, m/|Aut|=3.3
+    Class 3: |Aut|=3, arc_orbits=?, m/|Aut|=3.3
+    Class 4: |Aut|=1, arc_orbits=?, m/|Aut|=10.0
+    Class 5: |Aut|=1, arc_orbits=?, m/|Aut|=10.0
+    Class 6: |Aut|=1, arc_orbits=?, m/|Aut|=10.0
+    Class 7: |Aut|=1, arc_orbits=?, m/|Aut|=10.0
+    Class 8: |Aut|=1, arc_orbits=?, m/|Aut|=10.0
+    Class 9: |Aut|=1, arc_orbits=?, m/|Aut|=10.0
+    Class 10: |Aut|=3, arc_orbits=?, m/|Aut|=3.3
+    Class 11: |Aut|=5, arc_orbits=?, m/|Aut|=2.0
+
+======================================================================
+  THE DEGREE FORMULA
+======================================================================
+
+  For each iso class C with automorphism group Aut(C):
+
+  1. The m arcs partition into Aut-ORBITS.
+     #orbits = (1/|Aut|) * sum_{g in Aut} Fix_arcs(g)
+     For |Aut|=1: #orbits = m (every arc is its own orbit)
+     For |Aut|=k: #orbits < m (arcs are grouped)
+
+  2. Each arc orbit maps to a SINGLE neighbor class (all arcs in
+     the orbit go to the same class because Aut maps them to each other).
+
+  3. Some orbits are SELF-LOOPS (flip stays in C).
+     Others are CROSS-ORBITS (flip goes to a different class).
+
+  4. degree(C) = number of DISTINCT classes among the cross-orbits.
+     Multiple cross-orbits can go to the SAME neighbor, reducing degree.
+
+  5. edges(G_n) = (1/2) * sum_C degree(C).
+
+  THE BYPASS: We don't need a closed-form formula for edges.
+  We can compute degree(C) from Aut(C) and the orbit structure.
+  This is O(|S_n| * |Aut|) per class, much faster than brute force.
+
+  For n=7 (456 classes): feasible with this approach.
+  For n=8+ (6880+ classes): might need Aut-based shortcuts.
+
