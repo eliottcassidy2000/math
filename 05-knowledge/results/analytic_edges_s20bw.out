@@ -1,0 +1,115 @@
+======================================================================
+  ANALYTICAL EDGE THEORY FOR G_n
+======================================================================
+
+======================================================================
+  1. SELF-LOOP ANALYSIS: WHAT DETERMINES SELF-LOOPS?
+======================================================================
+
+  n=4:
+   Class    H  |Aut|  Self  Cross  Degree  Self/m
+       0    1      1     3      3       3   0.500
+       1    3      3     0      6       2   0.000
+       2    3      3     0      6       2   0.000
+       3    5      1     3      3       3   0.500
+
+  Total self-loops: 144/384 = 3/8
+  Expected (1/2)_k/k!: 3/8
+  Match: True
+  n=5:
+   Class    H  |Aut|  Self  Cross  Degree  Self/m
+       0    1      1     4      6       6   0.400
+       1    3      3     1      9       3   0.100
+       2    3      3     0     10       4   0.000
+       3    3      3     1      9       3   0.100
+       4    5      1     3      7       7   0.300
+       5    5      1     3      7       7   0.300
+       6    9      1     2      8       6   0.200
+       7    9      1     0     10       7   0.000
+       8   11      1     2      8       6   0.200
+       9   13      1     0     10       6   0.000
+      10   15      3     0     10       3   0.000
+      11   15      5     0     10       2   0.000
+
+  Total self-loops: 1760/10240 = 11/64
+  Expected (1/2)_k/k!: 5/16
+  Match: False
+
+======================================================================
+  2. SELF-LOOPS CORRELATE WITH SCORE SEQUENCE
+======================================================================
+
+  n=5: Self-loops by score class
+                 Score    H  |Aut|  Self    S/m
+  [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)]    1      1     4  0.400
+  [np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)]    3      3     1  0.100
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)]    5      1     3  0.300
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)]    3      3     0  0.000
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)]    9      1     2  0.200
+  [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)]    5      1     3  0.300
+  [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)]    9      1     0  0.000
+  [np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)]    3      3     1  0.100
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]   11      1     2  0.200
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]   15      3     0  0.000
+  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(3)]   13      1     0  0.000
+  [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)]   15      5     0  0.000
+
+======================================================================
+  3. CAN WE PREDICT SELF-LOOPS FROM SCORE + |Aut|?
+======================================================================
+
+  Self-loop counts for |Aut|=1 classes: [0, 2, 3, 4]
+  Values: Counter({3: 2, 2: 2, 0: 2, 4: 1})
+  Range: [0, 4]
+  Self-loop counts for |Aut|=3 classes: [1, 0, 1, 0]
+  Self-loop counts for |Aut|=5 classes: [0]
+
+======================================================================
+  4. EDGE COUNT DECOMPOSITION
+======================================================================
+
+   Class    H  |Aut|  Deg  Self  Cross  Dups
+       0    1      1    6     4      6     0
+       1    3      3    3     1      9     6
+       2    5      1    7     3      7     0
+       3    3      3    4     0     10     6
+       4    9      1    6     2      8     2
+       5    5      1    7     3      7     0
+       6    9      1    7     0     10     3
+       7    3      3    3     1      9     6
+       8   11      1    6     2      8     2
+       9   15      3    3     0     10     7
+      10   13      1    6     0     10     4
+      11   15      5    2     0     10     8
+
+======================================================================
+  5. ANALYTICAL RELATIONSHIPS
+======================================================================
+
+  Total self-loops: 1760
+  Predicted (2^m * m * f(n)): 3200
+  Match: False
+  Average self-loops per tournament: 1.7188
+  = m * f(n) = 3.1250
+
+  |Aut|=1 classes: 7 classes
+    Degree range: [6, 7]
+    Average degree: 6.43
+    Sum of degrees: 45
+
+  |Aut|>1 classes: 5 classes
+    Sum of degrees: 15
+
+  Total degree: 60
+  Edges: 30
+
+  Degree from |Aut|=1: 45/60 = 0.750
+  At large n, almost all classes have |Aut|=1.
+  So: edges ~ (1/2) * A000568(n) * (m - avg_self_loops)
+  where avg_self_loops ~ m * f(n) = m * (1/2)_{n-2}/(n-2)!
+  giving: edges ~ (1/2) * A000568(n) * m * (1 - f(n))
+  = (1/2) * A000568(n) * C(n,2) * (1 - (1/2)_{n-2}/(n-2)!)
+  n=3: predicted=2, actual=1, ratio=0.667
+  n=4: predicted=8, actual=5, ratio=0.667
+  n=5: predicted=41, actual=30, ratio=0.727
+  n=6: predicted=305, actual=290, ratio=0.950
