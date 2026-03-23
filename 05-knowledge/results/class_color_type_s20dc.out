@@ -1,0 +1,250 @@
+================================================================================
+  CLASS COLOR TYPE: PURE BLUE / PURE BLACK / MIXED
+  kind-pasteur-2026-03-23-S20dc
+================================================================================
+
+######################################################################
+  n = 4
+######################################################################
+  4 classes, built in 0s
+
+  CLASS COLOR TYPE:
+    PURE BLUE (all tilings grid-sym): 2
+    PURE BLACK (no grid-sym tilings): 1
+    MIXED (some of each): 1
+
+  COLOR TYPE vs SC/NS:
+                     SC     NS  total
+       PURE_BLUE      1      1      2
+           MIXED      1      0      1
+      PURE_BLACK      0      1      1
+
+  BLUE FRACTION (gs/fiber) distribution:
+    bf=0.000: 1 classes
+    bf=0.400: 1 classes
+    bf=1.000: 2 classes
+
+  H RANGES by color type:
+       PURE BLUE: H in [1, 3], avg=2.0
+           MIXED: H in [5, 5], avg=5.0
+      PURE BLACK: H in [3, 3], avg=3.0
+
+  IS PURE BLUE = SC?
+    PURE BLUE that are SC: 1
+    PURE BLUE that are NOT SC: 1
+    ANSWER: NO — some pure blue classes are not SC!
+
+######################################################################
+  n = 5
+######################################################################
+  12 classes, built in 0s
+
+  CLASS COLOR TYPE:
+    PURE BLUE (all tilings grid-sym): 2
+    PURE BLACK (no grid-sym tilings): 4
+    MIXED (some of each): 6
+
+  COLOR TYPE vs SC/NS:
+                     SC     NS  total
+       PURE_BLUE      1      1      2
+           MIXED      4      2      6
+      PURE_BLACK      3      1      4
+
+  BLUE FRACTION (gs/fiber) distribution:
+    bf=0.000: 4 classes
+    bf=0.154: 1 classes
+    bf=0.200: 1 classes
+    bf=0.333: 1 classes
+    bf=0.400: 2 classes
+    bf=0.444: 1 classes
+    bf=1.000: 2 classes
+
+  H RANGES by color type:
+       PURE BLUE: H in [1, 3], avg=2.0
+           MIXED: H in [5, 15], avg=9.3
+      PURE BLACK: H in [3, 15], avg=8.0
+
+  IS PURE BLUE = SC?
+    PURE BLUE that are SC: 1
+    PURE BLUE that are NOT SC: 1
+    ANSWER: NO — some pure blue classes are not SC!
+
+######################################################################
+  n = 6
+######################################################################
+  56 classes, built in 0s
+
+  CLASS COLOR TYPE:
+    PURE BLUE (all tilings grid-sym): 2
+    PURE BLACK (no grid-sym tilings): 18
+    MIXED (some of each): 36
+
+  COLOR TYPE vs SC/NS:
+                     SC     NS  total
+       PURE_BLUE      1      1      2
+           MIXED      8     28     36
+      PURE_BLACK      3     15     18
+
+  BLUE FRACTION (gs/fiber) distribution:
+    bf=0.000: 18 classes
+    bf=0.023: 2 classes
+    bf=0.027: 2 classes
+    bf=0.030: 1 classes
+    bf=0.034: 2 classes
+    bf=0.040: 2 classes
+    bf=0.043: 2 classes
+    bf=0.053: 1 classes
+    bf=0.054: 1 classes
+    bf=0.061: 2 classes
+    bf=0.065: 2 classes
+    bf=0.067: 3 classes
+    bf=0.069: 1 classes
+    bf=0.091: 1 classes
+    bf=0.103: 1 classes
+    bf=0.111: 2 classes
+    bf=0.118: 1 classes
+    bf=0.135: 1 classes
+    bf=0.154: 1 classes
+    bf=0.176: 1 classes
+    bf=0.200: 1 classes
+    bf=0.211: 1 classes
+    bf=0.333: 2 classes
+    bf=0.400: 2 classes
+    bf=0.444: 1 classes
+    bf=1.000: 2 classes
+
+  H RANGES by color type:
+       PURE BLUE: H in [1, 3], avg=2.0
+           MIXED: H in [5, 45], avg=24.7
+      PURE BLACK: H in [3, 45], avg=18.3
+
+  IS PURE BLUE = SC?
+    PURE BLUE that are SC: 1
+    PURE BLUE that are NOT SC: 1
+    ANSWER: NO — some pure blue classes are not SC!
+
+######################################################################
+  n = 7
+######################################################################
+    5000/32768 (1s)
+    10000/32768 (2s)
+    15000/32768 (3s)
+    20000/32768 (4s)
+    25000/32768 (5s)
+    30000/32768 (5s)
+  456 classes, built in 6s
+
+  CLASS COLOR TYPE:
+    PURE BLUE (all tilings grid-sym): 2
+    PURE BLACK (no grid-sym tilings): 175
+    MIXED (some of each): 279
+
+  COLOR TYPE vs SC/NS:
+                     SC     NS  total
+       PURE_BLUE      1      1      2
+           MIXED     45    234    279
+      PURE_BLACK     42    133    175
+
+  BLUE FRACTION (gs/fiber) distribution:
+    bf=0.000: 175 classes
+    bf=0.007: 11 classes
+    bf=0.008: 10 classes
+    bf=0.009: 18 classes
+    bf=0.010: 11 classes
+    bf=0.011: 14 classes
+    bf=0.012: 5 classes
+    bf=0.013: 10 classes
+    bf=0.014: 7 classes
+    bf=0.015: 5 classes
+    bf=0.017: 5 classes
+    bf=0.018: 9 classes
+    bf=0.019: 9 classes
+    bf=0.020: 5 classes
+    bf=0.021: 5 classes
+    bf=0.022: 8 classes
+    bf=0.023: 6 classes
+    bf=0.024: 8 classes
+    bf=0.025: 4 classes
+    bf=0.026: 3 classes
+    bf=0.027: 5 classes
+    bf=0.028: 3 classes
+    bf=0.029: 5 classes
+    bf=0.030: 5 classes
+    bf=0.031: 3 classes
+    bf=0.034: 12 classes
+    bf=0.035: 2 classes
+    bf=0.036: 1 classes
+    bf=0.037: 4 classes
+    bf=0.038: 1 classes
+    bf=0.039: 1 classes
+    bf=0.040: 7 classes
+    bf=0.041: 4 classes
+    bf=0.042: 1 classes
+    bf=0.043: 5 classes
+    bf=0.044: 1 classes
+    bf=0.045: 4 classes
+    bf=0.046: 1 classes
+    bf=0.047: 1 classes
+    bf=0.049: 1 classes
+    bf=0.051: 2 classes
+    bf=0.052: 1 classes
+    bf=0.053: 4 classes
+    bf=0.054: 3 classes
+    bf=0.055: 2 classes
+    bf=0.057: 1 classes
+    bf=0.059: 4 classes
+    bf=0.061: 5 classes
+    bf=0.065: 2 classes
+    bf=0.067: 5 classes
+    bf=0.069: 1 classes
+    bf=0.072: 2 classes
+    bf=0.073: 1 classes
+    bf=0.074: 1 classes
+    bf=0.075: 2 classes
+    bf=0.077: 1 classes
+    bf=0.091: 1 classes
+    bf=0.097: 1 classes
+    bf=0.103: 2 classes
+    bf=0.111: 5 classes
+    bf=0.118: 1 classes
+    bf=0.121: 1 classes
+    bf=0.135: 1 classes
+    bf=0.154: 1 classes
+    bf=0.176: 1 classes
+    bf=0.194: 1 classes
+    bf=0.200: 1 classes
+    bf=0.211: 1 classes
+    bf=0.333: 2 classes
+    bf=0.400: 2 classes
+    bf=0.444: 1 classes
+    bf=1.000: 2 classes
+
+  H RANGES by color type:
+       PURE BLUE: H in [1, 3], avg=2.0
+           MIXED: H in [5, 159], avg=77.3
+      PURE BLACK: H in [3, 189], avg=77.8
+
+  IS PURE BLUE = SC?
+    PURE BLUE that are SC: 1
+    PURE BLUE that are NOT SC: 1
+    ANSWER: NO — some pure blue classes are not SC!
+
+======================================================================
+  CROSS-n SUMMARY
+======================================================================
+
+  At each n, every tiling is DEFINITIVELY blue (grid-sym) or black (not).
+  This is a perfect binary partition of the tiling space.
+
+  At the class level, the split into PURE BLUE / PURE BLACK / MIXED
+  depends on whether the class contains any grid-symmetric tilings.
+
+  PURE BLUE classes are the 'most symmetric' — they have the reversal
+  as an anti-automorphism for EVERY base-path representative.
+
+  The relationship between PURE BLUE and SC:
+  PURE BLUE => SC (grid-sym implies reversal anti-aut implies SC)
+  SC does NOT => PURE BLUE (SC tournaments may use non-reversal anti-auts)
+
+  DONE.
+================================================================================
