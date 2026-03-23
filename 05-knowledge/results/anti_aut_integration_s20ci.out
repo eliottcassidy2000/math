@@ -1,0 +1,130 @@
+======================================================================
+  ANTI-AUTOMORPHISM INTEGRATION: COMPLETE PICTURE
+======================================================================
+
+======================================================================
+  1. THE COMPLETE TABLE
+======================================================================
+
+    n  A000568     SC     NS   NS/2  V_merg  E_orig  E_merg  Coll  Twin
+    3        2      2      0      0       2       1       1     0     0
+    4        4      2      2      1       3       5       3     0     2
+    5       12      8      4      2      10      30      21     0     9
+    6       56     12     44     22      34     290     143     5   142
+    7      456     88    368    184     272    4086       ?     ?     ?
+    8     6880    176   6704   3352    3528       ?       ?     ?     ?
+    9   191536   2752 188784  94392   97144       ?       ?     ?     ?
+   10  9733056   8784 9724272 4862136 4870920       ?       ?     ?     ?
+
+======================================================================
+  2. SC FRACTION ANALYSIS
+======================================================================
+
+    n     SC/V   SC frac  Odd n?
+    3    2/2      1.0000     ODD
+    4    2/4      0.5000    even
+    5    8/12     0.6667     ODD
+    6   12/56     0.2143    even
+    7   88/456    0.1930     ODD
+    8  176/6880   0.0256    even
+    9 2752/191536   0.0144     ODD
+   10 8784/9733056   0.0009    even
+
+  SC FRACTION PATTERN:
+    n=3: 100%   (odd, all SC)
+    n=4: 50%    (even)
+    n=5: 66.7%  (odd)
+    n=6: 21.4%  (even)
+    n=7: 19.3%  (odd) -- DRAMATIC DROP from n=5's 66.7%!
+    n=8: 2.6%   (even)
+    n=9: 1.4%   (odd)
+    n=10: 0.09% (even)
+
+  The SC fraction -> 0 at ALL parities.
+  Odd n has higher SC fraction than even n, but both decrease.
+  At n=10: only 0.09% of iso classes are SC!
+
+======================================================================
+  3. MERGED VERTEX SEQUENCE
+======================================================================
+
+  V_merged = (A000568 + SC) / 2:
+  n=3: V_merged = (2 + 2)/2 = 2 (100.0% of A000568)
+  n=4: V_merged = (4 + 2)/2 = 3 (75.0% of A000568)
+  n=5: V_merged = (12 + 8)/2 = 10 (83.3% of A000568)
+  n=6: V_merged = (56 + 12)/2 = 34 (60.7% of A000568)
+  n=7: V_merged = (456 + 88)/2 = 272 (59.6% of A000568)
+  n=8: V_merged = (6880 + 176)/2 = 3528 (51.3% of A000568)
+  n=9: V_merged = (191536 + 2752)/2 = 97144 (50.7% of A000568)
+  n=10: V_merged = (9733056 + 8784)/2 = 4870920 (50.0% of A000568)
+
+  V_merged / A000568 -> 50% as SC fraction -> 0.
+  At large n: V_merged ~ A000568 / 2 (every class pairs with complement).
+
+======================================================================
+  4. CORRECTED n=7 PREDICTIONS (SC=88, not 240)
+======================================================================
+
+  n=7: V=456, SC=88, NS=368, NS_pairs=184
+  V_merged = 272
+  SC fraction: 0.193 = 19.3%
+
+  CORRECTION: My estimate was SC~240, actual is SC=88.
+  V_merged estimate was 348, actual is 272.
+  The SC fraction at odd n drops MUCH faster than I predicted.
+
+  DESCENT RATIOS (corrected):
+  n=5: V_merged ratio = 10/2 = 5.0, A000568 ratio = 6.0
+  n=6: V_merged ratio = 34/3 = 11.3, A000568 ratio = 14.0
+  n=7: V_merged ratio = 272/10 = 27.2, A000568 ratio = 38.0
+
+======================================================================
+  5. BLUE FRACTION (corrected for SC=88)
+======================================================================
+
+  NS fraction: 0.807
+  SC fraction: 0.193
+  Random blue fraction: ns^2 + sc^2 = 0.689
+  Previous data: n=6 blue=69%, n=5 blue=47%
+  Predicted n=7 blue: ~69%-80%
+
+======================================================================
+  6. THE GRAND ANALYTICAL PICTURE
+======================================================================
+
+  WITH THE ANTI-AUTOMORPHISM FORMULA, WE NOW HAVE:
+
+  EXACT FORMULAS (computable at any n from cycle type enumeration):
+    1. A000568(n) = tournament iso class count [Burnside, odd-cycles]
+    2. SC(n) = SC iso class count [anti-aut Burnside, opus S214]
+    3. V_merged(n) = (A000568 + SC) / 2 [from 1 and 2]
+    4. f(n) = (1/2)_{n-2} / (n-2)! [fiber fraction]
+    5. Width(n) = C(n-2, (n-2)//2) [central binomial]
+    6. Fix(sigma) for tournaments [only odd cycles contribute]
+    7. Fix_anti(sigma) for anti-automorphisms [opus S214]
+    8. Tilings * |Aut| = H [orbit-stabilizer]
+    9. Weight symmetry W[i,j] = W[j,i]
+   10. Down edges = 0 always (DAG property)
+
+  NEAR-FORMULAS (asymptotically exact):
+   11. E ~ V*m*(1-f)/2 [edge approximation, 95%+ at n>=6]
+   12. Blue fraction -> 1 [NS-NS dominates]
+   13. T_n/(2*E_n) -> 1 [transition orbits approach 2*edges]
+
+  THE n -> n-2 DESCENT:
+   14. G_n/Z_2 -> G_(n-2)/Z_2 via PoS projection
+   15. Descent ratio ~ A000568(n)/A000568(n-2)
+
+  PHASE TRANSITIONS AT n=6:
+   16. H-convexity FAILS
+   17. Degree-H correlation flips sign
+   18. Assortativity flips
+   19. Alpha_2 onset
+   20. Morse secondary peak
+
+  THIS IS A NEAR-COMPLETE ANALYTICAL DESCRIPTION OF G_n FOR ALL n.
+  The only remaining unknowns are:
+    - Exact edge count formula (have near-formula)
+    - Spectral structure
+    - Collapsed/twin edge formulas
+
