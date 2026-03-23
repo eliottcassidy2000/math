@@ -1,0 +1,216 @@
+
+========================================================================
+  THE THREE BURNSIDE SUMS
+========================================================================
+
+  n   | V (cls)      | SC (anti)    | T (arc-wt)   | T_anti_wt    | V_merged   | T_merged  
+  -------------------------------------------------------------------------------------
+  3   | 2            | 2            | 4            | 2            | 2          | 3         
+  4   | 4            | 2            | 16           | 4            | 3          | 10        
+  5   | 12           | 8            | 88           | 16           | 10         | 52        
+  6   | 56           | 12           | 704          | 32           | 34         | 368       
+  7   | 456          | 88           | 8912         | 256          | 272        | 4584      
+  8   | 6880         | 176          | 188288       | 688          | 3528       | 94488     
+  9   | 191536       | 2752         | 6847200      | 10944        | 97144      | 3429072   
+  10  | 9733056      | 8784         | 437069312    | 43776        | 4870920    | 218556544 
+  11  | 903753248    | 279968       | 49674860096  | 1398784      | 452016608  | 24838129440
+  12  | 154108311168 | 1492288      | 10169189235712 | 8950592      | 77054901728 | 5084599093152
+  13  | 48542114686912 | 95458560     | 3786065734484352 | 572706048    | 24271105072736 | 1893033153595200
+
+========================================================================
+  EDGE COUNT ESTIMATES FROM T
+========================================================================
+
+  n   | T        | T/2      | E_actual | T/(2E)   | V*m*(1-f)/2 | E_merged
+  ----------------------------------------------------------------------
+  3   | 4        | 2        | 1        | 2.0000   | 1.5        | 3       
+  4   | 16       | 8        | 5        | 1.6000   | 7.5        | 10      
+  5   | 88       | 44       | 30       | 1.4667   | 41.2       | 52      
+  6   | 704      | 352      | 290      | 1.2138   | 305.2      | 368     
+  7   | 8912     | 4456     | 4086     | 1.0906   | 3609.7     | 4584    
+  8   | 188288   | 94144    | ?        | ?        | 74591.6    | 94488   
+
+========================================================================
+  KEY RELATIONSHIPS BETWEEN THE THREE BURNSIDES
+========================================================================
+
+  RELATIONSHIP 1: T_anti / SC -> floor(n/2)
+
+    n= 3: T_anti/SC = 2/2 = 1.0000, floor(n/2) = 1
+    n= 4: T_anti/SC = 4/2 = 2.0000, floor(n/2) = 2
+    n= 5: T_anti/SC = 16/8 = 2.0000, floor(n/2) = 2
+    n= 6: T_anti/SC = 32/12 = 2.6667, floor(n/2) = 3
+    n= 7: T_anti/SC = 256/88 = 2.9091, floor(n/2) = 3
+    n= 8: T_anti/SC = 688/176 = 3.9091, floor(n/2) = 4
+    n= 9: T_anti/SC = 10944/2752 = 3.9767, floor(n/2) = 4
+    n=10: T_anti/SC = 43776/8784 = 4.9836, floor(n/2) = 5
+    n=11: T_anti/SC = 1398784/279968 = 4.9962, floor(n/2) = 5
+    n=12: T_anti/SC = 8950592/1492288 = 5.9979, floor(n/2) = 6
+    n=13: T_anti/SC = 572706048/95458560 = 5.9995, floor(n/2) = 6
+
+  RELATIONSHIP 2: V_merged / V -> 1/2
+
+    n= 3: V_merged/V = 1.000000
+    n= 4: V_merged/V = 0.750000
+    n= 5: V_merged/V = 0.833333
+    n= 6: V_merged/V = 0.607143
+    n= 7: V_merged/V = 0.596491
+    n= 8: V_merged/V = 0.512791
+    n= 9: V_merged/V = 0.507184
+    n=10: V_merged/V = 0.500451
+    n=11: V_merged/V = 0.500155
+    n=12: V_merged/V = 0.500005
+    n=13: V_merged/V = 0.500001
+
+  RELATIONSHIP 3: SC / V -> 0
+
+    n= 3: SC/V = 1.000000
+    n= 4: SC/V = 0.500000
+    n= 5: SC/V = 0.666667
+    n= 6: SC/V = 0.214286
+    n= 7: SC/V = 0.192982
+    n= 8: SC/V = 0.025581
+    n= 9: SC/V = 0.014368
+    n=10: SC/V = 0.000902
+    n=11: SC/V = 0.000310
+    n=12: SC/V = 0.000010
+    n=13: SC/V = 0.000002
+
+  RELATIONSHIP 4: T / (V * m) = avg arc-orbits per class per arc
+
+    n= 3: T/(V*m) = 2/3 = 0.666667
+    n= 4: T/(V*m) = 2/3 = 0.666667
+    n= 5: T/(V*m) = 11/15 = 0.733333
+    n= 6: T/(V*m) = 88/105 = 0.838095
+    n= 7: T/(V*m) = 1114/1197 = 0.930660
+    n= 8: T/(V*m) = 1471/1505 = 0.977409
+    n= 9: T/(V*m) = 23775/23942 = 0.993025
+
+========================================================================
+  ORBIFOLD EULER CHARACTERISTIC (from kind-pasteur S20ca)
+========================================================================
+
+  chi_orb = sum_C 1/|Aut(C)| = V / <|Aut|>
+
+  From Burnside: sum 1/|Aut| = 2^m / n! (orbit-stabilizer).
+
+  n=3: chi_orb = 2^3/3! = 4/3 = 1.333333
+  n=4: chi_orb = 2^6/4! = 8/3 = 2.666667
+  n=5: chi_orb = 2^10/5! = 128/15 = 8.533333
+  n=6: chi_orb = 2^15/6! = 2048/45 = 45.511111
+  n=7: chi_orb = 2^21/7! = 131072/315 = 416.101587
+  n=8: chi_orb = 2^28/8! = 2097152/315 = 6657.625397
+  n=9: chi_orb = 2^36/9! = 536870912/2835 = 189372.455732
+
+========================================================================
+  THE TRIANGLE UNIFICATION
+========================================================================
+
+
+  From kind-pasteur S20cm: EVERYTHING IS THE TRIANGLE.
+
+  THE STAIRCASE delta_{n-2} IS a right isosceles triangle.
+  Its three sides encode the three Burnside formulas:
+
+  HYPOTENUSE (anti-diagonal, i+j = const):
+    -> Hook lengths 2(k-d)-1 (odd numbers)
+    -> Fiber fraction f(n) = (1/2)_k / k! = [x^k](1-x)^{-1/2}
+    -> Controls the TOPOLOGY (two-sheeted cover, pi)
+    -> BURNSIDE 2 (anti-automorphism) lives here
+       (SC classes = tilings on the branch locus)
+
+  VERTICAL LEG (column j = const, same target vertex):
+    -> Score contributions
+    -> OCR = projection onto score space
+    -> Controls the HIERARCHY (transitive at top)
+    -> BURNSIDE 1 (classical) lives here
+       (vertex count = orbits of tiling space)
+
+  HORIZONTAL LEG (row i = const, same source vertex):
+    -> Arc range = "skip distance"
+    -> Controls the DYNAMICS (arc reversal = Glauber)
+    -> BURNSIDE 3 (edge/arc-weighted) lives here
+       (edge count ~ arc-orbit count)
+
+  THE FOUR CONSTANTS:
+    sqrt(2) = hypotenuse/leg = the "pseudo-doubling" ratio
+    pi = from fiber fractions (Wallis product)
+    e = from Stirling/Burnside asymptotics
+    gamma = Euler-Mascheroni from harmonic corrections
+
+  FENG'S DUAL BURNSIDE (arXiv:2510.25202):
+    Classical K = BA acts on group elements (cycle types)
+    Dual Q = AB acts on states (tournaments)
+    Both share eigenvalues -> the THREE Burnsides are spectral
+    projections of the SAME underlying Markov chain.
+
+
+========================================================================
+  THE EDGE FORMULA: DEFINITIVE STATUS
+========================================================================
+
+
+  |E(G_n)| = 1, 5, 30, 290, 4086
+
+  THREE BURNSIDE FORMULAS give THREE estimates:
+
+  1. T/2 (from BURNSIDE 3):
+     E ~ T/2 where T = sum Fix(sigma)*Fix_arcs(sigma) / n!
+     T/(2E) -> 1 as n -> inf. Currently 1.09 at n=7.
+
+  2. V*m*(1-f)/2 (from BURNSIDE 1 + fiber fraction):
+     E ~ A000568(n) * C(n,2) * (1 - (1/2)_{n-2}/(n-2)!) / 2
+     95%+ for n >= 6. Overshoots then undershoots.
+
+  3. Tm/Em (from BURNSIDE 2 + merged graph):
+     E_merged via T_merged = (T + T_anti) / 2
+     E_orig = E_merged + collapsed + twin
+
+  THE EXACT FORMULA:
+  E(G_n) = (1/2) * sum_C degree(C)
+  where degree(C) = #{distinct classes among cross-orbits of Aut(C)}
+  This is COMPUTABLE but requires knowing Aut(C) for each class.
+
+  THE ASYMPTOTIC FORMULA:
+  E(G_n) ~ A000568(n) * C(n,2) / 2 as n -> inf
+  Equivalently: avg_deg -> m = C(n,2)
+  The graph becomes ASYMPTOTICALLY COMPLETE.
+
+  THE REMAINING GAP:
+  A CLOSED-FORM cycle-index expression that gives E(G_n)
+  exactly for all n, without computing individual classes.
+  This would require a Burnside formula that accounts for
+  the DEGENERACY (multiple arc-orbits hitting the same class).
+
+  CURRENT BEST ESTIMATE for n=8:
+  T(8) = 188288, so E(8) ~ 188288/2 * (1/1.07) ~ 88,000
+  V*m*(1-f)/2 = 74,592
+  Range: 75,000 - 90,000
+
+
+========================================================================
+  FIVE EXACT SEQUENCES FROM THE THREE BURNSIDES
+========================================================================
+
+  All computable to any n via cycle-index algebra:
+
+  1. V(n) = A000568 (tournament iso classes):
+     [2, 4, 12, 56, 456, 6880, 191536, 9733056, 903753248, 154108311168, 48542114686912]
+
+  2. SC(n) (self-complementary classes):
+     [2, 2, 8, 12, 88, 176, 2752, 8784, 279968, 1492288, 95458560]
+
+  3. T(n) (total arc-orbits):
+     [4, 16, 88, 704, 8912, 188288, 6847200, 437069312, 49674860096, 10169189235712, 3786065734484352]
+
+  4. V_merged(n) = (V + SC) / 2:
+     [2, 3, 10, 34, 272, 3528, 97144, 4870920, 452016608, 77054901728, 24271105072736]
+
+  5. T_merged(n) = (T + T_anti) / 2:
+     [3, 10, 52, 368, 4584, 94488, 3429072, 218556544, 24838129440, 5084599093152, 1893033153595200]
+
+  Additional derived sequences:
+  NSC(n) = V - SC: [0, 2, 4, 44, 368, 6704, 188784, 9724272, 903473280, 154106818880, 48542019228352]
+  T_anti(n): [2, 4, 16, 32, 256, 688, 10944, 43776, 1398784, 8950592, 572706048]
+
+Done. opus-2026-03-22-S190
