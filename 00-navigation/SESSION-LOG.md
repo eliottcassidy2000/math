@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S242 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S240
+**Summary of work:** Verified and analyzed the breakthrough edge orbit formula. Proved Case A = T_n/2 algebraically. Verified Case B = (n-2)! at n=3,4,5 by direct Burnside computation.
+
+**Key results:**
+1. **edge_orbits(G_n) = T_n/2 + (n-2)!** — verified at n=3,4,5 exactly
+2. **Case A = T_n/2**: PROVED. Burnside on (tournament, arc) pairs, divide by 2.
+3. **Case B = (n-2)!**: VERIFIED. sum_σ Fix_B(σ) = n! × (n-2)! at n=3,4,5.
+4. **E(G_n) = T_n/2 + (n-2)! - SL_orbits** where SL_orbits = G(n)/2 + (n-2)!
+5. The SL_orbits = G/2 + (n-2)! identity is a TAUTOLOGY — real content is in Case B
+6. SL_orbits sequence 2,5,20,86,490,3703 not in OEIS
+
+**New scripts:** burnside_edge_verify_s242.py, near_aut_proof_s243.py, case_b_proof_s243b.py
+
+**Unresolved:** Prove Case B = (n-2)! for ALL n (not just n=3,4,5)
+
 ## opus-2026-03-23-S240 — 2026-03-23
 
 **Account:** opus
