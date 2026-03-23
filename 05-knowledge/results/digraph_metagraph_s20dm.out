@@ -1,0 +1,136 @@
+================================================================================
+  METAGRAPH HIERARCHY: TOURNAMENT -> ORIENTED -> DIGRAPH
+  kind-pasteur-2026-03-23-S20dm
+================================================================================
+
+############################################################
+  n = 3
+############################################################
+
+  TOURNAMENT at n=3:
+    States per position: 2
+    Total states: 8 = 2^3
+    Iso classes (V): 2
+    Edges (E): 1
+    H values: min=1, max=3, distinct=2
+    H=0 classes (no Ham path): 0
+    H odd classes: 2
+    H even classes: 0
+    Time: 0.0s
+    Edge density: {3: 2}...
+
+  ORIENTED at n=3:
+    States per position: 3
+    Total states: 27 = 3^3
+    Iso classes (V): 7
+    Edges (E): 11
+    H values: min=0, max=3, distinct=3
+    H=0 classes (no Ham path): 4
+    H odd classes: 3
+    H even classes: 4
+    Time: 0.0s
+    Edge density: {0: 1, 1: 1, 2: 3, 3: 2}...
+
+  DIGRAPH at n=3:
+    States per position: 4
+    Total states: 64 = 4^3
+    Iso classes (V): 16
+    Edges (E): 46
+    H values: min=0, max=6, distinct=6
+    H=0 classes (no Ham path): 5
+    H odd classes: 6
+    H even classes: 10
+    Time: 0.0s
+    Edge density: {0: 1, 1: 1, 2: 4, 3: 4, 4: 4, 5: 1, 6: 1}...
+
+############################################################
+  n = 4
+############################################################
+
+  TOURNAMENT at n=4:
+    States per position: 2
+    Total states: 64 = 2^6
+    Iso classes (V): 4
+    Edges (E): 5
+    H values: min=1, max=5, distinct=3
+    H=0 classes (no Ham path): 0
+    H odd classes: 4
+    H even classes: 0
+    Time: 0.0s
+    Edge density: {6: 4}...
+
+  ORIENTED at n=4:
+    States per position: 3
+    Total states: 729 = 3^6
+    Iso classes (V): 42
+    Edges (E): 171
+    H values: min=0, max=5, distinct=6
+    H=0 classes (no Ham path): 24
+    H odd classes: 13
+    H even classes: 29
+    Time: 0.1s
+    Edge density: {0: 1, 1: 1, 2: 4, 3: 10, 4: 12, 5: 10, 6: 4}...
+
+  DIGRAPH at n=4:
+    States per position: 4
+    Total states: 4096 = 4^6
+    Iso classes (V): 218
+    Edges (E): 1560
+    H values: min=0, max=24, distinct=16
+    H=0 classes (no Ham path): 52
+    H odd classes: 74
+    H even classes: 144
+    Time: 0.6s
+    Edge density: {0: 1, 1: 1, 2: 5, 3: 13, 4: 27, 5: 38, 6: 48, 7: 38, 8: 27, 9: 13}...
+
+############################################################
+  n = 5
+############################################################
+
+  TOURNAMENT at n=5:
+    States per position: 2
+    Total states: 1024 = 2^10
+    Iso classes (V): 12
+    Edges (E): 30
+    H values: min=1, max=15, distinct=7
+    H=0 classes (no Ham path): 0
+    H odd classes: 12
+    H even classes: 0
+    Time: 0.8s
+    Edge density: {10: 12}...
+
+  ORIENTED at n=5:
+    States per position: 3
+    Total states: 59049 = 3^10
+    Iso classes (V): 582
+    Edges (E): 0
+    H values: min=0, max=15, distinct=14
+    H=0 classes (no Ham path): 291
+    H odd classes: 193
+    H even classes: 389
+    Time: 22.8s
+    Edge density: {0: 1, 1: 1, 2: 4, 3: 13, 4: 41, 5: 78, 6: 131, 7: 144, 8: 107, 9: 50}...
+
+  DIGRAPH at n=5: 1048576 states = 4^10 — TOO LARGE, skipping
+
+
+============================================================
+  CROSS-LEVEL COMPARISON
+============================================================
+
+    n        level  states        V        E   H=0  H_odd H_even
+    3   TOURNAMENT       2        2        1     0      2      0
+    3     ORIENTED       3        7       11     4      3      0
+    3      DIGRAPH       4       16       46     5      6      5
+    4   TOURNAMENT       2        4        5     0      4      0
+    4     ORIENTED       3       42      171    24     13      5
+    4      DIGRAPH       4      218     1560    52     74     92
+    5   TOURNAMENT       2       12       30     0     12      0
+    5     ORIENTED       3      582        0   291    193     98
+
+  V(tournament) = A000568: [2, 4, 12]
+  V(oriented) = A001174: [7, 42, 582]
+  V(digraph) = A000273: [16, 218, '?']
+
+  DONE.
+================================================================================
