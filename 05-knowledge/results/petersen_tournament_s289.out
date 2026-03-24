@@ -1,0 +1,106 @@
+Meta-graph: V=10, E=21
+
+
+========================================================================
+  THE PETERSEN GRAPH ON THESE 10 NODES
+========================================================================
+
+  CONSTRUCTING TOURNAMENT T_meta FROM THE META-GRAPH:
+
+  Rule: meta-edge → orient LOW H to HIGH H (transitive)
+  Rule: non-edge → orient HIGH H to LOW H (anti-transitive)
+
+  Score sequence: [2, 3, 4, 4, 4, 5, 5, 5, 6, 7]
+  3-cycles: 32
+  H(T_meta) = 7343
+  Szele bound: 7087
+  H/Szele = 1.0361
+  Is transitive: False
+
+  ORIENTATION TABLE:
+  from (H)        | to (H)          | direction | meta-edge?
+  ------------------------------------------------------------
+  0(H=1)     | 1(H=3)     | → (low→high) | yes
+  0(H=1)     | 2(H=3)     | → (low→high) | yes
+  0(H=1)     | 3(H=5)     | → (low→high) | yes
+  0(H=1)     | 4(H=9)     | → (low→high) | yes
+  0(H=1)     | 5(H=9)     | ← (high→low) | NO
+  0(H=1)     | 6(H=11)     | ← (high→low) | NO
+  0(H=1)     | 7(H=13)     | ← (high→low) | NO
+  0(H=1)     | 8(H=15)     | ← (high→low) | NO
+  0(H=1)     | 9(H=15)     | ← (high→low) | NO
+  1(H=3)     | 2(H=3)     | ← (high→low) | NO
+  1(H=3)     | 3(H=5)     | → (low→high) | yes
+  1(H=3)     | 4(H=9)     | ← (high→low) | NO
+  1(H=3)     | 5(H=9)     | → (low→high) | yes
+  1(H=3)     | 6(H=11)     | ← (high→low) | NO
+  1(H=3)     | 7(H=13)     | ← (high→low) | NO
+  1(H=3)     | 8(H=15)     | ← (high→low) | NO
+  1(H=3)     | 9(H=15)     | ← (high→low) | NO
+  2(H=3)     | 3(H=5)     | → (low→high) | yes
+  2(H=3)     | 4(H=9)     | ← (high→low) | NO
+  2(H=3)     | 5(H=9)     | ← (high→low) | NO
+  2(H=3)     | 6(H=11)     | ← (high→low) | NO
+  2(H=3)     | 7(H=13)     | ← (high→low) | NO
+  2(H=3)     | 8(H=15)     | → (low→high) | yes
+  2(H=3)     | 9(H=15)     | ← (high→low) | NO
+
+========================================================================
+  THE PURE PETERSEN TOURNAMENT
+========================================================================
+
+  Petersen vertices (2-subsets of [5]):
+    0: (0, 1)
+    1: (0, 2)
+    2: (0, 3)
+    3: (0, 4)
+    4: (1, 2)
+    5: (1, 3)
+    6: (1, 4)
+    7: (2, 3)
+    8: (2, 4)
+    9: (3, 4)
+
+  Petersen: V=10, E=15
+  Score sequence: [3, 3, 4, 4, 4, 5, 5, 5, 6, 6]
+  3-cycles: 36
+  H(T_Petersen) = 11491
+  H/Szele = 1.6214
+
+========================================================================
+  COMPARING THE TWO TOURNAMENTS
+========================================================================
+
+  T_meta (from meta-graph adjacency):
+    Scores: [2, 3, 4, 4, 4, 5, 5, 5, 6, 7]
+    c3: 32
+    H: 7343
+
+  T_Petersen (from Petersen + lex orientation):
+    Scores: [3, 3, 4, 4, 4, 5, 5, 5, 6, 6]
+    c3: 36
+    H: 11491
+
+  Arc difference: 24 / 45 arcs differ
+
+========================================================================
+  THE STRUCTURE OF T_meta
+========================================================================
+
+  T_meta is the tournament where:
+  - Lower-H classes beat higher-H classes IF they're meta-graph neighbors
+  - Higher-H classes beat lower-H IF they're NOT meta-graph neighbors
+
+  This inverts the usual 'transitive = low beats high' for NON-neighbors.
+  The non-neighbors are the LONG-RANGE connections (large dH).
+  So: short-range = transitive, long-range = anti-transitive.
+
+  Pure transitive (all low→high): H = 1
+  T_meta (edges transitive, non-edges anti): H = 7343
+  T_Petersen (Petersen edges transitive): H = 11491
+
+  Score analysis:
+  Pure transitive: scores = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  T_meta: scores = [2, 3, 4, 4, 4, 5, 5, 5, 6, 7]
+
+Done. opus-2026-03-24-S289
