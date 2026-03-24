@@ -1,0 +1,80 @@
+
+========================================================================
+  COMPLEMENT ASYMMETRY AT n=5
+========================================================================
+
+  For each labeled tiling T:
+  - w(T) = which arcs are neutral (wiggly self-loop)
+  - w(T^op) = which arcs are neutral in the complement
+  - asymmetry = Hamming distance between w(T) and w(complement(T))
+
+  COMPLEMENT ASYMMETRY PER MERGED CLASS:
+
+  mid | H   | SC? | avg_hamm | avg_n_T  | avg_n_Top | Jaccard  | same_n? 
+  ----------------------------------------------------------------------
+  0   | 1   | SC  | 0.00     | 4.00     | 4.00     | 1.0000   | YES
+  1   | 3   | NS  | 0.00     | 1.00     | 1.00     | 1.0000   | YES
+  2   | 5   | NS  | 0.00     | 3.00     | 3.00     | 1.0000   | YES
+  3   | 3   | SC  | 0.00     | 0.00     | 0.00     | 1.0000   | YES
+  4   | 9   | SC  | 0.00     | 2.00     | 2.00     | 1.0000   | YES
+  5   | 9   | SC  | 0.00     | 0.00     | 0.00     | 1.0000   | YES
+  6   | 11  | SC  | 0.00     | 2.00     | 2.00     | 1.0000   | YES
+  7   | 15  | SC  | 0.00     | 0.00     | 0.00     | 1.0000   | YES
+  8   | 13  | SC  | 0.00     | 0.00     | 0.00     | 1.0000   | YES
+  9   | 15  | SC  | 0.00     | 0.00     | 0.00     | 1.0000   | YES
+
+========================================================================
+  THE ASYMMETRY SPECTRUM
+========================================================================
+
+  Hamming distance distribution (T vs T^op wiggly profiles):
+
+    d=0: 1024 tilings (100.0%) ##################################################
+
+  Average Hamming distance: 0.00 / 10
+  = 0.0% of arcs have different neutrality under complement
+
+========================================================================
+  SC vs NS ASYMMETRY
+========================================================================
+
+  SC tilings: avg Hamming = 0.00
+  NS tilings: avg Hamming = 0.00
+
+  SC LESS asymmetric? False (0.00 < 0.00)
+
+========================================================================
+  THE MEANING OF MAXIMAL ASYMMETRY
+========================================================================
+
+
+  MAXIMAL ASYMMETRY means: T and T^op have completely DIFFERENT
+  wiggly neighborhoods. Flipping the SAME tile in T vs T^op
+  leads to DIFFERENT meta-graph destinations.
+
+  PERFECT COMPLEMENT PAIRING means: T and T^op have the SAME H,
+  the SAME score (reversed), the SAME c3 count. They are
+  "structurally equivalent" from the complement perspective.
+
+  THE TENSION: the complement pairing says T ≈ T^op globally,
+  but the wiggly structure says T ≠ T^op locally.
+
+  FOR SC TOURNAMENTS: T ≅ T^op, so there exists σ with σ(T) = T^op.
+  This σ maps the wiggly profile of T to the wiggly profile of T^op.
+  So: w(T^op) = σ(w(T)). The profiles are S_n-equivalent.
+  Hamming distance can be nonzero (different LABELED positions neutral)
+  but the MULTISET of neutrality patterns is preserved.
+
+  FOR NS TOURNAMENTS: T ≇ T^op. No σ maps T to T^op.
+  The wiggly profiles are GENUINELY DIFFERENT.
+  The asymmetry is a REAL invariant of the complement pair.
+
+  THE ASYMMETRY MEASURES "how much information is lost by merging":
+  High asymmetry → merging loses a lot of wiggly structure.
+  Low asymmetry → merging preserves most wiggly structure.
+  Zero asymmetry → T and T^op are wiggly-identical (SC case).
+
+  MOST ASYMMETRIC CLASS: mid=0 (H=1, SC=True, avg hamming=0.00)
+  LEAST ASYMMETRIC CLASS: mid=0 (H=1, SC=True, avg hamming=0.00)
+
+Done. opus-2026-03-24-S282
