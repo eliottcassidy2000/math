@@ -1,0 +1,126 @@
+================================================================================
+  TWO TILINGS TILE A SQUARE
+  kind-pasteur-2026-03-25-S20gi
+================================================================================
+
+  k=1 (n=3):
+    delta_1 (lower-left): 1 cells = C(2,2)
+    delta_0 (upper-right): 0 cells = C(1,2)
+    Total: 1 = 1 = 1^2 = square_1
+    Match: True
+    Square layout (1x1):
+     L0,0
+    Diagonal (1 cells): NEW tiles at level k (vertex 2's arcs)
+    Below diagonal (0 cells): delta_0 = tournament on 2 verts
+    Above diagonal (0 cells): delta_0 flipped = companion
+
+  k=2 (n=4):
+    delta_2 (lower-left): 3 cells = C(3,2)
+    delta_1 (upper-right): 1 cells = C(2,2)
+    Total: 4 = 4 = 2^2 = square_2
+    Match: True
+    Square layout (2x2):
+     L1,0 L1,1
+     L0,0 U0,1
+    Diagonal (2 cells): NEW tiles at level k (vertex 3's arcs)
+    Below diagonal (1 cells): delta_1 = tournament on 3 verts
+    Above diagonal (1 cells): delta_1 flipped = companion
+
+  k=3 (n=5):
+    delta_3 (lower-left): 6 cells = C(4,2)
+    delta_2 (upper-right): 3 cells = C(3,2)
+    Total: 9 = 9 = 3^2 = square_3
+    Match: True
+    Square layout (3x3):
+     L2,0 L2,1 L2,2
+     L1,0 L1,1 U1,2
+     L0,0 U0,1 U0,2
+    Diagonal (3 cells): NEW tiles at level k (vertex 4's arcs)
+    Below diagonal (3 cells): delta_2 = tournament on 4 verts
+    Above diagonal (3 cells): delta_2 flipped = companion
+
+  k=4 (n=6):
+    delta_4 (lower-left): 10 cells = C(5,2)
+    delta_3 (upper-right): 6 cells = C(4,2)
+    Total: 16 = 16 = 4^2 = square_4
+    Match: True
+    Square layout (4x4):
+     L3,0 L3,1 L3,2 L3,3
+     L2,0 L2,1 L2,2 U2,3
+     L1,0 L1,1 U1,2 U1,3
+     L0,0 U0,1 U0,2 U0,3
+    Diagonal (4 cells): NEW tiles at level k (vertex 5's arcs)
+    Below diagonal (6 cells): delta_3 = tournament on 5 verts
+    Above diagonal (6 cells): delta_3 flipped = companion
+
+  k=5 (n=7):
+    delta_5 (lower-left): 15 cells = C(6,2)
+    delta_4 (upper-right): 10 cells = C(5,2)
+    Total: 25 = 25 = 5^2 = square_5
+    Match: True
+    Square layout (5x5):
+     L4,0 L4,1 L4,2 L4,3 L4,4
+     L3,0 L3,1 L3,2 L3,3 U3,4
+     L2,0 L2,1 L2,2 U2,3 U2,4
+     L1,0 L1,1 U1,2 U1,3 U1,4
+     L0,0 U0,1 U0,2 U0,3 U0,4
+    Diagonal (5 cells): NEW tiles at level k (vertex 6's arcs)
+    Below diagonal (10 cells): delta_4 = tournament on 6 verts
+    Above diagonal (10 cells): delta_4 flipped = companion
+
+  k=6 (n=8):
+    delta_6 (lower-left): 21 cells = C(7,2)
+    delta_5 (upper-right): 15 cells = C(6,2)
+    Total: 36 = 36 = 6^2 = square_6
+    Match: True
+    Diagonal (6 cells): NEW tiles at level k (vertex 7's arcs)
+    Below diagonal (15 cells): delta_5 = tournament on 7 verts
+    Above diagonal (15 cells): delta_5 flipped = companion
+
+  k=7 (n=9):
+    delta_7 (lower-left): 28 cells = C(8,2)
+    delta_6 (upper-right): 21 cells = C(7,2)
+    Total: 49 = 49 = 7^2 = square_7
+    Match: True
+    Diagonal (7 cells): NEW tiles at level k (vertex 8's arcs)
+    Below diagonal (21 cells): delta_6 = tournament on 8 verts
+    Above diagonal (21 cells): delta_6 flipped = companion
+
+============================================================
+THE CHAIN STRUCTURE
+============================================================
+
+THE SQUARE DECOMPOSITION:
+
+  square_k = delta_k (lower) + delta_{k-1} (upper, flipped)
+
+  Lower triangle = diagonal + below-diagonal
+                  = (k new bits) + delta_{k-1}
+                  = level-k tiles + sub-tournament
+
+  Upper triangle = delta_{k-1} flipped
+                  = the COMPANION tiling at level k-1
+
+THE DIRECTED CHAIN:
+  ...-> delta_{k-1} -> square_k -> delta_k -> square_{k+1} -> delta_{k+1} -> ...
+
+Each step: delta_k = delta_{k-1} + k new bits (the diagonal of square_k).
+The companion tiling in the upper triangle is delta_{k-1} viewed from
+the OTHER direction (flipped staircase).
+
+THIS IS THE TOURNAMENT MATRIX:
+  The (n-2) x (n-2) adjacency matrix of the inner tournament on {1,...,n-2}
+  IS the square. The lower triangle is A[i][j] for i > j.
+  The upper triangle is A[i][j] for i < j = 1 - A[j][i].
+  The diagonal is A[i][i] = 0 (no self-arcs).
+
+So: the square IS the adjacency matrix of the (n-2)-tournament.
+    The lower triangle IS the tiling (delta_{k} for the n-tournament).
+    The upper triangle IS the complement tiling (= (n-1)-tournament data).
+
+The two tilings (size n and size n-1) together give the COMPLETE
+adjacency matrix of the overlap sub-tournament. The diagonal is
+the shared information — it's where the n-tournament adds its new vertex.
+
+DONE.
+================================================================================

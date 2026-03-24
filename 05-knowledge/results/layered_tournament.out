@@ -1,0 +1,24 @@
+======================================================================
+  LAYERED TOURNAMENT ENGINE — BENCHMARK
+======================================================================
+
+       n     random      score         hw         fp        cmp       flip
+               (us)       (us)       (us)       (us)       (us)       (us)
+      10        1.0        3.6        0.8        4.4        0.2        0.3
+      50        5.3       89.7        8.4       97.5        0.2        0.4
+     100       12.5      349.3       27.9      409.4        0.3        0.9
+     500       95.7     9688.2      574.7    10718.9        0.3        3.4
+    1000      257.6    59920.7     3216.9    74677.0        0.3       12.5
+    5000     5040.6  2175593.4    71117.4  2567698.0        0.4      186.1
+
+  PROGRESSIVE COMPARISON EARLY EXIT:
+    n=100: diff at layer 0, checked 1/4851 bits = 0.02%
+    n=1000: diff at layer 0, checked 1/498501 bits = 0.00%
+    n=10000: diff at layer 0, checked 1/49985001 bits = 0.00%
+
+  PACK/UNPACK:
+    n=10: 36 bits packed to 35-bit int. Roundtrip OK.
+    n=50: 1176 bits packed to 1175-bit int. Roundtrip OK.
+    n=100: 4851 bits packed to 4850-bit int. Roundtrip OK.
+
+DONE.
