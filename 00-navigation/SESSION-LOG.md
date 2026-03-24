@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S257 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S253
+**Summary of work:** Prime polynomial P(n,x) for Burnside formula. Recursive structure via prime cycle addition. Connected odd cycles as "primes" to the OCF finite Euler product.
+
+**Key discoveries:**
+1. P(n,x) = Burnside polynomial, V_n = P(n,2)/n!
+2. pair_orbits(lambda) = sum (c_i-1)/2 + sum gcd(c_i, c_j) — exact formula from cycle type
+3. Adding prime p-cycle: Delta = (p-1)/2 + (p-2)*d_p + k — recursive formula
+4. Prime cycles interact BINARY: gcd(p,q) = 1 for distinct primes
+5. P(n,x) gives a RECURSIVE decomposition: P(n,x) relates to P(n-p,x) for each odd prime p
+
+**The connection to the OCF:** The OCF is a finite Euler product over odd cycles (the "primes" of tournament theory). The Burnside polynomial P(n,x) is the COUNTING version of this product — it counts how many tournaments are fixed by each cycle type, weighted by x^{pair_orbits}.
+
 ## opus-2026-03-23-S253 — 2026-03-23
 
 **Account:** opus
