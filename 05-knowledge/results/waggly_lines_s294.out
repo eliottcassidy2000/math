@@ -1,0 +1,291 @@
+
+========================================================================
+  THE WAGGLY GRAPH: STRUCTURE BY HAMMING DISTANCE
+========================================================================
+
+  n=5: m=6 tiles, 64 tilings, 10 merged classes
+  Wiggly (d=1): 6 neighbors per tiling
+  Waggly (d≥2): 57 neighbors per tiling
+  Blue/black (d=m=6): 1 neighbor per tiling
+
+  WAGGLY WEIGHT MATRICES BY HAMMING DISTANCE:
+
+  d=1: total=384 (expected=384 ✓), self-loops=40 (10.4%), cross=344
+  d=2: total=960 (expected=960 ✓), self-loops=184 (19.2%), cross=776
+        self-loop rate: 0.1917 (vs wiggly d=1: 0.1042)
+  d=3: total=1280 (expected=1280 ✓), self-loops=92 (7.2%), cross=1188
+        self-loop rate: 0.0719 (vs wiggly d=1: 0.1042)
+  d=4: total=960 (expected=960 ✓), self-loops=160 (16.7%), cross=800
+        self-loop rate: 0.1667 (vs wiggly d=1: 0.1042)
+  d=5: total=384 (expected=384 ✓), self-loops=44 (11.5%), cross=340
+        self-loop rate: 0.1146 (vs wiggly d=1: 0.1042)
+  d=6: total=64 (expected=64 ✓), self-loops=8 (12.5%), cross=56
+        self-loop rate: 0.1250 (vs wiggly d=1: 0.1042)
+
+  d=6 (COMPLEMENT = blue/black): total=64, self-loops=8 (12.5%)
+
+  n=6: m=10 tiles, 1024 tilings, 34 merged classes
+  Wiggly (d=1): 10 neighbors per tiling
+  Waggly (d≥2): 1013 neighbors per tiling
+  Blue/black (d=m=10): 1 neighbor per tiling
+
+  WAGGLY WEIGHT MATRICES BY HAMMING DISTANCE:
+
+  d=1: total=10240 (expected=10240 ✓), self-loops=988 (9.6%), cross=9252
+  d=2: total=46080 (expected=46080 ✓), self-loops=3128 (6.8%), cross=42952
+        self-loop rate: 0.0679 (vs wiggly d=1: 0.0965)
+  d=3: total=122880 (expected=122880 ✓), self-loops=5744 (4.7%), cross=117136
+        self-loop rate: 0.0467 (vs wiggly d=1: 0.0965)
+
+
+========================================================================
+  THE WAGGLY SPECTRUM AT n=5
+========================================================================
+
+  COMPLETE WAGGLY ANALYSIS (n=5, m=6, all distances 1..6):
+
+  SELF-LOOP RATE BY DISTANCE AND CLASS:
+
+  mid  H    fiber  d=1     d=2     d=3     d=4     d=5     d=6    
+  ----------------------------------------------------------------------
+  0    1    1      0.000   0.000   0.000   0.000   0.000   0.000  
+  1    3    2      0.000   0.067   0.000   0.000   0.000   0.000  
+  3    3    1      0.000   0.000   0.000   0.000   0.000   0.000  
+  2    5    10     0.333   0.173   0.120   0.107   0.067   0.000  
+  4    9    9      0.148   0.119   0.067   0.207   0.148   0.000  
+  5    9    9      0.000   0.163   0.056   0.252   0.111   0.000  
+  6    11   11     0.182   0.182   0.136   0.121   0.212   0.364  
+  8    13   13     0.000   0.400   0.054   0.256   0.128   0.308  
+  7    15   5      0.000   0.133   0.000   0.133   0.000   0.000  
+  9    15   3      0.000   0.000   0.033   0.044   0.111   0.000  
+
+  TOTAL SELF-LOOP RATE BY DISTANCE:
+    d=1: 40/384 = 0.104167 (1-tile mutation neutrality)
+    d=2: 184/960 = 0.191667 (2-tile mutation neutrality)
+    d=3: 92/1280 = 0.071875 (3-tile mutation neutrality)
+    d=4: 160/960 = 0.166667 (4-tile mutation neutrality)
+    d=5: 44/384 = 0.114583 (5-tile mutation neutrality)
+    d=6: 8/64 = 0.125000 (6-tile mutation neutrality)
+
+========================================================================
+  THE THREE LENSES: WIGGLY, WAGGLY-2, AND COMPLEMENT
+========================================================================
+
+  THREE LENSES ON THE TILING SPACE (n=5):
+
+  === WIGGLY (d=1) ===
+    Edges: 21 / 45 possible, Self-loops: 3 / 10 classes
+    Degree range: 2..7 (avg 4.2)
+    Self-loop fraction: 0.1042 (40/384)
+
+  === WAGGLY-2 (d=2) ===
+    Edges: 35 / 45 possible, Self-loops: 7 / 10 classes
+    Degree range: 5..9 (avg 7.0)
+    Self-loop fraction: 0.1917 (184/960)
+    Same adjacency as wiggly: False (diff=26 edges)
+
+  === WAGGLY-3 (d=3) ===
+    Edges: 41 / 45 possible, Self-loops: 6 / 10 classes
+    Degree range: 6..9 (avg 8.2)
+    Self-loop fraction: 0.0719 (92/1280)
+    Same adjacency as wiggly: False (diff=24 edges)
+
+  === COMPLEMENT (d=6) ===
+    Edges: 18 / 45 possible, Self-loops: 2 / 10 classes
+    Degree range: 1..6 (avg 3.6)
+    Self-loop fraction: 0.1250 (8/64)
+    Same adjacency as wiggly: False (diff=17 edges)
+
+
+========================================================================
+  THE WAGGLY-2 WEIGHT MATRIX
+========================================================================
+
+  WAGGLY-2 WEIGHT MATRIX (2-tile mutations):
+
+  H:  [1, 3, 3, 5, 9, 9, 11, 13, 15, 15]
+  H= 1:    0    0    0    6    0    5    2    1    1    0  | fib=1, row=15
+  H= 3:    0    2    2    6    6    0    4   10    0    0  | fib=2, row=30
+  H= 3:    0    2    0    4    3    1    1    4    0    0  | fib=1, row=15
+  H= 5:    6    6    4   26   22   26   26   18   10    6  | fib=10, row=150
+  H= 9:    0    6    3   22   16   10   20   49    2    7  | fib=9, row=135
+  H= 9:    5    0    1   26   10   22   30    4   26   11  | fib=9, row=135
+  H=11:    2    4    1   26   20   30   30   25   19    8  | fib=11, row=165
+  H=13:    1   10    4   18   49    4   25   78    0    6  | fib=13, row=195
+  H=15:    1    0    0   10    2   26   19    0   10    7  | fib=5, row=75
+  H=15:    0    0    0    6    7   11    8    6    7    0  | fib=3, row=45
+
+  Properties:
+  Symmetric: True
+  Row sums: [15, 30, 15, 150, 135, 135, 165, 195, 75, 45]
+  All row sums = fiber × C(m,2) = fiber × 15: True
+
+========================================================================
+  COMPARING WIGGLY AND WAGGLY-2 TRANSITION MATRICES
+========================================================================
+
+  TRANSITION MATRIX COMPARISON (n=5):
+
+  Wiggly (d=1) eigenvalues: [0.9999999999999993, 0.5026488452316802, 0.26246427204249917, 0.19889773658038815, 0.13909428742410798]
+  Waggly (d=2) eigenvalues: [1.000000000000002, 0.5203526711392242, 0.1450596477413971, 0.04934570311766214, -0.002116629668080213]
+
+  EIGENVECTOR ALIGNMENT:
+    v_0: λ_wiggly=1.0000, λ_waggly=1.0000, |<v1,v2>|=1.0000
+    v_1: λ_wiggly=0.5026, λ_waggly=0.5204, |<v1,v2>|=0.1669
+    v_2: λ_wiggly=0.2625, λ_waggly=0.1451, |<v1,v2>|=0.3390
+    v_3: λ_wiggly=0.1989, λ_waggly=0.0493, |<v1,v2>|=0.1340
+
+========================================================================
+  THE COMPLEMENT LENS (d=m)
+========================================================================
+
+  COMPLEMENT WEIGHT MATRIX (d=6 = flip ALL tiles):
+
+  H:  [1, 3, 3, 5, 9, 9, 11, 13, 15, 15]
+  H= 1:   0   0   0   0   0   1   0   0   0   0
+  H= 3:   0   0   0   0   2   0   0   0   0   0
+  H= 3:   0   0   0   0   0   0   0   1   0   0
+  H= 5:   0   0   0   0   2   2   2   2   2   0
+  H= 9:   0   2   0   2   0   2   1   2   0   0
+  H= 9:   1   0   0   2   2   0   1   1   2   0
+  H=11:   0   0   0   2   1   1   4   2   0   1
+  H=13:   0   0   1   2   2   1   2   4   0   1
+  H=15:   0   0   0   2   0   2   0   0   0   1
+  H=15:   0   0   0   0   0   0   1   1   1   0
+
+  In the MERGED meta-graph, complement maps class to class.
+  Self-loops in complement = SC classes (complement = self).
+  Off-diagonal = NS complement pairs.
+
+  SC classes (self-loop in complement):
+    mid=6 (H=11): 4 self-complement tilings
+    mid=8 (H=13): 4 self-complement tilings
+
+========================================================================
+  THE WAGGLY HIERARCHY: d=1 < d=2 < ... < d=m
+========================================================================
+
+
+  THE WAGGLY HIERARCHY AT n=5:
+
+  d=1 (WIGGLY): flip 1 tile. 6 neighbors. The LOCAL mutation.
+    Self-loop rate: 0.1042 (10.4%)
+    Creates the meta-graph we've been studying.
+
+  d=2 (WAGGLY-2): flip 2 tiles. 15 neighbors. The SECOND HARMONIC.
+    Self-loop rate: (computed above)
+    Sees the same classes as wiggly but with DIFFERENT weights.
+
+  d=3 (WAGGLY-3): flip 3 tiles. 20 neighbors.
+    The CUBIC mutation. Reaches further in class space.
+
+  d=4 (WAGGLY-4): flip 4 tiles. 15 neighbors.
+    Symmetric with d=2 (m-d = 2 tiles unchanged).
+
+  d=5 (WAGGLY-5): flip 5 tiles. 6 neighbors.
+    Symmetric with d=1 (m-d = 1 tile unchanged).
+    This is "everything except one tile" = the NEAR-COMPLEMENT.
+
+  d=6 (COMPLEMENT): flip all 6 tiles. 1 neighbor.
+    The blue/black line. Maps T → T^op (in tiling space).
+
+  THE SYMMETRY: waggly at distance d and distance m-d are RELATED.
+  Flipping d tiles is the same as "keeping m-d tiles and flipping the rest."
+
+  Define: W_d[C][D] = #{(t, S) : t ∈ C, |S|=d, t⊕S ∈ D}.
+  Then: W_d[C][D] = W_{m-d}[C'][D'] where C' = complement of C, D' = complement of D.
+
+  In the MERGED meta-graph (complement pairs identified):
+  W_d and W_{m-d} may become the SAME matrix! (or transpose.)
+
+  VERIFYING d ↔ m-d SYMMETRY:
+
+  d=1 vs d=5: total_weights 384 vs 384 (ratio 1.000), SL 40 vs 44
+  d=2 vs d=4: total_weights 960 vs 960 (ratio 1.000), SL 184 vs 160
+  d=3 vs d=3: total_weights 1280 vs 1280 (ratio 1.000), SL 92 vs 92
+  d=4 vs d=2: total_weights 960 vs 960 (ratio 1.000), SL 160 vs 184
+  d=5 vs d=1: total_weights 384 vs 384 (ratio 1.000), SL 44 vs 40
+
+========================================================================
+  WAGGLY SELF-LOOP RATES: THE KEY PATTERN
+========================================================================
+
+  SELF-LOOP RATES BY DISTANCE (n=5):
+
+  d  | C(m,d) | total_SL | SL_rate   | pattern
+  ---+--------+----------+-----------+--------
+  1  | 6      | 40       | 0.104167 | ← wiggly
+  2  | 15     | 184      | 0.191667 | ← waggly-2
+  3  | 20     | 92       | 0.071875 | ← middle
+  4  | 15     | 160      | 0.166667 | 
+  5  | 6      | 44       | 0.114583 | ← near-complement
+  6  | 1      | 8        | 0.125000 | ← complement (blue/black)
+
+========================================================================
+  THE WAGGLY-2 GRAPH: NEW CLASSES?
+========================================================================
+
+  Wiggly (d=1) edges: 21
+  Waggly-2 (d=2) edges: 35
+  NEW edges in waggly-2 (not in wiggly): 20
+
+    {0(H=1), 5(H=9)}: ΔH=8
+    {0(H=1), 6(H=11)}: ΔH=10
+    {0(H=1), 7(H=15)}: ΔH=14
+    {0(H=1), 8(H=13)}: ΔH=12
+    {1(H=3), 3(H=3)}: ΔH=0
+    {1(H=3), 4(H=9)}: ΔH=6
+    {1(H=3), 6(H=11)}: ΔH=8
+    {1(H=3), 8(H=13)}: ΔH=10
+    {2(H=5), 7(H=15)}: ΔH=10
+    {2(H=5), 9(H=15)}: ΔH=10
+    {3(H=3), 4(H=9)}: ΔH=6
+    {3(H=3), 5(H=9)}: ΔH=6
+    {3(H=3), 6(H=11)}: ΔH=8
+    {3(H=3), 8(H=13)}: ΔH=10
+    {4(H=9), 8(H=13)}: ΔH=4
+    {4(H=9), 9(H=15)}: ΔH=6
+    {5(H=9), 7(H=15)}: ΔH=6
+    {5(H=9), 9(H=15)}: ΔH=6
+    {6(H=11), 7(H=15)}: ΔH=4
+    {7(H=15), 9(H=15)}: ΔH=0
+
+  ADJACENCY COMPARISON FOR ALL DISTANCES:
+    d=2: 35 edges, 20 new, 6 lost vs wiggly
+    d=3: 41 edges, 22 new, 2 lost vs wiggly
+    d=4: 36 edges, 20 new, 5 lost vs wiggly
+    d=5: 31 edges, 15 new, 5 lost vs wiggly
+    d=6: 18 edges, 7 new, 10 lost vs wiggly
+
+========================================================================
+  WAGGLY PER-CLASS: THE DEEP STRUCTURE
+========================================================================
+
+  CLASS-LEVEL REACHABILITY BY DISTANCE:
+
+  mid  H    fiber   d=1  d=2  d=3  d=4  d=5  d=6
+  ----------------------------------------------------------------------
+  0    1    1       4    5    6    5    3    1  
+  1    3    2       3    5    7    6    4    1  
+  3    3    1       3    6    7    4    4    1  
+  2    5    10      7    9    9    7    6    5  
+  4    9    9       5    8    9    9    8    5  
+  5    9    9       5    8    9    8    8    6  
+  6    11   11      5    9    9    9    9    5  
+  8    13   13      5    8    9    8    7    6  
+  7    15   5       3    6    8    7    7    3  
+  9    15   3       2    6    9    9    6    3  
+
+  THE WAGGLY HIERARCHY REVEALS:
+
+  At d=1 (wiggly): some classes only reach 2-4 others (narrow funnel tips).
+  At d=2 (waggly-2): reach EXPANDS for ALL classes.
+  At d=3: reach may expand further.
+  At d=m-1: reach may contract (near-complement is like wiggly of complement).
+  At d=m: reach contracts to 1 (the complement class).
+
+  The MAXIMUM REACH occurs at d ≈ m/2 (the middle of the distance spectrum).
+  This is the WAGGLY EQUATOR — the distance at which the most information
+  about the tiling landscape is accessible.
+
+Done. opus-2026-03-24-S294
