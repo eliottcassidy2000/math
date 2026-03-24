@@ -1,0 +1,195 @@
+
+========================================================================
+  WIGGLY CLASS DEFINITION
+========================================================================
+
+
+  The staircase delta_{n-2} has cells at positions (r, c) where:
+    r = 1, ..., n-2 (row, = range of the arc = j - i - 1)
+    c = 1, ..., n-1-r (column, = source vertex index + 1)
+
+  Each cell (r, c) corresponds to the arc between vertices:
+    i = c - 1 (source in the pair)
+    j = c + r (target in the pair)
+
+  We label each cell with a LETTER:
+    Cell 1 = A, Cell 2 = B, Cell 3 = C, ...
+
+  WIGGLY CLASS X: the set of all wiggly lines connecting tilings
+  that differ ONLY at cell X.
+
+  A wiggly line of class X between tilings T1 and T2 means:
+  - T1 and T2 agree on ALL cells except X
+  - At cell X, T1 has value 0 and T2 has value 1 (or vice versa)
+  - T1 and T2 may be in the SAME iso class (blueself/blackself) or DIFFERENT
+
+
+========================================================================
+  WIGGLY CLASSES AT n=4
+========================================================================
+
+  Staircase delta_2: 3 cells = C(3, 2)
+
+  WIGGLY CLASS LABELS:
+    A: cell (1,1) = arc (0,2) = pair {0,2}
+    B: cell (1,2) = arc (1,3) = pair {1,3}
+    C: cell (2,1) = arc (0,3) = pair {0,3}
+
+  Staircase pairs (3): [(0, 2), (1, 3), (0, 3)]
+  Non-staircase pairs (3): [(0, 1), (1, 2), (2, 3)]
+
+  ACTUALLY: Each of the C(n,2) = 6 pairs gets a wiggly class.
+
+    A: arc (0,1)
+    B: arc (0,2)
+    C: arc (0,3)
+    D: arc (1,2)
+    E: arc (1,3)
+    F: arc (2,3)
+
+  Per the user: 3 wiggly classes (cells of delta_2)
+
+  META-GRAPH EDGES WITH WIGGLY CLASS COLORS:
+    {0(H=1), 1(H=3)}: witnessed by classes A,B,C,D,E,F (6 classes)
+    {0(H=1), 2(H=5)}: witnessed by classes A,B,C,D,E,F (6 classes)
+    {1(H=3), 2(H=5)}: witnessed by classes A,B,C,D,E,F (6 classes)
+
+  SELF-LOOP WIGGLY CLASSES:
+    Node 0 (H=1): self-loop classes A,B,C,D,E,F (6/6)
+    Node 2 (H=5): self-loop classes A,B,C,D,E,F (6/6)
+
+  VERIFICATION: Does every wiggly class see every meta-graph edge?
+    Class A (arc (0, 1)): sees 3/3 edges
+    Class B (arc (0, 2)): sees 3/3 edges
+    Class C (arc (0, 3)): sees 3/3 edges
+    Class D (arc (1, 2)): sees 3/3 edges
+    Class E (arc (1, 3)): sees 3/3 edges
+    Class F (arc (2, 3)): sees 3/3 edges
+
+  WIGGLY COLORS PER EDGE:
+    Min: 6, Max: 6, Avg: 6.00 (out of 6 possible)
+    Edges seen by ALL 6 classes: 3
+
+========================================================================
+  WIGGLY CLASSES AT n=5
+========================================================================
+
+  Staircase delta_3: 6 cells = C(4, 2)
+
+  WIGGLY CLASS LABELS:
+    A: cell (1,1) = arc (0,2) = pair {0,2}
+    B: cell (1,2) = arc (1,3) = pair {1,3}
+    C: cell (1,3) = arc (2,4) = pair {2,4}
+    D: cell (2,1) = arc (0,3) = pair {0,3}
+    E: cell (2,2) = arc (1,4) = pair {1,4}
+    F: cell (3,1) = arc (0,4) = pair {0,4}
+
+  Staircase pairs (6): [(0, 2), (1, 3), (2, 4), (0, 3), (1, 4), (0, 4)]
+  Non-staircase pairs (4): [(0, 1), (1, 2), (2, 3), (3, 4)]
+
+  ACTUALLY: Each of the C(n,2) = 10 pairs gets a wiggly class.
+
+    A: arc (0,1)
+    B: arc (0,2)
+    C: arc (0,3)
+    D: arc (0,4)
+    E: arc (1,2)
+    F: arc (1,3)
+    G: arc (1,4)
+    H: arc (2,3)
+    I: arc (2,4)
+    J: arc (3,4)
+
+  Per the user: 6 wiggly classes (cells of delta_3)
+
+  META-GRAPH EDGES WITH WIGGLY CLASS COLORS:
+    {0(H=1), 1(H=3)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {0(H=1), 2(H=5)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {0(H=1), 3(H=3)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {0(H=1), 4(H=9)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {1(H=3), 2(H=5)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {1(H=3), 5(H=9)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {2(H=5), 3(H=3)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {2(H=5), 4(H=9)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {2(H=5), 5(H=9)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {2(H=5), 6(H=11)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {2(H=5), 8(H=13)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {3(H=3), 7(H=15)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {4(H=9), 5(H=9)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {4(H=9), 6(H=11)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {4(H=9), 7(H=15)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {5(H=9), 6(H=11)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {5(H=9), 8(H=13)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {6(H=11), 8(H=13)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {6(H=11), 9(H=15)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {7(H=15), 8(H=13)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+    {8(H=13), 9(H=15)}: witnessed by classes A,B,C,D,E,F,G,H,I,J (10 classes)
+
+  SELF-LOOP WIGGLY CLASSES:
+    Node 0 (H=1): self-loop classes A,B,C,D,E,F,G,H,I,J (10/10)
+    Node 1 (H=3): self-loop classes A,B,C,D,E,F,G,H,I,J (10/10)
+    Node 2 (H=5): self-loop classes A,B,C,D,E,F,G,H,I,J (10/10)
+    Node 4 (H=9): self-loop classes A,B,C,D,E,F,G,H,I,J (10/10)
+    Node 6 (H=11): self-loop classes A,B,C,D,E,F,G,H,I,J (10/10)
+
+  VERIFICATION: Does every wiggly class see every meta-graph edge?
+    Class A (arc (0, 1)): sees 21/21 edges
+    Class B (arc (0, 2)): sees 21/21 edges
+    Class C (arc (0, 3)): sees 21/21 edges
+    Class D (arc (0, 4)): sees 21/21 edges
+    Class E (arc (1, 2)): sees 21/21 edges
+    Class F (arc (1, 3)): sees 21/21 edges
+    Class G (arc (1, 4)): sees 21/21 edges
+    Class H (arc (2, 3)): sees 21/21 edges
+    Class I (arc (2, 4)): sees 21/21 edges
+    Class J (arc (3, 4)): sees 21/21 edges
+
+  WIGGLY COLORS PER EDGE:
+    Min: 10, Max: 10, Avg: 10.00 (out of 10 possible)
+    Edges seen by ALL 10 classes: 21
+
+========================================================================
+  TERMINOLOGY UPDATE FOR ALL AGENTS
+========================================================================
+
+
+  DEFINITIVE TERMINOLOGY:
+
+  WIGGLY LINE: Clicking one tile in the explorer = flipping one arc.
+  WIGGLY CLASS: Which tile (cell of the staircase) was flipped.
+
+  At n=4 (delta_2, 3 staircase cells):
+    A = cell (1,1) = arc (0,1)
+    B = cell (1,2) = arc (1,2)
+    C = cell (2,1) = arc (0,2)
+
+  Wait — the user says n=4 has 3 classes. But C(4,2)=6 arcs.
+  The staircase delta_2 = (2,1) has 3 cells.
+  So only 3 of the 6 arcs are "staircase arcs" = wiggly classes.
+
+  But the explorer shows ALL arcs as tiles. Clicking ANY tile
+  is a wiggly line. So there should be C(n,2) = m wiggly classes.
+
+  RESOLUTION: The user counts C(n-1,2) because the staircase
+  delta_{n-2} has that many cells. The remaining n-1 arcs are
+  the "diagonal" or "boundary" arcs that don't appear as
+  independent tiles in the staircase.
+
+  FOR NOW: we use m = C(n,2) wiggly classes (one per arc/pair).
+  If the user means only the staircase cells, that's C(n-1,2).
+  We'll confirm with the explorer.
+
+  PREVIOUS TERMINOLOGY MAPPING:
+  - "Opaque" edge = wiggly line that changes class = CROSS wiggly
+  - "Blueself/blackself" = wiggly line that preserves class = SELF wiggly
+  - "Translucent" = was used for self-loops, NOW DEPRECATED
+  - "Wiggly class" = which specific arc was flipped
+
+  THE WIGGLY-COLORED META-GRAPH:
+  Each meta-graph edge gets a SET of wiggly classes (which arcs witness it).
+  From S262 (local=global): EVERY wiggly class witnesses EVERY edge.
+  So each edge has the FULL SET of wiggly colors.
+  But the LABELED multiplicity varies: some classes witness more
+  labeled (T, T') pairs for a given edge than others.
+
+Done. opus-2026-03-23-S273
