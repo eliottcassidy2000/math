@@ -1,0 +1,297 @@
+
+========================================================================
+  THE RESIDUAL SEQUENCE
+========================================================================
+
+  n | T_n      | twin_SL | 2E       | residual | res/T
+  --|----------|---------|----------|----------|------
+  3 |        4 |       2 |        2 |        0 | 0.000000
+  4 |       16 |       4 |       10 |        2 | 0.125000
+  5 |       88 |      12 |       60 |       16 | 0.181818
+  6 |      704 |      48 |      580 |       76 | 0.107955
+  7 |     8912 |     296 |     8172 |      444 | 0.049820
+  8 |   188288 |    3040 |   182322 |     2926 | 0.015540
+  9 |  6847200 |   54256 |  6761502 |    31442 | 0.004592
+
+  Residual sequence: [0, 2, 16, 76, 444, 2926, 31442]
+
+========================================================================
+  FACTORIZATIONS OF RESIDUALS
+========================================================================
+
+  n=3: residual = 0
+  n=4: residual = 2 = 2
+  n=5: residual = 16 = 2 × 2 × 2 × 2
+  n=6: residual = 76 = 2 × 2 × 19
+  n=7: residual = 444 = 2 × 2 × 3 × 37
+  n=8: residual = 2926 = 2 × 7 × 11 × 19
+  n=9: residual = 31442 = 2 × 79 × 199
+
+========================================================================
+  RESIDUAL RATIOS AND PATTERNS
+========================================================================
+
+  Consecutive ratios residual(n+1)/residual(n):
+    res(5)/res(4) = 16/2 = 8.0000
+    res(6)/res(5) = 76/16 = 4.7500
+    res(7)/res(6) = 444/76 = 5.8421
+    res(8)/res(7) = 2926/444 = 6.5901
+    res(9)/res(8) = 31442/2926 = 10.7457
+
+  Residual / (n-2)!:
+    n=3: 0 / 1 = 0 = 0.000000
+    n=4: 2 / 2 = 1 = 1.000000
+    n=5: 16 / 6 = 8/3 = 2.666667
+    n=6: 76 / 24 = 19/6 = 3.166667
+    n=7: 444 / 120 = 37/10 = 3.700000
+    n=8: 2926 / 720 = 1463/360 = 4.063889
+    n=9: 31442 / 5040 = 15721/2520 = 6.238492
+
+  Residual / V_n:
+    n=3: 0 / 2 = 0.0000
+    n=4: 2 / 4 = 0.5000
+    n=5: 16 / 12 = 1.3333
+    n=6: 76 / 56 = 1.3571
+    n=7: 444 / 456 = 0.9737
+    n=8: 2926 / 6880 = 0.4253
+    n=9: 31442 / 191536 = 0.1642
+
+  Residual / n!:
+    n=3: 0 / 6 = 0
+    n=4: 2 / 24 = 1/12
+    n=5: 16 / 120 = 2/15
+    n=6: 76 / 720 = 19/180
+    n=7: 444 / 5040 = 37/420
+    n=8: 2926 / 40320 = 209/2880
+    n=9: 31442 / 362880 = 15721/181440
+
+========================================================================
+  RESIDUAL AS CUT-CYCLE INTERACTION
+========================================================================
+
+
+  From the factorization theorem (S263):
+
+  Fix_tournament(σ) = Fix_even(σ) × 2^{k-1}
+
+  where:
+  - Fix_even(σ) = 2^{arc_orbits(σ) - k + 1} = the CYCLE part
+  - 2^{k-1} = the CUT part (k = number of cycles of σ)
+
+  TOURNAMENT = CYCLE × CUT
+
+  The twin_SL captures the part where the CUT part has a specific
+  structure (twin pair among fixed points):
+    twin(σ) = 2C(f,2) × Fix_even(σ)
+
+  The TOTAL = V_n uses Fix_even × 2^{k-1} (all of cut space).
+
+  The difference (total - twin - 2E) = RESIDUAL:
+  residual = #{orbits where the cut-cycle interaction creates
+              complex self-loops or multi-edges that aren't twins}
+
+  The residual MEASURES the interaction between the cycle space
+  (Fix_even) and the cut space (2^{k-1}).
+
+  When cycle and cut are INDEPENDENT: residual = 0.
+  When they INTERACT: residual > 0.
+
+  At n=3: residual = 0 (perfect independence at the triangle level!)
+  At n≥4: residual > 0 (interaction emerges with the 4th vertex)
+
+
+========================================================================
+  RESIDUAL BY CYCLE TYPE
+========================================================================
+
+  n=3:
+    (1, 1, 1): k=3, f=3, Fix_even=2^1, ratio=Fix_tourn/twin=2/3
+    V=2 (known 2), twin=2 (known 2)
+
+  n=4:
+    (1, 1, 1, 1): k=4, f=4, Fix_even=2^3, ratio=Fix_tourn/twin=2/3
+    V=4 (known 4), twin=4 (known 4)
+
+  n=5:
+    (1, 1, 1, 1, 1): k=5, f=5, Fix_even=2^6, ratio=Fix_tourn/twin=4/5
+    (1, 1, 3): k=3, f=2, Fix_even=2^2, ratio=Fix_tourn/twin=2
+    V=12 (known 12), twin=12 (known 12)
+
+  n=6:
+    (1, 1, 1, 1, 1, 1): k=6, f=6, Fix_even=2^10, ratio=Fix_tourn/twin=16/15
+    (1, 1, 1, 3): k=4, f=3, Fix_even=2^4, ratio=Fix_tourn/twin=4/3
+    V=56 (known 56), twin=48 (known 48)
+
+  n=7:
+    (1, 1, 1, 1, 1, 1, 1): k=7, f=7, Fix_even=2^15, ratio=Fix_tourn/twin=32/21
+    (1, 1, 1, 1, 3): k=5, f=4, Fix_even=2^7, ratio=Fix_tourn/twin=4/3
+    (1, 1, 5): k=3, f=2, Fix_even=2^3, ratio=Fix_tourn/twin=2
+    V=456 (known 456), twin=296 (known 296)
+
+  n=8:
+    V=6880 (known 6880), twin=3040 (known 3040)
+
+  n=9:
+    V=191536 (known 191536), twin=54256 (known 54256)
+
+
+========================================================================
+  THE RATIO Fix_tourn/twin FOR EACH CYCLE TYPE
+========================================================================
+
+
+  For cycle type with k cycles and f fixed points:
+
+  Fix_tourn(σ) / twin(σ) = 2^{k-1} / (2C(f,2))
+                          = 2^{k-2} / C(f,2)
+                          = 2^{k-2} / (f(f-1)/2)
+                          = 2^{k-1} / (f(f-1))
+
+  For the identity (k=n, f=n):
+    ratio = 2^{n-1} / (n(n-1)) = 2^{n-1} / 2m
+    = 2^{n-2} / m
+
+  This ratio GROWS exponentially with n.
+  At n=5: 2^3/10 = 0.8 (twin captures 1/0.8 = 125% — wait, that's >1?)
+
+  Actually: twin(σ) can be LARGER than Fix_tourn(σ) when f is large
+  relative to k. Let me re-examine.
+
+  twin(σ) = 2C(f,2) × Fix_even(σ)
+  Fix_tourn(σ) = Fix_even(σ) × 2^{k-1}
+
+  ratio = twin / Fix_tourn = 2C(f,2) / 2^{k-1} = f(f-1) / 2^{k-1}
+
+  For identity (k=n, f=n):
+    twin/Fix = n(n-1) / 2^{n-1}
+
+  n=3: 6/4 = 1.5 (twin > Fix!)
+  n=4: 12/8 = 1.5
+  n=5: 20/16 = 1.25
+  n=6: 30/32 = 0.9375
+  n=7: 42/64 = 0.65625
+  n=8: 56/128 = 0.4375
+
+  The identity term has twin > Fix for n ≤ 5!
+  This means the twin sum OVERESTIMATES at small n.
+  The correction comes from non-identity cycle types where twin < Fix.
+
+  twin(identity) / Fix_tourn(identity) = n(n-1)/2^{n-1}:
+    n=3: 3/2 = 1.500000
+    n=4: 3/2 = 1.500000
+    n=5: 5/4 = 1.250000
+    n=6: 15/16 = 0.937500
+    n=7: 21/32 = 0.656250
+    n=8: 7/16 = 0.437500
+    n=9: 9/32 = 0.281250
+    n=10: 45/256 = 0.175781
+    n=11: 55/512 = 0.107422
+
+========================================================================
+  THE RESIDUAL = BURNSIDE CORRECTION TO TWIN APPROXIMATION
+========================================================================
+
+
+  The formula: T = twin_SL + 2E + residual
+
+  Rearranging: 2E = T - twin_SL - residual
+
+  The TWIN approximation: E ≈ (T - twin_SL) / 2
+  The EXACT: E = (T - twin_SL - residual) / 2
+
+  So: E_twin - E_exact = residual / 2
+
+  The residual / 2 sequence: 0, 1, 8, 38, 222, 1463, 15721
+
+  FACTORIZATIONS:
+
+  n=3: residual/2 = 0
+  n=4: residual/2 = 1 = 
+  n=5: residual/2 = 8 = 2 × 2 × 2
+  n=6: residual/2 = 38 = 2 × 19
+  n=7: residual/2 = 222 = 2 × 3 × 37
+  n=8: residual/2 = 1463 = 7 × 11 × 19
+  n=9: residual/2 = 15721 = 79 × 199
+
+  residual/2 = [0, 1, 8, 38, 222, 1463, 15721]
+
+  Ratios res/2(n+1) / res/2(n):
+    8/1 = 8.0000
+    38/8 = 4.7500
+    222/38 = 5.8421
+    1463/222 = 6.5901
+    15721/1463 = 10.7457
+
+  residual/2 / (n-2)!:
+    n=4: 1 / 2 = 1/2 = 0.500000
+    n=5: 8 / 6 = 4/3 = 1.333333
+    n=6: 38 / 24 = 19/12 = 1.583333
+    n=7: 222 / 120 = 37/20 = 1.850000
+    n=8: 1463 / 720 = 1463/720 = 2.031944
+    n=9: 15721 / 5040 = 15721/5040 = 3.119246
+
+  residual/2 vs 2×D_{n-2} (D = derangements):
+    n=4: res/2=1, 2×D_2=2, ratio=0.5000
+    n=5: res/2=8, 2×D_3=4, ratio=2.0000
+    n=6: res/2=38, 2×D_4=18, ratio=2.1111
+    n=7: res/2=222, 2×D_5=88, ratio=2.5227
+    n=8: res/2=1463, 2×D_6=530, ratio=2.7604
+    n=9: res/2=15721, 2×D_7=3708, ratio=4.2398
+
+========================================================================
+  THE RESIDUAL THROUGH THE GF(2) LENS
+========================================================================
+
+
+  From the factorization theorem:
+  Fix_tournament = Fix_even × 2^{k-1}
+
+  The 2^{k-1} is the CUT SPACE dimension.
+  The CUT SPACE = GF(2)^{k-1} acts on the score sequence.
+
+  twin_SL uses C(f,2) of the cut dimensions (twin pairs from fixed pts).
+  The RESIDUAL comes from the REMAINING cut dimensions:
+  2^{k-1} - 2C(f,2) of the cut space goes into non-twin self-loops + multi-edges.
+
+  For the identity (k=n, f=n):
+    Cut space = GF(2)^{n-1}
+    Twin constraint uses C(n,2) = n(n-1)/2 dimensions... wait.
+    Actually twin uses C(f,2) = C(n,2) fixed-point pairs.
+    But the cut space is only (n-1)-dimensional!
+    C(n,2) > n-1 for n ≥ 4, so the twin COUNT exceeds the cut DIMENSION.
+
+  This is the source of the residual: the twin count OVERESTIMATES
+  because it treats fixed-point pairs as independent, but they're
+  constrained by the (n-1)-dimensional cut space.
+
+  The residual = RANK DEFICIENCY of the twin constraint system.
+  At n=3: C(3,2)=3, dim(cut)=2. 3-2=1 redundancy. But residual=0!
+  At n=4: C(4,2)=6, dim(cut)=3. 6-3=3 redundancy. Residual=2.
+  At n=5: C(5,2)=10, dim(cut)=4. 10-4=6 redundancy. Residual=16.
+
+  The redundancy = C(n,2) - (n-1) = C(n-1,2) = dimension of the CYCLE SPACE.
+
+  So: the residual is controlled by the CYCLE SPACE DIMENSION C(n-1,2).
+  Let me check: residual/2 vs 2^{C(n-1,2)} ...
+
+  residual/2: 0, 1, 8, 38, 222, 1463, 15721
+  C(n-1,2):   1, 3, 6, 10, 15,   21,    28
+  2^{C(n-1,2)}: 2, 8, 64, 1024, 32768, 2097152, ...
+
+  residual/2 / 2^{C(n-1,2)}: -, 1/8, 1/8, 38/1024, 222/32768, ...
+                             = -, 0.125, 0.125, 0.037, 0.0068, ...
+
+  The fraction DECREASES — the residual is a SMALL fraction of the
+  cycle space. It measures the INTERACTION (non-independence) between
+  cut and cycle, which vanishes as the spaces grow apart.
+
+  residual/2 vs cycle space dimension C(n-1,2):
+    n=3: res/2=0, C(n-1,2)=1, 2^{C(n-1,2)}=2, ratio=0.00000000
+    n=4: res/2=1, C(n-1,2)=3, 2^{C(n-1,2)}=8, ratio=0.12500000
+    n=5: res/2=8, C(n-1,2)=6, 2^{C(n-1,2)}=64, ratio=0.12500000
+    n=6: res/2=38, C(n-1,2)=10, 2^{C(n-1,2)}=1024, ratio=0.03710938
+    n=7: res/2=222, C(n-1,2)=15, 2^{C(n-1,2)}=32768, ratio=0.00677490
+    n=8: res/2=1463, C(n-1,2)=21, 2^{C(n-1,2)}=2097152, ratio=0.00069761
+    n=9: res/2=15721, C(n-1,2)=28, 2^{C(n-1,2)}=268435456, ratio=0.00005857
+
+Done. opus-2026-03-23-S264
