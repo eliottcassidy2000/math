@@ -1,0 +1,240 @@
+========================================================================
+  REVERSIBLE MARKOV CHAIN ON THE WIGGLY METAGRAPH
+  opus-2026-03-24-S295
+========================================================================
+
+########################################################################
+  n = 4: REVERSIBLE MARKOV CHAIN ON WIGGLY METAGRAPH
+########################################################################
+  Built in 0.0s. V=3, m=3
+
+  DETAILED BALANCE: 0 violations (should be 0)
+
+  MARKOV EIGENVALUES (top 10):
+    μ_0 = 1.00000000
+    μ_1 = 0.17489836
+    μ_2 = -0.50823169
+
+  SPECTRAL GAP: 1 - μ_1 = 0.825102
+  2/n = 0.500000
+  Ratio: 1.6502
+
+  MIXING TIME:
+    π_min = 0.125000 (class with fewest tilings)
+    π_max = 0.625000 (class with most tilings)
+    π_max/π_min = 5.00
+    t_mix ≈ (1/gap) × ln(1/π_min) = 2.5 steps
+
+  DIRICHLET FORM FOR H:
+    E(H,H) = 1.6667
+    Var_π(H) = 2.0000
+    Rayleigh quotient E/Var = 0.833333
+    Spectral gap = 0.825102
+    Ratio Rayleigh/gap = 1.0100
+    (= 1.0 if H is exactly the 2nd eigenvector)
+
+  CONDUCTANCE (Cheeger constant):
+    Φ ≈ 0.555556 (sweep cut)
+    Cheeger bound: gap/2 ≤ Φ ≤ √(2×gap)
+    gap/2 = 0.412551
+    √(2×gap) = 1.284602
+
+  ORNSTEIN-UHLENBECK ON H:
+    Mean-reversion rate ≈ gap = 0.8251
+    Equilibrium H* ≈ E_π[H] = 4.00
+    Relaxation time τ = 1/gap = 1.2 steps
+    Szele expected H = 3.00
+
+  FLOW STRUCTURE:
+    H levels: 3
+    H range: [1, 5]
+    Net upward flow (low H → high H): 0.291667
+    Net downward flow (high H → low H): 0.291667
+    Ratio up/down: 1.0000
+    (= 1.0 at equilibrium by detailed balance)
+
+########################################################################
+  n = 5: REVERSIBLE MARKOV CHAIN ON WIGGLY METAGRAPH
+########################################################################
+  Built in 0.0s. V=10, m=6
+
+  DETAILED BALANCE: 0 violations (should be 0)
+
+  MARKOV EIGENVALUES (top 10):
+    μ_0 = 1.00000000
+    μ_1 = 0.50264885
+    μ_2 = 0.26246427
+    μ_3 = 0.19889774
+    μ_4 = 0.13909429
+    μ_5 = 0.03779827
+    μ_6 = -0.16646100
+    μ_7 = -0.26446432
+    μ_8 = -0.32394355
+    μ_9 = -0.72273488
+
+  SPECTRAL GAP: 1 - μ_1 = 0.497351
+  2/n = 0.400000
+  Ratio: 1.2434
+
+  MIXING TIME:
+    π_min = 0.015625 (class with fewest tilings)
+    π_max = 0.203125 (class with most tilings)
+    π_max/π_min = 13.00
+    t_mix ≈ (1/gap) × ln(1/π_min) = 8.4 steps
+
+  DIRICHLET FORM FOR H:
+    E(H,H) = 6.6667
+    Var_π(H) = 12.8594
+    Rayleigh quotient E/Var = 0.518429
+    Spectral gap = 0.497351
+    Ratio Rayleigh/gap = 1.0424
+    (= 1.0 if H is exactly the 2nd eigenvector)
+
+  CONDUCTANCE (Cheeger constant):
+    Φ ≈ 0.354167 (sweep cut)
+    Cheeger bound: gap/2 ≤ Φ ≤ √(2×gap)
+    gap/2 = 0.248676
+    √(2×gap) = 0.997348
+
+  ORNSTEIN-UHLENBECK ON H:
+    Mean-reversion rate ≈ gap = 0.4974
+    Equilibrium H* ≈ E_π[H] = 9.88
+    Relaxation time τ = 1/gap = 2.0 steps
+    Szele expected H = 7.50
+
+  FLOW STRUCTURE:
+    H levels: 7
+    H range: [1, 15]
+    Net upward flow (low H → high H): 0.411458
+    Net downward flow (high H → low H): 0.411458
+    Ratio up/down: 1.0000
+    (= 1.0 at equilibrium by detailed balance)
+
+########################################################################
+  n = 6: REVERSIBLE MARKOV CHAIN ON WIGGLY METAGRAPH
+########################################################################
+  Built in 0.2s. V=34, m=10
+
+  DETAILED BALANCE: 0 violations (should be 0)
+
+  MARKOV EIGENVALUES (top 10):
+    μ_0 = 1.00000000
+    μ_1 = 0.66499750
+    μ_2 = 0.50347354
+    μ_3 = 0.49030637
+    μ_4 = 0.47020903
+    μ_5 = 0.42863836
+    μ_6 = 0.34547650
+    μ_7 = 0.24841355
+    μ_8 = 0.21488170
+    μ_9 = 0.20962608
+
+  SPECTRAL GAP: 1 - μ_1 = 0.335002
+  2/n = 0.333333
+  Ratio: 1.0050
+
+  MIXING TIME:
+    π_min = 0.000977 (class with fewest tilings)
+    π_max = 0.083984 (class with most tilings)
+    π_max/π_min = 86.00
+    t_mix ≈ (1/gap) × ln(1/π_min) = 20.7 steps
+
+  DIRICHLET FORM FOR H:
+    E(H,H) = 36.6125
+    Var_π(H) = 104.5625
+    Rayleigh quotient E/Var = 0.350149
+    Spectral gap = 0.335002
+    Ratio Rayleigh/gap = 1.0452
+    (= 1.0 if H is exactly the 2nd eigenvector)
+
+  CONDUCTANCE (Cheeger constant):
+    Φ ≈ 0.303006 (sweep cut)
+    Cheeger bound: gap/2 ≤ Φ ≤ √(2×gap)
+    gap/2 = 0.167501
+    √(2×gap) = 0.818538
+
+  ORNSTEIN-UHLENBECK ON H:
+    Mean-reversion rate ≈ gap = 0.3350
+    Equilibrium H* ≈ E_π[H] = 29.00
+    Relaxation time τ = 1/gap = 3.0 steps
+    Szele expected H = 22.50
+
+  FLOW STRUCTURE:
+    H levels: 19
+    H range: [1, 45]
+    Net upward flow (low H → high H): 0.422656
+    Net downward flow (high H → low H): 0.422656
+    Ratio up/down: 1.0000
+    (= 1.0 at equilibrium by detailed balance)
+
+########################################################################
+  n = 7: REVERSIBLE MARKOV CHAIN ON WIGGLY METAGRAPH
+########################################################################
+  Built in 13.5s. V=272, m=15
+
+  DETAILED BALANCE: 0 violations (should be 0)
+
+  MARKOV EIGENVALUES (top 10):
+    μ_0 = 1.00000000
+    μ_1 = 0.76120967
+    μ_2 = 0.63923474
+    μ_3 = 0.63207986
+    μ_4 = 0.60772697
+    μ_5 = 0.59087934
+    μ_6 = 0.52849992
+    μ_7 = 0.46636282
+    μ_8 = 0.46231464
+    μ_9 = 0.45099302
+
+  SPECTRAL GAP: 1 - μ_1 = 0.238790
+  2/n = 0.285714
+  Ratio: 0.8358
+
+  MIXING TIME:
+    π_min = 0.000031 (class with fewest tilings)
+    π_max = 0.009338 (class with most tilings)
+    π_max/π_min = 306.00
+    t_mix ≈ (1/gap) × ln(1/π_min) = 43.5 steps
+
+  DIRICHLET FORM FOR H:
+    E(H,H) = 298.3396
+    Var_π(H) = 1189.6787
+    Rayleigh quotient E/Var = 0.250773
+    Spectral gap = 0.238790
+    Ratio Rayleigh/gap = 1.0502
+    (= 1.0 if H is exactly the 2nd eigenvector)
+
+  CONDUCTANCE (Cheeger constant):
+    Φ ≈ 0.233963 (sweep cut)
+    Cheeger bound: gap/2 ≤ Φ ≤ √(2×gap)
+    gap/2 = 0.119395
+    √(2×gap) = 0.691072
+
+  ORNSTEIN-UHLENBECK ON H:
+    Mean-reversion rate ≈ gap = 0.2388
+    Equilibrium H* ≈ E_π[H] = 99.22
+    Relaxation time τ = 1/gap = 4.2 steps
+    Szele expected H = 78.75
+
+  FLOW STRUCTURE:
+    H levels: 77
+    H range: [1, 189]
+    Net upward flow (low H → high H): 0.469096
+    Net downward flow (high H → low H): 0.469096
+    Ratio up/down: 1.0000
+    (= 1.0 at equilibrium by detailed balance)
+
+========================================================================
+  SUMMARY
+========================================================================
+    n      gap    2/n  ratio  Ray(H)/gap        Φ    t_mix
+    4   0.8251 0.5000  1.650      1.0100   0.5556      2.5
+    5   0.4974 0.4000  1.243      1.0424   0.3542      8.4
+    6   0.3350 0.3333  1.005      1.0452   0.3030     20.7
+    7   0.2388 0.2857  0.836      1.0502   0.2340     43.5
+
+  KEY RESULT: Rayleigh(H)/gap → 1.0 confirms H IS the 2nd eigenvector
+  The OU process dH = -gap(H-H*) + noise is the EXACT dynamics
+  of H under wiggly random walk.
+
+DONE.
