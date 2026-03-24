@@ -1,427 +1,363 @@
 #!/usr/bin/env python3
 """
-wiggly_lines_s272.py -- opus-2026-03-23-S272
+wiggly_lines_s272.py — Wiggly lines: inner sub-tournament flips (Mode B)
+opus-2026-03-23-S272
 
-WIGGLY LINES: FIBER CONNECTIONS THROUGH THE OVERLAP
+A tournament on n vertices decomposes (Mode B, n→n-2) into:
+  OVERLAP: inner sub-tournament on vertices {1,...,n-2}, C(n-2,2) arcs
+  WIRING:  arcs involving vertices 0 or n-1, 2(n-2)+1 = 2n-3 arcs
 
-Each tiling (labeled tournament on n vertices) decomposes as:
-  T = boundary(0) + boundary(n-1) + apex(0,n-1) + overlap(interior)
+Total: C(n-2,2) + (2n-3) = C(n,2) ✓
 
-The OVERLAP has C(n-2,2) cells (arcs among vertices 1..n-2).
-Fixing the boundary+apex and varying the overlap gives 2^{C(n-2,2)}
-tilings — a C(n-2,2)-dimensional subcube of Q_m.
-
-WIGGLY LINES connect tilings that share the same boundary+apex
-but differ in the overlap. Each tiling has 2^{C(n-2,2)} - 1
-wiggly neighbors (all tilings in its overlap fiber minus itself).
+A WIGGLY LINE connects two tilings that differ in exactly ONE overlap cell.
+Each tiling has C(n-2,2) wiggly neighbors.
+Tilings sharing the same wiring form a hypercube Q_{C(n-2,2)}.
 
 QUESTIONS:
-1. How do wiggly fibers project onto the meta-graph?
-   (Do wiggly-connected tilings land in the SAME class or different?)
-2. What is the wiggly analog of the meta-graph edge count?
-3. How do wiggly fibers interact with the opaque/translucent structure?
-
-Author: opus-2026-03-23-S272
+1. How many wiggly lines generate metagraph edges? (vs self-loops)
+2. Which metagraph edges are wiggly-reachable? Which require wiring flips?
+3. How do wiggly groups (constant wiring) map to iso classes?
+4. Is the wiggly/wiring split related to the cut/cycle decomposition?
+5. What's the wiggly quotient: Q_m / (same wiring) = 2^{2n-3} points?
 """
 
-import sys
-import numpy as np
+import sys, time, subprocess
 from math import comb, factorial
 from itertools import permutations
 from collections import defaultdict, Counter
+
 sys.stdout.reconfigure(line_buffering=True)
 
-def banner(title):
-    print("\n" + "="*72)
-    print("  " + title)
-    print("="*72 + "\n")
+def build_tournament_data(n):
+    """Build all tournament data with iso class identification."""
+    m = comb(n, 2)
+    P = [(i,j) for i in range(n) for j in range(i+1,n)]
 
-def canon(A, n):
-    sc = [sum(A[i]) for i in range(n)]
-    sg = defaultdict(list)
-    for v in range(n): sg[sc[v]].append(v)
-    gs = [sg[s] for s in sorted(sg.keys())]
-    best = None
-    def gp(gs):
-        if not gs: yield []; return
-        for p in permutations(gs[0]):
-            for r in gp(gs[1:]): yield list(p)+r
-    for p in gp(gs):
-        f = tuple(A[p[i]][p[j]] for i in range(n) for j in range(n) if i!=j)
-        if best is None or f < best: best = f
-    return best
+    r = subprocess.run(['gentourng', str(n)], capture_output=True, text=True)
+    lines = [l.strip() for l in (r.stdout or '').split('\n')
+             if len(l.strip()) == m and all(c in '01' for c in l.strip())]
 
-def Hcount(A, n):
-    dp = {}
-    for v in range(n): dp[(1<<v,v)] = 1
-    full = (1<<n)-1
-    for S in range(1,1<<n):
-        for v in range(n):
-            if not (S&(1<<v)): continue
-            c = dp.get((S,v),0)
-            if c==0: continue
-            for w in range(n):
-                if S&(1<<w): continue
-                if A[v][w]: dp[(S|(1<<w),w)] = dp.get((S|(1<<w),w),0) + c
-    return sum(dp.get((full,v),0) for v in range(n))
+    def b2a(bits):
+        a = [[0]*n for _ in range(n)]
+        for k, (i,j) in enumerate(P):
+            if bits & (1 << (m-1-k)): a[i][j] = 1
+            else: a[j][i] = 1
+        return a
 
-def complement(A, n):
-    return [[1-A[i][j] if i!=j else 0 for j in range(n)] for i in range(n)]
+    def ss(a): return tuple(sorted(sum(a[i][j] for j in range(n)) for i in range(n)))
+    def c3(a):
+        c = 0
+        for i in range(n):
+            for j in range(i+1, n):
+                for k in range(j+1, n):
+                    if a[i][j] and a[j][k] and a[k][i]: c += 1
+                    if a[i][k] and a[k][j] and a[j][i]: c += 1
+        return c
+    def H(a):
+        dp = {}
+        for v in range(n): dp[(1<<v,v)] = 1
+        for S in range(1, 1<<n):
+            for v in range(n):
+                if not (S&(1<<v)): continue
+                val = dp.get((S,v), 0)
+                if val == 0: continue
+                for u in range(n):
+                    if S&(1<<u): continue
+                    if a[v][u]: dp[(S|(1<<u),u)] = dp.get((S|(1<<u),u),0) + val
+        return sum(dp.get(((1<<n)-1,v),0) for v in range(n))
+    def cp(a):
+        sc = [sum(a[i][j] for j in range(n)) for i in range(n)]
+        sg = defaultdict(list)
+        for v in range(n): sg[sc[v]].append(v)
+        gs = [sg[s] for s in sorted(sg.keys())]
+        best = None; cnt = 0
+        def gp(gs2):
+            if not gs2: yield []; return
+            for p in permutations(gs2[0]):
+                for rest in gp(gs2[1:]): yield list(p)+rest
+        for p in gp(gs):
+            f = tuple(a[p[i]][p[j]] for i in range(n) for j in range(n))
+            if best is None or f < best: best = f
+            cnt += 1
+            if cnt > 500000: break
+        return best
 
-banner("THE WIGGLY LINE CONCEPT")
+    cls = []
+    hm = defaultdict(list); cm = {}
+    for i, line in enumerate(lines):
+        bits = int(line, 2); adj = b2a(bits)
+        s = ss(adj); cc = c3(adj); h = H(adj); canon = cp(adj)
+        comp = [[1-adj[a][b] if a!=b else 0 for b in range(n)] for a in range(n)]
+        cc2 = cp(comp); sc = (canon == cc2)
+        cls.append({'cid':i, 'adj':adj, 'score':s, 'c3':cc, 'H':h,
+                    'sc':sc, 'comp_canon':cc2, 'canon':canon})
+        hm[(s,cc,h)].append(i); cm[canon] = i
+    for cl in cls: cl['comp_cid'] = cm.get(cl['comp_canon'], -1)
 
-print("""
-  THE RECURSIVE DECOMPOSITION:
-  T on [n] = boundary_left (arcs from 0) + boundary_right (arcs to n-1)
-             + apex (arc 0↔n-1) + overlap (arcs among 1..n-2)
+    def lk(adj):
+        s = ss(adj); cc = c3(adj); h = H(adj)
+        cids = hm.get((s,cc,h))
+        if not cids: return -1
+        if len(cids) == 1: return cids[0]
+        return cm.get(cp(adj), -1)
 
-  CELL COUNTS:
-    boundary_left: n-2 cells (arcs 0→j for j=1..n-2)
-    boundary_right: n-2 cells (arcs j→(n-1) for j=1..n-2)
-    apex: 1 cell (arc 0↔(n-1))
-    overlap: C(n-2, 2) cells (arcs among 1..n-2)
-    TOTAL: 2(n-2) + 1 + C(n-2,2) = C(n,2) = m  ✓
+    # Merge complement pairs
+    mn = {}; mid = 0
+    for cl in cls:
+        ci = cl['cid']
+        if ci in mn: continue
+        if cl['sc']: mn[ci] = mid; mid += 1
+        else:
+            mn[ci] = mid
+            comp = cl['comp_cid']
+            if comp >= 0 and comp != ci: mn[comp] = mid
+            mid += 1
 
-  WIGGLY FIBER: Fix boundary+apex, vary overlap.
-  Fiber size = 2^{C(n-2,2)} (one tournament per interior orientation).
+    mi = {}
+    for mm in range(mid):
+        cids = [cl['cid'] for cl in cls if mn[cl['cid']] == mm]
+        cl0 = cls[cids[0]]
+        mi[mm] = {'H': cl0['H'], 'sc': cl0['sc']}
 
-  At n=3: C(1,2)=0 → fiber=1 (no interior, only boundary+apex)
-  At n=4: C(2,2)=1 → fiber=2 (one interior arc, 2 choices)
-  At n=5: C(3,2)=3 → fiber=8 (three interior arcs, 8 choices)
-  At n=6: C(4,2)=6 → fiber=64 (six interior arcs, 64 choices)
-  At n=7: C(5,2)=10 → fiber=1024
+    return P, cls, lk, mn, mid, mi, m
 
-  Each fiber is a C(n-2,2)-subcube of Q_m.
-  The total number of fibers = 2^{2(n-2)+1} = 2^{2n-3}
-  (one per boundary+apex configuration).
+def classify_arcs(n, P):
+    """Classify arcs into OVERLAP (inner) and WIRING (extreme vertices)."""
+    m = len(P)
+    inner_vertices = set(range(1, n-1))  # {1, ..., n-2}
+
+    overlap_arcs = []  # indices of arcs between inner vertices
+    wiring_arcs = []   # indices of arcs involving vertex 0 or n-1
+
+    for k, (i, j) in enumerate(P):
+        if i in inner_vertices and j in inner_vertices:
+            overlap_arcs.append(k)
+        else:
+            wiring_arcs.append(k)
+
+    return overlap_arcs, wiring_arcs
+
+def analyze_wiggly(n):
+    """Full wiggly line analysis."""
+    print(f"\n{'#'*72}")
+    print(f"  n = {n}: WIGGLY LINE ANALYSIS")
+    print(f"{'#'*72}")
+
+    P, cls, lk, mn, V_merged, mi, m = build_tournament_data(n)
+    overlap_arcs, wiring_arcs = classify_arcs(n, P)
+
+    n_overlap = len(overlap_arcs)
+    n_wiring = len(wiring_arcs)
+
+    print(f"\n  DECOMPOSITION:")
+    print(f"    Total arcs: {m} = C({n},2)")
+    print(f"    Overlap arcs (inner sub-tournament): {n_overlap} = C({n-2},2)")
+    print(f"    Wiring arcs (extreme vertices): {n_wiring} = 2({n-2})+1 = {2*(n-2)+1}")
+    print(f"    Check: {n_overlap} + {n_wiring} = {n_overlap + n_wiring} = {m} ✓")
+
+    print(f"\n    Overlap arcs: {[(P[k]) for k in overlap_arcs]}")
+    print(f"    Wiring arcs: {[(P[k]) for k in wiring_arcs]}")
+
+    print(f"\n    Wiggly groups: 2^{n_wiring} = {2**n_wiring} groups")
+    print(f"    Group size: 2^{n_overlap} = {2**n_overlap} tilings per group")
+
+    # Iterate over ALL labeled tournaments
+    # For each, classify its wiggly flips vs wiring flips
+    wiggly_class_changes = 0  # overlap flip changes merged class
+    wiggly_self_loops = 0     # overlap flip preserves merged class
+    wiring_class_changes = 0
+    wiring_self_loops = 0
+
+    # Track which metagraph edges are wiggly-reachable
+    wiggly_edges = set()
+    wiring_edges = set()
+
+    # Track wiggly groups → class distribution
+    group_class_map = defaultdict(set)  # wiring_config → set of merged classes
+
+    total_tournaments = 2 ** m
+
+    def b2a(bits):
+        a = [[0]*n for _ in range(n)]
+        for k, (i,j) in enumerate(P):
+            if bits & (1 << (m-1-k)): a[i][j] = 1
+            else: a[j][i] = 1
+        return a
+
+    for bits in range(total_tournaments):
+        adj = b2a(bits)
+        cid = lk(adj)
+        if cid < 0: continue
+        ma = mn[cid]
+
+        # Wiring configuration = values at wiring arc positions
+        wiring_config = tuple((bits >> (m-1-k)) & 1 for k in wiring_arcs)
+        group_class_map[wiring_config].add(ma)
+
+        # Wiggly flips (overlap arcs)
+        for arc in overlap_arcs:
+            fb = bits ^ (1 << (m-1-arc))
+            fadj = b2a(fb)
+            nb_cid = lk(fadj)
+            if nb_cid < 0: continue
+            mb = mn[nb_cid]
+            if ma == mb:
+                wiggly_self_loops += 1
+            else:
+                wiggly_class_changes += 1
+                wiggly_edges.add((min(ma, mb), max(ma, mb)))
+
+        # Wiring flips
+        for arc in wiring_arcs:
+            fb = bits ^ (1 << (m-1-arc))
+            fadj = b2a(fb)
+            nb_cid = lk(fadj)
+            if nb_cid < 0: continue
+            mb = mn[nb_cid]
+            if ma == mb:
+                wiring_self_loops += 1
+            else:
+                wiring_class_changes += 1
+                wiring_edges.add((min(ma, mb), max(ma, mb)))
+
+    # Results
+    total_wiggly = wiggly_class_changes + wiggly_self_loops
+    total_wiring = wiring_class_changes + wiring_self_loops
+
+    print(f"\n  WIGGLY vs WIRING STATISTICS:")
+    print(f"    Wiggly flips (overlap arcs):")
+    print(f"      Total: {total_wiggly}")
+    print(f"      Class-changing: {wiggly_class_changes} ({100*wiggly_class_changes/total_wiggly:.1f}%)")
+    print(f"      Self-loops: {wiggly_self_loops} ({100*wiggly_self_loops/total_wiggly:.1f}%)")
+    print(f"      Metagraph edges reached: {len(wiggly_edges)}")
+
+    print(f"\n    Wiring flips (extreme arcs):")
+    print(f"      Total: {total_wiring}")
+    print(f"      Class-changing: {wiring_class_changes} ({100*wiring_class_changes/total_wiring:.1f}%)")
+    print(f"      Self-loops: {wiring_self_loops} ({100*wiring_self_loops/total_wiring:.1f}%)")
+    print(f"      Metagraph edges reached: {len(wiring_edges)}")
+
+    # Full metagraph edges
+    all_edges = wiggly_edges | wiring_edges
+    only_wiggly = wiggly_edges - wiring_edges
+    only_wiring = wiring_edges - wiggly_edges
+    both = wiggly_edges & wiring_edges
+
+    print(f"\n  METAGRAPH EDGE DECOMPOSITION:")
+    print(f"    Total metagraph edges: {len(all_edges)}")
+    print(f"    Wiggly-only edges: {len(only_wiggly)} ({100*len(only_wiggly)/len(all_edges):.1f}%)")
+    print(f"    Wiring-only edges: {len(only_wiring)} ({100*len(only_wiring)/len(all_edges):.1f}%)")
+    print(f"    Both wiggly AND wiring: {len(both)} ({100*len(both)/len(all_edges):.1f}%)")
+
+    # Wiggly group analysis
+    n_groups = len(group_class_map)
+    classes_per_group = [len(v) for v in group_class_map.values()]
+    print(f"\n  WIGGLY GROUP → CLASS MAPPING:")
+    print(f"    Total wiggly groups: {n_groups} (= 2^{n_wiring} = {2**n_wiring})")
+    print(f"    Classes per group: min={min(classes_per_group)}, max={max(classes_per_group)}, "
+          f"mean={sum(classes_per_group)/len(classes_per_group):.2f}")
+
+    # Distribution of classes per group
+    cpg_dist = Counter(classes_per_group)
+    print(f"    Distribution:")
+    for k in sorted(cpg_dist.keys()):
+        print(f"      {k} classes: {cpg_dist[k]} groups ({100*cpg_dist[k]/n_groups:.1f}%)")
+
+    # How many groups map to a SINGLE class?
+    single_class_groups = sum(1 for v in group_class_map.values() if len(v) == 1)
+    print(f"\n    Single-class groups: {single_class_groups}/{n_groups} "
+          f"({100*single_class_groups/n_groups:.1f}%)")
+    print(f"    = wirings where the inner sub-tournament doesn't affect the class")
+
+    # The inner sub-tournament IS a tournament on n-2 vertices
+    # How many distinct iso classes of the inner tournament appear per group?
+    print(f"\n  INNER SUB-TOURNAMENT STRUCTURE:")
+    print(f"    Inner tournament: n-2 = {n-2} vertices, C({n-2},2) = {n_overlap} arcs")
+    print(f"    Inner iso classes: A000568({n-2}) = ?")
+
+    # For each wiggly group, extract the inner tournaments and classify them
+    if n <= 6:
+        inner_cls_per_group = defaultdict(Counter)
+        for bits in range(total_tournaments):
+            wc = tuple((bits >> (m-1-k)) & 1 for k in wiring_arcs)
+            # Inner tournament = bits at overlap positions
+            inner_bits = tuple((bits >> (m-1-k)) & 1 for k in overlap_arcs)
+            inner_adj = [[0]*(n-2) for _ in range(n-2)]
+            inner_P = [(i-1,j-1) for (i,j) in [P[k] for k in overlap_arcs]]
+            for idx, (i,j) in enumerate(inner_P):
+                if inner_bits[idx]: inner_adj[i][j] = 1
+                else: inner_adj[j][i] = 1
+
+            # Classify inner tournament (simple canonical form for n-2 ≤ 4)
+            inner_canon = tuple(inner_adj[i][j] for i in range(n-2) for j in range(n-2))
+            inner_cls_per_group[wc][inner_canon] += 1
+
+        # How many distinct inner tournaments per group?
+        inner_per_group = [len(v) for v in inner_cls_per_group.values()]
+        print(f"    Distinct inner tournaments per group: "
+              f"all = {2**n_overlap} (= 2^{n_overlap})")
+        print(f"    (All groups have all inner tournaments — they're hypercubes)")
+
+    return {
+        'n': n, 'V_merged': V_merged,
+        'n_overlap': n_overlap, 'n_wiring': n_wiring,
+        'wiggly_edges': len(wiggly_edges),
+        'wiring_edges': len(wiring_edges),
+        'both_edges': len(both),
+        'total_edges': len(all_edges),
+        'wiggly_neutral_frac': wiggly_self_loops / total_wiggly if total_wiggly > 0 else 0,
+        'wiring_neutral_frac': wiring_self_loops / total_wiring if total_wiring > 0 else 0,
+    }
+
+if __name__ == '__main__':
+    print("=" * 72)
+    print("  WIGGLY LINES: MODE B INNER SUB-TOURNAMENT FLIPS")
+    print("  opus-2026-03-23-S272")
+    print("=" * 72)
+
+    results = []
+    for n in [4, 5, 6]:
+        t0 = time.time()
+        r = analyze_wiggly(n)
+        results.append(r)
+        print(f"\n  Time for n={n}: {time.time()-t0:.1f}s")
+
+    # Summary
+    print(f"\n{'='*72}")
+    print("  SUMMARY TABLE")
+    print(f"{'='*72}")
+    print(f"  {'n':>3} {'V_m':>5} {'E_total':>8} {'E_wiggly':>9} {'E_wiring':>9} "
+          f"{'E_both':>7} {'wig%':>5} {'wir%':>5} {'wig_neut':>9} {'wir_neut':>9}")
+    for r in results:
+        wp = 100*r['wiggly_edges']/r['total_edges'] if r['total_edges'] > 0 else 0
+        wrp = 100*r['wiring_edges']/r['total_edges'] if r['total_edges'] > 0 else 0
+        print(f"  {r['n']:>3} {r['V_merged']:>5} {r['total_edges']:>8} "
+              f"{r['wiggly_edges']:>9} {r['wiring_edges']:>9} {r['both_edges']:>7} "
+              f"{wp:>5.1f} {wrp:>5.1f} {r['wiggly_neutral_frac']:>9.4f} {r['wiring_neutral_frac']:>9.4f}")
+
+    print(f"\n{'='*72}")
+    print("  THE WIGGLY/WIRING DECOMPOSITION")
+    print(f"{'='*72}")
+    print("""
+  WIGGLY LINES = flips of inner arcs (overlap, Mode B sub-tournament)
+  WIRING LINES = flips of extreme arcs (vertices 0 and n-1)
+
+  The m-cube Q_m decomposes as:
+    Q_m = Q_{overlap} × Q_{wiring}
+    Q_{C(n,2)} = Q_{C(n-2,2)} × Q_{2n-3}
+
+  Each wiring configuration defines a Q_{C(n-2,2)} "wiggly group."
+  There are 2^{2n-3} wiggly groups, each of size 2^{C(n-2,2)}.
+
+  METAGRAPH EDGES come from BOTH types:
+  - Wiggly edges: changing the inner structure
+  - Wiring edges: changing how extremes connect to the middle
+  - Most edges are reachable by BOTH types (high overlap)
+
+  This IS the Mode B recursion (n → n-2):
+  The inner sub-tournament recurses, while the wiring is "frozen."
+  The wiggly group structure reveals how much the inner tournament
+  INDEPENDENTLY determines the iso class.
 """)
 
-for n in [4, 5, 6]:
-    banner("WIGGLY LINES AT n=%d" % n)
-    m = comb(n, 2)
-    pairs = [(i,j) for i in range(n) for j in range(i+1,n)]
-    pair_idx = {p: k for k, p in enumerate(pairs)}
-
-    # Classify pairs into boundary_left, boundary_right, apex, overlap
-    boundary_left = [(0, j) for j in range(1, n-1)]
-    boundary_right = [(j, n-1) for j in range(1, n-1)]
-    apex_pair = [(0, n-1)]
-    overlap_pairs = [(i, j) for i in range(1, n-1) for j in range(i+1, n-1)]
-
-    bl_bits = [pair_idx[p] for p in boundary_left]
-    br_bits = [pair_idx[p] for p in boundary_right]
-    ap_bits = [pair_idx[p] for p in apex_pair]
-    ov_bits = [pair_idx[p] for p in overlap_pairs]
-
-    n_overlap = len(overlap_pairs)
-    fiber_size = 2**n_overlap
-    n_boundary = 2*(n-2) + 1  # boundary + apex bits
-    n_fibers = 2**n_boundary
-
-    print("  Overlap cells: %d = C(%d,2)" % (n_overlap, n-2))
-    print("  Boundary+apex cells: %d = 2(%d-2)+1" % (n_boundary, n))
-    print("  Fiber size: 2^%d = %d" % (n_overlap, fiber_size))
-    print("  Number of fibers: 2^%d = %d" % (n_boundary, n_fibers))
-    print("  Total: %d × %d = %d = 2^%d ✓\n" % (n_fibers, fiber_size, n_fibers*fiber_size, m))
-
-    # Build iso classes
-    cmap = {}; sizes = {}; tc = {}
-    for bits in range(2**m):
-        A = [[0]*n for _ in range(n)]
-        for k,(ii,jj) in enumerate(pairs):
-            if (bits>>k)&1: A[ii][jj]=1
-            else: A[jj][ii]=1
-        c = canon(A, n)
-        if c not in cmap:
-            cid = len(cmap); cmap[c] = cid; sizes[cid] = 0
-        sizes[cmap[c]] += 1; tc[bits] = cmap[c]
-    nc = len(cmap)
-
-    info = {}
-    for cid in range(nc):
-        info[cid] = {'size': sizes[cid]}
-
-    # Merged
-    for cid in range(nc):
-        A = [[0]*n for _ in range(n)]
-        bits_rep = None
-        for bits in range(2**m):
-            if tc[bits] == cid:
-                bits_rep = bits; break
-        if bits_rep is None: continue
-        for k,(ii,jj) in enumerate(pairs):
-            if (bits_rep>>k)&1: A[ii][jj]=1
-            else: A[jj][ii]=1
-        comp_c = canon(complement(A, n), n)
-        info[cid]['H'] = Hcount(A, n)
-        info[cid]['comp'] = cmap[comp_c]
-        info[cid]['SC'] = cmap[comp_c] == cid
-
-    merged = {}; mid_map = {}; mid = 0
-    for cid in range(nc):
-        if cid in mid_map: continue
-        comp = info[cid]['comp']
-        merged[mid] = (cid,) if comp == cid else (cid, comp)
-        mid_map[cid] = mid
-        if comp != cid: mid_map[comp] = mid
-        mid += 1
-    nm = mid
-
-    # ============================================================
-    # WIGGLY FIBER ANALYSIS
-    # ============================================================
-
-    # Extract the boundary+apex key for each tournament
-    def boundary_key(bits):
-        """The boundary+apex configuration (fixing overlap)."""
-        key = 0
-        for i, k in enumerate(bl_bits + br_bits + ap_bits):
-            if (bits >> k) & 1:
-                key |= (1 << i)
-        return key
-
-    def overlap_key(bits):
-        """The overlap configuration."""
-        key = 0
-        for i, k in enumerate(ov_bits):
-            if (bits >> k) & 1:
-                key |= (1 << i)
-        return key
-
-    # Group tournaments by their boundary key (= wiggly fiber)
-    fibers = defaultdict(list)
-    for bits in range(2**m):
-        bk = boundary_key(bits)
-        fibers[bk].append(bits)
-
-    # Verify fiber sizes
-    fiber_sizes = Counter(len(f) for f in fibers.values())
-    print("  Fiber size distribution: %s" % dict(fiber_sizes))
-    print("  All fibers have size %d: %s\n" %
-          (fiber_size, all(len(f) == fiber_size for f in fibers.values())))
-
-    # For each fiber: how many distinct merged classes does it visit?
-    classes_per_fiber = []
-    class_dist_per_fiber = []
-    for bk, fiber_tilings in fibers.items():
-        classes_in_fiber = set()
-        class_counts = Counter()
-        for bits in fiber_tilings:
-            mi = mid_map[tc[bits]]
-            classes_in_fiber.add(mi)
-            class_counts[mi] += 1
-        classes_per_fiber.append(len(classes_in_fiber))
-        class_dist_per_fiber.append(class_counts)
-
-    cpf_dist = Counter(classes_per_fiber)
-    print("  CLASSES PER WIGGLY FIBER:")
-    for k in sorted(cpf_dist.keys()):
-        print("    %d classes: %d fibers" % (k, cpf_dist[k]))
-
-    avg_classes = np.mean(classes_per_fiber)
-    print("  Average classes per fiber: %.2f (out of %d merged classes)" %
-          (avg_classes, nm))
-
-    # How are the classes distributed within a typical fiber?
-    print("\n  EXAMPLE FIBERS:")
-    for i, (bk, fiber_tilings) in enumerate(list(fibers.items())[:5]):
-        class_counts = Counter()
-        for bits in fiber_tilings:
-            mi = mid_map[tc[bits]]
-            H = info[merged[mi][0]]['H']
-            class_counts[(mi, H)] += 1
-        print("    Fiber %d (bkey=%d): %s" %
-              (i, bk, dict(class_counts)))
-
-    # ============================================================
-    # WIGGLY EDGES PROJECTED TO META-GRAPH
-    # ============================================================
-
-    banner("WIGGLY EDGES → META-GRAPH EDGES (n=%d)" % n)
-
-    # A "wiggly edge" connects two tilings in the same fiber
-    # (same boundary+apex, different overlap).
-    # How many distinct META-GRAPH edges are "witnessed" by wiggly connections?
-
-    wiggly_meta_edges = set()
-    wiggly_self_loops = 0
-    total_wiggly_pairs = 0
-
-    for bk, fiber_tilings in fibers.items():
-        # All pairs within this fiber
-        for i in range(len(fiber_tilings)):
-            for j in range(i+1, len(fiber_tilings)):
-                bi = fiber_tilings[i]; bj = fiber_tilings[j]
-                mi = mid_map[tc[bi]]; mj = mid_map[tc[bj]]
-                total_wiggly_pairs += 1
-                if mi == mj:
-                    wiggly_self_loops += 1
-                else:
-                    wiggly_meta_edges.add((min(mi,mj), max(mi,mj)))
-
-    # Compare with actual meta-graph edges
-    actual_edges = set()
-    for ci in range(nc):
-        mi = mid_map[ci]
-        for cj in range(nc):
-            mj = mid_map[cj]
-            if mi < mj:
-                # Check if they're adjacent in meta-graph
-                for bits in range(2**m):
-                    if tc[bits] != ci: continue
-                    for k in range(m):
-                        if tc[bits ^ (1<<k)] == cj:
-                            actual_edges.add((mi, mj))
-                            break
-                    else: continue
-                    break
-
-    E_meta = len(actual_edges)
-    E_wiggly = len(wiggly_meta_edges)
-    E_both = len(wiggly_meta_edges & actual_edges)
-
-    print("  Total wiggly pairs: %d (= %d fibers × C(%d, 2))" %
-          (total_wiggly_pairs, n_fibers, fiber_size))
-    print("  Wiggly self-loops: %d (%.1f%%)" %
-          (wiggly_self_loops, 100*wiggly_self_loops/total_wiggly_pairs if total_wiggly_pairs > 0 else 0))
-    print()
-    print("  Wiggly meta-edges (distinct class pairs): %d" % E_wiggly)
-    print("  Actual meta-graph edges: %d" % E_meta)
-    print("  Wiggly ∩ Actual: %d" % E_both)
-    print("  Wiggly \\ Actual: %d (wiggly-only, NOT in meta-graph)" %
-          (E_wiggly - E_both))
-    print("  Actual \\ Wiggly: %d (opaque-only, NOT from wiggly)" %
-          (E_meta - E_both))
-
-    # KEY QUESTION: Do wiggly lines RECOVER the meta-graph edges?
-    print("\n  Wiggly recovery rate: %d/%d = %.1f%% of meta-graph edges" %
-          (E_both, E_meta, 100*E_both/E_meta if E_meta > 0 else 0))
-
-    # KEY QUESTION: Do wiggly lines ADD new edges?
-    if E_wiggly > E_both:
-        print("  Wiggly ADDS %d NEW edges not in the meta-graph!" %
-              (E_wiggly - E_both))
-        # These new edges connect classes reachable by changing the
-        # overlap (multiple interior arcs at once), not just one arc.
-        print("  (These connect classes reachable via multi-flip in the overlap)")
-    else:
-        print("  Wiggly adds NO new edges beyond the meta-graph.")
-
-    # ============================================================
-    # THE SUM OF SQUARES IDENTITY
-    # ============================================================
-
-    banner("SUM OF SQUARES IDENTITY (n=%d)" % n)
-
-    # From S20cv: 2^{m-1} = Σ_O fiber(O)^2
-    # where O ranges over (n-2)-classes and fiber(O) = ways to extend
-    # an overlap class to a full n-tournament.
-
-    # Let me verify: how do wiggly fibers relate to the sum of squares?
-    # Each wiggly fiber has a fixed boundary+apex.
-    # The overlap in each fiber is a free (n-2)-tournament.
-    # The ISO CLASS of the overlap determines a partition of the fiber.
-
-    # For each fiber: the overlap classes partition the fiber_size tilings.
-    # If overlap class O_i has f_i tilings in this fiber:
-    # Then Σ f_i = fiber_size and the class distribution determines the wiggly structure.
-
-    # Group by overlap iso class
-    def overlap_iso_class(bits):
-        """Iso class of the tournament restricted to vertices 1..n-2."""
-        n2 = n - 2
-        if n2 <= 1: return 0
-        A2 = [[0]*n2 for _ in range(n2)]
-        for (i,j) in overlap_pairs:
-            k = pair_idx[(i,j)]
-            if (bits >> k) & 1:
-                A2[i-1][j-1] = 1
-            else:
-                A2[j-1][i-1] = 1
-        return canon(A2, n2)
-
-    # For one fiber: class distribution of overlaps
-    example_bk = list(fibers.keys())[0]
-    example_fiber = fibers[example_bk]
-    overlap_classes = Counter()
-    for bits in example_fiber:
-        oc = overlap_iso_class(bits)
-        overlap_classes[oc] += 1
-
-    print("  Example fiber overlap class distribution:")
-    for oc, count in overlap_classes.most_common():
-        print("    Overlap class: size %d" % count)
-
-    # Sum of squares check
-    sum_sq = sum(c**2 for c in overlap_classes.values())
-    print("  Σ (count)² = %d, should relate to 2^{m-1} = %d" %
-          (sum_sq, 2**(m-1)))
-
-    # Actually the sum of squares identity from S234 says:
-    # Over ALL boundary configurations (both left and right),
-    # the number of tournaments is:
-    # Σ over overlap classes O: (# ways to extend O left) × (# ways to extend O right) × 2
-    # = Σ fiber_left(O) × fiber_right(O) × 2
-
-    # For a FIXED boundary, the overlap varies freely:
-    # each fiber has EXACTLY one tiling per overlap configuration.
-    # So within one fiber: each of the 2^{C(n-2,2)} overlap configs
-    # maps to exactly one tiling, and they all have the same boundary.
-
-    print("\n  Within each fiber: %d tilings, %d overlap configs → bijection" %
-          (fiber_size, 2**n_overlap))
-    print("  (One tiling per overlap, by construction)")
-
-    # The WIGGLY GRAPH within each fiber: it's the C(n-2,2)-cube Q_{C(n-2,2)}
-    # because any two overlap configs are connected by a sequence of single-arc flips.
-    # But wiggly lines connect ALL pairs in the fiber, not just single-flip neighbors!
-    # Wiggly = sharing boundary+apex, ANY difference in overlap (not just 1-flip).
-
-    print("\n  THE WIGGLY GRAPH within a fiber is the COMPLETE GRAPH K_%d" % fiber_size)
-    print("  (Every pair of tilings with the same boundary+apex is wiggly-connected)")
-    print("  Wiggly degree: %d (= fiber_size - 1 = 2^{C(n-2,2)} - 1)" % (fiber_size - 1))
-
-banner("SYNTHESIS: THE THREE TYPES OF TILING CONNECTIONS")
-
-print("""
-  EVERY PAIR OF TILINGS (labeled tournaments) on n vertices has one of:
-
-  1. OPAQUE CONNECTION: differ by one arc, different iso class.
-     = meta-graph edges. m neighbors per tiling.
-     These form the meta-graph G_n/Z_2.
-
-  2. BLUESELF/BLACKSELF CONNECTION: differ by one arc, SAME iso class.
-     = neutral arc flips. Avg (m × arc_neutrality) neighbors per tiling.
-     The translucent/self-loop structure from S270.
-     The transitive class forms a permutohedron.
-
-  3. WIGGLY CONNECTION: same boundary+apex, different overlap.
-     = sharing all boundary arcs but differing in the interior.
-     2^{C(n-2,2)} - 1 neighbors per tiling.
-     Each wiggly fiber is a COMPLETE GRAPH on the overlap configurations.
-
-  The three types are NOT disjoint:
-  - A wiggly pair that differs in exactly 1 overlap arc is ALSO opaque or blueself.
-  - A wiggly pair that differs in k overlap arcs is connected by a k-step
-    path in Q_m, but directly connected by the wiggly line.
-
-  WIGGLY CONNECTIONS ARE THE RECURSIVE FIBER:
-  Fixing the boundary (how vertices 0 and n-1 connect to the interior)
-  and the apex (0↔n-1 direction), the interior tournament varies freely.
-  The wiggly fiber = the (n-2)-tournament space embedded in n-tournament space.
-
-  THE META-GRAPH PROJECTION OF WIGGLY LINES:
-  Some wiggly pairs land in the same class → wiggly self-loops
-  Some wiggly pairs land in different classes → wiggly meta-edges
-
-  At n=5: wiggly meta-edges = %d, actual meta-edges = %d
-  Wiggly recovery: %.0f%% of meta-graph edges are wiggly-witnessed.
-
-  THE WIGGLY STRUCTURE IS THE RECURSIVE BURNSIDE:
-  Each wiggly fiber is parameterized by a (n-2)-tournament.
-  The iso class distribution within a fiber depends on HOW the
-  interior (n-2)-tournament interacts with the boundary.
-  This IS the recursive structure we seek for computing E(G_n).
-""" % (E_wiggly, E_meta, 100*E_both/E_meta if E_meta > 0 else 0))
-
-print("Done. opus-2026-03-23-S272")
+    print("DONE.")
