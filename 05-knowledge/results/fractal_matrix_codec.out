@@ -1,0 +1,97 @@
+================================================================================
+  FRACTAL MATRIX CODEC
+  kind-pasteur-2026-03-25-S20gl
+================================================================================
+
+  FRACTAL COMPRESSION:
+
+  16x16 band-limited matrix (bandwidth=3):
+  Depth  Entries  Quality  Compress
+  bw=3 d=0      100   96.31%     2.56x
+  bw=3 d=1      135   97.38%     1.90x
+  bw=3 d=2      164   98.01%     1.56x
+  bw=3 d=3      187   98.74%     1.37x
+  bw=3 d=4      207   99.10%     1.24x
+  bw=3 d=5      221   99.53%     1.16x
+
+  bw=5 d=0      146   99.23%     1.75x
+  bw=5 d=1      192   99.54%     1.33x
+  bw=5 d=2      212   99.66%     1.21x
+  bw=5 d=3      226   99.78%     1.13x
+  bw=5 d=4      237   99.84%     1.08x
+  bw=5 d=5      245   99.91%     1.04x
+
+  bw=8 d=0      200   99.93%     1.28x
+
+
+  32x32 band-limited matrix (bandwidth=3):
+  Depth  Entries  Quality  Compress
+  bw=3 d=0      212   95.88%     4.83x
+  bw=3 d=1      295   96.41%     3.47x
+  bw=3 d=2      372   96.78%     2.75x
+  bw=3 d=3      443   97.19%     2.31x
+  bw=3 d=4      508   97.49%     2.02x
+  bw=3 d=5      567   97.89%     1.81x
+
+  bw=5 d=0      322   99.01%     3.18x
+  bw=5 d=1      448   99.22%     2.29x
+  bw=5 d=2      516   99.31%     1.98x
+  bw=5 d=3      578   99.39%     1.77x
+  bw=5 d=4      634   99.51%     1.62x
+  bw=5 d=5      684   99.60%     1.50x
+
+  bw=8 d=0      472   99.88%     2.17x
+  bw=8 d=1      663   99.92%     1.54x
+
+
+  64x64 band-limited matrix (bandwidth=3):
+  Depth  Entries  Quality  Compress
+  bw=3 d=0      436   95.63%     9.39x
+  bw=3 d=1      615   95.88%     6.66x
+  bw=3 d=2      788   96.07%     5.20x
+  bw=3 d=3      955   96.30%     4.29x
+  bw=3 d=4     1116   96.50%     3.67x
+  bw=3 d=5     1271   96.71%     3.22x
+
+  bw=5 d=0      674   98.91%     6.08x
+  bw=5 d=1      960   99.01%     4.27x
+  bw=5 d=2     1124   99.05%     3.64x
+  bw=5 d=3     1282   99.09%     3.20x
+  bw=5 d=4     1434   99.14%     2.86x
+  bw=5 d=5     1580   99.19%     2.59x
+
+  bw=8 d=0     1016   99.86%     4.03x
+  bw=8 d=1     1495   99.88%     2.74x
+  bw=8 d=2     1742   99.89%     2.35x
+  bw=8 d=3     1882   99.90%     2.18x
+  bw=8 d=4     2016   99.90%     2.03x
+
+
+  COMPARISON: Simple truncation vs Fractal
+
+  32x32:
+                Method  Entries  Quality  Compress
+            Trunc bw=3      212   95.94%     4.83x
+            Trunc bw=5      322   99.04%     3.18x
+            Trunc bw=8      472   99.89%     2.17x
+           Fractal d=0      212   95.94%     4.83x
+           Fractal d=1      295   96.47%     3.47x
+           Fractal d=2      372   96.83%     2.75x
+           Fractal d=3      443   97.23%     2.31x
+           Fractal d=4      508   97.49%     2.02x
+           Fractal d=5      567   97.89%     1.81x
+
+  64x64:
+                Method  Entries  Quality  Compress
+            Trunc bw=3      436   95.60%     9.39x
+            Trunc bw=5      674   98.88%     6.08x
+            Trunc bw=8     1016   99.86%     4.03x
+           Fractal d=0      436   95.60%     9.39x
+           Fractal d=1      615   95.87%     6.66x
+           Fractal d=2      788   96.06%     5.20x
+           Fractal d=3      955   96.33%     4.29x
+           Fractal d=4     1116   96.53%     3.67x
+           Fractal d=5     1271   96.74%     3.22x
+
+DONE.
+================================================================================

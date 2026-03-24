@@ -1,0 +1,49 @@
+================================================================================
+  BIT-PLANE TOURNAMENT CODEC
+  kind-pasteur-2026-03-25-S20gl
+================================================================================
+
+  1. PROGRESSIVE VALUE DECODE:
+
+  16x16, 8-bit quantization (full error: 0.28%):
+  Planes  Quality       Bits  Compress
+       1   40.50%        256      8.0x
+       2   66.96%        512      4.0x
+       3   82.84%        768      2.7x
+       4   91.48%       1024      2.0x
+       5   95.72%       1280      1.6x
+       6   98.02%       1536      1.3x
+       7   99.27%       1792      1.1x
+       8   99.72%       2048      1.0x
+
+  32x32, 8-bit quantization (full error: 0.43%):
+  Planes  Quality       Bits  Compress
+       1   37.56%       1024      8.0x
+       2   64.61%       2048      4.0x
+       3   79.96%       3072      2.7x
+       4   89.29%       4096      2.0x
+       5   94.53%       5120      1.6x
+       6   97.33%       6144      1.3x
+       7   98.91%       7168      1.1x
+       8   99.57%       8192      1.0x
+
+  2. VIDEO DELTA (bitplane level):
+  32x32 x 8bit: full=8192 bits, delta=2303 bits
+  Delta compression: 3.6x
+  (Small motion: 2% RMS noise on [0,1] values)
+  noise=0.01: delta= 1805 bits (22.0%), 4.5x
+  noise=0.02: delta= 2415 bits (29.5%), 3.4x
+  noise=0.05: delta= 2932 bits (35.8%), 2.8x
+  noise=0.10: delta= 3323 bits (40.6%), 2.5x
+  noise=0.20: delta= 3499 bits (42.7%), 2.3x
+
+  3. COMBINED PROGRESSIVE (planes + layers):
+  16x16 x 8bit: DOUBLY PROGRESSIVE decode
+  Planes Layers     Bits  Quality  Compress
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\bitplane_tournament_codec.py", line 228, in <module>
+    pl = binary_tiling_decode(lower[:n_layers], upper[:n_layers], diag, N)
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\bitplane_tournament_codec.py", line 103, in binary_tiling_decode
+    plane[i][j] = (lower_layers[i-1] >> j) & 1
+                   ~~~~~~~~~~~~^^^^^
+IndexError: list index out of range
