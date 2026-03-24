@@ -1,0 +1,192 @@
+================================================================================
+  THE REVERSIBLE MARKOV CHAIN ON Q_m / S_n
+  kind-pasteur-2026-03-24-S20fo
+================================================================================
+
+############################################################
+  n = 5, m = 6, V = 12
+############################################################
+
+  DETAILED BALANCE VERIFICATION:
+    max |pi(C)*P[C,D] - pi(D)*P[D,C]| = 6.94e-18
+    REVERSIBLE: YES
+    max |pi*P - pi| = 1.73e-18
+    STATIONARY: YES
+
+  MARKOV SPECTRAL ANALYSIS:
+    Eigenvalues (top 8): ['1.0000', '0.5026', '0.3903', '0.2625', '0.1989', '0.1391', '0.0378', '-0.0569']
+    lambda_1 = 1.000000 (should be 1.000)
+    lambda_2 = 0.502649
+    Spectral gap = 1 - lambda_2 = 0.497351
+    Mixing time ~ 1/gap = 2.0 steps
+
+  UNWEIGHTED WALK COMPARISON:
+    Reversible with pi propto degree? max imbalance = 0.00e+00
+    YES (unweighted walk is always reversible for undirected graphs)
+    Spectral gap (unweighted) = 0.532178
+    Mixing time (unweighted) = 1.9 steps
+
+  STATIONARY DISTRIBUTIONS:
+    Class    H |Aut|  tilings  pi_wiggly  pi_degree    ratio
+        0    1     1        1   0.015625   0.100000    0.156
+        1    3     3        1   0.015625   0.050000    0.312
+        3    3     3        1   0.015625   0.066667    0.234
+        7    3     3        1   0.015625   0.050000    0.312
+        2    5     1        5   0.078125   0.116667    0.670
+        5    5     1        5   0.078125   0.116667    0.670
+        4    9     1        9   0.140625   0.100000    1.406
+        6    9     1        9   0.140625   0.116667    1.205
+        8   11     1       11   0.171875   0.100000    1.719
+       10   13     1       13   0.203125   0.100000    2.031
+        9   15     3        5   0.078125   0.050000    1.562
+       11   15     5        3   0.046875   0.033333    1.406
+
+    Correlation(pi_wiggly, pi_degree) = 0.5524
+
+  DIRICHLET FORM AND SMOOTHNESS:
+    E(H, H) = 6.6667
+    Var_pi(H) = 12.8594
+    E/Var = 0.5184 (Poincare bound: >= gap = 0.4974)
+    H is SMOOTH on the chain
+
+  HITTING TIMES:
+    Transitive (H=1, pi=0.0156)
+    Max H class (H=15, pi=0.0781)
+    Approximate commute time: 25.7 steps
+    Expected return time to transitive: 64.0 steps
+    Expected return time to max H: 12.8 steps
+
+  Time: 0.0s
+
+############################################################
+  n = 6, m = 10, V = 56
+############################################################
+
+  DETAILED BALANCE VERIFICATION:
+    max |pi(C)*P[C,D] - pi(D)*P[D,C]| = 8.67e-19
+    REVERSIBLE: YES
+    max |pi*P - pi| = 6.94e-18
+    STATIONARY: YES
+
+  MARKOV SPECTRAL ANALYSIS:
+    Eigenvalues (top 8): ['1.0000', '0.6650', '0.5721', '0.5035', '0.4903', '0.4702', '0.4286', '0.3455']
+    lambda_1 = 1.000000 (should be 1.000)
+    lambda_2 = 0.664998
+    Spectral gap = 1 - lambda_2 = 0.335002
+    Mixing time ~ 1/gap = 3.0 steps
+
+  UNWEIGHTED WALK COMPARISON:
+    Reversible with pi propto degree? max imbalance = 0.00e+00
+    YES (unweighted walk is always reversible for undirected graphs)
+    Spectral gap (unweighted) = 0.317112
+    Mixing time (unweighted) = 3.2 steps
+
+  STATIONARY DISTRIBUTIONS:
+    Class    H |Aut|  tilings  pi_wiggly  pi_degree    ratio
+        0    1     1        1   0.000977   0.017241    0.057
+        1    3     3        1   0.000977   0.008621    0.113
+        3    3     3        1   0.000977   0.010345    0.094
+        7    3     3        1   0.000977   0.010345    0.094
+       19    3     3        1   0.000977   0.008621    0.113
+        2    5     1        5   0.004883   0.018966    0.257
+        5    5     1        5   0.004883   0.020690    0.236
+       15    5     1        5   0.004883   0.018966    0.257
+        4    9     1        9   0.008789   0.018966    0.463
+        6    9     1        9   0.008789   0.020690    0.425
+       13    9     1        9   0.008789   0.018966    0.463
+       17    9     1        9   0.008789   0.020690    0.425
+       23    9     9        1   0.000977   0.005172    0.189
+        8   11     1       11   0.010742   0.018966    0.566
+       25   11     1       11   0.010742   0.018966    0.566
+       10   13     1       13   0.012695   0.018966    0.669
+       37   13     1       13   0.012695   0.018966    0.669
+        9   15     3        5   0.004883   0.010345    0.472
+       11   15     5        3   0.002930   0.005172    0.566
+       14   15     1       15   0.014648   0.022414    0.654
+       18   15     1       15   0.014648   0.022414    0.654
+       36   15     3        5   0.004883   0.010345    0.472
+       50   15     5        3   0.002930   0.005172    0.566
+       12   17     1       17   0.016602   0.020690    0.802
+       22   17     1       17   0.016602   0.018966    0.875
+       16   19     1       19   0.018555   0.024138    0.769
+       26   19     1       19   0.018555   0.024138    0.769
+       21   23     1       23   0.022461   0.024138    0.931
+       24   23     1       23   0.022461   0.020690    1.086
+       27   23     1       23   0.022461   0.020690    1.086
+       33   23     1       23   0.022461   0.024138    0.931
+       29   25     1       25   0.024414   0.022414    1.089
+       40   25     1       25   0.024414   0.022414    1.089
+       20   27     3        9   0.008789   0.012069    0.728
+       34   27     3        9   0.008789   0.012069    0.728
+       35   29     1       29   0.028320   0.024138    1.173
+       41   29     1       29   0.028320   0.024138    1.173
+       43   29     1       29   0.028320   0.022414    1.264
+       44   29     1       29   0.028320   0.020690    1.369
+       32   31     1       31   0.030273   0.022414    1.351
+       39   31     1       31   0.030273   0.022414    1.351
+       28   33     3       11   0.010742   0.010345    1.038
+       31   33     1       33   0.032227   0.022414    1.438
+       45   33     1       33   0.032227   0.022414    1.438
+       48   33     1       33   0.032227   0.022414    1.438
+       53   33     3       11   0.010742   0.010345    1.038
+       30   37     1       37   0.036133   0.018966    1.905
+       38   37     1       37   0.036133   0.022414    1.612
+       42   37     1       37   0.036133   0.022414    1.612
+       47   37     1       37   0.036133   0.022414    1.612
+       49   37     1       37   0.036133   0.022414    1.612
+       46   41     1       41   0.040039   0.017241    2.322
+       51   43     1       43   0.041992   0.018966    2.214
+       52   43     1       43   0.041992   0.018966    2.214
+       54   45     3       15   0.014648   0.006897    2.124
+       55   45     3       15   0.014648   0.008621    1.699
+
+    Correlation(pi_wiggly, pi_degree) = 0.6240
+
+  DIRICHLET FORM AND SMOOTHNESS:
+    E(H, H) = 36.6125
+    Var_pi(H) = 104.5625
+    E/Var = 0.3501 (Poincare bound: >= gap = 0.3350)
+    H is SMOOTH on the chain
+
+  HITTING TIMES:
+    Transitive (H=1, pi=0.0010)
+    Max H class (H=45, pi=0.0146)
+    Approximate commute time: 203.8 steps
+    Expected return time to transitive: 1024.0 steps
+    Expected return time to max H: 68.3 steps
+
+  Time: 2.9s
+
+============================================================
+THE REVERSIBLE MARKOV CHAIN
+============================================================
+
+THE WIGGLY WALK:
+  From tiling T, pick a random tile (uniform), flip it.
+  This projects to a REVERSIBLE Markov chain on iso classes.
+
+STATIONARY DISTRIBUTION: pi(C) propto tilings(C) = H(C)/|Aut(C)|.
+  NOT proportional to degree (like the unweighted walk).
+  pi captures the FIBER SIZE — how many tilings represent each class.
+
+REVERSIBILITY: Detailed balance holds because W is symmetric.
+  pi(C) * P[C,D] = W[C,D] / (2^m * m) is symmetric in C, D.
+
+The wiggly weights are the UNIQUE weights that make the walk
+reversible with the tiling-count stationary distribution.
+
+PHYSICAL INTERPRETATION:
+  The random walk is a "random mutation" process on tournaments.
+  Each step flips one random arc (relative to a fixed base path).
+  The stationary distribution weights classes by their "accessibility"
+  — classes with more Hamiltonian paths are visited more often.
+
+  The spectral gap controls how fast the walk forgets its starting
+  point. Fast mixing (~3 steps at n=6) means the mutation process
+  quickly reaches equilibrium.
+
+  H is "smooth" on the chain (Dirichlet form is moderate), meaning
+  nearby classes in the wiggly metric have similar H values.
+
+DONE.
+================================================================================
