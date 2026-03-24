@@ -1,0 +1,74 @@
+========================================================================
+  TOURNAMENT ANOMALY DETECTOR + DATA SKETCH
+  opus-2026-03-24-S315
+========================================================================
+
+========================================================================
+  1. ANOMALY DETECTION ON SENSOR DATA
+========================================================================
+  Trained on 50 normal chunks
+  Baseline ratio: 1.823 ± 0.018
+
+            Chunk type   Ratio  Z-score  Anomaly
+  -------------------- ------- -------- --------
+              normal_1   1.820    -0.17       ok ✓
+              normal_2   1.811    -0.67       ok ✓
+              normal_3   1.814    -0.49       ok ✓
+                 spike   2.007   +10.05  ⚠ ALERT ✓
+          random_noise   0.963   -46.90  ⚠ ALERT ✓
+              constant  22.999 +1155.22  ⚠ ALERT ✓
+              normal_4   1.842    +1.02       ok ✓
+              normal_5   1.835    +0.64       ok ✓
+
+========================================================================
+  2. DATA SKETCHING — Compact similarity fingerprints
+========================================================================
+
+  Sketch sizes: 2128B each (TournamentSketch(rows=1600, chunks=100, size=2128B))
+  vs raw data: 51200B per dataset
+  Compression: 24x
+
+  SIMILARITY MATRIX (cosine of score distributions):
+                 sensor       text     random   gradient
+      sensor     1.0000     0.5056     0.1987     0.3176
+        text     0.5056     1.0000     0.5040     0.1990
+      random     0.1987     0.5040     1.0000     0.0486
+    gradient     0.3176     0.1990     0.0486     1.0000
+
+  CLASSIFICATION TEST (new chunks → nearest sketch):
+         sensor_new →     sensor (sim=0.9642, 2nd=0.5081)
+           text_new →       text (sim=0.8020, 2nd=0.4518)
+         random_new →     random (sim=0.7713, 2nd=0.3973)
+       gradient_new →   gradient (sim=0.9428, 2nd=0.4784)
+
+========================================================================
+  3. COMPRESSION-BASED CLUSTERING
+========================================================================
+
+  NCD matrix (lower = more similar):
+    Intra-cluster NCD: mean=0.502, std=0.331
+    Inter-cluster NCD: mean=1.068, std=0.108
+    Separation: 0.567
+    → GOOD separation ✓
+
+========================================================================
+  APPLICATIONS
+========================================================================
+
+    1. ANOMALY DETECTION:
+       - Train on normal data → learn score distribution
+       - Anomalous data compresses differently → z-score alert
+       - Use cases: intrusion detection, sensor faults, fraud
+
+    2. DATA SKETCHING:
+       - Compress dataset into 280-byte score histogram
+       - 180x compression of the distribution
+       - Cosine similarity answers "is this data like that data?"
+       - Use cases: data deduplication, approximate search, monitoring
+
+    3. COMPRESSION-BASED CLUSTERING:
+       - NCD (Normalized Compression Distance) groups similar data
+       - No feature engineering needed — the compressor IS the model
+       - Use cases: malware classification, document clustering, music genre
+    
+DONE.
