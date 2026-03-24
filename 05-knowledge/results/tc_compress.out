@@ -1,0 +1,15 @@
+TC Compress v1.0.0 -- Directory Benchmark
+  Directory: test_images
+  Files: 7
+==========================================================================================
+                            File        Res        Raw         TC        PNG   TC/PNG          Method
+                     checker.png    256x256    65,536B        56B       418B    7.46x             twt WIN
+                      circle.png    256x256    65,536B       312B       742B    2.38x             raw WIN
+              color_gradient.png    256x256   196,608B        62B       573B    9.24x    adaptive_rgb WIN
+                  gradient_h.png    256x256    65,536B        44B       369B    8.39x       row_delta WIN
+                  gradient_v.png    256x256    65,536B        44B       374B    8.50x       col_delta WIN
+                      random.png    256x256    65,536B    60,516B    65,917B    1.09x             twt WIN
+                      smooth.png    256x256    65,536B     4,312B    13,322B    3.09x      diag_delta WIN
+
+  SCORE: 7W 0T 0L / 7
+  Win rate: 100%
