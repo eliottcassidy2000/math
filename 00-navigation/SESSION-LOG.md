@@ -13,7 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
-## kind-pasteur-2026-03-24-S20cq — 2026-03-24: Production Engineering Tools Sprint (13 tools, 5725 lines)
+## kind-pasteur-2026-03-24-S20cq — 2026-03-24: Production Engineering Sprint (18 tools, 8500+ lines)
+
+### Phase 2: Image/Video/Audio Codecs
+Added 6 more tools targeting media compression:
+- **tc_image_v3**: 14W 2T 0L vs PNG — YCbCr + column/diagonal scan + multi-backend
+- **tc_image_ultimate**: 15W 1T 0L vs PNG (94% win) — combines ALL techniques
+- **tc_video**: Keyframe + delta codec, 370x on static, 102x on motion, lossless roundtrip
+- **tc_compress**: Production CLI for real image files, 100% win on test PNGs
+- **tc_audio**: 7W 1T 0L on audio, 23.5x on sawtooth, 4.3x on sine, 2.84x on music
+- **tournament_wavelet**: Skip-hierarchy decomposition, wins on gradients AND random data
+
+### Phase 1: General Tools (13 tools, 5725 lines)
+
+## kind-pasteur-2026-03-24-S20cq-p1 — 2026-03-24: Production Engineering Tools Sprint (13 tools, 5725 lines)
 
 **Account:** kind-pasteur
 **Continuation of:** kind-pasteur-2026-03-24-S20cp
