@@ -1,0 +1,50 @@
+
+========================================================================
+  THE TWO SYSTEMS AT n=5
+========================================================================
+
+  SYSTEM A (Even + Odd Graphs):
+  |Even| = 12, |Odd| = 22, Total = 34
+
+  Interaction: EO = 36 edges, EE = 9, OO = 29
+  EO/(EO+EE+OO) = 0.4865 (interaction fraction)
+
+  SYSTEM B (Tournaments — self-contained):
+  |Tournaments| = 12, E = 30, self-loops = 7
+  Interaction with outside: ZERO (tournaments stay tournaments)
+
+
+========================================================================
+  THE DUALITY: INTERACTION vs SELF-LOOPS
+========================================================================
+
+
+  SYSTEM A (Even + Odd): INTERACTING
+    |Even| = 12, |Odd| = 22
+    Internal edges: EE = 9, OO = 29
+    INTERACTION (EO boundary): 36 edges
+
+  SYSTEM B (Tournaments): NON-INTERACTING but SELF-LOOPING
+    |Tournaments| = 12 (= |Even|!)
+    Internal edges: 30
+    SELF-LOOPS: 7 classes have self-loops
+
+  THE KEY OBSERVATION:
+  System A has EO INTERACTION but NO self-loops (graph toggles always change class).
+  System B has NO INTERACTION but HAS self-loops (arc reversals can preserve class).
+
+  INTERACTION and SELF-LOOPS are COMPLEMENTARY:
+  - If you CAN leave your type (even→odd), you DON'T self-loop
+  - If you CAN'T leave your type (tournament stays tournament), you DO self-loop
+
+  The EO interaction energy = 36 edges.
+  The self-loop count = 7 classes.
+  Are these related?
+
+  Numerical comparison at n=5:
+  EO edges = 36, T self-loop classes = 7
+  EO / T_self = 5.1429
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/dual_systems_s261.py", line 278, in <module>
+    ci = tc_i[canon_tournament([[0]*n_val for _ in range(n_val)], n_val)]
+KeyError: (0, 0, 0, 0, 0, 0)
