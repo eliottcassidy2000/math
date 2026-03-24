@@ -1,0 +1,144 @@
+================================================================================
+  WIGGLY RECURSION: Mode B through the fiber lens
+  kind-pasteur-2026-03-23-S20ep
+================================================================================
+
+######################################################################
+  n = 4
+  V_merged(n) = 3, V(n-2) = 1, E(G_(n-2)) = 0
+######################################################################
+
+  Q1: Same overlap class => same full class?
+    Same sub AND same full: 12 (37.5%)
+    Same sub BUT diff full: 20 (62.5%)
+
+  Q2: G_(n-2) edge -> G_n edge? (2x2 table)
+                             G_n edge  G_n self-loop
+               Sub edge:            0              0
+          Sub self-loop:           40             24
+    Sub SL -> G_n edge rate:   62.5%
+    Overall G_n edge rate:     62.5%
+
+  Q3: Forgetting map G_n -> G_(n-2) (distribution of overlap classes per full class):
+       G_n class  Total tilings #sub classes   Dominant sub  Dominance
+               2             16            1              0      1.000
+               0             24            1              0      1.000
+               4             24            1              0      1.000
+
+  Time: 0.0s
+
+######################################################################
+  n = 5
+  V_merged(n) = 10, V(n-2) = 2, E(G_(n-2)) = 1
+######################################################################
+
+  Q1: Same overlap class => same full class?
+    Same sub AND same full: 536 (26.2%)
+    Same sub BUT diff full: 1512 (73.8%)
+
+  Q2: G_(n-2) edge -> G_n edge? (2x2 table)
+                             G_n edge  G_n self-loop
+               Sub edge:         1440             96
+          Sub self-loop:         1104            432
+
+    Sub edge -> G_n edge rate: 93.8%
+    Sub SL -> G_n edge rate:   71.9%
+    Overall G_n edge rate:     82.8%
+
+  Q3: Forgetting map G_n -> G_(n-2) (distribution of overlap classes per full class):
+       G_n class  Total tilings #sub classes   Dominant sub  Dominance
+              76             24            2              2      0.500
+               5             40            2              0      0.900
+              40             40            2              0      0.600
+               2             80            2              0      0.900
+               0            120            1              0      1.000
+               8            120            2              0      0.700
+              10            120            2              0      0.700
+              41            120            2              0      0.600
+              12            120            2              0      0.600
+               4            240            2              0      0.800
+
+  Time: 0.3s
+
+######################################################################
+  n = 6
+  V_merged(n) = 34, V(n-2) = 4, E(G_(n-2)) = 5
+######################################################################
+
+  Q1: Same overlap class => same full class?
+    Same sub AND same full: 47392 (15.2%)
+    Same sub BUT diff full: 263904 (84.8%)
+
+  Q2: G_(n-2) edge -> G_n edge? (2x2 table)
+                             G_n edge  G_n self-loop
+               Sub edge:       118272           4608
+          Sub self-loop:        57984          15744
+
+    Sub edge -> G_n edge rate: 96.2%
+    Sub SL -> G_n edge rate:   78.6%
+    Overall G_n edge rate:     89.6%
+
+  Q3: Forgetting map G_n -> G_(n-2) (distribution of overlap classes per full class):
+       G_n class  Total tilings #sub classes   Dominant sub  Dominance
+              87             80            3              0      0.600
+            1332            240            3              4      0.600
+             408            240            2              4      0.800
+             140            288            4              4      0.333
+               5            480            3              0      0.800
+               2            480            3              0      0.800
+              72            480            4              0      0.400
+              80            480            4              0      0.400
+              88            480            4              4      0.600
+               0            720            1              0      1.000
+               9            720            4              0      0.667
+              16            720            2              0      0.600
+             144            720            4              4      0.467
+             145            720            4              4      0.467
+              83            720            4              0      0.400
+             153            720            4              4      0.467
+             154            720            4              4      0.400
+             280            720            2              4      0.800
+               4           1440            4              0      0.667
+               8           1440            4              0      0.600
+              10           1440            4              0      0.533
+              12           1440            4              0      0.467
+              73           1440            4              0      0.400
+              18           1440            4              0      0.467
+              81           1440            4              4      0.333
+              20           1440            4              0      0.400
+             177           1440            4              4      0.467
+             152           1440            4              4      0.600
+              24           1440            2              4      0.600
+             146           1440            4              4      0.400
+             148           1440            4              4      0.533
+              89           1440            4              4      0.467
+             156           1440            4              4      0.600
+             344           1440            4              4      0.667
+
+  Time: 82.9s
+
+================================================================================
+SYNTHESIS
+================================================================================
+
+THE MODE B RECURSION THROUGH WIGGLY LINES:
+
+1. Same overlap class does NOT guarantee same full class (non-factoring).
+   The "extra information" in the boundary-overlap coupling grows with n.
+
+2. The 2x2 table (sub edge vs G_n edge) reveals the MIXING rate:
+   A sub-tournament edge (overlap class change) can become a G_n self-loop
+   (if the boundary absorbs the change). Conversely, a sub self-loop
+   (overlap class preserved) can become a G_n edge (if the boundary
+   amplifies an intra-class relabeling into a class change).
+
+3. The forgetting function G_n -> G_{n-2} shows how full classes
+   distribute across overlap classes. Classes with more tilings
+   tend to use more overlap classes (higher entropy).
+
+4. The fiber bundle is TWISTED: the transition functions depend
+   on the boundary. This twist is the obstruction to reducing
+   G_n to a product G_{n-2} x boundary.
+
+DONE.
+================================================================================
