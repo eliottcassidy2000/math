@@ -3,6 +3,22 @@
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
 Entry format:
+
+## opus-2026-03-24-S305 — 2026-03-24
+
+**Account:** opus
+**Continuation of:** opus-2026-03-24-S291 through S304
+**Summary of work:** MASSIVE SESSION: Tournament Counting Theorem (Euler product), waggly lines (all tiling connections), the 1D-2D boundary, coding theory lens, association schemes.
+
+**Key results:**
+1. Tournament Counting Theorem (S291): Euler product factorization of V_n with poles at x=4,16,64,...
+2. Waggly = ALL tiling connections (S296-297), decomposed by Hamming distance
+3. Waggly Completeness Theorem (S301): k* = diam(G_n), conjecture diam = n-2
+4. Waggly alphabet (S302-303): range-3 harmonic most neutral, zero-SL combos vanish at n=6
+5. Universal law (S304): SL rate ~ range profile + all-same-range indicator + Krawtchouk
+6. Almost-1D (S305): fractal dim = 2-log2/logn, K₁ correlates with H at -0.94
+**Terminology:** MISTAKE-033 corrected. CLAUDE.md updated with waggly definitions.
+**Unresolved:** Prove diam = n-2. Compute K₁-H correlation at n=7. Tournament Hilbert curve.
 ```
 ## [INSTANCE-ID] — [DATE]
 ```
