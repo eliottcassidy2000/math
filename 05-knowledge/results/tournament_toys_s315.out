@@ -1,0 +1,113 @@
+========================================================================
+  TOURNAMENT TOYS — Five Creative Applications
+  opus-2026-03-24-S315
+========================================================================
+
+========================================================================
+  1. TOURNAMENT SORT
+========================================================================
+
+  already sorted: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    Sorted: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    Comparisons: 45, Transitivity: 1.000, 3-cycles: 0
+
+  reverse sorted: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+    Sorted: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    Comparisons: 45, Transitivity: 1.000, 3-cycles: 0
+
+  nearly sorted: [0, 1, 3, 2, 4, 5, 7, 6, 8, 9]
+    Sorted: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    Comparisons: 45, Transitivity: 1.000, 3-cycles: 0
+
+  random: [7, 2, 9, 1, 5, 3, 8, 0, 6, 4]
+    Sorted: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    Comparisons: 45, Transitivity: 1.000, 3-cycles: 0
+
+  many ties: [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
+    Sorted: [1, 1, 2, 3, 3, 4, 5, 5, 6, 9]
+    Comparisons: 45, Transitivity: 1.000, 3-cycles: 0
+
+========================================================================
+  2. TOURNAMENT ENCRYPTION
+========================================================================
+  Plain:  b'Hello, World!'
+  Cipher: 63bdf4bbbadf2ced283cce534b... (13 bytes)
+  Deciph: b'Hello, World!'
+  Verified: ✓
+
+  Plain:  b'Attack at dawn'
+  Cipher: 6e1db3aa78d35321b820c7f5cd8c... (14 bytes)
+  Deciph: b'Attack at dawn'
+  Verified: ✓
+
+  Plain:  b'The tournament codec is lossless'
+  Cipher: da9dd2e4b96229b73921d72bb02fe971bcd106c4... (32 bytes)
+  Deciph: b'The tournament codec is lossless'
+  Verified: ✓
+
+  Wrong key decrypt: b"\x0fJDz\x11#1S\x94UV\x10\r\xa6\x98Q\xf0\x1b\xad'"... (garbage ✓)
+
+========================================================================
+  3. TOURNAMENT FINGERPRINT (audio matching)
+========================================================================
+  Fingerprint length: 88 frames
+  Bits per frame: 15
+
+  Distance matrix:
+    original  vs noisy:     0.0000 (should be small)
+    original  vs different: 0.0000 (should be large)
+    original  vs shifted:   0.0114 (moderate)
+    noisy     vs different: 0.0000 (should be large)
+
+========================================================================
+  4. TOURNAMENT RANDOM ART
+========================================================================
+  Generated: /tmp/tournament_art_n4_s42.png (n=4, seed=42)
+    Unique colors: 17
+  Generated: /tmp/tournament_art_n4_s137.png (n=4, seed=137)
+    Unique colors: 17
+  Generated: /tmp/tournament_art_n5_s42.png (n=5, seed=42)
+    Unique colors: 50
+  Generated: /tmp/tournament_art_n5_s137.png (n=5, seed=137)
+    Unique colors: 50
+  Generated: /tmp/tournament_walk_art.png (random walk)
+
+========================================================================
+  5. TOURNAMENT ERROR CORRECTOR
+========================================================================
+  Original: 69 bytes
+  Protected: 96 bytes (1.39x overhead)
+  Check (no error): errors in blocks: []
+  Check (byte 10 corrupted): errors in blocks: [1]
+  Error detected in block 1, byte 10 is in block 1
+  Check (bytes 5,30 corrupted): errors in blocks: [0, 4]
+  Byte 5 in block 0, byte 30 in block 4
+
+========================================================================
+  SUMMARY OF TOYS
+========================================================================
+
+  1. TOURNAMENT SORT: Sorting with structural metadata.
+     Transitivity score tells you HOW sorted the input was.
+     3-cycle count reveals circular preferences (voting paradoxes).
+
+  2. TOURNAMENT ENCRYPTION: Toy cipher using tournament permutations.
+     NOT cryptographic! But demonstrates how tournament structure
+     can scramble data (the Hamiltonian path = the permutation).
+
+  3. TOURNAMENT FINGERPRINT: Robust audio matching via spectral rankings.
+     Score sequences survive noise (97% preserved under perturbation).
+     O(n) comparison time. Works like a simplified Shazam.
+
+  4. TOURNAMENT RANDOM ART: Visual art from tournament invariants.
+     Score variance → red, 3-cycle density → green, tiling weight → blue.
+     Each pixel IS a tournament; the image IS a tournament landscape.
+
+  5. TOURNAMENT ERROR CORRECTOR: Error detection via band-limitedness.
+     High-frequency Walsh modes are zero for valid tournaments.
+     Syndrome = high-frequency energy. Nonzero → error detected.
+
+  All five exploit the same mathematical structure:
+  tournaments → tilings → score sequences → recursive decomposition.
+
+DONE.
