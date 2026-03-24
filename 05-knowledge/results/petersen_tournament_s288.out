@@ -1,0 +1,47 @@
+========================================================================
+  THE PETERSEN TOURNAMENT
+  opus-2026-03-24-S288
+========================================================================
+
+  Petersen graph: 15 edges on 10 vertices
+  Edges: [(0, 1), (0, 4), (0, 5), (1, 2), (1, 6), (2, 3), (2, 7), (3, 4), (3, 8), (4, 9), (5, 7), (5, 8), (6, 8), (6, 9), (7, 9)]
+
+  Finding Hamiltonian paths in Petersen graph...
+  Found 240 directed Hamiltonian paths
+  = 120 undirected paths (each traversable both ways)
+
+  1 DISTINCT tournament types from 240 paths
+
+  PETERSEN TOURNAMENTS:
+    #      H   c3                         scores  #paths  flipped  unflipped
+    1   6961   28 (2, 3, 3, 3, 4, 5, 6, 6, 6, 7)     240       30          6
+
+  TYPE 1: H=6961, scores=(2, 3, 3, 3, 4, 5, 6, 6, 6, 7)
+    Hamiltonian path: 0 → 1 → 2 → 3 → 4 → 9 → 6 → 8 → 5 → 7
+    Labels: {0: 10, 1: 9, 2: 8, 3: 7, 4: 6, 5: 2, 6: 4, 7: 1, 8: 3, 9: 5}
+    Score per vertex (label order): [6, 7, 6, 5, 6, 3, 4, 3, 2, 3]
+    Flipped tiles: 30/36
+    Palindromic scores (SC candidate): True
+    H / Szele expected (7088): 0.9822
+
+========================================================================
+  SYNTHESIS
+========================================================================
+
+  The Petersen graph, viewed as a tournament on 10 vertices:
+  - 15 edges → oriented high→low (unflipped = "Petersen arcs")
+  - 30 non-edges → oriented low→high (flipped)
+  - Base path chosen from a Hamiltonian path in the Petersen graph
+  - 6 remaining Petersen edges become unflipped tiles
+  - 30 non-Petersen pairs become flipped tiles
+
+  The Petersen graph IS Hamiltonian-path-rich (many paths exist)
+  but NOT Hamiltonian-cycle (no cycle — a famous result).
+  Each Hamiltonian path choice gives a potentially different tournament.
+
+  The number of tiles: C(9,2) = 36
+  Unflipped tiles: 6 (= 15 - 9 = Petersen edges minus path edges)
+  Flipped tiles: 30
+  Flipped fraction: 30/36 = 83.3%
+
+DONE.
