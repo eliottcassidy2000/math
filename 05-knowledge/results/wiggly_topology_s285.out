@@ -1,0 +1,258 @@
+
+========================================================================
+  TOPOLOGY OF W_5/Z_2
+========================================================================
+
+  V = 10, E = 21, avg_deg = 4.20
+
+  GENUS:
+    Lower bound: g >= 0 (from E - 3V + 6)
+    Triangles: 12
+    If triangulated: F=14, chi=3, g=-1
+
+  NODE SIGNATURES (degree, H, triangles):
+    (2, 15, 1): 1 nodes [9]
+    (3, 3, 1): 1 nodes [3]
+    (3, 3, 2): 1 nodes [1]
+    (3, 15, 0): 1 nodes [7]
+    (4, 1, 3): 1 nodes [0]
+    (5, 9, 4): 1 nodes [4]
+    (5, 9, 6): 1 nodes [5]
+    (5, 11, 6): 1 nodes [6]
+    (5, 13, 4): 1 nodes [8]
+    (7, 5, 9): 1 nodes [2]
+
+  Aut group upper bound (from signatures): 1
+  Actual automorphisms: 1
+  The graph has NO non-trivial symmetry (rigid)
+
+========================================================================
+  THE RING STRUCTURE (n=5)
+========================================================================
+
+  H-LEVEL STRUCTURE (the 'rings' of the donut):
+    H=1: 1 nodes, 0 level-edges, 4 up-edges
+    H=3: 2 nodes, 0 level-edges, 4 up-edges
+    H=5: 1 nodes, 0 level-edges, 4 up-edges
+    H=9: 2 nodes, 1 level-edges, 4 up-edges
+    H=11: 1 nodes, 0 level-edges, 2 up-edges
+    H=13: 1 nodes, 0 level-edges, 2 up-edges
+    H=15: 2 nodes, 0 level-edges, 0 up-edges
+
+  CYCLE RANK (β₁ of graph): 12
+  = number of independent loops in the graph
+  This is the 'donut dimension' — the number of independent
+  ways you can go around the graph and come back.
+
+  Clique complex β₁: 2 (loops NOT fillable by triangles)
+  Graph β₁: 12 (ALL independent loops)
+  Fillable loops: 10 (loops that ARE triangulable)
+
+========================================================================
+  HOW H SITS ON THE RING (n=5)
+========================================================================
+
+
+  The H function creates a HEIGHT on the donut:
+  - Bottom: transitive (H=1) — a single point
+  - Top: regular (H=max) — one or two points
+  - In between: multiple nodes at each H level
+
+  The donut is NOT a clean torus because:
+  1. The degree varies (min=2, max=7) — not regular
+  2. The H-levels have different numbers of nodes (1 to 2)
+  3. Level edges exist only at some H values
+
+  But it HAS the topology of a torus (or higher genus surface):
+  β₁ = 12 independent loops, genus ≥ 0.
+
+  THE ASYMMETRY OF H ON THE RING:
+  H increases monotonically along most edges (DAG-like).
+  But level edges (dH=0) create the HORIZONTAL rings.
+  And multiple paths between levels create VERTICAL wrapping.
+
+  The graph is a "PINCHED TORUS": narrow at the top (H=max,
+  few nodes) and bottom (H=min, one node), wide in the middle.
+  Like a donut that's been squeezed at the poles.
+
+  H-DISTRIBUTION OF TRIANGLES:
+  Triangle H-spans: {2: 1, 4: 5, 6: 3, 8: 3}
+  Max span: 8, Avg span: 5.3
+  Level triangles (same H): 0
+
+
+========================================================================
+  TOPOLOGY OF W_6/Z_2
+========================================================================
+
+  V = 34, E = 143, avg_deg = 8.41
+
+  GENUS:
+    Lower bound: g >= 8 (from E - 3V + 6)
+    Triangles: 139
+    If triangulated: F=95, chi=-14, g=8
+
+  NODE SIGNATURES (degree, H, triangles):
+    (2, 9, 0): 1 nodes [17]
+    (3, 15, 1): 1 nodes [20]
+    (3, 45, 1): 1 nodes [33]
+    (3, 45, 2): 1 nodes [32]
+    (5, 3, 4): 1 nodes [1]
+    (6, 1, 6): 1 nodes [0]
+    (6, 3, 5): 1 nodes [3]
+    (6, 15, 2): 1 nodes [12]
+    (6, 33, 5): 1 nodes [18]
+    (6, 41, 7): 1 nodes [30]
+    (7, 5, 8): 1 nodes [5]
+    (7, 17, 6): 2 nodes [8, 16]
+    (7, 27, 3): 1 nodes [14]
+    (7, 29, 2): 1 nodes [27]
+    (7, 37, 5): 1 nodes [21]
+    (8, 29, 11): 1 nodes [26]
+    (8, 33, 11): 1 nodes [22]
+    (9, 43, 16): 1 nodes [31]
+    (10, 23, 16): 1 nodes [11]
+    (11, 5, 23): 1 nodes [2]
+    (11, 9, 16): 1 nodes [4]
+    (11, 11, 18): 1 nodes [7]
+    (11, 13, 12): 1 nodes [13]
+    (11, 15, 23): 1 nodes [9]
+    (11, 25, 23): 1 nodes [19]
+    (11, 31, 15): 1 nodes [23]
+    (11, 37, 21): 1 nodes [24]
+    (12, 9, 24): 1 nodes [6]
+    (12, 19, 25): 1 nodes [10]
+    (12, 33, 26): 1 nodes [28]
+    (13, 23, 23): 1 nodes [15]
+    (13, 29, 25): 1 nodes [29]
+    (13, 37, 26): 1 nodes [25]
+
+  Aut group upper bound (from signatures): 2
+
+========================================================================
+  THE RING STRUCTURE (n=6)
+========================================================================
+
+  H-LEVEL STRUCTURE (the 'rings' of the donut):
+    H=1: 1 nodes, 0 level-edges, 6 up-edges
+    H=3: 2 nodes, 0 level-edges, 9 up-edges
+    H=5: 2 nodes, 0 level-edges, 13 up-edges
+    H=9: 3 nodes, 1 level-edges, 15 up-edges
+    H=11: 1 nodes, 0 level-edges, 7 up-edges
+    H=13: 1 nodes, 0 level-edges, 7 up-edges
+    H=15: 3 nodes, 0 level-edges, 11 up-edges
+    H=17: 2 nodes, 0 level-edges, 7 up-edges
+    H=19: 1 nodes, 0 level-edges, 7 up-edges
+    H=23: 2 nodes, 0 level-edges, 13 up-edges
+    H=25: 1 nodes, 0 level-edges, 5 up-edges
+    H=27: 1 nodes, 0 level-edges, 3 up-edges
+    H=29: 3 nodes, 1 level-edges, 14 up-edges
+    H=31: 1 nodes, 0 level-edges, 4 up-edges
+    H=33: 3 nodes, 0 level-edges, 9 up-edges
+    H=37: 3 nodes, 3 level-edges, 5 up-edges
+    H=41: 1 nodes, 0 level-edges, 2 up-edges
+    H=43: 1 nodes, 0 level-edges, 1 up-edges
+    H=45: 2 nodes, 0 level-edges, 0 up-edges
+
+  CYCLE RANK (β₁ of graph): 110
+  = number of independent loops in the graph
+  This is the 'donut dimension' — the number of independent
+  ways you can go around the graph and come back.
+
+  Clique complex β₁: 15 (loops NOT fillable by triangles)
+  Graph β₁: 110 (ALL independent loops)
+  Fillable loops: 95 (loops that ARE triangulable)
+
+========================================================================
+  HOW H SITS ON THE RING (n=6)
+========================================================================
+
+
+  The H function creates a HEIGHT on the donut:
+  - Bottom: transitive (H=1) — a single point
+  - Top: regular (H=max) — one or two points
+  - In between: multiple nodes at each H level
+
+  The donut is NOT a clean torus because:
+  1. The degree varies (min=2, max=13) — not regular
+  2. The H-levels have different numbers of nodes (1 to 3)
+  3. Level edges exist only at some H values
+
+  But it HAS the topology of a torus (or higher genus surface):
+  β₁ = 110 independent loops, genus ≥ 8.
+
+  THE ASYMMETRY OF H ON THE RING:
+  H increases monotonically along most edges (DAG-like).
+  But level edges (dH=0) create the HORIZONTAL rings.
+  And multiple paths between levels create VERTICAL wrapping.
+
+  The graph is a "PINCHED TORUS": narrow at the top (H=max,
+  few nodes) and bottom (H=min, one node), wide in the middle.
+  Like a donut that's been squeezed at the poles.
+
+  H-DISTRIBUTION OF TRIANGLES:
+  Triangle H-spans: {0: 1, 2: 1, 4: 13, 6: 15, 8: 24, 10: 18, 12: 11, 14: 24, 16: 5, 18: 15, 20: 4, 22: 2, 24: 4, 26: 2}
+  Max span: 26, Avg span: 11.6
+  Level triangles (same H): 1
+
+
+========================================================================
+  THE DONUT METAPHOR
+========================================================================
+
+
+  THE META-GRAPH AS A HIGHER-DIMENSIONAL DONUT:
+
+  At n=5 (10 nodes, 21 edges, β₁=12):
+    A surface of genus ≥ 1.
+    12 independent loops: 2 are essential (not triangle-fillable),
+    10 are fillable (contained in the triangle mesh).
+
+    The donut has:
+    - 1 "vertical" axis: H (height, from 1 to 15)
+    - 12 "horizontal" wrappings: independent loops
+
+    Like a torus, but with VARIABLE cross-section:
+    - At H=1: 1 node (thin, like the center of the donut hole)
+    - At H=9: 2 nodes (wider)
+    - At H=5: 1 node but degree 7 (very connected)
+
+  At n=6 (34 nodes, 143 edges, β₁=110):
+    A surface of genus ≥ 8.
+    110 independent loops: 15 essential, 95 fillable.
+    The donut has become a PRETZEL (high genus surface).
+
+  THE ASYMMETRIC H ON THE SYMMETRIC RING:
+    The ring structure (loops, genus) is TOPOLOGICAL — it's the
+    same regardless of how you embed the graph.
+
+    H is a MORSE FUNCTION on this surface:
+    - H=1 (transitive): the MINIMUM of H — a single critical point
+    - H=max (regular): the MAXIMUM — one or two critical points
+    - Each H-level is a "slice" through the donut
+
+    The NUMBER OF CRITICAL POINTS of H tells us the topology:
+    By Morse theory: #(min) - #(saddle) + #(max) = χ = V - E + F
+
+    The H-gradient flow is the STEEPEST DESCENT on the surface.
+    It flows from regular (top) to transitive (bottom).
+    The OU process (E[ΔH] ≈ -2H/n) IS this gradient flow.
+
+  THE SYMMETRY:
+    At n=5: the graph has 2 automorphisms (if any).
+    The H function BREAKS most symmetry (different H values at
+    different nodes). But the COMPLEMENT SYMMETRY (T ↔ T^op)
+    preserves H and creates a Z₂ on the graph.
+
+    For SC classes: the Z₂ fixes them (self-complementary).
+    For NS pairs: the Z₂ swaps them (but they're already merged).
+    So in the merged graph: the Z₂ acts trivially.
+
+    The ONLY symmetries of G_n/Z_2 come from:
+    - H-level permutations (swapping nodes at the same H)
+    - Score-preserving relabelings
+
+    The donut's symmetry group is much SMALLER than S_n
+    (the full symmetry of the m-cube before quotienting).
+
+Done. opus-2026-03-24-S285
