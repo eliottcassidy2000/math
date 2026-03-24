@@ -1,0 +1,72 @@
+TC4 v4.0.0 — Tournament Codec 4
+==========================================================================================
+
+  SIZE: 4,096B
+          Type      tc4   zlib-1   zlib-9      bz2     lzma  zstd-19    WINNER       TC4 modes
+  ----------------------------------------------------------------------------------------------
+         zeros   61.1x    99.9x   157.5x    95.3x    44.5x   186.2x*   zstd-19            T0:2
+      gradient   61.1x*   12.8x    13.0x     6.2x    12.6x    14.6x        tc4            T1:2
+      sawtooth   61.1x*   12.8x    13.0x     6.2x    12.3x    14.6x        tc4            T1:2
+     staircase   53.2x*    9.7x     9.7x     5.9x    13.0x    14.2x        tc4            T1:2
+          sine   19.1x    19.4x    24.2x*   13.6x    18.3x    23.1x     zlib-9            T2:2
+          text    7.5x     6.0x     7.9x    12.0x*    9.7x     9.2x        bz2           T7:16
+          html    4.2x     3.9x     4.9x     6.7x*    4.7x     5.1x        bz2            T0:2
+          json    3.7x     3.7x     3.9x     4.8x     4.6x     5.6x*   zstd-19            T0:2
+           csv    3.1x     2.9x     3.2x     3.6x     3.5x     3.8x*   zstd-19            T0:2
+        binary    1.7x     1.8x     1.8x     1.5x     1.8x     1.9x*   zstd-19            T0:2
+        sensor    1.9x*    1.1x     1.1x     1.5x     1.5x     1.1x        tc4       T1:1,T3:1
+         image    1.4x     1.2x     1.2x     1.3x     1.5x*    1.2x       lzma            T1:2
+        sparse   32.5x    27.7x    51.2x*   35.3x    24.4x    41.0x     zlib-9            T0:2
+     delta1pct   22.0x    21.9x    26.4x*   22.5x    20.5x    25.1x     zlib-9            T0:2
+        random    1.0x     1.0x*    1.0x     0.9x     1.0x     1.0x     zlib-1            T0:2
+
+  WINS (4,096B):  tc4=4  zlib-1=1  zlib-9=3  bz2=2  lzma=1  zstd-19=4  / 15
+
+  SIZE: 65,536B
+          Type      tc4   zlib-1   zlib-9      bz2     lzma  zstd-19    WINNER       TC4 modes
+  ----------------------------------------------------------------------------------------------
+         zeros   78.8x   213.5x   780.2x  1524.1x   468.1x  2849.4x*   zstd-19           T0:32
+      gradient   78.8x    76.4x   112.0x    83.2x   176.2x   233.2x*   zstd-19           T1:32
+      sawtooth   78.8x    76.2x   112.0x    82.9x   170.7x   233.2x*   zstd-19           T1:32
+     staircase   66.1x    29.7x    76.6x    49.4x   167.2x   220.7x*   zstd-19           T1:32
+          sine   19.7x    46.8x   109.2x   122.3x*  104.4x   121.8x        bz2      T2:29,T7:3
+          text    7.5x     6.1x     8.2x    12.5x*   11.5x    10.0x        bz2          T7:256
+          html    4.2x     4.4x     6.7x    10.6x*    7.1x     7.1x        bz2           T0:32
+          json    4.1x     3.6x     4.4x     5.5x     7.5x*    6.6x       lzma           T0:32
+           csv    3.2x     2.9x     3.3x     4.3x     5.0x*    4.1x       lzma           T0:28
+        binary    1.7x     1.9x     1.9x     1.9x     1.9x     2.0x*   zstd-19           T0:32
+        sensor    1.9x     1.3x     1.2x     2.1x*    1.7x     1.4x        bz2     T1:14,T3:18
+         image    1.5x     1.4x     1.4x     1.6x     1.7x*    1.4x       lzma      T0:5,T1:27
+        sparse   33.5x    29.1x    61.6x    68.9x*   44.8x    54.8x        bz2      T0:31,T7:1
+     delta1pct   23.1x    21.8x    29.2x    32.9x    32.4x    38.8x*   zstd-19           T0:32
+        random    1.0x     1.0x     1.0x     1.0x     1.0x     1.0x*   zstd-19           T0:32
+
+  WINS (65,536B):  tc4=0  zlib-1=0  zlib-9=0  bz2=5  lzma=3  zstd-19=7  / 15
+
+  ROUNDTRIP VERIFICATION:
+           zeros: ✓
+        gradient: ✓
+        sawtooth: ✓
+       staircase: ✓
+            sine: ✓
+            text: ✓
+            html: ✓
+            json: ✓
+             csv: ✓
+          binary: ✓
+          sensor: ✓
+           image: ✓
+          sparse: ✓
+       delta1pct: ✓
+          random: ✓
+  All: PASS ✓
+
+  SPEED:
+      4096B: enc=6.3ms dec=0.3ms (1 KB/s enc, 14 KB/s dec)
+     16384B: enc=24.3ms dec=1.1ms (1 KB/s enc, 14 KB/s dec)
+     65536B: enc=97.5ms dec=4.4ms (1 KB/s enc, 14 KB/s dec)
+
+  REAL FILES:
+                   words (500,000B):  tc4=3.1x  zlib-9=3.2x  lzma=3.8x  winner=lzma
+                   hosts (    213B):  tc4=1.3x  zlib-9=1.4x  lzma=1.0x  winner=zlib-9
+             tc4_s315.py ( 19,061B):  tc4=2.6x  zlib-9=3.4x  lzma=3.5x  winner=lzma
