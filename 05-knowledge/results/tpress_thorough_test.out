@@ -1,0 +1,51 @@
+======================================================================
+  THOROUGH REAL-WORLD TESTING OF tpress v3
+======================================================================
+
+                       Data      Raw       v3       BestInd  v3/ind   Ent          Method Result
+  --------------------------------------------------------------------------------------------------------------
+
+  --- REAL FILES ---
+            CLAUDE.md[:16K]    16384B     7134B     6839B(  bz2)   0.959x  5.20b      whole_zlib LOSE
+                  CLAUDE.md    28404B    11877B    11087B(  bz2)   0.933x  5.18b      whole_zlib LOSE
+          SESSION-LOG[:16K]    16384B     6541B     6210B(  bz2)   0.949x  5.35b      whole_zlib LOSE
+                SESSION-LOG   651045B   233562B   185407B(  bz2)   0.794x  5.47b      whole_zlib LOSE
+              formalrank.py    13186B     4346B     4244B( lzma)   0.977x  4.89b      whole_zlib LOSE
+               tpress_v3.py     9504B     3551B     3520B( lzma)   0.991x  5.01b      whole_zlib LOSE
+        explorer.html[:16K]    16384B     5069B     4988B( lzma)   0.984x  5.56b      whole_zlib LOSE
+              explorer.html    38509B    10822B    10352B( lzma)   0.957x  5.60b      whole_zlib LOSE
+
+  --- STRUCTURED ---
+                   zeros_4K     4096B       26B       26B(zlib9)   1.000x -0.00b             raw TIE
+                    ones_4K     4096B       26B       26B(zlib9)   1.000x -0.00b             raw TIE
+                 counter_4K     4096B       27B      315B(zlib9)  11.667x  8.00b           delta WIN
+                sawtooth_4K     4096B       39B       66B(zlib9)   1.692x  5.00b           delta WIN
+                    sine_4K     4096B      257B      604B( lzma)   2.350x  7.33b           delta WIN
+                gradient_2d     4096B       40B      232B( lzma)   5.800x  6.72b           delta WIN
+                  blocks_2d     4096B       42B       49B(zlib9)   1.167x  1.00b             xor WIN
+
+  --- UNSTRUCTURED ---
+                  random_4K     4096B     4107B     4107B(zlib1)   1.000x  7.95b             raw TIE
+                 random_64K    65536B    65562B    65562B(zlib1)   1.000x  8.00b      whole_zlib TIE
+                english_rep     4096B       52B       55B(zlib9)   1.058x  3.82b         stride4 WIN
+                english_var      230B      153B      153B(zlib1)   1.000x  4.06b            gray TIE
+                python_code     1890B      141B      141B(zlib9)   1.000x  4.26b             raw TIE
+                   xml_data     1320B      106B      106B(zlib9)   1.000x  4.42b             raw TIE
+                csv_numbers     4500B       71B       71B(zlib9)   1.000x  3.53b      whole_zlib TIE
+                log_entries     3300B       92B       92B(zlib9)   1.000x  4.75b             raw TIE
+
+  --- EDGE CASES ---
+                single_byte        1B        1B        9B(zlib1)   9.000x -0.00b             raw WIN
+                  two_bytes        2B        2B       10B(zlib1)   5.000x  1.00b             raw WIN
+               all_same_64K    65536B       85B       43B(  bz2)   0.506x -0.00b      whole_zlib LOSE
+                alternating     4096B       27B       27B(zlib9)   1.000x  1.00b             raw TIE
+                near_random     4096B       28B      315B(zlib9)  11.250x  8.00b           delta WIN
+                mostly_zero     4096B       30B      237B(zlib9)   7.900x  0.64b           delta WIN
+               high_entropy     4096B     3035B     3035B(zlib1)   1.000x  5.80b             raw TIE
+                low_entropy     4096B     1337B     1163B(  bz2)   0.870x  2.00b             raw LOSE
+                    bimodal     4096B      379B      379B(zlib9)   1.000x  0.46b             raw TIE
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tpress_thorough_test.py", line 138, in <module>
+    test_data("struct_4byte", bytes([0x00,0x00,i%256,(i*7)%256] for i in range(1024) for _ in [0])[:4096])
+                              ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'list' object cannot be interpreted as an integer
