@@ -1,0 +1,142 @@
+================================================================================
+  EXTENDING CLAIMS TO n=8,9,10
+  kind-pasteur-2026-03-24-S20fg
+================================================================================
+
+============================================================
+  CLAIM 1: GRID-SYMMETRY PAIRING (PROOF)
+============================================================
+
+THEOREM: For all n >= 3, grid-symmetry paired wiggly classes
+produce identical metagraph edge sets.
+
+PROOF:
+Let sigma_grid be the vertex permutation i -> n+1-i.
+This maps tile (x,y) to tile (n+1-y, n+1-x).
+
+For any tiling T (binary assignment to tiles):
+  sigma_grid(T) is the tiling obtained by permuting tile values
+  according to the grid symmetry map.
+
+Key fact: sigma_grid is a vertex permutation, so it maps
+isomorphic tournaments to isomorphic tournaments. I.e.,
+[sigma_grid(T)] = [T] as iso classes.
+
+Now: let X be a wiggly class (tile position), and X' = sigma_grid(X).
+For any tiling T:
+  - Flipping X in T gives T^X with class [T^X].
+  - Flipping X' in sigma_grid(T) gives (sigma_grid(T))^{X'}.
+
+Since sigma_grid maps tile X to X', we have:
+  (sigma_grid(T))^{X'} = sigma_grid(T^X).
+
+Therefore: [T^X] = [(sigma_grid(T))^{X'}] = [sigma_grid(T^X)].
+
+The transition T -> T^X in class space is the SAME as
+sigma_grid(T) -> (sigma_grid(T))^{X'} in class space.
+
+Since sigma_grid is a bijection on tilings preserving iso classes,
+the set of (source_class, target_class) pairs for wiggly class X
+is IDENTICAL to that of wiggly class X'.
+
+Therefore: edge_set(X) = edge_set(X'). QED.
+
+This proof works for ALL n. No computation needed.
+The grid-symmetry pairing is a THEOREM, not just a computation.
+
+============================================================
+  CLAIM 2: SKIP HIERARCHY (score-change proxy)
+============================================================
+
+  n = 4, m = 3 tiles, samples = 8
+  Score-preserve rate by skip (UPPER BOUND on SL rate):
+  Skip Count  Avg rate           Range
+     1     2    50.00%  50.00- 50.00%
+     2     1    25.00%  25.00- 25.00%
+  Skip=1 avg: 50.000%, Skip>=2 avg: 25.000%, Gap: 0.5x
+  Time: 0.0s
+
+  n = 5, m = 6 tiles, samples = 64
+  Score-preserve rate by skip (UPPER BOUND on SL rate):
+  Skip Count  Avg rate           Range
+     1     3    41.67%  37.50- 50.00%
+     2     2    37.50%  37.50- 37.50%
+     3     1    25.00%  25.00- 25.00%
+  Skip=1 avg: 41.667%, Skip>=2 avg: 33.333%, Gap: 0.8x
+  Time: 0.0s
+
+  n = 6, m = 10 tiles, samples = 1024
+  Score-preserve rate by skip (UPPER BOUND on SL rate):
+  Skip Count  Avg rate           Range
+     1     4    34.38%  31.25- 37.50%
+     2     3    33.33%  31.25- 37.50%
+     3     2    31.25%  31.25- 31.25%
+     4     1    23.44%  23.44- 23.44%
+  Skip=1 avg: 34.375%, Skip>=2 avg: 30.990%, Gap: 0.9x
+  Time: 0.0s
+
+  n = 7, m = 15 tiles, samples = 32768
+  Score-preserve rate by skip (UPPER BOUND on SL rate):
+  Skip Count  Avg rate           Range
+     1     5    29.69%  27.34- 31.25%
+     2     4    29.30%  27.34- 31.25%
+     3     3    28.65%  27.34- 31.25%
+     4     2    27.34%  27.34- 27.34%
+     5     1    21.88%  21.88- 21.88%
+  Skip=1 avg: 29.688%, Skip>=2 avg: 27.969%, Gap: 0.9x
+  Time: 0.4s
+
+  n = 8, m = 21 tiles, samples = 100000
+  Score-preserve rate by skip (UPPER BOUND on SL rate):
+  Skip Count  Avg rate           Range
+     1     6    26.49%  24.48- 27.72%
+     2     5    26.28%  24.40- 27.46%
+     3     4    26.05%  24.62- 27.47%
+     4     3    25.57%  24.60- 27.34%
+     5     2    24.70%  24.65- 24.74%
+     6     1    20.36%  20.36- 20.36%
+  Skip=1 avg: 26.491%, Skip>=2 avg: 25.471%, Gap: 1.0x
+  Time: 1.9s
+
+  n = 9, m = 28 tiles, samples = 100000
+  Score-preserve rate by skip (UPPER BOUND on SL rate):
+  Skip Count  Avg rate           Range
+     1     7    24.07%  22.53- 24.82%
+     2     6    24.02%  22.64- 24.76%
+     3     5    23.78%  22.39- 24.77%
+     4     4    23.54%  22.41- 24.63%
+     5     3    23.27%  22.48- 24.84%
+     6     2    22.58%  22.50- 22.66%
+     7     1    19.43%  19.43- 19.43%
+  Skip=1 avg: 24.065%, Skip>=2 avg: 23.410%, Gap: 1.0x
+  Time: 2.5s
+
+  n = 10, m = 36 tiles, samples = 100000
+  Score-preserve rate by skip (UPPER BOUND on SL rate):
+  Skip Count  Avg rate           Range
+     1     8    22.16%  20.98- 22.68%
+     2     7    22.10%  20.88- 22.64%
+     3     6    22.13%  20.91- 22.82%
+     4     5    21.89%  20.87- 22.62%
+     5     4    21.66%  20.75- 22.41%
+     6     3    21.43%  20.74- 22.54%
+     7     2    20.82%  20.76- 20.88%
+     8     1    18.34%  18.34- 18.34%
+  Skip=1 avg: 22.165%, Skip>=2 avg: 21.710%, Gap: 1.0x
+  Time: 3.4s
+
+============================================================
+  CLAIM 3: COMPLEMENT-FLIP OVERLAP (sample search)
+============================================================
+
+  n = 8, m = 21
+  Strategy: sample random palindromic-score tournaments,
+  check if complement is Hamming-1 reachable (via defect counting)
+  Samples: 50000
+  Palindromic score: 17744 (35.5%)
+  Almost-anti-automorphisms found: 28
+  (Each means: complement is single-flip reachable)
+  Time: 56.3s
+
+DONE.
+================================================================================
