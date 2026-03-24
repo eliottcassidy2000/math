@@ -1,0 +1,80 @@
+
+========================================================================
+  VERIFYING THE ROYLE ET AL. IDENTITY
+========================================================================
+
+  FORMULA: #Graphs = (1/n!) sum_g 2^{c(g_E)}
+           #Tourn  = (1/n!) sum_{|g| odd} 2^{c(g_E)}
+           #Odd    = (1/n!) sum_{|g| even} 2^{c(g_E)}
+           #Even   = #Graphs - #Odd = #Tourn
+
+  n=3: #Graphs=4, #Tourn=2, #Odd=2, #Even=2
+       A000088=4, A000568=2, Even=Tourn? True
+
+  n=4: #Graphs=11, #Tourn=4, #Odd=7, #Even=4
+       A000088=11, A000568=4, Even=Tourn? True
+
+  n=5: #Graphs=34, #Tourn=12, #Odd=22, #Even=12
+       A000088=34, A000568=12, Even=Tourn? True
+
+  n=6: #Graphs=156, #Tourn=56, #Odd=100, #Even=56
+       A000088=156, A000568=56, Even=Tourn? True
+
+  n=7: #Graphs=1044, #Tourn=456, #Odd=588, #Even=456
+       A000088=1044, A000568=456, Even=Tourn? True
+
+  n=8: #Graphs=12346, #Tourn=6880, #Odd=5466, #Even=6880
+       A000088=12346, A000568=6880, Even=Tourn? True
+
+
+========================================================================
+  THE DEEP CONNECTION TO OUR META-GRAPH
+========================================================================
+
+
+  THE ROYLE IDENTITY AND THE TOURNAMENT META-GRAPH:
+
+  V_n = A000568(n) = #EvenGraphs(n)
+
+  This means: for every tournament iso class, there is a
+  CORRESPONDING even graph iso class. The bijection is NOT
+  constructive (Royle et al. leave it as an open problem).
+
+  BUT: the Burnside sum that counts them is the SAME:
+
+  V_n = (1/n!) sum_{|g| odd} 2^{c(g_E)}
+
+  where c(g_E) = edge_orbits = our pair_orbits function.
+
+  For ODD-ORDER g: c(g_E) = pair_orbits(cycle_type(g))
+  because |g| odd iff ALL cycle lengths are odd.
+  (lcm of odd numbers is odd.)
+
+  So: the SAME cycle types contribute to both counts!
+
+  NOW: what about the META-GRAPH of even graphs?
+
+  Define: the even graph flip graph as the graph on even graph
+  iso classes, where two are adjacent if they differ by adding
+  or removing one edge.
+
+  QUESTION: Does this flip graph have the SAME number of edges
+  as the tournament meta-graph G_n?
+
+  CONJECTURE: The even graph meta-graph is ISOMORPHIC to G_n.
+  (Or at least has the same edge count.)
+
+  If true: EVERY invariant of G_n (edges, clique complex, Betti
+  numbers, etc.) applies equally to the even graph flip graph!
+
+
+========================================================================
+  WHAT ODD-ORDER MEANS FOR CYCLE TYPES
+========================================================================
+
+  Cycle types with odd order (= all odd cycles):
+  n=3: odd-order types: [(1, 1, 1), (3,)]
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/even_graph_connection_s259.py", line 218, in <module>
+    print("        even-order types: %s" % (n, sorted(even_order_parts)))
+TypeError: not all arguments converted during string formatting
