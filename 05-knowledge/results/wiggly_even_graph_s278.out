@@ -1,0 +1,365 @@
+========================================================================
+  WIGGLY TILINGS = EVEN GRAPHS?
+  opus-2026-03-24-S278
+========================================================================
+
+########################################################################
+  n = 3: TILING → TOURNAMENT CLASS × EVEN GRAPH CLASS
+########################################################################
+  Tilings: 2 = 2^1
+  Tournament classes (merged): 2
+  Even graph classes: 2
+
+  CROSS-TABULATION:
+  Tournament classes per even graph class:
+    Even class 0: 1 tourn classes, H=[1], 1 tilings
+    Even class 1: 1 tourn classes, H=[3], 1 tilings
+
+  Even graph classes per tournament class:
+    Tourn class 0 (H=1): 1 even classes, 1 tilings
+    Tourn class 1 (H=3): 1 even classes, 1 tilings
+
+  INJECTIVITY CHECK:
+  Tournament class determines even class: True
+  Even class determines tournament class: True
+  → BIJECTION! Tournament classes = Even graph classes through tilings!
+
+  TILINGS PER TOURNAMENT CLASS:
+    Class 0 (H=1): 1 tilings
+    Class 1 (H=3): 1 tilings
+
+  TILINGS vs H:
+   Class     H  #tilings  H == #til?
+       0     1         1           ✓
+       1     3         1           ✗
+
+  Time: 0.0s
+
+########################################################################
+  n = 4: TILING → TOURNAMENT CLASS × EVEN GRAPH CLASS
+########################################################################
+  Tilings: 8 = 2^3
+  Tournament classes (merged): 3
+  Even graph classes: 5
+
+  CROSS-TABULATION:
+  Tournament classes per even graph class:
+    Even class 0: 1 tourn classes, H=[1], 1 tilings
+    Even class 1: 2 tourn classes, H=[3, 5], 3 tilings
+    Even class 2: 1 tourn classes, H=[5], 1 tilings
+    Even class 3: 1 tourn classes, H=[5], 2 tilings
+    Even class 4: 1 tourn classes, H=[5], 1 tilings
+
+  Even graph classes per tournament class:
+    Tourn class 0 (H=1): 1 even classes, 1 tilings
+    Tourn class 1 (H=3): 1 even classes, 2 tilings
+    Tourn class 2 (H=5): 4 even classes, 5 tilings
+
+  INJECTIVITY CHECK:
+  Tournament class determines even class: False
+  Even class determines tournament class: False
+  → MANY-TO-MANY: both directions have multiplicity
+
+  TILINGS PER TOURNAMENT CLASS:
+    Class 0 (H=1): 1 tilings
+    Class 1 (H=3): 2 tilings
+    Class 2 (H=5): 5 tilings
+
+  TILINGS vs H:
+   Class     H  #tilings  H == #til?
+       0     1         1           ✓
+       1     3         2           ✗
+       2     5         5           ✓
+
+  Time: 0.0s
+
+########################################################################
+  n = 5: TILING → TOURNAMENT CLASS × EVEN GRAPH CLASS
+########################################################################
+  Tilings: 64 = 2^6
+  Tournament classes (merged): 10
+  Even graph classes: 18
+
+  CROSS-TABULATION:
+  Tournament classes per even graph class:
+    Even class 0: 1 tourn classes, H=[1], 1 tilings
+    Even class 1: 4 tourn classes, H=[3, 5, 9, 3], 6 tilings
+    Even class 2: 4 tourn classes, H=[5, 13, 9, 15], 6 tilings
+    Even class 3: 3 tourn classes, H=[5, 11, 9], 9 tilings
+    Even class 4: 4 tourn classes, H=[5, 13, 9, 15], 10 tilings
+    Even class 5: 3 tourn classes, H=[11, 13, 9], 7 tilings
+    Even class 6: 4 tourn classes, H=[11, 9, 15, 15], 7 tilings
+    Even class 7: 1 tourn classes, H=[11], 1 tilings
+    Even class 8: 1 tourn classes, H=[9], 2 tilings
+    Even class 9: 2 tourn classes, H=[11, 9], 4 tilings
+    Even class 10: 1 tourn classes, H=[13], 1 tilings
+    Even class 11: 1 tourn classes, H=[15], 1 tilings
+    Even class 12: 1 tourn classes, H=[15], 2 tilings
+    Even class 13: 1 tourn classes, H=[13], 2 tilings
+    Even class 14: 1 tourn classes, H=[11], 1 tilings
+    Even class 15: 1 tourn classes, H=[9], 2 tilings
+    Even class 16: 1 tourn classes, H=[13], 1 tilings
+    Even class 17: 1 tourn classes, H=[9], 1 tilings
+
+  Even graph classes per tournament class:
+    Tourn class 0 (H=1): 1 even classes, 1 tilings
+    Tourn class 1 (H=3): 1 even classes, 2 tilings
+    Tourn class 2 (H=5): 4 even classes, 10 tilings
+    Tourn class 3 (H=11): 6 even classes, 11 tilings
+    Tourn class 4 (H=13): 6 even classes, 13 tilings
+    Tourn class 5 (H=9): 5 even classes, 9 tilings
+    Tourn class 6 (H=9): 5 even classes, 9 tilings
+    Tourn class 7 (H=15): 3 even classes, 3 tilings
+    Tourn class 8 (H=3): 1 even classes, 1 tilings
+    Tourn class 9 (H=15): 3 even classes, 5 tilings
+
+  INJECTIVITY CHECK:
+  Tournament class determines even class: False
+  Even class determines tournament class: False
+  → MANY-TO-MANY: both directions have multiplicity
+
+  TILINGS PER TOURNAMENT CLASS:
+    Class 0 (H=1): 1 tilings
+    Class 1 (H=3): 2 tilings
+    Class 2 (H=5): 10 tilings
+    Class 3 (H=11): 11 tilings
+    Class 4 (H=13): 13 tilings
+    Class 5 (H=9): 9 tilings
+    Class 6 (H=9): 9 tilings
+    Class 7 (H=15): 3 tilings
+    Class 8 (H=3): 1 tilings
+    Class 9 (H=15): 5 tilings
+
+  TILINGS vs H:
+   Class     H  #tilings  H == #til?
+       0     1         1           ✓
+       1     3         2           ✗
+       2     5        10           ✗
+       3    11        11           ✓
+       4    13        13           ✓
+       5     9         9           ✓
+       6     9         9           ✓
+       7    15         3           ✗
+       8     3         1           ✗
+       9    15         5           ✗
+
+  Time: 0.0s
+
+########################################################################
+  n = 6: TILING → TOURNAMENT CLASS × EVEN GRAPH CLASS
+########################################################################
+  Tilings: 1024 = 2^10
+  Tournament classes (merged): 34
+  Even graph classes: 91
+
+  CROSS-TABULATION:
+  Tournament classes per even graph class:
+    Even class 0: 1 tourn classes, H=[1], 1 tilings
+    Even class 1: 6 tourn classes, H=[3, 9, 17, 5, 3, 5], 10 tilings
+    Even class 2: 12 tourn classes, H=[33, 23, 15, 5, 37, 13, 9, 27, 15, 5, 9, 17], 21 tilings
+    Even class 3: 7 tourn classes, H=[23, 15, 5, 11, 9, 5, 19], 24 tilings
+    Even class 4: 15 tourn classes, H=[23, 5, 13, 9, 15, 5, 37, 29, 25, 29, 29, 33, 41, 31, 17], 45 tilings
+    Even class 5: 15 tourn classes, H=[9, 23, 15, 37, 11, 13, 37, 29, 25, 19, 33, 37, 29, 31, 17], 54 tilings
+    Even class 6: 15 tourn classes, H=[9, 23, 15, 11, 15, 15, 29, 25, 19, 43, 37, 29, 29, 33, 31], 62 tilings
+    Even class 7: 4 tourn classes, H=[11, 25, 43, 45], 8 tilings
+    Even class 8: 4 tourn classes, H=[9, 23, 15, 19], 12 tilings
+    Even class 9: 13 tourn classes, H=[33, 23, 15, 11, 9, 37, 25, 37, 29, 29, 33, 41, 17], 48 tilings
+    Even class 10: 2 tourn classes, H=[13, 25], 4 tilings
+    Even class 11: 5 tourn classes, H=[23, 15, 43, 37, 33], 10 tilings
+    Even class 12: 8 tourn classes, H=[23, 15, 33, 37, 29, 29, 33, 31], 18 tilings
+    Even class 13: 8 tourn classes, H=[33, 13, 37, 43, 37, 29, 45, 31], 28 tilings
+    Even class 14: 3 tourn classes, H=[11, 29, 45], 6 tilings
+    Even class 15: 9 tourn classes, H=[9, 33, 23, 37, 25, 19, 29, 33, 41], 28 tilings
+    Even class 16: 5 tourn classes, H=[13, 29, 43, 37, 31], 20 tilings
+    Even class 17: 4 tourn classes, H=[9, 43, 37, 31], 14 tilings
+    Even class 18: 9 tourn classes, H=[23, 33, 17, 37, 29, 25, 45, 29, 29], 19 tilings
+    Even class 19: 3 tourn classes, H=[23, 17, 25], 10 tilings
+    Even class 20: 12 tourn classes, H=[23, 23, 17, 37, 27, 37, 19, 33, 37, 33, 41, 31], 38 tilings
+    Even class 21: 4 tourn classes, H=[37, 29, 31, 17], 5 tilings
+    Even class 22: 13 tourn classes, H=[33, 23, 37, 37, 29, 25, 19, 43, 37, 29, 29, 45, 33], 35 tilings
+    Even class 23: 11 tourn classes, H=[33, 15, 37, 29, 25, 19, 43, 37, 29, 33, 31], 34 tilings
+    Even class 24: 16 tourn classes, H=[23, 33, 17, 37, 27, 37, 29, 25, 45, 33, 43, 37, 45, 33, 41, 31], 45 tilings
+    Even class 25: 9 tourn classes, H=[23, 37, 29, 19, 33, 43, 37, 33, 41], 26 tilings
+    Even class 26: 4 tourn classes, H=[29, 45, 31, 17], 7 tilings
+    Even class 27: 3 tourn classes, H=[37, 33, 41], 8 tilings
+    Even class 28: 3 tourn classes, H=[23, 37, 37], 10 tilings
+    Even class 29: 9 tourn classes, H=[33, 23, 15, 37, 43, 29, 29, 33, 41], 17 tilings
+    Even class 30: 5 tourn classes, H=[27, 33, 43, 33, 41], 16 tilings
+    Even class 31: 6 tourn classes, H=[37, 25, 43, 29, 33, 41], 24 tilings
+    Even class 32: 9 tourn classes, H=[37, 37, 25, 45, 43, 37, 29, 29, 45], 34 tilings
+    Even class 33: 5 tourn classes, H=[23, 17, 37, 27, 41], 10 tilings
+    Even class 34: 8 tourn classes, H=[15, 37, 25, 43, 37, 29, 33, 31], 22 tilings
+    Even class 35: 3 tourn classes, H=[23, 37, 45], 5 tilings
+    Even class 36: 9 tourn classes, H=[23, 17, 37, 45, 33, 37, 29, 33, 41], 22 tilings
+    Even class 37: 2 tourn classes, H=[29, 45], 4 tilings
+    Even class 38: 5 tourn classes, H=[37, 19, 43, 37, 33], 10 tilings
+    Even class 39: 4 tourn classes, H=[23, 45, 29, 41], 8 tilings
+    Even class 40: 3 tourn classes, H=[37, 45, 43], 5 tilings
+    Even class 41: 4 tourn classes, H=[17, 37, 27, 41], 6 tilings
+    Even class 42: 4 tourn classes, H=[37, 45, 43, 37], 14 tilings
+    Even class 43: 4 tourn classes, H=[37, 19, 29, 33], 8 tilings
+    Even class 44: 1 tourn classes, H=[41], 1 tilings
+    Even class 45: 3 tourn classes, H=[33, 43, 41], 4 tilings
+    Even class 46: 3 tourn classes, H=[33, 45, 31], 4 tilings
+    Even class 47: 1 tourn classes, H=[29], 1 tilings
+    Even class 48: 1 tourn classes, H=[17], 2 tilings
+    Even class 49: 3 tourn classes, H=[23, 15, 19], 6 tilings
+    Even class 50: 2 tourn classes, H=[37, 27], 6 tilings
+    Even class 51: 5 tourn classes, H=[23, 33, 37, 29, 31], 10 tilings
+    Even class 52: 3 tourn classes, H=[23, 15, 19], 6 tilings
+    Even class 53: 3 tourn classes, H=[23, 37, 29], 8 tilings
+    Even class 54: 5 tourn classes, H=[25, 29, 29, 33, 17], 12 tilings
+    Even class 55: 1 tourn classes, H=[37], 2 tilings
+    Even class 56: 3 tourn classes, H=[33, 37, 37], 6 tilings
+    Even class 57: 2 tourn classes, H=[29, 31], 4 tilings
+    Even class 58: 2 tourn classes, H=[33, 37], 3 tilings
+    Even class 59: 1 tourn classes, H=[41], 3 tilings
+    Even class 60: 1 tourn classes, H=[37], 4 tilings
+    Even class 61: 2 tourn classes, H=[33, 37], 4 tilings
+    Even class 62: 1 tourn classes, H=[25], 4 tilings
+    Even class 63: 4 tourn classes, H=[33, 37, 43, 37], 8 tilings
+    Even class 64: 3 tourn classes, H=[43, 33, 41], 8 tilings
+    Even class 65: 2 tourn classes, H=[37, 31], 6 tilings
+    Even class 66: 3 tourn classes, H=[23, 33, 31], 6 tilings
+    Even class 67: 2 tourn classes, H=[37, 45], 3 tilings
+    Even class 68: 2 tourn classes, H=[37, 45], 3 tilings
+    Even class 69: 1 tourn classes, H=[37], 2 tilings
+    Even class 70: 2 tourn classes, H=[33, 37], 4 tilings
+    Even class 71: 1 tourn classes, H=[29], 2 tilings
+    Even class 72: 1 tourn classes, H=[23], 2 tilings
+    Even class 73: 1 tourn classes, H=[17], 2 tilings
+    Even class 74: 2 tourn classes, H=[23, 19], 4 tilings
+    Even class 75: 2 tourn classes, H=[15, 19], 4 tilings
+    Even class 76: 1 tourn classes, H=[29], 2 tilings
+    Even class 77: 1 tourn classes, H=[33], 2 tilings
+    Even class 78: 1 tourn classes, H=[33], 2 tilings
+    Even class 79: 1 tourn classes, H=[27], 2 tilings
+    Even class 80: 1 tourn classes, H=[25], 2 tilings
+    Even class 81: 1 tourn classes, H=[23], 2 tilings
+    Even class 82: 1 tourn classes, H=[25], 2 tilings
+    Even class 83: 1 tourn classes, H=[17], 1 tilings
+    Even class 84: 1 tourn classes, H=[15], 2 tilings
+    Even class 85: 1 tourn classes, H=[33], 1 tilings
+    Even class 86: 1 tourn classes, H=[31], 2 tilings
+    Even class 87: 1 tourn classes, H=[29], 1 tilings
+    Even class 88: 1 tourn classes, H=[29], 1 tilings
+    Even class 89: 1 tourn classes, H=[23], 2 tilings
+    Even class 90: 1 tourn classes, H=[17], 1 tilings
+
+  Even graph classes per tournament class:
+    Tourn class 0 (H=1): 1 even classes, 1 tilings
+    Tourn class 1 (H=3): 1 even classes, 2 tilings
+    Tourn class 2 (H=9): 5 even classes, 18 tilings
+    Tourn class 3 (H=23): 15 even classes, 46 tilings
+    Tourn class 4 (H=33): 17 even classes, 33 tilings
+    Tourn class 5 (H=23): 17 even classes, 46 tilings
+    Tourn class 6 (H=15): 13 even classes, 30 tilings
+    Tourn class 7 (H=17): 11 even classes, 17 tilings
+    Tourn class 8 (H=5): 4 even classes, 5 tilings
+    Tourn class 9 (H=37): 18 even classes, 37 tilings
+    Tourn class 10 (H=11): 6 even classes, 22 tilings
+    Tourn class 11 (H=13): 6 even classes, 26 tilings
+    Tourn class 12 (H=9): 5 even classes, 18 tilings
+    Tourn class 13 (H=15): 3 even classes, 6 tilings
+    Tourn class 14 (H=3): 1 even classes, 2 tilings
+    Tourn class 15 (H=27): 8 even classes, 18 tilings
+    Tourn class 16 (H=15): 3 even classes, 10 tilings
+    Tourn class 17 (H=5): 4 even classes, 10 tilings
+    Tourn class 18 (H=37): 26 even classes, 74 tilings
+    Tourn class 19 (H=29): 14 even classes, 29 tilings
+    Tourn class 20 (H=25): 19 even classes, 50 tilings
+    Tourn class 21 (H=19): 15 even classes, 38 tilings
+    Tourn class 22 (H=45): 12 even classes, 15 tilings
+    Tourn class 23 (H=33): 9 even classes, 22 tilings
+    Tourn class 24 (H=43): 21 even classes, 86 tilings
+    Tourn class 25 (H=37): 23 even classes, 74 tilings
+    Tourn class 26 (H=29): 14 even classes, 29 tilings
+    Tourn class 27 (H=29): 20 even classes, 58 tilings
+    Tourn class 28 (H=45): 7 even classes, 15 tilings
+    Tourn class 29 (H=33): 23 even classes, 66 tilings
+    Tourn class 30 (H=41): 18 even classes, 41 tilings
+    Tourn class 31 (H=31): 19 even classes, 62 tilings
+    Tourn class 32 (H=9): 1 even classes, 1 tilings
+    Tourn class 33 (H=17): 8 even classes, 17 tilings
+
+  INJECTIVITY CHECK:
+  Tournament class determines even class: False
+  Even class determines tournament class: False
+  → MANY-TO-MANY: both directions have multiplicity
+
+  TILINGS PER TOURNAMENT CLASS:
+    Class 0 (H=1): 1 tilings
+    Class 1 (H=3): 2 tilings
+    Class 2 (H=9): 18 tilings
+    Class 3 (H=23): 46 tilings
+    Class 4 (H=33): 33 tilings
+    Class 5 (H=23): 46 tilings
+    Class 6 (H=15): 30 tilings
+    Class 7 (H=17): 17 tilings
+    Class 8 (H=5): 5 tilings
+    Class 9 (H=37): 37 tilings
+    Class 10 (H=11): 22 tilings
+    Class 11 (H=13): 26 tilings
+    Class 12 (H=9): 18 tilings
+    Class 13 (H=15): 6 tilings
+    Class 14 (H=3): 2 tilings
+    Class 15 (H=27): 18 tilings
+    Class 16 (H=15): 10 tilings
+    Class 17 (H=5): 10 tilings
+    Class 18 (H=37): 74 tilings
+    Class 19 (H=29): 29 tilings
+    Class 20 (H=25): 50 tilings
+    Class 21 (H=19): 38 tilings
+    Class 22 (H=45): 15 tilings
+    Class 23 (H=33): 22 tilings
+    Class 24 (H=43): 86 tilings
+    Class 25 (H=37): 74 tilings
+    Class 26 (H=29): 29 tilings
+    Class 27 (H=29): 58 tilings
+    Class 28 (H=45): 15 tilings
+    Class 29 (H=33): 66 tilings
+    Class 30 (H=41): 41 tilings
+    Class 31 (H=31): 62 tilings
+    Class 32 (H=9): 1 tilings
+    Class 33 (H=17): 17 tilings
+
+  TILINGS vs H:
+   Class     H  #tilings  H == #til?
+       0     1         1           ✓
+       1     3         2           ✗
+       2     9        18           ✗
+       3    23        46           ✗
+       4    33        33           ✓
+       5    23        46           ✗
+       6    15        30           ✗
+       7    17        17           ✓
+       8     5         5           ✓
+       9    37        37           ✓
+      10    11        22           ✗
+      11    13        26           ✗
+      12     9        18           ✗
+      13    15         6           ✗
+      14     3         2           ✗
+      15    27        18           ✗
+      16    15        10           ✗
+      17     5        10           ✗
+      18    37        74           ✗
+      19    29        29           ✓
+      20    25        50           ✗
+      21    19        38           ✗
+      22    45        15           ✗
+      23    33        22           ✗
+      24    43        86           ✗
+      25    37        74           ✗
+      26    29        29           ✓
+      27    29        58           ✗
+      28    45        15           ✗
+      29    33        66           ✗
+      30    41        41           ✓
+      31    31        62           ✗
+      32     9         1           ✗
+      33    17        17           ✓
+
+  Time: 0.3s
+
+DONE.
