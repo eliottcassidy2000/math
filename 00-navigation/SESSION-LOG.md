@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S271 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S270
+**Summary of work:** MAJOR: Transitive class translucent graph = PERMUTOHEDRON. All translucent components within a class are isomorphic. Connected to Pilaud-Santos quotientope theory.
+
+**Discovery:** The translucent graph at the transitive node (H=1) is the (n-1)-dimensional permutohedron. Mechanism: transitive tournaments ↔ permutations, neutral flips ↔ adjacent transpositions.
+
+**Component structure at n=5:**
+- H=1: 1 permutohedron (120 nodes, 240 edges)
+- H=3: 40 isolated pairs (forest)
+- H=5: 10 copies of (24,18) graph
+- H=9: 20 copies of (6,3) graph
+- H=11: 30 copies of (4,2) graph
+- H≥13: isolated (0 translucent)
+
 ## opus-2026-03-23-S270 — 2026-03-23
 
 **Account:** opus
