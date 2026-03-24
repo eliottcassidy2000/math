@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-23-S20el — 2026-03-23
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-23-S20eg (context overflow, resumed)
+**Summary of work:** PROVED the exact D(n) defect-1 Burnside formula for SL_mine. Discovered that T-2E != SL_mine (multi-edge correction). Computed D(n) to n=24.
+
+**Key results:**
+1. **PROVED:** R(ct) = k * 2^{a(ct)} for cycle types with exactly one even cycle 2k, R=0 otherwise. Each even 2k-cycle creates one odd-reversal arc orbit of size k.
+2. **PROVED:** D(n) = (1/n!) sum_{single-even-cycle ct} count(ct) * k * 2^{a(ct)} via orbit direction analysis.
+3. **VERIFIED:** Brute-force confirmation at n=3..7 — all R(ct) values match formula exactly.
+4. **DISCOVERED:** Direct computation shows SL_mine(6)=58, D(6)=60. Correction D-SL_mine=2 from one class with |Aut|=3. Opus had SL(7)=324 vs my D(7)=328, correction=4.
+5. **CORRECTED:** T-2E != SL_mine due to multi-edges in metagraph. Multi-edge surplus = 0,0,12,66,416 at n=3..7.
+6. **COMPUTED:** D(3..12) = 2, 6, 16, 60, 328, 3160, 54928, 1722992, 97323552, 9941203552.
+7. **Twin dominance:** twin_SL/D -> 1 as n grows (0.988 at n=9).
+
+**New contributions:** HYP-1744 through HYP-1748; 6 computation scripts; updated OPEN-Q-039.
+**Unresolved:** Exact SL_mine for n>=8 (needs correction from |Aut|>1 classes); exact multi-edge formula; gap_orbits formula.
+
 ## opus-2026-03-23-S268 — 2026-03-23
 
 **Account:** opus
@@ -23,8 +41,8 @@ Entry format:
 1. Mean reversion E[ΔH] = 8.35 - 0.38H at n=6 (vs -2/n = -0.33)
 2. Fixed point H* = 22.0 ≈ E[H] = 22.5 (OU equilibrium)
 3. Channel: after t=11 steps, Pr[stay] ≈ 1/V (fully mixed)
-4. Code rate R = 0.34 at n=5,6, → 1/2 asymptotically
-5. Hitting time transitive→regular = 115 steps at n=6
+4. Code rate R = 0.34 at n=5,6, -> 1/2 asymptotically
+5. Hitting time transitive->regular = 115 steps at n=6
 
 ## opus-2026-03-23-S267 — 2026-03-23
 

@@ -1,0 +1,114 @@
+================================================================================
+  BRUTE-FORCE R(ct) PER CYCLE TYPE
+  kind-pasteur-2026-03-23-S20eh
+================================================================================
+
+============================================================
+  n = 3, m = 3 arcs, 2^m = 8 tournaments
+============================================================
+  ct=(2, 1): R=4, perms=3, total=12
+
+  Total raw = 12
+  SL_mine = 12 / 6 = 2
+  Expected SL_mine = T - 2E = 4 - 2*1 = 2
+  MATCH!
+
+  ALL cycle types with even parts:
+    (2, 1)                even=[2]  R=     4  perms=     3  contrib=      12
+
+  Time: 0.0s
+
+============================================================
+  n = 4, m = 6 arcs, 2^m = 64 tournaments
+============================================================
+  ct=(4,): R=8, perms=6, total=48
+  ct=(2, 1, 1): R=16, perms=6, total=96
+
+  Total raw = 144
+  SL_mine = 144 / 24 = 6
+  Expected SL_mine = T - 2E = 16 - 2*5 = 6
+  MATCH!
+
+  ALL cycle types with even parts:
+    (4,)                  even=[4]  R=     8  perms=     6  contrib=      48
+    (2, 1, 1)             even=[2]  R=    16  perms=     6  contrib=      96
+    (2, 2)                even=[2, 2]  R=     0  perms=     3  contrib=       0
+
+  Time: 0.0s
+
+============================================================
+  n = 5, m = 10 arcs, 2^m = 1024 tournaments
+============================================================
+  ct=(4, 1): R=16, perms=30, total=480
+  ct=(3, 2): R=8, perms=20, total=160
+  ct=(2, 1, 1, 1): R=128, perms=10, total=1280
+
+  Total raw = 1920
+  SL_mine = 1920 / 120 = 16
+  Expected SL_mine = T - 2E = 88 - 2*30 = 28
+  OFF BY -12
+
+  ALL cycle types with even parts:
+    (4, 1)                even=[4]  R=    16  perms=    30  contrib=     480
+    (3, 2)                even=[2]  R=     8  perms=    20  contrib=     160
+    (2, 2, 1)             even=[2, 2]  R=     0  perms=    15  contrib=       0
+    (2, 1, 1, 1)          even=[2]  R=   128  perms=    10  contrib=    1280
+
+  Time: 0.1s
+
+============================================================
+  n = 6, m = 15 arcs, 2^m = 32768 tournaments
+============================================================
+  ct=(6,): R=24, perms=120, total=2880
+  ct=(4, 1, 1): R=64, perms=90, total=5760
+  ct=(3, 2, 1): R=32, perms=120, total=3840
+  ct=(2, 1, 1, 1, 1): R=2048, perms=15, total=30720
+
+  Total raw = 43200
+  SL_mine = 43200 / 720 = 60
+  Expected SL_mine = T - 2E = 704 - 2*290 = 124
+  OFF BY -64
+
+  ALL cycle types with even parts:
+    (6,)                  even=[6]  R=    24  perms=   120  contrib=    2880
+    (3, 2, 1)             even=[2]  R=    32  perms=   120  contrib=    3840
+    (4, 2)                even=[4, 2]  R=     0  perms=    90  contrib=       0
+    (4, 1, 1)             even=[4]  R=    64  perms=    90  contrib=    5760
+    (2, 2, 1, 1)          even=[2, 2]  R=     0  perms=    45  contrib=       0
+    (2, 2, 2)             even=[2, 2, 2]  R=     0  perms=    15  contrib=       0
+    (2, 1, 1, 1, 1)       even=[2]  R=  2048  perms=    15  contrib=   30720
+
+  Time: 12.8s
+
+============================================================
+  n = 7, m = 21 arcs, 2^m = 2097152 tournaments
+============================================================
+  ct=(6, 1): R=48, perms=840, total=40320
+  ct=(5, 2): R=16, perms=504, total=8064
+  ct=(4, 3): R=32, perms=420, total=13440
+  ct=(4, 1, 1, 1): R=512, perms=210, total=107520
+  ct=(3, 2, 1, 1): R=256, perms=420, total=107520
+  ct=(2, 1, 1, 1, 1, 1): R=65536, perms=21, total=1376256
+
+  Total raw = 1653120
+  SL_mine = 1653120 / 5040 = 328
+  Expected SL_mine = T - 2E = 8912 - 2*4086 = 740
+  OFF BY -412
+
+  ALL cycle types with even parts:
+    (6, 1)                even=[6]  R=    48  perms=   840  contrib=   40320
+    (4, 2, 1)             even=[4, 2]  R=     0  perms=   630  contrib=       0
+    (5, 2)                even=[2]  R=    16  perms=   504  contrib=    8064
+    (4, 3)                even=[4]  R=    32  perms=   420  contrib=   13440
+    (3, 2, 1, 1)          even=[2]  R=   256  perms=   420  contrib=  107520
+    (4, 1, 1, 1)          even=[4]  R=   512  perms=   210  contrib=  107520
+    (3, 2, 2)             even=[2, 2]  R=     0  perms=   210  contrib=       0
+    (2, 2, 2, 1)          even=[2, 2, 2]  R=     0  perms=   105  contrib=       0
+    (2, 2, 1, 1, 1)       even=[2, 2]  R=     0  perms=   105  contrib=       0
+    (2, 1, 1, 1, 1, 1)    even=[2]  R= 65536  perms=    21  contrib= 1376256
+
+  Time: 1523.4s
+  (Skipping larger n due to time)
+
+DONE.
+================================================================================

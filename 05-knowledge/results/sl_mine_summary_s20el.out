@@ -1,0 +1,59 @@
+================================================================================
+  SL_mine SUMMARY AND CORRECTED METAGRAPH EQUATIONS
+  kind-pasteur-2026-03-23-S20el
+================================================================================
+
+CORRECTED METAGRAPH EQUATIONS:
+  T = SL_mine + non_SL
+  non_SL >= 2*E (multi-edges possible)
+  D >= SL_mine (orbit size correction)
+  E = (T - SL_mine)/2 ONLY IF no multi-edges
+
+  n        V          T        D  SL_mine   D-SL   non_SL       2E  surplus     D/V   tw/D
+----------------------------------------------------------------------------------------------------
+  3        2          4        2        2      0        2        2        0   1.000  1.000
+  4        4         16        6        6      0       10       10        0   1.500  0.667
+  5       12         88       16       16      0       72       60       12   1.333  0.750
+  6       56        704       60       58      2      646      580       66   1.071  0.800
+  7      456       8912      328 <=    328   ? >=   8584     8172   >=412   0.719  0.902
+  8     6880     188288     3160 <=   3160   ? >= 185128   182322   >=2806   0.459  0.962
+  9   191536    6847200    54928 <=  54928   ? >=6792272  6761502   >=30770   0.287  0.988
+ 10  9733056  437069312  1722992 <=1722992   ? >=435346320        ?        ?   0.177  0.996
+ 11 903753248 49674860096 97323552 <=97323552   ? >=49577536544        ?        ?   0.108  0.999
+ 12 154108311168 10169189235712 9941203552 <=9941203552   ? >=10159248032160        ?        ?   0.065  1.000
+ 13 48542114686912 3786065734484352 1849298084096 <=1849298084096   ? >=3784216436400256        ?        ?   0.038  1.000
+ 14 28401423719122304 2584485140200024064 631047433809344 <=631047433809344   ? >=2583854092766214720        ?        ?   0.022  1.000
+ 15 31021002160355166848 3257188815249086506240 397619928514258944 <=397619928514258944   ? >=3256791195320572247296        ?        ?   0.013  1.000
+
+LEGEND:
+  V = iso classes, T = total arc orbit transitions
+  D = Burnside defect-1 count (Burnside-computable upper bound on SL_mine)
+  SL_mine = actual self-loop orbit count
+  D-SL = orbit size correction (from |Aut|>1 classes)
+  non_SL = non-self-loop transitions = T - SL_mine
+  2E = twice the number of simple edges
+  surplus = non_SL - 2E = multi-edge surplus
+  tw/D = fraction of D from 2-cycle types (twin contribution)
+
+================================================================================
+KEY FORMULAE (all Burnside-computable):
+================================================================================
+
+V(n) = (1/n!) sum_{ct all-odd} count(ct) * 2^{a(ct)}
+T(n) = (1/n!) sum_{ct all-odd} count(ct) * 2^{a(ct)} * C(f(ct),2)
+D(n) = (1/n!) sum_{ct with 1 even cycle 2k} count(ct) * k * 2^{a(ct)}
+
+where a(ct) = sum(c//2) + sum(gcd(ci,cj)) and f(ct) = #{1-cycles}
+
+RELATIONS:
+  SL_mine <= D (equality iff all SL arc orbits have size 1)
+  E <= (T - SL_mine)/2 (equality iff no multi-edges)
+  E = (T - D + correction)/2 + multi_edge_correction
+
+ASYMPTOTICS:
+  D/V -> 0 (most classes have no self-loops)
+  twin/D -> 1 (2-cycle types dominate)
+  D ~ twin_SL ~ sum over k-cycles of k*2^{a(2,k^*)} terms
+
+DONE.
+================================================================================

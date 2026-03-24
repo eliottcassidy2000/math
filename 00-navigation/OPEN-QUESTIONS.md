@@ -755,6 +755,14 @@ G_n = Q_{C(n,2)} / S_n is a genuinely new mathematical object (no prior literatu
   E(G_n) ≈ (T_n - twin_SL)/2 - D(n-2) [99.6% accurate, all Burnside]
   E(G_n) ≈ T_n/2 for n ≥ 12 [asymptotic]
 
+**SL_mine FORMULA (kind-pasteur-S20eh, PROVED):**
+  D(n) = (1/n!) sum_{ct with 1 even cycle 2k} count(ct) * k * 2^{a(ct)}
+  SL_mine <= D(n) with small correction from |Aut|>1 classes
+  D - SL_mine = 0, 0, 0, 2, 4 at n=3..7
+  D(3..12) = 2, 6, 16, 60, 328, 3160, 54928, 1722992, 97323552, 9941203552
+  CORRECTED: T - 2E != SL_mine (multi-edge surplus exists at n>=5)
+  Multi-edge surplus = 0, 0, 12, 66, 416 at n=3..7
+
 **STRUCTURAL LAWS (19+ verified):** DAG, BBK impossibility, rib crossover, spine ~4-regular, ribs linear in n, sea dominates, ΔH=2^(n-2), cell uniformity, lattice oscillation, etc.
 
 **REMAINING:** Exact formula for gap_orbits (= 2,5,20,86,490,3703,47889); twin_SL residual; spectral gap behavior; chi=n-1 conjecture proof.

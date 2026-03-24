@@ -1,0 +1,579 @@
+================================================================================
+  ORBIT ANALYSIS FOR DEFECT-1
+  kind-pasteur-2026-03-23-S20ei
+================================================================================
+
+############################################################
+  n = 3
+############################################################
+
+  ct = (2, 1)
+    Total orbits: 2
+    Even-reversal orbits: 1 (sizes: [2])
+    Odd-reversal orbits: 1 (sizes: [1])
+      Orbit 0: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(0, 1)]
+      Orbit 1: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 2), (1, 2)]
+    -> Exactly 1 odd orbit of size 1 (transposition arc). Defect=1 from this. Other orbits must have defect 0.
+    -> Free bits from even orbits: 1
+    -> R_theory = 2 * 2^1 = 4
+    -> R_theory = 2^2 = 4
+
+############################################################
+  n = 4
+############################################################
+
+  ct = (4,)
+    Total orbits: 2
+    Even-reversal orbits: 1 (sizes: [4])
+    Odd-reversal orbits: 1 (sizes: [2])
+      Orbit 0: size=4, rev=2, [EVEN] dirs=PPRR
+        arcs: [(0, 1), (1, 2), (2, 3), (0, 3)]
+      Orbit 1: size=2, rev=1, [ODD*] dirs=PR
+        arcs: [(0, 2), (1, 3)]
+    -> 1 odd orbits (sizes: [2])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 1.
+    -> Single odd orbit of size 2. Defect from this orbit is odd (1,3,5...).
+    -> For defect=1: this orbit contributes 1 defect, all even orbits contribute 0.
+
+  ct = (2, 2)
+    Total orbits: 4
+    Even-reversal orbits: 2 (sizes: [2, 2])
+    Odd-reversal orbits: 2 (sizes: [1, 1])
+      Orbit 0: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(0, 1)]
+      Orbit 1: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 3), (1, 2)]
+      Orbit 3: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(2, 3)]
+    -> 2 odd orbits (sizes: [1, 1])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 2.
+    -> DEFECT >= 2 > 1. R should be 0 for defect-1.
+
+  ct = (2, 1, 1)
+    Total orbits: 4
+    Even-reversal orbits: 3 (sizes: [2, 2, 1])
+    Odd-reversal orbits: 1 (sizes: [1])
+      Orbit 0: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(0, 1)]
+      Orbit 1: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 2), (1, 2)]
+      Orbit 2: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 3), (1, 3)]
+      Orbit 3: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(2, 3)]
+    -> Exactly 1 odd orbit of size 1 (transposition arc). Defect=1 from this. Other orbits must have defect 0.
+    -> Free bits from even orbits: 3
+    -> R_theory = 2 * 2^3 = 16
+    -> R_theory = 2^4 = 16
+
+############################################################
+  n = 5
+############################################################
+
+  ct = (4, 1)
+    Total orbits: 3
+    Even-reversal orbits: 2 (sizes: [4, 4])
+    Odd-reversal orbits: 1 (sizes: [2])
+      Orbit 0: size=4, rev=2, [EVEN] dirs=PPRR
+        arcs: [(0, 1), (1, 2), (2, 3), (0, 3)]
+      Orbit 1: size=2, rev=1, [ODD*] dirs=PR
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=4, rev=0, [EVEN] dirs=PPPP
+        arcs: [(0, 4), (1, 4), (2, 4), (3, 4)]
+    -> 1 odd orbits (sizes: [2])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 1.
+    -> Single odd orbit of size 2. Defect from this orbit is odd (1,3,5...).
+    -> For defect=1: this orbit contributes 1 defect, all even orbits contribute 0.
+
+  ct = (3, 2)
+    Total orbits: 3
+    Even-reversal orbits: 2 (sizes: [3, 6])
+    Odd-reversal orbits: 1 (sizes: [1])
+      Orbit 0: size=3, rev=2, [EVEN] dirs=PRR
+        arcs: [(0, 1), (1, 2), (0, 2)]
+      Orbit 1: size=6, rev=0, [EVEN] dirs=PPPPPP
+        arcs: [(0, 3), (1, 4), (2, 3), (0, 4), (1, 3), (2, 4)]
+      Orbit 2: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(3, 4)]
+    -> Exactly 1 odd orbit of size 1 (transposition arc). Defect=1 from this. Other orbits must have defect 0.
+    -> Free bits from even orbits: 2
+    -> R_theory = 2 * 2^2 = 8
+    -> R_theory = 2^3 = 8
+
+  ct = (2, 2, 1)
+    Total orbits: 6
+    Even-reversal orbits: 4 (sizes: [2, 2, 2, 2])
+    Odd-reversal orbits: 2 (sizes: [1, 1])
+      Orbit 0: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(0, 1)]
+      Orbit 1: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 3), (1, 2)]
+      Orbit 3: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 4), (1, 4)]
+      Orbit 4: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(2, 3)]
+      Orbit 5: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(2, 4), (3, 4)]
+    -> 2 odd orbits (sizes: [1, 1])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 2.
+    -> DEFECT >= 2 > 1. R should be 0 for defect-1.
+
+  ct = (2, 1, 1, 1)
+    Total orbits: 7
+    Even-reversal orbits: 6 (sizes: [2, 2, 2, 1, 1, 1])
+    Odd-reversal orbits: 1 (sizes: [1])
+      Orbit 0: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(0, 1)]
+      Orbit 1: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 2), (1, 2)]
+      Orbit 2: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 3), (1, 3)]
+      Orbit 3: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 4), (1, 4)]
+      Orbit 4: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(2, 3)]
+      Orbit 5: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(2, 4)]
+      Orbit 6: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(3, 4)]
+    -> Exactly 1 odd orbit of size 1 (transposition arc). Defect=1 from this. Other orbits must have defect 0.
+    -> Free bits from even orbits: 6
+    -> R_theory = 2 * 2^6 = 128
+    -> R_theory = 2^7 = 128
+
+############################################################
+  n = 6
+############################################################
+
+  ct = (6,)
+    Total orbits: 3
+    Even-reversal orbits: 2 (sizes: [6, 6])
+    Odd-reversal orbits: 1 (sizes: [3])
+      Orbit 0: size=6, rev=2, [EVEN] dirs=PPPPRR
+        arcs: [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (0, 5)]
+      Orbit 1: size=6, rev=2, [EVEN] dirs=PPPRPR
+        arcs: [(0, 2), (1, 3), (2, 4), (3, 5), (0, 4), (1, 5)]
+      Orbit 2: size=3, rev=1, [ODD*] dirs=PPR
+        arcs: [(0, 3), (1, 4), (2, 5)]
+    -> 1 odd orbits (sizes: [3])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 1.
+    -> Single odd orbit of size 3. Defect from this orbit is odd (1,3,5...).
+    -> For defect=1: this orbit contributes 1 defect, all even orbits contribute 0.
+
+  ct = (4, 2)
+    Total orbits: 5
+    Even-reversal orbits: 3 (sizes: [4, 4, 4])
+    Odd-reversal orbits: 2 (sizes: [2, 1])
+      Orbit 0: size=4, rev=2, [EVEN] dirs=PPRR
+        arcs: [(0, 1), (1, 2), (2, 3), (0, 3)]
+      Orbit 1: size=2, rev=1, [ODD*] dirs=PR
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=4, rev=0, [EVEN] dirs=PPPP
+        arcs: [(0, 4), (1, 5), (2, 4), (3, 5)]
+      Orbit 3: size=4, rev=0, [EVEN] dirs=PPPP
+        arcs: [(0, 5), (1, 4), (2, 5), (3, 4)]
+      Orbit 4: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(4, 5)]
+    -> 2 odd orbits (sizes: [2, 1])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 2.
+    -> DEFECT >= 2 > 1. R should be 0 for defect-1.
+
+  ct = (4, 1, 1)
+    Total orbits: 5
+    Even-reversal orbits: 4 (sizes: [4, 4, 4, 1])
+    Odd-reversal orbits: 1 (sizes: [2])
+      Orbit 0: size=4, rev=2, [EVEN] dirs=PPRR
+        arcs: [(0, 1), (1, 2), (2, 3), (0, 3)]
+      Orbit 1: size=2, rev=1, [ODD*] dirs=PR
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=4, rev=0, [EVEN] dirs=PPPP
+        arcs: [(0, 4), (1, 4), (2, 4), (3, 4)]
+      Orbit 3: size=4, rev=0, [EVEN] dirs=PPPP
+        arcs: [(0, 5), (1, 5), (2, 5), (3, 5)]
+      Orbit 4: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(4, 5)]
+    -> 1 odd orbits (sizes: [2])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 1.
+    -> Single odd orbit of size 2. Defect from this orbit is odd (1,3,5...).
+    -> For defect=1: this orbit contributes 1 defect, all even orbits contribute 0.
+
+  ct = (3, 2, 1)
+    Total orbits: 5
+    Even-reversal orbits: 4 (sizes: [3, 6, 3, 2])
+    Odd-reversal orbits: 1 (sizes: [1])
+      Orbit 0: size=3, rev=2, [EVEN] dirs=PRR
+        arcs: [(0, 1), (1, 2), (0, 2)]
+      Orbit 1: size=6, rev=0, [EVEN] dirs=PPPPPP
+        arcs: [(0, 3), (1, 4), (2, 3), (0, 4), (1, 3), (2, 4)]
+      Orbit 2: size=3, rev=0, [EVEN] dirs=PPP
+        arcs: [(0, 5), (1, 5), (2, 5)]
+      Orbit 3: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(3, 4)]
+      Orbit 4: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(3, 5), (4, 5)]
+    -> Exactly 1 odd orbit of size 1 (transposition arc). Defect=1 from this. Other orbits must have defect 0.
+    -> Free bits from even orbits: 4
+    -> R_theory = 2 * 2^4 = 32
+    -> R_theory = 2^5 = 32
+
+  ct = (2, 2, 2)
+    Total orbits: 9
+    Even-reversal orbits: 6 (sizes: [2, 2, 2, 2, 2, 2])
+    Odd-reversal orbits: 3 (sizes: [1, 1, 1])
+      Orbit 0: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(0, 1)]
+      Orbit 1: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 3), (1, 2)]
+      Orbit 3: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 4), (1, 5)]
+      Orbit 4: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 5), (1, 4)]
+      Orbit 5: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(2, 3)]
+      Orbit 6: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(2, 4), (3, 5)]
+      Orbit 7: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(2, 5), (3, 4)]
+      Orbit 8: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(4, 5)]
+    -> 3 odd orbits (sizes: [1, 1, 1])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 3.
+    -> DEFECT >= 3 > 1. R should be 0 for defect-1.
+
+  ct = (2, 2, 1, 1)
+    Total orbits: 9
+    Even-reversal orbits: 7 (sizes: [2, 2, 2, 2, 2, 2, 1])
+    Odd-reversal orbits: 2 (sizes: [1, 1])
+      Orbit 0: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(0, 1)]
+      Orbit 1: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 3), (1, 2)]
+      Orbit 3: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 4), (1, 4)]
+      Orbit 4: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 5), (1, 5)]
+      Orbit 5: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(2, 3)]
+      Orbit 6: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(2, 4), (3, 4)]
+      Orbit 7: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(2, 5), (3, 5)]
+      Orbit 8: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(4, 5)]
+    -> 2 odd orbits (sizes: [1, 1])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 2.
+    -> DEFECT >= 2 > 1. R should be 0 for defect-1.
+
+  ct = (2, 1, 1, 1, 1)
+    Total orbits: 11
+    Even-reversal orbits: 10 (sizes: [2, 2, 2, 2, 1, 1, 1, 1, 1, 1])
+    Odd-reversal orbits: 1 (sizes: [1])
+      Orbit 0: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(0, 1)]
+      Orbit 1: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 2), (1, 2)]
+      Orbit 2: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 3), (1, 3)]
+      Orbit 3: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 4), (1, 4)]
+      Orbit 4: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 5), (1, 5)]
+      Orbit 5: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(2, 3)]
+      Orbit 6: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(2, 4)]
+      Orbit 7: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(2, 5)]
+      Orbit 8: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(3, 4)]
+      Orbit 9: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(3, 5)]
+      Orbit 10: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(4, 5)]
+    -> Exactly 1 odd orbit of size 1 (transposition arc). Defect=1 from this. Other orbits must have defect 0.
+    -> Free bits from even orbits: 10
+    -> R_theory = 2 * 2^10 = 2048
+    -> R_theory = 2^11 = 2048
+
+############################################################
+  n = 7
+############################################################
+
+  ct = (6, 1)
+    Total orbits: 4
+    Even-reversal orbits: 3 (sizes: [6, 6, 6])
+    Odd-reversal orbits: 1 (sizes: [3])
+      Orbit 0: size=6, rev=2, [EVEN] dirs=PPPPRR
+        arcs: [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (0, 5)]
+      Orbit 1: size=6, rev=2, [EVEN] dirs=PPPRPR
+        arcs: [(0, 2), (1, 3), (2, 4), (3, 5), (0, 4), (1, 5)]
+      Orbit 2: size=3, rev=1, [ODD*] dirs=PPR
+        arcs: [(0, 3), (1, 4), (2, 5)]
+      Orbit 3: size=6, rev=0, [EVEN] dirs=PPPPPP
+        arcs: [(0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6)]
+    -> 1 odd orbits (sizes: [3])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 1.
+    -> Single odd orbit of size 3. Defect from this orbit is odd (1,3,5...).
+    -> For defect=1: this orbit contributes 1 defect, all even orbits contribute 0.
+
+  ct = (5, 2)
+    Total orbits: 4
+    Even-reversal orbits: 3 (sizes: [5, 5, 10])
+    Odd-reversal orbits: 1 (sizes: [1])
+      Orbit 0: size=5, rev=2, [EVEN] dirs=PPPRR
+        arcs: [(0, 1), (1, 2), (2, 3), (3, 4), (0, 4)]
+      Orbit 1: size=5, rev=2, [EVEN] dirs=PPRPR
+        arcs: [(0, 2), (1, 3), (2, 4), (0, 3), (1, 4)]
+      Orbit 2: size=10, rev=0, [EVEN] dirs=PPPPPPPPPP
+      Orbit 3: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(5, 6)]
+    -> Exactly 1 odd orbit of size 1 (transposition arc). Defect=1 from this. Other orbits must have defect 0.
+    -> Free bits from even orbits: 3
+    -> R_theory = 2 * 2^3 = 16
+    -> R_theory = 2^4 = 16
+
+  ct = (4, 3)
+    Total orbits: 4
+    Even-reversal orbits: 3 (sizes: [4, 12, 3])
+    Odd-reversal orbits: 1 (sizes: [2])
+      Orbit 0: size=4, rev=2, [EVEN] dirs=PPRR
+        arcs: [(0, 1), (1, 2), (2, 3), (0, 3)]
+      Orbit 1: size=2, rev=1, [ODD*] dirs=PR
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=12, rev=0, [EVEN] dirs=PPPPPPPPPPPP
+      Orbit 3: size=3, rev=2, [EVEN] dirs=PRR
+        arcs: [(4, 5), (5, 6), (4, 6)]
+    -> 1 odd orbits (sizes: [2])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 1.
+    -> Single odd orbit of size 2. Defect from this orbit is odd (1,3,5...).
+    -> For defect=1: this orbit contributes 1 defect, all even orbits contribute 0.
+
+  ct = (4, 2, 1)
+    Total orbits: 7
+    Even-reversal orbits: 5 (sizes: [4, 4, 4, 4, 2])
+    Odd-reversal orbits: 2 (sizes: [2, 1])
+      Orbit 0: size=4, rev=2, [EVEN] dirs=PPRR
+        arcs: [(0, 1), (1, 2), (2, 3), (0, 3)]
+      Orbit 1: size=2, rev=1, [ODD*] dirs=PR
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=4, rev=0, [EVEN] dirs=PPPP
+        arcs: [(0, 4), (1, 5), (2, 4), (3, 5)]
+      Orbit 3: size=4, rev=0, [EVEN] dirs=PPPP
+        arcs: [(0, 5), (1, 4), (2, 5), (3, 4)]
+      Orbit 4: size=4, rev=0, [EVEN] dirs=PPPP
+        arcs: [(0, 6), (1, 6), (2, 6), (3, 6)]
+      Orbit 5: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(4, 5)]
+      Orbit 6: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(4, 6), (5, 6)]
+    -> 2 odd orbits (sizes: [2, 1])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 2.
+    -> DEFECT >= 2 > 1. R should be 0 for defect-1.
+
+  ct = (4, 1, 1, 1)
+    Total orbits: 8
+    Even-reversal orbits: 7 (sizes: [4, 4, 4, 4, 1, 1, 1])
+    Odd-reversal orbits: 1 (sizes: [2])
+      Orbit 0: size=4, rev=2, [EVEN] dirs=PPRR
+        arcs: [(0, 1), (1, 2), (2, 3), (0, 3)]
+      Orbit 1: size=2, rev=1, [ODD*] dirs=PR
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=4, rev=0, [EVEN] dirs=PPPP
+        arcs: [(0, 4), (1, 4), (2, 4), (3, 4)]
+      Orbit 3: size=4, rev=0, [EVEN] dirs=PPPP
+        arcs: [(0, 5), (1, 5), (2, 5), (3, 5)]
+      Orbit 4: size=4, rev=0, [EVEN] dirs=PPPP
+        arcs: [(0, 6), (1, 6), (2, 6), (3, 6)]
+      Orbit 5: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(4, 5)]
+      Orbit 6: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(4, 6)]
+      Orbit 7: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(5, 6)]
+    -> 1 odd orbits (sizes: [2])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 1.
+    -> Single odd orbit of size 2. Defect from this orbit is odd (1,3,5...).
+    -> For defect=1: this orbit contributes 1 defect, all even orbits contribute 0.
+
+  ct = (3, 2, 2)
+    Total orbits: 7
+    Even-reversal orbits: 5 (sizes: [3, 6, 6, 2, 2])
+    Odd-reversal orbits: 2 (sizes: [1, 1])
+      Orbit 0: size=3, rev=2, [EVEN] dirs=PRR
+        arcs: [(0, 1), (1, 2), (0, 2)]
+      Orbit 1: size=6, rev=0, [EVEN] dirs=PPPPPP
+        arcs: [(0, 3), (1, 4), (2, 3), (0, 4), (1, 3), (2, 4)]
+      Orbit 2: size=6, rev=0, [EVEN] dirs=PPPPPP
+        arcs: [(0, 5), (1, 6), (2, 5), (0, 6), (1, 5), (2, 6)]
+      Orbit 3: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(3, 4)]
+      Orbit 4: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(3, 5), (4, 6)]
+      Orbit 5: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(3, 6), (4, 5)]
+      Orbit 6: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(5, 6)]
+    -> 2 odd orbits (sizes: [1, 1])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 2.
+    -> DEFECT >= 2 > 1. R should be 0 for defect-1.
+
+  ct = (3, 2, 1, 1)
+    Total orbits: 8
+    Even-reversal orbits: 7 (sizes: [3, 6, 3, 3, 2, 2, 1])
+    Odd-reversal orbits: 1 (sizes: [1])
+      Orbit 0: size=3, rev=2, [EVEN] dirs=PRR
+        arcs: [(0, 1), (1, 2), (0, 2)]
+      Orbit 1: size=6, rev=0, [EVEN] dirs=PPPPPP
+        arcs: [(0, 3), (1, 4), (2, 3), (0, 4), (1, 3), (2, 4)]
+      Orbit 2: size=3, rev=0, [EVEN] dirs=PPP
+        arcs: [(0, 5), (1, 5), (2, 5)]
+      Orbit 3: size=3, rev=0, [EVEN] dirs=PPP
+        arcs: [(0, 6), (1, 6), (2, 6)]
+      Orbit 4: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(3, 4)]
+      Orbit 5: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(3, 5), (4, 5)]
+      Orbit 6: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(3, 6), (4, 6)]
+      Orbit 7: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(5, 6)]
+    -> Exactly 1 odd orbit of size 1 (transposition arc). Defect=1 from this. Other orbits must have defect 0.
+    -> Free bits from even orbits: 7
+    -> R_theory = 2 * 2^7 = 256
+    -> R_theory = 2^8 = 256
+
+  ct = (2, 2, 2, 1)
+    Total orbits: 12
+    Even-reversal orbits: 9 (sizes: [2, 2, 2, 2, 2, 2, 2, 2, 2])
+    Odd-reversal orbits: 3 (sizes: [1, 1, 1])
+      Orbit 0: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(0, 1)]
+      Orbit 1: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 3), (1, 2)]
+      Orbit 3: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 4), (1, 5)]
+      Orbit 4: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 5), (1, 4)]
+      Orbit 5: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 6), (1, 6)]
+      Orbit 6: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(2, 3)]
+      Orbit 7: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(2, 4), (3, 5)]
+      Orbit 8: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(2, 5), (3, 4)]
+      Orbit 9: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(2, 6), (3, 6)]
+      Orbit 10: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(4, 5)]
+      Orbit 11: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(4, 6), (5, 6)]
+    -> 3 odd orbits (sizes: [1, 1, 1])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 3.
+    -> DEFECT >= 3 > 1. R should be 0 for defect-1.
+
+  ct = (2, 2, 1, 1, 1)
+    Total orbits: 13
+    Even-reversal orbits: 11 (sizes: [2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1])
+    Odd-reversal orbits: 2 (sizes: [1, 1])
+      Orbit 0: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(0, 1)]
+      Orbit 1: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 2), (1, 3)]
+      Orbit 2: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 3), (1, 2)]
+      Orbit 3: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 4), (1, 4)]
+      Orbit 4: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 5), (1, 5)]
+      Orbit 5: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 6), (1, 6)]
+      Orbit 6: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(2, 3)]
+      Orbit 7: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(2, 4), (3, 4)]
+      Orbit 8: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(2, 5), (3, 5)]
+      Orbit 9: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(2, 6), (3, 6)]
+      Orbit 10: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(4, 5)]
+      Orbit 11: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(4, 6)]
+      Orbit 12: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(5, 6)]
+    -> 2 odd orbits (sizes: [1, 1])
+    -> Complex case: need exactly 1 total defect across all orbits.
+    -> Each odd orbit contributes >=1 defect. Multiple odd orbits => defect >= 2.
+    -> DEFECT >= 2 > 1. R should be 0 for defect-1.
+
+  ct = (2, 1, 1, 1, 1, 1)
+    Total orbits: 16
+    Even-reversal orbits: 15 (sizes: [2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+    Odd-reversal orbits: 1 (sizes: [1])
+      Orbit 0: size=1, rev=1, [ODD*] dirs=R
+        arcs: [(0, 1)]
+      Orbit 1: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 2), (1, 2)]
+      Orbit 2: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 3), (1, 3)]
+      Orbit 3: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 4), (1, 4)]
+      Orbit 4: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 5), (1, 5)]
+      Orbit 5: size=2, rev=0, [EVEN] dirs=PP
+        arcs: [(0, 6), (1, 6)]
+      Orbit 6: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(2, 3)]
+      Orbit 7: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(2, 4)]
+      Orbit 8: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(2, 5)]
+      Orbit 9: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(2, 6)]
+      Orbit 10: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(3, 4)]
+      Orbit 11: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(3, 5)]
+      Orbit 12: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(3, 6)]
+      Orbit 13: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(4, 5)]
+      Orbit 14: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(4, 6)]
+      Orbit 15: size=1, rev=0, [EVEN] dirs=P
+        arcs: [(5, 6)]
+    -> Exactly 1 odd orbit of size 1 (transposition arc). Defect=1 from this. Other orbits must have defect 0.
+    -> Free bits from even orbits: 15
+    -> R_theory = 2 * 2^15 = 65536
+    -> R_theory = 2^16 = 65536
+
+DONE.
+================================================================================
