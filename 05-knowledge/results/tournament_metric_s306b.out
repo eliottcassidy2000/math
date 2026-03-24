@@ -1,0 +1,64 @@
+
+========================================================================
+  TOURNAMENT SIMILARITY METRIC: EXAMPLES AT n=5
+========================================================================
+
+  PAIRWISE WAGGLY DISTANCES:
+
+               Transitive   Near-trans   Regular      Rev-regular 
+  ------------------------------------------------------------
+  Transitive   0            0            3            3           
+  Near-trans   0            0            3            3           
+  Regular      3            3            0            0           
+  Rev-regular  3            3            0            0           
+
+  ISO CLASS COMPARISON:
+  Transitive  : H=1, 1 HPs, 1 tilings, canon=(0, 0, 0, 0, 1, 0, 0, 0, 1, 1,...
+  Near-trans  : H=1, 1 HPs, 1 tilings, canon=(0, 0, 0, 0, 1, 0, 0, 0, 1, 1,...
+  Regular     : H=15, 15 HPs, 3 tilings, canon=(0, 0, 1, 1, 1, 0, 0, 1, 1, 1,...
+  Rev-regular : H=15, 15 HPs, 3 tilings, canon=(0, 0, 1, 1, 1, 0, 0, 1, 1, 1,...
+
+========================================================================
+  USE CASE: LLM LEADERBOARD COMPARISON
+========================================================================
+
+
+  SCENARIO: You have two snapshots of an LLM benchmark leaderboard.
+
+  Snapshot 1: Model ranking A > B > C > D > E
+  Snapshot 2: Same models but B > A > C > E > D
+
+  In tournament language:
+  Snapshot 1 = transitive tournament (total order)
+  Snapshot 2 = near-transitive (2 matchups reversed: A/B and D/E)
+
+  The WAGGLY DISTANCE between these snapshots tells you:
+  "How many STRUCTURAL changes happened?"
+  Not just "how many matchups flipped" (which is Hamming distance on arcs)
+  but "how many INDEPENDENT structural changes are needed."
+
+  For 5 models (n=5, m=6 tiles):
+  - Flipping 1 matchup: waggly distance 1 (wiggly)
+  - Flipping 2 independent matchups: waggly distance ≤ 2
+  - Complete structural overhaul: waggly distance up to 3 (= n-2)
+
+  The maximum distance 3 means that at most 3 tile flips suffice
+  to convert ANY tournament into ANY other (up to isomorphism).
+
+  For 10 models (n=10, m=36 tiles):
+  - Max distance = n-2 = 8 (conjectured)
+  - Most pairs differ by d=2 (50% of class pairs)
+  - A "wiggly step" changes one tile = one matchup reversal
+  - 8 steps cover all of tournament space
+
+
+========================================================================
+  TRIANGLE INEQUALITY VERIFICATION
+========================================================================
+
+  For all triples (T1, T2, T3):
+
+  Checked 24 triples, 0 violations
+  Triangle inequality holds for all triples ✓
+
+Done. opus-2026-03-24-S306

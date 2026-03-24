@@ -1,152 +1,171 @@
-============================================================
-  Paley Tournaments as Error-Correcting Codes
-  Testing: P_7, P_11, P_13, P_23
-============================================================
+======================================================================
+  Paley Tournaments -> Error-Correcting Codes
+  Testing p = 7, 11, 13, 23
+======================================================================
 
-============================================================
-  Paley Tournament P_7
-============================================================
-  Quadratic residues mod 7: [1, 2, 4]
-  |QR| = 3 = (p-1)/2 = 3
-  Is tournament: True
-  Score sequence: [3, 3, 3, 3, 3, 3, 3]
-  Regular: True (all scores = 3)
+======================================================================
+  p = 7
+======================================================================
+  QR mod 7: [1, 2, 4]
+  p mod 4 = 3  =>  Paley TOURNAMENT (antisymmetric)
+  Tournament: True, scores: [3, 3, 3, 3, 3, 3, 3]
+  A*A^T = 0 mod 2: False
+  A*A^T over Z: diagonal=3, off-diagonal=1
 
-  Parity-check matrix H = A (mod 2):
-    Size: 7 x 7
-    GF(2) rank: 4
-    Code length n = 7
-    Code dimension k = 7 - 4 = 3
-    Null space dimension: 3
-    Null space verified: all basis vectors satisfy Hx=0
-    Computing minimum distance (brute force over 8 codewords)...
-    Minimum distance d = 4  (exact, brute force)
-    Time: 0.00s
+    C1: H=A (raw adjacency): [7, 3, 4]  (rank=4, exact, 0.00s)
+      Weight dist: w4:7
+    C2: H=A+I: [7, 4, 3]  (rank=3, exact, 0.00s)
+      Weight dist: w3:7, w4:7, w7:1
+    C3: Bordered QR (8x8): [8, 3, 4]  (rank=5, exact, 0.00s)
+      Weight dist: w4:7
+    C4: First 3 rows of A: [7, 4, 1]  (rank=3, exact, 0.00s)
+      Weight dist: w1:1, w3:4, w4:7, w5:3
+    C5: H=A^T (complement): [7, 3, 4]  (rank=4, exact, 0.00s)
+      Weight dist: w4:7
+    C6: Bordered (A+I) (8x8): [8, 3, 4]  (rank=5, exact, 0.00s)
+      Weight dist: w4:7
 
-    Weight distribution:
-      w=  0: 1 codewords
-      w=  4: 7 codewords
+    --- Dual code (use A as GENERATOR matrix) ---
+    C7: G=A (generator): [7, 4, ?]  d=3
 
-  => Code parameters: [7, 3, 4]
-  Expected: Hamming [7,4,3] -> k=4, d=3
-  MATCH: NO
+======================================================================
+  p = 11
+======================================================================
+  QR mod 11: [1, 3, 4, 5, 9]
+  p mod 4 = 3  =>  Paley TOURNAMENT (antisymmetric)
+  Tournament: True, scores: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+  A*A^T = 0 mod 2: False
+  A*A^T over Z: diagonal=5, off-diagonal=2
 
-  Self-orthogonality check (H * H^T mod 2):
-    Diagonal values mod 2: {1}
-    Off-diagonal values mod 2: {1}
-    H * H^T = 0 (mod 2): False
+    C1: H=A (raw adjacency): [11, 0, -] (trivial, rank=11)
+    C2: H=A+I: [11, 1, 11]  (rank=10, exact, 0.00s)
+      Weight dist: w11:1
+    C3: Bordered QR (12x12): [12, 0, -] (trivial, rank=12)
+    C4: First 5 rows of A: [11, 6, 3]  (rank=5, exact, 0.00s)
+      Weight dist: w3:7, w4:10, w5:11, w6:16, w7:13, w8:5, w9:1
+    C5: H=A^T (complement): [11, 0, -] (trivial, rank=11)
+    C6: Bordered (A+I) (12x12): [12, 0, -] (trivial, rank=12)
 
-============================================================
-  Paley Tournament P_11
-============================================================
-  Quadratic residues mod 11: [1, 3, 4, 5, 9]
-  |QR| = 5 = (p-1)/2 = 5
-  Is tournament: True
-  Score sequence: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
-  Regular: True (all scores = 5)
+    --- Dual code (use A as GENERATOR matrix) ---
+    C7: G=A (generator): [11, 11, ?]  d=1
 
-  Parity-check matrix H = A (mod 2):
-    Size: 11 x 11
-    GF(2) rank: 11
-    Code length n = 11
-    Code dimension k = 11 - 11 = 0
-    Null space dimension: 0
-    Null space verified: all basis vectors satisfy Hx=0
-    Computing minimum distance (brute force over 1 codewords)...
-    Minimum distance d = inf  (exact, brute force)
-    Time: 0.00s
+======================================================================
+  p = 13
+======================================================================
+  QR mod 13: [1, 3, 4, 9, 10, 12]
+  p mod 4 = 1  =>  NOT a tournament (p=1 mod 4, -1 is QR, graph is undirected)
+  Tournament: False, scores: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+  A*A^T = 0 mod 2: False
+  A*A^T over Z: diagonal=6, off-diagonal=2
 
-    Weight distribution:
-      w=  0: 1 codewords
+    C1: H=A (raw adjacency): [13, 1, 13]  (rank=12, exact, 0.00s)
+      Weight dist: w13:1
+    C2: H=A+I: [13, 0, -] (trivial, rank=13)
+    C3: Bordered QR (14x14): [14, 0, -] (trivial, rank=14)
+    C4: First 6 rows of A: [13, 7, 3]  (rank=6, exact, 0.00s)
+      Weight dist: w3:5, w4:9, w5:18, w6:31, w7:31, w8:18, w9:9, w10:5, w13:1
+    C5: H=A^T (complement): [13, 1, 13]  (rank=12, exact, 0.00s)
+      Weight dist: w13:1
+    C6: Bordered (A+I) (14x14): [14, 1, 14]  (rank=13, exact, 0.00s)
+      Weight dist: w14:1
 
-  => Code parameters: [11, 0, inf]
+    --- Dual code (use A as GENERATOR matrix) ---
+    C7: G=A (generator): [13, 12, ?]  d=2
 
-  Self-orthogonality check (H * H^T mod 2):
-    Diagonal values mod 2: {1}
-    Off-diagonal values mod 2: {0}
-    H * H^T = 0 (mod 2): False
+======================================================================
+  p = 23
+======================================================================
+  QR mod 23: [1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]
+  p mod 4 = 3  =>  Paley TOURNAMENT (antisymmetric)
+  Tournament: True, scores: [11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11]
+  A*A^T = 0 mod 2: False
+  A*A^T over Z: diagonal=11, off-diagonal=5
 
-============================================================
-  Paley Tournament P_13
-============================================================
-  WARNING: p = 13 ≡ 1 (mod 4), not 3 (mod 4).
-  Paley tournament requires p ≡ 3 (mod 4).
-  For p ≡ 1 (mod 4), -1 is a QR, so the 'tournament' is
-  actually a self-complementary graph (not a tournament).
-  We'll construct the QR-directed digraph anyway.
+    C1: H=A (raw adjacency): [23, 11, 8]  (rank=12, exact, 0.06s)
+      Weight dist: w8:506, w12:1288, w16:253
+    C2: H=A+I: [23, 12, 7]  (rank=11, exact, 0.13s)
+      Weight dist: w7:253, w8:506, w11:1288, w12:1288, w15:506, w16:253, w23:1
+    C3: Bordered QR (24x24): [24, 11, 8]  (rank=13, exact, 0.07s)
+      Weight dist: w8:506, w12:1288, w16:253
+    C4: First 11 rows of A: [23, 12, 3]  (rank=11, exact, 0.13s)
+      Weight dist: w3:1, w5:16, w7:120, w8:506, w9:400, ... (12 nonzero weights)
+    C5: H=A^T (complement): [23, 11, 8]  (rank=12, exact, 0.07s)
+      Weight dist: w8:506, w12:1288, w16:253
+    C6: Bordered (A+I) (24x24): [24, 11, 8]  (rank=13, exact, 0.07s)
+      Weight dist: w8:506, w12:1288, w16:253
 
-  Quadratic residues mod 13: [1, 3, 4, 9, 10, 12]
-  |QR| = 6 = (p-1)/2 = 6
-  Is tournament: False
-  Score sequence: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
-  Regular: True (all scores = 6)
+    --- Dual code (use A as GENERATOR matrix) ---
+    C7: G=A (generator): [23, 12, ?]  d=7
 
-  Parity-check matrix H = A (mod 2):
-    Size: 13 x 13
-    GF(2) rank: 12
-    Code length n = 13
-    Code dimension k = 13 - 12 = 1
-    Null space dimension: 1
-    Null space verified: all basis vectors satisfy Hx=0
-    Computing minimum distance (brute force over 2 codewords)...
-    Minimum distance d = 13  (exact, brute force)
-    Time: 0.00s
 
-    Weight distribution:
-      w=  0: 1 codewords
-      w= 13: 1 codewords
+======================================================================
+  GRAND SUMMARY
+======================================================================
 
-  => Code parameters: [13, 1, 13]
+  p = 7:
+    raw                   [7,3,4]         <-- dual of Hamming = simplex code
+    A+I                   [7,4,3]         <-- HAMMING [7,4,3] !
+    bordered              [8,3,4]        
+    half                  [7,4,1]        
+    A^T                   [7,3,4]         <-- dual of Hamming = simplex code
+    bordered_AI           [8,3,4]        
+    generator             [7,4,3]         <-- HAMMING [7,4,3] !
 
-  Self-orthogonality check (H * H^T mod 2):
-    Diagonal values mod 2: {0}
-    Off-diagonal values mod 2: {0, 1}
-    H * H^T = 0 (mod 2): False
+  p = 11:
+    raw                   [11,0,?]       
+    A+I                   [11,1,11]      
+    bordered              [12,0,?]       
+    half                  [11,6,3]       
+    A^T                   [11,0,?]       
+    bordered_AI           [12,0,?]       
+    generator             [11,11,1]      
 
-============================================================
-  Paley Tournament P_23
-============================================================
-  Quadratic residues mod 23: [1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]
-  |QR| = 11 = (p-1)/2 = 11
-  Is tournament: True
-  Score sequence: [11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11]
-  Regular: True (all scores = 11)
+  p = 13:
+    raw                   [13,1,13]      
+    A+I                   [13,0,?]       
+    bordered              [14,0,?]       
+    half                  [13,7,3]       
+    A^T                   [13,1,13]      
+    bordered_AI           [14,1,14]      
+    generator             [13,12,2]      
 
-  Parity-check matrix H = A (mod 2):
-    Size: 23 x 23
-    GF(2) rank: 12
-    Code length n = 23
-    Code dimension k = 23 - 12 = 11
-    Null space dimension: 11
-    Null space verified: all basis vectors satisfy Hx=0
-    Computing minimum distance (brute force over 2048 codewords)...
-    Minimum distance d = 8  (exact, brute force)
-    Time: 0.06s
+  p = 23:
+    raw                   [23,11,8]       <-- dual of Golay (expurgated)
+    A+I                   [23,12,7]       <-- GOLAY [23,12,7] !
+    bordered              [24,11,8]      
+    half                  [23,12,3]      
+    A^T                   [23,11,8]       <-- dual of Golay (expurgated)
+    bordered_AI           [24,11,8]      
+    generator             [23,12,7]       <-- GOLAY [23,12,7] !
 
-    Weight distribution:
-      w=  0: 1 codewords
-      w=  8: 506 codewords
-      w= 12: 1288 codewords
-      w= 16: 253 codewords
+======================================================================
+  VERDICT ON ORIGINAL CLAIMS
+======================================================================
 
-  => Code parameters: [23, 11, 8]
-  Expected: binary Golay [23,12,7] -> k=12, d=7
-  MATCH: NO
+  P_7 -> Hamming [7,4,3]?
+    Raw A as parity-check: [7,3,4]
+    This is the [7,3,4] SIMPLEX code = dual of Hamming [7,4,3].
+    The claim is HALF-RIGHT: A defines the Hamming code, but as
+    GENERATOR matrix (rowspace), not parity-check (nullspace).
+    A as GENERATOR matrix: [7,4,3] = Hamming [7,4,3]. CONFIRMED.
 
-  Self-orthogonality check (H * H^T mod 2):
-    Diagonal values mod 2: {1}
-    Off-diagonal values mod 2: {1}
-    H * H^T = 0 (mod 2): False
+  P_23 -> Golay [23,12,7]?
+    Raw A as parity-check: [23,11,8]
+    A as generator matrix: [23,12,7]
+    Bordered QR matrix:    [24,11,8]
+    Bordered (A+I):        [24,11,8]
+    GOLAY [23,12,7] found via: A+I
+    GOLAY [23,12,7] found via: generator
 
-============================================================
-  SUMMARY
-============================================================
-     p     n     k     d                  Code  Known?
-   ---   ---   ---   ---                   ---  ---
-     7     7     3     4               [7,3,4]  Hamming [7,4,3]  NO
-Traceback (most recent call last):
-  File "/home/e/Documents/claude/math/04-computation/paley_codes_s306.py", line 375, in <module>
-    main()
-  File "/home/e/Documents/claude/math/04-computation/paley_codes_s306.py", line 352, in main
-    print(f"  {p:4d}  {p:4d}  {k:4d}  {d:4d}  {code_str:>20s}  {known}  {match_str}")
-ValueError: Unknown format code 'd' for object of type 'float'
+  P_11 analysis:
+    A+I                   [11,1,11]
+    half                  [11,6,3]
+    generator             [11,11,1]
+
+  P_13 analysis (p=1 mod 4, NOT a tournament):
+    raw                   [13,1,13]
+    half                  [13,7,3]
+    A^T                   [13,1,13]
+    bordered_AI           [14,1,14]
+    generator             [13,12,2]
+
