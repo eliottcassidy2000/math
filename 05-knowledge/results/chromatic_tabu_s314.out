@@ -1,0 +1,110 @@
+========================================================================
+  TABU SEARCH COLORING + STRUCTURAL ANALYSIS
+  opus-2026-03-24-S314
+========================================================================
+
+========================================================================
+  n = 5
+========================================================================
+  V=10, E=21
+
+  Trying k=3-coloring (tabu search):
+    iter 0: conflicts = 7
+    iter 2: conflicts = 3
+    iter 3: conflicts = 1
+    Best conflicts after 500000 iterations: 1
+    iter 0: conflicts = 5
+    iter 2: conflicts = 3
+    iter 3: conflicts = 2
+    iter 5: conflicts = 1
+    Best conflicts after 500000 iterations: 1
+    iter 0: conflicts = 3
+    iter 1: conflicts = 2
+    iter 5: conflicts = 1
+    Best conflicts after 500000 iterations: 1
+    iter 0: conflicts = 7
+    iter 3: conflicts = 3
+    iter 5: conflicts = 2
+    iter 7: conflicts = 1
+    Best conflicts after 500000 iterations: 1
+    iter 0: conflicts = 4
+    iter 1: conflicts = 3
+    iter 2: conflicts = 2
+    iter 3: conflicts = 1
+    Best conflicts after 500000 iterations: 1
+    k=3: no coloring found
+
+  Trying k=4-coloring (tabu search):
+    iter 0: conflicts = 3
+    iter 1: conflicts = 2
+    iter 2: conflicts = 1
+    iter 8: conflicts = 0
+    k=4: VALID coloring found (seed 0)
+    Colors used: 4
+      Color 0: 3 vertices, SC=2, H in [3..13]
+      Color 1: 2 vertices, SC=1, H in [5..15]
+      Color 2: 3 vertices, SC=3, H in [1..15]
+      Color 3: 2 vertices, SC=2, H in [3..11]
+    χ ≤ 4 = n-1 confirmed!
+
+  INDEPENDENCE NUMBER:
+    α ≥ 4
+    V/α ≤ 2.50 (fractional χ lower bound)
+    V/(n-1) = 2.50 (expected class size if χ=n-1)
+
+========================================================================
+  n = 6
+========================================================================
+  V=34, E=143
+
+  Trying k=4-coloring (tabu search):
+    iter 0: conflicts = 31
+    iter 29: conflicts = 3
+    iter 34: conflicts = 2
+    Best conflicts after 500000 iterations: 2
+    iter 0: conflicts = 29
+    iter 49: conflicts = 3
+    iter 69: conflicts = 2
+    Best conflicts after 500000 iterations: 2
+    iter 0: conflicts = 34
+    iter 29: conflicts = 3
+    iter 32: conflicts = 2
+    Best conflicts after 500000 iterations: 2
+    iter 0: conflicts = 41
+    iter 67: conflicts = 3
+    iter 69: conflicts = 2
+    Best conflicts after 500000 iterations: 2
+    iter 0: conflicts = 32
+    iter 67: conflicts = 2
+    Best conflicts after 500000 iterations: 2
+    k=4: no coloring found
+
+  Trying k=5-coloring (tabu search):
+    iter 0: conflicts = 22
+    iter 9: conflicts = 3
+    iter 11: conflicts = 2
+    iter 13: conflicts = 1
+    iter 99: conflicts = 0
+    k=5: VALID coloring found (seed 0)
+    Colors used: 5
+      Color 0: 5 vertices, SC=2, H in [1..33]
+      Color 1: 7 vertices, SC=1, H in [9..37]
+      Color 2: 8 vertices, SC=3, H in [3..41]
+      Color 3: 7 vertices, SC=4, H in [5..45]
+      Color 4: 7 vertices, SC=2, H in [3..43]
+    χ ≤ 5 = n-1 confirmed!
+
+  INDEPENDENCE NUMBER:
+    α ≥ 11
+    V/α ≤ 3.09 (fractional χ lower bound)
+    V/(n-1) = 6.80 (expected class size if χ=n-1)
+
+========================================================================
+  n = 7
+========================================================================
+  V=272, E=2123
+
+  Trying k=5-coloring (tabu search):
+    iter 0: conflicts = 408
+    Best conflicts after 500000 iterations: 16
+    iter 0: conflicts = 426

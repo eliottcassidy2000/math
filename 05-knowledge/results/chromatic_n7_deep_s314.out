@@ -1,0 +1,50 @@
+========================================================================
+  DEEP ANALYSIS: χ(G_7/Z_2)
+  opus-2026-03-24-S314
+========================================================================
+
+Building metagraph for n=7...
+V=272, E=2123
+
+Degree stats: min=1, max=21, mean=15.6
+Vertices with max degree: 22
+
+========================================================================
+  1. EXACT MAX CLIQUE (Bron-Kerbosch)
+========================================================================
+    New clique size 3: [0, 1, 27]
+    New clique size 4: [2, 182, 198, 14]
+    BK iterations: 2100
+
+  ω(G_7/Z_2) = 4
+  Clique: [2, 182, 198, 14]
+  H values: [15, 15, 17, 19]
+  SC types: [False, False, False, False]
+
+========================================================================
+  2. COLORING ATTEMPTS
+========================================================================
+
+  Attempt 1: degree ordering, k=6
+  Failed within timeout
+
+  Attempt 2: H-value ordering, k=6
+  Failed within timeout
+
+  Attempt 3: c3-value ordering, k=6
+  Failed within timeout
+
+  Attempt 4: trying k=7
+  Failed
+
+========================================================================
+  SUMMARY FOR n=7
+========================================================================
+  ω = 4
+  χ ≤ ?
+  Need larger clique (currently 4, target 6)
+
+  Hoffman bound: χ ≥ 2.4771
+  Lovász theta: need SDP, skipping
+
+DONE.

@@ -1,0 +1,4 @@
+Building metagraph n=7...
+V=272, E=2123
+
+=== Testing k=5 (expect failure) ===

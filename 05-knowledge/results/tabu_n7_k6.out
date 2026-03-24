@@ -1,0 +1,12 @@
+Building metagraph n=7...
+V=272, E=2123
+
+Tabu search for 6-coloring with 10 restarts, 2M iters each:
+  Seed 0: ZERO conflicts at iter 1454!
+  *** VALID 6-COLORING FOUND! ***
+    Color 0: 44 vertices, SC=12, H in [5..189]
+    Color 1: 46 vertices, SC=15, H in [3..157]
+    Color 2: 38 vertices, SC=11, H in [3..159]
+    Color 3: 44 vertices, SC=18, H in [9..151]
+    Color 4: 56 vertices, SC=13, H in [9..159]
+    Color 5: 44 vertices, SC=19, H in [1..175]

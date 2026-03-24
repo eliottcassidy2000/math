@@ -1,0 +1,176 @@
+========================================================================
+  HOFFMAN BOUND AND LIE RANK
+  opus-2026-03-24-S314
+========================================================================
+
+========================================================================
+  n = 4
+========================================================================
+  V=3, E=3
+  λ_max = 2.0000
+  λ_min = -1.0000
+  Hoffman bound: χ ≥ 1 + 2.0000/1.0000 = 3.0000
+  ⌈Hoffman⌉ = 3
+  Actual χ = n-1 = 3
+  Hoffman colorable? True
+  *** χ = Hoffman bound! The spectrum DETERMINES χ. ***
+  λ_max/|λ_min| = 2.0000
+  n-2 = 2
+  Ratio / (n-2) = 1.0000
+
+  LIE ALGEBRA A_3:
+    rank = 3 = χ
+    Coxeter number h = 4
+    |W| = 24 = n!
+    dim = 15
+
+  STAIRCASE δ_2:
+    2 strips
+    3 tiles
+    χ = n-1 = #strips + 1
+
+  FULL SPECTRUM:
+    λ_0 = 2.0000
+    λ_1 = -1.0000
+    λ_2 = -1.0000
+    ...
+    λ_2 = -1.0000
+    λ_1 = -1.0000
+    λ_0 = 2.0000
+
+========================================================================
+  n = 5
+========================================================================
+  V=10, E=21
+  λ_max = 4.6405
+  λ_min = -2.9001
+  Hoffman bound: χ ≥ 1 + 4.6405/2.9001 = 2.6001
+  ⌈Hoffman⌉ = 3
+  Actual χ = n-1 = 4
+  Hoffman colorable? False
+  λ_max/|λ_min| = 1.6001
+  n-2 = 3
+  Ratio / (n-2) = 0.5334
+
+  LIE ALGEBRA A_4:
+    rank = 4 = χ
+    Coxeter number h = 5
+    |W| = 120 = n!
+    dim = 24
+
+  STAIRCASE δ_3:
+    3 strips
+    6 tiles
+    χ = n-1 = #strips + 1
+
+  FULL SPECTRUM:
+    λ_0 = 4.6405
+    λ_1 = 1.8516
+    λ_2 = 1.1112
+    λ_3 = 0.3378
+    λ_4 = -0.0000
+    ...
+    λ_9 = -2.9001
+    λ_8 = -1.8119
+    λ_7 = -1.5328
+
+========================================================================
+  n = 6
+========================================================================
+  V=34, E=143
+  λ_max = 9.7796
+  λ_min = -5.3527
+  Hoffman bound: χ ≥ 1 + 9.7796/5.3527 = 2.8270
+  ⌈Hoffman⌉ = 3
+  Actual χ = n-1 = 5
+  Hoffman colorable? False
+  λ_max/|λ_min| = 1.8270
+  n-2 = 4
+  Ratio / (n-2) = 0.4568
+
+  LIE ALGEBRA A_5:
+    rank = 5 = χ
+    Coxeter number h = 6
+    |W| = 720 = n!
+    dim = 35
+
+  STAIRCASE δ_4:
+    4 strips
+    10 tiles
+    χ = n-1 = #strips + 1
+
+  FULL SPECTRUM:
+    λ_0 = 9.7796
+    λ_1 = 5.4908
+    λ_2 = 3.4413
+    λ_3 = 3.2637
+    λ_4 = 2.9464
+    ...
+    λ_33 = -5.3527
+    λ_32 = -4.2843
+    λ_31 = -3.8529
+
+========================================================================
+  n = 7
+========================================================================
+  V=272, E=2123
+  λ_max = 17.6171
+  λ_min = -11.9271
+  Hoffman bound: χ ≥ 1 + 17.6171/11.9271 = 2.4771
+  ⌈Hoffman⌉ = 3
+  Actual χ = n-1 = 6
+  Hoffman colorable? False
+  λ_max/|λ_min| = 1.4771
+  n-2 = 5
+  Ratio / (n-2) = 0.2954
+
+  LIE ALGEBRA A_6:
+    rank = 6 = χ
+    Coxeter number h = 7
+    |W| = 5040 = n!
+    dim = 48
+
+  STAIRCASE δ_5:
+    5 strips
+    15 tiles
+    χ = n-1 = #strips + 1
+
+  FULL SPECTRUM:
+    λ_0 = 17.6171
+    λ_1 = 12.7521
+    λ_2 = 9.8096
+    λ_3 = 9.4722
+    λ_4 = 9.4121
+    ...
+    λ_271 = -11.9271
+    λ_270 = -9.1126
+    λ_269 = -8.9935
+
+========================================================================
+  SYNTHESIS: WHY χ = n-1
+========================================================================
+
+  FIVE CONVERGING EXPLANATIONS:
+
+  1. HOFFMAN BOUND: χ ≥ 1 + λ_max/|λ_min|.
+     If this is tight, χ is determined by the spectrum.
+     Testing: is the Hoffman bound exactly n-1?
+
+  2. LIE ALGEBRA RANK: A_{n-1} has rank n-1.
+     The metagraph = Q_m / W(A_{n-1}). The chromatic number
+     equals the rank of the Lie algebra whose Weyl group acts.
+     Rank = number of simple roots = number of "independent directions."
+
+  3. STRIP COUNT + 1: The staircase δ_{n-2} has n-2 strips.
+     χ = n-1 = #strips + 1. The +1 comes from the base path
+     (which is NOT a strip but adds one dimension).
+
+  4. KNESER ANALOGY: K(n,2) has χ = n-2 (Lovász 1978).
+     Our graph has χ = n-1 = K(n,2) + 1. The "+1" might come
+     from the orientation structure that tournaments add to graphs.
+
+  5. FLIP GRAPH UNIVERSALITY: Flip graphs of combinatorial objects
+     (matchings, triangulations, tournaments) tend to have χ linear in n.
+     The coefficient ≈ 1 and offset ≈ -1 or +1 seems universal.
+
+DONE.

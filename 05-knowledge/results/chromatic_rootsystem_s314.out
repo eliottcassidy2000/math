@@ -1,0 +1,87 @@
+========================================================================
+  ROOT SYSTEM COLORING ANALYSIS
+  opus-2026-03-24-S314
+========================================================================
+
+========================================================================
+  n = 4
+========================================================================
+  V=3, E=3
+
+  EDGE ROOT WEIGHTS:
+    weight 1 (roots of length 1): 7 arc-edge incidences, pairs: [(0, 1), (1, 2), (2, 3)]
+    weight 2 (roots of length 2): 4 arc-edge incidences, pairs: [(0, 2), (1, 3)]
+    weight 3 (roots of length 3): 2 arc-edge incidences, pairs: [(0, 3)]
+
+  COLORING ATTEMPTS:
+    wsum mod 3: well-defined=True, valid=False, colors=2
+    wsum mod 2: well-defined=True, valid=False, colors=1
+    wsum mod 4: well-defined=True, valid=False, colors=2
+    H mod 3: valid=True
+    c3 mod 3: valid=True
+    (H+c3) mod 3: valid=False
+    H mod 2: valid=False
+
+  SCORE SEQUENCE PARTITION:
+    3 distinct score types
+    Within same score type: 0/3
+    Between score types: 3/3
+
+  H parity: same=3/3, diff=0/3
+
+========================================================================
+  n = 5
+========================================================================
+  V=10, E=21
+
+  EDGE ROOT WEIGHTS:
+    weight 1 (roots of length 1): 29 arc-edge incidences, pairs: [(0, 1), (1, 2), (2, 3), (3, 4)]
+    weight 2 (roots of length 2): 25 arc-edge incidences, pairs: [(0, 2), (1, 3), (2, 4)]
+    weight 3 (roots of length 3): 19 arc-edge incidences, pairs: [(0, 3), (1, 4)]
+    weight 4 (roots of length 4): 8 arc-edge incidences, pairs: [(0, 4)]
+
+  COLORING ATTEMPTS:
+    wsum mod 4: well-defined=True, valid=False, colors=2
+    wsum mod 3: well-defined=False, valid=False, colors=3
+    wsum mod 5: well-defined=False, valid=False, colors=4
+    H mod 4: valid=False
+    c3 mod 4: valid=False
+    (H+c3) mod 4: valid=False
+    H mod 2: valid=False
+
+  SCORE SEQUENCE PARTITION:
+    7 distinct score types
+    Within same score type: 3/21
+    Between score types: 18/21
+
+  H parity: same=21/21, diff=0/21
+
+========================================================================
+  n = 6
+========================================================================
+  V=34, E=143
+
+  EDGE ROOT WEIGHTS:
+    weight 1 (roots of length 1): 172 arc-edge incidences, pairs: [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)]
+    weight 2 (roots of length 2): 159 arc-edge incidences, pairs: [(0, 2), (1, 3), (2, 4), (3, 5)]
+    weight 3 (roots of length 3): 116 arc-edge incidences, pairs: [(0, 3), (1, 4), (2, 5)]
+    weight 4 (roots of length 4): 87 arc-edge incidences, pairs: [(0, 4), (1, 5)]
+    weight 5 (roots of length 5): 37 arc-edge incidences, pairs: [(0, 5)]
+
+  COLORING ATTEMPTS:
+    wsum mod 5: well-defined=False, valid=False, colors=5
+    wsum mod 4: well-defined=False, valid=False, colors=2
+    wsum mod 6: well-defined=False, valid=False, colors=3
+    H mod 5: valid=False
+    c3 mod 5: valid=False
+    (H+c3) mod 5: valid=False
+    H mod 2: valid=False
+
+  SCORE SEQUENCE PARTITION:
+    17 distinct score types
+    Within same score type: 20/143
+    Between score types: 123/143
+
+  H parity: same=143/143, diff=0/143
+
+DONE.
