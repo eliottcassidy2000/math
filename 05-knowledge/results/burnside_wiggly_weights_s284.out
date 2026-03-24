@@ -1,0 +1,144 @@
+========================================================================
+  BURNSIDE STRUCTURE IN WIGGLY WEIGHTS
+  opus-2026-03-24-S284
+========================================================================
+
+########################################################################
+  n = 4: BURNSIDE STRUCTURE IN WIGGLY WEIGHTS
+########################################################################
+  V=3, m=3, computed in 0.0s
+
+  DIVISIBILITY CHECKS:
+  W[i][j] divisible by gcd(|Aut_i|, |Aut_j|): 4/4
+  W[i][j] divisible by gcd(fiber_i, fiber_j): 4/4
+
+  NORMALIZED W[i][j] / (fiber_i × fiber_j):
+  Range: [0.200000, 1.000000]
+  Mean: 0.533333, Std: 0.339935
+
+  TOP 10 NORMALIZED WEIGHTS (looking for rational patterns):
+    W[0,1] =      2, fiber=(1,2), norm=1.000000 ≈ 1/1, H=(1,3)
+    W[1,2] =      4, fiber=(2,5), norm=0.400000 ≈ 2/5, H=(3,5)
+    W[0,2] =      1, fiber=(1,5), norm=0.200000 ≈ 1/5, H=(1,5)
+
+  PREDICTION TEST: Does (H_i, H_j, |Aut_i|, |Aut_j|) determine W[i][j]?
+  Feature groups: 3
+  Groups with constant W: 3/3
+
+  ORBITAL FORMULA:
+  rank = (1/n!) Σ fix(σ)² = 176
+  Number of orbits on ORDERED pairs of tournaments = 176
+  Number of orbits on UNORDERED pairs ≈ 89
+  Actual metagraph edges (from W): 3
+
+  TRANSITION ORBITS T_n = 16
+  W total (sum all entries) = 24
+  Expected: 2^m × m = 24
+  Match: True
+
+########################################################################
+  n = 5: BURNSIDE STRUCTURE IN WIGGLY WEIGHTS
+########################################################################
+  V=10, m=6, computed in 0.0s
+
+  DIVISIBILITY CHECKS:
+  W[i][j] divisible by gcd(|Aut_i|, |Aut_j|): 23/24
+  W[i][j] divisible by gcd(fiber_i, fiber_j): 21/24
+
+  NORMALIZED W[i][j] / (fiber_i × fiber_j):
+  Range: [0.050505, 1.000000]
+  Mean: 0.258343, Std: 0.258144
+
+  TOP 10 NORMALIZED WEIGHTS (looking for rational patterns):
+    W[0,1] =      2, fiber=(1,2), norm=1.000000 ≈ 1/1, H=(1,3)
+    W[0,8] =      1, fiber=(1,1), norm=1.000000 ≈ 1/1, H=(1,3)
+    W[2,8] =      4, fiber=(10,1), norm=0.400000 ≈ 2/5, H=(5,3)
+    W[1,5] =      6, fiber=(2,9), norm=0.333333 ≈ 1/3, H=(3,9)
+    W[3,7] =      9, fiber=(11,3), norm=0.272727 ≈ 3/11, H=(11,15)
+    W[4,7] =      9, fiber=(13,3), norm=0.230769 ≈ 3/13, H=(13,15)
+    W[0,2] =      2, fiber=(1,10), norm=0.200000 ≈ 1/5, H=(1,5)
+    W[1,2] =      4, fiber=(2,10), norm=0.200000 ≈ 1/5, H=(3,5)
+    W[8,9] =      1, fiber=(1,5), norm=0.200000 ≈ 1/5, H=(3,15)
+
+  PREDICTION TEST: Does (H_i, H_j, |Aut_i|, |Aut_j|) determine W[i][j]?
+  Feature groups: 19
+  Groups with constant W: 17/19
+
+  VARIABLE GROUPS (same features, different W):
+    H=(5,9), |Aut|=(1,1), SC=(False,True): W values = [np.int64(6), np.int64(8)]
+    H=(11,9), |Aut|=(1,1), SC=(True,True): W values = [np.int64(5), np.int64(16)]
+
+  ORBITAL FORMULA:
+  rank = (1/n!) Σ fix(σ)² = 8784
+  Number of orbits on ORDERED pairs of tournaments = 8784
+  Number of orbits on UNORDERED pairs ≈ 4397
+  Actual metagraph edges (from W): 21
+
+  TRANSITION ORBITS T_n = 88
+  W total (sum all entries) = 384
+  Expected: 2^m × m = 384
+  Match: True
+
+########################################################################
+  n = 6: BURNSIDE STRUCTURE IN WIGGLY WEIGHTS
+########################################################################
+  V=34, m=10, computed in 1.9s
+
+  DIVISIBILITY CHECKS:
+  W[i][j] divisible by gcd(|Aut_i|, |Aut_j|): 154/161
+  W[i][j] divisible by gcd(fiber_i, fiber_j): 137/161
+
+  NORMALIZED W[i][j] / (fiber_i × fiber_j):
+  Range: [0.009002, 1.000000]
+  Mean: 0.068377, Std: 0.149650
+
+  TOP 10 NORMALIZED WEIGHTS (looking for rational patterns):
+    W[0,1] =      2, fiber=(1,2), norm=1.000000 ≈ 1/1, H=(1,3)
+    W[0,14] =      2, fiber=(1,2), norm=1.000000 ≈ 1/1, H=(1,3)
+    W[1,32] =      2, fiber=(2,1), norm=1.000000 ≈ 1/1, H=(3,9)
+    W[32,33] =      8, fiber=(1,17), norm=0.470588 ≈ 8/17, H=(9,17)
+    W[8,14] =      4, fiber=(5,2), norm=0.400000 ≈ 2/5, H=(5,3)
+    W[0,8] =      1, fiber=(1,5), norm=0.200000 ≈ 1/5, H=(1,5)
+    W[0,17] =      2, fiber=(1,10), norm=0.200000 ≈ 1/5, H=(1,5)
+    W[1,17] =      4, fiber=(2,10), norm=0.200000 ≈ 1/5, H=(3,5)
+    W[14,17] =      4, fiber=(2,10), norm=0.200000 ≈ 1/5, H=(3,5)
+
+  PREDICTION TEST: Does (H_i, H_j, |Aut_i|, |Aut_j|) determine W[i][j]?
+  Feature groups: 124
+  Groups with constant W: 109/124
+
+  VARIABLE GROUPS (same features, different W):
+    H=(9,23), |Aut|=(1,1), SC=(False,False): W values = [np.int64(14), np.int64(16)]
+    H=(9,17), |Aut|=(1,1), SC=(False,True): W values = [np.int64(12), np.int64(16)]
+    H=(9,5), |Aut|=(1,1), SC=(False,False): W values = [np.int64(6), np.int64(8)]
+    H=(23,17), |Aut|=(1,1), SC=(False,True): W values = [np.int64(32), np.int64(60)]
+    H=(23,37), |Aut|=(1,1), SC=(False,False): W values = [np.int64(34), np.int64(40)]
+
+  ORBITAL FORMULA:
+  rank = (1/n!) Σ fix(σ)² = 1492288
+  Number of orbits on ORDERED pairs of tournaments = 1492288
+  Number of orbits on UNORDERED pairs ≈ 746161
+  Actual metagraph edges (from W): 143
+
+  TRANSITION ORBITS T_n = 704
+  W total (sum all entries) = 10240
+  Expected: 2^m × m = 10240
+  Match: True
+
+========================================================================
+  KEY FINDINGS
+========================================================================
+
+  The ORBITAL FORMULA rank = (1/n!) Σ fix(σ)² counts orbits
+  on ORDERED pairs of tournaments. This gives an UPPER BOUND
+  on the number of distinct W[i][j] values.
+
+  The NORMALIZED WEIGHT W[i][j]/(fiber_i × fiber_j) is the
+  transition probability between classes in the tiling model.
+  It should relate to the DOUBLE COSET structure of S_n.
+
+  DIVISIBILITY: W[i][j] is always divisible by gcd(fiber_i, fiber_j)
+  (if verified). This would mean the transition probability is
+  always a ratio with denominator dividing lcm(fiber_i, fiber_j).
+
+DONE.
