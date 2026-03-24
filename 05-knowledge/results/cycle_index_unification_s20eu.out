@@ -1,0 +1,341 @@
+================================================================================
+  CYCLE INDEX UNIFICATION
+  kind-pasteur-2026-03-24-S20eu
+================================================================================
+
+============================================================
+  n = 3
+============================================================
+  Tiles: 1, Fixed by grid-sym: 1, Paired: 0
+  Blue tilings (grid-sym) = 2^(1+0) = 2^1 = 2
+  Total tilings = 2^1 = 2
+  Blue fraction = 2^0 = 2^0
+  Blue exponent = (tiles + fixed)/2 = (1+1)/2 = 1
+  Blue fraction exponent = 1 - 1 = 0
+
+  BURNSIDE RESULTS:
+    V(n) = 2
+    T(n) = 4
+    D(n) = 2
+    Blue tilings = 2
+    Blue/Total = 2/2 = 2^0
+
+  CYCLE TYPE TABLE (top contributors):
+                         ct    perms    a        V_c        T_c        D_c
+                     (2, 1)        3    2          0          0         12
+                  (1, 1, 1)        1    3          8         24          0
+                       (3,)        2    1          4          0          0
+
+  Time: 0.00s
+
+============================================================
+  n = 4
+============================================================
+  Tiles: 3, Fixed by grid-sym: 1, Paired: 1
+  Blue tilings (grid-sym) = 2^(1+1) = 2^2 = 4
+  Total tilings = 2^3 = 8
+  Blue fraction = 2^-1 = 2^-1
+  Blue exponent = (tiles + fixed)/2 = (3+1)/2 = 2
+  Blue fraction exponent = 2 - 3 = -1
+
+  BURNSIDE RESULTS:
+    V(n) = 4
+    T(n) = 16
+    D(n) = 6
+    Blue tilings = 4
+    Blue/Total = 4/8 = 2^-1
+
+  CYCLE TYPE TABLE (top contributors):
+                         ct    perms    a        V_c        T_c        D_c
+                  (2, 1, 1)        6    4          0          0         96
+               (1, 1, 1, 1)        1    6         64        384          0
+                       (4,)        6    2          0          0         48
+                     (3, 1)        8    2         32          0          0
+
+  Time: 0.00s
+
+============================================================
+  n = 5
+============================================================
+  Tiles: 6, Fixed by grid-sym: 2, Paired: 2
+  Blue tilings (grid-sym) = 2^(2+2) = 2^4 = 16
+  Total tilings = 2^6 = 64
+  Blue fraction = 2^-2 = 2^-2
+  Blue exponent = (tiles + fixed)/2 = (6+2)/2 = 4
+  Blue fraction exponent = 4 - 6 = -2
+
+  BURNSIDE RESULTS:
+    V(n) = 12
+    T(n) = 88
+    D(n) = 16
+    Blue tilings = 16
+    Blue/Total = 16/64 = 2^-2
+
+  CYCLE TYPE TABLE (top contributors):
+                         ct    perms    a        V_c        T_c        D_c
+               (2, 1, 1, 1)       10    7          0          0       1280
+            (1, 1, 1, 1, 1)        1   10       1024      10240          0
+                     (4, 1)       30    3          0          0        480
+                  (3, 1, 1)       20    4        320        320          0
+                     (3, 2)       20    3          0          0        160
+                       (5,)       24    2         96          0          0
+
+  Time: 0.00s
+
+============================================================
+  n = 6
+============================================================
+  Tiles: 10, Fixed by grid-sym: 2, Paired: 4
+  Blue tilings (grid-sym) = 2^(2+4) = 2^6 = 64
+  Total tilings = 2^10 = 1024
+  Blue fraction = 2^-4 = 2^-4
+  Blue exponent = (tiles + fixed)/2 = (10+2)/2 = 6
+  Blue fraction exponent = 6 - 10 = -4
+
+  BURNSIDE RESULTS:
+    V(n) = 56
+    T(n) = 704
+    D(n) = 60
+    Blue tilings = 64
+    Blue/Total = 64/1024 = 2^-4
+
+  CYCLE TYPE TABLE (top contributors):
+                         ct    perms    a        V_c        T_c        D_c
+         (1, 1, 1, 1, 1, 1)        1   15      32768     491520          0
+            (2, 1, 1, 1, 1)       15   11          0          0      30720
+                  (4, 1, 1)       90    5          0          0       5760
+               (3, 1, 1, 1)       40    7       5120      15360          0
+                  (3, 2, 1)      120    5          0          0       3840
+                       (6,)      120    3          0          0       2880
+                     (3, 3)       40    5       1280          0          0
+                     (5, 1)      144    3       1152          0          0
+
+  Time: 0.00s
+
+============================================================
+  n = 7
+============================================================
+  Tiles: 15, Fixed by grid-sym: 3, Paired: 6
+  Blue tilings (grid-sym) = 2^(3+6) = 2^9 = 512
+  Total tilings = 2^15 = 32768
+  Blue fraction = 2^-6 = 2^-6
+  Blue exponent = (tiles + fixed)/2 = (15+3)/2 = 9
+  Blue fraction exponent = 9 - 15 = -6
+
+  BURNSIDE RESULTS:
+    V(n) = 456
+    T(n) = 8912
+    D(n) = 328
+    Blue tilings = 512
+    Blue/Total = 512/32768 = 2^-6
+
+  CYCLE TYPE TABLE (top contributors):
+                         ct    perms    a        V_c        T_c        D_c
+      (1, 1, 1, 1, 1, 1, 1)        1   21    2097152   44040192          0
+         (2, 1, 1, 1, 1, 1)       21   16          0          0    1376256
+            (3, 1, 1, 1, 1)       70   11     143360     860160          0
+               (4, 1, 1, 1)      210    8          0          0     107520
+               (3, 2, 1, 1)      420    8          0          0     107520
+                     (6, 1)      840    4          0          0      40320
+                  (3, 3, 1)      280    7      35840          0          0
+                  (5, 1, 1)      504    5      16128      16128          0
+                     (4, 3)      420    4          0          0      13440
+                     (5, 2)      504    4          0          0       8064
+
+  Time: 0.00s
+
+============================================================
+  n = 8
+============================================================
+  Tiles: 21, Fixed by grid-sym: 3, Paired: 9
+  Blue tilings (grid-sym) = 2^(3+9) = 2^12 = 4096
+  Total tilings = 2^21 = 2097152
+  Blue fraction = 2^-9 = 2^-9
+  Blue exponent = (tiles + fixed)/2 = (21+3)/2 = 12
+  Blue fraction exponent = 12 - 21 = -9
+
+  BURNSIDE RESULTS:
+    V(n) = 6880
+    T(n) = 188288
+    D(n) = 3160
+    Blue tilings = 4096
+    Blue/Total = 4096/2097152 = 2^-9
+
+  CYCLE TYPE TABLE (top contributors):
+                         ct    perms    a        V_c        T_c        D_c
+   (1, 1, 1, 1, 1, 1, 1, 1)        1   28  268435456 7516192768          0
+      (2, 1, 1, 1, 1, 1, 1)       28   22          0          0  117440512
+         (3, 1, 1, 1, 1, 1)      112   16    7340032   73400320          0
+            (3, 2, 1, 1, 1)     1120   12          0          0    4587520
+            (4, 1, 1, 1, 1)      420   12          0          0    3440640
+               (3, 3, 1, 1)     1120   10    1146880    1146880          0
+                  (6, 1, 1)     3360    6          0          0     645120
+                  (4, 3, 1)     3360    6          0          0     430080
+               (5, 1, 1, 1)     1344    8     344064    1032192          0
+                       (8,)     5040    4          0          0     322560
+
+  Time: 0.00s
+
+============================================================
+  n = 9
+============================================================
+  Tiles: 28, Fixed by grid-sym: 4, Paired: 12
+  Blue tilings (grid-sym) = 2^(4+12) = 2^16 = 65536
+  Total tilings = 2^28 = 268435456
+  Blue fraction = 2^-12 = 2^-12
+  Blue exponent = (tiles + fixed)/2 = (28+4)/2 = 16
+  Blue fraction exponent = 16 - 28 = -12
+
+  BURNSIDE RESULTS:
+    V(n) = 191536
+    T(n) = 6847200
+    D(n) = 54928
+    Blue tilings = 65536
+    Blue/Total = 65536/268435456 = 2^-12
+
+  CYCLE TYPE TABLE (top contributors):
+                         ct    perms    a        V_c        T_c        D_c
+  (1, 1, 1, 1, 1, 1, 1, 1, 1)        1   36 68719476736 2473901162496          0
+   (2, 1, 1, 1, 1, 1, 1, 1)       36   29          0          0 19327352832
+      (3, 1, 1, 1, 1, 1, 1)      168   22  704643072 10569646080          0
+         (3, 2, 1, 1, 1, 1)     2520   17          0          0  330301440
+         (4, 1, 1, 1, 1, 1)      756   17          0          0  198180864
+            (3, 3, 1, 1, 1)     3360   14   55050240  165150720          0
+               (3, 3, 2, 1)    10080   11          0          0   20643840
+               (6, 1, 1, 1)    10080    9          0          0   15482880
+               (4, 3, 1, 1)    15120    9          0          0   15482880
+            (5, 1, 1, 1, 1)     3024   12   12386304   74317824          0
+
+  Time: 0.00s
+
+============================================================
+  n = 10
+============================================================
+  Tiles: 36, Fixed by grid-sym: 4, Paired: 16
+  Blue tilings (grid-sym) = 2^(4+16) = 2^20 = 1048576
+  Total tilings = 2^36 = 68719476736
+  Blue fraction = 2^-16 = 2^-16
+  Blue exponent = (tiles + fixed)/2 = (36+4)/2 = 20
+  Blue fraction exponent = 20 - 36 = -16
+
+  BURNSIDE RESULTS:
+    V(n) = 9733056
+    T(n) = 437069312
+    D(n) = 1722992
+    Blue tilings = 1048576
+    Blue/Total = 1048576/68719476736 = 2^-16
+
+  CYCLE TYPE TABLE (top contributors):
+                         ct    perms    a        V_c        T_c        D_c
+  (1, 1, 1, 1, 1, 1, 1, 1, 1, 1)        1   45 35184372088832 1583296743997440          0
+  (2, 1, 1, 1, 1, 1, 1, 1, 1)       45   37          0          0 6184752906240
+   (3, 1, 1, 1, 1, 1, 1, 1)      240   29 128849018880 2705829396480          0
+      (3, 2, 1, 1, 1, 1, 1)     5040   23          0          0 42278584320
+      (4, 1, 1, 1, 1, 1, 1)     1260   23          0          0 21139292160
+         (3, 3, 1, 1, 1, 1)     8400   19 4404019200 26424115200          0
+            (3, 3, 2, 1, 1)    50400   15          0          0 1651507200
+            (4, 3, 1, 1, 1)    50400   13          0          0  825753600
+         (5, 1, 1, 1, 1, 1)     6048   17  792723456 7927234560          0
+               (3, 3, 3, 1)    22400   15  734003200          0          0
+
+  Time: 0.00s
+
+============================================================
+  n = 11
+============================================================
+  Tiles: 45, Fixed by grid-sym: 5, Paired: 20
+  Blue tilings (grid-sym) = 2^(5+20) = 2^25 = 33554432
+  Total tilings = 2^45 = 35184372088832
+  Blue fraction = 2^-20 = 2^-20
+  Blue exponent = (tiles + fixed)/2 = (45+5)/2 = 25
+  Blue fraction exponent = 25 - 45 = -20
+
+  BURNSIDE RESULTS:
+    V(n) = 903753248
+    T(n) = 49674860096
+    D(n) = 97323552
+    Blue tilings = 33554432
+    Blue/Total = 33554432/35184372088832 = 2^-20
+
+  CYCLE TYPE TABLE (top contributors):
+                         ct    perms    a        V_c        T_c        D_c
+  (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)        1   55 36028797018963968 1981583836043018240          0
+  (2, 1, 1, 1, 1, 1, 1, 1, 1, 1)       55   46          0          0 3870280929771520
+  (3, 1, 1, 1, 1, 1, 1, 1, 1)      330   37 45354854645760 1269935930081280          0
+   (3, 2, 1, 1, 1, 1, 1, 1)     9240   30          0          0 9921374453760
+   (4, 1, 1, 1, 1, 1, 1, 1)     1980   30          0          0 4252017623040
+      (3, 3, 1, 1, 1, 1, 1)    18480   25 620085903360 6200859033600          0
+         (3, 3, 2, 1, 1, 1)   184800   20          0          0 193776844800
+      (5, 1, 1, 1, 1, 1, 1)    11088   23 93012885504 1395193282560          0
+         (4, 3, 1, 1, 1, 1)   138600   18          0          0 72666316800
+            (3, 3, 3, 1, 1)   123200   19 64592281600 64592281600          0
+
+  Time: 0.00s
+
+============================================================
+  n = 12
+============================================================
+  Tiles: 55, Fixed by grid-sym: 5, Paired: 25
+  Blue tilings (grid-sym) = 2^(5+25) = 2^30 = 1073741824
+  Total tilings = 2^55 = 36028797018963968
+  Blue fraction = 2^-25 = 2^-25
+  Blue exponent = (tiles + fixed)/2 = (55+5)/2 = 30
+  Blue fraction exponent = 30 - 55 = -25
+
+  BURNSIDE RESULTS:
+    V(n) = 154108311168
+    T(n) = 10169189235712
+    D(n) = 9941203552
+    Blue tilings = 1073741824
+    Blue/Total = 1073741824/36028797018963968 = 2^-25
+
+  CYCLE TYPE TABLE (top contributors):
+                         ct    perms    a        V_c        T_c        D_c
+  (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)        1   66 73786976294838206464 4869940435459321626624          0
+  (2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)       66   56          0          0 4755801206503243776
+  (3, 1, 1, 1, 1, 1, 1, 1, 1, 1)      440   46 30962247438172160 1114640907774197760          0
+  (3, 2, 1, 1, 1, 1, 1, 1, 1)    15840   38          0          0 4354066045992960
+  (4, 1, 1, 1, 1, 1, 1, 1, 1)     2970   38          0          0 1632774767247360
+   (3, 3, 1, 1, 1, 1, 1, 1)    36960   32 158741991260160 2381129868902400          0
+      (3, 3, 2, 1, 1, 1, 1)   554400   26          0          0 37205154201600
+   (5, 1, 1, 1, 1, 1, 1, 1)    19008   30 20409684590592 428603376402432          0
+      (4, 3, 1, 1, 1, 1, 1)   332640   24          0          0 11161546260480
+         (3, 3, 3, 1, 1, 1)   492800   24 8267812044800 24803436134400          0
+
+  Time: 0.00s
+
+============================================================
+THE UNIFIED CYCLE INDEX PICTURE
+============================================================
+
+EVERY metagraph quantity is a Burnside evaluation:
+
+  Z(S_n) = (1/n!) * sum_sigma p_1^{c_1} * p_2^{c_2} * ...
+
+Different evaluations:
+  V(n):  p_odd = 2, p_even = 0
+  T(n):  p_odd = 2 * C(fixed_pts, 2), p_even = 0
+  D(n):  p_{2k} = 2*k (one even cycle), p_odd = 2
+
+  Blue total: NOT a cycle-index evaluation of S_n.
+  Instead: Burnside over Z_2 = {id, grid_involution}.
+  Blue = Fix(grid) = 2^{(tiles + diagonal)/2}
+
+THE DEEP SIMILARITY:
+  Blue/black decorates NODES: each node has a blue count = tilings(C) * blue_fraction(C)
+  Wiggly decorates EDGES: each edge has a wiggly weight = D-contribution per edge
+
+  BOTH are determined by the SAME underlying structure:
+  the action of S_n on the tiling hypercube Q_{C(n-1,2)}.
+
+  Blue/black = quotient by Z_2 (complement)
+  Wiggly = edges of the quotient graph (single-tile flips)
+
+  The cycle index encodes BOTH through different evaluations.
+  V = node count, T = edge count (with multiplicity), D = self-loop count,
+  Blue = grid-symmetric fraction.
+
+  They are PARALLEL PROJECTIONS of the same generating function.
+
+DONE.
+================================================================================
