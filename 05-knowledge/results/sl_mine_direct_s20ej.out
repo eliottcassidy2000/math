@@ -1,0 +1,132 @@
+================================================================================
+  DIRECT SL_mine COMPUTATION
+  kind-pasteur-2026-03-23-S20ej
+================================================================================
+
+============================================================
+  n = 3
+============================================================
+  Classes: 2
+  T (total arc orbits): 4
+  SL_mine (orbit-level self-loops): 2
+  D (labeled self-loops / class): 2
+  E (metagraph edges): 1
+  non_SL = T - SL_mine = 2
+  2*E = 2
+  T - 2E = 2
+  multi_edge_surplus = non_SL - 2E = 0
+  D == SL_mine? True
+  T-2E == SL_mine? True
+
+  T_known = 4, match: True
+  E_known = 1, match: True
+
+  Classes with SL orbits:
+    |Aut|=  1, orbits= 3, SL= 2, neutral_labeled=  2
+
+  Time: 0.0s
+
+============================================================
+  n = 4
+============================================================
+  Classes: 4
+  T (total arc orbits): 16
+  SL_mine (orbit-level self-loops): 6
+  D (labeled self-loops / class): 6
+  E (metagraph edges): 5
+  non_SL = T - SL_mine = 10
+  2*E = 10
+  T - 2E = 6
+  multi_edge_surplus = non_SL - 2E = 0
+  D == SL_mine? True
+  T-2E == SL_mine? True
+
+  T_known = 16, match: True
+  E_known = 5, match: True
+
+  Classes with SL orbits:
+    |Aut|=  1, orbits= 6, SL= 3, neutral_labeled=  3
+    |Aut|=  1, orbits= 6, SL= 3, neutral_labeled=  3
+
+  Time: 0.0s
+
+============================================================
+  n = 5
+============================================================
+  Classes: 12
+  T (total arc orbits): 88
+  SL_mine (orbit-level self-loops): 16
+  D (labeled self-loops / class): 16
+  E (metagraph edges): 30
+  non_SL = T - SL_mine = 72
+  2*E = 60
+  T - 2E = 28
+  multi_edge_surplus = non_SL - 2E = 12
+  D == SL_mine? True
+  T-2E == SL_mine? False
+
+  T_known = 88, match: True
+  E_known = 30, match: True
+
+  Classes with SL orbits:
+    |Aut|=  1, orbits=10, SL= 4, neutral_labeled=  4
+    |Aut|=  3, orbits= 4, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=10, SL= 3, neutral_labeled=  3
+    |Aut|=  1, orbits=10, SL= 2, neutral_labeled=  2
+    |Aut|=  1, orbits=10, SL= 3, neutral_labeled=  3
+    |Aut|=  3, orbits= 4, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=10, SL= 2, neutral_labeled=  2
+
+  Time: 0.2s
+
+============================================================
+  n = 6
+============================================================
+  Classes: 56
+  T (total arc orbits): 704
+  SL_mine (orbit-level self-loops): 58
+  D (labeled self-loops / class): 60
+  E (metagraph edges): 290
+  non_SL = T - SL_mine = 646
+  2*E = 580
+  T - 2E = 124
+  multi_edge_surplus = non_SL - 2E = 66
+  D == SL_mine? False
+  T-2E == SL_mine? False
+
+  T_known = 704, match: True
+  E_known = 290, match: True
+
+  Classes with SL orbits:
+    |Aut|=  1, orbits=15, SL= 5, neutral_labeled=  5
+    |Aut|=  3, orbits= 7, SL= 2, neutral_labeled=  2
+    |Aut|=  1, orbits=15, SL= 4, neutral_labeled=  4
+    |Aut|=  3, orbits= 7, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=15, SL= 2, neutral_labeled=  2
+    |Aut|=  1, orbits=15, SL= 3, neutral_labeled=  3
+    |Aut|=  3, orbits= 7, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=15, SL= 2, neutral_labeled=  2
+    |Aut|=  1, orbits=15, SL= 3, neutral_labeled=  3
+    |Aut|=  1, orbits=15, SL= 2, neutral_labeled=  2
+    |Aut|=  1, orbits=15, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=15, SL= 4, neutral_labeled=  4
+    |Aut|=  1, orbits=15, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=15, SL= 1, neutral_labeled=  1
+    |Aut|=  3, orbits= 7, SL= 2, neutral_labeled=  2
+    |Aut|=  1, orbits=15, SL= 3, neutral_labeled=  3
+    |Aut|=  1, orbits=15, SL= 2, neutral_labeled=  2
+    |Aut|=  1, orbits=15, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=15, SL= 3, neutral_labeled=  3
+    |Aut|=  3, orbits= 7, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=15, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=15, SL= 3, neutral_labeled=  3
+    |Aut|=  1, orbits=15, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=15, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=15, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=15, SL= 1, neutral_labeled=  1
+    |Aut|=  1, orbits=15, SL= 3, neutral_labeled=  3
+    |Aut|=  1, orbits=15, SL= 1, neutral_labeled=  1
+    |Aut|=  3, orbits= 7, SL= 1, neutral_labeled=  1
+    |Aut|=  3, orbits= 5, SL= 1, neutral_labeled=  3 <--- D != SL
+
+  Time: 82.8s
