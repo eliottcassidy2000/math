@@ -207,18 +207,23 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
   - In the merged graph: pure-black node count = 0, 1, 2, 22, 184 for n=3..7.
   - The old "blue" ≈ SC-SC + NS-NS; the old "black" = SC-NS.
 - **NEUTRAL ARC FLIPS (formerly "translucent lines")**: An arc flip that preserves the iso class = a self-loop in the metagraph. These are classified as BLUE-SELF (if the tiling is grid-symmetric) or BLACK-SELF (if not). Do NOT call them "translucent" — use blue-self/black-self.
-- **WIGGLY LINES — STRICT DEFINITION** (opus-2026-03-23-S273, corrected):
-  - A **WIGGLY LINE** = clicking one TILE in the tournament-tiling-explorer = flipping one non-base-path arc.
-  - A wiggly line connects two tilings that differ in the state of exactly ONE tile.
-  - The tiles are the arcs (a,b) with a - b ≥ 2 (see `01-canon/definitions.md`). There are m = C(n-1, 2) tiles.
-  - Each tiling has exactly C(n-1, 2) wiggly neighbors (one per tile).
-  - **WIGGLY CLASSES** label WHICH tile was flipped. Labeled A, B, C, ... (one per tile):
-    - n=4: 3 wiggly classes (A, B, C) — corresponding to the 3 tiles of δ_2
-    - n=5: 6 wiggly classes (A, B, C, D, E, F) — corresponding to the 6 tiles of δ_3
-    - n=6: 10 wiggly classes — corresponding to the 10 tiles of δ_4
-  - Each wiggly class is a PERFECT MATCHING on the 2^m tilings (every tiling is paired with exactly one other in that class).
+- **WIGGLY LINES — STRICT DEFINITION** (opus-S273, kind-pasteur-S20er):
+  - A **WIGGLY LINE** = clicking one TILE in the `tournament-tiling-explorer` = flipping one non-base-path arc. It connects one tiling to exactly one other tiling.
+  - Fix the base Hamiltonian path: n -> n-1 -> n-2 -> ... -> 2 -> 1.
+  - **BASE-PATH arcs** = arcs between consecutive vertices: {(k, k-1) : k = n, n-1, ..., 2}. There are n-1 of these. These are NOT tiles (not flippable).
+  - **TILES** = arcs between NON-consecutive vertices: {(x, y) : x - y >= 2}. There are m = C(n-1, 2) of these. These ARE the clickable tiles in the explorer.
+  - Each tiling has C(n-1, 2) wiggly neighbors. Each tile position defines a **WIGGLY CLASS**.
+  - **WIGGLY CLASSES** label WHICH tile was flipped. Labeled A, B, C, ... following the explorer's tile enumeration order: `for y=1..n-2: for x=n down to y+2: tile (x,y)`.
+    - **n=4** (3 classes): A=(4,1), B=(3,1), C=(4,2)
+    - **n=5** (6 classes): A=(5,1), B=(4,1), C=(3,1), D=(5,2), E=(4,2), F=(5,3)
+    - **n=6** (10 classes): A=(6,1), B=(5,1), C=(4,1), D=(3,1), E=(6,2), F=(5,2), G=(4,2), H=(6,3), I=(5,3), J=(6,4)
+    - **n=7** (15 classes): A through O, same pattern
+  - Each wiggly class is a PERFECT MATCHING on the 2^m tilings (every tiling paired with exactly one other).
+  - Flipping a tile in wiggly class X is either a **self-loop** (same iso class) or an **edge** (different class).
+  - **WIGGLY CLASSES ARE NOT ALL EQUIVALENT.** Self-loop rates differ by tile position (kind-pasteur-S20er): skip=1 tiles have lower SL%, long-range tiles have higher SL%. This breaks the S_n isotropy (tiling model has lower symmetry than arc model).
+  - The tiling space is the hypercube Q_{C(n-1,2)}. Wiggly lines are its edges. All 2^{C(n-1,2)} tilings are connected.
   - The wiggly arcs = the **cycle-space generators** when the base path P_0 is used as spanning tree. Base-path arcs = the **cut-space** (score hierarchy).
-  - The 2^m tilings with C(n-1,2) wiggly classes form the hypercube Q_{C(n-1,2)} = the cycle-space hypercube.
+  - This decomposition IS the GF(2) Cut ⊕ Cycle split: base-path = cut, wiggly = cycle.
 - **GEOMETRIC ALIGNMENT of G_n/Z_2:** The merged metagraph has three perpendicular structures:
   - The **PRINCIPAL LINE** runs from the transitive class (H=1) through the SC backbone. The transitive's "big" SC neighbor is at H = 2^(n-2)+1.
   - The **SPINE** (SC-SC edges) is a sparse skeleton. The **RIBS** (SC-NS edges) attach perpendicularly, bipartite and triangle-free. The **SEA** (NS-NS edges) is the dominant bulk (96% at n=8).

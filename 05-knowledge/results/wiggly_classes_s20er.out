@@ -1,0 +1,114 @@
+================================================================================
+  WIGGLY CLASS ANALYSIS
+  kind-pasteur-2026-03-23-S20er
+================================================================================
+
+######################################################################
+  n = 4, 3 tiles = 3 wiggly classes
+  Base path: 4 -> 3 -> 2 -> 1
+  Tiles: A=(4,1), B=(3,1), C=(4,2)
+  Tiling space: Q_3 = 2^3 = 8 tilings
+######################################################################
+
+  Class    Tile     SL   Edge     SL%  #Edges  Blue   Blk
+      A (4,1)      4      4   50.0%       2     4     4
+      B (3,1)      4      4   50.0%       2     4     4
+      C (4,2)      6      2   75.0%       1     4     4
+
+  Total metagraph edges: 3
+
+  All classes have same SL count? False
+  All classes reach same # of metagraph edges? False
+    SL counts: [4, 6]
+    Edge counts: [1, 2]
+
+  Metagraph edges reached by ALL wiggly classes: 0/3
+  Metagraph edges reached by SOME wiggly class: 3/3
+
+  TILE GEOMETRY:
+    A: (4,1), skip=2, row=1, SL%=50.0%
+    B: (3,1), skip=1, row=1, SL%=50.0%
+    C: (4,2), skip=1, row=2, SL%=75.0%
+
+  Time: 0.0s
+
+######################################################################
+  n = 5, 6 tiles = 6 wiggly classes
+  Base path: 5 -> 4 -> 3 -> 2 -> 1
+  Tiles: A=(5,1), B=(4,1), C=(3,1), D=(5,2), E=(4,2), F=(5,3)
+  Tiling space: Q_6 = 2^6 = 64 tilings
+######################################################################
+
+  Class    Tile     SL   Edge     SL%  #Edges  Blue   Blk
+      A (5,1)     12     52   18.8%      14    16    48
+      B (4,1)     14     50   21.9%      12    16    48
+      C (3,1)     14     50   21.9%      11    16    48
+      D (5,2)     16     48   25.0%      11    16    48
+      E (4,2)     20     44   31.2%       8    16    48
+      F (5,3)     16     48   25.0%      10    16    48
+
+  Total metagraph edges: 21
+
+  All classes have same SL count? False
+  All classes reach same # of metagraph edges? False
+    SL counts: [12, 14, 16, 20]
+    Edge counts: [8, 10, 11, 12, 14]
+
+  Metagraph edges reached by ALL wiggly classes: 5/21
+  Metagraph edges reached by SOME wiggly class: 21/21
+
+  TILE GEOMETRY:
+    A: (5,1), skip=3, row=1, SL%=18.8%
+    B: (4,1), skip=2, row=1, SL%=21.9%
+    C: (3,1), skip=1, row=1, SL%=21.9%
+    D: (5,2), skip=2, row=2, SL%=25.0%
+    E: (4,2), skip=1, row=2, SL%=31.2%
+    F: (5,3), skip=1, row=3, SL%=25.0%
+
+  Time: 0.0s
+
+######################################################################
+  n = 6, 10 tiles = 10 wiggly classes
+  Base path: 6 -> 5 -> 4 -> 3 -> 2 -> 1
+  Tiles: A=(6,1), B=(5,1), C=(4,1), D=(3,1), E=(6,2), F=(5,2), G=(4,2), H=(6,3), I=(5,3), J=(6,4)
+  Tiling space: Q_10 = 2^10 = 1024 tilings
+######################################################################
+
+  Class    Tile     SL   Edge     SL%  #Edges  Blue   Blk
+      A (6,1)    110    914   10.7%     168    64   960
+      B (5,1)    108    916   10.5%     162    64   960
+      C (4,1)    102    922   10.0%     158    64   960
+      D (3,1)     58    966    5.7%     160    64   960
+      E (6,2)    116    908   11.3%     159    64   960
+      F (5,2)    114    910   11.1%     147    64   960
+      G (4,2)     74    950    7.2%     144    64   960
+      H (6,3)    110    914   10.7%     156    64   960
+      I (5,3)     74    950    7.2%     144    64   960
+      J (6,4)     70    954    6.8%     159    64   960
+
+  Total metagraph edges: 234
+
+  All classes have same SL count? False
+  All classes reach same # of metagraph edges? False
+    SL counts: [58, 70, 74, 102, 108, 110, 114, 116]
+    Edge counts: [144, 147, 156, 158, 159, 160, 162, 168]
+
+  Metagraph edges reached by ALL wiggly classes: 87/234
+  Metagraph edges reached by SOME wiggly class: 234/234
+
+  TILE GEOMETRY:
+    A: (6,1), skip=4, row=1, SL%=10.7%
+    B: (5,1), skip=3, row=1, SL%=10.5%
+    C: (4,1), skip=2, row=1, SL%=10.0%
+    D: (3,1), skip=1, row=1, SL%=5.7%
+    E: (6,2), skip=3, row=2, SL%=11.3%
+    F: (5,2), skip=2, row=2, SL%=11.1%
+    G: (4,2), skip=1, row=2, SL%=7.2%
+    H: (6,3), skip=2, row=3, SL%=10.7%
+    I: (5,3), skip=1, row=3, SL%=7.2%
+    J: (6,4), skip=1, row=4, SL%=6.8%
+
+  Time: 3.0s
+
+DONE.
+================================================================================
