@@ -1,0 +1,104 @@
+
+========================================================================
+  THE FOUR GRAPH INTERPRETATIONS AT n=5
+========================================================================
+
+  n=5: 12 tournament iso classes
+
+  H    #HPs   A_pv0    B_pv0    C_pv0    D_pv0    ANY_pv0 
+  -------------------------------------------------------
+  1    1      1        1        0        0        ✓       
+  3    3      0        0        0        0        ✗       
+  3    3      0        0        0        0        ✗       
+  3    3      0        0        0        0        ✗       
+  5    5      0        0        0        0        ✗       
+  5    5      0        0        0        0        ✗       
+  9    9      0        0        1        1        ✓       
+  9    9      0        0        3        3        ✓       
+  11   11     2        2        0        0        ✓       
+  13   13     1        1        0        0        ✓       
+  15   15     0        0        0        0        ✗       
+  15   15     0        0        0        0        ✗       
+
+  Classes with ANY interpretation giving even graph: 5 / 12 (41.7%)
+
+========================================================================
+  THE UNION: A ∪ B ∪ C ∪ D
+========================================================================
+
+
+  COMBINING ALL FOUR INTERPRETATIONS:
+
+  Interpretation A: HP edges present, natural tiles present
+  Interpretation B: HP edges absent, flipped tiles present (= complement of A)
+  Interpretation C: HP edges present, flipped tiles present
+  Interpretation D: HP edges absent, natural tiles present (= complement of C)
+
+  PARITY STRUCTURE:
+  In interpretation A: endpoint degrees = 1 + tile_deg (odd + ?)
+  In interpretation B: endpoint degrees = 0 + tile_deg_flipped (0 + ?)
+  In interpretation C: endpoint degrees = 1 + tile_deg_flipped (odd + ?)
+  In interpretation D: endpoint degrees = 0 + tile_deg (0 + ?)
+
+  For EVEN graph: all degrees even.
+  A: endpoints need odd tile_deg → possible but constrained
+  B: endpoints need even tile_deg (of flipped tiles) → different constraint!
+  C: endpoints need odd tile_deg (of flipped tiles)
+  D: endpoints need even tile_deg (of natural tiles)
+
+  B and D remove the base-path parity issue entirely!
+  In B: no base edges → endpoint parity = tile_deg_flipped parity
+  In D: no base edges → endpoint parity = tile_deg parity
+
+  The constraint for B to be even: every vertex has even "flipped-tile-degree"
+  The constraint for D to be even: every vertex has even "natural-tile-degree"
+
+  These are DIFFERENT constraints from A's. And they may be satisfiable
+  for classes where A isn't!
+
+
+========================================================================
+  WHICH INTERPRETATION REACHES EACH CLASS?
+========================================================================
+
+  PER-CLASS BEST PV BY INTERPRETATION:
+
+  H    #HPs   A_best B_best C_best D_best BEST  
+  ------------------------------------------
+  1    1      0      0      2      2      0      (A+B)
+  3    3      2      2      2      2      2      (A+B+C+D)
+  3    3      2      2      4      4      2      (A+B)
+  3    3      2      2      2      2      2      (A+B+C+D)
+  5    5      2      2      2      2      2      (A+B+C+D)
+  5    5      2      2      2      2      2      (A+B+C+D)
+  9    9      2      2      0      0      0      (C+D)
+  9    9      2      2      0      0      0      (C+D)
+  11   11     0      0      2      2      0      (A+B)
+  13   13     0      0      2      2      0      (A+B)
+  15   15     2      2      2      2      2      (A+B+C+D)
+  15   15     2      2      4      4      2      (A+B)
+
+  OVERALL BEST PV DISTRIBUTION:
+    PV=0: 5 classes (41.7%)
+    PV=2: 7 classes (58.3%)
+
+  TOTAL CLASSES REACHABLE TO EVEN (any interpretation): 5 / 12 (41.7%)
+
+========================================================================
+  THE RESULT
+========================================================================
+
+
+  COMBINING A + B + C + D:
+
+  With FOUR interpretations and adaptive HP selection:
+  Can we reach PV=0 for EVERY tournament class?
+
+  If YES: the union of the four interpretations gives a complete
+  bijection from tournaments to even graphs (via choosing the right
+  interpretation and HP for each class).
+
+  If NO: some classes are "truly dark" — they can't be represented
+  as even graphs in ANY interpretation with ANY HP.
+
+Done. opus-2026-03-24-S321
