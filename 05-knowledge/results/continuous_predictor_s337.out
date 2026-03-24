@@ -1,0 +1,113 @@
+
+========================================================================
+  THE CONTINUOUS PREDICTOR
+========================================================================
+
+
+========================================================================
+  THE WEIGHTED PREDICTOR (Haskell-style composition)
+========================================================================
+
+
+========================================================================
+  BENCHMARK: CONTINUOUS vs DISCRETE
+========================================================================
+
+  Image                Raw      Contin.    α-opt      HICv3      Best    
+  ----------------------------------------------------------------------
+  circle_128           16384    4129     ✓ 2650     ✓ 2675       α=1.0   
+  circle_256           65536    11032    ✓ 8323     ✓ 8417       α=1.0   
+  circle_64            4096     1387     ✓ 847      ✓ 855        α=1.0   
+  edges_128            16384    462      ✓ 462      ✓ 117        HICv3   
+  gradient_128         16384    476      ✓ 83       ✓ 90         α=1.0   
+  gradient_256         65536    1008     ✓ 317      ✓ 322        α=1.0   
+  gradient_64          4096     278      ✓ 173      ✓ 180        α=1.0   
+  photo_128            16384    14098    ✓ 13238    ✓ 13254      α=0.2   
+  smooth_128           16384    7172     ✓ 5025     ✓ 5072       α=1.0   
+  smooth_256           65536    25195    ✓ 17194    ✓ 17236      α=1.0   
+  smooth_64            4096     2106     ✓ 1375     ✓ 1391       α=1.0   
+
+========================================================================
+  VIDEO APPLICATION: TEMPORAL PREDICTION
+========================================================================
+
+
+  THE VIDEO EXTENSION:
+
+  For video: each pixel has TEMPORAL neighbors (same position in previous frame).
+  The continuous predictor becomes:
+
+    pred(r,c,t) = w_a*left + w_b*above + w_c*diag + w_t*prev_frame(r,c)
+
+  The weights AUTOMATICALLY adapt:
+  - Static scene: w_t → 1 (temporal prediction dominates)
+  - Moving object: w_t → 0 (spatial prediction needed)
+  - Smooth motion: w_t ≈ 0.5 (blend of temporal and spatial)
+
+  No motion vectors. No block matching. No I/P/B frame distinction.
+  Just ONE continuous prediction function that handles everything.
+
+  The residual (actual - predicted) is then compressed with zlib.
+  For static regions: residual ≈ 0 → extreme compression.
+  For moving regions: residual = spatial prediction error (like image codec).
+
+  TEMPORAL PREDICTION: 128×128, 5 frames, 3%% motion
+
+  Frame    Spatial    Temporal   Blend      zlib_raw  
+  --------------------------------------------------
+  frame0  7172       7172       7172       8488       ★
+  frame1  10894      10045      13741      13697      ★
+  frame2  11091      12051      14620      13949      ★
+  frame3  11204      13229      15219      14018      ★
+  frame4  11261      14037      15704      14080      ★
+
+========================================================================
+  THE FUNCTIONAL COMPOSITION
+========================================================================
+
+
+  THE HASKELL-STYLE COMPOSITION:
+
+  Instead of:
+    case filterType of
+      Sub     -> pixel - left
+      Up      -> pixel - above
+      Paeth   -> pixel - paeth(left, above, diag)
+      ...
+
+  We have ONE function:
+    predict :: (Float, Float, Float, Float) -> Context -> Int
+    predict (wa, wb, wc, wd) (a, b, c, d) =
+      clamp $ round $ wa*a + wb*b + wc*c + wd*d
+
+  The weight vector (wa, wb, wc, wd) is a POINT in R⁴.
+  Each standard filter is a specific point:
+    Sub     = (1, 0, 0, 0)
+    Up      = (0, 1, 0, 0)
+    Average = (0.5, 0.5, 0, 0)
+    Paeth   = (1, 1, -1, 0)
+
+  The CONTINUOUS predictor finds the optimal point analytically:
+    w* = argmin_w Σ (pixel_i - w·context_i)²
+       = (X^T X)^{-1} X^T y  (ordinary least squares)
+
+  This is computed per-row (or per-block) from the already-decoded
+  pixels, so it requires NO extra storage — the decoder can
+  reconstruct the same optimal weights.
+
+  THE COMPOSABILITY:
+    predict_spatial w_s = predict w_s context_spatial
+    predict_temporal w_t = predict w_t context_temporal
+    predict_video = compose predict_spatial predict_temporal
+                  = predict (w_s ⊕ w_t) (context_spatial ++ context_temporal)
+
+  Spatial and temporal prediction COMPOSE into a single linear predictor.
+  No special handling needed for I-frames vs P-frames vs B-frames.
+  The weights automatically make w_t ≈ 0 for I-frames (no temporal context)
+  and w_t ≈ 1 for static scenes.
+
+  THIS IS THE MATHEMATICAL OBJECT: a linear predictor in a high-dimensional
+  context space, with weights determined by local least squares.
+  It subsumes ALL discrete filters as special cases.
+
+Done. opus-2026-03-24-S337
