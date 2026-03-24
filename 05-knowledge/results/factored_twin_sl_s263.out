@@ -1,0 +1,47 @@
+======================================================================
+  FACTORED TWIN SL — CORRECTED
+  opus-2026-03-23-S263
+======================================================================
+
+  n        V    twin_SL  twin_known  match        T_n   E_approx  E_known    resid
+  3        2          2           2      ✓          4          1        1        0
+  4        4          4           4      ✓         16          6        5        2
+  5       12         12          12      ✓         88         38       30       16
+  6       56         48          48      ✓        704        328      290       76
+  7      456        296         296      ✓       8912       4308     4086      444
+  8     6880       3040        3040      ✓     188288      92624    91161     2926
+  9   191536      54256       54256      ✓    6847200    3396472  3380751    31442
+ 10  9733056    1716608           ?      ?  437069312  217676352        ?        ?
+ 11 903753248   97213472           ?      ? 49674860096 24788823312        ?        ?
+ 12 154108311168 9937755904           ?      ? 10169189235712 5079625739904        ?        ?
+
+======================================================================
+  FACTORED DECOMPOSITION
+======================================================================
+
+  THEOREM (Burnside Exponent Factorization):
+    Fix_tournament(σ) = Fix_even(σ) × 2^{k-1}
+    twin_SL(σ)       = 2C(f,2) × Fix_even(σ)
+
+  Therefore:
+    V_n     = (1/n!) Σ Fix_even × 2^{k-1}    [all odd-cycle σ]
+    twin_SL = (1/n!) Σ 2C(f,2) × Fix_even     [odd-cycle σ with f≥2]
+    T_n     = (1/n!) Σ C(f,2) × Fix_even × 2^{k-1}  [transition orbits]
+
+  The twin fraction:
+    twin_SL / T_n → n(n-1)/2^{n-1} × (identity-dominated correction)
+
+  The residual:
+    residual = T_n - twin_SL - 2E
+            = complex_SL + MW
+            = cut-cycle INTERACTION term
+            → 0 relative to T (asymptotic independence)
+
+  PHYSICAL INTERPRETATION:
+    - Fix_even = "pure cyclic structure" degrees of freedom
+    - 2^{k-1} = "score hierarchy" degrees of freedom
+    - C(f,2) = "potential twin pairs" (fixed-point pairs)
+    - twin_SL = twins counted by cycle × score factorization
+    - residual = interference between cycle and score spaces
+
+DONE.

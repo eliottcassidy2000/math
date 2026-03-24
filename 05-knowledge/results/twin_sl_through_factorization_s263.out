@@ -1,0 +1,88 @@
+======================================================================
+  TWIN SL THROUGH THE FACTORIZATION LENS
+  opus-2026-03-23-S263
+======================================================================
+
+  n=3: T=2, twin_SL=4, E≈-1
+    twin_frac = 2.000000, predicted = 0.500000, ratio = 4.0000
+                 ct    ccs   f   k  nfc C(f,2)   2^(ao-nfc)   twin_contrib
+          [1, 1, 1]      1   3   3    0      3            8             24
+
+  n=4: T=4, twin_SL=16, E≈-6
+    twin_frac = 4.000000, predicted = 0.250000, ratio = 16.0000
+                 ct    ccs   f   k  nfc C(f,2)   2^(ao-nfc)   twin_contrib
+       [1, 1, 1, 1]      1   4   4    0      6           64            384
+
+  n=5: T=12, twin_SL=86, E≈-37
+    twin_frac = 7.166667, predicted = 0.125000, ratio = 57.3333
+                 ct    ccs   f   k  nfc C(f,2)   2^(ao-nfc)   twin_contrib
+          [3, 1, 1]     20   2   3    1      1            8            160
+    [1, 1, 1, 1, 1]      1   5   5    0     10         1024          10240
+
+  n=6: T=56, twin_SL=693, E≈-319
+    twin_frac = 12.375000, predicted = 0.062500, ratio = 198.0000
+                 ct    ccs   f   k  nfc C(f,2)   2^(ao-nfc)   twin_contrib
+       [3, 1, 1, 1]     40   3   4    1      3           64           7680
+    [1, 1, 1, 1, 1, 1]      1   6   6    0     15        32768         491520
+
+  n=7: T=456, twin_SL=8825, E≈-4185
+    twin_frac = 19.353070, predicted = 0.031250, ratio = 619.2982
+                 ct    ccs   f   k  nfc C(f,2)   2^(ao-nfc)   twin_contrib
+          [5, 1, 1]    504   2   3    1      1           16           8064
+    [3, 1, 1, 1, 1]     70   4   5    1      6         1024         430080
+    [1, 1, 1, 1, 1, 1, 1]      1   7   7    0     21      2097152       44040192
+
+  n=8: T=6880, twin_SL=187343, E≈-90232
+    twin_frac = 27.230087, predicted = 0.015625, ratio = 1742.7256
+                 ct    ccs   f   k  nfc C(f,2)   2^(ao-nfc)   twin_contrib
+       [5, 1, 1, 1]   1344   3   4    1      3          128         516096
+       [3, 3, 1, 1]   1120   2   4    2      1          256         286720
+    [3, 1, 1, 1, 1, 1]    112   5   6    1     10        32768       36700160
+    [1, 1, 1, 1, 1, 1, 1, 1]      1   8   8    0     28    268435456     7516192768
+
+  n=9: T=191536, twin_SL=6832190, E≈-3320327
+    twin_frac = 35.670527, predicted = 0.007812, ratio = 4565.8274
+
+  n=10: T=9733056, twin_SL=436689900, E≈-213478422
+    twin_frac = 44.866679, predicted = 0.003906, ratio = 11485.8698
+
+  n=11: T=903753248, twin_SL=49658817054, E≈-24377531903
+    twin_frac = 54.947318, predicted = 0.001953, ratio = 28133.0268
+
+======================================================================
+  TWIN_SL IN FACTORED FORM
+======================================================================
+
+  For odd-cycle σ with k cycles, f fixed points, nfc non-fixed cycles:
+    k = f + nfc
+    ao = Σ (c_i-1)/2 + Σ gcd(c_i,c_j)
+
+  twin_SL contribution = C(f,2) × 2^{ao - nfc}
+
+  Factored: 2^{ao - nfc} = 2^{ao - k + f} = 2^{ao - k + 1} × 2^{f - 1}
+                          = Fix_even × 2^{f - 1}
+
+  So: twin_SL(σ) = C(f,2) × Fix_even(σ) × 2^{f - 1}
+
+  The twin mechanism decomposes as:
+  - Fix_even(σ): the cycle-space (even graph) part
+  - C(f,2) × 2^{f-1}: the cut-space (score) part with twin constraint
+
+  Note: C(f,2) × 2^{f-1} = f(f-1)/2 × 2^{f-1} = f(f-1) × 2^{f-2}
+
+  The "extra" 2^{k-1} in Fix_tourn comes from cut freedom.
+  The "twin reduction" from 2^{k-1} to C(f,2) × 2^{f-1} is:
+    2^{k-1} / (C(f,2) × 2^{f-1}) = 2^{nfc} / C(f,2)
+
+  This is the RATIO of total cut-space orientations to twin-compatible ones.
+
+  VERIFICATION: twin_SL(σ) = C(f,2) × Fix_even(σ) × 2^{f-1}
+  n=3: direct=4, factored=4, match=✓
+  n=4: direct=16, factored=16, match=✓
+  n=5: direct=86, factored=86, match=✓
+  n=6: direct=693, factored=693, match=✓
+  n=7: direct=8825, factored=8825, match=✓
+  n=8: direct=187343, factored=187343, match=✓
+  n=9: direct=6832190, factored=6832190, match=✓
+
+DONE.
