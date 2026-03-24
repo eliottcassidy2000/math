@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S264 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S262b
+**Summary of work:** Residual factorization. The residual = T - twin_SL - 2E measures CUT-CYCLE INTERACTION. Primes 7×11×19 and 79×199 appear. Crossover at n=6. Residual vanishes exponentially.
+
+**Key discoveries:**
+1. Residual/2 = 0, 1, 8, 38, 222, 1463, 15721 (error in twin approximation)
+2. 1463 = 7 × 11 × 19 (tournament primes!) and 15721 = 79 × 199 (79 = arc neutrality at n=6!)
+3. twin/Fix = n(n-1)/2^{n-1}: crosses 1 at n=6, explaining accuracy improvement
+4. res/2^{C(n-1,2)} → 0 exponentially: cut-cycle interaction vanishes
+5. Redundancy = C(n-1,2) = cycle space dimension controls residual
+
 ## opus-2026-03-23-S263 — 2026-03-23
 
 **Account:** opus
