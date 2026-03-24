@@ -1238,3 +1238,31 @@ Claims about blue fraction being exactly 2^{-(n-2)} per class are wrong. The cor
 
 ### Lesson
 Always verify formulas at multiple n values, not just the first few where coincidences can mask errors.
+
+---
+
+## MISTAKE-033: Confused complement-tiling with complement-tournament in blue/black analysis
+
+**Date discovered:** 2026-03-24
+**Found by:** User correction (opus-S295)
+**Affects:** three_graphs_s295.py, wiggly_vs_lines_s275.py reasoning
+
+### What was assumed
+Blue/black lines were modeled as connecting T to T^op (the tournament complement, flipping ALL C(n,2) arcs including base-path arcs). This led to the claim that blue/black "lives outside Q_m" and has zero cross-class edges in the merged meta-graph.
+
+### Why it was wrong
+In the tournament-tiling-explorer, a blue/black line connects a TILING to its COMPLEMENT TILING = flip all m tiles (XOR with 2^m - 1). This stays INSIDE Q_m. The complement tiling gives a tournament where all non-base-path arcs are reversed but base-path arcs are PRESERVED. This is NOT T^op (which reverses ALL arcs).
+
+The complement tiling IS at Hamming distance m in Q_m. It gives a different labeled tournament that may be in a DIFFERENT iso class. Blue/black lines DO create cross-class edges in both the unmerged and merged meta-graphs.
+
+### The correct framing
+- **Complement TILING** = flip all m tiles = bits XOR (2^m - 1). Stays in Q_m. THIS is what blue/black lines are.
+- **Complement TOURNAMENT** (T^op) = flip all C(n,2) arcs. Leaves Q_m (changes base-path arcs). NOT the same as complement tiling.
+- Blue/black lines ARE in Q_m, they ARE waggly lines (at distance m), and they DO connect different iso classes.
+- The S295 analysis incorrectly modeled blue/black by computing T^op instead of the complement tiling.
+
+### Impact
+The three_graphs_s295.py blue/black weight matrix is WRONG. The claim "blue/black is purely diagonal" is FALSE. Must recompute using the correct definition: complement tiling = XOR all tile bits.
+
+### Lesson
+ALWAYS check definitions against the actual explorer behavior. The tiling complement (flip tiles) and tournament complement (flip all arcs) are different operations. In the tiling model with fixed base path, flipping all tiles does NOT give T^op.

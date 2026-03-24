@@ -1,0 +1,695 @@
+
+========================================================================
+  CORRECTED THREE-GRAPH ANALYSIS
+========================================================================
+
+
+========================================================================
+  n=4: m=3 tiles, 8 tilings, 3 merged classes
+========================================================================
+
+  WIGGLY (d=1):
+    Edges: 3, Self-loops: 1/3, Total: 24, SL%: 41.7%
+    H: [1, 3, 5]
+    H= 1:    0    2    1  |fib=1
+    H= 3:    2    0    4  |fib=2
+    H= 5:    1    4   10  |fib=5
+
+  WAGGLY-2 (d=2):
+    Edges: 2, Self-loops: 2/3, Total: 24, SL%: 41.7%
+    H: [1, 3, 5]
+    H= 1:    0    0    3  |fib=1
+    H= 3:    0    2    4  |fib=2
+    H= 5:    3    4    8  |fib=5
+
+  BLUE/BLACK (tiling complement, d=3):
+    Edges: 2, Self-loops: 1/3, Total: 8, SL%: 25.0%
+    H: [1, 3, 5]
+    H= 1:    0    0    1  |fib=1
+    H= 3:    0    0    2  |fib=2
+    H= 5:    1    2    2  |fib=5
+
+  VENN DIAGRAM:
+    Wiggly edges:       3
+    Waggly-2 edges:     2
+    Blue/black edges:   2
+    Wig ∩ Wag:          2
+    Wig ∩ BB:           2
+    Wag ∩ BB:           2
+    All three:          2
+    Union:              3 / 3 possible
+
+  UNIQUE EDGES:
+    Only wiggly:     1
+    Only waggly-2:   0
+    Only blue/black: 0
+
+  BLUE/BLACK CROSS-CLASS EDGES:
+    {0(H=1) ↔ 2(H=5)}: weight=2 also wiggly
+    {1(H=3) ↔ 2(H=5)}: weight=4 also wiggly
+
+  BLUE/BLACK SELF-LOOPS (SC classes in tiling model):
+    mid=2 (H=5): 2 self-loops out of 5 tilings (40.0%)
+
+  BLUE/BLACK vs WIGGLY OVERLAP:
+    {0(H=1)↔2(H=5)}: wiggly=True, waggly-2=True
+    {1(H=3)↔2(H=5)}: wiggly=True, waggly-2=True
+
+========================================================================
+  n=5: m=6 tiles, 64 tilings, 10 merged classes
+========================================================================
+
+  WIGGLY (d=1):
+    Edges: 21, Self-loops: 3/10, Total: 384, SL%: 10.4%
+    H: [1, 3, 3, 5, 9, 9, 11, 13, 15, 15]
+    H= 1:    0    2    1    2    1    0    0    0    0    0  |fib=1
+    H= 3:    2    0    0    4    0    6    0    0    0    0  |fib=2
+    H= 3:    1    0    0    4    0    0    0    0    1    0  |fib=1
+    H= 5:    2    4    4   20    8    6    8    8    0    0  |fib=10
+    H= 9:    1    0    0    8    8   14   16    0    7    0  |fib=9
+    H= 9:    0    6    0    6   14    0    5   23    0    0  |fib=9
+    H=11:    0    0    0    8   16    5   12   16    0    9  |fib=11
+    H=13:    0    0    0    8    0   23   16    0   22    9  |fib=13
+    H=15:    0    0    1    0    7    0    0   22    0    0  |fib=5
+    H=15:    0    0    0    0    0    0    9    9    0    0  |fib=3
+
+  WAGGLY-2 (d=2):
+    Edges: 35, Self-loops: 7/10, Total: 960, SL%: 19.2%
+    H: [1, 3, 3, 5, 9, 9, 11, 13, 15, 15]
+    H= 1:    0    0    0    6    0    5    2    1    1    0  |fib=1
+    H= 3:    0    2    2    6    6    0    4   10    0    0  |fib=2
+    H= 3:    0    2    0    4    3    1    1    4    0    0  |fib=1
+    H= 5:    6    6    4   26   22   26   26   18   10    6  |fib=10
+    H= 9:    0    6    3   22   16   10   20   49    2    7  |fib=9
+    H= 9:    5    0    1   26   10   22   30    4   26   11  |fib=9
+    H=11:    2    4    1   26   20   30   30   25   19    8  |fib=11
+    H=13:    1   10    4   18   49    4   25   78    0    6  |fib=13
+    H=15:    1    0    0   10    2   26   19    0   10    7  |fib=5
+    H=15:    0    0    0    6    7   11    8    6    7    0  |fib=3
+
+  BLUE/BLACK (tiling complement, d=6):
+    Edges: 18, Self-loops: 2/10, Total: 64, SL%: 12.5%
+    H: [1, 3, 3, 5, 9, 9, 11, 13, 15, 15]
+    H= 1:    0    0    0    0    0    1    0    0    0    0  |fib=1
+    H= 3:    0    0    0    0    2    0    0    0    0    0  |fib=2
+    H= 3:    0    0    0    0    0    0    0    1    0    0  |fib=1
+    H= 5:    0    0    0    0    2    2    2    2    2    0  |fib=10
+    H= 9:    0    2    0    2    0    2    1    2    0    0  |fib=9
+    H= 9:    1    0    0    2    2    0    1    1    2    0  |fib=9
+    H=11:    0    0    0    2    1    1    4    2    0    1  |fib=11
+    H=13:    0    0    1    2    2    1    2    4    0    1  |fib=13
+    H=15:    0    0    0    2    0    2    0    0    0    1  |fib=5
+    H=15:    0    0    0    0    0    0    1    1    1    0  |fib=3
+
+  VENN DIAGRAM:
+    Wiggly edges:       21
+    Waggly-2 edges:     35
+    Blue/black edges:   18
+    Wig ∩ Wag:          15
+    Wig ∩ BB:           11
+    Wag ∩ BB:           18
+    All three:          11
+    Union:              41 / 45 possible
+
+  UNIQUE EDGES:
+    Only wiggly:     6
+    Only waggly-2:   13
+    Only blue/black: 0
+
+  BLUE/BLACK CROSS-CLASS EDGES:
+    {0(H=1) ↔ 4(H=9)}: weight=2 
+    {1(H=3) ↔ 3(H=9)}: weight=4 
+    {2(H=5) ↔ 3(H=9)}: weight=4 also wiggly
+    {2(H=5) ↔ 4(H=9)}: weight=4 also wiggly
+    {2(H=5) ↔ 5(H=11)}: weight=4 also wiggly
+    {2(H=5) ↔ 7(H=15)}: weight=4 
+    {2(H=5) ↔ 8(H=13)}: weight=4 also wiggly
+    {3(H=9) ↔ 4(H=9)}: weight=4 also wiggly
+    {3(H=9) ↔ 5(H=11)}: weight=2 also wiggly
+    {3(H=9) ↔ 8(H=13)}: weight=4 
+    {4(H=9) ↔ 5(H=11)}: weight=2 also wiggly
+    {4(H=9) ↔ 7(H=15)}: weight=4 
+    {4(H=9) ↔ 8(H=13)}: weight=2 also wiggly
+    {5(H=11) ↔ 8(H=13)}: weight=4 also wiggly
+    {5(H=11) ↔ 9(H=15)}: weight=2 also wiggly
+    {6(H=3) ↔ 8(H=13)}: weight=2 
+    {7(H=15) ↔ 9(H=15)}: weight=2 
+    {8(H=13) ↔ 9(H=15)}: weight=2 also wiggly
+
+  BLUE/BLACK SELF-LOOPS (SC classes in tiling model):
+    mid=5 (H=11): 4 self-loops out of 11 tilings (36.4%)
+    mid=8 (H=13): 4 self-loops out of 13 tilings (30.8%)
+
+  BLUE/BLACK vs WIGGLY OVERLAP:
+    {0(H=1)↔4(H=9)}: wiggly=False, waggly-2=True
+    {1(H=3)↔3(H=9)}: wiggly=False, waggly-2=True
+    {2(H=5)↔3(H=9)}: wiggly=True, waggly-2=True
+    {2(H=5)↔4(H=9)}: wiggly=True, waggly-2=True
+    {2(H=5)↔5(H=11)}: wiggly=True, waggly-2=True
+    {2(H=5)↔7(H=15)}: wiggly=False, waggly-2=True
+    {2(H=5)↔8(H=13)}: wiggly=True, waggly-2=True
+    {3(H=9)↔4(H=9)}: wiggly=True, waggly-2=True
+    {3(H=9)↔5(H=11)}: wiggly=True, waggly-2=True
+    {3(H=9)↔8(H=13)}: wiggly=False, waggly-2=True
+    {4(H=9)↔5(H=11)}: wiggly=True, waggly-2=True
+    {4(H=9)↔7(H=15)}: wiggly=False, waggly-2=True
+    {4(H=9)↔8(H=13)}: wiggly=True, waggly-2=True
+    {5(H=11)↔8(H=13)}: wiggly=True, waggly-2=True
+    {5(H=11)↔9(H=15)}: wiggly=True, waggly-2=True
+    {6(H=3)↔8(H=13)}: wiggly=False, waggly-2=True
+    {7(H=15)↔9(H=15)}: wiggly=False, waggly-2=True
+    {8(H=13)↔9(H=15)}: wiggly=True, waggly-2=True
+
+========================================================================
+  n=6: m=10 tiles, 1024 tilings, 34 merged classes
+========================================================================
+
+  WIGGLY (d=1):
+    Edges: 143, Self-loops: 18/34, Total: 10240, SL%: 9.6%
+    H: [1, 3, 3, 5, 5, 9, 9, 9, 11, 13, 15, 15, 15, 17, 17, 19, 23, 23, 25, 27, 29, 29, 29, 31, 33, 33, 33, 37, 37, 37, 41, 43, 45, 45]
+    H= 1:    0    2    2    2    1    2    0    0    0    0    0    0    0    1    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0  |fib=1
+    H= 3:    2    0    0    4    0    0    6    2    0    0    6    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0  |fib=2
+    H= 3:    2    0    0    4    4    0    6    0    0    0    0    2    0    0    0    0    0    0    0    2    0    0    0    0    0    0    0    0    0    0    0    0    0    0  |fib=2
+    H= 5:    2    4    4   20    0    8    6    0    8    8   10    0    0    0   10   10    0   10    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0  |fib=10
+    H= 5:    1    0    4    0   10    8    6    0    8    8    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    5    0    0    0    0    0    0  |fib=5
+    H= 9:    2    0    0    8    8   16   28    0   32    0   10   14    0   16    0    0   16   14    0    0    0    0    0    0    0    0   16    0    0    0    0    0    0    0  |fib=18
+    H= 9:    0    6    6    6    6   28    0    0   10   46   12    0    0    0   12   16    0    0    0    0    0   16    0   16    0    0    0    0    0    0    0    0    0    0  |fib=18
+    H= 9:    0    2    0    0    0    0    0    0    0    0    0    0    0    0    8    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0  |fib=1
+    H=11:    0    0    0    8    8   32   10    0   24   32    0    0   18    0    0   14   20    0   16    0    0    0   18    0    0    0    0    0    0   20    0    0    0    0  |fib=22
+    H=13:    0    0    0    8    8    0   46    0   32    0    0   44   18    0    0    0    0   18   20    0   22   22    0    0    0    0    0    0   22    0    0    0    0    0  |fib=26
+    H=15:    0    6    0   10    0   10   12    0    0    0   36    0    0   26   24   44    0   24   56    0    0   24    0   28    0    0    0    0    0    0    0    0    0    0  |fib=30
+    H=15:    0    0    2    0    0   14    0    0    0   44    0    0    0    0    0    0    0    0    0    8    0    0    0   24    8    0    0    0    0    0    0    0    0    0  |fib=10
+    H=15:    0    0    0    0    0    0    0    0   18   18    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0   24    0    0    0    0    0    0    0    0  |fib=6
+    H=17:    1    0    0    0    0   16    0    0    0    0   26    0    0   24    0   30   32    0    0   26    0    0    0    0    0    0    0   15    0    0    0    0    0    0  |fib=17
+    H=17:    0    0    0   10    0    0   12    8    0    0   24    0    0    0    0    0    0   60    0    0   28    0   28    0    0    0    0    0    0    0    0    0    0    0  |fib=17
+    H=19:    0    0    0   10    0    0   16    0   14    0   44    0    0   30    0   20   56   28   30    0   36   28    0    0    0   36    0    0   32    0    0    0    0    0  |fib=38
+    H=23:    0    0    0    0    0   16    0    0   20    0    0    0    0   32    0   56  116    0   32    0    0   34    0    0   34   38    0    0    0   40   42    0    0    0  |fib=46
+    H=23:    0    0    0   10    0   14    0    0    0   18   24    0    0    0   60   28    0    0   38   40    0    0   40   76    0   40   38    0    0   34    0    0    0    0  |fib=46
+    H=25:    0    0    0    0    0    0    0    0   16   20   56    0    0    0    0   30   32   38   56    0    0    0    0   42   46   76    0    0   46    0    0   42    0    0  |fib=50
+    H=27:    0    0    2    0    0    0    0    0    0    0    0    8    0   26    0    0    0   40    0    0    0   48    0    0   16    0    0   40    0    0    0    0    0    0  |fib=18
+    H=29:    0    0    0    0    0    0    0    0    0   22    0    0    0    0   28   36    0    0    0    0    0    0    0   92    0   40    0    0    0   50    0    0    0   22  |fib=29
+    H=29:    0    0    0    0    0    0   16    0    0   22   24    0    0    0    0   28   34    0    0   48    0  100   40   44    0   44   42    0   44   42    0   52    0    0  |fib=58
+    H=29:    0    0    0    0    0    0    0    0   18    0    0    0    0    0   28    0    0   40    0    0    0   40   20    0    0   44   27    0    0   50    0    0   23    0  |fib=29
+    H=31:    0    0    0    0    0    0   16    0    0    0   28   24    0    0    0    0    0   76   42    0   92   44    0    0    0    0   50   52  148    0    0   48    0    0  |fib=62
+    H=33:    0    0    0    0    0    0    0    0    0    0    0    8    0    0    0    0   34    0   46   16    0    0    0    0   12    0    0    0   48    0    0   56    0    0  |fib=22
+    H=33:    0    0    0    0    0    0    0    0    0    0    0    0   24    0    0   36   38   40   76    0   40   44   44    0    0    0    0    0   56   58  100  104    0    0  |fib=66
+    H=33:    0    0    0    0    0   16    0    0    0    0    0    0    0    0    0    0    0   38    0    0    0   42   27   50    0    0   20   58    0   52   27    0    0    0  |fib=33
+    H=37:    0    0    0    0    5    0    0    0    0    0    0    0    0   15    0    0    0    0    0   40    0    0    0   52    0    0   58   78   60   62    0    0    0    0  |fib=37
+    H=37:    0    0    0    0    0    0    0    0    0   22    0    0    0    0    0   32    0    0   46    0    0   44    0  148   48   56    0   60    0  108    0  112    0   64  |fib=74
+    H=37:    0    0    0    0    0    0    0    0   20    0    0    0    0    0    0    0   40   34    0    0   50   42   50    0    0   58   52   62  108   48   58   58   60    0  |fib=74
+    H=41:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0   42    0    0    0    0    0    0    0    0  100   27    0    0   58   90   60   33    0  |fib=41
+    H=43:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0   42    0    0   52    0   48   56  104    0    0  112   58   60  264    0   64  |fib=86
+    H=45:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0   23    0    0    0    0    0    0   60   33    0   34    0  |fib=15
+    H=45:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0   22    0    0    0    0    0    0    0   64    0    0   64    0    0  |fib=15
+
+  WAGGLY-2 (d=2):
+    Edges: 404, Self-loops: 29/34, Total: 46080, SL%: 6.8%
+    H: [1, 3, 3, 5, 5, 9, 9, 9, 11, 13, 15, 15, 15, 17, 17, 19, 23, 23, 25, 27, 29, 29, 29, 31, 33, 33, 33, 37, 37, 37, 41, 43, 45, 45]
+    H= 1:    0    0    0    6    3    0   10    1    4    2    6    2    0    0    1    2    2    2    0    2    0    0    0    0    0    0    1    1    0    0    0    0    0    0  |fib=1
+    H= 3:    0    2    4    6    2    8    0    0    4   10    4    0    0    2   16   10    0    4    6    0    0    6    0    6    0    0    0    0    0    0    0    0    0    0  |fib=2
+    H= 3:    0    4    2    6    4   12    2    0    6   18    4    0    0    2    4    4    0    4    0    0    0    6    0    6    2    0    0    4    0    0    0    0    0    0  |fib=2
+    H= 5:    6    6    6   18   10   24   38    4   26   18   38   10    6   10   20   26   16   38   26    4   18   14   18   16    0   10    8    0    8    8    0    0    0    0  |fib=10
+    H= 5:    3    2    4   10    8   22   26    0   26   18    4   10    6    5    2    6    6    6    6    4    4    4    3    6    0    0    8   10    8    8    0    0    0    0  |fib=5
+    H= 9:    0    8   12   24   22   42   24    0   46  104   38    4   14   26   26   62   58   18   30   24    0   32   26   56   12   12   14   22    0   40   14    0    0    0  |fib=18
+    H= 9:   10    0    2   38   26   24   48    6   66   12   48   58   22   24    6   22   34   72   40    6   48   50   16   10    0   14   24    6   54   10    0   14    0    0  |fib=18
+    H= 9:    1    0    0    4    0    0    6    0    0    0    6    0    0    0    0    0    0   14    0    0    7    0    7    0    0    0    0    0    0    0    0    0    0    0  |fib=1
+    H=11:    4    4    6   26   26   46   66    0   66   56   34   38   16   28   14   32   72   54   40    0   26   48   22    8   14   84   28    8   38   38   18   14   16    0  |fib=22
+    H=13:    2   10   18   18   18  104   12    0   56  164   38    0   12    0   42   70   28    8   36   36    0   40   26  160   34   88   14    8   16   60    0   34    0   18  |fib=26
+    H=15:    6    4    4   38    4   38   48    6   34   38   52    8    0   54   34   90   84  112  104   42   64   58   38   66   26   86   30   24   90   20    0   48    0    0  |fib=30
+    H=15:    2    0    0   10   10    4   58    0   38    0    8   20   14   12    0    0   12   46   34    2   36   36    0    0    6    0   12   18   54    0    0   18    0    0  |fib=10
+    H=15:    0    0    0    6    6   14   22    0   16   12    0   14    0    0    0   12   16   12   28    0   16   16   14    0    0    0    0    0   14   16   18   18    0    0  |fib=6
+    H=17:    0    2    2   10    5   26   24    0   28    0   54   12    0   20   10   66   88   56   48   20   14   68    0   24   24   28   14   53   26   28   15    0    0    0  |fib=17
+    H=17:    1   16    4   20    2   26    6    0   14   42   34    0    0   10   56   58    0   28   44   26    0   30   37  108    0   70   38    0    0   72    0    0   12   11  |fib=17
+    H=19:    2   10    4   26    6   62   22    0   32   70   90    0   12   66   58   60  144   42  128   46   18   84   36  160   44  114   24   26   42  116   54   82    0   30  |fib=38
+    H=23:    2    0    0   16    6   58   34    0   72   28   84   12   16   88    0  144  170   52  140   48   54  106   42   28   60  172   42   28  130  118  138  146   36    0  |fib=46
+    H=23:    2    4    4   38    6   18   72   14   54    8  112   46   12   56   28   42   52  158  104    0  138  190   98   52   34   86   74  126  162   94   62   94   30    0  |fib=46
+    H=25:    0    6    0   26    6   30   40    0   40   36  104   34   28   48   44  128  140  104   84   34   70  112   46  134   78  118   30   38  198  108   84  264    0   38  |fib=50
+    H=27:    2    0    0    4    4   24    6    0    0   36   42    2    0   20   26   46   48    0   34   22    0   42   34   84    6   34   68   48   70   64    0   44    0    0  |fib=18
+    H=29:    0    0    0   18    4    0   48    7   26    0   64   36   16   14    0   18   54  138   70    0   62   74   44    0    0   34   56   59  230   32   51  128   22    0  |fib=29
+    H=29:    0    6    6   14    4   32   50    0   48   40   58   36   16   68   30   84  106  190  112   42   74  110   96  138   72  162  100  144  184  198   96  228   28   38  |fib=58
+    H=29:    0    0    0   18    3   26   16    7   22   26   38    0   14    0   37   36   42   98   46   34   44   96   24   64    0   60   65   46   72  152   91   72   56    0  |fib=29
+    H=31:    0    6    6   16    6   56   10    0    8  160   66    0    0   24  108  160   28   52  134   84    0  138   64  290   88  222   98  160  106  330   40  216    0  114  |fib=62
+    H=33:    0    0    2    0    0   12    0    0   14   34   26    6    0   24    0   44   60   34   78    6    0   72    0   88    0   98    0   34   68   66   30  152    0   42  |fib=22
+    H=33:    0    0    0   10    0   12   14    0   84   88   86    0    0   28   70  114  172   86  118   34   34  162   60  222   98  194  106   48  172  276  184  344   78   76  |fib=66
+    H=33:    1    0    0    8    8   14   24    0   28   14   30   12    0   14   38   24   42   74   30   68   56  100   65   98    0  106   26  124  162  144   58   76   41    0  |fib=33
+    H=37:    1    0    4    0   10   22    6    0    8    8   24   18    0   53    0   26   28  126   38   48   59  144   46  160   34   48  124  102  166  176   46   88   25   27  |fib=37
+    H=37:    0    0    0    8    8    0   54    0   38   16   90   54   14   26    0   42  130  162  198   70  230  184   72  106   68  172  162  166  370  158  124  530   40   38  |fib=74
+    H=37:    0    0    0    8    8   40   10    0   38   60   20    0   16   28   72  116  118   94  108   64   32  198  152  330   66  276  144  176  158  258  250  284  126   80  |fib=74
+    H=41:    0    0    0    0    0   14    0    0   18    0    0    0   18   15    0   54  138   62   84    0   51   96   91   40   30  184   58   46  124  250  118  238   93   23  |fib=41
+    H=43:    0    0    0    0    0    0   14    0   14   34   48   18   18    0    0   82  146   94  264   44  128  228   72  216  152  344   76   88  530  284  238  554   44  140  |fib=86
+    H=45:    0    0    0    0    0    0    0    0   16    0    0    0    0    0   12    0   36   30    0    0   22   28   56    0    0   78   41   25   40  126   93   44   28    0  |fib=15
+    H=45:    0    0    0    0    0    0    0    0    0   18    0    0    0    0   11   30    0    0   38    0    0   38    0  114   42   76    0   27   38   80   23  140    0    0  |fib=15
+
+  BLUE/BLACK (tiling complement, d=10):
+    Edges: 173, Self-loops: 10/34, Total: 1024, SL%: 5.1%
+    H: [1, 3, 3, 5, 5, 9, 9, 9, 11, 13, 15, 15, 15, 17, 17, 19, 23, 23, 25, 27, 29, 29, 29, 31, 33, 33, 33, 37, 37, 37, 41, 43, 45, 45]
+    H= 1:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    1    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0  |fib=1
+    H= 3:    0    0    0    0    0    0    0    0    0    0    2    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0  |fib=2
+    H= 3:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    2    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0  |fib=2
+    H= 5:    0    0    0    0    0    0    0    0    0    0    2    0    0    2    0    2    0    2    0    2    0    0    0    0    0    0    0    0    0    0    0    0    0    0  |fib=10
+    H= 5:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    1    0    1    2    0    0    1    0    0    0    0    0    0    0  |fib=5
+    H= 9:    0    0    0    0    0    0    0    0    0    0    2    0    0    0    2    2    0    0    0    2    2    4    2    0    0    0    0    2    0    0    0    0    0    0  |fib=18
+    H= 9:    0    0    0    0    0    0    0    0    0    0    2    0    0    2    0    0    0    2    2    0    0    2    0    4    0    0    2    2    0    0    0    0    0    0  |fib=18
+    H= 9:    0    0    0    0    0    0    0    0    0    0    0    0    0    1    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0  |fib=1
+    H=11:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    4    2    2    0    0    2    2    0    0    2    0    2    2    4    0    0    0    0  |fib=22
+    H=13:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    2    0    0    4    2    0    2    0    2    0    2    4    2    4    2    0    0    0    0  |fib=26
+    H=15:    0    2    0    2    0    2    2    0    0    0    4    0    0    0    0    2    0    2    2    2    0    4    0    2    0    0    2    2    0    0    0    0    0    0  |fib=30
+    H=15:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    2    0    0    0    2    0    2    0    2    0    2    0    0    0    0    0    0  |fib=10
+    H=15:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    2    0    0    0    2    2    0    0    0    0  |fib=6
+    H=17:    0    0    0    2    0    0    2    1    0    0    0    0    0    0    3    0    0    4    0    0    1    0    1    2    0    0    1    0    0    0    0    0    0    0  |fib=17
+    H=17:    1    0    0    0    0    2    0    0    0    0    0    0    0    3    0    2    2    0    0    2    0    0    0    0    0    0    2    3    0    0    0    0    0    0  |fib=17
+    H=19:    0    0    0    2    0    2    0    0    0    2    2    0    0    0    2    4    0    2    2    0    0    2    2    2    2    0    2    2    6    2    0    0    0    0  |fib=38
+    H=23:    0    0    0    0    0    0    0    0    4    0    0    0    0    0    2    0    0    4    4    0    0    2    6    2    2    8    0    0    4    2    0    4    0    2  |fib=46
+    H=23:    0    0    2    2    0    0    2    0    2    0    2    2    0    4    0    2    4    4    0    0    0    2    0    4    0    0    0    6    2    6    0    0    0    0  |fib=46
+    H=25:    0    0    0    0    0    0    2    0    2    4    2    0    0    0    0    2    4    0    8    0    0    2    0    2    2    2    2    2    4    4    2    4    0    0  |fib=50
+    H=27:    0    0    0    2    0    2    0    0    0    2    2    0    0    0    2    0    0    0    0    0    2    0    0    2    0    0    2    0    0    2    0    0    0    0  |fib=18
+    H=29:    0    0    0    0    1    2    0    0    0    0    0    0    0    1    0    0    0    0    0    2    0    6    1    0    2    2    3    1    2    2    2    0    0    2  |fib=29
+    H=29:    0    0    0    0    0    4    2    0    2    2    4    2    0    0    0    2    2    2    2    0    6    4    0    4    0    4    0    0    4    8    0    4    0    0  |fib=58
+    H=29:    0    0    0    0    1    2    0    0    2    0    0    0    0    1    0    2    6    0    0    0    1    0    0    4    0    0    0    3    2    2    1    0    2    0  |fib=29
+    H=31:    0    0    0    0    2    0    4    0    0    2    2    2    0    2    0    2    2    4    2    2    0    4    4    4    0    4    0    2    8    4    2    4    0    0  |fib=62
+    H=33:    0    0    0    0    0    0    0    0    0    0    0    0    2    0    0    2    2    0    2    0    2    0    0    0    0    4    0    0    2    0    2    4    0    0  |fib=22
+    H=33:    0    0    0    0    0    0    0    0    2    2    0    2    0    0    0    0    8    0    2    0    2    4    0    4    4    0    6    0    8    4    2   12    2    2  |fib=66
+    H=33:    0    0    0    0    1    0    2    0    0    4    2    0    0    1    2    2    0    0    2    2    3    0    0    0    0    6    0    1    2    2    0    0    1    0  |fib=33
+    H=37:    0    0    0    0    0    2    2    0    2    2    2    2    0    0    3    2    0    6    2    0    1    0    3    2    0    0    1    0    0    0    1    2    1    1  |fib=37
+    H=37:    0    0    0    0    0    0    0    0    2    4    0    0    2    0    0    6    4    2    4    0    2    4    2    8    2    8    2    0    0    2    4   14    2    0  |fib=74
+    H=37:    0    0    0    0    0    0    0    0    4    2    0    0    2    0    0    2    2    6    4    2    2    8    2    4    0    4    2    0    2    8    8    8    2    0  |fib=74
+    H=41:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    2    0    2    0    1    2    2    2    0    1    4    8    2   12    2    1  |fib=41
+    H=43:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    4    0    4    0    0    4    0    4    4   12    0    2   14    8   12   12    0    6  |fib=86
+    H=45:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    2    0    0    2    1    1    2    2    2    0    2    1  |fib=15
+    H=45:    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    2    0    0    0    2    0    0    0    0    2    0    1    0    0    1    6    1    0  |fib=15
+
+  VENN DIAGRAM:
+    Wiggly edges:       143
+    Waggly-2 edges:     404
+    Blue/black edges:   173
+    Wig ∩ Wag:          126
+    Wig ∩ BB:           66
+    Wag ∩ BB:           160
+    All three:          64
+    Union:              432 / 561 possible
+
+  UNIQUE EDGES:
+    Only wiggly:     15
+    Only waggly-2:   182
+    Only blue/black: 11
+
+  BLUE/BLACK CROSS-CLASS EDGES:
+    {0(H=1) ↔ 15(H=17)}: weight=2 
+    {1(H=3) ↔ 7(H=15)}: weight=4 also wiggly
+    {2(H=5) ↔ 6(H=17)}: weight=4 
+    {2(H=5) ↔ 7(H=15)}: weight=4 also wiggly
+    {2(H=5) ↔ 8(H=19)}: weight=4 also wiggly
+    {2(H=5) ↔ 13(H=27)}: weight=4 
+    {2(H=5) ↔ 14(H=23)}: weight=4 also wiggly
+    {3(H=9) ↔ 7(H=15)}: weight=4 also wiggly
+    {3(H=9) ↔ 8(H=19)}: weight=4 
+    {3(H=9) ↔ 13(H=27)}: weight=4 
+    {3(H=9) ↔ 15(H=17)}: weight=4 
+    {3(H=9) ↔ 20(H=37)}: weight=4 
+    {3(H=9) ↔ 24(H=29)}: weight=4 
+    {3(H=9) ↔ 27(H=29)}: weight=8 
+    {3(H=9) ↔ 29(H=29)}: weight=4 
+    {4(H=9) ↔ 6(H=17)}: weight=4 
+    {4(H=9) ↔ 7(H=15)}: weight=4 also wiggly
+    {4(H=9) ↔ 14(H=23)}: weight=4 
+    {4(H=9) ↔ 17(H=25)}: weight=4 
+    {4(H=9) ↔ 20(H=37)}: weight=4 
+    {4(H=9) ↔ 21(H=31)}: weight=8 also wiggly
+    {4(H=9) ↔ 26(H=33)}: weight=4 
+    {4(H=9) ↔ 27(H=29)}: weight=4 also wiggly
+    {5(H=11) ↔ 9(H=23)}: weight=8 also wiggly
+    {5(H=11) ↔ 14(H=23)}: weight=4 
+    {5(H=11) ↔ 17(H=25)}: weight=4 also wiggly
+    {5(H=11) ↔ 20(H=37)}: weight=4 
+    {5(H=11) ↔ 22(H=37)}: weight=4 
+    {5(H=11) ↔ 23(H=37)}: weight=8 also wiggly
+    {5(H=11) ↔ 25(H=33)}: weight=4 
+    {5(H=11) ↔ 27(H=29)}: weight=4 
+    {5(H=11) ↔ 29(H=29)}: weight=4 also wiggly
+    {6(H=17) ↔ 14(H=23)}: weight=8 
+    {6(H=17) ↔ 15(H=17)}: weight=6 
+    {6(H=17) ↔ 21(H=31)}: weight=4 
+    {6(H=17) ↔ 24(H=29)}: weight=2 
+    {6(H=17) ↔ 26(H=33)}: weight=2 
+    {6(H=17) ↔ 29(H=29)}: weight=2 
+    {6(H=17) ↔ 33(H=9)}: weight=2 
+    {7(H=15) ↔ 8(H=19)}: weight=4 also wiggly
+    {7(H=15) ↔ 13(H=27)}: weight=4 
+    {7(H=15) ↔ 14(H=23)}: weight=4 also wiggly
+    {7(H=15) ↔ 17(H=25)}: weight=4 also wiggly
+    {7(H=15) ↔ 20(H=37)}: weight=4 
+    {7(H=15) ↔ 21(H=31)}: weight=4 also wiggly
+    {7(H=15) ↔ 26(H=33)}: weight=4 
+    {7(H=15) ↔ 27(H=29)}: weight=8 also wiggly
+    {8(H=19) ↔ 12(H=13)}: weight=4 
+    {8(H=19) ↔ 14(H=23)}: weight=4 also wiggly
+    {8(H=19) ↔ 15(H=17)}: weight=4 
+    {8(H=19) ↔ 16(H=33)}: weight=4 
+    {8(H=19) ↔ 17(H=25)}: weight=4 also wiggly
+    {8(H=19) ↔ 20(H=37)}: weight=4 
+    {8(H=19) ↔ 21(H=31)}: weight=4 
+    {8(H=19) ↔ 22(H=37)}: weight=12 also wiggly
+    {8(H=19) ↔ 23(H=37)}: weight=4 
+    {8(H=19) ↔ 26(H=33)}: weight=4 
+    {8(H=19) ↔ 27(H=29)}: weight=4 also wiggly
+    {8(H=19) ↔ 29(H=29)}: weight=4 
+    {9(H=23) ↔ 14(H=23)}: weight=8 
+    {9(H=23) ↔ 15(H=17)}: weight=4 
+    {9(H=23) ↔ 16(H=33)}: weight=4 also wiggly
+    {9(H=23) ↔ 17(H=25)}: weight=8 also wiggly
+    {9(H=23) ↔ 21(H=31)}: weight=4 
+    {9(H=23) ↔ 22(H=37)}: weight=8 
+    {9(H=23) ↔ 23(H=37)}: weight=4 also wiggly
+    {9(H=23) ↔ 25(H=33)}: weight=16 also wiggly
+    {9(H=23) ↔ 27(H=29)}: weight=4 also wiggly
+    {9(H=23) ↔ 29(H=29)}: weight=12 
+    {9(H=23) ↔ 30(H=43)}: weight=8 
+    {9(H=23) ↔ 32(H=45)}: weight=4 
+    {10(H=3) ↔ 14(H=23)}: weight=4 
+    {11(H=15) ↔ 14(H=23)}: weight=4 
+    {11(H=15) ↔ 20(H=37)}: weight=4 
+    {11(H=15) ↔ 21(H=31)}: weight=4 also wiggly
+    {11(H=15) ↔ 25(H=33)}: weight=4 
+    {11(H=15) ↔ 27(H=29)}: weight=4 
+    {12(H=13) ↔ 13(H=27)}: weight=4 
+    {12(H=13) ↔ 17(H=25)}: weight=8 also wiggly
+    {12(H=13) ↔ 20(H=37)}: weight=4 
+    {12(H=13) ↔ 21(H=31)}: weight=4 
+    {12(H=13) ↔ 22(H=37)}: weight=8 also wiggly
+    {12(H=13) ↔ 23(H=37)}: weight=4 
+    {12(H=13) ↔ 25(H=33)}: weight=4 
+    {12(H=13) ↔ 26(H=33)}: weight=8 
+    {12(H=13) ↔ 27(H=29)}: weight=4 also wiggly
+    {13(H=27) ↔ 15(H=17)}: weight=4 
+    {13(H=27) ↔ 21(H=31)}: weight=4 
+    {13(H=27) ↔ 23(H=37)}: weight=4 
+    {13(H=27) ↔ 24(H=29)}: weight=4 
+    {13(H=27) ↔ 26(H=33)}: weight=4 
+    {14(H=23) ↔ 20(H=37)}: weight=12 
+    {14(H=23) ↔ 21(H=31)}: weight=8 also wiggly
+    {14(H=23) ↔ 22(H=37)}: weight=4 
+    {14(H=23) ↔ 23(H=37)}: weight=12 also wiggly
+    {14(H=23) ↔ 27(H=29)}: weight=4 
+    {15(H=17) ↔ 20(H=37)}: weight=6 
+    {15(H=17) ↔ 26(H=33)}: weight=4 
+    {16(H=33) ↔ 17(H=25)}: weight=4 also wiggly
+    {16(H=33) ↔ 19(H=15)}: weight=4 
+    {16(H=33) ↔ 22(H=37)}: weight=4 also wiggly
+    {16(H=33) ↔ 24(H=29)}: weight=4 
+    {16(H=33) ↔ 25(H=33)}: weight=8 
+    {16(H=33) ↔ 28(H=41)}: weight=4 
+    {16(H=33) ↔ 30(H=43)}: weight=8 also wiggly
+    {17(H=25) ↔ 20(H=37)}: weight=4 
+    {17(H=25) ↔ 21(H=31)}: weight=4 also wiggly
+    {17(H=25) ↔ 22(H=37)}: weight=8 also wiggly
+    {17(H=25) ↔ 23(H=37)}: weight=8 
+    {17(H=25) ↔ 25(H=33)}: weight=4 also wiggly
+    {17(H=25) ↔ 26(H=33)}: weight=4 
+    {17(H=25) ↔ 27(H=29)}: weight=4 
+    {17(H=25) ↔ 28(H=41)}: weight=4 
+    {17(H=25) ↔ 30(H=43)}: weight=8 also wiggly
+    {18(H=5) ↔ 21(H=31)}: weight=4 
+    {18(H=5) ↔ 24(H=29)}: weight=2 
+    {18(H=5) ↔ 26(H=33)}: weight=2 
+    {18(H=5) ↔ 29(H=29)}: weight=2 
+    {19(H=15) ↔ 22(H=37)}: weight=4 
+    {19(H=15) ↔ 23(H=37)}: weight=4 
+    {20(H=37) ↔ 21(H=31)}: weight=4 also wiggly
+    {20(H=37) ↔ 24(H=29)}: weight=2 
+    {20(H=37) ↔ 26(H=33)}: weight=2 also wiggly
+    {20(H=37) ↔ 28(H=41)}: weight=2 
+    {20(H=37) ↔ 29(H=29)}: weight=6 
+    {20(H=37) ↔ 30(H=43)}: weight=4 
+    {20(H=37) ↔ 31(H=45)}: weight=2 
+    {20(H=37) ↔ 32(H=45)}: weight=2 
+    {21(H=31) ↔ 22(H=37)}: weight=16 also wiggly
+    {21(H=31) ↔ 23(H=37)}: weight=8 
+    {21(H=31) ↔ 25(H=33)}: weight=8 
+    {21(H=31) ↔ 27(H=29)}: weight=8 also wiggly
+    {21(H=31) ↔ 28(H=41)}: weight=4 
+    {21(H=31) ↔ 29(H=29)}: weight=8 
+    {21(H=31) ↔ 30(H=43)}: weight=8 also wiggly
+    {22(H=37) ↔ 23(H=37)}: weight=4 also wiggly
+    {22(H=37) ↔ 24(H=29)}: weight=4 
+    {22(H=37) ↔ 25(H=33)}: weight=16 also wiggly
+    {22(H=37) ↔ 26(H=33)}: weight=4 
+    {22(H=37) ↔ 27(H=29)}: weight=8 also wiggly
+    {22(H=37) ↔ 28(H=41)}: weight=8 
+    {22(H=37) ↔ 29(H=29)}: weight=4 
+    {22(H=37) ↔ 30(H=43)}: weight=28 also wiggly
+    {22(H=37) ↔ 31(H=45)}: weight=4 
+    {23(H=37) ↔ 24(H=29)}: weight=4 also wiggly
+    {23(H=37) ↔ 25(H=33)}: weight=8 also wiggly
+    {23(H=37) ↔ 26(H=33)}: weight=4 also wiggly
+    {23(H=37) ↔ 27(H=29)}: weight=16 also wiggly
+    {23(H=37) ↔ 28(H=41)}: weight=16 also wiggly
+    {23(H=37) ↔ 29(H=29)}: weight=4 also wiggly
+    {23(H=37) ↔ 30(H=43)}: weight=16 also wiggly
+    {23(H=37) ↔ 31(H=45)}: weight=4 also wiggly
+    {24(H=29) ↔ 25(H=33)}: weight=4 also wiggly
+    {24(H=29) ↔ 26(H=33)}: weight=6 
+    {24(H=29) ↔ 27(H=29)}: weight=12 
+    {24(H=29) ↔ 28(H=41)}: weight=4 
+    {24(H=29) ↔ 29(H=29)}: weight=2 
+    {24(H=29) ↔ 32(H=45)}: weight=4 also wiggly
+    {25(H=33) ↔ 26(H=33)}: weight=12 
+    {25(H=33) ↔ 27(H=29)}: weight=8 also wiggly
+    {25(H=33) ↔ 28(H=41)}: weight=4 also wiggly
+    {25(H=33) ↔ 30(H=43)}: weight=24 also wiggly
+    {25(H=33) ↔ 31(H=45)}: weight=4 
+    {25(H=33) ↔ 32(H=45)}: weight=4 
+    {26(H=33) ↔ 31(H=45)}: weight=2 
+    {27(H=29) ↔ 30(H=43)}: weight=8 also wiggly
+    {28(H=41) ↔ 29(H=29)}: weight=2 
+    {28(H=41) ↔ 30(H=43)}: weight=24 also wiggly
+    {28(H=41) ↔ 31(H=45)}: weight=4 also wiggly
+    {28(H=41) ↔ 32(H=45)}: weight=2 
+    {29(H=29) ↔ 31(H=45)}: weight=4 also wiggly
+    {30(H=43) ↔ 32(H=45)}: weight=12 also wiggly
+    {31(H=45) ↔ 32(H=45)}: weight=2 
+
+  BLUE/BLACK SELF-LOOPS (SC classes in tiling model):
+    mid=7 (H=15): 4 self-loops out of 30 tilings (13.3%)
+    mid=8 (H=19): 4 self-loops out of 38 tilings (10.5%)
+    mid=14 (H=23): 4 self-loops out of 46 tilings (8.7%)
+    mid=17 (H=25): 8 self-loops out of 50 tilings (16.0%)
+    mid=27 (H=29): 4 self-loops out of 58 tilings (6.9%)
+    mid=21 (H=31): 4 self-loops out of 62 tilings (6.5%)
+    mid=23 (H=37): 8 self-loops out of 74 tilings (10.8%)
+    mid=28 (H=41): 2 self-loops out of 41 tilings (4.9%)
+    mid=30 (H=43): 12 self-loops out of 86 tilings (14.0%)
+    mid=31 (H=45): 2 self-loops out of 15 tilings (13.3%)
+
+  BLUE/BLACK vs WIGGLY OVERLAP:
+    {0(H=1)↔15(H=17)}: wiggly=False, waggly-2=True
+    {1(H=3)↔7(H=15)}: wiggly=True, waggly-2=True
+    {2(H=5)↔6(H=17)}: wiggly=False, waggly-2=True
+    {2(H=5)↔7(H=15)}: wiggly=True, waggly-2=True
+    {2(H=5)↔8(H=19)}: wiggly=True, waggly-2=True
+    {2(H=5)↔13(H=27)}: wiggly=False, waggly-2=True
+    {2(H=5)↔14(H=23)}: wiggly=True, waggly-2=True
+    {3(H=9)↔7(H=15)}: wiggly=True, waggly-2=True
+    {3(H=9)↔8(H=19)}: wiggly=False, waggly-2=True
+    {3(H=9)↔13(H=27)}: wiggly=False, waggly-2=True
+    {3(H=9)↔15(H=17)}: wiggly=False, waggly-2=True
+    {3(H=9)↔20(H=37)}: wiggly=False, waggly-2=True
+    {3(H=9)↔24(H=29)}: wiggly=False, waggly-2=False
+    {3(H=9)↔27(H=29)}: wiggly=False, waggly-2=True
+    {3(H=9)↔29(H=29)}: wiggly=False, waggly-2=True
+    {4(H=9)↔6(H=17)}: wiggly=False, waggly-2=True
+    {4(H=9)↔7(H=15)}: wiggly=True, waggly-2=True
+    {4(H=9)↔14(H=23)}: wiggly=False, waggly-2=True
+    {4(H=9)↔17(H=25)}: wiggly=False, waggly-2=True
+    {4(H=9)↔20(H=37)}: wiggly=False, waggly-2=True
+    {4(H=9)↔21(H=31)}: wiggly=True, waggly-2=True
+    {4(H=9)↔26(H=33)}: wiggly=False, waggly-2=True
+    {4(H=9)↔27(H=29)}: wiggly=True, waggly-2=True
+    {5(H=11)↔9(H=23)}: wiggly=True, waggly-2=True
+    {5(H=11)↔14(H=23)}: wiggly=False, waggly-2=True
+    {5(H=11)↔17(H=25)}: wiggly=True, waggly-2=True
+    {5(H=11)↔20(H=37)}: wiggly=False, waggly-2=True
+    {5(H=11)↔22(H=37)}: wiggly=False, waggly-2=True
+    {5(H=11)↔23(H=37)}: wiggly=True, waggly-2=True
+    {5(H=11)↔25(H=33)}: wiggly=False, waggly-2=True
+    {5(H=11)↔27(H=29)}: wiggly=False, waggly-2=True
+    {5(H=11)↔29(H=29)}: wiggly=True, waggly-2=True
+    {6(H=17)↔14(H=23)}: wiggly=False, waggly-2=True
+    {6(H=17)↔15(H=17)}: wiggly=False, waggly-2=True
+    {6(H=17)↔21(H=31)}: wiggly=False, waggly-2=True
+    {6(H=17)↔24(H=29)}: wiggly=False, waggly-2=True
+    {6(H=17)↔26(H=33)}: wiggly=False, waggly-2=True
+    {6(H=17)↔29(H=29)}: wiggly=False, waggly-2=False
+    {6(H=17)↔33(H=9)}: wiggly=False, waggly-2=False
+    {7(H=15)↔8(H=19)}: wiggly=True, waggly-2=True
+    {7(H=15)↔13(H=27)}: wiggly=False, waggly-2=True
+    {7(H=15)↔14(H=23)}: wiggly=True, waggly-2=True
+    {7(H=15)↔17(H=25)}: wiggly=True, waggly-2=True
+    {7(H=15)↔20(H=37)}: wiggly=False, waggly-2=True
+    {7(H=15)↔21(H=31)}: wiggly=True, waggly-2=True
+    {7(H=15)↔26(H=33)}: wiggly=False, waggly-2=True
+    {7(H=15)↔27(H=29)}: wiggly=True, waggly-2=True
+    {8(H=19)↔12(H=13)}: wiggly=False, waggly-2=True
+    {8(H=19)↔14(H=23)}: wiggly=True, waggly-2=True
+    {8(H=19)↔15(H=17)}: wiggly=False, waggly-2=True
+    {8(H=19)↔16(H=33)}: wiggly=False, waggly-2=True
+    {8(H=19)↔17(H=25)}: wiggly=True, waggly-2=True
+    {8(H=19)↔20(H=37)}: wiggly=False, waggly-2=True
+    {8(H=19)↔21(H=31)}: wiggly=False, waggly-2=True
+    {8(H=19)↔22(H=37)}: wiggly=True, waggly-2=True
+    {8(H=19)↔23(H=37)}: wiggly=False, waggly-2=True
+    {8(H=19)↔26(H=33)}: wiggly=False, waggly-2=True
+    {8(H=19)↔27(H=29)}: wiggly=True, waggly-2=True
+    {8(H=19)↔29(H=29)}: wiggly=False, waggly-2=True
+    {9(H=23)↔14(H=23)}: wiggly=False, waggly-2=True
+    {9(H=23)↔15(H=17)}: wiggly=False, waggly-2=False
+    {9(H=23)↔16(H=33)}: wiggly=True, waggly-2=True
+    {9(H=23)↔17(H=25)}: wiggly=True, waggly-2=True
+    {9(H=23)↔21(H=31)}: wiggly=False, waggly-2=True
+    {9(H=23)↔22(H=37)}: wiggly=False, waggly-2=True
+    {9(H=23)↔23(H=37)}: wiggly=True, waggly-2=True
+    {9(H=23)↔25(H=33)}: wiggly=True, waggly-2=True
+    {9(H=23)↔27(H=29)}: wiggly=True, waggly-2=True
+    {9(H=23)↔29(H=29)}: wiggly=False, waggly-2=True
+    {9(H=23)↔30(H=43)}: wiggly=False, waggly-2=True
+    {9(H=23)↔32(H=45)}: wiggly=False, waggly-2=False
+    {10(H=3)↔14(H=23)}: wiggly=False, waggly-2=True
+    {11(H=15)↔14(H=23)}: wiggly=False, waggly-2=True
+    {11(H=15)↔20(H=37)}: wiggly=False, waggly-2=True
+    {11(H=15)↔21(H=31)}: wiggly=True, waggly-2=False
+    {11(H=15)↔25(H=33)}: wiggly=False, waggly-2=False
+    {11(H=15)↔27(H=29)}: wiggly=False, waggly-2=True
+    {12(H=13)↔13(H=27)}: wiggly=False, waggly-2=True
+    {12(H=13)↔17(H=25)}: wiggly=True, waggly-2=True
+    {12(H=13)↔20(H=37)}: wiggly=False, waggly-2=True
+    {12(H=13)↔21(H=31)}: wiggly=False, waggly-2=True
+    {12(H=13)↔22(H=37)}: wiggly=True, waggly-2=True
+    {12(H=13)↔23(H=37)}: wiggly=False, waggly-2=True
+    {12(H=13)↔25(H=33)}: wiggly=False, waggly-2=True
+    {12(H=13)↔26(H=33)}: wiggly=False, waggly-2=True
+    {12(H=13)↔27(H=29)}: wiggly=True, waggly-2=True
+    {13(H=27)↔15(H=17)}: wiggly=False, waggly-2=True
+    {13(H=27)↔21(H=31)}: wiggly=False, waggly-2=True
+    {13(H=27)↔23(H=37)}: wiggly=False, waggly-2=True
+    {13(H=27)↔24(H=29)}: wiggly=False, waggly-2=False
+    {13(H=27)↔26(H=33)}: wiggly=False, waggly-2=True
+    {14(H=23)↔20(H=37)}: wiggly=False, waggly-2=True
+    {14(H=23)↔21(H=31)}: wiggly=True, waggly-2=True
+    {14(H=23)↔22(H=37)}: wiggly=False, waggly-2=True
+    {14(H=23)↔23(H=37)}: wiggly=True, waggly-2=True
+    {14(H=23)↔27(H=29)}: wiggly=False, waggly-2=True
+    {15(H=17)↔20(H=37)}: wiggly=False, waggly-2=False
+    {15(H=17)↔26(H=33)}: wiggly=False, waggly-2=True
+    {16(H=33)↔17(H=25)}: wiggly=True, waggly-2=True
+    {16(H=33)↔19(H=15)}: wiggly=False, waggly-2=False
+    {16(H=33)↔22(H=37)}: wiggly=True, waggly-2=True
+    {16(H=33)↔24(H=29)}: wiggly=False, waggly-2=False
+    {16(H=33)↔25(H=33)}: wiggly=False, waggly-2=True
+    {16(H=33)↔28(H=41)}: wiggly=False, waggly-2=True
+    {16(H=33)↔30(H=43)}: wiggly=True, waggly-2=True
+    {17(H=25)↔20(H=37)}: wiggly=False, waggly-2=True
+    {17(H=25)↔21(H=31)}: wiggly=True, waggly-2=True
+    {17(H=25)↔22(H=37)}: wiggly=True, waggly-2=True
+    {17(H=25)↔23(H=37)}: wiggly=False, waggly-2=True
+    {17(H=25)↔25(H=33)}: wiggly=True, waggly-2=True
+    {17(H=25)↔26(H=33)}: wiggly=False, waggly-2=True
+    {17(H=25)↔27(H=29)}: wiggly=False, waggly-2=True
+    {17(H=25)↔28(H=41)}: wiggly=False, waggly-2=True
+    {17(H=25)↔30(H=43)}: wiggly=True, waggly-2=True
+    {18(H=5)↔21(H=31)}: wiggly=False, waggly-2=True
+    {18(H=5)↔24(H=29)}: wiggly=False, waggly-2=True
+    {18(H=5)↔26(H=33)}: wiggly=False, waggly-2=True
+    {18(H=5)↔29(H=29)}: wiggly=False, waggly-2=True
+    {19(H=15)↔22(H=37)}: wiggly=False, waggly-2=True
+    {19(H=15)↔23(H=37)}: wiggly=False, waggly-2=True
+    {20(H=37)↔21(H=31)}: wiggly=True, waggly-2=True
+    {20(H=37)↔24(H=29)}: wiggly=False, waggly-2=True
+    {20(H=37)↔26(H=33)}: wiggly=True, waggly-2=True
+    {20(H=37)↔28(H=41)}: wiggly=False, waggly-2=True
+    {20(H=37)↔29(H=29)}: wiggly=False, waggly-2=True
+    {20(H=37)↔30(H=43)}: wiggly=False, waggly-2=True
+    {20(H=37)↔31(H=45)}: wiggly=False, waggly-2=True
+    {20(H=37)↔32(H=45)}: wiggly=False, waggly-2=True
+    {21(H=31)↔22(H=37)}: wiggly=True, waggly-2=True
+    {21(H=31)↔23(H=37)}: wiggly=False, waggly-2=True
+    {21(H=31)↔25(H=33)}: wiggly=False, waggly-2=True
+    {21(H=31)↔27(H=29)}: wiggly=True, waggly-2=True
+    {21(H=31)↔28(H=41)}: wiggly=False, waggly-2=True
+    {21(H=31)↔29(H=29)}: wiggly=False, waggly-2=True
+    {21(H=31)↔30(H=43)}: wiggly=True, waggly-2=True
+    {22(H=37)↔23(H=37)}: wiggly=True, waggly-2=True
+    {22(H=37)↔24(H=29)}: wiggly=False, waggly-2=True
+    {22(H=37)↔25(H=33)}: wiggly=True, waggly-2=True
+    {22(H=37)↔26(H=33)}: wiggly=False, waggly-2=True
+    {22(H=37)↔27(H=29)}: wiggly=True, waggly-2=True
+    {22(H=37)↔28(H=41)}: wiggly=False, waggly-2=True
+    {22(H=37)↔29(H=29)}: wiggly=False, waggly-2=True
+    {22(H=37)↔30(H=43)}: wiggly=True, waggly-2=True
+    {22(H=37)↔31(H=45)}: wiggly=False, waggly-2=True
+    {23(H=37)↔24(H=29)}: wiggly=True, waggly-2=True
+    {23(H=37)↔25(H=33)}: wiggly=True, waggly-2=True
+    {23(H=37)↔26(H=33)}: wiggly=True, waggly-2=True
+    {23(H=37)↔27(H=29)}: wiggly=True, waggly-2=True
+    {23(H=37)↔28(H=41)}: wiggly=True, waggly-2=True
+    {23(H=37)↔29(H=29)}: wiggly=True, waggly-2=True
+    {23(H=37)↔30(H=43)}: wiggly=True, waggly-2=True
+    {23(H=37)↔31(H=45)}: wiggly=True, waggly-2=True
+    {24(H=29)↔25(H=33)}: wiggly=True, waggly-2=True
+    {24(H=29)↔26(H=33)}: wiggly=False, waggly-2=True
+    {24(H=29)↔27(H=29)}: wiggly=False, waggly-2=True
+    {24(H=29)↔28(H=41)}: wiggly=False, waggly-2=True
+    {24(H=29)↔29(H=29)}: wiggly=False, waggly-2=True
+    {24(H=29)↔32(H=45)}: wiggly=True, waggly-2=False
+    {25(H=33)↔26(H=33)}: wiggly=False, waggly-2=True
+    {25(H=33)↔27(H=29)}: wiggly=True, waggly-2=True
+    {25(H=33)↔28(H=41)}: wiggly=True, waggly-2=True
+    {25(H=33)↔30(H=43)}: wiggly=True, waggly-2=True
+    {25(H=33)↔31(H=45)}: wiggly=False, waggly-2=True
+    {25(H=33)↔32(H=45)}: wiggly=False, waggly-2=True
+    {26(H=33)↔31(H=45)}: wiggly=False, waggly-2=True
+    {27(H=29)↔30(H=43)}: wiggly=True, waggly-2=True
+    {28(H=41)↔29(H=29)}: wiggly=False, waggly-2=True
+    {28(H=41)↔30(H=43)}: wiggly=True, waggly-2=True
+    {28(H=41)↔31(H=45)}: wiggly=True, waggly-2=True
+    {28(H=41)↔32(H=45)}: wiggly=False, waggly-2=True
+    {29(H=29)↔31(H=45)}: wiggly=True, waggly-2=True
+    {30(H=43)↔32(H=45)}: wiggly=True, waggly-2=True
+    {31(H=45)↔32(H=45)}: wiggly=False, waggly-2=False
+
+========================================================================
+  KEY IDENTITIES AND RELATIONSHIPS
+========================================================================
+
+
+  CORRECTED DEFINITIONS:
+
+  1. WIGGLY LINE: flip 1 tile. Hamming distance 1 in Q_m.
+     = single-tile mutation. Each tiling has exactly m neighbors.
+
+  2. WAGGLY LINE: any non-wiggly connection in Q_m. Distance ≥ 2.
+     Includes the complement tiling at distance m.
+
+  3. BLUE/BLACK LINE: connect tiling t to its complement tiling
+     t_comp = t XOR (2^m - 1). This is a SPECIFIC waggly line at
+     distance m. It flips all TILES but preserves the BASE PATH.
+
+     This is NOT the tournament complement T^op!
+     T^op would require also flipping the base-path arcs.
+     The complement tiling gives a DIFFERENT tournament than T^op.
+
+  CRITICAL: blue/black IS a waggly line (at max distance m).
+  It IS inside Q_m. It DOES connect different iso classes.
+
+  The previous analysis (S295) was WRONG because it computed T^op
+  (flipping all arcs) instead of the complement tiling (flipping
+  only non-base-path arcs).
+
+  CORRECT HIERARCHY:
+  wiggly ⊂ Q_m edges (d=1)
+  waggly ⊃ blue/black (d=2,...,m including d=m)
+  blue/black = the d=m waggly line = complement tiling
+
+  Blue/black has cross-class edges. They are the connections between
+  classes that are NOT self-complementary in the TILING sense
+  (which is different from SC in the TOURNAMENT sense).
+
+Done. opus-2026-03-24-S295b
