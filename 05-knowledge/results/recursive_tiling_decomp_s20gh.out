@@ -1,0 +1,188 @@
+================================================================================
+  RECURSIVE TILING DECOMPOSITION
+  kind-pasteur-2026-03-25-S20gh
+================================================================================
+
+  n = 4, delta_2: 3 tiles = C(3,2)
+    Bottom (y=1):  2 tiles = [(4, 1), (3, 1)]
+    Top (x=4):    2 tiles = [(4, 1), (4, 2)]
+    Apex (4,1):   1 tile
+    Overlap:       0 tiles = C(2,2) = 1
+    Check: 2 + 2 - 1 + 0 = 3 = 3
+
+    MODE A (remove vertex 4):
+      New:   2 tiles (= 4-2 = 2)
+      Inner: 1 tiles (= C(2,2) = 1)
+      Inner IS delta_1
+
+    MODE B (remove vertices 1 and 4):
+      Removed: 3 tiles (= 2*2-1 = 3)
+      Inner:   0 tiles (= C(1,2) = 0)
+      Inner IS delta_0
+
+    FRACTAL DECOMPOSITION (Mode A chain):
+      Level 2: delta_2 = delta_1 + 2 new tiles
+      Level 1: delta_1 = delta_0 + 1 new tiles
+      Level 0: delta_0 = delta_-1 + 0 new tiles
+      Total tiles: 3 = 3
+
+    INFORMATION CONTENT:
+      delta_2 = 3 free bits = 2 + 1 + 0
+      = sum 1..2 = C(3,2) = 3
+
+  n = 5, delta_3: 6 tiles = C(4,2)
+    Bottom (y=1):  3 tiles = [(5, 1), (4, 1), (3, 1)]
+    Top (x=5):    3 tiles = [(5, 1), (5, 2), (5, 3)]
+    Apex (5,1):   1 tile
+    Overlap:       1 tiles = C(3,2) = 3
+    Check: 3 + 3 - 1 + 1 = 6 = 6
+
+    MODE A (remove vertex 5):
+      New:   3 tiles (= 5-2 = 3)
+      Inner: 3 tiles (= C(3,2) = 3)
+      Inner IS delta_2
+
+    MODE B (remove vertices 1 and 5):
+      Removed: 5 tiles (= 2*3-1 = 5)
+      Inner:   1 tiles (= C(2,2) = 1)
+      Inner IS delta_1
+
+    FRACTAL DECOMPOSITION (Mode A chain):
+      Level 3: delta_3 = delta_2 + 3 new tiles
+      Level 2: delta_2 = delta_1 + 2 new tiles
+      Level 1: delta_1 = delta_0 + 1 new tiles
+      Level 0: delta_0 = delta_-1 + 0 new tiles
+      Total tiles: 6 = 6
+
+    INFORMATION CONTENT:
+      delta_3 = 6 free bits = 3 + 2 + 1 + 0
+      = sum 1..3 = C(4,2) = 6
+
+  n = 6, delta_4: 10 tiles = C(5,2)
+    Bottom (y=1):  4 tiles = [(6, 1), (5, 1), (4, 1), (3, 1)]
+    Top (x=6):    4 tiles = [(6, 1), (6, 2), (6, 3), (6, 4)]
+    Apex (6,1):   1 tile
+    Overlap:       3 tiles = C(4,2) = 6
+    Check: 4 + 4 - 1 + 3 = 10 = 10
+
+    MODE A (remove vertex 6):
+      New:   4 tiles (= 6-2 = 4)
+      Inner: 6 tiles (= C(4,2) = 6)
+      Inner IS delta_3
+
+    MODE B (remove vertices 1 and 6):
+      Removed: 7 tiles (= 2*4-1 = 7)
+      Inner:   3 tiles (= C(3,2) = 3)
+      Inner IS delta_2
+
+    FRACTAL DECOMPOSITION (Mode A chain):
+      Level 4: delta_4 = delta_3 + 4 new tiles
+      Level 3: delta_3 = delta_2 + 3 new tiles
+      Level 2: delta_2 = delta_1 + 2 new tiles
+      Level 1: delta_1 = delta_0 + 1 new tiles
+      Level 0: delta_0 = delta_-1 + 0 new tiles
+      Total tiles: 10 = 10
+
+    INFORMATION CONTENT:
+      delta_4 = 10 free bits = 4 + 3 + 2 + 1 + 0
+      = sum 1..4 = C(5,2) = 10
+
+  n = 7, delta_5: 15 tiles = C(6,2)
+    Bottom (y=1):  5 tiles = [(7, 1), (6, 1), (5, 1), (4, 1), (3, 1)]
+    Top (x=7):    5 tiles = [(7, 1), (7, 2), (7, 3), (7, 4), (7, 5)]
+    Apex (7,1):   1 tile
+    Overlap:       6 tiles = C(5,2) = 10
+    Check: 5 + 5 - 1 + 6 = 15 = 15
+
+    MODE A (remove vertex 7):
+      New:   5 tiles (= 7-2 = 5)
+      Inner: 10 tiles (= C(5,2) = 10)
+      Inner IS delta_4
+
+    MODE B (remove vertices 1 and 7):
+      Removed: 9 tiles (= 2*5-1 = 9)
+      Inner:   6 tiles (= C(4,2) = 6)
+      Inner IS delta_3
+
+    FRACTAL DECOMPOSITION (Mode A chain):
+      Level 5: delta_5 = delta_4 + 5 new tiles
+      Level 4: delta_4 = delta_3 + 4 new tiles
+      Level 3: delta_3 = delta_2 + 3 new tiles
+      Level 2: delta_2 = delta_1 + 2 new tiles
+      Level 1: delta_1 = delta_0 + 1 new tiles
+      Level 0: delta_0 = delta_-1 + 0 new tiles
+      Total tiles: 15 = 15
+
+    INFORMATION CONTENT:
+      delta_5 = 15 free bits = 5 + 4 + 3 + 2 + 1 + 0
+      = sum 1..5 = C(6,2) = 15
+
+  n = 8, delta_6: 21 tiles = C(7,2)
+    Bottom (y=1):  6 tiles = [(8, 1), (7, 1), (6, 1), (5, 1), (4, 1), (3, 1)]
+    Top (x=8):    6 tiles = [(8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6)]
+    Apex (8,1):   1 tile
+    Overlap:       10 tiles = C(6,2) = 15
+    Check: 6 + 6 - 1 + 10 = 21 = 21
+
+    MODE A (remove vertex 8):
+      New:   6 tiles (= 8-2 = 6)
+      Inner: 15 tiles (= C(6,2) = 15)
+      Inner IS delta_5
+
+    MODE B (remove vertices 1 and 8):
+      Removed: 11 tiles (= 2*6-1 = 11)
+      Inner:   10 tiles (= C(5,2) = 10)
+      Inner IS delta_4
+
+    FRACTAL DECOMPOSITION (Mode A chain):
+      Level 6: delta_6 = delta_5 + 6 new tiles
+      Level 5: delta_5 = delta_4 + 5 new tiles
+      Level 4: delta_4 = delta_3 + 4 new tiles
+      Level 3: delta_3 = delta_2 + 3 new tiles
+      Level 2: delta_2 = delta_1 + 2 new tiles
+      Level 1: delta_1 = delta_0 + 1 new tiles
+      Level 0: delta_0 = delta_-1 + 0 new tiles
+      Total tiles: 21 = 21
+
+    INFORMATION CONTENT:
+      delta_6 = 21 free bits = 6 + 5 + 4 + 3 + 2 + 1 + 0
+      = sum 1..6 = C(7,2) = 21
+
+============================================================
+THE RECURSIVE VIEW
+============================================================
+
+A TILING IS A NESTED SEQUENCE OF CHOICES:
+
+  Level 0: delta_0 = 0 tiles (tournament on 2 vertices = trivial)
+  Level 1: delta_1 = 1 tile (tournament on 3 vertices = 1 choice)
+  Level 2: delta_2 = 1 + 2 = 3 tiles (4 vertices = 2 new choices)
+  Level 3: delta_3 = 3 + 3 = 6 tiles (5 vertices = 3 new choices)
+  Level k: delta_k = delta_{k-1} + k tiles (k+2 vertices = k new choices)
+
+Each level adds one vertex and k arcs connecting it to all existing vertices.
+The k arcs are the k new tiles. They are FREE binary choices,
+independent of the previous levels.
+
+THIS IS THE FRACTAL CODEC: the tiling is literally a sequence of
+independent layers, each adding one vertex with k free bits.
+
+The "tile" at position (x,y) in the staircase belongs to level x-y-1:
+  (x,y) is in the (x-y-1)-th layer of new tiles.
+  Its "skip" = x-y-1 = the level at which it was added.
+
+So: skip=0 tiles (base path) were "added" at level 0 (trivially fixed).
+    skip=1 tiles were added at level 1 (first non-trivial choices).
+    skip=k tiles were added at level k.
+
+The SKIP HIERARCHY corresponds exactly to the RECURSION DEPTH:
+  High-skip tiles were added EARLY (deep in the recursion).
+  Low-skip tiles were added LATE (near the surface).
+  skip=1 tiles are the MOST RECENT additions (the "hypotenuse").
+
+This explains WHY skip=1 has low SL%: the most recent tiles are
+the least constrained by the existing structure, so flipping them
+is most likely to change the isomorphism class.
+
+DONE.
+================================================================================
