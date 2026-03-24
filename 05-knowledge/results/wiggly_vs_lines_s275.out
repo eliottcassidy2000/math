@@ -1,0 +1,109 @@
+
+========================================================================
+  WIGGLY vs BLUE/BLACK LINES AT n=4
+========================================================================
+
+  V_unmerged = 4, V_merged = 3, m = 6
+
+  BLUE/BLACK LINES (complement pairing):
+  Every line connects a tiling to its complement.
+  In the merged graph: ALL blue/black lines are SELF-LOOPS
+  (because complement pairs are merged into the same node).
+
+  WIGGLY LINES (single-tile flips):
+  Total wiggly lines: 192 (= 2^m × m / 2 = 192)
+  Self-loops (same merged node): 72
+  Cross-edges (different merged nodes): 120
+  Distinct merged-node pairs connected: 3
+
+  COMPARISON:
+  Blue/black lines: 0 inter-node edges (all self-loops)
+  Wiggly lines: 3 inter-node edges
+  The meta-graph has E = 3 edges (ALL from wiggly lines)
+
+  Blue/black lines connect TILINGS (one-to-one complement pairing)
+  Wiggly lines connect TILINGS (one-to-m single-flip)
+  Meta-graph edges = wiggly lines projected to merged nodes
+
+  UNMERGED GRAPH:
+  Blue/black edges (complement pairs): 1
+  Wiggly edges (single-flip pairs): 5
+  Both: 0
+  Blue/black only: 1
+  Wiggly only: 5
+
+  NO edges are both blue/black and wiggly.
+  The complement is NEVER reachable by a single arc flip.
+
+========================================================================
+  WIGGLY vs BLUE/BLACK LINES AT n=5
+========================================================================
+
+  V_unmerged = 12, V_merged = 10, m = 10
+
+  BLUE/BLACK LINES (complement pairing):
+  Every line connects a tiling to its complement.
+  In the merged graph: ALL blue/black lines are SELF-LOOPS
+  (because complement pairs are merged into the same node).
+
+  WIGGLY LINES (single-tile flips):
+  Total wiggly lines: 5120 (= 2^m × m / 2 = 5120)
+  Self-loops (same merged node): 880
+  Cross-edges (different merged nodes): 4240
+  Distinct merged-node pairs connected: 21
+
+  COMPARISON:
+  Blue/black lines: 0 inter-node edges (all self-loops)
+  Wiggly lines: 21 inter-node edges
+  The meta-graph has E = 21 edges (ALL from wiggly lines)
+
+  Blue/black lines connect TILINGS (one-to-one complement pairing)
+  Wiggly lines connect TILINGS (one-to-m single-flip)
+  Meta-graph edges = wiggly lines projected to merged nodes
+
+  UNMERGED GRAPH:
+  Blue/black edges (complement pairs): 2
+  Wiggly edges (single-flip pairs): 30
+  Both: 0
+  Blue/black only: 2
+  Wiggly only: 30
+
+  NO edges are both blue/black and wiggly.
+  The complement is NEVER reachable by a single arc flip.
+
+========================================================================
+  DEFINITIVE TERMINOLOGY UPDATE
+========================================================================
+
+
+  THE THREE TYPES OF TILING CONNECTIONS:
+
+  1. BLUE LINE: tiling → its complement, where the tiling is grid-symmetric.
+     = flip ALL bits simultaneously.
+     Connects each tiling to exactly 1 partner.
+     In the merged meta-graph: ALL blue lines are internal (self-loops).
+
+  2. BLACK LINE: tiling → its complement, where the tiling is NOT grid-symmetric.
+     Same as blue but for non-grid-symmetric tilings.
+     Also internal to merged nodes.
+
+  3. WIGGLY LINE (class X): tiling → its single-tile-flip neighbor at cell X.
+     = flip ONE bit.
+     Each tiling has m = C(n,2) wiggly lines (one per cell).
+     Wiggly class A,B,C,... labels which cell.
+     In the merged meta-graph: wiggly lines create ALL the edges.
+
+  THE RELATIONSHIP:
+  - Blue/black lines create the MERGING (Z_2 quotient)
+  - Wiggly lines create the EDGES (meta-graph structure)
+  - These are DIFFERENT operations on different scales
+  - A complement is almost NEVER reachable by a single flip
+    (verified: 0 cases at n=4, need to check n=5,6)
+
+  PREVIOUS ERRORS TO CORRECT:
+  - "translucent" → DEPRECATED (was confusing)
+  - The meta-graph edges were sometimes called "blue/black" → WRONG
+    Meta-graph edges come from WIGGLY lines, not from complement pairing
+  - "opaque" → redundant, since ALL inter-node connections are wiggly
+
+Done. opus-2026-03-24-S275
