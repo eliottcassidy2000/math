@@ -1,0 +1,208 @@
+========================================================================
+  ABSTRACT DISTANCE PROFILES
+  opus-2026-03-24-S304
+========================================================================
+
+########################################################################
+  n = 5: ABSTRACT DISTANCE PROFILES
+########################################################################
+  V=10, m=6. Built in 0.0s
+
+  1. PROFILE FROM EVERY CLASS:
+    Distinct profiles: 6 out of 10
+      (1, 5, 4, 0): 4 classes, H=[11, 13, 9, 9]
+      (1, 3, 5, 1): 2 classes, H=[3, 15]
+      (1, 4, 4, 1): 1 classes, H=[1]
+      (1, 3, 4, 2): 1 classes, H=[3]
+      (1, 7, 2, 0): 1 classes, H=[5]
+
+  2. ECCENTRICITY:
+    Diameter: 3, Radius: 2
+    Eccentricity distribution: [(np.int64(2), 5), (np.int64(3), 5)]
+    Center (5 nodes): H = [5, 9, 9, 11, 13]
+    Peripheral (5 nodes): H = [1, 3, 3, 15, 15]
+
+  3. DISTANCE-REGULAR CHECK:
+    d=1: c_d = 1 (constant ✓)
+    d=2: intersection number c_d = [1, 2, 3, 4] (NOT constant)
+    d=3: intersection number c_d = [2, 3] (NOT constant)
+    Distance-regular: False
+
+  4. CROSS-PROFILE EMBEDDING (landmarks: transitive, max-H):
+    Coordinates (d_trans, d_reg):
+      (0,3): 1 classes, H=[1]
+      (1,2): 2 classes, H=[5, 9]
+      (1,3): 2 classes, H=[3, 3]
+      (2,1): 2 classes, H=[11, 13]
+      (2,2): 2 classes, H=[9, 15]
+      (3,0): 1 classes, H=[15]
+
+    Injective with 2 landmarks: False (6/10)
+    Injective with 3 landmarks: False (8/10)
+
+  5. PROFILE GENERATING FUNCTIONS:
+    Average profile: [1.00, 4.20, 4.00, 0.80]
+    Sum: 10.00 (should be 10)
+    P_avg(-1) = -0.0000
+
+  6. H-WEIGHTED ANALYSIS:
+    d=0: mean H of neighbors = 8.40 (from 1 classes per source)
+    d=1: mean H of neighbors = 8.14 (from 4 classes per source)
+    d=2: mean H of neighbors = 8.60 (from 4 classes per source)
+    d=3: mean H of neighbors = 8.75 (from 0 classes per source)
+
+    Corr(H, dist_from_transitive) = 0.8854
+    Corr(H, dist_from_regular) = -0.8345
+
+  7. SPECTRAL PROFILE:
+    Distance matrix eigenvalues (top 5): [14.93, 0.68, -0.16, -0.47, -0.87]
+    Distance matrix eigenvalues (bottom 3): [-2.19, -3.78, -5.10]
+    λ_0 / λ_1 = 21.8853
+
+########################################################################
+  n = 6: ABSTRACT DISTANCE PROFILES
+########################################################################
+  V=34, m=10. Built in 0.2s
+
+  1. PROFILE FROM EVERY CLASS:
+    Distinct profiles: 26 out of 34
+      (1, 11, 18, 4, 0): 4 classes, H=[15, 13, 25, 31]
+      (1, 6, 13, 11, 3): 2 classes, H=[1, 3]
+      (1, 11, 16, 5, 1): 2 classes, H=[9, 37]
+      (1, 7, 19, 7, 0): 2 classes, H=[17, 5]
+      (1, 7, 18, 8, 0): 2 classes, H=[27, 17]
+
+  2. ECCENTRICITY:
+    Diameter: 4, Radius: 3
+    Eccentricity distribution: [(np.int64(3), 19), (np.int64(4), 15)]
+    Center (19 nodes): H = [5, 5, 9, 11, 13, 15, 17, 17, 19, 23]
+    Peripheral (15 nodes): H = [1, 3, 3, 9, 9, 15, 15, 23, 33, 37]
+
+  3. DISTANCE-REGULAR CHECK:
+    d=1: c_d = 1 (constant ✓)
+    d=2: intersection number c_d = [1, 2, 3, 4, 5, 6, 7, 8, 9] (NOT constant)
+    d=3: intersection number c_d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] (NOT constant)
+    d=4: intersection number c_d = [1, 2, 3, 4, 5, 6, 8, 10] (NOT constant)
+    Distance-regular: False
+
+  4. CROSS-PROFILE EMBEDDING (landmarks: transitive, max-H):
+    Coordinates (d_trans, d_reg):
+      (0,4): 1 classes, H=[1]
+      (1,3): 4 classes, H=[5, 5, 9, 17]
+      (1,4): 2 classes, H=[3, 3]
+      (2,2): 6 classes, H=[11, 17, 23, 23, 33, 37]
+      (2,3): 6 classes, H=[9, 9, 13, 15, 19, 27]
+      (2,4): 1 classes, H=[15]
+      (3,1): 3 classes, H=[29, 37, 41]
+      (3,2): 4 classes, H=[29, 29, 33, 37]
+      (3,3): 4 classes, H=[15, 25, 31, 33]
+      (4,0): 1 classes, H=[45]
+      (4,2): 1 classes, H=[43]
+      (4,3): 1 classes, H=[45]
+
+    Injective with 2 landmarks: False (12/34)
+    Injective with 3 landmarks: False (19/34)
+
+  5. PROFILE GENERATING FUNCTIONS:
+    Average profile: [1.00, 8.41, 16.35, 7.12, 1.12]
+    Sum: 34.00 (should be 34)
+    P_avg(-1) = 2.9412
+
+  6. H-WEIGHTED ANALYSIS:
+    d=0: mean H of neighbors = 22.53 (from 1 classes per source)
+    d=1: mean H of neighbors = 22.51 (from 8 classes per source)
+    d=2: mean H of neighbors = 22.59 (from 16 classes per source)
+    d=3: mean H of neighbors = 22.45 (from 7 classes per source)
+    d=4: mean H of neighbors = 22.26 (from 1 classes per source)
+
+    Corr(H, dist_from_transitive) = 0.8495
+    Corr(H, dist_from_regular) = -0.6923
+
+  7. SPECTRAL PROFILE:
+    Distance matrix eigenvalues (top 5): [68.28, 2.57, 2.07, 1.78, 1.54]
+    Distance matrix eigenvalues (bottom 3): [-7.99, -10.40, -15.58]
+    λ_0 / λ_1 = 26.6111
+
+########################################################################
+  n = 7: ABSTRACT DISTANCE PROFILES
+########################################################################
+  V=272, m=15. Built in 13.2s
+
+  1. PROFILE FROM EVERY CLASS:
+    Distinct profiles: 270 out of 272
+      (1, 19, 104, 123, 23, 2, 0, 0): 2 classes, H=[89, 25]
+      (1, 12, 85, 144, 28, 2, 0, 0): 2 classes, H=[83, 93]
+      (1, 9, 38, 79, 90, 46, 7, 2): 1 classes, H=[1]
+      (1, 8, 33, 85, 94, 41, 8, 2): 1 classes, H=[3]
+      (1, 18, 80, 112, 52, 7, 2, 0): 1 classes, H=[17]
+
+  2. ECCENTRICITY:
+    Diameter: 7, Radius: 4
+    Eccentricity distribution: [(np.int64(4), 23), (np.int64(5), 172), (np.int64(6), 65), (np.int64(7), 12)]
+    Center (23 nodes): H = [43, 59, 65, 67, 67, 73, 73, 75, 77, 81]
+    Peripheral (12 nodes): H = [1, 3, 3, 3, 9, 9, 9, 9, 15, 171]
+
+  3. DISTANCE-REGULAR CHECK:
+    d=1: c_d = 1 (constant ✓)
+    d=2: intersection number c_d = [1, 2, 3, 4, 5, 6, 7, 8, 9] (NOT constant)
+    d=3: intersection number c_d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21] (NOT constant)
+    d=4: intersection number c_d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21] (NOT constant)
+    d=5: intersection number c_d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] (NOT constant)
+    d=6: intersection number c_d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20] (NOT constant)
+    d=7: intersection number c_d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15] (NOT constant)
+    Distance-regular: False
+
+  4. CROSS-PROFILE EMBEDDING (landmarks: transitive, max-H):
+    Coordinates (d_trans, d_reg):
+      (0,7): 1 classes, H=[1]
+      (1,6): 4 classes, H=[5, 5, 17, 33]
+      (1,7): 5 classes, H=[3, 3, 3, 9, 9]
+      (2,5): 12 classes, H=[13, 13, 17, 19, 19, 25]...
+      (2,6): 25 classes, H=[9, 9, 9, 9, 11, 11]...
+      (2,7): 1 classes, H=[15]
+      (3,4): 18 classes, H=[29, 37, 37, 43, 45, 49]...
+      (3,5): 53 classes, H=[25, 25, 27, 29, 29, 31]...
+      (3,6): 8 classes, H=[15, 15, 29, 31, 35, 41]...
+      (4,3): 15 classes, H=[45, 75, 77, 79, 89, 91]...
+      (4,4): 51 classes, H=[43, 43, 65, 65, 65, 67]...
+      (4,5): 22 classes, H=[57, 61, 67, 69, 71, 75]...
+      (4,6): 2 classes, H=[45, 65]
+      (5,2): 6 classes, H=[111, 125, 129, 141, 143, 159]
+      (5,3): 18 classes, H=[99, 101, 105, 111, 115, 121]...
+      (5,4): 16 classes, H=[91, 109, 111, 115, 129, 131]...
+      (5,5): 6 classes, H=[109, 127, 129, 135, 151, 159]
+      (6,1): 1 classes, H=[159]
+      (6,2): 1 classes, H=[153]
+      (6,3): 3 classes, H=[147, 151, 153]
+      (6,4): 1 classes, H=[151]
+      (6,5): 1 classes, H=[175]
+      (7,0): 1 classes, H=[189]
+      (7,3): 1 classes, H=[171]
+
+    Injective with 2 landmarks: False (24/272)
+    Injective with 3 landmarks: False (51/272)
+
+  5. PROFILE GENERATING FUNCTIONS:
+    Average profile: [1.00, 15.61, 87.27, 119.99, 40.10, 6.99, 0.95, 0.10]
+    Sum: 272.00 (should be 272)
+    P_avg(-1) = -13.3529
+
+  6. H-WEIGHTED ANALYSIS:
+    d=0: mean H of neighbors = 80.49 (from 1 classes per source)
+    d=1: mean H of neighbors = 79.78 (from 15 classes per source)
+    d=2: mean H of neighbors = 80.45 (from 87 classes per source)
+    d=3: mean H of neighbors = 80.37 (from 119 classes per source)
+    d=4: mean H of neighbors = 80.29 (from 40 classes per source)
+    d=5: mean H of neighbors = 84.11 (from 6 classes per source)
+    d=6: mean H of neighbors = 91.97 (from 0 classes per source)
+    d=7: mean H of neighbors = 93.85 (from 0 classes per source)
+
+    Corr(H, dist_from_transitive) = 0.8531
+    Corr(H, dist_from_regular) = -0.7004
+
+  7. SPECTRAL PROFILE:
+    Distance matrix eigenvalues (top 5): [761.74, 13.29, 12.29, 11.38, 10.97]
+    Distance matrix eigenvalues (bottom 3): [-54.94, -57.14, -122.69]
+    λ_0 / λ_1 = 57.3290
+
+DONE.
