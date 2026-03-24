@@ -1,0 +1,41 @@
+================================================================================
+  EXACT SL_mine VIA DEFECT-1 BURNSIDE
+  kind-pasteur-2026-03-23-S20ef
+================================================================================
+
+FORMULA: SL_mine(n) = (1/n!) * sum over cycle types (2, odd^*)
+         of count(type) * 2^{a(type)}
+
+  n= 3: SL_mine =            2  expected=2 MATCH!  (0.000s)
+  n= 4: SL_mine =            4  expected=6 MISMATCH  (0.000s)
+  n= 5: SL_mine =           12  expected=28 MISMATCH  (0.000s)
+  n= 6: SL_mine =           48  expected=124 MISMATCH  (0.000s)
+  n= 7: SL_mine =          296  expected=740 MISMATCH  (0.000s)
+  n= 8: SL_mine =         3040  expected=5966 MISMATCH  (0.000s)
+  n= 9: SL_mine =        54256  expected=85698 MISMATCH  (0.000s)
+  n=10: SL_mine =      1716608    (0.000s)
+  n=11: SL_mine =     97213472    (0.000s)
+  n=12: SL_mine =   9937755904    (0.000s)
+  n=13: SL_mine = 1849103423168    (0.001s)
+  n=14: SL_mine = 631027551238656    (0.002s)
+  n=15: SL_mine = 397616229914793600    (0.001s)
+
+E(G_n) = (T_n - SL_mine) / 2 where BOTH are Burnside-computable!
+
+EXACT E(G_n):
+  n= 3: T=               4  SL=           2  E=(T-SL)/2=             1  known=1 EXACT!
+  n= 4: T=              16  SL=           4  E=(T-SL)/2=             6  known=5 off by 1
+  n= 5: T=              88  SL=          12  E=(T-SL)/2=            38  known=30 off by 8
+  n= 6: T=             704  SL=          48  E=(T-SL)/2=           328  known=290 off by 38
+  n= 7: T=            8912  SL=         296  E=(T-SL)/2=          4308  known=4086 off by 222
+  n= 8: T=          188288  SL=        3040  E=(T-SL)/2=         92624  known=91161 off by 1463
+  n= 9: T=         6847200  SL=       54256  E=(T-SL)/2=       3396472  known=3380751 off by 15721
+  n=10: T=       437069312  SL=     1716608  E=(T-SL)/2=     217676352  
+  n=11: T=     49674860096  SL=    97213472  E=(T-SL)/2=   24788823312  
+  n=12: T=  10169189235712  SL=  9937755904  E=(T-SL)/2= 5079625739904  
+  n=13: T=3786065734484352  SL=1849103423168  E=(T-SL)/2=1892108315530592  
+  n=14: T=2584485140200024064  SL=631027551238656  E=(T-SL)/2=1291927056324392704  
+  n=15: T=3257188815249086506240  SL=397616229914793600  E=(T-SL)/2=1628395599509585856320  
+
+DONE.
+================================================================================
