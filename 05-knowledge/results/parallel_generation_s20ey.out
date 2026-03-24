@@ -1,0 +1,188 @@
+================================================================================
+  PARALLEL GENERATION: Blue/black and Wiggly
+  kind-pasteur-2026-03-24-S20ey
+================================================================================
+
+############################################################
+  n = 4, m = 3 tiles, 2^m = 8 tilings
+  V = 4 iso classes = A000568(4) = #even graphs(4)
+  SC = 2, V_merged = 3 = (V+SC)/2 = (4+2)/2 = 3
+############################################################
+
+  BLUE/BLACK LINES:
+    Blue tilings: 4 (grid-symmetric)
+    Black tilings: 4
+    Blue fraction: 0.500000
+    Unmerged complement edges: 1 (= (V-SC)/2 = 1)
+    SC (self-complement) classes: 2
+    In merged graph: ALL blue/black lines become self-loops
+
+  WIGGLY LINES:
+    Total wiggly transitions: 24
+    Wiggly self-loops (labeled): 10
+    Unmerged wiggly edges: 5
+    Merged wiggly edges: 3
+
+  THE PARALLEL:
+    Blue/black nodes: 4 unmerged, 3 merged
+    Wiggly nodes: 4 unmerged, 3 merged
+    Same node set? YES (both = A000568(4) = #even_graphs(4))
+
+  OVERLAP (unmerged):
+    Blue/black edges: 1
+    Wiggly edges: 5
+    Overlap: 0
+    Complement reachable by single flip? NO
+
+  COMBINED UNMERGED GRAPH:
+    Vertices: 4
+    Blue/black edges: 1
+    Wiggly edges: 5
+    Total unique edges: 6
+    Blue/black adds 1 new edges beyond wiggly
+
+  CONNECTIVITY:
+    Wiggly-only connected? True (reaches 4/4)
+    Blue/black-only connected? False (reaches 1/4)
+    Both needed for full connectivity? False
+
+  GRAPH DENSITY:
+    Blue/black: 1/6 = 0.1667
+    Wiggly: 5/6 = 0.8333
+    Combined: 6/6 = 1.0000
+
+  DEGREE COMPARISON:
+    Wiggly: min=2, max=3, avg=2.5
+    Blue/black: min=1, max=1, avg=1.0
+    (Blue/black is a matching: every non-SC node has degree 1, SC nodes have degree 0)
+
+  Time: 0.0s
+
+############################################################
+  n = 5, m = 6 tiles, 2^m = 64 tilings
+  V = 12 iso classes = A000568(5) = #even graphs(5)
+  SC = 8, V_merged = 10 = (V+SC)/2 = (12+8)/2 = 10
+############################################################
+
+  BLUE/BLACK LINES:
+    Blue tilings: 16 (grid-symmetric)
+    Black tilings: 48
+    Blue fraction: 0.250000
+    Unmerged complement edges: 2 (= (V-SC)/2 = 2)
+    SC (self-complement) classes: 8
+    In merged graph: ALL blue/black lines become self-loops
+
+  WIGGLY LINES:
+    Total wiggly transitions: 384
+    Wiggly self-loops (labeled): 40
+    Unmerged wiggly edges: 30
+    Merged wiggly edges: 21
+
+  THE PARALLEL:
+    Blue/black nodes: 12 unmerged, 10 merged
+    Wiggly nodes: 12 unmerged, 10 merged
+    Same node set? YES (both = A000568(5) = #even_graphs(5))
+
+  OVERLAP (unmerged):
+    Blue/black edges: 2
+    Wiggly edges: 30
+    Overlap: 0
+    Complement reachable by single flip? NO
+
+  COMBINED UNMERGED GRAPH:
+    Vertices: 12
+    Blue/black edges: 2
+    Wiggly edges: 30
+    Total unique edges: 32
+    Blue/black adds 2 new edges beyond wiggly
+
+  CONNECTIVITY:
+    Wiggly-only connected? True (reaches 12/12)
+    Blue/black-only connected? False (reaches 1/12)
+    Both needed for full connectivity? False
+
+  GRAPH DENSITY:
+    Blue/black: 2/66 = 0.0303
+    Wiggly: 30/66 = 0.4545
+    Combined: 32/66 = 0.4848
+
+  DEGREE COMPARISON:
+    Wiggly: min=2, max=7, avg=5.0
+    Blue/black: min=1, max=1, avg=1.0
+    (Blue/black is a matching: every non-SC node has degree 1, SC nodes have degree 0)
+
+  Time: 0.0s
+
+############################################################
+  n = 6, m = 10 tiles, 2^m = 1024 tilings
+  V = 56 iso classes = A000568(6) = #even graphs(6)
+  SC = 12, V_merged = 34 = (V+SC)/2 = (56+12)/2 = 34
+############################################################
+
+  BLUE/BLACK LINES:
+    Blue tilings: 64 (grid-symmetric)
+    Black tilings: 960
+    Blue fraction: 0.062500
+    Unmerged complement edges: 22 (= (V-SC)/2 = 22)
+    SC (self-complement) classes: 12
+    In merged graph: ALL blue/black lines become self-loops
+
+  WIGGLY LINES:
+    Total wiggly transitions: 10240
+    Wiggly self-loops (labeled): 528
+    Unmerged wiggly edges: 290
+    Merged wiggly edges: 143
+
+  THE PARALLEL:
+    Blue/black nodes: 56 unmerged, 34 merged
+    Wiggly nodes: 56 unmerged, 34 merged
+    Same node set? YES (both = A000568(6) = #even_graphs(6))
+
+  OVERLAP (unmerged):
+    Blue/black edges: 22
+    Wiggly edges: 290
+    Overlap: 5
+    Complement reachable by single flip? YES
+
+  COMBINED UNMERGED GRAPH:
+    Vertices: 56
+    Blue/black edges: 22
+    Wiggly edges: 290
+    Total unique edges: 307
+    Blue/black adds 17 new edges beyond wiggly
+
+  CONNECTIVITY:
+    Wiggly-only connected? True (reaches 56/56)
+    Blue/black-only connected? False (reaches 1/56)
+    Both needed for full connectivity? False
+
+  GRAPH DENSITY:
+    Blue/black: 22/1540 = 0.0143
+    Wiggly: 290/1540 = 0.1883
+    Combined: 307/1540 = 0.1994
+
+  DEGREE COMPARISON:
+    Wiggly: min=3, max=14, avg=10.4
+    Blue/black: min=1, max=1, avg=1.0
+    (Blue/black is a matching: every non-SC node has degree 1, SC nodes have degree 0)
+
+  Time: 3.1s
+
+======================================================================
+SYNTHESIS
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\parallel_generation_s20ey.py", line 302, in <module>
+    print("""
+    ~~~~~^^^^
+    THE PARALLEL GENERATION:
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<25 lines>...
+      determines the merged metagraph G_n/Z_2.
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """)
+    ^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 897: character maps to <undefined>
