@@ -1,0 +1,138 @@
+
+========================================================================
+  THE FOUR-TYPE SYSTEM: COUNTS
+========================================================================
+
+  THE 2×2 SYSTEM:
+
+  n    Graphs     T (odd σ)  D (even σ) Even G     Odd G     
+  -------------------------------------------------------
+  3    3          2          1          2          1         
+  4    7          4          3          4          3         
+  5    21         12         9          12         9         
+  6    93         56         37         56         37        
+  7    670        456        214        456        214       
+  8    8899       6880       2019       6880       2019      
+  9    224502     191536     32966      191536     32966     
+  10   10705834   9733056    972778     9733056    972778    
+  11   956265564  903753248  52512316   903753248  52512316  
+
+========================================================================
+  WHAT FIXES UNDER EVEN-ORDER PERMUTATIONS?
+========================================================================
+
+
+  THE MECHANISM: Why even-order σ give 2^{pair_orbits} "dark" objects.
+
+  For a permutation σ with at least one even-length cycle:
+  - The pair orbits still decompose into within-cycle and cross-cycle.
+  - Self-paired orbits exist (from even cycles): pairs (i, σ^{k/2}(i))
+    where k = even cycle length.
+  - For a TOURNAMENT: self-paired orbits require A[i][j] = A[j][i],
+    which is IMPOSSIBLE (tournaments are antisymmetric).
+  - So even-order σ fix 0 tournaments.
+
+  For a GRAPH (undirected): self-paired orbits are fine (A[i][j] = A[j][i]
+  always holds). So 2^{pair_orbits} graphs are fixed.
+
+  The "dark tournaments" count = the contribution of even-order σ to
+  the graph Burnside sum. These are graphs that can ONLY be fixed by
+  even-order permutations — i.e., they have no odd-order automorphism.
+
+  But this isn't quite right. Let me think again...
+
+  Actually: #D = (1/n!) Σ_{even σ} 2^{po(σ)} counts the average
+  number of even-order fixers, which equals the number of orbits
+  that contribute to even-order Burnside sum.
+
+  These are NOT "graphs with no odd-order automorphism."
+  They are the EXCESS of graphs over tournaments.
+  D = #Graphs - #Tournaments = #OddGraphs.
+
+  So: D IS the count of odd graphs (up to isomorphism).
+  "Dark tournaments" ARE odd graphs. The name is evocative but
+  the object is known!
+
+
+========================================================================
+  THE META-GRAPH PARALLEL
+========================================================================
+
+  n=5: Building graph meta-graphs...
+
+  Total graph classes: 34 = A000088(5)
+  Even graph classes: 7
+  Odd graph classes: 0
+  Other: 27
+
+  EVEN meta-graph: V=7, E=0, max_deg=0
+  ODD: no classes
+
+  Tournament classes: 12 = A000568(5)
+  Verification: #Even = #Tourn = False
+
+========================================================================
+  THE DARK TOURNAMENT CANDIDATES
+========================================================================
+
+
+  WHAT STRUCTURE HAS EXACTLY #OddGraphs ISO CLASSES?
+
+  CANDIDATE 1: Odd graphs themselves (trivial answer).
+  D = odd graphs. This is correct but uninteresting.
+
+  CANDIDATE 2: SEMI-TOURNAMENTS (partially directed graphs).
+  A semi-tournament: for each pair {i,j}, either i→j or j→i or i↔j.
+  3 choices per pair → 3^{C(n,2)} total.
+  But this gives A000088 + more (too many classes).
+
+  CANDIDATE 3: TOURNAMENTS WITH ONE UNDIRECTED EDGE.
+  Take a tournament on n vertices and make one arc bidirectional.
+  This creates a "tournament with one defect" = a near-tournament.
+  Count: C(n,2) × 2^{C(n,2)-1} labeled (one pair is undirected).
+  Iso classes: need Burnside.
+
+  CANDIDATE 4: SIGNED TOURNAMENTS.
+  A signed tournament: each arc gets a sign (+/-).
+  This doubles the choices: 4 options per pair (i→j+, i→j-, j→i+, j→i-).
+  Iso classes = (1/n!) Σ_σ 4^{pair_orbits(σ)} = way too many.
+
+  CANDIDATE 5: TOURNAMENTS WITH A MARKED HAMILTONIAN PATH.
+  Each tournament T has H(T) Hamiltonian paths.
+  A "marked tournament" = (T, P) where P is a specific HP.
+  Total: Σ H(T) = n! × 2^{m}... no, that's wrong.
+  Actually: Σ_{labeled T} H(T) = the sum of all HP counts.
+
+  CANDIDATE 6: COLORINGS OF THE METAGRAPH.
+  The metagraph has χ = n-1 colors.
+  A "dark tournament" = a pair (tournament class, coloring).
+  This gives (n-1) × V_n classes = too many (unless we quotient).
+
+  CANDIDATE 7: TOURNAMENTS ON n-1 VERTICES PLUS A DEFECT.
+  Maybe D captures the "residual" when you try to extend a tournament
+  from n-1 to n vertices but can't (the extension creates a non-tournament).
+
+  THE REAL ANSWER: D = odd graphs. The Burnside sum
+  (1/n!) Σ_{even σ} 2^{po(σ)} exactly counts odd graph iso classes.
+  There is no "darker" interpretation — odd graphs ARE the dark tournaments.
+
+  BUT: the METAGRAPH structure of odd graphs is DIFFERENT from tournaments.
+  The edge-toggle meta-graph of odd graphs has different connectivity,
+  different spectral properties, and NO self-loops.
+  Understanding how the two meta-graphs RELATE (despite having different
+  node counts) is the key to understanding the "dark" structure.
+
+
+========================================================================
+  THE FOUR META-GRAPHS COMPARED
+========================================================================
+
+  THE FOUR META-GRAPHS AT n=5:
+
+  Type            V      E      maxD   Connected 
+  ---------------------------------------------
+  Tournament      12     30     7      Yes       
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/dark_tournaments_s317.py", line 414, in <module>
+    print("  %-15s %-6d %-6d %-6d %-10s" % ("Even Graph", len(even_classes),
+TypeError: %d format: a real number is required, not str
