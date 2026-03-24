@@ -1,0 +1,185 @@
+================================================================================
+  EVEN/ODD GRAPHS AND THE SHADOW OF THE METAGRAPH
+  kind-pasteur-2026-03-23-S20du
+================================================================================
+
+############################################################
+  n = 3
+############################################################
+  Total graphs: 4, Even: 2, Odd: 2
+  Graph metagraph edges: 3
+
+  GRAPH METAGRAPH EDGE TYPES:
+    Even-Even: 0
+    Even-Odd: 3
+    Odd-Odd: 0
+  Self-loops (total raw): 0
+
+  TOURNAMENT METAGRAPH: V=2, E=1
+  GRAPH METAGRAPH: V=4, E=3
+
+  EVEN GRAPH SUB-METAGRAPH:
+    V=2, E(internal)=0
+    Tournament metagraph: V=2, E=1
+    Same V? True
+
+  COMPLEMENT STRUCTURE:
+    Even -> Even complement: 0
+    Even -> Odd complement: 2
+    Odd -> Even complement: 2
+    Odd -> Odd complement: 0
+
+  EVEN GRAPH DETAILS:
+  edges                  deg  Aut  comp_type
+      0            (0, 0, 0)    6        odd
+      2            (1, 1, 2)    2        odd
+
+  ODD GRAPH DETAILS:
+  edges                  deg  Aut  comp_type
+      1            (0, 1, 1)    2       even
+      3            (2, 2, 2)    6       even
+
+  Time: 0.0s
+
+############################################################
+  n = 4
+############################################################
+  Total graphs: 11, Even: 4, Odd: 7
+  Graph metagraph edges: 14
+
+  GRAPH METAGRAPH EDGE TYPES:
+    Even-Even: 1
+    Even-Odd: 7
+    Odd-Odd: 6
+  Self-loops (total raw): 0
+
+  TOURNAMENT METAGRAPH: V=4, E=5
+  GRAPH METAGRAPH: V=11, E=14
+
+  EVEN GRAPH SUB-METAGRAPH:
+    V=4, E(internal)=1
+    Tournament metagraph: V=4, E=5
+    Same V? True
+
+  COMPLEMENT STRUCTURE:
+    Even -> Even complement: 0
+    Even -> Odd complement: 4
+    Odd -> Even complement: 4
+    Odd -> Odd complement: 3
+
+  EVEN GRAPH DETAILS:
+  edges                  deg  Aut  comp_type
+      0         (0, 0, 0, 0)   24        odd
+      2         (0, 1, 1, 2)    2        odd
+      3         (1, 1, 1, 3)    6        odd
+      4         (2, 2, 2, 2)    8        odd
+
+  ODD GRAPH DETAILS:
+  edges                  deg  Aut  comp_type
+      1         (0, 0, 1, 1)    4        odd
+      2         (1, 1, 1, 1)    8       even
+      3         (0, 2, 2, 2)    6       even
+      3         (1, 1, 2, 2)    2        odd
+      4         (1, 2, 2, 3)    2       even
+      5         (2, 2, 3, 3)    4        odd
+      6         (3, 3, 3, 3)   24       even
+
+  Time: 0.0s
+
+############################################################
+  n = 5
+############################################################
+  Total graphs: 34, Even: 12, Odd: 22
+  Graph metagraph edges: 74
+
+  GRAPH METAGRAPH EDGE TYPES:
+    Even-Even: 9
+    Even-Odd: 36
+    Odd-Odd: 29
+  Self-loops (total raw): 0
+
+  TOURNAMENT METAGRAPH: V=12, E=30
+  GRAPH METAGRAPH: V=34, E=74
+
+  EVEN GRAPH SUB-METAGRAPH:
+    V=12, E(internal)=9
+    Tournament metagraph: V=12, E=30
+    Same V? True
+
+  COMPLEMENT STRUCTURE:
+    Even -> Even complement: 2
+    Even -> Odd complement: 10
+    Odd -> Even complement: 10
+    Odd -> Odd complement: 12
+
+  EVEN GRAPH DETAILS:
+  edges                  deg  Aut  comp_type
+      0      (0, 0, 0, 0, 0)  120        odd
+      2      (0, 0, 1, 1, 2)    4        odd
+      3      (0, 1, 1, 1, 3)    6        odd
+      4      (1, 1, 1, 1, 4)   24        odd
+      4      (1, 1, 1, 2, 3)    2        odd
+      4      (0, 2, 2, 2, 2)    8        odd
+      4      (1, 1, 2, 2, 2)    2       even
+      5      (1, 2, 2, 2, 3)    2        odd
+      6      (1, 2, 2, 3, 4)    2        odd
+      6      (2, 2, 2, 3, 3)   12        odd
+      6      (2, 2, 2, 3, 3)    2       even
+      8      (3, 3, 3, 3, 4)    8        odd
+
+  ODD GRAPH DETAILS:
+  edges                  deg  Aut  comp_type
+      1      (0, 0, 0, 1, 1)   12        odd
+      2      (0, 1, 1, 1, 1)    8       even
+      3      (0, 0, 2, 2, 2)   12        odd
+      3      (0, 1, 1, 2, 2)    2        odd
+      3      (1, 1, 1, 1, 2)    4        odd
+      4      (0, 1, 2, 2, 3)    2       even
+      4      (1, 1, 2, 2, 2)   12       even
+      5      (1, 1, 2, 2, 4)    4        odd
+      5      (0, 2, 2, 3, 3)    4        odd
+      5      (1, 1, 2, 3, 3)    2        odd
+      5      (1, 2, 2, 2, 3)    2       even
+      5      (2, 2, 2, 2, 2)   10        odd
+      6      (0, 3, 3, 3, 3)   24       even
+      6      (1, 2, 3, 3, 3)    2       even
+      6      (2, 2, 2, 2, 4)    8       even
+      7      (2, 2, 2, 4, 4)   12        odd
+      7      (1, 3, 3, 3, 4)    6       even
+      7      (2, 2, 3, 3, 4)    2        odd
+      7      (2, 3, 3, 3, 3)    4        odd
+      8      (2, 3, 3, 4, 4)    4       even
+      9      (3, 3, 4, 4, 4)   12        odd
+     10      (4, 4, 4, 4, 4)  120       even
+
+  Time: 1.5s
+
+============================================================
+SYNTHESIS
+============================================================
+
+THE SHADOW OF THE METAGRAPH:
+
+The graph metagraph (ALL graphs on n vertices, edges = single edge flips)
+contains BOTH even and odd graphs. The even/odd partition creates
+THREE types of metagraph edges:
+
+  Even-Even (EE): both endpoints are even graphs
+  Even-Odd (EO): one even, one odd
+  Odd-Odd (OO): both endpoints are odd graphs
+
+The EVEN SUB-METAGRAPH (EE edges only) is the "shadow" of the
+tournament metagraph onto graph space. It has the SAME number of
+vertices as the tournament metagraph (by Royle et al.) but
+potentially DIFFERENT edge structure.
+
+The ODD graphs are the "anti-tournaments" — they are what's LEFT
+after removing the tournament-equivalent objects from graph space.
+The EO edges are the BOUNDARY between the tournament world and
+its complement.
+
+KEY QUESTION: Is the even sub-metagraph ISOMORPHIC to the tournament
+metagraph? Or just equinumerous in vertices?
+
+DONE.
+================================================================================
