@@ -1,0 +1,18 @@
+TC Photo v1.0.0 -- Real Photo Codec
+====================================================================================================
+  Directory: test_real, 8 images
+
+                  File        Res        Raw         TC        PNG   TC/PNG               Method
+  ------------------------------------------------------------------------------------------
+          document.png 512x 512   786,432B   256,412B   280,944B   1.096x                  raw WIN
+              food.png 512x 512   786,432B   541,244B   533,889B   0.986x             advanced TIE
+            indoor.png 512x 512   786,432B   420,598B   420,174B   0.999x                  raw TIE
+         landscape.png 512x 512   786,432B   538,248B   531,454B   0.987x              pngfilt TIE
+             night.png 512x 512   786,432B   586,216B   613,924B   1.047x                  raw WIN
+          portrait.png 512x 512   786,432B   407,768B   401,162B   0.984x             advanced TIE
+        screenshot.png 512x 512   786,432B       480B     2,121B   4.419x              pngfilt WIN
+           texture.png 512x 512   786,432B   328,656B   354,075B   1.077x             advanced WIN
+
+  SCORE: 4W 4T 0L / 8
+  Win rate: 50%
+  Aggregate: TC=3,079,622B vs PNG=3,137,743B (1.019x)
