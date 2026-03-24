@@ -1,0 +1,37 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_image_v3.py:375: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  img = Image.fromarray(img_array, mode='L')
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_image_v3.py:377: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  img = Image.fromarray(img_array, mode='RGB')
+TC Image v3.0.0 -- Tournament Image Codec
+====================================================================================================
+
+  GRAYSCALE (256x256):
+             Name      Raw       TC      PNG   TC/PNG               Method
+  ---------------------------------------------------------------------------
+           grad_h   65536B      44B     369B    8.39x            row_delta WIN
+           grad_v   65536B      44B     374B    8.50x            col_delta WIN
+        grad_diag   65536B      51B     368B    7.22x            col_delta WIN
+          checker   65536B      62B     440B    7.10x            col_delta WIN
+        stripes_h   65536B      51B     294B    5.76x            row_delta WIN
+        stripes_v   65536B      51B     377B    7.39x            col_delta WIN
+       smooth_sin   65536B    4312B   13322B    3.09x           diag_delta WIN
+           circle   65536B     312B     742B    2.38x              raw_bz2 WIN
+      perlin_like   65536B   57646B   59274B    1.03x            raw_zlib9 WIN
+           sparse   65536B     309B     604B    1.95x              raw_bz2 WIN
+           random   65536B   65562B   65918B    1.01x            col_delta TIE
+        text_like   65536B     787B    1550B    1.97x             adaptive WIN
+
+  Grayscale: 11W 1T 0L
+
+  COLOR (256x256 RGB):
+             Name      Raw       TC      PNG   TC/PNG               Method
+  ---------------------------------------------------------------------------
+       color_grad  196608B      62B     573B    9.24x         rgb_adaptive WIN
+    color_checker  196608B      80B     637B    7.96x         rgb_adaptive WIN
+     color_smooth  196608B     452B    2280B    5.04x         stride_delta WIN
+     color_random  196608B  196160B  197172B    1.01x         ycbcr_stride TIE
+
+  Color: 3W 1T 0L
+
+  TOTAL: 14W 2T 0L / 16
+  Win rate: 88%, Never-worse: 100%

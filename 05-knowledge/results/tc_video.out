@@ -1,0 +1,23 @@
+TC Video v1.0.0 -- Tournament Video Codec
+================================================================================
+
+         Sequence  Frames        Raw         TC   Ratio  Avg-Chg  Key-KB  Dlt-KB
+  --------------------------------------------------------------------------------
+           static     30   491,520B     2,307B  213.1x    0.0%    0.5K    0.0K
+    moving_circle     30   491,520B     4,817B  102.0x    2.7%    0.1K    0.2K
+      scroll_grad     30   491,520B    16,000B   30.7x  100.0%    0.5K    0.3K
+         noisy_bg     30   491,520B   281,422B    1.7x   90.9%    9.2K   10.0K
+     scene_change     30   491,520B     1,330B  369.6x    3.4%    0.0K    0.0K
+         blinking     30   491,520B     1,909B  257.5x   50.0%    0.0K    0.1K
+         zoom_out     30   491,520B     4,254B  115.5x    1.6%    0.2K    0.1K
+
+  Verifying roundtrips...
+           static: OK (2,307B)
+    moving_circle: OK (4,817B)
+      scroll_grad: OK (16,000B)
+         noisy_bg: OK (281,422B)
+     scene_change: OK (1,330B)
+         blinking: OK (1,909B)
+         zoom_out: OK (4,254B)
+
+  All roundtrips verified.
