@@ -1,0 +1,35 @@
+============================================================
+  RankDB v1.0.0 — Self-Contained Ranking Database
+============================================================
+
+  Simulating 5000 pairwise comparisons...
+  Added 5000 observations in 9ms
+  (587K obs/sec)
+
+RankDB 'LLM_Arena' v1.0.0
+  Items: 8, Observations: 5000
+  Completeness: 100.0% (28/28 pairs)
+  Intransitivity: 0.0% (0 cycles)
+  Top 5:
+    1.      Command-R+ strength=  +7.421 WR=85.4%
+    2.        Qwen-2.5 strength=  +4.913 WR=74.8%
+    3.     DeepSeek-V3 strength=  +3.387 WR=66.0%
+    4.   Mistral-Large strength=  +0.902 WR=55.9%
+    5.         Llama-3 strength=  -0.734 WR=44.8%
+
+  Head-to-head: GPT-4o vs Claude-3.5
+    GPT-4o wins: 81, Claude wins: 110
+    GPT-4o win probability: 1.4%
+
+  Ambiguity Analysis:
+    Three-cycles: 0 / 56
+    Intransitivity: 0.0%
+    (0% = perfectly transitive, 25% = maximally cyclic)
+
+  Save/Load: RankDB('LLM_Arena', items=8, obs=5000) -> test_rankdb.rdb -> RankDB('LLM_Arena', items=8, obs=5000)
+  Rankings match: True
+
+  Merge: RankDB('server1', items=4, obs=100) + RankDB('server2', items=4, obs=100) = RankDB('server1+server2', items=8, obs=200)
+  Merged items: 200 observations across 8 items
+
+DONE.
