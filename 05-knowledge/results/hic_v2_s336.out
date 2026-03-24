@@ -1,0 +1,69 @@
+======================================================================
+  HIC v2 — Block-Adaptive Hilbert Image Codec
+======================================================================
+
+  Image                Raw      HICv2    HICv1    zlib     v2/z   v2/v1 
+  -----------------------------------------------------------------
+
+========================================================================
+  HILBERT IMAGE CODEC: BENCHMARK
+========================================================================
+
+  Image                Raw      HIC      zlib     ratio    vs_z   method         
+  ---------------------------------------------------------------------------
+  circle_128           16384    1721   ✓ 4563     9.5      2.65   raster+delta   
+  circle_256           65536    5378   ✓ 11773    12.2     2.19   raster+delta   
+  circle_64            4096     761    ✓ 1898     5.4      2.49   raster+delta   
+  gradient_128         16384    88     ✓ 528      186.2    6.00   raster+delta   
+  gradient_256         65536    322    ✓ 1057     203.5    3.28   raster+delta   
+  gradient_64          4096     156    ✓ 275      26.3     1.76   hilbert+delta  
+  photo_128            16384    13312  ✓ 14694    1.2      1.10   hilbert+avg    
+  photo_64             4096     3369   ✓ 3723     1.2      1.11   hilbert+avg    
+  smooth_128           16384    6115   ✓ 8488     2.7      1.39   raster+delta   
+  smooth_256           65536    20802  ✓ 25781    3.2      1.24   raster+delta   
+  smooth_64            4096     1897   ✓ 2655     2.2      1.40   raster+delta   
+
+  WINS vs zlib: 11/11
+  All lossless: ✓
+
+========================================================================
+  VIDEO DELTA WITH HILBERT
+========================================================================
+
+  VIDEO: 128×128, 5 frames with 3%% pixel change per frame
+
+  Frame    Raw      HIC_delta  zlib_delta vs_zlib 
+  --------------------------------------------------
+  frame0   16384    6115       8488       1.39    x
+  frame1   16384    10889      13986      1.28    x
+  frame2   16384    11203      14137      1.26    x
+  frame3   16384    11439      14204      1.24    x
+  frame4   16384    11656      14259      1.22    x
+
+Done. opus-2026-03-24-S336
+/home/e/Documents/claude/math/04-computation/hic_v2_s336.py:64: RuntimeWarning: overflow encountered in scalar subtract
+  out[i] = (pixels[i] - pixels[i-1]) % 256
+/home/e/Documents/claude/math/04-computation/hic_v2_s336.py:72: RuntimeWarning: overflow encountered in scalar subtract
+  out[i] = (pixels[i] - paeth(a, b, c)) % 256
+/home/e/Documents/claude/math/04-computation/hic_v2_s336.py:36: RuntimeWarning: overflow encountered in scalar subtract
+  pa, pb, pc = abs(p-a), abs(p-b), abs(p-c)
+/home/e/Documents/claude/math/04-computation/hic_v2_s336.py:35: RuntimeWarning: overflow encountered in scalar add
+  p = a + b - c
+/home/e/Documents/claude/math/04-computation/hic_v2_s336.py:35: RuntimeWarning: overflow encountered in scalar subtract
+  p = a + b - c
+/home/e/Documents/claude/math/04-computation/hic_v2_s336.py:78: RuntimeWarning: overflow encountered in scalar add
+  out[i] = (pixels[i] - (a+b)//2) % 256
+  circle_128           16384    5509   ✓ 1721     4563     0.83   0.31  
+  circle_256           65536    16724  ✓ 5378     11773    0.70   0.32  
+  circle_64            4096     2046   ✓ 761      1898     0.93   0.37  
+  gradient_128         16384    179    ✓ 88       528      2.95   0.49  
+  gradient_256         65536    341    ✓ 322      1057     3.10   0.94  
+  gradient_64          4096     243    ✓ 156      275      1.13   0.64  
+  noise_128            16384    16865  ✓ 16401    16395    0.97   0.97  
+  photo_128            16384    16034  ✓ 13286    14689    0.92   0.83  
+  smooth_128           16384    11701  ✓ 6115     8488     0.73   0.52  
+  smooth_256           65536    46489  ✓ 20802    25781    0.55   0.45  
+  smooth_64            4096     2940   ✓ 1897     2655     0.90   0.65  
+
+  Wins vs zlib: 3/11
+  Wins vs HICv1: 0/11
