@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S258 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S257
+**Summary of work:** Turbo metagraph computation: V_n, T_n, edge_orbits for n=3..20 in 9ms via cycle index. Verified master formula E ≈ T×(2^{n-1}-2)/2^n.
+
+**Performance:** O(p(n)) where p(n) = odd partitions of n. Speedup 10^13 at n=10 vs enumeration.
+
 ## opus-2026-03-23-S257 — 2026-03-23
 
 **Account:** opus
