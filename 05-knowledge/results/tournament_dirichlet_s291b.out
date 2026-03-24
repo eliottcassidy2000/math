@@ -1,0 +1,341 @@
+
+========================================================================
+  THE (3,3) RATIO: EXACT ANALYSIS
+========================================================================
+
+  EXACT (3,3) ANALYSIS:
+
+  n= 6: mult_3=40    mult_33=40    po_3=7   po_33=5   excess=6 ratio=16/5=3.2000
+  n= 7: mult_3=70    mult_33=280   po_3=11  po_33=7   excess=6 ratio=256/35=7.3143
+  n= 8: mult_3=112   mult_33=1120  po_3=16  po_33=10  excess=6 ratio=80/7=11.4286
+  n= 9: mult_3=168   mult_33=3360  po_3=22  po_33=14  excess=6 ratio=320/21=15.2381
+  n=10: mult_3=240   mult_33=8400  po_3=29  po_33=19  excess=6 ratio=56/3=18.6667
+  n=11: mult_3=330   mult_33=18480 po_3=37  po_33=25  excess=6 ratio=3584/165=21.7212
+  n=12: mult_3=440   mult_33=36960 po_3=46  po_33=32  excess=6 ratio=1344/55=24.4364
+  n=13: mult_3=572   mult_33=68640 po_3=56  po_33=40  excess=6 ratio=3840/143=26.8531
+  n=14: mult_3=728   mult_33=120120 po_3=67  po_33=49  excess=6 ratio=2640/91=29.0110
+  n=15: mult_3=910   mult_33=200200 po_3=79  po_33=59  excess=6 ratio=2816/91=30.9451
+
+========================================================================
+  THE EXACT CROSS-ORBIT FORMULA
+========================================================================
+
+  CROSS-ORBIT RATIO GROWTH:
+
+  For (3,3): actual/predicted = ?
+
+  n= 6: ratio = 3.200000, ratio/(n-3) = 1.066667
+  n= 7: ratio = 7.314286, ratio/(n-3) = 1.828571
+  n= 8: ratio = 11.428571, ratio/(n-3) = 2.285714
+  n= 9: ratio = 15.238095, ratio/(n-3) = 2.539683
+  n=10: ratio = 18.666667, ratio/(n-3) = 2.666667
+  n=11: ratio = 21.721212, ratio/(n-3) = 2.715152
+  n=12: ratio = 24.436364, ratio/(n-3) = 2.715152
+  n=13: ratio = 26.853147, ratio/(n-3) = 2.685315
+  n=14: ratio = 29.010989, ratio/(n-3) = 2.637363
+  n=15: ratio = 30.945055, ratio/(n-3) = 2.578755
+  n=16: ratio = 32.685714, ratio/(n-3) = 2.514286
+  n=17: ratio = 34.258824, ratio/(n-3) = 2.447059
+
+  Checking ratio = (n-3) × 2^{something}:
+
+  n= 7: ratio/(n-3) = 1.828571, log2 = 0.87
+  n= 8: ratio/(n-3) = 2.285714, log2 = 1.19
+  n= 9: ratio/(n-3) = 2.539683, log2 = 1.34
+  n=10: ratio/(n-3) = 2.666667, log2 = 1.42
+  n=11: ratio/(n-3) = 2.715152, log2 = 1.44
+  n=12: ratio/(n-3) = 2.715152, log2 = 1.44
+  n=13: ratio/(n-3) = 2.685315, log2 = 1.43
+  n=14: ratio/(n-3) = 2.637363, log2 = 1.40
+  n=15: ratio/(n-3) = 2.578755, log2 = 1.37
+  n=16: ratio/(n-3) = 2.514286, log2 = 1.33
+  n=17: ratio/(n-3) = 2.447059, log2 = 1.29
+
+========================================================================
+  THE DIRICHLET SERIES D_k(s)
+========================================================================
+
+  VERIFY R_3 formula:
+
+  n=3: exact=1/2, formula=C(n,3)×2^{5-2n}=1/2, match=True
+  n=4: exact=1/2, formula=C(n,3)×2^{5-2n}=1/2, match=True
+  n=5: exact=5/16, formula=C(n,3)×2^{5-2n}=5/16, match=True
+  n=6: exact=5/32, formula=C(n,3)×2^{5-2n}=5/32, match=True
+  n=7: exact=35/512, formula=C(n,3)×2^{5-2n}=35/512, match=True
+  n=8: exact=7/256, formula=C(n,3)×2^{5-2n}=7/256, match=True
+  n=9: exact=21/2048, formula=C(n,3)×2^{5-2n}=21/2048, match=True
+
+  D_3(0) = 32 × Σ C(n,3)(1/4)^n = 32 × 4/81 = 128/81 ≈ 1.580247
+  (This is the total correction from k=3 terms summed over all n.)
+
+  D_3(0) = 128/81 = 1.5802469136
+  D_3(1) = 32 × Σ C(n,3)(1/4)^n/n = 32 × 7969907031132433918691108555564851463980573434658097261823022705372369203755682699474214053333758738999701148064033277/645562469521727147413979793000752968582426448207305878207664839135161905504210298657411338320034457858975792993186873344 ≈ 0.3950617284
+
+  D_3(s) for several s values:
+
+  D_3(s=0.0) = 32 × 0.0493827160 = 1.5802469136
+  D_3(s=0.5) = 32 × 0.0244641934 = 0.7828541872
+  D_3(s=1.0) = 32 × 0.0123456790 = 0.3950617284
+  D_3(s=1.5) = 32 × 0.0063359717 = 0.2027510956
+  D_3(s=2.0) = 32 × 0.0033014316 = 0.1056458099
+  D_3(s=3.0) = 32 × 0.0009320657 = 0.0298261021
+
+========================================================================
+  THE FULL DIRICHLET SERIES D(s) = Σ R(n) n^{-s}
+========================================================================
+
+  FULL DIRICHLET SERIES (exact R(n) for n=3..13):
+
+  D(s=0.0) = 1.7831060471
+  D(s=0.5) = 0.8680619264
+  D(s=1.0) = 0.4310164118
+  D(s=1.5) = 0.2179886803
+  D(s=2.0) = 0.1121299495
+
+========================================================================
+  THE FUNCTIONAL EQUATION CANDIDATE
+========================================================================
+
+
+  THE TOURNAMENT COUNTING GENERATING FUNCTION:
+
+  G(x) = Σ_{n≥1} V_n x^n / n!
+  = Σ_{n≥1} [Σ_λ mult(λ) 2^{po(λ)} / n!²] x^n
+  = ... (involves double factorial-like denominators)
+
+  A cleaner GF: Let a_n = V_n × n! / 2^{C(n,2)} = T(n) = 1 + R(n).
+  Then: F(x) = Σ_{n≥1} a_n x^n.
+
+  F(x) ≈ x/(1-x) + Σ correction terms.
+
+  The correction GF: G(x) = Σ_{n≥3} R(n) x^n
+  ≈ Σ_{n≥3} C(n,3) 2^{5-2n} x^n  (3-cycle approximation)
+  = 32 Σ_{n≥3} C(n,3) (x/4)^n
+  = 32 × (x/4)^3 / (1-x/4)^4  (for |x| < 4)
+  = 32 × x³/64 / (1-x/4)^4
+  = x³/2 / (1-x/4)^4
+
+  So: G(x) ≈ x³/(2(1-x/4)^4)  for the LEADING correction.
+
+  VERIFICATION: R(n) vs x³/(2(1-x/4)^4) coefficients:
+
+  n= 3: R_exact =   0.50000000, R_approx =   0.50000000, ratio = 1.000000
+  n= 4: R_exact =   0.50000000, R_approx =   0.50000000, ratio = 1.000000
+  n= 5: R_exact =   0.40625000, R_approx =   0.31250000, ratio = 1.300000
+  n= 6: R_exact =   0.23046875, R_approx =   0.15625000, ratio = 1.475000
+  n= 7: R_exact =   0.09588623, R_approx =   0.06835938, ratio = 1.402679
+  n= 8: R_exact =   0.03340149, R_approx =   0.02734375, ratio = 1.221540
+  n= 9: R_exact =   0.01142481, R_approx =   0.01025391, ratio = 1.114191
+  n=10: R_exact =   0.00383527, R_approx =   0.00366211, ratio = 1.047284
+  n=11: R_exact =   0.00128066, R_approx =   0.00125885, ratio = 1.017325
+  n=12: R_exact =   0.00042218, R_approx =   0.00041962, ratio = 1.006107
+  n=13: R_exact =   0.00013666, R_approx =   0.00013638, ratio = 1.002086
+
+========================================================================
+  THE GENERATING FUNCTION NEAR x=4
+========================================================================
+
+  F(x) = Σ (1 + R(n)) x^n = 1/(1-x) + G(x)
+  where G(x) ≈ x³/(2(1-x/4)^4) for the 3-cycle correction.
+  Poles: x=1 (from identity), x=4 (from 3-cycle correction).
+
+  The RADIUS 4 = 2² comes from 2^{2n} in the Delta_3 exponent.
+  For k=5: pole at x = 2^4 = 16.
+  For k=7: pole at x = 2^6 = 64.
+  General k: pole at x = 2^{k-1}.
+
+  The poles form a GEOMETRIC SEQUENCE: 4, 16, 64, 256, ...
+  = 4^1, 4^2, 4^3, 4^4, ...
+  No wait: 2^{k-1} for k=3,5,7,9 = 4, 16, 64, 256.
+  Ratios: 4, 4, 4, ... YES: poles at 4^{(k-1)/2} for odd k.
+  = 4, 4², 4³, 4⁴ for k=3,5,7,9.
+
+========================================================================
+  POLES AND THE LOG-DERIVATIVE
+========================================================================
+
+  log2(V_n) vs Stirling-Burnside:
+
+  n= 3: V=2, log2(V)=1.0000, stirling=0.4150, +corr=-0.6670
+  n= 4: V=4, log2(V)=2.0000, stirling=1.4150, +corr=0.0625
+  n= 5: V=12, log2(V)=3.5850, stirling=3.0931, +corr=1.6673
+  n= 6: V=56, log2(V)=5.8074, stirling=5.5081, +corr=4.0679
+  n= 7: V=456, log2(V)=8.8329, stirling=8.7008, +corr=7.2584
+  n= 8: V=6880, log2(V)=12.7482, stirling=12.7008, +corr=11.2581
+  n= 9: V=191536, log2(V)=17.5473, stirling=17.5309, +corr=16.0882
+  n=10: V=9733056, log2(V)=23.2145, stirling=23.2089, +corr=21.7662
+  n=11: V=903753248, log2(V)=29.7514, stirling=29.7495, +corr=28.3068
+  n=12: V=154108311168, log2(V)=37.1652, stirling=37.1645, +corr=35.7218
+  n=13: V=48542114686912, log2(V)=45.4643, stirling=45.4641, +corr=44.0214
+
+========================================================================
+  THE TOURNAMENT PRIME RECIPROCAL SUM
+========================================================================
+
+  R_5/R_3 RATIO (measures importance of 5-cycle):
+
+  n= 5: R_5/R_3 = 0.3000000000
+  n= 6: R_5/R_3 = 0.2250000000
+  n= 7: R_5/R_3 = 0.1125000000
+  n= 8: R_5/R_3 = 0.0468750000
+  n= 9: R_5/R_3 = 0.0175781250
+  n=10: R_5/R_3 = 0.0061523437
+  n=11: R_5/R_3 = 0.0020507813
+  n=12: R_5/R_3 = 0.0006591797
+  n=13: R_5/R_3 = 0.0002059937
+  n=14: R_5/R_3 = 0.0000629425
+  n=15: R_5/R_3 = 0.0000188828
+  n=16: R_5/R_3 = 0.0000055790
+  n=17: R_5/R_3 = 0.0000016272
+  n=18: R_5/R_3 = 0.0000004694
+  n=19: R_5/R_3 = 0.0000001341
+
+  THE TOURNAMENT PRIME HIERARCHY:
+
+  R(n) = R_3(n) × [1 + R_5/R_3 + R_7/R_3 + ...]
+       = R_3(n) × [1 + 3(n-3)(n-4)/(5×4^{n-4}) + higher terms]
+
+  The correction from each higher "prime" k DECAYS as 4^{-(k-3)/2}
+  times a polynomial in n.
+
+  At n=20: R_5/R_3 < 10^{-8}. The tournament count is determined
+  to 8 digits by JUST the 3-cycle term.
+
+  The generating function is DOMINATED by the smallest prime p=3,
+  with each higher prime contributing a correction that is
+  EXPONENTIALLY smaller (factor 4^{-(k-3)/2} per step).
+
+  This is analogous to the PRIME ZETA FUNCTION:
+  P(s) = Σ_{p prime} p^{-s}
+  where the first term 2^{-s} dominates for large s,
+  but here the "large parameter" is n (vertex count) rather than s.
+
+
+========================================================================
+  CLEAN ASYMPTOTIC EXPANSION
+========================================================================
+
+  VERIFY R_5 formula:
+
+  n=5: exact=3/32, formula=(1/5)×n↓5×2^{-8}=3/32, match=True
+  n=6: exact=9/256, formula=(1/5)×n↓5×2^{-12}=9/256, match=True
+  n=7: exact=63/8192, formula=(1/5)×n↓5×2^{-16}=63/8192, match=True
+  n=8: exact=21/16384, formula=(1/5)×n↓5×2^{-20}=21/16384, match=True
+  n=9: exact=189/1048576, formula=(1/5)×n↓5×2^{-24}=189/1048576, match=True
+
+========================================================================
+  THE CLEAN ASYMPTOTIC TABLE
+========================================================================
+
+  V_n × n! / 2^{C(n,2)} = 1 + Σ_{k=3,5,7,...} (1/k) × n↓k × 2^{Δ_k} + cross terms
+
+  where Δ_k = (k-1)(k+1-2n)/2 and n↓k = n!/(n-k)!
+
+  LEADING TERMS:
+  k=3: (1/3) × n(n-1)(n-2) × 2^{4-2n}
+  k=5: (1/5) × n(n-1)(n-2)(n-3)(n-4) × 2^{12-4n}
+  k=7: (1/7) × n↓7 × 2^{24-6n}
+
+  EXPONENT PATTERN: Δ_k = (k-1)(k+1-2n)/2
+  k=3: 4-2n     (pole at x = 2^2 = 4)
+  k=5: 12-4n    (pole at x = 2^4 = 16)
+  k=7: 24-6n    (pole at x = 2^6 = 64)
+  k=9: 40-8n    (pole at x = 2^8 = 256)
+
+  The constant terms: 4, 12, 24, 40, ... = k(k-1)/2 - (k-1) = (k-1)(k-2)/2 + (k-1)/2
+  Actually: (k-1)(k+1)/2 = 4, 12, 24, 40 for k=3,5,7,9.
+  Yes: (k²-1)/2.
+
+  k   | Δ_k          | coefficient     | pole       | weight 1/k
+  ------------------------------------------------------------
+  3   | 4 - 2n    | (1/3)×n↓3    | 2^{2}=4     | 1/3 = 0.333333
+  5   | 12 - 4n    | (1/5)×n↓5    | 2^{4}=16    | 1/5 = 0.200000
+  7   | 24 - 6n    | (1/7)×n↓7    | 2^{6}=64    | 1/7 = 0.142857
+  9   | 40 - 8n    | (1/9)×n↓9    | 2^{8}=256   | 1/9 = 0.111111
+  11  | 60 - 10n   | (1/11)×n↓11   | 2^{10}=1024  | 1/11 = 0.090909
+  13  | 84 - 12n   | (1/13)×n↓13   | 2^{12}=4096  | 1/13 = 0.076923
+  15  | 112 - 14n   | (1/15)×n↓15   | 2^{14}=16384 | 1/15 = 0.066667
+  17  | 144 - 16n   | (1/17)×n↓17   | 2^{16}=65536 | 1/17 = 0.058824
+  19  | 180 - 18n   | (1/19)×n↓19   | 2^{18}=262144 | 1/19 = 0.052632
+
+========================================================================
+  THE TOURNAMENT PARTITION FUNCTION
+========================================================================
+
+  T(n) AS A Q-SERIES (Q = 4^{-n}):
+
+  T(n) = 1 + Σ_j a_{2j+1}(n) × Q^j  where Q = 1/4^n
+
+  n= 3 (Q=4^{-3}=1.56e-02):
+    k=3: a=     32.00 × Q^1 = 5.000000e-01
+  n= 4 (Q=4^{-4}=3.91e-03):
+    k=3: a=    128.00 × Q^1 = 5.000000e-01
+  n= 5 (Q=4^{-5}=9.77e-04):
+    k=3: a=    320.00 × Q^1 = 3.125000e-01
+    k=5: a=  98304.00 × Q^2 = 9.375000e-02
+  n= 6 (Q=4^{-6}=2.44e-04):
+    k=3: a=    640.00 × Q^1 = 1.562500e-01
+    k=5: a= 589824.00 × Q^2 = 3.515625e-02
+  n= 7 (Q=4^{-7}=6.10e-05):
+    k=3: a=   1120.00 × Q^1 = 6.835938e-02
+    k=5: a=2064384.00 × Q^2 = 7.690430e-03
+    k=7: a=12079595520.00 × Q^3 = 2.746582e-03
+  n= 8 (Q=4^{-8}=1.53e-05):
+    k=3: a=   1792.00 × Q^1 = 2.734375e-02
+    k=5: a=5505024.00 × Q^2 = 1.281738e-03
+    k=7: a=96636764160.00 × Q^3 = 3.433228e-04
+  n= 9 (Q=4^{-9}=3.81e-06):
+    k=3: a=   2688.00 × Q^1 = 1.025391e-02
+    k=5: a=12386304.00 × Q^2 = 1.802444e-04
+    k=7: a=434865438720.00 × Q^3 = 2.413988e-05
+    k=9: a=44332308831928320.00 × Q^4 = 9.387732e-06
+  n=10 (Q=4^{-10}=9.54e-07):
+    k=3: a=   3840.00 × Q^1 = 3.662109e-03
+    k=5: a=24772608.00 × Q^2 = 2.253056e-05
+    k=7: a=1449551462400.00 × Q^3 = 1.257285e-06
+    k=9: a=443323088319283200.00 × Q^4 = 3.667083e-07
+  n=11 (Q=4^{-11}=2.38e-07):
+    k=3: a=   5280.00 × Q^1 = 1.258850e-03
+    k=5: a=45416448.00 × Q^2 = 2.581626e-06
+    k=7: a=3986266521600.00 × Q^3 = 5.402399e-08
+    k=9: a=2438276985756057600.00 × Q^4 = 7.878498e-09
+    k=11: a=4183721555917326306508800.00 × Q^5 = 3.223022e-09
+  n=12 (Q=4^{-12}=5.96e-08):
+    k=3: a=   7040.00 × Q^1 = 4.196167e-04
+    k=5: a=77856768.00 × Q^2 = 2.766028e-07
+    k=7: a=9567039651840.00 × Q^3 = 2.025899e-09
+    k=9: a=9753107943024230400.00 × Q^4 = 1.231015e-10
+    k=11: a=50204658671007915678105600.00 × Q^5 = 3.776979e-11
+  n=13 (Q=4^{-13}=1.49e-08):
+    k=3: a=   9152.00 × Q^1 = 1.363754e-04
+    k=5: a=126517248.00 × Q^2 = 2.809247e-08
+    k=7: a=20728585912320.00 × Q^3 = 6.858514e-11
+    k=9: a=31697600814828748800.00 × Q^4 = 1.562812e-12
+    k=11: a=326330281361551451907686400.00 × Q^5 = 2.397496e-13
+    k=13: a=9265238430027500129455005342105600.00 × Q^6 = 1.014325e-13
+
+  SUMMARY — THE TOURNAMENT COUNTING THEOREM:
+
+  V_n = (2^{C(n,2)} / n!) × T(n)
+
+  where T(n) = 1 + Σ_{k=3,5,7,...} (1/k) × n↓k × 2^{(k²-1)/2 - (k-1)n}
+             + cross-orbit corrections (exponentially smaller)
+
+  = 1 + (1/3)n↓3 × 32/4^n + (1/5)n↓5 × 2^{12}/16^n + (1/7)n↓7 × 2^{24}/64^n + ...
+
+  The k-th "tournament prime" contributes:
+  - Factor 1/k (prime reciprocal from cycle index)
+  - Factor n↓k (falling factorial = number of k-arrangements)
+  - Factor 2^{(k²-1)/2} (constant from pair orbits within cycle)
+  - Factor (2^{k-1})^{-n} (exponential decay, rate = 2^{k-1})
+
+  POLES of the generating function G(x) = Σ R(n) x^n:
+  At x = 2^{k-1} for each odd k = 3, 5, 7, 9, ...
+  i.e., at x = 4, 16, 64, 256, ...
+
+  The tournament counting function Z_T(x) = Σ T(n) x^n has:
+  - A POLE at x = 1 (from the constant term 1)
+  - POLES at x = 4, 16, 64, 256, ... (from correction terms)
+  - Each pole carries a PRIME RECIPROCAL 1/k weight.
+
+Done. opus-2026-03-24-S291

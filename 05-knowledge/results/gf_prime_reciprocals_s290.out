@@ -1,0 +1,160 @@
+
+========================================================================
+  THE BURNSIDE CORRECTION AS PRIME PRODUCT
+========================================================================
+
+  V_n × n! / 2^m = 1 + correction:
+
+  n= 3: V=2, V×n!/2^m = 1/4, correction = -3/4
+  n= 4: V=4, V×n!/2^m = 1/16, correction = -15/16
+  n= 5: V=12, V×n!/2^m = 3/256, correction = -253/256
+  n= 6: V=56, V×n!/2^m = 7/4096, correction = -4089/4096
+  n= 7: V=456, V×n!/2^m = 57/262144, correction = -262087/262144
+  n= 8: V=6880, V×n!/2^m = 215/8388608, correction = -8388393/8388608
+  n= 9: V=191536, V×n!/2^m = 11971/4294967296, correction = -4294955325/4294967296
+  n=10: V=9733056, V×n!/2^m = 152079/549755813888, correction = -549755661809/549755813888
+  n=11: V=9.0375e+08, correction ≈ -0.99999997
+  n=12: V=1.5411e+11, correction ≈ -1.00000000
+  n=13: V=4.8542e+13, correction ≈ -1.00000000
+  n=14: V=2.8401e+16, correction ≈ -1.00000000
+  n=15: V=3.1021e+19, correction ≈ -1.00000000
+
+========================================================================
+  THE CORRECTION AS A PRODUCT OVER ODD PRIMES
+========================================================================
+
+  CONTRIBUTION OF EACH CYCLE LENGTH TO V_n:
+
+  n=3:
+    max_cycle=1: contribution = 1/6 = 0.16666667
+    max_cycle=3: contribution = 1/12 = 0.08333333
+  n=4:
+    max_cycle=1: contribution = 1/24 = 0.04166667
+    max_cycle=3: contribution = 1/48 = 0.02083333
+  n=5:
+    max_cycle=1: contribution = 1/120 = 0.00833333
+    max_cycle=3: contribution = 1/384 = 0.00260417
+    max_cycle=5: contribution = 1/1280 = 0.00078125
+  n=6:
+    max_cycle=1: contribution = 1/720 = 0.00138889
+    max_cycle=3: contribution = 5/18432 = 0.00027127
+    max_cycle=5: contribution = 1/20480 = 0.00004883
+  n=7:
+    max_cycle=1: contribution = 1/5040 = 0.00019841
+    max_cycle=3: contribution = 5/294912 = 0.00001695
+    max_cycle=5: contribution = 1/655360 = 0.00000153
+    max_cycle=7: contribution = 1/1835008 = 0.00000054
+  n=8:
+    max_cycle=1: contribution = 1/40320 = 0.00002480
+    max_cycle=3: contribution = 37/47185920 = 0.00000078
+    max_cycle=5: contribution = 3/83886080 = 0.00000004
+    max_cycle=7: contribution = 1/117440512 = 0.00000001
+
+========================================================================
+  PRIME RECIPROCAL GENERATING FUNCTION
+========================================================================
+
+
+  THE PRIME RECIPROCAL CONNECTION:
+
+  The correction to V_n from the identity-only approximation is:
+  correction(n) = Σ_{k=3,5,7,...} corr_k(n)
+
+  where corr_k(n) comes from partitions containing a k-cycle.
+
+  For a SINGLE k-cycle (one k-cycle + (n-k) fixed points):
+  corr_k(n) = C(n, k) × (k-1)! / k × 2^{pair_orbits((1^{n-k}, k)) - m}
+
+  The 2^{...} factor is:
+  2^{(k-1)/2 + (n-k) - C(k,2)} = 2^{(k-1)/2 + n - k - k(k-1)/2}
+  = 2^{(k-1)/2 × (1-k) + n - k}
+  = 2^{n - k - (k-1)(k-1)/2}
+
+  For k=3: 2^{n-3-2} = 2^{n-5}
+  For k=5: 2^{n-5-8} = 2^{n-13}
+  For k=7: 2^{n-7-18} = 2^{n-25}
+
+  The k-cycle contribution DECAYS as 2^{-k(k-1)/2} relative to the identity.
+  This is SUPER-EXPONENTIAL in k (the "prime").
+
+  So: correction(n) ≈ corr_3(n) × (1 + 2^{-6} × ... + 2^{-18} × ... + ...)
+  The higher "primes" (k=5,7,...) contribute NEGLIGIBLY.
+
+  THE GENERATING FUNCTION:
+  G(x) = Σ_n V_n × n! / 2^{C(n,2)} × x^n
+  = Σ_n (1 + correction(n)) × x^n
+  ≈ 1/(1-x) + Σ_n correction(n) × x^n
+
+  The correction GF involves:
+  Σ_n corr_3(n) x^n = Σ_n C(n,3)(2/3)2^{n-5-m+Δ} x^n = ...
+
+  This is getting complex. Let me just compute the numerical values.
+
+  CORRECTION SEQUENCE (V_n × n! / 2^m - 1):
+
+  n= 3: correction = -3/4 = -0.7500000000
+  n= 4: correction = -15/16 = -0.9375000000
+  n= 5: correction = -253/256 = -0.9882812500
+  n= 6: correction = -4089/4096 = -0.9982910156
+  n= 7: correction = -262087/262144 = -0.9997825623
+  n= 8: correction = -8388393/8388608 = -0.9999743700
+  n= 9: correction = -4294955325/4294967296 = -0.9999972128
+  n=10: correction = -549755661809/549755813888 = -0.9999997234
+  n=11: correction ≈ -0.999999974916
+  n=12: correction ≈ -0.999999997911
+  n=13: correction ≈ -0.999999999839
+  n=14: correction ≈ -0.999999999989
+  n=15: correction ≈ -0.999999999999
+
+  COMPARISON WITH PRIME RECIPROCAL SUMS:
+  Σ 1/p for odd primes p ≤ 2n-3:
+
+  n= 3: Σ1/p = 1/3 = 0.333333, correction = -0.75000000, ratio = -0.4444
+  n= 4: Σ1/p = 8/15 = 0.533333, correction = -0.93750000, ratio = -0.5689
+  n= 5: Σ1/p = 71/105 = 0.676190, correction = -0.98828125, ratio = -0.6842
+  n= 6: Σ1/p = 71/105 = 0.676190, correction = -0.99829102, ratio = -0.6773
+  n= 7: Σ1/p = 886/1155 = 0.767100, correction = -0.99978256, ratio = -0.7673
+  n= 8: Σ1/p = 12673/15015 = 0.844023, correction = -0.99997437, ratio = -0.8440
+  n= 9: Σ1/p = 12673/15015 = 0.844023, correction = -0.99999721, ratio = -0.8440
+  n=10: Σ1/p = 230456/255255 = 0.902846, correction = -0.99999972, ratio = -0.9028
+  n=11: Σ1/p = 4633919/4849845 = 0.955478, correction = -0.99999997, ratio = -0.9555
+  n=12: Σ1/p = 4633919/4849845 = 0.955478, correction = -1.00000000, ratio = -0.9555
+  n=13: Σ1/p = 111429982/111546435 = 0.998956, correction = -1.00000000, ratio = -0.9990
+  n=14: Σ1/p = 111429982/111546435 = 0.998956, correction = -1.00000000, ratio = -0.9990
+  n=15: Σ1/p = 111429982/111546435 = 0.998956, correction = -1.00000000, ratio = -0.9990
+
+========================================================================
+  THE MERTENS CONSTANT CONNECTION
+========================================================================
+
+  log(V_n × n! / 2^m) sequence:
+
+  n= 3: log(1+corr) = -1.3862943611
+  n= 4: log(1+corr) = -2.7725887222
+  n= 5: log(1+corr) = -4.4465651558
+  n= 6: log(1+corr) = -6.3718560177
+  n= 7: log(1+corr) = -8.4335979822
+  n= 8: log(1+corr) = -10.5717471248
+  n= 9: log(1+corr) = -12.7904674407
+  n=10: log(1+corr) = -15.1005846402
+  n=11: log(1+corr) = -17.5010280055
+  n=12: log(1+corr) = -19.9867923898
+  n=13: log(1+corr) = -22.5520270306
+  n=14: log(1+corr) = -25.1911756085
+  n=15: log(1+corr) = -27.8992645236
+
+  Correction ratios:
+  n=4→5: ratio = 1.250000
+  n=5→6: ratio = 1.054167
+  n=6→7: ratio = 1.010128
+  n=7→8: ratio = 1.001494
+  n=8→9: ratio = 1.000192
+  n=9→10: ratio = 1.000023
+  n=10→11: ratio = 1.000003
+  n=11→12: ratio = 1.000000
+  n=12→13: ratio = 1.000000
+  n=13→14: ratio = 1.000000
+  n=14→15: ratio = 1.000000
+  n=15→16: ratio = 1.000000
+
+Done. opus-2026-03-24-S290
