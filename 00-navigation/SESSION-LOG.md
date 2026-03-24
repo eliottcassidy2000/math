@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S265 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S264
+**Summary of work:** Speed engine computing 9 meta-graph quantities from cycle index in 57ms for n=3..50. Every trick combined.
+
+**Performance:** n=10 in <1ms (10 partitions), n=50 in 0.2ms (truncated), V_100 ≈ 10^1332.
+
 ## opus-2026-03-23-S264 — 2026-03-23
 
 **Account:** opus
