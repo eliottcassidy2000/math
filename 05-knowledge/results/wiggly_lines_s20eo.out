@@ -1,0 +1,168 @@
+================================================================================
+  WIGGLY LINES: FIBER BUNDLE STRUCTURE OF G_n
+  kind-pasteur-2026-03-23-S20eo
+================================================================================
+
+######################################################################
+  n = 4
+  Overlap (wiggly) dimension: 1 = C(2,2)
+  Boundary (opaque) dimension: 5 = 2*2+1
+  Fibers: 2^5 = 32
+  Fiber size: 2^1 = 2
+######################################################################
+
+  FIBER STATISTICS:
+    V(n-2) = 1 (overlap iso classes)
+    V_merged(n) = 3
+    E(G_n/Z_2) = 3
+    E visible via wiggly lines = 3 (100.0%)
+    Wiggly-only edges (not in opaque) = 0 (by isotropy)
+
+  PER-FIBER DISTRIBUTION:
+    Classes per fiber: min=1, max=2, avg=1.62
+    G_n edges per fiber: min=0, max=1, avg=0.62
+    Total fibers: 32
+
+  FIBER MULTIPLICITY (how many fibers witness each G_n edge):
+    min=8, max=16, avg=13.3
+    8 fibers: 1 edges
+    16 fibers: 2 edges
+
+  WIGGLY SELF-LOOP RATE:
+    Total wiggly transitions: 32
+    Wiggly self-loops: 12 (37.5%)
+
+  G_(n-2) vs G_n REFINEMENT:
+    V(n-2) = 1 overlap classes
+    Avg full classes per fiber = 1.62
+    Refinement factor = 1.62
+    (boundary, overlap_class) pairs: 32
+    Pairs mapping to >1 full class: 20 (62.5%)
+    Max full classes from one (B, C_overlap): 2
+
+  FACTORING THROUGH G_(n-2):
+    Fibers where phi_B factors through overlap class: 12/32 (37.5%)
+    Fibers where it DOESN'T factor: 20/32
+    (phi_B factors = same overlap class always gives same full class)
+
+  Time: 0.0s
+
+######################################################################
+  n = 5
+  Overlap (wiggly) dimension: 3 = C(3,2)
+  Boundary (opaque) dimension: 7 = 2*3+1
+  Fibers: 2^7 = 128
+  Fiber size: 2^3 = 8
+######################################################################
+
+  FIBER STATISTICS:
+    V(n-2) = 2 (overlap iso classes)
+    V_merged(n) = 10
+    E(G_n/Z_2) = 21
+    E visible via wiggly lines = 21 (100.0%)
+    Wiggly-only edges (not in opaque) = 0 (by isotropy)
+
+  PER-FIBER DISTRIBUTION:
+    Classes per fiber: min=2, max=6, avg=4.25
+    G_n edges per fiber: min=1, max=9, avg=5.12
+    Total fibers: 128
+
+  FIBER MULTIPLICITY (how many fibers witness each G_n edge):
+    min=24, max=216, avg=121.1
+    72 fibers: 6 edges
+    144 fibers: 13 edges
+
+  WIGGLY SELF-LOOP RATE:
+    Total wiggly transitions: 1536
+    Wiggly self-loops: 264 (17.2%)
+
+  G_(n-2) vs G_n REFINEMENT:
+    V(n-2) = 2 overlap classes
+    Avg full classes per fiber = 4.25
+    Refinement factor = 2.12
+    (boundary, overlap_class) pairs: 256
+    Pairs mapping to >1 full class: 168 (65.6%)
+    Max full classes from one (B, C_overlap): 5
+
+  FACTORING THROUGH G_(n-2):
+    Fibers where phi_B factors through overlap class: 8/128 (6.2%)
+    Fibers where it DOESN'T factor: 120/128
+    (phi_B factors = same overlap class always gives same full class)
+
+  Time: 0.3s
+
+######################################################################
+  n = 6
+  Overlap (wiggly) dimension: 6 = C(4,2)
+  Boundary (opaque) dimension: 9 = 2*4+1
+  Fibers: 2^9 = 512
+  Fiber size: 2^6 = 64
+######################################################################
+
+  FIBER STATISTICS:
+    V(n-2) = 4 (overlap iso classes)
+    V_merged(n) = 34
+    E(G_n/Z_2) = 143
+    E visible via wiggly lines = 143 (100.0%)
+    Wiggly-only edges (not in opaque) = 0 (by isotropy)
+
+  PER-FIBER DISTRIBUTION:
+    Classes per fiber: min=3, max=24, avg=17.03
+    G_n edges per fiber: min=3, max=74, avg=48.72
+    Total fibers: 512
+
+  FIBER MULTIPLICITY (how many fibers witness each G_n edge):
+    min=384, max=3456, avg=1232.6
+    576 fibers: 10 edges
+    1152 fibers: 110 edges
+    2304 fibers: 15 edges
+
+  WIGGLY SELF-LOOP RATE:
+    Total wiggly transitions: 98304
+    Wiggly self-loops: 10176 (10.4%)
+
+  G_(n-2) vs G_n REFINEMENT:
+    V(n-2) = 4 overlap classes
+    Avg full classes per fiber = 17.03
+    Refinement factor = 4.26
+    (boundary, overlap_class) pairs: 2048
+    Pairs mapping to >1 full class: 2016 (98.4%)
+    Max full classes from one (B, C_overlap): 12
+
+  FACTORING THROUGH G_(n-2):
+    Fibers where phi_B factors through overlap class: 8/512 (1.6%)
+    Fibers where it DOESN'T factor: 504/512
+    (phi_B factors = same overlap class always gives same full class)
+
+  Time: 84.5s
+
+================================================================================
+ABSTRACT SYNTHESIS
+================================================================================
+
+THE FIBER BUNDLE STRUCTURE:
+
+  Total tiling space = {0,1}^{C(n,2)} is a PRODUCT:
+    Base (boundary): {0,1}^{2n-3}
+    Fiber (overlap): {0,1}^{C(n-2,2)}
+
+  WIGGLY LINES = edges within each fiber = single overlap tile flips
+  Each fiber is a hypercube Q_{C(n-2,2)} with 2^{C(n-2,2)} tilings.
+
+  The FIBER MAP phi_B: Fiber -> G_n/Z_2 sends each overlap to its full class.
+  phi_B is NOT a morphism from G_{n-2} to G_n (it doesn't factor through
+  the overlap iso class map in general).
+
+  The wiggly lines project to ALL edges of G_n/Z_2 (by S_n isotropy).
+  Each G_n edge is witnessed by multiple fibers (fiber multiplicity).
+
+  KEY INSIGHT: The overlap sub-tournament's LABELED structure matters,
+  not just its iso class. Two isomorphic overlaps can give different
+  full classes (depending on how they interact with the boundary).
+
+  This is why G_n cannot be reduced to G_{n-2}: the boundary breaks
+  the symmetry of the overlap. The Mode B recursion n->n-2 is a
+  FIBER BUNDLE, not a simple quotient.
+
+DONE.
+================================================================================

@@ -1,0 +1,187 @@
+================================================================================
+  TRANSLUCENT DEEP ANALYSIS
+  kind-pasteur-2026-03-23-S20en
+================================================================================
+
+######################################################################
+  n = 4
+  Overlap: 1 arcs, Boundary: 5 arcs
+######################################################################
+  V = 4, V_merged = 3, SC = 2
+
+  EDGE DECOMPOSITION (merged metagraph):
+    Total edges:         3
+    Translucent edges:   3 (100.0%)
+    Opaque edges:        3 (100.0%)
+    Trans-only:          0
+    Opaque-only:         0
+    Both:                3
+
+  SPINE/RIBS/SEA DECOMPOSITION:
+        Type  Total  Trans-only  Opaque-only   Both
+       SC-SC      1           0            0      1
+       SC-NS      2           0            0      2
+       NS-NS      0           0            0      0
+
+  LINES PER EDGE (thickness):
+    Translucent: min=8, max=16, avg=13.3
+    Opaque:      min=40, max=80, avg=66.7
+    Total:       min=48, max=96, avg=80.0
+    Trans/(Trans+Opaque) ratio per edge: min=0.167, max=0.167, avg=0.167
+    Expected if uniform: 0.167 = 1/6
+
+  DEGREE SEQUENCES (merged):
+    Total:       min=2, max=2, avg=2.0
+    Translucent: min=2, max=2, avg=2.0
+    Opaque:      min=2, max=2, avg=2.0
+
+  SELF-LOOPS PER CLASS:
+    Classes with trans SL:  2/3
+    Classes with opaque SL: 2/3
+    Total trans SL lines:   24
+    Total opaque SL lines:  120
+
+  CONNECTIVITY:
+    Full graph:       1 component (V=3)
+    Translucent:      1 components (sizes: [3])
+    Opaque:           1 components (sizes: [3])
+
+  DIAMETER:
+    Full:         1
+    Translucent:  1
+    Opaque:       1
+
+  SPECTRAL DATA:
+    Full spectrum (top 5):       ['2.00', '-1.00', '-1.00']
+    Translucent spectrum (top 5): ['2.00', '-1.00', '-1.00']
+    Opaque spectrum (top 5):      ['2.00', '-1.00', '-1.00']
+    Full spectral gap:       3.0000
+    Translucent spectral gap: 3.0000
+    Opaque spectral gap:      3.0000
+
+    A_full = A_trans + A_opaque? max|diff| = 1.000000
+
+  Time: 0.7s
+
+######################################################################
+  n = 5
+  Overlap: 3 arcs, Boundary: 7 arcs
+######################################################################
+  V = 12, V_merged = 10, SC = 8
+
+  EDGE DECOMPOSITION (merged metagraph):
+    Total edges:         21
+    Translucent edges:   21 (100.0%)
+    Opaque edges:        21 (100.0%)
+    Trans-only:          0
+    Opaque-only:         0
+    Both:                21
+
+  SPINE/RIBS/SEA DECOMPOSITION:
+        Type  Total  Trans-only  Opaque-only   Both
+       SC-SC     12           0            0     12
+       SC-NS      8           0            0      8
+       NS-NS      1           0            0      1
+
+  LINES PER EDGE (thickness):
+    Translucent: min=24, max=216, avg=121.1
+    Opaque:      min=56, max=504, avg=282.7
+    Total:       min=80, max=720, avg=403.8
+    Trans/(Trans+Opaque) ratio per edge: min=0.300, max=0.300, avg=0.300
+    Expected if uniform: 0.300 = 3/10
+
+  DEGREE SEQUENCES (merged):
+    Total:       min=2, max=7, avg=4.2
+    Translucent: min=2, max=7, avg=4.2
+    Opaque:      min=2, max=7, avg=4.2
+
+  SELF-LOOPS PER CLASS:
+    Classes with trans SL:  5/10
+    Classes with opaque SL: 5/10
+    Total trans SL lines:   528
+    Total opaque SL lines:  1232
+
+  CONNECTIVITY:
+    Full graph:       1 component (V=10)
+    Translucent:      1 components (sizes: [10])
+    Opaque:           1 components (sizes: [10])
+
+  DIAMETER:
+    Full:         3
+    Translucent:  3
+    Opaque:       3
+
+  SPECTRAL DATA:
+    Full spectrum (top 5):       ['4.64', '1.85', '1.11', '0.34', '0.00']
+    Translucent spectrum (top 5): ['4.64', '1.85', '1.11', '0.34', '0.00']
+    Opaque spectrum (top 5):      ['4.64', '1.85', '1.11', '0.34', '0.00']
+    Full spectral gap:       2.7889
+    Translucent spectral gap: 2.7889
+    Opaque spectral gap:      2.7889
+
+    A_full = A_trans + A_opaque? max|diff| = 1.000000
+
+  Time: 0.3s
+
+######################################################################
+  n = 6
+  Overlap: 6 arcs, Boundary: 9 arcs
+######################################################################
+  V = 56, V_merged = 34, SC = 12
+
+  EDGE DECOMPOSITION (merged metagraph):
+    Total edges:         143
+    Translucent edges:   143 (100.0%)
+    Opaque edges:        143 (100.0%)
+    Trans-only:          0
+    Opaque-only:         0
+    Both:                143
+
+  SPINE/RIBS/SEA DECOMPOSITION:
+        Type  Total  Trans-only  Opaque-only   Both
+       SC-SC     13           0            0     13
+       SC-NS     45           0            0     45
+       NS-NS     85           0            0     85
+
+  LINES PER EDGE (thickness):
+    Translucent: min=384, max=3456, avg=1232.6
+    Opaque:      min=576, max=5184, avg=1848.8
+    Total:       min=960, max=8640, avg=3081.4
+    Trans/(Trans+Opaque) ratio per edge: min=0.400, max=0.400, avg=0.400
+    Expected if uniform: 0.400 = 6/15
+
+  DEGREE SEQUENCES (merged):
+    Total:       min=2, max=13, avg=8.4
+    Translucent: min=2, max=13, avg=8.4
+    Opaque:      min=2, max=13, avg=8.4
+
+  SELF-LOOPS PER CLASS:
+    Classes with trans SL:  21/34
+    Classes with opaque SL: 21/34
+    Total trans SL lines:   20352
+    Total opaque SL lines:  30528
+
+  CONNECTIVITY:
+    Full graph:       1 component (V=34)
+    Translucent:      1 components (sizes: [34])
+    Opaque:           1 components (sizes: [34])
+
+  DIAMETER:
+    Full:         4
+    Translucent:  4
+    Opaque:       4
+
+  SPECTRAL DATA:
+    Full spectrum (top 5):       ['9.78', '5.49', '3.44', '3.26', '2.95']
+    Translucent spectrum (top 5): ['9.78', '5.49', '3.44', '3.26', '2.95']
+    Opaque spectrum (top 5):      ['9.78', '5.49', '3.44', '3.26', '2.95']
+    Full spectral gap:       4.2888
+    Translucent spectral gap: 4.2888
+    Opaque spectral gap:      4.2888
+
+    A_full = A_trans + A_opaque? max|diff| = 1.000000
+
+  Time: 85.6s
+
+DONE.
+================================================================================
