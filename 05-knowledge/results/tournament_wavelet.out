@@ -1,0 +1,16 @@
+Tournament Wavelet v1.0.0
+==========================================================================================
+
+          Name      Raw      TWT    zlib9      bz2  TWT/best    LL%  L0-spar  L2-spar
+  --------------------------------------------------------------------------------
+        grad_h   65536B     448B     585B     788B     1.31x 98.8%  100.0%   66.7% WIN OK
+        grad_v   65536B     450B     553B     880B     1.23x 98.8%  100.0%   66.7% WIN OK
+     grad_diag   65536B     577B    1057B    1047B     1.81x 23.2%   99.2%   32.3% WIN OK
+       checker   65536B     444B     196B      62B     0.14x  5.8%  100.0%  100.0% LOSE OK
+        smooth   65536B   13557B   19170B    9626B     0.71x 85.0%   75.8%   35.0% LOSE OK
+        circle   65536B    2321B     452B     312B     0.13x 20.6%   99.3%   93.2% LOSE OK
+        sparse   65536B    2387B     412B     339B     0.14x  0.2%   99.3%   90.5% LOSE OK
+        random   65536B   60847B   65562B   66193B     1.08x  0.7%    2.3%   10.2% WIN OK
+
+  Note: TWT uses Haar-like lifting. Better wavelets (CDF 5/3, 9/7) would improve results.
+  The key advantage is skip-hierarchy decomposition, not the wavelet basis.
