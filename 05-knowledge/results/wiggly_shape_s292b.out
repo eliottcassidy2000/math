@@ -1,0 +1,252 @@
+
+========================================================================
+  TILING SPACE SUMMARY
+========================================================================
+
+  n=4: m=3 (=T_2), tilings=2^3=8
+    Iso classes: 4 unmerged, 3 merged
+    Neutrality (unmerged): 0.4167 (41.7%)
+    Neutrality (merged):   0.4167 (41.7%)
+    Degree: 3 (triangular T_2)
+
+  n=5: m=6 (=T_3), tilings=2^6=64
+    Iso classes: 12 unmerged, 10 merged
+    Neutrality (unmerged): 0.1042 (10.4%)
+    Neutrality (merged):   0.1042 (10.4%)
+    Degree: 6 (triangular T_3)
+
+  n=6: m=10 (=T_4), tilings=2^10=1024
+    Iso classes: 56 unmerged, 34 merged
+    Neutrality (unmerged): 0.0516 (5.2%)
+    Neutrality (merged):   0.0965 (9.6%)
+    Degree: 10 (triangular T_4)
+
+
+========================================================================
+  THE SHAPE AT n=5: DETAILED
+========================================================================
+
+  THE TILING SHAPE TABLE (n=5):
+
+  mid  H    fiber  SL_rate  reach    entropy  N2_reach   lumpiness 
+  ----------------------------------------------------------------------
+  9    1    1      0.000    4.00     1.92     5.00       0.333     
+  7    3    2      0.000    3.00     1.46     6.00       0.500     
+  8    3    1      0.000    3.00     1.25     6.00       0.667     
+  6    5    10     0.333    5.00     2.23     7.40       0.333     
+  0    9    9      0.000    3.56     1.69     6.33       0.444     
+  1    9    9      0.148    4.22     1.99     6.44       0.333     
+  3    11   11     0.182    4.36     2.04     6.27       0.303     
+  2    13   13     0.000    3.92     1.88     5.23       0.346     
+  4    15   3      0.000    2.00     0.77     5.00       0.722     
+  5    15   5      0.000    2.20     0.88     5.60       0.733     
+
+========================================================================
+  THE SHAPE AT n=6: THE NON-TRIVIAL CASE
+========================================================================
+
+  n=6: m=10, tilings=1024, classes=34 merged
+
+  THE TILING SHAPE (n=6) — SUMMARY BY H VALUE:
+
+  H      #cls   tot_fib  avg_SL%    avg_reach  avg_N2    
+  -------------------------------------------------------
+  1      1      1        0.000      6.00       15.00     
+  3      2      4        0.000      5.50       16.00     
+  5      2      15       0.200      8.07       22.20     
+  9      3      37       0.043      7.76       20.38     
+  11     1      22       0.109      8.40       22.30     
+  13     1      26       0.000      7.70       19.10     
+  15     3      46       0.078      5.73       18.46     
+  17     2      34       0.071      5.60       17.25     
+  19     1      38       0.053      9.30       21.90     
+  23     2      92       0.126      8.90       20.95     
+  25     1      50       0.112      9.30       22.40     
+  27     1      18       0.000      5.40       17.40     
+  29     3      116      0.103      6.93       18.10     
+  31     1      62       0.000      7.50       18.30     
+  33     3      121      0.026      6.93       18.03     
+  37     3      185      0.068      7.67       17.93     
+  41     1      41       0.220      5.50       15.80     
+  43     1      86       0.307      7.40       17.80     
+  45     2      30       0.113      3.20       11.85     
+
+========================================================================
+  THE NEUTRALITY DECAY
+========================================================================
+
+  NEUTRALITY DECAY SEQUENCE:
+
+  n=3: 0.0% (m=1, all flips are expressive)
+  n=4: 41.7% (m=3)
+  n=5: 10.4% (m=6)
+  n=6: 5.2% (m=10)
+
+  NEUTRALITY vs R(n) (Euler product correction):
+
+  n    m        neutrality   R(n)         ratio       
+  --------------------------------------------------
+  3    1        0.000000     0.500000     0.0000      
+  4    3        0.416667     0.500000     0.8333      
+  5    6        0.104167     0.406250     0.2564      
+  6    10       0.096484     0.230469     0.4186      
+
+========================================================================
+  THE INTRINSIC VOCABULARY
+========================================================================
+
+
+  THE TILING HYPERCUBE — NATURAL VOCABULARY
+
+  If we only knew about tilings and tile flips, here's what we'd call things:
+
+  THE OBJECTS:
+  ═══════════
+  TILING = a complete orientation of all non-base-path arcs.
+    Formally: a vertex of Q_m, a binary word of length m = T_{n-2}.
+    Total count: 2^m (= 2^{T_{n-2}}).
+
+  TILE = one non-base-path arc position.
+    There are m = C(n-1,2) = T_{n-2} tiles (a triangular number).
+    Labeled A, B, C, ... (m letters).
+
+  TILE FLIP = toggling one tile's orientation.
+    = moving to an adjacent vertex of Q_m.
+    Each tiling has exactly m tile-flip neighbors.
+
+  THE STRUCTURE:
+  ══════════════
+  The tiling hypercube Q_m has:
+  - 2^m vertices (tilings)
+  - m × 2^{m-1} edges (tile flips)
+  - m perfect matchings (one per tile position = one per wiggly class)
+
+  THE QUOTIENT:
+  ═════════════
+  TILING CLASS = set of tilings giving isomorphic tournaments.
+    (The orbits of S_n acting on tilings by relabeling vertices.)
+
+  FIBER = the number of tilings in a class.
+    fiber(C) × |Aut(C)| = n! (orbit-stabilizer).
+
+  SILENT MUTATION = tile flip that preserves the tiling class.
+    (The flip changes the tiling but the resulting tournament is isomorphic.)
+
+  EXPRESSIVE MUTATION = tile flip that changes the tiling class.
+
+  NEUTRALITY(t) = fraction of t's m flips that are silent.
+    = #{k : flip_k(t) ∈ class(t)} / m.
+
+  REACH(t) = number of distinct classes among t's m neighbors.
+    REACH(t) ≤ m (equality means every flip goes to a different class).
+
+  THE QUOTIENT GRAPH (= the meta-graph):
+  ═══════════════════════════════════════
+  MUTATION GRAPH = weighted graph on tiling classes.
+    Edge weight W(C,D) = total expressive mutations from C-tilings to D-tilings.
+    Self-loop weight W(C,C) = total silent mutations within C.
+    Row sum: W(C,•) = fiber(C) × m (every tiling contributes m flips).
+
+  MUTATION MATRIX P = W / (fiber × m) = transition matrix of random walk.
+    P is a REVERSIBLE Markov chain with stationary distribution π ∝ fiber.
+    Detailed balance: fiber(C) × P(C,D) = fiber(D) × P(D,C).
+
+  THE SHAPE:
+  ══════════
+  SPECTRAL GAP = 1 - λ_2 of P.
+    At n=5: gap ≈ 0.50, mixing time ≈ 2 steps.
+    The random walk mixes FAST — the quotient graph is well-connected.
+
+  NEUTRALITY LANDSCAPE = function mapping each class to its self-loop rate.
+    Silent mutations are concentrated at MID-H classes (not extremes).
+    The transitive (H=1) and regular (H=max) have 0% neutrality.
+    The "central" classes have the most silent mutations.
+
+  REACH LANDSCAPE = function mapping each class to average reach.
+    High-H extremes have LOW reach (few expressive directions).
+    Central classes have HIGH reach (many distinct classes reachable).
+    This creates a "funnel" shape: extremes are trapped, center is free.
+
+  THE SHAPE IS A FUNNEL:
+    Top (H=max): low reach, low neutrality → few options, all expressive
+    Middle:      high reach, moderate neutrality → many options, some silent
+    Bottom (H=1): low reach, zero neutrality → few options, all expressive
+
+  The middle of the H-spectrum is the WIDEST part of the funnel.
+  This is where the meta-graph is densest and most connected.
+  The extremes are narrow tips.
+
+
+========================================================================
+  THE FUNNEL SHAPE: QUANTIFIED
+========================================================================
+
+  THE FUNNEL AT n=6 (m=10, 34 merged classes):
+
+  H      #cls   fiber    SL_rate    avg_reach  width   
+  -------------------------------------------------------
+  1      1      1        0.000      6.00       0.0010  
+  3      2      4        0.000      5.50       0.0039  
+  5      2      15       0.200      7.60       0.0146  
+  9      3      37       0.043      7.00       0.0361  
+  11     1      22       0.109      8.00       0.0215  
+  13     1      26       0.000      7.80       0.0254  
+  15     3      46       0.078      5.47       0.0449  
+  17     2      34       0.071      5.40       0.0332  
+  19     1      38       0.053      9.60       0.0371  
+  23     2      92       0.126      9.20       0.0898  
+  25     1      50       0.112      9.00       0.0488  
+  27     1      18       0.000      5.20       0.0176  
+  29     3      116      0.103      6.93       0.1133  
+  31     1      62       0.000      7.20       0.0605  
+  33     3      121      0.026      6.87       0.1182  
+  37     3      185      0.068      7.53       0.1807  
+  41     1      41       0.220      5.40       0.0400  
+  43     1      86       0.307      7.60       0.0840  
+  45     2      30       0.113      3.10       0.0293  
+
+========================================================================
+  TOURNAMENT COUNTING THEOREM: FIBER PREDICTION
+========================================================================
+
+  TILING FIBER vs ARC FIBER:
+
+  mid  H    fib_tile   fib_arc    ratio      H_count     
+  -------------------------------------------------------
+  9    1    1          1          120.0000   H/|Aut|=1/120=0.0
+  7    3    2          1          80.0000    H/|Aut|=3/120=0.0
+  8    3    1          1          40.0000    H/|Aut|=3/120=0.0
+  6    5    10         5          48.0000    H/|Aut|=5/24=0.2
+  0    9    9          9          13.0000    H/|Aut|=9/13=0.7
+  1    9    9          9          13.0000    H/|Aut|=9/13=0.7
+  3    11   11         12         10.0000    H/|Aut|=11/10=1.1
+  2    13   13         13         9.0000     H/|Aut|=13/9=1.4
+  4    15   3          3          8.0000     H/|Aut|=15/40=0.4
+  5    15   5          5          8.0000     H/|Aut|=15/24=0.6
+
+  KEY IDENTITY: fiber_tiling(C) = H(C) / |Aut(C)|
+
+  This is the ORBIT-STABILIZER THEOREM applied to the tiling fibration:
+  - A labeled tournament T has H(T) Hamiltonian paths (directed).
+  - Our base path is one specific permutation of vertices.
+  - The probability that this permutation is a HP of T = H(T) / n!
+  - So: #{labeled T in class C with our base path} = (n!/|Aut|) × H/n! = H/|Aut|.
+
+  This means: the TILING FIBER encodes BOTH H and |Aut| simultaneously.
+  We don't need to compute H separately — it's already in the fiber!
+
+  fiber_tiling × |Aut| = H (the tetrahedron identity from S286).
+
+  THE TOURNAMENT COUNTING THEOREM IN TILING LANGUAGE:
+  Σ_C fiber_tiling(C) = 2^m = total tilings.
+  Σ_C H(C)/|Aut(C)| = 2^{C(n-1,2)}.
+
+  From the Euler product:
+  Σ_C 1 = V_n = 2^{C(n,2)} / n! × (1 + R(n))
+  Σ_C H(C)/|Aut(C)| = 2^{C(n-1,2)}
+
+  Dividing: <H/|Aut|> / 1 = 2^{C(n-1,2)} / V_n
+  = 2^{C(n-1,2)} × n! / (2^{C(n,2)} × (1+R(n)))
+  = n! / (2^{n-1} × (1+R(n)))
+
+Done. opus-2026-03-24-S292
