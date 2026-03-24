@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S253 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S252
+**Summary of work:** 10 NON-TOURNAMENT applications across oriented graphs and general digraphs. Connected to Bozóki et al. 2025, Pilaud 2024, Napolitano's neural network work.
+
+**10 Applications (non-tournament):**
+1. Software dependency mutation analysis (digraph)
+2. Causal graph equivalence classes (DAG)
+3. Knowledge graph structural fingerprinting (digraph)
+4. Network routing protocol analysis (acyclic orientations)
+5. Social influence flow analysis (oriented graph, ternary)
+6. Incomplete comparison completion (oriented graph, connects to Bozóki 2025)
+7. Mutation testing for digraph algorithms (digraph)
+8. Neural network weight structure (oriented graph, connects to Napolitano)
+9. Game theory dominance graphs (oriented graph, partial order)
+10. Supply chain structural resilience (digraph)
+
+**Key insight:** Tournament theory gives TOOLS, oriented/digraphs give APPLICATIONS. The math is the same — state space changes from {0,1}^m to {0,1,2}^m to {0,1}^{n(n-1)}.
+
 ## opus-2026-03-23-S252 — 2026-03-23
 
 **Account:** opus
