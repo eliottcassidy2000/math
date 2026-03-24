@@ -1,0 +1,240 @@
+
+========================================================================
+  TILE ALPHABET AT n=5
+========================================================================
+
+  Letter | Pair  | Range | Vertices involved
+  --------------------------------------------------
+  A      | (0,2) | 2     | 0 ↔ 2
+  B      | (0,3) | 3     | 0 ↔ 3
+  C      | (0,4) | 4     | 0 ↔ 4
+  D      | (1,3) | 2     | 1 ↔ 3
+  E      | (1,4) | 3     | 1 ↔ 4
+  F      | (2,4) | 2     | 2 ↔ 4
+
+========================================================================
+  d=2: ALL 15 LETTER PAIRS — WHICH CLASSES DO THEY CONNECT?
+========================================================================
+
+  Pair   Shared?  Edges  SL_cls   SL_rate    Σrange      
+  -------------------------------------------------------
+  AF     {2}      12     6        0.312      4           
+  BE     none     11     4        0.312      6           
+  AB     {0}      17     5        0.250      5           
+  AD     none     13     4        0.250      4           
+  DF     none     13     4        0.250      4           
+  EF     {4}      17     5        0.250      5           
+  BD     {3}      18     5        0.219      5           
+  DE     {1}      18     5        0.219      5           
+  AE     none     16     4        0.188      5           
+  BF     none     16     4        0.188      5           
+  BC     {0}      20     3        0.125      7           
+  CE     {4}      20     3        0.125      7           
+  AC     {0}      18     2        0.062      6           
+  CD     none     13     1        0.062      6           
+  CF     {4}      18     2        0.062      6           
+
+========================================================================
+  d=2 PAIRS GROUPED BY STRUCTURE
+========================================================================
+
+  BY SHARED VERTEX:
+
+  Shared vertex:  9 pairs, avg SL=0.181, avg edges=17.6
+  No shared:      6 pairs, avg SL=0.208, avg edges=13.7
+
+  BY TOTAL RANGE:
+
+  Σrange=4: 3 pairs (AD, AF, DF), avg SL=0.271, avg edges=12.7
+  Σrange=5: 6 pairs (AB, AE, BD, BF, DE, EF), avg SL=0.219, avg edges=17.0
+  Σrange=6: 4 pairs (AC, BE, CD, CF), avg SL=0.125, avg edges=15.0
+  Σrange=7: 2 pairs (BC, CE), avg SL=0.125, avg edges=20.0
+
+  TRIANGLE STRUCTURE:
+    AB: triangle {2,0,3} with base arc (2,3)
+    BC: triangle {3,0,4} with base arc (3,4)
+    BD: triangle {0,3,1} with base arc (0,1)
+    CE: triangle {0,4,1} with base arc (0,1)
+    DE: triangle {3,1,4} with base arc (3,4)
+    EF: triangle {1,4,2} with base arc (1,2)
+
+========================================================================
+  d=3: ALL 20 LETTER TRIPLES
+========================================================================
+
+  Triple   Edges  SL_rate  #verts     ranges     triangle?   
+  ------------------------------------------------------------
+  ACF      8      0.250    3          (2, 2, 4)  YES         
+  ABD      18     0.094    4          (2, 2, 3)              
+  ABF      17     0.094    4          (2, 2, 3)              
+  AEF      17     0.094    4          (2, 2, 3)              
+  DEF      18     0.094    4          (2, 2, 3)              
+  ABC      18     0.062    4          (2, 3, 4)  YES         
+  ABE      16     0.062    5          (2, 3, 3)              
+  ACD      17     0.062    5          (2, 2, 4)              
+  ACE      18     0.062    4          (2, 3, 4)              
+  ADE      17     0.062    5          (2, 2, 3)              
+  BCD      18     0.062    4          (2, 3, 4)              
+  BCF      18     0.062    4          (2, 3, 4)              
+  BDE      16     0.062    4          (2, 3, 3)              
+  BDF      17     0.062    5          (2, 2, 3)              
+  BEF      16     0.062    5          (2, 3, 3)              
+  CDE      18     0.062    4          (2, 3, 4)              
+  CDF      17     0.062    5          (2, 2, 4)              
+  CEF      18     0.062    4          (2, 3, 4)  YES         
+  ADF      14     0.000    5          (2, 2, 2)              
+  BCE      16     0.000    4          (3, 3, 4)              
+
+  BY NUMBER OF DISTINCT VERTICES INVOLVED:
+  3 vertices: 1 triples, avg SL=0.250, avg edges=8.0
+  4 vertices: 12 triples, avg SL=0.068, avg edges=17.5
+  5 vertices: 7 triples, avg SL=0.054, avg edges=16.3
+
+  BY RANGE PROFILE:
+  ranges=(2, 2, 2): 1 triples (ADF), avg SL=0.000
+  ranges=(2, 2, 3): 6 triples (ABD, ABF, ADE, AEF, BDF, DEF), avg SL=0.083
+  ranges=(2, 2, 4): 3 triples (ACD, ACF, CDF), avg SL=0.125
+  ranges=(2, 3, 3): 3 triples (ABE, BDE, BEF), avg SL=0.062
+  ranges=(2, 3, 4): 6 triples (ABC, ACE, BCD, BCF, CDE, CEF), avg SL=0.062
+  ranges=(3, 3, 4): 1 triples (BCE), avg SL=0.000
+
+========================================================================
+  THE PATTERN: WHICH LETTER COMBOS ARE MOST/LEAST SILENT?
+========================================================================
+
+
+  DISCOVERY: The self-loop rate depends on the GEOMETRIC STRUCTURE
+  of the letter combination in the staircase.
+
+  d=1 (single letters):
+    All 6 letters have SL rates in {0.062, 0.125}.
+    Range-2 tiles (A,D,F): SL = 0.062 (lower)
+    Range-3 tiles (B,E):   SL = 0.125
+    Range-4 tile (C):      SL = 0.125
+
+  d=2 (letter pairs):
+    Highest SL: pairs whose tiles share a vertex AND have high total range.
+    Lowest SL: disjoint tiles (no shared vertex).
+
+  d=3 (letter triples):
+    Highest SL: triples involving few distinct vertices (concentrated).
+    Lowest SL: triples spanning all 5 vertices (spread out).
+    The TRIANGLE {A,D,F} = range (2,2,2) has SL = 0.250.
+
+
+========================================================================
+  d=4,5,6: HIGHER-ORDER LETTER COMBINATIONS
+========================================================================
+
+  d=4: C(6,4) = 15 combinations
+
+  TOP 5 by SL rate:
+    ABEF: SL=0.312, verts=5, ranges=(2, 2, 3, 3)
+    ABDE: SL=0.281, verts=5, ranges=(2, 2, 3, 3)
+    BDEF: SL=0.281, verts=5, ranges=(2, 2, 3, 3)
+    ACDF: SL=0.250, verts=5, ranges=(2, 2, 2, 4)
+    BCDE: SL=0.250, verts=4, ranges=(2, 3, 3, 4)
+  BOTTOM 5:
+    ACEF: SL=0.094, verts=4, ranges=(2, 2, 3, 4)
+    ABCD: SL=0.062, verts=5, ranges=(2, 2, 3, 4)
+    CDEF: SL=0.062, verts=5, ranges=(2, 2, 3, 4)
+    ABCE: SL=0.031, verts=5, ranges=(2, 3, 3, 4)
+    BCEF: SL=0.031, verts=5, ranges=(2, 3, 3, 4)
+
+  BY #VERTICES:
+    4 verts: 3 combos, avg SL=0.146
+    5 verts: 12 combos, avg SL=0.172
+
+  d=5: C(6,5) = 6 combinations
+
+  TOP 5 by SL rate:
+    ABCDE: SL=0.125, verts=5, ranges=(2, 2, 3, 3, 4)
+    ABCDF: SL=0.125, verts=5, ranges=(2, 2, 2, 3, 4)
+    ABDEF: SL=0.125, verts=5, ranges=(2, 2, 2, 3, 3)
+    ACDEF: SL=0.125, verts=5, ranges=(2, 2, 2, 3, 4)
+    BCDEF: SL=0.125, verts=5, ranges=(2, 2, 3, 3, 4)
+  BOTTOM 5:
+    ABCDF: SL=0.125, verts=5, ranges=(2, 2, 2, 3, 4)
+    ABDEF: SL=0.125, verts=5, ranges=(2, 2, 2, 3, 3)
+    ACDEF: SL=0.125, verts=5, ranges=(2, 2, 2, 3, 4)
+    BCDEF: SL=0.125, verts=5, ranges=(2, 2, 3, 3, 4)
+    ABCEF: SL=0.062, verts=5, ranges=(2, 2, 3, 3, 4)
+
+  BY #VERTICES:
+    5 verts: 6 combos, avg SL=0.115
+
+  d=6: C(6,6) = 1 combinations
+
+  TOP 5 by SL rate:
+    ABCDEF: SL=0.125, verts=5, ranges=(2, 2, 2, 3, 3, 4)
+  BOTTOM 5:
+    ABCDEF: SL=0.125, verts=5, ranges=(2, 2, 2, 3, 3, 4)
+
+  BY #VERTICES:
+    5 verts: 1 combos, avg SL=0.125
+
+
+========================================================================
+  THE VERTEX-COUNT LAW
+========================================================================
+
+
+  THE KEY PATTERN ACROSS ALL d:
+
+  Self-loop rate depends primarily on HOW MANY DISTINCT VERTICES
+  are involved in the flipped tiles.
+
+  Fewer vertices = more concentrated change = more likely silent.
+  More vertices = more spread-out change = less likely silent.
+
+  This makes sense: a silent mutation requires the resulting
+  tournament to be isomorphic to the original. If only 3 vertices
+  are affected (out of 5), the remaining 2 anchor the structure.
+  If all 5 are affected, nothing is anchored.
+
+  SL RATE BY (d, #vertices):
+
+  d     2-vert   3-vert   4-vert   5-vert  
+  --------------------------------------------------
+  d=1   0.104(6) -         -         -        
+  d=2   -         0.181(9) 0.208(6) -        
+  d=3   -         0.250(1) 0.068(12) 0.054(7)
+  d=4   -         -         0.146(3) 0.172(12)
+  d=5   -         -         -         0.115(6)
+  d=6   -         -         -         0.125(1)
+
+========================================================================
+  SPECIFIC CLASS-PAIR CONNECTIONS BY LETTER COMBO
+========================================================================
+
+  d=2 PAIRS: which letter combos connect which class pairs?
+
+  {0 ↔ 4}: connected by d=2 pairs: AC, AE, AF, BF, CF
+  {0 ↔ 5}: connected by d=2 pairs: BC, CE
+  {0 ↔ 7}: connected by d=2 pairs: CD
+  {0 ↔ 8}: connected by d=2 pairs: BE
+  {1 ↔ 3}: connected by d=2 pairs: AC, BC, BD, CE, CF, DE
+  {1 ↔ 5}: connected by d=2 pairs: AD, BE, DF
+  {1 ↔ 6}: connected by d=2 pairs: AD, DF
+  {1 ↔ 8}: connected by d=2 pairs: AB, AC, AE, BC, BF, CD, CE, CF, EF
+  {2 ↔ 7}: connected by d=2 pairs: AC, BC, CE, CF
+  {2 ↔ 9}: connected by d=2 pairs: AB, AC, BC, CE, CF, EF
+  {3 ↔ 6}: connected by d=2 pairs: AE, BF, CD
+  {3 ↔ 8}: connected by d=2 pairs: AB, AC, AD, AE, AF, BC, BD, BE, BF, CD, CE, CF, DE, DF, EF
+  {3 ↔ 9}: connected by d=2 pairs: AD, AE, BE, BF, DF
+  {4 ↔ 6}: connected by d=2 pairs: BE
+  {4 ↔ 7}: connected by d=2 pairs: AB, AC, AD, AE, AF, BC, BD, BE, BF, CD, CE, CF, DE, DF, EF
+  {4 ↔ 9}: connected by d=2 pairs: AD, AE, BE, BF, CD, DF
+  {5 ↔ 6}: connected by d=2 pairs: AF
+  {5 ↔ 7}: connected by d=2 pairs: AB, AC, AD, AE, AF, BD, BE, BF, CD, CF, DE, DF, EF
+  {6 ↔ 8}: connected by d=2 pairs: AC, BC, CE, CF
+  {7 ↔ 9}: connected by d=2 pairs: AB, AF, BC, BD, CE, DE, EF
+
+  d=3 EXCLUSIVE: class pairs ONLY reachable at d=3:
+
+  {0 ↔ 9}: ONLY by d=3 triples: BCE
+  {1 ↔ 7}: ONLY by d=3 triples: ABC, ACD, ACE, BCD, BCF, CDE, CDF, CEF
+  {1 ↔ 9}: ONLY by d=3 triples: ABE, ACD, BEF, CDF
+  {6 ↔ 9}: ONLY by d=3 triples: ACF
+
+Done. opus-2026-03-24-S302
