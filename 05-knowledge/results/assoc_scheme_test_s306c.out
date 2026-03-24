@@ -1,0 +1,106 @@
+
+========================================================================
+  ASSOCIATION SCHEME TEST AT n=5
+========================================================================
+
+  n=5: m=6, 10 merged classes
+
+  ALGEBRA CLOSURE TEST: W_i × W_j in span(W_0,...,W_m)?
+
+  W_0 × W_0: coefficients = ['9.97', '-0.02', '0.36', '-0.07', '-0.41'], relative error = 0.194039
+  W_0 × W_1: coefficients = ['1.96', '8.16', '-0.50', '1.26', '-0.05'], relative error = 0.261999
+  W_0 × W_2: coefficients = ['4.29', '-1.43', '10.94', '0.34', '-1.19'], relative error = 0.224714
+  W_0 × W_3: coefficients = ['1.45', '-0.40', '-1.01', '10.67', '0.82'], relative error = 0.225434
+  W_1 × W_1: coefficients = ['20.09', '1.95', '14.20', '-1.14', '6.24'], relative error = 0.173819
+  W_1 × W_2: coefficients = ['-1.06', '34.22', '2.23', '23.97', '3.72'], relative error = 0.158194
+  W_1 × W_3: coefficients = ['14.26', '4.82', '24.95', '6.33', '31.45'], relative error = 0.135626
+  W_2 × W_2: coefficients = ['68.22', '6.52', '68.83', '10.51', '37.48'], relative error = 0.117963
+  W_2 × W_3: coefficients = ['22.57', '61.67', '21.72', '61.88', '24.99'], relative error = 0.101462
+  W_3 × W_3: coefficients = ['98.31', '45.79', '64.70', '39.32', '85.99'], relative error = 0.068526
+
+  If error = 0 for ALL products → association scheme.
+  Any nonzero error → NOT an association scheme.
+
+  CLOSURE ERRORS (relative):
+    W_0 × W_0: error = 0.194039 (NOT in span)
+    W_0 × W_1: error = 0.261999 (NOT in span)
+    W_0 × W_2: error = 0.224714 (NOT in span)
+    W_0 × W_3: error = 0.225434 (NOT in span)
+    W_0 × W_4: error = 0.222436 (NOT in span)
+    W_0 × W_5: error = 0.229814 (NOT in span)
+    W_0 × W_6: error = 0.253185 (NOT in span)
+    W_1 × W_1: error = 0.173819 (NOT in span)
+    W_1 × W_2: error = 0.158194 (NOT in span)
+    W_1 × W_3: error = 0.135626 (NOT in span)
+    W_1 × W_4: error = 0.125437 (NOT in span)
+    W_1 × W_5: error = 0.148654 (NOT in span)
+    W_1 × W_6: error = 0.203870 (NOT in span)
+    W_2 × W_2: error = 0.117963 (NOT in span)
+    W_2 × W_3: error = 0.101462 (NOT in span)
+    W_2 × W_4: error = 0.087145 (NOT in span)
+    W_2 × W_5: error = 0.112127 (NOT in span)
+    W_2 × W_6: error = 0.143706 (NOT in span)
+    W_3 × W_3: error = 0.068526 (NOT in span)
+    W_3 × W_4: error = 0.057954 (NOT in span)
+    W_3 × W_5: error = 0.072777 (NOT in span)
+    W_3 × W_6: error = 0.110248 (NOT in span)
+    W_4 × W_4: error = 0.045214 (NOT in span)
+    W_4 × W_5: error = 0.059855 (NOT in span)
+    W_4 × W_6: error = 0.098708 (NOT in span)
+    W_5 × W_5: error = 0.069304 (NOT in span)
+    W_5 × W_6: error = 0.109245 (NOT in span)
+    W_6 × W_6: error = 0.165858 (NOT in span)
+
+  28 / 28 products have nonzero error
+  Association scheme: NO
+
+========================================================================
+  THE BOSE-MESNER ALGEBRA DIMENSION
+========================================================================
+
+  Dimension of span(W_0,...,W_6) = 7
+  Number of relations: m+1 = 7
+  Number of classes: nm = 10
+  Space of all nm×nm matrices: dimension 100
+
+  Is BM algebra closed (self-contained)?
+  If yes, it IS a scheme. If no, it's a PARTIAL scheme.
+
+  Starting rank: 7 (from W_0,...,W_6)
+  Round 1: rank = 35
+
+  FULL ALGEBRA DIMENSION = 35
+  For an association scheme, this would be 7 (= m+1)
+  Excess: 28 (= how far from being a scheme)
+
+========================================================================
+  WHAT MAKES IT FAIL?
+========================================================================
+
+
+  THE METAGRAPH FAILS TO BE AN ASSOCIATION SCHEME BECAUSE:
+
+  In the Hamming scheme H(m,2), the relations are the Hamming distances.
+  The S_n action partitions tilings into orbits (iso classes).
+  The ORBIT MATRICES (waggly weight matrices W_d) are obtained by
+  collapsing the Hamming scheme's adjacency matrices to the orbit space.
+
+  For the quotient to be an association scheme, the group action must be
+  COMPATIBLE with the scheme: the orbits must form a "coherent configuration."
+
+  The S_n action is NOT compatible because:
+  - S_n permutes vertices, which permutes tile POSITIONS
+  - Two tilings at Hamming distance d may map (under σ ∈ S_n) to
+    tilings at a DIFFERENT Hamming distance
+  - So the quotient orbit matrices don't close under multiplication
+
+  The EXCESS (full algebra dimension - scheme dimension) measures
+  how much additional structure exists beyond the scheme.
+  A small excess means the metagraph is "almost" a scheme.
+
+  PRACTICAL IMPLICATION:
+  Even though the metagraph isn't a scheme, the Krawtchouk polynomials
+  APPROXIMATELY diagonalize the weight matrices (K_1 gives r=-0.94).
+  The scheme structure is a GOOD APPROXIMATION that degrades slowly with n.
+
+Done. opus-2026-03-24-S306
