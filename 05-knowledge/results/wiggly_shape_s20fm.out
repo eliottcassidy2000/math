@@ -1,0 +1,234 @@
+================================================================================
+  THE SHAPE OF Q_m / S_n
+  kind-pasteur-2026-03-24-S20fm
+================================================================================
+
+############################################################
+  n = 4, m = 3 (triangular number T(2))
+  Q_3: 8 tilings, each with 3 wiggly neighbors
+  V = 4 iso classes (S_4 orbits)
+############################################################
+
+  PER-CLASS NEIGHBORHOOD SHAPE:
+     H |Aut|  #til  AvgDist  AvgSelf  Avg2step  UnifDist  UnifSelf
+     1     1     1      3.0      0.0       1.0         Y         Y
+     3     3     1      2.0      0.0       2.0         Y         Y
+     3     3     1      2.0      0.0       2.0         Y         Y
+     5     1     5      2.0      2.0       2.4         N         N
+
+  All classes have uniform distinct-neighbor count? False
+  Classes with NON-UNIFORM neighborhood:
+    H=5, |Aut|=1: distinct in [1, 3]
+
+  CORRELATIONS:
+    H vs avg_distinct_neighbors: r = -0.8165
+    H vs avg_self_neighbors:     r = 0.8165
+    H vs avg_2step_classes:       r = 0.9570
+    |Aut| vs avg_distinct:        r = -0.5774
+
+  SHAPE METRICS:
+    Diversity (distinct/m): min=0.667, max=1.000, avg=0.750
+    Self-frac (self/m):     min=0.000, max=0.667, avg=0.167
+
+  Time: 0.1s
+
+############################################################
+  n = 5, m = 6 (triangular number T(3))
+  Q_6: 64 tilings, each with 6 wiggly neighbors
+  V = 12 iso classes (S_5 orbits)
+############################################################
+
+  PER-CLASS NEIGHBORHOOD SHAPE:
+     H |Aut|  #til  AvgDist  AvgSelf  Avg2step  UnifDist  UnifSelf
+     1     1     1      6.0      0.0       6.0         Y         Y
+     3     3     1      3.0      0.0       7.0         Y         Y
+     3     3     1      4.0      0.0       8.0         Y         Y
+     3     3     1      3.0      0.0       7.0         Y         Y
+     5     1     5      5.0      2.0       8.2         N         N
+     5     1     5      5.0      2.0       8.2         N         N
+     9     1     9      4.4      0.9       7.1         N         N
+     9     1     9      3.8      0.0       6.8         N         Y
+    11     1    11      4.5      1.1       7.0         N         N
+    13     1    13      4.0      0.0       5.5         N         Y
+    15     3     5      2.2      0.0       6.2         N         Y
+    15     5     3      2.0      0.0       6.0         Y         Y
+
+  All classes have uniform distinct-neighbor count? False
+  Classes with NON-UNIFORM neighborhood:
+    H=5, |Aut|=1: distinct in [4, 6]
+    H=9, |Aut|=1: distinct in [4, 6]
+    H=5, |Aut|=1: distinct in [4, 6]
+    H=9, |Aut|=1: distinct in [3, 5]
+    H=11, |Aut|=1: distinct in [4, 6]
+    H=15, |Aut|=3: distinct in [2, 3]
+    H=13, |Aut|=1: distinct in [3, 5]
+
+  CORRELATIONS:
+    H vs avg_distinct_neighbors: r = -0.5408
+    H vs avg_self_neighbors:     r = -0.1333
+    H vs avg_2step_classes:       r = -0.5244
+    |Aut| vs avg_distinct:        r = -0.8199
+
+  SHAPE METRICS:
+    Diversity (distinct/m): min=0.333, max=1.000, avg=0.651
+    Self-frac (self/m):     min=0.000, max=0.333, avg=0.083
+
+  Time: 0.0s
+
+############################################################
+  n = 6, m = 10 (triangular number T(4))
+  Q_10: 1024 tilings, each with 10 wiggly neighbors
+  V = 56 iso classes (S_6 orbits)
+############################################################
+
+  PER-CLASS NEIGHBORHOOD SHAPE:
+     H |Aut|  #til  AvgDist  AvgSelf  Avg2step  UnifDist  UnifSelf
+     1     1     1     10.0      0.0      25.0         Y         Y
+     3     3     1      5.0      0.0      19.0         Y         Y
+     3     3     1      6.0      0.0      22.0         Y         Y
+     3     3     1      6.0      0.0      22.0         Y         Y
+     3     3     1      5.0      0.0      19.0         Y         Y
+     5     1     5      9.0      2.0      29.4         N         N
+     5     1     5      9.0      2.0      30.2         N         N
+     5     1     5      9.0      2.0      29.4         N         N
+     9     1     9      8.4      0.9      28.4         N         N
+     9     1     9      7.8      0.0      26.3         N         Y
+     9     1     9      8.4      0.9      28.4         N         N
+     9     1     9      7.8      0.0      26.3         N         Y
+     9     9     1      3.0      0.0      11.0         Y         Y
+    11     1    11      8.5      1.1      27.8         N         N
+    11     1    11      8.5      1.1      27.8         N         N
+    13     1    13      8.0      0.0      24.3         N         Y
+    13     1    13      8.0      0.0      24.3         N         Y
+    15     3     5      4.8      0.0      19.2         N         Y
+    15     5     3      3.0      0.0      17.3         Y         Y
+    15     1    15      9.1      0.4      29.2         N         N
+    15     1    15      9.1      0.4      29.2         N         N
+    15     3     5      4.8      0.0      19.2         N         Y
+    15     5     3      3.0      0.0      17.3         Y         Y
+    17     1    17      9.4      1.4      28.6         N         N
+    17     1    17      7.1      0.0      25.1         N         Y
+    19     1    19     10.0      0.5      30.3         Y         N
+    19     1    19     10.0      0.5      30.3         Y         N
+    23     1    23      9.7      0.0      28.6         N         Y
+    23     1    23      9.2      1.7      28.9         N         N
+    23     1    23      9.2      1.7      28.9         N         N
+    23     1    23      9.7      0.0      28.6         N         Y
+    25     1    25      9.9      0.5      30.2         N         N
+    25     1    25      9.9      0.5      30.2         N         N
+    27     3     9      5.4      0.0      23.6         N         Y
+    27     3     9      5.4      0.0      23.6         N         Y
+    29     1    29      9.3      0.0      28.0         N         Y
+    29     1    29      9.3      0.0      28.0         N         Y
+    29     1    29      9.8      0.7      26.3         N         N
+    29     1    29      8.4      0.0      24.8         N         Y
+    31     1    31      8.9      0.0      26.0         N         Y
+    31     1    31      8.9      0.0      26.0         N         Y
+    33     3    11      5.6      0.5      22.0         N         N
+    33     1    33      9.2      0.6      27.1         N         N
+    33     1    33      8.9      0.0      26.4         N         Y
+    33     1    33      8.9      0.0      26.4         N         Y
+    33     3    11      5.6      0.5      22.0         N         N
+    37     1    37      8.2      2.1      25.9         N         N
+    37     1    37      9.2      0.0      25.4         N         Y
+    37     1    37      9.4      0.6      25.2         N         N
+    37     1    37      9.4      0.6      25.2         N         N
+    37     1    37      9.2      0.0      25.4         N         Y
+    41     1    41      8.4      2.2      24.2         N         N
+    43     1    43      7.7      0.0      23.2         N         Y
+    43     1    43      7.7      0.0      23.2         N         Y
+    45     3    15      4.7      2.3      18.8         N         N
+    45     3    15      4.7      0.0      19.7         N         Y
+
+  All classes have uniform distinct-neighbor count? False
+  Classes with NON-UNIFORM neighborhood:
+    H=5, |Aut|=1: distinct in [8, 10]
+    H=9, |Aut|=1: distinct in [8, 10]
+    H=5, |Aut|=1: distinct in [8, 10]
+    H=9, |Aut|=1: distinct in [7, 9]
+    H=11, |Aut|=1: distinct in [8, 10]
+    H=15, |Aut|=3: distinct in [4, 5]
+    H=13, |Aut|=1: distinct in [7, 9]
+    H=17, |Aut|=1: distinct in [8, 10]
+    H=9, |Aut|=1: distinct in [8, 10]
+    H=15, |Aut|=1: distinct in [9, 10]
+    H=5, |Aut|=1: distinct in [8, 10]
+    H=9, |Aut|=1: distinct in [7, 9]
+    H=15, |Aut|=1: distinct in [9, 10]
+    H=27, |Aut|=3: distinct in [5, 6]
+    H=23, |Aut|=1: distinct in [9, 10]
+    H=17, |Aut|=1: distinct in [6, 8]
+    H=23, |Aut|=1: distinct in [8, 10]
+    H=11, |Aut|=1: distinct in [8, 10]
+    H=23, |Aut|=1: distinct in [8, 10]
+    H=33, |Aut|=3: distinct in [5, 6]
+    H=25, |Aut|=1: distinct in [9, 10]
+    H=37, |Aut|=1: distinct in [7, 10]
+    H=33, |Aut|=1: distinct in [9, 10]
+    H=31, |Aut|=1: distinct in [8, 10]
+    H=23, |Aut|=1: distinct in [9, 10]
+    H=27, |Aut|=3: distinct in [5, 6]
+    H=29, |Aut|=1: distinct in [9, 10]
+    H=15, |Aut|=3: distinct in [4, 5]
+    H=13, |Aut|=1: distinct in [7, 9]
+    H=37, |Aut|=1: distinct in [8, 10]
+    H=31, |Aut|=1: distinct in [8, 10]
+    H=25, |Aut|=1: distinct in [9, 10]
+    H=29, |Aut|=1: distinct in [9, 10]
+    H=37, |Aut|=1: distinct in [9, 10]
+    H=29, |Aut|=1: distinct in [9, 10]
+    H=29, |Aut|=1: distinct in [7, 10]
+    H=33, |Aut|=1: distinct in [8, 9]
+    H=41, |Aut|=1: distinct in [6, 10]
+    H=37, |Aut|=1: distinct in [9, 10]
+    H=33, |Aut|=1: distinct in [8, 9]
+    H=37, |Aut|=1: distinct in [8, 10]
+    H=43, |Aut|=1: distinct in [6, 9]
+    H=43, |Aut|=1: distinct in [6, 9]
+    H=33, |Aut|=3: distinct in [5, 6]
+    H=45, |Aut|=3: distinct in [4, 5]
+    H=45, |Aut|=3: distinct in [4, 5]
+
+  CORRELATIONS:
+    H vs avg_distinct_neighbors: r = 0.1268
+    H vs avg_self_neighbors:     r = 0.0276
+    H vs avg_2step_classes:       r = -0.0148
+    |Aut| vs avg_distinct:        r = -0.8659
+
+  SHAPE METRICS:
+    Diversity (distinct/m): min=0.300, max=1.000, avg=0.782
+    Self-frac (self/m):     min=0.000, max=0.227, avg=0.050
+
+  Time: 2.7s
+
+============================================================
+THE WIGGLY SHAPE
+============================================================
+
+THE WIGGLY TILING SPACE Q_m / S_n:
+
+Each tiling is a vertex of Q_m, connected to m = C(n-1,2) neighbors.
+Grouping by S_n orbits gives V iso classes (= even graph count).
+
+The SHAPE is captured by:
+  1. Diversity: how many distinct classes among m neighbors
+  2. Self-fraction: how many neighbors stay in the same class
+  3. 2-step reach: how many classes reachable in 2 wiggly steps
+
+Classes with HIGH H have high diversity (many distinct neighbors).
+Classes with HIGH |Aut| have low diversity (concentrated neighborhoods).
+The TRANSITIVE class (H=1) has the fewest distinct neighbors.
+The REGULAR class (max H) has the most.
+
+The neighborhood profile is NOT uniform within a class:
+different tilings of the same tournament have different wiggly neighborhoods.
+This is because S_n acts on Q_m but doesn't preserve the wiggly class labels.
+
+The shape of Q_m / S_n is a WEIGHTED GRAPH where:
+  - Node weight = tilings = H/|Aut|
+  - Edge weight = wiggly lines between classes
+  - Self-loop weight = neutral arcs per class
+  - Each node has "diversity" = distinct neighbor count
+
+DONE.
+================================================================================
