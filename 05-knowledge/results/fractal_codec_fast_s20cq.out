@@ -1,0 +1,133 @@
+================================================================================
+  FRACTAL TOURNAMENT CODEC — Fast Analysis
+  kind-pasteur-2026-03-24-S20cq
+================================================================================
+
+========================================================================
+  LEVEL-BY-LEVEL CONDITIONAL ENTROPY MEASUREMENT
+========================================================================
+
+  Level 2: H(resid) = 1.000 bits (trivial base case)
+
+  Level 3 (m=3, |T|=8): done [0.0s]
+    H(resid|class(2)) = 2.0000 bits (naive: 2, savings: 0.0000 = 0.0%)
+    Sub-classes: 1, distinct residuals/class: 4-4 (of 4)
+
+  Level 4 (m=6, |T|=64): done [0.0s]
+    H(resid|class(3)) = 3.0000 bits (naive: 3, savings: 0.0000 = 0.0%)
+    Sub-classes: 2, distinct residuals/class: 8-8 (of 8)
+
+  Level 5 (m=10, |T|=1024): done [0.0s]
+    H(resid|class(4)) = 4.0000 bits (naive: 4, savings: 0.0000 = 0.0%)
+    Sub-classes: 4, distinct residuals/class: 16-16 (of 16)
+
+  Level 6 (m=15, |T|=32768): done [7.2s]
+    H(resid|class(5)) = 5.0000 bits (naive: 5, savings: 0.0000 = 0.0%)
+    Sub-classes: 12, distinct residuals/class: 32-32 (of 32)
+
+  Level 7 (m=21, |T|=2097152): done [33.5s]
+    H(resid|class(6)) = 6.0000 bits (naive: 6, savings: 0.0000 = 0.0%)
+    Sub-classes: 52, distinct residuals/class: 64-64 (of 64)
+
+========================================================================
+  STRATEGY COMPARISON: Which vertex to delete?
+========================================================================
+
+  n = 3:
+    v=0 (source)      : H = 2.0000 / 2 (savings = 0.0000 = 0.0%)
+    v=n-1 (sink)      : H = 2.0000 / 2 (savings = 0.0000 = 0.0%)
+    median score      : H = 1.0000 / 2 (savings = 1.0000 = 50.0%)
+    min score         : H = 1.0613 / 2 (savings = 0.9387 = 46.9%)
+    max score         : H = 1.0613 / 2 (savings = 0.9387 = 46.9%)
+    BEST: median score
+
+  n = 4:
+    v=0 (source)      : H = 3.0000 / 3 (savings = 0.0000 = 0.0%)
+    v=n-1 (sink)      : H = 3.0000 / 3 (savings = 0.0000 = 0.0%)
+    median score      : H = 2.0596 / 3 (savings = 0.9404 = 31.3%)
+    min score         : H = 1.7546 / 3 (savings = 1.2454 = 41.5%)
+    max score         : H = 1.7546 / 3 (savings = 1.2454 = 41.5%)
+    BEST: min score
+
+  n = 5:
+    v=0 (source)      : H = 4.0000 / 4 (savings = 0.0000 = 0.0%)
+    v=n-1 (sink)      : H = 4.0000 / 4 (savings = 0.0000 = 0.0%)
+    median score      : H = 2.9171 / 4 (savings = 1.0829 = 27.1%)
+    min score         : H = 2.3749 / 4 (savings = 1.6251 = 40.6%)
+    max score         : H = 2.3749 / 4 (savings = 1.6251 = 40.6%)
+    BEST: max score
+
+  n = 6:
+    v=0 (source)      : H = 5.0000 / 5 (savings = 0.0000 = 0.0%)
+    v=n-1 (sink)      : H = 5.0000 / 5 (savings = 0.0000 = 0.0%)
+    median score      : H = 4.0429 / 5 (savings = 0.9571 = 19.1%)
+    min score         : H = 3.2307 / 5 (savings = 1.7693 = 35.4%)
+    max score         : H = 3.2307 / 5 (savings = 1.7693 = 35.4%)
+    BEST: min score
+
+========================================================================
+  FRACTAL CODEC: TOTAL COMPRESSION SUMMARY
+========================================================================
+
+    n  C(n,2)   Fractal   InfoLim   Ratio  Overhead   Savings/level
+  --- ------- --------- --------- ------- --------- ---------------
+    3       3     3.000     1.000   1.000     3.000x           0.000
+    4       6     6.000     2.000   1.000     3.000x           0.000
+    5      10    10.000     3.585   1.000     2.789x           0.000
+    6      15    15.000     5.807   1.000     2.583x           0.000
+    7      21    21.000     8.833   1.000     2.377x           0.000
+
+========================================================================
+  INFORMATION-THEORETIC ANALYSIS
+========================================================================
+
+  THE THREE ENTROPY SCALES:
+
+  1. NAIVE:   C(n,2) bits — raw upper-triangle encoding
+  2. FRACTAL: sum_k H(resid_k | class_{k-1}) — recursive conditional
+  3. OPTIMAL: log2(A000568(n)) — information-theoretic limit
+
+  The gap between FRACTAL and OPTIMAL comes from:
+  (a) Encoding LABELED tournaments, not classes
+  (b) Not exploiting AUTOMORPHISMS (class size varies)
+  (c) Not exploiting GLOBAL structure (only local vertex-by-vertex)
+
+  To close the gap, combine fractal recursion with:
+  - Burnside-based class coding (like Steinruecken's combinatorial coding)
+  - Modular decomposition (prime/quotient tree)
+  - Krawtchouk spectral filtering (band-limitedness)
+
+
+========================================================================
+  ALL COMPRESSION METHODS COMPARED
+========================================================================
+
+  Method                              n=5      n=6      n=7     n=10
+  ------------------------------ -------- -------- -------- --------
+  Raw matrix n^2                     25.0    36.0    49.0   100.0
+  L1: Antisymmetry C(n,2)            10.0    15.0    21.0    45.0
+  L2: Isomorphism log2(Vn)            3.6     5.8     8.8    23.2
+  L3: Base path C(n-1,2)              6.0    10.0    15.0    36.0
+  L4: Band-limited m/2                3.0     5.0     7.5    18.0
+  L5: Fractal recursive              10.0    15.0    21.0    42.0
+  L4+L5: Fractal+BL (est)             5.0     7.5    10.5    21.0
+  Info limit log2(A000568)            3.6     5.8     8.8    23.2
+
+========================================================================
+  THE FRACTAL TOURNAMENT CODEC — Architecture
+========================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\fractal_codec_fast_s20cq.py", line 329, in <module>
+    print("""
+    ~~~~~^^^^
+      ENCODING ALGORITHM:
+      ^^^^^^^^^^^^^^^^^^^
+    ...<80 lines>...
+      but the gap shrinks as n grows (both \u2192 C(n,2) asymptotically).
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    """)
+    ^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3312.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 27-43: character maps to <undefined>
