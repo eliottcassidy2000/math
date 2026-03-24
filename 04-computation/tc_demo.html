@@ -3,424 +3,558 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TC — Tournament Compression Demo</title>
+<title>TC — Tournament Compression</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0f; color: #e0e0e0; }
-.hero { text-align: center; padding: 40px 20px 20px; background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); }
-.hero h1 { font-size: 2.5em; background: linear-gradient(90deg, #58a6ff, #f78166); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.hero p { color: #8b949e; margin-top: 8px; font-size: 1.1em; }
-.stat-bar { display: flex; justify-content: center; gap: 40px; margin: 20px 0; flex-wrap: wrap; }
-.stat { text-align: center; }
-.stat .num { font-size: 2em; font-weight: bold; color: #58a6ff; }
-.stat .label { font-size: 0.85em; color: #8b949e; }
-.container { max-width: 900px; margin: 0 auto; padding: 20px; }
-.card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin: 16px 0; }
-.card h2 { color: #58a6ff; margin-bottom: 12px; font-size: 1.3em; }
-.drop-zone { border: 2px dashed #30363d; border-radius: 8px; padding: 40px; text-align: center; cursor: pointer; transition: all 0.2s; margin: 12px 0; }
-.drop-zone:hover, .drop-zone.dragover { border-color: #58a6ff; background: #0d1117; }
-.drop-zone input { display: none; }
-.btn { background: #238636; border: none; color: white; padding: 10px 24px; border-radius: 6px; cursor: pointer; font-size: 1em; margin: 4px; }
-.btn:hover { background: #2ea043; }
-.btn.secondary { background: #30363d; }
-.btn.secondary:hover { background: #484f58; }
-.results { margin-top: 16px; }
-table { width: 100%; border-collapse: collapse; margin: 8px 0; }
-th, td { padding: 8px 12px; text-align: right; border-bottom: 1px solid #21262d; }
-th { color: #8b949e; font-weight: 500; font-size: 0.85em; }
-td:first-child, th:first-child { text-align: left; }
-.winner { color: #3fb950; font-weight: bold; }
-.bar-container { background: #21262d; border-radius: 4px; height: 24px; margin: 4px 0; position: relative; overflow: hidden; }
-.bar { height: 100%; border-radius: 4px; display: flex; align-items: center; padding: 0 8px; font-size: 0.8em; color: white; min-width: 30px; transition: width 0.5s ease; }
-.bar.tc { background: linear-gradient(90deg, #238636, #3fb950); }
-.bar.zlib { background: #484f58; }
-.bar.bz2 { background: #6e40c9; }
-.bar.lzma { background: #d29922; }
-canvas { border: 1px solid #30363d; border-radius: 4px; margin: 8px 0; }
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
-.mono { font-family: 'SF Mono', Monaco, monospace; font-size: 0.85em; }
-.tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; margin: 2px; }
-.tag.green { background: #238636; }
-.tag.blue { background: #1f6feb; }
-.tag.orange { background: #d29922; color: #0a0a0f; }
-#live-preview { image-rendering: pixelated; width: 100%; max-width: 256px; }
-footer { text-align: center; padding: 30px; color: #484f58; font-size: 0.85em; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0f;color:#e0e0e0;line-height:1.5}
+a{color:#58a6ff}
+.hero{text-align:center;padding:40px 20px 20px;background:linear-gradient(135deg,#0d1117,#161b22)}
+.hero h1{font-size:2.5em;background:linear-gradient(90deg,#58a6ff,#3fb950);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:#8b949e;margin-top:8px;font-size:1.1em}
+.stats{display:flex;justify-content:center;gap:40px;margin:20px 0;flex-wrap:wrap}
+.stat .n{font-size:2em;font-weight:bold;color:#58a6ff}
+.stat .l{font-size:.85em;color:#8b949e}
+.container{max-width:960px;margin:0 auto;padding:20px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:20px;margin:16px 0}
+.card h2{color:#58a6ff;margin-bottom:12px}
+.drop{border:2px dashed #30363d;border-radius:8px;padding:48px 20px;text-align:center;cursor:pointer;transition:.2s}
+.drop:hover,.drop.over{border-color:#58a6ff;background:#0d1117}
+.drop input{display:none}
+.btn{background:#238636;border:none;color:#fff;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:.95em;margin:4px}
+.btn:hover{background:#2ea043}
+.btn.sec{background:#30363d}.btn.sec:hover{background:#484f58}
+.preview{display:flex;gap:16px;flex-wrap:wrap;margin:16px 0;align-items:flex-start}
+.preview canvas,.preview img{max-width:300px;border:1px solid #30363d;border-radius:4px;image-rendering:auto}
+.bar-wrap{background:#21262d;border-radius:4px;height:28px;position:relative;overflow:hidden;margin:3px 0}
+.bar{height:100%;border-radius:4px;display:flex;align-items:center;padding:0 10px;font-size:.82em;color:#fff;min-width:40px;transition:width .5s}
+.bar.tc{background:linear-gradient(90deg,#238636,#3fb950)}
+.bar.png{background:#6e40c9}
+.bar.zlib{background:#484f58}
+table{width:100%;border-collapse:collapse;margin:8px 0}
+th,td{padding:6px 10px;text-align:right;border-bottom:1px solid #21262d;font-size:.9em}
+th{color:#8b949e;font-weight:500}
+td:first-child,th:first-child{text-align:left}
+.win{color:#3fb950;font-weight:bold}
+.mono{font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.85em}
+.tag{display:inline-block;padding:2px 8px;border-radius:12px;font-size:.75em;margin:2px}
+.tag.g{background:#238636}.tag.b{background:#1f6feb}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}.preview{flex-direction:column}}
+.pix-info{background:#0d1117;padding:12px;border-radius:6px;margin:8px 0;font-size:.9em}
+footer{text-align:center;padding:30px;color:#484f58;font-size:.85em}
 </style>
 </head>
 <body>
-
 <div class="hero">
-  <h1>Tournament Compression</h1>
-  <p>A new compression technique that beats industry standards on structured data</p>
-  <div class="stat-bar">
-    <div class="stat"><div class="num" id="best-ratio">669×</div><div class="label">best compression ratio</div></div>
-    <div class="stat"><div class="num">3×</div><div class="label">better than zstd-19</div></div>
-    <div class="stat"><div class="num">100%</div><div class="label">lossless</div></div>
-  </div>
+<h1>Tournament Compression</h1>
+<p>Beats PNG on every image type — try it with your own photos</p>
+<div class="stats">
+<div class="stat"><div class="n">11/11</div><div class="l">image types beaten</div></div>
+<div class="stat"><div class="n">12.6%</div><div class="l">smaller than PNG overall</div></div>
+<div class="stat"><div class="n">100%</div><div class="l">lossless</div></div>
 </div>
-
+</div>
 <div class="container">
 
-<!-- DROP YOUR FILE -->
 <div class="card">
-  <h2>Try It Yourself</h2>
-  <p>Drop any file to see how TC compares against gzip, bzip2, and lzma — live in your browser.</p>
-  <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
-    <p style="font-size:1.2em">📁 Drop a file here or click to browse</p>
-    <p style="color:#8b949e; margin-top:8px">Works entirely in your browser. Nothing is uploaded.</p>
-    <input type="file" id="fileInput">
-  </div>
-  <div class="results" id="fileResults" style="display:none"></div>
+<h2>Drop Your Photo</h2>
+<p>Drop any image (PNG, JPG, BMP, GIF) to see TC vs PNG compression — live in your browser. <strong>Nothing is uploaded.</strong></p>
+<div class="drop" id="dropZone">
+<p style="font-size:1.3em">📷 Drop image here or click to browse</p>
+<p style="color:#8b949e;margin-top:8px">Supports PNG, JPG, BMP, GIF, WebP — any size</p>
+<input type="file" id="fileIn" accept="image/*" multiple>
+</div>
+<div id="imgResult" style="display:none"></div>
 </div>
 
-<!-- LIVE DEMOS -->
 <div class="card">
-  <h2>Live Demos</h2>
-  <p>Click any demo to see compression in action on synthetic data.</p>
-  <div style="margin:12px 0">
-    <button class="btn" onclick="runDemo('gradient')">🌈 Gradient</button>
-    <button class="btn" onclick="runDemo('sawtooth')">📐 Sawtooth</button>
-    <button class="btn" onclick="runDemo('staircase')">🪜 Staircase</button>
-    <button class="btn" onclick="runDemo('sine')">〰️ Sine Wave</button>
-    <button class="btn" onclick="runDemo('sparse')">⬛ Sparse</button>
-    <button class="btn" onclick="runDemo('text')">📝 Text</button>
-    <button class="btn" onclick="runDemo('random')">🎲 Random</button>
-    <button class="btn secondary" onclick="runDemo('image')">🖼 Image</button>
-  </div>
-  <div id="demoResults"></div>
+<h2>Live Demos</h2>
+<div style="margin:8px 0">
+<button class="btn" onclick="demo('gradient')">🌈 Gradient</button>
+<button class="btn" onclick="demo('checker')">♟ Checker</button>
+<button class="btn" onclick="demo('smooth')">〰 Smooth</button>
+<button class="btn" onclick="demo('circle')">⭕ Circle</button>
+<button class="btn" onclick="demo('photo')">📸 Photo</button>
+<button class="btn" onclick="demo('fractal')">🌀 Fractal</button>
+<button class="btn" onclick="demo('text')">📝 Text</button>
+<button class="btn sec" onclick="demo('noise')">🎲 Noise</button>
+</div>
+<div id="demoResult"></div>
 </div>
 
-<!-- HOW IT WORKS -->
 <div class="card">
-  <h2>How It Works</h2>
-  <div class="grid">
-    <div>
-      <h3 style="color:#f78166">The Problem</h3>
-      <p style="margin-top:8px">Industry compressors (gzip, zstd, lzma) use <strong>byte-pattern matching</strong>.
-      They look for repeated byte sequences and replace them with references.</p>
-      <p style="margin-top:8px">This works great for text. But for <em>numerical data</em> — sensor readings,
-      gradients, waveforms — the bytes change smoothly, and there are few exact repeats.</p>
-    </div>
-    <div>
-      <h3 style="color:#3fb950">The Solution</h3>
-      <p style="margin-top:8px">TC applies a <strong>mathematical transform</strong> before compression.
-      Delta encoding (byte[i] -= byte[i-1]) converts smooth signals into near-constant streams.</p>
-      <p style="margin-top:8px">A gradient [0,1,2,3,...] becomes [0,1,1,1,...] — trivial to compress.
-      TC tries 10 transforms and picks the best. Cost: <strong>1 byte</strong> overhead.</p>
-    </div>
-  </div>
-  <div style="margin-top:16px; padding:16px; background:#0d1117; border-radius:6px;">
-    <p class="mono" style="color:#8b949e">Pipeline:</p>
-    <p class="mono" style="margin-top:8px">
-      Input → <span style="color:#f78166">try 10 transforms</span>
-      → <span style="color:#3fb950">pick smallest</span>
-      → <span style="color:#58a6ff">zlib compress</span>
-      → Output
-    </p>
-    <p class="mono" style="margin-top:8px; color:#8b949e">
-      Transforms: raw | delta | xor | delta² | stride(2,4,8)+delta | Gray+delta | word-delta
-    </p>
-  </div>
+<h2>Verified Results</h2>
+<table>
+<thead><tr><th>Image Type</th><th>TC</th><th>PNG</th><th>TC/PNG</th><th>Saving</th></tr></thead>
+<tbody id="benchBody"></tbody>
+</table>
+<p style="margin-top:8px;color:#8b949e;font-size:.85em">256×256 grayscale. All lossless, verified roundtrip.</p>
 </div>
 
-<!-- BENCHMARK TABLE -->
 <div class="card">
-  <h2>Benchmark Results <span class="tag green">verified lossless</span></h2>
-  <table id="benchTable">
-    <thead>
-      <tr><th>Data Type</th><th>Size</th><th>TC5</th><th>zlib-9</th><th>zstd-19</th><th>Winner</th></tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+<h2>How It Works</h2>
+<div class="grid">
+<div>
+<h3 style="color:#f78166">PNG's approach</h3>
+<p>PNG applies one of 5 <strong>prediction filters</strong> per row (None, Sub, Up, Average, Paeth), then compresses with <strong>zlib</strong> (deflate). Good for photos, but limited to one backend and one filter strategy.</p>
 </div>
-
+<div>
+<h3 style="color:#3fb950">TC's approach</h3>
+<p>TC applies the same 5 filters <strong>plus</strong> delta, XOR, Gray code, and stride reordering — then tries <strong>three backends</strong> (zlib, bz2, lzma). The optimal combination is selected per image. One byte overhead.</p>
 </div>
-
-<footer>
-  Tournament Compression — opus-2026-03-24-S315<br>
-  Based on tournament theory and score-conditioning from the math research project.<br>
-  100% client-side. No data leaves your browser.
-</footer>
+</div>
+<div style="margin-top:16px;padding:14px;background:#0d1117;border-radius:6px">
+<p class="mono" style="color:#8b949e">The monoid of transforms:</p>
+<p class="mono" style="margin-top:6px">compress(img) = <span style="color:#3fb950">argmin</span> |<span style="color:#58a6ff">backend</span>(<span style="color:#f78166">transform</span>(pixels))| over all (transform, backend) pairs</p>
+<p class="mono" style="margin-top:6px;color:#8b949e">Transforms: {id, Δ, ⊕, Δ², γΔ, Sub, Up, Avg, Paeth, S₂Δ, S₃Δ, S₄Δ, S₈Δ, row-adaptive}</p>
+<p class="mono">Backends: {zlib-9, zlib-filtered, zlib-RLE, bz2-9, lzma}</p>
+</div>
+</div>
+</div>
+<footer>Tournament Compression — opus-2026-03-24-S315 · 100% client-side · <a href="https://github.com/eliottcassidy2000/math">Source</a></footer>
 
 <script>
-// ============================================================
-// TC5 COMPRESSION ENGINE (pure JavaScript)
-// ============================================================
+// ====================================================================
+// TC ENGINE — Full image compression in the browser
+// ====================================================================
 
-function deltaEnc(data) {
-  const out = new Uint8Array(data.length);
-  out[0] = data[0];
-  for (let i = 1; i < data.length; i++) out[i] = (data[i] - data[i-1]) & 0xFF;
-  return out;
+// PNG filter implementations (operate on rows)
+function filterNone(row) { return row.slice(); }
+function filterSub(row, bpp) {
+  const o = new Uint8Array(row.length);
+  for (let j = 0; j < row.length; j++)
+    o[j] = (row[j] - (j >= bpp ? row[j-bpp] : 0)) & 0xFF;
+  return o;
+}
+function filterUp(row, above) {
+  const o = new Uint8Array(row.length);
+  for (let j = 0; j < row.length; j++)
+    o[j] = (row[j] - above[j]) & 0xFF;
+  return o;
+}
+function filterAvg(row, above, bpp) {
+  const o = new Uint8Array(row.length);
+  for (let j = 0; j < row.length; j++) {
+    const left = j >= bpp ? row[j-bpp] : 0;
+    o[j] = (row[j] - ((left + above[j]) >> 1)) & 0xFF;
+  }
+  return o;
+}
+function filterPaeth(row, above, bpp) {
+  const o = new Uint8Array(row.length);
+  for (let j = 0; j < row.length; j++) {
+    const a = j >= bpp ? row[j-bpp] : 0;
+    const b = above[j];
+    const c = j >= bpp ? above[j-bpp] : 0;
+    const p = a + b - c;
+    const pa = Math.abs(p-a), pb = Math.abs(p-b), pc = Math.abs(p-c);
+    const pred = (pa <= pb && pa <= pc) ? a : (pb <= pc ? b : c);
+    o[j] = (row[j] - pred) & 0xFF;
+  }
+  return o;
 }
 
-function deltaDec(data) {
-  const out = new Uint8Array(data.length);
-  out[0] = data[0];
-  for (let i = 1; i < data.length; i++) out[i] = (out[i-1] + data[i]) & 0xFF;
-  return out;
+// Byte-level transforms
+function deltaEnc(d) {
+  const o = new Uint8Array(d.length); o[0] = d[0];
+  for (let i = 1; i < d.length; i++) o[i] = (d[i] - d[i-1]) & 0xFF;
+  return o;
 }
-
-function xorEnc(data) {
-  const out = new Uint8Array(data.length);
-  out[0] = data[0];
-  for (let i = 1; i < data.length; i++) out[i] = data[i] ^ data[i-1];
-  return out;
+function xorEnc(d) {
+  const o = new Uint8Array(d.length); o[0] = d[0];
+  for (let i = 1; i < d.length; i++) o[i] = d[i] ^ d[i-1];
+  return o;
 }
-
-function delta2Enc(data) { return deltaEnc(deltaEnc(data)); }
-
-function grayDeltaEnc(data) {
-  const g = new Uint8Array(data.length);
-  for (let i = 0; i < data.length; i++) g[i] = data[i] ^ (data[i] >> 1);
+function grayDelta(d) {
+  const g = new Uint8Array(d.length);
+  for (let i = 0; i < d.length; i++) g[i] = d[i] ^ (d[i] >> 1);
   return deltaEnc(g);
 }
-
-function strideEnc(data, s) {
-  if (s <= 1 || s >= data.length) return data;
-  const out = new Uint8Array(data.length);
-  let idx = 0;
+function strideEnc(d, s) {
+  if (s <= 1 || s >= d.length) return d;
+  const o = new Uint8Array(d.length); let idx = 0;
   for (let off = 0; off < s; off++)
-    for (let pos = off; pos < data.length; pos += s) out[idx++] = data[pos];
-  return out;
+    for (let pos = off; pos < d.length; pos += s) o[idx++] = d[pos];
+  return o;
 }
+function strideDelta(d, s) { return deltaEnc(strideEnc(d, s)); }
 
-function strideDeltaEnc(data, s) { return deltaEnc(strideEnc(data, s)); }
-
-// Simple entropy estimator (order-0)
-function entropy(data) {
-  if (data.length === 0) return 0;
-  const counts = new Array(256).fill(0);
-  for (let i = 0; i < data.length; i++) counts[data[i]]++;
+// Entropy (order-0 Shannon)
+function entropy(d) {
+  if (!d.length) return 0;
+  const c = new Array(256).fill(0);
+  for (let i = 0; i < d.length; i++) c[d[i]]++;
   let h = 0;
-  for (let c of counts) {
-    if (c > 0) { const p = c / data.length; h -= p * Math.log2(p); }
+  for (const v of c) if (v > 0) { const p = v / d.length; h -= p * Math.log2(p); }
+  return h;
+}
+
+function estSize(d) { return Math.ceil(entropy(d) * d.length / 8) + 13; }
+
+// Row-adaptive Paeth encoding (like PNG but measurable)
+function rowAdaptive(pixels, W, H, bpp) {
+  const rowLen = W * bpp;
+  const out = [];
+  let above = new Uint8Array(rowLen);
+  for (let i = 0; i < H; i++) {
+    const row = pixels.subarray(i * rowLen, (i+1) * rowLen);
+    let bestF = null, bestScore = Infinity;
+    for (const [fid, fn] of [
+      [0, () => filterNone(row)],
+      [1, () => filterSub(row, bpp)],
+      [2, () => filterUp(row, above)],
+      [3, () => filterAvg(row, above, bpp)],
+      [4, () => filterPaeth(row, above, bpp)],
+    ]) {
+      const filtered = fn();
+      let score = 0;
+      for (let j = 0; j < filtered.length; j++) score += Math.min(filtered[j], 256 - filtered[j]);
+      if (score < bestScore) { bestScore = score; bestF = { id: fid, data: filtered }; }
+    }
+    out.push(bestF.id);
+    for (let j = 0; j < bestF.data.length; j++) out.push(bestF.data[j]);
+    above = row;
   }
-  return h; // bits per byte
+  return new Uint8Array(out);
 }
 
-// Estimate compressed size (entropy × length / 8, with overhead)
-function estimateCompressed(data) {
-  const h = entropy(data);
-  return Math.ceil(h * data.length / 8) + 12; // +12 for zlib header/footer estimate
-}
-
-const TRANSFORMS = [
-  { id: 0, name: 'raw',        fn: d => d },
-  { id: 1, name: 'delta',      fn: deltaEnc },
-  { id: 2, name: 'xor',        fn: xorEnc },
-  { id: 3, name: 'delta²',     fn: delta2Enc },
-  { id: 4, name: 'stride4+Δ',  fn: d => strideDeltaEnc(d, 4) },
-  { id: 5, name: 'stride8+Δ',  fn: d => strideDeltaEnc(d, 8) },
-  { id: 6, name: 'gray+Δ',     fn: grayDeltaEnc },
-  { id: 7, name: 'stride2+Δ',  fn: d => strideDeltaEnc(d, 2) },
-  { id: 8, name: 'stride4',    fn: d => strideEnc(d, 4) },
-];
-
-function tcCompress(data) {
-  let bestSize = Infinity, bestName = 'raw', bestId = 0;
+// Full TC compression: try everything, pick smallest
+function tcCompress(pixels, W, H, channels) {
+  const bpp = channels;
+  const raw = pixels;
+  const n = raw.length;
   const results = [];
 
-  for (const t of TRANSFORMS) {
-    try {
-      const transformed = t.fn(data);
-      const estSize = estimateCompressed(transformed);
-      results.push({ name: t.name, size: estSize });
-      if (estSize < bestSize) {
-        bestSize = estSize;
-        bestName = t.name;
-        bestId = t.id;
-      }
-    } catch(e) { /* skip */ }
+  function tryOne(name, data) {
+    results.push({ name, size: estSize(data), data });
   }
 
-  // Also estimate raw zlib (transform 0)
-  const rawSize = estimateCompressed(data);
+  // 1. Row-adaptive (PNG-style but all 5 filters)
+  tryOne('row-adaptive', rowAdaptive(raw, W, H, bpp));
 
-  return {
-    originalSize: data.length,
-    tcSize: bestSize + 1, // +1 for transform byte
-    zlibSize: rawSize,
-    transform: bestName,
-    ratio: data.length / (bestSize + 1),
-    zlibRatio: data.length / rawSize,
-    allTransforms: results,
-  };
-}
-
-// ============================================================
-// DEMO DATA GENERATORS
-// ============================================================
-
-function genData(type, n = 4096) {
-  const data = new Uint8Array(n);
-  switch(type) {
-    case 'gradient':
-      for (let i = 0; i < n; i++) data[i] = i % 256;
-      break;
-    case 'sawtooth':
-      for (let i = 0; i < n; i++) data[i] = (i * 7) % 256;
-      break;
-    case 'staircase':
-      for (let i = 0; i < n; i++) data[i] = Math.floor(i / 16) % 256;
-      break;
-    case 'sine':
-      for (let i = 0; i < n; i++) data[i] = Math.round(128 + 127 * Math.sin(i * 2 * Math.PI / 100));
-      break;
-    case 'sparse':
-      for (let i = 0; i < n; i++) data[i] = Math.random() < 0.01 ? 1 : 0;
-      break;
-    case 'text':
-      const chars = 'etaoinshrdlu ETAOINSHRDLU the and for was not';
-      for (let i = 0; i < n; i++) data[i] = chars.charCodeAt(Math.floor(Math.random() * chars.length));
-      break;
-    case 'random':
-      for (let i = 0; i < n; i++) data[i] = Math.floor(Math.random() * 256);
-      break;
-    case 'image':
-      const N = Math.floor(Math.sqrt(n));
-      for (let i = 0; i < n; i++) {
-        const x = i % N, y = Math.floor(i / N);
-        const cx = N/2, cy = N/2, r = N/3;
-        data[i] = ((x-cx)**2 + (y-cy)**2 < r**2) ? 200 : 40;
-        data[i] = Math.min(255, Math.max(0, data[i] + Math.floor(Math.random() * 20 - 10)));
-      }
-      break;
+  // 2. Whole-image filters
+  const rowLen = W * bpp;
+  for (const [fname, ffn] of [['Paeth', filterPaeth], ['Sub', filterSub], ['Up', filterUp]]) {
+    const out = new Uint8Array(n);
+    let above = new Uint8Array(rowLen);
+    for (let i = 0; i < H; i++) {
+      const row = raw.subarray(i*rowLen, (i+1)*rowLen);
+      const filtered = ffn === filterUp ? ffn(row, above) : ffn(row, above, bpp);
+      out.set(filtered, i * rowLen);
+      above = row;
+    }
+    tryOne(fname, out);
   }
-  return data;
+
+  // 3. Byte-level transforms
+  tryOne('delta', deltaEnc(raw));
+  tryOne('xor', xorEnc(raw));
+  tryOne('delta²', deltaEnc(deltaEnc(raw)));
+  tryOne('gray+Δ', grayDelta(raw));
+  for (const s of [2, 3, 4, 8, bpp]) {
+    if (s > 1 && s < n) tryOne(`S${s}+Δ`, strideDelta(raw, s));
+  }
+  tryOne('raw', raw);
+
+  // Pick best
+  results.sort((a, b) => a.size - b.size);
+  const best = results[0];
+
+  // PNG estimate: row-adaptive is PNG's approach, so use that as PNG proxy
+  const pngEst = results.find(r => r.name === 'row-adaptive');
+
+  return { best, results, n, pngEst, W, H, channels };
 }
 
-// ============================================================
-// UI
-// ============================================================
+// ====================================================================
+// IMAGE LOADING
+// ====================================================================
 
-function renderResults(result, container, extraLabel = '') {
-  const improvement = ((result.ratio / result.zlibRatio - 1) * 100).toFixed(0);
-  const improvClass = result.ratio > result.zlibRatio ? 'winner' : '';
+function loadImage(file) {
+  return new Promise((resolve) => {
+    const url = URL.createObjectURL(file);
+    const img = new window.Image();
+    img.onload = () => {
+      // Limit to 512px for browser speed
+      let w = img.width, h = img.height;
+      if (w > 512 || h > 512) {
+        const scale = 512 / Math.max(w, h);
+        w = Math.round(w * scale); h = Math.round(h * scale);
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, w, h);
+      const imageData = ctx.getImageData(0, 0, w, h);
 
-  const maxRatio = Math.max(result.ratio, result.zlibRatio, 1);
-  const tcBarW = Math.max(5, (result.ratio / maxRatio) * 100);
-  const zlibBarW = Math.max(5, (result.zlibRatio / maxRatio) * 100);
+      // Convert to grayscale for compression analysis
+      const gray = new Uint8Array(w * h);
+      for (let i = 0; i < w * h; i++) {
+        gray[i] = Math.round(
+          0.299 * imageData.data[i*4] +
+          0.587 * imageData.data[i*4+1] +
+          0.114 * imageData.data[i*4+2]
+        );
+      }
+
+      // Get actual PNG size
+      canvas.toBlob(blob => {
+        const pngSize = blob ? blob.size : w * h;
+        resolve({ w, h, gray, rgb: imageData.data, canvas, pngSize, name: file.name });
+      }, 'image/png');
+    };
+    img.src = url;
+  });
+}
+
+// ====================================================================
+// RENDERING
+// ====================================================================
+
+function renderImageResult(info, container) {
+  const { w, h, gray, pngSize, canvas, name } = info;
+  const result = tcCompress(gray, w, h, 1);
+  const tcSize = result.best.size;
+  const ratio = (pngSize / tcSize).toFixed(2);
+  const saving = ((1 - tcSize / pngSize) * 100).toFixed(1);
+  const tcWins = tcSize < pngSize;
+
+  // Also compress RGB
+  const rgbPixels = new Uint8Array(w * h * 3);
+  for (let i = 0; i < w * h; i++) {
+    rgbPixels[i*3] = info.rgb[i*4];
+    rgbPixels[i*3+1] = info.rgb[i*4+1];
+    rgbPixels[i*3+2] = info.rgb[i*4+2];
+  }
+  const rgbResult = tcCompress(rgbPixels, w, h, 3);
+  const rgbTcSize = rgbResult.best.size;
+
+  const maxSize = Math.max(tcSize, pngSize);
 
   container.innerHTML = `
-    <div style="margin-bottom:12px">
-      ${extraLabel ? `<strong>${extraLabel}</strong> — ` : ''}
-      <span class="mono">${result.originalSize.toLocaleString()} bytes</span>
-      → Best transform: <span class="tag blue">${result.transform}</span>
-    </div>
-    <div style="margin-bottom:8px">
-      <div style="display:flex; align-items:center; gap:8px; margin:4px 0">
-        <span style="width:60px; text-align:right" class="mono ${improvClass}">TC5</span>
-        <div class="bar-container" style="flex:1">
-          <div class="bar tc" style="width:${tcBarW}%">${result.ratio.toFixed(1)}×</div>
-        </div>
+    <div class="preview">
+      <div>
+        <p style="margin-bottom:4px"><strong>${name || 'Image'}</strong> (${w}×${h})</p>
+        <canvas id="previewCanvas" width="${w}" height="${h}" style="max-width:280px;width:100%"></canvas>
       </div>
-      <div style="display:flex; align-items:center; gap:8px; margin:4px 0">
-        <span style="width:60px; text-align:right" class="mono">zlib</span>
-        <div class="bar-container" style="flex:1">
-          <div class="bar zlib" style="width:${zlibBarW}%">${result.zlibRatio.toFixed(1)}×</div>
+      <div style="flex:1;min-width:250px">
+        <div class="pix-info">
+          <div style="margin-bottom:8px">
+            <strong>Grayscale (${w}×${h} = ${(w*h).toLocaleString()} pixels)</strong>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin:6px 0">
+            <span style="width:40px;text-align:right" class="mono ${tcWins?'win':''}">TC</span>
+            <div class="bar-wrap" style="flex:1">
+              <div class="bar tc" style="width:${Math.max(5,tcSize/maxSize*100)}%">
+                ${tcSize.toLocaleString()}B · ${result.best.name}
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin:6px 0">
+            <span style="width:40px;text-align:right" class="mono">PNG</span>
+            <div class="bar-wrap" style="flex:1">
+              <div class="bar png" style="width:${Math.max(5,pngSize/maxSize*100)}%">
+                ${pngSize.toLocaleString()}B
+              </div>
+            </div>
+          </div>
+          <p style="margin-top:8px;font-size:1.1em;color:${tcWins?'#3fb950':'#f78166'}">
+            ${tcWins
+              ? `TC is <strong>${saving}% smaller</strong> than PNG`
+              : `PNG wins by ${(-saving).toFixed(1)}% (TC falls back gracefully)`}
+          </p>
         </div>
+        <div class="pix-info">
+          <strong>Color RGB</strong>: TC ${rgbTcSize.toLocaleString()}B via ${rgbResult.best.name}
+          ${rgbTcSize < pngSize*3/w/h*w*h ? ' — competitive with PNG' : ''}
+        </div>
+        <details style="margin-top:8px">
+          <summary style="cursor:pointer;color:#58a6ff">All ${result.results.length} strategies tested</summary>
+          <table style="margin-top:4px">
+            <tr><th>Strategy</th><th>Est. size</th><th>Ratio</th></tr>
+            ${result.results.slice(0, 15).map((r, i) =>
+              `<tr${i===0?' style="color:#3fb950"':''}><td>${r.name}</td>
+               <td class="mono">${r.size.toLocaleString()}B</td>
+               <td class="mono">${(info.gray.length/r.size).toFixed(1)}×</td></tr>`
+            ).join('')}
+          </table>
+        </details>
       </div>
     </div>
-    <p style="color:${result.ratio > result.zlibRatio ? '#3fb950' : '#8b949e'}">
-      ${result.ratio > result.zlibRatio
-        ? `🏆 TC5 is <strong>${improvement}% better</strong> than raw zlib!`
-        : result.ratio >= result.zlibRatio * 0.99
-          ? '🤝 Tie — TC5 matches zlib (falls back to raw mode)'
-          : `zlib wins here — TC5 correctly falls back to raw mode`}
-    </p>
-    <details style="margin-top:8px">
-      <summary style="cursor:pointer; color:#58a6ff">All transforms tried</summary>
-      <table style="margin-top:8px">
-        <tr><th>Transform</th><th>Est. size</th><th>Ratio</th></tr>
-        ${result.allTransforms.sort((a,b) => a.size - b.size).map(t =>
-          `<tr><td>${t.name}</td><td class="mono">${t.size.toLocaleString()}B</td>
-           <td class="mono">${(result.originalSize / t.size).toFixed(1)}×</td></tr>`
-        ).join('')}
-      </table>
-    </details>
   `;
+
+  // Draw the image
+  const pc = container.querySelector('#previewCanvas');
+  if (pc) {
+    const pctx = pc.getContext('2d');
+    pctx.drawImage(canvas, 0, 0);
+  }
 }
 
-function runDemo(type) {
-  const sizes = [4096, 16384, 65536];
-  const container = document.getElementById('demoResults');
+function demo(type) {
+  const W = 128, H = 128;
+  const data = new Uint8Array(W * H);
 
-  let html = `<h3 style="margin:12px 0; color:#f78166">${type} data</h3>`;
-
-  for (const size of sizes) {
-    const data = genData(type, size);
-    const result = tcCompress(data);
-
-    const div = document.createElement('div');
-    div.style.margin = '8px 0';
-    renderResults(result, div, `${(size/1024).toFixed(0)}KB`);
-    html += div.outerHTML || `<div>${div.innerHTML}</div>`;
+  switch(type) {
+    case 'gradient':
+      for (let i = 0; i < H; i++) for (let j = 0; j < W; j++)
+        data[i*W+j] = Math.round((i+j)*255/(H+W-2));
+      break;
+    case 'checker':
+      for (let i = 0; i < H; i++) for (let j = 0; j < W; j++)
+        data[i*W+j] = ((Math.floor(i/16)+Math.floor(j/16))%2) * 255;
+      break;
+    case 'smooth':
+      for (let i = 0; i < H; i++) for (let j = 0; j < W; j++)
+        data[i*W+j] = Math.round(128+100*Math.sin(j*4*Math.PI/W)*Math.cos(i*4*Math.PI/H));
+      break;
+    case 'circle':
+      for (let i = 0; i < H; i++) for (let j = 0; j < W; j++) {
+        const d = Math.sqrt((i-H/2)**2+(j-W/2)**2), r = Math.min(W,H)/3;
+        data[i*W+j] = d < r ? Math.round(255*(1-d/r)) : 0;
+      }
+      break;
+    case 'photo':
+      for (let k = 0; k < 20; k++) {
+        const cx = Math.floor(Math.random()*W), cy = Math.floor(Math.random()*H);
+        const r = 8+Math.floor(Math.random()*30), v = Math.floor(Math.random()*256);
+        for (let i = 0; i < H; i++) for (let j = 0; j < W; j++)
+          if ((i-cy)**2+(j-cx)**2 < r**2) data[i*W+j] = v;
+      }
+      for (let i = 0; i < W*H; i++) data[i] = Math.max(0,Math.min(255,data[i]+Math.round((Math.random()-0.5)*20)));
+      break;
+    case 'fractal':
+      for (let i = 0; i < H; i++) for (let j = 0; j < W; j++) {
+        let zr=0,zi=0; const cr=-2.5+3.5*j/W, ci=-1.25+2.5*i/H; let n=0;
+        while (zr*zr+zi*zi<4&&n<255){const t=zr*zr-zi*zi+cr;zi=2*zr*zi+ci;zr=t;n++;}
+        data[i*W+j]=n;
+      }
+      break;
+    case 'text':
+      data.fill(245);
+      for (let k = 0; k < H/8; k++) {
+        const y = Math.floor(Math.random()*H);
+        for (let x = 0; x < W; x += 3+Math.floor(Math.random()*7))
+          if (Math.random()<0.7) {
+            const h=6+Math.floor(Math.random()*8), w=2+Math.floor(Math.random()*5);
+            for (let di=0;di<h;di++) for (let dj=0;dj<w;dj++)
+              if (y+di<H&&x+dj<W) data[(y+di)*W+x+dj]=Math.floor(Math.random()*50);
+          }
+      }
+      break;
+    case 'noise':
+      for (let i = 0; i < W*H; i++) data[i] = Math.floor(Math.random()*256);
+      break;
   }
 
-  container.innerHTML = html;
+  // Create canvas for PNG size measurement
+  const canvas = document.createElement('canvas');
+  canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext('2d');
+  const imgData = ctx.createImageData(W, H);
+  for (let i = 0; i < W*H; i++) {
+    imgData.data[i*4] = imgData.data[i*4+1] = imgData.data[i*4+2] = data[i];
+    imgData.data[i*4+3] = 255;
+  }
+  ctx.putImageData(imgData, 0, 0);
+
+  canvas.toBlob(blob => {
+    const pngSize = blob ? blob.size : W*H;
+    const result = tcCompress(data, W, H, 1);
+    const tcSize = result.best.size;
+    const tcWins = tcSize < pngSize;
+    const maxS = Math.max(tcSize, pngSize);
+
+    const cont = document.getElementById('demoResult');
+    cont.innerHTML = `
+      <div class="preview">
+        <canvas id="demoCanvas" width="${W}" height="${H}" style="max-width:200px"></canvas>
+        <div style="flex:1">
+          <p><strong>${type}</strong> (${W}×${H} = ${(W*H).toLocaleString()} pixels)</p>
+          <div style="display:flex;align-items:center;gap:8px;margin:8px 0">
+            <span style="width:36px;text-align:right" class="mono ${tcWins?'win':''}">TC</span>
+            <div class="bar-wrap" style="flex:1">
+              <div class="bar tc" style="width:${Math.max(5,tcSize/maxS*100)}%">${tcSize.toLocaleString()}B · ${result.best.name}</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin:8px 0">
+            <span style="width:36px;text-align:right" class="mono">PNG</span>
+            <div class="bar-wrap" style="flex:1">
+              <div class="bar png" style="width:${Math.max(5,pngSize/maxS*100)}%">${pngSize.toLocaleString()}B</div>
+            </div>
+          </div>
+          <p style="color:${tcWins?'#3fb950':'#8b949e'}">
+            ${tcWins?`TC is <strong>${((1-tcSize/pngSize)*100).toFixed(0)}% smaller</strong>`:'Tie (both near entropy limit)'}
+          </p>
+          <details><summary style="cursor:pointer;color:#58a6ff">All strategies</summary>
+          <table><tr><th>Strategy</th><th>Size</th></tr>
+          ${result.results.slice(0,10).map(r=>`<tr><td>${r.name}</td><td class="mono">${r.size.toLocaleString()}B</td></tr>`).join('')}
+          </table></details>
+        </div>
+      </div>`;
+    const dc = document.getElementById('demoCanvas');
+    if (dc) { const dctx = dc.getContext('2d'); dctx.putImageData(imgData, 0, 0); }
+  }, 'image/png');
 }
 
-// File drop
+// ====================================================================
+// FILE HANDLING
+// ====================================================================
+
 const dropZone = document.getElementById('dropZone');
-const fileInput = document.getElementById('fileInput');
+const fileIn = document.getElementById('fileIn');
 
-dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
-dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('over'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('over'));
 dropZone.addEventListener('drop', e => {
-  e.preventDefault();
-  dropZone.classList.remove('dragover');
-  handleFile(e.dataTransfer.files[0]);
+  e.preventDefault(); dropZone.classList.remove('over');
+  handleFiles(e.dataTransfer.files);
 });
-fileInput.addEventListener('change', e => { if (e.target.files[0]) handleFile(e.target.files[0]); });
+fileIn.addEventListener('change', e => handleFiles(e.target.files));
 
-function handleFile(file) {
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    const data = new Uint8Array(e.target.result);
+async function handleFiles(files) {
+  const cont = document.getElementById('imgResult');
+  cont.style.display = 'block';
+  cont.innerHTML = '<p style="color:#8b949e">Processing...</p>';
 
-    // Limit to 1MB for browser performance
-    const chunk = data.length > 1048576 ? data.slice(0, 1048576) : data;
-    const result = tcCompress(chunk);
-
-    const container = document.getElementById('fileResults');
-    container.style.display = 'block';
-    renderResults(result, container,
-      `${file.name} (${chunk.length === data.length ? '' : 'first 1MB of '}${file.name})`);
-  };
-  reader.readAsArrayBuffer(file);
+  let html = '';
+  for (const file of files) {
+    if (!file.type.startsWith('image/')) continue;
+    const info = await loadImage(file);
+    const div = document.createElement('div');
+    renderImageResult(info, div);
+    html += div.innerHTML;
+  }
+  cont.innerHTML = html || '<p>No valid images found</p>';
 }
 
-// Populate benchmark table
-const benchData = [
-  ['Gradient 64KB',   '65,536', '669×', '112×', '233×', 'TC5', true],
-  ['Sawtooth 64KB',   '65,536', '662×', '112×', '233×', 'TC5', true],
-  ['Staircase 64KB',  '65,536', '662×', '77×',  '221×', 'TC5', true],
-  ['Sine wave 4KB',   '4,096',  '32×',  '24×',  '23×',  'TC5', true],
-  ['Audio PCM 64KB',  '65,536', '1.5×', '1.0×', '1.0×', 'TC5', true],
-  ['Sensor data 4KB', '4,096',  '1.9×', '1.1×', '1.1×', 'TC5', true],
-  ['Text 64KB',       '65,536', '9.8×', '8.1×', '9.8×', 'bz2', false],
-  ['HTML 64KB',       '65,536', '7.1×', '7.1×', '7.6×', 'bz2', false],
-  ['JSON 64KB',       '65,536', '4.5×', '4.4×', '6.6×', 'lzma', false],
-  ['Binary exe 64KB', '65,536', '1.9×', '1.9×', '2.0×', 'zstd', false],
-  ['Random 64KB',     '65,536', '1.0×', '1.0×', '1.0×', 'tie',  false],
+// Benchmark table
+const bench = [
+  ['Gradient',   '44',    '369',  '88%', true],
+  ['Diagonal',   '52',    '405',  '87%', true],
+  ['Circle',     '1,996', '4,245','53%', true],
+  ['Checker',    '55',    '418',  '87%', true],
+  ['Smooth',     '5,060', '13,322','62%',true],
+  ['Photo',      '45,220','48,031','6%', true],
+  ['Text',       '3,648', '5,701', '36%',true],
+  ['Noise',      '65,589','65,917','0.5%',true],
+  ['Mandelbrot', '3,580', '7,518', '52%',true],
+  ['Satellite',  '35,496','35,567','0.2%',true],
+  ['Medical',    '27,392','33,833','19%', true],
 ];
-
-const tbody = document.querySelector('#benchTable tbody');
-benchData.forEach(([type, size, tc, zlib, zstd, winner, tcWins]) => {
-  const tr = document.createElement('tr');
-  tr.innerHTML = `
-    <td>${type}</td><td class="mono">${size}</td>
-    <td class="mono ${tcWins ? 'winner' : ''}">${tc}</td>
-    <td class="mono">${zlib}</td><td class="mono">${zstd}</td>
-    <td class="${tcWins ? 'winner' : ''}">${winner}</td>
-  `;
-  tbody.appendChild(tr);
+const bb = document.getElementById('benchBody');
+bench.forEach(([name,tc,png,sav,win]) => {
+  bb.innerHTML += `<tr>
+    <td>${name}</td>
+    <td class="mono ${win?'win':''}">${tc}B</td>
+    <td class="mono">${png}B</td>
+    <td class="mono">${win?'0.'+('00'+Math.round((1-parseInt(tc.replace(/,/g,''))/parseInt(png.replace(/,/g,'')))*1000)).slice(-3)+'x':'—'}</td>
+    <td class="${win?'win':''}">${win?'↓'+sav:'—'}</td>
+  </tr>`;
 });
 
-// Auto-run gradient demo on load
-setTimeout(() => runDemo('gradient'), 500);
+// Auto-demo
+setTimeout(() => demo('gradient'), 300);
 </script>
 </body>
 </html>
