@@ -1,0 +1,29 @@
+tpress v6.0.0 -- Context-Aware Compressor
+==============================================================================================================
+
+             Data      Raw       v6    zlib9      bz2     lzma     Best  v6/best      ms              Class                  Pipeline
+  -----------------------------------------------------------------------------------------------------------------------------------
+       counter_4K    4096B      27B     315B     657B     324B     315B  11.667x     43ms         structured    structured:delta+zlib6 WIN
+          sine_4K    4096B     219B     711B    1073B     604B     604B   2.758x     54ms         structured   structured:delta2+zlib9 WIN
+      gradient_2d    4096B      40B     243B     461B     232B     232B   5.800x     51ms         structured    structured:delta+zlib6 WIN
+        quadratic    4096B     316B    2089B    2843B    1952B    1952B   6.177x     54ms  binary_structured binary_structured:stride8+d+zlib6 WIN
+       english_4K    4096B      75B      79B     137B     136B      79B   1.053x     53ms    text_repetitive text_repetitive:stride3+zlib6 WIN
+        python_2K    2048B      68B      68B     131B     124B      68B   1.000x     38ms    text_repetitive text_repetitive:raw+zlib6 TIE
+          json_4K    4096B      77B      79B     133B     132B      79B   1.026x     47ms    text_repetitive text_repetitive:stride2+zlib6 WIN
+           log_4K    4096B      72B      73B     115B     124B      73B   1.014x     52ms    text_repetitive text_repetitive:stride2+zlib6 WIN
+          html_4K    3750B     100B     100B     163B     156B     100B   1.000x     44ms    text_repetitive text_repetitive:raw+zlib6 TIE
+           csv_4K    4096B      83B      83B     148B     140B      83B   1.000x     52ms    text_repetitive text_repetitive:raw+zlib6 TIE
+        CLAUDE.md   28404B   11079B   11877B   11087B   11272B   11087B   1.001x    413ms               text           text:sub128+bz2 TIE
+    formalrank.py   13186B    4224B    4346B    4274B    4244B    4244B   1.005x     69ms    text_repetitive  text_repetitive:rle+lzma TIE
+        random_4K    4096B    4107B    4107B    4562B    4156B    4107B   1.000x     18ms             random          random:raw+zlib1 TIE
+         zeros_4K    4096B      16B      26B      43B      92B      26B   1.625x     31ms             sparse          sparse:rle+zlib1 WIN
+       binary_exe    4096B      28B     315B     660B     332B     315B  11.250x     42ms         structured    structured:delta+zlib6 WIN
+      low_entropy    4096B    1161B    1333B    1161B    1408B    1161B   1.000x     62ms        low_entropy       low_entropy:raw+bz2 TIE
+     mostly_zeros    4096B      26B     306B     445B     324B     306B  11.769x     33ms             sparse        sparse:rle+d+zlib1 WIN
+      english_64K   65536B     169B     260B     169B     184B     169B   1.000x    780ms    text_repetitive   text_repetitive:raw+bz2 TIE
+       binary_64K   65536B      41B     585B     791B     384B     384B   9.366x    508ms         structured               block:zlib6 WIN
+
+  SCORE: 11W 8T 0L / 19 tests
+  Win rate: 58%, Never-worse rate: 100%
+  Aggregate: v6=21,928B vs best=25,384B (1.158x)
+  Total time: 2442ms (129ms avg)
