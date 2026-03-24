@@ -1,0 +1,147 @@
+================================================================================
+  WAGGLY ALPHABET: Letter Combinations
+  kind-pasteur-2026-03-24-S20fr
+================================================================================
+
+############################################################
+  n = 5, m = 6 tiles (A,B,C,D,E,F)
+  V = 12, d=1 edges = 30
+############################################################
+
+  d=2: 15 letter pairs
+
+  LETTER PAIRS (sorted by new edges beyond d=1):
+   Pair  Grid Share SameR SkipS  Total   New    SL
+     AB    AD     Y     Y     5     22    10     8
+     AC    AF     Y     Y     4     20    10     4
+     AD    AB     Y     N     5     22    10     8
+     AF    AC     Y     N     4     20    10     4
+     BD    BD     N     N     4     15    10    16
+     BF    CD     N     N     3     19    10    10
+     CD    BF     N     N     3     19    10    10
+     AE    AE     N     N     4     18     8     4
+     CF    CF     Y     N     2     18     8    16
+     CE    EF     N     N     2     13     7    16
+     EF    CE     N     N     2     13     7    16
+     BC    DF     Y     Y     3     17     6    16
+     DF    BC     Y     N     3     17     6    16
+     BE    DE     Y     N     3     18     5    14
+     DE    BE     Y     Y     3     18     5    14
+
+  GRID-SYMMETRY PAIRS (same edge set?):
+    AB <-> AD: J=0.571, new=10/10
+    AC <-> AF: J=0.538, new=10/10
+    BF <-> CD: J=0.652, new=10/10
+    CE <-> EF: J=0.300, new=7/7
+    BC <-> DF: J=0.417, new=6/6
+    BE <-> DE: J=0.385, new=5/5
+
+  PRODUCTIVITY BY GEOMETRY:
+    Share vertex: avg new = 7.8
+    No shared vertex: avg new = 8.7
+    Same row: avg new = 7.8
+    Diff row: avg new = 8.3
+
+  d=3: 20 letter triples
+  TOP TRIPLES (most new edges):
+    ACE: total=18, new=2, SL=4
+    AEF: total=18, new=2, SL=4
+    ABC: total=21, new=1, SL=4
+    ABD: total=21, new=1, SL=0
+    ABE: total=20, new=1, SL=4
+    ABF: total=20, new=1, SL=4
+    ACD: total=20, new=1, SL=4
+    ACF: total=11, new=1, SL=16
+    ADE: total=20, new=1, SL=4
+    ADF: total=21, new=1, SL=4
+  Triples with new edges: 12/20
+
+  Time: 0.0s
+
+############################################################
+  n = 6, m = 10 tiles (A,B,C,D,E,F,G,H,I,J)
+  V = 56, d=1 edges = 290
+############################################################
+
+  d=2: 45 letter pairs
+
+  LETTER PAIRS (sorted by new edges beyond d=1):
+   Pair  Grid Share SameR SkipS  Total   New    SL
+     BJ    DE     N     N     4    321   253    30
+     DE    BJ     N     N     4    321   253    30
+     AG    AI     N     N     5    310   249    16
+     AI    AG     N     N     5    310   249    16
+     DF    FJ     N     N     3    312   243    34
+     FJ    DF     N     N     3    312   243    34
+     AD    AJ     Y     Y     5    344   239    24
+     AJ    AD     Y     N     5    344   239    24
+     BE    BE     N     N     6    301   239    44
+     DJ    DJ     N     N     2    295   239    20
+     AF    AF     N     N     6    303   238    20
+     DG    IJ     N     N     2    289   235    50
+     IJ    DG     N     N     2    289   235    50
+     BH    CE     N     N     5    303   234    32
+     CE    BH     N     N     5    303   234    32
+     CJ    DH     Y     N     3    343   230    28
+     DH    CJ     Y     N     3    343   230    28
+     CI    GH     N     N     3    292   214    38
+     GH    CI     N     N     3    292   214    38
+     AC    AH     Y     Y     6    325   210    32
+     AH    AC     Y     N     6    325   210    32
+     CG    HI     Y     N     3    341   209    52
+     HI    CG     Y     Y     3    341   209    52
+     CH    CH     N     N     4    254   208    32
+     BF    EF     Y     N     5    333   205    46
+     EF    BF     Y     Y     5    333   205    46
+     CD    HJ     Y     Y     3    315   204    56
+     DI    GJ     Y     N     2    296   204    54
+     GJ    DI     Y     N     2    296   204    54
+     HJ    CD     Y     N     3    315   204    56
+     AB    AE     Y     Y     7    334   201    48
+     AE    AB     Y     N     7    334   201    48
+     CF    FH     N     N     4    251   201    56
+     FH    CF     N     N     4    251   201    56
+     BI    EG     Y     N     4    309   200    36
+     EG    BI     Y     Y     4    309   200    36
+     BD    EJ     Y     Y     4    301   193    44
+     EJ    BD     Y     N     4    301   193    44
+     GI    GI     N     N     2    249   193    64
+     BG    EI     N     N     4    245   184    28
+     EI    BG     N     N     4    245   184    28
+     FG    FI     Y     Y     3    291   175    68
+     FI    FG     Y     N     3    291   175    68
+     BC    EH     Y     Y     5    300   174    56
+     EH    BC     Y     N     5    300   174    56
+
+  GRID-SYMMETRY PAIRS (same edge set?):
+    BJ <-> DE: J=0.554, new=253/253
+    AG <-> AI: J=0.520, new=249/249
+    DF <-> FJ: J=0.504, new=243/243
+    AD <-> AJ: J=0.286, new=239/239
+    DG <-> IJ: J=0.521, new=235/235
+    BH <-> CE: J=0.638, new=234/234
+    CJ <-> DH: J=0.508, new=230/230
+    CI <-> GH: J=0.545, new=214/214
+    AC <-> AH: J=0.324, new=210/210
+    CG <-> HI: J=0.442, new=209/209
+    BF <-> EF: J=0.368, new=205/205
+    CD <-> HJ: J=0.482, new=204/204
+    DI <-> GJ: J=0.458, new=204/204
+    AB <-> AE: J=0.363, new=201/201
+    CF <-> FH: J=0.379, new=201/201
+    BI <-> EG: J=0.464, new=200/200
+    BD <-> EJ: J=0.501, new=193/193
+    BG <-> EI: J=0.369, new=184/184
+    FG <-> FI: J=0.577, new=175/175
+    BC <-> EH: J=0.342, new=174/174
+
+  PRODUCTIVITY BY GEOMETRY:
+    Share vertex: avg new = 203.7
+    No shared vertex: avg new = 225.9
+    Same row: avg new = 201.0
+    Diff row: avg new = 217.7
+
+  Time: 2.9s
+
+DONE.
+================================================================================
