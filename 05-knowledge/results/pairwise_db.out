@@ -1,0 +1,43 @@
+pairwise_db v1.0.0 -- LLM Arena Simulation
+======================================================================
+
+  Simulated 5000 comparisons in 11ms (449K obs/sec)
+
+PairwiseDB v1.0.0 (LLM Arena)
+  Items:         10
+  Observations:  5,000
+  Ambiguity:     0.0%
+  Transitivity:  1.000
+  Condorcet:     GPT-4o
+
+  Rankings:
+Rank                 Item   Strength  WinRate   Games                   CI
+   1               GPT-4o      7.076   78.5%    1049       [+7.06, +7.09]
+   2           Claude-3.5      6.855   76.6%     962       [+6.84, +6.87]
+   3           Gemini-Pro      4.618   68.1%    1035       [+4.60, +4.64]
+   4             Claude-3      2.120   58.6%     991       [+2.09, +2.15]
+   5                GPT-4      1.024   55.1%     972       [+1.00, +1.05]
+   6          Llama-3-70B     -0.390   48.8%     990       [-0.42, -0.36]
+   7         Mixtral-8x7B     -1.636   41.3%    1023       [-1.66, -1.61]
+   8              GPT-3.5     -5.523   27.2%     986       [-5.54, -5.50]
+   9           Llama-3-8B     -6.375   24.5%     994       [-6.40, -6.35]
+  10           Phi-3-mini     -7.769   20.1%     998       [-7.79, -7.75]
+
+  Rank accuracy: 8/10 exact matches with true ranking
+  Kendall tau:   44/45 concordant pairs (97.8%)
+
+  Head-to-head: Claude-3.5 vs GPT-4o
+    Wins: 53, Losses: 55, Draws: 0
+    Win probability: 39.1%
+
+  Pairs needing more data:
+    Llama-3-70B vs Gemini-Pro: 89 comparisons
+    Claude-3.5 vs Llama-3-8B: 91 comparisons
+    GPT-3.5 vs Mixtral-8x7B: 96 comparisons
+    Llama-3-70B vs Claude-3: 97 comparisons
+    Llama-3-8B vs Gemini-Pro: 98 comparisons
+
+  Condorcet cycles: 0
+
+  Merge: PairwiseDB(items=10, obs=100) + PairwiseDB(items=10, obs=100) = PairwiseDB(items=10, obs=200)
+  Save/load: PairwiseDB(items=10, obs=5000)

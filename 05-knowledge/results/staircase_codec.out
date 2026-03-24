@@ -1,0 +1,46 @@
+staircase_codec v1.0.0 -- Demo
+======================================================================
+
+  n=4 (m=6 arcs, raw=6 bits = 1 bytes)
+             Type    Raw  Score   Resid  Total   Save Scores
+       transitive     6b     8b    0.0b   8.0b -33.3% [0, 1, 2, 3]
+           random     6b     8b    2.6b  10.6b -76.4% [0, 2, 2, 2]
+       anti-trans     6b     8b    0.0b   8.0b -33.3% [0, 1, 2, 3]
+
+  n=5 (m=10 arcs, raw=10 bits = 2 bytes)
+             Type    Raw  Score   Resid  Total   Save Scores
+       transitive    10b    15b    0.0b  15.0b -50.0% [0, 1, 2, 3, 4]
+           random    10b    15b    4.2b  19.2b -91.7% [0, 2, 2, 3, 3]
+       anti-trans    10b    15b    0.0b  15.0b -50.0% [0, 1, 2, 3, 4]
+
+  n=6 (m=15 arcs, raw=15 bits = 2 bytes)
+             Type    Raw  Score   Resid  Total   Save Scores
+       transitive    15b    18b    0.0b  18.0b -20.0% [0, 1, 2, 3, 4, 5]
+           random    15b    18b    6.5b  24.5b -63.3% [1, 2, 2, 3, 3, 4]
+       anti-trans    15b    18b    0.0b  18.0b -20.0% [0, 1, 2, 3, 4, 5]
+
+  n=7 (m=21 arcs, raw=21 bits = 3 bytes)
+             Type    Raw  Score   Resid  Total   Save Scores
+       transitive    21b    21b    0.0b  21.0b   0.0% [0, 1, 2, 3, 4, 5, 6]
+           random    21b    21b   11.2b  32.2b -53.5% [1, 3, 3, 3, 3, 4, 4]
+       anti-trans    21b    21b    0.0b  21.0b   0.0% [0, 1, 2, 3, 4, 5, 6]
+
+  n=8 (m=28 arcs, raw=28 bits = 4 bytes)
+             Type    Raw  Score   Resid  Total   Save Scores
+       transitive    28b    24b    0.0b  24.0b  14.3% [0, 1, 2, 3, 4, 5, 6, 7]
+           random    28b    24b   13.6b  37.6b -34.4% [1, 2, 3, 4, 4, 4, 5, 5]
+       anti-trans    28b    24b    0.0b  24.0b  14.3% [0, 1, 2, 3, 4, 5, 6, 7]
+
+  All roundtrips verified OK
+
+  THEORETICAL SAVINGS BY n:
+     n   Raw bits   Score bits   Avg residual  Avg savings
+     3          3            6            1.0      -133.3%
+     4          6            8            2.6       -76.4%
+     5         10           15            5.2      -101.7%
+     6         15           18            8.5       -76.6%
+     7         21           21           12.8       -61.0%
+     8         28           24           17.9       -49.8%
+     9         36           36           24.1       -66.9%
+    10         45           40           31.0       -57.9%
+    11         55           44           39.0       -51.0%

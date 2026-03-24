@@ -1,0 +1,57 @@
+tournament_hash v1.0.0 -- Demo
+======================================================================
+
+1. VECTOR HASHING (similar vectors -> similar tournaments)
+  v1 = [1..8]:    T8:00000000  scores=[0, 1, 2, 3, 4, 5, 6, 7]
+  v2 = [1.1..8.1]: T8:00000000  scores=[0, 1, 2, 3, 4, 5, 6, 7]
+  v3 = [8..1]:    T8:0fffffff  scores=[0, 1, 2, 3, 4, 5, 6, 7]
+  v4 = random:    T8:0d622047  scores=[0, 1, 2, 3, 4, 5, 6, 7]
+  dist(v1,v2) = 0.000 (should be ~0)
+  dist(v1,v3) = 1.000 (should be ~1)
+  dist(v1,v4) = 0.393 (should be ~0.5)
+
+2. TEXT HASHING (similar texts -> similar tournaments)
+  t1 = 'the quick brown fox jumps over...'
+  t2 = 'the fast brown fox leaps over ...' (similar)
+  t3 = 'completely unrelated text abou...' (different)
+  t4 = 'THE QUICK BROWN FOX JUMPS OVER...' (uppercase)
+  dist(t1,t2) = 0.250
+  dist(t1,t3) = 0.536
+  dist(t1,t4) = 0.429
+
+3. NEAR-DUPLICATE DETECTION
+  Indexed 7 documents
+
+  Pairwise distances:
+    [0] vs [1]: dist=0.143 NEAR-DUPLICATE
+    [1] vs [2]: dist=0.286 NEAR-DUPLICATE
+    [2] vs [3]: dist=0.214 NEAR-DUPLICATE
+    [2] vs [5]: dist=0.286 NEAR-DUPLICATE
+    [5] vs [6]: dist=0.179 NEAR-DUPLICATE
+
+4. BYTE-LEVEL HASHING (structural similarity)
+  counter vs shifted:  dist=0.000
+  counter vs random:   dist=0.393
+  counter vs zeros:    dist=0.000
+  random vs zeros:     dist=0.393
+
+5. NEAREST NEIGHBOR SEARCH
+  Query: item 0 (cluster 0)
+  Nearest neighbors:
+    item   0 (cluster 0): dist=0.000
+    item   3 (cluster 0): dist=0.107
+    item  17 (cluster 0): dist=0.143
+    item  13 (cluster 0): dist=0.214
+    item   1 (cluster 0): dist=0.250
+  Cluster quality: 0.126 (higher = better separation)
+
+6. TOURNAMENT HASH PROPERTIES
+  Vertices: 8
+  Bits per hash: 28
+  Possible tournaments: 2^28 = 268,435,456
+  Hash size: 5 bytes
+  Distance range: [0, 28] arcs
+
+  Sorted vector hash:  c3=0, scores=[0, 1, 2, 3, 4, 5, 6, 7]
+  (Transitive = perfectly sorted data)
+  Random data avg c3: 0.0 (max possible = 0)
