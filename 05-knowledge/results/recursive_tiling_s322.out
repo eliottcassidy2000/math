@@ -1,0 +1,125 @@
+
+========================================================================
+  THE STAIRCASE DECOMPOSITION: VISUAL
+========================================================================
+
+  n=5: δ_3 has 6 tiles
+
+      j=2   j=3   j=4 
+  i=0  BOT   BOT   APEX 
+  i=1   ·    OVER  RGT  
+  i=2   ·     ·    RGT  
+
+    Overlap (interior): 1 tiles
+    Bottom row (vertex 0): 3 tiles
+    Right column (vertex 4): 3 tiles
+    Apex overlap: 1 tile (in both bottom and right)
+    Boundary (bottom ∪ right): 5 unique tiles
+    Total: 1 interior + 5 boundary = 6 = m ✓
+
+  n=6: δ_4 has 10 tiles
+
+      j=2   j=3   j=4   j=5 
+  i=0  BOT   BOT   BOT   APEX 
+  i=1   ·    OVER  OVER  RGT  
+  i=2   ·     ·    OVER  RGT  
+  i=3   ·     ·     ·    RGT  
+
+    Overlap (interior): 3 tiles
+    Bottom row (vertex 0): 4 tiles
+    Right column (vertex 5): 4 tiles
+    Apex overlap: 1 tile (in both bottom and right)
+    Boundary (bottom ∪ right): 7 unique tiles
+    Total: 3 interior + 7 boundary = 10 = m ✓
+
+  n=7: δ_5 has 15 tiles
+
+      j=2   j=3   j=4   j=5   j=6 
+  i=0  BOT   BOT   BOT   BOT   APEX 
+  i=1   ·    OVER  OVER  OVER  RGT  
+  i=2   ·     ·    OVER  OVER  RGT  
+  i=3   ·     ·     ·    OVER  RGT  
+  i=4   ·     ·     ·     ·    RGT  
+
+    Overlap (interior): 6 tiles
+    Bottom row (vertex 0): 5 tiles
+    Right column (vertex 6): 5 tiles
+    Apex overlap: 1 tile (in both bottom and right)
+    Boundary (bottom ∪ right): 9 unique tiles
+    Total: 6 interior + 9 boundary = 15 = m ✓
+
+
+========================================================================
+  THE RECURSIVE PEELING
+========================================================================
+
+
+  THE STAIRCASE PEELS LAYER BY LAYER:
+
+  δ_{n-2} → δ_{n-3} → δ_{n-4} → ... → δ_1 → δ_0
+
+  At each step, we remove ONE layer from the triangle.
+  The layer can be peeled from three directions:
+
+  PEEL BOTTOM (remove row i=0): removes n-2 tiles
+    These are vertex 0's non-base connections: (0,2), (0,3), ..., (0,n-1)
+    = Mode A deletion of the SOURCE vertex
+
+  PEEL RIGHT (remove column j=n-1): removes n-2 tiles
+    These are vertex n-1's non-base connections: (0,n-1), (1,n-1), ..., (n-3,n-1)
+    = Mode A deletion of the SINK vertex
+
+  PEEL HYPOTENUSE (remove anti-diagonal): removes floor((n-2)/2) tiles
+    These are the tiles with range 2: (0,2), (1,3), (2,4), ...
+    = Mode A deletion of the "DIAGONAL vertex"
+
+  PEEL BOTH LEGS (remove bottom row AND right column): Mode B
+    Removes 2(n-3) + 1 tiles (bottom_unique + right_unique + apex)
+    = 2n-5 tiles removed, leaving C(n-3,2) = overlap
+
+  Each peeling order gives a DIFFERENT recursive decomposition
+  of the tiling into sub-tilings.
+
+
+========================================================================
+  THE FULL RECURSIVE TREE AT n=5
+========================================================================
+
+  n=5: δ_3 = 6 tiles: A=(0,2) B=(0,3) C=(0,4) D=(1,3) E=(1,4) F=(2,4)
+
+  PEELING VERTEX 0 AT EACH LEVEL:
+
+  Level 0: δ_3 = {A,B,C,D,E,F} (6 tiles, vertices {0,1,2,3,4})
+    Peel i=0: remove {A=(0,2), B=(0,3), C=(0,4)} [3 tiles = n-2]
+    Remaining: δ_2 = {D=(1,3), E=(1,4), F=(2,4)} [3 tiles, vertices {1,2,3,4}]
+
+  Level 1: δ_2 = {D,E,F} (3 tiles, vertices {1,2,3,4})
+    Peel i=1: remove {D=(1,3), E=(1,4)} [2 tiles = n-3]
+    Remaining: δ_1 = {F=(2,4)} [1 tile, vertices {2,3,4}]
+
+  Level 2: δ_1 = {F} (1 tile, vertices {2,3,4})
+    Peel i=2: remove {F=(2,4)} [1 tile = n-4]
+    Remaining: δ_0 = {} [0 tiles, vertices {3,4}]
+
+  Level 3: δ_0 = {} (0 tiles, vertices {3,4}). BASE CASE.
+
+  THE RECURSIVE FORMULA:
+    tiling(δ_{k}) = (tiling(δ_{k-1}), boundary_bits[k])
+    where boundary_bits[k] has k bits (one per tile in the peeled row).
+
+  Total bits: Σ_{k=1}^{n-2} k = C(n-1, 2) = m. ✓
+
+  This gives a FACTORIZATION of the tiling word:
+    m-bit tiling = (1 bit from δ_1) | (2 bits from δ_2 boundary) | (3 bits from δ_3 boundary)
+    = F | (D,E) | (A,B,C)
+    = [1 bit] [2 bits] [3 bits]
+
+  In general: m = 1 + 2 + 3 + ... + (n-2) = T_{n-2} = C(n-1,2).
+  The tiling decomposes into n-2 LAYERS of sizes 1, 2, ..., n-2.
+
+
+========================================================================
+  THE LAYER DECOMPOSITION
+========================================================================
+
+  n=5 (m=6):
