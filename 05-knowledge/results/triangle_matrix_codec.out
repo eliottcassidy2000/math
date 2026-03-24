@@ -1,0 +1,94 @@
+================================================================================
+  TRIANGLE MATRIX CODEC
+  kind-pasteur-2026-03-25-S20gk
+================================================================================
+
+  1. CORRELATION MATRIX (real-valued, symmetric):
+    8x8: 90% accuracy at layer 6/7 (62/64 = 97% entries)
+    8x8: 95% accuracy at layer 6/7 (62/64 = 97% entries)
+    8x8: 99% accuracy at layer 6/7 (62/64 = 97% entries)
+    16x16: 90% accuracy at layer 11/15 (236/256 = 92% entries)
+    16x16: 95% accuracy at layer 13/15 (250/256 = 98% entries)
+    16x16: 99% accuracy at layer 14/15 (254/256 = 99% entries)
+    32x32: 90% accuracy at layer 25/31 (982/1024 = 96% entries)
+    32x32: 95% accuracy at layer 29/31 (1018/1024 = 99% entries)
+    32x32: 99% accuracy at layer 31/31 (1024/1024 = 100% entries)
+
+  2. BAND-LIMITED MATRIX (exponential decay from diagonal):
+    16x16 layer  0: energy= 35.2%, cumul= 35.2%
+    16x16 layer  1: energy= 34.1%, cumul= 69.3%
+    16x16 layer  2: energy= 16.3%, cumul= 85.6%
+    16x16 layer  3: energy=  7.8%, cumul= 93.4%
+    16x16 layer  4: energy=  3.4%, cumul= 96.9%
+    16x16 layer  5: energy=  1.7%, cumul= 98.6%
+    16x16 layer  6: energy=  0.8%, cumul= 99.3%
+    32x32 layer  0: energy= 34.8%, cumul= 34.8%
+    32x32 layer  1: energy= 33.4%, cumul= 68.1%
+    32x32 layer  2: energy= 15.7%, cumul= 83.8%
+    32x32 layer  3: energy=  8.1%, cumul= 91.9%
+    32x32 layer  4: energy=  4.1%, cumul= 96.1%
+    32x32 layer  5: energy=  2.0%, cumul= 98.1%
+    32x32 layer  6: energy=  1.0%, cumul= 99.0%
+    64x64 layer  0: energy= 33.6%, cumul= 33.6%
+    64x64 layer  1: energy= 32.9%, cumul= 66.5%
+    64x64 layer  2: energy= 16.6%, cumul= 83.2%
+    64x64 layer  3: energy=  8.2%, cumul= 91.4%
+    64x64 layer  4: energy=  4.2%, cumul= 95.6%
+    64x64 layer  5: energy=  2.2%, cumul= 97.8%
+    64x64 layer  6: energy=  1.1%, cumul= 98.9%
+    64x64 layer  7: energy=  0.5%, cumul= 99.4%
+
+  3. TRANSITION MATRIX (Markov chain):
+    8x8 Markov: 90% at layer 4 (81% entries)
+    8x8 Markov: 95% at layer 5 (91% entries)
+    8x8 Markov: 99% at layer 7 (100% entries)
+    16x16 Markov: 90% at layer 4 (48% entries)
+    16x16 Markov: 95% at layer 5 (57% entries)
+    16x16 Markov: 99% at layer 8 (78% entries)
+
+  4. COMPRESSION RATIOS (lossy, keeping first k layers):
+    16x16    low: keep 4/15 layers, 2.1x compression, 80.3% quality
+    16x16 medium: keep 8/15 layers, 1.3x compression, 93.6% quality
+    16x16   high: keep 12/15 layers, 1.0x compression, 97.1% quality
+    32x32    low: keep 8/31 layers, 2.2x compression, 87.1% quality
+    32x32 medium: keep 16/31 layers, 1.3x compression, 92.3% quality
+    32x32   high: keep 24/31 layers, 1.1x compression, 96.6% quality
+    64x64    low: keep 16/63 layers, 2.2x compression, 83.1% quality
+    64x64 medium: keep 32/63 layers, 1.3x compression, 88.7% quality
+    64x64   high: keep 48/63 layers, 1.1x compression, 94.5% quality
+
+  5. SPEED (decompose + reconstruct):
+    16x16: encode=0.0ms decode=0.0ms
+    32x32: encode=0.1ms decode=0.1ms
+    64x64: encode=0.2ms decode=0.2ms
+    128x128: encode=0.7ms decode=0.7ms
+    256x256: encode=4.6ms decode=4.3ms
+
+============================================================
+WHY THIS WORKS
+============================================================
+
+The diagonal decomposition works because MOST real-world matrices
+have BANDWIDTH STRUCTURE: entries decay with distance from diagonal.
+
+  Correlation matrices: corr(X_i, X_j) ~ exp(-|i-j|/tau)
+  Transition matrices: P(i->j) ~ exp(-|i-j|/sigma)
+  Distance matrices: d(i,j) ~ |i-j| (for ordered data)
+  Adjacency of path/cycle graphs: band-limited by construction
+
+The triangular decomposition C(k+1,2) + C(k,2) = k^2 orders entries
+by diagonal distance, putting MOST IMPORTANT entries first.
+
+For a matrix with bandwidth b (entries beyond b-th diagonal are ~0):
+  First b layers capture ~99% of the information
+  Compression ratio ~ N/b (for large N)
+  Progressive decode gives useful approximation from b << N layers
+
+This is the TOURNAMENT PERSPECTIVE on matrix compression:
+  The matrix IS two tournament-style tilings
+  The layers ARE the recursion levels of the tiling
+  Progressive decode follows the tournament chain
+  Delta encoding exploits the tiling XOR structure
+
+DONE.
+================================================================================
