@@ -1,0 +1,200 @@
+========================================================================
+  CONSTRAINING H AND |Aut| FROM DUAL METRICS
+  opus-2026-03-24-S283
+========================================================================
+
+########################################################################
+  n = 4: CONSTRAINING H AND |Aut| FROM W AND B
+########################################################################
+
+  SUM CONSTRAINTS:
+  Σ fiber = 8 = 2^3 = 8
+  Σ H/|Aut| × mult = 8 = 2^3 = 8
+  Σ n!/|Aut| × mult = 64 = 2^6 = 64
+
+  PER-CLASS DATA:
+   mid    H |Aut|  SC  fiber  W_self  B_self  B_off  W_deg  neut/m
+     0    1     1  SC      1       0       0      1      2    0.00
+     1    3     3  NS      2       0       0      2      2    0.00
+     2    5     1  SC      5      10       2      3      2    2.00
+
+  Corr(|Aut|, W_self) = -0.5000
+  Corr(|Aut|, neutral_frac) = -0.5000
+  Corr(|Aut|, B_self_frac) = -0.5000
+
+  COMPLEMENT SPREAD:
+    Class 0 (H=1): 1 complement neighbors, B_self=0/1
+    Class 1 (H=3): 1 complement neighbors, B_self=0/2
+    Class 2 (H=5): 2 complement neighbors, B_self=2/5
+
+  CONCENTRATION: Σ fiber² / Σ fiber = 3.75
+  If uniform: concentration = 2.67
+  Ratio: 1.4062
+
+  Time: 0.0s
+
+########################################################################
+  n = 5: CONSTRAINING H AND |Aut| FROM W AND B
+########################################################################
+
+  SUM CONSTRAINTS:
+  Σ fiber = 64 = 2^6 = 64
+  Σ H/|Aut| × mult = 64 = 2^6 = 64
+  Σ n!/|Aut| × mult = 1024 = 2^10 = 1024
+
+  PER-CLASS DATA:
+   mid    H |Aut|  SC  fiber  W_self  B_self  B_off  W_deg  neut/m
+     0    1     1  SC      1       0       0      1      4    0.00
+     1    3     3  NS      2       0       0      2      3    0.00
+     2    5     1  NS     10      20       0     10      7    2.00
+     3   11     1  SC     11      12       4      7      5    1.09
+     4   13     1  SC     13       0       4      9      5    0.00
+     5    9     1  SC      9       0       0      9      5    0.00
+     6    9     1  SC      9       8       0      9      5    0.89
+     7   15     5  SC      3       0       0      3      2    0.00
+     8    3     3  SC      1       0       0      1      3    0.00
+     9   15     3  SC      5       0       0      5      3    0.00
+
+  Corr(|Aut|, W_self) = -0.4454
+  Corr(|Aut|, neutral_frac) = -0.4474
+  Corr(|Aut|, B_self_frac) = -0.3711
+
+  COMPLEMENT SPREAD:
+    Class 0 (H=1): 1 complement neighbors, B_self=0/1
+    Class 1 (H=3): 1 complement neighbors, B_self=0/2
+    Class 2 (H=5): 5 complement neighbors, B_self=0/10
+    Class 3 (H=11): 5 complement neighbors, B_self=4/11
+    Class 4 (H=13): 6 complement neighbors, B_self=4/13
+    Class 5 (H=9): 6 complement neighbors, B_self=0/9
+    Class 6 (H=9): 5 complement neighbors, B_self=0/9
+    Class 7 (H=15): 3 complement neighbors, B_self=0/3
+    Class 8 (H=3): 1 complement neighbors, B_self=0/1
+    Class 9 (H=15): 3 complement neighbors, B_self=0/5
+
+  CONCENTRATION: Σ fiber² / Σ fiber = 9.25
+  If uniform: concentration = 6.40
+  Ratio: 1.4453
+
+  Time: 0.0s
+
+########################################################################
+  n = 6: CONSTRAINING H AND |Aut| FROM W AND B
+########################################################################
+
+  SUM CONSTRAINTS:
+  Σ fiber = 1024 = 2^10 = 1024
+  Σ H/|Aut| × mult = 1024 = 2^10 = 1024
+  Σ n!/|Aut| × mult = 32768 = 2^15 = 32768
+
+  PER-CLASS DATA:
+   mid    H |Aut|  SC  fiber  W_self  B_self  B_off  W_deg  neut/m
+     0    1     1  SC      1       0       0      1      6    0.00
+     1    3     3  NS      2       0       0      2      5    0.00
+     2    9     1  NS     18      16       0     18     11    0.89
+     3   23     1  NS     46     116       0     46     10    2.52
+     4   33     1  SC     33      20       0     33      8    0.61
+     5   23     1  NS     46       0       4     42     13    0.00
+     6   15     1  NS     30      36       4     26     11    1.20
+     7   17     1  SC     17      24       0     17      7    1.41
+     8    5     1  SC      5      10       0      5      7    2.00
+     9   37     1  SC     37      78       0     37      7    2.11
+    10   11     1  NS     22      24       0     22     11    1.09
+    11   13     1  NS     26       0       0     26     11    0.00
+    12    9     1  NS     18       0       0     18     12    0.00
+    13   15     5  NS      6       0       0      6      3    0.00
+    14    3     3  NS      2       0       0      2      6    0.00
+    15   27     3  NS     18       0       0     18      7    0.00
+    16   15     3  NS     10       0       0     10      6    0.00
+    17    5     1  NS     10      20       0     10     11    2.00
+    18   37     1  NS     74      48       8     66     13    0.65
+    19   29     1  SC     29      20       0     29      8    0.69
+    20   25     1  NS     50      56       8     42     11    1.12
+    21   19     1  NS     38      20       4     34     12    0.53
+    22   45     3  SC     15      34       2     13      3    2.27
+    23   33     3  NS     22      12       0     22      6    0.55
+    24   43     1  NS     86     264      12     74      9    3.07
+    25   37     1  NS     74       0       0     74     11    0.00
+    26   29     1  SC     29       0       0     29      7    0.00
+    27   29     1  NS     58     100       4     54     13    1.72
+    28   45     3  SC     15       0       0     15      3    0.00
+    29   33     1  NS     66       0       0     66     12    0.00
+    30   41     1  SC     41      90       2     39      6    2.20
+    31   31     1  NS     62       0       4     58     11    0.00
+    32    9     9  SC      1       0       0      1      2    0.00
+    33   17     1  SC     17       0       0     17      7    0.00
+
+  Corr(|Aut|, W_self) = -0.2359
+  Corr(|Aut|, neutral_frac) = -0.2922
+  Corr(|Aut|, B_self_frac) = -0.1902
+
+  COMPLEMENT SPREAD:
+    Class 0 (H=1): 1 complement neighbors, B_self=0/1
+    Class 1 (H=3): 1 complement neighbors, B_self=0/2
+    Class 2 (H=9): 8 complement neighbors, B_self=0/18
+    Class 3 (H=23): 13 complement neighbors, B_self=0/46
+    Class 4 (H=33): 15 complement neighbors, B_self=0/33
+    Class 5 (H=23): 14 complement neighbors, B_self=4/46
+    Class 6 (H=15): 12 complement neighbors, B_self=4/30
+    Class 7 (H=17): 9 complement neighbors, B_self=0/17
+    Class 8 (H=5): 4 complement neighbors, B_self=0/5
+    Class 9 (H=37): 18 complement neighbors, B_self=0/37
+    Class 10 (H=11): 9 complement neighbors, B_self=0/22
+    Class 11 (H=13): 10 complement neighbors, B_self=0/26
+    Class 12 (H=9): 8 complement neighbors, B_self=0/18
+    Class 13 (H=15): 3 complement neighbors, B_self=0/6
+    Class 14 (H=3): 1 complement neighbors, B_self=0/2
+    Class 15 (H=27): 9 complement neighbors, B_self=0/18
+    Class 16 (H=15): 5 complement neighbors, B_self=0/10
+    Class 17 (H=5): 5 complement neighbors, B_self=0/10
+    Class 18 (H=37): 18 complement neighbors, B_self=8/74
+    Class 19 (H=29): 13 complement neighbors, B_self=0/29
+    Class 20 (H=25): 16 complement neighbors, B_self=8/50
+    Class 21 (H=19): 15 complement neighbors, B_self=4/38
+    Class 22 (H=45): 8 complement neighbors, B_self=2/15
+    Class 23 (H=33): 9 complement neighbors, B_self=0/22
+    Class 24 (H=43): 11 complement neighbors, B_self=12/86
+    Class 25 (H=37): 18 complement neighbors, B_self=0/74
+    Class 26 (H=29): 14 complement neighbors, B_self=0/29
+    Class 27 (H=29): 16 complement neighbors, B_self=4/58
+    Class 28 (H=45): 7 complement neighbors, B_self=0/15
+    Class 29 (H=33): 16 complement neighbors, B_self=0/66
+    Class 30 (H=41): 12 complement neighbors, B_self=2/41
+    Class 31 (H=31): 19 complement neighbors, B_self=4/62
+    Class 32 (H=9): 1 complement neighbors, B_self=0/1
+    Class 33 (H=17): 8 complement neighbors, B_self=0/17
+
+  CONCENTRATION: Σ fiber² / Σ fiber = 47.58
+  If uniform: concentration = 30.12
+  Ratio: 1.5799
+
+  Time: 0.2s
+
+========================================================================
+  THE GRAND IDENTITY
+========================================================================
+
+  THREE COUNTING IDENTITIES on the same set of V_n nodes:
+
+  1. TILING SUM:    Σ H(C)/|Aut(C)| × mult(C) = 2^{C(n-1,2)}
+  2. LABELED SUM:   Σ n!/|Aut(C)| × mult(C) = 2^{C(n,2)}
+  3. SZELE AVERAGE:  Σ H(C) × n!/|Aut(C)| × mult(C) = n! × 2^{C(n-1,2)}
+
+  From 1 and 2:
+     Σ n!/|Aut| / Σ H/|Aut| = 2^{n-1}
+     → the weighted average of n!/H over classes is 2^{n-1}
+
+  The WIGGLY MATRIX W determines identity 1 (via row sums).
+  The COMPLEMENT MATRIX B provides a SECOND independent view.
+  The BLUE/BLACK classification (SC vs NS) determines mult.
+
+  Together: W + B + SC/NS → three equations → constrain H, |Aut|, mult.
+
+  WHAT'S STILL NEEDED for full separation:
+  |Aut| cannot be read from W or B alone (it requires knowing the
+  full S_n action, not just the tiling model with fixed base path).
+  The tiling model has Stab(P_0) = {id}, so it cannot see |Aut| > 1.
+
+  BUT: H/|Aut| IS determined, and H can be recovered if we know
+  the EIGENVALUES of W (since H ≈ 2nd eigenvector of the metagraph).
+
+DONE.
