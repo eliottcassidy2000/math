@@ -1,0 +1,72 @@
+======================================================================
+  TOURNAMENT CODEC: Multi-Level Compression
+======================================================================
+
+  n=5:
+    Level 0 (raw):            10 bits  (C(5,2) = 10)
+    Level 1 (tiling):          6 bits  (C(4,2) = 6), ratio 1.67:1
+    Level 2 (fingerprint): ~  12 bits  (H + score + c3 + hw)
+    Level 3 (class):         4.0 bits  (log2(V) = 3.6)
+    Level 4 (entropy):       3.1 bits  (Shannon entropy)
+    Compression L0->L1: 1.67x
+    Compression L0->L3: 2.5x
+    Compression L0->L4: 3.2x
+    Roundtrip verified: L0 OK, L1 label-shifted (expected)
+
+  n=6:
+    Level 0 (raw):            15 bits  (C(6,2) = 15)
+    Level 1 (tiling):         10 bits  (C(5,2) = 10), ratio 1.50:1
+    Level 2 (fingerprint): ~  12 bits  (H + score + c3 + hw)
+    Level 3 (class):         6.0 bits  (log2(V) = 5.8)
+    Level 4 (entropy):       5.4 bits  (Shannon entropy)
+    Compression L0->L1: 1.50x
+    Compression L0->L3: 2.5x
+    Compression L0->L4: 2.8x
+    Roundtrip verified: L0 OK, L1 label-shifted (expected)
+
+  n=7:
+    Level 0 (raw):            21 bits  (C(7,2) = 21)
+    Level 1 (tiling):         15 bits  (C(6,2) = 15), ratio 1.40:1
+    Level 2 (fingerprint): ~  18 bits  (H + score + c3 + hw)
+    Level 3 (class):         9.0 bits  (log2(V) = 8.8)
+    Level 4 (entropy):       7.8 bits  (Shannon entropy)
+    Compression L0->L1: 1.40x
+    Compression L0->L3: 2.3x
+    Compression L0->L4: 2.7x
+    Roundtrip verified: L0 OK, L1 label-shifted (expected)
+
+  n=8:
+    Level 0 (raw):            28 bits  (C(8,2) = 28)
+    Level 1 (tiling):         21 bits  (C(7,2) = 21), ratio 1.33:1
+    Level 2 (fingerprint): ~  22 bits  (H + score + c3 + hw)
+    Level 3 (class):        13.0 bits  (log2(V) = 12.7)
+    Level 4 (entropy):      10.5 bits  (Shannon entropy)
+    Compression L0->L1: 1.33x
+    Compression L0->L3: 2.2x
+    Compression L0->L4: 2.7x
+    Roundtrip verified: L0 OK, L1 label-shifted (expected)
+
+======================================================================
+COMPRESSION SUMMARY
+======================================================================
+
+  Level 0 -> Level 1 (tiling): LOSSLESS for labeled tournament
+    Saves n-1 bits by fixing a base path. Ratio: C(n,2)/C(n-1,2) ~ 1 + 2/(n-2)
+    At n=8: 28 -> 21 bits = 1.33x compression
+
+  Level 1 -> Level 3 (class): LOSSY (forgets labeling)
+    Saves all label information. Ratio: C(n-1,2) / log2(V)
+    At n=8: 21 -> 12.7 bits = 1.65x additional compression
+
+  Level 3 -> Level 4 (entropy): LOSSY (variable-length)
+    Saves based on class frequency. Ratio: log2(V) / H(pi)
+    At n=8: 12.7 -> 10.5 bits = 1.21x additional compression
+
+  TOTAL L0->L4: 28 -> 10.5 bits at n=8 = 2.67x compression
+    (raw tournament -> entropy-coded class)
+
+  The PRACTICAL SWEET SPOT is Level 1 (tiling): lossless with 1.3x savings.
+  For databases: Level 3 (class) with 2.2x savings.
+  For ML: Level 2 (fingerprint) as a feature vector.
+
+DONE.
