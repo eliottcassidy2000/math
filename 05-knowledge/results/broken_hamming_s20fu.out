@@ -1,0 +1,43 @@
+================================================================================
+  THE BROKEN HAMMING SCHEME AT EACH n
+  kind-pasteur-2026-03-24-S20fu
+================================================================================
+
+  n = 4, m = 3... V=4, residual=0.1060, P1^2~0.628*P2+0.171*P1+0.210*I, max_err=0.0344 (0s)
+
+  n = 5, m = 6... V=12, residual=0.2285, P1^2~0.834*P2+0.058*P1+0.100*I, max_err=0.0594 (0s)
+
+  n = 6, m = 10... V=56, residual=0.3181, P1^2~0.902*P2+0.023*P1+0.065*I, max_err=0.0296 (3s)
+
+  n = 7, m = 15... V=456, residual=0.3548, P1^2~0.939*P2+0.008*P1+0.047*I, max_err=0.0240 (820s)
+
+======================================================================
+  BROKEN HAMMING SCHEME: SUMMARY ACROSS n
+======================================================================
+
+    n    m      V  Residual%  P2 coeff  P1 coeff  I coeff   MaxErr
+    4    3      4     10.60%    0.6276    0.1708   0.2101   0.0344
+    5    6     12     22.85%    0.8341    0.0583   0.0996   0.0594
+    6   10     56     31.81%    0.9023    0.0230   0.0650   0.0296
+    7   15    456     35.48%    0.9394    0.0079   0.0466   0.0240
+
+INTERPRETATION:
+  - Residual% measures how badly W_1^2 fails to lie in span{I, W_1, W_2}.
+  - P2 coefficient measures how much of P_1^2 is "pure d=2 step."
+  - If the scheme were exact: residual = 0, P2 coeff = known formula.
+
+TREND:
+  Does the breaking INCREASE or DECREASE with n?
+  If residual% increases: the metagraph becomes LESS regular.
+  If P2 coefficient stabilizes: the Markov structure is robust.
+
+
+  COMPARISON WITH OTHER n-DEPENDENT PHENOMENA:
+    n  Residual%  SC frag?  Skip gap  Overlap Grid-sym exp
+    4     10.60%         N      2.0x        0           -1
+    5     22.85%         N       ~2x        0           -2
+    6     31.81%         N      1.6x        5           -4
+    7     35.48%         N       14x        0           -6
+
+DONE.
+================================================================================
