@@ -1,0 +1,177 @@
+
+========================================================================
+  HOFFMAN BOUNDS ON THE METAGRAPH G_n/Z_2
+========================================================================
+
+  n=5: 10 merged classes
+
+  ADJACENCY MATRIX EIGENVALUES:
+    λ_max = 4.6405, λ_min = -2.9001
+    λ₁/λ₂ = 2.5063
+
+  HOFFMAN BOUNDS:
+    α(G) ≤ 3.85  (independence number)
+    χ(G) ≥ 2.60  (chromatic number, adjacency)
+    χ(G) ≥ 2.42  (chromatic number, weight matrix)
+
+  ACTUAL VALUES:
+    ω(G) = 4  (clique number)
+    χ(G) = 4  (chromatic number, known from S313)
+    n-1 = 4
+
+  HOFFMAN vs ACTUAL:
+    Hoffman χ ≥ 2.60 vs actual χ = 4
+    Gap: 1.40 (Hoffman captures 65.0% of the truth)
+
+  WEIGHT MATRIX EIGENVALUES (top 5):
+    λ_0 = 54.8803
+    λ_1 = 18.3446
+    λ_2 = 11.6379
+    λ_3 = 6.8391
+    λ_4 = 2.6535
+    λ_min = -38.5458
+
+  n=6: 34 merged classes
+
+  ADJACENCY MATRIX EIGENVALUES:
+    λ_max = 9.7796, λ_min = -5.3527
+    λ₁/λ₂ = 1.7811
+
+  HOFFMAN BOUNDS:
+    α(G) ≤ 12.03  (independence number)
+    χ(G) ≥ 2.83  (chromatic number, adjacency)
+    χ(G) ≥ 3.04  (chromatic number, weight matrix)
+
+  ACTUAL VALUES:
+    ω(G) = 5  (clique number)
+    χ(G) = 5  (chromatic number, known from S313)
+    n-1 = 5
+
+  HOFFMAN vs ACTUAL:
+    Hoffman χ ≥ 2.83 vs actual χ = 5
+    Gap: 2.17 (Hoffman captures 56.5% of the truth)
+
+  WEIGHT MATRIX EIGENVALUES (top 5):
+    λ_0 = 536.1415
+    λ_1 = 245.7556
+    λ_2 = 206.5002
+    λ_3 = 183.7379
+    λ_4 = 122.9226
+    λ_min = -262.9223
+
+
+========================================================================
+  THE DELSARTE-KRAWTCHOUK CONNECTION
+========================================================================
+
+
+  THE THREE-WAY CONNECTION: Hoffman-Delsarte-Krawtchouk
+
+  1. HOFFMAN BOUND (graph-theoretic):
+     χ(G) ≥ 1 - λ_max(A) / λ_min(A)
+     Uses the adjacency eigenvalues of the metagraph.
+     At n=5: gives χ ≥ 2.4 (actual is 4).
+     At n=6: gives χ ≥ ? (actual is 5).
+     The Hoffman bound is LOOSE for the metagraph.
+
+  2. DELSARTE LP BOUND (coding-theoretic):
+     For the Hamming scheme H(m, 2):
+     max Σ B_i subject to:
+       B_0 = 1
+       B_i ≥ 0
+       Σ B_i K_k(i; m) ≥ 0 for all k
+     where B_i = (1/|C|) × A_i = normalized weight distribution.
+
+     This bounds the maximum code size A(m, d) in the Hamming scheme.
+     Each tournament iso class IS a code with parameters (m, fiber, d_min).
+
+  3. KRAWTCHOUK BAND-LIMITEDNESS:
+     hat{H}_k = 0 for k > m/2.
+     This IS a constraint on the Krawtchouk expansion of the
+     class indicator functions.
+     In Delsarte terms: the class partition satisfies
+     Σ_C fiber(C)^2 × K_k(weight dist of C) = 0 for k > m/2.
+
+  THE SYNTHESIS:
+  The Hoffman bound on the metagraph is WEAK because the metagraph
+  is far from regular (degree varies widely).
+
+  But the DELSARTE bound on the Hamming scheme is STRONG because
+  it uses ALL the Krawtchouk polynomials as constraints.
+
+  The band-limitedness provides EXTRA constraints that Delsarte
+  doesn't normally have. These extra constraints come from the
+  TOURNAMENT STRUCTURE (OCF, Rédei's theorem) and could potentially
+  tighten the Delsarte bound beyond its usual range.
+
+  SPECIFICALLY: the constraint hat{H}_k = 0 for k > m/2 says that
+  the class partition is "spectrally simple" — it doesn't use
+  the full Krawtchouk basis. This spectral simplicity should
+  constrain the chromatic number.
+
+  CONJECTURE: The band-limited Delsarte bound gives χ = n-1 exactly.
+
+
+========================================================================
+  APPLYING DELSARTE TO TOURNAMENT CLASSES
+========================================================================
+
+  WEIGHT DISTRIBUTIONS AND KRAWTCHOUK CONSTRAINTS (n=5):
+
+  mid  H    fiber  weight dist A_i                K constraints  
+  -----------------------------------------------------------------
+  0    1    1      0:1                            ✓ 
+  1    3    2      1:2                            ✗ tight at k=[3]
+  6    3    1      1:1                            ✗ tight at k=[3]
+  2    5    10     1:2, 2:6, 3:2                  ✗ 
+  3    9    9      1:1, 3:4, 4:2, 5:2             ✗ tight at k=[5]
+  4    9    9      2:5, 3:1, 4:2, 6:1             ✗ tight at k=[1, 5]
+  5    11   11     2:2, 3:3, 4:5, 5:1             ✗ 
+  8    13   13     2:1, 3:9, 5:3                  ✗ 
+  7    15   5      2:1, 4:4                       ✗ 
+  9    15   3      3:1, 4:2                       ✗ 
+
+========================================================================
+  THE HOFFMAN-DELSARTE-KRAWTCHOUK TRIANGLE
+========================================================================
+
+
+  THE UNIFIED PICTURE:
+
+  THREE BOUNDS ON THE SAME OBJECT:
+
+  1. HOFFMAN (graph eigenvalues):
+     χ(metagraph) ≥ 1 - λ_max/λ_min
+     WEAK because the metagraph is far from regular.
+     At n=5: gives χ ≥ 2.4 (actual 4).
+
+  2. DELSARTE (Krawtchouk LP):
+     Bounds the maximum code size in H(m, 2).
+     MEDIUM because it constrains individual classes
+     but not their pairwise interactions.
+
+  3. KRAWTCHOUK BAND-LIMITED (our discovery):
+     hat{H}_k = 0 for k > m/2.
+     STRONG because it constrains the GLOBAL structure
+     of the class partition.
+
+  THE POTENTIAL PROOF OF χ = n-1:
+
+  The sl(n) framework (S313) says χ = rank(A_{n-1}) = n-1.
+  The Lie-theoretic argument uses the Coxeter complex structure.
+
+  The Hoffman-Delsarte approach would need:
+  1. Show the metagraph has clique number ≥ n-1 (verified n ≤ 6)
+  2. Show Hoffman bound ≥ n-1 (NOT achieved with current eigenvalues)
+  3. OR: use the Delsarte LP with band-limitedness as extra constraint
+     to force χ ≥ n-1.
+
+  The MOST PROMISING route: combine the sl(n) structure with
+  the Delsarte constraints. The sl(n) representation gives the
+  Krawtchouk eigenvalues, and the Delsarte LP with band-limited
+  constraints may force the chromatic number to equal the rank.
+
+  This would be a SPECTRAL PROOF of χ = n-1:
+  purely algebraic, using Krawtchouk + Lie theory + LP duality.
+
+Done. opus-2026-03-24-S316
