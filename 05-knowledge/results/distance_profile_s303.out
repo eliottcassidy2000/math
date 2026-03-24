@@ -1,0 +1,164 @@
+========================================================================
+  DISTANCE PROFILES AND PALINDROMICITY
+  opus-2026-03-24-S303
+========================================================================
+
+########################################################################
+  n = 3
+########################################################################
+  V=2, m=1. Built in 0.0s
+  Diameter: 1
+  Distance profile from transitive: [1, 1]
+  Sum: 2 (should be 2)
+  PALINDROMIC: True
+  GF: P(x) = 1 + 1x
+  P(1) = 2 = V
+  P(-1) = 0
+  Fiber-weighted profile: [1, 1]
+  Sum: 2 (should be 2)
+  Fiber-weighted PALINDROMIC: True
+
+  H DISTRIBUTION BY DISTANCE:
+    d=0: 1 classes, SC=1, H=[1], mean_H=1.0, fiber_sum=1
+    d=1: 1 classes, SC=1, H=[3], mean_H=3.0, fiber_sum=1
+
+  Profile from REGULAR (H=3): [1, 1]
+  PALINDROMIC: True
+
+########################################################################
+  n = 4
+########################################################################
+  V=3, m=3. Built in 0.0s
+  Diameter: 1
+  Distance profile from transitive: [1, 2]
+  Sum: 3 (should be 3)
+  PALINDROMIC: False
+  GF: P(x) = 1 + 2x
+  P(1) = 3 = V
+  P(-1) = -1
+  Fiber-weighted profile: [1, 7]
+  Sum: 8 (should be 8)
+  Fiber-weighted PALINDROMIC: False
+
+  H DISTRIBUTION BY DISTANCE:
+    d=0: 1 classes, SC=1, H=[1], mean_H=1.0, fiber_sum=1
+    d=1: 2 classes, SC=1, H=[3, 5], mean_H=4.0, fiber_sum=7
+
+  Profile from REGULAR (H=5): [1, 2]
+  PALINDROMIC: False
+
+########################################################################
+  n = 5
+########################################################################
+  V=10, m=6. Built in 0.0s
+  Diameter: 3
+  Distance profile from transitive: [1, 4, 4, 1]
+  Sum: 10 (should be 10)
+  PALINDROMIC: True
+  GF: P(x) = 1 + 4x + 4x^2 + 1x^3
+  P(1) = 10 = V
+  P(-1) = 0
+  Fiber-weighted profile: [1, 22, 38, 3]
+  Sum: 64 (should be 64)
+  Fiber-weighted PALINDROMIC: False
+
+  H DISTRIBUTION BY DISTANCE:
+    d=0: 1 classes, SC=1, H=[1], mean_H=1.0, fiber_sum=1
+    d=1: 4 classes, SC=2, H=[3, 3, 5, 9], mean_H=5.0, fiber_sum=22
+    d=2: 4 classes, SC=4, H=[9, 11, 13, 15], mean_H=12.0, fiber_sum=38
+    d=3: 1 classes, SC=1, H=[15], mean_H=15.0, fiber_sum=3
+
+########################################################################
+  n = 6
+########################################################################
+  V=34, m=10. Built in 0.2s
+  Diameter: 4
+  Distance profile from transitive: [1, 6, 13, 11, 3]
+  Sum: 34 (should be 34)
+  PALINDROMIC: False
+  GF: P(x) = 1 + 6x + 13x^2 + 11x^3 + 3x^4
+  P(1) = 34 = V
+  P(-1) = 0
+  Fiber-weighted profile: [1, 54, 342, 511, 116]
+  Sum: 1024 (should be 1024)
+  Fiber-weighted PALINDROMIC: False
+
+  H DISTRIBUTION BY DISTANCE:
+    d=0: 1 classes, SC=1, H=[1], mean_H=1.0, fiber_sum=1
+    d=1: 6 classes, SC=2, H=[3, 3, 5, 5, 9, 17], mean_H=7.0, fiber_sum=54
+    d=2: 13 classes, SC=4, H=[9, 9, 11, 13, 15, 15, 17, 19]..., mean_H=19.3, fiber_sum=342
+    d=3: 11 classes, SC=3, H=[15, 25, 29, 29, 29, 31, 33, 33]..., mean_H=30.8, fiber_sum=511
+    d=4: 3 classes, SC=2, H=[43, 45, 45], mean_H=44.3, fiber_sum=116
+
+########################################################################
+  n = 7
+########################################################################
+  V=272, m=15. Built in 13.3s
+  Diameter: 7
+  Distance profile from transitive: [1, 9, 38, 79, 90, 46, 7, 2]
+  Sum: 272 (should be 272)
+  PALINDROMIC: False
+  GF: P(x) = 1 + 9x + 38x^2 + 79x^3 + 90x^4 + 46x^5 + 7x^6 + 2x^7
+  P(1) = 272 = V
+  P(-1) = 0
+  Fiber-weighted profile: [1, 119, 1640, 7645, 13825, 8229, 1243, 66]
+  Sum: 32768 (should be 32768)
+  Fiber-weighted PALINDROMIC: False
+
+  H DISTRIBUTION BY DISTANCE:
+    d=0: 1 classes, SC=1, H=[1], mean_H=1.0, fiber_sum=1
+    d=1: 9 classes, SC=3, H=[3, 3, 3, 5, 5, 9, 9, 17]..., mean_H=9.7, fiber_sum=119
+    d=2: 38 classes, SC=10, H=[9, 9, 9, 9, 11, 11, 13, 13]..., mean_H=29.5, fiber_sum=1640
+    d=3: 79 classes, SC=17, H=[15, 15, 25, 25, 27, 29, 29, 29]..., mean_H=59.9, fiber_sum=7645
+    d=4: 90 classes, SC=25, H=[43, 43, 45, 45, 57, 61, 65, 65]..., mean_H=94.2, fiber_sum=13825
+    d=5: 46 classes, SC=25, H=[91, 99, 101, 105, 109, 109, 111, 111]..., mean_H=131.1, fiber_sum=8229
+    d=6: 7 classes, SC=5, H=[147, 151, 151, 153, 153, 159, 175], mean_H=155.6, fiber_sum=1243
+    d=7: 2 classes, SC=2, H=[171, 189], mean_H=180.0, fiber_sum=66
+
+  Profile from REGULAR (H=189): [1, 1, 7, 37, 86, 94, 39, 7]
+  PALINDROMIC: False
+
+========================================================================
+  SUMMARY: DISTANCE PROFILES
+========================================================================
+    n  diam                                  profile   palindrome
+    3     1                                   [1, 1]            ✓
+    4     1                                   [1, 2]            ✗
+    5     3                             [1, 4, 4, 1]            ✓
+    6     4                        [1, 6, 13, 11, 3]            ✗
+    7     7             [1, 9, 38, 79, 90, 46, 7, 2]            ✗
+
+========================================================================
+  REPRESENTATION-THEORETIC INTERPRETATION
+========================================================================
+
+  The distance profile P(d) from the transitive class is:
+    P(x) = Σ_{d=0}^{diam} #{classes at distance d} × x^d
+
+  PALINDROMICITY means: P(d) = P(diam - d) for all d.
+  This is equivalent to: x^diam × P(1/x) = P(x)
+  = the polynomial is SELF-RECIPROCAL.
+
+  In representation theory, self-reciprocal polynomials arise from:
+
+  1. GORENSTEIN RINGS: the h-vector of a Gorenstein simplicial complex
+     is palindromic (Dehn-Sommerville relations). If the metagraph's
+     independence complex is Gorenstein, the profile is palindromic.
+
+  2. POINCARÉ DUALITY: if the quotient Q_m / S_n has a manifold-like
+     structure with Poincaré duality, Betti numbers are palindromic.
+     The distance profile would be the "Betti numbers" of the
+     distance filtration.
+
+  3. MOLIEN SERIES: the cycle index of S_n on Q_m gives a polynomial
+     in which the coefficient of x^d counts orbits of Hamming weight d.
+     This IS the distance profile (if the transitive = weight 0).
+     Molien series of real representations are palindromic when the
+     group contains -1 (the complement involution).
+
+  4. SELF-DUALITY OF THE TILING SPACE: The complement involution
+     (flip all tiles) maps weight-d tilings to weight-(m-d) tilings.
+     If this involution preserves iso classes, it would give
+     palindromicity of the CLASS profile.
+
+DONE.
