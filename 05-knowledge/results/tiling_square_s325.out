@@ -1,0 +1,167 @@
+
+========================================================================
+  THE ARITHMETIC: δ_{n-2} + δ_{n-3} = (n-2)²
+========================================================================
+
+  n    δ_{n-2}  δ_{n-3}  sum        (n-2)²   match   
+  --------------------------------------------------
+  3    1        0        1          1        ✓       
+  4    3        1        4          4        ✓       
+  5    6        3        9          9        ✓       
+  6    10       6        16         16       ✓       
+  7    15       10       25         25       ✓       
+  8    21       15       36         36       ✓       
+  9    28       21       49         49       ✓       
+  10   36       28       64         64       ✓       
+  11   45       36       81         81       ✓       
+  12   55       45       100        100      ✓       
+  13   66       55       121        121      ✓       
+  14   78       66       144        144      ✓       
+
+========================================================================
+  THE SQUARE AT n=5
+========================================================================
+
+  n=5: side=3, square=9 cells
+
+  n-TILING (δ_3) → lower triangle + diagonal:
+
+    A  .  .
+    B  D  .
+    C  E  F
+
+  Tiles: [('A', (0, 2)), ('B', (0, 3)), ('C', (0, 4)), ('D', (1, 3)), ('E', (1, 4)), ('F', (2, 4))]
+
+  (n-1)-TILING (δ_2) → upper triangle:
+
+    .  b  .
+    .  .  .
+    .  .  .
+
+  Tiles: [('a', (0, 2)), ('b', (0, 3)), ('c', (1, 3))]
+
+  COMBINED SQUARE (n-tiling + (n-1)-tiling):
+
+    A  b  .
+    B  D  .
+    C  E  F
+
+  Filled: 7 / 9 cells
+
+========================================================================
+  THE CHAIN: n=3 → n=4 → n=5 → n=6 → ...
+========================================================================
+
+
+  THE DIRECTED CHAIN OF TILINGS:
+
+  Each consecutive pair (n, n-1) fills a (n-2)² square.
+  The chain looks like:
+
+  n=3 (δ_1, 1 tile) + n=2 (δ_0, 0 tiles) → 1² = 1 cell square
+  n=4 (δ_2, 3 tiles) + n=3 (δ_1, 1 tile) → 2² = 4 cell square
+  n=5 (δ_3, 6 tiles) + n=4 (δ_2, 3 tiles) → 3² = 9 cell square
+  n=6 (δ_4, 10 tiles) + n=5 (δ_3, 6 tiles) → 4² = 16 cell square
+  n=7 (δ_5, 15 tiles) + n=6 (δ_4, 10 tiles) → 5² = 25 cell square
+
+  OVERLAPS: consecutive squares SHARE the smaller tiling.
+  The n=4 tiling appears in BOTH the (4,3) square and the (5,4) square.
+  This creates a CHAIN where each tiling links two squares.
+
+  The chain structure:
+    [1²] ← δ_1 → [2²] ← δ_2 → [3²] ← δ_3 → [4²] ← δ_4 → [5²] ...
+
+  Each LINK (δ_k) is a tournament on k+2 vertices.
+  Each SQUARE ((k+1)²) contains two consecutive tournaments.
+
+  THE SQUARE MATRIX:
+  The (n-2)×(n-2) matrix M has:
+    M[r][c] = n-tiling bit for r ≥ c (lower + diagonal)
+    M[r][c] = (n-1)-tiling bit for r < c (upper)
+
+  This matrix encodes BOTH tournaments simultaneously.
+  It has (n-2)² entries = C(n-1,2) + C(n-2,2) bits.
+
+  WHAT DOES THIS MATRIX REPRESENT?
+
+  The lower triangle encodes the n-tournament's non-base arcs.
+  The upper triangle encodes the (n-1)-tournament's non-base arcs.
+  The diagonal encodes the n-tournament's "rightmost column"
+  = the new vertex's connections when going from n-1 to n.
+
+  So: THE DIAGONAL IS THE INSERTION LAYER.
+  M[r][r] = the bit that was added when extending from n-1 to n.
+  There are n-2 diagonal bits = the insertion layer from S322.
+
+  DIAGONAL = INSERTION LAYER:
+
+  n=5: diagonal tiles = [(0, 2), (1, 3), (2, 4)] (range-2 tiles)
+    insertion layer = [(0, 4), (1, 4), (2, 4)] (rightmost column)
+    These are DIFFERENT: diagonal = range-2, insertion = rightmost column.
+
+  n=6: diagonal tiles = [(0, 2), (1, 3), (2, 4), (3, 5)] (range-2 tiles)
+    insertion layer = [(0, 5), (1, 5), (2, 5), (3, 5)] (rightmost column)
+    These are DIFFERENT: diagonal = range-2, insertion = rightmost column.
+
+  n=7: diagonal tiles = [(0, 2), (1, 3), (2, 4), (3, 5), (4, 6)] (range-2 tiles)
+    insertion layer = [(0, 6), (1, 6), (2, 6), (3, 6), (4, 6)] (rightmost column)
+    These are DIFFERENT: diagonal = range-2, insertion = rightmost column.
+
+
+  CORRECTION: The diagonal is NOT the insertion layer.
+  The diagonal = RANGE-2 TILES (the atoms from S322).
+  The insertion layer = RIGHTMOST COLUMN (all ranges involving vertex n-1).
+
+  THE STRUCTURE OF THE SQUARE:
+    Upper triangle: (n-1)-tiling bits
+    Diagonal: range-2 tiles of the n-tiling (the ATOMS)
+    Lower triangle (excl diagonal): higher-range tiles of n-tiling
+
+  This decomposition separates the n-tiling into:
+    ATOMS (diagonal): n-2 range-2 tiles = the most local interactions
+    COMPOUNDS (lower triangle): C(n-2,2) higher-range tiles = longer-range interactions
+
+  And the (n-1)-tiling fills the UPPER triangle:
+    C(n-2,2) tiles = the previous level's compound tiles.
+
+  THE ATOMS of level n ARE the COMPOUNDS of level n+1's upper triangle!
+  Wait — that's not right either. Let me think about what the upper
+  triangle actually represents.
+
+  In the n-tiling: tiles (i,j) for j-i ≥ 2, 0 ≤ i < j ≤ n-1.
+  Map: row = j-2, col = i.
+  Lower triangle (row > col): j-2 > i → j > i+2 → range ≥ 3.
+  Diagonal (row = col): j-2 = i → j = i+2 → range = 2.
+  Upper part: row < col → j-2 < i → j < i+2 → range < 2 → impossible for tiles!
+
+  So the n-tiling fills the lower triangle + diagonal EXACTLY.
+  The upper triangle IS the (n-1)-tiling.
+
+  THE KEY: the (n-1)-tiling's tiles (i,j) with j ≤ n-2 map to
+  upper-triangle cells via some coordinate transformation.
+  With the FLIP: (n-1)-tile (i,j) → grid (col, row) = (j-2, i)
+  which gives row = i, col = j-2. For this to be upper: i < j-2,
+  i.e., j > i+2, i.e., range ≥ 3. And for range = 2: i = j-2 → diagonal.
+
+  So the (n-1)-tiling ALSO fills lower+diagonal of a grid, but
+  when TRANSPOSED it fills the upper triangle.
+
+  THE SQUARE IS:
+    M = lower(n-tiling) + upper((n-1)-tiling transposed)
+    = δ_{n-2} + δ_{n-3}^T
+
+
+========================================================================
+  THE SQUARE MATRIX AS A BINARY MATRIX
+========================================================================
+
+  n=5: 3×3 square matrix for ALL 64 × 8 = 512 tiling pairs:
+
+  n=5 tiling has 6 bits, n=4 tiling has 3 bits
+  Square: 3 × 3 = 9 cells ✓
+
+  n5=000000 n4=000 → M = [0, 0, 0, 0, 0, 0, 0, 0, 0] det=0 tr=0 rank=0
+  n5=000000 n4=101 → M = [0, 0, 0, 0, 0, 0, 0, 0, 0] det=0 tr=0 rank=0
+  n5=000000 n4=111 → M = [0, 1, 0, 0, 0, 0, 0, 0, 0] det=0 tr=0 rank=1
+  n5=000111 n4=000 → M = [1, 0, 0, 1, 0, 0, 1, 0, 0] det=0 tr=1 rank=1
+  n5=000111 n4=101 → M = [1, 0, 0, 1, 0, 0, 1, 0, 0] det=0 tr=1 rank=1
