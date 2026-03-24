@@ -1,0 +1,112 @@
+================================================================================
+  EDGE-CENTRIC VIEW: Counting metagraph edges through arc positions
+  kind-pasteur-2026-03-23-S20dz
+================================================================================
+
+n=3: (0.0s)
+  Arc position (0,1):
+    Distinct class pairs via this arc: 1
+    Self-loops via this arc: 4 out of 8
+    Self-loop rate: 0.500000
+  By S_n symmetry:
+    SL_full = C(n,2) * 4 = 12
+    SL_orbits = SL_full / n! = 2
+  E(G_n) = 1
+  edges_via_e = 1 (this is a LOWER BOUND on E)
+  edges_via_e / E = 1.0000
+  Lower bound (1 position): 1
+  Upper bound (all positions, no overlap): 3
+  Actual E: 1
+  Average positions per edge: 3.00
+  Total non-SL transitions: C(n,2) * 4 = 12
+  T_non_sl_orbits: 2
+  Should equal T - SL_mine: T-SL(opus) = 4 - 2 = 2
+
+n=4: (0.0s)
+  Arc position (0,1):
+    Distinct class pairs via this arc: 5
+    Self-loops via this arc: 24 out of 64
+    Self-loop rate: 0.375000
+  By S_n symmetry:
+    SL_full = C(n,2) * 24 = 144
+    SL_orbits = SL_full / n! = 6
+  E(G_n) = 5
+  edges_via_e = 5 (this is a LOWER BOUND on E)
+  edges_via_e / E = 1.0000
+  Lower bound (1 position): 5
+  Upper bound (all positions, no overlap): 30
+  Actual E: 5
+  Average positions per edge: 6.00
+  Total non-SL transitions: C(n,2) * 40 = 240
+  T_non_sl_orbits: 10
+  Should equal T - SL_mine: T-SL(opus) = 16 - 5 = 11
+
+n=5: (0.6s)
+  Arc position (0,1):
+    Distinct class pairs via this arc: 30
+    Self-loops via this arc: 176 out of 1024
+    Self-loop rate: 0.171875
+  By S_n symmetry:
+    SL_full = C(n,2) * 176 = 1760
+    SL_orbits = SL_full / n! = 14
+  E(G_n) = 30
+  edges_via_e = 30 (this is a LOWER BOUND on E)
+  edges_via_e / E = 1.0000
+  Lower bound (1 position): 30
+  Upper bound (all positions, no overlap): 300
+  Actual E: 30
+  Average positions per edge: 10.00
+  Total non-SL transitions: C(n,2) * 848 = 8480
+  T_non_sl_orbits: 70
+  Should equal T - SL_mine: T-SL(opus) = 88 - 20 = 68
+
+n=6: (179.6s)
+  Arc position (0,1):
+    Distinct class pairs via this arc: 290
+    Self-loops via this arc: 2528 out of 32768
+    Self-loop rate: 0.077148
+  By S_n symmetry:
+    SL_full = C(n,2) * 2528 = 37920
+    SL_orbits = SL_full / n! = 52
+  E(G_n) = 290
+  edges_via_e = 290 (this is a LOWER BOUND on E)
+  edges_via_e / E = 1.0000
+  Lower bound (1 position): 290
+  Upper bound (all positions, no overlap): 4350
+  Actual E: 290
+  Average positions per edge: 15.00
+  Total non-SL transitions: C(n,2) * 30240 = 453600
+  T_non_sl_orbits: 630
+  Should equal T - SL_mine: T-SL(opus) = 704 - 86 = 618
+
+======================================================================
+THE EDGE-CENTRIC FORMULA
+======================================================================
+
+For a FIXED arc position e = {0,1}:
+  self_loops_via_e = # labeled T where flipping e preserves class
+  edges_via_e = # distinct class pairs connected by flipping e
+
+By S_n symmetry:
+  SL_full = C(n,2) * self_loops_via_e
+  Total non-SL transitions = C(n,2) * (2^m - self_loops_via_e)
+
+The STABILIZER of arc {0,1} in S_n is S_2 x S_{n-2}:
+  S_2 = swap vertices 0 and 1
+  S_{n-2} = permute vertices {2,...,n-1}
+  |Stab| = 2 * (n-2)!
+
+By Burnside on the stabilizer:
+  edges_via_e = (1/|Stab|) * sum_{sigma in Stab} Fix_pair(sigma)
+  where Fix_pair(sigma) counts T with sigma(T)=T and [T]!=[T flip e]
+
+This is a Burnside sum over S_2 x S_{n-2} instead of S_n.
+|S_2 x S_{n-2}| = 2*(n-2)! which is MUCH smaller than n!.
+
+For n=9: |Stab| = 2*7! = 10080 vs |S_9| = 362880.
+The computation is 36x FASTER per arc position.
+And there are only C(n,2) = 36 positions (all equivalent).
+So edges_via_e determines everything!
+
+DONE.
+================================================================================
