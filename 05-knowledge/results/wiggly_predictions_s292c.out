@@ -1,0 +1,261 @@
+
+========================================================================
+  TILING STATISTICS FROM THE EULER PRODUCT
+========================================================================
+
+  PREDICTIONS FROM V_n = (2^{C(n,2)}/n!) × (1 + R(n)):
+
+  n    m      V_n        2^m          <fiber>      n!/2^{n-1}   R(n)        
+  ---------------------------------------------------------------------------
+  3    1      2          2            1.0          1.5          0.500000    
+  4    3      4          8            2.0          3.0          0.500000    
+  5    6      12         64           5.3          7.5          0.406250    
+  6    10     56         1024         18.3         22.5         0.230469    
+  7    15     456        32768        71.9         78.8         0.095886    
+  8    21     6880       2097152      304.8        315.0        0.033401    
+  9    28     191536     268435456    1401.5       1417.5       0.011425    
+  10   36     9733056    68719476736  7060.4       7087.5       0.003835    
+  11   45     903753248  35184372088832 38931.4      38981.2      0.001281    
+  12   55     154108311168 36028797018963968 233788.8     233887.5     0.000422    
+  13   66     4.85e+13   7.38e+19     1.52e+06     1.52e+06     1.37e-04    
+  14   78     2.84e+16   3.02e+23     1.06e+07     1.06e+07     4.34e-05    
+  15   91     3.10e+19   2.48e+27     7.98e+07     7.98e+07     1.36e-05    
+  16   105    6.35e+22   4.06e+31     6.39e+08     6.39e+08     4.17e-06    
+  17   120    2.45e+26   1.33e+36     5.43e+09     5.43e+09     1.27e-06    
+
+========================================================================
+  THE TRIANGULAR DEGREE SEQUENCE
+========================================================================
+
+  EVERY tiling has EXACTLY m = C(n-1,2) = T_{n-2} neighbors.
+
+  n  | m = T_{n-2} | meaning
+  ---|-------------|--------
+  3  | 1 = T_1     | each tiling has 1 neighbor (just one tile to flip!)
+  4  | 3 = T_2     | each tiling has 3 neighbors
+  5  | 6 = T_3     | each tiling has 6 neighbors
+  6  | 10 = T_4    | each tiling has 10 neighbors
+  7  | 15 = T_5    | each tiling has 15 neighbors
+  8  | 21 = T_6    | each tiling has 21 neighbors
+  9  | 28 = T_7    | each tiling has 28 neighbors
+  10 | 36 = T_8    | each tiling has 36 neighbors
+
+  THE TRIANGULAR NUMBER m = T_{n-2} = (n-2)(n-1)/2.
+
+  This counts the TILES in the staircase Young diagram δ_{n-2}.
+  The staircase has rows of length 1, 2, ..., n-2.
+  Sum = T_{n-2} = the triangular number.
+
+  The PERFECT MATCHINGS: each tile position defines one perfect matching
+  on Q_m (pairs every tiling with exactly one other). There are m such
+  matchings, and they are EDGE-DISJOINT (no two share an edge).
+  Together they partition ALL m × 2^{m-1} edges of Q_m into m groups
+  of 2^{m-1} edges each.
+
+
+========================================================================
+  PREDICTED NEUTRALITY AT LARGE n
+========================================================================
+
+  NEUTRALITY PREDICTION:
+
+  Observed: n=3: 0%, n=4: 42%, n=5: 10%, n=6: 5%
+
+  n=3: neutrality = 0.0000, m = 1
+  n=4: neutrality = 0.4167, m = 3
+  n=5: neutrality = 0.1042, m = 6
+  n=6: neutrality = 0.0516, m = 10
+
+  Test: neutrality ≈ 1/m?
+    n=3: neutrality/1/m = 0.0000
+    n=4: neutrality/1/m = 1.2501
+    n=5: neutrality/1/m = 0.6252
+    n=6: neutrality/1/m = 0.5160
+  Test: neutrality ≈ c/√m?
+    n=3: neutrality × √m = 0.0000
+    n=4: neutrality × √m = 0.7217
+    n=5: neutrality × √m = 0.2552
+    n=6: neutrality × √m = 0.1632
+
+========================================================================
+  THE AVERAGE FIBER FORMULA
+========================================================================
+
+  AVERAGE TILING FIBER = 2^m / V_n = 2^{C(n-1,2)} / V_n
+
+  From V_n ≈ 2^{C(n,2)} / n!:
+  <fiber> ≈ 2^{C(n-1,2)} × n! / 2^{C(n,2)}
+           = n! × 2^{C(n-1,2) - C(n,2)}
+           = n! × 2^{-(n-1)}
+           = n! / 2^{n-1}
+
+  This is EXACT in the limit R(n) → 0.
+
+  With correction: <fiber> = n!/(2^{n-1} × (1+R(n)))
+
+  The MEDIAN fiber is close to <fiber> when V_n is large
+  (most classes have fiber ≈ H ≈ n!/2^{n-1} when |Aut|=1).
+
+  AVERAGE FIBER TABLE:
+
+  n    m        n!/2^{n-1}      2^m/V_n         Szele bound 
+  -------------------------------------------------------
+  3    1        1.50            1.00            1.50        
+  4    3        3.00            2.00            3.00        
+  5    6        7.50            5.33            7.50        
+  6    10       22.50           18.29           22.50       
+  7    15       78.75           71.86           78.75       
+  8    21       315.00          304.82          315.00      
+  9    28       1417.50         1401.49         1417.50     
+  10   36       7087.50         7060.42         7087.50     
+  11   45       38981.25        38931.39        38981.25    
+  12   55       233887.50       233788.80       233887.50   
+  13   66       1520268.75      1520061.02      1520268.75  
+  14   78       1.06e+07       
+
+========================================================================
+  THE MUTATION GRAPH AT SCALE
+========================================================================
+
+  MUTATION GRAPH SCALE:
+
+  n    m        V_n          total_mut       avg_degree   edges/node     
+  -----------------------------------------------------------------
+  3    1        2            2               1.0          1.5            
+  4    3        4            24              6.0          9.0            
+  5    6        12           384             32.0         45.0           
+  6    10       56           10240           182.9        225.0          
+  7    15       456          491520          1077.9       1181.2         
+  8    21       6880         44040192        6401.2       6615.0         
+  9    28       191536       7516192768      39241.7      39690.0        
+  10   36       9733056      2473901162496   254175.2     255150.0       
+  11   45       903753248    1583296743997440 1751912.6    1754156.2      
+  12   55       154108311168 1981583836043018240 12858384.0   12863812.5     
+  13   66       48542114686912 4869940435459321626624 100324027.2  100337737.5    
+
+========================================================================
+  THE FUNNEL: REACH vs H PREDICTION
+========================================================================
+
+
+  THE FUNNEL GEOMETRY:
+
+  From the n=5 and n=6 data:
+  - EXTREMAL classes (H=1 or H=max): reach = 2-4 classes
+  - MID-H classes: reach = 7-10 classes
+  - The maximum reach is about m/2 to 2m/3 of the total classes
+
+  WHY THE FUNNEL?
+
+  1. The TRANSITIVE tournament (H=1) has |Aut|=n!/(n!/1)=1 tiling.
+     Its m tile flips all go to DIFFERENT tournaments (no silent mutations).
+     But many of these tournaments share the same iso class
+     (because flipping arcs that the automorphism group maps to each other
+     gives isomorphic results).
+     At n=5: reach = 4 out of 10 classes.
+     At n=6: reach = 6 out of 34 classes.
+
+  2. The REGULAR tournament (H=max) has small fiber.
+     Its flips go to few distinct classes because the high symmetry
+     means many flips lead to the same neighbor.
+
+  3. The MID-H classes have large fiber AND moderate |Aut|.
+     Each tiling's m flips explore many different iso classes.
+     This is the WIDEST part of the funnel.
+
+  QUANTITATIVE PREDICTION:
+  reach(C) ≈ min(m, #{distinct 1-flip-reachable classes from any T ∈ C})
+
+  For a RANDOM tournament at large n (|Aut|=1, fiber ≈ n!/2^{n-1}):
+  - Each of m flips gives a tournament T' with prob ≈ 1/V_n of being any class.
+  - But T' is NOT random — it's a 1-arc perturbation of T.
+  - The probability T' is in the SAME class as T ≈ 0 (neutrality → 0).
+  - The probability two flips give the SAME class is also low.
+  - So reach ≈ m for random tournaments at large n.
+
+  But at EXTREMES (transitive, regular): reach << m because
+  many flips are "symmetric" (give isomorphic results).
+
+
+========================================================================
+  PRACTICAL: PREDICTED V_n, <fiber>, m FOR LARGE n
+========================================================================
+
+  USING R(n) ≈ C(n,3) × 2^{5-2n}:
+
+  n    m=T_{n-2} V_n             <fiber>         tilings=2^m     neut_pred 
+  ----------------------------------------------------------------------
+  3    1        2.0             1.0             2               data
+  4    3        4.0             2.0             8               data
+  5    6        11.2            5.7             64              ~7.3e-02
+  6    10       52.6            19.5            1024            ~2.6e-02
+  7    15       444.5           73.7            32768           ~9.0e-03
+  8    21       6839.7          306.6           2097152         ~2.9e-03
+  9    28       191314.3        1403.1          268435456       ~9.3e-04
+  10   36       9731377.1       7061.6          68719476736     ~2.9e-04
+  11   45       903733562.7     38932.2         35184372088832  ~8.7e-05
+  12   55       154107916429.2  233789.4        36028797018963968 ~2.6e-05
+  13   66       4.85e+13        1.52e+06        7.38e+19        ~7.6e-06
+  14   78       2.84e+16        1.06e+07        3.02e+23        ~2.2e-06
+  15   91       3.10e+19        7.98e+07        2.48e+27        ~6.3e-07
+  16   105      6.35e+22        6.39e+08        4.06e+31        ~1.8e-07
+  17   120      2.45e+26        5.43e+09        1.33e+36        ~5.0e-08
+  18   136      1.78e+30        4.88e+10        8.71e+40        ~1.4e-08
+  19   153      2.46e+34        4.64e+11        1.14e+46        ~3.9e-09
+  20   171      6.45e+38        4.64e+12        2.99e+51        ~1.1e-09
+  21   190      3.22e+43        4.87e+13        1.57e+57        ~3.0e-10
+  22   210      3.07e+48        5.36e+14        1.65e+63        ~8.3e-11
+  23   231      5.60e+53        6.16e+15        3.45e+69        ~2.3e-11
+  24   253      1.96e+59        7.40e+16        1.45e+76        ~6.1e-12
+
+========================================================================
+  FINAL SYNTHESIS: THE TILING HYPERCUBE'S SHAPE
+========================================================================
+
+
+  THE TILING HYPERCUBE Q_m — COMPLETE PICTURE
+
+  ═══════════════════════════════════════════════
+
+  STRUCTURE: Q_m = m-dimensional hypercube (m = T_{n-2})
+  VERTICES:  2^m tilings (binary words of length m)
+  EDGES:     m × 2^{m-1} tile flips
+  DEGREE:    every vertex has exactly m neighbors
+
+  QUOTIENT BY ISOMORPHISM:
+  CLASSES:   V_n ≈ 2^{C(n,2)} / n! (Tournament Counting Theorem)
+  FIBERS:    fiber(C) = H(C)/|Aut(C)| per class
+  AVG FIBER: n!/2^{n-1} (the Szele average)
+
+  THE MUTATION GRAPH (quotient):
+  NODES:     V_n weighted by fiber(C)
+  EDGES:     W(C,D) = #{expressive mutations from C to D}
+  SELF-LOOPS: W(C,C) = #{silent mutations within C}
+  ROW SUM:   W(C,•) = fiber(C) × m
+
+  MARKOV CHAIN:
+  TRANSITION: P(C,D) = W(C,D) / (fiber(C) × m)
+  STATIONARY: π(C) = fiber(C) / 2^m
+  REVERSIBLE: fiber(C)P(C,D) = fiber(D)P(D,C) ✓
+  MIXING:     O(1/gap) ≈ O(n) steps
+
+  THE FUNNEL GEOMETRY:
+  BOTTOM TIP: transitive (H=1), 1 tiling, reach ≈ n-1
+  WIDE MIDDLE: typical classes, fiber ≈ n!/2^{n-1}, reach ≈ m
+  TOP TIP:     regular (H=max), small fiber, reach ≈ 2-3
+
+  NEUTRALITY LANDSCAPE:
+  EXTREMES:  0% silent mutations (all expressive)
+  MIDDLE:    peak neutrality ≈ 20-30% for "near-symmetric" classes
+  AVERAGE:   decays as ~1/4^n (almost all flips are expressive at large n)
+
+  THE TOURNAMENT COUNTING THEOREM TELLS US:
+  1. HOW MANY classes exist (V_n from Euler product)
+  2. HOW BIG each class is (fiber = H/|Aut|)
+  3. HOW CONNECTED the quotient is (edge weights from Burnside correction)
+  4. HOW FAST neutrality decays (R(n) ≈ n³/(3×4^n))
+
+  The 1/3 from the first prime reciprocal (= the 3-cycle term)
+  controls the SHAPE of the funnel at large n.
+
+Done. opus-2026-03-24-S292
