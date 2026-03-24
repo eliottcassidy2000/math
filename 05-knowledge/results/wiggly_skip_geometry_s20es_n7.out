@@ -1,0 +1,201 @@
+================================================================================
+  WIGGLY SKIP GEOMETRY
+  kind-pasteur-2026-03-24-S20es
+================================================================================
+
+######################################################################
+  n = 4, 3 wiggly classes
+######################################################################
+
+  BY SKIP (distance between vertices in base path - 1):
+  Skip Count  Avg SL%       SL% range Avg #edges
+     1     2    62.50  50.00- 75.00        1.5
+     2     1    50.00  50.00- 50.00        2.0
+
+  BY ROW (y coordinate in staircase):
+  row=1: 2 tiles, avg SL%=50.00, range=50.00-50.00
+  row=2: 1 tiles, avg SL%=75.00, range=75.00-75.00
+
+  BY ANTI-DIAGONAL (x+y = const):
+  x+y=4: tiles=[(3, 1)], avg SL%=50.00
+  x+y=5: tiles=[(4, 1)], avg SL%=50.00
+  x+y=6: tiles=[(4, 2)], avg SL%=75.00
+
+  EDGE OVERLAP BETWEEN WIGGLY CLASSES:
+    skip=1: B vs C: |common|=0, |union|=3, Jaccard=0.000
+
+  ALL WIGGLY CLASSES:
+  Label    Tile Skip Row     SL%  #Edges
+      C (4,2)    1   2  75.00%       1
+      A (4,1)    2   1  50.00%       2
+      B (3,1)    1   1  50.00%       2
+
+  Time: 0.0s
+
+######################################################################
+  n = 5, 6 wiggly classes
+######################################################################
+
+  BY SKIP (distance between vertices in base path - 1):
+  Skip Count  Avg SL%       SL% range Avg #edges
+     1     3    26.04  21.88- 31.25        9.7
+     2     2    23.44  21.88- 25.00       11.5
+     3     1    18.75  18.75- 18.75       14.0
+
+  BY ROW (y coordinate in staircase):
+  row=1: 3 tiles, avg SL%=20.83, range=18.75-21.88
+  row=2: 2 tiles, avg SL%=28.12, range=25.00-31.25
+  row=3: 1 tiles, avg SL%=25.00, range=25.00-25.00
+
+  BY ANTI-DIAGONAL (x+y = const):
+  x+y=4: tiles=[(3, 1)], avg SL%=21.88
+  x+y=5: tiles=[(4, 1)], avg SL%=21.88
+  x+y=6: tiles=[(5, 1), (4, 2)], avg SL%=25.00
+  x+y=7: tiles=[(5, 2)], avg SL%=25.00
+  x+y=8: tiles=[(5, 3)], avg SL%=25.00
+
+  EDGE OVERLAP BETWEEN WIGGLY CLASSES:
+    skip=1: C vs E: |common|=5, |union|=14, Jaccard=0.357
+    skip=1: C vs F: |common|=5, |union|=16, Jaccard=0.312
+    skip=1: E vs F: |common|=6, |union|=12, Jaccard=0.500
+    skip=2: B vs D: |common|=6, |union|=17, Jaccard=0.353
+
+  ALL WIGGLY CLASSES:
+  Label    Tile Skip Row     SL%  #Edges
+      E (4,2)    1   2  31.25%       8
+      D (5,2)    2   2  25.00%      11
+      F (5,3)    1   3  25.00%      10
+      B (4,1)    2   1  21.88%      12
+      C (3,1)    1   1  21.88%      11
+      A (5,1)    3   1  18.75%      14
+
+  Time: 0.0s
+
+######################################################################
+  n = 6, 10 wiggly classes
+######################################################################
+
+  BY SKIP (distance between vertices in base path - 1):
+  Skip Count  Avg SL%       SL% range Avg #edges
+     1     4     6.74   5.66-  7.23      151.8
+     2     3    10.61   9.96- 11.13      153.7
+     3     2    10.94  10.55- 11.33      160.5
+     4     1    10.74  10.74- 10.74      168.0
+
+  BY ROW (y coordinate in staircase):
+  row=1: 4 tiles, avg SL%=9.23, range=5.66-10.74
+  row=2: 3 tiles, avg SL%=9.90, range=7.23-11.33
+  row=3: 2 tiles, avg SL%=8.98, range=7.23-10.74
+  row=4: 1 tiles, avg SL%=6.84, range=6.84-6.84
+
+  BY ANTI-DIAGONAL (x+y = const):
+  x+y=4: tiles=[(3, 1)], avg SL%=5.66
+  x+y=5: tiles=[(4, 1)], avg SL%=9.96
+  x+y=6: tiles=[(5, 1), (4, 2)], avg SL%=8.89
+  x+y=7: tiles=[(6, 1), (5, 2)], avg SL%=10.94
+  x+y=8: tiles=[(6, 2), (5, 3)], avg SL%=9.28
+  x+y=9: tiles=[(6, 3)], avg SL%=10.74
+  x+y=10: tiles=[(6, 4)], avg SL%=6.84
+
+  EDGE OVERLAP BETWEEN WIGGLY CLASSES:
+    skip=1: D vs G: |common|=124, |union|=180, Jaccard=0.689
+    skip=1: D vs I: |common|=125, |union|=179, Jaccard=0.698
+    skip=1: D vs J: |common|=117, |union|=202, Jaccard=0.579
+    skip=1: G vs I: |common|=132, |union|=156, Jaccard=0.846
+    skip=1: G vs J: |common|=123, |union|=180, Jaccard=0.683
+    skip=1: I vs J: |common|=125, |union|=178, Jaccard=0.702
+    skip=2: C vs F: |common|=118, |union|=187, Jaccard=0.631
+    skip=2: C vs H: |common|=106, |union|=208, Jaccard=0.510
+    skip=2: F vs H: |common|=118, |union|=185, Jaccard=0.638
+    skip=3: B vs E: |common|=114, |union|=207, Jaccard=0.551
+
+  ALL WIGGLY CLASSES:
+  Label    Tile Skip Row     SL%  #Edges
+      E (6,2)    3   2  11.33%     159
+      F (5,2)    2   2  11.13%     147
+      A (6,1)    4   1  10.74%     168
+      H (6,3)    2   3  10.74%     156
+      B (5,1)    3   1  10.55%     162
+      C (4,1)    2   1   9.96%     158
+      G (4,2)    1   2   7.23%     144
+      I (5,3)    1   3   7.23%     144
+      J (6,4)    1   4   6.84%     159
+      D (3,1)    1   1   5.66%     160
+
+  Time: 2.9s
+
+######################################################################
+  n = 7, 15 wiggly classes
+######################################################################
+
+  BY SKIP (distance between vertices in base path - 1):
+  Skip Count  Avg SL%       SL% range Avg #edges
+     1     5     1.10   0.98-  1.21     3108.2
+     2     4     3.97   3.87-  4.03     3056.0
+     3     3     4.09   3.99-  4.18     3129.7
+     4     2     3.99   3.94-  4.03     3140.5
+     5     1     3.77   3.77-  3.77     3101.0
+
+  BY ROW (y coordinate in staircase):
+  row=1: 5 tiles, avg SL%=3.31, range=0.98-3.99
+  row=2: 4 tiles, avg SL%=3.35, range=1.17-4.18
+  row=3: 3 tiles, avg SL%=3.11, range=1.21-4.11
+  row=4: 2 tiles, avg SL%=2.55, range=1.15-3.96
+  row=5: 1 tiles, avg SL%=0.98, range=0.98-0.98
+
+  BY ANTI-DIAGONAL (x+y = const):
+  x+y=4: tiles=[(3, 1)], avg SL%=0.98
+  x+y=5: tiles=[(4, 1)], avg SL%=3.87
+  x+y=6: tiles=[(5, 1), (4, 2)], avg SL%=2.58
+  x+y=7: tiles=[(6, 1), (5, 2)], avg SL%=3.99
+  x+y=8: tiles=[(7, 1), (6, 2), (5, 3)], avg SL%=3.05
+  x+y=9: tiles=[(7, 2), (6, 3)], avg SL%=4.03
+  x+y=10: tiles=[(7, 3), (6, 4)], avg SL%=2.63
+  x+y=11: tiles=[(7, 4)], avg SL%=3.96
+  x+y=12: tiles=[(7, 5)], avg SL%=0.98
+
+  EDGE OVERLAP BETWEEN WIGGLY CLASSES:
+    skip=1: E vs I: |common|=2844, |union|=3388, Jaccard=0.839
+    skip=1: E vs L: |common|=2836, |union|=3380, Jaccard=0.839
+    skip=1: E vs N: |common|=2832, |union|=3398, Jaccard=0.833
+    skip=1: E vs O: |common|=2669, |union|=3578, Jaccard=0.746
+    skip=1: I vs L: |common|=3034, |union|=3158, Jaccard=0.961
+    skip=1: I vs N: |common|=3012, |union|=3194, Jaccard=0.943
+    skip=1: I vs O: |common|=2839, |union|=3384, Jaccard=0.839
+    skip=1: L vs N: |common|=3034, |union|=3156, Jaccard=0.961
+    skip=1: L vs O: |common|=2847, |union|=3360, Jaccard=0.847
+    skip=1: N vs O: |common|=2858, |union|=3363, Jaccard=0.850
+    skip=2: D vs H: |common|=2771, |union|=3344, Jaccard=0.829
+    skip=2: D vs K: |common|=2704, |union|=3412, Jaccard=0.792
+    skip=2: D vs M: |common|=2579, |union|=3566, Jaccard=0.723
+    skip=2: H vs K: |common|=2910, |union|=3169, Jaccard=0.918
+    skip=2: H vs M: |common|=2712, |union|=3396, Jaccard=0.799
+    skip=2: K vs M: |common|=2782, |union|=3327, Jaccard=0.836
+    skip=3: C vs G: |common|=2827, |union|=3429, Jaccard=0.824
+    skip=3: C vs J: |common|=2662, |union|=3606, Jaccard=0.738
+    skip=3: G vs J: |common|=2840, |union|=3414, Jaccard=0.832
+    skip=4: B vs F: |common|=2692, |union|=3589, Jaccard=0.750
+
+  ALL WIGGLY CLASSES:
+  Label    Tile Skip Row     SL%  #Edges
+      G (6,2)    3   2   4.18%    3121
+      J (7,3)    3   3   4.11%    3133
+      H (5,2)    2   2   4.03%    3039
+      F (7,2)    4   2   4.03%    3137
+      K (6,3)    2   3   4.02%    3040
+      C (5,1)    3   1   3.99%    3135
+      M (7,4)    2   4   3.96%    3069
+      B (6,1)    4   1   3.94%    3144
+      D (4,1)    2   1   3.87%    3076
+      A (7,1)    5   1   3.77%    3101
+      L (5,3)    1   3   1.21%    3088
+      I (4,2)    1   2   1.17%    3104
+      N (6,4)    1   4   1.15%    3102
+      E (3,1)    1   1   0.98%    3128
+      O (7,5)    1   5   0.98%    3119
+
+  Time: 839.3s
+  Skipping larger n
+
+DONE.
+================================================================================
