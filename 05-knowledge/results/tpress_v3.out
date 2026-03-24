@@ -1,0 +1,19 @@
+tpress v3.0.0 — Fractal Adaptive Compressor
+============================================================
+
+             Data    Size      v3   zlib9  v3/zlib               Method
+         gradient   4096B     40B    104B   2.600x                delta **
+          sine_4K   4096B    257B    711B   2.767x                delta **
+          english   4096B     77B     78B   1.013x              stride3 **
+             html   4000B    104B    104B   1.000x                  raw   
+              csv   4096B     83B     83B   1.000x                  raw   
+             json   4060B     90B     91B   1.011x              stride2 **
+       binary_exe   4096B     28B    315B  11.250x                delta **
+         log_file   4096B     90B     90B   1.000x                  raw   
+           random   4096B   4107B   4107B   1.000x                  raw   
+      english_64K  64000B    291B    291B   1.000x           whole_zlib   
+       binary_64K  65536B     44B    585B  13.295x      adaptive(delta) **
+
+  v3/zlib > 1.0 means v3 BEATS zlib
+  v3/zlib = 1.0 means tie (both fall back to same zlib)
+  v3/zlib < 1.0 means zlib wins (our overhead exceeds gains)
