@@ -1,0 +1,15 @@
+TC Video v2.0.0 -- Motion-Compensated Tournament Codec
+==========================================================================================
+
+              Seq  Frames        Raw         TC   Ratio  Keys   Dlts   Skip
+  ---------------------------------------------------------------------------
+           static     30   491,520B     2,308B  213.0x    2    28  1792 OK
+    moving_circle     30   491,520B     4,818B  102.0x    2    28  1792 OK
+           scroll     30   491,520B    16,001B   30.7x   30     0     0 OK
+         noisy_bg     30   491,520B   281,423B    1.7x   30     0     0 OK
+     scene_change     30   491,520B     1,331B  369.3x    2    28  1792 OK
+         blinking     30   491,520B     1,910B  257.3x    2    28   896 OK
+             zoom     30   491,520B     4,255B  115.5x    2    28  1607 OK
+              pan     30   491,520B    24,132B   20.4x   30     0     0 OK
+
+  Motion estimation search range: 8px
