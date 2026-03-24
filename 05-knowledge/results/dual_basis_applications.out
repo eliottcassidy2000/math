@@ -1,0 +1,99 @@
+================================================================================
+  THE 45-DEGREE TRICK: ABSTRACT APPLICATIONS
+  kind-pasteur-2026-03-25-S20gq
+================================================================================
+
+  1. TOURNAMENT ADJACENCY IN ROTATED COORDINATES:
+  Tournament on 8 vertices:
+  In standard coords: antisymmetric (A[i][j] + A[j][i] = 1)
+  In rotated coords: d=i-j slices show GAP-DEPENDENT win rates
+    d= -7 (gap 7): avg=1.000, entries=1
+    d= -6 (gap 6): avg=0.500, entries=2
+    d= -5 (gap 5): avg=0.333, entries=3
+    d= -4 (gap 4): avg=0.750, entries=4
+    d= -3 (gap 3): avg=0.400, entries=5
+    d= -2 (gap 2): avg=0.667, entries=6
+    d= -1 (gap 1): avg=0.571, entries=7
+    d= +0 (gap 0): avg=0.000, entries=8
+    d= +1 (gap 1): avg=0.429, entries=7
+    d= +2 (gap 2): avg=0.333, entries=6
+    d= +3 (gap 3): avg=0.600, entries=5
+    d= +4 (gap 4): avg=0.250, entries=4
+    d= +5 (gap 5): avg=0.667, entries=3
+    d= +6 (gap 6): avg=0.500, entries=2
+    d= +7 (gap 7): avg=0.000, entries=1
+  Near-transitive should show avg increasing with d.
+
+  2. ATTENTION MATRIX (transformer-style):
+  Local attention (tau=3.0) on 16 tokens:
+  In rotated coords: d=i-j = attention distance
+    d= -4: avg_attention=0.0524
+    d= -3: avg_attention=0.0730
+    d= -2: avg_attention=0.1024
+    d= -1: avg_attention=0.1447
+    d= +0: avg_attention=0.2071
+    d= +1: avg_attention=0.1447
+    d= +2: avg_attention=0.1024
+    d= +3: avg_attention=0.0730
+    d= +4: avg_attention=0.0524
+  -> Attention decays with |d| (local attention = band-limited in rotated)
+  -> Compressible: keep only |d| <= bandwidth, zero the rest
+  95% attention captured by |d| <= 2: 74/256 entries (29%)
+
+  3. TIME SERIES DELAY EMBEDDING:
+  Periodic signal (period=8) with noise, N=32:
+  Rotated constant-d slices = autocorrelation at lag d
+    lag   0: autocorr=0.4971
+    lag   1: autocorr=0.3371
+    lag   2: autocorr=0.0088
+    lag   4: autocorr=-0.4844
+    lag   8: autocorr=0.4968
+    lag  12: autocorr=-0.4922
+    lag  16: autocorr=0.4723
+  -> Period visible: autocorr peaks at lag 0, 8, 16 (multiples of period)
+
+  4. FINANCIAL CORRELATION MATRIX:
+  4-sector correlation matrix, 16 stocks:
+  Standard: block-diagonal (sectors along diagonal)
+  Rotated: sector structure visible in d-slices
+    d=  0: avg_corr=0.9202 (within sector)
+    d=  1: avg_corr=0.7626 (within sector)
+    d=  2: avg_corr=0.5708 (within sector)
+    d=  3: avg_corr=0.3719 (within sector)
+    d=  4: avg_corr=0.1561 (cross sector)
+    d=  5: avg_corr=0.1509 (cross sector)
+    d=  8: avg_corr=0.1579 (cross sector)
+    d= 12: avg_corr=0.1297 (cross sector)
+
+  5. COMPRESSION BENEFIT (rotated vs standard for each type):
+       tournament: row=34B, diag=30B, winner=DIAG, ratio=1.13x
+        attention: row=151B, diag=137B, winner=DIAG, ratio=1.10x
+      correlation: row=221B, diag=219B, winner=DIAG, ratio=1.01x
+
+============================================================
+THE ABSTRACT PRINCIPLE
+============================================================
+
+The 45-degree rotation is a CHANGE OF BASIS that reveals hidden structure:
+
+  STANDARD (i,j):  Row structure visible. Good for row-correlated data.
+  ROTATED (i+j, i-j): Diagonal structure visible. Good for distance-correlated data.
+
+APPLICATION MAP:
+  Standard basis good for: images (spatial), sequences (temporal), tables (records)
+  Rotated basis good for: tournaments (ranking gap), attention (distance),
+                           autocorrelation (lag), band-limited matrices
+
+THE UNIVERSAL TRICK: When your data has structure along DIAGONALS,
+rotate 45 degrees to make it ROW structure, then apply any row-based tool.
+
+This is why the tournament decomposition works on band-limited matrices:
+  Band structure = diagonal correlation = ROW correlation after rotation.
+  zlib works on rows. Rotate -> zlib works on bands.
+
+It's also why attention is compressible:
+  Local attention = band-limited = few significant diagonal slices.
+  In rotated coords: few significant ROWS = sparse representation.
+
+DONE.
+================================================================================
