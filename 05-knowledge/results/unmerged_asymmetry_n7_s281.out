@@ -1,0 +1,36 @@
+========================================================================
+  n=7: UNMERGED ASYMMETRY — FLAT FIBER BUNDLE TEST
+  opus-2026-03-24-S281
+========================================================================
+
+  Building class data... done (0.4s). V_merged=272, V_unmerged=456
+  Tilings: 32768, Tiles: 15
+  Precomputing tiling classes... 10000...20000...30000... done (13.6s)
+
+  Computing sub-flows and checking complement symmetry...
+    10000/32768...
+    20000/32768...
+    30000/32768...
+  Done (0.3s). 2123 merged edges with sub-flows.
+
+  NS-NS edges to check: 1399
+
+  COMPLEMENT SYMMETRY CHECK (NS-NS edges):
+  Complement-preserving: 1399/1399 (100.0%)
+  Not preserving: 0/1399
+
+  *** FLAT FIBER BUNDLE VERIFIED AT n=7! ***
+  All 1399 NS-NS edges have perfect complement pairing.
+
+  SC-NS edges: 550
+  SC-NS balanced (SC→C = SC→C^c): 550/550
+  *** SC-NS PERFECTLY BALANCED AT n=7! ***
+
+  SUMMARY n=7:
+  SC classes: 88, NS classes: 184
+  NS-NS edges: 1399, all complement-preserving: YES
+  SC-NS edges: 550, all balanced: YES
+
+  Total time: 14.2s
+
+DONE.
