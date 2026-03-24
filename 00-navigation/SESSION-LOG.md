@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S272 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S271
+**Summary of work:** WIGGLY LINES: fix boundary+apex, vary overlap. Each tiling connects to 2^{C(n-2,2)}-1 wiggly neighbors (complete graph fibers). Wiggly recovers 100% of meta-graph edges AND adds new ones.
+
+**Key numbers at n=5:** 128 fibers × K_8 each. Wiggly meta-edges = 35 > 21 actual. 14 new wiggly-only edges. 19% self-loop rate.
+**Key numbers at n=6:** 512 fibers × K_{64} each. Wiggly = 523 > 143 actual. 380 new edges. 7.1% self-loops.
+
+**The three connection types clarified:**
+1. OPAQUE = 1-arc flip, class changes (meta-graph edges)
+2. BLUESELF/BLACKSELF = 1-arc flip, class preserved (neutral arcs, permutohedron)
+3. WIGGLY = same boundary+apex, different overlap (recursive fiber, complete graph)
+
 ## opus-2026-03-23-S271 — 2026-03-23
 
 **Account:** opus
