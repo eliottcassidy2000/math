@@ -1,0 +1,154 @@
+================================================================================
+  CYCLE SPACE BIJECTION: Tiling <-> Even Graph
+  kind-pasteur-2026-03-25-S20ge
+================================================================================
+
+############################################################
+  n = 4, tiles = 3, full edges = 6
+############################################################
+
+  CYCLE SPACE MAP RESULTS:
+    Tilings: 8
+    All produce even graphs: True
+    Distinct even graph images (labeled): 8
+    Even graph iso classes in image: 3
+    All even graph iso classes: 3
+    Image covers ALL even classes: True
+    Tournament iso classes: 4
+    Tournament classes = Even graph classes? False
+    Map is injective (labeled): True
+
+  TOURNAMENT -> EVEN GRAPH CLASS MAP:
+    1-to-1 (each tourn class -> one even class): False
+    Multi-image tournament classes: 1/4
+      Tournament class -> 2 even graph classes
+    Missing even classes: 0
+    Extra classes: 0
+
+  Time: 0.0s
+
+############################################################
+  n = 5, tiles = 6, full edges = 10
+############################################################
+
+  CYCLE SPACE MAP RESULTS:
+    Tilings: 64
+    All produce even graphs: True
+    Distinct even graph images (labeled): 64
+    Even graph iso classes in image: 7
+    All even graph iso classes: 7
+    Image covers ALL even classes: True
+    Tournament iso classes: 12
+    Tournament classes = Even graph classes? False
+    Map is injective (labeled): True
+
+  TOURNAMENT -> EVEN GRAPH CLASS MAP:
+    1-to-1 (each tourn class -> one even class): False
+    Multi-image tournament classes: 8/12
+      Tournament class -> 5 even graph classes
+      Tournament class -> 5 even graph classes
+      Tournament class -> 5 even graph classes
+      Tournament class -> 3 even graph classes
+      Tournament class -> 3 even graph classes
+      Tournament class -> 2 even graph classes
+      Tournament class -> 2 even graph classes
+      Tournament class -> 2 even graph classes
+    Missing even classes: 0
+    Extra classes: 0
+
+  Time: 0.1s
+
+############################################################
+  n = 6, tiles = 10, full edges = 15
+############################################################
+
+  CYCLE SPACE MAP RESULTS:
+    Tilings: 1024
+    All produce even graphs: True
+    Distinct even graph images (labeled): 1024
+    Even graph iso classes in image: 16
+    All even graph iso classes: 16
+    Image covers ALL even classes: True
+    Tournament iso classes: 56
+    Tournament classes = Even graph classes? False
+    Map is injective (labeled): True
+
+  TOURNAMENT -> EVEN GRAPH CLASS MAP:
+    1-to-1 (each tourn class -> one even class): False
+    Multi-image tournament classes: 50/56
+      Tournament class -> 11 even graph classes
+      Tournament class -> 11 even graph classes
+      Tournament class -> 11 even graph classes
+      Tournament class -> 10 even graph classes
+      Tournament class -> 10 even graph classes
+      Tournament class -> 10 even graph classes
+      Tournament class -> 10 even graph classes
+      Tournament class -> 10 even graph classes
+      Tournament class -> 10 even graph classes
+      Tournament class -> 10 even graph classes
+      Tournament class -> 10 even graph classes
+      Tournament class -> 10 even graph classes
+      Tournament class -> 10 even graph classes
+      Tournament class -> 9 even graph classes
+      Tournament class -> 9 even graph classes
+      Tournament class -> 9 even graph classes
+      Tournament class -> 9 even graph classes
+      Tournament class -> 9 even graph classes
+      Tournament class -> 9 even graph classes
+      Tournament class -> 9 even graph classes
+      Tournament class -> 8 even graph classes
+      Tournament class -> 8 even graph classes
+      Tournament class -> 7 even graph classes
+      Tournament class -> 7 even graph classes
+      Tournament class -> 7 even graph classes
+      Tournament class -> 7 even graph classes
+      Tournament class -> 7 even graph classes
+      Tournament class -> 7 even graph classes
+      Tournament class -> 7 even graph classes
+      Tournament class -> 7 even graph classes
+      Tournament class -> 6 even graph classes
+      Tournament class -> 5 even graph classes
+      Tournament class -> 5 even graph classes
+      Tournament class -> 5 even graph classes
+      Tournament class -> 5 even graph classes
+      Tournament class -> 5 even graph classes
+      Tournament class -> 5 even graph classes
+      Tournament class -> 5 even graph classes
+      Tournament class -> 5 even graph classes
+      Tournament class -> 4 even graph classes
+      Tournament class -> 4 even graph classes
+      Tournament class -> 3 even graph classes
+      Tournament class -> 3 even graph classes
+      Tournament class -> 3 even graph classes
+      Tournament class -> 3 even graph classes
+      Tournament class -> 2 even graph classes
+      Tournament class -> 2 even graph classes
+      Tournament class -> 2 even graph classes
+      Tournament class -> 2 even graph classes
+      Tournament class -> 2 even graph classes
+    Missing even classes: 0
+    Extra classes: 0
+
+  Time: 6.3s
+
+============================================================
+THE BIJECTION
+============================================================
+
+The cycle space map: tiling -> XOR of fundamental cycles
+is a LABELED BIJECTION: 2^m tilings <-> 2^m even graphs (1-to-1).
+
+At the ISO CLASS level:
+  #tournament classes = #even graph classes (Royle-Praeger)
+  But the map is NOT necessarily 1-to-1 on classes!
+  Different tilings of the same tournament can produce
+  different even graph classes (because the base path choice
+  breaks the graph symmetry differently from the tournament symmetry).
+
+The "trivial vertex" insight: the base path pins n-1 edges.
+These become part of every fundamental cycle that crosses them.
+The vertex at the end of the path is the one with the most
+constrained cycle structure — it's the "trivial" direction.
+
+DONE.
+================================================================================

@@ -1,0 +1,107 @@
+================================================================================
+  TILING -> GRAPH MAP
+  kind-pasteur-2026-03-25-S20gd
+================================================================================
+
+############################################################
+  n = 4, m = 3 tiles
+############################################################
+
+  TILING -> GRAPH MAP:
+    Total tilings: 8
+    Produces even-degree graphs: 1 (12.5%)
+    Produces odd-degree graphs: 7 (87.5%)
+    Distinct graph classes in image: 5
+    Distinct even graph classes: 1
+    Distinct tournament classes: 4
+
+  GRAPH CLASSES PER TOURNAMENT CLASS:
+    min=1, max=4, avg=1.75
+
+  EDGE COUNT DISTRIBUTION:
+    Min edges: 3 (base path only)
+    Max edges: 6 (K_n = all forward)
+      3 edges:     1 tilings (   0 even)
+      4 edges:     3 tilings (   1 even)
+      5 edges:     3 tilings (   0 even)
+      6 edges:     1 tilings (   0 even)
+
+  ALL even graph classes: 3
+  Even classes in tiling image: 1
+  Missing from image: 2
+  Extra in image: 0
+
+  Time: 0.0s
+
+############################################################
+  n = 5, m = 6 tiles
+############################################################
+
+  TILING -> GRAPH MAP:
+    Total tilings: 64
+    Produces even-degree graphs: 4 (6.2%)
+    Produces odd-degree graphs: 60 (93.8%)
+    Distinct graph classes in image: 18
+    Distinct even graph classes: 4
+    Distinct tournament classes: 12
+
+  GRAPH CLASSES PER TOURNAMENT CLASS:
+    min=1, max=6, avg=3.33
+
+  EDGE COUNT DISTRIBUTION:
+    Min edges: 4 (base path only)
+    Max edges: 10 (K_n = all forward)
+      4 edges:     1 tilings (   0 even)
+      5 edges:     6 tilings (   1 even)
+      6 edges:    15 tilings (   1 even)
+      7 edges:    20 tilings (   1 even)
+      8 edges:    15 tilings (   0 even)
+      9 edges:     6 tilings (   0 even)
+     10 edges:     1 tilings (   1 even)
+
+  ALL even graph classes: 7
+  Even classes in tiling image: 4
+  Missing from image: 3
+  Extra in image: 0
+
+  Time: 0.0s
+
+############################################################
+  n = 6, m = 10 tiles
+############################################################
+
+  TILING -> GRAPH MAP:
+    Total tilings: 1024
+    Produces even-degree graphs: 32 (3.1%)
+    Produces odd-degree graphs: 992 (96.9%)
+    Distinct graph classes in image: 91
+    Distinct even graph classes: 7
+    Distinct tournament classes: 56
+
+  GRAPH CLASSES PER TOURNAMENT CLASS:
+    min=1, max=26, avg=11.59
+
+  EDGE COUNT DISTRIBUTION:
+    Min edges: 5 (base path only)
+    Max edges: 15 (K_n = all forward)
+      5 edges:     1 tilings (   0 even)
+      6 edges:    10 tilings (   1 even)
+      7 edges:    45 tilings (   2 even)
+      8 edges:   120 tilings (   3 even)
+      9 edges:   210 tilings (   4 even)
+     10 edges:   252 tilings (   7 even)
+     11 edges:   210 tilings (  10 even)
+     12 edges:   120 tilings (   5 even)
+     13 edges:    45 tilings (   0 even)
+     14 edges:    10 tilings (   0 even)
+     15 edges:     1 tilings (   0 even)
+
+  ALL even graph classes: 16
+  Even classes in tiling image: 7
+  Missing from image: 9
+  Extra in image: 0
+
+  Time: 4.7s
+
+DONE.
+================================================================================
