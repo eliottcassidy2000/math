@@ -1,0 +1,35 @@
+================================================================================
+  TILING IMAGE CODEC — Production Grade
+  kind-pasteur-2026-03-25-S20gm
+================================================================================
+
+  BENCHMARK: Tiling codec vs zlib vs raw
+                 Image      Raw     zlib   Tiling   vs raw  vs zlib
+        64x64 gradient     512B      50B    4743B    0.11x    0.01x
+           64x64 block     512B      49B    1479B    0.35x    0.03x
+          64x64 sparse     512B     371B    1689B    0.30x    0.22x
+          64x64 random     512B     735B    3043B    0.17x    0.24x
+      128x128 gradient    2048B     103B   18951B    0.11x    0.01x
+         128x128 block    2048B      81B    5895B    0.35x    0.01x
+        128x128 sparse    2048B    1357B    6741B    0.30x    0.20x
+        128x128 random    2048B    2726B   11731B    0.17x    0.23x
+      256x256 gradient    8192B     330B   75783B    0.11x    0.00x
+         256x256 block    8192B     196B   23559B    0.35x    0.01x
+        256x256 sparse    8192B    5293B   27059B    0.30x    0.20x
+        256x256 random    8192B   10328B   47128B    0.17x    0.22x
+
+  VIDEO DELTA BENCHMARK:
+      Motion   Keyframe      Delta   Compress
+          1%      6128B      4410B       1.4x
+          2%      6351B      4687B       1.4x
+          5%      6940B      5518B       1.3x
+         10%      7864B      6672B       1.2x
+         25%      9631B      9003B       1.1x
+
+  ENCODE/DECODE SPEED:
+  64x64: encode=1.0ms (4 Kpix/s)
+  128x128: encode=4.0ms (4 Kpix/s)
+  256x256: encode=17.2ms (4 Kpix/s)
+
+DONE.
+================================================================================
