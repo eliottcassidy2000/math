@@ -1,0 +1,281 @@
+========================================================================
+  TRANSLUCENT LINES: DEEP INVESTIGATION
+  opus-2026-03-23-S271
+========================================================================
+
+  Building full data for n=4... done (0.0s)
+
+########################################################################
+  n = 4: TRANSLUCENT LINE ANALYSIS (V=3, E=3)
+########################################################################
+
+  Total labeled arc-flip pairs: 192
+  Opaque (class-changing):   240 (62.5%)
+  Translucent (class-preserving): 144 (37.5%)
+
+  LINES PER METAGRAPH EDGE:
+    Min lines/edge: 24
+    Max lines/edge: 48
+    Mean lines/edge: 40.0
+    Median lines/edge: 48
+
+    Weight distribution:
+      24 lines: 1 edges (33.3%)
+      48 lines: 2 edges (66.7%)
+
+  TRANSLUCENT FRACTION PER CLASS (sorted by H):
+   mid    H  SC    trans   opaque     frac  fiber
+     0    1  SC       72      144   0.3333     24
+     1    3  NS        0      192   0.0000      8
+     2    5  SC       72      144   0.3333     24
+
+  Correlation(H, translucent_fraction) = 0.0000
+
+  TOP 10 HEAVIEST METAGRAPH EDGES (most opaque lines):
+    (0,1): 48 lines, H=(1,3), ΔH=2
+    (1,2): 48 lines, H=(3,5), ΔH=2
+    (0,2): 24 lines, H=(1,5), ΔH=4
+
+  BOTTOM 10 LIGHTEST METAGRAPH EDGES:
+    (0,2): 24 lines, H=(1,5), ΔH=4
+    (0,1): 48 lines, H=(1,3), ΔH=2
+    (1,2): 48 lines, H=(3,5), ΔH=2
+
+  ARC POSITION ANALYSIS:
+   arc    (i,j)  edges    lines  hook
+     0 (0,1):>8      3       40     3
+     1 (0,2):>8      3       40     1
+     2 (0,3):>8      3       40     1
+     3 (1,2):>8      3       40     1
+     4 (1,3):>8      3       40     1
+     5 (2,3):>8      3       40     1
+
+  Building full data for n=5... done (0.6s)
+
+########################################################################
+  n = 5: TRANSLUCENT LINE ANALYSIS (V=10, E=21)
+########################################################################
+
+  Total labeled arc-flip pairs: 5120
+  Opaque (class-changing):   8480 (82.8%)
+  Translucent (class-preserving): 1760 (17.2%)
+
+  LINES PER METAGRAPH EDGE:
+    Min lines/edge: 40
+    Max lines/edge: 360
+    Mean lines/edge: 201.9
+    Median lines/edge: 240
+
+    Weight distribution:
+      40 lines: 1 edges (4.8%)
+      120 lines: 6 edges (28.6%)
+      240 lines: 13 edges (61.9%)
+      360 lines: 1 edges (4.8%)
+
+  TRANSLUCENT FRACTION PER CLASS (sorted by H):
+   mid    H  SC    trans   opaque     frac  fiber
+     0    1  SC      480     1440   0.2500    120
+     1    3  NS       80     1440   0.0526     40
+     8    3  SC        0      800   0.0000     40
+     2    5  NS      720     3360   0.1765    120
+     5    9  SC        0     2400   0.0000    120
+     6    9  SC      240     1920   0.1111    120
+     3   11  SC      240     1920   0.1111    120
+     4   13  SC        0     2400   0.0000    120
+     7   15  SC        0      480   0.0000     24
+     9   15  SC        0      800   0.0000     40
+
+  Correlation(H, translucent_fraction) = -0.5721
+
+  TOP 10 HEAVIEST METAGRAPH EDGES (most opaque lines):
+    (4,5): 360 lines, H=(13,9), ΔH=4
+    (0,1): 240 lines, H=(1,3), ΔH=2
+    (0,2): 240 lines, H=(1,5), ΔH=4
+    (1,5): 240 lines, H=(3,9), ΔH=6
+    (1,2): 240 lines, H=(3,5), ΔH=2
+    (2,6): 240 lines, H=(5,9), ΔH=4
+    (2,5): 240 lines, H=(5,9), ΔH=4
+    (2,4): 240 lines, H=(5,13), ΔH=8
+    (2,3): 240 lines, H=(5,11), ΔH=6
+    (2,8): 240 lines, H=(5,3), ΔH=2
+
+  BOTTOM 10 LIGHTEST METAGRAPH EDGES:
+    (8,9): 40 lines, H=(3,15), ΔH=12
+    (0,6): 120 lines, H=(1,9), ΔH=8
+    (0,8): 120 lines, H=(1,3), ΔH=2
+    (6,9): 120 lines, H=(9,15), ΔH=6
+    (3,5): 120 lines, H=(11,9), ΔH=2
+    (3,7): 120 lines, H=(11,15), ΔH=4
+    (4,7): 120 lines, H=(13,15), ΔH=2
+    (0,1): 240 lines, H=(1,3), ΔH=2
+    (0,2): 240 lines, H=(1,5), ΔH=4
+    (1,5): 240 lines, H=(3,9), ΔH=6
+
+  ARC POSITION ANALYSIS:
+   arc    (i,j)  edges    lines  hook
+     0 (0,1):>8     21      848     5
+     1 (0,2):>8     21      848     3
+     2 (0,3):>8     21      848     1
+     3 (0,4):>8     21      848     1
+     4 (1,2):>8     21      848     1
+     5 (1,3):>8     21      848     1
+     6 (1,4):>8     21      848     1
+     7 (2,3):>8     21      848     1
+     8 (2,4):>8     21      848     1
+     9 (3,4):>8     21      848     1
+
+  Building full data for n=6... done (76.7s)
+
+########################################################################
+  n = 6: TRANSLUCENT LINE ANALYSIS (V=34, E=143)
+########################################################################
+
+  Total labeled arc-flip pairs: 245760
+  Opaque (class-changing):   440640 (89.6%)
+  Translucent (class-preserving): 50880 (10.4%)
+
+  LINES PER METAGRAPH EDGE:
+    Min lines/edge: 480
+    Max lines/edge: 4320
+    Mean lines/edge: 1540.7
+    Median lines/edge: 1440
+
+    Weight distribution:
+      480 lines: 6 edges (4.2%)
+      720 lines: 10 edges (7.0%)
+      1440 lines: 110 edges (76.9%)
+      2880 lines: 15 edges (10.5%)
+      4320 lines: 2 edges (1.4%)
+
+  TRANSLUCENT FRACTION PER CLASS (sorted by H):
+   mid    H  SC    trans   opaque     frac  fiber
+     0    1  SC     3600    14400   0.2000    720
+     1    3  NS      960    12480   0.0714    240
+    14    3  NS      480    13440   0.0345    240
+     8    5  SC     2160    17280   0.1111    720
+    17    5  NS     5760    31680   0.1538    720
+     2    9  NS     2880    37440   0.0714    720
+    12    9  NS        0    43200   0.0000    720
+    32    9  SC        0     2400   0.0000     80
+    10   11  NS     2880    37440   0.0714    720
+    11   13  NS        0    43200   0.0000    720
+     6   15  NS     2880    37440   0.0714    720
+    13   15  NS        0     8640   0.0000    144
+    16   15  NS        0    14400   0.0000    240
+     7   17  SC     2160    17280   0.1111    720
+    33   17  SC        0    21600   0.0000    720
+    21   19  NS     1440    40320   0.0345    720
+     3   23  NS     5760    31680   0.1538    720
+     5   23  NS        0    43200   0.0000    720
+    20   25  NS     2880    37440   0.0714    720
+    15   27  NS        0    14400   0.0000    240
+    19   29  SC      720    20160   0.0345    720
+    26   29  SC        0    21600   0.0000    720
+    27   29  NS     2880    37440   0.0714    720
+    31   31  NS        0    43200   0.0000    720
+     4   33  SC      720    20160   0.0345    720
+    23   33  NS      480    13440   0.0345    240
+    29   33  NS        0    43200   0.0000    720
+     9   37  SC     2160    17280   0.1111    720
+    18   37  NS     1440    40320   0.0345    720
+    25   37  NS        0    43200   0.0000    720
+    30   41  SC     2160    17280   0.1111    720
+    24   43  NS     5760    31680   0.1538    720
+    22   45  SC      720     5760   0.1111    240
+    28   45  SC        0     7200   0.0000    240
+
+  Correlation(H, translucent_fraction) = -0.1039
+
+  TOP 10 HEAVIEST METAGRAPH EDGES (most opaque lines):
+    (11,12): 4320 lines, H=(13,9), ΔH=4
+    (25,31): 4320 lines, H=(37,31), ΔH=6
+    (2,12): 2880 lines, H=(9,9), ΔH=0
+    (2,10): 2880 lines, H=(9,11), ΔH=2
+    (10,11): 2880 lines, H=(11,13), ΔH=2
+    (11,16): 2880 lines, H=(13,15), ΔH=2
+    (6,20): 2880 lines, H=(15,25), ΔH=10
+    (6,21): 2880 lines, H=(15,19), ΔH=4
+    (3,21): 2880 lines, H=(23,19), ΔH=4
+    (5,31): 2880 lines, H=(23,31), ΔH=8
+
+  BOTTOM 10 LIGHTEST METAGRAPH EDGES:
+    (1,32): 480 lines, H=(3,9), ΔH=6
+    (14,15): 480 lines, H=(3,27), ΔH=24
+    (14,16): 480 lines, H=(3,15), ΔH=12
+    (15,16): 480 lines, H=(27,15), ΔH=12
+    (16,23): 480 lines, H=(15,33), ΔH=18
+    (15,23): 480 lines, H=(27,33), ΔH=6
+    (0,7): 720 lines, H=(1,17), ΔH=16
+    (0,8): 720 lines, H=(1,5), ΔH=4
+    (8,9): 720 lines, H=(5,37), ΔH=32
+    (7,9): 720 lines, H=(17,37), ΔH=20
+
+  ARC POSITION ANALYSIS:
+   arc    (i,j)  edges    lines  hook
+     0 (0,1):>8    143    29376     7
+     1 (0,2):>8    143    29376     5
+     2 (0,3):>8    143    29376     3
+     3 (0,4):>8    143    29376     1
+     4 (0,5):>8    143    29376     1
+     5 (1,2):>8    143    29376     3
+     6 (1,3):>8    143    29376     1
+     7 (1,4):>8    143    29376     1
+     8 (1,5):>8    143    29376     1
+     9 (2,3):>8    143    29376     1
+    10 (2,4):>8    143    29376     1
+    11 (2,5):>8    143    29376     1
+    12 (3,4):>8    143    29376     1
+    13 (3,5):>8    143    29376     1
+    14 (4,5):>8    143    29376     1
+
+========================================================================
+  SYNTHESIS: TRANSLUCENT LINES AND THE HEAP CONNECTION
+========================================================================
+
+  TRANSLUCENT = NEUTRAL ARCS = "FREE PIECES" in Viennot's heap framework.
+
+  A neutral arc is one whose direction doesn't matter for the iso class.
+  In heap terms: it's a piece that can be freely moved (flipped) without
+  changing the overall structure. It commutes with all other pieces.
+
+  For the TRANSITIVE tournament:
+    Neutral arcs = arcs between vertices with identical "relative positions"
+    = the TWINS (vertices with same out-neighborhoods)
+    Translucent fraction ≈ 2/(n-1) (decays as n grows)
+
+  For REGULAR tournaments:
+    Zero neutral arcs — every arc matters.
+    = maximally "rigid" or "chaotic" structure
+    = the heap is FULLY CONSTRAINED (no free pieces)
+
+  The translucent fraction F(class) anti-correlates with H:
+    High H → few translucent (rigid, cyclic)
+    Low H → many translucent (flexible, hierarchical)
+
+  In BINARY TREE terms:
+    The translucent subgraph within a class is like a partial binary tree:
+    - Root = one representative labeling
+    - Children = labelings reachable by one neutral flip
+    - Depth = translucent diameter
+    - Leaves = labelings with no further neutral flips
+
+    For the transitive class: this tree spans ALL n! labelings (connected)
+    For regular classes: this "tree" is just isolated points (disconnected)
+
+  METAGRAPH EDGE WEIGHTS = OPAQUE LINE COUNTS:
+    Heavy edges: connect similar classes (many ways to transition)
+    Light edges: connect dissimilar classes (few transitions)
+    The weight measures the "width" of the tunnel between classes.
+
+  THE TWO-LEVEL HIERARCHY:
+    Level 1 (metagraph): classes connected by opaque lines
+    Level 2 (translucent): labeled tournaments within each class
+                           connected by neutral flips
+
+    Level 1 is COARSE (V_merged nodes)
+    Level 2 is FINE (n!/|Aut| nodes per class)
+
+    The metagraph's spectral properties (H ≈ 2nd eigenvector, gap ≈ 2/n)
+    describe Level 1. The translucent structure describes Level 2.
+
+DONE.
