@@ -1,0 +1,54 @@
+======================================================================
+  VERIFICATION: V_even via factorization
+  opus-2026-03-23-S263
+======================================================================
+
+  n      V_tourn   V_even_odd   V_even_all  match
+  3            2            1            2 odd=? all=✓
+  4            4            1            4 odd=? all=?
+  5           12            2            7 odd=? all=✓
+  6           56            4           19 odd=? all=?
+  7          456           12           54 odd=? all=✓
+  8         6880           64          262 odd=? all=?
+  9       191536          792         2038 odd=? all=✓
+ 10      9733056        19296        33462 odd=? all=?
+ 11    903753248       886288      1182004 odd=? all=✓
+ 12 154108311168     75346496     87748408 odd=? all=?
+ 13 48542114686912  11856006240  12886193064 odd=? all=?
+ 14 28401423719122304 3467423603904 3633064047760 odd=? all=?
+ 15 31021002160355166848 1893448825054528 1944000150734320 odd=? all=?
+
+======================================================================
+  KEY RELATIONSHIPS
+======================================================================
+  n=3: 2^{C(n-1,2)} = 2, identity_fix_even = 2, match = True
+  n=4: 2^{C(n-1,2)} = 8, identity_fix_even = 8, match = True
+  n=5: 2^{C(n-1,2)} = 64, identity_fix_even = 64, match = True
+  n=6: 2^{C(n-1,2)} = 1024, identity_fix_even = 1024, match = True
+  n=7: 2^{C(n-1,2)} = 32768, identity_fix_even = 32768, match = True
+  n=8: 2^{C(n-1,2)} = 2097152, identity_fix_even = 2097152, match = True
+  n=9: 2^{C(n-1,2)} = 268435456, identity_fix_even = 268435456, match = True
+
+======================================================================
+  FACTORIZATION THEOREM (final form)
+======================================================================
+
+  For all-odd cycle type σ with k cycles:
+
+    Fix_tournament(σ) = 2^{arc_orbits(σ)}
+    Fix_even_graph(σ) = 2^{arc_orbits(σ) - k + 1}
+
+  Therefore:
+    Fix_tournament(σ) = Fix_even_graph(σ) × 2^{k-1}
+
+  The 2^{k-1} factor counts the CUT SPACE free bits.
+
+  The Burnside sum for V_even:
+    V_even = (1/n!) Σ_{all-odd σ} ccs(σ) × 2^{arc_orbits(σ) - k(σ) + 1}
+           + (1/n!) Σ_{some-even σ} ccs(σ) × Fix_even(σ)
+
+  The first sum (odd-cycle types only) misses even-cycle contributions.
+  For even cycle types, Fix_even ≠ 0 in general.
+  The FULL formula requires the constraint matrix for even types.
+
+DONE.
