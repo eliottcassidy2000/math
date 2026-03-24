@@ -1,0 +1,130 @@
+
+========================================================================
+  WIGGLY SELF-GENERATION AT n=5
+========================================================================
+
+  Staircase decomposition of 10 tiles:
+    Overlap (interior): 3 tiles [(1, 2), (1, 3), (2, 3)]
+    Boundary (extreme): 6 tiles [(0, 1), (0, 2), (0, 3), (1, 4), (2, 4), (3, 4)]
+    Apex (0↔n-1): 1 tiles [(0, 4)]
+    Total: 3 + 6 + 1 = 10 = C(5,2) ✓
+
+  EDGE WEIGHT DECOMPOSITION BY REGION:
+
+  Edge                           | overlap | boundary | apex | total
+  ---------------------------------------------------------------------------
+  {0(H=1),1(H=3)}                   |    144  |     288  |   48 | 480
+  {0(H=1),2(H=5)}                   |    144  |     288  |   48 | 480
+  {0(H=1),3(H=3)}                   |     72  |     144  |   24 | 240
+  {0(H=1),4(H=9)}                   |     72  |     144  |   24 | 240
+  {1(H=3),2(H=5)}                   |    144  |     288  |   48 | 480
+  {1(H=3),5(H=9)}                   |    144  |     288  |   48 | 480
+  {2(H=5),3(H=3)}                   |    144  |     288  |   48 | 480
+  {2(H=5),4(H=9)}                   |    144  |     288  |   48 | 480
+  {2(H=5),5(H=9)}                   |    144  |     288  |   48 | 480
+  {2(H=5),6(H=11)}                   |    144  |     288  |   48 | 480
+  {2(H=5),8(H=13)}                   |    144  |     288  |   48 | 480
+  {3(H=3),7(H=15)}                   |     24  |      48  |    8 | 80
+  {4(H=9),5(H=9)}                   |    144  |     288  |   48 | 480
+  {4(H=9),6(H=11)}                   |    144  |     288  |   48 | 480
+  {4(H=9),7(H=15)}                   |     72  |     144  |   24 | 240
+  {5(H=9),6(H=11)}                   |     72  |     144  |   24 | 240
+  {5(H=9),8(H=13)}                   |    216  |     432  |   72 | 720
+  {6(H=11),8(H=13)}                   |    144  |     288  |   48 | 480
+  {6(H=11),9(H=15)}                   |     72  |     144  |   24 | 240
+  {7(H=15),8(H=13)}                   |    144  |     288  |   48 | 480
+  {8(H=13),9(H=15)}                   |     72  |     144  |   24 | 240
+
+========================================================================
+  SELF-LOOPS BY REGION
+========================================================================
+
+  Node                 | overlap | boundary | apex | total
+  ------------------------------------------------------------
+  0 (H=1)            |    144  |     288  |   48 | 480
+  1 (H=3)            |     24  |      48  |    8 | 80
+  2 (H=5)            |    216  |     432  |   72 | 720
+  4 (H=9)            |     72  |     144  |   24 | 240
+  6 (H=11)            |     72  |     144  |   24 | 240
+
+========================================================================
+  REGION CONTRIBUTION RATIOS
+========================================================================
+
+  Overlap: 3072 (30.0%)
+  Boundary: 6144 (60.0%)
+  Apex: 1024 (10.0%)
+
+  Expected (from tile counts):
+  Overlap: 3/10 = 30.0%
+  Boundary: 6/10 = 60.0%
+  Apex: 1/10 = 10.0%
+
+  Actual/Expected ratio:
+  Overlap: 1.0000
+  Boundary: 1.0000
+  Apex: 1.0000
+
+========================================================================
+  THE RECURSIVE IDENTITY
+========================================================================
+
+  W_overlap / W_total (off-diagonal, where nonzero):
+    min=0.3000, max=0.3000, std=0.000000
+    → CONSTANT ratio 0.3000 = 3/10 tiles
+  W_boundary / W_total (off-diagonal):
+    min=0.6000, max=0.6000, std=0.000000
+  W_apex / W_total (off-diagonal):
+    min=0.1000, max=0.1000, std=0.000000
+
+  IF the ratios are constant: W_region = (n_region/m) × W_total.
+  This would mean: the overlap, boundary, and apex contribute
+  PROPORTIONALLY to the total, with no region-specific structure.
+
+  If TRUE: W(n) = W_total, and we can compute it from:
+    W_total = (m/n_ov) × W_overlap
+  And W_overlap relates to W(n-2) via the fiber map.
+  This gives: W(n) = (m/C(n-2,2)) × lifted_W(n-2)
+  = the RECURSIVE FORMULA for the wiggly weight matrix.
+
+
+========================================================================
+  THE SELF-GENERATION: W(n) FROM W(n-2)
+========================================================================
+
+  W(n-2) at n-2=3: 2x2 matrix
+  W(n-2) =
+[[12  6]
+ [ 6  0]]
+
+  OVERLAP FLIP LIFTING TABLE (n-2 → n):
+                        n-class changes | n-class stays
+    sub-class changes:             1440 |            96
+    sub-class stays:               1104 |           432
+    Total: 3072
+
+  LIFT RATE: sub-edge → full-edge = 0.9375
+  NOISE RATE: sub-self → full-edge = 0.7188
+  (Lift >> Noise means the sub-structure almost always lifts)
+
+  THE SELF-GENERATION MECHANISM:
+
+  1. The overlap W at n is built from W at n-2:
+     - Each sub-edge at n-2 LIFTS to a full edge at n with prob 93.8%
+     - Each sub-self-loop at n-2 creates a full edge with prob 71.9%
+
+  2. The boundary and apex contribute PROPORTIONALLY:
+     - W_boundary = (6/10) × W_total (boundary tile fraction)
+     - W_apex = (1/10) × W_total (apex tile fraction)
+
+  3. So: W(n) ≈ (m/C(n-2,2)) × lifted(W(n-2))
+     The lift is not exact (noise rate > 0), but it's a strong recursion.
+
+  4. To compute W(n) AND the meta-graph simultaneously:
+     a. Compute W(n-2) (the sub-tournament wiggly structure)
+     b. Lift to W_overlap(n) via the fiber map
+     c. Add boundary and apex contributions (proportional)
+     d. The meta-graph edges = nonzero off-diagonal entries of W(n)
+     e. fiber(C) = row_sum(W(n)) / m
+
+Done. opus-2026-03-24-S284
