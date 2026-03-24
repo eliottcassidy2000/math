@@ -1,0 +1,228 @@
+======================================================================
+  EVEN GRAPH FIBER ANALYSIS
+  opus-2026-03-23-S260
+======================================================================
+
+======================================================================
+  n = 3: FIBER ANALYSIS
+======================================================================
+  m = 3, cut dim = 2, cycle dim = 1
+  Tournament classes: 2
+  Even graph classes (from projection): 2
+  Fiber size distribution: [1, 1]
+  Max fiber: 1, Mean fiber: 1.00
+
+  H STATISTICS WITHIN FIBERS:
+  Total H variance: 1.0
+  Within-fiber fraction: 0.0000 (0.0%)
+  Between-fiber fraction: 1.0000 (100.0%)
+  (within = H variance explained by scores; between = H variance explained by cycle structure)
+
+  SCORE DIVERSITY WITHIN FIBERS:
+  Max score diversity in any fiber: 0
+
+  SC ENRICHMENT:
+  Overall SC rate: 2/2 = 1.000
+  SC rate in singleton fibers: 2/2 = 1.000
+
+  COMPLEMENT INTERACTION:
+  complement(T) maps to complement(cycle_proj(T)): 0/2 (0.0%)
+  Mismatches: 2
+
+  ORBIT STRUCTURE:
+  Even graph orbit sizes: [1, 1]
+  Sum of orbit sizes: 2 (should be 2 labeled even graphs)
+
+  FIBER DETAIL (tournament_classes, labeled_even_graphs, labeled_tournaments):
+
+======================================================================
+  n = 4: FIBER ANALYSIS
+======================================================================
+  m = 6, cut dim = 3, cycle dim = 3
+  Tournament classes: 4
+  Even graph classes (from projection): 3
+  Fiber size distribution: [1, 1, 2]
+  Max fiber: 2, Mean fiber: 1.33
+
+  H STATISTICS WITHIN FIBERS:
+  Total H variance: 2.0
+  Within-fiber fraction: 0.2500 (25.0%)
+  Between-fiber fraction: 0.7500 (75.0%)
+  (within = H variance explained by scores; between = H variance explained by cycle structure)
+
+  SCORE DIVERSITY WITHIN FIBERS:
+  Max score diversity in any fiber: 2
+
+  SC ENRICHMENT:
+  Overall SC rate: 2/4 = 0.500
+  SC rate in singleton fibers: 1/2 = 0.500
+
+  COMPLEMENT INTERACTION:
+  complement(T) maps to complement(cycle_proj(T)): 0/4 (0.0%)
+  Mismatches: 4
+
+  ORBIT STRUCTURE:
+  Even graph orbit sizes: [1, 1, 2]
+  Sum of orbit sizes: 4 (should be 8 labeled even graphs)
+
+  FIBER DETAIL (tournament_classes, labeled_even_graphs, labeled_tournaments):
+    2 classes, 2 labeled even graphs, 32 labeled tournaments
+
+======================================================================
+  n = 5: FIBER ANALYSIS
+======================================================================
+  m = 10, cut dim = 4, cycle dim = 6
+  Tournament classes: 12
+  Even graph classes (from projection): 7
+  Fiber size distribution: [1, 1, 1, 2, 2, 2, 3]
+  Max fiber: 3, Mean fiber: 1.71
+
+  H STATISTICS WITHIN FIBERS:
+  Total H variance: 22.9
+  Within-fiber fraction: 0.1044 (10.4%)
+  Between-fiber fraction: 0.8956 (89.6%)
+  (within = H variance explained by scores; between = H variance explained by cycle structure)
+
+  SCORE DIVERSITY WITHIN FIBERS:
+  Max score diversity in any fiber: 2
+
+  SC ENRICHMENT:
+  Overall SC rate: 8/12 = 0.667
+  SC rate in singleton fibers: 3/3 = 1.000
+
+  COMPLEMENT INTERACTION:
+  complement(T) maps to complement(cycle_proj(T)): 0/12 (0.0%)
+  Mismatches: 12
+
+  ORBIT STRUCTURE:
+  Even graph orbit sizes: [1, 1, 1, 2, 2, 2, 3]
+  Sum of orbit sizes: 12 (should be 64 labeled even graphs)
+
+  FIBER DETAIL (tournament_classes, labeled_even_graphs, labeled_tournaments):
+    3 classes, 3 labeled even graphs, 280 labeled tournaments
+    2 classes, 2 labeled even graphs, 80 labeled tournaments
+    2 classes, 2 labeled even graphs, 160 labeled tournaments
+    2 classes, 2 labeled even graphs, 240 labeled tournaments
+
+======================================================================
+  n = 6: FIBER ANALYSIS
+======================================================================
+  m = 15, cut dim = 5, cycle dim = 10
+  Tournament classes: 56
+  Even graph classes (from projection): 21
+  Fiber size distribution: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 4, 5, 7, 7, 8]
+  Max fiber: 8, Mean fiber: 2.67
+
+  H STATISTICS WITHIN FIBERS:
+  Total H variance: 157.6
+  Within-fiber fraction: 0.1987 (19.9%)
+  Between-fiber fraction: 0.8013 (80.1%)
+  (within = H variance explained by scores; between = H variance explained by cycle structure)
+
+  SCORE DIVERSITY WITHIN FIBERS:
+    Fiber size 8: 5 distinct scores, 3 SC, H range [9, 37]
+    Fiber size 7: 4 distinct scores, 2 SC, H range [17, 37]
+    Fiber size 7: 6 distinct scores, 0 SC, H range [15, 37]
+    Fiber size 5: 4 distinct scores, 0 SC, H range [9, 23]
+  Max score diversity in any fiber: 6
+
+  SC ENRICHMENT:
+  Overall SC rate: 12/56 = 0.214
+  SC rate in singleton fibers: 6/11 = 0.545
+  SC rate in large fibers (>3): 6/31 = 0.194
+
+  COMPLEMENT INTERACTION:
+  complement(T) maps to complement(cycle_proj(T)): 0/56 (0.0%)
+  Mismatches: 56
+
+  ORBIT STRUCTURE:
+  Even graph orbit sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 4, 5, 7, 7, 8]
+  Sum of orbit sizes: 56 (should be 1024 labeled even graphs)
+
+  FIBER DETAIL (tournament_classes, labeled_even_graphs, labeled_tournaments):
+    8 classes, 8 labeled even graphs, 4160 labeled tournaments
+    7 classes, 7 labeled even graphs, 4080 labeled tournaments
+    7 classes, 7 labeled even graphs, 4464 labeled tournaments
+    5 classes, 5 labeled even graphs, 3600 labeled tournaments
+    4 classes, 4 labeled even graphs, 1440 labeled tournaments
+    3 classes, 3 labeled even graphs, 1680 labeled tournaments
+    3 classes, 3 labeled even graphs, 2160 labeled tournaments
+    3 classes, 3 labeled even graphs, 1680 labeled tournaments
+    3 classes, 3 labeled even graphs, 2160 labeled tournaments
+    2 classes, 2 labeled even graphs, 960 labeled tournaments
+
+======================================================================
+  n = 7: FIBER ANALYSIS
+======================================================================
+  m = 21, cut dim = 6, cycle dim = 15
+  Tournament classes: 456
+  Even graph classes (from projection): 88
+  Fiber size distribution: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 11, 11, 11, 12, 12, 13, 13, 14, 15, 17, 19, 24, 25]
+  Max fiber: 25, Mean fiber: 5.18
+
+  H STATISTICS WITHIN FIBERS:
+  Total H variance: 1728.0
+  Within-fiber fraction: 0.2149 (21.5%)
+  Between-fiber fraction: 0.7851 (78.5%)
+  (within = H variance explained by scores; between = H variance explained by cycle structure)
+
+  SCORE DIVERSITY WITHIN FIBERS:
+    Fiber size 25: 9 distinct scores, 4 SC, H range [45, 129]
+    Fiber size 24: 11 distinct scores, 1 SC, H range [27, 109]
+    Fiber size 19: 12 distinct scores, 3 SC, H range [9, 93]
+    Fiber size 17: 10 distinct scores, 3 SC, H range [15, 111]
+    Fiber size 15: 6 distinct scores, 5 SC, H range [29, 123]
+    Fiber size 14: 10 distinct scores, 0 SC, H range [15, 73]
+    Fiber size 13: 8 distinct scores, 2 SC, H range [29, 77]
+    Fiber size 13: 5 distinct scores, 6 SC, H range [83, 159]
+    Fiber size 12: 9 distinct scores, 3 SC, H range [31, 101]
+    Fiber size 12: 7 distinct scores, 0 SC, H range [45, 103]
+    Fiber size 11: 7 distinct scores, 2 SC, H range [9, 37]
+    Fiber size 11: 7 distinct scores, 1 SC, H range [43, 133]
+    Fiber size 11: 4 distinct scores, 0 SC, H range [17, 37]
+    Fiber size 10: 4 distinct scores, 1 SC, H range [51, 97]
+    Fiber size 10: 6 distinct scores, 1 SC, H range [89, 123]
+    Fiber size 10: 6 distinct scores, 1 SC, H range [89, 141]
+    Fiber size 8: 7 distinct scores, 0 SC, H range [9, 47]
+    Fiber size 8: 6 distinct scores, 3 SC, H range [43, 135]
+    Fiber size 8: 6 distinct scores, 4 SC, H range [83, 157]
+    Fiber size 8: 4 distinct scores, 2 SC, H range [67, 109]
+    Fiber size 7: 7 distinct scores, 2 SC, H range [3, 9]
+    Fiber size 7: 7 distinct scores, 2 SC, H range [5, 23]
+    Fiber size 7: 4 distinct scores, 0 SC, H range [49, 103]
+    Fiber size 6: 5 distinct scores, 1 SC, H range [15, 31]
+    Fiber size 6: 4 distinct scores, 2 SC, H range [49, 115]
+    Fiber size 6: 5 distinct scores, 2 SC, H range [57, 155]
+    Fiber size 6: 3 distinct scores, 2 SC, H range [123, 153]
+    Fiber size 5: 5 distinct scores, 2 SC, H range [19, 51]
+    Fiber size 5: 3 distinct scores, 2 SC, H range [49, 83]
+    Fiber size 5: 5 distinct scores, 2 SC, H range [91, 151]
+    Fiber size 5: 2 distinct scores, 0 SC, H range [89, 115]
+    Fiber size 5: 2 distinct scores, 0 SC, H range [67, 113]
+    Fiber size 5: 3 distinct scores, 2 SC, H range [117, 159]
+  Max score diversity in any fiber: 12
+
+  SC ENRICHMENT:
+  Overall SC rate: 88/456 = 0.193
+  SC rate in singleton fibers: 6/21 = 0.286
+  SC rate in large fibers (>3): 74/382 = 0.194
+
+  COMPLEMENT INTERACTION:
+  complement(T) maps to complement(cycle_proj(T)): 0/456 (0.0%)
+  Mismatches: 456
+
+  ORBIT STRUCTURE:
+  Even graph orbit sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 11, 11, 11, 12, 12, 13, 13, 14, 15, 17, 19, 24, 25]
+  Sum of orbit sizes: 456 (should be 32768 labeled even graphs)
+
+======================================================================
+  SUMMARY
+======================================================================
+  n   V_t   V_e  ratio cycle_dim  H_within  H_between  comp%
+  3     2     2 1.000         1      0.0%     100.0%   0.0%
+  4     4     3 1.333         3     25.0%      75.0%   0.0%
+  5    12     7 1.714         6     10.4%      89.6%   0.0%
+  6    56    21 2.667        10     19.9%      80.1%   0.0%
+  7   456    88 5.182        15     21.5%      78.5%   0.0%
+
+DONE.

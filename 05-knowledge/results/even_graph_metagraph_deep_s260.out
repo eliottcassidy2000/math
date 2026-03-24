@@ -1,0 +1,558 @@
+======================================================================
+  EVEN GRAPHS THROUGH THE MERGED METAGRAPH LENS
+  opus-2026-03-23-S260
+======================================================================
+
+######################################################################
+  n = 3
+######################################################################
+  Tournament iso classes: 2
+  Even graph iso classes (from tournament projections): 2
+  Ratio V_tournament / V_even = 2 / 2 = 1.000
+
+  FIBER STRUCTURE (tournament classes per even graph class):
+    Even class 0 (1 edges, degs=(0, 1, 1)): 1 tournaments, H=[1], SC=[True]
+    Even class 1 (0 edges, degs=(0, 0, 0)): 1 tournaments, H=[3], SC=[True]
+
+  Is tournament -> even_class INJECTIVE? True
+  Fiber size distribution: [1, 1]
+
+  TOURNAMENT METAGRAPH AND EVEN GRAPH PROJECTION:
+  Tournament metagraph edges: 1
+  Edges where both endpoints have SAME even class: 0
+  Edges where endpoints have DIFFERENT even class: 2
+  Fraction same-even: 0.000
+
+  EVEN GRAPH SHADOW (projected metagraph):
+    Vertices: 2
+    Edges: 1
+    Edge density: 1.000
+
+  SC TOURNAMENTS AND EVEN GRAPH CLASSES:
+    SC tournament classes: 2
+    Even classes containing SC tournaments: 2
+    Even classes with ONLY SC tournaments: 2
+
+  ARC FLIP EFFECT ON CYCLE SPACE:
+    Cycle-space Hamming distance per arc flip: [(1, 1)]
+    Cut-space Hamming distance per arc flip: [(2, 1)]
+
+  MERGED METAGRAPH VIEW:
+    V_merged: 2
+    E_merged: 1
+    Spine (SC-SC): 1
+    Ribs (SC-NS): 0
+    Sea (NS-NS): 0
+
+  EVEN GRAPH CLASSES IN MERGED METAGRAPH:
+    Even class 0: 1 merged nodes (1 SC)
+    Even class 1: 1 merged nodes (1 SC)
+
+  METAGRAPH EDGES BY EVEN CLASS:
+    Same even class: 0 (0.0%)
+    Different even class: 1 (100.0%)
+
+######################################################################
+  n = 4
+######################################################################
+  Tournament iso classes: 4
+  Even graph iso classes (from tournament projections): 3
+  Ratio V_tournament / V_even = 4 / 3 = 1.333
+
+  FIBER STRUCTURE (tournament classes per even graph class):
+    Even class 0 (3 edges, degs=(0, 2, 2, 2)): 1 tournaments, H=[1], SC=[True]
+    Even class 1 (2 edges, degs=(0, 1, 2, 1)): 1 tournaments, H=[3], SC=[False]
+    Even class 2 (1 edges, degs=(0, 1, 0, 1)): 2 tournaments, H=[3, 5], SC=[False, True]
+      Score diversity: 2 distinct scores
+
+  Is tournament -> even_class INJECTIVE? False
+  Fiber size distribution: [1, 1, 2]
+
+  TOURNAMENT METAGRAPH AND EVEN GRAPH PROJECTION:
+  Tournament metagraph edges: 5
+  Edges where both endpoints have SAME even class: 2
+  Edges where endpoints have DIFFERENT even class: 7
+  Fraction same-even: 0.222
+
+  EVEN GRAPH SHADOW (projected metagraph):
+    Vertices: 3
+    Edges: 3
+    Edge density: 1.000
+
+  SC TOURNAMENTS AND EVEN GRAPH CLASSES:
+    SC tournament classes: 2
+    Even classes containing SC tournaments: 2
+    Even classes with ONLY SC tournaments: 1
+
+  ARC FLIP EFFECT ON CYCLE SPACE:
+    Cycle-space Hamming distance per arc flip: [(1, 2), (2, 3)]
+    Cut-space Hamming distance per arc flip: [(0, 1), (3, 2), (4, 2)]
+
+  MERGED METAGRAPH VIEW:
+    V_merged: 3
+    E_merged: 3
+    Spine (SC-SC): 1
+    Ribs (SC-NS): 2
+    Sea (NS-NS): 0
+
+  EVEN GRAPH CLASSES IN MERGED METAGRAPH:
+    Even class 0: 1 merged nodes (1 SC)
+    Even class 1: 1 merged nodes (0 SC)
+    Even class 2: 1 merged nodes (1 SC)
+
+  METAGRAPH EDGES BY EVEN CLASS:
+    Same even class: 0 (0.0%)
+    Different even class: 3 (100.0%)
+
+######################################################################
+  n = 5
+######################################################################
+  Tournament iso classes: 12
+  Even graph iso classes (from tournament projections): 7
+  Ratio V_tournament / V_even = 12 / 7 = 1.714
+
+  FIBER STRUCTURE (tournament classes per even graph class):
+    Even class 0 (6 edges, degs=(0, 3, 3, 3, 3)): 1 tournaments, H=[1], SC=[True]
+    Even class 1 (5 edges, degs=(0, 3, 2, 3, 2)): 2 tournaments, H=[3, 3], SC=[False, True]
+      Score diversity: 2 distinct scores
+    Even class 2 (3 edges, degs=(0, 2, 2, 0, 2)): 2 tournaments, H=[5, 3], SC=[False, False]
+      Score diversity: 2 distinct scores
+    Even class 3 (2 edges, degs=(0, 1, 1, 1, 1)): 1 tournaments, H=[11], SC=[True]
+    Even class 4 (2 edges, degs=(0, 1, 2, 0, 1)): 3 tournaments, H=[13, 9, 15], SC=[True, True, True]
+      Score diversity: 2 distinct scores
+    Even class 5 (4 edges, degs=(0, 2, 2, 1, 3)): 2 tournaments, H=[9, 5], SC=[True, False]
+      Score diversity: 2 distinct scores
+    Even class 6 (3 edges, degs=(0, 2, 1, 1, 2)): 1 tournaments, H=[15], SC=[True]
+
+  Is tournament -> even_class INJECTIVE? False
+  Fiber size distribution: [1, 1, 1, 2, 2, 2, 3]
+
+  TOURNAMENT METAGRAPH AND EVEN GRAPH PROJECTION:
+  Tournament metagraph edges: 30
+  Edges where both endpoints have SAME even class: 10
+  Edges where endpoints have DIFFERENT even class: 42
+  Fraction same-even: 0.192
+
+  EVEN GRAPH SHADOW (projected metagraph):
+    Vertices: 7
+    Edges: 14
+    Edge density: 0.667
+
+  SC TOURNAMENTS AND EVEN GRAPH CLASSES:
+    SC tournament classes: 8
+    Even classes containing SC tournaments: 6
+    Even classes with ONLY SC tournaments: 4
+
+  ARC FLIP EFFECT ON CYCLE SPACE:
+    Cycle-space Hamming distance per arc flip: [(1, 7), (2, 12), (3, 8), (4, 3)]
+    Cut-space Hamming distance per arc flip: [(0, 11), (4, 14), (6, 5)]
+
+  MERGED METAGRAPH VIEW:
+    V_merged: 10
+    E_merged: 21
+    Spine (SC-SC): 12
+    Ribs (SC-NS): 8
+    Sea (NS-NS): 1
+
+  EVEN GRAPH CLASSES IN MERGED METAGRAPH:
+    Even class 0: 1 merged nodes (1 SC)
+    Even class 1: 2 merged nodes (1 SC)
+    Even class 2: 1 merged nodes (0 SC)
+    Even class 3: 1 merged nodes (1 SC)
+    Even class 4: 3 merged nodes (3 SC)
+    Even class 5: 1 merged nodes (1 SC)
+    Even class 6: 1 merged nodes (1 SC)
+
+  METAGRAPH EDGES BY EVEN CLASS:
+    Same even class: 2 (9.5%)
+    Different even class: 19 (90.5%)
+
+######################################################################
+  n = 6
+######################################################################
+  Tournament iso classes: 56
+  Even graph iso classes (from tournament projections): 21
+  Ratio V_tournament / V_even = 56 / 21 = 2.667
+
+  FIBER STRUCTURE (tournament classes per even graph class):
+    Even class 0 (10 edges, degs=(0, 4, 4, 4, 4, 4)): 1 tournaments, H=[1], SC=[True]
+    Even class 1 (9 edges, degs=(0, 4, 4, 3, 4, 3)): 4 tournaments, H=[3, 5, 3, 3], SC=[False, True, False, False]
+      Score diversity: 4 distinct scores
+    Even class 2 (6 edges, degs=(0, 3, 3, 3, 0, 3)): 3 tournaments, H=[9, 5, 3], SC=[False, False, False]
+      Score diversity: 3 distinct scores
+    Even class 3 (4 edges, degs=(0, 2, 2, 2, 1, 1)): 5 tournaments, H=[23, 11, 23, 9, 19], SC=[False, False, False, False, False]
+      Score diversity: 4 distinct scores
+    Even class 4 (5 edges, degs=(0, 2, 3, 3, 0, 2)): 8 tournaments, H=[33, 23, 15, 37, 27, 13, 15, 9], SC=[True, False, False, True, False, False, False, True]
+      Score diversity: 5 distinct scores
+    Even class 5 (7 edges, degs=(0, 3, 3, 3, 1, 4)): 1 tournaments, H=[17], SC=[True]
+    Even class 6 (8 edges, degs=(0, 2, 4, 4, 3, 3)): 3 tournaments, H=[11, 9, 5], SC=[False, False, False]
+      Score diversity: 3 distinct scores
+    Even class 7 (8 edges, degs=(0, 3, 3, 4, 3, 3)): 3 tournaments, H=[13, 9, 15], SC=[False, False, False]
+      Score diversity: 2 distinct scores
+    Even class 8 (7 edges, degs=(0, 2, 3, 4, 3, 2)): 1 tournaments, H=[15], SC=[False]
+    Even class 9 (3 edges, degs=(0, 1, 2, 1, 1, 1)): 7 tournaments, H=[37, 29, 33, 37, 33, 29, 17], SC=[False, True, False, False, False, False, True]
+      Score diversity: 4 distinct scores
+    Even class 10 (5 edges, degs=(0, 2, 2, 2, 1, 3)): 7 tournaments, H=[25, 19, 37, 15, 33, 31, 15], SC=[False, False, False, False, False, False, False]
+      Score diversity: 6 distinct scores
+    Even class 11 (2 edges, degs=(0, 1, 1, 1, 1, 0)): 1 tournaments, H=[45], SC=[True]
+    Even class 12 (4 edges, degs=(0, 1, 2, 2, 1, 2)): 1 tournaments, H=[43], SC=[False]
+    Even class 13 (4 edges, degs=(0, 1, 3, 0, 2, 2)): 3 tournaments, H=[25, 23, 31], SC=[False, False, False]
+      Score diversity: 2 distinct scores
+    Even class 14 (4 edges, degs=(0, 2, 2, 0, 2, 2)): 1 tournaments, H=[29], SC=[True]
+    Even class 15 (6 edges, degs=(0, 2, 3, 1, 2, 4)): 2 tournaments, H=[29, 27], SC=[False, False]
+      Score diversity: 2 distinct scores
+    Even class 16 (4 edges, degs=(0, 1, 3, 1, 1, 2)): 1 tournaments, H=[45], SC=[True]
+    Even class 17 (3 edges, degs=(0, 1, 2, 0, 2, 1)): 1 tournaments, H=[33], SC=[False]
+    Even class 18 (5 edges, degs=(0, 1, 3, 1, 2, 3)): 1 tournaments, H=[37], SC=[False]
+    Even class 19 (6 edges, degs=(0, 3, 1, 2, 3, 3)): 1 tournaments, H=[41], SC=[True]
+    Even class 20 (6 edges, degs=(0, 2, 2, 2, 3, 3)): 1 tournaments, H=[43], SC=[False]
+
+  Is tournament -> even_class INJECTIVE? False
+  Fiber size distribution: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 4, 5, 7, 7, 8]
+
+  TOURNAMENT METAGRAPH AND EVEN GRAPH PROJECTION:
+  Tournament metagraph edges: 290
+  Edges where both endpoints have SAME even class: 60
+  Edges where endpoints have DIFFERENT even class: 330
+  Fraction same-even: 0.154
+
+  EVEN GRAPH SHADOW (projected metagraph):
+    Vertices: 21
+    Edges: 96
+    Edge density: 0.457
+
+  SC TOURNAMENTS AND EVEN GRAPH CLASSES:
+    SC tournament classes: 12
+    Even classes containing SC tournaments: 9
+    Even classes with ONLY SC tournaments: 6
+
+  ARC FLIP EFFECT ON CYCLE SPACE:
+    Cycle-space Hamming distance per arc flip: [(1, 10), (2, 2), (3, 6), (4, 19), (5, 4), (6, 6), (7, 2), (8, 1)]
+    Cut-space Hamming distance per arc flip: [(0, 15), (5, 18), (8, 15), (9, 2)]
+
+  MERGED METAGRAPH VIEW:
+    V_merged: 34
+    E_merged: 143
+    Spine (SC-SC): 13
+    Ribs (SC-NS): 45
+    Sea (NS-NS): 85
+
+  EVEN GRAPH CLASSES IN MERGED METAGRAPH:
+    Even class 0: 1 merged nodes (1 SC)
+    Even class 1: 3 merged nodes (1 SC)
+    Even class 2: 1 merged nodes (0 SC)
+    Even class 3: 1 merged nodes (0 SC)
+    Even class 4: 6 merged nodes (3 SC)
+    Even class 5: 1 merged nodes (1 SC)
+    Even class 6: 2 merged nodes (0 SC)
+    Even class 7: 3 merged nodes (0 SC)
+    Even class 8: 1 merged nodes (0 SC)
+    Even class 9: 5 merged nodes (2 SC)
+    Even class 10: 2 merged nodes (0 SC)
+    Even class 11: 1 merged nodes (1 SC)
+    Even class 12: 1 merged nodes (0 SC)
+    Even class 13: 1 merged nodes (0 SC)
+    Even class 14: 1 merged nodes (1 SC)
+    Even class 15: 1 merged nodes (0 SC)
+    Even class 16: 1 merged nodes (1 SC)
+    Even class 17: 1 merged nodes (0 SC)
+    Even class 19: 1 merged nodes (1 SC)
+
+  METAGRAPH EDGES BY EVEN CLASS:
+    Same even class: 14 (9.8%)
+    Different even class: 129 (90.2%)
+
+######################################################################
+  n = 7
+######################################################################
+  Tournament iso classes: 456
+  Even graph iso classes (from tournament projections): 88
+  Ratio V_tournament / V_even = 456 / 88 = 5.182
+
+  FIBER STRUCTURE (tournament classes per even graph class):
+    Even class 0 (15 edges, degs=(0, 5, 5, 5, 5, 5, 5)): 1 tournaments, H=[1], SC=[True]
+    Even class 1 (14 edges, degs=(0, 5, 5, 5, 4, 5, 4)): 7 tournaments, H=[3, 9, 5, 3, 5, 3, 3], SC=[False, True, False, False, False, True, False]
+      Score diversity: 7 distinct scores
+    Even class 2 (10 edges, degs=(0, 4, 4, 4, 4, 0, 4)): 4 tournaments, H=[17, 9, 5, 3], SC=[False, False, False, False]
+      Score diversity: 4 distinct scores
+    Even class 3 (7 edges, degs=(0, 3, 3, 3, 3, 1, 1)): 8 tournaments, H=[47, 23, 19, 11, 47, 15, 9, 39], SC=[False, False, False, False, False, False, False, False]
+      Score diversity: 7 distinct scores
+    Even class 4 (9 edges, degs=(0, 3, 4, 4, 4, 0, 3)): 19 tournaments, H=[85, 59, 41, 27, 93, 69, 51, 33, 23, 37, 27, 15, 23, 17, 13, 27, 15, 9, 9], SC=[True, False, False, False, True, False, False, False, False, False, False, False, False, False, False, False, False, True, False]
+      Score diversity: 12 distinct scores
+    Even class 5 (11 edges, degs=(0, 4, 4, 4, 4, 1, 5)): 2 tournaments, H=[33, 15], SC=[True, False]
+      Score diversity: 2 distinct scores
+    Even class 6 (13 edges, degs=(0, 3, 5, 5, 5, 4, 4)): 7 tournaments, H=[23, 17, 11, 9, 5, 11, 9], SC=[False, False, False, False, False, True, True]
+      Score diversity: 7 distinct scores
+    Even class 7 (13 edges, degs=(0, 4, 4, 5, 5, 4, 4)): 11 tournaments, H=[33, 23, 15, 37, 13, 9, 27, 15, 13, 15, 9], SC=[False, False, False, False, False, False, False, False, True, True, False]
+      Score diversity: 7 distinct scores
+    Even class 8 (12 edges, degs=(0, 5, 3, 4, 5, 4, 3)): 6 tournaments, H=[15, 25, 19, 15, 31, 15], SC=[False, False, False, True, False, False]
+      Score diversity: 5 distinct scores
+    Even class 9 (6 edges, degs=(0, 2, 2, 2, 2, 2, 2)): 5 tournaments, H=[51, 45, 23, 37, 19], SC=[True, True, False, False, False]
+      Score diversity: 5 distinct scores
+    Even class 10 (6 edges, degs=(0, 2, 3, 3, 1, 1, 2)): 24 tournaments, H=[109, 81, 59, 103, 79, 91, 69, 91, 69, 35, 89, 71, 69, 37, 29, 37, 69, 33, 71, 41, 27, 45, 57, 29], SC=[False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, True, False, False, False]
+      Score diversity: 11 distinct scores
+    Even class 11 (8 edges, degs=(0, 3, 3, 3, 2, 1, 4)): 14 tournaments, H=[49, 39, 41, 33, 59, 33, 59, 25, 15, 65, 73, 27, 65, 31], SC=[False, False, False, False, False, False, False, False, False, False, False, False, False, False]
+      Score diversity: 10 distinct scores
+    Even class 12 (7 edges, degs=(0, 2, 2, 3, 2, 2, 3)): 12 tournaments, H=[81, 101, 83, 73, 53, 37, 65, 33, 91, 43, 31, 79], SC=[False, False, True, False, False, False, False, False, False, False, True, True]
+      Score diversity: 9 distinct scores
+    Even class 13 (5 edges, degs=(0, 2, 2, 2, 1, 2, 1)): 10 tournaments, H=[69, 97, 81, 89, 75, 79, 69, 77, 51, 73], SC=[False, False, True, False, False, False, False, False, False, False]
+      Score diversity: 4 distinct scores
+    Even class 14 (7 edges, degs=(0, 2, 3, 3, 2, 1, 3)): 11 tournaments, H=[115, 89, 111, 75, 121, 45, 43, 131, 55, 43, 133], SC=[False, False, False, True, False, False, False, False, False, False, False]
+      Score diversity: 7 distinct scores
+    Even class 15 (8 edges, degs=(0, 2, 4, 4, 0, 3, 3)): 17 tournaments, H=[73, 59, 45, 41, 91, 73, 111, 55, 53, 41, 35, 29, 25, 77, 93, 31, 15], SC=[False, False, False, True, False, False, True, False, False, False, False, False, False, False, True, False, False]
+      Score diversity: 10 distinct scores
+    Even class 16 (8 edges, degs=(0, 3, 3, 4, 0, 3, 3)): 15 tournaments, H=[91, 71, 99, 49, 99, 77, 117, 111, 123, 71, 41, 77, 31, 29, 45], SC=[True, False, False, False, False, False, True, True, True, False, False, False, True, False, False]
+      Score diversity: 6 distinct scores
+    Even class 17 (10 edges, degs=(0, 3, 4, 4, 1, 3, 5)): 13 tournaments, H=[71, 51, 69, 37, 51, 33, 69, 49, 77, 53, 29, 29, 51], SC=[False, False, False, False, True, False, True, False, False, False, False, False, False]
+      Score diversity: 8 distinct scores
+    Even class 18 (7 edges, degs=(0, 2, 3, 4, 1, 2, 2)): 25 tournaments, H=[123, 93, 113, 89, 129, 71, 117, 123, 123, 103, 83, 77, 65, 109, 81, 101, 65, 101, 45, 75, 57, 115, 65, 117, 69], SC=[False, False, False, False, False, True, False, False, False, False, False, False, True, False, False, False, False, False, False, False, False, False, True, False, True]
+      Score diversity: 9 distinct scores
+    Even class 19 (7 edges, degs=(0, 2, 4, 3, 0, 3, 2)): 8 tournaments, H=[97, 57, 117, 135, 61, 43, 87, 53], SC=[False, False, False, True, True, False, True, False]
+      Score diversity: 6 distinct scores
+    Even class 20 (9 edges, degs=(0, 2, 4, 4, 1, 3, 4)): 3 tournaments, H=[103, 65, 73], SC=[False, False, False]
+      Score diversity: 3 distinct scores
+    Even class 21 (9 edges, degs=(0, 3, 3, 4, 1, 3, 4)): 6 tournaments, H=[115, 95, 77, 81, 99, 49], SC=[False, True, False, False, True, False]
+      Score diversity: 4 distinct scores
+    Even class 22 (7 edges, degs=(0, 3, 3, 3, 0, 3, 2)): 7 tournaments, H=[103, 73, 75, 55, 67, 49, 81], SC=[False, False, False, False, False, False, False]
+      Score diversity: 4 distinct scores
+    Even class 23 (9 edges, degs=(0, 4, 3, 3, 2, 2, 4)): 4 tournaments, H=[83, 67, 55, 65], SC=[False, True, False, True]
+      Score diversity: 3 distinct scores
+    Even class 24 (9 edges, degs=(0, 4, 3, 3, 1, 3, 4)): 5 tournaments, H=[83, 67, 81, 49, 67], SC=[False, True, False, True, False]
+      Score diversity: 3 distinct scores
+    Even class 25 (8 edges, degs=(0, 4, 2, 2, 2, 3, 3)): 5 tournaments, H=[151, 111, 145, 91, 95], SC=[True, False, True, False, False]
+      Score diversity: 5 distinct scores
+    Even class 26 (8 edges, degs=(0, 3, 3, 2, 2, 3, 3)): 6 tournaments, H=[151, 131, 155, 109, 97, 57], SC=[True, False, True, False, False, False]
+      Score diversity: 5 distinct scores
+    Even class 27 (6 edges, degs=(0, 3, 2, 3, 1, 2, 1)): 8 tournaments, H=[157, 135, 145, 89, 83, 109, 115, 111], SC=[True, True, True, False, False, False, True, False]
+      Score diversity: 6 distinct scores
+    Even class 28 (6 edges, degs=(0, 4, 2, 2, 1, 2, 1)): 3 tournaments, H=[131, 139, 127], SC=[False, True, True]
+      Score diversity: 2 distinct scores
+    Even class 29 (6 edges, degs=(0, 3, 2, 2, 1, 3, 1)): 4 tournaments, H=[121, 101, 111, 93], SC=[False, False, False, False]
+      Score diversity: 4 distinct scores
+    Even class 30 (8 edges, degs=(0, 3, 3, 3, 2, 2, 3)): 3 tournaments, H=[133, 91, 135], SC=[False, False, False]
+      Score diversity: 2 distinct scores
+    Even class 31 (8 edges, degs=(0, 4, 2, 3, 2, 2, 3)): 13 tournaments, H=[131, 105, 143, 83, 159, 139, 159, 139, 137, 89, 123, 135, 89], SC=[False, True, True, False, True, False, True, True, False, False, False, True, False]
+      Score diversity: 5 distinct scores
+    Even class 32 (6 edges, degs=(0, 3, 2, 2, 2, 2, 1)): 10 tournaments, H=[123, 101, 101, 91, 109, 89, 103, 89, 105, 89], SC=[True, False, False, False, False, False, False, False, False, False]
+      Score diversity: 6 distinct scores
+    Even class 33 (8 edges, degs=(0, 3, 3, 3, 1, 3, 3)): 2 tournaments, H=[131, 91], SC=[False, False]
+      Score diversity: 2 distinct scores
+    Even class 34 (8 edges, degs=(0, 4, 2, 3, 1, 3, 3)): 10 tournaments, H=[137, 109, 141, 89, 113, 103, 129, 91, 91, 111], SC=[False, False, True, False, False, False, False, False, False, False]
+      Score diversity: 6 distinct scores
+    Even class 35 (10 edges, degs=(0, 4, 3, 3, 2, 3, 5)): 4 tournaments, H=[105, 83, 41, 65], SC=[True, False, False, False]
+      Score diversity: 4 distinct scores
+    Even class 36 (9 edges, degs=(0, 4, 3, 2, 2, 3, 4)): 1 tournaments, H=[175], SC=[True]
+    Even class 37 (12 edges, degs=(0, 2, 5, 5, 4, 4, 4)): 3 tournaments, H=[23, 33, 19], SC=[False, False, False]
+      Score diversity: 3 distinct scores
+    Even class 38 (12 edges, degs=(0, 3, 4, 5, 4, 4, 4)): 11 tournaments, H=[37, 29, 37, 25, 29, 23, 33, 31, 27, 29, 17], SC=[False, False, False, False, False, False, False, False, False, False, False]
+      Score diversity: 4 distinct scores
+    Even class 39 (9 edges, degs=(0, 2, 4, 5, 3, 3, 1)): 8 tournaments, H=[109, 93, 73, 67, 75, 77, 69, 71], SC=[False, True, False, False, False, True, False, False]
+      Score diversity: 4 distinct scores
+    Even class 40 (11 edges, degs=(0, 2, 5, 4, 4, 4, 3)): 3 tournaments, H=[37, 77, 33], SC=[False, False, False]
+      Score diversity: 3 distinct scores
+    Even class 41 (11 edges, degs=(0, 3, 4, 4, 4, 4, 3)): 1 tournaments, H=[45], SC=[False]
+    Even class 42 (11 edges, degs=(0, 2, 5, 5, 3, 4, 3)): 4 tournaments, H=[33, 79, 69, 59], SC=[False, False, False, False]
+      Score diversity: 3 distinct scores
+    Even class 43 (11 edges, degs=(0, 3, 4, 5, 3, 4, 3)): 2 tournaments, H=[43, 37], SC=[False, False]
+      Score diversity: 2 distinct scores
+    Even class 44 (12 edges, degs=(0, 4, 4, 4, 4, 4, 4)): 1 tournaments, H=[29], SC=[False]
+    Even class 45 (9 edges, degs=(0, 3, 3, 5, 3, 3, 1)): 4 tournaments, H=[113, 75, 77, 81], SC=[False, False, True, False]
+      Score diversity: 2 distinct scores
+    Even class 46 (11 edges, degs=(0, 3, 4, 4, 4, 4, 3)): 2 tournaments, H=[45, 33], SC=[False, False]
+      Score diversity: 2 distinct scores
+    Even class 47 (10 edges, degs=(0, 4, 4, 4, 3, 1, 4)): 2 tournaments, H=[37, 25], SC=[False, True]
+      Score diversity: 2 distinct scores
+    Even class 48 (8 edges, degs=(0, 4, 3, 3, 3, 1, 2)): 1 tournaments, H=[109], SC=[False]
+    Even class 49 (8 edges, degs=(0, 3, 4, 4, 2, 1, 2)): 1 tournaments, H=[97], SC=[False]
+    Even class 50 (8 edges, degs=(0, 4, 3, 4, 2, 1, 2)): 5 tournaments, H=[111, 89, 115, 101, 111], SC=[False, False, False, False, False]
+      Score diversity: 2 distinct scores
+    Even class 51 (6 edges, degs=(0, 3, 3, 3, 2, 1, 0)): 1 tournaments, H=[133], SC=[False]
+    Even class 52 (10 edges, degs=(0, 3, 4, 4, 3, 2, 4)): 1 tournaments, H=[109], SC=[False]
+    Even class 53 (10 edges, degs=(0, 4, 3, 4, 3, 2, 4)): 3 tournaments, H=[123, 101, 43], SC=[False, False, False]
+      Score diversity: 3 distinct scores
+    Even class 54 (10 edges, degs=(0, 4, 4, 4, 2, 2, 4)): 1 tournaments, H=[97], SC=[False]
+    Even class 55 (8 edges, degs=(0, 2, 5, 3, 2, 2, 2)): 3 tournaments, H=[139, 159, 129], SC=[False, True, True]
+      Score diversity: 3 distinct scores
+    Even class 56 (8 edges, degs=(0, 2, 4, 4, 2, 2, 2)): 1 tournaments, H=[143], SC=[False]
+    Even class 57 (8 edges, degs=(0, 2, 5, 3, 3, 1, 2)): 3 tournaments, H=[111, 89, 79], SC=[False, False, False]
+      Score diversity: 2 distinct scores
+    Even class 58 (8 edges, degs=(0, 3, 4, 3, 3, 1, 2)): 1 tournaments, H=[91], SC=[False]
+    Even class 59 (8 edges, degs=(0, 2, 5, 4, 2, 1, 2)): 1 tournaments, H=[105], SC=[False]
+    Even class 60 (6 edges, degs=(0, 2, 4, 3, 2, 1, 0)): 3 tournaments, H=[137, 135, 75], SC=[False, True, False]
+      Score diversity: 2 distinct scores
+    Even class 61 (10 edges, degs=(0, 2, 5, 4, 3, 2, 4)): 4 tournaments, H=[121, 103, 91, 91], SC=[False, False, False, False]
+      Score diversity: 3 distinct scores
+    Even class 62 (10 edges, degs=(0, 3, 4, 4, 3, 2, 4)): 2 tournaments, H=[109, 123], SC=[False, False]
+      Score diversity: 2 distinct scores
+    Even class 63 (10 edges, degs=(0, 3, 5, 3, 3, 2, 4)): 1 tournaments, H=[101], SC=[False]
+    Even class 64 (5 edges, degs=(0, 1, 3, 1, 1, 2, 2)): 12 tournaments, H=[81, 65, 59, 51, 45, 95, 81, 103, 97, 101, 65, 51], SC=[False, False, False, False, False, False, False, False, False, False, False, False]
+      Score diversity: 7 distinct scores
+    Even class 65 (5 edges, degs=(0, 2, 2, 1, 1, 2, 2)): 5 tournaments, H=[103, 109, 103, 113, 67], SC=[False, False, False, False, False]
+      Score diversity: 2 distinct scores
+    Even class 66 (4 edges, degs=(0, 1, 1, 2, 2, 0, 2)): 2 tournaments, H=[109, 95], SC=[False, False]
+      Score diversity: 2 distinct scores
+    Even class 67 (4 edges, degs=(0, 2, 1, 1, 1, 1, 2)): 2 tournaments, H=[95, 93], SC=[False, False]
+      Score diversity: 2 distinct scores
+    Even class 68 (5 edges, degs=(0, 2, 1, 2, 2, 0, 3)): 2 tournaments, H=[151, 139], SC=[False, False]
+      Score diversity: 2 distinct scores
+    Even class 69 (3 edges, degs=(0, 1, 1, 1, 1, 1, 1)): 1 tournaments, H=[137], SC=[True]
+    Even class 70 (5 edges, degs=(0, 2, 1, 2, 1, 1, 3)): 6 tournaments, H=[131, 123, 153, 135, 123, 133], SC=[False, False, True, False, False, True]
+      Score diversity: 3 distinct scores
+    Even class 71 (6 edges, degs=(0, 2, 2, 2, 1, 3, 2)): 4 tournaments, H=[115, 129, 93, 91], SC=[False, True, False, False]
+      Score diversity: 3 distinct scores
+    Even class 72 (7 edges, degs=(0, 2, 2, 3, 2, 2, 3)): 4 tournaments, H=[147, 117, 153, 115], SC=[True, True, False, False]
+      Score diversity: 2 distinct scores
+    Even class 73 (7 edges, degs=(0, 1, 3, 3, 2, 2, 3)): 5 tournaments, H=[153, 117, 159, 129, 137], SC=[False, True, True, False, False]
+      Score diversity: 3 distinct scores
+    Even class 74 (5 edges, degs=(0, 1, 2, 2, 2, 2, 1)): 4 tournaments, H=[129, 139, 151, 117], SC=[True, False, True, False]
+      Score diversity: 3 distinct scores
+    Even class 75 (7 edges, degs=(0, 1, 3, 3, 1, 3, 3)): 2 tournaments, H=[133, 151], SC=[False, False]
+      Score diversity: 2 distinct scores
+    Even class 76 (7 edges, degs=(0, 2, 2, 3, 1, 3, 3)): 4 tournaments, H=[141, 141, 137, 143], SC=[True, True, True, False]
+    Even class 77 (5 edges, degs=(0, 1, 2, 3, 1, 2, 1)): 4 tournaments, H=[121, 131, 125, 131], SC=[False, False, True, False]
+    Even class 78 (7 edges, degs=(0, 2, 2, 2, 2, 3, 3)): 2 tournaments, H=[135, 109], SC=[False, False]
+      Score diversity: 2 distinct scores
+    Even class 79 (9 edges, degs=(0, 2, 3, 3, 2, 3, 5)): 2 tournaments, H=[109, 133], SC=[False, True]
+      Score diversity: 2 distinct scores
+    Even class 80 (8 edges, degs=(0, 2, 3, 3, 2, 2, 4)): 1 tournaments, H=[171], SC=[True]
+    Even class 81 (7 edges, degs=(0, 1, 4, 0, 3, 3, 3)): 2 tournaments, H=[49, 59], SC=[False, False]
+    Even class 82 (6 edges, degs=(0, 3, 2, 0, 2, 3, 2)): 1 tournaments, H=[81], SC=[False]
+    Even class 83 (7 edges, degs=(0, 1, 4, 2, 1, 3, 3)): 1 tournaments, H=[135], SC=[False]
+    Even class 84 (7 edges, degs=(0, 2, 3, 2, 2, 2, 3)): 1 tournaments, H=[129], SC=[False]
+    Even class 85 (6 edges, degs=(0, 2, 3, 1, 1, 3, 2)): 1 tournaments, H=[189], SC=[True]
+    Even class 86 (4 edges, degs=(0, 1, 2, 1, 1, 2, 1)): 1 tournaments, H=[99], SC=[True]
+    Even class 87 (8 edges, degs=(0, 1, 4, 3, 1, 3, 4)): 1 tournaments, H=[89], SC=[False]
+
+  Is tournament -> even_class INJECTIVE? False
+  Fiber size distribution: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 11, 11, 11, 12, 12, 13, 13, 14, 15, 17, 19, 24, 25]
+
+  TOURNAMENT METAGRAPH AND EVEN GRAPH PROJECTION:
+  Tournament metagraph edges: 4086
+  Edges where both endpoints have SAME even class: 516
+  Edges where endpoints have DIFFERENT even class: 4108
+  Fraction same-even: 0.112
+
+  EVEN GRAPH SHADOW (projected metagraph):
+    Vertices: 88
+    Edges: 1188
+    Edge density: 0.310
+
+  SC TOURNAMENTS AND EVEN GRAPH CLASSES:
+    SC tournament classes: 88
+    Even classes containing SC tournaments: 46
+    Even classes with ONLY SC tournaments: 6
+
+  ARC FLIP EFFECT ON CYCLE SPACE:
+    Cycle-space Hamming distance per arc flip: [(1, 3), (2, 3), (3, 3), (4, 6), (5, 9), (6, 8), (7, 5), (8, 6), (9, 4), (10, 3)]
+    Cut-space Hamming distance per arc flip: [(0, 11), (6, 14), (10, 18), (12, 7)]
+
+  MERGED METAGRAPH VIEW:
+    V_merged: 272
+    E_merged: 2123
+    Spine (SC-SC): 174
+    Ribs (SC-NS): 550
+    Sea (NS-NS): 1399
+
+  EVEN GRAPH CLASSES IN MERGED METAGRAPH:
+    Even class 0: 1 merged nodes (1 SC)
+    Even class 1: 5 merged nodes (2 SC)
+    Even class 2: 1 merged nodes (0 SC)
+    Even class 3: 3 merged nodes (0 SC)
+    Even class 4: 12 merged nodes (3 SC)
+    Even class 5: 2 merged nodes (1 SC)
+    Even class 6: 6 merged nodes (2 SC)
+    Even class 7: 11 merged nodes (2 SC)
+    Even class 8: 5 merged nodes (1 SC)
+    Even class 9: 2 merged nodes (2 SC)
+    Even class 10: 14 merged nodes (1 SC)
+    Even class 11: 7 merged nodes (0 SC)
+    Even class 12: 7 merged nodes (3 SC)
+    Even class 13: 3 merged nodes (1 SC)
+    Even class 14: 5 merged nodes (1 SC)
+    Even class 15: 10 merged nodes (3 SC)
+    Even class 16: 11 merged nodes (5 SC)
+    Even class 17: 8 merged nodes (2 SC)
+    Even class 18: 13 merged nodes (4 SC)
+    Even class 19: 7 merged nodes (3 SC)
+    Even class 20: 3 merged nodes (0 SC)
+    Even class 21: 5 merged nodes (2 SC)
+    Even class 22: 2 merged nodes (0 SC)
+    Even class 23: 4 merged nodes (2 SC)
+    Even class 24: 3 merged nodes (2 SC)
+    Even class 25: 2 merged nodes (2 SC)
+    Even class 26: 4 merged nodes (2 SC)
+    Even class 27: 4 merged nodes (4 SC)
+    Even class 28: 3 merged nodes (2 SC)
+    Even class 29: 3 merged nodes (0 SC)
+    Even class 30: 3 merged nodes (0 SC)
+    Even class 31: 9 merged nodes (6 SC)
+    Even class 32: 3 merged nodes (1 SC)
+    Even class 33: 2 merged nodes (0 SC)
+    Even class 34: 6 merged nodes (1 SC)
+    Even class 35: 2 merged nodes (1 SC)
+    Even class 36: 1 merged nodes (1 SC)
+    Even class 38: 7 merged nodes (0 SC)
+    Even class 39: 5 merged nodes (2 SC)
+    Even class 40: 2 merged nodes (0 SC)
+    Even class 41: 1 merged nodes (0 SC)
+    Even class 42: 1 merged nodes (0 SC)
+    Even class 43: 2 merged nodes (0 SC)
+    Even class 44: 1 merged nodes (0 SC)
+    Even class 45: 4 merged nodes (1 SC)
+    Even class 46: 2 merged nodes (0 SC)
+    Even class 47: 1 merged nodes (1 SC)
+    Even class 48: 1 merged nodes (0 SC)
+    Even class 49: 1 merged nodes (0 SC)
+    Even class 50: 5 merged nodes (0 SC)
+    Even class 51: 1 merged nodes (0 SC)
+    Even class 53: 3 merged nodes (0 SC)
+    Even class 54: 1 merged nodes (0 SC)
+    Even class 55: 3 merged nodes (2 SC)
+    Even class 56: 1 merged nodes (0 SC)
+    Even class 57: 3 merged nodes (0 SC)
+    Even class 58: 1 merged nodes (0 SC)
+    Even class 59: 1 merged nodes (0 SC)
+    Even class 60: 2 merged nodes (1 SC)
+    Even class 62: 1 merged nodes (0 SC)
+    Even class 63: 1 merged nodes (0 SC)
+    Even class 64: 4 merged nodes (0 SC)
+    Even class 65: 1 merged nodes (0 SC)
+    Even class 67: 1 merged nodes (0 SC)
+    Even class 68: 1 merged nodes (0 SC)
+    Even class 69: 1 merged nodes (1 SC)
+    Even class 70: 3 merged nodes (2 SC)
+    Even class 71: 1 merged nodes (1 SC)
+    Even class 72: 2 merged nodes (2 SC)
+    Even class 73: 3 merged nodes (2 SC)
+    Even class 74: 2 merged nodes (2 SC)
+    Even class 76: 3 merged nodes (3 SC)
+    Even class 77: 1 merged nodes (1 SC)
+    Even class 78: 1 merged nodes (0 SC)
+    Even class 79: 1 merged nodes (1 SC)
+    Even class 80: 1 merged nodes (1 SC)
+    Even class 84: 1 merged nodes (0 SC)
+    Even class 85: 1 merged nodes (1 SC)
+    Even class 86: 1 merged nodes (1 SC)
+
+  METAGRAPH EDGES BY EVEN CLASS:
+    Same even class: 179 (8.4%)
+    Different even class: 1944 (91.6%)
+
+======================================================================
+  SUMMARY TABLE
+======================================================================
+  n    V_t    V_e  ratio    E_t  E_sha   inj    V_m    E_m  same%
+  3      2      2 1.000      1      1  True      2      1   0.0%
+  4      4      3 1.333      5      3 False      3      3   0.0%
+  5     12      7 1.714     30     14 False     10     21   9.5%
+  6     56     21 2.667    290     96 False     34    143   9.8%
+  7    456     88 5.182   4086   1188 False    272   2123   8.4%
+
+  Fiber sizes per n:
+    n=3: [1, 1]
+    n=4: [1, 1, 2]
+    n=5: [1, 1, 1, 2, 2, 2, 3]
+    n=6: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 4, 5, 7, 7, 8]
+    n=7: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 11, 11, 11, 12, 12, 13, 13, 14, 15, 17, 19, 24, 25]
+
+DONE.

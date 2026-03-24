@@ -1,0 +1,98 @@
+======================================================================
+  EVEN GRAPH ANALYSIS — ODD n ONLY
+  Cut ⊕ Cycle valid only for odd n over GF(2)
+  opus-2026-03-23-S260
+======================================================================
+
+######################################################################
+  n = 3 (ODD)
+######################################################################
+  m = 3, cycle_dim = 1
+  Tournament iso classes: 2
+  Projection is idempotent: True
+  Even graph iso classes: 2
+  V_tournament/V_even = 2/2 = 1.000
+
+  FIBER STATISTICS:
+  Min fiber: 1, Max fiber: 1, Mean: 1.0, Median: 1
+  Singleton fibers: 2
+  Large fibers (>10): 0
+  Fiber size histogram:
+    size 1: 2 even graph classes
+
+  H VARIANCE DECOMPOSITION:
+  Total var(H) = 1.0
+  Within-fiber (score):  0.0%
+  Between-fiber (cycle): 100.0%
+
+######################################################################
+  n = 5 (ODD)
+######################################################################
+  m = 10, cycle_dim = 6
+  Tournament iso classes: 12
+  Projection is idempotent: True
+  Even graph iso classes: 5
+  V_tournament/V_even = 12/5 = 2.400
+
+  FIBER STATISTICS:
+  Min fiber: 1, Max fiber: 4, Mean: 2.4, Median: 3
+  Singleton fibers: 2
+  Large fibers (>10): 0
+  Fiber size histogram:
+    size 1: 2 even graph classes
+    size 3: 2 even graph classes
+    size 4: 1 even graph classes
+
+  H VARIANCE DECOMPOSITION:
+  Total var(H) = 22.9
+  Within-fiber (score):  14.7%
+  Between-fiber (cycle): 85.3%
+
+######################################################################
+  n = 7 (ODD)
+######################################################################
+  m = 21, cycle_dim = 15
+  Tournament iso classes: 456
+  Projection is idempotent: True
+  Even graph iso classes: 38
+  V_tournament/V_even = 456/38 = 12.000
+
+  FIBER STATISTICS:
+  Min fiber: 1, Max fiber: 65, Mean: 12.0, Median: 8
+  Singleton fibers: 7
+  Large fibers (>10): 15
+  Fiber size histogram:
+    size 1: 7 even graph classes
+    size 2: 1 even graph classes
+    size 3: 3 even graph classes
+    size 4: 4 even graph classes
+    size 8: 2 even graph classes
+    size 9: 3 even graph classes
+    size 16: 4 even graph classes
+    size 20: 2 even graph classes
+    size 65: 1 even graph classes
+
+  H VARIANCE DECOMPOSITION:
+  Total var(H) = 1728.0
+  Within-fiber (score):  27.3%
+  Between-fiber (cycle): 72.7%
+
+======================================================================
+  SUMMARY
+======================================================================
+  n      V_t    V_e    ratio  max_fib  singletons
+  3        2      2    1.000        1           2
+  5       12      5    2.400        4           2
+  7      456     38   12.000       65           7
+
+======================================================================
+  KEY THEOREM (discovered this session):
+  Over GF(2), Edge(K_n) = Cut ⊕ Cycle iff n is ODD.
+  For even n: dim(Cut ∩ Cycle) = n-2.
+  The cycle-space projection v ↦ (I + L(K_n)) v mod 2
+  gives a well-defined tournament → even graph map only at odd n.
+  At odd n: V_even(n) = number of even graph iso classes
+  on n vertices. V_t/V_e grows exponentially.
+======================================================================
+
+DONE.
