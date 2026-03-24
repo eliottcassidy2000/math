@@ -1,0 +1,21 @@
+================================================================================
+  FAST COMPLEMENT-FLIP OVERLAP AT n=7
+  kind-pasteur-2026-03-24-S20fa
+================================================================================
+  n=7, m=15, 2^m=32768
+  Building tilings and score groups...
+  32768 tilings in 59 score groups (0.3s)
+  Canonicalizing within score groups...
+  Canonicalization done (551s)
+
+  V = 456, SC = 88, V_merged = 272
+  Complement pairs: 184
+
+  Finding wiggly edges...
+  Wiggly edges: 4086 (0s)
+
+  OVERLAP (complement AND single-flip): 0
+  Overlap / complement_pairs = 0/184 = 0.0000
+
+  Total time: 560s
+DONE.
