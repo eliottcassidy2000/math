@@ -1,0 +1,71 @@
+================================================================================
+  THE TRIVIAL VERTEX BRIDGE
+  kind-pasteur-2026-03-25-S20gf
+================================================================================
+
+  DIMENSION MATCH:
+    n   C(n,2)   C(n-1,2)   n-1  Euler(n)  Tour(n)  Tour(n-1)  RP-even(n)
+    1        0          0     0         1        1          1           1
+    2        1          0     1         1        1          1           1
+    3        3          1     2         2        2          1           2
+    4        6          3     3         3        4          2           4
+    5       10          6     4         7       12          4          12
+    6       15         10     5        16       56         12          56
+    7       21         15     6        54      456         56         456
+    8       28         21     7       243     6880        456        6880
+
+  RATIO COMPARISON:
+    n  A000568/A002854   A000568/A000568(n-1)
+    2           1.0000                 1.0000
+    3           1.0000                 2.0000
+    4           1.3333                 2.0000
+    5           1.7143                 3.0000
+    6           3.5000                 4.6667
+    7           8.4444                 8.1429
+    8          28.3128                15.0877
+
+============================================================
+  SIGN REPRESENTATION AT n=4,5
+============================================================
+
+  n = 4: classifying ALL 64 graphs
+    RP-even classes:  4 (= A000568(4) = 4)
+    Euler classes:    3 (= A002854(4) = 3)
+    Both:             2
+    RP-even only:     2
+    Euler only:       1
+    Neither:          6
+    Total classes:    11
+    Euler NOT subset of RP-even (Euler-only exists)
+    RP-even NOT subset of Euler (RP-only exists)
+
+  n = 5: classifying ALL 1024 graphs
+    RP-even classes:  12 (= A000568(5) = 12)
+    Euler classes:    7 (= A002854(5) = 7)
+    Both:             2
+    RP-even only:     10
+    Euler only:       5
+    Neither:          17
+    Total classes:    34
+    Euler NOT subset of RP-even (Euler-only exists)
+    RP-even NOT subset of Euler (RP-only exists)
+
+============================================================
+SYNTHESIS
+============================================================
+
+The trivial vertex connects three counting families:
+  Euler(n): all-even-degree graphs, counted by cycle space (dim C(n-1,2))
+  RP-even(n): sign-even graphs, counted by Burnside (= A000568(n))
+  Tournament(n): complete directed, counted by Burnside (= A000568(n))
+
+The relationship Euler vs RP-even determines which graphs are
+"reachable" from the tiling model:
+  - If Euler subset RP-even: every Euler graph is also RP-even,
+    and the extra RP-even graphs are non-Euler (have odd degrees)
+  - This would mean: the cycle space bijection covers the Euler part,
+    and the remaining A000568 - A002854 RP-even graphs need a
+    DIFFERENT construction (using the trivial vertex's freedom)
+
+DONE.
+================================================================================
