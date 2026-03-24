@@ -217,6 +217,26 @@ The 9 nontrivial Cayley boosts form a 3x3 matrix whose Column I product = **84 =
 ### Forbidden H-Values
 **H = 7 and H = 21 are impossible** for any tournament on any number of vertices (THM-029/079).
 
+### The Krawtchouk Framework (2026-03-24)
+The tiling hypercube Q_m (where m = C(n-1,2) tiles) is the **Hamming scheme H(m,2)**. Its Krawtchouk polynomial eigenfunctions provide a 3-axis coordinate system for tournament space:
+
+- **B_1 = K_1(x;m) = m - 2x**: correlates with -H at r = -0.94 (n=5). The "principal axis."
+- **B_2 = K_2**: correlates with -c3 (3-cycle count) at r = -0.86. The "width axis."
+- **B_3**: captures the "twist" (SC/NS separation via complement parity).
+
+**Band-limitedness**: H is exactly zero in the upper Walsh spectrum (k >= m/2). Tournament structure is a low-pass signal on the hypercube. This gives 4:1 compression of tournament data and free error detection.
+
+### Tournament Counting Theorem
+**V_n x n!/2^m = 1 + Sum_{k odd} (1/k) x n-falling-k x 2^{(k^2-1)/2 - (k-1)n}**. An Euler product over "tournament primes" (odd integers), dominated by 1/3 (99.98% of correction by n=15). Poles of the generating function at x = 4, 16, 64, 256, ...
+
+### The Waggly Completeness Theorem
+All connections between tilings (= the complete graph on 2^m vertices) decompose by Hamming distance d = 1,...,m. "Wiggly" = d=1 (single tile flip). "Blue/black" = d=m (complement tiling). The completeness order k* = diam(G_n) = **OEIS A003141** = maximum feedback arc set number, growing as ~n^2/4.
+
+### Paley Tournaments Give Classical Codes
+Using the adjacency matrix A+I of the Paley tournament P_p as a parity-check matrix over GF(2):
+- **P_7 -> Hamming [7,4,3]** code
+- **P_23 -> binary Golay [23,12,7]** code
+
 ---
 
 ## Quick Start
