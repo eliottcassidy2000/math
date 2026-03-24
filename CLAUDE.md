@@ -196,7 +196,7 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
   - **RED** = connects transpose-paired iso classes (not a tiling line).
   - An **EDGE** in the metagraph = a connection from a single-tile flip (NOT a complement flip). Edges are made of many lines. Lines and edges are DIFFERENT concepts.
   - A **PURE BLUE** class = all tilings grid-symmetric. A **PURE BLACK** class = no tilings grid-symmetric. **MIXED** = both.
-  - **VERIFIED n=3..7**: transpose-self classes are NEVER pure black (always pure blue or mixed). Non-transpose-self classes are ALWAYS pure black. Grid-sym fraction = exactly 2^{-(n-2)}.
+  - **VERIFIED n=3..7**: transpose-self classes are NEVER pure black (always pure blue or mixed). Non-transpose-self classes are ALWAYS pure black. Grid-sym fraction = 2^{(floor((n-1)/2) - C(n-1,2))/2} (exponents: 0,-1,-2,-4,-6,-9 for n=3..8). **CORRECTED** (kind-pasteur-S20ex): was incorrectly stated as 2^{-(n-2)}.
   - The staircase is oriented with **right angle at bottom-left**, tiles labeled (x,y) with x=upper vertex, y=lower vertex.
   - **LEGACY WARNING:** Sessions S211-S231 used "blue/black" for SC-type preservation at the class level. This is DIFFERENT. See spine/ribs/sea below.
 - **CLASS-LEVEL EDGE TYPES** (separate from blue/black, use these descriptive names):

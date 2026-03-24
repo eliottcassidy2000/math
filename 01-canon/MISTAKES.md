@@ -1198,3 +1198,43 @@ At n=3,4: multi = 0, so the values coincide — masking the error (same pattern 
 
 ### Lesson
 **Name quantities precisely.** "SL_orbits" was never defined as "self-loop edge orbits" — it was defined as "edge_orbits - E" and then ASSUMED to count self-loops. The assumption failed at n=5. Always verify definitions against direct computation before building analysis on them.
+
+---
+
+## MISTAKE-031: Tiling complement ≠ tournament complement
+
+**Date discovered:** 2026-03-24
+**Found by:** Devil's advocate audit (kind-pasteur-S20ex)
+**Affects:** wiggly_metagraph_deep_s20ev.py, aw_precision_s20ew.py, wiggly_patterns_s20eq.py, unified_weights_s20et.py
+
+### What was assumed
+Flipping all TILE bits (`mask ^ ((1<<m)-1)`) gives the complement tournament.
+
+### Why it was wrong
+The tiling model has m = C(n-1,2) tiles (non-base-path arcs). Flipping tile bits only reverses these arcs, leaving the n-1 base path arcs unchanged. The true tournament complement reverses ALL C(n,2) arcs. These produce different tournaments.
+
+### Impact
+V_merged was wrong at n>=5: got 9 (should be 10) at n=5, 41 (should be 34) at n=6. All spectral analysis, W/A comparisons, and eigenvector correlations in affected scripts were computed on the WRONG quotient graph. Corrected in wiggly_corrected_s20ex.py.
+
+### Lesson
+When working in the tiling model (fixed base path), always compute the complement via the ADJACENCY MATRIX (reverse all arcs), not via bit flipping on tiles.
+
+---
+
+## MISTAKE-032: Grid-symmetric fraction formula was wrong
+
+**Date discovered:** 2026-03-24
+**Found by:** Devil's advocate audit (kind-pasteur-S20ex)
+**Affects:** CLAUDE.md (line about "Grid-sym fraction = exactly 2^{-(n-2)}")
+
+### What was assumed
+The fraction of grid-symmetric tilings is 2^{-(n-2)} for all n.
+
+### Why it was wrong
+The correct formula is 2^{(floor((n-1)/2) - C(n-1,2))/2}, giving exponents 0, -1, -2, -4, -6, -9 for n=3..8. The formula 2^{-(n-2)} gives -1, -2, -3, -4, -5, -6 which only matches at n=5,6.
+
+### Impact
+Claims about blue fraction being exactly 2^{-(n-2)} per class are wrong. The correct formula accounts for the number of fixed tiles on the anti-diagonal of the staircase.
+
+### Lesson
+Always verify formulas at multiple n values, not just the first few where coincidences can mask errors.
