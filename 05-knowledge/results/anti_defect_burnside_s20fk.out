@@ -1,0 +1,23 @@
+================================================================================
+  ANTI-DEFECT BURNSIDE: defect = M-1
+  kind-pasteur-2026-03-24-S20fk
+================================================================================
+
+  COMPARING D(n) and anti_D(n) (brute force):
+    n        D   anti_D   Equal?    M
+    3        2        0       NO    3
+    4        6        0       NO    6
+    5       16        0       NO   10
+    6       60        1       NO   15
+    7      328        ?        ?   21
+
+If D = anti_D: the defect spectrum is SYMMETRIC around M/2.
+This would mean: the "almost-automorphism" structure perfectly mirrors
+the "almost-anti-automorphism" structure. The D(n) formula would also
+give the AAA count.
+
+If D != anti_D: the spectrum is asymmetric, and the AAA count has a
+different Burnside formula.
+
+DONE.
+================================================================================
