@@ -1,0 +1,37 @@
+tournament_election v1.0.0 -- Demo
+======================================================================
+
+1. SIMPLE ELECTION (clear winner)
+  Condorcet winner: Alice
+  Transitivity:     1.000
+  Copeland:         [('Alice', 2), ('Bob', 1), ('Carol', 0)]
+  Methods agree:    True
+
+2. CONDORCET PARADOX (no clear winner)
+  Condorcet winner: None (none!)
+  Condorcet cycles: 1
+  Transitivity:     0.000
+  Smith set:        {'Bob', 'Alice', 'Carol'}
+  Copeland:         [('Bob', 1), ('Alice', 1), ('Carol', 1)]
+  Schulze:          [('Alice', 0), ('Bob', 0), ('Carol', 0)]
+  Paradoxical:      True
+
+3. REALISTIC ELECTION (5 candidates)
+  Voters:           100
+  Condorcet winner: None
+  Condorcet cycles: 2
+  Transitivity:     0.800
+  Smith set:        {'Centrist', 'Progressive', 'Conservative', 'Liberal'}
+  Margin strength:  21.8
+
+  Rankings comparison:
+      Method                                                      Ranking
+    copeland Centrist(3) > Liberal(3) > Progressive(2) > Conservative(2) > Populist(0)
+     schulze Liberal(4) > Progressive(3) > Centrist(2) > Conservative(1) > Populist(0)
+       borda Centrist(94.0) > Liberal(54.0) > Progressive(46.0) > Conservative(24.0) > Populist(0)
+  Methods agree: False
+
+4. TOURNAMENT STABILITY
+  3 candidates, 50 random voters: stability=0, transitivity=1.000, cycles=0
+  4 candidates, 50 random voters: stability=0, transitivity=1.000, cycles=0
+  5 candidates, 50 random voters: stability=1, transitivity=0.800, cycles=2
