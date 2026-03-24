@@ -1,0 +1,85 @@
+================================================================================
+  ONE TILING -> FOUR OBJECTS
+  kind-pasteur-2026-03-25-S20gg
+================================================================================
+
+############################################################
+  n = 4, tiles = 3
+############################################################
+
+  Distinct (T, T_comp, E, E_comp) quadruples: 7
+
+  Tournament classes: 4
+  Euler graph classes: 3
+
+  TOURNAMENT -> EULER MAP:
+    T class -> 1 Euler classes
+    T class -> 1 Euler classes
+    T class -> 2 Euler classes
+    T class -> 1 Euler classes
+
+  EULER -> TOURNAMENT MAP:
+    E class -> 1 Tournament classes
+    E class -> 3 Tournament classes
+    E class -> 1 Tournament classes
+
+  COMPLEMENT STRUCTURE:
+    Tournament SC pairs: 1
+    Euler SC pairs: 2
+    Tournament complement pairs: 4
+    Euler complement pairs: 3
+
+  CROSS-TABLE (tournament x euler):
+    Distinct (T-class, E-class) pairs: 5
+    If independent: 4 x 3 = 12
+    Observed / independent: 0.417
+
+  Time: 0.0s
+
+############################################################
+  n = 5, tiles = 6
+############################################################
+
+  Distinct (T, T_comp, E, E_comp) quadruples: 52
+
+  Tournament classes: 12
+  Euler graph classes: 7
+
+  TOURNAMENT -> EULER MAP:
+    T class -> 1 Euler classes
+    T class -> 1 Euler classes
+    T class -> 2 Euler classes
+    T class -> 1 Euler classes
+    T class -> 3 Euler classes
+    T class -> 2 Euler classes
+    T class -> 5 Euler classes
+    T class -> 1 Euler classes
+    T class -> 5 Euler classes
+    T class -> 3 Euler classes
+    T class -> 5 Euler classes
+    T class -> 2 Euler classes
+
+  EULER -> TOURNAMENT MAP:
+    E class -> 1 Tournament classes
+    E class -> 7 Tournament classes
+    E class -> 6 Tournament classes
+    E class -> 5 Tournament classes
+    E class -> 5 Tournament classes
+    E class -> 6 Tournament classes
+    E class -> 1 Tournament classes
+
+  COMPLEMENT STRUCTURE:
+    Tournament SC pairs: 2
+    Euler SC pairs: 1
+    Tournament complement pairs: 26
+    Euler complement pairs: 4
+
+  CROSS-TABLE (tournament x euler):
+    Distinct (T-class, E-class) pairs: 31
+    If independent: 12 x 7 = 84
+    Observed / independent: 0.369
+
+  Time: 0.1s
+
+DONE.
+================================================================================
