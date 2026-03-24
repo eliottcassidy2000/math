@@ -1,0 +1,95 @@
+======================================================================
+  TOURNAMENT FINGERPRINT: Practical Tool
+======================================================================
+
+  DEMO: Random tournament on 6 vertices
+  H = 5
+  Hamming weight = 4/10
+  Score = (0, 1, 3, 3, 4, 4)
+  Score variance = 2.25
+  3-cycles = 2
+  Feature vector = [5, 4, np.float64(2.25), 0, 4, 2]
+
+  FINGERPRINT RESOLUTION TEST:
+  n=4: V=4 classes, 6 fingerprints, 0 collisions, max_collision=1 (0.0s)
+  n=5: V=12 classes, 27 fingerprints, 2 collisions, max_collision=2 (0.0s)
+    COLLISION: H=9, hw=3, score=(1, 1, 2, 3, 3), c3=3 -> 2 classes
+    COLLISION: H=9, hw=4, score=(1, 1, 2, 3, 3), c3=3 -> 2 classes
+  n=6: V=56 classes, 179 fingerprints, 68 collisions, max_collision=4 (3.0s)
+    COLLISION: H=23, hw=2, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=23, hw=3, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=15, hw=2, score=(1, 1, 2, 3, 4, 4), c3=4 -> 2 classes
+    COLLISION: H=15, hw=3, score=(1, 1, 2, 3, 4, 4), c3=4 -> 2 classes
+    COLLISION: H=9, hw=3, score=(1, 1, 2, 3, 3, 5), c3=3 -> 2 classes
+    COLLISION: H=17, hw=4, score=(1, 1, 2, 3, 4, 4), c3=4 -> 2 classes
+    COLLISION: H=33, hw=3, score=(2, 2, 2, 2, 3, 4), c3=7 -> 2 classes
+    COLLISION: H=37, hw=3, score=(2, 2, 2, 2, 3, 4), c3=7 -> 2 classes
+    COLLISION: H=25, hw=3, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=29, hw=3, score=(1, 2, 2, 3, 3, 4), c3=6 -> 4 classes
+    COLLISION: H=33, hw=4, score=(1, 2, 3, 3, 3, 3), c3=7 -> 2 classes
+    COLLISION: H=25, hw=4, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=23, hw=4, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=23, hw=5, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=33, hw=4, score=(2, 2, 2, 2, 3, 4), c3=7 -> 2 classes
+    COLLISION: H=31, hw=3, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=29, hw=4, score=(1, 2, 2, 3, 3, 4), c3=6 -> 4 classes
+    COLLISION: H=37, hw=3, score=(1, 2, 3, 3, 3, 3), c3=7 -> 2 classes
+    COLLISION: H=45, hw=4, score=(2, 2, 2, 3, 3, 3), c3=8 -> 2 classes
+    COLLISION: H=43, hw=4, score=(2, 2, 2, 3, 3, 3), c3=8 -> 2 classes
+    COLLISION: H=37, hw=4, score=(1, 2, 3, 3, 3, 3), c3=7 -> 2 classes
+    COLLISION: H=37, hw=5, score=(1, 2, 3, 3, 3, 3), c3=7 -> 2 classes
+    COLLISION: H=33, hw=5, score=(1, 2, 3, 3, 3, 3), c3=7 -> 2 classes
+    COLLISION: H=23, hw=6, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=9, hw=4, score=(1, 1, 2, 3, 3, 5), c3=3 -> 2 classes
+    COLLISION: H=15, hw=5, score=(1, 1, 2, 3, 4, 4), c3=4 -> 2 classes
+    COLLISION: H=31, hw=4, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=15, hw=4, score=(1, 1, 2, 3, 4, 4), c3=4 -> 2 classes
+    COLLISION: H=37, hw=4, score=(2, 2, 2, 2, 3, 4), c3=7 -> 2 classes
+    COLLISION: H=25, hw=5, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=31, hw=5, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=15, hw=6, score=(1, 1, 2, 3, 4, 4), c3=4 -> 2 classes
+    COLLISION: H=9, hw=3, score=(0, 2, 2, 3, 4, 4), c3=3 -> 2 classes
+    COLLISION: H=37, hw=5, score=(2, 2, 2, 2, 3, 4), c3=7 -> 2 classes
+    COLLISION: H=29, hw=5, score=(1, 2, 2, 3, 3, 4), c3=6 -> 4 classes
+    COLLISION: H=17, hw=5, score=(1, 1, 2, 3, 4, 4), c3=4 -> 2 classes
+    COLLISION: H=17, hw=7, score=(1, 1, 2, 3, 4, 4), c3=4 -> 2 classes
+    COLLISION: H=33, hw=3, score=(1, 2, 3, 3, 3, 3), c3=7 -> 2 classes
+    COLLISION: H=45, hw=5, score=(2, 2, 2, 3, 3, 3), c3=8 -> 2 classes
+    COLLISION: H=43, hw=5, score=(2, 2, 2, 3, 3, 3), c3=8 -> 2 classes
+    COLLISION: H=37, hw=6, score=(2, 2, 2, 2, 3, 4), c3=7 -> 2 classes
+    COLLISION: H=43, hw=6, score=(2, 2, 2, 3, 3, 3), c3=8 -> 2 classes
+    COLLISION: H=33, hw=7, score=(2, 2, 2, 2, 3, 4), c3=7 -> 2 classes
+    COLLISION: H=31, hw=6, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=37, hw=6, score=(1, 2, 3, 3, 3, 3), c3=7 -> 2 classes
+    COLLISION: H=45, hw=6, score=(2, 2, 2, 3, 3, 3), c3=8 -> 2 classes
+    COLLISION: H=33, hw=6, score=(1, 2, 3, 3, 3, 3), c3=7 -> 2 classes
+    COLLISION: H=29, hw=7, score=(1, 2, 2, 3, 3, 4), c3=6 -> 3 classes
+    COLLISION: H=33, hw=5, score=(2, 2, 2, 2, 3, 4), c3=7 -> 2 classes
+    COLLISION: H=25, hw=7, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=33, hw=6, score=(2, 2, 2, 2, 3, 4), c3=7 -> 2 classes
+    COLLISION: H=29, hw=6, score=(1, 2, 2, 3, 3, 4), c3=6 -> 4 classes
+    COLLISION: H=23, hw=7, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=37, hw=7, score=(2, 2, 2, 2, 3, 4), c3=7 -> 2 classes
+    COLLISION: H=25, hw=6, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=9, hw=4, score=(0, 2, 2, 3, 4, 4), c3=3 -> 2 classes
+    COLLISION: H=31, hw=7, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=15, hw=7, score=(1, 1, 2, 3, 4, 4), c3=4 -> 2 classes
+    COLLISION: H=15, hw=8, score=(1, 1, 2, 3, 4, 4), c3=4 -> 2 classes
+    COLLISION: H=33, hw=7, score=(1, 2, 3, 3, 3, 3), c3=7 -> 2 classes
+    COLLISION: H=43, hw=7, score=(2, 2, 2, 3, 3, 3), c3=8 -> 2 classes
+    COLLISION: H=25, hw=8, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=37, hw=7, score=(1, 2, 3, 3, 3, 3), c3=7 -> 2 classes
+    COLLISION: H=31, hw=8, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+    COLLISION: H=29, hw=8, score=(1, 2, 2, 3, 3, 4), c3=6 -> 3 classes
+    COLLISION: H=15, hw=9, score=(1, 1, 2, 3, 4, 4), c3=4 -> 2 classes
+    COLLISION: H=45, hw=8, score=(2, 2, 2, 3, 3, 3), c3=8 -> 2 classes
+    COLLISION: H=29, hw=9, score=(1, 2, 2, 3, 3, 4), c3=6 -> 2 classes
+
+  SPEED BENCHMARK:
+  n=8: 0.4ms per fingerprint
+  n=10: 3.1ms per fingerprint
+  n=12: 20.8ms per fingerprint
+  n=14: 105.4ms per fingerprint
+  n=16: 656.6ms per fingerprint
+
+DONE.
