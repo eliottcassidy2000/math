@@ -13,6 +13,27 @@ Entry format:
 **Continuation of:** opus-2026-03-24-S289/S290
 **Summary of work:** THE TOURNAMENT COUNTING THEOREM: complete Euler product factorization of V_n. Proved V_n×n!/2^m = 1 + Σ (1/k)×n↓k×2^{(k²-1)/2-(k-1)n} + cross terms. Found generating function with poles at 4, 16, 64, 256, ... Discovered Mersenne prime connection. Connected correction to meta-graph automorphism strata.
 
+## kind-pasteur-2026-03-24-S20fl — 2026-03-24
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-S20el through S20fk (long overnight session)
+**Summary:** Massive session covering D(n) formula, wiggly classes, complement-flip overlap, SC filtering theorem, grid-symmetry pairing proof, and defect spectrum analysis.
+
+**Key results:**
+1. **D(n) defect-1 formula PROVED**: R(ct) = k*2^{a(ct)} for single-even-cycle types
+2. **SL_mine corrected**: T-2E != SL_mine (multi-edges), D >= SL_mine with small correction
+3. **Wiggly classes A,B,C,...**: NOT all equivalent; skip=1 gap grows exponentially (14x at n=7)
+4. **Grid-symmetry pairing PROVED for all n**: sigma_grid preserves edge sets (theoretical proof)
+5. **SC filtering THEOREM**: At odd n, defect=M-1 only for SC tournaments (explains 0,0,5,0,>0 overlap)
+6. **Complement-flip overlap returns at n=8**: Even-n phenomenon, 28 cases found
+7. **Defect spectrum**: Bell-shaped, asymmetric, EXACT even/odd equipartition (50/50)
+8. **Three identities verified**: sum H/|Aut| = 2^{C(n-1,2)} EXACT
+9. **Blue fraction corrected**: NOT 2^{-(n-2)}, correct formula derived
+10. **Devil's advocate audit**: Fixed complement bug (MISTAKE-031), grid-sym formula (MISTAKE-032)
+
+**New contributions:** HYP-1744..1748, MISTAKE-031/032, 15+ computation scripts, grid-symmetry pairing proof
+**Unresolved:** WHY odd-n forces SC-only high defect (algebraic proof needed), E(G_n) exact formula
+
 **Key results:**
 1. **Exact single-cycle formula**: R_k(n) = (1/k)×n↓k×2^{Δ_k} where Δ_k = (k-1)(k+1-2n)/2
 2. **3-cycle dominance**: R_3/R → 1 (99.98% by n=15)
