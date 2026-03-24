@@ -1,0 +1,418 @@
+
+========================================================================
+  KRAWTCHOUK POLYNOMIALS vs H(T) -- TILING HYPERCUBE ANALYSIS
+========================================================================
+
+Krawtchouk polynomials K_k(x; m) on the binary Hamming scheme Q_m
+K_k(x; m) = sum_{j=0}^{k} (-1)^j C(x,j) C(m-x, k-j)
+
+Tiling: m = C(n-1, 2) bits, each bit = one non-base-path arc direction
+Hamming weight x = number of 1-bits in the tiling
+
+Sanity check: K_1(x; 6) for x=0..6:
+  K_1(0; 6) = 6  [expect 6 - 2*0 = 6]
+  K_1(1; 6) = 4  [expect 6 - 2*1 = 4]
+  K_1(2; 6) = 2  [expect 6 - 2*2 = 2]
+  K_1(3; 6) = 0  [expect 6 - 2*3 = 0]
+  K_1(4; 6) = -2  [expect 6 - 2*4 = -2]
+  K_1(5; 6) = -4  [expect 6 - 2*5 = -4]
+  K_1(6; 6) = -6  [expect 6 - 2*6 = -6]
+
+
+========================================================================
+  n = 5, m = 6, total tilings = 64
+========================================================================
+
+Tile pairs (6): [(0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 4)]
+
+Phase 1: Computing iso classes for 64 tilings...
+  6/64 tilings processed (0.0 s)
+  12/64 tilings processed (0.0 s)
+  18/64 tilings processed (0.0 s)
+  24/64 tilings processed (0.0 s)
+  30/64 tilings processed (0.0 s)
+  36/64 tilings processed (0.0 s)
+  42/64 tilings processed (0.0 s)
+  48/64 tilings processed (0.0 s)
+  54/64 tilings processed (0.0 s)
+  60/64 tilings processed (0.0 s)
+  Done: 12 iso classes found in 0.0 s
+
+Phase 2: Computing H for 12 iso class representatives...
+  Done in 0.0 s
+  H range: [1, 15]
+  Distinct H values: 7
+
+Phase 3: Computing Krawtchouk values for all tilings...
+
+Phase 4: Correlations across ALL 64 tilings
+--------------------------------------------------
+  corr(K_1, H) = -0.569226
+  corr(K_2, H) = -0.378010
+  corr(K_3, H) = 0.062356
+  corr(weight, H) = 0.569226
+
+  Note: K_1 = m - 2*weight, so corr(K_1, H) = -corr(weight, H)
+  Verified: -0.569226 vs -0.569226
+
+Phase 5: Multiple regression K_1, K_2, K_3 -> H
+--------------------------------------------------
+  Regression: H ~ beta_0 + beta_1*K_1 + beta_2*K_2 + beta_3*K_3
+  beta_0 (intercept) = 9.875000
+  beta_1 (K_1)       = -0.833333
+  beta_2 (K_2)       = -0.350000
+  beta_3 (K_3)       = 0.050000
+  R^2 = 0.470798
+  Residual std = 2.6087
+  Mean H = 9.8750, Std H = 3.5860
+
+  K_1-only: R^2 = 0.324018
+  K_1+K_2: R^2 = 0.466910
+
+Phase 6: Iso-class level correlations
+--------------------------------------------------
+  Unweighted corr(K_1_mean, H) over 12 classes = -0.939212
+  Size-weighted corr(K_1_mean, H) = -0.880664
+
+Phase 7: Weight distribution by H level
+--------------------------------------------------
+  H         #class    mean_wt     std_wt      #tilings
+  1         1         0.000       0.000       1       
+  3         3         1.000       0.000       3       
+  5         2         2.000       0.632       10      
+  9         2         3.222       1.272       18      
+  11        1         3.455       0.891       11      
+  13        1         3.385       0.923       13      
+  15        2         3.625       0.696       8       
+
+Phase 8: Higher Krawtchouk at iso-class level
+--------------------------------------------------
+  K_1: unweighted corr = -0.939212, weighted corr = -0.880664
+  K_2: unweighted corr = -0.746652, weighted corr = -0.634604
+  K_3: unweighted corr = -0.252817, weighted corr = +0.087982
+  K_4: unweighted corr = -0.086517, weighted corr = +0.045259
+  K_5: unweighted corr = +0.002793, weighted corr = +0.000000
+  K_6: unweighted corr = +0.293359, weighted corr = +0.000000
+
+Phase 9: Krawtchouk expansion coefficients of H
+--------------------------------------------------
+  H as function on Q_m. Expand H(bits) in Krawtchouk basis.
+  hat{H}_k = (1/2^m) * sum_x H(x) * K_k(wt(x); m)
+  (This is the k-th spectral coefficient in the Hamming scheme)
+  hat{H}_0 = 9.875000  (norm K_0 = 1.0000, normalized = 9.875000)
+  hat{H}_1 = -5.000000  (norm K_1 = 6.0000, normalized = -0.833333)
+  hat{H}_2 = -5.250000  (norm K_2 = 15.0000, normalized = -0.350000)
+  hat{H}_3 = 1.000000  (norm K_3 = 20.0000, normalized = 0.050000)
+  hat{H}_4 = 0.375000  (norm K_4 = 15.0000, normalized = 0.025000)
+  hat{H}_5 = 0.000000  (norm K_5 = 6.0000, normalized = 0.000000)
+  hat{H}_6 = 0.000000  (norm K_6 = 1.0000, normalized = 0.000000)
+
+Total time for n=5: 0.0 s
+
+========================================================================
+  SUMMARY for n=5
+========================================================================
+  m = 6, 2^m = 64, iso classes = 12
+  corr(K_1, H) = -0.569226  [all tilings]
+  corr(K_2, H) = -0.378010  [all tilings]
+  corr(K_3, H) = 0.062356  [all tilings]
+  R^2(K_1 only)      = 0.324018
+  R^2(K_1 + K_2)     = 0.466910
+  R^2(K_1 + K_2 + K_3) = 0.470798
+  corr(K_1_mean, H) at class level = -0.939212
+
+
+========================================================================
+  n = 6, m = 10, total tilings = 1024
+========================================================================
+
+Tile pairs (10): [(0, 2), (0, 3), (0, 4), (0, 5), (1, 3), (1, 4), (1, 5), (2, 4), (2, 5), (3, 5)]
+
+Phase 1: Computing iso classes for 1024 tilings...
+  102/1024 tilings processed (0.0 s)
+  204/1024 tilings processed (0.0 s)
+  306/1024 tilings processed (0.0 s)
+  408/1024 tilings processed (0.1 s)
+  510/1024 tilings processed (0.1 s)
+  612/1024 tilings processed (0.1 s)
+  714/1024 tilings processed (0.1 s)
+  816/1024 tilings processed (0.1 s)
+  918/1024 tilings processed (0.1 s)
+  1020/1024 tilings processed (0.1 s)
+  Done: 56 iso classes found in 0.1 s
+
+Phase 2: Computing H for 56 iso class representatives...
+  Done in 0.0 s
+  H range: [1, 45]
+  Distinct H values: 19
+
+Phase 3: Computing Krawtchouk values for all tilings...
+
+Phase 4: Correlations across ALL 1024 tilings
+--------------------------------------------------
+  corr(K_1, H) = -0.432952
+  corr(K_2, H) = -0.364457
+  corr(K_3, H) = 0.053564
+  corr(weight, H) = 0.432952
+
+  Note: K_1 = m - 2*weight, so corr(K_1, H) = -corr(weight, H)
+  Verified: -0.432952 vs -0.432952
+
+Phase 5: Multiple regression K_1, K_2, K_3 -> H
+--------------------------------------------------
+  Regression: H ~ beta_0 + beta_1*K_1 + beta_2*K_2 + beta_3*K_3
+  beta_0 (intercept) = 29.000000
+  beta_1 (K_1)       = -1.400000
+  beta_2 (K_2)       = -0.555556
+  beta_3 (K_3)       = 0.050000
+  R^2 = 0.323145
+  Residual std = 8.4127
+  Mean H = 29.0000, Std H = 10.2256
+
+  K_1-only: R^2 = 0.187448
+  K_1+K_2: R^2 = 0.320276
+
+Phase 6: Iso-class level correlations
+--------------------------------------------------
+  Unweighted corr(K_1_mean, H) over 56 classes = -0.885608
+  Size-weighted corr(K_1_mean, H) = -0.854049
+
+Phase 7: Weight distribution by H level
+--------------------------------------------------
+  H         #class    mean_wt     std_wt      #tilings
+  1         1         0.000       0.000       1       
+  3         4         1.000       0.000       4       
+  5         3         2.000       0.632       15      
+  9         5         3.189       1.270       37      
+  11        2         3.455       0.891       22      
+  13        2         3.385       0.923       26      
+  15        6         4.261       1.847       46      
+  17        2         4.647       1.923       34      
+  19        2         4.842       1.755       38      
+  23        4         5.000       1.560       92      
+  25        2         5.040       1.562       50      
+  27        2         5.333       1.563       18      
+  29        4         5.112       1.569       116     
+  31        2         5.129       1.497       62      
+  33        5         5.355       1.291       121     
+  37        5         5.508       1.231       185     
+  41        1         5.756       0.905       41      
+  43        2         5.512       0.899       86      
+  45        2         5.667       1.043       30      
+
+Phase 8: Higher Krawtchouk at iso-class level
+--------------------------------------------------
+  K_1: unweighted corr = -0.885608, weighted corr = -0.854049
+  K_2: unweighted corr = -0.700457, weighted corr = -0.708597
+  K_3: unweighted corr = -0.427502, weighted corr = +0.094120
+  K_4: unweighted corr = -0.305946, weighted corr = +0.063554
+  K_5: unweighted corr = -0.160490, weighted corr = +0.000000
+  K_6: unweighted corr = -0.026862, weighted corr = +0.000000
+
+Phase 9: Krawtchouk expansion coefficients of H
+--------------------------------------------------
+  H as function on Q_m. Expand H(bits) in Krawtchouk basis.
+  hat{H}_k = (1/2^m) * sum_x H(x) * K_k(wt(x); m)
+  (This is the k-th spectral coefficient in the Hamming scheme)
+  hat{H}_0 = 29.000000  (norm K_0 = 1.0000, normalized = 29.000000)
+  hat{H}_1 = -14.000000  (norm K_1 = 10.0000, normalized = -1.400000)
+  hat{H}_2 = -25.000000  (norm K_2 = 45.0000, normalized = -0.555556)
+  hat{H}_3 = 6.000000  (norm K_3 = 120.0000, normalized = 0.050000)
+  hat{H}_4 = 5.000000  (norm K_4 = 210.0000, normalized = 0.023810)
+  hat{H}_5 = 0.000000  (norm K_5 = 252.0000, normalized = 0.000000)
+  hat{H}_6 = 0.000000  (norm K_6 = 210.0000, normalized = 0.000000)
+  hat{H}_7 = 0.000000  (norm K_7 = 120.0000, normalized = 0.000000)
+
+Total time for n=6: 0.2 s
+
+========================================================================
+  SUMMARY for n=6
+========================================================================
+  m = 10, 2^m = 1024, iso classes = 56
+  corr(K_1, H) = -0.432952  [all tilings]
+  corr(K_2, H) = -0.364457  [all tilings]
+  corr(K_3, H) = 0.053564  [all tilings]
+  R^2(K_1 only)      = 0.187448
+  R^2(K_1 + K_2)     = 0.320276
+  R^2(K_1 + K_2 + K_3) = 0.323145
+  corr(K_1_mean, H) at class level = -0.885608
+
+
+========================================================================
+  n = 7, m = 15, total tilings = 32768
+========================================================================
+
+Tile pairs (15): [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (1, 3), (1, 4), (1, 5), (1, 6), (2, 4), (2, 5), (2, 6), (3, 5), (3, 6), (4, 6)]
+
+Phase 1: Computing iso classes for 32768 tilings...
+  3276/32768 tilings processed (0.8 s)
+  6552/32768 tilings processed (1.7 s)
+  9828/32768 tilings processed (2.9 s)
+  13104/32768 tilings processed (4.4 s)
+  16380/32768 tilings processed (5.7 s)
+  19656/32768 tilings processed (6.8 s)
+  22932/32768 tilings processed (8.2 s)
+  26208/32768 tilings processed (9.8 s)
+  29484/32768 tilings processed (11.3 s)
+  32760/32768 tilings processed (12.5 s)
+  Done: 456 iso classes found in 12.5 s
+
+Phase 2: Computing H for 456 iso class representatives...
+  Done in 0.3 s
+  H range: [1, 189]
+  Distinct H values: 77
+
+Phase 3: Computing Krawtchouk values for all tilings...
+
+Phase 4: Correlations across ALL 32768 tilings
+--------------------------------------------------
+  corr(K_1, H) = -0.332651
+  corr(K_2, H) = -0.342973
+  corr(K_3, H) = 0.044004
+  corr(weight, H) = 0.332651
+
+  Note: K_1 = m - 2*weight, so corr(K_1, H) = -corr(weight, H)
+  Verified: -0.332651 vs -0.332651
+
+Phase 5: Multiple regression K_1, K_2, K_3 -> H
+--------------------------------------------------
+  Regression: H ~ beta_0 + beta_1*K_1 + beta_2*K_2 + beta_3*K_3
+  beta_0 (intercept) = 99.218750
+  beta_1 (K_1)       = -2.962500
+  beta_2 (K_2)       = -1.154464
+  beta_3 (K_3)       = 0.071154
+  R^2 = 0.230224
+  Residual std = 30.2620
+  Mean H = 99.2188, Std H = 34.4917
+
+  K_1-only: R^2 = 0.110657
+  K_1+K_2: R^2 = 0.228288
+
+Phase 6: Iso-class level correlations
+--------------------------------------------------
+  Unweighted corr(K_1_mean, H) over 456 classes = -0.832295
+  Size-weighted corr(K_1_mean, H) = -0.834183
+
+Phase 7: Weight distribution by H level
+--------------------------------------------------
+  H         #class    mean_wt     std_wt      #tilings
+  1         1         0.000       0.000       1       
+  3         5         1.000       0.000       5       
+  5         4         2.000       0.632       20      
+  9         9         3.158       1.268       57      
+  11        3         3.455       0.891       33      
+  13        3         3.385       0.923       39      
+  15        12        4.181       1.862       94      
+  17        4         4.647       1.923       68      
+  19        4         4.842       1.755       76      
+  23        8         5.000       1.560       184     
+  25        5         5.344       2.067       125     
+  27        7         6.026       2.665       117     
+  29        10        5.228       1.929       290     
+  31        6         5.349       2.043       186     
+  33        13        5.833       1.857       341     
+  35        2         5.971       2.720       70      
+  37        12        5.712       1.550       444     
+  39        2         6.846       2.131       78      
+  41        7         6.178       2.386       287     
+  43        6         5.837       1.756       258     
+  45        9         6.449       2.258       225     
+  47        2         7.128       1.632       94      
+  49        7         6.796       2.437       343     
+  51        8         6.987       2.337       306     
+  53        4         6.726       2.417       212     
+  55        4         6.882       2.346       220     
+  57        4         6.882       2.395       152     
+  59        8         7.153       2.255       472     
+  61        1         6.689       2.526       61      
+  65        11        7.203       2.175       715     
+  67        6         7.045       2.176       402     
+  69        12        7.330       2.157       552     
+  71        7         7.296       2.263       497     
+  73        8         7.329       2.026       584     
+  75        7         7.259       2.155       425     
+  77        10        7.387       2.118       770     
+  79        5         7.438       1.844       395     
+  81        11        7.359       2.117       891     
+  83        7         7.544       1.896       581     
+  85        1         8.000       1.916       85      
+  87        1         7.184       2.120       87      
+  89        14        7.533       1.897       1246    
+  91        15        7.556       1.914       1365    
+  93        7         7.653       1.921       651     
+  95        5         7.623       1.903       475     
+  97        6         7.722       1.880       582     
+  99        4         7.587       1.948       242     
+  101       10        7.683       1.682       1010    
+  103       10        7.736       1.842       1030    
+  105       4         7.855       1.571       420     
+  109       14        7.868       1.706       1526    
+  111       10        7.772       1.682       1036    
+  113       4         7.783       1.745       452     
+  115       7         7.832       1.676       805     
+  117       7         7.858       1.648       819     
+  121       4         7.971       1.410       484     
+  123       10        7.967       1.570       984     
+  125       1         7.888       1.364       125     
+  127       1         7.827       1.762       127     
+  129       7         7.930       1.546       817     
+  131       8         8.063       1.415       1048    
+  133       6         8.034       1.381       798     
+  135       8         7.982       1.447       792     
+  137       6         8.028       1.366       822     
+  139       6         8.042       1.476       834     
+  141       3         7.920       1.366       423     
+  143       3         7.890       1.294       429     
+  145       2         8.245       1.476       290     
+  147       1         8.034       1.139       147     
+  151       5         8.195       1.175       755     
+  153       3         8.028       1.157       459     
+  155       1         8.219       1.061       155     
+  157       1         8.306       1.214       157     
+  159       4         8.060       1.085       530     
+  171       1         8.175       0.861       57      
+  175       1         8.520       0.854       25      
+  189       1         7.889       0.314       9       
+
+Phase 8: Higher Krawtchouk at iso-class level
+--------------------------------------------------
+  K_1: unweighted corr = -0.832295, weighted corr = -0.834183
+  K_2: unweighted corr = -0.652802, weighted corr = -0.773659
+  K_3: unweighted corr = -0.347086, weighted corr = +0.102876
+  K_4: unweighted corr = -0.264161, weighted corr = +0.078990
+  K_5: unweighted corr = -0.186882, weighted corr = -0.003360
+  K_6: unweighted corr = -0.127743, weighted corr = -0.001984
+
+Phase 9: Krawtchouk expansion coefficients of H
+--------------------------------------------------
+  H as function on Q_m. Expand H(bits) in Krawtchouk basis.
+  hat{H}_k = (1/2^m) * sum_x H(x) * K_k(wt(x); m)
+  (This is the k-th spectral coefficient in the Hamming scheme)
+  hat{H}_0 = 99.218750  (norm K_0 = 1.0000, normalized = 99.218750)
+  hat{H}_1 = -44.437500  (norm K_1 = 15.0000, normalized = -2.962500)
+  hat{H}_2 = -121.218750  (norm K_2 = 105.0000, normalized = -1.154464)
+  hat{H}_3 = 32.375000  (norm K_3 = 455.0000, normalized = 0.071154)
+  hat{H}_4 = 40.281250  (norm K_4 = 1365.0000, normalized = 0.029510)
+  hat{H}_5 = -2.937500  (norm K_5 = 3003.0000, normalized = -0.000978)
+  hat{H}_6 = -2.281250  (norm K_6 = 5005.0000, normalized = -0.000456)
+  hat{H}_7 = 0.000000  (norm K_7 = 6435.0000, normalized = 0.000000)
+
+Total time for n=7: 13.3 s
+
+========================================================================
+  SUMMARY for n=7
+========================================================================
+  m = 15, 2^m = 32768, iso classes = 456
+  corr(K_1, H) = -0.332651  [all tilings]
+  corr(K_2, H) = -0.342973  [all tilings]
+  corr(K_3, H) = 0.044004  [all tilings]
+  R^2(K_1 only)      = 0.110657
+  R^2(K_1 + K_2)     = 0.228288
+  R^2(K_1 + K_2 + K_3) = 0.230224
+  corr(K_1_mean, H) at class level = -0.832295
+
+
+========================================================================
+  COMPUTATION COMPLETE
+========================================================================
+
