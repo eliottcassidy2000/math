@@ -1,0 +1,147 @@
+================================================================================
+  CORRECTED WIGGLY METAGRAPH (proper complement)
+  kind-pasteur-2026-03-24-S20ex
+================================================================================
+
+############################################################
+  n = 4, tiles = 3
+  V_unmerged = 4 (expected 4)
+  SC = 2 (expected 2)
+  V_merged = 3 (expected 3)
+############################################################
+
+  CORRECTED METAGRAPH:
+    E = 3
+    Max degree = 2
+    W@1 = tilings*m? True
+
+  SPECTRAL (corrected):
+    A eigenvalues (top 5): ['2.000', '-1.000', '-1.000']
+    W eigenvalues (top 5): ['4.924', '-0.785', '-4.139']
+    N vs A: slope=1.0665, R^2=0.898043
+    Frobenius residual: 1.0429 / 2.7568 = 37.8%
+
+  H CORRELATION (corrected):
+    Eigvec 0 (eval=4.9): |corr(H)|=0.779, |corr(tilings)|=0.574
+    Eigvec 1 (eval=-0.8): |corr(H)|=0.949, |corr(tilings)|=0.824
+    Eigvec 2 (eval=-4.1): |corr(H)|=0.329, |corr(tilings)|=0.578
+
+  SELF-LOOP (corrected):
+    SL rate: min=0.0000, max=0.6667, avg=0.2222
+
+  PER-CLASS (sorted by H):
+   idx      H  tilings  deg    W_deg       SL     SL%
+     0      1        1    2        3        0   0.00%
+     1      3        2    2        6        0   0.00%
+     2      5        5    2        5       10  66.67%
+
+  Time: 0.0s
+
+############################################################
+  n = 5, tiles = 6
+  V_unmerged = 12 (expected 12)
+  SC = 8 (expected 8)
+  V_merged = 10 (expected 10)
+############################################################
+
+  CORRECTED METAGRAPH:
+    E = 21
+    Max degree = 7
+    W@1 = tilings*m? True
+
+  SPECTRAL (corrected):
+    A eigenvalues (top 5): ['4.641', '1.852', '1.111', '0.338', '0.000']
+    W eigenvalues (top 5): ['49.215', '10.789', '5.965', '2.279', '1.619']
+    N vs A: slope=1.2765, R^2=0.979589
+    Frobenius residual: 3.8045 / 8.3585 = 45.5%
+
+  H CORRELATION (corrected):
+    Eigvec 0 (eval=49.2): |corr(H)|=0.650, |corr(tilings)|=0.939
+    Eigvec 1 (eval=10.8): |corr(H)|=0.670, |corr(tilings)|=0.010
+    Eigvec 2 (eval=6.0): |corr(H)|=0.509, |corr(tilings)|=0.213
+
+  SELF-LOOP (corrected):
+    SL rate: min=0.0000, max=0.3333, avg=0.0663
+
+  PER-CLASS (sorted by H):
+   idx      H  tilings  deg    W_deg       SL     SL%
+     0      1        1    4        6        0   0.00%
+     1      3        2    3       12        0   0.00%
+     3      3        1    3        6        0   0.00%
+     2      5       10    7       40       20  33.33%
+     4      9        9    5       46        8  14.81%
+     5      9        9    5       54        0   0.00%
+     6     11       11    5       54       12  18.18%
+     8     13       13    5       78        0   0.00%
+     7     15        5    3       30        0   0.00%
+     9     15        3    2       18        0   0.00%
+
+  Time: 0.0s
+
+############################################################
+  n = 6, tiles = 10
+  V_unmerged = 56 (expected 56)
+  SC = 12 (expected 12)
+  V_merged = 34 (expected 34)
+############################################################
+
+  CORRECTED METAGRAPH:
+    E = 143
+    Max degree = 13
+    W@1 = tilings*m? True
+
+  SPECTRAL (corrected):
+    A eigenvalues (top 5): ['9.780', '5.491', '3.441', '3.264', '2.946']
+    W eigenvalues (top 5): ['458.179', '163.682', '152.908', '137.486', '83.626']
+    N vs A: slope=1.0618, R^2=0.986158
+    Frobenius residual: 7.8089 / 18.0821 = 43.2%
+
+  H CORRELATION (corrected):
+    Eigvec 0 (eval=458.2): |corr(H)|=0.719, |corr(tilings)|=0.963
+    Eigvec 1 (eval=163.7): |corr(H)|=0.304, |corr(tilings)|=0.193
+    Eigvec 2 (eval=152.9): |corr(H)|=0.388, |corr(tilings)|=0.203
+
+  SELF-LOOP (corrected):
+    SL rate: min=0.0000, max=0.3070, avg=0.0783
+
+  PER-CLASS (sorted by H):
+   idx      H  tilings  deg    W_deg       SL     SL%
+     0      1        1    6       10        0   0.00%
+     1      3        2    5       20        0   0.00%
+     3      3        2    6       20        0   0.00%
+     2      5       10   11       80       20  20.00%
+     5      5        5    7       40       10  20.00%
+     4      9       18   11      164       16   8.89%
+     6      9       18   12      180        0   0.00%
+    17      9        1    2       10        0   0.00%
+     7     11       22   11      196       24  10.91%
+     9     13       26   11      260        0   0.00%
+     8     15       10    6      100        0   0.00%
+    10     15        6    3       60        0   0.00%
+    12     15       30   11      264       36  12.00%
+    11     17       17    7      146       24  14.12%
+    16     17       17    7      170        0   0.00%
+    13     19       38   12      360       20   5.26%
+    15     23       46   13      460        0   0.00%
+    18     23       46   10      344      116  25.22%
+    20     25       50   11      444       56  11.20%
+    14     27       18    7      180        0   0.00%
+    24     29       58   13      480      100  17.24%
+    27     29       29    8      270       20   6.90%
+    28     29       29    7      290        0   0.00%
+    23     31       62   11      620        0   0.00%
+    19     33       22    6      208       12   5.45%
+    22     33       33    8      310       20   6.06%
+    29     33       66   12      660        0   0.00%
+    21     37       37    7      292       78  21.08%
+    25     37       74   11      740        0   0.00%
+    26     37       74   13      692       48   6.49%
+    30     41       41    6      320       90  21.95%
+    31     43       86    9      596      264  30.70%
+    32     45       15    3      116       34  22.67%
+    33     45       15    3      150        0   0.00%
+
+  Time: 3.0s
+
+DONE.
+================================================================================
