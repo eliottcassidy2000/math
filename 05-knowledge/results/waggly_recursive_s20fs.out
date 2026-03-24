@@ -1,0 +1,137 @@
+================================================================================
+  WAGGLY RECURSIVE PATTERNS
+  kind-pasteur-2026-03-24-S20fs
+================================================================================
+
+############################################################
+  n = 5, m = 6 tiles
+  OLD tiles (from n-1): 3 = C(3,2) = 3
+  NEW tiles (vertex 5): 3 = 3
+    A: (5,1)
+    D: (5,2)
+    F: (5,3)
+############################################################
+  Building canon map... done (0s)
+  d=2 pairs: 3 OLD-OLD, 9 OLD-NEW, 3 NEW-NEW
+  OLD-OLD: 3 pairs, avg_new=6.0, range=[5,7], total_new=18, avg_SL=15.3
+  OLD-NEW: 9 pairs, avg_new=8.7, range=[5,10], total_new=78, avg_SL=10.9
+  NEW-NEW: 3 pairs, avg_new=8.7, range=[6,10], total_new=26, avg_SL=9.3
+
+  Top 5 OLD-OLD:
+    CE = (3,1)+(4,2): new=7
+    BC = (4,1)+(3,1): new=6
+    BE = (4,1)+(4,2): new=5
+
+  Top 5 OLD-NEW:
+    CD = (3,1)+(5,2): new=10
+    BF = (4,1)+(5,3): new=10
+    BD = (4,1)+(5,2): new=10
+    AC = (5,1)+(3,1): new=10
+    AB = (5,1)+(4,1): new=10
+
+  Top 5 NEW-NEW:
+    AF = (5,1)+(5,3): new=10
+    AD = (5,1)+(5,2): new=10
+    DF = (5,2)+(5,3): new=6
+
+  Time: 0s
+
+############################################################
+  n = 6, m = 10 tiles
+  OLD tiles (from n-1): 6 = C(4,2) = 6
+  NEW tiles (vertex 6): 4 = 4
+    A: (6,1)
+    E: (6,2)
+    H: (6,3)
+    J: (6,4)
+############################################################
+  Building canon map... done (3s)
+  d=2 pairs: 15 OLD-OLD, 24 OLD-NEW, 6 NEW-NEW
+  OLD-OLD: 15 pairs, avg_new=200.6, range=[174,243], total_new=3009, avg_SL=50.0
+  OLD-NEW: 24 pairs, avg_new=225.0, range=[184,253], total_new=5401, avg_SL=34.4
+  NEW-NEW: 6 pairs, avg_new=203.5, range=[174,239], total_new=1221, avg_SL=43.3
+
+  Top 5 OLD-OLD:
+    DF = (3,1)+(5,2): new=243
+    DG = (3,1)+(4,2): new=235
+    CI = (4,1)+(5,3): new=214
+    CG = (4,1)+(4,2): new=209
+    BF = (5,1)+(5,2): new=205
+
+  Top 5 OLD-NEW:
+    DE = (3,1)+(6,2): new=253
+    BJ = (5,1)+(6,4): new=253
+    AI = (6,1)+(5,3): new=249
+    AG = (6,1)+(4,2): new=249
+    FJ = (5,2)+(6,4): new=243
+
+  Top 5 NEW-NEW:
+    AJ = (6,1)+(6,4): new=239
+    AH = (6,1)+(6,3): new=210
+    HJ = (6,3)+(6,4): new=204
+    AE = (6,1)+(6,2): new=201
+    EJ = (6,2)+(6,4): new=193
+
+  Time: 3s
+
+############################################################
+  n = 7, m = 15 tiles
+  OLD tiles (from n-1): 10 = C(5,2) = 10
+  NEW tiles (vertex 7): 5 = 5
+    A: (7,1)
+    F: (7,2)
+    J: (7,3)
+    M: (7,4)
+    O: (7,5)
+############################################################
+  Building canon map... done (816s)
+  d=2 pairs: 45 OLD-OLD, 50 OLD-NEW, 10 NEW-NEW
+  OLD-OLD: 45 pairs, avg_new=7689.4, range=[6555,9508], total_new=346024, avg_SL=362.7
+  OLD-NEW: 50 pairs, avg_new=8377.7, range=[7227,9743], total_new=418887, avg_SL=281.9
+  NEW-NEW: 10 pairs, avg_new=7364.6, range=[6917,7807], total_new=73646, avg_SL=376.8
+
+  Top 5 OLD-OLD:
+    EH = (3,1)+(5,2): new=9508
+    EG = (3,1)+(6,2): new=9387
+    CN = (5,1)+(6,4): new=8650
+    DL = (4,1)+(5,3): new=8628
+    CK = (5,1)+(6,3): new=8457
+
+  Top 5 OLD-NEW:
+    AK = (7,1)+(6,3): new=9743
+    AH = (7,1)+(5,2): new=9743
+    CF = (5,1)+(7,2): new=9543
+    BJ = (6,1)+(7,3): new=9543
+    EM = (3,1)+(7,4): new=9525
+
+  Top 5 NEW-NEW:
+    AO = (7,1)+(7,5): new=7807
+    AM = (7,1)+(7,4): new=7646
+    FO = (7,2)+(7,5): new=7579
+    JO = (7,3)+(7,5): new=7531
+    MO = (7,4)+(7,5): new=7360
+
+  Time: 817s
+
+============================================================
+  CROSS-n COMPARISON
+============================================================
+
+  n=6: OLD-OLD pairs = 15, ALL pairs at n-1 = 15
+  Count match? True
+  Avg new edges: OLD-OLD@n=200.6, ALL@n-1=8.1
+  Ratio: 24.66
+  New edges from OLD-OLD: 3009 (31.2%)
+  New edges from OLD-NEW: 5401 (56.1%)
+  New edges from NEW-NEW: 1221 (12.7%)
+
+  n=7: OLD-OLD pairs = 45, ALL pairs at n-1 = 45
+  Count match? True
+  Avg new edges: OLD-OLD@n=7689.4, ALL@n-1=214.0
+  Ratio: 35.93
+  New edges from OLD-OLD: 346024 (41.3%)
+  New edges from OLD-NEW: 418887 (50.0%)
+  New edges from NEW-NEW: 73646 (8.8%)
+
+DONE.
+================================================================================
