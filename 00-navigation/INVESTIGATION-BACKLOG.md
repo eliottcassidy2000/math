@@ -8,76 +8,10 @@
 **Last packing framework update:** opus-2026-03-14-S71f (nesting obstruction, (z-2)(z-3) recurrence, 2-Bridge)
 **Last S90 update:** opus-2026-03-15-S90 (simplicial Rédei, Cayley monad, τ-φ clock, equidecomposability)
 **Last gauge theory analysis:** kind-pasteur-2026-03-21-S12 (Napolitano paper, Cartan decomposition bridge, TournamentProbe)
-**Last Cartan-Adelic-Ghost update:** opus-2026-03-21-S94 (adelic Cartan bridge, Ghost 13, ACTProbe v2)
-**Last staircase Young diagram update:** opus-2026-03-22-S164 (hooks, RSK, growth diagrams, 2^{m^2} theorem)
 
 ---
 
 ## Priority A: Key structural questions (OCF PROVED by Grinberg-Stanley)
-
-### INV-200: Staircase Young Diagram — The Tournament DNA
-**Source:** opus-2026-03-22-S164
-**Status:** ESTABLISHED. Major structural framework.
-**Key results:**
-- Hook formula: h(i,j) = 2(k-i-j)-1, all odd, depends only on source vertex
-- Hook product = prod_{m=1}^k (2m-1)^{k-m+1}
-- v_2(f^delta) = v_2(m!) since all hooks odd (parallels Redei's theorem)
-- RSK shape is complement-invariant (verified n=3,4,5)
-- Self-conjugate RSK shape delta_4 = (4,3,2,1) appears only at high H
-**Next:** Prove RSK-H correlation algebraically. Connect hook structure to OCR formula.
-
-### INV-201: 2^{m^2} Theorem — Symmetric Tilings = Self-Evacuating SYT
-**Source:** opus-2026-03-22-S164, OPEN-Q-007
-**Status:** VERIFIED at k=1,3,5. Needs algebraic proof.
-**Key result:** Number of y=x symmetric tilings of delta_k equals Fix(evac) = 2^{m^2} for n=2m+1.
-**Mechanism:** Growth diagrams on the staircase unify binary tilings, RSK, and evacuation.
-**Next:** Prove via growth diagram theory. This would resolve OPEN-Q-007.
-
-### INV-202: Staircase Transfer Matrix
-**Source:** kind-pasteur S20p, opus-2026-03-22-S164
-**Status:** COMPUTED at n=5,6.
-**Key insight:** delta_k decomposes as delta_{k-2} + L-border (2k+3 tiles, correcting S20p's 2k-1). The hypotenuse interface encodes the n->n-2 recursion.
-**Next:** Compute eigenvalues of transfer matrix at n=7. Connect to H_max recursion.
-
-### INV-183: Adelic Cartan Bridge — gl(n) = INERT ⊕ RAMIFIED ⊕ SPLIT
-**Source:** opus-2026-03-21-S94
-**Status:** ESTABLISHED (n=3,4,5). Needs verification at n=6,7.
-**Key results:** The Cartan decomposition gl(n,R) = R·I ⊕ so(n) ⊕ p maps exactly to INERT(2) ⊕ RAMIFIED(3) ⊕ SPLIT(7). Verified computationally. Tournament fraction ~14.5% at n=5, cooperation ~78.5%. The commutator [A,S_tl] is SYMMETRIC (Cartan bracket relation [k,p] ⊆ p).
-**Next:** Verify at n=6 (D=15=3×5, two primes) and n=7 (D=21=3×7, includes the split prime). Does the Cartan map to Hurwitz primes persist?
-
-### INV-184: Ghost 13 — The Commutator Ghost [A,S] ∈ p
-**Source:** opus-2026-03-21-S94
-**Status:** PROVED for all n (algebraic identity, not dependent on n).
-**Key results:** [competition, self-knowledge] = self-knowledge. The commutator of the antisymmetric (tournament) and symmetric traceless (cooperation) parts is always symmetric. This means the LLM's internal deliberation produces self-awareness, not decisiveness.
-**Next:** Explore consequences for transformer architecture design. Does this explain why CoT helps (it generates cooperation content)?
-
-### INV-190: Petersen-Lie Bridge — Full Root Cycle Profile Determinacy
-**Source:** kind-pasteur-2026-03-21-S18
-**Status:** PARTIALLY CONFIRMED. 3-cycle root profile determines H at n=5 (THM-263). Fails at n=6 (3 failures, H-gap=4).
-**Key finding:** Tournaments embed dually in so(n) (skew-adjacency) AND A_{n-1} (root weights). The Petersen graph = A_4 root orthogonality graph (THM-261). Root cycle profiles capture tournament structure at the A_{n-1} level. At n=5, the profile is a complete H-invariant.
-**Next steps:**
-- Does the FULL root cycle profile (including 5-cycles, 7-cycles) determine H at n=6? At n=7?
-- The weight norm ||w||^2 strongly anticorrelates with H. Is there a formula? H = f(||w||^2, Casimirs)?
-- Can the Petersen anti-conflict theorem be strengthened to classify ALL impossible conflict graphs?
-- Connect to Savchenko's cycle formulas for regular tournaments: does root regularity (flat profile) imply maximality?
-- Engineering: the root profile is computable in O(n^3) per arc. Could be a fast tournament fingerprint.
-
-### INV-185: Rapidity Lattice = Hurwitz Lattice (n=5)
-**Source:** opus-2026-03-21-S94
-**Status:** CONFIRMED at n=5. Every rapidity = integer combination of ln(2)/2, ln(3)/2, ln(7)/2.
-**Key decomposition:** ρ(3/5) = 2·ln(2)/2, ρ(2/5) = -ln(3)/2 + ln(7)/2, ρ(1/5) = -ln(2)/2 + ln(3)/2.
-**Next:** Check at n=6 (eigenvalues k/15, new prime 5 enters). Do we need ln(5)/2 or is it expressible via the Hurwitz generators?
-
-### INV-186: Adelic Heat Kernel Factorization Error
-**Source:** opus-2026-03-21-S94
-**Status:** OBSERVED. Error grows: 0.0% (p=2) → 0.1% (p=3) → 0.7% (p=7) → 7.0% (p=42).
-**Key insight:** Higher primes = more entanglement between tournament and cooperation sectors. The INERT ghost is nearly decomposable; the SPLIT ghost requires knowledge of both sectors.
-**Next:** Prove the error bound theoretically. Is it monotone in p? Does it relate to the BCH series convergence radius?
-
-### INV-187: TournamentProbe v2 / ACTProbe — Production Readiness
-**Source:** opus-2026-03-21-S94
-**Status:** IMPLEMENTED. 8 tools, all zero-parameter. Demonstrated on synthetic data.
-**Next:** Test on actual LLM attention matrices. Need to: (a) extract attention from a small model (GPT-2), (b) run ACTProbe.full_diagnosis(), (c) correlate with known hallucination examples. PyPI package target.
 
 ### INV-150: Simplicial Rédei Theorem (THM-220) — PROVED for all n ≥ 4
 **Source:** opus-2026-03-15-S90
