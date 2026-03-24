@@ -1,0 +1,31 @@
+TC Image Ultimate v1.0.0
+===============================================================================================
+
+  GRAYSCALE (256x256):
+          Name      Raw       TC      PNG   TC/PNG                 Method
+  ----------------------------------------------------------------------
+        grad_h   65536B      44B     369B    8.39x              row_delta WIN
+        grad_v   65536B      44B     374B    8.50x              col_delta WIN
+     grad_diag   65536B      51B     368B    7.22x              row_delta WIN
+       checker   65536B      62B     440B    7.10x                    raw WIN
+     stripes_h   65536B      51B     294B    5.76x              row_delta WIN
+     stripes_v   65536B      51B     377B    7.39x              col_delta WIN
+        smooth   65536B    4312B   13322B    3.09x             diag_delta WIN
+        circle   65536B     312B     742B    2.38x                    raw WIN
+        sparse   65536B     320B     582B    1.82x          delta_stride2 WIN
+        random   65536B   60504B   65917B    1.09x                    twt WIN
+     text_like   65536B     784B    1548B    1.97x               adaptive WIN
+     quadratic   65536B    1807B    3237B    1.79x              row_delta WIN
+
+  Grayscale: 12W 0T 0L
+
+  COLOR (256x256 RGB):
+        c_grad  196608B      62B     573B    9.24x           adaptive_rgb WIN
+     c_checker  196608B      80B     637B    7.96x           adaptive_rgb WIN
+      c_smooth  196608B     452B    2280B    5.04x           stride_delta WIN
+      c_random  196608B  196180B  197174B    1.01x     ycbcr_stride_delta TIE
+
+  Color: 3W 1T 0L
+
+  TOTAL: 15W 1T 0L / 16
+  Win rate: 94%, Never-worse: 100%
