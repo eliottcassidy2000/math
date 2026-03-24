@@ -1,0 +1,125 @@
+========================================================================
+  PRISM CODEC — Fractal Diamond-Crosshair Fusion
+  opus-2026-03-24-S315
+========================================================================
+
+  SINGLE PRISM SCALE (what one pass captures):
+       Pattern   N    Raw  Scores   Resid   Total  Ratio    Acc ResidDens
+        circle  32   1024     524     372     895    1.1x   0.8%    0.165
+          diag  32   1024     677     436    1113    0.9x   1.0%    0.000
+      gradient  32   1024     898     459    1358    0.8x   0.8%    0.157
+       checker  32   1024     603     249     852    1.2x   1.0%    0.000
+      sparse_5  32   1024     371     186     557    1.8x   1.0%    0.049
+        blocks  32   1024     667     558    1224    0.8x   0.9%    0.138
+    delta_1pct  32   1024     149      42     191    5.4x   1.0%    0.010
+        random  32   1024     835     878    1713    0.6x   0.7%    0.271
+        circle  64   4096    1260    1593    2853    1.4x   0.9%    0.147
+          diag  64   4096    1571    1797    3368    1.2x   1.0%    0.000
+      gradient  64   4096    2123    1906    4029    1.0x   0.8%    0.165
+       checker  64   4096    1352    1036    2389    1.7x   1.0%    0.000
+      sparse_5  64   4096    1005     890    1895    2.2x   1.0%    0.048
+        blocks  64   4096    1525    2590    4114    1.0x   0.9%    0.125
+    delta_1pct  64   4096     466     199     665    6.2x   1.0%    0.010
+        random  64   4096    1987    3771    5758    0.7x   0.7%    0.333
+
+========================================================================
+  RECURSIVE PRISM (fractal multi-scale)
+========================================================================
+       Pattern   N    Raw   Prism  Ratio Levels
+        circle  32   1024    1024    1.0x      1
+          diag  32   1024     677    1.5x      1
+      gradient  32   1024    1024    1.0x      1
+       checker  32   1024     603    1.7x      1
+      sparse_5  32   1024    1024    1.0x      1
+        blocks  32   1024    1024    1.0x      1
+    delta_1pct  32   1024    1024    1.0x      1
+        random  32   1024    1024    1.0x      1
+        circle  64   4096    4096    1.0x      1
+          diag  64   4096    1571    2.6x      1
+      gradient  64   4096    4096    1.0x      1
+       checker  64   4096    1352    3.0x      1
+      sparse_5  64   4096    4096    1.0x      1
+        blocks  64   4096    4096    1.0x      1
+    delta_1pct  64   4096    4096    1.0x      1
+        random  64   4096    4096    1.0x      1
+
+  FRACTAL BREAKDOWN (circle, N=64):
+   Level   Type     Size    Bits  Accuracy
+       0    raw  64x64      4096          
+   TOTAL                    4096
+  Raw: 4096  Prism: 4096  Ratio: 1.0x
+
+========================================================================
+  VIDEO DELTA: PRISM vs FLAT vs ROW-ONLY
+========================================================================
+
+   Change%    Raw  RowOnly   Prism1   PrismR     Best
+      0.5%   4096      118      413     4096      118 ← row
+      1.0%   4096      224      673     4096      224 ← row
+      2.0%   4096      439     1081     4096      439 ← row
+      5.0%   4096      976     1902     4096      976 ← row
+     10.0%   4096     1676     2885     4096     1676 ← row
+     25.0%   4096     2906     4472     4096     2906 ← row
+     50.0%   4096     3710     5557     4096     3710 ← row
+
+========================================================================
+  LARGE IMAGE: BLOCK-PRISM
+========================================================================
+      circle  64x64: raw=  4096, prism=   4096, ratio=1.0x, blocks=4
+    gradient  64x64: raw=  4096, prism=   2839, ratio=1.4x, blocks=4
+      random  64x64: raw=  4096, prism=   4096, ratio=1.0x, blocks=4
+      circle 128x128: raw= 16384, prism=  16384, ratio=1.0x, blocks=16
+    gradient 128x128: raw= 16384, prism=  11357, ratio=1.4x, blocks=16
+      random 128x128: raw= 16384, prism=  16384, ratio=1.0x, blocks=16
+      circle 256x256: raw= 65536, prism=  65536, ratio=1.0x, blocks=64
+    gradient 256x256: raw= 65536, prism=  45429, ratio=1.4x, blocks=64
+      random 256x256: raw= 65536, prism=  65536, ratio=1.0x, blocks=64
+
+========================================================================
+  THE PRISM ARCHITECTURE
+========================================================================
+
+  THE RECURSION:
+
+    PRISM(M, depth):
+      if M is tiny: return RAW(M)
+
+      scores = extract_4_axis_scores(M)     # O(N²)
+      predicted = crosshair_predict(M, scores)  # O(N²)
+      residual = M ⊕ predicted              # binary XOR
+
+      return ENCODE(scores) + PRISM(residual, depth+1)
+
+  Each level:
+    1. EXTRACTS structure (the four score sequences = "wavelet coefficients")
+    2. PREDICTS from structure (crosshair intersection)
+    3. PASSES THE ERROR onward (residual is sparser = easier)
+
+  The residual at level k has density ≈ (1-accuracy_k) × density_{k-1}.
+  If accuracy is 85%, density drops by 6.7× per level.
+  After 3 levels: 0.15³ = 0.34% residual density → almost free to encode.
+
+  COMPARISON TO WAVELETS:
+    Wavelets: split signal into low-frequency (approximation) + high-frequency (detail)
+    Prism:    split matrix into scores (structure) + residual (noise)
+
+    Wavelets are LINEAR transforms. Prism is NONLINEAR (uses score constraint).
+    Wavelets work best on smooth signals. Prism works best on BINARY data.
+    Wavelets need special basis functions. Prism uses the GEOMETRY of the grid.
+
+  COMPARISON TO JPEG:
+    JPEG: 8x8 blocks → DCT → quantize → entropy code
+    Prism: NxN blocks → 4-axis scores → crosshair predict → recurse
+
+    JPEG is LOSSY (quantization destroys information).
+    Prism is LOSSLESS (residual preserves every bit).
+    JPEG captures frequency. Prism captures GEOMETRIC STRUCTURE.
+
+  THE FRACTAL NATURE:
+    The same operation at every scale. The same four axes.
+    The same crosshair intersection. The same score constraint.
+    At scale k, the "scores" are the wavelet coefficients of level k.
+    The residual IS the input to the next level.
+    This is self-similarity: the codec IS its own sub-codec.
+
+DONE.
