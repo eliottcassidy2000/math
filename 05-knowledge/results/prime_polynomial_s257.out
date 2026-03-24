@@ -1,0 +1,219 @@
+
+========================================================================
+  THE BURNSIDE FORMULA AND PRIMES
+========================================================================
+
+  The Burnside formula for T_n:
+
+  T_n = (1/n!) * sum_{sigma with all odd cycles} 2^{pair_orbits(sigma)}
+
+  n=3: T_n = 2
+    (1, 1, 1): 1 perms, Fix_sum=8, primes={1}
+    (3,): 2 perms, Fix_sum=4, primes=[3]
+
+  n=4: T_n = 4
+    (1, 1, 1, 1): 1 perms, Fix_sum=64, primes={1}
+    (1, 3): 8 perms, Fix_sum=32, primes=[3]
+
+  n=5: T_n = 12
+    (1, 1, 1, 1, 1): 1 perms, Fix_sum=1024, primes={1}
+    (1, 1, 3): 20 perms, Fix_sum=320, primes=[3]
+    (5,): 24 perms, Fix_sum=96, primes=[5]
+
+  n=6: T_n = 56
+    (1, 1, 1, 1, 1, 1): 1 perms, Fix_sum=32768, primes={1}
+    (1, 1, 1, 3): 40 perms, Fix_sum=5120, primes=[3]
+    (1, 5): 144 perms, Fix_sum=1152, primes=[5]
+    (3, 3): 40 perms, Fix_sum=1280, primes=[3]
+
+
+========================================================================
+  THE PRIME POLYNOMIAL FOR T_n
+========================================================================
+
+  Pair orbits from cycle type formula:
+
+  n=3: T from formula = 2 (expected 4, match=False)
+  n=4: T from formula = 4 (expected 16, match=False)
+  n=5: T from formula = 12 (expected 88, match=False)
+  n=6: T from formula = 56 (expected 704, match=False)
+
+========================================================================
+  THE PRIME CONTENT OF CYCLE TYPES
+========================================================================
+
+  Cycle types contributing to T_n and their prime content:
+
+  n=3: (1, 1, 1) → po=3, #perms=1, Fix=8, primes={1}
+  n=3: (3,) → po=1, #perms=2, Fix=2, primes=[3]
+  → T_3 = 2 (expected 4)
+
+  n=4: (1, 1, 1, 1) → po=6, #perms=1, Fix=64, primes={1}
+  n=4: (1, 3) → po=2, #perms=8, Fix=4, primes=[3]
+  → T_4 = 4 (expected 16)
+
+  n=5: (1, 1, 1, 1, 1) → po=10, #perms=1, Fix=1024, primes={1}
+  n=5: (2, 3) → po=2, #perms=20, Fix=4, primes=[3]
+  n=5: (5,) → po=2, #perms=24, Fix=4, primes=[5]
+  → T_5 = 10 (expected 88)
+
+  n=6: (1, 1, 1, 1, 1, 1) → po=15, #perms=1, Fix=32768, primes={1}
+  n=6: (1, 1, 1, 3) → po=7, #perms=40, Fix=128, primes=[3]
+  n=6: (1, 5) → po=3, #perms=144, Fix=8, primes=[5]
+  n=6: (3, 3) → po=5, #perms=40, Fix=32, primes=[3]
+  → T_6 = 56 (expected 704)
+
+  n=7: (1, 1, 1, 1, 1, 1, 1) → po=21, #perms=1, Fix=2097152, primes={1}
+  n=7: (1, 1, 1, 1, 3) → po=11, #perms=70, Fix=2048, primes=[3]
+  n=7: (1, 3, 3) → po=7, #perms=280, Fix=128, primes=[3]
+  n=7: (2, 5) → po=3, #perms=504, Fix=8, primes=[5]
+  n=7: (7,) → po=3, #perms=720, Fix=8, primes=[7]
+  → T_7 = 453 (expected 8912)
+
+  → T_8 = 6855 (expected 188288)
+
+  → T_9 = 191496 (expected 6847200)
+
+
+========================================================================
+  THE PRIME POLYNOMIAL P(n,x)
+========================================================================
+
+  The polynomial P(n, x) such that T_n = P(n, 2) / n!:
+
+  P(3, x) = 2 x^1 + 1 x^3
+  P(3, 2) / 3! = 2 = T_3  ✓
+
+  P(4, x) = 8 x^2 + 1 x^6
+  P(4, 2) / 4! = 4 = T_4  ✓
+
+  P(5, x) = 44 x^2 + 1 x^10
+  P(5, 2) / 5! = 10 = T_5  ✓
+
+  P(6, x) = 144 x^3 + 40 x^5 + 40 x^7 + 1 x^15
+  P(6, 2) / 6! = 56 = T_6  ✓
+
+  P(7, x) = 1224 x^3 + 280 x^7 + 70 x^11 + 1 x^21
+  P(7, 2) / 7! = 453 = T_7  ✓
+
+
+========================================================================
+  THE RECIPROCAL PRIME CONNECTION
+========================================================================
+
+
+  NOW: How do primes connect to the RECURSIVE STRUCTURE?
+
+  The recursion T(n) decomposes along the staircase:
+  T(n) = bottom(n-1) + top(n-1) - overlap(n-2) + apex_correction
+
+  In the Burnside polynomial P(n, x):
+  - Each term x^k comes from a cycle type with k free pair orbits
+  - The cycle type's odd primes determine WHICH arcs are free
+
+  THE KEY QUESTION: Does P(n, x) have a RECURSIVE formula?
+
+  P(n, x) depends on the partitions of n into odd parts.
+  The generating function for odd partitions:
+  prod_{k=0}^{inf} 1/(1 - z^{2k+1}) = 1 + z + z^2 + 2z^3 + 2z^4 + 3z^5 + ...
+
+  And the pair_orbits function maps partition → integer.
+  So P(n, x) = sum_lambda (multinomial coeff) × x^{pair_orbits(lambda)}.
+
+  IF the pair_orbits function has a recursive structure:
+  pair_orbits(lambda + [1]) = pair_orbits(lambda) + sum gcd(1, c_i) = pair_orbits(lambda) + len(lambda)
+  (adding a 1-cycle adds gcd(1, c) = 1 for each existing cycle)
+
+  pair_orbits(lambda + [3]) = pair_orbits(lambda) + 1 + sum gcd(3, c_i)
+  (the within-orbit for a 3-cycle is (3-1)/2 = 1, plus cross-orbits)
+
+  So: ADDING A PRIME CYCLE OF LENGTH p TO A PARTITION:
+  Δ(pair_orbits) = (p-1)/2 + sum_{c in lambda} gcd(p, c)
+
+  The gcd(p, c) = p if p | c, else gcd(p, c) depends on common factors.
+  For p prime: gcd(p, c) = p if p | c, else 1.
+
+  So: Δ = (p-1)/2 + #{cycles divisible by p} × (p-1) + #{other cycles}
+      = (p-1)/2 + (p-1) × d_p + (len(lambda) - d_p)
+      = (p-1)/2 + (p-1) × d_p + len(lambda) - d_p
+      = (p-1)/2 + (p-2) × d_p + len(lambda)
+
+  where d_p = #{existing cycles with length divisible by p}.
+
+  For p = 1 (fixed point): Δ = 0 + len(lambda) = len(lambda).
+  For p = 3: Δ = 1 + 2 × d_3 + len(lambda).
+  For p = 5: Δ = 2 + 3 × d_5 + len(lambda).
+  For p = 7: Δ = 3 + 5 × d_7 + len(lambda).
+
+  THE PATTERN: Adding a p-cycle increases pair_orbits by
+  (p-1)/2 + (p-2) × d_p + k  (where k = # existing cycles).
+
+  This gives a RECURSIVE formula for P(n, x) in terms of P(n-p, x)
+  for each odd prime p ≤ n.
+
+  Verifying pair_orbits recursion:
+
+  po((1,1,1)) = 3 (expect 3)
+  po((3,)) = 1 (expect 1)
+  po((1,3)) = 2 (expect 2)
+  po((1,1,3)) = 4 (expect ?)
+  po((3,3)) = 5 (expect ?)
+  po((1,1,1,1,1)) = 10 (expect C(5,2)=10)
+  po((5,)) = 2
+  po((1,1,3)) = 4
+  po((1,1,1,3)) = 7
+  po((3,3)) = 5
+
+========================================================================
+  THE GENERATING FUNCTION WITH PRIMES
+========================================================================
+
+
+  The generating function for T_n involves:
+
+  Z(x, z) = sum_n (P(n, x) / n!) × z^n
+
+  = sum over all sequences (a_1, a_3, a_5, ...) of non-neg integers:
+    prod_{k odd} (z^k / k)^{a_k} / a_k! × x^{pair_orbits}
+
+  This is an EXPONENTIAL generating function where each odd k contributes
+  z^k/k per cycle, and the pair_orbits add multiplicatively.
+
+  The pair_orbits from a single k-cycle: (k-1)/2.
+  The pair_orbits from two cycles of lengths k and l: gcd(k, l).
+
+  So the GF factorizes PARTLY:
+  Within-cycle: prod_{k odd} sum_{a≥0} (z^k/(k × a!))^a × x^{a(k-1)/2}
+  Cross-cycle: harder (gcd terms couple different cycle types).
+
+  FOR PRIMES: if k is prime, gcd(k, l) = k if l ≡ 0 (mod k), else 1.
+  So prime cycles interact with other cycles in a BINARY way:
+  either full coupling (gcd = k) or minimal coupling (gcd = 1).
+
+  This makes the GF SIMPLER for prime cycle types than composite ones!
+
+  THE PRIME APPROXIMATION:
+  If we only keep PRIME cycle types (1, 3, 5, 7, ...):
+  Z_prime(x, z) ≈ exp(z × x^0) × prod_{p prime, p≥3} exp(z^p/p × x^{(p-1)/2})
+  × (cross-terms depending on gcd)
+
+  The cross-term for two prime cycles of different primes p, q:
+  gcd(p, q) = 1 (since p ≠ q are both prime).
+  So cross contribution = +1 per pair of cycles from different primes.
+
+  The cross-term for two cycles of the SAME prime p:
+  gcd(p, p) = p. So cross contribution = +p per pair.
+
+  THIS IS WHERE THE PRIMES ENTER THE RECURSION.
+
+  T_n from cycle-type formula:
+
+  T_3 = 2 (expected 4, match=False)
+  T_4 = 4 (expected 16, match=False)
+  T_5 = 10 (expected 88, match=False)
+  T_6 = 56 (expected 704, match=False)
+  T_7 = 453 (expected 8912, match=False)
+  T_8 = 6855 (expected 188288, match=False)
+  T_9 = 191496 (expected 6847200, match=False)
+
+Done. opus-2026-03-23-S257
