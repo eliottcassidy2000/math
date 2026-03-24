@@ -1,0 +1,33 @@
+================================================================================
+  DARK TOURNAMENTS: What object counts as A000088 - A000568?
+  kind-pasteur-2026-03-25-S20ga
+================================================================================
+
+  COUNTS:
+    n   Graphs  Even=Tour   Odd=Dark  Dark/Even
+    1        1          1          0     0.0000
+    2        2          1          1     1.0000
+    3        4          2          2     1.0000
+    4       11          4          7     1.7500
+    5       34         12         22     1.8333
+    6      156         56        100     1.7857
+    7     1044        456        588     1.2895
+    8    12346       6880       5466     0.7945
+
+  Dark tournament sequence: [0, 1, 2, 7, 22, 100, 588, 5466]
+  = 0, 1, 2, 7, 22, 100, 588, 5466
+
+  SEARCHING FOR MATCHES...
+  n=3: 'tournament + 1 undirected edge' classes = 3, dark target = 2
+  n=4: 'tournament + 1 undirected edge' classes = 10, dark target = 7
+  n=5: 'tournament + 1 undirected edge' classes = 50, dark target = 22
+  n=3: perspectives (rooted tournaments) = 4, dark target = 2
+  n=4: perspectives (rooted tournaments) = 12, dark target = 7
+  n=5: perspectives (rooted tournaments) = 48, dark target = 22
+
+  DARK SEQUENCE: 0, 1, 2, 7, 22, 100, 588, 5466
+  OEIS search needed for this sequence.
+  Note: starts from n=1. If from n=3: 2, 7, 22, 100, 588, 5466
+
+DONE.
+================================================================================
