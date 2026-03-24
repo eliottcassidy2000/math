@@ -1,0 +1,87 @@
+========================================================================
+  CROSSHAIR CODEC — Dual-Axis Pixel Prediction
+  opus-2026-03-24-S315
+========================================================================
+
+  ENTROPY COMPARISON (N=32, all in bits, lower is better):
+         Pattern   Raw     Row    Dual  Triple    Quad  Spiral   Cross ScoreOH
+          circle  1024     533     517     390     372     301     374     958
+    diag_stripes  1024     933     488     528     540    1024     436     958
+        gradient  1024     660     350     449     511      30     463     958
+         checker  1024     933     488     528     488    1018     249     958
+          random  1024     907    1001    1009    1009    1023     878     958
+          sparse  1024     147     145     123     104     230     124     958
+           dense  1024     147     204     201     203     239     141     958
+
+  SCORE OVERHEAD ANALYSIS:
+  To use crosshair prediction, we need to transmit the line scores.
+     N  Rows  Cols AdiagS MdiagS  Total   NxN  Ovrhd%
+     8    25    25     48     48    146    64  227.8%
+    16    65    65    127    127    384   256  150.1%
+    32   161   161    318    318    958  1024   93.6%
+    64   385   385    765    765   2301  4096   56.2%
+   128   897   897   1788   1788   5371 16384   32.8%
+
+  CROSSHAIR PREDICTION ACCURACY BY POSITION:
+  Circle pattern (N=16):
+    Overall accuracy: 0.855
+    Center accuracy:  0.578
+    Edge accuracy:    1.000
+    → Center pixels predicted BETTER (more context)
+
+========================================================================
+  THE CROSSHAIR ADVANTAGE
+========================================================================
+
+         Pattern   Row-only  Crosshair  Improvement
+          circle        533       1333        0.40x
+    diag_stripes        933       1394        0.67x
+        gradient        660       1422        0.46x
+         checker        933       1208        0.77x
+          random        907       1837        0.49x
+          sparse        147       1082        0.14x
+
+========================================================================
+  THE MIDDLE-OUT STRATEGY
+========================================================================
+
+  TWO-PASS ENCODING:
+
+  PASS 1: SCORE TRANSMISSION
+    Send all four score sequences:
+      - N row scores        (~N log N bits)
+      - N col scores        (~N log N bits)
+      - (2N-1) anti-diag    (~2N log N bits)
+      - (2N-1) main-diag    (~2N log N bits)
+    Total overhead: ~6N log N bits (small for large N)
+
+  PASS 2: PIXEL-BY-PIXEL WITH CROSSHAIR CONTEXT
+    For each pixel in raster order:
+      - Compute P(pixel=1) from remaining row/col/diag weights
+      - Arithmetic-code the actual value against this probability
+      - Update partial scores
+    Total: sum of -log2(P(actual_value)) over all pixels
+
+  WHY "MIDDLE-OUT" HELPS:
+    In raster order: top-left pixels have NO row/col context → P ≈ prior
+    In spiral order: edge pixels have partial context → moderate P
+    In center-first: center pixels have MAXIMUM context → best P
+
+    But the center pixels are also the most "interesting" (most structure).
+    Encoding them FIRST means the EASY pixels get maximum context
+    and the HARD edge pixels get less, but there are fewer of them.
+
+  THE SCORE CONSTRAINT IS THE KEY:
+    Without scores: each pixel is 1 bit (binary entropy = 1)
+    With row scores: each pixel ≈ log2(C(remaining, weight)/2^remaining)
+    With crosshair: each pixel ≈ INTERSECTION of four constraints
+    The intersection is geometrically tighter than any single constraint.
+
+  FOR VIDEO DELTAS:
+    Delta frames are SPARSE (few changed pixels).
+    Row scores of delta ≈ 0 for most rows → log2(C(N,0)) = 0 bits!
+    Diagonal scores also ≈ 0 → doubly confirmed sparsity.
+    The crosshair of two zero-scores PROVES a pixel is unchanged → 0 bits.
+    Only the few rows/diags with nonzero scores need any bits at all.
+
+DONE.
