@@ -1,0 +1,56 @@
+================================================================================
+  SC vs NON-SC IN HIGH-DEFECT CASES
+  kind-pasteur-2026-03-24-S20fi
+================================================================================
+
+############################################################
+  n = 5, M = C(5,2) = 10, target defect = 9
+############################################################
+  Palindromic tilings checked: 52
+  Tilings with defect = 9:
+    Self-complementary (SC): 21
+    Non-self-complementary (NSC): 0
+    Total: 21
+    SC fraction: 100.0%
+    NSC count = actual overlap edges (new!)
+  Time: 0.0s
+
+############################################################
+  n = 6, M = C(6,2) = 15, target defect = 14
+############################################################
+  Palindromic tilings checked: 572
+  Tilings with defect = 14:
+    Self-complementary (SC): 178
+    Non-self-complementary (NSC): 270
+    Total: 448
+    SC fraction: 39.7%
+    NSC count = actual overlap edges (new!)
+  Time: 2.9s
+
+############################################################
+  n = 7, M = C(7,2) = 21, target defect = 20
+############################################################
+  Palindromic tilings checked: 5432
+  Tilings with defect = 20:
+    Self-complementary (SC): 32
+    Non-self-complementary (NSC): 0
+    Total: 32
+    SC fraction: 100.0%
+    NSC count = actual overlap edges (new!)
+  Time: 6.4s
+
+============================================================
+CONCLUSION
+============================================================
+
+If NSC count = 0 at odd n (5, 7): The odd-n vanishing is explained
+by SC filtering. All high-defect cases at odd n are SC tournaments,
+where the complement IS the same class (self-loop, not new edge).
+
+If NSC count > 0 at odd n: The vanishing has a different cause.
+Some non-SC tournaments achieve defect = M-1, but these specific
+classes happen to not overlap (the complement class is NOT connected
+by a wiggly edge to the original class).
+
+DONE.
+================================================================================

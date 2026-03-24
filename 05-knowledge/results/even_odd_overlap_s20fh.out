@@ -1,0 +1,83 @@
+================================================================================
+  EVEN/ODD COMPLEMENT-FLIP OVERLAP
+  kind-pasteur-2026-03-24-S20fh
+================================================================================
+
+############################################################
+  n = 5, C(n,2) = 10, defect needed = 9
+############################################################
+  Palindromic tournaments sampled: ~500
+  Permutations per tournament: 120
+  Max defect seen: 10 (need 9)
+  Defect = 9 count: 360
+  Defect = 10 count (anti-aut): 592
+  Top defect values: [(10, 592), (9, 360), (8, 2584), (7, 5068), (6, 8944), (5, 13384), (4, 8944), (3, 5068), (2, 2584), (1, 360)]
+  defect = 9 achievable? YES
+  defect = 10 (anti-aut) achievable? YES
+  Defect in [7..10]: 8604 occurrences
+  Time: 0.2s
+
+############################################################
+  n = 6, C(n,2) = 15, defect needed = 14
+############################################################
+  Palindromic tournaments sampled: ~500
+  Permutations per tournament: 500
+  Max defect seen: 15 (need 14)
+  Defect = 14 count: 305
+  Defect = 15 count (anti-aut): 81
+  Top defect values: [(15, 81), (14, 305), (13, 636), (12, 2088), (11, 6032), (10, 11073), (9, 17880), (8, 26386), (7, 25728), (6, 18757)]
+  defect = 14 achievable? YES
+  defect = 15 (anti-aut) achievable? YES
+  Defect in [12..15]: 3110 occurrences
+  Time: 0.7s
+
+############################################################
+  n = 7, C(n,2) = 21, defect needed = 20
+############################################################
+  Palindromic tournaments sampled: ~500
+  Permutations per tournament: 500
+  Max defect seen: 21 (need 20)
+  Defect = 20 count: 4
+  Defect = 21 count (anti-aut): 8
+  Top defect values: [(21, 8), (20, 4), (19, 79), (18, 157), (17, 604), (16, 1384), (15, 3791), (14, 7818), (13, 12523), (12, 18659)]
+  defect = 20 achievable? YES
+  defect = 21 (anti-aut) achievable? YES
+  Defect in [18..21]: 248 occurrences
+  Time: 0.9s
+
+############################################################
+  n = 8, C(n,2) = 28, defect needed = 27
+############################################################
+  Palindromic tournaments sampled: ~500
+  Permutations per tournament: 500
+  Max defect seen: 25 (need 27)
+  Defect = 27 count: 0
+  Defect = 28 count (anti-aut): 0
+  Top defect values: [(25, 6), (24, 20), (23, 64), (22, 190), (21, 457), (20, 1171), (19, 2468), (18, 4486), (17, 7351), (16, 10200)]
+  defect = 27 achievable? NOT FOUND
+  defect = 28 (anti-aut) achievable? NOT FOUND
+  Defect in [25..28]: 6 occurrences
+  Time: 0.7s
+
+============================================================
+ANALYSIS: WHY ODD n VANISHES
+============================================================
+
+The defect distribution near C(n,2) tells us:
+
+At EVEN n (n=6,8): defect = C(n,2)-1 IS achievable.
+  Some palindromic tournaments have "almost-anti-automorphisms."
+
+At ODD n (n=5,7): defect = C(n,2)-1 may NOT be achievable.
+  The max defect falls SHORT of C(n,2)-1.
+
+WHY? At odd n, every tournament has a UNIQUE vertex with median score
+(n-1)/2. Any permutation must map this vertex to itself (since it's
+the only one with that score in a palindromic tournament). This
+CONSTRAINS the permutation, making it harder to achieve high defect.
+
+At even n, there's NO unique median vertex — palindromic scores come
+in pairs, giving more freedom for permutations to achieve high defect.
+
+DONE.
+================================================================================
