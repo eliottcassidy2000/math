@@ -1,0 +1,37 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_algebra.py:18: SyntaxWarning: invalid escape sequence '\c'
+  . map (\c -> (encode (compress c input), c))
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_algebra.py:487: RuntimeWarning: overflow encountered in scalar add
+  sc = sum(min(b, 255-b) for b in res)
+TC Algebra v1.0.0 -- Functional Compression via Monoid Structure
+====================================================================================================
+
+  BYTE DATA:
+             Name      Raw      Alg    zlib9      bz2  Alg/best                     Chain
+       counter_4K    4096B      17B     315B     657B    18.53x           delta+rle|zlib1 WIN
+        quadratic    4096B      33B    2089B    2843B    63.30x         delta+delta|zlib6 WIN
+       english_4K    4096B      75B      79B     137B     1.05x             stride3|zlib6 WIN
+          json_4K    4096B      77B      79B     133B     1.03x             stride4|zlib6 WIN
+        random_4K    4096B    4107B    4107B    4562B     1.00x                  id|zlib1 TIE
+         zeros_4K    4096B      16B      26B      43B     1.62x                 rle|zlib1 WIN
+       binary_exe    4096B      17B     315B     660B    18.53x           delta+rle|zlib1 WIN
+  Bytes: 6W 1T 0L
+
+  IMAGES (256x256):
+          Name      Raw      Alg      PNG  Alg/PNG                    Method
+        grad_h   65536B      41B     369B    9.00x             rev+delta|bz2 WIN
+        grad_v   65536B      44B     374B    8.50x             rev+delta|bz2 WIN
+       checker   65536B      51B     440B    8.63x           stride2+xor|bz2 WIN
+        smooth   65536B    4312B   13322B    3.09x                diag_delta WIN
+        circle   65536B     234B     742B    3.17x                   xor|bz2 WIN
+        random   65536B   65562B   65917B    1.01x                  id|zlib1 TIE
+  Images: 5W 1T 0L
+
+  VIDEO (128x128, 30 frames):
+          Name        Raw        Alg   Ratio  Keys  Deltas
+        static   491,520B     1,467B  335.1x    2     28
+    moving_obj   491,520B     4,333B  113.4x    2     28
+        scroll   491,520B    16,000B   30.7x   30      0
+
+  COMBINED: 11W 2T 0L / 13
+  The algebra discovers chains automatically via beam search.
+  No hardcoded case statements -- pure algebraic composition.
