@@ -1,0 +1,172 @@
+========================================================================
+  THE (H, c3) TRIANGLE EMBEDDING
+  opus-2026-03-24-S307b
+========================================================================
+
+  n = 5: V = 10
+    Corr(H, c3) = 0.9748
+    H range: [1, 15]
+    c3 range: [0, 5]
+
+    H-LEVEL STRUCTURE:
+      H=   1: 1 classes, c3 range [0, 0]
+      H=   3: 2 classes, c3 range [1, 1]
+      H=   5: 1 classes, c3 range [2, 2]
+      H=   9: 2 classes, c3 range [3, 3]
+      H=  11: 1 classes, c3 range [4, 4]
+      H=  13: 1 classes, c3 range [4, 4]
+      H=  15: 2 classes, c3 range [4, 5]
+
+    SC IN (H, c3) SPACE:
+      SC: mean H = 9.5, mean c3 = 3.0
+      NS: mean H = 4.0, mean c3 = 1.5
+
+    ASPECT RATIO (diagonal/anti-diagonal): 7.250
+    (= √2 ≈ 1.414 if the triangle is right isosceles)
+
+  n = 6: V = 34
+    Corr(H, c3) = 0.9598
+    H range: [1, 45]
+    c3 range: [0, 8]
+
+    H-LEVEL STRUCTURE:
+      H=   1: 1 classes, c3 range [0, 0]
+      H=   3: 2 classes, c3 range [1, 1]
+      H=   5: 2 classes, c3 range [2, 2]
+      H=   9: 3 classes, c3 range [2, 3]
+      H=  11: 1 classes, c3 range [4, 4]
+      H=  13: 1 classes, c3 range [4, 4]
+      H=  15: 3 classes, c3 range [4, 5]
+      H=  17: 2 classes, c3 range [4, 4]
+      H=  19: 1 classes, c3 range [5, 5]
+      H=  23: 2 classes, c3 range [5, 6]
+      H=  25: 1 classes, c3 range [6, 6]
+      H=  27: 1 classes, c3 range [5, 5]
+      H=  29: 3 classes, c3 range [6, 6]
+      H=  31: 1 classes, c3 range [6, 6]
+      H=  33: 3 classes, c3 range [6, 7]
+      H=  37: 3 classes, c3 range [6, 7]
+      H=  41: 1 classes, c3 range [8, 8]
+      H=  43: 1 classes, c3 range [8, 8]
+      H=  45: 2 classes, c3 range [8, 8]
+
+    SC IN (H, c3) SPACE:
+      SC: mean H = 25.7, mean c3 = 5.0
+      NS: mean H = 20.8, mean c3 = 4.8
+
+    ASPECT RATIO (diagonal/anti-diagonal): 5.435
+    (= √2 ≈ 1.414 if the triangle is right isosceles)
+
+  n = 7: V = 272
+    Corr(H, c3) = 0.9515
+    H range: [1, 189]
+    c3 range: [0, 14]
+
+    H-LEVEL STRUCTURE:
+      H=   1: 1 classes, c3 range [0, 0]
+      H=   3: 3 classes, c3 range [1, 1]
+      H=   5: 2 classes, c3 range [2, 2]
+      H=   9: 6 classes, c3 range [2, 3]
+      H=  11: 2 classes, c3 range [4, 4]
+      H=  13: 2 classes, c3 range [4, 4]
+      H=  15: 7 classes, c3 range [3, 5]
+      H=  17: 2 classes, c3 range [4, 4]
+      H=  19: 2 classes, c3 range [5, 5]
+      H=  23: 4 classes, c3 range [5, 6]
+      H=  25: 3 classes, c3 range [5, 6]
+      H=  27: 4 classes, c3 range [5, 5]
+      H=  29: 5 classes, c3 range [5, 6]
+      H=  31: 4 classes, c3 range [5, 6]
+      H=  33: 7 classes, c3 range [5, 7]
+      H=  35: 1 classes, c3 range [6, 6]
+      H=  37: 6 classes, c3 range [6, 7]
+      H=  39: 1 classes, c3 range [7, 7]
+      H=  41: 4 classes, c3 range [6, 8]
+      H=  43: 3 classes, c3 range [7, 8]
+      H=  45: 5 classes, c3 range [6, 8]
+      H=  47: 1 classes, c3 range [8, 8]
+      H=  49: 4 classes, c3 range [7, 8]
+      H=  51: 5 classes, c3 range [6, 9]
+      H=  53: 2 classes, c3 range [7, 8]
+      H=  55: 2 classes, c3 range [7, 8]
+      H=  57: 2 classes, c3 range [8, 8]
+      H=  59: 4 classes, c3 range [7, 8]
+      H=  61: 1 classes, c3 range [8, 8]
+      H=  65: 7 classes, c3 range [8, 9]
+      H=  67: 4 classes, c3 range [8, 9]
+      H=  69: 7 classes, c3 range [7, 10]
+      H=  71: 4 classes, c3 range [8, 9]
+      H=  73: 4 classes, c3 range [8, 9]
+      H=  75: 4 classes, c3 range [9, 9]
+      H=  77: 6 classes, c3 range [8, 9]
+      H=  79: 3 classes, c3 range [9, 10]
+      H=  81: 6 classes, c3 range [9, 10]
+      H=  83: 4 classes, c3 range [9, 10]
+      H=  85: 1 classes, c3 range [8, 8]
+      H=  87: 1 classes, c3 range [9, 9]
+      H=  89: 7 classes, c3 range [9, 10]
+      H=  91: 8 classes, c3 range [9, 10]
+      H=  93: 5 classes, c3 range [8, 10]
+      H=  95: 3 classes, c3 range [10, 10]
+      H=  97: 3 classes, c3 range [10, 10]
+      H=  99: 3 classes, c3 range [9, 11]
+      H= 101: 5 classes, c3 range [10, 11]
+      H= 103: 5 classes, c3 range [10, 10]
+      H= 105: 3 classes, c3 range [11, 11]
+      H= 109: 7 classes, c3 range [10, 11]
+      H= 111: 6 classes, c3 range [9, 11]
+      H= 113: 2 classes, c3 range [10, 11]
+      H= 115: 4 classes, c3 range [10, 11]
+      H= 117: 5 classes, c3 range [9, 11]
+      H= 121: 2 classes, c3 range [11, 12]
+      H= 123: 6 classes, c3 range [9, 12]
+      H= 125: 1 classes, c3 range [12, 12]
+      H= 127: 1 classes, c3 range [11, 11]
+      H= 129: 5 classes, c3 range [11, 12]
+      H= 131: 4 classes, c3 range [12, 12]
+      H= 133: 4 classes, c3 range [12, 12]
+      H= 135: 6 classes, c3 range [10, 12]
+      H= 137: 4 classes, c3 range [12, 12]
+      H= 139: 4 classes, c3 range [12, 12]
+      H= 141: 3 classes, c3 range [12, 12]
+      H= 143: 2 classes, c3 range [12, 12]
+      H= 145: 2 classes, c3 range [12, 12]
+      H= 147: 1 classes, c3 range [13, 13]
+      H= 151: 4 classes, c3 range [13, 13]
+      H= 153: 2 classes, c3 range [13, 13]
+      H= 155: 1 classes, c3 range [13, 13]
+      H= 157: 1 classes, c3 range [13, 13]
+      H= 159: 4 classes, c3 range [13, 13]
+      H= 171: 1 classes, c3 range [14, 14]
+      H= 175: 1 classes, c3 range [14, 14]
+      H= 189: 1 classes, c3 range [14, 14]
+
+    SC IN (H, c3) SPACE:
+      SC: mean H = 97.8, mean c3 = 9.5
+      NS: mean H = 72.2, mean c3 = 8.4
+
+    ASPECT RATIO (diagonal/anti-diagonal): 5.236
+    (= √2 ≈ 1.414 if the triangle is right isosceles)
+
+========================================================================
+  THE TRIANGLE IS (H, c3)
+========================================================================
+
+  Tournament space in (H, c3) coordinates forms a TRIANGULAR region:
+  - Transitive corner: H=1, c3=0 (bottom-left)
+  - Regular corner: H=max, c3=max (top-right)
+  - The third corner depends on n (bottom-right or top-left)
+
+  The H+c3 diagonal runs from transitive to regular.
+  The perpendicular width measures "how different H and c3 are
+  from their linear relationship."
+
+  H and c3 are NOT independent — they're correlated (r ≈ 0.93).
+  But they're not perfectly correlated — the 7% residual is the WIDTH.
+  This 7% IS the "2D correction" to the "1D" H-gradient.
+
+  The Krawtchouk basis (B_1, B_2) diagonalizes this:
+  B_1 captures the diagonal (H + c3 direction)
+  B_2 captures the width (H - c3 direction)
+
+DONE.
