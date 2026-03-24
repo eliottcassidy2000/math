@@ -1,0 +1,287 @@
+================================================================================
+  TILING NEIGHBORHOOD PROFILES WITHIN ISO CLASSES
+  kind-pasteur-2026-03-24-S20fn
+================================================================================
+
+############################################################
+  n = 5, m = 6, V = 12
+############################################################
+
+  === CLASS: H=1, |Aut|=1, tilings=1 ===
+    Distinct profiles: 1/1
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 1, tilings/|Aut| = 1.0
+    Distinct multisets (ignoring tile position): 1/1
+    Grid-symmetry consistent: 0/1 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F):
+      T0: [4,5,7,2,3,1] self=0 distinct=6
+    Multiset distribution: 1 distinct multisets
+      count=1: targets=(1, 2, 3, 4, 5, 7), self=0
+
+  === CLASS: H=3, |Aut|=3, tilings=1 ===
+    Distinct profiles: 1/1
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 1, tilings/|Aut| = 0.3
+    Distinct multisets (ignoring tile position): 1/1
+    Grid-symmetry consistent: 0/1 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F):
+      T0: [6,6,6,2,2,0] self=0 distinct=3
+    Multiset distribution: 1 distinct multisets
+      count=1: targets=(0, 2, 2, 6, 6, 6), self=0
+
+  === CLASS: H=5, |Aut|=1, tilings=5 ===
+    Distinct profiles: 5/5
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 5, tilings/|Aut| = 5.0
+    Distinct multisets (ignoring tile position): 5/5
+    Grid-symmetry consistent: 0/5 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F):
+      T0: [8,10,6,0,2,2] self=2 distinct=5
+      T1: [10,6,4,3,2,2] self=2 distinct=5
+      T2: [4,8,10,1,2,2] self=2 distinct=5
+      T3: [10,4,8,2,1,3] self=1 distinct=6
+      T4: [6,4,8,2,2,2] self=3 distinct=4
+    Multiset distribution: 5 distinct multisets
+      count=1: targets=(0, 2, 2, 6, 8, 10), self=2
+      count=1: targets=(2, 2, 3, 4, 6, 10), self=2
+      count=1: targets=(1, 2, 2, 4, 8, 10), self=2
+      count=1: targets=(1, 2, 3, 4, 8, 10), self=1
+      count=1: targets=(2, 2, 2, 4, 6, 8), self=3
+
+  === CLASS: H=9, |Aut|=1, tilings=9 ===
+    Distinct profiles: 9/9
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 9, tilings/|Aut| = 9.0
+    Distinct multisets (ignoring tile position): 7/9
+    Grid-symmetry consistent: 3/9 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F):
+      T0: [0,8,6,8,9,6] self=0 distinct=4
+      T1: [5,6,8,8,6,9] self=0 distinct=4
+      T2: [9,4,2,5,6,8] self=1 distinct=6
+      T3: [4,4,6,5,8,8] self=2 distinct=4
+      T4: [4,9,8,6,8,6] self=1 distinct=4
+      T5: [2,8,9,6,6,8] self=0 distinct=4
+      T6: [9,2,8,4,6,5] self=1 distinct=6
+      T7: [4,2,8,4,8,6] self=2 distinct=4
+      T8: [4,6,6,9,8,8] self=1 distinct=4
+    Multiset distribution: 7 distinct multisets
+      count=2: targets=(2, 4, 5, 6, 8, 9), self=1
+      count=2: targets=(4, 6, 6, 8, 8, 9), self=1
+      count=1: targets=(0, 6, 6, 8, 8, 9), self=0
+      count=1: targets=(5, 6, 6, 8, 8, 9), self=0
+      count=1: targets=(4, 4, 5, 6, 8, 8), self=2
+
+  === CLASS: H=11, |Aut|=1, tilings=11 ===
+    Distinct profiles: 11/11
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 11, tilings/|Aut| = 11.0
+    Distinct multisets (ignoring tile position): 10/11
+    Grid-symmetry consistent: 4/11 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F):
+      T0: [5,4,4,11,10,10] self=0 distinct=4
+      T1: [2,11,10,4,10,4] self=0 distinct=4
+      T2: [8,6,10,5,4,11] self=1 distinct=6
+      T3: [8,10,11,4,4,10] self=1 distinct=4
+      T4: [6,10,4,10,11,4] self=0 distinct=4
+      T5: [8,2,11,6,4,10] self=1 distinct=6
+      T6: [8,4,10,10,4,11] self=1 distinct=4
+      T7: [11,8,2,8,6,5] self=2 distinct=5
+      T8: [10,8,4,8,10,5] self=2 distinct=4
+      T9: [10,8,2,8,10,4] self=2 distinct=4
+    Multiset distribution: 10 distinct multisets
+      count=2: targets=(4, 4, 8, 10, 10, 11), self=1
+      count=1: targets=(4, 4, 5, 10, 10, 11), self=0
+      count=1: targets=(2, 4, 4, 10, 10, 11), self=0
+      count=1: targets=(4, 5, 6, 8, 10, 11), self=1
+      count=1: targets=(4, 4, 6, 10, 10, 11), self=0
+
+  === CLASS: H=13, |Aut|=1, tilings=13 ===
+    Distinct profiles: 13/13
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 13, tilings/|Aut| = 13.0
+    Distinct multisets (ignoring tile position): 11/13
+    Grid-symmetry consistent: 6/13 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F):
+      T0: [11,2,8,5,6,8] self=0 distinct=5
+      T1: [6,8,8,6,9,9] self=0 distinct=3
+      T2: [5,9,6,8,8,9] self=0 distinct=4
+      T3: [5,6,9,9,6,11] self=0 distinct=4
+      T4: [2,8,9,9,8,6] self=0 distinct=4
+      T5: [6,6,9,8,9,8] self=0 distinct=3
+      T6: [6,9,6,9,11,6] self=0 distinct=3
+      T7: [9,6,6,11,8,5] self=0 distinct=5
+      T8: [9,11,2,6,8,6] self=0 distinct=5
+      T9: [11,9,8,9,6,8] self=0 distinct=4
+    Multiset distribution: 11 distinct multisets
+      count=2: targets=(6, 6, 8, 8, 9, 9), self=0
+      count=2: targets=(6, 6, 8, 9, 9, 11), self=0
+      count=1: targets=(2, 5, 6, 8, 8, 11), self=0
+      count=1: targets=(5, 6, 8, 8, 9, 9), self=0
+      count=1: targets=(5, 6, 6, 9, 9, 11), self=0
+
+  === CLASS: H=15, |Aut|=3, tilings=5 ===
+    Distinct profiles: 5/5
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 5, tilings/|Aut| = 1.7
+    Distinct multisets (ignoring tile position): 3/5
+    Grid-symmetry consistent: 5/5 (ALL)
+    PROFILES (class index per wiggly position A B C D E F):
+      T0: [3,10,10,10,4,10] self=0 distinct=3
+      T1: [4,4,10,10,10,10] self=0 distinct=2
+      T2: [10,10,10,10,10,4] self=0 distinct=2
+      T3: [10,10,4,10,10,10] self=0 distinct=2
+      T4: [4,10,10,4,10,10] self=0 distinct=2
+    Multiset distribution: 3 distinct multisets
+      count=2: targets=(4, 4, 10, 10, 10, 10), self=0
+      count=2: targets=(4, 10, 10, 10, 10, 10), self=0
+      count=1: targets=(3, 4, 10, 10, 10, 10), self=0
+
+  Time: 0.0s
+
+############################################################
+  n = 6, m = 10, V = 56
+############################################################
+
+  === CLASS: H=1, |Aut|=1, tilings=1 ===
+    Distinct profiles: 1/1
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 1, tilings/|Aut| = 1.0
+    Distinct multisets (ignoring tile position): 1/1
+    Grid-symmetry consistent: 0/1 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F G H I J):
+      T0: [12,13,15,19,4,5,7,2,3,1] self=0 distinct=10
+    Multiset distribution: 1 distinct multisets
+      count=1: targets=(1, 2, 3, 4, 5, 7, 12, 13, 15, 19), self=0
+
+  === CLASS: H=3, |Aut|=3, tilings=1 ===
+    Distinct profiles: 1/1
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 1, tilings/|Aut| = 0.3
+    Distinct multisets (ignoring tile position): 1/1
+    Grid-symmetry consistent: 0/1 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F G H I J):
+      T0: [14,14,14,23,6,6,6,2,2,0] self=0 distinct=5
+    Multiset distribution: 1 distinct multisets
+      count=1: targets=(0, 2, 2, 6, 6, 6, 14, 14, 14, 23), self=0
+
+  === CLASS: H=5, |Aut|=1, tilings=5 ===
+    Distinct profiles: 5/5
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 5, tilings/|Aut| = 5.0
+    Distinct multisets (ignoring tile position): 5/5
+    Grid-symmetry consistent: 0/5 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F G H I J):
+      T0: [16,21,22,18,8,10,6,0,2,2] self=2 distinct=9
+      T1: [21,22,18,16,10,6,4,3,2,2] self=2 distinct=9
+      T2: [18,16,21,22,4,8,10,1,2,2] self=2 distinct=9
+      T3: [21,18,16,22,10,4,8,2,1,3] self=1 distinct=10
+      T4: [22,18,16,21,6,4,8,2,2,2] self=3 distinct=8
+    Multiset distribution: 5 distinct multisets
+      count=1: targets=(0, 2, 2, 6, 8, 10, 16, 18, 21, 22), self=2
+      count=1: targets=(2, 2, 3, 4, 6, 10, 16, 18, 21, 22), self=2
+      count=1: targets=(1, 2, 2, 4, 8, 10, 16, 18, 21, 22), self=2
+      count=1: targets=(1, 2, 3, 4, 8, 10, 16, 18, 21, 22), self=1
+      count=1: targets=(2, 2, 2, 4, 6, 8, 16, 18, 21, 22), self=3
+
+  === CLASS: H=9, |Aut|=1, tilings=9 ===
+    Distinct profiles: 9/9
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 9, tilings/|Aut| = 9.0
+    Distinct multisets (ignoring tile position): 8/9
+    Grid-symmetry consistent: 0/9 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F G H I J):
+      T0: [24,31,33,18,0,8,6,8,9,6] self=0 distinct=8
+      T1: [31,33,18,12,5,6,8,8,6,9] self=0 distinct=8
+      T2: [31,33,12,24,9,4,2,5,6,8] self=1 distinct=10
+      T3: [31,18,12,24,4,4,6,5,8,8] self=2 distinct=8
+      T4: [33,18,12,24,4,9,8,6,8,6] self=1 distinct=8
+      T5: [12,24,31,33,2,8,9,6,6,8] self=0 distinct=8
+      T6: [31,12,24,33,9,2,8,4,6,5] self=1 distinct=10
+      T7: [33,12,24,31,4,2,8,4,8,6] self=2 distinct=8
+      T8: [18,12,24,31,4,6,6,9,8,8] self=1 distinct=8
+    Multiset distribution: 8 distinct multisets
+      count=2: targets=(2, 4, 5, 6, 8, 9, 12, 24, 31, 33), self=1
+      count=1: targets=(0, 6, 6, 8, 8, 9, 18, 24, 31, 33), self=0
+      count=1: targets=(5, 6, 6, 8, 8, 9, 12, 18, 31, 33), self=0
+      count=1: targets=(4, 4, 5, 6, 8, 8, 12, 18, 24, 31), self=2
+      count=1: targets=(4, 6, 6, 8, 8, 9, 12, 18, 24, 33), self=1
+
+  === CLASS: H=11, |Aut|=1, tilings=11 ===
+    Distinct profiles: 11/11
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 11, tilings/|Aut| = 11.0
+    Distinct multisets (ignoring tile position): 11/11
+    Grid-symmetry consistent: 0/11 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F G H I J):
+      T0: [42,43,40,16,5,4,4,11,10,10] self=0 distinct=8
+      T1: [27,42,43,40,2,11,10,4,10,4] self=0 distinct=8
+      T2: [42,40,16,27,8,6,10,5,4,11] self=1 distinct=10
+      T3: [43,40,16,27,8,10,11,4,4,10] self=1 distinct=8
+      T4: [40,16,27,42,6,10,4,10,11,4] self=0 distinct=8
+      T5: [40,27,42,43,8,2,11,6,4,10] self=1 distinct=10
+      T6: [16,27,42,43,8,4,10,10,4,11] self=1 distinct=8
+      T7: [42,40,27,43,11,8,2,8,6,5] self=2 distinct=9
+      T8: [42,16,27,43,10,8,4,8,10,5] self=2 distinct=8
+      T9: [43,40,27,42,10,8,2,8,10,4] self=2 distinct=8
+    Multiset distribution: 11 distinct multisets
+      count=1: targets=(4, 4, 5, 10, 10, 11, 16, 40, 42, 43), self=0
+      count=1: targets=(2, 4, 4, 10, 10, 11, 27, 40, 42, 43), self=0
+      count=1: targets=(4, 5, 6, 8, 10, 11, 16, 27, 40, 42), self=1
+      count=1: targets=(4, 4, 8, 10, 10, 11, 16, 27, 40, 43), self=1
+      count=1: targets=(4, 4, 6, 10, 10, 11, 16, 27, 40, 42), self=0
+
+  === CLASS: H=13, |Aut|=1, tilings=13 ===
+    Distinct profiles: 13/13
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 13, tilings/|Aut| = 13.0
+    Distinct multisets (ignoring tile position): 13/13
+    Grid-symmetry consistent: 0/13 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F G H I J):
+      T0: [38,29,44,41,11,2,8,5,6,8] self=0 distinct=9
+      T1: [41,38,21,29,6,8,8,6,9,9] self=0 distinct=7
+      T2: [38,21,29,44,5,9,6,8,8,9] self=0 distinct=8
+      T3: [38,44,21,29,5,6,9,9,6,11] self=0 distinct=8
+      T4: [29,44,41,38,2,8,9,9,8,6] self=0 distinct=8
+      T5: [44,41,38,21,6,6,9,8,9,8] self=0 distinct=7
+      T6: [41,38,44,21,6,9,6,9,11,6] self=0 distinct=7
+      T7: [38,44,41,21,9,6,6,11,8,5] self=0 distinct=9
+      T8: [41,38,29,44,9,11,2,6,8,6] self=0 distinct=9
+      T9: [21,29,44,41,11,9,8,9,6,8] self=0 distinct=8
+    Multiset distribution: 13 distinct multisets
+      count=1: targets=(2, 5, 6, 8, 8, 11, 29, 38, 41, 44), self=0
+      count=1: targets=(6, 6, 8, 8, 9, 9, 21, 29, 38, 41), self=0
+      count=1: targets=(5, 6, 8, 8, 9, 9, 21, 29, 38, 44), self=0
+      count=1: targets=(5, 6, 6, 9, 9, 11, 21, 29, 38, 44), self=0
+      count=1: targets=(2, 6, 8, 8, 9, 9, 29, 38, 41, 44), self=0
+
+  === CLASS: H=15, |Aut|=3, tilings=5 ===
+    Distinct profiles: 5/5
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 5, tilings/|Aut| = 1.7
+    Distinct multisets (ignoring tile position): 4/5
+    Grid-symmetry consistent: 0/5 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F G H I J):
+      T0: [28,39,39,39,3,10,10,10,4,10] self=0 distinct=5
+      T1: [39,39,20,28,4,4,10,10,10,10] self=0 distinct=5
+      T2: [39,39,39,20,10,10,10,10,10,4] self=0 distinct=4
+      T3: [20,28,39,39,10,10,4,10,10,10] self=0 distinct=5
+      T4: [39,20,28,39,4,10,10,4,10,10] self=0 distinct=5
+    Multiset distribution: 4 distinct multisets
+      count=2: targets=(4, 4, 10, 10, 10, 10, 20, 28, 39, 39), self=0
+      count=1: targets=(3, 4, 10, 10, 10, 10, 28, 39, 39, 39), self=0
+      count=1: targets=(4, 10, 10, 10, 10, 10, 20, 39, 39, 39), self=0
+      count=1: targets=(4, 10, 10, 10, 10, 10, 20, 28, 39, 39), self=0
+
+  === CLASS: H=17, |Aut|=1, tilings=17 ===
+    Distinct profiles: 17/17
+    Ratio (should be tilings/|Aut| if Aut acts freely on profiles): 17, tilings/|Aut| = 17.0
+    Distinct multisets (ignoring tile position): 15/17
+    Grid-symmetry consistent: 0/17 (PARTIAL)
+    PROFILES (class index per wiggly position A B C D E F G H I J):
+      T0: [0,27,26,18,24,30,34,16,20,14] self=0 distinct=10
+      T1: [13,14,16,24,27,26,18,30,34,20] self=0 distinct=10
+      T2: [30,34,12,4,13,14,16,27,26,20] self=1 distinct=10
+      T3: [20,12,12,18,13,14,24,27,26,30] self=2 distinct=9
+      T4: [12,12,34,26,13,16,24,27,18,30] self=2 distinct=9
+      T5: [12,20,30,27,14,16,24,26,18,34] self=1 distinct=10
+      T6: [30,34,4,24,20,12,18,13,14,27] self=1 distinct=10
+      T7: [30,12,4,24,12,12,26,13,16,27] self=3 distinct=8
+      T8: [20,12,18,16,12,34,26,13,24,27] self=2 distinct=9
+      T9: [34,12,4,24,12,20,27,14,16,26] self=2 distinct=9
+    Multiset distribution: 15 distinct multisets
+      count=3: targets=(12, 14, 16, 18, 20, 24, 26, 27, 30, 34), self=1
+      count=1: targets=(0, 14, 16, 18, 20, 24, 26, 27, 30, 34), self=0
+      count=1: targets=(13, 14, 16, 18, 20, 24, 26, 27, 30, 34), self=0
+      count=1: targets=(4, 12, 13, 14, 16, 20, 26, 27, 30, 34), self=1
+      count=1: targets=(12, 12, 13, 14, 18, 20, 24, 26, 27, 30), self=2
+
+  Time: 2.8s
+
+DONE.
+================================================================================
