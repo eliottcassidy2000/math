@@ -5,6 +5,28 @@ Chronological record of all sessions. Every new Claude instance adds an entry at
 Entry format:
 ```
 ## [INSTANCE-ID] — [DATE]
+```
+
+## opus-2026-03-24-S291 — 2026-03-24
+
+**Account:** opus
+**Continuation of:** opus-2026-03-24-S289/S290
+**Summary of work:** THE TOURNAMENT COUNTING THEOREM: complete Euler product factorization of V_n. Proved V_n×n!/2^m = 1 + Σ (1/k)×n↓k×2^{(k²-1)/2-(k-1)n} + cross terms. Found generating function with poles at 4, 16, 64, 256, ... Discovered Mersenne prime connection. Connected correction to meta-graph automorphism strata.
+
+**Key results:**
+1. **Exact single-cycle formula**: R_k(n) = (1/k)×n↓k×2^{Δ_k} where Δ_k = (k-1)(k+1-2n)/2
+2. **3-cycle dominance**: R_3/R → 1 (99.98% by n=15)
+3. **GF closed form**: G(x) ≈ x³/(2(1-x/4)^4) with poles at 2^{k-1}
+4. **D_k(0) exact**: (k-1)!×2^{-(k-1)²/2}/(1-2^{1-k})^{k+1}. D_3(0) = 128/81
+5. **Meta-graph connection**: R(n) = Σ_C fiber(C)×(|Aut(C)|-1)/2^m
+6. **Mersenne primes**: base factors 2^{k-2}-1 = 7, 31, 127 for k=5,7,9
+7. **Cross-orbit excess**: always 6 for (3,3) partition at all n
+
+**New contributions:** HYP-1749 through HYP-1756, reflection euler-product-and-metagraph.md
+**New files:** euler_product_tournament_s291.py, tournament_dirichlet_s291b.py, euler_metagraph_s291c.py, tournament_zeta_special_s291d.py
+**Unresolved threads:** Exact closed form for cross-orbit corrections; functional equation of tournament zeta; connection to L-functions
+```
+## [INSTANCE-ID] — [DATE]
 **Account:** [A/B/C/...]
 **Continuation of:** [previous instance ID, or "fresh start"]
 **Files read:** [list of files read at session start]
