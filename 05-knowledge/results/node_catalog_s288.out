@@ -1,0 +1,388 @@
+
+========================================================================
+  COMPREHENSIVE NODE CATALOG AT n=5
+========================================================================
+
+
+========================================================================
+  NODE 0: H=1, SC
+========================================================================
+
+  BASIC:
+    H = 1, c3 = 0, |Aut| = 1, SC = True
+    Score = (0, 1, 2, 3, 4)
+    Fiber = 120 tilings (1 unmerged classes)
+
+  META-GRAPH:
+    Degree = 4
+    Neighbors: [(1, 'H=3'), (3, 'H=3'), (2, 'H=5'), (4, 'H=9')]
+    Self-loop weight = 480 (40.0% of total 1200)
+
+  WIGGLY WEIGHTS TO EACH NEIGHBOR (per letter, all equal by S_n):
+    Target          | per-letter | total (all 10 letters)
+    --------------------------------------------------
+    1(H=3)        |        48 | 480
+    3(H=3)        |        24 | 240
+    2(H=5)        |        48 | 480
+    4(H=9)        |        24 | 240
+    SELF         |        48 | 480
+
+  WIGGLY PROFILES (neutral arc patterns):
+    Distinct profiles: 60
+    Neutral arc distribution:
+      4 neutral arcs: 120 tilings
+
+  WIGGLY DESTINATION DISTRIBUTION (from all 120 tilings):
+    → 0(H=1): 480 lines (40.0%) SELF
+    → 1(H=3): 240 lines (20.0%) 
+    → 2(H=5): 240 lines (20.0%) 
+    → 4(H=9): 120 lines (10.0%) 
+    → 3(H=3): 120 lines (10.0%) 
+    Blue/black lines: 120 tilings paired with complements
+
+
+========================================================================
+  NODE 1: H=3, NS
+========================================================================
+
+  BASIC:
+    H = 3, c3 = 1, |Aut| = 3, SC = False
+    Score = (1, 1, 1, 3, 4)
+    Fiber = 80 tilings (2 unmerged classes)
+
+  META-GRAPH:
+    Degree = 3
+    Neighbors: [(0, 'H=1'), (2, 'H=5'), (5, 'H=9')]
+    Self-loop weight = 80 (10.0% of total 800)
+
+  WIGGLY WEIGHTS TO EACH NEIGHBOR (per letter, all equal by S_n):
+    Target          | per-letter | total (all 10 letters)
+    --------------------------------------------------
+    0(H=1)        |        48 | 480
+    2(H=5)        |        48 | 480
+    5(H=9)        |        48 | 480
+    SELF         |         8 | 80
+
+  WIGGLY PROFILES (neutral arc patterns):
+    Distinct profiles: 10
+    Neutral arc distribution:
+      1 neutral arcs: 80 tilings
+
+  WIGGLY DESTINATION DISTRIBUTION (from all 80 tilings):
+    → 0(H=1): 240 lines (30.0%) 
+    → 2(H=5): 240 lines (30.0%) 
+    → 5(H=9): 240 lines (30.0%) 
+    → 1(H=3): 80 lines (10.0%) SELF
+    Blue/black lines: 80 tilings paired with complements
+
+
+========================================================================
+  NODE 3: H=3, SC
+========================================================================
+
+  BASIC:
+    H = 3, c3 = 1, |Aut| = 3, SC = True
+    Score = (0, 2, 2, 2, 4)
+    Fiber = 40 tilings (1 unmerged classes)
+
+  META-GRAPH:
+    Degree = 3
+    Neighbors: [(0, 'H=1'), (2, 'H=5'), (7, 'H=15')]
+    Self-loop weight = 0 (0.0% of total 400)
+
+  WIGGLY WEIGHTS TO EACH NEIGHBOR (per letter, all equal by S_n):
+    Target          | per-letter | total (all 10 letters)
+    --------------------------------------------------
+    0(H=1)        |        24 | 240
+    2(H=5)        |        48 | 480
+    7(H=15)        |         8 | 80
+
+  WIGGLY PROFILES (neutral arc patterns):
+    Distinct profiles: 1
+    Neutral arc distribution:
+      0 neutral arcs: 40 tilings
+
+  WIGGLY DESTINATION DISTRIBUTION (from all 40 tilings):
+    → 2(H=5): 240 lines (60.0%) 
+    → 0(H=1): 120 lines (30.0%) 
+    → 7(H=15): 40 lines (10.0%) 
+    Blue/black lines: 40 tilings paired with complements
+
+
+========================================================================
+  NODE 2: H=5, NS
+========================================================================
+
+  BASIC:
+    H = 5, c3 = 2, |Aut| = 1, SC = False
+    Score = (1, 1, 2, 2, 4)
+    Fiber = 240 tilings (2 unmerged classes)
+
+  META-GRAPH:
+    Degree = 7
+    Neighbors: [(0, 'H=1'), (1, 'H=3'), (3, 'H=3'), (4, 'H=9'), (5, 'H=9'), (6, 'H=11'), (8, 'H=13')]
+    Self-loop weight = 720 (30.0% of total 2400)
+
+  WIGGLY WEIGHTS TO EACH NEIGHBOR (per letter, all equal by S_n):
+    Target          | per-letter | total (all 10 letters)
+    --------------------------------------------------
+    0(H=1)        |        48 | 480
+    1(H=3)        |        48 | 480
+    3(H=3)        |        48 | 480
+    4(H=9)        |        48 | 480
+    5(H=9)        |        48 | 480
+    6(H=11)        |        48 | 480
+    8(H=13)        |        48 | 480
+    SELF         |        72 | 720
+
+  WIGGLY PROFILES (neutral arc patterns):
+    Distinct profiles: 60
+    Neutral arc distribution:
+      3 neutral arcs: 240 tilings
+
+  WIGGLY DESTINATION DISTRIBUTION (from all 240 tilings):
+    → 2(H=5): 720 lines (30.0%) SELF
+    → 3(H=3): 240 lines (10.0%) 
+    → 0(H=1): 240 lines (10.0%) 
+    → 6(H=11): 240 lines (10.0%) 
+    → 8(H=13): 240 lines (10.0%) 
+    → 1(H=3): 240 lines (10.0%) 
+    → 5(H=9): 240 lines (10.0%) 
+    → 4(H=9): 240 lines (10.0%) 
+    Blue/black lines: 240 tilings paired with complements
+
+
+========================================================================
+  NODE 4: H=9, SC
+========================================================================
+
+  BASIC:
+    H = 9, c3 = 3, |Aut| = 1, SC = True
+    Score = (1, 1, 2, 3, 3)
+    Fiber = 120 tilings (1 unmerged classes)
+
+  META-GRAPH:
+    Degree = 5
+    Neighbors: [(0, 'H=1'), (2, 'H=5'), (5, 'H=9'), (6, 'H=11'), (7, 'H=15')]
+    Self-loop weight = 240 (20.0% of total 1200)
+
+  WIGGLY WEIGHTS TO EACH NEIGHBOR (per letter, all equal by S_n):
+    Target          | per-letter | total (all 10 letters)
+    --------------------------------------------------
+    0(H=1)        |        24 | 240
+    2(H=5)        |        48 | 480
+    5(H=9)        |        48 | 480
+    6(H=11)        |        48 | 480
+    7(H=15)        |        24 | 240
+    SELF         |        24 | 240
+
+  WIGGLY PROFILES (neutral arc patterns):
+    Distinct profiles: 30
+    Neutral arc distribution:
+      2 neutral arcs: 120 tilings
+
+  WIGGLY DESTINATION DISTRIBUTION (from all 120 tilings):
+    → 2(H=5): 240 lines (20.0%) 
+    → 5(H=9): 240 lines (20.0%) 
+    → 6(H=11): 240 lines (20.0%) 
+    → 4(H=9): 240 lines (20.0%) SELF
+    → 0(H=1): 120 lines (10.0%) 
+    → 7(H=15): 120 lines (10.0%) 
+    Blue/black lines: 120 tilings paired with complements
+
+
+========================================================================
+  NODE 5: H=9, SC
+========================================================================
+
+  BASIC:
+    H = 9, c3 = 3, |Aut| = 1, SC = True
+    Score = (1, 1, 2, 3, 3)
+    Fiber = 120 tilings (1 unmerged classes)
+
+  META-GRAPH:
+    Degree = 5
+    Neighbors: [(1, 'H=3'), (2, 'H=5'), (4, 'H=9'), (6, 'H=11'), (8, 'H=13')]
+    Self-loop weight = 0 (0.0% of total 1200)
+
+  WIGGLY WEIGHTS TO EACH NEIGHBOR (per letter, all equal by S_n):
+    Target          | per-letter | total (all 10 letters)
+    --------------------------------------------------
+    1(H=3)        |        48 | 480
+    2(H=5)        |        48 | 480
+    4(H=9)        |        48 | 480
+    6(H=11)        |        24 | 240
+    8(H=13)        |        72 | 720
+
+  WIGGLY PROFILES (neutral arc patterns):
+    Distinct profiles: 1
+    Neutral arc distribution:
+      0 neutral arcs: 120 tilings
+
+  WIGGLY DESTINATION DISTRIBUTION (from all 120 tilings):
+    → 8(H=13): 360 lines (30.0%) 
+    → 1(H=3): 240 lines (20.0%) 
+    → 4(H=9): 240 lines (20.0%) 
+    → 2(H=5): 240 lines (20.0%) 
+    → 6(H=11): 120 lines (10.0%) 
+    Blue/black lines: 120 tilings paired with complements
+
+
+========================================================================
+  NODE 6: H=11, SC
+========================================================================
+
+  BASIC:
+    H = 11, c3 = 4, |Aut| = 1, SC = True
+    Score = (1, 2, 2, 2, 3)
+    Fiber = 120 tilings (1 unmerged classes)
+
+  META-GRAPH:
+    Degree = 5
+    Neighbors: [(2, 'H=5'), (4, 'H=9'), (5, 'H=9'), (8, 'H=13'), (9, 'H=15')]
+    Self-loop weight = 240 (20.0% of total 1200)
+
+  WIGGLY WEIGHTS TO EACH NEIGHBOR (per letter, all equal by S_n):
+    Target          | per-letter | total (all 10 letters)
+    --------------------------------------------------
+    2(H=5)        |        48 | 480
+    4(H=9)        |        48 | 480
+    5(H=9)        |        24 | 240
+    8(H=13)        |        48 | 480
+    9(H=15)        |        24 | 240
+    SELF         |        24 | 240
+
+  WIGGLY PROFILES (neutral arc patterns):
+    Distinct profiles: 15
+    Neutral arc distribution:
+      2 neutral arcs: 120 tilings
+
+  WIGGLY DESTINATION DISTRIBUTION (from all 120 tilings):
+    → 2(H=5): 240 lines (20.0%) 
+    → 4(H=9): 240 lines (20.0%) 
+    → 6(H=11): 240 lines (20.0%) SELF
+    → 8(H=13): 240 lines (20.0%) 
+    → 9(H=15): 120 lines (10.0%) 
+    → 5(H=9): 120 lines (10.0%) 
+    Blue/black lines: 120 tilings paired with complements
+
+
+========================================================================
+  NODE 8: H=13, SC
+========================================================================
+
+  BASIC:
+    H = 13, c3 = 4, |Aut| = 1, SC = True
+    Score = (1, 2, 2, 2, 3)
+    Fiber = 120 tilings (1 unmerged classes)
+
+  META-GRAPH:
+    Degree = 5
+    Neighbors: [(2, 'H=5'), (5, 'H=9'), (6, 'H=11'), (7, 'H=15'), (9, 'H=15')]
+    Self-loop weight = 0 (0.0% of total 1200)
+
+  WIGGLY WEIGHTS TO EACH NEIGHBOR (per letter, all equal by S_n):
+    Target          | per-letter | total (all 10 letters)
+    --------------------------------------------------
+    2(H=5)        |        48 | 480
+    5(H=9)        |        72 | 720
+    6(H=11)        |        48 | 480
+    7(H=15)        |        48 | 480
+    9(H=15)        |        24 | 240
+
+  WIGGLY PROFILES (neutral arc patterns):
+    Distinct profiles: 1
+    Neutral arc distribution:
+      0 neutral arcs: 120 tilings
+
+  WIGGLY DESTINATION DISTRIBUTION (from all 120 tilings):
+    → 5(H=9): 360 lines (30.0%) 
+    → 7(H=15): 240 lines (20.0%) 
+    → 2(H=5): 240 lines (20.0%) 
+    → 6(H=11): 240 lines (20.0%) 
+    → 9(H=15): 120 lines (10.0%) 
+    Blue/black lines: 120 tilings paired with complements
+
+
+========================================================================
+  NODE 7: H=15, SC
+========================================================================
+
+  BASIC:
+    H = 15, c3 = 4, |Aut| = 3, SC = True
+    Score = (1, 2, 2, 2, 3)
+    Fiber = 40 tilings (1 unmerged classes)
+
+  META-GRAPH:
+    Degree = 3
+    Neighbors: [(3, 'H=3'), (4, 'H=9'), (8, 'H=13')]
+    Self-loop weight = 0 (0.0% of total 400)
+
+  WIGGLY WEIGHTS TO EACH NEIGHBOR (per letter, all equal by S_n):
+    Target          | per-letter | total (all 10 letters)
+    --------------------------------------------------
+    3(H=3)        |         8 | 80
+    4(H=9)        |        24 | 240
+    8(H=13)        |        48 | 480
+
+  WIGGLY PROFILES (neutral arc patterns):
+    Distinct profiles: 1
+    Neutral arc distribution:
+      0 neutral arcs: 40 tilings
+
+  WIGGLY DESTINATION DISTRIBUTION (from all 40 tilings):
+    → 8(H=13): 240 lines (60.0%) 
+    → 4(H=9): 120 lines (30.0%) 
+    → 3(H=3): 40 lines (10.0%) 
+    Blue/black lines: 40 tilings paired with complements
+
+
+========================================================================
+  NODE 9: H=15, SC
+========================================================================
+
+  BASIC:
+    H = 15, c3 = 5, |Aut| = 5, SC = True
+    Score = (2, 2, 2, 2, 2)
+    Fiber = 24 tilings (1 unmerged classes)
+
+  META-GRAPH:
+    Degree = 2
+    Neighbors: [(6, 'H=11'), (8, 'H=13')]
+    Self-loop weight = 0 (0.0% of total 240)
+
+  WIGGLY WEIGHTS TO EACH NEIGHBOR (per letter, all equal by S_n):
+    Target          | per-letter | total (all 10 letters)
+    --------------------------------------------------
+    6(H=11)        |        24 | 240
+    8(H=13)        |        24 | 240
+
+  WIGGLY PROFILES (neutral arc patterns):
+    Distinct profiles: 1
+    Neutral arc distribution:
+      0 neutral arcs: 24 tilings
+
+  WIGGLY DESTINATION DISTRIBUTION (from all 24 tilings):
+    → 8(H=13): 120 lines (50.0%) 
+    → 6(H=11): 120 lines (50.0%) 
+    Blue/black lines: 24 tilings paired with complements
+
+
+========================================================================
+  SUMMARY: ALL NODES SIDE BY SIDE
+========================================================================
+
+  mid | H   | c3  | Aut  | fiber  | deg | SL%  | neighbors          | neut   | score
+  ------------------------------------------------------------------------------------------
+  0   | 1   | 0   | 1    | 120    | 4   | 40.0 | 1,2,3,4            | 4.0    | (0, 1, 2, 3, 4)
+  1   | 3   | 1   | 3    | 80     | 3   | 10.0 | 0,2,5              | 1.0    | (1, 1, 1, 3, 4)
+  3   | 3   | 1   | 3    | 40     | 3   |  0.0 | 0,2,7              | 0.0    | (0, 2, 2, 2, 4)
+  2   | 5   | 2   | 1    | 240    | 7   | 30.0 | 0,1,3,4,5,6,8      | 3.0    | (1, 1, 2, 2, 4)
+  4   | 9   | 3   | 1    | 120    | 5   | 20.0 | 0,2,5,6,7          | 2.0    | (1, 1, 2, 3, 3)
+  5   | 9   | 3   | 1    | 120    | 5   |  0.0 | 1,2,4,6,8          | 0.0    | (1, 1, 2, 3, 3)
+  6   | 11  | 4   | 1    | 120    | 5   | 20.0 | 2,4,5,8,9          | 2.0    | (1, 2, 2, 2, 3)
+  8   | 13  | 4   | 1    | 120    | 5   |  0.0 | 2,5,6,7,9          | 0.0    | (1, 2, 2, 2, 3)
+  7   | 15  | 4   | 3    | 40     | 3   |  0.0 | 3,4,8              | 0.0    | (1, 2, 2, 2, 3)
+  9   | 15  | 5   | 5    | 24     | 2   |  0.0 | 6,8                | 0.0    | (2, 2, 2, 2, 2)
+
+Done. opus-2026-03-24-S288
