@@ -13,6 +13,12 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S273 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S272
+**Summary of work:** WIGGLY CLASS terminology established. A wiggly line = clicking one tile = flipping one arc. Wiggly class = which tile. Confirmed: every wiggly class sees every meta-graph edge (local=global). Deprecated "translucent" — use blueself/blackself for neutral arcs.
+
 ## opus-2026-03-23-S272 — 2026-03-23
 
 **Account:** opus
