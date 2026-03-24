@@ -1,0 +1,292 @@
+========================================================================
+  WIGGLY PROFILES: HOW TILINGS IN THE SAME CLASS DIFFER
+  opus-2026-03-24-S294
+========================================================================
+
+########################################################################
+  n = 4: WIGGLY PROFILES WITHIN ISO CLASSES
+########################################################################
+  Built in 0.0s. V=3, m=3, 2^m=8
+
+  Class 0 (H=1, SC, fiber=1):
+    Distinct profiles: 1
+    Distinct sorted profiles: 1
+    Distinct class multisets: 1
+    *** ALL TILINGS HAVE IDENTICAL PROFILE! ***
+    Profile: (2, 1, 1)
+    → classes visited: [1, 2]
+    → self-loops: 0/3
+
+  Class 1 (H=3, NS, fiber=2):
+    Distinct profiles: 2
+    Distinct sorted profiles: 1
+    Distinct class multisets: 1
+    Profile (1×): classes=[0, 2], self-loops=0
+      Detail: [2, 2, 0]
+    Profile (1×): classes=[0, 2], self-loops=0
+      Detail: [2, 0, 2]
+
+  Class 2 (H=5, SC, fiber=5):
+    Distinct profiles: 4
+    Distinct sorted profiles: 4
+    Distinct class multisets: 4
+    Profile (2×): classes=[1, 2], self-loops=2
+      Detail: [1, 2, 2]
+    Profile (1×): classes=[1, 2], self-loops=1
+      Detail: [2, 1, 1]
+    Profile (1×): classes=[0, 2], self-loops=2
+      Detail: [0, 2, 2]
+    Profile (1×): classes=[2], self-loops=3
+      Detail: [2, 2, 2]
+
+  SUMMARY:
+  Classes with constant profile: 1/3 (33.3%)
+  Classes with constant self-loop count: 2/3 (66.7%)
+  Classes with constant diversity: 2/3 (66.7%)
+
+########################################################################
+  n = 5: WIGGLY PROFILES WITHIN ISO CLASSES
+########################################################################
+  Built in 0.0s. V=10, m=6, 2^m=64
+
+  Class 0 (H=1, SC, fiber=1):
+    Distinct profiles: 1
+    Distinct sorted profiles: 1
+    Distinct class multisets: 1
+    *** ALL TILINGS HAVE IDENTICAL PROFILE! ***
+    Profile: (6, 2, 1, 2, 8, 1)
+    → classes visited: [1, 2, 6, 8]
+    → self-loops: 0/6
+
+  Class 1 (H=3, NS, fiber=2):
+    Distinct profiles: 2
+    Distinct sorted profiles: 1
+    Distinct class multisets: 1
+    Profile (1×): classes=[0, 2, 5], self-loops=0
+      Detail: [5, 5, 5, 2, 2, 0]
+    Profile (1×): classes=[0, 2, 5], self-loops=0
+      Detail: [5, 2, 0, 5, 2, 5]
+
+  Class 2 (H=5, NS, fiber=10):
+    Distinct profiles: 10
+    Distinct sorted profiles: 5
+    Distinct class multisets: 5
+    Self-loops: min=1, max=3, mean=2.00
+    Diversity: min=4, max=6, mean=5.00
+    → VARIABLE self-loop count: [(1, 2), (2, 6), (3, 2)]
+
+  Class 3 (H=11, SC, fiber=11):
+    Distinct profiles: 11
+    Distinct sorted profiles: 7
+    Distinct class multisets: 7
+    Self-loops: min=0, max=2, mean=1.09
+    Diversity: min=4, max=6, mean=4.36
+    → VARIABLE self-loop count: [(0, 3), (1, 4), (2, 4)]
+
+  Class 4 (H=13, SC, fiber=13):
+    Distinct profiles: 13
+    Distinct sorted profiles: 8
+    Distinct class multisets: 8
+    Self-loops: min=0, max=0, mean=0.00
+    Diversity: min=3, max=5, mean=3.92
+    → CONSTANT self-loop count: 0
+
+  Class 5 (H=9, SC, fiber=9):
+    Distinct profiles: 9
+    Distinct sorted profiles: 6
+    Distinct class multisets: 6
+    Self-loops: min=0, max=0, mean=0.00
+    Diversity: min=3, max=5, mean=3.56
+    → CONSTANT self-loop count: 0
+
+  Class 6 (H=9, SC, fiber=9):
+    Distinct profiles: 9
+    Distinct sorted profiles: 5
+    Distinct class multisets: 5
+    Self-loops: min=0, max=2, mean=0.89
+    Diversity: min=4, max=5, mean=4.22
+    → VARIABLE self-loop count: [(0, 3), (1, 4), (2, 2)]
+
+  Class 7 (H=15, SC, fiber=3):
+    Distinct profiles: 3
+    Distinct sorted profiles: 3
+    Distinct class multisets: 3
+    Profile (1×): classes=[3, 4], self-loops=0
+      Detail: [4, 4, 3, 4, 3, 3]
+    Profile (1×): classes=[3, 4], self-loops=0
+      Detail: [3, 4, 4, 4, 4, 4]
+    Profile (1×): classes=[3, 4], self-loops=0
+      Detail: [4, 3, 3, 3, 3, 3]
+
+  Class 8 (H=3, SC, fiber=1):
+    Distinct profiles: 1
+    Distinct sorted profiles: 1
+    Distinct class multisets: 1
+    *** ALL TILINGS HAVE IDENTICAL PROFILE! ***
+    Profile: (9, 2, 2, 2, 0, 2)
+    → classes visited: [0, 2, 9]
+    → self-loops: 0/6
+
+  Class 9 (H=15, SC, fiber=5):
+    Distinct profiles: 5
+    Distinct sorted profiles: 3
+    Distinct class multisets: 3
+    Profile (1×): classes=[4, 6, 8], self-loops=0
+      Detail: [8, 4, 4, 4, 6, 4]
+    Profile (1×): classes=[4, 6], self-loops=0
+      Detail: [4, 4, 6, 4, 4, 4]
+    Profile (1×): classes=[4, 6], self-loops=0
+      Detail: [6, 6, 4, 4, 4, 4]
+    Profile (1×): classes=[4, 6], self-loops=0
+      Detail: [6, 4, 4, 6, 4, 4]
+    Profile (1×): classes=[4, 6], self-loops=0
+      Detail: [4, 4, 4, 4, 4, 6]
+
+  SUMMARY:
+  Classes with constant profile: 2/10 (20.0%)
+  Classes with constant self-loop count: 7/10 (70.0%)
+  Classes with constant diversity: 4/10 (40.0%)
+
+########################################################################
+  n = 6: WIGGLY PROFILES WITHIN ISO CLASSES
+########################################################################
+  Built in 0.2s. V=34, m=10, 2^m=1024
+
+  Class 0 (H=1, SC, fiber=1):
+    Distinct profiles: 1
+    Distinct sorted profiles: 1
+    Distinct class multisets: 1
+    *** ALL TILINGS HAVE IDENTICAL PROFILE! ***
+    Profile: (7, 2, 17, 1, 2, 8, 14, 17, 14, 1)
+    → classes visited: [1, 2, 7, 8, 14, 17]
+    → self-loops: 0/10
+
+  Class 1 (H=3, NS, fiber=2):
+    Distinct profiles: 2
+    Distinct sorted profiles: 1
+    Distinct class multisets: 1
+    Profile (1×): classes=[0, 6, 12, 17, 32], self-loops=0
+      Detail: [6, 6, 6, 32, 12, 12, 12, 17, 17, 0]
+    Profile (1×): classes=[0, 6, 12, 17, 32], self-loops=0
+      Detail: [6, 12, 17, 0, 6, 12, 17, 6, 12, 32]
+
+  Class 2 (H=9, NS, fiber=18):
+    Distinct profiles: 18
+    Distinct sorted profiles: 8
+    Distinct class multisets: 8
+    Self-loops: min=0, max=2, mean=0.89
+    Diversity: min=8, max=10, mean=8.44
+    → VARIABLE self-loop count: [(0, 6), (1, 8), (2, 4)]
+
+  Class 7 (H=17, SC, fiber=17):
+    Distinct profiles: 17
+    Distinct sorted profiles: 10
+    Distinct class multisets: 10
+    Self-loops: min=0, max=3, mean=1.41
+    Diversity: min=5, max=7, mean=6.24
+    → VARIABLE self-loop count: [(0, 3), (1, 6), (2, 6), (3, 2)]
+
+  Class 8 (H=5, SC, fiber=5):
+    Distinct profiles: 5
+    Distinct sorted profiles: 4
+    Distinct class multisets: 4
+    Profile (1×): classes=[2, 8, 9, 10, 11, 14], self-loops=1
+      Detail: [9, 11, 2, 10, 11, 8, 14, 2, 14, 10]
+    Profile (1×): classes=[0, 8, 9, 10, 11, 12], self-loops=2
+      Detail: [9, 10, 11, 12, 10, 0, 8, 11, 8, 12]
+    Profile (1×): classes=[2, 8, 9, 10, 11, 12, 14], self-loops=2
+      Detail: [9, 2, 10, 11, 11, 14, 8, 12, 8, 2]
+    Profile (1×): classes=[2, 8, 9, 10, 11, 12, 14], self-loops=2
+      Detail: [9, 11, 12, 2, 2, 14, 8, 10, 8, 11]
+    Profile (1×): classes=[2, 8, 9, 10, 12], self-loops=3
+      Detail: [9, 12, 2, 10, 12, 8, 8, 2, 8, 10]
+
+  Class 12 (H=9, NS, fiber=18):
+    Distinct profiles: 18
+    Distinct sorted profiles: 9
+    Distinct class multisets: 9
+    Self-loops: min=0, max=0, mean=0.00
+    Diversity: min=7, max=9, mean=7.78
+    → CONSTANT self-loop count: 0
+
+  Class 13 (H=15, NS, fiber=6):
+    Distinct profiles: 6
+    Distinct sorted profiles: 3
+    Distinct class multisets: 3
+    Self-loops: min=0, max=0, mean=0.00
+    Diversity: min=3, max=3, mean=3.00
+    → CONSTANT self-loop count: 0
+    → CONSTANT diversity: 3
+
+  Class 14 (H=3, NS, fiber=2):
+    Distinct profiles: 2
+    Distinct sorted profiles: 1
+    Distinct class multisets: 1
+    Profile (1×): classes=[0, 8, 12, 15, 16, 17], self-loops=0
+      Detail: [15, 12, 12, 12, 16, 8, 8, 17, 0, 17]
+    Profile (1×): classes=[0, 8, 12, 15, 16, 17], self-loops=0
+      Detail: [15, 16, 17, 17, 12, 8, 0, 12, 8, 12]
+
+  Class 15 (H=27, NS, fiber=18):
+    Distinct profiles: 18
+    Distinct sorted profiles: 7
+    Distinct class multisets: 7
+    Self-loops: min=0, max=0, mean=0.00
+    Diversity: min=5, max=6, mean=5.44
+    → CONSTANT self-loop count: 0
+
+  Class 16 (H=15, NS, fiber=10):
+    Distinct profiles: 10
+    Distinct sorted profiles: 4
+    Distinct class multisets: 4
+    Self-loops: min=0, max=0, mean=0.00
+    Diversity: min=4, max=5, mean=4.80
+    → CONSTANT self-loop count: 0
+
+  Class 17 (H=5, NS, fiber=10):
+    Distinct profiles: 10
+    Distinct sorted profiles: 5
+    Distinct class multisets: 5
+    Self-loops: min=1, max=3, mean=2.00
+    Diversity: min=8, max=10, mean=9.00
+    → VARIABLE self-loop count: [(1, 2), (2, 6), (3, 2)]
+
+  Class 22 (H=45, SC, fiber=15):
+    Distinct profiles: 15
+    Distinct sorted profiles: 11
+    Distinct class multisets: 11
+    Self-loops: min=0, max=3, mean=2.27
+    Diversity: min=3, max=4, mean=3.73
+    → VARIABLE self-loop count: [(0, 1), (1, 2), (2, 4), (3, 8)]
+
+  Class 28 (H=45, SC, fiber=15):
+    Distinct profiles: 13
+    Distinct sorted profiles: 7
+    Distinct class multisets: 7
+    Self-loops: min=0, max=0, mean=0.00
+    Diversity: min=2, max=3, mean=2.87
+    → CONSTANT self-loop count: 0
+
+  Class 32 (H=9, SC, fiber=1):
+    Distinct profiles: 1
+    Distinct sorted profiles: 1
+    Distinct class multisets: 1
+    *** ALL TILINGS HAVE IDENTICAL PROFILE! ***
+    Profile: (33, 33, 33, 1, 33, 33, 33, 33, 33, 1)
+    → classes visited: [1, 33]
+    → self-loops: 0/10
+
+  Class 33 (H=17, SC, fiber=17):
+    Distinct profiles: 17
+    Distinct sorted profiles: 11
+    Distinct class multisets: 11
+    Self-loops: min=0, max=0, mean=0.00
+    Diversity: min=4, max=6, mean=5.35
+    → CONSTANT self-loop count: 0
+
+  SUMMARY:
+  Classes with constant profile: 2/34 (5.9%)
+  Classes with constant self-loop count: 16/34 (47.1%)
+  Classes with constant diversity: 5/34 (14.7%)
+
+DONE.
