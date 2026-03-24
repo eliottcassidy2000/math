@@ -1,0 +1,113 @@
+
+========================================================================
+  VERTEX DELETION STRATEGIES AT n=5
+========================================================================
+
+  n=5: 1024 tournaments
+
+  min_score      : H(r|sub_class)=2.375 (59.4% of 4), 15 class pairs
+  max_score      : H(r|sub_class)=2.375 (59.4% of 4), 15 class pairs
+  source         : H(r|sub_class)=2.375 (59.4% of 4), 15 class pairs
+  sink           : H(r|sub_class)=2.375 (59.4% of 4), 15 class pairs
+  median_score   : H(r|sub_class)=2.917 (72.9% of 4), 17 class pairs
+  max_c3         : H(r|sub_class)=3.750 (93.8% of 4), 14 class pairs
+  fixed_0        : H(r|sub_class)=4.000 (100.0% of 4), 29 class pairs
+
+========================================================================
+  MODE B: DUAL DELETION (source + sink)
+========================================================================
+
+  MODE B: Delete source AND sink
+
+  n=5: Mode B residual = 7 bits
+    H(residual | sub_class) = 4.029 (57.6% of 7)
+    Sub-classes: 2 distinct
+    Mode A comparison: H(r|sub) = 2.375 (59.4% of 4)
+    Mode B saves: 1.3 bits more than Mode A
+
+  n=6: Mode B residual = 9 bits
+    H(residual | sub_class) = 5.775 (64.2% of 9)
+    Sub-classes: 4 distinct
+    Mode A comparison: H(r|sub) = 3.212 (64.2% of 5)
+    Mode B saves: 1.4 bits more than Mode A
+
+
+========================================================================
+  ADAPTIVE VERTEX SELECTION: WHICH IS BEST?
+========================================================================
+
+  ADAPTIVE STRATEGY: choose v to MINIMIZE H(r | sub_class, score)
+
+  ADAPTIVE (most extreme score vertex):
+    H(r | sub_class, score) = 1.064 (26.6% of 4)
+    Vertex selection: {0: 456, 1: 244, 4: 64, 2: 152, 3: 108}
+    Score distribution: {0: 240, 1: 260, 2: 24, 3: 260, 4: 240}
+
+========================================================================
+  THE STAIRCASE DECOMPOSITION
+========================================================================
+
+
+  THE THREE-PART DECOMPOSITION OF THE STAIRCASE:
+
+  When deleting vertex v from a tournament T on n vertices:
+
+  The C(n,2) arcs decompose into:
+  1. OVERLAP: arcs between non-v vertices = C(n-1, 2) arcs = T
+  2. RESIDUAL: arcs from v to others = n-1 arcs = the deleted row/column
+
+  When deleting BOTH source and sink (Mode B):
+  1. OVERLAP: arcs between interior vertices = C(n-2, 2) arcs = T\{s,t}
+  2. BOTTOM WIRING: source→interior arcs = n-2 arcs
+  3. TOP WIRING: sink→interior arcs = n-2 arcs
+  4. APEX: source→sink arc = 1 arc
+  Total: C(n-2,2) + 2(n-2) + 1 = C(n,2) ✓
+
+  In the TILING MODEL (fixed base path):
+  The tiles decompose similarly:
+  1. OVERLAP: tiles of the (n-2)-staircase = C(n-2, 2) tiles
+  2. BOUNDARY: tiles involving the deleted vertex(es)
+  3. APEX: the long-range tile connecting source to sink
+
+  THIS IS THE RECURSIVE STRUCTURE of the staircase:
+    δ_{n-2} = δ_{n-3} ∪ (boundary tiles) ∪ (apex)
+
+  The overlap δ_{n-3} IS the (n-1)-tournament's tile space.
+  The boundary tiles are the residual.
+  The apex is the single extra bit.
+
+  VERTEX SELECTION determines HOW to decompose:
+  - Source deletion: boundary = bottom row of staircase
+  - Sink deletion: boundary = right column of staircase
+  - Middle vertex deletion: boundary = a diagonal strip
+  - Dual deletion (source+sink): boundary = both legs + apex
+
+  THE OPTIMAL SELECTION minimizes the conditional entropy of
+  the boundary given the overlap's iso class.
+  Adaptive selection (most extreme score) achieves the best compression.
+
+
+========================================================================
+  inshat AND THE INSERTION FORMULA
+========================================================================
+
+  THE inshat DISTRIBUTION AT n=5:
+
+  class                          H      mean_ins   min_ins    max_ins   
+  ----------------------------------------------------------------------
+  (0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1      1.00       1          1         
+  (0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 3      1.67       1          3         
+  (0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 5      1.92       1          3         
+  (0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3      1.67       1          3         
+  (0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 9      2.65       1          3         
+  (0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 15     3.57       3          5         
+  (0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 5      1.92       1          3         
+  (0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 11     2.62       1          3         
+  (0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 13     3.10       1          5         
+  (0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 15     3.00       1          5         
+  (0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 3      1.67       1          3         
+  (0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 9      2.65       1          5         
+
+  inshat always odd: True ✓
+
+Done. opus-2026-03-24-S315
