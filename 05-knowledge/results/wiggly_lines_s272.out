@@ -1,0 +1,266 @@
+
+========================================================================
+  THE WIGGLY LINE CONCEPT
+========================================================================
+
+
+  THE RECURSIVE DECOMPOSITION:
+  T on [n] = boundary_left (arcs from 0) + boundary_right (arcs to n-1)
+             + apex (arc 0↔n-1) + overlap (arcs among 1..n-2)
+
+  CELL COUNTS:
+    boundary_left: n-2 cells (arcs 0→j for j=1..n-2)
+    boundary_right: n-2 cells (arcs j→(n-1) for j=1..n-2)
+    apex: 1 cell (arc 0↔(n-1))
+    overlap: C(n-2, 2) cells (arcs among 1..n-2)
+    TOTAL: 2(n-2) + 1 + C(n-2,2) = C(n,2) = m  ✓
+
+  WIGGLY FIBER: Fix boundary+apex, vary overlap.
+  Fiber size = 2^{C(n-2,2)} (one tournament per interior orientation).
+
+  At n=3: C(1,2)=0 → fiber=1 (no interior, only boundary+apex)
+  At n=4: C(2,2)=1 → fiber=2 (one interior arc, 2 choices)
+  At n=5: C(3,2)=3 → fiber=8 (three interior arcs, 8 choices)
+  At n=6: C(4,2)=6 → fiber=64 (six interior arcs, 64 choices)
+  At n=7: C(5,2)=10 → fiber=1024
+
+  Each fiber is a C(n-2,2)-subcube of Q_m.
+  The total number of fibers = 2^{2(n-2)+1} = 2^{2n-3}
+  (one per boundary+apex configuration).
+
+
+========================================================================
+  WIGGLY LINES AT n=4
+========================================================================
+
+  Overlap cells: 1 = C(2,2)
+  Boundary+apex cells: 5 = 2(4-2)+1
+  Fiber size: 2^1 = 2
+  Number of fibers: 2^5 = 32
+  Total: 32 × 2 = 64 = 2^6 ✓
+
+  Fiber size distribution: {2: 32}
+  All fibers have size 2: True
+
+  CLASSES PER WIGGLY FIBER:
+    1 classes: 12 fibers
+    2 classes: 20 fibers
+  Average classes per fiber: 1.62 (out of 3 merged classes)
+
+  EXAMPLE FIBERS:
+    Fiber 0 (bkey=0): {(0, 1): 2}
+    Fiber 1 (bkey=1): {(0, 1): 1, (1, 3): 1}
+    Fiber 2 (bkey=2): {(1, 3): 1, (0, 1): 1}
+    Fiber 3 (bkey=3): {(0, 1): 2}
+    Fiber 4 (bkey=16): {(2, 5): 2}
+
+========================================================================
+  WIGGLY EDGES → META-GRAPH EDGES (n=4)
+========================================================================
+
+  Total wiggly pairs: 32 (= 32 fibers × C(2, 2))
+  Wiggly self-loops: 12 (37.5%)
+
+  Wiggly meta-edges (distinct class pairs): 3
+  Actual meta-graph edges: 3
+  Wiggly ∩ Actual: 3
+  Wiggly \ Actual: 0 (wiggly-only, NOT in meta-graph)
+  Actual \ Wiggly: 0 (opaque-only, NOT from wiggly)
+
+  Wiggly recovery rate: 3/3 = 100.0% of meta-graph edges
+  Wiggly adds NO new edges beyond the meta-graph.
+
+========================================================================
+  SUM OF SQUARES IDENTITY (n=4)
+========================================================================
+
+  Example fiber overlap class distribution:
+    Overlap class: size 2
+  Σ (count)² = 4, should relate to 2^{m-1} = 32
+
+  Within each fiber: 2 tilings, 2 overlap configs → bijection
+  (One tiling per overlap, by construction)
+
+  THE WIGGLY GRAPH within a fiber is the COMPLETE GRAPH K_2
+  (Every pair of tilings with the same boundary+apex is wiggly-connected)
+  Wiggly degree: 1 (= fiber_size - 1 = 2^{C(n-2,2)} - 1)
+
+========================================================================
+  WIGGLY LINES AT n=5
+========================================================================
+
+  Overlap cells: 3 = C(3,2)
+  Boundary+apex cells: 7 = 2(5-2)+1
+  Fiber size: 2^3 = 8
+  Number of fibers: 2^7 = 128
+  Total: 128 × 8 = 1024 = 2^10 ✓
+
+  Fiber size distribution: {8: 128}
+  All fibers have size 8: True
+
+  CLASSES PER WIGGLY FIBER:
+    2 classes: 8 fibers
+    3 classes: 36 fibers
+    4 classes: 36 fibers
+    5 classes: 12 fibers
+    6 classes: 36 fibers
+  Average classes per fiber: 4.25 (out of 10 merged classes)
+
+  EXAMPLE FIBERS:
+    Fiber 0 (bkey=0): {(0, 1): 6, (3, 3): 2}
+    Fiber 1 (bkey=1): {(0, 1): 2, (1, 3): 2, (2, 5): 4}
+    Fiber 2 (bkey=2): {(1, 3): 2, (0, 1): 2, (2, 5): 4}
+    Fiber 3 (bkey=3): {(0, 1): 2, (2, 5): 4, (3, 3): 2}
+    Fiber 4 (bkey=4): {(2, 5): 4, (1, 3): 2, (0, 1): 2}
+
+========================================================================
+  WIGGLY EDGES → META-GRAPH EDGES (n=5)
+========================================================================
+
+  Total wiggly pairs: 3584 (= 128 fibers × C(8, 2))
+  Wiggly self-loops: 680 (19.0%)
+
+  Wiggly meta-edges (distinct class pairs): 35
+  Actual meta-graph edges: 21
+  Wiggly ∩ Actual: 21
+  Wiggly \ Actual: 14 (wiggly-only, NOT in meta-graph)
+  Actual \ Wiggly: 0 (opaque-only, NOT from wiggly)
+
+  Wiggly recovery rate: 21/21 = 100.0% of meta-graph edges
+  Wiggly ADDS 14 NEW edges not in the meta-graph!
+  (These connect classes reachable via multi-flip in the overlap)
+
+========================================================================
+  SUM OF SQUARES IDENTITY (n=5)
+========================================================================
+
+  Example fiber overlap class distribution:
+    Overlap class: size 6
+    Overlap class: size 2
+  Σ (count)² = 40, should relate to 2^{m-1} = 512
+
+  Within each fiber: 8 tilings, 8 overlap configs → bijection
+  (One tiling per overlap, by construction)
+
+  THE WIGGLY GRAPH within a fiber is the COMPLETE GRAPH K_8
+  (Every pair of tilings with the same boundary+apex is wiggly-connected)
+  Wiggly degree: 7 (= fiber_size - 1 = 2^{C(n-2,2)} - 1)
+
+========================================================================
+  WIGGLY LINES AT n=6
+========================================================================
+
+  Overlap cells: 6 = C(4,2)
+  Boundary+apex cells: 9 = 2(6-2)+1
+  Fiber size: 2^6 = 64
+  Number of fibers: 2^9 = 512
+  Total: 512 × 64 = 32768 = 2^15 ✓
+
+  Fiber size distribution: {64: 512}
+  All fibers have size 64: True
+
+  CLASSES PER WIGGLY FIBER:
+    3 classes: 4 fibers
+    4 classes: 4 fibers
+    6 classes: 16 fibers
+    9 classes: 44 fibers
+    10 classes: 24 fibers
+    11 classes: 32 fibers
+    12 classes: 28 fibers
+    14 classes: 24 fibers
+    15 classes: 24 fibers
+    18 classes: 24 fibers
+    19 classes: 48 fibers
+    20 classes: 48 fibers
+    21 classes: 48 fibers
+    22 classes: 96 fibers
+    24 classes: 48 fibers
+  Average classes per fiber: 17.03 (out of 34 merged classes)
+
+  EXAMPLE FIBERS:
+    Fiber 0 (bkey=0): {(0, 1): 24, (3, 3): 16, (5, 5): 24}
+    Fiber 1 (bkey=1): {(0, 1): 6, (1, 3): 6, (2, 5): 12, (4, 9): 12, (6, 9): 12, (7, 11): 6, (3, 3): 2, (13, 13): 6, (12, 15): 2}
+    Fiber 2 (bkey=2): {(1, 3): 6, (0, 1): 6, (2, 5): 12, (6, 9): 12, (3, 3): 2, (4, 9): 12, (13, 13): 6, (7, 11): 6, (12, 15): 2}
+    Fiber 3 (bkey=3): {(0, 1): 4, (2, 5): 8, (3, 3): 4, (4, 9): 4, (5, 5): 8, (7, 11): 12, (12, 15): 4, (13, 13): 12, (6, 9): 4, (20, 15): 4}
+    Fiber 4 (bkey=4): {(2, 5): 12, (1, 3): 6, (13, 13): 6, (6, 9): 12, (0, 1): 6, (4, 9): 12, (3, 3): 2, (7, 11): 6, (12, 15): 2}
+
+========================================================================
+  WIGGLY EDGES → META-GRAPH EDGES (n=6)
+========================================================================
+
+  Total wiggly pairs: 1032192 (= 512 fibers × C(64, 2))
+  Wiggly self-loops: 73152 (7.1%)
+
+  Wiggly meta-edges (distinct class pairs): 523
+  Actual meta-graph edges: 143
+  Wiggly ∩ Actual: 143
+  Wiggly \ Actual: 380 (wiggly-only, NOT in meta-graph)
+  Actual \ Wiggly: 0 (opaque-only, NOT from wiggly)
+
+  Wiggly recovery rate: 143/143 = 100.0% of meta-graph edges
+  Wiggly ADDS 380 NEW edges not in the meta-graph!
+  (These connect classes reachable via multi-flip in the overlap)
+
+========================================================================
+  SUM OF SQUARES IDENTITY (n=6)
+========================================================================
+
+  Example fiber overlap class distribution:
+    Overlap class: size 24
+    Overlap class: size 24
+    Overlap class: size 8
+    Overlap class: size 8
+  Σ (count)² = 1280, should relate to 2^{m-1} = 16384
+
+  Within each fiber: 64 tilings, 64 overlap configs → bijection
+  (One tiling per overlap, by construction)
+
+  THE WIGGLY GRAPH within a fiber is the COMPLETE GRAPH K_64
+  (Every pair of tilings with the same boundary+apex is wiggly-connected)
+  Wiggly degree: 63 (= fiber_size - 1 = 2^{C(n-2,2)} - 1)
+
+========================================================================
+  SYNTHESIS: THE THREE TYPES OF TILING CONNECTIONS
+========================================================================
+
+
+  EVERY PAIR OF TILINGS (labeled tournaments) on n vertices has one of:
+
+  1. OPAQUE CONNECTION: differ by one arc, different iso class.
+     = meta-graph edges. m neighbors per tiling.
+     These form the meta-graph G_n/Z_2.
+
+  2. BLUESELF/BLACKSELF CONNECTION: differ by one arc, SAME iso class.
+     = neutral arc flips. Avg (m × arc_neutrality) neighbors per tiling.
+     The translucent/self-loop structure from S270.
+     The transitive class forms a permutohedron.
+
+  3. WIGGLY CONNECTION: same boundary+apex, different overlap.
+     = sharing all boundary arcs but differing in the interior.
+     2^{C(n-2,2)} - 1 neighbors per tiling.
+     Each wiggly fiber is a COMPLETE GRAPH on the overlap configurations.
+
+  The three types are NOT disjoint:
+  - A wiggly pair that differs in exactly 1 overlap arc is ALSO opaque or blueself.
+  - A wiggly pair that differs in k overlap arcs is connected by a k-step
+    path in Q_m, but directly connected by the wiggly line.
+
+  WIGGLY CONNECTIONS ARE THE RECURSIVE FIBER:
+  Fixing the boundary (how vertices 0 and n-1 connect to the interior)
+  and the apex (0↔n-1 direction), the interior tournament varies freely.
+  The wiggly fiber = the (n-2)-tournament space embedded in n-tournament space.
+
+  THE META-GRAPH PROJECTION OF WIGGLY LINES:
+  Some wiggly pairs land in the same class → wiggly self-loops
+  Some wiggly pairs land in different classes → wiggly meta-edges
+
+  At n=5: wiggly meta-edges = 523, actual meta-edges = 143
+  Wiggly recovery: 100% of meta-graph edges are wiggly-witnessed.
+
+  THE WIGGLY STRUCTURE IS THE RECURSIVE BURNSIDE:
+  Each wiggly fiber is parameterized by a (n-2)-tournament.
+  The iso class distribution within a fiber depends on HOW the
+  interior (n-2)-tournament interacts with the boundary.
+  This IS the recursive structure we seek for computing E(G_n).
+
+Done. opus-2026-03-23-S272
