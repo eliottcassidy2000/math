@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S267 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S266
+**Summary of work:** Computed full spectrum + eigenvectors of G_n/Z_2 adjacency matrix at n=5,6. Major discovery: H is 79% the 2nd eigenvector. Markov gap = 2/n nearly exact.
+
+**Key findings:**
+1. H is 72-79% concentrated on the 2nd adjacency eigenvector
+2. Markov spectral gap = 0.331 vs 2/6 = 0.333 (off by 0.6%!)
+3. 1st eigenvector = degree (trivial), 2nd = H/c3 (the physics)
+4. Fiedler vector partially separates SC from NS
+5. No eigenvalue degeneracy at n=5,6
+
 ## opus-2026-03-23-S266 — 2026-03-23
 
 **Account:** opus
