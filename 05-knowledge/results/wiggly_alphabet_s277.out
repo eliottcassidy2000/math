@@ -1,0 +1,196 @@
+
+========================================================================
+  THE WIGGLY ALPHABET AT n=5
+========================================================================
+
+  Alphabet size: m = C(5,2) = 10 letters
+
+  Letter 0: pair (0,1), range 1
+  Letter 1: pair (0,2), range 2
+  Letter 2: pair (0,3), range 3
+  Letter 3: pair (0,4), range 4
+  Letter 4: pair (1,2), range 1
+  Letter 5: pair (1,3), range 2
+  Letter 6: pair (1,4), range 3
+  Letter 7: pair (2,3), range 1
+  Letter 8: pair (2,4), range 2
+  Letter 9: pair (3,4), range 1
+
+  RANGE GROUPS:
+  Range 1: 4 letters ([0, 4, 7, 9])
+  Range 2: 3 letters ([1, 5, 8])
+  Range 3: 2 letters ([2, 6])
+  Range 4: 1 letters ([3])
+
+========================================================================
+  WIGGLY WORDS: PATHS IN THE META-GRAPH AS WORDS OVER THE ALPHABET
+========================================================================
+
+
+  WIGGLY WORDS:
+
+  A word of length k = a sequence of k letters from the alphabet.
+  Each word traces a path in Q_m (the m-cube of all tilings).
+
+  PROPERTIES:
+  - The same letter twice CANCELS (XOR): ...X...X... returns to before X.
+  - A word of length k with all distinct letters = Hamming distance k in Q_m.
+  - The ISO CLASS at each step determines the meta-graph path.
+
+  WORD EQUIVALENCES:
+  - S_n acts on the alphabet: σ relabels letters.
+    Words w and σ(w) give ISOMORPHIC paths.
+  - Complement (Z_2) flips all bits: equivalent to prepending "flip all."
+    This doesn't change the meta-graph path at all (merging).
+
+  The WIGGLY WORD LANGUAGE:
+  L_n = {words w : w spells a path in the meta-graph from class C to class D}
+  This language is REGULAR (determined by the finite meta-graph automaton).
+
+
+========================================================================
+  RANGE-REDUCED ALPHABET
+========================================================================
+
+  RANGE-REDUCED ALPHABET: 4 super-letters (one per range)
+
+  EDGE WEIGHTS BY RANGE:
+  Edge                       | r=1     | r=2     | r=3     | r=4     | total
+  ----------------------------------------------------------------------
+  {0(H=1),1(H=3)}| 192     | 144     | 96      | 48      | 480
+  {0(H=1),2(H=5)}| 192     | 144     | 96      | 48      | 480
+  {0(H=1),3(H=3)}| 96      | 72      | 48      | 24      | 240
+  {0(H=1),4(H=9)}| 96      | 72      | 48      | 24      | 240
+  {1(H=3),2(H=5)}| 192     | 144     | 96      | 48      | 480
+  {1(H=3),5(H=9)}| 192     | 144     | 96      | 48      | 480
+  {2(H=5),3(H=3)}| 192     | 144     | 96      | 48      | 480
+  {2(H=5),4(H=9)}| 192     | 144     | 96      | 48      | 480
+  {2(H=5),5(H=9)}| 192     | 144     | 96      | 48      | 480
+  {2(H=5),6(H=11)}| 192     | 144     | 96      | 48      | 480
+  {2(H=5),8(H=13)}| 192     | 144     | 96      | 48      | 480
+  {3(H=3),7(H=15)}| 32      | 24      | 16      | 8       | 80
+  {4(H=9),5(H=9)}| 192     | 144     | 96      | 48      | 480
+  {4(H=9),6(H=11)}| 192     | 144     | 96      | 48      | 480
+  {4(H=9),7(H=15)}| 96      | 72      | 48      | 24      | 240
+  {5(H=9),6(H=11)}| 96      | 72      | 48      | 24      | 240
+  {5(H=9),8(H=13)}| 288     | 216     | 144     | 72      | 720
+  {6(H=11),8(H=13)}| 192     | 144     | 96      | 48      | 480
+  {6(H=11),9(H=15)}| 96      | 72      | 48      | 24      | 240
+  {7(H=15),8(H=13)}| 192     | 144     | 96      | 48      | 480
+  {8(H=13),9(H=15)}| 96      | 72      | 48      | 24      | 240
+
+========================================================================
+  SELF-LOOP WEIGHTS BY RANGE
+========================================================================
+
+  Node (H)              | r=1     | r=2     | r=3     | r=4     | total
+  ------------------------------------------------------------
+  0 (H=1)               | 192     | 144     | 96      | 48      | 480
+  1 (H=3)               | 32      | 24      | 16      | 8       | 80
+  2 (H=5)               | 288     | 216     | 144     | 72      | 720
+  4 (H=9)               | 96      | 72      | 48      | 24      | 240
+  6 (H=11)               | 96      | 72      | 48      | 24      | 240
+
+========================================================================
+  THE RANGE RATIO: A UNIVERSAL PATTERN?
+========================================================================
+
+  For each edge, the weight ratio by range:
+  (Normalized so range-1 = 1.000)
+
+  {0,1}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {0,2}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {0,3}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {0,4}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {1,2}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {1,5}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {2,3}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {2,4}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {2,5}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {2,6}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {2,8}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {3,7}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {4,5}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {4,6}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {4,7}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {5,6}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {5,8}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {6,8}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {6,9}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {7,8}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+  {8,9}: ratios=[1.0, 0.75, 0.5, 0.25], expected=[1.0, 0.75, 0.5, 0.25], match=True
+
+========================================================================
+  THE WIGGLY WORD AUTOMATON
+========================================================================
+
+
+  THE META-GRAPH AS A FINITE AUTOMATON:
+
+  States: merged iso classes (V_merged nodes)
+  Alphabet: wiggly classes {A, B, C, ...} (m letters)
+  Transitions: δ(state, letter) = set of states reachable by flipping letter
+
+  Wait — from a single merged class, flipping letter X doesn't give a
+  SINGLE target class. Different labeled tilings in the source class
+  may land in DIFFERENT target classes when flipping the same letter.
+
+  So: δ(C, X) = {D : ∃ T ∈ C with T^X ∈ D}
+
+  This is a NONDETERMINISTIC automaton (NFA).
+
+  But from the local=global theorem: δ(C, X) = set of ALL neighbors of C.
+  So for every letter X: δ(C, X) = {D : {C,D} is a meta-graph edge} ∪ {C if neutral}.
+
+  This means: THE NFA IS THE SAME FOR EVERY LETTER.
+  Every letter gives the same transition function!
+  The wiggly word language is LETTER-INDEPENDENT.
+
+  IMPLICATION: The meta-graph path depends on the SEQUENCE of classes
+  visited, not on WHICH specific letter was flipped at each step.
+  The alphabet labels carry NO information about the meta-graph dynamics.
+
+  The information carried by the alphabet labels is WITHIN-CLASS:
+  which specific tiling within the class is selected. This is the
+  fiber structure (permutohedron at the transitive class, etc.).
+
+  THE RANGE RATIO:
+  Although every range sees every edge, the WEIGHT differs.
+  Range-r letters contribute weight proportional to (n-r) = #{arcs at range r}.
+  This is because S_n acts transitively on pairs, and there are (n-r)
+  pairs at distance r in the staircase.
+
+  So: the weight of edge {C,D} at range r = (n-r) × (base weight of {C,D}).
+  The base weight depends only on the edge, not the range.
+  This is a PERFECT FACTORIZATION: weight(edge, range) = w(edge) × (n-r).
+
+  VERIFYING: weight(edge, range) = w(edge) × (n-r)
+
+  ✓ PERFECT FACTORIZATION VERIFIED for all edges at n=5
+    weight(edge, range r) = base_weight(edge) × (n - r)
+    where (n-r) = #{pairs at distance r in the staircase}
+
+  BASE WEIGHTS (range-independent edge weights):
+    {0(H=1),1(H=3)}: base = 48
+    {0(H=1),2(H=5)}: base = 48
+    {0(H=1),3(H=3)}: base = 24
+    {0(H=1),4(H=9)}: base = 24
+    {1(H=3),2(H=5)}: base = 48
+    {1(H=3),5(H=9)}: base = 48
+    {2(H=5),3(H=3)}: base = 48
+    {2(H=5),4(H=9)}: base = 48
+    {2(H=5),5(H=9)}: base = 48
+    {2(H=5),6(H=11)}: base = 48
+    {2(H=5),8(H=13)}: base = 48
+    {3(H=3),7(H=15)}: base = 8
+    {4(H=9),5(H=9)}: base = 48
+    {4(H=9),6(H=11)}: base = 48
+    {4(H=9),7(H=15)}: base = 24
+    {5(H=9),6(H=11)}: base = 24
+    {5(H=9),8(H=13)}: base = 72
+    {6(H=11),8(H=13)}: base = 48
+    {6(H=11),9(H=15)}: base = 24
+    {7(H=15),8(H=13)}: base = 48
+    {8(H=13),9(H=15)}: base = 24
+
+Done. opus-2026-03-24-S277
