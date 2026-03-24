@@ -1,0 +1,151 @@
+========================================================================
+  THE TWIST: (B1, B2, B3) STRUCTURE
+  opus-2026-03-24-S308
+========================================================================
+
+########################################################################
+  n = 5
+########################################################################
+  V=10, m=6
+
+  B2 = 0.219 + 1.708 × B1 + residual
+  B3 = 0.672 + 1.290 × B1 + residual
+  B2 residual std: 2.1618
+  B3 residual std: 5.3014
+
+  TWIST ANALYSIS (B2_resid, B3_resid along H-gradient):
+    Angle increases: 4/9 (44%)
+    Angle decreases: 4/9 (44%)
+    No consistent rotation (random-like)
+
+    Twist amplitude: min=0.096, max=12.443, mean=4.668
+    SC twist amplitude: 4.208
+    NS twist amplitude: 6.506
+
+    SC mean angle: 0.860 rad (49.3°)
+    NS mean angle: -2.038 rad (-116.8°)
+    Angular separation: 166.0°
+    *** SC AND NS ARE ANGULARLY SEPARATED! ***
+    → TWO STRANDS in the twist plane
+
+    SORTED BY H:
+       H  c3  SC      B1     B2r     B3r     amp   angle
+       1   0  SC    6.00   4.535  11.587  12.443    68.6°
+       3   1  NS    4.00  -2.049  -5.833   6.182  -109.4°
+       3   1  SC    4.00  -2.049  -5.833   6.182  -109.4°
+       5   2  NS    2.00  -3.834  -5.652   6.830  -124.1°
+       9   3  SC    0.00   0.337  -4.228   4.241   -85.4°
+       9   3  SC   -0.89   1.410   1.364   1.962    44.0°
+      11   4  SC   -0.91   0.334   1.592   1.626    78.2°
+      13   4  SC   -0.77   0.095   0.013   0.096     7.6°
+      15   5  SC   -1.33   0.391   3.715   3.735    84.0°
+      15   4  SC   -1.20   0.830   3.276   3.380    75.8°
+
+########################################################################
+  n = 6
+########################################################################
+  V=34, m=10
+
+  B2 = -0.380 + 2.940 × B1 + residual
+  B3 = -1.749 + 5.189 × B1 + residual
+  B2 residual std: 4.5692
+  B3 residual std: 16.8198
+
+  TWIST ANALYSIS (B2_resid, B3_resid along H-gradient):
+    Angle increases: 15/33 (45%)
+    Angle decreases: 16/33 (48%)
+    No consistent rotation (random-like)
+
+    Twist amplitude: min=0.501, max=71.664, mean=12.578
+    SC twist amplitude: 17.183
+    NS twist amplitude: 10.066
+
+    SC mean angle: 0.908 rad (52.0°)
+    NS mean angle: 0.386 rad (22.1°)
+    Angular separation: 29.9°
+
+    SORTED BY H:
+       H  c3  SC      B1     B2r     B3r     amp   angle
+       1   0  SC   10.00  15.982  69.859  71.664    77.1°
+       3   1  NS    8.00   3.862   8.237   9.097    64.9°
+       3   1  NS    8.00   3.862   8.237   9.097    64.9°
+       5   2  SC    6.00  -3.459 -16.585  16.942  -101.8°
+       5   2  NS    6.00  -3.459 -16.585  16.942  -101.8°
+       9   3  NS    3.11  -6.210 -14.395  15.677  -113.3°
+       9   3  NS    4.00  -4.824 -16.341  17.038  -106.4°
+       9   2  SC    6.00  -4.259 -21.385  21.805  -101.3°
+      11   4  NS    3.09  -7.343 -18.654  20.047  -111.5°
+      13   4  NS    3.23  -7.195 -19.939  21.197  -109.8°
+      15   4  NS    0.80   2.628  -5.602   6.188   -64.9°
+      15   5  NS    2.67  -8.459 -20.089  21.797  -112.8°
+      15   4  NS    2.80  -7.651 -17.580  19.173  -113.5°
+      17   4  SC   -0.47   2.175   7.485   7.794    73.8°
+      17   4  SC    1.88  -0.271 -19.313  19.315   -90.8°
+      19   5  NS    0.32   0.662  -1.574   1.708   -67.2°
+      23   6  NS   -0.35  -0.467   5.641   5.660    94.7°
+      23   5  NS    0.35   0.966  -7.360   7.424   -82.5°
+      25   6  NS   -0.08   0.495  -0.076   0.501    -8.7°
+      27   5  NS   -0.67   2.451   6.986   7.403    70.7°
+      29   6  SC   -0.28   1.846  -3.716   4.150   -63.6°
+      29   6  SC    0.21  -0.470  -5.670   5.689   -94.7°
+      29   6  NS   -0.41   1.286   4.172   4.366    72.9°
+      31   6  NS   -0.26   0.655   0.765   1.007    49.5°
+      33   6  SC   -0.91   2.477   6.709   7.151    69.7°
+      33   7  NS   -0.55  -0.653   6.761   6.792    95.5°
+      33   7  NS   -0.67   0.915   4.238   4.336    77.8°
+      37   6  SC   -1.41   3.620  14.231  14.684    75.7°
+      37   7  NS   -1.08   2.234   8.440   8.730    75.2°
+      37   7  NS   -0.76   0.740   7.189   7.227    84.1°
+      41   8  SC   -1.51   2.606  14.279  14.514    79.7°
+      43   8  NS   -1.02   0.528  10.035  10.049    87.0°
+      45   8  SC   -1.87   5.134  14.635  15.509    70.7°
+      45   8  SC   -0.80  -0.402   6.967   6.978    93.3°
+
+########################################################################
+  n = 7
+########################################################################
+  V=272, m=15
+
+  B2 = -0.509 + 3.973 × B1 + residual
+  B3 = -3.580 + 9.902 × B1 + residual
+  B2 residual std: 5.9807
+  B3 residual std: 32.3771
+
+  TWIST ANALYSIS (B2_resid, B3_resid along H-gradient):
+    Angle increases: 133/271 (49%)
+    Angle decreases: 127/271 (47%)
+    No consistent rotation (random-like)
+
+    Twist amplitude: min=0.344, max=313.432, mean=19.947
+    SC twist amplitude: 22.268
+    NS twist amplitude: 18.837
+
+    SC mean angle: 1.333 rad (76.4°)
+    NS mean angle: -1.112 rad (-63.7°)
+    Angular separation: 140.1°
+    *** SC AND NS ARE ANGULARLY SEPARATED! ***
+    → TWO STRANDS in the twist plane
+
+========================================================================
+  THE TWIST STRUCTURE
+========================================================================
+
+  The TWIST = the residual of (B2, B3) after removing the linear
+  dependence on B1 (= H). It captures what H DOESN'T explain.
+
+  If the twist traces a HELIX as H increases:
+    → tournament space is a SPIRAL STAIRCASE
+    → each H-level is rotated relative to the previous
+    → SC and NS form the two rails of the spiral
+
+  If the twist is RANDOM:
+    → no coherent rotation
+    → the perpendicular structure is unstructured noise
+
+  If SC and NS are ANGULARLY SEPARATED:
+    → the two types occupy different sectors of the twist plane
+    → this is a DOUBLE HELIX with SC and NS as the two strands
+    → like DNA: the two strands carry different information
+       (SC = structural, NS = generic) wrapped around the H-axis
+
+DONE.
