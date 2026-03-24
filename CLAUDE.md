@@ -194,7 +194,7 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
   - A **BLUE LINE** = a line where the tiling is grid-symmetric (`isGridSym`): invariant under `(x,y) -> (n-y+1, n-x+1)`. Since `isGridSym(flip(t)) == isGridSym(t)`, both endpoints are always the same color. Every line is exactly blue or black.
   - A **BLACK LINE** = a line where the tiling is NOT grid-symmetric.
   - **RED** = connects transpose-paired iso classes (not a tiling line).
-  - An **EDGE** in the metagraph = a connection from a single-tile flip (NOT a complement flip). Edges are made of many lines. Lines and edges are DIFFERENT concepts.
+  - An **EDGE** in the metagraph can come from ANY waggly layer (d=1,...,m). The d=1 (wiggly) layer creates the most-studied edges. Blue/black (d=m) also creates cross-class edges. Lines (individual tiling pairs) and edges (class-pair connections) are DIFFERENT concepts.
   - A **PURE BLUE** class = all tilings grid-symmetric. A **PURE BLACK** class = no tilings grid-symmetric. **MIXED** = both.
   - **VERIFIED n=3..7**: transpose-self classes are NEVER pure black (always pure blue or mixed). Non-transpose-self classes are ALWAYS pure black. Grid-sym fraction = 2^{(floor((n-1)/2) - C(n-1,2))/2} (exponents: 0,-1,-2,-4,-6,-9 for n=3..8). **CORRECTED** (kind-pasteur-S20ex): was incorrectly stated as 2^{-(n-2)}.
   - The staircase is oriented with **right angle at bottom-left**, tiles labeled (x,y) with x=upper vertex, y=lower vertex.
@@ -206,12 +206,17 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
   - These are properties of the MERGED iso classes, not of individual tilings.
   - In the merged graph: pure-black node count = 0, 1, 2, 22, 184 for n=3..7.
   - The old "blue" ≈ SC-SC + NS-NS; the old "black" = SC-NS.
-- **BLUE/BLACK vs WIGGLY — COMPLETELY DISJOINT** (opus-S275, CRITICAL):
-  - **BLUE/BLACK lines** = complement pairing (flip ALL tiles). In merged metagraph: all become SELF-LOOPS (complement pairs merge into same node).
-  - **WIGGLY lines** = single-tile flip (flip ONE tile). Create ALL edges in the merged metagraph.
-  - The complement is NEVER reachable by a single tile flip. Blue/black and wiggly have ZERO overlap.
-  - **DEPRECATED TERMS**: "translucent", "opaque" — do not use. Use blue/black for complement pairing, wiggly for single-tile flips.
-- **NEUTRAL ARC FLIPS**: A wiggly line that preserves the iso class = a self-loop in the metagraph. Classified as BLUE-SELF (grid-symmetric tiling) or BLACK-SELF (not grid-symmetric).
+- **WAGGLY LAYER STRUCTURE** (opus-S297, supersedes S275):
+  - ALL connections between tilings = **waggly lines**. They decompose into m layers by Hamming distance d=1,...,m.
+  - **WIGGLY** = layer d=1 (flip 1 tile). **BLUE/BLACK** = layer d=m (flip all tiles). Both are subsets of waggly.
+  - Wiggly and blue/black have ZERO overlap (d=1 ≠ d=m for m ≥ 2). But they are NOT "disjoint kinds of connection" — they are different layers of the same spectrum.
+  - **HIGHER LAYERS** (d=2,...,m-1): connections from flipping 2 or more (but not all) tiles. No standard name yet. These often reveal edges not visible at d=1.
+  - At n=5: layers d=1,2,3 together cover 100% of quotient edges. d=1 alone covers only 47%.
+  - **CORRECTED** (MISTAKE-033): Blue/black lines DO create cross-class edges in the merged metagraph (18 at n=5). The old claim that they are "purely self-loops in the merged graph" was WRONG — it confused complement tiling (flip tiles, stay in Q_m) with complement tournament T^op (flip ALL arcs, leave Q_m).
+  - **DEPRECATED TERMS**: "translucent", "opaque" — do not use. Their insights are preserved as:
+    - Old "translucent" (class-preserving flip) → now **silent mutation** or **self-loop** or **neutral flip**
+    - Old "opaque" (class-changing flip) → now **expressive mutation** or **cross-class flip**
+- **SILENT MUTATIONS** (formerly "neutral arc flips" / "translucent"): Any waggly line (at any distance d) that preserves the iso class = a self-loop in the quotient. At d=1 (wiggly): classified as BLUE-SELF (grid-symmetric tiling) or BLACK-SELF (not grid-symmetric). At d=2: self-loop rate is HIGHER than d=1 (19% vs 10% at n=5). Self-loop rates vary non-monotonically across layers.
 - **WIGGLY LINES — STRICT DEFINITION** (opus-S273, kind-pasteur-S20er):
   - A **WIGGLY LINE** = clicking one TILE in the `tournament-tiling-explorer` = flipping one non-base-path arc. It connects one tiling to exactly one other tiling.
   - Fix the base Hamiltonian path: n -> n-1 -> n-2 -> ... -> 2 -> 1.
@@ -243,7 +248,7 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
   - Per tiling: m neighbors at d=1, C(m,2) at d=2, ..., 1 at d=m. Total = 2^m - 1 neighbors.
   - Total waggly lines: C(2^m, 2) = 2^m(2^m-1)/2. At n=4: 28. At n=5: 2016. At n=6: 523776.
   - The **complement tiling** (d=m, flip all tiles) preserves base-path arcs but reverses all tile arcs. This is NOT T^op (which reverses ALL arcs including base path). MISTAKE-033: confusing these two was a major error.
-  - In the quotient meta-graph at n=5: d=1 (wiggly) covers 21/45 class-pair edges. d=2 covers 35/45. d=3 covers 41/45. d=m (blue/black) covers 18/45. The union of d=1 and d≥2 covers 43/45.
+  - In the quotient meta-graph at n=5: d=1 covers 21/45 edges. d=2 covers 35/45. d=3 covers 41/45. d=m covers 18/45. Cumulative d=1..3 covers **all 45/45** (100%). The full waggly graph on iso classes is COMPLETE.
   - Creative waggly subsets beyond distance: **range flips** (all tiles of same range r), **vertex-star flips** (all tiles incident to vertex v), **triangle flips** (3 tiles forming a 3-cycle). Each has distinct neutrality patterns.
   - Vertex-star neutrality is SYMMETRIC around the center of the base path (v=0 ↔ v=n-1) but NOT uniform. Center vertex is ~5× more neutral than endpoints (n=5).
 - **GEOMETRIC ALIGNMENT of G_n/Z_2:** The merged metagraph has three perpendicular structures:
