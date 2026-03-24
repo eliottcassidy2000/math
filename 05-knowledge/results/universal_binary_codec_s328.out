@@ -1,0 +1,83 @@
+
+========================================================================
+  THE UNIVERSAL DECOMPOSITION
+========================================================================
+
+
+  ANY N×N BINARY MATRIX = TWO TRIANGULAR TILINGS + DIAGONAL
+
+  ┌─────────────────────┐
+  │ diag  upper (δ_{N-2}^T) │
+  │                         │
+  │ lower (δ_{N-1})   diag  │
+  └─────────────────────┘
+
+  Lower triangle: N(N-1)/2 bits
+  Upper triangle: (N-1)(N-2)/2 bits
+  Diagonal: N bits
+  Total: N² bits ✓
+
+  Each triangle IS a tournament-like tiling.
+  All our tools apply: score conditioning, Krawtchouk spectrum,
+  fractal peeling, waggly analysis.
+
+  THIS IS NOT ABOUT TOURNAMENTS. It's about BINARY RELATIONS.
+  A tournament is a binary relation that happens to be antisymmetric.
+  An arbitrary binary matrix has no such constraint.
+  But the COMPRESSION TECHNIQUES still work because they
+  operate on the TRIANGULAR structure, not the tournament semantics.
+
+
+========================================================================
+  COMPRESSING AN N×N BINARY MATRIX
+========================================================================
+
+  COMPRESSION OF RANDOM N×N BINARY MATRICES:
+
+  N    raw      lower_sc   upper_sc   total_sc ratio   
+  --------------------------------------------------
+  4    16       1.0        1.0        6.0      2.67    
+  8    64       16.9       16.5       41.5     1.54    
+  16   256      83.1       84.8       183.9    1.39    
+  32   1024     408.3      402.1      842.4    1.22    
+  64   4096     1821.8     1814.4     3700.2   1.11    
+  128  16384    7632.3     7628.6     15388.9  1.06    
+
+========================================================================
+  COMPRESSING IMAGE BITPLANES
+========================================================================
+
+
+  AN 8-BIT GRAYSCALE IMAGE (W×H pixels):
+
+  Each pixel = 8 bits. Decompose into 8 BITPLANES:
+    Bitplane 0 (LSB): least significant bit of each pixel
+    Bitplane 7 (MSB): most significant bit of each pixel
+
+  Each bitplane = a W×H binary matrix.
+  Higher bitplanes are MORE structured (smooth regions have constant MSBs).
+  Lower bitplanes are MORE random (noise dominates).
+
+  COMPRESS EACH BITPLANE independently:
+  1. Decompose into lower + diagonal + upper triangles
+  2. Apply score conditioning to each triangle
+  3. Higher planes compress MUCH better (score concentrated near 0 or max)
+
+  SIMULATED 16×16 GRADIENT IMAGE:
+
+  Bitplane   raw_bits   compressed savings%   weight% 
+  --------------------------------------------------
+  Plane 0   256        197.2      23.0      % 50.0    %
+  Plane 1   256        188.3      26.5      % 50.0    %
+  Plane 2   256        151.2      40.9      % 50.0    %
+  Plane 3   256        200.6      21.7      % 53.1    %
+  Plane 4   256        198.1      22.6      % 53.1    %
+  Plane 5   256        188.0      26.6      % 53.1    %
+  Plane 6   256        153.5      40.0      % 53.1    %
+  Plane 7   256        102.0      60.1      % 46.9    %
+
+  TOTAL: raw=2048 bits, compressed=1378.8 bits, ratio=1.49:1
+
+========================================================================
+  VIDEO DELTA COMPRESSION
+========================================================================
