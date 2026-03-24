@@ -206,7 +206,12 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
   - These are properties of the MERGED iso classes, not of individual tilings.
   - In the merged graph: pure-black node count = 0, 1, 2, 22, 184 for n=3..7.
   - The old "blue" ≈ SC-SC + NS-NS; the old "black" = SC-NS.
-- **NEUTRAL ARC FLIPS (formerly "translucent lines")**: An arc flip that preserves the iso class = a self-loop in the metagraph. These are classified as BLUE-SELF (if the tiling is grid-symmetric) or BLACK-SELF (if not). Do NOT call them "translucent" — use blue-self/black-self.
+- **BLUE/BLACK vs WIGGLY — COMPLETELY DISJOINT** (opus-S275, CRITICAL):
+  - **BLUE/BLACK lines** = complement pairing (flip ALL tiles). In merged metagraph: all become SELF-LOOPS (complement pairs merge into same node).
+  - **WIGGLY lines** = single-tile flip (flip ONE tile). Create ALL edges in the merged metagraph.
+  - The complement is NEVER reachable by a single tile flip. Blue/black and wiggly have ZERO overlap.
+  - **DEPRECATED TERMS**: "translucent", "opaque" — do not use. Use blue/black for complement pairing, wiggly for single-tile flips.
+- **NEUTRAL ARC FLIPS**: A wiggly line that preserves the iso class = a self-loop in the metagraph. Classified as BLUE-SELF (grid-symmetric tiling) or BLACK-SELF (not grid-symmetric).
 - **WIGGLY LINES — STRICT DEFINITION** (opus-S273, kind-pasteur-S20er):
   - A **WIGGLY LINE** = clicking one TILE in the `tournament-tiling-explorer` = flipping one non-base-path arc. It connects one tiling to exactly one other tiling.
   - Fix the base Hamiltonian path: n -> n-1 -> n-2 -> ... -> 2 -> 1.
