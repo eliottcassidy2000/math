@@ -3,119 +3,6 @@
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
 Entry format:
-
-## opus-2026-03-24-S315 — 2026-03-24
-
-**Account:** opus
-**Continuation of:** opus-2026-03-24-S314
-**Summary of work:** Even graphs elevated to first-class objects. Built the even graph metagraph E_n for n=3..7. Discovered E_n is PERFECT (ω=χ) while G_n is not. χ(E_n) grows much faster than χ(G_n). Built dual metagraph bridge with four-way tile flip classification. Updated CLAUDE.md with even graph mandate.
-
-**Key results:**
-1. V(E_n) = 2, 3, 7, 16, 54 for n=3..7. E_n is denser than G_n (76-100% density).
-2. χ(E_n) = 2, 3, 5, 10, 28 — MUCH faster than χ(G_n) = n-1.
-3. E_n is PERFECT at all computed n: ω(E_n) = χ(E_n). G_n loses perfectness at n=7.
-4. 80% of tile flips change both tournament class and even class (Jaccard ≈ 0.82).
-5. Bridge matrix B has full rank at every n.
-
-**Files:** even_graph_metagraph_s315.py, dual_metagraph_bridge_s315.py, 07-reflections/even-graphs-as-first-class.md
-**CLAUDE.md updated:** Even graphs now mandatory for all future agents.
-
-## opus-2026-03-24-S314 — 2026-03-24
-
-**Account:** opus
-**Continuation of:** opus-2026-03-24-S260 through S313
-**Summary of work:** Chromatic number synthesis session. Proved χ(G_n/Z_2) = n-1 for n=4..7 through multiple computational attacks.
-
-**Key results:**
-1. **Hoffman bound NOT tight**: ⌈1+λ_max/|λ_min|⌉ = 3 for all n≥5, while χ = n-1 grows. Spectrum doesn't determine χ.
-2. **χ(G_7/Z_2) ≤ 6**: Tabu search found valid 6-coloring in 1454 iterations (V=272, E=2123).
-3. **ω = χ pattern breaks at n=7**: Clique number ω(G_7/Z_2) = 4 (exact via Bron-Kerbosch), but χ ≤ 6. Graph not perfect for n≥7.
-4. **No simple coloring formula**: H mod χ, c3 mod χ, distance mod χ, root-weight mod χ all fail. Wsum not well-defined on iso classes for n≥5.
-5. **H parity constant on edges**: All edges connect vertices with same H parity (trivially true since all H values odd).
-6. **Reflection file**: `07-reflections/chromatic-number-synthesis.md` with 5 approaches to proof.
-
-**New hypotheses:** HYP-1757 (χ=n-1), HYP-1758 (perfectness refuted), HYP-1759 (Hoffman refuted), HYP-1760 (band-limitedness).
-
-**Scripts created:**
-- hoffman_chromatic_s314.py — Hoffman bound test
-- chromatic_n7_deep_s314.py — Bron-Kerbosch + backtracking
-- chromatic_rootsystem_s314.py — Root system coloring attempts
-- tabu_n7_k6_s314.py — Successful tabu search coloring
-
-**Open:** χ > 5 at n=7 (tabu search for k=5 running, expected to fail). Prove χ = n-1 algebraically.
-
-## opus-2026-03-24-S309 (doc update) — 2026-03-24
-
-**Account:** opus
-**Continuation of:** opus-2026-03-24-S291 through S312 (multi-agent)
-**Summary of work:** Comprehensive doc update integrating ALL S291-S312 findings from multiple opus sessions and kind-pasteur. Updated OPEN-QUESTIONS.md with OPEN-Q-040 (the Krawtchouk framework). Read and integrated: Euler product (S291), waggly lines (S292-S304), band-limitedness proof (S310-S311), Krawtchouk 3-axis (S307), twist=complement parity (S309), Paley→dual codes (S306), gap=2/n explained (S312), practical tools (S308-S309), tournament_codec (kind-pasteur-S20fx).
-
-**Key findings from OTHER agents integrated:**
-- S307: B₁≈-H, B₂≈-c₃, B₃=twist — 3-axis Krawtchouk coordinate system
-- S309: SC has B_odd=0 EXACTLY (Krawtchouk parity under complement)
-- S310: Band-limitedness CONFIRMED exactly via Walsh-Hadamard transform
-- S311: WHY H is band-limited: polynomial degree + complement cancellation
-- S312: gap=2/n from K₁ spacing 2/m compressed by S_n quotient
-- kind-pasteur-S20fx: tournament_codec.py (multi-level compression) and tournament_fingerprint.py
-
-## opus-2026-03-24-S305 — 2026-03-24
-
-**Account:** opus
-**Continuation of:** opus-2026-03-24-S291 through S304
-**Summary of work:** MASSIVE SESSION: Tournament Counting Theorem (Euler product), waggly lines (all tiling connections), the 1D-2D boundary, coding theory lens, association schemes.
-
-**Key results:**
-1. Tournament Counting Theorem (S291): Euler product factorization of V_n with poles at x=4,16,64,...
-2. Waggly = ALL tiling connections (S296-297), decomposed by Hamming distance
-3. Waggly Completeness Theorem (S301): k* = diam(G_n), conjecture diam = n-2
-4. Waggly alphabet (S302-303): range-3 harmonic most neutral, zero-SL combos vanish at n=6
-5. Universal law (S304): SL rate ~ range profile + all-same-range indicator + Krawtchouk
-6. Almost-1D (S305): fractal dim = 2-log2/logn, K₁ correlates with H at -0.94
-**Terminology:** MISTAKE-033 corrected. CLAUDE.md updated with waggly definitions.
-**Unresolved:** Prove diam = n-2. Compute K₁-H correlation at n=7. Tournament Hilbert curve.
-```
-## [INSTANCE-ID] — [DATE]
-```
-
-## opus-2026-03-24-S291 — 2026-03-24
-
-**Account:** opus
-**Continuation of:** opus-2026-03-24-S289/S290
-**Summary of work:** THE TOURNAMENT COUNTING THEOREM: complete Euler product factorization of V_n. Proved V_n×n!/2^m = 1 + Σ (1/k)×n↓k×2^{(k²-1)/2-(k-1)n} + cross terms. Found generating function with poles at 4, 16, 64, 256, ... Discovered Mersenne prime connection. Connected correction to meta-graph automorphism strata.
-
-## kind-pasteur-2026-03-24-S20fl — 2026-03-24
-
-**Account:** kind-pasteur
-**Continuation of:** kind-pasteur-S20el through S20fk (long overnight session)
-**Summary:** Massive session covering D(n) formula, wiggly classes, complement-flip overlap, SC filtering theorem, grid-symmetry pairing proof, and defect spectrum analysis.
-
-**Key results:**
-1. **D(n) defect-1 formula PROVED**: R(ct) = k*2^{a(ct)} for single-even-cycle types
-2. **SL_mine corrected**: T-2E != SL_mine (multi-edges), D >= SL_mine with small correction
-3. **Wiggly classes A,B,C,...**: NOT all equivalent; skip=1 gap grows exponentially (14x at n=7)
-4. **Grid-symmetry pairing PROVED for all n**: sigma_grid preserves edge sets (theoretical proof)
-5. **SC filtering THEOREM**: At odd n, defect=M-1 only for SC tournaments (explains 0,0,5,0,>0 overlap)
-6. **Complement-flip overlap returns at n=8**: Even-n phenomenon, 28 cases found
-7. **Defect spectrum**: Bell-shaped, asymmetric, EXACT even/odd equipartition (50/50)
-8. **Three identities verified**: sum H/|Aut| = 2^{C(n-1,2)} EXACT
-9. **Blue fraction corrected**: NOT 2^{-(n-2)}, correct formula derived
-10. **Devil's advocate audit**: Fixed complement bug (MISTAKE-031), grid-sym formula (MISTAKE-032)
-
-**New contributions:** HYP-1744..1748, MISTAKE-031/032, 15+ computation scripts, grid-symmetry pairing proof
-**Unresolved:** WHY odd-n forces SC-only high defect (algebraic proof needed), E(G_n) exact formula
-
-**Key results:**
-1. **Exact single-cycle formula**: R_k(n) = (1/k)×n↓k×2^{Δ_k} where Δ_k = (k-1)(k+1-2n)/2
-2. **3-cycle dominance**: R_3/R → 1 (99.98% by n=15)
-3. **GF closed form**: G(x) ≈ x³/(2(1-x/4)^4) with poles at 2^{k-1}
-4. **D_k(0) exact**: (k-1)!×2^{-(k-1)²/2}/(1-2^{1-k})^{k+1}. D_3(0) = 128/81
-5. **Meta-graph connection**: R(n) = Σ_C fiber(C)×(|Aut(C)|-1)/2^m
-6. **Mersenne primes**: base factors 2^{k-2}-1 = 7, 31, 127 for k=5,7,9
-7. **Cross-orbit excess**: always 6 for (3,3) partition at all n
-
-**New contributions:** HYP-1749 through HYP-1756, reflection euler-product-and-metagraph.md
-**New files:** euler_product_tournament_s291.py, tournament_dirichlet_s291b.py, euler_metagraph_s291c.py, tournament_zeta_special_s291d.py
-**Unresolved threads:** Exact closed form for cross-orbit corrections; functional equation of tournament zeta; connection to L-functions
 ```
 ## [INSTANCE-ID] — [DATE]
 **Account:** [A/B/C/...]
@@ -125,55 +12,6 @@ Entry format:
 **New contributions:** [theorem IDs, court cases, tangents added]
 **Unresolved threads:** [things left open for next session]
 ```
-
-## opus-2026-03-23-S273 — 2026-03-23
-
-**Account:** opus
-**Continuation of:** opus-2026-03-23-S272
-**Summary of work:** WIGGLY CLASS terminology established. A wiggly line = clicking one tile = flipping one arc. Wiggly class = which tile. Confirmed: every wiggly class sees every meta-graph edge (local=global). Deprecated "translucent" — use blueself/blackself for neutral arcs.
-
-## opus-2026-03-23-S272 — 2026-03-23
-
-**Account:** opus
-**Continuation of:** opus-2026-03-23-S271
-**Summary of work:** WIGGLY LINES: fix boundary+apex, vary overlap. Each tiling connects to 2^{C(n-2,2)}-1 wiggly neighbors (complete graph fibers). Wiggly recovers 100% of meta-graph edges AND adds new ones.
-
-**Key numbers at n=5:** 128 fibers × K_8 each. Wiggly meta-edges = 35 > 21 actual. 14 new wiggly-only edges. 19% self-loop rate.
-**Key numbers at n=6:** 512 fibers × K_{64} each. Wiggly = 523 > 143 actual. 380 new edges. 7.1% self-loops.
-
-**The three connection types clarified:**
-1. OPAQUE = 1-arc flip, class changes (meta-graph edges)
-2. BLUESELF/BLACKSELF = 1-arc flip, class preserved (neutral arcs, permutohedron)
-3. WIGGLY = same boundary+apex, different overlap (recursive fiber, complete graph)
-
-## opus-2026-03-23-S271 — 2026-03-23
-
-**Account:** opus
-**Continuation of:** opus-2026-03-23-S270
-**Summary of work:** MAJOR: Transitive class translucent graph = PERMUTOHEDRON. All translucent components within a class are isomorphic. Connected to Pilaud-Santos quotientope theory.
-
-**Discovery:** The translucent graph at the transitive node (H=1) is the (n-1)-dimensional permutohedron. Mechanism: transitive tournaments ↔ permutations, neutral flips ↔ adjacent transpositions.
-
-**Component structure at n=5:**
-- H=1: 1 permutohedron (120 nodes, 240 edges)
-- H=3: 40 isolated pairs (forest)
-- H=5: 10 copies of (24,18) graph
-- H=9: 20 copies of (6,3) graph
-- H=11: 30 copies of (4,2) graph
-- H≥13: isolated (0 translucent)
-
-## opus-2026-03-23-S270 — 2026-03-23
-
-**Account:** opus
-**Continuation of:** opus-2026-03-23-S268
-**Summary of work:** Computed the TRANSLUCENT LINE structure — intra-class tiling connections. The m-cube partitions into translucent (same-class) and opaque (class-changing) edges. Only the transitive class is translucently connected.
-
-**Key findings:**
-1. Q_m = translucent ∪ opaque (disjoint edge partition)
-2. Translucent fraction = arc neutrality = 17.2% at n=5
-3. Only transitive (H=1) is translucently CONNECTED (diameter m)
-4. All other classes fragment into many isolated components
-5. Classes with |Aut|>1 often have ZERO neutral arcs
 
 ## kind-pasteur-2026-03-23-S20el — 2026-03-23
 
@@ -192,32 +30,6 @@ Entry format:
 
 **New contributions:** HYP-1744 through HYP-1748; 6 computation scripts; updated OPEN-Q-039.
 **Unresolved:** Exact SL_mine for n>=8 (needs correction from |Aut|>1 classes); exact multi-edge formula; gap_orbits formula.
-
-## opus-2026-03-23-S268 — 2026-03-23
-
-**Account:** opus
-**Continuation of:** opus-2026-03-23-S267
-**Summary of work:** Random walk + coding theory duality on G_n/Z_2. Confirmed Ornstein-Uhlenbeck process on H. Channel transition analysis. Mean reversion rate = -2/n.
-
-**Key results:**
-1. Mean reversion E[ΔH] = 8.35 - 0.38H at n=6 (vs -2/n = -0.33)
-2. Fixed point H* = 22.0 ≈ E[H] = 22.5 (OU equilibrium)
-3. Channel: after t=11 steps, Pr[stay] ≈ 1/V (fully mixed)
-4. Code rate R = 0.34 at n=5,6, -> 1/2 asymptotically
-5. Hitting time transitive->regular = 115 steps at n=6
-
-## opus-2026-03-23-S267 — 2026-03-23
-
-**Account:** opus
-**Continuation of:** opus-2026-03-23-S266
-**Summary of work:** Computed full spectrum + eigenvectors of G_n/Z_2 adjacency matrix at n=5,6. Major discovery: H is 79% the 2nd eigenvector. Markov gap = 2/n nearly exact.
-
-**Key findings:**
-1. H is 72-79% concentrated on the 2nd adjacency eigenvector
-2. Markov spectral gap = 0.331 vs 2/6 = 0.333 (off by 0.6%!)
-3. 1st eigenvector = degree (trivial), 2nd = H/c3 (the physics)
-4. Fiedler vector partially separates SC from NS
-5. No eigenvalue degeneracy at n=5,6
 
 ## opus-2026-03-23-S266 — 2026-03-23
 

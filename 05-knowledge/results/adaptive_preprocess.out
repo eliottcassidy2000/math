@@ -1,0 +1,15 @@
+Adaptive Preprocess v1.0.0
+============================================================
+    gradient_h 64x64: raw_zlib=104B, adaptive=39B (row+left), gain=2.667x
+    gradient_h 128x128: raw_zlib=231B, adaptive=80B (row+left), gain=2.888x
+    gradient_v 64x64: raw_zlib=124B, adaptive=30B (row+dual8), gain=4.133x
+    gradient_v 128x128: raw_zlib=257B, adaptive=40B (row+dual8), gain=6.425x
+       natural 64x64: raw_zlib=3455B, adaptive=2664B (row+dual8), gain=1.297x
+       natural 128x128: raw_zlib=13559B, adaptive=10390B (row+dual8), gain=1.305x
+        blocks 64x64: raw_zlib=49B, adaptive=45B (zorder+left), gain=1.089x
+        blocks 128x128: raw_zlib=81B, adaptive=81B (row+none), gain=1.000x
+
+  Speed benchmark:
+    64x64: 33ms (0.1 Mpix/s)
+    128x128: 141ms (0.1 Mpix/s)
+    256x256: 812ms (0.1 Mpix/s)
