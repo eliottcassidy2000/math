@@ -1,0 +1,37 @@
+
+========================================================================
+  HILBERT IMAGE CODEC: BENCHMARK
+========================================================================
+
+  Image                Raw      HIC      zlib     ratio    vs_z   method         
+  ---------------------------------------------------------------------------
+  circle_128           16384    1721   ✓ 4563     9.5      2.65   raster+delta   
+  circle_256           65536    5378   ✓ 11773    12.2     2.19   raster+delta   
+  circle_64            4096     761    ✓ 1898     5.4      2.49   raster+delta   
+  gradient_128         16384    88     ✓ 528      186.2    6.00   raster+delta   
+  gradient_256         65536    322    ✓ 1057     203.5    3.28   raster+delta   
+  gradient_64          4096     156    ✓ 275      26.3     1.76   hilbert+delta  
+  photo_128            16384    13312  ✓ 14694    1.2      1.10   hilbert+avg    
+  photo_64             4096     3369   ✓ 3723     1.2      1.11   hilbert+avg    
+  smooth_128           16384    6115   ✓ 8488     2.7      1.39   raster+delta   
+  smooth_256           65536    20802  ✓ 25781    3.2      1.24   raster+delta   
+  smooth_64            4096     1897   ✓ 2655     2.2      1.40   raster+delta   
+
+  WINS vs zlib: 11/11
+  All lossless: ✓
+
+========================================================================
+  VIDEO DELTA WITH HILBERT
+========================================================================
+
+  VIDEO: 128×128, 5 frames with 3%% pixel change per frame
+
+  Frame    Raw      HIC_delta  zlib_delta vs_zlib 
+  --------------------------------------------------
+  frame0   16384    6115       8488       1.39    x
+  frame1   16384    10889      13986      1.28    x
+  frame2   16384    11203      14137      1.26    x
+  frame3   16384    11439      14204      1.24    x
+  frame4   16384    11656      14259      1.22    x
+
+Done. opus-2026-03-24-S336
