@@ -1,0 +1,16 @@
+tpress v2.0.0 — Tournament-Powered Compressor
+============================================================
+
+             Data     Raw      v2   zlib9  v2/zlib       Method
+       gradient_h   4096B     40B    104B    2.60x        delta
+       gradient_v   4096B     39B    124B    3.18x        delta
+       gradient_d   4096B     40B    243B    6.08x        delta
+          natural   4096B   2771B   3455B    1.25x        delta
+           blocks   4096B     42B     49B    1.17x   gray_delta
+          sine_4K   4096B    257B    711B    2.77x        delta
+           random   4096B   4107B   4107B    1.00x         zlib
+           smooth   4096B    446B    669B    1.50x        delta
+
+  Speed:
+    4K: 18ms
+    64x64: 46ms
