@@ -1,0 +1,39 @@
+========================================================================
+  PETERSEN GRAPH AND THE n=5 METAGRAPH
+  opus-2026-03-24-S286
+========================================================================
+
+  Petersen: 15 edges
+  n=5 merged metagraph: 21 edges
+  Difference: 21 - 15 = 6
+
+  MERGED METAGRAPH NODES:
+    Node 0: H=1, SC=SC, degree=4
+    Node 1: H=3, SC=NS, degree=3
+    Node 2: H=5, SC=NS, degree=7
+    Node 3: H=11, SC=SC, degree=5
+    Node 4: H=13, SC=SC, degree=5
+    Node 5: H=9, SC=SC, degree=5
+    Node 6: H=9, SC=SC, degree=5
+    Node 7: H=15, SC=SC, degree=2
+    Node 8: H=3, SC=SC, degree=3
+    Node 9: H=15, SC=SC, degree=3
+
+  Degree sequence: [2, 3, 3, 3, 4, 5, 5, 5, 5, 7]
+  Petersen degree sequence: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+  CHECKING IF PETERSEN IS A SUBGRAPH...
+  Nodes with degree < 3: [7] (can't be Petersen vertices)
+  Nodes with degree >= 3: [0, 1, 2, 3, 4, 5, 6, 8, 9] (9 nodes)
+  Only 9 nodes have degree >= 3, need 10.
+  Petersen subgraph is IMPOSSIBLE (not enough high-degree nodes).
+
+  CHECKING FOR 3-REGULAR SUBGRAPHS ON 10 VERTICES...
+  Current degrees: [4, 3, 7, 5, 5, 5, 5, 2, 3, 3]
+  Excess over 3: [1, 0, 4, 2, 2, 2, 2, -1, 0, 0]
+  Total excess: 12 (need 6 = 6.0 edges removed)
+  ✓ Total excess = 12 = 2 × 6 → exactly 6 edges must be removed
+
+  Total 3-regular subgraphs found: 0
+
+DONE.
