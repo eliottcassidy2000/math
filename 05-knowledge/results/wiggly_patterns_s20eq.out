@@ -1,0 +1,221 @@
+================================================================================
+  WIGGLY PATTERN HUNTING
+  kind-pasteur-2026-03-23-S20eq
+================================================================================
+
+######################################################################
+  n = 4, V_merged = 3, E = 3
+######################################################################
+
+  PATTERN 1: Wiggly fraction per edge
+    Expected (uniform): 0.166667 = 1/6
+    Actual: min=0.166667, max=0.166667
+    All equal? True
+
+  PATTERN 2: Wiggly lines per edge, sorted by edge properties
+                    Edge   Type   Wiggly   Opaque    Total     dH    H_sum
+                  (0, 4)  SC-SC        4       20       24      0       48
+                  (0, 2)  SC-NS        8       40       48      0       48
+                  (2, 4)  SC-NS        8       40       48      0       48
+    Correlation(total_lines, tilings_product): -1.0000
+    total_lines / (tilings1 * tilings2): min=0.0417, max=0.1250
+    Constant? False
+
+  PATTERN 3: Self-loop structure per class
+       Class  SC      H  Aut  Tilings     W_SL     O_SL   W_SL/T   O_SL/T  #Fibers   AvgFib
+           0   Y     24    1       24       12       60      0.5      2.5       18     1.33
+           2   N     24    3       16        0        0      0.0      0.0       16     1.00
+           4   Y     24    1       24       12       60      0.5      2.5       18     1.33
+
+    W_SL/tilings range: 0.00 to 0.50
+    O_SL/tilings range: 0.00 to 2.50
+
+  PATTERN 4: Fiber profile
+           2: in   16/32 fibers ( 50.0%), avg 1.00 tilings/fiber, H=24, tilings=16
+           0: in   18/32 fibers ( 56.2%), avg 1.33 tilings/fiber, H=24, tilings=24
+           4: in   18/32 fibers ( 56.2%), avg 1.33 tilings/fiber, H=24, tilings=24
+
+  Time: 0.0s
+
+######################################################################
+  n = 5, V_merged = 10, E = 21
+######################################################################
+
+  PATTERN 1: Wiggly fraction per edge
+    Expected (uniform): 0.300000 = 3/10
+    Actual: min=0.300000, max=0.300000
+    All equal? True
+
+  PATTERN 2: Wiggly lines per edge, sorted by edge properties
+                    Edge   Type   Wiggly   Opaque    Total     dH    H_sum
+                 (5, 40)  SC-SC       12       28       40      0      240
+                  (0, 5)  SC-SC       36       84      120      0      240
+                  (0, 8)  SC-SC       36       84      120      0      240
+                 (8, 40)  SC-SC       36       84      120      0      240
+                (10, 12)  SC-SC       36       84      120      0      240
+                (12, 76)  SC-SC       36       84      120      0      240
+                (41, 76)  SC-SC       36       84      120      0      240
+                  (0, 2)  SC-NS       72      168      240      0      240
+                  (0, 4)  SC-NS       72      168      240      0      240
+                  (2, 4)  NS-NS       72      168      240      0      240
+                 (2, 10)  SC-NS       72      168      240      0      240
+                  (4, 5)  SC-NS       72      168      240      0      240
+                  (4, 8)  SC-NS       72      168      240      0      240
+                 (4, 10)  SC-NS       72      168      240      0      240
+                 (4, 12)  SC-NS       72      168      240      0      240
+                 (4, 41)  SC-NS       72      168      240      0      240
+                 (8, 10)  SC-SC       72      168      240      0      240
+                 (8, 12)  SC-SC       72      168      240      0      240
+                (12, 41)  SC-SC       72      168      240      0      240
+                (40, 41)  SC-SC       72      168      240      0      240
+    ... (21 total edges)
+    Correlation(total_lines, tilings_product): 0.5303
+    total_lines / (tilings1 * tilings2): min=0.0083, max=0.0500
+    Constant? False
+
+  PATTERN 3: Self-loop structure per class
+       Class  SC      H  Aut  Tilings     W_SL     O_SL   W_SL/T   O_SL/T  #Fibers   AvgFib
+           0   Y    120    1      120      144      336      1.2      2.8       54     2.22
+           2   N    120    3       80       24       56      0.3      0.7       40     2.00
+           4   N    120    1      240      216      504      0.9      2.1       96     2.50
+           5   Y    120    3       40        0        0      0.0      0.0       26     1.54
+           8   Y    120    1      120       72      168      0.6      1.4       68     1.76
+          10   Y    120    1      120        0        0      0.0      0.0       66     1.82
+          12   Y    120    1      120       72      168      0.6      1.4       72     1.67
+          40   Y    120    3       40        0        0      0.0      0.0       38     1.05
+          41   Y    120    1      120        0        0      0.0      0.0       66     1.82
+          76   Y    120    5       24        0        0      0.0      0.0       18     1.33
+
+    W_SL/tilings range: 0.00 to 1.20
+    O_SL/tilings range: 0.00 to 2.80
+
+  PATTERN 4: Fiber profile
+          76: in   18/128 fibers ( 14.1%), avg 1.33 tilings/fiber, H=120, tilings=24
+           5: in   26/128 fibers ( 20.3%), avg 1.54 tilings/fiber, H=120, tilings=40
+          40: in   38/128 fibers ( 29.7%), avg 1.05 tilings/fiber, H=120, tilings=40
+           2: in   40/128 fibers ( 31.2%), avg 2.00 tilings/fiber, H=120, tilings=80
+           0: in   54/128 fibers ( 42.2%), avg 2.22 tilings/fiber, H=120, tilings=120
+          10: in   66/128 fibers ( 51.6%), avg 1.82 tilings/fiber, H=120, tilings=120
+          41: in   66/128 fibers ( 51.6%), avg 1.82 tilings/fiber, H=120, tilings=120
+           8: in   68/128 fibers ( 53.1%), avg 1.76 tilings/fiber, H=120, tilings=120
+          12: in   72/128 fibers ( 56.2%), avg 1.67 tilings/fiber, H=120, tilings=120
+           4: in   96/128 fibers ( 75.0%), avg 2.50 tilings/fiber, H=120, tilings=240
+
+  Time: 0.3s
+
+######################################################################
+  n = 6, V_merged = 34, E = 143
+######################################################################
+
+  PATTERN 1: Wiggly fraction per edge
+    Expected (uniform): 0.400000 = 6/15
+    Actual: min=0.400000, max=0.400000
+    All equal? True
+
+  PATTERN 2: Wiggly lines per edge, sorted by edge properties
+                    Edge   Type   Wiggly   Opaque    Total     dH    H_sum
+                 (2, 87)  SC-NS      192      288      480      0     1440
+                 (5, 72)  NS-NS      192      288      480      0     1440
+                 (5, 80)  NS-NS      192      288      480      0     1440
+                (72, 80)  NS-NS      192      288      480      0     1440
+                (72, 88)  NS-NS      192      288      480      0     1440
+                (80, 88)  NS-NS      192      288      480      0     1440
+                  (0, 9)  SC-SC      288      432      720      0     1440
+                 (0, 16)  SC-SC      288      432      720      0     1440
+                (9, 144)  SC-SC      288      432      720      0     1440
+               (16, 144)  SC-SC      288      432      720      0     1440
+                (83, 87)  SC-SC      288      432      720      0     1440
+              (145, 153)  SC-SC      288      432      720      0     1440
+              (145, 280)  SC-SC      288      432      720      0     1440
+              (153, 408)  SC-SC      288      432      720      0     1440
+             (154, 1332)  SC-SC      288      432      720      0     1440
+              (280, 408)  SC-SC      288      432      720      0     1440
+                  (0, 2)  SC-NS      576      864     1440      0     1440
+                  (0, 4)  SC-NS      576      864     1440      0     1440
+                  (0, 5)  SC-NS      576      864     1440      0     1440
+                  (0, 8)  SC-NS      576      864     1440      0     1440
+    ... (143 total edges)
+    Correlation(total_lines, tilings_product): 0.4265
+    total_lines / (tilings1 * tilings2): min=0.0007, max=0.0125
+    Constant? False
+
+  PATTERN 3: Self-loop structure per class
+       Class  SC      H  Aut  Tilings     W_SL     O_SL   W_SL/T   O_SL/T  #Fibers   AvgFib
+           0   Y    720    1      720     1440     2160      2.0      3.0      162     4.44
+           2   N    720    3      480      384      576      0.8      1.2      140     3.43
+           4   N    720    1     1440     2304     3456      1.6      2.4      268     5.37
+           5   N    720    3      480      192      288      0.4      0.6      158     3.04
+           8   N    720    1     1440     1152     1728      0.8      1.2      356     4.04
+           9   Y    720    1      720      864     1296      1.2      1.8      174     4.14
+          10   N    720    1     1440        0        0      0.0      0.0      360     4.00
+          12   N    720    1     1440     1152     1728      0.8      1.2      372     3.87
+          16   Y    720    1      720      864     1296      1.2      1.8      222     3.24
+          18   N    720    1     1440     1152     1728      0.8      1.2      296     4.86
+          20   N    720    1     1440      576      864      0.4      0.6      344     4.19
+          24   N    720    1     1440     2304     3456      1.6      2.4      384     3.75
+          72   N    720    3      480        0        0      0.0      0.0      216     2.22
+          73   N    720    1     1440        0        0      0.0      0.0      344     4.19
+          80   N    720    3      480        0        0      0.0      0.0      218     2.20
+          81   N    720    1     1440        0        0      0.0      0.0      320     4.50
+          83   Y    720    1      720        0        0      0.0      0.0      232     3.10
+          87   Y    720    9       80        0        0      0.0      0.0       40     2.00
+          88   N    720    3      480      192      288      0.4      0.6      232     2.07
+          89   N    720    1     1440     1152     1728      0.8      1.2      384     3.75
+         140   N    720    5      288        0        0      0.0      0.0      120     2.40
+         144   Y    720    1      720      864     1296      1.2      1.8      230     3.13
+         145   Y    720    1      720      288      432      0.4      0.6      256     2.81
+         146   N    720    1     1440        0        0      0.0      0.0      376     3.83
+         148   N    720    1     1440        0        0      0.0      0.0      328     4.39
+         152   N    720    1     1440      576      864      0.4      0.6      352     4.09
+         153   Y    720    1      720      288      432      0.4      0.6      288     2.50
+         154   Y    720    1      720        0        0      0.0      0.0      312     2.31
+         156   N    720    1     1440        0        0      0.0      0.0      308     4.68
+         177   N    720    1     1440     1152     1728      0.8      1.2      324     4.44
+         280   Y    720    1      720      864     1296      1.2      1.8      200     3.60
+         344   N    720    1     1440     2304     3456      1.6      2.4      188     7.66
+         408   Y    720    3      240      288      432      1.2      1.8       96     2.50
+        1332   Y    720    3      240        0        0      0.0      0.0      120     2.00
+
+    W_SL/tilings range: 0.00 to 2.00
+    O_SL/tilings range: 0.00 to 3.00
+
+  PATTERN 4: Fiber profile
+          87: in   40/512 fibers (  7.8%), avg 2.00 tilings/fiber, H=720, tilings=80
+         408: in   96/512 fibers ( 18.8%), avg 2.50 tilings/fiber, H=720, tilings=240
+         140: in  120/512 fibers ( 23.4%), avg 2.40 tilings/fiber, H=720, tilings=288
+        1332: in  120/512 fibers ( 23.4%), avg 2.00 tilings/fiber, H=720, tilings=240
+           2: in  140/512 fibers ( 27.3%), avg 3.43 tilings/fiber, H=720, tilings=480
+           5: in  158/512 fibers ( 30.9%), avg 3.04 tilings/fiber, H=720, tilings=480
+           0: in  162/512 fibers ( 31.6%), avg 4.44 tilings/fiber, H=720, tilings=720
+           9: in  174/512 fibers ( 34.0%), avg 4.14 tilings/fiber, H=720, tilings=720
+         344: in  188/512 fibers ( 36.7%), avg 7.66 tilings/fiber, H=720, tilings=1440
+         280: in  200/512 fibers ( 39.1%), avg 3.60 tilings/fiber, H=720, tilings=720
+          72: in  216/512 fibers ( 42.2%), avg 2.22 tilings/fiber, H=720, tilings=480
+          80: in  218/512 fibers ( 42.6%), avg 2.20 tilings/fiber, H=720, tilings=480
+          16: in  222/512 fibers ( 43.4%), avg 3.24 tilings/fiber, H=720, tilings=720
+         144: in  230/512 fibers ( 44.9%), avg 3.13 tilings/fiber, H=720, tilings=720
+          83: in  232/512 fibers ( 45.3%), avg 3.10 tilings/fiber, H=720, tilings=720
+          88: in  232/512 fibers ( 45.3%), avg 2.07 tilings/fiber, H=720, tilings=480
+         145: in  256/512 fibers ( 50.0%), avg 2.81 tilings/fiber, H=720, tilings=720
+           4: in  268/512 fibers ( 52.3%), avg 5.37 tilings/fiber, H=720, tilings=1440
+         153: in  288/512 fibers ( 56.2%), avg 2.50 tilings/fiber, H=720, tilings=720
+          18: in  296/512 fibers ( 57.8%), avg 4.86 tilings/fiber, H=720, tilings=1440
+         156: in  308/512 fibers ( 60.2%), avg 4.68 tilings/fiber, H=720, tilings=1440
+         154: in  312/512 fibers ( 60.9%), avg 2.31 tilings/fiber, H=720, tilings=720
+          81: in  320/512 fibers ( 62.5%), avg 4.50 tilings/fiber, H=720, tilings=1440
+         177: in  324/512 fibers ( 63.3%), avg 4.44 tilings/fiber, H=720, tilings=1440
+         148: in  328/512 fibers ( 64.1%), avg 4.39 tilings/fiber, H=720, tilings=1440
+          20: in  344/512 fibers ( 67.2%), avg 4.19 tilings/fiber, H=720, tilings=1440
+          73: in  344/512 fibers ( 67.2%), avg 4.19 tilings/fiber, H=720, tilings=1440
+         152: in  352/512 fibers ( 68.8%), avg 4.09 tilings/fiber, H=720, tilings=1440
+           8: in  356/512 fibers ( 69.5%), avg 4.04 tilings/fiber, H=720, tilings=1440
+          10: in  360/512 fibers ( 70.3%), avg 4.00 tilings/fiber, H=720, tilings=1440
+          12: in  372/512 fibers ( 72.7%), avg 3.87 tilings/fiber, H=720, tilings=1440
+         146: in  376/512 fibers ( 73.4%), avg 3.83 tilings/fiber, H=720, tilings=1440
+          24: in  384/512 fibers ( 75.0%), avg 3.75 tilings/fiber, H=720, tilings=1440
+          89: in  384/512 fibers ( 75.0%), avg 3.75 tilings/fiber, H=720, tilings=1440
+
+  Time: 85.0s
+
+DONE.
+================================================================================
