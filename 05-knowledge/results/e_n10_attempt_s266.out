@@ -1,0 +1,23 @@
+======================================================================
+  EDGE-CENTRIC E(G_n) VIA NAUTY + HASHING
+  opus-2026-03-23-S266
+======================================================================
+  n=3: E=1, SL=1, ✓
+  n=4: E=3, SL=1, ✗ (expected 5)
+  n=5: E=7, SL=2, ✗ (expected 30)
+  n=6: E=41, SL=4, ✗ (expected 290)
+  n=7: E=349, SL=19, ✗ (expected 4086)
+  n=8: E=5861, SL=110, ✗ (expected 91161)
+
+  Attempting n=9 (191536 classes)...
+
+  Computing E(G_9)...
+  191536 class reps in 0.3s
+    Hashed 100000/191536...
+  Hash map: 91518 groups, max size 144 (16.5s)
+    Processed 100000/191536, edges so far: 85114...
+  Result: E(G_9) = 173155, self_loops = 1020 (14.3s)
+  Total time: 31.0s
+  n=9: E=173155, SL=1020, expected=3380751, time=31.3s
+
+DONE.
