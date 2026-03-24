@@ -1,0 +1,213 @@
+
+========================================================================
+  THE 2-FOLD PAIRING: WHAT CREATES IT? (n=5)
+========================================================================
+
+  For each class, find what PAIRS tilings with the same class-count profile.
+
+  mid=2 (H=5, fiber=10):
+    PAIR: bits=000010 vs 010000 (hamming=2, complement=False)
+    PAIR: bits=000011 vs 110000 (hamming=4, complement=False)
+    PAIR: bits=000101 vs 100100 (hamming=2, complement=False)
+    PAIR: bits=000110 vs 010100 (hamming=2, complement=False)
+    PAIR: bits=000111 vs 110100 (hamming=4, complement=False)
+  mid=4 (H=9, fiber=9):
+    PAIR: bits=001011 vs 111000 (hamming=4, complement=False)
+      relabeling σ=(3, 4, 0, 1, 2) maps base path [4,3,2,1,0] → [2, 1, 0, 4, 3] (valid HP: True)
+      σ cycles: [(0, 3, 1, 4, 2)]
+    PAIR: bits=010101 vs 100110 (hamming=4, complement=False)
+      relabeling σ=(0, 2, 3, 1, 4) maps base path [4,3,2,1,0] → [4, 1, 3, 2, 0] (valid HP: False)
+      σ cycles: [(1, 2, 3)]
+    PAIR: bits=010111 vs 110110 (hamming=2, complement=False)
+      relabeling σ=(4, 2, 3, 0, 1) maps base path [4,3,2,1,0] → [1, 0, 3, 2, 4] (valid HP: False)
+      σ cycles: [(0, 4, 1, 2, 3)]
+    PAIR: bits=011111 vs 111110 (hamming=2, complement=False)
+      relabeling σ=(1, 2, 3, 4, 0) maps base path [4,3,2,1,0] → [0, 4, 3, 2, 1] (valid HP: True)
+      σ cycles: [(0, 1, 2, 3, 4)]
+  mid=5 (H=9, fiber=9):
+    PAIR: bits=001001 vs 101000 (hamming=2, complement=False)
+      relabeling σ=(4, 0, 1, 2, 3) maps base path [4,3,2,1,0] → [3, 2, 1, 0, 4] (valid HP: True)
+      σ cycles: [(0, 4, 3, 2, 1)]
+    PAIR: bits=001111 vs 111100 (hamming=4, complement=False)
+      relabeling σ=(2, 3, 4, 0, 1) maps base path [4,3,2,1,0] → [1, 0, 4, 3, 2] (valid HP: True)
+      σ cycles: [(0, 2, 4, 1, 3)]
+    PAIR: bits=010001 vs 100010 (hamming=4, complement=False)
+      relabeling σ=(1, 3, 0, 4, 2) maps base path [4,3,2,1,0] → [2, 4, 0, 3, 1] (valid HP: False)
+      σ cycles: [(0, 1, 3, 4, 2)]
+  mid=6 (H=11, fiber=11):
+    PAIR: bits=001010 vs 011000 (hamming=2, complement=False)
+      relabeling σ=(4, 0, 1, 2, 3) maps base path [4,3,2,1,0] → [3, 2, 1, 0, 4] (valid HP: True)
+      σ cycles: [(0, 4, 3, 2, 1)]
+    PAIR: bits=010011 vs 110010 (hamming=2, complement=False)
+      relabeling σ=(1, 3, 0, 4, 2) maps base path [4,3,2,1,0] → [2, 4, 0, 3, 1] (valid HP: False)
+      σ cycles: [(0, 1, 3, 4, 2)]
+    PAIR: bits=011011 vs 111010 (hamming=2, complement=False)
+      relabeling σ=(2, 3, 4, 0, 1) maps base path [4,3,2,1,0] → [1, 0, 4, 3, 2] (valid HP: True)
+      σ cycles: [(0, 2, 4, 1, 3)]
+    PAIR: bits=100111 vs 110101 (hamming=2, complement=False)
+      relabeling σ=(3, 4, 2, 0, 1) maps base path [4,3,2,1,0] → [1, 0, 2, 4, 3] (valid HP: True)
+      σ cycles: [(0, 3), (1, 4)]
+  mid=8 (H=13, fiber=13):
+    PAIR: bits=001101 vs 101100 (hamming=2, complement=False)
+      relabeling σ=(3, 4, 0, 1, 2) maps base path [4,3,2,1,0] → [2, 1, 0, 4, 3] (valid HP: True)
+      σ cycles: [(0, 3, 1, 4, 2)]
+    PAIR: bits=001110 vs 011100 (hamming=2, complement=False)
+      relabeling σ=(2, 3, 4, 0, 1) maps base path [4,3,2,1,0] → [1, 0, 4, 3, 2] (valid HP: True)
+      σ cycles: [(0, 2, 4, 1, 3)]
+    PAIR: bits=011001 vs 101010 (hamming=4, complement=False)
+      relabeling σ=(4, 0, 1, 2, 3) maps base path [4,3,2,1,0] → [3, 2, 1, 0, 4] (valid HP: True)
+      σ cycles: [(0, 4, 3, 2, 1)]
+    PAIR: bits=100011 vs 110001 (hamming=2, complement=False)
+      relabeling σ=(2, 0, 4, 1, 3) maps base path [4,3,2,1,0] → [3, 1, 4, 0, 2] (valid HP: False)
+      σ cycles: [(0, 2, 4, 3, 1)]
+    PAIR: bits=101111 vs 111101 (hamming=2, complement=False)
+      relabeling σ=(1, 2, 3, 4, 0) maps base path [4,3,2,1,0] → [0, 4, 3, 2, 1] (valid HP: True)
+      σ cycles: [(0, 1, 2, 3, 4)]
+  mid=7 (H=15, fiber=5):
+    PAIR: bits=011101 vs 101110 (hamming=4, complement=False)
+      relabeling σ=(0, 2, 3, 1, 4) maps base path [4,3,2,1,0] → [4, 1, 3, 2, 0] (valid HP: False)
+      σ cycles: [(1, 2, 3)]
+    PAIR: bits=101011 vs 111001 (hamming=2, complement=False)
+      relabeling σ=(3, 4, 0, 1, 2) maps base path [4,3,2,1,0] → [2, 1, 0, 4, 3] (valid HP: True)
+      σ cycles: [(0, 3, 1, 4, 2)]
+  mid=9 (H=15, fiber=3):
+
+========================================================================
+  THE REGULAR TOURNAMENT (mid=9, H=15, |Aut|=5)
+========================================================================
+
+  THE REGULAR TOURNAMENT (unique at n=5, scores=(2,2,2,2,2)):
+
+  Adjacency matrix:
+    [0, 0, 0, 1, 1]
+    [1, 0, 0, 0, 1]
+    [1, 1, 0, 0, 0]
+    [0, 1, 1, 0, 0]
+    [0, 0, 1, 1, 0]
+
+  15 Hamiltonian paths:
+  |Aut| = 5
+  Automorphisms:
+    (0, 1, 2, 3, 4) → cycles identity
+    (1, 2, 3, 4, 0) → cycles [(0, 1, 2, 3, 4)]
+    (2, 3, 4, 0, 1) → cycles [(0, 2, 4, 1, 3)]
+    (3, 4, 0, 1, 2) → cycles [(0, 3, 1, 4, 2)]
+    (4, 0, 1, 2, 3) → cycles [(0, 4, 3, 2, 1)]
+
+  HP orbits (each = one tiling):
+    Orbit 0 (size 5):
+      HP (0, 3, 2, 1, 4)
+      HP (1, 4, 3, 2, 0)
+      HP (2, 0, 4, 3, 1)
+    → tiling 110011, profile: {6: 3, 8: 3}, neutral=0
+    Orbit 1 (size 5):
+      HP (0, 3, 1, 4, 2)
+      HP (1, 4, 2, 0, 3)
+      HP (2, 0, 3, 1, 4)
+    → tiling 101101, profile: {8: 5, 6: 1}, neutral=0
+    Orbit 2 (size 5):
+      HP (0, 4, 3, 2, 1)
+      HP (1, 0, 4, 3, 2)
+      HP (2, 1, 0, 4, 3)
+    → tiling 011010, profile: {6: 5, 8: 1}, neutral=0
+
+========================================================================
+  THE PATTERN: COMPLEMENT PAIRING IN TILINGS
+========================================================================
+
+  For each pair: is one the tiling-complement of the other?
+
+  Complement pairs: 0
+  Non-complement pairs: 23 (of which 18 related by relabeling)
+  Total pairs: 23
+
+========================================================================
+  WHAT IS THE PAIRING? DETAILED EXAMINATION
+========================================================================
+
+
+  mid=2 (H=5, fiber=10):
+
+  mid=4 (H=9, fiber=9):
+    σ=(3, 4, 0, 1, 2), cycles=[(0, 3, 1, 4, 2)], maps BP=[4, 3, 2, 1, 0]→[2, 1, 0, 4, 3]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 4 / 6
+    σ=(0, 2, 3, 1, 4), cycles=[(1, 2, 3)], maps BP=[4, 3, 2, 1, 0]→[4, 1, 3, 2, 0]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 4 / 6
+    σ=(4, 2, 3, 0, 1), cycles=[(0, 4, 1, 2, 3)], maps BP=[4, 3, 2, 1, 0]→[1, 0, 3, 2, 4]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 2 / 6
+
+  mid=5 (H=9, fiber=9):
+    σ=(4, 0, 1, 2, 3), cycles=[(0, 4, 3, 2, 1)], maps BP=[4, 3, 2, 1, 0]→[3, 2, 1, 0, 4]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 2 / 6
+    σ=(2, 3, 4, 0, 1), cycles=[(0, 2, 4, 1, 3)], maps BP=[4, 3, 2, 1, 0]→[1, 0, 4, 3, 2]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 4 / 6
+    σ=(1, 3, 0, 4, 2), cycles=[(0, 1, 3, 4, 2)], maps BP=[4, 3, 2, 1, 0]→[2, 4, 0, 3, 1]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 4 / 6
+
+  mid=6 (H=11, fiber=11):
+    σ=(4, 0, 1, 2, 3), cycles=[(0, 4, 3, 2, 1)], maps BP=[4, 3, 2, 1, 0]→[3, 2, 1, 0, 4]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 2 / 6
+    σ=(1, 3, 0, 4, 2), cycles=[(0, 1, 3, 4, 2)], maps BP=[4, 3, 2, 1, 0]→[2, 4, 0, 3, 1]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 2 / 6
+    σ=(2, 3, 4, 0, 1), cycles=[(0, 2, 4, 1, 3)], maps BP=[4, 3, 2, 1, 0]→[1, 0, 4, 3, 2]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 2 / 6
+
+  mid=8 (H=13, fiber=13):
+    σ=(3, 4, 0, 1, 2), cycles=[(0, 3, 1, 4, 2)], maps BP=[4, 3, 2, 1, 0]→[2, 1, 0, 4, 3]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 2 / 6
+    σ=(2, 3, 4, 0, 1), cycles=[(0, 2, 4, 1, 3)], maps BP=[4, 3, 2, 1, 0]→[1, 0, 4, 3, 2]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 2 / 6
+    σ=(4, 0, 1, 2, 3), cycles=[(0, 4, 3, 2, 1)], maps BP=[4, 3, 2, 1, 0]→[3, 2, 1, 0, 4]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 4 / 6
+
+  mid=7 (H=15, fiber=5):
+    σ=(0, 2, 3, 1, 4), cycles=[(1, 2, 3)], maps BP=[4, 3, 2, 1, 0]→[4, 1, 3, 2, 0]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 4 / 6
+    σ=(1, 2, 3, 4, 0), cycles=[(0, 1, 2, 3, 4)], maps BP=[4, 3, 2, 1, 0]→[0, 4, 3, 2, 1]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 4 / 6
+    σ=(4, 2, 3, 0, 1), cycles=[(0, 4, 1, 2, 3)], maps BP=[4, 3, 2, 1, 0]→[1, 0, 3, 2, 4]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 4 / 6
+    σ=(3, 4, 0, 1, 2), cycles=[(0, 3, 1, 4, 2)], maps BP=[4, 3, 2, 1, 0]→[2, 1, 0, 4, 3]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 2 / 6
+    σ=(3, 4, 1, 2, 0), cycles=[(0, 3, 2, 1, 4)], maps BP=[4, 3, 2, 1, 0]→[0, 2, 1, 4, 3]
+      BP reversed: False
+      Involution: False
+      Tiling hamming distance: 2 / 6
+    σ=(3, 4, 2, 0, 1), cycles=[(0, 3), (1, 4)], maps BP=[4, 3, 2, 1, 0]→[1, 0, 2, 4, 3]
+      BP reversed: False
+      Involution: True
+      Tiling hamming distance: 2 / 6
+
+Done. opus-2026-03-24-S293
