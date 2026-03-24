@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S262 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S261 (context continuation)
+**Summary of work:** Deep dive into even graphs through the merged metagraph lens. Discovered the GF(2) parity obstruction: Edge(K_n) = Cut ⊕ Cycle only for ODD n (for even n, dim(Cut ∩ Cycle) = n-2). Derived the projection formula v_cycle = (I + L(K_n))v mod 2. Computed V_even(degree) = A002854 via Burnside, confirming it's NOT A000568. Clarified three meanings of "even graph": degree-even (A002854), Royle-even (A000568), edge-count-even. Showed H variance INVERTS from labeled to iso-class level: scores dominate labeled (97%), cycle structure dominates iso-class (73-85%). Verified Royle equinumerosity is NOT from Burnside order split.
+
+**New contributions:**
+- 07-reflections/even-graphs-through-the-metagraph.md — comprehensive reflection
+- 04-computation/even_graph_burnside_s260.py — Burnside for degree-even graphs
+- 04-computation/even_graph_odd_n_s260.py — line graph projection for odd n
+- 04-computation/royle_even_burnside_s260.py — verification of Royle formula
+- GF(2) parity obstruction theorem (NEW)
+
+**Unresolved threads:**
+- Explicit polynomial-time characterization of Royle-even graphs
+- Even graph analysis at n=9 (odd, so projection works)
+- The residual sequence for E(G_n) remains last unknown
+
 ## opus-2026-03-23-S261 — 2026-03-23
 
 **Account:** opus

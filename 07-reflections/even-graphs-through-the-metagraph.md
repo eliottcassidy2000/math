@@ -8,8 +8,9 @@
 
 There are three distinct notions of "even" for graphs, and confusing them leads to errors:
 
-### 1. Degree-Even (= Eulerian = Cycle Space)
-A graph where **every vertex has even degree**. These form the **cycle space** of K_n over GF(2), with dimension C(n-1,2). The number of iso classes is **A003049**: 2, 3, 7, 16, 54, 243, 2038, ...
+### 1. Degree-Even (= Eulerian = Cycle Space = Two-Graph)
+A graph where **every vertex has even degree**. These form the **cycle space** of K_n over GF(2), with dimension C(n-1,2). The number of iso classes is **A002854**: 2, 3, 7, 16, 54, 243, 2038, ...
+(Note: A003049 counts the CONNECTED version; A002854 counts all Euler graphs.)
 
 ### 2. Royle-Even (= Automorphism-Orientation Compatible)
 A graph where every orientation and every non-identity automorphism reverses an **even** number of arcs. The number of Royle-even iso classes equals **A000568** (tournament count): 2, 4, 12, 56, 456, 6880, ...
@@ -17,7 +18,15 @@ A graph where every orientation and every non-identity automorphism reverses an 
 ### 3. Edge-Count Even
 A graph with an even number of edges. Not useful for our purposes.
 
-**The Royle equinumerosity** is: #(Royle-even graphs on n vertices) = #(tournaments on n vertices). This is **NOT** about degree-even graphs.
+**The Royle equinumerosity** (arXiv:2204.01947, Devillers-Freedman-Glasby-Praeger-Royle 2022): #(Royle-even graphs on n vertices) = #(tournaments on n vertices) = A000568(n). This is **NOT** about degree-even graphs.
+
+**Key caution**: The Royle equinumerosity is NOT simply "split Burnside by permutation order." The Burnside split gives:
+- Σ_{|g| odd} 2^{c(g_E)} / n! = A000568 (tournaments)
+- Σ_{|g| even} 2^{c(g_E)} / n! = A000088 - A000568 (NOT equal to A000568 for n ≥ 4)
+
+The Royle-even partition is based on an **intrinsic graph property** (no automorphism reversing an odd number of oriented arcs), not on the Burnside split. That this partition yields A000568 is a deep combinatorial fact.
+
+The conjecture was originally made by Pontus von Bromssen, who computed even graphs on ≤ 10 vertices and noticed the match with A000568.
 
 ---
 
