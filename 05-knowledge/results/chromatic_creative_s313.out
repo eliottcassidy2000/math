@@ -1,0 +1,92 @@
+========================================================================
+  CREATIVE CHROMATIC NUMBER ANALYSIS
+  opus-2026-03-24-S313
+========================================================================
+
+########################################################################
+  n = 5
+########################################################################
+  V=10, E=21
+
+  EXACT CHROMATIC NUMBER (backtracking):
+    χ = 4
+    Conjectured n-1 = 4
+    Match? YES ✓
+
+    OPTIMAL COLORING STRUCTURE:
+      Color 0: 3 classes, H=[1, 11, 15], SC=3
+      Color 1: 4 classes, H=[3, 3, 9, 13], SC=3
+      Color 2: 2 classes, H=[5, 15], SC=1
+      Color 3: 1 classes, H=[9], SC=1
+
+    Color = H mod 4? 2/10 match
+    Color = c3 mod 4? 7/10 match
+    Distinct score types: 7
+    Color = dist_from_trans mod 4? 4/10 match
+    Color = (H+c3) mod 4? 1/10 match
+    Color = (H-c3) mod 4? 2/10 match
+
+    H mod 4 is valid coloring? False
+    dist mod 4 is valid coloring? False
+
+    Same-distance edges: 7/21 (33.3%)
+
+    Clique number ω ≥ 3
+
+########################################################################
+  n = 6
+########################################################################
+  V=34, E=143
+
+  EXACT CHROMATIC NUMBER (backtracking):
+    χ = 5
+    Conjectured n-1 = 5
+    Match? YES ✓
+
+    OPTIMAL COLORING STRUCTURE:
+      Color 0: 11 classes, H=[1, 9, 9, 15, 15, 23, 23, 29, 37, 43, 45], SC=5
+      Color 1: 10 classes, H=[3, 3, 9, 13, 17, 19, 31, 33, 37, 45], SC=2
+      Color 2: 5 classes, H=[11, 15, 27, 33, 33], SC=1
+      Color 3: 6 classes, H=[5, 5, 17, 29, 37, 41], SC=4
+      Color 4: 2 classes, H=[25, 29], SC=0
+
+    Color = H mod 5? 6/34 match
+    Color = c3 mod 5? 8/34 match
+    Distinct score types: 17
+    Color = dist_from_trans mod 5? 11/34 match
+    Color = (H+c3) mod 5? 4/34 match
+    Color = (H-c3) mod 5? 13/34 match
+
+    H mod 5 is valid coloring? False
+    dist mod 5 is valid coloring? False
+
+    Same-distance edges: 51/143 (35.7%)
+
+    Clique number ω ≥ 3
+
+========================================================================
+  THE CHROMATIC STRUCTURE
+========================================================================
+
+  THE OPTIMAL COLORING reveals:
+
+  At n=5 (χ=4): The 10 nodes split into 4 color classes.
+  At n=6: χ = ? (compute above).
+
+  The coloring is NOT simply H mod χ or dist mod χ.
+  Same-distance edges exist (nodes at the same BFS level are connected).
+  These prevent distance-based coloring.
+
+  THE DEEPER STRUCTURE:
+  χ = n-1 would mean: tournament iso classes can be partitioned into
+  n-1 independent sets (no edges within). This is a statement about
+  the structure of SINGLE-ARC-FLIP connections.
+
+  If two classes have the same color, they cannot be connected by ANY
+  single arc flip. This means: no arc reversal can transform one into
+  the other. They are "structurally incompatible" under single-arc changes.
+
+  The n-1 colors correspond to n-1 "structural families" of tournaments
+  that are mutually non-adjacent in the metagraph.
+
+DONE.
