@@ -1,0 +1,151 @@
+================================================================================
+  UNIFIED BLUE/BLACK + WIGGLY WEIGHT ANALYSIS
+  kind-pasteur-2026-03-24-S20et
+================================================================================
+
+######################################################################
+  n = 4, V_merged = 3, E = 3, tiles = 3
+######################################################################
+
+  NODE BLUE FRACTION (expected = 2^{-2} = 0.250000):
+    Actual: min=0.000000, max=1.000000
+    All equal to expected? False
+
+  WIGGLY FACTORIZATION BY SKIP:
+    Edge ('0000100011001110', '0000100111001010'): per-tile weight by skip: {1: 1.0, 2: 0.0}
+    Edge ('0000100011001110', '0001100011000110'): per-tile weight by skip: {1: 1.0, 2: 2.0}
+    Edge ('0000100111001010', '0001100011000110'): per-tile weight by skip: {1: 1.0, 2: 2.0}
+
+  SKIP RATIO (normalized to skip=1):
+    skip=1: min=1.0000, max=1.0000, constant=True
+    skip=2: min=0.0000, max=2.0000, constant=False
+
+  WIGGLY FROM BLUE vs BLACK TILINGS:
+    Edge ('0000100011001110', '0000100111001010'): total=2, from_blue=1 (0.5000), from_black=1
+    Edge ('0000100011001110', '0001100011000110'): total=4, from_blue=3 (0.7500), from_black=1
+    Edge ('0000100111001010', '0001100011000110'): total=4, from_blue=1 (0.2500), from_black=3
+
+    Blue fraction of wiggly lines across all edges:
+    min=0.2500, max=0.7500, expected=0.2500
+    All equal to node blue fraction? False
+
+  BASE WEIGHT ANALYSIS:
+    ('0000100011001110', '0000100111001010'): total_weight=2, tilings=1*1=1, weight/(t1*t2)=2.000000
+    ('0000100011001110', '0001100011000110'): total_weight=4, tilings=1*6=6, weight/(t1*t2)=0.666667
+    ('0000100111001010', '0001100011000110'): total_weight=4, tilings=1*6=6, weight/(t1*t2)=0.666667
+
+    weight/(t1*t2): min=0.666667, max=2.000000
+    Constant? False
+
+  UNIFIED VIEW:
+    NODES: tilings × blue_fraction = blue_count
+    EDGES: base_weight × skip_factor = class_weight
+    Blue fraction of wiggly lines = blue fraction of nodes (same 2^{-2})
+
+  Time: 0.0s
+
+######################################################################
+  n = 5, V_merged = 9, E = 21, tiles = 6
+######################################################################
+
+  NODE BLUE FRACTION (expected = 2^{-3} = 0.125000):
+    Actual: min=0.000000, max=1.000000
+    All equal to expected? False
+
+  WIGGLY FACTORIZATION BY SKIP:
+    Edge ('0000010000110001110011110', '0000010000110011110011010'): per-tile weight by skip: {1: 0.6666666666666666, 2: 0.0, 3: 0.0}
+    Edge ('0000010000110001110011110', '0000010001110001110010110'): per-tile weight by skip: {1: 0.0, 2: 1.0, 3: 0.0}
+    Edge ('0000010000110001110011110', '0000010001110001110110100'): per-tile weight by skip: {1: 0.6666666666666666, 2: 0.0, 3: 0.0}
+    Edge ('0000010000110001110011110', '0000110000110001110001110'): per-tile weight by skip: {1: 0.6666666666666666, 2: 0.0, 3: 2.0}
+    Edge ('0000010000110001110011110', '0000110000110001110101100'): per-tile weight by skip: {1: 0.0, 2: 1.0, 3: 0.0}
+
+  SKIP RATIO (normalized to skip=1):
+    skip=1: min=1.0000, max=1.0000, constant=True
+    skip=2: min=0.0000, max=2.2500, constant=False
+    skip=3: min=0.0000, max=6.0000, constant=False
+
+  WIGGLY FROM BLUE vs BLACK TILINGS:
+    Edge ('0000010000110001110011110', '0000010000110011110011010'): total=2, from_blue=1 (0.5000), from_black=1
+    Edge ('0000010000110001110011110', '0000010001110001110010110'): total=2, from_blue=1 (0.5000), from_black=1
+    Edge ('0000010000110001110011110', '0000010001110001110110100'): total=2, from_blue=2 (1.0000), from_black=0
+    Edge ('0000010000110001110011110', '0000110000110001110001110'): total=4, from_blue=3 (0.7500), from_black=1
+    Edge ('0000010000110001110011110', '0000110000110001110101100'): total=2, from_blue=1 (0.5000), from_black=1
+
+    Blue fraction of wiggly lines across all edges:
+    min=0.0000, max=1.0000, expected=0.1250
+    All equal to node blue fraction? False
+
+  BASE WEIGHT ANALYSIS:
+    ('0000010000110001110011110', '0000010000110011110011010'): total_weight=2, tilings=1*1=1, weight/(t1*t2)=2.000000
+    ('0000010000110001110011110', '0000010001110001110010110'): total_weight=2, tilings=1*5=5, weight/(t1*t2)=0.400000
+    ('0000010000110001110011110', '0000010001110001110110100'): total_weight=2, tilings=1*1=1, weight/(t1*t2)=2.000000
+    ('0000010000110001110011110', '0000110000110001110001110'): total_weight=4, tilings=1*19=19, weight/(t1*t2)=0.210526
+    ('0000010000110001110011110', '0000110000110001110101100'): total_weight=2, tilings=1*5=5, weight/(t1*t2)=0.400000
+    ('0000010000110011110011010', '0000010001110001110010110'): total_weight=4, tilings=1*5=5, weight/(t1*t2)=0.800000
+    ('0000010000110011110011010', '0000110000110001110001110'): total_weight=6, tilings=1*19=19, weight/(t1*t2)=0.315789
+    ('0000010001110001110010110', '0000010001110001110110100'): total_weight=4, tilings=5*1=5, weight/(t1*t2)=0.800000
+
+    weight/(t1*t2): min=0.114286, max=2.000000
+    Constant? False
+
+  UNIFIED VIEW:
+    NODES: tilings × blue_fraction = blue_count
+    EDGES: base_weight × skip_factor = class_weight
+    Blue fraction of wiggly lines = blue fraction of nodes (same 2^{-3})
+
+  Time: 0.0s
+
+######################################################################
+  n = 6, V_merged = 41, E = 234, tiles = 10
+######################################################################
+
+  NODE BLUE FRACTION (expected = 2^{-4} = 0.062500):
+    Actual: min=0.000000, max=1.000000
+    All equal to expected? False
+
+  WIGGLY FACTORIZATION BY SKIP:
+    Edge ('000000100000110000111000111100111110', '000000100000110000111001111100111010'): per-tile weight by skip: {1: 0.5, 2: 0.0, 3: 0.0, 4: 0.0}
+    Edge ('000000100000110000111000111100111110', '000000100000110001111000111100110110'): per-tile weight by skip: {1: 0.0, 2: 0.6666666666666666, 3: 0.0, 4: 0.0}
+    Edge ('000000100000110000111000111100111110', '000000100000110001111000111101110100'): per-tile weight by skip: {1: 0.5, 2: 0.0, 3: 0.0, 4: 0.0}
+    Edge ('000000100000110000111000111100111110', '000000100001110000111000111100101110'): per-tile weight by skip: {1: 0.0, 2: 0.0, 3: 1.0, 4: 0.0}
+    Edge ('000000100000110000111000111100111110', '000000100001110000111000111101101100'): per-tile weight by skip: {1: 0.0, 2: 0.6666666666666666, 3: 0.0, 4: 0.0}
+
+  SKIP RATIO (normalized to skip=1):
+    skip=1: min=1.0000, max=1.0000, constant=True
+    skip=2: min=0.0000, max=4.0000, constant=False
+    skip=3: min=0.0000, max=10.0000, constant=False
+    skip=4: min=0.0000, max=12.0000, constant=False
+
+  WIGGLY FROM BLUE vs BLACK TILINGS:
+    Edge ('000000100000110000111000111100111110', '000000100000110000111001111100111010'): total=2, from_blue=1 (0.5000), from_black=1
+    Edge ('000000100000110000111000111100111110', '000000100000110001111000111100110110'): total=2, from_blue=1 (0.5000), from_black=1
+    Edge ('000000100000110000111000111100111110', '000000100000110001111000111101110100'): total=2, from_blue=1 (0.5000), from_black=1
+    Edge ('000000100000110000111000111100111110', '000000100001110000111000111100101110'): total=2, from_blue=1 (0.5000), from_black=1
+    Edge ('000000100000110000111000111100111110', '000000100001110000111000111101101100'): total=2, from_blue=2 (1.0000), from_black=0
+
+    Blue fraction of wiggly lines across all edges:
+    min=0.0000, max=1.0000, expected=0.0625
+    All equal to node blue fraction? False
+
+  BASE WEIGHT ANALYSIS:
+    ('000000100000110000111000111100111110', '000000100000110000111001111100111010'): total_weight=2, tilings=1*1=1, weight/(t1*t2)=2.000000
+    ('000000100000110000111000111100111110', '000000100000110001111000111100110110'): total_weight=2, tilings=1*5=5, weight/(t1*t2)=0.400000
+    ('000000100000110000111000111100111110', '000000100000110001111000111101110100'): total_weight=2, tilings=1*1=1, weight/(t1*t2)=2.000000
+    ('000000100000110000111000111100111110', '000000100001110000111000111100101110'): total_weight=2, tilings=1*9=9, weight/(t1*t2)=0.222222
+    ('000000100000110000111000111100111110', '000000100001110000111000111101101100'): total_weight=2, tilings=1*5=5, weight/(t1*t2)=0.400000
+    ('000000100000110000111000111100111110', '000000100001110000111001111101101000'): total_weight=2, tilings=1*1=1, weight/(t1*t2)=2.000000
+    ('000000100000110000111000111100111110', '000001100000110000111000111100011110'): total_weight=2, tilings=1*58=58, weight/(t1*t2)=0.034483
+    ('000000100000110000111000111100111110', '000001100000110000111000111101011100'): total_weight=2, tilings=1*9=9, weight/(t1*t2)=0.222222
+
+    weight/(t1*t2): min=0.006069, max=2.000000
+    Constant? False
+
+  UNIFIED VIEW:
+    NODES: tilings × blue_fraction = blue_count
+    EDGES: base_weight × skip_factor = class_weight
+    Blue fraction of wiggly lines = blue fraction of nodes (same 2^{-4})
+
+  Time: 2.8s
+
+DONE.
+================================================================================
