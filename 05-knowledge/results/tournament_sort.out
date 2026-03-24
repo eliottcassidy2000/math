@@ -1,0 +1,19 @@
+tournament_sort v1.0.0 -- Benchmark
+================================================================================
+
+             Test        N   tsort ms  sorted() ms  Speedup  Sorted?   Runs
+           sorted  100000      15.9ms         1.2ms    0.08x    1.00     1
+         reversed  100000      25.1ms         1.5ms    0.06x    0.00     1
+           random  100000     568.0ms        22.7ms    0.04x    0.29  4128
+    nearly_sorted  100000     243.3ms         6.2ms    0.03x    0.99   202
+       few_unique  100000     412.5ms         9.9ms    0.02x    0.36  4037
+    sorted_blocks  100000     215.1ms         8.6ms    0.04x    1.00    10
+       pipe_organ  100000      54.3ms         2.9ms    0.05x    1.00     1
+        all_equal  100000      17.9ms         1.0ms    0.05x    1.00     1
+
+  All results verified correct.
+
+  Selection (find median of 100000 elements):
+    tselect:     31.1ms
+    full sort:   21.4ms
+    speedup:     0.69x
