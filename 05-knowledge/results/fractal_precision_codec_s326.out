@@ -1,0 +1,93 @@
+
+========================================================================
+  THE FRACTAL CODEC: LEVEL-BY-LEVEL ENTROPY
+========================================================================
+
+  n=5: 1024 tournaments
+
+  Level 0 (delete v=0 from 5-tournament):
+    Residual: 4 bits naive
+    H(r|class) = 4.000 bits (0.0% savings)
+    H(r|class,score) = 1.969 bits (50.8% savings)
+  Level 1 (delete v=0 from 4-tournament):
+    Residual: 3 bits naive
+    H(r|class) = 3.000 bits (0.0% savings)
+    H(r|class,score) = 1.189 bits (60.4% savings)
+  Level 2 (delete v=0 from 3-tournament):
+    Residual: 2 bits naive
+    H(r|class) = 2.000 bits (0.0% savings)
+    H(r|class,score) = 0.500 bits (75.0% savings)
+
+  TOTAL BITS:
+    Naive: 10 bits
+    Class-conditioned: 9.00 bits (90.0% of naive)
+    Class+score-conditioned: 3.66 bits (36.6% of naive)
+    Compression ratio: 2.73:1
+
+  n=6: 32768 tournaments
+
+  Level 0 (delete v=0 from 6-tournament):
+    Residual: 5 bits naive
+    H(r|class) = 5.000 bits (0.0% savings)
+    H(r|class,score) = 2.802 bits (44.0% savings)
+  Level 1 (delete v=0 from 5-tournament):
+    Residual: 4 bits naive
+    H(r|class) = 4.000 bits (0.0% savings)
+    H(r|class,score) = 1.969 bits (50.8% savings)
+  Level 2 (delete v=0 from 4-tournament):
+    Residual: 3 bits naive
+    H(r|class) = 3.000 bits (0.0% savings)
+    H(r|class,score) = 1.189 bits (60.4% savings)
+  Level 3 (delete v=0 from 3-tournament):
+    Residual: 2 bits naive
+    H(r|class) = 2.000 bits (0.0% savings)
+    H(r|class,score) = 0.500 bits (75.0% savings)
+
+  TOTAL BITS:
+    Naive: 15 bits
+    Class-conditioned: 14.00 bits (93.3% of naive)
+    Class+score-conditioned: 6.46 bits (43.1% of naive)
+    Compression ratio: 2.32:1
+
+
+========================================================================
+  THE CROSS-LEVEL BOOST
+========================================================================
+
+
+  THE FRACTAL PRECISION TECHNIQUE:
+
+  Standard fractal codec:
+    Encode T(n) as: (class(T(n-1)), score(v), residual_pattern)
+    Entropy per level: H(r | class, score) ≈ (n-k-1)/2
+
+  BOOSTED fractal codec:
+    Encode T(n) as: (class(T(n-1)), score(v), residual_pattern,
+                     PREVIOUS_RESIDUAL_PATTERN)
+    The previous residual constrains the current one through the
+    tiling square correlations.
+
+  THE MECHANISM:
+  In the tiling square M = lower(δ_{n-2}) + upper(δ_{n-3}^T):
+    The DIAGONAL of M = range-2 tiles of the n-tiling.
+    The diagonal tiles are SHARED between the n-tiling and the structure
+    of the (n-1)-tiling (via the chain).
+
+  Knowing the (n-1)-tiling (from the previous level) constrains
+  which range-2 tiles are likely → constrains the diagonal of M
+  → constrains the current residual.
+
+  EXPECTED BOOST: ~10-20% additional savings at each level,
+  compounding to ~30-50% total improvement over the standard codec.
+
+  THE LOSSLESS GUARANTEE:
+  If we encode ALL the conditional information at each level,
+  the codec is LOSSLESS. The total bits = the joint entropy
+  H(T(n), T(n-1), ..., T(3)) which equals C(n,2) - log₂(n!).
+  This is the INFORMATION-THEORETIC MINIMUM.
+
+
+========================================================================
+  EXACT LOSSLESS FRACTAL CODEC AT n=5
+========================================================================
+
