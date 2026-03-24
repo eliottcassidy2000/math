@@ -1,0 +1,103 @@
+================================================================================
+  EFFECTIVE DIMENSION OF THE METAGRAPH
+  kind-pasteur-2026-03-24-S20fv
+================================================================================
+
+############################################################
+  n = 5, V = 12, m = 6
+############################################################
+
+  1. H AS COORDINATE:
+    H range: 1 to 15
+    H levels: 7
+    Best eigenvector for H: k=1 (corr=0.8746)
+    Top 5 correlations: ['0.193', '0.875', '0.304', '0.000', '0.161']
+    Directed edges: uphill=29, downhill=29, level=2
+    DAG under H? NO
+
+  2. EIGENVALUE DECAY:
+    Positive eigenvalues: 6
+    Decay exponent alpha = 2.322
+    (1D: alpha~2, 2D: alpha~1, interpretation: dim ~ 2/alpha)
+    Effective dimension: 0.86
+    Top 5 eigenvalues: ['5.58', '1.94', '1.22', '1.00', '0.32']
+
+  3. VARIANCE DECOMPOSITION:
+    H captures 3.7% of leading eigenvector variance
+    Residual (perpendicular to H): 96.3%
+    Eigenvectors for 90% energy: 12 (out of 12)
+    Effective dimension (90% energy): 12
+
+  4. SQRT(2) CONNECTION:
+    Pseudo-doubling ratio: (2n-5)/(n-2) = 1.6667
+    sqrt(2) = 1.4142
+    Ratio / sqrt(2) = 1.1785
+    Approaches 2 = sqrt(2)^2 as n -> inf
+
+  5. OPPOSING TRENDS (beta analogy):
+    Scheme residual (beta_1-like): 0.229
+    Markov deviation (1-P2, beta_3-like): 0.166
+    Product (seesaw?): 0.0380
+
+  Time: 0.0s
+
+############################################################
+  n = 6, V = 56, m = 10
+############################################################
+
+  1. H AS COORDINATE:
+    H range: 1 to 45
+    H levels: 19
+    Best eigenvector for H: k=1 (corr=0.9124)
+    Top 5 correlations: ['0.352', '0.912', '0.000', '0.060', '0.021']
+    Directed edges: uphill=275, downhill=275, level=30
+    DAG under H? NO
+
+  2. EIGENVALUE DECAY:
+    Positive eigenvalues: 26
+    Decay exponent alpha = 0.526
+    (1D: alpha~2, 2D: alpha~1, interpretation: dim ~ 2/alpha)
+    Effective dimension: 3.80
+    Top 5 eigenvalues: ['11.67', '6.79', '5.01', '4.34', '4.25']
+
+  3. VARIANCE DECOMPOSITION:
+    H captures 12.4% of leading eigenvector variance
+    Residual (perpendicular to H): 87.6%
+    Eigenvectors for 90% energy: 55 (out of 56)
+    Effective dimension (90% energy): 55
+
+  4. SQRT(2) CONNECTION:
+    Pseudo-doubling ratio: (2n-5)/(n-2) = 1.7500
+    sqrt(2) = 1.4142
+    Ratio / sqrt(2) = 1.2374
+    Approaches 2 = sqrt(2)^2 as n -> inf
+
+  5. OPPOSING TRENDS (beta analogy):
+    Scheme residual (beta_1-like): 0.318
+    Markov deviation (1-P2, beta_3-like): 0.098
+    Product (seesaw?): 0.0312
+
+  Time: 2.9s
+
+============================================================
+  OPPOSING TRENDS SEESAW CHECK
+============================================================
+
+    n  Residual     1-P2   Product    Sum
+    4    0.1060   0.3720   0.03943 0.4780
+    5    0.2290   0.1660   0.03801 0.3950
+    6    0.3180   0.0980   0.03116 0.4160
+    7    0.3550   0.0610   0.02166 0.4160
+
+If Product -> 0: SEESAW (can't have both large). Like beta_1*beta_3=0.
+If Sum -> const: CONSERVATION LAW (total "breaking" is constant).
+
+Product: 0.03943, 0.03801, 0.03116, 0.02166
+-> Product DECREASES: 0.039 -> 0.038 -> 0.031 -> 0.022. SEESAW-LIKE!
+
+The product approaches 0, suggesting the opposing trends ARE
+analogous to beta_1 and beta_3: they can't BOTH be large.
+As the scheme breaks more, the Markov accuracy compensates.
+
+DONE.
+================================================================================
