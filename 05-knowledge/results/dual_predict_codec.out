@@ -1,0 +1,61 @@
+================================================================================
+  DUAL-BASIS PREDICTION CODEC
+  kind-pasteur-2026-03-25-S20gr
+================================================================================
+
+                Method    32x32    64x64   128x128   256x256
+                   Raw      540B     1839B     6798B    26055B
+                  Left      614B     2061B     7982B    30708B
+                    Up      543B     2000B     7913B    30959B
+C:\Users\Eliott\Documents\GitHub\math\04-computation\dual_predict_codec.py:72: RuntimeWarning: overflow encountered in scalar subtract
+  residual[i, j] = M[i, j] - pred
+              Avg(L+U)      603B     2059B     8008B    30655B
+C:\Users\Eliott\Documents\GitHub\math\04-computation\dual_predict_codec.py:84: RuntimeWarning: overflow encountered in scalar subtract
+  residual[i, j] = M[i, j] - M[i-1, j-1]
+              Diagonal      645B     2045B     7864B    31137B
+C:\Users\Eliott\Documents\GitHub\math\04-computation\dual_predict_codec.py:108: RuntimeWarning: overflow encountered in scalar subtract
+  residual[i, j] = M[i, j] - pred
+                Dual-8      561B     1947B     7750B     slow
+            Middle-out      556B     1965B     7795B     slow
+
+  DETAILED COMPARISON (64x64 natural image):
+  Raw (no prediction) + zlib: 3536B
+                  Left:   2061B (+41.7% vs raw), mean|resid|=123.0
+                    Up:   2000B (+43.4% vs raw), mean|resid|=123.1
+              Avg(L+U):   2059B (+41.8% vs raw), mean|resid|=120.4
+              Diagonal:   2045B (+42.2% vs raw), mean|resid|=126.4
+                Dual-8:   1947B (+44.9% vs raw), mean|resid|=118.8
+            Middle-out:   1965B (+44.4% vs raw), mean|resid|=119.6
+
+  VIDEO DELTA (64x64, small motion):
+  Raw delta + zlib: 1823B
+                  Left:   1563B
+                    Up:   1674B
+              Avg(L+U):   1647B
+              Diagonal:   1675B
+                Dual-8:   1648B
+            Middle-out:   1651B
+
+============================================================
+THE DUAL-BASIS INSIGHT
+============================================================
+
+Each pixel lives at the intersection of TWO coordinate systems:
+  Orthogonal: (row, col) — captured by Left/Up prediction
+  Diagonal: (row+col, row-col) — captured by Diagonal prediction
+
+The DUAL-8 predictor uses ALL 8 neighbors (both bases).
+The MIDDLE-OUT predictor additionally changes the scan ORDER
+so that each pixel is predicted from its NEAREST decoded neighbor
+(not just raster-order predecessors).
+
+If Dual-8 beats both Left and Diagonal individually:
+  The two bases carry INDEPENDENT information about each pixel.
+  Combining them reduces the residual below either alone.
+
+If Middle-out beats Dual-8:
+  The scan order matters — center-out gives better predictions
+  because the center is most constrained (most neighbors available).
+
+DONE.
+================================================================================
