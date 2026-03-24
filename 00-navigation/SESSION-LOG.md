@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S268 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S267
+**Summary of work:** Random walk + coding theory duality on G_n/Z_2. Confirmed Ornstein-Uhlenbeck process on H. Channel transition analysis. Mean reversion rate = -2/n.
+
+**Key results:**
+1. Mean reversion E[ΔH] = 8.35 - 0.38H at n=6 (vs -2/n = -0.33)
+2. Fixed point H* = 22.0 ≈ E[H] = 22.5 (OU equilibrium)
+3. Channel: after t=11 steps, Pr[stay] ≈ 1/V (fully mixed)
+4. Code rate R = 0.34 at n=5,6, → 1/2 asymptotically
+5. Hitting time transitive→regular = 115 steps at n=6
+
 ## opus-2026-03-23-S267 — 2026-03-23
 
 **Account:** opus
