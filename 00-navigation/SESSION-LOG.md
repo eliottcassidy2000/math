@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S261 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S260
+**Summary of work:** Discovered the interaction-vs-self-loops complementarity principle. The two systems (even+odd graphs vs tournaments) have the same counts but dual energy distributions: boundary interaction in System A corresponds to self-loops in System B.
+
+**Key insight:** Both systems are Q_m / S_n with different semantics (present/absent vs forward/backward). Switching semantics moves energy between boundary and interior.
+
 ## opus-2026-03-23-S260 — 2026-03-23
 
 **Account:** opus
