@@ -1,0 +1,181 @@
+
+========================================================================
+  TRANSLUCENT LINES AT n=4
+========================================================================
+
+  V_merged = 3, V_unmerged = 4, m = 6
+
+  Merged node 0 (H=1, |Aut|=1, fiber=24):
+    Translucent edges: 36
+    Avg neutral arcs/tiling: 3.00 / 6
+    Translucent components: 1
+    Translucent diameter: 6
+    Neutral fraction: 0.5000
+
+  Merged node 1 (H=3, |Aut|=3, fiber=16):
+    Translucent edges: 0
+    Avg neutral arcs/tiling: 0.00 / 6
+    Translucent components: 16
+    Translucent diameter: 0
+    Neutral fraction: 0.0000
+
+  Merged node 2 (H=5, |Aut|=1, fiber=24):
+    Translucent edges: 36
+    Avg neutral arcs/tiling: 3.00 / 6
+    Translucent components: 1
+    Translucent diameter: 6
+    Neutral fraction: 0.5000
+
+
+========================================================================
+  SUMMARY: TRANSLUCENT STRUCTURE AT n=4
+========================================================================
+
+  Total labeled edges (one per pair of adjacent tilings): 192
+  Translucent (same class): 72 (37.5%)
+  Opaque (different class): 120 (62.5%)
+  Total = m × 2^{m-1} = 6 × 32 = 192 ✓
+
+  Translucent fraction = 144/384 = 0.375000 = arc neutrality
+
+  THE TWO-LEVEL STRUCTURE:
+  LEVEL 1 (coarse): G_n/Z_2 with 3 nodes, connected by opaque lines
+  LEVEL 2 (fine):   Each node has a translucent subgraph on its tilings
+  The full Q_m = translucent subgraph ∪ opaque subgraph
+  (disjoint edge partition of the m-cube)
+
+========================================================================
+  TRANSLUCENT LINES AT n=5
+========================================================================
+
+  V_merged = 10, V_unmerged = 12, m = 10
+
+  Merged node 0 (H=1, |Aut|=1, fiber=120):
+    Translucent edges: 240
+    Avg neutral arcs/tiling: 4.00 / 10
+    Translucent components: 1
+    Translucent diameter: 10
+    Neutral fraction: 0.4000
+
+  Merged node 1 (H=3, |Aut|=3, fiber=80):
+    Translucent edges: 40
+    Avg neutral arcs/tiling: 1.00 / 10
+    Translucent components: 40
+    Translucent diameter: 1
+    Neutral fraction: 0.1000
+
+  Merged node 3 (H=3, |Aut|=3, fiber=40):
+    Translucent edges: 0
+    Avg neutral arcs/tiling: 0.00 / 10
+    Translucent components: 40
+    Translucent diameter: 0
+    Neutral fraction: 0.0000
+
+  Merged node 4 (H=9, |Aut|=1, fiber=120):
+    Translucent edges: 120
+    Avg neutral arcs/tiling: 2.00 / 10
+    Translucent components: 20
+    Translucent diameter: 3
+    Neutral fraction: 0.2000
+
+  Merged node 5 (H=9, |Aut|=1, fiber=120):
+    Translucent edges: 0
+    Avg neutral arcs/tiling: 0.00 / 10
+    Translucent components: 120
+    Translucent diameter: 0
+    Neutral fraction: 0.0000
+
+  Merged node 6 (H=11, |Aut|=1, fiber=120):
+    Translucent edges: 120
+    Avg neutral arcs/tiling: 2.00 / 10
+    Translucent components: 30
+    Translucent diameter: 2
+    Neutral fraction: 0.2000
+
+  Merged node 7 (H=15, |Aut|=3, fiber=40):
+    Translucent edges: 0
+    Avg neutral arcs/tiling: 0.00 / 10
+    Translucent components: 40
+    Translucent diameter: 0
+    Neutral fraction: 0.0000
+
+  Merged node 8 (H=13, |Aut|=1, fiber=120):
+    Translucent edges: 0
+    Avg neutral arcs/tiling: 0.00 / 10
+    Translucent components: 120
+    Translucent diameter: 0
+    Neutral fraction: 0.0000
+
+  Merged node 9 (H=15, |Aut|=5, fiber=24):
+    Translucent edges: 0
+    Avg neutral arcs/tiling: 0.00 / 10
+    Translucent components: 24
+    Translucent diameter: 0
+    Neutral fraction: 0.0000
+
+
+========================================================================
+  SUMMARY: TRANSLUCENT STRUCTURE AT n=5
+========================================================================
+
+  Total labeled edges (one per pair of adjacent tilings): 5120
+  Translucent (same class): 880 (17.2%)
+  Opaque (different class): 4240 (82.8%)
+  Total = m × 2^{m-1} = 10 × 512 = 5120 ✓
+
+  Translucent fraction = 1760/10240 = 0.171875 = arc neutrality
+
+  THE TWO-LEVEL STRUCTURE:
+  LEVEL 1 (coarse): G_n/Z_2 with 10 nodes, connected by opaque lines
+  LEVEL 2 (fine):   Each node has a translucent subgraph on its tilings
+  The full Q_m = translucent subgraph ∪ opaque subgraph
+  (disjoint edge partition of the m-cube)
+
+========================================================================
+  THE TRANSLUCENT GRAPH AS CAYLEY GRAPH OF Aut(T)
+========================================================================
+
+
+  For a class C with automorphism group Aut(C):
+
+  The TRANSLUCENT GRAPH within C has:
+  - Vertices: n!/|Aut(C)| labeled tournaments
+  - Edges: neutral arc flips (stay in class C)
+
+  The structure of this graph is determined by Aut(C):
+  - If |Aut| = 1: each tournament has its own "neutral neighborhood"
+    with no automorphism-induced equivalences.
+    Translucent degree = # neutral arcs per tournament.
+
+  - If |Aut| > 1: automorphisms map neutral arcs to neutral arcs,
+    creating orbits within the translucent graph.
+    The translucent graph has quotient structure.
+
+  CONJECTURE: The translucent graph of class C is a CAYLEY GRAPH
+  of S_n / Aut(C) with generators = the neutral arc types.
+
+  For the TRANSITIVE tournament (|Aut| = 1 at n ≥ 4):
+  - Fiber = n! labeled copies
+  - Neutral arcs: those whose reversal gives another transitive
+  - From S244: at n=5, neutral arcs of transitive = 4 (of 10)
+
+  For the REGULAR tournament (|Aut| = n at odd n):
+  - Fiber = n!/n = (n-1)! labeled copies
+  - Neutral arcs: often 0 (regular tournaments are "rigid")
+
+  TRANSLUCENT CONNECTIVITY:
+  n=4: Class 1 (size=8, |Aut|=3) is DISCONNECTED translucently! (1/8 reachable)
+  n=4: Class 3 (size=8, |Aut|=3) is DISCONNECTED translucently! (1/8 reachable)
+  n=5: Class 1 (size=40, |Aut|=3) is DISCONNECTED translucently! (2/40 reachable)
+  n=5: Class 2 (size=120, |Aut|=1) is DISCONNECTED translucently! (24/120 reachable)
+  n=5: Class 3 (size=40, |Aut|=3) is DISCONNECTED translucently! (1/40 reachable)
+  n=5: Class 4 (size=120, |Aut|=1) is DISCONNECTED translucently! (6/120 reachable)
+  n=5: Class 5 (size=120, |Aut|=1) is DISCONNECTED translucently! (24/120 reachable)
+  n=5: Class 6 (size=120, |Aut|=1) is DISCONNECTED translucently! (1/120 reachable)
+  n=5: Class 7 (size=40, |Aut|=3) is DISCONNECTED translucently! (2/40 reachable)
+  n=5: Class 8 (size=120, |Aut|=1) is DISCONNECTED translucently! (4/120 reachable)
+  n=5: Class 9 (size=40, |Aut|=3) is DISCONNECTED translucently! (1/40 reachable)
+  n=5: Class 10 (size=120, |Aut|=1) is DISCONNECTED translucently! (1/120 reachable)
+  n=5: Class 11 (size=24, |Aut|=5) is DISCONNECTED translucently! (1/24 reachable)
+
+Done. opus-2026-03-23-S270
