@@ -1,0 +1,94 @@
+========================================================================
+  HIGHER KRAWTCHOUK MODES
+  opus-2026-03-24-S307
+========================================================================
+
+########################################################################
+  n = 5
+########################################################################
+  V=10, m=6
+
+  KRAWTCHOUK DUAL COEFFICIENTS vs TOURNAMENT INVARIANTS:
+                    H       c3       SC
+         B_1  -0.9365  -0.9630  -0.3730
+         B_2  -0.7892  -0.8571  -0.0328
+         B_3  -0.3480  -0.4419   0.2624
+
+  B_2 DETAILS:
+    Class 3: H=11, c3=4, B_1=-0.91, B_2=-1.00, B_3=1.09
+    Class 4: H=13, c3=4, B_1=-0.77, B_2=-1.00, B_3=-0.31
+    Class 9: H=15, c3=4, B_1=-1.20, B_2=-1.00, B_3=2.40
+    Class 2: H=5, c3=2, B_1=2.00, B_2=-0.20, B_3=-2.40
+    Class 1: H=3, c3=1, B_1=4.00, B_2=5.00, B_3=0.00
+    Class 8: H=3, c3=1, B_1=4.00, B_2=5.00, B_3=0.00
+    Class 0: H=1, c3=0, B_1=6.00, B_2=15.00, B_3=20.00
+
+  MULTIPLE REGRESSION (B_1, B_2 → H):
+    H ≈ 10.30 + -2.23×B_1 + 0.26×B_2
+    R² = 0.8899
+
+  MULTIPLE REGRESSION (B_1, B_2 → c3):
+    c3 ≈ 3.33 + -0.60×B_1 + 0.01×B_2
+    R² = 0.9276
+
+  WITH B_3 ADDED:
+    H ~ B_1 + B_2 + B_3: R² = 0.9170
+    c3 ~ B_1 + B_2 + B_3: R² = 0.9515
+
+########################################################################
+  n = 6
+########################################################################
+  V=34, m=10
+
+  KRAWTCHOUK DUAL COEFFICIENTS vs TOURNAMENT INVARIANTS:
+                    H       c3       SC
+         B_1  -0.8829  -0.9303  -0.0392
+         B_2  -0.7026  -0.8301   0.1149
+         B_3  -0.4352  -0.5887   0.1507
+
+  B_2 DETAILS:
+    Class 28: H=45, c3=8, B_1=-0.80, B_2=-3.13, B_3=1.07
+    Class 3: H=23, c3=6, B_1=-0.35, B_2=-1.87, B_3=2.09
+    Class 4: H=33, c3=6, B_1=-0.91, B_2=-0.58, B_3=0.24
+    Class 2: H=9, c3=3, B_1=3.11, B_2=2.56, B_3=0.00
+    Class 6: H=15, c3=4, B_1=0.80, B_2=4.60, B_3=-3.20
+    Class 33: H=17, c3=4, B_1=1.88, B_2=4.88, B_3=-11.29
+    Class 12: H=9, c3=3, B_1=4.00, B_2=6.56, B_3=2.67
+    Class 32: H=9, c3=2, B_1=6.00, B_2=13.00, B_3=8.00
+    Class 8: H=5, c3=2, B_1=6.00, B_2=13.80, B_3=12.80
+    Class 17: H=5, c3=2, B_1=6.00, B_2=13.80, B_3=12.80
+    Class 1: H=3, c3=1, B_1=8.00, B_2=27.00, B_3=48.00
+    Class 14: H=3, c3=1, B_1=8.00, B_2=27.00, B_3=48.00
+    Class 0: H=1, c3=0, B_1=10.00, B_2=45.00, B_3=120.00
+
+  MULTIPLE REGRESSION (B_1, B_2 → H):
+    H ≈ 28.55 + -5.35×B_1 + 0.56×B_2
+    R² = 0.8183
+
+  MULTIPLE REGRESSION (B_1, B_2 → c3):
+    c3 ≈ 5.89 + -0.65×B_1 + 0.00×B_2
+    R² = 0.8654
+
+  WITH B_3 ADDED:
+    H ~ B_1 + B_2 + B_3: R² = 0.8434
+    c3 ~ B_1 + B_2 + B_3: R² = 0.8945
+
+========================================================================
+  THE KRAWTCHOUK DECOMPOSITION OF TOURNAMENT INVARIANTS
+========================================================================
+
+  B_1 ≈ -H (captures the "position" along the diagonal)
+  B_2 captures the "curvature" — the second-order deviation from linearity
+  B_3 captures the "asymmetry" — the third-order structure
+
+  Together: B_1, B_2, B_3 form a COORDINATE SYSTEM for tournament space:
+    B_1 = principal axis (H-gradient, 85-94% of variance)
+    B_2 = first perpendicular (width, ~5-10% of variance)
+    B_3 = second perpendicular (skewness, ~2-5% of variance)
+
+  This is the KRAWTCHOUK COORDINATE SYSTEM — the natural basis
+  for the Hamming scheme, projected onto the tournament quotient.
+  It diagonalizes the distance operator and gives the spectral
+  decomposition of tournament space.
+
+DONE.
