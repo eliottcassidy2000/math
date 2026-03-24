@@ -1,0 +1,17 @@
+tpress v1.0.0 — Tournament-Powered Universal Compressor
+============================================================
+
+             Data     Raw   tpress   zlib-9   Ratio       Method
+      gradient_64   4096B     229B     758B   17.9x        delta
+        random_4K   4096B    4112B    4107B    1.0x         zlib
+     sparse_delta 524288B    3191B    3186B  164.3x         zlib
+        sine_wave   4096B     262B     711B   15.6x        delta
+    block_pattern   4096B      54B      49B   75.9x         zlib
+
+  Speed benchmark:
+      4096B: 11.1ms (0.4 MB/s)
+     16384B: 43.4ms (0.4 MB/s)
+     65536B: 180.5ms (0.3 MB/s)
+
+  Pipelines: ranking, matrix, image, timeseries, delta, generic
+  Auto-detection enabled. Use --type to override.
