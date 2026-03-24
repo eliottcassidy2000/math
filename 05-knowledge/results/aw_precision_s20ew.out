@@ -1,0 +1,131 @@
+================================================================================
+  A vs W: PRECISE INFORMATION CONTENT
+  kind-pasteur-2026-03-24-S20ew
+================================================================================
+
+############################################################
+  n = 5, V = 9, E = 21, m = 6
+############################################################
+
+  IDENTITY 1: W @ 1 = tilings * m
+    Max |W@1 - t*m| = 0.0
+    EXACT: True
+
+  IDENTITY 2: W = W^T
+    Max |W - W^T| = 0.0
+    EXACT: True
+
+  MARKOV: P = D_t^{-1} W, row sums = m = 6
+    Max |P@1 - m| = 0.000000
+
+  WHAT DOES W KNOW BEYOND A AND TILINGS?
+    N[i,j] = W[i,j] / sqrt(ti * tj) for edges:
+    min = 0.4472, max = 2.7288, std/mean = 0.6135
+    N constant? False
+
+    W / (ti * tj): min=0.057143, max=1.000000, CV=1.094
+    W / (ti + tj): min=0.1000, max=1.2222, CV=0.721
+    W / min(ti,tj): min=0.8000, max=4.4000, CV=0.533
+
+  SPECTRAL TRICK: N vs A eigenvalues
+    Linear fit: eig_N = 1.0381 * eig_A + -0.0000
+    R^2 = 0.975590
+    Max residual = 0.7559
+    N ~ constant * A? NO
+
+  JOINT A+W TRICKS:
+    1. tilings = W@1 / m (EXACT: True)
+    2. degree = A@1 (trivial)
+    3. avg_weight = W_off_row / degree: min=1.2, max=15.6
+    4. SL_rate = diag(W) / (tilings*m): min=0.0000, max=0.3684
+    5. Weight excess (W actual / W if uniform):
+       min=0.6000, max=2.2361, mean=1.2612
+    6. Spectral entropy: A=1.4284, N=1.4770, ratio=1.0340
+
+  RESIDUAL (N - c*A - d*I):
+    Top eigenvalues: ['2.2930', '1.0267', '0.8115', '0.1125', '-0.0209']
+    Frobenius norm: 3.6793
+    % of N norm: 54.02%
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+    Residual diagonal vs tilings: r=nan
+    Residual diagonal vs self-loops: r=nan
+
+  Time: 0.1s
+
+############################################################
+  n = 6, V = 41, E = 234, m = 10
+############################################################
+
+  IDENTITY 1: W @ 1 = tilings * m
+    Max |W@1 - t*m| = 0.0
+    EXACT: True
+
+  IDENTITY 2: W = W^T
+    Max |W - W^T| = 0.0
+    EXACT: True
+
+  MARKOV: P = D_t^{-1} W, row sums = m = 10
+    Max |P@1 - m| = 0.000000
+
+  WHAT DOES W KNOW BEYOND A AND TILINGS?
+    N[i,j] = W[i,j] / sqrt(ti * tj) for edges:
+    min = 0.1313, max = 2.7288, std/mean = 0.6042
+    N constant? False
+
+    W / (ti * tj): min=0.003034, max=1.000000, CV=1.950
+    W / (ti + tj): min=0.0169, max=1.2222, CV=0.651
+    W / min(ti,tj): min=0.3448, max=4.5116, CV=0.633
+
+  SPECTRAL TRICK: N vs A eigenvalues
+    Linear fit: eig_N = 0.8268 * eig_A + 0.0000
+    R^2 = 0.978794
+    Max residual = 1.6473
+    N ~ constant * A? NO
+
+  JOINT A+W TRICKS:
+    1. tilings = W@1 / m (EXACT: True)
+    2. degree = A@1 (trivial)
+    3. avg_weight = W_off_row / degree: min=1.0, max=58.3
+    4. SL_rate = diag(W) / (tilings*m): min=0.0000, max=0.3008
+    5. Weight excess (W actual / W if uniform):
+       min=0.2500, max=4.3147, mean=1.1524
+    6. Spectral entropy: A=3.5351, N=3.6348, ratio=1.0282
+
+  RESIDUAL (N - c*A - d*I):
+    Top eigenvalues: ['3.2828', '2.9482', '2.8014', '2.1941', '1.9925']
+    Frobenius norm: 9.6558
+    % of N norm: 53.41%
+    Residual diagonal vs tilings: r=nan
+    Residual diagonal vs self-loops: r=nan
+
+  Time: 2.9s
+
+======================================================================
+SUMMARY: A vs W INFORMATION CONTENT
+======================================================================
+
+A KNOWS:            W KNOWS:
+  topology            topology (same edges)
+  degree              degree (same)
+  spectral gap        spectral gap (different value!)
+  clustering          clustering (same topology)
+  -                   tiling counts (from row sums)
+  -                   self-loop structure
+  -                   edge weights (thickness)
+
+W = D_t^{1/2} @ N @ D_t^{1/2}  where N is the "structural" part.
+If N ~ c * A: then W just scales A by tiling counts. No new topology.
+If N != c * A: then W carries genuine new topological info beyond tilings.
+
+THE TRICK: Compute A for topology, W for tilings and weights.
+  W@1/m = tilings (EXACT). No enumeration needed if W is computable.
+  A@1 = degree. Standard graph metric.
+  diag(W)/(tilings*m) = SL rate per class. = D(n) contribution.
+  N = D_t^{-1/2} W D_t^{-1/2} = "pure structure" after removing tilings.
+  Compare eig(N) vs eig(A) to see if W adds topology.
+
+DONE.
+================================================================================
