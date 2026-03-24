@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S259 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S258
+**Summary of work:** Integrated Royle et al. 2022 paper. Verified #EvenGraphs = A000568 at n=3..8. Tested whether flip graphs are isomorphic — they're NOT. Tournament meta-graph has richer connectivity.
+
+**Key findings:**
+1. VERIFIED: #EvenGraphs(n) = #Tournaments(n) = A000568(n) for n=3..8
+2. Proof mechanism: Burnside sum splits into odd-order (tournaments) + even-order (odd graphs). Every graph is even XOR odd.
+3. The even graph FLIP GRAPH has V = A000568 but FEWER edges than G_n: E_even = 0,1,16 vs E_tourn = 1,5,30 at n=3,4,5
+4. Tournament structure is NOT inherited from undirected graph structure — the arc reversal operation creates RICHER connectivity
+5. The self-paired cycle mechanism (Lemma 3.1): g_A has self-paired cycle iff |g| even, explaining why only odd-order permutations fix tournaments
+
 ## opus-2026-03-23-S258 — 2026-03-23
 
 **Account:** opus
