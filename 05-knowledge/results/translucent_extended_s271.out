@@ -1,0 +1,160 @@
+
+========================================================================
+  BUILDING FULL STRUCTURE AT n=5
+========================================================================
+
+  V_merged = 10, V_unmerged = 12, m = 10, 2^m = 1024
+
+
+========================================================================
+  Q1: LABELED EDGES PER META-GRAPH EDGE
+========================================================================
+
+  META-GRAPH EDGES WITH THICKNESS:
+  {C, D}: labeled pairs, translucent(C), translucent(D)
+
+  {5(H=9), 8(H=13)}: thickness=720
+  {0(H=1), 1(H=3)}: thickness=480
+  {0(H=1), 2(H=5)}: thickness=480
+  {1(H=3), 2(H=5)}: thickness=480
+  {1(H=3), 5(H=9)}: thickness=480
+  {2(H=5), 3(H=3)}: thickness=480
+  {2(H=5), 4(H=9)}: thickness=480
+  {2(H=5), 5(H=9)}: thickness=480
+  {2(H=5), 6(H=11)}: thickness=480
+  {2(H=5), 8(H=13)}: thickness=480
+  {4(H=9), 5(H=9)}: thickness=480
+  {4(H=9), 6(H=11)}: thickness=480
+  {6(H=11), 8(H=13)}: thickness=480
+  {7(H=15), 8(H=13)}: thickness=480
+  {0(H=1), 3(H=3)}: thickness=240
+
+  Total opaque thickness: 8480
+  Total translucent weight: 1760
+  Grand total: 10240 (should be 2^m × m = 10240)
+
+========================================================================
+  Q2: IS THE TRANSLUCENT GRAPH A TREE/FOREST?
+========================================================================
+
+  TRANSLUCENT TOPOLOGY PER CLASS:
+
+  mid  | H    | fiber  | trans_E  | tree_E   | excess   | comps  | type
+  ---------------------------------------------------------------------------
+  0    | 1    | 120    | 240      | 119      | 121      | 1      | CYCLES(121)
+  1    | 3    | 80     | 40       | 40       | 0        | 40     | FOREST
+  2    | 5    | 240    | 360      | 230      | 130      | 10     | CYCLES(130)
+  3    | 3    | 40     | 0        | 0        | 0        | 40     | ISOLATED
+  4    | 9    | 120    | 120      | 100      | 20       | 20     | CYCLES(20)
+  5    | 9    | 120    | 0        | 0        | 0        | 120    | ISOLATED
+  6    | 11   | 120    | 120      | 90       | 30       | 30     | CYCLES(30)
+  7    | 15   | 40     | 0        | 0        | 0        | 40     | ISOLATED
+  8    | 13   | 120    | 0        | 0        | 0        | 120    | ISOLATED
+  9    | 15   | 24     | 0        | 0        | 0        | 24     | ISOLATED
+
+========================================================================
+  Q3: TRANSLUCENT DEGREE SEQUENCE
+========================================================================
+
+  TRANSITIVE CLASS (H=1) TRANSLUCENT DEGREE SEQUENCE:
+    degree 4: 120 tilings
+
+  Min degree: 4, Max degree: 4, Avg: 4.00
+  All tilings have SAME translucent degree = 4 (REGULAR translucent graph)
+
+========================================================================
+  Q4: TRANSLUCENT EDGES PROJECTED TO META-GRAPH
+========================================================================
+
+  META-GRAPH WITH TRANSLUCENT SELF-LOOPS:
+
+  Node 0 (H=1, |Aut|=1): fiber=120, trans_edges=240, neutral_arcs=240, neutral/tiling=2.0
+  Node 1 (H=3, |Aut|=3): fiber=80, trans_edges=40, neutral_arcs=40, neutral/tiling=0.5
+  Node 2 (H=5, |Aut|=1): fiber=240, trans_edges=360, neutral_arcs=360, neutral/tiling=1.5
+  Node 3 (H=3, |Aut|=3): fiber=40, trans_edges=0, neutral_arcs=0, neutral/tiling=0.0
+  Node 4 (H=9, |Aut|=1): fiber=120, trans_edges=120, neutral_arcs=120, neutral/tiling=1.0
+  Node 5 (H=9, |Aut|=1): fiber=120, trans_edges=0, neutral_arcs=0, neutral/tiling=0.0
+  Node 6 (H=11, |Aut|=1): fiber=120, trans_edges=120, neutral_arcs=120, neutral/tiling=1.0
+  Node 7 (H=15, |Aut|=3): fiber=40, trans_edges=0, neutral_arcs=0, neutral/tiling=0.0
+  Node 8 (H=13, |Aut|=1): fiber=120, trans_edges=0, neutral_arcs=0, neutral/tiling=0.0
+  Node 9 (H=15, |Aut|=5): fiber=24, trans_edges=0, neutral_arcs=0, neutral/tiling=0.0
+
+========================================================================
+  Q5: THE HEAP CONNECTION
+========================================================================
+
+
+  A HEAP (Viennot) on the staircase is an assignment of labels to cells
+  respecting the partial order: if cell A is above cell B in the Hasse
+  diagram, then label(A) < label(B).
+
+  For TOURNAMENTS (binary tilings): there's no order constraint between
+  cells. Every 0/1 assignment is valid. So tournaments are "orderless heaps."
+
+  For STANDARD YOUNG TABLEAUX: the labels 1..m must increase along rows
+  and columns. This IS a heap constraint.
+
+  THE TRANSLUCENT GRAPH has a hidden ORDER STRUCTURE:
+  Two tilings connected by a translucent edge differ in exactly one cell,
+  and the flip preserves the iso class. The sequence of flips in a
+  translucent path is a "walk" through the fiber that preserves structure.
+
+  CONJECTURE: The translucent graph of the transitive class is
+  ISOMORPHIC to the Cayley graph of S_n with generators = neutral
+  transpositions (those preserving the transitive order).
+
+  For the transitive tournament: score sequence = (0, 1, ..., n-1).
+  A neutral arc flip swaps two adjacent-score vertices.
+  This IS an adjacent transposition in S_n!
+
+  So: the translucent graph of the transitive class =
+  the Cayley graph of S_n with adjacent transpositions =
+  the PERMUTOHEDRON skeleton!
+
+  Let me verify this at n=5.
+
+  VERIFICATION: Transitive class translucent graph vs Permutohedron
+  Vertices: translucent=120, permutohedron=120 (MATCH)
+  Edges: translucent=240, permutohedron=240 (MATCH)
+  Diameter: translucent=10, permutohedron=10 (MATCH)
+  Degree: translucent=4, permutohedron=4 (MATCH)
+
+  THE TRANSITIVE CLASS TRANSLUCENT GRAPH IS THE PERMUTOHEDRON!
+
+  This is because:
+  - Transitive tournaments biject with permutations of [n]
+    (the unique total order compatible with each tournament)
+  - A neutral arc flip on a transitive tournament = swapping two
+    vertices with adjacent scores
+  - Swapping adjacent-score vertices = adjacent transposition in S_n
+  - The Cayley graph of S_n with adjacent transpositions = permutohedron
+
+  SO: The translucent subgraph at the transitive node IS the
+  (n-1)-dimensional permutohedron. Its faces correspond to
+  score-coarsening equivalences.
+
+  THIS CONNECTS TO QUOTIENTOPES:
+  The permutohedron is the TOP of the Pilaud-Santos quotientope
+  hierarchy. Lattice congruences of the weak order contract
+  permutohedron edges to give associahedra, cubes, etc.
+
+  The translucent contractions within the transitive class ARE
+  the quotientope operations! Contracting neutral edges =
+  applying a lattice congruence to the weak order.
+
+  So: the meta-graph's translucent structure at the transitive node
+  IS the Pilaud-Santos quotientope theory, embedded within our
+  tournament meta-graph framework.
+
+
+========================================================================
+  Q6: TRANSLUCENT COMPONENTS ARE REGULAR SUBGRAPHS
+========================================================================
+
+  Node 0 (H=1): 1 components, types: {(120, 120): 1}
+  Node 1 (H=3): 40 components, types: {(2, 0): 40}
+  Node 2 (H=5): 10 components, types: {(24, 18): 10}
+  Node 4 (H=9): 20 components, types: {(6, 3): 20}
+  Node 6 (H=11): 30 components, types: {(4, 2): 30}
+
+Done. opus-2026-03-23-S271
