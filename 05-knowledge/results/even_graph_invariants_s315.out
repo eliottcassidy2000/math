@@ -1,0 +1,52 @@
+========================================================================
+  EVEN GRAPH INVARIANTS AND PERFECTNESS
+  opus-2026-03-24-S315
+========================================================================
+
+########################################################################
+  n = 5
+########################################################################
+  V(E_5) = 7, E(E_5) = 16
+
+  COMPLEMENT: V=7, E(complement)=5
+  α(E_5) = 2 (independent set)
+  Independent set: [0, 6]
+  Their edge counts: [0, 10]
+
+  Edge count as coloring? True
+  Edge count distribution: [(0, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (10, 1)]
+  Distinct edge counts: 7
+  Same-edge-count edges: 0/16 (0.0%)
+  Edge count mod 6: VALID coloring (5 colors)
+  Edge count mod 7: VALID coloring (5 colors)
+
+  Complement triangles: 0
+  *** Complement is TRIANGLE-FREE! ***
+  This means alpha(E_n) <= 2 and E_n has no independent set of size 3!
+  Chordal? YES!
+
+  COMPARABILITY TEST (ordered by edge count):
+    Transitivity violations: 13
+
+########################################################################
+  n = 6
+########################################################################
+  V(E_6) = 16, E(E_6) = 90
+
+  COMPLEMENT: V=16, E(complement)=30
+  α(E_6) = 4 (independent set)
+  Independent set: [9, 0, 13, 12]
+  Their edge counts: [6, 0, 10, 8]
+
+  Edge count as coloring? False
+  Edge count distribution: [(0, 1), (3, 1), (4, 1), (5, 1), (6, 3), (7, 2), (8, 2), (9, 1), (10, 2), (11, 1), (12, 1)]
+  Distinct edge counts: 11
+  Same-edge-count edges: 6/90 (6.7%)
+
+  Complement triangles: 13
+  Chordal? YES!
+
+  COMPARABILITY TEST (ordered by edge count):
+    Transitivity violations: 118
+
+DONE.

@@ -33,11 +33,19 @@ The cycle-space bijection (tiling ↔ even graph via XOR of fundamental cycles) 
 
 The sequence 2, 3, 5, 10, 28 for n=3..7 is suggestive. Differences: 1, 2, 5, 18. Second differences: 1, 3, 13. These grow roughly factorially.
 
-### 2. E_n Is Perfect (ω = χ)
+### 2. ω(E_n) = χ(E_n) at All Computed n
 
-At every computed n (3 through 7), ω(E_n) = χ(E_n). The even graph metagraph is a **perfect graph**. This is striking because G_n LOSES perfectness at n=7 (ω=4, χ=6).
+At every computed n (3 through 7), ω(E_n) = χ(E_n). The max clique equals the chromatic number for the full graph.
 
-Why might E_n be perfect? The even graph iso classes have a natural partial order by edge count (= weight in the cycle space). If this partial order makes E_n a comparability graph or a chordal graph, perfectness follows from the Strong Perfect Graph Theorem.
+**CAUTION:** This does NOT mean E_n is a perfect graph in the graph-theoretic sense. A graph is perfect iff ω = χ for EVERY induced subgraph.
+
+- n=5: E_5 is **chordal** (no chordless 4-cycle) → perfect graph ✓
+- n=6: E_6 is **chordal** → perfect graph ✓
+- n=7: E_7 has **chordless 4-cycles AND chordless 5-cycles (odd holes)** in both the graph and complement → NOT a perfect graph (by SPGT). But ω = χ = 28 for the full graph.
+
+So E_n transitions from perfect (chordal) at n ≤ 6 to merely ω-chromatic at n = 7. Whether ω = χ continues to hold for larger n is unknown.
+
+For comparison: G_n has ω = χ for n ≤ 6 but ω(G_7) = 4 < 6 = χ(G_7), so the tournament metagraph loses even the weaker ω = χ property at n = 7.
 
 ### 3. The Bridge Matrix Has Full Rank
 
@@ -92,7 +100,7 @@ The two metagraphs are the **tournament side** and the **graph side** of the sam
 
 ## Open Questions
 
-1. **Is E_n always perfect?** (χ = ω at n=3..7 — prove or find counterexample)
+1. **Does ω(E_n) = χ(E_n) always hold?** (True at n=3..7. E_n is chordal at n≤6 but has odd holes at n=7. Might fail for larger n.)
 2. **What is χ(E_n) asymptotically?** (Grows faster than linear — polynomial? exponential?)
 3. **What is the natural coloring of E_n?** (Edge count mod something?)
 4. **Does V(G_n)/V(E_n) have a limit?** (Currently 1, 1, 1.4, 2.1, 5.0)

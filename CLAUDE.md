@@ -193,7 +193,7 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
   - V(E_n): 2, 3, 7, 16, 54 for n=3..7 (A002854 shifted by 1)
   - E_n is MUCH denser than G_n: density 76-100% vs ~50%
   - χ(E_n) grows FASTER: 2, 3, 5, 10, 28 for n=3..7 (vs χ(G_n) = n-1)
-  - E_n is PERFECT (ω=χ) at all computed n — G_n loses perfectness at n=7
+  - ω(E_n)=χ(E_n) at all computed n (3..7). E_n is chordal (hence perfect) at n≤6, has odd holes at n=7
   - ~80% of tile flips change BOTH tournament class and even class (Jaccard ≈ 0.82)
   - Bridge matrix B[tourn,even] has full rank = V(E_n) at all n
   - The cycle-space bijection: tiling → XOR of fundamental cycles → even graph. See `07-reflections/even-graphs-as-first-class.md`.
