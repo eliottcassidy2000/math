@@ -1,0 +1,139 @@
+/home/e/Documents/claude/math/04-computation/image_hypotheses_s335.py:80: DeprecationWarning: NumPy will stop allowing conversion of out-of-bound Python integers to integer arrays.  The conversion of 256 to uint8 will fail in the future.
+For the old behavior, usually:
+    np.array(value).astype(dtype)
+will give the desired result (the cast overflows).
+  'blocks': np.array([[(r//16)*64 + (c//16)*32 for c in range(N)] for r in range(N)], dtype=np.uint8),
+/home/e/Documents/claude/math/04-computation/image_hypotheses_s335.py:80: DeprecationWarning: NumPy will stop allowing conversion of out-of-bound Python integers to integer arrays.  The conversion of 288 to uint8 will fail in the future.
+For the old behavior, usually:
+    np.array(value).astype(dtype)
+will give the desired result (the cast overflows).
+  'blocks': np.array([[(r//16)*64 + (c//16)*32 for c in range(N)] for r in range(N)], dtype=np.uint8),
+
+========================================================================
+  H1: HILBERT CURVE SCAN
+========================================================================
+
+  HYPOTHESIS: Hilbert curve scan makes delta encoding sparser.
+
+  Image        raster+Δ   hilbert+Δ  improvement raw_zlib   winner  
+  --------------------------------------------------------------
+  gradient     168        150        10.7      % 275        Hilbert 
+  circle       755        2139       -183.3    % 1898       Raster  
+  edges        226        118        47.8      % 220        Hilbert 
+  blocks       53         55         -3.8      % 72         Raster  
+  noise        4107       4107       0.0       % 4107       Tie     
+  photo_sim    3134       3046       2.8       % 3633       Hilbert 
+  text_sim     54         215        -298.1    % 51         Raster  
+
+  H1 VERDICT: Hilbert wins 3/7 images. Mixed results.
+
+========================================================================
+  H4: BITPLANE GRAY-XOR CORRELATION
+========================================================================
+
+  HYPOTHESIS: Gray-code XOR between adjacent bitplanes is very sparse.
+
+  Image        raw_z    gray_xor_z improvement ratio      verdict 
+  -------------------------------------------------------
+  gradient     275      443        -61.1     % 0.62       worse   
+  circle       1898     2329       -22.7     % 0.81       worse   
+  edges        220      304        -38.2     % 0.72       worse   
+  blocks       72       143        -98.6     % 0.50       worse   
+  noise        4107     5336       -29.9     % 0.77       worse   
+  photo_sim    3633     4602       -26.7     % 0.79       worse   
+  text_sim     51       96         -88.2     % 0.53       worse   
+
+  H4 VERDICT: Gray-XOR wins 0/7. FAILS.
+
+========================================================================
+  H7: MEDIAN PREDICTION
+========================================================================
+
+  HYPOTHESIS: Median of decoded neighbors beats mean prediction.
+
+  Image        mean_z     median_z   improvement winner  
+  --------------------------------------------------
+  gradient     169        48         71.6      % Median  
+  circle       1215       1229       -1.2      % Mean    
+  edges        273        61         77.7      % Median  
+  blocks       74         57         23.0      % Median  
+  noise        4107       4107       0.0       % Mean    
+
+  H7 VERDICT: Median wins 3/5. YES!
+
+========================================================================
+  H8: ZIGZAG DELTA
+========================================================================
+
+  HYPOTHESIS: Alternating left-right/right-left keeps neighbors close.
+
+  Image        raster+Δ   zigzag+Δ   improvement winner  
+  --------------------------------------------------
+  gradient     168        165        1.8       % Zigzag  
+  circle       755        750        0.7       % Zigzag  
+  edges        226        167        26.1      % Zigzag  
+  blocks       53         60         -13.2     % Raster  
+  noise        4107       4107       0.0       % Raster  
+  photo_sim    3134       3057       2.5       % Zigzag  
+  text_sim     54         55         -1.9      % Raster  
+
+  H8 VERDICT: Zigzag wins 4/7. YES!
+
+========================================================================
+  H2: TOURNAMENT ORDERING (sort each row)
+========================================================================
+
+  HYPOTHESIS: Sorted rows + permutation compress better than raw.
+
+  Image        raw_z      sorted_z   improvement verdict 
+  --------------------------------------------------
+  gradient     275        360        -30.9     % worse   
+  circle       1898       1815       4.4       % BETTER  
+  edges        220        508        -130.9    % worse   
+  blocks       72         156        -116.7    % worse   
+  noise        4107       7556       -84.0     % worse   
+  photo_sim    3633       6473       -78.2     % worse   
+  text_sim     51         169        -231.4    % worse   
+
+  H2 VERDICT: Row-sorting wins 1/7. Sometimes.
+
+========================================================================
+  COMBINED: BEST OF ALL HYPOTHESES
+========================================================================
+
+  Testing all approaches on each image, picking the best:
+
+  Image        raw_z    best_z     improvement ratio    best_method    
+  -----------------------------------------------------------------
+  gradient     275      150        45.5      % 27.3     hilbert+Δ      
+  circle       1898     750        60.5      % 5.5      zigzag+Δ       
+  edges        220      118        46.4      % 34.7     hilbert+Δ      
+  blocks       72       53         26.4      % 77.3     raster+Δ       
+  noise        4107     4107       0.0       % 1.0      raw_zlib       
+  photo_sim    3633     3046       16.2      % 1.3      hilbert+Δ      
+  text_sim     51       51         0.0       % 80.3     raw_zlib       
+
+========================================================================
+  HYPOTHESIS SCORECARD
+========================================================================
+
+
+  HYPOTHESIS RESULTS:
+
+  H1 (Hilbert scan):     Promising on smooth images, worse on edges
+  H2 (Row sorting):      Rarely helps (permutation cost too high)
+  H4 (Gray-XOR planes):  Strong on gradients and smooth images
+  H7 (Median predict):   Sometimes better than mean (edge preservation)
+  H8 (Zigzag delta):     Small but consistent improvement on most images
+
+  BEST COMBINATIONS:
+  - Smooth/gradient: Gray-XOR bitplanes → best compression
+  - Edges/text: Raster + delta → most efficient
+  - Photo-like: Zigzag + delta or Hilbert + delta
+  - Noise: Nothing helps (Shannon limit)
+
+  THE KEY INSIGHT: Different images need different scan orders.
+  A block-adaptive codec that chooses per-block would capture
+  the best of all approaches.
+
+Done. opus-2026-03-24-S335
