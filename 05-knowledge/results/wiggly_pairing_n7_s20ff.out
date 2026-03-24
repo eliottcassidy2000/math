@@ -1,0 +1,173 @@
+================================================================================
+  GRID-SYMMETRY PAIRING AT n=4..7
+  kind-pasteur-2026-03-24-S20ff
+================================================================================
+
+############################################################
+  n = 4, m = 3 tiles
+############################################################
+  Grid symmetry: (x,y) -> (5-y, 5-x)
+  Fixed tiles (anti-diagonal x+y=5): 1
+    A: (4,1)
+  Paired tiles: 1 pairs
+    {B: (3,1), C: (4,2)}
+  Effective classes (quotient): 2
+  C(n-2, 2) = C(2, 2) = 1 = tiles at n-1
+  Match? False
+
+  JACCARD VERIFICATION (paired classes):
+    B-C: J=1.0000 PERFECT, |edges|=2,2
+
+  ALL pairs have Jaccard = 1.0? True
+
+  SL RATES (paired classes should match):
+    B: 50.00%, C: 50.00%, match: True
+    A (fixed): 25.00%
+
+  EFFECTIVE EDGE COUNTS (after quotient):
+    Total metagraph edges: 3
+    Edges reachable by quotient classes: 3 (should be same)
+
+  Time: 0.0s
+
+############################################################
+  n = 5, m = 6 tiles
+############################################################
+  Grid symmetry: (x,y) -> (6-y, 6-x)
+  Fixed tiles (anti-diagonal x+y=6): 2
+    A: (5,1)
+    E: (4,2)
+  Paired tiles: 2 pairs
+    {B: (4,1), D: (5,2)}
+    {C: (3,1), F: (5,3)}
+  Effective classes (quotient): 4
+  C(n-2, 2) = C(3, 2) = 3 = tiles at n-1
+  Match? False
+
+  JACCARD VERIFICATION (paired classes):
+    B-D: J=1.0000 PERFECT, |edges|=17,17
+    C-F: J=1.0000 PERFECT, |edges|=15,15
+
+  ALL pairs have Jaccard = 1.0? True
+
+  SL RATES (paired classes should match):
+    B: 12.50%, D: 12.50%, match: True
+    C: 6.25%, F: 6.25%, match: True
+    A (fixed): 12.50%
+    E (fixed): 12.50%
+
+  EFFECTIVE EDGE COUNTS (after quotient):
+    Total metagraph edges: 21
+    Edges reachable by quotient classes: 21 (should be same)
+
+  Time: 0.0s
+
+############################################################
+  n = 6, m = 10 tiles
+############################################################
+  Grid symmetry: (x,y) -> (7-y, 7-x)
+  Fixed tiles (anti-diagonal x+y=7): 2
+    A: (6,1)
+    F: (5,2)
+  Paired tiles: 4 pairs
+    {B: (5,1), E: (6,2)}
+    {C: (4,1), H: (6,3)}
+    {D: (3,1), J: (6,4)}
+    {G: (4,2), I: (5,3)}
+  Effective classes (quotient): 6
+  C(n-2, 2) = C(4, 2) = 6 = tiles at n-1
+  Match? True
+
+  JACCARD VERIFICATION (paired classes):
+    B-E: J=1.0000 PERFECT, |edges|=127,127
+    C-H: J=1.0000 PERFECT, |edges|=127,127
+    D-J: J=1.0000 PERFECT, |edges|=125,125
+    G-I: J=1.0000 PERFECT, |edges|=98,98
+
+  ALL pairs have Jaccard = 1.0? True
+
+  SL RATES (paired classes should match):
+    B: 10.94%, E: 10.94%, match: True
+    C: 11.72%, H: 11.72%, match: True
+    D: 6.64%, J: 6.64%, match: True
+    G: 8.20%, I: 8.20%, match: True
+    A (fixed): 8.98%
+    F (fixed): 12.50%
+
+  EFFECTIVE EDGE COUNTS (after quotient):
+    Total metagraph edges: 143
+    Edges reachable by quotient classes: 143 (should be same)
+
+  Time: 3.2s
+
+############################################################
+  n = 7, m = 15 tiles
+############################################################
+  Grid symmetry: (x,y) -> (8-y, 8-x)
+  Fixed tiles (anti-diagonal x+y=8): 3
+    A: (7,1)
+    G: (6,2)
+    L: (5,3)
+  Paired tiles: 6 pairs
+    {B: (6,1), F: (7,2)}
+    {C: (5,1), J: (7,3)}
+    {D: (4,1), M: (7,4)}
+    {E: (3,1), O: (7,5)}
+    {H: (5,2), K: (6,3)}
+    {I: (4,2), N: (6,4)}
+  Effective classes (quotient): 9
+  C(n-2, 2) = C(5, 2) = 10 = tiles at n-1
+  Match? False
+
+  JACCARD VERIFICATION (paired classes):
+    B-F: J=1.0000 PERFECT, |edges|=2021,2021
+    C-J: J=1.0000 PERFECT, |edges|=2035,2035
+    D-M: J=1.0000 PERFECT, |edges|=2012,2012
+    E-O: J=1.0000 PERFECT, |edges|=2012,2012
+    H-K: J=1.0000 PERFECT, |edges|=1806,1806
+    I-N: J=1.0000 PERFECT, |edges|=1820,1820
+
+  ALL pairs have Jaccard = 1.0? True
+
+  SL RATES (paired classes should match):
+    B: 3.28%, F: 3.28%, match: True
+    C: 3.26%, J: 3.26%, match: True
+    D: 3.16%, M: 3.16%, match: True
+    E: 0.23%, O: 0.23%, match: True
+    H: 3.19%, K: 3.19%, match: True
+    I: 0.30%, N: 0.30%, match: True
+    A (fixed): 3.17%
+    G (fixed): 3.34%
+    L (fixed): 0.24%
+
+  EFFECTIVE EDGE COUNTS (after quotient):
+    Total metagraph edges: 2123
+    Edges reachable by quotient classes: 2123 (should be same)
+
+  Time: 841.8s
+
+============================================================
+SYNTHESIS: GRID-SYMMETRY QUOTIENT PATTERN
+============================================================
+
+At every n=4..7:
+  m = C(n-1,2) tiles
+  Grid symmetry pairs: (m - anti-diag) / 2 pairs + anti-diag fixed
+  Quotient = (m + anti-diag) / 2 effective classes
+
+  Anti-diagonal count = floor((n-1)/2)
+  Quotient size = (C(n-1,2) + floor((n-1)/2)) / 2 = C(n-2,2) + floor((n-1)/2) ... ?
+
+  n=4: m=3, fixed=1, pairs=1, quotient=2. C(2,2)=1. NOT matching C(n-2,2).
+  n=5: m=6, fixed=2, pairs=2, quotient=4. C(3,2)=3.
+  n=6: m=10, fixed=2, pairs=4, quotient=6. C(4,2)=6. MATCH!
+  n=7: m=15, fixed=3, pairs=6, quotient=9. C(5,2)=10.
+
+  Actually: quotient = (m + fixed) / 2 = (C(n-1,2) + floor((n-1)/2)) / 2
+  This is EXACTLY the blue exponent! = dimension of grid-sym tiling space.
+  Grid-sym tilings = 2^quotient.
+
+  The quotient of wiggly classes IS the free parameter space of blue tilings.
+
+DONE.
+================================================================================
