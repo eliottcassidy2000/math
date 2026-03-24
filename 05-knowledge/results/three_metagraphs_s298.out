@@ -1,0 +1,184 @@
+========================================================================
+  THREE METAGRAPHS IN TANDEM
+  opus-2026-03-24-S298
+========================================================================
+
+########################################################################
+  n = 4: THREE METAGRAPHS IN TANDEM
+########################################################################
+  Built in 0.0s. V=3, m=3
+
+  EDGE COUNTS:
+    Wiggly (E1):          3 (100.0%)
+    Waggly-2 (E2):        2 (66.7%)
+    Complement (EB):      2 (66.7%)
+
+  VENN DIAGRAM:
+    Only wiggly:            1
+    Only waggly-2:          0
+    Only complement:        0
+    Wiggly ∩ waggly-2:      0
+    Wiggly ∩ complement:    0
+    Waggly-2 ∩ comp:        0
+    ALL THREE:              2
+    NONE (gap):             0
+
+  SYMMETRY:
+    W1 symmetric: True
+    W2 symmetric: True
+    B symmetric:  True
+
+  ROW SUMS:
+    W1_row = fiber × 3 (check: True)
+    W2_row = fiber × C(3,2) = fiber × 3 (check: True)
+    B_row = fiber × 1 = fiber (check: True)
+
+  W2/W1 RATIO (for edges in both):
+    Min: 1.00, Max: 3.00, Mean: 2.00
+
+  SPECTRA (top 5 eigenvalues):
+    W1: [11.6, 0.8, -2.5]
+    W2: [10.7, 1.0, -1.7]
+    B: [3.4, 0.0, -1.4]
+
+  H PROJECTION ONTO 2ND EIGENVECTOR:
+    W1 (wiggly): v_1 captures 62.6% of H, best non-trivial = v_1 at 62.6%
+    W2 (waggly-2): v_1 captures 7.7% of H, best non-trivial = v_2 at 72.3%
+    B (complement): v_1 captures 40.0% of H, best non-trivial = v_2 at 42.2%
+
+  MEAN |ΔH| BY EDGE TYPE:
+             Only wiggly:    2.0 (1 edges)
+               All three:    3.0 (2 edges)
+
+  WEIGHT RELATIONSHIPS:
+    Node 0 (H=1): W1_self=0, W2_self=0, B_self=0, fiber=1, total_self/fiber=0.0
+    Node 1 (H=3): W1_self=0, W2_self=2, B_self=0, fiber=2, total_self/fiber=1.0
+    Node 2 (H=5): W1_self=10, W2_self=8, B_self=2, fiber=5, total_self/fiber=4.0
+
+########################################################################
+  n = 5: THREE METAGRAPHS IN TANDEM
+########################################################################
+  Built in 0.0s. V=10, m=6
+
+  EDGE COUNTS:
+    Wiggly (E1):         21 (46.7%)
+    Waggly-2 (E2):       35 (77.8%)
+    Complement (EB):     18 (40.0%)
+
+  VENN DIAGRAM:
+    Only wiggly:            6
+    Only waggly-2:         13
+    Only complement:        0
+    Wiggly ∩ waggly-2:      4
+    Wiggly ∩ complement:    0
+    Waggly-2 ∩ comp:        7
+    ALL THREE:             11
+    NONE (gap):             4
+
+  SYMMETRY:
+    W1 symmetric: True
+    W2 symmetric: True
+    B symmetric:  True
+
+  ROW SUMS:
+    W1_row = fiber × 6 (check: True)
+    W2_row = fiber × C(6,2) = fiber × 15 (check: True)
+    B_row = fiber × 1 = fiber (check: True)
+
+  W2/W1 RATIO (for edges in both):
+    Min: 0.17, Max: 6.00, Mean: 1.98
+
+  SPECTRA (top 5 eigenvalues):
+    W1: [54.9, 18.3, 11.6, 6.8, 2.7]
+    W2: [141.6, 68.4, 10.6, 1.4, -0.1]
+    B: [9.4, 2.9, 2.4, 1.5, 0.3]
+
+  H PROJECTION ONTO 2ND EIGENVECTOR:
+    W1 (wiggly): v_1 captures 48.3% of H, best non-trivial = v_1 at 48.3%
+    W2 (waggly-2): v_1 captures 0.2% of H, best non-trivial = v_2 at 64.8%
+    B (complement): v_1 captures 2.2% of H, best non-trivial = v_4 at 33.3%
+
+  MEAN |ΔH| BY EDGE TYPE:
+             Only wiggly:    5.3 (6 edges)
+           Only waggly-2:    7.7 (13 edges)
+                   W1∩W2:    3.5 (4 edges)
+                    W2∩B:    6.3 (7 edges)
+               All three:    3.5 (11 edges)
+
+  WEIGHT RELATIONSHIPS:
+    Node 0 (H=1): W1_self=0, W2_self=0, B_self=0, fiber=1, total_self/fiber=0.0
+    Node 1 (H=3): W1_self=0, W2_self=2, B_self=0, fiber=2, total_self/fiber=1.0
+    Node 2 (H=5): W1_self=20, W2_self=26, B_self=0, fiber=10, total_self/fiber=4.6
+    Node 3 (H=11): W1_self=12, W2_self=30, B_self=4, fiber=11, total_self/fiber=4.2
+    Node 4 (H=13): W1_self=0, W2_self=78, B_self=4, fiber=13, total_self/fiber=6.3
+    Node 5 (H=9): W1_self=0, W2_self=22, B_self=0, fiber=9, total_self/fiber=2.4
+    Node 6 (H=9): W1_self=8, W2_self=16, B_self=0, fiber=9, total_self/fiber=2.7
+    Node 7 (H=15): W1_self=0, W2_self=0, B_self=0, fiber=3, total_self/fiber=0.0
+    Node 8 (H=3): W1_self=0, W2_self=0, B_self=0, fiber=1, total_self/fiber=0.0
+    Node 9 (H=15): W1_self=0, W2_self=10, B_self=0, fiber=5, total_self/fiber=2.0
+
+########################################################################
+  n = 6: THREE METAGRAPHS IN TANDEM
+########################################################################
+  Built in 0.2s. V=34, m=10
+
+  EDGE COUNTS:
+    Wiggly (E1):        143 (25.5%)
+    Waggly-2 (E2):      404 (72.0%)
+    Complement (EB):    173 (30.8%)
+
+  VENN DIAGRAM:
+    Only wiggly:           15
+    Only waggly-2:        182
+    Only complement:       11
+    Wiggly ∩ waggly-2:     62
+    Wiggly ∩ complement:    2
+    Waggly-2 ∩ comp:       96
+    ALL THREE:             64
+    NONE (gap):           129
+
+  SYMMETRY:
+    W1 symmetric: True
+    W2 symmetric: True
+    B symmetric:  True
+
+  ROW SUMS:
+    W1_row = fiber × 10 (check: True)
+    W2_row = fiber × C(10,2) = fiber × 45 (check: True)
+    B_row = fiber × 1 = fiber (check: True)
+
+  W2/W1 RATIO (for edges in both):
+    Min: 0.25, Max: 6.60, Mean: 2.40
+
+  SPECTRA (top 5 eigenvalues):
+    W1: [536.1, 245.8, 206.5, 183.7, 122.9]
+    W2: [2246.4, 605.7, 473.2, 354.3, 315.7]
+    B: [51.5, 20.3, 11.4, 10.5, 8.6]
+
+  H PROJECTION ONTO 2ND EIGENVECTOR:
+    W1 (wiggly): v_1 captures 2.6% of H, best non-trivial = v_3 at 14.6%
+    W2 (waggly-2): v_1 captures 2.5% of H, best non-trivial = v_2 at 21.4%
+    B (complement): v_1 captures 11.5% of H, best non-trivial = v_1 at 11.5%
+
+  MEAN |ΔH| BY EDGE TYPE:
+             Only wiggly:    9.2 (15 edges)
+           Only waggly-2:   15.8 (182 edges)
+         Only complement:   11.8 (11 edges)
+                   W1∩W2:    7.1 (62 edges)
+                    W1∩B:   16.0 (2 edges)
+                    W2∩B:   12.7 (96 edges)
+               All three:    9.6 (64 edges)
+
+  WEIGHT RELATIONSHIPS:
+    Node 0 (H=1): W1_self=0, W2_self=0, B_self=0, fiber=1, total_self/fiber=0.0
+    Node 1 (H=3): W1_self=0, W2_self=2, B_self=0, fiber=2, total_self/fiber=1.0
+    Node 2 (H=9): W1_self=16, W2_self=42, B_self=0, fiber=18, total_self/fiber=3.2
+    Node 3 (H=23): W1_self=116, W2_self=170, B_self=0, fiber=46, total_self/fiber=6.2
+    Node 4 (H=33): W1_self=20, W2_self=26, B_self=0, fiber=33, total_self/fiber=1.4
+    Node 5 (H=23): W1_self=0, W2_self=158, B_self=4, fiber=46, total_self/fiber=3.5
+    Node 6 (H=15): W1_self=36, W2_self=52, B_self=4, fiber=30, total_self/fiber=3.1
+    Node 7 (H=17): W1_self=24, W2_self=20, B_self=0, fiber=17, total_self/fiber=2.6
+    Node 8 (H=5): W1_self=10, W2_self=8, B_self=0, fiber=5, total_self/fiber=3.6
+    Node 9 (H=37): W1_self=78, W2_self=102, B_self=0, fiber=37, total_self/fiber=4.9
+
+DONE.
