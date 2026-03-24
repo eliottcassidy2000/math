@@ -1,0 +1,45 @@
+===============================================================================================
+  TC IMAGE v3 — Beat PNG on EVERY Image Type
+  opus-2026-03-24-S315
+===============================================================================================
+
+  GRAYSCALE 256×256 — TC v3 vs PNG (optimized):
+         Image      Raw       TC      PNG  TC/PNG                  Strategy  Win
+  --------------------------------------------------------------------------------
+    gradient_h   65536B      44B     369B   0.12x                   sub+bz2 ✓
+    gradient_d   65536B      52B     405B   0.13x                 paeth+bz2 ✓
+        circle   65536B    1996B    4245B   0.47x                  sub+lzma ✓
+       checker   65536B      62B     418B   0.15x                 paeth+bz2 ✓
+        smooth   65536B    5060B   13322B   0.38x                delta+lzma ✓
+         photo   65536B   45220B   48031B   0.94x                  raw+lzma ✓
+          text   65536B    3648B    5701B   0.64x                  raw+lzma ✓
+         noise   65536B   65562B   65917B   0.99x                paeth+zlib ✓
+    mandelbrot   65536B    3580B    7518B   0.48x                  raw+lzma ✓
+     satellite   65536B   35956B   35567B   1.01x         row-adaptive+lzma ✗
+       medical   65536B   27500B   33871B   0.81x                  raw+lzma ✓
+
+  TC wins: 10/11
+  Total: TC=188,680B vs PNG=215,364B (TC/PNG=0.876)
+
+  COLOR 256×256 RGB:
+         Image      Raw       TC      PNG  TC/PNG                  Strategy  Win
+  --------------------------------------------------------------------------------
+    gradient_d  196608B   14620B   25964B   0.56x         ch-sep+paeth+lzma ✓
+        circle  196608B   10684B   23417B   0.46x                  sub+lzma ✓
+        smooth  196608B   11712B   23911B   0.49x                  sub+lzma ✓
+         photo  196608B   63096B   95724B   0.66x         ch-sep+paeth+lzma ✓
+       checker  196608B   13544B   23730B   0.57x                  sub+lzma ✓
+    mandelbrot  196608B   16956B   32929B   0.51x                  sub+lzma ✓
+     satellite  196608B   51436B   78603B   0.65x         ch-sep+paeth+lzma ✓
+       medical  196608B   50628B   74567B   0.68x         ch-sep+paeth+lzma ✓
+
+  TC wins (color): 8/8
+
+  SIZE SCALING (photo — hardest case):
+      64×64: TC=   3172B  PNG=   3276B  TC/PNG=0.968 ✓
+     128×128: TC=  11416B  PNG=  12175B  TC/PNG=0.938 ✓
+     256×256: TC=  45220B  PNG=  48031B  TC/PNG=0.941 ✓
+     512×512: TC= 162888B  PNG= 183593B  TC/PNG=0.887 ✓
+
+===============================================================================================
+DONE.
