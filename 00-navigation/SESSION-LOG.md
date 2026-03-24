@@ -13,6 +13,19 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-23-S270 — 2026-03-23
+
+**Account:** opus
+**Continuation of:** opus-2026-03-23-S268
+**Summary of work:** Computed the TRANSLUCENT LINE structure — intra-class tiling connections. The m-cube partitions into translucent (same-class) and opaque (class-changing) edges. Only the transitive class is translucently connected.
+
+**Key findings:**
+1. Q_m = translucent ∪ opaque (disjoint edge partition)
+2. Translucent fraction = arc neutrality = 17.2% at n=5
+3. Only transitive (H=1) is translucently CONNECTED (diameter m)
+4. All other classes fragment into many isolated components
+5. Classes with |Aut|>1 often have ZERO neutral arcs
+
 ## kind-pasteur-2026-03-23-S20el — 2026-03-23
 
 **Account:** kind-pasteur
