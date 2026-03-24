@@ -1,0 +1,330 @@
+========================================================================
+  CREATIVE SPECTRAL INVESTIGATIONS
+  opus-2026-03-23-S269
+========================================================================
+
+  Building G_5/Z_2... done (0.0s)
+
+########################################################################
+  n = 5: CREATIVE SPECTRAL ANALYSIS (V=10, E=21)
+########################################################################
+
+  1. RANDOM MATRIX UNIVERSALITY
+    Spacing statistics (V=10):
+    Mean spacing (normalized): 1.0000 (GOE≈1, Poisson=1)
+    Var(spacing): 0.7606 (GOE≈0.273, Poisson=1)
+    P(s < 0.1): 0.0000 (GOE≈0, Poisson≈0.095)
+    Mean ratio r̃: 0.5887 (GOE≈0.531, Poisson≈0.386)
+    Classification: GOE-like
+
+  2. HEAT KERNEL / PARTITION FUNCTION
+    Z(β) = tr(exp(-β·L)):
+    β= 0.01: Z=      9.5917, S(entropy)=  2.3023, <E>=  4.1384
+    β= 0.10: Z=      6.7754, S(entropy)=  2.2721, <E>=  3.5880
+    β= 0.50: Z=      2.4563, S(entropy)=  1.7344, <E>=  1.6715
+    β= 1.00: Z=      1.4436, S(entropy)=  1.0010, <E>=  0.6339
+    β= 2.00: Z=      1.0736, S(entropy)=  0.2952, <E>=  0.1121
+    β= 5.00: Z=      1.0008, S(entropy)=  0.0066, <E>=  0.0012
+    β=10.00: Z=      1.0000, S(entropy)=  0.0000, <E>=  0.0000
+
+    Spectral dimension d_s(t):
+    t=  0.0100: d_s =  0.099
+    t=  0.0298: d_s =  0.285
+    t=  0.0886: d_s =  0.756
+    t=  0.2637: d_s =  1.520
+    t=  0.7848: d_s =  1.325
+    t=  2.3357: d_s =  0.182
+    t=  6.9519: d_s =  0.000
+    d_s at small t → 0.099 (≈ geometric dimension)
+    d_s at large t → 0.000 (= 0 for finite graph)
+
+  3. GRAPH SIGNAL PROCESSING: H AS SIGNAL
+    Graph Fourier Transform of H:
+    Frequency  Eigenvalue  Power    Cumul%
+    k=  0: λ_L=  0.0000, |ĥ|²=      0.00,    0.0%
+    k=  1: λ_L=  1.4298, |ĥ|²=    132.42,   55.1%
+    k=  2: λ_L=  2.1578, |ĥ|²=     42.72,   72.9%
+    k=  3: λ_L=  3.0283, |ĥ|²=     52.54,   94.7%
+    k=  4: λ_L=  3.8446, |ĥ|²=     11.02,   99.3%
+    k=  5: λ_L=  4.4322, |ĥ|²=      0.07,   99.3%
+    k=  6: λ_L=  5.5417, |ĥ|²=      0.19,   99.4%
+    k=  7: λ_L=  6.2576, |ĥ|²=      0.05,   99.4%
+    k=  8: λ_L=  7.0760, |ĥ|²=      0.11,   99.5%
+    k=  9: λ_L=  8.2320, |ĥ|²=      1.29,  100.0%
+
+    Dirichlet energy E(H) = 2.0632
+    Max possible = 8.2320
+    Smoothness = 1 - E/E_max = 0.7494
+    (1.0 = perfectly smooth, 0.0 = maximally rough)
+
+    LOW-PASS RECONSTRUCTION OF H:
+    k=   1 modes: R² = 0.0000 (0.0%)
+    k=   2 modes: R² = 0.5508 (55.1%)
+    k=   3 modes: R² = 0.7286 (72.9%)
+    k=   5 modes: R² = 0.9929 (99.3%)
+    k=  10 modes: R² = 1.0000 (100.0%)
+    k=   5 modes: R² = 0.9929 (99.3%)
+    k=  10 modes: R² = 1.0000 (100.0%)
+
+  4. SPECTRAL CLUSTERING
+    Fiedler bipartition: A=6, B=4
+    Mean H: A=6.0, B=12.0
+    SC count: A=4, B=4
+    Cut edges: 7/21 (33.3%)
+    Normalized cut: 0.6918
+
+  5. QUANTUM WALK ON THE METAGRAPH
+    Start: node 0 (H=1, transitive)
+    Target: node 7 (H=15, regular)
+
+         t   P(trans)     P(reg)      P(SC)        <H>     spread
+       0.1     0.9608     0.0000     0.9805       1.16       0.93
+       0.5     0.3722     0.0034     0.7477       4.43       3.95
+       1.0     0.0704     0.1209     0.8966       9.80       4.56
+       2.0     0.1343     0.3323     0.9731      10.00       5.07
+       5.0     0.1077     0.0763     0.7028       7.75       5.10
+      10.0     0.1612     0.1454     0.9661       8.65       4.88
+      20.0     0.1776     0.0019     0.6989       6.76       4.91
+
+    CLASSICAL walk (same times):
+         t   P(trans)     P(reg)        <H>
+         1     0.0000     0.0000       5.00
+         2     0.2524     0.0000       6.80
+         5     0.0763     0.0370       7.87
+        10     0.1004     0.0488       8.15
+        20     0.0954     0.0477       8.14
+        50     0.0952     0.0476       8.14
+
+  6. SPECTRAL ZETA FUNCTION
+    ζ_G(s) = Σ λ_L^(-s):
+    s=0.5: ζ_G = 4.625721
+    s=1.0: ζ_G = 2.581828
+    s=1.5: ζ_G = 1.565974
+    s=2.0: ζ_G = 1.024353
+    s=3.0: ζ_G = 0.521302
+    s=4.0: ζ_G = 0.306781
+
+    det'(L) = 321590.0000
+    Spanning trees ≈ 32159.0
+
+  Building G_6/Z_2... done (0.1s)
+
+########################################################################
+  n = 6: CREATIVE SPECTRAL ANALYSIS (V=34, E=143)
+########################################################################
+
+  1. RANDOM MATRIX UNIVERSALITY
+    Spacing statistics (V=34):
+    Mean spacing (normalized): 1.0000 (GOE≈1, Poisson=1)
+    Var(spacing): 2.7806 (GOE≈0.273, Poisson=1)
+    P(s < 0.1): 0.0000 (GOE≈0, Poisson≈0.095)
+    Mean ratio r̃: 0.5981 (GOE≈0.531, Poisson≈0.386)
+    Classification: GOE-like
+
+  2. HEAT KERNEL / PARTITION FUNCTION
+    Z(β) = tr(exp(-β·L)):
+    β= 0.01: Z=     31.2858, S(entropy)=  3.5254, <E>=  8.2275
+    β= 0.10: Z=     16.0623, S(entropy)=  3.4371, <E>=  6.6067
+    β= 0.50: Z=      3.1761, S(entropy)=  2.3158, <E>=  2.3204
+    β= 1.00: Z=      1.5634, S(entropy)=  1.2674, <E>=  0.8205
+    β= 2.00: Z=      1.0786, S(entropy)=  0.3351, <E>=  0.1297
+    β= 5.00: Z=      1.0007, S(entropy)=  0.0057, <E>=  0.0010
+    β=10.00: Z=      1.0000, S(entropy)=  0.0000, <E>=  0.0000
+
+    Spectral dimension d_s(t):
+    t=  0.0100: d_s =  0.197
+    t=  0.0298: d_s =  0.556
+    t=  0.0886: d_s =  1.383
+    t=  0.2637: d_s =  2.317
+    t=  0.7848: d_s =  1.723
+    t=  2.3357: d_s =  0.191
+    t=  6.9519: d_s =  0.000
+    d_s at small t → 0.197 (≈ geometric dimension)
+    d_s at large t → 0.000 (= 0 for finite graph)
+
+  3. GRAPH SIGNAL PROCESSING: H AS SIGNAL
+    Graph Fourier Transform of H:
+    Frequency  Eigenvalue  Power    Cumul%
+    k=  0: λ_L= -0.0000, |ĥ|²=      0.00,    0.0%
+    k=  1: λ_L=  1.4662, |ĥ|²=   1452.13,   25.0%
+    k=  2: λ_L=  2.2090, |ĥ|²=   2520.73,   68.4%
+    k=  3: λ_L=  2.4396, |ĥ|²=    402.62,   75.3%
+    k=  4: λ_L=  2.6820, |ĥ|²=     52.27,   76.2%
+    k=  5: λ_L=  3.6545, |ĥ|²=    742.89,   89.0%
+    k=  6: λ_L=  4.1524, |ĥ|²=      0.10,   89.0%
+    k=  7: λ_L=  4.9844, |ĥ|²=      7.47,   89.1%
+    k=  8: λ_L=  5.0807, |ĥ|²=    179.19,   92.2%
+    k=  9: λ_L=  5.5928, |ĥ|²=     20.57,   92.6%
+    k= 10: λ_L=  6.0053, |ĥ|²=    114.26,   94.6%
+    k= 11: λ_L=  6.2850, |ĥ|²=      1.73,   94.6%
+    k= 12: λ_L=  6.8046, |ĥ|²=     66.38,   95.7%
+    k= 13: λ_L=  6.8870, |ĥ|²=     36.98,   96.4%
+    k= 14: λ_L=  7.1176, |ĥ|²=     88.51,   97.9%
+
+    Dirichlet energy E(H) = 2.7105
+    Max possible = 16.5795
+    Smoothness = 1 - E/E_max = 0.8365
+    (1.0 = perfectly smooth, 0.0 = maximally rough)
+
+    LOW-PASS RECONSTRUCTION OF H:
+    k=   1 modes: R² = 0.0000 (0.0%)
+    k=   2 modes: R² = 0.2500 (25.0%)
+    k=   3 modes: R² = 0.6840 (68.4%)
+    k=   5 modes: R² = 0.7623 (76.2%)
+    k=  10 modes: R² = 0.9259 (92.6%)
+    k=  17 modes: R² = 0.9878 (98.8%)
+    k=  34 modes: R² = 1.0000 (100.0%)
+
+  4. SPECTRAL CLUSTERING
+    Fiedler bipartition: A=9, B=25
+    Mean H: A=7.4, B=28.0
+    SC count: A=4, B=8
+    Cut edges: 29/143 (20.3%)
+    Normalized cut: 0.5653
+
+  5. QUANTUM WALK ON THE METAGRAPH
+    Start: node 0 (H=1, transitive)
+    Target: node 22 (H=45, regular)
+
+         t   P(trans)     P(reg)      P(SC)        <H>     spread
+       0.1     0.9421     0.0000     0.9609       1.36       1.94
+       0.5     0.2681     0.0008     0.4367      11.06      11.19
+       1.0     0.0105     0.0030     0.3810      27.73      13.46
+       2.0     0.0085     0.0164     0.3196      24.64      11.47
+       5.0     0.0693     0.0993     0.4404      23.55      14.28
+      10.0     0.0095     0.0276     0.3199      23.56      14.74
+      20.0     0.0943     0.0343     0.3791      21.40      15.20
+
+    CLASSICAL walk (same times):
+         t   P(trans)     P(reg)        <H>
+         1     0.0000     0.0000       7.00
+         2     0.1390     0.0000      12.36
+         5     0.0286     0.0051      19.38
+        10     0.0229     0.0098      22.09
+        20     0.0210     0.0105      22.50
+        50     0.0210     0.0105      22.51
+
+  6. SPECTRAL ZETA FUNCTION
+    ζ_G(s) = Σ λ_L^(-s):
+    s=0.5: ζ_G = 12.700394
+    s=1.0: ζ_G = 5.483446
+    s=1.5: ζ_G = 2.693667
+    s=2.0: ζ_G = 1.499517
+    s=3.0: ζ_G = 0.620535
+    s=4.0: ζ_G = 0.323463
+
+    det'(L) = 62646123962659535927669424128.0000
+    Spanning trees ≈ 1842533057725280436122288128.0
+
+  Building G_7/Z_2... done (3.8s)
+
+########################################################################
+  n = 7: CREATIVE SPECTRAL ANALYSIS (V=272, E=2123)
+########################################################################
+
+  1. RANDOM MATRIX UNIVERSALITY
+    Spacing statistics (V=272):
+    Mean spacing (normalized): 1.0000 (GOE≈1, Poisson=1)
+    Var(spacing): 13.1327 (GOE≈0.273, Poisson=1)
+    P(s < 0.1): 0.0480 (GOE≈0, Poisson≈0.095)
+    Mean ratio r̃: 0.5651 (GOE≈0.531, Poisson≈0.386)
+    Classification: GOE-like
+
+  2. HEAT KERNEL / PARTITION FUNCTION
+    Z(β) = tr(exp(-β·L)):
+    β= 0.01: Z=    233.1577, S(entropy)=  5.6038, <E>= 15.2065
+    β= 0.10: Z=     69.9311, S(entropy)=  5.4065, <E>= 11.5900
+    β= 0.50: Z=      5.3643, S(entropy)=  3.3206, <E>=  3.2816
+    β= 1.00: Z=      2.0434, S(entropy)=  1.8041, <E>=  1.0895
+    β= 2.00: Z=      1.2252, S(entropy)=  0.6279, <E>=  0.2124
+    β= 5.00: Z=      1.0144, S(entropy)=  0.0746, <E>=  0.0121
+    β=10.00: Z=      1.0002, S(entropy)=  0.0019, <E>=  0.0002
+
+    Spectral dimension d_s(t):
+    t=  0.0100: d_s =  0.365
+    t=  0.0298: d_s =  1.015
+    t=  0.0886: d_s =  2.413
+    t=  0.2637: d_s =  3.531
+    t=  0.7848: d_s =  2.294
+    t=  2.3357: d_s =  0.481
+    t=  6.9519: d_s =  0.014
+    d_s at small t → 0.365 (≈ geometric dimension)
+    d_s at large t → 0.014 (= 0 for finite graph)
+
+  3. GRAPH SIGNAL PROCESSING: H AS SIGNAL
+    Graph Fourier Transform of H:
+    Frequency  Eigenvalue  Power    Cumul%
+    k=  0: λ_L= -0.0000, |ĥ|²=      0.00,    0.0%
+    k=  1: λ_L=  0.8493, |ĥ|²=  21107.63,    4.1%
+    k=  2: λ_L=  2.0745, |ĥ|²= 168480.62,   36.9%
+    k=  3: λ_L=  2.4366, |ĥ|²=  30859.27,   42.9%
+    k=  4: λ_L=  2.4582, |ĥ|²=  19690.98,   46.8%
+    k=  5: λ_L=  2.6308, |ĥ|²=   2114.39,   47.2%
+    k=  6: λ_L=  3.0062, |ĥ|²= 118488.10,   70.2%
+    k=  7: λ_L=  3.2568, |ĥ|²=  46286.25,   79.2%
+    k=  8: λ_L=  3.5968, |ĥ|²=     81.20,   79.3%
+    k=  9: λ_L=  3.6823, |ĥ|²=     20.15,   79.3%
+    k= 10: λ_L=  4.0254, |ĥ|²=  12470.71,   81.7%
+    k= 11: λ_L=  4.1189, |ĥ|²=   8846.42,   83.4%
+    k= 12: λ_L=  4.3445, |ĥ|²=   7160.55,   84.8%
+    k= 13: λ_L=  4.4571, |ĥ|²=  11824.07,   87.1%
+    k= 14: λ_L=  4.9451, |ĥ|²=  12820.46,   89.6%
+
+    Dirichlet energy E(H) = 3.0831
+    Max possible = 30.9036
+    Smoothness = 1 - E/E_max = 0.9002
+    (1.0 = perfectly smooth, 0.0 = maximally rough)
+
+    LOW-PASS RECONSTRUCTION OF H:
+    k=   1 modes: R² = -0.0000 (-0.0%)
+    k=   2 modes: R² = 0.0411 (4.1%)
+    k=   3 modes: R² = 0.3691 (36.9%)
+    k=   5 modes: R² = 0.4676 (46.8%)
+    k=  10 modes: R² = 0.7927 (79.3%)
+    k= 136 modes: R² = 0.9994 (99.9%)
+    k= 272 modes: R² = 1.0000 (100.0%)
+
+  4. SPECTRAL CLUSTERING
+    Fiedler bipartition: A=17, B=255
+    Mean H: A=145.1, B=76.2
+    SC count: A=14, B=74
+    Cut edges: 128/2123 (6.0%)
+    Normalized cut: 0.7124
+
+  5. QUANTUM WALK ON THE METAGRAPH
+    Start: node 0 (H=1, transitive)
+    Target: node 245 (H=189, regular)
+
+         t   P(trans)     P(reg)      P(SC)        <H>     spread
+       0.1     0.9147     0.0000     0.9427       1.81       4.08
+       0.5     0.1445     0.0000     0.3938      31.29      34.67
+       1.0     0.0017     0.0006     0.3894      91.65      48.50
+       2.0     0.0130     0.0010     0.2777      63.00      47.47
+       5.0     0.0057     0.0070     0.3799      84.61      46.97
+      10.0     0.0063     0.0063     0.3661      76.36      48.51
+      20.0     0.0178     0.0026     0.3353      80.57      46.59
+
+    CLASSICAL walk (same times):
+         t   P(trans)     P(reg)        <H>
+         1     0.0000     0.0000       9.67
+         2     0.0926     0.0000      21.42
+         5     0.0094     0.0000      47.42
+        10     0.0044     0.0001      68.91
+        20     0.0023     0.0002      78.67
+        50     0.0021     0.0002      79.78
+
+  6. SPECTRAL ZETA FUNCTION
+    ζ_G(s) = Σ λ_L^(-s):
+    s=0.5: ζ_G = 75.441637
+    s=1.0: ζ_G = 23.531369
+    s=1.5: ζ_G = 8.809414
+    s=2.0: ζ_G = 4.286976
+    s=3.0: ζ_G = 2.265592
+    s=4.0: ζ_G = 2.118826
+/Users/e/Documents/GitHub/math/04-computation/spectral_creative_s269.py:377: RuntimeWarning: overflow encountered in exp
+  det_val = np.exp(log_det)
+
+    det'(L) = inf
+    Spanning trees ≈ inf
+
+DONE. opus-2026-03-23-S269
