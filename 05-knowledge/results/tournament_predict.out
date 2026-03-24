@@ -1,0 +1,92 @@
+tournament_predict v1.0.0 -- Demo
+======================================================================
+
+1. TRENDING SERIES (should predict positive direction)
+TournamentPredictor v1.0.0
+  Window:        16
+  Position:      100
+  Score entropy: 0.918
+  Transitivity:  1.000
+  C3 density:    0.000
+  Upset rate:    0.075
+  Momentum:      +0.733
+  Direction:     +0.660
+  Anomaly score: 1.24
+  Regime shift:  0.83
+
+2. MEAN-REVERTING SERIES (should show high c3, low momentum)
+TournamentPredictor v1.0.0
+  Window:        16
+  Position:      100
+  Score entropy: 0.918
+  Transitivity:  1.000
+  C3 density:    0.000
+  Upset rate:    0.092
+  Momentum:      +0.867
+  Direction:     +0.780
+  Anomaly score: 1.40
+  Regime shift:  3.35
+
+3. REGIME CHANGE (two phases with different dynamics)
+TournamentPredictor v1.0.0
+  Window:        16
+  Position:      100
+  Score entropy: 0.918
+  Transitivity:  1.000
+  C3 density:    0.000
+  Upset rate:    0.408
+  Momentum:      +0.733
+  Direction:     +0.660
+  Anomaly score: 1.09
+  Regime shift:  2.59
+  Regime change score: 2.59
+
+4. RANDOM WALK (no predictable direction)
+TournamentPredictor v1.0.0
+  Window:        16
+  Position:      100
+  Score entropy: 0.918
+  Transitivity:  1.000
+  C3 density:    0.000
+  Upset rate:    0.175
+  Momentum:      +0.200
+  Direction:     +0.180
+  Anomaly score: 1.23
+  Regime shift:  1.57
+
+5. ANOMALY DETECTION
+  Found 8 anomalies:
+    Position 23: score=2.07 value=51.1
+    Position 24: score=2.51 value=52.9
+    Position 30: score=2.36 value=46.6
+    Position 44: score=2.19 value=47.2
+    Position 46: score=2.01 value=48.3
+    Position 54: score=2.01 value=50.2
+    Position 56: score=2.48 value=52.8
+    Position 57: score=2.09 value=50.2
+
+6. STREAMING MODE
+  Step   Value    Dir   Anom  Trans     C3
+     7    58.0 +0.13  0.00 1.000 0.000
+     8    55.4 -0.64  0.00 1.000 0.000
+     9    52.3 +0.45  0.00 1.000 0.000
+    10    48.4 +0.45  0.00 1.000 0.000
+    11    45.2 +0.45  1.28 1.000 0.000
+    12    43.3 +0.45  1.11 1.000 0.000
+    13    40.8 +0.45  0.95 1.000 0.000
+    14    39.0 +0.45  0.84 1.000 0.000
+    15    40.4 +0.32  0.66 1.000 0.000
+    16    40.0 +0.32  0.50 1.000 0.000
+    17    44.2 -0.19  2.33 1.000 0.000
+    18    47.6 +0.90  2.37 1.000 0.000
+    19    51.7 +0.90  1.90 1.000 0.000
+    20    53.9 +0.90  1.73 1.000 0.000
+    21    57.5 +0.90  1.77 1.000 0.000
+    22    58.7 +0.90  1.56 1.000 0.000
+    23    58.8 +0.90  1.50 1.000 0.000
+    24    58.5 +0.39  1.21 1.000 0.000
+    25    57.9 +0.13  0.89 1.000 0.000
+    26    55.5 -0.39  0.43 1.000 0.000
+    27    54.8 -0.64  0.74 1.000 0.000
+    28    50.7 +0.45  1.03 1.000 0.000
+    29    48.2 +0.45  1.13 1.000 0.000

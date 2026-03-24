@@ -1,0 +1,29 @@
+tpress v5.0.0 -- Tournament-Powered Compressor
+====================================================================================================
+
+             Data      Raw       v5    zlib9      bz2     lzma     Best  v5/best              Pipeline      ms
+  ------------------------------------------------------------------------------------------------------------
+       counter_4K    4096B      26B     315B     657B     324B     315B  12.115x           rev+d+zlib6   1465ms WIN
+          sine_4K    4096B     219B     711B    1073B     604B     604B   2.758x          delta2+zlib9   1522ms WIN
+      gradient_2d    4096B      33B     243B     461B     232B     232B   7.030x            d+s4+zlib6   1535ms WIN
+        quadratic    4096B      33B    2089B    2843B    1952B    1952B  59.152x          delta2+zlib6   1476ms WIN
+       english_4K    4096B      75B      79B     137B     136B      79B   1.053x              s3+zlib6   1689ms WIN
+        python_2K    2048B      68B      68B     131B     124B      68B   1.000x             raw+zlib6   1487ms TIE
+          json_4K    4096B      77B      79B     133B     132B      79B   1.026x              s2+zlib6   1617ms WIN
+           log_4K    4096B      70B      73B     115B     124B      73B   1.043x          xor+s4+zlib6   1675ms WIN
+          html_4K    4000B     104B     104B     176B     164B     104B   1.000x             raw+zlib6   1754ms TIE
+           csv_4K    4096B      83B      83B     148B     140B      83B   1.000x             raw+zlib6   1483ms TIE
+        CLAUDE.md   28404B   11079B   11877B   11087B   11272B   11087B   1.001x            sub128+bz2   3876ms TIE
+    formalrank.py   13186B    4224B    4346B    4274B    4244B    4244B   1.005x              rle+lzma   2147ms TIE
+     tpress_v4.py    8802B    3116B    3152B    3220B    3140B    3140B   1.008x              rle+lzma   1880ms WIN
+        random_4K    4096B    4107B    4107B    4562B    4156B    4107B   1.000x             raw+zlib1   1595ms TIE
+         zeros_4K    4096B      16B      26B      43B      92B      26B   1.625x             rle+zlib1   1453ms WIN
+       binary_exe    4096B      28B     315B     660B     332B     315B  11.250x           delta+zlib6   1503ms WIN
+      low_entropy    4096B    1158B    1333B    1161B    1408B    1161B   1.003x            s2+xor+bz2   1555ms TIE
+     mostly_zeros    4096B      26B     306B     445B     324B     306B  11.769x           rle+d+zlib1   1491ms WIN
+      english_64K   65536B     165B     260B     169B     184B     169B   1.024x            ungray+bz2   3586ms WIN
+       binary_64K   65536B      41B     585B     791B     384B     384B   9.366x           block+zlib6   3784ms WIN
+
+  SCORE: 13W 7T 0L / 20 tests
+  Win rate: 65%, Never-worse rate: 100%
+  Aggregate: v5 used 24,748B vs best-industry 28,528B (1.153x)
