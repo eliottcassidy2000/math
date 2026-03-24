@@ -1,0 +1,235 @@
+================================================================================
+  SEQUENCE BREAKDOWN BY CYCLE TYPE
+  opus-2026-03-24-S292
+================================================================================
+
+================================================================================
+  n = 3: 2 odd-cycle partitions
+================================================================================
+
+             partition      ccs   po   k   f         V_ct         T_ct      twin_ct       R_ct
+                  (3,)        2    1   1   0            4            0            0   0.500000
+             (1, 1, 1)        1    3   3   3            8           24           12   1.000000
+
+  TOTALS (÷ 6):
+    V = 2
+    T = 4
+    twin_SL = 2
+    E_twin = (T-twin)/2 = 1
+    E_exact = 1
+    residual = T - twin - 2E = 0
+    residual/2 = 0
+
+  DOMINANCE:
+    Identity [1^3] contributes 8/12 = 66.67% of V_sum
+    #1 non-identity: (3,) contributes 4/12 = 33.33%
+
+  T - twin PER PARTITION TYPE:
+               (1, 1, 1): T_ct-twin_ct =           12 (=         24 -         12)
+
+================================================================================
+  n = 4: 2 odd-cycle partitions
+================================================================================
+
+             partition      ccs   po   k   f         V_ct         T_ct      twin_ct       R_ct
+                (3, 1)        8    2   2   1           32            0            0   0.500000
+          (1, 1, 1, 1)        1    6   4   4           64          384           96   1.000000
+
+  TOTALS (÷ 24):
+    V = 4
+    T = 16
+    twin_SL = 4
+    E_twin = (T-twin)/2 = 6
+    E_exact = 5
+    residual = T - twin - 2E = 2
+    residual/2 = 1
+
+  DOMINANCE:
+    Identity [1^4] contributes 64/96 = 66.67% of V_sum
+    #1 non-identity: (3, 1) contributes 32/96 = 33.33%
+
+  T - twin PER PARTITION TYPE:
+            (1, 1, 1, 1): T_ct-twin_ct =          288 (=        384 -         96)
+
+================================================================================
+  n = 5: 3 odd-cycle partitions
+================================================================================
+
+             partition      ccs   po   k   f         V_ct         T_ct      twin_ct       R_ct
+                  (5,)       24    2   1   0           96            0            0   0.093750
+             (3, 1, 1)       20    4   3   2          320          320          160   0.312500
+       (1, 1, 1, 1, 1)        1   10   5   5         1024        10240         1280   1.000000
+
+  TOTALS (÷ 120):
+    V = 12
+    T = 88
+    twin_SL = 12
+    E_twin = (T-twin)/2 = 38
+    E_exact = 30
+    residual = T - twin - 2E = 16
+    residual/2 = 8
+
+  DOMINANCE:
+    Identity [1^5] contributes 1024/1440 = 71.11% of V_sum
+    #1 non-identity: (3, 1, 1) contributes 320/1440 = 22.22%
+    #2 non-identity: (5,) contributes 96/1440 = 6.67%
+
+  T - twin PER PARTITION TYPE:
+               (3, 1, 1): T_ct-twin_ct =          160 (=        320 -        160)
+         (1, 1, 1, 1, 1): T_ct-twin_ct =         8960 (=      10240 -       1280)
+
+================================================================================
+  n = 6: 4 odd-cycle partitions
+================================================================================
+
+             partition      ccs   po   k   f         V_ct         T_ct      twin_ct       R_ct
+                (3, 3)       40    5   2   0         1280            0            0   0.039062
+                (5, 1)      144    3   2   1         1152            0            0   0.035156
+          (3, 1, 1, 1)       40    7   4   3         5120        15360         3840   0.156250
+    (1, 1, 1, 1, 1, 1)        1   15   6   6        32768       491520        30720   1.000000
+
+  TOTALS (÷ 720):
+    V = 56
+    T = 704
+    twin_SL = 48
+    E_twin = (T-twin)/2 = 328
+    E_exact = 290
+    residual = T - twin - 2E = 76
+    residual/2 = 38
+
+  DOMINANCE:
+    Identity [1^6] contributes 32768/40320 = 81.27% of V_sum
+    #1 non-identity: (3, 1, 1, 1) contributes 5120/40320 = 12.70%
+    #2 non-identity: (3, 3) contributes 1280/40320 = 3.17%
+    #3 non-identity: (5, 1) contributes 1152/40320 = 2.86%
+
+  T - twin PER PARTITION TYPE:
+            (3, 1, 1, 1): T_ct-twin_ct =        11520 (=      15360 -       3840)
+      (1, 1, 1, 1, 1, 1): T_ct-twin_ct =       460800 (=     491520 -      30720)
+
+================================================================================
+  n = 7: 5 odd-cycle partitions
+================================================================================
+
+             partition      ccs   po   k   f         V_ct         T_ct      twin_ct       R_ct
+                  (7,)      720    3   1   0         5760            0            0   0.002747
+             (3, 3, 1)      280    7   3   1        35840            0            0   0.017090
+             (5, 1, 1)      504    5   3   2        16128        16128         8064   0.007690
+       (3, 1, 1, 1, 1)       70   11   5   4       143360       860160       107520   0.068359
+  (1, 1, 1, 1, 1, 1, 1)        1   21   7   7      2097152     44040192      1376256   1.000000
+
+  TOTALS (÷ 5040):
+    V = 456
+    T = 8912
+    twin_SL = 296
+    E_twin = (T-twin)/2 = 4308
+    E_exact = 4086
+    residual = T - twin - 2E = 444
+    residual/2 = 222
+
+  DOMINANCE:
+    Identity [1^7] contributes 2097152/2298240 = 91.25% of V_sum
+    #1 non-identity: (3, 1, 1, 1, 1) contributes 143360/2298240 = 6.24%
+    #2 non-identity: (3, 3, 1) contributes 35840/2298240 = 1.56%
+    #3 non-identity: (5, 1, 1) contributes 16128/2298240 = 0.70%
+    #4 non-identity: (7,) contributes 5760/2298240 = 0.25%
+
+  T - twin PER PARTITION TYPE:
+               (5, 1, 1): T_ct-twin_ct =         8064 (=      16128 -       8064)
+         (3, 1, 1, 1, 1): T_ct-twin_ct =       752640 (=     860160 -     107520)
+    (1, 1, 1, 1, 1, 1, 1): T_ct-twin_ct =     42663936 (=   44040192 -    1376256)
+
+================================================================================
+  n = 8: 6 odd-cycle partitions
+================================================================================
+
+             partition      ccs   po   k   f         V_ct         T_ct      twin_ct       R_ct
+                (5, 3)     2688    4   2   0        43008            0            0   0.000160
+                (7, 1)     5760    4   2   1        92160            0            0   0.000343
+          (3, 3, 1, 1)     1120   10   4   2      1146880      1146880       286720   0.004272
+          (5, 1, 1, 1)     1344    8   4   3       344064      1032192       258048   0.001282
+    (3, 1, 1, 1, 1, 1)      112   16   6   5      7340032     73400320      4587520   0.027344
+  (1, 1, 1, 1, 1, 1, 1, 1)        1   28   8   8    268435456   7516192768    117440512   1.000000
+
+  TOTALS (÷ 40320):
+    V = 6880
+    T = 188288
+    twin_SL = 3040
+    E_twin = (T-twin)/2 = 92624
+    E_exact = 91161
+    residual = T - twin - 2E = 2926
+    residual/2 = 1463
+
+  DOMINANCE:
+    Identity [1^8] contributes 268435456/277401600 = 96.77% of V_sum
+    #1 non-identity: (3, 1, 1, 1, 1, 1) contributes 7340032/277401600 = 2.65%
+    #2 non-identity: (3, 3, 1, 1) contributes 1146880/277401600 = 0.41%
+    #3 non-identity: (5, 1, 1, 1) contributes 344064/277401600 = 0.12%
+    #4 non-identity: (7, 1) contributes 92160/277401600 = 0.03%
+    #5 non-identity: (5, 3) contributes 43008/277401600 = 0.02%
+
+  T - twin PER PARTITION TYPE:
+            (3, 3, 1, 1): T_ct-twin_ct =       860160 (=    1146880 -     286720)
+            (5, 1, 1, 1): T_ct-twin_ct =       774144 (=    1032192 -     258048)
+      (3, 1, 1, 1, 1, 1): T_ct-twin_ct =     68812800 (=   73400320 -    4587520)
+    (1, 1, 1, 1, 1, 1, 1, 1): T_ct-twin_ct =   7398752256 (= 7516192768 -  117440512)
+
+================================================================================
+  n = 9: 8 odd-cycle partitions
+================================================================================
+
+  TOTALS (÷ 362880):
+    V = 191536
+    T = 6847200
+    twin_SL = 54256
+    E_twin = (T-twin)/2 = 3396472
+    E_exact = 3380751
+    residual = T - twin - 2E = 31442
+    residual/2 = 15721
+
+================================================================================
+  n = 10: 10 odd-cycle partitions
+================================================================================
+
+  TOTALS (÷ 3628800):
+    V = 9733056
+    T = 437069312
+    twin_SL = 1716608
+    E_twin = (T-twin)/2 = 217676352
+
+================================================================================
+  THE RESIDUAL BREAKDOWN QUESTION
+================================================================================
+
+  E = (T - twin_SL - residual) / 2
+
+  We know T and twin_SL break down by partition type.
+  The DIFFERENCE T - twin_SL also breaks down:
+
+  (T - twin)_ct = ccs × C(f,2) × 2^po × [1 - 2^{1-k+1}/2^{po}]
+                = ccs × C(f,2) × [2^po - 2^{po-k+2}]
+                = ccs × C(f,2) × 2^{po-k+2} × [2^{k-2} - 1]
+
+  For identity [1^n]: k=n, so [2^{n-2} - 1] × ccs × C(n,2) × 2^{m-n+2}
+  For single 3-cycle [3,1^{n-3}]: k=n-2, [2^{n-4} - 1] × ...
+
+  This means T - twin = Σ partition_contributions, each computable.
+  And 2E = (T - twin) - residual.
+
+  The residual is the PART that doesn't factor by partition type.
+  It comes from MULTI-EDGE collisions: two different partitions
+  contributing to the SAME metagraph edge. This is intrinsically
+  non-factorizable.
+
+  BUT: maybe we can bound the residual by bounding the collision rate.
+
+    n       T-twin   residual    ratio
+    3            2          0   0.0000
+    4           12          2   0.1667
+    5           76         16   0.2105
+    6          656         76   0.1159
+    7         8616        444   0.0515
+    8       185248       2926   0.0158
+    9      6792944      31442   0.0046
+
+DONE.
