@@ -1,0 +1,310 @@
+
+########################################################################
+  n = 4: GAPS IN THE WIGGLY METAGRAPH
+########################################################################
+  Built in 0.0s. V=3, m=3, 2^m=8
+
+  EDGE/GAP COUNTS:
+    Total class pairs: 3
+    Wiggly edges: 3 (100.0%)
+    GAPS (non-edges): 0 (0.0%)
+
+  DEGREE DISTRIBUTION:
+    Min degree: 2 (most isolated)
+    Max degree: 2 (most connected)
+    Mean degree: 2.00
+
+  MOST ISOLATED CLASSES (fewest wiggly neighbors):
+    Class 0 (H=1, SC): degree=2, neighbors H=[3, 5]
+    Class 1 (H=3, NS): degree=2, neighbors H=[1, 5]
+    Class 2 (H=5, SC): degree=2, neighbors H=[1, 3]
+
+  HAMMING DISTANCES FOR GAPS:
+
+  METAGRAPH DIAMETER:
+    Diameter: 1
+    Radius: 1
+    Center nodes: [0, 1, 2]
+
+########################################################################
+  n = 5: GAPS IN THE WIGGLY METAGRAPH
+########################################################################
+  Built in 0.0s. V=10, m=6, 2^m=64
+
+  EDGE/GAP COUNTS:
+    Total class pairs: 45
+    Wiggly edges: 21 (46.7%)
+    GAPS (non-edges): 24 (53.3%)
+
+  DEGREE DISTRIBUTION:
+    Min degree: 2 (most isolated)
+    Max degree: 7 (most connected)
+    Mean degree: 4.20
+
+  MOST ISOLATED CLASSES (fewest wiggly neighbors):
+    Class 7 (H=15, SC): degree=2, neighbors H=[11, 13]
+    Class 1 (H=3, NS): degree=3, neighbors H=[1, 5, 9]
+    Class 8 (H=3, SC): degree=3, neighbors H=[1, 5, 15]
+    Class 9 (H=15, SC): degree=3, neighbors H=[3, 9, 13]
+    Class 0 (H=1, SC): degree=4, neighbors H=[3, 3, 5, 9]
+
+  HAMMING DISTANCES FOR GAPS:
+    Min Hamming distance distribution for gaps:
+      distance 2: 20 gaps (83.3%)
+      distance 3: 4 gaps (16.7%)
+
+    DISTANCE-2 GAPS (closest non-connected pairs):
+      (0,3): H=(1,11), SC=(SC,SC)
+      (0,4): H=(1,13), SC=(SC,SC)
+      (0,5): H=(1,9), SC=(SC,SC)
+      (0,9): H=(1,15), SC=(SC,SC)
+      (1,3): H=(3,11), SC=(NS,SC)
+      (1,4): H=(3,13), SC=(NS,SC)
+      (1,6): H=(3,9), SC=(NS,SC)
+      (1,8): H=(3,3), SC=(NS,SC)
+      (2,7): H=(5,15), SC=(NS,SC)
+      (2,9): H=(5,15), SC=(NS,SC)
+
+    FARTHEST GAPS (distance 3):
+      (0,7): H=(1,15)
+      (1,7): H=(3,15)
+      (1,9): H=(3,15)
+      (7,8): H=(15,3)
+
+  METAGRAPH DIAMETER:
+    Diameter: 3
+    Radius: 2
+    Center nodes: [2, 3, 4, 5, 6]
+
+  |ΔH| FOR EDGES VS GAPS:
+    Edges: mean |ΔH| = 4.00, max = 12
+    Gaps:  mean |ΔH| = 8.08, max = 14
+
+    |ΔH| threshold analysis:
+    |ΔH| ≤    0: 1 edges, 2 gaps → 33% edges
+    |ΔH| ≤    2: 10 edges, 2 gaps → 83% edges
+    |ΔH| ≤    4: 15 edges, 4 gaps → 79% edges
+    |ΔH| ≤    6: 18 edges, 10 gaps → 64% edges
+    |ΔH| ≤    8: 20 edges, 13 gaps → 61% edges
+    |ΔH| ≤   10: 20 edges, 18 gaps → 53% edges
+    |ΔH| ≤   12: 21 edges, 22 gaps → 49% edges
+    |ΔH| ≤   14: 21 edges, 24 gaps → 47% edges
+
+########################################################################
+  n = 6: GAPS IN THE WIGGLY METAGRAPH
+########################################################################
+  Built in 0.2s. V=34, m=10, 2^m=1024
+
+  EDGE/GAP COUNTS:
+    Total class pairs: 561
+    Wiggly edges: 143 (25.5%)
+    GAPS (non-edges): 418 (74.5%)
+
+  DEGREE DISTRIBUTION:
+    Min degree: 2 (most isolated)
+    Max degree: 13 (most connected)
+    Mean degree: 8.41
+
+  MOST ISOLATED CLASSES (fewest wiggly neighbors):
+    Class 32 (H=9, SC): degree=2, neighbors H=[3, 17]
+    Class 13 (H=15, NS): degree=3, neighbors H=[11, 13, 33]
+    Class 22 (H=45, SC): degree=3, neighbors H=[29, 37, 41]
+    Class 28 (H=45, SC): degree=3, neighbors H=[29, 37, 43]
+    Class 1 (H=3, NS): degree=5, neighbors H=[1, 5, 9, 9, 15]
+
+  HAMMING DISTANCES FOR GAPS:
+    Min Hamming distance distribution for gaps:
+      distance 2: 278 gaps (66.5%)
+      distance 3: 121 gaps (28.9%)
+      distance 4: 19 gaps (4.5%)
+
+    DISTANCE-2 GAPS (closest non-connected pairs):
+      (0,3): H=(1,23), SC=(SC,NS)
+      (0,4): H=(1,33), SC=(SC,SC)
+      (0,5): H=(1,23), SC=(SC,NS)
+      (0,6): H=(1,15), SC=(SC,NS)
+      (0,9): H=(1,37), SC=(SC,SC)
+      (0,10): H=(1,11), SC=(SC,NS)
+      (0,11): H=(1,13), SC=(SC,NS)
+      (0,12): H=(1,9), SC=(SC,NS)
+      (0,15): H=(1,27), SC=(SC,NS)
+      (0,16): H=(1,15), SC=(SC,NS)
+
+    FARTHEST GAPS (distance 4):
+      (0,22): H=(1,45)
+      (0,24): H=(1,43)
+      (0,28): H=(1,45)
+      (1,22): H=(3,45)
+      (1,28): H=(3,45)
+
+  METAGRAPH DIAMETER:
+    Diameter: 4
+    Radius: 3
+    Center nodes: [4, 5, 6, 7, 8, 10, 11, 12, 15, 17, 18, 19, 20, 21, 26, 27, 29, 31, 33]
+
+  |ΔH| FOR EDGES VS GAPS:
+    Edges: mean |ΔH| = 8.53, max = 32
+    Gaps:  mean |ΔH| = 17.87, max = 44
+
+    |ΔH| threshold analysis:
+    |ΔH| ≤    0: 5 edges, 15 gaps → 25% edges
+    |ΔH| ≤    2: 26 edges, 30 gaps → 46% edges
+    |ΔH| ≤    4: 50 edges, 56 gaps → 47% edges
+    |ΔH| ≤    6: 69 edges, 78 gaps → 47% edges
+    |ΔH| ≤    8: 88 edges, 105 gaps → 46% edges
+    |ΔH| ≤   10: 102 edges, 126 gaps → 45% edges
+    |ΔH| ≤   12: 112 edges, 153 gaps → 42% edges
+    |ΔH| ≤   14: 121 edges, 187 gaps → 39% edges
+    |ΔH| ≤   16: 128 edges, 208 gaps → 38% edges
+    |ΔH| ≤   18: 135 edges, 230 gaps → 37% edges
+
+========================================================================
+  THE GAPS ARE THE STRUCTURE
+========================================================================
+
+  The wiggly metagraph's GAPS (non-edges) reveal:
+
+  1. MOST class pairs are NOT wiggly-connected at large n
+     (gaps dominate as V grows faster than edges)
+
+  2. Distance-2 gaps = classes reachable by 2 tile flips but not 1
+     These are "almost neighbors" — structurally close but not adjacent
+
+  3. The ΔH of gaps is LARGER than of edges
+     → large H-jumps require multiple tile flips
+     → the H-gradient is "smooth" at the wiggly scale
+
+  4. The diameter grows slowly (polynomial in n)
+     → all classes are polynomially close in the wiggly metric
+
+  5. The gaps encode the COARSE GEOMETRY of tournament space:
+     which structural changes require multi-step transformations.
+
+DONE.
+========================================================================
+  DEEP GAPS: WHAT FILLS ORDER ≥ 3?
+  opus-2026-03-24-S299
+========================================================================
+
+########################################################################
+  n = 5: DEEP GAPS (ORDER ≥ 3)
+########################################################################
+  V=10, m=6, 2^m=64
+  Computed in 0.0s
+  F_1 (orders 1..1): 21/45 edges (46.7%), 24 gaps remain
+  F_2 (orders 1..2): 41/45 edges (91.1%), 4 gaps remain
+  F_3 (orders 1..3): 45/45 edges (100.0%), 0 gaps remain
+  F_3 + complement: 45/45 (100.0%), 0 gaps remain
+
+  ORDER-3 ANALYSIS:
+    E[3] total: 41 edges
+    E[3] new (not in 1 or 2): 4
+    These fill the distance-3 gaps from S296
+
+    Gaps after orders 1+2+3: 0
+    *** ORDERS 1+2+3 ARE COMPLETE! ***
+    Every class pair is reachable by ≤ 3 tile flips.
+
+  ΔH BY ORDER:
+    Order 1 new edges: 21, mean |ΔH| = 4.0, range [0, 12]
+    Order 2 new edges: 20, mean |ΔH| = 7.2, range [0, 14]
+    Order 3 new edges: 4, mean |ΔH| = 12.5, range [12, 14]
+
+  STRUCTURAL ANALYSIS OF GAPS:
+    Distance-3 gaps: 4
+    Distance-4+ gaps: 0
+
+########################################################################
+  n = 6: DEEP GAPS (ORDER ≥ 3)
+########################################################################
+  V=34, m=10, 2^m=1024
+  Computed in 0.2s
+  F_1 (orders 1..1): 143/561 edges (25.5%), 418 gaps remain
+  F_2 (orders 1..2): 421/561 edges (75.0%), 140 gaps remain
+  F_3 (orders 1..3): 542/561 edges (96.6%), 19 gaps remain
+  F_3 + complement: 542/561 (96.6%), 19 gaps remain
+
+  ORDER-3 ANALYSIS:
+    E[3] total: 527 edges
+    E[3] new (not in 1 or 2): 121
+    These fill the distance-3 gaps from S296
+
+    Gaps after orders 1+2+3: 19
+    19 pairs still need order ≥ 4.
+
+    ORDER-≥4 GAPS:
+      (0,22): H=(1,45), SC=(SC,SC)
+      (0,24): H=(1,43), SC=(SC,NS)
+      (0,28): H=(1,45), SC=(SC,SC)
+      (1,22): H=(3,45), SC=(NS,SC)
+      (1,28): H=(3,45), SC=(NS,SC)
+      (1,30): H=(3,41), SC=(NS,SC)
+      (2,28): H=(9,45), SC=(NS,SC)
+      (3,32): H=(23,9), SC=(NS,SC)
+      (9,32): H=(37,9), SC=(SC,SC)
+      (13,32): H=(15,9), SC=(NS,SC)
+      (14,22): H=(3,45), SC=(NS,SC)
+      (14,28): H=(3,45), SC=(NS,SC)
+      (14,30): H=(3,41), SC=(NS,SC)
+      (16,22): H=(15,45), SC=(NS,SC)
+      (16,32): H=(15,9), SC=(NS,SC)
+      (23,32): H=(33,9), SC=(NS,SC)
+      (24,32): H=(43,9), SC=(NS,SC)
+      (25,32): H=(37,9), SC=(NS,SC)
+      (30,32): H=(41,9), SC=(SC,SC)
+
+    Checking order 4...
+    Order-4 fills: 19 of 19 remaining gaps
+    Gaps after 1+2+3+4: 0
+    *** ORDERS 1+2+3+4 ARE COMPLETE! ***
+
+  ΔH BY ORDER:
+    Order 1 new edges: 143, mean |ΔH| = 8.5, range [0, 32]
+    Order 2 new edges: 278, mean |ΔH| = 14.7, range [0, 36]
+    Order 3 new edges: 121, mean |ΔH| = 22.8, range [0, 40]
+
+  STRUCTURAL ANALYSIS OF GAPS:
+    Distance-3 gaps: 121
+    Distance-4+ gaps: 19
+    Distance-4+ details:
+      (0,22): distance=4, H=(1,45)
+      (0,24): distance=4, H=(1,43)
+      (0,28): distance=4, H=(1,45)
+      (1,22): distance=4, H=(3,45)
+      (1,28): distance=4, H=(3,45)
+      (1,30): distance=4, H=(3,41)
+      (2,28): distance=4, H=(9,45)
+      (3,32): distance=4, H=(23,9)
+      (9,32): distance=4, H=(37,9)
+      (13,32): distance=4, H=(15,9)
+      (14,22): distance=4, H=(3,45)
+      (14,28): distance=4, H=(3,45)
+      (14,30): distance=4, H=(3,41)
+      (16,22): distance=4, H=(15,45)
+      (16,32): distance=4, H=(15,9)
+      (23,32): distance=4, H=(33,9)
+      (24,32): distance=4, H=(43,9)
+      (25,32): distance=4, H=(37,9)
+      (30,32): distance=4, H=(41,9)
+
+========================================================================
+  THE COMPLETENESS THRESHOLD
+========================================================================
+
+  The COMPLETENESS ORDER k* = minimum k such that
+  F_k = orders 1..k fills ALL class pairs.
+
+  n=4: k* = 1 (wiggly alone is complete)
+  n=5: k* = ?
+  n=6: k* = ?
+
+  If k* ≤ diameter of the metagraph, then every gap
+  is accountable by the Hamming distance structure.
+
+  RECURSIVE STRUCTURE:
+  The gaps may correspond to classes differing in their
+  MODE B inner structure by a coordinated multi-tile change.
+  This would connect the gap order to the recursive depth
+  of the staircase decomposition.
+
+DONE.
