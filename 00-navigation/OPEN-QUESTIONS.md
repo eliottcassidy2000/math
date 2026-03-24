@@ -765,7 +765,41 @@ G_n = Q_{C(n,2)} / S_n is a genuinely new mathematical object (no prior literatu
 
 **STRUCTURAL LAWS (19+ verified):** DAG, BBK impossibility, rib crossover, spine ~4-regular, ribs linear in n, sea dominates, ΔH=2^(n-2), cell uniformity, lattice oscillation, etc.
 
-**REMAINING:** Exact formula for gap_orbits (= 2,5,20,86,490,3703,47889); twin_SL residual; spectral gap behavior; chi=n-1 conjecture proof.
+**REMAINING:** Exact formula for gap_orbits (= 2,5,20,86,490,3703,47889); twin_SL residual; chi=n-1 conjecture proof (greedy fails at n≥6).
 
 **Source:** opus S211-S249, kind-pasteur S20bo-S20dj. Library: `04-computation/tournament_metagraph.py`
+
+---
+
+## OPEN-Q-040: THE KRAWTCHOUK FRAMEWORK (sessions S291-S312, 2026-03-24)
+
+🟡 **The Krawtchouk coordinate system for tournament space**
+
+**RESOLVED sub-problems:**
+1. ✅ **Tournament Counting Theorem** (S291): V_n×n!/2^m = 1 + Σ(1/k)×n↓k×2^{(k²-1)/2-(k-1)n}. Euler product with poles at 4,16,64,... controlled by 1/3. D₃(0) = 128/81.
+2. ✅ **Band-limitedness** (S305,S310,S311): H is EXACTLY zero in upper Walsh spectrum (k ≥ m/2). PROVED at n=5,6. Mechanism: polynomial degree + complement cancellation.
+3. ✅ **Krawtchouk 3-axis system** (S307): B₁≈-H (r=-0.94), B₂≈-c₃ (r=-0.86), B₃=twist. SC classes have B_odd=0 exactly (Krawtchouk parity).
+4. ✅ **Diameter = A003141** (S306): max feedback arc set. Growth ~n²/4, not n-2 (small-n coincidence).
+5. ✅ **Paley→Dual Codes** (S306,S308): P₇+I→Hamming[7,4,3], P₂₃+I→Golay[23,12,7].
+6. ✅ **Not an association scheme** (S306): full algebra dim=35 vs needed 7 at n=5.
+7. ✅ **Spectral gap = 2/n explained** (S312): comes from K₁ spacing 2/m compressed by S_n quotient (factor m/n).
+8. ✅ **Waggly = all connections** (S296-S301): wiggly⊂waggly, blue/black⊂waggly. Completeness at k*=diam.
+9. ✅ **Waggly alphabet** (S302-S304): range-3 harmonic most neutral. Vertex-count law. All-same-range combos special.
+10. ✅ **Practical tools** (S308-S309): pre-filter eliminates 98% of canon calls. tournament_tools.py library. tournament_codec.py (kind-pasteur).
+
+**OPEN sub-problems (the 10 boundary questions from S307):**
+1. 🟡 B1: Prove H band-limited for ALL n (not just n=5,6,7)
+2. 🟢 B2: Exact constant in A003141 n^{3/2} correction
+3. 🟢 B3: Is transitive always a diameter endpoint?
+4. 🟢 B4: Does K₁-H correlation → 0 or stabilize? (0.94→0.89→0.83)
+5. 🟡 B5: Exact neutrality formula SL(d,n) as function of distance
+6. 🟢 B6: Width W(H) asymptotic distribution
+7. 🟢 B7: Is there ANY partition giving an association scheme?
+8. 🟢 B8: Is range ⌊(n-1)/2⌋ always most neutral?
+9. 🔴 B9: β₂=0 for all tournaments (proof strategy via band-limitedness, S312)
+10. 🟡 B10: min-FAS(T) in terms of OCF invariants
+
+**Key new files:** euler_product_tournament_s291.py, waggly_layers_s297.py, waggly_completeness_s301.py, waggly_alphabet_s302.py, almost_1d_s305.py, krawtchouk_h_n7_s306.py, paley_codes_s306.py, tournament_tools.py, tournament_codec.py
+
+**Key reflections:** the-tiling-hypercube.md, the-boundary-between-1d-and-2d.md, euler-product-and-metagraph.md, paley-gives-dual-codes.md, h-is-band-limited.md, what-we-can-and-cannot-know.md, tournament-compression-and-beyond.md, terminology-evolution.md, diameter-is-feedback-arc-set.md
 

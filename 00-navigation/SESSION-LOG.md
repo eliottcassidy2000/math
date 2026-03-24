@@ -4,6 +4,20 @@ Chronological record of all sessions. Every new Claude instance adds an entry at
 
 Entry format:
 
+## opus-2026-03-24-S309 (doc update) — 2026-03-24
+
+**Account:** opus
+**Continuation of:** opus-2026-03-24-S291 through S312 (multi-agent)
+**Summary of work:** Comprehensive doc update integrating ALL S291-S312 findings from multiple opus sessions and kind-pasteur. Updated OPEN-QUESTIONS.md with OPEN-Q-040 (the Krawtchouk framework). Read and integrated: Euler product (S291), waggly lines (S292-S304), band-limitedness proof (S310-S311), Krawtchouk 3-axis (S307), twist=complement parity (S309), Paley→dual codes (S306), gap=2/n explained (S312), practical tools (S308-S309), tournament_codec (kind-pasteur-S20fx).
+
+**Key findings from OTHER agents integrated:**
+- S307: B₁≈-H, B₂≈-c₃, B₃=twist — 3-axis Krawtchouk coordinate system
+- S309: SC has B_odd=0 EXACTLY (Krawtchouk parity under complement)
+- S310: Band-limitedness CONFIRMED exactly via Walsh-Hadamard transform
+- S311: WHY H is band-limited: polynomial degree + complement cancellation
+- S312: gap=2/n from K₁ spacing 2/m compressed by S_n quotient
+- kind-pasteur-S20fx: tournament_codec.py (multi-level compression) and tournament_fingerprint.py
+
 ## opus-2026-03-24-S305 — 2026-03-24
 
 **Account:** opus
