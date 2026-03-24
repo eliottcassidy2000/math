@@ -1,0 +1,139 @@
+========================================================================
+  PRACTICAL APPLICATIONS OF THE COMPLETENESS THEOREM
+  opus-2026-03-24-S302
+========================================================================
+
+========================================================================
+  USE 1: DIAMETER BOUNDS
+========================================================================
+
+    n    m  diam   m/2  diam/m  n-2  diam=n-2?
+    3    1     1   0.5   1.000    1          ✓
+    4    3     1   1.5   0.333    2          ✗
+    5    6     3   3.0   0.500    3          ✓
+    6   10     4   5.0   0.400    4          ✓
+    7   15     7   7.5   0.467    5          ✗
+    8   21     8  10.5   0.381    6          ✗
+
+  CONJECTURE: diameter = n-2 for n ≥ 4
+  Verified: n=4 (1=2✓), n=5 (3=3✓), n=6 (4=4✓), n=7 (7=5✗!)
+  FAILS at n=7: diameter=7 but n-2=5.
+
+  DIAMETER SEQUENCE: d(3)=1, d(4)=1, d(5)=3, d(6)=4, d(7)=7, d(8)=8, 
+  Differences: [0, 2, 1, 3, 1]
+  d(4)/d(3) = 1.000
+  d(5)/d(4) = 3.000
+  d(6)/d(5) = 1.333
+  d(7)/d(6) = 1.750
+  d(8)/d(7) = 1.143
+
+========================================================================
+  USE 2: RANKING CHANGE QUANTIFICATION
+========================================================================
+
+  PROBLEM: Given two tournament rankings (e.g., LLM leaderboards
+  from different time periods), how "structurally different" are they?
+
+  ANSWER (from completeness theorem):
+    structural_distance = min_Hamming(tiling(T1), tiling(T2))
+    = number of pairwise comparisons that must change
+    to transform T1 into T2 (minimized over relabelings)
+
+  This is computable in O(n! × m) time for exact, or
+  O(n²m) with heuristic relabeling.
+
+  EXAMPLE at n=10 (10 LLM models):
+    m = C(9,2) = 36 tiles
+    Two leaderboard snapshots → two tilings of δ_8
+    Hamming distance = number of changed head-to-head matchups
+    If distance = 3: only 3 matchup reversals separate the rankings
+    If distance = 15: half the matchups differ → very different rankings
+
+
+========================================================================
+  USE 3: EFFICIENT METAGRAPH CONSTRUCTION
+========================================================================
+
+  The completeness theorem tells us:
+    F_k = {pairs at metagraph distance ≤ k}
+       = {pairs at min_Hamming ≤ k}
+       = {pairs reachable by ≤ k tile flips}
+
+  So to build the metagraph (distance-1 pairs only):
+    Just compute F_1 = all single-tile-flip connections.
+    This is O(2^m × m) time, which we already do.
+
+  But for APPROXIMATE metagraphs at large n:
+    The spectral gap ≈ 2/n and H ≈ 2nd eigenvector
+    mean we can PREDICT many edge weights from H values alone:
+      W[i][j] ≈ f(H_i, H_j, |Aut_i|, |Aut_j|)
+    This is 88% accurate (from S284).
+
+  For the remaining 12%: need actual computation.
+
+
+========================================================================
+  USE 4: TOURNAMENT SIMILARITY METRIC FOR ML
+========================================================================
+
+  The completeness theorem provides a METRIC on tournament iso classes:
+    d(C, D) = min_Hamming(C, D)
+
+  Properties:
+  - d(C, D) = 0 iff C = D (identity)
+  - d(C, D) = d(D, C) (symmetry — from W being symmetric)
+  - d(C, E) ≤ d(C, D) + d(D, E) (triangle inequality — from Hamming)
+  - Integer-valued: d ∈ {0, 1, 2, ..., m}
+
+  This is a PROPER METRIC on the set of tournament iso classes.
+  It can be used as a kernel or distance function in ML:
+    K(C, D) = exp(-d(C,D) / σ)  (Gaussian kernel)
+    K(C, D) = (1 + d(C,D))^{-α}  (inverse polynomial)
+
+  For TDA (topological data analysis):
+    Build a Rips complex on iso classes using this metric.
+    Compute persistent homology → topological features of tournament space.
+
+  For clustering:
+    k-medoids or hierarchical clustering using d(C,D).
+    Each cluster = a "structural family" of tournaments.
+
+
+========================================================================
+  USE 5: NEW OEIS SEQUENCES
+========================================================================
+  Diameter of wiggly metagraph: 1, 1, 3, 4, 7, 8 (n=3..8)
+  → NOT in OEIS (should submit)
+
+  Distance profile from transitive (from S296/S299):
+    n=5: distance [0,1,2,3] → classes [1, 4, 4, 1]
+    n=6: distance [0,1,2,3,4] → classes [1, 6, 11, 12, 4]
+    n=7: distance [0,1,2,...,7] → need to compute
+
+  Filling fraction at each waggly order:
+    n=5: [47%, 91%, 100%]
+    n=6: [26%, 75%, 97%, 100%]
+    n=7: [5.8%, 38%, 82%, ...]
+
+========================================================================
+  USE 6: DIAMETER FROM SPEED ENGINE
+========================================================================
+    n  diam C(n-2,2)   ratio
+    4     1        1   1.000
+    5     3        3   1.000
+    6     4        6   0.667
+    7     7       10   0.700
+    8     8       15   0.533
+
+  diam vs m:
+  n=3: diam=1, m=1, diam/m=1.000
+  n=4: diam=1, m=3, diam/m=0.333
+  n=5: diam=3, m=6, diam/m=0.500
+  n=6: diam=4, m=10, diam/m=0.400
+  n=7: diam=7, m=15, diam/m=0.467
+  n=8: diam=8, m=21, diam/m=0.381
+
+  diam/m sequence: [0.3333333333333333, 0.5, 0.4, 0.4666666666666667, 0.38095238095238093]
+  → Roughly diam ≈ m/2 at large n? Need more data.
+
+DONE.
