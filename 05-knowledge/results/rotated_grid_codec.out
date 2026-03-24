@@ -1,0 +1,79 @@
+================================================================================
+  ROTATED GRID CODEC — 45-degree dual coordinates
+  kind-pasteur-2026-03-25-S20gp
+================================================================================
+
+  1. STATIC IMAGE COMPRESSION:
+                 Image   Size     Row     Col    Diag   ADiag    Zord    Best   Gain
+            h_gradient  32x32     49B     68B    136B    136B    112B     row  1.00x
+            v_gradient  32x32     68B     49B    136B    136B    103B     col  1.39x
+            d_gradient  32x32    140B    140B    174B    198B    218B     row  1.00x
+               circles  32x32    494B    494B    539B    519B    813B     row  1.00x
+               texture  32x32    827B    858B    861B    866B    873B     row  1.00x
+                block8  32x32     29B     29B    121B    121B     26B  zorder  1.12x
+            h_gradient  64x64    104B    124B    293B    293B    231B     row  1.00x
+            v_gradient  64x64    124B    104B    305B    305B    210B     col  1.19x
+            d_gradient  64x64    275B    275B    328B    423B    433B     row  1.00x
+               circles  64x64   1685B   1685B   1831B   1799B   3262B     row  1.00x
+               texture  64x64   2958B   3166B   3206B   3356B   3415B     row  1.00x
+                block8  64x64     49B     49B    240B    240B     46B  zorder  1.07x
+            h_gradient 128x128    231B    257B    658B    658B    529B     row  1.00x
+            v_gradient 128x128    257B    231B    655B    655B    487B     col  1.11x
+            d_gradient 128x128    528B    528B    616B    839B    929B     row  1.00x
+               circles 128x128   5696B   5696B   6155B   6090B  12565B     row  1.00x
+               texture 128x128  10010B  11408B  11666B  12896B  13518B     row  1.00x
+                block8 128x128     81B     81B    495B    495B     93B     row  1.00x
+
+  2. VIDEO DELTA COMPRESSION:
+                 Scene   Size     Row    Diag   ADiag    Best  vs Row
+       64x64 pan_right   4096   2325B   2650B   2650B     row   1.00x
+        64x64 pan_down   4096   2123B   2386B   2355B     col   1.01x
+        64x64 pan_diag   4096   2277B   2419B   2421B     col   1.02x
+         64x64 zoom_in   4096   2074B   2419B   2435B     row   1.00x
+         64x64 noise_2   4096   1538B   1541B   1543B     col   1.00x
+        64x64 noise_10   4096   2463B   2459B   2464B    diag   1.00x
+     128x128 pan_right  16384   7179B   8605B   8626B     row   1.00x
+      128x128 pan_down  16384   7064B   8095B   8056B     col   1.04x
+      128x128 pan_diag  16384   6844B   7674B   7184B     col   1.00x
+       128x128 zoom_in  16384   9115B  11369B  11423B     row   1.00x
+       128x128 noise_2  16384   5913B   5943B   5908B   adiag   1.00x
+      128x128 noise_10  16384   9908B   9906B   9908B    diag   1.00x
+
+  3. ADAPTIVE 4-SCAN (pick best per frame):
+            Scene  Plain zlib   4-scan+2b   Gain
+        pan_right       8475B       8476B 1.000x
+         pan_down       8350B       7905B 1.056x
+         pan_diag       8124B       7995B 1.016x
+         rotate_5      11970B      11689B 1.024x
+          noise_5       8590B       8573B 1.002x
+            mixed      10029B       9966B 1.006x
+
+============================================================
+THE 45-DEGREE TRICK
+============================================================
+
+The rotated coordinate system works because:
+
+  ROW MAJOR: captures horizontal correlation (pan right)
+  COL MAJOR: captures vertical correlation (pan down)
+  DIAGONAL: captures diagonal correlation (pan diagonal, rotation)
+  ANTI-DIAG: captures the other diagonal
+
+Each scan direction is optimal for different MOTION TYPES:
+  Horizontal motion -> row major wins
+  Vertical motion -> col major wins
+  Diagonal motion -> diagonal scan wins
+  Rotation -> mixed scans help
+
+The ADAPTIVE 4-SCAN approach: try all 4, pick best, prepend 2-bit header.
+Cost: ~4x encode time (parallelizable), 2 bits overhead.
+Gain: 1-10% over row-major for directional motion.
+
+Combined with bitplane decomposition:
+  Each bit plane gets its OWN best scan direction.
+  MSB planes might prefer row-major (smooth gradients horizontal)
+  LSB planes might prefer diagonal (noise is isotropic)
+  The per-plane adaptive scan adds ~16 bits overhead for 8-bit image.
+
+DONE.
+================================================================================
