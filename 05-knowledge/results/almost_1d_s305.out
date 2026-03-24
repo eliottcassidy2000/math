@@ -1,0 +1,417 @@
+
+========================================================================
+  THE DIMENSIONALITY OF TOURNAMENT SPACE
+========================================================================
+
+  n=5: m=6, 10 merged classes
+
+  Eigenvalues > 0.1: 9 out of 10
+  Top eigenvalues: ['1.000', '0.503', '0.262', '0.199', '0.139', '0.038', '-0.166', '-0.264']
+  Spectral gap: 0.4974
+  Effective dimension (log V / log max_deg): 1.183
+
+  H-ordering:
+    Distinct H values: 7
+    Max width (classes per H level): 2
+    V_merged / distinct_H = 1.43 (avg width)
+    H range: [1, 15]
+    Edges between H-adjacent levels: 12 / 21 (57.1%)
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+    corr(graph_distance, |ΔH|) = 0.6289
+
+  WIDTH FUNCTION (classes per H level):
+    H=  1: 1  █
+    H=  3: 2  ██
+    H=  5: 1  █
+    H=  9: 2  ██
+    H= 11: 1  █
+    H= 13: 1  █
+    H= 15: 2  ██
+
+  EIGENVALUE RATIOS:
+    λ_0/λ_1 = 1.0000 / 0.5026 = 1.9895
+    λ_1/λ_2 = 0.5026 / 0.2625 = 1.9151
+    λ_2/λ_3 = 0.2625 / 0.1989 = 1.3196
+    λ_3/λ_4 = 0.1989 / 0.1391 = 1.4299
+    λ_4/λ_5 = 0.1391 / 0.0378 = 3.6799
+
+  n=6: m=10, 34 merged classes
+
+  Eigenvalues > 0.1: 25 out of 34
+  Top eigenvalues: ['1.000', '0.665', '0.503', '0.490', '0.470', '0.429', '0.345', '0.248']
+  Spectral gap: 0.3350
+  Effective dimension (log V / log max_deg): 1.375
+
+  H-ordering:
+    Distinct H values: 19
+    Max width (classes per H level): 3
+    V_merged / distinct_H = 1.79 (avg width)
+    H range: [1, 45]
+    Edges between H-adjacent levels: 38 / 143 (26.6%)
+    corr(graph_distance, |ΔH|) = 0.5439
+
+  WIDTH FUNCTION (classes per H level):
+    H=  1: 1  █
+    H=  3: 2  ██
+    H=  5: 2  ██
+    H=  9: 3  ███
+    H= 11: 1  █
+    H= 13: 1  █
+    H= 15: 3  ███
+    H= 17: 2  ██
+    H= 19: 1  █
+    H= 23: 2  ██
+    H= 25: 1  █
+    H= 27: 1  █
+    H= 29: 3  ███
+    H= 31: 1  █
+    H= 33: 3  ███
+    H= 37: 3  ███
+    H= 41: 1  █
+    H= 43: 1  █
+    H= 45: 2  ██
+
+  EIGENVALUE RATIOS:
+    λ_0/λ_1 = 1.0000 / 0.6650 = 1.5038
+    λ_1/λ_2 = 0.6650 / 0.5035 = 1.3208
+    λ_2/λ_3 = 0.5035 / 0.4903 = 1.0269
+    λ_3/λ_4 = 0.4903 / 0.4702 = 1.0427
+    λ_4/λ_5 = 0.4702 / 0.4286 = 1.0970
+
+
+========================================================================
+  THE STAIRCASE AS A SPACE-FILLING CURVE
+========================================================================
+
+
+  THE STAIRCASE TILING IS A DISCRETE SPACE-FILLING CURVE:
+
+  The m = C(n-1, 2) tiles of the staircase delta_{n-2} are arranged
+  in a right isosceles triangle. The standard tile ordering
+  (A, B, C, ...) follows a DIAGONAL TRAVERSAL:
+
+  For n=5 (6 tiles in a 3×3 triangle):
+    Row 0: A=(0,2) B=(0,3) C=(0,4)     ranges: 2, 3, 4
+    Row 1: D=(1,3) E=(1,4)             ranges: 2, 3
+    Row 2: F=(2,4)                     range:  2
+
+  The diagonal traversal (constant x+y) gives:
+    Diagonal 0: A (range 2)
+    Diagonal 1: B, D (ranges 3, 2)
+    Diagonal 2: C, E, F (ranges 4, 3, 2)
+
+  Each DIAGONAL has constant x+y = range + (something).
+  Actually: tile (x,y) = (lo, hi) has range = hi - lo.
+  And the anti-diagonal coordinate is lo + hi.
+
+  The ANTI-DIAGONAL traversal maps the 2D staircase to a 1D sequence.
+  This is the natural "space-filling" direction of the triangle.
+
+  THE SQRT(2) RATIO:
+  The staircase has legs of length n-2 and hypotenuse of length
+  (n-2)×sqrt(2). The number of tiles on each anti-diagonal is:
+  d=0: 1 tile (corner)
+  d=1: 2 tiles
+  ...
+  d=k: min(k+1, n-2-k) tiles (reaches max at d = floor((n-3)/2))
+  d=n-3: 1 tile (opposite corner)
+
+  This is the WIDTH FUNCTION of the staircase along the diagonal.
+  It grows from 1 to floor(n/2)-1, then shrinks back to 1.
+  This is a TRIANGULAR shape — the 1D shadow of the 2D triangle.
+
+  n=5 (m=6 tiles): anti-diagonal distribution:
+    d=2: 1 tiles  █
+    d=3: 1 tiles  █
+    d=4: 2 tiles  ██
+    d=5: 1 tiles  █
+    d=6: 1 tiles  █
+    Max width: 2, #diagonals: 5, avg: 1.2
+
+  n=6 (m=10 tiles): anti-diagonal distribution:
+    d=2: 1 tiles  █
+    d=3: 1 tiles  █
+    d=4: 2 tiles  ██
+    d=5: 2 tiles  ██
+    d=6: 2 tiles  ██
+    d=7: 1 tiles  █
+    d=8: 1 tiles  █
+    Max width: 2, #diagonals: 7, avg: 1.4
+
+  n=7 (m=15 tiles): anti-diagonal distribution:
+    d=2: 1 tiles  █
+    d=3: 1 tiles  █
+    d=4: 2 tiles  ██
+    d=5: 2 tiles  ██
+    d=6: 3 tiles  ███
+    d=7: 2 tiles  ██
+    d=8: 2 tiles  ██
+    d=9: 1 tiles  █
+    d=10: 1 tiles  █
+    Max width: 3, #diagonals: 9, avg: 1.7
+
+  n=8 (m=21 tiles): anti-diagonal distribution:
+    d=2: 1 tiles  █
+    d=3: 1 tiles  █
+    d=4: 2 tiles  ██
+    d=5: 2 tiles  ██
+    d=6: 3 tiles  ███
+    d=7: 3 tiles  ███
+    d=8: 3 tiles  ███
+    d=9: 2 tiles  ██
+    d=10: 2 tiles  ██
+    d=11: 1 tiles  █
+    d=12: 1 tiles  █
+    Max width: 3, #diagonals: 11, avg: 1.9
+
+
+========================================================================
+  THE ASSOCIATION SCHEME STRUCTURE
+========================================================================
+
+
+  THE HAMMING SCHEME ON TILINGS:
+
+  The 2^m tilings form the vertices of the Hamming scheme H(m, 2).
+  This is the association scheme where:
+  - Relation i: pairs at Hamming distance i (for i = 0, 1, ..., m)
+  - The scheme has m+1 classes
+  - The eigenvalues are KRAWTCHOUK POLYNOMIALS K_k(i; m)
+
+  The waggly layers d=1,...,m are EXACTLY the association scheme relations.
+  Each relation has:
+  - Valency v_i = C(m, i) (number of i-neighbors per vertex)
+  - Eigenmatrix entry P_j(i) = K_j(i; m) (Krawtchouk polynomial)
+
+  THE QUOTIENT BY ISOMORPHISM:
+  The S_n action partitions tilings into orbits (iso classes).
+  This gives a QUOTIENT SCHEME — but it's NOT an association scheme
+  in general (the quotient of a scheme is a scheme iff the group
+  action is compatible with the scheme relations).
+
+  IS THE S_n ACTION COMPATIBLE WITH THE HAMMING SCHEME?
+  For this, we'd need: if σ ∈ S_n maps tiling t to t', and
+  d(t, s) = k, then d(t', σ(s)) = k.
+  But σ permutes the TILE POSITIONS (because relabeling vertices
+  changes which arcs are tiles). So σ does NOT preserve Hamming distance
+  in general.
+
+  HOWEVER: the waggly weight matrices W_d DO capture the scheme structure
+  projected onto the quotient. They are the "orbital matrices" of the
+  Hamming scheme action under S_n.
+
+  THE CODING THEORY CONNECTION:
+  In coding theory, an (m, K, d) code C is a subset of {0,1}^m
+  with K codewords and minimum Hamming distance d.
+
+  An iso class of tournaments IS a "code" in this sense:
+  - Codewords = tilings in the class
+  - Minimum distance = min Hamming distance within the class
+  - K = fiber(class) = number of codewords
+
+  The MINIMUM DISTANCE of a class tells us how "spread out" its tilings are.
+  Classes with large |Aut| have small fiber and large min distance.
+  Classes with |Aut|=1 have large fiber and small min distance.
+
+  n=5: Intra-class Hamming distances:
+
+  mid  H    fiber  min_d    avg_d    max_d   
+  ---------------------------------------------
+  0    1    1      -        -        -       
+  1    3    2      2        2.00     2       
+  6    3    1      -        -        -       
+  2    5    10     1        2.53     5       
+  3    9    9      1        3.17     5       
+  4    9    9      2        3.33     5       
+  5    11   11     1        3.05     6       
+  8    13   13     2        3.03     6       
+  7    15   5      2        3.00     4       
+  9    15   3      3        4.00     5       
+
+  AS CODES: (m=6, K=fiber, d=min_dist):
+    (6, 1, 6) H=1, rate=0.000
+    (6, 2, 2) H=3, rate=0.167
+    (6, 1, 6) H=3, rate=0.000
+    (6, 10, 1) H=5, rate=0.554
+    (6, 9, 1) H=9, rate=0.528
+    (6, 9, 2) H=9, rate=0.528
+    (6, 11, 1) H=11, rate=0.577
+    (6, 13, 2) H=13, rate=0.617
+    (6, 5, 2) H=15, rate=0.387
+    (6, 3, 3) H=15, rate=0.264
+
+  n=6: Intra-class Hamming distances:
+
+  mid  H    fiber  min_d    avg_d    max_d   
+  ---------------------------------------------
+  0    1    1      -        -        -       
+  1    3    2      2        2.00     2       
+  10   3    2      2        2.00     2       
+  2    5    10     1        2.93     6       
+  18   5    5      1        1.60     3       
+  3    9    18     1        4.04     8       
+  4    9    18     2        4.01     8       
+  33   9    1      -        -        -       
+  5    11   22     1        4.00     8       
+  12   13   26     2        4.16     8       
+  7    15   30     1        5.07     10      
+  11   15   10     2        4.36     8       
+  19   15   6      3        4.93     7       
+  6    17   17     1        4.84     8       
+  15   17   17     2        4.78     8       
+  8    19   38     1        4.95     10      
+  9    23   46     1        4.64     9       
+  14   23   46     2        5.05     10      
+  17   25   50     1        5.02     10      
+  13   27   18     2        5.19     8       
+  24   29   29     2        5.13     8       
+  27   29   58     1        5.05     10      
+  29   29   29     1        4.90     9       
+  21   31   62     2        5.02     10      
+  16   33   22     1        5.05     9       
+  25   33   66     2        5.04     9       
+  26   33   33     1        4.96     9       
+  20   37   37     1        4.88     9       
+  22   37   74     2        4.96     9       
+  23   37   74     1        4.92     10      
+  28   41   41     1        4.88     10      
+  30   43   86     1        4.86     10      
+  31   45   15     1        4.65     10      
+  32   45   15     3        5.10     9       
+
+  AS CODES: (m=10, K=fiber, d=min_dist):
+    (10, 1, 10) H=1, rate=0.000
+    (10, 2, 2) H=3, rate=0.100
+    (10, 2, 2) H=3, rate=0.100
+    (10, 10, 1) H=5, rate=0.332
+    (10, 5, 1) H=5, rate=0.232
+    (10, 18, 1) H=9, rate=0.417
+    (10, 18, 2) H=9, rate=0.417
+    (10, 1, 10) H=9, rate=0.000
+    (10, 22, 1) H=11, rate=0.446
+    (10, 26, 2) H=13, rate=0.470
+    (10, 30, 1) H=15, rate=0.491
+    (10, 10, 2) H=15, rate=0.332
+    (10, 6, 3) H=15, rate=0.258
+    (10, 17, 1) H=17, rate=0.409
+    (10, 17, 2) H=17, rate=0.409
+    (10, 38, 1) H=19, rate=0.525
+    (10, 46, 1) H=23, rate=0.552
+    (10, 46, 2) H=23, rate=0.552
+    (10, 50, 1) H=25, rate=0.564
+    (10, 18, 2) H=27, rate=0.417
+    (10, 29, 2) H=29, rate=0.486
+    (10, 58, 1) H=29, rate=0.586
+    (10, 29, 1) H=29, rate=0.486
+    (10, 62, 2) H=31, rate=0.595
+    (10, 22, 1) H=33, rate=0.446
+    (10, 66, 2) H=33, rate=0.604
+    (10, 33, 1) H=33, rate=0.504
+    (10, 37, 1) H=37, rate=0.521
+    (10, 74, 2) H=37, rate=0.621
+    (10, 74, 1) H=37, rate=0.621
+    (10, 41, 1) H=41, rate=0.536
+    (10, 86, 1) H=43, rate=0.643
+    (10, 15, 1) H=45, rate=0.391
+    (10, 15, 3) H=45, rate=0.391
+
+
+========================================================================
+  H AS A SPACE-FILLING CURVE INDEX
+========================================================================
+
+  n=5: H values = [1, 3, 3, 5, 9, 9, 11, 13, 15, 15]
+  Distinct H values: 7 out of 10 classes
+  H range: [1, 15]
+  H gaps: [2, 2, 4, 2, 2, 2]
+  Gap statistics: min=2, max=4, avg=2.3
+  H_max / H_min = 15 / 1 = 15.0
+  Width sequence: [1, 2, 1, 2, 1, 1, 2]
+  Max width: 2 at H=3
+  Width unimodal: False (inc=True, dec=False)
+
+  n=6: H values = [1, 3, 3, 5, 5, 9, 9, 9, 11, 13, 15, 15, 15, 17, 17, 19, 23, 23, 25, 27, 29, 29, 29, 31, 33, 33, 33, 37, 37, 37, 41, 43, 45, 45]
+  Distinct H values: 19 out of 34 classes
+  H range: [1, 45]
+  H gaps: [2, 2, 4, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 2, 4, 4, 2, 2]
+  Gap statistics: min=2, max=4, avg=2.4
+  H_max / H_min = 45 / 1 = 45.0
+  Width sequence: [1, 2, 2, 3, 1, 1, 3, 2, 1, 2, 1, 1, 3, 1, 3, 3, 1, 1, 2]
+  Max width: 3 at H=9
+  Width unimodal: False (inc=True, dec=False)
+
+
+========================================================================
+  THE SQRT(2) IN TOURNAMENT THEORY
+========================================================================
+
+
+  WHERE SQRT(2) APPEARS:
+
+  1. THE STAIRCASE GEOMETRY:
+     The staircase delta_{n-2} is a right isosceles triangle.
+     Legs have length n-2. Hypotenuse has length (n-2)×sqrt(2).
+     The diagonal traversal covers sqrt(2) × (leg length) distance.
+
+  2. THE PSEUDO-DOUBLING RATIO:
+     V_merged(n+1) / V_merged(n) ≈ 2 - 1/(n-2) → 2
+     This is the growth rate of tournament iso classes.
+     The factor 2 = (sqrt(2))^2 — the square of the hypotenuse ratio.
+
+  3. THE H RANGE:
+     H ranges from 1 to ≈ n!/2^{n-1} (Szele bound).
+     The ratio H_max/H_min grows as n!/2^{n-1}.
+     By Stirling: n!/2^{n-1} ≈ sqrt(2πn) × (n/e)^n / 2^{n-1}
+     = sqrt(2πn) × (n/(2e))^n × 2.
+     The sqrt(2πn) factor contains sqrt(2).
+
+  4. THE FIBER FRACTION:
+     f(n) = (1/2)_{n-2} / (n-2)! ∼ 1/sqrt(π(n-2))
+     = 1/sqrt(π) × 1/sqrt(n-2)
+     The GF is (1-x)^{-1/2} — a SQUARE ROOT singularity.
+     This is the 2-sheeted branched cover: the number 2 again.
+
+  5. THE ASSOCIATION SCHEME:
+     The Hamming scheme H(m, 2) on Q_m has alphabet size q=2.
+     The Krawtchouk polynomials are K_k(x; m, 2).
+     The eigenvalues involve powers of (q-1) = 1 and q = 2.
+
+  6. THE WALSH SPECTRUM:
+     Walsh characters are χ_S(t) = (-1)^{|S∩t|}.
+     The base field is GF(2). Everything is mod 2.
+     The Fourier transform over GF(2)^m has exactly 2^m terms.
+
+  THE UNIFICATION: sqrt(2) is the characteristic ratio of the
+  right isosceles triangle. Tournament theory lives on this triangle.
+  The 1D-to-2D transition is mediated by the diagonal traversal,
+  which has length sqrt(2) times the leg.
+
+  The boundary between 1D and 2D is a FRACTAL of dimension
+  between 1 and 2. The Hilbert curve has dimension 2 but covers
+  a 1D path. The staircase traversal has dimension log(m)/log(n-2)
+  = log(C(n-1,2))/log(n-2) → 2 as n → ∞.
+
+  Tournament space IS the transition from 1D (H-ordering) to 2D
+  (tile space), mediated by the staircase triangle and its sqrt(2).
+
+  FRACTAL DIMENSION OF THE STAIRCASE:
+
+  n= 3: m=  1 tiles, leg=1, dim=log(1)/log(1) = 0.0000
+  n= 4: m=  3 tiles, leg=2, dim=log(3)/log(2) = 1.5850
+  n= 5: m=  6 tiles, leg=3, dim=log(6)/log(3) = 1.6309
+  n= 6: m= 10 tiles, leg=4, dim=log(10)/log(4) = 1.6610
+  n= 7: m= 15 tiles, leg=5, dim=log(15)/log(5) = 1.6826
+  n= 8: m= 21 tiles, leg=6, dim=log(21)/log(6) = 1.6992
+  n= 9: m= 28 tiles, leg=7, dim=log(28)/log(7) = 1.7124
+  n=10: m= 36 tiles, leg=8, dim=log(36)/log(8) = 1.7233
+  n=11: m= 45 tiles, leg=9, dim=log(45)/log(9) = 1.7325
+  n=12: m= 55 tiles, leg=10, dim=log(55)/log(10) = 1.7404
+  n=13: m= 66 tiles, leg=11, dim=log(66)/log(11) = 1.7472
+  n=14: m= 78 tiles, leg=12, dim=log(78)/log(12) = 1.7533
+
+  As n → ∞: dim → log(n²/2)/log(n) = 2 - log(2)/log(n) → 2
+  The staircase dimension APPROACHES 2 but never reaches it.
+  This is the ALMOST-2D nature of tournament space.
+
+Done. opus-2026-03-24-S305
