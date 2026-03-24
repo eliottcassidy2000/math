@@ -229,6 +229,16 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
   - The tiling space is the hypercube Q_{C(n-1,2)}. Wiggly lines are its edges. All 2^{C(n-1,2)} tilings are connected.
   - The wiggly arcs = the **cycle-space generators** when the base path P_0 is used as spanning tree. Base-path arcs = the **cut-space** (score hierarchy).
   - This decomposition IS the GF(2) Cut ⊕ Cycle split: base-path = cut, wiggly = cycle.
+- **WAGGLY LINES — DEFINITION** (opus-S296):
+  - A **WAGGLY LINE** connects two tilings at Hamming distance ≥ 2 in Q_m. These are the NON-EDGES of the wiggly graph.
+  - Each tiling has exactly **2^m - 1 - m** waggly neighbors (all other tilings except itself and its m wiggly neighbors).
+  - Total waggly lines: 2^m × (2^m - 1 - m) / 2. At n=5: 1824 waggly lines. At n=4: 16.
+  - Waggly lines decompose by Hamming distance d=2,3,...,m. At distance d: C(m,d) per tiling.
+  - **BLUE/BLACK lines ARE waggly lines** at distance d=m (flip ALL tiles). blue/black ⊂ waggly.
+  - The **complement tiling** (flip all m tiles) gives a tournament with base-path arcs PRESERVED but all tile arcs REVERSED. This is NOT T^op (which reverses ALL arcs including base path). MISTAKE-033: confusing these two was a major error.
+  - In the quotient meta-graph: waggly covers 43/45 edges at n=5 (nearly complete). Wiggly covers 21/45. Blue/black covers 18/45.
+  - Creative waggly subsets: **range flips** (all tiles of same range r), **vertex-star flips** (all tiles incident to vertex v), **triangle flips** (3 tiles forming a 3-cycle). Each has distinct neutrality patterns.
+  - Vertex-star neutrality is SYMMETRIC around the center of the base path (v=0 ↔ v=n-1) but NOT uniform. Center vertex is ~5× more neutral than endpoints (n=5).
 - **GEOMETRIC ALIGNMENT of G_n/Z_2:** The merged metagraph has three perpendicular structures:
   - The **PRINCIPAL LINE** runs from the transitive class (H=1) through the SC backbone. The transitive's "big" SC neighbor is at H = 2^(n-2)+1.
   - The **SPINE** (SC-SC edges) is a sparse skeleton. The **RIBS** (SC-NS edges) attach perpendicularly, bipartite and triangle-free. The **SEA** (NS-NS edges) is the dominant bulk (96% at n=8).
