@@ -1,0 +1,93 @@
+================================================================================
+  FRACTAL TOURNAMENT CODEC
+  kind-pasteur-2026-03-24-S20fy
+================================================================================
+
+############################################################
+  n = 5, m = 6
+############################################################
+  Building classes... V(n)=12, V(n-1)=4
+
+  CONDITIONAL ENTROPY:
+    Naive residual: 4 bits
+    H(residual | class(n-1)): 3.0000 bits
+    Savings: 1.0000 bits = 25.0%
+    Distinct residuals per class: min=8, max=8, avg=8.0
+    Max possible: 2^4 = 16
+    Residual compression: 2^4/8 = 2.0x for best class
+
+  FRACTAL COMPRESSION (recursive):
+    Naive total: C(5,2) = 10 bits
+    Level 5: H(resid|class(4)) = 3.0000 bits
+    Estimated total (fractal): 7.75 bits
+    Fractal compression ratio: 1.29x
+    vs Level 3 (class): 2.79x
+
+  TOP (n-1)-CLASSES by extension count:
+    class: 8 extensions (8 tilings), entropy=3.00 bits (naive=4)
+    class: 8 extensions (40 tilings), entropy=3.00 bits (naive=4)
+    class: 8 extensions (8 tilings), entropy=3.00 bits (naive=4)
+    class: 8 extensions (8 tilings), entropy=3.00 bits (naive=4)
+
+  Time: 0.0s
+
+############################################################
+  n = 6, m = 10
+############################################################
+  Building classes... V(n)=56, V(n-1)=12
+
+  CONDITIONAL ENTROPY:
+    Naive residual: 5 bits
+    H(residual | class(n-1)): 4.0000 bits
+    Savings: 1.0000 bits = 20.0%
+    Distinct residuals per class: min=16, max=16, avg=16.0
+    Max possible: 2^5 = 32
+    Residual compression: 2^5/16 = 2.0x for best class
+
+  FRACTAL COMPRESSION (recursive):
+    Naive total: C(6,2) = 15 bits
+    Level 6: H(resid|class(5)) = 4.0000 bits
+    Estimated total (fractal): 12.20 bits
+    Fractal compression ratio: 1.23x
+    vs Level 3 (class): 2.58x
+
+  TOP (n-1)-CLASSES by extension count:
+    class: 16 extensions (16 tilings), entropy=4.00 bits (naive=5)
+    class: 16 extensions (144 tilings), entropy=4.00 bits (naive=5)
+    class: 16 extensions (80 tilings), entropy=4.00 bits (naive=5)
+    class: 16 extensions (176 tilings), entropy=4.00 bits (naive=5)
+    class: 16 extensions (16 tilings), entropy=4.00 bits (naive=5)
+
+  Time: 3.2s
+
+############################################################
+  n = 7, m = 15
+############################################################
+  Building classes... V(n)=456, V(n-1)=56
+
+  CONDITIONAL ENTROPY:
+    Naive residual: 6 bits
+    H(residual | class(n-1)): 5.0000 bits
+    Savings: 1.0000 bits = 16.7%
+    Distinct residuals per class: min=32, max=32, avg=32.0
+    Max possible: 2^6 = 64
+    Residual compression: 2^6/32 = 2.0x for best class
+
+  FRACTAL COMPRESSION (recursive):
+    Naive total: C(7,2) = 21 bits
+    Level 7: H(resid|class(6)) = 5.0000 bits
+    Estimated total (fractal): 17.67 bits
+    Fractal compression ratio: 1.19x
+    vs Level 3 (class): 2.38x
+
+  TOP (n-1)-CLASSES by extension count:
+    class: 32 extensions (32 tilings), entropy=5.00 bits (naive=6)
+    class: 32 extensions (544 tilings), entropy=5.00 bits (naive=6)
+    class: 32 extensions (288 tilings), entropy=5.00 bits (naive=6)
+    class: 32 extensions (736 tilings), entropy=5.00 bits (naive=6)
+    class: 32 extensions (160 tilings), entropy=5.00 bits (naive=6)
+
+  Time: 981.3s
+
+DONE.
+================================================================================
