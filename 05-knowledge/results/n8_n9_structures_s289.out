@@ -1,0 +1,175 @@
+========================================================================
+  KEY STRUCTURES AT n=8, 9, 10
+  opus-2026-03-24-S289
+========================================================================
+
+========================================================================
+  n = 8 (computed in 0.001s)
+========================================================================
+
+  BURNSIDE QUANTITIES:
+    V (iso classes):                6880
+    SC (self-comp):                  176
+    V_merged (÷Z_2):                3528
+    T (transitions):              188288
+    twin_SL:                        3040
+    edge_orbits:                   94864
+    E_master (approx):             92673
+    E_twin (approx):               92624
+    E_exact (known):               91161
+
+  TILING MODEL:
+    m_tiles = C(7,2) = 21
+    total tilings = 2^21 =         2097152
+    tilings/class (avg) = 594.43
+
+  TILING FORMULA CONSTRAINT:
+    Σ H/|Aut| × mult = 2097152
+    This constrains H and |Aut| across all 3528 merged classes
+
+  WIGGLY METAGRAPH:
+    Same node set as merged metagraph: V = 3528
+    W_total = 2^21 × 21 = 44040192
+    W_row(i) = fiber(i) × 21
+
+  SC/NS SPLIT IN MERGED METAGRAPH:
+    SC nodes: 176
+    NS nodes: 3352
+    SC fraction: 0.0499
+
+  SPINE/RIBS/SEA ESTIMATE:
+    Spine (SC-SC) ≈ 0.25% of possible edges
+    Sea (NS-NS)   ≈ 90.27% of possible edges
+    Ribs (SC-NS)  ≈ 9.48% of possible edges
+
+========================================================================
+  n = 9 (computed in 0.000s)
+========================================================================
+
+  BURNSIDE QUANTITIES:
+    V (iso classes):              191536
+    SC (self-comp):                 2752
+    V_merged (÷Z_2):               97144
+    T (transitions):             6847200
+    twin_SL:                       54256
+    edge_orbits:                 3428640
+    E_master (approx):           3396853
+    E_twin (approx):             3396472
+    E_exact (known):             3380751
+    V_even (odd n):                 2038
+
+  TILING MODEL:
+    m_tiles = C(8,2) = 28
+    total tilings = 2^28 =       268435456
+    tilings/class (avg) = 2763.27
+
+  TILING FORMULA CONSTRAINT:
+    Σ H/|Aut| × mult = 268435456
+    This constrains H and |Aut| across all 97144 merged classes
+
+  WIGGLY METAGRAPH:
+    Same node set as merged metagraph: V = 97144
+    W_total = 2^28 × 28 = 7516192768
+    W_row(i) = fiber(i) × 28
+
+  SC/NS SPLIT IN MERGED METAGRAPH:
+    SC nodes: 2752
+    NS nodes: 94392
+    SC fraction: 0.0283
+
+  SPINE/RIBS/SEA ESTIMATE:
+    Spine (SC-SC) ≈ 0.08% of possible edges
+    Sea (NS-NS)   ≈ 94.41% of possible edges
+    Ribs (SC-NS)  ≈ 5.51% of possible edges
+
+========================================================================
+  n = 10 (computed in 0.000s)
+========================================================================
+
+  BURNSIDE QUANTITIES:
+    V (iso classes):             9733056
+    SC (self-comp):                 8784
+    V_merged (÷Z_2):             4870920
+    T (transitions):           437069312
+    twin_SL:                     1716608
+    edge_orbits:               218574976
+    E_master (approx):         217681005
+    E_twin (approx):           217676352
+
+  TILING MODEL:
+    m_tiles = C(9,2) = 36
+    total tilings = 2^36 =     68719476736
+    tilings/class (avg) = 14108.11
+
+  TILING FORMULA CONSTRAINT:
+    Σ H/|Aut| × mult = 68719476736
+    This constrains H and |Aut| across all 4870920 merged classes
+
+  WIGGLY METAGRAPH:
+    Same node set as merged metagraph: V = 4870920
+    W_total = 2^36 × 36 = 2473901162496
+    W_row(i) = fiber(i) × 36
+
+  PETERSEN TOURNAMENT (T_Pet ∈ this metagraph):
+    H(T_Pet) = 6961
+    Scores = (2,3,3,3,4,5,6,6,6,7) — palindromic
+    c3 = 28
+    30/36 tiles flipped (83.3%)
+    T_Pet is ONE of 4870920 merged classes
+    T_Pet's fiber = H/|Aut| × mult = 6961/|Aut| × mult
+    Szele expected H = 7087 at n=10
+    T_Pet H / Szele = 0.9822
+
+  SC/NS SPLIT IN MERGED METAGRAPH:
+    SC nodes: 8784
+    NS nodes: 4862136
+    SC fraction: 0.0018
+
+  SPINE/RIBS/SEA ESTIMATE:
+    Spine (SC-SC) ≈ 0.00% of possible edges
+    Sea (NS-NS)   ≈ 99.64% of possible edges
+    Ribs (SC-NS)  ≈ 0.36% of possible edges
+
+========================================================================
+  SUMMARY TABLE: n=3 through n=10
+========================================================================
+    n          V       SC        V_m m_tiles          2^m     E_approx     V_even
+    3          2        2          2       1            2            1          2
+    4          4        2          3       3            8            5          —
+    5         12        8         10       6           64           30          7
+    6         56       12         34      10         1024          290          —
+    7        456       88        272      15        32768         4086         54
+    8       6880      176       3528      21      2097152        91161          —
+    9     191536     2752      97144      28    268435456      3380751       2038
+   10    9733056     8784    4870920      36  68719476736    217681005          —
+
+========================================================================
+  THE PETERSEN PATTERN
+========================================================================
+
+  At each n, we can construct "graph tournaments" T_G by:
+  1. Take ANY graph G on n vertices with a Hamiltonian path
+  2. Orient G-edges as unflipped (high→low)
+  3. Orient non-G-edges as flipped (low→high)
+
+  The Petersen tournament (n=10) is path-independent:
+  ALL 240 Hamiltonian paths give the SAME tournament.
+  This is because |Aut(Petersen)| = 120 = 5! = |S_5|.
+
+  NATURAL GRAPH TOURNAMENTS AT EACH n:
+
+  n=5: K_5 has everything as an edge → transitive tournament (all unflipped)
+       C_5 has 5 edges → a specific "cycle tournament" with H=?
+       Petersen = K(5,2) on 5 elements — but it has 10 vertices, not 5
+
+  n=8: The Cayley graph of Z_2^3 (the 3-cube graph Q_3)
+       Q_3 has 12 edges on 8 vertices. 12 unflipped + 16 flipped.
+       |Aut(Q_3)| = 48. Hamiltonian path → tournament.
+
+  n=9: The Paley graph of order 9 (strongly regular (9,4,1,2))
+       9 edges. Hamiltonian paths exist.
+       |Aut| = 72. Would give a specific tournament.
+
+  n=10: PETERSEN (computed above). H=6961, palindromic scores.
+
+DONE.
