@@ -1,0 +1,191 @@
+========================================================================
+  WIGGLY ALPHABET OVERLAY ON THE METAGRAPH
+  opus-2026-03-24-S282
+========================================================================
+
+########################################################################
+  n = 4: WIGGLY ALPHABET OVERLAY
+########################################################################
+  Tiles: 3, Edges: 3
+
+  TILE MAP:
+    A: tile (4,1), skip=2
+    B: tile (3,1), skip=1
+    C: tile (4,2), skip=1
+
+  TILES PER EDGE:
+    Min: 1, Max: 3, Mean: 2.00
+    1 tiles: 1 edges (33.3%)
+    2 tiles: 1 edges (33.3%)
+    3 tiles: 1 edges (33.3%)
+
+  EDGES PER TILE:
+    A (4,1) skip=2: 2/3 edges (66.7%)
+    B (3,1) skip=1: 2/3 edges (66.7%)
+    C (4,2) skip=1: 2/3 edges (66.7%)
+
+  TILE EQUIVALENCE CLASSES (tiles with identical edge sets):
+    ['B', 'C']: 2/3 edges, skips=[1, 1]
+    ['A']: 2/3 edges, skips=[2]
+
+  EDGE EQUIVALENCE CLASSES (edges with same tile set):
+    3 distinct tile-set patterns for 3 edges
+    Tiles ['B', 'C'] (2 tiles): 1 edges, e.g. H=[(1, 3)]
+    Tiles ['A'] (1 tiles): 1 edges, e.g. H=[(1, 5)]
+    Tiles ['A', 'B', 'C'] (3 tiles): 1 edges, e.g. H=[(3, 5)]
+
+  SPINE/RIBS/SEA × WIGGLY CLASS:
+  Total: spine=1, ribs=2, sea=0
+   Tile  skip  spine   ribs    sea  total  spine%   ribs%    sea%
+      A     2      1      1      0      2   50.0%   50.0%    0.0%
+      B     1      0      2      0      2    0.0%  100.0%    0.0%
+      C     1      0      2      0      2    0.0%  100.0%    0.0%
+
+  Time: 0.0s
+
+########################################################################
+  n = 5: WIGGLY ALPHABET OVERLAY
+########################################################################
+  Tiles: 6, Edges: 21
+
+  TILE MAP:
+    A: tile (5,1), skip=3
+    B: tile (4,1), skip=2
+    C: tile (3,1), skip=1
+    D: tile (5,2), skip=2
+    E: tile (4,2), skip=1
+    F: tile (5,3), skip=1
+
+  TILES PER EDGE:
+    Min: 1, Max: 6, Mean: 4.24
+    1 tiles: 3 edges (14.3%)
+    2 tiles: 2 edges (9.5%)
+    3 tiles: 1 edges (4.8%)
+    4 tiles: 2 edges (9.5%)
+    5 tiles: 7 edges (33.3%)
+    6 tiles: 6 edges (28.6%)
+
+  EDGES PER TILE:
+    A (5,1) skip=3: 14/21 edges (66.7%)
+    B (4,1) skip=2: 17/21 edges (81.0%)
+    C (3,1) skip=1: 15/21 edges (71.4%)
+    D (5,2) skip=2: 17/21 edges (81.0%)
+    E (4,2) skip=1: 11/21 edges (52.4%)
+    F (5,3) skip=1: 15/21 edges (71.4%)
+
+  TILE EQUIVALENCE CLASSES (tiles with identical edge sets):
+    ['B', 'D']: 17/21 edges, skips=[2, 2]
+    ['C', 'F']: 15/21 edges, skips=[1, 1]
+    ['A']: 14/21 edges, skips=[3]
+    ['E']: 11/21 edges, skips=[1]
+
+  EDGE EQUIVALENCE CLASSES (edges with same tile set):
+    10 distinct tile-set patterns for 21 edges
+    Tiles ['A', 'B', 'C', 'D', 'E', 'F'] (6 tiles): 6 edges, e.g. H=[(11, 13), (11, 15), (13, 9)]
+    Tiles ['A', 'B', 'C', 'D', 'F'] (5 tiles): 5 edges, e.g. H=[(3, 9), (5, 11), (5, 13)]
+    Tiles ['A'] (1 tiles): 2 edges, e.g. H=[(1, 9), (3, 15)]
+    Tiles ['B', 'C', 'D', 'E', 'F'] (5 tiles): 2 edges, e.g. H=[(11, 9), (9, 9)]
+    Tiles ['C', 'F'] (2 tiles): 1 edges, e.g. H=[(1, 3)]
+    Tiles ['B', 'D'] (2 tiles): 1 edges, e.g. H=[(1, 5)]
+    Tiles ['E'] (1 tiles): 1 edges, e.g. H=[(1, 3)]
+    Tiles ['B', 'D', 'E'] (3 tiles): 1 edges, e.g. H=[(3, 5)]
+    Tiles ['B', 'C', 'D', 'F'] (4 tiles): 1 edges, e.g. H=[(5, 3)]
+    Tiles ['A', 'B', 'D', 'E'] (4 tiles): 1 edges, e.g. H=[(11, 9)]
+
+  SPINE/RIBS/SEA × WIGGLY CLASS:
+  Total: spine=12, ribs=8, sea=1
+   Tile  skip  spine   ribs    sea  total  spine%   ribs%    sea%
+      A     3      9      5      0     14   64.3%   35.7%    0.0%
+      B     2      9      7      1     17   52.9%   41.2%    5.9%
+      C     1      8      7      0     15   53.3%   46.7%    0.0%
+      D     2      9      7      1     17   52.9%   41.2%    5.9%
+      E     1     10      0      1     11   90.9%    0.0%    9.1%
+      F     1      8      7      0     15   53.3%   46.7%    0.0%
+
+  Time: 0.0s
+
+########################################################################
+  n = 6: WIGGLY ALPHABET OVERLAY
+########################################################################
+  Tiles: 10, Edges: 143
+
+  TILE MAP:
+    A: tile (6,1), skip=4
+    B: tile (5,1), skip=3
+    C: tile (4,1), skip=2
+    D: tile (3,1), skip=1
+    E: tile (6,2), skip=3
+    F: tile (5,2), skip=2
+    G: tile (4,2), skip=1
+    H: tile (6,3), skip=2
+    I: tile (5,3), skip=1
+    J: tile (6,4), skip=1
+
+  TILES PER EDGE:
+    Min: 1, Max: 10, Mean: 8.07
+    1 tiles: 4 edges (2.8%)
+    2 tiles: 6 edges (4.2%)
+    3 tiles: 1 edges (0.7%)
+    4 tiles: 2 edges (1.4%)
+    5 tiles: 6 edges (4.2%)
+    6 tiles: 6 edges (4.2%)
+    7 tiles: 32 edges (22.4%)
+    8 tiles: 5 edges (3.5%)
+    9 tiles: 13 edges (9.1%)
+    10 tiles: 68 edges (47.6%)
+
+  EDGES PER TILE:
+    A (6,1) skip=4: 107/143 edges (74.8%)
+    B (5,1) skip=3: 127/143 edges (88.8%)
+    C (4,1) skip=2: 127/143 edges (88.8%)
+    D (3,1) skip=1: 125/143 edges (87.4%)
+    E (6,2) skip=3: 127/143 edges (88.8%)
+    F (5,2) skip=2: 93/143 edges (65.0%)
+    G (4,2) skip=1: 98/143 edges (68.5%)
+    H (6,3) skip=2: 127/143 edges (88.8%)
+    I (5,3) skip=1: 98/143 edges (68.5%)
+    J (6,4) skip=1: 125/143 edges (87.4%)
+
+  TILE EQUIVALENCE CLASSES (tiles with identical edge sets):
+    ['B', 'E']: 127/143 edges, skips=[3, 3]
+    ['C', 'H']: 127/143 edges, skips=[2, 2]
+    ['D', 'J']: 125/143 edges, skips=[1, 1]
+    ['G', 'I']: 98/143 edges, skips=[1, 1]
+    ['A']: 107/143 edges, skips=[4]
+    ['F']: 93/143 edges, skips=[2]
+
+  EDGE EQUIVALENCE CLASSES (edges with same tile set):
+    23 distinct tile-set patterns for 143 edges
+    Tiles ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'] (10 tiles): 68 edges, e.g. H=[(23, 25), (23, 19), (23, 33)]
+    Tiles ['A', 'B', 'C', 'D', 'E', 'H', 'J'] (7 tiles): 28 edges, e.g. H=[(9, 23), (9, 33), (9, 23)]
+    Tiles ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'] (9 tiles): 10 edges, e.g. H=[(9, 15), (23, 25), (15, 17)]
+    Tiles ['B', 'E', 'F', 'G', 'I'] (5 tiles): 5 edges, e.g. H=[(3, 9), (9, 5), (11, 5)]
+    Tiles ['B', 'C', 'D', 'E', 'H', 'J'] (6 tiles): 5 edges, e.g. H=[(9, 5), (5, 11), (5, 13)]
+    Tiles ['A'] (1 tiles): 3 edges, e.g. H=[(1, 17), (5, 37), (3, 27)]
+    Tiles ['C', 'D', 'F', 'G', 'H', 'I', 'J'] (7 tiles): 3 edges, e.g. H=[(9, 11), (9, 9), (17, 19)]
+    Tiles ['A', 'B', 'C', 'D', 'E', 'G', 'H', 'I', 'J'] (9 tiles): 3 edges, e.g. H=[(23, 41), (19, 33), (43, 29)]
+    Tiles ['D', 'J'] (2 tiles): 2 edges, e.g. H=[(1, 3), (3, 9)]
+    Tiles ['B', 'E'] (2 tiles): 2 edges, e.g. H=[(1, 9), (3, 15)]
+    Tiles ['B', 'C', 'D', 'E', 'G', 'H', 'I', 'J'] (8 tiles): 2 edges, e.g. H=[(23, 17), (27, 33)]
+    Tiles ['F'] (1 tiles): 1 edges, e.g. H=[(1, 5)]
+    Tiles ['G', 'I'] (2 tiles): 1 edges, e.g. H=[(1, 3)]
+    Tiles ['C', 'H'] (2 tiles): 1 edges, e.g. H=[(1, 5)]
+    Tiles ['A', 'B', 'C', 'E', 'H'] (5 tiles): 1 edges, e.g. H=[(3, 15)]
+
+  SPINE/RIBS/SEA × WIGGLY CLASS:
+  Total: spine=13, ribs=45, sea=85
+   Tile  skip  spine   ribs    sea  total  spine%   ribs%    sea%
+      A     4     12     31     64    107   11.2%   29.0%   59.8%
+      B     3      9     39     79    127    7.1%   30.7%   62.2%
+      C     2     10     40     77    127    7.9%   31.5%   60.6%
+      D     1      9     41     75    125    7.2%   32.8%   60.0%
+      E     3      9     39     79    127    7.1%   30.7%   62.2%
+      F     2     11     28     54     93   11.8%   30.1%   58.1%
+      G     1      9     31     58     98    9.2%   31.6%   59.2%
+      H     2     10     40     77    127    7.9%   31.5%   60.6%
+      I     1      9     31     58     98    9.2%   31.6%   59.2%
+      J     1      9     41     75    125    7.2%   32.8%   60.0%
+
+  Time: 0.2s
+
+DONE.
