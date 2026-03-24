@@ -1,0 +1,153 @@
+========================================================================
+  DUAL METAGRAPH BRIDGE: G_n ↔ E_n
+  opus-2026-03-24-S315
+========================================================================
+
+########################################################################
+  n = 4
+########################################################################
+  V(G_4) = 3 tournament classes
+  V(E_4) = 3 even graph classes
+  E(G_4) = 3 tournament edges
+
+  BRIDGE MAP (tournament → even graph classes):
+    Max fan-out: 3 (tournament class touches this many even classes)
+    Mean fan-out: 1.67
+    Fan-out distribution: Counter({1: 2, 3: 1})
+
+  REVERSE BRIDGE (even graph → tournament classes):
+    Max fan-in: 2 (even class is touched by this many tournament classes)
+    Mean fan-in: 1.67
+    Fan-in distribution: Counter({2: 2, 1: 1})
+
+  BRIDGE MATRIX B (VT × VE = 3 × 3):
+    Nonzero entries: 5 of 9 (55.6%)
+    Row sums (tournament fibers): [np.int64(1), np.int64(2), np.int64(5)]
+    Col sums (even graph fibers): [np.int64(1), np.int64(3), np.int64(4)]
+
+  BRIDGE SINGULAR VALUES:
+    σ_0 = 3.3928
+    σ_1 = 1.5299
+    σ_2 = 0.3853
+    Rank = 3 (out of min(3,3) = 3)
+
+  METAGRAPH EDGE CORRELATION:
+    E(G_4) = 3 tournament edges
+    E(E_4) = 3 even graph edges
+
+  TILE FLIP CLASSIFICATION:
+    Both change:              8 (33.3%)
+    Tournament only:          6 (25.0%)
+    Even graph only:         10 (41.7%)
+    Neither (both self):      0 (0.0%)
+    Jaccard similarity: 0.3333
+
+########################################################################
+  n = 5
+########################################################################
+  V(G_5) = 10 tournament classes
+  V(E_5) = 7 even graph classes
+  E(G_5) = 21 tournament edges
+
+  BRIDGE MAP (tournament → even graph classes):
+    Max fan-out: 5 (tournament class touches this many even classes)
+    Mean fan-out: 2.80
+    Fan-out distribution: Counter({5: 3, 1: 3, 3: 2, 2: 2})
+
+  REVERSE BRIDGE (even graph → tournament classes):
+    Max fan-in: 6 (even class is touched by this many tournament classes)
+    Mean fan-in: 4.00
+    Fan-in distribution: Counter({5: 4, 1: 2, 6: 1})
+
+  BRIDGE MATRIX B (VT × VE = 10 × 7):
+    Nonzero entries: 28 of 70 (40.0%)
+    Row sums (tournament fibers): [np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(5), np.int64(9), np.int64(9), np.int64(10), np.int64(11), np.int64(13)]
+    Col sums (even graph fibers): [np.int64(1), np.int64(1), np.int64(10), np.int64(10), np.int64(12), np.int64(15), np.int64(15)]
+
+  BRIDGE SINGULAR VALUES:
+    σ_0 = 11.1259
+    σ_1 = 7.1383
+    σ_2 = 4.3776
+    σ_3 = 3.0710
+    σ_4 = 1.8303
+    Rank = 7 (out of min(10,7) = 7)
+
+  METAGRAPH EDGE CORRELATION:
+    E(G_5) = 21 tournament edges
+    E(E_5) = 16 even graph edges
+
+  TILE FLIP CLASSIFICATION:
+    Both change:            304 (79.2%)
+    Tournament only:         40 (10.4%)
+    Even graph only:         32 (8.3%)
+    Neither (both self):      8 (2.1%)
+    Jaccard similarity: 0.8085
+
+########################################################################
+  n = 6
+########################################################################
+  V(G_6) = 34 tournament classes
+  V(E_6) = 16 even graph classes
+  E(G_6) = 143 tournament edges
+
+  BRIDGE MAP (tournament → even graph classes):
+    Max fan-out: 10 (tournament class touches this many even classes)
+    Mean fan-out: 6.47
+    Fan-out distribution: Counter({9: 7, 8: 7, 7: 4, 1: 4, 10: 3, 5: 3, 6: 2, 3: 2, 4: 1, 2: 1})
+
+  REVERSE BRIDGE (even graph → tournament classes):
+    Max fan-in: 23 (even class is touched by this many tournament classes)
+    Mean fan-in: 13.75
+    Fan-in distribution: Counter({23: 2, 20: 2, 16: 2, 7: 2, 22: 1, 18: 1, 14: 1, 13: 1, 9: 1, 8: 1, 3: 1, 1: 1})
+
+  BRIDGE MATRIX B (VT × VE = 34 × 16):
+    Nonzero entries: 220 of 544 (40.4%)
+    Row sums (tournament fibers): [np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(5), np.int64(6), np.int64(10), np.int64(10), np.int64(15), np.int64(15), np.int64(17), np.int64(17), np.int64(18), np.int64(18), np.int64(18), np.int64(22), np.int64(22), np.int64(26), np.int64(29), np.int64(29), np.int64(30), np.int64(33), np.int64(37), np.int64(38), np.int64(41), np.int64(46), np.int64(46), np.int64(50), np.int64(58), np.int64(62), np.int64(66), np.int64(74), np.int64(74), np.int64(86)]
+    Col sums (even graph fibers): [np.int64(1), np.int64(6), np.int64(10), np.int64(15), np.int64(15), np.int64(20), np.int64(45), np.int64(60), np.int64(60), np.int64(60), np.int64(72), np.int64(90), np.int64(90), np.int64(120), np.int64(180), np.int64(180)]
+
+  BRIDGE SINGULAR VALUES:
+    σ_0 = 78.3268
+    σ_1 = 34.6187
+    σ_2 = 24.9424
+    σ_3 = 21.6187
+    σ_4 = 16.9258
+    Rank = 16 (out of min(34,16) = 16)
+
+  METAGRAPH EDGE CORRELATION:
+    E(G_6) = 143 tournament edges
+    E(E_6) = 90 even graph edges
+
+  TILE FLIP CLASSIFICATION:
+    Both change:           8286 (80.9%)
+    Tournament only:        966 (9.4%)
+    Even graph only:        842 (8.2%)
+    Neither (both self):    146 (1.4%)
+    Jaccard similarity: 0.8209
+
+========================================================================
+  SYNTHESIS
+========================================================================
+
+  THE TWO QUOTIENTS:
+  
+  Both G_n and E_n are quotients of Q_m = the tiling hypercube.
+  
+  G_n = Q_m / (S_n acting on tournament orientations)
+  E_n = Q_m / (S_n acting on even graph structure)
+  
+  The SAME tile flip has DIFFERENT effects on the two quotients:
+  - A flip might change the tournament class but not the even graph class
+    (pure score change = cut-space modification)
+  - A flip might change the even graph class but not the tournament class
+    (pure cycle change with tournament symmetry absorption)
+  - A flip might change both
+  
+  χ(G_n) = n-1:  Tournament coloring is LINEAR in n
+  χ(E_n) ≈ ???:  Even graph coloring grows FASTER
+  
+  The ratio V(G_n)/V(E_n) grows: 1, 1, 1.4, 2.1, 5.0
+  The ratio E(G_n)/E(E_n) grows: 1, 1, 1.3, 1.6, 2.2
+  
+  The even graph quotient is COARSER (fewer classes) but DENSER (more edges).
+
+DONE.

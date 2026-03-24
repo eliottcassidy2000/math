@@ -189,6 +189,15 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
 - **When in doubt about a computation, re-derive from definitions.** See `01-canon/definitions.md`.
 - **The isomorphism class graph G_n is the KEY OBJECT.** Every session should spend 5-10 minutes considering it. When computing any invariant, also compute it per iso class. When finding a formula, check if it simplifies on G_n. See `07-reflections/the-isomorphism-class-graph.md` and OPEN-Q-039.
 - **The MERGED metagraph G_n/Z_2 is the PRIMARY object.** Complement symmetry factored out. V_merged = (A000568+SC)/2. See `07-reflections/merged-metagraph-invariants.md`.
+- **EVEN GRAPHS ARE FIRST-CLASS OBJECTS.** The even graph metagraph E_n is the DUAL of G_n. Both are quotients of Q_m by S_n, but S_n acts on tournament orientations (G_n) vs even graph structure (E_n). Every computation on G_n should ALSO be done on E_n. Key facts:
+  - V(E_n): 2, 3, 7, 16, 54 for n=3..7 (A002854 shifted by 1)
+  - E_n is MUCH denser than G_n: density 76-100% vs ~50%
+  - χ(E_n) grows FASTER: 2, 3, 5, 10, 28 for n=3..7 (vs χ(G_n) = n-1)
+  - E_n is PERFECT (ω=χ) at all computed n — G_n loses perfectness at n=7
+  - ~80% of tile flips change BOTH tournament class and even class (Jaccard ≈ 0.82)
+  - Bridge matrix B[tourn,even] has full rank = V(E_n) at all n
+  - The cycle-space bijection: tiling → XOR of fundamental cycles → even graph. See `07-reflections/even-graphs-as-first-class.md`.
+  - The projection tournament → even graph (odd n only): T_cycle = (I + L(K_n))·T mod 2. See `07-reflections/even-graphs-through-the-metagraph.md`.
 - **BLUE and BLACK — STRICT DEFINITION** (matches `tournament-tiling-explorer.html` EXACTLY):
   - A **LINE** = one (tiling, complement-tiling) pair. The explorer draws these.
   - A **BLUE LINE** = a line where the tiling is grid-symmetric (`isGridSym`): invariant under `(x,y) -> (n-y+1, n-x+1)`. Since `isGridSym(flip(t)) == isGridSym(t)`, both endpoints are always the same color. Every line is exactly blue or black.
