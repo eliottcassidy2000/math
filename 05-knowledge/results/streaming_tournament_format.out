@@ -1,0 +1,33 @@
+======================================================================
+  STREAMING TOURNAMENT FORMAT
+======================================================================
+
+  1. ENCODE/DECODE:
+    n=   5: 6 bits = 1 bytes (raw adj: 2 bytes, saves 50%)
+    n=  10: 36 bits = 5 bytes (raw adj: 6 bytes, saves 17%)
+    n=  20: 171 bits = 22 bytes (raw adj: 24 bytes, saves 8%)
+    n=  50: 1176 bits = 147 bytes (raw adj: 154 bytes, saves 5%)
+    n= 100: 4851 bits = 607 bytes (raw adj: 619 bytes, saves 2%)
+
+  2. PROGRESSIVE DECODING:
+    After 1 layers (3 vertices): 1 bytes, score=(1, 1, 1)
+    After 2 layers (4 vertices): 1 bytes, score=(0, 2, 2, 2)
+    After 4 layers (6 vertices): 2 bytes, score=(1, 2, 2, 3, 3, 4)
+    After 8 layers (10 vertices): 5 bytes, score=(3, 3, 4, 4, 5, 5, 5, 5, 5, 6)
+
+  3. DELTA ENCODING:
+    Full tournament: 22 bytes
+    Delta (3 flips): 3 bits changed, 22 bytes
+    Delta compression: 1.0x
+
+  4. TRIE COMPRESSION (shared prefixes):
+    n=50: avg shared prefix = 41.8 layers out of 48
+    Avg shared bits: 898 / 1176 = 76%
+    Trie savings: 76% of bits shared in trie nodes
+
+  5. SPEED BENCHMARK:
+    n=   10: encode=2us decode=2us (5 bytes)
+    n=  100: encode=32us decode=33us (607 bytes)
+    n= 1000: encode=3592us decode=9197us (62313 bytes)
+
+DONE.
