@@ -1,0 +1,271 @@
+========================================================================
+  TWIST PLANE DEEP DIVE
+  opus-2026-03-24-S309
+========================================================================
+
+########################################################################
+  n = 5
+########################################################################
+
+  1. WHAT PREDICTS THE TWIST ANGLE?
+                    SC: r_cos=+0.6544, r_sin=+0.5641, |r|=0.8640
+                    c3: r_cos=+0.4097, r_sin=+0.4558, |r|=0.6128
+             score_var: r_cos=-0.4097, r_sin=-0.4558, |r|=0.6128
+       palindrome_dist: r_cos=-0.6544, r_sin=-0.5641, |r|=0.8640
+             amplitude: r_cos=-0.4601, r_sin=-0.1597, |r|=0.4870
+
+  2. SC FRACTION AT EACH H-LEVEL:
+       H  #cls  SC  NS    SC%  mean_θ
+     3.0     2   1   1    50% -109.4°
+     9.0     2   2   0   100%  -20.7°
+    15.0     2   2   0   100%   79.9°
+
+  3. SKEWNESS FROM KRAWTCHOUK:
+    Corr(cos(θ), skewness) = 0.2358
+    Corr(sin(θ), skewness) = 0.5269
+    Combined |r| = 0.5773
+    SC mean skewness: 2.8979
+    NS mean skewness: -1.2000
+
+  4. WEIGHT DISTRIBUTION KURTOSIS:
+
+  5. SCORE PALINDROME DISTANCE AND TWIST:
+    SC mean palindrome_dist: 0.00
+    NS mean palindrome_dist: 4.00
+
+  6. WHY ODD n SEPARATES MORE THAN EVEN n:
+    n-1 = 4 (even)
+    C(n,2) = 10 (even)
+    m = C(n-1,2) = 6 (even)
+    m/2 = 3.0 (center of weight distribution)
+
+    KRAWTCHOUK REFLECTION: complement maps
+    B_1 → -B_1 (H is complement-antisymmetric)
+    B_2 → +B_2 (c3 is complement-SYMMETRIC)
+    B_3 → -B_3 (antisymmetric again)
+    General: B_k → (-1)^k B_k
+    
+    SC classes: B_1=0 and B_3=0 after centering
+    (because complement = self for SC)
+    NS classes: B_1 ≠ 0 and B_3 ≠ 0
+    
+    IN THE TWIST PLANE (B2_resid, B3_resid):
+    SC has B3_resid ≈ 0 → angle ≈ 0° or 180° (on B2 axis)
+    NS has B3_resid ≠ 0 → angle ≠ 0° (off the B2 axis)
+    The SEPARATION = the difference in B3_resid between SC and NS
+
+    |B3_resid| for SC: mean=3.951
+    |B3_resid| for NS: mean=5.743
+    Ratio NS/SC: 1.454
+
+########################################################################
+  n = 6
+########################################################################
+
+  1. WHAT PREDICTS THE TWIST ANGLE?
+                    SC: r_cos=+0.0413, r_sin=+0.0615, |r|=0.0741
+                    c3: r_cos=+0.1993, r_sin=+0.3904, |r|=0.4383
+             score_var: r_cos=-0.1993, r_sin=-0.3904, |r|=0.4383
+       palindrome_dist: r_cos=-0.3890, r_sin=-0.2321, |r|=0.4530
+             amplitude: r_cos=-0.3394, r_sin=-0.0911, |r|=0.3514
+
+  2. SC FRACTION AT EACH H-LEVEL:
+       H  #cls  SC  NS    SC%  mean_θ
+     3.0     2   0   2     0%   64.9°
+     5.0     2   1   1    50% -101.8°
+     9.0     3   1   2    33% -107.0°
+    15.0     3   0   3     0%  -97.1°
+    17.0     2   2   0   100%   -8.5°
+    23.0     2   0   2     0%    6.1°
+    29.0     3   2   1    67%  -28.5°
+    33.0     3   1   2    33%   81.0°
+    37.0     3   1   2    33%   78.3°
+    45.0     2   2   0   100%   82.0°
+
+  3. SKEWNESS FROM KRAWTCHOUK:
+    Corr(cos(θ), skewness) = 0.1573
+    Corr(sin(θ), skewness) = 0.3138
+    Combined |r| = 0.3511
+    SC mean skewness: 11.1617
+    NS mean skewness: 3.7979
+
+  4. WEIGHT DISTRIBUTION KURTOSIS:
+
+  5. SCORE PALINDROME DISTANCE AND TWIST:
+    SC mean palindrome_dist: 0.00
+    NS mean palindrome_dist: 3.09
+
+  6. WHY ODD n SEPARATES MORE THAN EVEN n:
+    n-1 = 5 (odd)
+    C(n,2) = 15 (odd)
+    m = C(n-1,2) = 10 (even)
+    m/2 = 5.0 (center of weight distribution)
+
+    KRAWTCHOUK REFLECTION: complement maps
+    B_1 → -B_1 (H is complement-antisymmetric)
+    B_2 → +B_2 (c3 is complement-SYMMETRIC)
+    B_3 → -B_3 (antisymmetric again)
+    General: B_k → (-1)^k B_k
+    
+    SC classes: B_1=0 and B_3=0 after centering
+    (because complement = self for SC)
+    NS classes: B_1 ≠ 0 and B_3 ≠ 0
+    
+    IN THE TWIST PLANE (B2_resid, B3_resid):
+    SC has B3_resid ≈ 0 → angle ≈ 0° or 180° (on B2 axis)
+    NS has B3_resid ≠ 0 → angle ≠ 0° (off the B2 axis)
+    The SEPARATION = the difference in B3_resid between SC and NS
+
+    |B3_resid| for SC: mean=16.736
+    |B3_resid| for NS: mean=9.495
+    Ratio NS/SC: 0.567
+
+########################################################################
+  n = 7
+########################################################################
+
+  1. WHAT PREDICTS THE TWIST ANGLE?
+                    SC: r_cos=+0.0595, r_sin=+0.1914, |r|=0.2004
+                    c3: r_cos=+0.0487, r_sin=+0.5412, |r|=0.5434
+             score_var: r_cos=-0.0487, r_sin=-0.5412, |r|=0.5434
+       palindrome_dist: r_cos=-0.1221, r_sin=-0.3106, |r|=0.3337
+             amplitude: r_cos=-0.1088, r_sin=-0.0452, |r|=0.1178
+
+  2. SC FRACTION AT EACH H-LEVEL:
+       H  #cls  SC  NS    SC%  mean_θ
+     3.0     3   1   2    33%   80.1°
+     5.0     2   0   2     0%   77.1°
+     9.0     6   3   3    50%   -9.2°
+    11.0     2   1   1    50%  -98.3°
+    13.0     2   1   1    50%  -97.6°
+    15.0     7   2   5    29%  -99.6°
+    17.0     2   0   2     0% -101.8°
+    19.0     2   0   2     0% -103.9°
+    23.0     4   0   4     0% -103.4°
+    25.0     3   1   2    33%  -72.0°
+    27.0     4   1   3    25%  -78.6°
+    29.0     5   0   5     0% -100.3°
+    31.0     4   2   2    50%  -94.5°
+    33.0     7   1   6    14%  -64.3°
+    37.0     6   0   6     0% -104.3°
+    41.0     4   1   3    25%  -91.5°
+    43.0     3   0   3     0%  -99.5°
+    45.0     5   1   4    20%  -99.5°
+    49.0     4   1   3    25%  -88.6°
+    51.0     5   2   3    40%  -26.4°
+    53.0     2   0   2     0%  -91.6°
+    55.0     2   0   2     0%  -89.5°
+    57.0     2   0   2     0%  -92.4°
+    59.0     4   0   4     0%  -38.2°
+    65.0     7   3   4    43%  -51.4°
+    67.0     4   2   2    50%  -99.2°
+    69.0     7   2   5    29%  -36.3°
+    71.0     4   1   3    25%  -22.6°
+    73.0     4   0   4     0%  -58.9°
+    75.0     4   1   3    25%  -48.2°
+    77.0     6   2   4    33%  -33.5°
+    79.0     3   1   2    33%  109.7°
+    81.0     6   1   5    17%  -34.1°
+    83.0     4   1   3    25%   48.8°
+    89.0     7   0   7     0%    2.3°
+    91.0     8   1   7    12%   -2.1°
+    93.0     5   3   2    60%    0.4°
+    95.0     3   1   2    33%  -18.0°
+    97.0     3   0   3     0%   27.3°
+    99.0     3   2   1    67%  -63.0°
+    101.0     5   0   5     0%   88.1°
+    103.0     5   0   5     0%   36.5°
+    105.0     3   2   1    67%   86.2°
+    109.0     7   0   7     0%   81.4°
+    111.0     6   2   4    33%   87.8°
+    113.0     2   0   2     0%   79.5°
+    115.0     4   1   3    25%   76.6°
+    117.0     5   3   2    60%   83.7°
+    121.0     2   0   2     0%   86.2°
+    123.0     6   2   4    33%   82.8°
+    129.0     5   3   2    60%   82.2°
+    131.0     4   0   4     0%   83.4°
+    133.0     4   2   2    50%   84.7°
+    135.0     6   4   2    67%   84.8°
+    137.0     4   2   2    50%   85.0°
+    139.0     4   2   2    50%   82.5°
+    141.0     3   3   0   100%   89.1°
+    143.0     2   1   1    50%   90.6°
+    145.0     2   2   0   100%   78.6°
+    151.0     4   3   1    75%   85.0°
+    153.0     2   1   1    50%   87.7°
+    159.0     4   4   0   100%   88.2°
+
+  3. SKEWNESS FROM KRAWTCHOUK:
+    Corr(cos(θ), skewness) = 0.0754
+    Corr(sin(θ), skewness) = 0.1597
+    Combined |r| = 0.1766
+    SC mean skewness: 14.4083
+    NS mean skewness: 6.6971
+
+  4. WEIGHT DISTRIBUTION KURTOSIS:
+
+  5. SCORE PALINDROME DISTANCE AND TWIST:
+    SC mean palindrome_dist: 0.00
+    NS mean palindrome_dist: 3.20
+
+  6. WHY ODD n SEPARATES MORE THAN EVEN n:
+    n-1 = 6 (even)
+    C(n,2) = 21 (odd)
+    m = C(n-1,2) = 15 (odd)
+    m/2 = 7.5 (center of weight distribution)
+
+    KRAWTCHOUK REFLECTION: complement maps
+    B_1 → -B_1 (H is complement-antisymmetric)
+    B_2 → +B_2 (c3 is complement-SYMMETRIC)
+    B_3 → -B_3 (antisymmetric again)
+    General: B_k → (-1)^k B_k
+    
+    SC classes: B_1=0 and B_3=0 after centering
+    (because complement = self for SC)
+    NS classes: B_1 ≠ 0 and B_3 ≠ 0
+    
+    IN THE TWIST PLANE (B2_resid, B3_resid):
+    SC has B3_resid ≈ 0 → angle ≈ 0° or 180° (on B2 axis)
+    NS has B3_resid ≠ 0 → angle ≠ 0° (off the B2 axis)
+    The SEPARATION = the difference in B3_resid between SC and NS
+
+    |B3_resid| for SC: mean=21.841
+    |B3_resid| for NS: mean=18.280
+    Ratio NS/SC: 0.837
+
+========================================================================
+  WHY THE TWIST SEPARATES SC AND NS
+========================================================================
+
+  THE KRAWTCHOUK REFLECTION FORMULA:
+    K_k(m-x; m) = (-1)^k K_k(x; m)
+
+  This means: the COMPLEMENT (flip all tiles, x → m-x) maps:
+    B_1 → -B_1  (antisymmetric — H flips sign)
+    B_2 → +B_2  (symmetric — c3 is preserved!)
+    B_3 → -B_3  (antisymmetric)
+    B_4 → +B_4  (symmetric)
+    ...
+
+  For SC classes (self-complementary): complement = self.
+  So B_k = (-1)^k B_k for SC classes.
+  For odd k: B_k = -B_k → B_k = 0.
+  For even k: B_k = B_k (no constraint).
+
+  SC CLASSES HAVE B_1 = B_3 = B_5 = ... = 0 (odd modes vanish!)
+  NS classes have nonzero odd modes.
+
+  In the TWIST PLANE (B2_resid, B3_resid):
+    SC: B3_resid ≈ 0 → lives on the B2_resid axis (angle ≈ 0° or 180°)
+    NS: B3_resid ≠ 0 → lives OFF the B2_resid axis
+
+  This is WHY SC and NS separate angularly:
+  SC lives on a LINE (the B2 axis).
+  NS spreads into a PLANE (both B2 and B3).
+  The angular separation measures the B3 contribution of NS classes.
+
+  AT ODD n: the GF(2) decomposition is clean → B3 is large → strong separation.
+  AT EVEN n: the cut/cycle overlap muddies B3 → weak separation.
+
+DONE.
