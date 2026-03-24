@@ -1,0 +1,16 @@
+TC Audio v1.0.0 -- Tournament Audio Codec
+==========================================================================================
+
+           Signal        Raw         TC      zlib9        bz2  TC/best             Method
+  -------------------------------------------------------------------------------------
+          silence    88,200B        47B       108B        47B    1.00x                raw TIE
+         sine_440    88,200B     1,968B     8,549B    13,966B    4.34x             delta2 WIN
+          a_major    88,200B    22,901B    87,112B    82,487B    3.60x             delta2 WIN
+      speech_like    88,200B    37,032B    77,026B    67,971B    1.84x             delta2 WIN
+      white_noise    88,200B    83,349B    86,779B    85,974B    1.03x         byte_split WIN
+       music_like    88,200B    19,780B    71,048B    56,152B    2.84x             delta2 WIN
+            sweep    88,200B    43,636B    85,024B    83,068B    1.90x             delta2 WIN
+         sawtooth    88,200B       368B     8,663B    12,341B   23.54x              delta WIN
+
+  SCORE: 7W 1T 0L / 8
+  Win rate: 88%, Never-worse: 100%
