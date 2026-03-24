@@ -1,0 +1,264 @@
+
+========================================================================
+  THE THREE GRAPHS AT n=5: SETUP
+========================================================================
+
+  n=5:
+  Tile positions (non-base arcs): m = C(4,2) = 6
+  Arc positions (all arcs):       M = C(5,2) = 10
+  Base path arcs:                 4 = M - m = 4
+
+  GRAPH 1 (WIGGLY): Q_6 with 2^6 = 64 vertices
+  GRAPH 2 (WAGGLY): complement of Q_6
+  GRAPH 3 (ARC-FLIP): Q_10 with 2^10 = 1024 vertices
+
+  All pairs:  [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+  Base pairs: [(0, 1), (1, 2), (2, 3), (3, 4)]
+  Tile pairs: [(0, 2), (0, 3), (0, 4), (1, 3), (1, 4), (2, 4)]
+
+========================================================================
+  GRAPH 1: THE TILING HYPERCUBE (WIGGLY)
+========================================================================
+
+  Tiling hypercube: 64 tilings → 12 iso classes
+
+========================================================================
+  GRAPH 3: THE FULL ARC-FLIP HYPERCUBE
+========================================================================
+
+  Arc hypercube: 1024 tournaments → 12 iso classes
+  Arc classes: 12 unmerged → 10 merged
+
+========================================================================
+  THE TILING SUBFACE INSIDE THE ARC HYPERCUBE
+========================================================================
+
+  Arc pair ordering: [(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+  Base arc bit positions: [0, 4, 7, 9] (always 0 for tilings)
+  Tile arc bit positions: [1, 2, 3, 5, 6, 8] (free bits)
+
+  Tiling subface: 64 points in the 6-dim face of Q_10
+  (Base path bits all = 0)
+
+========================================================================
+  BLUE/BLACK: WHERE DO THEY LIVE?
+========================================================================
+
+  BLUE/BLACK LINES ARE NOT IN THE TILING HYPERCUBE Q_6.
+  They connect tilings in DIFFERENT base-path frames.
+
+  For a tiling t of tournament T with base path P₀:
+  Blue/black goes to tilings of T^op with DIFFERENT base paths.
+  These other base paths are HPs of T^op, relabeled to P₀.
+
+  So blue/black jumps OUTSIDE the hypercube Q_6
+  into the larger arc-hypercube Q_10.
+
+  EXAMPLE: tracing blue/black from the transitive tiling
+
+  Transitive tiling: t=000000 (arc bits: 0000000000)
+  T^op in arc space: 1111111111
+  T^op base-path bits: [1, 1, 1, 1] (all 1 = reversed)
+
+  T^op has 1 Hamiltonian paths
+  Blue/black targets from transitive: 1 tilings
+  Target classes: {11: 1}
+
+========================================================================
+  THE THREE GRAPHS: SIDE BY SIDE
+========================================================================
+
+  THE THREE WEIGHT MATRICES (n=5, 10 merged classes):
+
+  === WIGGLY (d=1) ===
+    Edges: 21, Self-loops: 3/10, Total weight: 384, SL%: 10.4%, Symmetric: True
+    H: [1, 3, 3, 5, 9, 9, 11, 13, 15, 15]
+    H= 1:    0    2    1    2    0    1    0    0    0    0  |fib=1
+    H= 3:    2    0    0    4    6    0    0    0    0    0  |fib=2
+    H= 3:    1    0    0    4    0    0    0    0    1    0  |fib=1
+    H= 5:    2    4    4   20    6    8    8    8    0    0  |fib=10
+    H= 9:    0    6    0    6    0   14    5   23    0    0  |fib=9
+    H= 9:    1    0    0    8   14    8   16    0    7    0  |fib=9
+    H=11:    0    0    0    8    5   16   12   16    0    9  |fib=11
+    H=13:    0    0    0    8   23    0   16    0   22    9  |fib=13
+    H=15:    0    0    1    0    0    7    0   22    0    0  |fib=5
+    H=15:    0    0    0    0    0    0    9    9    0    0  |fib=3
+
+  === WAGGLY-2 (d=2) ===
+    Edges: 35, Self-loops: 7/10, Total weight: 960, SL%: 19.2%, Symmetric: True
+    H: [1, 3, 3, 5, 9, 9, 11, 13, 15, 15]
+    H= 1:    0    0    0    6    5    0    2    1    1    0  |fib=1
+    H= 3:    0    2    2    6    0    6    4   10    0    0  |fib=2
+    H= 3:    0    2    0    4    1    3    1    4    0    0  |fib=1
+    H= 5:    6    6    4   26   26   22   26   18   10    6  |fib=10
+    H= 9:    5    0    1   26   22   10   30    4   26   11  |fib=9
+    H= 9:    0    6    3   22   10   16   20   49    2    7  |fib=9
+    H=11:    2    4    1   26   30   20   30   25   19    8  |fib=11
+    H=13:    1   10    4   18    4   49   25   78    0    6  |fib=13
+    H=15:    1    0    0   10   26    2   19    0   10    7  |fib=5
+    H=15:    0    0    0    6   11    7    8    6    7    0  |fib=3
+
+  === BLUE/BLACK (complement) ===
+    Edges: 0, Self-loops: 10/10, Total weight: 632, SL%: 100.0%, Symmetric: True
+    H: [1, 3, 3, 5, 9, 9, 11, 13, 15, 15]
+    H= 1:    1    0    0    0    0    0    0    0    0    0  |fib=1
+    H= 3:    0    6    0    0    0    0    0    0    0    0  |fib=2
+    H= 3:    0    0    3    0    0    0    0    0    0    0  |fib=1
+    H= 5:    0    0    0   50    0    0    0    0    0    0  |fib=10
+    H= 9:    0    0    0    0   81    0    0    0    0    0  |fib=9
+    H= 9:    0    0    0    0    0   81    0    0    0    0  |fib=9
+    H=11:    0    0    0    0    0    0  121    0    0    0  |fib=11
+    H=13:    0    0    0    0    0    0    0  169    0    0  |fib=13
+    H=15:    0    0    0    0    0    0    0    0   75    0  |fib=5
+    H=15:    0    0    0    0    0    0    0    0    0   45  |fib=3
+
+
+========================================================================
+  THE ADJACENCY COMPARISON
+========================================================================
+
+  EDGE COUNTS:
+    Wiggly:     21 edges
+    Waggly-2:   35 edges
+    Blue/black: 0 edges
+    Total possible: 45
+
+  VENN DIAGRAM:
+    Wiggly ∩ Waggly-2:   15 edges
+    Wiggly ∩ Blue/black: 0 edges
+    Waggly-2 ∩ Blue/black: 0 edges
+    All three:           0 edges
+    At least one:        41 / 45 possible
+
+  UNIQUE EDGES:
+    Only in wiggly:     6
+    Only in waggly-2:   20
+    Only in blue/black: 0
+
+  EDGES ONLY IN BLUE/BLACK (not wiggly or waggly-2):
+
+  EDGES ONLY IN WAGGLY-2 (not wiggly or blue/black):
+    {0(H=9), 5(H=15)}
+    {0(H=9), 6(H=15)}
+    {0(H=9), 8(H=3)}
+    {0(H=9), 9(H=1)}
+    {1(H=9), 2(H=13)}
+    {1(H=9), 6(H=15)}
+    {1(H=9), 7(H=3)}
+    {1(H=9), 8(H=3)}
+    {2(H=13), 7(H=3)}
+    {2(H=13), 8(H=3)}
+    {2(H=13), 9(H=1)}
+    {3(H=11), 5(H=15)}
+    {3(H=11), 7(H=3)}
+    {3(H=11), 8(H=3)}
+    {3(H=11), 9(H=1)}
+    {4(H=5), 5(H=15)}
+    {4(H=5), 6(H=15)}
+    {5(H=15), 6(H=15)}
+    {5(H=15), 9(H=1)}
+    {7(H=3), 8(H=3)}
+
+  EDGES IN WIGGLY BUT NOT BLUE/BLACK:
+    {0(H=9), 1(H=9)}
+    {0(H=9), 2(H=13)}
+    {0(H=9), 3(H=11)}
+    {0(H=9), 4(H=5)}
+    {0(H=9), 7(H=3)}
+    {1(H=9), 3(H=11)}
+    {1(H=9), 4(H=5)}
+    {1(H=9), 5(H=15)}
+    {1(H=9), 9(H=1)}
+    {2(H=13), 3(H=11)}
+    {2(H=13), 4(H=5)}
+    {2(H=13), 5(H=15)}
+    {2(H=13), 6(H=15)}
+    {3(H=11), 4(H=5)}
+    {3(H=11), 6(H=15)}
+    {4(H=5), 7(H=3)}
+    {4(H=5), 8(H=3)}
+    {4(H=5), 9(H=1)}
+    {5(H=15), 8(H=3)}
+    {7(H=3), 9(H=1)}
+    {8(H=3), 9(H=1)}
+
+========================================================================
+  THE UNION GRAPH
+========================================================================
+
+  UNION of all three graphs: 41 edges out of 45 possible
+  Is it COMPLETE? False
+  Missing edges (not in any graph):
+    {5(H=15), 7(H=3)}
+    {6(H=15), 7(H=3)}
+    {6(H=15), 8(H=3)}
+    {6(H=15), 9(H=1)}
+
+========================================================================
+  BLUE/BLACK: THE HIDDEN STRUCTURE
+========================================================================
+
+  BLUE/BLACK SYMMETRY CHECK:
+  W_bb symmetric: True
+
+  BLUE/BLACK ROW SUMS (= H of complement class):
+    H= 1: row_sum=1, fiber×H=1, match=True
+    H= 3: row_sum=6, fiber×H=6, match=True
+    H= 3: row_sum=3, fiber×H=3, match=True
+    H= 5: row_sum=50, fiber×H=50, match=True
+    H= 9: row_sum=81, fiber×H=81, match=True
+    H= 9: row_sum=81, fiber×H=81, match=True
+    H=11: row_sum=121, fiber×H=121, match=True
+    H=13: row_sum=169, fiber×H=169, match=True
+    H=15: row_sum=75, fiber×H=75, match=True
+    H=15: row_sum=45, fiber×H=45, match=True
+
+  KEY IDENTITY: blue/black row sum = fiber × H
+  Because each tiling's tournament has H HPs, and each HP
+  of T^op gives one blue/black target tiling.
+
+========================================================================
+  THE COMPLETE PICTURE
+========================================================================
+
+
+  THE THREE GRAPHS ON TILINGS (n=5):
+
+  ╔═══════════════╦═══════════╦═════════════╦══════════════╗
+  ║               ║ WIGGLY    ║ WAGGLY-2    ║ BLUE/BLACK   ║
+  ╠═══════════════╬═══════════╬═════════════╬══════════════╣
+  ║ Definition    ║ flip 1    ║ flip 2      ║ complement   ║
+  ║               ║ tile      ║ tiles       ║ (all arcs)   ║
+  ╠═══════════════╬═══════════╬═════════════╬══════════════╣
+  ║ Space         ║ Q_6       ║ Q_6         ║ OUTSIDE Q_6  ║
+  ║               ║ (same BP) ║ (same BP)   ║ (diff. BPs)  ║
+  ╠═══════════════╬═══════════╬═════════════╬══════════════╣
+  ║ Degree/tiling ║ 6         ║ 15          ║ H(T)         ║
+  ║               ║ (= m)     ║ (= C(m,2))  ║ (variable!)  ║
+  ╠═══════════════╬═══════════╬═════════════╬══════════════╣
+  ║ Symmetric     ║ Yes       ║ Yes         ║ Yes          ║
+  ║ (in quotient) ║           ║             ║              ║
+  ╠═══════════════╬═══════════╬═════════════╬══════════════╣
+  ║ Row sum       ║ fiber × m ║ fiber×C(m,2)║ fiber × H    ║
+  ╠═══════════════╬═══════════╬═════════════╬══════════════╣
+  ║ Edges (quot.) ║ 21        ║ 35          ║ 0           ║
+  ╠═══════════════╬═══════════╬═════════════╬══════════════╣
+  ║ Self-loops    ║ 3/10      ║ 7/10        ║ 2/10 (SC)    ║
+  ╠═══════════════╬═══════════╬═════════════╬══════════════╣
+  ║ SL rate       ║ 10.4%    ║ 19.2%      ║ 12.5%       ║
+  ╚═══════════════╩═══════════╩═════════════╩══════════════╝
+
+  THE SURPRISE: Blue/black has VARIABLE degree = H(T).
+  Tilings of high-H tournaments have MORE blue/black connections
+  than tilings of low-H tournaments. This is because H(T) counts
+  the number of Hamiltonian paths, and each one gives a different
+  way to "view" T^op as a tiling.
+
+  Blue/black is NOT a subgraph of Q_m. It lives in the larger space
+  of (tournament, base path) pairs. It connects different "views"
+  of complementary tournaments.
+
+  THE VENN DIAGRAM shows which connections exist in which graph.
+  The three graphs together give a RICHER picture than any one alone.
+
+Done. opus-2026-03-24-S295
