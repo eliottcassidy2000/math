@@ -1,0 +1,191 @@
+
+========================================================================
+  TILE ALPHABET AT n=6 (m=10)
+========================================================================
+
+  Letter | Pair  | Range | Vertices
+  ----------------------------------------
+  A      | (0,2) | 2     | 0 ↔ 2
+  B      | (0,3) | 3     | 0 ↔ 3
+  C      | (0,4) | 4     | 0 ↔ 4
+  D      | (0,5) | 5     | 0 ↔ 5
+  E      | (1,3) | 2     | 1 ↔ 3
+  F      | (1,4) | 3     | 1 ↔ 4
+  G      | (1,5) | 4     | 1 ↔ 5
+  H      | (2,4) | 2     | 2 ↔ 4
+  I      | (2,5) | 3     | 2 ↔ 5
+  J      | (3,5) | 2     | 3 ↔ 5
+
+  Building class map for 1024 tilings...
+  56 iso classes → 34 merged classes
+
+
+========================================================================
+  d=1: INDIVIDUAL TILE SL RATES
+========================================================================
+
+  Letter Range    Edges    SL_rate   
+  -----------------------------------
+  A      2        125      0.0664    
+  B      3        127      0.1172    
+  C      4        127      0.1094    
+  D      5        107      0.0898    
+  E      2        98       0.0820    
+  F      3        93       0.1250    
+  G      4        127      0.1094    
+  H      2        98       0.0820    
+  I      3        127      0.1172    
+  J      2        125      0.0664    
+
+  BY RANGE:
+    Range 2: 4 tiles, avg SL=0.0742, values=['0.0664', '0.0820', '0.0820', '0.0664']
+    Range 3: 3 tiles, avg SL=0.1198, values=['0.1172', '0.1250', '0.1172']
+    Range 4: 2 tiles, avg SL=0.1094, values=['0.1094', '0.1094']
+    Range 5: 1 tiles, avg SL=0.0898, values=['0.0898']
+
+========================================================================
+  d=2: LETTER PAIR ANALYSIS (45 pairs)
+========================================================================
+
+  Computing all 45 d=2 pair SL rates...
+
+  TOP 10 d=2 pairs by SL rate:
+    EH   SL=0.1367 Σrange=4 shared=-
+    CG   SL=0.1094 Σrange=8 shared=-
+    BF   SL=0.1074 Σrange=6 shared=-
+    FI   SL=0.1074 Σrange=6 shared=-
+    BI   SL=0.1016 Σrange=6 shared=-
+    AE   SL=0.0938 Σrange=4 shared=-
+    HJ   SL=0.0938 Σrange=4 shared=-
+    AJ   SL=0.0898 Σrange=4 shared=-
+    CE   SL=0.0898 Σrange=6 shared=-
+    GH   SL=0.0898 Σrange=6 shared=-
+
+  BOTTOM 10:
+    CD   SL=0.0547 Σrange=9 shared={0}
+    DG   SL=0.0547 Σrange=9 shared={5}
+    CF   SL=0.0508 Σrange=7 shared={4}
+    FG   SL=0.0508 Σrange=7 shared={1}
+    BD   SL=0.0469 Σrange=8 shared={0}
+    DI   SL=0.0469 Σrange=8 shared={5}
+    AD   SL=0.0332 Σrange=7 shared={0}
+    DJ   SL=0.0332 Σrange=7 shared={5}
+    AI   SL=0.0293 Σrange=5 shared={2}
+    BJ   SL=0.0293 Σrange=5 shared={3}
+
+  ZERO-SL d=2 pairs: 0
+
+  BY Σrange:
+    Σrange=4: 6 pairs, avg SL=0.0905, [0.0645 - 0.1367]
+    Σrange=5: 12 pairs, avg SL=0.0599, [0.0293 - 0.0762]
+    Σrange=6: 11 pairs, avg SL=0.0817, [0.0566 - 0.1074]
+    Σrange=7: 10 pairs, avg SL=0.0520, [0.0332 - 0.0605]
+    Σrange=8: 4 pairs, avg SL=0.0664, [0.0469 - 0.1094]
+    Σrange=9: 2 pairs, avg SL=0.0547, [0.0547 - 0.0547]
+
+  BY SHARED VERTEX:
+    Shared: 24 pairs, avg SL=0.0540
+    None:   21 pairs, avg SL=0.0837
+
+========================================================================
+  d=3: SAMPLED TRIPLE ANALYSIS (120 triples)
+========================================================================
+
+  Computing all 120 d=3 triple SL rates...
+
+  TOP 10 d=3 triples by SL rate:
+    BFI   SL=0.2266 #verts=6 ranges=(3, 3, 3)
+    ADI   SL=0.1543 #verts=3 ranges=(2, 3, 5)
+    BDJ   SL=0.1543 #verts=3 ranges=(2, 3, 5)
+    DEH   SL=0.1406 #verts=6 ranges=(2, 2, 5)
+    AFJ   SL=0.1367 #verts=6 ranges=(2, 2, 3)
+    AHI   SL=0.1309 #verts=4 ranges=(2, 2, 3)
+    BEJ   SL=0.1309 #verts=4 ranges=(2, 2, 3)
+    BGH   SL=0.1309 #verts=6 ranges=(2, 3, 4)
+    CEI   SL=0.1309 #verts=6 ranges=(2, 3, 4)
+    CFH   SL=0.1289 #verts=4 ranges=(2, 3, 4)
+
+  BOTTOM 10:
+    FIJ   SL=0.0215 #verts=5 ranges=(2, 3, 3)
+    BDF   SL=0.0195 #verts=5 ranges=(3, 3, 5)
+    CDG   SL=0.0195 #verts=4 ranges=(4, 4, 5)
+    DFI   SL=0.0195 #verts=5 ranges=(3, 3, 5)
+    ACG   SL=0.0176 #verts=5 ranges=(2, 4, 4)
+    ADE   SL=0.0176 #verts=5 ranges=(2, 2, 5)
+    AFI   SL=0.0176 #verts=5 ranges=(2, 3, 3)
+    BFJ   SL=0.0176 #verts=5 ranges=(2, 3, 3)
+    CGJ   SL=0.0176 #verts=5 ranges=(2, 4, 4)
+    DHJ   SL=0.0176 #verts=5 ranges=(2, 2, 5)
+
+  ZERO-SL d=3 triples: 0 out of 120
+
+  BY #VERTICES:
+    3 verts: 4 triples, avg SL=0.1396, [0.1250 - 0.1543]
+    4 verts: 57 triples, avg SL=0.0485, [0.0195 - 0.1309]
+    5 verts: 54 triples, avg SL=0.0281, [0.0176 - 0.0391]
+    6 verts: 5 triples, avg SL=0.1531, [0.1309 - 0.2266]
+
+  BY RANGE PROFILE (top 5):
+    (3, 3, 3): 1 triples, avg SL=0.2266
+    (2, 3, 4): 24 triples, avg SL=0.0602
+    (2, 3, 5): 12 triples, avg SL=0.0570
+    (2, 2, 3): 18 triples, avg SL=0.0551
+    (2, 2, 4): 12 triples, avg SL=0.0479
+    (3, 4, 5): 6 triples, avg SL=0.0449
+    (2, 2, 5): 6 triples, avg SL=0.0443
+    (2, 4, 5): 8 triples, avg SL=0.0415
+
+========================================================================
+  d=4: THE DEEP GAP LAYER (210 quadruples)
+========================================================================
+
+  Computing all 210 d=4 quadruple SL rates...
+
+  TOP 10 d=4 quadruples:
+    ABIJ   SL=0.1484 #verts=4 ranges=(2, 2, 3, 3)
+    BCEF   SL=0.1465 #verts=4 ranges=(2, 3, 3, 4)
+    FGHI   SL=0.1465 #verts=4 ranges=(2, 3, 3, 4)
+    ACGJ   SL=0.1152 #verts=6 ranges=(2, 2, 4, 4)
+    CDFG   SL=0.1094 #verts=4 ranges=(3, 4, 4, 5)
+    AEHJ   SL=0.1074 #verts=6 ranges=(2, 2, 2, 2)
+    BCGI   SL=0.1074 #verts=6 ranges=(3, 3, 4, 4)
+    CEGH   SL=0.1016 #verts=6 ranges=(2, 2, 4, 4)
+    ACEH   SL=0.0957 #verts=5 ranges=(2, 2, 2, 4)
+    EGHJ   SL=0.0957 #verts=5 ranges=(2, 2, 2, 4)
+
+  BOTTOM 10:
+    AFHJ   SL=0.0176 #verts=6 ranges=(2, 2, 2, 3)
+    BEFI   SL=0.0176 #verts=6 ranges=(2, 3, 3, 3)
+    BFHI   SL=0.0176 #verts=6 ranges=(2, 3, 3, 3)
+    CEIJ   SL=0.0176 #verts=6 ranges=(2, 2, 3, 4)
+    DEHJ   SL=0.0176 #verts=6 ranges=(2, 2, 2, 5)
+    DEIJ   SL=0.0176 #verts=5 ranges=(2, 2, 3, 5)
+    DFGJ   SL=0.0176 #verts=5 ranges=(2, 3, 4, 5)
+    EGIJ   SL=0.0176 #verts=4 ranges=(2, 2, 3, 4)
+    ABEG   SL=0.0137 #verts=5 ranges=(2, 2, 3, 4)
+    CHIJ   SL=0.0137 #verts=5 ranges=(2, 2, 3, 4)
+
+  ZERO-SL d=4 quadruples: 0 out of 210
+
+  BY #VERTICES:
+    4 verts: 24 quads, avg SL=0.0509, [0.0176 - 0.1484]
+    5 verts: 122 quads, avg SL=0.0410, [0.0137 - 0.0957]
+    6 verts: 64 quads, avg SL=0.0510, [0.0176 - 0.1152]
+
+========================================================================
+  THE VERTEX-COUNT LAW AT n=6
+========================================================================
+
+  SL RATE BY (d, #vertices):
+
+  d     2-vert      3-vert      4-vert      5-vert      6-vert     
+  -----------------------------------------------------------------
+  d=1   0.0965(10) -           -           -           -          
+  d=2  Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/waggly_alphabet_n6_s303.py", line 330, in <module>
+    vals = [d['rate'] for d in pair_sl.values()
+  File "/home/e/Documents/claude/math/04-computation/waggly_alphabet_n6_s303.py", line 331, in <listcomp>
+    if len(set().union(*[set(tile_pairs[i]) for i in range(m) if (1<<i) & sum(1<<k for k in key)])) == nv  # too complex
+  File "/home/e/Documents/claude/math/04-computation/waggly_alphabet_n6_s303.py", line 331, in <listcomp>
+    if len(set().union(*[set(tile_pairs[i]) for i in range(m) if (1<<i) & sum(1<<k for k in key)])) == nv  # too complex
+NameError: name 'key' is not defined
