@@ -1,0 +1,135 @@
+
+========================================================================
+  STRATEGY 1: CANONICAL PATH SELECTION (n=5)
+========================================================================
+
+  For each tournament: try ALL HPs, pick the one giving
+  the graph closest to even (minimum degree-parity violations).
+
+  12 tournament iso classes
+
+  H    #HPs   best_PV    #even_HPs  #graph_cls  
+  ---------------------------------------------
+  1    1      0          1          1           
+  3    3      2          0          1           
+  3    3      2          0          1           
+  3    3      2          0          1           
+  5    5      2          0          4           
+  5    5      2          0          4           
+  9    9      2          0          5           
+  9    9      2          0          5           
+  11   11     0          2          6           
+  13   13     0          1          6           
+  15   15     2          0          3           
+  15   15     2          0          3           
+
+========================================================================
+  THE KEY QUESTION: CAN EVERY TOURNAMENT FIND AN EVEN HP?
+========================================================================
+
+  Can every tournament choose an HP that gives an even graph?
+
+  Classes with ≥1 even-graph HP: 3 / 12
+  Classes with NO even-graph HP: 9 / 12
+
+  SOME TOURNAMENTS CANNOT PRODUCE AN EVEN GRAPH!
+  The bijection CANNOT be made even-graph-preserving for ALL classes.
+
+    H=3: 3 HPs tried, NONE gives even graph. Best PV=2
+    H=3: 3 HPs tried, NONE gives even graph. Best PV=2
+    H=3: 3 HPs tried, NONE gives even graph. Best PV=2
+    H=5: 5 HPs tried, NONE gives even graph. Best PV=2
+    H=5: 5 HPs tried, NONE gives even graph. Best PV=2
+    H=9: 9 HPs tried, NONE gives even graph. Best PV=2
+    H=9: 9 HPs tried, NONE gives even graph. Best PV=2
+    H=15: 15 HPs tried, NONE gives even graph. Best PV=2
+    H=15: 15 HPs tried, NONE gives even graph. Best PV=2
+
+========================================================================
+  STRATEGY 2: THE GRAPH MULTISET Φ(T)
+========================================================================
+
+  Φ(T) = {G_P : P ∈ HP(T)} = the multiset of graphs from all HPs.
+
+  H= 1: 1 HPs → 1 distinct graph classes, 1 even, avg_edges=10.0
+    1× graph (1, 1, 1, 1, 1, 1, 1, 1, 1, 1)...
+  H= 3: 3 HPs → 1 distinct graph classes, 0 even, avg_edges=9.0
+    3× graph (0, 1, 1, 1, 1, 1, 1, 1, 1, 1)...
+  H= 3: 3 HPs → 1 distinct graph classes, 0 even, avg_edges=9.0
+    3× graph (0, 1, 1, 1, 1, 1, 1, 1, 1, 1)...
+  H= 3: 3 HPs → 1 distinct graph classes, 0 even, avg_edges=9.0
+    3× graph (0, 1, 1, 1, 1, 1, 1, 1, 1, 1)...
+  H= 5: 5 HPs → 4 distinct graph classes, 0 even, avg_edges=8.0
+    2× graph (0, 0, 1, 1, 1, 1, 1, 1, 1, 1)...
+    1× graph (0, 0, 1, 1, 1, 0, 1, 1, 1, 1)...
+    1× graph (0, 1, 1, 1, 1, 1, 1, 0, 1, 1)...
+  H= 5: 5 HPs → 4 distinct graph classes, 0 even, avg_edges=8.0
+    2× graph (0, 0, 1, 1, 1, 1, 1, 1, 1, 1)...
+    1× graph (0, 0, 1, 1, 1, 0, 1, 1, 1, 1)...
+    1× graph (0, 1, 1, 1, 1, 1, 1, 0, 1, 1)...
+  H= 9: 9 HPs → 5 distinct graph classes, 0 even, avg_edges=6.6
+    2× graph (0, 0, 0, 1, 1, 1, 1, 1, 1, 1)...
+    2× graph (0, 0, 1, 0, 1, 0, 1, 0, 1, 1)...
+    2× graph (0, 0, 1, 1, 1, 0, 1, 1, 0, 1)...
+  H= 9: 9 HPs → 5 distinct graph classes, 0 even, avg_edges=7.0
+    3× graph (0, 0, 1, 1, 1, 1, 1, 1, 1, 1)...
+    2× graph (0, 0, 0, 1, 1, 1, 0, 1, 1, 1)...
+    2× graph (0, 1, 1, 1, 1, 1, 1, 0, 1, 1)...
+  H=11: 11 HPs → 6 distinct graph classes, 2 even, avg_edges=6.5
+    3× graph (0, 0, 1, 1, 1, 1, 1, 1, 1, 0)...
+    2× graph (0, 0, 1, 1, 1, 1, 1, 1, 1, 1)...
+    2× graph (0, 0, 0, 1, 1, 1, 0, 1, 1, 1)...
+  H=13: 13 HPs → 6 distinct graph classes, 1 even, avg_edges=6.6
+    6× graph (0, 0, 1, 1, 1, 0, 1, 1, 1, 1)...
+    2× graph (0, 0, 0, 1, 0, 1, 1, 1, 1, 0)...
+    2× graph (0, 0, 1, 1, 1, 1, 1, 1, 1, 0)...
+  H=15: 15 HPs → 3 distinct graph classes, 0 even, avg_edges=6.4
+    6× graph (0, 0, 0, 1, 0, 1, 1, 1, 1, 1)...
+    6× graph (0, 0, 1, 1, 1, 0, 1, 1, 0, 1)...
+    3× graph (0, 1, 1, 1, 1, 1, 1, 0, 1, 1)...
+  H=15: 15 HPs → 3 distinct graph classes, 0 even, avg_edges=6.3
+    5× graph (0, 0, 1, 1, 0, 1, 1, 1, 1, 0)...
+    5× graph (0, 0, 1, 1, 1, 0, 1, 1, 0, 1)...
+    5× graph (0, 0, 1, 1, 1, 0, 1, 1, 1, 1)...
+
+========================================================================
+  STRATEGY 3: SCORE-BASED CANONICAL PATH
+========================================================================
+
+
+  THE SCORE PATH: order vertices by score (out-degree), highest first.
+  This gives a canonical HP for tournaments with DISTINCT scores.
+
+  For tournaments with tied scores: break ties by secondary invariant.
+
+  THE TRICK: the score path is the TRANSITIVE ORDERING.
+  If T were transitive, the score path IS the unique HP.
+  For non-transitive T: the score path may NOT be a valid HP
+  (the arc between consecutive score-ranked vertices might go "wrong way").
+
+  ALTERNATIVE: use the score RANKING as a guide but find the
+  CLOSEST valid HP to the score ranking (minimum Kendall tau distance).
+
+  Score-ordered path is valid HP: 11 / 12 classes (91.7%)
+
+========================================================================
+  STRATEGY 4: THE CLOSEST-TO-EVEN PATH
+========================================================================
+
+  CLOSEST-TO-EVEN PATH: minimize Σ (degree mod 2) over all HPs.
+
+  Distribution of best parity violations:
+    PV=0: 3 classes (25.0%)
+    PV=2: 9 classes (75.0%)
+
+  Classes reachable to even graph (PV=0): 3 / 12 (25.0%)
+  Classes with PV=2 (off by one vertex pair): 9
+
+========================================================================
+  THE PATH-INDEPENDENT BIJECTION
+========================================================================
+
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/canonical_bijection_s320.py", line 342, in <module>
+    print("""
+KeyError: 'P ∈ HP(T)'
