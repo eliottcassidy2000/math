@@ -1,0 +1,54 @@
+==========================================================================================
+  PARALLEL IDEAS: Kill two birds with one stone
+  kind-pasteur-2026-03-25-S7
+==========================================================================================
+
+  Image          MED raster    Dual-pass Context hash Gradient steer Checkerboard    Multi-res     Quincunx          Raw     PNG          BEST  vs PNG
+  ----------------------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_parallel_ideas.py:65: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob                2764         2830         2795         3599         2670*        5297         2759         3704     3421  Checkerboard   1.28x
+  circles             5565         6055         5623         6909         5521*       10695         5975         5805     6978  Checkerboard   1.26x
+  grad_d                27*         264           27          414           53          215           55          343      149    MED raster   5.52x
+  grad_h                29*         134           44          160           63          129           60          152      148    MED raster   5.10x
+  mixed               1945*        2074         2259         2326         2524         3350         2505         3131     2656    MED raster   1.37x
+  natural            12180        11993        12201        12523        11656*       14416        11895        13306    12100  Checkerboard   1.04x
+  random             16398*       16398        16398        16398        16398        20103        16398        16398    16580    MED raster   1.01x
+  solid                 24           33           68           23*          23           29           23           23      148  Gradient steer   6.43x
+  stripes_0             31           45          205           53           75           31           69           26*     154           Raw   5.92x
+  stripes_45            89*         164          427          213          236          223          209          140      515    MED raster   5.79x
+  stripes_90            37*          48          111           62           82           39           88           44      135    MED raster   3.65x
+
+  METHOD WIN COUNTS (which method was smallest most often):
+    MED raster      : 6
+    Checkerboard    : 3
+    Gradient steer  : 1
+    Raw             : 1
+
+==========================================================================================
+  ANALYSIS: Which new idea actually helps?
+==========================================================================================
+
+  Compare each method to MED raster baseline:
+  Image           MED  Dual-pas  Context   Gradient  Checkerb  Multi-re  Quincunx       Raw
+  blob           2764    0.98-    0.99=    0.77-    1.04+    0.52-    1.00=    0.75-
+  circles        5565    0.92-    0.99=    0.81-    1.01=    0.52-    0.93-    0.96-
+  grad_d           27    0.10-    1.00=    0.07-    0.51-    0.13-    0.49-    0.08-
+  grad_h           29    0.22-    0.66-    0.18-    0.46-    0.22-    0.48-    0.19-
+  mixed          1945    0.94-    0.86-    0.84-    0.77-    0.58-    0.78-    0.62-
+  natural       12180    1.02=    1.00=    0.97-    1.04+    0.84-    1.02+    0.92-
+  random        16398    1.00=    1.00=    1.00=    1.00=    0.82-    1.00=    1.00=
+  solid            24    0.73-    0.35-    1.04+    1.04+    0.83-    1.04+    1.04+
+  stripes_0        31    0.69-    0.15-    0.58-    0.41-    1.00=    0.45-    1.19+
+  stripes_45       89    0.54-    0.21-    0.42-    0.38-    0.40-    0.43-    0.64-
+  stripes_90       37    0.77-    0.33-    0.60-    0.45-    0.95-    0.42-    0.84-
+
+  LEGEND: + = better than MED, - = worse, = = same (within 2%)
+
+  KEY FINDINGS:
+  - Context hash: expected to help on natural images (running error correction)
+  - Checkerboard: expected to help on diagonal patterns (symmetric 2D context)
+  - Multi-res: expected to help on smooth images (global structure first)
+  - Gradient steer: expected to help on mixed-direction images
+  - Quincunx: similar to checkerboard but diamond geometry
+

@@ -1,0 +1,48 @@
+================================================================================
+  CHECKERBOARD CODEC: Direction-free prediction via phase decomposition
+  kind-pasteur-2026-03-25-S7
+================================================================================
+
+--- 64x64 ---
+  Image            PNG     MED  Checker     Raw    Best  vs PNG   RT
+  -----------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_checker.py:44: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob            1312     994     1113    1545     994   1.32x   OK
+  circles         2143    1666     1785    1682    1666   1.29x   OK
+  grad_d           106      45      114     190      45   2.36x   OK
+  grad_h           108      33       90      95      33   3.27x   OK
+  natural         3137    3088     3062    3416    3062   1.02x   OK
+  random          4228    4110     4121    4110    4110   1.03x   OK
+  solid            100      24       39      23      23   4.35x   OK
+  stripes_45       156      47      110      39      39   4.00x   OK
+
+  8W / 0T / 0L out of 8
+
+--- 128x128 ---
+  Image            PNG     MED  Checker     Raw    Best  vs PNG   RT
+  -----------------------------------------------------------------
+  blob            3421    2764     3026    3704    2764   1.24x   OK
+  circles         6978    5565     6143    5805    5565   1.25x   OK
+  grad_d           149      27       81     343      27   5.52x   OK
+  grad_h           148      29       81     152      29   5.10x   OK
+  natural        12100   12180    12147   13306   12147   1.00x   OK
+  random         16580   16398    16409   16398   16398   1.01x   OK
+  solid            148      24       43      23      23   6.43x   OK
+  stripes_45       229      47      130      52      47   4.87x   OK
+
+  7W / 0T / 1L out of 8
+
+--- 256x256 ---
+  Image            PNG     MED  Checker     Raw    Best  vs PNG   RT
+  -----------------------------------------------------------------
+  blob            9323    7748     9330    6532    6532   1.43x   OK
+  circles        24780   19504    21825   19454   19454   1.27x   OK
+  grad_d           405      36       52     714      36  11.25x   OK
+  grad_h           369      28       67     227      28  13.18x   OK
+  natural        47736   48345    48196   52222   48196   0.99x   OK
+  random         65917   65550    65561   65550   65550   1.01x   OK
+  solid            369      24       43      23      23  16.04x   OK
+  stripes_45       536      49      121      85      49  10.94x   OK
+
+  7W / 0T / 1L out of 8
