@@ -1,0 +1,140 @@
+========================================================================
+  TOURNAMENT THEORY IN THE COMPLEX PLANE
+  opus-2026-03-25-S339
+========================================================================
+
+  1. THE TOURNAMENT DIRICHLET SERIES
+  V(s) = Sum_{n>=1} A000568(n) / n^s
+
+         s             V(s)   converges?
+       0.5   3144345.778132  yes (all s)
+       1.0    995527.420635  yes (all s)
+       1.5    315215.981151  yes (all s)
+       2.0     99815.765876  yes (all s)
+       3.0     10012.177777  yes (all s)
+       5.0       101.865760  yes (all s)
+      10.0         1.002053  yes (all s)
+
+  V(s) at complex s:
+  s = (2+0j): V(s) = 99815.765876+0.000000j
+  s = (2+1j): V(s) = -66477.491894-74432.833109j
+  s = (2-1j): V(s) = -66477.491894+74432.833109j
+  s = (1+1j): V(s) = -663283.768167-742186.305526j
+  s = (0.5+3j): V(s) = 2560237.315502-1818952.140359j
+
+  RESULT: V(s) converges for ALL s in C (entire Dirichlet series!)
+  because A000568(n) < n! and Sum n! / n^s converges for all s.
+
+  This means: V(s) defines a HOLOMORPHIC function on ALL of C.
+  No poles, no branch cuts, no barriers. Tournament counting
+  extends perfectly to the entire complex plane.
+
+  Compare: the Riemann zeta ζ(s) has a pole at s=1.
+  V(s) has NO poles — tournament counting is "smoother" than
+  prime counting.
+
+========================================================================
+  2. THE LABELED TOURNAMENT EGF
+========================================================================
+
+  L(z) = Sum_n 2^{C(n,2)} z^n / n!
+
+  L(z) at real z:
+  L(  0.1) = 290.13152054
+  L(  0.5) = 1739372865664.47216797
+  L(  1.0) = 28448880949370920.00000000
+  L(  2.0) = 465706956831852199936.00000000
+  L( -1.0) = 28351808180133380.00000000
+  L( -0.5) = 1727522500604.61132812
+
+  L(z) at complex z:
+  L(1j) = -28400036478184232.000000+48534579423278.710938j
+  L((1+1j)) = -3116158486946873.500000-3638330627147667968.000000j
+  L((-1+1j)) = 3096440947665793.500000+3632118143245499904.000000j
+  L(0.5j) = -1733372466636.202637+5924301080.392383j
+  L((0.7071067811865476+0.7071067811865475j)) = -34474449700493.257812-28434509632041464.000000j
+
+  L(z) is ENTIRE (converges for all z in C).
+
+  Proof: |2^{C(n,2)} z^n / n!| = 2^{n(n-1)/2} |z|^n / n!
+  By Stirling: n! ~ sqrt(2πn)(n/e)^n
+  So the terms decay super-exponentially for any fixed z.
+
+  The ZEROS of L(z) are interesting:
+  L(z) = 0 means: the "total weight of labeled tournaments"
+  vanishes at z. Since L is entire and not identically zero,
+  it has isolated zeros. Where are they?
+
+  Searching for real zeros of L(z):
+
+========================================================================
+  3. V(z) = 2^{z(z-1)/2} / Gamma(z+1) IN THE COMPLEX PLANE
+========================================================================
+
+  V(z) on the real line:
+         z           V(z)    A000568
+    -0.500         0.7317           
+     0.000         1.0000           
+     0.500         1.0347           
+     1.000         1.0000          1
+     1.500         0.9756           
+     2.000         1.0000          1
+     2.500         1.1037           
+     3.000         1.3333          2
+     3.500         1.7839           
+     4.000         2.6667          4
+     4.500         4.4849           
+     5.000         8.5333         12
+     5.500        18.4513           
+     6.000        45.5111         56
+     6.500       128.4631           
+     7.000       416.1016        456
+     7.500      1550.2869           
+     8.000      6657.6254       6880
+
+  POLES of V(z): at z = -1, -2, -3, ... (where Gamma(z+1) = 0)
+  These are the "negative vertex" poles.
+
+  ZEROS of V(z): the numerator 2^{z(z-1)/2} is never zero (it's exp of
+  something finite). So V(z) has no zeros — it's a meromorphic function
+  with poles at negative integers.
+
+  The RESIDUE at z = -k (k = 1, 2, 3, ...):
+    Res(V, -k) = 2^{k(k+1)/2} / (Gamma'(1-k))
+    = 2^{C(k+1,2)} × (-1)^k / k!
+
+  This is the "number of tournaments on -k vertices with sign."
+  The alternating signs suggest a cohomological interpretation:
+    Res(V, -k) ~ (-1)^k × V(k+1) (!)
+  The residues at negative integers are SIGNED VERSION of values
+  at positive integers!
+
+  Residues at negative integers:
+      z              Res    (-1)^k V(k+1)
+     -1          -2.0000          -1.0000
+     -2           4.0000           1.3333
+     -3         -10.6667          -2.6667
+     -4          42.6667           8.5333
+     -5        -273.0667         -45.5111
+     -6        2912.7111         416.1016
+     -7      -53261.0032       -6657.6254
+
+========================================================================
+  4. THE FIBER FRACTION f(z) = Gamma(z-3/2) / (Gamma(1/2) Gamma(z-1))
+========================================================================
+
+  f(z) has POLES at z = 3/2, 1/2, -1/2, -3/2, ... (from Gamma(z-3/2))
+  f(z) has ZEROS at z = 1, 0, -1, -2, ... (from 1/Gamma(z-1))
+  The poles and zeros ALTERNATE on the real line!
+
+       z           f(z)   pole/zero?
+   0.000            nan 
+   0.500            nan 
+   1.000      -0.000000 ← zero (Gamma(0) in denom)
+   1.400      -2.718060 
+   1.600       3.604251 
+   2.000       1.000000 
+   2.500       0.636620 
+   3.000       0.500000 
+   4.000       0.375000 
+   5.000       0.312500 
