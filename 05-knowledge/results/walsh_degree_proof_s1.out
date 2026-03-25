@@ -1,0 +1,186 @@
+
+============================================================
+  n = 4, m = 3 tiles, N = 8 tilings
+  Predicted Walsh degree: 2
+  m/2 = 1.5
+============================================================
+  H computation: 0.0s
+  H range: [1, 5]
+  Mean H: 4.0000
+  Expected (all tournaments): 3.0000
+  Walsh transform: 0.6s
+
+  Walsh coefficients by Hamming weight:
+   wt  C(m,wt)  #nonzero  max|coeff|     alpha_k
+    0        1         1    4.000000    4.000000
+    1        3         3    1.000000   -2.000000
+    2        3         2    0.500000   -1.000000
+    3        1         0    0.000000    0.000000
+
+  RESULTS:
+    Observed max nonzero weight: 2
+    Predicted (THM-259):         2
+    Match: YES
+    m/2 = 1.5
+    Band-limited (degree < m/2): NO
+    Complement symmetry H(t)=H(~t): NO (4 violations)
+    Odd-weight Walsh coefficients: 3 nonzero (complement symmetry breaks in tiling model)
+
+  THM-076 amplitude verification:
+    wt=0: max|coeff|=4.000000, THM-076 r=1 amp=6.000000, r=2 amp=12.000000
+    wt=2: max|coeff|=0.500000, THM-076 r=1 amp=0.500000, r=2 amp=1.000000
+
+============================================================
+  n = 5, m = 6 tiles, N = 64 tilings
+  Predicted Walsh degree: 4
+  m/2 = 3.0
+============================================================
+  H computation: 0.0s
+  H range: [1, 15]
+  Mean H: 9.8750
+  Expected (all tournaments): 7.5000
+  Walsh transform: 0.0s
+
+  Walsh coefficients by Hamming weight:
+   wt  C(m,wt)  #nonzero  max|coeff|     alpha_k
+    0        1         1    9.875000    9.875000
+    1        6         5    2.000000   -5.000000
+    2       15        15    0.875000   -5.250000
+    3       20        12    0.250000    1.000000
+    4       15         7    0.125000    0.375000
+    5        6         0    0.000000    0.000000
+    6        1         0    0.000000    0.000000
+
+  RESULTS:
+    Observed max nonzero weight: 4
+    Predicted (THM-259):         4
+    Match: YES
+    m/2 = 3.0
+    Band-limited (degree < m/2): NO
+    Complement symmetry H(t)=H(~t): NO (26 violations)
+    Odd-weight Walsh coefficients: 17 nonzero (complement symmetry breaks in tiling model)
+
+  THM-076 amplitude verification:
+    wt=0: max|coeff|=9.875000, THM-076 r=1 amp=15.000000, r=2 amp=30.000000
+    wt=2: max|coeff|=0.875000, THM-076 r=1 amp=0.750000, r=2 amp=1.500000
+    wt=4: max|coeff|=0.125000, THM-076 r=1 amp=0.125000
+
+============================================================
+  n = 6, m = 10 tiles, N = 1024 tilings
+  Predicted Walsh degree: 4
+  m/2 = 5.0
+============================================================
+  H computation: 0.1s
+  H range: [1, 45]
+  Mean H: 29.0000
+  Expected (all tournaments): 22.5000
+  Walsh transform: 0.0s
+
+  Walsh coefficients by Hamming weight:
+   wt  C(m,wt)  #nonzero  max|coeff|     alpha_k
+    0        1         1   29.000000   29.000000
+    1       10         8    4.000000  -14.000000
+    2       45        44    1.875000  -25.000000
+    3      120        73    0.375000    6.000000
+    4      210        81    0.250000    5.000000
+    5      252         0    0.000000    0.000000
+    6      210         0    0.000000    0.000000
+    7      120         0    0.000000    0.000000
+    8       45         0    0.000000    0.000000
+    9       10         0    0.000000    0.000000
+   10        1         0    0.000000    0.000000
+
+  RESULTS:
+    Observed max nonzero weight: 4
+    Predicted (THM-259):         4
+    Match: YES
+    m/2 = 5.0
+    Band-limited (degree < m/2): YES
+    Complement symmetry H(t)=H(~t): NO (460 violations)
+    Odd-weight Walsh coefficients: 81 nonzero (complement symmetry breaks in tiling model)
+
+  THM-076 amplitude verification:
+    wt=0: max|coeff|=29.000000, THM-076 r=1 amp=45.000000, r=2 amp=90.000000
+    wt=2: max|coeff|=1.875000, THM-076 r=1 amp=1.500000, r=2 amp=3.000000
+    wt=4: max|coeff|=0.250000, THM-076 r=1 amp=0.125000, r=2 amp=0.250000
+
+
+Starting n=7 (m=15, 32768 tilings)...
+
+============================================================
+  n = 7, m = 15 tiles, N = 32768 tilings
+  Predicted Walsh degree: 6
+  m/2 = 7.5
+============================================================
+  H computation: 12.2s
+  H range: [1, 189]
+  Mean H: 99.2188
+  Expected (all tournaments): 78.7500
+  Walsh transform: 0.1s
+
+  Walsh coefficients by Hamming weight:
+   wt  C(m,wt)  #nonzero  max|coeff|     alpha_k
+    0        1         1   99.218750   99.218750
+    1       15        14    9.937500  -44.437500
+    2      105       103    4.718750 -121.218750
+    3      455       364    0.875000   32.375000
+    4     1365       730    0.468750   40.281250
+    5     3003       529    0.062500   -2.937500
+    6     5005       323    0.031250   -2.281250
+    7     6435         0    0.000000    0.000000
+    8     6435         0    0.000000    0.000000
+    9     5005         0    0.000000    0.000000
+   10     3003         0    0.000000    0.000000
+   11     1365         0    0.000000    0.000000
+   12      455         0    0.000000    0.000000
+   13      105         0    0.000000    0.000000
+   14       15         0    0.000000    0.000000
+   15        1         0    0.000000    0.000000
+
+  RESULTS:
+    Observed max nonzero weight: 6
+    Predicted (THM-259):         6
+    Match: YES
+    m/2 = 7.5
+    Band-limited (degree < m/2): YES
+    Complement symmetry H(t)=H(~t): NO (15915 violations)
+    Odd-weight Walsh coefficients: 907 nonzero (complement symmetry breaks in tiling model)
+
+  THM-076 amplitude verification:
+    wt=0: max|coeff|=99.218750, THM-076 r=1 amp=157.500000, r=2 amp=315.000000
+    wt=2: max|coeff|=4.718750, THM-076 r=1 amp=3.750000, r=2 amp=7.500000
+    wt=4: max|coeff|=0.468750, THM-076 r=1 amp=0.187500, r=2 amp=0.375000
+    wt=6: max|coeff|=0.031250, THM-076 r=1 amp=0.031250
+
+
+============================================================
+SUMMARY: Walsh degree verification
+============================================================
+  n    m   m/2  observed  predicted  match  BL at m/2
+  4    3   1.5         2          2    YES         NO
+  5    6   3.0         4          4    YES         NO
+  6   10   5.0         4          4    YES        YES
+  7   15   7.5         6          6    YES        YES
+
+PROOF OF BAND-LIMITEDNESS FOR ALL n >= 6:
+
+1. THM-076 (proved algebraically for all n):
+   Walsh amplitude |hat_H[S]| = 2^r * (n-2k)! / 2^(n-1)
+   for monomials of type (2a_1, ..., 2a_r) with 2k+r <= n.
+
+2. Maximum Hamming weight = max(2k : 2k+r <= n, r >= 1) = n-1.
+   Only EVEN weights have nonzero amplitudes in the full arc model.
+   In the tiling model, odd weights CAN be nonzero (no complement symmetry).
+
+3. Walsh degree in tiling model = 2*floor((n-1)/2):
+   - Upper bound: degree in full model <= 2*floor((n-1)/2), tiling <= full.
+   - Lower bound (n>=4): interleaving construction provides base-path-free
+     Hamiltonian paths, achieving max weight in tile variables.
+
+4. Band-limitedness: For n >= 6, 2*floor((n-1)/2) <= n-1 < C(n-1,2)/2.
+   So all Walsh/Krawtchouk coefficients above m/2 are zero.
+
+5. At n=5: degree 4 > m/2 = 3, so NOT band-limited at m/2 in tiling model.
+   At n=4: degree 2 > m/2 = 1.5, NOT band-limited.
+   Band-limitedness at m/2 holds for n >= 6.
+

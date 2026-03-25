@@ -1,0 +1,80 @@
+============================================================
+SC MAXIMIZER PROOF ANALYSIS
+kind-pasteur-2026-03-25-S1
+============================================================
+
+############################################################
+  n = 5
+############################################################
+  Enumerated 1024 tournaments in 0.1s
+  SC score sequences: [(0, 1, 2, 3, 4), (0, 2, 2, 2, 4), (1, 1, 2, 3, 3), (1, 2, 2, 2, 3), (2, 2, 2, 2, 2)]
+
+  Score (0, 1, 2, 3, 4): 120 tournaments, max H = 1
+    SC maximizers: 120, NSC maximizers: 0
+    SC max H = 1, NSC max H = 0
+    [OK] SC achieves max
+
+  Score (0, 2, 2, 2, 4): 40 tournaments, max H = 3
+    SC maximizers: 40, NSC maximizers: 0
+    SC max H = 3, NSC max H = 0
+    [OK] SC achieves max
+
+  Score (1, 1, 2, 3, 3): 240 tournaments, max H = 9
+    SC maximizers: 240, NSC maximizers: 0
+    SC max H = 9, NSC max H = 0
+    [OK] SC achieves max
+
+  Score (1, 2, 2, 2, 3): 280 tournaments, max H = 15
+    SC maximizers: 40, NSC maximizers: 0
+    SC max H = 15, NSC max H = 0
+    [OK] SC achieves max
+
+  Score (2, 2, 2, 2, 2): 24 tournaments, max H = 15
+    SC maximizers: 24, NSC maximizers: 0
+    SC max H = 15, NSC max H = 0
+    [OK] SC achieves max
+
+############################################################
+  n = 6
+############################################################
+  Enumerated 32768 tournaments in 4.6s
+  SC score sequences (6 total): [(0, 1, 2, 3, 4, 5), (0, 2, 2, 3, 3, 5), (1, 1, 1, 4, 4, 4), (1, 1, 2, 3, 4, 4), (1, 2, 2, 3, 3, 4), (2, 2, 2, 3, 3, 3)]
+  Score (0, 1, 2, 3, 4, 5): 720 tours, max H=1, SC in max: 50/50 [OK]
+  Score (0, 2, 2, 3, 3, 5): 720 tours, max H=5, SC in max: 50/50 [OK]
+  Score (1, 1, 1, 4, 4, 4): 80 tours, max H=9, SC in max: 50/50 [OK]
+  Score (1, 1, 2, 3, 4, 4): 2880 tours, max H=17, SC in max: 50/50 [OK]
+  Score (1, 2, 2, 3, 3, 4): 8640 tours, max H=37, SC in max: 50/50 [OK]
+  Score (2, 2, 2, 3, 3, 3): 2640 tours, max H=45, SC in max: 50/50 [OK]
+
+############################################################
+  n = 7 (sampling)
+############################################################
+
+  Testing regular score (3,3,3,3,3,3,3):
+  Sampled 72 regular tournaments in 0.2s
+  Best H = 189
+  H distribution (top 5): [(171, 40), (175, 22), (189, 10)]
+  Best tournament SC: True
+
+============================================================
+  Z_2 ORBIT ANALYSIS ON OMEGA
+============================================================
+
+  Circulant T_5 with S={1,2}: H = 15
+  Directed odd cycles: 7
+    (0, 1, 3)
+    (0, 2, 3)
+    (0, 2, 4)
+    (1, 2, 4)
+    (1, 3, 4)
+    (0, 1, 2, 3, 4)
+    (0, 2, 4, 1, 3)
+
+  Anti-automorphisms of T_5:
+    sigma = (0, 4, 3, 2, 1), involution: True
+    sigma = (1, 0, 4, 3, 2), involution: True
+    sigma = (2, 1, 0, 4, 3), involution: True
+    sigma = (3, 2, 1, 0, 4), involution: True
+    sigma = (4, 3, 2, 1, 0), involution: True
+
+DONE.

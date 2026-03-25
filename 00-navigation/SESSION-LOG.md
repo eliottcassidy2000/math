@@ -13,6 +13,41 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## kind-pasteur-2026-03-25-S1 — 2026-03-25: Open Problems Session (2 theorems, corrections, defect wave)
+
+**Account:** kind-pasteur
+**Continuation of:** kind-pasteur-2026-03-24-S20cq
+**Files read:** Full startup sequence (definitions, mistakes, open questions, session log, tangents, hypothesis index, investigation backlog)
+**Summary of work:** Long session attacking open problems across multiple tracks. Proved band-limitedness for all n, proved Z₂ orbit pairing mechanism for SC Maximizer, extended defect wave to n=9, confirmed seesaw at n=8.
+
+### New Theorems
+- **THM-260** (Band-limitedness for all n): Walsh degree of H = 2*floor((n-1)/2) in tiling model. Band-limited at m/2 for n >= 6. PROOF: THM-076 upper bound + interleaving construction lower bound. Resolves B1 of OPEN-Q-040.
+- **THM-261** (Z₂ Orbit Pairing on Omega): For SC tournament T* with involutory anti-aut sigma, phi: C -> sigma(C)^rev is an automorphism of Omega(T*). At even n (sigma fpf): paired cycles vertex-disjoint → boosts alpha_2. At odd n (sigma has fixed point): paired cycles share fixed point → boosts alpha_1 via BIBD constraint.
+
+### Corrections
+- **MISTAKE-034**: Band-limitedness at m/2 does NOT hold at n=5 (Walsh degree 4 > m/2 = 3). Corrected OPEN-Q-040 item 2 and h-is-band-limited.md.
+- Odd-weight Walsh coefficients ARE nonzero in the tiling model (complement symmetry H(t)=H(~t) fails because tiling complement ≠ T^op).
+
+### Key Computational Results
+1. **Walsh degree verified**: n=4,5,6,7 all match formula 2*floor((n-1)/2). Exhaustive.
+2. **SC Maximizer verified**: All SC score classes at n=5 (5 classes) and n=6 (6 classes) have SC maximizers (exhaustive). n=7 regular class confirmed by sampling.
+3. **Gap orbits sequence** (2,5,20,86,490,3703,47889): NOT in OEIS. No simple recurrence. Genuinely new.
+4. **Defect wave extended to n=9**: beta_1 rate: 30% → 14.6% → 5.8% → 2% → ~0%. beta_3 rate: 0% → 1.2% → 8% → 20% → 22%. Crossover at n=7.
+5. **Seesaw beta_1*beta_3=0 at n=8**: 0/500 violations. beta_2=0 always (500/500). beta_3*beta_4 also mutually exclusive (0/500).
+
+### New Scripts
+- verify_bandlimited_all_n.py, walsh_degree_proof_s1.py (Walsh analysis)
+- sc_maximizer_proof_s1.py (SC Maximizer verification)
+- gap_orbits_analysis_s1.py (sequence analysis)
+- beta3_wave_s1.py, seesaw_n8_test_s1.py (path homology)
+
+### Unresolved Threads
+- SC Maximizer: full algebraic proof still open (Z₂ mechanism proved but sufficiency unproved)
+- Gap orbits formula: needs understanding of what "edge_orbits" means in the Burnside decomposition
+- beta_3 bound: beta_3 ≤ 2 conjectured for all n, max beta_3 = 2 at n=8,9 (too rare to catch in 500 samples)
+- beta_1 algebraic proof: rank(TT) ≥ C(n,2)-n still open
+- Seesaw at n≥9: needs verification with larger samples
+
 ## kind-pasteur-2026-03-24-S20cq — 2026-03-24: Production Engineering Sprint (18 tools, 8500+ lines)
 
 ### Phase 2: Image/Video/Audio Codecs

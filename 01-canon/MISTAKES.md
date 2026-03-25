@@ -1266,3 +1266,31 @@ The three_graphs_s295.py blue/black weight matrix is WRONG. The claim "blue/blac
 
 ### Lesson
 ALWAYS check definitions against the actual explorer behavior. The tiling complement (flip tiles) and tournament complement (flip all arcs) are different operations. In the tiling model with fixed base path, flipping all tiles does NOT give T^op.
+
+---
+
+## MISTAKE-034: Band-limitedness at m/2 does NOT hold at n=5
+
+**Date discovered:** 2026-03-25
+**Found by:** kind-pasteur-2026-03-25-S1
+**Affects:** h-is-band-limited.md (opus-S306), OPEN-Q-040 item 2
+
+### What was assumed
+"H is EXACTLY zero in upper Walsh spectrum (k >= m/2). PROVED at n=5,6." (From OPEN-Q-040 and h-is-band-limited.md reflection.)
+
+### Why it was wrong
+At n=5 (m=6): the Walsh degree of H is 4 = 2*floor((5-1)/2). Since m/2 = 3, the Walsh degree EXCEEDS m/2. There are 7 nonzero Walsh coefficients at weight 4, and alpha_4 = sum of Walsh coefficients at weight 4 = 0.375 != 0.
+
+Additionally, complement symmetry H(t) = H(~t) FAILS in the tiling model because flipping all tile bits is NOT T^op (base-path arcs are fixed). This means odd-weight Walsh coefficients are nonzero (17 at n=5, 907 at n=7).
+
+### The correct framing
+- Walsh degree = 2*floor((n-1)/2) for ALL n >= 4 (THM-260, proved via THM-076)
+- Band-limitedness at m/2 holds for **n >= 6** (since 2*floor((n-1)/2) < C(n-1,2)/2 iff n >= 6)
+- At n=4,5: Walsh degree exceeds m/2 — NOT band-limited at midpoint
+- In the tiling model, both odd and even Walsh weights can be nonzero
+
+### Impact
+The "upper half vanishes" claim in h-is-band-limited.md needs correction at n=5. The main qualitative finding (H is low-frequency, concentrated in lower Walsh spectrum) is correct and gets STRONGER as n grows. The asymptotic ratio degree/m -> 0 still holds.
+
+### Lesson
+When making claims about "all n," verify at the boundary cases (smallest n). The n=5 case is special because m = C(4,2) = 6 is comparable in size to n-1 = 4. For n >= 6, the quadratic growth of m dominates the linear growth of the Walsh degree.

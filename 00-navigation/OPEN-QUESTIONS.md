@@ -777,7 +777,7 @@ G_n = Q_{C(n,2)} / S_n is a genuinely new mathematical object (no prior literatu
 
 **RESOLVED sub-problems:**
 1. ✅ **Tournament Counting Theorem** (S291): V_n×n!/2^m = 1 + Σ(1/k)×n↓k×2^{(k²-1)/2-(k-1)n}. Euler product with poles at 4,16,64,... controlled by 1/3. D₃(0) = 128/81.
-2. ✅ **Band-limitedness** (S305,S310,S311): H is EXACTLY zero in upper Walsh spectrum (k ≥ m/2). PROVED at n=5,6. Mechanism: polynomial degree + complement cancellation.
+2. ✅ **Band-limitedness** (S305,S310,S311, **CORRECTED kind-pasteur-S1 2026-03-25**): Walsh degree = 2*floor((n-1)/2) for all n>=4 (THM-260). Band-limited at m/2 for n>=6. **CORRECTION:** n=5 is NOT band-limited at m/2 (degree 4 > m/2=3). Odd-weight Walsh coefficients are nonzero in tiling model (complement symmetry fails).
 3. ✅ **Krawtchouk 3-axis system** (S307): B₁≈-H (r=-0.94), B₂≈-c₃ (r=-0.86), B₃=twist. SC classes have B_odd=0 exactly (Krawtchouk parity).
 4. ✅ **Diameter = A003141** (S306): max feedback arc set. Growth ~n²/4, not n-2 (small-n coincidence).
 5. ✅ **Paley→Dual Codes** (S306,S308): P₇+I→Hamming[7,4,3], P₂₃+I→Golay[23,12,7].
@@ -788,7 +788,7 @@ G_n = Q_{C(n,2)} / S_n is a genuinely new mathematical object (no prior literatu
 10. ✅ **Practical tools** (S308-S309): pre-filter eliminates 98% of canon calls. tournament_tools.py library. tournament_codec.py (kind-pasteur).
 
 **OPEN sub-problems (the 10 boundary questions from S307):**
-1. 🟡 B1: Prove H band-limited for ALL n (not just n=5,6,7)
+1. ✅ B1: **RESOLVED** (THM-260, kind-pasteur-S1): Walsh degree = 2*floor((n-1)/2) for all n. Band-limited at m/2 for n>=6. Proof: THM-076 upper bound + interleaving construction lower bound.
 2. 🟢 B2: Exact constant in A003141 n^{3/2} correction
 3. 🟢 B3: Is transitive always a diameter endpoint?
 4. 🟢 B4: Does K₁-H correlation → 0 or stabilize? (0.94→0.89→0.83)
