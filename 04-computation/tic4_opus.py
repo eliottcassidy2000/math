@@ -327,8 +327,20 @@ def encode(image):
 
         # ---- NEW V4 STRATEGIES ----
 
-        # SPIRAL scan with avg-neighbor prediction
+        # SPIRAL scan with linear extrapolation (2*prev - prev2)
         spiral_path = _scan_spiral(H, W)
+        buf = bytearray()
+        for plane in planes:
+            prev, prev2 = 0, 0
+            for i, (r, c) in enumerate(spiral_path):
+                if i == 0: pred = 0
+                elif i == 1: pred = prev
+                else: pred = max(0, min(255, 2 * prev - prev2))
+                buf.append((int(plane[r, c]) - pred) & 0xFF)
+                prev2, prev = prev, int(plane[r, c])
+        all_candidates.append((6, ct_id, bytes(buf)))
+
+        # SPIRAL scan with avg-neighbor prediction (better on noisy images)
         buf = bytearray()
         for plane in planes:
             known = set()
@@ -336,7 +348,7 @@ def encode(image):
                 pred = _predict_path_pixel(plane, r, c, known, H, W)
                 buf.append((int(plane[r, c]) - pred) & 0xFF)
                 known.add((r, c))
-        all_candidates.append((6, ct_id, bytes(buf)))
+        all_candidates.append((13, ct_id, bytes(buf)))
 
         # CHECKERBOARD scan: phase1 raw sub, phase2 median-predicted
         phase1, phase2 = _scan_checkerboard(H, W)
@@ -426,9 +438,10 @@ def encode(image):
 
 SCAN_NAMES = {
     0: "raster", 1: "transp", 4: "ring", 5: "delta",
-    6: "spiral", 7: "checker/med", 8: "checker/avg",
+    6: "spiral/ext", 7: "checker/med", 8: "checker/avg",
     9: "zigzag/sub", 10: "zigzag/raw",
     11: "hilbert/sub", 12: "hilbert/raw",
+    13: "spiral/avg",
 }
 
 def get_scan_name(data):
@@ -548,7 +561,23 @@ def _decode_planes(payload, H, W, channels, scan_id):
         return planes
 
     if scan_id == 6:
-        # Spiral
+        # Spiral with linear extrapolation
+        spiral_path = _scan_spiral(H, W)
+        planes = []; offset = 0
+        for ch in range(channels):
+            plane = np.zeros((H, W), dtype=np.uint8)
+            prev, prev2 = 0, 0
+            for i, (r, c) in enumerate(spiral_path):
+                if i == 0: pred = 0
+                elif i == 1: pred = prev
+                else: pred = max(0, min(255, 2 * prev - prev2))
+                plane[r, c] = (int(payload[offset]) + pred) & 0xFF; offset += 1
+                prev2, prev = prev, int(plane[r, c])
+            planes.append(plane)
+        return planes
+
+    if scan_id == 13:
+        # Spiral with avg-neighbor prediction
         spiral_path = _scan_spiral(H, W)
         planes = []; offset = 0
         for ch in range(channels):
