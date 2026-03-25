@@ -1,0 +1,45 @@
+================================================================================
+  SAC ANALYSIS: Structure-Aligned Scanning — When Does It Help?
+  kind-pasteur-2026-03-25-S5
+================================================================================
+
+  TEST: Stripes at various angles (64x64)
+  For each angle: which scan direction gives smallest compressed residuals?
+  The BEST scan should be perpendicular to the stripes.
+
+   Angle |    horiz     vert    adiag     diag     ring |     best    PNG  ratio
+  -------+----------------------------------------------------+-------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\sac_analysis.py:123: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L')
+      0° |       56       54      232      233      192 |     vert    108   2.00
+     15° |      231      146      357      417      627 |     vert    324   2.22
+     30° |      193      135      367      417      707 |     vert    239   1.77
+     45° |      135      135      106      303      441 |    adiag    304   2.87
+     60° |      134      190      339      427      691 |    horiz    234   1.75
+     75° |      146      231      344      386      626 |    horiz    277   1.90
+     90° |       54       56      224      224      184 |    horiz    103   1.91
+    105° |      188      227      391      333      588 |    horiz    295   1.57
+    120° |      175      220      431      326      639 |    horiz    337   1.93
+    135° |      147      147      292      107      368 |     diag    254   2.37
+    150° |      220      175      416      348      624 |     vert    344   1.97
+    165° |      227      188      392      361      595 |     vert    316   1.68
+
+         Pattern |    horiz     vert    adiag     diag     ring |     best    PNG  ratio
+  ---------------+----------------------------------------------------+-------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\sac_analysis.py:157: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L')
+         circles |     1975     1975     2118     2113     1053 |     ring   2143   2.04
+     radial_grad |      998      998     1045     1051      468 |     ring   1118   2.39
+            blob |     1098     1098     1181     1195      590 |     ring   1312   2.22
+         natural |     2974     2971     2974     2975     2971 |     vert   3145   1.06
+          random |     4107     4107     4107     4107     4107 |    horiz   4228   1.03
+
+  CONCLUSIONS:
+  1. For angle θ stripes, the best scan is perpendicular to θ (as predicted)
+  2. For radial patterns, ring scan is best (as predicted)
+  3. The compression RATIO (best scan / PNG) quantifies the staircase paradox gain
+  4. Structure-aligned scanning is a REAL, measurable advantage
+
+  This is the core of SAC: detect the angle, pick the matching scan.
+  The mathematical basis: staircase paradox penalty = sec(misalignment angle).
+

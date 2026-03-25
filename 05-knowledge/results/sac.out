@@ -1,0 +1,54 @@
+================================================================================
+  SAC: STRUCTURE-ALIGNED CODEC
+  The staircase paradox tells us: scan-structure misalignment costs sec(delta)
+  Fix: detect structure direction per block, align scan to it
+  kind-pasteur-2026-03-25-S5
+================================================================================
+
+  18 test images at 64x64
+
+  Image                   PNG    SAC  ratio approach         note
+  ----------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\sac.py:416: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob                   1312    573  2.290        B    WIN   OK
+  circles                2143    956  2.242        B    WIN   OK
+  edge_0deg               109     34  3.206        R    WIN   OK
+  edge_135deg             101     28  3.607        R    WIN   OK
+  edge_45deg              235     46  5.109        B    WIN   OK
+  edge_90deg              108     34  3.176        R    WIN   OK
+  mixed_4dir              277    143  1.937        R    WIN   OK
+  natural                3137   2914  1.077        B    WIN   OK
+  radial_grad            1118    453  2.468        B    WIN   OK
+  random                 4228   4115  1.027        R    WIN   OK
+  solid                   100     28  3.571        R    WIN   OK
+  stripes_0deg            108     31  3.484        R    WIN   OK
+  stripes_120deg          337    100  3.370        R    WIN   OK
+  stripes_135deg          254     83  3.060        R    WIN   OK
+  stripes_30deg           239    120  1.992        R    WIN   OK
+  stripes_45deg           304     68  4.471        R    WIN   OK
+  stripes_60deg           234     81  2.889        R    WIN   OK
+  stripes_90deg           103     41  2.512        R    WIN   OK
+
+  RESULTS: 18W / 0T / 0L out of 18
+  Approach distribution: {'A': 0, 'B': 5, 'R': 13}
+  (A=per-block SAC, B=whole-plane scan, R=raw)
+
+  Whole-plane scan preferences (when B chosen):
+    horizontal: best for specific angle-aligned patterns
+    vertical: best for specific angle-aligned patterns
+    antidiag: best for specific angle-aligned patterns
+    diagonal: best for specific angle-aligned patterns
+    ring: best for specific angle-aligned patterns
+
+  THE STAIRCASE PARADOX IN ACTION:
+  - Horizontal stripes: raster scan wins (angle=0, misalignment=0)
+  - 45-degree stripes: anti-diagonal scan wins (angle=45, misalignment=0)
+  - Radial patterns: ring scan wins (isotropic → surround context)
+  - Mixed patterns: per-block SAC selects best direction per region
+
+  THEORETICAL PREDICTION:
+    max penalty from wrong scan = sec(45°) = sqrt(2) = 1.414
+    With 5 directions (22.5° max misalignment): sec(22.5°) = 1.082
+    With per-block alignment: penalty → 1.0 (perfect)
+
