@@ -1,0 +1,67 @@
+================================================================================
+  TIC v4: Structure-Aligned + Cross-Plane + Spiral
+  kind-pasteur-2026-03-25-S6
+================================================================================
+
+--- 64x64 ---
+  Image               PNG   TIC4  ratio       scan   RT
+  -------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic4.py:377: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob               1312    849   1.55       ring   OK
+  circles            2143   1247   1.72       ring   OK
+  grad_h              108     36   3.00  transpose   OK
+  mixed_4way          883    671   1.32     raster   OK
+  natural            3137   3090   1.02  transpose   OK
+  random             4228   4114   1.03     raster   OK
+  rgb_natural        8737   8811   0.99      multi   OK
+  solid               100     28   3.57     raster   OK
+  stripes_0           108     35   3.09     raster   OK
+  stripes_135         254     76   3.34     raster   OK
+  stripes_30          239     85   2.81  transpose   OK
+  stripes_45          304     56   5.43     raster   OK
+  stripes_60          234     86   2.72     raster   OK
+  stripes_90          103     35   2.94  transpose   OK
+
+  13W / 0T / 1L out of 14
+  Scan selection: {'ring': 2, 'transpose': 4, 'raster': 7, 'multi': 1}
+
+--- 128x128 ---
+  Image               PNG   TIC4  ratio       scan   RT
+  -------------------------------------------------------
+  blob               3421   2016   1.70       ring   OK
+  circles            6978   3686   1.89       ring   OK
+  grad_h              148     33   4.48     raster   OK
+  mixed_4way         2656   1949   1.36     raster   OK
+  natural           12100  12184   0.99     raster   OK
+  random            16580  16402   1.01     raster   OK
+  rgb_natural       34041  34508   0.99      multi   OK
+  solid               148     28   5.29     raster   OK
+  stripes_0           154     35   4.40     raster   OK
+  stripes_135         431    112   3.85     raster   OK
+  stripes_30          348    105   3.31  transpose   OK
+  stripes_45          515     93   5.54     raster   OK
+  stripes_60          333    103   3.23     raster   OK
+  stripes_90          135     35   3.86  transpose   OK
+
+  12W / 0T / 2L out of 14
+  Scan selection: {'ring': 2, 'raster': 9, 'multi': 1, 'transpose': 2}
+
+================================================================================
+  WHAT'S NEW IN v4:
+================================================================================
+
+  1. SPIRAL SCAN: continuous spiral from center, groups of 32.
+     Better locality than concentric rings for smooth images.
+
+  2. CROSS-PLANE RGB: G first, then R-G and B-G residuals.
+     Exploits color correlation (R and B highly correlated with G).
+
+  3. MED FILTER ON SCAN LINES: instead of per-pixel avg-neighbor
+     prediction (slow), use MED filter along 1D scan lines (fast).
+     Previous line provides the "above" context.
+
+  4. 6 SCAN DIRECTIONS (was 5): added spiral between ring and raster.
+
+  The structure-aligned insight remains the foundation.
+

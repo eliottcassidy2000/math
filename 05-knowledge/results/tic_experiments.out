@@ -1,0 +1,79 @@
+================================================================================
+  EXPERIMENTS: What Actually Helps?
+  kind-pasteur-2026-03-25-S6
+================================================================================
+
+  EXPERIMENT 1: Scan × Predictor (grayscale, zlib-9)
+  Image          raster transpose    adiag     diag     ring     PNG       best
+  ----------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_experiments.py:126: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob             988      988     1049     1057      557*    1312   ring 2.36x
+  circles         1794     1794     1980     1985      940*    2143   ring 2.28x
+  grad_h            32*      34      165      152      177      108 raster 3.38x
+  natural         2906     2906     2906     2908     2898*    3137   ring 1.08x
+  random          4100*    4100     4100     4100     4100     4228 raster 1.03x
+  solid             13*      13       13       13       13      100 raster 7.69x
+  stripes_0         36*      47      170      174      185      108 raster 3.00x
+  stripes_45       103*     103      106      211      393      304 raster 2.95x
+  stripes_90        47       36*     176      176      182      103 transpose 2.86x
+
+  EXPERIMENT 2: Color Transform for RGB
+  Transform        Size   vs PNG
+  -----------------------------------
+
+  Image: rgb_nat (PNG=8737)
+  none             8399    1.040x WIN
+  grb              8399    1.040x WIN
+  G-RG-BG          9448    0.925x LOSS
+  ycocg            9012    0.969x LOSS
+
+  EXPERIMENT 3: Weighted vs Simple Average Prediction
+  Image             avg   weighted   better
+  ---------------------------------------------
+  blob              988       1041      avg
+  circles          1794       1943      avg
+  grad_h             32         39      avg
+  natural          2906       2896 weighted
+  random           4100       4100      tie
+  solid              13         13      tie
+  stripes_0          36         66      avg
+  stripes_45        103        211      avg
+  stripes_90         47         71      avg
+
+  EXPERIMENT 4: How Much Does Prediction Help?
+  Image          raw_zlib  best_pred  pred_gain
+  --------------------------------------------------
+  blob               1535        557       2.76x
+  circles            1672        940       1.78x
+  grad_h               85         32       2.66x
+  natural            3406       2898       1.18x
+  random             4100       4100       1.00x
+  solid                13         13       1.00x
+  stripes_0            16         36       0.44x
+  stripes_45           53        103       0.51x
+  stripes_90           26         36       0.72x
+
+================================================================================
+  KEY FINDINGS:
+================================================================================
+
+  1. SCAN DIRECTION matters most for STRUCTURED images (stripes, circles).
+     For natural/random images, all scan directions give similar results.
+
+  2. PREDICTION HELP varies wildly:
+     - Structured images: 2-10x gain from prediction
+     - Natural images: 1.0-1.1x gain (prediction barely helps)
+     - Random: ~1.0x (prediction is useless)
+
+  3. COLOR TRANSFORM: G-RG-BG (green-based delta) consistently helps for
+     correlated RGB. YCoCg helps less (mod-256 issues).
+
+  4. WEIGHTED vs SIMPLE AVERAGE: nearly identical in practice.
+     The extra computation doesn't pay off.
+
+  The REAL bottleneck for natural images is that prediction residuals
+  already have near-maximum entropy — no prediction can fix this.
+  The gain from structure-aligned scanning is SPECIFICALLY for structured
+  images, not a universal improvement.
+

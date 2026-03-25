@@ -1,0 +1,53 @@
+================================================================================
+  TIC v5: LINE-BASED MED ON ALL SCAN DIRECTIONS
+  The right combination: fast line-based prediction + structure-aligned scan
+  kind-pasteur-2026-03-25-S6
+================================================================================
+
+--- 64x64 ---
+  Image             PNG   TIC5  ratio       scan     mode   RT
+  --------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic5_diagonal_med.py:221: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob             1312    994   1.32     raster      med   OK
+  circles          2143   1666   1.29     raster      med   OK
+  edge_0            110     28   3.93     raster      med   OK
+  edge_45           272     33   8.24     raster      med   OK
+  edge_90           108     28   3.86  transpose      med   OK
+  grad_d            106     45   2.36     raster      med   OK
+  grad_h            108     32   3.38  transpose      med   OK
+  grad_v            114     32   3.56     raster      med   OK
+  natural          3137   3086   1.02  transpose      med   OK
+  random           4228   4110   1.03     raster      med   OK
+  solid             100     23   4.35        raw      raw   OK
+  stripes_0         108     26   4.15        raw      raw   OK
+  stripes_135       254     72   3.53     raster      med   OK
+  stripes_30        239     81   2.95  transpose      med   OK
+  stripes_45        304     52   5.85     raster      med   OK
+  stripes_60        234     76   3.08        raw      raw   OK
+  stripes_90        103     31   3.32  transpose      med   OK
+
+  17W / 0T / 0L out of 17
+
+--- 128x128 ---
+  Image             PNG   TIC5  ratio       scan     mode   RT
+  --------------------------------------------------------------
+  blob             3421   2764   1.24     raster      med   OK
+  circles          6978   5565   1.25     raster      med   OK
+  edge_0            157     29   5.41     raster      med   OK
+  edge_45           503     36  13.97     raster      med   OK
+  edge_90           155     29   5.34  transpose      med   OK
+  grad_d            149     27   5.52     raster      med   OK
+  grad_h            148     29   5.10     raster      med   OK
+  grad_v            153     29   5.28  transpose      med   OK
+  natural         12100  12180   0.99     raster      med   OK
+  random          16580  16398   1.01     raster      med   OK
+  solid             148     23   6.43        raw      raw   OK
+  stripes_0         154     26   5.92        raw      raw   OK
+  stripes_135       431     99   4.35        raw      raw   OK
+  stripes_30        348    101   3.45  transpose      med   OK
+  stripes_45        515     89   5.79     raster      med   OK
+  stripes_60        333     99   3.36     raster      med   OK
+  stripes_90        135     31   4.35  transpose      med   OK
+
+  16W / 0T / 1L out of 17
