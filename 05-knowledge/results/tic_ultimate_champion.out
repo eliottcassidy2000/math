@@ -1,0 +1,44 @@
+================================================================================
+  TIC ULTIMATE CHAMPION: 7 methods, every winning technique
+  kind-pasteur-2026-03-25-S9
+================================================================================
+
+--- 128x128 ---
+  Image            PNG   CHAMP   ratio   method
+  --------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_ultimate_champion.py:35: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob            3421    1122    3.05  ColSort
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_ultimate_champion.py:35: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blocks           384     158    2.43      Raw
+  checker          184      42    4.38      Raw
+  circles         6978    3143    2.22     LPC4
+  grad_d           149      27    5.52      MED
+  grad_h           148      29    5.10      MED
+  natural        12100   11814    1.02   Wiener
+  radial          2783    1068    2.61  ColSort
+  random         16580   16398    1.01      MED
+  solid            148      23    6.43      Raw
+  stripes0         157      29    5.41    MED-T
+  stripes45        229      47    4.87      MED
+  stripes90        151      25    6.04      Raw
+
+  13W / 0T / 0L out of 13
+  Methods: {'ColSort': 2, 'Raw': 4, 'LPC4': 1, 'MED': 4, 'Wiener': 1, 'MED-T': 1}
+
+  THE FULL PICTURE: Each method wins on its natural domain.
+  The champion picks the right tool for each image.
+
+  MED:     Edges, stripes (nonlinear switching essential)
+  LPC-1D:  Smooth radial (optimal weights via Levinson-Durbin)
+  Wiener:  Natural photos (19-neighbor optimal linear filter)
+  ColSort: Symmetric patterns (BWT-inspired column reordering)
+  RowLPC:  Inter-row correlation (audio-style row prediction)
+  Raw:     Highly regular (zlib finds global patterns directly)
+
+  The mathematical insight: the image's autocorrelation structure
+  determines which predictor is optimal. LPC/Wiener find the optimal
+  LINEAR predictor automatically. MED provides NONLINEAR adaptation.
+  ColSort/RowSort capture NON-LOCAL correlations via reordering.
+
