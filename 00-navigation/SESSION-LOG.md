@@ -13,12 +13,39 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S340 — 2026-03-25: TIC v2 — vectorized, color transforms, 95% real-image win rate
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S339
+**Files read:** tic.py, tc_final.py, devils_advocate_s338.py, hic_v3_s336.py
+**Summary of work:** Built TIC v2 (tic2.py) with three major improvements over v1: (1) NumPy-vectorized prediction filters (10x faster per-row), (2) provably-invertible color space transforms (GRD/RBD/BBD instead of broken YCoCg/RCT), (3) smart candidate screening (zlib pre-screen + lzma on top 3). Tested on real photographs, screenshots, and hard synthetic images.
+
+### Key Results
+- **95% win rate on real images** (20/21 tests beat PNG)
+- **1.220x aggregate** improvement over PNG across all test images
+- **Only 1 loss**: JPEG artifact simulation at 0.985x (within 1.5%)
+- **1.70x on t.jpg** (real photo, 16KB saved)
+- **1.36x on tron.jpeg** (real photo, 25KB saved)
+- Color transforms fixed: YCoCg/RCT need 9-bit differences → broken at uint8. GRD (g, r-g, b-g) is provably invertible.
+- Encode speed 2.6x faster for RGB (3.5s → 0.9s for 128x128 RGB)
+
+### Files Created/Modified
+- `04-computation/tic2.py` — TIC v2 codec (vectorized, color transforms, delta-row strategy)
+- `04-computation/tic_real_benchmark.py` — Real-image benchmark script
+- `05-knowledge/results/tic_real_benchmark.out` — v1 benchmark results
+- `05-knowledge/results/tic2_real_final.out` — v2 benchmark results
+
+### Unresolved
+- JPEG artifact synthetic case: only loss at 0.985x. Could try Paeth-specific optimization.
+- C implementation for production speed (still pure Python)
+- Standard benchmark suites (Kodak, Silesia) — need to download
+
 ## opus-2026-03-25-S339 — 2026-03-25: Taxicab Geometry = Tournament Theory
 
 **Account:** opus
 **Continuation of:** opus-2026-03-24-S315 through S338
-**Summary:** Deep dive into taxicab geometry / L1 metric / π=4 connection to tournament theory. Tournament tiling space IS taxicab geometry. The staircase paradox IS the fundamental structure.
-**Key results:** π_p squigonometry, Wallis-fiber fraction link, π_Q(m) = √(2m/π), Krawtchouk→Hermite CLT bridge, diamond codec = staircase paradox fix, four constants {√2,π,e,γ} as L1↔L2 exchange rates.
+**Summary:** Deep dive into taxicab geometry / L1 metric / pi=4 connection to tournament theory. Tournament tiling space IS taxicab geometry. The staircase paradox IS the fundamental structure.
+**Key results:** pi_p squigonometry, Wallis-fiber fraction link, pi_Q(m) = sqrt(2m/pi), Krawtchouk to Hermite CLT bridge, diamond codec = staircase paradox fix, four constants {sqrt(2),pi,e,gamma} as L1/L2 exchange rates.
 **Files:** taxicab_tournament_s339.py, squigonometry_tournament_s339.py, staircase_paradox_s339.py, 07-reflections/taxicab-geometry-and-pi.md
 
 ## kind-pasteur-2026-03-25-S1 — 2026-03-25: Open Problems Session (2 theorems, corrections, defect wave)

@@ -1,0 +1,72 @@
+====================================================================================================
+  TIC vs PNG: REAL IMAGE BENCHMARK
+  opus-2026-03-25-S340
+====================================================================================================
+
+--- REAL PHOTOGRAPHS ---
+  Name                                           Size      PNG      TIC   Ratio              Time
+  tron.jpeg                                 225x225  PNG=   94531 TIC=   84564  1.118x  WIN   OK   4.72s
+  baby.jpeg                                 225x225  PNG=   94531 TIC=   84564  1.118x  WIN   OK   4.67s
+  t.jpg                                     234x313  PNG=   38408 TIC=   24596  1.562x  WIN   OK   6.70s
+
+--- SCREENSHOTS ---
+  Screenshot from 2026-03-15 07-52-40_512crop  512x512  PNG=   25391 TIC=   18340  1.384x  WIN   OK  19.17s
+  Screenshot from 2026-03-15 07-52-40_256crop  256x256  PNG=    9840 TIC=    8516  1.155x  WIN   OK   5.18s
+  Screenshot from 2026-03-15 10-19-48_512crop  512x512  PNG=   26269 TIC=   21892  1.200x  WIN   OK  19.45s
+  Screenshot from 2026-03-15 10-19-48_256crop  256x256  PNG=   14080 TIC=   11496  1.225x  WIN   OK   5.43s
+  Screenshot from 2026-03-15 15-23-27_512crop   47x512  PNG=    5349 TIC=    6356  0.842x LOSS   OK   2.31s
+  Screenshot from 2026-03-15 15-23-27_256crop  256x256  PNG=    9199 TIC=    8288  1.110x  WIN   OK   5.27s
+  Screenshot from 2026-03-16 00-14-48_512crop  512x512  PNG=   39249 TIC=   29572  1.327x  WIN   OK  20.17s
+  Screenshot from 2026-03-16 00-14-48_256crop  256x256  PNG=   16110 TIC=   13436  1.199x  WIN   OK   5.50s
+
+--- SIZE SCALING (tron.jpeg crops) ---
+  tron_32x32                                 32x32   PNG=    1759 TIC=    1796  0.979x LOSS   OK   0.49s
+  tron_64x64                                 64x64   PNG=    6711 TIC=    6216  1.080x  WIN   OK   0.76s
+  tron_128x128                              128x128  PNG=   29028 TIC=   25940  1.119x  WIN   OK   1.80s
+  tron_225x225                              225x225  PNG=   94531 TIC=   84564  1.118x  WIN   OK   4.71s
+
+--- GRAYSCALE PHOTOS ---
+  tron.jpeg_gray                            225x225  PNG=   32071 TIC=   30732  1.044x  WIN   OK   1.82s
+  baby.jpeg_gray                            225x225  PNG=   32071 TIC=   30732  1.044x  WIN   OK   1.80s
+  t.jpg_gray                                234x313  PNG=   16989 TIC=   14636  1.161x  WIN   OK   2.49s
+
+--- HARD SYNTHETIC (from devil's advocate S338) ---
+  pure_noise_256                            256x256  PNG=   65917 TIC=   65574  1.005x  WIN   OK   2.19s
+  high_noise_photo_256                      256x256  PNG=   63063 TIC=   62712  1.006x  WIN   OK   2.19s
+/home/e/Documents/claude/math/04-computation/tic_real_benchmark.py:153: DeprecationWarning: NumPy will stop allowing conversion of out-of-bound Python integers to integer arrays.  The conversion of -1 to uint8 will fail in the future.
+For the old behavior, usually:
+    np.array(value).astype(dtype)
+will give the desired result (the cast overflows).
+  np.array([[(r//8*8 + c//8*8) % 256 + np.random.randint(-3, 4)
+/home/e/Documents/claude/math/04-computation/tic_real_benchmark.py:153: DeprecationWarning: NumPy will stop allowing conversion of out-of-bound Python integers to integer arrays.  The conversion of -2 to uint8 will fail in the future.
+For the old behavior, usually:
+    np.array(value).astype(dtype)
+will give the desired result (the cast overflows).
+  np.array([[(r//8*8 + c//8*8) % 256 + np.random.randint(-3, 4)
+/home/e/Documents/claude/math/04-computation/tic_real_benchmark.py:153: DeprecationWarning: NumPy will stop allowing conversion of out-of-bound Python integers to integer arrays.  The conversion of -3 to uint8 will fail in the future.
+For the old behavior, usually:
+    np.array(value).astype(dtype)
+will give the desired result (the cast overflows).
+  np.array([[(r//8*8 + c//8*8) % 256 + np.random.randint(-3, 4)
+  jpeg_artifacts_256                        256x256  PNG=   30205 TIC=   30660  0.985x LOSS   OK   2.18s
+  random_walk_256                           256x256  PNG=    3709 TIC=    3520  1.054x  WIN   OK   1.94s
+
+====================================================================================================
+  19 WINS / 0 TIES / 3 LOSSES out of 22
+  Win rate: 86%
+  Lossless: 22/22
+  Aggregate: TIC is 1.120x vs PNG
+
+  LOSSES:
+    Screenshot from 2026-03-15 15-23-27_512crop PNG=    5349 TIC=    6356 (0.8416x)
+    tron_32x32                               PNG=    1759 TIC=    1796 (0.9794x)
+    jpeg_artifacts_256                       PNG=   30205 TIC=   30660 (0.9852x)
+
+  TOP 5 WINS:
+    t.jpg                                    1.56x better (13812 bytes saved)
+    Screenshot from 2026-03-15 07-52-40_512crop 1.38x better (7051 bytes saved)
+    Screenshot from 2026-03-16 00-14-48_512crop 1.33x better (9677 bytes saved)
+    Screenshot from 2026-03-15 10-19-48_256crop 1.22x better (2584 bytes saved)
+    Screenshot from 2026-03-15 10-19-48_512crop 1.20x better (4377 bytes saved)
+
+Done. opus-2026-03-25-S340

@@ -1,0 +1,43 @@
+================================================================================
+  TIC v2.0.0 — Tournament Image Codec v2 Test Suite
+================================================================================
+
+--- Grayscale ---
+  OK gradient_64                             4096B ->       47B    87.1:1
+  OK noise_64                                4096B ->     4120B     1.0:1
+  OK solid_64                                4096B ->       39B   105.0:1
+  OK gradient_128                           16384B ->       54B   303.4:1
+  OK noise_128                              16384B ->    16408B     1.0:1
+  OK solid_128                              16384B ->       52B   315.1:1
+  OK gradient_256                           65536B ->      101B   648.9:1
+  OK noise_256                              65536B ->    65575B     1.0:1
+  OK solid_256                              65536B ->       97B   675.6:1
+
+--- RGB ---
+  OK rgb_noise_64                           12288B ->    12312B     1.0:1
+  OK rgb_gradient_64                        12288B ->       69B   178.1:1
+  OK rgb_noise_128                          49152B ->    49186B     1.0:1
+  OK rgb_gradient_128                       49152B ->       97B   506.7:1
+
+--- Color Transform Roundtrips ---
+  OK ct_GRD_roundtrip
+  OK ct_RBD_roundtrip
+  OK ct_BBD_roundtrip
+
+--- TIC v2 vs PNG ---
+  gradient_128              TIC=     54 PNG=    148 2.741x WIN
+  smooth_128                TIC=   4033 PNG=   6225 1.544x WIN
+  noise_128                 TIC=  16408 PNG=  16580 1.010x WIN
+  gradient_256              TIC=    101 PNG=    369 3.653x WIN
+  smooth_256                TIC=  11669 PNG=  22048 1.889x WIN
+  noise_256                 TIC=  65575 PNG=  65917 1.005x WIN
+
+--- Real Photos ---
+  tron.jpeg                 TIC=  69037 PNG=  94531 1.369x WIN OK 4.16s
+  t.jpg                     TIC=  22201 PNG=  38408 1.730x WIN OK 4.43s
+
+--- Speed ---
+  128x128 gray encode: 263ms (4 img/s)
+  128x128 RGB  encode: 1380ms (1 img/s)
+
+  RESULTS: 18 passed, 0 failed, 8/8 beat PNG
