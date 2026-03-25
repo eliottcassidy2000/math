@@ -1,0 +1,53 @@
+============================================================
+BETA_3 PREDICTOR ANALYSIS
+kind-pasteur-2026-03-25-S1
+============================================================
+
+--- n=7: 300 samples ---
+  [100/300] 0.9s
+  [200/300] 1.8s
+  [300/300] 2.7s
+  Done: 2.7s
+
+  beta_3 > 0: 14/300 = 4.7%
+
+  H:
+    beta_3=0: mean=81.69
+    beta_3>0: mean=96.71
+    t-test: t=1.408, p=0.1600 ns
+
+  c3:
+    beta_3=0: mean=8.93
+    beta_3>0: mean=9.57
+    t-test: t=0.952, p=0.3418 ns
+
+  score_var:
+    beta_3=0: mean=1.45
+    beta_3>0: mean=1.27
+    t-test: t=-0.952, p=0.3418 ns
+
+  SC score:
+    beta_3=0: SC rate = 44.4%
+    beta_3>0: SC rate = 71.4%
+    Overall SC rate: 45.7%
+
+  Score sequences with beta_3 > 0:
+    (2, 2, 3, 3, 3, 4, 4): 4/41 = 10%
+    (2, 2, 2, 3, 4, 4, 4): 3/17 = 18%
+    (1, 2, 2, 3, 4, 4, 5): 2/25 = 8%
+    (1, 1, 2, 3, 4, 5, 5): 1/8 = 12%
+    (1, 2, 2, 2, 4, 5, 5): 1/5 = 20%
+    (1, 1, 2, 4, 4, 4, 5): 1/4 = 25%
+    (2, 2, 2, 3, 3, 4, 5): 1/37 = 3%
+    (1, 2, 3, 3, 4, 4, 4): 1/28 = 4%
+
+  H distribution:
+    beta_3=0: min=5, median=89, max=171
+    beta_3>0: min=31, median=123, max=137
+
+  c3 (directed 3-cycles) distribution:
+    beta_3=0: min=2, median=10, max=14
+    beta_3>0: min=5, median=11, max=12
+
+  Seesaw at n=7:
+    beta_1>0 AND beta_3>0: 0/300
