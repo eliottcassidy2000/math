@@ -1,0 +1,33 @@
+==========================================================================================
+  TIC v6.0.0 — Axiom-Breaking Adaptive Codec
+==========================================================================================
+
+--- Grayscale ---
+  OK gradient_64               TIC=     47 PNG=    108 2.30x  WIN [RowLPC]
+  FAIL v_gradient_64             2752 diffs [RowLPC]
+  OK diag_grad_64              TIC=     61 PNG=    106 1.74x  WIN [RowLPC]
+  FAIL circle_64                 4008 diffs [RowLPC]
+  FAIL checker_64                2016 diffs [RowLPC]
+  OK noise_64                  TIC=   4120 PNG=   4228 1.03x  WIN [RowLPC]
+  OK solid_64                  TIC=     39 PNG=    100 2.56x  WIN [RowLPC]
+  FAIL blob_64                   3808 diffs [RowLPC]
+  OK gradient_128              TIC=     54 PNG=    148 2.74x  WIN [RowLPC]
+  FAIL v_gradient_128            128 diffs [RowLPC]
+  OK diag_grad_128             TIC=     53 PNG=    149 2.81x  WIN [RowLPC]
+  FAIL circle_128                16324 diffs [RowLPC]
+  FAIL checker_128               8128 diffs [RowLPC]
+  OK noise_128                 TIC=  16408 PNG=  16580 1.01x  WIN [RowLPC]
+  OK solid_128                 TIC=     52 PNG=    148 2.85x  WIN [RowLPC]
+  OK blob_128                  TIC=   2685 PNG=   3384 1.26x  WIN [RowLPC]
+
+--- RGB ---
+  OK rgb_noise_64              TIC=  12312 PNG=  12420 1.01x  WIN [RowSort]
+  OK rgb_noise_128             TIC=  49181 PNG=  49353 1.00x  WIN [RowSort]
+
+--- Real Photos ---
+  OK tron.jpeg (8.6s)          TIC=  69845 PNG=  94531 1.35x  WIN [RowSort]
+  OK tron.jpeg_gray            TIC=  31217 PNG=  32071 1.03x  WIN [RowLPC]
+  OK t.jpg (12.3s)             TIC=  24649 PNG=  38408 1.56x  WIN [RowSort]
+  OK t.jpg_gray                TIC=  15957 PNG=  16989 1.06x  WIN [RowLPC]
+
+  15 passed, 7 failed
