@@ -1,0 +1,53 @@
+Backends: zlib=yes, brotli=True, zstd=True, lzma=yes
+============================================================================
+  TC FINAL vs PNG: COMPREHENSIVE MULTI-SIZE TEST
+  kind-pasteur-2026-03-25-S2
+============================================================================
+
+--- 128x128 grayscale ---
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_final.py:192: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil=Image.fromarray(img,'L' if img.ndim==2 else 'RGB')
+  128_solid                      PNG=     148 TC=      18   8.222 WIN
+  128_grad_h                     PNG=     148 TC=      24   6.167 WIN
+  128_checker8                   PNG=     184 TC=      37   4.973 WIN
+  128_circles                    PNG=    6978 TC=    3769   1.851 WIN
+  128_random                     PNG=   16580 TC=   16393   1.011 WIN
+  128_sparse_1%                  PNG=     649 TC=     424   1.531 WIN
+  128_sparse_5%                  PNG=    2079 TC=    1803   1.153 WIN
+  128_sparse_10%                 PNG=    3438 TC=    3082   1.116 WIN
+  128_sparse_20%                 PNG=    5569 TC=    4985   1.117 WIN
+  128_natural_n10                PNG=   11985 TC=   11855   1.011 WIN
+  128_natural_n25                PNG=   14572 TC=   14376   1.014 WIN
+
+--- 128x128 RGB ---
+  128_rgb_nat                    PNG=   35775 TC=   35684   1.003 WIN
+  128_rgb_blocks                 PNG=     524 TC=     329   1.593 WIN
+
+--- 256x256 grayscale ---
+  256_solid                      PNG=     369 TC=      18  20.500 WIN
+  256_grad_h                     PNG=     369 TC=      23  16.043 WIN
+  256_checker8                   PNG=     435 TC=      38  11.447 WIN
+  256_circles                    PNG=   24780 TC=   11613   2.134 WIN
+  256_random                     PNG=   65917 TC=   65545   1.006 WIN
+  256_sparse_1%                  PNG=    2137 TC=    1646   1.298 WIN
+  256_sparse_5%                  PNG=    7439 TC=    6809   1.093 WIN
+  256_sparse_10%                 PNG=   12882 TC=   12013   1.072 WIN
+  256_sparse_20%                 PNG=   21397 TC=   19866   1.077 WIN
+  256_natural_n10                PNG=   47708 TC=   47295   1.009 WIN
+  256_natural_n25                PNG=   57863 TC=   57120   1.013 WIN
+
+--- 256x256 RGB ---
+  256_rgb_nat                    PNG=  142535 TC=  141750   1.006 WIN
+  256_rgb_blocks                 PNG=     996 TC=     509   1.957 WIN
+
+============================================================================
+  26 WINS / 0 TIES / 0 LOSSES out of 26
+  Win rate: 100%
+  Aggregate: TC is 1.058x smaller than PNG
+
+  TOP 5 WINS:
+    256_solid: 20.50x better (351 bytes saved)
+    256_grad_h: 16.04x better (346 bytes saved)
+    256_checker8: 11.45x better (397 bytes saved)
+    128_solid: 8.22x better (130 bytes saved)
+    128_grad_h: 6.17x better (124 bytes saved)

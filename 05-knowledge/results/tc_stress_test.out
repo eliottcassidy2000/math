@@ -1,0 +1,50 @@
+============================================================================
+  STRESS TEST: TC v3 vs PNG at 256x256 + adversarial images
+  kind-pasteur-2026-03-25-S2
+============================================================================
+
+--- Standard tests at 256x256 ---
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_stress_test.py:140: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil=Image.fromarray(img,'L' if img.ndim==2 else 'RGB')
+  solid                     PNG=     369 TC=      89 ratio=4.1461 WIN
+  grad_h                    PNG=     369 TC=      93 ratio=3.9677 WIN
+  grad_v                    PNG=     374 TC=      93 ratio=4.0215 WIN
+  grad_diag                 PNG=     405 TC=     320 ratio=1.2656 WIN
+  checker8                  PNG=     435 TC=     193 ratio=2.2539 WIN
+  checker1                  PNG=     290 TC=     224 ratio=1.2946 WIN
+  circles                   PNG=   24780 TC=   20402 ratio=1.2146 WIN
+
+--- Adversarial tests ---
+  random_uniform            PNG=   65918 TC=   65567 ratio=1.0054 WIN
+  binary_noise              PNG=   13670 TC=   10340 ratio=1.3221 WIN
+  sparse_0.1%               PNG=     411 TC=     360 ratio=1.1417 WIN
+  sparse_1.0%               PNG=    2155 TC=    2239 ratio=0.9625 LOSS
+  sparse_5.0%               PNG=    7451 TC=    7843 ratio=0.9500 LOSS
+  sparse_10.0%              PNG=   12814 TC=   13201 ratio=0.9707 LOSS
+  sparse_20.0%              PNG=   21314 TC=   21828 ratio=0.9765 LOSS
+  sparse_50.0%              PNG=   37398 TC=   39674 ratio=0.9426 LOSS
+  smooth_16x                PNG=   31504 TC=   18438 ratio=1.7086 WIN
+  natural_noise5            PNG=   44078 TC=   45153 ratio=0.9762 LOSS
+  natural_noise15           PNG=   52832 TC=   52394 ratio=1.0084 WIN
+  natural_noise30           PNG=   60147 TC=   59233 ratio=1.0154 WIN
+  dithered                  PNG=   10418 TC=    6712 ratio=1.5521 WIN
+  text                      PNG=     849 TC=     360 ratio=2.3583 WIN
+  blocks                    PNG=     750 TC=     421 ratio=1.7815 WIN
+
+--- RGB tests ---
+  rgb_natural               PNG=  142535 TC=  143256 ratio=0.9950 LOSS
+  rgb_blocks                PNG=    1051 TC=     980 ratio=1.0724 WIN
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_stress_test.py", line 237, in <module>
+    test("rgb_random", np.random.randint(0,256,(SZ,SZ,3),dtype=np.uint8))
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_stress_test.py", line 159, in test
+    ps=png_size(img); ts=len(compress_image(img))
+                             ~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_stress_test.py", line 133, in compress_image
+    bd=hdr+b''.join(struct.pack('<H',len(d))+d for d in pd)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_stress_test.py", line 133, in <genexpr>
+    bd=hdr+b''.join(struct.pack('<H',len(d))+d for d in pd)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^
+struct.error: 'H' format requires 0 <= number <= 65535

@@ -1,0 +1,29 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_diagnose_loss.py:21: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L')
+PNG total: 2153 bytes
+PNG IDAT compressed: 2096 bytes
+PNG overhead (sig+IHDR+IDAT hdr+IEND): 57 bytes
+PNG filtered data: 65792 bytes (= 256 rows * (256+1) bytes = 65792)
+PNG filter distribution: {0: 255, 2: 1}
+Our zlib ( default): 2248 bytes (PNG: 2096, diff: +152)
+Our zlib (filtered): 2243 bytes (PNG: 2096, diff: +147)
+Our zlib ( huffman): 8991 bytes (PNG: 2096, diff: +6895)
+Raw zlib ( default): 2240 bytes
+Raw zlib (filtered): 2237 bytes
+Raw zlib ( huffman): 8945 bytes
+
+Our filter distribution: {0: 255, 2: 1}
+Filter agreement: 256/256 (100.0%)
+Our filtered ( default): 2248 bytes
+Our filtered (filtered): 2243 bytes
+
+Filtered data is IDENTICAL to PNG!
+
+PNG overhead: 57 bytes
+Our overhead: 5 bytes
+Overhead advantage: 52 bytes in our favor
+Conclusion: if we match PNG's compressed data, we save 52 bytes
+
+With PNG's exact filtered data + our header: 2248 bytes
+vs PNG: 2153 bytes
+Result: LOSS by 95 bytes

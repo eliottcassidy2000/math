@@ -1,0 +1,47 @@
+============================================================================
+  TC v4 vs PNG: MULTI-SIZE STRESS TEST
+  kind-pasteur-2026-03-25-S2
+============================================================================
+
+--- 128x128 ---
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png_v4.py:153: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil=Image.fromarray(img,'L' if img.ndim==2 else 'RGB')
+  128_solid                    PNG=     148 TC=      44  3.3636 WIN
+  128_grad_h                   PNG=     148 TC=      46  3.2174 WIN
+  128_checker8                 PNG=     184 TC=      82  2.2439 WIN
+  128_circles                  PNG=    6978 TC=    4383  1.5921 WIN
+  128_random                   PNG=   16580 TC=   16400  1.0110 WIN
+  128_dithered_bw              PNG=    3662 TC=    2722  1.3453 WIN
+  128_sparse_1%                PNG=     636 TC=     574  1.1080 WIN
+  128_sparse_5%                PNG=    2065 TC=    2053  1.0058 WIN
+  128_sparse_10%               PNG=    3438 TC=    3406  1.0094 WIN
+  128_sparse_20%               PNG=    5529 TC=    5082  1.0880 WIN
+  128_natural_n10              PNG=   12068 TC=   12015  1.0044 WIN
+  128_natural_n25              PNG=   14620 TC=   14529  1.0063 WIN
+  128_rgb_nat                  PNG=   35958 TC=   36140  0.9950 LOSS
+
+--- 256x256 ---
+  256_solid                    PNG=     369 TC=      89  4.1461 WIN
+  256_grad_h                   PNG=     369 TC=      93  3.9677 WIN
+  256_checker8                 PNG=     435 TC=     193  2.2539 WIN
+  256_circles                  PNG=   24780 TC=   20402  1.2146 WIN
+  256_random                   PNG=   65917 TC=   65557  1.0055 WIN
+  256_dithered_bw              PNG=   13875 TC=   10305  1.3464 WIN
+  256_sparse_1%                PNG=    2133 TC=    2226  0.9582 LOSS
+  256_sparse_5%                PNG=    7457 TC=    7855  0.9493 LOSS
+  256_sparse_10%               PNG=   12813 TC=   13150  0.9744 LOSS
+  256_sparse_20%               PNG=   21385 TC=   20155  1.0610 WIN
+  256_natural_n10              PNG=   47717 TC=   47664  1.0011 WIN
+  256_natural_n25              PNG=   57967 TC=   57794  1.0030 WIN
+  256_rgb_nat                  PNG=  142404 TC=  142734  0.9977 LOSS
+
+============================================================================
+  21 WINS / 0 TIES / 5 LOSSES out of 26
+  Aggregate: 1.029x
+
+  LOSSES:
+    128_rgb_nat: PNG=35958 TC=36140 (0.9950)
+    256_sparse_1%: PNG=2133 TC=2226 (0.9582)
+    256_sparse_5%: PNG=7457 TC=7855 (0.9493)
+    256_sparse_10%: PNG=12813 TC=13150 (0.9744)
+    256_rgb_nat: PNG=142404 TC=142734 (0.9977)
