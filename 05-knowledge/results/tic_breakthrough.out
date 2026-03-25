@@ -1,0 +1,28 @@
+==========================================================================================
+  BREAKTHROUGH: Adaptive Wiener + Context Switch + Score Conditioning
+  Merging tournament theory with signal processing
+  kind-pasteur-2026-03-25-S10
+==========================================================================================
+
+  Image           PNG         MED        LPC4      Wiener     ColSort AdaptWiener   CtxSwitch   ScoreSort  LPC+Wiener  MultiScale         Raw          BEST
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_breakthrough.py:45: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421       2764        1689        2647        1122*       2770        2974        7439        3154        4987        3704        ColSort 3.05x
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_breakthrough.py:45: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  circles        6978       5565        3143*       4384        4445        3793        5605       13990        4440       11380        5805           LPC4 2.22x
+  grad_d          149         27*        239         100         382         103          52         139         381         168         343            MED 5.52x
+  grad_h          148         29*         64          94         136         122          38         141          85          99         152            MED 5.10x
+  natural       12100      12180       12314       11814       15287       11722*      12255       18902       12440       14581       13306    AdaptWiener 1.03x
+  random        16580      16398*      16414       16454       16513       16398       16398       24637       16414       20832       16398            MED 1.01x
+  solid           148         24          39          79         135          28          23*        153          46          47          23      CtxSwitch 6.43x
+  stripes45       229         47*         74         203         225         260         113         422         100         132          52            MED 4.87x
+
+  THE KEY QUESTIONS:
+  1. Does Adaptive Wiener beat fixed Wiener? (adapts to local statistics)
+  2. Does Context Switch (MED on edges, Wiener on smooth) beat either alone?
+  3. Does LPC+Wiener hybrid capture both global and local structure?
+  4. Does score-sorted residual encoding help zlib?
+  5. Does multi-scale decomposition capture structure missed by prediction?
+
