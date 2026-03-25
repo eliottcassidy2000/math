@@ -13,6 +13,36 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S342 — 2026-03-25: TIC v4-v5 — Spiral + Checkerboard + Quincunx Pyramid
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S341
+**Files read:** tic3.py, ring_codec_v2.py, tic4.py (kind-pasteur), tic5_diagonal_med.py, reflections
+**Summary:** Long session with 3 pushes. Built TIC v4 (spiral + checkerboard + zigzag + Hilbert scans), quincunx pyramid codec, and TIC v5 grand unification.
+
+### Key Innovations
+1. **Spiral + linear extrapolation**: 16-19% better than ring scan on circles. circle_256: 3.79x vs PNG.
+2. **Checkerboard scan**: 2-phase (white/black squares). Phase 2 predicts from all 4 cardinal neighbors. 2-3x better on alternating patterns.
+3. **Quincunx pyramid**: Multiresolution checkerboard subsampling. BEST EVER on radial: circle_256 5.29x, radial_256 5.33x vs PNG.
+4. **TIC v5 unified**: Merges ALL strategies from both agents. Auto-selects optimal scan per image.
+
+### Results
+- 14/14 beat PNG in unified codec, all lossless
+- circle_256: 5.29x vs PNG (quincunx auto-selected)
+- radial_256: 5.33x vs PNG (quincunx auto-selected)
+- Real photos: 1.36-1.73x vs PNG
+- Scan auto-selection: quincunx for radial, diagonal for edges, checkerboard for alternating, raster for photos
+
+### Files Created
+- `04-computation/tic4_opus.py` — v4 with spiral/checkerboard/zigzag/Hilbert
+- `04-computation/quincunx.py` — Quincunx pyramid codec (standalone)
+- `04-computation/tic5_unified.py` — Grand unified codec (all strategies)
+
+### Unresolved
+- Quincunx is slow (pixel-by-pixel prediction in Python)
+- Real photo compression (1.36x) could be improved with better adaptive methods
+- Standard benchmarks (Kodak) not yet tested
+
 ## opus-2026-03-25-S341 — 2026-03-25: TIC v3 — Structure-Aligned Scanning (100% win rate, beats v2)
 
 **Account:** opus
