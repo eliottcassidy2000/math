@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S339 — 2026-03-25: Taxicab Geometry = Tournament Theory
+
+**Account:** opus
+**Continuation of:** opus-2026-03-24-S315 through S338
+**Summary:** Deep dive into taxicab geometry / L1 metric / π=4 connection to tournament theory. Tournament tiling space IS taxicab geometry. The staircase paradox IS the fundamental structure.
+**Key results:** π_p squigonometry, Wallis-fiber fraction link, π_Q(m) = √(2m/π), Krawtchouk→Hermite CLT bridge, diamond codec = staircase paradox fix, four constants {√2,π,e,γ} as L1↔L2 exchange rates.
+**Files:** taxicab_tournament_s339.py, squigonometry_tournament_s339.py, staircase_paradox_s339.py, 07-reflections/taxicab-geometry-and-pi.md
+
 ## kind-pasteur-2026-03-25-S1 — 2026-03-25: Open Problems Session (2 theorems, corrections, defect wave)
 
 **Account:** kind-pasteur
