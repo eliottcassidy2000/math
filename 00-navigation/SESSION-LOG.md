@@ -13,6 +13,41 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S341 — 2026-03-25: TIC v3 — Structure-Aligned Scanning (100% win rate, beats v2)
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S340
+**Files read:** tic2.py, ring_codec_v2.py, taxicab-geometry-and-pi.md, everything-is-the-triangle.md, boundary-between-1d-and-2d.md
+
+**Summary:** Built TIC v3 with structure-aligned scanning — the codec automatically selects the scan direction that matches the image's dominant structure. Added 5 scan modes (raster, transpose, diagonal, anti-diagonal, ring) plus whole-plane and delta-row variants. Added 3 new 2D predictors (NE/upper-right, cross-diagonal, clamped gradient). Merged kind-pasteur's ring codec insight.
+
+### Key Results
+- **100% win rate vs PNG** (30/30 tests)
+- **v3 beats v2** on 13/30 tests, ties 15, loses 2 (by 12 bytes each)
+- **1.258x aggregate** vs PNG (up from v2's 1.252x)
+- **Diagonal edge: 10.8x vs PNG** (diag_edge_256: 102B vs PNG 1106B)
+- Ring scan picks up **2.6x** on circles automatically
+- Structure detection is fully automatic — no user intervention needed
+
+### Innovation: Three Directions of the Triangle
+The staircase triangle has three natural directions that map directly to compression:
+- Horizontal leg -> raster scan -> horizontal structure
+- Vertical leg -> transpose scan -> vertical structure
+- Hypotenuse -> diagonal scan -> diagonal structure
+- Ring -> center-outward -> radial structure
+
+### Files Created
+- `04-computation/tic3.py` — TIC v3 codec with structure-aligned scanning
+- `04-computation/tic3_benchmark.py` — Comparative benchmark
+- `07-reflections/structure-aligned-scanning.md` — Reflection on three-direction insight
+- `05-knowledge/results/tic3_*.out` — All benchmark outputs
+
+### Unresolved
+- Two grayscale photo cases where v2 is 12B better (essentially tied)
+- Ring scan is slow (pixel-by-pixel Python loop for neighbor averaging)
+- Could add more scan angles (22.5, 67.5 degrees) via sheared raster
+- Standard benchmark suites (Kodak) still needed
+
 ## opus-2026-03-25-S340 — 2026-03-25: TIC v2 — vectorized, color transforms, 95% real-image win rate
 
 **Account:** opus

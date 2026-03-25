@@ -1,0 +1,72 @@
+===================================================================================================================
+  TIC v3 vs v2 vs PNG — Structure-Aligned Scanning Benchmark
+  opus-2026-03-25-S341
+===================================================================================================================
+
+--- DIAGONAL PATTERNS (v3 target) ---
+  diag_stripes_128                  128x128 PNG=    229 v2=    114 v3=    101 v3/PNG=2.267x  v3 OK [A/n]
+  antidiag_stripes_128              128x128 PNG=    227 v2=    121 v3=    101 v3/PNG=2.248x  v3 OK [s22]
+  diag_gradient_128                 128x128 PNG=    149 v2=     53 v3=     53 v3/PNG=2.811x tie OK [s20]
+  diag_sine_128                     128x128 PNG=    533 v2=    305 v3=    305 v3/PNG=1.748x tie OK [s20]
+  diag_edge_128                     128x128 PNG=    523 v2=    102 v3=     54 v3/PNG=9.685x  v3 OK [D/n]
+  checker_128                       128x128 PNG=    154 v2=    106 v3=    105 v3/PNG=1.467x  v3 OK [s22]
+  diag_stripes_256                  256x256 PNG=    536 v2=    273 v3=    202 v3/PNG=2.653x  v3 OK [A/n]
+  antidiag_stripes_256              256x256 PNG=    533 v2=    213 v3=    197 v3/PNG=2.706x  v3 OK [s22]
+  diag_gradient_256                 256x256 PNG=    405 v2=    177 v3=    169 v3/PNG=2.396x  v3 OK [raster]
+  diag_sine_256                     256x256 PNG=   1037 v2=    441 v3=    441 v3/PNG=2.351x tie OK [s20]
+  diag_edge_256                     256x256 PNG=   1106 v2=    161 v3=    102 v3/PNG=10.843x  v3 OK [D/n]
+  checker_256                       256x256 PNG=    290 v2=    165 v3=    165 v3/PNG=1.758x tie OK [s22]
+
+--- STANDARD PATTERNS ---
+  h_gradient_128                    128x128 PNG=    148 v2=     54 v3=     54 v3/PNG=2.741x tie OK [s20]
+  v_gradient_128                    128x128 PNG=    153 v2=     57 v3=     57 v3/PNG=2.684x tie OK [s18]
+  circle_128                        128x128 PNG=   3421 v2=   1585 v3=   1305 v3/PNG=2.621x  v3 OK [ring]
+  solid_128                         128x128 PNG=    148 v2=     52 v3=     52 v3/PNG=2.846x tie OK [s16]
+  noise_128                         128x128 PNG=  16580 v2=  16408 v3=  16408 v3/PNG=1.010x tie OK [s16]
+  h_gradient_256                    256x256 PNG=    369 v2=    101 v3=    101 v3/PNG=3.653x tie OK [s20]
+  v_gradient_256                    256x256 PNG=    374 v2=    101 v3=    101 v3/PNG=3.703x tie OK [s18]
+  circle_256                        256x256 PNG=   9319 v2=   3497 v3=   2941 v3/PNG=3.169x  v3 OK [ring]
+  solid_256                         256x256 PNG=    369 v2=     97 v3=     97 v3/PNG=3.804x tie OK [s16]
+  noise_256                         256x256 PNG=  65915 v2=  65575 v3=  65575 v3/PNG=1.005x tie OK [s16]
+
+--- REAL PHOTOS ---
+  tron.jpeg                       225x225x3 PNG=  94531 v2=  69481 v3=  69405 v3/PNG=1.362x  v3 OK [transp]
+  tron.jpeg_gray                    225x225 PNG=  32071 v2=  30733 v3=  30745 v3/PNG=1.043x  v2 OK [transp]
+  baby.jpeg                       225x225x3 PNG=  94531 v2=  69481 v3=  69405 v3/PNG=1.362x  v3 OK [transp]
+  baby.jpeg_gray                    225x225 PNG=  32071 v2=  30733 v3=  30745 v3/PNG=1.043x  v2 OK [transp]
+  t.jpg                           234x313x3 PNG=  38408 v2=  22645 v3=  22201 v3/PNG=1.730x  v3 OK [s17]
+  t.jpg_gray                        234x313 PNG=  16989 v2=  14637 v3=  14637 v3/PNG=1.161x tie OK [s17]
+  ss_Screenshot from 2026_256     256x256x3 PNG=   9840 v2=   8537 v3=   8537 v3/PNG=1.153x tie OK [s16]
+  ss_Screenshot from 2026_256     256x256x3 PNG=  14080 v2=  11561 v3=  11561 v3/PNG=1.218x tie OK [s16]
+
+===================================================================================================================
+  v3 vs PNG: 30/30 wins (100%)
+  v3 vs v2:  13 wins / 2 losses / 15 ties
+  Lossless:  30/30
+  Aggregate: v3 = 1.258x vs PNG, v2 = 1.252x vs PNG
+  v3 saves 1644 bytes vs v2 total
+
+  Top v3 gains over v2:
+    diag_edge_128                  saved     48B (1.889x)
+    diag_edge_256                  saved     59B (1.578x)
+    diag_stripes_256               saved     71B (1.351x)
+    circle_128                     saved    280B (1.215x)
+    antidiag_stripes_128           saved     20B (1.198x)
+
+  v2 still better on:
+    tron.jpeg_gray                 v3 adds     12B (1.000x)
+    baby.jpeg_gray                 v3 adds     12B (1.000x)
+
+  Scan mode distribution:
+    s16               6 images
+    s20               5 images
+    s22               4 images
+    transp            4 images
+    A/n               2 images
+    D/n               2 images
+    s18               2 images
+    ring              2 images
+    s17               2 images
+    raster            1 images
+
+Done. opus-2026-03-25-S341

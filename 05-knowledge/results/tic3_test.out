@@ -1,0 +1,47 @@
+==========================================================================================
+  TIC v3.0.0 — Structure-Aligned Scanning
+==========================================================================================
+
+--- Grayscale ---
+  OK gradient_64                             4096B ->       64B    64.0:1  [raster]
+  OK diagonal_grad_64                        4096B ->       67B    61.1:1  [raster]
+  OK diag_edge_64                            4096B ->       54B    75.9:1  [scan5]
+  OK antidiag_edge_64                        4096B ->       51B    80.3:1  [scan5]
+  OK circle_64                               4096B ->      569B     7.2:1  [ring]
+  OK noise_64                                4096B ->     4120B     1.0:1  [ring]
+  OK solid_64                                4096B ->       39B   105.0:1  [ring]
+  OK gradient_128                           16384B ->      104B   157.5:1  [raster]
+  OK diagonal_grad_128                      16384B ->      102B   160.6:1  [raster]
+  OK diag_edge_128                          16384B ->      102B   160.6:1  [scan5]
+  OK antidiag_edge_128                      16384B ->       94B   174.3:1  [scan5]
+  OK circle_128                             16384B ->     1305B    12.6:1  [ring]
+  OK noise_128                              16384B ->    16408B     1.0:1  [ring]
+  OK solid_128                              16384B ->       52B   315.1:1  [ring]
+
+--- Diagonal Structure (where this codec should excel) ---
+  OK diag_stripes_128                       16384B ->      131B   125.1:1  [scan5]
+  OK antidiag_stripes_128                   16384B ->      124B   132.1:1  [raster]
+  OK diag_sine_128                          16384B ->      401B    40.9:1  [raster]
+  OK diag_stripes_256                       65536B ->      221B   296.5:1  [raster]
+  OK antidiag_stripes_256                   65536B ->      205B   319.7:1  [transpose]
+  OK diag_sine_256                          65536B ->      573B   114.4:1  [raster]
+
+--- RGB ---
+  OK rgb_noise_64                           12288B ->    12312B     1.0:1  [ring]
+  OK rgb_noise_128                          49152B ->    49186B     1.0:1  [ring]
+
+--- TIC v3 vs PNG ---
+  gradient_128              TIC=    104 PNG=    148 1.423x  WIN [raster]
+  diag_grad_128             TIC=    102 PNG=    149 1.461x  WIN [raster]
+  diag_stripe_128           TIC=    131 PNG=    229 1.748x  WIN [scan5]
+  circle_128                TIC=   1305 PNG=   3421 2.621x  WIN [ring]
+  noise_128                 TIC=  16408 PNG=  16580 1.010x  WIN [ring]
+
+--- Real Photos ---
+  tron.jpeg                 TIC=  69481 PNG=  94531 1.361x  WIN OK 4.1s [transpose]
+  t.jpg                     TIC=  23581 PNG=  38408 1.629x  WIN OK 5.6s [scan5]
+
+--- Speed ---
+  128x128 gray: 395ms (3 img/s)
+
+  RESULTS: 24 passed, 0 failed
