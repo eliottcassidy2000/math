@@ -1,0 +1,30 @@
+====================================================================================================
+  ANALOG THINKING: Audio compression meets image compression
+  The digital-analog divide is only as real as you lack math skills
+  kind-pasteur-2026-03-25-S9
+====================================================================================================
+
+  Image           PNG      MED std  LPC-1D ord4  LPC-1D ord8 LPC adaptive       LPC-2D   Wiener r=3   FLAC-style Spectral dlt          BEST
+  ----------------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_analog.py:67: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421        2764         1689*        1841         2112         2968         2647         2521       999999    LPC-1D ord4 2.03x
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_analog.py:67: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  circles        6978        5565         3143*        3185         5069         4197         4384         5243       999999    LPC-1D ord4 2.22x
+  grad_d          149          27*         239          262          557          398          100          326       999999        MED std 5.52x
+  grad_h          148          29*          64           81          308          272           94           59       999999        MED std 5.10x
+  natural       12100       12180        12314        12213        12562        11822        11814*       12194       999999     Wiener r=3 1.02x
+  random        16580       16398*       16414        16430        16654        16422        16454        16409       999999        MED std 1.01x
+  solid           148          24*          39           55          290           74           79           34       999999        MED std 6.17x
+  stripes45       229          47*          74           84          307           72          203          141       999999        MED std 4.87x
+
+  KEY QUESTION: Does the optimal LINEAR predictor (Wiener/2D-LPC) beat MED?
+
+  MED is a NONLINEAR predictor (it selects between left, above, and linear).
+  The Wiener filter is the optimal LINEAR predictor for stationary signals.
+  2D-LPC finds optimal linear coefficients from the image autocorrelation.
+
+  If Wiener/2D-LPC beats MED: there's room for better linear predictors.
+  If MED beats them: MED's nonlinearity is essential, linear methods plateau.
+
