@@ -1,0 +1,60 @@
+============================================================================
+  TC ROUNDTRIP VERIFICATION + FAIR BENCHMARK
+  kind-pasteur-2026-03-25-S3
+============================================================================
+
+=== PART 1: LOSSLESS ROUNDTRIP VERIFICATION ===
+Test                   Compress   Decompress    Match
+------------------------------------------------------------
+solid                   409.1ms        2.5ms       OK
+grad_h                  465.8ms        4.6ms       OK
+checker8                495.8ms        2.4ms       OK
+circles                 723.6ms        6.7ms       OK
+random                  772.3ms        2.5ms       OK
+sparse_1%               961.1ms        2.5ms       OK
+sparse_10%             1083.9ms        0.1ms       OK
+natural_n10             614.4ms        6.3ms       OK
+rgb_nat                1863.3ms       18.8ms       OK
+rgb_blocks             2014.4ms        5.3ms       OK
+
+  ROUNDTRIP: ALL PASS
+
+=== PART 2: FAIR BENCHMARK (zlib-9 only, same backend as PNG) ===
+Test                     PNG  TC-zlib  TC-best  zlib/PNG  best/PNG
+----------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_roundtrip.py:364: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil=Image.fromarray(img,'L' if img.ndim==2 else 'RGB')
+solid                    148       44       18     3.364     8.222
+grad_h                   148       46       24     3.217     6.167
+checker8                 184       82       37     2.244     4.973
+circles                 6978     4383     3769     1.592     1.851
+random                 16580    16400    16393     1.011     1.011
+sparse_1%                649      590      424     1.100     1.531
+sparse_10%              3425     3402     3080     1.007     1.112
+natural_n10            12120    12068    11979     1.004     1.012
+rgb_nat                35775    35933    35684     0.996     1.003
+rgb_blocks               543      532      322     1.021     1.686
+
+  FAIR (zlib only): 9W / 0T / 1L out of 10
+  BEST (all backends): 10W / 0T / 0L out of 10
+
+=== PART 3: HONEST ASSESSMENT ===
+
+  With SAME backend (zlib-9, fair comparison):
+    Win rate: 9/10 = 90%
+    Loss rate: 1/10 = 10%
+
+  With BEST backend (brotli/zstd/lzma, unfair but real):
+    Win rate: 10/10 = 100%
+
+  What's genuinely better than PNG:
+    - More predictors (MED, GAP beyond PNG's 5 filters)
+    - Transpose trick (column-major scan for vertical patterns)
+    - Smaller header (4 bytes vs 57 bytes)
+
+  What's NOT better:
+    - Same zlib backend = same or worse compression
+    - No metadata, checksums, or format identification
+    - 75x slower than PNG (Python vs C)
+    - No standard support anywhere
+
