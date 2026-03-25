@@ -1,0 +1,24 @@
+=====================================================================================
+  Wavefront + Adaptive Lifting Codec
+  opus-2026-03-25-S343
+=====================================================================================
+
+  Image                        PNG    MED     WF  ALift     Best   OK
+  ----------------------------------------------------------------------
+  blob_128                    3384   2934   3486   3755   MED 1.15x   OK
+  blob_64                     1394   1111   1375   1552   MED 1.25x   OK
+  checker_128                  154     94    447     40 ALift 3.85x   OK
+  checker_64                   100     45    219     27 ALift 3.70x   OK
+  circle_128                  3421   2997   2202   2362    WF 1.55x   OK
+  circle_64                   1312   1058    816   1005    WF 1.61x   OK
+  diag_edge_128                523     89    171    303   MED 5.88x   OK
+  diag_edge_64                 267     42    107    142   MED 6.36x   OK
+  gradient_128                 148     41    449     97   MED 3.61x   OK
+  gradient_64                  108     34    340     65   MED 3.18x   OK
+  noise_128                  16580  16395  16395  16395   MED 1.01x   OK
+  noise_64                    4228   4107   4107   4107   MED 1.03x   OK
+  smooth_128                  6225   5843   7959   6872   MED 1.07x   OK
+  smooth_64                   1797   1603   2130   2098   MED 1.12x   OK
+
+--- Real Photo ---
+  tron_64x64  PNG=2322 MED=2309 WF=2779 ALift=2621 WF_ok=True AL_ok=True (378ms)

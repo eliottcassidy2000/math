@@ -13,6 +13,40 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S343 — 2026-03-25: Axiom-Breaking — Wavefront + Adaptive Lifting + Prediction-Entropy Duality
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S342
+**Summary:** Deep creative session questioning implicit axioms of all our compression work. Built TIC v6 (6 paradigms), wavefront codec (graph-based scan), and adaptive lifting codec (content-adaptive checkerboard wavelets). Discovered fundamental prediction-entropy duality.
+
+### Key Discoveries
+1. **Prediction-Entropy Duality**: Better prediction (smaller residuals) does NOT always mean better compression. The entropy coder needs STRUCTURED residuals, not just small ones. Wavefront has smallest average residual but worst zlib ratio.
+2. **Wavefront codec**: Expands from smooth center outward by confidence. Wins on circles (26% over MED) but loses to spiral+extrap because irregular ordering hurts entropy coding.
+3. **Adaptive lifting**: Checkerboard lattice with gradient-adaptive prediction weights. Wins on checkerboard patterns (57% over MED) by using directional weights.
+4. **RowLPC with reproducible prediction**: Fixed the decode mismatch — use shifted least-squares (fit rows[-3,-2]→rows[-1], apply to rows[-2,-1]→current).
+5. **ColSort reshape bug**: Column data stored column-major but decoded row-major. Fixed.
+6. **Context matching fails on small images**: Not enough data for learned prediction to converge. MED wins because it's locally optimal without training.
+
+### Implicit Axioms Enumerated and Tested
+| Axiom | Broken by | Result |
+|-------|-----------|--------|
+| Fixed scan order | Wavefront, ColSort | Mixed — wins on specific patterns |
+| Local-only prediction | Context matching | Fails — too sparse for small images |
+| Rectangular grid | Checkerboard lattice | Wins on alternating patterns |
+| Stationary model | RowLPC | Wins on varying gradients |
+| Pixel-atomic | Parametric blocks | Fails — overhead too large |
+| Grid structure | Graph walk | Graph walk prediction is best BUT entropy coding is worst |
+
+### Files Created
+- `04-computation/tic6_adaptive.py` — 6-paradigm adaptive codec
+- `04-computation/wavefront.py` — Wavefront + adaptive lifting codec
+- `07-reflections/prediction-vs-entropy.md` — The duality reflection
+
+### Unresolved
+- Can we design a codec that maximizes BOTH prediction accuracy AND entropy coding efficiency simultaneously?
+- The spiral codec comes closest — can we improve it further?
+- Wavefront ideas might work with a custom entropy coder (not zlib)
+
 ## opus-2026-03-25-S342 — 2026-03-25: TIC v4-v5 — Spiral + Checkerboard + Quincunx Pyramid
 
 **Account:** opus
