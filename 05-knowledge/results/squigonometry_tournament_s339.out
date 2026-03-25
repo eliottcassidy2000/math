@@ -1,0 +1,132 @@
+========================================================================
+  SQUIGONOMETRY OF TOURNAMENT SPACE
+  opus-2026-03-25-S339
+========================================================================
+
+  THE WALLIS INTEGRAL CONNECTION
+  Wallis integral: W_k = ∫₀^{π/2} sin^k(θ) dθ
+  Fiber fraction:  f(n) = (1/2)_{n-2} / (n-2)!
+  These are RELATED through Γ(1/2) = √π.
+
+    k          W_k       f(k+2)   W_k/f(k+2)    W_k·k!/√π
+    1     1.000000     0.500000     2.000000     0.564190
+    2     0.785398     0.375000     2.094395     0.886227
+    3     0.666667     0.312500     2.133333     2.256758
+    4     0.589049     0.273438     2.154235     7.976042
+    5     0.533333     0.246094     2.167196    36.108133
+    6     0.490874     0.225586     2.175995   199.401058
+    7     0.457143     0.209473     2.182351  1299.892800
+    8     0.429515     0.196381     2.187154  9770.651853
+    9     0.406349     0.185471     2.190909 83193.139232
+   10     0.386563     0.176197     2.193925 791422.800102
+   11     0.369408     0.168188     2.196400 8319313.923162
+
+  Key identity: f(n) = W_{n-2} × (n-2)! / √π × correction
+  Both involve the Pochhammer symbol (1/2)_k = Γ(k+1/2)/Γ(1/2)
+
+========================================================================
+  Lp BALL VOLUMES AND THE TOURNAMENT COUNT
+========================================================================
+
+  The volume of the n-dimensional Lp unit ball:
+  V_p(n) = (2Γ(1+1/p))^n / Γ(1+n/p)
+
+  For p=1 (cross-polytope): V_1(n) = 2^n / n!
+  For p=2 (ball): V_2(n) = π^(n/2) / Γ(1+n/2)
+  For p=∞ (cube): V_∞(n) = 2^n
+
+  NOTICE: V_1(n) = 2^n / n! and the tournament count V_n ~ 2^m / n!
+  The number of tournament iso classes ≈ Lp=1 unit ball volume!
+  This is NOT a coincidence: both count objects modulo n! symmetries.
+
+    n    m         2^m/n!   V_n (actual)  V_1(m)=2^m/m!
+    3    1           0.33              2       2.000000
+    4    3           0.33              4       1.333333
+    5    6           0.53             12       0.088889
+    6   10           1.42             56       0.000282
+    7   15           6.50            456       0.000000
+    8   21          52.01           6880       0.000000
+
+========================================================================
+  WHAT Lp NORM DOES THE METAGRAPH USE?
+========================================================================
+
+  The metagraph G_n/Z_2 has a DISTANCE function (waggly distance).
+  Is this distance more like L1, L2, or something else?
+
+  We can measure: for each pair of classes, compute:
+    d_waggly = minimum Hamming distance between representatives
+    d_spectral = Euclidean distance in Krawtchouk eigenspace
+
+  If d_waggly ~ d_spectral, the geometry is L2-like.
+  If d_waggly ~ d_spectral^2, there's a nonlinear mapping.
+
+  At n=5 (V=10, m=6):
+    Waggly diameter = 5 (from completeness theorem, S301)
+    Spectral diameter (max eigenvalue difference) = λ_max - λ_min
+
+  The SHAPE of the metagraph ball (the set of classes at waggly distance ≤ r
+  from a fixed class) tells us the effective Lp norm.
+
+  For L1: ball grows as r^dim (polynomial in r)
+  For L2: ball grows as r^dim (same polynomial but different constant)
+  For L∞: ball grows as (2r+1)^dim
+
+  DEGREE DISTRIBUTION (from known metagraph data):
+  n=5 (V=10): avg_deg = 4.2, max_deg ≈ 7
+  n=6 (V=34): avg_deg = 8.4, max_deg ≈ 13
+  n=7 (V=272): avg_deg = 15.6, max_deg ≈ 21
+  n=5: avg_deg=3.5, density=0.318, d_eff=1.8, m=6, log₂V=3.6
+  n=6: avg_deg=5.1, density=0.093, d_eff=2.6, m=10, log₂V=5.8
+  n=7: avg_deg=9.3, density=0.020, d_eff=4.7, m=15, log₂V=8.8
+
+========================================================================
+  π OF THE METAGRAPH
+========================================================================
+
+  Question: what is π for the metagraph G_n/Z_2?
+
+  For a graph G with distance d, define:
+    B(v, r) = {u : d(v,u) ≤ r}  (ball of radius r around v)
+    S(v, r) = {u : d(v,u) = r}   (sphere of radius r)
+
+  The "growth function" f(r) = |B(v,r)| measures how fast balls grow.
+
+  For Euclidean R^n:    f(r) = c_n · r^n where c_n involves π
+  For the Hamming cube:  f(r) = Σ C(m,i) for i≤r (binomial growth)
+  For the metagraph:    f(r) = ??? (depends on the quotient structure)
+
+  The "π" of the metagraph could be defined as:
+    π_G = lim (|S(v,r)|·r / |B(v,r)|) as r → diam/2
+
+  For Z^2 (grid):  π_Z2 = 4 (L1 balls are diamonds)
+  For R^2:         π_R2 = π (L2 balls are circles)
+  For Q_m:         π_Q = ??? (depends on m and r)
+
+  Computation for Q_m at the equator r = m/2:
+    |B(v, m/2)| = 2^{m-1} (half the cube)
+    |S(v, m/2)| = C(m, m/2) ~ 2^m·√(2/(πm))
+
+    π_Q(m) = |S(v,m/2)|·(m/2) / |B(v,m/2)|
+           = C(m,m/2)·m / (2·2^{m-1})
+           = C(m,m/2)·m / 2^m
+           ~ m·√(2/(πm)) = √(2m/π)
+
+  π_Q(m) = C(m,m/2)·m / 2^m  for the Hamming cube:
+  m= 1 (n=3): π_Q = 0.5000, √(2m/π) = 0.7979
+  m= 3 (n=4): π_Q = 1.1250, √(2m/π) = 1.3820
+  m= 6 (n=5): π_Q = 1.8750, √(2m/π) = 1.9544
+  m=10 (n=6): π_Q = 2.4609, √(2m/π) = 2.5231
+  m=15 (n=7): π_Q = 2.9457, √(2m/π) = 3.0902
+  m=21 (n=8): π_Q = 3.5319, √(2m/π) = 3.6564
+  m=28 (n=9): π_Q = 4.1845, √(2m/π) = 4.2220
+  m=36 (n=10): π_Q = 4.7542, √(2m/π) = 4.7873
+  m=45 (n=11): π_Q = 5.2652, √(2m/π) = 5.3524
+
+========================================================================
+  THE CLT AS L1 → L2 TRANSITION
+========================================================================
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/squigonometry_tournament_s339.py", line 255, in <module>
+    The four constants {sqrt(2), pi, e, gamma} ARE the Taylor coefficients of this
+NameError: name 'gamma' is not defined
