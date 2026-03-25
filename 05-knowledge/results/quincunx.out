@@ -1,0 +1,34 @@
+================================================================================
+  Quincunx Pyramid Codec — Multiresolution Checkerboard Compression
+  opus-2026-03-25-S342
+================================================================================
+
+  Image                         Raw    Quin     PNG   Q/PNG  Levels   OK
+  --------------------------------------------------------------------
+  checker_128                 16384     317     154   0.49x   7lev   OK
+  checker_256                 65536     675     290   0.43x   8lev   OK
+  checker_64                   4096     178     100   0.56x   6lev   OK
+  circle_128                  16384     896    3421   3.82x   7lev   OK
+  circle_256                  65536    1756    9319   5.31x   8lev   OK
+  circle_64                    4096     516    1312   2.54x   6lev   OK
+  diag_grad_128               16384    6736     149   0.02x   7lev   OK
+  diag_grad_256               65536   27772     405   0.01x   8lev   OK
+  diag_grad_64                 4096    1883     106   0.06x   6lev   OK
+  gradient_128                16384    3540     148   0.04x   7lev   OK
+  gradient_256                65536   12396     369   0.03x   8lev   OK
+  gradient_64                  4096    1096     108   0.10x   6lev   OK
+  noise_128                   16384   16403   16580   1.01x   7lev   OK
+  noise_256                   65536   65570   65917   1.01x   8lev   OK
+  noise_64                     4096    4115    4228   1.03x   6lev   OK
+  radial_128                  16384    1728    6978   4.04x   7lev   OK
+  radial_256                  65536    4644   24780   5.34x   8lev   OK
+  radial_64                    4096     692    2143   3.10x   6lev   OK
+  smooth_128                  16384   10412    6225   0.60x   7lev   OK
+  smooth_256                  65536   41640   22048   0.53x   8lev   OK
+  smooth_64                    4096    2776    1797   0.65x   6lev   OK
+
+  9/21 beat PNG. All lossless: True
+
+--- Real Photos ---
+  tron.jpeg                 Quin=  40564 PNG=  32071 0.791x OK
+  t.jpg                     Quin=  44484 PNG=  16989 0.382x OK

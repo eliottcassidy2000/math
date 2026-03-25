@@ -397,6 +397,11 @@ def _fast_compress(data):
 
 def _best_backend(data):
     results = [(0, zlib.compress(data, 9))]
+    # Z_FILTERED often better for prediction residuals
+    try:
+        obj = zlib.compressobj(9, zlib.DEFLATED, 15, 9, zlib.Z_FILTERED)
+        results.append((0, obj.compress(data) + obj.flush()))
+    except: pass
     try: results.append((1, lzma.compress(data, preset=9)))
     except: pass
     return min(results, key=lambda x: len(x[1]))
