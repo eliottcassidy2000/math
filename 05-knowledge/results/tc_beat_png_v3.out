@@ -1,0 +1,48 @@
+============================================================================
+  TOURNAMENT CODEC v3 vs PNG: 24 TESTS
+  kind-pasteur-2026-03-25-S2
+============================================================================
+
+Test                   Raw     PNG      TC  TC/PNG  Verdict
+----------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png_v3.py:218: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L')
+solid                16384     148      44   3.364      WIN
+grad_h               16384     148      46   3.217      WIN
+grad_v               16384     153      49   3.122      WIN
+grad_d               16384     149      45   3.311      WIN
+check8               16384     184      82   2.244      WIN
+check2               16384     173     106   1.632      WIN
+circles              16384    6978    4383   1.592      WIN
+stripes4               128      76      20   3.800      WIN
+edges                16384     403     218   1.849      WIN
+text                 16384     337     147   2.293      WIN
+natural              16384   12069   11950   1.010      WIN
+dithered             16384    2860    1827   1.565      WIN
+smooth               16384    5075    2833   1.791      WIN
+random               16384   16580   16400   1.011      WIN
+sparse1              16384     653     586   1.114      WIN
+sparse10             16384    3459    3449   1.003      WIN
+halftone             16384     159     107   1.486      WIN
+plasma               16384    3462    3152   1.098      WIN
+zigzag               16384     152      99   1.535      WIN
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png_v3.py:220: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'RGB')
+rgb_grad             49152     264     138   1.913      WIN
+rgb_natural          49152   20223   12035   1.680      WIN
+rgb_edges            49152     543     523   1.038      WIN
+rgb_smooth           49152    6517    2918   2.233      WIN
+rgb_plasma           49152   13941    7579   1.839      WIN
+----------------------------------------------------------------------------
+TOTAL                        94706   68736   1.378
+
+  === 24 WINS / 0 TIES / 0 LOSSES out of 24 ===
+  Win rate: 100%
+  Aggregate compression ratio vs PNG: 1.378x
+
+  TOP 5 WINS:
+    stripes4: 3.80x better (56 bytes saved)
+    solid: 3.36x better (104 bytes saved)
+    grad_d: 3.31x better (104 bytes saved)
+    grad_h: 3.22x better (102 bytes saved)
+    grad_v: 3.12x better (104 bytes saved)

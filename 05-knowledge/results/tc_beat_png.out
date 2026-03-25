@@ -1,0 +1,92 @@
+========================================================================
+  TOURNAMENT CODEC vs PNG: COMPREHENSIVE BENCHMARK
+  kind-pasteur-2026-03-25-S2
+========================================================================
+
+Test Image                 Raw     PNG      TC   Ratio   Result
+------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:80: RuntimeWarning: overflow encountered in scalar add
+  if dh > dv + dv:      # strong horizontal edge → predict from above
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:134: RuntimeWarning: overflow encountered in scalar subtract
+  correction = (b - base) // 4
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:42: RuntimeWarning: overflow encountered in scalar add
+  return (a + b) // 2
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:49: RuntimeWarning: overflow encountered in scalar add
+  p = a + b - c
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:49: RuntimeWarning: overflow encountered in scalar subtract
+  p = a + b - c
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:85: RuntimeWarning: overflow encountered in scalar add
+  return (a + b) // 2
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:108: RuntimeWarning: overflow encountered in scalar add
+  return sum(vals) // len(vals) if vals else 0
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:132: RuntimeWarning: overflow encountered in scalar multiply
+  if abs(gh) > 2 * abs(gv) and abs(gh) > 8:
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:137: RuntimeWarning: overflow encountered in scalar subtract
+  correction = (a - base) // 4
+gray_solid               16384     148      52   2.846      WIN
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:78: RuntimeWarning: overflow encountered in scalar subtract
+  dh = abs(a - c) + abs(b - d)  # horizontal discontinuity
+gray_grad_h              16384     148      55   2.691      WIN
+gray_grad_v              16384     153      57   2.684      WIN
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:78: RuntimeWarning: overflow encountered in scalar add
+  dh = abs(a - c) + abs(b - d)  # horizontal discontinuity
+gray_grad_diag           16384     149      55   2.709      WIN
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:79: RuntimeWarning: overflow encountered in scalar subtract
+  dv = abs(b - c) + abs(a - (row[x-2] if x >= 2 else 0))  # vertical discontinuity
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:50: RuntimeWarning: overflow encountered in scalar subtract
+  pa, pb, pc = abs(p - a), abs(p - b), abs(p - c)
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:130: RuntimeWarning: overflow encountered in scalar subtract
+  gv = b - c   # vertical gradient
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:129: RuntimeWarning: overflow encountered in scalar subtract
+  gh = a - c   # horizontal gradient
+gray_checker_8           16384     184      91   2.022      WIN
+gray_checker_2           16384     173     114   1.518      WIN
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:82: RuntimeWarning: overflow encountered in scalar add
+  elif dv > dh + dh:    # strong vertical edge → predict from left
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:68: RuntimeWarning: overflow encountered in scalar add
+  return a + b - c
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:68: RuntimeWarning: overflow encountered in scalar subtract
+  return a + b - c
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:79: RuntimeWarning: overflow encountered in scalar add
+  dv = abs(b - c) + abs(a - (row[x-2] if x >= 2 else 0))  # vertical discontinuity
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:135: RuntimeWarning: overflow encountered in scalar multiply
+  elif abs(gv) > 2 * abs(gh) and abs(gv) > 8:
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:125: RuntimeWarning: overflow encountered in scalar add
+  base = a + b - c
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:125: RuntimeWarning: overflow encountered in scalar subtract
+  base = a + b - c
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:141: RuntimeWarning: overflow encountered in scalar add
+  return np.clip(base + correction, 0, 255)
+gray_circles             16384    6978    4392   1.589      WIN
+gray_stripes_4             128      76      28   2.714      WIN
+gray_stripes_16            128      75      29   2.586      WIN
+gray_edges               16384     365     213   1.714      WIN
+gray_text                16384     309     143   2.161      WIN
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png.py:330: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  img = PILImage.fromarray(small.astype(np.uint8), 'L')
+gray_natural             16384   11581   11936   0.970     LOSS
+gray_dithered            16384    2860    1835   1.559      WIN
+gray_smooth_noise        16384    2939    2391   1.229      WIN
+gray_random              16384   16580   16409   1.010      WIN
+gray_sparse_1pct         16384     643     603   1.066      WIN
+gray_sparse_10pct        16384    3423    3437   0.996      TIE
+rgb_gradient             49152     264     146   1.808      WIN
+rgb_natural              49152   34511   35780   0.965     LOSS
+rgb_edges                49152     579     582   0.995     LOSS
+------------------------------------------------------------------------
+AGGREGATE                        82138   78348   1.048
+
+Wins: 16  Ties: 1  Losses: 3  Total: 20
+Win rate: 80%
+
+--- LOSSES (we need to fix these) ---
+  gray_natural: PNG=11581, TC=11936, ratio=0.970 (+3.0%)
+  rgb_natural: PNG=34511, TC=35780, ratio=0.965 (+3.5%)
+  rgb_edges: PNG=579, TC=582, ratio=0.995 (+0.5%)
+
+--- BIGGEST WINS ---
+  gray_solid: PNG=148, TC=52, ratio=2.846 (+184.6%)
+  gray_stripes_4: PNG=76, TC=28, ratio=2.714 (+171.4%)
+  gray_grad_diag: PNG=149, TC=55, ratio=2.709 (+170.9%)
+  gray_grad_h: PNG=148, TC=55, ratio=2.691 (+169.1%)
+  gray_grad_v: PNG=153, TC=57, ratio=2.684 (+168.4%)

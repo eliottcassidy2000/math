@@ -1,0 +1,46 @@
+============================================================================
+  TOURNAMENT CODEC v2 vs PNG: COMPREHENSIVE BENCHMARK
+  kind-pasteur-2026-03-25-S2
+============================================================================
+
+Test                     Raw     PNG      TC   Ratio   Better
+----------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png_v2.py:311: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  img = Image.fromarray(img_array, 'L')
+gray_solid             16384     148      54   2.741      WIN
+gray_grad_h            16384     148      57   2.596      WIN
+gray_grad_v            16384     153      59   2.593      WIN
+gray_grad_diag         16384     149      57   2.614      WIN
+gray_checker8          16384     184      93   1.978      WIN
+gray_checker2          16384     173     116   1.491      WIN
+gray_circles           16384    6978    4394   1.588      WIN
+gray_stripes4            128      76      30   2.533      WIN
+gray_edges             16384     351     219   1.603      WIN
+gray_text              16384     343     161   2.130      WIN
+gray_natural           16384   12074   11981   1.008      WIN
+gray_dithered          16384    2860    1837   1.557      WIN
+gray_smooth            16384    4558    2711   1.681      WIN
+gray_random            16384   16580   16410   1.010      WIN
+gray_sparse1           16384     655     602   1.088      WIN
+gray_sparse10          16384    3426    3454   0.992     LOSS
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tc_beat_png_v2.py:313: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  img = Image.fromarray(img_array, 'RGB')
+rgb_gradient           49152     264     150   1.760      WIN
+rgb_natural            49152   35775   35641   1.004      TIE
+rgb_edges              49152     543     534   1.017      WIN
+rgb_smooth             49152   24619   14503   1.698      WIN
+----------------------------------------------------------------------------
+AGGREGATE                     110057   93063   1.183
+
+  Wins: 18  Ties: 1  Losses: 1  Total: 20
+  Win rate: 18/20 = 90%
+
+--- LOSSES ---
+  gray_sparse10: PNG=3426, TC=3454, overhead=28 bytes (0.8%)
+
+--- TOP 5 WINS ---
+  gray_solid: TC is 2.74x smaller than PNG (saves 94 bytes)
+  gray_grad_diag: TC is 2.61x smaller than PNG (saves 92 bytes)
+  gray_grad_h: TC is 2.60x smaller than PNG (saves 91 bytes)
+  gray_grad_v: TC is 2.59x smaller than PNG (saves 94 bytes)
+  gray_stripes4: TC is 2.53x smaller than PNG (saves 46 bytes)
