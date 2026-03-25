@@ -1,0 +1,30 @@
+====================================================================================================
+  ROWSORT CODEC: 7 variants of row-sorting for compression
+  kind-pasteur-2026-03-25-S8
+====================================================================================================
+
+  Image           PNG   MED std  RS delta    RS MED  RS bysum  CS delta  RS+CS 2D RS Hilbert RS NN-TSP        BEST
+  -------------------------------------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_rowsort.py:38: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421     2764      1728      1639      1728      1122*     1284      1807      1728     CS delta 3.05x
+  circles        6978     5565      5812      4305      6904      4445      6265      8407      3463*   RS NN-TSP 2.02x
+  grad_d          149       27*      229       134       229       382       336       229       229      MED std 5.52x
+  grad_h          148       29*      261       136       261       136       368       261       261      MED std 5.10x
+  grad_v          153       34*      137       141       137       364       244       137       137      MED std 4.50x
+  natural       12100    12180*    13833     12806     13808     15287     15268     13673     12627      MED std 0.99x
+  radial         2783     2270      1398      1354      1398      1068*     1109      1458      1239     CS delta 2.61x
+  random        16580    16398*    16523     16523     16523     16513     16648     16523     16523      MED std 1.01x
+  solid           148       24*      135       131       135       135       242       135       135      MED std 6.17x
+  stripes0        157       35*      159       158       159       152       266       159       161      MED std 4.49x
+  stripes45       229       47*      196       189       159       225       355       159       187      MED std 4.87x
+  stripes90       151       29*      136       136       136       157       265       136       136      MED std 5.21x
+
+  === ROW SIMILARITY AFTER SORTING (blob image) ===
+  Original image: mean row-to-row diff = 2.07
+  Sorted image: mean row-to-row diff = 1.04
+  Reduction: 1.99x
+
+  === ROW SIMILARITY AFTER NN-TSP SORT (blob) ===
+  NN-TSP sorted: mean row-to-row diff = 1.04
+  Reduction vs original: 1.99x

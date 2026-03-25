@@ -1,0 +1,41 @@
+==========================================================================================
+  RADICAL IDEAS: Break every assumption
+  kind-pasteur-2026-03-25-S8
+==========================================================================================
+
+  Image           PNG    MED  GolRice  FlatRgn  PolyFit   2D-LZ  BitPln  RowSort  FreqSrt
+  -----------------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_radical.py:62: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421   2764     4722     4017     5378    5998    5810     1728     4442  BEST: RowSort
+  circles        6978   5565     9377     7075    10645    7947    7825     5812     7046  BEST: MED
+  grad_d          149     27     6155      311       66     452     449      229      564  BEST: MED
+  grad_h          148     29     2123       97       70     339     112      261      159  BEST: MED
+  natural       12100  12180    12389    12728    13225   13495   14465    13833    15014  BEST: PNG
+  random        16580  16398    17429    16660    16438   16409   16426    16523    16579  BEST: MED
+  solid           148     24     2091       28       63     367      98      135       34  BEST: MED
+  stripes45       229     47     2443       35      349     389     490      196       63  BEST: FlatRgn
+
+  ANALYSIS OF RADICAL IDEAS:
+
+  Golomb-Rice: Custom entropy coding for Laplacian residuals.
+    Should beat zlib on MED residuals because it's distribution-optimal.
+
+  Flat Regions: Flood-fill segmentation → mean + tiny residuals.
+    Great for smooth images, terrible for noisy ones.
+
+  Polynomial Fit: 2D polynomial surface + residual.
+    Captures gradients in ~20 coefficients. Good for smooth, bad for texture.
+
+  2D-LZ: Block-copy matching in 2D.
+    Finds repeated 8x8 blocks. Good for screenshots/tiled content.
+
+  Bit-Planes: MSB planes are smooth, LSB planes are noise.
+    Separates signal from noise without wavelets.
+
+  Row-Sort: Reorder rows by similarity, then delta-compress.
+    Groups similar rows → smaller deltas. Good for horizontal patterns.
+
+  Freq-Sort: Map pixel values to frequency ranks.
+    Makes common values cluster at low ranks → better compression.
+

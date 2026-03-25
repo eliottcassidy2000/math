@@ -1,0 +1,42 @@
+================================================================================
+  MST-WALK CODEC: Adaptive scan order from minimum spanning tree
+  kind-pasteur-2026-03-25-S8
+================================================================================
+
+  Image           PNG    MED    MST    MST stats       BEST
+  ------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_mst.py:49: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           1312    994   2089 mw=  2.5 mr=  2.5    MED 1.32x
+  circles        2143   1666   2761 mw=  6.4 mr=  6.4    MED 1.29x
+  grad_d          106     45    364 mw=  2.0 mr=  2.0    MED 2.36x
+  grad_h          108     33    176 mw=  0.1 mr=  0.1    MED 3.27x
+  natural        3137   3088   3695 mw=  5.8 mr=  5.8    MED 1.02x
+  radial         1118    915   1817 mw=  2.3 mr=  2.3    MED 1.22x
+  random         4228   4110   5121 mw= 42.6 mr= 41.6    MED 1.03x
+  solid           100     24     98 mw=  0.0 mr=  0.0    MED 4.17x
+
+  ANALYSIS:
+  mw = mean MST edge weight (lower = better MST prediction)
+  mr = mean absolute residual in MST walk
+
+  MST ADVANTAGE:
+  - The MST naturally finds the path of minimum prediction error
+  - Every pixel is predicted from its closest (most similar) neighbor
+  - The tree adapts to any image structure (radial, gradient, edges)
+
+  MST DISADVANTAGE:
+  - Tree structure costs ~n * log2(5) / 8 bytes (3 bits per pixel: 4 dirs + root)
+  - For 64×64 = 4096 pixels: ~1536 bytes of tree structure
+  - This overhead must be less than the residual savings
+
+  The MST codec wins when:
+  - Residual savings > tree overhead
+  - Happens for images with smooth regions separated by sharp edges
+  - The MST follows smooth paths, avoiding edges
+
+  RESIDUAL DISTRIBUTION (blob):
+  MED: mean|res| = 1.45, max|res| = 7
+  MST: mean|res| = 2.48, max|res| = 7
+  MST residuals are 0.59x smaller
+  But tree structure costs 505 bytes

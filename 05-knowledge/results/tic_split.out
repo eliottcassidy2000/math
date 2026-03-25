@@ -1,0 +1,25 @@
+====================================================================================================
+  RADICAL IDEAS ROUND 2: Split, LPC, Rank, Gray-XOR, Edge-Smooth
+  kind-pasteur-2026-03-25-S8
+====================================================================================================
+
+  Image           PNG    MED std   BinSplit     RowLPC    RankMED    GrayXOR EdgeSmooth        BEST
+  ------------------------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_split.py:43: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421      2764       3704       2491*      3270       4965       4309       RowLPC 1.37x
+  circles        6978      5565       5805       4450*      6270       7249       7997       RowLPC 1.57x
+  grad_d          149        27*       343        177        240        685        729      MED std 5.52x
+  grad_h          148        29*       152        166        161        116        171      MED std 5.10x
+  natural       12100     12180*     13306      12323      12394      13561      23487      MED std 0.99x
+  random        16580     16398*     16398      16559      16610      16426      29724      MED std 1.01x
+  solid           148        24         23*        40         28         98         36     BinSplit 6.43x
+  stripes45       229        47*        52         91         53        147        187      MED std 4.87x
+
+  KEY FINDINGS:
+  - Binary Split: captures self-similarity at multiple scales
+  - Row LPC: audio-style linear prediction on rows
+  - Rank+MED: histogram equalization before MED
+  - Gray XOR: Gray-code bit-planes (smoother bit-planes)
+  - Edge+Smooth: separate high/low frequency components
+

@@ -1,0 +1,48 @@
+================================================================================
+  TIC CHAMPION: Best of 6 methods per image
+  kind-pasteur-2026-03-25-S8
+================================================================================
+
+--- 128x128 ---
+  Image            PNG   CHAMP   ratio   method
+  --------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_champion.py:36: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob            3421    1122    3.05  ColSort
+  blocks           384     158    2.43      Raw
+  checker          184      42    4.38      Raw
+  circles         6978    4296    1.62   RowLPC
+  grad_d           149      27    5.52      MED
+  grad_h           148      29    5.10      MED
+  grad_v           153      29    5.28   RowLPC
+  natural        12100   12115    1.00   RowLPC
+  radial          2783    1068    2.61  ColSort
+  random         16580   16398    1.01      MED
+  solid            148      23    6.43      Raw
+  stripes0         157      29    5.41    MED-T
+  stripes45        229      47    4.87      MED
+  stripes90        151      25    6.04      Raw
+
+  13W / 0T / 1L out of 14
+  Method wins: {'ColSort': 2, 'Raw': 4, 'RowLPC': 3, 'MED': 4, 'MED-T': 1}
+
+--- 256x256 ---
+  Image            PNG   CHAMP   ratio   method
+  --------------------------------------------------
+  blob            9323    2402    3.88  ColSort
+  blocks           601     201    2.99      Raw
+  checker          435      43   10.12      Raw
+  circles        24780   16372    1.51   RowLPC
+  grad_d           405      36   11.25      MED
+  grad_h           369      28   13.18      MED
+  grad_v           374      28   13.36    MED-T
+  natural        47736   48056    0.99   RowLPC
+  radial          6992    2193    3.19  ColSort
+  random         65917   65550    1.01      MED
+  solid            369      23   16.04      Raw
+  stripes0         303      29   10.45    MED-T
+  stripes45        536      49   10.94      MED
+  stripes90        374      25   14.96      Raw
+
+  13W / 0T / 1L out of 14
+  Method wins: {'ColSort': 2, 'Raw': 4, 'RowLPC': 2, 'MED': 4, 'MED-T': 2}
