@@ -1,0 +1,11 @@
+ISO CLASS SEPARATION (n=6, 56 classes):
+score only:       11/56 = 19.6%
++ c3:             11/56 = 19.6% (c3 adds NOTHING)
++ H:              26/56 = 46.4%
++ row_A2 sums:    48/56 = 85.7%
++ row_A2 + row_A3: 54/56 = 96.4%
++ full A2 rows:    56/56 = 100.0%
+
+The 2-path profile (row sums of A^2) is THE key missing invariant.
+It captures local directed connectivity that global invariants miss.
+
