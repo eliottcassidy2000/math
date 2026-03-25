@@ -1,0 +1,42 @@
+===============================================================================================
+  TIC v5.0.0 — Grand Unified Codec
+===============================================================================================
+
+--- Roundtrip ---
+  OK gradient_64                        4096B ->      47B   87.1:1 [whole/paeth]
+  OK circle_64                          4096B ->     446B    9.2:1 [spiral]
+  OK diag_edge_64                       4096B ->      43B   95.3:1 [diag/n]
+  OK checker_64                         4096B ->      40B  102.4:1 [checker]
+  OK noise_64                           4096B ->    4120B    1.0:1 [whole/none]
+  OK gradient_128                      16384B ->      54B  303.4:1 [whole/paeth]
+  OK circle_128                        16384B ->     905B   18.1:1 [quincunx]
+  OK diag_edge_128                     16384B ->      54B  303.4:1 [diag/n]
+  OK checker_128                       16384B ->      53B  309.1:1 [checker]
+  OK noise_128                         16384B ->   16408B    1.0:1 [whole/none]
+  OK gradient_256                      65536B ->     101B  648.9:1 [whole/paeth]
+  OK circle_256                        65536B ->    1761B   37.2:1 [quincunx]
+  OK diag_edge_256                     65536B ->     102B  642.5:1 [diag/n]
+  OK checker_256                       65536B ->      98B  668.7:1 [checker]
+  OK noise_256                         65536B ->   65575B    1.0:1 [whole/none]
+  OK rgb_64                            12288B ->   12312B    1.0:1 [whole/none]
+  OK rgb_128                           49152B ->   49181B    1.0:1 [whole/none]
+
+--- v5 vs PNG ---
+  gradient_128              TIC=     54 PNG=    148 2.74x  WIN [whole/paeth]
+  circle_128                TIC=    905 PNG=   3421 3.78x  WIN [quincunx]
+  diag_stripe_128           TIC=    101 PNG=    229 2.27x  WIN [adiag/n]
+  checker_128               TIC=     53 PNG=    154 2.91x  WIN [checker]
+  radial_128                TIC=   1737 PNG=   6978 4.02x  WIN [quincunx]
+  noise_128                 TIC=  16408 PNG=  16580 1.01x  WIN [whole/none]
+  gradient_256              TIC=    101 PNG=    369 3.65x  WIN [whole/paeth]
+  circle_256                TIC=   1761 PNG=   9319 5.29x  WIN [quincunx]
+  diag_stripe_256           TIC=    202 PNG=    536 2.65x  WIN [adiag/n]
+  checker_256               TIC=     98 PNG=    290 2.96x  WIN [checker]
+  radial_256                TIC=   4649 PNG=  24780 5.33x  WIN [quincunx]
+  noise_256                 TIC=  65575 PNG=  65915 1.01x  WIN [whole/none]
+
+--- Real Photos ---
+  tron.jpeg                 TIC=  69405 PNG=  94531 1.36x OK 9.9s [transp]
+  t.jpg                     TIC=  22201 PNG=  38408 1.73x OK 15.0s [whole/sub]
+
+  19 passed, 0 failed, 14/14 beat PNG
