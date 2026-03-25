@@ -1,0 +1,76 @@
+========================================================================
+  HUNT FOR THE MISSING INVARIANT
+  opus-2026-03-25-S339
+========================================================================
+
+########################################################################
+  n = 5
+########################################################################
+  64 tilings, 6.0 bits full entropy
+  Base (score+c3+H): 2.86 bits, 11 classes
+  Reducibility: 52.3%
+  Irreducible: 47.7% (2.86 bits)
+
+  ADDITIONAL REDUCTION from each invariant (beyond score+c3+H):
+        Invariant  Classes  Entropy  Reduction   New info
+               c5       11     2.86      0.00b       0.0%  (1 standalone)
+             bc33       11     2.86      0.00b       0.0%  (1 standalone)
+      eigenvalues       12     3.14     -0.28b      -4.7%  (9 standalone)
+         skew_eig       12     3.14     -0.28b      -4.7%  (2 standalone)
+      nbr_degrees       12     3.14     -0.28b      -4.7%  (12 standalone)
+           row_A2       12     3.14     -0.28b      -4.7%  (12 standalone)
+           row_A3       12     3.14     -0.28b      -4.7%  (12 standalone)
+            tr_A2       11     2.86      0.00b       0.0%  (1 standalone)
+            tr_A3       11     2.86      0.00b       0.0%  (6 standalone)
+         gf2_rank       11     2.86      0.00b       0.0%  (3 standalone)
+     feedback_arc       23     4.12     -1.26b     -21.0%  (8 standalone)
+       ham_cycles       11     2.86      0.00b       0.0%  (4 standalone)
+         aut_size       11     2.86      0.00b       0.0%  (3 standalone)
+
+  RANKED BY ADDITIONAL INFORMATION:
+                 c5: +0.00 bits (0.0%), total 11 classes
+               bc33: +0.00 bits (0.0%), total 11 classes
+              tr_A2: +0.00 bits (0.0%), total 11 classes
+              tr_A3: +0.00 bits (0.0%), total 11 classes
+           gf2_rank: +0.00 bits (0.0%), total 11 classes
+
+  BEST COMBO (base + ['c5', 'bc33', 'tr_A2']):
+    Classes: 11, Entropy: 2.86, Reducibility: 52.3%
+
+########################################################################
+  n = 6
+########################################################################
+  1024 tilings, 10.0 bits full entropy
+  Base (score+c3+H): 4.61 bits, 40 classes
+  Reducibility: 53.9%
+  Irreducible: 46.1% (4.61 bits)
+
+  ADDITIONAL REDUCTION from each invariant (beyond score+c3+H):
+        Invariant  Classes  Entropy  Reduction   New info
+               c5       41     4.64     -0.03b      -0.3%  (2 standalone)
+             bc33       47     4.98     -0.37b      -3.7%  (4 standalone)
+      eigenvalues       50     5.10     -0.48b      -4.8%  (28 standalone)
+         skew_eig       47     4.95     -0.33b      -3.3%  (6 standalone)
+      nbr_degrees       52     5.19     -0.58b      -5.8%  (52 standalone)
+           row_A2       52     5.19     -0.58b      -5.8%  (52 standalone)
+           row_A3       54     5.35     -0.73b      -7.3%  (53 standalone)
+            tr_A2       40     4.61      0.00b       0.0%  (1 standalone)
+            tr_A3       40     4.61      0.00b       0.0%  (9 standalone)
+         gf2_rank       47     5.00     -0.39b      -3.9%  (3 standalone)
+     feedback_arc      120     6.25     -1.63b     -16.3%  (10 standalone)
+       ham_cycles       41     4.71     -0.09b      -0.9%  (6 standalone)
+
+  RANKED BY ADDITIONAL INFORMATION:
+              tr_A2: +0.00 bits (0.0%), total 40 classes
+              tr_A3: +0.00 bits (0.0%), total 40 classes
+                 c5: +-0.03 bits (-0.3%), total 41 classes
+         ham_cycles: +-0.09 bits (-0.9%), total 41 classes
+           skew_eig: +-0.33 bits (-3.3%), total 47 classes
+
+  BEST COMBO (base + ['tr_A2', 'tr_A3', 'c5']):
+    Classes: 41, Entropy: 4.64, Reducibility: 53.6%
+
+========================================================================
+  WHAT WE LEARNED
+========================================================================
+DONE.
