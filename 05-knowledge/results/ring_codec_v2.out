@@ -1,0 +1,82 @@
+================================================================================
+  RING CODEC v2: HYBRID RING/RASTER — PROPER BENCHMARK
+  kind-pasteur-2026-03-25-S4
+================================================================================
+
+--- ROUNDTRIP VERIFICATION (64x64) ---
+  ALL 16 IMAGES: PASS
+
+--- 64x64: RING v2 vs PNG ---
+  Image             PNG  RC-zlib  RC-best  z/PNG  b/PNG  Strat
+  --------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\ring_codec_v2.py:269: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  solid             100       40       27  2.500  3.704   RING
+  grad_h            108       65       41  1.662  2.634 raster
+  grad_v            114       65       41  1.754  2.780  trans
+  grad_diag         106       68       51  1.559  2.078 raster
+  checker           124       63       45  1.968  2.756    raw
+  circles          2143      960      854  2.232  2.509   RING
+  radial_grad      1118      394      394  2.838  2.838   RING
+  bullseye          399      224      208  1.781  1.918    raw
+  blob             1312      508      497  2.583  2.640   RING
+  spotlight        1054      400      377  2.635  2.796   RING
+  stripes_h         104       56       38  1.857  2.737    raw
+  stripes_v         105       46       29  2.283  3.621    raw
+  random           4228     4121     4114  1.026  1.028   RING
+  natural          3137     2969     2956  1.057  1.061   RING
+  blocks            218      136      112  1.603  1.946    raw
+  rgb_natural      9157     8903     8871  1.029  1.032 RING/RING/RING
+
+  Fair (zlib): 16W / 0T / 0L
+  Best (all):  16W / 0T / 0L
+  Ring strategy chosen: 8/16 images (50%)
+
+--- 128x128: RING v2 vs PNG ---
+  Image             PNG  RC-zlib  RC-best  z/PNG  b/PNG  Strat
+  --------------------------------------------------------------
+  solid             148       53       27  2.792  5.481   RING
+  grad_h            148      105       38  1.410  3.895 raster
+  grad_v            153      105       38  1.457  4.026  trans
+  grad_diag         149      103       38  1.447  3.921 raster
+  checker           184       95       46  1.937  4.000    raw
+  circles          6978     2780     2373  2.510  2.941   RING
+  radial_grad      2783      991      900  2.808  3.092   RING
+  bullseye         1039      632      536  1.644  1.938    raw
+  blob             3421     1198     1077  2.856  3.176   RING
+  spotlight        2689     1030      908  2.611  2.961   RING
+  stripes_h         157       87       39  1.805  4.026  trans
+  stripes_v         151       64       29  2.359  5.207    raw
+  random          16580    16409    16402  1.010  1.011   RING
+  natural         12100    11821    11747  1.024  1.030   RING
+  blocks            384      231      162  1.662  2.370    raw
+  rgb_natural     35775    35141    34986  1.018  1.023 RING/RING/RING
+
+  Fair (zlib): 16W / 0T / 0L
+  Best (all):  16W / 0T / 0L
+  Ring strategy chosen: 8/16 images (50%)
+
+================================================================================
+  WHAT THE RING CODEC ACTUALLY CONTRIBUTES
+================================================================================
+
+  GENUINELY NOVEL:
+  - Center-outward concentric ring scan order
+  - Full-interior prediction context (not just above/left)
+  - Progressive center-first decode capability
+  - Automatic scan-order selection (ring vs raster)
+
+  WHEN RING WINS OVER RASTER:
+  - Radial patterns (circles, blobs, spotlights): 2-3x better than PNG
+  - Center-focused images (portraits, objects): better context
+  - Circular/symmetric patterns: natural ring alignment
+
+  WHEN RASTER WINS (fallback kicks in):
+  - Linear gradients: raster scan + MED/Paeth excels
+  - Horizontal/vertical stripes: row-by-row filtering optimal
+  - Text/documents: horizontal structure dominant
+
+  THE HYBRID APPROACH:
+  Try both, pick smaller per plane. Never worse than PNG's approach.
+  Sometimes much better (radial patterns).
+

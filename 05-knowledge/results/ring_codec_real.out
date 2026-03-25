@@ -1,0 +1,86 @@
+================================================================================
+  RING CODEC: PROPER BENCHMARK
+  The one genuinely novel idea — center-outward concentric encoding
+  kind-pasteur-2026-03-25-S4
+================================================================================
+
+================================================================================
+  64x64 IMAGES
+================================================================================
+
+  Image                PNG  Ring-zlib  Ring-best  zlib/PNG  best/PNG   Strategy
+  ----------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\ring_codec_real.py:324: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  solid                100         40         27     2.500     3.704  ring-best
+  grad_h               108        125         99     0.864     1.091        raw
+  grad_v               114        179        137     0.637     0.832        raw
+  grad_diag            106        197        182     0.538     0.582   ring-avg
+  checker              124         63         45     1.968     2.756        raw
+  circles             2143        927        839     2.312     2.554  ring-best
+  radial_grad         1118        394        387     2.838     2.889  ring-best
+  bullseye             399        218        205     1.830     1.946  ring-best
+  blob                1312        500        480     2.624     2.733  ring-best
+  spotlight           1054        400        377     2.635     2.796   ring-avg
+  stripes_h            104         56         38     1.857     2.737        raw
+  stripes_v            105         46         29     2.283     3.621        raw
+  random              4228       4031       4009     1.049     1.055  ring-best
+  natural             3137       2798       2786     1.121     1.126  ring-best
+  blocks               218        136        112     1.603     1.946        raw
+  rgb_natural         9157       8355       8325     1.096     1.100      multi
+
+  Fair (zlib):  13W / 0T / 3L  out of 16
+  Best (all):   14W / 0T / 2L  out of 16
+
+================================================================================
+  128x128 IMAGES
+================================================================================
+
+  Image                PNG  Ring-zlib  Ring-best  zlib/PNG  best/PNG   Strategy
+  ----------------------------------------------------------------------------
+  solid                148         53         27     2.792     5.481  ring-best
+  grad_h               148        251        138     0.590     1.072 raster-avg
+  grad_v               153        308        249     0.497     0.614        raw
+  grad_diag            149        313        268     0.476     0.556 raster-avg
+  checker              184         95         46     1.937     4.000        raw
+  circles             6978       2648       2287     2.635     3.051  ring-best
+  radial_grad         2783        929        876     2.996     3.177  ring-best
+  bullseye            1039        607        536     1.712     1.938        raw
+  blob                3421       1164       1066     2.939     3.209  ring-best
+  spotlight           2689       1028        885     2.616     3.038  ring-best
+  stripes_h            157         87         40     1.805     3.925        raw
+  stripes_v            151         64         29     2.359     5.207        raw
+  random             16580      15900      15880     1.043     1.044  ring-best
+  natural            12100      11141      11084     1.086     1.092  ring-best
+  blocks               384        231        162     1.662     2.370        raw
+  rgb_natural        35775      33003      32918     1.084     1.087      multi
+
+  Fair (zlib):  13W / 0T / 3L  out of 16
+  Best (all):   14W / 0T / 2L  out of 16
+
+================================================================================
+  ROUNDTRIP VERIFICATION
+================================================================================
+
+  solid            OK
+  grad_h           OK
+  grad_v           OK
+  grad_diag        FAIL  (2768 pixels differ)
+  checker          OK
+  circles          FAIL  (4007 pixels differ)
+  radial_grad      OK
+  bullseye         FAIL  (3754 pixels differ)
+  blob             FAIL  (3819 pixels differ)
+  spotlight        OK
+  stripes_h        OK
+  stripes_v        OK
+  random           FAIL  (4052 pixels differ)
+  natural          FAIL  (3958 pixels differ)
+  blocks           OK
+  rgb_natural      FAIL  (11910 pixels differ)
+
+  Roundtrip: FAILURES - strategy A bug detected
+
+  NOTE: Strategy A (per-pixel best predictor) has a roundtrip bug.
+  The encoder picks different predictors per pixel but the decoder
+  uses only avg_neighbors. Fixing by removing strategy A from candidates.
