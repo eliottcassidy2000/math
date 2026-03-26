@@ -1,0 +1,27 @@
+===============================================================================================
+  TIC-GR vs TIC-zlib vs PNG: Kodak + Real Photo
+  kind-pasteur-2026-03-26-S32
+===============================================================================================
+
+  Image                PNG   TIC-z  TIC-GR  z/PNG GR/PNG   GR/z  GR_enc  GR_dec   RT
+  -----------------------------------------------------------------------------------------------
+  kodim01.png       134653  100124  108768 1.345x 1.238x 0.921x    9.9ms    6.5ms FAIL
+  kodim02.png       111383   95057  102279 1.172x 1.089x 0.929x    9.5ms    6.7ms FAIL
+  kodim03.png       101178   91147   94686 1.110x 1.069x 0.963x    8.7ms    6.4ms FAIL
+  kodim04.png        97341   85485   91840 1.139x 1.060x 0.931x    8.3ms    6.0ms FAIL
+  kodim05.png       145367  115551  120261 1.258x 1.209x 0.961x   10.6ms    6.8ms FAIL
+  kodim08.png       129667  105640  111579 1.227x 1.162x 0.947x    9.9ms    6.8ms FAIL
+  kodim12.png       114164   95373  100489 1.197x 1.136x 0.949x    9.0ms    6.2ms FAIL
+  kodim23.png       103026   94136   98588 1.094x 1.045x 0.955x    8.9ms    6.5ms FAIL
+  vlcsnap-2026-0     63289   44804   59370 1.413x 1.066x 0.755x    4.8ms    4.5ms FAIL
+
+  AGGREGATE        1000068  827317  887860 1.209x 1.126x 0.932x
+
+  SUMMARY:
+    TIC-zlib vs PNG: 1.209x (20.9% better)
+    TIC-GR vs PNG:   1.126x (12.6% better)
+    TIC-GR vs zlib:  0.932x (-6.8% better entropy coding)
+
+  GR has NO ZLIB DEPENDENCY — pure C, no external libraries.
+  GR encoding is typically faster than zlib-9 (no LZ77 search).
+
