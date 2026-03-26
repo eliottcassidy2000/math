@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S350 — 2026-03-25: TIC Share — Shareable Compression with Pipeline Visualization
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S349
+**Summary:** Built tic_share.html — a self-contained web app where users compress images, share them as .tic files or data URLs, and recipients decompress with animated pipeline visualization showing every step.
+
+### Features
+- **Compress tab**: Drop image → animated 4-stage pipeline (Decorrelate → Predict → Deflate → Pack) → download .tic or copy tic:// URL
+- **Decompress tab**: Drop .tic file or paste URL → animated pipeline → view + save as PNG
+- Full TIC codec in JavaScript (6 filters, GRD transform, per-row adaptive, pako.js zlib)
+- Hex view of TIC header for under-the-hood transparency
+- 100% client-side, nothing leaves the browser
+- tic:// data URL scheme for clipboard sharing
+
+### Files Created
+- `04-computation/tic_share.html` — Complete shareable compression demo
+
 ## opus-2026-03-25-S349 — 2026-03-25: Polished C Implementation — tic.c Production Codec
 
 **Account:** opus
