@@ -1,0 +1,98 @@
+================================================================================
+  FULL CHAIN COMPLEX ANALYSIS
+  kind-pasteur-2026-03-25-S26
+================================================================================
+
+  n = 7
+  dim(ker ∂₁) = C(7,2) - (7-1) = 15
+
+  --- Transitive ---
+  dim(Ω_p): [7, 21, 35, 35, 21, 7]
+  rank(∂_p): [0, np.int64(6), np.int64(15), np.int64(20), np.int64(15), np.int64(6)]
+  β_p:       [np.int64(1), 0, 0, 0, 0, np.int64(1)]
+  Ω palindromic: True
+  S = 15 - 35 + 35 = 15
+  β₁+β₃ = 0
+  β₁·β₃ = 0
+  seesaw: HOLDS
+  χ = 0 (from Ω), 0 (from β)
+  [0.0s]
+
+  --- Paley T_7 ---
+  dim(Ω_p): [7, 21, np.int64(42), np.int64(63), np.int64(63), np.int64(42)]
+  rank(∂_p): [0, np.int64(6), np.int64(15), np.int64(27), np.int64(36), np.int64(21)]
+  β_p:       [np.int64(1), 0, 0, 0, np.int64(6), np.int64(21)]
+  Ω palindromic: False
+  S = 15 - 42 + 63 = 36
+  β₁+β₃ = 0
+  β₁·β₃ = 0
+  seesaw: HOLDS
+  χ = -14 (from Ω), -14 (from β)
+  [0.1s]
+
+  --- Random_0 ---
+  dim(Ω_p): [7, 21, np.int64(35), np.int64(34), np.int64(17), np.int64(3)]
+  rank(∂_p): [0, np.int64(6), np.int64(15), np.int64(20), np.int64(14), np.int64(3)]
+  β_p:       [np.int64(1), 0, 0, 0, 0, 0]
+  Ω palindromic: False
+  S = 15 - 35 + 34 = 14
+  β₁+β₃ = 0
+  β₁·β₃ = 0
+  seesaw: HOLDS
+  χ = 1 (from Ω), 1 (from β)
+  [0.0s]
+
+  --- Random_1 ---
+  dim(Ω_p): [7, 21, np.int64(37), np.int64(40), np.int64(27), np.int64(12)]
+  rank(∂_p): [0, np.int64(6), np.int64(15), np.int64(22), np.int64(18), np.int64(9)]
+  β_p:       [np.int64(1), 0, 0, 0, 0, np.int64(3)]
+  Ω palindromic: False
+  S = 15 - 37 + 40 = 18
+  β₁+β₃ = 0
+  β₁·β₃ = 0
+  seesaw: HOLDS
+  χ = -2 (from Ω), -2 (from β)
+  [0.0s]
+
+  --- Random_2 ---
+  dim(Ω_p): [7, 21, np.int64(35), np.int64(35), np.int64(20), np.int64(6)]
+  rank(∂_p): [0, np.int64(6), np.int64(15), np.int64(20), np.int64(14), np.int64(6)]
+  β_p:       [np.int64(1), 0, 0, np.int64(1), 0, 0]
+  Ω palindromic: False
+  S = 15 - 35 + 35 = 15
+  β₁+β₃ = 1
+  β₁·β₃ = 0
+  seesaw: HOLDS
+  χ = 0 (from Ω), 0 (from β)
+  [0.0s]
+
+  --- Random_3 ---
+  dim(Ω_p): [7, 21, np.int64(36), np.int64(36), np.int64(18), np.int64(3)]
+  rank(∂_p): [0, np.int64(6), np.int64(15), np.int64(21), np.int64(15), np.int64(3)]
+  β_p:       [np.int64(1), 0, 0, 0, 0, 0]
+  Ω palindromic: False
+  S = 15 - 36 + 36 = 15
+  β₁+β₃ = 0
+  β₁·β₃ = 0
+  seesaw: HOLDS
+  χ = 1 (from Ω), 1 (from β)
+  [0.0s]
+
+  --- Random_4 ---
+  dim(Ω_p): [7, 21, np.int64(40), np.int64(53), np.int64(44), np.int64(26)]
+  rank(∂_p): [0, np.int64(6), np.int64(15), np.int64(25), np.int64(28), np.int64(16)]
+  β_p:       [np.int64(1), 0, 0, 0, 0, np.int64(10)]
+  Ω palindromic: False
+  S = 15 - 40 + 53 = 28
+  β₁+β₃ = 0
+  β₁·β₃ = 0
+  seesaw: HOLDS
+  χ = -9 (from Ω), -9 (from β)
+  [0.1s]
+
+  KEY QUESTIONS:
+  1. Is Ω palindromic for all tournaments at n=7? (Not just Paley)
+  2. Does S grow with tournament complexity?
+  3. What determines β₄ > 0?
+  4. Is there a pattern in the β profiles?
+

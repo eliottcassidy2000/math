@@ -1,0 +1,36 @@
+================================================================================
+  SEESAW ALGEBRAIC ANALYSIS: Computing S = dim(ker ∂₁) - dim(Ω₂) + dim(Ω₃)
+  kind-pasteur-2026-03-25-S26
+================================================================================
+
+--- n = 6 ---
+  dim(ker ∂₁) = C(6,2) - (6-1) = 10
+  [10/50] 0.0s
+  [20/50] 0.0s
+  [30/50] 0.0s
+  [40/50] 0.0s
+  [50/50] 0.0s
+
+  S distribution: {np.int64(3): 16, np.int64(4): 7, np.int64(5): 13, np.int64(6): 1, np.int64(7): 1, np.int64(8): 1, np.int64(9): 6, np.int64(10): 5}
+  S range: [3, 10]
+  S mean: 5.32
+  S > 1 observed → seesaw requires dim(im ∂₄) ≥ 9
+
+--- n = 7 ---
+  dim(ker ∂₁) = C(7,2) - (7-1) = 15
+  [10/20] 0.0s
+  [20/20] 0.0s
+
+  S distribution: {np.int64(12): 1, np.int64(13): 3, np.int64(14): 1, np.int64(15): 3, np.int64(16): 1, np.int64(17): 1, np.int64(18): 2, np.int64(20): 1, np.int64(21): 3, np.int64(24): 1, np.int64(29): 1, np.int64(33): 1, np.int64(35): 1}
+  S range: [12, 35]
+  S mean: 19.15
+  S > 1 observed → seesaw requires dim(im ∂₄) ≥ 34
+
+  INTERPRETATION:
+  If S = dim(ker ∂₁) - dim(Ω₂) + dim(Ω₃) ≤ 1 for ALL tournaments,
+  then β₁ + β₃ = S - dim(im ∂₄) ≤ 1 (since dim(im ∂₄) ≥ 0),
+  which gives β₁·β₃ = 0 (the seesaw).
+
+  If S > 1 for some tournaments, the seesaw requires dim(im ∂₄) ≥ S-1.
+  This would need a separate argument about ∂₄.
+
