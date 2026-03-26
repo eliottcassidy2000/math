@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S349 — 2026-03-25: Polished C Implementation — tic.c Production Codec
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S348
+**Summary:** Read kind-pasteur's C implementation (tic_codec.c, 240 Mpixels/s) and Kodak benchmark (9/9 beats PNG). Built improved C codec (tic.c) with per-row adaptive filtering, multiple color transforms, dual zlib strategy, and self-describing file format.
+
+### Improvements Over kind-pasteur's tic_codec.c
+1. Per-row adaptive filtering (6 filters) instead of whole-plane MED
+2. Three color transforms (None, GRD, RBD) auto-selected
+3. Dual zlib strategy (default + Z_FILTERED, pick smaller)
+4. Self-describing header (12 bytes) — decoder doesn't need W/H args
+5. Clean CLI with compress/decompress/bench modes
+
+### Results
+- tron.jpeg: 72362B vs PNG 94531B = **1.31x** (31% smaller)
+- t.jpg: 26945B vs PNG 38408B = **1.43x** (43% smaller)
+- Decode speed: **25 Mpixels/s**
+- All roundtrips verified PASS
+
+### Files Created
+- `04-computation/tic.c` — Production C codec (540 lines)
+- `04-computation/tic_bin` — Compiled binary
+
 ## opus-2026-03-25-S348 — 2026-03-25: The Photo Compression Wall — Deep Analysis of Every Tangent
 
 **Account:** opus
