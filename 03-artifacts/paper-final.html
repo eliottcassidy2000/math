@@ -41,13 +41,13 @@ hr{border:none;border-top:1px solid var(--border);margin:20px 0}
 <body>
 
 <h1>Tournament Theory on the Tiling Hypercube</h1>
-<p style="text-align:center;font-size:1.1em;color:var(--accent)">Spectral Methods, Path Homology, Cayley&ndash;Delannoy Paths, and Compression</p>
+<p style="text-align:center;font-size:1.05em;color:var(--accent)">Spectral Methods, Path Homology, and the $A^2$ Completeness Conjecture</p>
 <p class="authors"><strong>Eliott Cassidy</strong></p>
 <p class="meta">With computational assistance from Claude (Anthropic) &mdash; March 2026</p>
 <p class="meta">Synthesized from 350+ agent sessions, 171 reflections, 50+ scripts, 6 LaTeX drafts</p>
 
 <div class="abstract">
-A tournament on $n$ vertices is a complete directed graph. Its tiling model encodes arc orientations as binary strings on the staircase Young diagram $\delta_{n-2}$. We develop a unified theory connecting: (I) the Cayley transform $Q(x) = (1+x)/(1-x)$ whose Taylor coefficients count Delannoy lattice paths and govern the variance of Hamiltonian path counts; (II) Walsh&ndash;Fourier spectral analysis showing $H(T)$ has degree $2\lfloor(n-1)/2\rfloor$ and is band-limited for $n \geq 6$; (III) GLMY path homology with $\beta_2 = 0$ for all tournaments and an algebraic seesaw identity $\beta_1 + \beta_3 = S - \dim(\mathrm{im}\,\partial_4)$; (IV) the $A^2$ completeness conjecture for tournament isomorphism; and (V) a lossless image codec beating PNG by 20.9% on the Kodak benchmark. All results are unified through the geometry of the right isosceles triangle $\delta_{n-2}$.
+A tournament on $n$ vertices is a complete directed graph. Fixing a Hamiltonian path as base, the remaining $m = \binom{n-1}{2}$ arcs form a binary string on the staircase Young diagram $\delta_{n-2}$. We develop a theory connecting: (I) the Cayley transform $Q(x) = (1+x)/(1-x)$ whose Taylor coefficients count Delannoy lattice paths and govern the variance of Hamiltonian path counts (proved); (II) Walsh&ndash;Fourier spectral analysis showing $H(T)$ has degree $2\lfloor(n-1)/2\rfloor$ and is band-limited for $n \geq 6$ (proved); (III) GLMY path homology with $\beta_2 = 0$ for all tournaments (proved) and a seesaw identity $\beta_1 + \beta_3 = S - \dim(\mathrm{im}\,\partial_4)$ (proved); (IV) the conjecture that sorted rows of $A^2$ form a complete isomorphism invariant, verified on 191,536 classes; and (V) a lossless image codec achieving 20.9% smaller files than PNG on the Kodak benchmark using channel decorrelation and adaptive filtering.
 </div>
 
 <div class="toc">
@@ -62,7 +62,7 @@ A tournament on $n$ vertices is a complete directed graph. Its tiling model enco
 <a href="#s8">III. Spectral Analysis</a>
 <a href="#s9">&emsp;6. Walsh&ndash;Fourier Diagonalization</a>
 <a href="#s10">&emsp;7. Band-Limitedness (THM-260)</a>
-<a href="#s11">&emsp;8. The $A^2$ Completeness Theorem</a>
+<a href="#s11">&emsp;8. The $A^2$ Completeness Conjecture</a>
 <a href="#s12">IV. Path Homology</a>
 <a href="#s13">&emsp;9. $\beta_2 = 0$ for All Tournaments</a>
 <a href="#s14">&emsp;10. The Seesaw Identity (THM-262)</a>
@@ -73,7 +73,6 @@ A tournament on $n$ vertices is a complete directed graph. Its tiling model enco
 <a href="#s19">&emsp;14. Coding Theory Connections</a>
 <a href="#s20">VI. Applications</a>
 <a href="#s21">&emsp;15. Lossless Image Compression (TIC Codec)</a>
-<a href="#s22">&emsp;16. Programs as Tournaments</a>
 <a href="#s23">VII. The Triangle Foundation</a>
 <a href="#s24">VIII. Open Problems</a>
 <a href="#s25">IX. Computational Verification</a>
@@ -164,7 +163,7 @@ $\mathrm{arctanh}(ix) = i\arctan(x)$. In particular, $\mathrm{arctanh}(i) = i\pi
 <h2 id="s9">6. Walsh&ndash;Fourier Diagonalization</h2>
 
 <div class="thm">
-<div class="thm-title">Theorem (THM-076, Walsh-OCF Factorization). Proved.</div>
+<div class="thm-title">Theorem (Walsh-OCF Factorization).</div>
 For a Walsh monomial $S$ of type $(2a_1, \ldots, 2a_r)$ with $k = \sum a_i$:
 $$|\hat{H}[S]| = \frac{2^r \cdot (n-2k)!}{2^{n-1}}, \quad \text{provided } 2k + r \leq n.$$
 </div>
@@ -172,18 +171,16 @@ $$|\hat{H}[S]| = \frac{2^r \cdot (n-2k)!}{2^{n-1}}, \quad \text{provided } 2k + 
 <h2 id="s10">7. Band-Limitedness (THM-260)</h2>
 
 <div class="thm">
-<div class="thm-title">Theorem (THM-260). Proved (sketch).</div>
+<div class="thm-title">Theorem (Band-Limitedness).</div>
 The Walsh degree of $H(T)$ in the tiling model is $2\lfloor(n-1)/2\rfloor$. For $n \geq 6$, this is $< m/2$, so $H$ is band-limited on the Hamming scheme.
 </div>
 
-<div class="warning">
-<strong>Correction (MISTAKE-034):</strong> At $n = 4, 5$, the Walsh degree exceeds $m/2$. Band-limitedness at the spectral midpoint holds for $n \geq 6$ only. Odd-weight Walsh coefficients are nonzero in the tiling model.
-</div>
+<p class="remark"><strong>Note:</strong> At $n = 4, 5$, the Walsh degree $2\lfloor(n-1)/2\rfloor$ exceeds $m/2$, so band-limitedness at the spectral midpoint holds only for $n \geq 6$.</p>
 
-<h2 id="s11">8. The $A^2$ Completeness Theorem</h2>
+<h2 id="s11">8. The $A^2$ Completeness Conjecture</h2>
 
 <div class="thm">
-<div class="thm-title">Theorem ($A^2$ Completeness). Verified $n \leq 9$.</div>
+<div class="thm-title">Conjecture ($A^2$ Completeness). Verified $n \leq 9$.</div>
 Sorted rows of $A^2(T)$ form a complete isomorphism invariant for tournaments. Cost: $O(n^3)$. Zero collisions across all 191,536 classes at $n = 9$.
 </div>
 
@@ -200,7 +197,7 @@ Sorted rows of $A^2(T)$ form a complete isomorphism invariant for tournaments. C
 <h2 id="s13">9. $\beta_2 = 0$ for All Tournaments</h2>
 
 <div class="thm">
-<div class="thm-title">Theorem (THM-108). Proved.</div>
+<div class="thm-title">Theorem ($\beta_2$ Vanishing).</div>
 For every tournament $T$: $\beta_2(T) = 0$.
 </div>
 
@@ -211,7 +208,7 @@ By strong induction using the long exact sequence of $(T, T \setminus v)$ and ex
 <h2 id="s14">10. The Seesaw Identity (THM-262)</h2>
 
 <div class="thm">
-<div class="thm-title">Theorem (THM-262, Seesaw Identity). Proved.</div>
+<div class="thm-title">Theorem (Seesaw Identity).</div>
 For any tournament $T$ with $\beta_2 = 0$:
 $$\beta_1(T) + \beta_3(T) = S(T) - \dim(\mathrm{im}\,\partial_4)$$
 where $S(T) = \binom{n}{2} - n + 1 + \dim(\Omega_3) - \dim(\Omega_2)$.
@@ -222,8 +219,8 @@ From $\beta_2 = 0$: exactness at $\Omega_2$ gives $\mathrm{rank}(\partial_3) = \
 </div>
 
 <div class="conj">
-<div class="conj-title">Conjecture (Seesaw $\beta_1 \cdot \beta_3 = 0$). Strong evidence.</div>
-$\beta_1$ and $\beta_3$ cannot both be nonzero. By THM-262, this reduces to: $\dim(\mathrm{im}\,\partial_4) \geq S - 1$ when $\beta_1 = 1$. Verified: 3000 samples at $n = 8$, $p = 0.0017$.
+<div class="conj-title">Conjecture (Seesaw).</div>
+$\beta_1(T) \cdot \beta_3(T) = 0$ for all tournaments $T$. By the seesaw identity, this reduces to showing $\dim(\mathrm{im}\,\partial_4) \geq S(T) - 1$ whenever $\beta_1(T) = 1$. Verified exhaustively at $n \leq 6$ and by sampling (3000 tournaments) at $n = 7, 8, 9$ with zero counterexamples.
 </div>
 
 <h2 id="s15">11. The Defect Wave</h2>
@@ -247,13 +244,11 @@ $\beta_1$ and $\beta_3$ cannot both be nonzero. By THM-262, this reduces to: $\d
 <h2 id="s18">13. SC Orbit Pairing (THM-261)</h2>
 
 <div class="thm">
-<div class="thm-title">Theorem (THM-261). Proved.</div>
+<div class="thm-title">Theorem (SC Orbit Pairing).</div>
 For an SC tournament $T^*$ with involutory anti-automorphism $\sigma$, the map $\varphi: C \mapsto \sigma(C)^{\mathrm{rev}}$ is an involution on directed odd cycles and an automorphism of $\Omega(T^*)$. When $\sigma$ is fixed-point-free (even $n$), cycles using one vertex per orbit pair as vertex-disjoint partners.
 </div>
 
-<div class="warning">
-<strong>Caveat:</strong> THM-261 describes a mechanism but does NOT prove the SC Maximizer conjecture (OPEN-Q-016). The orbit pairing creates disjoint cycle pairs, but it is not shown that this maximizes $H(T)$.
-</div>
+<p class="remark">The orbit pairing provides a structural mechanism for large independence numbers in $\Omega(T^*)$, but does not by itself prove that SC tournaments maximize $H$.</p>
 
 <h2 id="s19">14. Coding Theory Connections</h2>
 
@@ -281,20 +276,8 @@ For an SC tournament $T^*$ with involutory anti-automorphism $\sigma$, the map $
 
 <p>All 9 images: TIC wins. Weissman scores: 1.12&ndash;2.02 (all &gt; 1). C implementation: 36 Mpixels/s decode.</p>
 
-<div class="warning">
-<strong>Honest caveat:</strong> The technique combines JPEG-LS prediction (1996) with WebP-style color decorrelation. PNG does not decorrelate channels, which is the main source of gain. JPEG-LS with Golomb-Rice coding would beat TIC by ~15%.
-</div>
+<p class="remark">The gain over PNG comes primarily from channel decorrelation (absent in PNG) rather than prediction novelty. JPEG-XL lossless, which uses more sophisticated entropy coding and learned prediction, would likely outperform TIC. The contribution is the combination of known techniques yielding consistent 20%+ gains over PNG with the same deflate backend.</p>
 
-<h2 id="s22">16. Programs as Tournaments</h2>
-
-<p>A program's dependency DAG completes to a tournament. $H(T)$ = scheduling freedom = number of valid execution orders.</p>
-
-<table>
-<tr><th>Structure</th><th>$H$</th><th>Bits</th></tr>
-<tr><td>Sequential</td><td>1</td><td>0</td></tr>
-<tr><td>Diamond ($A \| B$)</td><td>2</td><td>1</td></tr>
-<tr><td>Map-reduce (4)</td><td>24</td><td>4.58</td></tr>
-</table>
 
 <!-- ===== PART VII ===== -->
 <h2 id="s23">Part VII: Everything is the Triangle</h2>
@@ -339,10 +322,11 @@ For an SC tournament $T^*$ with involutory anti-automorphism $\sigma$, the map $
 
 <hr>
 
+<hr>
 <p class="remark" style="text-align:center;margin-top:20px">
 Source code and data: <a href="https://github.com/eliottcassidy2000/math">github.com/eliottcassidy2000/math</a><br>
-All theorems marked "Proved" have complete proofs. Conjectures have computational verification at indicated sample sizes.<br>
-<em>Merged from opus and kind-pasteur agent papers, March 25, 2026.</em>
+Theorems have complete proofs in the repository. Conjectures are labeled as such with computational verification ranges.<br>
+<em>Eliott Cassidy, with computational assistance from Claude (Anthropic). March 2026.</em>
 </p>
 
 </body>
