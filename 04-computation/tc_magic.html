@@ -147,17 +147,54 @@ function bestFilter(row, above, bpp) {
 }
 
 // ================================================================
-// Entropy estimation (order-0 Shannon)
+// Entropy estimation (improved: accounts for zlib behavior)
 // ================================================================
 function estimateSize(data) {
+  const n = data.length;
+  if (n === 0) return 13;
   const counts = new Array(256).fill(0);
-  for (let i = 0; i < data.length; i++) counts[data[i]]++;
-  let h = 0;
+  for (let i = 0; i < n; i++) counts[data[i]]++;
+
+  // Order-0 Shannon entropy
+  let h0 = 0;
   for (const c of counts) {
-    if (c > 0) { const p = c / data.length; h -= p * Math.log2(p); }
+    if (c > 0) { const p = c / n; h0 -= p * Math.log2(p); }
   }
-  // Add ~13 bytes zlib overhead, and account for zlib being better than order-0
-  return Math.ceil(h * data.length / 8 * 0.92) + 13;
+
+  // Count unique symbols and zero-run density
+  let nUnique = 0, nZeros = 0;
+  for (let i = 0; i < 256; i++) if (counts[i] > 0) nUnique++;
+  nZeros = counts[0];
+  const zeroDensity = nZeros / n;
+
+  // zlib correction factor:
+  // - zlib is BETTER than order-0 on data with long repeated runs (factor < 1)
+  // - zlib is WORSE than order-0 on scattered low-entropy data (factor > 1)
+  // - For palette data (few unique, many zeros): factor ≈ 1.3-1.5
+  // - For photo residuals (many unique, few zeros): factor ≈ 0.85-0.95
+  let factor;
+  if (nUnique <= 32 && zeroDensity > 0.3) {
+    // Palette/GIF-like: zlib overhead on scattered sparse data
+    factor = 1.4;
+  } else if (h0 < 2.0) {
+    // Very low entropy: zlib matches well
+    factor = 1.0;
+  } else if (h0 > 7.0) {
+    // Near-random: zlib can't do much beyond order-0
+    factor = 1.02;
+  } else {
+    // Photo-like: zlib does better than order-0
+    factor = 0.88;
+  }
+
+  // Final estimate: entropy × length / 8 × factor + header
+  const raw = Math.ceil(h0 * n / 8 * factor);
+
+  // But never estimate below a reasonable minimum
+  // zlib has ~11 bytes overhead + at least some output per block
+  const minSize = Math.max(13, Math.ceil(n / 1000) + 13);
+
+  return Math.max(raw, minSize) + 13;
 }
 
 // ================================================================
