@@ -263,20 +263,26 @@ For an SC tournament $T^*$ with involutory anti-automorphism $\sigma$, the map $
 
 <h2 id="s21">15. Lossless Image Compression (TIC Codec)</h2>
 
-<p>The TIC codec implements: <strong>G-RG-BG color decorrelation</strong> $\to$ <strong>MED prediction</strong> $\to$ <strong>zlib-9</strong>.</p>
+<p>The TIC codec implements: <strong>G-RG-BG color decorrelation</strong> $\to$ <strong>MED prediction</strong> $\to$ <strong>context-adaptive Golomb-Rice</strong>.</p>
+
+<p>Two variants exist: TIC-zlib (using Deflate, same backend as PNG) and TIC-GR (using 64-context adaptive Golomb-Rice, no external dependencies).</p>
 
 <table>
-<tr><th>Image</th><th>PNG</th><th>TIC</th><th>Gain</th></tr>
-<tr><td>kodim01 (sails)</td><td>134,653</td><td>99,894</td><td>1.35&times;</td></tr>
-<tr><td>kodim05 (stream)</td><td>145,367</td><td>115,532</td><td>1.26&times;</td></tr>
-<tr><td>kodim08 (moon)</td><td>129,667</td><td>105,621</td><td>1.23&times;</td></tr>
-<tr><td>vlcsnap (real photo)</td><td>63,289</td><td>44,785</td><td>1.41&times;</td></tr>
-<tr><td><strong>Aggregate (9)</strong></td><td><strong>1,000,068</strong></td><td><strong>827,317</strong></td><td><strong>1.21&times;</strong></td></tr>
+<tr><th>Image</th><th>PNG</th><th>TIC-zlib</th><th>TIC-GR</th></tr>
+<tr><td>kodim01 (sails)</td><td>134,653</td><td>100,124</td><td>91,716</td></tr>
+<tr><td>kodim05 (stream)</td><td>145,367</td><td>115,551</td><td>102,007</td></tr>
+<tr><td>kodim08 (moon)</td><td>129,667</td><td>105,640</td><td>94,777</td></tr>
+<tr><td>vlcsnap (real photo)</td><td>63,289</td><td>44,804</td><td>56,641</td></tr>
+<tr><td><strong>Aggregate (9)</strong></td><td><strong>1,000,068</strong></td><td><strong>827,317 (1.21&times;)</strong></td><td><strong>748,378 (1.34&times;)</strong></td></tr>
 </table>
 
-<p>All 9 images: TIC wins. Weissman scores: 1.12&ndash;2.02 (all &gt; 1). C implementation: 36 Mpixels/s decode.</p>
+<p>All 9 images: both variants beat PNG. All roundtrips verified lossless.</p>
 
-<p class="remark">The gain over PNG comes primarily from channel decorrelation (absent in PNG) rather than prediction novelty. JPEG-XL lossless, which uses more sophisticated entropy coding and learned prediction, would likely outperform TIC. The contribution is the combination of known techniques yielding consistent 20%+ gains over PNG with the same deflate backend.</p>
+<p><strong>Why Golomb-Rice beats zlib:</strong> MED residuals follow a Laplacian distribution peaked at 0. Golomb-Rice encodes at BIT level (3&ndash;5 bits for small residuals), while zlib operates at BYTE level (minimum 8 bits). The 64 gradient contexts allow the GR parameter $k$ to adapt to local statistics: smooth regions get small $k$ (fewer bits per residual), textured regions get larger $k$.</p>
+
+<p class="remark">Golomb-Rice is perfectly lossless &mdash; it maps integers to variable-length bit strings and back with zero loss. The TIC-GR codec has <strong>no external dependencies</strong> (no zlib). Compile with <code>gcc -O2 -o tic_gr tic_gr2.c -lm</code>.</p>
+
+<p class="remark">The gain over PNG comes from (1) channel decorrelation absent in PNG, and (2) bit-level entropy coding optimal for Laplacian residuals. JPEG-LS uses the same approach with 365 contexts and run-length mode, achieving ~35% over PNG. Our 64-context GR achieves 33.6%.</p>
 
 
 <!-- ===== PART VII ===== -->
@@ -317,7 +323,7 @@ For an SC tournament $T^*$ with involutory anti-automorphism $\sigma$, the map $
 <tr><td>$A^2$ completeness</td><td>Exhaustive $n \leq 9$</td><td>Verified (191,536 classes)</td></tr>
 <tr><td>Band-limitedness</td><td>Exhaustive $n \leq 7$</td><td><strong>Proved</strong> (THM-260)</td></tr>
 <tr><td>Cayley-Delannoy</td><td>Exact $(m,k) \leq (8,8)$</td><td><strong>Proved</strong> (Theorems 1-2)</td></tr>
-<tr><td>TIC vs PNG</td><td>Kodak 9 images</td><td>9/9 wins, 1.21&times;</td></tr>
+<tr><td>TIC-GR vs PNG</td><td>Kodak 9 images</td><td>9/9 wins, 1.34&times; (GR), 1.21&times; (zlib)</td></tr>
 </table>
 
 <hr>
