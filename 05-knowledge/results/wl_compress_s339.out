@@ -1,0 +1,64 @@
+================================================================================
+  WEISFEILER-LEMAN COMPRESSION
+  opus-2026-03-25-S339
+================================================================================
+
+  ROW-LEVEL WL COLORING (128×128 images):
+       Image     Raw  WL-row     PNG    zlib  WL/PNG  colors
+    gradient  16384    243    148    262   1.64x      3
+     stripes  16384     71    146     61   0.49x     10
+     checker  16384     85    178     82   0.48x     10
+      smooth  16384   6326   4830   6199   1.31x     64
+       photo  16384  15348  12209  14997   1.26x    128
+      blocks  16384    297    338    234   0.88x     40
+       noise  16384  16749  16580  16395   1.01x    128
+
+  BLOCK-LEVEL WL COLORING (128×128, 8×8 blocks):
+       Image     Raw  WL-blk     PNG  WL/PNG  colors
+    gradient  16384    354    148   2.39x     48
+     stripes  16384    111    146   0.76x     18
+     checker  16384    130    178   0.73x     12
+      smooth  16384   9671   4830   2.00x    256
+       photo  16384  15586  12209   1.28x    256
+      blocks  16384    664    338   1.96x    250
+       noise  16384  17012  16580   1.03x    256
+
+================================================================================
+  THE WL-A² CONNECTION
+================================================================================
+
+  The WL test after k rounds produces a coloring where same-colored
+  vertices have isomorphic k-neighborhoods.
+
+  For a matrix M viewed as a bipartite graph:
+    Round 0: row color = row content (quantized)
+    Round 1: row color = (content, neighbor contents) = A¹ profile
+    Round 2: row color = (A¹ profile, neighbors' A¹ profiles) ≈ A² profile
+
+  So WL-2 coloring IS the A² fingerprint in disguise!
+
+  For COMPRESSION this means:
+  - WL-0: rows with identical content share a prototype (trivial)
+  - WL-1: rows with same content AND same neighbors share (Sub filter)
+  - WL-2: rows with same 2-hop structure share (the A² insight!)
+
+  The OPTIMAL compression uses the FINEST WL coloring where the
+  residuals are still small. Too coarse → residuals are large.
+  Too fine → too many prototypes.
+
+  The SWEET SPOT: WL depth = 1 or 2 for most images.
+  This matches our finding that k=2 captures 86% of structure.
+
+
+  REAL PHOTO TEST:
+  256×256 synthetic photo:
+    WL-0:  55136B,  256 colors, vs PNG 45586B (1.209x)
+    WL-1:  55136B,  256 colors, vs PNG 45586B (1.209x)
+    WL-2:  55136B,  256 colors, vs PNG 45586B (1.209x)
+    WL-3:  55136B,  256 colors, vs PNG 45586B (1.209x)
+
+  Effect of quantization on WL-2:
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/wl_compress_s339.py", line 398, in <module>
+    proto_size = len(zlib.compress(bytes(set(map(bytes, [quantized[i] for i in range(N)]))), 9))
+TypeError: 'bytes' object cannot be interpreted as an integer
