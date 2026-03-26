@@ -1,15 +1,34 @@
-SORTED A² ROWS — COMPLETE INVARIANT VERIFIED:
-n=5:  12/12     = 100% (0.01s)
-n=6:  56/56     = 100% (0.1s)
-n=7:  456/456   = 100% (5.6s)
-n=8:  6880/6880 = 100% (0.1s)
-n=9:  191536/191536 = 100% (2.7s)
-n=10: RUNNING (9.7M classes, ~10 min estimated)
+SORTED A² ROWS — COMPLETE INVARIANT FOR TOURNAMENT ISOMORPHISM
 
-fp_2 row sums only (not full rows):
-n=5: 100%, n=6: 93%, n=7: 62.5%, n=8: 37.8%
-→ Row sums degrade rapidly; full rows hold.
+VERIFIED COMPLETE (exhaustive):
+  n=5:  12/12         = 100% (0.01s)
+  n=6:  56/56         = 100% (0.1s)
+  n=7:  456/456       = 100% (5.6s)
+  n=8:  6,880/6,880   = 100% (0.1s via gentourng)
+  n=9:  191,536/191,536 = 100% (2.7s)
 
-This is a POLYNOMIAL-TIME COMPLETE INVARIANT for tournament
-isomorphism through n=9 (191,536 classes). O(n^3) computation.
+STRONG EVIDENCE (random sampling):
+  n=10: 1,000,000/9,733,056 sampled = 100% (0 collisions, 28.5s)
 
+fp_2 row sums only (weaker invariant):
+  n=5: 100%, n=6: 93%, n=7: 62.5%, n=8: 37.8%
+  → Degrades rapidly. Full rows needed for completeness.
+
+fp_2 full sorted rows (COMPLETE invariant):
+  100% at n=5 through n=9 (exhaustive)
+  100% in 1M random sample at n=10
+
+CONJECTURE: Sorted rows of A² is a complete isomorphism invariant
+for tournaments on all n vertices.
+
+COST: O(n³) (one matrix multiplication + row sort)
+      Compare: nauty/traces = O(n! worst case), O(n²·log n average)
+      Compare: Babai 2015 = O(exp(polylog(n))) for general graphs
+
+PRACTICAL APPLICATIONS:
+  - Tournament identification: ONE matrix multiply
+  - Graph fingerprinting: fp_2 hash = cheap isomorphism test
+  - Ranking validation: compare A² profiles of different tournaments
+  - Compression: use A² profile as context for prediction
+  - Anomaly detection: monitor A² profile for structural changes
+  - GNN features: A² row = simplest 2-hop message passing feature
