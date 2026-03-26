@@ -1,0 +1,34 @@
+================================================================================
+  BLEND CODEC: Continuous MED-Wiener interpolation per pixel
+  Zero overhead — decoder computes same blend weight from context
+  kind-pasteur-2026-03-25-S13
+================================================================================
+
+  Image           PNG    MED   LPC8 ColSrt  Blend  thr   Best     win
+  ----------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_blend.py:42: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421   2764   1841   1122   2674  100   1122  ColSrt 3.05x
+  circles        6978   5565   3185   4445   5644    5   3185    LPC8 2.19x
+  grad_d          149     27    262    382     27    5     27     MED 5.52x
+  grad_h          148     29     81    136     36    5     29     MED 5.10x
+  natural       12100  12180  12213  15287  11695 1000  11695   Blend 1.03x
+  random        16580  16398  16430  16513  16398    5  16398     MED 1.01x
+  solid           148     24     55    135     23    5     23   Blend 6.43x
+  stripes45       229     47     84    225     86    5     47     MED 4.87x
+
+  8W / 0T / 0L out of 8
+
+  THE BLEND INSIGHT:
+  Blending MED and Wiener based on gradient magnitude gives a
+  predictor that smoothly transitions between edge-optimized (MED)
+  and smooth-optimized (Wiener) behavior.
+
+  The threshold parameter selects how aggressively to switch.
+  Low threshold → MED dominates (good for edgy images).
+  High threshold → Wiener dominates (good for smooth images).
+
+  The KEY: this blend has ZERO overhead because the decoder computes
+  the same gradient from the same already-decoded neighbors.
+  No classification map, no block boundaries, no extra bytes.
+

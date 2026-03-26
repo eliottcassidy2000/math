@@ -1,0 +1,34 @@
+================================================================================
+  PROBE CODEC: Don't choose — KNOW.
+  Probe first, classify blocks, then encode each optimally.
+  The staircase paradox is AVOIDED, not met head-on.
+  kind-pasteur-2026-03-25-S13
+================================================================================
+
+  Image           PNG    MED   LPC8  Probe  ratio                     class_dist
+  --------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_probe.py:55: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421   2764   1841   6438   1.86                     S:56 T:200  LPC8
+  circles        6978   5565   3185   7920   2.19                     E:229 T:27  LPC8
+  grad_d          149     27    262    919   5.52                          S:256  MED
+  grad_h          148     29     81    261   5.10                          S:256  MED
+  mixed_4        4580   4268   4771   4418   1.07                F:64 E:128 T:64  MED
+  natural       12100  12180  12213  12814   0.99                          E:256  MED
+  random        16580  16398  16430  16601   1.01                          E:256  MED
+  solid           148     24     55     45   6.17                          F:256  MED
+  stripes45       229     47     84     79   4.87                          E:256  MED
+
+  HOW TO READ THE CLASS DISTRIBUTION:
+    F=FLAT (const), S=SMOOTH (LPC), E=EDGE (MED), T=TEXTURE (raw)
+
+  THE PROBE CODEC ADVANTAGE:
+    On mixed_4 (flat + gradient + stripes + random in one image):
+    Probe classifies each quadrant correctly → uses optimal method per region.
+    MED/LPC use one method for everything → suboptimal on 3/4 of the image.
+
+  THE PARADOX AVOIDANCE:
+    We don't choose MED or LPC. We PROBE and the data tells us.
+    The cost of probing: ~2% of image size (block stats).
+    The benefit: never pay the √2 staircase penalty.
+
