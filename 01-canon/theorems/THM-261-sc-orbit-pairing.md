@@ -53,16 +53,23 @@ their vertex sets are disjoint. QED.
 through sigma(v_0) = v_0. So C and phi(C) share vertex v_0 and are adjacent
 in Omega. QED.
 
-## Consequence for SC Maximizer
+## Conjectured Connection to SC Maximizer (NOT PROVED)
 
-**Even n mechanism (alpha_2 boost):**
-The fpf pairing creates C(n/2, 3) families of complementary 3-cycle pairs.
-Each family contributes to alpha_2. NSC tournaments lack this systematic pairing.
+**CAUTION (S29 review):** The following describes a MECHANISM, not a proof.
+THM-261 does NOT prove the SC Maximizer conjecture (OPEN-Q-016). It shows
+that SC tournaments HAVE a cycle-pairing structure, but does NOT show that
+this structure MAXIMIZES H. An NSC tournament could in principle have more
+disjoint pairs through a different mechanism.
 
-**Odd n mechanism (alpha_1 boost):**
+**Even n mechanism (alpha_2 boost, conjectured):**
+The fpf pairing creates vertex-disjoint cycle pairs from 3-cycles that use
+one vertex per sigma-orbit (Part 3). The number of such 3-cycles and the
+resulting alpha_2 boost are NOT quantified here.
+
+**Odd n mechanism (alpha_1 boost, conjectured):**
 The phi-pairing doesn't create disjoint pairs through v_0, but the BIBD-like
-constraint on cycle arrangements (forced by the SC symmetry) maximizes the
-total number of 5-cycles and 7-cycles, boosting alpha_1.
+constraint on cycle arrangements (forced by the SC symmetry) correlates with
+higher total cycle count. This is an empirical observation, not a proof.
 
 ## Verification
 

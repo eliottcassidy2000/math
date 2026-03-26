@@ -1,6 +1,7 @@
 # THM-260: Band-Limitedness of H for All n (Resolves B1 of OPEN-Q-040)
 
-**Status:** PROVED (algebraic, all n >= 4; verified computationally n=4,5,6,7)
+**Status:** PROVED (algebraic sketch, all n >= 4; verified computationally n=4,5,6,7)
+**Devil's advocate review (S29):** Upper bound correct but substitution argument needs detail. Lower bound interleaving construction correct but even-n case not explicitly handled. Both gaps are fillable.
 **Filed by:** kind-pasteur-2026-03-25-S1
 **Dependencies:** THM-076 (Walsh-OCF factorization), THM-259 (Walsh degree formula)
 
@@ -24,8 +25,16 @@ For tournaments on n >= 4 vertices, the Hamiltonian path count H(T), viewed as a
 variables), the Walsh coefficient hat{H}[S] is nonzero only for monomials S that
 are unions of even-length paths with total vertices 2k+r <= n. The Hamming weight
 |S| = 2k <= n-r <= n-1. Restricting to tiling variables (fixing the n-1 base-path
-arcs to constants) can only decrease the polynomial degree. Therefore the Walsh
-degree in the tiling model is <= 2*floor((n-1)/2).
+arcs to their constant values ±1) is a SUBSTITUTION in the multilinear Walsh
+expansion. Substituting a variable x_i = c (constant) eliminates all monomials
+containing x_i and preserves those not containing it — so the multilinear degree
+can only decrease or stay the same. Since only even-weight monomials survive
+complement symmetry in the full model, the max even weight in the tiling model
+is <= 2*floor((n-1)/2).
+
+**Note (S29 review):** THM-259 uses m = C(n,2) (full arc model). THM-260 uses
+m = C(n-1,2) (tiling model). The Walsh degrees are the same in both models
+because the max-weight monomials can be constructed using only tile arcs.
 
 **Lower bound (n >= 4):** We exhibit a Walsh monomial of weight 2*floor((n-1)/2)
 using only tile arcs (non-base-path arcs).
@@ -33,14 +42,22 @@ using only tile arcs (non-base-path arcs).
 *Construction:* A single path P_{2k} with k = floor((n-1)/2) visits 2k+1 vertices.
 For this path to use only tile arcs, it must avoid all consecutive-vertex arcs (v, v-1).
 
-The **interleaving construction** achieves this: order vertices as
-1, 3, 5, ..., (odds), 2, 4, 6, ..., (evens), then take any subpath of length 2k.
-In this ordering, consecutive vertices in the path differ by >= 2, so all arcs
-are tile arcs.
+The **interleaving construction** achieves this:
 
-Example at n=7 (k=3, path of length 6 on all 7 vertices):
-  1 -> 3 -> 5 -> 7 -> 2 -> 4 -> 6
-All arcs: (1,3), (3,5), (5,7), (7,2), (2,4), (4,6) — all non-consecutive, all tiles.
+**Odd n** (k = (n-1)/2, path uses all n vertices):
+Order vertices as 1, 3, 5, ..., n, 2, 4, ..., n-1.
+Example at n=7 (k=3, 6 arcs on 7 vertices): 1→3→5→7→2→4→6.
+All arcs: (1,3),(3,5),(5,7),(7,2),(2,4),(4,6) — differences ≥ 2, all tiles. ✓
+
+**Even n** (k = (n-2)/2, path uses n-1 vertices):
+Order vertices as 1, 3, 5, ..., n-1, 2, 4, ..., n-2. Take this (n-1)-vertex path.
+Example at n=8 (k=3, 6 arcs on 7 vertices): 1→3→5→7→2→4→6.
+The transition 7→2 has |7-2|=5 ≥ 2. All arcs are tiles. ✓
+(Vertex 8 is unused, giving a path on n-1 = 7 vertices with n-2 = 6 arcs.)
+
+**General verification:** In the interleaving order, consecutive elements differ
+by 2 (within odds or evens) or by n-3 or more (at the odd→even boundary).
+Since n ≥ 4, the minimum difference is min(2, n-3) ≥ 2. All arcs are tiles.
 
 THM-076 gives |hat{H}[S]| = 2 * (n-2k)! / 2^{n-1} > 0 for this monomial.
 So the tiling model has nonzero coefficient at weight 2k. QED.
