@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TIC Share — Compress, Share, Decompress</title>
+<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0f;color:#e0e0e0;min-height:100vh}
+.hero{text-align:center;padding:28px 20px 12px;background:linear-gradient(135deg,#0d1117,#161b22)}
+.hero h1{font-size:2em;background:linear-gradient(90deg,#58a6ff,#3fb950);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:#8b949e;margin-top:4px;font-size:.95em}
+.tabs{display:flex;justify-content:center;gap:4px;margin:16px 0 8px;padding:0 16px}
+.tab{padding:10px 28px;border-radius:8px 8px 0 0;cursor:pointer;font-weight:600;border:1px solid #30363d;border-bottom:none;color:#8b949e;background:#161b22;transition:.2s}
+.tab.active{color:#3fb950;background:#0d1117;border-color:#3fb950}
+.tab:hover{color:#e0e0e0}
+.container{max-width:860px;margin:0 auto;padding:0 16px 16px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:20px;margin:12px 0}
+.drop{border:2px dashed #30363d;border-radius:12px;padding:48px 20px;text-align:center;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
+.drop:hover,.drop.over{border-color:#3fb950;background:#0d1117}
+.drop input{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.pipeline{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;margin:16px 0}
+.stage{background:#21262d;border:2px solid #30363d;border-radius:10px;padding:12px 16px;text-align:center;min-width:120px;transition:.4s;position:relative}
+.stage.active{border-color:#3fb950;box-shadow:0 0 12px rgba(63,185,80,.3)}
+.stage.done{border-color:#238636;background:#0d1117}
+.stage .icon{font-size:1.8em;margin-bottom:4px}
+.stage .name{font-size:.85em;font-weight:600;color:#e0e0e0}
+.stage .detail{font-size:.75em;color:#8b949e;margin-top:2px}
+.arrow{color:#30363d;font-size:1.4em;font-weight:bold}
+.arrow.active{color:#3fb950}
+canvas{border-radius:6px;border:1px solid #30363d;max-width:100%}
+.preview-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:12px 0}
+.preview-box{text-align:center;flex:1;min-width:180px}
+.preview-box p{font-size:.8em;color:#8b949e;margin-top:4px}
+.share-box{background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:16px;margin:12px 0;text-align:center}
+.btn{display:inline-block;padding:10px 24px;border-radius:8px;font-weight:600;cursor:pointer;border:none;font-size:.95em;transition:.2s}
+.btn-green{background:#238636;color:#fff}.btn-green:hover{background:#2ea043}
+.btn-blue{background:#1f6feb;color:#fff}.btn-blue:hover{background:#388bfd}
+.btn-outline{background:transparent;color:#58a6ff;border:1px solid #30363d}.btn-outline:hover{border-color:#58a6ff}
+.meter{background:#21262d;border-radius:16px;height:28px;margin:8px 0;position:relative;overflow:hidden}
+.meter .fill{height:100%;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.8em;transition:width 1s}
+.fill.tc{background:linear-gradient(90deg,#238636,#3fb950)}
+.fill.png{background:#6e40c9}
+.mono{font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.85em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin:12px 0}
+.stat{background:#0d1117;border-radius:8px;padding:10px;text-align:center}
+.stat .val{font-size:1.4em;font-weight:bold;color:#58a6ff}
+.stat .lbl{font-size:.75em;color:#8b949e;margin-top:2px}
+.hidden{display:none}
+.hex-view{background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:8px 12px;font-family:monospace;font-size:.75em;color:#7ee787;max-height:120px;overflow-y:auto;white-space:pre;margin:8px 0}
+footer{text-align:center;padding:20px;color:#484f58;font-size:.75em}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.processing{animation:pulse 1s infinite}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<h1>TIC Share</h1>
+<p>Compress. Share. Decompress. Watch every step.</p>
+</div>
+
+<div class="tabs">
+<div class="tab active" onclick="showTab('compress')" id="tabCompress">Compress &amp; Share</div>
+<div class="tab" onclick="showTab('decompress')" id="tabDecompress">Receive &amp; Decompress</div>
+</div>
+
+<div class="container">
+
+<!-- COMPRESS TAB -->
+<div id="compressPanel">
+<div class="card">
+<div class="drop" id="dropEnc">
+<div style="font-size:3em;margin-bottom:8px">📷</div>
+<p><strong>Drop an image to compress &amp; share</strong></p>
+<p style="color:#8b949e;font-size:.9em;margin-top:4px">PNG, JPG, WebP — runs entirely in your browser</p>
+<input type="file" id="fileEnc" accept="image/*">
+</div>
+</div>
+<div id="encResult"></div>
+</div>
+
+<!-- DECOMPRESS TAB -->
+<div id="decompressPanel" class="hidden">
+<div class="card">
+<div class="drop" id="dropDec">
+<div style="font-size:3em;margin-bottom:8px">📦</div>
+<p><strong>Drop a .tic file to decompress</strong></p>
+<p style="color:#8b949e;font-size:.9em;margin-top:4px">Or paste a TIC data URL below</p>
+<input type="file" id="fileDec" accept=".tic">
+</div>
+<div style="text-align:center;margin:12px 0">
+<input type="text" id="urlInput" placeholder="Paste tic:// data URL here..." style="width:80%;padding:8px 12px;border-radius:6px;border:1px solid #30363d;background:#0d1117;color:#e0e0e0;font-family:monospace;font-size:.85em">
+<button class="btn btn-blue" onclick="decodeFromUrl()" style="margin-left:4px">Decode</button>
+</div>
+</div>
+<div id="decResult"></div>
+</div>
+
+</div>
+
+<footer>TIC Share — opus-2026-03-25-S350 · Lossless · Private · <a href="https://github.com/eliottcassidy2000/math" style="color:#58a6ff">Source</a></footer>
+
+<script>
+// ================================================================
+// TAB SWITCHING
+// ================================================================
+function showTab(tab) {
+  document.getElementById('compressPanel').classList.toggle('hidden', tab !== 'compress');
+  document.getElementById('decompressPanel').classList.toggle('hidden', tab !== 'decompress');
+  document.getElementById('tabCompress').classList.toggle('active', tab === 'compress');
+  document.getElementById('tabDecompress').classList.toggle('active', tab === 'decompress');
+}
+
+// ================================================================
+// TIC CODEC (full encode + decode in JavaScript)
+// ================================================================
+const TIC_MAGIC = [0x54, 0x49, 0x43, 0x21]; // "TIC!"
+
+function med(a, b, c) {
+  const mn = Math.min(a, b), mx = Math.max(a, b);
+  if (c >= mx) return mn;
+  if (c <= mn) return mx;
+  return a + b - c;
+}
+
+function paethPred(a, b, c) {
+  const p = a + b - c;
+  const pa = Math.abs(p-a), pb = Math.abs(p-b), pc = Math.abs(p-c);
+  if (pa <= pb && pa <= pc) return a;
+  if (pb <= pc) return b;
+  return c;
+}
+
+function getPred(f, a, b, c) {
+  switch(f) {
+    case 0: return 0;
+    case 1: return a;
+    case 2: return b;
+    case 3: return (a+b)>>1;
+    case 4: return paethPred(a, b, c);
+    case 5: return med(a, b, c);
+  }
+  return 0;
+}
+
+function filterRow(row, prev, w, f) {
+  const out = new Uint8Array(w);
+  for (let c = 0; c < w; c++) {
+    const a = c > 0 ? row[c-1] : 0;
+    const b = prev ? prev[c] : 0;
+    const d = (prev && c > 0) ? prev[c-1] : 0;
+    out[c] = (row[c] - getPred(f, a, b, d)) & 0xFF;
+  }
+  return out;
+}
+
+function unfilterRow(filtered, prev, w, f) {
+  const out = new Uint8Array(w);
+  for (let c = 0; c < w; c++) {
+    const a = c > 0 ? out[c-1] : 0;
+    const b = prev ? prev[c] : 0;
+    const d = (prev && c > 0) ? prev[c-1] : 0;
+    out[c] = (filtered[c] + getPred(f, a, b, d)) & 0xFF;
+  }
+  return out;
+}
+
+function scoreRow(filtered) {
+  let s = 0;
+  for (let i = 0; i < filtered.length; i++) {
+    const v = filtered[i];
+    s += v < 128 ? v : 256 - v;
+  }
+  return s;
+}
+
+function encodePlane(plane, w, h) {
+  const payload = [];
+  let prev = null;
+  for (let r = 0; r < h; r++) {
+    const row = plane.subarray(r * w, (r+1) * w);
+    let bestF = 0, bestScore = w * 256, bestOut = null;
+    for (let f = 0; f < 6; f++) {
+      const filtered = filterRow(row, prev, w, f);
+      const s = scoreRow(filtered);
+      if (s < bestScore) { bestScore = s; bestF = f; bestOut = filtered; }
+    }
+    payload.push(bestF);
+    for (let i = 0; i < w; i++) payload.push(bestOut[i]);
+    prev = row;
+  }
+  return new Uint8Array(payload);
+}
+
+function decodePlane(payload, offset, w, h) {
+  const plane = new Uint8Array(w * h);
+  let pos = offset, prev = null;
+  for (let r = 0; r < h; r++) {
+    const f = payload[pos++];
+    const filtered = payload.subarray(pos, pos + w); pos += w;
+    const row = unfilterRow(filtered, prev, w, f);
+    plane.set(row, r * w);
+    prev = plane.subarray(r * w, (r+1) * w);
+  }
+  return { plane, nextOffset: pos };
+}
+
+// Color transforms
+function rgbToGrd(rgba, w, h) {
+  const n = w * h;
+  const g = new Uint8Array(n), rg = new Uint8Array(n), bg = new Uint8Array(n);
+  for (let i = 0; i < n; i++) {
+    const rv = rgba[i*4], gv = rgba[i*4+1], bv = rgba[i*4+2];
+    g[i] = gv; rg[i] = (rv - gv) & 0xFF; bg[i] = (bv - gv) & 0xFF;
+  }
+  return { planes: [g, rg, bg], ct: 1 };
+}
+
+function grdToRgba(g, rg, bg, w, h) {
+  const n = w * h, rgba = new Uint8Array(n * 4);
+  for (let i = 0; i < n; i++) {
+    const gv = g[i];
+    rgba[i*4+0] = (rg[i] + gv) & 0xFF;
+    rgba[i*4+1] = gv;
+    rgba[i*4+2] = (bg[i] + gv) & 0xFF;
+    rgba[i*4+3] = 255;
+  }
+  return rgba;
+}
+
+// Full encode
+function ticEncode(imageData, w, h, onStage) {
+  onStage('color', 'active');
+  const { planes, ct } = rgbToGrd(imageData.data, w, h);
+  onStage('color', 'done');
+
+  onStage('predict', 'active');
+  const payloads = planes.map(p => encodePlane(p, w, h));
+  const combined = new Uint8Array(payloads.reduce((s, p) => s + p.length, 0));
+  let off = 0;
+  for (const p of payloads) { combined.set(p, off); off += p.length; }
+  onStage('predict', 'done');
+
+  onStage('entropy', 'active');
+  const compressed = pako.deflate(combined, { level: 9 });
+  onStage('entropy', 'done');
+
+  onStage('pack', 'active');
+  const header = new Uint8Array(12);
+  header[0]=0x54;header[1]=0x49;header[2]=0x43;header[3]=0x21; // TIC!
+  header[4] = 1; // version
+  header[5] = w & 0xFF; header[6] = (w >> 8) & 0xFF;
+  header[7] = h & 0xFF; header[8] = (h >> 8) & 0xFF;
+  header[9] = 3; // channels
+  header[10] = ct;
+  header[11] = 0; // flags
+
+  const result = new Uint8Array(12 + compressed.length);
+  result.set(header); result.set(compressed, 12);
+  onStage('pack', 'done');
+
+  return { data: result, payloadSize: combined.length, compressedSize: compressed.length };
+}
+
+// Full decode
+function ticDecode(data, onStage) {
+  onStage('unpack', 'active');
+  if (data[0]!==0x54||data[1]!==0x49||data[2]!==0x43||data[3]!==0x21)
+    throw new Error('Not a TIC file');
+  const w = data[5] | (data[6] << 8);
+  const h = data[7] | (data[8] << 8);
+  const ch = data[9];
+  const ct = data[10];
+  onStage('unpack', 'done');
+
+  onStage('inflate', 'active');
+  const payload = pako.inflate(data.subarray(12));
+  onStage('inflate', 'done');
+
+  onStage('unpredict', 'active');
+  let off = 0;
+  const planes = [];
+  for (let c = 0; c < ch; c++) {
+    const { plane, nextOffset } = decodePlane(payload, off, w, h);
+    planes.push(plane); off = nextOffset;
+  }
+  onStage('unpredict', 'done');
+
+  onStage('uncolor', 'active');
+  let rgba;
+  if (ct === 1) rgba = grdToRgba(planes[0], planes[1], planes[2], w, h);
+  else {
+    rgba = new Uint8Array(w*h*4);
+    for (let i = 0; i < w*h; i++) {
+      rgba[i*4]=planes[0][i]; rgba[i*4+1]=planes[1]?planes[1][i]:0;
+      rgba[i*4+2]=planes[2]?planes[2][i]:0; rgba[i*4+3]=255;
+    }
+  }
+  onStage('uncolor', 'done');
+
+  return { rgba, w, h };
+}
+
+// ================================================================
+// PIPELINE VISUALIZATION
+// ================================================================
+
+function makePipeline(stages, idPrefix) {
+  let html = '<div class="pipeline">';
+  stages.forEach((s, i) => {
+    if (i > 0) html += `<div class="arrow" id="${idPrefix}Arrow${i}">→</div>`;
+    html += `<div class="stage" id="${idPrefix}Stage${s.id}">
+      <div class="icon">${s.icon}</div>
+      <div class="name">${s.name}</div>
+      <div class="detail" id="${idPrefix}Detail${s.id}">${s.detail}</div>
+    </div>`;
+  });
+  html += '</div>';
+  return html;
+}
+
+const encStages = [
+  { id:'color', icon:'🎨', name:'Decorrelate', detail:'G, R−G, B−G' },
+  { id:'predict', icon:'🔮', name:'Predict', detail:'6 filters/row' },
+  { id:'entropy', icon:'📦', name:'Deflate', detail:'zlib level 9' },
+  { id:'pack', icon:'💾', name:'Pack', detail:'.tic format' },
+];
+const decStages = [
+  { id:'unpack', icon:'📬', name:'Unpack', detail:'Read header' },
+  { id:'inflate', icon:'📦', name:'Inflate', detail:'zlib decompress' },
+  { id:'unpredict', icon:'🔮', name:'Unpredict', detail:'Reverse filters' },
+  { id:'uncolor', icon:'🎨', name:'Recombine', detail:'R=RG+G, B=BG+G' },
+];
+
+function setStage(idPrefix, stageId, state) {
+  const el = document.getElementById(idPrefix + 'Stage' + stageId);
+  if (!el) return;
+  el.classList.remove('active', 'done');
+  if (state) el.classList.add(state);
+}
+
+// ================================================================
+// ENCODE UI
+// ================================================================
+
+const dropEnc = document.getElementById('dropEnc');
+const fileEnc = document.getElementById('fileEnc');
+dropEnc.addEventListener('dragover', e => { e.preventDefault(); dropEnc.classList.add('over'); });
+dropEnc.addEventListener('dragleave', () => dropEnc.classList.remove('over'));
+dropEnc.addEventListener('drop', e => { e.preventDefault(); dropEnc.classList.remove('over'); handleEnc(e.dataTransfer.files[0]); });
+fileEnc.addEventListener('change', e => { if (e.target.files[0]) handleEnc(e.target.files[0]); });
+
+let lastTicData = null;
+
+function handleEnc(file) {
+  if (!file) return;
+  const url = URL.createObjectURL(file);
+  const img = new Image();
+  img.onload = function() {
+    let w = img.width, h = img.height;
+    if (w > 512 || h > 512) {
+      const s = 512 / Math.max(w, h);
+      w = Math.round(w * s); h = Math.round(h * s);
+    }
+    const cv = document.createElement('canvas');
+    cv.width = w; cv.height = h;
+    cv.getContext('2d').drawImage(img, 0, 0, w, h);
+    URL.revokeObjectURL(url);
+    const imageData = cv.getContext('2d').getImageData(0, 0, w, h);
+
+    // Get PNG size
+    cv.toBlob(function(blob) {
+      const pngSize = blob ? blob.size : w*h*3;
+      doEncode(imageData, w, h, file.name, pngSize, cv);
+    }, 'image/png');
+  };
+  img.src = url;
+}
+
+function doEncode(imageData, w, h, name, pngSize, origCanvas) {
+  const res = document.getElementById('encResult');
+  res.innerHTML = `
+    <div class="card">
+      <h3 style="color:#58a6ff;margin-bottom:8px">Compressing ${name} (${w}×${h})</h3>
+      ${makePipeline(encStages, 'enc')}
+      <div id="encProgress" class="processing" style="text-align:center;color:#8b949e;margin:8px 0">Starting...</div>
+    </div>`;
+
+  setTimeout(() => {
+    const t0 = performance.now();
+    const result = ticEncode(imageData, w, h, (id, state) => setStage('enc', id, state));
+    const elapsed = performance.now() - t0;
+    lastTicData = result.data;
+
+    const ticSize = result.data.length;
+    const ratio = (pngSize / ticSize).toFixed(2);
+    const saving = ((1 - ticSize / pngSize) * 100).toFixed(0);
+    const maxSz = Math.max(ticSize, pngSize);
+
+    // Hex preview of header
+    let hexStr = '';
+    for (let i = 0; i < Math.min(48, result.data.length); i++) {
+      hexStr += result.data[i].toString(16).padStart(2, '0') + ' ';
+      if (i === 3 || i === 11) hexStr += '| ';
+    }
+
+    document.getElementById('encProgress').remove();
+    res.innerHTML += `
+      <div class="card">
+        <div class="preview-row">
+          <div class="preview-box"><canvas id="origPrev" width="${w}" height="${h}"></canvas><p>Original</p></div>
+          <div class="preview-box" style="flex:1.4">
+            <p style="text-align:center;margin:4px 0;color:#8b949e">TC</p>
+            <div class="meter"><div class="fill tc" style="width:${Math.max(5,ticSize/maxSz*100)}%">${ticSize.toLocaleString()}B</div></div>
+            <p style="text-align:center;margin:4px 0;color:#8b949e">PNG</p>
+            <div class="meter"><div class="fill png" style="width:${Math.max(5,pngSize/maxSz*100)}%">${pngSize.toLocaleString()}B</div></div>
+            <div class="stats">
+              <div class="stat"><div class="val">${ratio}×</div><div class="lbl">vs PNG</div></div>
+              <div class="stat"><div class="val">${saving}%</div><div class="lbl">smaller</div></div>
+              <div class="stat"><div class="val">${elapsed.toFixed(0)}ms</div><div class="lbl">encode</div></div>
+              <div class="stat"><div class="val">✓</div><div class="lbl">lossless</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="hex-view">TIC! header: ${hexStr}...</div>
+        <div class="share-box">
+          <p style="margin-bottom:10px;color:#8b949e">Share this compressed image:</p>
+          <button class="btn btn-green" onclick="downloadTic('${name}')">Download .tic (${(ticSize/1024).toFixed(1)}KB)</button>
+          <button class="btn btn-blue" onclick="copyTicUrl()" style="margin-left:8px">Copy Data URL</button>
+          <p id="copyMsg" style="color:#3fb950;margin-top:6px;font-size:.85em;min-height:1.2em"></p>
+        </div>
+      </div>`;
+
+    const c = document.getElementById('origPrev');
+    if (c) c.getContext('2d').drawImage(origCanvas, 0, 0);
+  }, 50);
+}
+
+function downloadTic(name) {
+  if (!lastTicData) return;
+  const blob = new Blob([lastTicData], { type: 'application/octet-stream' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name.replace(/\.\w+$/, '') + '.tic';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function copyTicUrl() {
+  if (!lastTicData) return;
+  // Encode as base64 data URL
+  let binary = '';
+  for (let i = 0; i < lastTicData.length; i++) binary += String.fromCharCode(lastTicData[i]);
+  const b64 = btoa(binary);
+  const url = 'tic://' + b64;
+  navigator.clipboard.writeText(url).then(() => {
+    document.getElementById('copyMsg').textContent = 'Copied! Paste in the Receive tab to decompress.';
+    setTimeout(() => { document.getElementById('copyMsg').textContent = ''; }, 3000);
+  });
+}
+
+// ================================================================
+// DECODE UI
+// ================================================================
+
+const dropDec = document.getElementById('dropDec');
+const fileDec = document.getElementById('fileDec');
+dropDec.addEventListener('dragover', e => { e.preventDefault(); dropDec.classList.add('over'); });
+dropDec.addEventListener('dragleave', () => dropDec.classList.remove('over'));
+dropDec.addEventListener('drop', e => { e.preventDefault(); dropDec.classList.remove('over'); handleDecFile(e.dataTransfer.files[0]); });
+fileDec.addEventListener('change', e => { if (e.target.files[0]) handleDecFile(e.target.files[0]); });
+
+function handleDecFile(file) {
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function() {
+    const data = new Uint8Array(reader.result);
+    doDecode(data, file.name);
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+function decodeFromUrl() {
+  const input = document.getElementById('urlInput').value.trim();
+  if (!input.startsWith('tic://')) { alert('Paste a tic:// URL'); return; }
+  const b64 = input.slice(6);
+  const binary = atob(b64);
+  const data = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) data[i] = binary.charCodeAt(i);
+  doDecode(data, 'shared.tic');
+}
+
+function doDecode(data, name) {
+  const res = document.getElementById('decResult');
+  res.innerHTML = `
+    <div class="card">
+      <h3 style="color:#58a6ff;margin-bottom:8px">Decompressing ${name} (${(data.length/1024).toFixed(1)}KB)</h3>
+      ${makePipeline(decStages, 'dec')}
+      <div id="decProgress" class="processing" style="text-align:center;color:#8b949e;margin:8px 0">Starting...</div>
+    </div>`;
+
+  setTimeout(() => {
+    try {
+      const t0 = performance.now();
+      const result = ticDecode(data, (id, state) => setStage('dec', id, state));
+      const elapsed = performance.now() - t0;
+
+      const w = result.w, h = result.h;
+      const cv = document.createElement('canvas');
+      cv.width = w; cv.height = h;
+      const ctx = cv.getContext('2d');
+      const imgData = ctx.createImageData(w, h);
+      imgData.data.set(result.rgba);
+      ctx.putImageData(imgData, 0, 0);
+
+      // Hex preview
+      let hexStr = '';
+      for (let i = 0; i < Math.min(48, data.length); i++) {
+        hexStr += data[i].toString(16).padStart(2, '0') + ' ';
+        if (i === 3 || i === 11) hexStr += '| ';
+      }
+
+      document.getElementById('decProgress').remove();
+      res.innerHTML += `
+        <div class="card">
+          <div class="preview-row">
+            <div class="preview-box">
+              <canvas id="decPrev" width="${w}" height="${h}"></canvas>
+              <p>Decompressed ${w}×${h} in ${elapsed.toFixed(0)}ms</p>
+            </div>
+            <div class="preview-box" style="flex:1">
+              <div class="stats">
+                <div class="stat"><div class="val">${w}×${h}</div><div class="lbl">pixels</div></div>
+                <div class="stat"><div class="val">${(data.length/1024).toFixed(1)}KB</div><div class="lbl">compressed</div></div>
+                <div class="stat"><div class="val">${((w*h*3)/1024).toFixed(0)}KB</div><div class="lbl">uncompressed</div></div>
+                <div class="stat"><div class="val">${elapsed.toFixed(0)}ms</div><div class="lbl">decode time</div></div>
+              </div>
+              <button class="btn btn-green" onclick="savePng()" style="margin-top:12px">Save as PNG</button>
+            </div>
+          </div>
+          <div class="hex-view">Received: ${hexStr}...</div>
+        </div>`;
+
+      const pc = document.getElementById('decPrev');
+      if (pc) pc.getContext('2d').drawImage(cv, 0, 0);
+      window._lastDecCanvas = cv;
+    } catch (e) {
+      document.getElementById('decProgress').textContent = 'Error: ' + e.message;
+      document.getElementById('decProgress').style.color = '#f78166';
+    }
+  }, 50);
+}
+
+function savePng() {
+  if (!window._lastDecCanvas) return;
+  window._lastDecCanvas.toBlob(function(blob) {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'decoded.png';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }, 'image/png');
+}
+</script>
+</body>
+</html>
