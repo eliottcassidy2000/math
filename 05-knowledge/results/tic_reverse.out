@@ -1,0 +1,36 @@
+================================================================================
+  REVERSE COMPRESSION: Start with the answer, find the question
+  kind-pasteur-2026-03-25-S12
+================================================================================
+
+  Image           PNG        MED       LPC8 ProgRemoval  Generator   PCA-rows   Deletion        Raw          BEST
+  -----------------------------------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_reverse.py:55: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421       ERR       1841       6057       4502       1004*      3704       3704       PCA-rows 3.41x
+  circles        6978       ERR       3185      13115      13250       2247*      5805       5805       PCA-rows 3.11x
+  grad_d          149       ERR        262        101*      1735        343        343        343    ProgRemoval 1.48x
+  grad_h          148       ERR         81         58*       129        152        152        152    ProgRemoval 2.55x
+  natural       12100       ERR      12213*     13088      14638      13077      13306      13306           LPC8 0.99x
+  random        16580       ERR      16430      16605      17576      16398*     16398      16398       PCA-rows 1.01x
+  solid           148       ERR         55         35         46         23*        23         23       PCA-rows 6.43x
+  stripes45       229       ERR         84         83       8984         52*        52         52       PCA-rows 4.40x
+
+  THE REVERSE INSIGHTS:
+
+  1. PROGRESSIVE REMOVAL: subtract structure at decreasing scales.
+     Like wavelets but with plain block means.
+     Should excel at multi-scale images (natural photos).
+
+  2. GENERATOR MODEL: encode the image as a multi-scale generator.
+     Coarse grid → upsample → add corrections → repeat.
+     The decoder IS the generative model.
+
+  3. PCA ON ROWS: find the eigenbasis of the row-space.
+     Represent each row as coefficients in the eigenbasis.
+     For images with repeated row patterns: massive compression.
+
+  4. DELETION: remove predictable pixels, encode only surprises.
+     The decoder reconstructs predictable pixels from neighbors.
+     For smooth images: most pixels are predictable → few surprises.
+
