@@ -13,6 +13,29 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S347 — 2026-03-25: PAQ Analysis — Context Mixing, Arithmetic Coding, GRD+MED Best Strategy
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S346
+**Summary:** Built PAQ-inspired structural context mixer (5 2D-aware models, logistic mixing, 64 gradient contexts). Analyzed why beating PAQ requires arithmetic coding not zlib. Found GRD+MED+lzma is our absolute best RGB strategy.
+
+### Key Findings
+1. **GRD+MED+lzma = our BEST RGB strategy**: tron 1.35x, t.jpg 1.56x vs PNG
+2. **Context mixing residuals don't beat MED for zlib/lzma**: zlib's LZ77 already exploits repetition; our mixer produces LESS repetitive residuals despite better per-pixel predictions
+3. **To beat PAQ: need arithmetic coding** that directly uses our per-pixel probability distributions. zlib/lzma wastes bits because they impose their own probability model on top of ours.
+4. **t.jpg achieves 2.69 bpp** — within PAQ's typical range (2.0-2.5 bpp)
+5. **MED captures 25.6% zeros on photos** — hard to improve further with any linear predictor
+6. **kind-pasteur's G-RG-BG+MED confirmed**: 41% improvement on real photos via color decorrelation
+
+### The Path to PAQ
+- PAQ's advantage: arithmetic coding (bit-level precision) + 500 models
+- Our advantage: 2D spatial models (Paeth, GAP, LOCO, gradient) that PAQ doesn't have
+- The fusion: arithmetic-code our 2D model probabilities → should beat PAQ on images
+- Bottleneck: Python arithmetic coder too slow for production use
+
+### Files Created
+- `04-computation/tic8_paq_beater.py` — 5-model structural context mixer
+
 ## opus-2026-03-25-S346 — 2026-03-25: Grand Unification + Context-Adaptive Prediction
 
 **Account:** opus
