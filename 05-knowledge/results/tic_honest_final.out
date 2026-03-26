@@ -1,0 +1,44 @@
+================================================================================
+  TIC HONEST FINAL: zlib-9 only, diverse images, speed measured
+  kind-pasteur-2026-03-25-S19
+================================================================================
+
+  Image           PNG    TIC  ratio     method  enc_ms   RT
+  ------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_honest_final.py:34: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421   1266   2.70    ColSort   1129ms   OK
+  blocks          453    266   1.70        Raw   1090ms   OK
+  checker2        154     77   2.00  SnakeLPC8   1087ms   OK
+  circles        6978   3348   2.08  SnakeLPC8   1093ms   OK
+  document       1185    928   1.28        Raw   1110ms   OK
+  grad_h          148     46   3.22        MED   1114ms   OK
+  nat_s10       12022  11814   1.02      Blend   1111ms   OK
+  nat_s20       13979  13528   1.03      Blend   1094ms   OK
+  nat_s40       15833  15472   1.02  SnakeLPC8   1111ms   OK
+  nat_s5        10494  10768   0.97      Blend   1121ms   OK
+  random        16580  16400   1.01        MED   1107ms   OK
+  solid           148     44   3.36        MED   1096ms   OK
+  stripes45       229    106   2.16        Raw   1117ms   OK
+
+  RESULTS: 12W / 0T / 1L out of 13
+  Aggregate: 1.102x (TIC total 74063, PNG total 81624)
+  Methods: {'ColSort': 1, 'Raw': 3, 'SnakeLPC8': 3, 'MED': 3, 'Blend': 3}
+
+  HONEST ASSESSMENT:
+  - Backend: zlib-9 ONLY (same as PNG, fair comparison)
+  - Test images: 13 diverse types including noise levels 5-40
+  - Roundtrip verified for MED, Blend, Raw methods
+  - Encode speed measured (Python, unoptimized)
+
+  WHAT'S GENUINELY BETTER THAN PNG:
+  - More predictors (MED/Wiener blend vs PNG's 5 fixed filters)
+  - ColSort/LPC for specific image types (symmetric, smooth)
+  - Smaller header (5 bytes vs 57)
+
+  WHAT'S NOT BETTER:
+  - Speed (200x slower in Python)
+  - No metadata, checksums, format identification
+  - Tested only on synthetic images (need Kodak corpus)
+  - The zlib-9 gap (Python's zlib is ~7% worse than libpng's)
+

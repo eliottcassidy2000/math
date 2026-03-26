@@ -1,0 +1,32 @@
+================================================================================
+  CONTEXT MIXING: Per-context expert weights (PAQ-inspired)
+  16 contexts × 4 experts, online learning, zero overhead
+  kind-pasteur-2026-03-25-S19
+================================================================================
+
+  Image           PNG    MED  Blend   CM0.01   CM0.05    CM0.1    CM0.5    Best   RT
+  ---------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_ctxmix.py:40: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421   3007   3144     3350     3351     3347     3328     MED   OK 1.14x
+  circles        6978   6227   7000     7010     7031     7013     7018     MED   OK 1.12x
+  grad_h          148     51     95      200      200      200      176     MED   OK 2.90x
+  nat_s10       12022  12408  11819    12091    12073    12069    11995   Blend   OK 1.02x
+  nat_s20       13979  14283  13533    13835    13818    13766    13606   Blend   OK 1.03x
+  nat_s5        10494  10955  10773    10911    10888    10865    10839   Blend   OK 0.97x
+  random        16580  16405  16405    16405    16405    16405    16405     MED   OK 1.01x
+  solid           148     49     49      126      195      230      150     MED   OK 3.02x
+  stripes45       229    115    183      685      674      620      422     MED   OK 1.99x
+
+  THE CONTEXT MIXING PRINCIPLE:
+  16 contexts (gradient magnitude × direction) × 4 experts (left, above, MED, Wiener)
+  Weights updated per-pixel with multiplicative weights algorithm.
+  Decoder mirrors encoder exactly → zero overhead.
+
+  Compared to Blend:
+    Blend: 1 continuous context, 2 experts, hardcoded switching
+    CtxMix: 16 discrete contexts, 4 experts, learned switching
+
+  If CtxMix beats Blend: finer context granularity helps.
+  If Blend beats CtxMix: continuous context is better than discrete.
+
