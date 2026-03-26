@@ -1,0 +1,37 @@
+================================================================================
+  KODAK + REAL PHOTO BENCHMARK
+  kind-pasteur-2026-03-25-S21
+================================================================================
+
+  9 images to test
+
+  Image                           Size      PNG  zlib-best   brotli  z/PNG  b/PNG               method
+  ----------------------------------------------------------------------------------------------------
+  kodim01.png                   196608   134653      99894    88151 1.348x 1.528x          B-GB-RB+MED
+  kodim02.png                   196608   111383      95038    82218 1.172x 1.355x          G-RG-BG+MED
+  kodim03.png                   196608   101178      91128    78613 1.110x 1.287x          G-RG-BG+MED
+  kodim04.png                   196608    97341      85466    73218 1.139x 1.329x          G-RG-BG+MED
+  kodim05.png                   196608   145367     115532   102952 1.258x 1.412x          G-RG-BG+MED
+  kodim08.png                   196608   129667     105621    92927 1.228x 1.395x          G-RG-BG+MED
+  kodim12.png                   196608   114164      95354    83155 1.197x 1.373x          G-RG-BG+MED
+  kodim23.png                   196608   103026      94117    80506 1.095x 1.280x          G-RG-BG+MED
+  vlcsnap-2026-03-10-1          196608    63289      44785    38050 1.413x 1.663x          G-RG-BG+MED
+
+  AGGREGATE: zlib-9 1.209x, brotli 1.389x vs PNG
+  zlib-9: 9W / 0T / 0L out of 9
+  brotli: 9W out of 9
+
+  NEW TECHNIQUE: Noise-Adaptive MED-Blend
+    Estimates local noise from running MED residual magnitude.
+    Adapts the MED-Wiener blend threshold per pixel.
+    High noise (dark areas, sensor noise) → more MED
+    Low noise (bright smooth areas) → more Wiener
+
+  COLOR TRANSFORM MATTERS:
+    G-RG-BG decorrelation provides the BIGGEST single gain.
+    Different images may prefer different transforms.
+
+  PER-PLANE ADAPTIVE (MED on G, Blend on R-G/B-G):
+    The G channel has edges → MED is best.
+    The R-G and B-G channels are smoother → Blend may help.
+
