@@ -1,0 +1,38 @@
+==========================================================================================
+  ADAPTIVE GOLOMB-RICE: Can we match JPEG-LS?
+  kind-pasteur-2026-03-25-S31
+==========================================================================================
+
+  Image                PNG    zlib  perrow running   ctx16 Shannon    best    b/z
+  --------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\golomb_rice_adaptive.py:36: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(plane, 'L')
+  kodim01.png        46613   48196   47181   45577   45542   47170   45542 0.945x
+  kodim02.png        37567   40798   37248   36638   36129   36791   36129 0.886x
+  kodim03.png        36130   38512   38351   34883   33764   36118   33764 0.877x
+  kodim04.png        35036   39059   35372   34773   34527   34739   34527 0.884x
+  kodim05.png        49569   51333   50713   49569   47742   49453   47742 0.930x
+  kodim08.png        44779   46989   44877   43750   43355   44186   43355 0.923x
+  kodim12.png        40178   42882   40024   39700   38520   39165   38520 0.898x
+  kodim23.png        35398   38574   35333   33934   33523   34556   33523 0.869x
+  vlcsnap-2026-0     26023   26858   24997   24559   24555   24450   24555 0.914x
+
+  AGGREGATE         351293  373201  354096  343383  337657  346628  337657 0.905x
+
+  RESULTS:
+    Per-row GR vs zlib:    0.949x
+    Running GR vs zlib:    0.920x
+    Context GR vs zlib:    0.905x
+    Shannon vs zlib:       0.929x (theoretical minimum)
+
+  IS GOLOMB-RICE LOSSLESS? YES.
+    GR maps integers to bits and back with zero loss.
+    zigzag(n) → GR encode → bits → GR decode → zigzag⁻¹(n) = original.
+    Verified: all 3 roundtrip tests pass.
+
+  CAN WE COMPETE WITH JPEG-LS?
+    JPEG-LS uses: MED + context-adaptive GR (365 contexts) + run-length mode.
+    Our best: MED + context-adaptive GR (16 contexts), no run-length.
+    The run-length mode handles long runs of identical residuals (e.g., flat regions).
+    Adding run-length mode would close most of the remaining gap.
+

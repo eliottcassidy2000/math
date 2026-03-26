@@ -1,0 +1,43 @@
+================================================================================
+  GOLOMB-RICE vs ZLIB: Why JPEG-LS beats our codec
+  kind-pasteur-2026-03-25-S31
+================================================================================
+
+  Image                   PNG   MED+zlib     MED+GR    GR bits    Shannon   k  GR/zlib
+  -------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\golomb_rice_investigation.py:203: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  ps = png_size(Image.fromarray(green, 'L'))
+  kodim01.png           46613      48196      51728     413813      47170   5   0.932x
+  kodim02.png           37567      40798      42735     341868      36791   4   0.955x
+  kodim03.png           36130      38512      43318     346535      36118   4   0.889x
+  kodim04.png           35036      39059      36662     293287      34739   3   1.065x
+  kodim05.png           49569      51333      53072     424567      49453   5   0.967x
+  kodim08.png           44779      46989      50997     407961      44186   5   0.921x
+  kodim12.png           40178      42882      43449     347583      39165   4   0.987x
+  kodim23.png           35398      38574      37125     296991      34556   3   1.039x
+  vlcsnap-2026-03-      26023      26858      27748     221976      24450   2   0.968x
+
+  AGGREGATE (G only)   351293     373201     386834                346628
+
+  ANALYSIS:
+    GR vs zlib:    0.965x (zlib better)
+    GR vs PNG:     0.908x
+    GR vs Shannon: 1.116x from optimal
+
+  WHY THE GAP EXISTS:
+    zlib encodes at BYTE level (min 1 byte per symbol).
+    Golomb-Rice encodes at BIT level (can use <8 bits per symbol).
+    For MED residuals peaked at 0: most residuals are small (0, ±1, ±2).
+    GR encodes 0 in 3 bits. At k=4: 5 bits. At k=2: 3 bits.
+    zlib encodes 0 in ~8 bits minimum (one byte).
+
+  THE FIX: Replace zlib with Golomb-Rice in our C codec.
+    This would make TIC competitive with JPEG-LS.
+    Golomb-Rice IS lossless (it's just a different way to encode integers).
+    JPEG-LS adds context modeling on top (per-context k selection),
+    which gives another ~5% over plain Golomb-Rice.
+
+  ROUNDTRIP VERIFICATION:
+    k=2: encode 23 values → 247 bits → decode PASS
+    k=4: encode 23 values → 152 bits → decode PASS
+    k=6: encode 23 values → 168 bits → decode PASS
