@@ -1,0 +1,68 @@
+================================================================================
+  TIC UNIFIED: 15 sessions of research in one codec
+  kind-pasteur-2026-03-25-S15
+================================================================================
+
+--- 64×64 (12 images) ---
+  Image            PNG     TIC   ratio       method
+  ----------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_unified.py:46: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob            1312     539    2.43      ColSort
+  blocks           218      99    2.20          Raw
+  checker          124      32    3.88          Raw
+  circles         2143    1012    2.12    SnakeLPC8
+  grad_d           106      36    2.94          MED
+  grad_h           108      24    4.50          MED
+  mixed           2031    1682    1.21          MED
+  natural         3137    2912    1.08        Blend
+  radial          1118     516    2.17      ColSort
+  random          4228    4101    1.03          MED
+  solid            100      14    7.14        Blend
+  stripes45        156      30    5.20          Raw
+
+  12W / 0T / 0L out of 12
+  Methods: {'ColSort': 2, 'Raw': 3, 'SnakeLPC8': 1, 'MED': 4, 'Blend': 2}
+
+--- 128×128 (12 images) ---
+  Image            PNG     TIC   ratio       method
+  ----------------------------------------------------
+  blob            3421    1113    3.07      ColSort
+  blocks           384     149    2.58          Raw
+  checker          184      33    5.58          Raw
+  circles         6978    2993    2.33    SnakeLPC8
+  grad_d           149      18    8.28          MED
+  grad_h           148      20    7.40          MED
+  mixed           7277    6089    1.20          MED
+  natural        12100   11686    1.04        Blend
+  radial          2783    1059    2.63      ColSort
+  random         16580   16389    1.01          MED
+  solid            148      14   10.57        Blend
+  stripes45        229      38    6.03          MED
+
+  12W / 0T / 0L out of 12
+  Methods: {'ColSort': 2, 'Raw': 2, 'SnakeLPC8': 1, 'MED': 5, 'Blend': 2}
+
+--- 256×256 (12 images) ---
+  Image            PNG     TIC   ratio       method
+  ----------------------------------------------------
+  blob            9323    2393    3.90      ColSort
+  blocks           601     192    3.13          Raw
+  checker          435      34   12.79          Raw
+  circles        24780    9744    2.54    SnakeLPC8
+  grad_d           405      27   15.00          MED
+  grad_h           369      19   19.42          MED
+  mixed          26468   22497    1.18          MED
+  natural        47736   46433    1.03        Blend
+  radial          6992    2184    3.20      ColSort
+  random         65917   65541    1.01          MED
+  solid            369      14   26.36        Blend
+  stripes45        536      40   13.40          MED
+
+  12W / 0T / 0L out of 12
+  Methods: {'ColSort': 2, 'Raw': 2, 'SnakeLPC8': 1, 'MED': 5, 'Blend': 2}
+
+================================================================================
+  GRAND TOTAL: 36W / 0T / 0L out of 36
+  Win rate: 100%
+================================================================================
