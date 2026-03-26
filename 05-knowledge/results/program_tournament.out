@@ -1,0 +1,284 @@
+
+===========================================================================
+  EXECUTION TRACE COMPRESSION via Tournament Theory
+===========================================================================
+
+  Example: Diamond dependency
+    start -> A -> C -> D -> end
+           -> B ->
+
+  Nodes: ['A', 'B', 'C', 'D', 'end', 'start']
+  Score sequence: [4, 3, 3, 2, 2, 1]
+  Hamiltonian paths: 23
+  Bits per trace: 4.52
+  3-cycles: 6
+  Longest path (≈ min stages): 7
+  Scheduling freedom: high
+
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+
+  Example: Parallel map-reduce
+    init -> {W1, W2, W3, W4} -> merge -> output
+
+  Nodes: 7
+  Score sequence: [6, 5, 4, 3, 2, 1, 0]
+  Hamiltonian paths: 1
+  Bits per trace: 0.00
+  Min parallel stages: 6
+  Workers are freely reorderable: 4! = 24 permutations
+  H(T) = 1 (accounts for all valid schedules)
+
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+
+  Example: Sequential chain A->B->C->D->E->F
+  Hamiltonian paths: 1 (transitive tournament = 1 path)
+  Bits per trace: 0.00
+  This IS a transitive tournament: zero scheduling freedom.
+
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+  ─
+
+  Example: Fan-out: init -> {A,B,C,D,E} (5 independent tasks)
+  Hamiltonian paths: 1
+  Bits per trace: 0.00
+  5 independent tasks: 5! = 120 possible orders
+  But only 1 are HP (init must be first)
+
+===========================================================================
+  CODE METRICS from Tournament Invariants
+===========================================================================
+
+  tic3.py:
+    Functions: 44
+    Score sequence: [43, 42, 41, 40, 39, 38, 37, 35, 34, 33]...
+    Min parallel stages: 45
+    encode calls: _score, _scan_ring, _fast_compress, _best_backend, _predict_ring_pixel
+    decode calls: _decode_planes, _decompress
+    _decode_planes calls: _unfilter_line_1d, _scan_ring, _unfilter_row_2d, _predict_ring_pixel
+    _test calls: check, png_size, encode, get_scan_name, decode
+
+  tic5_unified.py:
+    Functions: 7
+    Score sequence: [6, 5, 4, 3, 2, 1, 0]
+    Valid execution orders (H): 1
+    Scheduling bits: 0.0
+    Min parallel stages: 7
+    Mutual recursion cycles: 0
+    decode calls: _decode_planes
+    _test calls: check, encode, get_scan_name, png_sz, decode
+
+  quincunx.py:
+    Functions: 6
+    Score sequence: [5, 4, 3, 2, 1, 0]
+    Valid execution orders (H): 1
+    Scheduling bits: 0.0
+    Min parallel stages: 6
+    Mutual recursion cycles: 0
+    encode_quincunx calls: _spiral_order, _quincunx_levels, _predict_quincunx
+    decode_quincunx calls: _spiral_order, _quincunx_levels, _predict_quincunx
+
+  wavefront.py:
+    Functions: 7
+    Score sequence: [6, 5, 4, 3, 2, 1, 0]
+    Valid execution orders (H): 1
+    Scheduling bits: 0.0
+    Min parallel stages: 6
+    Mutual recursion cycles: 0
+    _encode_med calls: _loco
+
+===========================================================================
+  SOURCE CODE COMPRESSION via Tournament Prediction
+===========================================================================
+
+  File                         Raw   zlib    MED    Col     DL    Ind     Best  Ratio
+  -----------------------------------------------------------------------------------------------
+  tic3.py                    33409   7821  22655  34439  23959   7657 indent-split   4.4x
+  quincunx.py                 8487   3007   7580  10561   8019   2978 indent-split   2.8x
+  wavefront.py               16212   4130  10943  16359  11530   4037 indent-split   4.0x
+  tic6_adaptive.py           21721   6030  16858  24155  17787   5958 indent-split   3.6x
+
+===========================================================================
+  THE DEEP ANALOGY: Program = Tournament = Codec
+===========================================================================
+
+  TOURNAMENT              PROGRAM                 CODEC
+  ─────────              ───────                 ─────
+  Vertex                 Statement/Variable       Pixel
+  Arc i→j                i executes before j      i predicts j
+  Score(i)               # depending on i         # predicted from i
+  Hamiltonian path       Execution trace          Scan order
+  H(T)                   # valid schedules        # valid scan orders
+  Score sequence         Criticality ranking      Gradient profile
+  3-cycle                Mutual dependency         Non-monotone region
+  Transitive T           Sequential code           Sorted image
+  Regular T              Balanced parallelism      Uniform texture
+  Complement T^op        Reversed execution        Transpose
+  Isomorphism class      Functionally equiv code   Equivalent images
+  χ(T)                   Min parallel stages       Min scan directions
+  OCF: H = I(Ω, 2)      Schedules from cycles     Compression from structure
+
+  THE KEY INSIGHT:
+  A program's DEPENDENCY TOURNAMENT determines its parallelism.
+  An image's PREDICTION TOURNAMENT determines its compressibility.
+  A codec's STRATEGY TOURNAMENT determines its optimality.
+
+  ALL THREE are governed by the same mathematics:
+  - The score sequence bounds H(T) (scheduling/compression)
+  - The cycle structure determines the odd-cycle formula
+  - Band-limitedness limits the effective degrees of freedom
+  - The staircase paradox bounds the misalignment penalty
+
+  CONCRETE EXAMPLE: The 'compress' function itself
+
+  compress(image):
+    1. validate input       # score 5 (everything depends on this)
+    2. color_transform      # score 4 (prediction depends on this)
+    3. choose_scan_order    # score 3 (prediction follows scan)
+    4. predict_residuals    # score 2 (entropy coder needs this)
+    5. entropy_encode       # score 1 (output depends on this)
+    6. write_output         # score 0 (nothing depends on this)
+
+  This is a TRANSITIVE tournament: (5,4,3,2,1,0)
+  H = 1. Only one valid execution order.
+  Bits per trace = 0. No scheduling freedom.
+  The function is INHERENTLY SEQUENTIAL.
+
+  parallel_compress(image):
+    1. validate             # score 7
+    2a. color_R             # score 4 (independent of 2b, 2c)
+    2b. color_G             # score 4
+    2c. color_B             # score 4
+    3. predict_all          # score 2
+    4. entropy_encode       # score 1
+    5. write_output         # score 0
+
+  Score sequence: [5, 4, 3, 3, 2, 2, 2]
+  H = 69. The 3 color channels can be processed in any order.
+  Bits per trace = 6.11.
+  Scheduling freedom: 3! = 6 valid orderings of parallel work.
+  Min parallel stages: 8
+
+===========================================================================
+  CODE DEDUPLICATION via Tournament Isomorphism
+===========================================================================
+
+  tic3.py: 4 clone groups
+    Structural clones: _scan_raster, _scan_transpose
+    Structural clones: _ct_none, _ct_none_inv
+    Structural clones: _ct_grd, _ct_rbd
+    Structural clones: _ct_grd_inv, _ct_rbd_inv
+
+  tic5_unified.py: no structural clones found
+
+  tic6_adaptive.py: no structural clones found
+
+===========================================================================
+  Done. opus-2026-03-25-S344
+===========================================================================
