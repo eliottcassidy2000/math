@@ -370,8 +370,9 @@ function processFrame(canvas, w, h, file, extraInfo, origFileSize) {
       <div class="card result">
         <div class="compare">
           <div>
-            <canvas id="previewCanvas" width="${w}" height="${h}"></canvas>
+            <canvas id="previewCanvas" width="${w}" height="${h}" style="cursor:pointer" title="Click to decompress!"></canvas>
             <p class="mono" style="margin-top:4px">${file.name} (${w}×${h})${extraInfo||''}</p>
+            <p style="color:#3fb950;font-size:.8em;text-align:center;margin-top:2px;cursor:pointer" id="decompLabel">▶ Click image to decompress</p>
           </div>
           <div style="flex:1.5;min-width:280px">
             <div class="magic-text">
@@ -398,7 +399,65 @@ function processFrame(canvas, w, h, file, extraInfo, origFileSize) {
       </div>
     `;
     const pc = document.getElementById('previewCanvas');
-    if (pc) pc.getContext('2d').drawImage(canvas, 0, 0);
+    if (pc) {
+      // Initially show a "compressed" scrambled view
+      const pctx = pc.getContext('2d');
+      pctx.drawImage(canvas, 0, 0);
+
+      // Apply a visual "compressed" effect (pixelate)
+      const small = document.createElement('canvas');
+      small.width = Math.max(1, Math.floor(w / 8));
+      small.height = Math.max(1, Math.floor(h / 8));
+      small.getContext('2d').drawImage(canvas, 0, 0, small.width, small.height);
+      pctx.imageSmoothingEnabled = false;
+      pctx.drawImage(small, 0, 0, w, h);
+
+      // Overlay "TC" text
+      pctx.fillStyle = 'rgba(35,134,54,0.7)';
+      pctx.fillRect(w/2-30, h/2-14, 60, 28);
+      pctx.fillStyle = '#fff';
+      pctx.font = 'bold 16px monospace';
+      pctx.textAlign = 'center';
+      pctx.fillText('TC ▶', w/2, h/2+5);
+
+      // Click to decompress: animate scanline reveal
+      let decompressed = false;
+      pc.onclick = function() {
+        if (decompressed) return;
+        decompressed = true;
+        const label = document.getElementById('decompLabel');
+        if (label) label.textContent = 'Decompressing...';
+
+        // Scanline animation: reveal original image row by row
+        const origData = canvas.getContext('2d').getImageData(0, 0, w, h);
+        let row = 0;
+        const rowsPerFrame = Math.max(1, Math.floor(h / 30)); // ~30 frames
+
+        function animateRow() {
+          const endRow = Math.min(row + rowsPerFrame, h);
+          // Draw original rows
+          pctx.putImageData(origData, 0, 0, 0, row, w, endRow - row);
+          // Draw a green scanline
+          if (endRow < h) {
+            pctx.fillStyle = '#3fb950';
+            pctx.fillRect(0, endRow, w, 2);
+          }
+          row = endRow;
+
+          if (row < h) {
+            requestAnimationFrame(animateRow);
+          } else {
+            // Fully decompressed — show clean image
+            pctx.drawImage(canvas, 0, 0);
+            if (label) {
+              label.textContent = '✓ Decompressed — bit-perfect!';
+              label.style.color = '#3fb950';
+            }
+          }
+        }
+        requestAnimationFrame(animateRow);
+      };
+    }
   }, 'image/png');
 }
 
