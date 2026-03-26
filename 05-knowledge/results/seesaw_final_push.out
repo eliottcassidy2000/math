@@ -1,0 +1,76 @@
+================================================================================
+  SEESAW FINAL PUSH: Chain complex statistics at n=7
+================================================================================
+  [100/300] 1.0s
+  [200/300] 2.0s
+  [300/300] 3.0s
+
+  Profile distribution:
+  (β₁,β₂,β₃) = (0, 0, 0): 255 (85.0%)
+  (β₁,β₂,β₃) = (0, 0, np.int64(1)): 27 (9.0%)
+  (β₁,β₂,β₃) = (np.int64(1), 0, 0): 18 (6.0%)
+
+  === CHAIN COMPLEX COMPARISON ===
+  Statistic          β₁=0,β₃=0    β₁=1,β₃=0    β₁=0,β₃=1
+  -------------------------------------------------------
+  o2                      36.5         35.9         37.3
+  r2                      15.0         14.0         15.0
+  o3                      41.5         43.1         43.9
+  r3                      21.5         21.9         22.3
+  o4                      31.1         33.7         32.7
+  r4                      20.0         21.2         20.6
+  ker_d3                  20.0         21.2         21.6
+  im_d4                   20.0         21.2         20.6
+
+  === THE SEESAW MECHANISM ===
+
+  (0,0,0):
+    dim(Ω₂) = 36.5, rank(∂₂) = 15.0
+    ker(∂₂) = dim(Ω₂) - rank(∂₂) = 21.5
+    rank(∂₃) = 21.5 (should equal ker(∂₂) by β₂=0)
+    Exactness gap: 0.0 (should be ~0)
+    ker(∂₃) = 20.0, im(∂₄) = 20.0
+    β₃ ≈ ker(∂₃) - im(∂₄) = 0.0
+
+  (1,0,0):
+    dim(Ω₂) = 35.9, rank(∂₂) = 14.0
+    ker(∂₂) = dim(Ω₂) - rank(∂₂) = 21.9
+    rank(∂₃) = 21.9 (should equal ker(∂₂) by β₂=0)
+    Exactness gap: -0.0 (should be ~0)
+    ker(∂₃) = 21.2, im(∂₄) = 21.2
+    β₃ ≈ ker(∂₃) - im(∂₄) = 0.0
+
+  (0,0,1):
+    dim(Ω₂) = 37.3, rank(∂₂) = 15.0
+    ker(∂₂) = dim(Ω₂) - rank(∂₂) = 22.3
+    rank(∂₃) = 22.3 (should equal ker(∂₂) by β₂=0)
+    Exactness gap: 0.0 (should be ~0)
+    ker(∂₃) = 21.6, im(∂₄) = 20.6
+    β₃ ≈ ker(∂₃) - im(∂₄) = 1.0
+
+  THE SEESAW IN NUMBERS:
+  When β₁ goes from 0 to 1:
+    rank(∂₂) drops by 1 (one fewer constraint)
+    → ker(∂₂) increases by 1
+    → by β₂=0 exactness: rank(∂₃) must INCREASE by 1
+    → ker(∂₃) = Ω₃ - rank(∂₃) DECREASES by 1
+    → β₃ = ker(∂₃) - im(∂₄) DECREASES by 1
+
+  IF ker(∂₃) starts at exactly im(∂₄) + 1 when β₃=1,
+  THEN decreasing ker(∂₃) by 1 gives β₃=0. SEESAW!
+
+  This requires: β₃ = 1 is the MAXIMUM possible (no β₃≥2 at n=7).
+  And when β₁=1, the rank increase in ∂₃ is EXACTLY 1.
+
+  CHECK: Is rank(∂₃) exactly 1 higher in β₁=1 tournaments vs β₁=0?
+
+  rank(∂₃) when β₁=0: mean=21.49, values=[(np.int64(21), 53), (np.int64(22), 50), (np.int64(20), 39), (np.int64(19), 38), (np.int64(23), 32)]
+  rank(∂₃) when β₁=1: mean=21.89, values=[(np.int64(19), 6), (np.int64(22), 4), (np.int64(26), 2), (np.int64(29), 2), (np.int64(20), 2)]
+  Difference: 0.40
+
+  ker(∂₃) - im(∂₄) when β₃=0:
+    (0,0,0): [(np.int64(0), 255)]
+    (1,0,0): [(np.int64(0), 18)]
+
+  ker(∂₃) - im(∂₄) when β₃=1:
+    (0,0,1): [(np.int64(1), 27)]
