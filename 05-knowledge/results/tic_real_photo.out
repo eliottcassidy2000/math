@@ -1,0 +1,51 @@
+================================================================================
+  REAL PHOTO BENCHMARK: vlcsnap (desk scene)
+  kind-pasteur-2026-03-25-S20
+================================================================================
+
+  Image: inbox/vlcsnap-2026-03-10-17h12m34s408.png
+  Dimensions: 3840×2160, 3 channels
+  Raw size: 24883200 bytes
+  PNG size: 7010231 bytes (3.5:1 ratio)
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_real_photo.py:96: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  gray_png = png_size_from_pil(Image.fromarray(gray, 'L'))
+
+  Grayscale: 3840×2160
+  Gray PNG: 2638345 bytes
+
+  === GRAYSCALE METHODS (zlib-9, fair comparison) ===
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_real_photo.py:109: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  crop_png = png_size_from_pil(Image.fromarray(crop, 'L'))
+  Crop: 256×256, PNG=19287
+
+  Method           zlib-9   vs PNG    time
+  ------------------------------------------
+  MED               18625   1.036x     94ms  WIN
+  Blend             18665   1.033x    732ms  WIN
+  SnakeLPC8         19856   0.971x   8013ms  LOSS
+  ColSort           37805   0.510x     11ms  LOSS
+  SnakeDelta        19191   1.005x     43ms  WIN
+  Raw               24986   0.772x      6ms  LOSS
+
+  BEST: MED at 18625 bytes (1.036x vs PNG)
+
+  === RGB METHODS (3840×2160) ===
+  RGB PNG: 7010231 bytes
+
+  Crop 256×256 RGB:
+  Method                 size   vs PNG    time
+  ---------------------------------------------
+  PNG...............    46823
+  RGB MED indep.....    62395   0.750x    242ms
+  G-RG-BG + MED.....    33175   1.411x    216ms
+  RGB Blend.........    64784   0.723x   2024ms
+  G-RG-BG + Blend...    48223   0.971x   2042ms
+  G-RG-BG+Blend+brotli    42351   1.106x
+
+  === IMAGE STATISTICS ===
+  R: mean=157.1, std=23.7, grad_h=88.6, grad_v=85.0
+  G: mean=129.7, std=35.5, grad_h=85.1, grad_v=77.2
+  B: mean=99.1, std=35.0, grad_h=93.6, grad_v=83.6
+  Gray: mean=134.4, std=31.5
+  M² rank (1% threshold): 2/256
+  WL L1 colors: 13
