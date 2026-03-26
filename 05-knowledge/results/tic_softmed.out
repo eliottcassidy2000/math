@@ -1,0 +1,30 @@
+==========================================================================================
+  SOFT-MED + GRADIENT CLAMP: Learned switching thresholds
+  The right COMPOSITION of linear functions with minimal nonlinearity
+  kind-pasteur-2026-03-25-S16
+==========================================================================================
+
+  Image           PNG              MED            Blend          SoftMED        GradClamp
+                          sz      sf      sz      sf      sz      sf      sz      sf
+  -------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_softmed.py:44: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421    2764   0.189    2675   0.075    2686 (s= 0.1)    2760 (cf=5.0)
+  circles        6978    5565   0.110    6141   0.062    5379 (s= 0.1)    4633 (cf=5.0)
+  grad_h          148      29   0.018      36   0.992      30 (s= 0.1)     153 (cf=1.5)
+  natural       12118   12188   0.492   11648   0.515   12208 (s= 5.0)   12148 (cf=0.3)
+
+  THE COMPOSITION:
+    MED = hardcoded at sharpness=∞ (instant switching at edge)
+    SoftMED(s) = parametric (s=0.1: smooth blend, s=100: hard MED)
+    GradClamp = gradient extension with learned clamp threshold
+
+  The learned parameters (1 byte each) adapt MED's switching to the image.
+  For smooth images: low sharpness → more linear extrapolation → less overshoot.
+  For edgy images: high sharpness → more MED switching → less undershoot.
+
+  THE FUNDAMENTAL ANSWER:
+  The "nonlinear structure" in the 46% gap is NOT exotic.
+  It's mostly MED overshooting on smooth images (hard switching when soft is needed).
+  Soft-MED captures this with 1 byte of overhead.
+

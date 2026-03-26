@@ -1,0 +1,27 @@
+==========================================================================================
+  NONLINEAR PREDICTION: Compositions of linear functions break the ceiling
+  All nonlinear functions = compositions of linear functions (ReLU network)
+  kind-pasteur-2026-03-25-S16
+==========================================================================================
+
+  Image           PNG             MED           Blend       Nonlinear     NL-Adaptive  Deep (2-layer)
+                          sz     sf      sz     sf      sz     sf      sz     sf      sz     sf
+  ----------------------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_nonlinear.py:52: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421    2764  0.189    2675  0.075    2917  0.490    2916  0.512    2918  0.490
+  circles        6978    5565  0.110    6141  0.062    3776  0.431    3879  0.479    3795  0.433
+  grad_h          148      29  0.018      36  0.992     213  0.024     180  0.024     223  0.024
+  natural       12118   12188  0.492   11648  0.515   11793  0.525   11975  0.529   11812  0.523
+
+  KEY: sz = compressed size, sf = spectral flatness (1.0 = optimal whitening)
+
+  THE COMPOSITION THEORY:
+    MED = 1-layer piecewise-linear (3 pieces, hardcoded thresholds)
+    Nonlinear = 1-layer ReLU network (16 features, learned weights)
+    Deep = 2-layer (16 base features + 5 interaction features, learned weights)
+
+  If spectral flatness increases with depth → nonlinear structure IS being captured.
+  If compressed size decreases → the weight overhead is worth the prediction gain.
+  If sf > 0.54 → WE'VE BROKEN THE LINEAR CEILING.
+
