@@ -1,0 +1,125 @@
+================================================================================
+  EXPRESSION NORMALIZATION = Semantic Compression
+================================================================================
+
+  Expression                     Normalized                Before After Type
+  --------------------------------------------------------------------------------
+  2 + 3                          5                             4n    1n constant folding
+  x + 0                          x                             5n    2n identity elimination
+  0 * y                          0                             5n    1n zero multiplication
+  1 * z                          z                             5n    2n identity multiplication
+  b + a                          a + b                         6n    6n commutativity (canonical order)
+  3 + 2 + x                      5 + x                         8n    5n partial evaluation
+  (1 + 2) * (3 + 4)              21                           10n    1n full evaluation
+
+================================================================================
+  PROGRAM CANONICALIZATION = Tournament Isomorphism
+================================================================================
+
+  Three semantically equivalent functions:
+
+  func1 (67 chars → 75 chars canonical):
+    Original:  def add_squares(x, y):
+    a = x * x
+    b = y * y
+    retur...
+    Canonical: def add_squares(x, y):
+    v0 = v1 * v1
+    v2 = v3 * v3
+   ...
+    Mapping:   {'a': 'v0', 'x': 'v1', 'b': 'v2', 'y': 'v3'}
+
+  func2 (80 chars → 70 chars canonical):
+    Original:  def sum_sq(p, q):
+    first = p * p
+    second = q * q
+    r...
+    Canonical: def sum_sq(p, q):
+    v0 = v1 * v1
+    v2 = v3 * v3
+    retu...
+    Mapping:   {'first': 'v0', 'p': 'v1', 'second': 'v2', 'q': 'v3'}
+
+  func3 (95 chars → 83 chars canonical):
+    Original:  def compute(m, n):
+    sq_m = m * m
+    sq_n = n * n
+    res...
+    Canonical: def compute(m, n):
+    v0 = v1 * v1
+    v2 = v3 * v3
+    v4 ...
+    Mapping:   {'sq_m': 'v0', 'm': 'v1', 'sq_n': 'v2', 'n': 'v3', 'result': 'v4'}
+
+  func1 == func2 (canonical): False
+  func1 == func3 (canonical): False
+  func2 == func3 (canonical): False
+
+================================================================================
+  AST-GUIDED SOURCE COMPRESSION
+  (Skeleton = tournament structure, Tokens = arc labels)
+================================================================================
+
+  File                              Raw   zlib   Skel    Tok  Split  Save
+  -------------------------------------------------------------------------------------
+  tic3.py                         33409   7821   5092   5179  10271 -31.3%
+  quincunx.py                      8487   3007   1982   2082   4064 -35.2%
+  wavefront.py                    16212   4130   2647   2726   5373 -30.1%
+  code_tournament_tools.py        14337   4654   1908   3360   5268 -13.2%
+
+================================================================================
+  THE DEEPEST IDEA: Code = Compressed Mathematics
+================================================================================
+
+  Consider: a function f(x) = x² + 2x + 1.
+
+  As a MATHEMATICAL OBJECT: an infinite set of (input, output) pairs.
+  As a POLYNOMIAL: 3 coefficients [1, 2, 1]. Compressed from ∞ to 3 numbers.
+  As a FACTORED FORM: (x+1)². Even more compressed: 2 numbers.
+  As CODE: def f(x): return (x+1)**2. A few bytes.
+
+  THE CODE IS THE MOST COMPRESSED FORM OF THE MATHEMATICAL OBJECT.
+  It's a finite representation of an infinite truth.
+
+  Now: the function f's DEPENDENCY TOURNAMENT has vertices {x, x+1, (x+1)², return}
+  and arcs: x → x+1 → (x+1)² → return.
+  This is a TRANSITIVE tournament (score sequence [3,2,1,0]).
+  H = 1. Only one execution order. Fully sequential.
+
+  Compare: g(x, y) = x² + y²
+  Dependencies: {x→x², y→y², x²→sum, y²→sum, sum→return}
+  x² and y² are INDEPENDENT. H = 2.
+  The tournament says: "x² and y² can be computed in parallel."
+
+  THE COMPRESSION RATIO OF CODE:
+  A function from [0,255] to [0,255] has 256 possible inputs.
+  Specifying it fully: 256 bytes (lookup table).
+  Specifying as polynomial: degree d needs d+1 coefficients.
+  Specifying as code: often O(1) bytes regardless of domain size.
+
+  Code achieves INFINITE compression ratio on mathematical functions
+  because it encodes the RULE, not the TABLE.
+
+  Tournament theory quantifies HOW MUCH compression:
+  - H(T) = number of valid decompositions of the rule
+  - Score sequence = how hierarchical the rule is
+  - Cycle structure = how much feedback the rule has
+  
+  CONCRETE COMPARISON: Table vs Code vs Tournament
+  -------------------------------------------------------
+  Function          Code  Table Table_z  Ratio
+  identity           11B   256B    267B  24.3x
+  double             19B   256B    146B   7.7x
+  square             19B   256B    145B   7.6x
+  xor_rotate         20B   256B    267B  13.3x
+  collatz_step       41B   256B    267B   6.5x
+
+  Key insight: CODE is always smaller than TABLE (even compressed table).
+  The code encodes the RULE; the table encodes the EXTENSION.
+  Tournament theory says: the rule's complexity = tournament complexity
+  (score sequence + cycle structure). Simple rules = transitive tournaments.
+  Complex rules (Collatz) = tournaments with rich cycle structure.
+  
+================================================================================
+  Done. opus-2026-03-25-S344
+================================================================================

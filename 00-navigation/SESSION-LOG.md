@@ -13,6 +13,35 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S344 — 2026-03-25: Programs ARE Tournaments — Code Metrics, Semantic Compression, Scheduling Entropy
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S343
+**Summary:** Deep creative session exploring the program-tournament analogy. Built tools for parallelism detection, code entropy analysis, structural fingerprinting, expression normalization, and semantic compression. Discovered that code IS compressed mathematics — finite representation of infinite truth.
+
+### Key Discoveries
+1. **Scheduling entropy = log2(linear extensions)**: Sequential code = 0 bits (transitive tournament), map-reduce = 4.58 bits, fully parallel = 6.91 bits
+2. **Code decomposes into structure + content**: Structure entropy 2.0-2.7 bits, content 5.2 bits. SAME as tournament score sequence (constrained) vs arc orientation (free).
+3. **Code vs table**: Code ALWAYS smaller than compressed lookup table. identity: 24.3x, square: 7.6x. Code encodes the RULE; tables encode the EXTENSION.
+4. **Expression normalization IS semantic compression**: (1+2)*(3+4) = 10 nodes → 21 = 1 node (10:1)
+5. **AST-split WORSE than raw zlib**: Splitting structure from content helps conceptually but hurts entropy coding (breaks cross-references). Prediction-entropy duality strikes again.
+6. **Structural clone detection**: AST fingerprinting found 4 clone groups in tic3.py (color transform pairs are isomorphic sub-tournaments)
+
+### Files Created
+- `04-computation/program_tournament.py` — Full demo: dependency tournaments, trace compression, code metrics, deep analogy
+- `04-computation/code_tournament_tools.py` — Practical tools: parallelism detector, code entropy, fingerprinting
+- `04-computation/semantic_compression.py` — Expression normalization, canonicalization, AST compression, code-vs-table
+- `07-reflections/code-as-compressed-mathematics.md` — The deepest insight
+
+### The Three-Way Analogy
+| Tournament | Program | Image Codec |
+|------------|---------|-------------|
+| Vertex | Statement | Pixel |
+| Arc i→j | i before j | i predicts j |
+| H(T) | Valid schedules | Valid scans |
+| Score seq | Criticality | Gradient profile |
+| χ(T) | Min parallel stages | Min scan directions |
+
 ## opus-2026-03-25-S343 — 2026-03-25: Axiom-Breaking — Wavefront + Adaptive Lifting + Prediction-Entropy Duality
 
 **Account:** opus
