@@ -1,0 +1,41 @@
+==========================================================================================
+  A² CODEC: Matrix square as compression guide
+  Sign-mag split + row-correlation prediction + M² fingerprinting
+  kind-pasteur-2026-03-25-S15
+==========================================================================================
+
+  Image           PNG      MED    Blend     LPC8  ColSort  SignMag  RowCorr      Raw        BEST  M²_rank
+  ---------------------------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_a2.py:44: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421    2764     2675     1841     1122*    3810     4768     3704      ColSort        1 3.05x
+  circles        6978    5565     6141     3185*    4445     6244     7775     5805         LPC8        6 2.19x
+  grad_d          149      27*      27      262      382       38      414      343          MED        2 5.52x
+  grad_h          148      29*      36       81      136       40      154      152          MED        1 5.10x
+  natural       12100   12180    11695*   12213    15287    12377    12159    13306        Blend        9 1.03x
+  random        16580   16398*   16398    16430    16513    17909    16398    16398          MED      108 1.01x
+  solid           148      24       23*      55      135       35       28       23        Blend        1 6.43x
+  stripes45       229      47*     100       84      225       86      139       52          MED        9 4.87x
+
+  M² FINGERPRINT → METHOD PREDICTION:
+  Image         rank   energy_var  mean_corr     winner
+  -------------------------------------------------------
+  blob             1 1586384375638    1289049    ColSort
+  circles          6 522139409252    2047021       LPC8
+  grad_d           2 1467555675984    2220407        MED
+  grad_h           1            0    2742435        MED
+  natural          9 757877944717    1680437      Blend
+  random         108  47298878670    2067546        MED
+  solid            1            0    2080768      Blend
+  stripes45        9            0    2048288        MED
+
+  PREDICTION RULES (derived from M² fingerprint):
+    rank = 1 (all rows identical):     → ColSort or Raw
+    rank low, energy uniform:          → LPC (inter-row linearity)
+    rank high, energy varied:          → MED (independent rows)
+    high mean_corr:                    → ColSort or RowCorr
+    low mean_corr:                     → MED or Blend
+
+  The M² fingerprint replaces trial compression with O(n²) matrix multiply.
+  Each method has a region in the (rank, energy_var, mean_corr) space.
+
