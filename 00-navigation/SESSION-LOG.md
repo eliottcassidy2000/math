@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S351 — 2026-03-25: tc.html — Unified Demo (19 Features, 345 Lines)
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S350b
+**Summary:** Merged tc_magic.html (scanline animation, explainer, benchmark card) with tic_live.html (full codec, pipeline animation, sharing) into one polished page. 19 features, 345 lines.
+
+### Key Features
+- Full TIC encode/decode with pako.js (real compression, not estimates)
+- Drop image/GIF/video → animated 4-stage compression pipeline
+- Pixelated "compressed" preview with green TC overlay
+- Click preview → animated 4-stage decompression pipeline
+- Green scanline sweeps down revealing the decompressed image
+- GIF plays / video plays with controls after decompress
+- Size bars (TIC green vs PNG purple), stats grid
+- Download .tic, copy tic:// share URL, hex header view
+- How-it-works explainer, Kodak benchmark stats card
+
+### File Created
+- `04-computation/tc.html` — 345 lines, self-contained
+
 ## opus-2026-03-25-S350b — 2026-03-25: TIC Live — Click-to-Decompress with Media Playback
 
 **Account:** opus
