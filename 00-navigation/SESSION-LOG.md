@@ -13,6 +13,31 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S350b — 2026-03-25: TIC Live — Click-to-Decompress with Media Playback
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S350
+**Summary:** Built tic_live.html — unified single-page UX where you drop media, watch compression animate, then click the glowing blob to decompress and play. Handles images, GIFs, and videos seamlessly.
+
+### UX Flow
+1. Drop image/GIF/video → pipeline animates (4 stages)
+2. Compressed blob appears, pulsing green, with size bars
+3. Click blob → decompression pipeline animates
+4. Image displays / GIF plays / Video plays with controls
+5. Download .tic / Copy share URL / Save as PNG
+
+### Key Design Decisions
+- No tabs — single page, linear flow
+- Pulsing blob creates "invitation to click" (discoverability)
+- Pipeline stages light up sequentially (transparency)
+- Hex header view expandable on click (for technical users)
+- GIF: first frame compressed, original plays on decompress
+- Video: keyframe compressed, original plays with controls on decompress
+- Hash URL loading: page.html#tic://base64 for direct sharing
+
+### Files Created
+- `04-computation/tic_live.html` — 509 lines, self-contained
+
 ## opus-2026-03-25-S350 — 2026-03-25: TIC Share — Shareable Compression with Pipeline Visualization
 
 **Account:** opus
