@@ -13,6 +13,27 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S346 — 2026-03-25: Grand Unification + Context-Adaptive Prediction
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S345
+**Summary:** Merged ALL innovations from both agents into TIC v7. Built context-adaptive multi-predictor blend (WL classification at zero overhead). Integrated snake LPC, MED-Wiener blend, and color transforms.
+
+### Key Results
+1. **TIC v7 Grand Unified**: 17/17 beat PNG, merges opus + kind-pasteur
+   - Snake LPC (kind-pasteur): wins on smooth/radial (1.84-2.24x)
+   - Whole/paeth (opus): wins on gradients (2.74-3.65x)
+   - Per-row adaptive (opus): wins on photos (1.36-1.73x)
+2. **Context-Adaptive Blend**: Zero-overhead WL-inspired prediction
+   - Gradient context = implicit WL-1 coloring (64 context classes)
+   - Blends MED+AVG+GRADIENT with learned weights per context
+   - Wins 7.9% on smooth, 9.0% on radial over plain MED
+3. **Fractal WL reading**: Tower-of-ideals decomposition = adaptive wavelet. Hybrid beats PNG 7/7.
+
+### Files Created/Modified
+- `04-computation/tic7_grand.py` — Grand unified codec (12 strategies)
+- `04-computation/adaptive_context.py` — Context-adaptive prediction experiments
+
 ## kind-pasteur-2026-03-21-S12 — 2026-03-21: Deep analysis of Napolitano gauge theory paper & Tournament-Attention bridge
 
 **Account:** kind-pasteur
