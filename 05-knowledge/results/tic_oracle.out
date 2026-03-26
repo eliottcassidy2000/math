@@ -1,0 +1,43 @@
+==========================================================================================
+  THE ORACLE CODEC: Perfect mathematical decoder → work backwards
+  Mixture of 8 experts with exponential weight updates
+  Zero overhead: decoder tracks same weights from same context
+  kind-pasteur-2026-03-25-S17
+==========================================================================================
+
+  Image           PNG           MED         Blend        Oracle
+                         sz    sf     sz    sf     sz    sf    lr
+  ------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_oracle.py:45: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421   2764 0.189   2675 0.075   2923 0.127 0.500  Blend
+  circles        6978   5565 0.110   6141 0.062   5748 0.125 1.000  MED
+  grad_h          148     29 0.018     36 0.992    105 0.082 1.000  MED
+  natural       12118  12188 0.492  11648 0.515  11680 0.517 1.000  Blend
+  random        16580  16398 0.561  16398 0.558  16399 0.551 0.001  MED
+  stripes45       229     47 0.000    100 0.001    291 0.006 1.000  MED
+
+  EXPERT WEIGHT ANALYSIS (natural image, best learning rate):
+  Learning rate: 1.0
+  Average absolute error per expert:
+        left: 12.38
+       above: 12.36
+         avg: 10.33
+         MED: 12.04
+      Wiener: 9.66
+        diag: 13.26
+       lin_h: 19.64
+       lin_v: 19.80
+
+  THE MATHEMATICAL INSIGHT:
+  The oracle's mixture prediction is provably within O(log K / T)
+  of the best expert in hindsight, for K experts over T pixels.
+  For 8 experts, 16384 pixels: regret ≤ log(8)/16384 ≈ 0.0001 bits/pixel.
+
+  This means the oracle automatically converges to the best predictor
+  for each region WITHOUT any overhead for the selection decision.
+  The decoder computes the SAME weights from the SAME decoded context.
+
+  IF the oracle beats Blend: the mixture captures something Blend misses.
+  IF Blend beats oracle: the continuous blend IS the optimal mixture.
+
