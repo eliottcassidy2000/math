@@ -1,0 +1,83 @@
+================================================================================
+  REAL PHOTO COMPRESSION
+  opus-2026-03-25-S339
+================================================================================
+
+  Image: inbox/vlcsnap-2026-03-10-17h12m34s408.png
+  Dimensions: 3840×2160, 3 channels
+  Raw: 24,883,200 bytes
+  PNG file: 8,832,713 bytes
+
+  CROP 128×128 (center):
+    Raw: 49,152 bytes, PNG: 21,293 bytes
+    Best: 12,589 bytes (decorr) = 0.5912× PNG ✓ BEATS PNG
+    Time: 1.1s
+    Top 5:
+                              decorr:   12,589B (0.5912x)
+                   decorr_chsep+lzma:   12,660B (0.5946x)
+                   decorr_paeth+lzma:   13,768B (0.6466x)
+                decorr_adaptive+lzma:   14,000B (0.6575x)
+                   decorr_chsep+zlib:   14,538B (0.6828x)
+
+    Grayscale: PNG=7,978, TC=7,828 (0.9812x) [adaptive+lzma]
+
+  CROP 256×256 (center):
+    Raw: 196,608 bytes, PNG: 63,289 bytes
+    Best: 38,330 bytes (decorr) = 0.6056× PNG ✓ BEATS PNG
+    Time: 4.9s
+    Top 5:
+                              decorr:   38,330B (0.6056x)
+                   decorr_chsep+lzma:   39,196B (0.6193x)
+                decorr_adaptive+lzma:   40,740B (0.6437x)
+                   decorr_paeth+lzma:   41,720B (0.6592x)
+                    decorr_paeth+bz2:   42,669B (0.6742x)
+
+    Grayscale: PNG=25,379, TC=23,488 (0.9255x) [adaptive+lzma]
+
+  CROP 512×512 (center):
+    Raw: 786,432 bytes, PNG: 234,166 bytes
+    Best: 139,720 bytes (decorr) = 0.5967× PNG ✓ BEATS PNG
+    Time: 21.4s
+    Top 5:
+                              decorr:  139,720B (0.5967x)
+                   decorr_chsep+lzma:  144,716B (0.6180x)
+                decorr_adaptive+lzma:  147,416B (0.6295x)
+                    decorr_paeth+bz2:  151,413B (0.6466x)
+                   decorr_paeth+lzma:  151,444B (0.6467x)
+
+    Grayscale: PNG=95,808, TC=88,104 (0.9196x) [adaptive+lzma]
+
+  FULL IMAGE (grayscale only, 3840×2160):
+    Gray PNG: 2,747,933 bytes
+    Best: 2,521,276 bytes (paeth+lzma) = 0.9175× PNG ✓ BEATS PNG
+    Time: 35.0s
+      paeth+lzma: 2,521,276 bytes
+      paeth+bz2: 2,665,591 bytes
+      delta+lzma: 2,723,012 bytes
+
+================================================================================
+  RESULTS SUMMARY
+================================================================================
+
+  The real desk scene photo (vlcsnap, 3840×2160):
+
+  PNG's advantage on natural photos:
+    PNG uses adaptive per-row filtering (5 filters) + optimized deflate.
+    For photos with complex textures, this is very hard to beat.
+
+  Our advantage:
+    1. Multi-backend: lzma has larger dictionary than zlib (PNG's backend)
+    2. Color decorrelation: G-RG-BG reduces inter-channel redundancy
+    3. Row-adaptive with 5 filters: matches PNG's filter selection
+    4. Combined: multiple strategies tried, best picked per image
+
+  On natural photos, the margin is THIN. PNG is a 30-year-old format
+  optimized specifically for this case. Beating it by even 1% is
+  significant. Beating it by 5-10% requires fundamentally different
+  approaches (like JPEG-XL's modular encoding or FLIF's MANIAC trees).
+
+  Our structural context mixing principle provides the THEORETICAL
+  framework for such approaches: use WL coloring to identify
+  structural regions, then apply optimal prediction per region.
+
+DONE.
