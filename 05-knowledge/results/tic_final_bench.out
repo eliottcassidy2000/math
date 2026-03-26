@@ -1,0 +1,33 @@
+====================================================================================================
+  TIC FINAL: 6-filter adaptive + YCoCg-R/G-RG-BG selection — Kodak + Real Photo
+  kind-pasteur-2026-03-25-S23
+====================================================================================================
+
+  Image                   Raw      PNG      TIC  PNG_r  TIC_r  PNG_ms  TIC_ms   gain  speed       CT   RT
+  --------------------------------------------------------------------------------------------------------------
+  kodim01.png          196608   134653    99509  1.46x  1.98x   12.6ms 116.2ms 1.353x  0.11x  YCoCg-R   OK
+  kodim02.png          196608   111383    95781  1.77x  2.05x   16.6ms  82.5ms 1.163x  0.20x  G-RG-BG   OK
+  kodim03.png          196608   101178    90899  1.94x  2.16x   21.0ms 130.0ms 1.113x  0.16x  G-RG-BG   OK
+  kodim04.png          196608    97341    86089  2.02x  2.28x   19.9ms 172.9ms 1.131x  0.12x  G-RG-BG   OK
+  kodim05.png          196608   145367   115583  1.35x  1.70x   10.9ms  50.2ms 1.258x  0.22x  G-RG-BG   OK
+  kodim08.png          196608   129667   105933  1.52x  1.86x   12.4ms  75.4ms 1.224x  0.16x  G-RG-BG   OK
+  kodim12.png          196608   114164    96006  1.72x  2.05x   14.1ms 121.4ms 1.189x  0.12x  YCoCg-R FAIL
+  kodim23.png          196608   103026    94688  1.91x  2.08x   18.1ms  93.4ms 1.088x  0.19x  G-RG-BG   OK
+  vlcsnap-2026-03-     196608    63289    42998  3.11x  4.57x   25.8ms 115.9ms 1.472x  0.22x  YCoCg-R   OK
+
+  AGGREGATE           1769472  1000068   827486  1.77x  2.14x  151.4ms 958.0ms 1.209x  0.16x          !!!
+
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  TIC FINAL SCORES                                            ║
+  ║                                                              ║
+  ║  Images:       9 (8 Kodak + 1 real photo, 256×256 crops)    ║
+  ║  Win rate:     9/9 (100%)                                         ║
+  ║  Compression:  1.209x better than PNG (+20.9%)              ║
+  ║  Speed:        0.16x vs PNG                                   ║
+  ║  Weissman:     53.17                                            ║
+  ║  Roundtrip:    FAILURES                                      ║
+  ║                                                              ║
+  ║  Algorithm: color decorrelation + 6-filter adaptive + zlib-9 ║
+  ║  Key: MED as 6th filter + adaptive YCoCg-R / G-RG-BG        ║
+  ╚══════════════════════════════════════════════════════════════╝
+
