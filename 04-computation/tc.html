@@ -11,25 +11,34 @@
 --green:#3fb950;--gbg:#238636;--blue:#58a6ff;--purple:#8957e5;--orange:#f0883e;--red:#f85149}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
 a{color:var(--blue);text-decoration:none}
-.hero{text-align:center;padding:24px 16px 10px;background:linear-gradient(135deg,#0d1117,var(--card))}
+.hero{text-align:center;padding:22px 16px 10px;background:linear-gradient(135deg,#0d1117,var(--card));position:relative}
 .hero h1{font-size:1.9em;background:linear-gradient(90deg,var(--blue),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{color:var(--muted);margin-top:3px;font-size:.88em}
-.wrap{max-width:900px;margin:0 auto;padding:8px 16px 20px}
+.hero p{color:var(--muted);margin-top:3px;font-size:.86em}
+.mode-toggle{position:absolute;right:16px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:6px}
+.mode-toggle label{font-size:.76em;color:var(--muted);cursor:pointer}
+.sw{width:36px;height:20px;background:var(--border);border-radius:10px;position:relative;cursor:pointer;transition:.2s}
+.sw::after{content:'';width:16px;height:16px;background:var(--muted);border-radius:50%;position:absolute;top:2px;left:2px;transition:.2s}
+.sw.on{background:var(--gbg)}.sw.on::after{left:18px;background:#fff}
+.wrap{max-width:900px;margin:0 auto;padding:6px 16px 20px}
 .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;margin:10px 0}
 .drop{border:2px dashed var(--border);border-radius:14px;padding:44px 16px;text-align:center;cursor:pointer;transition:.25s;position:relative}
 .drop:hover,.drop.over{border-color:var(--green);background:rgba(63,185,80,.04)}
 .drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+/* Pipeline */
 .pipe{display:flex;gap:5px;align-items:center;justify-content:center;flex-wrap:wrap;margin:12px 0}
 .step{background:#21262d;border:2px solid var(--border);border-radius:9px;padding:8px 12px;text-align:center;min-width:88px;transition:.3s}
 .step.on{border-color:var(--green);box-shadow:0 0 8px rgba(63,185,80,.25)}
 .step.ok{border-color:var(--gbg);background:#0d1117}
 .step.err{border-color:var(--red);box-shadow:0 0 8px rgba(248,81,73,.25)}
-.step .si{font-size:1.3em}.step .sn{font-size:.72em;font-weight:600;margin-top:1px}.step .sd{font-size:.62em;color:var(--dim);margin-top:1px}
+.step .si{font-size:1.3em}.step .sn{font-size:.72em;font-weight:600;margin-top:1px}.step .sd{font-size:.62em;color:var(--dim)}
 .arr{color:var(--border);font-size:1em;font-weight:bold}
+/* Canvas & preview */
 canvas{border-radius:7px;border:1px solid var(--border);max-width:100%;cursor:pointer;transition:.15s}
 canvas:hover{box-shadow:0 0 14px rgba(63,185,80,.2)}
+canvas.draw-mode{cursor:crosshair}
 .row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start}
 .row>div{flex:1;min-width:200px;text-align:center}
+/* Bars & stats */
 .bar-r{margin:5px 0}.bar-l{display:flex;justify-content:space-between;font-size:.72em;color:var(--muted);margin-bottom:2px}
 .bar{background:#21262d;border-radius:12px;height:22px;overflow:hidden}
 .bar .fill{height:100%;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.7em;color:#fff;transition:width .7s}
@@ -43,16 +52,18 @@ canvas:hover{box-shadow:0 0 14px rgba(63,185,80,.2)}
 .bg{background:var(--gbg);color:#fff}.bg:hover{background:#2ea043}
 .bb{background:#1f6feb;color:#fff}.bb:hover{background:#388bfd}
 .bs{padding:5px 12px;font-size:.75em;background:#21262d;color:var(--muted);border:1px solid var(--border);border-radius:6px;cursor:pointer}.bs:hover{color:var(--text);border-color:var(--muted)}
-
-/* The hex editor — this IS the compressed data */
+.bs.active{background:var(--gbg);color:#fff;border-color:var(--gbg)}
+/* Hex editor */
 .hex-ed{background:#0d1117;border:1px solid var(--border);border-radius:8px;padding:10px;margin:10px 0;position:relative}
 .hex-ed label{display:block;font-size:.72em;color:var(--muted);margin-bottom:4px;font-weight:600}
-.hex-ed textarea{width:100%;min-height:80px;max-height:200px;background:#000;border:1px solid #21262d;border-radius:6px;color:#7ee787;font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.72em;line-height:1.5;padding:8px;resize:vertical}
+.hex-ed textarea{width:100%;min-height:70px;max-height:200px;background:#000;border:1px solid #21262d;border-radius:6px;color:#7ee787;font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.7em;line-height:1.5;padding:8px;resize:vertical}
 .hex-ed textarea:focus{outline:none;border-color:var(--green)}
 .hex-ed textarea.dirty{border-color:var(--orange);color:var(--orange)}
 .hex-ed .hex-info{font-size:.68em;color:var(--dim);margin-top:3px;display:flex;justify-content:space-between}
-.hex-ed .warn{color:var(--orange);font-size:.72em;margin-top:3px}
-
+/* Draw toolbar */
+.toolbar{display:flex;gap:5px;align-items:center;flex-wrap:wrap;margin:6px 0;padding:6px 10px;background:#0d1117;border-radius:8px;border:1px solid var(--border)}
+.toolbar .lbl{font-size:.72em;color:var(--muted)}
+/* Explainer */
 .explain{margin:10px 0;color:var(--muted);font-size:.84em;line-height:1.6}
 .explain strong{color:var(--text)}.explain ol{margin:6px 0 0 18px}
 .hidden{display:none}
@@ -65,13 +76,18 @@ footer{text-align:center;padding:14px;color:var(--dim);font-size:.7em}
 <div class="hero">
 <h1>Tournament Compression</h1>
 <p>Drop media. Compress it for real. Edit the bytes. Click to decode.</p>
+<div class="mode-toggle">
+<label>View</label>
+<div class="sw" id="modeSw" onclick="toggleMode()"></div>
+<label>Draw</label>
+</div>
 </div>
 <div class="wrap">
 <div class="card"><div class="drop" id="dz">
-<div style="font-size:2.8em;margin-bottom:6px">📷 🎬 🖼️</div>
+<div style="font-size:2.6em;margin-bottom:6px">📷 🎬 🖼️</div>
 <p style="font-size:1em"><strong>Drop any image, GIF, or video</strong></p>
 <p style="color:var(--muted);margin-top:3px;font-size:.84em">PNG, JPG, WebP, GIF, MP4, WebM</p>
-<p style="color:var(--dim);margin-top:5px;font-size:.72em">100% in-browser. The compressed bytes are real — you can edit them.</p>
+<p style="color:var(--dim);margin-top:5px;font-size:.72em">100% in-browser. The compressed bytes are real — edit them.</p>
 <input type="file" id="fi" accept="image/*,video/*,.gif">
 </div></div>
 <div id="out"></div>
@@ -79,10 +95,10 @@ footer{text-align:center;padding:14px;color:var(--dim);font-size:.7em}
 <h3 style="color:var(--blue);margin-bottom:4px;font-size:.9em">How it works</h3>
 <ol>
 <li><strong>Decorrelate</strong> — G, R−G, B−G. Each channel becomes independent.</li>
-<li><strong>Predict</strong> — 6 filters tested per row. The winner makes residuals tiny.</li>
+<li><strong>Predict</strong> — 6 filters tested per row. Best residuals are tiny.</li>
 <li><strong>Deflate</strong> — zlib compresses the near-zero residuals.</li>
 </ol>
-<p style="margin-top:6px">The hex editor below the image shows the <strong>actual compressed bytes</strong>. Edit any byte and click the image — the decoder runs on your modified data. Corrupted bytes produce real glitch art.</p>
+<p style="margin-top:6px">The hex editor shows <strong>actual compressed bytes</strong>. Edit any byte, click the image — the decoder runs on your modified data. Toggle <strong>Draw</strong> mode to paint on the image and watch the compression update live.</p>
 </div>
 <div class="card" style="text-align:center">
 <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap">
@@ -93,7 +109,7 @@ footer{text-align:center;padding:14px;color:var(--dim);font-size:.7em}
 </div>
 <footer>Tournament Compression · opus-2026-03-25 · <a href="https://github.com/eliottcassidy2000/math">source</a></footer>
 <script>
-/* === TIC CODEC === */
+/* === TIC CODEC (6 filters, GRD, pako zlib) === */
 function med(a,b,c){const mn=Math.min(a,b),mx=Math.max(a,b);return c>=mx?mn:c<=mn?mx:a+b-c}
 function pp(a,b,c){const p=a+b-c,pa=Math.abs(p-a),pb=Math.abs(p-b),pc=Math.abs(p-c);return pa<=pb&&pa<=pc?a:pb<=pc?b:c}
 function gp(f,a,b,c){return[0,a,b,(a+b)>>1,pp(a,b,c),med(a,b,c)][f]}
@@ -113,7 +129,6 @@ function ticEnc(imgData,w,h){
   hdr[5]=w&0xFF;hdr[6]=(w>>8)&0xFF;hdr[7]=h&0xFF;hdr[8]=(h>>8)&0xFF;hdr[9]=3;hdr[10]=1;hdr[11]=0;
   const out=new Uint8Array(12+comp.length);out.set(hdr);out.set(comp,12);return out;
 }
-
 function ticDec(d){
   if(d[0]!==0x54||d[1]!==0x49||d[2]!==0x43||d[3]!==0x21)throw Error('Bad magic');
   const w=d[5]|(d[6]<<8),h=d[7]|(d[8]<<8),ch=d[9];
@@ -122,18 +137,18 @@ function ticDec(d){
   return{rgba:frG(pls[0],pls[1],pls[2],w,h),w,h};
 }
 
-/* === PIPELINE === */
+/* === PIPELINE HTML === */
 const ES=[{id:'ct',i:'🎨',n:'Decorrelate',d:'G, R−G, B−G'},{id:'pr',i:'🔮',n:'Predict',d:'6 filters/row'},{id:'df',i:'📦',n:'Deflate',d:'zlib'},{id:'pk',i:'💾',n:'Pack',d:'.tic'}];
 const DS=[{id:'up',i:'📬',n:'Unpack',d:'Header'},{id:'in',i:'📦',n:'Inflate',d:'zlib'},{id:'un',i:'🔮',n:'Unpredict',d:'Reverse'},{id:'rc',i:'🎨',n:'Recombine',d:'RGB'}];
 function pH(stg,pfx){let h='<div class="pipe">';stg.forEach((s,i)=>{if(i)h+='<div class="arr">→</div>';h+=`<div class="step" id="${pfx}${s.id}"><div class="si">${s.i}</div><div class="sn">${s.n}</div><div class="sd">${s.d}</div></div>`});return h+'</div>'}
 function sS(pfx,id,cls){const el=document.getElementById(pfx+id);if(el){el.classList.remove('on','ok','err');if(cls)el.classList.add(cls)}}
 
-/* === HEX UTILS === */
+/* === HEX === */
 function toHex(d){let s='';for(let i=0;i<d.length;i++){if(i>0&&i%16===0)s+='\n';else if(i>0)s+=' ';s+=d[i].toString(16).padStart(2,'0')}return s}
-function fromHex(s){const bytes=[];const tokens=s.replace(/[^0-9a-fA-F]/g,' ').trim().split(/\s+/);for(const t of tokens){if(t.length===2){const v=parseInt(t,16);if(!isNaN(v))bytes.push(v)}}return new Uint8Array(bytes)}
+function fromHex(s){const bytes=[];const tokens=s.replace(/[^0-9a-fA-F]/g,' ').trim().split(/\s+/);for(const t of tokens){if(t.length>=2){const v=parseInt(t.substring(0,2),16);if(!isNaN(v))bytes.push(v)}}return new Uint8Array(bytes)}
 
 /* === STATE === */
-let ticData=null,origCv=null,mBlob=null,mType=null,imgW=0,imgH=0;
+let ticData=null,origCv=null,mBlob=null,mType=null,imgW=0,imgH=0,interactive=false,drawing=false,tool='draw';
 
 /* === DROP === */
 const dz=document.getElementById('dz'),fi=document.getElementById('fi'),out=document.getElementById('out');
@@ -141,6 +156,14 @@ dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('over')})
 dz.addEventListener('dragleave',()=>dz.classList.remove('over'));
 dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('over');go(e.dataTransfer.files[0])});
 fi.addEventListener('change',e=>{if(e.target.files[0])go(e.target.files[0])});
+
+/* === MODE TOGGLE === */
+function toggleMode(){
+  interactive=!interactive;
+  document.getElementById('modeSw').classList.toggle('on',interactive);
+  const tb=document.getElementById('drawBar');if(tb)tb.classList.toggle('hidden',!interactive);
+  const cv=document.getElementById('prevCv');if(cv)cv.classList.toggle('draw-mode',interactive);
+}
 
 function go(file){
   if(!file)return;mBlob=file;
@@ -157,7 +180,7 @@ function go(file){
 function doCompress(cv,w,h,file){
   origCv=cv;imgW=w;imgH=h;
   const imgData=cv.getContext('2d').getImageData(0,0,w,h);
-  out.innerHTML=`<div class="card fade">${pH(ES,'e')}<div id="encSt" style="text-align:center;color:var(--muted);font-size:.78em">Compressing...</div></div>`;
+  out.innerHTML=`<div class="card fade">${pH(ES,'e')}</div>`;
   const D=60;
   setTimeout(()=>{sS('e','ct','on');setTimeout(()=>{sS('e','ct','ok');sS('e','pr','on');setTimeout(()=>{sS('e','pr','ok');sS('e','df','on');
   setTimeout(()=>{const t0=performance.now();ticData=ticEnc(imgData,w,h);const ms=performance.now()-t0;
@@ -167,39 +190,43 @@ function doCompress(cv,w,h,file){
 }
 
 function showCompressed(pngSz,ticSz,w,h,file,ms){
-  document.getElementById('encSt')?.remove();
   const ratio=(pngSz/ticSz).toFixed(2),saving=Math.max(0,Math.round((1-ticSz/pngSz)*100)),mx=Math.max(ticSz,pngSz);
   out.innerHTML+=`<div class="card fade">
+  <div class="toolbar hidden" id="drawBar">
+    <button class="btn bs active" id="btnDraw" onclick="setTool('draw')">✏️ Draw</button>
+    <button class="btn bs" id="btnErase" onclick="setTool('erase')">🧹 Erase</button>
+    <button class="btn bs" onclick="clearDraw()">🗑 Clear</button>
+    <span class="lbl" id="brushLbl">red 3px</span>
+  </div>
   <div class="row">
     <div>
-      <canvas id="prevCv" width="${w}" height="${h}" title="Click to decode from the hex data below"></canvas>
+      <canvas id="prevCv" width="${w}" height="${h}" title="Click to decode / Draw in interactive mode"></canvas>
       <p style="font-size:.75em;color:var(--green);margin-top:3px" id="hint">▶ Click to decode from hex below</p>
     </div>
     <div style="flex:1.2;min-width:240px">
       <div style="text-align:center;margin:4px 0"><span class="badge">${saving}% smaller</span> <span style="color:var(--green);font-weight:bold">${ratio}×</span> <span style="color:var(--muted);font-size:.84em">vs PNG</span></div>
       <div class="bar-r"><div class="bar-l"><span>TIC ${ticSz.toLocaleString()}B</span></div><div class="bar"><div class="fill ftc" style="width:${Math.max(4,ticSz/mx*100)}%">${(ticSz/1024).toFixed(1)}KB</div></div></div>
       <div class="bar-r"><div class="bar-l"><span>PNG ${pngSz.toLocaleString()}B</span></div><div class="bar"><div class="fill fpng" style="width:${Math.max(4,pngSz/mx*100)}%">${(pngSz/1024).toFixed(1)}KB</div></div></div>
-      <div class="stats"><div class="st"><div class="v">${ms.toFixed(0)}ms</div><div class="l">encode</div></div><div class="st"><div class="v">${file.size?(file.size/1024).toFixed(0)+'KB':'—'}</div><div class="l">original</div></div><div class="st"><div class="v">✓</div><div class="l">lossless</div></div><div class="st"><div class="v">${w}×${h}</div><div class="l">pixels</div></div></div>
+      <div class="stats" id="statsGrid"><div class="st"><div class="v">${ms.toFixed(0)}ms</div><div class="l">encode</div></div><div class="st"><div class="v">${file.size?(file.size/1024).toFixed(0)+'KB':'—'}</div><div class="l">original</div></div><div class="st"><div class="v">✓</div><div class="l">lossless</div></div><div class="st"><div class="v">${w}×${h}</div><div class="l">pixels</div></div></div>
     </div>
   </div>
-
   <div class="hex-ed">
-    <label>Compressed data (edit any byte, then click the image to decode your changes)</label>
+    <label>Compressed data — edit any byte, then click image to decode (or draw in interactive mode)</label>
     <textarea id="hexBox" spellcheck="false">${toHex(ticData)}</textarea>
     <div class="hex-info"><span id="hexLen">${ticData.length} bytes</span><span id="hexDirty"></span></div>
   </div>
-
   <div class="actions">
     <button class="btn bg" onclick="dlTic('${file.name}')">Download .tic</button>
     <button class="btn bb" onclick="cpUrl()">Copy Share URL</button>
     <button class="btn bs" onclick="randomize()">Randomize 10 bytes</button>
     <button class="btn bs" onclick="corruptPayload()">Corrupt payload</button>
-    <button class="btn bs" onclick="resetHex()">Reset to original</button>
+    <button class="btn bs" onclick="resetHex()">Reset</button>
+    <button class="btn bs" onclick="location.reload()">New</button>
   </div>
   <p id="msg" style="text-align:center;color:var(--green);font-size:.75em;min-height:.9em;margin-top:3px"></p>
   </div><div id="decOut"></div>`;
 
-  // Draw pixelated preview
+  // Pixelated preview
   const pc=document.getElementById('prevCv'),ctx=pc.getContext('2d');
   const sm=document.createElement('canvas');sm.width=Math.max(1,w>>3);sm.height=Math.max(1,h>>3);
   sm.getContext('2d').drawImage(origCv,0,0,sm.width,sm.height);
@@ -207,147 +234,120 @@ function showCompressed(pngSz,ticSz,w,h,file,ms){
   ctx.fillStyle='rgba(35,134,54,.6)';ctx.fillRect(w/2-30,h/2-14,60,28);
   ctx.fillStyle='#fff';ctx.font='bold 14px monospace';ctx.textAlign='center';ctx.fillText('▶ TC',w/2,h/2+5);
 
-  // Track hex edits
+  // Hex dirty tracking
   const box=document.getElementById('hexBox');
   box.addEventListener('input',()=>{
     const cur=fromHex(box.value);
     const dirty=cur.length!==ticData.length||cur.some((v,i)=>v!==ticData[i]);
     box.classList.toggle('dirty',dirty);
     document.getElementById('hexDirty').textContent=dirty?'modified':'';
-    document.getElementById('hexDirty').style.color=dirty?'var(--orange)':'';
     document.getElementById('hexLen').textContent=cur.length+' bytes';
+    if(interactive)liveDecodeFromHex(); // live update in draw mode
   });
 
-  // Click to decode — ALWAYS from the hex box data
-  pc.onclick=()=>decodeFromHex();
+  // Click/draw handlers
+  pc.addEventListener('mousedown',e=>{if(interactive){drawing=true;drawAt(e,pc)}else decodeFromHex()});
+  pc.addEventListener('mousemove',e=>{if(interactive&&drawing)drawAt(e,pc)});
+  pc.addEventListener('mouseup',()=>{if(interactive){drawing=false;reencodeCanvas()}});
+  pc.addEventListener('mouseleave',()=>{if(interactive&&drawing){drawing=false;reencodeCanvas()}});
+  // Touch
+  pc.addEventListener('touchstart',e=>{if(interactive){e.preventDefault();drawing=true;drawAtT(e,pc)}});
+  pc.addEventListener('touchmove',e=>{if(interactive){e.preventDefault();drawAtT(e,pc)}});
+  pc.addEventListener('touchend',()=>{if(interactive){drawing=false;reencodeCanvas()}});
+
+  if(interactive)document.getElementById('drawBar').classList.remove('hidden'),pc.classList.add('draw-mode');
 }
 
-/* === DECODE — genuinely from the hex data === */
+/* === DRAWING === */
+function setTool(t){
+  tool=t;
+  document.getElementById('btnDraw').classList.toggle('active',t==='draw');
+  document.getElementById('btnErase').classList.toggle('active',t==='erase');
+  document.getElementById('brushLbl').textContent=t==='draw'?'red 3px':'white 3px';
+}
+function drawAt(e,cv){
+  const r=cv.getBoundingClientRect(),x=(e.clientX-r.left)*cv.width/r.width,y=(e.clientY-r.top)*cv.height/r.height;
+  const ctx=cv.getContext('2d');ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);
+  ctx.fillStyle=tool==='draw'?'#ff3333':'#ffffff';ctx.fill();
+}
+function drawAtT(e,cv){const t=e.touches[0];drawAt({clientX:t.clientX,clientY:t.clientY},cv)}
+function clearDraw(){
+  if(!origCv)return;const pc=document.getElementById('prevCv');
+  pc.getContext('2d').drawImage(origCv,0,0);reencodeCanvas();
+}
+function reencodeCanvas(){
+  const pc=document.getElementById('prevCv');
+  const imgData=pc.getContext('2d').getImageData(0,0,imgW,imgH);
+  const t0=performance.now();ticData=ticEnc(imgData,imgW,imgH);const ms=performance.now()-t0;
+  document.getElementById('hexBox').value=toHex(ticData);
+  document.getElementById('hexBox').classList.remove('dirty');
+  document.getElementById('hexLen').textContent=ticData.length+' bytes';
+  document.getElementById('hexDirty').textContent='';
+  // Update stats
+  pc.toBlob(blob=>{
+    const pngSz=blob?blob.size:imgW*imgH*3,ticSz=ticData.length;
+    const sg=document.getElementById('statsGrid');
+    if(sg)sg.innerHTML=`<div class="st"><div class="v">${ms.toFixed(0)}ms</div><div class="l">encode</div></div><div class="st"><div class="v">${(ticSz/1024).toFixed(1)}KB</div><div class="l">TIC</div></div><div class="st"><div class="v">${(pngSz/1024).toFixed(1)}KB</div><div class="l">PNG</div></div><div class="st"><div class="v">${(pngSz/ticSz).toFixed(2)}×</div><div class="l">ratio</div></div>`;
+  },'image/png');
+}
+
+/* === LIVE DECODE FROM HEX (interactive mode) === */
+let liveTimer=null;
+function liveDecodeFromHex(){
+  if(liveTimer)clearTimeout(liveTimer);
+  liveTimer=setTimeout(()=>{
+    try{
+      const data=fromHex(document.getElementById('hexBox').value);
+      const res=ticDec(data);
+      const pc=document.getElementById('prevCv'),ctx=pc.getContext('2d');
+      const imgD=ctx.createImageData(res.w,res.h);imgD.data.set(res.rgba);ctx.putImageData(imgD,0,0);
+    }catch(e){}
+  },150);
+}
+
+/* === DECODE FROM HEX (click mode) === */
 function decodeFromHex(){
-  const box=document.getElementById('hexBox');
-  const data=fromHex(box.value);
+  const data=fromHex(document.getElementById('hexBox').value);
   const area=document.getElementById('decOut');
-  area.innerHTML=`<div class="card fade">${pH(DS,'d')}<div id="decSt" style="text-align:center;color:var(--muted);font-size:.78em">Decoding ${data.length} bytes...</div></div>`;
-
-  const hint=document.getElementById('hint');
-  if(hint)hint.textContent='Decoding...';
-
+  area.innerHTML=`<div class="card fade">${pH(DS,'d')}</div>`;
+  const hint=document.getElementById('hint');if(hint)hint.textContent='Decoding...';
   const D=55;
   setTimeout(()=>{sS('d','up','on');setTimeout(()=>{
-    // Unpack — check header
-    let headerOk=data.length>=12&&data[0]===0x54&&data[1]===0x49&&data[2]===0x43&&data[3]===0x21;
-    sS('d','up',headerOk?'ok':'err');
-    if(!headerOk){
-      document.getElementById('decSt').innerHTML='<span style="color:var(--red)">Bad header — magic bytes should be 54 49 43 21 (TIC!)</span>';
-      if(hint)hint.textContent='✗ Bad header';hint.style.color='var(--red)';return;
-    }
-
+    let ok=data.length>=12&&data[0]===0x54&&data[1]===0x49&&data[2]===0x43&&data[3]===0x21;
+    sS('d','up',ok?'ok':'err');if(!ok){if(hint){hint.textContent='Bad header';hint.style.color='var(--red)'}return}
     sS('d','in','on');setTimeout(()=>{
-      // Inflate
-      let payload;
-      try{payload=pako.inflate(data.subarray(12));sS('d','in','ok')}
-      catch(e){sS('d','in','err');
-        document.getElementById('decSt').innerHTML=`<span style="color:var(--orange)">Inflate error: ${e.message}. Trying raw decode...</span>`;
-        // Fall through with corrupted data — try to show SOMETHING
-        payload=data.subarray(12); // raw bytes, will produce glitches
-        sS('d','in','err');
-      }
-
+      let payload;try{payload=pako.inflate(data.subarray(12));sS('d','in','ok')}catch(e){payload=data.subarray(12);sS('d','in','err')}
       sS('d','un','on');setTimeout(()=>{
-        // Unpredict — this is where glitches become visible
         const w=data[5]|(data[6]<<8),h=data[7]|(data[8]<<8),ch=data[9]||3;
         let pls=[],decOk=true;
-        try{
-          let off=0;
-          for(let c=0;c<Math.min(ch,3);c++){
-            if(off>=payload.length){pls.push(new Uint8Array(w*h));continue}
-            const{plane,next}=decP(payload,off,w,h);pls.push(plane);off=next;
-          }
-          while(pls.length<3)pls.push(new Uint8Array(w*h));
-        }catch(e){decOk=false;
-          // Fill missing planes with whatever we decoded
-          while(pls.length<3)pls.push(new Uint8Array(w*h));
-        }
-        sS('d','un',decOk?'ok':'err');
-
-        sS('d','rc','on');setTimeout(()=>{
-          const ct=data[10]||1;
-          let rgba;
-          try{rgba=ct===1?frG(pls[0],pls[1],pls[2],w,h):frG(pls[0],pls[1],pls[2],w,h)}
-          catch(e){rgba=new Uint8Array(w*h*4);for(let i=0;i<w*h;i++)rgba[i*4+3]=255}
+        try{let off=0;for(let c=0;c<Math.min(ch,3);c++){if(off>=payload.length){pls.push(new Uint8Array(w*h));continue}const{plane,next}=decP(payload,off,w,h);pls.push(plane);off=next}while(pls.length<3)pls.push(new Uint8Array(w*h))}catch(e){decOk=false;while(pls.length<3)pls.push(new Uint8Array(w*h))}
+        sS('d','un',decOk?'ok':'err');sS('d','rc','on');
+        setTimeout(()=>{
+          let rgba;try{rgba=frG(pls[0],pls[1],pls[2],w,h)}catch(e){rgba=new Uint8Array(w*h*4);for(let i=0;i<w*h;i++)rgba[i*4+3]=255}
           sS('d','rc',decOk?'ok':'err');
-
           // Scanline reveal
           const pc=document.getElementById('prevCv'),pctx=pc.getContext('2d');
-          const decCv=document.createElement('canvas');decCv.width=w;decCv.height=h;
-          const dctx=decCv.getContext('2d'),imgD=dctx.createImageData(w,h);
-          imgD.data.set(rgba);dctx.putImageData(imgD,0,0);
-
-          const t0=performance.now();
+          const dCv=document.createElement('canvas');dCv.width=w;dCv.height=h;
+          const dCtx=dCv.getContext('2d'),imgD=dCtx.createImageData(w,h);imgD.data.set(rgba);dCtx.putImageData(imgD,0,0);
           let row=0;const rps=Math.max(1,Math.floor(h/22));
-          function scan(){
-            const end=Math.min(row+rps,h);
-            pctx.drawImage(decCv,0,row,w,end-row,0,row,w,end-row);
-            if(end<h){pctx.fillStyle=decOk?'var(--green)':'var(--orange)';pctx.fillRect(0,end,w,2)}
-            row=end;
-            if(row<h)requestAnimationFrame(scan);
-            else{
-              pctx.drawImage(decCv,0,0);
-              document.getElementById('decSt')?.remove();
-              if(hint){hint.textContent=decOk?'✓ Decoded — bit-perfect':'⚠ Decoded with glitches (data was modified)';hint.style.color=decOk?'var(--green)':'var(--orange)'}
-              showResult(rgba,w,h,performance.now()-t0,decCv,decOk);
-            }
-          }
-          requestAnimationFrame(scan);
+          function scan(){const end=Math.min(row+rps,h);pctx.drawImage(dCv,0,row,w,end-row,0,row,w,end-row);
+            if(end<h){pctx.fillStyle=decOk?'var(--green)':'var(--orange)';pctx.fillRect(0,end,w,2)}row=end;
+            if(row<h)requestAnimationFrame(scan);else{pctx.drawImage(dCv,0,0);
+              if(hint){hint.textContent=decOk?'✓ Decoded — pixel-perfect':'⚠ Decoded with glitches';hint.style.color=decOk?'var(--green)':'var(--orange)'}
+              window._dCv=dCv;
+            }}requestAnimationFrame(scan);
         },D)},D+30)},D)},D)},15);
 }
 
-function showResult(rgba,w,h,ms,decCv,ok){
-  const area=document.getElementById('decOut');
-  let media='';
-  if(mType==='gif'&&mBlob&&ok){
-    media=`<img src="${URL.createObjectURL(mBlob)}" style="max-width:100%;max-height:360px;border-radius:7px;border:1px solid var(--border)"><p style="font-size:.72em;color:var(--muted);margin-top:3px">GIF playing</p>`;
-  }else if(mType==='video'&&mBlob&&ok){
-    media=`<video src="${URL.createObjectURL(mBlob)}" controls autoplay loop muted style="max-width:100%;max-height:360px;border-radius:7px;border:1px solid var(--border)"></video><p style="font-size:.72em;color:var(--muted);margin-top:3px">Video playing</p>`;
-  }else{
-    media=`<canvas id="fCv" width="${w}" height="${h}"></canvas><p style="font-size:.72em;color:${ok?'var(--muted)':'var(--orange)'};margin-top:3px">${ok?'Pixel-perfect decode':'Glitch decode — data was modified'} · ${Math.round(ms)}ms</p>`;
-  }
-  area.innerHTML+=`<div class="card fade"><div style="text-align:center">${media}</div>
-    <div class="stats"><div class="st"><div class="v">${w}×${h}</div><div class="l">pixels</div></div><div class="st"><div class="v">${Math.round(ms)}ms</div><div class="l">decode</div></div><div class="st"><div class="v">${ok?'✓':'⚠'}</div><div class="l">${ok?'perfect':'glitched'}</div></div></div>
-    <div class="actions"><button class="btn bg" onclick="savePng()">Save as PNG</button>${!ok?'<button class="btn bs" onclick="resetHex();decodeFromHex()">Decode original</button>':''}</div>
-  </div>`;
-  const fc=document.getElementById('fCv');if(fc)fc.getContext('2d').drawImage(decCv,0,0);window._dCv=decCv;
-}
-
 /* === CORRUPTION TOOLS === */
-function randomize(){
-  if(!ticData)return;const box=document.getElementById('hexBox');
-  const d=fromHex(box.value);
-  // Randomize 10 bytes in the payload (not header)
-  for(let i=0;i<10;i++){const idx=12+Math.floor(Math.random()*(d.length-12));d[idx]=Math.floor(Math.random()*256)}
-  box.value=toHex(d);box.dispatchEvent(new Event('input'));
-  document.getElementById('msg').textContent='10 random bytes changed in payload. Click image to see glitches!';
-  setTimeout(()=>document.getElementById('msg').textContent='',3000);
-}
-function corruptPayload(){
-  if(!ticData)return;const box=document.getElementById('hexBox');
-  const d=fromHex(box.value);
-  // Flip every 50th byte
-  for(let i=12;i<d.length;i+=50)d[i]^=0xFF;
-  box.value=toHex(d);box.dispatchEvent(new Event('input'));
-  document.getElementById('msg').textContent='Every 50th payload byte flipped. Click image!';
-  setTimeout(()=>document.getElementById('msg').textContent='',3000);
-}
-function resetHex(){
-  if(!ticData)return;const box=document.getElementById('hexBox');
-  box.value=toHex(ticData);box.dispatchEvent(new Event('input'));
-  document.getElementById('msg').textContent='Reset to original compressed data.';
-  setTimeout(()=>document.getElementById('msg').textContent='',2000);
-}
+function randomize(){if(!ticData)return;const box=document.getElementById('hexBox');const d=fromHex(box.value);for(let i=0;i<10;i++){const idx=12+Math.floor(Math.random()*(d.length-12));d[idx]=Math.floor(Math.random()*256)}box.value=toHex(d);box.dispatchEvent(new Event('input'));flash('10 bytes randomized — click image!')}
+function corruptPayload(){if(!ticData)return;const box=document.getElementById('hexBox');const d=fromHex(box.value);for(let i=12;i<d.length;i+=50)d[i]^=0xFF;box.value=toHex(d);box.dispatchEvent(new Event('input'));flash('Every 50th byte flipped — click image!')}
+function resetHex(){if(!ticData)return;document.getElementById('hexBox').value=toHex(ticData);document.getElementById('hexBox').dispatchEvent(new Event('input'));flash('Reset to original')}
+function flash(t){const m=document.getElementById('msg');m.textContent=t;setTimeout(()=>m.textContent='',3000)}
 
-/* === ACTIONS === */
+/* === SHARE === */
 function dlTic(name){const d=fromHex(document.getElementById('hexBox').value);const b=new Blob([d],{type:'application/octet-stream'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name.replace(/\.\w+$/,'')+'.tic';a.click();URL.revokeObjectURL(a.href)}
-function cpUrl(){const d=fromHex(document.getElementById('hexBox').value);let bin='';for(let i=0;i<d.length;i++)bin+=String.fromCharCode(d[i]);navigator.clipboard.writeText('tic://'+btoa(bin)).then(()=>{document.getElementById('msg').textContent='Copied!';setTimeout(()=>document.getElementById('msg').textContent='',2000)})}
+function cpUrl(){const d=fromHex(document.getElementById('hexBox').value);let bin='';for(let i=0;i<d.length;i++)bin+=String.fromCharCode(d[i]);navigator.clipboard.writeText('tic://'+btoa(bin)).then(()=>flash('Share URL copied!'))}
 function savePng(){if(!window._dCv)return;window._dCv.toBlob(b=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='decoded.png';a.click();URL.revokeObjectURL(a.href)},'image/png')}
 </script>
 </body>
