@@ -164,63 +164,125 @@ function estimateSize(data) {
 // TC compress pipeline
 // ================================================================
 function tcCompress(imageData, width, height) {
-  const bpp = 3;
-  const rowBytes = width * bpp;
+  const npix = width * height;
 
-  // Step 1: YCoCg-R transform
-  const transformed = new Uint8Array(width * height * 3);
-  for (let i = 0; i < width * height; i++) {
-    const [y, co, cg] = rgbToYCoCg(
-      imageData.data[i*4], imageData.data[i*4+1], imageData.data[i*4+2]
-    );
-    transformed[i*3] = y; transformed[i*3+1] = co; transformed[i*3+2] = cg;
+  // Step 0: Detect palette images (GIFs, pixel art)
+  // Count unique colors in a sample
+  const colorSet = new Set();
+  const sampleSize = Math.min(npix, 10000);
+  const step = Math.max(1, Math.floor(npix / sampleSize));
+  for (let i = 0; i < npix; i += step) {
+    colorSet.add((imageData.data[i*4] << 16) | (imageData.data[i*4+1] << 8) | imageData.data[i*4+2]);
+  }
+  const estUniqueColors = colorSet.size;
+  const isPalette = estUniqueColors <= 256;
+
+  let tcSize, method;
+
+  if (isPalette) {
+    // PALETTE MODE: build palette + index stream, then compress
+    // Much better for GIFs and pixel art
+    const fullColorSet = new Map();
+    let cid = 0;
+    const indices = new Uint8Array(npix);
+    for (let i = 0; i < npix; i++) {
+      const c = (imageData.data[i*4] << 16) | (imageData.data[i*4+1] << 8) | imageData.data[i*4+2];
+      if (!fullColorSet.has(c)) { fullColorSet.set(c, cid++); }
+      indices[i] = fullColorSet.get(c);
+    }
+    const nColors = fullColorSet.size;
+
+    // Palette: nColors × 3 bytes
+    const palette = new Uint8Array(nColors * 3);
+    for (const [color, id] of fullColorSet) {
+      palette[id*3] = (color >> 16) & 0xFF;
+      palette[id*3+1] = (color >> 8) & 0xFF;
+      palette[id*3+2] = color & 0xFF;
+    }
+
+    // Index stream: per-row adaptive filtering on 1-byte-per-pixel indices
+    const filtered = [];
+    let above = new Uint8Array(width);
+    for (let i = 0; i < height; i++) {
+      const row = indices.subarray(i * width, (i+1) * width);
+      const f = bestFilter(row, above, 1);
+      const frow = filterRow(row, above, 1, f);
+      filtered.push(f);
+      for (let j = 0; j < width; j++) filtered.push(frow[j]);
+      above = row;
+    }
+
+    // Total: palette + filtered indices
+    const totalData = new Uint8Array(3 + palette.length + filtered.length);
+    totalData[0] = 1; // palette mode flag
+    totalData[1] = (nColors >> 8) & 0xFF;
+    totalData[2] = nColors & 0xFF;
+    totalData.set(palette, 3);
+    totalData.set(new Uint8Array(filtered), 3 + palette.length);
+
+    tcSize = estimateSize(totalData);
+    method = `palette(${nColors} colors)`;
+
+  } else {
+    // FULL COLOR MODE: YCoCg-R + adaptive filtering (original pipeline)
+    const bpp = 3;
+    const rowBytes = width * bpp;
+
+    const transformed = new Uint8Array(npix * 3);
+    for (let i = 0; i < npix; i++) {
+      const [y, co, cg] = rgbToYCoCg(
+        imageData.data[i*4], imageData.data[i*4+1], imageData.data[i*4+2]
+      );
+      transformed[i*3] = y; transformed[i*3+1] = co; transformed[i*3+2] = cg;
+    }
+
+    const filtered = [];
+    let above = new Uint8Array(rowBytes);
+    for (let i = 0; i < height; i++) {
+      const row = transformed.subarray(i * rowBytes, (i+1) * rowBytes);
+      const f = bestFilter(row, above, bpp);
+      const frow = filterRow(row, above, bpp, f);
+      filtered.push(f);
+      for (let j = 0; j < rowBytes; j++) filtered.push(frow[j]);
+      above = row;
+    }
+
+    tcSize = estimateSize(new Uint8Array(filtered));
+    method = 'YCoCg-R';
   }
 
-  // Step 2: Per-row adaptive filtering
-  const filtered = [];
-  let above = new Uint8Array(rowBytes);
-  for (let i = 0; i < height; i++) {
-    const row = transformed.subarray(i * rowBytes, (i+1) * rowBytes);
-    const f = bestFilter(row, above, bpp);
-    const frow = filterRow(row, above, bpp, f);
-    filtered.push(f);
-    for (let j = 0; j < rowBytes; j++) filtered.push(frow[j]);
-    above = row;
-  }
-
-  const filteredArr = new Uint8Array(filtered);
-
-  // Step 3: Estimate compressed size
-  const tcSize = estimateSize(filteredArr);
-
-  // Also estimate raw zlib (no transform, no filtering) for comparison
-  const rawPixels = new Uint8Array(width * height * 3);
-  for (let i = 0; i < width * height; i++) {
+  // Raw comparison
+  const rawPixels = new Uint8Array(npix * 3);
+  for (let i = 0; i < npix; i++) {
     rawPixels[i*3] = imageData.data[i*4];
     rawPixels[i*3+1] = imageData.data[i*4+1];
     rawPixels[i*3+2] = imageData.data[i*4+2];
   }
   const rawZlibSize = estimateSize(rawPixels);
 
-  // Step 4: Verify roundtrip (YCoCg-R only, filtering is always reversible)
+  // Roundtrip check
   let roundtripOk = true;
-  for (let i = 0; i < Math.min(1000, width * height); i++) {
-    const [y, co, cg] = rgbToYCoCg(
-      imageData.data[i*4], imageData.data[i*4+1], imageData.data[i*4+2]
-    );
-    const [r, g, b] = ycoCgToRgb(y, co, cg);
-    if (r !== imageData.data[i*4] || g !== imageData.data[i*4+1] || b !== imageData.data[i*4+2]) {
-      roundtripOk = false; break;
+  if (!isPalette) {
+    for (let i = 0; i < Math.min(1000, npix); i++) {
+      const [y, co, cg] = rgbToYCoCg(
+        imageData.data[i*4], imageData.data[i*4+1], imageData.data[i*4+2]
+      );
+      const [r, g, b] = ycoCgToRgb(y, co, cg);
+      if (r !== imageData.data[i*4] || g !== imageData.data[i*4+1] || b !== imageData.data[i*4+2]) {
+        roundtripOk = false; break;
+      }
     }
   }
 
   return {
     tcSize,
     rawZlibSize,
-    rawSize: width * height * 3,
+    rawSize: npix * 3,
     width, height,
     roundtripOk,
-    filteredData: filteredArr,
+    method,
+    isPalette,
+    estUniqueColors,
   };
 }
 
@@ -252,7 +314,7 @@ function handleFile(file) {
   }
 }
 
-function processFrame(canvas, w, h, file, extraInfo) {
+function processFrame(canvas, w, h, file, extraInfo, origFileSize) {
   const ctx = canvas.getContext('2d');
   const imageData = ctx.getImageData(0, 0, w, h);
 
@@ -288,10 +350,11 @@ function processFrame(canvas, w, h, file, extraInfo) {
               <div class="stat-box"><div class="val">${ratio}×</div><div class="label">TC compression</div></div>
               <div class="stat-box"><div class="val">${elapsed.toFixed(0)}ms</div><div class="label">time</div></div>
               <div class="stat-box"><div class="val">${result.roundtripOk ? '✓' : '✗'}</div><div class="label">lossless</div></div>
-              <div class="stat-box"><div class="val">${(result.rawSize/1024).toFixed(0)}KB</div><div class="label">raw pixels</div></div>
+              <div class="stat-box"><div class="val">${origFileSize ? (origFileSize/1024).toFixed(0)+'KB' : (result.rawSize/1024).toFixed(0)+'KB'}</div><div class="label">${origFileSize ? 'original file' : 'raw pixels'}</div></div>
             </div>
             <p style="text-align:center;color:#484f58;font-size:.8em;margin-top:8px">
-              YCoCg-R → adaptive prediction → entropy coding
+              ${result.method || 'YCoCg-R'} → adaptive prediction → entropy coding
+              ${result.isPalette ? ' (palette mode: '+result.estUniqueColors+' colors detected)' : ''}
             </p>
           </div>
         </div>
@@ -318,7 +381,7 @@ function handleImage(file) {
     URL.revokeObjectURL(url);
 
     const info = file.type.includes('gif') ? ' (first frame)' : '';
-    processFrame(canvas, w, h, file, info);
+    processFrame(canvas, w, h, file, info, file.size);
   };
   img.onerror = function() {
     resultArea.innerHTML = '<div class="card"><p style="color:#f78166">Could not load image. Try a different format.</p></div>';
@@ -351,7 +414,7 @@ function handleVideo(file) {
     URL.revokeObjectURL(url);
 
     const dur = video.duration ? ` · ${video.duration.toFixed(1)}s` : '';
-    processFrame(canvas, w, h, file, ` (frame @${video.currentTime.toFixed(1)}s${dur})`);
+    processFrame(canvas, w, h, file, ` (frame @${video.currentTime.toFixed(1)}s${dur})`, file.size);
   };
 
   video.onerror = function() {
