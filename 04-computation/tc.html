@@ -75,11 +75,11 @@ footer{text-align:center;padding:14px;color:var(--dim);font-size:.7em}
 <body>
 <div class="hero">
 <h1>Tournament Compression</h1>
-<p>Drop media. Compress it for real. Edit the bytes. Click to decode.</p>
+<p>Drop media. Draw on it. Edit the compressed bytes. See everything sync.</p>
 <div class="mode-toggle">
-<label>View</label>
+<label style="font-size:.8em">Manual</label>
 <div class="sw" id="modeSw" onclick="toggleMode()"></div>
-<label>Draw</label>
+<label style="font-size:.8em">⚡ Seamless</label>
 </div>
 </div>
 <div class="wrap">
@@ -148,7 +148,7 @@ function toHex(d){let s='';for(let i=0;i<d.length;i++){if(i>0&&i%16===0)s+='\n';
 function fromHex(s){const bytes=[];const tokens=s.replace(/[^0-9a-fA-F]/g,' ').trim().split(/\s+/);for(const t of tokens){if(t.length>=2){const v=parseInt(t.substring(0,2),16);if(!isNaN(v))bytes.push(v)}}return new Uint8Array(bytes)}
 
 /* === STATE === */
-let ticData=null,origCv=null,mBlob=null,mType=null,imgW=0,imgH=0,interactive=false,drawing=false,tool='draw',decoded=false;
+let ticData=null,origCv=null,mBlob=null,mType=null,imgW=0,imgH=0,seamless=false,drawing=false,tool='draw',decoded=false;
 
 /* === DROP === */
 const dz=document.getElementById('dz'),fi=document.getElementById('fi'),out=document.getElementById('out');
@@ -159,24 +159,28 @@ fi.addEventListener('change',e=>{if(e.target.files[0])go(e.target.files[0])});
 
 /* === MODE TOGGLE === */
 function toggleMode(){
-  interactive=!interactive;
-  document.getElementById('modeSw').classList.toggle('on',interactive);
-  const tb=document.getElementById('drawBar');if(tb)tb.classList.toggle('hidden',!interactive);
+  seamless=!seamless;
+  document.getElementById('modeSw').classList.toggle('on',seamless);
   const cv=document.getElementById('prevCv');
-  if(cv){
-    cv.classList.toggle('draw-mode',interactive);
-    // When entering draw mode, show the actual image (not pixelated preview)
-    if(interactive&&origCv){
-      cv.getContext('2d').drawImage(origCv,0,0);
-      decoded=true;
-      const hint=document.getElementById('hint');
-      if(hint){hint.textContent='Draw mode — paint on the image, hex updates live';hint.style.color='var(--blue)'}
-    }
-    // When leaving draw mode, show pixelated preview again if not decoded
-    if(!interactive&&origCv&&!decoded){
-      showPixelated(cv,imgW,imgH);
-    }
+  const hint=document.getElementById('hint');
+  const syncBtns=document.querySelectorAll('.sync-btn');
+
+  if(cv&&origCv){
+    cv.classList.add('draw-mode');
+    // Always show real image when toggling (not pixelated)
+    if(!decoded){cv.getContext('2d').drawImage(origCv,0,0);decoded=true;}
   }
+
+  if(seamless){
+    if(hint){hint.textContent='⚡ Seamless — draw & edit hex, everything syncs live';hint.style.color='var(--blue)';}
+    syncBtns.forEach(b=>b.classList.add('hidden'));
+  }else{
+    if(hint){hint.textContent='✏️ Draw or edit hex, then click Encode/Decode to sync';hint.style.color='var(--muted)';}
+    syncBtns.forEach(b=>b.classList.remove('hidden'));
+  }
+
+  // Always show draw toolbar
+  const tb=document.getElementById('drawBar');if(tb)tb.classList.remove('hidden');
 }
 
 function go(file){
@@ -215,7 +219,7 @@ function showCompressed(pngSz,ticSz,w,h,file,ms){
   <div class="row">
     <div>
       <canvas id="prevCv" width="${w}" height="${h}" title="Click to decode / Draw in interactive mode"></canvas>
-      <p style="font-size:.75em;color:var(--green);margin-top:3px" id="hint">▶ Click to decode from hex below</p>
+      <p style="font-size:.75em;color:var(--muted);margin-top:3px" id="hint">✏️ Draw or edit hex, then click Encode/Decode — or toggle Seamless</p>
     </div>
     <div style="flex:1.2;min-width:240px">
       <div style="text-align:center;margin:4px 0"><span class="badge">${saving}% smaller</span> <span style="color:var(--green);font-weight:bold">${ratio}×</span> <span style="color:var(--muted);font-size:.84em">vs PNG</span></div>
@@ -230,12 +234,13 @@ function showCompressed(pngSz,ticSz,w,h,file,ms){
     <div class="hex-info"><span id="hexLen">${ticData.length} bytes</span><span id="hexDirty"></span></div>
   </div>
   <div class="actions">
-    <button class="btn bg" onclick="dlTic('${file.name}')">Download .tic</button>
-    <button class="btn bb" onclick="cpUrl()">Copy Share URL</button>
-    <button class="btn bs" onclick="randomize()">Randomize 10 bytes</button>
-    <button class="btn bs" onclick="corruptPayload()">Corrupt payload</button>
-    <button class="btn bs" onclick="resetHex()">Reset</button>
-    <button class="btn bs" onclick="location.reload()">New</button>
+    <button class="btn bg sync-btn" onclick="reencodeCanvas()" title="Re-encode the current canvas to update hex">⬇ Encode image → hex</button>
+    <button class="btn bb sync-btn" onclick="decodeFromHex()" title="Decode hex to update the image">⬆ Decode hex → image</button>
+    <button class="btn bs" onclick="dlTic('${file.name}')">💾 Download .tic</button>
+    <button class="btn bs" onclick="randomize()">🎲 Randomize</button>
+    <button class="btn bs" onclick="corruptPayload()">💥 Corrupt</button>
+    <button class="btn bs" onclick="resetHex()">↩ Reset</button>
+    <button class="btn bs" onclick="location.reload()">🔄 New</button>
   </div>
   <p id="msg" style="text-align:center;color:var(--green);font-size:.75em;min-height:.9em;margin-top:3px"></p>
   </div><div id="decOut"></div>`;
@@ -243,30 +248,26 @@ function showCompressed(pngSz,ticSz,w,h,file,ms){
   decoded=false;
   const pc=document.getElementById('prevCv');
 
-  // Show pixelated preview (or actual image if in draw mode)
-  if(interactive){
-    pc.getContext('2d').drawImage(origCv,0,0);
-    decoded=true;
-    document.getElementById('drawBar').classList.remove('hidden');
-    pc.classList.add('draw-mode');
-  }else{
-    showPixelated(pc,w,h);
-  }
+  // Always show the real image and draw toolbar
+  pc.getContext('2d').drawImage(origCv,0,0);
+  decoded=true;
+  document.getElementById('drawBar').classList.remove('hidden');
+  pc.classList.add('draw-mode');
 
   // Hex dirty tracking
   document.getElementById('hexBox').addEventListener('input',onHexInput);
 
-  // Mouse handlers (use named functions to avoid stacking)
+  // Mouse handlers — drawing always works, but re-encode only in seamless mode
   pc.onmousedown=e=>{
-    if(interactive){drawing=true;drawAt(e,pc)}
-    else{e.preventDefault();decodeFromHex()}
+    if(!decoded){e.preventDefault();decodeFromHex();return;}
+    drawing=true;drawAt(e,pc);
   };
-  pc.onmousemove=e=>{if(interactive&&drawing)drawAt(e,pc)};
-  pc.onmouseup=()=>{if(interactive){drawing=false;reencodeCanvas()}};
-  pc.onmouseleave=()=>{if(interactive&&drawing){drawing=false;reencodeCanvas()}};
-  pc.ontouchstart=e=>{if(interactive){e.preventDefault();drawing=true;drawAtT(e,pc)}};
-  pc.ontouchmove=e=>{if(interactive){e.preventDefault();drawAtT(e,pc)}};
-  pc.ontouchend=()=>{if(interactive){drawing=false;reencodeCanvas()}};
+  pc.onmousemove=e=>{if(drawing)drawAt(e,pc)};
+  pc.onmouseup=()=>{drawing=false;if(seamless)reencodeCanvas();};
+  pc.onmouseleave=()=>{if(drawing){drawing=false;if(seamless)reencodeCanvas();}};
+  pc.ontouchstart=e=>{if(!decoded){decodeFromHex();return;}e.preventDefault();drawing=true;drawAtT(e,pc)};
+  pc.ontouchmove=e=>{e.preventDefault();drawAtT(e,pc)};
+  pc.ontouchend=()=>{drawing=false;if(seamless)reencodeCanvas();};
 }
 
 function showPixelated(cv,w,h){
@@ -286,7 +287,7 @@ function onHexInput(){
   box.classList.toggle('dirty',dirty);
   document.getElementById('hexDirty').textContent=dirty?'modified':'';
   document.getElementById('hexLen').textContent=cur.length+' bytes';
-  if(interactive)liveDecodeFromHex();
+  if(seamless)liveDecodeFromHex();
 }
 
 /* === DRAWING === */
