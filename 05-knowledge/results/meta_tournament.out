@@ -1,0 +1,92 @@
+=====================================================================================
+  Meta-Tournament of Codecs — A² Analysis
+  opus-2026-03-25-S345
+=====================================================================================
+/home/e/Documents/claude/math/04-computation/meta_tournament.py:268: DeprecationWarning: NumPy will stop allowing conversion of out-of-bound Python integers to integer arrays.  The conversion of 256 to uint8 will fail in the future.
+For the old behavior, usually:
+    np.array(value).astype(dtype)
+will give the desired result (the cast overflows).
+  tests['blocks'] = np.array([[64*(r//32)+64*(c//32) for c in range(N)] for r in range(N)], dtype=np.uint8).clip(0,255)
+/home/e/Documents/claude/math/04-computation/meta_tournament.py:268: DeprecationWarning: NumPy will stop allowing conversion of out-of-bound Python integers to integer arrays.  The conversion of 320 to uint8 will fail in the future.
+For the old behavior, usually:
+    np.array(value).astype(dtype)
+will give the desired result (the cast overflows).
+  tests['blocks'] = np.array([[64*(r//32)+64*(c//32) for c in range(N)] for r in range(N)], dtype=np.uint8).clip(0,255)
+/home/e/Documents/claude/math/04-computation/meta_tournament.py:268: DeprecationWarning: NumPy will stop allowing conversion of out-of-bound Python integers to integer arrays.  The conversion of 384 to uint8 will fail in the future.
+For the old behavior, usually:
+    np.array(value).astype(dtype)
+will give the desired result (the cast overflows).
+  tests['blocks'] = np.array([[64*(r//32)+64*(c//32) for c in range(N)] for r in range(N)], dtype=np.uint8).clip(0,255)
+
+  META-TOURNAMENT ADJACENCY MATRIX (codec i beats codec j):
+             MED MED-T   Sub    Up Paeth   GAP RowLP   Raw
+       MED    -    0    1    1    1    1    1    1
+     MED-T    1    -    1    1    1    1    1    1
+       Sub    0    0    -    0    0    1    0    1
+        Up    0    0    1    -    0    1    0    1
+     Paeth    0    0    1    1    -    1    1    1
+       GAP    0    0    0    0    0    -    0    0
+    RowLPC    0    0    1    0    0    1    -    1
+       Raw    0    0    0    0    0    1    0    -
+
+  SCORE SEQUENCE (direct dominance):
+    MED-T   : score=7
+    MED     : score=6
+    Paeth   : score=5
+    Up      : score=3
+    RowLPC  : score=3
+    Sub     : score=2
+    Raw     : score=1
+    GAP     : score=0
+
+  A² SCORE (transitive dominance — the two-hop principle!):
+    MED-T   : A²_score=20
+    MED     : A²_score=14
+    Paeth   : A²_score=9
+    Up      : A²_score=3
+    RowLPC  : A²_score=3
+    Sub     : A²_score=1
+    GAP     : A²_score=0
+    Raw     : A²_score=0
+
+  BEST CODEC PER IMAGE:
+  Image          MED MED-T   Sub    Up Paeth   GAP RowLP   Raw  BEST   PNG
+  circle        2997  2997  1747  3054  3267  3973  2221  4563  Sub     3421
+  h_grad          41    85    82   221    41   268   221   262  MED      148
+  v_grad          85    41   375    44    85   374    44   294  MED-T    153
+  d_grad          40    40   339   187    40   477   195   528  MED      149
+  smooth        5843  5790  6225  5337  6301  6928  5168  8488  RowLPC  6225
+  noise        16395 16395 16395 16395 16395 16395 16395 16395  MED    16580
+  checker         94    94    95    95    94    95    95    93  Raw      154
+  solid           39    39    80    40    39    83    40    39  MED      148
+  blob          2972  2969  3056  3126  3289  3664  3721  6488  MED-T   3440
+  d_stripe       105   105   139   118   105   145   118   101  Raw      229
+  blocks          54    54    93    59    54   132    76    98  MED      169
+  radial        6217  6217  4378  6530  6243  7696  4439  7033  Sub     6978
+
+  A²-FEATURE PROFILES:
+  Image        GradMag  DirEnt    Curv   Aniso    TexE    Flat Best    
+  circle           3.3    0.44     1.0    0.83       2    0.15 Sub     
+  h_grad           2.0    0.03     0.0    0.08       0    0.00 MED     
+  v_grad           2.0    0.00     0.0    0.00       0    0.00 MED-T   
+  d_grad           1.4    0.00     0.0    0.00       0    1.00 MED     
+  smooth           9.1    0.64     2.7    1.32       9    0.01 RowLPC  
+  noise          132.2    0.70   298.8    0.99    4246    0.00 MED     
+  checker        360.6    0.00  1020.0    1.00       0    0.00 Raw     
+  solid            0.0    0.00     0.0    0.00       0    1.00 MED     
+  blob             2.4    0.56     1.0    0.83       3    0.41 MED-T   
+  d_stripe        45.1    2.57   127.5    1.00   14223    0.88 Raw     
+  blocks           4.5    5.17     9.1    0.98     559    0.95 MED     
+  radial          16.3    0.63     3.5    0.95      61    0.04 Sub     
+
+  INSIGHT: Feature clusters predict codec choice!
+  - Flat images (flatness > 0.8): Raw always wins
+  - Smooth gradients (curvature < 2, grad > 5): MED wins
+  - Texture (texture_energy > 100): MED or Raw
+  - Radial (curvature > 5, anisotropy ≈ 1): RowLPC or MED
+
+  REAL PHOTO TEST:
+     tron.jpeg: predicted=MED, actual_best=MED-T, size=9963, PNG=9983, ratio=1.002x
+         t.jpg: predicted=MED, actual_best=Sub, size=4670, PNG=4766, ratio=1.021x
+
+  Done. opus-2026-03-25-S345
