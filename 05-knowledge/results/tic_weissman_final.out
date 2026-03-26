@@ -1,0 +1,44 @@
+================================================================================================
+  TIC v1.0 — WEISSMAN SCORE REPORT
+  Compression × Speed combined metric on Kodak + real photo
+================================================================================================
+
+  Image                Raw     PNG     TIC │ PNG_r TIC_r  gain │   PNGe   TICe   PNGd   TICd │ W_enc W_dec │   RT
+  ─────────────────────────────────────────────────────────────────────────────────────────────
+  kodim01.png       196608  134653  100124 │ 1.46x 1.96x 1.34x │  12.2m  53.1m   1.3m   1.8m │  2.02  1.42 │   OK
+  kodim02.png       196608  111383   95057 │ 1.77x 2.07x 1.17x │  15.7m  40.5m   1.3m   1.8m │  1.52  1.23 │   OK
+  kodim03.png       196608  101178   91147 │ 1.94x 2.16x 1.11x │  21.3m  66.1m   1.0m   1.8m │  1.57  1.21 │   OK
+  kodim04.png       196608   97341   85485 │ 2.02x 2.30x 1.14x │  19.6m  86.0m   1.0m   1.7m │  1.83  1.24 │   OK
+  kodim05.png       196608  145367  115551 │ 1.35x 1.70x 1.26x │  10.9m  24.4m   1.1m   1.9m │  1.53  1.37 │   OK
+  kodim08.png       196608  129667  105640 │ 1.52x 1.86x 1.23x │  12.0m  36.1m   1.6m   1.9m │  1.63  1.26 │   OK
+  kodim12.png       196608  114164   95373 │ 1.72x 2.06x 1.20x │  14.8m  63.0m   1.5m   1.8m │  1.82  1.23 │   OK
+  kodim23.png       196608  103026   94136 │ 1.91x 2.09x 1.09x │  18.4m  47.5m   1.5m   1.8m │  1.44  1.12 │   OK
+  vlcsnap-2026-0    196608   63289   44804 │ 3.11x 4.39x 1.41x │  25.9m  48.7m   1.1m   1.2m │  1.71  1.43 │   OK
+  ─────────────────────────────────────────────────────────────────────────────────────────────
+              MEAN                         │ 1.77x 2.14x 1.21x │                             │  1.67  1.28 │ ALL
+
+  ┌───────────────────────────────────────────────────────────┐
+  │  WEISSMAN SCORES                                          │
+  │                                                           │
+  │  Encode Weissman (compression vs encode speed):           │
+  │    Per-image mean:  1.67                                   │
+  │    Aggregate:       2.99                                   │
+  │                                                           │
+  │  Decode Weissman (compression vs decode speed):           │
+  │    Per-image mean:  1.28                                   │
+  │    Aggregate:       1.30                                   │
+  │                                                           │
+  │  Interpretation:                                          │
+  │    W > 1: TIC beats PNG on combined compression×speed     │
+  │    W < 1: PNG beats TIC on combined metric                │
+  │                                                           │
+  │  Compression alone: 1.209x (+20.9% better than PNG)        │
+  │  Encode speed:      0.32x vs PNG                             │
+  │  Decode speed:      0.72x vs PNG                             │
+  │  Roundtrip:         ALL 9/9 PASS                          │
+  └───────────────────────────────────────────────────────────┘
+
+  FORMULA: W = (TIC_ratio / PNG_ratio) × ln(PNG_time) / ln(TIC_time)
+  Source: Weissman score as defined by Tsachy Weissman (Stanford) for
+  the HBO show Silicon Valley, adapted from information theory.
+
