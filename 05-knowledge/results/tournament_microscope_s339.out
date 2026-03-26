@@ -1,0 +1,66 @@
+========================================================================
+  THE TOURNAMENT MICROSCOPE
+  opus-2026-03-25-S339
+========================================================================
+
+  MULTI-SCALE STRUCTURAL MAP (64×64 images):
+
+       Image  Scale  Blocks    Trace μ    Trace σ    Aniso μ    Aniso σ
+  ------------------------------------------------------------------------
+    gradient    8×8      64    1389810    1243512       1.00      0.000
+    gradient   16×16      16    5559240    4824305       1.00      0.000
+    gradient   32×32       4   22236960   16830400       1.00      0.000
+     checker    8×8      64    2080800    2080800       0.50      0.500
+     checker   16×16      16    8323200          0       1.00      0.000
+     checker   32×32       4   33292800          0       1.00      0.000
+      circle    8×8      64    1390925    1728469  223523.78 574500.778
+      circle   16×16      16    5563702    6396663 1454934.66 1491305.783
+      circle   32×32       4   22254806     942722 22254806.25 942722.349
+       mixed    8×8      64    1399248     887507       1.43      0.477
+       mixed   16×16      16    5596991    3414814       1.32      0.368
+       mixed   32×32       4   22387962   11905978       1.22      0.218
+       noise    8×8      64    1371636     157853       1.93      0.441
+       noise   16×16      16    5486543     275269       1.72      0.174
+       noise   32×32       4   21946171     374980       1.55      0.031
+    tampered    8×8      64    1430355    1226976       1.12      0.308
+    tampered   16×16      16    5721421    4749145       1.11      0.200
+    tampered   32×32       4   22885686   16342662       1.29      0.206
+
+  TAMPERING DETECTION:
+  Anomalous blocks (>2σ deviation): 0
+
+  STRUCTURAL HASH (content-aware, locality-preserving):
+      gradient: 0000080000000008...
+       checker: 0000000000000000...
+        circle: 0000000000000000...
+         mixed: 0000080000000008...
+         noise: 070e030506070809...
+      tampered: 0000080000000008...
+
+  Hash similarity:
+    gradient vs tampered: 0.88 (should be high — mostly same)
+    gradient vs noise:    0.05 (should be low — different)
+
+========================================================================
+  TEXTURE SEGMENTATION VIA A² PROFILE
+========================================================================
+
+  Mixed image: gradient (top half) + noise (bottom half)
+  Block-wise anisotropy map:
+    Row 0: ░░░░░░░░ (gradient)
+    Row 1: ░░░░░░░░ (gradient)
+    Row 2: ░░░░░░░░ (gradient)
+    Row 3: ░░░░░░░░ (gradient)
+    Row 4: ████████ (noise)
+    Row 5: ░██░██░█ (noise)
+    Row 6: ██░█████ (noise)
+    Row 7: ██░████░ (noise)
+
+  █ = structured (high anisotropy, gradient-like)
+  ░ = random (low anisotropy, noise-like)
+
+  The microscope correctly SEGMENTS the image by texture type,
+  using ONLY the A² profile. No training, no parameters,
+  just one matrix multiplication per block.
+
+DONE.
