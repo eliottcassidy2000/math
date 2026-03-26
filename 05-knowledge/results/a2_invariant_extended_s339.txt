@@ -1,0 +1,15 @@
+SORTED A² ROWS — COMPLETE INVARIANT VERIFIED:
+n=5:  12/12     = 100% (0.01s)
+n=6:  56/56     = 100% (0.1s)
+n=7:  456/456   = 100% (5.6s)
+n=8:  6880/6880 = 100% (0.1s)
+n=9:  191536/191536 = 100% (2.7s)
+n=10: RUNNING (9.7M classes, ~10 min estimated)
+
+fp_2 row sums only (not full rows):
+n=5: 100%, n=6: 93%, n=7: 62.5%, n=8: 37.8%
+→ Row sums degrade rapidly; full rows hold.
+
+This is a POLYNOMIAL-TIME COMPLETE INVARIANT for tournament
+isomorphism through n=9 (191,536 classes). O(n^3) computation.
+
