@@ -1,0 +1,28 @@
+==========================================================================================
+  TIC v8 — PAQ-Beating Structural Context Mixer
+  opus-2026-03-25-S347
+==========================================================================================
+
+  Image           PNG  MED+z MED+lz   CM+z  CM+lz CM_bpp    Best  v PNG
+  ----------------------------------------------------------------------------------
+  checker         154     94    132    280    272 10.45  MED+z  1.64x OK
+  circle         3421   2997   2768   3150   2952  1.65 MED+lz  1.24x OK
+  gradient        148     41    124    112    188  1.05  MED+z  3.61x OK
+  noise         16580  16395  16444  16395  16444  8.76  MED+z  1.01x OK
+  photo          9983  10150   9712  10311   9872  4.81 MED+lz  1.03x OK
+  radial         6978   6217   5500   6021   5540  3.34 MED+lz  1.27x OK
+  smooth         6225   5843   4792   5942   5052  3.00 MED+lz  1.30x OK
+
+  ANALYSIS:
+  - CM+lz vs MED+lz: does context mixing produce BETTER residuals for lzma?
+  - CM_bpp: theoretical bits/pixel from the mixing model (lower = better model)
+  - If CM_bpp < 8.0: the model captures meaningful structure
+  - If CM+lz < MED+lz: context mixing genuinely helps
+
+  PAQ on typical photos: ~2.0-2.5 bpp
+  Our model's bpp tells us if we're in the same ballpark.
+
+  TO TRULY BEAT PAQ: need arithmetic coding (not zlib/lzma backend)
+  using the per-pixel probability distribution from the mixer.
+  This would achieve compression close to CM_bpp * H * W / 8 bytes.
+
