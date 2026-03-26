@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TC — See Your Photo Shrink</title>
+<title>TC — See Your Media Shrink</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0f;color:#e0e0e0;min-height:100vh}
@@ -42,18 +42,18 @@ footer{text-align:center;padding:24px;color:#484f58;font-size:.8em}
 
 <div class="hero">
 <h1>Tournament Compression</h1>
-<p>Drop your photo. Watch it shrink. Get it back. Perfectly.</p>
+<p>Drop your photo, GIF, or video. Watch it shrink. Get it back. Perfectly.</p>
 </div>
 
 <div class="container">
 
 <div class="card">
 <div class="drop" id="dropZone">
-<div class="drop-icon">📷</div>
-<p style="font-size:1.2em;margin-bottom:8px"><strong>Drop your photo here</strong></p>
-<p style="color:#8b949e">PNG, JPG, BMP, WebP — any photo, any size</p>
+<div class="drop-icon">📷🎬</div>
+<p style="font-size:1.2em;margin-bottom:8px"><strong>Drop your photo, GIF, or video here</strong></p>
+<p style="color:#8b949e">PNG, JPG, GIF, WebP, MP4, WebM — any media, any size</p>
 <p style="color:#484f58;margin-top:8px;font-size:.85em">100% private — nothing leaves your browser</p>
-<input type="file" id="fileIn" accept="image/*">
+<input type="file" id="fileIn" accept="image/*,video/*">
 </div>
 </div>
 
@@ -238,107 +238,128 @@ dropZone.addEventListener('drop', e => { e.preventDefault(); dropZone.classList.
 fileIn.addEventListener('change', e => { if (e.target.files[0]) handleFile(e.target.files[0]); });
 
 function handleFile(file) {
-  if (!file || !file.type.startsWith('image/')) return;
-  resultArea.innerHTML = '<div class="card" style="text-align:center"><p style="color:#8b949e">Processing your photo...</p></div>';
+  if (!file) return;
+  const isVideo = file.type.startsWith('video/');
+  const isImage = file.type.startsWith('image/');
+  if (!isVideo && !isImage) return;
 
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    const img = new Image();
-    img.onload = function() {
-      // Limit to 512px for browser speed
-      let w = img.width, h = img.height;
-      const maxDim = 512;
-      if (w > maxDim || h > maxDim) {
-        const scale = maxDim / Math.max(w, h);
-        w = Math.round(w * scale); h = Math.round(h * scale);
-      }
+  resultArea.innerHTML = '<div class="card" style="text-align:center"><p style="color:#8b949e">Processing...</p></div>';
 
-      const canvas = document.createElement('canvas');
-      canvas.width = w; canvas.height = h;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(img, 0, 0, w, h);
-      const imageData = ctx.getImageData(0, 0, w, h);
+  if (isVideo) {
+    handleVideo(file);
+  } else {
+    handleImage(file);
+  }
+}
 
-      // Get actual PNG size
-      canvas.toBlob(function(blob) {
-        const pngSize = blob ? blob.size : w * h * 3;
+function processFrame(canvas, w, h, file, extraInfo) {
+  const ctx = canvas.getContext('2d');
+  const imageData = ctx.getImageData(0, 0, w, h);
 
-        // TC compress
-        const t0 = performance.now();
-        const result = tcCompress(imageData, w, h);
-        const elapsed = performance.now() - t0;
+  canvas.toBlob(function(blob) {
+    const pngSize = blob ? blob.size : w * h * 3;
+    const t0 = performance.now();
+    const result = tcCompress(imageData, w, h);
+    const elapsed = performance.now() - t0;
 
-        const saving = ((1 - result.tcSize / pngSize) * 100).toFixed(0);
-        const tcWins = result.tcSize < pngSize;
-        const ratio = (pngSize / result.tcSize).toFixed(2);
+    const saving = ((1 - result.tcSize / pngSize) * 100).toFixed(0);
+    const tcWins = result.tcSize < pngSize;
+    const ratio = (pngSize / result.tcSize).toFixed(2);
+    const maxSize = Math.max(result.tcSize, pngSize);
 
-        // Build result display
-        const maxSize = Math.max(result.tcSize, pngSize);
-
-        resultArea.innerHTML = `
-          <div class="card result">
-            <div class="compare">
-              <div>
-                <canvas id="previewCanvas" width="${w}" height="${h}"></canvas>
-                <p class="mono" style="margin-top:4px">${file.name} (${w}×${h})</p>
-              </div>
-              <div style="flex:1.5;min-width:280px">
-                <div class="magic-text">
-                  ${tcWins
-                    ? `<span class="badge win">TC wins!</span> Your photo is <strong style="color:#3fb950;font-size:1.3em">${saving}% smaller</strong> than PNG`
-                    : `<span class="badge tie">Tie</span> PNG and TC are within 5%`}
-                </div>
-
-                <p style="text-align:center;margin:8px 0;color:#8b949e">TC</p>
-                <div class="meter">
-                  <div class="fill tc" style="width:${Math.max(5,result.tcSize/maxSize*100)}%">
-                    ${result.tcSize.toLocaleString()} bytes
-                  </div>
-                </div>
-
-                <p style="text-align:center;margin:8px 0;color:#8b949e">PNG</p>
-                <div class="meter">
-                  <div class="fill png" style="width:${Math.max(5,pngSize/maxSize*100)}%">
-                    ${pngSize.toLocaleString()} bytes
-                  </div>
-                </div>
-
-                <div class="stats">
-                  <div class="stat-box">
-                    <div class="val">${ratio}×</div>
-                    <div class="label">TC compression ratio</div>
-                  </div>
-                  <div class="stat-box">
-                    <div class="val">${elapsed.toFixed(0)}ms</div>
-                    <div class="label">compression time</div>
-                  </div>
-                  <div class="stat-box">
-                    <div class="val">${result.roundtripOk ? '✓' : '✗'}</div>
-                    <div class="label">lossless verified</div>
-                  </div>
-                  <div class="stat-box">
-                    <div class="val">${(result.rawSize/1024).toFixed(0)}KB</div>
-                    <div class="label">original pixels</div>
-                  </div>
-                </div>
-
-                <p style="text-align:center;color:#484f58;font-size:.8em;margin-top:8px">
-                  YCoCg-R decorrelation → 5-filter adaptive prediction → entropy coding
-                </p>
-              </div>
-            </div>
+    resultArea.innerHTML = `
+      <div class="card result">
+        <div class="compare">
+          <div>
+            <canvas id="previewCanvas" width="${w}" height="${h}"></canvas>
+            <p class="mono" style="margin-top:4px">${file.name} (${w}×${h})${extraInfo||''}</p>
           </div>
-        `;
+          <div style="flex:1.5;min-width:280px">
+            <div class="magic-text">
+              ${tcWins
+                ? `<span class="badge win">TC wins!</span> <strong style="color:#3fb950;font-size:1.3em">${saving}% smaller</strong> than PNG`
+                : `<span class="badge tie">Close</span> TC and PNG within 5%`}
+            </div>
+            <p style="text-align:center;margin:8px 0;color:#8b949e">TC</p>
+            <div class="meter"><div class="fill tc" style="width:${Math.max(5,result.tcSize/maxSize*100)}%">${result.tcSize.toLocaleString()} bytes</div></div>
+            <p style="text-align:center;margin:8px 0;color:#8b949e">PNG</p>
+            <div class="meter"><div class="fill png" style="width:${Math.max(5,pngSize/maxSize*100)}%">${pngSize.toLocaleString()} bytes</div></div>
+            <div class="stats">
+              <div class="stat-box"><div class="val">${ratio}×</div><div class="label">TC compression</div></div>
+              <div class="stat-box"><div class="val">${elapsed.toFixed(0)}ms</div><div class="label">time</div></div>
+              <div class="stat-box"><div class="val">${result.roundtripOk ? '✓' : '✗'}</div><div class="label">lossless</div></div>
+              <div class="stat-box"><div class="val">${(result.rawSize/1024).toFixed(0)}KB</div><div class="label">raw pixels</div></div>
+            </div>
+            <p style="text-align:center;color:#484f58;font-size:.8em;margin-top:8px">
+              YCoCg-R → adaptive prediction → entropy coding
+            </p>
+          </div>
+        </div>
+      </div>
+    `;
+    const pc = document.getElementById('previewCanvas');
+    if (pc) pc.getContext('2d').drawImage(canvas, 0, 0);
+  }, 'image/png');
+}
 
-        // Draw the image
-        const pc = document.getElementById('previewCanvas');
-        if (pc) pc.getContext('2d').drawImage(canvas, 0, 0);
+function handleImage(file) {
+  const url = URL.createObjectURL(file);
+  const img = new Image();
+  img.onload = function() {
+    let w = img.width, h = img.height;
+    const maxDim = 512;
+    if (w > maxDim || h > maxDim) {
+      const scale = maxDim / Math.max(w, h);
+      w = Math.round(w * scale); h = Math.round(h * scale);
+    }
+    const canvas = document.createElement('canvas');
+    canvas.width = w; canvas.height = h;
+    canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+    URL.revokeObjectURL(url);
 
-      }, 'image/png');
-    };
-    img.src = e.target.result;
+    const info = file.type.includes('gif') ? ' (first frame)' : '';
+    processFrame(canvas, w, h, file, info);
   };
-  reader.readAsDataURL(file);
+  img.onerror = function() {
+    resultArea.innerHTML = '<div class="card"><p style="color:#f78166">Could not load image. Try a different format.</p></div>';
+    URL.revokeObjectURL(url);
+  };
+  img.src = url;
+}
+
+function handleVideo(file) {
+  const url = URL.createObjectURL(file);
+  const video = document.createElement('video');
+  video.muted = true;
+  video.preload = 'auto';
+
+  video.onloadeddata = function() {
+    // Seek to 1 second in (or 0 if shorter)
+    video.currentTime = Math.min(1, video.duration / 2);
+  };
+
+  video.onseeked = function() {
+    let w = video.videoWidth, h = video.videoHeight;
+    const maxDim = 512;
+    if (w > maxDim || h > maxDim) {
+      const scale = maxDim / Math.max(w, h);
+      w = Math.round(w * scale); h = Math.round(h * scale);
+    }
+    const canvas = document.createElement('canvas');
+    canvas.width = w; canvas.height = h;
+    canvas.getContext('2d').drawImage(video, 0, 0, w, h);
+    URL.revokeObjectURL(url);
+
+    const dur = video.duration ? ` · ${video.duration.toFixed(1)}s` : '';
+    processFrame(canvas, w, h, file, ` (frame @${video.currentTime.toFixed(1)}s${dur})`);
+  };
+
+  video.onerror = function() {
+    resultArea.innerHTML = '<div class="card"><p style="color:#f78166">Could not load video. Try MP4 or WebM.</p></div>';
+    URL.revokeObjectURL(url);
+  };
+
+  video.src = url;
 }
 </script>
 </body>
