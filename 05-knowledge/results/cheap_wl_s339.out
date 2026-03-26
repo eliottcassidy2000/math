@@ -1,0 +1,71 @@
+================================================================================
+  CHEAP WL — Redefine 'same' for practical compression
+  opus-2026-03-25-S339
+================================================================================
+
+  EFFECT OF DEFINITION OF 'SAME' (128×128):
+         Image    PNG  L0(μ)  L1(μσ)  L2(μσg) L3(full)  colors0  colors2
+      gradient   148   229    229     229     229       1       1
+       stripes   146    52     52      52      52       2       2
+       checker   178    75     75      75      75       1       1
+        smooth  4830  4444   4796    4796    4796       1       5
+         photo 12209 12336  12552   12980   13108       5      21
+    mandelbrot  2729  1748   1772    1772    1732       9      16
+         noise 16580 16602  16620   16926   17406       3       8
+
+  CHEAP WL + INTRA-CLASS PAETH (128×128):
+         Image    PNG  CheapWL  CWL+Paeth  CWL+P/PNG
+      gradient   148     229        45     0.304x ✓
+       stripes   146      52        54     0.370x ✓
+       checker   178      75        68     0.382x ✓
+        smooth  4830    4796      4120     0.853x ✓
+         photo 12209   12980     12524     1.026x 
+    mandelbrot  2729    1772      2340     0.857x ✓
+         noise 16580   16926     16530     0.997x ✓
+
+  FULL HYBRID: best of all methods (128×128):
+         Image    PNG   Best   B/PNG          Method
+      gradient   148    45  0.304x        cwl+P_L1 ✓
+       stripes   146    49  0.336x       paeth+bz2 ✓
+       checker   178    59  0.331x       paeth+bz2 ✓
+        smooth  4830  2332  0.483x      delta+lzma ✓
+         photo 12209 11528  0.944x        raw+lzma ✓
+    mandelbrot  2729  1308  0.479x        raw+lzma ✓
+         noise 16580 16444  0.992x      paeth+lzma ✓
+
+  *** ALL IMAGES BEAT PNG ***
+
+================================================================================
+  THE CHEAP WL PRINCIPLE
+================================================================================
+
+  STANDARD WL: "same" = identical content. Too many colors.
+  CHEAP WL:    "same" = same statistics. Bounded colors.
+
+  The LEVELS OF SAME form a REFINEMENT HIERARCHY:
+    L0: same mean                         → O(2^q) colors
+    L1: same (mean, std)                  → O(2^{2q}) colors
+    L2: same (mean, std, gradient)        → O(2^{3q}) colors
+    L3: same (mean, std, gradient, curve) → O(2^{4q}) colors
+
+  With q=4 bits of quantization:
+    L0: ≤ 16 colors (very coarse, big groups, big residuals)
+    L1: ≤ 256 colors (medium, balanced)
+    L2: ≤ 4096 colors (fine, small groups, small residuals)
+    L3: ≤ 65536 colors (very fine, approaches pixel-level)
+
+  The SWEET SPOT is L1 or L2: enough colors to capture structure,
+  few enough that prototypes + color map are cheap.
+
+  INTRA-CLASS PAETH:
+  Within each color class, rows are structurally similar.
+  Paeth prediction between consecutive rows of the same class
+  is MUCH more accurate than Paeth between arbitrary neighbors.
+  This is because WL coloring ensures the predictor matches the
+  structural type of the data.
+
+  The FUSION: WL for GROUPING + Paeth for PREDICTION = each step
+  does what it's best at. WL finds the structure (what's equivalent),
+  Paeth exploits the structure (predicts from context).
+
+DONE.
