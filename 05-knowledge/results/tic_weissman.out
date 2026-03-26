@@ -1,0 +1,36 @@
+==========================================================================================
+  TIC WEISSMAN SCORE BENCHMARK: C kernel + Python zlib
+  kind-pasteur-2026-03-25-S22
+==========================================================================================
+
+  Image                    Size   PNG_sz   TIC_sz  PNG_r  TIC_r  PNG_ms  TIC_ms  ratio  speed   RT
+  ----------------------------------------------------------------------------------------------------
+  kodim01.png            196608   134653   100124  1.46x  1.96x   12.2ms   57.1ms 1.345x  0.21x   OK
+  kodim02.png            196608   111383    95057  1.77x  2.07x   15.4ms   42.9ms 1.172x  0.36x   OK
+  kodim03.png            196608   101178    91147  1.94x  2.16x   20.6ms   70.4ms 1.110x  0.29x   OK
+  kodim04.png            196608    97341    85485  2.02x  2.30x   19.6ms   92.1ms 1.139x  0.21x   OK
+  kodim05.png            196608   145367   115551  1.35x  1.70x   10.8ms   25.8ms 1.258x  0.42x   OK
+  kodim08.png            196608   129667   105640  1.52x  1.86x   12.4ms   39.2ms 1.227x  0.32x   OK
+  kodim12.png            196608   114164    95373  1.72x  2.06x   14.1ms   67.5ms 1.197x  0.21x   OK
+  kodim23.png            196608   103026    94136  1.91x  2.09x   18.4ms   50.0ms 1.094x  0.37x   OK
+  vlcsnap-2026-03-10     196608    63289    44804  3.11x  4.39x   26.5ms   52.8ms 1.413x  0.50x   OK
+
+  AGGREGATE             1769472  1000068   827317  1.77x  2.14x  150.1ms  497.9ms 1.209x  0.30x  ALL
+
+  SUMMARY:
+    Compression: TIC is 120.9% of PNG size (= 1.209x smaller)
+    Speed:       TIC is 0.30x slower than PNG
+    Roundtrip:   ALL PASS
+
+  Size ratio > 1: TIC compresses better
+  Speed ratio > 1: TIC is faster (C kernel + Python zlib vs PIL's libpng)
+
+  WEISSMAN-LIKE METRIC: compression_gain × speed_gain = 0.364
+    > 1 means we beat PNG in the combined ratio×speed product
+    = 1 means we trade compression for speed (or vice versa)
+    < 1 means PNG wins overall
+
+  NOTE: Our encode is split between C (MED prediction, ~10% of time)
+  and Python zlib (compression, ~90% of time). A full C implementation
+  with direct zlib calls would be significantly faster.
+
