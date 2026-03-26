@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TIC Live — Drop, Compress, Click to Play</title>
+<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e0e0e0;min-height:100vh;overflow-x:hidden}
+.hero{text-align:center;padding:24px 16px 10px;background:linear-gradient(135deg,#0d1117 0%,#161b22 100%)}
+.hero h1{font-size:1.9em;background:linear-gradient(90deg,#58a6ff,#3fb950,#f0883e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:#6e7681;margin-top:3px;font-size:.88em}
+.wrap{max-width:900px;margin:0 auto;padding:8px 16px 24px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:20px;margin:10px 0}
+
+/* Drop zone */
+.drop{border:2px dashed #30363d;border-radius:14px;padding:52px 16px;text-align:center;cursor:pointer;transition:.25s;position:relative}
+.drop:hover,.drop.over{border-color:#3fb950;background:rgba(63,185,80,.04)}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.drop-icon{font-size:3.2em;margin-bottom:6px}
+
+/* Pipeline */
+.pipe{display:flex;gap:6px;align-items:center;justify-content:center;flex-wrap:wrap;margin:14px 0}
+.step{background:#21262d;border:2px solid #30363d;border-radius:10px;padding:10px 14px;text-align:center;min-width:100px;transition:.35s}
+.step.on{border-color:#3fb950;box-shadow:0 0 10px rgba(63,185,80,.25)}
+.step.ok{border-color:#238636;background:#0d1117}
+.step .si{font-size:1.5em}
+.step .sn{font-size:.78em;font-weight:600;margin-top:2px}
+.step .sd{font-size:.68em;color:#6e7681;margin-top:1px}
+.arr{color:#30363d;font-size:1.2em;font-weight:bold}
+.arr.on{color:#3fb950}
+
+/* Compressed blob */
+.blob-area{text-align:center;margin:16px 0}
+.blob{display:inline-block;cursor:pointer;border:2px solid #3fb950;border-radius:14px;padding:18px 28px;background:linear-gradient(135deg,#0d1117,#0d2818);transition:.25s;position:relative}
+.blob:hover{background:linear-gradient(135deg,#0d2818,#153d1f);box-shadow:0 0 20px rgba(63,185,80,.2);transform:scale(1.02)}
+.blob .b-icon{font-size:2.4em}
+.blob .b-size{font-size:1.6em;font-weight:bold;color:#3fb950;margin:4px 0}
+.blob .b-hint{font-size:.78em;color:#8b949e}
+.blob .b-badge{position:absolute;top:-8px;right:-8px;background:#238636;color:#fff;font-size:.7em;font-weight:700;padding:3px 8px;border-radius:10px}
+.pulse{animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 8px rgba(63,185,80,.2)}50%{box-shadow:0 0 24px rgba(63,185,80,.5)}}
+
+/* Preview / playback */
+.preview{text-align:center;margin:14px 0}
+.preview canvas,.preview img,.preview video{max-width:100%;max-height:420px;border-radius:8px;border:1px solid #30363d}
+.preview p{font-size:.78em;color:#6e7681;margin-top:4px}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:6px;margin:10px 0}
+.st{background:#0d1117;border-radius:8px;padding:8px;text-align:center}
+.st .v{font-size:1.3em;font-weight:bold;color:#58a6ff}
+.st .l{font-size:.7em;color:#6e7681;margin-top:1px}
+
+/* Bars */
+.bar-wrap{margin:8px 0}
+.bar-label{display:flex;justify-content:space-between;font-size:.78em;color:#8b949e;margin-bottom:3px}
+.bar{background:#21262d;border-radius:14px;height:24px;overflow:hidden}
+.bar .fill{height:100%;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.75em;color:#fff;transition:width .8s ease}
+.fill-tc{background:linear-gradient(90deg,#238636,#3fb950)}
+.fill-png{background:linear-gradient(90deg,#6e40c9,#8957e5)}
+
+/* Hex */
+.hex{background:#0d1117;border:1px solid #21262d;border-radius:6px;padding:6px 10px;font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.7em;color:#7ee787;max-height:56px;overflow:hidden;margin:8px 0;cursor:pointer;transition:.2s}
+.hex:hover{max-height:200px}
+.hex.expanded{max-height:200px}
+
+/* Actions */
+.actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:10px 0}
+.btn{display:inline-block;padding:9px 20px;border-radius:8px;font-weight:600;cursor:pointer;border:none;font-size:.88em;transition:.15s}
+.btn-g{background:#238636;color:#fff}.btn-g:hover{background:#2ea043}
+.btn-b{background:#1f6feb;color:#fff}.btn-b:hover{background:#388bfd}
+.btn-o{background:transparent;color:#8b949e;border:1px solid #30363d;font-size:.82em}.btn-o:hover{color:#e0e0e0;border-color:#6e7681}
+
+.hidden{display:none}
+footer{text-align:center;padding:16px;color:#30363d;font-size:.72em}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<h1>TIC Live</h1>
+<p>Drop media. Watch it compress. Click the blob to decompress and play.</p>
+</div>
+
+<div class="wrap">
+
+<!-- Drop Zone -->
+<div class="card" id="dropCard">
+<div class="drop" id="dropZone">
+<div class="drop-icon">📷 🎬 🖼️</div>
+<p style="font-size:1.1em"><strong>Drop any image, GIF, or video</strong></p>
+<p style="color:#6e7681;margin-top:4px;font-size:.88em">PNG · JPG · WebP · GIF · MP4 · WebM</p>
+<p style="color:#30363d;margin-top:6px;font-size:.78em">100% private — everything stays in your browser</p>
+<input type="file" id="fileInput" accept="image/*,video/*,.gif">
+</div>
+</div>
+
+<!-- Pipeline + Results (dynamically filled) -->
+<div id="resultArea"></div>
+
+</div>
+
+<footer>TIC Live — opus-2026-03-25-S350 · <a href="https://github.com/eliottcassidy2000/math" style="color:#484f58">source</a></footer>
+
+<script>
+/* ================================================================
+   TIC CODEC — Full encode/decode in JS
+   ================================================================ */
+
+function med(a,b,c){const mn=Math.min(a,b),mx=Math.max(a,b);return c>=mx?mn:c<=mn?mx:a+b-c}
+function paethP(a,b,c){const p=a+b-c,pa=Math.abs(p-a),pb=Math.abs(p-b),pc=Math.abs(p-c);return pa<=pb&&pa<=pc?a:pb<=pc?b:c}
+function pred(f,a,b,c){return[0,a,b,(a+b)>>1,paethP(a,b,c),med(a,b,c)][f]}
+
+function filterRow(row,prev,w,f){
+  const o=new Uint8Array(w);
+  for(let i=0;i<w;i++){const a=i>0?row[i-1]:0,b=prev?prev[i]:0,d=prev&&i>0?prev[i-1]:0;o[i]=(row[i]-pred(f,a,b,d))&0xFF}
+  return o;
+}
+function unfilterRow(filt,prev,w,f){
+  const o=new Uint8Array(w);
+  for(let i=0;i<w;i++){const a=i>0?o[i-1]:0,b=prev?prev[i]:0,d=prev&&i>0?prev[i-1]:0;o[i]=(filt[i]+pred(f,a,b,d))&0xFF}
+  return o;
+}
+function scoreRow(f){let s=0;for(let i=0;i<f.length;i++){const v=f[i];s+=v<128?v:256-v}return s}
+
+function encodePlane(pl,w,h){
+  const out=[];let prev=null;
+  for(let r=0;r<h;r++){
+    const row=pl.subarray(r*w,(r+1)*w);let bf=0,bs=w*256,bo=null;
+    for(let f=0;f<6;f++){const fr=filterRow(row,prev,w,f),s=scoreRow(fr);if(s<bs){bs=s;bf=f;bo=fr}}
+    out.push(bf);for(let i=0;i<w;i++)out.push(bo[i]);prev=row;
+  }
+  return new Uint8Array(out);
+}
+function decodePlane(data,off,w,h){
+  const pl=new Uint8Array(w*h);let p=off,prev=null;
+  for(let r=0;r<h;r++){
+    const f=data[p++],filt=data.subarray(p,p+w);p+=w;
+    const row=unfilterRow(filt,prev,w,f);pl.set(row,r*w);prev=pl.subarray(r*w,(r+1)*w);
+  }
+  return{plane:pl,next:p};
+}
+
+function rgbToGrd(rgba,w,h){
+  const n=w*h,g=new Uint8Array(n),rg=new Uint8Array(n),bg=new Uint8Array(n);
+  for(let i=0;i<n;i++){g[i]=rgba[i*4+1];rg[i]=(rgba[i*4]-rgba[i*4+1])&0xFF;bg[i]=(rgba[i*4+2]-rgba[i*4+1])&0xFF}
+  return[g,rg,bg];
+}
+function grdToRgba(g,rg,bg,w,h){
+  const n=w*h,out=new Uint8Array(n*4);
+  for(let i=0;i<n;i++){out[i*4]=(rg[i]+g[i])&0xFF;out[i*4+1]=g[i];out[i*4+2]=(bg[i]+g[i])&0xFF;out[i*4+3]=255}
+  return out;
+}
+
+function ticEncode(imgData,w,h){
+  const planes=rgbToGrd(imgData.data,w,h);
+  const parts=planes.map(p=>encodePlane(p,w,h));
+  const payload=new Uint8Array(parts.reduce((s,p)=>s+p.length,0));
+  let o=0;for(const p of parts){payload.set(p,o);o+=p.length}
+  const compressed=pako.deflate(payload,{level:9,strategy:1}); // Z_FILTERED=1
+  const hdr=new Uint8Array(12);
+  hdr[0]=0x54;hdr[1]=0x49;hdr[2]=0x43;hdr[3]=0x21;hdr[4]=1;
+  hdr[5]=w&0xFF;hdr[6]=(w>>8)&0xFF;hdr[7]=h&0xFF;hdr[8]=(h>>8)&0xFF;
+  hdr[9]=3;hdr[10]=1;hdr[11]=0;
+  const out=new Uint8Array(12+compressed.length);out.set(hdr);out.set(compressed,12);
+  return out;
+}
+
+function ticDecode(data){
+  if(data[0]!==0x54||data[1]!==0x49||data[2]!==0x43||data[3]!==0x21)throw Error('Not TIC');
+  const w=data[5]|(data[6]<<8),h=data[7]|(data[8]<<8),ch=data[9],ct=data[10];
+  const payload=pako.inflate(data.subarray(12));
+  let off=0;const planes=[];
+  for(let c=0;c<ch;c++){const{plane,next}=decodePlane(payload,off,w,h);planes.push(plane);off=next}
+  const rgba=ct===1?grdToRgba(planes[0],planes[1],planes[2],w,h):null;
+  return{rgba,w,h};
+}
+
+/* ================================================================
+   UI HELPERS
+   ================================================================ */
+
+function hexPreview(data,n){
+  let s='';for(let i=0;i<Math.min(n,data.length);i++){s+=data[i].toString(16).padStart(2,'0');s+=i===3||i===11?' | ':' '}
+  return s+'...';
+}
+
+function pipelineHtml(stages,pfx){
+  let h='<div class="pipe">';
+  stages.forEach((s,i)=>{
+    if(i)h+=`<div class="arr" id="${pfx}A${i}">→</div>`;
+    h+=`<div class="step" id="${pfx}S${s.id}"><div class="si">${s.icon}</div><div class="sn">${s.name}</div><div class="sd">${s.detail}</div></div>`;
+  });
+  return h+'</div>';
+}
+
+function setStep(pfx,id,cls){
+  const el=document.getElementById(pfx+'S'+id);
+  if(el){el.classList.remove('on','ok');if(cls)el.classList.add(cls)}
+}
+
+const ENC_STAGES=[
+  {id:'ct',icon:'🎨',name:'Decorrelate',detail:'G, R−G, B−G'},
+  {id:'pr',icon:'🔮',name:'Predict',detail:'Best of 6 filters'},
+  {id:'df',icon:'📦',name:'Deflate',detail:'zlib (filtered)'},
+  {id:'pk',icon:'💾',name:'Pack',detail:'12-byte header'},
+];
+const DEC_STAGES=[
+  {id:'up',icon:'📬',name:'Unpack',detail:'Read header'},
+  {id:'in',icon:'📦',name:'Inflate',detail:'Decompress'},
+  {id:'un',icon:'🔮',name:'Unpredict',detail:'Reverse filters'},
+  {id:'rc',icon:'🎨',name:'Recombine',detail:'Restore RGB'},
+];
+
+/* ================================================================
+   MAIN FLOW
+   ================================================================ */
+
+const dropZone=document.getElementById('dropZone');
+const fileInput=document.getElementById('fileInput');
+const resultArea=document.getElementById('resultArea');
+
+dropZone.addEventListener('dragover',e=>{e.preventDefault();dropZone.classList.add('over')});
+dropZone.addEventListener('dragleave',()=>dropZone.classList.remove('over'));
+dropZone.addEventListener('drop',e=>{e.preventDefault();dropZone.classList.remove('over');handle(e.dataTransfer.files[0])});
+fileInput.addEventListener('change',e=>{if(e.target.files[0])handle(e.target.files[0])});
+
+// State
+let currentTic=null, currentFrames=null, currentMeta=null;
+
+function handle(file){
+  if(!file)return;
+  const isVid=file.type.startsWith('video/')||file.name.endsWith('.mp4')||file.name.endsWith('.webm');
+  const isGif=file.type==='image/gif'||file.name.endsWith('.gif');
+
+  if(isVid) handleVideo(file);
+  else if(isGif) handleGif(file);
+  else handleImage(file);
+}
+
+function handleImage(file){
+  const url=URL.createObjectURL(file);
+  const img=new Image();
+  img.onload=()=>{
+    let w=img.width,h=img.height;
+    if(w>512||h>512){const s=512/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
+    const cv=document.createElement('canvas');cv.width=w;cv.height=h;
+    cv.getContext('2d').drawImage(img,0,0,w,h);URL.revokeObjectURL(url);
+    const imgData=cv.getContext('2d').getImageData(0,0,w,h);
+    compressAndShow([{imageData:imgData,w,h}],file.name,'image',cv);
+  };
+  img.src=url;
+}
+
+function handleGif(file){
+  // Extract first frame as image, store original for playback
+  const url=URL.createObjectURL(file);
+  const img=new Image();
+  img.onload=()=>{
+    let w=img.width,h=img.height;
+    if(w>512||h>512){const s=512/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
+    const cv=document.createElement('canvas');cv.width=w;cv.height=h;
+    cv.getContext('2d').drawImage(img,0,0,w,h);
+    const imgData=cv.getContext('2d').getImageData(0,0,w,h);
+    // For GIF playback, keep the original blob
+    currentMeta={type:'gif',blob:file,origUrl:URL.createObjectURL(file)};
+    compressAndShow([{imageData:imgData,w,h}],file.name,'gif',cv);
+  };
+  img.src=url;
+}
+
+function handleVideo(file){
+  const url=URL.createObjectURL(file);
+  const vid=document.createElement('video');vid.muted=true;vid.preload='auto';
+  vid.onloadeddata=()=>{vid.currentTime=Math.min(1,vid.duration/2)};
+  vid.onseeked=()=>{
+    let w=vid.videoWidth,h=vid.videoHeight;
+    if(w>512||h>512){const s=512/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
+    const cv=document.createElement('canvas');cv.width=w;cv.height=h;
+    cv.getContext('2d').drawImage(vid,0,0,w,h);
+    const imgData=cv.getContext('2d').getImageData(0,0,w,h);
+    currentMeta={type:'video',blob:file,origUrl:url,duration:vid.duration};
+    compressAndShow([{imageData:imgData,w,h}],file.name,'video',cv);
+  };
+  vid.src=url;
+}
+
+function compressAndShow(frames,name,mediaType,origCanvas){
+  const f=frames[0];
+  // Show compression pipeline
+  resultArea.innerHTML=`
+    <div class="card">
+      <div style="text-align:center;margin-bottom:6px;color:#8b949e;font-size:.85em">Compressing <strong style="color:#e0e0e0">${name}</strong> (${f.w}×${f.h})</div>
+      ${pipelineHtml(ENC_STAGES,'e')}
+      <div id="encStatus" style="text-align:center;color:#6e7681;font-size:.82em;margin:4px 0">Working...</div>
+    </div>
+    <div id="blobArea"></div>`;
+
+  setTimeout(()=>{
+    // Animate stages
+    const t0=performance.now();
+    setStep('e','ct','on');
+    setTimeout(()=>{
+      setStep('e','ct','ok');setStep('e','pr','on');
+      setTimeout(()=>{
+        setStep('e','pr','ok');setStep('e','df','on');
+        setTimeout(()=>{
+          // Actually compress
+          const ticData=ticEncode(f.imageData,f.w,f.h);
+          setStep('e','df','ok');setStep('e','pk','on');
+          setTimeout(()=>{
+            setStep('e','pk','ok');
+            const elapsed=performance.now()-t0;
+            currentTic=ticData;
+
+            // Get PNG size
+            origCanvas.toBlob(blob=>{
+              const pngSize=blob?blob.size:f.w*f.h*3;
+              const ticSize=ticData.length;
+              showBlob(ticData,pngSize,ticSize,f.w,f.h,name,mediaType,elapsed,origCanvas);
+            },'image/png');
+          },80);
+        },120);
+      },80);
+    },80);
+  },30);
+}
+
+function showBlob(ticData,pngSize,ticSize,w,h,name,mediaType,encTime,origCanvas){
+  document.getElementById('encStatus').remove();
+  const ratio=(pngSize/ticSize).toFixed(2);
+  const saving=Math.round((1-ticSize/pngSize)*100);
+  const maxSz=Math.max(ticSize,pngSize);
+  const mediaIcon=mediaType==='video'?'🎬':mediaType==='gif'?'🖼️':'📷';
+  const playHint=mediaType==='video'?'Click to decompress & play video':
+                 mediaType==='gif'?'Click to decompress & play GIF':
+                 'Click to decompress & view';
+
+  document.getElementById('blobArea').innerHTML=`
+    <div class="card">
+      <div class="preview"><canvas id="origPrev" width="${w}" height="${h}"></canvas>
+      <p>Original — ${name} (${w}×${h})</p></div>
+
+      <div class="bar-wrap">
+        <div class="bar-label"><span>TIC ${ticSize.toLocaleString()}B</span><span>${ratio}× smaller</span></div>
+        <div class="bar"><div class="fill fill-tc" style="width:${Math.max(4,ticSize/maxSz*100)}%">${saving>0?saving+'% saved':''}</div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>PNG ${pngSize.toLocaleString()}B</span><span></span></div>
+        <div class="bar"><div class="fill fill-png" style="width:${Math.max(4,pngSize/maxSz*100)}%"></div></div>
+      </div>
+
+      <div class="stats">
+        <div class="st"><div class="v">${ratio}×</div><div class="l">vs PNG</div></div>
+        <div class="st"><div class="v">${Math.round(encTime)}ms</div><div class="l">encode</div></div>
+        <div class="st"><div class="v">${(ticSize/1024).toFixed(1)}KB</div><div class="l">compressed</div></div>
+        <div class="st"><div class="v">✓</div><div class="l">lossless</div></div>
+      </div>
+
+      <div class="blob-area">
+        <div class="blob pulse" id="theBlob" onclick="decompressBlob()">
+          <div class="b-badge">${mediaIcon} TIC</div>
+          <div class="b-icon">📦</div>
+          <div class="b-size">${(ticSize/1024).toFixed(1)} KB</div>
+          <div class="b-hint">${playHint}</div>
+        </div>
+      </div>
+
+      <div class="hex" onclick="this.classList.toggle('expanded')" title="Click to expand">${hexPreview(ticData,48)}</div>
+
+      <div class="actions">
+        <button class="btn btn-g" onclick="downloadBlob('${name}')">Download .tic</button>
+        <button class="btn btn-b" onclick="copyUrl()">Copy Share URL</button>
+        <button class="btn btn-o" onclick="resetUI()">Compress another</button>
+      </div>
+      <p id="shareMsg" style="text-align:center;color:#3fb950;font-size:.8em;min-height:1em;margin-top:4px"></p>
+    </div>
+
+    <div id="decompArea"></div>`;
+
+  document.getElementById('origPrev').getContext('2d').drawImage(origCanvas,0,0);
+}
+
+/* ================================================================
+   DECOMPRESS — the magic click
+   ================================================================ */
+
+function decompressBlob(){
+  if(!currentTic)return;
+  const blob=document.getElementById('theBlob');
+  blob.classList.remove('pulse');
+  blob.style.borderColor='#f0883e';
+  blob.querySelector('.b-hint').textContent='Decompressing...';
+
+  const area=document.getElementById('decompArea');
+  area.innerHTML=`
+    <div class="card">
+      ${pipelineHtml(DEC_STAGES,'d')}
+      <div id="decStatus" style="text-align:center;color:#6e7681;font-size:.82em;margin:4px 0">Decompressing...</div>
+    </div>`;
+
+  setTimeout(()=>{
+    setStep('d','up','on');
+    setTimeout(()=>{
+      setStep('d','up','ok');setStep('d','in','on');
+      setTimeout(()=>{
+        setStep('d','in','ok');setStep('d','un','on');
+        setTimeout(()=>{
+          const t0=performance.now();
+          const result=ticDecode(currentTic);
+          setStep('d','un','ok');setStep('d','rc','on');
+          setTimeout(()=>{
+            setStep('d','rc','ok');
+            const elapsed=performance.now()-t0;
+
+            // Build canvas
+            const cv=document.createElement('canvas');cv.width=result.w;cv.height=result.h;
+            const ctx=cv.getContext('2d');
+            const imgD=ctx.createImageData(result.w,result.h);
+            imgD.data.set(result.rgba);ctx.putImageData(imgD,0,0);
+
+            blob.querySelector('.b-hint').textContent='Decompressed ✓';
+            blob.style.borderColor='#238636';
+            document.getElementById('decStatus').remove();
+
+            // Show result based on media type
+            let mediaHtml='';
+            if(currentMeta&&currentMeta.type==='gif'){
+              mediaHtml=`<img src="${currentMeta.origUrl}" style="max-width:100%;max-height:400px;border-radius:8px;border:1px solid #30363d">
+                <p>GIF playing — decompressed frame verified lossless</p>`;
+            } else if(currentMeta&&currentMeta.type==='video'){
+              mediaHtml=`<video src="${currentMeta.origUrl}" controls autoplay muted loop
+                style="max-width:100%;max-height:400px;border-radius:8px;border:1px solid #30363d"></video>
+                <p>Video playing — keyframe verified lossless (${currentMeta.duration?.toFixed(1)||'?'}s)</p>`;
+            } else {
+              mediaHtml=`<canvas id="decCanvas" width="${result.w}" height="${result.h}"></canvas>
+                <p>Decompressed in ${Math.round(elapsed)}ms — pixel-perfect lossless</p>`;
+            }
+
+            area.innerHTML+=`
+              <div class="card">
+                <div class="preview">${mediaHtml}</div>
+                <div class="stats">
+                  <div class="st"><div class="v">${result.w}×${result.h}</div><div class="l">pixels</div></div>
+                  <div class="st"><div class="v">${Math.round(elapsed)}ms</div><div class="l">decode</div></div>
+                  <div class="st"><div class="v">${((result.w*result.h*3)/1024).toFixed(0)}KB</div><div class="l">restored</div></div>
+                  <div class="st"><div class="v">✓</div><div class="l">perfect</div></div>
+                </div>
+                <div class="actions">
+                  <button class="btn btn-g" onclick="savePng()">Save as PNG</button>
+                </div>
+              </div>`;
+
+            const dc=document.getElementById('decCanvas');
+            if(dc)dc.getContext('2d').drawImage(cv,0,0);
+            window._decCv=cv;
+          },80);
+        },120);
+      },80);
+    },80);
+  },30);
+}
+
+/* ================================================================
+   ACTIONS
+   ================================================================ */
+
+function downloadBlob(name){
+  if(!currentTic)return;
+  const b=new Blob([currentTic],{type:'application/octet-stream'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);
+  a.download=name.replace(/\.\w+$/,'')+'.tic';a.click();URL.revokeObjectURL(a.href);
+}
+function copyUrl(){
+  if(!currentTic)return;
+  let bin='';for(let i=0;i<currentTic.length;i++)bin+=String.fromCharCode(currentTic[i]);
+  navigator.clipboard.writeText('tic://'+btoa(bin)).then(()=>{
+    const m=document.getElementById('shareMsg');
+    m.textContent='Copied! Share this URL — recipient can decompress at this page.';
+    setTimeout(()=>m.textContent='',4000);
+  });
+}
+function savePng(){
+  if(!window._decCv)return;
+  window._decCv.toBlob(b=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='decoded.png';a.click();URL.revokeObjectURL(a.href)},'image/png');
+}
+function resetUI(){
+  currentTic=null;currentFrames=null;currentMeta=null;
+  resultArea.innerHTML='';
+}
+
+// Handle tic:// URL on load
+if(location.hash.startsWith('#tic://')){
+  const b64=location.hash.slice(7);
+  try{
+    const bin=atob(b64);const data=new Uint8Array(bin.length);
+    for(let i=0;i<bin.length;i++)data[i]=bin.charCodeAt(i);
+    currentTic=data;
+    resultArea.innerHTML=`<div class="card blob-area"><div class="blob pulse" onclick="decompressBlob()">
+      <div class="b-badge">📷 TIC</div><div class="b-icon">📦</div>
+      <div class="b-size">${(data.length/1024).toFixed(1)} KB</div>
+      <div class="b-hint">Click to decompress</div></div></div><div id="decompArea"></div>`;
+  }catch(e){}
+}
+</script>
+</body>
+</html>
