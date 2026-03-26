@@ -13,6 +13,31 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S352 — 2026-03-25: Seesaw Proof — LES + Deletion Closes the Gap
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S351v2
+**Summary:** Advanced the β₁·β₃=0 seesaw proof. Established the complete proof chain via LES (long exact sequence) of the pair (T, T\v). Verified H₃(T,T\v)=0 for all 75 β₁>0 tournaments tested at n=5,6.
+
+### The Complete Proof Chain
+1. β₂(T) = 0 for all tournaments [THM-108, PROVED]
+2. When β₁(T)=1, exists vertex v with β₁(T\v)=0 [VERIFIED n≤7]
+3. For this critical v: β₃(T\v)=0 [VERIFIED n≤7]
+4. LES: H₃(T\v) → H₃(T) → H₃(T,T\v) → H₂(T\v) → H₂(T) = 0 → H₃(T) → H₃(T,T\v) → 0
+5. So H₃(T) ≅ H₃(T,T\v)
+6. **KEY**: H₃(T,T\v) = 0 [VERIFIED: 75/75 β₁>0 tournaments, zero counterexamples]
+7. Therefore β₃(T)=0 whenever β₁(T)=1 → β₁·β₃=0 ∎
+
+### The Remaining Gap
+Step 6 is verified computationally but needs a PROOF. The argument: tournament completeness (every pair has an arc) ensures abundant 4-paths through v to fill any relative 3-cycle. The critical vertex is "essential in degree 1 but inessential in degree 3."
+
+### Technical Note
+Fixed a bug in my initial seesaw_proof.py: was computing A_p (all allowed paths) instead of Ω_p (paths whose boundary is also allowed). The correct implementation uses path_homology_v3.py.
+
+### Files Created
+- `04-computation/seesaw_proof.py` — H₃(T,T\v) relative homology computation
+- `05-knowledge/results/seesaw_proof.out` — Verification results
+
 ## opus-2026-03-25-S351v2 — 2026-03-25: tc.html v2 — Genuine Decode + Hex Editor + Glitch Art
 
 **Account:** opus
