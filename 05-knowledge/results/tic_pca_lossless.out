@@ -1,0 +1,26 @@
+================================================================================
+  LOSSLESS PCA: Store exact reconstruction + residual
+  GUARANTEED LOSSLESS by construction (verified per image)
+  kind-pasteur-2026-03-25-S12
+================================================================================
+
+  Image           PNG      MED     LPC8  ColSort  PCA-raw  PCA-MED      Raw        BEST
+  ----------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_pca_lossless.py:37: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421    2764     1841     1122*    3704     2774     3704      ColSort 3.05x
+  circles        6978    5565     3185*    4445     5805     5575     5805         LPC8 2.19x
+  grad_d          149      27*     262      382      343       37      343          MED 5.52x
+  grad_h          148      29*      81      136      152       39      152          MED 5.10x
+  natural       12100   12180*   12213    15287    13306    12190    13306          MED 0.99x
+  random        16580   16398*   16430    16513    16398    16408    16398          MED 1.01x
+  solid           148      24       55      135       23*      34       23      PCA-raw 6.43x
+  stripes45       229      47*      84      225       52       57       52          MED 4.87x
+
+  LOSSLESS PCA TRICK:
+  Instead of storing quantized components (lossy), store the
+  EXACT uint8 reconstruction as a compressed image.
+  The reconstruction is smoother than the original → compresses better.
+  The residual is sparser → compresses to almost nothing.
+  Both together = lossless, and often smaller than the original.
+
