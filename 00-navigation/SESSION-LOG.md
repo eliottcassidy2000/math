@@ -13,6 +13,37 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S348 — 2026-03-25: The Photo Compression Wall — Deep Analysis of Every Tangent
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S347
+**Summary:** Deep investigation of every possible improvement for natural photo compression. Tested cross-channel prediction, arithmetic coding, bit-plane decomposition, signal-noise separation, all color transforms. Found the wall: GRD/RBD+MED+lzma is near-optimal for our architecture.
+
+### Tangents Investigated
+1. Cross-channel prediction (G guides R-G): HURTS by 5% — gradient not predictive enough
+2. Arithmetic coding (adaptive 256-symbol): LOSES to zlib by 59% — model too weak
+3. Bit-plane separation: WORSE by 42% — breaks cross-bit correlation
+4. Signal-noise separation (denoise+residual): WORSE by 13% — parts sum to more than whole
+5. Quantize+residual (4-7 bits): WORSE by 13% — even 7-bit quantize loses
+6. Gray code on MED residuals: TIE (saves 4 bytes = 0.04%)
+7. RBD vs GRD: RBD wins by 0.7% on all tested photos
+8. Concat vs separate plane compression: Concat wins (lzma cross-plane dictionary)
+
+### Results Summary
+- tron.jpeg: 1.36x vs PNG (69340B vs 94531B) using RBD+MED+lzma
+- t.jpg: 1.57x vs PNG (24476B vs 38408B) using RBD+MED+lzma
+- Kodak benchmark (kind-pasteur S21): 9/9 beats PNG, 1.21x aggregate
+
+### Reflection: The Photo Compression Wall
+We're between PNG and JPEG-LS in the codec hierarchy. Further gains require:
+- C arithmetic coder with learned probability model (→ PAQ territory)
+- Semantic prediction models (→ JPEG-XL/neural territory)
+- Neither is achievable in Python in reasonable time
+
+### Files Created
+- `04-computation/photo_codec.py` — Full photo codec with all techniques
+- `07-reflections/the-photo-compression-wall.md` — The wall and what it means
+
 ## opus-2026-03-25-S347 — 2026-03-25: PAQ Analysis — Context Mixing, Arithmetic Coding, GRD+MED Best Strategy
 
 **Account:** opus
