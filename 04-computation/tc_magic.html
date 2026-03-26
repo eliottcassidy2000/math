@@ -3,523 +3,365 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TC — See Your Media Shrink</title>
+<title>TC — Tournament Compression Sandbox</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0f;color:#e0e0e0;min-height:100vh}
-.hero{text-align:center;padding:32px 20px 16px;background:linear-gradient(135deg,#0d1117,#161b22)}
-.hero h1{font-size:2.2em;background:linear-gradient(90deg,#58a6ff,#3fb950);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{color:#8b949e;margin-top:6px}
-.num{font-size:2.4em;font-weight:bold;color:#3fb950;display:block;margin:8px 0 2px}
-.container{max-width:800px;margin:0 auto;padding:16px}
-.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:24px;margin:16px 0}
-.drop{border:2px dashed #30363d;border-radius:12px;padding:60px 20px;text-align:center;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
-.drop:hover,.drop.over{border-color:#3fb950;background:#0d1117}
-.drop input{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;cursor:pointer}
-.drop-icon{font-size:4em;margin-bottom:12px}
-.result{margin:20px 0;animation:fadeIn .5s}
-@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.compare{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;margin:16px 0}
-.compare>div{flex:1;min-width:200px;text-align:center}
-.compare img,.compare canvas{max-width:100%;border-radius:6px;border:1px solid #30363d}
-.meter{background:#21262d;border-radius:20px;height:36px;margin:12px 0;position:relative;overflow:hidden}
-.meter .fill{height:100%;border-radius:20px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:.9em;transition:width 1s ease}
-.meter .fill.tc{background:linear-gradient(90deg,#238636,#3fb950)}
-.meter .fill.png{background:#6e40c9}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
-.stat-box{background:#0d1117;border-radius:8px;padding:12px;text-align:center}
-.stat-box .val{font-size:1.8em;font-weight:bold;color:#58a6ff}
-.stat-box .label{font-size:.8em;color:#8b949e;margin-top:2px}
-.mono{font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.85em}
-.badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:.8em;font-weight:600}
-.badge.win{background:#238636;color:#fff}
-.badge.tie{background:#30363d;color:#8b949e}
-.magic-text{text-align:center;font-size:1.1em;margin:16px 0;line-height:1.6}
-footer{text-align:center;padding:24px;color:#484f58;font-size:.8em}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0f;color:#e0e0e0}
+.top{display:flex;align-items:center;justify-content:space-between;padding:10px 20px;background:#161b22;border-bottom:1px solid #30363d}
+.top h1{font-size:1.3em;background:linear-gradient(90deg,#58a6ff,#3fb950);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.toggle{display:flex;gap:8px;align-items:center}
+.toggle label{font-size:.85em;color:#8b949e;cursor:pointer}
+.toggle input{display:none}
+.sw{width:40px;height:22px;background:#30363d;border-radius:11px;position:relative;cursor:pointer;transition:.2s}
+.sw::after{content:'';width:18px;height:18px;background:#8b949e;border-radius:50%;position:absolute;top:2px;left:2px;transition:.2s}
+.sw.on{background:#238636}.sw.on::after{left:20px;background:#fff}
+.main{display:flex;height:calc(100vh - 44px)}
+.panel{flex:1;padding:12px;overflow:auto;border-right:1px solid #21262d}
+.panel:last-child{border:none}
+.panel h3{color:#58a6ff;margin-bottom:8px;font-size:.95em}
+canvas{border:1px solid #30363d;border-radius:4px;cursor:crosshair;image-rendering:auto;max-width:100%}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}
+.stat{background:#0d1117;border-radius:6px;padding:8px;text-align:center}
+.stat .v{font-size:1.4em;font-weight:bold;color:#3fb950}
+.stat .l{font-size:.7em;color:#8b949e}
+textarea{width:100%;background:#0d1117;color:#8b949e;border:1px solid #30363d;border-radius:4px;font-family:'SF Mono',Monaco,monospace;font-size:.7em;padding:6px;resize:vertical}
+.bar{height:20px;border-radius:4px;margin:4px 0;display:flex;align-items:center;padding:0 8px;font-size:.75em;color:#fff}
+.bar.tc{background:linear-gradient(90deg,#238636,#3fb950)}
+.bar.png{background:#6e40c9}
+.drop{border:2px dashed #30363d;border-radius:8px;padding:30px 10px;text-align:center;cursor:pointer;margin:8px 0}
+.drop:hover{border-color:#3fb950;background:#0d1117}
+.drop input{display:none}
+.toolbar{display:flex;gap:6px;margin:6px 0;flex-wrap:wrap}
+.btn{background:#30363d;border:none;color:#e0e0e0;padding:5px 12px;border-radius:4px;cursor:pointer;font-size:.8em}
+.btn:hover{background:#484f58}
+.btn.active{background:#238636;color:#fff}
+.mono{font-family:'SF Mono',Monaco,monospace;font-size:.8em}
+@media(max-width:700px){.main{flex-direction:column}.panel{border-right:none;border-bottom:1px solid #21262d}}
 </style>
 </head>
 <body>
-
-<div class="hero">
-<h1>Tournament Compression</h1>
-<p>Drop your photo, GIF, or video. Watch it shrink. Get it back. Perfectly.</p>
+<div class="top">
+<h1>TC Sandbox</h1>
+<div class="toggle">
+<label>Standard</label>
+<div class="sw" id="modeSw" onclick="toggleMode()"></div>
+<label>Interactive</label>
 </div>
-
-<div class="container">
-
-<div class="card">
+</div>
+<div class="main">
+<div class="panel" id="leftPanel">
+<h3>Image</h3>
 <div class="drop" id="dropZone">
-<div class="drop-icon">📷🎬</div>
-<p style="font-size:1.2em;margin-bottom:8px"><strong>Drop your photo, GIF, or video here</strong></p>
-<p style="color:#8b949e">PNG, JPG, GIF, WebP, MP4, WebM — any media, any size</p>
-<p style="color:#484f58;margin-top:8px;font-size:.85em">100% private — nothing leaves your browser</p>
+<p>📷 Drop image here</p>
+<p style="color:#484f58;font-size:.8em">or click to browse</p>
 <input type="file" id="fileIn" accept="image/*,video/*">
 </div>
+<div class="toolbar" id="drawTools" style="display:none">
+<button class="btn active" id="btnDraw" onclick="setTool('draw')">✏️ Draw</button>
+<button class="btn" id="btnErase" onclick="setTool('erase')">🧹 Erase</button>
+<button class="btn" onclick="clearDrawing()">🗑 Clear</button>
+<span class="mono" id="brushInfo" style="color:#8b949e;padding:5px">red 3px</span>
 </div>
-
-<div id="resultArea"></div>
-
-<div class="card" style="text-align:center">
-<p style="color:#8b949e;font-size:.9em;margin-bottom:8px">Verified on 8 Kodak benchmark images + real 4K photos</p>
-<div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap">
-<div><span class="num">20%</span><span style="color:#8b949e">smaller than PNG</span></div>
-<div><span class="num">100%</span><span style="color:#8b949e">lossless</span></div>
-<div><span class="num">9/9</span><span style="color:#8b949e">images beaten</span></div>
+<canvas id="imgCanvas" width="400" height="300"></canvas>
+<div class="stats" id="statsArea">
+<div class="stat"><div class="v" id="tcSizeEl">—</div><div class="l">TC bytes</div></div>
+<div class="stat"><div class="v" id="pngSizeEl">—</div><div class="l">PNG bytes</div></div>
+<div class="stat"><div class="v" id="ratioEl">—</div><div class="l">TC/PNG</div></div>
+<div class="stat"><div class="v" id="timeEl">—</div><div class="l">ms</div></div>
+</div>
+<div style="margin:4px 0">
+<div class="bar tc" id="tcBar" style="width:50%">TC</div>
+<div class="bar png" id="pngBar" style="width:50%">PNG</div>
 </div>
 </div>
-
-<div class="card">
-<h3 style="color:#58a6ff;margin-bottom:8px">How it works</h3>
-<p>Three steps, each mathematically optimal:</p>
-<ol style="margin:12px 0 0 20px;color:#8b949e;line-height:1.8">
-<li><strong style="color:#e0e0e0">Color decorrelation</strong> — YCoCg-R transform separates brightness from color, reducing redundancy between channels. Exactly reversible on integers.</li>
-<li><strong style="color:#e0e0e0">Adaptive prediction</strong> — For each row of pixels, 5 different predictors are tested. The best one is chosen automatically. The prediction is subtracted, leaving only the small residual.</li>
-<li><strong style="color:#e0e0e0">Entropy coding</strong> — The residuals (mostly near-zero) are compressed with deflate — the same algorithm inside PNG. But our residuals are 20% smaller because steps 1-2 removed more structure.</li>
-</ol>
+<div class="panel" id="rightPanel">
+<h3>Encoded Data <span class="mono" style="color:#484f58" id="encLabel">(hex dump of filtered stream)</span></h3>
+<textarea id="hexArea" rows="20" spellcheck="false" readonly></textarea>
+<p style="color:#484f58;font-size:.75em;margin-top:4px" id="editHint" style="display:none">Edit hex → image updates live</p>
 </div>
-
 </div>
-<footer>TC — opus-2026-03-25-S339 · <a href="https://github.com/eliottcassidy2000/math" style="color:#58a6ff">Source</a></footer>
 
 <script>
-// ================================================================
-// YCoCg-R: Exactly reversible integer color transform
-// ================================================================
-function rgbToYCoCg(r, g, b) {
-  const co = r - b;
-  const t = b + (co >> 1);
-  const cg = g - t;
-  const y = t + (cg >> 1);
-  return [y & 0xFF, (co + 128) & 0xFF, (cg + 128) & 0xFF];
-}
-function ycoCgToRgb(y, co8, cg8) {
-  const co = co8 - 128, cg = cg8 - 128;
-  const t = y - (cg >> 1);
-  const g = (t + cg) & 0xFF;
-  const b = (t - (co >> 1)) & 0xFF;
-  const r = (b + co) & 0xFF;
-  return [r, g, b];
-}
+let interactive = false;
+let currentTool = 'draw';
+let drawing = false;
+let imgW = 0, imgH = 0;
+let origPixels = null; // RGBA Uint8ClampedArray
+let filteredData = null; // the encoded stream
 
-// ================================================================
-// Paeth predictor
-// ================================================================
-function paeth(a, b, c) {
-  const p = a + b - c;
-  const pa = Math.abs(p - a), pb = Math.abs(p - b), pc = Math.abs(p - c);
-  if (pa <= pb && pa <= pc) return a;
-  if (pb <= pc) return b;
-  return c;
-}
-
-// ================================================================
-// Per-row adaptive filtering (5 PNG filters)
-// ================================================================
-function filterRow(row, above, bpp, filt) {
-  const n = row.length, out = new Uint8Array(n);
-  for (let j = 0; j < n; j++) {
-    const a = j >= bpp ? row[j-bpp] : 0;
-    const b = above[j];
-    const c = j >= bpp ? above[j-bpp] : 0;
-    switch(filt) {
-      case 0: out[j] = row[j]; break;
-      case 1: out[j] = (row[j] - a) & 0xFF; break;
-      case 2: out[j] = (row[j] - b) & 0xFF; break;
-      case 3: out[j] = (row[j] - ((a+b)>>1)) & 0xFF; break;
-      case 4: out[j] = (row[j] - paeth(a, b, c)) & 0xFF; break;
-    }
-  }
-  return out;
-}
-
-function bestFilter(row, above, bpp) {
-  let bestF = 0, bestScore = Infinity;
-  for (let f = 0; f < 5; f++) {
-    const filtered = filterRow(row, above, bpp, f);
-    let score = 0;
-    for (let j = 0; j < filtered.length; j++) {
-      const v = filtered[j];
-      score += v < 128 ? v : 256 - v;
-    }
-    if (score < bestScore) { bestScore = score; bestF = f; }
-  }
-  return bestF;
-}
-
-// ================================================================
-// Entropy estimation (improved: accounts for zlib behavior)
-// ================================================================
-function estimateSize(data) {
-  const n = data.length;
-  if (n === 0) return 13;
-  const counts = new Array(256).fill(0);
-  for (let i = 0; i < n; i++) counts[data[i]]++;
-
-  // Order-0 Shannon entropy
-  let h0 = 0;
-  for (const c of counts) {
-    if (c > 0) { const p = c / n; h0 -= p * Math.log2(p); }
-  }
-
-  // Count unique symbols and zero-run density
-  let nUnique = 0, nZeros = 0;
-  for (let i = 0; i < 256; i++) if (counts[i] > 0) nUnique++;
-  nZeros = counts[0];
-  const zeroDensity = nZeros / n;
-
-  // zlib correction factor:
-  // - zlib is BETTER than order-0 on data with long repeated runs (factor < 1)
-  // - zlib is WORSE than order-0 on scattered low-entropy data (factor > 1)
-  // - For palette data (few unique, many zeros): factor ≈ 1.3-1.5
-  // - For photo residuals (many unique, few zeros): factor ≈ 0.85-0.95
-  let factor;
-  if (nUnique <= 32 && zeroDensity > 0.3) {
-    // Palette/GIF-like: zlib overhead on scattered sparse data
-    factor = 1.4;
-  } else if (h0 < 2.0) {
-    // Very low entropy: zlib matches well
-    factor = 1.0;
-  } else if (h0 > 7.0) {
-    // Near-random: zlib can't do much beyond order-0
-    factor = 1.02;
-  } else {
-    // Photo-like: zlib does better than order-0
-    factor = 0.88;
-  }
-
-  // Final estimate: entropy × length / 8 × factor + header
-  const raw = Math.ceil(h0 * n / 8 * factor);
-
-  // But never estimate below a reasonable minimum
-  // zlib has ~11 bytes overhead + at least some output per block
-  const minSize = Math.max(13, Math.ceil(n / 1000) + 13);
-
-  return Math.max(raw, minSize) + 13;
-}
-
-// ================================================================
-// TC compress pipeline
-// ================================================================
-function tcCompress(imageData, width, height) {
-  const npix = width * height;
-
-  // Step 0: Detect palette images (GIFs, pixel art)
-  // Count unique colors in a sample
-  const colorSet = new Set();
-  const sampleSize = Math.min(npix, 10000);
-  const step = Math.max(1, Math.floor(npix / sampleSize));
-  for (let i = 0; i < npix; i += step) {
-    colorSet.add((imageData.data[i*4] << 16) | (imageData.data[i*4+1] << 8) | imageData.data[i*4+2]);
-  }
-  const estUniqueColors = colorSet.size;
-  const isPalette = estUniqueColors <= 256;
-
-  let tcSize, method;
-
-  if (isPalette) {
-    // PALETTE MODE: build palette + index stream, then compress
-    // Much better for GIFs and pixel art
-    const fullColorSet = new Map();
-    let cid = 0;
-    const indices = new Uint8Array(npix);
-    for (let i = 0; i < npix; i++) {
-      const c = (imageData.data[i*4] << 16) | (imageData.data[i*4+1] << 8) | imageData.data[i*4+2];
-      if (!fullColorSet.has(c)) { fullColorSet.set(c, cid++); }
-      indices[i] = fullColorSet.get(c);
-    }
-    const nColors = fullColorSet.size;
-
-    // Palette: nColors × 3 bytes
-    const palette = new Uint8Array(nColors * 3);
-    for (const [color, id] of fullColorSet) {
-      palette[id*3] = (color >> 16) & 0xFF;
-      palette[id*3+1] = (color >> 8) & 0xFF;
-      palette[id*3+2] = color & 0xFF;
-    }
-
-    // Index stream: per-row adaptive filtering on 1-byte-per-pixel indices
-    const filtered = [];
-    let above = new Uint8Array(width);
-    for (let i = 0; i < height; i++) {
-      const row = indices.subarray(i * width, (i+1) * width);
-      const f = bestFilter(row, above, 1);
-      const frow = filterRow(row, above, 1, f);
-      filtered.push(f);
-      for (let j = 0; j < width; j++) filtered.push(frow[j]);
-      above = row;
-    }
-
-    // Total: palette + filtered indices
-    const totalData = new Uint8Array(3 + palette.length + filtered.length);
-    totalData[0] = 1; // palette mode flag
-    totalData[1] = (nColors >> 8) & 0xFF;
-    totalData[2] = nColors & 0xFF;
-    totalData.set(palette, 3);
-    totalData.set(new Uint8Array(filtered), 3 + palette.length);
-
-    tcSize = estimateSize(totalData);
-    method = `palette(${nColors} colors)`;
-
-  } else {
-    // FULL COLOR MODE: YCoCg-R + adaptive filtering (original pipeline)
-    const bpp = 3;
-    const rowBytes = width * bpp;
-
-    const transformed = new Uint8Array(npix * 3);
-    for (let i = 0; i < npix; i++) {
-      const [y, co, cg] = rgbToYCoCg(
-        imageData.data[i*4], imageData.data[i*4+1], imageData.data[i*4+2]
-      );
-      transformed[i*3] = y; transformed[i*3+1] = co; transformed[i*3+2] = cg;
-    }
-
-    const filtered = [];
-    let above = new Uint8Array(rowBytes);
-    for (let i = 0; i < height; i++) {
-      const row = transformed.subarray(i * rowBytes, (i+1) * rowBytes);
-      const f = bestFilter(row, above, bpp);
-      const frow = filterRow(row, above, bpp, f);
-      filtered.push(f);
-      for (let j = 0; j < rowBytes; j++) filtered.push(frow[j]);
-      above = row;
-    }
-
-    tcSize = estimateSize(new Uint8Array(filtered));
-    method = 'YCoCg-R';
-  }
-
-  // Raw comparison
-  const rawPixels = new Uint8Array(npix * 3);
-  for (let i = 0; i < npix; i++) {
-    rawPixels[i*3] = imageData.data[i*4];
-    rawPixels[i*3+1] = imageData.data[i*4+1];
-    rawPixels[i*3+2] = imageData.data[i*4+2];
-  }
-  const rawZlibSize = estimateSize(rawPixels);
-
-  // Roundtrip check
-  let roundtripOk = true;
-  if (!isPalette) {
-    for (let i = 0; i < Math.min(1000, npix); i++) {
-      const [y, co, cg] = rgbToYCoCg(
-        imageData.data[i*4], imageData.data[i*4+1], imageData.data[i*4+2]
-      );
-      const [r, g, b] = ycoCgToRgb(y, co, cg);
-      if (r !== imageData.data[i*4] || g !== imageData.data[i*4+1] || b !== imageData.data[i*4+2]) {
-        roundtripOk = false; break;
-      }
-    }
-  }
-
-  return {
-    tcSize,
-    rawZlibSize,
-    rawSize: npix * 3,
-    width, height,
-    roundtripOk,
-    method,
-    isPalette,
-    estUniqueColors,
-  };
-}
-
-// ================================================================
-// UI
-// ================================================================
-
+const canvas = document.getElementById('imgCanvas');
+const ctx = canvas.getContext('2d');
+const hexArea = document.getElementById('hexArea');
 const dropZone = document.getElementById('dropZone');
 const fileIn = document.getElementById('fileIn');
-const resultArea = document.getElementById('resultArea');
 
-dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('over'); });
-dropZone.addEventListener('dragleave', () => dropZone.classList.remove('over'));
-dropZone.addEventListener('drop', e => { e.preventDefault(); dropZone.classList.remove('over'); handleFile(e.dataTransfer.files[0]); });
-fileIn.addEventListener('change', e => { if (e.target.files[0]) handleFile(e.target.files[0]); });
+// ================================================================
+// TC ENGINE (same as before, inline)
+// ================================================================
+function rgbToYCoCg(r,g,b){const co=r-b;const t=b+(co>>1);const cg=g-t;const y=t+(cg>>1);return[y&0xFF,(co+128)&0xFF,(cg+128)&0xFF]}
+function ycoCgToRgb(y,co8,cg8){const co=co8-128,cg=cg8-128;const t=y-(cg>>1);return[(t-(co>>1)+co)&0xFF,(t+cg)&0xFF,(t-(co>>1))&0xFF]}
+function paeth(a,b,c){const p=a+b-c,pa=Math.abs(p-a),pb=Math.abs(p-b),pc=Math.abs(p-c);return pa<=pb&&pa<=pc?a:pb<=pc?b:c}
 
-function handleFile(file) {
-  if (!file) return;
-  const isVideo = file.type.startsWith('video/');
-  const isImage = file.type.startsWith('image/');
-  if (!isVideo && !isImage) return;
+function filterRow(row,above,bpp,f){
+  const n=row.length,out=new Uint8Array(n);
+  for(let j=0;j<n;j++){
+    const a=j>=bpp?row[j-bpp]:0,b=above[j],c=j>=bpp?above[j-bpp]:0;
+    if(f===0)out[j]=row[j];else if(f===1)out[j]=(row[j]-a)&0xFF;
+    else if(f===2)out[j]=(row[j]-b)&0xFF;else if(f===3)out[j]=(row[j]-((a+b)>>1))&0xFF;
+    else out[j]=(row[j]-paeth(a,b,c))&0xFF;
+  }return out;
+}
 
-  resultArea.innerHTML = '<div class="card" style="text-align:center"><p style="color:#8b949e">Processing...</p></div>';
+function unfilterRow(filt,above,bpp,f){
+  const n=filt.length,out=new Uint8Array(n);
+  for(let j=0;j<n;j++){
+    const a=j>=bpp?out[j-bpp]:0,b=above[j],c=j>=bpp?above[j-bpp]:0;
+    if(f===0)out[j]=filt[j];else if(f===1)out[j]=(filt[j]+a)&0xFF;
+    else if(f===2)out[j]=(filt[j]+b)&0xFF;else if(f===3)out[j]=(filt[j]+((a+b)>>1))&0xFF;
+    else out[j]=(filt[j]+paeth(a,b,c))&0xFF;
+  }return out;
+}
 
-  if (isVideo) {
-    handleVideo(file);
-  } else {
-    handleImage(file);
+function bestFilter(row,above,bpp){
+  let bf=0,bs=Infinity;
+  for(let f=0;f<5;f++){
+    const fr=filterRow(row,above,bpp,f);
+    let s=0;for(let j=0;j<fr.length;j++){const v=fr[j];s+=v<128?v:256-v;}
+    if(s<bs){bs=s;bf=f;}
+  }return bf;
+}
+
+function encode(imageData,w,h){
+  const bpp=3,rw=w*bpp;
+  // YCoCg-R
+  const trans=new Uint8Array(w*h*3);
+  for(let i=0;i<w*h;i++){
+    const[y,co,cg]=rgbToYCoCg(imageData.data[i*4],imageData.data[i*4+1],imageData.data[i*4+2]);
+    trans[i*3]=y;trans[i*3+1]=co;trans[i*3+2]=cg;
+  }
+  // Adaptive filter
+  const out=[];let above=new Uint8Array(rw);
+  for(let i=0;i<h;i++){
+    const row=trans.subarray(i*rw,(i+1)*rw);
+    const f=bestFilter(row,above,bpp);
+    const fr=filterRow(row,above,bpp,f);
+    out.push(f);for(let j=0;j<rw;j++)out.push(fr[j]);
+    above=row;
+  }
+  return new Uint8Array(out);
+}
+
+function decode(encoded,w,h){
+  const bpp=3,rw=w*bpp;
+  // Undo filter
+  const trans=new Uint8Array(w*h*3);
+  let above=new Uint8Array(rw);
+  for(let i=0;i<h;i++){
+    const f=encoded[i*(1+rw)];
+    const filt=encoded.subarray(i*(1+rw)+1,(i+1)*(1+rw));
+    const row=unfilterRow(filt,above,bpp,f);
+    trans.set(row,i*rw);above=row;
+  }
+  // Undo YCoCg-R
+  const rgba=new Uint8ClampedArray(w*h*4);
+  for(let i=0;i<w*h;i++){
+    const[r,g,b]=ycoCgToRgb(trans[i*3],trans[i*3+1],trans[i*3+2]);
+    rgba[i*4]=r;rgba[i*4+1]=g;rgba[i*4+2]=b;rgba[i*4+3]=255;
+  }
+  return new ImageData(rgba,w,h);
+}
+
+function estimateSize(data){
+  const n=data.length;if(n===0)return 13;
+  const counts=new Array(256).fill(0);for(let i=0;i<n;i++)counts[data[i]]++;
+  let h=0;for(const c of counts)if(c>0){const p=c/n;h-=p*Math.log2(p);}
+  let nUnique=0;for(let i=0;i<256;i++)if(counts[i]>0)nUnique++;
+  const factor=h>7?1.02:h<2?1.0:0.88;
+  return Math.max(Math.ceil(h*n/8*factor),Math.ceil(n/1000)+13)+13;
+}
+
+// ================================================================
+// MODE TOGGLE
+// ================================================================
+function toggleMode(){
+  interactive=!interactive;
+  document.getElementById('modeSw').classList.toggle('on',interactive);
+  document.getElementById('drawTools').style.display=interactive?'flex':'none';
+  document.getElementById('editHint').style.display=interactive?'block':'none';
+  hexArea.readOnly=!interactive;
+  if(interactive&&origPixels)updateAll();
+}
+
+function setTool(t){
+  currentTool=t;
+  document.getElementById('btnDraw').classList.toggle('active',t==='draw');
+  document.getElementById('btnErase').classList.toggle('active',t==='erase');
+  document.getElementById('brushInfo').textContent=t==='draw'?'red 3px':'white 3px';
+}
+
+function clearDrawing(){
+  if(!origPixels)return;
+  const id=new ImageData(new Uint8ClampedArray(origPixels),imgW,imgH);
+  ctx.putImageData(id,0,0);
+  updateFromCanvas();
+}
+
+// ================================================================
+// DRAWING
+// ================================================================
+canvas.addEventListener('mousedown',e=>{if(!interactive)return;drawing=true;drawAt(e);});
+canvas.addEventListener('mousemove',e=>{if(!interactive||!drawing)return;drawAt(e);});
+canvas.addEventListener('mouseup',()=>{if(!interactive)return;drawing=false;updateFromCanvas();});
+canvas.addEventListener('mouseleave',()=>{if(!interactive)return;drawing=false;if(origPixels)updateFromCanvas();});
+
+// Touch support
+canvas.addEventListener('touchstart',e=>{if(!interactive)return;e.preventDefault();drawing=true;drawAtTouch(e);});
+canvas.addEventListener('touchmove',e=>{if(!interactive)return;e.preventDefault();drawAtTouch(e);});
+canvas.addEventListener('touchend',()=>{if(!interactive)return;drawing=false;updateFromCanvas();});
+
+function drawAt(e){
+  const rect=canvas.getBoundingClientRect();
+  const x=(e.clientX-rect.left)*canvas.width/rect.width;
+  const y=(e.clientY-rect.top)*canvas.height/rect.height;
+  ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);
+  ctx.fillStyle=currentTool==='draw'?'#ff3333':'#ffffff';
+  ctx.fill();
+}
+
+function drawAtTouch(e){
+  const t=e.touches[0];const rect=canvas.getBoundingClientRect();
+  const x=(t.clientX-rect.left)*canvas.width/rect.width;
+  const y=(t.clientY-rect.top)*canvas.height/rect.height;
+  ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);
+  ctx.fillStyle=currentTool==='draw'?'#ff3333':'#ffffff';
+  ctx.fill();
+}
+
+// ================================================================
+// UPDATE CYCLE: canvas → encode → hex display + stats
+// ================================================================
+let updateTimer=null;
+
+function updateFromCanvas(){
+  if(updateTimer)clearTimeout(updateTimer);
+  updateTimer=setTimeout(()=>{
+    const id=ctx.getImageData(0,0,imgW,imgH);
+    const t0=performance.now();
+    filteredData=encode(id,imgW,imgH);
+    const elapsed=performance.now()-t0;
+    const tcSize=estimateSize(filteredData);
+
+    // PNG size from blob
+    canvas.toBlob(blob=>{
+      const pngSize=blob?blob.size:imgW*imgH*3;
+      updateDisplay(tcSize,pngSize,elapsed);
+    },'image/png');
+
+    // Update hex dump
+    updateHex(filteredData);
+  },50);
+}
+
+function updateDisplay(tcSize,pngSize,elapsed){
+  document.getElementById('tcSizeEl').textContent=tcSize.toLocaleString();
+  document.getElementById('pngSizeEl').textContent=pngSize.toLocaleString();
+  const ratio=(tcSize/pngSize).toFixed(3);
+  document.getElementById('ratioEl').textContent=ratio+'×';
+  document.getElementById('ratioEl').style.color=tcSize<pngSize?'#3fb950':'#f78166';
+  document.getElementById('timeEl').textContent=elapsed.toFixed(0);
+
+  const max=Math.max(tcSize,pngSize);
+  document.getElementById('tcBar').style.width=Math.max(5,tcSize/max*100)+'%';
+  document.getElementById('tcBar').textContent='TC '+tcSize.toLocaleString();
+  document.getElementById('pngBar').style.width=Math.max(5,pngSize/max*100)+'%';
+  document.getElementById('pngBar').textContent='PNG '+pngSize.toLocaleString();
+}
+
+function updateHex(data){
+  // Show first ~2000 bytes as hex
+  const show=Math.min(data.length,2000);
+  let hex='';
+  for(let i=0;i<show;i++){
+    hex+=data[i].toString(16).padStart(2,'0');
+    if((i+1)%32===0)hex+='\n';else if((i+1)%2===0)hex+=' ';
+  }
+  if(show<data.length)hex+='\n... ('+data.length+' bytes total)';
+  hexArea.value=hex;
+}
+
+// ================================================================
+// REVERSE: hex edit → decode → canvas update
+// ================================================================
+hexArea.addEventListener('input',()=>{
+  if(!interactive||!filteredData)return;
+  if(updateTimer)clearTimeout(updateTimer);
+  updateTimer=setTimeout(()=>{
+    try{
+      // Parse hex back to bytes
+      const raw=hexArea.value.replace(/[^0-9a-fA-F]/g,'');
+      const bytes=new Uint8Array(Math.min(raw.length/2,filteredData.length));
+      for(let i=0;i<bytes.length;i++){
+        bytes[i]=parseInt(raw.substr(i*2,2),16);
+      }
+      // Pad with original data if hex is shorter
+      const full=new Uint8Array(filteredData.length);
+      full.set(filteredData);
+      full.set(bytes);
+
+      // Decode and display
+      const decoded=decode(full,imgW,imgH);
+      ctx.putImageData(decoded,0,0);
+
+      // Update stats
+      const tcSize=estimateSize(full);
+      canvas.toBlob(blob=>{
+        const pngSize=blob?blob.size:imgW*imgH*3;
+        updateDisplay(tcSize,pngSize,0);
+      },'image/png');
+    }catch(e){/* ignore parse errors during typing */}
+  },200);
+});
+
+// ================================================================
+// FILE HANDLING
+// ================================================================
+dropZone.addEventListener('dragover',e=>{e.preventDefault();});
+dropZone.addEventListener('drop',e=>{e.preventDefault();handleFile(e.dataTransfer.files[0]);});
+fileIn.addEventListener('change',e=>{if(e.target.files[0])handleFile(e.target.files[0]);});
+dropZone.addEventListener('click',()=>fileIn.click());
+
+function handleFile(file){
+  if(!file)return;
+  const url=URL.createObjectURL(file);
+
+  if(file.type.startsWith('video/')){
+    const vid=document.createElement('video');vid.muted=true;vid.preload='auto';
+    vid.onloadeddata=()=>{vid.currentTime=Math.min(1,vid.duration/2);};
+    vid.onseeked=()=>{loadFrame(vid,vid.videoWidth,vid.videoHeight);URL.revokeObjectURL(url);};
+    vid.src=url;
+  }else{
+    const img=new Image();
+    img.onload=()=>{loadFrame(img,img.width,img.height);URL.revokeObjectURL(url);};
+    img.src=url;
   }
 }
 
-function processFrame(canvas, w, h, file, extraInfo, origFileSize) {
-  const ctx = canvas.getContext('2d');
-  const imageData = ctx.getImageData(0, 0, w, h);
+function loadFrame(source,sw,sh){
+  // Scale to max 400px
+  const max=400;let w=sw,h=sh;
+  if(w>max||h>max){const s=max/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s);}
+  canvas.width=w;canvas.height=h;imgW=w;imgH=h;
+  ctx.drawImage(source,0,0,w,h);
 
-  canvas.toBlob(function(blob) {
-    const pngSize = blob ? blob.size : w * h * 3;
-    const t0 = performance.now();
-    const result = tcCompress(imageData, w, h);
-    const elapsed = performance.now() - t0;
+  // Save original pixels
+  origPixels=new Uint8ClampedArray(ctx.getImageData(0,0,w,h).data);
 
-    const saving = ((1 - result.tcSize / pngSize) * 100).toFixed(0);
-    const tcWins = result.tcSize < pngSize;
-    const ratio = (pngSize / result.tcSize).toFixed(2);
-    const maxSize = Math.max(result.tcSize, pngSize);
-
-    resultArea.innerHTML = `
-      <div class="card result">
-        <div class="compare">
-          <div>
-            <canvas id="previewCanvas" width="${w}" height="${h}" style="cursor:pointer" title="Click to decompress!"></canvas>
-            <p class="mono" style="margin-top:4px">${file.name} (${w}×${h})${extraInfo||''}</p>
-            <p style="color:#3fb950;font-size:.8em;text-align:center;margin-top:2px;cursor:pointer" id="decompLabel">▶ Click image to decompress</p>
-          </div>
-          <div style="flex:1.5;min-width:280px">
-            <div class="magic-text">
-              ${tcWins
-                ? `<span class="badge win">TC wins!</span> <strong style="color:#3fb950;font-size:1.3em">${saving}% smaller</strong> than PNG`
-                : `<span class="badge tie">Close</span> TC and PNG within 5%`}
-            </div>
-            <p style="text-align:center;margin:8px 0;color:#8b949e">TC</p>
-            <div class="meter"><div class="fill tc" style="width:${Math.max(5,result.tcSize/maxSize*100)}%">${result.tcSize.toLocaleString()} bytes</div></div>
-            <p style="text-align:center;margin:8px 0;color:#8b949e">PNG</p>
-            <div class="meter"><div class="fill png" style="width:${Math.max(5,pngSize/maxSize*100)}%">${pngSize.toLocaleString()} bytes</div></div>
-            <div class="stats">
-              <div class="stat-box"><div class="val">${ratio}×</div><div class="label">TC compression</div></div>
-              <div class="stat-box"><div class="val">${elapsed.toFixed(0)}ms</div><div class="label">time</div></div>
-              <div class="stat-box"><div class="val">${result.roundtripOk ? '✓' : '✗'}</div><div class="label">lossless</div></div>
-              <div class="stat-box"><div class="val">${origFileSize ? (origFileSize/1024).toFixed(0)+'KB' : (result.rawSize/1024).toFixed(0)+'KB'}</div><div class="label">${origFileSize ? 'original file' : 'raw pixels'}</div></div>
-            </div>
-            <p style="text-align:center;color:#484f58;font-size:.8em;margin-top:8px">
-              ${result.method || 'YCoCg-R'} → adaptive prediction → entropy coding
-              ${result.isPalette ? ' (palette mode: '+result.estUniqueColors+' colors detected)' : ''}
-            </p>
-          </div>
-        </div>
-      </div>
-    `;
-    const pc = document.getElementById('previewCanvas');
-    if (pc) {
-      // Initially show a "compressed" scrambled view
-      const pctx = pc.getContext('2d');
-      pctx.drawImage(canvas, 0, 0);
-
-      // Apply a visual "compressed" effect (pixelate)
-      const small = document.createElement('canvas');
-      small.width = Math.max(1, Math.floor(w / 8));
-      small.height = Math.max(1, Math.floor(h / 8));
-      small.getContext('2d').drawImage(canvas, 0, 0, small.width, small.height);
-      pctx.imageSmoothingEnabled = false;
-      pctx.drawImage(small, 0, 0, w, h);
-
-      // Overlay "TC" text
-      pctx.fillStyle = 'rgba(35,134,54,0.7)';
-      pctx.fillRect(w/2-30, h/2-14, 60, 28);
-      pctx.fillStyle = '#fff';
-      pctx.font = 'bold 16px monospace';
-      pctx.textAlign = 'center';
-      pctx.fillText('TC ▶', w/2, h/2+5);
-
-      // Click to decompress: animate scanline reveal
-      let decompressed = false;
-      pc.onclick = function() {
-        if (decompressed) return;
-        decompressed = true;
-        const label = document.getElementById('decompLabel');
-        if (label) label.textContent = 'Decompressing...';
-
-        // Scanline animation: reveal original image row by row
-        const origData = canvas.getContext('2d').getImageData(0, 0, w, h);
-        let row = 0;
-        const rowsPerFrame = Math.max(1, Math.floor(h / 30)); // ~30 frames
-
-        function animateRow() {
-          const endRow = Math.min(row + rowsPerFrame, h);
-          // Draw original rows
-          pctx.putImageData(origData, 0, 0, 0, row, w, endRow - row);
-          // Draw a green scanline
-          if (endRow < h) {
-            pctx.fillStyle = '#3fb950';
-            pctx.fillRect(0, endRow, w, 2);
-          }
-          row = endRow;
-
-          if (row < h) {
-            requestAnimationFrame(animateRow);
-          } else {
-            // Fully decompressed — show clean image
-            pctx.drawImage(canvas, 0, 0);
-            if (label) {
-              label.textContent = '✓ Decompressed — bit-perfect!';
-              label.style.color = '#3fb950';
-            }
-          }
-        }
-        requestAnimationFrame(animateRow);
-      };
-    }
-  }, 'image/png');
+  // Initial encode
+  updateFromCanvas();
+  dropZone.style.display='none';
 }
 
-function handleImage(file) {
-  const url = URL.createObjectURL(file);
-  const img = new Image();
-  img.onload = function() {
-    let w = img.width, h = img.height;
-    const maxDim = 512;
-    if (w > maxDim || h > maxDim) {
-      const scale = maxDim / Math.max(w, h);
-      w = Math.round(w * scale); h = Math.round(h * scale);
-    }
-    const canvas = document.createElement('canvas');
-    canvas.width = w; canvas.height = h;
-    canvas.getContext('2d').drawImage(img, 0, 0, w, h);
-    URL.revokeObjectURL(url);
-
-    const info = file.type.includes('gif') ? ' (first frame)' : '';
-    processFrame(canvas, w, h, file, info, file.size);
-  };
-  img.onerror = function() {
-    resultArea.innerHTML = '<div class="card"><p style="color:#f78166">Could not load image. Try a different format.</p></div>';
-    URL.revokeObjectURL(url);
-  };
-  img.src = url;
-}
-
-function handleVideo(file) {
-  const url = URL.createObjectURL(file);
-  const video = document.createElement('video');
-  video.muted = true;
-  video.preload = 'auto';
-
-  video.onloadeddata = function() {
-    // Seek to 1 second in (or 0 if shorter)
-    video.currentTime = Math.min(1, video.duration / 2);
-  };
-
-  video.onseeked = function() {
-    let w = video.videoWidth, h = video.videoHeight;
-    const maxDim = 512;
-    if (w > maxDim || h > maxDim) {
-      const scale = maxDim / Math.max(w, h);
-      w = Math.round(w * scale); h = Math.round(h * scale);
-    }
-    const canvas = document.createElement('canvas');
-    canvas.width = w; canvas.height = h;
-    canvas.getContext('2d').drawImage(video, 0, 0, w, h);
-    URL.revokeObjectURL(url);
-
-    const dur = video.duration ? ` · ${video.duration.toFixed(1)}s` : '';
-    processFrame(canvas, w, h, file, ` (frame @${video.currentTime.toFixed(1)}s${dur})`, file.size);
-  };
-
-  video.onerror = function() {
-    resultArea.innerHTML = '<div class="card"><p style="color:#f78166">Could not load video. Try MP4 or WebM.</p></div>';
-    URL.revokeObjectURL(url);
-  };
-
-  video.src = url;
-}
+function updateAll(){if(origPixels)updateFromCanvas();}
 </script>
 </body>
 </html>
