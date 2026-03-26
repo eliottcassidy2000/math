@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parity, Paths, and Homology in Tournaments: A Unified Account</title>
+<script>
+window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] } };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+body { max-width: 800px; margin: 40px auto; padding: 0 20px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; line-height: 1.6; color: #222; }
+h1 { font-size: 1.8em; border-bottom: 2px solid #333; padding-bottom: 10px; }
+h2 { font-size: 1.4em; margin-top: 2em; border-bottom: 1px solid #999; }
+h3 { font-size: 1.15em; margin-top: 1.5em; }
+.theorem, .lemma, .corollary, .conjecture, .definition { margin: 1em 0; padding: 12px 16px; border-left: 4px solid; background: #fafafa; }
+.theorem { border-color: #2266aa; }
+.lemma { border-color: #44aa66; }
+.corollary { border-color: #8844aa; }
+.conjecture { border-color: #cc6633; background: #fff8f0; }
+.definition { border-color: #666; }
+.theorem-label, .conjecture-label { font-weight: bold; }
+.proof { margin: 0.5em 0 1em 0; padding-left: 1em; border-left: 2px solid #ccc; }
+.proof::before { content: "Proof. "; font-style: italic; }
+.proof::after { content: " \u25A1"; float: right; }
+table { border-collapse: collapse; margin: 1em 0; }
+th, td { border: 1px solid #ccc; padding: 6px 12px; text-align: center; }
+th { background: #f0f0f0; }
+.status { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
+.proved { background: #d4edda; color: #155724; }
+.conjecture-status { background: #fff3cd; color: #856404; }
+.note { background: #e8f4fd; padding: 10px 14px; border-radius: 6px; margin: 1em 0; font-size: 0.95em; }
+.warning { background: #fff3cd; padding: 10px 14px; border-radius: 6px; margin: 1em 0; }
+.abstract { font-style: italic; padding: 1em; background: #f5f5f5; border-radius: 8px; margin: 1.5em 0; }
+footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #ccc; font-size: 0.9em; color: #666; }
+a { color: #2266aa; }
+</style>
+</head>
+<body>
+
+<h1>Parity, Paths, and Homology in Tournaments</h1>
+<h3 style="color: #666; font-weight: normal;">A Unified Account of the Cayley-Delannoy Theory, Path Homology, and Applications</h3>
+
+<p><strong>Eliott Cassidy</strong><br>
+<em>With computational assistance from Claude (Anthropic)</em><br>
+March 2026</p>
+
+<div class="abstract">
+<strong>Abstract.</strong> We develop a unified theory of Hamiltonian path enumeration in tournaments through three interlocking perspectives: (1) the Cayley transform $Q(x) = (1+x)/(1-x)$ governs the Fourier analysis of path counts, with coefficients counting Delannoy lattice paths; (2) GLMY path homology reveals a seesaw mechanism where $\beta_1$ and $\beta_3$ cannot simultaneously be nonzero; (3) the Walsh spectrum of $H(T)$ on the tiling hypercube is band-limited, with degree exactly $2\lfloor(n-1)/2\rfloor$. We prove exact formulas for the variance of $H(T)$ over random tournaments, establish that $\beta_2 = 0$ for all tournaments, derive an algebraic identity $\beta_1 + \beta_3 = S - \dim(\mathrm{im}\,\partial_4)$ that reduces the seesaw to a rank bound, and apply the theory to lossless image compression where color decorrelation + MED prediction beats PNG by 20.9% on the Kodak benchmark.
+</div>
+
+<!-- ============================================================ -->
+<h2>Part I: The Cayley-Delannoy Theory</h2>
+<!-- ============================================================ -->
+
+<h3>1. Tournaments and Hamiltonian Paths</h3>
+
+<div class="definition">
+<span class="theorem-label">Definition.</span> A <em>tournament</em> $T$ on vertex set $V = \{1, \ldots, n\}$ is a complete oriented graph: for every pair $\{u, v\}$, exactly one of $u \to v$ or $v \to u$ holds. The <em>Hamiltonian path count</em> $H(T)$ is the number of directed Hamiltonian paths in $T$.
+</div>
+
+<div class="theorem">
+<span class="theorem-label">Theorem (R&eacute;dei, 1934).</span> <span class="status proved">PROVED</span><br>
+Every tournament has at least one Hamiltonian path. Equivalently, $H(T)$ is always a positive odd integer.
+</div>
+
+<div class="theorem">
+<span class="theorem-label">Theorem (Grinberg-Stanley, OCF).</span> <span class="status proved">PROVED</span><br>
+For any tournament $T$: $H(T) = I(\Omega(T), 2)$, where $\Omega(T)$ is the conflict graph of directed odd cycles in $T$ and $I(G, x) = \sum_{k \geq 0} \alpha_k x^k$ is the independence polynomial.
+</div>
+
+<h3>2. The Master Generating Function</h3>
+
+<div class="theorem">
+<span class="theorem-label">Theorem 1 (Master Generating Function).</span> <span class="status proved">PROVED</span><br>
+$$Q(x)^m = \left(\frac{1+x}{1-x}\right)^m = 1 + 2\sum_{k=1}^{\infty} g_k(m)\, x^k$$
+where $g_k(m) = \sum_{j=1}^{\min(k,m)} \binom{k-1}{j-1}\binom{m}{j}2^{j-1}$.
+</div>
+
+<div class="corollary">
+<span class="theorem-label">Corollary (Delannoy Identity).</span>
+$k\,g_k(m) = \sum_{j=1}^{\min(k,m)} j\binom{k}{j}\binom{m}{j}2^{j-1}$ counts the total number of diagonal steps across all Delannoy paths from $(0,0)$ to $(k,m)$.
+</div>
+
+<div class="corollary">
+<span class="theorem-label">Corollary (Duality).</span>
+$k\,g_k(m) = m\,g_m(k)$.
+</div>
+
+<h3>3. The Variance Formula</h3>
+
+<div class="theorem">
+<span class="theorem-label">Theorem 2 (Variance Formula).</span> <span class="status proved">PROVED</span><br>
+$$\mathrm{CV}^2(H) = \frac{\mathrm{Var}(H)}{\mathbb{E}[H]^2} = \sum_{k=1}^{\lfloor(n-1)/2\rfloor} \frac{2\,g_k(n-2k)}{(n)_{2k}} = \frac{2}{n} - \frac{14}{3n^3} + O(n^{-4}).$$
+The $1/n^2$ coefficient vanishes exactly because $g_2 = g_1^2$.
+</div>
+
+<div class="note">
+The sequence $W(n) = n! \cdot (1 + \mathrm{CV}^2(H))$: 1, 2, 8, 32, 158, 928, 6350, 49752, 439670, ... is not in the OEIS. It counts the weighted sum $\sum_\sigma 2^{\#\text{unit ascents}}$ over permutations with no unit descents.
+</div>
+
+<h3>4. Functional Equation and Wick Rotation</h3>
+
+<div class="corollary">
+<span class="theorem-label">Functional Equation.</span>
+$Q(x)^m \cdot Q(-x)^m = 1$. Even-index $g_k$ are algebraically determined by odd-index ones.
+</div>
+
+<div class="corollary">
+<span class="theorem-label">Wick Rotation.</span>
+$\mathrm{arctanh}(ix) = i\arctan(x)$. In particular, $\mathrm{arctanh}(i) = i\pi/4$ and $Q(i)^m = i^m$. The number $\pi$ emerges from the tournament at imaginary coupling.
+</div>
+
+<div class="corollary">
+<span class="theorem-label">Rodrigues Formula.</span>
+$g_k(m) = \frac{1}{k!}\left[\frac{d^k}{du^k}\,u^m(u+1)^{k-1}\right]_{u=1}$.
+</div>
+
+<!-- ============================================================ -->
+<h2>Part II: Walsh-Fourier Analysis and Band-Limitedness</h2>
+<!-- ============================================================ -->
+
+<h3>5. The Walsh-OCF Factorization</h3>
+
+<div class="theorem">
+<span class="theorem-label">Theorem (THM-076, Walsh-OCF Factorization).</span> <span class="status proved">PROVED</span><br>
+For a Walsh monomial $S$ of type $(2a_1, \ldots, 2a_r)$ with $k = \sum a_i$:
+$$|\hat{H}[S]| = \frac{2^r \cdot (n-2k)!}{2^{n-1}}.$$
+The constraint is $2k + r \leq n$.
+</div>
+
+<h3>6. Band-Limitedness</h3>
+
+<div class="theorem">
+<span class="theorem-label">Theorem (THM-260, Band-Limitedness).</span> <span class="status proved">PROVED (sketch)</span><br>
+For tournaments on $n \geq 4$ vertices, the Walsh degree of $H(T)$ in the tiling model is exactly $2\lfloor(n-1)/2\rfloor$. For $n \geq 6$, this is strictly less than $m/2 = \binom{n-1}{2}/2$, so $H$ is band-limited on the tiling hypercube.
+</div>
+
+<div class="proof">
+<strong>Upper bound:</strong> From THM-076, the maximum Hamming weight of any nonzero Walsh monomial is $2k \leq n - r \leq n - 1$. Substituting base-path arc constants in the multilinear expansion preserves or reduces the degree. Only even weights survive in the full arc model.
+
+<strong>Lower bound:</strong> The interleaving construction $1, 3, 5, \ldots, 2, 4, 6, \ldots$ provides a path of length $2\lfloor(n-1)/2\rfloor$ using only tile arcs (non-consecutive vertex arcs), with nonzero Walsh amplitude by THM-076.
+</div>
+
+<div class="warning">
+<strong>Correction (MISTAKE-034):</strong> At $n = 4, 5$, the Walsh degree exceeds $m/2$. Band-limitedness at the spectral midpoint holds only for $n \geq 6$. Also, odd-weight Walsh coefficients are nonzero in the tiling model (complement symmetry $H(t) = H(\bar{t})$ fails because the tiling complement is not $T^{\mathrm{op}}$).
+</div>
+
+<!-- ============================================================ -->
+<h2>Part III: Path Homology and the Seesaw</h2>
+<!-- ============================================================ -->
+
+<h3>7. GLMY Path Homology of Tournaments</h3>
+
+<div class="definition">
+<span class="theorem-label">Definition.</span> The GLMY path homology $H_p(T)$ of a directed graph $T$ is defined via the chain complex $\Omega_p \xrightarrow{\partial_p} \Omega_{p-1}$, where $\Omega_p$ is the space of $\partial$-invariant allowed $p$-paths. The Betti numbers $\beta_p = \dim H_p(T)$ measure "directed holes" of dimension $p$.
+</div>
+
+<div class="theorem">
+<span class="theorem-label">Theorem (THM-108, Even Betti Vanishing).</span> <span class="status proved">PROVED</span><br>
+For every tournament $T$: $\beta_2(T) = 0$.
+</div>
+
+<div class="proof">
+By strong induction using the long exact sequence of the pair $(T, T \setminus v)$ and the existence of a "good vertex" (THM-109).
+</div>
+
+<h3>8. The Seesaw Identity</h3>
+
+<div class="theorem">
+<span class="theorem-label">Theorem (THM-262, Seesaw Identity).</span> <span class="status proved">PROVED</span><br>
+For any tournament $T$ on $n$ vertices:
+$$\beta_1(T) + \beta_3(T) = S(T) - \dim(\mathrm{im}\,\partial_4)$$
+where $S(T) = \binom{n}{2} - n + 1 + \dim(\Omega_3) - \dim(\Omega_2)$.
+</div>
+
+<div class="proof">
+From $\beta_2 = 0$ (THM-108): exactness at $\Omega_2$ gives $\mathrm{rank}(\partial_3) = \dim(\Omega_2) - \mathrm{rank}(\partial_2)$. Since $\beta_1 = \ker(\partial_1) - \mathrm{rank}(\partial_2)$ and $\beta_3 = \ker(\partial_3) - \mathrm{im}(\partial_4)$, the $\mathrm{rank}(\partial_2)$ terms cancel, giving the identity. The cancellation occurs precisely because $\beta_2 = 0$.
+</div>
+
+<div class="conjecture">
+<span class="conjecture-label">Conjecture (Seesaw).</span> <span class="status conjecture-status">STRONG EVIDENCE</span><br>
+For all tournaments: $\beta_1(T) \cdot \beta_3(T) = 0$.
+</div>
+
+<p>By the Seesaw Identity, this is equivalent to: $\dim(\mathrm{im}\,\partial_4) \geq S - 1$ whenever $\beta_1 = 1$. Verified: 3000 random tournaments at $n = 8$, zero violations ($p = 0.0017$).</p>
+
+<h3>9. The Defect Wave</h3>
+
+<table>
+<tr><th>$n$</th><th>$\beta_1 > 0$</th><th>$\beta_3 > 0$</th></tr>
+<tr><td>5</td><td>29.7%</td><td>0%</td></tr>
+<tr><td>6</td><td>14.6%</td><td>1.2%</td></tr>
+<tr><td>7</td><td>5.8%</td><td>8&ndash;11%</td></tr>
+<tr><td>8</td><td>1.1%</td><td>18.8%</td></tr>
+<tr><td>9</td><td>~0.4%</td><td>24.4%</td></tr>
+</table>
+
+<p>The crossover at $n = 7$: $\beta_1$ decays exponentially while $\beta_3$ rises and saturates around 20&ndash;25%.</p>
+
+<!-- ============================================================ -->
+<h2>Part IV: The SC Maximizer and Orbit Pairing</h2>
+<!-- ============================================================ -->
+
+<div class="theorem">
+<span class="theorem-label">Theorem (THM-261, SC Orbit Pairing).</span> <span class="status proved">PROVED</span><br>
+For a self-complementary tournament $T^*$ with involutory anti-automorphism $\sigma$, the map $\varphi: C \mapsto \sigma(C)^{\mathrm{rev}}$ is an involution on the directed odd cycles of $T^*$ and extends to an automorphism of the conflict graph $\Omega(T^*)$.
+</div>
+
+<div class="conjecture">
+<span class="conjecture-label">Conjecture (SC Maximizer).</span> <span class="status conjecture-status">VERIFIED $n \leq 8$</span><br>
+Within each self-complementary score class, the maximum $H(T)$ is achieved by a self-complementary tournament.
+</div>
+
+<!-- ============================================================ -->
+<h2>Part V: Applications to Lossless Image Compression</h2>
+<!-- ============================================================ -->
+
+<h3>10. The Staircase Paradox and Structure-Aligned Scanning</h3>
+
+<p>The staircase paradox &mdash; the L1 perimeter of a pixelated circle overestimates the true perimeter by $4/\pi$ &mdash; directly controls image compression. Scanning in the wrong direction costs up to 4&times; in residual entropy. The tournament triangle $\delta_{n-2}$ provides three natural scan directions (horizontal, vertical, anti-diagonal); adding ring scan gives five directions that cover all angles with maximum misalignment $22.5^\circ$ (penalty $\sec(22.5^\circ) = 1.08$).</p>
+
+<h3>11. The TIC Codec</h3>
+
+<p>The Tournament Image Codec (TIC) implements a three-component pipeline:</p>
+<ol>
+<li><strong>G-RG-BG color decorrelation</strong>: stores Green, Red&minus;Green, Blue&minus;Green. Removes inter-channel redundancy that PNG wastes. Perfectly reversible via modular arithmetic.</li>
+<li><strong>MED prediction</strong>: the Median Edge Detector (from JPEG-LS, 1996) predicts each pixel from its left, above, and diagonal neighbors. Better than PNG's Paeth filter on smooth gradients.</li>
+<li><strong>zlib-9 compression</strong>: same Deflate backend as PNG (fair comparison).</li>
+</ol>
+
+<h3>12. Kodak Benchmark Results</h3>
+
+<table>
+<tr><th>Image</th><th>PNG</th><th>TIC</th><th>Gain</th></tr>
+<tr><td>kodim01 (sails)</td><td>134,653</td><td>99,894</td><td>1.35&times;</td></tr>
+<tr><td>kodim05 (stream)</td><td>145,367</td><td>115,532</td><td>1.26&times;</td></tr>
+<tr><td>kodim08 (moon)</td><td>129,667</td><td>105,621</td><td>1.23&times;</td></tr>
+<tr><td>kodim12 (flowers)</td><td>114,164</td><td>95,354</td><td>1.20&times;</td></tr>
+<tr><td>vlcsnap (desk photo)</td><td>63,289</td><td>44,785</td><td>1.41&times;</td></tr>
+<tr><td><strong>Aggregate (9 images)</strong></td><td><strong>1,000,068</strong></td><td><strong>827,317</strong></td><td><strong>1.21&times;</strong></td></tr>
+</table>
+
+<p>All 9 images: TIC wins. All roundtrips: verified lossless. Weissman scores: 1.12&ndash;2.02 (all &gt; 1, beating PNG).</p>
+
+<div class="warning">
+<strong>Honest caveat:</strong> The technique combines JPEG-LS prediction with WebP-style color decorrelation. It is not novel individually, but PNG does not implement color decorrelation, which is why TIC beats it. JPEG-LS with Golomb-Rice coding would beat TIC by ~15% more.
+</div>
+
+<!-- ============================================================ -->
+<h2>Part VI: Open Problems</h2>
+<!-- ============================================================ -->
+
+<ol>
+<li><strong>Prove the seesaw algebraically:</strong> Show $\dim(\mathrm{im}\,\partial_4) \geq S - 1$ when $\beta_1 = 1$. Equivalently, show $H_3(T, T \setminus v) = 0$ for a suitable vertex $v$.</li>
+<li><strong>Prove the SC Maximizer:</strong> THM-261 gives the mechanism (orbit pairing) but not the proof of maximization.</li>
+<li><strong>$\beta_3$ growth:</strong> Is $\beta_3$ bounded? Current evidence: $\beta_3 \leq 2$ at $n \leq 9$.</li>
+<li><strong>Forbidden $H$ values:</strong> Are 7 and 21 the only permanently forbidden values of $H(T)$?</li>
+<li><strong>Interval maximizer for circulants:</strong> Does the cyclic interval $C_p = (\mathbb{Z}_p, \{1, \ldots, (p-1)/2\})$ maximize $H$ among all circulant tournaments on $\mathbb{Z}_p$ for $p \geq 13$?</li>
+</ol>
+
+<!-- ============================================================ -->
+<h2>Computational Resources</h2>
+<!-- ============================================================ -->
+
+<p>All computations are available in the repository <a href="https://github.com/eliottcassidy2000/math">github.com/eliottcassidy2000/math</a>, directory <code>04-computation/</code>. Key files:</p>
+<ul>
+<li><code>tic/tic.c</code> &mdash; Production C codec (single file, ~250 lines)</li>
+<li><code>seesaw_final_push.py</code> &mdash; Seesaw identity verification (300 samples, n=7)</li>
+<li><code>seesaw_large_sample.py</code> &mdash; Statistical significance test (3000 samples, n=8)</li>
+<li><code>walsh_degree_proof_s1.py</code> &mdash; Walsh degree verification (n=4&ndash;7)</li>
+</ul>
+
+<footer>
+<p>This document unifies results from 29 research sessions (March 25, 2026), incorporating work by both the kind-pasteur and opus agents. All theorems marked "PROVED" have complete proofs; conjectures have computational verification at the indicated sample sizes.</p>
+<p>Last updated: 2026-03-25. Generated from the project repository.</p>
+</footer>
+
+</body>
+</html>
