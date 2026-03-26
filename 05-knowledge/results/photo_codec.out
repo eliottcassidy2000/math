@@ -1,0 +1,30 @@
+===============================================================================================
+  Photo Codec — Maximum Compression on Natural Photographs
+  opus-2026-03-25-S348
+===============================================================================================
+
+  Image                                     Size      PNG      TIC  Ratio Method
+  -------------------------------------------------------------------------------------
+  tron.jpeg 225x225                       151875    94531    69340  1.36x RBD+MED+lzma (4.3s)
+  t.jpg 234x313                           219726    38408    24476  1.57x RBD+MED+lzma (4.8s)
+  baby.jpeg 225x225                       151875    94531    69340  1.36x RBD+MED+lzma (4.3s)
+  Screenshot from 2026-03-15 07- 256x256_crop     196608     9840    10532  0.93x GRD+MED+lzma (3.5s)
+  Screenshot from 2026-03-15 10- 256x256_crop     196608    14080    13696  1.03x GRD+MED+lzma (3.8s)
+
+  ARITHMETIC CODING TEST:
+  tron 64x64 gray MED residuals:
+    zlib-9:       2309 bytes
+    Z_FILTERED:   2246 bytes
+    lzma-9:       2264 bytes
+    Arithmetic:   3672 bytes (verify: OK)
+    PNG:          2322 bytes
+
+  CROSS-CHANNEL PREDICTION TEST:
+  tron.jpeg 128x128:
+    GRD+MED (zlib):   25644  GRD+CC (zlib):   26766  diff: -1122
+    GRD+MED (lzma):   23096  GRD+CC (lzma):   24172  diff: -1076
+  t.jpg 128x128:
+    GRD+MED (zlib):    4005  GRD+CC (zlib):    4046  diff:   -41
+    GRD+MED (lzma):    3564  GRD+CC (lzma):    3604  diff:   -40
+
+  Done. opus-2026-03-25-S348
