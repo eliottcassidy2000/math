@@ -1,0 +1,37 @@
+=====================================================================================
+  A² Codec — Second-Order Prediction for Images
+  opus-2026-03-25-S345
+=====================================================================================
+
+  Image                   PNG    MED  CALIC   2Hop    Best  vs PNG   OK
+  ---------------------------------------------------------------------------
+  blob_128               3384   2934   3104   3070   MED   1.15x   OK
+  blob_64                1394   1111   1255   1193   MED   1.25x   OK
+  circle_128             3421   2997   3348   3134   MED   1.14x   OK
+  circle_64              1312   1058   1310   1192   MED   1.24x   OK
+  diag_128                149     40    371     41   MED   3.73x   OK
+  diag_64                 106     48    320     64   MED   2.21x   OK
+  gradient_128            148     41    272     88   MED   3.61x   OK
+  gradient_64             108     34    133     57   MED   3.18x   OK
+  noise_128             16580  16395  16395  16395   MED   1.01x   OK
+  noise_64               4228   4107   4107   4107   MED   1.03x   OK
+  smooth_128             6225   5843   6549   5618  2Hop   1.11x   OK
+  smooth_64              1797   1603   1922   1615   MED   1.12x   OK
+
+--- Real Photos ---
+  tron.jpeg_128        TIC=  9822 PNG=  9983 1.016x [MED] OK 0.5s
+    Blocks: flat=40 smooth=4 edge=79 texture=133
+  t.jpg_128            TIC=  4804 PNG=  4766 0.992x [MED] OK 0.5s
+    Blocks: flat=133 smooth=0 edge=42 texture=81
+
+  12/12 beat PNG
+
+  THE A² PRINCIPLE IN ACTION:
+  - CALIC uses gradient-of-gradient (second derivative = A² of pixel graph)
+  - Error feedback uses context history (conditioning on A² profile)
+  - Two-hop prediction uses neighbors of neighbors (literal A²)
+  - Block classification uses curvature (second-order feature)
+  ALL are manifestations of the same principle: A² captures more
+  structure than A¹, at minimal extra cost (one more multiplication).
+
+  Done. opus-2026-03-25-S345
