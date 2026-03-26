@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tournament Compression</title>
-<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+<!-- No external dependencies — Golomb-Rice is implemented inline -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0a0a0f;--card:#161b22;--border:#30363d;--text:#e0e0e0;--muted:#8b949e;--dim:#484f58;
@@ -96,7 +96,7 @@ footer{text-align:center;padding:14px;color:var(--dim);font-size:.7em}
 <ol>
 <li><strong>Decorrelate</strong> — G, R−G, B−G. Each channel becomes independent.</li>
 <li><strong>Predict</strong> — 6 filters tested per row. Best residuals are tiny.</li>
-<li><strong>Deflate</strong> — zlib compresses the near-zero residuals.</li>
+<li><strong>Golomb-Rice</strong> — 64-context adaptive entropy coding compresses the residuals. No zlib needed.</li>
 </ol>
 <p style="margin-top:6px">The hex editor shows <strong>actual compressed bytes</strong>. Edit any byte, click the image — the decoder runs on your modified data. Toggle <strong>Draw</strong> mode to paint on the image and watch the compression update live.</p>
 </div>
@@ -109,7 +109,51 @@ footer{text-align:center;padding:14px;color:var(--dim);font-size:.7em}
 </div>
 <footer>Tournament Compression · opus-2026-03-25 · <a href="https://github.com/eliottcassidy2000/math">source</a></footer>
 <script>
-/* === TIC CODEC (6 filters, GRD, pako zlib) === */
+/* === GOLOMB-RICE BITSTREAM === */
+class BitWriter{constructor(n){this.d=new Uint8Array(n);this.p=0;this.b=7}
+  bit(v){if(this.p>=this.d.length)return;if(v)this.d[this.p]|=(1<<this.b);if(--this.b<0){this.b=7;this.p++}}
+  bits(v,n){for(let i=n-1;i>=0;i--)this.bit((v>>i)&1)}
+  size(){return this.p+(this.b<7?1:0)}
+  result(){return this.d.subarray(0,this.size())}
+}
+class BitReader{constructor(d){this.d=d;this.p=0;this.b=7}
+  bit(){if(this.p>=this.d.length)return 0;const v=(this.d[this.p]>>this.b)&1;if(--this.b<0){this.b=7;this.p++}return v}
+  bits(n){let v=0;for(let i=0;i<n;i++)v=(v<<1)|this.bit();return v}
+}
+function zze(v){return v>=0?2*v:2*(-v)-1}
+function zzd(v){return(v&1)?-((v+1)>>1):v>>1}
+function grEnc(bw,val,k){const v=zze(val),q=v>>k,r=v&((1<<k)-1);if(q>30){for(let i=0;i<31;i++)bw.bit(1);bw.bit(0);bw.bits(v,16)}else{for(let i=0;i<q;i++)bw.bit(1);bw.bit(0);bw.bits(r,k)}}
+function grDec(br,k){let q=0;while(br.bit()===1&&q<31)q++;let v;if(q>=31)v=br.bits(16);else v=(q<<k)|br.bits(k);return zzd(v)}
+function kFromAvg(a){if(a<0.5)return 0;let k=Math.round(Math.log2(a/0.693));return k<0?0:(k>12?12:k)}
+
+function grCompressPlane(plane,w,h){
+  const bw=new BitWriter(w*h*2);
+  const ca=new Float64Array(64).fill(4);
+  for(let r=0;r<h;r++)for(let c=0;c<w;c++){
+    const i=r*w+c;
+    const a=c>0?plane[i-1]:0,b=r>0?plane[i-w]:0,cv=r>0&&c>0?plane[i-w-1]:0,d2=r>0&&c+1<w?plane[i-w+1]:b;
+    const pred=med(a,b,cv);let res=plane[i]-pred;if(res>128)res-=256;if(res<-128)res+=256;
+    const g=Math.abs(a-cv)+Math.abs(b-cv)+Math.abs(d2-b);
+    const cx=g<3?0:g<8?1:g<15?2:g<25?3:g<40?4+((g-25)/5|0):g<100?7+((g-40)/10|0):Math.min(13+((g-100)/20|0),63);
+    const k=kFromAvg(ca[cx]);grEnc(bw,res,k);ca[cx]=0.9*ca[cx]+0.1*Math.abs(res);
+  }
+  return bw.result();
+}
+function grDecompressPlane(data,w,h){
+  const br=new BitReader(data);const plane=new Uint8Array(w*h);
+  const ca=new Float64Array(64).fill(4);
+  for(let r=0;r<h;r++)for(let c=0;c<w;c++){
+    const i=r*w+c;
+    const a=c>0?plane[i-1]:0,b=r>0?plane[i-w]:0,cv=r>0&&c>0?plane[i-w-1]:0,d2=r>0&&c+1<w?plane[i-w+1]:b;
+    const g=Math.abs(a-cv)+Math.abs(b-cv)+Math.abs(d2-b);
+    const cx=g<3?0:g<8?1:g<15?2:g<25?3:g<40?4+((g-25)/5|0):g<100?7+((g-40)/10|0):Math.min(13+((g-100)/20|0),63);
+    const k=kFromAvg(ca[cx]);const res=grDec(br,k);
+    plane[i]=(med(a,b,cv)+res)&0xFF;ca[cx]=0.9*ca[cx]+0.1*Math.abs(res);
+  }
+  return plane;
+}
+
+/* === TIC CODEC (6 filters, GRD, Golomb-Rice) === */
 function med(a,b,c){const mn=Math.min(a,b),mx=Math.max(a,b);return c>=mx?mn:c<=mn?mx:a+b-c}
 function pp(a,b,c){const p=a+b-c,pa=Math.abs(p-a),pb=Math.abs(p-b),pc=Math.abs(p-c);return pa<=pb&&pa<=pc?a:pb<=pc?b:c}
 function gp(f,a,b,c){return[0,a,b,(a+b)>>1,pp(a,b,c),med(a,b,c)][f]}
@@ -122,24 +166,40 @@ function toG(rgba,w,h){const n=w*h,g=new Uint8Array(n),rg=new Uint8Array(n),bg=n
 function frG(g,rg,bg,w,h){const n=w*h,out=new Uint8Array(n*4);for(let i=0;i<n;i++){out[i*4]=(rg[i]+g[i])&0xFF;out[i*4+1]=g[i];out[i*4+2]=(bg[i]+g[i])&0xFF;out[i*4+3]=255}return out}
 
 function ticEnc(imgData,w,h){
-  const pls=toG(imgData.data,w,h),parts=pls.map(p=>encP(p,w,h));
-  const payload=new Uint8Array(parts.reduce((s,p)=>s+p.length,0));let o=0;for(const p of parts){payload.set(p,o);o+=p.length}
-  const comp=pako.deflate(payload,{level:9,strategy:1});
-  const hdr=new Uint8Array(12);hdr[0]=0x54;hdr[1]=0x49;hdr[2]=0x43;hdr[3]=0x21;hdr[4]=1;
-  hdr[5]=w&0xFF;hdr[6]=(w>>8)&0xFF;hdr[7]=h&0xFF;hdr[8]=(h>>8)&0xFF;hdr[9]=3;hdr[10]=1;hdr[11]=0;
-  const out=new Uint8Array(12+comp.length);out.set(hdr);out.set(comp,12);return out;
+  const[g,rg,bg]=toG(imgData.data,w,h);
+  // GR-compress each plane directly (MED prediction is inside grCompressPlane)
+  const cg=grCompressPlane(g,w,h),crg=grCompressPlane(rg,w,h),cbg=grCompressPlane(bg,w,h);
+  // Pack: header + 3 plane lengths + 3 compressed planes
+  const totalComp=cg.length+crg.length+cbg.length;
+  const out=new Uint8Array(24+totalComp);
+  // Magic: TICG
+  out[0]=0x54;out[1]=0x49;out[2]=0x43;out[3]=0x47;out[4]=2;
+  out[5]=w&0xFF;out[6]=(w>>8)&0xFF;out[7]=h&0xFF;out[8]=(h>>8)&0xFF;out[9]=3;out[10]=1;out[11]=0;
+  // Plane sizes (4 bytes each)
+  const dv=new DataView(out.buffer);
+  dv.setUint32(12,cg.length,true);dv.setUint32(16,crg.length,true);dv.setUint32(20,cbg.length,true);
+  out.set(cg,24);out.set(crg,24+cg.length);out.set(cbg,24+cg.length+crg.length);
+  return out;
 }
 function ticDec(d){
-  if(d[0]!==0x54||d[1]!==0x49||d[2]!==0x43||d[3]!==0x21)throw Error('Bad magic');
-  const w=d[5]|(d[6]<<8),h=d[7]|(d[8]<<8),ch=d[9];
-  const payload=pako.inflate(d.subarray(12));
-  let off=0;const pls=[];for(let c=0;c<ch;c++){const{plane,next}=decP(payload,off,w,h);pls.push(plane);off=next}
-  return{rgba:frG(pls[0],pls[1],pls[2],w,h),w,h};
+  if(d[0]!==0x54||d[1]!==0x49)throw Error('Bad magic');
+  const w=d[5]|(d[6]<<8),h=d[7]|(d[8]<<8);
+  if(d[3]===0x47){
+    // TICG format (Golomb-Rice)
+    const dv=new DataView(d.buffer,d.byteOffset);
+    const s1=dv.getUint32(12,true),s2=dv.getUint32(16,true),s3=dv.getUint32(20,true);
+    const g=grDecompressPlane(d.subarray(24,24+s1),w,h);
+    const rg=grDecompressPlane(d.subarray(24+s1,24+s1+s2),w,h);
+    const bg=grDecompressPlane(d.subarray(24+s1+s2,24+s1+s2+s3),w,h);
+    return{rgba:frG(g,rg,bg,w,h),w,h};
+  }
+  // Legacy TIC! format (would need pako — fall back to raw)
+  throw Error('Legacy TIC! format not supported without pako');
 }
 
 /* === PIPELINE HTML === */
-const ES=[{id:'ct',i:'🎨',n:'Decorrelate',d:'G, R−G, B−G'},{id:'pr',i:'🔮',n:'Predict',d:'6 filters/row'},{id:'df',i:'📦',n:'Deflate',d:'zlib'},{id:'pk',i:'💾',n:'Pack',d:'.tic'}];
-const DS=[{id:'up',i:'📬',n:'Unpack',d:'Header'},{id:'in',i:'📦',n:'Inflate',d:'zlib'},{id:'un',i:'🔮',n:'Unpredict',d:'Reverse'},{id:'rc',i:'🎨',n:'Recombine',d:'RGB'}];
+const ES=[{id:'ct',i:'🎨',n:'Decorrelate',d:'G, R−G, B−G'},{id:'pr',i:'🔮',n:'Predict',d:'MED + context'},{id:'df',i:'📦',n:'Golomb-Rice',d:'64 contexts'},{id:'pk',i:'💾',n:'Pack',d:'.tic'}];
+const DS=[{id:'up',i:'📬',n:'Unpack',d:'Header'},{id:'in',i:'📦',n:'Golomb-Rice',d:'decode'},{id:'un',i:'🔮',n:'Unpredict',d:'Reverse'},{id:'rc',i:'🎨',n:'Recombine',d:'RGB'}];
 function pH(stg,pfx){let h='<div class="pipe">';stg.forEach((s,i)=>{if(i)h+='<div class="arr">→</div>';h+=`<div class="step" id="${pfx}${s.id}"><div class="si">${s.i}</div><div class="sn">${s.n}</div><div class="sd">${s.d}</div></div>`});return h+'</div>'}
 function sS(pfx,id,cls){const el=document.getElementById(pfx+id);if(el){el.classList.remove('on','ok','err');if(cls)el.classList.add(cls)}}
 
@@ -361,14 +421,21 @@ function decodeFromHex(){
   const hint=document.getElementById('hint');if(hint)hint.textContent='Decoding...';
   const D=55;
   setTimeout(()=>{sS('d','up','on');setTimeout(()=>{
-    let ok=data.length>=12&&data[0]===0x54&&data[1]===0x49&&data[2]===0x43&&data[3]===0x21;
+    let ok=data.length>=24&&data[0]===0x54&&data[1]===0x49&&data[2]===0x43;
     sS('d','up',ok?'ok':'err');if(!ok){if(hint){hint.textContent='Bad header';hint.style.color='var(--red)'}return}
     sS('d','in','on');setTimeout(()=>{
-      let payload;try{payload=pako.inflate(data.subarray(12));sS('d','in','ok')}catch(e){payload=data.subarray(12);sS('d','in','err')}
+      const w=data[5]|(data[6]<<8),h=data[7]|(data[8]<<8);
+      let pls=[],decOk=true;
+      try{
+        const result=ticDec(data);
+        // Extract planes from RGBA
+        const n=w*h;
+        const g=new Uint8Array(n),rg=new Uint8Array(n),bg=new Uint8Array(n);
+        for(let i=0;i<n;i++){g[i]=result.rgba[i*4+1];rg[i]=result.rgba[i*4];bg[i]=result.rgba[i*4+2]}
+        pls=[g,rg,bg];
+        sS('d','in','ok');
+      }catch(e){decOk=false;pls=[new Uint8Array(w*h),new Uint8Array(w*h),new Uint8Array(w*h)];sS('d','in','err')}
       sS('d','un','on');setTimeout(()=>{
-        const w=data[5]|(data[6]<<8),h=data[7]|(data[8]<<8),ch=data[9]||3;
-        let pls=[],decOk=true;
-        try{let off=0;for(let c=0;c<Math.min(ch,3);c++){if(off>=payload.length){pls.push(new Uint8Array(w*h));continue}const{plane,next}=decP(payload,off,w,h);pls.push(plane);off=next}while(pls.length<3)pls.push(new Uint8Array(w*h))}catch(e){decOk=false;while(pls.length<3)pls.push(new Uint8Array(w*h))}
         sS('d','un',decOk?'ok':'err');sS('d','rc','on');
         setTimeout(()=>{
           let rgba;try{rgba=frG(pls[0],pls[1],pls[2],w,h)}catch(e){rgba=new Uint8Array(w*h*4);for(let i=0;i<w*h;i++)rgba[i*4+3]=255}
