@@ -1,0 +1,28 @@
+==========================================================================================
+  TIC v7.0.0 — Grand Unified Codec
+==========================================================================================
+
+--- Grayscale ---
+  OK gradient_128                   TIC=     54 PNG=    148  2.74x  WIN [w/p]
+  OK v_gradient_128                 TIC=     57 PNG=    153  2.68x  WIN [w/u]
+  OK diag_grad_128                  TIC=     53 PNG=    149  2.81x  WIN [w/p]
+  OK circle_128                     TIC=   1585 PNG=   3421  2.16x  WIN [w/s]
+  OK smooth_128                     TIC=   3389 PNG=   6225  1.84x  WIN [sLPC4]
+  OK noise_128                      TIC=  16408 PNG=  16580  1.01x  WIN [w/n]
+  OK checker_128                    TIC=     54 PNG=    154  2.85x  WIN [sDelta]
+  OK solid_128                      TIC=     52 PNG=    148  2.85x  WIN [w/n]
+  OK radial_128                     TIC=   3113 PNG=   6978  2.24x  WIN [sLPC4]
+  OK d_stripe_128                   TIC=    114 PNG=    229  2.01x  WIN [w/n]
+  OK gradient_256                   TIC=    101 PNG=    369  3.65x  WIN [w/p]
+  OK circle_256                     TIC=   3441 PNG=   9319  2.71x  WIN [sDelta]
+  OK noise_256                      TIC=  65575 PNG=  65915  1.01x  WIN [w/n]
+
+--- RGB ---
+  OK rgb_noise_64                   TIC=  12312 PNG=  12420  1.01x  WIN [w/n]
+  OK rgb_noise_128                  TIC=  49181 PNG=  49353  1.00x  WIN [w/n]
+
+--- Real Photos ---
+  OK tron.jpeg (0s)                 TIC=  69481 PNG=  94531  1.36x  WIN [transp]
+  OK t.jpg (0s)                     TIC=  22201 PNG=  38408  1.73x  WIN [w/s]
+
+  17 passed, 0 failed, 17/17 beat PNG
