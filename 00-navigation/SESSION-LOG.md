@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-03-25-S351v2 — 2026-03-25: tc.html v2 — Genuine Decode + Hex Editor + Glitch Art
+
+**Account:** opus
+**Continuation of:** opus-2026-03-25-S351
+**Summary:** Rebuilt tc.html so the decode is GENUINE — always from the editable hex textarea, never from cache. Added corruption tools and graceful glitch handling.
+
+### Core Design Change
+The compressed bytes in the hex textarea ARE the source of truth. Every click decodes FROM that textarea. Edit a byte → click → see the change. This makes the compression tangible and interactive.
+
+### Features Added
+- Editable hex textarea with live dirty-detection (turns orange when modified)
+- "Randomize 10 bytes" button — random payload corruption
+- "Corrupt payload" button — flip every 50th byte (systematic glitch patterns)
+- "Reset to original" button — restore clean data
+- Pipeline stages turn RED on decode errors
+- Orange scanline for glitched decodes (vs green for clean)
+- Inflate error fallback: tries raw bytes, produces beautiful glitches
+- Download and share also read from textarea (share your glitches!)
+
 ## opus-2026-03-25-S351 — 2026-03-25: tc.html — Unified Demo (19 Features, 345 Lines)
 
 **Account:** opus
