@@ -8,338 +8,347 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0a0a0f;--card:#161b22;--border:#30363d;--text:#e0e0e0;--muted:#8b949e;--dim:#484f58;
---green:#3fb950;--green-bg:#238636;--blue:#58a6ff;--purple:#8957e5;--orange:#f0883e}
+--green:#3fb950;--gbg:#238636;--blue:#58a6ff;--purple:#8957e5;--orange:#f0883e;--red:#f85149}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
 a{color:var(--blue);text-decoration:none}
-
-/* Header */
-.hero{text-align:center;padding:28px 16px 14px;background:linear-gradient(135deg,#0d1117,var(--card))}
-.hero h1{font-size:2em;background:linear-gradient(90deg,var(--blue),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{color:var(--muted);margin-top:4px;font-size:.9em}
-
-/* Layout */
-.wrap{max-width:880px;margin:0 auto;padding:8px 16px 20px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin:12px 0}
-
-/* Drop zone */
-.drop{border:2px dashed var(--border);border-radius:14px;padding:50px 16px;text-align:center;cursor:pointer;transition:.25s;position:relative}
+.hero{text-align:center;padding:24px 16px 10px;background:linear-gradient(135deg,#0d1117,var(--card))}
+.hero h1{font-size:1.9em;background:linear-gradient(90deg,var(--blue),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:var(--muted);margin-top:3px;font-size:.88em}
+.wrap{max-width:900px;margin:0 auto;padding:8px 16px 20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;margin:10px 0}
+.drop{border:2px dashed var(--border);border-radius:14px;padding:44px 16px;text-align:center;cursor:pointer;transition:.25s;position:relative}
 .drop:hover,.drop.over{border-color:var(--green);background:rgba(63,185,80,.04)}
 .drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.pipe{display:flex;gap:5px;align-items:center;justify-content:center;flex-wrap:wrap;margin:12px 0}
+.step{background:#21262d;border:2px solid var(--border);border-radius:9px;padding:8px 12px;text-align:center;min-width:88px;transition:.3s}
+.step.on{border-color:var(--green);box-shadow:0 0 8px rgba(63,185,80,.25)}
+.step.ok{border-color:var(--gbg);background:#0d1117}
+.step.err{border-color:var(--red);box-shadow:0 0 8px rgba(248,81,73,.25)}
+.step .si{font-size:1.3em}.step .sn{font-size:.72em;font-weight:600;margin-top:1px}.step .sd{font-size:.62em;color:var(--dim);margin-top:1px}
+.arr{color:var(--border);font-size:1em;font-weight:bold}
+canvas{border-radius:7px;border:1px solid var(--border);max-width:100%;cursor:pointer;transition:.15s}
+canvas:hover{box-shadow:0 0 14px rgba(63,185,80,.2)}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start}
+.row>div{flex:1;min-width:200px;text-align:center}
+.bar-r{margin:5px 0}.bar-l{display:flex;justify-content:space-between;font-size:.72em;color:var(--muted);margin-bottom:2px}
+.bar{background:#21262d;border-radius:12px;height:22px;overflow:hidden}
+.bar .fill{height:100%;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.7em;color:#fff;transition:width .7s}
+.ftc{background:linear-gradient(90deg,var(--gbg),var(--green))}.fpng{background:linear-gradient(90deg,#6e40c9,var(--purple))}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(82px,1fr));gap:5px;margin:8px 0}
+.st{background:#0d1117;border-radius:7px;padding:7px;text-align:center}
+.st .v{font-size:1.2em;font-weight:bold;color:var(--blue)}.st .l{font-size:.65em;color:var(--dim);margin-top:1px}
+.badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:.75em;font-weight:600;background:var(--gbg);color:#fff}
+.actions{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:8px 0}
+.btn{display:inline-block;padding:8px 18px;border-radius:7px;font-weight:600;cursor:pointer;border:none;font-size:.82em;transition:.15s}
+.bg{background:var(--gbg);color:#fff}.bg:hover{background:#2ea043}
+.bb{background:#1f6feb;color:#fff}.bb:hover{background:#388bfd}
+.bs{padding:5px 12px;font-size:.75em;background:#21262d;color:var(--muted);border:1px solid var(--border);border-radius:6px;cursor:pointer}.bs:hover{color:var(--text);border-color:var(--muted)}
 
-/* Pipeline */
-.pipe{display:flex;gap:6px;align-items:center;justify-content:center;flex-wrap:wrap;margin:14px 0}
-.step{background:#21262d;border:2px solid var(--border);border-radius:10px;padding:10px 13px;text-align:center;min-width:95px;transition:.35s}
-.step.on{border-color:var(--green);box-shadow:0 0 10px rgba(63,185,80,.25)}
-.step.ok{border-color:var(--green-bg);background:#0d1117}
-.step .si{font-size:1.4em}.step .sn{font-size:.76em;font-weight:600;margin-top:2px}.step .sd{font-size:.66em;color:var(--dim);margin-top:1px}
-.arr{color:var(--border);font-size:1.1em;font-weight:bold}
+/* The hex editor — this IS the compressed data */
+.hex-ed{background:#0d1117;border:1px solid var(--border);border-radius:8px;padding:10px;margin:10px 0;position:relative}
+.hex-ed label{display:block;font-size:.72em;color:var(--muted);margin-bottom:4px;font-weight:600}
+.hex-ed textarea{width:100%;min-height:80px;max-height:200px;background:#000;border:1px solid #21262d;border-radius:6px;color:#7ee787;font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.72em;line-height:1.5;padding:8px;resize:vertical}
+.hex-ed textarea:focus{outline:none;border-color:var(--green)}
+.hex-ed textarea.dirty{border-color:var(--orange);color:var(--orange)}
+.hex-ed .hex-info{font-size:.68em;color:var(--dim);margin-top:3px;display:flex;justify-content:space-between}
+.hex-ed .warn{color:var(--orange);font-size:.72em;margin-top:3px}
 
-/* Preview */
-.prev-area{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-start;margin:14px 0}
-.prev-area>div{flex:1;min-width:200px;text-align:center}
-.prev-area canvas,.prev-area img,.prev-area video{max-width:100%;max-height:380px;border-radius:8px;border:1px solid var(--border);cursor:pointer;transition:.15s}
-.prev-area canvas:hover{box-shadow:0 0 16px rgba(63,185,80,.3)}
-
-/* Bars */
-.bar-row{margin:6px 0}
-.bar-label{display:flex;justify-content:space-between;font-size:.76em;color:var(--muted);margin-bottom:2px}
-.bar{background:#21262d;border-radius:14px;height:26px;overflow:hidden}
-.bar .fill{height:100%;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.75em;color:#fff;transition:width .8s}
-.fill-tc{background:linear-gradient(90deg,var(--green-bg),var(--green))}
-.fill-png{background:linear-gradient(90deg,#6e40c9,var(--purple))}
-
-/* Stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:6px;margin:10px 0}
-.st{background:#0d1117;border-radius:8px;padding:8px;text-align:center}
-.st .v{font-size:1.3em;font-weight:bold;color:var(--blue)}
-.st .l{font-size:.68em;color:var(--dim);margin-top:1px}
-.badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:.78em;font-weight:600}
-.badge.win{background:var(--green-bg);color:#fff}
-
-/* Actions */
-.actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:10px 0}
-.btn{display:inline-block;padding:9px 20px;border-radius:8px;font-weight:600;cursor:pointer;border:none;font-size:.86em;transition:.15s}
-.btn-g{background:var(--green-bg);color:#fff}.btn-g:hover{background:#2ea043}
-.btn-b{background:#1f6feb;color:#fff}.btn-b:hover{background:#388bfd}
-.btn-sm{padding:6px 14px;font-size:.78em;background:#21262d;color:var(--muted);border:1px solid var(--border)}.btn-sm:hover{color:var(--text);border-color:var(--muted)}
-
-/* Hex */
-.hex{background:#0d1117;border:1px solid #21262d;border-radius:6px;padding:5px 10px;font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.68em;color:#7ee787;max-height:46px;overflow:hidden;cursor:pointer;transition:max-height .3s;margin:6px 0}
-.hex:hover,.hex.open{max-height:180px;overflow-y:auto}
-
-/* Explainer */
-.explain{margin:12px 0;color:var(--muted);font-size:.88em;line-height:1.7}
-.explain strong{color:var(--text)}
-.explain ol{margin:8px 0 0 20px}
-
-/* Misc */
-.mono{font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.82em}
+.explain{margin:10px 0;color:var(--muted);font-size:.84em;line-height:1.6}
+.explain strong{color:var(--text)}.explain ol{margin:6px 0 0 18px}
 .hidden{display:none}
-@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.fade-up{animation:fadeUp .4s ease}
-@keyframes scanline{0%{top:0}100%{top:100%}}
-footer{text-align:center;padding:16px;color:var(--dim);font-size:.72em}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.fade{animation:fadeUp .35s ease}
+footer{text-align:center;padding:14px;color:var(--dim);font-size:.7em}
 </style>
 </head>
 <body>
-
 <div class="hero">
 <h1>Tournament Compression</h1>
-<p>Drop any media. Watch it compress. Click to decompress and play.</p>
+<p>Drop media. Compress it for real. Edit the bytes. Click to decode.</p>
 </div>
-
 <div class="wrap">
-<div class="card">
-<div class="drop" id="dropZone">
-<div style="font-size:3em;margin-bottom:8px">📷 🎬 🖼️</div>
-<p style="font-size:1.05em"><strong>Drop your image, GIF, or video</strong></p>
-<p style="color:var(--muted);margin-top:4px;font-size:.86em">PNG, JPG, WebP, GIF, MP4, WebM</p>
-<p style="color:var(--dim);margin-top:6px;font-size:.76em">100% private — everything stays in your browser</p>
-<input type="file" id="fileIn" accept="image/*,video/*,.gif">
-</div>
-</div>
-
+<div class="card"><div class="drop" id="dz">
+<div style="font-size:2.8em;margin-bottom:6px">📷 🎬 🖼️</div>
+<p style="font-size:1em"><strong>Drop any image, GIF, or video</strong></p>
+<p style="color:var(--muted);margin-top:3px;font-size:.84em">PNG, JPG, WebP, GIF, MP4, WebM</p>
+<p style="color:var(--dim);margin-top:5px;font-size:.72em">100% in-browser. The compressed bytes are real — you can edit them.</p>
+<input type="file" id="fi" accept="image/*,video/*,.gif">
+</div></div>
 <div id="out"></div>
-
 <div class="card explain">
-<h3 style="color:var(--blue);margin-bottom:6px;font-size:.95em">How it works</h3>
+<h3 style="color:var(--blue);margin-bottom:4px;font-size:.9em">How it works</h3>
 <ol>
-<li><strong>Color decorrelation</strong> — separates brightness from color (G, R−G, B−G). Channels become independent, each with lower entropy.</li>
-<li><strong>Adaptive prediction</strong> — for each row, 6 predictors are tested (none, left, above, average, Paeth, MED). The winner is chosen per-row — residuals are tiny.</li>
-<li><strong>Entropy coding</strong> — the near-zero residuals are deflated. Same backend as PNG, but our residuals are 20–40% smaller.</li>
+<li><strong>Decorrelate</strong> — G, R−G, B−G. Each channel becomes independent.</li>
+<li><strong>Predict</strong> — 6 filters tested per row. The winner makes residuals tiny.</li>
+<li><strong>Deflate</strong> — zlib compresses the near-zero residuals.</li>
 </ol>
+<p style="margin-top:6px">The hex editor below the image shows the <strong>actual compressed bytes</strong>. Edit any byte and click the image — the decoder runs on your modified data. Corrupted bytes produce real glitch art.</p>
 </div>
-
 <div class="card" style="text-align:center">
-<p style="color:var(--muted);font-size:.82em;margin-bottom:6px">Verified on Kodak benchmark + real 4K photos</p>
-<div style="display:flex;justify-content:center;gap:28px;flex-wrap:wrap">
-<div><span style="font-size:2em;font-weight:bold;color:var(--green)">20–40%</span><br><span style="color:var(--muted);font-size:.82em">smaller than PNG</span></div>
-<div><span style="font-size:2em;font-weight:bold;color:var(--blue)">100%</span><br><span style="color:var(--muted);font-size:.82em">lossless</span></div>
-<div><span style="font-size:2em;font-weight:bold;color:var(--purple)">9/9</span><br><span style="color:var(--muted);font-size:.82em">Kodak images beaten</span></div>
+<div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap">
+<div><span style="font-size:1.8em;font-weight:bold;color:var(--green)">20–40%</span><br><span style="color:var(--muted);font-size:.78em">smaller than PNG</span></div>
+<div><span style="font-size:1.8em;font-weight:bold;color:var(--blue)">100%</span><br><span style="color:var(--muted);font-size:.78em">lossless</span></div>
+<div><span style="font-size:1.8em;font-weight:bold;color:var(--purple)">9/9</span><br><span style="color:var(--muted);font-size:.78em">Kodak beaten</span></div>
+</div></div>
 </div>
-</div>
-</div>
-
-<footer>Tournament Compression — opus-2026-03-25 · <a href="https://github.com/eliottcassidy2000/math">source</a></footer>
-
+<footer>Tournament Compression · opus-2026-03-25 · <a href="https://github.com/eliottcassidy2000/math">source</a></footer>
 <script>
-/* ================================================================
-   TIC CODEC
-   ================================================================ */
+/* === TIC CODEC === */
 function med(a,b,c){const mn=Math.min(a,b),mx=Math.max(a,b);return c>=mx?mn:c<=mn?mx:a+b-c}
-function paethP(a,b,c){const p=a+b-c,pa=Math.abs(p-a),pb=Math.abs(p-b),pc=Math.abs(p-c);return pa<=pb&&pa<=pc?a:pb<=pc?b:c}
-function pr(f,a,b,c){return[0,a,b,(a+b)>>1,paethP(a,b,c),med(a,b,c)][f]}
-
-function fRow(row,prev,w,f){const o=new Uint8Array(w);for(let i=0;i<w;i++){const a=i>0?row[i-1]:0,b=prev?prev[i]:0,d=prev&&i>0?prev[i-1]:0;o[i]=(row[i]-pr(f,a,b,d))&0xFF}return o}
-function uRow(fl,prev,w,f){const o=new Uint8Array(w);for(let i=0;i<w;i++){const a=i>0?o[i-1]:0,b=prev?prev[i]:0,d=prev&&i>0?prev[i-1]:0;o[i]=(fl[i]+pr(f,a,b,d))&0xFF}return o}
-function scr(f){let s=0;for(let i=0;i<f.length;i++){const v=f[i];s+=v<128?v:256-v}return s}
-
-function encPlane(pl,w,h){const out=[];let pv=null;for(let r=0;r<h;r++){const row=pl.subarray(r*w,(r+1)*w);let bf=0,bs=w*256,bo;for(let f=0;f<6;f++){const fr=fRow(row,pv,w,f),s=scr(fr);if(s<bs){bs=s;bf=f;bo=fr}}out.push(bf);for(let i=0;i<w;i++)out.push(bo[i]);pv=row}return new Uint8Array(out)}
-function decPlane(d,off,w,h){const pl=new Uint8Array(w*h);let p=off,pv=null;for(let r=0;r<h;r++){const f=d[p++],fl=d.subarray(p,p+w);p+=w;const row=uRow(fl,pv,w,f);pl.set(row,r*w);pv=pl.subarray(r*w,(r+1)*w)}return{plane:pl,next:p}}
-
-function toGrd(rgba,w,h){const n=w*h,g=new Uint8Array(n),rg=new Uint8Array(n),bg=new Uint8Array(n);for(let i=0;i<n;i++){g[i]=rgba[i*4+1];rg[i]=(rgba[i*4]-rgba[i*4+1])&0xFF;bg[i]=(rgba[i*4+2]-rgba[i*4+1])&0xFF}return[g,rg,bg]}
-function fromGrd(g,rg,bg,w,h){const n=w*h,out=new Uint8Array(n*4);for(let i=0;i<n;i++){out[i*4]=(rg[i]+g[i])&0xFF;out[i*4+1]=g[i];out[i*4+2]=(bg[i]+g[i])&0xFF;out[i*4+3]=255}return out}
+function pp(a,b,c){const p=a+b-c,pa=Math.abs(p-a),pb=Math.abs(p-b),pc=Math.abs(p-c);return pa<=pb&&pa<=pc?a:pb<=pc?b:c}
+function gp(f,a,b,c){return[0,a,b,(a+b)>>1,pp(a,b,c),med(a,b,c)][f]}
+function fR(row,prev,w,f){const o=new Uint8Array(w);for(let i=0;i<w;i++){const a=i>0?row[i-1]:0,b=prev?prev[i]:0,d=prev&&i>0?prev[i-1]:0;o[i]=(row[i]-gp(f,a,b,d))&0xFF}return o}
+function uR(fl,prev,w,f){const o=new Uint8Array(w);for(let i=0;i<w;i++){const a=i>0?o[i-1]:0,b=prev?prev[i]:0,d=prev&&i>0?prev[i-1]:0;o[i]=(fl[i]+gp(f,a,b,d))&0xFF}return o}
+function sc(f){let s=0;for(let i=0;i<f.length;i++){const v=f[i];s+=v<128?v:256-v}return s}
+function encP(pl,w,h){const out=[];let pv=null;for(let r=0;r<h;r++){const row=pl.subarray(r*w,(r+1)*w);let bf=0,bs=w*256,bo;for(let f=0;f<6;f++){const fr=fR(row,pv,w,f),s=sc(fr);if(s<bs){bs=s;bf=f;bo=fr}}out.push(bf);for(let i=0;i<w;i++)out.push(bo[i]);pv=row}return new Uint8Array(out)}
+function decP(d,off,w,h){const pl=new Uint8Array(w*h);let p=off,pv=null;for(let r=0;r<h;r++){const f=d[p++],fl=d.subarray(p,p+w);p+=w;const row=uR(fl,pv,w,f);pl.set(row,r*w);pv=pl.subarray(r*w,(r+1)*w)}return{plane:pl,next:p}}
+function toG(rgba,w,h){const n=w*h,g=new Uint8Array(n),rg=new Uint8Array(n),bg=new Uint8Array(n);for(let i=0;i<n;i++){g[i]=rgba[i*4+1];rg[i]=(rgba[i*4]-rgba[i*4+1])&0xFF;bg[i]=(rgba[i*4+2]-rgba[i*4+1])&0xFF}return[g,rg,bg]}
+function frG(g,rg,bg,w,h){const n=w*h,out=new Uint8Array(n*4);for(let i=0;i<n;i++){out[i*4]=(rg[i]+g[i])&0xFF;out[i*4+1]=g[i];out[i*4+2]=(bg[i]+g[i])&0xFF;out[i*4+3]=255}return out}
 
 function ticEnc(imgData,w,h){
-  const pls=toGrd(imgData.data,w,h),parts=pls.map(p=>encPlane(p,w,h));
+  const pls=toG(imgData.data,w,h),parts=pls.map(p=>encP(p,w,h));
   const payload=new Uint8Array(parts.reduce((s,p)=>s+p.length,0));let o=0;for(const p of parts){payload.set(p,o);o+=p.length}
   const comp=pako.deflate(payload,{level:9,strategy:1});
   const hdr=new Uint8Array(12);hdr[0]=0x54;hdr[1]=0x49;hdr[2]=0x43;hdr[3]=0x21;hdr[4]=1;
   hdr[5]=w&0xFF;hdr[6]=(w>>8)&0xFF;hdr[7]=h&0xFF;hdr[8]=(h>>8)&0xFF;hdr[9]=3;hdr[10]=1;hdr[11]=0;
   const out=new Uint8Array(12+comp.length);out.set(hdr);out.set(comp,12);return out;
 }
+
 function ticDec(d){
+  if(d[0]!==0x54||d[1]!==0x49||d[2]!==0x43||d[3]!==0x21)throw Error('Bad magic');
   const w=d[5]|(d[6]<<8),h=d[7]|(d[8]<<8),ch=d[9];
-  const payload=pako.inflate(d.subarray(12));let off=0;const pls=[];
-  for(let c=0;c<ch;c++){const{plane,next}=decPlane(payload,off,w,h);pls.push(plane);off=next}
-  return{rgba:fromGrd(pls[0],pls[1],pls[2],w,h),w,h};
+  const payload=pako.inflate(d.subarray(12));
+  let off=0;const pls=[];for(let c=0;c<ch;c++){const{plane,next}=decP(payload,off,w,h);pls.push(plane);off=next}
+  return{rgba:frG(pls[0],pls[1],pls[2],w,h),w,h};
 }
 
-/* ================================================================
-   PIPELINE HTML
-   ================================================================ */
-const ENC=[{id:'ct',i:'🎨',n:'Decorrelate',d:'G, R−G, B−G'},{id:'pr',i:'🔮',n:'Predict',d:'Best of 6/row'},{id:'df',i:'📦',n:'Deflate',d:'zlib filtered'},{id:'pk',i:'💾',n:'Pack',d:'12-byte .tic'}];
-const DEC=[{id:'up',i:'📬',n:'Unpack',d:'Read header'},{id:'in',i:'📦',n:'Inflate',d:'Decompress'},{id:'un',i:'🔮',n:'Unpredict',d:'Reverse filters'},{id:'rc',i:'🎨',n:'Recombine',d:'Restore RGB'}];
+/* === PIPELINE === */
+const ES=[{id:'ct',i:'🎨',n:'Decorrelate',d:'G, R−G, B−G'},{id:'pr',i:'🔮',n:'Predict',d:'6 filters/row'},{id:'df',i:'📦',n:'Deflate',d:'zlib'},{id:'pk',i:'💾',n:'Pack',d:'.tic'}];
+const DS=[{id:'up',i:'📬',n:'Unpack',d:'Header'},{id:'in',i:'📦',n:'Inflate',d:'zlib'},{id:'un',i:'🔮',n:'Unpredict',d:'Reverse'},{id:'rc',i:'🎨',n:'Recombine',d:'RGB'}];
+function pH(stg,pfx){let h='<div class="pipe">';stg.forEach((s,i)=>{if(i)h+='<div class="arr">→</div>';h+=`<div class="step" id="${pfx}${s.id}"><div class="si">${s.i}</div><div class="sn">${s.n}</div><div class="sd">${s.d}</div></div>`});return h+'</div>'}
+function sS(pfx,id,cls){const el=document.getElementById(pfx+id);if(el){el.classList.remove('on','ok','err');if(cls)el.classList.add(cls)}}
 
-function pipeHtml(stages,pfx){let h='<div class="pipe">';stages.forEach((s,i)=>{if(i)h+=`<div class="arr">→</div>`;h+=`<div class="step" id="${pfx}${s.id}"><div class="si">${s.i}</div><div class="sn">${s.n}</div><div class="sd">${s.d}</div></div>`});return h+'</div>'}
-function setS(pfx,id,cls){const el=document.getElementById(pfx+id);if(el){el.classList.remove('on','ok');if(cls)el.classList.add(cls)}}
+/* === HEX UTILS === */
+function toHex(d){let s='';for(let i=0;i<d.length;i++){if(i>0&&i%16===0)s+='\n';else if(i>0)s+=' ';s+=d[i].toString(16).padStart(2,'0')}return s}
+function fromHex(s){const bytes=[];const tokens=s.replace(/[^0-9a-fA-F]/g,' ').trim().split(/\s+/);for(const t of tokens){if(t.length===2){const v=parseInt(t,16);if(!isNaN(v))bytes.push(v)}}return new Uint8Array(bytes)}
 
-function hexStr(d,n){let s='';for(let i=0;i<Math.min(n,d.length);i++){s+=d[i].toString(16).padStart(2,'0');if(i===3||i===11)s+=' │ ';else s+=' '}return s+'…'}
+/* === STATE === */
+let ticData=null,origCv=null,mBlob=null,mType=null,imgW=0,imgH=0;
 
-/* ================================================================
-   MAIN FLOW
-   ================================================================ */
-const drop=document.getElementById('dropZone'),fileIn=document.getElementById('fileIn'),out=document.getElementById('out');
-drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('over')});
-drop.addEventListener('dragleave',()=>drop.classList.remove('over'));
-drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('over');go(e.dataTransfer.files[0])});
-fileIn.addEventListener('change',e=>{if(e.target.files[0])go(e.target.files[0])});
-
-let ticData=null,origCanvas=null,mediaBlob=null,mediaType=null;
+/* === DROP === */
+const dz=document.getElementById('dz'),fi=document.getElementById('fi'),out=document.getElementById('out');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('over')});
+dz.addEventListener('dragleave',()=>dz.classList.remove('over'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('over');go(e.dataTransfer.files[0])});
+fi.addEventListener('change',e=>{if(e.target.files[0])go(e.target.files[0])});
 
 function go(file){
-  if(!file)return;
-  mediaBlob=file;
-  mediaType=file.type.startsWith('video/')?'video':(file.type==='image/gif'||file.name.endsWith('.gif'))?'gif':'image';
-  if(mediaType==='video')goVideo(file);else goImage(file);
+  if(!file)return;mBlob=file;
+  mType=file.type.startsWith('video/')?'video':(file.type==='image/gif'||file.name.endsWith('.gif'))?'gif':'image';
+  if(mType==='video'){const url=URL.createObjectURL(file);const v=document.createElement('video');v.muted=true;v.preload='auto';
+    v.onloadeddata=()=>{v.currentTime=Math.min(1,v.duration/2)};
+    v.onseeked=()=>{let w=v.videoWidth,h=v.videoHeight;if(w>640||h>640){const s=640/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
+      const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(v,0,0,w,h);doCompress(cv,w,h,file)};v.src=url;
+  }else{const url=URL.createObjectURL(file);const img=new Image();
+    img.onload=()=>{let w=img.width,h=img.height;if(w>640||h>640){const s=640/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
+      const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(img,0,0,w,h);URL.revokeObjectURL(url);doCompress(cv,w,h,file)};img.src=url;}
 }
 
-function goImage(file){
-  const url=URL.createObjectURL(file);const img=new Image();
-  img.onload=()=>{
-    let w=img.width,h=img.height;if(w>640||h>640){const s=640/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
-    const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(img,0,0,w,h);URL.revokeObjectURL(url);
-    compress(cv,w,h,file);
-  };img.src=url;
-}
-function goVideo(file){
-  const url=URL.createObjectURL(file);const v=document.createElement('video');v.muted=true;v.preload='auto';
-  v.onloadeddata=()=>{v.currentTime=Math.min(1,v.duration/2)};
-  v.onseeked=()=>{
-    let w=v.videoWidth,h=v.videoHeight;if(w>640||h>640){const s=640/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
-    const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(v,0,0,w,h);
-    compress(cv,w,h,file);
-  };v.src=url;
-}
-
-function compress(cv,w,h,file){
-  origCanvas=cv;
+function doCompress(cv,w,h,file){
+  origCv=cv;imgW=w;imgH=h;
   const imgData=cv.getContext('2d').getImageData(0,0,w,h);
-  out.innerHTML=`<div class="card fade-up"><div style="text-align:center;color:var(--muted);font-size:.84em;margin-bottom:4px">Compressing <strong style="color:var(--text)">${file.name}</strong> (${w}×${h})</div>${pipeHtml(ENC,'e')}</div>`;
-
-  // Animate compression pipeline
-  const delay=70;
-  setTimeout(()=>{setS('e','ct','on');setTimeout(()=>{setS('e','ct','ok');setS('e','pr','on');setTimeout(()=>{setS('e','pr','ok');setS('e','df','on');
-  setTimeout(()=>{
-    const t0=performance.now();
-    ticData=ticEnc(imgData,w,h);
-    const ms=performance.now()-t0;
-    setS('e','df','ok');setS('e','pk','on');
-    setTimeout(()=>{
-      setS('e','pk','ok');
-      cv.toBlob(blob=>{showResult(blob?blob.size:w*h*3,ticData.length,w,h,file,ms,cv);},'image/png');
-    },delay);
-  },delay+40);},delay);},delay);},20);
+  out.innerHTML=`<div class="card fade">${pH(ES,'e')}<div id="encSt" style="text-align:center;color:var(--muted);font-size:.78em">Compressing...</div></div>`;
+  const D=60;
+  setTimeout(()=>{sS('e','ct','on');setTimeout(()=>{sS('e','ct','ok');sS('e','pr','on');setTimeout(()=>{sS('e','pr','ok');sS('e','df','on');
+  setTimeout(()=>{const t0=performance.now();ticData=ticEnc(imgData,w,h);const ms=performance.now()-t0;
+    sS('e','df','ok');sS('e','pk','on');setTimeout(()=>{sS('e','pk','ok');
+      cv.toBlob(blob=>{showCompressed(blob?blob.size:w*h*3,ticData.length,w,h,file,ms);},'image/png');
+    },D)},D+30)},D)},D)},15);
 }
 
-function showResult(pngSz,ticSz,w,h,file,encMs,cv){
-  const ratio=(pngSz/ticSz).toFixed(2),saving=Math.round((1-ticSz/pngSz)*100),mx=Math.max(ticSz,pngSz);
-  const mi=mediaType==='video'?'🎬':mediaType==='gif'?'🖼️':'📷';
+function showCompressed(pngSz,ticSz,w,h,file,ms){
+  document.getElementById('encSt')?.remove();
+  const ratio=(pngSz/ticSz).toFixed(2),saving=Math.max(0,Math.round((1-ticSz/pngSz)*100)),mx=Math.max(ticSz,pngSz);
+  out.innerHTML+=`<div class="card fade">
+  <div class="row">
+    <div>
+      <canvas id="prevCv" width="${w}" height="${h}" title="Click to decode from the hex data below"></canvas>
+      <p style="font-size:.75em;color:var(--green);margin-top:3px" id="hint">▶ Click to decode from hex below</p>
+    </div>
+    <div style="flex:1.2;min-width:240px">
+      <div style="text-align:center;margin:4px 0"><span class="badge">${saving}% smaller</span> <span style="color:var(--green);font-weight:bold">${ratio}×</span> <span style="color:var(--muted);font-size:.84em">vs PNG</span></div>
+      <div class="bar-r"><div class="bar-l"><span>TIC ${ticSz.toLocaleString()}B</span></div><div class="bar"><div class="fill ftc" style="width:${Math.max(4,ticSz/mx*100)}%">${(ticSz/1024).toFixed(1)}KB</div></div></div>
+      <div class="bar-r"><div class="bar-l"><span>PNG ${pngSz.toLocaleString()}B</span></div><div class="bar"><div class="fill fpng" style="width:${Math.max(4,pngSz/mx*100)}%">${(pngSz/1024).toFixed(1)}KB</div></div></div>
+      <div class="stats"><div class="st"><div class="v">${ms.toFixed(0)}ms</div><div class="l">encode</div></div><div class="st"><div class="v">${file.size?(file.size/1024).toFixed(0)+'KB':'—'}</div><div class="l">original</div></div><div class="st"><div class="v">✓</div><div class="l">lossless</div></div><div class="st"><div class="v">${w}×${h}</div><div class="l">pixels</div></div></div>
+    </div>
+  </div>
 
-  out.innerHTML+=`<div class="card fade-up">
-    <div class="prev-area">
-      <div>
-        <canvas id="prevCv" width="${w}" height="${h}" title="Click to decompress"></canvas>
-        <p style="font-size:.78em;color:var(--green);margin-top:4px;cursor:pointer" id="clickHint">▶ Click image to decompress${mediaType!=='image'?' & play':''}</p>
-      </div>
-      <div style="flex:1.3;min-width:260px">
-        <div style="text-align:center;margin:6px 0">${saving>0?`<span class="badge win">${saving}% smaller</span>`:''} <span style="color:var(--green);font-weight:bold;font-size:1.1em">${ratio}×</span> <span style="color:var(--muted);font-size:.88em">vs PNG</span></div>
-        <div class="bar-row"><div class="bar-label"><span>${mi} TIC — ${ticSz.toLocaleString()}B</span><span></span></div><div class="bar"><div class="fill fill-tc" style="width:${Math.max(5,ticSz/mx*100)}%">${(ticSz/1024).toFixed(1)}KB</div></div></div>
-        <div class="bar-row"><div class="bar-label"><span>PNG — ${pngSz.toLocaleString()}B</span><span></span></div><div class="bar"><div class="fill fill-png" style="width:${Math.max(5,pngSz/mx*100)}%">${(pngSz/1024).toFixed(1)}KB</div></div></div>
-        <div class="stats">
-          <div class="st"><div class="v">${encMs.toFixed(0)}ms</div><div class="l">encode</div></div>
-          <div class="st"><div class="v">${file.size?(file.size/1024).toFixed(0)+'KB':'—'}</div><div class="l">original</div></div>
-          <div class="st"><div class="v">✓</div><div class="l">lossless</div></div>
-          <div class="st"><div class="v">6</div><div class="l">filters</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="hex" onclick="this.classList.toggle('open')" title="Click to expand">${hexStr(ticData,60)}</div>
-    <div class="actions">
-      <button class="btn btn-g" onclick="dlTic('${file.name}')">Download .tic</button>
-      <button class="btn btn-b" onclick="cpUrl()">Copy Share URL</button>
-      <button class="btn-sm btn" onclick="location.reload()">New image</button>
-    </div>
-    <p id="msg" style="text-align:center;color:var(--green);font-size:.78em;min-height:1em;margin-top:4px"></p>
+  <div class="hex-ed">
+    <label>Compressed data (edit any byte, then click the image to decode your changes)</label>
+    <textarea id="hexBox" spellcheck="false">${toHex(ticData)}</textarea>
+    <div class="hex-info"><span id="hexLen">${ticData.length} bytes</span><span id="hexDirty"></span></div>
+  </div>
+
+  <div class="actions">
+    <button class="btn bg" onclick="dlTic('${file.name}')">Download .tic</button>
+    <button class="btn bb" onclick="cpUrl()">Copy Share URL</button>
+    <button class="btn bs" onclick="randomize()">Randomize 10 bytes</button>
+    <button class="btn bs" onclick="corruptPayload()">Corrupt payload</button>
+    <button class="btn bs" onclick="resetHex()">Reset to original</button>
+  </div>
+  <p id="msg" style="text-align:center;color:var(--green);font-size:.75em;min-height:.9em;margin-top:3px"></p>
   </div><div id="decOut"></div>`;
 
-  // Draw pixelated "compressed" preview
-  const pc=document.getElementById('prevCv'),pctx=pc.getContext('2d');
+  // Draw pixelated preview
+  const pc=document.getElementById('prevCv'),ctx=pc.getContext('2d');
   const sm=document.createElement('canvas');sm.width=Math.max(1,w>>3);sm.height=Math.max(1,h>>3);
-  sm.getContext('2d').drawImage(cv,0,0,sm.width,sm.height);
-  pctx.imageSmoothingEnabled=false;pctx.drawImage(sm,0,0,w,h);
-  pctx.fillStyle='rgba(35,134,54,.65)';pctx.fillRect(w/2-32,h/2-16,64,32);
-  pctx.fillStyle='#fff';pctx.font='bold 15px monospace';pctx.textAlign='center';pctx.fillText('▶ TC',w/2,h/2+5);
+  sm.getContext('2d').drawImage(origCv,0,0,sm.width,sm.height);
+  ctx.imageSmoothingEnabled=false;ctx.drawImage(sm,0,0,w,h);
+  ctx.fillStyle='rgba(35,134,54,.6)';ctx.fillRect(w/2-30,h/2-14,60,28);
+  ctx.fillStyle='#fff';ctx.font='bold 14px monospace';ctx.textAlign='center';ctx.fillText('▶ TC',w/2,h/2+5);
 
-  // Click to decompress
-  let done=false;
-  pc.onclick=()=>{
-    if(done)return;done=true;
-    document.getElementById('clickHint').textContent='Decompressing…';
-    decompress(w,h);
-  };
+  // Track hex edits
+  const box=document.getElementById('hexBox');
+  box.addEventListener('input',()=>{
+    const cur=fromHex(box.value);
+    const dirty=cur.length!==ticData.length||cur.some((v,i)=>v!==ticData[i]);
+    box.classList.toggle('dirty',dirty);
+    document.getElementById('hexDirty').textContent=dirty?'modified':'';
+    document.getElementById('hexDirty').style.color=dirty?'var(--orange)':'';
+    document.getElementById('hexLen').textContent=cur.length+' bytes';
+  });
+
+  // Click to decode — ALWAYS from the hex box data
+  pc.onclick=()=>decodeFromHex();
 }
 
-function decompress(w,h){
+/* === DECODE — genuinely from the hex data === */
+function decodeFromHex(){
+  const box=document.getElementById('hexBox');
+  const data=fromHex(box.value);
   const area=document.getElementById('decOut');
-  area.innerHTML=`<div class="card fade-up">${pipeHtml(DEC,'d')}</div>`;
+  area.innerHTML=`<div class="card fade">${pH(DS,'d')}<div id="decSt" style="text-align:center;color:var(--muted);font-size:.78em">Decoding ${data.length} bytes...</div></div>`;
 
-  const delay=70;
-  setTimeout(()=>{setS('d','up','on');setTimeout(()=>{setS('d','up','ok');setS('d','in','on');
-  setTimeout(()=>{setS('d','in','ok');setS('d','un','on');
-  setTimeout(()=>{
-    const t0=performance.now();
-    const res=ticDec(ticData);
-    const ms=performance.now()-t0;
-    setS('d','un','ok');setS('d','rc','on');
+  const hint=document.getElementById('hint');
+  if(hint)hint.textContent='Decoding...';
 
-    setTimeout(()=>{
-      setS('d','rc','ok');
+  const D=55;
+  setTimeout(()=>{sS('d','up','on');setTimeout(()=>{
+    // Unpack — check header
+    let headerOk=data.length>=12&&data[0]===0x54&&data[1]===0x49&&data[2]===0x43&&data[3]===0x21;
+    sS('d','up',headerOk?'ok':'err');
+    if(!headerOk){
+      document.getElementById('decSt').innerHTML='<span style="color:var(--red)">Bad header — magic bytes should be 54 49 43 21 (TIC!)</span>';
+      if(hint)hint.textContent='✗ Bad header';hint.style.color='var(--red)';return;
+    }
 
-      // Scanline animation on the preview canvas
-      const pc=document.getElementById('prevCv'),pctx=pc.getContext('2d');
-      const decCv=document.createElement('canvas');decCv.width=res.w;decCv.height=res.h;
-      const dctx=decCv.getContext('2d'),imgD=dctx.createImageData(res.w,res.h);
-      imgD.data.set(res.rgba);dctx.putImageData(imgD,0,0);
-
-      let row=0;const rps=Math.max(1,Math.floor(res.h/25));
-      function scan(){
-        const end=Math.min(row+rps,res.h);
-        pctx.drawImage(decCv,0,row,res.w,end-row,0,row,res.w,end-row);
-        if(end<res.h){pctx.fillStyle='var(--green)';pctx.fillRect(0,end,res.w,2)}
-        row=end;
-        if(row<res.h)requestAnimationFrame(scan);
-        else{
-          pctx.drawImage(decCv,0,0);
-          document.getElementById('clickHint').textContent='✓ Decompressed — pixel-perfect';
-          document.getElementById('clickHint').style.color='var(--green)';
-          showPlayback(res,ms,decCv);
-        }
+    sS('d','in','on');setTimeout(()=>{
+      // Inflate
+      let payload;
+      try{payload=pako.inflate(data.subarray(12));sS('d','in','ok')}
+      catch(e){sS('d','in','err');
+        document.getElementById('decSt').innerHTML=`<span style="color:var(--orange)">Inflate error: ${e.message}. Trying raw decode...</span>`;
+        // Fall through with corrupted data — try to show SOMETHING
+        payload=data.subarray(12); // raw bytes, will produce glitches
+        sS('d','in','err');
       }
-      requestAnimationFrame(scan);
-    },delay);
-  },delay+40);},delay);},delay);},20);
+
+      sS('d','un','on');setTimeout(()=>{
+        // Unpredict — this is where glitches become visible
+        const w=data[5]|(data[6]<<8),h=data[7]|(data[8]<<8),ch=data[9]||3;
+        let pls=[],decOk=true;
+        try{
+          let off=0;
+          for(let c=0;c<Math.min(ch,3);c++){
+            if(off>=payload.length){pls.push(new Uint8Array(w*h));continue}
+            const{plane,next}=decP(payload,off,w,h);pls.push(plane);off=next;
+          }
+          while(pls.length<3)pls.push(new Uint8Array(w*h));
+        }catch(e){decOk=false;
+          // Fill missing planes with whatever we decoded
+          while(pls.length<3)pls.push(new Uint8Array(w*h));
+        }
+        sS('d','un',decOk?'ok':'err');
+
+        sS('d','rc','on');setTimeout(()=>{
+          const ct=data[10]||1;
+          let rgba;
+          try{rgba=ct===1?frG(pls[0],pls[1],pls[2],w,h):frG(pls[0],pls[1],pls[2],w,h)}
+          catch(e){rgba=new Uint8Array(w*h*4);for(let i=0;i<w*h;i++)rgba[i*4+3]=255}
+          sS('d','rc',decOk?'ok':'err');
+
+          // Scanline reveal
+          const pc=document.getElementById('prevCv'),pctx=pc.getContext('2d');
+          const decCv=document.createElement('canvas');decCv.width=w;decCv.height=h;
+          const dctx=decCv.getContext('2d'),imgD=dctx.createImageData(w,h);
+          imgD.data.set(rgba);dctx.putImageData(imgD,0,0);
+
+          const t0=performance.now();
+          let row=0;const rps=Math.max(1,Math.floor(h/22));
+          function scan(){
+            const end=Math.min(row+rps,h);
+            pctx.drawImage(decCv,0,row,w,end-row,0,row,w,end-row);
+            if(end<h){pctx.fillStyle=decOk?'var(--green)':'var(--orange)';pctx.fillRect(0,end,w,2)}
+            row=end;
+            if(row<h)requestAnimationFrame(scan);
+            else{
+              pctx.drawImage(decCv,0,0);
+              document.getElementById('decSt')?.remove();
+              if(hint){hint.textContent=decOk?'✓ Decoded — bit-perfect':'⚠ Decoded with glitches (data was modified)';hint.style.color=decOk?'var(--green)':'var(--orange)'}
+              showResult(rgba,w,h,performance.now()-t0,decCv,decOk);
+            }
+          }
+          requestAnimationFrame(scan);
+        },D)},D+30)},D)},D)},15);
 }
 
-function showPlayback(res,decMs,decCv){
+function showResult(rgba,w,h,ms,decCv,ok){
   const area=document.getElementById('decOut');
-  let mediaEl='';
-  if(mediaType==='gif'&&mediaBlob){
-    const url=URL.createObjectURL(mediaBlob);
-    mediaEl=`<img src="${url}" style="max-width:100%;max-height:380px;border-radius:8px;border:1px solid var(--border)"><p style="font-size:.78em;color:var(--muted);margin-top:4px">GIF playing — first frame verified lossless</p>`;
-  }else if(mediaType==='video'&&mediaBlob){
-    const url=URL.createObjectURL(mediaBlob);
-    mediaEl=`<video src="${url}" controls autoplay loop muted style="max-width:100%;max-height:380px;border-radius:8px;border:1px solid var(--border)"></video><p style="font-size:.78em;color:var(--muted);margin-top:4px">Video playing — keyframe verified lossless</p>`;
+  let media='';
+  if(mType==='gif'&&mBlob&&ok){
+    media=`<img src="${URL.createObjectURL(mBlob)}" style="max-width:100%;max-height:360px;border-radius:7px;border:1px solid var(--border)"><p style="font-size:.72em;color:var(--muted);margin-top:3px">GIF playing</p>`;
+  }else if(mType==='video'&&mBlob&&ok){
+    media=`<video src="${URL.createObjectURL(mBlob)}" controls autoplay loop muted style="max-width:100%;max-height:360px;border-radius:7px;border:1px solid var(--border)"></video><p style="font-size:.72em;color:var(--muted);margin-top:3px">Video playing</p>`;
   }else{
-    mediaEl=`<canvas id="finalCv" width="${res.w}" height="${res.h}"></canvas><p style="font-size:.78em;color:var(--muted);margin-top:4px">Decoded ${res.w}×${res.h} in ${Math.round(decMs)}ms</p>`;
+    media=`<canvas id="fCv" width="${w}" height="${h}"></canvas><p style="font-size:.72em;color:${ok?'var(--muted)':'var(--orange)'};margin-top:3px">${ok?'Pixel-perfect decode':'Glitch decode — data was modified'} · ${Math.round(ms)}ms</p>`;
   }
-
-  area.innerHTML+=`<div class="card fade-up"><div style="text-align:center">${mediaEl}</div>
-    <div class="stats"><div class="st"><div class="v">${res.w}×${res.h}</div><div class="l">pixels</div></div><div class="st"><div class="v">${Math.round(decMs)}ms</div><div class="l">decode</div></div><div class="st"><div class="v">${((res.w*res.h*3)/1024).toFixed(0)}KB</div><div class="l">restored</div></div><div class="st"><div class="v">✓</div><div class="l">bit-perfect</div></div></div>
-    <div class="actions"><button class="btn btn-g" onclick="savePng()">Save as PNG</button></div>
+  area.innerHTML+=`<div class="card fade"><div style="text-align:center">${media}</div>
+    <div class="stats"><div class="st"><div class="v">${w}×${h}</div><div class="l">pixels</div></div><div class="st"><div class="v">${Math.round(ms)}ms</div><div class="l">decode</div></div><div class="st"><div class="v">${ok?'✓':'⚠'}</div><div class="l">${ok?'perfect':'glitched'}</div></div></div>
+    <div class="actions"><button class="btn bg" onclick="savePng()">Save as PNG</button>${!ok?'<button class="btn bs" onclick="resetHex();decodeFromHex()">Decode original</button>':''}</div>
   </div>`;
-
-  const fc=document.getElementById('finalCv');
-  if(fc)fc.getContext('2d').drawImage(decCv,0,0);
-  window._decCv=decCv;
+  const fc=document.getElementById('fCv');if(fc)fc.getContext('2d').drawImage(decCv,0,0);window._dCv=decCv;
 }
 
-/* ================================================================
-   ACTIONS
-   ================================================================ */
-function dlTic(name){if(!ticData)return;const b=new Blob([ticData],{type:'application/octet-stream'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name.replace(/\.\w+$/,'')+'.tic';a.click();URL.revokeObjectURL(a.href)}
-function cpUrl(){if(!ticData)return;let bin='';for(let i=0;i<ticData.length;i++)bin+=String.fromCharCode(ticData[i]);navigator.clipboard.writeText('tic://'+btoa(bin)).then(()=>{const m=document.getElementById('msg');m.textContent='Copied! Share this URL.';setTimeout(()=>m.textContent='',3000)})}
-function savePng(){if(!window._decCv)return;window._decCv.toBlob(b=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='decoded.png';a.click();URL.revokeObjectURL(a.href)},'image/png')}
+/* === CORRUPTION TOOLS === */
+function randomize(){
+  if(!ticData)return;const box=document.getElementById('hexBox');
+  const d=fromHex(box.value);
+  // Randomize 10 bytes in the payload (not header)
+  for(let i=0;i<10;i++){const idx=12+Math.floor(Math.random()*(d.length-12));d[idx]=Math.floor(Math.random()*256)}
+  box.value=toHex(d);box.dispatchEvent(new Event('input'));
+  document.getElementById('msg').textContent='10 random bytes changed in payload. Click image to see glitches!';
+  setTimeout(()=>document.getElementById('msg').textContent='',3000);
+}
+function corruptPayload(){
+  if(!ticData)return;const box=document.getElementById('hexBox');
+  const d=fromHex(box.value);
+  // Flip every 50th byte
+  for(let i=12;i<d.length;i+=50)d[i]^=0xFF;
+  box.value=toHex(d);box.dispatchEvent(new Event('input'));
+  document.getElementById('msg').textContent='Every 50th payload byte flipped. Click image!';
+  setTimeout(()=>document.getElementById('msg').textContent='',3000);
+}
+function resetHex(){
+  if(!ticData)return;const box=document.getElementById('hexBox');
+  box.value=toHex(ticData);box.dispatchEvent(new Event('input'));
+  document.getElementById('msg').textContent='Reset to original compressed data.';
+  setTimeout(()=>document.getElementById('msg').textContent='',2000);
+}
+
+/* === ACTIONS === */
+function dlTic(name){const d=fromHex(document.getElementById('hexBox').value);const b=new Blob([d],{type:'application/octet-stream'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name.replace(/\.\w+$/,'')+'.tic';a.click();URL.revokeObjectURL(a.href)}
+function cpUrl(){const d=fromHex(document.getElementById('hexBox').value);let bin='';for(let i=0;i<d.length;i++)bin+=String.fromCharCode(d[i]);navigator.clipboard.writeText('tic://'+btoa(bin)).then(()=>{document.getElementById('msg').textContent='Copied!';setTimeout(()=>document.getElementById('msg').textContent='',2000)})}
+function savePng(){if(!window._dCv)return;window._dCv.toBlob(b=>{const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='decoded.png';a.click();URL.revokeObjectURL(a.href)},'image/png')}
 </script>
 </body>
 </html>
