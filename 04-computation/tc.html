@@ -148,7 +148,7 @@ function toHex(d){let s='';for(let i=0;i<d.length;i++){if(i>0&&i%16===0)s+='\n';
 function fromHex(s){const bytes=[];const tokens=s.replace(/[^0-9a-fA-F]/g,' ').trim().split(/\s+/);for(const t of tokens){if(t.length>=2){const v=parseInt(t.substring(0,2),16);if(!isNaN(v))bytes.push(v)}}return new Uint8Array(bytes)}
 
 /* === STATE === */
-let ticData=null,origCv=null,mBlob=null,mType=null,imgW=0,imgH=0,interactive=false,drawing=false,tool='draw';
+let ticData=null,origCv=null,mBlob=null,mType=null,imgW=0,imgH=0,interactive=false,drawing=false,tool='draw',decoded=false;
 
 /* === DROP === */
 const dz=document.getElementById('dz'),fi=document.getElementById('fi'),out=document.getElementById('out');
@@ -162,7 +162,21 @@ function toggleMode(){
   interactive=!interactive;
   document.getElementById('modeSw').classList.toggle('on',interactive);
   const tb=document.getElementById('drawBar');if(tb)tb.classList.toggle('hidden',!interactive);
-  const cv=document.getElementById('prevCv');if(cv)cv.classList.toggle('draw-mode',interactive);
+  const cv=document.getElementById('prevCv');
+  if(cv){
+    cv.classList.toggle('draw-mode',interactive);
+    // When entering draw mode, show the actual image (not pixelated preview)
+    if(interactive&&origCv){
+      cv.getContext('2d').drawImage(origCv,0,0);
+      decoded=true;
+      const hint=document.getElementById('hint');
+      if(hint){hint.textContent='Draw mode — paint on the image, hex updates live';hint.style.color='var(--blue)'}
+    }
+    // When leaving draw mode, show pixelated preview again if not decoded
+    if(!interactive&&origCv&&!decoded){
+      showPixelated(cv,imgW,imgH);
+    }
+  }
 }
 
 function go(file){
@@ -226,68 +240,101 @@ function showCompressed(pngSz,ticSz,w,h,file,ms){
   <p id="msg" style="text-align:center;color:var(--green);font-size:.75em;min-height:.9em;margin-top:3px"></p>
   </div><div id="decOut"></div>`;
 
-  // Pixelated preview
-  const pc=document.getElementById('prevCv'),ctx=pc.getContext('2d');
+  decoded=false;
+  const pc=document.getElementById('prevCv');
+
+  // Show pixelated preview (or actual image if in draw mode)
+  if(interactive){
+    pc.getContext('2d').drawImage(origCv,0,0);
+    decoded=true;
+    document.getElementById('drawBar').classList.remove('hidden');
+    pc.classList.add('draw-mode');
+  }else{
+    showPixelated(pc,w,h);
+  }
+
+  // Hex dirty tracking
+  document.getElementById('hexBox').addEventListener('input',onHexInput);
+
+  // Mouse handlers (use named functions to avoid stacking)
+  pc.onmousedown=e=>{
+    if(interactive){drawing=true;drawAt(e,pc)}
+    else{e.preventDefault();decodeFromHex()}
+  };
+  pc.onmousemove=e=>{if(interactive&&drawing)drawAt(e,pc)};
+  pc.onmouseup=()=>{if(interactive){drawing=false;reencodeCanvas()}};
+  pc.onmouseleave=()=>{if(interactive&&drawing){drawing=false;reencodeCanvas()}};
+  pc.ontouchstart=e=>{if(interactive){e.preventDefault();drawing=true;drawAtT(e,pc)}};
+  pc.ontouchmove=e=>{if(interactive){e.preventDefault();drawAtT(e,pc)}};
+  pc.ontouchend=()=>{if(interactive){drawing=false;reencodeCanvas()}};
+}
+
+function showPixelated(cv,w,h){
+  const ctx=cv.getContext('2d');
   const sm=document.createElement('canvas');sm.width=Math.max(1,w>>3);sm.height=Math.max(1,h>>3);
   sm.getContext('2d').drawImage(origCv,0,0,sm.width,sm.height);
   ctx.imageSmoothingEnabled=false;ctx.drawImage(sm,0,0,w,h);
+  ctx.imageSmoothingEnabled=true;
   ctx.fillStyle='rgba(35,134,54,.6)';ctx.fillRect(w/2-30,h/2-14,60,28);
   ctx.fillStyle='#fff';ctx.font='bold 14px monospace';ctx.textAlign='center';ctx.fillText('▶ TC',w/2,h/2+5);
+}
 
-  // Hex dirty tracking
+function onHexInput(){
   const box=document.getElementById('hexBox');
-  box.addEventListener('input',()=>{
-    const cur=fromHex(box.value);
-    const dirty=cur.length!==ticData.length||cur.some((v,i)=>v!==ticData[i]);
-    box.classList.toggle('dirty',dirty);
-    document.getElementById('hexDirty').textContent=dirty?'modified':'';
-    document.getElementById('hexLen').textContent=cur.length+' bytes';
-    if(interactive)liveDecodeFromHex(); // live update in draw mode
-  });
-
-  // Click/draw handlers
-  pc.addEventListener('mousedown',e=>{if(interactive){drawing=true;drawAt(e,pc)}else decodeFromHex()});
-  pc.addEventListener('mousemove',e=>{if(interactive&&drawing)drawAt(e,pc)});
-  pc.addEventListener('mouseup',()=>{if(interactive){drawing=false;reencodeCanvas()}});
-  pc.addEventListener('mouseleave',()=>{if(interactive&&drawing){drawing=false;reencodeCanvas()}});
-  // Touch
-  pc.addEventListener('touchstart',e=>{if(interactive){e.preventDefault();drawing=true;drawAtT(e,pc)}});
-  pc.addEventListener('touchmove',e=>{if(interactive){e.preventDefault();drawAtT(e,pc)}});
-  pc.addEventListener('touchend',()=>{if(interactive){drawing=false;reencodeCanvas()}});
-
-  if(interactive)document.getElementById('drawBar').classList.remove('hidden'),pc.classList.add('draw-mode');
+  const cur=fromHex(box.value);
+  const dirty=!ticData||cur.length!==ticData.length||cur.some((v,i)=>v!==ticData[i]);
+  box.classList.toggle('dirty',dirty);
+  document.getElementById('hexDirty').textContent=dirty?'modified':'';
+  document.getElementById('hexLen').textContent=cur.length+' bytes';
+  if(interactive)liveDecodeFromHex();
 }
 
 /* === DRAWING === */
+const BRUSH_SIZE=4;
 function setTool(t){
   tool=t;
   document.getElementById('btnDraw').classList.toggle('active',t==='draw');
   document.getElementById('btnErase').classList.toggle('active',t==='erase');
-  document.getElementById('brushLbl').textContent=t==='draw'?'red 3px':'white 3px';
+  document.getElementById('brushLbl').textContent=t==='draw'?`red ${BRUSH_SIZE}px`:`white ${BRUSH_SIZE}px`;
+}
+function canvasXY(e,cv){
+  const r=cv.getBoundingClientRect();
+  return[(e.clientX-r.left)*(cv.width/r.width),(e.clientY-r.top)*(cv.height/r.height)];
 }
 function drawAt(e,cv){
-  const r=cv.getBoundingClientRect(),x=(e.clientX-r.left)*cv.width/r.width,y=(e.clientY-r.top)*cv.height/r.height;
-  const ctx=cv.getContext('2d');ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);
+  const[x,y]=canvasXY(e,cv);
+  const ctx=cv.getContext('2d');
+  ctx.beginPath();ctx.arc(x,y,BRUSH_SIZE,0,Math.PI*2);
   ctx.fillStyle=tool==='draw'?'#ff3333':'#ffffff';ctx.fill();
 }
-function drawAtT(e,cv){const t=e.touches[0];drawAt({clientX:t.clientX,clientY:t.clientY},cv)}
+function drawAtT(e,cv){
+  const t=e.touches[0];
+  drawAt({clientX:t.clientX,clientY:t.clientY},cv);
+}
 function clearDraw(){
-  if(!origCv)return;const pc=document.getElementById('prevCv');
-  pc.getContext('2d').drawImage(origCv,0,0);reencodeCanvas();
+  if(!origCv)return;
+  const pc=document.getElementById('prevCv');
+  pc.getContext('2d').drawImage(origCv,0,0);
+  reencodeCanvas();
+  flash('Canvas reset to original image');
 }
 function reencodeCanvas(){
   const pc=document.getElementById('prevCv');
+  if(!pc)return;
   const imgData=pc.getContext('2d').getImageData(0,0,imgW,imgH);
-  const t0=performance.now();ticData=ticEnc(imgData,imgW,imgH);const ms=performance.now()-t0;
-  document.getElementById('hexBox').value=toHex(ticData);
-  document.getElementById('hexBox').classList.remove('dirty');
-  document.getElementById('hexLen').textContent=ticData.length+' bytes';
-  document.getElementById('hexDirty').textContent='';
-  // Update stats
+  const t0=performance.now();
+  ticData=ticEnc(imgData,imgW,imgH);
+  const ms=performance.now()-t0;
+  const box=document.getElementById('hexBox');
+  if(box){box.value=toHex(ticData);box.classList.remove('dirty')}
+  const hl=document.getElementById('hexLen');if(hl)hl.textContent=ticData.length+' bytes';
+  const hd=document.getElementById('hexDirty');if(hd)hd.textContent='';
+  // Update stats and bars
   pc.toBlob(blob=>{
-    const pngSz=blob?blob.size:imgW*imgH*3,ticSz=ticData.length;
+    const pngSz=blob?blob.size:imgW*imgH*3,ticSz=ticData.length,mx=Math.max(ticSz,pngSz);
+    const ratio=(pngSz/ticSz).toFixed(2);
     const sg=document.getElementById('statsGrid');
-    if(sg)sg.innerHTML=`<div class="st"><div class="v">${ms.toFixed(0)}ms</div><div class="l">encode</div></div><div class="st"><div class="v">${(ticSz/1024).toFixed(1)}KB</div><div class="l">TIC</div></div><div class="st"><div class="v">${(pngSz/1024).toFixed(1)}KB</div><div class="l">PNG</div></div><div class="st"><div class="v">${(pngSz/ticSz).toFixed(2)}×</div><div class="l">ratio</div></div>`;
+    if(sg)sg.innerHTML=`<div class="st"><div class="v">${ms.toFixed(0)}ms</div><div class="l">encode</div></div><div class="st"><div class="v">${(ticSz/1024).toFixed(1)}KB</div><div class="l">TIC</div></div><div class="st"><div class="v">${(pngSz/1024).toFixed(1)}KB</div><div class="l">PNG</div></div><div class="st"><div class="v">${ratio}×</div><div class="l">ratio</div></div>`;
   },'image/png');
 }
 
