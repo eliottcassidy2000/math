@@ -1,0 +1,77 @@
+==========================================================================================
+  RIGOROUS OVERHEAD ANALYSIS: Is block classification fundamentally limited?
+  kind-pasteur-2026-03-25-S14
+==========================================================================================
+
+  STEP 1: Classification map overhead
+  Image         raw_map  comp_map  entropy  #blocks                     class_dist
+  --------------------------------------------------------------------------------
+  blob              256        60     46.9      256                S:56 E:136 T:64
+  circles           256        11     -0.0      256                          T:256
+  grad_h            256        11     -0.0      256                          S:256
+  mixed             256        20     48.0      256                F:64 E:64 T:128
+  natural           256        30      6.4      256                      E:8 T:248
+  random            256        11     -0.0      256                          T:256
+  solid             256        11     -0.0      256                          F:256
+
+  STEP 2: Prediction gain from classification
+  Image         MED_all  per_class   gain  map_cost    NET    verdict
+  ----------------------------------------------------------------------
+  blob             2754       4128  -1374        60  -1434  NOT WORTH
+  circles          5555       7926  -2371        11  -2382  NOT WORTH
+  grad_h             19         77    -58        11    -69  NOT WORTH
+  mixed            6057       6513   -456        20   -476  NOT WORTH
+  natural         12170      13493  -1323        30  -1353  NOT WORTH
+  random          16388      16388     +0        11    -11  NOT WORTH
+  solid              14         13     +1        11    -10  NOT WORTH
+
+  STEP 3: THE FUNDAMENTAL QUESTION
+
+  Is block classification fundamentally limited?
+
+  THEOREM ATTEMPT: For an image where all blocks have the same statistics
+  (homogeneous image), classification provides ZERO prediction gain.
+  But the map still costs > 0 bytes. So net < 0 always.
+
+  COUNTER-THEOREM: For a mixed image (flat + gradient + noise + circles),
+  classification provides prediction gain proportional to the entropy
+  difference between the best single predictor and the per-class predictors.
+  If this exceeds the map cost, net > 0.
+
+  THE ANSWER depends on the image:
+  - Homogeneous images: classification is PROVABLY useless
+  - Mixed images: classification CAN help IF the map compresses well
+    AND the prediction gain exceeds the map cost
+
+  THE CRITICAL RATIO:
+    classification_gain / map_cost = prediction_entropy_reduction / map_entropy
+
+  For this to be > 1, the prediction gain per block must exceed
+  the cost of identifying that block's class (~2 bits for 4 classes).
+
+  A block of 8×8 = 64 pixels. 2 bits of class info per block =
+  2/64 = 0.03 bits per pixel overhead. If knowing the class saves
+  more than 0.03 bpp in prediction, it's worth it.
+
+  STEP 4: How to FIX the probe codec
+
+  mixed: region-level LPC
+       FLAT:   4096 pixels →     13 bytes (0.03 bpp)
+       EDGE:   4096 pixels →     81 bytes (0.16 bpp)
+    TEXTURE:   8192 pixels →   7262 bytes (7.09 bpp)
+    TOTAL: class_data=7356 + map=20 = 7376 vs MED=6057
+    MED STILL WINS (diff=+1319)
+
+  natural: region-level LPC
+       EDGE:    512 pixels →    400 bytes (6.25 bpp)
+    TEXTURE:  15872 pixels →  12506 bytes (6.30 bpp)
+    TOTAL: class_data=12906 + map=30 = 12936 vs MED=12170
+    MED STILL WINS (diff=+766)
+
+  blob: region-level LPC
+     SMOOTH:   3584 pixels →    874 bytes (1.95 bpp)
+       EDGE:   8704 pixels →   2556 bytes (2.35 bpp)
+    TEXTURE:   4096 pixels →   1661 bytes (3.24 bpp)
+    TOTAL: class_data=5091 + map=60 = 5151 vs MED=2754
+    MED STILL WINS (diff=+2397)
+

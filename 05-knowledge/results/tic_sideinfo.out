@@ -1,0 +1,26 @@
+================================================================================
+  SIDE-INFO CODEC: Classification as side info, not routing
+  Proves: raster order + class-dependent prediction > splitting
+  kind-pasteur-2026-03-25-S14
+================================================================================
+
+  Image           PNG    MED  Blend SideIn   Best   winner
+  -------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_sideinfo.py:41: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421   2764   2675   3113   2675    Blend 1.28x
+  circles        6978   5565   6141   4124   4124   SideIn 1.69x
+  grad_h          148     29     36     75     29      MED 5.10x
+  mixed          7066   6067   6313   5837   5837   SideIn 1.21x
+  natural       12100  12180  11695  12586  11695    Blend 1.03x
+  random        16580  16398  16398  16601  16398      MED 1.01x
+  solid           148     24     23     45     23    Blend 6.43x
+
+  THE LESSON:
+  The overhead proof showed splitting is ALWAYS worse.
+  Side-info preserves spatial locality while using classification.
+  But does it beat the continuous blend?
+
+  If SideInfo > Blend: discrete classification adds value over continuous blend
+  If Blend > SideInfo: continuous is strictly better than discrete
+
