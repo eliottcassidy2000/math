@@ -1,0 +1,26 @@
+==========================================================================================
+  WL-GUIDED CODEC: Weisfeiler-Leman coloring meets compression
+  kind-pasteur-2026-03-25-S18
+==========================================================================================
+
+  Image           PNG        MED      Blend  SnakeLPC8    ColSort    WL-Sort     WL-LPC   WL-Blend WL-ReordLPC        Raw          BEST
+  ---------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_wl.py:48: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421      2764       2675       1837       1122*      2794       2106       2711       1885       3704        ColSort 3.05x
+  circles        6978      5565       6141       3002*      4445       8068       3714       6118       3785       5805      SnakeLPC8 2.32x
+  grad_d          149        27*        27         99        382        229        391         27        369        343            MED 5.52x
+  grad_h          148        29*        36         77        136        261         68         36        188        152            MED 5.10x
+  natural       12100     12180      11695*     12048      15287      13123      12809      11828      12355      13306          Blend 1.03x
+  random        16580     16398*     16398      16430      16513      16524      16480      16398      16556      16398            MED 1.01x
+  solid           148        24         23*        55        135        135         33         23        162         23          Blend 6.43x
+  stripes45       229        47*       100        127        225        159         78         86        191         52            MED 4.87x
+
+  WL COLOR STATISTICS:
+
+  natural: 27 WL colors (L1)
+  natural: 9 WL colors (L2)
+  blob: 16 WL colors (L1)
+  blob: 8 WL colors (L2)
+  circles: 15 WL colors (L1)
+  circles: 9 WL colors (L2)
