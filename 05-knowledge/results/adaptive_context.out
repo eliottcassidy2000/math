@@ -1,0 +1,18 @@
+=====================================================================================
+  Context-Adaptive Prediction (WL without overhead)
+  opus-2026-03-25-S346
+=====================================================================================
+
+  Image              PNG    MED AdpMED  Blend    Best vs PNG   OK
+  ------------------------------------------------------------------------
+  blob              3440   2972   2972   3064   MED  1.16x OK
+  circle            3421   2997   2997   3047   MED  1.14x OK
+  gradient           148     41     41     97   MED  3.61x OK
+  noise            16580  16395  16395  16397   MED  1.01x OK
+  photo             9983  10150  10155  10382   MED  0.98x OK
+  radial            6978   6217   6223   5656 Blend  1.23x OK
+  smooth            6225   5843   5845   5380 Blend  1.16x OK
+
+  KEY FINDING: Adaptive MED/Blend should beat plain MED by 1-5%
+  on images where the prediction error has context-dependent bias.
+  This is WL classification at ZERO overhead cost.

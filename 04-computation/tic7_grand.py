@@ -237,6 +237,26 @@ def s_blend(plane, threshold=1000):
             buf.append((int(plane[r,c]) - pred) & 0xFF)
     return bytes(buf)
 
+def _adaptive_blend_encode(plane):
+    """Context-adaptive multi-predictor blend. Zero decode overhead."""
+    H, W = plane.shape; buf = bytearray()
+    N_CTX = 64
+    pred_err = np.ones((N_CTX, 3)) * 100
+    for r in range(H):
+        for c in range(W):
+            a = int(plane[r,c-1]) if c>0 else 0
+            b = int(plane[r-1,c]) if r>0 else 0
+            d = int(plane[r-1,c-1]) if r>0 and c>0 else 0
+            p_med = _loco(a, b, d); p_avg = (a+b)>>1; p_grad = max(0, min(255, a+b-d))
+            gh = abs(a-d); gv = abs(b-d)
+            ctx = (min(gh//16, 7)*8 + min(gv//16, 7)) % N_CTX
+            errs = pred_err[ctx]; w = 1.0/(errs+1.0); w /= w.sum()
+            pred = max(0, min(255, int(round(w[0]*p_med + w[1]*p_avg + w[2]*p_grad))))
+            actual = int(plane[r,c]); buf.append((actual - pred) & 0xFF)
+            for i, p in enumerate([p_med, p_avg, p_grad]):
+                pred_err[ctx, i] = pred_err[ctx, i]*0.98 + (actual-p)**2 * 0.02
+    return bytes(buf)
+
 def s_deltarow(plane):
     """Row-by-row delta."""
     H, W = plane.shape; buf = bytearray()
@@ -339,10 +359,10 @@ def encode(image):
         for pl in planes: buf.extend(s_snake_delta(pl))
         cands.append((M_SNAKE_DELTA, ct_id, bytes(buf)))
 
-        # Blend (only for gray or first CT — too slow for all)
-        if ct_id == 0 and channels == 1:
-            buf = s_blend(planes[0])
-            cands.append((M_BLEND, ct_id, bytes(buf)))
+        # Adaptive blend (context-adaptive multi-predictor, zero overhead)
+        buf = bytearray()
+        for pl in planes: buf.extend(_adaptive_blend_encode(pl))
+        cands.append((M_BLEND, ct_id, bytes(buf)))
 
         # Delta-row
         buf = bytearray()
@@ -460,26 +480,24 @@ def _decode_planes(payload, H, W, ch, mid):
         return planes
 
     if mid == M_BLEND:
+        N_CTX = 64
         planes = []; off = 0
         for _ in range(ch):
-            p = np.zeros((H,W), np.uint8); img = p.astype(float)
+            p = np.zeros((H,W), np.uint8)
+            pred_err = np.ones((N_CTX, 3)) * 100
             for r in range(H):
                 for c in range(W):
-                    a = img[r,c-1] if c>0 else 0.0; b = img[r-1,c] if r>0 else 0.0
-                    d = img[r-1,c-1] if r>0 and c>0 else 0.0
-                    grad = abs(a-d)+abs(b-d) if r>0 and c>0 else 0
-                    alpha = min(1.0, grad/1000)
-                    p_med = _loco(int(a),int(b),int(d))
-                    total, wt = 0.0, 0.0
-                    for dr, dc in [(-1,-1),(-1,0),(-1,1),(0,-1)]:
-                        nr, nc = r+dr, c+dc
-                        if 0<=nr<H and 0<=nc<W:
-                            dst = abs(dr)+abs(dc); w2 = 4.0/(dst*dst)
-                            total += img[nr,nc]*w2; wt += w2
-                    p_wie = total/wt if wt > 0 else 128
-                    pred = int(np.clip(round(alpha*p_med+(1-alpha)*p_wie), 0, 255))
-                    p[r,c] = (int(payload[off]) + pred) & 0xFF; off += 1
-                    img[r,c] = float(p[r,c])
+                    a = int(p[r,c-1]) if c>0 else 0
+                    b = int(p[r-1,c]) if r>0 else 0
+                    d = int(p[r-1,c-1]) if r>0 and c>0 else 0
+                    p_med = _loco(a,b,d); p_avg = (a+b)>>1; p_grad = max(0, min(255, a+b-d))
+                    gh = abs(a-d); gv = abs(b-d)
+                    ctx = (min(gh//16, 7)*8 + min(gv//16, 7)) % N_CTX
+                    errs = pred_err[ctx]; w = 1.0/(errs+1.0); w /= w.sum()
+                    pred = max(0, min(255, int(round(w[0]*p_med+w[1]*p_avg+w[2]*p_grad))))
+                    actual = (int(payload[off]) + pred) & 0xFF; p[r,c] = actual; off += 1
+                    for i, pp in enumerate([p_med, p_avg, p_grad]):
+                        pred_err[ctx, i] = pred_err[ctx, i]*0.98 + (actual-pp)**2 * 0.02
             planes.append(p)
         return planes
 
