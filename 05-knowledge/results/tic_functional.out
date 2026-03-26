@@ -1,0 +1,54 @@
+================================================================================
+  FUNCTIONAL COMPRESSION: Pure composition of bijections
+  compress = encode . residualize . predict . reorder
+  kind-pasteur-2026-03-25-S11
+================================================================================
+
+  PART 1: Best composition per image (2 reorders × 6 predictors × 3 residualizers = 36 combos)
+  Image           PNG   BEST  ratio                    composition
+  -----------------------------------------------------------------
+C:\Users\Eliott\Documents\GitHub\math\04-computation\tic_functional.py:66: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)
+  pil = Image.fromarray(img, 'L' if img.ndim == 2 else 'RGB')
+  blob           3421   1371   2.50              raster|delta|none
+  circles        6978   2970   2.35                snake|lpc8|none
+  grad_d          149     35   4.26              raster|delta|none
+  grad_h          148     33   4.48              raster|delta|none
+  natural       12100  12016   1.01                snake|lpc8|none
+  random        16580  16398   1.01               raster|none|none
+  solid           148     23   6.43               raster|none|none
+  stripes45       229     43   5.33                raster|none|xor
+
+  8/8 beat PNG
+
+  PART 2: SPECTRAL FLATNESS of residuals (1.0 = optimal white noise)
+  Image            none    delta     lpc4     lpc8    alpc4 alpc4_1k       raw
+  -----------------------------------------------------------------------------
+  blob           0.0000   0.0413   0.4419   0.4844   0.1635   0.2582    0.0000
+  circles        0.0000   0.0606   0.3669   0.4107   0.3059   0.3358    0.0000
+  grad_d         0.0004   0.0086   0.0091   0.0092   0.0094   0.0095    0.0004
+  grad_h         0.0866   0.0041   0.0009   0.0010   0.0010   0.0010    0.0866
+  natural        0.0229   0.4990   0.4966   0.5240   0.5044   0.5099    0.0229
+  random         0.5661   0.5620   0.5662   0.5611   0.5603   0.5644    0.5661
+  solid          1.0000   1.0000   1.0000   1.0000   1.0000   1.0000    1.0000
+  stripes45      0.0039   0.0000   0.0003   0.0039   0.0003   0.0003    0.0039
+
+  INTERPRETATION:
+  - Spectral flatness close to 1.0 = residuals are white noise = OPTIMAL
+  - Below 1.0 = residuals have structure = room for better prediction
+  - The BEST predictor for each image makes flattest residuals
+
+  The functional insight: compression quality = how well the composition
+  (reorder . predict . residualize) whitens the signal.
+  Perfect whitening → entropy coding is optimal → minimum size.
+
+  PART 3: Contribution of each step (bits per pixel)
+  Image           raw  reord   pred  resid  total
+  --------------------------------------------------
+  blob           1.80   1.80   0.66   0.66   0.66
+  circles        2.83   2.83   1.45   1.45   1.45
+  grad_d         0.16   0.16   0.01   0.01   0.01
+  grad_h         0.07   0.07   0.01   0.01   0.01
+  natural        6.49   6.49   5.86   5.86   5.86
+  random         8.00   8.00   8.00   8.00   8.00
+  solid          0.01   0.01   0.01   0.01   0.01
+  stripes45      0.02   0.02   0.02   0.02   0.02
