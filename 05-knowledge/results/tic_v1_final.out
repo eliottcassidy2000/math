@@ -1,0 +1,31 @@
+========================================================================================
+  TIC v1.0 — Final Kodak Benchmark (single C implementation, honest numbers)
+========================================================================================
+
+  Image                   Raw      PNG      TIC   gain  PNG_ms  TIC_enc  TIC_dec   RT
+  ------------------------------------------------------------------------------------------
+  kodim01.png          196608   134653   100124 1.345x   12.2ms    52.9ms     1.8ms   OK
+  kodim02.png          196608   111383    95057 1.172x   15.7ms    40.7ms     1.8ms   OK
+  kodim03.png          196608   101178    91147 1.110x   21.0ms    66.4ms     1.8ms   OK
+  kodim04.png          196608    97341    85485 1.139x   19.8ms    86.2ms     1.8ms   OK
+  kodim05.png          196608   145367   115551 1.258x   10.8ms    24.3ms     1.9ms   OK
+  kodim08.png          196608   129667   105640 1.227x   12.0ms    36.9ms     1.9ms   OK
+  kodim12.png          196608   114164    95373 1.197x   13.8ms    63.0ms     1.9ms   OK
+  kodim23.png          196608   103026    94136 1.094x   18.4ms    47.3ms     1.8ms   OK
+  vlcsnap-2026-03-     196608    63289    44804 1.413x   26.4ms    48.9ms     1.2ms   OK
+
+  AGGREGATE           1769472  1000068   827317 1.209x  150.0ms   466.7ms
+
+  ╔═══════════════════════════════════════════════════════╗
+  ║  TIC v1.0 FINAL RESULTS                               ║
+  ║                                                        ║
+  ║  Images:      9 (8 Kodak + 1 real photo)              ║
+  ║  Wins:        9/9 (100%)                                   ║
+  ║  Compression: 1.209x better than PNG                    ║
+  ║  Roundtrip:   ALL PASS                               ║
+  ║                                                        ║
+  ║  Algorithm:   G-RG-BG + MED + zlib-9 (single pass)    ║
+  ║  Code:        tic.c + tic.h (one file, ~250 lines)    ║
+  ║  Build:       gcc -O2 -o tic tic.c -lz                ║
+  ╚═══════════════════════════════════════════════════════╝
+
