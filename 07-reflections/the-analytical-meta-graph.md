@@ -57,7 +57,7 @@ Everything else follows:
 - Self-loops per tournament ~ C(n,2) * f
 - Weight per edge ~ n! * C(n,2) / (A000568 * edges)
 
-The meta-graph G_n is the **quotient of the C(n,2)-dimensional hypercube by S_n**, viewed through the H-gradient DAG structure. Its geometry is controlled by the Pochhammer symbol (1/2)_{n-2}/(n-2)!, which is the Taylor coefficient of 1/sqrt(1-x), which is the simplest two-sheeted branched cover, which encodes the Z/2Z monodromy of tournament complementation.
+The meta-graph G_n is the **quotient of the C(n,2)-dimensional hypercube by S_n**, viewed through the H-gradient structure (strong but not a strict DAG — see MISTAKE-035). Its geometry is controlled by the Pochhammer symbol (1/2)_{n-2}/(n-2)!, which is the Taylor coefficient of 1/sqrt(1-x), which is the simplest two-sheeted branched cover, which encodes the Z/2Z monodromy of tournament complementation.
 
 ## What Made This Possible
 

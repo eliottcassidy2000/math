@@ -30,7 +30,7 @@ This graph captures the TOPOLOGY of tournament space at its coarsest meaningful 
 - **total_weight[i] = class_size[i] × C(n,2)** — each tournament contributes C(n,2) transitions
 - **corr(|Aut|, degree) ≈ -0.94** — high symmetry → low connectivity
 - **corr(class_size, degree) ≈ +0.96** — large classes are well-connected
-- **H-gradient is almost a DAG**: at n=5, 29/30 edges increase H, 0 decrease, 1 level
+- **H-gradient is strong but not a DAG**: at n=5, 29 uphill/0 downhill/1 level; at n=7, 2988/962/136. See MISTAKE-035.
 - **Eigenvalues include ±1** at every n (from complement symmetry)
 - **E[L] = E[H]/2 = n!/2^n** (exactly half of paths close)
 - **E[total_arb] = (n/2)^{n-1}** (average arborescences)
@@ -61,17 +61,13 @@ Black edges break it.
 
 Every sequence we've computed (H, HC, L, arb, kings, c₃, c₅, OCR, ...) is a function on the vertices of G_n. Understanding G_n means understanding the JOINT distribution of all invariants simultaneously.
 
-### 3. The diameter conjecture
+### 3. The diameter conjecture — REFUTED (MISTAKE-036)
 
-Diameter(n) = {1, 2, 3} for n = {3, 4, 5}. Conjecture: **diameter = n - 2**.
-This would mean: any iso class can reach any other in at most n-2 arc flips.
-This is related to the fact that the staircase has n-1 rows, and each flip crosses one row boundary.
+Diameter(n) = 1, 2, 3, 4, **7**, **8** for n = 3..8. The conjecture diam = n-2 held at n=3..6 but **FAILS at n=7** (diam=7≠5). Growth is closer to ~n²/4, not linear. See `diameter-is-feedback-arc-set.md`.
 
-### 4. The H-gradient is almost a DAG
+### 4. The H-gradient is strong but NOT a DAG (MISTAKE-035)
 
-At n=5, the ONLY level edge is between two H=9 classes. Every other edge increases H. This means the H-landscape at the iso class level is ALMOST monotone: you can always increase H by flipping one arc to move to a higher class.
-
-**Question**: at n=6, does the DAG property break down? Are there H-decreasing edges between iso classes?
+At n=5: 29 uphill edges, 0 downhill, 1 level (H=9 pair). At n=6: 15 level edges, mostly at H=37. At n=7: 2988 uphill, **962 downhill**, 136 level — the gradient is strong (~76% uphill) but NOT monotone. The metagraph is NOT a DAG from n≥5 (level edges) and has H-decreasing edges from n≥7. See MISTAKE-035.
 
 ### 5. The blue skeleton spans the full H range
 
@@ -81,9 +77,9 @@ The blue subgraph (SC-preserving edges) connects all SC classes in one component
 
 ## Open Problems (Priority Order)
 
-1. **Extend to n=6** (56 classes). How many edges? Does the DAG property hold?
+1. **Extend to n=6** (56 classes). ✅ DONE: 290 edges, 56 classes. See merged-metagraph-invariants.md.
 
-2. **Prove diameter = n-2**. This would formalize the staircase connection.
+2. ~~**Prove diameter = n-2**.~~ REFUTED at n=7 (MISTAKE-036). Actual: diam grows ~n²/4.
 
 3. **Find the adjacency matrix eigenvalues** at n=6. Do they contain structural information?
 
@@ -95,7 +91,7 @@ The blue subgraph (SC-preserving edges) connects all SC classes in one component
 
 7. **Blue vs black edge density as n grows**. Does blue fraction → 0? At n=5: 14/30 = 46.7%.
 
-8. **The level edges**. At n=5 there's exactly 1. How many at n=6? These are the "phase transition" edges.
+8. **The level edges**. ✅ ANSWERED: 0, 0, 1, 15, 136 for n=3..7. Growth is super-exponential. At n=7, there are also 962 H-decreasing edges.
 
 ---
 
@@ -103,7 +99,7 @@ The blue subgraph (SC-preserving edges) connects all SC classes in one component
 
 ### A. The iso class graph IS a tournament
 
-G_n itself is an undirected graph. But if we ORIENT each edge by the H-gradient (lower→higher H), we get a TOURNAMENT on the iso classes (almost — modulo the level edges). This meta-tournament has its own H value, its own cycles, its own structure.
+G_n itself is an undirected graph. If we ORIENT each edge by the H-gradient (lower→higher H), we get an approximate tournament on iso classes — but with level edges (from n≥5) and H-decreasing edges (from n≥7, MISTAKE-035), this orientation is imperfect.
 
 **The meta-H of G_5**: H(meta-tournament on 12 classes) could be computed.
 

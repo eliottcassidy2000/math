@@ -531,7 +531,7 @@ $+\, A^2$ full rows & 48\% & 48\% & 46\% \\
 
 \noindent The ``reducibility'' column measures $1 - H(\text{partition}) / H(\text{full})$ where $H$ is Shannon entropy. The score sequence alone captures 48--69\% of the multiway structure. Adding $c_3$ adds \emph{nothing} (it is determined by the score sequence via $c_3 = \binom{n}{3} - \sum \binom{s_i}{2}$). Adding $H$ brings it to 52--54\%. The $A^2$ fingerprint captures the remaining structure entirely at $n \leq 6$.
 
-The tiling hypercube $Q_m$ is a multiway system in Wolfram's sense: states are tilings, rules are tile flips, and the quotient $G_n$ is the ``branchial graph.'' The $H$-gradient DAG property (zero downhill edges, verified $n \leq 7$) is a form of causal invariance.
+The tiling hypercube $Q_m$ is a multiway system in Wolfram's sense: states are tilings, rules are tile flips, and the quotient $G_n$ is the ``branchial graph.'' The $H$-gradient is strong (most edges increase $H$) but $G_n$ is \emph{not} a strict DAG: level edges appear at $n \geq 5$ and $H$-decreasing edges at $n \geq 7$.
 
 %═══════════════════════════════════════════════════════════════
 \section{Applications: Lossless Image Compression}

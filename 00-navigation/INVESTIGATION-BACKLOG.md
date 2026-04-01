@@ -395,6 +395,24 @@
 
 ---
 
+### INV-200: Theorem number collisions — 10 numbers have multiple files (HOUSEKEEPING)
+**Source:** opus-2026-04-01-S1 (systematic audit)
+**Status:** DOCUMENTED. Needs human decision on which file keeps the original number.
+**Collisions (22 files):**
+- THM-130: `c5-paley-closed-form` vs `paley-betti-formula`
+- THM-133: `h-trace-formula-p7` vs `spectral-ocf-chain`
+- THM-134: `paley-local-max-parseval` vs `schur-concavity-dichotomy`
+- THM-137: `paley-crossover-mechanism` vs `paley-eigenvector-interaction`
+- THM-201: `grand-energy-formula` (CORRECTED) vs `k3-component-impossibility`
+- THM-217: `binomial-truncation` vs `transfer-matrix-gk`
+- THM-224: `golden-exceptional-points` vs `simplicial-up-laplacian`
+- THM-260: `bandlimited-all-n` vs `edge-count-structure` vs `rooted-tournament-layer-decomposition` (THREE files!)
+- THM-261: `petersen-root-orthogonality` vs `sc-orbit-pairing`
+- THM-262: `dual-lie-embedding` vs `seesaw-identity`
+**Next step:** Human should decide which file keeps the number. Duplicates should be renumbered to THM-266+. Check for references before renaming.
+
+---
+
 ## Priority B: Important structural understanding
 
 ### INV-007: Odd-cycle bijection (Open Problem 3 in paper)

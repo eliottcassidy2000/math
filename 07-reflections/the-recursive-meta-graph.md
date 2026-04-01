@@ -123,6 +123,6 @@ The evolution with n is:
 2. The spine THINS (SC fraction -> 0)
 3. The connections become BLUER (NS-NS dominate)
 4. The density DECREASES (graph becomes sparser)
-5. The DAG property PERSISTS (H always increases toward the sinks)
+5. The H-gradient is strong but NOT a perfect DAG — level edges and H-decreasing edges appear at larger n (see MISTAKE-035)
 
 This is the tournament analog of the moduli space of algebraic curves: as the genus increases, the moduli space grows, becomes more complex, but retains its fundamental structure (DAG from low-H to high-H, spine of symmetric types, bulk of generic types).

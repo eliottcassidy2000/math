@@ -58,7 +58,7 @@ The tiling hypercube Q_m is a **multiway system** in Wolfram's sense:
 
 The **waggly layers** (d=1, d=2, ..., d=m) correspond to different "update schedules" — flipping 1 tile at a time, 2 at a time, etc.
 
-**Causal invariance**: The H-gradient on G_n is a DAG (verified n=3..7: zero downhill edges). This means: no matter which sequence of tile flips you perform, H never decreases. This is precisely causal invariance — the "arrow of time" (from transitive to regular) is path-independent.
+**Causal structure**: The H-gradient on G_n is strong but NOT a strict DAG. Level edges (same H, different class) appear at n≥5: 1, 15, 136 for n=5,6,7. H-decreasing edges appear at n≥7 (962/4086 at n=7). The "arrow of time" from transitive to regular is a statistical tendency, not an absolute law. See MISTAKE-035. **CORRECTED** (opus-S1, 2026-04-01): earlier versions of this file claimed zero downhill edges — that claim was trivially true for undirected graphs and masked the real structure.
 
 **Branchial structure**: The complement involution T → T^op creates a "branchial" dimension. Two tournaments related by complement are on "different branches" of the multiway system. The merged metagraph G_n/Z_2 collapses this branching, analogous to how an observer collapses multiway branches into a single perceived reality.
 

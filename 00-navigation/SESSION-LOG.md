@@ -13,6 +13,35 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-01-S1 — 2026-04-01: Systematic Error Audit — 15+ Files Corrected
+
+**Account:** opus
+**Continuation of:** fresh start (audit session)
+**Summary:** Comprehensive audit of the repo for propagating errors and contradictions. Found and corrected major false claims about the H-DAG property, diameter conjecture, and other issues.
+
+### Critical Corrections Made
+1. **MISTAKE-035 (H-DAG):** The claim "G_n is a DAG under H (0 downhill edges, verified n=3..7)" was FALSE. Computation shows 962 downhill edges at n=7. The original claim was trivially true for undirected graphs and masked the real structure. Fixed in CLAUDE.md, OPEN-QUESTIONS.md, 6 reflection files, paper draft.
+2. **MISTAKE-036 (diameter):** diam(G_n) = n-2 REFUTED at n=7 (actual=7). Fixed self-contradicting merged-metagraph-invariants.md and stale claims in the-isomorphism-class-graph.md.
+3. **MISTAKE-037 (H-convexity):** Documented as refuted at n=6.
+4. **MISTAKES.md:** Fixed unresolved merge conflict markers (lines 973/1027), renamed duplicate MISTAKE-018 to MISTAKE-018b.
+5. **THM-123:** Fixed internal contradiction (status said FALSE at n=8, evidence table said YES at n=8).
+6. **Width formula:** Added caveat that C(n-2,floor((n-2)/2)) fails at n≥7.
+7. **10 theorem number collisions** documented in INVESTIGATION-BACKLOG.md (22 files, worst: THM-260 has 3 files).
+8. **"A002854 shifted by 1"** → corrected to "= A002854(n)".
+9. **"pure-black node count"** → corrected to "NS-merged node count" with caveat.
+
+### Files Modified (15+)
+CLAUDE.md, OPEN-QUESTIONS.md, MISTAKES.md, INVESTIGATION-BACKLOG.md, SESSION-LOG.md, tournament-theory-comprehensive.tex, THM-123-beta3-leq-1-proof-architecture.md, computational-irreducibility-and-tournaments.md, tournament-space-at-the-1d-2d-boundary.md, the-recursive-meta-graph.md, unlocking-gn-at-all-n.md, merged-metagraph-invariants.md, the-isomorphism-class-graph.md, the-meta-tournament.md, the-analytical-meta-graph.md
+
+### Unresolved
+- Theorem number collisions need human decision on which file keeps the original number
+- ~16 theorem files marked PROVED without proof sections
+- 12 phantom theorem references (THM-035, THM-066, THM-148, THM-175-183)
+- Agent broadcast messages still contain stale claims (historical, not corrected — too many to edit)
+- `gn_merged_cascade_s221.py` and `local_gradient_s186.py` have hardcoded false output (Python code, not documentation — flagged but not edited)
+
+---
+
 ## opus-2026-03-25-S352 — 2026-03-25: Seesaw Proof — LES + Deletion Closes the Gap
 
 **Account:** opus

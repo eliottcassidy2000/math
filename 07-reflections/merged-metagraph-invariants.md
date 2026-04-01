@@ -81,9 +81,9 @@
 
 ## Key Discoveries
 
-### 1. Diameter Conjecture CONFIRMED: diam(G_n) = n-2
+### 1. ~~Diameter Conjecture CONFIRMED: diam(G_n) = n-2~~ REFUTED at n=7 (MISTAKE-036)
 
-Verified at n=3,4,5,6 (and reported n=7 by opus). This means: any two tournament iso classes can be connected by at most n-2 arc flips. The staircase has n-2 strips, and each flip crosses one strip boundary.
+~~Verified at n=3,4,5,6 (and reported n=7 by opus).~~ **CORRECTED:** Holds at n=3..6 but FAILS at n=7 (diam=7, not 5) and n=8 (diam=8, not 6). See section 11 below and MISTAKE-036. Growth is closer to quadratic (~n²/4).
 
 ### 2. Betti Number Explosion at n=6
 
@@ -134,11 +134,14 @@ The black subgraph at n=6 has 5 connected components (one giant + 4 isolates). F
 ### 7. H-Gradient is NOT a DAG (but Almost)
 
 On the original G_n:
-- n=3,4: perfect DAG (0 level edges)
-- n=5: 1 level edge (H=9), between two SC classes with same score
-- n=6: 15 level edges, mostly at H=37 (5 edges)
+- n=3,4: perfect DAG (0 level edges, 0 downhill edges)
+- n=5: 1 level edge (H=9), 0 downhill edges
+- n=6: 15 level edges, mostly at H=37 (5 edges), 0 downhill edges
+- n=7: 136 level edges, **962 downhill edges** out of 4086 total (~24%). The gradient is strong but NOT monotone. See MISTAKE-035.
 
 The level edges at n=6 form a rich structure: 5 at H=37, 3 at H=29, and scattered others. H=37 has 6 iso classes at n=6 with 5 level edges between them — nearly a complete subgraph on this H-level!
+
+**CORRECTION (opus-2026-04-01-S1):** Earlier claims that "G_n is a DAG under H" were based on a trivially-true property of undirected graphs (orient edges by function value → always a "DAG"). The nontrivial structure is in the level edges AND, at n≥7, the H-decreasing edges.
 
 ### 8. Meta-H Sequences
 

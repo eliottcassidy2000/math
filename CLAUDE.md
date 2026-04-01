@@ -190,7 +190,7 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
 - **The isomorphism class graph G_n is the KEY OBJECT.** Every session should spend 5-10 minutes considering it. When computing any invariant, also compute it per iso class. When finding a formula, check if it simplifies on G_n. See `07-reflections/the-isomorphism-class-graph.md` and OPEN-Q-039.
 - **The MERGED metagraph G_n/Z_2 is the PRIMARY object.** Complement symmetry factored out. V_merged = (A000568+SC)/2. See `07-reflections/merged-metagraph-invariants.md`.
 - **EVEN GRAPHS ARE FIRST-CLASS OBJECTS.** The even graph metagraph E_n is the DUAL of G_n. Both are quotients of Q_m by S_n, but S_n acts on tournament orientations (G_n) vs even graph structure (E_n). Every computation on G_n should ALSO be done on E_n. Key facts:
-  - V(E_n): 2, 3, 7, 16, 54 for n=3..7 (A002854 shifted by 1)
+  - V(E_n): 2, 3, 7, 16, 54 for n=3..7 (= A002854(n), the sequence of non-isomorphic even graphs)
   - E_n is MUCH denser than G_n: density 76-100% vs ~50%
   - χ(E_n) grows FASTER: 2, 3, 5, 10, 28 for n=3..7 (vs χ(G_n) = n-1)
   - ω(E_n)=χ(E_n) at all computed n (3..7). E_n is chordal (hence perfect) at n≤6, has odd holes at n=7
@@ -213,7 +213,7 @@ Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `f
   - **SC-NS** edges (the ribs): one SC, one NS endpoint. Bipartite, triangle-free.
   - **NS-NS** edges (the sea/bulk): both endpoints non-self-complementary. Dominates at large n.
   - These are properties of the MERGED iso classes, not of individual tilings.
-  - In the merged graph: pure-black node count = 0, 1, 2, 22, 184 for n=3..7.
+  - In the merged graph: NS-merged node count = 0, 1, 2, 22, 184 for n=3..7 (= (V - SC)/2). NOTE: these were previously labeled "pure-black" but that conflates NS status with grid-symmetry status — not all NS nodes are necessarily pure-black under the strict definition.
   - The old "blue" ≈ SC-SC + NS-NS; the old "black" = SC-NS.
 - **WAGGLY LAYER STRUCTURE** (opus-S297, supersedes S275):
   - ALL connections between tilings = **waggly lines**. They decompose into m layers by Hamming distance d=1,...,m.
@@ -321,9 +321,9 @@ In the FULL arc-flip model, every cell generates the same SC-NS fraction (isotro
 Key proven results (see `07-reflections/everything-is-the-triangle.md` for full picture):
 - Burnside: Fix(sigma) = 0 for even cycles, 2^{orbit-pairs} for all-odd (A000568 exact through n=10)
 - Fiber fraction: f(n) = (1/2)_{n-2}/(n-2)!, GF = (1-x)^{-1/2} (two-sheeted branched cover)
-- Width of G_n: C(n-2, floor((n-2)/2)) (verified n=3..6)
+- Width of G_n: C(n-2, floor((n-2)/2)) at n=3..6 only. FAILS at n≥7 (predicted 10, actual 15 at n=7; predicted 20, actual 49 at n=8). Not a general formula.
 - Tilings * |Aut| = H for every iso class (orbit-stabilizer on tiling fibration)
-- The meta-graph G_n is a DAG under H-gradient (0 downhill edges, verified n=3..7)
+- The meta-graph G_n has a strong H-gradient: most edges are H-increasing, but it is NOT a strict DAG. Level edges (same H, different class): 0, 0, 1, 15, 136 for n=3..7. At n≥7 there are also H-decreasing edges (962 at n=7). See MISTAKE-035.
 - Cayley-Dickson tower: R(n=2)->C(n=3)->H(n=5)->O(n=9)->S(n=17), each level loses a property
 - The merged graph G_n/Z_2: V_merged = (A000568 + SC)/2 -> A000568/2
 

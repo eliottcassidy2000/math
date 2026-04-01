@@ -970,7 +970,6 @@ The disconnected decomposition 63=7×9 is correctly blocked, but connected Ω gr
 
 Always check prior session results before claiming a new proof. The H-spectrum density analysis (hspectrum_density.out) had already settled this question computationally. Cross-reference before broadcasting claims.
 
-<<<<<<< Updated upstream
 ---
 
 ## MISTAKE-025: S112 W(8) Value Off By 8
@@ -1024,8 +1023,12 @@ Cross-ratio = 2 = the OCF fugacity itself. This is MORE meaningful than 8/7 — 
 
 ### Source
 Code review agent, opus-2026-03-15-S90.
-=======
-## MISTAKE-018: THM-225 "Universal Top Eigenvalue = n" is FALSE at n ≥ 9
+
+---
+
+## MISTAKE-018b: THM-225 "Universal Top Eigenvalue = n" is FALSE at n ≥ 9
+
+**NOTE:** This was originally numbered MISTAKE-018 from a different branch, causing a collision with MISTAKE-018 (beta_3 <= 1). Renumbered to 018b by opus-2026-04-01-S1.
 
 **Date discovered:** 2026-03-15
 **Found by:** opus-S72d
@@ -1294,3 +1297,84 @@ The "upper half vanishes" claim in h-is-band-limited.md needs correction at n=5.
 
 ### Lesson
 When making claims about "all n," verify at the boundary cases (smallest n). The n=5 case is special because m = C(4,2) = 6 is comparable in size to n-1 = 4. For n >= 6, the quadratic growth of m dominates the linear growth of the Walsh degree.
+
+---
+
+## MISTAKE-035: "G_n is a DAG under H-gradient" — False Claim Propagated Across Repo
+
+**Date discovered:** 2026-04-01
+**Found by:** opus-2026-04-01-S1 (systematic audit)
+**Affects:** CLAUDE.md, OPEN-QUESTIONS.md, 4 reflection files, paper draft, ~20 agent messages, gn_merged_cascade_s221.py (hardcoded output), local_gradient_s186.py (hardcoded CONFIRMED)
+
+### What was claimed
+"The meta-graph G_n is a DAG under H-gradient (0 downhill edges, verified n=3..7)" — CLAUDE.md line 326 (pre-fix). OPEN-QUESTIONS.md claimed "HOLDS at n=3..8."
+
+### Why it was wrong
+THREE distinct errors compounded:
+
+1. **Trivially true claim conflated with nontrivial property.** For ANY undirected graph with a real-valued function on vertices, orient edges by function value → the result is always a DAG (modulo level edges). This was explicitly noted in `meta_graph_deep_s181.py` lines 366-368 but the insight was never propagated. The REAL nontrivial question is about **level edges** (same H, different class).
+
+2. **Level edges exist from n=5 onward.** G_n level edges: 0, 0, 1, 15, 136 for n=3..7. G_n/Z_2 level edges: 0, 0, 1, 5, 71 for n=3..7. The graph is NOT a strict DAG from n=5 onward.
+
+3. **H-decreasing edges exist at n=7.** `merged_n7_deep_s20co.out` shows: G_7 has uphill=2988, downhill=962, level=136. G_7/Z_2 has uphill=1633, downhill=419, level=71. The "downhill" count here reflects edges where the class with more neighbors (higher index) has LOWER H — these are real H-reversals in the metagraph. `gap_inventory_s196.py` correctly listed this as REFUTED.
+
+4. **Hardcoded output bugs.** `gn_merged_cascade_s221.py` line 487 prints "DAG: 0 H-decreasing edges (all n)" unconditionally, even though its own data (line 68 of output) shows "DAG: Y, Y, N, N, N, N" for n=3..8. `local_gradient_s186.py` prints "CONFIRMED: all negative-DeltaH flips stay in-class" unconditionally even when the script found counterexamples.
+
+### The correct framing
+- G_n has a **strong H-gradient**: most edges increase H. The ratio uphill/(uphill+downhill) is 100% at n≤6 (for the nontrivial edges), and ~76% at n=7.
+- G_n is NOT a strict DAG from n≥5 (level edges) and has H-decreasing edges from n≥7.
+- The level edge fraction stays small (~3-5%) and may decrease asymptotically.
+- The H-gradient is a useful organizing principle but not an absolute law.
+
+### Impact
+- CLAUDE.md, OPEN-QUESTIONS.md, 4 reflection files, paper draft all corrected (opus-2026-04-01-S1).
+- Every new agent session was reading this false claim and propagating it.
+- The `unlocking-gn-at-all-n.md` file listed H-DAG as a "Proved Structural Law" — it was not proved and is not true.
+
+### Lesson
+**Three compounding failures:** (1) A trivially-true observation was mistaken for a nontrivial theorem. (2) The discoverer of the triviality (meta_graph_deep_s181.py) did not propagate the correction. (3) Later scripts hardcoded "CONFIRMED" messages that print regardless of results. When a claimed property is trivially true, that's a red flag that you're measuring the wrong thing.
+
+---
+
+## MISTAKE-036: Diameter conjecture diam(G_n) = n-2 is WRONG
+
+**Date discovered:** 2026-03-23
+**Found by:** kind-pasteur (gap_inventory_s196)
+**Affects:** the-isomorphism-class-graph.md, merged-metagraph-invariants.md, multiple broadcast messages
+
+### What was claimed
+"Diameter of G_n is n-2" — conjectured based on n=3 (diam=1), n=4 (diam=2), n=5 (diam=3).
+
+### Why it was wrong
+At n=6: diam=4 = n-2 (still holds). At n=7: diam=**7** ≠ 5 = n-2. At n=8: diam=**8** ≠ 6. The actual growth is closer to quadratic (~n²/4), not linear. The diameter-is-feedback-arc-set.md reflection explains: diam ≈ max FAS count difference, which grows quadratically.
+
+### The correct values
+diam(G_n) = 1, 2, 3, 4, 7, 8 for n=3..8.
+
+### Impact
+- `merged-metagraph-invariants.md` self-contradicts: says "CONFIRMED" at line 84 and "REFUTED" at line 172.
+- `the-isomorphism-class-graph.md` still lists "Prove diameter = n-2" as an open problem.
+- Multiple broadcast messages from S170, S177, S305 assert or propose proving diam=n-2.
+
+### Lesson
+Patterns that hold for 4 consecutive values (n=3..6) can still fail at n=7. Always test at the next case before conjecturing.
+
+---
+
+## MISTAKE-037: H-convexity conjecture is FALSE
+
+**Date discovered:** 2026-03-23
+**Found by:** kind-pasteur-S20ch
+**Affects:** gap_inventory_s196.py line 176
+
+### What was claimed
+That the H-landscape on G_n is "convex" — a specific technical condition about H values along paths in the metagraph.
+
+### Why it was wrong
+Refuted at n=6 by kind-pasteur-S20ch. Specific counterexample documented in gap_inventory_s196.py.
+
+### Impact
+Low — this was a tentative conjecture, not widely propagated.
+
+### Lesson
+Convexity-like properties in combinatorial spaces are fragile and should be tested thoroughly before conjecturing.

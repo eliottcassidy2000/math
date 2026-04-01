@@ -743,7 +743,7 @@ G_n = Q_{C(n,2)} / S_n is a genuinely new mathematical object (no prior literatu
 **RESOLVED sub-problems:**
 1. ✅ Extended to n=6,7,8,9 (6880 classes at n=8, 191536 at n=9)
 2. ✅ Diameter = n-2 DISPROVED at n=7 (diam=7≠5). Actual: 1,2,3,4,7,8
-3. ✅ H-DAG property HOLDS at n=3..8 (0 downhill edges verified)
+3. ✅ H-DAG property REFUTED: G_n is NOT a strict DAG. Level edges appear at n≥5 (1, 15, 136 for n=5,6,7). H-decreasing edges appear at n=7 (962/4086). The H-gradient is strong but imperfect. See MISTAKE-035.
 4. ✅ Spectral data computed at n=3..7 (Ramanujan fails at n=6)
 5. ✅ |Aut|-degree connection: corr→0 at large n (classes become generic)
 6. ✅ I(G_n,2) computed: 5, 13, 793, 15B (super-exponential "meta-H")

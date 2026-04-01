@@ -28,7 +28,7 @@ where m_{(n)} = V_n, m_{(n-1,1)} ~ V_n*(n-2), m_{(n-2,2)} ~ V_n*n(n-3)/2.
 
 ### Tier 2: Proved Structural Laws (hold at all n)
 
-1. **H-DAG:** G_n/Z_2 oriented by H is a DAG (0 downhill edges)
+1. **H-gradient:** G_n/Z_2 has a strong H-gradient but is NOT a strict DAG. Level edges at n≥5; H-decreasing edges at n≥7 (MISTAKE-035). ~~Previously listed as "0 downhill edges."~~
 2. **Black bipartiteness:** Black subgraph is bipartite (SC vs NS)
 3. **BBK impossibility:** No triangle has 2 blue + 1 black edges
 4. **Odd-black walk vanishing:** Closed walks need even #black edges

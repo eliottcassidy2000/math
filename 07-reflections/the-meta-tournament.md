@@ -70,7 +70,7 @@ This connects to the rapid mixing result of Kannan-Tetali-Vempala: the random wa
 
 ## Connections
 
-1. **The meta-tournament is the Hasse diagram of H-ordering on iso classes** -- it IS the partial order of tournaments by H, collapsed to iso classes.
+1. **The meta-tournament is approximately the Hasse diagram of H-ordering on iso classes** — but this is not a strict partial order: level edges (same H, different class) exist from n≥5, and H-decreasing edges exist from n≥7. See MISTAKE-035.
 
 2. **The meta-H = 1 is Redei at the meta-level** -- every POSET has an odd number of linear extensions (Redei for the Hasse diagram). For a total order (transitive tournament), there is exactly 1.
 

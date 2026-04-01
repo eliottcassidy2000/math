@@ -7,11 +7,11 @@
 i_*-injectivity FAILS at n=8 (HYP-380 refuted). The theorem beta_3≤1 holds
 ONLY for n≤7 and is NOT universal.
 
-## Main Theorem (THM-098 for k=1)
+## Main Theorem (THM-098 for k=1) — RESTRICTED to n≤7
 
-For every tournament T on n >= 3 vertices, beta_3(T) <= 1 in GLMY path homology.
+For every tournament T on 3 ≤ n ≤ 7 vertices, beta_3(T) ≤ 1 in GLMY path homology. **FALSE at n=8:** beta_3=2 exists with ~0.08% frequency (kind-pasteur-S48).
 
-Equivalently: rank(d_4) >= ker(d_3) - 1 (rank near-saturation).
+Equivalently: rank(d_4) >= ker(d_3) - 1 (rank near-saturation). Fails at n=8.
 
 ## Computational Evidence
 
@@ -20,9 +20,9 @@ Equivalently: rank(d_4) >= ker(d_3) - 1 (rank near-saturation).
 | 3-5 | exhaustive | beta_3 = 0 always | YES |
 | 6 | exhaustive (32768) | beta_3 in {0,1}; 320 have beta_3=1 | YES |
 | 7 | sampled (2000) | beta_3 in {0,1}; ~8.3% have beta_3=1 | YES |
-| 8 | sampled (200) | beta_3 in {0,1} | YES |
+| 8 | sampled (200+) | beta_3 in {0,1,**2**} | **NO** — beta_3=2 at ~0.08% rate (kind-pasteur-S48) |
 
-Zero violations found. Gap = rank(d_4) - (ker(d_3) - 1) is always 0 or 1.
+**CORRECTED (opus-2026-04-01-S1):** The n=8 row originally said "Confirmed: YES" from an early sample that missed the rare beta_3=2 cases. The critical update at line 6 is correct; the table was stale.
 
 ## Proof Strategy: LES Induction
 

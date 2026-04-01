@@ -7,7 +7,7 @@
 
 Tournament space is "effectively one-dimensional" through the H function:
 - H correlates 0.87-0.91 with the 2nd adjacency eigenvector
-- The metagraph is a DAG under H (no downhill edges in the merged graph)
+- The metagraph has a strong H-gradient but is NOT a strict DAG (level edges at n≥5, H-decreasing edges at n≥7; see MISTAKE-035)
 - The Markov chain approximation P₁² ≈ 0.94·P₂ treats the space as nearly 1D
 
 But it's NOT truly 1D:
