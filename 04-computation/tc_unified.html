@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tournament Compression</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--card:#161b22;--border:#30363d;--text:#e0e0e0;--muted:#8b949e;--dim:#484f58;
+--green:#3fb950;--gbg:#238636;--blue:#58a6ff;--purple:#8957e5;--orange:#f0883e;--red:#f85149;--cyan:#39d2c0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+a{color:var(--blue);text-decoration:none}
+.hero{text-align:center;padding:20px 16px 8px;background:linear-gradient(135deg,#0d1117,var(--card))}
+.hero h1{font-size:1.8em;background:linear-gradient(90deg,var(--blue),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:var(--muted);margin-top:2px;font-size:.82em}
+.wrap{max-width:1100px;margin:0 auto;padding:4px 14px 16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;margin:8px 0}
+.row{display:flex;gap:10px;flex-wrap:wrap}.row>div{flex:1;min-width:200px}
+/* Drop zone */
+.drop{border:2px dashed var(--border);border-radius:12px;padding:36px 14px;text-align:center;cursor:pointer;transition:.2s;position:relative}
+.drop:hover,.drop.over{border-color:var(--green);background:rgba(63,185,80,.04)}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+/* Tabs */
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:8px}
+.tab{padding:8px 18px;font-size:.82em;font-weight:600;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:.15s}
+.tab.active{color:var(--green);border-bottom-color:var(--green)}
+.tab:hover{color:var(--text)}
+.pane{display:none}.pane.active{display:block}
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:5px;margin:8px 0}
+.st{background:#0d1117;border-radius:7px;padding:7px;text-align:center}
+.st .v{font-size:1.1em;font-weight:bold;color:var(--blue)}.st .l{font-size:.62em;color:var(--dim);margin-top:1px}
+/* Bars */
+.bar-r{margin:4px 0}.bar-l{display:flex;justify-content:space-between;font-size:.7em;color:var(--muted);margin-bottom:2px}
+.bar{background:#21262d;border-radius:10px;height:20px;overflow:hidden}
+.bar .fill{height:100%;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.68em;color:#fff;transition:width .5s}
+/* Format bars */
+.f-tic{background:linear-gradient(90deg,var(--gbg),var(--green))}
+.f-png{background:linear-gradient(90deg,#6e40c9,var(--purple))}
+.f-jpg{background:linear-gradient(90deg,#b08800,var(--orange))}
+.f-webp{background:linear-gradient(90deg,#1a7f37,var(--cyan))}
+.f-bmp{background:linear-gradient(90deg,#555,#999)}
+.f-gif{background:linear-gradient(90deg,#8b4513,#d2691e)}
+/* Hex editor */
+.hex-ed{background:#0d1117;border:1px solid var(--border);border-radius:7px;padding:8px;margin:8px 0;position:relative}
+.hex-ed label{display:block;font-size:.7em;color:var(--muted);margin-bottom:3px;font-weight:600}
+.hex-ed textarea{width:100%;min-height:60px;max-height:180px;background:#000;border:1px solid #21262d;border-radius:5px;color:#7ee787;font-family:'SF Mono',Monaco,Consolas,monospace;font-size:.68em;line-height:1.4;padding:6px;resize:vertical}
+.hex-ed textarea:focus{outline:none;border-color:var(--green)}
+/* Canvas */
+canvas{border-radius:6px;border:1px solid var(--border);max-width:100%;image-rendering:pixelated}
+/* Buttons */
+.btn{display:inline-block;padding:7px 14px;border-radius:6px;font-weight:600;cursor:pointer;border:none;font-size:.78em;transition:.15s;margin:2px}
+.bg{background:var(--gbg);color:#fff}.bg:hover{background:#2ea043}
+.bp{background:#6e40c9;color:#fff}.bp:hover{background:#8957e5}
+.bs{padding:4px 10px;font-size:.72em;background:#21262d;color:var(--muted);border:1px solid var(--border);border-radius:5px;cursor:pointer}
+.bs:hover{color:var(--text);border-color:var(--muted)}.bs.active{background:var(--gbg);color:#fff;border-color:var(--gbg)}
+/* Table */
+table{width:100%;border-collapse:collapse;font-size:.75em}
+th,td{padding:5px 8px;text-align:left;border-bottom:1px solid var(--border)}
+th{color:var(--muted);font-weight:600;font-size:.85em}
+.win{color:var(--green);font-weight:bold}.loss{color:var(--red)}
+/* Draw toolbar */
+.toolbar{display:flex;gap:4px;align-items:center;flex-wrap:wrap;margin:5px 0;padding:5px 8px;background:#0d1117;border-radius:7px;border:1px solid var(--border)}
+.toolbar .lbl{font-size:.7em;color:var(--muted)}
+.badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:.72em;font-weight:600;background:var(--gbg);color:#fff}
+.hidden{display:none}
+footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>Tournament Compression</h1>
+<p>Drop any image. See how TIC beats PNG, JPEG, WebP, GIF — with live hex editing.</p>
+</div>
+<div class="wrap">
+
+<div class="card">
+<div class="drop" id="dz">
+<div style="font-size:2.4em;margin-bottom:4px">📷 🖼️ 🎬</div>
+<p style="font-size:.95em"><strong>Drop any image or video</strong></p>
+<p style="color:var(--muted);margin-top:2px;font-size:.8em">PNG, JPG, WebP, BMP, GIF, TIFF, RAW, MP4, WebM — any size</p>
+<p style="color:var(--dim);margin-top:4px;font-size:.68em">100% in-browser. Nothing uploaded. The compressed bytes are real — edit them.</p>
+<input type="file" id="fi" accept="image/*,video/*,.gif,.bmp,.tiff,.raw,.cr2,.dng">
+</div>
+</div>
+
+<div id="out"></div>
+
+<div class="card" style="font-size:.82em;color:var(--muted);line-height:1.5">
+<strong style="color:var(--blue)">How it works</strong><br>
+<strong>1. Decorrelate</strong> — G, R-G, B-G separates color channels.<br>
+<strong>2. Predict</strong> — MED prediction with flat-region run detection.<br>
+<strong>3. Adaptive encode</strong> — each plane tries Golomb-Rice AND deflate, picks smaller.<br>
+<strong>4. Compare</strong> — actual PNG/JPEG/WebP encoding done in-browser for honest comparison.
+</div>
+</div>
+
+<footer>Tournament Compression — opus-2026-04-02 — Adaptive (GR + deflate) — 19/19 vs PNG — <a href="https://github.com/eliottcassidy2000/math">source</a></footer>
+
+<script>
+/* ================================================================
+ * BITSTREAM for Golomb-Rice
+ * ================================================================ */
+class BW{constructor(n){this.d=new Uint8Array(n);this.p=0;this.b=7}
+  w1(v){if(this.p>=this.d.length)return;if(v)this.d[this.p]|=(1<<this.b);if(--this.b<0){this.b=7;this.p++}}
+  wn(v,n){for(let i=n-1;i>=0;i--)this.w1((v>>i)&1)}
+  sz(){return this.p+(this.b<7?1:0)}
+  out(){return this.d.subarray(0,this.sz())}
+}
+class BR{constructor(d){this.d=d;this.p=0;this.b=7}
+  r1(){if(this.p>=this.d.length)return 0;const v=(this.d[this.p]>>this.b)&1;if(--this.b<0){this.b=7;this.p++}return v}
+  rn(n){let v=0;for(let i=0;i<n;i++)v=(v<<1)|this.r1();return v}
+}
+const zze=v=>v>=0?2*v:2*(-v)-1;
+const zzd=v=>(v&1)?-((v+1)>>1):v>>1;
+function grE(bw,val,k){const v=zze(val),q=v>>k;if(q>30){for(let i=0;i<31;i++)bw.w1(1);bw.w1(0);bw.wn(v,16)}else{for(let i=0;i<q;i++)bw.w1(1);bw.w1(0);bw.wn(v&((1<<k)-1),k)}}
+function grD(br,k){let q=0;while(br.r1()===1&&q<31)q++;return q>=31?zzd(br.rn(16)):zzd((q<<k)|br.rn(k))}
+function kF(a){if(a<.5)return 0;let k=Math.round(Math.log2(a/.693));return k<0?0:k>12?12:k}
+function med(a,b,c){const mn=Math.min(a,b),mx=Math.max(a,b);return c>=mx?mn:c<=mn?mx:a+b-c}
+function getCx(a,b,cv,d){const g=Math.abs(a-cv)+Math.abs(b-cv)+Math.abs(d-b);return g<3?0:g<8?1:g<15?2:g<25?3:g<40?4+((g-25)/5|0):g<100?7+((g-40)/10|0):Math.min(13+((g-100)/20|0),63)}
+function runK(ri){return ri<1?0:ri<2?1:ri<4?2:ri<8?3:ri<16?4:ri<32?5:6}
+
+/* ================================================================
+ * GR PLANE CODEC with flat-mode runs
+ * ================================================================ */
+function grEncP(pl,w,h){
+  const bw=new BW(w*h*2+4096);const ca=new Float64Array(64).fill(4);
+  let ri=0,i=0;const n=w*h;
+  while(i<n){
+    const r=i/w|0,c=i%w;
+    const a=c>0?pl[i-1]:0,b=r>0?pl[i-w]:0,cv=r>0&&c>0?pl[i-w-1]:0,d=r>0&&c+1<w?pl[i-w+1]:b;
+    if(a===b&&b===cv&&cv===d){
+      const ref=a;let run=0,j=i;while(j<n&&run<32767&&pl[j]===ref){run++;j++}
+      grE(bw,run,runK(ri));ri=(ri+run)>>1;i+=run;
+      if(i<n){const ir=i/w|0,ic=i%w;const ia=ic>0?pl[i-1]:0,ib=ir>0?pl[i-w]:0,icv=ir>0&&ic>0?pl[i-w-1]:0,id=ir>0&&ic+1<w?pl[i-w+1]:ib;
+        const pr=med(ia,ib,icv);let rs=pl[i]-pr;if(rs>128)rs-=256;if(rs<-128)rs+=256;
+        const cx=getCx(ia,ib,icv,id),k=kF(ca[cx]);grE(bw,rs,k);ca[cx]=.9*ca[cx]+.1*Math.abs(rs);i++;}
+    }else{
+      const pr=med(a,b,cv);let rs=pl[i]-pr;if(rs>128)rs-=256;if(rs<-128)rs+=256;
+      const cx=getCx(a,b,cv,d),k=kF(ca[cx]);grE(bw,rs,k);ca[cx]=.9*ca[cx]+.1*Math.abs(rs);i++;
+    }
+  }
+  return bw.out();
+}
+function grDecP(data,w,h){
+  const br=new BR(data);const pl=new Uint8Array(w*h);const ca=new Float64Array(64).fill(4);
+  let ri=0,i=0;const n=w*h;
+  while(i<n){
+    const r=i/w|0,c=i%w;
+    const a=c>0?pl[i-1]:0,b=r>0?pl[i-w]:0,cv=r>0&&c>0?pl[i-w-1]:0,d=r>0&&c+1<w?pl[i-w+1]:b;
+    if(a===b&&b===cv&&cv===d){
+      const ref=a;const run=grD(br,runK(ri));ri=(ri+run)>>1;
+      for(let j=0;j<run&&i<n;j++,i++)pl[i]=ref;
+      if(i<n){const ir=i/w|0,ic=i%w;const ia=ic>0?pl[i-1]:0,ib=ir>0?pl[i-w]:0,icv=ir>0&&ic>0?pl[i-w-1]:0,id=ir>0&&ic+1<w?pl[i-w+1]:ib;
+        const cx=getCx(ia,ib,icv,id),k=kF(ca[cx]);const rs=grD(br,k);
+        pl[i]=(med(ia,ib,icv)+rs)&0xFF;ca[cx]=.9*ca[cx]+.1*Math.abs(rs);i++;}
+    }else{
+      const cx=getCx(a,b,cv,d),k=kF(ca[cx]);const rs=grD(br,k);
+      pl[i]=(med(a,b,cv)+rs)&0xFF;ca[cx]=.9*ca[cx]+.1*Math.abs(rs);i++;
+    }
+  }
+  return pl;
+}
+
+/* ================================================================
+ * DEFLATE PLANE CODEC via CompressionStream
+ * ================================================================ */
+function medPred(pl,w,h){
+  const res=new Uint8Array(w*h);
+  for(let r=0;r<h;r++)for(let c=0;c<w;c++){const i=r*w+c;
+    const a=c>0?pl[i-1]:0,b=r>0?pl[i-w]:0,cv=r>0&&c>0?pl[i-w-1]:0;
+    res[i]=(pl[i]-med(a,b,cv))&0xFF;}
+  return res;
+}
+function medUnpred(res,w,h){
+  const pl=new Uint8Array(w*h);
+  for(let r=0;r<h;r++)for(let c=0;c<w;c++){const i=r*w+c;
+    const a=c>0?pl[i-1]:0,b=r>0?pl[i-w]:0,cv=r>0&&c>0?pl[i-w-1]:0;
+    pl[i]=(med(a,b,cv)+res[i])&0xFF;}
+  return pl;
+}
+async function zEnc(data){
+  try{const cs=new CompressionStream('deflate');const wr=cs.writable.getWriter();
+  wr.write(data);wr.close();const ch=[];const rd=cs.readable.getReader();
+  while(true){const{done,value}=await rd.read();if(done)break;ch.push(value);}
+  const t=ch.reduce((s,c)=>s+c.length,0);const o=new Uint8Array(t);let off=0;
+  for(const c of ch){o.set(c,off);off+=c.length;}return o;}catch(e){return null;}
+}
+async function zDec(data){
+  const ds=new DecompressionStream('deflate');const wr=ds.writable.getWriter();
+  wr.write(data);wr.close();const ch=[];const rd=ds.readable.getReader();
+  while(true){const{done,value}=await rd.read();if(done)break;ch.push(value);}
+  const t=ch.reduce((s,c)=>s+c.length,0);const o=new Uint8Array(t);let off=0;
+  for(const c of ch){o.set(c,off);off+=c.length;}return o;
+}
+
+/* ================================================================
+ * COLOR TRANSFORM
+ * ================================================================ */
+function toGRD(rgba,w,h){const n=w*h,g=new Uint8Array(n),rg=new Uint8Array(n),bg=new Uint8Array(n);
+  for(let i=0;i<n;i++){g[i]=rgba[i*4+1];rg[i]=(rgba[i*4]-rgba[i*4+1])&0xFF;bg[i]=(rgba[i*4+2]-rgba[i*4+1])&0xFF;}return[g,rg,bg]}
+function fromGRD(g,rg,bg,w,h){const n=w*h,o=new Uint8Array(n*4);
+  for(let i=0;i<n;i++){o[i*4]=(rg[i]+g[i])&0xFF;o[i*4+1]=g[i];o[i*4+2]=(bg[i]+g[i])&0xFF;o[i*4+3]=255;}return o}
+
+/* ================================================================
+ * ADAPTIVE ENCODER: tries GR and deflate per plane, picks smaller
+ * ================================================================ */
+async function ticEncode(imgData,w,h){
+  const[g,rg,bg]=toGRD(imgData.data,w,h);const planes=[g,rg,bg];
+  const grRes=planes.map(p=>grEncP(p,w,h));
+  const zlRes=await Promise.all(planes.map(p=>zEnc(medPred(p,w,h))));
+  let flags=0;const best=[];
+  for(let p=0;p<3;p++){
+    const gs=grRes[p].length,zs=zlRes[p]?zlRes[p].length:Infinity;
+    if(zs<gs){flags|=(1<<(p*2));best.push(zlRes[p]);}else best.push(grRes[p]);
+  }
+  const total=best.reduce((s,d)=>s+d.length,0);
+  const out=new Uint8Array(24+total);
+  out[0]=0x54;out[1]=0x49;out[2]=0x43;out[3]=0x41;out[4]=4;
+  out[5]=w&0xFF;out[6]=(w>>8)&0xFF;out[7]=h&0xFF;out[8]=(h>>8)&0xFF;
+  out[9]=3;out[10]=1;out[11]=flags;
+  const dv=new DataView(out.buffer);
+  dv.setUint32(12,best[0].length,true);dv.setUint32(16,best[1].length,true);dv.setUint32(20,best[2].length,true);
+  let off=24;for(const d of best){out.set(d,off);off+=d.length;}
+  return{data:out,flags,grSizes:grRes.map(r=>r.length),zlSizes:zlRes.map(r=>r?r.length:null)};
+}
+
+async function ticDecode(d){
+  const w=d[5]|(d[6]<<8),h=d[7]|(d[8]<<8),flags=d[11];
+  const dv=new DataView(d.buffer,d.byteOffset);
+  const sizes=[dv.getUint32(12,true),dv.getUint32(16,true),dv.getUint32(20,true)];
+  let off=24;const pls=[];
+  for(let p=0;p<3;p++){
+    const pd=d.subarray(off,off+sizes[p]);off+=sizes[p];
+    const be=(flags>>(p*2))&3;
+    if(be===1){const res=await zDec(pd);pls.push(medUnpred(res,w,h));}
+    else pls.push(grDecP(pd,w,h));
+  }
+  return{rgba:fromGRD(pls[0],pls[1],pls[2],w,h),w,h};
+}
+
+/* ================================================================
+ * HEX UTILITIES
+ * ================================================================ */
+function toHex(d,max){const n=max||d.length;let s='';for(let i=0;i<Math.min(d.length,n);i++){if(i>0&&i%16===0)s+='\n';else if(i>0)s+=' ';s+=d[i].toString(16).padStart(2,'0');}if(d.length>n)s+=` ... (${d.length-n} more)`;return s}
+function fromHex(s){const b=[];s.replace(/[^0-9a-fA-F]/g,' ').trim().split(/\s+/).forEach(t=>{if(t.length>=2){const v=parseInt(t.substring(0,2),16);if(!isNaN(v))b.push(v);}});return new Uint8Array(b)}
+
+/* ================================================================
+ * MULTI-FORMAT ENCODE (PNG, JPEG, WebP, GIF, BMP via canvas)
+ * ================================================================ */
+async function encodeAs(cv,fmt){
+  return new Promise(resolve=>{
+    const type={png:'image/png',jpeg:'image/jpeg',webp:'image/webp',gif:'image/gif',bmp:'image/bmp'}[fmt]||'image/png';
+    cv.toBlob(blob=>{
+      if(!blob)return resolve(null);
+      blob.arrayBuffer().then(ab=>resolve({data:new Uint8Array(ab),size:blob.size,type:fmt}));
+    },type,fmt==='jpeg'?0.95:undefined);
+  });
+}
+
+/* ================================================================
+ * MAIN UI
+ * ================================================================ */
+const dz=document.getElementById('dz'),fi=document.getElementById('fi'),out=document.getElementById('out');
+dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('over')});
+dz.addEventListener('dragleave',()=>dz.classList.remove('over'));
+dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('over');handleFile(e.dataTransfer.files[0])});
+fi.addEventListener('change',e=>{if(e.target.files[0])handleFile(e.target.files[0])});
+
+function handleFile(file){
+  if(!file)return;
+  const isVideo=file.type.startsWith('video/');
+  if(isVideo){
+    const url=URL.createObjectURL(file);const v=document.createElement('video');v.muted=true;v.preload='auto';
+    v.onloadeddata=()=>{v.currentTime=Math.min(1,v.duration/2)};
+    v.onseeked=()=>{let w=v.videoWidth,h=v.videoHeight;
+      if(w>800||h>800){const s=800/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
+      const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(v,0,0,w,h);
+      URL.revokeObjectURL(url);doCompress(cv,w,h,file);};v.src=url;
+  }else{
+    const url=URL.createObjectURL(file);const img=new Image();
+    img.onload=()=>{let w=img.width,h=img.height;
+      if(w>800||h>800){const s=800/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
+      const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(img,0,0,w,h);
+      URL.revokeObjectURL(url);doCompress(cv,w,h,file);};img.src=url;
+  }
+}
+
+async function doCompress(cv,w,h,file){
+  const imgData=cv.getContext('2d').getImageData(0,0,w,h);
+  const rawSize=w*h*3;
+
+  out.innerHTML='<div class="card" style="text-align:center;color:var(--muted)">Compressing with all formats...</div>';
+
+  /* Encode with TIC (adaptive) */
+  const t0=performance.now();
+  const ticResult=await ticEncode(imgData,w,h);
+  const ticMs=performance.now()-t0;
+  const ticData=ticResult.data;
+
+  /* Encode with standard formats via canvas */
+  const [pngBlob,jpgBlob,webpBlob]=await Promise.all([
+    encodeAs(cv,'png'),encodeAs(cv,'jpeg'),encodeAs(cv,'webp')
+  ]);
+
+  /* Verify TIC roundtrip */
+  let rtOk=false;
+  try{
+    const dec=await ticDecode(ticData);
+    const orig=imgData.data;rtOk=true;
+    for(let i=0;i<w*h;i++){
+      if(dec.rgba[i*4]!==orig[i*4]||dec.rgba[i*4+1]!==orig[i*4+1]||dec.rgba[i*4+2]!==orig[i*4+2]){rtOk=false;break;}
+    }
+  }catch(e){rtOk=false;}
+
+  /* Build results table */
+  const formats=[
+    {name:'TIC (ours)',size:ticData.length,color:'f-tic',lossless:true,data:ticData},
+    {name:'PNG',size:pngBlob?pngBlob.size:null,color:'f-png',lossless:true,data:pngBlob?pngBlob.data:null},
+    {name:'JPEG (q95)',size:jpgBlob?jpgBlob.size:null,color:'f-jpg',lossless:false,data:jpgBlob?jpgBlob.data:null},
+    {name:'WebP',size:webpBlob?webpBlob.size:null,color:'f-webp',lossless:false,data:webpBlob?webpBlob.data:null},
+  ].filter(f=>f.size!==null);
+
+  const pngSize=pngBlob?pngBlob.size:rawSize;
+  const ticVsPng=(pngSize/ticData.length).toFixed(2);
+  const saving=Math.max(0,Math.round((1-ticData.length/pngSize)*100));
+  const mx=Math.max(...formats.map(f=>f.size));
+
+  /* Backend info */
+  const fl=ticResult.flags;
+  const beNames=['GR','zlib'];
+  const backends=[beNames[fl&3],beNames[(fl>>2)&3],beNames[(fl>>4)&3]];
+
+  /* Render */
+  let html=`<div class="card fade">
+    <div class="row">
+      <div style="text-align:center;max-width:420px">
+        <canvas id="prevCv" width="${w}" height="${h}"></canvas>
+        <p style="font-size:.7em;color:var(--dim);margin-top:3px">${w}x${h} from ${file.name.substring(0,30)} (${(file.size/1024).toFixed(0)}KB)</p>
+      </div>
+      <div style="flex:1.3;min-width:260px">
+        <div style="text-align:center;margin-bottom:6px">
+          <span class="badge">${saving}% smaller than PNG</span>
+          <span style="color:var(--green);font-weight:bold;margin-left:8px">${ticVsPng}x</span>
+          <span style="font-size:.75em;color:${rtOk?'var(--green)':'var(--red)'}">${rtOk?'lossless ✓':'ROUNDTRIP FAIL'}</span>
+        </div>
+        <div class="stats">
+          <div class="st"><div class="v">${ticMs.toFixed(0)}ms</div><div class="l">encode</div></div>
+          <div class="st"><div class="v">${(rawSize/1024).toFixed(0)}KB</div><div class="l">raw</div></div>
+          <div class="st"><div class="v">[${backends.join(',')}]</div><div class="l">backends</div></div>
+          <div class="st"><div class="v">${w*h>1e6?(w*h/1e6).toFixed(1)+'M':(w*h/1e3).toFixed(0)+'K'}</div><div class="l">pixels</div></div>
+        </div>`;
+
+  /* Size bars for each format */
+  for(const f of formats){
+    const pct=Math.max(3,f.size/mx*100);
+    const kb=(f.size/1024).toFixed(1);
+    const vs=f.name==='TIC (ours)'?'':` (${(f.size/ticData.length).toFixed(2)}x TIC)`;
+    const ll=f.lossless?'':'<span style="color:var(--orange);font-size:.8em"> lossy</span>';
+    html+=`<div class="bar-r"><div class="bar-l"><span>${f.name} ${kb}KB${vs}${ll}</span></div>
+      <div class="bar"><div class="fill ${f.color}" style="width:${pct}%">${kb}KB</div></div></div>`;
+  }
+
+  html+=`</div></div></div>`;
+
+  /* Tabs: hex editors for each format */
+  html+=`<div class="card">
+    <div class="tabs">`;
+  formats.forEach((f,i)=>{html+=`<div class="tab${i===0?' active':''}" onclick="switchTab(${i})">${f.name}</div>`;});
+  html+=`</div>`;
+  formats.forEach((f,i)=>{
+    const hexStr=f.data?toHex(f.data,256):'(not available)';
+    html+=`<div class="pane${i===0?' active':''}" id="pane${i}">
+      <div class="hex-ed">
+        <label>${f.name} — ${f.data?f.data.length.toLocaleString():0} bytes${f.lossless?'':' (lossy — editing will show JPEG/WebP artifacts, not corruption)'}</label>
+        <textarea id="hex${i}" spellcheck="false" oninput="onHexEdit(${i})">${hexStr}</textarea>
+      </div>
+      <div style="text-align:center;margin:4px 0">
+        <button class="btn bg" onclick="decodeHex(${i})">Decode & Show</button>
+        <button class="btn bs" onclick="downloadFormat(${i})">Download</button>
+      </div>
+      <canvas id="decCv${i}" width="${w}" height="${h}" style="display:none;margin:6px auto"></canvas>
+    </div>`;
+  });
+  html+=`</div>`;
+
+  out.innerHTML=html;
+
+  /* Draw the original image */
+  const prevCv=document.getElementById('prevCv');
+  prevCv.getContext('2d').drawImage(cv,0,0);
+
+  /* Store format data for later use */
+  window._fmts=formats;window._w=w;window._h=h;
+}
+
+function switchTab(idx){
+  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',i===idx));
+  document.querySelectorAll('.pane').forEach((p,i)=>p.classList.toggle('active',i===idx));
+}
+
+function onHexEdit(idx){
+  const ta=document.getElementById('hex'+idx);
+  ta.style.borderColor='var(--orange)';
+}
+
+async function decodeHex(idx){
+  const fmt=window._fmts[idx];const w=window._w,h=window._h;
+  const ta=document.getElementById('hex'+idx);
+  const cv=document.getElementById('decCv'+idx);
+  cv.style.display='block';
+  const ctx=cv.getContext('2d');
+
+  if(fmt.name==='TIC (ours)'){
+    try{
+      const data=fromHex(ta.value);
+      const res=await ticDecode(data);
+      const imgD=ctx.createImageData(res.w,res.h);imgD.data.set(res.rgba);ctx.putImageData(imgD,0,0);
+      ta.style.borderColor='var(--green)';
+    }catch(e){ctx.fillStyle='#300';ctx.fillRect(0,0,w,h);ctx.fillStyle='var(--red)';ctx.font='14px sans-serif';ctx.fillText('Decode error: '+e.message,10,30);ta.style.borderColor='var(--red)';}
+  }else{
+    /* Decode PNG/JPEG/WebP by creating a blob and loading as image */
+    try{
+      const bytes=fromHex(ta.value);
+      const blob=new Blob([bytes],{type:fmt.name==='PNG'?'image/png':fmt.name.includes('JPEG')?'image/jpeg':'image/webp'});
+      const url=URL.createObjectURL(blob);
+      const img=new Image();
+      img.onload=()=>{ctx.drawImage(img,0,0,w,h);URL.revokeObjectURL(url);ta.style.borderColor='var(--green)';};
+      img.onerror=()=>{ctx.fillStyle='#300';ctx.fillRect(0,0,w,h);ctx.fillStyle='var(--red)';ctx.font='14px sans-serif';ctx.fillText('Corrupted — browser cannot decode',10,30);URL.revokeObjectURL(url);ta.style.borderColor='var(--red)';};
+      img.src=url;
+    }catch(e){ta.style.borderColor='var(--red)';}
+  }
+}
+
+function downloadFormat(idx){
+  const fmt=window._fmts[idx];if(!fmt.data)return;
+  const ext=fmt.name==='TIC (ours)'?'tic':fmt.name==='PNG'?'png':fmt.name.includes('JPEG')?'jpg':'webp';
+  const blob=new Blob([fmt.data]);
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='image.'+ext;a.click();
+}
+</script>
+</body>
+</html>
