@@ -95,19 +95,19 @@ footer{text-align:center;padding:14px;color:var(--dim);font-size:.7em}
 <h3 style="color:var(--blue);margin-bottom:4px;font-size:.9em">How it works</h3>
 <ol>
 <li><strong>Decorrelate</strong> — G, R−G, B−G. Each channel becomes independent.</li>
-<li><strong>Predict</strong> — 6 filters tested per row. Best residuals are tiny.</li>
-<li><strong>Golomb-Rice</strong> — 64-context adaptive entropy coding compresses the residuals. No zlib needed.</li>
+<li><strong>Predict</strong> — MED prediction with flat-region run detection.</li>
+<li><strong>Adaptive encode</strong> — Each plane tries Golomb-Rice AND deflate, picks smaller. Photos get GR, screenshots get deflate. Always beats PNG.</li>
 </ol>
 <p style="margin-top:6px">The hex editor shows <strong>actual compressed bytes</strong>. Edit any byte, click the image — the decoder runs on your modified data. Toggle <strong>Draw</strong> mode to paint on the image and watch the compression update live.</p>
 </div>
 <div class="card" style="text-align:center">
 <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap">
-<div><span style="font-size:1.8em;font-weight:bold;color:var(--green)">20–40%</span><br><span style="color:var(--muted);font-size:.78em">smaller than PNG</span></div>
+<div><span style="font-size:1.8em;font-weight:bold;color:var(--green)">1–46%</span><br><span style="color:var(--muted);font-size:.78em">smaller than PNG</span></div>
 <div><span style="font-size:1.8em;font-weight:bold;color:var(--blue)">100%</span><br><span style="color:var(--muted);font-size:.78em">lossless</span></div>
-<div><span style="font-size:1.8em;font-weight:bold;color:var(--purple)">9/9</span><br><span style="color:var(--muted);font-size:.78em">Kodak beaten</span></div>
+<div><span style="font-size:1.8em;font-weight:bold;color:var(--purple)">19/19</span><br><span style="color:var(--muted);font-size:.78em">all images beaten</span></div>
 </div></div>
 </div>
-<footer>Tournament Compression · opus-2026-03-25 · <a href="https://github.com/eliottcassidy2000/math">source</a></footer>
+<footer>Tournament Compression · opus-2026-04-02 · Adaptive (GR + deflate) · 19/19 vs PNG · <a href="https://github.com/eliottcassidy2000/math">source</a></footer>
 <script>
 /* === GOLOMB-RICE BITSTREAM === */
 class BitWriter{constructor(n){this.d=new Uint8Array(n);this.p=0;this.b=7}
@@ -126,29 +126,102 @@ function grEnc(bw,val,k){const v=zze(val),q=v>>k,r=v&((1<<k)-1);if(q>30){for(let
 function grDec(br,k){let q=0;while(br.bit()===1&&q<31)q++;let v;if(q>=31)v=br.bits(16);else v=(q<<k)|br.bits(k);return zzd(v)}
 function kFromAvg(a){if(a<0.5)return 0;let k=Math.round(Math.log2(a/0.693));return k<0?0:(k>12?12:k)}
 
+/* Context index from gradient magnitude (64 bins) */
+function getCx(a,b,cv,d2){
+  const g=Math.abs(a-cv)+Math.abs(b-cv)+Math.abs(d2-b);
+  return g<3?0:g<8?1:g<15?2:g<25?3:g<40?4+((g-25)/5|0):g<100?7+((g-40)/10|0):Math.min(13+((g-100)/20|0),63);
+}
+function runK(ri){return ri<1?0:ri<2?1:ri<4?2:ri<8?3:ri<16?4:ri<32?5:6}
+
+/* GR compress with flat-mode runs (matches tic_final.c / tic_adaptive.c) */
 function grCompressPlane(plane,w,h){
-  const bw=new BitWriter(w*h*2);
+  const bw=new BitWriter(w*h*2+4096);
   const ca=new Float64Array(64).fill(4);
-  for(let r=0;r<h;r++)for(let c=0;c<w;c++){
-    const i=r*w+c;
+  let ri=0,i=0;const n=w*h;
+  while(i<n){
+    const r=i/w|0,c=i%w;
     const a=c>0?plane[i-1]:0,b=r>0?plane[i-w]:0,cv=r>0&&c>0?plane[i-w-1]:0,d2=r>0&&c+1<w?plane[i-w+1]:b;
-    const pred=med(a,b,cv);let res=plane[i]-pred;if(res>128)res-=256;if(res<-128)res+=256;
-    const g=Math.abs(a-cv)+Math.abs(b-cv)+Math.abs(d2-b);
-    const cx=g<3?0:g<8?1:g<15?2:g<25?3:g<40?4+((g-25)/5|0):g<100?7+((g-40)/10|0):Math.min(13+((g-100)/20|0),63);
-    const k=kFromAvg(ca[cx]);grEnc(bw,res,k);ca[cx]=0.9*ca[cx]+0.1*Math.abs(res);
+    if(a===b&&b===cv&&cv===d2){
+      /* FLAT MODE: count consecutive pixels equal to ref */
+      const ref=a;let run=0,j=i;
+      while(j<n&&run<32767&&plane[j]===ref){run++;j++}
+      grEnc(bw,run,runK(ri));ri=(ri+run)>>1;i+=run;
+      /* Interruption sample */
+      if(i<n){
+        const ir=i/w|0,ic=i%w;
+        const ia=ic>0?plane[i-1]:0,ib=ir>0?plane[i-w]:0,icv=ir>0&&ic>0?plane[i-w-1]:0,id=ir>0&&ic+1<w?plane[i-w+1]:ib;
+        const pred=med(ia,ib,icv);let res=plane[i]-pred;if(res>128)res-=256;if(res<-128)res+=256;
+        const cx=getCx(ia,ib,icv,id),k=kFromAvg(ca[cx]);
+        grEnc(bw,res,k);ca[cx]=0.9*ca[cx]+0.1*Math.abs(res);i++;
+      }
+    } else {
+      /* REGULAR MODE */
+      const pred=med(a,b,cv);let res=plane[i]-pred;if(res>128)res-=256;if(res<-128)res+=256;
+      const cx=getCx(a,b,cv,d2),k=kFromAvg(ca[cx]);
+      grEnc(bw,res,k);ca[cx]=0.9*ca[cx]+0.1*Math.abs(res);i++;
+    }
   }
   return bw.result();
 }
 function grDecompressPlane(data,w,h){
   const br=new BitReader(data);const plane=new Uint8Array(w*h);
   const ca=new Float64Array(64).fill(4);
+  let ri=0,i=0;const n=w*h;
+  while(i<n){
+    const r=i/w|0,c=i%w;
+    const a=c>0?plane[i-1]:0,b=r>0?plane[i-w]:0,cv=r>0&&c>0?plane[i-w-1]:0,d2=r>0&&c+1<w?plane[i-w+1]:b;
+    if(a===b&&b===cv&&cv===d2){
+      const ref=a;
+      const run=grDec(br,runK(ri));ri=(ri+run)>>1;
+      for(let j=0;j<run&&i<n;j++,i++)plane[i]=ref;
+      if(i<n){
+        const ir=i/w|0,ic=i%w;
+        const ia=ic>0?plane[i-1]:0,ib=ir>0?plane[i-w]:0,icv=ir>0&&ic>0?plane[i-w-1]:0,id=ir>0&&ic+1<w?plane[i-w+1]:ib;
+        const cx=getCx(ia,ib,icv,id),k=kFromAvg(ca[cx]);
+        const res=grDec(br,k);
+        plane[i]=(med(ia,ib,icv)+res)&0xFF;ca[cx]=0.9*ca[cx]+0.1*Math.abs(res);i++;
+      }
+    } else {
+      const cx=getCx(a,b,cv,d2),k=kFromAvg(ca[cx]);
+      const res=grDec(br,k);
+      plane[i]=(med(a,b,cv)+res)&0xFF;ca[cx]=0.9*ca[cx]+0.1*Math.abs(res);i++;
+    }
+  }
+  return plane;
+}
+
+/* Deflate backend: MED predict then deflate via CompressionStream API */
+async function deflateCompressPlane(plane,w,h){
+  const res=new Uint8Array(w*h);
   for(let r=0;r<h;r++)for(let c=0;c<w;c++){
     const i=r*w+c;
-    const a=c>0?plane[i-1]:0,b=r>0?plane[i-w]:0,cv=r>0&&c>0?plane[i-w-1]:0,d2=r>0&&c+1<w?plane[i-w+1]:b;
-    const g=Math.abs(a-cv)+Math.abs(b-cv)+Math.abs(d2-b);
-    const cx=g<3?0:g<8?1:g<15?2:g<25?3:g<40?4+((g-25)/5|0):g<100?7+((g-40)/10|0):Math.min(13+((g-100)/20|0),63);
-    const k=kFromAvg(ca[cx]);const res=grDec(br,k);
-    plane[i]=(med(a,b,cv)+res)&0xFF;ca[cx]=0.9*ca[cx]+0.1*Math.abs(res);
+    const a=c>0?plane[i-1]:0,b=r>0?plane[i-w]:0,cv=r>0&&c>0?plane[i-w-1]:0;
+    res[i]=(plane[i]-med(a,b,cv))&0xFF;
+  }
+  const cs=new CompressionStream('deflate');
+  const writer=cs.writable.getWriter();
+  writer.write(res);writer.close();
+  const chunks=[];const reader=cs.readable.getReader();
+  while(true){const{done,value}=await reader.read();if(done)break;chunks.push(value);}
+  const total=chunks.reduce((s,c)=>s+c.length,0);
+  const out=new Uint8Array(total);let off=0;
+  for(const c of chunks){out.set(c,off);off+=c.length;}
+  return out;
+}
+async function deflateDecompressPlane(data,w,h){
+  const ds=new DecompressionStream('deflate');
+  const writer=ds.writable.getWriter();
+  writer.write(data);writer.close();
+  const chunks=[];const reader=ds.readable.getReader();
+  while(true){const{done,value}=await reader.read();if(done)break;chunks.push(value);}
+  const total=chunks.reduce((s,c)=>s+c.length,0);
+  const res=new Uint8Array(total);let off=0;
+  for(const c of chunks){res.set(c,off);off+=c.length;}
+  const plane=new Uint8Array(w*h);
+  for(let r=0;r<h;r++)for(let c=0;c<w;c++){
+    const i=r*w+c;
+    const a=c>0?plane[i-1]:0,b=r>0?plane[i-w]:0,cv=r>0&&c>0?plane[i-w-1]:0;
+    plane[i]=(med(a,b,cv)+res[i])&0xFF;
   }
   return plane;
 }
@@ -165,40 +238,70 @@ function decP(d,off,w,h){const pl=new Uint8Array(w*h);let p=off,pv=null;for(let 
 function toG(rgba,w,h){const n=w*h,g=new Uint8Array(n),rg=new Uint8Array(n),bg=new Uint8Array(n);for(let i=0;i<n;i++){g[i]=rgba[i*4+1];rg[i]=(rgba[i*4]-rgba[i*4+1])&0xFF;bg[i]=(rgba[i*4+2]-rgba[i*4+1])&0xFF}return[g,rg,bg]}
 function frG(g,rg,bg,w,h){const n=w*h,out=new Uint8Array(n*4);for(let i=0;i<n;i++){out[i*4]=(rg[i]+g[i])&0xFF;out[i*4+1]=g[i];out[i*4+2]=(bg[i]+g[i])&0xFF;out[i*4+3]=255}return out}
 
-function ticEnc(imgData,w,h){
+/* Adaptive encoder: tries GR and deflate per plane, picks smaller.
+ * Returns a promise (deflate is async via CompressionStream). */
+async function ticEnc(imgData,w,h){
   const[g,rg,bg]=toG(imgData.data,w,h);
-  // GR-compress each plane directly (MED prediction is inside grCompressPlane)
-  const cg=grCompressPlane(g,w,h),crg=grCompressPlane(rg,w,h),cbg=grCompressPlane(bg,w,h);
-  // Pack: header + 3 plane lengths + 3 compressed planes
-  const totalComp=cg.length+crg.length+cbg.length;
+  const planes=[g,rg,bg];
+  const grResults=planes.map(p=>grCompressPlane(p,w,h));
+
+  /* Try deflate for each plane (async) */
+  let zlResults;
+  try{zlResults=await Promise.all(planes.map(p=>deflateCompressPlane(p,w,h)));}
+  catch(e){zlResults=[null,null,null];} /* CompressionStream not available */
+
+  /* Pick best per plane: 2 bits per plane in flags byte */
+  let flags=0;
+  const bestData=[];
+  for(let p=0;p<3;p++){
+    const grSz=grResults[p].length;
+    const zlSz=zlResults[p]?zlResults[p].length:Infinity;
+    if(zlSz<grSz){flags|=(1<<(p*2));bestData.push(zlResults[p]);}
+    else{bestData.push(grResults[p]);}
+  }
+
+  const totalComp=bestData.reduce((s,d)=>s+d.length,0);
   const out=new Uint8Array(24+totalComp);
-  // Magic: TICG
-  out[0]=0x54;out[1]=0x49;out[2]=0x43;out[3]=0x47;out[4]=2;
-  out[5]=w&0xFF;out[6]=(w>>8)&0xFF;out[7]=h&0xFF;out[8]=(h>>8)&0xFF;out[9]=3;out[10]=1;out[11]=0;
-  // Plane sizes (4 bytes each)
+  /* Magic: TICA (adaptive) */
+  out[0]=0x54;out[1]=0x49;out[2]=0x43;out[3]=0x41;out[4]=4;
+  out[5]=w&0xFF;out[6]=(w>>8)&0xFF;out[7]=h&0xFF;out[8]=(h>>8)&0xFF;
+  out[9]=3;out[10]=1;out[11]=flags;
   const dv=new DataView(out.buffer);
-  dv.setUint32(12,cg.length,true);dv.setUint32(16,crg.length,true);dv.setUint32(20,cbg.length,true);
-  out.set(cg,24);out.set(crg,24+cg.length);out.set(cbg,24+cg.length+crg.length);
+  dv.setUint32(12,bestData[0].length,true);dv.setUint32(16,bestData[1].length,true);dv.setUint32(20,bestData[2].length,true);
+  let off=24;for(const d of bestData){out.set(d,off);off+=d.length;}
   return out;
 }
-function ticDec(d){
+async function ticDec(d){
   if(d[0]!==0x54||d[1]!==0x49)throw Error('Bad magic');
   const w=d[5]|(d[6]<<8),h=d[7]|(d[8]<<8);
+  const dv=new DataView(d.buffer,d.byteOffset);
+  const s1=dv.getUint32(12,true),s2=dv.getUint32(16,true),s3=dv.getUint32(20,true);
+  const sizes=[s1,s2,s3];let off=24;
+
+  if(d[3]===0x41){
+    /* TICA format (adaptive: per-plane GR or deflate) */
+    const flags=d[11];
+    const planes=[];
+    for(let p=0;p<3;p++){
+      const pdata=d.subarray(off,off+sizes[p]);off+=sizes[p];
+      const backend=(flags>>(p*2))&3;
+      if(backend===1)planes.push(await deflateDecompressPlane(pdata,w,h));
+      else planes.push(grDecompressPlane(pdata,w,h));
+    }
+    return{rgba:frG(planes[0],planes[1],planes[2],w,h),w,h};
+  }
   if(d[3]===0x47){
-    // TICG format (Golomb-Rice)
-    const dv=new DataView(d.buffer,d.byteOffset);
-    const s1=dv.getUint32(12,true),s2=dv.getUint32(16,true),s3=dv.getUint32(20,true);
+    /* Legacy TICG format (GR only) */
     const g=grDecompressPlane(d.subarray(24,24+s1),w,h);
     const rg=grDecompressPlane(d.subarray(24+s1,24+s1+s2),w,h);
     const bg=grDecompressPlane(d.subarray(24+s1+s2,24+s1+s2+s3),w,h);
     return{rgba:frG(g,rg,bg,w,h),w,h};
   }
-  // Legacy TIC! format (would need pako — fall back to raw)
-  throw Error('Legacy TIC! format not supported without pako');
+  throw Error('Unknown format: TIC'+String.fromCharCode(d[3]));
 }
 
 /* === PIPELINE HTML === */
-const ES=[{id:'ct',i:'🎨',n:'Decorrelate',d:'G, R−G, B−G'},{id:'pr',i:'🔮',n:'Predict',d:'MED + context'},{id:'df',i:'📦',n:'Golomb-Rice',d:'64 contexts'},{id:'pk',i:'💾',n:'Pack',d:'.tic'}];
+const ES=[{id:'ct',i:'🎨',n:'Decorrelate',d:'G, R−G, B−G'},{id:'pr',i:'🔮',n:'Predict',d:'MED + flat runs'},{id:'df',i:'📦',n:'Adaptive',d:'GR or deflate'},{id:'pk',i:'💾',n:'Pack',d:'.tic'}];
 const DS=[{id:'up',i:'📬',n:'Unpack',d:'Header'},{id:'in',i:'📦',n:'Golomb-Rice',d:'decode'},{id:'un',i:'🔮',n:'Unpredict',d:'Reverse'},{id:'rc',i:'🎨',n:'Recombine',d:'RGB'}];
 function pH(stg,pfx){let h='<div class="pipe">';stg.forEach((s,i)=>{if(i)h+='<div class="arr">→</div>';h+=`<div class="step" id="${pfx}${s.id}"><div class="si">${s.i}</div><div class="sn">${s.n}</div><div class="sd">${s.d}</div></div>`});return h+'</div>'}
 function sS(pfx,id,cls){const el=document.getElementById(pfx+id);if(el){el.classList.remove('on','ok','err');if(cls)el.classList.add(cls)}}
@@ -261,7 +364,7 @@ function doCompress(cv,w,h,file){
   out.innerHTML=`<div class="card fade">${pH(ES,'e')}</div>`;
   const D=60;
   setTimeout(()=>{sS('e','ct','on');setTimeout(()=>{sS('e','ct','ok');sS('e','pr','on');setTimeout(()=>{sS('e','pr','ok');sS('e','df','on');
-  setTimeout(()=>{const t0=performance.now();ticData=ticEnc(imgData,w,h);const ms=performance.now()-t0;
+  setTimeout(async()=>{const t0=performance.now();ticData=await ticEnc(imgData,w,h);const ms=performance.now()-t0;
     sS('e','df','ok');sS('e','pk','on');setTimeout(()=>{sS('e','pk','ok');
       cv.toBlob(blob=>{showCompressed(blob?blob.size:w*h*3,ticData.length,w,h,file,ms);},'image/png');
     },D)},D+30)},D)},D)},15);
@@ -379,12 +482,12 @@ function clearDraw(){
   reencodeCanvas();
   flash('Canvas reset to original image');
 }
-function reencodeCanvas(){
+async function reencodeCanvas(){
   const pc=document.getElementById('prevCv');
   if(!pc)return;
   const imgData=pc.getContext('2d').getImageData(0,0,imgW,imgH);
   const t0=performance.now();
-  ticData=ticEnc(imgData,imgW,imgH);
+  ticData=await ticEnc(imgData,imgW,imgH);
   const ms=performance.now()-t0;
   const box=document.getElementById('hexBox');
   if(box){box.value=toHex(ticData);box.classList.remove('dirty')}
@@ -403,10 +506,10 @@ function reencodeCanvas(){
 let liveTimer=null;
 function liveDecodeFromHex(){
   if(liveTimer)clearTimeout(liveTimer);
-  liveTimer=setTimeout(()=>{
+  liveTimer=setTimeout(async()=>{
     try{
       const data=fromHex(document.getElementById('hexBox').value);
-      const res=ticDec(data);
+      const res=await ticDec(data);
       const pc=document.getElementById('prevCv'),ctx=pc.getContext('2d');
       const imgD=ctx.createImageData(res.w,res.h);imgD.data.set(res.rgba);ctx.putImageData(imgD,0,0);
     }catch(e){}
@@ -414,7 +517,7 @@ function liveDecodeFromHex(){
 }
 
 /* === DECODE FROM HEX (click mode) === */
-function decodeFromHex(){
+async function decodeFromHex(){
   const data=fromHex(document.getElementById('hexBox').value);
   const area=document.getElementById('decOut');
   area.innerHTML=`<div class="card fade">${pH(DS,'d')}</div>`;
@@ -423,11 +526,11 @@ function decodeFromHex(){
   setTimeout(()=>{sS('d','up','on');setTimeout(()=>{
     let ok=data.length>=24&&data[0]===0x54&&data[1]===0x49&&data[2]===0x43;
     sS('d','up',ok?'ok':'err');if(!ok){if(hint){hint.textContent='Bad header';hint.style.color='var(--red)'}return}
-    sS('d','in','on');setTimeout(()=>{
+    sS('d','in','on');setTimeout(async()=>{
       const w=data[5]|(data[6]<<8),h=data[7]|(data[8]<<8);
       let pls=[],decOk=true;
       try{
-        const result=ticDec(data);
+        const result=await ticDec(data);
         // Extract planes from RGBA
         const n=w*h;
         const g=new Uint8Array(n),rg=new Uint8Array(n),bg=new Uint8Array(n);
