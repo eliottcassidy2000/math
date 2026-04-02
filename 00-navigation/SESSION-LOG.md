@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-02-S1 — 2026-04-02: TIC-GR4 Codec — JPEG-LS-Inspired Improvements
+
+**Account:** opus
+**Continuation of:** kind-pasteur-2026-03-26-S33 (tic_gr3.c)
+**Summary:** Deep audit of every arbitrary choice in the TIC compression codecs (tic_gr{1,2,3}.c). Attempted to merge JPEG/JPEG-LS concepts. Created tic_gr4.c with: context-based run mode, sign correction, YCoCg-R auto-selection, adaptive escape. Key discovery: JPEG-LS's 365-context model is too sparse for 256×256 images — 64 contexts with EMA adaptation is better. GR4 beats GR2 by 12% aggregate on 9 test images.
+**New contributions:** `04-computation/tic/tic_gr4.c`, `04-computation/tic/bench_gr4.py`, `05-knowledge/results/tic_gr4_benchmark.out`
+**Unresolved threads:** GR4 still loses to PNG on aggregate (535KB vs 463KB). Bias correction hurts — needs investigation. Cross-channel context helps correlated images but hurts independent channels — needs adaptive selection.
+
 ## opus-2026-04-01-S1 — 2026-04-01: Systematic Error Audit — 15+ Files Corrected
 
 **Account:** opus
