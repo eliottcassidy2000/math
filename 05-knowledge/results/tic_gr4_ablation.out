@@ -1,0 +1,40 @@
+
+======================================================================
+  ABLATION STUDY: 256x256 crop of IMG_2811 (G plane)
+======================================================================
+  A. GR2 baseline                 271,704 bits  4.146 bpp  +0.000 vs baseline  (0.1s)
+  B. + sign correction            273,472 bits  4.173 bpp  +0.027 vs baseline  (0.1s)
+  C. + run mode                   278,709 bits  4.253 bpp  +0.107 vs baseline  (0.1s)
+  D. + adaptive escape            271,717 bits  4.146 bpp  +0.000 vs baseline  (0.1s)
+  E. sign + run                   280,338 bits  4.278 bpp  +0.132 vs baseline  (0.1s)
+  F. ALL (GR4)                    280,351 bits  4.278 bpp  +0.132 vs baseline  (0.1s)
+
+======================================================================
+  ABLATION STUDY: 512x512 crop of IMG_2811 (G plane)
+======================================================================
+  A. GR2 baseline               1,157,202 bits  4.414 bpp  +0.000 vs baseline  (0.4s)
+  B. + sign correction          1,162,415 bits  4.434 bpp  +0.020 vs baseline  (0.4s)
+  C. + run mode                 1,177,055 bits  4.490 bpp  +0.076 vs baseline  (0.4s)
+  D. + adaptive escape          1,157,202 bits  4.414 bpp  +0.000 vs baseline  (0.4s)
+  E. sign + run                 1,182,064 bits  4.509 bpp  +0.095 vs baseline  (0.5s)
+  F. ALL (GR4)                  1,182,064 bits  4.509 bpp  +0.095 vs baseline  (0.5s)
+
+======================================================================
+  ABLATION STUDY: 1024x1024 crop of IMG_2811 (G plane)
+======================================================================
+  A. GR2 baseline               4,799,431 bits  4.577 bpp  +0.000 vs baseline  (1.6s)
+  B. + sign correction          4,819,866 bits  4.597 bpp  +0.019 vs baseline  (1.7s)
+  C. + run mode                 4,865,584 bits  4.640 bpp  +0.063 vs baseline  (1.8s)
+  D. + adaptive escape          4,799,431 bits  4.577 bpp  +0.000 vs baseline  (1.6s)
+  E. sign + run                 4,884,920 bits  4.659 bpp  +0.082 vs baseline  (1.9s)
+  F. ALL (GR4)                  4,884,920 bits  4.659 bpp  +0.082 vs baseline  (1.9s)
+
+======================================================================
+  ABLATION STUDY: 2048x2048 crop of IMG_2811 (G plane)
+======================================================================
+  A. GR2 baseline              20,001,498 bits  4.769 bpp  +0.000 vs baseline  (6.3s)
+  B. + sign correction         20,069,482 bits  4.785 bpp  +0.016 vs baseline  (6.8s)
+  C. + run mode                20,180,010 bits  4.811 bpp  +0.043 vs baseline  (7.0s)
+  D. + adaptive escape         20,001,497 bits  4.769 bpp  -0.000 vs baseline  (6.3s)
+  E. sign + run                20,245,653 bits  4.827 bpp  +0.058 vs baseline  (7.5s)
+  F. ALL (GR4)                 20,245,652 bits  4.827 bpp  +0.058 vs baseline  (7.5s)

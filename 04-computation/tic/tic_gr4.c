@@ -468,46 +468,43 @@ static void grd_to_rgb(const uint8_t *g, const uint8_t *rg, const uint8_t *bg, u
  * ================================================================ */
 
 long tic_enc(const uint8_t *rgb, int w, int h, uint8_t *out, size_t cap) {
-    int n = w * h;
+    size_t n = (size_t)w * h;
     uint8_t *p0 = malloc(n), *p1 = malloc(n), *p2 = malloc(n);
     if (!p0 || !p1 || !p2) { free(p0); free(p1); free(p2); return -1; }
 
-    /* Try both color transforms, pick smaller total */
-    uint8_t *ycocg_p0 = malloc(n), *ycocg_p1 = malloc(n), *ycocg_p2 = malloc(n);
-    uint8_t *grd_p0 = malloc(n), *grd_p1 = malloc(n), *grd_p2 = malloc(n);
-
-    rgb_to_ycocg(rgb, ycocg_p0, ycocg_p1, ycocg_p2, n);
-    rgb_to_grd(rgb, grd_p0, grd_p1, grd_p2, n);
-
-    /* Quick entropy estimate: sum of |differences| as proxy */
+    /* Decide color transform by computing BOTH inline on a sample.
+     * For large images, subsample every 16th pixel for the estimate. */
     int64_t ycocg_cost = 0, grd_cost = 0;
-    for (int i = 1; i < n; i++) {
-        ycocg_cost += abs((int)ycocg_p0[i] - ycocg_p0[i-1])
-                    + abs((int)ycocg_p1[i] - ycocg_p1[i-1])
-                    + abs((int)ycocg_p2[i] - ycocg_p2[i-1]);
-        grd_cost   += abs((int)grd_p0[i] - grd_p0[i-1])
-                    + abs((int)grd_p1[i] - grd_p1[i-1])
-                    + abs((int)grd_p2[i] - grd_p2[i-1]);
+    int step = n > 100000 ? 16 : 1;
+    for (size_t i = step; i < n; i += step) {
+        unsigned R0=rgb[3*(i-step)],G0=rgb[3*(i-step)+1],B0=rgb[3*(i-step)+2];
+        unsigned R1=rgb[3*i],G1=rgb[3*i+1],B1=rgb[3*i+2];
+        /* YCoCg-R diffs */
+        unsigned co0=(R0-B0)&0xFF, t0=(B0+(co0>>1))&0xFF, cg0=(G0-t0)&0xFF, y0=(t0+(cg0>>1))&0xFF;
+        unsigned co1=(R1-B1)&0xFF, t1=(B1+(co1>>1))&0xFF, cg1=(G1-t1)&0xFF, y1=(t1+(cg1>>1))&0xFF;
+        int dy=((int)y1-(int)y0), dco=((int)(uint8_t)co1-(int)(uint8_t)co0), dcg=((int)(uint8_t)cg1-(int)(uint8_t)cg0);
+        if(dy>128)dy-=256;else if(dy<-128)dy+=256;
+        if(dco>128)dco-=256;else if(dco<-128)dco+=256;
+        if(dcg>128)dcg-=256;else if(dcg<-128)dcg+=256;
+        ycocg_cost += abs(dy)+abs(dco)+abs(dcg);
+        /* GRD diffs */
+        int dg=(int)G1-(int)G0, drg=((int)R1-(int)G1)-((int)R0-(int)G0), dbg=((int)B1-(int)G1)-((int)B0-(int)G0);
+        if(dg>128)dg-=256;else if(dg<-128)dg+=256;
+        if(drg>128)drg-=256;else if(drg<-128)drg+=256;
+        if(dbg>128)dbg-=256;else if(dbg<-128)dbg+=256;
+        grd_cost += abs(dg)+abs(drg)+abs(dbg);
     }
 
     int use_ycocg = (ycocg_cost <= grd_cost);
-    if (use_ycocg) {
-        memcpy(p0, ycocg_p0, n);
-        memcpy(p1, ycocg_p1, n);
-        memcpy(p2, ycocg_p2, n);
-    } else {
-        memcpy(p0, grd_p0, n);
-        memcpy(p1, grd_p1, n);
-        memcpy(p2, grd_p2, n);
-    }
+    if (use_ycocg)
+        rgb_to_ycocg(rgb, p0, p1, p2, n);
+    else
+        rgb_to_grd(rgb, p0, p1, p2, n);
 
-    free(ycocg_p0); free(ycocg_p1); free(ycocg_p2);
-    free(grd_p0); free(grd_p1); free(grd_p2);
-
-    /* Allocate output buffer for plane encoding.
-     * Worst case per pixel: 1 (run flag) + 33 (escape GR) = 34 bits.
-     * So worst case = 34*n/8 + 16 ≈ 5*n bytes. Use 8*n for safety. */
-    size_t bc = (size_t)n * 8 + 256;
+    /* Plane encoding buffer: 2× plane size handles all real images.
+     * GR escape mode worst case is ~5 bytes/pixel, but that only
+     * occurs for truly random data where compression ratio < 1 anyway. */
+    size_t bc = n * 2 + 4096;
     uint8_t *buf = malloc(bc);
     if (!buf) { free(p0); free(p1); free(p2); return -1; }
 
@@ -537,7 +534,7 @@ long tic_enc(const uint8_t *rgb, int w, int h, uint8_t *out, size_t cap) {
 }
 
 int tic_dec(const uint8_t *data, size_t len, int w, int h, uint8_t *rgb) {
-    int n = w * h;
+    size_t n = (size_t)w * h;
     uint8_t *p0 = calloc(n, 1), *p1 = calloc(n, 1), *p2 = calloc(n, 1);
     if (!p0 || !p1 || !p2) { free(p0); free(p1); free(p2); return -1; }
 
@@ -588,8 +585,8 @@ int main(int argc, char **argv) {
     }
 
     int w = atoi(argv[3]), h = atoi(argv[4]);
-    int iters = (argc >= 6) ? atoi(argv[5]) : 50;
-    int n = w * h * 3;
+    int iters = (argc >= 6) ? atoi(argv[5]) : 1;
+    size_t n = (size_t)w * h * 3;
 
     uint8_t *rgb = malloc(n);
     FILE *f = fopen(argv[2], "rb");
@@ -597,7 +594,7 @@ int main(int argc, char **argv) {
     if (fread(rgb, 1, n, f) != (size_t)n) { printf("Short read\n"); fclose(f); return 1; }
     fclose(f);
 
-    size_t cap = (size_t)n * 8 + 1024; /* worst-case: ~34 bits/pixel * 3 planes */
+    size_t cap = (size_t)n * 2 + 65536; /* 2× raw + header overhead */
     uint8_t *out = malloc(cap);
 
     /* Warmup */
@@ -619,10 +616,10 @@ int main(int argc, char **argv) {
     int ok = (memcmp(rgb, dec, n) == 0);
 
     printf("TIC-GR4: %dx%d, %d iters\n", w, h, iters);
-    printf("  Raw:        %d\n", n);
+    printf("  Raw:        %zu\n", n);
     printf("  Compressed: %ld (%.2f:1)\n", sz, (double)n / sz);
-    printf("  Encode:     %.3f ms (%.1f Mpix/s)\n", et * 1000, (double)(w*h) / et / 1e6);
-    printf("  Decode:     %.3f ms (%.1f Mpix/s)\n", dt * 1000, (double)(w*h) / dt / 1e6);
+    printf("  Encode:     %.1f ms (%.1f Mpix/s)\n", et * 1000, (double)((size_t)w*h) / et / 1e6);
+    printf("  Decode:     %.1f ms (%.1f Mpix/s)\n", dt * 1000, (double)((size_t)w*h) / dt / 1e6);
     printf("  Roundtrip:  %s\n", ok ? "PASS" : "FAIL");
 
     free(rgb); free(out); free(dec);

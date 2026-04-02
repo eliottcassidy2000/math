@@ -1,0 +1,68 @@
+Test image: 1024x1024 crop of IMG_2811.jpg
+
+================================================================================
+  EXPERIMENT 1: Per-plane entropy analysis
+================================================================================
+
+  Color transform comparison:
+  Plane         GRD range  YCoCg range   GRD mean|diff|   YCoCg mean|diff|
+  Luma       [ -66, 106] [-128, 128]             4.54               5.77
+  Chroma1    [ -43,  45] [ -79,  53]             1.09               1.68
+  Chroma2    [ -37,  72] [-128, 128]             1.57               2.23
+
+================================================================================
+  EXPERIMENT 2: Residual entropy (bits per pixel)
+================================================================================
+  Luma        GRD: 4.620 bpp   YCoCg: 4.832 bpp   diff: +0.212
+  Chroma1     GRD: 2.560 bpp   YCoCg: 3.134 bpp   diff: +0.573
+  Chroma2     GRD: 3.066 bpp   YCoCg: 2.794 bpp   diff: -0.272
+  TOTAL       GRD: 10.246 bpp   YCoCg: 10.760 bpp   diff: +0.513
+
+================================================================================
+  EXPERIMENT 3: Recursive compression
+================================================================================
+
+  Luma plane (1024x1024):
+    Raw entropy:                            8.000 bpp
+    After MED (1st round residuals):        4.620 bpp
+    After 2nd MED (residuals of residuals): 5.278 bpp
+    Gain from 2nd round:                    -0.658 bpp
+    After 3rd MED (res of res of res):      6.062 bpp
+    Gain from 3rd round:                    -0.784 bpp
+
+    'Predict 0' on raw residuals:           4.620 bpp  (same as 1st round, obviously)
+
+  Multi-resolution approach:
+    Half-res (512x512) entropy: 5.319 bpp
+    Detail residual entropy:                4.345 bpp
+    Multi-res total: 5.319/4 + 4.345*3/4 = 4.589 bpp
+    vs single-pass MED:                     4.620 bpp
+    Gain from multi-res:                    +0.031 bpp
+
+================================================================================
+  EXPERIMENT 4: Sign correction impact
+================================================================================
+
+  Luma residual sign distribution:
+    Positive:  472,495 (45.1%)
+    Zero:       88,967 (8.5%)
+    Negative:  487,114 (46.5%)
+    Skewness: -0.031
+
+  Zigzag encoding efficiency:
+    Mean zigzag value:    8.61
+    Median zigzag value:  6.0
+    Mean bits at k=0:     9.61
+    Mean bits at k=2:     4.81
+    Mean bits at k=4:     5.19
+    Optimal (entropy):    4.62
+
+================================================================================
+  EXPERIMENT 5: Backend comparison on MED residuals
+================================================================================
+  Luma(G)        raw:1,048,576  zlib-9: 658,649  entropy: 605,591  zlib/entropy:1.088x  zlib bpp:5.025
+  Chroma(R-G)    raw:1,048,576  zlib-9: 379,290  entropy: 335,548  zlib/entropy:1.130x  zlib bpp:2.894
+  Chroma(B-G)    raw:1,048,576  zlib-9: 454,258  entropy: 401,879  zlib/entropy:1.130x  zlib bpp:3.466
+
+  (zlib/entropy > 1.0 means zlib wastes bits beyond the theoretical minimum)
+  (GR typically matches or slightly exceeds zlib for Laplacian residuals)

@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-02-S2 — 2026-04-02: Full-Size Benchmarks + Ablation Study
+
+**Account:** opus
+**Continuation of:** opus-2026-04-02-S1
+**Summary:** Fixed tic_gr4 for arbitrary image sizes (was only tested at 256x256). Benchmarked on full-size photos: vlcsnap 3840×2160 and IMG_2811 5184×3456. Ablation study showed every GR4 "improvement" (sign correction, run mode, bias correction) HURTS on real photos. GR2's simple architecture (64-ctx EMA + MED + GR) is already near-optimal. Created production codec tic_gr2_prod.c. Investigated recursive compression — applying MED to residuals INCREASES entropy. Multi-resolution gives only +0.03 bpp. TIC beats PNG at every size on both test images (10/10 wins, 2-23% savings).
+**New contributions:** `tic_gr2_prod.c`, `bench_fullsize.py`, `investigate.py`, `ablation.py`, benchmark results
+**Key findings:** GR2 is the winner. Color decorrelation is the only thing that matters vs PNG. All JPEG-LS features hurt. Recursive compression is destructive.
+
 ## opus-2026-04-02-S1 — 2026-04-02: TIC-GR4 Codec — JPEG-LS-Inspired Improvements
 
 **Account:** opus
