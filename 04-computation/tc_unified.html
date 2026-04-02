@@ -70,7 +70,7 @@ footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
 <body>
 <div class="hero">
 <h1>Tournament Compression</h1>
-<p>Drop any image. See how TIC beats PNG, JPEG, WebP, GIF — with live hex editing.</p>
+<p>Drop any image. Lossless apples-to-apples: TIC vs PNG vs QOI vs WebP vs AVIF — with hex editing.</p>
 </div>
 <div class="wrap">
 
@@ -88,10 +88,10 @@ footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
 
 <div class="card" style="font-size:.82em;color:var(--muted);line-height:1.5">
 <strong style="color:var(--blue)">How it works</strong><br>
-<strong>1. Decorrelate</strong> — G, R-G, B-G separates color channels.<br>
-<strong>2. Predict</strong> — MED prediction with flat-region run detection.<br>
-<strong>3. Adaptive encode</strong> — each plane tries Golomb-Rice AND deflate, picks smaller.<br>
-<strong>4. Compare</strong> — actual PNG/JPEG/WebP encoding done in-browser for honest comparison.
+<strong>TIC</strong> — color decorrelation (G, R-G, B-G) + MED prediction + adaptive encoding (Golomb-Rice or deflate per plane, picks smaller).<br>
+<strong>Comparison</strong> — real PNG, QOI, WebP (lossless), AVIF, JPEG, and BMP encoding done in-browser. All sizes are actual encoded bytes, not estimates.<br>
+<strong>Hex editing</strong> — edit any format's compressed bytes and decode to see how each format handles corruption.<br>
+<span style="color:var(--dim);font-size:.85em">JPEG-LS and JPEG-XL are not available in browsers. AVIF support varies (Chrome/Firefox yes, Safari limited). WebP q100 is near-lossless, not strictly lossless via canvas API.</span>
 </div>
 </div>
 
@@ -246,15 +246,122 @@ function toHex(d,max){const n=max||d.length;let s='';for(let i=0;i<Math.min(d.le
 function fromHex(s){const b=[];s.replace(/[^0-9a-fA-F]/g,' ').trim().split(/\s+/).forEach(t=>{if(t.length>=2){const v=parseInt(t.substring(0,2),16);if(!isNaN(v))b.push(v);}});return new Uint8Array(b)}
 
 /* ================================================================
- * MULTI-FORMAT ENCODE (PNG, JPEG, WebP, GIF, BMP via canvas)
+ * QOI ENCODER — Quite OK Image format (lossless, ~80 lines)
+ * Spec: https://qoiformat.org/qoi-specification.pdf
  * ================================================================ */
-async function encodeAs(cv,fmt){
+function qoiEncode(rgba,w,h){
+  const n=w*h,out=new Uint8Array(14+n*5+8);/* worst case */
+  let op=0;
+  /* Header: "qoif", width(4BE), height(4BE), channels(1), colorspace(1) */
+  out[op++]=0x71;out[op++]=0x6F;out[op++]=0x69;out[op++]=0x66;
+  out[op++]=(w>>24)&0xFF;out[op++]=(w>>16)&0xFF;out[op++]=(w>>8)&0xFF;out[op++]=w&0xFF;
+  out[op++]=(h>>24)&0xFF;out[op++]=(h>>16)&0xFF;out[op++]=(h>>8)&0xFF;out[op++]=h&0xFF;
+  out[op++]=3;/* channels=RGB */out[op++]=0;/* sRGB */
+  const idx=new Uint32Array(64);/* hash table of seen pixels */
+  let pr=0,pg=0,pb=0;/* previous pixel */
+  let run=0;
+  for(let i=0;i<n;i++){
+    const r=rgba[i*4],g=rgba[i*4+1],b=rgba[i*4+2];
+    if(r===pr&&g===pg&&b===pb){
+      run++;
+      if(run===62||i===n-1){out[op++]=0xC0|(run-1);run=0;}
+    }else{
+      if(run>0){out[op++]=0xC0|(run-1);run=0;}
+      const hash=((r*3+g*5+b*7+255*11)&63);
+      const stored=idx[hash];
+      const sr=(stored>>16)&0xFF,sg=(stored>>8)&0xFF,sb=stored&0xFF;
+      if(sr===r&&sg===g&&sb===b){out[op++]=hash;/* QOI_OP_INDEX */}
+      else{
+        idx[hash]=(r<<16)|(g<<8)|b;
+        const dr=r-pr,dg=g-pg,db=b-pb;
+        if(dr>=-2&&dr<=1&&dg>=-2&&dg<=1&&db>=-2&&db<=1){
+          out[op++]=0x40|((dr+2)<<4)|((dg+2)<<2)|(db+2);/* QOI_OP_DIFF */
+        }else{
+          const drdg=dr-dg,dbdg=db-dg;
+          if(dg>=-32&&dg<=31&&drdg>=-8&&drdg<=7&&dbdg>=-8&&dbdg<=7){
+            out[op++]=0x80|(dg+32);out[op++]=((drdg+8)<<4)|(dbdg+8);/* QOI_OP_LUMA */
+          }else{
+            out[op++]=0xFE;out[op++]=r;out[op++]=g;out[op++]=b;/* QOI_OP_RGB */
+          }
+        }
+      }
+      pr=r;pg=g;pb=b;
+    }
+  }
+  /* End marker: 7 zeros + 0x01 */
+  for(let i=0;i<7;i++)out[op++]=0;out[op++]=1;
+  return out.subarray(0,op);
+}
+function qoiDecode(data){
+  if(data[0]!==0x71||data[1]!==0x6F)throw Error('Not QOI');
+  const w=(data[4]<<24)|(data[5]<<16)|(data[6]<<8)|data[7];
+  const h=(data[8]<<24)|(data[9]<<16)|(data[10]<<8)|data[11];
+  const n=w*h,rgba=new Uint8Array(n*4);
+  const idx=new Uint32Array(64);
+  let pr=0,pg=0,pb=0,ip=14,px=0;
+  while(px<n&&ip<data.length-8){
+    const b1=data[ip++];
+    if(b1===0xFE){pr=data[ip++];pg=data[ip++];pb=data[ip++];const hash=((pr*3+pg*5+pb*7+255*11)&63);idx[hash]=(pr<<16)|(pg<<8)|pb;rgba[px*4]=pr;rgba[px*4+1]=pg;rgba[px*4+2]=pb;rgba[px*4+3]=255;px++;}
+    else if((b1&0xC0)===0x00){const s=idx[b1&0x3F];pr=(s>>16)&0xFF;pg=(s>>8)&0xFF;pb=s&0xFF;rgba[px*4]=pr;rgba[px*4+1]=pg;rgba[px*4+2]=pb;rgba[px*4+3]=255;px++;}
+    else if((b1&0xC0)===0x40){pr=(pr+((b1>>4)&3)-2)&0xFF;pg=(pg+((b1>>2)&3)-2)&0xFF;pb=(pb+(b1&3)-2)&0xFF;const hash=((pr*3+pg*5+pb*7+255*11)&63);idx[hash]=(pr<<16)|(pg<<8)|pb;rgba[px*4]=pr;rgba[px*4+1]=pg;rgba[px*4+2]=pb;rgba[px*4+3]=255;px++;}
+    else if((b1&0xC0)===0x80){const dg=(b1&0x3F)-32,b2=data[ip++],dr=dg+((b2>>4)&0xF)-8,db=dg+(b2&0xF)-8;pr=(pr+dr)&0xFF;pg=(pg+dg)&0xFF;pb=(pb+db)&0xFF;const hash=((pr*3+pg*5+pb*7+255*11)&63);idx[hash]=(pr<<16)|(pg<<8)|pb;rgba[px*4]=pr;rgba[px*4+1]=pg;rgba[px*4+2]=pb;rgba[px*4+3]=255;px++;}
+    else{const run=(b1&0x3F)+1;for(let j=0;j<run&&px<n;j++){rgba[px*4]=pr;rgba[px*4+1]=pg;rgba[px*4+2]=pb;rgba[px*4+3]=255;px++;}}
+  }
+  return{rgba,w,h};
+}
+
+/* ================================================================
+ * BMP ENCODER — uncompressed baseline (24-bit, bottom-up)
+ * ================================================================ */
+function bmpEncode(rgba,w,h){
+  const rowSz=Math.ceil(w*3/4)*4;/* pad rows to 4-byte boundary */
+  const imgSz=rowSz*h,fileSz=54+imgSz;
+  const out=new Uint8Array(fileSz);const dv=new DataView(out.buffer);
+  /* BMP header */
+  out[0]=0x42;out[1]=0x4D;dv.setUint32(2,fileSz,true);dv.setUint32(10,54,true);
+  /* DIB header */
+  dv.setUint32(14,40,true);dv.setInt32(18,w,true);dv.setInt32(22,h,true);
+  dv.setUint16(26,1,true);dv.setUint16(28,24,true);dv.setUint32(34,imgSz,true);
+  /* Pixel data (bottom-up, BGR) */
+  for(let r=0;r<h;r++){const yr=h-1-r;for(let c=0;c<w;c++){
+    const si=(yr*w+c)*4,di=54+r*rowSz+c*3;
+    out[di]=rgba[si+2];out[di+1]=rgba[si+1];out[di+2]=rgba[si];}}
+  return out;
+}
+
+/* ================================================================
+ * ENTROPY BOUND — theoretical minimum (Shannon entropy on residuals)
+ * ================================================================ */
+function entropyBound(rgba,w,h){
+  /* MED-predict the G plane, compute empirical entropy */
+  const n=w*h;let totalBits=0;
+  for(let ch=0;ch<3;ch++){
+    const counts=new Int32Array(512);/* residuals in [-255,255] → index [0,510] */
+    for(let r=0;r<h;r++)for(let c=0;c<w;c++){
+      const i=r*w+c;const v=rgba[i*4+ch];
+      const a=c>0?rgba[(i-1)*4+ch]:0,b=r>0?rgba[(i-w)*4+ch]:0,cv=r>0&&c>0?rgba[(i-w-1)*4+ch]:0;
+      let res=v-med(a,b,cv);if(res>128)res-=256;if(res<-128)res+=256;
+      counts[res+255]++;
+    }
+    let H=0;
+    for(let j=0;j<512;j++){if(counts[j]>0){const p=counts[j]/n;H-=p*Math.log2(p);}}
+    totalBits+=H*n;
+  }
+  return Math.ceil(totalBits/8);/* bytes */
+}
+
+/* ================================================================
+ * MULTI-FORMAT ENCODE
+ * ================================================================ */
+async function encodeAs(cv,fmt,quality){
   return new Promise(resolve=>{
-    const type={png:'image/png',jpeg:'image/jpeg',webp:'image/webp',gif:'image/gif',bmp:'image/bmp'}[fmt]||'image/png';
+    const type={'png':'image/png','jpeg':'image/jpeg','webp':'image/webp',
+                'webp-ll':'image/webp','avif':'image/avif','avif-ll':'image/avif'}[fmt]||'image/png';
+    const q=(fmt==='jpeg')?0.95:(fmt==='webp')?0.90:(fmt==='webp-ll')?1.0:(fmt==='avif')?0.80:(fmt==='avif-ll')?1.0:undefined;
     cv.toBlob(blob=>{
-      if(!blob)return resolve(null);
+      if(!blob||blob.size<10)return resolve(null);
       blob.arrayBuffer().then(ab=>resolve({data:new Uint8Array(ab),size:blob.size,type:fmt}));
-    },type,fmt==='jpeg'?0.95:undefined);
+    },type,q);
   });
 }
 
@@ -290,7 +397,7 @@ async function doCompress(cv,w,h,file){
   const imgData=cv.getContext('2d').getImageData(0,0,w,h);
   const rawSize=w*h*3;
 
-  out.innerHTML='<div class="card" style="text-align:center;color:var(--muted)">Compressing with all formats...</div>';
+  out.innerHTML='<div class="card" style="text-align:center;color:var(--muted)">Compressing with all formats... (TIC, PNG, QOI, WebP, AVIF, JPEG, BMP)</div>';
 
   /* Encode with TIC (adaptive) */
   const t0=performance.now();
@@ -298,9 +405,19 @@ async function doCompress(cv,w,h,file){
   const ticMs=performance.now()-t0;
   const ticData=ticResult.data;
 
+  /* QOI encode */
+  const qoiData=qoiEncode(imgData.data,w,h);
+
+  /* BMP encode (uncompressed baseline) */
+  const bmpData=bmpEncode(imgData.data,w,h);
+
+  /* Entropy bound */
+  const entropyBytes=entropyBound(imgData.data,w,h);
+
   /* Encode with standard formats via canvas */
-  const [pngBlob,jpgBlob,webpBlob]=await Promise.all([
-    encodeAs(cv,'png'),encodeAs(cv,'jpeg'),encodeAs(cv,'webp')
+  const [pngBlob,jpgBlob,webpBlob,webpLLBlob,avifBlob,avifLLBlob]=await Promise.all([
+    encodeAs(cv,'png'),encodeAs(cv,'jpeg'),encodeAs(cv,'webp'),
+    encodeAs(cv,'webp-ll'),encodeAs(cv,'avif'),encodeAs(cv,'avif-ll')
   ]);
 
   /* Verify TIC roundtrip */
@@ -313,13 +430,25 @@ async function doCompress(cv,w,h,file){
     }
   }catch(e){rtOk=false;}
 
-  /* Build results table */
-  const formats=[
-    {name:'TIC (ours)',size:ticData.length,color:'f-tic',lossless:true,data:ticData},
-    {name:'PNG',size:pngBlob?pngBlob.size:null,color:'f-png',lossless:true,data:pngBlob?pngBlob.data:null},
-    {name:'JPEG (q95)',size:jpgBlob?jpgBlob.size:null,color:'f-jpg',lossless:false,data:jpgBlob?jpgBlob.data:null},
-    {name:'WebP',size:webpBlob?webpBlob.size:null,color:'f-webp',lossless:false,data:webpBlob?webpBlob.data:null},
-  ].filter(f=>f.size!==null);
+  /* Verify QOI roundtrip */
+  let qoiOk=false;
+  try{const qd=qoiDecode(qoiData);qoiOk=true;
+    for(let i=0;i<w*h;i++){if(qd.rgba[i*4]!==imgData.data[i*4]||qd.rgba[i*4+1]!==imgData.data[i*4+1]||qd.rgba[i*4+2]!==imgData.data[i*4+2]){qoiOk=false;break;}}
+  }catch(e){qoiOk=false;}
+
+  /* Build ALL results */
+  const formats=[];
+  const add=(name,size,color,lossless,data,note)=>{if(size>0)formats.push({name,size,color,lossless,data,note:note||''})};
+  add('Entropy bound',entropyBytes,'f-bmp',true,null,'theoretical min');
+  add('TIC (ours)',ticData.length,'f-tic',true,ticData,rtOk?'lossless ✓':'RT FAIL');
+  add('PNG',pngBlob?pngBlob.size:0,'f-png',true,pngBlob?.data,'lossless');
+  add('QOI',qoiData.length,'f-gif',true,qoiData,qoiOk?'lossless ✓':'RT FAIL');
+  if(webpLLBlob)add('WebP (q100)',webpLLBlob.size,'f-webp',true,webpLLBlob.data,'near-lossless');
+  if(avifLLBlob&&avifLLBlob.size>50)add('AVIF (q100)',avifLLBlob.size,'f-webp',true,avifLLBlob.data,'near-lossless');
+  add('BMP',bmpData.length,'f-bmp',false,bmpData,'uncompressed');
+  if(jpgBlob)add('JPEG (q95)',jpgBlob.size,'f-jpg',false,jpgBlob.data,'lossy');
+  if(webpBlob)add('WebP (q90)',webpBlob.size,'f-webp',false,webpBlob.data,'lossy');
+  if(avifBlob&&avifBlob.size>50)add('AVIF (q80)',avifBlob.size,'f-webp',false,avifBlob.data,'lossy');
 
   const pngSize=pngBlob?pngBlob.size:rawSize;
   const ticVsPng=(pngSize/ticData.length).toFixed(2);
@@ -351,28 +480,55 @@ async function doCompress(cv,w,h,file){
           <div class="st"><div class="v">${w*h>1e6?(w*h/1e6).toFixed(1)+'M':(w*h/1e3).toFixed(0)+'K'}</div><div class="l">pixels</div></div>
         </div>`;
 
-  /* Size bars for each format */
-  for(const f of formats){
-    const pct=Math.max(3,f.size/mx*100);
-    const kb=(f.size/1024).toFixed(1);
-    const vs=f.name==='TIC (ours)'?'':` (${(f.size/ticData.length).toFixed(2)}x TIC)`;
-    const ll=f.lossless?'':'<span style="color:var(--orange);font-size:.8em"> lossy</span>';
-    html+=`<div class="bar-r"><div class="bar-l"><span>${f.name} ${kb}KB${vs}${ll}</span></div>
-      <div class="bar"><div class="fill ${f.color}" style="width:${pct}%">${kb}KB</div></div></div>`;
+  /* Sorted comparison table — lossless only for fair comparison */
+  const lossless=formats.filter(f=>f.lossless).sort((a,b)=>a.size-b.size);
+  const lossy=formats.filter(f=>!f.lossless).sort((a,b)=>a.size-b.size);
+  const smallest=lossless.length>0?lossless[0].size:ticData.length;
+
+  html+=`<div style="margin-top:8px"><strong style="color:var(--green);font-size:.82em">Lossless (apples-to-apples)</strong></div>`;
+  html+=`<table><tr><th>#</th><th>Format</th><th style="text-align:right">Size</th><th style="text-align:right">bpp</th><th style="text-align:right">vs best</th><th>Note</th></tr>`;
+  lossless.forEach((f,i)=>{
+    const bpp=(8*f.size/(w*h)).toFixed(2);
+    const vsBest=i===0?'<span class="win">BEST</span>':`<span class="loss">+${((f.size/smallest-1)*100).toFixed(1)}%</span>`;
+    const isTic=f.name.includes('TIC');
+    html+=`<tr${isTic?' style="background:#0d1117"':''}><td>${i+1}</td><td>${isTic?'<strong style="color:var(--green)">'+f.name+'</strong>':f.name}</td>
+      <td style="text-align:right">${f.size.toLocaleString()}</td><td style="text-align:right">${bpp}</td><td style="text-align:right">${vsBest}</td><td style="color:var(--dim)">${f.note}</td></tr>`;
+  });
+  html+=`</table>`;
+
+  if(lossy.length>0){
+    html+=`<div style="margin-top:8px"><strong style="color:var(--orange);font-size:.82em">Lossy (not comparable — shown for context)</strong></div>`;
+    html+=`<table><tr><th>Format</th><th style="text-align:right">Size</th><th style="text-align:right">bpp</th><th>Note</th></tr>`;
+    lossy.forEach(f=>{
+      const bpp=(8*f.size/(w*h)).toFixed(2);
+      html+=`<tr><td>${f.name}</td><td style="text-align:right">${f.size.toLocaleString()}</td><td style="text-align:right">${bpp}</td><td style="color:var(--dim)">${f.note}</td></tr>`;
+    });
+    html+=`</table>`;
   }
 
-  html+=`</div></div></div>`;
+  /* Visual size bars for all */
+  html+=`<div style="margin-top:8px">`;
+  for(const f of [...lossless,...lossy].filter(f=>f.data)){
+    const pct=Math.max(3,f.size/mx*100);
+    const kb=(f.size/1024).toFixed(1);
+    html+=`<div class="bar-r"><div class="bar-l"><span>${f.name} ${kb}KB</span></div>
+      <div class="bar"><div class="fill ${f.color}" style="width:${pct}%">${kb}KB</div></div></div>`;
+  }
+  html+=`</div></div></div></div>`;
 
-  /* Tabs: hex editors for each format */
+  /* Tabs: hex editors for each format WITH data */
+  const tabFormats=formats.filter(f=>f.data);
   html+=`<div class="card">
-    <div class="tabs">`;
-  formats.forEach((f,i)=>{html+=`<div class="tab${i===0?' active':''}" onclick="switchTab(${i})">${f.name}</div>`;});
+    <p style="font-size:.76em;color:var(--muted);margin-bottom:6px">Edit any format's bytes below, then click <strong>Decode & Show</strong> to see how corruption manifests in each format.</p>
+    <div class="tabs" style="flex-wrap:wrap">`;
+  tabFormats.forEach((f,i)=>{html+=`<div class="tab${i===0?' active':''}" onclick="switchTab(${i})">${f.name}</div>`;});
   html+=`</div>`;
-  formats.forEach((f,i)=>{
-    const hexStr=f.data?toHex(f.data,256):'(not available)';
+  tabFormats.forEach((f,i)=>{
+    const hexStr=toHex(f.data,320);
+    const note=f.lossless?'Lossless — edit bytes to see exact pixel damage':'Lossy — edits show decoder artifacts';
     html+=`<div class="pane${i===0?' active':''}" id="pane${i}">
       <div class="hex-ed">
-        <label>${f.name} — ${f.data?f.data.length.toLocaleString():0} bytes${f.lossless?'':' (lossy — editing will show JPEG/WebP artifacts, not corruption)'}</label>
+        <label>${f.name} — ${f.data.length.toLocaleString()} bytes — ${note}</label>
         <textarea id="hex${i}" spellcheck="false" oninput="onHexEdit(${i})">${hexStr}</textarea>
       </div>
       <div style="text-align:center;margin:4px 0">
@@ -391,7 +547,7 @@ async function doCompress(cv,w,h,file){
   prevCv.getContext('2d').drawImage(cv,0,0);
 
   /* Store format data for later use */
-  window._fmts=formats;window._w=w;window._h=h;
+  window._fmts=tabFormats;window._w=w;window._h=h;
 }
 
 function switchTab(idx){
@@ -411,22 +567,27 @@ async function decodeHex(idx){
   cv.style.display='block';
   const ctx=cv.getContext('2d');
 
+  const bytes=fromHex(ta.value);
   if(fmt.name==='TIC (ours)'){
-    try{
-      const data=fromHex(ta.value);
-      const res=await ticDecode(data);
-      const imgD=ctx.createImageData(res.w,res.h);imgD.data.set(res.rgba);ctx.putImageData(imgD,0,0);
-      ta.style.borderColor='var(--green)';
-    }catch(e){ctx.fillStyle='#300';ctx.fillRect(0,0,w,h);ctx.fillStyle='var(--red)';ctx.font='14px sans-serif';ctx.fillText('Decode error: '+e.message,10,30);ta.style.borderColor='var(--red)';}
+    try{const res=await ticDecode(bytes);const imgD=ctx.createImageData(res.w,res.h);imgD.data.set(res.rgba);ctx.putImageData(imgD,0,0);ta.style.borderColor='var(--green)';
+    }catch(e){ctx.fillStyle='#200';ctx.fillRect(0,0,w,h);ctx.fillStyle='#f55';ctx.font='13px sans-serif';ctx.fillText('TIC decode error: '+e.message,8,24);ta.style.borderColor='var(--red)';}
+  }else if(fmt.name==='QOI'){
+    try{const res=qoiDecode(bytes);const imgD=ctx.createImageData(res.w,res.h);imgD.data.set(res.rgba);ctx.putImageData(imgD,0,0);ta.style.borderColor='var(--green)';
+    }catch(e){ctx.fillStyle='#200';ctx.fillRect(0,0,w,h);ctx.fillStyle='#f55';ctx.font='13px sans-serif';ctx.fillText('QOI decode error: '+e.message,8,24);ta.style.borderColor='var(--red)';}
+  }else if(fmt.name==='BMP'){
+    try{const blob=new Blob([bytes],{type:'image/bmp'});const url=URL.createObjectURL(blob);
+      const img=new Image();img.onload=()=>{ctx.drawImage(img,0,0,w,h);URL.revokeObjectURL(url);ta.style.borderColor='var(--green)';};
+      img.onerror=()=>{ctx.fillStyle='#200';ctx.fillRect(0,0,w,h);ctx.fillStyle='#f55';ctx.font='13px sans-serif';ctx.fillText('BMP corrupted',8,24);URL.revokeObjectURL(url);ta.style.borderColor='var(--red)';};img.src=url;
+    }catch(e){ta.style.borderColor='var(--red)';}
   }else{
-    /* Decode PNG/JPEG/WebP by creating a blob and loading as image */
+    /* Decode PNG/JPEG/WebP/AVIF by creating a blob */
     try{
-      const bytes=fromHex(ta.value);
-      const blob=new Blob([bytes],{type:fmt.name==='PNG'?'image/png':fmt.name.includes('JPEG')?'image/jpeg':'image/webp'});
-      const url=URL.createObjectURL(blob);
-      const img=new Image();
+      const mimeMap={'PNG':'image/png','JPEG':'image/jpeg','WebP':'image/webp','AVIF':'image/avif'};
+      const mime=Object.entries(mimeMap).find(([k])=>fmt.name.includes(k));
+      const blob=new Blob([bytes],{type:mime?mime[1]:'image/png'});
+      const url=URL.createObjectURL(blob);const img=new Image();
       img.onload=()=>{ctx.drawImage(img,0,0,w,h);URL.revokeObjectURL(url);ta.style.borderColor='var(--green)';};
-      img.onerror=()=>{ctx.fillStyle='#300';ctx.fillRect(0,0,w,h);ctx.fillStyle='var(--red)';ctx.font='14px sans-serif';ctx.fillText('Corrupted — browser cannot decode',10,30);URL.revokeObjectURL(url);ta.style.borderColor='var(--red)';};
+      img.onerror=()=>{ctx.fillStyle='#200';ctx.fillRect(0,0,w,h);ctx.fillStyle='#f55';ctx.font='13px sans-serif';ctx.fillText('Corrupted — browser cannot decode',8,24);URL.revokeObjectURL(url);ta.style.borderColor='var(--red)';};
       img.src=url;
     }catch(e){ta.style.borderColor='var(--red)';}
   }
@@ -434,9 +595,10 @@ async function decodeHex(idx){
 
 function downloadFormat(idx){
   const fmt=window._fmts[idx];if(!fmt.data)return;
-  const ext=fmt.name==='TIC (ours)'?'tic':fmt.name==='PNG'?'png':fmt.name.includes('JPEG')?'jpg':'webp';
+  const extMap={'TIC':'tic','PNG':'png','QOI':'qoi','BMP':'bmp','JPEG':'jpg','WebP':'webp','AVIF':'avif'};
+  const ext=Object.entries(extMap).find(([k])=>fmt.name.includes(k));
   const blob=new Blob([fmt.data]);
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='image.'+ext;a.click();
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='image.'+(ext?ext[1]:'bin');a.click();
 }
 </script>
 </body>
