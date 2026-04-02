@@ -1,0 +1,29 @@
+========================================================================================================================
+  TIC ADAPTIVE: 100% WIN RATE ATTEMPT
+========================================================================================================================
+
+ # Image                            Type          Size        PNG      TIC-A   ratio        RT backends
+-------------------------------------------------------------------------------------------------------------------
+ 1 03.cr2                           RAW   5796x3870 27,580,119 25,845,539  0.937x  WIN   OK [GR,GR,GR]
+ 2 05.cr2                           RAW   5796x3870 26,154,655 23,096,870  0.883x  WIN   OK [GR,GR,GR]
+ 3 07.cr2                           RAW   3870x5796 22,649,433 20,668,404  0.913x  WIN   OK [GR,GR,GR]
+ 4 20150413_5min_p_vegas_007.dng    RAW   5796x3870 21,977,558 19,784,232  0.900x  WIN   OK [GR,GR,GR]
+ 5 20150413_5min_p_vegas_023.dng    RAW   5796x3870 22,949,636 21,115,400  0.920x  WIN   OK [GR,GR,GR]
+ 6 20150413_5min_p_vegas_035.dng    RAW   5796x3870 24,521,333 22,394,463  0.913x  WIN   OK [GR,GR,GR]
+ 7 IMG_2811.jpg                     JPEG  5184x3456 29,762,128 22,898,106  0.769x  WIN   OK [GR,GR,GR]
+ 8 IMG_8669.jpg                     JPEG  4032x3024  8,799,105  5,498,551  0.625x  WIN   OK [GR,zlib,zlib]
+ 9 Screenshot 2026-03-13 at 8.00.   PNG   1915x1024    886,734    850,301  0.959x  WIN   OK [GR,zlib,zlib]
+10 Screenshot 2026-03-13 at 8.01.   PNG   1915x1024    345,914    336,980  0.974x  WIN   OK [GR,GR,GR]
+11 Screenshot 2026-03-13 at 8.04.   PNG   1915x1024    840,276    801,889  0.954x  WIN   OK [zlib,zlib,zlib]
+12 Screenshot 2026-04-02 at 5.27.   PNG   1920x1080  1,461,711  1,227,005  0.839x  WIN   OK [GR,GR,GR]
+13 Screenshot 2026-04-02 at 6.01.   PNG   1920x1080    224,363    122,035  0.544x  WIN   OK [zlib,zlib,zlib]
+14 Screenshot 2026-04-02 at 6.29.   PNG   1920x1080    205,306    159,157  0.775x  WIN   OK [zlib,zlib,zlib]
+15 Screenshot 2026-04-02 at 6.31.   PNG   1920x1080    158,403    134,166  0.847x  WIN   OK [zlib,zlib,zlib]
+16 Screenshot 2026-04-02 at 6.35.   PNG   1920x1080  1,223,595  1,204,677  0.985x  WIN   OK [zlib,GR,GR]
+17 sample1.cr2                      RAW   8736x5856 60,602,249 52,857,340  0.872x  WIN   OK [GR,GR,GR]
+18 sample1.dng                      RAW   3474x2314  9,764,972  8,332,504  0.853x  WIN   OK [GR,GR,GR]
+19 vlcsnap-2026-03-10-17h12m34s40   PNG   3840x2160  7,010,231  4,820,302  0.688x  WIN   OK [zlib,zlib,zlib]
+
+   AGGREGATE                                           267,117,721 232,147,921  0.869x
+
+   SCORE: 19/19 *** 100% WIN RATE ***
