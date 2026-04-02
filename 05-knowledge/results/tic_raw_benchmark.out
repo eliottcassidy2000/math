@@ -1,0 +1,109 @@
+====================================================================================================
+  GENUINE RAW CAMERA DATA BENCHMARK
+  opus-2026-04-02-S3
+====================================================================================================
+
+  CR2_EOS60D: 8736×5856, Bayer 8736×5856, uint16 [2043-15899]
+
+  DNG_EOS350D: 3474×2314, Bayer 3474×2314, uint16 [245-4095]
+  JPEG_Canon: 5184×3456
+  JPEG_iPhone: 4032×3024
+
+====================================================================================================
+  EXPERIMENT 1: TIC vs PNG — raw-derived vs JPEG-derived
+====================================================================================================
+
+  Image                Size                PNG        TIC  TIC/PNG    bpp      Δ
+  ---------------------------------------------------------------------------
+  CR2_EOS60D           512x512         270,615    253,984   0.939x  7.75    WIN
+  CR2_EOS60D           1024x1024     1,155,631  1,053,341   0.911x  8.04    WIN
+  CR2_EOS60D           8736x5856    60,602,249 52,215,187   0.862x  8.17    WIN
+  DNG_EOS350D          512x512         243,929    206,762   0.848x  6.31    WIN
+  DNG_EOS350D          1024x1024     1,164,460    957,682   0.822x  7.31    WIN
+  DNG_EOS350D          3474x2314     9,764,972  8,131,976   0.833x  8.09    WIN
+  JPEG_Canon           512x512         424,415    330,877   0.780x 10.10    WIN
+  JPEG_Canon           1024x1024     1,744,663  1,330,585   0.763x 10.15    WIN
+  JPEG_Canon           5184x3456    29,762,128 22,919,476   0.770x 10.23    WIN
+  JPEG_iPhone          512x512         110,979    133,960   1.207x  4.09   loss
+  JPEG_iPhone          1024x1024       491,413    564,285   1.148x  4.31   loss
+  JPEG_iPhone          4032x3024     8,799,105  8,083,473   0.919x  5.30    WIN
+
+====================================================================================================
+  EXPERIMENT 2: Cross-channel correlation (RAW vs JPEG-decoded)
+====================================================================================================
+
+  CR2_EOS60D (RAW-derived 8-bit):
+    corr(R,G)=0.622  corr(R,B)=0.665  corr(G,B)=0.982
+    H(R)=6.67  H(G)=5.43  H(B)=5.66  → total 17.76 bpp
+    H(R-G)=6.02  H(B-G)=4.45  → decorrelated 15.89 bpp
+    Decorrelation saves: 1.87 bpp
+
+  DNG_EOS350D (RAW-derived 8-bit):
+    corr(R,G)=0.984  corr(R,B)=0.899  corr(G,B)=0.951
+    H(R)=7.26  H(G)=6.91  H(B)=6.74  → total 20.91 bpp
+    H(R-G)=5.46  H(B-G)=5.85  → decorrelated 18.22 bpp
+    Decorrelation saves: 2.69 bpp
+
+  JPEG_Canon (JPEG-decoded 8-bit):
+    corr(R,G)=0.958  corr(R,B)=0.861  corr(G,B)=0.943
+    H(R)=7.43  H(G)=7.34  H(B)=7.64  → total 22.42 bpp
+    H(R-G)=6.00  H(B-G)=6.11  → decorrelated 19.46 bpp
+    Decorrelation saves: 2.96 bpp
+
+  JPEG_iPhone (JPEG-decoded 8-bit):
+    corr(R,G)=0.999  corr(R,B)=0.996  corr(G,B)=0.999
+    H(R)=7.49  H(G)=7.56  H(B)=7.59  → total 22.64 bpp
+    H(R-G)=3.67  H(B-G)=3.48  → decorrelated 14.71 bpp
+    Decorrelation saves: 7.93 bpp
+
+====================================================================================================
+  EXPERIMENT 3: Raw Bayer mosaic — compression frontier
+====================================================================================================
+
+  CR2_EOS60D: 8736×5856 Bayer, 14-bit, black=[2047, 2047, 2047, 2047], white=15510
+    Pixel entropy (512x512 crop): 8.66 bpp (vs 14 raw)
+    Computing MED residuals...
+    MED residual entropy (interleaved): 8.69 bpp
+    MED on R channel: 6.26 bpp
+    MED on G1 channel: 6.40 bpp
+    MED on G2 channel: 6.39 bpp
+    MED on B channel: 6.00 bpp
+    Per-channel MED total: 6.26 bpp
+
+    Decorrelated Bayer:
+      G_avg:  8.15 bpp
+      G_diff: 6.49 bpp (green channel noise)
+      R-G:    8.45 bpp
+      B-G:    7.44 bpp
+      Total (weighted): 7.63 bpp per Bayer pixel
+    Decorrelated + MED:
+      G_avg: 5.95 bpp after MED
+      G_diff: 6.82 bpp after MED
+      R-G: 6.54 bpp after MED
+      B-G: 6.36 bpp after MED
+
+  DNG_EOS350D: 3474×2314 Bayer, 12-bit, black=[256, 257, 256, 257], white=4095
+    Pixel entropy (512x512 crop): 10.29 bpp (vs 12 raw)
+    Computing MED residuals...
+    MED residual entropy (interleaved): 11.09 bpp
+    MED on R channel: 6.74 bpp
+    MED on G1 channel: 6.49 bpp
+    MED on G2 channel: 6.48 bpp
+    MED on B channel: 6.72 bpp
+    Per-channel MED total: 6.60 bpp
+
+    Decorrelated Bayer:
+      G_avg:  9.71 bpp
+      G_diff: 6.87 bpp (green channel noise)
+      R-G:    10.49 bpp
+      B-G:    9.18 bpp
+      Total (weighted): 9.06 bpp per Bayer pixel
+    Decorrelated + MED:
+      G_avg: 6.22 bpp after MED
+      G_diff: 6.70 bpp after MED
+      R-G: 7.15 bpp after MED
+      B-G: 6.79 bpp after MED
+
+====================================================================================================
+  DONE
+====================================================================================================
