@@ -154,17 +154,12 @@ static size_t enc_plane(const uint8_t *p, int h, int w,
         if (a == b && b == cv && cv == d) {
             uint8_t ref = (uint8_t)a;  /* reference value */
 
-            /* Count how many consecutive pixels equal ref AND stay in flat context */
+            /* Count consecutive pixels equal to ref.
+             * Cap at 32767 to prevent GR 16-bit escape overflow.
+             * Longer runs re-enter flat mode on the next iteration. */
             int run = 0;
             int j = i;
-            while (j < n) {
-                if (p[j] != ref) break;
-                /* Check that the NEXT pixel will also see flat context
-                 * (so decoder knows to stay in run mode). Actually, the
-                 * decoder checks flat at each NEW pixel position, so we
-                 * just count consecutive ref-matching pixels starting at i. */
-                run++; j++;
-            }
+            while (j < n && run < 32767 && p[j] == ref) { run++; j++; }
 
             /* Encode run length */
             int rk = run_k(run_idx);
@@ -180,10 +175,9 @@ static size_t enc_plane(const uint8_t *p, int h, int w,
              * at position i ARE all ref (from the pixels we just decoded).
              * So yes, position i is still flat, and we need to encode the
              * interruption sample. */
-            /* Interruption sample: the pixel that broke the run.
-             * Its neighbors are all ref, so the decoder sees flat and
-             * expects this. Use regular context-adaptive k (not k=0)
-             * since the interruption residual can be large. */
+            /* Interruption sample: always present when i < n.
+             * When run was capped at 32767 and next pixel is also ref,
+             * the residual will be 0 → costs only 1-3 bits per 32K chunk. */
             if (i < n) {
                 int ir = i / w, ic = i % w;
                 int ia = (ic > 0)            ? p[i-1]   : 0;
@@ -250,7 +244,7 @@ static void dec_plane(const uint8_t *data, size_t len,
             for (int j = 0; j < run && i < n; j++, i++)
                 p[i] = ref;
 
-            /* Interruption sample — use full context-adaptive decoding */
+            /* Interruption sample — always present when i < n */
             if (i < n) {
                 int ir = i / w, ic = i % w;
                 int ia = (ic > 0)            ? p[i-1]   : 0;
