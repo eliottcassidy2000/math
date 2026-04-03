@@ -78,9 +78,9 @@ footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
 <div class="drop" id="dz">
 <div style="font-size:2.4em;margin-bottom:4px">📷 🖼️ 🎬</div>
 <p style="font-size:.95em"><strong>Drop any image or video</strong></p>
-<p style="color:var(--muted);margin-top:2px;font-size:.8em">PNG, JPG, WebP, BMP, GIF, TIFF, RAW, MP4, WebM — any size</p>
+<p style="color:var(--muted);margin-top:2px;font-size:.8em">PNG, JPG, HEIC, WebP, BMP, GIF, TIFF, MP4, WebM — any size</p>
 <p style="color:var(--dim);margin-top:4px;font-size:.68em">100% in-browser. Nothing uploaded. The compressed bytes are real — edit them.</p>
-<input type="file" id="fi" accept="image/*,video/*,.gif,.bmp,.tiff,.raw,.cr2,.dng">
+<input type="file" id="fi" accept="image/*,video/*,.gif,.bmp,.tiff,.raw,.cr2,.dng,.heic,.heif">
 </div>
 </div>
 
@@ -378,15 +378,20 @@ function handleFile(file){
   if(!file)return;
   const ext=file.name.split('.').pop().toLowerCase();
   const isRaw=['cr2','nef','arw','dng','orf','rw2','raf'].includes(ext);
+  const isHeic=['heic','heif'].includes(ext);
   const isVideo=file.type.startsWith('video/');
 
   if(isRaw){
     out.innerHTML=`<div class="card" style="text-align:center;color:var(--orange)">
       <strong>RAW files (.${ext})</strong> cannot be decoded in the browser.<br>
-      <span style="color:var(--muted);font-size:.85em">Browsers only understand standard image formats (PNG, JPEG, WebP, GIF, BMP).<br>
-      To test RAW files, use the Python benchmark: <code>python3 bench_all_formats.py</code><br>
-      or convert to TIFF/PNG first with dcraw, Lightroom, or rawpy.</span></div>`;
+      <span style="color:var(--muted);font-size:.85em">Convert to TIFF or PNG first (using Lightroom, rawpy, or dcraw), then drop the converted file here.<br>
+      Or use the Python benchmark: <code style="background:#21262d;padding:2px 6px;border-radius:4px">python3 04-computation/tic/bench_all_formats.py</code></span></div>`;
     return;
+  }
+
+  if(isHeic && !file.type.includes('heic')){
+    /* HEIC: macOS Safari can load natively; Chrome/Firefox cannot. Try anyway. */
+    out.innerHTML=`<div class="card" style="text-align:center;color:var(--muted)">Loading HEIC — this works on Safari (macOS/iOS) but may fail on Chrome/Firefox...</div>`;
   }
 
   /* Show progress for large files */
@@ -418,7 +423,9 @@ async function doCompress(cv,w,h,file){
   const imgData=cv.getContext('2d').getImageData(0,0,w,h);
   const rawSize=w*h*3;
 
-  out.innerHTML='<div class="card" style="text-align:center;color:var(--muted)">Compressing with all formats... (TIC, PNG, QOI, WebP, AVIF, JPEG, BMP)</div>';
+  out.innerHTML=`<div class="card" style="text-align:center;color:var(--muted)">
+    <div style="font-size:1.1em;margin-bottom:4px">Compressing...</div>
+    <div id="progressMsg" style="font-size:.78em">TIC adaptive encoder running...</div></div>`;
 
   /* Encode with TIC (adaptive) */
   const t0=performance.now();
@@ -426,7 +433,9 @@ async function doCompress(cv,w,h,file){
   const ticMs=performance.now()-t0;
   const ticData=ticResult.data;
 
-  /* QOI encode */
+  const pm=document.getElementById('progressMsg');
+  if(pm)pm.textContent='QOI encoding...';
+  await new Promise(r=>setTimeout(r,0));/* yield to update UI */
   const qoiData=qoiEncode(imgData.data,w,h);
 
   /* BMP encode (uncompressed baseline) */
@@ -435,6 +444,8 @@ async function doCompress(cv,w,h,file){
   /* Entropy bound */
   const entropyBytes=entropyBound(imgData.data,w,h);
 
+  if(pm)pm.textContent='PNG, WebP, AVIF, JPEG encoding...';
+  await new Promise(r=>setTimeout(r,0));
   /* Encode with standard formats via canvas */
   const [pngBlob,jpgBlob,webpBlob,webpLLBlob,avifBlob,avifLLBlob]=await Promise.all([
     encodeAs(cv,'png'),encodeAs(cv,'jpeg'),encodeAs(cv,'webp'),
@@ -517,23 +528,37 @@ async function doCompress(cv,w,h,file){
   });
   html+=`</table>`;
 
+  /* Lossy toggle + table */
   if(lossy.length>0){
-    html+=`<div style="margin-top:8px"><strong style="color:var(--orange);font-size:.82em">Lossy (not comparable — shown for context)</strong></div>`;
-    html+=`<table><tr><th>Format</th><th style="text-align:right">Size</th><th style="text-align:right">bpp</th><th>Note</th></tr>`;
+    html+=`<div style="margin-top:8px;display:flex;align-items:center;gap:8px">
+      <strong style="color:var(--orange);font-size:.82em">Lossy (not comparable)</strong>
+      <label style="font-size:.72em;color:var(--muted);cursor:pointer;user-select:none">
+        <input type="checkbox" id="lossyToggle" onchange="toggleLossy()" checked style="accent-color:var(--orange)"> show
+      </label></div>`;
+    html+=`<div id="lossySection"><table><tr><th>Format</th><th style="text-align:right">Size</th><th style="text-align:right">bpp</th><th>Note</th></tr>`;
     lossy.forEach(f=>{
       const bpp=(8*f.size/(w*h)).toFixed(2);
       html+=`<tr><td>${f.name}</td><td style="text-align:right">${f.size.toLocaleString()}</td><td style="text-align:right">${bpp}</td><td style="color:var(--dim)">${f.note}</td></tr>`;
     });
-    html+=`</table>`;
+    html+=`</table></div>`;
   }
 
-  /* Visual size bars for all */
-  html+=`<div style="margin-top:8px">`;
-  for(const f of [...lossless,...lossy].filter(f=>f.data)){
-    const pct=Math.max(3,f.size/mx*100);
-    const kb=(f.size/1024).toFixed(1);
-    html+=`<div class="bar-r"><div class="bar-l"><span>${f.name} ${kb}KB</span></div>
-      <div class="bar"><div class="fill ${f.color}" style="width:${pct}%">${kb}KB</div></div></div>`;
+  /* Visual size bars — smart scaling excludes BMP-like outliers.
+   * Click any bar label to toggle it off/on. */
+  const barFormats=[...lossless,...lossy].filter(f=>f.data&&f.name!=='BMP'&&f.name!=='Entropy bound');
+  html+=`<div style="margin-top:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+    <strong style="color:var(--blue);font-size:.82em">Size comparison</strong>
+    <span style="font-size:.68em;color:var(--dim)">(click label to hide/show)</span></div>`;
+  html+=`<div id="barChart">`;
+  const barMax=Math.max(...barFormats.map(f=>f.size));
+  for(let bi=0;bi<barFormats.length;bi++){
+    const f=barFormats[bi];
+    const pct=Math.max(3,f.size/barMax*100);
+    const kb=f.size>1e6?(f.size/1e6).toFixed(2)+'MB':(f.size/1024).toFixed(1)+'KB';
+    const ll=f.lossless?'':'<span style="opacity:.5"> lossy</span>';
+    html+=`<div class="bar-r" id="bar${bi}">
+      <div class="bar-l"><span style="cursor:pointer" onclick="toggleBar(${bi})">${f.name} ${kb}${ll}</span></div>
+      <div class="bar"><div class="fill ${f.color}" style="width:${pct}%">${kb}</div></div></div>`;
   }
   html+=`</div></div></div></div>`;
 
@@ -620,6 +645,27 @@ function downloadFormat(idx){
   const ext=Object.entries(extMap).find(([k])=>fmt.name.includes(k));
   const blob=new Blob([fmt.data]);
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='image.'+(ext?ext[1]:'bin');a.click();
+}
+
+/* Toggle lossy section visibility */
+function toggleLossy(){
+  const s=document.getElementById('lossySection');
+  const cb=document.getElementById('lossyToggle');
+  if(s)s.style.display=cb&&cb.checked?'block':'none';
+  /* Also toggle lossy bars */
+  document.querySelectorAll('.bar-r').forEach(el=>{
+    if(el.innerHTML.includes('lossy')){
+      el.style.display=cb&&cb.checked?'block':'none';
+    }
+  });
+}
+
+/* Toggle individual bar visibility */
+function toggleBar(idx){
+  const el=document.getElementById('bar'+idx);
+  if(!el)return;
+  if(el.style.opacity==='0.2'){el.style.opacity='1';el.querySelector('.bar').style.display='block';}
+  else{el.style.opacity='0.2';el.querySelector('.bar').style.display='none';}
 }
 </script>
 </body>
