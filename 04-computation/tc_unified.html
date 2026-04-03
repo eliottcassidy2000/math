@@ -98,7 +98,7 @@ footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
 <div id="out"></div>
 
 <div class="card" style="font-size:.8em;color:var(--muted);line-height:1.5">
-<strong style="color:var(--blue)">How it works</strong> — TIC uses color decorrelation + MED prediction + adaptive Golomb-Rice/deflate. All other formats use the browser's native encoders. Sizes are actual bytes, not estimates. Edit hex to see how each format handles corruption. CR2/DNG/NEF: embedded JPEG preview is extracted and compressed. <span style="color:var(--dim)">JPEG-LS and JPEG-XL not available in browsers.</span>
+<strong style="color:var(--blue)">Formats compared</strong> — <strong>Lossless:</strong> TIC (ours), PNG, QOI, WebP q100, AVIF q100, TIC-deflate, Deflate-raw. <strong>Lossy:</strong> JPEG q95, WebP q90. <strong>Reference:</strong> Entropy bound, BMP, JPEG-XL/JPEG-LS estimates. All sizes are actual bytes encoded in your browser. CR2/DNG: embedded JPEG preview extracted. HEIC: Safari only.
 </div>
 </div>
 
@@ -572,6 +572,28 @@ async function doCompress(cv,w,h,file){
     return{name:'Entropy bound',size:sz,color:'f-bmp',lossless:true,data:null,note:'theoretical min — not a real format',isRef:true};
   }
 
+  /* Deflate-raw: compress raw RGB bytes with no prediction — baseline for what prediction adds */
+  async function runDeflateRaw(){
+    pm().textContent='Deflate (raw, no prediction)...';await yield_();
+    const rgb=new Uint8Array(w*h*3);
+    for(let i=0;i<w*h;i++){rgb[i*3]=imgData.data[i*4];rgb[i*3+1]=imgData.data[i*4+1];rgb[i*3+2]=imgData.data[i*4+2];}
+    const z=await zEnc(rgb);
+    if(!z)return null;
+    return{name:'Deflate (raw)',size:z.length,color:'f-bmp',lossless:true,data:z,note:'no prediction — shows prediction value'};
+  }
+
+  /* TIC-deflate: our decorrelation + MED + deflate only (no GR) — isolates decorrelation benefit */
+  async function runTICDeflate(){
+    pm().textContent='TIC-deflate encoding...';await yield_();
+    const[g,rg,bg]=toGRD(imgData.data,w,h);
+    const planes=[g,rg,bg];
+    const compressed=await Promise.all(planes.map(p=>zEnc(medPred(p,w,h))));
+    if(compressed.some(c=>!c))return null;
+    const totalSz=compressed.reduce((s,c)=>s+c.length,0)+24;/* header overhead */
+    return{name:'TIC-deflate',size:totalSz,color:'f-tic',lossless:true,data:null,
+           note:'decorrelation+MED+deflate (no GR)'};
+  }
+
   async function runCanvas(key,label,fmtStr,color,lossless,note){
     if(!fmts[key])return null;
     const r=await encodeAs(cv,fmtStr);
@@ -584,15 +606,25 @@ async function doCompress(cv,w,h,file){
   pm().textContent='Running all encoders in parallel...';await yield_();
 
   const tasks=[
+    /* Lossless codecs — always run */
     runTIC().catch(e=>({name:'TIC (ours)',size:0,note:'error: '+e.message,color:'f-tic',lossless:true,data:null})),
+    runCanvas('png','PNG','png','f-png',true,'lossless — browser native').catch(e=>null),
     runQOI().catch(e=>({name:'QOI',size:0,note:'error: '+e.message,color:'f-gif',lossless:true,data:null})),
-    runEntropy().catch(e=>null),
-    runBMP().catch(e=>null),
-    runCanvas('png','PNG','png','f-png',true,'lossless').catch(e=>null),
     runCanvas('webpll','WebP (q100)','webp-ll','f-webp',true,'q100 via canvas — may not be truly lossless').catch(e=>null),
     runCanvas('avifll','AVIF (q100)','avif-ll','f-webp',true,'q100 via canvas — may not be truly lossless').catch(e=>null),
+    runTICDeflate().catch(e=>null),
+    runDeflateRaw().catch(e=>null),
+    /* Lossy codecs */
     runCanvas('jpeg','JPEG (q95)','jpeg','f-jpg',false,'lossy').catch(e=>null),
     runCanvas('webp','WebP (q90)','webp','f-webp',false,'lossy').catch(e=>null),
+    /* References */
+    runEntropy().catch(e=>null),
+    runBMP().catch(e=>null),
+    /* JPEG-XL / JPEG-LS: cannot encode in browser — show as reference note */
+    Promise.resolve({name:'JPEG-XL (est.)',size:0,color:'f-bmp',lossless:true,data:null,
+      note:'not available in browsers — typically 5-15% smaller than WebP-LL',isRef:true,unsupported:true}),
+    Promise.resolve({name:'JPEG-LS (est.)',size:0,color:'f-bmp',lossless:true,data:null,
+      note:'not available in browsers — similar to TIC (MED+GR)',isRef:true,unsupported:true}),
   ];
 
   const results=await Promise.all(tasks);
