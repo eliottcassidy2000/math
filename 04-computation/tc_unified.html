@@ -99,10 +99,10 @@ footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
 </div>
 <div style="display:flex;align-items:center;gap:10px;margin-top:6px;flex-wrap:wrap">
 <strong style="color:var(--blue);font-size:.85em">Resolution</strong>
-<label class="bs active" style="cursor:pointer"><input type="radio" name="res" value="0" checked> Full size</label>
-<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="2048"> Max 2048px</label>
-<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="1024"> Max 1024px</label>
-<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="512"> Max 512px</label>
+<label class="bs active" style="cursor:pointer"><input type="radio" name="res" value="0" checked onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');autoRecompress()"> Full size</label>
+<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="2048" onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');autoRecompress()"> 2048px</label>
+<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="1024" onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');autoRecompress()"> 1024px</label>
+<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="512" onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');autoRecompress()"> 512px</label>
 <span id="resInfo" style="font-size:.72em;color:var(--dim)"></span>
 </div>
 </div>
@@ -395,7 +395,9 @@ function getEnabledFormats(){
   document.querySelectorAll('#controls input[data-fmt]').forEach(cb=>{fmts[cb.dataset.fmt]=cb.checked;});
   return fmts;
 }
-function updateFmt(el){el.parentElement.classList.toggle('active',el.checked);}
+function updateFmt(el){el.parentElement.classList.toggle('active',el.checked);autoRecompress();}
+let _recompressTimer=null;
+function autoRecompress(){if(_recompressTimer)clearTimeout(_recompressTimer);_recompressTimer=setTimeout(()=>{if(lastFile)handleFile(lastFile);},600);}
 function getMaxRes(){
   const v=document.querySelector('input[name="res"]:checked');
   return v?parseInt(v.value):0;
@@ -563,20 +565,20 @@ async function doCompress(cv,w,h,file){
   async function runBMP(){
     if(!fmts.bmp)return null;
     const data=bmpEncode(imgData.data,w,h);
-    return{name:'BMP',size:data.length,color:'f-bmp',lossless:false,data,note:'uncompressed'};
+    return{name:'BMP',size:data.length,color:'f-bmp',lossless:true,data,note:'uncompressed baseline'};
   }
 
   async function runEntropy(){
     if(!fmts.entropy)return null;
     pm().textContent='Computing entropy bound...';await yield_();
     const sz=entropyBound(imgData.data,w,h);
-    return{name:'Entropy bound',size:sz,color:'f-bmp',lossless:true,data:null,note:'theoretical min'};
+    return{name:'Entropy bound',size:sz,color:'f-bmp',lossless:true,data:null,note:'theoretical min — not a real format',isRef:true};
   }
 
   async function runCanvas(key,label,fmtStr,color,lossless,note){
     if(!fmts[key])return null;
     const r=await encodeAs(cv,fmtStr);
-    if(!r||r.size<10)return null;
+    if(!r||r.size<10)return{name:label,size:0,color,lossless,data:null,note:'not supported by this browser',unsupported:true};
     return{name:label,size:r.size,color,lossless,data:r.data,note};
   }
 
@@ -590,16 +592,16 @@ async function doCompress(cv,w,h,file){
     runEntropy().catch(e=>null),
     runBMP().catch(e=>null),
     runCanvas('png','PNG','png','f-png',true,'lossless').catch(e=>null),
-    runCanvas('webpll','WebP lossless','webp-ll','f-webp',true,'lossless').catch(e=>null),
-    runCanvas('avifll','AVIF lossless','avif-ll','f-webp',true,'lossless').catch(e=>null),
+    runCanvas('webpll','WebP (q100)','webp-ll','f-webp',true,'q100 via canvas — may not be truly lossless').catch(e=>null),
+    runCanvas('avifll','AVIF (q100)','avif-ll','f-webp',true,'q100 via canvas — may not be truly lossless').catch(e=>null),
     runCanvas('jpeg','JPEG (q95)','jpeg','f-jpg',false,'lossy').catch(e=>null),
     runCanvas('webp','WebP (q90)','webp','f-webp',false,'lossy').catch(e=>null),
   ];
 
   const results=await Promise.all(tasks);
 
-  /* Build results — filter nulls and zero-size */
-  const formats=results.filter(r=>r&&r.size>0);
+  /* Build results — keep unsupported entries for display, filter only nulls */
+  const formats=results.filter(r=>r&&(r.size>0||r.unsupported));
 
   /* Extract TIC-specific info */
   const ticEntry=formats.find(f=>f.name.includes('TIC'));
@@ -638,19 +640,26 @@ async function doCompress(cv,w,h,file){
           <div class="st"><div class="v">${w*h>1e6?(w*h/1e6).toFixed(1)+'M':(w*h/1e3).toFixed(0)+'K'}</div><div class="l">pixels</div></div>
         </div>`;
 
-  /* Sorted comparison table — lossless only for fair comparison */
-  const lossless=formats.filter(f=>f.lossless).sort((a,b)=>a.size-b.size);
+  /* Sorted comparison table — lossless only, references separated */
+  const refs=formats.filter(f=>f.isRef);
+  const lossless=formats.filter(f=>f.lossless&&!f.isRef).sort((a,b)=>a.size-b.size);
   const lossy=formats.filter(f=>!f.lossless).sort((a,b)=>a.size-b.size);
   const smallest=lossless.length>0?lossless[0].size:(ticSz||rawSize);
 
-  html+=`<div style="margin-top:8px"><strong style="color:var(--green);font-size:.82em">Lossless (apples-to-apples)</strong></div>`;
+  html+=`<div style="margin-top:8px"><strong style="color:var(--green);font-size:.82em">Lossless comparison</strong></div>`;
   html+=`<table><tr><th>#</th><th>Format</th><th style="text-align:right">Size</th><th style="text-align:right">bpp</th><th style="text-align:right">vs best</th><th>Note</th></tr>`;
   lossless.forEach((f,i)=>{
     const bpp=(8*f.size/(w*h)).toFixed(2);
     const vsBest=i===0?'<span class="win">BEST</span>':`<span class="loss">+${((f.size/smallest-1)*100).toFixed(1)}%</span>`;
     const isTic=f.name.includes('TIC');
     html+=`<tr${isTic?' style="background:#0d1117"':''}><td>${i+1}</td><td>${isTic?'<strong style="color:var(--green)">'+f.name+'</strong>':f.name}</td>
-      <td style="text-align:right">${f.size.toLocaleString()}</td><td style="text-align:right">${bpp}</td><td style="text-align:right">${vsBest}</td><td style="color:var(--dim)">${f.note}</td></tr>`;
+      <td style="text-align:right">${f.size.toLocaleString()}</td><td style="text-align:right">${bpp}</td><td style="text-align:right">${vsBest}</td><td style="color:var(--dim)">${f.note||''}</td></tr>`;
+  });
+  /* Reference rows (entropy bound, BMP) — shown below the ranking, visually distinct */
+  refs.forEach(f=>{
+    const bpp=(8*f.size/(w*h)).toFixed(2);
+    html+=`<tr style="opacity:.5;border-top:1px dashed var(--border)"><td>—</td><td style="font-style:italic">${f.name}</td>
+      <td style="text-align:right">${f.size.toLocaleString()}</td><td style="text-align:right">${bpp}</td><td></td><td style="color:var(--dim)">${f.note||''}</td></tr>`;
   });
   html+=`</table>`;
 
