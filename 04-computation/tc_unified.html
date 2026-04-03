@@ -414,18 +414,35 @@ fi.addEventListener('change',e=>{if(e.target.files[0])handleFile(e.target.files[
 async function handleFile(file){
   if(!file)return;
   const ext=file.name.split('.').pop().toLowerCase();
-  const isRaw=['cr2','nef','arw','dng','orf','rw2','raf'].includes(ext);
-  const isHeic=['heic','heif'].includes(ext);
+  const needsExtract=['cr2','nef','arw','dng','orf','rw2','raf','heic','heif'].includes(ext);
   const isVideo=file.type.startsWith('video/');
 
-  if(isRaw){
+  if(needsExtract){
     out.innerHTML=`<div class="card" style="text-align:center;color:var(--muted)">
-      <div style="font-size:1em;margin-bottom:4px">Extracting preview from .${ext} file...</div>
-      <div style="font-size:.78em">RAW files contain embedded JPEG previews. Scanning ${(file.size/1e6).toFixed(1)}MB...</div></div>`;
-    /* Extract embedded JPEG preview from CR2/DNG/NEF etc.
-     * Strategy: find all FFD8..FFD9 JPEG blobs, pick the largest one
-     * that's < 5MB (to avoid the raw Bayer data in CR2 which has FFD8 header
-     * but isn't a real JPEG). */
+      <div style="font-size:1em;margin-bottom:4px">Loading .${ext} file...</div>
+      <div id="extractMsg" style="font-size:.78em">Trying native decode...</div></div>`;
+
+    /* First try: can the browser decode it natively? (Safari handles HEIC) */
+    try{
+      const url=URL.createObjectURL(file);
+      const img=await Promise.race([
+        new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=url;}),
+        new Promise((_,rej)=>setTimeout(()=>rej('timeout'),3000))
+      ]);
+      URL.revokeObjectURL(url);
+      let w=img.width,h=img.height;
+      [w,h]=scaleDown(w,h,getMaxRes());
+      const cv=document.createElement('canvas');cv.width=w;cv.height=h;
+      cv.getContext('2d').drawImage(img,0,0,w,h);
+      doCompress(cv,w,h,file);return;
+    }catch(e){/* native failed — fall through to JPEG extraction */}
+
+    const em=document.getElementById('extractMsg');
+    if(em)em.textContent=`Native decode failed. Extracting embedded JPEG preview from ${(file.size/1e6).toFixed(1)}MB...`;
+
+    /* Fallback: extract embedded JPEG preview from the binary data.
+     * Works for CR2, DNG, NEF, HEIC — all contain JPEG thumbnails/previews.
+     * Strategy: scan for FFD8..FFD9 blobs, pick largest decodable one < 5MB. */
     const buf=await file.arrayBuffer();
     const u8=new Uint8Array(buf);
     const jpegs=[];
@@ -453,7 +470,7 @@ async function handleFile(file){
         const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=url;});
         URL.revokeObjectURL(url);
         let w=img.width,h=img.height;
-        if(w>800||h>800){const s=800/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s);}
+        [w,h]=scaleDown(w,h,getMaxRes());
         const cv=document.createElement('canvas');cv.width=w;cv.height=h;
         cv.getContext('2d').drawImage(img,0,0,w,h);
         doCompress(cv,w,h,file);loaded=true;break;
@@ -461,11 +478,6 @@ async function handleFile(file){
     }
     if(!loaded)out.innerHTML=`<div class="card" style="color:var(--orange)">Could not decode any embedded preview from .${ext} file.</div>`;
     return;
-  }
-
-  if(isHeic && !file.type.includes('heic')){
-    /* HEIC: macOS Safari can load natively; Chrome/Firefox cannot. Try anyway. */
-    out.innerHTML=`<div class="card" style="text-align:center;color:var(--muted)">Loading HEIC — this works on Safari (macOS/iOS) but may fail on Chrome/Firefox...</div>`;
   }
 
   /* Show progress for large files */
