@@ -649,6 +649,8 @@ async function doCompress(cv,w,h,file){
   }
 
   const yield_=()=>new Promise(r=>setTimeout(r,0));
+  /* pm() is a no-op now — progress shown via streaming results instead */
+  const pm=()=>({set textContent(v){}});
 
   /* ========================================================
    * ISOLATED ENCODER TASKS — each wrapped in try/catch.
