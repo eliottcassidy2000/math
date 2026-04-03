@@ -474,21 +474,26 @@ async function handleFile(file){
   }
 
   if(isVideo){
+    out.innerHTML=`<div class="card" style="text-align:center;color:var(--muted)">Loading video (${(file.size/1e6).toFixed(1)}MB)... extracting frame</div>`;
     const url=URL.createObjectURL(file);const v=document.createElement('video');v.muted=true;v.preload='auto';
-    v.onloadeddata=()=>{v.currentTime=Math.min(1,v.duration/2)};
+    v.onloadedmetadata=()=>{
+      /* Pick a frame: 25% through, or 1s, whichever is less */
+      v.currentTime=Math.min(v.duration*0.25, 1.0);
+    };
     v.onseeked=()=>{let w=v.videoWidth,h=v.videoHeight;
-      [w,h]=scaleDown(w,h,getMaxRes())
+      [w,h]=scaleDown(w,h,getMaxRes());
       const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(v,0,0,w,h);
       URL.revokeObjectURL(url);doCompress(cv,w,h,file);};
-    v.onerror=()=>{out.innerHTML=`<div class="card" style="color:var(--red)">Cannot decode this video format.</div>`;URL.revokeObjectURL(url);};
+    v.onerror=()=>{out.innerHTML=`<div class="card" style="color:var(--red)">Cannot decode this video. Try MP4 (H.264) or WebM.</div>`;URL.revokeObjectURL(url);};
     v.src=url;
   }else{
+    if(file.size>500_000)out.innerHTML=`<div class="card" style="text-align:center;color:var(--muted)">Loading image (${(file.size/1e6).toFixed(1)}MB)...</div>`;
     const url=URL.createObjectURL(file);const img=new Image();
     img.onload=()=>{let w=img.width,h=img.height;
-      [w,h]=scaleDown(w,h,getMaxRes())
+      [w,h]=scaleDown(w,h,getMaxRes());
       const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(img,0,0,w,h);
       URL.revokeObjectURL(url);doCompress(cv,w,h,file);};
-    img.onerror=()=>{out.innerHTML=`<div class="card" style="color:var(--red)">Cannot decode this file. Try PNG, JPG, WebP, GIF, or BMP.</div>`;URL.revokeObjectURL(url);};
+    img.onerror=()=>{out.innerHTML=`<div class="card" style="color:var(--red)">Cannot decode this file. Supported: PNG, JPG, HEIC (Safari), WebP, GIF, BMP.</div>`;URL.revokeObjectURL(url);};
     img.src=url;
   }
 }
@@ -501,80 +506,104 @@ async function doCompress(cv,w,h,file){
   lastFile=file;
   ctrlPanel.style.display='block';
   const resInfo=document.getElementById('resInfo');
-  if(resInfo)resInfo.textContent=`(working at ${w}x${h} = ${(w*h/1e6).toFixed(1)}M pixels)`;
+  if(resInfo)resInfo.textContent=`(${w}x${h} = ${(w*h/1e6).toFixed(1)}M pixels)`;
   const imgData=cv.getContext('2d').getImageData(0,0,w,h);
   const rawSize=w*h*3;
   const fmts=getEnabledFormats();
 
   out.innerHTML=`<div class="card" style="text-align:center;color:var(--muted)">
-    <div style="font-size:1.1em;margin-bottom:4px">Compressing...</div>
-    <div id="progressMsg" style="font-size:.78em">TIC adaptive encoder running...</div></div>`;
+    <div style="font-size:1.1em;margin-bottom:4px">Compressing ${w}x${h}...</div>
+    <div id="progressMsg" style="font-size:.78em">Starting encoders...</div></div>`;
 
-  const pm=()=>document.getElementById('progressMsg');
+  const pm=()=>{const el=document.getElementById('progressMsg');return el||{set textContent(v){}}};
   const yield_=()=>new Promise(r=>setTimeout(r,0));
 
-  /* Each format runs independently, only if enabled */
-  let ticData=null,ticMs=0,ticResult=null,rtOk=false;
-  if(fmts.tic){
-    if(pm())pm().textContent=`TIC encoding ${w}x${h}...`;await yield_();
+  /* ========================================================
+   * ISOLATED ENCODER TASKS — each wrapped in try/catch.
+   * A crash in one never affects the others.
+   * ======================================================== */
+
+  async function runTIC(){
+    if(!fmts.tic)return null;
+    pm().textContent=`TIC encoding ${w}x${h}...`;await yield_();
     const t0=performance.now();
-    ticResult=await ticEncode(imgData,w,h);
-    ticMs=performance.now()-t0;ticData=ticResult.data;
-    /* Verify roundtrip */
-    try{const dec=await ticDecode(ticData);const orig=imgData.data;rtOk=true;
-      for(let i=0;i<w*h;i++){if(dec.rgba[i*4]!==orig[i*4]||dec.rgba[i*4+1]!==orig[i*4+1]||dec.rgba[i*4+2]!==orig[i*4+2]){rtOk=false;break;}}
-    }catch(e){rtOk=false;}
+    const result=await ticEncode(imgData,w,h);
+    const ms=performance.now()-t0;
+    let rt=false;
+    try{const dec=await ticDecode(result.data);const o=imgData.data;rt=true;
+      for(let i=0;i<w*h;i++){if(dec.rgba[i*4]!==o[i*4]||dec.rgba[i*4+1]!==o[i*4+1]||dec.rgba[i*4+2]!==o[i*4+2]){rt=false;break;}}
+    }catch(e){rt=false;}
+    return{name:'TIC (ours)',size:result.data.length,color:'f-tic',lossless:true,data:result.data,
+           note:rt?'lossless ✓':'RT FAIL',ms,flags:result.flags};
   }
 
-  let qoiData=null,qoiOk=false;
-  if(fmts.qoi){
-    if(pm())pm().textContent=`QOI encoding ${w}x${h}...`;await yield_();
-    qoiData=qoiEncode(imgData.data,w,h);
-    try{const qd=qoiDecode(qoiData);qoiOk=true;
-      for(let i=0;i<w*h;i++){if(qd.rgba[i*4]!==imgData.data[i*4]||qd.rgba[i*4+1]!==imgData.data[i*4+1]||qd.rgba[i*4+2]!==imgData.data[i*4+2]){qoiOk=false;break;}}
-    }catch(e){qoiOk=false;}
+  async function runQOI(){
+    if(!fmts.qoi)return null;
+    pm().textContent=`QOI encoding ${w}x${h}...`;await yield_();
+    const data=qoiEncode(imgData.data,w,h);
+    let ok=false;
+    try{const d=qoiDecode(data);ok=true;
+      for(let i=0;i<w*h;i++){if(d.rgba[i*4]!==imgData.data[i*4]||d.rgba[i*4+1]!==imgData.data[i*4+1]||d.rgba[i*4+2]!==imgData.data[i*4+2]){ok=false;break;}}
+    }catch(e){}
+    return{name:'QOI',size:data.length,color:'f-gif',lossless:true,data,note:ok?'lossless ✓':'RT FAIL'};
   }
 
-  let bmpData=null;
-  if(fmts.bmp){bmpData=bmpEncode(imgData.data,w,h);}
-
-  let entropyBytes=0;
-  if(fmts.entropy){
-    if(pm())pm().textContent=`Computing entropy bound...`;await yield_();
-    entropyBytes=entropyBound(imgData.data,w,h);
+  async function runBMP(){
+    if(!fmts.bmp)return null;
+    const data=bmpEncode(imgData.data,w,h);
+    return{name:'BMP',size:data.length,color:'f-bmp',lossless:false,data,note:'uncompressed'};
   }
 
-  if(pm())pm().textContent='PNG / WebP / AVIF / JPEG...';await yield_();
-  const encTasks=[];
-  if(fmts.png)encTasks.push(encodeAs(cv,'png').then(r=>({k:'png',r})));
-  if(fmts.jpeg)encTasks.push(encodeAs(cv,'jpeg').then(r=>({k:'jpeg',r})));
-  if(fmts.webp)encTasks.push(encodeAs(cv,'webp').then(r=>({k:'webp',r})));
-  if(fmts.webpll)encTasks.push(encodeAs(cv,'webp-ll').then(r=>({k:'webpll',r})));
-  if(fmts.avifll)encTasks.push(encodeAs(cv,'avif-ll').then(r=>({k:'avifll',r})));
-  const canvasResults=await Promise.all(encTasks);
-  const cr={};canvasResults.forEach(({k,r})=>{cr[k]=r;});
+  async function runEntropy(){
+    if(!fmts.entropy)return null;
+    pm().textContent='Computing entropy bound...';await yield_();
+    const sz=entropyBound(imgData.data,w,h);
+    return{name:'Entropy bound',size:sz,color:'f-bmp',lossless:true,data:null,note:'theoretical min'};
+  }
 
-  /* Build results */
-  const formats=[];
-  const add=(name,size,color,lossless,data,note)=>{if(size>0)formats.push({name,size,color,lossless,data,note:note||''})};
-  if(entropyBytes>0)add('Entropy bound',entropyBytes,'f-bmp',true,null,'theoretical min');
-  if(ticData)add('TIC (ours)',ticData.length,'f-tic',true,ticData,rtOk?'lossless ✓':'RT FAIL');
-  if(cr.png)add('PNG',cr.png.size,'f-png',true,cr.png.data,'lossless');
-  if(qoiData)add('QOI',qoiData.length,'f-gif',true,qoiData,qoiOk?'lossless ✓':'RT FAIL');
-  if(cr.webpll)add('WebP lossless',cr.webpll.size,'f-webp',true,cr.webpll.data,'lossless');
-  if(cr.avifll&&cr.avifll.size>50)add('AVIF lossless',cr.avifll.size,'f-webp',true,cr.avifll.data,'lossless');
-  if(bmpData)add('BMP',bmpData.length,'f-bmp',false,bmpData,'uncompressed');
-  if(cr.jpeg)add('JPEG (q95)',cr.jpeg.size,'f-jpg',false,cr.jpeg.data,'lossy');
-  if(cr.webp)add('WebP (q90)',cr.webp.size,'f-webp',false,cr.webp.data,'lossy');
+  async function runCanvas(key,label,fmtStr,color,lossless,note){
+    if(!fmts[key])return null;
+    const r=await encodeAs(cv,fmtStr);
+    if(!r||r.size<10)return null;
+    return{name:label,size:r.size,color,lossless,data:r.data,note};
+  }
 
-  const pngSize=cr.png?cr.png.size:rawSize;
+  /* Launch ALL enabled encoders. Each is independent — allSettled means
+   * a crash in one returns {status:'rejected'} without killing others. */
+  pm().textContent='Running all encoders in parallel...';await yield_();
+
+  const tasks=[
+    runTIC().catch(e=>({name:'TIC (ours)',size:0,note:'error: '+e.message,color:'f-tic',lossless:true,data:null})),
+    runQOI().catch(e=>({name:'QOI',size:0,note:'error: '+e.message,color:'f-gif',lossless:true,data:null})),
+    runEntropy().catch(e=>null),
+    runBMP().catch(e=>null),
+    runCanvas('png','PNG','png','f-png',true,'lossless').catch(e=>null),
+    runCanvas('webpll','WebP lossless','webp-ll','f-webp',true,'lossless').catch(e=>null),
+    runCanvas('avifll','AVIF lossless','avif-ll','f-webp',true,'lossless').catch(e=>null),
+    runCanvas('jpeg','JPEG (q95)','jpeg','f-jpg',false,'lossy').catch(e=>null),
+    runCanvas('webp','WebP (q90)','webp','f-webp',false,'lossy').catch(e=>null),
+  ];
+
+  const results=await Promise.all(tasks);
+
+  /* Build results — filter nulls and zero-size */
+  const formats=results.filter(r=>r&&r.size>0);
+
+  /* Extract TIC-specific info */
+  const ticEntry=formats.find(f=>f.name.includes('TIC'));
+  const ticData=ticEntry?ticEntry.data:null;
+  const ticMs=ticEntry?.ms||0;
+  const rtOk=ticEntry?.note==='lossless ✓';
+
+  const pngEntry=formats.find(f=>f.name==='PNG');
+  const pngSize=pngEntry?pngEntry.size:rawSize;
   const ticSz=ticData?ticData.length:0;
   const ticVsPng=ticSz>0?(pngSize/ticSz).toFixed(2):'—';
   const saving=ticSz>0?Math.max(0,Math.round((1-ticSz/pngSize)*100)):0;
 
   /* Backend info */
   let backends=['—','—','—'];
-  if(ticResult){const fl=ticResult.flags;const bn=['GR','zlib'];backends=[bn[fl&3],bn[(fl>>2)&3],bn[(fl>>4)&3]];}
+  if(ticEntry&&ticEntry.flags!=null){const fl=ticEntry.flags;const bn=['GR','zlib'];backends=[bn[fl&3],bn[(fl>>2)&3],bn[(fl>>4)&3]];}
 
   /* Render */
   let html=`<div class="card fade">
