@@ -1,0 +1,66 @@
+Loaded 31 images
+
+ # Image                                             WxH        PNG        TIC        QOI    WebP-LL   Winner
+----------------------------------------------------------------------------------------------------
+ 1 03.cr2                                     5796x3870 27,580,119 25,845,539     (skip) 24,122,894  WebP-LL
+ 2 05.cr2                                     5796x3870 26,154,655 23,096,870     (skip) 22,992,448  WebP-LL
+ 3 07.cr2                                     3870x5796 22,649,433 20,668,404     (skip) 19,870,616  WebP-LL
+ 4 20150413_5min_p_vegas_007.dng              5796x3870 21,977,558 19,784,232     (skip) 18,870,892  WebP-LL
+ 5 20150413_5min_p_vegas_023.dng              5796x3870 22,949,636 21,115,400     (skip) 19,308,716  WebP-LL
+ 6 20150413_5min_p_vegas_035.dng              5796x3870 24,521,333 22,394,463     (skip) 21,704,836  WebP-LL
+ 7 IMG_1414.HEIC                              3024x4032  9,768,498  6,043,555     (skip)  6,131,010      TIC
+ 8 IMG_1470.jpg                               1170x1786  1,512,938  1,500,590  2,105,465  1,353,630  WebP-LL
+ 9 IMG_1560.PNG                               1170x2532    107,404     73,993    140,769     27,892  WebP-LL
+10 IMG_20260319_211730_713.jpg                4000x3000 20,308,759 12,906,750     (skip) 13,153,030      TIC
+11 IMG_20260402_110843_594.jpg                4000x3000 17,862,557 11,432,844     (skip) 11,854,844      TIC
+12 IMG_2811.jpg                               5184x3456 29,762,128 22,898,106     (skip) 21,568,070  WebP-LL
+13 IMG_8669.jpg                               4032x3024  8,799,105  5,498,551     (skip)  5,566,280      TIC
+14 IMG_9096.HEIC                              3024x4032 16,905,491  9,297,337     (skip)  9,621,228      TIC
+15 IMG_9118.HEIC                              3024x4032 12,094,040  7,296,638     (skip)  7,397,044      TIC
+16 IMG_9142.HEIC                              3024x4032 13,817,959  7,799,742     (skip)  7,931,368      TIC
+17 Screenshot 2026-03-13 at 8.00.34 PM.png    1915x1024    886,734    850,301  1,296,908    645,754  WebP-LL
+18 Screenshot 2026-03-13 at 8.01.04 PM.png    1915x1024    345,914    336,980    432,825    241,812  WebP-LL
+19 Screenshot 2026-03-13 at 8.04.20 PM.png    1915x1024    840,276    801,889  1,188,150    608,840  WebP-LL
+20 Screenshot 2026-04-02 at 5.27.09 PM.png    1920x1080  1,461,711  1,227,005  1,765,116  1,084,508  WebP-LL
+21 Screenshot 2026-04-02 at 6.01.23 PM.png    1920x1080    224,363    122,035    379,844     61,886  WebP-LL
+22 Screenshot 2026-04-02 at 6.29.04 PM.png    1920x1080    205,306    159,157    285,330     57,714  WebP-LL
+23 Screenshot 2026-04-02 at 6.31.57 PM.png    1920x1080    158,403    134,166    188,410     85,956  WebP-LL
+24 Screenshot 2026-04-02 at 6.35.05 PM.png    1920x1080  1,223,595  1,204,677  1,455,871    829,206  WebP-LL
+25 Screenshot 2026-04-02 at 7.19.05 PM.png    1920x1080    287,841    292,920    422,476    202,150  WebP-LL
+26 Screenshot_20260402-131813.png             864x1939    107,455     76,155    135,855     40,524  WebP-LL
+27 Silicon-Valley-Wikia_infobox-richard_01.   250x 330    113,850     86,295    147,796     80,258  WebP-LL
+28 sample1.cr2                                8736x5856 60,602,249 52,857,340     (skip) 52,030,422  WebP-LL
+29 sample1.dng                                3474x2314  9,764,972  8,332,504     (skip)  8,239,942  WebP-LL
+30 tree-of-life.png                           1500x1500     45,747     22,110     60,624     13,042  WebP-LL
+31 vlcsnap-2026-03-10-17h12m34s408.png        3840x2160  7,010,231  4,820,302     (skip)  4,528,908  WebP-LL
+
+====================================================================================================
+WINS: TIC=7, PNG=0, QOI=0, WebP-LL=24
+
+By image type:
+  photo (9 images): wins={'WebP-LL': 6, 'TIC': 3}, TIC/PNG=0.693x, WebP/PNG=0.680x
+  screenshot (10 images): wins={'WebP-LL': 10}, TIC/PNG=0.907x, WebP/PNG=0.672x
+  raw (8 images): wins={'WebP-LL': 8}, TIC/PNG=0.898x, WebP/PNG=0.866x
+  heic (4 images): wins={'TIC': 4}, TIC/PNG=0.579x, WebP/PNG=0.591x
+
+PATTERN: When does TIC beat WebP-LL?
+  IMG_1414.HEIC                         TIC/WebP=0.986 (TIC wins)
+  IMG_1470.jpg                          TIC/WebP=1.109 (WebP wins)
+  IMG_1560.PNG                          TIC/WebP=2.653 (WebP wins)
+  IMG_20260319_211730_713.jpg           TIC/WebP=0.981 (TIC wins)
+  IMG_20260402_110843_594.jpg           TIC/WebP=0.964 (TIC wins)
+  IMG_8669.jpg                          TIC/WebP=0.988 (TIC wins)
+  IMG_9096.HEIC                         TIC/WebP=0.966 (TIC wins)
+  IMG_9118.HEIC                         TIC/WebP=0.986 (TIC wins)
+  IMG_9142.HEIC                         TIC/WebP=0.983 (TIC wins)
+  Screenshot 2026-03-13 at 8.00.34 PM   TIC/WebP=1.317 (WebP wins)
+  Screenshot 2026-03-13 at 8.01.04 PM   TIC/WebP=1.394 (WebP wins)
+  Screenshot 2026-03-13 at 8.04.20 PM   TIC/WebP=1.317 (WebP wins)
+  Screenshot 2026-04-02 at 5.27.09 PM   TIC/WebP=1.131 (WebP wins)
+  Screenshot 2026-04-02 at 6.01.23 PM   TIC/WebP=1.972 (WebP wins)
+  Screenshot 2026-04-02 at 6.29.04 PM   TIC/WebP=2.758 (WebP wins)
+  Screenshot 2026-04-02 at 6.31.57 PM   TIC/WebP=1.561 (WebP wins)
+  Screenshot 2026-04-02 at 6.35.05 PM   TIC/WebP=1.453 (WebP wins)
+  Screenshot 2026-04-02 at 7.19.05 PM   TIC/WebP=1.449 (WebP wins)
+  Screenshot_20260402-131813.png        TIC/WebP=1.879 (WebP wins)
+  tree-of-life.png                      TIC/WebP=1.695 (WebP wins)
