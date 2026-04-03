@@ -1,0 +1,43 @@
+==============================================================================================================
+  TIC-MOSAIC: Block-Adaptive Compression
+  Classifies each 32×32 block and applies optimal strategy
+==============================================================================================================
+
+Loaded 28 images
+
+ # Image                                        WxH        PNG        TIC     Mosaic    WebP-LL    Best Composition
+----------------------------------------------------------------------------------------------------------------------------------
+ 1 IMG_1560.PNG                          1170x2532    107,404     73,993    112,203     27,892 WebP-LL flat:2596 ui:237 photo:108 gradient:19
+ 2 PHOTO:IMG_1470.jpg                    1170x1786  1,512,938  1,500,590  1,343,977  1,353,630  Mosaic gradient:978 flat:564 photo:320 ui:210
+ 3 PHOTO:IMG_8669.jpg                    4032x3024  8,799,105  5,498,551  6,556,161  5,566,280     TIC ui:7677 gradient:3923 flat:186 photo:184
+ 4 Screenshot 2026-03-13 at 8.00.34 PM   1915x1024    886,734    850,301    913,326    645,754 WebP-LL ui:942 gradient:866 photo:66 flat:46
+ 5 Screenshot 2026-03-13 at 8.01.04 PM   1915x1024    345,914    336,980    340,830    241,812 WebP-LL flat:1362 ui:242 gradient:192 photo:124
+ 6 Screenshot 2026-03-13 at 8.04.20 PM   1915x1024    840,276    801,889    863,984    608,840 WebP-LL ui:1073 gradient:720 flat:75 photo:52
+ 7 Screenshot 2026-04-02 at 5.27.09 PM   1920x1080  1,461,711  1,227,005  1,087,810  1,084,508 WebP-LL gradient:658 photo:498 flat:489 ui:395
+ 8 Screenshot 2026-04-02 at 6.01.23 PM   1920x1080    224,363    122,035    267,709     61,886 WebP-LL flat:915 photo:798 ui:307 gradient:20
+ 9 Screenshot 2026-04-02 at 6.29.04 PM   1920x1080    205,306    159,157    287,043     57,714 WebP-LL flat:1397 photo:413 ui:197 gradient:33
+10 Screenshot 2026-04-02 at 6.31.57 PM   1920x1080    158,403    134,166    173,830     85,956 WebP-LL flat:1540 ui:292 photo:159 gradient:49
+11 Screenshot 2026-04-02 at 6.35.05 PM   1920x1080  1,223,595  1,204,677  1,158,693    829,206 WebP-LL photo:787 gradient:494 flat:476 ui:283
+12 Screenshot 2026-04-02 at 7.19.05 PM   1920x1080    287,841    292,920    313,290    202,150 WebP-LL flat:1313 ui:388 photo:251 gradient:88
+13 Screenshot_20260402-131813.png        864x1939    107,455     76,155    109,386     40,524 WebP-LL flat:1329 ui:169 photo:99 gradient:50
+14 bash_gnome_terminal.png               1024x 768    105,645    187,841    193,473     48,606 WebP-LL flat:402 photo:180 gradient:102 ui:84
+15 dark_code_editor.png                  1920x1080      9,466      7,511     42,925        780 WebP-LL flat:2040
+16 diagram_whiteboard.png                1920x1080      9,035      7,478     32,040        840 WebP-LL flat:2040
+17 docs_with_code.png                    1920x1080      9,074      7,250     76,964        752 WebP-LL flat:2040
+18 game_ui.png                           1920x1080      8,784      7,357    113,997      1,482 WebP-LL ui:2008 flat:32
+19 iphone_messages.png                   1170x2532     13,479     10,494     69,368      1,134 WebP-LL flat:2960
+20 light_web_page.png                    1920x1080      8,905      4,746     40,244        756 WebP-LL flat:2040
+21 photo_editor_ui.png                   1920x1080  1,130,495    666,618    856,944    694,182     TIC gradient:1176 flat:864
+22 retina_macos.png                      2560x1600     15,087      6,251     46,024        944 WebP-LL flat:3998 ui:2
+23 spreadsheet.png                       1920x1080     12,646     10,348     96,758      2,324 WebP-LL flat:2035 ui:5
+24 terminal_green_on_black.png           1920x1080      8,096      6,564     40,239        614 WebP-LL flat:2040
+25 tree-of-life.png                      1500x1500     45,747     22,110     40,370     13,042 WebP-LL flat:2049 ui:138 photo:22
+26 ubuntu_22_desktop.png                 1920x1080  1,501,862  1,473,586  1,661,664  1,151,292 WebP-LL ui:1227 gradient:774 photo:29 flat:10
+27 vlcsnap-2026-03-10-17h12m34s408.png   3840x2160  7,010,231  4,820,302  5,895,159  4,528,908 WebP-LL gradient:6159 ui:1871 photo:125 flat:5
+28 vscode_1080p.png                      1920x1080    240,441    311,004    390,722     93,358 WebP-LL flat:1219 ui:408 photo:322 gradient:91
+
+WINS: {'WebP-LL': 25, 'Mosaic': 1, 'TIC': 2}
+
+Mosaic approach: try ALL block strategies, pick smallest per block.
+If Mosaic beats TIC, it means block-adaptive helps.
+If Mosaic beats WebP-LL, we have a genuine advance.

@@ -13,6 +13,14 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-03-S26 — 2026-04-03: Block-Adaptive Mosaic Codec v2→v4
+
+**Account:** opus
+**Continuation of:** opus-2026-04-02-S25
+**Summary:** Built and iterated a block-adaptive image codec through 4 versions. v2: quadtree sub-block decomposition with 6 encoding strategies (11/31 wins vs WebP). v3: strip merging + full-image fallback + zstd-19 (17/31 wins). v4: multi-backend (brotli-11, lzma-9e, zstd-19, zlib-9) × multi-predictor (MED, Paeth, Left, Up) × multi-color-transform × optional 4:2:0 chroma subsampling × optional palette encoding. Final: 26/31 wins vs WebP-LL, 50.4% of PNG aggregate, 74.2% of WebP aggregate. The codec automatically selects from ~20 encoding pipelines per image. Key innovations: palette+brotli for UI screenshots (7-11% of PNG), 4:2:0+MED+brotli for medium photos (48-56% of PNG), raw+lzma for code editors.
+**New contributions:** mosaic_v2.py, mosaic_v3.py, mosaic_v4.py, benchmark results
+**Unresolved threads:** 5 images still lose to WebP (terminal text patterns, tree-of-life palette image). Block-adaptive path could be improved for mixed-content images. Encode speed is slow (brotli/lzma) — needs C implementation for production.
+
 ## opus-2026-04-02-S2 — 2026-04-02: Full-Size Benchmarks + Ablation Study
 
 **Account:** opus

@@ -1,0 +1,49 @@
+========================================================================================================================
+  TIC-Mosaic v2: Quadtree Block-Adaptive Compression
+  Blocks: 64→32→16→8 quadtree | 6 encoding strategies | Always picks smallest
+========================================================================================================================
+
+Loaded 31 images
+
+ # Image                                              WxH        PNG      TIC-A    Mosaic2    WebP-LL     Best Strategies
+--------------------------------------------------------------------------------------------------------------------------------------------
+ 1 IMG_1560.PNG                               1170x2532    107,404     73,993     75,104     27,892  WebP-LL [ 886 blocks] flat:593 raw_defl:27 sub420_d:266
+ 2 PHOTO:IMG_1470.jpg                         1170x1786  1,512,938  1,500,590    965,456  1,353,630  Mosaic2 [ 544 blocks] flat:107 raw_defl:3 sub420_d:434
+ 3 PHOTO:IMG_20260319_211730_713.jpg          4000x3000 20,308,759 12,906,750 10,651,668 13,153,030  Mosaic2 [2973 blocks] sub420_d:2973
+ 4 PHOTO:IMG_20260402_110843_594.jpg          4000x3000 17,862,557 11,432,844  9,943,890 11,854,844  Mosaic2 [3024 blocks] sub420_d:3024
+ 5 PHOTO:IMG_2811.jpg                         5184x3456 29,762,128 22,898,106 15,986,999 21,568,070  Mosaic2 [4986 blocks] sub420_d:4986
+ 6 PHOTO:IMG_8669.jpg                         4032x3024  8,799,105  5,498,551  5,999,519  5,566,280    TIC-A [3249 blocks] sub420_d:3249
+ 7 Screenshot 2026-03-13 at 8.00.34 PM.png    1915x1024    886,734    850,301    572,931    645,754  Mosaic2 [ 519 blocks] flat:5 raw_defl:28 sub420_d:486
+ 8 Screenshot 2026-03-13 at 8.01.04 PM.png    1915x1024    345,914    336,980    219,149    241,812  Mosaic2 [ 549 blocks] flat:300 raw_defl:68 sub420_d:181
+ 9 Screenshot 2026-03-13 at 8.04.20 PM.png    1915x1024    840,276    801,889    529,355    608,840  Mosaic2 [ 510 blocks] flat:14 deflate_:1 raw_defl:29 sub420_d:466
+10 Screenshot 2026-04-02 at 5.27.09 PM.png    1920x1080  1,461,711  1,227,005    840,367  1,084,508  Mosaic2 [ 636 blocks] flat:56 raw_defl:28 sub420_d:552
+11 Screenshot 2026-04-02 at 6.01.23 PM.png    1920x1080    224,363    122,035    209,701     61,886  WebP-LL [ 543 blocks] flat:170 deflate_:2 raw_defl:5 sub420_d:366
+12 Screenshot 2026-04-02 at 6.29.04 PM.png    1920x1080    205,306    159,157    181,824     57,714  WebP-LL [ 543 blocks] flat:137 deflate_:2 raw_defl:152 sub420_d:252
+13 Screenshot 2026-04-02 at 6.31.57 PM.png    1920x1080    158,403    134,166    112,274     85,956  WebP-LL [ 549 blocks] flat:290 deflate_:1 deflate_:1 raw_defl:71 sub420_d:186
+14 Screenshot 2026-04-02 at 6.35.05 PM.png    1920x1080  1,223,595  1,204,677    782,859    829,206  Mosaic2 [ 639 blocks] flat:35 deflate_:1 raw_defl:172 sub420_d:431
+15 Screenshot 2026-04-02 at 7.19.05 PM.png    1920x1080    287,841    292,920    185,873    202,150  Mosaic2 [ 531 blocks] flat:214 raw_defl:96 sub420_d:221
+16 Screenshot_20260402-131813.png             864x1939    107,455     76,155     78,268     40,524  WebP-LL [ 467 blocks] flat:220 raw_defl:34 sub420_d:213
+17 bash_gnome_terminal.png                    1024x 768    105,645    187,841     92,357     48,606  WebP-LL [ 216 blocks] flat:105 raw_defl:99 sub420_d:12
+18 dark_code_editor.png                       1920x1080      9,466      7,511     15,535        780  WebP-LL [ 516 blocks] flat:316 deflate_:1 deflate_:1 raw_defl:140 sub420_d:58
+19 diagram_whiteboard.png                     1920x1080      9,035      7,478     12,288        840  WebP-LL [ 522 blocks] flat:376 deflate_:3 deflate_:16 raw_defl:89 sub420_d:38
+20 docs_with_code.png                         1920x1080      9,074      7,250     25,334        752  WebP-LL [ 510 blocks] flat:99 raw_defl:286 sub420_d:125
+21 game_ui.png                                1920x1080      8,784      7,357     38,744      1,482  WebP-LL [ 510 blocks] deflate_:2 deflate_:1 gradient:30 raw_defl:474 sub420_d:3
+22 iphone_messages.png                        1170x2532     13,479     10,494     23,523      1,134  WebP-LL [ 760 blocks] flat:417 deflate_:22 deflate_:13 raw_defl:235 sub420_d:73
+23 light_web_page.png                         1920x1080      8,905      4,746     13,794        756  WebP-LL [ 510 blocks] flat:282 raw_defl:36 sub420_d:192
+24 photo_editor_ui.png                        1920x1080  1,130,495    666,618    763,301    694,182    TIC-A [ 537 blocks] flat:140 raw_defl:25 sub420_d:372
+25 retina_macos.png                           2560x1600     15,087      6,251     14,593        944  WebP-LL [1000 blocks] flat:844 raw_defl:2 sub420_d:154
+26 spreadsheet.png                            1920x1080     12,646     10,348     36,007      2,324  WebP-LL [ 510 blocks] deflate_:69 deflate_:7 raw_defl:84 sub420_d:350
+27 terminal_green_on_black.png                1920x1080      8,096      6,564     13,654        614  WebP-LL [ 510 blocks] flat:318 raw_defl:39 sub420_d:153
+28 tree-of-life.png                           1500x1500     45,747     22,110     25,081     13,042  WebP-LL [ 594 blocks] flat:533 sub420_d:61
+29 ubuntu_22_desktop.png                      1920x1080  1,501,862  1,473,586    757,963  1,151,292  Mosaic2 [ 510 blocks] sub420_d:510
+30 vlcsnap-2026-03-10-17h12m34s408.png        3840x2160  7,010,231  4,820,302  4,696,823  4,528,908  WebP-LL [2055 blocks] raw_defl:124 sub420_d:1931
+31 vscode_1080p.png                           1920x1080    240,441    311,004    156,753     93,358  WebP-LL [ 558 blocks] flat:218 deflate_:1 raw_defl:247 sub420_d:92
+--------------------------------------------------------------------------------------------------------------------------------------------
+   TOTALS                                                 94,223,482 67,065,579 54,020,987 63,921,110
+
+   vs PNG:  Mosaic2 = 57.3%  |  WebP-LL = 67.8%  |  TIC-A = 71.2%
+   vs WebP: Mosaic2 = 84.5%
+
+   WINS: {'WebP-LL': 18, 'Mosaic2': 11, 'TIC-A': 2}
+
+   Strategy IDs: 0=flat, 1=deflate_planar, 2=deflate_interleaved, 3=gradient_poly, 4=raw_deflate, 5=sub420_deflate
