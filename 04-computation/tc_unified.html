@@ -522,8 +522,42 @@ async function doCompress(cv,w,h,file){
   const rawSize=w*h*3;
   const fmts=getEnabledFormats();
 
-  /* Render the shell immediately — results stream in as encoders finish */
+  /* All format slots defined upfront — greyed out until each finishes */
+  const SLOTS=[
+    {id:'tic',name:'TIC (ours)',color:'f-tic',lossless:true},
+    {id:'png',name:'PNG',color:'f-png',lossless:true},
+    {id:'qoi',name:'QOI',color:'f-gif',lossless:true},
+    {id:'webpll',name:'WebP (q100)',color:'f-webp',lossless:true},
+    {id:'avifll',name:'AVIF (q100)',color:'f-webp',lossless:true},
+    {id:'ticdefl',name:'TIC-deflate',color:'f-tic',lossless:true},
+    {id:'deflraw',name:'Deflate (raw)',color:'f-bmp',lossless:true},
+    {id:'jpeg',name:'JPEG (q95)',color:'f-jpg',lossless:false},
+    {id:'webp',name:'WebP (q90)',color:'f-webp',lossless:false},
+    {id:'entropy',name:'Entropy bound',color:'f-bmp',lossless:true,isRef:true},
+    {id:'bmp',name:'BMP',color:'f-bmp',lossless:true,isRef:true},
+  ];
+
+  /* Visibility state — user can toggle each format */
+  if(!window._visible)window._visible={};
+  SLOTS.forEach(s=>{if(window._visible[s.id]===undefined)window._visible[s.id]=!s.isRef;});
+
+  /* Render full layout immediately — all slots greyed out */
   const rawKB=rawSize>1e6?(rawSize/1e6).toFixed(1)+'MB':(rawSize/1024).toFixed(0)+'KB';
+  let slotHTML='';
+  SLOTS.forEach(s=>{
+    const vis=window._visible[s.id];
+    slotHTML+=`<div id="slot_${s.id}" style="margin:3px 0;opacity:.3;${vis?'':'display:none;'}" class="result-row">
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:.75em;margin-bottom:1px">
+        <span>
+          <input type="checkbox" ${vis?'checked':''} onchange="toggleVis('${s.id}',this.checked)" style="accent-color:var(--green);vertical-align:middle;margin-right:3px">
+          ${s.id==='tic'?'<strong style="color:var(--green)">'+s.name+'</strong>':s.name}
+        </span>
+        <span id="sz_${s.id}" style="color:var(--dim)">encoding...</span>
+      </div>
+      <div class="bar"><div id="bar_${s.id}" class="fill ${s.color}" style="width:0%;transition:width .7s ease-out"></div></div>
+    </div>`;
+  });
+
   out.innerHTML=`<div class="card">
     <div class="row">
       <div style="text-align:center;max-width:500px">
@@ -531,99 +565,64 @@ async function doCompress(cv,w,h,file){
         <p style="font-size:.7em;color:var(--dim);margin-top:3px">${w}x${h} &middot; ${rawKB} raw &middot; ${file.name.substring(0,30)}
         <button class="bs" onclick="recompress()" style="margin-left:6px">Re-compress</button></p>
       </div>
-      <div style="flex:1.3;min-width:260px">
-        <div id="resultRows"></div>
-      </div>
+      <div style="flex:1.3;min-width:260px">${slotHTML}</div>
     </div>
   </div>
   <div class="card" id="hexCard" style="display:none"></div>`;
 
-  /* Draw the image immediately */
   document.getElementById('prevCv').getContext('2d').drawImage(cv,0,0);
 
-  /* State for streaming results */
-  const allResults=[];
-  const resultDiv=document.getElementById('resultRows');
+  /* State */
+  const results={};/* id → result */
   window._fmts=[];window._w=w;window._h=h;
-
-  function addResult(r){
-    if(!r||(!r.size&&!r.unsupported&&!r.isRef))return;
-    allResults.push(r);
-    if(r.data)window._fmts.push(r);
-    renderResults();
-  }
 
   function fmtSz(sz){return sz>1e6?(sz/1e6).toFixed(2)+'MB':sz>1024?(sz/1024).toFixed(1)+'KB':sz+'B';}
 
-  function renderResults(){
-    const refs=allResults.filter(f=>f.isRef);
-    const lossless=allResults.filter(f=>f.lossless&&!f.isRef&&f.size>0).sort((a,b)=>a.size-b.size);
-    const lossy=allResults.filter(f=>!f.lossless&&f.size>0).sort((a,b)=>a.size-b.size);
-    const unsup=allResults.filter(f=>f.unsupported&&!f.isRef);
-    const best=lossless.length>0?lossless[0].size:1;
-    const barMax=Math.max(...[...lossless,...lossy].filter(f=>f.size>0&&f.name!=='BMP').map(f=>f.size),1);
+  /* Called when an encoder finishes — lights up its slot */
+  function finishSlot(id,r){
+    if(!r)return;
+    results[id]=r;
+    if(r.data)window._fmts.push(r);
+    const slot=document.getElementById('slot_'+id);
+    const szEl=document.getElementById('sz_'+id);
+    const barEl=document.getElementById('bar_'+id);
+    if(!slot)return;
 
-    let h='';
+    if(r.unsupported||r.size===0){
+      slot.style.opacity='.25';
+      if(szEl)szEl.innerHTML=`<span style="color:var(--orange);font-size:.9em">${r.note||'not supported'}</span>`;
+      return;
+    }
 
-    /* Lossless table with animated bars */
+    /* Light it up */
+    slot.style.opacity='1';
+    const bpp=(8*r.size/(w*h)).toFixed(2);
+    if(szEl)szEl.innerHTML=`<strong>${fmtSz(r.size)}</strong> &middot; ${bpp}bpp${r.ms?' &middot; '+r.ms.toFixed(0)+'ms':''}`;
+
+    /* Animate bar — scale relative to all finished non-ref non-BMP results */
+    const allSizes=Object.values(results).filter(x=>x.size>0&&!x.isRef&&x.name!=='BMP').map(x=>x.size);
+    const barMax=Math.max(...allSizes,1);
+    /* Re-scale ALL visible bars */
+    for(const [oid,or] of Object.entries(results)){
+      if(!or.size||or.isRef)continue;
+      const bel=document.getElementById('bar_'+oid);
+      if(bel)bel.style.width=Math.max(2,or.size/barMax*100)+'%';
+    }
+    if(barEl&&r.size){barEl.style.width=Math.max(2,r.size/barMax*100)+'%';barEl.textContent=fmtSz(r.size);}
+
+    /* Update rankings on all lossless slots */
+    const lossless=Object.entries(results).filter(([k,v])=>v.lossless&&!v.isRef&&v.size>0).sort((a,b)=>a[1].size-b[1].size);
     if(lossless.length>0){
-      h+=`<div style="margin-bottom:4px"><strong style="color:var(--green);font-size:.8em">Lossless</strong></div>`;
-      lossless.forEach((f,i)=>{
-        const pct=Math.max(2,f.size/barMax*100);
-        const bpp=(8*f.size/(w*window._h)).toFixed(2);
-        const isTic=f.name.includes('TIC (ours)');
-        const rank=i===0?'<span class="win" style="font-size:.7em">BEST</span>'
-          :`<span style="color:var(--dim);font-size:.7em">+${((f.size/best-1)*100).toFixed(1)}%</span>`;
-        h+=`<div style="margin:3px 0;${isTic?'background:#0d1117;border-radius:6px;padding:2px 6px;':''}" class="result-row">
-          <div style="display:flex;justify-content:space-between;font-size:.75em;margin-bottom:1px">
-            <span>${isTic?'<strong style="color:var(--green)">'+f.name+'</strong>':f.name} <span style="color:var(--dim)">${f.note||''}</span></span>
-            <span><strong>${fmtSz(f.size)}</strong> &middot; ${bpp}bpp ${rank}</span>
-          </div>
-          <div class="bar"><div class="fill ${f.color}" style="width:${pct}%;transition:width .6s">${fmtSz(f.size)}</div></div>
-        </div>`;
+      const best=lossless[0][1].size;
+      lossless.forEach(([k,v],i)=>{
+        const szE=document.getElementById('sz_'+k);
+        if(!szE)return;
+        const bppV=(8*v.size/(w*h)).toFixed(2);
+        const rank=i===0?'<span class="win" style="font-size:.8em">BEST</span>'
+          :`<span style="color:var(--dim);font-size:.8em">+${((v.size/best-1)*100).toFixed(1)}%</span>`;
+        szE.innerHTML=`<strong>${fmtSz(v.size)}</strong> &middot; ${bppV}bpp ${rank}${v.ms?' &middot; '+v.ms.toFixed(0)+'ms':''}`;
       });
     }
-
-    /* References (entropy, JPEG-XL etc) */
-    refs.filter(f=>f.size>0).forEach(f=>{
-      const bpp=(8*f.size/(w*window._h)).toFixed(2);
-      h+=`<div style="margin:2px 0;opacity:.5;font-size:.72em;color:var(--dim)">
-        — ${f.name}: ${fmtSz(f.size)} (${bpp}bpp) <span style="font-style:italic">${f.note||''}</span></div>`;
-    });
-    refs.filter(f=>!f.size&&f.note).forEach(f=>{
-      h+=`<div style="margin:2px 0;opacity:.4;font-size:.68em;color:var(--dim);font-style:italic">
-        — ${f.name}: ${f.note}</div>`;
-    });
-
-    /* Unsupported */
-    unsup.forEach(f=>{
-      h+=`<div style="margin:2px 0;opacity:.4;font-size:.68em;color:var(--orange)">
-        ${f.name}: ${f.note}</div>`;
-    });
-
-    /* Lossy */
-    if(lossy.length>0){
-      h+=`<div style="margin-top:6px;margin-bottom:3px"><strong style="color:var(--orange);font-size:.75em">Lossy (for context)</strong></div>`;
-      lossy.forEach(f=>{
-        const pct=Math.max(2,f.size/barMax*100);
-        h+=`<div style="margin:2px 0;opacity:.7">
-          <div style="display:flex;justify-content:space-between;font-size:.72em;color:var(--muted)">
-            <span>${f.name}</span><span>${fmtSz(f.size)}</span>
-          </div>
-          <div class="bar" style="height:14px"><div class="fill ${f.color}" style="width:${pct}%;transition:width .6s;font-size:.6em">${fmtSz(f.size)}</div></div>
-        </div>`;
-      });
-    }
-
-    /* Still encoding indicator */
-    const done=allResults.length;
-    const total=13;/* approximate total tasks */
-    if(done<total-2){
-      h+=`<div style="margin-top:6px;font-size:.72em;color:var(--dim);text-align:center">
-        Encoding... ${done} formats done</div>`;
-    }
-
-    resultDiv.innerHTML=h;
 
     /* Update hex editor tabs */
     const hexCard=document.getElementById('hexCard');
@@ -724,27 +723,27 @@ async function doCompress(cv,w,h,file){
     return{name:label,size:r.size,color,lossless,data:r.data,note};
   }
 
-  /* Launch ALL encoders. Each calls addResult() when done — results stream in live. */
-  const fire=(p)=>p.then(r=>addResult(r)).catch(e=>null);
+  /* Fire all encoders — each lights up its slot when done */
+  const fire=(id,p)=>p.then(r=>{if(r)r.lossless=SLOTS.find(s=>s.id===id)?.lossless??true;finishSlot(id,r);}).catch(e=>null);
 
-  /* Instant references */
-  addResult({name:'JPEG-XL (est.)',size:0,color:'f-bmp',lossless:true,data:null,
-    note:'not in browsers — typically 5-15% smaller than WebP-LL',isRef:true,unsupported:true});
-  addResult({name:'JPEG-LS (est.)',size:0,color:'f-bmp',lossless:true,data:null,
-    note:'not in browsers — similar to TIC (MED+GR)',isRef:true,unsupported:true});
+  fire('png', runCanvas('png','PNG','png','f-png',true,'lossless'));
+  fire('webpll', runCanvas('webpll','WebP (q100)','webp-ll','f-webp',true,'q100 via canvas'));
+  fire('avifll', runCanvas('avifll','AVIF (q100)','avif-ll','f-webp',true,'q100 via canvas'));
+  fire('jpeg', runCanvas('jpeg','JPEG (q95)','jpeg','f-jpg',false,'lossy'));
+  fire('webp', runCanvas('webp','WebP (q90)','webp','f-webp',false,'lossy'));
+  fire('tic', runTIC());
+  fire('qoi', runQOI());
+  fire('ticdefl', runTICDeflate());
+  fire('deflraw', runDeflateRaw());
+  fire('entropy', runEntropy());
+  fire('bmp', runBMP());
+}
 
-  /* Fire all encoders — each updates the UI independently when done */
-  fire(runCanvas('png','PNG','png','f-png',true,'lossless'));
-  fire(runCanvas('webpll','WebP (q100)','webp-ll','f-webp',true,'q100 via canvas'));
-  fire(runCanvas('avifll','AVIF (q100)','avif-ll','f-webp',true,'q100 via canvas'));
-  fire(runCanvas('jpeg','JPEG (q95)','jpeg','f-jpg',false,'lossy'));
-  fire(runCanvas('webp','WebP (q90)','webp','f-webp',false,'lossy'));
-  fire(runTIC());
-  fire(runQOI());
-  fire(runTICDeflate());
-  fire(runDeflateRaw());
-  fire(runEntropy());
-  fire(runBMP());
+/* Toggle visibility of a format slot */
+function toggleVis(id,checked){
+  window._visible[id]=checked;
+  const slot=document.getElementById('slot_'+id);
+  if(slot)slot.style.display=checked?'':'none';
 }
 
 function switchTab(idx){
