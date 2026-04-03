@@ -91,7 +91,7 @@ footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
 <strong>TIC</strong> — color decorrelation (G, R-G, B-G) + MED prediction + adaptive encoding (Golomb-Rice or deflate per plane, picks smaller).<br>
 <strong>Comparison</strong> — real PNG, QOI, WebP (lossless), AVIF, JPEG, and BMP encoding done in-browser. All sizes are actual encoded bytes, not estimates.<br>
 <strong>Hex editing</strong> — edit any format's compressed bytes and decode to see how each format handles corruption.<br>
-<span style="color:var(--dim);font-size:.85em">JPEG-LS and JPEG-XL are not available in browsers. AVIF support varies (Chrome/Firefox yes, Safari limited). WebP q100 is near-lossless, not strictly lossless via canvas API.</span>
+<span style="color:var(--dim);font-size:.85em">WebP lossless (via Pillow, not canvas) is the strongest lossless competitor — it beats TIC on most images via LZ77 + 13 predictor modes + Huffman coding. JPEG-LS and JPEG-XL are not available in browsers. RAW camera files (.cr2, .dng) cannot be decoded in-browser — use the Python benchmark.</span>
 </div>
 </div>
 
@@ -376,20 +376,41 @@ fi.addEventListener('change',e=>{if(e.target.files[0])handleFile(e.target.files[
 
 function handleFile(file){
   if(!file)return;
+  const ext=file.name.split('.').pop().toLowerCase();
+  const isRaw=['cr2','nef','arw','dng','orf','rw2','raf'].includes(ext);
   const isVideo=file.type.startsWith('video/');
+
+  if(isRaw){
+    out.innerHTML=`<div class="card" style="text-align:center;color:var(--orange)">
+      <strong>RAW files (.${ext})</strong> cannot be decoded in the browser.<br>
+      <span style="color:var(--muted);font-size:.85em">Browsers only understand standard image formats (PNG, JPEG, WebP, GIF, BMP).<br>
+      To test RAW files, use the Python benchmark: <code>python3 bench_all_formats.py</code><br>
+      or convert to TIFF/PNG first with dcraw, Lightroom, or rawpy.</span></div>`;
+    return;
+  }
+
+  /* Show progress for large files */
+  if(file.size>2_000_000){
+    out.innerHTML=`<div class="card" style="text-align:center;color:var(--muted)">Loading ${(file.size/1e6).toFixed(1)}MB file...</div>`;
+  }
+
   if(isVideo){
     const url=URL.createObjectURL(file);const v=document.createElement('video');v.muted=true;v.preload='auto';
     v.onloadeddata=()=>{v.currentTime=Math.min(1,v.duration/2)};
     v.onseeked=()=>{let w=v.videoWidth,h=v.videoHeight;
       if(w>800||h>800){const s=800/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
       const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(v,0,0,w,h);
-      URL.revokeObjectURL(url);doCompress(cv,w,h,file);};v.src=url;
+      URL.revokeObjectURL(url);doCompress(cv,w,h,file);};
+    v.onerror=()=>{out.innerHTML=`<div class="card" style="color:var(--red)">Cannot decode this video format.</div>`;URL.revokeObjectURL(url);};
+    v.src=url;
   }else{
     const url=URL.createObjectURL(file);const img=new Image();
     img.onload=()=>{let w=img.width,h=img.height;
       if(w>800||h>800){const s=800/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
       const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(img,0,0,w,h);
-      URL.revokeObjectURL(url);doCompress(cv,w,h,file);};img.src=url;
+      URL.revokeObjectURL(url);doCompress(cv,w,h,file);};
+    img.onerror=()=>{out.innerHTML=`<div class="card" style="color:var(--red)">Cannot decode this file. Try PNG, JPG, WebP, GIF, or BMP.</div>`;URL.revokeObjectURL(url);};
+    img.src=url;
   }
 }
 
