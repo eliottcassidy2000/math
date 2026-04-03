@@ -84,14 +84,33 @@ footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
 </div>
 </div>
 
+<div class="card" id="controls" style="display:none">
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+<strong style="color:var(--blue);font-size:.85em">Formats</strong>
+<label class="bs active" style="cursor:pointer"><input type="checkbox" data-fmt="tic" checked onchange="updateFmt(this)"> TIC</label>
+<label class="bs active" style="cursor:pointer"><input type="checkbox" data-fmt="png" checked onchange="updateFmt(this)"> PNG</label>
+<label class="bs active" style="cursor:pointer"><input type="checkbox" data-fmt="qoi" checked onchange="updateFmt(this)"> QOI</label>
+<label class="bs active" style="cursor:pointer"><input type="checkbox" data-fmt="webpll" checked onchange="updateFmt(this)"> WebP lossless</label>
+<label class="bs" style="cursor:pointer"><input type="checkbox" data-fmt="avifll" onchange="updateFmt(this)"> AVIF lossless</label>
+<label class="bs" style="cursor:pointer"><input type="checkbox" data-fmt="jpeg" onchange="updateFmt(this)"> JPEG q95</label>
+<label class="bs" style="cursor:pointer"><input type="checkbox" data-fmt="webp" onchange="updateFmt(this)"> WebP q90</label>
+<label class="bs" style="cursor:pointer"><input type="checkbox" data-fmt="bmp" onchange="updateFmt(this)"> BMP</label>
+<label class="bs active" style="cursor:pointer"><input type="checkbox" data-fmt="entropy" checked onchange="updateFmt(this)"> Entropy bound</label>
+</div>
+<div style="display:flex;align-items:center;gap:10px;margin-top:6px;flex-wrap:wrap">
+<strong style="color:var(--blue);font-size:.85em">Resolution</strong>
+<label class="bs active" style="cursor:pointer"><input type="radio" name="res" value="0" checked> Full size</label>
+<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="2048"> Max 2048px</label>
+<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="1024"> Max 1024px</label>
+<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="512"> Max 512px</label>
+<span id="resInfo" style="font-size:.72em;color:var(--dim)"></span>
+</div>
+</div>
+
 <div id="out"></div>
 
-<div class="card" style="font-size:.82em;color:var(--muted);line-height:1.5">
-<strong style="color:var(--blue)">How it works</strong><br>
-<strong>TIC</strong> — color decorrelation (G, R-G, B-G) + MED prediction + adaptive encoding (Golomb-Rice or deflate per plane, picks smaller).<br>
-<strong>Comparison</strong> — real PNG, QOI, WebP (lossless), AVIF, JPEG, and BMP encoding done in-browser. All sizes are actual encoded bytes, not estimates.<br>
-<strong>Hex editing</strong> — edit any format's compressed bytes and decode to see how each format handles corruption.<br>
-<span style="color:var(--dim);font-size:.85em">WebP lossless (via Pillow, not canvas) is the strongest lossless competitor — it beats TIC on most images via LZ77 + 13 predictor modes + Huffman coding. JPEG-LS and JPEG-XL are not available in browsers. RAW camera files (.cr2, .dng) cannot be decoded in-browser — use the Python benchmark.</span>
+<div class="card" style="font-size:.8em;color:var(--muted);line-height:1.5">
+<strong style="color:var(--blue)">How it works</strong> — TIC uses color decorrelation + MED prediction + adaptive Golomb-Rice/deflate. All other formats use the browser's native encoders. Sizes are actual bytes, not estimates. Edit hex to see how each format handles corruption. CR2/DNG/NEF: embedded JPEG preview is extracted and compressed. <span style="color:var(--dim)">JPEG-LS and JPEG-XL not available in browsers.</span>
 </div>
 </div>
 
@@ -368,7 +387,25 @@ async function encodeAs(cv,fmt,quality){
 /* ================================================================
  * MAIN UI
  * ================================================================ */
-const dz=document.getElementById('dz'),fi=document.getElementById('fi'),out=document.getElementById('out');
+const dz=document.getElementById('dz'),fi=document.getElementById('fi'),out=document.getElementById('out'),ctrlPanel=document.getElementById('controls');
+
+/* Format toggle state */
+function getEnabledFormats(){
+  const fmts={};
+  document.querySelectorAll('#controls input[data-fmt]').forEach(cb=>{fmts[cb.dataset.fmt]=cb.checked;});
+  return fmts;
+}
+function updateFmt(el){el.parentElement.classList.toggle('active',el.checked);}
+function getMaxRes(){
+  const v=document.querySelector('input[name="res"]:checked');
+  return v?parseInt(v.value):0;
+}
+function scaleDown(w,h,maxDim){
+  if(!maxDim||maxDim===0)return[w,h];
+  if(w<=maxDim&&h<=maxDim)return[w,h];
+  const s=maxDim/Math.max(w,h);
+  return[Math.round(w*s),Math.round(h*s)];
+}
 dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('over')});
 dz.addEventListener('dragleave',()=>dz.classList.remove('over'));
 dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('over');handleFile(e.dataTransfer.files[0])});
@@ -440,7 +477,7 @@ async function handleFile(file){
     const url=URL.createObjectURL(file);const v=document.createElement('video');v.muted=true;v.preload='auto';
     v.onloadeddata=()=>{v.currentTime=Math.min(1,v.duration/2)};
     v.onseeked=()=>{let w=v.videoWidth,h=v.videoHeight;
-      if(w>800||h>800){const s=800/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
+      [w,h]=scaleDown(w,h,getMaxRes())
       const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(v,0,0,w,h);
       URL.revokeObjectURL(url);doCompress(cv,w,h,file);};
     v.onerror=()=>{out.innerHTML=`<div class="card" style="color:var(--red)">Cannot decode this video format.</div>`;URL.revokeObjectURL(url);};
@@ -448,7 +485,7 @@ async function handleFile(file){
   }else{
     const url=URL.createObjectURL(file);const img=new Image();
     img.onload=()=>{let w=img.width,h=img.height;
-      if(w>800||h>800){const s=800/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s)}
+      [w,h]=scaleDown(w,h,getMaxRes())
       const cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(img,0,0,w,h);
       URL.revokeObjectURL(url);doCompress(cv,w,h,file);};
     img.onerror=()=>{out.innerHTML=`<div class="card" style="color:var(--red)">Cannot decode this file. Try PNG, JPG, WebP, GIF, or BMP.</div>`;URL.revokeObjectURL(url);};
@@ -456,103 +493,114 @@ async function handleFile(file){
   }
 }
 
+/* Store last image for re-compression with different settings */
+let lastFile=null;
+function recompress(){if(lastFile)handleFile(lastFile);}
+
 async function doCompress(cv,w,h,file){
+  lastFile=file;
+  ctrlPanel.style.display='block';
+  const resInfo=document.getElementById('resInfo');
+  if(resInfo)resInfo.textContent=`(working at ${w}x${h} = ${(w*h/1e6).toFixed(1)}M pixels)`;
   const imgData=cv.getContext('2d').getImageData(0,0,w,h);
   const rawSize=w*h*3;
+  const fmts=getEnabledFormats();
 
   out.innerHTML=`<div class="card" style="text-align:center;color:var(--muted)">
     <div style="font-size:1.1em;margin-bottom:4px">Compressing...</div>
     <div id="progressMsg" style="font-size:.78em">TIC adaptive encoder running...</div></div>`;
 
-  /* Encode with TIC (adaptive) */
-  const t0=performance.now();
-  const ticResult=await ticEncode(imgData,w,h);
-  const ticMs=performance.now()-t0;
-  const ticData=ticResult.data;
+  const pm=()=>document.getElementById('progressMsg');
+  const yield_=()=>new Promise(r=>setTimeout(r,0));
 
-  const pm=document.getElementById('progressMsg');
-  if(pm)pm.textContent='QOI encoding...';
-  await new Promise(r=>setTimeout(r,0));/* yield to update UI */
-  const qoiData=qoiEncode(imgData.data,w,h);
+  /* Each format runs independently, only if enabled */
+  let ticData=null,ticMs=0,ticResult=null,rtOk=false;
+  if(fmts.tic){
+    if(pm())pm().textContent=`TIC encoding ${w}x${h}...`;await yield_();
+    const t0=performance.now();
+    ticResult=await ticEncode(imgData,w,h);
+    ticMs=performance.now()-t0;ticData=ticResult.data;
+    /* Verify roundtrip */
+    try{const dec=await ticDecode(ticData);const orig=imgData.data;rtOk=true;
+      for(let i=0;i<w*h;i++){if(dec.rgba[i*4]!==orig[i*4]||dec.rgba[i*4+1]!==orig[i*4+1]||dec.rgba[i*4+2]!==orig[i*4+2]){rtOk=false;break;}}
+    }catch(e){rtOk=false;}
+  }
 
-  /* BMP encode (uncompressed baseline) */
-  const bmpData=bmpEncode(imgData.data,w,h);
+  let qoiData=null,qoiOk=false;
+  if(fmts.qoi){
+    if(pm())pm().textContent=`QOI encoding ${w}x${h}...`;await yield_();
+    qoiData=qoiEncode(imgData.data,w,h);
+    try{const qd=qoiDecode(qoiData);qoiOk=true;
+      for(let i=0;i<w*h;i++){if(qd.rgba[i*4]!==imgData.data[i*4]||qd.rgba[i*4+1]!==imgData.data[i*4+1]||qd.rgba[i*4+2]!==imgData.data[i*4+2]){qoiOk=false;break;}}
+    }catch(e){qoiOk=false;}
+  }
 
-  /* Entropy bound */
-  const entropyBytes=entropyBound(imgData.data,w,h);
+  let bmpData=null;
+  if(fmts.bmp){bmpData=bmpEncode(imgData.data,w,h);}
 
-  if(pm)pm.textContent='PNG, WebP, AVIF, JPEG encoding...';
-  await new Promise(r=>setTimeout(r,0));
-  /* Encode with standard formats via canvas */
-  const [pngBlob,jpgBlob,webpBlob,webpLLBlob,avifBlob,avifLLBlob]=await Promise.all([
-    encodeAs(cv,'png'),encodeAs(cv,'jpeg'),encodeAs(cv,'webp'),
-    encodeAs(cv,'webp-ll'),encodeAs(cv,'avif'),encodeAs(cv,'avif-ll')
-  ]);
+  let entropyBytes=0;
+  if(fmts.entropy){
+    if(pm())pm().textContent=`Computing entropy bound...`;await yield_();
+    entropyBytes=entropyBound(imgData.data,w,h);
+  }
 
-  /* Verify TIC roundtrip */
-  let rtOk=false;
-  try{
-    const dec=await ticDecode(ticData);
-    const orig=imgData.data;rtOk=true;
-    for(let i=0;i<w*h;i++){
-      if(dec.rgba[i*4]!==orig[i*4]||dec.rgba[i*4+1]!==orig[i*4+1]||dec.rgba[i*4+2]!==orig[i*4+2]){rtOk=false;break;}
-    }
-  }catch(e){rtOk=false;}
+  if(pm())pm().textContent='PNG / WebP / AVIF / JPEG...';await yield_();
+  const encTasks=[];
+  if(fmts.png)encTasks.push(encodeAs(cv,'png').then(r=>({k:'png',r})));
+  if(fmts.jpeg)encTasks.push(encodeAs(cv,'jpeg').then(r=>({k:'jpeg',r})));
+  if(fmts.webp)encTasks.push(encodeAs(cv,'webp').then(r=>({k:'webp',r})));
+  if(fmts.webpll)encTasks.push(encodeAs(cv,'webp-ll').then(r=>({k:'webpll',r})));
+  if(fmts.avifll)encTasks.push(encodeAs(cv,'avif-ll').then(r=>({k:'avifll',r})));
+  const canvasResults=await Promise.all(encTasks);
+  const cr={};canvasResults.forEach(({k,r})=>{cr[k]=r;});
 
-  /* Verify QOI roundtrip */
-  let qoiOk=false;
-  try{const qd=qoiDecode(qoiData);qoiOk=true;
-    for(let i=0;i<w*h;i++){if(qd.rgba[i*4]!==imgData.data[i*4]||qd.rgba[i*4+1]!==imgData.data[i*4+1]||qd.rgba[i*4+2]!==imgData.data[i*4+2]){qoiOk=false;break;}}
-  }catch(e){qoiOk=false;}
-
-  /* Build ALL results */
+  /* Build results */
   const formats=[];
   const add=(name,size,color,lossless,data,note)=>{if(size>0)formats.push({name,size,color,lossless,data,note:note||''})};
-  add('Entropy bound',entropyBytes,'f-bmp',true,null,'theoretical min');
-  add('TIC (ours)',ticData.length,'f-tic',true,ticData,rtOk?'lossless ✓':'RT FAIL');
-  add('PNG',pngBlob?pngBlob.size:0,'f-png',true,pngBlob?.data,'lossless');
-  add('QOI',qoiData.length,'f-gif',true,qoiData,qoiOk?'lossless ✓':'RT FAIL');
-  if(webpLLBlob)add('WebP (q100)',webpLLBlob.size,'f-webp',true,webpLLBlob.data,'near-lossless');
-  if(avifLLBlob&&avifLLBlob.size>50)add('AVIF (q100)',avifLLBlob.size,'f-webp',true,avifLLBlob.data,'near-lossless');
-  add('BMP',bmpData.length,'f-bmp',false,bmpData,'uncompressed');
-  if(jpgBlob)add('JPEG (q95)',jpgBlob.size,'f-jpg',false,jpgBlob.data,'lossy');
-  if(webpBlob)add('WebP (q90)',webpBlob.size,'f-webp',false,webpBlob.data,'lossy');
-  if(avifBlob&&avifBlob.size>50)add('AVIF (q80)',avifBlob.size,'f-webp',false,avifBlob.data,'lossy');
+  if(entropyBytes>0)add('Entropy bound',entropyBytes,'f-bmp',true,null,'theoretical min');
+  if(ticData)add('TIC (ours)',ticData.length,'f-tic',true,ticData,rtOk?'lossless ✓':'RT FAIL');
+  if(cr.png)add('PNG',cr.png.size,'f-png',true,cr.png.data,'lossless');
+  if(qoiData)add('QOI',qoiData.length,'f-gif',true,qoiData,qoiOk?'lossless ✓':'RT FAIL');
+  if(cr.webpll)add('WebP lossless',cr.webpll.size,'f-webp',true,cr.webpll.data,'lossless');
+  if(cr.avifll&&cr.avifll.size>50)add('AVIF lossless',cr.avifll.size,'f-webp',true,cr.avifll.data,'lossless');
+  if(bmpData)add('BMP',bmpData.length,'f-bmp',false,bmpData,'uncompressed');
+  if(cr.jpeg)add('JPEG (q95)',cr.jpeg.size,'f-jpg',false,cr.jpeg.data,'lossy');
+  if(cr.webp)add('WebP (q90)',cr.webp.size,'f-webp',false,cr.webp.data,'lossy');
 
-  const pngSize=pngBlob?pngBlob.size:rawSize;
-  const ticVsPng=(pngSize/ticData.length).toFixed(2);
-  const saving=Math.max(0,Math.round((1-ticData.length/pngSize)*100));
-  const mx=Math.max(...formats.map(f=>f.size));
+  const pngSize=cr.png?cr.png.size:rawSize;
+  const ticSz=ticData?ticData.length:0;
+  const ticVsPng=ticSz>0?(pngSize/ticSz).toFixed(2):'—';
+  const saving=ticSz>0?Math.max(0,Math.round((1-ticSz/pngSize)*100)):0;
 
   /* Backend info */
-  const fl=ticResult.flags;
-  const beNames=['GR','zlib'];
-  const backends=[beNames[fl&3],beNames[(fl>>2)&3],beNames[(fl>>4)&3]];
+  let backends=['—','—','—'];
+  if(ticResult){const fl=ticResult.flags;const bn=['GR','zlib'];backends=[bn[fl&3],bn[(fl>>2)&3],bn[(fl>>4)&3]];}
 
   /* Render */
   let html=`<div class="card fade">
     <div class="row">
-      <div style="text-align:center;max-width:420px">
-        <canvas id="prevCv" width="${w}" height="${h}"></canvas>
-        <p style="font-size:.7em;color:var(--dim);margin-top:3px">${w}x${h} from ${file.name.substring(0,30)} (${(file.size/1024).toFixed(0)}KB)</p>
+      <div style="text-align:center;max-width:500px">
+        <canvas id="prevCv" width="${w}" height="${h}" style="max-width:100%;max-height:500px"></canvas>
+        <p style="font-size:.7em;color:var(--dim);margin-top:3px">${w}x${h} from ${file.name.substring(0,30)} (${(file.size/1024).toFixed(0)}KB)
+        <button class="bs" onclick="recompress()" style="margin-left:6px">Re-compress with new settings</button></p>
       </div>
       <div style="flex:1.3;min-width:260px">
-        <div style="text-align:center;margin-bottom:6px">
-          <span class="badge">${saving}% smaller than PNG</span>
-          <span style="color:var(--green);font-weight:bold;margin-left:8px">${ticVsPng}x</span>
-          <span style="font-size:.75em;color:${rtOk?'var(--green)':'var(--red)'}">${rtOk?'lossless ✓':'ROUNDTRIP FAIL'}</span>
-        </div>
+        ${ticSz>0?`<div style="text-align:center;margin-bottom:6px">
+          <span class="badge">TIC: ${saving}% smaller than PNG</span>
+          <span style="color:var(--green);font-weight:bold;margin-left:6px">${ticVsPng}x</span>
+          <span style="font-size:.72em;color:${rtOk?'var(--green)':'var(--red)'};margin-left:4px">${rtOk?'lossless ✓':'RT FAIL'}</span>
+        </div>`:''}
         <div class="stats">
-          <div class="st"><div class="v">${ticMs.toFixed(0)}ms</div><div class="l">encode</div></div>
-          <div class="st"><div class="v">${(rawSize/1024).toFixed(0)}KB</div><div class="l">raw</div></div>
-          <div class="st"><div class="v">[${backends.join(',')}]</div><div class="l">backends</div></div>
+          ${ticSz>0?`<div class="st"><div class="v">${ticMs.toFixed(0)}ms</div><div class="l">TIC encode</div></div>`:''}
+          <div class="st"><div class="v">${rawSize>1e6?(rawSize/1e6).toFixed(1)+'MB':(rawSize/1024).toFixed(0)+'KB'}</div><div class="l">raw RGB</div></div>
+          ${ticSz>0?`<div class="st"><div class="v">[${backends.join(',')}]</div><div class="l">backends</div></div>`:''}
           <div class="st"><div class="v">${w*h>1e6?(w*h/1e6).toFixed(1)+'M':(w*h/1e3).toFixed(0)+'K'}</div><div class="l">pixels</div></div>
         </div>`;
 
   /* Sorted comparison table — lossless only for fair comparison */
   const lossless=formats.filter(f=>f.lossless).sort((a,b)=>a.size-b.size);
   const lossy=formats.filter(f=>!f.lossless).sort((a,b)=>a.size-b.size);
-  const smallest=lossless.length>0?lossless[0].size:ticData.length;
+  const smallest=lossless.length>0?lossless[0].size:(ticSz||rawSize);
 
   html+=`<div style="margin-top:8px"><strong style="color:var(--green);font-size:.82em">Lossless (apples-to-apples)</strong></div>`;
   html+=`<table><tr><th>#</th><th>Format</th><th style="text-align:right">Size</th><th style="text-align:right">bpp</th><th style="text-align:right">vs best</th><th>Note</th></tr>`;
