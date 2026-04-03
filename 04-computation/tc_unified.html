@@ -85,24 +85,12 @@ footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
 </div>
 
 <div class="card" id="controls" style="display:none">
-<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-<strong style="color:var(--blue);font-size:.85em">Formats</strong>
-<label class="bs active" style="cursor:pointer"><input type="checkbox" data-fmt="tic" checked onchange="updateFmt(this)"> TIC</label>
-<label class="bs active" style="cursor:pointer"><input type="checkbox" data-fmt="png" checked onchange="updateFmt(this)"> PNG</label>
-<label class="bs active" style="cursor:pointer"><input type="checkbox" data-fmt="qoi" checked onchange="updateFmt(this)"> QOI</label>
-<label class="bs active" style="cursor:pointer"><input type="checkbox" data-fmt="webpll" checked onchange="updateFmt(this)"> WebP lossless</label>
-<label class="bs" style="cursor:pointer"><input type="checkbox" data-fmt="avifll" onchange="updateFmt(this)"> AVIF lossless</label>
-<label class="bs" style="cursor:pointer"><input type="checkbox" data-fmt="jpeg" onchange="updateFmt(this)"> JPEG q95</label>
-<label class="bs" style="cursor:pointer"><input type="checkbox" data-fmt="webp" onchange="updateFmt(this)"> WebP q90</label>
-<label class="bs" style="cursor:pointer"><input type="checkbox" data-fmt="bmp" onchange="updateFmt(this)"> BMP</label>
-<label class="bs active" style="cursor:pointer"><input type="checkbox" data-fmt="entropy" checked onchange="updateFmt(this)"> Entropy bound</label>
-</div>
-<div style="display:flex;align-items:center;gap:10px;margin-top:6px;flex-wrap:wrap">
+<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
 <strong style="color:var(--blue);font-size:.85em">Resolution</strong>
-<label class="bs active" style="cursor:pointer"><input type="radio" name="res" value="0" checked onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');autoRecompress()"> Full size</label>
-<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="2048" onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');autoRecompress()"> 2048px</label>
-<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="1024" onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');autoRecompress()"> 1024px</label>
-<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="512" onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');autoRecompress()"> 512px</label>
+<label class="bs active" style="cursor:pointer"><input type="radio" name="res" value="0" checked onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');recompress()"> Full size</label>
+<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="2048" onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');recompress()"> 2048px</label>
+<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="1024" onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');recompress()"> 1024px</label>
+<label class="bs" style="cursor:pointer"><input type="radio" name="res" value="512" onchange="this.parentElement.parentElement.querySelectorAll('label').forEach(l=>l.classList.remove('active'));this.parentElement.classList.add('active');recompress()"> 512px</label>
 <span id="resInfo" style="font-size:.72em;color:var(--dim)"></span>
 </div>
 </div>
@@ -372,16 +360,19 @@ function entropyBound(rgba,w,h){
 /* ================================================================
  * MULTI-FORMAT ENCODE
  * ================================================================ */
-async function encodeAs(cv,fmt,quality){
-  return new Promise(resolve=>{
-    const type={'png':'image/png','jpeg':'image/jpeg','webp':'image/webp',
-                'webp-ll':'image/webp','avif':'image/avif','avif-ll':'image/avif'}[fmt]||'image/png';
-    const q=(fmt==='jpeg')?0.95:(fmt==='webp')?0.90:(fmt==='webp-ll')?1.0:(fmt==='avif')?0.80:(fmt==='avif-ll')?1.0:undefined;
-    cv.toBlob(blob=>{
-      if(!blob||blob.size<10)return resolve(null);
-      blob.arrayBuffer().then(ab=>resolve({data:new Uint8Array(ab),size:blob.size,type:fmt}));
-    },type,q);
-  });
+async function encodeAs(cv,fmt){
+  return Promise.race([
+    new Promise(resolve=>{
+      const type={'png':'image/png','jpeg':'image/jpeg','webp':'image/webp',
+                  'webp-ll':'image/webp','avif':'image/avif','avif-ll':'image/avif'}[fmt]||'image/png';
+      const q=(fmt==='jpeg')?0.95:(fmt==='webp')?0.90:(fmt==='webp-ll')?1.0:(fmt==='avif')?0.80:(fmt==='avif-ll')?1.0:undefined;
+      cv.toBlob(blob=>{
+        if(!blob||blob.size<10)return resolve(null);
+        blob.arrayBuffer().then(ab=>resolve({data:new Uint8Array(ab),size:blob.size,type:fmt}));
+      },type,q);
+    }),
+    new Promise(resolve=>setTimeout(()=>resolve(null),10000)) /* 10s timeout */
+  ]);
 }
 
 /* ================================================================
@@ -389,15 +380,10 @@ async function encodeAs(cv,fmt,quality){
  * ================================================================ */
 const dz=document.getElementById('dz'),fi=document.getElementById('fi'),out=document.getElementById('out'),ctrlPanel=document.getElementById('controls');
 
-/* Format toggle state */
+/* All formats always compute. User controls visibility only. */
 function getEnabledFormats(){
-  const fmts={};
-  document.querySelectorAll('#controls input[data-fmt]').forEach(cb=>{fmts[cb.dataset.fmt]=cb.checked;});
-  return fmts;
+  return{tic:true,png:true,qoi:true,webpll:true,avifll:true,jpeg:true,webp:true,bmp:true,entropy:true};
 }
-function updateFmt(el){el.parentElement.classList.toggle('active',el.checked);autoRecompress();}
-let _recompressTimer=null;
-function autoRecompress(){if(_recompressTimer)clearTimeout(_recompressTimer);_recompressTimer=setTimeout(()=>{if(lastFile)handleFile(lastFile);},600);}
 function getMaxRes(){
   const v=document.querySelector('input[name="res"]:checked');
   return v?parseInt(v.value):0;
@@ -429,7 +415,7 @@ async function handleFile(file){
       const url=URL.createObjectURL(file);
       const img=await Promise.race([
         new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=url;}),
-        new Promise((_,rej)=>setTimeout(()=>rej('timeout'),3000))
+        new Promise((_,rej)=>setTimeout(()=>rej('timeout'),5000))
       ]);
       URL.revokeObjectURL(url);
       let w=img.width,h=img.height;
@@ -437,14 +423,25 @@ async function handleFile(file){
       const cv=document.createElement('canvas');cv.width=w;cv.height=h;
       cv.getContext('2d').drawImage(img,0,0,w,h);
       doCompress(cv,w,h,file);return;
-    }catch(e){/* native failed — fall through to JPEG extraction */}
+    }catch(e){/* native failed */}
+
+    /* HEIC uses H.265 internally — NO extractable JPEG previews.
+     * The FFD8 markers in HEIC are HEVC NAL boundaries, not real JPEGs.
+     * Only Safari can decode HEIC natively. */
+    if(['heic','heif'].includes(ext)){
+      out.innerHTML=`<div class="card" style="text-align:center;color:var(--orange)">
+        <div style="font-size:1em;margin-bottom:4px">Cannot decode .${ext} in this browser</div>
+        <div style="font-size:.82em;color:var(--muted)">HEIC uses H.265 encoding. Only <strong>Safari</strong> (macOS/iOS) can decode it in-browser.<br>
+        On Chrome/Firefox, convert first: <code style="background:#21262d;padding:1px 5px;border-radius:3px">sips -s format jpeg photo.heic --out photo.jpg</code></div></div>`;
+      return;
+    }
 
     const em=document.getElementById('extractMsg');
-    if(em)em.textContent=`Native decode failed. Extracting embedded JPEG preview from ${(file.size/1e6).toFixed(1)}MB...`;
+    if(em)em.textContent=`Extracting embedded JPEG preview from ${(file.size/1e6).toFixed(1)}MB...`;
+    await new Promise(r=>setTimeout(r,0));
 
-    /* Fallback: extract embedded JPEG preview from the binary data.
-     * Works for CR2, DNG, NEF, HEIC — all contain JPEG thumbnails/previews.
-     * Strategy: scan for FFD8..FFD9 blobs, pick largest decodable one < 5MB. */
+    /* Fallback for RAW (CR2/DNG/NEF): extract embedded JPEG preview.
+     * These truly contain standalone JPEG previews, unlike HEIC. */
     const buf=await file.arrayBuffer();
     const u8=new Uint8Array(buf);
     const jpegs=[];
