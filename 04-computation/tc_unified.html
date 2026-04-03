@@ -78,7 +78,7 @@ footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
 <div class="drop" id="dz">
 <div style="font-size:2.4em;margin-bottom:4px">📷 🖼️ 🎬</div>
 <p style="font-size:.95em"><strong>Drop any image or video</strong></p>
-<p style="color:var(--muted);margin-top:2px;font-size:.8em">PNG, JPG, HEIC, WebP, BMP, GIF, TIFF, MP4, WebM — any size</p>
+<p style="color:var(--muted);margin-top:2px;font-size:.8em">PNG, JPG, HEIC, WebP, GIF, BMP, CR2, DNG, NEF, MP4 — any size</p>
 <p style="color:var(--dim);margin-top:4px;font-size:.68em">100% in-browser. Nothing uploaded. The compressed bytes are real — edit them.</p>
 <input type="file" id="fi" accept="image/*,video/*,.gif,.bmp,.tiff,.raw,.cr2,.dng,.heic,.heif">
 </div>
@@ -374,7 +374,7 @@ dz.addEventListener('dragleave',()=>dz.classList.remove('over'));
 dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('over');handleFile(e.dataTransfer.files[0])});
 fi.addEventListener('change',e=>{if(e.target.files[0])handleFile(e.target.files[0])});
 
-function handleFile(file){
+async function handleFile(file){
   if(!file)return;
   const ext=file.name.split('.').pop().toLowerCase();
   const isRaw=['cr2','nef','arw','dng','orf','rw2','raf'].includes(ext);
@@ -382,10 +382,47 @@ function handleFile(file){
   const isVideo=file.type.startsWith('video/');
 
   if(isRaw){
-    out.innerHTML=`<div class="card" style="text-align:center;color:var(--orange)">
-      <strong>RAW files (.${ext})</strong> cannot be decoded in the browser.<br>
-      <span style="color:var(--muted);font-size:.85em">Convert to TIFF or PNG first (using Lightroom, rawpy, or dcraw), then drop the converted file here.<br>
-      Or use the Python benchmark: <code style="background:#21262d;padding:2px 6px;border-radius:4px">python3 04-computation/tic/bench_all_formats.py</code></span></div>`;
+    out.innerHTML=`<div class="card" style="text-align:center;color:var(--muted)">
+      <div style="font-size:1em;margin-bottom:4px">Extracting preview from .${ext} file...</div>
+      <div style="font-size:.78em">RAW files contain embedded JPEG previews. Scanning ${(file.size/1e6).toFixed(1)}MB...</div></div>`;
+    /* Extract embedded JPEG preview from CR2/DNG/NEF etc.
+     * Strategy: find all FFD8..FFD9 JPEG blobs, pick the largest one
+     * that's < 5MB (to avoid the raw Bayer data in CR2 which has FFD8 header
+     * but isn't a real JPEG). */
+    const buf=await file.arrayBuffer();
+    const u8=new Uint8Array(buf);
+    const jpegs=[];
+    for(let i=0;i<u8.length-1;i++){
+      if(u8[i]===0xFF&&u8[i+1]===0xD8){
+        for(let j=i+2;j<u8.length-1;j++){
+          if(u8[j]===0xFF&&u8[j+1]===0xD9){
+            const sz=j+2-i;
+            if(sz>1000&&sz<5_000_000)jpegs.push({off:i,sz,data:u8.subarray(i,j+2)});
+            i=j+1;break;
+          }
+        }
+      }
+    }
+    if(jpegs.length===0){
+      out.innerHTML=`<div class="card" style="color:var(--orange)">No embedded JPEG preview found in .${ext} file.</div>`;return;
+    }
+    /* Pick the largest preview that the browser can decode */
+    jpegs.sort((a,b)=>b.sz-a.sz);
+    let loaded=false;
+    for(const jp of jpegs){
+      try{
+        const blob=new Blob([jp.data],{type:'image/jpeg'});
+        const url=URL.createObjectURL(blob);
+        const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=url;});
+        URL.revokeObjectURL(url);
+        let w=img.width,h=img.height;
+        if(w>800||h>800){const s=800/Math.max(w,h);w=Math.round(w*s);h=Math.round(h*s);}
+        const cv=document.createElement('canvas');cv.width=w;cv.height=h;
+        cv.getContext('2d').drawImage(img,0,0,w,h);
+        doCompress(cv,w,h,file);loaded=true;break;
+      }catch(e){continue;}/* try next JPEG blob */
+    }
+    if(!loaded)out.innerHTML=`<div class="card" style="color:var(--orange)">Could not decode any embedded preview from .${ext} file.</div>`;
     return;
   }
 
