@@ -1,0 +1,119 @@
+n=3: m=1, eigenvalues=[np.float64(0.0)]
+  Signature: (0+, 10, 0-)
+  n-2 = 1, actual neg = 0: MISMATCH
+
+n=4: m=3, eigenvalues=[np.float64(-2.8), np.float64(0.0), np.float64(2.8)]
+  Signature: (1+, 10, 1-)
+  n-2 = 2, actual neg = 1: MISMATCH
+
+n=5: m=6, eigenvalues=[np.float64(-8.0), np.float64(-4.5), np.float64(-0.4), np.float64(-0.0), np.float64(4.4), np.float64(8.5)]
+  Signature: (2+, 20, 2-)
+  n-2 = 3, actual neg = 2: MISMATCH
+
+n=6: m=10, eigenvalues=[np.float64(-29.3), np.float64(-23.4), np.float64(-10.1), np.float64(-3.9), np.float64(4.3), np.float64(4.3), np.float64(7.2), np.float64(9.0), np.float64(18.2), np.float64(23.8)]
+  Signature: (6+, 00, 4-)
+  n-2 = 4, actual neg = 4: MATCH
+
+n=7: m=15, eigenvalues=[np.float64(-93.9), np.float64(-82.9), np.float64(-33.4), np.float64(-22.7), np.float64(-9.9), np.float64(4.1), np.float64(4.2), np.float64(4.2), np.float64(6.7), np.float64(8.9), np.float64(9.4), np.float64(20.0), np.float64(22.7), np.float64(65.5), np.float64(97.0)]
+  Signature: (10+, 00, 5-)
+  n-2 = 5, actual neg = 5: MATCH
+
+REFINED EIGENVALUE ANALYSIS (threshold 0.01)
+============================================================
+n=3: m=1
+  Eigenvalues: [np.float64(0.0)]
+  Signature: (0+, 10, 0-)
+  n-2=1: ✗ (actual neg=0)
+  Null space dim=1:
+    [(3, 1):1.000]
+
+n=4: m=3
+  Eigenvalues: [np.float64(-2.8284), np.float64(0.0), np.float64(2.8284)]
+  Signature: (1+, 10, 1-)
+  n-2=2: ✗ (actual neg=1)
+  Null space dim=1:
+    [(4, 2):0.707 (3, 1):-0.707 (4, 1):0.000]
+
+n=5: m=6
+  Eigenvalues: [np.float64(-8.0), np.float64(-4.5062), np.float64(-0.3811), np.float64(-0.0), np.float64(4.3811), np.float64(8.5062)]
+  Signature: (2+, 10, 3-)
+  n-2=3: ✓ (actual neg=3)
+  Null space dim=1:
+    [(5, 2):-0.500 (3, 1):-0.500 (5, 3):0.500]
+
+n=6: m=10
+  Eigenvalues: [np.float64(-29.318), np.float64(-23.3683), np.float64(-10.1318), np.float64(-3.9432), np.float64(4.2669), np.float64(4.3116), np.float64(7.1829), np.float64(8.9648), np.float64(18.1943), np.float64(23.8408)]
+  Signature: (6+, 00, 4-)
+  n-2=4: ✓ (actual neg=4)
+
+n=7: m=15
+  Eigenvalues: [np.float64(-93.8618), np.float64(-82.8761), np.float64(-33.3818), np.float64(-22.6929), np.float64(-9.902), np.float64(4.12), np.float64(4.2196), np.float64(4.2261), np.float64(6.6506), np.float64(8.9126), np.float64(9.3799), np.float64(20.0068), np.float64(22.6583), np.float64(65.5466), np.float64(96.994)]
+  Signature: (10+, 00, 5-)
+  n-2=5: ✓ (actual neg=5)
+
+============================================================
+MODE A^2 vs MODE B TILE COMPARISON
+============================================================
+
+n=5 → n+2=7:
+  Mode A² tiles (9): [(6, 1), (6, 2), (6, 3), (6, 4), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5)]
+  Mode B tiles (9): [(3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5)]
+  |A²| = 9, |B| = 9
+  Shared: 6 tiles [(6, 1), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5)]
+  A²-only: 3 tiles [(6, 2), (6, 3), (6, 4)]
+  B-only: 3 tiles [(3, 1), (4, 1), (5, 1)]
+
+n=6 → n+2=8:
+  Mode A² tiles (11): [(7, 1), (7, 2), (7, 3), (7, 4), (7, 5), (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6)]
+  Mode B tiles (11): [(3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6)]
+  |A²| = 11, |B| = 11
+  Shared: 7 tiles [(7, 1), (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6)]
+  A²-only: 4 tiles [(7, 2), (7, 3), (7, 4), (7, 5)]
+  B-only: 4 tiles [(3, 1), (4, 1), (5, 1), (6, 1)]
+
+n=7 → n+2=9:
+  Mode A² tiles (13): [(8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7)]
+  Mode B tiles (13): [(3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7)]
+  |A²| = 13, |B| = 13
+  Shared: 8 tiles [(8, 1), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7)]
+  A²-only: 5 tiles [(8, 2), (8, 3), (8, 4), (8, 5), (8, 6)]
+  B-only: 5 tiles [(3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
+n=7, m=15
+Eigenvalues: [np.float64(-93.86), np.float64(-82.88), np.float64(-33.38), np.float64(-22.69), np.float64(-9.9), np.float64(4.12), np.float64(4.22), np.float64(4.23), np.float64(6.65), np.float64(8.91), np.float64(9.38), np.float64(20.01), np.float64(22.66), np.float64(65.55), np.float64(96.99)]
+Negative count: 5 = n-2 = 5
+
+Most NEGATIVE quadratic coefficients:
+  c((7, 1),(3, 1)) = -8  shared={'lower=1'}  skips=(6,2)
+  c((7, 1),(7, 5)) = -8  shared={'upper=7'}  skips=(6,2)
+  c((6, 1),(3, 1)) = -4  shared={'lower=1'}  skips=(5,2)
+  c((6, 1),(6, 4)) = -4  shared={'upper=6'}  skips=(5,2)
+  c((7, 1),(4, 1)) = -4  shared={'lower=1'}  skips=(6,3)
+  c((7, 1),(7, 4)) = -4  shared={'upper=7'}  skips=(6,3)
+  c((7, 2),(4, 2)) = -4  shared={'lower=2'}  skips=(5,2)
+  c((7, 2),(7, 5)) = -4  shared={'upper=7'}  skips=(5,2)
+  c((4, 1),(3, 1)) = -2  shared={'lower=1'}  skips=(3,2)
+  c((4, 1),(4, 2)) = -2  shared={'upper=4'}  skips=(3,2)
+
+Negative eigenvectors projected onto same-end PAIRS:
+  λ=-93.86: top tiles=[((6, 1), np.float64(-0.521)), ((7, 2), np.float64(0.521)), ((5, 1), np.float64(-0.37))], bottom_wt=0.50 top_wt=0.50
+  λ=-82.88: top tiles=[((7, 1), np.float64(-0.666)), ((6, 2), np.float64(0.503)), ((5, 2), np.float64(0.296))], bottom_wt=0.47 top_wt=0.47
+  λ=-33.38: top tiles=[((5, 2), np.float64(0.4)), ((6, 3), np.float64(-0.4)), ((6, 1), np.float64(-0.305))], bottom_wt=0.26 top_wt=0.26
+  λ=-22.69: top tiles=[((5, 3), np.float64(0.479)), ((6, 2), np.float64(-0.399)), ((7, 3), np.float64(0.364))], bottom_wt=0.27 top_wt=0.27
+  λ=-9.90: top tiles=[((7, 4), np.float64(0.427)), ((4, 1), np.float64(-0.427)), ((6, 4), np.float64(0.379))], bottom_wt=0.28 top_wt=0.28
+
+Tile groups:
+  [0] (7,1) skip=6 bottom
+  [1] (6,1) skip=5 bottom
+  [2] (5,1) skip=4 bottom
+  [3] (4,1) skip=3 bottom
+  [4] (3,1) skip=2 bottom
+  [5] (7,2) skip=5 top
+  [6] (6,2) skip=4 inner
+  [7] (5,2) skip=3 inner
+  [8] (4,2) skip=2 inner
+  [9] (7,3) skip=4 top
+  [10] (6,3) skip=3 inner
+  [11] (5,3) skip=2 inner
+  [12] (7,4) skip=3 top
+  [13] (6,4) skip=2 inner
+  [14] (7,5) skip=2 top
