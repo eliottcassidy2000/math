@@ -97,3 +97,28 @@ Vertex 5 (endpoint): touches dists [0,1,2], skips [1,2,3] — ALL layers
 Endpoints see the full triangle. The middle vertex only sees the periphery.
 This is why vertex-star flips at the center are more neutral: they only
 affect periphery bits, leaving the hypotenuse backbone intact.
+
+### H-Landscape on the (hyp, per) Plane
+
+Maximum H is achieved at BOTH extremes of the hypotenuse axis:
+
+n=5: max H=15 at (hyp=0,per=4) AND (hyp=2,per=0) — opposite corners
+n=6: max H=45 at (hyp=0,per=8), (hyp=2,per=2..6), and many intermediate points
+
+The minimum H=1 (transitive) is always at (0,0) — all tiles in default direction.
+
+The anti-transitive tiling (all bits=1) has:
+  n=5: (hyp=2,per=4) → H=9 (NOT maximum)
+  n=6: (hyp=2,per=8) → H=17 (NOT maximum)
+
+Key insight: the anti-transitive tournament is NOT the regular tournament!
+The regular tournament (max H) is achieved by concentrating flips in a
+structured pattern, not by flipping everything.
+
+The H-landscape has a SADDLE POINT structure: high H at both
+(hyp-full, per-empty) and (hyp-empty, per-full), lower H at the corners
+(all-0 and all-1).
+
+At n=6, max H=45 is spread across many (hyp,per) combinations,
+suggesting the regular tournament has multiple tiling representations
+with different coordinate decompositions.
