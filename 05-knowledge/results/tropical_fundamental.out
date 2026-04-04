@@ -1,0 +1,318 @@
+
+============================================================
+NEWTON POLYTOPE of H(t), n=5
+============================================================
+  Support size: 35 / 64 possible monomials
+  Affine dimension of NP(H): 6
+  Ambient dimension: 6
+  Codimension: 0
+  Contains origin: True
+  Contains (1,...,1): False
+  Contains all unit vectors: True
+
+  Support by degree:
+    d=0: 1/1 = 1.000
+    d=1: 6/6 = 1.000
+    d=2: 13/15 = 0.867
+    d=3: 8/20 = 0.400
+    d=4: 7/15 = 0.467
+
+  Max degree in support: 4
+  Expected degree cap: 4
+
+  Face analysis (vertices maximizing w·v):
+    w=all-ones: face has 7 vertices, degrees [4]
+    w=neg-all-ones: face has 1 vertices, degrees [0]
+    w=skip-weighted: face has 2 vertices, degrees [4]
+    w=first-tile: face has 13 vertices, degrees [1, 2, 3, 4]
+    w=last-tile: face has 12 vertices, degrees [1, 2, 3, 4]
+
+============================================================
+NEWTON POLYTOPE of H(t), n=6
+============================================================
+  Support size: 200 / 1024 possible monomials
+  Affine dimension of NP(H): 10
+  Ambient dimension: 10
+  Codimension: 0
+  Contains origin: True
+  Contains (1,...,1): False
+  Contains all unit vectors: True
+
+  Support by degree:
+    d=0: 1/1 = 1.000
+    d=1: 10/10 = 1.000
+    d=2: 42/45 = 0.933
+    d=3: 66/120 = 0.550
+    d=4: 81/210 = 0.386
+
+  Max degree in support: 4
+  Expected degree cap: 4
+
+  Face analysis (vertices maximizing w·v):
+    w=all-ones: face has 81 vertices, degrees [4]
+    w=neg-all-ones: face has 1 vertices, degrees [0]
+    w=skip-weighted: face has 4 vertices, degrees [4]
+    w=first-tile: face has 55 vertices, degrees [1, 2, 3, 4]
+    w=last-tile: face has 57 vertices, degrees [1, 2, 3, 4]
+
+============================================================
+NEWTON POLYTOPE of H(t), n=7
+============================================================
+  Support size: 1782 / 32768 possible monomials
+  Affine dimension of NP(H): 15
+  Ambient dimension: 15
+  Codimension: 0
+  Contains origin: True
+  Contains (1,...,1): False
+  Contains all unit vectors: True
+
+  Support by degree:
+    d=0: 1/1 = 1.000
+    d=1: 15/15 = 1.000
+    d=2: 101/105 = 0.962
+    d=3: 309/455 = 0.679
+    d=4: 626/1365 = 0.459
+    d=5: 407/3003 = 0.136
+    d=6: 323/5005 = 0.065
+
+  Max degree in support: 6
+  Expected degree cap: 6
+
+  Face analysis (vertices maximizing w·v):
+    w=all-ones: face has 323 vertices, degrees [6]
+    w=neg-all-ones: face has 1 vertices, degrees [0]
+    w=skip-weighted: face has 16 vertices, degrees [6]
+    w=first-tile: face has 436 vertices, degrees [1, 2, 3, 4, 5, 6]
+    w=last-tile: face has 455 vertices, degrees [1, 2, 3, 4, 5, 6]
+
+============================================================
+TROPICAL H(t) via 2-ADIC VALUATION, n=5
+============================================================
+  Nonzero terms: 35
+  trop(H)(t) = v_2(H(t))? Agreement: 64/64 = 1.000
+
+  Tropical value distribution:
+    v_2 = 0: trop predicts 64, actual 64
+
+  Tropical variety (min achieved by 2+ terms): 0/64 = 0.000
+
+  Dominant term analysis:
+    Transitive (t=0): trop=0, v_2(H)=0, mult=1
+    All-backward (t=all 1): trop=0, v_2(H)=0, mult=1
+
+============================================================
+TROPICAL H(t) via 2-ADIC VALUATION, n=6
+============================================================
+  Nonzero terms: 200
+  trop(H)(t) = v_2(H(t))? Agreement: 1024/1024 = 1.000
+
+  Tropical value distribution:
+    v_2 = 0: trop predicts 1024, actual 1024
+
+  Tropical variety (min achieved by 2+ terms): 0/1024 = 0.000
+
+  Dominant term analysis:
+    Transitive (t=0): trop=0, v_2(H)=0, mult=1
+    All-backward (t=all 1): trop=0, v_2(H)=0, mult=1
+
+============================================================
+CONFLICT GRAPH EVOLUTION n=5
+============================================================
+  Flipping tiles from transitive (skip-ordered: largest first):
+    Step 1: flip tile (5, 1) (skip=4)
+      Omega: 4 cycles, 6 edges, H=9
+        cycle 0: [0, 1, 4] (len 3)
+        cycle 1: [0, 2, 4] (len 3)
+        cycle 2: [0, 3, 4] (len 3)
+        cycle 3: [0, 1, 2, 3, 4] (len 5)
+    Step 2: flip tile (4, 1) (skip=3)
+      Omega: 5 cycles, 10 edges, H=11
+        cycle 0: [0, 1, 3] (len 3)
+        cycle 1: [0, 1, 4] (len 3)
+        cycle 2: [0, 2, 3] (len 3)
+        cycle 3: [0, 2, 4] (len 3)
+        cycle 4: [0, 1, 2, 3, 4] (len 5)
+    Step 3: flip tile (5, 2) (skip=3)
+      Omega: 6 cycles, 15 edges, H=15
+        cycle 0: [0, 1, 3] (len 3)
+        cycle 1: [0, 2, 3] (len 3)
+        cycle 2: [0, 2, 4] (len 3)
+        cycle 3: [1, 2, 4] (len 3)
+        cycle 4: [1, 3, 4] (len 3)
+        cycle 5: [0, 1, 2, 3, 4] (len 5)
+    Step 4: flip tile (3, 1) (skip=2)
+      Omega: 5 cycles, 10 edges, H=11
+    Step 5: flip tile (4, 2) (skip=2)
+      Omega: 4 cycles, 6 edges, H=9
+    Step 6: flip tile (5, 3) (skip=2)
+      Omega: 4 cycles, 6 edges, H=9
+
+  Random flip sequence (seed=42):
+    H sequence (first 15): [1, np.int64(9), np.int64(11), np.int64(13), np.int64(15), np.int64(13), np.int64(9)]
+    H diffs: [np.int64(8), np.int64(2), np.int64(2), np.int64(2), np.int64(-2), np.int64(-4)]
+    Always increasing? False
+    Decreases at steps: [(4, np.int64(15), np.int64(13)), (5, np.int64(13), np.int64(9))]
+
+============================================================
+DOMINANT TERMS AND TROPICAL PERMANENT n=5
+============================================================
+  Most frequent dominant terms:
+    S=[(5, 1)] (deg 1): dominant for 32/64 tilings, c=8
+    S=[(4, 1)] (deg 1): dominant for 16/64 tilings, c=4
+    S=[(5, 2)] (deg 1): dominant for 8/64 tilings, c=4
+    S=[(3, 1)] (deg 1): dominant for 2/64 tilings, c=2
+    S=[(4, 2)] (deg 1): dominant for 2/64 tilings, c=2
+    S=[(3, 1), (5, 3)] (deg 2): dominant for 2/64 tilings, c=4
+    S=[] (deg 0): dominant for 1/64 tilings, c=1
+    S=[(5, 3)] (deg 1): dominant for 1/64 tilings, c=2
+
+  Constant term fraction 1/H(t):
+    mean = 0.1333
+    min = 0.066667 (at H=15)
+    max = 1.000000 (at H=1)
+
+  Linear approximation (1 + sum c_k*t_k) / H(t):
+    mean = 1.2382
+    min = 0.5556
+    max = 2.5556
+
+============================================================
+DOMINANT TERMS AND TROPICAL PERMANENT n=6
+============================================================
+  Most frequent dominant terms:
+    S=[(6, 1)] (deg 1): dominant for 512/1024 tilings, c=16
+    S=[(5, 1), (6, 2)] (deg 2): dominant for 128/1024 tilings, c=16
+    S=[(5, 1)] (deg 1): dominant for 64/1024 tilings, c=8
+    S=[(6, 2)] (deg 1): dominant for 64/1024 tilings, c=8
+    S=[(4, 1), (6, 2)] (deg 2): dominant for 64/1024 tilings, c=10
+    S=[(5, 1), (6, 3)] (deg 2): dominant for 64/1024 tilings, c=10
+    S=[(4, 1), (6, 3)] (deg 2): dominant for 32/1024 tilings, c=8
+    S=[(5, 2)] (deg 1): dominant for 24/1024 tilings, c=4
+    S=[(4, 1)] (deg 1): dominant for 16/1024 tilings, c=4
+    S=[(3, 1), (6, 3)] (deg 2): dominant for 16/1024 tilings, c=8
+
+  Constant term fraction 1/H(t):
+    mean = 0.0444
+    min = 0.022222 (at H=45)
+    max = 1.000000 (at H=1)
+
+  Linear approximation (1 + sum c_k*t_k) / H(t):
+    mean = 1.0005
+    min = 0.3103
+    max = 3.4000
+
+============================================================
+FREE ENERGY AND LEGENDRE TRANSFORM n=5
+============================================================
+  Degree sums S_d = [np.int64(1), np.int64(22), np.int64(0), np.int64(-20), np.int64(6)]
+
+  F(0) = log(H(1)) = log(9) = 2.1972
+  F(-inf) = log(c_0) = log(1) = 0
+  F'(0) = E[degree] = -1.5556
+    (Expected number of backward tiles per tiling)
+    Uniform expectation: m/2 = 3.0
+  F''(0) = Var[degree] = -9.3086
+
+  Legendre transform S(mu):
+    mu=0.5: lambda*=0.336, S(mu)=690.9434
+    mu=1.0: lambda*=0.336, S(mu)=691.1113
+    mu=1.5: lambda*=0.336, S(mu)=691.2791
+    mu=3.0: lambda*=0.336, S(mu)=691.7828
+
+  Key entropy values:
+    S(0+) = log(c_0) - F(-inf) = 0 (only transitive)
+    S(m/2) ≈ 3.0*0 - log(9) = -2.1972 bits
+    Boltzmann entropy: 3.1699 bits
+
+============================================================
+FREE ENERGY AND LEGENDRE TRANSFORM n=6
+============================================================
+  Degree sums S_d = [np.int64(1), np.int64(52), np.int64(92), np.int64(-208), np.int64(80)]
+
+  F(0) = log(H(1)) = log(17) = 2.8332
+  F(-inf) = log(c_0) = log(1) = 0
+  F'(0) = E[degree] = -4.0000
+    (Expected number of backward tiles per tiling)
+    Uniform expectation: m/2 = 5.0
+  F''(0) = Var[degree] = -26.1176
+
+  Legendre transform S(mu):
+    mu=0.5: lambda*=0.209, S(mu)=690.8802
+    mu=1.0: lambda*=0.209, S(mu)=690.9848
+    mu=2.5: lambda*=0.209, S(mu)=691.2987
+
+  Key entropy values:
+    S(0+) = log(c_0) - F(-inf) = 0 (only transitive)
+    S(m/2) ≈ 5.0*0 - log(17) = -2.8332 bits
+    Boltzmann entropy: 4.0875 bits
+
+============================================================
+FREE ENERGY AND LEGENDRE TRANSFORM n=7
+============================================================
+  Degree sums S_d = [np.int64(1), np.int64(114), np.int64(616), np.int64(-948), np.int64(-138), np.int64(532), np.int64(-146)]
+
+  F(0) = log(H(1)) = log(31) = 3.4340
+  F(-inf) = log(c_0) = log(1) = 0
+  F'(0) = E[degree] = -8.5806
+    (Expected number of backward tiles per tiling)
+    Uniform expectation: m/2 = 7.5
+  F''(0) = Var[degree] = -77.4339
+
+  Legendre transform S(mu):
+    mu=0.5: lambda*=0.341, S(mu)=28.5894
+    mu=1.0: lambda*=0.341, S(mu)=28.7598
+    mu=3.8: lambda*=0.341, S(mu)=29.6968
+
+  Key entropy values:
+    S(0+) = log(c_0) - F(-inf) = 0 (only transitive)
+    S(m/2) ≈ 7.5*0 - log(31) = -3.4340 bits
+    Boltzmann entropy: 4.9542 bits
+
+============================================================
+THE IRREDUCIBLE CORE n=5
+============================================================
+  Corr(H, c_3) = 0.9553
+  H ≈ 3.324*c_3 + -0.926, R² = 0.9127
+
+  Corr(H, score_spread) = -0.7882
+  Corr(H, #backward_tiles) = 0.5692
+  Corr(H, weighted_backward) = 0.6270
+
+  H ≈ 3.277*c_3 + 0.022*wt_hw + -0.951
+  R² = 0.9129
+
+  THE FUNDAMENTAL HIERARCHY:
+    Level 0: H(t) mod 2 = 1 always (Redei)
+    Level 1: H(t) mod 4 = 1 + 2*alpha_1(t) mod 4
+    Level 2: H(t) mod 8 depends on alpha_1, alpha_2
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/tropical_fundamental.py", line 689, in <module>
+    irreducible_core(n)
+  File "/Users/e/Documents/GitHub/math/04-computation/tropical_fundamental.py", line 661, in irreducible_core
+    print(f"    Level k: H(t) mod 2^{k+1} depends on alpha_0,...,alpha_k")
+NameError: name 'k' is not defined
+
+============================================================
+THE IRREDUCIBLE CORE n=6
+============================================================
+  Corr(H, c_3) = 0.9560
+  H ≈ 6.706*c_3 + -11.235, R² = 0.9139
+
+  Corr(H, score_spread) = -0.8790
+  Corr(H, #backward_tiles) = 0.4330
+  Corr(H, weighted_backward) = 0.4816
+
+  H ≈ 6.607*c_3 + 0.060*wt_hw + -11.542
+  R² = 0.9146
+
+  THE FUNDAMENTAL HIERARCHY:
+    Level 0: H(t) mod 2 = 1 always (Redei)
+    Level 1: H(t) mod 4 = 1 + 2*alpha_1(t) mod 4
+    Level 2: H(t) mod 8 depends on alpha_1, alpha_2
+    Level k: H(t) mod 2^(k+1) depends on alpha_0,...,alpha_k
+    Full: H(t) = sum_k alpha_k * 2^k
+
+  The OCF gives H in terms of the INDEPENDENCE SEQUENCE of Omega.
+  The multilinear polynomial expresses this in tile coordinates.
+  The sign rule, recursive preservation, etc. are all consequences
+  of how the conflict graph Omega depends on tile flips.
