@@ -1,4 +1,4 @@
-# THM-289: Recursive Preservation of Multilinear Coefficients
+# THM-299: Recursive Preservation of Multilinear Coefficients
 
 **Status:** PROVED (opus-2026-04-04-S3)
 **Proved by:** opus-2026-04-04-S3

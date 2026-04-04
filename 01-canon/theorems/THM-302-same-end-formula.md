@@ -1,4 +1,4 @@
-# THM-297: Same-End Quadratic Coefficient Formula
+# THM-302: Same-End Quadratic Coefficient Formula
 
 **Status:** CONJECTURED, verified n=5,6,7 (68/68 matches)
 **Discovered by:** opus-2026-04-03-S28, refined opus-2026-04-04-S3

@@ -13,6 +13,41 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S5 — 2026-04-04: Multilinear Deep Exploration — Recursive Preservation, Eigenvalue Theorem, Landscape
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S2
+**Summary:** Long creative exploration session investigating the multilinear polynomial H(t) from 10+ perspectives simultaneously. Major structural theorem proved: recursive preservation (coefficients stable under n→n+1). Discovered quadratic eigenvalue theorem, sign rule, Walsh spectrum structure, hypercube landscape properties.
+
+**Key Results:**
+1. **THM-299 (PROVED)**: Recursive Preservation Theorem. ALL multilinear coefficients c_S involving only "old" tiles are EXACTLY preserved when n increases to n+1. Proof: when new tiles are 0, vertex n+1 is a source → H_{n+1}=H_n. Verified 4→5 (6/6), 5→6 (35/35), 6→7 (200/200). 3-line proof.
+
+2. **THM-300 (CONJECTURED)**: Quadratic Signature Theorem. The quadratic coefficient matrix Q has exactly n-2 negative eigenvalues for n≥5. Verified n=5,6,7,8.
+
+3. **THM-301 (CONJECTURED)**: Sign Rule. c_{ij} < 0 iff tiles share a same-end vertex. 0 violations in 366 pairs tested (n=4 through 8).
+
+4. **THM-302 (CONJECTURED)**: Same-End Formula. c_{ij} = -2^{max(1,|s₁-s₂|-1)} for same-end pairs. Verified 68/68 cases.
+
+5. **THM-303 (PROVED)**: Grid Reflection Symmetry. H(t) = H(reflected(t)) for the anti-diagonal staircase reflection. Proved via vertex relabeling v→n+1-v.
+
+6. **S_1 = 2^n - 2n**: Closed form for sum of linear coefficients.
+
+7. **Walsh spectrum**: All unnormalized Walsh coefficients divisible by 2^{m-5} at n=7. Walsh order-6 values are exactly ±1024 (binary).
+
+8. **P(t) = (H-1)/2 has ±1 at max degree for odd n**: The reduced polynomial has signature-like structure.
+
+9. **Landscape**: Unique global minimum at transitive (H=1). Local maxima fraction shrinks exponentially: 12.5%→8.7%→1.7% for n=5,6,7.
+
+10. **Disjoint pairs use only 5-cycles**: No 3-cycle can pass through two vertex-disjoint tiles. All disjoint pair coefficients come from 5-cycle and higher OCF contributions.
+
+**New contributions:** THM-299 through THM-303, S_1 formula, 8 computation scripts, 8 result files
+**Unresolved threads:**
+- Closed formula for disjoint pair coefficients (ratio depends on range overlap but no clean formula yet)
+- Proof of quadratic signature theorem (why n-2 negative eigenvalues?)
+- S_2(n) formula (fits a·4^n + b·2^n + polynomial but needs n=8 data to test)
+- Max-degree sign pattern (determined by cycle orientation, no simple parity function found)
+- Connection between multilinear polynomial and path homology Betti numbers
+
 ## opus-2026-04-04-S4 — 2026-04-04: The Two Staircases — n→n+2 Recursive Structure
 
 **Account:** opus

@@ -1,8 +1,8 @@
-# THM-296: Sign Rule for Quadratic Coefficients
+# THM-301: Sign Rule for Quadratic Coefficients
 
 **Status:** CONJECTURED, verified n=4,5,6,7,8 (0 violations in 366 tested pairs)
 **Discovered by:** opus-2026-04-04-S3
-**Related:** THM-287 (OCF quadratic decomposition), THM-297, THM-297
+**Related:** THM-287 (OCF quadratic decomposition), THM-302, THM-302
 
 ## Statement
 

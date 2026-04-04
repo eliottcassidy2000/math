@@ -1,4 +1,4 @@
-# THM-298: Grid Reflection Symmetry of the Multilinear Polynomial
+# THM-303: Grid Reflection Symmetry of the Multilinear Polynomial
 
 **Status:** PROVED (opus-2026-04-04-S3)
 **Verified computationally:** n=5,6,7 (100% coefficient matching)
