@@ -117,3 +117,25 @@ Tile groups:
   [12] (7,4) skip=3 top
   [13] (6,4) skip=2 inner
   [14] (7,5) skip=2 top
+n=6: m=10
+  Grid reflection: 4 anti-symmetric, 6 symmetric
+  Q restricted to anti-symmetric:
+    eigenvalues: [np.float64(-29.32), np.float64(-10.13), np.float64(4.27), np.float64(7.18)]
+    negative: 2
+  Q restricted to symmetric:
+    eigenvalues: [np.float64(-23.37), np.float64(-3.94), np.float64(4.31), np.float64(8.96), np.float64(18.19), np.float64(23.84)]
+    negative: 2
+  TOTAL negative = 4 = n-2 = 4
+  All negative in ANTI-SYMMETRIC block: False
+
+n=7: m=15
+  Grid reflection: 6 anti-symmetric, 9 symmetric
+  Q restricted to anti-symmetric:
+    eigenvalues: [np.float64(-93.86), np.float64(-33.38), np.float64(-9.9), np.float64(4.23), np.float64(8.91), np.float64(20.01)]
+    negative: 3
+  Q restricted to symmetric:
+    eigenvalues: [np.float64(-82.88), np.float64(-22.69), np.float64(4.12), np.float64(4.22), np.float64(6.65), np.float64(9.38), np.float64(22.66), np.float64(65.55), np.float64(96.99)]
+    negative: 2
+  TOTAL negative = 5 = n-2 = 5
+  All negative in ANTI-SYMMETRIC block: False
+

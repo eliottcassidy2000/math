@@ -67,6 +67,22 @@ The remaining m - (n-2) directions are:
 - Positive eigenvectors: cooperative tile interactions (cross-end pairs, disjoint pairs)
 - Zero eigenvectors: degenerate directions (at small n only)
 
+## Block Decomposition Under Grid Reflection
+
+The grid reflection (x,y) → (n+1-y, n+1-x) decomposes Q into symmetric and
+anti-symmetric blocks. The n-2 negative eigenvalues split between BOTH blocks:
+
+| n | Anti neg | Sym neg | Total neg | Anti pos | Sym pos |
+|---|---------|---------|-----------|---------|---------|
+| 6 | 2 | 2 | 4 = n-2 | 2 | 4 |
+| 7 | 3 | 2 | 5 = n-2 | 3 | 7 |
+
+Split: anti_neg = ⌈(n-2)/2⌉, sym_neg = ⌊(n-2)/2⌋.
+
+The negative eigenvalues are NOT purely anti-symmetric. Both blocks contribute.
+The mechanism involves WITHIN-LEG competition (same-end tiles on each leg have
+negative interactions) which appears in both symmetric and anti-symmetric sectors.
+
 ## The Isomorphism (Partially Understood)
 
 Mode A² and Mode B both produce δ_{k+2}, but via different intermediate steps:
