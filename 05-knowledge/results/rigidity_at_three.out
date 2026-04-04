@@ -1,0 +1,120 @@
+============================================================
+DEGREES OF FREEDOM ANALYSIS
+============================================================
+
+  All tournaments on 5 vertices: 1024
+
+  Bouquet at vertex 0: 3 cycles, H=9
+    Cycles: [(0, 4, 1), (0, 4, 2), (0, 4, 3)]
+    Has 5-cycle: True
+
+  Bouquet at vertex 4: 3 cycles, H=9
+    Cycles: [(4, 1, 0), (4, 2, 0), (4, 3, 0)]
+    Has 5-cycle: True
+
+  Bouquet at vertex 0: 3 cycles, H=9
+    Cycles: [(0, 2, 1), (0, 3, 1), (0, 4, 1)]
+    Has 5-cycle: True
+
+  Bouquet at vertex 1: 3 cycles, H=9
+    Cycles: [(1, 0, 2), (1, 0, 3), (1, 0, 4)]
+    Has 5-cycle: True
+
+  Bouquet at vertex 0: 3 cycles, H=9
+    Cycles: [(0, 4, 1), (0, 4, 2), (0, 4, 3)]
+    Has 5-cycle: True
+
+  Total bouquets (≥3 cycles at a vertex, all pairwise sharing): 320
+  H distribution from bouquets: {np.int64(9): 240, np.int64(15): 80}
+  H=7 from bouquets: 0
+
+  Alpha_1 distribution at n=5:
+    alpha_1=0: 120 tournaments, H≥1 (= 1 if alpha_2=0)
+    alpha_1=1: 120 tournaments, H≥3 (= 3 if alpha_2=0)
+    alpha_1=2: 240 tournaments, H≥5 (= 5 if alpha_2=0)
+    alpha_1=4: 240 tournaments, H≥9 (= 9 if alpha_2=0)
+    alpha_1=5: 120 tournaments, H≥11 (= 11 if alpha_2=0)
+    alpha_1=6: 120 tournaments, H≥13 (= 13 if alpha_2=0)
+    alpha_1=7: 64 tournaments, H≥15 (= 15 if alpha_2=0)
+
+  THE GAP: alpha_1 jumps from 2 (H=5) to 4 (H≥9).
+  alpha_1=3 with alpha_2=0 is IMPOSSIBLE at n=5.
+  alpha_1=3 with alpha_2≥1 gives H≥11, not 7.
+  Therefore H=7 is IMPOSSIBLE.
+
+============================================================
+COMPLETENESS PRESSURE: TOURNAMENTS vs GENERAL DIGRAPHS
+============================================================
+
+  At n=5:
+    Tournament arcs: 10 = 10 (FIXED)
+    Degrees of freedom: 10 (one bit per pair)
+    Total tournaments: 1024 = 1024
+    Achievable H values: [np.int64(1), np.int64(3), np.int64(5), np.int64(9), np.int64(11), np.int64(13), np.int64(15)]
+    Missing odd values: [7]
+
+  THE RIGIDITY INTERPRETATION:
+    H=1: 0 cycles. Freedom: 10 arcs. UNDERCONSTRAINED.
+    H=3: 1 cycle.  Freedom: 7 arcs.  UNDERCONSTRAINED.
+    H=5: 2 cycles. Freedom: 4 arcs.  UNDERCONSTRAINED.
+    H=7: 3 cycles. Freedom: 0 arcs.  RIGID → forced 5-cycle → H≥9.
+    H=9: 4 cycles. Freedom: reborn (5-cycle adds new DOF).
+
+    7 is the UNIQUE odd value at the rigidity threshold.
+    It is the value where the system transitions from
+    'underconstrained' to 'overconstrained', and the
+    overconstrained system forces H to jump past 7.
+
+============================================================
+ACHIEVABLE H MOD STRUCTURE n=5
+============================================================
+  Achievable H values: [1, 3, 5, 9, 11, 13, 15]
+  Count: 7
+
+  Achievable H mod 7: {1: 2, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  Missing residues mod 7: [0]
+  Achievable H mod 3: {0: 3, 1: 2, 2: 2}
+  Achievable H mod 42: 7 of 21 odd residues
+  Missing odd residues mod 42: [7, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41]
+
+  Residue 7 mod 42 achieved? False
+  Residue 21 mod 42 achieved? False
+
+  H values divisible by 7: []
+
+============================================================
+ACHIEVABLE H MOD STRUCTURE n=6
+============================================================
+  Achievable H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  Count: 19
+
+  Achievable H mod 7: {1: 4, 2: 3, 3: 4, 4: 2, 5: 3, 6: 3}
+  Missing residues mod 7: [0]
+  Achievable H mod 3: {0: 6, 1: 7, 2: 6}
+  Achievable H mod 42: 17 of 21 odd residues
+  Missing odd residues mod 42: [7, 21, 35, 39]
+
+  Residue 7 mod 42 achieved? False
+  Residue 21 mod 42 achieved? False
+
+  H values divisible by 7: []
+
+============================================================
+ACHIEVABLE H MOD STRUCTURE n=7
+============================================================
+  Achievable H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 65]...
+  Count: 77
+
+  Achievable H mod 7: {0: 9, 1: 12, 2: 9, 3: 13, 4: 11, 5: 12, 6: 11}
+  Missing residues mod 7: []
+  Achievable H mod 3: {0: 27, 1: 27, 2: 23}
+  Achievable H mod 42: 21 of 21 odd residues
+  Missing odd residues mod 42: []
+
+  Residue 7 mod 42 achieved? True
+  Residue 21 mod 42 achieved? True
+
+  H values divisible by 7: [35, 49, 77, 91, 105, 133, 147, 175, 189]
+  Smallest: 35
+  None equal to 7: True
+  None equal to 21: True
