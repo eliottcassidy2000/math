@@ -203,7 +203,8 @@ def frustration_propagation(n_target):
 
     print(f"\n  Total extensions checked: {total}")
     print(f"  Errors in c₃ propagation: {errors}")
-    print(f"  ✓ c₃(T_n) = c₃(T_{n-1}) + Δc₃(T_{n-1}, σ) {'VERIFIED' if errors == 0 else 'FAILED'}")
+    nn = n_target
+    print(f"  c3(T_{nn}) = c3(T_{nn-1}) + dc3 {'VERIFIED' if errors == 0 else 'FAILED'}")
 
     # Δc₃ statistics by score of new vertex
     print(f"\n  Δc₃ by score of new vertex (score(n) = Σσ):")

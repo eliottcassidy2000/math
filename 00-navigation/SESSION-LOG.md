@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S18 — 2026-04-04: LaTeX Paper Update — 8 New Theorems, Precise Tables
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S17
+**Summary:** Updated the main LaTeX paper (parity_tournaments_fixed.tex) with all major results from sessions S5-S17. Added 188 lines of new content including 8 theorems, 3 tables, and precise computed values. All numbers verified exact before inclusion.
+
+**Content added to paper:**
+1. **A000568 table** (n=1..15, all exact, extended to n=200 = 5382 digits)
+2. **THM: Asymptotic recursion** a(n) = a(n-1)·2^{n-1}/n · (1 - correction)
+3. **THM: Permanent gaps** H=7 and H=21 impossible (with proof sketch)
+4. **THM: OCF truncation** H = 1+2α₁+4α₂ exact for n≤8 (with proof)
+5. **THM: Recursive preservation** c_S^{(n+1)} = c_S^{(n)} (with 3-line proof)
+6. **THM: Linear coefficients** c_k = 2^{skip-1}, S₁ = 2^n-2n
+7. **THM: Sign rule** parts (a),(b) with proof via vertex degree constraints
+8. **THM: Detailed balance** entries=exits via involution
+9. **THM: All tiling counts odd** via Rédei + odd |Aut|
+10. **THM: Tribonacci identity** H(backward) = T_{n+1}
+11. **THM: Sum-of-H formula** Σ H = W(n)·2^{C(n-2,2)-1}
+12. **Gap structure table** (achievable H values per n)
+13. **Sequences table** (max_H, H_back, Σ_H, P(n), S₁(n) with OEIS IDs)
+
+**Verification:** All braces and environments balanced. Paper grew from 2217→2405 lines.
+**New contributions:** Updated parity_tournaments_fixed.tex
+
 ## opus-2026-04-04-S17 — 2026-04-04: Recursive Improvements — 5 Practical Tools
 
 **Account:** opus
