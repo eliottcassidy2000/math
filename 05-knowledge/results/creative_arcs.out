@@ -1,0 +1,220 @@
+
+============================================================
+CREATIVE ARCS AT n=3
+============================================================
+
+  FROM TRANSITIVE (H=1):
+  Each tile flip creates a new tournament. How much structure?
+      tile  skip  H_new    ΔH   c3     effect
+    (3, 1)     2      3    +2    1      c_k=2
+
+  FROM H-MAXIMIZER (H=3), 1 tilings:
+    (3, 1) skip=2 ←: H=   1 (ΔH=   -2)
+
+  AVERAGE EFFECT BY SKIP:
+    skip=2: mean ΔH from transitive = 2.0, values = [2]
+
+============================================================
+CREATIVE ARCS AT n=4
+============================================================
+
+  FROM TRANSITIVE (H=1):
+  Each tile flip creates a new tournament. How much structure?
+      tile  skip  H_new    ΔH   c3     effect
+    (4, 1)     3      5    +4    2      c_k=4
+    (3, 1)     2      3    +2    1      c_k=2
+    (4, 2)     2      3    +2    1      c_k=2
+
+  FROM H-MAXIMIZER (H=5), 5 tilings:
+    (4, 1) skip=3 ←: H=   1 (ΔH=   -4)
+    (3, 1) skip=2 →: H=   5 (ΔH=   +0)
+    (4, 2) skip=2 →: H=   5 (ΔH=   +0)
+
+  AVERAGE EFFECT BY SKIP:
+    skip=2: mean ΔH from transitive = 2.0, values = [2, 2]
+    skip=3: mean ΔH from transitive = 4.0, values = [4]
+
+============================================================
+CREATIVE ARCS AT n=5
+============================================================
+
+  FROM TRANSITIVE (H=1):
+  Each tile flip creates a new tournament. How much structure?
+      tile  skip  H_new    ΔH   c3     effect
+    (5, 1)     4      9    +8    3      c_k=8
+    (4, 1)     3      5    +4    2      c_k=4
+    (3, 1)     2      3    +2    1      c_k=2
+    (5, 2)     3      5    +4    2      c_k=4
+    (4, 2)     2      3    +2    1      c_k=2
+    (5, 3)     2      3    +2    1      c_k=2
+
+  FROM H-MAXIMIZER (H=15), 8 tilings:
+    (5, 1) skip=4 ←: H=  13 (ΔH=   -2)
+    (4, 1) skip=3 ←: H=  11 (ΔH=   -4)
+    (3, 1) skip=2 →: H=  11 (ΔH=   -4)
+    (5, 2) skip=3 ←: H=  11 (ΔH=   -4)
+    (4, 2) skip=2 →: H=  11 (ΔH=   -4)
+    (5, 3) skip=2 →: H=  11 (ΔH=   -4)
+
+  AVERAGE EFFECT BY SKIP:
+    skip=2: mean ΔH from transitive = 2.0, values = [2, 2, 2]
+    skip=3: mean ΔH from transitive = 4.0, values = [4, 4]
+    skip=4: mean ΔH from transitive = 8.0, values = [8]
+
+============================================================
+CREATIVE ARCS AT n=6
+============================================================
+
+  FROM TRANSITIVE (H=1):
+  Each tile flip creates a new tournament. How much structure?
+      tile  skip  H_new    ΔH   c3     effect
+    (6, 1)     5     17   +16    4     c_k=16
+    (5, 1)     4      9    +8    3      c_k=8
+    (4, 1)     3      5    +4    2      c_k=4
+    (3, 1)     2      3    +2    1      c_k=2
+    (6, 2)     4      9    +8    3      c_k=8
+    (5, 2)     3      5    +4    2      c_k=4
+    (4, 2)     2      3    +2    1      c_k=2
+    (6, 3)     3      5    +4    2      c_k=4
+    (5, 3)     2      3    +2    1      c_k=2
+    (6, 4)     2      3    +2    1      c_k=2
+
+  FROM H-MAXIMIZER (H=45), 30 tilings:
+    (6, 1) skip=5 ←: H=  29 (ΔH=  -16)
+    (5, 1) skip=4 ←: H=  37 (ΔH=   -8)
+    (4, 1) skip=3 →: H=  41 (ΔH=   -4)
+    (3, 1) skip=2 →: H=  37 (ΔH=   -8)
+    (6, 2) skip=4 ←: H=  37 (ΔH=   -8)
+    (5, 2) skip=3 ←: H=  41 (ΔH=   -4)
+    (4, 2) skip=2 →: H=  37 (ΔH=   -8)
+    (6, 3) skip=3 →: H=  41 (ΔH=   -4)
+    (5, 3) skip=2 →: H=  37 (ΔH=   -8)
+    (6, 4) skip=2 →: H=  37 (ΔH=   -8)
+
+  AVERAGE EFFECT BY SKIP:
+    skip=2: mean ΔH from transitive = 2.0, values = [2, 2, 2, 2]
+    skip=3: mean ΔH from transitive = 4.0, values = [4, 4, 4]
+    skip=4: mean ΔH from transitive = 8.0, values = [8, 8]
+    skip=5: mean ΔH from transitive = 16.0, values = [16]
+
+============================================================
+CLASS CHANGE PROBABILITY BY TILE n=5
+============================================================
+      tile  skip  changes  total     frac  mean_|ΔH|
+    (5, 1)     4       56     64   0.8750       4.25
+    (4, 1)     3       56     64   0.8750       2.75
+    (3, 1)     2       60     64   0.9375       2.88
+    (5, 2)     3       56     64   0.8750       2.75
+    (4, 2)     2       56     64   0.8750       2.00
+    (5, 3)     2       60     64   0.9375       2.88
+
+  SUMMARY BY SKIP:
+    skip=2: mean class-change frac = 0.9167, mean |ΔH| = 2.58
+    skip=3: mean class-change frac = 0.8750, mean |ΔH| = 2.75
+    skip=4: mean class-change frac = 0.8750, mean |ΔH| = 4.25
+
+============================================================
+CLASS CHANGE PROBABILITY BY TILE n=6
+============================================================
+      tile  skip  changes  total     frac  mean_|ΔH|
+    (6, 1)     5      952   1024   0.9297       9.64
+    (5, 1)     4      948   1024   0.9258       6.59
+    (4, 1)     3      954   1024   0.9316       6.70
+    (3, 1)     2     1002   1024   0.9785       7.01
+    (6, 2)     4      948   1024   0.9258       6.59
+    (5, 2)     3      952   1024   0.9297       5.62
+    (4, 2)     2     1000   1024   0.9766       5.27
+    (6, 3)     3      954   1024   0.9316       6.70
+    (5, 3)     2     1000   1024   0.9766       5.27
+    (6, 4)     2     1002   1024   0.9785       7.01
+
+  SUMMARY BY SKIP:
+    skip=2: mean class-change frac = 0.9775, mean |ΔH| = 6.14
+    skip=3: mean class-change frac = 0.9310, mean |ΔH| = 6.34
+    skip=4: mean class-change frac = 0.9258, mean |ΔH| = 6.59
+    skip=5: mean class-change frac = 0.9297, mean |ΔH| = 9.64
+
+============================================================
+THE ABSTRACT PRINCIPLE
+============================================================
+
+  THE TOURNAMENT AS A QUANTUM SYSTEM:
+
+  Ground state:  Transitive (H=1, all arcs "forward")
+  Excitations:   Each backward tile is an excitation with energy 2^(skip-1)
+  Interactions:  Same-end tiles COMPETE (antiferromagnetic coupling)
+                 Cross-end/disjoint tiles COOPERATE (but multiplicatively weaker)
+
+  FROM GROUND STATE (transitive):
+    Flipping tile k adds energy c_k = 2^(skip-1) = the LINEAR effect
+    H(transitive + e_k) = 1 + 2^(skip-1)
+
+    The USER'S n=3 OBSERVATION: the ONLY excitation (skip-2) creates
+    the 3-cycle (the fundamental curvature quantum). H goes 1→3.
+
+    At larger n: the APEX excitation (skip = n-1) creates the LARGEST
+    jump: H → 1 + 2^(n-2). This is the "hardest" excitation.
+
+  FROM EXCITED STATE (H-maximizer):
+    Every flip REDUCES H (the maximum is a peak).
+    The H-maximizer is FRAGILE in the sense that MANY flips reduce H.
+    But it's NOT fragile in the iso-class sense — it may have self-loops
+    (flips that stay in the same class but a different tournament).
+    
+  Verification at n=5:
+    tile (5, 1) skip=4: H = 9, 1+2^(skip-1) = 9 ✓
+    tile (4, 1) skip=3: H = 5, 1+2^(skip-1) = 5 ✓
+    tile (3, 1) skip=2: H = 3, 1+2^(skip-1) = 3 ✓
+    tile (5, 2) skip=3: H = 5, 1+2^(skip-1) = 5 ✓
+    tile (4, 2) skip=2: H = 3, 1+2^(skip-1) = 3 ✓
+    tile (5, 3) skip=2: H = 3, 1+2^(skip-1) = 3 ✓
+
+  From H-maximizer (H=15):
+    skip=2: mean ΔH = -4.0, values = [np.int64(-4), np.int64(-4), np.int64(-4)]
+    skip=3: mean ΔH = -4.0, values = [np.int64(-4), np.int64(-4)]
+    skip=4: mean ΔH = -2.0, values = [np.int64(-2)]
+
+============================================================
+THE ABSTRACT PRINCIPLE
+============================================================
+
+  THE TOURNAMENT AS A QUANTUM SYSTEM:
+
+  Ground state:  Transitive (H=1, all arcs "forward")
+  Excitations:   Each backward tile is an excitation with energy 2^(skip-1)
+  Interactions:  Same-end tiles COMPETE (antiferromagnetic coupling)
+                 Cross-end/disjoint tiles COOPERATE (but multiplicatively weaker)
+
+  FROM GROUND STATE (transitive):
+    Flipping tile k adds energy c_k = 2^(skip-1) = the LINEAR effect
+    H(transitive + e_k) = 1 + 2^(skip-1)
+
+    The USER'S n=3 OBSERVATION: the ONLY excitation (skip-2) creates
+    the 3-cycle (the fundamental curvature quantum). H goes 1→3.
+
+    At larger n: the APEX excitation (skip = n-1) creates the LARGEST
+    jump: H → 1 + 2^(n-2). This is the "hardest" excitation.
+
+  FROM EXCITED STATE (H-maximizer):
+    Every flip REDUCES H (the maximum is a peak).
+    The H-maximizer is FRAGILE in the sense that MANY flips reduce H.
+    But it's NOT fragile in the iso-class sense — it may have self-loops
+    (flips that stay in the same class but a different tournament).
+    
+  Verification at n=6:
+    tile (6, 1) skip=5: H = 17, 1+2^(skip-1) = 17 ✓
+    tile (5, 1) skip=4: H = 9, 1+2^(skip-1) = 9 ✓
+    tile (4, 1) skip=3: H = 5, 1+2^(skip-1) = 5 ✓
+    tile (3, 1) skip=2: H = 3, 1+2^(skip-1) = 3 ✓
+    tile (6, 2) skip=4: H = 9, 1+2^(skip-1) = 9 ✓
+    tile (5, 2) skip=3: H = 5, 1+2^(skip-1) = 5 ✓
+    tile (4, 2) skip=2: H = 3, 1+2^(skip-1) = 3 ✓
+    tile (6, 3) skip=3: H = 5, 1+2^(skip-1) = 5 ✓
+    tile (5, 3) skip=2: H = 3, 1+2^(skip-1) = 3 ✓
+    tile (6, 4) skip=2: H = 3, 1+2^(skip-1) = 3 ✓
+
+  From H-maximizer (H=45):
+    skip=2: mean ΔH = -8.0, values = [np.int64(-8), np.int64(-8), np.int64(-8), np.int64(-8)]
+    skip=3: mean ΔH = -4.0, values = [np.int64(-4), np.int64(-4), np.int64(-4)]
+    skip=4: mean ΔH = -8.0, values = [np.int64(-8), np.int64(-8)]
+    skip=5: mean ΔH = -16.0, values = [np.int64(-16)]
