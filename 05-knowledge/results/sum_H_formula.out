@@ -1,0 +1,85 @@
+Σ H FORMULA VERIFICATION
+============================================================
+
+n=3: m=1
+  Valid HPs: 3 (out of 3! = 6)
+  BP distribution: {1: 2, 2: 1}
+  Formula: Σ N(bp)·2^(m-n+1+bp) = 4
+  Actual Σ H = 4
+  ✓ MATCH
+  E[H] = 2.000000
+
+n=4: m=3
+  Valid HPs: 11 (out of 4! = 24)
+  BP distribution: {0: 2, 1: 5, 2: 3, 3: 1}
+  Formula: Σ N(bp)·2^(m-n+1+bp) = 32
+  Actual Σ H = 32
+  ✓ MATCH
+  E[H] = 4.000000
+
+n=5: m=6
+  Valid HPs: 53 (out of 5! = 120)
+  BP distribution: {0: 14, 1: 20, 2: 14, 3: 4, 4: 1}
+  Formula: Σ N(bp)·2^(m-n+1+bp) = 632
+  Actual Σ H = 632
+  ✓ MATCH
+  E[H] = 9.875000
+
+n=6: m=10
+  Valid HPs: 309 (out of 6! = 720)
+  BP distribution: {0: 90, 1: 115, 2: 72, 3: 26, 4: 5, 5: 1}
+  Formula: Σ N(bp)·2^(m-n+1+bp) = 29696
+  Actual Σ H = 29696
+  ✓ MATCH
+  E[H] = 29.000000
+
+n=7: m=15
+  Valid HPs: 2119 (out of 7! = 5040)
+  BP distribution: {0: 646, 1: 790, 2: 467, 3: 168, 4: 41, 5: 6, 6: 1}
+  Formula: Σ N(bp)·2^(m-n+1+bp) = 3251200
+  Actual Σ H = 3251200
+  ✓ MATCH
+  E[H] = 99.218750
+
+============================================================
+EXTENDED Σ H via BP FORMULA
+============================================================
+  n=3: Σ H = 4, E[H] = 2.0000, valid HPs = 3
+  n=4: Σ H = 32, E[H] = 4.0000, valid HPs = 11
+  n=5: Σ H = 632, E[H] = 9.8750, valid HPs = 53
+  n=6: Σ H = 29696, E[H] = 29.0000, valid HPs = 309
+  n=7: Σ H = 3251200, E[H] = 99.2188, valid HPs = 2119
+  n=8: Σ H = 815136768, E[H] = 388.6875, valid HPs = 16687
+  n=9: Σ H = 461027409920, E[H] = 1717.4609, valid HPs = 148329
+  n=10: Σ H = 580881441882112, E[H] = 8452.9375, valid HPs = 1468457
+  n=11: (too large for permutation enumeration)
+
+Succession-free permutations (= valid HP count):
+  n=3: 3
+  n=4: 11
+  n=5: 53
+  n=6: 309
+  n=7: 2119
+  n=8: 16687
+  n=9: 148329
+  n=10: 1468457
+
+Σ H sequence (total HP count over all tilings):
+  n=3: 4
+  n=4: 32
+  n=5: 632
+  n=6: 29696
+  n=7: 3251200
+  n=8: 815136768
+  n=9: 461027409920
+  n=10: 580881441882112
+
+E[H] = mean HP count with fixed base path:
+  n=3: E[H] = 2.0
+  n=4: E[H] = 4.0
+  n=5: E[H] = 9.875
+  n=6: E[H] = 29.0
+  n=7: E[H] = 99.21875
+  n=8: E[H] = 388.6875
+  n=9: E[H] = 1717.4609375
+  n=10: E[H] = 8452.9375
