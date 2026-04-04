@@ -494,15 +494,28 @@ function setupGraph(){
   if(merged){
     const pairs=graphData.transposePairs;
     const mergeMap=new Int32Array(cd.length);for(let i=0;i<cd.length;i++) mergeMap[i]=i;
-    for(const[a,b] of pairs) mergeMap[b]=a;
+    const pairMap={};for(const[a,b] of pairs){mergeMap[b]=a;pairMap[a]=b;pairMap[b]=a;}
     const seen=new Set();const mergedClasses=[];const ciToMerged={};
     for(let i=0;i<cd.length;i++){
       const rep=mergeMap[i];
       if(!seen.has(rep)){
         seen.add(rep);ciToMerged[rep]=mergedClasses.length;
-        const wasMerged=(mergeMap[i]!==i||(pairs.some(([a,b])=>a===i||b===i)));
-        const isPaired=pairs.some(([a,b])=>a===rep||b===rep);
-        mergedClasses.push({...cd[rep],mergedWith:isPaired?true:false});
+        const partner=pairMap[rep];
+        const isPaired=(partner!==undefined);
+        // For paired classes, combine attributes from both partners
+        const mc={...cd[rep]};
+        mc.mergedWith=isPaired;
+        mc.mergeType=isPaired?'paired':'backbone'; // backbone = SC fixed point
+        if(isPaired&&partner!==undefined){
+          const p=cd[partner];
+          mc.H2=p.H; mc.scores2=p.scores; mc.t3_2=p.t3;
+          mc.size2=p.size; mc.per2=p.per; mc.ham2=p.ham;
+          mc.combinedSize=mc.size+p.size; mc.combinedH=mc.H+p.H;
+          mc.pairCi=p.ci;
+        } else {
+          mc.combinedSize=mc.size; mc.combinedH=mc.H;
+        }
+        mergedClasses.push(mc);
       }
       ciToMerged[i]=ciToMerged[rep];
     }
@@ -912,18 +925,30 @@ function draw(){
     ctx.fillStyle=nodeColor(nd);
     ctx.beginPath();ctx.arc(sx,sy,r,0,Math.PI*2);ctx.fill();
 
-    // Border encoding: purity + SC status + merge status
-    if(merged&&nd.mergedWith){
-      ctx.strokeStyle='rgba(188,140,255,0.4)';ctx.lineWidth=1;
-      ctx.beginPath();ctx.arc(sx,sy,r+3,0,Math.PI*2);ctx.stroke();
+    // Border encoding
+    if(merged){
+      if(nd.mergeType==='backbone'){
+        // SC backbone: green glow ring — the skeleton of the merged graph
+        ctx.strokeStyle='rgba(63,185,80,0.6)';ctx.lineWidth=2.5;
+        ctx.beginPath();ctx.arc(sx,sy,r+2,0,Math.PI*2);ctx.stroke();
+      } else {
+        // Paired NS: subtle half-and-half indicator
+        ctx.strokeStyle='rgba(140,140,140,0.3)';ctx.lineWidth=1;
+        ctx.beginPath();ctx.arc(sx,sy,r+2,0,Math.PI*2);ctx.stroke();
+        // Small "×2" indicator
+        if(camZ>0.5&&r>4){
+          ctx.fillStyle='rgba(140,140,140,0.5)';ctx.font=`${Math.max(6,r*0.5)}px sans-serif`;
+          ctx.textAlign='right';ctx.textBaseline='top';
+          ctx.fillText('×2',sx+r+1,sy-r-1);
+        }
+      }
     }
-    if(nd.purity==='pureBlue'){
-      // Pure-blue: bright blue double ring (all tilings grid-symmetric)
+    if(nd.purity==='pureBlue'&&!merged){
       ctx.strokeStyle='rgba(26,111,196,0.8)';ctx.lineWidth=2.5;
       ctx.beginPath();ctx.arc(sx,sy,r+1.5,0,Math.PI*2);ctx.stroke();
     }
-    ctx.strokeStyle=isSelected?'#fff':nd.isSC?'rgba(63,185,80,0.7)':nd.purity==='mixed'?'rgba(160,80,200,0.5)':'rgba(255,255,255,0.2)';
-    ctx.lineWidth=isSelected?2.5:nd.isSC?1.5:0.8;
+    ctx.strokeStyle=isSelected?'#fff':nd.isSC?'rgba(63,185,80,0.6)':nd.purity==='mixed'?'rgba(160,80,200,0.4)':'rgba(255,255,255,0.15)';
+    ctx.lineWidth=isSelected?2.5:nd.isSC?1.5:0.7;
     ctx.beginPath();ctx.arc(sx,sy,r,0,Math.PI*2);ctx.stroke();
 
     // Label
@@ -956,14 +981,24 @@ function draw(){
     const r=nodeRadius(nd)*camZ;
     const tx=sx+r+8,ty=sy-10;
     const bf=(nd.nodeBlueFrac*100).toFixed(0);
-    const lines=tilingView?[
-      `tiling ${nd.mask!=null?'0b'+nd.mask.toString(2):'?'}  class #${nd.ci}`,
-      `H=${nd.H}  [${nd.scores.join(',')}]  ${nd.gridSym?'grid-sym':''}`,
-    ]:[
-      `#${nd.ci}  H=${nd.H}  t₃=${nd.c3}  ${nd.isSC?'SC':''}`,
-      `[${nd.scores.join(',')}]  tilings=${nd.size}`,
-      `edges=${nd.compDeg}  blue${bf}%  wig=${nd.wigglyDeg||0}`,
-    ];
+    let lines;
+    if(tilingView){
+      lines=[
+        `tiling ${nd.mask!=null?'0b'+nd.mask.toString(2):'?'}  class #${nd.ci}`,
+        `H=${nd.H}  [${nd.scores.join(',')}]  ${nd.gridSym?'grid-sym':''}`,
+      ];
+    } else if(merged&&nd.mergeType==='paired'){
+      lines=[
+        `#${nd.ci}+#${nd.pairCi||'?'}  H=${nd.H}/${nd.H2||'?'}  ${nd.mergeType}`,
+        `tilings=${nd.combinedSize}  t₃=${nd.c3}/${nd.t3_2||'?'}`,
+      ];
+    } else {
+      lines=[
+        `#${nd.ci}  H=${nd.H}  t₃=${nd.c3}  ${nd.isSC?'SC backbone':''}`,
+        `[${nd.scores.join(',')}]  tilings=${nd.size}`,
+        `deg=${nd.degree}  blue${bf}%`,
+      ];
+    }
     ctx.font='11px monospace';
     const mw=Math.max(...lines.map(l=>ctx.measureText(l).width));
     ctx.fillStyle='rgba(22,27,34,0.92)';
@@ -1000,7 +1035,13 @@ function draw(){
       if(edgeLayer==='complement'||edgeLayer==='both') statsStr+=`  comp=${vc.length}(${vb}b ${vm}m ${vk}k)`;
       if(edgeLayer==='wiggly'||edgeLayer==='both') statsStr+=`  wig=${vw}`;
     }
-    statsStr+=`  n=${N}${merged?' merged':''}`;
+    if(merged){
+      const nBB=nodes.filter(nd=>nd.mergeType==='backbone').length;
+      const nPR=nodes.filter(nd=>nd.mergeType==='paired').length;
+      statsStr+=`  n=${N} G_n/Z₂: ${nBB} SC backbone + ${nPR} paired`;
+    } else {
+      statsStr+=`  n=${N}`;
+    }
   }
   ctx.fillText(statsStr,8,H-8);
 }
@@ -1139,16 +1180,20 @@ function selectNode(nd){
 
   // Cycle cover polynomial display
   const ckStr=nd.Ck?Object.entries(nd.Ck).sort((a,b)=>+a[0]-+b[0]).map(([k,v])=>`C<sub>${k}</sub>=${v}`).join(' '):'';
-  info.innerHTML=`<h3>Class #${nd.ci}</h3>
+  const isPaired=merged&&nd.mergeType==='paired';
+  const headerLabel=isPaired?`Merged #${nd.ci} + #${nd.pairCi||'?'}`:
+    merged&&nd.mergeType==='backbone'?`SC Backbone #${nd.ci}`:`Class #${nd.ci}`;
+  const headerColor=merged?(nd.mergeType==='backbone'?'var(--green)':'var(--muted)'):'var(--blue)';
+  info.innerHTML=`<h3 style="color:${headerColor}">${headerLabel}</h3>
     <canvas id="infoCanvas" width="140" height="140"></canvas>
     <div style="font-size:.65em;color:var(--dim);text-align:center;margin-bottom:6px">
-      [${nd.scores.join(',')}] &middot; ${nd.isSC?'<span style="color:var(--green)">SC</span>':'NS'}
-      &middot; <span style="color:${nd.classPurity==='pureBlue'?'#1a6fc4':nd.classPurity==='pureBlack'?'#888':'#a050c8'}">${nd.classPurity==='pureBlue'?'pure-blue':nd.classPurity==='pureBlack'?'pure-black':'mixed'}</span>
-      &middot; |Aut|=${nd.autSize||'?'}  &middot; ${nd.gsCount||0}/${nd.size} grid-sym</div>
+      [${nd.scores.join(',')}]${isPaired?' / ['+((nd.scores2||[]).join(','))+']':''}
+      &middot; ${nd.isSC?'<span style="color:var(--green)">SC</span>':'NS'}
+      &middot; |Aut|=${nd.autSize||'?'}${isPaired?' (paired)':''}</div>
     <div style="font-size:.72em;color:var(--blue);font-weight:600;margin:4px 0">Hamiltonian</div>
-    <div class="row"><span class="k">H (paths)</span><span class="v" style="color:var(--green)">${nd.H}</span></div>
-    <div class="row"><span class="k">ham (circuits)</span><span class="v">${nd.ham}</span></div>
-    <div class="row"><span class="k">Tilings</span><span class="v">${nd.size}</span></div>
+    <div class="row"><span class="k">H (paths)</span><span class="v" style="color:var(--green)">${nd.H}${isPaired?' / '+nd.H2:''}</span></div>
+    <div class="row"><span class="k">ham (circuits)</span><span class="v">${nd.ham}${isPaired&&nd.ham2!=null?' / '+nd.ham2:''}</span></div>
+    <div class="row"><span class="k">Tilings</span><span class="v">${nd.size}${isPaired?' + '+nd.size2+' = '+nd.combinedSize:''}</span></div>
     <div style="font-size:.72em;color:var(--orange);font-weight:600;margin:6px 0 4px">Cycle Structure</div>
     <div class="row"><span class="k">3-cycles (t<sub>3</sub>)</span><span class="v">${nd.c3}</span></div>
     ${nd.c5?`<div class="row"><span class="k">5-cycles (t<sub>5</sub>)</span><span class="v">${nd.c5}</span></div>`:''}
