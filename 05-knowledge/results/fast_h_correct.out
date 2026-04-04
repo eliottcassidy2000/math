@@ -1,0 +1,17 @@
+CORRECTED FAST H BENCHMARK
+============================================================
+
+  n=5, sample=64:
+    DP: 0.004s (0.07ms each)
+    OCF: 0.001s (0.02ms each)
+    Matches: 64/64
+
+  n=6, sample=100:
+    DP: 0.017s (0.17ms each)
+    OCF: 0.009s (0.09ms each)
+    Matches: 100/100
+
+  n=7, sample=100:
+    DP: 0.045s (0.45ms each)
+    OCF: 0.062s (0.62ms each)
+    Matches: 100/100
