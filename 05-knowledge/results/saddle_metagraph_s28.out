@@ -1,0 +1,167 @@
+
+======================================================================
+METAGRAPH SADDLE STRUCTURE: n=5, m=6
+======================================================================
+
+Iso classes: 12
+
+Class distribution by H:
+  H=  1:   1 classes,      1 tilings, avg apex frac=0.000
+  H=  3:   3 classes,      3 tilings, avg apex frac=0.000
+  H=  5:   2 classes,     10 tilings, avg apex frac=0.000
+  H=  9:   2 classes,     18 tilings, avg apex frac=0.556
+  H= 11:   1 classes,     11 tilings, avg apex frac=0.455
+  H= 13:   1 classes,     13 tilings, avg apex frac=0.769
+  H= 15:   2 classes,      8 tilings, avg apex frac=0.833
+
+--- WIGGLY CONNECTIONS IN THE METAGRAPH ---
+
+Wiggly edges: 30
+
+|delta H| distribution across wiggly edges:
+  |ΔH|=  0:    1 edges (3.3%)
+  |ΔH|=  2:   12 edges (40.0%)
+  |ΔH|=  4:    8 edges (26.7%)
+  |ΔH|=  6:    5 edges (16.7%)
+  |ΔH|=  8:    3 edges (10.0%)
+  |ΔH|= 12:    1 edges (3.3%)
+
+Edge type distribution (threshold H >= 10):
+  High-High: 4 (13.3%)
+  High-Low:  9 (30.0%)
+  Low-Low:   17 (56.7%)
+
+High-H classes: 4 (out of 12)
+Connected components among high-H classes: 1
+  Component 0: 4 classes, H range [11, 15]
+
+======================================================================
+METAGRAPH SADDLE STRUCTURE: n=6, m=10
+======================================================================
+
+Iso classes: 56
+
+Class distribution by H:
+  H=  1:   1 classes,      1 tilings, avg apex frac=0.000
+  H=  3:   4 classes,      4 tilings, avg apex frac=0.000
+  H=  5:   3 classes,     15 tilings, avg apex frac=0.000
+  H=  9:   5 classes,     37 tilings, avg apex frac=0.000
+  H= 11:   2 classes,     22 tilings, avg apex frac=0.000
+  H= 13:   2 classes,     26 tilings, avg apex frac=0.000
+  H= 15:   6 classes,     46 tilings, avg apex frac=0.133
+  H= 17:   2 classes,     34 tilings, avg apex frac=0.353
+  H= 19:   2 classes,     38 tilings, avg apex frac=0.316
+  H= 23:   4 classes,     92 tilings, avg apex frac=0.391
+  H= 25:   2 classes,     50 tilings, avg apex frac=0.480
+  H= 27:   2 classes,     18 tilings, avg apex frac=0.667
+  H= 29:   4 classes,    116 tilings, avg apex frac=0.569
+  H= 31:   2 classes,     62 tilings, avg apex frac=0.581
+  H= 33:   5 classes,    121 tilings, avg apex frac=0.582
+  H= 37:   5 classes,    185 tilings, avg apex frac=0.681
+  H= 41:   1 classes,     41 tilings, avg apex frac=0.585
+  H= 43:   2 classes,     86 tilings, avg apex frac=0.698
+  H= 45:   2 classes,     30 tilings, avg apex frac=0.667
+
+--- WIGGLY CONNECTIONS IN THE METAGRAPH ---
+
+Wiggly edges: 290
+
+|delta H| distribution across wiggly edges:
+  |ΔH|=  0:   15 edges (5.2%)
+  |ΔH|=  2:   42 edges (14.5%)
+  |ΔH|=  4:   48 edges (16.6%)
+  |ΔH|=  6:   42 edges (14.5%)
+  |ΔH|=  8:   40 edges (13.8%)
+  |ΔH|= 10:   28 edges (9.7%)
+  |ΔH|= 12:   18 edges (6.2%)
+  |ΔH|= 14:   18 edges (6.2%)
+  |ΔH|= 16:   11 edges (3.8%)
+  |ΔH|= 18:   14 edges (4.8%)
+  |ΔH|= 20:    3 edges (1.0%)
+  |ΔH|= 22:    2 edges (0.7%)
+  |ΔH|= 24:    6 edges (2.1%)
+  |ΔH|= 26:    2 edges (0.7%)
+  |ΔH|= 32:    1 edges (0.3%)
+
+Edge type distribution (threshold H >= 31):
+  High-High: 40 (13.8%)
+  High-Low:  75 (25.9%)
+  Low-Low:   175 (60.3%)
+
+High-H classes: 15 (out of 56)
+Connected components among high-H classes: 1
+  Component 0: 15 classes, H range [33, 45]
+
+--- APEX BIT AND METAGRAPH PARTITION (n=5) ---
+    H  |class|  apex_frac       type
+    0        1      0.000     apex=0
+    0        9      0.556      mixed
+    0        5      0.000     apex=0
+    0       11      0.455      mixed
+    0        1      0.000     apex=0
+    0        9      0.556      mixed
+    0        5      0.000     apex=0
+    0       13      0.769      mixed
+    0        3      0.667      mixed
+    0        1      0.000     apex=0
+    0        5      1.000     apex=1
+    0        1      0.000     apex=0
+
+--- APEX BIT AND METAGRAPH PARTITION (n=6) ---
+    H  |class|  apex_frac       type
+    1        1      0.000     apex=0
+    3        1      0.000     apex=0
+    3        1      0.000     apex=0
+    3        1      0.000     apex=0
+    3        1      0.000     apex=0
+    5        5      0.000     apex=0
+    5        5      0.000     apex=0
+    5        5      0.000     apex=0
+    9        9      0.000     apex=0
+    9        9      0.000     apex=0
+    9        9      0.000     apex=0
+    9        9      0.000     apex=0
+    9        1      0.000     apex=0
+   11       11      0.000     apex=0
+   11       11      0.000     apex=0
+   13       13      0.000     apex=0
+   13       13      0.000     apex=0
+   15       15      0.400      mixed
+   15       15      0.400      mixed
+   15        3      0.000     apex=0
+   15        5      0.000     apex=0
+   15        3      0.000     apex=0
+   15        5      0.000     apex=0
+   17       17      0.353      mixed
+   17       17      0.353      mixed
+   19       19      0.316      mixed
+   19       19      0.316      mixed
+   23       23      0.261      mixed
+   23       23      0.261      mixed
+   23       23      0.522      mixed
+   23       23      0.522      mixed
+   25       25      0.480      mixed
+   25       25      0.480      mixed
+   27        9      0.667      mixed
+   27        9      0.667      mixed
+   29       29      0.621      mixed
+   29       29      0.414      mixed
+   29       29      0.621      mixed
+   29       29      0.621      mixed
+   31       31      0.581      mixed
+   31       31      0.581      mixed
+   33       33      0.727      mixed
+   33       33      0.545      mixed
+   33       33      0.545      mixed
+   33       11      0.545      mixed
+   33       11      0.545      mixed
+   37       37      0.649      mixed
+   37       37      0.811      mixed
+   37       37      0.649      mixed
+   37       37      0.649      mixed
+   37       37      0.649      mixed
+   41       41      0.585      mixed
+   43       43      0.698      mixed
+   43       43      0.698      mixed
+   45       15      0.667      mixed
+   45       15      0.667      mixed
