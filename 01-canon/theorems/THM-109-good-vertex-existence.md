@@ -1,6 +1,6 @@
 # THM-109: Good Vertex Existence — For Every Tournament T with b1(T)=0
 
-**Status:** PROVED (all cases algebraic except n=5 Case 2 exhaustive)
+**Status:** PROVED (ALL cases algebraic — n=5 Case 2 is vacuous, see THM-285)
 **Filed by:** kind-pasteur-2026-03-08-S43
 **Depends on:** THM-107 (b1 <= 1), THM-105 (dominant vertex forcing)
 
@@ -104,9 +104,13 @@ dominated cycle with F adjacent to D (sharing a directed edge). Then:
 
 **For n >= 6:** n - 5 >= 1 in the worst case. So at least 1 good vertex exists. QED.
 
-**For n = 5:** n - 5 = 0 in the worst case. Need additional argument.
-Verified exhaustively: all 720 tournaments with b_1 = 0 at n = 5 have a good vertex.
-(1024 total tournaments; 720 with b_1 = 0; all 720 have good vertex.)
+**For n = 5:** VACUOUS — no n=5 tournament has both b₁=0 and κ≥2.
+Proof (THM-285): If κ≥2 at n=5, a dominator d of any 3-cycle C=(a,b,c) would
+create a source or sink in T\e (the other external vertex), contradicting T\e SC.
+Therefore all 3-cycles are free, so b₁=1. The b₁=0 precondition never holds.
+
+**For n = 4:** VACUOUS — κ≥2 impossible at n=4 (score sum 6 > max 4 with all scores ≤ 1).
+See THM-285 for details.
 
 **For n = 4:** All b_1 = 0 tournaments have good vertex (40/40 verified exhaustively).
 At n = 4, there are no free cycles (all dominated), so this falls under Case 3.

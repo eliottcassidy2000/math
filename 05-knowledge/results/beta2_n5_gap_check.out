@@ -1,0 +1,29 @@
+=== COMPLETE n=5 TOURNAMENT CLASSIFICATION ===
+Total tournaments: 1024
+  b1=1: 304
+  b1=0: 720
+    No 3-cycles (transitive): 120
+    Has free cycles: 240
+    All cycles dominated: 360
+    Strongly connected: 240
+      kappa=1: 240
+      kappa>=2: 0
+      SC + has free: 240
+      SC + kappa>=2 + has free: 0
+    Not SC: 360
+
+=== THE KEY FINDING ===
+Case 2 applies to 240 tournaments at n=5
+Need to check if these all have good vertices algebraically
+
+=== VERIFICATION ===
+b1=0 with cycles: 600
+b1=0 all dominated: 360
+
+=== n=4 CHECK ===
+n=4: b1=0 count=40, has_free=0, all_dom=16
+
+=== n=6 CHECK (sampled) ===
+n=6 (5000 sampled): b1=0 count=4318, has_free=2477
+  Free cycle rate among b1=0: 57.4%
+  This confirms Case 2 is NON-vacuous at n=6 (as expected)

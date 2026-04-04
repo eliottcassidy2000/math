@@ -1,9 +1,9 @@
 # THM-108: beta_2 = 0 for All Tournaments — Proof Architecture
 
-**Status:** PROVED (all cases algebraic except n=5 free-cycle case verified exhaustively)
+**Status:** PROVED (ALL cases algebraic — no exhaustive verification needed)
 **Filed by:** kind-pasteur-2026-03-08-S43
-**Updated:** kind-pasteur-2026-03-08-S43 (isolation characterization breakthrough)
-**Depends on:** THM-122 (TT span), THM-103 (β₁≤1), THM-104, THM-105, THM-106, THM-107, THM-109
+**Updated:** opus-2026-04-04-S1 (THM-285: n=5 gap closure — Case 2 is vacuous at n≤5)
+**Depends on:** THM-122 (TT span), THM-103 (β₁≤1), THM-104, THM-105, THM-106, THM-107, THM-109, THM-285
 
 ## Main Theorem
 
@@ -72,7 +72,10 @@ n-1 vertices. BAD vertices always have 0 isolation edges.
 dominated cycle D. The (F,D) pair guarantees n-5 good vertices (worst case: unique
 dominator outside V(F)). For n >= 6: n-5 >= 1.
 
-**For n = 4, 5:** Verified exhaustively (40/40 and 720/720).
+**For n = 4, 5:** VACUOUS — no n=4 or n=5 tournament has both b₁=0 and κ≥2.
+At n=4, κ≥2 is impossible (algebraic: score sum contradiction).
+At n=5, κ≥2 implies b₁=1 (algebraic: dominator would create source/sink in deletion).
+See **THM-285** for full proof.
 
 **All-dominated subcase — PROVED (Extreme Score Lemma, S43):**
 At most 1 bad vertex. Proof: bad vertex has score 0 or n-1 (forced by

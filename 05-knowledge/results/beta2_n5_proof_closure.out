@@ -1,0 +1,50 @@
+
+=== n=4 ===
+Total SC tournaments: 24
+SC with b1=0: 0
+Kappa distribution (all SC): {1: 24, 2: 0, 3: 0, 4: 0}
+Kappa distribution (SC, b1=0): {1: 0, 2: 0, 3: 0, 4: 0}
+*** CONFIRMED: No SC kappa>=2 b1=0 tournaments at n=4 ***
+*** THM-109 Case 2 is VACUOUS at n=4 ***
+
+=== n=5 ===
+Total SC tournaments: 544
+SC with b1=0: 240
+Kappa distribution (all SC): {1: 520, 2: 24, 3: 0, 4: 0}
+Kappa distribution (SC, b1=0): {1: 240, 2: 0, 3: 0, 4: 0}
+*** CONFIRMED: No SC kappa>=2 b1=0 tournaments at n=5 ***
+*** THM-109 Case 2 is VACUOUS at n=5 ***
+  n=6 progress: 5000/32768...
+  n=6 progress: 10000/32768...
+  n=6 progress: 15000/32768...
+  n=6 progress: 20000/32768...
+  n=6 progress: 25000/32768...
+  n=6 progress: 30000/32768...
+
+=== n=6 ===
+SC + kappa>=2 + b1=0 tournaments: 1680
+  Of which have free cycles (Case 2): 1680
+  Lemma B gives n-5=1 good vertices (>=1 ✓)
+
+=== ALGEBRAIC ANALYSIS ===
+Total SC kappa>=2 tournaments at n=5: 24
+  bits=76, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), b1=1, #cycles=5, #free=5, #dom=0
+  bits=105, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), b1=1, #cycles=5, #free=5, #dom=0
+  bits=202, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), b1=1, #cycles=5, #free=5, #dom=0
+  bits=217, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), b1=1, #cycles=5, #free=5, #dom=0
+  bits=284, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), b1=1, #cycles=5, #free=5, #dom=0
+  bits=298, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), b1=1, #cycles=5, #free=5, #dom=0
+  bits=313, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), b1=1, #cycles=5, #free=5, #dom=0
+  bits=326, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), b1=1, #cycles=5, #free=5, #dom=0
+  bits=341, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), b1=1, #cycles=5, #free=5, #dom=0
+  bits=355, scores=(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2)), b1=1, #cycles=5, #free=5, #dom=0
+
+Score sequences: {(np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2))}
+b1 values: {1}
+
+*** THEOREM: At n=5, SC kappa>=2 implies b1=1 ***
+*** Therefore SC kappa>=2 + b1=0 is EMPTY ***
+*** The beta_2=0 proof gap at n=5 is VACUOUS ***
+
+n=4: SC kappa>=2: 0, of which b1=0: 0
+  n=4 also vacuous (or falls in Case 3 all-dominated)
