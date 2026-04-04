@@ -1,0 +1,111 @@
+PURE BOUNDARY POLYNOMIAL EVOLUTION
+============================================================
+
+n_outer=5, boundary tiles=5
+  Tiles: [(5, 1), (4, 1), (3, 1), (5, 2), (5, 3)]
+  H range with inner=0: [1, 15], mean=9.9
+  H(0,0,...,0) = 1 (= H_3(0) = 1)
+  Bottom (2): [(4, 1), (3, 1)]
+  Top (2): [(5, 2), (5, 3)]
+  Apex (1): [(5, 1)]
+
+  Linear coefficients (pure boundary):
+    (5, 1) skip=4 [top]: c=8 ✓
+    (4, 1) skip=3 [bottom]: c=4 ✓
+    (3, 1) skip=2 [bottom]: c=2 ✓
+    (5, 2) skip=3 [top]: c=4 ✓
+    (5, 3) skip=2 [top]: c=2 ✓
+
+  H(0_inner, 1_boundary) = 13
+  H(0_inner, 0_boundary) = 1
+
+  Boundary polynomial degree: 4
+  Coefficients per order: {0: 1, 1: 5, 2: 10, 3: 3, 4: 1}
+
+n_outer=6, boundary tiles=7
+  Tiles: [(6, 1), (5, 1), (4, 1), (3, 1), (6, 2), (6, 3), (6, 4)]
+  H range with inner=0: [1, 45], mean=25.8
+  H(0,0,...,0) = 1 (= H_4(0) = 1)
+  Bottom (3): [(5, 1), (4, 1), (3, 1)]
+  Top (3): [(6, 2), (6, 3), (6, 4)]
+  Apex (1): [(6, 1)]
+
+  Linear coefficients (pure boundary):
+    (6, 1) skip=5 [top]: c=16 ✓
+    (5, 1) skip=4 [bottom]: c=8 ✓
+    (4, 1) skip=3 [bottom]: c=4 ✓
+    (3, 1) skip=2 [bottom]: c=2 ✓
+    (6, 2) skip=4 [top]: c=8 ✓
+    (6, 3) skip=3 [top]: c=4 ✓
+    (6, 4) skip=2 [top]: c=2 ✓
+
+  H(0_inner, 1_boundary) = 33
+  H(0_inner, 0_boundary) = 1
+
+  Boundary polynomial degree: 4
+  Coefficients per order: {0: 1, 1: 7, 2: 21, 3: 17, 4: 8}
+
+n_outer=7, boundary tiles=9
+  Tiles: [(7, 1), (6, 1), (5, 1), (4, 1), (3, 1), (7, 2), (7, 3), (7, 4), (7, 5)]
+  H range with inner=0: [1, 151], mean=69.5
+  H(0,0,...,0) = 1 (= H_5(0) = 1)
+  Bottom (4): [(6, 1), (5, 1), (4, 1), (3, 1)]
+  Top (4): [(7, 2), (7, 3), (7, 4), (7, 5)]
+  Apex (1): [(7, 1)]
+
+  Linear coefficients (pure boundary):
+    (7, 1) skip=6 [top]: c=32 ✓
+    (6, 1) skip=5 [bottom]: c=16 ✓
+    (5, 1) skip=4 [bottom]: c=8 ✓
+    (4, 1) skip=3 [bottom]: c=4 ✓
+    (3, 1) skip=2 [bottom]: c=2 ✓
+    (7, 2) skip=5 [top]: c=16 ✓
+    (7, 3) skip=4 [top]: c=8 ✓
+    (7, 4) skip=3 [top]: c=4 ✓
+    (7, 5) skip=2 [top]: c=2 ✓
+
+  H(0_inner, 1_boundary) = 85
+  H(0_inner, 0_boundary) = 1
+
+  Boundary polynomial degree: 4
+  Coefficients per order: {0: 1, 1: 9, 2: 36, 3: 49, 4: 33}
+
+============================================================
+BOTTOM-TOP STRUCTURE at n_outer=7
+============================================================
+Bottom tiles: [(6, 1), (5, 1), (4, 1), (3, 1)]
+Top tiles: [(7, 2), (7, 3), (7, 4), (7, 5)]
+Apex tile: (7, 1)
+  Factorization fail: bottom=1, top=1, H_bt=85, H_b=17, H_t=17, H_bt·H_00=85, H_b·H_t=289
+  Factorization fail: bottom=1, top=2, H_bt=59, H_b=17, H_t=9, H_bt·H_00=59, H_b·H_t=153
+  Factorization fail: bottom=1, top=3, H_bt=109, H_b=17, H_t=23, H_bt·H_00=109, H_b·H_t=391
+  Factorization fail: bottom=2, top=1, H_bt=59, H_b=9, H_t=17, H_bt·H_00=59, H_b·H_t=153
+  Factorization fail: bottom=2, top=2, H_bt=41, H_b=9, H_t=9, H_bt·H_00=41, H_b·H_t=81
+  Factorization fail: bottom=2, top=3, H_bt=81, H_b=9, H_t=23, H_bt·H_00=81, H_b·H_t=207
+  Factorization fail: bottom=3, top=1, H_bt=109, H_b=23, H_t=17, H_bt·H_00=109, H_b·H_t=391
+  Factorization fail: bottom=3, top=2, H_bt=81, H_b=23, H_t=9, H_bt·H_00=81, H_b·H_t=207
+  Factorization fail: bottom=3, top=3, H_bt=145, H_b=23, H_t=23, H_bt·H_00=145, H_b·H_t=529
+
+  Bottom-top factorization: FAILS
+
+  Bottom-only polynomial:
+    bits=0000: H=1 tiles flipped: []
+    bits=0001: H=17 tiles flipped: [(6, 1)]
+    bits=0010: H=9 tiles flipped: [(5, 1)]
+    bits=0011: H=23 tiles flipped: [(6, 1), (5, 1)]
+    bits=0100: H=5 tiles flipped: [(4, 1)]
+    bits=0101: H=19 tiles flipped: [(6, 1), (4, 1)]
+    bits=0110: H=11 tiles flipped: [(5, 1), (4, 1)]
+    bits=0111: H=23 tiles flipped: [(6, 1), (5, 1), (4, 1)]
+    bits=1111: H=17 tiles flipped: [(6, 1), (5, 1), (4, 1), (3, 1)]
+
+  Top-only polynomial:
+    bits=0000: H=1 tiles flipped: []
+    bits=0001: H=17 tiles flipped: [(7, 2)]
+    bits=0010: H=9 tiles flipped: [(7, 3)]
+    bits=0011: H=23 tiles flipped: [(7, 2), (7, 3)]
+    bits=0100: H=5 tiles flipped: [(7, 4)]
+    bits=0101: H=19 tiles flipped: [(7, 2), (7, 4)]
+    bits=0110: H=11 tiles flipped: [(7, 3), (7, 4)]
+    bits=0111: H=23 tiles flipped: [(7, 2), (7, 3), (7, 4)]
+    bits=1111: H=17 tiles flipped: [(7, 2), (7, 3), (7, 4), (7, 5)]

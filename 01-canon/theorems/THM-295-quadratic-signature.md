@@ -1,4 +1,4 @@
-# THM-290: Quadratic Coefficient Matrix Signature
+# THM-295: Quadratic Coefficient Matrix Signature
 
 **Status:** CONJECTURED, verified n=5,6,7,8
 **Discovered by:** opus-2026-04-04-S3
