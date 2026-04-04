@@ -7,3 +7,27 @@ Phase 2: Sample 200000 random tilings for statistics...
   50000/200000 (1091/s, elapsed 46s)...
   100000/200000 (1087/s, elapsed 92s)...
   150000/200000 (1079/s, elapsed 139s)...
+
+============================================================
+n=8 STATISTICS (200000 samples)
+============================================================
+H range: [3, 661]
+Mean H: 388.70
+Distinct H values: 319
+Time: 185.5s
+
+Linear approx E_lin[H] = 121
+Correction: 267.70
+
+H values (first 20): [3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45]
+H values (last 10): [639, 641, 643, 645, 649, 651, 653, 657, 659, 661]
+All H odd (Redei): True
+
+Phase 3: Exact E[H_8] via recursion...
+  Computing E[H_6] exactly...
+  E[H_6] = 29.0000
+  Σ H_6 = 29696
+  Sampling 1000 boundary configs...
+  Boundary tiles: 11
+  E[H_8] ≈ 386.02 (from boundary sampling)
+  E[H_8] from direct sampling: 388.70

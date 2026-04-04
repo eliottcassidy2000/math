@@ -1,0 +1,70 @@
+
+============================================================
+TOURNAMENT Q-METRIC n=5
+============================================================
+  Corr(Q-distance, |ΔH|): -0.0844
+
+  H variance explained:
+    Linear only (degree 1): R² = -0.1944
+    Linear + Quadratic (degree 1+2): R² = 0.2333
+    Remaining variance fraction: 0.7667
+    Bits of H explained by quadratic: 0.38
+
+  Top-3 Q eigenvalues: ['8.51', '-8.00', '-4.51']
+
+  Mean fingerprint by H value (top-3 projections):
+    H=  1 (    1 tilings): mean=[-0.182, -0.000, 0.250], std=[0.000, 0.000, 0.000]
+    H=  3 (    3 tilings): mean=[-0.176, 0.000, 0.345], std=[0.328, 0.408, 0.379]
+    H=  5 (   10 tilings): mean=[0.038, 0.000, 0.505], std=[0.320, 0.742, 0.310]
+    H=  9 (   18 tilings): mean=[-0.006, 0.000, -0.009], std=[0.381, 0.553, 0.507]
+    H= 11 (   11 tilings): mean=[0.267, 0.000, -0.022], std=[0.450, 0.426, 0.483]
+    H= 13 (   13 tilings): mean=[-0.106, 0.000, -0.260], std=[0.612, 0.392, 0.364]
+    H= 15 (    8 tilings): mean=[-0.141, -0.000, -0.319], std=[0.680, 0.250, 0.358]
+
+============================================================
+TOURNAMENT Q-METRIC n=6
+============================================================
+  Corr(Q-distance, |ΔH|): -0.0295
+
+  H variance explained:
+    Linear only (degree 1): R² = -0.0287
+    Linear + Quadratic (degree 1+2): R² = -3.5409
+    Remaining variance fraction: 4.5409
+
+  Top-3 Q eigenvalues: ['-29.32', '23.84', '-23.37']
+
+  Mean fingerprint by H value (top-3 projections):
+    H=  1 (    1 tilings): mean=[0.000, 0.800, -0.010], std=[0.000, 0.000, 0.000]
+    H=  3 (    4 tilings): mean=[0.000, 0.709, 0.059], std=[0.198, 0.112, 0.233]
+    H=  5 (   15 tilings): mean=[-0.000, 0.595, 0.271], std=[0.425, 0.278, 0.417]
+    H=  9 (   37 tilings): mean=[-0.000, 0.331, 0.472], std=[0.717, 0.320, 0.441]
+    H= 11 (   22 tilings): mean=[-0.000, 0.340, 0.552], std=[0.736, 0.283, 0.309]
+    H= 13 (   26 tilings): mean=[-0.000, 0.211, 0.438], std=[0.795, 0.278, 0.285]
+    H= 15 (   46 tilings): mean=[-0.000, 0.077, 0.240], std=[0.673, 0.345, 0.539]
+    H= 17 (   34 tilings): mean=[-0.000, 0.049, 0.128], std=[0.544, 0.417, 0.600]
+    H= 19 (   38 tilings): mean=[-0.000, -0.077, 0.196], std=[0.502, 0.435, 0.571]
+    H= 23 (   92 tilings): mean=[-0.000, -0.043, 0.114], std=[0.530, 0.437, 0.546]
+
+============================================================
+TOURNAMENT Q-METRIC n=7
+============================================================
+  Corr(Q-distance, |ΔH|) [sampled]: 0.0449
+
+  H variance explained:
+    Linear only (degree 1): R² = 0.0985
+    Linear + Quadratic (degree 1+2): R² = -7.4188
+    Remaining variance fraction: 8.4188
+
+  Top-3 Q eigenvalues: ['96.99', '-93.86', '-82.88']
+
+  Mean fingerprint by H value (top-3 projections):
+    H=  1 (    1 tilings): mean=[1.767, 0.000, -0.125], std=[0.000, 0.000, 0.000]
+    H=  3 (    5 tilings): mean=[1.656, 0.000, -0.080], std=[0.008, 0.108, 0.126]
+    H=  5 (   20 tilings): mean=[1.453, 0.000, 0.051], std=[0.084, 0.213, 0.255]
+    H=  9 (   57 tilings): mean=[1.183, -0.000, 0.234], std=[0.258, 0.358, 0.422]
+    H= 11 (   33 tilings): mean=[1.119, -0.000, 0.292], std=[0.174, 0.363, 0.392]
+    H= 13 (   39 tilings): mean=[1.121, -0.000, 0.249], std=[0.172, 0.411, 0.428]
+    H= 15 (   94 tilings): mean=[0.907, -0.000, 0.345], std=[0.455, 0.579, 0.510]
+    H= 17 (   68 tilings): mean=[0.795, -0.000, 0.467], std=[0.484, 0.645, 0.468]
+    H= 19 (   76 tilings): mean=[0.719, -0.000, 0.533], std=[0.427, 0.655, 0.418]
+    H= 23 (  184 tilings): mean=[0.697, -0.000, 0.518], std=[0.387, 0.693, 0.401]
