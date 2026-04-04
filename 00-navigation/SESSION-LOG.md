@@ -13,6 +13,36 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S6 — 2026-04-04: Sign Rule Proved, Statistical/Information Analysis, Tournament Metric
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S5
+**Summary:** Pushed the sign rule (THM-301) from conjecture to proved (parts a,b) via vertex degree constraints in directed cycles. Deep statistical and information-theoretic analysis of the H(t) distribution. Built practical tournament distance metric from Q eigenvectors. Discovered the additive/multiplicative sign split.
+
+**Key Results:**
+1. **THM-301 (a,b) PROVED**: Same-end sign rule via Opposite Direction Theorem (vertex indeg=outdeg=1 in cycle forces opposite tile directions). Cross-end via Same Direction Theorem. Both proofs are 3-line arguments from cycle degree constraints. Part (c) disjoint verified but open.
+
+2. **Additive/multiplicative sign split**: c_{ij} > 0 (additive synergy) coexists with lambda_{ij} < 0 (multiplicative competition) for disjoint/cross-end pairs. These measure fundamentally different quantities. The sign rule for c_{ij} does NOT follow from the antiferromagnetic property of lambda_{ij}.
+
+3. **Q decomposition**: Q = Q_same + Q_cross + Q_disj. neg(Q_same) = n-2 at n=5,6 but 6≠5 at n=7. Each vertex star contributes 1 negative eigenvalue to Q_same. The full Q signature arises from interplay of all three components.
+
+4. **Correlation matrix has neg(Corr) = neg(Q)**: The Boltzmann correlation matrix matches Q's negative eigenvalue count (3 at n=5, 4 at n=6). Negative eigenspaces nearly aligned (principal angles <12°). Q is a good linear approximation to the true dependence.
+
+5. **Near-uniformity**: H(t)/Z has >98% entropy efficiency, KL < 0.11 bits from uniform. Tiles are nearly independent (total correlation 0.06-0.07 bits). Same-end tiles have highest MI (~0.006), disjoint lowest (~0.0004).
+
+6. **Disjoint chi analysis**: chi=-1 cycles require opposite tile directions, chi=+1 require same. Same-direction cycles always outnumber opposite (ratio ≥ 3:1 when both exist).
+
+7. **Tournament fingerprint**: Top Q eigenvector monotonically separates H values (transitive projects to 1.77, high-H projects near 0). Quadratic embedding achieves R²=0.74 at n=6.
+
+8. **Hessian point-dependence**: Hessian signature varies across the hypercube. At transitive = Q. At anti-transitive: one fewer negative eigenvalue at n=7.
+
+**New contributions:** THM-301 proof, sign_rule_formal_proof.py, sign_rule_and_statistics.py, tournament_metric.py, 4 result files
+**Unresolved:**
+- Prove disjoint sign rule (part c) — counting argument that same-direction 5-cycles outnumber opposite-direction
+- Why neg(Q) = n-2 exactly (decomposition doesn't directly explain it)
+- Closed formula for disjoint coefficient
+- Is the "Boltzmann" distribution H(t)/Z useful for practical sampling?
+
 ## opus-2026-04-04-S5 — 2026-04-04: Multilinear Deep Exploration — Recursive Preservation, Eigenvalue Theorem, Landscape
 
 **Account:** opus
