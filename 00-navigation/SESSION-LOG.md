@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S10 — 2026-04-04: Why Seven Is Forbidden — The Rigidity Threshold
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S9
+**Summary:** Identified the fundamental mechanism behind 7's forbidden status in all senses: the RIGIDITY THRESHOLD at 3 cycles. At n=5, alpha_1 (odd cycle count) jumps from 2 directly to 4 — the value 3 is completely missing. This gap in alpha_1 creates the gap at H=7. The mechanism is tournament completeness: 3 pairwise-conflicting cycles at a common vertex leave zero degrees of freedom, forcing a 5-cycle that pushes alpha_1 to 4+.
+
+**Key Results:**
+1. **The alpha_1 gap**: At n=5, alpha_1 ∈ {0,1,2,4,5,6,7}. The value 3 is MISSING. This is the root cause — H = 1+2·3 = 7 falls into this gap.
+
+2. **All 320 bouquets give H≥9**: Every tournament with 3+ pairwise-sharing cycles at a common vertex has a forced 5-cycle. H=9 (240 cases) or H=15 (80 cases), never H=7.
+
+3. **The rigidity interpretation**: H=1→H=5 is "underconstrained" (freedom to choose arcs). H=7 is "rigid" (zero remaining DOF after 3 cycles). H=9+ is "overconstrained but new DOF from 5-cycle". 7 sits at the unique rigidity threshold.
+
+4. **7-residue opens at n=7**: H mod 7 = 0 first appears at n=7 (H=35,49,...). But values 7 and 21 themselves remain permanently forbidden. The prohibition is on specific integers, not residue classes.
+
+5. **The one mechanism**: Tournament completeness (every pair has an arc) prevents "pure curvature" (3 conflicting cycles, no depth). The completeness forces side effects. 7 = 1+2·3 is the first value at this threshold. 21 = the second. 42 = 2·3·7 encodes all three structural primes.
+
+6. **Connection to tiling counts**: tc=7 requires (H,|Aut|) combinations that don't exist, for the same reason: tournaments with H divisible by 7 are generic (|Aut|=1), and their H values are large multiples of 7 (≥35), never 7 itself. The rigidity that forbids H=7 also prevents the symmetry needed to divide H down to tc=7.
+
+**New contributions:** why-seven-is-forbidden.md reflection, rigidity_at_three.py, 1 result file
+**Unresolved:** Formal proof that alpha_1=3 with alpha_2=0 is impossible at ALL n (currently proved at n≤6, H=7 impossibility uses a different argument at n≥7)
+
 ## opus-2026-04-04-S9 — 2026-04-04: Forbidden Seven In All Senses — Tiling Counts, Automorphisms, and the 7-Gap
 
 **Account:** opus
