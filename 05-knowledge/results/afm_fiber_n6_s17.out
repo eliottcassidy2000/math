@@ -1,0 +1,73 @@
+  ... 200/1024 parents done
+  ... 400/1024 parents done
+  ... 600/1024 parents done
+  ... 800/1024 parents done
+  ... 1000/1024 parents done
+
+======================================================================
+  H PROPAGATION: n=5 → n=6 (exhaustive over parents, full extensions)
+======================================================================
+
+  Total extensions: 32768
+
+  ΔH by Δc₃:
+    Δc₃     mean ΔH         std     min     max    count
+      0      0.0000      0.0000       0       0     3008
+      1      5.1429      2.6419       2      12     4480
+      2     11.5556      4.9241       4      22     8640
+      3     18.8571      5.9744       8      28     8960
+      4     25.4118      6.0104      10      34     5440
+      5     28.0000      5.2915      18      34     1920
+      6     24.0000      3.4641      22      30      320
+
+  Correlation(Δc₃, ΔH) = 0.844317
+
+  Full model: ΔH ≈ 6.0000*Δc₃ + -0.0000*score(n) + 0.0000*H_sub + 3.0000*c₃_sub + -7.5000
+  R² = 0.891089
+  Simple: ΔH ≈ 6.0000*Δc₃ + -0.0000
+  R²(simple) = 0.712871
+  ΔH ≈ 6.0000*Δc₃ + 0.9474*H_sub + -7.1053
+  R²(Δc₃ + H_sub) = 0.881709
+  ΔH ≈ 0.277992*Δc₃*H_sub + 4.3320*Δc₃ + 0.2524*H_sub + -2.9354
+  R²(interaction) = 0.906481
+
+  FIBER CONNECTION by parent H:
+   H_sub     mean ΔH    mean Δc₃    ΔH/Δc₃      corr   min ΔH   max ΔH
+       1      7.5000      2.5000    3.0000    0.9673        0       22
+       3     10.5000      2.5000    4.2000    0.9662        0       30
+       5     13.5000      2.5000    5.4000    0.9544        0       32
+       9     16.5000      2.5000    6.6000    0.9468        0       34
+      11     19.5000      2.5000    7.8000    0.9687        0       34
+      13     19.5000      2.5000    7.8000    0.9665        0       32
+      15     20.6250      2.5000    8.2500    0.8907        0       28
+
+  [H propagation n=5→6: 5.7s]
+
+======================================================================
+  INNER vs BOUNDARY MAGNON DECOMPOSITION — n = 6 (sampled)
+======================================================================
+
+  Samples: 5000
+
+  INNER magnons (flip within T_5):
+    Count: 50000
+    Mean |ΔH|: 7.0236
+    ΔH=0 rate: 14.39%
+
+  BOUNDARY magnons (flip arc to/from vertex 5):
+    Count: 25000
+    Mean |ΔH|: 7.0047
+    ΔH=0 rate: 14.37%
+
+  RATIO: boundary/inner = 0.9973
+
+  Boundary by vertex:
+    v=0: mean|ΔH|=6.9076
+    v=1: mean|ΔH|=7.0648
+    v=2: mean|ΔH|=6.9984
+    v=3: mean|ΔH|=7.0416
+    v=4: mean|ΔH|=7.0112
+
+  [Magnon decomp n=6: 14.0s]
+
+  TOTAL: 19.7s
