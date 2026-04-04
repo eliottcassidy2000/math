@@ -1,0 +1,166 @@
+
+============================================================
+MAX-DEGREE SIGN ANALYSIS n=5
+============================================================
+  Max degree: 4, 7 terms
+  P values: [np.int64(-1), np.int64(1)]
+  Positive: 5, Negative: 2
+    sum_r parity: 5/7 = 0.714
+    sum_skip parity: 5/7 = 0.714
+    odd_skip parity: 5/7 = 0.714
+    left_col parity: 5/7 = 0.714
+    top_row parity: 5/7 = 0.714
+    below_diag > above_diag: 5/7 = 0.714
+    num tiles with r > c: 2/7 = 0.286
+
+  Row/column coverage analysis:
+  Row-set sign determination: 1 pure, 1 mixed
+  Col-set sign determination: 1 pure, 1 mixed
+
+============================================================
+MAX-DEGREE SIGN ANALYSIS n=7
+============================================================
+  Max degree: 6, 323 terms
+  P values: [np.int64(-1), np.int64(1)]
+  Positive: 125, Negative: 198
+
+  Row/column coverage analysis:
+  Row-set sign determination: 5 pure, 11 mixed
+  Col-set sign determination: 2 pure, 4 mixed
+
+============================================================
+MULTILINEAR vs BETTI NUMBERS n=5
+============================================================
+  P(t) mod 2: 26 nonzero terms out of 63
+  By degree: {1: 3, 2: 10, 3: 6, 4: 7}
+  H mod 4 distribution: {1: 42, 3: 22}
+  P even (H≡1): 42, P odd (H≡3): 22
+
+============================================================
+MULTILINEAR vs BETTI NUMBERS n=6
+============================================================
+  P(t) mod 2: 126 nonzero terms out of 1023
+  By degree: {1: 4, 2: 24, 3: 36, 4: 62}
+  H mod 4 distribution: {1: 656, 3: 368}
+  P even (H≡1): 656, P odd (H≡3): 368
+
+============================================================
+n-GENERATING FUNCTION FOR DEGREE SUMS
+============================================================
+
+    n         S_0         S_1         S_2         S_3         S_4         S_5         S_6        H(1)
+    3           1           2                                                                       3
+    4           1           8          -4                                                           5
+    5           1          22           0         -20           6                                   9
+    6           1          52          92        -208          80                                  17
+    7           1         114         616        -948        -138         532        -146          31
+
+  S_1(n) = 2^n - 2n:
+    n=3: formula=2, actual=2, match=True
+    n=4: formula=8, actual=8, match=True
+    n=5: formula=22, actual=22, match=True
+    n=6: formula=52, actual=52, match=True
+    n=7: formula=114, actual=114, match=True
+
+  S_2(n) values:
+    n=3: S_2 = 0
+    n=4: S_2 = -4
+    n=5: S_2 = 0
+    n=6: S_2 = 92
+    n=7: S_2 = 616
+
+  Fit S_2(n) = a*4^n + b*2^n + c*n^2 + d*n + e:
+    a=0.053241, b=-1.500000, c=-5.333333, d=35.111111, e=-48.740741
+    n=3: actual=0, predicted=0.0
+    n=4: actual=-4, predicted=-4.0
+    n=5: actual=0, predicted=-0.0
+    n=6: actual=92, predicted=92.0
+    n=7: actual=616, predicted=616.0
+
+  Fit S_2(n) = a*4^n + b*2^n + c*n + d:
+    a=0.056755, b=-2.809298, c=6.666667, d=-0.915033
+    n=3: actual=0, predicted=0.2
+    n=4: actual=-4, predicted=-4.7
+    n=5: actual=0, predicted=0.6
+    n=6: actual=92, predicted=91.8
+    n=7: actual=616, predicted=616.0
+
+  H(1,...,1) sequence:
+    n=3: H(1) = 3
+    n=4: H(1) = 5
+    n=5: H(1) = 9
+    n=6: H(1) = 17
+    n=7: H(1) = 31
+
+============================================================
+H(t) LANDSCAPE ANALYSIS n=5
+============================================================
+  Local maxima: 8 (H values: [15])
+  Local minima: 6 (H values: [1, 5, 9])
+  Global max: H = 15
+  Global min: H = 1
+  Fraction local max: 8/64 = 0.1250
+  Fraction local min: 6/64 = 0.0938
+  Tilings achieving global min (H=1): 1
+
+  Uphill neighbor distribution:
+    0 uphill: 8 tilings (12.5%)
+    1 uphill: 3 tilings (4.7%)
+    2 uphill: 15 tilings (23.4%)
+    3 uphill: 32 tilings (50.0%)
+    4 uphill: 2 tilings (3.1%)
+    5 uphill: 3 tilings (4.7%)
+    6 uphill: 1 tilings (1.6%)
+
+============================================================
+H(t) LANDSCAPE ANALYSIS n=6
+============================================================
+  Local maxima: 89 (H values: [45, 43, 37])
+  Local minima: 14 (H values: [1, 5, 9, 15])
+  Global max: H = 45
+  Global min: H = 1
+  Fraction local max: 89/1024 = 0.0869
+  Fraction local min: 14/1024 = 0.0137
+  Tilings achieving global min (H=1): 1
+
+  Uphill neighbor distribution:
+    0 uphill: 89 tilings (8.7%)
+    1 uphill: 68 tilings (6.6%)
+    2 uphill: 114 tilings (11.1%)
+    3 uphill: 80 tilings (7.8%)
+    4 uphill: 133 tilings (13.0%)
+    5 uphill: 216 tilings (21.1%)
+    6 uphill: 140 tilings (13.7%)
+    7 uphill: 141 tilings (13.8%)
+    8 uphill: 35 tilings (3.4%)
+    9 uphill: 7 tilings (0.7%)
+    10 uphill: 1 tilings (0.1%)
+
+============================================================
+H(t) LANDSCAPE ANALYSIS n=7
+============================================================
+  Local maxima: 567 (H values: [189, 175, 171, 159, 155, 145, 143, 141, 135, 123])
+  Local minima: 30 (H values: [1, 5, 9, 15, 25, 27, 69])
+  Global max: H = 189
+  Global min: H = 1
+  Fraction local max: 567/32768 = 0.0173
+  Fraction local min: 30/32768 = 0.0009
+  Tilings achieving global min (H=1): 1
+
+  Uphill neighbor distribution:
+    0 uphill: 567 tilings (1.7%)
+    1 uphill: 373 tilings (1.1%)
+    2 uphill: 947 tilings (2.9%)
+    3 uphill: 1155 tilings (3.5%)
+    4 uphill: 1690 tilings (5.2%)
+    5 uphill: 2906 tilings (8.9%)
+    6 uphill: 4295 tilings (13.1%)
+    7 uphill: 6342 tilings (19.4%)
+    8 uphill: 5547 tilings (16.9%)
+    9 uphill: 3937 tilings (12.0%)
+    10 uphill: 2682 tilings (8.2%)
+    11 uphill: 1387 tilings (4.2%)
+    12 uphill: 747 tilings (2.3%)
+    13 uphill: 170 tilings (0.5%)
+    14 uphill: 21 tilings (0.1%)
+    15 uphill: 2 tilings (0.0%)
