@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S19 — 2026-04-04: Frustration Propagation Formula — F(n) = 2^n - 4(n-1)
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S18
+**Summary:** Derived the exact recursive frustration propagation formula. The total frustration F(n) = 2^n - 4(n-1), growing exponentially with a linear correction. Each new layer adds frustration ΔF = 2(2^{n-2}-2), split equally between new-new and new-old interactions (remarkable symmetry F_nn = F_no).
+
+**Key Results:**
+1. **CLOSED FORM: F(n) = 2^n - 4(n-1)** (total frustration = sum of |negative c_{ij}|). Verified n=3..7.
+2. **Layer symmetry: F_nn = F_no = 2^{n-2} - 2** at each step. New tiles frustrate each other exactly as much as they frustrate old tiles.
+3. **Apex at threshold: ρ = frust_load/c_k = 1.00 always for the apex tile.** The highest-energy excitation sits exactly at the frustration threshold.
+4. **Corners exponentially frustrated: ρ = 2^{n-3}** for skip-2 corner tiles. Their tiny energy (c_k=2) is overwhelmed by same-end competition.
+5. **The recursion is EXACT**: F(n) = F(n-1) + 2^{n-1} - 4, starting from F(3) = 0. Each new vertex adds precisely 2(2^{n-2}-2) new frustration.
+
+**New contributions:** frustration_propagation.py, frustration-propagation-formula.md reflection
+**Unresolved:** Prove F_nn = F_no algebraically. Derive the synergy growth formula similarly. Connect ρ(tile) to the frustration threshold from S15.
+
 ## opus-2026-04-04-S17b — 2026-04-04: The Fiber Bundle Antiferromagnet — Exchange Coupling Renormalization
 
 **Account:** opus
