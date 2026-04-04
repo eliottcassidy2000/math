@@ -1,0 +1,65 @@
+n=8, m=21, fixed=3, paired=9, gs_dim=12, gs_count=2^12=4096
+Building permutation lookup...
+40320 permutations
+Free positions: 12, gs tilings: 4096
+
+Canonicalizing 4096 gs tilings (this will take ~10-15 min)...
+  0/4096 (0.0%) 0s elapsed, ~0s remaining
+  200/4096 (4.9%) 35s elapsed, ~680s remaining
+  400/4096 (9.8%) 70s elapsed, ~648s remaining
+  600/4096 (14.6%) 106s elapsed, ~617s remaining
+  800/4096 (19.5%) 143s elapsed, ~588s remaining
+  1000/4096 (24.4%) 179s elapsed, ~554s remaining
+  1200/4096 (29.3%) 215s elapsed, ~519s remaining
+  1400/4096 (34.2%) 251s elapsed, ~483s remaining
+  1600/4096 (39.1%) 287s elapsed, ~448s remaining
+  1800/4096 (43.9%) 324s elapsed, ~413s remaining
+  2000/4096 (48.8%) 360s elapsed, ~377s remaining
+  2200/4096 (53.7%) 396s elapsed, ~341s remaining
+  2400/4096 (58.6%) 433s elapsed, ~306s remaining
+  2600/4096 (63.5%) 470s elapsed, ~270s remaining
+  2800/4096 (68.4%) 506s elapsed, ~234s remaining
+  3000/4096 (73.2%) 542s elapsed, ~198s remaining
+  3200/4096 (78.1%) 578s elapsed, ~162s remaining
+  3400/4096 (83.0%) 614s elapsed, ~126s remaining
+  3600/4096 (87.9%) 650s elapsed, ~90s remaining
+  3800/4096 (92.8%) 686s elapsed, ~53s remaining
+  4000/4096 (97.7%) 722s elapsed, ~17s remaining
+
+Done in 739.4s
+Distinct iso classes among gs tilings: 176
+
+Computing |Aut| for each class...
+  0/176...
+  20/176...
+  40/176...
+  60/176...
+  80/176...
+  100/176...
+  120/176...
+  140/176...
+  160/176...
+Done in 31.8s
+
+============================================================
+n=8 RESULTS
+============================================================
+T(8) = 6880
+SC(8) = 176 (from gs enumeration, expected 176)
+NS(8) = 6704
+Pure-blue: 0
+Mixed: 176
+Pure-black: 6704
+
+Mixed class gs_count distribution: {1: 3, 3: 2, 5: 4, 7: 6, 9: 6, 11: 4, 13: 6, 15: 8, 17: 7, 19: 15, 21: 7, 23: 15, 25: 15, 27: 11, 29: 17, 31: 17, 33: 17, 35: 8, 37: 6, 39: 2}
+
+======================================================================
+COMPLETE PURITY SEQUENCE (n=3..8)
+======================================================================
+    n     T(n)     SC     NS     PB     MX     PK       gs      gs_frac
+    3        2      2      0      2      0      0        2          1.0
+    4        4      2      2      1      1      2        4          1/2
+    5       12      8      4      3      5      4       16          1/4
+    6       56     12     44      2     10     44       64         1/16
+    7      456     88    368      0     88    368      512         1/64
+    8     6880    176   6704      0    176   6704     4096        1/512
