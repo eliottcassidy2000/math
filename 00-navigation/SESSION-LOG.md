@@ -13,6 +13,35 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S12 — 2026-04-04: Recursive Metagraph Generation — Fiber Bundle Algorithm
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S11
+**Summary:** Built a recursive metagraph generation algorithm using the fiber bundle structure (G_n as bundle over G_{n-1} with extension fiber). The algorithm is 690× faster than brute force at n=7 and produces correct results. Goes beyond transfer matrices by using Burnside orbit counting + invariant grouping + canonical form merging.
+
+**Key Results:**
+1. **RECURSIVE ALGORITHM**: Generate G_n from G_{n-1} in 5 steps:
+   (a) Enumerate iso classes at n-1 with Aut groups
+   (b) For each class, compute extension orbits via Burnside: #orbits = (1/|Aut|)Σ 2^{cycles(α)}
+   (c) Build representative tournament for each orbit
+   (d) Group by cheap invariants (H, score_seq, c_3)
+   (e) Merge within groups by canonical form
+
+2. **Performance**: 690× faster than brute force at n=7 (3040 canonical checks vs 2M tilings). Speedup grows exponentially with n.
+
+3. **Fiber bundle structure verified**: Each iso class at n has ~n parents (merging ratio 4.0→5.29→6.67 for n=5,6,7). Fiber sizes follow Burnside exactly: 2^{n-1}/|Aut|.
+
+4. **Correct results**: V_5=12, V_6=56, V_7=456 all match known values. H distributions match.
+
+5. **Bootstrapping**: The algorithm uses its OWN output at n-1 as input for n, so it generates the full sequence G_3, G_4, ..., G_n without ever enumerating all tilings.
+
+**New contributions:** metagraph_fiber_bundle.py, metagraph_recursive_gen.py, 2 result files
+**Unresolved:**
+- Extend to n=8 (V_8=6880; estimated ~7800 pre-classes, feasible with faster canonical forms)
+- Build metagraph EDGES recursively (currently only vertices)
+- Predict merging ratio analytically (conjecture: approaches n)
+- Can we avoid canonical forms entirely using Burnside at the n-level?
+
 ## opus-2026-04-04-S11 — 2026-04-04: Practical Extensions — THM-304, H-Gap Census, Achievable Lattice
 
 **Account:** opus
