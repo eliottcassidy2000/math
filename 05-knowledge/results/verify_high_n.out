@@ -1,0 +1,225 @@
+VERIFICATION OF KEY CLAIMS AT HIGHER n
+============================================================
+
+========================================
+n=8
+========================================
+
+  RÉDEI (H always odd) at n=8: 5000/5000 odd (✓)
+
+  H-GAPS at n=8: H=7: 0, H=21: 0, range [1, 661]
+    ✓
+
+  PERFECT STORM (c₃=3 → c₅≥1) at n=8: c₃=3 found 73 times, c₅=0 violations: 13
+    H values when c₃=3: {9: 60, 15: 13}
+    H=7 count: 0
+    ✓ NO H=7
+
+  OCF H = I(Ω,2) at n=8: 200/200 match (✓)
+
+  n→n+2 RECURSION (6→8): 500/500 match (✓)
+
+  Σ H FORMULA at n=8: estimated=811553616, expected=815136768, ratio=0.9956
+    ✓ (within 5%)
+
+  ANTIFERROMAGNETIC at n=8 (m=21 tiles): 1326/2500 satisfy c_ij ≤ c_i·c_j (✗)
+
+  Total time for n=8: 104s
+
+========================================
+n=9
+========================================
+
+  RÉDEI (H always odd) at n=9: 2000/2000 odd (✓)
+
+  H-GAPS at n=9: H=7: 0, H=21: 0, range [3, 3073]
+    ✓
+
+  PERFECT STORM (c₃=3 → c₅≥1) at n=9: c₃=3 found 1 times, c₅=0 violations: 0
+    H values when c₃=3: {9: 1}
+    H=7 count: 0
+    ✓ NO H=7
+
+  Total time for n=9: 50s
+
+========================================
+n=10
+========================================
+
+  RÉDEI (H always odd) at n=10: 500/500 odd (✓)
+
+  H-GAPS at n=10: H=7: 0, H=21: 0, range [27, 15513]
+    ✓
+
+  Total time for n=10: 32s
+ANTIFERROMAGNETIC INEQUALITY at n=8 (transitive base)
+============================================================
+H(transitive) = 1
+Linear coefficients c_i: [64, 32, 16, 8, 4, 2, 32, 16, 8, 4]...
+Expected 2^(skip-1): [64, 32, 16, 8, 4, 2, 32, 16, 8, 4]...
+All c_i = 2^(skip-1): True
+
+Antiferromagnetic at n=8: 210/210 satisfy c_ij ≤ c_i*c_j
+  Violations: 0, Equalities: 35
+  ✓
+
+Exhaustive antiferromagnetic at n=7:
+  105/105 satisfy c_ij ≤ c_i*c_j
+  Violations: 0, Equalities: 15
+  ✓
+REFINED PERFECT STORM at n=8: WHY c₃=3, c₅=0 still avoids H=7
+============================================================
+Found 147 tournaments with c₃=3
+  seed=171: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 4}, {0, 4, 6}, {4, 5, 6}]
+  seed=452: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{1, 4, 7}, {1, 5, 7}, {2, 3, 6}]
+  seed=1038: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 4, 6}, {1, 6, 7}, {5, 6, 7}]
+  seed=1638: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 4}, {1, 4, 7}, {4, 5, 7}]
+  seed=1822: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 4}, {1, 4, 6}, {2, 4, 6}]
+  seed=1858: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 5, 7}, {3, 5, 6}, {5, 6, 7}]
+  seed=3312: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 3, 6}, {2, 3, 7}, {2, 4, 6}]
+  seed=4335: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 3}, {1, 2, 5}, {1, 5, 7}]
+  seed=4504: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 3}, {2, 3, 4}, {2, 3, 6}]
+  seed=4914: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 6}, {2, 5, 6}, {4, 5, 6}]
+  seed=5239: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 6}, {3, 4, 6}, {4, 5, 6}]
+  seed=6237: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{1, 2, 5}, {3, 4, 6}, {3, 4, 7}]
+  seed=6871: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 4, 7}, {1, 3, 6}, {3, 5, 6}]
+  seed=7183: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 6}, {1, 4, 6}, {2, 4, 6}]
+  seed=8483: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 7}, {0, 4, 7}, {4, 5, 7}]
+  seed=9108: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 6}, {1, 3, 5}, {1, 3, 6}]
+  seed=9340: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 4}, {0, 4, 7}, {3, 4, 7}]
+  seed=9488: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 1, 2}, {1, 2, 3}, {4, 5, 7}]
+  seed=10253: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 3, 5}, {1, 6, 7}, {2, 3, 5}]
+  seed=10335: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 4}, {2, 4, 5}, {2, 4, 7}]
+  seed=11370: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 5}, {2, 4, 5}, {4, 5, 6}]
+  seed=12203: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 5}, {0, 3, 5}, {0, 5, 6}]
+  seed=12483: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 4}, {1, 3, 4}, {1, 4, 7}]
+  seed=13373: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 5}, {1, 2, 5}, {2, 5, 6}]
+  seed=13674: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 4}, {0, 3, 5}, {2, 3, 4}]
+  seed=14080: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 5, 7}, {1, 2, 3}, {2, 3, 4}]
+  seed=14237: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 7}, {0, 5, 7}, {3, 4, 7}]
+  seed=14249: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 5}, {1, 2, 5}, {1, 5, 7}]
+  seed=15138: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 4, 5}, {0, 5, 7}, {1, 2, 3}]
+  seed=15344: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 4}, {1, 3, 6}, {3, 4, 6}]
+  seed=15924: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 4, 7}, {4, 5, 6}, {4, 6, 7}]
+  seed=17910: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 5}, {0, 1, 6}, {1, 4, 5}]
+  seed=18292: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 4}, {1, 2, 5}, {1, 2, 6}]
+  seed=19769: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 1, 4}, {1, 3, 4}, {2, 5, 7}]
+  seed=20002: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 6, 7}, {1, 6, 7}, {2, 6, 7}]
+  seed=21066: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 6, 7}, {3, 5, 6}, {5, 6, 7}]
+  seed=21211: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 5}, {2, 4, 6}, {4, 5, 6}]
+  seed=23069: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 3}, {2, 3, 6}, {2, 3, 7}]
+  seed=23821: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 7}, {2, 5, 7}, {2, 6, 7}]
+  seed=25691: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 5}, {1, 3, 5}, {3, 5, 6}]
+  seed=27680: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 5}, {2, 4, 5}, {2, 5, 6}]
+  seed=28143: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 5}, {0, 2, 5}, {0, 5, 7}]
+  seed=28974: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 7}, {0, 3, 7}, {0, 6, 7}]
+  seed=29574: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 4}, {1, 2, 4}, {2, 3, 4}]
+  seed=31294: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 2}, {0, 1, 3}, {1, 2, 7}]
+  seed=31527: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 3}, {2, 3, 5}, {2, 3, 6}]
+  seed=32697: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 5}, {3, 4, 7}, {4, 5, 7}]
+  seed=32700: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 6}, {2, 3, 6}, {2, 6, 7}]
+  seed=33271: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 3, 6}, {3, 4, 6}, {3, 5, 6}]
+  seed=35005: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 4, 7}, {1, 5, 6}, {3, 4, 7}]
+  seed=35250: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 4}, {0, 4, 5}, {0, 4, 6}]
+  seed=35336: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 3, 4}, {1, 4, 6}, {1, 5, 6}]
+  seed=35389: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 5}, {1, 2, 5}, {1, 4, 5}]
+  seed=36271: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 2, 5}, {1, 2, 5}, {3, 4, 7}]
+  seed=37062: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 5, 6}, {1, 2, 4}, {1, 4, 7}]
+  seed=38336: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 3, 6}, {2, 3, 5}, {3, 5, 6}]
+  seed=40876: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 6, 7}, {4, 6, 7}, {5, 6, 7}]
+  seed=40887: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 3, 4}, {1, 3, 5}, {1, 3, 6}]
+  seed=42281: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 5}, {0, 2, 5}, {1, 5, 6}]
+  seed=42740: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 7}, {0, 3, 7}, {2, 4, 7}]
+  seed=43347: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 6, 7}, {3, 6, 7}, {4, 6, 7}]
+  seed=43400: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 5, 6}, {4, 5, 6}, {4, 5, 7}]
+  seed=43561: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 4, 7}, {1, 2, 6}, {3, 4, 7}]
+  seed=43608: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 4}, {0, 3, 5}, {0, 4, 7}]
+  seed=44525: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 7}, {1, 2, 3}, {1, 2, 7}]
+  seed=44747: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 4}, {0, 3, 4}, {0, 4, 6}]
+  seed=47007: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 5, 7}, {0, 6, 7}, {3, 5, 7}]
+  seed=47675: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 7}, {0, 4, 7}, {0, 5, 7}]
+  seed=47754: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 4}, {0, 4, 5}, {0, 4, 6}]
+  seed=47767: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 5, 6}, {3, 4, 5}, {3, 5, 6}]
+  seed=48218: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 3}, {0, 2, 7}, {1, 2, 7}]
+  seed=48258: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 6, 7}, {1, 2, 3}, {2, 3, 5}]
+  seed=49770: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 3}, {2, 3, 5}, {3, 4, 5}]
+  seed=50795: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 3, 6}, {2, 4, 6}, {2, 6, 7}]
+  seed=50981: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 4}, {1, 3, 4}, {1, 4, 7}]
+  seed=51493: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 5, 7}, {3, 5, 7}, {5, 6, 7}]
+  seed=52739: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 7}, {1, 3, 7}, {1, 5, 7}]
+  seed=53378: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{1, 3, 4}, {2, 3, 4}, {5, 6, 7}]
+  seed=54756: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 7}, {4, 5, 7}, {4, 6, 7}]
+  seed=54794: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 5}, {0, 3, 7}, {3, 4, 5}]
+  seed=55211: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 6}, {0, 4, 5}, {0, 4, 6}]
+  seed=57371: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 1, 3}, {0, 1, 7}, {2, 4, 6}]
+  seed=57605: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 2, 6}, {1, 3, 5}, {3, 4, 5}]
+  seed=58820: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 5}, {0, 3, 6}, {3, 4, 5}]
+  seed=59656: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 2}, {0, 1, 6}, {0, 1, 7}]
+  seed=60604: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 4}, {0, 2, 6}, {2, 4, 5}]
+  seed=60886: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 7}, {2, 3, 7}, {3, 4, 7}]
+  seed=61655: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 3, 4}, {2, 3, 4}, {5, 6, 7}]
+  seed=61670: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 7}, {4, 5, 7}, {4, 6, 7}]
+  seed=61704: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 7}, {0, 3, 7}, {0, 4, 7}]
+  seed=61982: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 2, 3}, {0, 3, 7}, {1, 4, 5}]
+  seed=62265: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 6}, {0, 4, 7}, {4, 5, 6}]
+  seed=63178: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 3, 7}, {2, 6, 7}, {4, 6, 7}]
+  seed=63540: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 6}, {2, 3, 6}, {3, 6, 7}]
+  seed=64764: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 1, 7}, {1, 5, 7}, {2, 3, 6}]
+  seed=65027: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 5}, {0, 3, 7}, {0, 4, 7}]
+  seed=66062: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 4}, {0, 2, 4}, {0, 4, 7}]
+  seed=66809: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 3, 4}, {2, 4, 6}, {2, 4, 7}]
+  seed=68206: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 3}, {0, 2, 7}, {2, 5, 7}]
+  seed=68580: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 3, 7}, {3, 4, 6}, {3, 4, 7}]
+  seed=69368: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 3, 7}, {2, 3, 7}, {3, 6, 7}]
+  seed=70850: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 3, 5}, {3, 4, 5}, {3, 5, 6}]
+  seed=71165: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 4}, {1, 4, 6}, {1, 4, 7}]
+  seed=71176: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 5}, {1, 3, 5}, {1, 4, 5}]
+  seed=73934: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 6}, {0, 3, 6}, {0, 5, 6}]
+  seed=74813: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 3}, {0, 2, 4}, {0, 2, 7}]
+  seed=75780: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 5}, {1, 4, 5}, {1, 5, 7}]
+  seed=76461: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 2, 3}, {1, 5, 6}, {4, 5, 6}]
+  seed=77281: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 5}, {2, 3, 5}, {3, 5, 6}]
+  seed=77394: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 1, 2}, {1, 2, 7}, {3, 4, 6}]
+  seed=77748: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{1, 4, 5}, {2, 3, 6}, {2, 6, 7}]
+  seed=77768: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 3}, {0, 1, 6}, {1, 3, 4}]
+  seed=78358: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 5, 6}, {4, 5, 6}, {5, 6, 7}]
+  seed=79654: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 4, 6}, {2, 4, 7}, {2, 5, 7}]
+  seed=81480: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 4}, {1, 3, 4}, {1, 3, 5}]
+  seed=81775: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{1, 2, 5}, {1, 3, 5}, {4, 6, 7}]
+  seed=82398: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 6}, {1, 6, 7}, {5, 6, 7}]
+  seed=85713: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 2, 4}, {2, 3, 4}, {5, 6, 7}]
+  seed=85768: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 3}, {0, 3, 7}, {0, 5, 7}]
+  seed=87668: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 3, 4}, {3, 4, 6}, {3, 4, 7}]
+  seed=87799: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 3, 6}, {2, 5, 7}, {2, 6, 7}]
+  seed=87812: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 3, 6}, {1, 3, 7}, {1, 5, 6}]
+  seed=87837: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 3}, {1, 3, 6}, {3, 4, 6}]
+  seed=88445: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 4, 6}, {4, 6, 7}, {5, 6, 7}]
+  seed=89541: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{2, 4, 5}, {3, 4, 5}, {3, 4, 7}]
+  seed=90277: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 5}, {2, 3, 5}, {2, 4, 5}]
+  seed=91593: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 3, 5}, {1, 2, 7}, {2, 4, 7}]
+  seed=91622: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 4}, {1, 3, 4}, {2, 3, 4}]
+  seed=92085: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 3, 4}, {1, 3, 4}, {3, 4, 5}]
+  seed=92407: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 7}, {0, 3, 7}, {0, 6, 7}]
+  seed=92435: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 7}, {1, 4, 7}, {1, 6, 7}]
+  seed=94046: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 3, 4}, {2, 3, 4}, {3, 4, 7}]
+  seed=94059: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 3, 4}, {2, 5, 7}, {3, 4, 6}]
+  seed=94542: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 6}, {1, 4, 6}, {4, 6, 7}]
+  seed=94857: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 4, 6}, {1, 2, 5}, {1, 5, 7}]
+  seed=95976: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 4, 7}, {3, 4, 7}, {4, 6, 7}]
+  seed=96601: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 4}, {2, 3, 4}, {2, 4, 6}]
+  seed=97457: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 4, 5}, {3, 4, 5}, {3, 4, 7}]
+  seed=97655: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 6}, {0, 2, 5}, {0, 5, 6}]
+  seed=97713: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 3, 6}, {1, 2, 4}, {2, 4, 7}]
+  seed=97867: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 1, 3}, {1, 3, 4}, {1, 4, 7}]
+  seed=98807: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{1, 2, 5}, {1, 3, 5}, {3, 5, 7}]
+  seed=98913: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 4}, {2, 3, 4}, {2, 4, 5}]
+  seed=99010: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 7}, {2, 3, 7}, {2, 6, 7}]
+  seed=99284: c₅=0, H=15, Ω=has 2 indep pair(s), cycles=[{0, 4, 7}, {1, 2, 3}, {2, 3, 6}]
+  seed=99505: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 4}, {0, 2, 6}, {2, 5, 6}]
+  seed=99889: c₅=1, H=9, Ω=K₃ (all conflict), cycles=[{0, 2, 5}, {0, 4, 5}, {0, 5, 7}]
+
+  K₃ (all conflict): 118, non-K₃: 29
+
+H values by (Ω type, c₅):
+  ('K₃', 1): H values = [9], count = 118
+  ('non-K₃', 0): H values = [15], count = 29
