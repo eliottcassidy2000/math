@@ -1,0 +1,156 @@
+
+======================================================================
+COMPLEMENT ANATOMY: n=3, m=1
+Total arcs = C(3,2) = 3
+Base-path arcs = 2
+Tile arcs = 1
+Fraction of arcs flipped by tiling complement = 1/3 = 33%
+======================================================================
+
+H(tiling) = H(complement_tiling)? 0/2 = 0.000
+H(T) = H(T^op) always? True
+Mean |tiling complement delta| = 2.0000
+
+--- GRID REFLECTION vs TOURNAMENT COMPLEMENT ---
+Grid-reflected tournament = T^op? 0/2 = 0.000
+Grid-reflected tiling = complement tiling? 2/2 = 1.000
+
+--- THE THREE OPERATIONS ---
+  t=0 (w=0): H=1  comp=3  refl=3  comp∘refl=1  refl∘comp=1
+  t=1 (w=1): H=3  comp=1  refl=1  comp∘refl=3  refl∘comp=3
+
+Complement and grid-reflect COMMUTE? 2/2 = 1.000
+Complement∘reflect is involution? 2/2 = 1.000
+
+Complement∘reflect: H preservation?
+  H(t) = H(comp∘refl(t))? 2/2 = 1.000
+
+======================================================================
+COMPLEMENT ANATOMY: n=4, m=3
+Total arcs = C(4,2) = 6
+Base-path arcs = 3
+Tile arcs = 3
+Fraction of arcs flipped by tiling complement = 3/6 = 50%
+======================================================================
+
+H(tiling) = H(complement_tiling)? 2/8 = 0.250
+H(T) = H(T^op) always? True
+Mean |tiling complement delta| = 2.0000
+
+--- GRID REFLECTION vs TOURNAMENT COMPLEMENT ---
+Grid-reflected tournament = T^op? 0/8 = 0.000
+Grid-reflected tiling = complement tiling? 4/8 = 0.500
+Neither: 4/8
+
+--- THE THREE OPERATIONS ---
+  t=001 (w=1): H=5  comp=5  refl=5  comp∘refl=5  refl∘comp=5
+  t=010 (w=1): H=3  comp=5  refl=5  comp∘refl=3  refl∘comp=3
+  t=000 (w=0): H=1  comp=5  refl=5  comp∘refl=1  refl∘comp=1
+  t=101 (w=2): H=5  comp=3  refl=3  comp∘refl=5  refl∘comp=5
+  t=011 (w=2): H=5  comp=3  refl=3  comp∘refl=5  refl∘comp=5
+
+Complement and grid-reflect COMMUTE? 8/8 = 1.000
+Complement∘reflect is involution? 8/8 = 1.000
+
+Complement∘reflect: H preservation?
+  H(t) = H(comp∘refl(t))? 8/8 = 1.000
+
+======================================================================
+COMPLEMENT ANATOMY: n=5, m=6
+Total arcs = C(5,2) = 10
+Base-path arcs = 4
+Tile arcs = 6
+Fraction of arcs flipped by tiling complement = 6/10 = 60%
+======================================================================
+
+H(tiling) = H(complement_tiling)? 14/64 = 0.219
+H(T) = H(T^op) always? True
+Mean |tiling complement delta| = 4.1250
+
+--- GRID REFLECTION vs TOURNAMENT COMPLEMENT ---
+Grid-reflected tournament = T^op? 0/64 = 0.000
+Grid-reflected tiling = complement tiling? 16/64 = 0.250
+Neither: 48/64
+
+--- THE THREE OPERATIONS ---
+  t=100111 (w=4): H=15  comp=5  refl=5  comp∘refl=15  refl∘comp=15
+  t=010000 (w=1): H=3  comp=13  refl=13  comp∘refl=3  refl∘comp=3
+  t=101111 (w=5): H=13  comp=3  refl=3  comp∘refl=13  refl∘comp=13
+  t=010110 (w=3): H=5  comp=9  refl=9  comp∘refl=5  refl∘comp=5
+  t=110010 (w=3): H=9  comp=13  refl=13  comp∘refl=9  refl∘comp=9
+
+Complement and grid-reflect COMMUTE? 64/64 = 1.000
+Complement∘reflect is involution? 64/64 = 1.000
+
+Complement∘reflect: H preservation?
+  H(t) = H(comp∘refl(t))? 64/64 = 1.000
+
+======================================================================
+COMPLEMENT ANATOMY: n=6, m=10
+Total arcs = C(6,2) = 15
+Base-path arcs = 5
+Tile arcs = 10
+Fraction of arcs flipped by tiling complement = 10/15 = 66%
+======================================================================
+
+H(tiling) = H(complement_tiling)? 106/1024 = 0.104
+H(T) = H(T^op) always? True
+Mean |tiling complement delta| = 9.9219
+
+--- GRID REFLECTION vs TOURNAMENT COMPLEMENT ---
+Grid-reflected tournament = T^op? 0/1024 = 0.000
+Grid-reflected tiling = complement tiling? 64/1024 = 0.062
+Neither: 960/1024
+
+--- THE THREE OPERATIONS ---
+  t=1100101100 (w=5): H=33  comp=43  refl=43  comp∘refl=33  refl∘comp=33
+  t=1001001011 (w=5): H=33  comp=23  refl=23  comp∘refl=33  refl∘comp=33
+  t=1101001001 (w=5): H=45  comp=41  refl=41  comp∘refl=45  refl∘comp=45
+  t=0001010010 (w=3): H=31  comp=41  refl=41  comp∘refl=31  refl∘comp=31
+  t=0111110000 (w=5): H=9  comp=27  refl=27  comp∘refl=9  refl∘comp=9
+
+Complement and grid-reflect COMMUTE? 1024/1024 = 1.000
+Complement∘reflect is involution? 1024/1024 = 1.000
+
+Complement∘reflect: H preservation?
+  H(t) = H(comp∘refl(t))? 1024/1024 = 1.000
+
+======================================================================
+COMPLEMENT ANATOMY: n=7, m=15
+Total arcs = C(7,2) = 21
+Base-path arcs = 6
+Tile arcs = 15
+Fraction of arcs flipped by tiling complement = 15/21 = 71%
+======================================================================
+
+H(tiling) = H(complement_tiling)? 940/32768 = 0.029
+H(T) = H(T^op) always? True
+Mean |tiling complement delta| = 27.8892
+
+--- GRID REFLECTION vs TOURNAMENT COMPLEMENT ---
+  (Skipping exhaustive for n=7)
+
+n=3: m=1, base-path arcs=2, total arcs=3
+  Tiles flipped by complement: 1/3 = 0.3333
+  This is 1/3 = (n-1)(n-2)/2 / n(n-1)/2 = (n-2)/n
+  (n-2)/n = 0.3333
+
+n=4: m=3, base-path arcs=3, total arcs=6
+  Tiles flipped by complement: 3/6 = 0.5000
+  This is 3/6 = (n-1)(n-2)/2 / n(n-1)/2 = (n-2)/n
+  (n-2)/n = 0.5000
+
+n=5: m=6, base-path arcs=4, total arcs=10
+  Tiles flipped by complement: 6/10 = 0.6000
+  This is 6/10 = (n-1)(n-2)/2 / n(n-1)/2 = (n-2)/n
+  (n-2)/n = 0.6000
+
+n=6: m=10, base-path arcs=5, total arcs=15
+  Tiles flipped by complement: 10/15 = 0.6667
+  This is 10/15 = (n-1)(n-2)/2 / n(n-1)/2 = (n-2)/n
+  (n-2)/n = 0.6667
+
+n=7: m=15, base-path arcs=6, total arcs=21
+  Tiles flipped by complement: 15/21 = 0.7143
+  This is 15/21 = (n-1)(n-2)/2 / n(n-1)/2 = (n-2)/n
+  (n-2)/n = 0.7143
