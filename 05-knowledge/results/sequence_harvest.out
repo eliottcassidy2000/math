@@ -1,0 +1,130 @@
+SEQUENCE HARVEST FROM MULTILINEAR POLYNOMIAL THEORY
+======================================================================
+
+Computing n=3...
+  Done in 0.0s
+
+Computing n=4...
+  Done in 0.0s
+
+Computing n=5...
+  Done in 0.0s
+
+Computing n=6...
+  Done in 0.2s
+
+Computing n=7...
+  Done in 20.7s
+
+  P(n) = [2, 6, 35, 200, 1782]
+  P_pos(n) = [1, 3, 16, 95, 896]
+  P_neg(n) = [0, 2, 18, 104, 885]
+  S_0(n) = [np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1)]
+  S_1(n) = [np.int64(2), np.int64(8), np.int64(22), np.int64(52), np.int64(114)]
+  S_2(n) = [0, np.int64(-4), np.int64(0), np.int64(92), np.int64(616)]
+  S_3(n) = [0, 0, np.int64(-20), np.int64(-208), np.int64(-948)]
+  S_4(n) = [0, 0, np.int64(6), np.int64(80), np.int64(-138)]
+  Sigma_H(n) = [4, 32, 632, 29696, 3251200]
+    n=3: Sigma_H=4, 2^m=2, ratio=2.0000
+    n=4: Sigma_H=32, 2^m=8, ratio=4.0000
+    n=5: Sigma_H=632, 2^m=64, ratio=9.8750
+    n=6: Sigma_H=29696, 2^m=1024, ratio=29.0000
+    n=7: Sigma_H=3251200, 2^m=32768, ratio=99.2188
+  max_H(n) = [3, 5, 15, 45, 189]
+  distinct_H(n) = [2, 3, 7, 19, 77]
+  forbidden_odd_H(n) = [0, 0, 1, 4, 18]
+  f-vector(n=3) = [1]
+  f-vector(n=4) = [3, 2]
+  f-vector(n=5) = [6, 13, 8, 7]
+  f-vector(n=6) = [10, 42, 66, 81]
+  f-vector(n=7) = [15, 101, 309, 626, 407, 323]
+  euler_char(n) = [1, 1, -6, -47, -319]
+  var_H(n) = ['1.00', '2.00', '12.86', '104.56', '1189.68']
+  H(all backward)(n) = [3, 5, 9, 17, 31]
+  count(H≡1 mod 4)(n) = [1, 6, 42, 656, 17352]
+  sum_|c_S|(n) = [np.int64(3), np.int64(13), np.int64(89), np.int64(689), np.int64(6611)]
+  degree_counts(n=3) = {0: 1, 1: 1}
+  degree_counts(n=4) = {0: 1, 1: 3, 2: 2}
+  degree_counts(n=5) = {0: 1, 1: 6, 2: 13, 3: 8, 4: 7}
+  degree_counts(n=6) = {0: 1, 1: 10, 2: 42, 3: 66, 4: 81}
+  degree_counts(n=7) = {0: 1, 1: 15, 2: 101, 3: 309, 4: 626, 5: 407, 6: 323}
+  c_apex(n) = [2, 4, 8, 16, 32]
+  V_n = [2, 4, 12, 56, 456, 6880]
+  extension_orbits(n) = {4: 12, 5: 48, 6: 296, 7: 3040}
+
+
+======================================================================
+OEIS LOOKUP TABLE
+======================================================================
+
+  P(n) nonzero coeffs: [2, 6, 35, 200, 1782]
+
+  Sigma_H: [4, 32, 632, 29696, 3251200]
+
+  max_H: [3, 5, 15, 45, 189]
+
+  distinct_H: [2, 3, 7, 19, 77]
+
+  H(all backward): [3, 5, 9, 17, 31]
+
+  sum_|c_S|: [np.int64(3), np.int64(13), np.int64(89), np.int64(689), np.int64(6611)]
+
+  euler_char: [1, 1, -6, -47, -319]
+
+  P_pos: [1, 3, 16, 95, 896]
+
+  P_neg: [0, 2, 18, 104, 885]
+
+  count_Hmod4eq1: [1, 6, 42, 656, 17352]
+
+  forbidden_count: [0, 0, 1, 4, 18]
+
+  S_1(n)=2^n-2n: [2, 8, 22, 52, 114]
+
+
+======================================================================
+DERIVED SEQUENCES
+======================================================================
+
+  mean_H(n) = Sigma_H/2^m = ['2.0000', '4.0000', '9.8750', '29.0000', '99.2188']
+    n=3: mean_H * 2 / (n-1)! = 2.000000
+    n=4: mean_H * 2 / (n-1)! = 1.333333
+    n=5: mean_H * 2 / (n-1)! = 0.822917
+    n=6: mean_H * 2 / (n-1)! = 0.483333
+    n=7: mean_H * 2 / (n-1)! = 0.275608
+
+  P(n)/2^m = ['1.0000', '0.7500', '0.5469', '0.1953', '0.0544']
+
+  max_H/mean_H = ['1.500', '1.250', '1.519', '1.552', '1.905']
+  H(backward)/max_H = ['1.000', '1.000', '0.600', '0.378', '0.164']
+  log2(max_H)/n = ['0.528', '0.580', '0.781', '0.915', '1.080']
+
+  S_1(n) = [np.int64(2), np.int64(8), np.int64(22), np.int64(52), np.int64(114)]
+  2^n-2n = [2, 8, 22, 52, 114]
+  Match: True
+  S_2(n) = [0, np.int64(-4), np.int64(0), np.int64(92), np.int64(616)]
+
+  Sigma_H(n) = [4, 32, 632, 29696, 3251200]
+  Sigma_H/n! = [0.6666666666666666, 1.3333333333333333, 5.266666666666667, 41.24444444444445, 645.0793650793651]
+
+  W(n) (from prior sessions) = [1, 2, 8, 32, 158, 928, 6350, 49752]
+  Sigma_H(n) = [4, 32, 632, 29696, 3251200]
+    n=3: Sigma_H / W(n) = 0.5000
+    n=4: Sigma_H / W(n) = 1.0000
+    n=5: Sigma_H / W(n) = 4.0000
+    n=6: Sigma_H / W(n) = 32.0000
+    n=7: Sigma_H / W(n) = 512.0000
+
+
+======================================================================
+NEW SEQUENCE CANDIDATES
+======================================================================
+  P(n) = nonzero multilinear coefficients: [2, 6, 35, 200, 1782]
+  P_pos(n) = positive coefficients: [1, 3, 16, 95, 896]
+  P_neg(n) = negative coefficients: [0, 2, 18, 104, 885]
+  sum_|c_S|(n) = L1 norm of coefficients: [np.int64(3), np.int64(13), np.int64(89), np.int64(689), np.int64(6611)]
+  euler_char(n) of support: [1, 1, -6, -47, -319]
+  distinct_H(n) = distinct HP counts: [2, 3, 7, 19, 77]
+  forbidden_odd(n) = odd gaps below max H: [0, 0, 1, 4, 18]
+  H(all backward)(n): [3, 5, 9, 17, 31]
+  Sigma_H(n) = sum H over tilings: [4, 32, 632, 29696, 3251200]
