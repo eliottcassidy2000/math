@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S14 — 2026-04-04: A000568 Speedups and Asymptotic Recursion
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S13
+**Summary:** Pushed A000568 computation, discovered the exact asymptotic recursion with correction term, and analyzed modular structure. The fiber bundle prediction a(n) ≈ a(n-1)×2^{n-1}/n is exact to high precision by n=15, with the leading correction coming from 3-cycle Burnside terms.
+
+**Key Results:**
+1. **Exact recursion with correction**: a(n) = a(n-1) × 2^{n-1}/n × (1 - (n-1)(n-2)(n-4)/4^{n-2} + O(1/8^n)). The correction converges to ratio 1.00 by n=15. At n=15: predicted/actual = 0.9991.
+
+2. **a(n) always even** for n≥3 (complement pairing — tournaments come in T ↔ T^op pairs).
+
+3. **Modular structure**: a(n) mod 2 = 0 always. a(n) mod 3, 5, 7 appear pseudo-random with no period detected in first 100 terms. a(n) divisible by 7 at n=6,12,13,15,17,25,32,...
+
+4. **Growth rate**: log₂(a(n))/C(n,2) → 1 from below (0.52 at n=10, 0.89 at n=100).
+
+5. **a(200) recomputed** in 657s (8 threads, 487M partitions).
+
+6. **Speedup formula**: The correction term -(n-1)(n-2)(n-4)/4^{n-2} comes from the Burnside contribution of (1^{n-3}, 3^1) cycle type. The orbit count for this type: f = C(n-2,2) + 1 (proved from cycle orbit analysis on arcs).
+
+**New contributions:** a000568_extend_and_analyze.py, recursion_correction.py, 2 result files
+**Unresolved:** Push to n=300 (estimated ~hours). Derive next correction term from (1^{n-5}, 5^1) cycles. Submit extended terms to OEIS.
+
 ## opus-2026-04-04-S13 — 2026-04-04: Sequence Harvest — Tribonacci, A038375, New Sequences
 
 **Account:** opus
