@@ -1,0 +1,142 @@
+
+============================================================
+OCF MULTILINEAR DECOMPOSITION n=4, max cycle length=3
+m=3 tiles
+============================================================
+  3-cycles: 8 enumerated, 4 have valid indicators
+  Total valid directed odd cycles: 4
+  Finding independent sets...
+  Total independent sets: 5
+
+--- COMPARISON ---
+OCF coefficients: 6 nonzero
+Direct coefficients: 6 nonzero
+  *** PERFECT MATCH! *** OCF decomposition reproduces ALL coefficients.
+
+--- CONTRIBUTIONS BY |I| ---
+  |I|=0: contributes to 1 tile subsets. By multilinear order: {0: 1}
+  |I|=1: contributes to 5 tile subsets. By multilinear order: {1: 8, 2: 4}
+
+--- CYCLE ANATOMY OF LINEAR COEFFICIENTS ---
+  tile (4, 1) skip=3: c₁=4
+    From single cycles: 4 (match)
+      cycle (0, 3, 1): chi coefficient for {tile 0} = 1, contribution = 2
+      cycle (0, 3, 2): chi coefficient for {tile 0} = 1, contribution = 2
+  tile (3, 1) skip=2: c₁=2
+    From single cycles: 2 (match)
+      cycle (0, 2, 1): chi coefficient for {tile 1} = 1, contribution = 2
+  tile (4, 2) skip=2: c₁=2
+    From single cycles: 2 (match)
+      cycle (1, 3, 2): chi coefficient for {tile 2} = 1, contribution = 2
+
+============================================================
+OCF MULTILINEAR DECOMPOSITION n=5, max cycle length=5
+m=6 tiles
+============================================================
+  3-cycles: 20 enumerated, 11 have valid indicators
+  5-cycles: 24 enumerated, 9 have valid indicators
+  Total valid directed odd cycles: 20
+  Finding independent sets...
+  Total independent sets: 21
+
+--- COMPARISON ---
+OCF coefficients: 35 nonzero
+Direct coefficients: 35 nonzero
+  *** PERFECT MATCH! *** OCF decomposition reproduces ALL coefficients.
+
+--- CONTRIBUTIONS BY |I| ---
+  |I|=0: contributes to 1 tile subsets. By multilinear order: {0: 1}
+  |I|=1: contributes to 34 tile subsets. By multilinear order: {1: 22, 2: 32, 3: 20, 4: 14, 5: 0}
+
+--- CYCLE ANATOMY OF LINEAR COEFFICIENTS ---
+  tile (5, 1) skip=4: c₁=8
+    From single cycles: 8 (match)
+      cycle (0, 4, 1): chi coefficient for {tile 0} = 1, contribution = 2
+      cycle (0, 4, 3): chi coefficient for {tile 0} = 1, contribution = 2
+      cycle (0, 4, 2): chi coefficient for {tile 0} = 1, contribution = 2
+      cycle (0, 4, 3, 2, 1): chi coefficient for {tile 0} = 1, contribution = 2
+  tile (4, 1) skip=3: c₁=4
+    From single cycles: 4 (match)
+      cycle (0, 3, 2): chi coefficient for {tile 1} = 1, contribution = 2
+      cycle (0, 3, 1): chi coefficient for {tile 1} = 1, contribution = 2
+  tile (3, 1) skip=2: c₁=2
+    From single cycles: 2 (match)
+      cycle (0, 2, 1): chi coefficient for {tile 2} = 1, contribution = 2
+  tile (5, 2) skip=3: c₁=4
+    From single cycles: 4 (match)
+      cycle (1, 4, 2): chi coefficient for {tile 3} = 1, contribution = 2
+      cycle (1, 4, 3): chi coefficient for {tile 3} = 1, contribution = 2
+  tile (4, 2) skip=2: c₁=2
+    From single cycles: 2 (match)
+      cycle (1, 3, 2): chi coefficient for {tile 4} = 1, contribution = 2
+  tile (5, 3) skip=2: c₁=2
+    From single cycles: 2 (match)
+      cycle (2, 4, 3): chi coefficient for {tile 5} = 1, contribution = 2
+
+============================================================
+OCF MULTILINEAR DECOMPOSITION n=6, max cycle length=5
+m=10 tiles
+============================================================
+  3-cycles: 40 enumerated, 24 have valid indicators
+  5-cycles: 144 enumerated, 62 have valid indicators
+  Total valid directed odd cycles: 86
+  Finding independent sets...
+  Total independent sets: 102
+
+--- COMPARISON ---
+OCF coefficients: 200 nonzero
+Direct coefficients: 200 nonzero
+  *** PERFECT MATCH! *** OCF decomposition reproduces ALL coefficients.
+
+--- CONTRIBUTIONS BY |I| ---
+  |I|=0: contributes to 1 tile subsets. By multilinear order: {0: 1}
+  |I|=1: contributes to 171 tile subsets. By multilinear order: {1: 52, 2: 140, 3: 160, 4: 124, 5: 0}
+  |I|=2: contributes to 51 tile subsets. By multilinear order: {2: 40, 3: 96, 4: 76, 5: 0, 6: 0}
+
+--- CYCLE ANATOMY OF LINEAR COEFFICIENTS ---
+  tile (6, 1) skip=5: c₁=16
+    From single cycles: 16 (match)
+      cycle (0, 5, 3): chi coefficient for {tile 0} = 1, contribution = 2
+      cycle (0, 5, 2): chi coefficient for {tile 0} = 1, contribution = 2
+      cycle (0, 5, 1): chi coefficient for {tile 0} = 1, contribution = 2
+      cycle (0, 5, 4): chi coefficient for {tile 0} = 1, contribution = 2
+      cycle (0, 5, 4, 3, 1): chi coefficient for {tile 0} = 1, contribution = 2
+      cycle (0, 5, 3, 2, 1): chi coefficient for {tile 0} = 1, contribution = 2
+      cycle (0, 5, 4, 2, 1): chi coefficient for {tile 0} = 1, contribution = 2
+      cycle (0, 5, 4, 3, 2): chi coefficient for {tile 0} = 1, contribution = 2
+  tile (5, 1) skip=4: c₁=8
+    From single cycles: 8 (match)
+      cycle (0, 4, 1): chi coefficient for {tile 1} = 1, contribution = 2
+      cycle (0, 4, 3): chi coefficient for {tile 1} = 1, contribution = 2
+      cycle (0, 4, 2): chi coefficient for {tile 1} = 1, contribution = 2
+      cycle (0, 4, 3, 2, 1): chi coefficient for {tile 1} = 1, contribution = 2
+  tile (4, 1) skip=3: c₁=4
+    From single cycles: 4 (match)
+      cycle (0, 3, 2): chi coefficient for {tile 2} = 1, contribution = 2
+      cycle (0, 3, 1): chi coefficient for {tile 2} = 1, contribution = 2
+  tile (3, 1) skip=2: c₁=2
+    From single cycles: 2 (match)
+      cycle (0, 2, 1): chi coefficient for {tile 3} = 1, contribution = 2
+  tile (6, 2) skip=4: c₁=8
+    From single cycles: 8 (match)
+      cycle (1, 5, 4): chi coefficient for {tile 4} = 1, contribution = 2
+      cycle (1, 5, 3): chi coefficient for {tile 4} = 1, contribution = 2
+      cycle (1, 5, 2): chi coefficient for {tile 4} = 1, contribution = 2
+      cycle (1, 5, 4, 3, 2): chi coefficient for {tile 4} = 1, contribution = 2
+  tile (5, 2) skip=3: c₁=4
+    From single cycles: 4 (match)
+      cycle (1, 4, 2): chi coefficient for {tile 5} = 1, contribution = 2
+      cycle (1, 4, 3): chi coefficient for {tile 5} = 1, contribution = 2
+  tile (4, 2) skip=2: c₁=2
+    From single cycles: 2 (match)
+      cycle (1, 3, 2): chi coefficient for {tile 6} = 1, contribution = 2
+  tile (6, 3) skip=3: c₁=4
+    From single cycles: 4 (match)
+      cycle (2, 5, 4): chi coefficient for {tile 7} = 1, contribution = 2
+      cycle (2, 5, 3): chi coefficient for {tile 7} = 1, contribution = 2
+  tile (5, 3) skip=2: c₁=2
+    From single cycles: 2 (match)
+      cycle (2, 4, 3): chi coefficient for {tile 8} = 1, contribution = 2
+  tile (6, 4) skip=2: c₁=2
+    From single cycles: 2 (match)
+      cycle (3, 5, 4): chi coefficient for {tile 9} = 1, contribution = 2

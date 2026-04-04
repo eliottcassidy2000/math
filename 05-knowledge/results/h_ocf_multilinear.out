@@ -1,0 +1,42 @@
+
+============================================================
+OCF MULTILINEAR DECOMPOSITION n=4
+============================================================
+Total directed 3-cycles considered: 4
+Finding independent sets...
+Total independent sets: 5
+
+--- COMPARISON ---
+OCF coefficients: 6 nonzero
+Direct coefficients: 6 nonzero
+  PERFECT MATCH! OCF decomposition reproduces all coefficients.
+
+--- CONTRIBUTION BY INDEPENDENT SET SIZE ---
+  |I|=0: contributes to 1 coefficients, total weight sum=1
+  |I|=1: contributes to 5 coefficients, total weight sum=4
+
+============================================================
+OCF MULTILINEAR DECOMPOSITION n=5
+============================================================
+Total directed 3-cycles considered: 11
+Finding independent sets...
+Total independent sets: 12
+
+--- COMPARISON ---
+OCF coefficients: 16 nonzero
+Direct coefficients: 35 nonzero
+  MISMATCH at S=000001 tiles=[(5, 1)]: OCF=6, direct=8, diff=2
+  MISMATCH at S=001010 tiles=[(4, 1), (5, 2)]: OCF=0, direct=4, diff=4
+  MISMATCH at S=001011 tiles=[(5, 1), (4, 1), (5, 2)]: OCF=0, direct=-2, diff=-2
+  MISMATCH at S=001100 tiles=[(3, 1), (5, 2)]: OCF=0, direct=2, diff=2
+  MISMATCH at S=001110 tiles=[(4, 1), (3, 1), (5, 2)]: OCF=0, direct=-4, diff=-4
+  MISMATCH at S=010001 tiles=[(5, 1), (4, 2)]: OCF=0, direct=4, diff=4
+  MISMATCH at S=010011 tiles=[(5, 1), (4, 1), (4, 2)]: OCF=0, direct=-2, diff=-2
+  MISMATCH at S=010101 tiles=[(5, 1), (3, 1), (4, 2)]: OCF=0, direct=-2, diff=-2
+  MISMATCH at S=011001 tiles=[(5, 1), (5, 2), (4, 2)]: OCF=0, direct=-2, diff=-2
+  MISMATCH at S=011010 tiles=[(4, 1), (5, 2), (4, 2)]: OCF=0, direct=-2, diff=-2
+  21 mismatches (3-cycles only; 5-cycles needed)
+
+--- CONTRIBUTION BY INDEPENDENT SET SIZE ---
+  |I|=0: contributes to 1 coefficients, total weight sum=1
+  |I|=1: contributes to 15 coefficients, total weight sum=6
