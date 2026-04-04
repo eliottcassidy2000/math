@@ -1,0 +1,86 @@
+
+======================================================================
+TENSOR STRUCTURE ANALYSIS: n=5, m=6
+======================================================================
+
+Skip layers:
+  skip=2: ['C', 'E', 'F'] (3 tiles)
+  skip=3: ['B', 'D'] (2 tiles)
+  skip=4: ['A'] (1 tiles)
+
+Individual layer R² (variance explained):
+  skip=2 (3 tiles): R²=0.193196
+  skip=3 (2 tiles): R²=0.061968
+  skip=4 (1 tiles): R²=0.311057
+  Sum of individual R²: 0.566221
+  (If layers are independent, this would equal the full model R²)
+  Full model R² = 1.000000 (bits determine H)
+  Interaction contribution = 0.433779
+
+--- MULTIPLICATIVITY TEST ---
+Product model R² = 0.478473
+(1.0 = perfect multiplicative factorization)
+
+Sample predictions:
+  bits=100111: actual=15, predicted=16.14, error=-1.14
+  bits=010000: actual=3, predicted=6.35, error=-3.35
+  bits=101111: actual=13, predicted=17.75, error=-4.75
+  bits=010110: actual=5, predicted=7.47, error=-2.47
+  bits=110010: actual=9, predicted=7.47, error=1.53
+  bits=101100: actual=13, predicted=10.70, error=2.30
+  bits=111100: actual=11, predicted=9.49, error=1.51
+  bits=110101: actual=15, predicted=12.16, error=2.84
+  bits=101111: actual=13, predicted=17.75, error=-4.75
+  bits=101001: actual=9, predicted=10.66, error=-1.66
+
+Additive model R² = 0.566221
+(This equals sum of individual R²: 0.566221)
+
+Model comparison:
+  Additive:       R² = 0.566221
+  Multiplicative: R² = 0.478473
+  Winner: ADDITIVE
+
+======================================================================
+TENSOR STRUCTURE ANALYSIS: n=6, m=10
+======================================================================
+
+Skip layers:
+  skip=2: ['D', 'G', 'I', 'J'] (4 tiles)
+  skip=3: ['C', 'F', 'H'] (3 tiles)
+  skip=4: ['B', 'E'] (2 tiles)
+  skip=5: ['A'] (1 tiles)
+
+Individual layer R² (variance explained):
+  skip=2 (4 tiles): R²=0.129707
+  skip=3 (3 tiles): R²=0.050807
+  skip=4 (2 tiles): R²=0.050508
+  skip=5 (1 tiles): R²=0.153019
+  Sum of individual R²: 0.384041
+  (If layers are independent, this would equal the full model R²)
+  Full model R² = 1.000000 (bits determine H)
+  Interaction contribution = 0.615959
+
+--- MULTIPLICATIVITY TEST ---
+Product model R² = 0.320752
+(1.0 = perfect multiplicative factorization)
+
+Sample predictions:
+  bits=1100101100: actual=33, predicted=25.54, error=7.46
+  bits=1001001011: actual=33, predicted=34.61, error=-1.61
+  bits=1101001001: actual=45, predicted=32.52, error=12.48
+  bits=0001010010: actual=31, predicted=21.49, error=9.51
+  bits=0111110000: actual=9, predicted=20.36, error=-11.36
+  bits=1100001100: actual=29, predicted=25.99, error=3.01
+  bits=0100001011: actual=29, predicted=32.59, error=-3.59
+  bits=0000100101: actual=37, predicted=27.81, error=9.19
+  bits=0000000000: actual=1, predicted=19.20, error=-18.20
+  bits=0010010101: actual=37, predicted=37.41, error=-0.41
+
+Additive model R² = 0.384041
+(This equals sum of individual R²: 0.384041)
+
+Model comparison:
+  Additive:       R² = 0.384041
+  Multiplicative: R² = 0.320752
+  Winner: ADDITIVE
