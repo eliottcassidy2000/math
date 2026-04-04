@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S17 — 2026-04-04: Recursive Improvements — 5 Practical Tools
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S15
+**Summary:** Applied the recursive understanding to 5 concrete improvements. Corrected fast_H via OCF (100/100 at n=7), built MCMC sampler (τ=4 mixing), predictive A000568 (2.2% error), skip-energy fingerprint, and fast iso count.
+
+**Key Results:**
+1. **fast_H_v2**: OCF truncation H=1+2α₁+4α₂ exact n≤8, 2x faster than DP at n=5-6, 100/100 correct at n=7.
+2. **MCMC sampler**: Detailed balance → τ≈4 mixing for uniform, 87% hit rate for targeted (H=45 at n=6).
+3. **Predictive A000568**: V(9)≈195698 (actual 191536, 2.2% error).
+4. **Skip-energy fingerprint**: Corr(energy,H)=0.66. Fast filter.
+5. **Fast iso count**: Fiber bundle recursion predicts V(9..15).
+
+**New contributions:** recursive_improvements.py, fast_h_correct.py
+**Unresolved:** C implementation of fast_H. Push fiber bundle to n=8.
+
 ## opus-2026-04-04-S16 — 2026-04-04: The Antiferromagnetic Tournament — Condensed Matter Physics of Parity
 
 **Account:** opus
