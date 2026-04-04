@@ -1,0 +1,513 @@
+MULTILINEAR CREATIVE EXPLORATION v2
+======================================================================
+
+============================================================
+SAME-END FORMULA TEST n=5
+============================================================
+  8/8 match formula c = -2^max(1,|s1-s2|-1)
+
+============================================================
+DISJOINT PAIR FORMULA SEARCH n=5
+============================================================
+  (3, 1)-(5, 2) s=(2,3) ov=1 man=2: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (4, 1)-(5, 3) s=(3,2) ov=1 man=3: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (4, 1)-(5, 2) s=(3,3) ov=2 man=1: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (5, 1)-(4, 2) s=(4,2) ov=2 man=3: c=4, 2^(s1+s2-2)=16, ratio=1/4
+
+============================================================
+SAME-END FORMULA TEST n=6
+============================================================
+  20/20 match formula c = -2^max(1,|s1-s2|-1)
+
+============================================================
+DISJOINT PAIR FORMULA SEARCH n=6
+============================================================
+  (3, 1)-(5, 2) s=(2,3) ov=1 man=2: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (4, 2)-(6, 3) s=(2,3) ov=1 man=2: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (4, 1)-(5, 3) s=(3,2) ov=1 man=3: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (5, 2)-(6, 4) s=(3,2) ov=1 man=3: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (3, 1)-(6, 2) s=(2,4) ov=1 man=3: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (4, 1)-(5, 2) s=(3,3) ov=2 man=1: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (5, 1)-(4, 2) s=(4,2) ov=2 man=3: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (5, 2)-(6, 3) s=(3,3) ov=2 man=1: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (6, 2)-(5, 3) s=(4,2) ov=2 man=3: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (5, 1)-(6, 4) s=(4,2) ov=1 man=5: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (3, 1)-(6, 4) s=(2,2) ov=-1 man=3: c=4, 2^(s1+s2-2)=4, ratio=1
+  (6, 1)-(4, 2) s=(5,2) ov=2 man=4: c=8, 2^(s1+s2-2)=32, ratio=1/4
+  (4, 1)-(6, 3) s=(3,3) ov=1 man=2: c=8, 2^(s1+s2-2)=16, ratio=1/2
+  (6, 1)-(5, 3) s=(5,2) ov=2 man=5: c=8, 2^(s1+s2-2)=32, ratio=1/4
+  (4, 1)-(6, 2) s=(3,4) ov=2 man=2: c=10, 2^(s1+s2-2)=32, ratio=5/16
+  (5, 1)-(6, 3) s=(4,3) ov=2 man=3: c=10, 2^(s1+s2-2)=32, ratio=5/16
+  (5, 1)-(6, 2) s=(4,4) ov=3 man=1: c=16, 2^(s1+s2-2)=64, ratio=1/4
+  (6, 1)-(5, 2) s=(5,3) ov=3 man=3: c=16, 2^(s1+s2-2)=64, ratio=1/4
+
+============================================================
+SAME-END FORMULA TEST n=7
+============================================================
+  40/40 match formula c = -2^max(1,|s1-s2|-1)
+
+============================================================
+DISJOINT PAIR FORMULA SEARCH n=7
+============================================================
+  (3, 1)-(5, 2) s=(2,3) ov=1 man=2: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (4, 2)-(6, 3) s=(2,3) ov=1 man=2: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (4, 1)-(5, 3) s=(3,2) ov=1 man=3: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (5, 3)-(7, 4) s=(2,3) ov=1 man=2: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (5, 2)-(6, 4) s=(3,2) ov=1 man=3: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (6, 3)-(7, 5) s=(3,2) ov=1 man=3: c=2, 2^(s1+s2-2)=8, ratio=1/4
+  (3, 1)-(6, 2) s=(2,4) ov=1 man=3: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (4, 1)-(5, 2) s=(3,3) ov=2 man=1: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (5, 1)-(4, 2) s=(4,2) ov=2 man=3: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (4, 2)-(7, 3) s=(2,4) ov=1 man=3: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (5, 2)-(6, 3) s=(3,3) ov=2 man=1: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (6, 2)-(5, 3) s=(4,2) ov=2 man=3: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (6, 3)-(7, 4) s=(3,3) ov=2 man=1: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (5, 1)-(6, 4) s=(4,2) ov=1 man=5: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (3, 1)-(6, 4) s=(2,2) ov=-1 man=3: c=4, 2^(s1+s2-2)=4, ratio=1
+  (7, 3)-(6, 4) s=(4,2) ov=2 man=3: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (3, 1)-(7, 5) s=(2,2) ov=-2 man=4: c=4, 2^(s1+s2-2)=4, ratio=1
+  (6, 2)-(7, 5) s=(4,2) ov=1 man=5: c=4, 2^(s1+s2-2)=16, ratio=1/4
+  (4, 2)-(7, 5) s=(2,2) ov=-1 man=3: c=4, 2^(s1+s2-2)=4, ratio=1
+  (3, 1)-(7, 2) s=(2,5) ov=1 man=4: c=8, 2^(s1+s2-2)=32, ratio=1/4
+  (6, 1)-(4, 2) s=(5,2) ov=2 man=4: c=8, 2^(s1+s2-2)=32, ratio=1/4
+  (4, 1)-(6, 3) s=(3,3) ov=1 man=2: c=8, 2^(s1+s2-2)=16, ratio=1/2
+  (6, 1)-(5, 3) s=(5,2) ov=2 man=5: c=8, 2^(s1+s2-2)=32, ratio=1/4
+  (7, 2)-(5, 3) s=(5,2) ov=2 man=4: c=8, 2^(s1+s2-2)=32, ratio=1/4
+  (3, 1)-(7, 4) s=(2,3) ov=-1 man=4: c=8, 2^(s1+s2-2)=8, ratio=1
+  (5, 2)-(7, 4) s=(3,3) ov=1 man=2: c=8, 2^(s1+s2-2)=16, ratio=1/2
+  (7, 2)-(6, 4) s=(5,2) ov=2 man=5: c=8, 2^(s1+s2-2)=32, ratio=1/4
+  (6, 1)-(7, 5) s=(5,2) ov=1 man=7: c=8, 2^(s1+s2-2)=32, ratio=1/4
+  (4, 1)-(7, 5) s=(3,2) ov=-1 man=5: c=8, 2^(s1+s2-2)=8, ratio=1
+  (4, 1)-(6, 2) s=(3,4) ov=2 man=2: c=10, 2^(s1+s2-2)=32, ratio=5/16
+  (5, 2)-(7, 3) s=(3,4) ov=2 man=2: c=10, 2^(s1+s2-2)=32, ratio=5/16
+  (5, 1)-(6, 3) s=(4,3) ov=2 man=3: c=10, 2^(s1+s2-2)=32, ratio=5/16
+  (6, 2)-(7, 4) s=(4,3) ov=2 man=3: c=10, 2^(s1+s2-2)=32, ratio=5/16
+  (5, 1)-(6, 2) s=(4,4) ov=3 man=1: c=16, 2^(s1+s2-2)=64, ratio=1/4
+  (6, 1)-(5, 2) s=(5,3) ov=3 man=3: c=16, 2^(s1+s2-2)=64, ratio=1/4
+  (7, 1)-(4, 2) s=(6,2) ov=2 man=5: c=16, 2^(s1+s2-2)=64, ratio=1/4
+  (4, 1)-(7, 3) s=(3,4) ov=1 man=3: c=16, 2^(s1+s2-2)=32, ratio=1/2
+  (6, 2)-(7, 3) s=(4,4) ov=3 man=1: c=16, 2^(s1+s2-2)=64, ratio=1/4
+  (7, 2)-(6, 3) s=(5,3) ov=3 man=3: c=16, 2^(s1+s2-2)=64, ratio=1/4
+  (7, 1)-(5, 3) s=(6,2) ov=2 man=6: c=16, 2^(s1+s2-2)=64, ratio=1/4
+  (5, 1)-(7, 4) s=(4,3) ov=1 man=4: c=16, 2^(s1+s2-2)=32, ratio=1/2
+  (7, 1)-(6, 4) s=(6,2) ov=2 man=7: c=16, 2^(s1+s2-2)=64, ratio=1/4
+  (4, 1)-(7, 2) s=(3,5) ov=2 man=3: c=20, 2^(s1+s2-2)=64, ratio=5/16
+  (6, 1)-(7, 4) s=(5,3) ov=2 man=5: c=20, 2^(s1+s2-2)=64, ratio=5/16
+  (5, 1)-(7, 3) s=(4,4) ov=2 man=2: c=24, 2^(s1+s2-2)=64, ratio=3/8
+  (7, 1)-(5, 2) s=(6,3) ov=3 man=4: c=32, 2^(s1+s2-2)=128, ratio=1/4
+  (7, 1)-(6, 3) s=(6,3) ov=3 man=5: c=32, 2^(s1+s2-2)=128, ratio=1/4
+  (5, 1)-(7, 2) s=(4,5) ov=3 man=2: c=34, 2^(s1+s2-2)=128, ratio=17/64
+  (6, 1)-(7, 3) s=(5,4) ov=3 man=3: c=34, 2^(s1+s2-2)=128, ratio=17/64
+  (6, 1)-(7, 2) s=(5,5) ov=4 man=1: c=52, 2^(s1+s2-2)=256, ratio=13/64
+  (7, 1)-(6, 2) s=(6,4) ov=4 man=3: c=52, 2^(s1+s2-2)=256, ratio=13/64
+
+============================================================
+RECURSIVE STRUCTURE n=5 -> n=6
+============================================================
+  Tiles at n=5: 6
+  Tiles at n=6: 10
+  New tiles at n=6: [(6, 1), (6, 2), (6, 3), (6, 4)]
+  Old tiles (should match n=5): [(5, 1), (4, 1), (3, 1), (5, 2), (4, 2), (5, 3)]
+  Tile mapping (big->small): 6 mapped
+
+  Linear coefficient comparison:
+    (6, 1): NEW, c=16
+    (5, 1): big=8, small =
+    (4, 1): big=4, small =
+    (3, 1): big=2, small =
+    (6, 2): NEW, c=8
+    (5, 2): big=4, small =
+    (4, 2): big=2, small =
+    (6, 3): NEW, c=4
+    (5, 3): big=2, small =
+    (6, 4): NEW, c=2
+
+  Quadratic coefficient comparison (old-old pairs):
+  Preserved: 15, Changed: 0
+
+============================================================
+RECURSIVE STRUCTURE n=6 -> n=7
+============================================================
+  Tiles at n=6: 10
+  Tiles at n=7: 15
+  New tiles at n=7: [(7, 1), (7, 2), (7, 3), (7, 4), (7, 5)]
+  Old tiles (should match n=6): [(6, 1), (5, 1), (4, 1), (3, 1), (6, 2), (5, 2), (4, 2), (6, 3), (5, 3), (6, 4)]
+  Tile mapping (big->small): 10 mapped
+
+  Linear coefficient comparison:
+    (7, 1): NEW, c=32
+    (6, 1): big=16, small =
+    (5, 1): big=8, small =
+    (4, 1): big=4, small =
+    (3, 1): big=2, small =
+    (7, 2): NEW, c=16
+    (6, 2): big=8, small =
+    (5, 2): big=4, small =
+    (4, 2): big=2, small =
+    (7, 3): NEW, c=8
+    (6, 3): big=4, small =
+    (5, 3): big=2, small =
+    (7, 4): NEW, c=4
+    (6, 4): big=2, small =
+    (7, 5): NEW, c=2
+
+  Quadratic coefficient comparison (old-old pairs):
+  Preserved: 45, Changed: 0
+
+============================================================
+EIGENSPACE GEOMETRY n=5
+============================================================
+  Staircase coords: [((5, 1), (3, 0)), ((4, 1), (2, 0)), ((3, 1), (1, 0)), ((5, 2), (2, 1)), ((4, 2), (1, 1)), ((5, 3), (1, 2))]
+
+  NEGATIVE EIGENVECTORS in staircase coords:
+
+  lambda = -8.0000:
+    r=3:                      
+    r=2:  -0.500              
+    r=1:  -0.500  0.000       
+    r=0:   0.000  0.000  0.000
+
+  lambda = -4.5062:
+    r=3:                      
+    r=2:  -0.025              
+    r=1:  -0.173  0.631       
+    r=0:   0.000  0.000  0.000
+
+  lambda = -0.3811:
+    r=3:                      
+    r=2:  -0.456              
+    r=1:  -0.182 -0.600       
+    r=0:   0.000  0.000  0.000
+
+  NULL VECTOR in staircase coords:
+    r=3:                      
+    r=2:   0.500              
+    r=1:  -0.500 -0.000       
+    r=0:   0.000  0.000  0.000
+
+============================================================
+EIGENSPACE GEOMETRY n=6
+============================================================
+  Staircase coords: [((6, 1), (4, 0)), ((5, 1), (3, 0)), ((4, 1), (2, 0)), ((3, 1), (1, 0)), ((6, 2), (3, 1)), ((5, 2), (2, 1)), ((4, 2), (1, 1)), ((6, 3), (2, 2)), ((5, 3), (1, 2)), ((6, 4), (1, 3))]
+
+  NEGATIVE EIGENVECTORS in staircase coords:
+
+  lambda = -29.3180:
+    r=4:                             
+    r=3:  -0.501                     
+    r=2:  -0.412 -0.000              
+    r=1:  -0.280  0.008 -0.008       
+    r=0:   0.000  0.000  0.000  0.000
+
+  lambda = -23.3683:
+    r=4:                             
+    r=3:   0.005                     
+    r=2:  -0.084  0.561              
+    r=1:  -0.164  0.302  0.302       
+    r=0:   0.000  0.000  0.000  0.000
+
+  lambda = -10.1318:
+    r=4:                             
+    r=3:  -0.373                     
+    r=2:   0.244 -0.000              
+    r=1:   0.322  0.444 -0.444       
+    r=0:   0.000  0.000  0.000  0.000
+
+  lambda = -3.9432:
+    r=4:                             
+    r=3:   0.211                     
+    r=2:  -0.434  0.390              
+    r=1:   0.331 -0.285 -0.285       
+    r=0:   0.000  0.000  0.000  0.000
+
+============================================================
+EIGENSPACE GEOMETRY n=7
+============================================================
+  Staircase coords: [((7, 1), (5, 0)), ((6, 1), (4, 0)), ((5, 1), (3, 0)), ((4, 1), (2, 0)), ((3, 1), (1, 0)), ((7, 2), (4, 1)), ((6, 2), (3, 1)), ((5, 2), (2, 1)), ((4, 2), (1, 1)), ((7, 3), (3, 2)), ((6, 3), (2, 2)), ((5, 3), (1, 2)), ((7, 4), (2, 3)), ((6, 4), (1, 3)), ((7, 5), (1, 4))]
+
+  NEGATIVE EIGENVECTORS in staircase coords:
+
+  lambda = -93.8618:
+    r=5:                                    
+    r=4:  -0.521                            
+    r=3:  -0.370 -0.000                     
+    r=2:  -0.248  0.034 -0.034              
+    r=1:  -0.167  0.036 -0.000 -0.036       
+    r=0:   0.000  0.000  0.000  0.000  0.000
+
+  lambda = -82.8761:
+    r=5:                                    
+    r=4:  -0.007                            
+    r=3:  -0.089  0.503                     
+    r=2:  -0.105  0.296  0.296              
+    r=1:  -0.110  0.155  0.131  0.155       
+    r=0:   0.000  0.000  0.000  0.000  0.000
+
+  lambda = -33.3818:
+    r=5:                                    
+    r=4:  -0.305                            
+    r=3:   0.233 -0.000                     
+    r=2:   0.243  0.400 -0.400              
+    r=1:   0.222  0.292  0.000 -0.292       
+    r=0:   0.000  0.000  0.000  0.000  0.000
+
+  lambda = -22.6929:
+    r=5:                                    
+    r=4:  -0.250                            
+    r=3:   0.364 -0.399                     
+    r=2:   0.042  0.191  0.191              
+    r=1:  -0.263 -0.030  0.479 -0.030       
+    r=0:   0.000  0.000  0.000  0.000  0.000
+
+  lambda = -9.9020:
+    r=5:                                    
+    r=4:  -0.043                            
+    r=3:   0.291 -0.000                     
+    r=2:  -0.427  0.278 -0.278              
+    r=1:   0.100 -0.379  0.000  0.379       
+    r=0:   0.000  0.000  0.000  0.000  0.000
+
+============================================================
+BOOLEAN INFLUENCE ANALYSIS n=5
+============================================================
+  tile (5, 1) skip=4: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=26.250, E[dH^2]=26.250, unchanged=0.1250
+  tile (4, 1) skip=3: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=11.500, E[dH^2]=11.500, unchanged=0.1875
+  tile (3, 1) skip=2: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=12.250, E[dH^2]=12.250, unchanged=0.1562
+  tile (5, 2) skip=3: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=11.500, E[dH^2]=11.500, unchanged=0.1875
+  tile (4, 2) skip=2: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=6.250, E[dH^2]=6.250, unchanged=0.2500
+  tile (5, 3) skip=2: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=12.250, E[dH^2]=12.250, unchanged=0.1562
+
+============================================================
+BOOLEAN INFLUENCE ANALYSIS n=6
+============================================================
+  tile (6, 1) skip=5: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=141.750, E[dH^2]=141.750, unchanged=0.1211
+  tile (5, 1) skip=4: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=70.625, E[dH^2]=70.625, unchanged=0.1641
+  tile (4, 1) skip=3: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=73.250, E[dH^2]=73.250, unchanged=0.1660
+  tile (3, 1) skip=2: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=79.625, E[dH^2]=79.625, unchanged=0.1328
+  tile (6, 2) skip=4: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=70.625, E[dH^2]=70.625, unchanged=0.1641
+  tile (5, 2) skip=3: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=52.500, E[dH^2]=52.500, unchanged=0.1797
+  tile (4, 2) skip=2: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=45.500, E[dH^2]=45.500, unchanged=0.1602
+  tile (6, 3) skip=3: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=73.250, E[dH^2]=73.250, unchanged=0.1660
+  tile (5, 3) skip=2: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=45.500, E[dH^2]=45.500, unchanged=0.1602
+  tile (6, 4) skip=2: E[dH]=0.000 (=c_k*E[deriv]?), Var(dH)=79.625, E[dH^2]=79.625, unchanged=0.1328
+
+============================================================
+FACTORIZATION INVESTIGATION n=5
+============================================================
+  H(t) = 1 (transitive) for 1/64 tilings
+  GCD of all nonzero non-constant coefficients: 2
+  H(t) = 1 + 2 * P(t) where P(t) is a multilinear polynomial
+  (H(t)-1)/2 coefficients: 34 nonzero
+  GCD of (H-1)/2 coefficients: 1
+
+  Linear factor check:
+    tile (5, 1): sum of coefficients involving k = -2
+    tile (4, 1): sum of coefficients involving k = -4
+    tile (3, 1): sum of coefficients involving k = 0
+    tile (5, 2): sum of coefficients involving k = -4
+    tile (4, 2): sum of coefficients involving k = -4
+    tile (5, 3): sum of coefficients involving k = 0
+
+  H(t) mod 4 distribution:
+    {1: 42, 3: 22}
+
+  Row independence check:
+    Rows 0,1: 5 cross-row interactions
+    Rows 0,2: 3 cross-row interactions
+    Rows 1,2: 1 cross-row interactions
+
+============================================================
+FACTORIZATION INVESTIGATION n=6
+============================================================
+  H(t) = 1 (transitive) for 1/1024 tilings
+  GCD of all nonzero non-constant coefficients: 2
+  H(t) = 1 + 2 * P(t) where P(t) is a multilinear polynomial
+  (H(t)-1)/2 coefficients: 199 nonzero
+  GCD of (H-1)/2 coefficients: 1
+
+  Linear factor check:
+    tile (6, 1): sum of coefficients involving k = -12
+    tile (5, 1): sum of coefficients involving k = -12
+    tile (4, 1): sum of coefficients involving k = -6
+    tile (3, 1): sum of coefficients involving k = 2
+    tile (6, 2): sum of coefficients involving k = -12
+    tile (5, 2): sum of coefficients involving k = -12
+
+  H(t) mod 4 distribution:
+    {1: 656, 3: 368}
+
+  Row independence check:
+    Rows 0,1: 11 cross-row interactions
+    Rows 0,2: 8 cross-row interactions
+    Rows 0,3: 4 cross-row interactions
+    Rows 1,2: 5 cross-row interactions
+    Rows 1,3: 3 cross-row interactions
+    Rows 2,3: 1 cross-row interactions
+
+============================================================
+FACTORIZATION INVESTIGATION n=7
+============================================================
+  H(t) = 1 (transitive) for 1/32768 tilings
+  GCD of all nonzero non-constant coefficients: 2
+  H(t) = 1 + 2 * P(t) where P(t) is a multilinear polynomial
+  (H(t)-1)/2 coefficients: 1781 nonzero
+  GCD of (H-1)/2 coefficients: 1
+
+  Linear factor check:
+    tile (7, 1): sum of coefficients involving k = -38
+    tile (6, 1): sum of coefficients involving k = -36
+    tile (5, 1): sum of coefficients involving k = -20
+    tile (4, 1): sum of coefficients involving k = -10
+    tile (3, 1): sum of coefficients involving k = 2
+    tile (7, 2): sum of coefficients involving k = -36
+
+  H(t) mod 4 distribution:
+    {1: 17352, 3: 15416}
+
+  Row independence check:
+    Rows 0,1: 19 cross-row interactions
+    Rows 0,2: 15 cross-row interactions
+    Rows 0,3: 10 cross-row interactions
+    Rows 0,4: 5 cross-row interactions
+    Rows 1,2: 11 cross-row interactions
+    Rows 1,3: 8 cross-row interactions
+    Rows 1,4: 4 cross-row interactions
+    Rows 2,3: 5 cross-row interactions
+    Rows 2,4: 3 cross-row interactions
+    Rows 3,4: 1 cross-row interactions
+
+============================================================
+SPECIAL POINT EVALUATIONS n=5
+============================================================
+  H(1/2,...,1/2) = average = 9.875
+  = 79/8
+
+  H(p, ..., p) as function of p:
+    p=0.0: H = 1.0000
+    p=0.1: H = 3.1806
+    p=0.2: H = 5.2496
+    p=0.3: H = 7.1086
+    p=0.4: H = 8.6736
+    p=0.5: H = 9.8750
+    p=0.6: H = 10.6576
+    p=0.7: H = 10.9806
+    p=0.8: H = 10.8176
+    p=0.9: H = 10.1566
+    p=1.0: H = 9.0000
+
+  Univariate H(p) = sum_d (sum_{|S|=d} c_S) * p^d:
+    H(p) = 1*p^0 + 22*p^1 + -20*p^3 + 6*p^4
+    Roots of (H(p)-1)/p = 0: [np.float64(-0.9276435441334625), np.float64(1.364777464871432), np.float64(2.8961994125953634)]
+    Critical points of H(p): [np.float64(-0.5483679060922628), np.float64(0.7170225088104308), np.float64(2.3313453972818325)]
+
+  H with skip-threshold tilings:
+    skip >= 2: H = 9
+    skip >= 3: H = 15
+    skip >= 4: H = 9
+
+============================================================
+SPECIAL POINT EVALUATIONS n=6
+============================================================
+  H(1/2,...,1/2) = average = 29.0
+  = 29
+
+  H(p, ..., p) as function of p:
+    p=0.0: H = 1.0000
+    p=0.1: H = 6.9200
+    p=0.2: H = 13.5440
+    p=0.3: H = 19.9120
+    p=0.4: H = 25.2560
+    p=0.5: H = 29.0000
+    p=0.6: H = 30.7600
+    p=0.7: H = 30.3440
+    p=0.8: H = 27.7520
+    p=0.9: H = 23.1760
+    p=1.0: H = 17.0000
+
+  Univariate H(p) = sum_d (sum_{|S|=d} c_S) * p^d:
+    H(p) = 1*p^0 + 52*p^1 + 92*p^2 + -208*p^3 + 80*p^4
+    Roots of (H(p)-1)/p = 0: [np.float64(-0.3145165714585287), np.float64(1.2186415390152239), np.float64(1.6958750324433054)]
+    Critical points of H(p): [np.float64(-0.17261579963659313), np.float64(0.6312178689629108), np.float64(1.491397930673684)]
+
+  H with skip-threshold tilings:
+    skip >= 2: H = 17
+    skip >= 3: H = 41
+    skip >= 4: H = 41
+    skip >= 5: H = 17
+
+============================================================
+SPECIAL POINT EVALUATIONS n=7
+============================================================
+  H(1/2,...,1/2) = average = 99.21875
+  = 3175/32
+
+  H(p, ..., p) as function of p:
+    p=0.0: H = 1.0000
+    p=0.1: H = 17.6034
+    p=0.2: H = 40.7961
+    p=0.3: H = 65.1125
+    p=0.4: H = 85.8049
+    p=0.5: H = 99.2188
+    p=0.6: H = 103.0637
+    p=0.7: H = 96.5787
+    p=0.8: H = 80.5919
+    p=0.9: H = 57.4765
+    p=1.0: H = 31.0000
+
+  Univariate H(p) = sum_d (sum_{|S|=d} c_S) * p^d:
+    H(p) = 1*p^0 + 114*p^1 + 616*p^2 + -948*p^3 + -138*p^4 + 532*p^5 + -146*p^6
+    Roots of (H(p)-1)/p = 0: [np.float64(-1.282097898136623), np.float64(-0.1511489033826171), np.float64(1.1236946684265932), np.float64(1.4096052695197214), np.float64(2.5437824800112816)]
+    Critical points of H(p): [np.float64(-0.9866604957840093), np.float64(-0.07858008898619555), np.float64(0.5873307832264442), np.float64(1.277654897640918), np.float64(2.2367845842681393)]
+
+  H with skip-threshold tilings:
+    skip >= 2: H = 31
+    skip >= 3: H = 105
+    skip >= 4: H = 175
+    skip >= 5: H = 105
+    skip >= 6: H = 33
+
+============================================================
+MAX-DEGREE SIGN PATTERN n=5
+============================================================
+  Max degree: 4
+  Number of max-degree coefficients: 7
+  Positive: 5, Negative: 2
+  + tiles=[(5, 1), (3, 1), (5, 2), (4, 2)] stair=[(3, 0), (1, 0), (2, 1), (1, 1)] rows=[1, 2, 3] cols=[0, 1]
+  + tiles=[(4, 1), (3, 1), (5, 2), (4, 2)] stair=[(2, 0), (1, 0), (2, 1), (1, 1)] rows=[1, 2] cols=[0, 1]
+  + tiles=[(4, 1), (3, 1), (5, 2), (5, 3)] stair=[(2, 0), (1, 0), (2, 1), (1, 2)] rows=[1, 2] cols=[0, 1, 2]
+  + tiles=[(5, 1), (4, 1), (4, 2), (5, 3)] stair=[(3, 0), (2, 0), (1, 1), (1, 2)] rows=[1, 2, 3] cols=[0, 1, 2]
+  - tiles=[(4, 1), (3, 1), (4, 2), (5, 3)] stair=[(2, 0), (1, 0), (1, 1), (1, 2)] rows=[1, 2] cols=[0, 1, 2]
+  + tiles=[(4, 1), (5, 2), (4, 2), (5, 3)] stair=[(2, 0), (2, 1), (1, 1), (1, 2)] rows=[1, 2] cols=[0, 1, 2]
+  - tiles=[(3, 1), (5, 2), (4, 2), (5, 3)] stair=[(1, 0), (2, 1), (1, 1), (1, 2)] rows=[1, 2] cols=[0, 1, 2]
+
+  SIGN PARITY ANALYSIS:
+    sign = (-1)^sum(rows): 5/7 correct
+    sign = (-1)^sum(cols): 4/7 correct
+    sign = (-1)^sum(rows+cols): 4/7 correct
+    sign = (-1)^num_tiles_with_even_skip: 5/7 correct
+
+============================================================
+MAX-DEGREE SIGN PATTERN n=6
+============================================================
+  Max degree: 4
+  Number of max-degree coefficients: 81
+  Positive: 57, Negative: 24
+
+  SIGN PARITY ANALYSIS:
+    sign = (-1)^sum(rows): 41/81 correct
+    sign = (-1)^sum(cols): 45/81 correct
+    sign = (-1)^sum(rows+cols): 45/81 correct
+    sign = (-1)^num_tiles_with_even_skip: 41/81 correct
+
+============================================================
+MAX-DEGREE SIGN PATTERN n=7
+============================================================
+  Max degree: 6
+  Number of max-degree coefficients: 323
+  Positive: 125, Negative: 198
+
+  SIGN PARITY ANALYSIS:
+    sign = (-1)^sum(rows): 175/323 correct
+    sign = (-1)^sum(cols): 153/323 correct
+    sign = (-1)^sum(rows+cols): 153/323 correct
+    sign = (-1)^num_tiles_with_even_skip: 175/323 correct

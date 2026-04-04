@@ -1,0 +1,26 @@
+
+n=5: Cross-end pair verification
+  (3, 1)-(5, 3) s=(2,2): H(0)=1, H(i)=3, H(j)=3, H(ij)=9 | c_i=2, c_j=2, c_ij=4, c_i*c_j=4 | H(ij)*H(0)=9, H(i)*H(j)=9, diff=0 | odds=1.000000, log=0.000000
+
+n=6: Cross-end pair verification
+  (4, 1)-(6, 4) s=(3,2): H(0)=1, H(i)=5, H(j)=3, H(ij)=15 | c_i=4, c_j=2, c_ij=8, c_i*c_j=8 | H(ij)*H(0)=15, H(i)*H(j)=15, diff=0 | odds=1.000000, log=0.000000
+  (3, 1)-(6, 3) s=(2,3): H(0)=1, H(i)=3, H(j)=5, H(ij)=15 | c_i=2, c_j=4, c_ij=8, c_i*c_j=8 | H(ij)*H(0)=15, H(i)*H(j)=15, diff=0 | odds=1.000000, log=0.000000
+  (3, 1)-(5, 3) s=(2,2): H(0)=1, H(i)=3, H(j)=3, H(ij)=9 | c_i=2, c_j=2, c_ij=4, c_i*c_j=4 | H(ij)*H(0)=9, H(i)*H(j)=9, diff=0 | odds=1.000000, log=0.000000
+  (4, 2)-(6, 4) s=(2,2): H(0)=1, H(i)=3, H(j)=3, H(ij)=9 | c_i=2, c_j=2, c_ij=4, c_i*c_j=4 | H(ij)*H(0)=9, H(i)*H(j)=9, diff=0 | odds=1.000000, log=0.000000
+
+Does c_ij = c_i*c_j for cross-end pairs?
+
+n=5: Antiferromagnetic inequality c_ij < c_i*c_j
+  Strict c_ij < c_i*c_j: 14/15
+  Equality c_ij = c_i*c_j: 1/15
+  Violations: 0/15
+
+n=6: Antiferromagnetic inequality c_ij < c_i*c_j
+  Strict c_ij < c_i*c_j: 40/45
+  Equality c_ij = c_i*c_j: 5/45
+  Violations: 0/45
+
+n=7: Antiferromagnetic inequality c_ij < c_i*c_j
+  Strict c_ij < c_i*c_j: 90/105
+  Equality c_ij = c_i*c_j: 15/105
+  Violations: 0/105

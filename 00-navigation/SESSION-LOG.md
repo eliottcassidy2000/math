@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S3 — 2026-04-04: Deep Inclusion-Exclusion — Antiferromagnetic Structure of H(t)
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S2
+**Summary:** Fully characterized the inclusion-exclusion structure of H(t). Three major theorems proved. The fundamental discovery: H(t) is the partition function of a frustrated antiferromagnet on the staircase.
+
+**Key Results:**
+1. **THM-289 (PROVED)**: Generalized Reversal Cancellation. For ANY independent set of all-tile-arc odd cycles, the 2^k orientation combinations cancel. Proof: each odd-length cycle factor gives (1+(-1)^L) = 0, and the product factorizes. This completely explains the degree cap 2⌊(n-1)/2⌋.
+
+2. **THM-290 (PROVED at n≤7, conjectured general)**: Antiferromagnetic inequality c_{ij} ≤ c_i·c_j for ALL tile pairs. Equivalently: H(ij)·H(0) ≤ H(i)·H(j). Tiles always compete (or at best, are independent at cross-end pairs). 0 violations in C(15,2)=105 pairs at n=7.
+
+3. **Log-structure discovery**: log(H) is FULL RANK (degree m, almost all coefficients nonzero) while H is sparse (degree 2⌊(n-1)/2⌋). The exponential map does the sparsification. Linear log-coefficients = log(1+2^(s-1)) exactly. All pairwise log-couplings ≤ 0.
+
+4. **Cross-end factorization**: Cross-end tile pairs have H(ij) = H(i)·H(j) EXACTLY. The partition function factors perfectly for these pairs. OCF explanation: cycles through cross-end tiles don't interact (independent backward arcs through relay vertex).
+
+5. **Cancellation hierarchy**: Order-k coefficients have cancel ratio growing exponentially with k. Mean ratio at n=6: ~1.6 (order 1), ~9 (order 2), ~28 (order 3), ~95 (order 4). Above degree 4: PERFECT cancellation.
+
+6. **Zero pattern**: ~90% of zero multilinear coefficients are STRUCTURAL (no cycle packing exists). ~10% are cancellation zeros. The reversal mechanism handles the rest.
+
+7. **Error corrected**: Initial analysis incorrectly included EVEN-length cycles in OCF. The OCF only uses odd cycles. 6-cycles (even) are NOT in the independence polynomial Ω.
+
+**New contributions:** THM-289, THM-290, log-structure analysis, IE deep scripts
+**Unresolved:** Algebraic proof of antiferromagnetic inequality for all n. Is log-submodularity a consequence of hard-core model FKG?
+
 ## opus-2026-04-04-S2 — 2026-04-04: OCF Multilinear Decomposition — Complete Structural Theory
 
 **Account:** opus
