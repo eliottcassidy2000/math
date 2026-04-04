@@ -67,6 +67,13 @@ canvas{display:block;cursor:grab}canvas.dragging{cursor:grabbing}canvas.hovering
   <label>Edge color</label>
   <select id="edgeColorSel"><option value="bluefrac">Blue fraction (gradient)</option><option value="edgetype">Pure blue / Mixed / Pure black</option><option value="overlap">Layer overlap</option><option value="srs">Spine / Ribs / Sea (SC)</option><option value="weight">By weight</option><option value="uniform">Uniform</option></select>
   <div class="sep"></div>
+  <label>Filter</label>
+  <button class="btn on" id="fBlue" data-filt="blue" style="color:#1a6fc4;border-color:#1a6fc4;padding:2px 6px">B</button>
+  <button class="btn on" id="fBlack" data-filt="black" style="color:#888;border-color:#888;padding:2px 6px">K</button>
+  <button class="btn on" id="fSpine" data-filt="spine" style="color:#3fb950;border-color:#3fb950;padding:2px 6px">SC²</button>
+  <button class="btn on" id="fRibs" data-filt="ribs" style="color:#f85149;border-color:#f85149;padding:2px 6px">SC·NS</button>
+  <button class="btn on" id="fSea" data-filt="sea" style="color:#58a6ff;border-color:#58a6ff;padding:2px 6px">NS²</button>
+  <div class="sep"></div>
   <button class="btn" id="mergeBtn">Merge G<sub>n</sub>/Z<sub>2</sub></button>
   <div class="sep"></div>
   <label>Grav</label><input type="range" id="gravSlider" min="0" max="100" value="30">
@@ -87,6 +94,7 @@ let camX=0,camY=0,camZ=1; // pan + zoom
 let isDragging=false,isPanning=false,lastMX=0,lastMY=0,dragDist=0;
 let layoutMode='force',colorMode='h';
 let edgeLayer='complement',edgeColorScheme='bluefrac';
+let edgeFilter={blue:true,black:true,spine:true,ribs:true,sea:true};
 let gravityStrength=0.3,repulsionStrength=80;
 let N=5;
 let animFrame=null;
@@ -736,12 +744,26 @@ function stepForce(){
 // ================================================================
 // COLORS
 // ================================================================
-// Edge visibility based on layer selector
+// Edge visibility based on layer selector AND filters
 function isEdgeVisible(e){
-  if(e.layer==='red') return !merged; // red only when unmerged
-  if(edgeLayer==='complement') return e.layer==='complement';
-  if(edgeLayer==='wiggly') return e.layer==='wiggly';
-  return e.layer==='complement'||e.layer==='wiggly'; // 'both'
+  if(e.layer==='red') return !merged;
+  // Layer filter
+  if(edgeLayer==='complement'&&e.layer!=='complement') return false;
+  if(edgeLayer==='wiggly'&&e.layer!=='wiggly') return false;
+  if(edgeLayer==='both'&&e.layer!=='complement'&&e.layer!=='wiggly') return false;
+  // Blue/black filter (complement edges only)
+  if(e.layer==='complement'){
+    if(e.edgeType==='pureBlue'&&!edgeFilter.blue) return false;
+    if(e.edgeType==='pureBlack'&&!edgeFilter.black) return false;
+    if(e.edgeType==='mixed'&&!edgeFilter.blue&&!edgeFilter.black) return false;
+  }
+  // SC type filter (any edge)
+  if(e.scType){
+    if(e.scType==='spine'&&!edgeFilter.spine) return false;
+    if(e.scType==='ribs'&&!edgeFilter.ribs) return false;
+    if(e.scType==='sea'&&!edgeFilter.sea) return false;
+  }
+  return true;
 }
 
 // Precompute ranges for coloring (called after setupGraph)
@@ -921,50 +943,71 @@ function draw(){
       ctx.beginPath();ctx.arc(sx,sy,glowR,0,Math.PI*2);ctx.fill();
     }
 
-    // Fill
-    ctx.fillStyle=nodeColor(nd);
-    ctx.beginPath();ctx.arc(sx,sy,r,0,Math.PI*2);ctx.fill();
+    // Fill — paired nodes get a split circle in merged mode
+    const baseColor=nodeColor(nd);
+    if(merged&&nd.mergeType==='paired'){
+      // Split circle: left half = base color, right half = darker
+      ctx.save();
+      ctx.beginPath();ctx.arc(sx,sy,r,0,Math.PI*2);ctx.clip();
+      // Left half
+      ctx.fillStyle=baseColor;
+      ctx.fillRect(sx-r,sy-r,r,r*2);
+      // Right half slightly darker/different
+      ctx.globalAlpha=0.5;
+      ctx.fillStyle=baseColor;
+      ctx.fillRect(sx,sy-r,r,r*2);
+      ctx.globalAlpha=1;
+      // Dividing line
+      ctx.strokeStyle='rgba(255,255,255,0.25)';ctx.lineWidth=1;
+      ctx.beginPath();ctx.moveTo(sx,sy-r);ctx.lineTo(sx,sy+r);ctx.stroke();
+      ctx.restore();
+    } else {
+      ctx.fillStyle=baseColor;
+      ctx.beginPath();ctx.arc(sx,sy,r,0,Math.PI*2);ctx.fill();
+    }
 
-    // Border encoding
+    // Border
     if(merged){
       if(nd.mergeType==='backbone'){
-        // SC backbone: green glow ring — the skeleton of the merged graph
-        ctx.strokeStyle='rgba(63,185,80,0.6)';ctx.lineWidth=2.5;
-        ctx.beginPath();ctx.arc(sx,sy,r+2,0,Math.PI*2);ctx.stroke();
+        // SC backbone: thick green ring
+        ctx.strokeStyle='rgba(63,185,80,0.7)';ctx.lineWidth=2.5;
+        ctx.beginPath();ctx.arc(sx,sy,r+1,0,Math.PI*2);ctx.stroke();
       } else {
-        // Paired NS: subtle half-and-half indicator
-        ctx.strokeStyle='rgba(140,140,140,0.3)';ctx.lineWidth=1;
-        ctx.beginPath();ctx.arc(sx,sy,r+2,0,Math.PI*2);ctx.stroke();
-        // Small "×2" indicator
-        if(camZ>0.5&&r>4){
-          ctx.fillStyle='rgba(140,140,140,0.5)';ctx.font=`${Math.max(6,r*0.5)}px sans-serif`;
-          ctx.textAlign='right';ctx.textBaseline='top';
-          ctx.fillText('×2',sx+r+1,sy-r-1);
-        }
+        // Paired: dashed ring
+        ctx.strokeStyle='rgba(180,180,180,0.35)';ctx.lineWidth=1.5;
+        ctx.setLineDash([3,3]);
+        ctx.beginPath();ctx.arc(sx,sy,r+1,0,Math.PI*2);ctx.stroke();
+        ctx.setLineDash([]);
       }
+    } else {
+      if(nd.purity==='pureBlue'){
+        ctx.strokeStyle='rgba(26,111,196,0.8)';ctx.lineWidth=2.5;
+        ctx.beginPath();ctx.arc(sx,sy,r+1.5,0,Math.PI*2);ctx.stroke();
+      }
+      ctx.strokeStyle=isSelected?'#fff':nd.isSC?'rgba(63,185,80,0.6)':nd.purity==='mixed'?'rgba(160,80,200,0.4)':'rgba(255,255,255,0.15)';
+      ctx.lineWidth=isSelected?2.5:nd.isSC?1.5:0.7;
+      ctx.beginPath();ctx.arc(sx,sy,r,0,Math.PI*2);ctx.stroke();
     }
-    if(nd.purity==='pureBlue'&&!merged){
-      ctx.strokeStyle='rgba(26,111,196,0.8)';ctx.lineWidth=2.5;
-      ctx.beginPath();ctx.arc(sx,sy,r+1.5,0,Math.PI*2);ctx.stroke();
-    }
-    ctx.strokeStyle=isSelected?'#fff':nd.isSC?'rgba(63,185,80,0.6)':nd.purity==='mixed'?'rgba(160,80,200,0.4)':'rgba(255,255,255,0.15)';
-    ctx.lineWidth=isSelected?2.5:nd.isSC?1.5:0.7;
-    ctx.beginPath();ctx.arc(sx,sy,r,0,Math.PI*2);ctx.stroke();
 
-    // Label
+    // Label — backbone=green text, paired=gray, unmerged=white
     if(camZ>0.4&&nodes.length<200&&!tilingView){
-      ctx.fillStyle='#fff';
+      const labelColor=merged?(nd.mergeType==='backbone'?'#7ee787':'#999'):'#fff';
+      ctx.fillStyle=labelColor;
       ctx.font=`bold ${Math.max(7,r*0.8)}px monospace`;
       ctx.textAlign='center';ctx.textBaseline='middle';
       let label='';
-      if(colorMode==='h') label=nd.H.toString();
+      if(colorMode==='h'){
+        label=merged&&nd.mergeType==='paired'&&nd.H2?nd.H+'/'+nd.H2:nd.H.toString();
+      }
       else if(colorMode==='t3') label=nd.c3.toString();
       else if(colorMode==='per') label=nd.per.toString();
       else if(colorMode==='ham') label=nd.ham.toString();
       else if(colorMode==='degree') label=nd.degree.toString();
       else if(colorMode==='qh') label=nd.Q>0?(nd.qhRatio*100|0)+'%':'';
       else if(colorMode==='alpha1') label=nd.nOddCycles.toString();
-      else if(colorMode==='tilings') label=nd.size.toString();
+      else if(colorMode==='tilings'){
+        label=merged&&nd.mergeType==='paired'?nd.combinedSize.toString():nd.size.toString();
+      }
       else if(colorMode==='bluefrac') label=(nd.nodeBlueFrac*100|0)+'%';
       else if(colorMode==='selfrate') label=(nd.wigglySelfRate*100|0)+'%';
       else if(colorMode==='compselfrate') label=(nd.compSelfRate*100|0)+'%';
@@ -1280,6 +1323,14 @@ document.getElementById('mergeBtn').addEventListener('click',e=>{
 });
 document.getElementById('edgeLayerSel').addEventListener('change',e=>{edgeLayer=e.target.value;updateLegend();});
 document.getElementById('edgeColorSel').addEventListener('change',e=>{edgeColorScheme=e.target.value;updateLegend();});
+document.querySelectorAll('[data-filt]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const f=btn.dataset.filt;
+    edgeFilter[f]=!edgeFilter[f];
+    btn.classList.toggle('on',edgeFilter[f]);
+    btn.style.opacity=edgeFilter[f]?'1':'0.3';
+  });
+});
 document.getElementById('gravSlider').addEventListener('input',e=>{gravityStrength=e.target.value/100;});
 document.getElementById('repSlider').addEventListener('input',e=>{repulsionStrength=+e.target.value;});
 
