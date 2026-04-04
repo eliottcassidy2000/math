@@ -1,0 +1,63 @@
+EXACT RECURSION CORRECTION epsilon(n)
+============================================================
+
+  a(n) = a(n-1) * 2^{n-1} / n * (1 + epsilon(n))
+    n          a(n-1)*2^(n-1)/n                      a(n)         epsilon     epsilon*2^n
+    4                       4.0                         4    0.0000000000        0.000000
+    5                      12.8                        12   -0.0625000000       -2.000000
+    6                      64.0                        56   -0.1250000000       -8.000000
+    7                     512.0                       456   -0.1093750000      -14.000000
+    8                    7296.0                      6880   -0.0570175439      -14.596491
+    9                  195697.8                    191536   -0.0212663517      -10.888372
+   10                 9806643.2                   9733056   -0.0075038113       -7.683903
+   11               906059031.3                 903753248   -0.0025448488       -5.211850
+   12            154240554325.3              154108311168   -0.0008573825       -3.511839
+   13          48555972503394.5            48542114686912   -0.0002853988       -2.337987
+   14       28404071679655936.0         28401423719122304   -0.0000932247       -1.527393
+   15    31021928414273323008.0      31021002160355166848   -0.0000298580       -0.978388
+
+  epsilon(n) * 2^n:
+    n=4: epsilon*2^n = 0.000000
+    n=5: epsilon*2^n = -2.000000
+    n=6: epsilon*2^n = -8.000000
+    n=7: epsilon*2^n = -14.000000
+    n=8: epsilon*2^n = -14.596491
+    n=9: epsilon*2^n = -10.888372
+    n=10: epsilon*2^n = -7.683903
+    n=11: epsilon*2^n = -5.211850
+    n=12: epsilon*2^n = -3.511839
+    n=13: epsilon*2^n = -2.337987
+    n=14: epsilon*2^n = -1.527393
+    n=15: epsilon*2^n = -0.978388
+
+============================================================
+LEADING CORRECTION FROM 3-CYCLE PERMUTATIONS
+============================================================
+
+  The correction from cycle type (1^{n-3}, 3):
+  ratio = n(n-1)(n-2) / (3 * 4^{n-2})
+  n=  4: predicted correction = 0.5000000000, actual epsilon = 0.0000000000, ratio = 0.0000
+  n=  5: predicted correction = 0.3125000000, actual epsilon = -0.0625000000, ratio = -0.2000
+  n=  6: predicted correction = 0.1562500000, actual epsilon = -0.1250000000, ratio = -0.8000
+  n=  7: predicted correction = 0.0683593750, actual epsilon = -0.1093750000, ratio = -1.6000
+  n=  8: predicted correction = 0.0273437500, actual epsilon = -0.0570175439, ratio = -2.0852
+  n=  9: predicted correction = 0.0102539062, actual epsilon = -0.0212663517, ratio = -2.0740
+  n= 10: predicted correction = 0.0036621094, actual epsilon = -0.0075038113, ratio = -2.0490
+  n= 11: predicted correction = 0.0012588501, actual epsilon = -0.0025448488, ratio = -2.0216
+  n= 12: predicted correction = 0.0004196167, actual epsilon = -0.0008573825, ratio = -2.0433
+  n= 13: predicted correction = 0.0001363754, actual epsilon = -0.0002853988, ratio = -2.0927
+  n= 14: predicted correction = 0.0000433922, actual epsilon = -0.0000932247, ratio = -2.1484
+  n= 15: predicted correction = 0.0000135601, actual epsilon = -0.0000298580, ratio = -2.2019
+
+  Refined: epsilon ≈ delta_n - delta_{n-1} = -(n-1)(n-2)(n-4) / 4^(n-2)
+  n=5: predicted = -0.187500000000, actual = -0.062500000000, ratio = 0.3333
+  n=6: predicted = -0.156250000000, actual = -0.125000000000, ratio = 0.8000
+  n=7: predicted = -0.087890625000, actual = -0.109375000000, ratio = 1.2444
+  n=8: predicted = -0.041015625000, actual = -0.057017543860, ratio = 1.3901
+  n=9: predicted = -0.017089843750, actual = -0.021266351744, ratio = 1.2444
+  n=10: predicted = -0.006591796875, actual = -0.007503811294, ratio = 1.1384
+  n=11: predicted = -0.002403259277, actual = -0.002544848838, ratio = 1.0589
+  n=12: predicted = -0.000839233398, actual = -0.000857382534, ratio = 1.0216
+  n=13: predicted = -0.000283241272, actual = -0.000285398804, ratio = 1.0076
+  n=14: predicted = -0.000092983246, actual = -0.000093224681, ratio = 1.0026
+  n=15: predicted = -0.000029832125, actual = -0.000029858038, ratio = 1.0009

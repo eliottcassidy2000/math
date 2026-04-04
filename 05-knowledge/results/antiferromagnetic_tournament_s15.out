@@ -1,0 +1,486 @@
+    ... 2000 done
+    ... 4000 done
+    ... 6000 done
+    ... 8000 done
+    ... 10000 done
+    ... 12000 done
+    ... 14000 done
+    ... 16000 done
+    ... 18000 done
+    ... 20000 done
+    ... 22000 done
+    ... 24000 done
+    ... 26000 done
+    ... 28000 done
+    ... 30000 done
+    ... 32000 done
+  Processed 500 tournaments...
+  Processed 1000 tournaments...
+╔══════════════════════════════════════════════════════════════╗
+║  THE ANTIFERROMAGNETIC TOURNAMENT                          ║
+║  opus-2026-04-04-S15                                       ║
+╚══════════════════════════════════════════════════════════════╝
+
+================================================================================
+  ANTIFERROMAGNETIC TOURNAMENT ANALYSIS — n = 4
+================================================================================
+
+  Staircase lattice: 3 tiles
+  Tile positions: [(4, 1), (3, 1), (4, 2)]
+  Lattice degree sequence: [1, 1, 2]
+  Mean degree: 1.33
+  Total lattice edges: 2
+
+  Exhaustive enumeration: 2^6 = 64 tournaments
+
+────────────────────────────────────────────────────────────
+  1. FRUSTRATION vs HAMILTONIAN PATH COUNT
+────────────────────────────────────────────────────────────
+  Correlation(frustration, H) = 1.000000
+  Correlation(c₃, H) = 1.000000
+
+  H by frustration level (c₃):
+     c₃    count      mean H    min H    max H    H range
+      0       24        1.00        1        1          0
+      1       16        3.00        3        3          0
+      2       24        5.00        5        5          0
+
+────────────────────────────────────────────────────────────
+  2. NÉEL ORDER PARAMETER (Score Variance)
+────────────────────────────────────────────────────────────
+  Correlation(score_variance, H) = -1.000000
+  Interpretation: MORE regular → MORE Ham paths
+
+  H by score variance:
+        sv    count      mean H    min H    max H
+    0.2500       24        5.00        5        5
+    0.7500       16        3.00        3        3
+    1.2500       24        1.00        1        1
+
+────────────────────────────────────────────────────────────
+  3. ANTIFERROMAGNETIC ENERGY FUNCTIONAL
+────────────────────────────────────────────────────────────
+  Correlation(E_AFM, H)  = -0.408248
+  Correlation(E_AFM, c₃) = -0.408248
+  E_AFM range: [-2, 2]
+  Mean E_AFM: 0.0000
+
+  AFM 'GROUND STATE' (min E = -2):
+    Count: 16
+    H values: min=1, max=5, mean=4.00
+    c₃ values: [np.int64(0), np.int64(1), np.int64(2)]
+
+  'FULLY ALIGNED' state (max E = 2):
+    Count: 16
+    H values: min=1, max=5, mean=2.00
+    = transitive tournaments? scores: set()
+
+  H distribution by AFM energy level:
+   E_AFM    count      mean H    min H    max H
+      -2       16        4.00        1        5
+       0       32        3.00        1        5
+       2       16        2.00        1        5
+
+────────────────────────────────────────────────────────────
+  4. MAGNETIZATION ANALYSIS
+────────────────────────────────────────────────────────────
+  Total magnetization M range: [-3, 3]
+  Mean M: 0.000000  (should be ~0 by symmetry)
+  Staggered magnetization M_stag range: [0.3333, 1.0000]
+  Correlation(M_stag, H) = 0.333333
+  Correlation(|M|, H) = -0.333333
+
+────────────────────────────────────────────────────────────
+  5. SELF-COMPLEMENTARY vs NON-SC (AFM symmetry)
+────────────────────────────────────────────────────────────
+  SC tournaments: 48
+    Mean H: 3.00, Mean E: 0.00
+    Mean c₃: 1.00, Mean sv: 0.75
+  NSC tournaments: 16
+    Mean H: 3.00, Mean E: 0.00
+    Mean c₃: 1.00, Mean sv: 0.75
+
+────────────────────────────────────────────────────────────
+  6. PHASE DIAGRAM (E_AFM, c₃, H)
+────────────────────────────────────────────────────────────
+  Energy levels: 3 distinct E values
+  Frustration levels: 3 distinct c₃ values
+
+  Linear model: H ≈ 0.0000*E_AFM + 2.0000*c₃ + 1.0000
+  R² = 1.000000
+  R²(c₃ only) = 1.000000
+  ΔR² from adding E_AFM: 0.000000
+  R²(sv + c₃) = 1.000000
+  R²(E + c₃ + sv) = 1.000000
+  Full model: H ≈ 0.0000*E + 2.0444*c₃ + 0.0889*sv + 0.8889
+
+================================================================================
+  ANTIFERROMAGNETIC TOURNAMENT ANALYSIS — n = 5
+================================================================================
+
+  Staircase lattice: 6 tiles
+  Tile positions: [(5, 1), (4, 1), (3, 1), (5, 2), (4, 2), (5, 3)]
+  Lattice degree sequence: [2, 3, 3, 3, 3, 4]
+  Mean degree: 3.00
+  Total lattice edges: 9
+
+  Exhaustive enumeration: 2^10 = 1024 tournaments
+
+────────────────────────────────────────────────────────────
+  1. FRUSTRATION vs HAMILTONIAN PATH COUNT
+────────────────────────────────────────────────────────────
+  Correlation(frustration, H) = 0.973329
+  Correlation(c₃, H) = 0.973329
+
+  H by frustration level (c₃):
+     c₃    count      mean H    min H    max H    H range
+      0      120        1.00        1        1          0
+      1      120        3.00        3        3          0
+      2      240        5.00        5        5          0
+      3      240        9.00        9        9          0
+      4      280       12.43       11       15          4
+      5       24       15.00       15       15          0
+
+────────────────────────────────────────────────────────────
+  2. NÉEL ORDER PARAMETER (Score Variance)
+────────────────────────────────────────────────────────────
+  Correlation(score_variance, H) = -0.973329
+  Interpretation: MORE regular → MORE Ham paths
+
+  H by score variance:
+        sv    count      mean H    min H    max H
+    0.0000       24       15.00       15       15
+    0.4000      280       12.43       11       15
+    0.8000      240        9.00        9        9
+    1.2000      240        5.00        5        5
+    1.6000      120        3.00        3        3
+    2.0000      120        1.00        1        1
+
+────────────────────────────────────────────────────────────
+  3. ANTIFERROMAGNETIC ENERGY FUNCTIONAL
+────────────────────────────────────────────────────────────
+  Correlation(E_AFM, H)  = -0.414644
+  Correlation(E_AFM, c₃) = -0.426006
+  E_AFM range: [-5, 9]
+  Mean E_AFM: 0.0000
+
+  AFM 'GROUND STATE' (min E = -5):
+    Count: 64
+    H values: min=5, max=15, mean=9.38
+    c₃ values: [np.int64(2), np.int64(3), np.int64(4), np.int64(5)]
+
+  'FULLY ALIGNED' state (max E = 9):
+    Count: 32
+    H values: min=1, max=9, mean=2.62
+    = transitive tournaments? scores: set()
+
+  H distribution by AFM energy level:
+   E_AFM    count      mean H    min H    max H
+      -5       64        9.38        5       15
+      -3      224        9.84        1       15
+      -1      256        8.12        1       15
+       1      224        6.48        1       15
+       3      192        5.71        1       15
+       5       32        5.12        1       13
+       9       32        2.62        1        9
+
+────────────────────────────────────────────────────────────
+  4. MAGNETIZATION ANALYSIS
+────────────────────────────────────────────────────────────
+  Total magnetization M range: [-6, 6]
+  Mean M: 0.000000  (should be ~0 by symmetry)
+  Staggered magnetization M_stag range: [0.0000, 1.0000]
+  Correlation(M_stag, H) = 0.204347
+  Correlation(|M|, H) = -0.302997
+
+────────────────────────────────────────────────────────────
+  5. SELF-COMPLEMENTARY vs NON-SC (AFM symmetry)
+────────────────────────────────────────────────────────────
+  SC tournaments: 704
+    Mean H: 8.86, Mean E: -0.32
+    Mean c₃: 2.84, Mean sv: 0.86
+  NSC tournaments: 320
+    Mean H: 4.50, Mean E: 0.70
+    Mean c₃: 1.75, Mean sv: 1.30
+
+────────────────────────────────────────────────────────────
+  6. PHASE DIAGRAM (E_AFM, c₃, H)
+────────────────────────────────────────────────────────────
+  Energy levels: 7 distinct E values
+  Frustration levels: 6 distinct c₃ values
+
+  Linear model: H ≈ -0.0000*E_AFM + 3.0000*c₃ + -0.0000
+  R² = 0.947368
+  R²(c₃ only) = 0.947368
+  ΔR² from adding E_AFM: -0.000000
+  R²(sv + c₃) = 0.947368
+  R²(E + c₃ + sv) = 0.947368
+  Full model: H ≈ 0.0000*E + 2.9070*c₃ + -0.2326*sv + 0.4651
+
+================================================================================
+  ANTIFERROMAGNETIC TOURNAMENT ANALYSIS — n = 6
+================================================================================
+
+  Staircase lattice: 10 tiles
+  Tile positions: [(6, 1), (5, 1), (4, 1), (3, 1), (6, 2), (5, 2), (4, 2), (6, 3), (5, 3), (6, 4)]
+  Lattice degree sequence: [4, 4, 4, 5, 5, 5, 5, 5, 5, 6]
+  Mean degree: 4.80
+  Total lattice edges: 24
+
+  Exhaustive enumeration: 2^15 = 32768 tournaments
+
+────────────────────────────────────────────────────────────
+  1. FRUSTRATION vs HAMILTONIAN PATH COUNT
+────────────────────────────────────────────────────────────
+  Correlation(frustration, H) = 0.960769
+  Correlation(c₃, H) = 0.960769
+
+  H by frustration level (c₃):
+     c₃    count      mean H    min H    max H    H range
+      0      720        1.00        1        1          0
+      1      960        3.00        3        3          0
+      2     2240        5.14        5        9          4
+      3     2880        9.00        9        9          0
+      4     6240       14.08       11       17          6
+      5     3648       21.32       15       27         12
+      6     8640       28.67       23       37         14
+      7     4800       35.40       33       37          4
+      8     2640       42.82       41       45          4
+
+────────────────────────────────────────────────────────────
+  2. NÉEL ORDER PARAMETER (Score Variance)
+────────────────────────────────────────────────────────────
+  Correlation(score_variance, H) = -0.960769
+  Interpretation: MORE regular → MORE Ham paths
+
+  H by score variance:
+        sv    count      mean H    min H    max H
+    0.2500     2640       42.82       41       45
+    0.5833     4800       35.40       33       37
+    0.9167     8640       28.67       23       37
+    1.2500     3648       21.32       15       27
+    1.5833     6240       14.08       11       17
+    1.9167     2880        9.00        9        9
+    2.2500     2240        5.14        5        9
+    2.5833      960        3.00        3        3
+    2.9167      720        1.00        1        1
+
+────────────────────────────────────────────────────────────
+  3. ANTIFERROMAGNETIC ENERGY FUNCTIONAL
+────────────────────────────────────────────────────────────
+  Correlation(E_AFM, H)  = -0.405096
+  Correlation(E_AFM, c₃) = -0.421637
+  E_AFM range: [-8, 24]
+  Mean E_AFM: 0.0000
+
+  AFM 'GROUND STATE' (min E = -8):
+    Count: 1344
+    H values: min=1, max=45, mean=31.90
+    c₃ values: [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8)]
+
+  'FULLY ALIGNED' state (max E = 24):
+    Count: 64
+    H values: min=1, max=17, mean=3.50
+    = transitive tournaments? scores: set()
+
+  H distribution by AFM energy level:
+   E_AFM    count      mean H    min H    max H
+      -8     1344       31.90        1       45
+      -6     3712       27.96        1       45
+      -4     4544       26.36        1       45
+      -2     5504       25.37        1       45
+       0     5568       21.93        1       45
+       2     3840       19.98        1       45
+       4     3456       19.02        1       45
+       6     2304       15.97        1       45
+       8     1024       13.72        1       37
+      10      640       13.15        1       37
+      12      192       12.50        1       37
+      14      384        8.58        1       29
+      16      192        7.67        1       29
+      24       64        3.50        1       17
+
+────────────────────────────────────────────────────────────
+  4. MAGNETIZATION ANALYSIS
+────────────────────────────────────────────────────────────
+  Total magnetization M range: [-10, 10]
+  Mean M: 0.000000  (should be ~0 by symmetry)
+  Staggered magnetization M_stag range: [0.0000, 1.0000]
+  Correlation(M_stag, H) = 0.135813
+  Correlation(|M|, H) = -0.281385
+
+────────────────────────────────────────────────────────────
+  5. SELF-COMPLEMENTARY vs NON-SC (AFM symmetry)
+────────────────────────────────────────────────────────────
+  SC tournaments: 15680
+    Mean H: 26.27, Mean E: -0.52
+    Mean c₃: 5.49, Mean sv: 1.09
+  NSC tournaments: 17088
+    Mean H: 19.04, Mean E: 0.48
+    Mean c₃: 4.55, Mean sv: 1.40
+
+────────────────────────────────────────────────────────────
+  6. PHASE DIAGRAM (E_AFM, c₃, H)
+────────────────────────────────────────────────────────────
+  Energy levels: 14 distinct E values
+  Frustration levels: 9 distinct c₃ values
+
+  Linear model: H ≈ 0.0000*E_AFM + 6.0000*c₃ + -7.5000
+  R² = 0.923077
+  R²(c₃ only) = 0.923077
+  ΔR² from adding E_AFM: 0.000000
+  R²(sv + c₃) = 0.923077
+  R²(E + c₃ + sv) = 0.923077
+  Full model: H ≈ 0.0000*E + 5.1726*c₃ + -2.4823*sv + -0.2599
+
+================================================================================
+  MAGNON DISPERSION RELATION — n = 4
+================================================================================
+
+  Tile positions and their 'magnon energies':
+      Tile  skip    mean|ΔH|     std|ΔH|     mean ΔH   %same_class
+  (4,1)      3      1.5000      1.3229      0.0000       37.50%
+  (3,1)      2      1.5000      1.3229      0.0000       37.50%
+  (4,2)      2      1.5000      1.3229      0.0000       37.50%
+
+  Mean |ΔH| by skip distance (AFM 'momentum'):
+    skip=2: mean|ΔH| = 1.5000 (from 2 tiles)
+    skip=3: mean|ΔH| = 1.5000 (from 1 tile)
+
+  Overall ΔH distribution (top 20):
+    ΔH =   +0: 72 (37.50%)
+    ΔH =   +2: 48 (25.00%)
+    ΔH =   -2: 48 (25.00%)
+    ΔH =   +4: 12 (6.25%)
+    ΔH =   -4: 12 (6.25%)
+
+================================================================================
+  MAGNON DISPERSION RELATION — n = 5
+================================================================================
+
+  Tile positions and their 'magnon energies':
+      Tile  skip    mean|ΔH|     std|ΔH|     mean ΔH   %same_class
+  (5,1)      4      3.0000      2.4495      0.0000       21.88%
+  (4,1)      3      3.0000      2.4495      0.0000       21.88%
+  (3,1)      2      3.0000      2.4495      0.0000       21.88%
+  (5,2)      3      3.0000      2.4495      0.0000       21.88%
+  (4,2)      2      3.0000      2.4495      0.0000       21.88%
+  (5,3)      2      3.0000      2.4495      0.0000       21.88%
+
+  Mean |ΔH| by skip distance (AFM 'momentum'):
+    skip=2: mean|ΔH| = 3.0000 (from 3 tiles)
+    skip=3: mean|ΔH| = 3.0000 (from 2 tiles)
+    skip=4: mean|ΔH| = 3.0000 (from 1 tile)
+
+  Overall ΔH distribution (top 20):
+    ΔH =   +0: 1344 (21.88%)
+    ΔH =   +2: 1080 (17.58%)
+    ΔH =   -2: 1080 (17.58%)
+    ΔH =   +4: 720 (11.72%)
+    ΔH =   -4: 720 (11.72%)
+    ΔH =   +6: 360 (5.86%)
+    ΔH =   -6: 360 (5.86%)
+    ΔH =   +8: 216 (3.52%)
+    ΔH =   -8: 216 (3.52%)
+    ΔH =  +12: 24 (0.39%)
+    ΔH =  -12: 24 (0.39%)
+
+================================================================================
+  SPIN-SPIN CORRELATION FUNCTION — n = 4
+================================================================================
+
+  Spin-spin correlation <σ_i σ_j> by lattice distance:
+   dist        <σσ>   #pairs    sign
+      0    1.000000        3       +
+      1    0.000000        4      ~0
+      2    0.000000        2      ~0
+
+================================================================================
+  SPIN-SPIN CORRELATION FUNCTION — n = 5
+================================================================================
+
+  Spin-spin correlation <σ_i σ_j> by lattice distance:
+   dist        <σσ>   #pairs    sign
+      0    1.000000        6       +
+      1    0.000000       18      ~0
+      2    0.000000       12      ~0
+
+================================================================================
+  FORBIDDEN H VALUES: AFM QUANTIZATION ANALYSIS — n = 5
+================================================================================
+
+  Achievable H values: [1, 3, 5, 9, 11, 13, 15]
+  Missing odd values in [1, 15]: [7]
+
+  Binary structure of H values:
+      H        binary   (H-1)/2   count    c₃ range
+      1             1         0     120  0-0
+      3            11         1     120  1-1
+      5           101         2     240  2-2
+      9          1001         4     240  3-3
+     11          1011         5     120  4-4
+     13          1101         6     120  4-4
+     15          1111         7      64  4-5
+
+  Analysis of forbidden values:
+
+  H = 7 (binary: 111):
+    (H-1)/2 = 3
+    Requires α₁ + 2α₂ + 4α₃ + ... = 3
+    Possible: α₁ = 3 with α₂=0, or α₁ = 1 with α₂=1, ...
+
+================================================================================
+  FORBIDDEN H VALUES: AFM QUANTIZATION ANALYSIS — n = 6
+================================================================================
+
+  Achievable H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  Missing odd values in [1, 45]: [7, 21, 35, 39]
+
+  Binary structure of H values:
+      H        binary   (H-1)/2   count    c₃ range
+      1             1         0     720  0-0
+      3            11         1     960  1-1
+      5           101         2    2160  2-2
+      9          1001         4    2960  2-3
+     11          1011         5    1440  4-4
+     13          1101         6    1440  4-4
+     15          1111         7    2208  4-5
+     17         10001         8    1440  4-4
+     19         10011         9    1440  5-5
+     23         10111        11    2880  5-6
+     25         11001        12    1440  6-6
+     27         11011        13     480  5-5
+     29         11101        14    2880  6-6
+     31         11111        15    1440  6-6
+     33        100001        16    2640  6-7
+     37        100101        18    3600  6-7
+     41        101001        20     720  8-8
+     43        101011        21    1440  8-8
+     45        101101        22     480  8-8
+
+  Analysis of forbidden values:
+
+  H = 7 (binary: 111):
+    (H-1)/2 = 3
+    Requires α₁ + 2α₂ + 4α₃ + ... = 3
+    Possible: α₁ = 3 with α₂=0, or α₁ = 1 with α₂=1, ...
+
+  H = 21 (binary: 10101):
+    (H-1)/2 = 10
+    Requires α₁ + 2α₂ + 4α₃ + ... = 10
+    Possible: α₁ = 10 with α₂=0, or α₁ = 8 with α₂=1, ...
+
+  H = 35 (binary: 100011):
+    (H-1)/2 = 17
+    Requires α₁ + 2α₂ + 4α₃ + ... = 17
+    Possible: α₁ = 17 with α₂=0, or α₁ = 15 with α₂=1, ...
+
+  H = 39 (binary: 100111):
+    (H-1)/2 = 19
+    Requires α₁ + 2α₂ + 4α₃ + ... = 19
+    Possible: α₁ = 19 with α₂=0, or α₁ = 17 with α₂=1, ...
+
+
+================================================================================
+  DONE. All results above.
+================================================================================
