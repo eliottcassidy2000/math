@@ -1,0 +1,274 @@
+
+============================================================
+B(i,j)=0 VERIFICATION FOR SAME-END PAIRS n=5
+============================================================
+  Tested 8 same-end pairs
+  B>0 violations: 0
+  CONFIRMED: B(i,j)=0 for all same-end pairs at n=5
+
+============================================================
+B(i,j)=0 VERIFICATION FOR SAME-END PAIRS n=6
+============================================================
+  Tested 20 same-end pairs
+  B>0 violations: 0
+  CONFIRMED: B(i,j)=0 for all same-end pairs at n=6
+
+============================================================
+CHI = -1 VERIFICATION FOR SAME-END CYCLES n=5
+============================================================
+  Tested 8 (cycle, same-end pair) combinations
+  Violations: 0
+  CONFIRMED: chi = -1 for ALL single cycles through same-end pairs
+
+============================================================
+CHI = -1 VERIFICATION FOR SAME-END CYCLES n=6
+============================================================
+  Tested 22 (cycle, same-end pair) combinations
+  Violations: 0
+  CONFIRMED: chi = -1 for ALL single cycles through same-end pairs
+
+============================================================
+CHI = +1 VERIFICATION FOR CROSS-END CYCLES n=5
+============================================================
+  Tested 2 (cycle, cross-end pair) combinations
+  Violations: 0
+  CONFIRMED: chi = +1 for ALL single cycles through cross-end pairs
+
+============================================================
+CHI = +1 VERIFICATION FOR CROSS-END CYCLES n=6
+============================================================
+  Tested 12 (cycle, cross-end pair) combinations
+  Violations: 0
+  CONFIRMED: chi = +1 for ALL single cycles through cross-end pairs
+
+============================================================
+DISJOINT PAIR CHI ANALYSIS n=5
+============================================================
+  Chi coefficient distribution for disjoint pairs:
+    (5, 1)-(4, 2) s=(4,2): chi values = {1: 2}, net = 2
+    (4, 1)-(5, 2) s=(3,3): chi values = {1: 2}, net = 2
+    (4, 1)-(5, 3) s=(3,2): chi values = {1: 1}, net = 1
+    (3, 1)-(5, 2) s=(2,3): chi values = {1: 1}, net = 1
+  All net chi positive? True
+
+============================================================
+DISJOINT PAIR CHI ANALYSIS n=6
+============================================================
+  Chi coefficient distribution for disjoint pairs:
+    (6, 1)-(5, 2) s=(5,3): chi values = {1: 4}, net = 4
+    (6, 1)-(4, 2) s=(5,2): chi values = {1: 3, -1: 1}, net = 2
+    (6, 1)-(5, 3) s=(5,2): chi values = {1: 3, -1: 1}, net = 2
+    (5, 1)-(6, 2) s=(4,4): chi values = {1: 4}, net = 4
+    (5, 1)-(4, 2) s=(4,2): chi values = {1: 2}, net = 2
+    (5, 1)-(6, 3) s=(4,3): chi values = {1: 3}, net = 3
+    (5, 1)-(6, 4) s=(4,2): chi values = {1: 2}, net = 2
+    (4, 1)-(6, 2) s=(3,4): chi values = {1: 3}, net = 3
+    (4, 1)-(5, 2) s=(3,3): chi values = {1: 2}, net = 2
+    (4, 1)-(6, 3) s=(3,3): chi values = {1: 2}, net = 2
+    (4, 1)-(5, 3) s=(3,2): chi values = {1: 1}, net = 1
+    (3, 1)-(6, 2) s=(2,4): chi values = {1: 2}, net = 2
+    (3, 1)-(5, 2) s=(2,3): chi values = {1: 1}, net = 1
+    (6, 2)-(5, 3) s=(4,2): chi values = {1: 2}, net = 2
+    (5, 2)-(6, 3) s=(3,3): chi values = {1: 2}, net = 2
+    (5, 2)-(6, 4) s=(3,2): chi values = {1: 1}, net = 1
+    (4, 2)-(6, 3) s=(2,3): chi values = {1: 1}, net = 1
+  All net chi positive? True
+
+============================================================
+Q DECOMPOSITION n=5
+============================================================
+
+  Q_same: signature (3+, 3-, 0 zero)
+    Eigenvalues: ['4.000', '2.686', '2.000', '-1.059', '-2.000', '-5.627']
+    Neg eigenvalues: ['-1.059', '-2.000', '-5.627']
+
+  Q_cross: signature (1+, 1-, 4 zero)
+    Eigenvalues: ['4.000', '0.000', '0.000', '0.000', '0.000', '-4.000']
+    Neg eigenvalues: ['-4.000']
+
+  Q_disj: signature (3+, 3-, 0 zero)
+    Eigenvalues: ['4.828', '4.000', '0.828', '-0.828', '-4.000', '-4.828']
+    Neg eigenvalues: ['-0.828', '-4.000', '-4.828']
+
+  Q: signature (2+, 3-, 1 zero)
+    Eigenvalues: ['8.506', '4.381', '-0.000', '-0.381', '-4.506', '-8.000']
+    Neg eigenvalues: ['-0.381', '-4.506', '-8.000']
+
+  neg(Q_same) = 3, n-2 = 3
+  MATCH: True
+
+  Q_same decomposition by shared vertex:
+    vertex 1: 3 pairs, neg eigenvalues: 1, smallest: -4.000
+    vertex 2: 1 pairs, neg eigenvalues: 1, smallest: -2.000
+    vertex 4: 1 pairs, neg eigenvalues: 1, smallest: -2.000
+    vertex 5: 3 pairs, neg eigenvalues: 1, smallest: -4.000
+  Sum of vertex matrices = Q_same? max diff = 0.000000
+
+============================================================
+Q DECOMPOSITION n=6
+============================================================
+
+  Q_same: signature (6+, 4-, 0 zero)
+    Eigenvalues: ['5.817', '4.000', '4.000', '2.991', '2.000', '0.776', '-2.000', '-3.931']...
+    Neg eigenvalues: ['-2.000', '-3.931', '-4.000', '-9.652']
+
+  Q_cross: signature (2+, 2-, 6 zero)
+    Eigenvalues: ['8.944', '8.944', '0.000', '0.000', '0.000', '0.000', '-0.000', '-0.000']...
+    Neg eigenvalues: ['-8.944', '-8.944']
+
+  Q_disj: signature (5+, 5-, 0 zero)
+    Eigenvalues: ['26.107', '17.683', '4.792', '3.818', '3.478', '-2.677', '-3.747', '-5.581']...
+    Neg eigenvalues: ['-2.677', '-3.747', '-5.581', '-20.314', '-23.561']
+
+  Q: signature (6+, 4-, 0 zero)
+    Eigenvalues: ['23.841', '18.194', '8.965', '7.183', '4.312', '4.267', '-3.943', '-10.132']...
+    Neg eigenvalues: ['-3.943', '-10.132', '-23.368', '-29.318']
+
+  neg(Q_same) = 4, n-2 = 4
+  MATCH: True
+
+  Q_same decomposition by shared vertex:
+    vertex 1: 6 pairs, neg eigenvalues: 1, smallest: -7.123
+    vertex 2: 3 pairs, neg eigenvalues: 1, smallest: -4.000
+    vertex 3: 1 pairs, neg eigenvalues: 1, smallest: -2.000
+    vertex 4: 1 pairs, neg eigenvalues: 1, smallest: -2.000
+    vertex 5: 3 pairs, neg eigenvalues: 1, smallest: -4.000
+    vertex 6: 6 pairs, neg eigenvalues: 1, smallest: -7.123
+  Sum of vertex matrices = Q_same? max diff = 0.000000
+
+============================================================
+Q DECOMPOSITION n=7
+============================================================
+
+  Q_same: signature (9+, 6-, 0 zero)
+    Eigenvalues: ['12.057', '6.117', '5.384', '4.000', '3.774', '3.132', '2.819', '2.340']...
+    Neg eigenvalues: ['-0.034', '-3.431', '-4.603', '-7.522', '-7.594', '-17.063']
+
+  Q_cross: signature (3+, 3-, 9 zero)
+    Eigenvalues: ['20.000', '18.762', '17.889', '0.000', '0.000', '0.000', '0.000', '-0.000']...
+    Neg eigenvalues: ['-17.889', '-18.762', '-20.000']
+
+  Q_disj: signature (9+, 6-, 0 zero)
+    Eigenvalues: ['104.316', '60.461', '16.317', '16.096', '11.703', '6.714', '3.070', '2.845']...
+    Neg eigenvalues: ['-8.455', '-14.010', '-17.695', '-21.837', '-77.217', '-84.572']
+
+  Q: signature (10+, 5-, 0 zero)
+    Eigenvalues: ['96.994', '65.547', '22.658', '20.007', '9.380', '8.913', '6.651', '4.226']...
+    Neg eigenvalues: ['-9.902', '-22.693', '-33.382', '-82.876', '-93.862']
+
+  neg(Q_same) = 6, n-2 = 5
+  MATCH: False
+
+  Q_same decomposition by shared vertex:
+    vertex 1: 10 pairs, neg eigenvalues: 1, smallest: -12.889
+    vertex 2: 6 pairs, neg eigenvalues: 1, smallest: -7.123
+    vertex 3: 3 pairs, neg eigenvalues: 1, smallest: -4.000
+    vertex 4: 2 pairs, neg eigenvalues: 2, smallest: -2.000
+    vertex 5: 3 pairs, neg eigenvalues: 1, smallest: -4.000
+    vertex 6: 6 pairs, neg eigenvalues: 1, smallest: -7.123
+    vertex 7: 10 pairs, neg eigenvalues: 1, smallest: -12.889
+  Sum of vertex matrices = Q_same? max diff = 0.000000
+
+============================================================
+STATISTICAL / INFORMATION ANALYSIS n=5
+============================================================
+
+  Distribution H(t)/Z:
+    Z = sum(H) = 632
+    Entropy = 5.8913 bits (uniform = 6)
+    Redundancy = 0.1087 bits
+    Efficiency = 0.9819
+    KL(P || uniform) = 0.1087 bits
+
+  Per-tile marginals E[t_k] under H/Z:
+    tile (5, 1) skip=4: E[t_k] = 0.6013 (bias = 0.1013)
+    tile (4, 1) skip=3: E[t_k] = 0.5316 (bias = 0.0316)
+    tile (3, 1) skip=2: E[t_k] = 0.5443 (bias = 0.0443)
+    tile (5, 2) skip=3: E[t_k] = 0.5316 (bias = 0.0316)
+    tile (4, 2) skip=2: E[t_k] = 0.5000 (bias = 0.0000)
+    tile (5, 3) skip=2: E[t_k] = 0.5443 (bias = 0.0443)
+
+  Pairwise correlations Corr(t_i, t_j):
+    Sign(Corr) = Sign(c_ij)? 12/13
+    Correlation matrix: (3+, 3-)
+    Top eigenvalues: ['0.2053', '0.1279', '0.0923', '-0.0307', '-0.1570']
+
+  Pairwise mutual information I(t_i; t_j):
+  MI vs |c_ij| correlation:
+    Pearson correlation(MI, |c_ij|) = -0.4493
+    same-end: mean MI = 0.005874, max = 0.007800
+    cross-end: mean MI = 0.004781, max = 0.004781
+    disjoint: mean MI = 0.000364, max = 0.000482
+
+  Total correlation C(t_1,...,t_m) = 0.0618 bits
+    (= sum H(t_k) - H(t_1,...,t_m))
+
+============================================================
+CORRELATION vs Q EIGENSTRUCTURE n=5
+============================================================
+  Max eigenvector overlap per Q eigenvector:
+    Q[0] (lambda=-8.000): max |<v,w>| = 0.9796
+    Q[1] (lambda=-4.506): max |<v,w>| = 0.9312
+    Q[2] (lambda=-0.381): max |<v,w>| = 0.9291
+    Q[3] (lambda=0.000): max |<v,w>| = 0.9796
+    Q[4] (lambda=4.381): max |<v,w>| = 0.9822
+    Q[5] (lambda=8.506): max |<v,w>| = 0.9754
+
+  Negative eigenvalue count: Q=3, Corr=3
+  Principal angles between negative eigenspaces: ['0.9', '7.1', '11.6']
+
+============================================================
+STATISTICAL / INFORMATION ANALYSIS n=6
+============================================================
+
+  Distribution H(t)/Z:
+    Z = sum(H) = 29696
+    Entropy = 9.8977 bits (uniform = 10)
+    Redundancy = 0.1023 bits
+    Efficiency = 0.9898
+    KL(P || uniform) = 0.1023 bits
+
+  Per-tile marginals E[t_k] under H/Z:
+    tile (6, 1) skip=5: E[t_k] = 0.5690 (bias = 0.0690)
+    tile (5, 1) skip=4: E[t_k] = 0.5280 (bias = 0.0280)
+    tile (4, 1) skip=3: E[t_k] = 0.5259 (bias = 0.0259)
+    tile (3, 1) skip=2: E[t_k] = 0.5345 (bias = 0.0345)
+    tile (6, 2) skip=4: E[t_k] = 0.5280 (bias = 0.0280)
+    tile (5, 2) skip=3: E[t_k] = 0.4957 (bias = -0.0043)
+    tile (4, 2) skip=2: E[t_k] = 0.5000 (bias = 0.0000)
+    tile (6, 3) skip=3: E[t_k] = 0.5259 (bias = 0.0259)
+    tile (5, 3) skip=2: E[t_k] = 0.5000 (bias = 0.0000)
+    tile (6, 4) skip=2: E[t_k] = 0.5345 (bias = 0.0345)
+
+  Pairwise correlations Corr(t_i, t_j):
+    Sign(Corr) = Sign(c_ij)? 35/42
+    Correlation matrix: (6+, 4-)
+    Top eigenvalues: ['0.1476', '0.1099', '0.1049', '0.1011', '0.0947']
+
+  Pairwise mutual information I(t_i; t_j):
+  MI vs |c_ij| correlation:
+    Pearson correlation(MI, |c_ij|) = -0.4426
+    same-end: mean MI = 0.002589, max = 0.003872
+    cross-end: mean MI = 0.002142, max = 0.002343
+    disjoint: mean MI = 0.000067, max = 0.000324
+
+  Total correlation C(t_1,...,t_m) = 0.0732 bits
+    (= sum H(t_k) - H(t_1,...,t_m))
+
+============================================================
+CORRELATION vs Q EIGENSTRUCTURE n=6
+============================================================
+  Max eigenvector overlap per Q eigenvector:
+    Q[0] (lambda=-29.318): max |<v,w>| = 0.8512
+    Q[1] (lambda=-23.368): max |<v,w>| = 0.9066
+    Q[2] (lambda=-10.132): max |<v,w>| = 0.8391
+    Q[3] (lambda=-3.943): max |<v,w>| = 0.9487
+    Q[4] (lambda=4.267): max |<v,w>| = 0.7503
+    Q[5] (lambda=4.312): max |<v,w>| = 0.9730
+    Q[6] (lambda=7.183): max |<v,w>| = 0.7284
+    Q[7] (lambda=8.965): max |<v,w>| = 0.9039
+    Q[8] (lambda=18.194): max |<v,w>| = 0.8406
+    Q[9] (lambda=23.841): max |<v,w>| = 0.8489
+
+  Negative eigenvalue count: Q=4, Corr=4
+  Principal angles between negative eigenspaces: ['4.0', '13.3', '13.7', '89.9']
