@@ -1893,3 +1893,17 @@ vertices needed for Ω₃ chains.
 1. Define soft conflict graph and soft independence polynomial
 2. Prove soft OCF: does I_soft(Omega_soft, 2) approximate H_soft?
 3. Test as regularizer in a small transformer training run
+
+### INV-183: The Antiferromagnetic Tournament Framework
+**Source:** opus-2026-04-04-S16
+**Status:** ESTABLISHED. Dictionary validated exhaustively at n=4,5,6.
+**What:** Tournaments are antiferromagnets on the staircase lattice. The frustration index c₃/C(n,3) correlates with H at r≈0.97. Score variance = Néel order parameter. Regular tournaments = AFM ground state. Magnon spectrum is flat over labeled ensemble (S_n isotropy). Boltzmann-weighted correlations show true AFM order at β>0. Phase transition at β_c≈0.7 (n=5). H=7 gap explained by frustration propagation (α₁ gap: 3 three-cycles force a 5-cycle).
+**Key files:** antiferromagnetic_tournament_s15.py, afm_deep_analysis_s15.py, afm_remaining_s15.py, the-antiferromagnetic-tournament.md
+**Open directions:**
+1. Per-class magnon dispersion (condition on iso class for anisotropy)
+2. β_c(n) scaling as n→∞ (thermodynamic limit)
+3. Yang-Lee zeros of Z(β) in complex plane
+4. Connection between seesaw β₁·β₃=0 and AFM selection rules
+5. α₁ gap mechanism for H=21 (needs n≥7 analysis)
+6. The staircase lattice as Brillouin zone of the tournament AFM
+**Priority:** HIGH (provides physics intuition for all open questions)

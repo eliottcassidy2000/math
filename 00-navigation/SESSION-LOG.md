@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S16 — 2026-04-04: The Antiferromagnetic Tournament — Condensed Matter Physics of Parity
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S15
+**Summary:** Creative session exploring all open questions through the lens of antiferromagnetism. Established and validated a precise dictionary between tournament theory and AFM physics. Computed frustration-H correlations (r≈0.97), magnon dispersion (flat by S_n isotropy), Boltzmann-weighted spin correlations (true AFM at β>0), phase transition (β_c≈0.7), and the α₁-gap mechanism for H=7 impossibility.
+
+**Key Results:**
+1. **Frustration-H correlation near-perfect**: r = 1.000 (n=4), 0.973 (n=5), 0.961 (n=6). Regular tournament = AFM ground state. Transitive = ferromagnet. Linear model H ≈ 2c₃+1 (n=4), H ≈ 3c₃ (n=5), H ≈ 6c₃-7.5 (n=6).
+
+2. **Magnon spectrum is FLAT**: Over labeled ensemble, ALL tiles give identical mean|ΔH| at each n. Proved: follows from S_n transitivity on vertex pairs. Per-class anisotropy exists but averages out.
+
+3. **Boltzmann-weighted correlations**: ⟨σ_iσ_j⟩ = 0 at β=0 (paramagnetic), negative at β>0 (AFM). Nearest-neighbor reaches -0.194 as β→∞ (n=5). Distance-2 stays ~0: short-range AFM order.
+
+4. **Phase transition at β_c ≈ 0.7** (n=5): specific heat peak. Below: disordered/transitive. Above: ordered/regular. The OCR breakdown IS the AFM phase transition.
+
+5. **H-maximizer ⊂ c₃-maximizer**: At n=5,6, all H-maximizers have maximum c₃. The H-max is a SUBSET of the frustration-maximizers.
+
+6. **H=7 impossibility from α₁ gap**: α₁ (total odd cycle count) skips value 3 at n=5. c₃=3 forces a 5-cycle, so α₁≥4 whenever c₃≥3. Frustration propagation: local → global. H=7 = 1+2·3 needs the non-existent α₁=3.
+
+7. **E_AFM adds ZERO beyond c₃**: Staircase Ising energy has ΔR²=0 when c₃ is already in model. The vertex triple (not the tile pair) is the fundamental AFM unit.
+
+**New contributions:** antiferromagnetic_tournament_s15.py, afm_deep_analysis_s15.py, afm_remaining_s15.py, the-antiferromagnetic-tournament.md reflection, HYP-1514 through HYP-1522, T258-T262
+**Unresolved:** Per-class magnon dispersion (condition on iso class). β_c(n) scaling as n→∞. Yang-Lee zeros of Z(β). Connection between seesaw β₁·β₃=0 and AFM selection rules. Whether the α₁ gap generalizes to explain H=21.
+
 ## opus-2026-04-04-S15 — 2026-04-04: The Asymmetry That Isn't — Detailed Balance, Creative Arcs, Tournament as Quantum System
 
 **Account:** opus
