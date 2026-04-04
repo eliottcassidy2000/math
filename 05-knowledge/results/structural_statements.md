@@ -66,3 +66,49 @@ Q1. Is H = size always true for the class at H=1+2^(n-2)?
 Q2. Does the formula size=1+2^(n-2) extend to n=7,8?
 Q3. What determines the wiggly degree of a class? Is there a formula in terms of H, t3, |Aut|?
 Q4. Why does max-H have LOW wiggly degree but HIGH complement degree?
+
+### CONSERVATION LAW: m+1 Transitions Per Tiling
+
+Every tiling has exactly m+1 transitions:
+  - m wiggly transitions (one per tile position)
+  - 1 complement transition (flip all tiles)
+
+Each transition is either:
+  - A SELF-LOOP (stays in same class) — "silent mutation"
+  - A CROSS-CLASS line (reaches a different class) — "expressive mutation"
+
+Therefore: cross-class lines per tiling = (m+1) - self_loops_per_tiling
+
+When comp_self_rate = 0 and wig_self_rate = 0 (no self-loops at all):
+  cross-class lines per tiling = m+1 (maximum connectivity)
+  This happens for the transitive class (H=1) at all n tested.
+
+When self-loop rates > 0:
+  cross-class lines per tiling < m+1
+  Higher-H classes tend to have more self-loops, fewer exits.
+
+Per-tiling complement lines = (1 - comp_self_rate)/2 ≈ 0.5 (most classes)
+Per-tiling wiggly lines = (m - wig_self_per_tiling)/2 ≤ m/2
+
+### THE DUALITY (refined)
+
+The transitive (H=1):
+  - Size 1, |Aut| = n!
+  - Zero self-loops → all m+1 slots are cross-class
+  - Wiggly degree = m (maximum: every tile flip creates a new class)
+  - Complement degree = 1 (only one complement)
+  - All wiggly neighbors are DIFFERENT classes
+
+The regular-like (max H):
+  - Larger classes, smaller |Aut|
+  - More self-loops → fewer cross-class slots per tiling
+  - Lower wiggly degree (per CLASS, not per tiling — fewer distinct neighbors)
+  - Higher complement degree (more tilings → more complement targets)
+  - But more LINE WEIGHT per edge (thicker connections)
+
+Correlation at n=6:
+  corr(H, comp_deg) = +0.737 (strong positive)
+  corr(H, wig_deg) = +0.197 (weak positive)  
+  corr(H, wig_self_rate) = +0.028 (nearly zero)
+  corr(size, comp_deg) = +0.923 (very strong)
+  corr(size, wig_deg) = +0.624 (moderate)
