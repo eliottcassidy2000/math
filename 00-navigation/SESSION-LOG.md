@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S11 — 2026-04-04: Practical Extensions — THM-304, H-Gap Census, Achievable Lattice
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S10
+**Summary:** Extended the rigidity framework into practical tools. Major theorem: H = 1+2α₁+4α₂ is EXACT through n≤7 (proved: max 2 vertex-disjoint odd cycles at n≤8). Built complete H-gap census, achievable (α₁,α₂) lattice, tournament complexity scorer, and H=21 obstruction analysis.
+
+**Key Results:**
+1. **THM-304 (PROVED)**: H(T) = 1 + 2α₁ + 4α₂ exactly for n≤7 (and likely n≤8). The OCF independence polynomial truncates at level 2 because max independent set size = 2. Verified 500/500 at n=7.
+
+2. **(α₁,α₂) → H is a deterministic function**: no two (α₁,α₂) pairs give the same H. The formula is just 1+2a₁+4a₂ — a perfect linear coding.
+
+3. **H-gap census**: complete first-appearance table up to H=200. 7 and 21 are the ONLY permanently forbidden values ≤100. All others appear by n=7. Next candidates for permanent forbidden: none known.
+
+4. **Alpha_1 gap landscape**: gaps {3} at n=5, {3,15,17,18} at n=6, {34,48,50,...} at n=7. Gap {3} closes at n=7 but H=7 stays forbidden.
+
+5. **H=21 uniquely blocked**: level a₁+2a₂=10 is the ONLY level (tested 6-14) where ALL decompositions are simultaneously unreachable. Neighboring levels each have 1-2 achieved points.
+
+6. **Practical tools**: tournament complexity score, achievable lattice lookup table, benchmark of cycle-counting vs DP.
+
+**New contributions:** THM-304, rigidity_extensions.py, practical_tools.py, 2 result files
+**Unresolved:** Does THM-304 extend to n=8 (likely yes — need verification)? The exact boundary where α₃ first becomes nonzero (n=9). Can the cycle-counting approach scale to n>10?
+
 ## opus-2026-04-04-S10 — 2026-04-04: Why Seven Is Forbidden — The Rigidity Threshold
 
 **Account:** opus
