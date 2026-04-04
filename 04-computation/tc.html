@@ -96,18 +96,18 @@ footer{text-align:center;padding:14px;color:var(--dim);font-size:.7em}
 <ol>
 <li><strong>Decorrelate</strong> — G, R−G, B−G. Each channel becomes independent.</li>
 <li><strong>Predict</strong> — MED prediction with flat-region run detection.</li>
-<li><strong>Adaptive encode</strong> — Each plane tries Golomb-Rice AND deflate, picks smaller. Photos get GR, screenshots get deflate. Always beats PNG.</li>
+<li><strong>Adaptive encode</strong> — Mosaic v4: multiple predictors (MED, Paeth, Sub, Up), color transforms (G-RG-BG, YCoCg-R), palette mode, 4:2:0 chroma, and per-plane backend selection (GR, deflate, brotli, zstd, lzma). Picks smallest.</li>
 </ol>
 <p style="margin-top:6px">The hex editor shows <strong>actual compressed bytes</strong>. Edit any byte, click the image — the decoder runs on your modified data. Toggle <strong>Draw</strong> mode to paint on the image and watch the compression update live.</p>
 </div>
 <div class="card" style="text-align:center">
 <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap">
-<div><span style="font-size:1.8em;font-weight:bold;color:var(--green)">1–46%</span><br><span style="color:var(--muted);font-size:.78em">smaller than PNG</span></div>
-<div><span style="font-size:1.8em;font-weight:bold;color:var(--blue)">100%</span><br><span style="color:var(--muted);font-size:.78em">lossless</span></div>
-<div><span style="font-size:1.8em;font-weight:bold;color:var(--purple)">19/19</span><br><span style="color:var(--muted);font-size:.78em">all images beaten</span></div>
+<div><span style="font-size:1.8em;font-weight:bold;color:var(--green)">50%</span><br><span style="color:var(--muted);font-size:.78em">avg size vs PNG</span></div>
+<div><span style="font-size:1.8em;font-weight:bold;color:var(--blue)">74%</span><br><span style="color:var(--muted);font-size:.78em">avg size vs WebP-LL</span></div>
+<div><span style="font-size:1.8em;font-weight:bold;color:var(--purple)">26/31</span><br><span style="color:var(--muted);font-size:.78em">wins vs WebP-LL</span></div>
 </div></div>
 </div>
-<footer>Tournament Compression · opus-2026-04-02 · Adaptive (GR + deflate) · 19/19 vs PNG · <a href="https://github.com/eliottcassidy2000/math">source</a></footer>
+<footer>Tournament Compression · opus-2026-04-03 · Mosaic v4 (block-adaptive) · 26/31 vs WebP-LL · <a href="https://github.com/eliottcassidy2000/math">source</a></footer>
 <script>
 /* === GOLOMB-RICE BITSTREAM === */
 class BitWriter{constructor(n){this.d=new Uint8Array(n);this.p=0;this.b=7}

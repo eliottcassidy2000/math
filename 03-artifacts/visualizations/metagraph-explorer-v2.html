@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metagraph Explorer — G_n (unified)</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--card:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--dim:#484f58;
+--green:#3fb950;--blue:#58a6ff;--purple:#bc8cff;--orange:#f0883e;--red:#f85149;--cyan:#39d2c0;--gold:#d4a72c}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);overflow:hidden;height:100vh}
+canvas{display:block;cursor:grab}canvas.dragging{cursor:grabbing}canvas.hovering{cursor:pointer}
+.bar{position:fixed;top:0;left:0;right:0;height:44px;background:var(--card);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 14px;gap:10px;z-index:10}
+.bar h1{font-size:1em;background:linear-gradient(90deg,var(--blue),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap}
+.sep{width:1px;height:22px;background:var(--border)}
+.bar label{font-size:.72em;color:var(--muted);cursor:pointer;white-space:nowrap}
+.bar select,.bar input[type=range]{background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:5px;padding:2px 6px;font-size:.72em;cursor:pointer}
+.bar select{appearance:none;-webkit-appearance:none;padding-right:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0l4 5 4-5z' fill='%238b949e'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 5px center}
+.bar input[type=range]{width:70px;height:4px;-webkit-appearance:none;appearance:none;outline:none;border:none;border-radius:2px}
+.bar input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;border-radius:50%;background:var(--green);cursor:pointer}
+.btn{padding:3px 10px;border-radius:5px;border:1px solid var(--border);background:var(--card);color:var(--muted);font-size:.72em;cursor:pointer;font-weight:600;transition:.15s}
+.btn:hover{color:var(--text);border-color:var(--muted)}
+.btn.on{background:var(--green);color:#fff;border-color:var(--green)}
+.info{position:fixed;bottom:12px;right:12px;width:280px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;z-index:10;font-size:.78em;display:none;max-height:50vh;overflow-y:auto}
+.info h3{color:var(--blue);margin-bottom:6px;font-size:1em}
+.info .row{display:flex;justify-content:space-between;padding:2px 0;border-bottom:1px solid #21262d}
+.info .row .k{color:var(--muted)}.info .row .v{color:var(--text);font-weight:600;font-family:'SF Mono',Consolas,monospace}
+.info canvas{border-radius:6px;border:1px solid var(--border);margin:8px auto 4px;display:block}
+.legend{position:fixed;bottom:12px;left:12px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:8px 12px;z-index:10;font-size:.68em;color:var(--muted)}
+.legend div{display:flex;align-items:center;gap:6px;margin:2px 0}
+.legend .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.help{position:fixed;top:52px;right:12px;font-size:.65em;color:var(--dim);z-index:5;text-align:right;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="bar">
+  <h1>G<sub>n</sub></h1>
+  <div class="sep"></div>
+  <label>n</label>
+  <select id="nSel"><option value="3">3</option><option value="4">4</option><option value="5" selected>5</option><option value="6">6</option></select>
+  <label>Layout</label>
+  <select id="layoutSel"><option value="force">Force</option><option value="layered">H-Layered</option><option value="tilings">Tilings-Layered</option><option value="t3">t₃-Layered</option><option value="circular">Circular</option><option value="hypercube">Tilings Q_m (n≤5)</option></select>
+  <div class="sep"></div>
+  <label>Node color</label>
+  <select id="colorSel">
+    <optgroup label="Tournament">
+      <option value="h">H value</option><option value="t3">3-cycles</option><option value="tilings">Tilings</option>
+      <option value="per">Permanent</option><option value="ham">Ham circuits</option>
+      <option value="alpha1">Odd cycles</option><option value="score">Score seq</option>
+    </optgroup>
+    <optgroup label="Metagraph">
+      <option value="sc">SC status</option><option value="degree">Degree</option>
+      <option value="bluefrac">Blue fraction</option>
+      <option value="purity">Class purity (blue/mixed/black)</option>
+      <option value="selfrate">Self-loop rate (d=1)</option>
+      <option value="compselfrate">Comp. self-loop rate (d=m)</option>
+    </optgroup>
+    <optgroup label="Barvinok">
+      <option value="qh">Q/H ratio</option>
+    </optgroup>
+  </select>
+  <label>Size</label>
+  <select id="sizeSel"><option value="uniform">Uniform</option><option value="degree">Degree</option><option value="h">H value</option><option value="tilings">Tilings</option><option value="per">Permanent</option><option value="alpha1">Odd cycles</option></select>
+  <div class="sep"></div>
+  <label>Edges</label>
+  <select id="edgeLayerSel"><option value="complement">Complement (d=m)</option><option value="wiggly">Wiggly (d=1)</option><option value="both">Both layers</option></select>
+  <label>Edge color</label>
+  <select id="edgeColorSel"><option value="bluefrac">Blue fraction (gradient)</option><option value="edgetype">Pure blue / Mixed / Pure black</option><option value="srs">Spine / Ribs / Sea (SC)</option><option value="weight">By weight</option><option value="uniform">Uniform</option></select>
+  <div class="sep"></div>
+  <label>Merge</label>
+  <select id="mergeSel"><option value="none">None</option><option value="transpose">Transpose (grid refl.)</option><option value="complement">G_n/Z_2 (T→T^op)</option></select>
+  <div class="sep"></div>
+  <label>Grav</label><input type="range" id="gravSlider" min="0" max="100" value="30">
+  <label>Rep</label><input type="range" id="repSlider" min="10" max="200" value="80">
+</div>
+<canvas id="cv"></canvas>
+<div class="info" id="info"></div>
+<div class="legend" id="legend"></div>
+<div class="help">scroll to zoom &middot; drag to pan &middot; click node for info<br>1/2/3 = layout &middot; m = merge &middot; r = reset &middot; esc = deselect</div>
+<script>
+// ================================================================
+// STATE
+// ================================================================
+const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+let W,H,dpr;
+let nodes=[],edges=[],merged=false,selectedNode=null,hoveredNode=null,dragNode=null;
+let camX=0,camY=0,camZ=1; // pan + zoom
+let isDragging=false,isPanning=false,lastMX=0,lastMY=0,dragDist=0;
+let layoutMode='force',colorMode='h';
+let edgeLayer='complement',edgeColorScheme='bluefrac';
+let gravityStrength=0.3,repulsionStrength=80;
+let N=5;
+let animFrame=null;
+
+// ================================================================
+// TOURNAMENT / METAGRAPH COMPUTATION
+// ================================================================
+function computeMetagraph(n){
+  const m=n*(n-1)/2;
+  // Generate tile positions (same convention as tiling explorer)
+  const tiles=[];
+  for(let y=1;y<=n-2;y++) for(let x=n;x>=y+2;x--) tiles.push([x,y]);
+  const numT=tiles.length; // = C(n-1,2)
+  const verts=Array.from({length:n},(_,i)=>n-i);
+
+  // Transpose map for grid symmetry
+  const tileKey=(x,y)=>`${x},${y}`;
+  const tileIdx={};
+  tiles.forEach((t,i)=>tileIdx[tileKey(t[0],t[1])]=i);
+  const transMap=tiles.map(([x,y])=>tileIdx[tileKey(n-y+1,n-x+1)]);
+  function isGridSym(bits){
+    for(let i=0;i<numT;i++) if(transMap[i]!==i&&bits[i]!==bits[transMap[i]]) return false;
+    return true;
+  }
+
+  // Bits → adjacency matrix
+  function bitsToAdj(bits){
+    const A=Array.from({length:n},()=>Array(n).fill(0));
+    for(let k=0;k<n-1;k++) A[k][k+1]=1; // base path
+    for(let i=0;i<numT;i++){
+      const[xL,yL]=tiles[i],xi=verts.indexOf(xL),yi=verts.indexOf(yL);
+      if(bits[i]===0) A[xi][yi]=1; else A[yi][xi]=1;
+    }
+    return A;
+  }
+
+  // All permutations of [0..n-1]
+  function permutations(arr){
+    if(arr.length<=1) return[arr.slice()];
+    const res=[];
+    for(let i=0;i<arr.length;i++){
+      const rest=arr.filter((_,j)=>j!==i);
+      for(const s of permutations(rest)) res.push([arr[i],...s]);
+    }
+    return res;
+  }
+  const perms=permutations(Array.from({length:n},(_,i)=>i));
+
+  function canonicalize(A){
+    let best=null;
+    for(const p of perms){
+      let s='';
+      for(let i=0;i<n;i++) for(let j=0;j<n;j++) s+=A[p[i]][p[j]];
+      if(best===null||s<best) best=s;
+    }
+    return best;
+  }
+  function adjScores(A){return A.map(r=>r.reduce((s,v)=>s+v,0)).sort((a,b)=>a-b);}
+
+  // Count Hamiltonian paths via DP (Held-Karp)
+  function countHP(A){
+    const full=(1<<n)-1;
+    const dp=Array.from({length:1<<n},()=>new Float64Array(n));
+    for(let v=0;v<n;v++) dp[1<<v][v]=1;
+    for(let mask=1;mask<=full;mask++){
+      for(let u=0;u<n;u++){
+        if(!(mask&(1<<u))||dp[mask][u]===0) continue;
+        for(let v=0;v<n;v++){
+          if(mask&(1<<v)) continue;
+          if(A[u][v]) dp[mask|(1<<v)][v]+=dp[mask][u];
+        }
+      }
+    }
+    let total=0;
+    for(let v=0;v<n;v++) total+=dp[full][v];
+    return total;
+  }
+
+  // Enumerate all tournaments, group by iso class
+  const allT=[];
+  for(let mask=0;mask<(1<<numT);mask++){
+    const bits=Array.from({length:numT},(_,k)=>(mask>>k)&1);
+    const adj=bitsToAdj(bits);
+    const canon=canonicalize(adj);
+    const scores=adjScores(adj);
+    const flipMask=bits.reduce((m,b,k)=>m|((1-b)<<k),0);
+    allT.push({bits,adj,canon,scores,mask,flipMask,gridSym:isGridSym(bits)});
+  }
+
+  const groups={};
+  for(const t of allT){if(!groups[t.canon]) groups[t.canon]=[];groups[t.canon].push(t);}
+  const sigs=Object.keys(groups).sort();
+  sigs.forEach((sig,ci)=>groups[sig].forEach(t=>t.ci=ci));
+  const maskToT={};allT.forEach(t=>maskToT[t.mask]=t);
+
+  // Build class data
+  const classData=sigs.map((sig,ci)=>{
+    const members=groups[sig];
+    const rep=members[0];
+    const Hval=countHP(rep.adj);
+    const sc=adjScores(rep.adj);
+    // Complement-tiling class (flip all tiles, NOT T^op)
+    const compTilingCI=maskToT[rep.flipMask].ci;
+    // TRUE self-complementary: T^op = reverse ALL arcs (transpose adjacency matrix)
+    const Aop=Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>rep.adj[j][i]));
+    const trueCompCI=sigs.indexOf(canonicalize(Aop));
+    const isSC=(trueCompCI===ci);       // T ≅ T^op
+    const compCI=compTilingCI;            // complement-tiling class (for blue/black lines)
+    // Count directed 3-cycles
+    let c3=0;
+    for(let i=0;i<n;i++) for(let j=0;j<n;j++) for(let k=0;k<n;k++)
+      if(i!==j&&j!==k&&k!==i&&rep.adj[i][j]&&rep.adj[j][k]&&rep.adj[k][i]) c3++;
+    c3/=3;
+    // Count directed 5-cycles
+    let c5=0;
+    if(n>=5){
+      const idx5=Array.from({length:n},(_,i)=>i);
+      for(let a=0;a<n;a++) for(let b=0;b<n;b++) if(b!==a&&rep.adj[a][b])
+        for(let c=0;c<n;c++) if(c!==a&&c!==b&&rep.adj[b][c])
+          for(let d=0;d<n;d++) if(d!==a&&d!==b&&d!==c&&rep.adj[c][d])
+            for(let e=0;e<n;e++) if(e!==a&&e!==b&&e!==c&&e!==d&&rep.adj[d][e]&&rep.adj[e][a]) c5++;
+      c5/=5;
+    }
+    // Cycle cover polynomial: per(A), ham(A), C_k via permanent decomposition
+    let per=0,ham=0,perOdd=0,perEven=0,Q=0;
+    const Ck={};
+    // Only compute for n≤6 (n! permutations)
+    if(n<=6){
+      const perm6=perms;
+      for(const sigma of perm6){
+        let prod=1;
+        for(let i=0;i<n;i++){prod*=rep.adj[i][sigma[i]];if(!prod)break;}
+        if(!prod) continue;
+        // Count cycles in this permutation
+        const vis=new Uint8Array(n);let nCyc=0,allOdd=true;
+        for(let i=0;i<n;i++){
+          if(vis[i]) continue;nCyc++;let len=0,j=i;
+          while(!vis[j]){vis[j]=1;j=sigma[j];len++;}
+          if(len%2===0) allOdd=false;
+        }
+        per++;Ck[nCyc]=(Ck[nCyc]||0)+1;
+        if(nCyc===1) ham++;
+        if(allOdd){perOdd++;Q+=(1<<nCyc);}else{perEven++;}
+      }
+    }
+    // Count all directed odd cycles for alpha_1 (independence number proxy)
+    let nOddCycles=0;
+    // 3-cycles already counted as c3
+    nOddCycles+=c3;
+    // 5-cycles
+    nOddCycles+=c5;
+    // Automorphism group size = n! / (number of labeled tournaments in class)
+    // size = members.length = number of tilings = effectively class fiber size
+    const autSize=Math.round(perms.length/members.length)||1;
+    // Q/H ratio
+    const qhRatio=Hval>0?Q/Hval:0;
+    // R = H - Q (partial packing remainder)
+    const R=Hval-Q;
+    // Grid-symmetry purity of this class
+    const gsCount=members.filter(t=>t.gridSym).length;
+    const classPurity=gsCount===0?'pureBlack':gsCount===members.length?'pureBlue':'mixed';
+    const classBlueFrac=members.length>0?gsCount/members.length:0;
+    return{ci,H:Hval,scores:sc,size:members.length,isSC,compCI,trueCompCI,adj:rep.adj,bits:rep.bits,
+           c3,c5,per,ham,perOdd,perEven,Q,R,qhRatio,Ck,nOddCycles,autSize,
+           classPurity,classBlueFrac,gsCount};
+  });
+
+  // ── PER-CLASS SELF-LOOP TRACKING ──
+  // Initialize self-loop counters per class
+  const nClasses=sigs.length;
+  const selfLoops={
+    compBlue:new Int32Array(nClasses),   // complement self-loops from blue tilings
+    compBlack:new Int32Array(nClasses),  // complement self-loops from black tilings
+    wigglyTotal:new Int32Array(nClasses),// wiggly self-loops (all positions)
+    wigglyByPos:Array.from({length:nClasses},()=>new Int32Array(numT)), // per position
+  };
+  const wigglyTotal=new Int32Array(nClasses); // total wiggly transitions from class (self+cross)
+
+  // ── LAYER 1: WIGGLY EDGES (d=1, single tile flip) ──
+  const wigglyMap={};
+  for(const t of allT){
+    for(let i=0;i<numT;i++){
+      const newBits=t.bits.slice();newBits[i]=1-newBits[i];
+      const newMask=newBits.reduce((m,b,k)=>m|(b<<k),0);
+      const targetCI=maskToT[newMask].ci;
+      wigglyTotal[t.ci]++;
+      if(targetCI===t.ci){
+        // Self-loop: flip tile i stays in same class
+        selfLoops.wigglyTotal[t.ci]++;
+        selfLoops.wigglyByPos[t.ci][i]++;
+        continue;
+      }
+      const a=Math.min(t.ci,targetCI),b=Math.max(t.ci,targetCI);
+      const key=a+'_'+b;
+      if(!wigglyMap[key]) wigglyMap[key]={a,b,weight:0};
+      wigglyMap[key].weight++;
+    }
+  }
+  const wigglyEdges=Object.values(wigglyMap).map(e=>{
+    e.weight=Math.round(e.weight/2);e.layer='wiggly';e.gridSym=null;return e;
+  });
+
+  // ── LAYER 2: COMPLEMENT EDGES (d=m, flip ALL tiles) ──
+  // A LINE = one (tiling, complement-tiling) pair. Every line is blue or black.
+  //   BLUE LINE = tiling is grid-symmetric
+  //   BLACK LINE = tiling is NOT grid-symmetric
+  // An EDGE = aggregation of all lines between the same class pair {A,B}.
+  //   Edge has: blueLines (count), blackLines (count), totalLines = blue+black.
+  //   Edge TYPE: PURE_BLUE (all blue), PURE_BLACK (all black), MIXED (both).
+  const compEdgeMap={};
+  let totalSelfBlue=0,totalSelfBlack=0;
+  for(const t of allT){
+    const compCI=maskToT[t.flipMask].ci;
+    if(compCI===t.ci){
+      // Complement self-loop: stays in same class
+      if(t.gridSym){totalSelfBlue++;selfLoops.compBlue[t.ci]++;}
+      else{totalSelfBlack++;selfLoops.compBlack[t.ci]++;}
+      continue;
+    }
+    const a=Math.min(t.ci,compCI),b=Math.max(t.ci,compCI);
+    const key=a+'_'+b;
+    if(!compEdgeMap[key]) compEdgeMap[key]={a,b,blueLines:0,blackLines:0};
+    if(t.gridSym) compEdgeMap[key].blueLines++;
+    else compEdgeMap[key].blackLines++;
+  }
+  const compEdges=Object.values(compEdgeMap).map(e=>{
+    // Each line counted once from each direction, divide by 2
+    e.blueLines=Math.round(e.blueLines/2);
+    e.blackLines=Math.round(e.blackLines/2);
+    e.weight=e.blueLines+e.blackLines;
+    e.blueFrac=e.weight>0?e.blueLines/e.weight:0;
+    e.edgeType=e.blackLines===0?'pureBlue':e.blueLines===0?'pureBlack':'mixed';
+    e.layer='complement';
+    return e;
+  });
+
+  // Attach self-loop data to each class
+  for(let ci=0;ci<nClasses;ci++){
+    const cd=classData[ci];
+    cd.compSelfBlue=selfLoops.compBlue[ci];
+    cd.compSelfBlack=selfLoops.compBlack[ci];
+    cd.compSelfTotal=cd.compSelfBlue+cd.compSelfBlack;
+    cd.compSelfRate=cd.size>0?cd.compSelfTotal/cd.size:0; // fraction of tilings whose complement is same class
+    cd.wigglySelfTotal=selfLoops.wigglyTotal[ci];
+    cd.wigglyTransTotal=wigglyTotal[ci];
+    cd.wigglySelfRate=cd.wigglyTransTotal>0?cd.wigglySelfTotal/cd.wigglyTransTotal:0;
+    cd.wigglySelfByPos=selfLoops.wigglyByPos[ci];
+    // Skip-based breakdown
+    cd.selfBySkip={};
+    for(let p=0;p<numT;p++){
+      const[x,y]=tiles[p];const skip=x-y-1;
+      if(!cd.selfBySkip[skip]) cd.selfBySkip[skip]={self:0,total:0};
+      cd.selfBySkip[skip].self+=selfLoops.wigglyByPos[ci][p];
+      // Total transitions from this position = cd.size (each tiling flips this tile once)
+      cd.selfBySkip[skip].total+=cd.size;
+    }
+  }
+
+  // ── LAYER 3: RED LINES (transpose-paired classes) ──
+  // Transpose = rearrange bits via transMap (grid reflection), NOT complement
+  for(const t of allT){
+    const transBits=new Array(numT);
+    for(let i=0;i<numT;i++) transBits[transMap[i]]=t.bits[i];
+    const transMask=transBits.reduce((m,b,k)=>m|(b<<k),0);
+    t.transCI=maskToT[transMask].ci;
+  }
+  // Compute class-level transpose targets
+  const classTransTarget=sigs.map((_,ci)=>{
+    const members=groups[sigs[ci]];
+    return members[0].transCI;
+  });
+  // Red pairs: classes paired by transpose (where target ≠ self)
+  const redPairs=[];const seenRP=new Set();
+  classTransTarget.forEach((tgt,ci)=>{
+    if(tgt!==ci){
+      const key=Math.min(ci,tgt)+'_'+Math.max(ci,tgt);
+      if(!seenRP.has(key)){seenRP.add(key);redPairs.push({a:Math.min(ci,tgt),b:Math.max(ci,tgt),type:'red',weight:1});}
+    }
+  });
+
+  // Add SC-type (spine/ribs/sea) to ALL non-red edges
+  const allNonRed=[...wigglyEdges,...compEdges];
+  for(const e of allNonRed){
+    const aSC=classData[e.a].isSC,bSC=classData[e.b].isSC;
+    e.scType=(aSC&&bSC)?'spine':(!aSC&&!bSC)?'sea':'ribs';
+  }
+  for(const e of redPairs){e.layer='red';e.scType=null;e.blueLines=0;e.blackLines=0;e.blueFrac=0;e.edgeType=null;}
+  const allEdges=[...allNonRed,...redPairs];
+
+  // Compute degrees per node for each layer
+  for(const c of classData){c.compDeg=0;c.wigglyDeg=0;c.totalBlueLines=0;c.totalBlackLines=0;c.spineDeg=0;c.ribsDeg=0;c.seaDeg=0;
+    c.pureBlueEdges=0;c.pureBlackEdges=0;c.mixedEdges=0;}
+  for(const e of compEdges){
+    classData[e.a].compDeg++;classData[e.b].compDeg++;
+    classData[e.a].totalBlueLines+=e.blueLines;classData[e.b].totalBlueLines+=e.blueLines;
+    classData[e.a].totalBlackLines+=e.blackLines;classData[e.b].totalBlackLines+=e.blackLines;
+    if(e.edgeType==='pureBlue'){classData[e.a].pureBlueEdges++;classData[e.b].pureBlueEdges++;}
+    else if(e.edgeType==='pureBlack'){classData[e.a].pureBlackEdges++;classData[e.b].pureBlackEdges++;}
+    else{classData[e.a].mixedEdges++;classData[e.b].mixedEdges++;}
+  }
+  for(const e of wigglyEdges){classData[e.a].wigglyDeg++;classData[e.b].wigglyDeg++;}
+  for(const e of allNonRed){
+    if(e.scType==='spine'){classData[e.a].spineDeg++;classData[e.b].spineDeg++;}
+    else if(e.scType==='ribs'){classData[e.a].ribsDeg++;classData[e.b].ribsDeg++;}
+    else{classData[e.a].seaDeg++;classData[e.b].seaDeg++;}
+  }
+  for(const c of classData){
+    c.degree=c.compDeg;
+    c.nodeBlueFrac=(c.totalBlueLines+c.totalBlackLines)>0?c.totalBlueLines/(c.totalBlueLines+c.totalBlackLines):0;
+  }
+
+  // Transpose pairs (grid reflection)
+  const transposePairs=redPairs.map(e=>[e.a,e.b]);
+  // True complement pairs (T→T^op)
+  const compPairs=[];const seenCP=new Set();
+  classData.forEach(c=>{
+    if(c.trueCompCI!==c.ci&&c.trueCompCI>=0){
+      const key=Math.min(c.ci,c.trueCompCI)+'_'+Math.max(c.ci,c.trueCompCI);
+      if(!seenCP.has(key)){seenCP.add(key);compPairs.push([Math.min(c.ci,c.trueCompCI),Math.max(c.ci,c.trueCompCI)]);}
+    }
+  });
+
+  return{classData,allEdges,wigglyEdges,compEdges,redPairs,
+         transposePairs,compPairs,classTransTarget,n,numClasses:sigs.length,
+         // Raw tiling data for tiling-level visualization
+         allT,maskToT,numT,tiles};
+}
+
+// ================================================================
+// NODE / EDGE SETUP
+// ================================================================
+let graphData=null;
+
+let tilingView=false; // true when showing individual tilings
+
+function setupGraph(){
+  graphData=computeMetagraph(N);
+  const cd=graphData.classData;
+  layoutMode=document.getElementById('layoutSel').value;
+  tilingView=(layoutMode==='hypercube');
+
+  // ── TILING VIEW: each node = one tiling, edges = wiggly connections ──
+  if(tilingView&&N<=5){
+    merged=false;
+    const aT=graphData.allT;
+    const nT=graphData.numT;
+    const mt=graphData.maskToT;
+    // Build tiling nodes
+    nodes=aT.map((t,i)=>({
+      idx:i,mask:t.mask,ci:t.ci,gridSym:t.gridSym,
+      H:cd[t.ci].H,scores:cd[t.ci].scores,isSC:cd[t.ci].isSC,
+      size:1,t3:cd[t.ci].c3,c5:cd[t.ci].c5,
+      per:0,ham:0,Q:0,R:0,qhRatio:0,nOddCycles:0,autSize:1,
+      degree:nT, // each tiling has m wiggly neighbors
+      compDeg:1, // one complement
+      wigglySelfRate:0,compSelfRate:0,
+      totalBlueLines:0,totalBlackLines:0,nodeBlueFrac:t.gridSym?1:0,
+      adj:t.adj,bits:t.bits,
+      x:(Math.random()-0.5)*300,y:(Math.random()-0.5)*300,vx:0,vy:0,fx:0,fy:0
+    }));
+    // Build mask→index for O(1) lookup
+    const maskToIdx={};aT.forEach((t,i)=>maskToIdx[t.mask]=i);
+    // Build wiggly edges between individual tilings
+    edges=[];
+    const seen=new Set();
+    for(let ti=0;ti<aT.length;ti++){
+      for(let p=0;p<nT;p++){
+        const newBits=aT[ti].bits.slice();newBits[p]=1-newBits[p];
+        const newMask=newBits.reduce((m,b,k)=>m|(b<<k),0);
+        const tj=maskToIdx[newMask];
+        if(tj===undefined||tj===ti) continue;
+        const a=Math.min(ti,tj),b=Math.max(ti,tj);
+        const key=a+'_'+b;
+        if(seen.has(key)) continue;seen.add(key);
+        const aSC=cd[aT[ti].ci].isSC,bSC=cd[aT[tj].ci].isSC;
+        edges.push({a,b,weight:1,layer:'wiggly',blueLines:0,blackLines:0,blueFrac:0,edgeType:null,
+                    scType:(aSC&&bSC)?'spine':(!aSC&&!bSC)?'sea':'ribs',
+                    sameClass:aT[ti].ci===aT[tj].ci});
+      }
+    }
+    // Also add complement lines
+    for(let ti=0;ti<aT.length;ti++){
+      const cMask=aT[ti].flipMask;
+      const tj=maskToIdx[cMask];
+      if(tj>=0&&tj!==ti){
+        const a=Math.min(ti,tj),b=Math.max(ti,tj);
+        const key='comp_'+a+'_'+b;
+        if(!seen.has(key)){
+          seen.add(key);
+          const bl=aT[ti].gridSym?1:0;
+          edges.push({a,b,weight:1,layer:'complement',blueLines:bl,blackLines:1-bl,
+                      blueFrac:bl,edgeType:bl?'pureBlue':'pureBlack',scType:null,sameClass:aT[ti].ci===aT[tj].ci});
+        }
+      }
+    }
+    selectedNode=null;hoveredNode=null;
+    document.getElementById('info').style.display='none';
+    computeRanges();
+    initLayout();
+    return;
+  }
+
+  // ── CLASS VIEW (normal) ──
+  const mergeMode=document.getElementById('mergeSel').value;
+  merged=(mergeMode!=='none');
+
+  if(merged){
+    const pairs=mergeMode==='transpose'?graphData.transposePairs:graphData.compPairs;
+    const mergeMap=new Int32Array(cd.length);for(let i=0;i<cd.length;i++) mergeMap[i]=i;
+    for(const[a,b] of pairs) mergeMap[b]=a;
+    const seen=new Set();const mergedClasses=[];const ciToMerged={};
+    for(let i=0;i<cd.length;i++){
+      const rep=mergeMap[i];
+      if(!seen.has(rep)){
+        seen.add(rep);ciToMerged[rep]=mergedClasses.length;
+        const wasMerged=(mergeMap[i]!==i||(pairs.some(([a,b])=>a===i||b===i)));
+        const isPaired=pairs.some(([a,b])=>a===rep||b===rep);
+        mergedClasses.push({...cd[rep],mergedWith:isPaired?true:false});
+      }
+      ciToMerged[i]=ciToMerged[rep];
+    }
+    nodes=mergedClasses.map((c,i)=>({...c,idx:i,x:(Math.random()-0.5)*300,y:(Math.random()-0.5)*300,vx:0,vy:0,fx:0,fy:0}));
+    const me={};
+    for(const e of graphData.allEdges){
+      if(e.layer==='red') continue;
+      const ma=ciToMerged[e.a],mb=ciToMerged[e.b];
+      if(ma===mb) continue;
+      const a=Math.min(ma,mb),b=Math.max(ma,mb);
+      const key=`${e.layer}_${a}_${b}`;
+      if(!me[key]) me[key]={a,b,weight:0,layer:e.layer,blueLines:0,blackLines:0,scType:e.scType};
+      me[key].weight+=e.weight;
+      me[key].blueLines+=(e.blueLines||0);
+      me[key].blackLines+=(e.blackLines||0);
+    }
+    // Recompute edge-level properties after merging
+    for(const e of Object.values(me)){
+      e.blueFrac=e.weight>0?(e.blueLines/e.weight):0;
+      e.edgeType=e.blackLines===0?'pureBlue':e.blueLines===0?'pureBlack':'mixed';
+    }
+    edges=Object.values(me);
+  } else {
+    // Unmerged: mark which nodes would be paired under each merge
+    nodes=cd.map((c,i)=>{
+      const hasTrPair=graphData.transposePairs.some(([a,b])=>a===i||b===i);
+      const hasCompPair=graphData.compPairs.some(([a,b])=>a===i||b===i);
+      return{...c,idx:i,hasTrPair,hasCompPair,
+             x:(Math.random()-0.5)*300,y:(Math.random()-0.5)*300,vx:0,vy:0,fx:0,fy:0};
+    });
+    edges=graphData.allEdges.map(e=>({...e}));
+  }
+
+  // Recompute node degrees from visible edges
+  for(const nd of nodes) nd.degree=0;
+  for(const e of edges) if(e.layer==='complement'){nodes[e.a].degree++;nodes[e.b].degree++;}
+
+  selectedNode=null;hoveredNode=null;
+  document.getElementById('info').style.display='none';
+  computeRanges();
+  initLayout();
+}
+
+// ================================================================
+// LAYOUT
+// ================================================================
+function initLayout(){
+  const nn=nodes.length;
+  if(layoutMode==='layered'){
+    // H-value determines Y, spread within layer
+    const Hvals=[...new Set(nodes.map(nd=>nd.H))].sort((a,b)=>a-b);
+    const hMap={};Hvals.forEach((h,i)=>hMap[h]=i);
+    const layers={};
+    nodes.forEach(nd=>{const li=hMap[nd.H];if(!layers[li])layers[li]=[];layers[li].push(nd);});
+    const totalLayers=Hvals.length;
+    const ySpan=Math.max(200,nn*8);
+    for(const[li,layer] of Object.entries(layers)){
+      const y=(+li/(Math.max(1,totalLayers-1))-0.5)*ySpan;
+      layer.forEach((nd,j)=>{
+        nd.x=(j-(layer.length-1)/2)*60;
+        nd.y=y;nd.vx=0;nd.vy=0;
+      });
+    }
+  } else if(layoutMode==='tilings'||layoutMode==='t3'){
+    // Layer by tilings (class size) or t3 (3-cycles)
+    const key=layoutMode==='tilings'?'size':'c3';
+    const vals=[...new Set(nodes.map(nd=>nd[key]))].sort((a,b)=>a-b);
+    const vMap={};vals.forEach((v,i)=>vMap[v]=i);
+    const layers={};
+    nodes.forEach(nd=>{const li=vMap[nd[key]];if(!layers[li])layers[li]=[];layers[li].push(nd);});
+    const totalLayers=vals.length;
+    const ySpan=Math.max(200,nn*8);
+    for(const[li,layer] of Object.entries(layers)){
+      const y=(+li/(Math.max(1,totalLayers-1))-0.5)*ySpan;
+      layer.forEach((nd,j)=>{nd.x=(j-(layer.length-1)/2)*60;nd.y=y;nd.vx=0;nd.vy=0;});
+    }
+  } else if(layoutMode==='hypercube'){
+    // Tiling-level view: arrange by Hamming weight layers (like a diamond)
+    if(!tilingView){initLayout();return;} // fallback
+    const m=graphData.numT;
+    const byHW={};
+    nodes.forEach(nd=>{
+      const hw=nd.bits?nd.bits.reduce((s,b)=>s+b,0):0;
+      if(!byHW[hw]) byHW[hw]=[];
+      byHW[hw].push(nd);
+    });
+    const ySpan=Math.max(200,nn*3);
+    for(const[hw,layer] of Object.entries(byHW)){
+      const y=(+hw/Math.max(1,m)-0.5)*ySpan;
+      layer.forEach((nd,j)=>{
+        nd.x=(j-(layer.length-1)/2)*25;
+        nd.y=y;nd.vx=0;nd.vy=0;
+      });
+    }
+  } else if(layoutMode==='circular'){
+    const R=Math.max(80,nn*6);
+    nodes.forEach((nd,i)=>{
+      const a=2*Math.PI*i/nn-Math.PI/2;
+      nd.x=R*Math.cos(a);nd.y=R*Math.sin(a);nd.vx=0;nd.vy=0;
+    });
+  } else {
+    // Force: random init, biased by H
+    const Hvals=nodes.map(nd=>nd.H);
+    const minH=Math.min(...Hvals),maxH=Math.max(...Hvals);
+    const spread=Math.max(100,nn*5);
+    nodes.forEach(nd=>{
+      const hFrac=maxH>minH?(nd.H-minH)/(maxH-minH):0.5;
+      nd.x=(Math.random()-0.5)*spread;
+      nd.y=(hFrac-0.5)*spread;
+      nd.vx=0;nd.vy=0;
+    });
+  }
+  camX=0;camY=0;
+  const extent=Math.max(200,nodes.length*8);
+  camZ=Math.min(2,Math.min(W,H)*0.4/extent);
+}
+
+// ================================================================
+// FORCE SIMULATION
+// ================================================================
+function stepForce(){
+  if(layoutMode==='circular') return; // no simulation for circular
+  const nn=nodes.length;if(nn===0) return;
+  const rep=repulsionStrength*repulsionStrength;
+  const Hvals=nodes.map(nd=>nd.H);
+  const minH=Math.min(...Hvals),maxH=Math.max(...Hvals);
+  const hSpan=Math.max(100,nn*5);
+
+  // Reset forces
+  for(const nd of nodes){nd.fx=0;nd.fy=0;}
+
+  // Repulsion (all pairs)
+  for(let i=0;i<nn;i++){
+    for(let j=i+1;j<nn;j++){
+      let dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y;
+      let d2=dx*dx+dy*dy;
+      if(d2<1) d2=1;
+      const f=rep/d2;
+      const fx=dx/Math.sqrt(d2)*f,fy=dy/Math.sqrt(d2)*f;
+      nodes[i].fx+=fx;nodes[i].fy+=fy;
+      nodes[j].fx-=fx;nodes[j].fy-=fy;
+    }
+  }
+
+  // Edge attraction from visible edges
+  for(const e of edges){
+    if(e.layer==='red') continue;
+    if(!isEdgeVisible(e)) continue;
+    const na=nodes[e.a],nb=nodes[e.b];
+    let dx=nb.x-na.x,dy=nb.y-na.y;
+    const d=Math.sqrt(dx*dx+dy*dy);
+    if(d<0.1) continue;
+    const ideal=30+Math.sqrt(nn)*4;
+    const f=(d-ideal)*0.015;
+    const fx=dx/d*f,fy=dy/d*f;
+    na.fx+=fx;na.fy+=fy;
+    nb.fx-=fx;nb.fy-=fy;
+  }
+
+  // H-gravity (pull toward target Y based on H)
+  if(gravityStrength>0.01){
+    for(const nd of nodes){
+      const hFrac=maxH>minH?(nd.H-minH)/(maxH-minH):0.5;
+      const targetY=(hFrac-0.5)*hSpan;
+      nd.fy+=(targetY-nd.y)*gravityStrength*0.05;
+      nd.fx+=(0-nd.x)*gravityStrength*0.005; // gentle centering
+    }
+  }
+
+  // Integrate
+  const damping=0.88;
+  const maxV=15;
+  for(const nd of nodes){
+    if(nd===dragNode) continue;
+    nd.vx=(nd.vx+nd.fx)*damping;
+    nd.vy=(nd.vy+nd.fy)*damping;
+    if(nd.vx>maxV) nd.vx=maxV;if(nd.vx<-maxV) nd.vx=-maxV;
+    if(nd.vy>maxV) nd.vy=maxV;if(nd.vy<-maxV) nd.vy=-maxV;
+    nd.x+=nd.vx;nd.y+=nd.vy;
+  }
+
+  // Layered: strongly constrain Y positions
+  if(layoutMode==='layered'||layoutMode==='tilings'||layoutMode==='t3'||layoutMode==='hypercube'){
+    const key=layoutMode==='tilings'?'size':layoutMode==='t3'?'c3':layoutMode==='hypercube'?'_hw':'H';
+    if(layoutMode==='hypercube'){for(const nd of nodes) nd._hw=nd.bits?nd.bits.reduce((s,b)=>s+b,0):0;}
+    const Hv=[...new Set(nodes.map(nd=>nd[key]))].sort((a,b)=>a-b);
+    const hMap={};Hv.forEach((h,i)=>hMap[h]=i);
+    const totalL=Hv.length;
+    for(const nd of nodes){
+      if(nd===dragNode) continue;
+      const li=hMap[nd[key]];
+      const targetY=(li/(Math.max(1,totalL-1))-0.5)*hSpan;
+      nd.y=targetY;
+      nd.vy=0;
+    }
+  }
+}
+
+// ================================================================
+// COLORS
+// ================================================================
+// Edge visibility based on layer selector
+function isEdgeVisible(e){
+  if(e.layer==='red') return !merged; // red only when unmerged
+  if(edgeLayer==='complement') return e.layer==='complement';
+  if(edgeLayer==='wiggly') return e.layer==='wiggly';
+  return e.layer==='complement'||e.layer==='wiggly'; // 'both'
+}
+
+// Precompute ranges for coloring (called after setupGraph)
+let _ranges={};
+function computeRanges(){
+  _ranges={};
+  const keys=['H','degree','t3','c5','per','ham','nOddCycles','qhRatio','autSize','size','wigglySelfRate','compSelfRate'];
+  for(const k of keys){
+    const vals=nodes.map(n=>n[k]||0);
+    _ranges[k]={min:Math.min(...vals),max:Math.max(...vals)};
+  }
+}
+function normalizeVal(nd,key){
+  const r=_ranges[key]||{min:0,max:1};
+  return r.max>r.min?(nd[key]-r.min)/(r.max-r.min):0.5;
+}
+
+function nodeColor(nd){
+  // In tiling view, default to coloring by class
+  if(tilingView&&colorMode==='h'){
+    // Use class index as hue
+    const nC=graphData.numClasses;
+    const h=(nd.ci/nC*330)%360;
+    return`hsl(${h},70%,55%)`;
+  }
+  if(colorMode==='sc') return nd.isSC?'#3fb950':'#58a6ff';
+  if(colorMode==='degree') return lerpHex('#1a3a5c','#f0883e',normalizeVal(nd,'degree'));
+  if(colorMode==='t3') return lerpHex('#1a1a4f','#d4a72c',normalizeVal(nd,'t3'));
+  if(colorMode==='per') return nd.per>0?lerpHex('#2ea043','#f0883e',normalizeVal(nd,'per')):'#30363d';
+  if(colorMode==='ham') return nd.ham>0?lerpHex('#2ea043','#bc8cff',normalizeVal(nd,'ham')):'#30363d';
+  if(colorMode==='qh') return nd.Q>0?lerpHex('#39d2c0','#f85149',nd.qhRatio):'#30363d';
+  if(colorMode==='alpha1') return lerpHex('#161b22','#58a6ff',normalizeVal(nd,'nOddCycles'));
+  if(colorMode==='tilings') return lerpHex('#161b22','#d4a72c',normalizeVal(nd,'size'));
+  if(colorMode==='bluefrac') return lerpHex('#555555','#1a6fc4',nd.nodeBlueFrac||0);
+  if(colorMode==='purity') return nd.classPurity==='pureBlue'?'#1a6fc4':nd.classPurity==='pureBlack'?'#666':'#a050c8';
+  if(colorMode==='selfrate') return lerpHex('#161b22','#f0883e',nd.wigglySelfRate||0);
+  if(colorMode==='compselfrate') return lerpHex('#161b22','#bc8cff',nd.compSelfRate||0);
+  if(colorMode==='score'){
+    const h=(nd.scores.reduce((s,v)=>s*31+v,0)%360+360)%360;
+    return`hsl(${h},70%,55%)`;
+  }
+  // Default: H value
+  return lerpHex('#2188ff','#f85149',normalizeVal(nd,'H'));
+}
+
+function edgeColor(e){
+  if(e.layer==='red') return 'rgba(192,57,43,0.6)';
+
+  // In tiling view, color wiggly edges by same-class (self-loop) vs cross-class
+  if(tilingView&&e.layer==='wiggly'){
+    return e.sameClass?'rgba(255,255,255,0.08)':'rgba(240,136,62,0.25)';
+  }
+
+  if(edgeColorScheme==='bluefrac'){
+    // Gradient from black (0% blue) through mixed to blue (100% blue)
+    if(e.layer==='wiggly') return 'rgba(240,136,62,0.25)';
+    const f=e.blueFrac||0;
+    const r=Math.round(120*(1-f)+26*f);
+    const g=Math.round(120*(1-f)+111*f);
+    const b=Math.round(120*(1-f)+196*f);
+    return`rgba(${r},${g},${b},${0.4+0.4*Math.abs(f-0.5)*2})`;
+  }
+  if(edgeColorScheme==='edgetype'){
+    // Discrete: pure blue, mixed (purple), pure black
+    if(e.layer==='wiggly') return 'rgba(240,136,62,0.25)';
+    if(e.edgeType==='pureBlue') return 'rgba(26,111,196,0.8)';
+    if(e.edgeType==='pureBlack') return 'rgba(120,120,120,0.6)';
+    if(e.edgeType==='mixed') return 'rgba(160,80,200,0.7)'; // purple for mixed
+    return 'rgba(140,140,140,0.3)';
+  }
+  if(edgeColorScheme==='srs'){
+    if(e.scType==='spine') return 'rgba(63,185,80,0.75)';
+    if(e.scType==='ribs') return 'rgba(248,81,73,0.6)';
+    if(e.scType==='sea') return 'rgba(88,166,255,0.4)';
+    return 'rgba(140,140,140,0.3)';
+  }
+  if(edgeColorScheme==='weight'){
+    const maxW=Math.max(...edges.filter(x=>isEdgeVisible(x)).map(x=>x.weight),1);
+    const t=Math.min(1,e.weight/maxW);
+    return`rgba(${Math.round(50+205*t)},${Math.round(180-100*t)},${Math.round(80-30*t)},${0.3+0.5*t})`;
+  }
+  return e.layer==='wiggly'?'rgba(240,136,62,0.25)':'rgba(150,150,150,0.45)';
+}
+
+function lerpHex(a,b,t){
+  const pa=parseInt(a.slice(1),16),pb=parseInt(b.slice(1),16);
+  const r=((pa>>16)&0xFF)*(1-t)+((pb>>16)&0xFF)*t;
+  const g=((pa>>8)&0xFF)*(1-t)+((pb>>8)&0xFF)*t;
+  const bl=(pa&0xFF)*(1-t)+(pb&0xFF)*t;
+  return`rgb(${r|0},${g|0},${bl|0})`;
+}
+
+// ================================================================
+// DRAW
+// ================================================================
+function toScreen(x,y){return[(x-camX)*camZ+W/2,(y-camY)*camZ+H/2];}
+function toWorld(sx,sy){return[(sx-W/2)/camZ+camX,(sy-H/2)/camZ+camY];}
+
+let sizeMode='uniform';
+function nodeRadius(nd){
+  const base=tilingView?(nodes.length>50?3:5):(nodes.length>100?4:nodes.length>30?7:10);
+  let bonus=0;
+  if(sizeMode==='degree') bonus=normalizeVal(nd,'degree')*5;
+  else if(sizeMode==='h') bonus=normalizeVal(nd,'H')*5;
+  else if(sizeMode==='tilings') bonus=normalizeVal(nd,'size')*6;
+  else if(sizeMode==='per') bonus=(nd.per>0?normalizeVal(nd,'per')*5:0);
+  else if(sizeMode==='alpha1') bonus=normalizeVal(nd,'nOddCycles')*5;
+  return base+bonus+(nd.isSC?1.5:0);
+}
+
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  ctx.fillStyle='#0a0a0f';ctx.fillRect(0,0,W,H);
+
+  // Layer lines (subtle background) for any layered mode
+  const isLayered=layoutMode==='layered'||layoutMode==='tilings'||layoutMode==='t3'||layoutMode==='hypercube';
+  if(isLayered&&nodes.length>0){
+    const key=layoutMode==='tilings'?'size':layoutMode==='t3'?'c3':layoutMode==='hypercube'?'_hw':'H';
+    const prefix=layoutMode==='tilings'?'tilings=':layoutMode==='t3'?'t₃=':layoutMode==='hypercube'?'d=':'H=';
+    // For hypercube, compute Hamming weight
+    if(layoutMode==='hypercube'){
+      for(const nd of nodes) nd._hw=nd.bits?nd.bits.reduce((s,b)=>s+b,0):0;
+    }
+    const drawn=new Set();
+    ctx.strokeStyle='rgba(48,54,61,0.5)';ctx.lineWidth=1;
+    ctx.font='10px monospace';ctx.fillStyle='rgba(72,79,88,0.6)';ctx.textAlign='left';
+    for(const nd of nodes){
+      const v=nd[key];
+      if(drawn.has(v)) continue;drawn.add(v);
+      const[,sy]=toScreen(0,nd.y);
+      ctx.beginPath();ctx.moveTo(0,sy);ctx.lineTo(W,sy);ctx.stroke();
+      ctx.fillText(prefix+v,4,sy-3);
+    }
+  }
+
+  // Edges — draw wiggly first (faint), then complement, then red
+  for(const pass of ['wiggly','complement','red']){
+    for(const e of edges){
+      if(e.layer!==pass) continue;
+      if(!isEdgeVisible(e)) continue;
+      const[x1,y1]=toScreen(nodes[e.a].x,nodes[e.a].y);
+      const[x2,y2]=toScreen(nodes[e.b].x,nodes[e.b].y);
+      const highlight=selectedNode!==null&&(e.a===selectedNode.idx||e.b===selectedNode.idx);
+      ctx.strokeStyle=highlight?'rgba(255,255,255,0.8)':edgeColor(e);
+      const baseW=e.layer==='wiggly'?0.7:e.layer==='red'?1.5:1.6;
+      ctx.lineWidth=(highlight?2.5:baseW+Math.min(1,Math.log2(e.weight+1)*0.25))*Math.min(1.5,camZ);
+      if(e.layer==='red'){ctx.setLineDash([6,4]);}else{ctx.setLineDash([]);}
+      ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();
+      ctx.setLineDash([]);
+    }
+  }
+
+  // Nodes
+  for(const nd of nodes){
+    const[sx,sy]=toScreen(nd.x,nd.y);
+    const r=nodeRadius(nd)*camZ;
+    if(sx+r<0||sx-r>W||sy+r<0||sy-r>H) continue; // cull
+
+    const isHovered=(nd===hoveredNode);
+    const isSelected=(nd===selectedNode);
+
+    // Outer glow for selected/hovered
+    if(isSelected||isHovered){
+      const glowR=r+6;
+      const grad=ctx.createRadialGradient(sx,sy,r,sx,sy,glowR);
+      grad.addColorStop(0,isSelected?'rgba(63,185,80,0.5)':'rgba(88,166,255,0.4)');
+      grad.addColorStop(1,'rgba(0,0,0,0)');
+      ctx.fillStyle=grad;
+      ctx.beginPath();ctx.arc(sx,sy,glowR,0,Math.PI*2);ctx.fill();
+    }
+
+    // Fill
+    ctx.fillStyle=nodeColor(nd);
+    ctx.beginPath();ctx.arc(sx,sy,r,0,Math.PI*2);ctx.fill();
+
+    // Border — SC gets green border; merged pairs get double ring
+    if(merged&&nd.mergedWith){
+      // Double ring for merged pairs
+      ctx.strokeStyle='rgba(188,140,255,0.5)';ctx.lineWidth=1;
+      ctx.beginPath();ctx.arc(sx,sy,r+3,0,Math.PI*2);ctx.stroke();
+    }
+    ctx.strokeStyle=isSelected?'#fff':nd.isSC?'rgba(63,185,80,0.8)':'rgba(255,255,255,0.25)';
+    ctx.lineWidth=isSelected?2.5:nd.isSC?2:1;
+    ctx.beginPath();ctx.arc(sx,sy,r,0,Math.PI*2);ctx.stroke();
+
+    // Label
+    if(camZ>0.4&&nodes.length<200&&!tilingView){
+      ctx.fillStyle='#fff';
+      ctx.font=`bold ${Math.max(7,r*0.8)}px monospace`;
+      ctx.textAlign='center';ctx.textBaseline='middle';
+      let label='';
+      if(colorMode==='h') label=nd.H.toString();
+      else if(colorMode==='t3') label=nd.c3.toString();
+      else if(colorMode==='per') label=nd.per.toString();
+      else if(colorMode==='ham') label=nd.ham.toString();
+      else if(colorMode==='degree') label=nd.degree.toString();
+      else if(colorMode==='qh') label=nd.Q>0?(nd.qhRatio*100|0)+'%':'';
+      else if(colorMode==='alpha1') label=nd.nOddCycles.toString();
+      else if(colorMode==='tilings') label=nd.size.toString();
+      else if(colorMode==='bluefrac') label=(nd.nodeBlueFrac*100|0)+'%';
+      else if(colorMode==='selfrate') label=(nd.wigglySelfRate*100|0)+'%';
+      else if(colorMode==='compselfrate') label=(nd.compSelfRate*100|0)+'%';
+      else if(colorMode==='purity') label=nd.classPurity==='pureBlue'?'PB':nd.classPurity==='pureBlack'?'PK':'MX';
+      else label=nd.ci.toString();
+      ctx.fillText(label,sx,sy);
+    }
+  }
+
+  // Hover tooltip
+  if(hoveredNode&&!dragNode){
+    const nd=hoveredNode;
+    const[sx,sy]=toScreen(nd.x,nd.y);
+    const r=nodeRadius(nd)*camZ;
+    const tx=sx+r+8,ty=sy-10;
+    const bf=(nd.nodeBlueFrac*100).toFixed(0);
+    const lines=tilingView?[
+      `tiling ${nd.mask!=null?'0b'+nd.mask.toString(2):'?'}  class #${nd.ci}`,
+      `H=${nd.H}  [${nd.scores.join(',')}]  ${nd.gridSym?'grid-sym':''}`,
+    ]:[
+      `#${nd.ci}  H=${nd.H}  t₃=${nd.c3}  ${nd.isSC?'SC':''}`,
+      `[${nd.scores.join(',')}]  tilings=${nd.size}`,
+      `edges=${nd.compDeg}  blue${bf}%  wig=${nd.wigglyDeg||0}`,
+    ];
+    ctx.font='11px monospace';
+    const mw=Math.max(...lines.map(l=>ctx.measureText(l).width));
+    ctx.fillStyle='rgba(22,27,34,0.92)';
+    ctx.strokeStyle='rgba(48,54,61,0.8)';ctx.lineWidth=1;
+    const bx=tx-4,by=ty-12,bw=mw+8,bh=lines.length*15+8;
+    ctx.beginPath();
+    if(ctx.roundRect){ctx.roundRect(bx,by,bw,bh,5);}
+    else{ctx.rect(bx,by,bw,bh);}
+    ctx.fill();ctx.stroke();
+    ctx.fillStyle='#e6edf3';ctx.textAlign='left';ctx.textBaseline='top';
+    lines.forEach((l,i)=>{ctx.fillText(l,tx,ty+i*15);});
+  }
+
+  // Stats
+  ctx.fillStyle='rgba(255,255,255,0.4)';
+  ctx.font='11px monospace';ctx.textAlign='left';
+  const vis=edges.filter(isEdgeVisible);
+  const vc=vis.filter(e=>e.layer==='complement');
+  const vb=vc.filter(e=>e.edgeType==='pureBlue').length;
+  const vk=vc.filter(e=>e.edgeType==='pureBlack').length;
+  const vm=vc.filter(e=>e.edgeType==='mixed').length;
+  const vw=vis.filter(e=>e.layer==='wiggly').length;
+  let statsStr;
+  if(tilingView){
+    const sameC=edges.filter(e=>e.layer==='wiggly'&&e.sameClass).length;
+    const crossC=edges.filter(e=>e.layer==='wiggly'&&!e.sameClass).length;
+    statsStr=`Q_${graphData.numT}: ${nodes.length} tilings, ${graphData.numClasses} classes | wiggly: ${sameC} within-class + ${crossC} cross-class = ${sameC+crossC}`;
+  } else {
+    statsStr=`V=${nodes.length}`;
+    if(edgeLayer==='complement'||edgeLayer==='both') statsStr+=`  comp=${vc.length}(${vb}b ${vm}m ${vk}k)`;
+    if(edgeLayer==='wiggly'||edgeLayer==='both') statsStr+=`  wig=${vw}`;
+    statsStr+=`  n=${N}${merged?' merged':''}`;
+  }
+  ctx.fillText(statsStr,8,H-8);
+}
+
+// ================================================================
+// ANIMATION LOOP
+// ================================================================
+function frame(){
+  stepForce();
+  draw();
+  animFrame=requestAnimationFrame(frame);
+}
+
+// ================================================================
+// INTERACTION
+// ================================================================
+function resize(){
+  dpr=window.devicePixelRatio||1;
+  W=window.innerWidth;H=window.innerHeight-44;
+  cv.width=W*dpr;cv.height=H*dpr;
+  cv.style.width=W+'px';cv.style.height=H+'px';cv.style.marginTop='44px';
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+
+function hitTest(sx,sy){
+  for(let i=nodes.length-1;i>=0;i--){
+    const[nx,ny]=toScreen(nodes[i].x,nodes[i].y);
+    const r=nodeRadius(nodes[i])*camZ+4;
+    if((sx-nx)**2+(sy-ny)**2<r*r) return nodes[i];
+  }
+  return null;
+}
+
+cv.addEventListener('mousedown',e=>{
+  const sx=e.offsetX,sy=e.offsetY;
+  dragDist=0;
+  const nd=hitTest(sx,sy);
+  if(nd){dragNode=nd;isDragging=true;cv.classList.add('dragging');}
+  else{isPanning=true;cv.classList.add('dragging');}
+  lastMX=sx;lastMY=sy;
+});
+
+cv.addEventListener('mousemove',e=>{
+  const sx=e.offsetX,sy=e.offsetY;
+  dragDist+=Math.abs(sx-lastMX)+Math.abs(sy-lastMY);
+  if(isDragging&&dragNode){
+    const[wx,wy]=toWorld(sx,sy);
+    dragNode.x=wx;dragNode.y=wy;dragNode.vx=0;dragNode.vy=0;
+  } else if(isPanning){
+    camX-=(sx-lastMX)/camZ;
+    camY-=(sy-lastMY)/camZ;
+  } else {
+    const nd=hitTest(sx,sy);
+    hoveredNode=nd;
+    cv.classList.toggle('hovering',!!nd);
+  }
+  lastMX=sx;lastMY=sy;
+});
+
+cv.addEventListener('mouseup',e=>{
+  if(dragDist<6){
+    const sx=e.offsetX,sy=e.offsetY;
+    const nd=hitTest(sx,sy);
+    if(nd) selectNode(nd);
+    else{selectedNode=null;document.getElementById('info').style.display='none';}
+  }
+  isDragging=false;isPanning=false;dragNode=null;
+  cv.classList.remove('dragging');
+});
+
+cv.addEventListener('wheel',e=>{
+  e.preventDefault();
+  const sx=e.offsetX,sy=e.offsetY;
+  const[wx,wy]=toWorld(sx,sy);
+  const factor=e.deltaY>0?0.9:1.1;
+  camZ=Math.max(0.05,Math.min(10,camZ*factor));
+  // Zoom toward cursor
+  camX=wx-(sx-W/2)/camZ;
+  camY=wy-(sy-H/2)/camZ;
+},{passive:false});
+
+// Touch support
+let touchDist=0;
+cv.addEventListener('touchstart',e=>{
+  e.preventDefault();
+  if(e.touches.length===1){
+    const t=e.touches[0];
+    const sx=t.clientX,sy=t.clientY-44;
+    const nd=hitTest(sx,sy);
+    if(nd){dragNode=nd;isDragging=true;}
+    else{isPanning=true;}
+    lastMX=sx;lastMY=sy;
+  } else if(e.touches.length===2){
+    touchDist=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+  }
+},{passive:false});
+cv.addEventListener('touchmove',e=>{
+  e.preventDefault();
+  if(e.touches.length===1){
+    const t=e.touches[0],sx=t.clientX,sy=t.clientY-44;
+    if(isDragging&&dragNode){const[wx,wy]=toWorld(sx,sy);dragNode.x=wx;dragNode.y=wy;dragNode.vx=0;dragNode.vy=0;}
+    else if(isPanning){camX-=(sx-lastMX)/camZ;camY-=(sy-lastMY)/camZ;}
+    lastMX=sx;lastMY=sy;
+  } else if(e.touches.length===2){
+    const d=Math.hypot(e.touches[0].clientX-e.touches[1].clientX,e.touches[0].clientY-e.touches[1].clientY);
+    if(touchDist>0) camZ=Math.max(0.05,Math.min(10,camZ*(d/touchDist)));
+    touchDist=d;
+  }
+},{passive:false});
+cv.addEventListener('touchend',e=>{
+  if(isDragging&&dragNode){
+    const t=e.changedTouches[0];if(t){const nd=hitTest(t.clientX,t.clientY-44);if(nd)selectNode(nd);}
+  }
+  isDragging=false;isPanning=false;dragNode=null;touchDist=0;
+});
+
+// ================================================================
+// INFO PANEL
+// ================================================================
+function selectNode(nd){
+  if(selectedNode===nd){selectedNode=null;document.getElementById('info').style.display='none';return;}
+  selectedNode=nd;
+  const info=document.getElementById('info');
+  const isAdj=e=>(e.a===nd.idx||e.b===nd.idx);
+  const wigglyN=edges.filter(e=>isAdj(e)&&e.layer==='wiggly').length;
+  const adjComp=edges.filter(e=>isAdj(e)&&e.layer==='complement');
+  const blueN=adjComp.reduce((s,e)=>s+e.blueLines,0);
+  const blackN=adjComp.reduce((s,e)=>s+e.blackLines,0);
+  const pbEdges=adjComp.filter(e=>e.edgeType==='pureBlue').length;
+  const mxEdges=adjComp.filter(e=>e.edgeType==='mixed').length;
+  const pkEdges=adjComp.filter(e=>e.edgeType==='pureBlack').length;
+  const redN=edges.filter(e=>isAdj(e)&&e.layer==='red').length;
+  const spineN=edges.filter(e=>isAdj(e)&&e.scType==='spine').length;
+  const ribsN=edges.filter(e=>isAdj(e)&&e.scType==='ribs').length;
+  const seaN=edges.filter(e=>isAdj(e)&&e.scType==='sea').length;
+
+  // Cycle cover polynomial display
+  const ckStr=nd.Ck?Object.entries(nd.Ck).sort((a,b)=>+a[0]-+b[0]).map(([k,v])=>`C<sub>${k}</sub>=${v}`).join(' '):'';
+  info.innerHTML=`<h3>Class #${nd.ci}</h3>
+    <canvas id="infoCanvas" width="140" height="140"></canvas>
+    <div style="font-size:.65em;color:var(--dim);text-align:center;margin-bottom:6px">
+      [${nd.scores.join(',')}] &middot; ${nd.isSC?'<span style="color:var(--green)">SC</span>':'NS'}
+      &middot; <span style="color:${nd.classPurity==='pureBlue'?'#1a6fc4':nd.classPurity==='pureBlack'?'#888':'#a050c8'}">${nd.classPurity==='pureBlue'?'pure-blue':nd.classPurity==='pureBlack'?'pure-black':'mixed'}</span>
+      &middot; |Aut|=${nd.autSize||'?'}  &middot; ${nd.gsCount||0}/${nd.size} grid-sym</div>
+    <div style="font-size:.72em;color:var(--blue);font-weight:600;margin:4px 0">Hamiltonian</div>
+    <div class="row"><span class="k">H (paths)</span><span class="v" style="color:var(--green)">${nd.H}</span></div>
+    <div class="row"><span class="k">ham (circuits)</span><span class="v">${nd.ham}</span></div>
+    <div class="row"><span class="k">Tilings</span><span class="v">${nd.size}</span></div>
+    <div style="font-size:.72em;color:var(--orange);font-weight:600;margin:6px 0 4px">Cycle Structure</div>
+    <div class="row"><span class="k">3-cycles (t<sub>3</sub>)</span><span class="v">${nd.c3}</span></div>
+    ${nd.c5?`<div class="row"><span class="k">5-cycles (t<sub>5</sub>)</span><span class="v">${nd.c5}</span></div>`:''}
+    <div class="row"><span class="k">Total odd cycles</span><span class="v">${nd.nOddCycles}</span></div>
+    <div style="font-size:.72em;color:var(--purple);font-weight:600;margin:6px 0 4px">Cycle Cover Polynomial</div>
+    <div class="row"><span class="k">per(A)</span><span class="v">${nd.per}</span></div>
+    <div class="row"><span class="k">per<sub>odd</sub> / per<sub>even</sub></span><span class="v">${nd.perOdd} / ${nd.perEven}</span></div>
+    ${ckStr?`<div class="row"><span class="k">C<sub>k</sub></span><span class="v">${ckStr}</span></div>`:''}
+    <div style="font-size:.72em;color:var(--cyan);font-weight:600;margin:6px 0 4px">H = Q + R Decomposition</div>
+    <div class="row"><span class="k">Q (covering)</span><span class="v">${nd.Q}</span></div>
+    <div class="row"><span class="k">R (partial)</span><span class="v">${nd.R}</span></div>
+    <div class="row"><span class="k">Q/H ratio</span><span class="v">${nd.qhRatio.toFixed(3)}</span></div>
+    <div style="font-size:.72em;color:var(--muted);font-weight:600;margin:6px 0 4px">Metagraph</div>
+    <div style="font-size:.72em;color:var(--muted);font-weight:600;margin:6px 0 4px">Complement (d=m): Lines &amp; Edges</div>
+    <div class="row"><span class="k">Cross-class edges</span><span class="v">${adjComp.length} (${pbEdges}pb ${mxEdges}mx ${pkEdges}pk)</span></div>
+    <div class="row"><span class="k">Cross: blue / black lines</span><span class="v"><span style="color:#1a6fc4">${blueN}</span> / <span style="color:#888">${blackN}</span></span></div>
+    <div class="row"><span class="k">Self-loops (silent)</span><span class="v">${nd.compSelfTotal||0} (<span style="color:#1a6fc4">${nd.compSelfBlue||0}b</span> <span style="color:#888">${nd.compSelfBlack||0}k</span>)</span></div>
+    <div class="row"><span class="k">Comp. self-loop rate</span><span class="v">${((nd.compSelfRate||0)*100).toFixed(1)}%</span></div>
+    <div class="row"><span class="k">Blue fraction</span><span class="v">${((nd.nodeBlueFrac||0)*100).toFixed(0)}%</span></div>
+    <div class="row"><span class="k">Spine / Ribs / Sea</span><span class="v"><span style="color:var(--green)">${spineN}</span> / <span style="color:var(--red)">${ribsN}</span> / <span style="color:var(--blue)">${seaN}</span></span></div>
+    <div style="font-size:.72em;color:var(--muted);font-weight:600;margin:6px 0 4px">Wiggly (d=1)</div>
+    <div class="row"><span class="k">Cross-class edges</span><span class="v" style="color:var(--orange)">${wigglyN}</span></div>
+    <div class="row"><span class="k">Cross-class lines</span><span class="v">${edges.filter(e=>isAdj(e)&&e.layer==='wiggly').reduce((s,e)=>s+e.weight,0)}</span></div>
+    <div class="row"><span class="k">Self-loops (silent)</span><span class="v">${nd.wigglySelfTotal||0} / ${nd.wigglyTransTotal||0} total</span></div>
+    <div class="row"><span class="k">Self-loop rate</span><span class="v">${((nd.wigglySelfRate||0)*100).toFixed(1)}%</span></div>
+    <div class="row"><span class="k">Transpose</span><span class="v" style="color:${redN?'var(--red)':'var(--green)'}">${redN?'paired':'self'}</span></div>
+    <div class="row"><span class="k">SC (T≅T<sup>op</sup>)</span><span class="v" style="color:${nd.isSC?'var(--green)':'var(--muted)'}">${nd.isSC?'Yes':'No'}</span></div>`;
+  info.style.display='block';
+
+  // Draw tournament
+  setTimeout(()=>{
+    const tc=document.getElementById('infoCanvas');
+    if(tc&&nd.adj) drawTournament(tc.getContext('2d'),nd.adj,140,140);
+  },10);
+}
+
+function drawTournament(ctx,A,W,H){
+  const n=A.length,cx=W/2,cy=H/2,R=W*0.34;
+  ctx.clearRect(0,0,W,H);
+  const pos=Array.from({length:n},(_,k)=>({x:cx+R*Math.cos(2*Math.PI*k/n-Math.PI/2),y:cy+R*Math.sin(2*Math.PI*k/n-Math.PI/2)}));
+  const nr=12,ah=8;
+  // Edges
+  for(let i=0;i<n;i++) for(let j=0;j<n;j++){
+    if(!A[i][j]) continue;
+    const{x:x1,y:y1}=pos[i],{x:x2,y:y2}=pos[j];
+    const dx=x2-x1,dy=y2-y1,d=Math.hypot(dx,dy);if(d<1)continue;
+    const sx=x1+dx*0.18,sy=y1+dy*0.18,ex=x2-dx*0.18,ey=y2-dy*0.18;
+    ctx.strokeStyle='rgba(88,166,255,0.7)';ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(ex,ey);ctx.stroke();
+    const a=Math.atan2(dy,dx);
+    ctx.fillStyle='rgba(88,166,255,0.7)';
+    ctx.beginPath();ctx.moveTo(ex,ey);
+    ctx.lineTo(ex-ah*Math.cos(a-0.4),ey-ah*Math.sin(a-0.4));
+    ctx.lineTo(ex-ah*Math.cos(a+0.4),ey-ah*Math.sin(a+0.4));
+    ctx.closePath();ctx.fill();
+  }
+  // Nodes
+  for(let i=0;i<n;i++){
+    ctx.fillStyle='#161b22';ctx.strokeStyle='#58a6ff';ctx.lineWidth=2;
+    ctx.beginPath();ctx.arc(pos[i].x,pos[i].y,nr,0,Math.PI*2);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#e6edf3';ctx.font='bold 11px monospace';ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillText(String(n-i),pos[i].x,pos[i].y);
+  }
+}
+
+// ================================================================
+// UI CONTROLS
+// ================================================================
+document.getElementById('nSel').addEventListener('change',e=>{
+  N=+e.target.value;
+  // Show loading for n=6 (takes a moment)
+  if(N>=6){
+    ctx.fillStyle='#0a0a0f';ctx.fillRect(0,0,W,H);
+    ctx.fillStyle='#8b949e';ctx.font='14px sans-serif';ctx.textAlign='center';
+    ctx.fillText('Computing metagraph for n='+N+'...',W/2,H/2);
+    setTimeout(()=>setupGraph(),30);
+  } else setupGraph();
+});
+document.getElementById('layoutSel').addEventListener('change',e=>{layoutMode=e.target.value;initLayout();});
+document.getElementById('colorSel').addEventListener('change',e=>{colorMode=e.target.value;updateLegend();});
+document.getElementById('sizeSel').addEventListener('change',e=>{sizeMode=e.target.value;});
+document.getElementById('mergeSel').addEventListener('change',()=>{setupGraph();});
+document.getElementById('edgeLayerSel').addEventListener('change',e=>{edgeLayer=e.target.value;updateLegend();});
+document.getElementById('edgeColorSel').addEventListener('change',e=>{edgeColorScheme=e.target.value;updateLegend();});
+document.getElementById('gravSlider').addEventListener('input',e=>{gravityStrength=e.target.value/100;});
+document.getElementById('repSlider').addEventListener('input',e=>{repulsionStrength=+e.target.value;});
+
+// Legend
+function updateLegend(){
+  const el=document.getElementById('legend');
+  const nodeLabels={
+    h:'H: blue(low) → red(high)',sc:'SC=green, NS=blue',degree:'Degree: dark → orange',
+    t3:'t₃: dark → gold',tilings:'Tilings: dark → gold',
+    bluefrac:'Blue fraction: gray → blue',
+    purity:'Blue=pure-blue, Purple=mixed, Gray=pure-black',
+    selfrate:'Wiggly self-loop rate: dark → orange',
+    compselfrate:'Complement self-loop rate: dark → purple',
+    per:'per(A): green → orange',ham:'ham circuits: green → purple',qh:'Q/H: cyan → red',
+    alpha1:'Odd cycles: dark → blue',score:'Score hash → hue'
+  };
+  const layerLabels={
+    complement:'<b>Complement flip (d=m)</b>: flip all m tiles.<br>Every tiling pairs with its complement.',
+    wiggly:'<b>Wiggly (d=1)</b>: flip one tile.<br>Each tiling has m=C(n-1,2) neighbors.',
+    both:'<b>Both layers</b>: complement (solid) + wiggly (thin).'
+  };
+  let edgeHTML='';
+  if(edgeColorScheme==='bluefrac'){
+    edgeHTML=`<div style="font-size:.82em;color:var(--dim)">Each edge = many lines. Each line is blue or black.</div>
+              <div><div class="dot" style="background:#1a6fc4"></div> 100% blue lines</div>
+              <div><div class="dot" style="background:#6070a0"></div> Mixed blue+black lines</div>
+              <div><div class="dot" style="background:#777"></div> 0% blue lines (all black)</div>`;
+  } else if(edgeColorScheme==='edgetype'){
+    edgeHTML=`<div><div class="dot" style="background:#1a6fc4"></div> <b>Pure blue</b> — all lines grid-sym</div>
+              <div><div class="dot" style="background:#a050c8"></div> <b>Mixed</b> — both (rare, requires mixed classes)</div>
+              <div><div class="dot" style="background:#777"></div> <b>Pure black</b> — no grid-sym lines</div>`;
+  } else if(edgeColorScheme==='srs'){
+    edgeHTML=`<div><div class="dot" style="background:#3fb950"></div> <b>Spine</b> — SC ↔ SC</div>
+              <div><div class="dot" style="background:#f85149"></div> <b>Ribs</b> — SC ↔ NS (bipartite)</div>
+              <div><div class="dot" style="background:#58a6ff"></div> <b>Sea</b> — NS ↔ NS</div>`;
+  } else if(edgeColorScheme==='weight'){
+    edgeHTML=`<div>Darker/thicker = higher weight</div>`;
+  } else {
+    edgeHTML=`<div>Uniform color per layer</div>`;
+  }
+  el.innerHTML=`
+    <div style="margin-bottom:4px;color:var(--text);font-weight:600;font-size:.85em">${nodeLabels[colorMode]||'Nodes: H value'}</div>
+    <div style="margin-top:5px;border-top:1px solid var(--border);padding-top:4px;font-size:.82em;color:var(--dim)">${layerLabels[edgeLayer]||''}</div>
+    <div style="margin-top:4px">${edgeHTML}</div>`;
+}
+
+// ================================================================
+// INIT
+// ================================================================
+// Keyboard shortcuts
+document.addEventListener('keydown',e=>{
+  if(e.key==='1') document.getElementById('layoutSel').value='force';
+  if(e.key==='2') document.getElementById('layoutSel').value='layered';
+  if(e.key==='3') document.getElementById('layoutSel').value='circular';
+  if(e.key>='1'&&e.key<='3'){layoutMode=document.getElementById('layoutSel').value;initLayout();}
+  if(e.key==='m'){
+    const sel=document.getElementById('mergeSel');
+    const opts=['none','transpose','complement'];
+    sel.value=opts[(opts.indexOf(sel.value)+1)%3];
+    setupGraph();
+  }
+  if(e.key==='r'){initLayout();} // reset layout
+  if(e.key==='Escape'){selectedNode=null;document.getElementById('info').style.display='none';}
+});
+
+window.addEventListener('resize',resize);
+resize();
+setupGraph();
+updateLegend();
+frame();
+</script>
+</body>
+</html>

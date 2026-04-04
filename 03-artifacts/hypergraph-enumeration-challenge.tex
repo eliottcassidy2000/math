@@ -1,0 +1,369 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}{Problem}
+\newtheorem{challenge}{Challenge}
+
+\lstset{
+  language=Python,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\color{blue!70!black},
+  commentstyle=\color{green!50!black},
+  stringstyle=\color{red!60!black},
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  frame=single,
+  breaklines=true,
+  xleftmargin=2em,
+  framexleftmargin=1.5em,
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Hypergraph Enumeration}
+\rhead{Combinatorics \& Computation}
+\cfoot{\thepage}
+
+\title{\vspace{-1.5em}\textbf{Counting the Uncounted} \\[6pt]
+\large Computing sequences that do not yet exist in the OEIS \\[3pt]
+\normalsize $k$-uniform hypergraphs, connected variants, and the inverse Euler transform}
+\author{Combinatorics \& Computational Mathematics}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+\begin{quote}
+\textit{``The On-Line Encyclopedia of Integer Sequences has over 370{,}000 entries. In this problem set, you will compute sequences that are not among them.''}
+\end{quote}
+
+\vspace{-0.5em}
+
+\section*{Overview}
+
+The \href{https://oeis.org}{OEIS} catalogs integer sequences from all of mathematics. For any well-defined counting problem, chances are someone has already computed the first few terms and submitted them. But not always. This problem set concerns a family of counting problems --- the enumeration of $k$-uniform hypergraphs and their connected variants --- where the OEIS's coverage runs out surprisingly quickly.
+
+\medskip
+
+\begin{center}
+\begin{tabular}{llrl}
+\toprule
+OEIS & Object & Terms available & Gap \\
+\midrule
+\href{https://oeis.org/A000088}{A000088} & Simple graphs ($k{=}2$) & 95 & (well covered) \\
+\href{https://oeis.org/A000665}{A000665} & 3-uniform hypergraphs & 29 & moderate \\
+\href{https://oeis.org/A051240}{A051240} & 4-uniform hypergraphs & 19 & large \\
+\href{https://oeis.org/A051249}{A051249} & 5-uniform hypergraphs & 16 & large \\
+\href{https://oeis.org/A309860}{A309860} & 6-uniform hypergraphs & 15 & large (no code on page) \\
+\midrule
+\href{https://oeis.org/A001349}{A001349} & Connected graphs & 76 & (well covered) \\
+\href{https://oeis.org/A003190}{A003190} & Connected 3-uniform & 12 & \textbf{severe} \\
+--- & Connected 4-uniform & 6 & \textbf{no dedicated entry} \\
+--- & Connected 5-uniform & 5 & \textbf{no dedicated entry} \\
+--- & Connected 6-uniform & 4 & \textbf{no dedicated entry} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\medskip
+\noindent The connected $k$-uniform hypergraphs for $k \geq 4$ do not have their own OEIS entries at all. They exist only as columns of the triangle \href{https://oeis.org/A301924}{A301924}, which has at most 6 terms per column.
+
+Your goal is to compute these sequences far beyond their current limits and, if you wish, submit them to the OEIS.
+
+\bigskip
+\hrule
+\bigskip
+
+%% ============================================================
+%% PART 1: BACKGROUND
+%% ============================================================
+
+\begin{problem}[\textbf{Background} --- 10 points]\label{prob:background}
+
+\begin{definition}
+A \textbf{$k$-uniform hypergraph} on $n$ vertices is a collection of $k$-element subsets (called \emph{hyperedges}) of $\{1, 2, \ldots, n\}$. Two $k$-uniform hypergraphs are \textbf{isomorphic} if one can be obtained from the other by relabeling vertices.
+\end{definition}
+
+\begin{enumerate}[label=(\alph*)]
+  \item When $k = 2$, a $k$-uniform hypergraph is just an ordinary graph. How many labeled graphs are there on $n$ vertices? How many labeled 3-uniform hypergraphs?
+
+  \item In general, the number of labeled $k$-uniform hypergraphs on $n$ vertices is $2^{\binom{n}{k}}$. Compute $\binom{n}{k}$ for $(n, k) = (6, 3)$, $(7, 3)$, $(8, 4)$. Notice that $\binom{n}{k}$ grows much faster than $\binom{n}{2}$ --- this is why $k$-uniform enumeration is harder than graph enumeration.
+
+  \item A $k$-uniform hypergraph is \textbf{connected} if, for every partition of the vertex set into two nonempty parts $A \cup B$, there exists a hyperedge that intersects both $A$ and $B$. Verify that for $k = 2$ this reduces to the usual notion of graph connectivity.
+\end{enumerate}
+\end{problem}
+
+\bigskip
+
+%% ============================================================
+%% PART 2: BURNSIDE FOR K-UNIFORM
+%% ============================================================
+
+\begin{problem}[\textbf{Burnside for $k$-Uniform Hypergraphs} --- 30 points]\label{prob:burnside}
+
+By Burnside's lemma, the number of non-isomorphic $k$-uniform hypergraphs on $n$ vertices is:
+\[
+H_k(n) \;=\; \frac{1}{n!} \sum_{\sigma \in S_n} 2^{f_k(\sigma)}
+\]
+where $f_k(\sigma)$ is the number of orbits of $\sigma$ acting on the $\binom{n}{k}$ possible $k$-element subsets.
+
+As usual, we group permutations by cycle type. For a partition $\lambda = (r_1^{m_1}, r_2^{m_2}, \ldots)$ of $n$:
+\[
+H_k(n) \;=\; \sum_{\lambda \vdash n} \frac{2^{c_k(\lambda)}}{\prod_i r_i^{m_i} \cdot m_i!}
+\]
+where $c_k(\lambda)$ is the number of orbits of $k$-subsets under a permutation with cycle type $\lambda$.
+
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{The $k = 2$ case.} Recall from graph enumeration that for $k = 2$:
+  \[
+  c_2(\lambda) \;=\; \sum_i m_i \left\lfloor \frac{r_i}{2} \right\rfloor + \sum_i \binom{m_i}{2} r_i + \sum_{i < j} m_i m_j \gcd(r_i, r_j).
+  \]
+  This has a nice closed form because 2-element subsets either lie within one cycle or span two cycles, and the orbit structure is determined by the cycle lengths and their GCDs. Verify this formula gives $H_2(4) = 11$ (the number of simple graphs on 4 vertices).
+
+  \item \textbf{The $k = 3$ case.} For 3-element subsets, a $k$-subset can use elements from 1, 2, or 3 distinct cycles. There is no simple closed-form expression for $c_3(\lambda)$ analogous to the $k = 2$ formula. Instead, we need to count orbits computationally.
+
+  \textbf{The generating function method.} Given a permutation $\sigma$ with cycle type $\lambda$, the number of $k$-subsets \emph{fixed} by $\sigma^d$ (for a divisor $d$ of $\mathrm{ord}(\sigma)$) can be computed as follows:
+  \begin{enumerate}[label=\roman*.]
+    \item When $\sigma$ is raised to the $d$-th power, each cycle of length $r_i$ in $\sigma$ splits into $\gcd(d, r_i)$ cycles of length $r_i / \gcd(d, r_i)$.
+    \item A $k$-subset is fixed by $\sigma^d$ iff it is a union of complete cycles of $\sigma^d$.
+    \item The number of such unions is $[x^k] \prod_{i} (1 + x^{r_i / \gcd(d, r_i)})^{m_i \cdot \gcd(d, r_i)}$, i.e., the coefficient of $x^k$ in the generating polynomial.
+  \end{enumerate}
+  Then by Burnside applied to the cyclic group $\langle\sigma\rangle$:
+  \[
+  c_k(\lambda) \;=\; \frac{1}{L} \sum_{d=0}^{L-1} [x^k]\; \prod_i \bigl(1 + x^{r_i / \gcd(d, r_i)}\bigr)^{m_i \cdot \gcd(d, r_i)}
+  \]
+  where $L = \mathrm{lcm}(r_1, r_2, \ldots)$.
+
+  Implement this formula and verify $H_3(5) = 34$, $H_3(6) = 2136$.
+
+  \item \textbf{General $k$.} The formula above works for any $k$. The only change is extracting the coefficient of $x^k$ instead of $x^3$. Implement a general $H_k(n)$ function and verify:
+
+  \begin{center}
+  \begin{tabular}{c|rrrrrrr}
+  \toprule
+  $n \backslash k$ & 2 & 3 & 4 & 5 \\
+  \midrule
+  4 & 11 & 2 & 2 & --- \\
+  5 & 34 & 34 & 6 & 2 \\
+  6 & 156 & 2136 & 156 & 6 \\
+  7 & 1044 & 7013320 & 7013320 & 156 \\
+  \bottomrule
+  \end{tabular}
+  \end{center}
+
+  \noindent (Notice the symmetry: $H_k(n) = H_{n-k}(n)$. Why?)
+
+  \item \textbf{Computational challenge.} The generating-function method requires computing a polynomial product for each partition \emph{and} each divisor $d$. This is the bottleneck for large $n$. How does the cost scale with $n$ and $k$?
+\end{enumerate}
+\end{problem}
+
+\bigskip
+
+%% ============================================================
+%% PART 3: INVERSE EULER TRANSFORM
+%% ============================================================
+
+\begin{problem}[\textbf{The Inverse Euler Transform} --- 25 points]\label{prob:euler}
+
+There is a classical relationship between counting \emph{all} structures and counting \emph{connected} structures. If $a(n)$ counts all unlabeled $k$-uniform hypergraphs on $n$ vertices and $b(n)$ counts the connected ones, then:
+
+\begin{theorem}[Euler Transform]
+The ordinary generating functions are related by
+\[
+\sum_{n=0}^{\infty} a(n)\, x^n \;=\; \prod_{m=1}^{\infty} \frac{1}{(1 - x^m)^{b(m)}}.
+\]
+\end{theorem}
+
+\noindent This means: every hypergraph decomposes uniquely into connected components, and the generating function for multisets of connected components gives the generating function for all hypergraphs. This is exactly analogous to the relationship between prime factorization and the integers.
+
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{The inversion.} Given $a(n)$, the connected counts $b(n)$ can be recovered by the \emph{inverse Euler transform}:
+  \begin{align*}
+    c(n) &= n \cdot a(n) - \sum_{j=1}^{n-1} c(j) \cdot a(n - j), \\
+    b(n) &= \frac{1}{n} \sum_{d \mid n} \mu(n/d) \cdot c(d),
+  \end{align*}
+  where $\mu$ is the M\"obius function. Implement this and verify it on a known case: the inverse Euler transform of \href{https://oeis.org/A000088}{A000088} (all graphs) should give \href{https://oeis.org/A001349}{A001349} (connected graphs):
+  \begin{center}
+  \begin{tabular}{c|rrrrrrrrrr}
+  \toprule
+  $n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\
+  \midrule
+  A000088 & 1 & 2 & 4 & 11 & 34 & 156 & 1044 & 12346 \\
+  A001349 & 1 & 1 & 2 & 6 & 21 & 112 & 853 & 11117 \\
+  \bottomrule
+  \end{tabular}
+  \end{center}
+
+  \item \textbf{Apply it.} Compute the connected 3-uniform hypergraphs by applying the inverse Euler transform to A000665. The OEIS entry \href{https://oeis.org/A003190}{A003190} has only 12 terms. Can you produce 30 or more?
+
+  \item \textbf{The key subtlety.} The inverse Euler transform requires knowing $a(n)$ for all $n$ up to the desired output. If you have computed $H_3(n)$ for $n = 0, 1, \ldots, N$, you can obtain the connected counts $b(1), \ldots, b(N)$ in $O(N^2)$ additional time. The hard part is computing $a(n)$ in the first place. Explain why you cannot ``shortcut'' the connected count by skipping the total count.
+\end{enumerate}
+\end{problem}
+
+\bigskip
+
+%% ============================================================
+%% PART 4: COMPUTE NEW SEQUENCES
+%% ============================================================
+
+\begin{problem}[\textbf{New Sequences} --- 20 points]\label{prob:new}
+
+Now put it all together and compute sequences that are not in the OEIS.
+
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Connected 4-uniform hypergraphs.} The OEIS has at most 6 terms for this (as a column of A301924). Compute at least 20 terms. The first few values are:
+  \begin{center}
+  \begin{tabular}{c|rrrrrrrrrr}
+  \toprule
+  $n$ & 4 & 5 & 6 & 7 & 8 & 9 \\
+  \midrule
+  connected & 1 & 5 & 143 & 7013159 & $?$ & $?$ \\
+  \bottomrule
+  \end{tabular}
+  \end{center}
+  (The connected 4-uniform count on 7 vertices is close to --- but not equal to --- the total count of $7{,}013{,}320$. The difference is the hypergraphs that decompose into components.)
+
+  \item \textbf{Connected 5-uniform hypergraphs.} The OEIS has at most 5 terms. Compute at least 15.
+
+  \item \textbf{Connected 6-uniform hypergraphs.} Compute at least 10 terms.
+
+  \item \textbf{Format for OEIS submission.} Format one of your new sequences as an OEIS b-file (lines of the form \texttt{n value}) and draft a brief OEIS entry including: name, first terms, formula/program, and cross-references to the parent sequence and the $k$-uniform triangle A309865.
+\end{enumerate}
+\end{problem}
+
+\bigskip
+
+%% ============================================================
+%% CHALLENGE
+%% ============================================================
+
+\begin{challenge}[\textbf{Going Further} --- Extra Credit]\label{chal:further}
+
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{The $k$-uniform triangle.} The OEIS entry \href{https://oeis.org/A309865}{A309865} tabulates $H_k(n)$ as a triangle with rows $n = 0, 1, 2, \ldots$ and columns $k = 0, 1, \ldots, n$. It has 15 rows (through $n = 14$). Extend it to row 26 or beyond.
+
+  \item \textbf{Closed-form edge formulas.} For $k = 2$, the orbit count $c_2(\lambda)$ has a simple closed form in terms of cycle lengths and GCDs. For $k = 3$, Andrew Howroyd gave a closed form on the OEIS in 2018. Derive or look up a closed-form expression for $c_3(\lambda)$ and compare its speed with the generating-function method. Can you find a closed form for $k = 4$?
+
+  \item \textbf{Optimization for large $n$.} The generating-function method for $c_k(\lambda)$ requires a polynomial multiplication for each divisor $d$ of $L = \mathrm{lcm}(r_1, \ldots)$. For large $n$, $L$ can be enormous (e.g., $L = \mathrm{lcm}(1, 2, \ldots, n)$ for the identity partition). Can you exploit the multiplicative structure to avoid iterating over all $L$ values? (Hint: the M\"obius function on divisors of $L$ can reduce the sum.)
+
+  \item \textbf{The connected triangle.} Compute the connected $k$-uniform triangle analogous to A309865. This triangle does not exist in the OEIS at all. Submit it.
+\end{enumerate}
+\end{challenge}
+
+\newpage
+
+%% ============================================================
+%% APPENDIX
+%% ============================================================
+
+\section*{Appendix A: Why These Sequences Are Missing}
+
+Why does the OEIS run out of terms so quickly for $k$-uniform hypergraphs?
+
+\begin{enumerate}
+  \item \textbf{The edge formula bottleneck.} For graphs ($k = 2$), the orbit count $c_2(\lambda)$ is a closed-form expression in cycle lengths and GCDs. For $k \geq 3$, no such simple formula exists. Instead, one must compute a polynomial product and extract a coefficient --- a much more expensive operation.
+
+  \item \textbf{Exponential growth in $\binom{n}{k}$.} The number of possible hyperedges is $\binom{n}{k}$, which grows much faster with $n$ for large $k$. At $n = 10$, $k = 3$: $\binom{10}{3} = 120$ possible hyperedges, giving $2^{120} \approx 10^{36}$ labeled hypergraphs. The Burnside sum avoids enumerating these, but the orbit counts grow correspondingly.
+
+  \item \textbf{Limited interest.} Graphs ($k = 2$) are ubiquitous in combinatorics, computer science, and network theory. The 3-uniform and higher cases are more specialized (they arise in algebraic topology, coding theory, and design theory), so fewer researchers have invested in computing them.
+
+  \item \textbf{No unified software.} The major computer algebra systems (Sage, Maple, Mathematica) support graph enumeration well but do not have optimized routines for $k$-uniform hypergraph enumeration. The OEIS entries for $k \geq 4$ were largely computed by Alois P.\ Heinz using custom Maple code.
+\end{enumerate}
+
+\section*{Appendix B: The Inverse Euler Transform in Detail}
+
+The Euler transform is the multiplicative analog of exponentiation for formal power series. It arises whenever a structure decomposes uniquely into connected components.
+
+\textbf{Forward:} Given the connected counts $b(1), b(2), \ldots$, the total counts are:
+\[
+A(x) = \prod_{m \geq 1} \frac{1}{(1 - x^m)^{b(m)}} = \sum_{n \geq 0} a(n)\, x^n.
+\]
+
+\textbf{Inverse:} Given $a(0), a(1), a(2), \ldots$ with $a(0) = 1$, recover $b(n)$:
+\begin{enumerate}
+  \item Compute the ``logarithmic derivative'' sequence:
+  \[
+  c(n) = n \cdot a(n) - \sum_{j=1}^{n-1} c(j) \cdot a(n-j).
+  \]
+  \item Apply M\"obius inversion on divisors:
+  \[
+  b(n) = \frac{1}{n} \sum_{d \mid n} \mu\!\left(\frac{n}{d}\right) c(d).
+  \]
+\end{enumerate}
+
+\noindent The M\"obius function $\mu(m)$ equals $(-1)^r$ if $m$ is a product of $r$ distinct primes, and $0$ if $m$ has any repeated prime factor.
+
+\medskip
+\noindent\textbf{Analogy:} This is the combinatorial version of the fundamental theorem of arithmetic. Just as every integer factors uniquely into primes, every (unlabeled) hypergraph decomposes uniquely into connected components. The Euler transform is the ``multiplication,'' and the inverse Euler transform is the ``factorization.''
+
+\section*{Appendix C: Reference Values}
+
+Known values for 3-uniform hypergraphs (\href{https://oeis.org/A000665}{A000665}):
+
+{\small
+\begin{center}
+\begin{tabular}{r|r}
+\toprule
+$n$ & $H_3(n)$ \\
+\midrule
+0 & 1 \\
+1 & 1 \\
+2 & 1 \\
+3 & 2 \\
+4 & 5 \\
+5 & 34 \\
+6 & 2{,}136 \\
+7 & 7{,}013{,}320 \\
+\bottomrule
+\end{tabular}
+\end{center}
+}
+
+\medskip
+\noindent Known values for 4-uniform hypergraphs (\href{https://oeis.org/A051240}{A051240}):
+
+{\small
+\begin{center}
+\begin{tabular}{r|r}
+\toprule
+$n$ & $H_4(n)$ \\
+\midrule
+0 & 1 \\
+1 & 1 \\
+2 & 1 \\
+3 & 1 \\
+4 & 2 \\
+5 & 6 \\
+6 & 156 \\
+7 & 7{,}013{,}320 \\
+\bottomrule
+\end{tabular}
+\end{center}
+}
+
+\medskip
+\noindent The coincidence $H_3(7) = H_4(7) = 7{,}013{,}320$ is explained by the symmetry $H_k(n) = H_{n-k}(n)$: choosing which 3-subsets are \emph{in} the hypergraph is equivalent to choosing which 4-subsets are \emph{out}, when $n = 7 = 3 + 4$.
+
+\vfill
+\begin{center}
+\small\itshape
+``These sequences do not appear in the OEIS. Compute them.''
+\end{center}
+
+\end{document}

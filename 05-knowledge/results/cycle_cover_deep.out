@@ -1,0 +1,518 @@
+DEEP CYCLE COVER INVESTIGATION
+Connecting per(A), ham(A), I(Ω,2)=H(T), Q(T), and cycle packing
+=====================================================================================
+
+=====================================================================================
+n = 3
+=====================================================================================
+
+2 classes, computed in 0.0s
+
+ #    H  t3   per  ham     Q     R H=I? Q=Qc #odd              alpha_k cover types
+--------------------------------------------------------------------------------------------------------------
+ 0    1   0     0    0     0     1    ✓    ✓    0                      
+ 1    3   1     1    1     2     1    ✓    ✓    1                  1:1 (3,):1
+
+--- Aggregate Analysis for n=3 ---
+
+Q(T)/H(T) ratio (covering fraction of independence polynomial):
+  H=   1: Q/H = 0.0000  (R = 1)
+  H=   3: Q/H = 0.6667  (R = 1)
+
+per(A)/H(T) ratio (permanent vs Hamiltonian paths):
+  H=   1: per/H = 0.0000  (per=0)
+  H=   3: per/H = 0.3333  (per=1)
+
+Classes with even-length cycle covers: 0/2
+
+H(T) = Q(T) + R(T) decomposition:
+  Q(T) = contribution from vertex-covering disjoint odd-cycle collections
+  R(T) = contribution from PARTIAL odd-cycle packings (+ empty set)
+  H=   1 = Q=   0 + R=   1  (Q/H=0.000)
+  H=   3 = Q=   2 + R=   1  (Q/H=0.667)
+
+Alpha_k (independent set counts) statistics:
+  α_0: min=1, max=1, mean=1.0
+  α_1: min=1, max=1, mean=1.0
+
+=====================================================================================
+n = 4
+=====================================================================================
+
+4 classes, computed in 0.0s
+
+ #    H  t3   per  ham     Q     R H=I? Q=Qc #odd              alpha_k cover types
+--------------------------------------------------------------------------------------------------------------
+ 0    1   0     0    0     0     1    ✓    ✓    0                      
+ 1    3   1     0    0     0     3    ✓    ✓    1                  1:1 
+ 3    3   1     0    0     0     3    ✓    ✓    1                  1:1 
+ 2    5   2     1    1     0     5    ✓    ✓    2                  1:2 (4,):1
+
+--- Aggregate Analysis for n=4 ---
+
+Q(T)/H(T) ratio (covering fraction of independence polynomial):
+  H=   1: Q/H = 0.0000  (R = 1)
+  H=   3: Q/H = 0.0000  (R = 3)
+  H=   3: Q/H = 0.0000  (R = 3)
+  H=   5: Q/H = 0.0000  (R = 5)
+
+per(A)/H(T) ratio (permanent vs Hamiltonian paths):
+  H=   1: per/H = 0.0000  (per=0)
+  H=   3: per/H = 0.0000  (per=0)
+  H=   3: per/H = 0.0000  (per=0)
+  H=   5: per/H = 0.2000  (per=1)
+
+Classes with even-length cycle covers: 1/4
+  #2: per_even=1, per_odd=0, cover_types={(4,): 1}
+
+H(T) = Q(T) + R(T) decomposition:
+  Q(T) = contribution from vertex-covering disjoint odd-cycle collections
+  R(T) = contribution from PARTIAL odd-cycle packings (+ empty set)
+  H=   1 = Q=   0 + R=   1  (Q/H=0.000)
+  H=   3 = Q=   0 + R=   3  (Q/H=0.000)
+  H=   3 = Q=   0 + R=   3  (Q/H=0.000)
+  H=   5 = Q=   0 + R=   5  (Q/H=0.000)
+
+Alpha_k (independent set counts) statistics:
+  α_0: min=1, max=1, mean=1.0
+  α_1: min=1, max=2, mean=1.3
+
+=====================================================================================
+n = 5
+=====================================================================================
+
+12 classes, computed in 0.4s
+
+ #    H  t3   per  ham     Q     R H=I? Q=Qc #odd              alpha_k cover types
+--------------------------------------------------------------------------------------------------------------
+ 0    1   0     0    0     0     1    ✓    ✓    0                      
+ 1    3   1     0    0     0     3    ✓    ✓    1                  1:1 
+ 3    3   1     0    0     0     3    ✓    ✓    1                  1:1 
+ 7    3   1     0    0     0     3    ✓    ✓    1                  1:1 
+ 2    5   2     0    0     0     5    ✓    ✓    2                  1:2 
+ 5    5   2     0    0     0     5    ✓    ✓    2                  1:2 
+ 4    9   3     1    1     2     7    ✓    ✓    4                  1:4 (5,):1
+ 6    9   3     1    1     2     7    ✓    ✓    4                  1:4 (5,):1
+ 8   11   4     1    1     2     9    ✓    ✓    5                  1:5 (5,):1
+10   13   4     2    2     4     9    ✓    ✓    6                  1:6 (5,):2
+ 9   15   4     3    3     6     9    ✓    ✓    7                  1:7 (5,):3
+11   15   5     2    2     4    11    ✓    ✓    7                  1:7 (5,):2
+
+--- Aggregate Analysis for n=5 ---
+
+Q(T)/H(T) ratio (covering fraction of independence polynomial):
+  H=   1: Q/H = 0.0000  (R = 1)
+  H=   3: Q/H = 0.0000  (R = 3)
+  H=   3: Q/H = 0.0000  (R = 3)
+  H=   3: Q/H = 0.0000  (R = 3)
+  H=   5: Q/H = 0.0000  (R = 5)
+  H=   5: Q/H = 0.0000  (R = 5)
+  H=  11: Q/H = 0.1818  (R = 9)
+  H=   9: Q/H = 0.2222  (R = 7)
+  H=   9: Q/H = 0.2222  (R = 7)
+  H=  15: Q/H = 0.2667  (R = 11)
+  H=  13: Q/H = 0.3077  (R = 9)
+  H=  15: Q/H = 0.4000  (R = 9)
+
+per(A)/H(T) ratio (permanent vs Hamiltonian paths):
+  H=   1: per/H = 0.0000  (per=0)
+  H=   3: per/H = 0.0000  (per=0)
+  H=   3: per/H = 0.0000  (per=0)
+  H=   3: per/H = 0.0000  (per=0)
+  H=   5: per/H = 0.0000  (per=0)
+  H=   5: per/H = 0.0000  (per=0)
+  H=  11: per/H = 0.0909  (per=1)
+  H=   9: per/H = 0.1111  (per=1)
+  H=   9: per/H = 0.1111  (per=1)
+  H=  15: per/H = 0.1333  (per=2)
+  H=  13: per/H = 0.1538  (per=2)
+  H=  15: per/H = 0.2000  (per=3)
+
+Classes with even-length cycle covers: 0/12
+
+H(T) = Q(T) + R(T) decomposition:
+  Q(T) = contribution from vertex-covering disjoint odd-cycle collections
+  R(T) = contribution from PARTIAL odd-cycle packings (+ empty set)
+  H=   1 = Q=   0 + R=   1  (Q/H=0.000)
+  H=   3 = Q=   0 + R=   3  (Q/H=0.000)
+  H=   3 = Q=   0 + R=   3  (Q/H=0.000)
+  H=   3 = Q=   0 + R=   3  (Q/H=0.000)
+  H=   5 = Q=   0 + R=   5  (Q/H=0.000)
+  H=   5 = Q=   0 + R=   5  (Q/H=0.000)
+  H=   9 = Q=   2 + R=   7  (Q/H=0.222)
+  H=   9 = Q=   2 + R=   7  (Q/H=0.222)
+  H=  11 = Q=   2 + R=   9  (Q/H=0.182)
+  H=  13 = Q=   4 + R=   9  (Q/H=0.308)
+  H=  15 = Q=   6 + R=   9  (Q/H=0.400)
+  H=  15 = Q=   4 + R=  11  (Q/H=0.267)
+
+Alpha_k (independent set counts) statistics:
+  α_0: min=1, max=1, mean=1.0
+  α_1: min=1, max=7, mean=3.6
+
+=====================================================================================
+n = 6
+=====================================================================================
+
+56 classes, computed in 110.3s
+
+ #    H  t3   per  ham     Q     R H=I? Q=Qc #odd              alpha_k cover types
+--------------------------------------------------------------------------------------------------------------
+ 0    1   0     0    0     0     1    ✓    ✓    0                      
+ 1    3   1     0    0     0     3    ✓    ✓    1                  1:1 
+ 3    3   1     0    0     0     3    ✓    ✓    1                  1:1 
+ 7    3   1     0    0     0     3    ✓    ✓    1                  1:1 
+19    3   1     0    0     0     3    ✓    ✓    1                  1:1 
+ 2    5   2     0    0     0     5    ✓    ✓    2                  1:2 
+ 5    5   2     0    0     0     5    ✓    ✓    2                  1:2 
+15    5   2     0    0     0     5    ✓    ✓    2                  1:2 
+ 4    9   3     0    0     0     9    ✓    ✓    4                  1:4 
+ 6    9   3     0    0     0     9    ✓    ✓    4                  1:4 
+13    9   3     0    0     0     9    ✓    ✓    4                  1:4 
+17    9   3     0    0     0     9    ✓    ✓    4                  1:4 
+23    9   2     1    0     4     5    ✓    ✓    2              1:2,2:1 (3, 3):1
+ 8   11   4     0    0     0    11    ✓    ✓    5                  1:5 
+25   11   4     0    0     0    11    ✓    ✓    5                  1:5 
+10   13   4     0    0     0    13    ✓    ✓    6                  1:6 
+37   13   4     0    0     0    13    ✓    ✓    6                  1:6 
+ 9   15   4     0    0     0    15    ✓    ✓    7                  1:7 
+11   15   5     0    0     0    15    ✓    ✓    7                  1:7 
+14   15   4     1    1     0    15    ✓    ✓    7                  1:7 (6,):1
+18   15   4     1    1     0    15    ✓    ✓    7                  1:7 (6,):1
+36   15   4     0    0     0    15    ✓    ✓    7                  1:7 
+50   15   5     0    0     0    15    ✓    ✓    7                  1:7 
+12   17   4     1    1     0    17    ✓    ✓    8                  1:8 (6,):1
+22   17   4     2    1     4    13    ✓    ✓    6              1:6,2:1 (3, 3):1 (6,):1
+16   19   5     1    1     0    19    ✓    ✓    9                  1:9 (6,):1
+26   19   5     1    1     0    19    ✓    ✓    9                  1:9 (6,):1
+21   23   5     3    2     4    19    ✓    ✓    9              1:9,2:1 (3, 3):1 (6,):2
+24   23   6     1    1     0    23    ✓    ✓   11                 1:11 (6,):1
+27   23   6     1    1     0    23    ✓    ✓   11                 1:11 (6,):1
+33   23   5     3    2     4    19    ✓    ✓    9              1:9,2:1 (3, 3):1 (6,):2
+29   25   6     2    2     0    25    ✓    ✓   12                 1:12 (6,):2
+40   25   6     2    2     0    25    ✓    ✓   12                 1:12 (6,):2
+20   27   5     4    3     4    23    ✓    ✓   11             1:11,2:1 (3, 3):1 (6,):3
+34   27   5     4    3     4    23    ✓    ✓   11             1:11,2:1 (3, 3):1 (6,):3
+35   29   6     4    3     4    25    ✓    ✓   12             1:12,2:1 (3, 3):1 (6,):3
+41   29   6     4    3     4    25    ✓    ✓   12             1:12,2:1 (3, 3):1 (6,):3
+43   29   6     5    3     8    21    ✓    ✓   10             1:10,2:2 (3, 3):2 (6,):3
+44   29   6     3    2     4    25    ✓    ✓   12             1:12,2:1 (3, 3):1 (6,):2
+32   31   6     4    3     4    27    ✓    ✓   13             1:13,2:1 (3, 3):1 (6,):3
+39   31   6     4    3     4    27    ✓    ✓   13             1:13,2:1 (3, 3):1 (6,):3
+28   33   7     3    3     0    33    ✓    ✓   16                 1:16 (6,):3
+31   33   6     6    4     8    25    ✓    ✓   12             1:12,2:2 (3, 3):2 (6,):4
+45   33   7     4    3     4    29    ✓    ✓   14             1:14,2:1 (3, 3):1 (6,):3
+48   33   7     4    3     4    29    ✓    ✓   14             1:14,2:1 (3, 3):1 (6,):3
+53   33   7     3    3     0    33    ✓    ✓   16                 1:16 (6,):3
+30   37   6     7    5     8    29    ✓    ✓   14             1:14,2:2 (3, 3):2 (6,):5
+38   37   7     5    4     4    33    ✓    ✓   16             1:16,2:1 (3, 3):1 (6,):4
+42   37   7     6    4     8    29    ✓    ✓   14             1:14,2:2 (3, 3):2 (6,):4
+47   37   7     6    4     8    29    ✓    ✓   14             1:14,2:2 (3, 3):2 (6,):4
+49   37   7     5    4     4    33    ✓    ✓   16             1:16,2:1 (3, 3):1 (6,):4
+46   41   8     6    4     8    33    ✓    ✓   16             1:16,2:2 (3, 3):2 (6,):4
+51   43   8     6    5     4    39    ✓    ✓   19             1:19,2:1 (3, 3):1 (6,):5
+52   43   8     6    5     4    39    ✓    ✓   19             1:19,2:1 (3, 3):1 (6,):5
+54   45   8     9    5    16    29    ✓    ✓   14             1:14,2:4 (3, 3):4 (6,):5
+55   45   8     6    5     4    41    ✓    ✓   20             1:20,2:1 (3, 3):1 (6,):5
+
+--- Aggregate Analysis for n=6 ---
+
+Q(T)/H(T) ratio (covering fraction of independence polynomial):
+  H=   1: Q/H = 0.0000  (R = 1)
+  H=   3: Q/H = 0.0000  (R = 3)
+  H=   3: Q/H = 0.0000  (R = 3)
+  H=   3: Q/H = 0.0000  (R = 3)
+  H=   3: Q/H = 0.0000  (R = 3)
+  H=   5: Q/H = 0.0000  (R = 5)
+  H=   5: Q/H = 0.0000  (R = 5)
+  H=   5: Q/H = 0.0000  (R = 5)
+  H=   9: Q/H = 0.0000  (R = 9)
+  H=   9: Q/H = 0.0000  (R = 9)
+  H=   9: Q/H = 0.0000  (R = 9)
+  H=   9: Q/H = 0.0000  (R = 9)
+  H=  11: Q/H = 0.0000  (R = 11)
+  H=  11: Q/H = 0.0000  (R = 11)
+  H=  13: Q/H = 0.0000  (R = 13)
+  H=  13: Q/H = 0.0000  (R = 13)
+  H=  15: Q/H = 0.0000  (R = 15)
+  H=  15: Q/H = 0.0000  (R = 15)
+  H=  15: Q/H = 0.0000  (R = 15)
+  H=  15: Q/H = 0.0000  (R = 15)
+  H=  15: Q/H = 0.0000  (R = 15)
+  H=  15: Q/H = 0.0000  (R = 15)
+  H=  17: Q/H = 0.0000  (R = 17)
+  H=  19: Q/H = 0.0000  (R = 19)
+  H=  19: Q/H = 0.0000  (R = 19)
+  H=  23: Q/H = 0.0000  (R = 23)
+  H=  23: Q/H = 0.0000  (R = 23)
+  H=  25: Q/H = 0.0000  (R = 25)
+  H=  25: Q/H = 0.0000  (R = 25)
+  H=  33: Q/H = 0.0000  (R = 33)
+  H=  33: Q/H = 0.0000  (R = 33)
+  H=  45: Q/H = 0.0889  (R = 41)
+  H=  43: Q/H = 0.0930  (R = 39)
+  H=  43: Q/H = 0.0930  (R = 39)
+  H=  37: Q/H = 0.1081  (R = 33)
+  H=  37: Q/H = 0.1081  (R = 33)
+  H=  33: Q/H = 0.1212  (R = 29)
+  H=  33: Q/H = 0.1212  (R = 29)
+  H=  31: Q/H = 0.1290  (R = 27)
+  H=  31: Q/H = 0.1290  (R = 27)
+  H=  29: Q/H = 0.1379  (R = 25)
+  H=  29: Q/H = 0.1379  (R = 25)
+  H=  29: Q/H = 0.1379  (R = 25)
+  H=  27: Q/H = 0.1481  (R = 23)
+  H=  27: Q/H = 0.1481  (R = 23)
+  H=  23: Q/H = 0.1739  (R = 19)
+  H=  23: Q/H = 0.1739  (R = 19)
+  H=  41: Q/H = 0.1951  (R = 33)
+  H=  37: Q/H = 0.2162  (R = 29)
+  H=  37: Q/H = 0.2162  (R = 29)
+  H=  37: Q/H = 0.2162  (R = 29)
+  H=  17: Q/H = 0.2353  (R = 13)
+  H=  33: Q/H = 0.2424  (R = 25)
+  H=  29: Q/H = 0.2759  (R = 21)
+  H=  45: Q/H = 0.3556  (R = 29)
+  H=   9: Q/H = 0.4444  (R = 5)
+
+per(A)/H(T) ratio (permanent vs Hamiltonian paths):
+  H=   1: per/H = 0.0000  (per=0)
+  H=   3: per/H = 0.0000  (per=0)
+  H=   3: per/H = 0.0000  (per=0)
+  H=   3: per/H = 0.0000  (per=0)
+  H=   3: per/H = 0.0000  (per=0)
+  H=   5: per/H = 0.0000  (per=0)
+  H=   5: per/H = 0.0000  (per=0)
+  H=   5: per/H = 0.0000  (per=0)
+  H=   9: per/H = 0.0000  (per=0)
+  H=   9: per/H = 0.0000  (per=0)
+  H=   9: per/H = 0.0000  (per=0)
+  H=   9: per/H = 0.0000  (per=0)
+  H=  11: per/H = 0.0000  (per=0)
+  H=  11: per/H = 0.0000  (per=0)
+  H=  13: per/H = 0.0000  (per=0)
+  H=  13: per/H = 0.0000  (per=0)
+  H=  15: per/H = 0.0000  (per=0)
+  H=  15: per/H = 0.0000  (per=0)
+  H=  15: per/H = 0.0000  (per=0)
+  H=  15: per/H = 0.0000  (per=0)
+  H=  23: per/H = 0.0435  (per=1)
+  H=  23: per/H = 0.0435  (per=1)
+  H=  19: per/H = 0.0526  (per=1)
+  H=  19: per/H = 0.0526  (per=1)
+  H=  17: per/H = 0.0588  (per=1)
+  H=  15: per/H = 0.0667  (per=1)
+  H=  15: per/H = 0.0667  (per=1)
+  H=  25: per/H = 0.0800  (per=2)
+  H=  25: per/H = 0.0800  (per=2)
+  H=  33: per/H = 0.0909  (per=3)
+  H=  33: per/H = 0.0909  (per=3)
+  H=  29: per/H = 0.1034  (per=3)
+  H=   9: per/H = 0.1111  (per=1)
+  H=  17: per/H = 0.1176  (per=2)
+  H=  33: per/H = 0.1212  (per=4)
+  H=  33: per/H = 0.1212  (per=4)
+  H=  31: per/H = 0.1290  (per=4)
+  H=  31: per/H = 0.1290  (per=4)
+  H=  23: per/H = 0.1304  (per=3)
+  H=  23: per/H = 0.1304  (per=3)
+  H=  45: per/H = 0.1333  (per=6)
+  H=  37: per/H = 0.1351  (per=5)
+  H=  37: per/H = 0.1351  (per=5)
+  H=  29: per/H = 0.1379  (per=4)
+  H=  29: per/H = 0.1379  (per=4)
+  H=  43: per/H = 0.1395  (per=6)
+  H=  43: per/H = 0.1395  (per=6)
+  H=  41: per/H = 0.1463  (per=6)
+  H=  27: per/H = 0.1481  (per=4)
+  H=  27: per/H = 0.1481  (per=4)
+  H=  37: per/H = 0.1622  (per=6)
+  H=  37: per/H = 0.1622  (per=6)
+  H=  29: per/H = 0.1724  (per=5)
+  H=  33: per/H = 0.1818  (per=6)
+  H=  37: per/H = 0.1892  (per=7)
+  H=  45: per/H = 0.2000  (per=9)
+
+Correlation(t3, C_2) = 0.5807
+  t3 values: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  C_2 values: [0, 1, 2, 4]
+    t3= 1, C_2= 0, H=   3, per=   0
+    t3= 1, C_2= 0, H=   3, per=   0
+    t3= 1, C_2= 0, H=   3, per=   0
+    t3= 1, C_2= 0, H=   3, per=   0
+    t3= 2, C_2= 0, H=   5, per=   0
+    t3= 2, C_2= 0, H=   5, per=   0
+    t3= 2, C_2= 0, H=   5, per=   0
+    t3= 2, C_2= 1, H=   9, per=   1
+    t3= 3, C_2= 0, H=   9, per=   0
+    t3= 3, C_2= 0, H=   9, per=   0
+    t3= 3, C_2= 0, H=   9, per=   0
+    t3= 3, C_2= 0, H=   9, per=   0
+    t3= 4, C_2= 0, H=  11, per=   0
+    t3= 4, C_2= 0, H=  15, per=   0
+    t3= 4, C_2= 0, H=  13, per=   0
+    t3= 4, C_2= 0, H=  17, per=   1
+    t3= 4, C_2= 0, H=  15, per=   1
+    t3= 4, C_2= 0, H=  15, per=   1
+    t3= 4, C_2= 1, H=  17, per=   2
+    t3= 4, C_2= 0, H=  11, per=   0
+    t3= 4, C_2= 0, H=  15, per=   0
+    t3= 4, C_2= 0, H=  13, per=   0
+    t3= 5, C_2= 0, H=  15, per=   0
+    t3= 5, C_2= 0, H=  19, per=   1
+    t3= 5, C_2= 1, H=  27, per=   4
+    t3= 5, C_2= 1, H=  23, per=   3
+    t3= 5, C_2= 0, H=  19, per=   1
+    t3= 5, C_2= 1, H=  23, per=   3
+    t3= 5, C_2= 1, H=  27, per=   4
+    t3= 5, C_2= 0, H=  15, per=   0
+    t3= 6, C_2= 0, H=  23, per=   1
+    t3= 6, C_2= 0, H=  23, per=   1
+    t3= 6, C_2= 0, H=  25, per=   2
+    t3= 6, C_2= 2, H=  37, per=   7
+    t3= 6, C_2= 2, H=  33, per=   6
+    t3= 6, C_2= 1, H=  31, per=   4
+    t3= 6, C_2= 1, H=  29, per=   4
+    t3= 6, C_2= 1, H=  31, per=   4
+    t3= 6, C_2= 0, H=  25, per=   2
+    t3= 6, C_2= 1, H=  29, per=   4
+    t3= 6, C_2= 2, H=  29, per=   5
+    t3= 6, C_2= 1, H=  29, per=   3
+    t3= 7, C_2= 0, H=  33, per=   3
+    t3= 7, C_2= 1, H=  37, per=   5
+    t3= 7, C_2= 2, H=  37, per=   6
+    t3= 7, C_2= 1, H=  33, per=   4
+    t3= 7, C_2= 2, H=  37, per=   6
+    t3= 7, C_2= 1, H=  33, per=   4
+    t3= 7, C_2= 1, H=  37, per=   5
+    t3= 7, C_2= 0, H=  33, per=   3
+    t3= 8, C_2= 2, H=  41, per=   6
+    t3= 8, C_2= 1, H=  43, per=   6
+    t3= 8, C_2= 1, H=  43, per=   6
+    t3= 8, C_2= 4, H=  45, per=   9
+    t3= 8, C_2= 1, H=  45, per=   6
+
+Classes with even-length cycle covers: 35/56
+  #12: per_even=1, per_odd=0, cover_types={(6,): 1}
+  #14: per_even=1, per_odd=0, cover_types={(6,): 1}
+  #16: per_even=1, per_odd=0, cover_types={(6,): 1}
+  #18: per_even=1, per_odd=0, cover_types={(6,): 1}
+  #20: per_even=3, per_odd=1, cover_types={(6,): 3, (3, 3): 1}
+  #21: per_even=2, per_odd=1, cover_types={(3, 3): 1, (6,): 2}
+  #22: per_even=1, per_odd=1, cover_types={(6,): 1, (3, 3): 1}
+  #24: per_even=1, per_odd=0, cover_types={(6,): 1}
+  #26: per_even=1, per_odd=0, cover_types={(6,): 1}
+  #27: per_even=1, per_odd=0, cover_types={(6,): 1}
+  #28: per_even=3, per_odd=0, cover_types={(6,): 3}
+  #29: per_even=2, per_odd=0, cover_types={(6,): 2}
+  #30: per_even=5, per_odd=2, cover_types={(6,): 5, (3, 3): 2}
+  #31: per_even=4, per_odd=2, cover_types={(6,): 4, (3, 3): 2}
+  #32: per_even=3, per_odd=1, cover_types={(6,): 3, (3, 3): 1}
+  #33: per_even=2, per_odd=1, cover_types={(6,): 2, (3, 3): 1}
+  #34: per_even=3, per_odd=1, cover_types={(6,): 3, (3, 3): 1}
+  #35: per_even=3, per_odd=1, cover_types={(6,): 3, (3, 3): 1}
+  #38: per_even=4, per_odd=1, cover_types={(6,): 4, (3, 3): 1}
+  #39: per_even=3, per_odd=1, cover_types={(6,): 3, (3, 3): 1}
+  #40: per_even=2, per_odd=0, cover_types={(6,): 2}
+  #41: per_even=3, per_odd=1, cover_types={(6,): 3, (3, 3): 1}
+  #42: per_even=4, per_odd=2, cover_types={(6,): 4, (3, 3): 2}
+  #43: per_even=3, per_odd=2, cover_types={(6,): 3, (3, 3): 2}
+  #44: per_even=2, per_odd=1, cover_types={(6,): 2, (3, 3): 1}
+  #45: per_even=3, per_odd=1, cover_types={(6,): 3, (3, 3): 1}
+  #46: per_even=4, per_odd=2, cover_types={(3, 3): 2, (6,): 4}
+  #47: per_even=4, per_odd=2, cover_types={(6,): 4, (3, 3): 2}
+  #48: per_even=3, per_odd=1, cover_types={(6,): 3, (3, 3): 1}
+  #49: per_even=4, per_odd=1, cover_types={(6,): 4, (3, 3): 1}
+  #51: per_even=5, per_odd=1, cover_types={(6,): 5, (3, 3): 1}
+  #52: per_even=5, per_odd=1, cover_types={(6,): 5, (3, 3): 1}
+  #53: per_even=3, per_odd=0, cover_types={(6,): 3}
+  #54: per_even=5, per_odd=4, cover_types={(3, 3): 4, (6,): 5}
+  #55: per_even=5, per_odd=1, cover_types={(3, 3): 1, (6,): 5}
+
+H(T) = Q(T) + R(T) decomposition:
+  Q(T) = contribution from vertex-covering disjoint odd-cycle collections
+  R(T) = contribution from PARTIAL odd-cycle packings (+ empty set)
+  H=   1 = Q=   0 + R=   1  (Q/H=0.000)
+  H=   3 = Q=   0 + R=   3  (Q/H=0.000)
+  H=   3 = Q=   0 + R=   3  (Q/H=0.000)
+  H=   3 = Q=   0 + R=   3  (Q/H=0.000)
+  H=   3 = Q=   0 + R=   3  (Q/H=0.000)
+  H=   5 = Q=   0 + R=   5  (Q/H=0.000)
+  H=   5 = Q=   0 + R=   5  (Q/H=0.000)
+  H=   5 = Q=   0 + R=   5  (Q/H=0.000)
+  H=   9 = Q=   0 + R=   9  (Q/H=0.000)
+  H=   9 = Q=   0 + R=   9  (Q/H=0.000)
+  H=   9 = Q=   0 + R=   9  (Q/H=0.000)
+  H=   9 = Q=   0 + R=   9  (Q/H=0.000)
+  H=   9 = Q=   4 + R=   5  (Q/H=0.444)
+  H=  11 = Q=   0 + R=  11  (Q/H=0.000)
+  H=  11 = Q=   0 + R=  11  (Q/H=0.000)
+  H=  13 = Q=   0 + R=  13  (Q/H=0.000)
+  H=  13 = Q=   0 + R=  13  (Q/H=0.000)
+  H=  15 = Q=   0 + R=  15  (Q/H=0.000)
+  H=  15 = Q=   0 + R=  15  (Q/H=0.000)
+  H=  15 = Q=   0 + R=  15  (Q/H=0.000)
+  H=  15 = Q=   0 + R=  15  (Q/H=0.000)
+  H=  15 = Q=   0 + R=  15  (Q/H=0.000)
+  H=  15 = Q=   0 + R=  15  (Q/H=0.000)
+  H=  17 = Q=   0 + R=  17  (Q/H=0.000)
+  H=  17 = Q=   4 + R=  13  (Q/H=0.235)
+  H=  19 = Q=   0 + R=  19  (Q/H=0.000)
+  H=  19 = Q=   0 + R=  19  (Q/H=0.000)
+  H=  23 = Q=   4 + R=  19  (Q/H=0.174)
+  H=  23 = Q=   0 + R=  23  (Q/H=0.000)
+  H=  23 = Q=   0 + R=  23  (Q/H=0.000)
+  H=  23 = Q=   4 + R=  19  (Q/H=0.174)
+  H=  25 = Q=   0 + R=  25  (Q/H=0.000)
+  H=  25 = Q=   0 + R=  25  (Q/H=0.000)
+  H=  27 = Q=   4 + R=  23  (Q/H=0.148)
+  H=  27 = Q=   4 + R=  23  (Q/H=0.148)
+  H=  29 = Q=   4 + R=  25  (Q/H=0.138)
+  H=  29 = Q=   4 + R=  25  (Q/H=0.138)
+  H=  29 = Q=   8 + R=  21  (Q/H=0.276)
+  H=  29 = Q=   4 + R=  25  (Q/H=0.138)
+  H=  31 = Q=   4 + R=  27  (Q/H=0.129)
+  H=  31 = Q=   4 + R=  27  (Q/H=0.129)
+  H=  33 = Q=   0 + R=  33  (Q/H=0.000)
+  H=  33 = Q=   8 + R=  25  (Q/H=0.242)
+  H=  33 = Q=   4 + R=  29  (Q/H=0.121)
+  H=  33 = Q=   4 + R=  29  (Q/H=0.121)
+  H=  33 = Q=   0 + R=  33  (Q/H=0.000)
+  H=  37 = Q=   8 + R=  29  (Q/H=0.216)
+  H=  37 = Q=   4 + R=  33  (Q/H=0.108)
+  H=  37 = Q=   8 + R=  29  (Q/H=0.216)
+  H=  37 = Q=   8 + R=  29  (Q/H=0.216)
+  H=  37 = Q=   4 + R=  33  (Q/H=0.108)
+  H=  41 = Q=   8 + R=  33  (Q/H=0.195)
+  H=  43 = Q=   4 + R=  39  (Q/H=0.093)
+  H=  43 = Q=   4 + R=  39  (Q/H=0.093)
+  H=  45 = Q=  16 + R=  29  (Q/H=0.356)
+  H=  45 = Q=   4 + R=  41  (Q/H=0.089)
+
+Alpha_k (independent set counts) statistics:
+  α_0: min=1, max=1, mean=1.0
+  α_1: min=1, max=20, mean=9.4
+  α_2: min=1, max=4, mean=1.4
+
+
+=====================================================================================
+THEORETICAL SUMMARY
+=====================================================================================
+
+Three partition functions on tournament T:
+
+  per(A) = Σ (cycle covers of ALL vertices using cycles of length ≥ 3)
+  H(T)   = I(Ω(T), 2) = Σ_k α_k · 2^k  (disjoint ODD-cycle collections, partial or total)
+  Q(T)   = Σ (2^k over vertex-COVERING disjoint odd-cycle partitions)
+
+Decompositions:
+  H(T) = Q(T) + R(T)       where R counts partial odd-cycle packings
+  per(A) = per_odd + per_even   where per_even uses ≥1 even-length cycle
+
+Key observations:
+  1. At n≤5: per(A) = ham(A) (no multi-cycle covers possible)
+  2. At n=6: C_2 counts disjoint 3-cycle PAIRS (the first multi-cycle covers)
+  3. Q(T) from cycle covers EQUALS Q(T) from independence polynomial (verified)
+  4. R(T) = H(T) - Q(T) measures the "partial packing surplus"
+  5. The possible cycle-count k in covers = partitions of n into parts ≥ 3
+

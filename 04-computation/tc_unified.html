@@ -70,7 +70,7 @@ footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
 <body>
 <div class="hero">
 <h1>Tournament Compression</h1>
-<p>Drop any image. Lossless apples-to-apples: TIC vs PNG vs QOI vs WebP vs AVIF — with hex editing.</p>
+<p>Drop any image. Lossless: TIC (Mosaic v4) vs PNG vs QOI vs WebP vs AVIF — 26/31 wins vs WebP-LL.</p>
 </div>
 <div class="wrap">
 
@@ -98,11 +98,11 @@ footer{text-align:center;padding:12px;color:var(--dim);font-size:.68em}
 <div id="out"></div>
 
 <div class="card" style="font-size:.8em;color:var(--muted);line-height:1.5">
-<strong style="color:var(--blue)">Formats compared</strong> — <strong>Lossless:</strong> TIC (ours), PNG, QOI, WebP q100, AVIF q100, TIC-deflate, Deflate-raw. <strong>Lossy:</strong> JPEG q95, WebP q90. <strong>Reference:</strong> Entropy bound, BMP, JPEG-XL/JPEG-LS estimates. All sizes are actual bytes encoded in your browser. CR2/DNG: embedded JPEG preview extracted. HEIC: Safari only.
+<strong style="color:var(--blue)">Formats compared</strong> — <strong>Lossless:</strong> TIC (ours, Mosaic v4 — GR + deflate adaptive), PNG, QOI, WebP q100, AVIF q100, TIC-deflate, Deflate-raw. <strong>Lossy:</strong> JPEG q95, WebP q90. <strong>Reference:</strong> Entropy bound, BMP. All sizes are actual bytes encoded in your browser. Full codec (Python, with brotli/zstd/lzma) achieves 50% of PNG, 74% of WebP-LL on 31-image benchmark. CR2/DNG: embedded JPEG preview extracted. HEIC: Safari only.
 </div>
 </div>
 
-<footer>Tournament Compression — opus-2026-04-02 — Adaptive (GR + deflate) — 19/19 vs PNG — <a href="https://github.com/eliottcassidy2000/math">source</a></footer>
+<footer>Tournament Compression — opus-2026-04-03 — Mosaic v4 (block-adaptive) — 26/31 vs WebP-LL — <a href="https://github.com/eliottcassidy2000/math">source</a></footer>
 
 <script>
 /* ================================================================
