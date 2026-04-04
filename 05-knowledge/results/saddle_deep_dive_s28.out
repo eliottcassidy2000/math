@@ -1,0 +1,262 @@
+
+======================================================================
+DEEP SADDLE ANALYSIS: n=3, m=1
+======================================================================
+Apex tile(s) (max skip=2): [((3, 1), 'A')]
+Hypotenuse tile(s) (max dist=4): [((3, 1), 'A')]
+Base tile(s) (min dist=4): [((3, 1), 'A')]
+
+--- APEX BIT vs HYPOTENUSE WEIGHT as saddle coordinates ---
+
+Mean H by (apex_bit, rest_weight):
+              rw= 0
+apex= 0:     1.0
+apex= 1:     3.0
+
+--- SADDLE COORDINATE SEARCH ---
+
+Pairwise interaction R² (top 10):
+
+--- PARITY AND INTERACTION EFFECTS ---
+Mean H (even parity): 1.0000 (1 tilings)
+Mean H (odd parity):  3.0000 (1 tilings)
+Mean H (apex=0): 1.0000
+Mean H (apex=1): 3.0000
+Apex effect: 2.0000
+
+--- COMPLEMENT REFLECTION ANALYSIS ---
+Number of complement pairs: 1
+Mean |H(t) - H(comp(t))| = 2.0000
+Max |H(t) - H(comp(t))| = 2
+
+Complement gap by Hamming weight:
+  w=0: mean |gap| = 2.00, max = 2, n = 1
+
+--- TILE-LEVEL WIGGLY vs COMPLEMENT EFFECTS ---
+
+Decomposing complement delta into wiggly sum + interaction:
+  Mean interaction = 0.0000
+  Mean |interaction| = 0.0000
+  Var(interaction) = 0.0000
+  Var(comp_delta) = 4.0000 (sampled)
+  Interaction distribution: {0: 2}
+
+--- H GRADIENT ANALYSIS ---
+Which tile is MOST OFTEN the best flip (steepest ascent)?
+  A (3,1) skip=2: 2 times (100.0%)
+Which tile is MOST OFTEN the worst flip (steepest descent)?
+  A (3,1) skip=2: 2 times (100.0%)
+
+======================================================================
+DEEP SADDLE ANALYSIS: n=4, m=3
+======================================================================
+Apex tile(s) (max skip=3): [((4, 1), 'A')]
+Hypotenuse tile(s) (max dist=6): [((4, 2), 'C')]
+Base tile(s) (min dist=4): [((3, 1), 'B')]
+
+--- APEX BIT vs HYPOTENUSE WEIGHT as saddle coordinates ---
+
+Mean H by (apex_bit, rest_weight):
+              rw= 0  rw= 1  rw= 2
+apex= 0:     1.0     3.0     5.0
+apex= 1:     5.0     5.0     5.0
+
+--- SADDLE COORDINATE SEARCH ---
+
+Pairwise interaction R² (top 10):
+  AC = (4,1)×(4,2) skip=(3,2) dist=(5,6): R²=0.7500
+  AB = (4,1)×(3,1) skip=(3,2) dist=(5,4): R²=0.7500
+  BC = (3,1)×(4,2) skip=(2,2) dist=(4,6): R²=0.2500
+
+--- PARITY AND INTERACTION EFFECTS ---
+Mean H (even parity): 4.0000 (4 tilings)
+Mean H (odd parity):  4.0000 (4 tilings)
+Mean H (apex=0): 3.0000
+Mean H (apex=1): 5.0000
+Apex effect: 2.0000
+
+--- COMPLEMENT REFLECTION ANALYSIS ---
+Number of complement pairs: 4
+Mean |H(t) - H(comp(t))| = 2.0000
+Max |H(t) - H(comp(t))| = 4
+
+Complement gap by Hamming weight:
+  w=0: mean |gap| = 4.00, max = 4, n = 1
+  w=1: mean |gap| = 1.00, max = 2, n = 2
+  w=2: mean |gap| = 2.00, max = 2, n = 1
+
+--- TILE-LEVEL WIGGLY vs COMPLEMENT EFFECTS ---
+
+Decomposing complement delta into wiggly sum + interaction:
+  Mean interaction = 0.0000
+  Mean |interaction| = 2.0000
+  Var(interaction) = 8.0000
+  Var(comp_delta) = 6.0000 (sampled)
+  Interaction distribution: {-4: 2, 0: 4, 4: 2}
+
+--- H GRADIENT ANALYSIS ---
+Which tile is MOST OFTEN the best flip (steepest ascent)?
+  A (4,1) skip=3: 5 times (62.5%)
+  B (3,1) skip=2: 3 times (37.5%)
+Which tile is MOST OFTEN the worst flip (steepest descent)?
+  A (4,1) skip=3: 4 times (50.0%)
+  B (3,1) skip=2: 3 times (37.5%)
+  C (4,2) skip=2: 1 times (12.5%)
+
+======================================================================
+DEEP SADDLE ANALYSIS: n=5, m=6
+======================================================================
+Apex tile(s) (max skip=4): [((5, 1), 'A')]
+Hypotenuse tile(s) (max dist=8): [((5, 3), 'F')]
+Base tile(s) (min dist=4): [((3, 1), 'C')]
+
+--- APEX BIT vs HYPOTENUSE WEIGHT as saddle coordinates ---
+
+Mean H by (apex_bit, rest_weight):
+              rw= 0  rw= 1  rw= 2  rw= 3  rw= 4  rw= 5
+apex= 0:     1.0     3.8     7.0     9.6    11.0    11.0
+apex= 1:     9.0    11.0    12.4    12.6    11.4     9.0
+
+--- SADDLE COORDINATE SEARCH ---
+
+Pairwise interaction R² (top 10):
+  AF = (5,1)×(5,3) skip=(4,2) dist=(6,8): R²=0.4010
+  AD = (5,1)×(5,2) skip=(4,3) dist=(6,7): R²=0.4010
+  AC = (5,1)×(3,1) skip=(4,2) dist=(6,4): R²=0.4010
+  AB = (5,1)×(4,1) skip=(4,3) dist=(6,5): R²=0.4010
+  AE = (5,1)×(4,2) skip=(4,2) dist=(6,6): R²=0.3159
+  CF = (3,1)×(5,3) skip=(2,2) dist=(4,8): R²=0.1786
+  DF = (5,2)×(5,3) skip=(3,2) dist=(7,8): R²=0.1495
+  BC = (4,1)×(3,1) skip=(3,2) dist=(5,4): R²=0.1495
+  CD = (3,1)×(5,2) skip=(2,3) dist=(4,7): R²=0.0948
+  BF = (4,1)×(5,3) skip=(3,2) dist=(5,8): R²=0.0948
+
+--- PARITY AND INTERACTION EFFECTS ---
+Mean H (even parity): 9.8750 (32 tilings)
+Mean H (odd parity):  9.8750 (32 tilings)
+Mean H (apex=0): 7.8750
+Mean H (apex=1): 11.8750
+Apex effect: 4.0000
+
+--- COMPLEMENT REFLECTION ANALYSIS ---
+Number of complement pairs: 32
+Mean |H(t) - H(comp(t))| = 4.1250
+Max |H(t) - H(comp(t))| = 10
+
+Complement gap by Hamming weight:
+  w=0: mean |gap| = 8.00, max = 8, n = 1
+  w=1: mean |gap| = 6.80, max = 10, n = 5
+  w=2: mean |gap| = 3.80, max = 10, n = 10
+  w=3: mean |gap| = 2.80, max = 4, n = 10
+  w=4: mean |gap| = 3.60, max = 6, n = 5
+  w=5: mean |gap| = 6.00, max = 6, n = 1
+
+--- TILE-LEVEL WIGGLY vs COMPLEMENT EFFECTS ---
+
+Decomposing complement delta into wiggly sum + interaction:
+  Mean interaction = 0.0000
+  Mean |interaction| = 8.7500
+  Var(interaction) = 110.0000
+  Var(comp_delta) = 26.7500 (sampled)
+  Interaction distribution: {-22: 1, -16: 2, -14: 3, -12: 4, -10: 6, -8: 4, -6: 4, -4: 5, 0: 5, 2: 3, 4: 6, 6: 7, 8: 2, 12: 3, 14: 5, 18: 2, 24: 1, 26: 1}
+
+--- H GRADIENT ANALYSIS ---
+Which tile is MOST OFTEN the best flip (steepest ascent)?
+  A (5,1) skip=4: 24 times (37.5%)
+  B (4,1) skip=3: 13 times (20.3%)
+  C (3,1) skip=2: 11 times (17.2%)
+  E (4,2) skip=2: 6 times (9.4%)
+  D (5,2) skip=3: 5 times (7.8%)
+  F (5,3) skip=2: 5 times (7.8%)
+Which tile is MOST OFTEN the worst flip (steepest descent)?
+  A (5,1) skip=4: 24 times (37.5%)
+  B (4,1) skip=3: 13 times (20.3%)
+  C (3,1) skip=2: 11 times (17.2%)
+  D (5,2) skip=3: 9 times (14.1%)
+  F (5,3) skip=2: 4 times (6.2%)
+  E (4,2) skip=2: 3 times (4.7%)
+
+======================================================================
+DEEP SADDLE ANALYSIS: n=6, m=10
+======================================================================
+Apex tile(s) (max skip=5): [((6, 1), 'A')]
+Hypotenuse tile(s) (max dist=10): [((6, 4), 'J')]
+Base tile(s) (min dist=4): [((3, 1), 'D')]
+
+--- APEX BIT vs HYPOTENUSE WEIGHT as saddle coordinates ---
+
+Mean H by (apex_bit, rest_weight):
+              rw= 0  rw= 1  rw= 2  rw= 3  rw= 4  rw= 5  rw= 6  rw= 7  rw= 8  rw= 9
+apex= 0:     1.0     5.0    11.1    17.9    24.1    28.9    31.9    32.8    31.7    29.0
+apex= 1:    17.0    22.8    28.3    32.7    35.1    35.3    33.1    28.9    23.2    17.0
+
+--- SADDLE COORDINATE SEARCH ---
+
+Pairwise interaction R² (top 10):
+  AJ = (6,1)×(6,4) skip=(5,2) dist=(7,10): R²=0.2206
+  AD = (6,1)×(3,1) skip=(5,2) dist=(7,4): R²=0.2206
+  AE = (6,1)×(6,2) skip=(5,4) dist=(7,8): R²=0.2119
+  AB = (6,1)×(5,1) skip=(5,4) dist=(7,6): R²=0.2119
+  AH = (6,1)×(6,3) skip=(5,3) dist=(7,9): R²=0.1961
+  AC = (6,1)×(4,1) skip=(5,3) dist=(7,5): R²=0.1961
+  AF = (6,1)×(5,2) skip=(5,3) dist=(7,7): R²=0.1542
+  AI = (6,1)×(5,3) skip=(5,2) dist=(7,8): R²=0.1536
+  AG = (6,1)×(4,2) skip=(5,2) dist=(7,6): R²=0.1536
+  HJ = (6,3)×(6,4) skip=(3,2) dist=(9,10): R²=0.0891
+
+--- PARITY AND INTERACTION EFFECTS ---
+Mean H (even parity): 29.0000 (512 tilings)
+Mean H (odd parity):  29.0000 (512 tilings)
+Mean H (apex=0): 25.0000
+Mean H (apex=1): 33.0000
+Apex effect: 8.0000
+
+--- COMPLEMENT REFLECTION ANALYSIS ---
+Number of complement pairs: 512
+Mean |H(t) - H(comp(t))| = 9.9219
+Max |H(t) - H(comp(t))| = 28
+
+Complement gap by Hamming weight:
+  w=0: mean |gap| = 16.00, max = 16, n = 1
+  w=1: mean |gap| = 18.22, max = 24, n = 9
+  w=2: mean |gap| = 16.89, max = 26, n = 36
+  w=3: mean |gap| = 13.00, max = 28, n = 84
+  w=4: mean |gap| = 9.21, max = 28, n = 126
+  w=5: mean |gap| = 7.17, max = 24, n = 126
+  w=6: mean |gap| = 7.81, max = 26, n = 84
+  w=7: mean |gap| = 9.89, max = 24, n = 36
+  w=8: mean |gap| = 12.44, max = 22, n = 9
+  w=9: mean |gap| = 12.00, max = 12, n = 1
+
+--- TILE-LEVEL WIGGLY vs COMPLEMENT EFFECTS ---
+
+Decomposing complement delta into wiggly sum + interaction:
+  Mean interaction = 0.0000
+  Mean |interaction| = 29.5859
+  Var(interaction) = 1235.0000
+  Var(comp_delta) = 156.6800 (sampled)
+  Interaction distribution: {-84: 1, -82: 2, -78: 2, -76: 2, -72: 2, -70: 2, -66: 6, -64: 2, -62: 6, -60: 6, -58: 6, -56: 15, -54: 4, -52: 12, -50: 24, -48: 7, -46: 12, -44: 9, -42: 12, -40: 16, -38: 28, -36: 22, -34: 16, -32: 14, -30: 18, -28: 25, -26: 24, -24: 20, -22: 16, -20: 10, -18: 20, -16: 25, -14: 14, -12: 6, -10: 20, -8: 19, -6: 26, -4: 21, -2: 16, 0: 15, 2: 12, 4: 19, 6: 24, 8: 28, 10: 18, 12: 23, 14: 26, 16: 27, 18: 12, 20: 14, 22: 14, 24: 11, 26: 14, 28: 12, 30: 16, 32: 17, 34: 14, 36: 20, 38: 6, 40: 11, 42: 14, 44: 12, 46: 26, 48: 8, 50: 16, 52: 9, 54: 2, 56: 17, 58: 8, 60: 17, 62: 10, 64: 5, 66: 4, 68: 6, 70: 2, 72: 5, 76: 2}
+
+--- H GRADIENT ANALYSIS ---
+Which tile is MOST OFTEN the best flip (steepest ascent)?
+  A (6,1) skip=5: 215 times (21.0%)
+  B (5,1) skip=4: 135 times (13.2%)
+  D (3,1) skip=2: 116 times (11.3%)
+  C (4,1) skip=3: 105 times (10.3%)
+  E (6,2) skip=4: 90 times (8.8%)
+  J (6,4) skip=2: 84 times (8.2%)
+  H (6,3) skip=3: 73 times (7.1%)
+  F (5,2) skip=3: 72 times (7.0%)
+  G (4,2) skip=2: 68 times (6.6%)
+  I (5,3) skip=2: 66 times (6.4%)
+Which tile is MOST OFTEN the worst flip (steepest descent)?
+  A (6,1) skip=5: 243 times (23.7%)
+  B (5,1) skip=4: 135 times (13.2%)
+  D (3,1) skip=2: 123 times (12.0%)
+  C (4,1) skip=3: 121 times (11.8%)
+  E (6,2) skip=4: 103 times (10.1%)
+  H (6,3) skip=3: 91 times (8.9%)
+  J (6,4) skip=2: 91 times (8.9%)
+  F (5,2) skip=3: 49 times (4.8%)
+  G (4,2) skip=2: 38 times (3.7%)
+  I (5,3) skip=2: 30 times (2.9%)

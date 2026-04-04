@@ -1,0 +1,304 @@
+
+======================================================================
+n = 3, m = 1 tiles
+======================================================================
+
+Tile layout:
+  A: (3,1) skip=2 dist=4 [PER]
+
+Distance layers (x+y=c, parallel to hypotenuse):
+  x+y=4: 1 tiles — ['A']
+
+Skip layers (x-y=s, perpendicular to hypotenuse):
+  skip=2: 1 tiles — ['A']
+
+Enumerating 2 tilings...
+
+--- H-SADDLE ANALYSIS (hypotenuse weight, periphery weight) ---
+Hypotenuse tiles (1): ['A']
+Periphery tiles (1): ['A']
+
+Mean H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1
+hyp= 0:     1.0     ---
+hyp= 1:     ---     3.0
+
+Max H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1
+hyp= 0:       1     ---
+hyp= 1:     ---       3
+
+Min H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1
+hyp= 0:       1     ---
+hyp= 1:     ---       3
+
+Corner analysis:
+  (0,0): min=1, mean=1.0, max=1, count=1
+  (1,1): min=3, mean=3.0, max=3, count=1
+
+Main diagonal (0,0)->(max,max): 1.0 -> 3.0
+
+--- WIGGLY / COMPLEMENT DUALITY ---
+
+Wiggly (d=1) delta-H statistics per tile:
+  A (3,1) skip=2 dist=4: mean=+0.00 |mean|=2.00 neutral=0.000
+
+Complement (d=m) delta-H statistics:
+  mean=+0.00 |mean|=2.00 neutral=0.000
+  Distribution: {-2: 1, 2: 1}
+
+--- WIGGLY-COMPLEMENT CORRELATION ---
+  Pearson corr(avg |wiggly delta|, |complement delta|) = 0.0000
+
+--- DISTANCE-LAYER DECOMPOSITION ---
+Distance layers: {4: 1}
+Overall: mean(H) = 2.00, var(H) = 1.00
+  dist (x+y)=4 (1 tiles): R²=1.0000  means={0: 1.0, 1: 3.0}
+  skip (x-y)=2 (1 tiles): R²=1.0000  means={0: 1.0, 1: 3.0}
+
+
+======================================================================
+n = 4, m = 3 tiles
+======================================================================
+
+Tile layout:
+  A: (4,1) skip=3 dist=5 [INT]
+  B: (3,1) skip=2 dist=4 [HYP,PER]
+  C: (4,2) skip=2 dist=6 [PER]
+
+Distance layers (x+y=c, parallel to hypotenuse):
+  x+y=4: 1 tiles — ['B']
+  x+y=5: 1 tiles — ['A']
+  x+y=6: 1 tiles — ['C']
+
+Skip layers (x-y=s, perpendicular to hypotenuse):
+  skip=2: 2 tiles — ['B', 'C']
+  skip=3: 1 tiles — ['A']
+
+Enumerating 8 tilings...
+
+--- H-SADDLE ANALYSIS (hypotenuse weight, periphery weight) ---
+Hypotenuse tiles (1): ['C']
+Periphery tiles (2): ['B', 'C']
+
+Mean H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1  per= 2
+hyp= 0:     3.0     4.0     ---
+hyp= 1:     ---     4.0     5.0
+
+Max H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1  per= 2
+hyp= 0:       5       5     ---
+hyp= 1:     ---       5       5
+
+Min H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1  per= 2
+hyp= 0:       1       3     ---
+hyp= 1:     ---       3       5
+
+Corner analysis:
+  (0,0): min=1, mean=3.0, max=5, count=2
+  (1,2): min=5, mean=5.0, max=5, count=2
+
+Main diagonal (0,0)->(max,max): 3.0 -> 5.0
+
+--- WIGGLY / COMPLEMENT DUALITY ---
+
+Wiggly (d=1) delta-H statistics per tile:
+  A (4,1) skip=3 dist=5: mean=+0.00 |mean|=2.00 neutral=0.250
+  B (3,1) skip=2 dist=4: mean=+0.00 |mean|=1.00 neutral=0.500
+  C (4,2) skip=2 dist=6: mean=+0.00 |mean|=1.00 neutral=0.500
+
+Complement (d=m) delta-H statistics:
+  mean=+0.00 |mean|=2.00 neutral=0.250
+  Distribution: {-4: 1, -2: 2, 0: 2, 2: 2, 4: 1}
+
+--- WIGGLY-COMPLEMENT CORRELATION ---
+  Pearson corr(avg |wiggly delta|, |complement delta|) = 0.0000
+
+--- DISTANCE-LAYER DECOMPOSITION ---
+Distance layers: {4: 1, 5: 1, 6: 1}
+Overall: mean(H) = 4.00, var(H) = 2.00
+  dist (x+y)=4 (1 tiles): R²=0.1250  means={0: 3.5, 1: 4.5}
+  dist (x+y)=5 (1 tiles): R²=0.5000  means={0: 3.0, 1: 5.0}
+  dist (x+y)=6 (1 tiles): R²=0.1250  means={0: 3.5, 1: 4.5}
+  skip (x-y)=2 (2 tiles): R²=0.2500  means={0: 3.0, 1: 4.0, 2: 5.0}
+  skip (x-y)=3 (1 tiles): R²=0.5000  means={0: 3.0, 1: 5.0}
+
+
+======================================================================
+n = 5, m = 6 tiles
+======================================================================
+
+Tile layout:
+  A: (5,1) skip=4 dist=6 [INT]
+  B: (4,1) skip=3 dist=5 [HYP]
+  C: (3,1) skip=2 dist=4 [PER]
+  D: (5,2) skip=3 dist=7 [INT]
+  E: (4,2) skip=2 dist=6 [PER]
+  F: (5,3) skip=2 dist=8 [PER]
+
+Distance layers (x+y=c, parallel to hypotenuse):
+  x+y=4: 1 tiles — ['C']
+  x+y=5: 1 tiles — ['B']
+  x+y=6: 2 tiles — ['A', 'E']
+  x+y=7: 1 tiles — ['D']
+  x+y=8: 1 tiles — ['F']
+
+Skip layers (x-y=s, perpendicular to hypotenuse):
+  skip=2: 3 tiles — ['C', 'E', 'F']
+  skip=3: 2 tiles — ['B', 'D']
+  skip=4: 1 tiles — ['A']
+
+Enumerating 64 tilings...
+
+--- H-SADDLE ANALYSIS (hypotenuse weight, periphery weight) ---
+Hypotenuse tiles (1): ['F']
+Periphery tiles (3): ['C', 'E', 'F']
+
+Mean H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1  per= 2  per= 3
+hyp= 0:     8.8     9.0     9.2     ---
+hyp= 1:     ---     8.8    11.2    11.8
+
+Max H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1  per= 2  per= 3
+hyp= 0:      15      15      15     ---
+hyp= 1:     ---      13      15      15
+
+Min H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1  per= 2  per= 3
+hyp= 0:       1       3       5     ---
+hyp= 1:     ---       3       5       9
+
+Corner analysis:
+  (0,0): min=1, mean=8.8, max=15, count=8
+  (1,3): min=9, mean=11.8, max=15, count=8
+
+Main diagonal (0,0)->(max,max): 8.8 -> 11.8
+
+--- WIGGLY / COMPLEMENT DUALITY ---
+
+Wiggly (d=1) delta-H statistics per tile:
+  A (5,1) skip=4 dist=6: mean=+0.00 |mean|=4.25 neutral=0.125
+  B (4,1) skip=3 dist=5: mean=+0.00 |mean|=2.75 neutral=0.188
+  C (3,1) skip=2 dist=4: mean=+0.00 |mean|=2.88 neutral=0.156
+  D (5,2) skip=3 dist=7: mean=+0.00 |mean|=2.75 neutral=0.188
+  E (4,2) skip=2 dist=6: mean=+0.00 |mean|=2.00 neutral=0.250
+  F (5,3) skip=2 dist=8: mean=+0.00 |mean|=2.88 neutral=0.156
+
+Complement (d=m) delta-H statistics:
+  mean=+0.00 |mean|=4.12 neutral=0.219
+  Distribution: {-10: 3, -8: 3, -6: 6, -4: 8, -2: 5, 0: 14, 2: 5, 4: 8, 6: 6, 8: 3, 10: 3}
+
+--- WIGGLY-COMPLEMENT CORRELATION ---
+  Pearson corr(avg |wiggly delta|, |complement delta|) = 0.0419
+
+--- DISTANCE-LAYER DECOMPOSITION ---
+Distance layers: {4: 1, 5: 1, 6: 2, 7: 1, 8: 1}
+Overall: mean(H) = 9.88, var(H) = 12.86
+  dist (x+y)=4 (1 tiles): R²=0.0595  means={0: 9.0, 1: 10.75}
+  dist (x+y)=5 (1 tiles): R²=0.0304  means={0: 9.25, 1: 10.5}
+  dist (x+y)=6 (2 tiles): R²=0.1604  means={0: 8.125, 1: 9.625, 2: 12.125}
+  dist (x+y)=7 (1 tiles): R²=0.0304  means={0: 9.25, 1: 10.5}
+  dist (x+y)=8 (1 tiles): R²=0.0595  means={0: 9.0, 1: 10.75}
+  skip (x-y)=2 (3 tiles): R²=0.0879  means={0: 8.75, 1: 8.916666666666666, 2: 10.583333333333334, 3: 11.75}
+  skip (x-y)=3 (2 tiles): R²=0.0620  means={0: 8.5, 1: 10.0, 2: 11.0}
+  skip (x-y)=4 (1 tiles): R²=0.3111  means={0: 7.875, 1: 11.875}
+
+
+======================================================================
+n = 6, m = 10 tiles
+======================================================================
+
+Tile layout:
+  A: (6,1) skip=5 dist=7 [INT]
+  B: (5,1) skip=4 dist=6 [HYP]
+  C: (4,1) skip=3 dist=5 [INT]
+  D: (3,1) skip=2 dist=4 [PER]
+  E: (6,2) skip=4 dist=8 [INT]
+  F: (5,2) skip=3 dist=7 [INT]
+  G: (4,2) skip=2 dist=6 [HYP,PER]
+  H: (6,3) skip=3 dist=9 [INT]
+  I: (5,3) skip=2 dist=8 [PER]
+  J: (6,4) skip=2 dist=10 [PER]
+
+Distance layers (x+y=c, parallel to hypotenuse):
+  x+y=4: 1 tiles — ['D']
+  x+y=5: 1 tiles — ['C']
+  x+y=6: 2 tiles — ['B', 'G']
+  x+y=7: 2 tiles — ['A', 'F']
+  x+y=8: 2 tiles — ['E', 'I']
+  x+y=9: 1 tiles — ['H']
+  x+y=10: 1 tiles — ['J']
+
+Skip layers (x-y=s, perpendicular to hypotenuse):
+  skip=2: 4 tiles — ['D', 'G', 'I', 'J']
+  skip=3: 3 tiles — ['C', 'F', 'H']
+  skip=4: 2 tiles — ['B', 'E']
+  skip=5: 1 tiles — ['A']
+
+Enumerating 1024 tilings...
+
+--- H-SADDLE ANALYSIS (hypotenuse weight, periphery weight) ---
+Hypotenuse tiles (1): ['J']
+Periphery tiles (4): ['D', 'G', 'I', 'J']
+
+Mean H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1  per= 2  per= 3  per= 4
+hyp= 0:    28.2    26.2    27.2    27.2     ---
+hyp= 1:     ---    28.2    29.2    31.9    36.2
+
+Max H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1  per= 2  per= 3  per= 4
+hyp= 0:      45      45      45      43     ---
+hyp= 1:     ---      45      45      45      45
+
+Min H in (hyp_weight, per_weight) grid:
+          per= 0  per= 1  per= 2  per= 3  per= 4
+hyp= 0:       1       3       5       9     ---
+hyp= 1:     ---       3       5       9      17
+
+Corner analysis:
+  (0,0): min=1, mean=28.2, max=45, count=64
+  (1,4): min=17, mean=36.2, max=45, count=64
+
+Main diagonal (0,0)->(max,max): 28.2 -> 36.2
+
+--- WIGGLY / COMPLEMENT DUALITY ---
+
+Wiggly (d=1) delta-H statistics per tile:
+  A (6,1) skip=5 dist=7: mean=+0.00 |mean|=9.64 neutral=0.121
+  B (5,1) skip=4 dist=6: mean=+0.00 |mean|=6.59 neutral=0.164
+  C (4,1) skip=3 dist=5: mean=+0.00 |mean|=6.70 neutral=0.166
+  D (3,1) skip=2 dist=4: mean=+0.00 |mean|=7.01 neutral=0.133
+  E (6,2) skip=4 dist=8: mean=+0.00 |mean|=6.59 neutral=0.164
+  F (5,2) skip=3 dist=7: mean=+0.00 |mean|=5.62 neutral=0.180
+  G (4,2) skip=2 dist=6: mean=+0.00 |mean|=5.27 neutral=0.160
+  H (6,3) skip=3 dist=9: mean=+0.00 |mean|=6.70 neutral=0.166
+  I (5,3) skip=2 dist=8: mean=+0.00 |mean|=5.27 neutral=0.160
+  J (6,4) skip=2 dist=10: mean=+0.00 |mean|=7.01 neutral=0.133
+
+Complement (d=m) delta-H statistics:
+  mean=+0.00 |mean|=9.92 neutral=0.104
+  Distribution: {-28: 5, -26: 10, -24: 12, -22: 18, -20: 25, -18: 30, -16: 18, -14: 44, -12: 42, -10: 42, -8: 55, -6: 66, -4: 54, -2: 38, 0: 106, 2: 38, 4: 54, 6: 66, 8: 55, 10: 42, 12: 42, 14: 44, 16: 18, 18: 30, 20: 25, 22: 18, 24: 12, 26: 10, 28: 5}
+
+--- WIGGLY-COMPLEMENT CORRELATION ---
+  Pearson corr(avg |wiggly delta|, |complement delta|) = -0.1064
+
+--- DISTANCE-LAYER DECOMPOSITION ---
+Distance layers: {4: 1, 5: 1, 6: 2, 7: 2, 8: 2, 9: 1, 10: 1}
+Overall: mean(H) = 29.00, var(H) = 104.56
+  dist (x+y)=4 (1 tiles): R²=0.0383  means={0: 27.0, 1: 31.0}
+  dist (x+y)=5 (1 tiles): R²=0.0215  means={0: 27.5, 1: 30.5}
+  dist (x+y)=6 (2 tiles): R²=0.0128  means={0: 27.25, 1: 29.125, 2: 30.5}
+  dist (x+y)=7 (2 tiles): R²=0.0678  means={0: 25.5, 1: 28.75, 2: 33.0}
+  dist (x+y)=8 (2 tiles): R²=0.0128  means={0: 27.25, 1: 29.125, 2: 30.5}
+  dist (x+y)=9 (1 tiles): R²=0.0215  means={0: 27.5, 1: 30.5}
+  dist (x+y)=10 (1 tiles): R²=0.0383  means={0: 27.0, 1: 31.0}
+  skip (x-y)=2 (4 tiles): R²=0.0532  means={0: 28.25, 1: 26.75, 2: 28.25, 3: 30.75, 4: 36.25}
+  skip (x-y)=3 (3 tiles): R²=0.0249  means={0: 25.75, 1: 28.25, 2: 30.083333333333332, 3: 31.25}
+  skip (x-y)=4 (2 tiles): R²=0.0505  means={0: 25.75, 1: 29.0, 2: 32.25}
+  skip (x-y)=5 (1 tiles): R²=0.1530  means={0: 25.0, 1: 33.0}
+
