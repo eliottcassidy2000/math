@@ -1,0 +1,74 @@
+Building metagraph at n=5, m=6 tiles, 2^m=64 tilings
+  Fast invariant groups: 9
+  Isomorphism classes: 12
+  Metagraph edges: 30
+
+  Metagraph adjacency spectrum:
+    Eigenvalues: [np.float64(5.582), np.float64(1.942), np.float64(1.223), np.float64(1.0), np.float64(0.322), np.float64(0.033), np.float64(-0.416), np.float64(-1.0), np.float64(-1.184), np.float64(-1.751), np.float64(-2.496), np.float64(-3.255)]
+
+  H values: [1, 3, 5, 9, 11, 13, 15]
+  H range: [1, 15]
+
+  Self-complementary classes: 1
+  Non-self-complementary classes: 11
+
+  Degree distribution: min=2, max=7, mean=5.0
+
+  Per-class structure:
+    Class 0: H=1, size=1, SC=False, scores=(0, 1, 2, 3, 4), c3=0, self-loops=0/6, cross=6/6
+    Class 1: H=3, size=1, SC=False, scores=(0, 1, 3, 3, 3), c3=1, self-loops=0/6, cross=6/6
+    Class 2: H=3, size=1, SC=False, scores=(0, 2, 2, 2, 4), c3=1, self-loops=0/6, cross=6/6
+    Class 3: H=5, size=5, SC=False, scores=(0, 2, 2, 3, 3), c3=2, self-loops=2/6, cross=4/6
+    Class 4: H=3, size=1, SC=False, scores=(1, 1, 1, 3, 4), c3=1, self-loops=0/6, cross=6/6
+    Class 5: H=5, size=5, SC=False, scores=(1, 1, 2, 2, 4), c3=2, self-loops=2/6, cross=4/6
+    Class 6: H=9, size=9, SC=False, scores=(1, 1, 2, 3, 3), c3=3, self-loops=0/6, cross=6/6
+    Class 7: H=9, size=9, SC=False, scores=(1, 1, 2, 3, 3), c3=3, self-loops=0/6, cross=6/6
+    Class 8: H=11, size=11, SC=True, scores=(1, 2, 2, 2, 3), c3=4, self-loops=0/6, cross=6/6
+    Class 9: H=13, size=13, SC=False, scores=(1, 2, 2, 2, 3), c3=4, self-loops=0/6, cross=6/6
+    Class 10: H=15, size=5, SC=False, scores=(1, 2, 2, 2, 3), c3=4, self-loops=0/6, cross=6/6
+    Class 11: H=15, size=3, SC=False, scores=(2, 2, 2, 2, 2), c3=5, self-loops=0/6, cross=6/6
+
+Building metagraph at n=6, m=10 tiles, 2^m=1024 tilings
+  Fast invariant groups: 22
+  Isomorphism classes: 56
+  Metagraph edges: 290
+
+  Metagraph adjacency spectrum:
+    Eigenvalues: [np.float64(11.67), np.float64(6.794), np.float64(5.011), np.float64(4.343), np.float64(4.251), np.float64(4.01), np.float64(3.905), np.float64(3.706), np.float64(3.318), np.float64(3.056), np.float64(2.78), np.float64(2.621), np.float64(2.058), np.float64(1.765), np.float64(1.704), np.float64(1.546), np.float64(1.143), np.float64(0.972), np.float64(0.96), np.float64(0.866), np.float64(0.689), np.float64(0.512), np.float64(0.328), np.float64(0.321), np.float64(0.184), np.float64(0.181), np.float64(-0.02), np.float64(-0.088), np.float64(-0.283), np.float64(-0.381), np.float64(-0.502), np.float64(-0.773), np.float64(-0.836), np.float64(-0.952), np.float64(-1.146), np.float64(-1.33), np.float64(-1.452), np.float64(-1.592), np.float64(-1.625), np.float64(-1.745), np.float64(-1.905), np.float64(-2.084), np.float64(-2.124), np.float64(-2.266), np.float64(-2.607), np.float64(-2.738), np.float64(-2.86), np.float64(-3.03), np.float64(-3.252), np.float64(-3.628), np.float64(-3.881), np.float64(-4.448), np.float64(-4.58), np.float64(-4.694), np.float64(-5.392), np.float64(-6.478)]
+
+  H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  H range: [1, 45]
+
+  Self-complementary classes: 3
+  Non-self-complementary classes: 53
+
+  Degree distribution: min=3, max=14, mean=10.4
+
+  Per-class structure:
+    Class 0: H=1, size=1, SC=False, scores=(0, 1, 2, 3, 4, 5), c3=0, self-loops=0/10, cross=10/10
+    Class 1: H=3, size=1, SC=False, scores=(0, 1, 2, 4, 4, 4), c3=1, self-loops=0/10, cross=10/10
+    Class 2: H=3, size=1, SC=False, scores=(0, 1, 3, 3, 3, 5), c3=1, self-loops=0/10, cross=10/10
+    Class 3: H=5, size=5, SC=False, scores=(0, 1, 3, 3, 4, 4), c3=2, self-loops=2/10, cross=8/10
+    Class 4: H=3, size=1, SC=False, scores=(0, 2, 2, 2, 4, 5), c3=1, self-loops=0/10, cross=10/10
+    Class 5: H=5, size=5, SC=False, scores=(0, 2, 2, 3, 3, 5), c3=2, self-loops=2/10, cross=8/10
+    Class 6: H=9, size=9, SC=False, scores=(0, 2, 2, 3, 4, 4), c3=3, self-loops=0/10, cross=10/10
+    Class 7: H=9, size=9, SC=False, scores=(0, 2, 2, 3, 4, 4), c3=3, self-loops=0/10, cross=10/10
+    Class 8: H=11, size=11, SC=False, scores=(0, 2, 3, 3, 3, 4), c3=4, self-loops=0/10, cross=10/10
+    Class 9: H=13, size=13, SC=False, scores=(0, 2, 3, 3, 3, 4), c3=4, self-loops=0/10, cross=10/10
+    Class 10: H=15, size=5, SC=False, scores=(0, 2, 3, 3, 3, 4), c3=4, self-loops=0/10, cross=10/10
+    Class 11: H=15, size=3, SC=False, scores=(0, 3, 3, 3, 3, 3), c3=5, self-loops=0/10, cross=10/10
+    Class 12: H=3, size=1, SC=False, scores=(1, 1, 1, 3, 4, 5), c3=1, self-loops=0/10, cross=10/10
+    Class 13: H=9, size=1, SC=False, scores=(1, 1, 1, 4, 4, 4), c3=2, self-loops=0/10, cross=10/10
+    Class 14: H=5, size=5, SC=False, scores=(1, 1, 2, 2, 4, 5), c3=2, self-loops=2/10, cross=8/10
+
+============================================================
+n→n+2 TRANSITION: 4 → 6
+============================================================
+  Classes at n=4: 12
+  Classes at n+2=6: 56
+  Class 0 (H=1, SC=False) → 39 target classes, H range [1, 45]
+  Class 4 (H=3, SC=False) → 35 target classes, H range [3, 45]
+  Class 5 (H=5, SC=False) → 46 target classes, H range [3, 45]
+  Class 6 (H=9, SC=False) → 44 target classes, H range [5, 45]
+  Class 7 (H=9, SC=False) → 38 target classes, H range [5, 45]
+  Class 8 (H=11, SC=True) → 39 target classes, H range [5, 43]

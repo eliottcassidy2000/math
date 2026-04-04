@@ -1,0 +1,223 @@
+Building metagraph at n=5, m=6 tiles, 2^m=64 tilings
+  Fast invariant groups: 9
+  Isomorphism classes: 12
+  Metagraph edges: 30
+
+  Metagraph adjacency spectrum:
+    Eigenvalues: [np.float64(5.582), np.float64(1.942), np.float64(1.223), np.float64(1.0), np.float64(0.322), np.float64(0.033), np.float64(-0.416), np.float64(-1.0), np.float64(-1.184), np.float64(-1.751), np.float64(-2.496), np.float64(-3.255)]
+
+  H values: [1, 3, 5, 9, 11, 13, 15]
+  H range: [1, 15]
+
+  Self-complementary classes: 1
+  Non-self-complementary classes: 11
+
+  Degree distribution: min=2, max=7, mean=5.0
+
+  Per-class structure:
+    Class 0: H=1, size=1, SC=False, scores=(0, 1, 2, 3, 4), c3=0, self-loops=0/6, cross=6/6
+    Class 1: H=3, size=1, SC=False, scores=(0, 1, 3, 3, 3), c3=1, self-loops=0/6, cross=6/6
+    Class 2: H=3, size=1, SC=False, scores=(0, 2, 2, 2, 4), c3=1, self-loops=0/6, cross=6/6
+    Class 3: H=5, size=5, SC=False, scores=(0, 2, 2, 3, 3), c3=2, self-loops=2/6, cross=4/6
+    Class 4: H=3, size=1, SC=False, scores=(1, 1, 1, 3, 4), c3=1, self-loops=0/6, cross=6/6
+    Class 5: H=5, size=5, SC=False, scores=(1, 1, 2, 2, 4), c3=2, self-loops=2/6, cross=4/6
+    Class 6: H=9, size=9, SC=False, scores=(1, 1, 2, 3, 3), c3=3, self-loops=0/6, cross=6/6
+    Class 7: H=9, size=9, SC=False, scores=(1, 1, 2, 3, 3), c3=3, self-loops=0/6, cross=6/6
+    Class 8: H=11, size=11, SC=True, scores=(1, 2, 2, 2, 3), c3=4, self-loops=0/6, cross=6/6
+    Class 9: H=13, size=13, SC=False, scores=(1, 2, 2, 2, 3), c3=4, self-loops=0/6, cross=6/6
+    Class 10: H=15, size=5, SC=False, scores=(1, 2, 2, 2, 3), c3=4, self-loops=0/6, cross=6/6
+    Class 11: H=15, size=3, SC=False, scores=(2, 2, 2, 2, 2), c3=5, self-loops=0/6, cross=6/6
+
+============================================================
+H-GRADIENT ANALYSIS n=5
+============================================================
+ΔH distribution across edges:
+  ΔH=0: 1 edges
+  ΔH=2: 12 edges
+  ΔH=4: 8 edges
+  ΔH=6: 5 edges
+  ΔH=8: 3 edges
+  ΔH=12: 1 edges
+
+H-level structure:
+  H=1: 1 classes, intra=0, up=6, down=0
+  H=3: 3 classes, intra=0, up=7, down=3
+  H=5: 2 classes, intra=0, up=8, down=6
+  H=9: 2 classes, intra=1, up=4, down=7
+  H=11: 1 classes, intra=0, up=2, down=4
+  H=13: 1 classes, intra=0, up=2, down=4
+  H=15: 2 classes, intra=0, up=0, down=5
+
+============================================================
+METAGRAPH DISTANCE ANALYSIS n=5
+============================================================
+  Diameter: 3
+  Distance distribution:
+    d=0: 6 pairs
+    d=1: 30 pairs
+    d=2: 30 pairs
+    d=3: 6 pairs
+
+  H-distance vs graph distance:
+    d=1: mean |ΔH|=4.1, max |ΔH|=12, min |ΔH|=0
+    d=2: mean |ΔH|=6.4, max |ΔH|=14, min |ΔH|=0
+    d=3: mean |ΔH|=12.3, max |ΔH|=14, min |ΔH|=12
+
+  Distance from transitive (H=1):
+    Class 0 (H=1): d=0
+    Class 1 (H=3): d=1
+    Class 2 (H=3): d=1
+    Class 3 (H=5): d=1
+    Class 4 (H=3): d=1
+    Class 5 (H=5): d=1
+    Class 6 (H=9): d=1
+    Class 7 (H=9): d=2
+    Class 8 (H=11): d=2
+    Class 9 (H=13): d=2
+    Class 10 (H=15): d=2
+    Class 11 (H=15): d=3
+
+============================================================
+TILE-FLIP DECOMPOSITION n=5
+============================================================
+Edges by skip value:
+  skip=2: 26 distinct edges
+  skip=3: 25 distinct edges
+  skip=4: 19 distinct edges
+
+Total unique edges: 30
+Union of all skip-edges: 30
+  skip=2 coverage: 87% (26/30)
+  skip=3 coverage: 83% (25/30)
+  skip=4 coverage: 63% (19/30)
+  skip≤2 cumulative: 87%
+  skip≤3 cumulative: 93%
+  skip≤4 cumulative: 100%
+
+  Skip-2 layer: 26 edges, rank=12, λ_max=5.08
+
+  Skip-3 layer: 25 edges, rank=10, λ_max=5.14
+
+  Skip-4 layer: 19 edges, rank=9, λ_max=4.25
+
+============================================================
+COMPLEMENT STRUCTURE n=5
+============================================================
+  SC (fixed) classes: 1 — [8]
+  Complement pairs: 11
+  Total: 23 = 12
+
+  H preserved by tiling complement: 3/12
+  H NOT preserved: 9/12
+    Class 0 (H=1) ↔ Class 7 (H=9), ΔH=8
+    Class 1 (H=3) ↔ Class 6 (H=9), ΔH=6
+    Class 2 (H=3) ↔ Class 9 (H=13), ΔH=10
+    Class 3 (H=5) ↔ Class 9 (H=13), ΔH=8
+    Class 4 (H=3) ↔ Class 6 (H=9), ΔH=6
+    Class 5 (H=5) ↔ Class 9 (H=13), ΔH=8
+    Class 6 (H=9) ↔ Class 8 (H=11), ΔH=2
+    Class 9 (H=13) ↔ Class 11 (H=15), ΔH=2
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+ModuleNotFoundError: No module named 'explicit_metagraph'
+Building metagraph at n=5, m=6 tiles, 2^m=64 tilings
+  Fast invariant groups: 9
+  Isomorphism classes: 12
+  Metagraph edges: 30
+
+  Metagraph adjacency spectrum:
+    Eigenvalues: [np.float64(5.582), np.float64(1.942), np.float64(1.223), np.float64(1.0), np.float64(0.322), np.float64(0.033), np.float64(-0.416), np.float64(-1.0), np.float64(-1.184), np.float64(-1.751), np.float64(-2.496), np.float64(-3.255)]
+
+  H values: [1, 3, 5, 9, 11, 13, 15]
+  H range: [1, 15]
+
+  Self-complementary classes: 1
+  Non-self-complementary classes: 11
+
+  Degree distribution: min=2, max=7, mean=5.0
+
+  Per-class structure:
+    Class 0: H=1, size=1, SC=False, scores=(0, 1, 2, 3, 4), c3=0, self-loops=0/6, cross=6/6
+    Class 1: H=3, size=1, SC=False, scores=(0, 1, 3, 3, 3), c3=1, self-loops=0/6, cross=6/6
+    Class 2: H=3, size=1, SC=False, scores=(0, 2, 2, 2, 4), c3=1, self-loops=0/6, cross=6/6
+    Class 3: H=5, size=5, SC=False, scores=(0, 2, 2, 3, 3), c3=2, self-loops=2/6, cross=4/6
+    Class 4: H=3, size=1, SC=False, scores=(1, 1, 1, 3, 4), c3=1, self-loops=0/6, cross=6/6
+    Class 5: H=5, size=5, SC=False, scores=(1, 1, 2, 2, 4), c3=2, self-loops=2/6, cross=4/6
+    Class 6: H=9, size=9, SC=False, scores=(1, 1, 2, 3, 3), c3=3, self-loops=0/6, cross=6/6
+    Class 7: H=9, size=9, SC=False, scores=(1, 1, 2, 3, 3), c3=3, self-loops=0/6, cross=6/6
+    Class 8: H=11, size=11, SC=True, scores=(1, 2, 2, 2, 3), c3=4, self-loops=0/6, cross=6/6
+    Class 9: H=13, size=13, SC=False, scores=(1, 2, 2, 2, 3), c3=4, self-loops=0/6, cross=6/6
+    Class 10: H=15, size=5, SC=False, scores=(1, 2, 2, 2, 3), c3=4, self-loops=0/6, cross=6/6
+    Class 11: H=15, size=3, SC=False, scores=(2, 2, 2, 2, 2), c3=5, self-loops=0/6, cross=6/6
+FULL n=5 METAGRAPH (12 vertices, 30 edges)
+============================================================
+  [0] H= 1 |Aut|=120 c3=0 scores=(0, 1, 2, 3, 4) → neighbors H: [3, 3, 5, 3, 5, 9]
+  [1] H= 3 |Aut|=120 c3=1 scores=(0, 1, 3, 3, 3) → neighbors H: [1, 5, 9]
+  [2] H= 3 |Aut|=120 c3=1 scores=(0, 2, 2, 2, 4) → neighbors H: [1, 5, 5, 15]
+  [3] H= 5 |Aut|= 24 c3=2 scores=(0, 2, 2, 3, 3) → neighbors H: [1, 3, 3, 9, 9, 11, 13]
+  [4] H= 3 |Aut|=120 c3=1 scores=(1, 1, 1, 3, 4) → neighbors H: [1, 5, 9]
+  [5] H= 5 |Aut|= 24 c3=2 scores=(1, 1, 2, 2, 4) → neighbors H: [1, 3, 3, 9, 9, 11, 13]
+  [6] H= 9 |Aut|= 13 c3=3 scores=(1, 1, 2, 3, 3) → neighbors H: [1, 5, 5, 9, 11, 15]
+  [7] H= 9 |Aut|= 13 c3=3 scores=(1, 1, 2, 3, 3) → neighbors H: [3, 5, 3, 5, 9, 11, 13]
+  [8] H=11 |Aut|= 10 c3=4 scores=(1, 2, 2, 2, 3) → neighbors H: [5, 5, 9, 9, 13, 15]
+  [9] H=13 |Aut|=  9 c3=4 scores=(1, 2, 2, 2, 3) → neighbors H: [5, 5, 9, 11, 15, 15]
+  [10] H=15 |Aut|= 24 c3=4 scores=(1, 2, 2, 2, 3) → neighbors H: [3, 9, 13]
+  [11] H=15 |Aut|= 40 c3=5 scores=(2, 2, 2, 2, 2) → neighbors H: [11, 13]
+
+Adjacency matrix (rows/cols labeled by H):
+       1  3  3  5  3  5  9  9 11 13 15 15
+H= 1   0  1  1  1  1  1  1  0  0  0  0  0
+H= 3   1  0  0  1  0  0  0  1  0  0  0  0
+H= 3   1  0  0  1  0  1  0  0  0  0  1  0
+H= 5   1  1  1  0  0  0  1  1  1  1  0  0
+H= 3   1  0  0  0  0  1  0  1  0  0  0  0
+H= 5   1  0  1  0  1  0  1  1  1  1  0  0
+H= 9   1  0  0  1  0  1  0  1  1  0  1  0
+H= 9   0  1  0  1  1  1  1  0  1  1  0  0
+H=11   0  0  0  1  0  1  1  1  0  1  0  1
+H=13   0  0  0  1  0  1  0  1  1  0  1  1
+H=15   0  0  1  0  0  0  1  0  0  1  0  0
+H=15   0  0  0  0  0  0  0  0  1  1  0  0
+
+Weighted adjacency (multiplicity = # tiling-tile pairs):
+         1    3    3    5    3    5    9    9   11   13   15   15
+H= 1     0    1    1    1    1    1    1    0    0    0    0    0
+H= 3     1    0    0    2    0    0    0    3    0    0    0    0
+H= 3     1    0    0    2    0    2    0    0    0    0    1    0
+H= 5     1    2    2    0    0    0    4    3    4    4    0    0
+H= 3     1    0    0    0    0    2    0    3    0    0    0    0
+H= 5     1    0    2    0    2    0    4    3    4    4    0    0
+H= 9     1    0    0    4    0    4    0   14   16    0    7    0
+H= 9     0    3    0    3    3    3   14    0    5   23    0    0
+H=11     0    0    0    4    0    4   16    5    0   16    0    9
+H=13     0    0    0    4    0    4    0   23   16    0   22    9
+H=15     0    0    1    0    0    0    7    0    0   22    0    0
+H=15     0    0    0    0    0    0    0    0    9    9    0    0
+
+Self-loop weights (class-preserving flips):
+  [0] H=1: 0/6 (0%)
+  [1] H=3: 0/6 (0%)
+  [2] H=3: 0/6 (0%)
+  [3] H=5: 10/30 (33%)
+  [4] H=3: 0/6 (0%)
+  [5] H=5: 10/30 (33%)
+  [6] H=9: 8/54 (15%)
+  [7] H=9: 0/54 (0%)
+  [8] H=11: 12/66 (18%)
+  [9] H=13: 0/78 (0%)
+  [10] H=15: 0/30 (0%)
+  [11] H=15: 0/18 (0%)
+
+Verify: self-loops + edge weights = size × m = size × 6
+  [0] H=1: 0 + 6 = 6 (should be 6)
+  [1] H=3: 0 + 6 = 6 (should be 6)
+  [2] H=3: 0 + 6 = 6 (should be 6)
+  [3] H=5: 10 + 20 = 30 (should be 30)
+  [4] H=3: 0 + 6 = 6 (should be 6)
+  [5] H=5: 10 + 20 = 30 (should be 30)
+  [6] H=9: 8 + 46 = 54 (should be 54)
+  [7] H=9: 0 + 54 = 54 (should be 54)
+  [8] H=11: 12 + 54 = 66 (should be 66)
+  [9] H=13: 0 + 78 = 78 (should be 78)
+  [10] H=15: 0 + 30 = 30 (should be 30)
+  [11] H=15: 0 + 18 = 18 (should be 18)
