@@ -1,0 +1,521 @@
+
+======================================================================
+WALSH SPECTRUM DEEP ANALYSIS: n=3, m=1
+======================================================================
+
+Walsh coefficients by order:
+
+  Order 0: 1 nonzero coefficients
+    S=0 support=[] coeff=2.000000
+
+  Order 1: 1 nonzero coefficients
+    S=1 support=[0] coeff=-1.000000
+
+  Maximum nonzero Walsh order: 1
+  Number of tile bits: 1
+  Polynomial degree of H in tile bits: 1
+
+  Multilinear polynomial H(x_1,...,x_1) coefficients:
+  (Only showing nonzero, up to 20)
+    1 (order 0): +1
+    A (order 1): +2
+
+  Total nonzero terms: 2
+    Order 0: 1/1 terms nonzero
+    Order 1: 1/1 terms nonzero
+
+======================================================================
+WALSH SPECTRUM DEEP ANALYSIS: n=4, m=3
+======================================================================
+
+Walsh coefficients by order:
+
+  Order 0: 1 nonzero coefficients
+    S=000 support=[] coeff=4.000000
+
+  Order 1: 3 nonzero coefficients
+    S=001 support=[0] coeff=-1.000000
+    S=010 support=[1] coeff=-0.500000
+    S=100 support=[2] coeff=-0.500000
+
+  Order 2: 2 nonzero coefficients
+    S=011 support=[0, 1] coeff=-0.500000
+    S=101 support=[0, 2] coeff=-0.500000
+
+  Maximum nonzero Walsh order: 2
+  Number of tile bits: 3
+  Polynomial degree of H in tile bits: 2
+
+  Order-2 analysis (pairwise interactions):
+    AB = (4,1)×(3,1) skip=(3,2) share {1}: coeff=-0.500000
+    AC = (4,1)×(4,2) skip=(3,2) share {4}: coeff=-0.500000
+
+  Multilinear polynomial H(x_1,...,x_3) coefficients:
+  (Only showing nonzero, up to 20)
+    1 (order 0): +1
+    A (order 1): +4
+    B (order 1): +2
+    C (order 1): +2
+    AB (order 2): -2
+    AC (order 2): -2
+
+  Total nonzero terms: 6
+    Order 0: 1/1 terms nonzero
+    Order 1: 3/3 terms nonzero
+    Order 2: 2/3 terms nonzero
+
+======================================================================
+WALSH SPECTRUM DEEP ANALYSIS: n=5, m=6
+======================================================================
+
+Walsh coefficients by order:
+
+  Order 0: 1 nonzero coefficients
+    S=000000 support=[] coeff=9.875000
+
+  Order 1: 5 nonzero coefficients
+    S=000001 support=[0] coeff=-2.000000
+    S=000100 support=[2] coeff=-0.875000
+    S=100000 support=[5] coeff=-0.875000
+    S=000010 support=[1] coeff=-0.625000
+    S=001000 support=[3] coeff=-0.625000
+
+  Order 2: 15 nonzero coefficients
+    S=000011 support=[0, 1] coeff=-0.875000
+    S=000110 support=[1, 2] coeff=-0.875000
+    S=001001 support=[0, 3] coeff=-0.875000
+    S=100100 support=[2, 5] coeff=0.875000
+    S=101000 support=[3, 5] coeff=-0.875000
+    S=010010 support=[1, 4] coeff=-0.750000
+    S=011000 support=[3, 4] coeff=-0.750000
+    S=000101 support=[0, 2] coeff=-0.625000
+    S=100001 support=[0, 5] coeff=-0.625000
+    S=001100 support=[2, 3] coeff=0.250000
+    ... and 5 more
+
+  Order 3: 12 nonzero coefficients
+    S=001011 support=[0, 1, 3] coeff=0.250000
+    S=001110 support=[1, 2, 3] coeff=0.250000
+    S=101010 support=[1, 3, 5] coeff=0.250000
+    S=110100 support=[2, 4, 5] coeff=0.250000
+    S=001101 support=[0, 2, 3] coeff=-0.125000
+    S=010011 support=[0, 1, 4] coeff=0.125000
+    S=010101 support=[0, 2, 4] coeff=0.125000
+    S=011001 support=[0, 3, 4] coeff=0.125000
+    S=011100 support=[2, 3, 4] coeff=-0.125000
+    S=100011 support=[0, 1, 5] coeff=-0.125000
+    ... and 2 more
+
+  Order 4: 7 nonzero coefficients
+    S=011101 support=[0, 2, 3, 4] coeff=0.125000
+    S=011110 support=[1, 2, 3, 4] coeff=0.125000
+    S=101110 support=[1, 2, 3, 5] coeff=0.125000
+    S=110011 support=[0, 1, 4, 5] coeff=0.125000
+    S=110110 support=[1, 2, 4, 5] coeff=-0.125000
+    S=111010 support=[1, 3, 4, 5] coeff=0.125000
+    S=111100 support=[2, 3, 4, 5] coeff=-0.125000
+
+  Maximum nonzero Walsh order: 4
+  Number of tile bits: 6
+  Polynomial degree of H in tile bits: 4
+
+  Order-2 analysis (pairwise interactions):
+    AB = (5,1)×(4,1) skip=(4,3) share {1}: coeff=-0.875000
+    BC = (4,1)×(3,1) skip=(3,2) share {1}: coeff=-0.875000
+    AD = (5,1)×(5,2) skip=(4,3) share {5}: coeff=-0.875000
+    CF = (3,1)×(5,3) skip=(2,2) share {3}: coeff=+0.875000
+    DF = (5,2)×(5,3) skip=(3,2) share {5}: coeff=-0.875000
+    BE = (4,1)×(4,2) skip=(3,2) share {4}: coeff=-0.750000
+    DE = (5,2)×(4,2) skip=(3,2) share {2}: coeff=-0.750000
+    AC = (5,1)×(3,1) skip=(4,2) share {1}: coeff=-0.625000
+    AF = (5,1)×(5,3) skip=(4,2) share {5}: coeff=-0.625000
+    CD = (3,1)×(5,2) skip=(2,3) disjoint: coeff=+0.250000
+    AE = (5,1)×(4,2) skip=(4,2) disjoint: coeff=+0.250000
+    CE = (3,1)×(4,2) skip=(2,2) disjoint: coeff=-0.250000
+    BF = (4,1)×(5,3) skip=(3,2) disjoint: coeff=+0.250000
+    EF = (4,2)×(5,3) skip=(2,2) disjoint: coeff=-0.250000
+    BD = (4,1)×(5,2) skip=(3,3) disjoint: coeff=-0.125000
+
+  Multilinear polynomial H(x_1,...,x_6) coefficients:
+  (Only showing nonzero, up to 20)
+    1 (order 0): +1
+    A (order 1): +8
+    B (order 1): +4
+    D (order 1): +4
+    C (order 1): +2
+    E (order 1): +2
+    F (order 1): +2
+    BD (order 2): +4
+    AE (order 2): +4
+    CF (order 2): +4
+    AB (order 2): -2
+    AC (order 2): -2
+    BC (order 2): -2
+    AD (order 2): -2
+    CD (order 2): +2
+    BE (order 2): -2
+    DE (order 2): -2
+    AF (order 2): -2
+    BF (order 2): +2
+    DF (order 2): -2
+    BCD (order 3): -4
+    BDF (order 3): -4
+    ABD (order 3): -2
+    ABE (order 3): -2
+    ACE (order 3): -2
+    ADE (order 3): -2
+    BDE (order 3): -2
+    AEF (order 3): -2
+    ACDE (order 4): +2
+    BCDE (order 4): +2
+
+  Total nonzero terms: 35
+    Order 0: 1/1 terms nonzero
+    Order 1: 6/6 terms nonzero
+    Order 2: 13/15 terms nonzero
+    Order 3: 8/20 terms nonzero
+    Order 4: 7/15 terms nonzero
+
+======================================================================
+WALSH SPECTRUM DEEP ANALYSIS: n=6, m=10
+======================================================================
+
+Walsh coefficients by order:
+
+  Order 0: 1 nonzero coefficients
+    S=0000000000 support=[] coeff=29.000000
+
+  Order 1: 8 nonzero coefficients
+    S=0000000001 support=[0] coeff=-4.000000
+    S=0000001000 support=[3] coeff=-2.000000
+    S=1000000000 support=[9] coeff=-2.000000
+    S=0000000010 support=[1] coeff=-1.625000
+    S=0000010000 support=[4] coeff=-1.625000
+    S=0000000100 support=[2] coeff=-1.500000
+    S=0010000000 support=[7] coeff=-1.500000
+    S=0000100000 support=[5] coeff=0.250000
+
+  Order 2: 44 nonzero coefficients
+    S=0000000011 support=[0, 1] coeff=-1.875000
+    S=0000010001 support=[0, 4] coeff=-1.875000
+    S=0000000110 support=[1, 2] coeff=-1.750000
+    S=0000001001 support=[0, 3] coeff=-1.750000
+    S=0000001100 support=[2, 3] coeff=-1.750000
+    S=0010001000 support=[3, 7] coeff=1.750000
+    S=0010010000 support=[4, 7] coeff=-1.750000
+    S=1000000001 support=[0, 9] coeff=-1.750000
+    S=1000000100 support=[2, 9] coeff=1.750000
+    S=1010000000 support=[7, 9] coeff=-1.750000
+    ... and 34 more
+
+  Order 3: 73 nonzero coefficients
+    S=0000010110 support=[1, 2, 4] coeff=0.375000
+    S=0000011100 support=[2, 3, 4] coeff=0.375000
+    S=0001000011 support=[0, 1, 6] coeff=0.375000
+    S=0010010010 support=[1, 4, 7] coeff=0.375000
+    S=0011001000 support=[3, 6, 7] coeff=0.375000
+    S=0100010001 support=[0, 4, 8] coeff=0.375000
+    S=0101000100 support=[2, 6, 8] coeff=-0.375000
+    S=0111000000 support=[6, 7, 8] coeff=-0.375000
+    S=1010000010 support=[1, 7, 9] coeff=0.375000
+    S=1100000100 support=[2, 8, 9] coeff=0.375000
+    ... and 63 more
+
+  Order 4: 81 nonzero coefficients
+    S=0000111100 support=[2, 3, 4, 5] coeff=0.250000
+    S=0001011010 support=[1, 3, 4, 6] coeff=0.250000
+    S=0001101001 support=[0, 3, 5, 6] coeff=0.250000
+    S=0010010110 support=[1, 2, 4, 7] coeff=0.250000
+    S=0011100001 support=[0, 5, 6, 7] coeff=0.250000
+    S=0011101000 support=[3, 5, 6, 7] coeff=-0.250000
+    S=0100100101 support=[0, 2, 5, 8] coeff=0.250000
+    S=0101010010 support=[1, 4, 6, 8] coeff=0.250000
+    S=0101011000 support=[3, 4, 6, 8] coeff=-0.250000
+    S=0111000100 support=[2, 6, 7, 8] coeff=0.250000
+    ... and 71 more
+
+  Maximum nonzero Walsh order: 4
+  Number of tile bits: 10
+  Polynomial degree of H in tile bits: 4
+
+  Order-2 analysis (pairwise interactions):
+    AB = (6,1)×(5,1) skip=(5,4) share {1}: coeff=-1.875000
+    AE = (6,1)×(6,2) skip=(5,4) share {6}: coeff=-1.875000
+    BC = (5,1)×(4,1) skip=(4,3) share {1}: coeff=-1.750000
+    AD = (6,1)×(3,1) skip=(5,2) share {1}: coeff=-1.750000
+    CD = (4,1)×(3,1) skip=(3,2) share {1}: coeff=-1.750000
+    DH = (3,1)×(6,3) skip=(2,3) share {3}: coeff=+1.750000
+    EH = (6,2)×(6,3) skip=(4,3) share {6}: coeff=-1.750000
+    AJ = (6,1)×(6,4) skip=(5,2) share {6}: coeff=-1.750000
+    CJ = (4,1)×(6,4) skip=(3,2) share {4}: coeff=+1.750000
+    HJ = (6,3)×(6,4) skip=(3,2) share {6}: coeff=-1.750000
+    BF = (5,1)×(5,2) skip=(4,3) share {5}: coeff=-1.625000
+    EF = (6,2)×(5,2) skip=(4,3) share {2}: coeff=-1.625000
+    FG = (5,2)×(4,2) skip=(3,2) share {2}: coeff=-1.625000
+    FI = (5,2)×(5,3) skip=(3,2) share {5}: coeff=-1.625000
+    AC = (6,1)×(4,1) skip=(5,3) share {1}: coeff=-1.500000
+    CG = (4,1)×(4,2) skip=(3,2) share {4}: coeff=-1.500000
+    AH = (6,1)×(6,3) skip=(5,3) share {6}: coeff=-1.500000
+    DI = (3,1)×(5,3) skip=(2,2) share {3}: coeff=+1.500000
+    HI = (6,3)×(5,3) skip=(3,2) share {3}: coeff=-1.500000
+    GJ = (4,2)×(6,4) skip=(2,2) share {4}: coeff=+1.500000
+    BD = (5,1)×(3,1) skip=(4,2) share {1}: coeff=-1.375000
+    EG = (6,2)×(4,2) skip=(4,2) share {2}: coeff=-1.375000
+    BI = (5,1)×(5,3) skip=(4,2) share {5}: coeff=-1.375000
+    EJ = (6,2)×(6,4) skip=(4,2) share {6}: coeff=-1.375000
+    DJ = (3,1)×(6,4) skip=(2,2) disjoint: coeff=+0.750000
+    CF = (4,1)×(5,2) skip=(3,3) disjoint: coeff=-0.500000
+    CH = (4,1)×(6,3) skip=(3,3) disjoint: coeff=+0.500000
+    FH = (5,2)×(6,3) skip=(3,3) disjoint: coeff=-0.500000
+    AF = (6,1)×(5,2) skip=(5,3) disjoint: coeff=+0.250000
+    DF = (3,1)×(5,2) skip=(2,3) disjoint: coeff=+0.250000
+    AG = (6,1)×(4,2) skip=(5,2) disjoint: coeff=+0.250000
+    DG = (3,1)×(4,2) skip=(2,2) disjoint: coeff=-0.250000
+    AI = (6,1)×(5,3) skip=(5,2) disjoint: coeff=+0.250000
+    GI = (4,2)×(5,3) skip=(2,2) disjoint: coeff=-0.250000
+    FJ = (5,2)×(6,4) skip=(3,2) disjoint: coeff=+0.250000
+    IJ = (5,3)×(6,4) skip=(2,2) disjoint: coeff=-0.250000
+    CE = (4,1)×(6,2) skip=(3,4) disjoint: coeff=+0.125000
+    DE = (3,1)×(6,2) skip=(2,4) disjoint: coeff=+0.125000
+    BG = (5,1)×(4,2) skip=(4,2) disjoint: coeff=-0.125000
+    BH = (5,1)×(6,3) skip=(4,3) disjoint: coeff=+0.125000
+    GH = (4,2)×(6,3) skip=(2,3) disjoint: coeff=-0.125000
+    CI = (4,1)×(5,3) skip=(3,2) disjoint: coeff=-0.125000
+    EI = (6,2)×(5,3) skip=(4,2) disjoint: coeff=-0.125000
+    BJ = (5,1)×(6,4) skip=(4,2) disjoint: coeff=+0.125000
+
+  Multilinear polynomial H(x_1,...,x_10) coefficients:
+  (Only showing nonzero, up to 20)
+    1 (order 0): +1
+    A (order 1): +16
+    B (order 1): +8
+    E (order 1): +8
+    C (order 1): +4
+    F (order 1): +4
+    H (order 1): +4
+    D (order 1): +2
+    G (order 1): +2
+    I (order 1): +2
+    J (order 1): +2
+    BE (order 2): +16
+    AF (order 2): +16
+    CE (order 2): +10
+    BH (order 2): +10
+    AG (order 2): +8
+    CH (order 2): +8
+    DH (order 2): +8
+    AI (order 2): +8
+    CJ (order 2): +8
+    AD (order 2): -4
+    DE (order 2): +4
+    CF (order 2): +4
+    BG (order 2): +4
+    FH (order 2): +4
+    DI (order 2): +4
+    EI (order 2): +4
+    AJ (order 2): -4
+    BJ (order 2): +4
+    DJ (order 2): +4
+
+  Total nonzero terms: 200
+    Order 0: 1/1 terms nonzero
+    Order 1: 10/10 terms nonzero
+    Order 2: 42/45 terms nonzero
+    Order 3: 66/120 terms nonzero
+    Order 4: 81/210 terms nonzero
+
+======================================================================
+WALSH SPECTRUM DEEP ANALYSIS: n=7, m=15
+======================================================================
+
+Walsh coefficients by order:
+
+  Order 0: 1 nonzero coefficients
+    S=000000000000000 support=[] coeff=99.218750
+
+  Order 1: 14 nonzero coefficients
+    S=000000000000001 support=[0] coeff=-9.937500
+    S=000000000010000 support=[4] coeff=-4.906250
+    S=100000000000000 support=[14] coeff=-4.906250
+    S=000000000000010 support=[1] coeff=-4.281250
+    S=000000000001000 support=[3] coeff=-4.281250
+    S=000000000100000 support=[5] coeff=-4.281250
+    S=001000000000000 support=[12] coeff=-4.281250
+    S=000000000000100 support=[2] coeff=-4.156250
+    S=000001000000000 support=[9] coeff=-4.156250
+    S=000000001000000 support=[6] coeff=0.375000
+    ... and 4 more
+
+  Order 2: 103 nonzero coefficients
+    S=000000000000011 support=[0, 1] coeff=-4.718750
+    S=000000000100001 support=[0, 5] coeff=-4.718750
+    S=000000000000110 support=[1, 2] coeff=-4.531250
+    S=000000000011000 support=[3, 4] coeff=-4.531250
+    S=000001000010000 support=[4, 9] coeff=4.531250
+    S=000001000100000 support=[5, 9] coeff=-4.531250
+    S=100000000000100 support=[2, 14] coeff=4.531250
+    S=101000000000000 support=[12, 14] coeff=-4.531250
+    S=000000000010001 support=[0, 4] coeff=-4.468750
+    S=100000000000001 support=[0, 14] coeff=-4.468750
+    ... and 93 more
+
+  Order 3: 364 nonzero coefficients
+    S=000000000101100 support=[2, 3, 5] coeff=0.875000
+    S=001001000000010 support=[1, 9, 12] coeff=0.875000
+    S=001100000001000 support=[3, 11, 12] coeff=0.875000
+    S=000011100000000 support=[8, 9, 10] coeff=-0.781250
+    S=010000010000100 support=[2, 7, 13] coeff=-0.781250
+    S=011000000010000 support=[4, 12, 13] coeff=0.750000
+    S=100000100001000 support=[3, 8, 14] coeff=0.750000
+    S=000000000100110 support=[1, 2, 5] coeff=0.687500
+    S=000000000111000 support=[3, 4, 5] coeff=0.687500
+    S=000001000100010 support=[1, 5, 9] coeff=0.687500
+    ... and 354 more
+
+  Order 4: 730 nonzero coefficients
+    S=000000011010001 support=[0, 4, 6, 7] coeff=0.468750
+    S=000000100110010 support=[1, 4, 5, 8] coeff=0.468750
+    S=000000110010001 support=[0, 4, 7, 8] coeff=0.468750
+    S=001000100010100 support=[2, 4, 8, 12] coeff=-0.468750
+    S=001010000110000 support=[4, 5, 10, 12] coeff=-0.468750
+    S=100000000110010 support=[1, 4, 5, 14] coeff=0.468750
+    S=100000010001010 support=[1, 3, 7, 14] coeff=-0.468750
+    S=100010001000001 support=[0, 6, 10, 14] coeff=0.468750
+    S=110000000100010 support=[1, 5, 13, 14] coeff=0.468750
+    S=110001000001000 support=[3, 9, 13, 14] coeff=-0.468750
+    ... and 720 more
+
+  Order 5: 529 nonzero coefficients
+    S=000001001100110 support=[1, 2, 5, 6, 9] coeff=-0.062500
+    S=000001001101100 support=[2, 3, 5, 6, 9] coeff=-0.062500
+    S=000001001111000 support=[3, 4, 5, 6, 9] coeff=-0.062500
+    S=000001011000011 support=[0, 1, 6, 7, 9] coeff=-0.062500
+    S=000001011001100 support=[2, 3, 6, 7, 9] coeff=-0.062500
+    S=000001011011000 support=[3, 4, 6, 7, 9] coeff=-0.062500
+    S=000001100110010 support=[1, 4, 5, 8, 9] coeff=0.062500
+    S=000001110000011 support=[0, 1, 7, 8, 9] coeff=-0.062500
+    S=000001110000110 support=[1, 2, 7, 8, 9] coeff=-0.062500
+    S=000001110011000 support=[3, 4, 7, 8, 9] coeff=-0.062500
+    ... and 519 more
+
+  Order 6: 323 nonzero coefficients
+    S=000011010101010 support=[1, 3, 5, 7, 9, 10] coeff=-0.031250
+    S=000011010101100 support=[2, 3, 5, 7, 9, 10] coeff=-0.031250
+    S=000011011001001 support=[0, 3, 6, 7, 9, 10] coeff=-0.031250
+    S=000011011001100 support=[2, 3, 6, 7, 9, 10] coeff=-0.031250
+    S=000011100100110 support=[1, 2, 5, 8, 9, 10] coeff=-0.031250
+    S=000011100101100 support=[2, 3, 5, 8, 9, 10] coeff=-0.031250
+    S=000011101000101 support=[0, 2, 6, 8, 9, 10] coeff=-0.031250
+    S=000011101001100 support=[2, 3, 6, 8, 9, 10] coeff=-0.031250
+    S=000011110000101 support=[0, 2, 7, 8, 9, 10] coeff=-0.031250
+    S=000011110000110 support=[1, 2, 7, 8, 9, 10] coeff=-0.031250
+    ... and 313 more
+
+  Maximum nonzero Walsh order: 6
+  Number of tile bits: 15
+  Polynomial degree of H in tile bits: 6
+
+  Order-2 analysis (pairwise interactions):
+    AB = (7,1)×(6,1) skip=(6,5) share {1}: coeff=-4.718750
+    AF = (7,1)×(7,2) skip=(6,5) share {7}: coeff=-4.718750
+    BC = (6,1)×(5,1) skip=(5,4) share {1}: coeff=-4.531250
+    DE = (4,1)×(3,1) skip=(3,2) share {1}: coeff=-4.531250
+    EJ = (3,1)×(7,3) skip=(2,4) share {3}: coeff=+4.531250
+    FJ = (7,2)×(7,3) skip=(5,4) share {7}: coeff=-4.531250
+    CO = (5,1)×(7,5) skip=(4,2) share {5}: coeff=+4.531250
+    MO = (7,4)×(7,5) skip=(3,2) share {7}: coeff=-4.531250
+    AE = (7,1)×(3,1) skip=(6,2) share {1}: coeff=-4.468750
+    AO = (7,1)×(7,5) skip=(6,2) share {7}: coeff=-4.468750
+    AD = (7,1)×(4,1) skip=(6,3) share {1}: coeff=-4.343750
+    CD = (5,1)×(4,1) skip=(4,3) share {1}: coeff=-4.343750
+    AM = (7,1)×(7,4) skip=(6,3) share {7}: coeff=-4.343750
+    DM = (4,1)×(7,4) skip=(3,3) share {4}: coeff=+4.343750
+    JM = (7,3)×(7,4) skip=(4,3) share {7}: coeff=-4.343750
+    BG = (6,1)×(6,2) skip=(5,4) share {6}: coeff=-4.312500
+    FG = (7,2)×(6,2) skip=(5,4) share {2}: coeff=-4.312500
+    BE = (6,1)×(3,1) skip=(5,2) share {1}: coeff=-4.125000
+    GH = (6,2)×(5,2) skip=(4,3) share {2}: coeff=-4.125000
+    DI = (4,1)×(4,2) skip=(3,2) share {4}: coeff=-4.125000
+    FI = (7,2)×(4,2) skip=(5,2) share {2}: coeff=-4.125000
+    HI = (5,2)×(4,2) skip=(3,2) share {2}: coeff=-4.125000
+    GK = (6,2)×(6,3) skip=(4,3) share {6}: coeff=-4.125000
+    BN = (6,1)×(6,4) skip=(5,2) share {6}: coeff=-4.125000
+    KN = (6,3)×(6,4) skip=(3,2) share {6}: coeff=-4.125000
+    MN = (7,4)×(6,4) skip=(3,2) share {4}: coeff=-4.125000
+    FO = (7,2)×(7,5) skip=(5,2) share {7}: coeff=-4.125000
+    AC = (7,1)×(5,1) skip=(6,4) share {1}: coeff=-4.093750
+    AJ = (7,1)×(7,3) skip=(6,4) share {7}: coeff=-4.093750
+    CH = (5,1)×(5,2) skip=(4,3) share {5}: coeff=-3.937500
+    EK = (3,1)×(6,3) skip=(2,3) share {3}: coeff=+3.937500
+    JK = (7,3)×(6,3) skip=(4,3) share {3}: coeff=-3.937500
+    EL = (3,1)×(5,3) skip=(2,2) share {3}: coeff=+3.937500
+    HL = (5,2)×(5,3) skip=(3,2) share {5}: coeff=-3.937500
+    KL = (6,3)×(5,3) skip=(3,2) share {3}: coeff=-3.937500
+    IM = (4,2)×(7,4) skip=(2,3) share {4}: coeff=+3.937500
+    DN = (4,1)×(6,4) skip=(3,2) share {4}: coeff=+3.937500
+    HO = (5,2)×(7,5) skip=(3,2) share {5}: coeff=+3.937500
+    LO = (5,3)×(7,5) skip=(2,2) share {5}: coeff=+3.937500
+    BD = (6,1)×(4,1) skip=(5,3) share {1}: coeff=-3.750000
+    CE = (5,1)×(3,1) skip=(4,2) share {1}: coeff=-3.750000
+    FH = (7,2)×(5,2) skip=(5,3) share {2}: coeff=-3.750000
+    BK = (6,1)×(6,3) skip=(5,3) share {6}: coeff=-3.750000
+    FM = (7,2)×(7,4) skip=(5,3) share {7}: coeff=-3.750000
+    IN = (4,2)×(6,4) skip=(2,2) share {4}: coeff=+3.750000
+    JO = (7,3)×(7,5) skip=(4,2) share {7}: coeff=-3.750000
+    GI = (6,2)×(4,2) skip=(4,2) share {2}: coeff=-3.562500
+    CL = (5,1)×(5,3) skip=(4,2) share {5}: coeff=-3.562500
+    JL = (7,3)×(5,3) skip=(4,2) share {3}: coeff=-3.562500
+    GN = (6,2)×(6,4) skip=(4,2) share {6}: coeff=-3.562500
+    EM = (3,1)×(7,4) skip=(2,3) disjoint: coeff=+1.093750
+    DO = (4,1)×(7,5) skip=(3,2) disjoint: coeff=+1.093750
+    HK = (5,2)×(6,3) skip=(3,3) disjoint: coeff=-0.906250
+    DH = (4,1)×(5,2) skip=(3,3) disjoint: coeff=-0.750000
+    GL = (6,2)×(5,3) skip=(4,2) disjoint: coeff=-0.750000
+    KM = (6,3)×(7,4) skip=(3,3) disjoint: coeff=-0.750000
+    CJ = (5,1)×(7,3) skip=(4,4) disjoint: coeff=+0.656250
+    CG = (5,1)×(6,2) skip=(4,4) disjoint: coeff=-0.625000
+    GJ = (6,2)×(7,3) skip=(4,4) disjoint: coeff=-0.625000
+    HJ = (5,2)×(7,3) skip=(3,4) disjoint: coeff=-0.625000
+    CK = (5,1)×(6,3) skip=(4,3) disjoint: coeff=-0.625000
+    DK = (4,1)×(6,3) skip=(3,3) disjoint: coeff=+0.593750
+    HM = (5,2)×(7,4) skip=(3,3) disjoint: coeff=+0.593750
+    DJ = (4,1)×(7,3) skip=(3,4) disjoint: coeff=+0.562500
+    CM = (5,1)×(7,4) skip=(4,3) disjoint: coeff=+0.562500
+    EN = (3,1)×(6,4) skip=(2,2) disjoint: coeff=+0.562500
+    IO = (4,2)×(7,5) skip=(2,2) disjoint: coeff=+0.562500
+    AG = (7,1)×(6,2) skip=(6,4) disjoint: coeff=+0.437500
+    EI = (3,1)×(4,2) skip=(2,2) disjoint: coeff=-0.437500
+    IJ = (4,2)×(7,3) skip=(2,4) disjoint: coeff=-0.437500
+    AL = (7,1)×(5,3) skip=(6,2) disjoint: coeff=+0.437500
+    CN = (5,1)×(6,4) skip=(4,2) disjoint: coeff=-0.437500
+    NO = (6,4)×(7,5) skip=(2,2) disjoint: coeff=-0.437500
+    CF = (5,1)×(7,2) skip=(4,5) disjoint: coeff=+0.406250
+    EH = (3,1)×(5,2) skip=(2,3) disjoint: coeff=+0.406250
+    BJ = (6,1)×(7,3) skip=(5,4) disjoint: coeff=+0.406250
+    IL = (4,2)×(5,3) skip=(2,2) disjoint: coeff=-0.406250
+    LN = (5,3)×(6,4) skip=(2,2) disjoint: coeff=-0.406250
+    KO = (6,3)×(7,5) skip=(3,2) disjoint: coeff=+0.406250
+    EF = (3,1)×(7,2) skip=(2,5) disjoint: coeff=+0.312500
+    AH = (7,1)×(5,2) skip=(6,3) disjoint: coeff=+0.312500
+    AK = (7,1)×(6,3) skip=(6,3) disjoint: coeff=+0.312500
+    BO = (6,1)×(7,5) skip=(5,2) disjoint: coeff=+0.312500
+    AI = (7,1)×(4,2) skip=(6,2) disjoint: coeff=+0.250000
+    AN = (7,1)×(6,4) skip=(6,2) disjoint: coeff=+0.250000
+    EO = (3,1)×(7,5) skip=(2,2) disjoint: coeff=+0.218750
+    BI = (6,1)×(4,2) skip=(5,2) disjoint: coeff=+0.187500
+    IK = (4,2)×(6,3) skip=(2,3) disjoint: coeff=+0.187500
+    DL = (4,1)×(5,3) skip=(3,2) disjoint: coeff=-0.187500
+    LM = (5,3)×(7,4) skip=(2,3) disjoint: coeff=-0.187500
+    FN = (7,2)×(6,4) skip=(5,2) disjoint: coeff=+0.187500
+    HN = (5,2)×(6,4) skip=(3,2) disjoint: coeff=+0.187500
+    EG = (3,1)×(6,2) skip=(2,4) disjoint: coeff=+0.156250
+    BH = (6,1)×(5,2) skip=(5,3) disjoint: coeff=-0.156250
+    CI = (5,1)×(4,2) skip=(4,2) disjoint: coeff=-0.156250
+    FK = (7,2)×(6,3) skip=(5,3) disjoint: coeff=-0.156250
+    JN = (7,3)×(6,4) skip=(4,2) disjoint: coeff=-0.156250
+    GO = (6,2)×(7,5) skip=(4,2) disjoint: coeff=+0.156250
+    BF = (6,1)×(7,2) skip=(5,5) disjoint: coeff=-0.031250
+    DF = (4,1)×(7,2) skip=(3,5) disjoint: coeff=-0.031250
+    BL = (6,1)×(5,3) skip=(5,2) disjoint: coeff=-0.031250
+    FL = (7,2)×(5,3) skip=(5,2) disjoint: coeff=-0.031250
+    BM = (6,1)×(7,4) skip=(5,3) disjoint: coeff=-0.031250
