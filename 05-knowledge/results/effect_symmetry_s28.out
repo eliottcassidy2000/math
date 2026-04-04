@@ -1,0 +1,251 @@
+
+======================================================================
+n=3, m=1: EFFECT SYMMETRY UNDER GRID REFLECTION
+======================================================================
+
+Grid reflection R: (x,y) -> (n+1-y, n+1-x) = (4-y, 4-x)
+    Tile    R(tile)   Self-paired?
+  A(3,1) -> A(3,1)  SELF
+
+Effect values and reflection symmetry:
+  A(3,1) effect=+2.0000  =  A(3,1) effect=+2.0000
+
+Reflection orbit effects:
+  Fixed point: A(3,1) effect=+2.0000
+
+Var(H) = 1.0000
+R² of linear (main effects only) model = 1.000000
+=> Pairwise+ interactions explain 0.000000 of variance
+  A(3,1) skip=2: effect=+2.0000 R²=1.000000
+
+======================================================================
+n=4, m=3: EFFECT SYMMETRY UNDER GRID REFLECTION
+======================================================================
+
+Grid reflection R: (x,y) -> (n+1-y, n+1-x) = (5-y, 5-x)
+    Tile    R(tile)   Self-paired?
+  A(4,1) -> A(4,1)  SELF
+  B(3,1) -> C(4,2)  
+  C(4,2) -> B(3,1)  
+
+Effect values and reflection symmetry:
+  A(4,1) effect=+2.0000  =  A(4,1) effect=+2.0000
+  B(3,1) effect=+1.0000  =  C(4,2) effect=+1.0000
+  C(4,2) effect=+1.0000  =  B(3,1) effect=+1.0000
+
+Reflection orbit effects:
+  Fixed point: A(4,1) effect=+2.0000
+  Pair: B(3,1) & C(4,2)  effects=+1.0000,+1.0000  avg=+1.0000 diff=+0.0000
+
+Var(H) = 2.0000
+R² of linear (main effects only) model = 0.750000
+=> Pairwise+ interactions explain 0.250000 of variance
+  A(4,1) skip=3: effect=+2.0000 R²=0.500000
+  B(3,1) skip=2: effect=+1.0000 R²=0.125000
+  C(4,2) skip=2: effect=+1.0000 R²=0.125000
+
+======================================================================
+n=5, m=6: EFFECT SYMMETRY UNDER GRID REFLECTION
+======================================================================
+
+Grid reflection R: (x,y) -> (n+1-y, n+1-x) = (6-y, 6-x)
+    Tile    R(tile)   Self-paired?
+  A(5,1) -> A(5,1)  SELF
+  B(4,1) -> D(5,2)  
+  C(3,1) -> F(5,3)  
+  D(5,2) -> B(4,1)  
+  E(4,2) -> E(4,2)  SELF
+  F(5,3) -> C(3,1)  
+
+Effect values and reflection symmetry:
+  A(5,1) effect=+4.0000  =  A(5,1) effect=+4.0000
+  B(4,1) effect=+1.2500  =  D(5,2) effect=+1.2500
+  C(3,1) effect=+1.7500  =  F(5,3) effect=+1.7500
+  D(5,2) effect=+1.2500  =  B(4,1) effect=+1.2500
+  E(4,2) effect=+0.0000  =  E(4,2) effect=+0.0000
+  F(5,3) effect=+1.7500  =  C(3,1) effect=+1.7500
+
+Reflection orbit effects:
+  Fixed point: A(5,1) effect=+4.0000
+  Pair: B(4,1) & D(5,2)  effects=+1.2500,+1.2500  avg=+1.2500 diff=+0.0000
+  Pair: C(3,1) & F(5,3)  effects=+1.7500,+1.7500  avg=+1.7500 diff=+0.0000
+  Fixed point: E(4,2) effect=+0.0000
+
+Var(H) = 12.8594
+R² of linear (main effects only) model = 0.490887
+=> Pairwise+ interactions explain 0.509113 of variance
+  A(5,1) skip=4: effect=+4.0000 R²=0.311057
+  B(4,1) skip=3: effect=+1.2500 R²=0.030377
+  C(3,1) skip=2: effect=+1.7500 R²=0.059538
+  D(5,2) skip=3: effect=+1.2500 R²=0.030377
+  E(4,2) skip=2: effect=+0.0000 R²=0.000000
+  F(5,3) skip=2: effect=+1.7500 R²=0.059538
+
+======================================================================
+n=6, m=10: EFFECT SYMMETRY UNDER GRID REFLECTION
+======================================================================
+
+Grid reflection R: (x,y) -> (n+1-y, n+1-x) = (7-y, 7-x)
+    Tile    R(tile)   Self-paired?
+  A(6,1) -> A(6,1)  SELF
+  B(5,1) -> E(6,2)  
+  C(4,1) -> H(6,3)  
+  D(3,1) -> J(6,4)  
+  E(6,2) -> B(5,1)  
+  F(5,2) -> F(5,2)  SELF
+  G(4,2) -> I(5,3)  
+  H(6,3) -> C(4,1)  
+  I(5,3) -> G(4,2)  
+  J(6,4) -> D(3,1)  
+
+Effect values and reflection symmetry:
+  A(6,1) effect=+8.0000  =  A(6,1) effect=+8.0000
+  B(5,1) effect=+3.2500  =  E(6,2) effect=+3.2500
+  C(4,1) effect=+3.0000  =  H(6,3) effect=+3.0000
+  D(3,1) effect=+4.0000  =  J(6,4) effect=+4.0000
+  E(6,2) effect=+3.2500  =  B(5,1) effect=+3.2500
+  F(5,2) effect=-0.5000  =  F(5,2) effect=-0.5000
+  G(4,2) effect=+0.0000  =  I(5,3) effect=+0.0000
+  H(6,3) effect=+3.0000  =  C(4,1) effect=+3.0000
+  I(5,3) effect=+0.0000  =  G(4,2) effect=+0.0000
+  J(6,4) effect=+4.0000  =  D(3,1) effect=+4.0000
+
+Reflection orbit effects:
+  Fixed point: A(6,1) effect=+8.0000
+  Pair: B(5,1) & E(6,2)  effects=+3.2500,+3.2500  avg=+3.2500 diff=+0.0000
+  Pair: C(4,1) & H(6,3)  effects=+3.0000,+3.0000  avg=+3.0000 diff=+0.0000
+  Pair: D(3,1) & J(6,4)  effects=+4.0000,+4.0000  avg=+4.0000 diff=+0.0000
+  Fixed point: F(5,2) effect=-0.5000
+  Pair: G(4,2) & I(5,3)  effects=+0.0000,+0.0000  avg=+0.0000 diff=+0.0000
+
+Var(H) = 104.5625
+R² of linear (main effects only) model = 0.323670
+=> Pairwise+ interactions explain 0.676330 of variance
+  A(6,1) skip=5: effect=+8.0000 R²=0.153019
+  B(5,1) skip=4: effect=+3.2500 R²=0.025254
+  C(4,1) skip=3: effect=+3.0000 R²=0.021518
+  D(3,1) skip=2: effect=+4.0000 R²=0.038255
+  E(6,2) skip=4: effect=+3.2500 R²=0.025254
+  F(5,2) skip=3: effect=-0.5000 R²=0.000598
+  G(4,2) skip=2: effect=+0.0000 R²=0.000000
+  H(6,3) skip=3: effect=+3.0000 R²=0.021518
+  I(5,3) skip=2: effect=+0.0000 R²=0.000000
+  J(6,4) skip=2: effect=+4.0000 R²=0.038255
+
+======================================================================
+n=7, m=15: EFFECT SYMMETRY UNDER GRID REFLECTION
+======================================================================
+
+Grid reflection R: (x,y) -> (n+1-y, n+1-x) = (8-y, 8-x)
+    Tile    R(tile)   Self-paired?
+  A(7,1) -> A(7,1)  SELF
+  B(6,1) -> F(7,2)  
+  C(5,1) -> J(7,3)  
+  D(4,1) -> M(7,4)  
+  E(3,1) -> O(7,5)  
+  F(7,2) -> B(6,1)  
+  G(6,2) -> G(6,2)  SELF
+  H(5,2) -> K(6,3)  
+  I(4,2) -> N(6,4)  
+  J(7,3) -> C(5,1)  
+  K(6,3) -> H(5,2)  
+  L(5,3) -> L(5,3)  SELF
+  M(7,4) -> D(4,1)  
+  N(6,4) -> I(4,2)  
+  O(7,5) -> E(3,1)  
+
+Effect values and reflection symmetry:
+  A(7,1) effect=+19.8750  =  A(7,1) effect=+19.8750
+  B(6,1) effect=+8.5625  =  F(7,2) effect=+8.5625
+  C(5,1) effect=+8.3125  =  J(7,3) effect=+8.3125
+  D(4,1) effect=+8.5625  =  M(7,4) effect=+8.5625
+  E(3,1) effect=+9.8125  =  O(7,5) effect=+9.8125
+  F(7,2) effect=+8.5625  =  B(6,1) effect=+8.5625
+  G(6,2) effect=-0.7500  =  G(6,2) effect=-0.7500
+  H(5,2) effect=-0.7500  =  K(6,3) effect=-0.7500
+  I(4,2) effect=+0.3750  =  N(6,4) effect=+0.3750
+  J(7,3) effect=+8.3125  =  C(5,1) effect=+8.3125
+  K(6,3) effect=-0.7500  =  H(5,2) effect=-0.7500
+  L(5,3) effect=+0.0000  =  L(5,3) effect=+0.0000
+  M(7,4) effect=+8.5625  =  D(4,1) effect=+8.5625
+  N(6,4) effect=+0.3750  =  I(4,2) effect=+0.3750
+  O(7,5) effect=+9.8125  =  E(3,1) effect=+9.8125
+
+Reflection orbit effects:
+  Fixed point: A(7,1) effect=+19.8750
+  Pair: B(6,1) & F(7,2)  effects=+8.5625,+8.5625  avg=+8.5625 diff=+0.0000
+  Pair: C(5,1) & J(7,3)  effects=+8.3125,+8.3125  avg=+8.3125 diff=+0.0000
+  Pair: D(4,1) & M(7,4)  effects=+8.5625,+8.5625  avg=+8.5625 diff=+0.0000
+  Pair: E(3,1) & O(7,5)  effects=+9.8125,+9.8125  avg=+9.8125 diff=+0.0000
+  Fixed point: G(6,2) effect=-0.7500
+  Pair: H(5,2) & K(6,3)  effects=-0.7500,-0.7500  avg=-0.7500 diff=+0.0000
+  Pair: I(4,2) & N(6,4)  effects=+0.3750,+0.3750  avg=+0.3750 diff=+0.0000
+  Fixed point: L(5,3) effect=+0.0000
+
+Var(H) = 1189.6787
+R² of linear (main effects only) model = 0.214557
+=> Pairwise+ interactions explain 0.785443 of variance
+  A(7,1) skip=6: effect=+19.8750 R²=0.083009
+  B(6,1) skip=5: effect=+8.5625 R²=0.015407
+  C(5,1) skip=4: effect=+8.3125 R²=0.014520
+  D(4,1) skip=3: effect=+8.5625 R²=0.015407
+  E(3,1) skip=2: effect=+9.8125 R²=0.020233
+  F(7,2) skip=5: effect=+8.5625 R²=0.015407
+  G(6,2) skip=4: effect=-0.7500 R²=0.000118
+  H(5,2) skip=3: effect=-0.7500 R²=0.000118
+  I(4,2) skip=2: effect=+0.3750 R²=0.000030
+  J(7,3) skip=4: effect=+8.3125 R²=0.014520
+  K(6,3) skip=3: effect=-0.7500 R²=0.000118
+  L(5,3) skip=2: effect=+0.0000 R²=0.000000
+  M(7,4) skip=3: effect=+8.5625 R²=0.015407
+  N(6,4) skip=2: effect=+0.3750 R²=0.000030
+  O(7,5) skip=2: effect=+9.8125 R²=0.020233
+
+======================================================================
+KEY PATTERN: Effects by (skip, position-on-boundary)
+======================================================================
+
+n=3:
+  A(3,1) skip=2 BOTTOM
+
+n=4:
+  A(4,1) skip=3 BOTTOM
+  B(3,1) skip=2 BOTTOM
+  C(4,2) skip=2 RIGHT
+
+n=5:
+  A(5,1) skip=4 BOTTOM
+  B(4,1) skip=3 BOTTOM
+  C(3,1) skip=2 BOTTOM
+  D(5,2) skip=3 RIGHT
+  E(4,2) skip=2 INTERIOR
+  F(5,3) skip=2 RIGHT
+
+n=6:
+  A(6,1) skip=5 BOTTOM
+  B(5,1) skip=4 BOTTOM
+  C(4,1) skip=3 BOTTOM
+  D(3,1) skip=2 BOTTOM
+  E(6,2) skip=4 RIGHT
+  F(5,2) skip=3 INTERIOR
+  G(4,2) skip=2 INTERIOR
+  H(6,3) skip=3 RIGHT
+  I(5,3) skip=2 INTERIOR
+  J(6,4) skip=2 RIGHT
+
+n=7:
+  A(7,1) skip=6 BOTTOM
+  B(6,1) skip=5 BOTTOM
+  C(5,1) skip=4 BOTTOM
+  D(4,1) skip=3 BOTTOM
+  E(3,1) skip=2 BOTTOM
+  F(7,2) skip=5 RIGHT
+  G(6,2) skip=4 INTERIOR
+  H(5,2) skip=3 INTERIOR
+  I(4,2) skip=2 INTERIOR
+  J(7,3) skip=4 RIGHT
+  K(6,3) skip=3 INTERIOR
+  L(5,3) skip=2 INTERIOR
+  M(7,4) skip=3 RIGHT
+  N(6,4) skip=2 INTERIOR
+  O(7,5) skip=2 RIGHT
