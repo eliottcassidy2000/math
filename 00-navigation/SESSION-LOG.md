@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S13 — 2026-04-04: Sequence Harvest — Tribonacci, A038375, New Sequences
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S12
+**Summary:** Systematic harvest of sequences from the multilinear polynomial theory. Three major connections found: H(all backward) = Tribonacci, max_H = A038375, Sigma_H = W(n) × 2^{C(n-2,2)-1}. Several likely NEW sequences identified including P(n) = number of nonzero multilinear coefficients.
+
+**Key Results:**
+1. **H(all backward) = Tribonacci(n+1)** (A000213): VERIFIED n=3..7. The all-backward tournament has HP count following T(k) = T(k-1)+T(k-2)+T(k-3). The tournament's structure (decrease by 1 OR jump up by ≥2) gives a 3-state transfer matrix.
+
+2. **max_H(n) = A038375**: maximal Hamiltonian paths in n-tournament. Known sequence: 1,1,3,5,15,45,189,661,3357,15745,95095. Gives max_H(8)=661 without computing!
+
+3. **Sigma_H(n) = W(n) × 2^{C(n-2,2)-1}** (EXACT): Links the sum of H over all tilings to the W(n) sequence. Verified n=3..7. Equivalently: mean_H(n) = W(n)/2^{n-1}. Predicts: mean_H(8) = 388.69.
+
+4. **P(n) = 2, 6, 35, 200, 1782** (nonzero multilinear coefficients): NO OEIS MATCH → likely NEW sequence! These count how many tile subsets have nonzero interaction.
+
+5. **12 sequence candidates** computed: P(n), P_pos, P_neg, S_d(n), Sigma_H, distinct_H, forbidden_count, f-vector, euler_char, var_H, sum|c_S|, mod-4 counts. Most appear to be new.
+
+6. **S_1(n) = 2^n - 2n** (confirmed, proved in S5).
+
+7. **H-gap density**: 87.5%→82.6%→81.1% (n=5→6→7). The fraction of achievable odd H values slowly decreases.
+
+**New contributions:** sequence_harvest.py, tribonacci_proof.py, 2 result files
+**Unresolved:** Prove H(backward) = Tribonacci via transfer matrix. Submit P(n) to OEIS. Extend W(n) formula to derive Sigma_H at n=9.
+
 ## opus-2026-04-04-S12 — 2026-04-04: Recursive Metagraph Generation — Fiber Bundle Algorithm
 
 **Account:** opus
