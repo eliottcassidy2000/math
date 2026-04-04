@@ -1,0 +1,678 @@
+/Users/e/Documents/GitHub/math/04-computation/multilinear_deep_explore.py:93: DeprecationWarning: Fraction.__float__ returned non-float (type numpy.float64).  The ability to return an instance of a strict subclass of float is deprecated, and may be removed in a future version of Python.
+  distinct = sorted(set(vals), key=lambda x: float(x))
+/Users/e/Documents/GitHub/math/04-computation/multilinear_deep_explore.py:107: DeprecationWarning: Fraction.__float__ returned non-float (type numpy.float64).  The ability to return an instance of a strict subclass of float is deprecated, and may be removed in a future version of Python.
+  parseval_walsh = sum(float(v)**2 for v in walsh.values())
+
+
+######################################################################
+# n = 5
+######################################################################
+Computing H for all tilings...
+Done. m=6, H range=[1, 15]
+
+============================================================
+WALSH SPECTRUM ANALYSIS (m=6 tiles)
+============================================================
+Total nonzero Walsh coefficients: 40 / 64
+
+  Order 0: 1 nonzero
+    Distinct values: [Fraction(79, 8)]
+    Denominators: {8}
+    Numerator min v₂: 0, Denominator max v₂: 3
+
+  Order 1: 5 nonzero
+    Distinct values: [Fraction(-2, 1), Fraction(-7, 8), Fraction(-5, 8)]
+    Denominators: {8, 1}
+    Numerator min v₂: 0, Denominator max v₂: 3
+
+  Order 2: 15 nonzero
+    Distinct values: [Fraction(-7, 8), Fraction(-3, 4), Fraction(-5, 8), Fraction(-1, 4), Fraction(-1, 8), Fraction(1, 4), Fraction(7, 8)]
+    Denominators: {8, 4}
+    Numerator min v₂: 0, Denominator max v₂: 3
+
+  Order 3: 12 nonzero
+    Distinct values: [Fraction(-1, 8), Fraction(1, 8), Fraction(1, 4)]
+    Denominators: {8, 4}
+    Numerator min v₂: 0, Denominator max v₂: 3
+
+  Order 4: 7 nonzero
+    Distinct values: [Fraction(-1, 8), Fraction(1, 8)]
+    Denominators: {8}
+    Numerator min v₂: 0, Denominator max v₂: 3
+
+  Parseval check: Σ ĥ² = 110.375000
+
+============================================================
+QUADRATIC FORM MATRIX (n=5, m=6)
+============================================================
+  Q matrix (6×6):
+            (5,1)  (4,1)  (3,1)  (5,2)  (4,2)  (5,3)
+     (5,1)     .    -2    -2    -2     4    -2
+     (4,1)    -2     .    -2     4    -2     2
+     (3,1)    -2    -2     .     2     .     4
+     (5,2)    -2     4     2     .    -2    -2
+     (4,2)     4    -2     .    -2     .     .
+     (5,3)    -2     2     4    -2     .     .
+
+  Eigenvalues: ['8.5062', '4.3811', '-0.0000', '-0.3811', '-4.5062', '-8.0000']
+  Rank: 5 / 6
+  Trace: 0.0
+  Determinant: 0.000000
+  Frobenius norm: 13.2665
+  Signature: (2+, 3-, 1 zero)
+
+  Eigenvalue analysis:
+    λ =     8.506174, |λ|/2 = 4.253087, log₂|λ| = 3.0885
+    λ =     4.381113, |λ|/2 = 2.190556, log₂|λ| = 2.1313
+    λ =    -0.381113, |λ|/2 = 0.190556, log₂|λ| = -1.3917
+    λ =    -4.506174, |λ|/2 = 2.253087, log₂|λ| = 2.1719
+    λ =    -8.000000, |λ|/2 = 4.000000, log₂|λ| = 3.0000
+
+============================================================
+COEFFICIENT SUPPORT TOPOLOGY (n=5)
+============================================================
+  Support sizes by degree:
+    d=1: 6/6 = 1.000
+    d=2: 13/15 = 0.867
+    d=3: 8/20 = 0.400
+    d=4: 7/15 = 0.467
+
+  Simplicial complex check:
+    VIOLATION: [(5, 1), (3, 1), (4, 2)] in support but face [(3, 1), (4, 2)] missing
+    VIOLATION: [(5, 1), (3, 1), (5, 2), (4, 2)] in support but face [(3, 1), (5, 2), (4, 2)] missing
+    VIOLATION: [(5, 1), (3, 1), (5, 2), (4, 2)] in support but face [(5, 1), (3, 1), (5, 2)] missing
+    VIOLATION: [(4, 1), (3, 1), (5, 2), (4, 2)] in support but face [(3, 1), (5, 2), (4, 2)] missing
+    VIOLATION: [(4, 1), (3, 1), (5, 2), (4, 2)] in support but face [(4, 1), (3, 1), (4, 2)] missing
+    ✗ 20 violations — NOT a simplicial complex
+    POSITIVE support (16 sets): 10 face violations
+    NEGATIVE support (18 sets): 10 face violations
+
+  f-vector: f = (6, 13, 8, 7)
+  Euler characteristic: χ = -6
+
+============================================================
+2-ADIC VALUATION STRUCTURE (n=5)
+============================================================
+
+  Degree 0: 1 coefficients
+    v₂ range: [0, 0]
+    v₂ distribution: {0: 1}
+    After dividing by 2^0: odd parts = [np.int64(1)]
+
+  Degree 1: 6 coefficients
+    v₂ range: [1, 3]
+    v₂ distribution: {1: 3, 2: 2, 3: 1}
+    After dividing by 2^1: odd parts = [np.int64(1), np.int64(2), np.int64(4)]
+
+  Degree 2: 13 coefficients
+    v₂ range: [1, 2]
+    v₂ distribution: {1: 10, 2: 3}
+    After dividing by 2^1: odd parts = [np.int64(-1), np.int64(1), np.int64(2)]
+    Detailed v₂ by tile pair:
+      [(5, 1), (4, 1)] skips=[4, 3]: c=-2, v₂=1
+      [(5, 1), (3, 1)] skips=[4, 2]: c=-2, v₂=1
+      [(4, 1), (3, 1)] skips=[3, 2]: c=-2, v₂=1
+      [(5, 1), (5, 2)] skips=[4, 3]: c=-2, v₂=1
+      [(3, 1), (5, 2)] skips=[2, 3]: c=2, v₂=1
+      [(4, 1), (4, 2)] skips=[3, 2]: c=-2, v₂=1
+      [(5, 2), (4, 2)] skips=[3, 2]: c=-2, v₂=1
+      [(5, 1), (5, 3)] skips=[4, 2]: c=-2, v₂=1
+      [(4, 1), (5, 3)] skips=[3, 2]: c=2, v₂=1
+      [(5, 2), (5, 3)] skips=[3, 2]: c=-2, v₂=1
+      [(4, 1), (5, 2)] skips=[3, 3]: c=4, v₂=2
+      [(5, 1), (4, 2)] skips=[4, 2]: c=4, v₂=2
+      [(3, 1), (5, 3)] skips=[2, 2]: c=4, v₂=2
+
+  Degree 3: 8 coefficients
+    v₂ range: [1, 2]
+    v₂ distribution: {1: 6, 2: 2}
+    After dividing by 2^1: odd parts = [np.int64(-2), np.int64(-1)]
+
+  Degree 4: 7 coefficients
+    v₂ range: [1, 1]
+    v₂ distribution: {1: 7}
+    After dividing by 2^1: odd parts = [np.int64(-1), np.int64(1)]
+
+============================================================
+GRADIENT STRUCTURE ∂H/∂t_k (n=5)
+============================================================
+  tile (5, 1) skip=4: ∂H/∂t_k has 13 terms, deg=3, at t=0: 8, at t=1: -2, sum=-2, (+4/-9)
+  tile (4, 1) skip=3: ∂H/∂t_k has 16 terms, deg=3, at t=0: 4, at t=1: -4, sum=-4, (+7/-9)
+  tile (3, 1) skip=2: ∂H/∂t_k has 12 terms, deg=3, at t=0: 2, at t=1: 0, sum=0, (+6/-6)
+  tile (5, 2) skip=3: ∂H/∂t_k has 16 terms, deg=3, at t=0: 4, at t=1: -4, sum=-4, (+7/-9)
+  tile (4, 2) skip=2: ∂H/∂t_k has 15 terms, deg=3, at t=0: 2, at t=1: -4, sum=-4, (+6/-9)
+  tile (5, 3) skip=2: ∂H/∂t_k has 12 terms, deg=3, at t=0: 2, at t=1: 0, sum=0, (+6/-6)
+
+============================================================
+TILE INTERACTION GRAPH (n=5)
+============================================================
+  Vertices: 6 tiles
+  Edges: 13 (5 positive, 8 negative)
+  Density: 13/15 = 0.867
+  Degree sequence: [5, 5, 5, 4, 4, 3]
+  Min degree: 3, Max degree: 5
+
+  Negative edges (same-vertex pairs):
+    (5, 1)-(4, 1): lower=1
+    (5, 1)-(3, 1): lower=1
+    (4, 1)-(3, 1): lower=1
+    (5, 1)-(5, 2): upper=5
+    (4, 1)-(4, 2): upper=4
+    (5, 2)-(4, 2): lower=2
+    (5, 1)-(5, 3): upper=5
+    (5, 2)-(5, 3): upper=5
+
+  Negative edges: 8 same-vertex, 0 cross-vertex
+  Positive edges: 0 same-end, 1 cross-end, 4 disjoint
+
+  Laplacian eigenvalues: ['-9.8190', '-3.2186', '-0.0000', '0.8769', '3.0376', '9.1231']
+  Algebraic connectivity (λ₂): -3.218601
+
+============================================================
+COEFFICIENT STATISTICS (n=5)
+============================================================
+  Total nonzero: 35
+  Sum of all coefficients: 9
+  Sum of |coefficients|: 89
+  Sum of positive: 49
+  Sum of negative: -40
+  H(all 1s) = sum(c_S) = 9
+  Alternating sum Σ (-1)^|S| c_S = 5
+  H(1/2, ..., 1/2) = 9.875000
+  = average of H over all tilings? No, that's sum H / 2^m = 
+  By-degree sums:
+    d=0: count=1, sum=1, |sum|=1, mean=1.000
+    d=1: count=6, sum=22, |sum|=22, mean=3.667
+    d=2: count=13, sum=0, |sum|=32, mean=0.000
+    d=3: count=8, sum=-20, |sum|=20, mean=-2.500
+    d=4: count=7, sum=6, |sum|=14, mean=0.857
+
+
+######################################################################
+# n = 6
+######################################################################
+Computing H for all tilings...
+Done. m=10, H range=[1, 45]
+
+============================================================
+WALSH SPECTRUM ANALYSIS (m=10 tiles)
+============================================================
+Total nonzero Walsh coefficients: 207 / 1024
+
+  Order 0: 1 nonzero
+    Distinct values: [Fraction(29, 1)]
+    Denominators: {1}
+    Numerator min v₂: 0, Denominator max v₂: 0
+
+  Order 1: 8 nonzero
+    Distinct values: [Fraction(-4, 1), Fraction(-2, 1), Fraction(-13, 8), Fraction(-3, 2), Fraction(1, 4)]
+    Denominators: {8, 1, 2, 4}
+    Numerator min v₂: 0, Denominator max v₂: 3
+
+  Order 2: 44 nonzero
+    Distinct values: [Fraction(-15, 8), Fraction(-7, 4), Fraction(-13, 8), Fraction(-3, 2), Fraction(-11, 8), Fraction(-1, 2), Fraction(-1, 4), Fraction(-1, 8), Fraction(1, 8), Fraction(1, 4), Fraction(1, 2), Fraction(3, 4), Fraction(3, 2), Fraction(7, 4)]
+    Denominators: {8, 2, 4}
+    Numerator min v₂: 0, Denominator max v₂: 3
+
+  Order 3: 73 nonzero
+    Distinct values: [Fraction(-3, 8), Fraction(-1, 4), Fraction(-1, 8), Fraction(1, 8), Fraction(1, 4), Fraction(3, 8)]
+    Denominators: {8, 4}
+    Numerator min v₂: 0, Denominator max v₂: 3
+
+  Order 4: 81 nonzero
+    Distinct values: [Fraction(-1, 4), Fraction(-1, 8), Fraction(1, 8), Fraction(1, 4)]
+    Denominators: {8, 4}
+    Numerator min v₂: 0, Denominator max v₂: 3
+
+  Parseval check: Σ ĥ² = 945.562500
+
+============================================================
+QUADRATIC FORM MATRIX (n=6, m=10)
+============================================================
+  Q matrix (10×10):
+            (6,1)  (5,1)  (4,1)  (3,1)  (6,2)  (5,2)  (4,2)  (6,3)  (5,3)  (6,4)
+     (6,1)     .    -2    -2    -4    -2    16     8    -2     8    -4
+     (5,1)    -2     .    -2    -2    16    -2     4    10    -2     4
+     (4,1)    -2    -2     .    -2    10     4    -2     8     2     8
+     (3,1)    -4    -2    -2     .     4     2     .     8     4     4
+     (6,2)    -2    16    10     4     .    -2    -2    -2     4    -2
+     (5,2)    16    -2     4     2    -2     .    -2     4    -2     2
+     (4,2)     8     4    -2     .    -2    -2     .     2     .     4
+     (6,3)    -2    10     8     8    -2     4     2     .    -2    -2
+     (5,3)     8    -2     2     4     4    -2     .    -2     .     .
+     (6,4)    -4     4     8     4    -2     2     4    -2     .     .
+
+  Eigenvalues: ['23.8408', '18.1943', '8.9648', '7.1829', '4.3116', '4.2669', '-3.9432', '-10.1318', '-23.3683', '-29.3180']
+  Rank: 10 / 10
+  Trace: 0.0
+  Determinant: 14065315839.999968
+  Frobenius norm: 50.9117
+  Signature: (6+, 4-, 0 zero)
+
+  Eigenvalue analysis:
+    λ =    23.840757, |λ|/2 = 11.920378, log₂|λ| = 4.5754
+    λ =    18.194324, |λ|/2 = 9.097162, log₂|λ| = 4.1854
+    λ =     8.964834, |λ|/2 = 4.482417, log₂|λ| = 3.1643
+    λ =     7.182887, |λ|/2 = 3.591443, log₂|λ| = 2.8446
+    λ =     4.311616, |λ|/2 = 2.155808, log₂|λ| = 2.1082
+    λ =     4.266909, |λ|/2 = 2.133454, log₂|λ| = 2.0932
+    λ =    -3.943227, |λ|/2 = 1.971614, log₂|λ| = 1.9794
+    λ =   -10.131764, |λ|/2 = 5.065882, log₂|λ| = 3.3408
+    λ =   -23.368303, |λ|/2 = 11.684151, log₂|λ| = 4.5465
+    λ =   -29.318032, |λ|/2 = 14.659016, log₂|λ| = 4.8737
+
+============================================================
+COEFFICIENT SUPPORT TOPOLOGY (n=6)
+============================================================
+  Support sizes by degree:
+    d=1: 10/10 = 1.000
+    d=2: 42/45 = 0.933
+    d=3: 66/120 = 0.550
+    d=4: 81/210 = 0.386
+
+  Simplicial complex check:
+    VIOLATION: [(5, 1), (4, 1), (6, 2), (6, 4)] in support but face [(4, 1), (6, 2), (6, 4)] missing
+    VIOLATION: [(5, 1), (4, 1), (6, 2), (6, 4)] in support but face [(5, 1), (4, 1), (6, 4)] missing
+    VIOLATION: [(4, 1), (3, 1), (6, 2), (6, 4)] in support but face [(4, 1), (6, 2), (6, 4)] missing
+    VIOLATION: [(6, 1), (5, 1), (5, 2), (6, 4)] in support but face [(5, 1), (5, 2), (6, 4)] missing
+    VIOLATION: [(6, 1), (5, 1), (5, 2), (6, 4)] in support but face [(6, 1), (5, 1), (6, 4)] missing
+    ✗ 130 violations — NOT a simplicial complex
+    POSITIVE support (95 sets): 68 face violations
+    NEGATIVE support (104 sets): 62 face violations
+
+  f-vector: f = (10, 42, 66, 81)
+  Euler characteristic: χ = -47
+
+============================================================
+2-ADIC VALUATION STRUCTURE (n=6)
+============================================================
+
+  Degree 0: 1 coefficients
+    v₂ range: [0, 0]
+    v₂ distribution: {0: 1}
+    After dividing by 2^0: odd parts = [np.int64(1)]
+
+  Degree 1: 10 coefficients
+    v₂ range: [1, 4]
+    v₂ distribution: {1: 4, 2: 3, 3: 2, 4: 1}
+    After dividing by 2^1: odd parts = [np.int64(1), np.int64(2), np.int64(4), np.int64(8)]
+
+  Degree 2: 42 coefficients
+    v₂ range: [1, 4]
+    v₂ distribution: {1: 24, 2: 11, 3: 5, 4: 2}
+    After dividing by 2^1: odd parts = [np.int64(-2), np.int64(-1), np.int64(1), np.int64(2), np.int64(4), np.int64(5), np.int64(8)]
+    Detailed v₂ by tile pair:
+      [(6, 1), (5, 1)] skips=[5, 4]: c=-2, v₂=1
+      [(6, 1), (4, 1)] skips=[5, 3]: c=-2, v₂=1
+      [(5, 1), (4, 1)] skips=[4, 3]: c=-2, v₂=1
+      [(5, 1), (3, 1)] skips=[4, 2]: c=-2, v₂=1
+      [(4, 1), (3, 1)] skips=[3, 2]: c=-2, v₂=1
+      [(6, 1), (6, 2)] skips=[5, 4]: c=-2, v₂=1
+      [(4, 1), (6, 2)] skips=[3, 4]: c=10, v₂=1
+      [(5, 1), (5, 2)] skips=[4, 3]: c=-2, v₂=1
+      [(3, 1), (5, 2)] skips=[2, 3]: c=2, v₂=1
+      [(6, 2), (5, 2)] skips=[4, 3]: c=-2, v₂=1
+      [(4, 1), (4, 2)] skips=[3, 2]: c=-2, v₂=1
+      [(6, 2), (4, 2)] skips=[4, 2]: c=-2, v₂=1
+      [(5, 2), (4, 2)] skips=[3, 2]: c=-2, v₂=1
+      [(6, 1), (6, 3)] skips=[5, 3]: c=-2, v₂=1
+      [(5, 1), (6, 3)] skips=[4, 3]: c=10, v₂=1
+      [(6, 2), (6, 3)] skips=[4, 3]: c=-2, v₂=1
+      [(4, 2), (6, 3)] skips=[2, 3]: c=2, v₂=1
+      [(5, 1), (5, 3)] skips=[4, 2]: c=-2, v₂=1
+      [(4, 1), (5, 3)] skips=[3, 2]: c=2, v₂=1
+      [(5, 2), (5, 3)] skips=[3, 2]: c=-2, v₂=1
+      [(6, 3), (5, 3)] skips=[3, 2]: c=-2, v₂=1
+      [(6, 2), (6, 4)] skips=[4, 2]: c=-2, v₂=1
+      [(5, 2), (6, 4)] skips=[3, 2]: c=2, v₂=1
+      [(6, 3), (6, 4)] skips=[3, 2]: c=-2, v₂=1
+      [(6, 1), (3, 1)] skips=[5, 2]: c=-4, v₂=2
+      [(3, 1), (6, 2)] skips=[2, 4]: c=4, v₂=2
+      [(4, 1), (5, 2)] skips=[3, 3]: c=4, v₂=2
+      [(5, 1), (4, 2)] skips=[4, 2]: c=4, v₂=2
+      [(5, 2), (6, 3)] skips=[3, 3]: c=4, v₂=2
+      [(3, 1), (5, 3)] skips=[2, 2]: c=4, v₂=2
+      [(6, 2), (5, 3)] skips=[4, 2]: c=4, v₂=2
+      [(6, 1), (6, 4)] skips=[5, 2]: c=-4, v₂=2
+      [(5, 1), (6, 4)] skips=[4, 2]: c=4, v₂=2
+      [(3, 1), (6, 4)] skips=[2, 2]: c=4, v₂=2
+      [(4, 2), (6, 4)] skips=[2, 2]: c=4, v₂=2
+      [(6, 1), (4, 2)] skips=[5, 2]: c=8, v₂=3
+      [(4, 1), (6, 3)] skips=[3, 3]: c=8, v₂=3
+      [(3, 1), (6, 3)] skips=[2, 3]: c=8, v₂=3
+      [(6, 1), (5, 3)] skips=[5, 2]: c=8, v₂=3
+      [(4, 1), (6, 4)] skips=[3, 2]: c=8, v₂=3
+      [(5, 1), (6, 2)] skips=[4, 4]: c=16, v₂=4
+      [(6, 1), (5, 2)] skips=[5, 3]: c=16, v₂=4
+
+  Degree 3: 66 coefficients
+    v₂ range: [1, 3]
+    v₂ distribution: {1: 36, 2: 22, 3: 8}
+    After dividing by 2^1: odd parts = [np.int64(-4), np.int64(-3), np.int64(-2), np.int64(-1), np.int64(1), np.int64(2), np.int64(3)]
+
+  Degree 4: 81 coefficients
+    v₂ range: [1, 2]
+    v₂ distribution: {1: 62, 2: 19}
+    After dividing by 2^1: odd parts = [np.int64(-2), np.int64(-1), np.int64(1), np.int64(2)]
+
+============================================================
+GRADIENT STRUCTURE ∂H/∂t_k (n=6)
+============================================================
+  tile (6, 1) skip=5: ∂H/∂t_k has 55 terms, deg=3, at t=0: 16, at t=1: -12, sum=-12, (+24/-31)
+  tile (5, 1) skip=4: ∂H/∂t_k has 66 terms, deg=3, at t=0: 8, at t=1: -12, sum=-12, (+32/-34)
+  tile (4, 1) skip=3: ∂H/∂t_k has 60 terms, deg=3, at t=0: 4, at t=1: -6, sum=-6, (+29/-31)
+  tile (3, 1) skip=2: ∂H/∂t_k has 57 terms, deg=3, at t=0: 2, at t=1: 2, sum=2, (+29/-28)
+  tile (6, 2) skip=4: ∂H/∂t_k has 66 terms, deg=3, at t=0: 8, at t=1: -12, sum=-12, (+32/-34)
+  tile (5, 2) skip=3: ∂H/∂t_k has 71 terms, deg=3, at t=0: 4, at t=1: -12, sum=-12, (+36/-35)
+  tile (4, 2) skip=2: ∂H/∂t_k has 62 terms, deg=3, at t=0: 2, at t=1: -6, sum=-6, (+30/-32)
+  tile (6, 3) skip=3: ∂H/∂t_k has 60 terms, deg=3, at t=0: 4, at t=1: -6, sum=-6, (+29/-31)
+  tile (5, 3) skip=2: ∂H/∂t_k has 62 terms, deg=3, at t=0: 2, at t=1: -6, sum=-6, (+30/-32)
+  tile (6, 4) skip=2: ∂H/∂t_k has 57 terms, deg=3, at t=0: 2, at t=1: 2, sum=2, (+29/-28)
+
+============================================================
+TILE INTERACTION GRAPH (n=6)
+============================================================
+  Vertices: 10 tiles
+  Edges: 42 (22 positive, 20 negative)
+  Density: 42/45 = 0.933
+  Degree sequence: [9, 9, 9, 9, 9, 9, 8, 8, 7, 7]
+  Min degree: 7, Max degree: 9
+
+  Negative edges (same-vertex pairs):
+    (6, 1)-(5, 1): lower=1
+    (6, 1)-(4, 1): lower=1
+    (5, 1)-(4, 1): lower=1
+    (6, 1)-(3, 1): lower=1
+    (5, 1)-(3, 1): lower=1
+    (4, 1)-(3, 1): lower=1
+    (6, 1)-(6, 2): upper=6
+    (5, 1)-(5, 2): upper=5
+    (6, 2)-(5, 2): lower=2
+    (4, 1)-(4, 2): upper=4
+    (6, 2)-(4, 2): lower=2
+    (5, 2)-(4, 2): lower=2
+    (6, 1)-(6, 3): upper=6
+    (6, 2)-(6, 3): upper=6
+    (5, 1)-(5, 3): upper=5
+    (5, 2)-(5, 3): upper=5
+    (6, 3)-(5, 3): lower=3
+    (6, 1)-(6, 4): upper=6
+    (6, 2)-(6, 4): upper=6
+    (6, 3)-(6, 4): upper=6
+
+  Negative edges: 20 same-vertex, 0 cross-vertex
+  Positive edges: 0 same-end, 4 cross-end, 18 disjoint
+
+  Laplacian eigenvalues: ['-3.4120', '-0.0000', '7.7494', '9.7629', '11.0453', '13.1785', '24.2950', '28.9618', '40.3088', '52.1104']
+  Algebraic connectivity (λ₂): -0.000000
+
+============================================================
+COEFFICIENT STATISTICS (n=6)
+============================================================
+  Total nonzero: 200
+  Sum of all coefficients: 17
+  Sum of |coefficients|: 689
+  Sum of positive: 353
+  Sum of negative: -336
+  H(all 1s) = sum(c_S) = 17
+  Alternating sum Σ (-1)^|S| c_S = 329
+  H(1/2, ..., 1/2) = 29.000000
+  = average of H over all tilings? No, that's sum H / 2^m = 
+  By-degree sums:
+    d=0: count=1, sum=1, |sum|=1, mean=1.000
+    d=1: count=10, sum=52, |sum|=52, mean=5.200
+    d=2: count=42, sum=92, |sum|=180, mean=2.190
+    d=3: count=66, sum=-208, |sum|=256, mean=-3.152
+    d=4: count=81, sum=80, |sum|=200, mean=0.988
+
+
+######################################################################
+# n = 7
+######################################################################
+Computing H for all tilings...
+Done. m=15, H range=[1, 189]
+
+============================================================
+QUADRATIC FORM MATRIX (n=7, m=15)
+============================================================
+  Q matrix (15×15):
+            (7,1)  (6,1)  (5,1)  (4,1)  (3,1)  (7,2)  (6,2)  (5,2)  (4,2)  (7,3)  (6,3)  (5,3)  (7,4)  (6,4)  (7,5)
+     (7,1)     .    -2    -2    -4    -8    -2    52    32    16    -2    32    16    -4    16    -8
+     (6,1)    -2     .    -2    -2    -4    52    -2    16     8    34    -2     8    20    -4     8
+     (5,1)    -2    -2     .    -2    -2    34    16    -2     4    24    10    -2    16     4    16
+     (4,1)    -4    -2    -2     .    -2    20    10     4    -2    16     8     2    16     8     8
+     (3,1)    -8    -4    -2    -2     .     8     4     2     .    16     8     4     8     4     4
+     (7,2)    -2    52    34    20     8     .    -2    -2    -4    -2    16     8    -2     8    -4
+     (6,2)    52    -2    16    10     4    -2     .    -2    -2    16    -2     4    10    -2     4
+     (5,2)    32    16    -2     4     2    -2    -2     .    -2    10     4    -2     8     2     8
+     (4,2)    16     8     4    -2     .    -4    -2    -2     .     4     2     .     8     4     4
+     (7,3)    -2    34    24    16    16    -2    16    10     4     .    -2    -2    -2     4    -2
+     (6,3)    32    -2    10     8     8    16    -2     4     2    -2     .    -2     4    -2     2
+     (5,3)    16     8    -2     2     4     8     4    -2     .    -2    -2     .     2     .     4
+     (7,4)    -4    20    16    16     8    -2    10     8     8    -2     4     2     .    -2    -2
+     (6,4)    16    -4     4     8     4     8    -2     2     4     4    -2     .    -2     .     .
+     (7,5)    -8     8    16     8     4    -4     4     8     4    -2     2     4    -2     .     .
+
+  Eigenvalues: ['96.9940', '65.5466', '22.6583', '20.0068', '9.3799', '8.9126', '6.6506', '4.2261', '4.2196', '4.1200', '-9.9020', '-22.6929', '-33.3818', '-82.8761', '-93.8618']
+  Rank: 15 / 15
+  Trace: 0.0
+  Determinant: -6869429409374797824.000000
+  Frobenius norm: 179.6886
+  Signature: (10+, 5-, 0 zero)
+
+  Eigenvalue analysis:
+    λ =    96.993986, |λ|/2 = 48.496993, log₂|λ| = 6.5998
+    λ =    65.546621, |λ|/2 = 32.773310, log₂|λ| = 6.0344
+    λ =    22.658262, |λ|/2 = 11.329131, log₂|λ| = 4.5020
+    λ =    20.006832, |λ|/2 = 10.003416, log₂|λ| = 4.3224
+    λ =     9.379933, |λ|/2 = 4.689966, log₂|λ| = 3.2296
+    λ =     8.912632, |λ|/2 = 4.456316, log₂|λ| = 3.1559
+    λ =     6.650592, |λ|/2 = 3.325296, log₂|λ| = 2.7335
+    λ =     4.226111, |λ|/2 = 2.113056, log₂|λ| = 2.0793
+    λ =     4.219610, |λ|/2 = 2.109805, log₂|λ| = 2.0771
+    λ =     4.120039, |λ|/2 = 2.060020, log₂|λ| = 2.0427
+    λ =    -9.901955, |λ|/2 = 4.950977, log₂|λ| = 3.3077
+    λ =   -22.692947, |λ|/2 = 11.346473, log₂|λ| = 4.5042
+    λ =   -33.381825, |λ|/2 = 16.690912, log₂|λ| = 5.0610
+    λ =   -82.876096, |λ|/2 = 41.438048, log₂|λ| = 6.3729
+    λ =   -93.861796, |λ|/2 = 46.930898, log₂|λ| = 6.5525
+
+============================================================
+COEFFICIENT SUPPORT TOPOLOGY (n=7)
+============================================================
+  Support sizes by degree:
+    d=1: 15/15 = 1.000
+    d=2: 101/105 = 0.962
+    d=3: 309/455 = 0.679
+    d=4: 626/1365 = 0.459
+    d=5: 407/3003 = 0.136
+    d=6: 323/5005 = 0.065
+
+  Simplicial complex check:
+    VIOLATION: [(7, 1), (4, 1), (7, 2), (6, 4)] in support but face [(7, 1), (4, 1), (6, 4)] missing
+    VIOLATION: [(5, 1), (3, 1), (7, 2), (7, 5)] in support but face [(5, 1), (7, 2), (7, 5)] missing
+    VIOLATION: [(6, 1), (7, 3), (6, 3), (7, 5)] in support but face [(7, 3), (6, 3), (7, 5)] missing
+    VIOLATION: [(6, 1), (7, 3), (6, 3), (7, 5)] in support but face [(6, 1), (6, 3), (7, 5)] missing
+    VIOLATION: [(4, 1), (3, 1), (7, 2), (6, 4), (7, 5)] in support but face [(4, 1), (3, 1), (6, 4), (7, 5)] missing
+    ✗ 2138 violations — NOT a simplicial complex
+    POSITIVE support (896 sets): 1078 face violations
+    NEGATIVE support (885 sets): 1060 face violations
+
+  f-vector: f = (15, 101, 309, 626, 407, 323)
+  Euler characteristic: χ = -319
+
+============================================================
+2-ADIC VALUATION STRUCTURE (n=7)
+============================================================
+
+  Degree 0: 1 coefficients
+    v₂ range: [0, 0]
+    v₂ distribution: {0: 1}
+    After dividing by 2^0: odd parts = [np.int64(1)]
+
+  Degree 1: 15 coefficients
+    v₂ range: [1, 5]
+    v₂ distribution: {1: 5, 2: 4, 3: 3, 4: 2, 5: 1}
+    After dividing by 2^1: odd parts = [np.int64(1), np.int64(2), np.int64(4), np.int64(8), np.int64(16)]
+
+  Degree 2: 101 coefficients
+    v₂ range: [1, 5]
+    v₂ distribution: {1: 44, 2: 26, 3: 17, 4: 12, 5: 2}
+    After dividing by 2^1: odd parts = [np.int64(-4), np.int64(-2), np.int64(-1), np.int64(1), np.int64(2), np.int64(4), np.int64(5), np.int64(8), np.int64(10), np.int64(12), np.int64(16), np.int64(17), np.int64(26)]
+
+  Degree 3: 309 coefficients
+    v₂ range: [1, 4]
+    v₂ distribution: {1: 126, 2: 99, 3: 63, 4: 21}
+    After dividing by 2^1: odd parts = [np.int64(-10), np.int64(-9), np.int64(-8), np.int64(-7), np.int64(-6), np.int64(-5), np.int64(-4), np.int64(-3), np.int64(-2), np.int64(-1), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(7), np.int64(8), np.int64(9), np.int64(10)]
+
+  Degree 4: 626 coefficients
+    v₂ range: [1, 3]
+    v₂ distribution: {1: 355, 2: 221, 3: 50}
+    After dividing by 2^1: odd parts = [np.int64(-4), np.int64(-3), np.int64(-2), np.int64(-1), np.int64(1), np.int64(2), np.int64(3), np.int64(4)]
+
+  Degree 5: 407 coefficients
+    v₂ range: [1, 2]
+    v₂ distribution: {1: 316, 2: 91}
+    After dividing by 2^1: odd parts = [np.int64(-2), np.int64(-1), np.int64(1), np.int64(2)]
+
+  Degree 6: 323 coefficients
+    v₂ range: [1, 1]
+    v₂ distribution: {1: 323}
+    After dividing by 2^1: odd parts = [np.int64(-1), np.int64(1)]
+
+============================================================
+GRADIENT STRUCTURE ∂H/∂t_k (n=7)
+============================================================
+  tile (7, 1) skip=6: ∂H/∂t_k has 436 terms, deg=5, at t=0: 32, at t=1: -38, sum=-38, (+225/-211)
+  tile (6, 1) skip=5: ∂H/∂t_k has 496 terms, deg=5, at t=0: 16, at t=1: -36, sum=-36, (+259/-237)
+  tile (5, 1) skip=4: ∂H/∂t_k has 518 terms, deg=5, at t=0: 8, at t=1: -20, sum=-20, (+266/-252)
+  tile (4, 1) skip=3: ∂H/∂t_k has 490 terms, deg=5, at t=0: 4, at t=1: -10, sum=-10, (+249/-241)
+  tile (3, 1) skip=2: ∂H/∂t_k has 455 terms, deg=5, at t=0: 2, at t=1: 2, sum=2, (+230/-225)
+  tile (7, 2) skip=5: ∂H/∂t_k has 496 terms, deg=5, at t=0: 16, at t=1: -36, sum=-36, (+259/-237)
+  tile (6, 2) skip=4: ∂H/∂t_k has 585 terms, deg=5, at t=0: 8, at t=1: -34, sum=-34, (+303/-282)
+  tile (5, 2) skip=3: ∂H/∂t_k has 562 terms, deg=5, at t=0: 4, at t=1: -18, sum=-18, (+290/-272)
+  tile (4, 2) skip=2: ∂H/∂t_k has 513 terms, deg=5, at t=0: 2, at t=1: -10, sum=-10, (+258/-255)
+  tile (7, 3) skip=4: ∂H/∂t_k has 518 terms, deg=5, at t=0: 8, at t=1: -20, sum=-20, (+266/-252)
+  tile (6, 3) skip=3: ∂H/∂t_k has 562 terms, deg=5, at t=0: 4, at t=1: -18, sum=-18, (+290/-272)
+  tile (5, 3) skip=2: ∂H/∂t_k has 532 terms, deg=5, at t=0: 2, at t=1: -10, sum=-10, (+268/-264)
+  tile (7, 4) skip=3: ∂H/∂t_k has 490 terms, deg=5, at t=0: 4, at t=1: -10, sum=-10, (+249/-241)
+  tile (6, 4) skip=2: ∂H/∂t_k has 513 terms, deg=5, at t=0: 2, at t=1: -10, sum=-10, (+258/-255)
+  tile (7, 5) skip=2: ∂H/∂t_k has 455 terms, deg=5, at t=0: 2, at t=1: 2, sum=2, (+230/-225)
+
+============================================================
+TILE INTERACTION GRAPH (n=7)
+============================================================
+  Vertices: 15 tiles
+  Edges: 101 (61 positive, 40 negative)
+  Density: 101/105 = 0.962
+  Degree sequence: [14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 13, 13, 12, 12, 12]
+  Min degree: 12, Max degree: 14
+
+  Negative edges (same-vertex pairs):
+    (7, 1)-(6, 1): lower=1
+    (7, 1)-(5, 1): lower=1
+    (6, 1)-(5, 1): lower=1
+    (7, 1)-(4, 1): lower=1
+    (6, 1)-(4, 1): lower=1
+    (5, 1)-(4, 1): lower=1
+    (7, 1)-(3, 1): lower=1
+    (6, 1)-(3, 1): lower=1
+    (5, 1)-(3, 1): lower=1
+    (4, 1)-(3, 1): lower=1
+    (7, 1)-(7, 2): upper=7
+    (6, 1)-(6, 2): upper=6
+    (7, 2)-(6, 2): lower=2
+    (5, 1)-(5, 2): upper=5
+    (7, 2)-(5, 2): lower=2
+    (6, 2)-(5, 2): lower=2
+    (4, 1)-(4, 2): upper=4
+    (7, 2)-(4, 2): lower=2
+    (6, 2)-(4, 2): lower=2
+    (5, 2)-(4, 2): lower=2
+    (7, 1)-(7, 3): upper=7
+    (7, 2)-(7, 3): upper=7
+    (6, 1)-(6, 3): upper=6
+    (6, 2)-(6, 3): upper=6
+    (7, 3)-(6, 3): lower=3
+    (5, 1)-(5, 3): upper=5
+    (5, 2)-(5, 3): upper=5
+    (7, 3)-(5, 3): lower=3
+    (6, 3)-(5, 3): lower=3
+    (7, 1)-(7, 4): upper=7
+    (7, 2)-(7, 4): upper=7
+    (7, 3)-(7, 4): upper=7
+    (6, 1)-(6, 4): upper=6
+    (6, 2)-(6, 4): upper=6
+    (6, 3)-(6, 4): upper=6
+    (7, 4)-(6, 4): lower=4
+    (7, 1)-(7, 5): upper=7
+    (7, 2)-(7, 5): upper=7
+    (7, 3)-(7, 5): upper=7
+    (7, 4)-(7, 5): upper=7
+
+  Negative edges: 40 same-vertex, 0 cross-vertex
+  Positive edges: 0 same-end, 10 cross-end, 51 disjoint
+
+  Laplacian eigenvalues: ['-0.0000', '32.8564', '37.7271', '37.7679', '43.5256', '45.4517', '55.8145', '70.4588', '77.3362', '82.1859', '91.0193', '124.7064', '128.5162', '193.8809', '210.7530']
+  Algebraic connectivity (λ₂): 32.856422
+
+============================================================
+COEFFICIENT STATISTICS (n=7)
+============================================================
+  Total nonzero: 1782
+  Sum of all coefficients: 31
+  Sum of |coefficients|: 6611
+  Sum of positive: 3321
+  Sum of negative: -3290
+  H(all 1s) = sum(c_S) = 31
+  Alternating sum Σ (-1)^|S| c_S = 635
+  H(1/2, ..., 1/2) = 99.218750
+  = average of H over all tilings? No, that's sum H / 2^m = 
+  By-degree sums:
+    d=0: count=1, sum=1, |sum|=1, mean=1.000
+    d=1: count=15, sum=114, |sum|=114, mean=7.600
+    d=2: count=101, sum=616, |sum|=824, mean=6.099
+    d=3: count=309, sum=-948, |sum|=1920, mean=-3.068
+    d=4: count=626, sum=-138, |sum|=2110, mean=-0.220
+    d=5: count=407, sum=532, |sum|=996, mean=1.307
+    d=6: count=323, sum=-146, |sum|=646, mean=-0.452
+
+
+######################################################################
+# n=7 WALSH SPECTRUM (integer-scaled)
+######################################################################
+Computing Walsh transform for n=7 (m=15, N=32768)...
+
+Nonzero unnormalized Walsh coefficients by order:
+  Order 0: 1 nonzero
+    Distinct values: [3251200]
+    Min v₂ of unnorm: 10 (actual Walsh v₂ = 10 - 15)
+  Order 1: 14 nonzero
+    Distinct values: [-325632, -160768, -140288, -136192, -6144, 12288]
+    Min v₂ of unnorm: 10 (actual Walsh v₂ = 10 - 15)
+  Order 2: 103 nonzero
+    Distinct values: [-154624, -148480, -146432, -142336, -141312, -135168, -134144, -129024, -122880, -116736, -29696, -24576, -20480, -14336, -13312]...
+    Min v₂ of unnorm: 10 (actual Walsh v₂ = 10 - 15)
+  Order 3: 364 nonzero
+    Distinct values: [-25600, -19456, -18432, -17408, -14336, -13312, -12288, -11264, -7168, -6144, -5120, -3072, -2048, -1024, 1024]...
+    Min v₂ of unnorm: 10 (actual Walsh v₂ = 10 - 15)
+  Order 4: 730 nonzero
+    Distinct values: [-15360, -14336, -13312, -12288, -11264, -7168, -6144, -5120, -4096, -3072, -2048, -1024, 1024, 2048, 3072]...
+    Min v₂ of unnorm: 10 (actual Walsh v₂ = 10 - 15)
+  Order 5: 529 nonzero
+    Distinct values: [-2048, -1024, 1024, 2048]
+    Min v₂ of unnorm: 10 (actual Walsh v₂ = 10 - 15)
+  Order 6: 323 nonzero
+    Distinct values: [-1024, 1024]
+    Min v₂ of unnorm: 10 (actual Walsh v₂ = 10 - 15)
+
+  Sparsity: 2064/32768 nonzero = 0.0630
+  Parseval: LHS=11847709229056, RHS=11847709229056, match=True
+
+  Checking multilinear ↔ Walsh conversion:
+    MISMATCH at S=0: expected 1, got 36
+    MISMATCH at S=1: expected 32, got -20
+    MISMATCH at S=2: expected 16, got -28
+    MISMATCH at S=3: expected -2, got 3
+    MISMATCH at S=4: expected 8, got -20
+    50 mismatches — conversion formula wrong, trying alternatives...

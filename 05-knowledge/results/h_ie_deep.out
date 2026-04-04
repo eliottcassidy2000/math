@@ -1,0 +1,273 @@
+
+============================================================
+GOAL 1: LOG STRUCTURE of H(t) at n=4
+============================================================
+Nonzero log-coefficients: 7 (vs 6 for H)
+
+  Order 1: 3 nonzero
+    [(4, 1)]: 1.609438
+    [(3, 1)]: 1.098612
+    [(4, 2)]: 1.098612
+
+  Order 2: 3 nonzero
+    [(4, 1), (3, 1)]: -1.098612
+    [(4, 1), (4, 2)]: -1.098612
+    [(3, 1), (4, 2)]: -0.587787
+
+  Order 3: 1 nonzero
+
+  H max degree: 2
+  log(H) max degree: 3
+
+============================================================
+GOAL 1: LOG STRUCTURE of H(t) at n=5
+============================================================
+Nonzero log-coefficients: 62 (vs 35 for H)
+
+  Order 1: 6 nonzero
+    [(5, 1)]: 2.197225
+    [(4, 1)]: 1.609438
+    [(5, 2)]: 1.609438
+    [(3, 1)]: 1.098612
+    [(4, 2)]: 1.098612
+    [(5, 3)]: 1.098612
+
+  Order 2: 14 nonzero
+    [(5, 1), (4, 1)]: -1.408767
+    [(5, 1), (5, 2)]: -1.408767
+    [(5, 1), (3, 1)]: -1.098612
+    [(4, 1), (3, 1)]: -1.098612
+    [(4, 1), (4, 2)]: -1.098612
+    [(5, 2), (4, 2)]: -1.098612
+    [(5, 1), (5, 3)]: -1.098612
+    [(5, 2), (5, 3)]: -1.098612
+
+  Order 3: 20 nonzero
+
+  Order 4: 15 nonzero
+
+  Order 5: 6 nonzero
+
+  Order 6: 1 nonzero
+
+  H max degree: 4
+  log(H) max degree: 6
+
+============================================================
+GOAL 1: LOG STRUCTURE of H(t) at n=6
+============================================================
+Nonzero log-coefficients: 1018 (vs 200 for H)
+
+  Order 1: 10 nonzero
+    [(6, 1)]: 2.833213
+    [(5, 1)]: 2.197225
+    [(6, 2)]: 2.197225
+    [(4, 1)]: 1.609438
+    [(5, 2)]: 1.609438
+    [(6, 3)]: 1.609438
+    [(3, 1)]: 1.098612
+    [(4, 2)]: 1.098612
+
+  Order 2: 40 nonzero
+    [(6, 1), (5, 1)]: -1.894944
+    [(6, 1), (6, 2)]: -1.894944
+    [(6, 1), (4, 1)]: -1.498212
+    [(6, 1), (6, 3)]: -1.498212
+    [(5, 1), (4, 1)]: -1.408767
+    [(5, 1), (5, 2)]: -1.408767
+    [(6, 2), (5, 2)]: -1.408767
+    [(6, 2), (6, 3)]: -1.408767
+
+  Order 3: 120 nonzero
+
+  Order 4: 210 nonzero
+
+  Order 5: 252 nonzero
+
+  Order 6: 210 nonzero
+
+  Order 7: 120 nonzero
+
+  Order 8: 45 nonzero
+
+  Order 9: 10 nonzero
+
+  Order 10: 1 nonzero
+
+  H max degree: 4
+  log(H) max degree: 10
+
+============================================================
+GOAL 2: ZERO PATTERN at n=5
+============================================================
+Total subsets: 64
+Nonzero: 35 (54.7%)
+Zero: 29 (45.3%)
+  Order 0: 1/1 nonzero (100%)
+  Order 1: 6/6 nonzero (100%)
+  Order 2: 13/15 nonzero (87%)
+  Order 3: 8/20 nonzero (40%)
+  Order 4: 7/15 nonzero (47%)
+  Order 5: 0/6 nonzero (0%)
+  Order 6: 0/1 nonzero (0%)
+
+Cycle servability analysis:
+  Total valid cycles: 20
+
+  Zero subsets analyzed: 29
+  Unreachable (no cycle packing exists): 26
+  Reachable but cancel: 3
+  (Unchecked: 0)
+
+============================================================
+GOAL 2: ZERO PATTERN at n=6
+============================================================
+Total subsets: 1024
+Nonzero: 200 (19.5%)
+Zero: 824 (80.5%)
+  Order 0: 1/1 nonzero (100%)
+  Order 1: 10/10 nonzero (100%)
+  Order 2: 42/45 nonzero (93%)
+  Order 3: 66/120 nonzero (55%)
+  Order 4: 81/210 nonzero (39%)
+  Order 5: 0/252 nonzero (0%)
+  Order 6: 0/210 nonzero (0%)
+  Order 7: 0/120 nonzero (0%)
+  Order 8: 0/45 nonzero (0%)
+  Order 9: 0/10 nonzero (0%)
+  Order 10: 0/1 nonzero (0%)
+
+Cycle servability analysis:
+  Total valid cycles: 86
+
+  Zero subsets analyzed: 200
+  Unreachable (no cycle packing exists): 191
+  Reachable but cancel: 9
+  (Unchecked: 624)
+
+============================================================
+GOAL 3: MATRIX FORMULA at n=4
+============================================================
+Symbolic adjacency matrix M(t) for n=4:
+         0        0       t1       t0
+         1        0        0       t2
+    (1-t1)        1        0        0
+    (1-t0)   (1-t2)        1        0
+
+  Tiling 0: H=1, det(I-2A)=1.0
+    Traces: [0, 0, 0, 0]
+    Cycle counts (tr(A^k)/k): ['0.0', '0.0', '0.0', '0.0']
+    log det(I-2A): exact=-0.0000, from traces=0.0000
+
+  Tiling 1: H=5, det(I-2A)=-31.0
+    Traces: [0, 0, 6, 4]
+    Cycle counts (tr(A^k)/k): ['0.0', '0.0', '2.0', '1.0']
+    log det(I-2A): exact=3.4340, from traces=-32.0000
+
+  Tiling 7: H=5, det(I-2A)=-31.0
+    Traces: [0, 0, 6, 4]
+    Cycle counts (tr(A^k)/k): ['0.0', '0.0', '2.0', '1.0']
+    log det(I-2A): exact=3.4340, from traces=-32.0000
+
+============================================================
+GOAL 3: MATRIX FORMULA at n=5
+============================================================
+Symbolic adjacency matrix M(t) for n=5:
+         0        0       t2       t1       t0
+         1        0        0       t4       t3
+    (1-t2)        1        0        0       t5
+    (1-t1)   (1-t4)        1        0        0
+    (1-t0)   (1-t3)   (1-t5)        1        0
+
+  Tiling 0: H=1, det(I-2A)=1.0
+    Traces: [0, 0, 0, 0, 0]
+    Cycle counts (tr(A^k)/k): ['0.0', '0.0', '0.0', '0.0', '0.0']
+    log det(I-2A): exact=0.0000, from traces=0.0000
+
+  Tiling 1: H=9, det(I-2A)=-103.0
+    Traces: [0, 0, 9, 12, 5]
+    Cycle counts (tr(A^k)/k): ['0.0', '0.0', '3.0', '3.0', '1.0']
+    log det(I-2A): exact=4.6347, from traces=-104.0000
+
+  Tiling 63: H=9, det(I-2A)=-87.0
+    Traces: [0, 0, 9, 8, 5]
+    Cycle counts (tr(A^k)/k): ['0.0', '0.0', '3.0', '2.0', '1.0']
+    log det(I-2A): exact=4.4659, from traces=-88.0000
+
+============================================================
+GOAL 4: CANCELLATION ANALYSIS at n=5
+============================================================
+
+  Order 1: 6 nonzero, 0 zero
+    Cancel ratio: min=1.2, max=2.0, mean=1.7
+    Most cancellation: [(3, 1)] ratio=2.0 (3-1=2)
+    Least cancellation: [(5, 1)] ratio=1.2 (9-1=8)
+
+  Order 2: 13 nonzero, 2 zero
+    Cancel ratio: min=4.0, max=13.0, mean=8.5
+    Most cancellation: [(5, 1), (4, 1)] ratio=13.0 (12-14=-2)
+    Least cancellation: [(3, 1), (5, 3)] ratio=4.0 (10-6=4)
+    Zero subsets: pos=neg always: True
+
+  Order 3: 8 nonzero, 12 zero
+    Cancel ratio: min=13.0, max=35.0, mean=25.5
+    Most cancellation: [(5, 1), (4, 1), (5, 2)] ratio=35.0 (34-36=-2)
+    Least cancellation: [(4, 1), (3, 1), (5, 2)] ratio=13.0 (24-28=-4)
+    Zero subsets: pos=neg always: True
+
+  Order 4: 7 nonzero, 8 zero
+    Cancel ratio: min=51.0, max=69.0, mean=58.1
+    Most cancellation: [(5, 1), (3, 1), (5, 2), (4, 2)] ratio=69.0 (70-68=2)
+    Least cancellation: [(4, 1), (3, 1), (5, 2), (4, 2)] ratio=51.0 (52-50=2)
+    Zero subsets: pos=neg always: True
+
+  Order 5: 0 nonzero, 6 zero
+    Zero subsets: pos=neg always: True
+
+  Order 6: 0 nonzero, 1 zero
+    Zero subsets: pos=neg always: True
+
+============================================================
+GOAL 4: CANCELLATION ANALYSIS at n=6
+============================================================
+
+  Order 1: 10 nonzero, 0 zero
+    Cancel ratio: min=1.1, max=2.0, mean=1.6
+    Most cancellation: [(3, 1)] ratio=2.0 (3-1=2)
+    Least cancellation: [(6, 1)] ratio=1.1 (17-1=16)
+
+  Order 2: 42 nonzero, 3 zero
+    Cancel ratio: min=3.0, max=25.0, mean=8.9
+    Most cancellation: [(6, 1), (5, 1)] ratio=25.0 (24-26=-2)
+    Least cancellation: [(3, 1), (6, 3)] ratio=3.0 (16-8=8)
+    Zero subsets: pos=neg always: True
+
+  Order 3: 66 nonzero, 54 zero
+    Cancel ratio: min=10.0, max=65.0, mean=27.6
+    Most cancellation: [(6, 1), (4, 1), (6, 2)] ratio=65.0 (64-66=-2)
+    Least cancellation: [(4, 1), (3, 1), (6, 2)] ratio=10.0 (36-44=-8)
+    Zero subsets: pos=neg always: True
+
+  Order 4: 81 nonzero, 129 zero
+    Cancel ratio: min=33.0, max=173.0, mean=94.9
+    Most cancellation: [(6, 1), (5, 1), (6, 2), (4, 2)] ratio=173.0 (174-172=2)
+    Least cancellation: [(4, 1), (4, 2), (6, 3), (5, 3)] ratio=33.0 (68-64=4)
+    Zero subsets: pos=neg always: True
+
+  Order 5: 0 nonzero, 252 zero
+    Zero subsets: pos=neg always: True
+
+  Order 6: 0 nonzero, 210 zero
+    Zero subsets: pos=neg always: True
+
+  Order 7: 0 nonzero, 120 zero
+    Zero subsets: pos=neg always: True
+
+  Order 8: 0 nonzero, 45 zero
+    Zero subsets: pos=neg always: True
+
+  Order 9: 0 nonzero, 10 zero
+    Zero subsets: pos=neg always: True
+
+  Order 10: 0 nonzero, 1 zero
+    Zero subsets: pos=neg always: True
