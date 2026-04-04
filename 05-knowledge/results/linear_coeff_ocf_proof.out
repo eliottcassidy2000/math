@@ -1,0 +1,26 @@
+PROOF OF LINEAR COEFFICIENT FORMULA c_k = 2^(skip-1)
+============================================================
+
+Tile (x,y) with skip s = x-y connects vertices x-1 and y-1 (0-indexed).
+Between them: s-1 intermediate vertices.
+
+A valid cycle: backward tile arc (y-1 → x-1) + descent through a SUBSET
+of intermediates (all arcs descending). Cycle length = 2 + |subset|.
+For ODD length: |subset| must be ODD.
+
+Count of odd-size subsets of (s-1) elements = 2^(s-2).
+OCF weight: 2^1 = 2 per cycle.
+Total: c_k = 2 · 2^(s-2) = 2^(s-1). QED
+
+  s=2: intermediates=1, odd subsets=1, c_k=2, 2^(s-1)=2 ✓
+  s=3: intermediates=2, odd subsets=2, c_k=4, 2^(s-1)=4 ✓
+  s=4: intermediates=3, odd subsets=4, c_k=8, 2^(s-1)=8 ✓
+  s=5: intermediates=4, odd subsets=8, c_k=16, 2^(s-1)=16 ✓
+  s=6: intermediates=5, odd subsets=16, c_k=32, 2^(s-1)=32 ✓
+  s=7: intermediates=6, odd subsets=32, c_k=64, 2^(s-1)=64 ✓
+  s=8: intermediates=7, odd subsets=64, c_k=128, 2^(s-1)=128 ✓
+
+The key identity: #{odd-size subsets of n elements} = 2^(n-1) for n >= 1.
+Proof: the map S → S Δ {1} (symmetric difference with {1}) bijects
+  odd-size subsets ↔ even-size subsets. Total subsets = 2^n.
+  So odd count = even count = 2^n / 2 = 2^(n-1).

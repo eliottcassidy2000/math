@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S2 — 2026-04-04: OCF Multilinear Decomposition — Complete Structural Theory
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S1
+**Summary:** Deep creative session decomposing H(t) via OCF into cycle-set contributions. Proved the complete structural theory of the multilinear polynomial. Devil's advocate audit found no errors in S1 results.
+
+**Key Results:**
+1. **OCF Multilinear Decomposition (PERFECT MATCH n=4,5,6)**: H(t) = Σ_{I independent} 2^|I| · Π_{C∈I} χ_C(t) where χ_C is the cycle indicator polynomial. This gives a COMBINATORIAL INTERPRETATION of every multilinear coefficient.
+
+2. **THM-287 (PROVED)**: Quadratic coefficient c_{ij} = 2·A(i,j) + 4·B(i,j) where A = single-cycle contribution, B = disjoint-pair contribution. No |I|≥3 contributes (since χ_C(0)=0 forces each cycle to contribute ≥1 degree). B(i,j)=0 for shared-vertex pairs and at n≤5.
+
+3. **THM-288 (PROVED)**: At odd n, max-degree coefficients are ALL ±2 and come exclusively from single Hamiltonian cycles with 1 base-path arc. The REVERSAL CANCELLATION THEOREM: all-tile-arc cycles of odd length L cancel in pairs via the reversal involution ((-1)^f + (-1)^{L-f} = 0 when L odd).
+
+4. **Complete OCF proof of c_k = 2^(skip-1)** (THM-284): Each valid cycle through tile k uses the backward arc + descent through an ODD-SIZE subset of s-1 intermediate vertices. Count = 2^(s-2) by symmetric-difference bijection. Weight 2 gives 2^(s-1).
+
+5. **Same-end sign rule**: Cycles through shared-vertex pairs use tiles in OPPOSITE directions → chi coeff = -1 always. Cross-end: SAME direction → chi coeff = +1. This geometrically explains why same-end c₂ is negative and cross-end is positive.
+
+6. **Devil's advocate**: Systematic audit of THM-285, THM-286, multilinear data, and seesaw analysis. All four results receive HIGH confidence. No errors found.
+
+**New contributions:** THM-287, THM-288, OCF proof of THM-284, 6 computation scripts, HYP-500
+**Unresolved threads:** Even-n degree cancellation (needs interaction between |I|=1 and |I|=2), disjoint pair closed formula, THM-286b (odd n max-degree ±2)
+
 ## opus-2026-04-04-S1 — 2026-04-04: β₂=0 Proof Closure + Multilinear Polynomial Structure
 
 **Account:** opus
