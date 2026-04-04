@@ -1,0 +1,17 @@
+╔══════════════════════════════════════════════════════════════════╗
+║  THE FIBER BUNDLE ANTIFERROMAGNET                              ║
+║  opus-2026-04-04-S17                                           ║
+╚══════════════════════════════════════════════════════════════════╝
+
+======================================================================
+  FRUSTRATION PROPAGATION: n=4 → n=5
+======================================================================
+
+  Total extensions checked: 1024
+  Errors in c₃ propagation: 0
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/afm_fiber_bundle_s17.py", line 634, in <module>
+    frustration_propagation(5)  # n=4→5
+  File "/Users/e/Documents/GitHub/math/04-computation/afm_fiber_bundle_s17.py", line 206, in frustration_propagation
+    print(f"  ✓ c₃(T_n) = c₃(T_{n-1}) + Δc₃(T_{n-1}, σ) {'VERIFIED' if errors == 0 else 'FAILED'}")
+NameError: name 'n' is not defined. Did you mean: 'np'?

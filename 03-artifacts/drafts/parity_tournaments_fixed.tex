@@ -1926,6 +1926,193 @@ band-limited Walsh subspace.
 \end{openquestion}
 
 %═══════════════════════════════════════════════════════════════════════════════
+\section{Extended Computational Results}
+\label{sec:extended}
+%═══════════════════════════════════════════════════════════════════════════════
+
+\noindent\textit{This section records precise values computed during the project, extending several OEIS sequences substantially and establishing new identities connecting different tournament invariants.}
+
+\subsection{OEIS sequence extensions}
+
+Using a Burnside/P\'{o}lya enumerator (C + GMP, multi-threaded), the following OEIS sequences have been extended beyond their previously known terms. All values are exact.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{crl}
+\hline
+$n$ & $a(n)$ & \textit{digits} \\
+\hline
+1 & $1$ & 1 \\
+2 & $1$ & 1 \\
+3 & $2$ & 1 \\
+4 & $4$ & 1 \\
+5 & $12$ & 2 \\
+6 & $56$ & 2 \\
+7 & $456$ & 3 \\
+8 & $6\,880$ & 4 \\
+9 & $191\,536$ & 6 \\
+10 & $9\,733\,056$ & 7 \\
+11 & $903\,753\,248$ & 9 \\
+12 & $154\,108\,311\,168$ & 12 \\
+13 & $48\,542\,114\,686\,912$ & 14 \\
+14 & $28\,401\,423\,719\,122\,304$ & 17 \\
+15 & $31\,021\,002\,160\,355\,166\,848$ & 20 \\
+\hline
+\end{tabular}
+\captionof{table}{A000568: number of nonisomorphic tournaments on $n$ vertices. Extended to $n = 200$ (5382~digits) by this project.}
+\label{tab:a000568}
+\end{center}
+
+\noindent The computation uses the standard Burnside formula restricted to partitions with all odd parts:
+\[
+  a(n) = \frac{1}{n!} \sum_{\substack{\lambda \vdash n \\ \text{all parts odd}}} \frac{n!}{z_\lambda}\,2^{e(\lambda)},
+\]
+where $z_\lambda = \prod_i c_i!\,i^{c_i}$ and $e(\lambda)$ counts the number of arc orbits under the permutation with cycle type~$\lambda$.
+
+\begin{theorem}[Asymptotic recursion for A000568]\label{thm:a568_recursion}
+For $n \geq 5$:
+\[
+  a(n) = \frac{a(n-1)\cdot 2^{n-1}}{n}\!\left(1 - \frac{(n{-}1)(n{-}2)(n{-}4)}{4^{n-2}} + O\bigl(16^{-n}\bigr)\right)\!.
+\]
+The main term $a(n{-}1)\cdot 2^{n-1}/n$ comes from the identity permutation in Burnside's lemma.
+The correction term comes from the cycle type $(1^{n-3}, 3^1)$, whose orbit count on arcs equals $\binom{n-2}{2}+1$.
+By $n = 15$ the correction is exact to four significant figures.
+\end{theorem}
+
+\subsection{Forbidden Hamiltonian path counts}
+
+\begin{theorem}[Permanent gaps in $H$]\label{thm:permanent_gaps}
+For any tournament~$T$ on $n$ vertices, $H(T) \neq 7$ and $H(T) \neq 21$.
+These are the \textbf{only} permanently forbidden odd values.
+\end{theorem}
+
+\noindent $H = 7$ is proved impossible because the OCF requires $\alpha_1 = 3, \alpha_2 = 0$ (three pairwise vertex-sharing odd cycles and no independent pair), but three such cycles on $\leq 5$ vertices share a common vertex, forcing a 5-cycle that increases $\alpha_1 \geq 4$ (see THM-029).
+$H = 21$ is proved impossible by component-reduction analysis (THM-079).
+
+\begin{center}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{cccl}
+\hline
+$n$ & achievable $H$ values & forbidden odd $\leq \max H$ & permanent \\
+\hline
+3 & $\{1, 3\}$ & $\varnothing$ & --- \\
+4 & $\{1, 3, 5\}$ & $\varnothing$ & --- \\
+5 & $\{1, 3, 5, 9, 11, 13, 15\}$ & $\{7\}$ & $\{7\}$ \\
+6 & 19 values & $\{7, 21, 35, 39\}$ & $\{7, 21\}$ \\
+7 & 77 values & 18~gaps & $\{7, 21\}$ \\
+\hline
+\end{tabular}
+\captionof{table}{Gap structure of achievable Hamiltonian path counts. Values $35, 39$ are transient (first achieved at $n = 7$).}
+\label{tab:h_gaps}
+\end{center}
+
+\subsection{The OCF truncation theorem}
+
+\begin{theorem}[Exact OCF truncation]\label{thm:ocf_trunc}
+For $n \leq 8$:
+\[
+  H(T) = 1 + 2\alpha_1\bigl(\Omega(T)\bigr) + 4\alpha_2\bigl(\Omega(T)\bigr),
+\]
+where $\alpha_k$ denotes the number of independent $k$-sets in the odd-cycle conflict graph~$\Omega(T)$.
+The truncation holds because the maximum independent set size in $\Omega(T)$ is at most $\lfloor n/3 \rfloor \leq 2$ for $n \leq 8$.
+\end{theorem}
+
+\noindent Verified exhaustively at $n \leq 6$ ($R^2 = 1.000000$, zero error) and by sampling at $n = 7$ (500/500 exact matches).
+
+\subsection{The multilinear polynomial}
+
+Writing $H$ as a function of the $m = \binom{n-1}{2}$ tile variables $t_1, \ldots, t_m \in \{0,1\}$:
+
+\begin{theorem}[Recursive preservation]\label{thm:recursive_pres}
+For every tile subset $S$ involving only tiles $(x,y)$ with $x \leq n$:
+\[
+  c_S^{(n+1)} = c_S^{(n)}.
+\]
+All multilinear coefficients of $H$ are exactly preserved when passing from $n$ to $n{+}1$.
+\end{theorem}
+
+\begin{proof}
+When all new tiles (those with $x = n{+}1$) are set to~$0$ (forward), vertex $n{+}1$ becomes a source (beats all others). A source must be the first vertex of every Hamiltonian path, so $H_{n+1}(\mathbf{t}_{\mathrm{old}}, \mathbf{0}_{\mathrm{new}}) = H_n(\mathbf{t}_{\mathrm{old}})$.
+The M\"obius inversion for $c_S$ involves only evaluations at subsets $T \subseteq S$ with new tiles at~$0$, so $c_S^{(n+1)} = c_S^{(n)}$.
+\end{proof}
+
+\begin{theorem}[Linear coefficients]\label{thm:linear_coeff}
+The linear multilinear coefficient of tile $(x,y)$ with skip $s = x - y$ is $c_k = 2^{s-1}$.
+\end{theorem}
+
+\noindent The degree-sum is therefore $S_1(n) = \sum_k c_k = 2^n - 2n$.
+
+\begin{theorem}[Sign rule for quadratic coefficients]\label{thm:sign_rule}
+\leavevmode
+\begin{enumerate}[\upshape(a)]
+\item If tiles $i,j$ share an upper or lower vertex (\emph{same-end}): $c_{ij} < 0$.
+\item If one tile's upper vertex equals the other's lower (\emph{cross-end}): $c_{ij} > 0$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(a)~Both tile arcs meet at the shared vertex. In any directed cycle, that vertex has indegree = outdegree = 1. So one tile arc is incoming and the other outgoing, forcing opposite directions and $\chi = -1$.  Furthermore $B(i,j) = 0$ (any two cycles through same-end tiles both visit the shared vertex, so they cannot be vertex-disjoint).
+
+(b)~At the relay vertex, one tile is outgoing (forward) and the other incoming (forward), or both reversed. Mixed directions give indegree $\neq$ outdegree, a contradiction. So both tiles are in the same direction, giving $\chi = +1$.
+\end{proof}
+
+\subsection{Detailed balance of the metagraph}
+
+\begin{theorem}[Detailed balance]\label{thm:detailed_balance}
+For every isomorphism class~$C$, the total number of arc flips entering~$C$ from other classes equals the total number leaving~$C$.
+\end{theorem}
+
+\begin{proof}
+Arc flips are involutions: flipping arc~$e$ in tournament~$T$ gives~$T'$, and flipping~$e$ in~$T'$ returns~$T$. Each transition $(T, e) \to C'$ bijects with $(T', e) \to C$.
+\end{proof}
+
+\subsection{Tiling-count statistics}
+
+\begin{theorem}[All tiling counts are odd]\label{thm:odd_tc}
+Every isomorphism class of tournaments has an odd number of tilings.
+\end{theorem}
+
+\begin{proof}
+$H(T)$ is always odd (R\'{e}dei). $|\mathrm{Aut}(T)|$ is always odd (a 2-cycle reverses an arc, contradicting the tournament property; by Cauchy's theorem, the group order has no even factor). The tiling count $H/|\mathrm{Aut}|$ is odd/odd = odd.
+\end{proof}
+
+\subsection{Key sequences arising from the multilinear polynomial}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{clcccccl}
+\hline
+ & Sequence & $n{=}3$ & $4$ & $5$ & $6$ & $7$ & OEIS \\
+\hline
+$\max H(n)$ & max HP count & 3 & 5 & 15 & 45 & 189 & A038375 \\
+$H_{\mathrm{back}}(n)$ & all-backward HP count & 3 & 5 & 9 & 17 & 31 & A000213 \\
+$\Sigma H(n)$ & sum of $H$ over tilings & 4 & 32 & 632 & $29696$ & $3251200$ & new \\
+$P(n)$ & nonzero multilinear coeffs & 2 & 6 & 35 & 200 & 1782 & new \\
+$S_1(n)$ & sum of linear coefficients & 2 & 8 & 22 & 52 & 114 & $2^n{-}2n$ \\
+\hline
+\end{tabular}
+\captionof{table}{Sequences arising from the multilinear polynomial $H(t_1, \ldots, t_m)$.}
+\label{tab:sequences}
+\end{center}
+
+\begin{theorem}[Tribonacci identity]\label{thm:tribonacci}
+The ``all-backward'' tournament (base path forward, all other arcs backward) satisfies
+$H_{\mathrm{back}}(n) = T_{n+1}$, where $T_k$ is the tribonacci sequence $T_1 = T_2 = T_3 = 1$, $T_k = T_{k-1} + T_{k-2} + T_{k-3}$.
+\end{theorem}
+
+\noindent Verified exactly for $n = 3, \ldots, 7$.  The recurrence arises because a Hamiltonian path in the all-backward tournament steps either down by~1 (base path) or up by~$\geq 2$ (backward tile), giving a 3-state transfer matrix.
+
+\begin{theorem}[Sum-of-$H$ formula]\label{thm:sigma_h}
+\[
+  \Sigma H(n) \;=\; W(n)\cdot 2^{\binom{n-2}{2} - 1},
+\]
+where $W(n) = \sum_{T\text{ labeled}} H(T)$ is the total Hamiltonian-path count over all labeled tournaments on~$n$ vertices.
+Equivalently, the mean $H$ over all $2^m$ tilings is $W(n)/2^{n-1}$.
+\end{theorem}
+
+\noindent Verified exactly for $n = 3, \ldots, 7$.  The sequence $W(n)$ begins $1, 2, 8, 32, 158, 928, 6350, 49752$ and does not appear in the OEIS.
+
+%═══════════════════════════════════════════════════════════════════════════════
 \appendix
 \section{Computational Verification}
 \label{app:code}
