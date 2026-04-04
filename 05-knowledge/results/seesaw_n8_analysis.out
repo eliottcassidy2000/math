@@ -1,0 +1,41 @@
+Sampling 3000 tournaments at n=8...
+  trial 0/3000...
+  trial 500/3000...
+  trial 1000/3000...
+  trial 1500/3000...
+  trial 2000/3000...
+  trial 2500/3000...
+
+============================================================
+SEESAW ANALYSIS at n=8 (3000 samples)
+============================================================
+β₁ > 0: 47/3000 (1.6%)
+β₃ > 0: 188/3000 (6.3%)
+β₁·β₃ > 0 (violations): 2/3000 (0.07%)
+
+Violation details:
+  trial=1377: β₁=1, β₃=1, scores=(1, 3, 3, 3, 4, 4, 4, 6), c₃=14, SC_score=True
+  trial=2256: β₁=1, β₃=1, scores=(1, 2, 3, 3, 4, 4, 5, 6), c₃=12, SC_score=True
+
+All violations have SC score: True
+β₁ values in violations: {1}
+β₃ values in violations: {1}
+c₃ in violations: [12, 14]
+c₃ overall: range [0, 20], mean=13.9
+
+β₁ + β₃ max: 2
+β₁ + β₃ distribution: {0: 2767, 1: 229, 2: 4}
+
+============================================================
+VIOLATION PREDICTORS
+============================================================
+
+Score sequences producing violations:
+  (1, 2, 3, 3, 4, 4, 5, 6): 1/176 violations (0.6%), SC=True
+  (1, 3, 3, 3, 4, 4, 4, 6): 1/46 violations (2.2%), SC=True
+
+============================================================
+EULER CHARACTERISTIC CHECK
+============================================================
+  trial=1377: β₁=1, β₃=1, β₁+β₃=2 (needs β₄-β₅+...= 2 for χ=1)
+  trial=2256: β₁=1, β₃=1, β₁+β₃=2 (needs β₄-β₅+...= 2 for χ=1)

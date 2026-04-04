@@ -1,0 +1,112 @@
+============================================================
+MAX DEGREE COEFFICIENT THEOREM
+============================================================
+
+n=3, m=1
+  Max degree: 1 (expected 2)
+  Max-degree coefficients: 1 nonzero
+  Distinct values: [np.int64(2)]
+  All ±2: True
+  +2: 1, -2: 0
+  Sub-max degree (0): 1 coeffs, values [np.int64(1)], max |c|=1
+
+n=4, m=3
+  Max degree: 2 (expected 2)
+  Max-degree coefficients: 2 nonzero
+  Distinct values: [np.int64(-2)]
+  All ±2: True
+  +2: 0, -2: 2
+  Sub-max degree (1): 3 coeffs, values [np.int64(2), np.int64(4)], max |c|=4
+
+n=5, m=6
+  Max degree: 4 (expected 4)
+  Max-degree coefficients: 7 nonzero
+  Distinct values: [np.int64(-2), np.int64(2)]
+  All ±2: True
+  +2: 5, -2: 2
+  Sub-max degree (3): 8 coeffs, values [np.int64(-4), np.int64(-2)], max |c|=4
+
+n=6, m=10
+  Max degree: 4 (expected 4)
+  Max-degree coefficients: 81 nonzero
+  Distinct values: [np.int64(-4), np.int64(-2), np.int64(2), np.int64(4)]
+  All ±2: False
+  +2: 57, -2: 24
+  Sub-max degree (3): 66 coeffs, values [np.int64(-8), np.int64(-6), np.int64(-4), np.int64(-2), np.int64(2), np.int64(4), np.int64(6)], max |c|=8
+
+n=7, m=15
+  Max degree: 6 (expected 6)
+  Max-degree coefficients: 323 nonzero
+  Distinct values: [np.int64(-2), np.int64(2)]
+  All ±2: True
+  +2: 125, -2: 198
+  Sub-max degree (5): 407 coeffs, values [np.int64(-4), np.int64(-2), np.int64(2), np.int64(4)], max |c|=4
+
+============================================================
+DETAILED n=4 ANALYSIS
+============================================================
+n=4, m=3 tiles: [(4, 1), (3, 1), (4, 2)]
+H values: [np.int64(1), np.int64(5), np.int64(3), np.int64(5), np.int64(3), np.int64(5), np.int64(5), np.int64(5)]
+
+All nonzero coefficients:
+  S=000 order=0 tiles=[]: c=1
+  S=001 order=1 tiles=[(4, 1)]: c=4
+  S=010 order=1 tiles=[(3, 1)]: c=2
+  S=011 order=2 tiles=[(4, 1), (3, 1)]: c=-2
+  S=100 order=1 tiles=[(4, 2)]: c=2
+  S=101 order=2 tiles=[(4, 1), (4, 2)]: c=-2
+
+============================================================
+SIGN PATTERN ANALYSIS
+============================================================
+
+n=5, max degree=4:
+  7 coefficients
+  tiles=[(5, 1), (3, 1), (5, 2), (4, 2)] skips=[4, 2, 3, 2] sum=11 prod=48 parity=1: c=2
+  tiles=[(4, 1), (3, 1), (5, 2), (4, 2)] skips=[3, 2, 3, 2] sum=10 prod=36 parity=0: c=2
+  tiles=[(4, 1), (3, 1), (5, 2), (5, 3)] skips=[3, 2, 3, 2] sum=10 prod=36 parity=0: c=2
+  tiles=[(5, 1), (4, 1), (4, 2), (5, 3)] skips=[4, 3, 2, 2] sum=11 prod=48 parity=1: c=2
+  tiles=[(4, 1), (3, 1), (4, 2), (5, 3)] skips=[3, 2, 2, 2] sum=9 prod=24 parity=1: c=-2
+  tiles=[(4, 1), (5, 2), (4, 2), (5, 3)] skips=[3, 3, 2, 2] sum=10 prod=36 parity=0: c=2
+  tiles=[(3, 1), (5, 2), (4, 2), (5, 3)] skips=[2, 3, 2, 2] sum=9 prod=24 parity=1: c=-2
+  Sign = (-1)^(skip_sum mod 2): 5/7 = 71%
+  Sign from sum of y-coordinates mod 2: 4/7 = 57%
+  Sign from sum of x-coordinates mod 2: 4/7 = 57%
+  Sign from product of skips mod 4 == 2: 5/7 = 71%
+  Sign from number of odd-skip tiles mod 2: 5/7 = 71%
+
+n=6, max degree=4:
+  81 coefficients
+  tiles=[(6, 1), (4, 1), (6, 2), (5, 2)] skips=[5, 3, 4, 3] sum=15 prod=180 parity=1: c=2
+  tiles=[(5, 1), (4, 1), (6, 2), (5, 2)] skips=[4, 3, 4, 3] sum=14 prod=144 parity=0: c=2
+  tiles=[(6, 1), (3, 1), (6, 2), (5, 2)] skips=[5, 2, 4, 3] sum=14 prod=120 parity=0: c=2
+  tiles=[(5, 1), (3, 1), (6, 2), (5, 2)] skips=[4, 2, 4, 3] sum=13 prod=96 parity=1: c=2
+  tiles=[(4, 1), (3, 1), (6, 2), (5, 2)] skips=[3, 2, 4, 3] sum=12 prod=72 parity=0: c=4
+  tiles=[(6, 1), (5, 1), (6, 2), (4, 2)] skips=[5, 4, 4, 2] sum=15 prod=160 parity=1: c=2
+  tiles=[(5, 1), (4, 1), (6, 2), (4, 2)] skips=[4, 3, 4, 2] sum=13 prod=96 parity=1: c=2
+  tiles=[(6, 1), (3, 1), (6, 2), (4, 2)] skips=[5, 2, 4, 2] sum=13 prod=80 parity=1: c=2
+  tiles=[(5, 1), (3, 1), (6, 2), (4, 2)] skips=[4, 2, 4, 2] sum=12 prod=64 parity=0: c=4
+  tiles=[(4, 1), (3, 1), (6, 2), (4, 2)] skips=[3, 2, 4, 2] sum=11 prod=48 parity=1: c=2
+  Sign = (-1)^(skip_sum mod 2): 41/81 = 51%
+  Sign from sum of y-coordinates mod 2: 45/81 = 56%
+  Sign from sum of x-coordinates mod 2: 45/81 = 56%
+  Sign from product of skips mod 4 == 2: 51/81 = 63%
+  Sign from number of odd-skip tiles mod 2: 41/81 = 51%
+
+n=7, max degree=6:
+  323 coefficients
+  tiles=[(6, 1), (4, 1), (7, 2), (5, 2), (7, 3), (6, 3)] skips=[5, 3, 5, 3, 4, 3] sum=23 prod=2700 parity=1: c=-2
+  tiles=[(5, 1), (4, 1), (7, 2), (5, 2), (7, 3), (6, 3)] skips=[4, 3, 5, 3, 4, 3] sum=22 prod=2160 parity=0: c=-2
+  tiles=[(7, 1), (4, 1), (6, 2), (5, 2), (7, 3), (6, 3)] skips=[6, 3, 4, 3, 4, 3] sum=23 prod=2592 parity=1: c=-2
+  tiles=[(5, 1), (4, 1), (6, 2), (5, 2), (7, 3), (6, 3)] skips=[4, 3, 4, 3, 4, 3] sum=21 prod=1728 parity=1: c=-2
+  tiles=[(6, 1), (5, 1), (7, 2), (4, 2), (7, 3), (6, 3)] skips=[5, 4, 5, 2, 4, 3] sum=23 prod=2400 parity=1: c=-2
+  tiles=[(5, 1), (4, 1), (7, 2), (4, 2), (7, 3), (6, 3)] skips=[4, 3, 5, 2, 4, 3] sum=21 prod=1440 parity=1: c=-2
+  tiles=[(7, 1), (5, 1), (6, 2), (4, 2), (7, 3), (6, 3)] skips=[6, 4, 4, 2, 4, 3] sum=23 prod=2304 parity=1: c=-2
+  tiles=[(5, 1), (4, 1), (6, 2), (4, 2), (7, 3), (6, 3)] skips=[4, 3, 4, 2, 4, 3] sum=20 prod=1152 parity=0: c=-2
+  tiles=[(7, 1), (5, 1), (5, 2), (4, 2), (7, 3), (6, 3)] skips=[6, 4, 3, 2, 4, 3] sum=22 prod=1728 parity=0: c=-2
+  tiles=[(6, 1), (5, 1), (5, 2), (4, 2), (7, 3), (6, 3)] skips=[5, 4, 3, 2, 4, 3] sum=21 prod=1440 parity=1: c=-2
+  Sign = (-1)^(skip_sum mod 2): 175/323 = 54%
+  Sign from sum of y-coordinates mod 2: 170/323 = 53%
+  Sign from sum of x-coordinates mod 2: 170/323 = 53%
+  Sign from product of skips mod 4 == 2: 194/323 = 60%
+  Sign from number of odd-skip tiles mod 2: 175/323 = 54%
