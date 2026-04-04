@@ -13,6 +13,31 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S9 — 2026-04-04: Forbidden Seven In All Senses — Tiling Counts, Automorphisms, and the 7-Gap
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S8
+**Summary:** Investigated the user's observation that 7 and 21 are forbidden as tiling counts per iso class. Proved this exhaustively at n≤7. Discovered that ALL tiling counts are odd (proved: H odd × |Aut| odd → tc odd). The 7-prohibition arises because H-divisible-by-7 tournaments all have |Aut|=1 (generic, no symmetry), so tc=H≥35, never 7.
+
+**Key Results:**
+1. **ALL tiling counts are ODD** (PROVED): H is odd (Rédei), |Aut| is odd (no even-order tournament automorphisms: 2-cycles reverse arcs), so tc = H/|Aut| = odd/odd = odd.
+
+2. **7 and 21 are forbidden tiling counts at n≤7** (EXHAUSTIVE): Checked all 32768 tilings at n=7. Among 3947 tilings with H div by 7, ALL those with H∈{35,49,77,91,105,133,147} have |Aut|=1. The only non-trivial: H=175→|Aut|=7→tc=25; H=189→|Aut|=21→tc=9. Neither gives tc=7 or 21.
+
+3. **H is never divisible by 7 at n≤6** (verified exhaustively: 0 out of 1088 tilings). First H÷7 appears at n=7.
+
+4. **The anti-correlation principle**: arithmetic specialness (H div 7) and symmetric specialness (|Aut|>1) are anti-correlated. Tournaments with H divisible by 7 are generically asymmetric. Tournaments with large |Aut| have H divisible by |Aut| but not specifically by 7.
+
+5. **Missing odd tiling counts at n=7**: {7, 21, 63, 107, 119, 149}. 7 and 21 appear to be permanently forbidden; 63, 107, 119, 149 are likely transient.
+
+6. **Connection to Fixed/Boundary/Free**: 7 is forbidden because the FREE direction (generic tournaments, |Aut|=1, H div 7) cannot collapse to the FIXED point (tc=7 requires specific symmetry). The gap between arithmetic and symmetric specialness prevents tc=7.
+
+**New contributions:** forbidden-seven-in-all-senses.md reflection, forbidden_tiling_counts.py, tiling_count_deep.py, forbidden7_exhaustive.py, 3 result files
+**Unresolved:**
+- Is tc=7 permanently forbidden for ALL n? (verified n≤7, conjectured permanent)
+- Proof from OCF that H div 7 implies |Aut|=1 (would make tc=7 permanent)
+- Full classification of permanently forbidden tiling counts
+
 ## opus-2026-04-04-S8 — 2026-04-04: All Triples Are One Triple — Fixed/Boundary/Free Unification
 
 **Account:** opus
