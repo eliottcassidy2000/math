@@ -65,10 +65,9 @@ canvas{display:block;cursor:grab}canvas.dragging{cursor:grabbing}canvas.hovering
   <label>Edges</label>
   <select id="edgeLayerSel"><option value="complement">Complement (d=m)</option><option value="wiggly">Wiggly (d=1)</option><option value="both">Both layers</option></select>
   <label>Edge color</label>
-  <select id="edgeColorSel"><option value="bluefrac">Blue fraction (gradient)</option><option value="edgetype">Pure blue / Mixed / Pure black</option><option value="srs">Spine / Ribs / Sea (SC)</option><option value="weight">By weight</option><option value="uniform">Uniform</option></select>
+  <select id="edgeColorSel"><option value="bluefrac">Blue fraction (gradient)</option><option value="edgetype">Pure blue / Mixed / Pure black</option><option value="overlap">Layer overlap</option><option value="srs">Spine / Ribs / Sea (SC)</option><option value="weight">By weight</option><option value="uniform">Uniform</option></select>
   <div class="sep"></div>
-  <label>Merge</label>
-  <select id="mergeSel"><option value="none">None</option><option value="transpose">Transpose (grid refl.)</option><option value="complement">G_n/Z_2 (T→T^op)</option></select>
+  <button class="btn" id="mergeBtn">Merge G<sub>n</sub>/Z<sub>2</sub></button>
   <div class="sep"></div>
   <label>Grav</label><input type="range" id="gravSlider" min="0" max="100" value="30">
   <label>Rep</label><input type="range" id="repSlider" min="10" max="200" value="80">
@@ -491,11 +490,9 @@ function setupGraph(){
   }
 
   // ── CLASS VIEW (normal) ──
-  const mergeMode=document.getElementById('mergeSel').value;
-  merged=(mergeMode!=='none');
-
+  // Transpose ≡ True-complement (proved n=3..7): use transposePairs for merge
   if(merged){
-    const pairs=mergeMode==='transpose'?graphData.transposePairs:graphData.compPairs;
+    const pairs=graphData.transposePairs;
     const mergeMap=new Int32Array(cd.length);for(let i=0;i<cd.length;i++) mergeMap[i]=i;
     for(const[a,b] of pairs) mergeMap[b]=a;
     const seen=new Set();const mergedClasses=[];const ciToMerged={};
@@ -542,6 +539,25 @@ function setupGraph(){
   // Recompute node degrees from visible edges
   for(const nd of nodes) nd.degree=0;
   for(const e of edges) if(e.layer==='complement'){nodes[e.a].degree++;nodes[e.b].degree++;}
+
+  // Tag edges with overlap (exists in both wiggly AND complement?)
+  const wigPairs=new Set(edges.filter(e=>e.layer==='wiggly').map(e=>e.a+'_'+e.b));
+  const compPairs=new Set(edges.filter(e=>e.layer==='complement').map(e=>e.a+'_'+e.b));
+  for(const e of edges){
+    const key=e.a+'_'+e.b;
+    if(e.layer==='wiggly') e.overlap=compPairs.has(key)?'both':'wigOnly';
+    else if(e.layer==='complement') e.overlap=wigPairs.has(key)?'both':'compOnly';
+    else e.overlap=null;
+  }
+
+  // Compute overlap stats for display
+  const nBoth=new Set([...wigPairs].filter(k=>compPairs.has(k))).size;
+  const nWigOnly=wigPairs.size-nBoth;
+  const nCompOnly=compPairs.size-nBoth;
+  const nTotal=nodes.length*(nodes.length-1)/2;
+  const nNeither=nTotal-nBoth-nWigOnly-nCompOnly;
+  window._overlapStats={nBoth,nWigOnly,nCompOnly,nNeither,nTotal,
+    wigTotal:wigPairs.size,compTotal:compPairs.size};
 
   selectedNode=null;hoveredNode=null;
   document.getElementById('info').style.display='none';
@@ -783,6 +799,13 @@ function edgeColor(e){
     if(e.edgeType==='mixed') return 'rgba(160,80,200,0.7)'; // purple for mixed
     return 'rgba(140,140,140,0.3)';
   }
+  if(edgeColorScheme==='overlap'){
+    // Color by whether this edge exists in both layers, or just one
+    if(e.overlap==='both') return 'rgba(188,140,255,0.8)';     // purple = both
+    if(e.overlap==='wigOnly') return 'rgba(240,136,62,0.6)';   // orange = wiggly only
+    if(e.overlap==='compOnly') return 'rgba(88,166,255,0.5)';  // blue = complement only
+    return 'rgba(140,140,140,0.3)';
+  }
   if(edgeColorScheme==='srs'){
     if(e.scType==='spine') return 'rgba(63,185,80,0.75)';
     if(e.scType==='ribs') return 'rgba(248,81,73,0.6)';
@@ -857,8 +880,9 @@ function draw(){
       const[x2,y2]=toScreen(nodes[e.b].x,nodes[e.b].y);
       const highlight=selectedNode!==null&&(e.a===selectedNode.idx||e.b===selectedNode.idx);
       ctx.strokeStyle=highlight?'rgba(255,255,255,0.8)':edgeColor(e);
-      const baseW=e.layer==='wiggly'?0.7:e.layer==='red'?1.5:1.6;
-      ctx.lineWidth=(highlight?2.5:baseW+Math.min(1,Math.log2(e.weight+1)*0.25))*Math.min(1.5,camZ);
+      const baseW=e.layer==='wiggly'?0.5:e.layer==='red'?1.5:1.2;
+      const wBonus=Math.min(2.5,Math.log2(e.weight+1)*0.4);
+      ctx.lineWidth=(highlight?3:baseW+wBonus)*Math.min(1.5,camZ);
       if(e.layer==='red'){ctx.setLineDash([6,4]);}else{ctx.setLineDash([]);}
       ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();
       ctx.setLineDash([]);
@@ -888,14 +912,18 @@ function draw(){
     ctx.fillStyle=nodeColor(nd);
     ctx.beginPath();ctx.arc(sx,sy,r,0,Math.PI*2);ctx.fill();
 
-    // Border — SC gets green border; merged pairs get double ring
+    // Border encoding: purity + SC status + merge status
     if(merged&&nd.mergedWith){
-      // Double ring for merged pairs
-      ctx.strokeStyle='rgba(188,140,255,0.5)';ctx.lineWidth=1;
+      ctx.strokeStyle='rgba(188,140,255,0.4)';ctx.lineWidth=1;
       ctx.beginPath();ctx.arc(sx,sy,r+3,0,Math.PI*2);ctx.stroke();
     }
-    ctx.strokeStyle=isSelected?'#fff':nd.isSC?'rgba(63,185,80,0.8)':'rgba(255,255,255,0.25)';
-    ctx.lineWidth=isSelected?2.5:nd.isSC?2:1;
+    if(nd.purity==='pureBlue'){
+      // Pure-blue: bright blue double ring (all tilings grid-symmetric)
+      ctx.strokeStyle='rgba(26,111,196,0.8)';ctx.lineWidth=2.5;
+      ctx.beginPath();ctx.arc(sx,sy,r+1.5,0,Math.PI*2);ctx.stroke();
+    }
+    ctx.strokeStyle=isSelected?'#fff':nd.isSC?'rgba(63,185,80,0.7)':nd.purity==='mixed'?'rgba(160,80,200,0.5)':'rgba(255,255,255,0.2)';
+    ctx.lineWidth=isSelected?2.5:nd.isSC?1.5:0.8;
     ctx.beginPath();ctx.arc(sx,sy,r,0,Math.PI*2);ctx.stroke();
 
     // Label
@@ -962,11 +990,16 @@ function draw(){
   if(tilingView){
     const sameC=edges.filter(e=>e.layer==='wiggly'&&e.sameClass).length;
     const crossC=edges.filter(e=>e.layer==='wiggly'&&!e.sameClass).length;
-    statsStr=`Q_${graphData.numT}: ${nodes.length} tilings, ${graphData.numClasses} classes | wiggly: ${sameC} within-class + ${crossC} cross-class = ${sameC+crossC}`;
+    statsStr=`Q_${graphData.numT}: ${nodes.length} tilings, ${graphData.numClasses} classes | wiggly: ${sameC} within + ${crossC} cross = ${sameC+crossC}`;
   } else {
+    const os=window._overlapStats||{};
     statsStr=`V=${nodes.length}`;
-    if(edgeLayer==='complement'||edgeLayer==='both') statsStr+=`  comp=${vc.length}(${vb}b ${vm}m ${vk}k)`;
-    if(edgeLayer==='wiggly'||edgeLayer==='both') statsStr+=`  wig=${vw}`;
+    if(edgeLayer==='both'&&os.nTotal){
+      statsStr+=`  wig=${os.wigTotal} comp=${os.compTotal} both=${os.nBoth} neither=${os.nNeither}(${(100*os.nNeither/os.nTotal).toFixed(0)}%)`;
+    } else {
+      if(edgeLayer==='complement'||edgeLayer==='both') statsStr+=`  comp=${vc.length}(${vb}b ${vm}m ${vk}k)`;
+      if(edgeLayer==='wiggly'||edgeLayer==='both') statsStr+=`  wig=${vw}`;
+    }
     statsStr+=`  n=${N}${merged?' merged':''}`;
   }
   ctx.fillText(statsStr,8,H-8);
@@ -1197,7 +1230,9 @@ document.getElementById('nSel').addEventListener('change',e=>{
 document.getElementById('layoutSel').addEventListener('change',e=>{layoutMode=e.target.value;initLayout();});
 document.getElementById('colorSel').addEventListener('change',e=>{colorMode=e.target.value;updateLegend();});
 document.getElementById('sizeSel').addEventListener('change',e=>{sizeMode=e.target.value;});
-document.getElementById('mergeSel').addEventListener('change',()=>{setupGraph();});
+document.getElementById('mergeBtn').addEventListener('click',e=>{
+  merged=!merged;e.target.classList.toggle('on',merged);setupGraph();
+});
 document.getElementById('edgeLayerSel').addEventListener('change',e=>{edgeLayer=e.target.value;updateLegend();});
 document.getElementById('edgeColorSel').addEventListener('change',e=>{edgeColorScheme=e.target.value;updateLegend();});
 document.getElementById('gravSlider').addEventListener('input',e=>{gravityStrength=e.target.value/100;});
@@ -1231,6 +1266,13 @@ function updateLegend(){
     edgeHTML=`<div><div class="dot" style="background:#1a6fc4"></div> <b>Pure blue</b> — all lines grid-sym</div>
               <div><div class="dot" style="background:#a050c8"></div> <b>Mixed</b> — both (rare, requires mixed classes)</div>
               <div><div class="dot" style="background:#777"></div> <b>Pure black</b> — no grid-sym lines</div>`;
+  } else if(edgeColorScheme==='overlap'){
+    const os=window._overlapStats||{};
+    edgeHTML=`<div style="font-size:.82em;color:var(--dim)">4 categories of class pairs:</div>
+              <div><div class="dot" style="background:#bc8cff"></div> <b>Both</b> — wig AND comp (${os.nBoth||'?'})</div>
+              <div><div class="dot" style="background:#f0883e"></div> <b>Wiggly only</b> (${os.nWigOnly||'?'})</div>
+              <div><div class="dot" style="background:#58a6ff"></div> <b>Complement only</b> (${os.nCompOnly||'?'})</div>
+              <div style="color:var(--dim)">Neither: ${os.nNeither||'?'} (${os.nTotal?((100*os.nNeither/os.nTotal).toFixed(0)):'?'}%)</div>`;
   } else if(edgeColorScheme==='srs'){
     edgeHTML=`<div><div class="dot" style="background:#3fb950"></div> <b>Spine</b> — SC ↔ SC</div>
               <div><div class="dot" style="background:#f85149"></div> <b>Ribs</b> — SC ↔ NS (bipartite)</div>
@@ -1256,10 +1298,7 @@ document.addEventListener('keydown',e=>{
   if(e.key==='3') document.getElementById('layoutSel').value='circular';
   if(e.key>='1'&&e.key<='3'){layoutMode=document.getElementById('layoutSel').value;initLayout();}
   if(e.key==='m'){
-    const sel=document.getElementById('mergeSel');
-    const opts=['none','transpose','complement'];
-    sel.value=opts[(opts.indexOf(sel.value)+1)%3];
-    setupGraph();
+    merged=!merged;document.getElementById('mergeBtn').classList.toggle('on',merged);setupGraph();
   }
   if(e.key==='r'){initLayout();} // reset layout
   if(e.key==='Escape'){selectedNode=null;document.getElementById('info').style.display='none';}
