@@ -1,0 +1,461 @@
+  ... 5000/32768 done
+  ... 10000/32768 done
+  ... 15000/32768 done
+  ... 20000/32768 done
+  ... 25000/32768 done
+  ... 30000/32768 done
+╔══════════════════════════════════════════════════════════════════╗
+║  THE ANTIFERROMAGNETIC TOURNAMENT — DEEP ANALYSIS              ║
+║  opus-2026-04-04-S15                                           ║
+╚══════════════════════════════════════════════════════════════════╝
+
+================================================================================
+  MAGNON DISPERSION AT n=6 (10 tiles, 32768 tournaments)
+================================================================================
+  Tiles: [(6, 1), (5, 1), (4, 1), (3, 1), (6, 2), (5, 2), (4, 2), (6, 3), (5, 3), (6, 4)]
+
+  Tile-by-tile magnon spectrum:
+      Tile  skip    mean|ΔH|     std|ΔH|     mean ΔH    ΔH=0 %    median|ΔH|
+  (6,1)      5      7.0078      5.9068      0.0000     14.45           6.0
+  (5,1)      4      7.0078      5.9068      0.0000     14.45           6.0
+  (4,1)      3      7.0078      5.9068      0.0000     14.45           6.0
+  (3,1)      2      7.0078      5.9068      0.0000     14.45           6.0
+  (6,2)      4      7.0078      5.9068      0.0000     14.45           6.0
+  (5,2)      3      7.0078      5.9068      0.0000     14.45           6.0
+  (4,2)      2      7.0078      5.9068      0.0000     14.45           6.0
+  (6,3)      3      7.0078      5.9068      0.0000     14.45           6.0
+  (5,3)      2      7.0078      5.9068      0.0000     14.45           6.0
+  (6,4)      2      7.0078      5.9068      0.0000     14.45           6.0
+
+  Mean |ΔH| by skip distance:
+    skip=2: mean|ΔH| = 7.0078, ΔH=0 rate = 14.45%  (4 tiles)
+    skip=3: mean|ΔH| = 7.0078, ΔH=0 rate = 14.45%  (3 tiles)
+    skip=4: mean|ΔH| = 7.0078, ΔH=0 rate = 14.45%  (2 tiles)
+    skip=5: mean|ΔH| = 7.0078, ΔH=0 rate = 14.45%  (1 tiles)
+
+  ANISOTROPY CHECK (tiles with same skip):
+    skip=2: mean|ΔH| range = [7.0078, 7.0078], spread = 0.0000
+      tile (3, 1): mean|ΔH| = 7.0078, ΔH=0 = 14.45%
+      tile (4, 2): mean|ΔH| = 7.0078, ΔH=0 = 14.45%
+      tile (5, 3): mean|ΔH| = 7.0078, ΔH=0 = 14.45%
+      tile (6, 4): mean|ΔH| = 7.0078, ΔH=0 = 14.45%
+    skip=3: mean|ΔH| range = [7.0078, 7.0078], spread = 0.0000
+      tile (4, 1): mean|ΔH| = 7.0078, ΔH=0 = 14.45%
+      tile (5, 2): mean|ΔH| = 7.0078, ΔH=0 = 14.45%
+      tile (6, 3): mean|ΔH| = 7.0078, ΔH=0 = 14.45%
+    skip=4: mean|ΔH| range = [7.0078, 7.0078], spread = 0.0000
+      tile (5, 1): mean|ΔH| = 7.0078, ΔH=0 = 14.45%
+      tile (6, 2): mean|ΔH| = 7.0078, ΔH=0 = 14.45%
+
+  [Magnon dispersion took 60.8s]
+
+================================================================================
+  BOLTZMANN-WEIGHTED SPIN CORRELATIONS — n = 5
+================================================================================
+  1024 tournaments, 6 tiles
+
+  β = 0.00:
+     dist        <σσ>_β    sign
+        0      1.000000       +
+        1      0.000000      ~0
+        2      0.000000      ~0
+    <M> = 0.000000, <M²> = 6.0000, <H> = 7.5000
+    χ_H = β·Var(H) = 0.0000
+
+  β = 0.10:
+     dist        <σσ>_β    sign
+        0      1.000000       +
+        1     -0.055254       -
+        2     -0.000000      ~0
+    <M> = 0.000000, <M²> = 5.0054, <H> = 9.2481
+    χ_H = β·Var(H) = 1.6602
+
+  β = 0.50:
+     dist        <σσ>_β    sign
+        0      1.000000       +
+        1     -0.161167       -
+        2     -0.000000      ~0
+    <M> = -0.000000, <M²> = 3.0990, <H> = 13.2204
+    χ_H = β·Var(H) = 2.3649
+
+  β = 1.00:
+     dist        <σσ>_β    sign
+        0      1.000000       +
+        1     -0.184753       -
+        2     -0.000000      ~0
+    <M> = -0.000000, <M²> = 2.6745, <H> = 14.4586
+    χ_H = β·Var(H) = 1.1851
+
+  β = 2.00:
+     dist        <σσ>_β    sign
+        0      1.000000       +
+        1     -0.193127       -
+        2     -0.000000      ~0
+    <M> = -0.000000, <M²> = 2.5237, <H> = 14.9311
+    χ_H = β·Var(H) = 0.2770
+
+  β = 5.00:
+     dist        <σσ>_β    sign
+        0      1.000000       +
+        1     -0.194441       -
+        2      0.000000      ~0
+    <M> = -0.000000, <M²> = 2.5001, <H> = 14.9998
+    χ_H = β·Var(H) = 0.0017
+
+  [Boltzmann correlations took 0.2s]
+
+================================================================================
+  VERTEX-TRIPLE FRUSTRATION ENERGY — n = 5
+================================================================================
+
+  Correlations:
+    corr(E_frust, H) = -0.973329
+    corr(c₃, H)     = 0.973329
+    corr(M_stag, H) = 0.000000
+    corr(Q, H)      = 0.000000
+    corr(|M_stag|, H) = 0.204347
+    corr(|Q|, H)    = -0.358219
+
+  Quadratic model: H ≈ 0.266667*c₃² + 1.800000*c₃ + 0.833333
+  R²(quadratic in c₃) = 0.961404
+
+  OCF decomposition analysis:
+  H = 1 + 2α₁ + 4α₂ + 8α₃ + ...
+  (H-1)/2 = α₁ + 2α₂ + 4α₃ + ...
+
+  (c₃, H) table:
+    c₃     H   count   (H-1)/2   α₁_min
+     0     1     120         0        0
+     1     3     120         1        1
+     2     5     240         2        2
+     3     9     240         4        3
+     4    11     120         5        4
+     4    13     120         6        4
+     4    15      40         7        4
+     5    15      24         7        5
+
+================================================================================
+  AFM GROUND STATE ANALYSIS — n = 5
+================================================================================
+
+  Maximum c₃ = 5
+  Maximum H = 15
+  Minimum score variance = 0.0000
+
+  H-MAXIMIZERS (H = 15): 64 tournaments
+    c₃ values: [4, 5]
+    Score variances: [0.0, 0.4]
+    Score sequences: [(1, 2, 2, 2, 3), (2, 2, 2, 2, 2)]
+
+  FRUSTRATION-MAXIMIZERS (c₃ = 5): 24 tournaments
+    H values: [15]
+    Score variances: [0.0]
+    Score sequences: [(2, 2, 2, 2, 2)]
+
+  OVERLAP between H-max and c₃-max: 24 tournaments
+    → The H-maximizer IS (sometimes) the maximally frustrated tournament!
+
+  MOST REGULAR tournaments (sv = 0.0000): 24
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/afm_deep_analysis_s15.py", line 749, in <module>
+    afm_ground_state_analysis(nn)
+  File "/Users/e/Documents/GitHub/math/04-computation/afm_deep_analysis_s15.py", line 471, in afm_ground_state_analysis
+    c3_vals_reg = [d['c3'] for d in min_sv_data]
+  File "/Users/e/Documents/GitHub/math/04-computation/afm_deep_analysis_s15.py", line 471, in <listcomp>
+    c3_vals_reg = [d['c3'] for d in min_sv_data]
+KeyError: 'c3'
+
+================================================================================
+  AFM GROUND STATE — n = 6
+================================================================================
+  Max c₃ = 8, Max H = 45
+
+  H-MAXIMIZERS (H=45): 480 tournaments
+    c₃ values: [8]
+    Scores: [(2, 2, 2, 3, 3, 3)]
+
+  FRUSTRATION-MAX (c₃=8): 2640 tournaments
+    H values: [41, 43, 45]
+    Scores: [(2, 2, 2, 3, 3, 3)]
+
+  ✓ Frustration-maximizer ACHIEVES max H = 45
+
+================================================================================
+  THERMODYNAMIC FUNCTIONS — n = 5
+================================================================================
+  1024 tournaments, H in [1, 15]
+
+         β         <H>      Var(H)        C(β)      <c₃>      <sv>
+    -3.000      1.0050      0.0101      0.0906     0.002    1.9990
+     0.000      7.5000     17.8125      0.0000     2.500    1.0000
+     0.500     13.2204      4.7299      1.1825     4.054    0.3784
+     0.700     13.9252      2.5852      1.2667     4.190    0.3242
+     0.900     14.3242      1.5180      1.2296     4.259    0.2964
+     1.000     14.4586      1.1851      1.1851     4.282    0.2874
+     1.900     14.9157      0.1696      0.6123     4.360    0.2562
+     2.000     14.9311      0.1385      0.5540     4.362    0.2551
+     5.000     14.9998      0.0003      0.0085     4.375    0.2500
+
+  SPECIFIC HEAT PEAK: C_max = 1.2667 at β = 0.700
+  This is the 'PHASE TRANSITION' of the tournament ensemble
+
+  Phase diagram summary:
+    β= -2.0: <H>=   1.04, <c₃>= 0.02, <sv>=1.992, S=2.729
+    β= -1.0: <H>=   1.36, <c₃>= 0.18, <sv>=1.928, S=3.586
+    β= +0.0: <H>=   7.50, <c₃>= 2.50, <sv>=1.000, S=6.931
+    β= +0.5: <H>=  13.22, <c₃>= 4.05, <sv>=0.378, S=11.540
+    β= +1.0: <H>=  14.46, <c₃>= 4.28, <sv>=0.287, S=18.878
+    β= +2.0: <H>=  14.93, <c₃>= 4.36, <sv>=0.255, S=34.055
+    β= +5.0: <H>=  15.00, <c₃>= 4.37, <sv>=0.250, S=79.158
+    β → -∞: FERROMAGNETIC (transitive, H=1, c₃=0)
+    β → +∞: ANTIFERROMAGNETIC (regular, max H, max c₃)
+
+================================================================================
+  FORBIDDEN H=7: OCF DECOMPOSITION at n = 5
+================================================================================
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=13
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=13, OCF=11
+  OCF MISMATCH: H=15, OCF=11
+
+  OCF decomposition for each H value:
+     H      #    α₁    α₂    α₃  3-cyc  5-cyc                scores
+     1    120  [0]  [0]  [0]  [0]  [0]  [(0, 1, 2, 3, 4)]
+     3    120  [1]  [0]  [0]  [1]  [0]  [(0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (1, 1, 1, 3, 4)]
+     5    240  [2]  [0]  [0]  [2]  [0]  [(0, 2, 2, 3, 3), (1, 1, 2, 2, 4)]
+     9    240  [4]  [0]  [0]  [3]  [1]  [(1, 1, 2, 3, 3)]
+    11    120  [5]  [0]  [0]  [4]  [1]  [(1, 2, 2, 2, 3)]
+    13    120  [5]  [0]  [0]  [4]  [1]  [(1, 2, 2, 2, 3)]
+    15     64  [5, 6]  [0]  [0]  [4, 5]  [1]  [(1, 2, 2, 2, 3), (2, 2, 2, 2, 2)]
+
+  ═══ WHY H=7 IS FORBIDDEN ═══
+  H = 1 + 2α₁ + 4α₂ + 8α₃ + ...
+  H = 7 requires α₁ + 2α₂ + 4α₃ + ... = 3
+  Possible decompositions: (α₁,α₂,α₃) = (3,0,0) or (1,1,0)
+
+  Tournaments with α₁=3: 0
+
+  The ONLY valid decomposition for H=7: α₁=3, α₂=0, α₃=0
+  Meaning: exactly 3 odd cycles, ALL pairwise sharing vertices
+  ✓ NO tournament has (α₁=3, α₂=0)!
+  → 3 odd cycles ALWAYS have at least one disjoint pair at n=5
+  → H = 1+2·3+4·α₂ ≥ 1+6+4 = 11
+  → H=7, H=9 with α₁=3 are impossible (9 needs (3,0) too)
+
+  Can α₁=3 be from mixed 3+5 cycles?
+
+================================================================================
+  FRUSTRATION FORCES DISJOINTNESS — n = 4
+================================================================================
+  Tournaments with α₁ ≥ 3: 0
+  Violations (α₁≥3 but α₂=0): 0
+  ✓ THEOREM HOLDS at n=4: α₁ ≥ 3 → α₂ ≥ 1
+    → H ≥ 1 + 2·3 + 4·1 = 11 whenever α₁ ≥ 3
+    → H=7 = 1+2·3+0 is impossible (the 4α₂ term is always ≥ 4)
+
+================================================================================
+  FRUSTRATION FORCES DISJOINTNESS — n = 5
+================================================================================
+  Tournaments with α₁ ≥ 3: 544
+  Violations (α₁≥3 but α₂=0): 544
+  ✗ VIOLATIONS found:
+    α₁=4, scores=(1, 1, 2, 3, 3)
+    α₁=4, scores=(1, 1, 2, 3, 3)
+    α₁=5, scores=(1, 2, 2, 2, 3)
+    α₁=4, scores=(1, 1, 2, 3, 3)
+    α₁=4, scores=(1, 1, 2, 3, 3)
+
+================================================================================
+  FRUSTRATION FORCES DISJOINTNESS — n = 6
+================================================================================
+    ... checked 2000 with α₁≥3    ... checked 4000 with α₁≥3    ... checked 6000 with α₁≥3    ... checked 8000 with α₁≥3    ... checked 10000 with α₁≥3    ... checked 12000 with α₁≥3    ... checked 14000 with α₁≥3    ... checked 16000 with α₁≥3    ... checked 18000 with α₁≥3    ... checked 20000 with α₁≥3    ... checked 22000 with α₁≥3    ... checked 24000 with α₁≥3    ... checked 26000 with α₁≥3    ... checked 28000 with α₁≥3  Tournaments with α₁ ≥ 3: 28848
+  Violations (α₁≥3 but α₂=0): 13488
+  ✗ VIOLATIONS found:
+    α₁=4, scores=(1, 1, 2, 3, 3, 5)
+    α₁=4, scores=(1, 1, 2, 3, 3, 5)
+    α₁=5, scores=(1, 2, 2, 2, 3, 5)
+    α₁=4, scores=(1, 1, 2, 3, 3, 5)
+    α₁=8, scores=(1, 1, 2, 3, 4, 4)
+
+
+Total time: 171.5s
