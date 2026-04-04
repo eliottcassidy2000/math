@@ -1,0 +1,123 @@
+
+============================================================
+DISJOINT PAIR FORMULA ANALYSIS n=5
+============================================================
+  Computing cycle anatomy for disjoint pairs...
+    (3, 1)-(5, 2) s=(2,3): c=2, 3-cyc=0, 5-cyc=8, range_ov=2, ratio=1/4
+    (4, 1)-(5, 3) s=(3,2): c=2, 3-cyc=0, 5-cyc=8, range_ov=2, ratio=1/4
+    (4, 1)-(5, 2) s=(3,3): c=4, 3-cyc=0, 5-cyc=8, range_ov=3, ratio=1/4
+    (5, 1)-(4, 2) s=(4,2): c=4, 3-cyc=0, 5-cyc=8, range_ov=3, ratio=1/4
+
+============================================================
+DISJOINT PAIR FORMULA ANALYSIS n=6
+============================================================
+  Computing cycle anatomy for disjoint pairs...
+    (3, 1)-(5, 2) s=(2,3): c=2, 3-cyc=0, 5-cyc=16, range_ov=2, ratio=1/4
+    (4, 2)-(6, 3) s=(2,3): c=2, 3-cyc=0, 5-cyc=16, range_ov=2, ratio=1/4
+    (4, 1)-(5, 3) s=(3,2): c=2, 3-cyc=0, 5-cyc=16, range_ov=2, ratio=1/4
+    (5, 2)-(6, 4) s=(3,2): c=2, 3-cyc=0, 5-cyc=16, range_ov=2, ratio=1/4
+    (3, 1)-(6, 2) s=(2,4): c=4, 3-cyc=0, 5-cyc=16, range_ov=2, ratio=1/4
+    (4, 1)-(5, 2) s=(3,3): c=4, 3-cyc=0, 5-cyc=16, range_ov=3, ratio=1/4
+    (5, 1)-(4, 2) s=(4,2): c=4, 3-cyc=0, 5-cyc=16, range_ov=3, ratio=1/4
+    (5, 2)-(6, 3) s=(3,3): c=4, 3-cyc=0, 5-cyc=16, range_ov=3, ratio=1/4
+    (6, 2)-(5, 3) s=(4,2): c=4, 3-cyc=0, 5-cyc=16, range_ov=3, ratio=1/4
+    (5, 1)-(6, 4) s=(4,2): c=4, 3-cyc=0, 5-cyc=16, range_ov=2, ratio=1/4
+    (3, 1)-(6, 4) s=(2,2): c=4, 3-cyc=0, 5-cyc=16, range_ov=0, ratio=1
+    (6, 1)-(4, 2) s=(5,2): c=8, 3-cyc=0, 5-cyc=16, range_ov=3, ratio=1/4
+    (4, 1)-(6, 3) s=(3,3): c=8, 3-cyc=0, 5-cyc=16, range_ov=2, ratio=1/2
+    (6, 1)-(5, 3) s=(5,2): c=8, 3-cyc=0, 5-cyc=16, range_ov=3, ratio=1/4
+    (4, 1)-(6, 2) s=(3,4): c=10, 3-cyc=0, 5-cyc=16, range_ov=3, ratio=5/16
+    (5, 1)-(6, 3) s=(4,3): c=10, 3-cyc=0, 5-cyc=16, range_ov=3, ratio=5/16
+    (5, 1)-(6, 2) s=(4,4): c=16, 3-cyc=0, 5-cyc=16, range_ov=4, ratio=1/4
+    (6, 1)-(5, 2) s=(5,3): c=16, 3-cyc=0, 5-cyc=16, range_ov=4, ratio=1/4
+
+============================================================
+INTERACTION RANGE n=5
+============================================================
+  Degree 2: 13 coefficients, span range [3, 4]
+  Degree 3: 8 coefficients, span range [4, 4]
+  Degree 4: 7 coefficients, span range [4, 4]
+
+============================================================
+INTERACTION RANGE n=6
+============================================================
+  Degree 2: 42 coefficients, span range [3, 5]
+  Degree 3: 66 coefficients, span range [4, 5]
+  Degree 4: 81 coefficients, span range [4, 5]
+
+============================================================
+INTERACTION RANGE n=7
+============================================================
+  Degree 2: 101 coefficients, span range [3, 6]
+  Degree 3: 309 coefficients, span range [4, 6]
+  Degree 4: 626 coefficients, span range [4, 6]
+  Degree 5: 407 coefficients, span range [6, 6]
+  Degree 6: 323 coefficients, span range [6, 6]
+
+============================================================
+DEGREE-SUM POLYNOMIAL ANALYSIS
+============================================================
+  Degree sums S_d by n:
+    n=3: [np.int64(1), np.int64(2)]
+    n=4: [np.int64(1), np.int64(8), np.int64(-4)]
+    n=5: [np.int64(1), np.int64(22), np.int64(0), np.int64(-20), np.int64(6)]
+    n=6: [np.int64(1), np.int64(52), np.int64(92), np.int64(-208), np.int64(80)]
+    n=7: [np.int64(1), np.int64(114), np.int64(616), np.int64(-948), np.int64(-138), np.int64(532), np.int64(-146)]
+
+  S_0 = 1 always (= H(transitive))
+
+  S_1 values: {3: np.int64(2), 4: np.int64(8), 5: np.int64(22), 6: np.int64(52), 7: np.int64(114)}
+    n=3: S_1 = 2 = 2
+    n=4: S_1 = 8 = 8
+    n=5: S_1 = 22 = 22
+    n=6: S_1 = 52 = 52
+    n=7: S_1 = 114 = 114
+    n=8: S_1 = 240 = 240
+    n=9: S_1 = 494 = 494
+
+  Formula: S_1 = 2^n - 2n + 1
+    n=3: 2^n-2n+1 = 3, actual S_1 = 2
+    n=4: 2^n-2n+1 = 9, actual S_1 = 8
+    n=5: 2^n-2n+1 = 23, actual S_1 = 22
+    n=6: 2^n-2n+1 = 53, actual S_1 = 52
+    n=7: 2^n-2n+1 = 115, actual S_1 = 114
+    n=8: 2^n-2n+1 = 241, actual S_1 = 240
+    n=9: 2^n-2n+1 = 495, actual S_1 = 494
+
+  S_2 values: {3: 0, 4: np.int64(-4), 5: np.int64(0), 6: np.int64(92), 7: np.int64(616)}
+    n=5: S_2=0, same-end=-16, cross-end=4, disjoint=12
+    n=6: S_2=92, same-end=-44, cross-end=24, disjoint=112
+    n=7: S_2=616, same-end=-104, cross-end=92, disjoint=628
+    n=5: same-end sum from formula = -16
+    n=6: same-end sum from formula = -44
+    n=7: same-end sum from formula = -104
+    n=8: same-end sum from formula = -228
+
+============================================================
+REDUCED POLYNOMIAL P(t) = (H(t)-1)/2
+============================================================
+
+  n=5: P(t) = (H(t)-1)/2
+    d=1: 6 terms, sum=11, values=[np.int64(1), np.int64(2), np.int64(4)]
+    d=2: 13 terms, sum=0, values=[np.int64(-1), np.int64(1), np.int64(2)]
+    d=3: 8 terms, sum=-10, values=[np.int64(-2), np.int64(-1)]
+    d=4: 7 terms, sum=3, values=[np.int64(-1), np.int64(1)]
+    Max degree 4: P coefficients = {np.int64(1), np.int64(-1)}
+    *** P has ±1 coefficients at max degree! ***
+
+  n=6: P(t) = (H(t)-1)/2
+    d=1: 10 terms, sum=26, values=[np.int64(1), np.int64(2), np.int64(4), np.int64(8)]
+    d=2: 42 terms, sum=46, values=[np.int64(-2), np.int64(-1), np.int64(1), np.int64(2), np.int64(4), np.int64(5), np.int64(8)]
+    d=3: 66 terms, sum=-104, values=[np.int64(-4), np.int64(-3), np.int64(-2), np.int64(-1), np.int64(1), np.int64(2), np.int64(3)]
+    d=4: 81 terms, sum=40, values=[np.int64(-2), np.int64(-1), np.int64(1), np.int64(2)]
+    Max degree 4: P coefficients = {np.int64(1), np.int64(2), np.int64(-1), np.int64(-2)}
+
+  n=7: P(t) = (H(t)-1)/2
+    d=1: 15 terms, sum=57, values=[np.int64(1), np.int64(2), np.int64(4), np.int64(8), np.int64(16)]
+    d=2: 101 terms, sum=308, values=[np.int64(-4), np.int64(-2), np.int64(-1), np.int64(1), np.int64(2), np.int64(4), np.int64(5), np.int64(8), np.int64(10), np.int64(12)]
+    d=3: 309 terms, sum=-474, values=[np.int64(-10), np.int64(-9), np.int64(-8), np.int64(-7), np.int64(-6), np.int64(-5), np.int64(-4), np.int64(-3), np.int64(-2), np.int64(-1)]
+    d=4: 626 terms, sum=-69, values=[np.int64(-4), np.int64(-3), np.int64(-2), np.int64(-1), np.int64(1), np.int64(2), np.int64(3), np.int64(4)]
+    d=5: 407 terms, sum=266, values=[np.int64(-2), np.int64(-1), np.int64(1), np.int64(2)]
+    d=6: 323 terms, sum=-73, values=[np.int64(-1), np.int64(1)]
+    Max degree 6: P coefficients = {np.int64(1), np.int64(-1)}
+    *** P has ±1 coefficients at max degree! ***
