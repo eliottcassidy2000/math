@@ -1,0 +1,150 @@
+
+H=7 NEGATIVE SPACE at n=5
+============================================================
+  H=5 tilings: 10
+  H=9 tilings: 18
+  H=7 tilings: 0 (CONFIRMED)
+
+  H=5 → flip results:
+    → H=1: 2 flips
+    → H=3: 8 flips
+    → H=5: 20 flips
+    → H=9: 14 flips
+    → H=11: 8 flips
+    → H=13: 8 flips
+
+  H=9 → flip results:
+    → H=1: 1 flips
+    → H=3: 3 flips
+    → H=5: 8 flips
+    → H=9: 21 flips
+    → H=11: 11 flips
+    → H=13: 12 flips
+    → H=15: 4 flips
+
+  Omega (cycle conflict graph) analysis:
+
+  --- H=5 tournaments ---
+    bits=2: c3=2, c5=0, α=[1, 2, 0], I(Ω,2)=5, H=5
+    bits=6: c3=2, c5=0, α=[1, 2, 0], I(Ω,2)=5, H=5
+    bits=8: c3=2, c5=0, α=[1, 2, 0], I(Ω,2)=5, H=5
+    bits=18: c3=2, c5=0, α=[1, 2, 0], I(Ω,2)=5, H=5
+    bits=20: c3=2, c5=0, α=[1, 2, 0], I(Ω,2)=5, H=5
+
+  --- H=9 tournaments ---
+    bits=1: c3=3, c5=1, α=[1, 4, 0, 0, 0], I(Ω,2)=9, H=9
+    bits=5: c3=3, c5=1, α=[1, 4, 0, 0, 0], I(Ω,2)=9, H=9
+    bits=7: c3=3, c5=1, α=[1, 4, 0, 0, 0], I(Ω,2)=9, H=9
+    bits=12: c3=3, c5=1, α=[1, 4, 0, 0, 0], I(Ω,2)=9, H=9
+    bits=23: c3=3, c5=1, α=[1, 4, 0, 0, 0], I(Ω,2)=9, H=9
+
+H=7 NEGATIVE SPACE at n=6
+============================================================
+  H=5 tilings: 15
+  H=9 tilings: 37
+  H=7 tilings: 0 (CONFIRMED)
+
+  H=5 → flip results:
+    → H=1: 3 flips
+    → H=3: 8 flips
+    → H=5: 19 flips
+    → H=9: 18 flips
+    → H=11: 11 flips
+    → H=13: 13 flips
+    → H=15: 6 flips
+    → H=17: 6 flips
+    → H=19: 6 flips
+    → H=23: 6 flips
+    → H=37: 4 flips
+
+  H=9 → flip results:
+    → H=1: 2 flips
+    → H=3: 3 flips
+    → H=5: 8 flips
+    → H=9: 20 flips
+    → H=11: 11 flips
+    → H=13: 12 flips
+    → H=15: 9 flips
+    → H=17: 6 flips
+    → H=19: 4 flips
+    → H=23: 10 flips
+    → H=29: 5 flips
+    → H=31: 5 flips
+    → H=33: 5 flips
+
+  Omega (cycle conflict graph) analysis:
+
+  --- H=5 tournaments ---
+    bits=4: c3=2, c5=0, α=[1, 2, 0], I(Ω,2)=5, H=5
+    bits=12: c3=2, c5=0, α=[1, 2, 0], I(Ω,2)=5, H=5
+    bits=32: c3=2, c5=0, α=[1, 2, 0], I(Ω,2)=5, H=5
+    bits=68: c3=2, c5=0, α=[1, 2, 0], I(Ω,2)=5, H=5
+    bits=72: c3=2, c5=0, α=[1, 2, 0], I(Ω,2)=5, H=5
+
+  --- H=9 tournaments ---
+    bits=2: c3=3, c5=1, α=[1, 4, 0, 0, 0], I(Ω,2)=9, H=9
+    bits=10: c3=3, c5=1, α=[1, 4, 0, 0, 0], I(Ω,2)=9, H=9
+    bits=14: c3=3, c5=1, α=[1, 4, 0, 0, 0], I(Ω,2)=9, H=9
+    bits=16: c3=3, c5=1, α=[1, 4, 0, 0, 0], I(Ω,2)=9, H=9
+    bits=40: c3=3, c5=1, α=[1, 4, 0, 0, 0], I(Ω,2)=9, H=9
+
+============================================================
+WHY Ω = K₃ IS IMPOSSIBLE (structural analysis)
+============================================================
+
+  n=5: tournaments with exactly 3 directed 3-cycles: 18
+  H distribution: {9: 18}
+  H=7 count: 0
+    H=9: 3-cycles=[(0, 1, 4), (0, 2, 4), (0, 3, 4)], shared={0, 4}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 1, 2), (0, 1, 4), (0, 3, 4)], shared={0}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 1, 2), (0, 1, 3), (0, 1, 4)], shared={0, 1}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 1, 2), (1, 2, 4), (1, 3, 4)], shared={1}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 1, 2), (0, 1, 4), (1, 2, 3)], shared={1}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 2, 3), (1, 2, 3), (1, 2, 4)], shared={2}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 1, 2), (1, 2, 3), (1, 2, 4)], shared={1, 2}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 1, 2), (1, 2, 3), (1, 2, 4)], shared={1, 2}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 1, 2), (1, 2, 3), (1, 2, 4)], shared={1, 2}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 1, 4), (0, 3, 4), (2, 3, 4)], shared={4}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 1, 3), (0, 2, 3), (2, 3, 4)], shared={3}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 1, 2), (0, 2, 4), (2, 3, 4)], shared={2}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 3, 4), (1, 3, 4), (2, 3, 4)], shared={3, 4}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 2, 3), (1, 2, 3), (2, 3, 4)], shared={2, 3}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 3, 4), (1, 2, 3), (2, 3, 4)], shared={3}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 2, 3), (1, 2, 3), (2, 3, 4)], shared={2, 3}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 2, 3), (1, 2, 3), (2, 3, 4)], shared={2, 3}, 5-cycles=1, α₂=0, Ω=K₃: True
+    H=9: 3-cycles=[(0, 1, 2), (1, 2, 3), (2, 3, 4)], shared={2}, 5-cycles=1, α₂=0, Ω=K₃: True
+
+  Ω = K₃ count: 18 / 18
+
+  n=6: c3=3 tournaments: 36
+  H distribution: {9: 36}
+  H=7 count: 0
+    n=7: 10000/32768...
+    n=7: 20000/32768...
+    n=7: 30000/32768...
+
+  n=7: c3=3 tournaments: 64
+  H distribution: {9: 54, 15: 10}
+  H=7 count: 0
+
+============================================================
+MULTILINEAR VIEW OF THE H=7 GAP (n=5)
+============================================================
+
+  H=5 tiling 2: c3=2, c5=0
+    ΔH=+2 flips: [] (would give H=7 if possible)
+    ΔH=+4 flips: [((5, 3), 4)] (skip to H=9)
+    ΔH<0 flips: [((4, 1), -4)]
+    *** NO ΔH=+2 flip exists → H=7 unreachable from this tiling ***
+
+  H=5 tiling 6: c3=2, c5=0
+    ΔH=+2 flips: [] (would give H=7 if possible)
+    ΔH=+4 flips: [((5, 1), 4)] (skip to H=9)
+    ΔH<0 flips: [((4, 1), -2)]
+    *** NO ΔH=+2 flip exists → H=7 unreachable from this tiling ***
+
+  H=5 tiling 8: c3=2, c5=0
+    ΔH=+2 flips: [] (would give H=7 if possible)
+    ΔH=+4 flips: [((3, 1), 4)] (skip to H=9)
+    ΔH<0 flips: [((5, 2), -4)]
+    *** NO ΔH=+2 flip exists → H=7 unreachable from this tiling ***
