@@ -996,18 +996,21 @@ function draw(){
       ctx.font=`bold ${Math.max(7,r*0.8)}px monospace`;
       ctx.textAlign='center';ctx.textBaseline='middle';
       let label='';
-      if(colorMode==='h'){
-        label=merged&&nd.mergeType==='paired'&&nd.H2?nd.H+'/'+nd.H2:nd.H.toString();
-      }
+      // In merged mode, default to showing combined tiling count (odd=backbone, even=paired)
+      if(merged&&colorMode==='h'){
+        // H is same for both classes in a pair, so just show it once
+        label=nd.H.toString();
+      } else if(merged&&(colorMode==='tilings'||colorMode==='score')){
+        // Combined tiling count: the key number. Odd=SC backbone, Even=NS paired.
+        label=nd.combinedSize.toString();
+      } else if(colorMode==='h') label=nd.H.toString();
       else if(colorMode==='t3') label=nd.c3.toString();
       else if(colorMode==='per') label=nd.per.toString();
       else if(colorMode==='ham') label=nd.ham.toString();
       else if(colorMode==='degree') label=nd.degree.toString();
       else if(colorMode==='qh') label=nd.Q>0?(nd.qhRatio*100|0)+'%':'';
       else if(colorMode==='alpha1') label=nd.nOddCycles.toString();
-      else if(colorMode==='tilings'){
-        label=merged&&nd.mergeType==='paired'?nd.combinedSize.toString():nd.size.toString();
-      }
+      else if(colorMode==='tilings') label=nd.combinedSize.toString();
       else if(colorMode==='bluefrac') label=(nd.nodeBlueFrac*100|0)+'%';
       else if(colorMode==='selfrate') label=(nd.wigglySelfRate*100|0)+'%';
       else if(colorMode==='compselfrate') label=(nd.compSelfRate*100|0)+'%';
@@ -1030,14 +1033,14 @@ function draw(){
         `tiling ${nd.mask!=null?'0b'+nd.mask.toString(2):'?'}  class #${nd.ci}`,
         `H=${nd.H}  [${nd.scores.join(',')}]  ${nd.gridSym?'grid-sym':''}`,
       ];
-    } else if(merged&&nd.mergeType==='paired'){
+    } else if(merged){
       lines=[
-        `#${nd.ci}+#${nd.pairCi||'?'}  H=${nd.H}/${nd.H2||'?'}  ${nd.mergeType}`,
-        `tilings=${nd.combinedSize}  t₃=${nd.c3}/${nd.t3_2||'?'}`,
+        `${nd.mergeType==='backbone'?'⬡':'⬡⬡'} H=${nd.H}  t₃=${nd.c3}  ${nd.mergeType==='backbone'?'SC':'paired'}`,
+        `tilings=${nd.combinedSize} (${nd.combinedSize%2===1?'odd→backbone':'even→paired'})`,
       ];
     } else {
       lines=[
-        `#${nd.ci}  H=${nd.H}  t₃=${nd.c3}  ${nd.isSC?'SC backbone':''}`,
+        `#${nd.ci}  H=${nd.H}  t₃=${nd.c3}  ${nd.isSC?'SC':''}`,
         `[${nd.scores.join(',')}]  tilings=${nd.size}`,
         `deg=${nd.degree}  blue${bf}%`,
       ];
@@ -1224,19 +1227,20 @@ function selectNode(nd){
   // Cycle cover polynomial display
   const ckStr=nd.Ck?Object.entries(nd.Ck).sort((a,b)=>+a[0]-+b[0]).map(([k,v])=>`C<sub>${k}</sub>=${v}`).join(' '):'';
   const isPaired=merged&&nd.mergeType==='paired';
-  const headerLabel=isPaired?`Merged #${nd.ci} + #${nd.pairCi||'?'}`:
-    merged&&nd.mergeType==='backbone'?`SC Backbone #${nd.ci}`:`Class #${nd.ci}`;
+  const headerLabel=isPaired?`Paired #${nd.ci}+#${nd.pairCi||'?'}`:
+    merged&&nd.mergeType==='backbone'?`Backbone #${nd.ci}`:`Class #${nd.ci}`;
   const headerColor=merged?(nd.mergeType==='backbone'?'var(--green)':'var(--muted)'):'var(--blue)';
+  // For complement pairs: H, t3, size, per, ham are all identical (THM-280 consequence)
   info.innerHTML=`<h3 style="color:${headerColor}">${headerLabel}</h3>
     <canvas id="infoCanvas" width="140" height="140"></canvas>
     <div style="font-size:.65em;color:var(--dim);text-align:center;margin-bottom:6px">
-      [${nd.scores.join(',')}]${isPaired?' / ['+((nd.scores2||[]).join(','))+']':''}
+      [${nd.scores.join(',')}]
       &middot; ${nd.isSC?'<span style="color:var(--green)">SC</span>':'NS'}
-      &middot; |Aut|=${nd.autSize||'?'}${isPaired?' (paired)':''}</div>
+      &middot; |Aut|=${nd.autSize||'?'}</div>
     <div style="font-size:.72em;color:var(--blue);font-weight:600;margin:4px 0">Hamiltonian</div>
-    <div class="row"><span class="k">H (paths)</span><span class="v" style="color:var(--green)">${nd.H}${isPaired?' / '+nd.H2:''}</span></div>
-    <div class="row"><span class="k">ham (circuits)</span><span class="v">${nd.ham}${isPaired&&nd.ham2!=null?' / '+nd.ham2:''}</span></div>
-    <div class="row"><span class="k">Tilings</span><span class="v">${nd.size}${isPaired?' + '+nd.size2+' = '+nd.combinedSize:''}</span></div>
+    <div class="row"><span class="k">H (paths)</span><span class="v" style="color:var(--green)">${nd.H}</span></div>
+    <div class="row"><span class="k">ham (circuits)</span><span class="v">${nd.ham}</span></div>
+    <div class="row"><span class="k">Tilings</span><span class="v">${nd.combinedSize} ${isPaired?'<span style="color:var(--dim)">('+nd.size+'×2, even)</span>':'<span style="color:var(--dim)">(odd)</span>'}</span></div>
     <div style="font-size:.72em;color:var(--orange);font-weight:600;margin:6px 0 4px">Cycle Structure</div>
     <div class="row"><span class="k">3-cycles (t<sub>3</sub>)</span><span class="v">${nd.c3}</span></div>
     ${nd.c5?`<div class="row"><span class="k">5-cycles (t<sub>5</sub>)</span><span class="v">${nd.c5}</span></div>`:''}
