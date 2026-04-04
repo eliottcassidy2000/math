@@ -1,0 +1,53 @@
+Building n=7 metagraph with rich invariant
+m=15 tiles, 2^m=32768 tilings
+============================================================
+  2000/32768 (360 groups, 3s, ETA 39s)
+  4000/32768 (375 groups, 5s, ETA 36s)
+  6000/32768 (381 groups, 8s, ETA 34s)
+  8000/32768 (381 groups, 10s, ETA 31s)
+  10000/32768 (384 groups, 13s, ETA 29s)
+  12000/32768 (384 groups, 15s, ETA 26s)
+  14000/32768 (384 groups, 18s, ETA 24s)
+  16000/32768 (384 groups, 20s, ETA 21s)
+  18000/32768 (388 groups, 23s, ETA 19s)
+  20000/32768 (388 groups, 25s, ETA 16s)
+  22000/32768 (388 groups, 28s, ETA 14s)
+  24000/32768 (388 groups, 30s, ETA 11s)
+  26000/32768 (388 groups, 33s, ETA 9s)
+  28000/32768 (388 groups, 36s, ETA 6s)
+  30000/32768 (388 groups, 38s, ETA 4s)
+  32000/32768 (388 groups, 41s, ETA 1s)
+
+  Groups: 388 (expected 456)
+  Time: 41s
+  Under-distinguishing: 388 < 456
+  Multi-member groups: 379
+  Max group size: 306
+  Tiling-fibration violations: 68
+
+  Distinct H values: 77
+  H range: [1, 189]
+
+  Building adjacency...
+  Edges: 3584
+  Degree: min=1, max=33, mean=18.5
+  Adjacency time: 0s
+
+  Self-loop rate: 11928/491520 = 2.4%
+
+  ΔH distribution:
+    ΔH=0: 97 edges
+    ΔH=2: 177 edges
+    ΔH=4: 194 edges
+    ΔH=6: 238 edges
+    ΔH=8: 202 edges
+    ΔH=10: 179 edges
+    ΔH=12: 220 edges
+    ΔH=14: 192 edges
+    ΔH=16: 160 edges
+    ΔH=18: 203 edges
+    ΔH=20: 167 edges
+    ΔH=22: 147 edges
+    ΔH=24: 169 edges
+    ΔH=26: 130 edges
+    ΔH=28: 110 edges
