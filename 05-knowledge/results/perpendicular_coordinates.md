@@ -65,3 +65,35 @@ n\s    1    2    3    4    5    6
  8     6    5    4    3    2    1
 ```
 Formula: skip s has n-s-2 tiles.
+
+### H vs Coordinate Profiles (n=5)
+
+Correlation of H with coordinate projections:
+  corr(H, Hamming weight) = 0.569
+  corr(H, hypotenuse bits) = 0.394
+  corr(H, periphery bits) = 0.418
+  corr(H, skip-1 bits) = 0.282
+
+H is non-monotone in the (hyp, per) decomposition:
+  (hyp=0, per=0) → H=1 (transitive)
+  (hyp=0, per=4) → H=15 (maximum)
+  (hyp=2, per=0) → H=15 (also maximum!)
+  (hyp=2, per=4) → H=9 (anti-transitive)
+
+Maximum H achieved by EITHER all bits on hypotenuse OR all bits off hypotenuse.
+The middle (hyp=1) has intermediate H. This suggests H is determined by how
+"concentrated" the bits are along one perpendicular axis vs the other.
+
+Skip profile determines H more tightly than distance profile.
+Some skip profiles give unique H: (0,0,0)→1, (0,2,1)→15.
+Others allow 2-3 values: (2,1,0)→{5,9,13}.
+
+### Vertex-Layer Anatomy (n=5)
+
+Vertex 1 (endpoint): touches dists [0,1,2], skips [1,2,3] — ALL layers
+Vertex 3 (middle): touches dists [2,2], skips [1,1] — ONLY periphery
+Vertex 5 (endpoint): touches dists [0,1,2], skips [1,2,3] — ALL layers
+
+Endpoints see the full triangle. The middle vertex only sees the periphery.
+This is why vertex-star flips at the center are more neutral: they only
+affect periphery bits, leaving the hypotenuse backbone intact.
