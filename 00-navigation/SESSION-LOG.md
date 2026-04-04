@@ -13,6 +13,30 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S1 — 2026-04-04: β₂=0 Proof Closure + Multilinear Polynomial Structure
+
+**Account:** opus
+**Continuation of:** opus-2026-04-03-S28
+**Summary:** Three-thread deep math session. Major result: closed the ONLY non-algebraic gap in the β₂=0 proof. Computed full multilinear polynomial at n=5,6,7. Investigated seesaw breakdown at n≥8.
+
+**Key Results:**
+1. **THM-285 (PROVED)**: The β₂=0 proof gap at n=5 is VACUOUS. No n=5 tournament has both b₁(T)=0 and κ(T)≥2. Proof: κ≥2 implies every deletion is SC, so any 3-cycle dominator would create a source/sink in the deletion — contradiction. The entire β₂=0 proof (THM-108) is now FULLY ALGEBRAIC with zero exhaustive verification.
+
+2. **THM-286 (PROVED)**: All multilinear coefficients c_S of H(t₁,...,tₘ) with |S|≥1 are even. Inductive proof from Rédei's theorem: H(indicator_S) is odd, so c_S = H(indicator_S) - 1 - Σ_{T⊊S} c_T is even.
+
+3. **Full multilinear polynomial data** at n=5,6,7: degree matches 2⌊(n-1)/2⌋ exactly. Count: 35, 200, 1782 nonzero coefficients. At odd n=3,5,7, max-degree coefficients are all ±2. At even n=6, max-degree includes ±4.
+
+4. **Apex effect decomposition**: apex effect = 159/8 at n=7 (not 2^(n-3)=16). The correction comes from degree-5 and degree-6 interactions that don't exist at n≤6.
+
+5. **HYP-500 REFUTED**: Weak seesaw β₁+β₃≤2 FAILS at n=8 (β₁=1, β₃=2 observed). The only universal constraint on (β₁,β₃) is the Euler characteristic.
+
+**New contributions:** THM-285, THM-286, HYP-500, 7 computation scripts, 7 result files
+**Unresolved threads:**
+- Disjoint pair coefficient formula (depends on geometry beyond skip+overlap)
+- Sign pattern at max degree (why ±2 at odd n?)
+- β₃ growth bound at general n
+- THM-286b conjecture: max-degree coefficients ±2 at odd n
+
 ## opus-2026-04-03-S28 — 2026-04-03: H-Saddle Deep Exploration — Linear/Quadratic Coefficient Theorems
 
 **Account:** opus

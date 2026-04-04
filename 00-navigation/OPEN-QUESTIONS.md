@@ -468,13 +468,14 @@ Verified algebraically for k=1,2,3,4 and n up to 12.
 **Prove: beta_{2k}(T) = 0 for all k >= 1, for any tournament T.**
 
 **UPDATE (kind-pasteur-S43): beta_2 = 0 PROVED (THM-108 + THM-109).**
+**UPDATE (opus-2026-04-04-S1): Proof is FULLY ALGEBRAIC — THM-285 closes n=5 gap.**
 
 Proof via strong induction using LES of (T, T\v):
-- Base case n=5 verified exhaustively (720/720)
+- ~~Base case n=5 verified exhaustively (720/720)~~ **THM-285: n=5 case is VACUOUS** (no n=5 tournament has both b₁=0 and κ≥2; proof: κ≥2 forces dominator→source/sink contradiction)
 - Induction step: good-vertex existence (THM-109)
 - Case 2 (free cycles exist): Lemma A (free adj dom) + Lemma B → n-5 good vertices for n≥6
-- Case 3 (all dominated): **Extreme Score Lemma** (ALGEBRAIC) — bad vertex has score 0
-  or n-1, hence in no 3-cycle, hence blocks other bad vertices. At most 1 bad.
+- Case 3 (all dominated): **Extreme Score Lemma** (ALGEBRAIC)
+- **ALL cases are now algebraic. No exhaustive verification needed anywhere.**
 - Comprehensive verification: 0 failures at n = 4-10
 
 GLMY path homology Betti numbers beta_p of tournaments:
