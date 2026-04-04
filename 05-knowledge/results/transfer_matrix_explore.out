@@ -1,0 +1,201 @@
+======================================================================
+MULTIPLICATIVE STRUCTURE TEST
+======================================================================
+
+  n=5:
+    Old coefficients (from n-1): 6
+    New coefficients (involve vertex n): 29
+    By number of new tiles involved: {1: 17, 2: 12}
+    New tiles: [(5, 1), (5, 2), (5, 3)]
+    F_n(t_new, t_old=0) = H_n(t_old=0, t_new):
+      t_new=(0,0,0): H = 1
+      t_new=(1,0,0): H = 9
+      t_new=(0,1,0): H = 5
+      t_new=(1,1,0): H = 11
+      t_new=(0,0,1): H = 3
+      t_new=(1,0,1): H = 9
+      t_new=(0,1,1): H = 5
+      t_new=(1,1,1): H = 9
+
+    Testing multiplicative factorization:
+      Multiplicative? False
+        new=100: 6 distinct ratios (range [9/5, 9])
+        new=010: 6 distinct ratios (range [5/3, 5])
+        new=110: 5 distinct ratios (range [9/5, 11])
+        new=001: 5 distinct ratios (range [5/3, 3])
+        new=101: 4 distinct ratios (range [13/5, 9])
+        new=011: 6 distinct ratios (range [5/3, 5])
+        new=111: 6 distinct ratios (range [9/5, 9])
+
+  n=6:
+    Old coefficients (from n-1): 35
+    New coefficients (involve vertex n): 165
+    By number of new tiles involved: {1: 92, 2: 73}
+    New tiles: [(6, 1), (6, 2), (6, 3), (6, 4)]
+    F_n(t_new, t_old=0) = H_n(t_old=0, t_new):
+      t_new=(0,0,0,0): H = 1
+      t_new=(1,0,0,0): H = 17
+      t_new=(0,1,0,0): H = 9
+      t_new=(1,1,0,0): H = 23
+      t_new=(0,0,1,0): H = 5
+      t_new=(1,0,1,0): H = 19
+      t_new=(0,1,1,0): H = 11
+      t_new=(1,1,1,0): H = 23
+      t_new=(0,0,0,1): H = 3
+      t_new=(1,0,0,1): H = 15
+      t_new=(0,1,0,1): H = 9
+      t_new=(1,1,0,1): H = 19
+      t_new=(0,0,1,1): H = 5
+      t_new=(1,0,1,1): H = 15
+      t_new=(0,1,1,1): H = 9
+      t_new=(1,1,1,1): H = 17
+
+    Testing multiplicative factorization:
+      Multiplicative? False
+        new=1000: 27 distinct ratios (range [5/3, 17])
+        new=0100: 26 distinct ratios (range [5/3, 9])
+        new=1100: 36 distinct ratios (range [5/3, 23])
+        new=0010: 25 distinct ratios (range [5/3, 5])
+        new=1010: 29 distinct ratios (range [31/13, 19])
+        new=0110: 31 distinct ratios (range [5/3, 11])
+        new=1110: 36 distinct ratios (range [5/3, 23])
+        new=0001: 24 distinct ratios (range [5/3, 23/5])
+        new=1001: 32 distinct ratios (range [31/13, 15])
+        new=0101: 25 distinct ratios (range [31/13, 9])
+        new=1101: 29 distinct ratios (range [31/13, 19])
+        new=0011: 31 distinct ratios (range [5/3, 33/5])
+        new=1011: 32 distinct ratios (range [31/13, 15])
+        new=0111: 35 distinct ratios (range [5/3, 9])
+        new=1111: 27 distinct ratios (range [5/3, 17])
+
+  n=7:
+    Old coefficients (from n-1): 200
+    New coefficients (involve vertex n): 1582
+    By number of new tiles involved: {1: 769, 2: 813}
+    New tiles: [(7, 1), (7, 2), (7, 3), (7, 4), (7, 5)]
+    F_n(t_new, t_old=0) = H_n(t_old=0, t_new):
+      t_new=(0,0,0,0,0): H = 1
+      t_new=(1,0,0,0,0): H = 33
+      t_new=(0,1,0,0,0): H = 17
+      t_new=(1,1,0,0,0): H = 47
+      t_new=(0,0,1,0,0): H = 9
+      t_new=(1,0,1,0,0): H = 39
+      t_new=(0,1,1,0,0): H = 23
+      t_new=(1,1,1,0,0): H = 51
+      t_new=(0,0,0,1,0): H = 5
+      t_new=(1,0,0,1,0): H = 33
+      t_new=(0,1,0,1,0): H = 19
+      t_new=(1,1,0,1,0): H = 45
+      t_new=(0,0,1,1,0): H = 11
+      t_new=(1,0,1,1,0): H = 37
+      t_new=(0,1,1,1,0): H = 23
+      t_new=(1,1,1,1,0): H = 47
+      t_new=(0,0,0,0,1): H = 3
+      t_new=(1,0,0,0,1): H = 27
+      t_new=(0,1,0,0,1): H = 15
+      t_new=(1,1,0,0,1): H = 37
+      t_new=(0,0,1,0,1): H = 9
+      t_new=(1,0,1,0,1): H = 31
+      t_new=(0,1,1,0,1): H = 19
+      t_new=(1,1,1,0,1): H = 39
+      t_new=(0,0,0,1,1): H = 5
+      t_new=(1,0,0,1,1): H = 25
+      t_new=(0,1,0,1,1): H = 15
+      t_new=(1,1,0,1,1): H = 33
+      t_new=(0,0,1,1,1): H = 9
+      t_new=(1,0,1,1,1): H = 27
+      t_new=(0,1,1,1,1): H = 17
+      t_new=(1,1,1,1,1): H = 33
+
+    Testing multiplicative factorization:
+
+======================================================================
+ADDITIVE LAYER DECOMPOSITION
+======================================================================
+
+  n=5: G_n = H_n - H_{n-1} (layer increment)
+    G range: [0, 12]
+    G(0) = 0 (should be 0, since H_n(0) = 1 = H_{n-1}(0))
+    Nonzero G coefficients: 29
+    Pure-new coefficients: 6
+    Mixed (new+old) coefficients: 23
+    Pure-old coefficients: 0
+    d=1: 3 terms, sum=14, range=[2,8]
+    d=2: 11 terms, sum=4, range=[-2,4]
+    d=3: 8 terms, sum=-20, range=[-4,-2]
+    d=4: 7 terms, sum=6, range=[-2,2]
+
+  n=6: G_n = H_n - H_{n-1} (layer increment)
+    G range: [0, 34]
+    G(0) = 0 (should be 0, since H_n(0) = 1 = H_{n-1}(0))
+    Nonzero G coefficients: 165
+    Pure-new coefficients: 10
+    Mixed (new+old) coefficients: 155
+    Pure-old coefficients: 0
+    d=1: 4 terms, sum=30, range=[2,16]
+    d=2: 29 terms, sum=92, range=[-4,16]
+    d=3: 58 terms, sum=-188, range=[-8,6]
+    d=4: 74 terms, sum=74, range=[-4,4]
+
+  n=7: G_n = H_n - H_{n-1} (layer increment)
+    G range: [0, 144]
+    G(0) = 0 (should be 0, since H_n(0) = 1 = H_{n-1}(0))
+    Nonzero G coefficients: 1582
+    Pure-new coefficients: 15
+    Mixed (new+old) coefficients: 1567
+    Pure-old coefficients: 0
+    d=1: 5 terms, sum=62, range=[2,32]
+    d=2: 59 terms, sum=524, range=[-8,52]
+    d=3: 243 terms, sum=-740, range=[-20,20]
+    d=4: 545 terms, sum=-218, range=[-8,8]
+    d=5: 407 terms, sum=532, range=[-4,4]
+    d=6: 323 terms, sum=-146, range=[-2,2]
+
+======================================================================
+DETERMINANT REPRESENTATION TEST
+======================================================================
+
+  n=4: Trying H(t) = det(I_k + M(t)) for various k
+    n=4: univariate H(p) = 1 + 8p - 4p²
+    = det(I_2 + p·A) where A has eigenvalues 4+2sqrt(5), 4-2sqrt(5)
+    = (1 + (4+2√5)p)(1 + (4-2√5)p)
+    This works for the UNIVARIATE version H(p,...,p)!
+
+  n=5: Trying H(t) = det(I_k + M(t)) for various k
+
+    n=5: univariate H(p) = 1 + 22p + 0p² - 20p³ + 6p⁴
+    If H(p) = det(I₄ + pA), eigenvalues of A: [21.95909022 -1.05547884  0.75226203  0.3441266 ]
+    e₁=22.0000 (expect 22)
+    e₂=-0.0000 (expect 0)
+    e₃=-20.0000 (expect -20)
+    e₄=-6.0000 (expect 6)
+    All real? True
+
+    n=6: H(p) = 1 + 52p + 92p² - 208p³ + 80p⁴
+    Eigenvalues: [50.08066855  3.08683892 -1.51017865  0.34267118]
+    All real? True
+
+    n=7: H(p) = 1 + 114p + 616p² - 948p³ - 138p⁴ + 532p⁵ - 146p⁶
+    Eigenvalues: [108.2274621    6.98304006   0.77985573  -0.88602071  -0.71124684
+  -0.39309033]
+    All real? True
+      lambda = 108.227462, log2 = 6.7579
+      lambda = 6.983040, log2 = 2.8039
+      lambda = 0.779856, log2 = -0.3587
+      lambda = -0.393090, log2 = -1.3471
+      lambda = -0.711247, log2 = -0.4916
+      lambda = -0.886021, log2 = -0.1746
+
+======================================================================
+MULTIVARIATE LAYER FACTORIZATION
+======================================================================
+
+  n=5: Testing H_5 = (1 + 2*t_{(3,1)}) * Q(t_{'other'})
+    t=000001: H(0)=9, H(1)=9, ratio=1
+    t=000010: H(0)=5, H(1)=5, ratio=1
+    t=000011: H(0)=11, H(1)=9, ratio=9/11
+    t=001000: H(0)=5, H(1)=9, ratio=9/5
+  H_5(t|(3,1)=1) = 3 * H_5(t|(3,1)=0)? 2/32 match
+  Tile (3, 1): H(1)/H(0) takes 16 values: [Fraction(9, 13), Fraction(11, 15), Fraction(9, 11), Fraction(11, 13), Fraction(13, 15)]...
+  Tile (4, 2): H(1)/H(0) takes 12 values: [Fraction(9, 13), Fraction(11, 15), Fraction(9, 11), Fraction(11, 13), Fraction(13, 15)]...
+  Tile (5, 3): H(1)/H(0) takes 16 values: [Fraction(9, 13), Fraction(11, 15), Fraction(9, 11), Fraction(11, 13), Fraction(13, 15)]...
