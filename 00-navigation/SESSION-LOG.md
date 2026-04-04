@@ -13,6 +13,36 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S7 — 2026-04-04: Tropical Geometry & The Three Functors — Finding What Is Most Fundamental
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S6
+**Summary:** Tropical thinking session seeking the irreducible core of H(t). Identified the three-functor decomposition (tiling→tournament→conflict graph→integer) as the fundamental structure. Computed Newton polytopes, real/2-adic tropicalizations, conflict graph evolution, frustration thresholds. The deepest insight: EVERYTHING about H(t) follows from Functor 2 (how the conflict graph Omega depends on tile flips).
+
+**Key Results:**
+1. **Three-functor decomposition**: H = I(Omega(T(t)), 2) decomposes into (1) linear tiling→tournament, (2) nonlinear local tournament→conflict graph, (3) algebraic global graph→integer. Every theorem traces back to one of these three.
+
+2. **Newton polytope**: Full-dimensional (dim=m), does NOT contain (1,...,1), the all-ones face = all max-degree monomials. Support density drops from 100% (degree 0-1) to 6.5% (degree 6 at n=7).
+
+3. **2-adic tropicalization is Redei**: v_2(H)=0 for all tilings (H always odd). The constant term c_0=1 always wins the 2-adic race. Tropical variety is empty.
+
+4. **Real tropicalization — dominant monomial shift**: degree-1 dominant at n=5 (95%), shifts to degree-2 dominant at n=7 (80%). The quadratic term c_{(6,1),(7,2)}=52 dominates 25% of all tilings at n=7.
+
+5. **Frustration threshold**: tile k's gradient flips sign when ~2^{skip-2} same-end neighbors are backward. For apex at n=6: threshold = 5 same-end backward (out of 6). For skip-2 tiles: threshold = 2 (out of 2-3).
+
+6. **c_3 explains 91% of H variance** (via regression, not direct formula). But 1+2c_3 is a poor direct prediction (R²=0.33 at n=5, negative at n=6) because alpha_1 ≠ c_3 and the coefficient isn't exactly 2.
+
+7. **H gap structure**: all gaps between consecutive H values are even (2 or 4). The gap-4 positions appear periodically.
+
+8. **Conflict graph evolution**: from transitive, H increases monotonically for the first ~m/2 flips then can decrease. Peak depends on flip order.
+
+**New contributions:** the-three-functors.md reflection, tropical_fundamental.py, tropical_real_and_core.py, 2 result files
+**Unresolved:**
+- Why exactly n-2 negative eigenvalues (the 3-functor picture doesn't directly explain the count)
+- Gap-4 pattern in H values
+- Why x=2 is the right evaluation point (deeper than GF(2))
+- Disjoint sign rule counting proof
+
 ## opus-2026-04-04-S6 — 2026-04-04: Sign Rule Proved, Statistical/Information Analysis, Tournament Metric
 
 **Account:** opus
