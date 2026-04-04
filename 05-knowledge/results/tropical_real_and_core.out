@@ -1,0 +1,328 @@
+
+============================================================
+REAL TROPICALIZATION n=5
+============================================================
+  Dominant monomial degree distribution:
+    degree 0: 1/64 = 0.016
+    degree 1: 61/64 = 0.953
+    degree 2: 2/64 = 0.031
+  Dominant monomial sign: {1: 64}
+
+  Corr(trop, log(H)) = 0.7666
+  log(H)/trop ratio: mean=1.381, std=0.306
+
+  Tropical cells (regions with same dominant monomial):
+    Number of cells: 8
+    S=[(5, 1)] (c=8): 32 tilings, H range [9, 15]
+    S=[(4, 1)] (c=4): 16 tilings, H range [5, 15]
+    S=[(5, 2)] (c=4): 8 tilings, H range [5, 13]
+    S=[(3, 1)] (c=2): 2 tilings, H range [3, 5]
+    S=[(4, 2)] (c=2): 2 tilings, H range [3, 5]
+    S=[(3, 1), (5, 3)] (c=4): 2 tilings, H range [9, 11]
+    S=[] (c=1): 1 tilings, H range [1, 1]
+    S=[(5, 3)] (c=2): 1 tilings, H range [3, 3]
+
+============================================================
+REAL TROPICALIZATION n=6
+============================================================
+  Dominant monomial degree distribution:
+    degree 0: 1/1024 = 0.001
+    degree 1: 695/1024 = 0.679
+    degree 2: 328/1024 = 0.320
+  Dominant monomial sign: {1: 1024}
+
+  Corr(trop, log(H)) = 0.7083
+  log(H)/trop ratio: mean=1.336, std=0.198
+
+  Tropical cells (regions with same dominant monomial):
+    Number of cells: 20
+    S=[(6, 1)] (c=16): 512 tilings, H range [15, 45]
+    S=[(5, 1), (6, 2)] (c=16): 128 tilings, H range [15, 45]
+    S=[(5, 1)] (c=8): 64 tilings, H range [9, 37]
+    S=[(6, 2)] (c=8): 64 tilings, H range [9, 37]
+    S=[(4, 1), (6, 2)] (c=10): 64 tilings, H range [15, 45]
+    S=[(5, 1), (6, 3)] (c=10): 64 tilings, H range [15, 45]
+    S=[(4, 1), (6, 3)] (c=8): 32 tilings, H range [15, 45]
+    S=[(5, 2)] (c=4): 24 tilings, H range [5, 29]
+
+============================================================
+REAL TROPICALIZATION n=7
+============================================================
+  Dominant monomial degree distribution:
+    degree 0: 1/32768 = 0.000
+    degree 1: 5969/32768 = 0.182
+    degree 2: 26218/32768 = 0.800
+    degree 3: 580/32768 = 0.018
+  Dominant monomial sign: {1: 32768}
+
+  Corr(trop, log(H)) = 0.5574
+  log(H)/trop ratio: mean=1.297, std=0.168
+
+  Tropical cells (regions with same dominant monomial):
+    Number of cells: 53
+    S=[(6, 1), (7, 2)] (c=52): 8192 tilings, H range [25, 189]
+    S=[(7, 1), (6, 2)] (c=52): 6144 tilings, H range [27, 189]
+    S=[(7, 1)] (c=32): 4096 tilings, H range [25, 175]
+    S=[(5, 1), (7, 2)] (c=34): 3072 tilings, H range [25, 189]
+    S=[(6, 1), (7, 3)] (c=34): 3072 tilings, H range [25, 189]
+    S=[(4, 1), (7, 2)] (c=20): 1024 tilings, H range [25, 159]
+    S=[(5, 1), (7, 3)] (c=24): 1024 tilings, H range [25, 175]
+    S=[(6, 1), (7, 4)] (c=20): 1024 tilings, H range [25, 159]
+
+============================================================
+NON-MONOTONICITY ANALYSIS n=5
+============================================================
+  tile (5, 1) skip=4: +26 ↑0.81, -2 ↓0.06, =4
+  tile (4, 1) skip=3: +18 ↑0.56, -8 ↓0.25, =6
+  tile (3, 1) skip=2: +20 ↑0.62, -7 ↓0.22, =5
+  tile (5, 2) skip=3: +18 ↑0.56, -8 ↓0.25, =6
+  tile (4, 2) skip=2: +12 ↑0.38, -12 ↓0.38, =8
+  tile (5, 3) skip=2: +20 ↑0.62, -7 ↓0.22, =5
+
+  GRADIENT SIGN ANALYSIS for apex tile (5, 1):
+    Gradient positive: 26, negative: 6
+
+  Critical threshold for gradient sign flip:
+    tile (5, 1) skip=4, 4 same-end tiles:
+      same-end backward=0: mean_grad=10.0, +2/-0
+      same-end backward=1: mean_grad=7.0, +8/-0
+      same-end backward=2: mean_grad=4.0, +12/-0
+      same-end backward=3: mean_grad=1.0, +4/-0
+      same-end backward=4: mean_grad=-2.0, +0/-2
+    tile (4, 1) skip=3, 3 same-end tiles:
+      same-end backward=0: mean_grad=6.0, +4/-0
+      same-end backward=1: mean_grad=3.0, +12/-0
+      same-end backward=2: mean_grad=-0.3, +2/-4
+      same-end backward=3: mean_grad=-4.0, +0/-4
+    tile (3, 1) skip=2, 2 same-end tiles:
+      same-end backward=0: mean_grad=4.8, +8/-0
+      same-end backward=1: mean_grad=1.8, +10/-2
+      same-end backward=2: mean_grad=-1.2, +2/-5
+    tile (5, 2) skip=3, 3 same-end tiles:
+      same-end backward=0: mean_grad=6.0, +4/-0
+      same-end backward=1: mean_grad=3.0, +12/-0
+      same-end backward=2: mean_grad=-0.3, +2/-4
+      same-end backward=3: mean_grad=-4.0, +0/-4
+    tile (4, 2) skip=2, 2 same-end tiles:
+      same-end backward=0: mean_grad=3.0, +8/-0
+      same-end backward=1: mean_grad=0.0, +4/-4
+      same-end backward=2: mean_grad=-3.0, +0/-8
+    tile (5, 3) skip=2, 2 same-end tiles:
+      same-end backward=0: mean_grad=4.8, +8/-0
+      same-end backward=1: mean_grad=1.8, +10/-2
+      same-end backward=2: mean_grad=-1.2, +2/-5
+
+============================================================
+NON-MONOTONICITY ANALYSIS n=6
+============================================================
+  tile (6, 1) skip=5: +385 ↑0.75, -65 ↓0.13, =62
+  tile (5, 1) skip=4: +298 ↑0.58, -130 ↓0.25, =84
+  tile (4, 1) skip=3: +287 ↑0.56, -140 ↓0.27, =85
+  tile (3, 1) skip=2: +315 ↑0.62, -129 ↓0.25, =68
+  tile (6, 2) skip=4: +298 ↑0.58, -130 ↓0.25, =84
+  tile (5, 2) skip=3: +202 ↑0.39, -218 ↓0.43, =92
+  tile (4, 2) skip=2: +217 ↑0.42, -213 ↓0.42, =82
+  tile (6, 3) skip=3: +287 ↑0.56, -140 ↓0.27, =85
+  tile (5, 3) skip=2: +217 ↑0.42, -213 ↓0.42, =82
+  tile (6, 4) skip=2: +315 ↑0.62, -129 ↓0.25, =68
+
+  GRADIENT SIGN ANALYSIS for apex tile (6, 1):
+    Gradient positive: 385, negative: 127
+
+  Critical threshold for gradient sign flip:
+    tile (6, 1) skip=5, 6 same-end tiles:
+      same-end backward=0: mean_grad=28.0, +8/-0
+      same-end backward=1: mean_grad=21.5, +48/-0
+      same-end backward=2: mean_grad=14.9, +120/-0
+      same-end backward=3: mean_grad=8.1, +160/-0
+      same-end backward=4: mean_grad=1.2, +49/-13
+      same-end backward=5: mean_grad=-5.8, +0/-44
+      same-end backward=6: mean_grad=-13.0, +0/-8
+    tile (5, 1) skip=4, 5 same-end tiles:
+      same-end backward=0: mean_grad=19.0, +16/-0
+      same-end backward=1: mean_grad=12.8, +80/-0
+      same-end backward=2: mean_grad=6.5, +154/-0
+      same-end backward=3: mean_grad=0.1, +48/-40
+      same-end backward=4: mean_grad=-6.4, +0/-74
+      same-end backward=5: mean_grad=-13.0, +0/-16
+    tile (4, 1) skip=3, 4 same-end tiles:
+      same-end backward=0: mean_grad=15.5, +32/-0
+      same-end backward=1: mean_grad=9.5, +126/-0
+      same-end backward=2: mean_grad=3.2, +114/-33
+      same-end backward=3: mean_grad=-3.5, +15/-75
+      same-end backward=4: mean_grad=-10.5, +0/-32
+    tile (3, 1) skip=2, 3 same-end tiles:
+      same-end backward=0: mean_grad=13.8, +64/-0
+      same-end backward=1: mean_grad=7.2, +163/-14
+      same-end backward=2: mean_grad=0.8, +80/-65
+      same-end backward=3: mean_grad=-5.8, +8/-50
+    tile (6, 2) skip=4, 5 same-end tiles:
+      same-end backward=0: mean_grad=19.0, +16/-0
+      same-end backward=1: mean_grad=12.8, +80/-0
+      same-end backward=2: mean_grad=6.5, +154/-0
+      same-end backward=3: mean_grad=0.1, +48/-40
+      same-end backward=4: mean_grad=-6.4, +0/-74
+      same-end backward=5: mean_grad=-13.0, +0/-16
+    tile (5, 2) skip=3, 4 same-end tiles:
+      same-end backward=0: mean_grad=12.0, +32/-0
+      same-end backward=1: mean_grad=6.0, +124/-0
+      same-end backward=2: mean_grad=-0.3, +46/-66
+      same-end backward=3: mean_grad=-7.0, +0/-120
+      same-end backward=4: mean_grad=-14.0, +0/-32
+
+============================================================
+INDEPENDENCE SEQUENCE ANALYSIS n=5
+============================================================
+  alpha_1 even (H≡1 mod 4): 42/64 = 0.656
+  alpha_1 odd (H≡3 mod 4): 22/64 = 0.344
+  H mod 8 distribution: {1: 19, 3: 14, 5: 23, 7: 8}
+  (H-1)/2 mod 4 distribution: {0: 19, 1: 14, 2: 23, 3: 8}
+
+  H value distribution:
+    7 distinct values: [1, 3, 5, 9, 11, 13, 15]...
+    All odd: True
+    Gaps between consecutive H values: [2, 2, 4, 2, 2, 2]...
+    All gaps even: True
+
+============================================================
+INDEPENDENCE SEQUENCE ANALYSIS n=6
+============================================================
+  alpha_1 even (H≡1 mod 4): 656/1024 = 0.641
+  alpha_1 odd (H≡3 mod 4): 368/1024 = 0.359
+  H mod 8 distribution: {1: 284, 3: 168, 5: 372, 7: 200}
+  (H-1)/2 mod 4 distribution: {0: 284, 1: 168, 2: 372, 3: 200}
+
+  H value distribution:
+    19 distinct values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33]...
+    All odd: True
+    Gaps between consecutive H values: [2, 2, 4, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 2, 4]...
+    All gaps even: True
+
+============================================================
+INDEPENDENCE SEQUENCE ANALYSIS n=7
+============================================================
+  alpha_1 even (H≡1 mod 4): 17352/32768 = 0.530
+  alpha_1 odd (H≡3 mod 4): 15416/32768 = 0.470
+  H mod 8 distribution: {1: 9136, 3: 8382, 5: 8216, 7: 7034}
+  (H-1)/2 mod 4 distribution: {0: 9136, 1: 8382, 2: 8216, 3: 7034}
+
+  H value distribution:
+    77 distinct values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33]...
+    All odd: True
+    Gaps between consecutive H values: [2, 2, 4, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 2, 2]...
+    All gaps even: True
+
+============================================================
+OMEGA AS FUNCTOR: TILE FLIP → GRAPH OPERATION n=5
+============================================================
+
+  Starting from transitive:
+    Flip tile (5, 1) (skip=4, forward→backward): ΔH = +8 (H: 1→9)
+    Flip tile (4, 1) (skip=3, forward→backward): ΔH = +4 (H: 1→5)
+    Flip tile (3, 1) (skip=2, forward→backward): ΔH = +2 (H: 1→3)
+    Flip tile (5, 2) (skip=3, forward→backward): ΔH = +4 (H: 1→5)
+    Flip tile (4, 2) (skip=2, forward→backward): ΔH = +2 (H: 1→3)
+    Flip tile (5, 3) (skip=2, forward→backward): ΔH = +2 (H: 1→3)
+
+  Starting from all backward:
+    Flip tile (5, 1) (skip=4, backward→forward): ΔH = +2 (H: 9→11)
+    Flip tile (4, 1) (skip=3, backward→forward): ΔH = +4 (H: 9→13)
+    Flip tile (3, 1) (skip=2, backward→forward): ΔH = +0 (H: 9→9)
+    Flip tile (5, 2) (skip=3, backward→forward): ΔH = +4 (H: 9→13)
+    Flip tile (4, 2) (skip=2, backward→forward): ΔH = +4 (H: 9→13)
+    Flip tile (5, 3) (skip=2, backward→forward): ΔH = +0 (H: 9→9)
+
+  FROM TRANSITIVE: every single flip increases H
+    (because c_k = 2^(skip-1) > 0 and there are no
+     quadratic corrections at t=0)
+
+  The gradient at t=0 is PURELY LINEAR: grad_k = c_k = 2^(skip-1)
+  This is the 'source property' in action.
+
+============================================================
+THE DEEPEST VIEW: H = I(Omega(T(t)), 2)
+============================================================
+
+    THE THREE FUNCTORS:
+
+    1. TILING → TOURNAMENT (linear, invertible)
+       t ∈ {0,1}^m → T(t) ∈ tournaments on n vertices
+       Each tile t_k controls one arc. Base path arcs are fixed.
+       This is an EMBEDDING of the m-cube into tournament space.
+
+    2. TOURNAMENT → CONFLICT GRAPH (nonlinear, local)
+       T → Omega(T) = (odd cycles, shared-vertex adjacency)
+       Adding one backward arc can CREATE cycles (those using the new arc)
+       or DESTROY them (those that required the old arc direction).
+       This is the CRUX of the nonlinearity.
+
+    3. CONFLICT GRAPH → HP COUNT (polynomial evaluation)
+       Omega → I(Omega, 2) = sum_k alpha_k * 2^k
+       This converts the TOPOLOGICAL information in Omega
+       into the ARITHMETIC value H.
+
+    CONSEQUENCES:
+    - Redei (H odd): alpha_0 = 1 always → I(Omega, 2) ≡ 1 (mod 2)
+    - Recursive preservation: vertex n+1 as source means Omega(T_{n+1}) = Omega(T_n)
+      when new tiles are forward (no new cycles use forward arcs from source)
+    - Sign rule: same-end tiles create COMPETING cycles at shared vertex
+      (antiferromagnetic). Cross-end tiles create COOPERATIVE cycles.
+    - Degree cap: at most floor((n-1)/2) vertex-disjoint odd cycles in
+      a tournament on n vertices (independence number of Omega is bounded).
+    - c_3 predicts 91% of H: because c_3 ≈ alpha_1 at small n
+      (most independent sets have size 0 or 1, so I ≈ 1 + 2*alpha_1 ≈ 1 + 2*c_3).
+    
+  APPROXIMATION: H ≈ 1 + 2*c_3
+    R² = 0.3293
+    Mean absolute error = 2.38
+    Max absolute error = 6
+
+  The hierarchy of approximations:
+    Level 0: H = 1 (Redei, correct mod 2)
+    Level 1: H ≈ 1 + 2*c_3 (R² = 0.329)
+    Level 2: H ≈ 1 + 2*(c_3 + c_5) + 4*alpha_2
+    Exact: H = I(Omega, 2)
+
+============================================================
+THE DEEPEST VIEW: H = I(Omega(T(t)), 2)
+============================================================
+
+    THE THREE FUNCTORS:
+
+    1. TILING → TOURNAMENT (linear, invertible)
+       t ∈ {0,1}^m → T(t) ∈ tournaments on n vertices
+       Each tile t_k controls one arc. Base path arcs are fixed.
+       This is an EMBEDDING of the m-cube into tournament space.
+
+    2. TOURNAMENT → CONFLICT GRAPH (nonlinear, local)
+       T → Omega(T) = (odd cycles, shared-vertex adjacency)
+       Adding one backward arc can CREATE cycles (those using the new arc)
+       or DESTROY them (those that required the old arc direction).
+       This is the CRUX of the nonlinearity.
+
+    3. CONFLICT GRAPH → HP COUNT (polynomial evaluation)
+       Omega → I(Omega, 2) = sum_k alpha_k * 2^k
+       This converts the TOPOLOGICAL information in Omega
+       into the ARITHMETIC value H.
+
+    CONSEQUENCES:
+    - Redei (H odd): alpha_0 = 1 always → I(Omega, 2) ≡ 1 (mod 2)
+    - Recursive preservation: vertex n+1 as source means Omega(T_{n+1}) = Omega(T_n)
+      when new tiles are forward (no new cycles use forward arcs from source)
+    - Sign rule: same-end tiles create COMPETING cycles at shared vertex
+      (antiferromagnetic). Cross-end tiles create COOPERATIVE cycles.
+    - Degree cap: at most floor((n-1)/2) vertex-disjoint odd cycles in
+      a tournament on n vertices (independence number of Omega is bounded).
+    - c_3 predicts 91% of H: because c_3 ≈ alpha_1 at small n
+      (most independent sets have size 0 or 1, so I ≈ 1 + 2*alpha_1 ≈ 1 + 2*c_3).
+    
+  APPROXIMATION: H ≈ 1 + 2*c_3
+    R² = -1.9845
+    Mean absolute error = 16.00
+    Max absolute error = 28
+
+  The hierarchy of approximations:
+    Level 0: H = 1 (Redei, correct mod 2)
+    Level 1: H ≈ 1 + 2*c_3 (R² = -1.984)
+    Level 2: H ≈ 1 + 2*(c_3 + c_5) + 4*alpha_2
+    Exact: H = I(Omega, 2)
