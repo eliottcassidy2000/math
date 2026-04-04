@@ -13,6 +13,28 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S15 — 2026-04-04: The Asymmetry That Isn't — Detailed Balance, Creative Arcs, Tournament as Quantum System
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S14
+**Summary:** Extended the user's n=3 observation (3 ways to break cyclic vs 1 way to create it from transitive) to all n. Discovered that the apparent asymmetry is resolved by DETAILED BALANCE: every iso class has entries=exits exactly. The real insight is that creation is CONCENTRATED (specific arcs) while destruction is DISTRIBUTED (any arc). Connected to the tournament-as-quantum-system picture.
+
+**Key Results:**
+1. **DETAILED BALANCE (PROVED)**: For EVERY iso class at EVERY n tested (3-6), entries=exits exactly. The directed metagraph is perfectly balanced. Proof: arc flips are involutions.
+
+2. **From transitive: H = 1 + 2^{skip-1}** (THM-284 revisited). The user's n=3 observation is the s=2 case. The apex (skip n-1) creates the most structure: H → 1+2^{n-2}. Each skip level doubles the creative capacity.
+
+3. **From H-maximizer: middle-range tiles cheapest to remove.** At n=5: apex flip costs ΔH=-2, others cost -4. At n=6: skip-3 costs -4, skip-2 costs -8, apex costs -16. Antiferromagnetic frustration makes middle tiles "loosely bound."
+
+4. **Short-range flips change class more often.** Skip-2 flips change iso class 97.8% of the time at n=6, vs 93.0% for long-range. Local perturbations are more structurally disruptive.
+
+5. **The quantum system analogy**: Transitive=vacuum, tiles=excitations with energy 2^{skip-1}, interactions=antiferromagnetic coupling, detailed balance=microscopic reversibility. Creation is specific; annihilation is generic.
+
+6. **No class is a net attractor or repeller.** The random walk on iso classes via arc flips has uniform stationary distribution (weighted by class size).
+
+**New contributions:** the-asymmetry-that-isnt.md reflection, asymmetry_of_flips.py, creative_arcs.py, 2 result files
+**Unresolved:** Formal proof of detailed balance at all n (conceptual proof via involution given, needs formalization). The middle-range "loosely bound" phenomenon needs OCF explanation. Connection between class-change probability and the quadratic form Q.
+
 ## opus-2026-04-04-S14 — 2026-04-04: A000568 Speedups and Asymptotic Recursion
 
 **Account:** opus
