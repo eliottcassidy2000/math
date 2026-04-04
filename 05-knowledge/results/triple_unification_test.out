@@ -1,0 +1,163 @@
+
+============================================================
+CROSS-END AS BOUNDARY n=5
+============================================================
+  Per-tile neighbor counts:
+    tile (5, 1) skip=4: SE=4, CE=0, DJ=1 (0.80/0.00/0.20)
+    tile (4, 1) skip=3: SE=3, CE=0, DJ=2 (0.60/0.00/0.40)
+    tile (3, 1) skip=2: SE=2, CE=1, DJ=2 (0.40/0.20/0.40)
+    tile (5, 2) skip=3: SE=3, CE=0, DJ=2 (0.60/0.00/0.40)
+    tile (4, 2) skip=2: SE=2, CE=0, DJ=3 (0.40/0.00/0.60)
+    tile (5, 3) skip=2: SE=2, CE=1, DJ=2 (0.40/0.20/0.40)
+
+  Cross-end pair analysis (does it bridge SE and DJ worlds?):
+    (3, 1) (SE-ratio=0.50) — (5, 3) (SE-ratio=0.50)
+
+============================================================
+CROSS-END AS BOUNDARY n=6
+============================================================
+  Per-tile neighbor counts:
+    tile (6, 1) skip=5: SE=6, CE=0, DJ=3 (0.67/0.00/0.33)
+    tile (5, 1) skip=4: SE=5, CE=0, DJ=4 (0.56/0.00/0.44)
+    tile (4, 1) skip=3: SE=4, CE=1, DJ=4 (0.44/0.11/0.44)
+    tile (3, 1) skip=2: SE=3, CE=2, DJ=4 (0.33/0.22/0.44)
+    tile (6, 2) skip=4: SE=5, CE=0, DJ=4 (0.56/0.00/0.44)
+    tile (5, 2) skip=3: SE=4, CE=0, DJ=5 (0.44/0.00/0.56)
+    tile (4, 2) skip=2: SE=3, CE=1, DJ=5 (0.33/0.11/0.56)
+    tile (6, 3) skip=3: SE=4, CE=1, DJ=4 (0.44/0.11/0.44)
+    tile (5, 3) skip=2: SE=3, CE=1, DJ=5 (0.33/0.11/0.56)
+    tile (6, 4) skip=2: SE=3, CE=2, DJ=4 (0.33/0.22/0.44)
+
+  Cross-end pair analysis (does it bridge SE and DJ worlds?):
+    (4, 1) (SE-ratio=0.50) — (6, 4) (SE-ratio=0.43)
+    (3, 1) (SE-ratio=0.43) — (6, 3) (SE-ratio=0.50)
+    (3, 1) (SE-ratio=0.43) — (5, 3) (SE-ratio=0.38)
+    (4, 2) (SE-ratio=0.38) — (6, 4) (SE-ratio=0.43)
+
+============================================================
+CROSS-END AS BOUNDARY n=7
+============================================================
+  Per-tile neighbor counts:
+    tile (7, 1) skip=6: SE=8, CE=0, DJ=6 (0.57/0.00/0.43)
+    tile (6, 1) skip=5: SE=7, CE=0, DJ=7 (0.50/0.00/0.50)
+    tile (5, 1) skip=4: SE=6, CE=1, DJ=7 (0.43/0.07/0.50)
+    tile (4, 1) skip=3: SE=5, CE=2, DJ=7 (0.36/0.14/0.50)
+    tile (3, 1) skip=2: SE=4, CE=3, DJ=7 (0.29/0.21/0.50)
+    tile (7, 2) skip=5: SE=7, CE=0, DJ=7 (0.50/0.00/0.50)
+    tile (6, 2) skip=4: SE=6, CE=0, DJ=8 (0.43/0.00/0.57)
+    tile (5, 2) skip=3: SE=5, CE=1, DJ=8 (0.36/0.07/0.57)
+    tile (4, 2) skip=2: SE=4, CE=2, DJ=8 (0.29/0.14/0.57)
+    tile (7, 3) skip=4: SE=6, CE=1, DJ=7 (0.43/0.07/0.50)
+    tile (6, 3) skip=3: SE=5, CE=1, DJ=8 (0.36/0.07/0.57)
+    tile (5, 3) skip=2: SE=4, CE=2, DJ=8 (0.29/0.14/0.57)
+    tile (7, 4) skip=3: SE=5, CE=2, DJ=7 (0.36/0.14/0.50)
+    tile (6, 4) skip=2: SE=4, CE=2, DJ=8 (0.29/0.14/0.57)
+    tile (7, 5) skip=2: SE=4, CE=3, DJ=7 (0.29/0.21/0.50)
+
+  Cross-end pair analysis (does it bridge SE and DJ worlds?):
+    (5, 1) (SE-ratio=0.46) — (7, 5) (SE-ratio=0.36)
+    (4, 1) (SE-ratio=0.42) — (7, 4) (SE-ratio=0.42)
+    (4, 1) (SE-ratio=0.42) — (6, 4) (SE-ratio=0.33)
+    (3, 1) (SE-ratio=0.36) — (7, 3) (SE-ratio=0.46)
+    (3, 1) (SE-ratio=0.36) — (6, 3) (SE-ratio=0.38)
+    (3, 1) (SE-ratio=0.36) — (5, 3) (SE-ratio=0.33)
+    (5, 2) (SE-ratio=0.38) — (7, 5) (SE-ratio=0.36)
+    (4, 2) (SE-ratio=0.33) — (7, 4) (SE-ratio=0.42)
+    (4, 2) (SE-ratio=0.33) — (6, 4) (SE-ratio=0.33)
+    (5, 3) (SE-ratio=0.33) — (7, 5) (SE-ratio=0.36)
+
+============================================================
+FREE ELEMENT DOMINANCE vs n
+============================================================
+  n=4: m=3, pairs=3
+    FIXED (same-end): 2 (0.667)
+    BOUNDARY (cross-end): 0 (0.000)
+    FREE (disjoint): 1 (0.333)
+  n=5: m=6, pairs=15
+    FIXED (same-end): 8 (0.533)
+    BOUNDARY (cross-end): 1 (0.067)
+    FREE (disjoint): 6 (0.400)
+  n=6: m=10, pairs=45
+    FIXED (same-end): 20 (0.444)
+    BOUNDARY (cross-end): 4 (0.089)
+    FREE (disjoint): 21 (0.467)
+  n=7: m=15, pairs=105
+    FIXED (same-end): 40 (0.381)
+    BOUNDARY (cross-end): 10 (0.095)
+    FREE (disjoint): 55 (0.524)
+  n=8: m=21, pairs=210
+    FIXED (same-end): 70 (0.333)
+    BOUNDARY (cross-end): 20 (0.095)
+    FREE (disjoint): 120 (0.571)
+
+============================================================
+FORMULA QUALITY BY TYPE n=5
+============================================================
+  FIXED (same-end): 8/8 match EXACT formula
+  BOUNDARY (cross-end): 1/1 match EXACT formula
+  FREE (disjoint): 4/4 match generic c=2^(s1+s2-2)/4
+    Disjoint coefficient variety: 2 distinct values
+
+============================================================
+FORMULA QUALITY BY TYPE n=6
+============================================================
+  FIXED (same-end): 20/20 match EXACT formula
+  BOUNDARY (cross-end): 4/4 match EXACT formula
+  FREE (disjoint): 14/18 match generic c=2^(s1+s2-2)/4
+    Disjoint coefficient variety: 5 distinct values
+
+============================================================
+FORMULA QUALITY BY TYPE n=7
+============================================================
+  FIXED (same-end): 40/40 match EXACT formula
+  BOUNDARY (cross-end): 10/10 match EXACT formula
+  FREE (disjoint): 31/51 match generic c=2^(s1+s2-2)/4
+    Disjoint coefficient variety: 10 distinct values
+
+============================================================
+UNIFIED TRIPLE CORRESPONDENCE
+============================================================
+
+    ABSTRACT ROLE  |  FIXED (preserves)   |  BOUNDARY (breaks)      |  FREE (creates)
+    ===============|======================|=========================|=====================
+    Eisenstein     |  Inert (p≡2 mod 3)   |  Ramified (p=3)         |  Split (p≡1 mod 3)
+    Computation    |  Lossless             |  Lossy                  |  Crystallization
+    Metagraph      |  SC-SC (spine)        |  SC-NS (ribs)           |  NS-NS (sea)
+    Tile pairs     |  Same-End             |  Cross-End              |  Disjoint
+    Three Functors |  F1 (linear)          |  F2 (nonlinear local)   |  F3 (algebraic global)
+    Triangle sides |  Hypotenuse           |  Vertical leg           |  Horizontal leg
+    Colors         |  Blue (grid-sym)      |  Black (generic)        |  Red (transpose)
+    Extremes       |  Transitive (H=1)     |  Intermediate           |  Regular (H=max)
+    Tiling decomp  |  Overlap (inner)      |  Wiring (boundary)      |  Apex
+    Constants      |  √2 (ratio)           |  π (area/curve)         |  e (growth)
+    Primes         |  2                    |  3                      |  7
+    ===============|======================|=========================|=====================
+
+    KEY PROPERTIES:
+    FIXED:    Exact formulas. Self-interaction. Diagonal. Small fraction. Stable under recursion.
+    BOUNDARY: Bipartite. Interface. Always triangle-free. Carries frustration/curvature.
+    FREE:     Statistical. Dominates at large n. Computationally irreducible. Generic.
+
+    PRODUCT: 2 × 3 × 7 = 42 = the triple point where all three coexist.
+    
+  CONSISTENCY CHECKS:
+
+  1. Spine is FIXED under complement Z₂ (SC classes = self-complement).
+     Same-end is FIXED under vertex incidence (tiles share a vertex).
+     F1 is FIXED under composition (linear = identity-like).
+     → ALL 'FIXED' elements are stabilized by the relevant symmetry. ✓
+
+  2. Ribs are BOUNDARY (bipartite, triangle-free) by THM-A.
+     Cross-end is BOUNDARY — one tile's upper = other's lower (handoff).
+     F2 is BOUNDARY — where nonlinearity first appears.
+     → ALL 'BOUNDARY' elements are interfaces between two phases. ✓
+
+  3. Sea dominates (96% at n=8).
+     Disjoint pairs dominate (see dominance test).
+     F3 is global (irreducible evaluation of independence polynomial).
+     → ALL 'FREE' elements are generic/dominant. ✓
+
+  4. FIXED carries exact formulas:
+     Same-end: c = -2^{max(1,|s₁-s₂|-1)} (EXACT at all tested n)
+     Cross-end: c = 2^{s₁+s₂-2} (EXACT)
+     Disjoint: NO clean formula (ratio varies). → FREE = statistical. ✓
