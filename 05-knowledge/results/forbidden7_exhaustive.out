@@ -1,0 +1,40 @@
+n=7, m=15, N=32768
+Computing H for all tilings...
+Tilings with H divisible by 7: 3947
+
+H values divisible by 7: [35, 49, 77, 91, 105, 133, 147, 175, 189]
+  H=35: 70 tilings, |Aut| dist = {1: 70}
+    Achieved tiling counts: [35]
+  H=49: 343 tilings, |Aut| dist = {1: 343}
+    Achieved tiling counts: [49]
+  H=77: 770 tilings, |Aut| dist = {1: 770}
+    Achieved tiling counts: [77]
+  H=91: 1365 tilings, |Aut| dist = {1: 1365}
+    Achieved tiling counts: [91]
+  H=105: 420 tilings, |Aut| dist = {1: 420}
+    Achieved tiling counts: [105]
+  H=133: 798 tilings, |Aut| dist = {1: 798}
+    Achieved tiling counts: [133]
+  H=147: 147 tilings, |Aut| dist = {1: 147}
+    Achieved tiling counts: [147]
+  H=175: 25 tilings, |Aut| dist = {7: 25}
+    Achieved tiling counts: [25]
+  H=189: 9 tilings, |Aut| dist = {21: 9}
+    Achieved tiling counts: [9]
+
+============================================================
+VERDICT: tiling count = 7 at n=7: NOT FOUND
+VERDICT: tiling count = 21 at n=7: NOT FOUND
+
+
+Computing ALL iso class tiling counts at n=7...
+(Using H + score_seq as iso class proxy, with Aut refinement)
+Groups (H, scores): 242
+
+Approximate tiling count set at n=7: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 65]...
+Total distinct values: 74
+
+Is 7 in the set? False
+Is 21 in the set? False
+
+Missing odd tiling counts up to 159: [7, 21, 63, 107, 119, 149]

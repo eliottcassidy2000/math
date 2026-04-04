@@ -1,0 +1,198 @@
+============================================================
+WHY ARE ALL TILING COUNTS ODD?
+============================================================
+
+  n=4: |Aut| distribution: {1: 6, 3: 2}
+  All |Aut| odd? True
+  |Aut| divides H always? True
+  H/|Aut| always odd? True
+
+  n=5: |Aut| distribution: {1: 53, 3: 8, 5: 3}
+  All |Aut| odd? True
+  |Aut| divides H always? True
+  H/|Aut| always odd? True
+
+  n=6: |Aut| distribution: {1: 933, 3: 84, 5: 6, 9: 1}
+  All |Aut| odd? True
+  |Aut| divides H always? True
+  H/|Aut| always odd? True
+
+  PROOF THAT TILING COUNT IS ALWAYS ODD:
+
+  Step 1: H(T) is always odd (Redei's theorem).
+  Step 2: |Aut(T)| is always odd for tournaments.
+     Proof: An automorphism σ of tournament T satisfies T(σ(u), σ(v)) = T(u,v).
+     If σ has a 2-cycle (u,v): then T(u,v) = T(σ(u), σ(v)) = T(v,u) = 1-T(u,v),
+     which gives T(u,v) = 1/2, impossible for binary values.
+     So σ has no 2-cycles in its cycle decomposition.
+     More generally, any cycle of even length in σ would create a contradiction
+     (the arc orientations around the cycle must be consistent but can't be
+     for even-length cycles in a tournament).
+     Therefore all cycles in σ have ODD length, so |σ| is odd.
+     By Cauchy's theorem, if |Aut(T)| were even, there would be an element
+     of order 2, which we just showed is impossible.
+     Therefore |Aut(T)| is odd.
+
+  Step 3: tiling_count = H(T)/|Aut(T)| = odd/odd.
+     Since |Aut(T)| divides H(T) (orbit-stabilizer applied to the
+     action of Aut(T) on Hamiltonian paths), the quotient is an integer.
+     An odd number divided by an odd divisor is odd.
+     Therefore the tiling count is always odd. QED.
+    
+
+============================================================
+IS TILING COUNT = 7 PERMANENTLY FORBIDDEN?
+============================================================
+  Need (H, |Aut|) pairs for tiling count = 7:
+    H=7: FORBIDDEN
+    H=21: FORBIDDEN
+    H=35, need |Aut|=5: 70 tilings with this H
+    H=49, need |Aut|=7: 343 tilings with this H
+    H=63: not achieved at n=7
+    H=77, need |Aut|=11: 770 tilings with this H
+    H=91, need |Aut|=13: 1365 tilings with this H
+    H=105, need |Aut|=15: 420 tilings with this H
+    H=119: not achieved at n=7
+    H=133, need |Aut|=19: 798 tilings with this H
+
+  Detailed analysis for H=35 (need |Aut|=5 for tc=7):
+    70 tilings with H=35
+    |Aut| distribution (sample of 20): {1: 20}
+    Any with |Aut|=5? False
+
+  Detailed analysis for H=49 (need |Aut|=7 for tc=7):
+    343 tilings with H=49
+    |Aut| distribution (sample of 20): {1: 20}
+    Any with |Aut|=7? False
+
+  Detailed analysis for H=105 (need |Aut|=15 for tc=7):
+    420 tilings with H=105
+    |Aut| distribution (sample): {1: 10}
+
+  IS TILING COUNT = 21 PERMANENTLY FORBIDDEN?
+    H=21: FORBIDDEN
+    H=63: not achieved at n=7
+    H=105, need |Aut|=5: 420 tilings
+    H=147, need |Aut|=7: 147 tilings
+    H=189, need |Aut|=9: 9 tilings
+
+============================================================
+TILING COUNT SEQUENCE STRUCTURE
+============================================================
+
+  n=5: achieved tiling counts = [1, 3, 5, 9, 11, 13]
+    tc=1: factorization = [1]
+    tc=3: factorization = [3]
+    tc=5: factorization = [5]
+    tc=9: factorization = [3, 3]
+    tc=11: factorization = [11]
+    tc=13: factorization = [13]
+
+    mod 3 distribution: {0: 2, 1: 2, 2: 2}
+    mod 7 distribution: {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+    Gaps: [2, 2, 4, 2, 2]
+
+  n=6: achieved tiling counts = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 29, 31, 33, 37, 41, 43]
+    tc=1: factorization = [1]
+    tc=3: factorization = [3]
+    tc=5: factorization = [5]
+    tc=9: factorization = [3, 3]
+    tc=11: factorization = [11]
+    tc=13: factorization = [13]
+    tc=15: factorization = [3, 5]
+    tc=17: factorization = [17]
+    tc=19: factorization = [19]
+    tc=23: factorization = [23]
+    tc=25: factorization = [5, 5]
+    tc=29: factorization = [29]
+    tc=31: factorization = [31]
+    tc=33: factorization = [3, 11]
+    tc=37: factorization = [37]
+    tc=41: factorization = [41]
+    tc=43: factorization = [43]
+
+    mod 3 distribution: {0: 4, 1: 7, 2: 6}
+    mod 7 distribution: {1: 4, 2: 3, 3: 3, 4: 2, 5: 3, 6: 2}
+    Gaps: [2, 2, 4, 2, 2, 2, 2, 2, 4, 2, 4, 2, 2, 4, 4, 2]
+
+============================================================
+CUBOID CONNECTION: TILING COUNTS mod 2, 3, 7
+============================================================
+
+  n=5:
+    tc    H tc%2 tc%3 tc%7  H%3  H%7 tc%42
+     1    1    1    1    1    1    1     1
+     1    3    1    1    1    0    3     1
+     1    3    1    1    1    0    3     1
+     1    3    1    1    1    0    3     1
+     3   15    1    0    3    0    1     3
+     5    5    1    2    5    2    5     5
+     5    5    1    2    5    2    5     5
+     5   15    1    2    5    0    1     5
+     9    9    1    0    2    0    2     9
+     9    9    1    0    2    0    2     9
+    11   11    1    2    4    2    4    11
+    13   13    1    1    6    1    6    13
+
+  n=6:
+    tc    H tc%2 tc%3 tc%7  H%3  H%7 tc%42
+     1    1    1    1    1    1    1     1
+     1    3    1    1    1    0    3     1
+     1    3    1    1    1    0    3     1
+     1    3    1    1    1    0    3     1
+     1    3    1    1    1    0    3     1
+     1    9    1    1    1    0    2     1
+     3   15    1    0    3    0    1     3
+     3   15    1    0    3    0    1     3
+     5    5    1    2    5    2    5     5
+     5    5    1    2    5    2    5     5
+     5   15    1    2    5    0    1     5
+     5    5    1    2    5    2    5     5
+     5   15    1    2    5    0    1     5
+     9    9    1    0    2    0    2     9
+     9    9    1    0    2    0    2     9
+     9    9    1    0    2    0    2     9
+     9   27    1    0    2    0    6     9
+     9    9    1    0    2    0    2     9
+     9   27    1    0    2    0    6     9
+    11   11    1    2    4    2    4    11
+    11   11    1    2    4    2    4    11
+    11   33    1    2    4    0    5    11
+    11   33    1    2    4    0    5    11
+    13   13    1    1    6    1    6    13
+    13   13    1    1    6    1    6    13
+    15   15    1    0    1    0    1    15
+    15   15    1    0    1    0    1    15
+    15   45    1    0    1    0    3    15
+    15   45    1    0    1    0    3    15
+    17   17    1    2    3    2    3    17
+    17   17    1    2    3    2    3    17
+    19   19    1    1    5    1    5    19
+    19   19    1    1    5    1    5    19
+    23   23    1    2    2    2    2    23
+    23   23    1    2    2    2    2    23
+    23   23    1    2    2    2    2    23
+    23   23    1    2    2    2    2    23
+    25   25    1    1    4    1    4    25
+    25   25    1    1    4    1    4    25
+    29   29    1    2    1    2    1    29
+    29   29    1    2    1    2    1    29
+    29   29    1    2    1    2    1    29
+    29   29    1    2    1    2    1    29
+    31   31    1    1    3    1    3    31
+    31   31    1    1    3    1    3    31
+    33   33    1    0    5    0    5    33
+    33   33    1    0    5    0    5    33
+    33   33    1    0    5    0    5    33
+    37   37    1    1    2    1    2    37
+    37   37    1    1    2    1    2    37
+    37   37    1    1    2    1    2    37
+    37   37    1    1    2    1    2    37
+    37   37    1    1    2    1    2    37
+    41   41    1    2    6    2    6    41
+    43   43    1    1    1    1    1     1
+    43   43    1    1    1    1    1     1
+
+  n=5: tilings with H divisible by 7: 0/64
+
+  n=6: tilings with H divisible by 7: 0/1024
