@@ -1,0 +1,67 @@
+======================================================================
+LINEAR COEFFICIENT = H(trans + flip) - H(trans) = 2^(skip-1)
+======================================================================
+
+n=3:
+  arc (3,1) skip=2: H=3, coeff=2, 2^(skip-1)=2 ✓
+
+n=4:
+  arc (3,1) skip=2: H=3, coeff=2, 2^(skip-1)=2 ✓
+  arc (4,1) skip=3: H=5, coeff=4, 2^(skip-1)=4 ✓
+  arc (4,2) skip=2: H=3, coeff=2, 2^(skip-1)=2 ✓
+
+n=5:
+  arc (3,1) skip=2: H=3, coeff=2, 2^(skip-1)=2 ✓
+  arc (4,1) skip=3: H=5, coeff=4, 2^(skip-1)=4 ✓
+  arc (4,2) skip=2: H=3, coeff=2, 2^(skip-1)=2 ✓
+  arc (5,1) skip=4: H=9, coeff=8, 2^(skip-1)=8 ✓
+  arc (5,2) skip=3: H=5, coeff=4, 2^(skip-1)=4 ✓
+  arc (5,3) skip=2: H=3, coeff=2, 2^(skip-1)=2 ✓
+
+n=6:
+  arc (3,1) skip=2: H=3, coeff=2, 2^(skip-1)=2 ✓
+  arc (4,1) skip=3: H=5, coeff=4, 2^(skip-1)=4 ✓
+  arc (4,2) skip=2: H=3, coeff=2, 2^(skip-1)=2 ✓
+  arc (5,1) skip=4: H=9, coeff=8, 2^(skip-1)=8 ✓
+  arc (5,2) skip=3: H=5, coeff=4, 2^(skip-1)=4 ✓
+  arc (5,3) skip=2: H=3, coeff=2, 2^(skip-1)=2 ✓
+  arc (6,1) skip=5: H=17, coeff=16, 2^(skip-1)=16 ✓
+  arc (6,2) skip=4: H=9, coeff=8, 2^(skip-1)=8 ✓
+  arc (6,3) skip=3: H=5, coeff=4, 2^(skip-1)=4 ✓
+  arc (6,4) skip=2: H=3, coeff=2, 2^(skip-1)=2 ✓
+
+n=7:
+
+n=8:
+
+======================================================================
+PROOF: Why 2^(skip-1)?
+======================================================================
+
+n=5, flipping arc (5,1) [0-indexed: (4,0)]:
+Paths before (transitive): 1
+  5 -> 4 -> 3 -> 2 -> 1
+
+Paths after (flip arc 5->1 to 1->5): 9
+  1 -> 5 -> 4 -> 3 -> 2 [uses 1->5]
+  2 -> 1 -> 5 -> 4 -> 3 [uses 1->5]
+  3 -> 1 -> 5 -> 4 -> 2 [uses 1->5]
+  3 -> 2 -> 1 -> 5 -> 4 [uses 1->5]
+  4 -> 1 -> 5 -> 3 -> 2 [uses 1->5]
+  4 -> 2 -> 1 -> 5 -> 3 [uses 1->5]
+  4 -> 3 -> 1 -> 5 -> 2 [uses 1->5]
+  4 -> 3 -> 2 -> 1 -> 5 [uses 1->5]
+  5 -> 4 -> 3 -> 2 -> 1 [old path]
+
+New paths: 8 = 2^(5-1-1) = 8?
+Actually: 2^(skip-1) = 2^(4-1) = 8
+
+n=6, flipping arc (6,1) [0-indexed: (5,0)]:
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/linear_coeff_proof_s28.py", line 154, in <module>
+    new_paths = [p for p in paths_after if not all(T_trans[p[i]][p[i+1]] for i in range(n-1))]
+  File "/Users/e/Documents/GitHub/math/04-computation/linear_coeff_proof_s28.py", line 154, in <listcomp>
+    new_paths = [p for p in paths_after if not all(T_trans[p[i]][p[i+1]] for i in range(n-1))]
+  File "/Users/e/Documents/GitHub/math/04-computation/linear_coeff_proof_s28.py", line 154, in <genexpr>
+    new_paths = [p for p in paths_after if not all(T_trans[p[i]][p[i+1]] for i in range(n-1))]
+IndexError: list index out of range
