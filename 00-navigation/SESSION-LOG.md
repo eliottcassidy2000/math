@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S17b — 2026-04-04: The Fiber Bundle Antiferromagnet — Exchange Coupling Renormalization
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S16
+**Summary:** Integrated the AFM framework (S16) with the fiber bundle recursion (S12). Discovered that frustration propagation is EXACT (c₃ additive through fibers) with a parabolic injection law. The H propagation reveals a positive-feedback mechanism: ΔH/Δc₃ grows linearly with parent H (exchange coupling renormalization). Magnon decomposition into inner/boundary is invisible to ensemble (S_n isotropy) but reveals real anisotropy per iso class.
+
+**Key Results:**
+1. **Frustration propagation theorem (EXACT)**: c₃(T_n) = c₃(T_{n-1}) + #{arcs W→L}. 0 errors in 33792 tests.
+2. **Parabolic law (EXACT)**: E[Δc₃ | score(n)=s] = s(n-1-s)/2. Ratio 1.0000 for ALL s,n.
+3. **Exchange coupling renormalization**: ΔH/Δc₃ grows 3.0→8.25 with parent H. Interaction: ΔH ≈ 0.28·Δc₃·H_sub + ... (R²=0.91).
+4. **ΔH coefficient doubles**: 3 (n=4→5) → 6 (n=5→6).
+5. **Per-class anisotropy**: Boundary/inner magnon ratio ranges 0.75–1.54.
+6. **Fiber PF**: corr(H_sub, mean_ΔH) = +1.000. Frustrated parents amplify more.
+
+**New contributions:** afm_fiber_bundle_s17.py, afm_fiber_n6_s17.py, fiber-bundle-antiferromagnet.md, HYP-1523–1529
+**Unresolved:** RG equation, prove interaction from OCF, fiber stiffness as invariant.
+
 ## opus-2026-04-04-S18 — 2026-04-04: LaTeX Paper Update — 8 New Theorems, Precise Tables
 
 **Account:** opus

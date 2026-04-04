@@ -1523,6 +1523,13 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1520 | **E_AFM adds zero information beyond c₃**: Staircase nearest-neighbor Ising energy has ΔR²=0 when c₃ is already in model. c₃ captures ALL relevant tournament structure for H. | CONFIRMED (exhaustive n=4,5,6) | antiferromagnetic_tournament_s15.py | opus-S15 |
 | HYP-1521 | **α₁=3 never occurs at n=5**: Achievable α₁ values jump 0,1,2,4,5,6. c₃=3 forces a 5-cycle, making α₁≥4. Frustration propagation: local forces global. | CONFIRMED (exhaustive n=5) | afm_remaining_s15.py | opus-S15 |
 | HYP-1522 | **H=7 impossibility from α₁ gap at n=5**: H=7 needs α₁=3 (with α₂=0), but α₁=3 never occurs at n=5. The frustration quasiparticle spectrum has gap at α₁=3. | CONFIRMED (exhaustive n=5) | afm_remaining_s15.py | opus-S15 |
+| HYP-1523 | **Frustration propagation exact**: c₃(T_n) = c₃(T_{n-1}) + Δc₃(T_{n-1}, σ) where Δc₃ = #{arcs W→L}. | CONFIRMED (exhaustive n=4→5, 5→6, 0 errors) | afm_fiber_bundle_s17.py | opus-S17 |
+| HYP-1524 | **Parabolic law EXACT**: E[Δc₃ | score(n)=s] = s(n-1-s)/2. Ratio to random baseline = 1.0000 at all tested n and s. | CONFIRMED (exhaustive n=4→5, 5→6) | afm_fiber_bundle_s17.py | opus-S17 |
+| HYP-1525 | **Exchange coupling renormalization**: ΔH/Δc₃ grows with parent H. At n=5→6: ratio goes from 3.0 (H_sub=1) to 8.25 (H_sub=15). Interaction model: ΔH ≈ 0.28·Δc₃·H_sub + 4.33·Δc₃ + ..., R²=0.91. | CONFIRMED (exhaustive n=5→6) | afm_fiber_n6_s17.py | opus-S17 |
+| HYP-1526 | **ΔH coefficient doubles per level**: 3 (n=4→5) → 6 (n=5→6). Matches the growth of the frustration-H correlation coefficient. | CONFIRMED (exhaustive) | afm_fiber_bundle_s17.py, afm_fiber_n6_s17.py | opus-S17 |
+| HYP-1527 | **Inner = boundary magnons in ensemble**: Mean|ΔH| identical for inner (within T_{n-1}) and boundary (involving vertex n) flips at n=5 (ratio=1.000) and n=6 (ratio=0.997). S_n isotropy. | CONFIRMED (exhaustive n=5, sampled n=6) | afm_fiber_bundle_s17.py, afm_fiber_n6_s17.py | opus-S17 |
+| HYP-1528 | **Per-class magnon anisotropy**: Boundary/inner ratio ranges 0.75–1.54 across iso classes at n=5. Transitive: 1.14 (stiff fiber). Regular: 1.00 (isotropic). | CONFIRMED (exhaustive n=5) | afm_fiber_bundle_s17.py | opus-S17 |
+| HYP-1529 | **Frustrated parents amplify more**: corr(H_sub, mean_ΔH) = +1.000 at n=4→5. The fiber PF z(T,β) at high β is dominated by max_ΔH, weakening the correlation. | CONFIRMED (exhaustive n=4→5) | afm_fiber_bundle_s17.py | opus-S17 |
 
 ## opus-2026-03-15-S71v Hypotheses
 

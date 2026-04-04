@@ -1,0 +1,149 @@
+FRUSTRATION PROPAGATION: RECURSIVE DECOMPOSITION
+======================================================================
+
+  n=4: m=3 tiles (1 old + 2 new)
+    FRUSTRATION (negative couplings):
+      Old-Old:       0  (inherited from n-1)
+      New-New:       2  (among new tiles)
+      New-Old:       2  (new frustrating old)
+      TOTAL:         4
+    SYNERGY (positive couplings):
+      Old-Old:       0
+      New-Old:       0
+    RECURSIVE CHECK:
+      F(n-1) inherited = 0
+      F(n) - F(n-1) = 4 (= new-new + new-old = 4)
+      Recursion exact? True
+
+  n=5: m=6 tiles (3 old + 3 new)
+    FRUSTRATION (negative couplings):
+      Old-Old:       4  (inherited from n-1)
+      New-New:       6  (among new tiles)
+      New-Old:       6  (new frustrating old)
+      TOTAL:        16
+    SYNERGY (positive couplings):
+      Old-Old:       0
+      New-Old:      16
+    RECURSIVE CHECK:
+      F(n-1) inherited = 4
+      F(n) - F(n-1) = 12 (= new-new + new-old = 12)
+      Recursion exact? True
+
+  n=6: m=10 tiles (6 old + 4 new)
+    FRUSTRATION (negative couplings):
+      Old-Old:      16  (inherited from n-1)
+      New-New:      14  (among new tiles)
+      New-Old:      14  (new frustrating old)
+      TOTAL:        44
+    SYNERGY (positive couplings):
+      Old-Old:      16
+      New-Old:     120
+    RECURSIVE CHECK:
+      F(n-1) inherited = 16
+      F(n) - F(n-1) = 28 (= new-new + new-old = 28)
+      Recursion exact? True
+
+  n=7: m=15 tiles (10 old + 5 new)
+    FRUSTRATION (negative couplings):
+      Old-Old:      44  (inherited from n-1)
+      New-New:      30  (among new tiles)
+      New-Old:      30  (new frustrating old)
+      TOTAL:       104
+    SYNERGY (positive couplings):
+      Old-Old:     136
+      New-Old:     584
+    RECURSIVE CHECK:
+      F(n-1) inherited = 44
+      F(n) - F(n-1) = 60 (= new-new + new-old = 60)
+      Recursion exact? True
+
+======================================================================
+NEW-NEW FRUSTRATION FORMULA
+======================================================================
+
+  New tiles at n+1: (n+1, 1), (n+1, 2), ..., (n+1, n-1).
+  All share upper vertex n+1 → ALL pairs are same-end.
+  Number of pairs: C(n-1, 2).
+
+  For same-end pairs, c_{ij} = -2^{max(1, |s_i - s_j| - 1)} (THM-302).
+  Tiles (n+1, y) have skip = n+1-y.
+
+  F_new-new = sum over pairs (i,j) of 2^{max(1, |s_i-s_j|-1)}.
+
+  n=4: 2 new tiles, C(2,2)=1 pairs, F_new-new = 2
+  n=5: 3 new tiles, C(3,2)=3 pairs, F_new-new = 6
+  n=6: 4 new tiles, C(4,2)=6 pairs, F_new-new = 14
+  n=7: 5 new tiles, C(5,2)=10 pairs, F_new-new = 30
+  n=8: 6 new tiles, C(6,2)=15 pairs, F_new-new = 62
+
+======================================================================
+NEW-OLD FRUSTRATION FORMULA
+======================================================================
+
+  New tile (n+1, y) interacts with old tile (x, z):
+  - Same lower vertex: y = z → same-end → c < 0
+  - Same upper vertex: n+1 = x → impossible (x ≤ n < n+1)
+  - Cross-end: n+1 = z or y = x → cross-end → c > 0
+  - Disjoint: otherwise → c > 0
+
+  So new-old FRUSTRATION comes ONLY from shared LOWER vertex.
+  For new tile (n+1, y): old tiles sharing lower vertex y are
+  (x, y) for x = y+2, ..., n. That's n-y-1 old tiles.
+
+  For each pair (new, old) with same lower y:
+  c = -2^{max(1, |s_new - s_old| - 1)} where s_new = n+1-y, s_old = x-y.
+
+  n=4: F_new-old (formula) = 2
+  n=5: F_new-old (formula) = 6
+  n=6: F_new-old (formula) = 14
+  n=7: F_new-old (formula) = 30
+
+======================================================================
+COMPLETE FRUSTRATION RECURSION TABLE
+======================================================================
+    n     F(n)     F_nn     F_no       ΔF      F/m
+    4        4        2        2        4     1.33
+    5       16        6        6       12     2.67
+    6       44       14       14       28     4.40
+    7      104       30       30       60     6.93
+
+======================================================================
+FRUSTRATION THRESHOLD vs LAYER
+======================================================================
+
+  n=5:
+    tile (5, 1) skip=4: c_k=   8, frust_load=    8, synergy=    4, frust/c_k=1.00
+    tile (4, 1) skip=3: c_k=   4, frust_load=    6, synergy=    6, frust/c_k=1.50
+    tile (3, 1) skip=2: c_k=   2, frust_load=    4, synergy=    6, frust/c_k=2.00
+    tile (5, 2) skip=3: c_k=   4, frust_load=    6, synergy=    6, frust/c_k=1.50
+    tile (4, 2) skip=2: c_k=   2, frust_load=    4, synergy=    4, frust/c_k=2.00
+    tile (5, 3) skip=2: c_k=   2, frust_load=    4, synergy=    6, frust/c_k=2.00
+
+  n=6:
+    tile (6, 1) skip=5: c_k=  16, frust_load=   16, synergy=   32, frust/c_k=1.00
+    tile (5, 1) skip=4: c_k=   8, frust_load=   10, synergy=   34, frust/c_k=1.25
+    tile (4, 1) skip=3: c_k=   4, frust_load=    8, synergy=   32, frust/c_k=2.00
+    tile (3, 1) skip=2: c_k=   2, frust_load=    8, synergy=   22, frust/c_k=4.00
+    tile (6, 2) skip=4: c_k=   8, frust_load=   10, synergy=   34, frust/c_k=1.25
+    tile (5, 2) skip=3: c_k=   4, frust_load=    8, synergy=   28, frust/c_k=2.00
+    tile (4, 2) skip=2: c_k=   2, frust_load=    6, synergy=   18, frust/c_k=3.00
+    tile (6, 3) skip=3: c_k=   4, frust_load=    8, synergy=   32, frust/c_k=2.00
+    tile (5, 3) skip=2: c_k=   2, frust_load=    6, synergy=   18, frust/c_k=3.00
+    tile (6, 4) skip=2: c_k=   2, frust_load=    8, synergy=   22, frust/c_k=4.00
+
+  n=7:
+    tile (7, 1) skip=6: c_k=  32, frust_load=   32, synergy=  164, frust/c_k=1.00
+    tile (6, 1) skip=5: c_k=  16, frust_load=   18, synergy=  146, frust/c_k=1.12
+    tile (5, 1) skip=4: c_k=   8, frust_load=   12, synergy=  124, frust/c_k=1.50
+    tile (4, 1) skip=3: c_k=   4, frust_load=   12, synergy=   92, frust/c_k=3.00
+    tile (3, 1) skip=2: c_k=   2, frust_load=   16, synergy=   58, frust/c_k=8.00
+    tile (7, 2) skip=5: c_k=  16, frust_load=   18, synergy=  146, frust/c_k=1.12
+    tile (6, 2) skip=4: c_k=   8, frust_load=   12, synergy=  116, frust/c_k=1.50
+    tile (5, 2) skip=3: c_k=   4, frust_load=   10, synergy=   86, frust/c_k=2.50
+    tile (4, 2) skip=2: c_k=   2, frust_load=   10, synergy=   50, frust/c_k=5.00
+    tile (7, 3) skip=4: c_k=   8, frust_load=   12, synergy=  124, frust/c_k=1.50
+    tile (6, 3) skip=3: c_k=   4, frust_load=   10, synergy=   86, frust/c_k=2.50
+    tile (5, 3) skip=2: c_k=   2, frust_load=    8, synergy=   48, frust/c_k=4.00
+    tile (7, 4) skip=3: c_k=   4, frust_load=   12, synergy=   92, frust/c_k=3.00
+    tile (6, 4) skip=2: c_k=   2, frust_load=   10, synergy=   50, frust/c_k=5.00
+    tile (7, 5) skip=2: c_k=   2, frust_load=   16, synergy=   58, frust/c_k=8.00
