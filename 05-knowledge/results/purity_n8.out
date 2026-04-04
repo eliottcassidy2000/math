@@ -63,3 +63,19 @@ COMPLETE PURITY SEQUENCE (n=3..8)
     6       56     12     44      2     10     44       64         1/16
     7      456     88    368      0     88    368      512         1/64
     8     6880    176   6704      0    176   6704     4096        1/512
+
+CORRECTION (from verification agent):
+- class_color_type_s20dc.py has a TILE-ORDERING BUG (uses TRANS_MAP in explorer index space
+  but reads bits in tile_arcs index space). Its constant-2 output is wrong.
+- explorer_exact_s20de.py is CORRECT. It uses consistent explorer ordering throughout.
+
+CORRECT pure-blue sequence: 2, 1, 3, 2, 4, 0 (n=3..8)
+  n=7: 4 pure-blue classes (at H=1, 3, 9, 15) — NOT 0 as initially computed in this session
+  n=8: 0 pure-blue classes — confirmed (but should be re-verified with correct tile ordering)
+
+The n=7 error in this session's computation likely has the same tile-ordering issue.
+The n=8 result (0) used the same method, so may also need re-verification.
+
+Key insight from verification: the H=1 class (all-ones tiling, fiber=1) is ALWAYS pure-blue.
+At n=8, if this class still exists with fiber=1, PB should be >= 1.
+This means PB(8)=0 is SUSPECT and needs re-checking with explorer_exact conventions.
