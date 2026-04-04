@@ -1,0 +1,226 @@
+
+======================================================================
+CR INVOLUTION ANATOMY: n=3, m=1
+======================================================================
+CR = pure remap? 2/2 = 1.000
+
+Vertex permutation sigma(v) = 4-v:
+  1 -> 3
+  2 -> 2
+  3 -> 1
+
+CR tournament = sigma-permuted tournament? 0/2 = 0.000
+
+Transitive tournament (bits=0):
+Base-path arcs in original:    T[0][1]=<>  T[1][2]=<>
+Base-path arcs in CR:          T[0][1]=<>  T[1][2]=<>
+Base-path arcs in sigma:       T[0][1]=><  T[1][2]=><
+
+Difference CR vs sigma (all arcs):
+  Arc (1,2): CR=← vs sigma=→
+  Arc (1,3): CR=← vs sigma=→
+  Arc (2,3): CR=← vs sigma=→
+  Total differences: 3
+
+--- CR INVARIANTS ---
+Score sequence preserved? 2/2 = 1.000
+3-cycle count preserved? 2/2 = 1.000
+
+Examples of T and CR(T):
+  bits=0: scores=(0, 1, 2) H=1 | CR scores=(0, 1, 2) H=1 SAME FIXED
+  bits=1: scores=(1, 1, 1) H=3 | CR scores=(1, 1, 1) H=3 SAME FIXED
+
+Fixed points of CR: 2/2
+Fixed = grid-symmetric tilings: 2^(fixed tiles in reflection)
+Self-reflected tiles: 1
+Predicted fixed points: 2^1 = 2
+
+======================================================================
+CR INVOLUTION ANATOMY: n=4, m=3
+======================================================================
+CR = pure remap? 8/8 = 1.000
+
+Vertex permutation sigma(v) = 5-v:
+  1 -> 4
+  2 -> 3
+  3 -> 2
+  4 -> 1
+
+CR tournament = sigma-permuted tournament? 0/8 = 0.000
+
+Transitive tournament (bits=0):
+Base-path arcs in original:    T[0][1]=<>  T[1][2]=<>  T[2][3]=<>
+Base-path arcs in CR:          T[0][1]=<>  T[1][2]=<>  T[2][3]=<>
+Base-path arcs in sigma:       T[0][1]=><  T[1][2]=><  T[2][3]=><
+
+Difference CR vs sigma (all arcs):
+  Arc (1,2): CR=← vs sigma=→
+  Arc (1,3): CR=← vs sigma=→
+  Arc (1,4): CR=← vs sigma=→
+  Arc (2,3): CR=← vs sigma=→
+  Arc (2,4): CR=← vs sigma=→
+  Arc (3,4): CR=← vs sigma=→
+  Total differences: 6
+
+--- CR INVARIANTS ---
+Score sequence preserved? 6/8 = 0.750
+3-cycle count preserved? 8/8 = 1.000
+
+Examples of T and CR(T):
+  bits=001: scores=(1, 1, 2, 2) H=5 | CR scores=(1, 1, 2, 2) H=5 SAME FIXED
+  bits=010: scores=(1, 1, 1, 3) H=3 | CR scores=(0, 2, 2, 2) H=3 DIFF 
+  bits=000: scores=(0, 1, 2, 3) H=1 | CR scores=(0, 1, 2, 3) H=1 SAME FIXED
+  bits=101: scores=(1, 1, 2, 2) H=5 | CR scores=(1, 1, 2, 2) H=5 SAME 
+  bits=011: scores=(1, 1, 2, 2) H=5 | CR scores=(1, 1, 2, 2) H=5 SAME 
+
+Fixed points of CR: 4/8
+Fixed = grid-symmetric tilings: 2^(fixed tiles in reflection)
+Self-reflected tiles: 1
+Predicted fixed points: 2^1 = 2
+
+======================================================================
+CR INVOLUTION ANATOMY: n=5, m=6
+======================================================================
+CR = pure remap? 64/64 = 1.000
+
+Vertex permutation sigma(v) = 6-v:
+  1 -> 5
+  2 -> 4
+  3 -> 3
+  4 -> 2
+  5 -> 1
+
+CR tournament = sigma-permuted tournament? 0/64 = 0.000
+
+Transitive tournament (bits=0):
+Base-path arcs in original:    T[0][1]=<>  T[1][2]=<>  T[2][3]=<>  T[3][4]=<>
+Base-path arcs in CR:          T[0][1]=<>  T[1][2]=<>  T[2][3]=<>  T[3][4]=<>
+Base-path arcs in sigma:       T[0][1]=><  T[1][2]=><  T[2][3]=><  T[3][4]=><
+
+Difference CR vs sigma (all arcs):
+  Arc (1,2): CR=← vs sigma=→
+  Arc (1,3): CR=← vs sigma=→
+  Arc (1,4): CR=← vs sigma=→
+  Arc (1,5): CR=← vs sigma=→
+  Arc (2,3): CR=← vs sigma=→
+  Arc (2,4): CR=← vs sigma=→
+  Arc (2,5): CR=← vs sigma=→
+  Arc (3,4): CR=← vs sigma=→
+  Arc (3,5): CR=← vs sigma=→
+  Arc (4,5): CR=← vs sigma=→
+  Total differences: 10
+
+--- CR INVARIANTS ---
+Score sequence preserved? 52/64 = 0.812
+3-cycle count preserved? 64/64 = 1.000
+
+Examples of T and CR(T):
+  bits=100111: scores=(1, 2, 2, 2, 3) H=15 | CR scores=(1, 2, 2, 2, 3) H=15 SAME 
+  bits=010000: scores=(0, 2, 2, 2, 4) H=3 | CR scores=(0, 2, 2, 2, 4) H=3 SAME FIXED
+  bits=101111: scores=(1, 2, 2, 2, 3) H=13 | CR scores=(1, 2, 2, 2, 3) H=13 SAME FIXED
+  bits=010110: scores=(1, 1, 2, 2, 4) H=5 | CR scores=(0, 2, 2, 3, 3) H=5 DIFF 
+  bits=110010: scores=(1, 1, 2, 3, 3) H=9 | CR scores=(1, 1, 2, 3, 3) H=9 SAME 
+
+Fixed points of CR: 16/64
+Fixed = grid-symmetric tilings: 2^(fixed tiles in reflection)
+Self-reflected tiles: 2
+Predicted fixed points: 2^2 = 4
+
+======================================================================
+CR INVOLUTION ANATOMY: n=6, m=10
+======================================================================
+CR = pure remap? 1024/1024 = 1.000
+
+Vertex permutation sigma(v) = 7-v:
+  1 -> 6
+  2 -> 5
+  3 -> 4
+  4 -> 3
+  5 -> 2
+  6 -> 1
+
+CR tournament = sigma-permuted tournament? 0/1024 = 0.000
+
+Transitive tournament (bits=0):
+Base-path arcs in original:    T[0][1]=<>  T[1][2]=<>  T[2][3]=<>  T[3][4]=<>  T[4][5]=<>
+Base-path arcs in CR:          T[0][1]=<>  T[1][2]=<>  T[2][3]=<>  T[3][4]=<>  T[4][5]=<>
+Base-path arcs in sigma:       T[0][1]=><  T[1][2]=><  T[2][3]=><  T[3][4]=><  T[4][5]=><
+
+Difference CR vs sigma (all arcs):
+  Arc (1,2): CR=← vs sigma=→
+  Arc (1,3): CR=← vs sigma=→
+  Arc (1,4): CR=← vs sigma=→
+  Arc (1,5): CR=← vs sigma=→
+  Arc (1,6): CR=← vs sigma=→
+  Arc (2,3): CR=← vs sigma=→
+  Arc (2,4): CR=← vs sigma=→
+  Arc (2,5): CR=← vs sigma=→
+  Arc (2,6): CR=← vs sigma=→
+  Arc (3,4): CR=← vs sigma=→
+  Arc (3,5): CR=← vs sigma=→
+  Arc (3,6): CR=← vs sigma=→
+  Arc (4,5): CR=← vs sigma=→
+  Arc (4,6): CR=← vs sigma=→
+  Arc (5,6): CR=← vs sigma=→
+  Total differences: 15
+
+--- CR INVARIANTS ---
+Score sequence preserved? 572/1024 = 0.559
+3-cycle count preserved? 1024/1024 = 1.000
+
+Examples of T and CR(T):
+  bits=1100101100: scores=(2, 2, 2, 2, 3, 4) H=33 | CR scores=(1, 2, 3, 3, 3, 3) H=33 DIFF 
+  bits=1001001011: scores=(1, 2, 3, 3, 3, 3) H=33 | CR scores=(2, 2, 2, 2, 3, 4) H=33 DIFF 
+  bits=1101001001: scores=(2, 2, 2, 3, 3, 3) H=45 | CR scores=(2, 2, 2, 3, 3, 3) H=45 SAME FIXED
+  bits=0001010010: scores=(1, 2, 2, 3, 3, 4) H=31 | CR scores=(1, 2, 2, 3, 3, 4) H=31 SAME 
+  bits=0111110000: scores=(0, 2, 2, 3, 4, 4) H=9 | CR scores=(1, 1, 2, 3, 3, 5) H=9 DIFF 
+
+Fixed points of CR: 64/1024
+Fixed = grid-symmetric tilings: 2^(fixed tiles in reflection)
+Self-reflected tiles: 2
+Predicted fixed points: 2^2 = 4
+
+======================================================================
+CR INVOLUTION ANATOMY: n=7, m=15
+======================================================================
+CR = pure remap? 32768/32768 = 1.000
+
+Vertex permutation sigma(v) = 8-v:
+  1 -> 7
+  2 -> 6
+  3 -> 5
+  4 -> 4
+  5 -> 3
+  6 -> 2
+  7 -> 1
+
+CR tournament = sigma-permuted tournament? 0/10000 = 0.000
+
+Transitive tournament (bits=0):
+Base-path arcs in original:    T[0][1]=<>  T[1][2]=<>  T[2][3]=<>  T[3][4]=<>  T[4][5]=<>  T[5][6]=<>
+Base-path arcs in CR:          T[0][1]=<>  T[1][2]=<>  T[2][3]=<>  T[3][4]=<>  T[4][5]=<>  T[5][6]=<>
+Base-path arcs in sigma:       T[0][1]=><  T[1][2]=><  T[2][3]=><  T[3][4]=><  T[4][5]=><  T[5][6]=><
+
+Difference CR vs sigma (all arcs):
+  Arc (1,2): CR=← vs sigma=→
+  Arc (1,3): CR=← vs sigma=→
+  Arc (1,4): CR=← vs sigma=→
+  Arc (1,5): CR=← vs sigma=→
+  Arc (1,6): CR=← vs sigma=→
+  Arc (1,7): CR=← vs sigma=→
+  Arc (2,3): CR=← vs sigma=→
+  Arc (2,4): CR=← vs sigma=→
+  Arc (2,5): CR=← vs sigma=→
+  Arc (2,6): CR=← vs sigma=→
+  Arc (2,7): CR=← vs sigma=→
+  Arc (3,4): CR=← vs sigma=→
+  Arc (3,5): CR=← vs sigma=→
+  Arc (3,6): CR=← vs sigma=→
+  Arc (3,7): CR=← vs sigma=→
+  Arc (4,5): CR=← vs sigma=→
+  Arc (4,6): CR=← vs sigma=→
+  Arc (4,7): CR=← vs sigma=→
+  Arc (5,6): CR=← vs sigma=→
+  Arc (5,7): CR=← vs sigma=→
+  Arc (6,7): CR=← vs sigma=→
+  Total differences: 21
