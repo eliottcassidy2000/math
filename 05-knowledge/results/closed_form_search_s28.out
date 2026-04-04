@@ -1,0 +1,30 @@
+======================================================================
+COMPLETE MULTILINEAR POLYNOMIAL: n=5, m=6
+======================================================================
+
+Tiles: A=(5,1) B=(4,1) C=(3,1) D=(5,2) E=(4,2) F=(5,3)
+Skips: A=4    B=3    C=2    D=3    E=2    F=2
+
+H = 11 + 8A + 4B + 2C + 4D + 2E + 2F + (-2)AB + (-2)AC + (-2)BC + (-2)AD + 4BD + 2CD + 4AE + (-2)BE + (-2)DE + (-2)AF + 2BF + 4CF + (-2)DF
+  + ... (15 more terms)
+
+Total terms: 35
+
+======================================================================
+TESTING PARTIAL PRODUCT ALONG ANTI-DIAGONAL CHAINS
+======================================================================
+
+Linear model: H_lin = 1 + Σ 2^(sⱼ-1) xⱼ
+  bits=000000: H_actual=1, H_linear=1, error=0
+  bits=111111: H_actual=9, H_linear=23, error=-14
+  bits=101010: H_actual=11, H_linear=11, error=0
+  bits=010101: H_actual=13, H_linear=13, error=0
+
+Key structural observation:
+  The multilinear polynomial has a 'tree of corrections' structure.
+  Order 0: 1 (transitive)
+  Order 1: +2^(s-1) per tile (new HPs from single flips)
+  Order 2: corrections for overlap/cooperation
+  Order 3: corrections to corrections
+  Order 4: highest-order corrections
+  This is an INCLUSION-EXCLUSION over tile subsets!

@@ -13,12 +13,14 @@ H(T) viewed as a function of tiling bits x₁,...,xₘ is a multilinear polynomi
 
 This gives: apex tile (n,1) has coefficient 2^(n-2), which dominates all others.
 
-### Quadratic coefficients (DISCOVERED)
-For tile pairs sharing a vertex v:
-- **Same-end** (both upper or both lower endpoint = v): c₂ = -2
-- **Cross-end** (v is upper for one, lower for other): c₂ = +2^(skip_i + skip_j - 2)
+### Quadratic coefficients (DISCOVERED + CORRECTED)
+For tile pairs sharing a vertex v, skips s₁, s₂:
+- **Same-end** (both upper or both lower endpoint = v): c₂ = -2^max(1, |s₁-s₂|-1)
+  - Adjacent skips (|s₁-s₂| ≤ 2): c₂ = -2
+  - Distant skips (|s₁-s₂| > 2): c₂ = -2^(|s₁-s₂|-1) — exponential interference
+- **Cross-end** (v is upper for one, lower for other): c₂ = +2^(s₁+s₂-2)
 
-The -2 for same-end pairs means: two tiles that both "emanate from" the same vertex destructively interfere. The positive coefficient for cross-end pairs means: tiles forming a "through-path" via the shared vertex constructively cooperate.
+Same-end pairs create destructive interference that grows with the skip gap. Cross-end pairs create "through-vertex shortcuts" whose cooperation grows exponentially with the total skip. Verified exhaustively n=4..9.
 
 ### Polynomial degree
 - n=3: degree 1

@@ -13,6 +13,25 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-03-S28 — 2026-04-03: H-Saddle Deep Exploration — Linear/Quadratic Coefficient Theorems
+
+**Account:** opus
+**Continuation of:** opus-2026-04-03-S27
+**Summary:** Deep creative exploration of the H-saddle structure in (hyp,per) coordinates and the wiggly/complement duality. Multiple theorems proved, several new structural results discovered.
+
+**Key Results:**
+1. **THM-284 (PROVED)**: Linear coefficient of tile (x,y) in H polynomial = 2^(skip-1). Combinatorial proof: flipping one arc from transitive creates 2^(s-1) new HPs via between-vertex binary partition.
+2. **Quadratic coefficients**: Same-end shared vertex: c₂ = -2^max(1,|s₁-s₂|-1). Cross-end: c₂ = +2^(s₁+s₂-2). Verified n=4..9.
+3. **Grid reflection effect symmetry**: effect(tile(x,y)) = effect(tile(n+1-y,n+1-x)) EXACTLY at all n=3..7.
+4. **Apex effect = 2^(n-3)** exactly for n=3..6, breaks at n=7 (becomes 159/8).
+5. **Complement∘reflect commutes and preserves H** — an H-preserving involution preserving 3-cycle count.
+6. **Walsh-waggly duality EXACT**: E[Δ²(d)] = Σ_k |ĥ_k|² g(k,d) with ratio 1.0000.
+7. **Single flip creates 2^(skip-2) cliqued odd cycles** from transitive.
+8. **Metagraph saddle**: high-H classes form single connected component; apex fraction monotonically increases with H.
+
+**New contributions:** THM-284, reflection h-saddle-and-waggly-duality.md, 10 computation scripts
+**Unresolved threads:** Disjoint pair c₂ formula; polynomial degree bound; apex effect correction at n≥7; complete order-k formulas for k≥3
+
 ## opus-2026-04-03-S26 — 2026-04-03: Block-Adaptive Mosaic Codec v2→v4
 
 **Account:** opus
