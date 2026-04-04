@@ -13,6 +13,26 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S4 — 2026-04-04: The Two Staircases — n→n+2 Recursive Structure
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S3
+**Summary:** Discovered and proved the n→n+2 recursive structure of the multilinear polynomial. A tournament on n+2 vertices is the n-tournament PLUS boundary wiring, and H_{n+2}(inner, 0) = H_n(inner) exactly.
+
+**Key Results:**
+1. **THM-291 (PROVED)**: H_{n+2}(t_inner, 0_boundary) = H_n(t_inner). Setting boundary to transitive makes endpoints source/sink, reducing HP count to inner tournament's count. Verified exhaustively at 3→5 (2 tilings), 4→6 (8), 5→7 (64). All inner coefficients match perfectly (2/2, 6/6, 35/35).
+
+2. **Staircase decomposition**: δ_n = δ_{n-2} ⊔ bottom_leg ⊔ top_leg ⊔ apex. The n-tournament tiles are the "inner" δ_{n-2}, plus 2(n-2)+1 = 2n-3 boundary tiles. ~97% of multilinear coefficients involve boundary tiles.
+
+3. **Bottom = Top** (mirror symmetry): The bottom-only and top-only polynomials are IDENTICAL under the skip-preserving map. Grid reflection symmetry swaps source↔sink.
+
+4. **Boundary polynomial degree = 4** (constant across n=5,6,7). The pure boundary polynomial has bounded degree regardless of tournament size. Degree growth comes from MIXED inner-boundary interactions (Hamiltonian cycles spanning both regions).
+
+5. **Bottom-top factorization FAILS**: H(bottom, top, 0_apex) ≠ H(bottom) · H(top) / H(0). The two legs interact through shared inner vertices (the "frustration" from THM-290).
+
+**New contributions:** THM-291, reflection "the-two-staircases.md", boundary polynomial analysis
+**Unresolved:** Closed formula for the boundary correction Δ_n. Connection between boundary degree cap (=4) and the inner degree cap (2⌊(n-1)/2⌋).
+
 ## opus-2026-04-04-S3 — 2026-04-04: Deep Inclusion-Exclusion — Antiferromagnetic Structure of H(t)
 
 **Account:** opus
