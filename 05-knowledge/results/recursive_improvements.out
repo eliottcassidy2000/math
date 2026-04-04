@@ -1,0 +1,114 @@
+
+============================================================
+FAST H BENCHMARK n=5
+============================================================
+  Sample: 64 tournaments
+  DP time: 0.004s (0.07ms each)
+  OCF time: 0.008s (0.12ms each)
+  Speedup: 0.56x
+  Matches: 64/64
+
+============================================================
+FAST H BENCHMARK n=6
+============================================================
+  Sample: 200 tournaments
+  DP time: 0.034s (0.17ms each)
+  OCF time: 0.121s (0.60ms each)
+  Speedup: 0.29x
+  Matches: 200/200
+
+============================================================
+FAST H BENCHMARK n=7
+============================================================
+  Sample: 200 tournaments
+  DP time: 0.090s (0.45ms each)
+  OCF time: 1.062s (5.31ms each)
+  Speedup: 0.08x
+  Matches: 20/200
+
+============================================================
+PREDICTIVE A000568 RECURSION (up to n=20)
+============================================================
+     n           exact       predicted        error    rel_error
+     3               2             2.0          0.0   0.00000000
+     4               4             4.0          0.0   0.00000000
+     5              12            10.4          1.6   0.13333333
+     6              56            46.8          9.2   0.16428571
+     7             456           390.3         65.7   0.14412594
+     8            6880          5988.3        891.7   0.12960220
+     9          191536        167423.9      24112.1   0.12588799
+    10         9733056       8515599.0    1217457.0   0.12508476
+
+  Predictions beyond known:
+  a( 11) ≈ 7.908197e+08 (9 digits)
+  a( 12) ≈ 1.348533e+11 (12 digits)
+  a( 13) ≈ 4.247713e+13 (14 digits)
+  a( 14) ≈ 2.485288e+16 (17 digits)
+  a( 15) ≈ 2.714516e+19 (20 digits)
+  a( 16) ≈ 5.559276e+22 (23 digits)
+  a( 17) ≈ 2.143128e+26 (27 digits)
+  a( 18) ≈ 1.560576e+30 (31 digits)
+  a( 19) ≈ 2.153135e+34 (35 digits)
+  a( 20) ≈ 5.644314e+38 (39 digits)
+
+============================================================
+SKIP-ENERGY FINGERPRINT n=5
+============================================================
+  Distinct skip profiles: 24
+  Distinct (H, scores) classes: 11
+  Profiles mapping to 1 class: 13
+  Profiles mapping to >1 class: 11
+  Profile discrimination rate: 0.542
+
+  Corr(total_energy, H) = 0.6574
+  R²(H ≈ 1 + energy) = -0.5456
+
+============================================================
+SKIP-ENERGY FINGERPRINT n=6
+============================================================
+  Distinct skip profiles: 120
+  Distinct (H, scores) classes: 40
+  Profiles mapping to 1 class: 22
+  Profiles mapping to >1 class: 98
+  Profile discrimination rate: 0.183
+
+  Corr(total_energy, H) = 0.5036
+  R²(H ≈ 1 + energy) = -0.0669
+
+============================================================
+MCMC TOURNAMENT SAMPLER n=6
+============================================================
+  Steps: 5000, Accepted: 5000 (1.000)
+  H trace: mean=29.33, std=9.97
+  H range: [1, 45]
+  Autocorrelation time: τ ≈ 4.2 steps
+
+============================================================
+MCMC TOURNAMENT SAMPLER n=6
+============================================================
+  Steps: 5000, Accepted: 1707 (0.341)
+  H trace: mean=43.33, std=2.37
+  H range: [1, 45]
+  Near target (|H-45|≤2): 4361/5001 = 0.872
+  Autocorrelation time: τ ≈ 11.3 steps
+
+============================================================
+FAST ISO CLASS COUNT PREDICTION
+============================================================
+  Known + predicted V(n):
+    V( 3) =               2 (exact)
+    V( 4) =               4 (exact)
+    V( 5) =              12 (exact)
+    V( 6) =              56 (exact)
+    V( 7) =             456 (exact)
+    V( 8) =            6880 (exact)
+    V( 9) =          195698 (predicted)
+    V(10) =        10019738 (predicted)
+    V(11) =       932746519 (predicted)
+    V(12) =    159188739243 (predicted)
+    V(13) =  50156698149179 (predicted)
+    V(14) = 29348833659862456 (predicted)
+    V(15) = 32056752712212430848 (predicted)
+
+  V(9) predicted: 195698, known A000568(9): 191536
+  Error: 4162, relative: 0.0217

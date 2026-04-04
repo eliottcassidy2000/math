@@ -833,4 +833,23 @@ Six cryptographic vulnerability classes from repo techniques: (1) **Walsh spectr
 **SC Maximizer Dual Mechanism (THM-255).** At n=6 regular, max H is achieved by SC tournaments via TWO distinct routes: Route A (max alpha_2=4, few cycles) and Route B (max alpha_1=20, few disjoint pairs). Both give alpha_1+2*alpha_2=22. NSC achieves only 21. At n=7, mechanism FLIPS: maximizer has FEWEST disjoint pairs (7 vs 14), winning purely via alpha_1. This means any algebraic proof of SC Maximizer must handle both mechanisms.
 
 **T257** #paley-interval #spectral-crossover #cycle-count | certainty: HIGH (computed p=7,11) | source: kind-pasteur-2026-03-20-S1
+
+---
+
+## Antiferromagnetic Tournament Theory (opus-S15)
+
+**T258** #AFM #frustration #H-correlation #ground-state | certainty: HIGH (exhaustive n=4,5,6) | source: opus-2026-04-04-S15
+Tournaments ARE antiferromagnets on the staircase lattice. Frustration index c₃/C(n,3) correlates with H at r≈0.97. Score variance = Néel order parameter (anti-correlates r≈-0.97). Regular tournaments = AFM ground state (max frustration = max H). Transitive = ferromagnet (H=1). H-maximizer ⊂ c₃-maximizer at n=5,6. See `07-reflections/the-antiferromagnetic-tournament.md`.
+
+**T259** #AFM #magnon #flat-dispersion #Sn-isotropy | certainty: HIGH (exhaustive n=4,5,6) | source: opus-2026-04-04-S15
+Magnon spectrum (mean|ΔH| per tile position) is FLAT over the labeled ensemble: all tiles give identical mean|ΔH| = 1.5 (n=4), 3.0 (n=5), 7.0 (n=6). Follows from S_n transitivity on vertex pairs. Per-class anisotropy exists but averages out. The mean|ΔH| grows roughly as 2^{n-2}.
+
+**T260** #AFM #Boltzmann #phase-transition #beta-c | certainty: HIGH (exhaustive n=5) | source: opus-2026-04-04-S15
+Boltzmann-weighted spin correlations ⟨σ_i σ_j⟩_β are exactly 0 at β=0 (paramagnetic), negative at β>0 (AFM order). Specific heat peaks at β_c ≈ 0.7 (n=5): tournament phase transition from disordered (transitive-like) to ordered (regular-like). β<0 prefers transitive (ferromagnetic).
+
+**T261** #AFM #H7-gap #frustration-propagation #alpha1-gap | certainty: HIGH (exhaustive n=5) | source: opus-2026-04-04-S15
+H=7 impossibility from AFM perspective: α₁ (total odd cycle count) SKIPS value 3 at n=5 (goes 0,1,2,4,5,6). Why: c₃=3 (3 three-cycles on 5 vertices) ALWAYS forces a 5-cycle, making α₁≥4. Frustration propagation: local frustration forces global frustration. H=7 = 1+2·3 needs α₁=3 which doesn't exist.
+
+**T262** #AFM #E-AFM #redundant | certainty: HIGH (exhaustive n=4,5,6) | source: opus-2026-04-04-S15
+Staircase nearest-neighbor Ising energy E_AFM = Σ_{neighbors} σ_i σ_j adds ZERO information beyond c₃ for predicting H (ΔR²=0). E_AFM counts correlated tile PAIRS; c₃ counts frustrated vertex TRIPLES. The vertex triple is the fundamental unit, not the tile pair.
 **Paley beats Interval via total cycle count at small p (THM-256).** At p=7: Paley has 80 directed odd cycles vs Interval's 59, despite FEWER disjoint pairs (7 vs 14). Same c3=14 for both. Paley's advantage is in 5-cycles (42 vs 28) and 7-cycles (24 vs 17). Spectral flatness explains this: flat |lambda_k|=sqrt(2) for all k gives uniform cycle distribution. Crossover to Interval occurs between p=11 and p=19.
