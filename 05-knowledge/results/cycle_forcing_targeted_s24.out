@@ -1,0 +1,39 @@
+======================================================================
+TARGETED CYCLE-FORCING VERIFICATION AT LARGE n
+======================================================================
+
+--- Verifying c₃ → c_{2k+1} threshold = 3*(2^k - 1) at n = 2k+1 ---
+
+k=1: c₃ → c_3 at n=3, predicted threshold = 3
+  c₃=2: could NOT construct any tournaments (might not exist)
+  c₃=3: could NOT construct any tournaments (might not exist)
+
+k=2: c₃ → c_5 at n=5, predicted threshold = 9
+  c₃=8: could NOT construct any tournaments (might not exist)
+  c₃=9: could NOT construct any tournaments (might not exist)
+
+k=3: c₃ → c_7 at n=7, predicted threshold = 21
+  c₃=20: could NOT construct any tournaments (might not exist)
+  c₃=21: could NOT construct any tournaments (might not exist)
+
+k=4: c₃ → c_9 at n=9, predicted threshold = 45
+  c₃=44: could NOT construct any tournaments (might not exist)
+  c₃=45: could NOT construct any tournaments (might not exist)
+
+
+--- How does c₃ → c₅ threshold change with n? ---
+
+  n=5: c₃ → c₅ threshold = 3 (max c₃ with c₅=0: 2)
+  n=6: c₃ → c₅ threshold = 3 (max c₃ with c₅=0: 2)
+  n=7: c₃ → c₅ threshold = 4 (max c₃ with c₅=0: 3)
+  n=8: c₃ → c₅ threshold = 5 (max c₃ with c₅=0: 4)
+  n=9: c₃ → c₅ threshold = 5 (max c₃ with c₅=0: 4)
+n=10: skipping (too large for cycle counting)
+n=11: skipping (too large for cycle counting)
+
+--- How does c₃ → c₇ threshold change with n? ---
+
+  n=7: c₃ → c₇ threshold = 9 (max c₃ with c₇=0: 8)
+  n=8: c₃ → c₇ threshold = 9 (max c₃ with c₇=0: 8)
+  n=9: c₃ → c₇ threshold = 10 (max c₃ with c₇=0: 9)
+  n=10: c₃ → c₇ threshold = 9 (max c₃ with c₇=0: 8)
