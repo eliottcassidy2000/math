@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-05-S24d — 2026-04-05: BIBD Structure, QR, and the Seven-Level Hierarchy
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S24c
+**Summary:** Proved that directed 3-cycles of Paley T_p form a 2-(p, 3, (p+1)/4) BIBD for ALL Paley primes (complete algebraic proof via Aff(QR) transitivity on arcs). Proved the QR Sum Distribution Theorem R(c)=(p-1-2χ(c))/4 via Jacobi sum J(χ,χ)=1. Discovered 5-cycles ALSO form a uniform design. Established the seven-level BIBD-QR hierarchy connecting everything from RH through spectral flatness to 2-adic valuations.
+
+**Key Results:**
+1. **THM-BIBD (PROVED)**: Directed 3-cycles of T_p form 2-(p,3,(p+1)/4) BIBD. Proof: Aff(QR) transitive on arcs → uniform λ.
+2. **THM-QR-SUM (PROVED)**: R(c)=(p-1-2χ(c))/4 for QR+QR representations. NQR targets get MORE.
+3. **5-CYCLE DESIGN**: 5-cycles also form uniform design at p=7,11.
+4. **(2/p) CONTROLS DIRECTED↔UNDIRECTED**: p≡7 mod 8 ⟺ undirected triples also form BIBD.
+5. **SEVEN-LEVEL HIERARCHY**: QR→Jacobi→BIBD→IP→2-adic→H-max→spectral (=RH for F_p).
+
+**New contributions:** bibd_qr_deep_s24d.py
+**Unresolved:** Prove 5-cycle design for general p. All-QR triple count formula.
+
 ## opus-2026-04-05-S27 — 2026-04-05: Barvinok-BIBD-QR Triangle — Permanent meets Design Theory
 
 **Account:** opus
