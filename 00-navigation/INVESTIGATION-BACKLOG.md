@@ -8,6 +8,41 @@
 **Last packing framework update:** opus-2026-03-14-S71f (nesting obstruction, (z-2)(z-3) recurrence, 2-Bridge)
 **Last S90 update:** opus-2026-03-15-S90 (simplicial Rédei, Cayley monad, τ-φ clock, equidecomposability)
 **Last gauge theory analysis:** kind-pasteur-2026-03-21-S12 (Napolitano paper, Cartan decomposition bridge, TournamentProbe)
+**Last literature sweep:** opus-2026-04-05-S24 (Stanley-Stembridge proved, Mitrovic NC deletion-contraction, Tang-Yau circulant Fourier)
+
+---
+
+## Priority S24: New Leads from Session S24
+
+### INV-184: Stanley-Stembridge PROVED (Hikita, arXiv:2410.12758)
+**Source:** opus-2026-04-05-S24 web search
+**Status:** NEW — needs integration
+**What:** e-positivity of chromatic symmetric functions for unit interval graphs proved by Tatsuyuki Hikita (Oct 2024, revised Dec 2025). Since Mitrovic-Stojadinovic (arXiv:2506.08841) connects Redei-Berge to chromatic functions, and Stanley-Stembridge concerns e-positivity, this potentially constrains the h-positivity of U_T.
+**Next:** Read Hikita's proof. Check implications for our U_T framework (THM-062/063). Does h-positivity of U_P follow?
+
+### INV-185: Mitrovic NC Deletion-Contraction (arXiv:2504.20968)
+**Source:** opus-2026-04-05-S24 web search
+**Status:** NEW
+**What:** The original Redei-Berge function does NOT satisfy deletion-contraction. Mitrovic introduces a noncommutative analogue that DOES. This enables inductive proofs — exactly what we need for Claim A-type results.
+**Next:** Read the NC deletion-contraction construction. Can it give a new proof of Claim A? Does it yield new tournament invariants?
+
+### INV-186: Real-Rootedness of I(Ω(T), x)
+**Source:** opus-2026-04-05-S24 computation
+**Status:** PROVED for n ≤ 8, CONJECTURED for all n
+**What:** All zeros of the independence polynomial of the odd-cycle conflict graph are real and negative. Proof at n ≤ 8: Ω(T) is claw-free (3 disjoint odd cycles need ≥ 9 vertices), by Chudnovsky-Seymour. At n ≥ 9, claws possible but real-rootedness may persist.
+**Next:** Test at n=9 with efficient cycle enumeration. Look for structural property beyond claw-free.
+
+### INV-187: E[H(T)] = n!/2^{n-1} 
+**Source:** opus-2026-04-05-S24 computation
+**Status:** PROVED (linearity of expectation)
+**What:** Clean closed form for average Hamiltonian paths. W(n) = n! × 2^{C(n-1,2)}. Probably known but not explicitly in our bibliography.
+**Next:** Check literature for this result. Is it in Moon's book?
+
+### INV-188: I(Ω(T), x) as Tournament Invariant
+**Source:** opus-2026-04-05-S24 computation
+**Status:** ESTABLISHED
+**What:** The full polynomial I(Ω(T), x) is a strictly finer tournament invariant than H(T). Distinguishes tournaments at n=6 that share the same H. Real-rooted decomposition: H = Π(1 + 2/r_i) where -1/r_i are the zeros.
+**Next:** Classify which iso classes are distinguished. Connection to Redei-Berge function?
 
 ---
 
