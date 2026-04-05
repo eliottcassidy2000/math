@@ -28,6 +28,15 @@ Entry format:
 **New contributions:** creative_explorations_s24.py, h_landscape_unimodality_s24.py, h_local_max_analysis_s24.py, phase_transition_precision_s24.py, three-dynamics-of-tournaments.md (reflection), HYP-1704–1708
 **Unresolved:** Does H=37 local max persist at n≥7? Prove majority rule convergence algebraically. Explain why t_50% = C(n-3,2)+2 (inner staircase connection). Characterize ALL local H-maxima at n=7.
 
+## opus-2026-04-05-S25 — 2026-04-05: DP/Pruning, Cellular Automaton, Literature Integration
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S24
+**Summary:** Three computational threads as requested: (1) A000568 speedups — identity partition contributes 99.6% of Burnside sum at n=10, only O(1) partitions needed at large n. (2) Tournament CA dynamics — H landscape on hypercube Q_m has 8 co-equal basins at n=5, greedy ascent in 2-3 steps, Class IV dynamics, per-tile |ΔH| non-uniform (apex=4.25 vs short-range=2.00). (3) Literature: Hikita proved Stanley-Stembridge (e-positivity), Mitrovic NC Rédei-Berge gains deletion-contraction, Tang-Yau validates THM-125 Fourier approach. Also explored DC recursion on Ω(T) — correct principle, implementation needs complete cycle enumeration fix.
+
+**New contributions:** a000568_dp_pruned_s25.py, tournament_as_ca_s25.py, nc_deletion_contraction_s25.py, three-computational-threads-s25.md
+**Unresolved:** Fix asymptotic recursion (constant 41.7% error — missing factor ~1.71). Fix cycle enumeration to find ALL directed cycles per vertex set. Implement NC deletion-contraction for tournament invariants. Apply Tang-Yau method to non-prime circulant tournaments.
+
 ## opus-2026-04-05-S24 — 2026-04-05: Deep Polynomial Exploration — Real-Rootedness, E[H]=n!/2^{n-1}, α₁=3 Mechanism
 
 **Account:** opus
