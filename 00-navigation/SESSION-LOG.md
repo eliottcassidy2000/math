@@ -13,6 +13,23 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-05-S26 — 2026-04-05: The QR Resonance Principle — Cross-Field Exploration
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S25
+**Summary:** Pushed the binary resonance insight (THM-305/306/307) across ten mathematical domains. PROVED the general base theorem (THM-308): b^{C(p,2)} ≡ (b/p) mod p² for ALL bases b. Discovered that tournaments are UNIQUE among Burnside counting problems in having a clean v_2 formula — the odd-cycle restriction is the key. Explored connections to: graphs (messy v_2), digraphs (trivial QR since base 4=2²), Ising/Potts models, coding theory, Dirichlet characters, representation theory, necklaces.
+
+**Key Results:**
+1. **THM-308 (General Base QR Congruence) — PROVED**: b^{C(p,2)} ≡ (b/p) mod p² for any base b, any odd prime p. Perfect square bases always give 1 (trivial). Digraphs (b=4) have NO QR discrimination. Verified for 70 (b,p) pairs.
+2. **Tournament uniqueness (HYP-1717)**: Among graphs, digraphs, oriented graphs, binary relations — ONLY tournaments have clean v_2 = (n-1)/2. The odd-cycle restriction makes the n-cycle dominant. Graphs have erratic v_2.
+3. **q-adic valuations**: v_3, v_5, v_7 of T(n) have NO clean formula. Only v_2 works — the odd-cycle constraint is specifically a mod-2 phenomenon.
+4. **QR Resonance Principle (HYP-1718)**: Meta-theorem: every non-square-base Burnside problem has QR resonance. Three regimes: trivial (square base), messy (unrestricted), clean (parity-restricted). Tournaments are in the "clean" regime.
+5. **Ising interpretation**: v_2(T(n)) = (n-1)/2 is a "zero-temperature constraint surviving at all temperatures."
+6. **Coding theory**: Tournament identification has persistent QR-controlled redundancy. Code rate → 1 but the 2-adic structure is permanent.
+
+**New contributions:** THM-308, HYP-1716-1718, binary_resonance_cross_field_s26.py, qr-resonance-principle.md
+**Unresolved:** Other parity-restricted Burnside problems with clean v_2? Wieferich prime behavior? The odd-part sequence.
+
 ## opus-2026-04-05-S24b — 2026-04-05: Five Fundamental QR-Tournament Theorems
 
 **Account:** opus

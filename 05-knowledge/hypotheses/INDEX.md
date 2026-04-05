@@ -1830,3 +1830,18 @@ Source: qr_tournament_master_s24b.py
 **Status:** PROVED
 **What:** For prime p ≥ 3, the total Fix count in Burnside's formula for tournaments satisfies p!·a(p) ≡ 2^{C(p,2)} - (2/p) mod p, where (2/p) is the Legendre symbol. Proof: only the identity and p-cycle terms contribute mod p; others have p | (p!/z_λ). Wilson and Euler give the explicit evaluation. The two sources of (2/p) cancel mod p, giving the tautology p | p!·a(p).
 Source: qr_tournament_master_s24b.py
+
+## HYP-1716: General base QR congruence b^{C(p,2)} ≡ (b/p) mod p² (opus-S26)
+**Status:** CONFIRMED → THM-308 (proved)
+**What:** For ANY integer b ≥ 2 with gcd(b,p)=1: b^{C(p,2)} ≡ (b/p) mod p². Perfect square bases (4,9,16...) always give 1 (trivial resonance). Digraphs (base 4) have no QR discrimination. Verified for b=2..10, p=3..23.
+Source: binary_resonance_cross_field_s26.py
+
+## HYP-1717: Tournament v_2 formula is UNIQUE among Burnside problems (opus-S26)
+**Status:** CONFIRMED (computational evidence)
+**What:** Among standard Burnside counting problems (graphs, digraphs, oriented graphs, binary relations), ONLY tournaments have a clean v_2 formula. Graphs have erratic v_2. The reason: tournaments are the only base-2 problem with an odd-cycle restriction, which makes the n-cycle uniquely dominant at the 2-adic level.
+Source: binary_resonance_cross_field_s26.py
+
+## HYP-1718: QR Resonance Principle — meta-theorem across combinatorics (opus-S26)
+**Status:** OPEN (proved for tournaments and labeled counts, conjectured in generality)
+**What:** Every Burnside counting problem with non-square base exhibits QR resonance at every prime dividing the group order. The Euler criterion b^{(p-1)/2} ≡ (b/p) mod p propagates through the Burnside sum. The STRENGTH of the resonance depends on whether the p-cycle uniquely minimizes v_p. Trichotomy: trivial (square base), messy (unrestricted), clean (parity-restricted).
+Source: binary_resonance_cross_field_s26.py, qr-resonance-principle.md
