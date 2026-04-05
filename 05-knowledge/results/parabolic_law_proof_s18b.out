@@ -1,0 +1,78 @@
+
+======================================================================
+  PARABOLIC LAW: PER-TOURNAMENT VERIFICATION — n_sub = 4
+======================================================================
+  Checked 64 tournaments, all scores s=0..4
+  Maximum |E[Δc₃] - s(n_sub-s)/2| = 0.0000000000
+  ✓ THEOREM VERIFIED (machine precision)
+
+======================================================================
+  PARABOLIC LAW: PER-TOURNAMENT VERIFICATION — n_sub = 5
+======================================================================
+  Checked 1024 tournaments, all scores s=0..5
+  Maximum |E[Δc₃] - s(n_sub-s)/2| = 0.0000000000
+  ✓ THEOREM VERIFIED (machine precision)
+
+  [Parabolic law verification: 0.0s]
+
+======================================================================
+  EXCHANGE COUPLING SCALING THROUGH LEVELS
+======================================================================
+
+  --- Level n=3 → n=4 ---
+    Simple: ΔH ≈ 2.0000*Δc₃ + 0.0000, R²=1.0000
+    +H_sub: ΔH ≈ 2.0000*Δc₃ + 0.0000*H_sub + 0.0000, R²=1.0000
+    Interact: ΔH ≈ -0.0000*Δc₃*H_sub + 2.0000*Δc₃ + 0.0000*H_sub + 0.0000, R²=1.0000
+    Per-parent exchange coupling J_eff = ΔH/Δc₃:
+      H_sub=1: J_eff = 2.0000
+      H_sub=3: J_eff = 2.0000
+
+  --- Level n=4 → n=5 ---
+    Simple: ΔH ≈ 3.0000*Δc₃ + 0.0000, R²=0.8571
+    +H_sub: ΔH ≈ 3.0000*Δc₃ + 0.5000*H_sub + -1.5000, R²=0.9206
+    Interact: ΔH ≈ 0.2609*Δc₃*H_sub + 2.3913*Δc₃ + 0.1087*H_sub + -0.5870, R²=0.9372
+    Per-parent exchange coupling J_eff = ΔH/Δc₃:
+      H_sub=1: J_eff = 2.3333
+      H_sub=3: J_eff = 3.0000
+      H_sub=5: J_eff = 3.6667
+
+  --- Level n=5 → n=6 ---
+    Simple: ΔH ≈ 6.0000*Δc₃ + -0.0000, R²=0.7129
+    +H_sub: ΔH ≈ 6.0000*Δc₃ + 0.9474*H_sub + -7.1053, R²=0.8817
+    Interact: ΔH ≈ 0.2780*Δc₃*H_sub + 4.3320*Δc₃ + 0.2524*H_sub + -2.9354, R²=0.9065
+    Per-parent exchange coupling J_eff = ΔH/Δc₃:
+      H_sub=1: J_eff = 3.0000
+      H_sub=3: J_eff = 4.2000
+      H_sub=5: J_eff = 5.4000
+      H_sub=9: J_eff = 6.6000
+      H_sub=11: J_eff = 7.8000
+      H_sub=13: J_eff = 7.8000
+      H_sub=15: J_eff = 8.2500
+
+  [Exchange coupling exact: 5.8s]
+
+======================================================================
+  EXCHANGE COUPLING at n=6→7 (sampled, 3000 parents)
+======================================================================
+  Simple: ΔH ≈ 15.1013*Δc₃ + 0.0955, R²=0.6077
+  +H_sub: ΔH ≈ 15.1281*Δc₃ + 1.4121*H_sub + -32.2043, R²=0.8868
+  Interact: ΔH ≈ 0.271396*Δc₃*H_sub + 10.0328*Δc₃ + 0.3980*H_sub + -13.1543, R²=0.9138
+
+  corr(Δc₃, ΔH) = 0.779532
+  corr(H_sub, ΔH) = 0.526278
+
+  [n=7 sampled: 45.7s]
+
+======================================================================
+  SCALING SUMMARY
+======================================================================
+  Level   Simple coeff   R²(simple)   Interaction coeff
+  3→4     (from above)
+  4→5     3.0            0.86          ~0.5
+  5→6     6.0            0.71          ~0.28
+  6→7     (from above)
+
+  The doubling pattern: 3 → 6 → ? at 6→7
+  If it continues: coefficient ≈ 12 at n=6→7
+
+  TOTAL: 51.5s

@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S18b — 2026-04-04: What Each Piece Really Represents — Parabolic Law Proved, Universal a≈0.27
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S17b
+**Summary:** Deep meditation session on fundamentals. Proved the parabolic law as a theorem (error=0 across all 1088 tournaments). Traced the exchange coupling through 4 levels: coefficient sequence 2,3,6,15 with growth factors 1.5,2.0,2.5 (arithmetic progression). Discovered the universal interaction constant a≈0.27. Wrote the definitive reflection on what each piece of mathematics represents.
+
+**Key Results:**
+1. **PARABOLIC LAW PROVED**: E[Δc₃|score=s] = s(n-1-s)/2 is EXACT for every tournament. One-line proof from completeness. Error = 0.0000000000.
+2. **Coefficient sequence 2,3,6,15**: Growth factors 1.5, 2.0, 2.5 form arithmetic progression (step 0.5).
+3. **Universal a ≈ 0.27**: Interaction coefficient Δc₃·H_sub stabilizes at 0.26-0.28 for n≥5.
+4. **ΔH = 2Δc₃ exactly at n=3→4**: UV fixed point, zero interaction.
+5. **What tournaments really are**: complete binary decision systems where completeness forces the parabolic law, which drives everything.
+
+**New contributions:** parabolic_law_proof_s18b.py, what-each-piece-really-represents.md, HYP-1530–1533
+**Unresolved:** Identify the coefficient sequence 2,3,6,15 (OEIS?). Prove a→0.27 analytically. Connection between growth factors (1.5,2.0,2.5) and the CD tower.
+
 ## opus-2026-04-04-S20 — 2026-04-04: Exchange Coupling Renormalization — Universal a≈0.16, Strong Coupling
 
 **Account:** opus

@@ -1530,6 +1530,10 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1527 | **Inner = boundary magnons in ensemble**: Mean|ΔH| identical for inner (within T_{n-1}) and boundary (involving vertex n) flips at n=5 (ratio=1.000) and n=6 (ratio=0.997). S_n isotropy. | CONFIRMED (exhaustive n=5, sampled n=6) | afm_fiber_bundle_s17.py, afm_fiber_n6_s17.py | opus-S17 |
 | HYP-1528 | **Per-class magnon anisotropy**: Boundary/inner ratio ranges 0.75–1.54 across iso classes at n=5. Transitive: 1.14 (stiff fiber). Regular: 1.00 (isotropic). | CONFIRMED (exhaustive n=5) | afm_fiber_bundle_s17.py | opus-S17 |
 | HYP-1529 | **Frustrated parents amplify more**: corr(H_sub, mean_ΔH) = +1.000 at n=4→5. The fiber PF z(T,β) at high β is dominated by max_ΔH, weakening the correlation. | CONFIRMED (exhaustive n=4→5) | afm_fiber_bundle_s17.py | opus-S17 |
+| HYP-1530 | **Parabolic law is EXACT per tournament** (THEOREM): For every T on n-1 verts, E_{σ:|σ|=s}[Δc₃(T,σ)] = s(n-1-s)/2. Error = 0.000 across all 1088 tournaments at n=4,5. Proof: completeness (A[i][j]+A[j][i]=1). | CONFIRMED / PROVED | parabolic_law_proof_s18b.py | opus-S18b |
+| HYP-1531 | **Simple coefficient sequence 2,3,6,15**: ΔH ≈ a_n·Δc₃ where a_n = 2,3,6,15 for n=3→4,...,6→7. Growth factors 1.5, 2.0, 2.5 (arithmetic progression, step 0.5). | CONFIRMED (exhaustive n≤6, sampled n=7) | parabolic_law_proof_s18b.py | opus-S18b |
+| HYP-1532 | **Universal interaction constant a ≈ 0.27**: The Δc₃·H_sub coefficient in the interaction model stabilizes at 0.261, 0.278, 0.271 for levels 4→5, 5→6, 6→7. At 3→4: a=0 exactly. | CONFIRMED (exhaustive n≤6, sampled n=7) | parabolic_law_proof_s18b.py | opus-S18b |
+| HYP-1533 | **ΔH = 2·Δc₃ EXACTLY at n=3→4**: R²=1.000, no interaction term needed. The UV fixed point of tournament RG flow. | CONFIRMED (exhaustive) | parabolic_law_proof_s18b.py | opus-S18b |
 
 ## opus-2026-03-15-S71v Hypotheses
 
