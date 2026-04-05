@@ -1,0 +1,142 @@
+======================================================================
+BURNSIDE PERTURBATION THEORY — GENERAL PRINCIPLE
+======================================================================
+
+── A000568 (Tournaments, base=2, odd parts) ──
+  a(3) =            2  ✓
+  a(4) =            4  ✓
+  a(5) =           12  ✓
+  a(6) =           56  ✓
+  a(7) =          456  ✓
+  a(8) =         6880  ✓
+  a(9) =       191536  ✓
+  a(10) =      9733056  ✓
+
+── A000088 (Simple graphs, base=2, all parts) ──
+  a(1) =            1  ✓
+  a(2) =            1  ✗ (got 1)
+  a(3) =            3  ✗ (got 3)
+  a(4) =            7  ✗ (got 7)
+  a(5) =           23  ✗ (got 23)
+  a(6) =          102  ✗ (got 102)
+  a(7) =          724  ✗ (got 724)
+  a(8) =         9374  ✗ (got 9374)
+  a(9) =       230427  ✗ (got 230427)
+  a(10) =     10824018  ✗ (got 10824018)
+
+── A000273 (Digraphs, base=2, all parts) ──
+  a(1) =               1  ✓
+  a(2) =               3  ✓
+  a(3) =              16  ✓
+  a(4) =             218  ✓
+  a(5) =            9608  ✓
+  a(6) =         1540944  ✓
+  a(7) =       882033440  ✓
+
+======================================================================
+PERTURBATION STRUCTURE — comparing sequences
+======================================================================
+
+── A000568 (Tournaments) at n=10 ──
+  #1: λ=1^10                 e=  45 ratio=  1.00000000 cum=0.99617938
+  #2: λ=3^1+1^7              e=  29 ratio=  0.00366211 cum=0.99982750
+  #3: λ=3^2+1^4              e=  19 ratio=  0.00012517 cum=0.99995219
+  #4: λ=5^1+1^5              e=  17 ratio=  0.00002253 cum=0.99997464
+  #5: λ=3^3+1^1              e=  15 ratio=  0.00002086 cum=0.99999542
+  #6: λ=5^1+3^1+1^2          e=   9 ratio=  0.00000176 cum=0.99999717
+  #7: λ=7^1+1^3              e=   9 ratio=  0.00000126 cum=0.99999843
+  #8: λ=5^2                  e=   9 ratio=  0.00000106 cum=0.99999948
+  Identity fraction: 0.996179
+  Top-3 cumulative: 0.99995219
+
+── A000088 (Graphs) at n=10 ──
+  #1: λ=1^10                 e=  45 ratio=  1.00000000 cum=0.89577357
+  #2: λ=2^1+1^8              e=  36 ratio=  0.08789062 cum=0.97450367
+  #3: λ=2^2+1^6              e=  30 ratio=  0.01922607 cum=0.99172588
+  #4: λ=3^1+1^7              e=  29 ratio=  0.00366211 cum=0.99500630
+  #5: λ=2^3+1^4              e=  25 ratio=  0.00300407 cum=0.99769727
+  #6: λ=2^4+1^2              e=  23 ratio=  0.00112653 cum=0.99870638
+  #7: λ=3^1+2^1+1^5          e=  22 ratio=  0.00060081 cum=0.99924458
+  #8: λ=3^1+2^2+1^3          e=  18 ratio=  0.00018775 cum=0.99941276
+  Identity fraction: 0.895774
+  Top-3 cumulative: 0.99172588
+
+── A000273 (Digraphs) at n=10 ──
+  #1: λ=1^10                 e=  90 ratio=  1.00000000 cum=0.99965615
+  #2: λ=2^1+1^8              e=  73 ratio=  0.00034332 cum=0.99999935
+  #3: λ=2^2+1^6              e=  60 ratio=  0.00000059 cum=0.99999994
+  #4: λ=3^1+1^7              e=  58 ratio=  0.00000006 cum=0.99999999
+  #5: λ=2^3+1^4              e=  51 ratio=  0.00000001 cum=1.00000000
+  #6: λ=2^4+1^2              e=  46 ratio=  0.00000000 cum=1.00000000
+  #7: λ=3^1+2^1+1^5          e=  45 ratio=  0.00000000 cum=1.00000000
+  #8: λ=4^1+1^6              e=  45 ratio=  0.00000000 cum=1.00000000
+  Identity fraction: 0.999656
+  Top-3 cumulative: 0.99999994
+
+======================================================================
+RG FLOW: Identity fraction vs n
+======================================================================
+
+── A000568 (Tournaments) ──
+  n= 4: id_frac=0.66666667, coupling=3.333333e-01, #partitions=2
+  n= 5: id_frac=0.71111111, coupling=2.888889e-01, #partitions=3
+  n= 6: id_frac=0.81269841, coupling=1.873016e-01, #partitions=4
+  n= 7: id_frac=0.91250348, coupling=8.749652e-02, #partitions=5
+  n= 8: id_frac=0.96767811, coupling=3.232189e-02, #partitions=6
+  n= 9: id_frac=0.98870424, coupling=1.129576e-02, #partitions=8
+  n=10: id_frac=0.99617938, coupling=3.820616e-03, #partitions=10
+  n=11: id_frac=0.99872098, coupling=1.279022e-03, #partitions=12
+  n=12: id_frac=0.99957800, coupling=4.220011e-04, #partitions=15
+  n=13: id_frac=0.99986336, coupling=1.366413e-04, #partitions=18
+  n=14: id_frac=0.99995658, coupling=4.342062e-05, #partitions=22
+  n=15: id_frac=0.99998644, coupling=1.356298e-05, #partitions=27
+
+── A000088 (Graphs) ──
+  n= 4: id_frac=0.35555556, coupling=6.444444e-01, #partitions=5
+  n= 5: id_frac=0.37101449, coupling=6.289855e-01, #partitions=7
+  n= 6: id_frac=0.44473398, coupling=5.552660e-01, #partitions=11
+  n= 7: id_frac=0.57419722, coupling=4.258028e-01, #partitions=15
+  n= 8: id_frac=0.71019721, coupling=2.898028e-01, #partitions=22
+  n= 9: id_frac=0.82183156, coupling=1.781684e-01, #partitions=30
+  n=10: id_frac=0.89577357, coupling=1.042264e-01, #partitions=42
+  n=11: id_frac=0.93994225, coupling=6.005775e-02, #partitions=56
+  n=12: id_frac=0.96544900, coupling=3.455100e-02, #partitions=77
+  n=13: id_frac=0.98013518, coupling=1.986482e-02, #partitions=101
+  n=14: id_frac=0.98860824, coupling=1.139176e-02, #partitions=135
+  n=15: id_frac=0.99349568, coupling=6.504323e-03, #partitions=176
+
+── A000273 (Digraphs) ──
+  n= 4: id_frac=0.78287462, coupling=2.171254e-01, #partitions=5
+  n= 5: id_frac=0.90946434, coupling=9.053566e-02, #partitions=7
+  n= 6: id_frac=0.96778863, coupling=3.221137e-02, #partitions=11
+  n= 7: id_frac=0.98933695, coupling=1.066305e-02, #partitions=15
+  n= 8: id_frac=0.99653361, coupling=3.466391e-03, #partitions=22
+  n= 9: id_frac=0.99889616, coupling=1.103838e-03, #partitions=30
+  n=10: id_frac=0.99965615, coupling=3.438533e-04, #partitions=42
+  n=11: id_frac=0.99989504, coupling=1.049558e-04, #partitions=56
+  n=12: id_frac=0.99996852, coupling=3.147607e-05, #partitions=77
+  n=13: id_frac=0.99999070, coupling=9.298759e-06, #partitions=101
+  n=14: id_frac=0.99999729, coupling=2.712049e-06, #partitions=135
+  n=15: id_frac=0.99999922, coupling=7.823142e-07, #partitions=176
+
+======================================================================
+PRACTICAL: Approximate values for large n
+======================================================================
+
+── A000568 (Tournaments) ──
+  n= 20: ~39 digits, 1st correction = 3.3178e-08 of identity
+  n= 50: ~305 digits, 1st correction = 4.9477e-25 of identity
+  n=100: ~1333 digits, 1st correction = 3.2200e-54 of identity
+
+── A000088 (Graphs) ──
+  n= 20: ~39 digits, 1st correction = 3.6240e-04 of identity
+  n= 50: ~305 digits, 1st correction = 2.1760e-12 of identity
+  n=100: ~1333 digits, 1st correction = 7.8097e-27 of identity
+
+── A000273 (Digraphs) ──
+  n= 20: ~97 digits, 1st correction = 1.3824e-09 of identity
+  n= 50: ~674 digits, 1st correction = 7.7308e-27 of identity
+  n=100: ~2823 digits, 1st correction = 2.4643e-56 of identity
+
+
+DONE.
