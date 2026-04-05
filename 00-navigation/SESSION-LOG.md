@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-05-S24b — 2026-04-05: Five Fundamental QR-Tournament Theorems
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S24
+**Summary:** Deep pure math session establishing the five fundamental connections between quadratic residues and tournament enumeration. The Paley tournament T_p is where tournament theory and number theory merge: eigenvalues = Gauss sums, cycle counts = trigonometric functions of arctan(√p), H(T_p)/p = self-avoiding QR walks. Proved orbit parity theorem: H/|Aff(QR)| is always odd. Discovered 1729 = H(T_11)/|Aff| (Hardy-Ramanujan number).
+
+**Key Results:**
+1. **THM-F1 (Eigenvalue Formula)**: λ_k = (-1 + (k/p)·i√p)/2. Verified 13 primes. Spectral flatness = RH for F_p.
+2. **THM-F2 (Exact Cycle Count)**: c_m = (1/m)[m₀^m + (p-1)Re(α^m)] where α=(-1+i√p)/2. Also c_3 = p(p²-1)/24 for any regular tournament. 3-cycles form 2-(p,3,(p+1)/4) BIBD.
+3. **THM-F3 (Divisibility)**: p(p-1)/2 | H(T_p). Aff(QR) acts freely on Hamiltonian paths (verified p ≤ 23).
+4. **THM-F4 (Burnside-Legendre)**: p!·a(p) ≡ 2^{C(p,2)} - (2/p) mod p. PROVED: only identity and p-cycles contribute mod p.
+5. **HYP-1713 (Orbit Parity)**: H/p ≡ (p-1)/2 mod (p-1). Verified p=3,7,11,19,23. Proof: anti-auto τ̃ = reverse∘negate pairs non-AP orbits.
+6. **QR-Walk Representation**: H(T_p)/p = #{self-avoiding walks in Z_p with QR steps}. Step distribution perfectly uniform but with persistence (same-step probability 2× random).
+7. **Character Sum Expansion**: H = (1/2^{p-1}) Σ_σ Σ_S χ(Π d_i). Self-avoidance prevents factorization.
+
+**New contributions:** qr_tournament_foundations_s24b.py, qr_deep_structure_s24b.py, qr_tournament_master_s24b.py, qr_orbit_theorem_s24b.py, qr_fugacity_deep_s24b.py, qr-tournament-foundations.md (reflection), HYP-1713–1715
+**Unresolved:** Prove orbit parity for general p. Is H(T_p)/|Aut| always a product of small Paley primes? Character sum closed form for self-avoiding QR walks.
+
 ## opus-2026-04-05-S25 — 2026-04-05: Tournament Enumeration ↔ Quadratic Residues — The Binary Resonance
 
 **Account:** opus

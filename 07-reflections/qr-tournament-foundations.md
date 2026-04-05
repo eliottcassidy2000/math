@@ -134,6 +134,39 @@ The fugacity x=2 in H(T) = I(Ω(T), 2) is the size of the image of the Legendre 
 
 **The most fundamental single fact:** The eigenvalue flatness of the Paley tournament IS the Riemann Hypothesis for F_p. RH couples tournaments to number theory. The fugacity x=2 is the glue.
 
+## The Self-Avoiding QR-Walk Representation (NEW)
+
+**H(T_p)/p = number of self-avoiding walks in Z_p with steps in QR.**
+
+A Hamiltonian path in T_p starting at vertex v_0 is determined by a sequence of steps d_1, ..., d_{p-1} where each d_i ∈ QR_p, and the partial sums 0, d_1, d_1+d_2, ..., sum all d_i are all distinct mod p. This is a self-avoiding random walk on Z_p restricted to QR steps.
+
+At p=7 (QR = {1,2,4}): exactly 27 such walks exist.
+
+**Step distribution is perfectly uniform:** Each QR element appears as a step exactly 1/3 of the time (54 out of 162 total steps).
+
+**But step-pair correlations are NOT uniform:** The conditional probability P(d_{i+1} = a | d_i = a) = 0.511, while P(d_{i+1} = b | d_i = a) = 0.244 for b ≠ a. The walk has a **persistence** property — same-step repetitions are roughly 2× as likely as switches.
+
+This persistence is because consecutive same-step moves (d, d) mean visiting positions x, x+d, x+2d, which is an arithmetic progression — and QR structure favors such progressions (the AP orbit is the most fundamental).
+
+## The Character Sum Expansion (NEW)
+
+H(T_p) = (1/2^{p-1}) Σ_σ Σ_{S⊆[p-1]} χ(Π_{i∈S} d_i)
+
+where σ ranges over self-avoiding walks and d_i = σ(i+1) - σ(i). This expresses the Hamiltonian path count as a CHARACTER SUM OVER SELF-AVOIDING WALKS — the deepest formula connecting QR arithmetic to tournament combinatorics.
+
+The self-avoidance constraint prevents factorization of the sum, which is why H(T_p) resists closed-form evaluation despite the simple structure of the Paley tournament.
+
+## Why the Fugacity is 2
+
+The number 2 appears in H(T) = I(Ω(T), 2) because:
+- 2 = |im(χ)| = |{+1, -1}| (Legendre symbol has binary image)
+- 2 = number of cycle traversal directions in Hamiltonian paths
+- 2 = order of complementation symmetry (T ↔ T^op)  
+- 2 = order of GF(2)* + 1 (tiling model characteristic)
+- 2^{(p-1)/2} ≡ (2/p) mod p (Euler's criterion — 2 is self-referential!)
+
+Tournament theory IS the theory of binary choices. QR theory IS the theory of binary classification. The Paley tournament identifies these two binary structures. The fugacity 2 is the common thread.
+
 ## Files
 
 - `04-computation/qr_tournament_foundations_s24b.py` — Level 1-10 analysis
@@ -142,3 +175,5 @@ The fugacity x=2 in H(T) = I(Ω(T), 2) is the size of the image of the Legendre 
 - `04-computation/qr_orbit_theorem_s24b.py` — Orbit parity theorem verification
 - `05-knowledge/results/qr_tournament_master_s24b.out` — Full output
 - `05-knowledge/results/qr_orbit_theorem_s24b.out` — Orbit analysis output
+- `04-computation/qr_fugacity_deep_s24b.py` — Fugacity and QR-walk analysis
+- `05-knowledge/results/qr_fugacity_deep_s24b.out` — Full fugacity output

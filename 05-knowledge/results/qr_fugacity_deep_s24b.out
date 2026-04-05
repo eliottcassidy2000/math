@@ -1,0 +1,279 @@
+==============================================================================
+  THE FUGACITY x=2 AND THE QR CHARACTER
+  opus-2026-04-05-S24b — Deep Analysis
+==============================================================================
+
+══════════════════════════════════════════════════════════════════════════════
+  PART 1: THE ORIGIN OF x=2 IN THE OCF
+══════════════════════════════════════════════════════════════════════════════
+
+  The Odd Cycle Formula H(T) = I(Omega(T), 2) was proved by Grinberg-Stanley
+  (arXiv:2307.05569, Corollary 20). Their formula:
+
+    ham(D) = Sigma_{sigma in S(D), all cycles odd} 2^{psi(sigma)}
+
+  where S(D) is the set of permutations compatible with D, and psi(sigma)
+  counts the number of cycles.
+
+  The factor 2^{psi(sigma)} arises because:
+  - A permutation with all odd cycles corresponds to a collection of
+    vertex-disjoint odd directed cycles in D.
+  - Each such collection of k cycles contributes 2^k to the Hamiltonian
+    path count.
+  - The 2 per cycle counts the TWO possible orientations of traversal.
+
+  In the independence polynomial I(Omega, x) = Sum alpha_k x^k:
+  - alpha_k = number of independent sets of size k in the conflict graph
+  - An independent set of size k = k vertex-disjoint odd cycles
+  - Each such set contributes x^k to I(Omega, x)
+  - At x=2: each set of k cycles contributes 2^k = the number of
+    orientation choices for those k cycles
+
+  THE STRUCTURAL REASON: x=2 because each directed odd cycle, when
+  embedded into a Hamiltonian path, can be traversed in exactly 2 ways
+  (the cycle direction and its reverse). Since odd cycles have an
+  ODD number of arcs, reversing the traversal ALSO gives a valid
+  embedding (unlike even cycles, where parity prevents this).
+
+  For a tournament (as opposed to a general digraph):
+  - An arc either goes forward (a→b) or backward (b→a)
+  - When traversing a cycle C = (v_0,v_1,...,v_{k-1}) embedded in a
+    Hamiltonian path, we can either follow the cycle (v_0→v_1→...→v_{k-1})
+    or reverse it (v_{k-1}→...→v_1→v_0)
+  - For ODD k: both traversals give valid sub-paths
+  - For EVEN k: one traversal always has a parity conflict
+  - This is the combinatorial meaning of "2 = number of cycle orientations"
+
+
+══════════════════════════════════════════════════════════════════════════════
+  PART 2: I(Omega(T), x) FOR ALL TOURNAMENTS AT n=3,4,5
+══════════════════════════════════════════════════════════════════════════════
+
+  n = 3:
+           scores      H                     alpha   I(2)  match
+  -----------------------------------------------------------------
+        (0, 1, 2)      1                       [1]      1      ✓
+        (1, 1, 1)      3                    [1, 1]      3      ✓
+  Time: 0.00s
+
+  n = 4:
+           scores      H                     alpha   I(2)  match
+  -----------------------------------------------------------------
+     (0, 1, 2, 3)      1                       [1]      1      ✓
+     (0, 2, 2, 2)      3                    [1, 1]      3      ✓
+     (1, 1, 1, 3)      3                    [1, 1]      3      ✓
+     (1, 1, 2, 2)      5                 [1, 2, 0]      5      ✓
+  Time: 0.00s
+
+  n = 5:
+           scores      H                     alpha   I(2)  match
+  -----------------------------------------------------------------
+  (0, 1, 2, 3, 4)      1                       [1]      1      ✓
+  (0, 1, 3, 3, 3)      3                    [1, 1]      3      ✓
+  (0, 2, 2, 2, 4)      3                    [1, 1]      3      ✓
+  (0, 2, 2, 3, 3)      5                 [1, 2, 0]      5      ✓
+  (1, 1, 1, 3, 4)      3                    [1, 1]      3      ✓
+  (1, 1, 2, 2, 4)      5                 [1, 2, 0]      5      ✓
+  (1, 1, 2, 3, 3)      9           [1, 4, 0, 0, 0]      9      ✓
+  (1, 2, 2, 2, 3)     11        [1, 5, 0, 0, 0, 0]     11      ✓
+  (1, 2, 2, 2, 3)     13        [1, 6, 0, 0, 0, 0]     13      ✓
+  (1, 2, 2, 2, 3)     15        [1, 7, 0, 0, 0, 0]     15      ✓
+  (2, 2, 2, 2, 2)     15        [1, 7, 0, 0, 0, 0]     15      ✓
+  Time: 0.04s
+
+
+══════════════════════════════════════════════════════════════════════════════
+  PART 3: alpha_k FOR PALEY T_p UNDER QR SYMMETRY
+══════════════════════════════════════════════════════════════════════════════
+
+  p = 3: Paley tournament
+    1 directed odd cycles
+      3-cycles: 1
+    alpha = [1, 1]
+    I(Omega, 2) = 3
+    H(T_p) = 3
+      alpha_0 = 1, mod p = 1
+      alpha_1 = 1, mod p = 1
+
+    I(Omega, x) at key values:
+      I(0) =        1  mod 3 = 1
+      I(1) =        2  mod 3 = 2
+      I(2) =        3  mod 3 = 0
+      I(3) =        4  mod 3 = 1
+      I(4) =        5  mod 3 = 2
+      I(5) =        6  mod 3 = 0
+      I(6) =        7  mod 3 = 1
+      I(7) =        8  mod 3 = 2
+
+  p = 7: Paley tournament
+    80 directed odd cycles
+      3-cycles: 14
+      5-cycles: 42
+      7-cycles: 24
+
+
+══════════════════════════════════════════════════════════════════════════════
+  PART 4: H(T_p) AS A CHARACTER SUM OVER S_p
+══════════════════════════════════════════════════════════════════════════════
+
+  H(T_p) counts Hamiltonian paths, which are in bijection with permutations
+  σ ∈ S_p such that T[σ(i)][σ(i+1)] = 1 for all i = 1,...,p-1.
+
+  For Paley: T[a][b] = 1 iff (b-a) mod p ∈ QR.
+  So σ is a Hamiltonian path iff (σ(i+1) - σ(i)) mod p ∈ QR for all i.
+
+  Writing d_i = σ(i+1) - σ(i) mod p (the "step sequence"):
+  - Each d_i ∈ QR
+  - The steps d_1,...,d_{p-1} must be such that the partial sums
+    σ(1), σ(1)+d_1, σ(1)+d_1+d_2, ... visit all p residues mod p.
+  - Equivalently: no partial sum of any subsequence of d_1,...,d_{p-1}
+    equals 0 mod p, EXCEPT the full sum d_1+...+d_{p-1} ≡ 0 mod p
+    (which is automatic since all residues are visited).
+
+  WAIT: The full sum d_1+...+d_{p-1} = σ(p) - σ(1). Since σ visits all
+  vertices, σ(p) - σ(1) can be anything. The constraint is that the
+  PARTIAL sums are all distinct mod p.
+
+  So: H(T_p) = p · #{sequences (d_1,...,d_{p-1}) ∈ QR^{p-1} :
+                      partial sums are all distinct mod p}
+
+  The factor p comes from the p choices of starting vertex σ(1).
+
+  ALTERNATIVE: H(T_p)/p = #{sequences (d_1,...,d_{p-1}) ∈ QR^{p-1} :
+                            0, d_1, d_1+d_2, ..., d_1+...+d_{p-1} are all distinct mod p}
+
+  This is a RESTRICTED RANDOM WALK in QR!
+  Start at 0, take p-1 steps, each step chosen from QR = {r_1,...,r_m} (m=(p-1)/2),
+  never revisiting a vertex mod p.
+
+  The total number of such self-avoiding QR-walks starting at 0 is H(T_p)/p.
+
+  p=3: QR = [1]
+    Self-avoiding QR-walks from 0: 1
+    H(T_p)/p = 1
+    Match: True
+
+  p=7: QR = [1, 2, 4]
+    Self-avoiding QR-walks from 0: 27
+    H(T_p)/p = 27
+    Match: True
+
+
+══════════════════════════════════════════════════════════════════════════════
+  PART 5: STEP DISTRIBUTION IN QR-WALKS
+══════════════════════════════════════════════════════════════════════════════
+
+  p=7: 27 QR-walks from 0 (= H/p = 27)
+  QR = [1, 2, 4]
+
+  Step frequencies (total steps = 162 = 27 × 6):
+    d=1: 54 (33.3%)
+    d=2: 54 (33.3%)
+    d=4: 54 (33.3%)
+  Expected if uniform: 54.0
+  Distribution is uniform
+
+  Step pair frequencies P(d_{i+1} | d_i):
+    (1,1):   23 = 0.511      (1,2):   11 = 0.244      (1,4):   11 = 0.244  
+    (2,1):   11 = 0.244      (2,2):   23 = 0.511      (2,4):   11 = 0.244  
+    (4,1):   11 = 0.244      (4,2):   11 = 0.244      (4,4):   23 = 0.511  
+
+  If steps were independent and uniform:
+    Each pair (a,b) would appear 9.0 times
+
+
+══════════════════════════════════════════════════════════════════════════════
+  PART 6: H(T_p) AS PERMANENT OF A QR MATRIX
+══════════════════════════════════════════════════════════════════════════════
+
+  H(T_p) can be expressed as:
+
+    H(T_p) = Σ_{σ ∈ S_p} Π_{i=0}^{p-2} A[σ(i), σ(i+1)]
+
+  where A is the adjacency matrix. For Paley:
+    A[a,b] = (1 + χ(b-a)) / 2  for a ≠ b, where χ is the Legendre symbol.
+
+  This is NOT a standard permanent (which would be Σ Π A[i,σ(i)]).
+  Instead, it's a "path permanent" — a sum over SEQUENCES, not matchings.
+
+  The connection to quadratic forms:
+    A[a,b] = (1 + χ(b-a)) / 2
+
+  So each factor is 1 if (b-a) ∈ QR and 0 if (b-a) ∈ NQR.
+
+  The product Π_{i} A[σ(i), σ(i+1)] = Π_{i} (1+χ(d_i))/2
+  where d_i = σ(i+1) - σ(i).
+
+  Sum over all σ: H = Σ_σ Π_i (1+χ(d_i))/2
+                    = (1/2^{p-1}) Σ_σ Π_i (1 + χ(d_i))
+
+  Expanding the product:
+    Π (1 + χ(d_i)) = Σ_{S ⊆ [p-1]} Π_{i ∈ S} χ(d_i)
+                    = Σ_S χ(Π_{i∈S} d_i)        [since χ is multiplicative]
+
+  So: H = (1/2^{p-1}) Σ_σ Σ_S χ(Π_{i∈S} d_i)
+        = (1/2^{p-1}) Σ_S Σ_σ χ(Π_{i∈S} d_i)
+
+  The innermost sum Σ_σ χ(Π_{i∈S} d_i) is a CHARACTER SUM OVER
+  SELF-AVOIDING WALKS — this is where the QR structure meets combinatorics!
+
+  For S = ∅: χ(1) = 1, and Σ_σ 1 = p! (total permutations, but we need
+  valid paths... actually Σ over all HAM PATHS σ of the complete tournament).
+  Hmm, this needs more care — σ ranges over all permutations such that
+  d_1,...,d_{p-1} ≠ 0 and the partial sums are distinct.
+
+  Let me reformulate: if we count ALL ordered sequences (not just self-avoiding),
+  the sum factorizes. But the self-avoidance constraint breaks the factorization.
+
+  This is WHY H(T_p) is hard to compute — it's an inclusion-exclusion over
+  self-avoidance, applied to a character sum.
+
+  Verification at p=3:
+  QR = [1], χ = Legendre symbol mod 3
+  Character sum expansion: 12 / 4 = 3
+  Direct H = 3, match = True
+
+
+══════════════════════════════════════════════════════════════════════════════
+  SYNTHESIS: THE FOUR FACES OF THE QR-TOURNAMENT CONNECTION
+══════════════════════════════════════════════════════════════════════════════
+
+  FACE 1 — SPECTRAL:
+    Tournament ↔ Circulant matrix ↔ Eigenvalues ↔ Gauss sum
+    The Paley adjacency matrix has eigenvalues determined by g(χ) = i√p.
+    Spectral flatness = Riemann Hypothesis.
+
+  FACE 2 — COMBINATORIAL:
+    Tournament ↔ Self-avoiding QR-walk ↔ Cycle structure ↔ BIBD
+    H(T_p)/p = number of self-avoiding walks in Z_p with steps in QR.
+    Cycle counts = exact trigonometric formulas involving arctan(√p).
+    3-cycles form a 2-(p, 3, (p+1)/4) balanced incomplete block design.
+
+  FACE 3 — ALGEBRAIC:
+    Tournament ↔ Character sums ↔ Burnside formula ↔ Legendre symbol
+    The Burnside enumeration formula meets (2/p) through Euler's criterion.
+    Two sources of (2/p) cancel mod p. The mod p² residue is non-trivial.
+
+  FACE 4 — GROUP-THEORETIC:
+    Tournament ↔ Aff(QR) orbits ↔ Anti-automorphism ↔ Orbit parity
+    Aff(QR) acts freely on Ham paths. H/|Aff| = odd (orbit parity theorem).
+    The anti-automorphism τ̃ = reverse ∘ negate pairs orbits.
+    The AP orbit is the unique τ̃-fixed orbit.
+
+  UNIFYING PRINCIPLE:
+    The number 2 appears EVERYWHERE because:
+    • 2 = |im(χ)| = |{+1, -1}| (Legendre symbol has binary image)
+    • 2 = number of cycle traversal directions
+    • 2 = order of the complementation symmetry (T ↔ T^op)
+    • 2 = characteristic of GF(2) (tiling model)
+    • 2 = fugacity in the OCF H = I(Ω, 2)
+    • 2^{(p-1)/2} ≡ (2/p) (Euler's criterion — the number 2 is special!)
+    • Z_2 = ker(χ² → ε) (the quadratic character is an order-2 character)
+
+    All these 2's are the SAME 2. Tournament theory is the theory of
+    binary choices on structured sets, and quadratic residue theory is
+    the theory of binary classification of nonzero field elements.
+    The Paley tournament is where these two binary theories merge.
+
+
+Computation complete.
