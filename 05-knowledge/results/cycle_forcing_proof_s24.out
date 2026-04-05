@@ -1,0 +1,170 @@
+======================================================================
+THEOREM: c₃ ≥ 3 on 5 vertices forces c₅ ≥ 1
+======================================================================
+
+Step 1: Score sequences with c₃ = 3 at n=5
+  Need: Σ C(sᵢ,2) = C(5,3) - 3 = 7, Σ sᵢ = C(5,2) = 10
+  Score sequences with c₃=3: [(1, 1, 2, 3, 3)]
+  UNIQUE: (1, 1, 2, 3, 3)
+
+Step 2: All tournaments with score (1,1,2,3,3)
+  Total tournaments with score (1,1,2,3,3): 240
+  Of these, tournaments with c₅ = 0: 0
+
+  *** THEOREM VERIFIED: Every tournament with c₃ = 3 on 5 vertices has c₅ ≥ 1 ***
+
+Step 3: Can c₃ = 2 have c₅ = 0? (should be YES)
+  Tournaments with c₃ = 2: 240
+  Of these with c₅ = 0: 240
+
+
+COROLLARY: H = 7 is impossible for all tournaments on n = 5 vertices
+  At n=5: H = 1 + 2α₁ where α₁ = c₃ + c₅ (since α₂ = 0)
+  H = 7 requires α₁ = 3
+  Case 1: c₃ ≥ 3 → c₅ ≥ 1 (by theorem above), so α₁ ≥ 4
+  Case 2: c₃ ≤ 2 → c₅ = 0 (verified), so α₁ = c₃ ≤ 2
+  In both cases α₁ ≠ 3, so H ≠ 7. ∎
+
+  Complete (c₃, c₅) table at n=5:
+    c₃=0, c₅=0: α₁=0, H=1, count=120
+    c₃=1, c₅=0: α₁=1, H=3, count=120
+    c₃=2, c₅=0: α₁=2, H=5, count=240
+    c₃=3, c₅=1: α₁=4, H=9, count=240
+    c₃=4, c₅=1: α₁=5, H=11, count=120
+    c₃=4, c₅=2: α₁=6, H=13, count=120
+    c₃=4, c₅=3: α₁=7, H=15, count=40
+    c₃=5, c₅=2: α₁=7, H=15, count=24
+
+
+======================================================================
+THEOREM: Divisor Decomposition of the Cycle Exponent
+======================================================================
+
+The cycle exponent c(λ) admits the decomposition:
+
+  2c(λ) = Σ_{d odd} φ(d) · N_d² − N_1
+
+where N_d = Σ_{k: d|k, k odd} m_k (number of parts divisible by d)
+and φ is Euler's totient function.
+
+This is equivalent to:
+
+  2c(λ) = Σ_{d|k, d|l, d odd} φ(d) · m_k · m_l − Σ_k m_k
+
+since Σ_d φ(d) · N_d² = Σ_{k,l} m_k m_l gcd(k,l) by Möbius inversion
+(because gcd(k,l) = Σ_{d|gcd(k,l)} φ(d)).
+
+Verification: standard c(λ) vs divisor decomposition c(λ)
+  n=3: 2 partitions, all match ✓
+  n=4: 2 partitions, all match ✓
+  n=5: 3 partitions, all match ✓
+  n=6: 4 partitions, all match ✓
+  n=7: 5 partitions, all match ✓
+  n=8: 6 partitions, all match ✓
+  n=9: 8 partitions, all match ✓
+  n=10: 10 partitions, all match ✓
+  n=11: 12 partitions, all match ✓
+  n=12: 15 partitions, all match ✓
+  n=13: 18 partitions, all match ✓
+  n=14: 22 partitions, all match ✓
+  n=15: 27 partitions, all match ✓
+
+  DIVISOR DECOMPOSITION VERIFIED for all odd-part partitions of n=3..15
+
+
+======================================================================
+THEOREM: Deficit of (k, 1^{n-k})
+======================================================================
+
+For the partition λ = (k, 1^{n-k}) where k is odd ≥ 3:
+
+  Δ(λ) = C(n,2) − c(λ) = (k−1)(2n−k−1)/2
+
+Proof: Using divisor decomposition,
+  N₁ = (n−k) + 1 = n−k+1  (all parts divisible by 1)
+  N_d = 1 for each odd d > 1 dividing k
+  All other N_d = 0.
+
+  2c = φ(1)·(n−k+1)² + Σ_{d|k, d>1} φ(d)·1 − (n−k+1)
+     = (n−k+1)² + (k−1) − (n−k+1)    [since Σ_{d|k} φ(d) = k]
+     = (n−k+1)(n−k) + (k−1)
+     = n² − (2k−1)n + k² − 1
+
+  2Δ = 2C(n,2) − 2c = (n²−n) − (n²−(2k−1)n+k²−1)
+     = (2k−2)n − k² + 1 = (k−1)(2n−k−1)
+
+  Δ = (k−1)(2n−k−1)/2.  ∎
+
+Verification:
+  n=5, k=3: Δ_computed=6, Δ_formula=6 ✓
+  n=5, k=5: Δ_computed=8, Δ_formula=8 ✓
+  n=6, k=3: Δ_computed=8, Δ_formula=8 ✓
+  n=6, k=5: Δ_computed=12, Δ_formula=12 ✓
+  n=7, k=3: Δ_computed=10, Δ_formula=10 ✓
+  n=7, k=5: Δ_computed=16, Δ_formula=16 ✓
+  n=7, k=7: Δ_computed=18, Δ_formula=18 ✓
+
+Minimum deficit partition:
+  n=5: min Δ = 6 at k=3, equals 2(n-2) = 6: ✓
+  n=6: min Δ = 8 at k=3, equals 2(n-2) = 8: ✓
+  n=7: min Δ = 10 at k=3, equals 2(n-2) = 10: ✓
+  n=8: min Δ = 12 at k=3, equals 2(n-2) = 12: ✓
+  n=9: min Δ = 14 at k=3, equals 2(n-2) = 14: ✓
+  n=10: min Δ = 16 at k=3, equals 2(n-2) = 16: ✓
+  n=11: min Δ = 18 at k=3, equals 2(n-2) = 18: ✓
+  n=12: min Δ = 20 at k=3, equals 2(n-2) = 20: ✓
+  n=13: min Δ = 22 at k=3, equals 2(n-2) = 22: ✓
+  n=14: min Δ = 24 at k=3, equals 2(n-2) = 24: ✓
+  n=15: min Δ = 26 at k=3, equals 2(n-2) = 26: ✓
+  n=16: min Δ = 28 at k=3, equals 2(n-2) = 28: ✓
+  n=17: min Δ = 30 at k=3, equals 2(n-2) = 30: ✓
+  n=18: min Δ = 32 at k=3, equals 2(n-2) = 32: ✓
+  n=19: min Δ = 34 at k=3, equals 2(n-2) = 34: ✓
+
+
+======================================================================
+THEOREM: Deficit of (k, l, 1^{n-k-l})
+======================================================================
+
+For λ = (k, l, 1^{n-k-l}) where k ≥ l, both odd ≥ 3:
+
+  Δ(k,l,...) = Δ(k,1^{n-k}) + Δ(l,1^{n-l}) − Δ(1^n) − gcd(k,l) + correction
+
+More precisely:
+  Δ(k, l, 1^{n-k-l}) = [(k-1)(2n-k-1) + (l-1)(2n-l-1)]/2 − (k-1)(l-1) − gcd(k,l) + 1
+
+The gcd(k,l) term is the INTERACTION: parts sharing a common divisor
+reduce the deficit less than independent parts would.
+
+Verification of two-part deficit:
+  n=7, (k,l)=(3,3): Δ=14, formula=14, interaction=6, gcd=3 ✓
+  n=8, (k,l)=(3,3): Δ=18, formula=18, interaction=6, gcd=3 ✓
+  n=8, (k,l)=(5,3): Δ=24, formula=24, interaction=8, gcd=1 ✓
+  n=9, (k,l)=(3,3): Δ=22, formula=22, interaction=6, gcd=3 ✓
+  n=9, (k,l)=(5,3): Δ=30, formula=30, interaction=8, gcd=1 ✓
+
+
+======================================================================
+2-ADIC VALUATION OF T(n)
+======================================================================
+
+  n | T(n) | v₂(T(n)) | min c(λ) | min Δ | theoretical v₂
+  --|------|----------|----------|-------|----------------
+   3 |            2 |        1 |        1 |     2 | (n-1)/2 = 1
+   4 |            4 |        2 |        2 |     4 | n/2 = 2
+   5 |           12 |        2 |        2 |     8 | (n-1)/2 = 2
+   6 |           56 |        3 |        3 |    12 | n/2 = 3
+   7 |          456 |        3 |        3 |    18 | (n-1)/2 = 3
+   8 |         6880 |        5 |        4 |    24 | n/2 = 4
+   9 |       191536 |        4 |        4 |    32 | (n-1)/2 = 4
+  10 |      9733056 |        6 |        5 |    40 | n/2 = 5
+  11 |    903753248 |        5 |        5 |    50 | (n-1)/2 = 5
+  12 | 154108311168 |        7 |        6 |    60 | n/2 = 6
+  13 | 48542114686912 |        6 |        6 |    72 | (n-1)/2 = 6
+  14 | 28401423719122304 |        7 |        7 |    84 | n/2 = 7
+  15 | 31021002160355166848 |        7 |        7 |    98 | (n-1)/2 = 7
+  16 | 63530415842308265100288 |       10 |        8 |   112 | n/2 = 8
+  17 | 244912778438520759443245824 |        8 |        8 |   128 | (n-1)/2 = 8
+  18 | 1783398846284777975419600287232 |        9 |        9 |   144 | n/2 = 9
+  19 | 24605641171260376770598003978281472 |        9 |        9 |   162 | (n-1)/2 = 9
+  20 | 645022068557873570931850526424042500096 |       12 |       10 |   180 | n/2 = 10
