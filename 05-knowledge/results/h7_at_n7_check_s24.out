@@ -1,0 +1,36 @@
+============================================================
+Sampling n=7 for H=7
+============================================================
+  ...50/500 α₁=3 found in 28898 trials, H dist so far: {15: 50}
+  ...100/500 α₁=3 found in 56069 trials, H dist so far: {15: 100}
+  ...150/500 α₁=3 found in 91826 trials, H dist so far: {15: 150}
+  ...200/500 α₁=3 found in 123220 trials, H dist so far: {15: 200}
+  ...250/500 α₁=3 found in 155353 trials, H dist so far: {15: 250}
+  ...300/500 α₁=3 found in 188565 trials, H dist so far: {15: 300}
+  ...350/500 α₁=3 found in 226323 trials, H dist so far: {15: 350}
+  ...400/500 α₁=3 found in 257452 trials, H dist so far: {15: 400}
+  ...450/500 α₁=3 found in 282622 trials, H dist so far: {15: 450}
+  ...500/500 α₁=3 found in 314718 trials, H dist so far: {15: 500}
+
+Results: checked 314718 tournaments, found 500 with α₁=3
+H distribution among α₁=3: {15: 500}
+α₂ distribution: {2: 500}
+H=7 found: 0
+
+============================================================
+Constructive approach: 3 three-cycles sharing a vertex
+============================================================
+Found 0 configurations with α₁=3
+
+============================================================
+Exhaustive search for H=7 at n=7 (DP + sampling)
+============================================================
+
+200K random n=7 tournaments: 0 with H=7
+
+Full H distribution from 50K samples at n=7:
+H ≤ 30: {1: 129, 3: 214, 5: 501, 9: 729, 11: 318, 13: 350, 15: 763, 17: 486, 19: 511, 23: 969, 25: 603, 27: 519, 29: 1200}
+Missing odd H ≤ 49 (in 50K sample): [7, 21]
+
+
+DONE.

@@ -1,0 +1,54 @@
+======================================================================
+H-LANDSCAPE UNIMODALITY ANALYSIS
+======================================================================
+
+==================================================
+n = 4, m = 6, total tournaments = 64
+==================================================
+
+  Local maxima search: 0.0s
+  Global max H = 5
+  Local maxima by H value: {5: 24}
+  ALL local maxima are at H = 5. H-LANDSCAPE IS UNIMODAL.
+
+  Gradient ascent from all 64 tournaments: 0.0s
+  Terminal H values: {5: 64}
+  Max steps needed: 2
+  CONFIRMED: Every tournament reaches H = 5 by gradient ascent.
+
+==================================================
+n = 5, m = 10, total tournaments = 1024
+==================================================
+
+  Local maxima search: 0.2s
+  Global max H = 15
+  Local maxima by H value: {15: 64}
+  ALL local maxima are at H = 15. H-LANDSCAPE IS UNIMODAL.
+
+  Gradient ascent from all 1024 tournaments: 1.2s
+  Terminal H values: {15: 1024}
+  Max steps needed: 4
+  CONFIRMED: Every tournament reaches H = 15 by gradient ascent.
+
+==================================================
+n = 6, m = 15, total tournaments = 32768
+==================================================
+
+  Finding global max by sampling...
+
+  Gradient ascent from 2000 random tournaments: 10.8s
+  Terminal H values: {45: 1783, 37: 217}
+  Max steps needed: 5
+
+  *** NON-GLOBAL TERMINALS FOUND: {37: 217} ***
+  This means local maxima exist at n=6!
+    H=37: 217 tournaments (10.8%)
+
+  Direct local max search on 5000 random tournaments...
+  Non-global local maxima found: 125/5000
+  H-values of local maxima: {37: 125}
+
+  H-max tournaments at each n:
+    n=3: max(H)=3, count=2/8 (25.0%)
+    n=4: max(H)=5, count=24/64 (37.5%)
+    n=5: max(H)=15, count=64/1024 (6.2%)

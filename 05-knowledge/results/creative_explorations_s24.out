@@ -1,0 +1,421 @@
+======================================================================
+EXPERIMENT 1: TOURNAMENT CELLULAR AUTOMATON
+======================================================================
+
+--- n = 4, 6 arcs, 64 tournaments ---
+
+  Rule: Majority
+    Trials: 64, Time: 0.0s
+    Fixed points: 24 distinct (48 total convergences)
+      bits=0: H=1, c3=0, score=(0, 1, 2, 3), basin=2
+      bits=1: H=1, c3=0, score=(0, 1, 2, 3), basin=2
+      bits=3: H=1, c3=0, score=(0, 1, 2, 3), basin=2
+      bits=33: H=1, c3=0, score=(0, 1, 2, 3), basin=2
+      bits=11: H=1, c3=0, score=(0, 1, 2, 3), basin=2
+    Limit cycles: {2: 16}
+    From transitive: H trajectory = [1]
+      -> settled to H=1, c3=0, cycle_len=1
+
+  Rule: TriStress
+    Trials: 64, Time: 0.0s
+    Fixed points: 40 distinct (64 total convergences)
+      bits=0: H=1, c3=0, score=(0, 1, 2, 3), basin=2
+      bits=1: H=1, c3=0, score=(0, 1, 2, 3), basin=2
+      bits=3: H=1, c3=0, score=(0, 1, 2, 3), basin=2
+      bits=7: H=1, c3=0, score=(0, 1, 2, 3), basin=2
+      bits=8: H=1, c3=0, score=(0, 1, 2, 3), basin=2
+    From transitive: H trajectory = [1]
+      -> settled to H=1, c3=0, cycle_len=1
+
+  Rule: H-Gradient
+    Trials: 64, Time: 0.0s
+    Fixed points: 24 distinct (64 total convergences)
+      bits=4: H=5, c3=2, score=(1, 1, 2, 2), basin=3
+      bits=17: H=5, c3=2, score=(1, 1, 2, 2), basin=3
+      bits=6: H=5, c3=2, score=(1, 1, 2, 2), basin=3
+      bits=12: H=5, c3=2, score=(1, 1, 2, 2), basin=3
+      bits=13: H=5, c3=2, score=(1, 1, 2, 2), basin=3
+    From transitive: H trajectory = [1, 5]
+      -> settled to H=5, c3=2, cycle_len=1
+
+--- n = 5, 10 arcs, 1024 tournaments ---
+
+  Rule: Majority
+    Trials: 200, Time: 0.0s
+    Fixed points: 90 distinct (149 total convergences)
+      bits=1023: H=1, c3=0, score=(0, 1, 2, 3, 4), basin=5
+      bits=969: H=1, c3=0, score=(0, 1, 2, 3, 4), basin=4
+      bits=602: H=1, c3=0, score=(0, 1, 2, 3, 4), basin=4
+      bits=510: H=1, c3=0, score=(0, 1, 2, 3, 4), basin=3
+      bits=50: H=1, c3=0, score=(0, 1, 2, 3, 4), basin=3
+    Limit cycles: {2: 51}
+    From transitive: H trajectory = [1]
+      -> settled to H=1, c3=0, cycle_len=1
+
+  Rule: TriStress
+    Trials: 200, Time: 0.0s
+    Fixed points: 130 distinct (194 total convergences)
+      bits=531: H=1, c3=0, score=(0, 1, 2, 3, 4), basin=4
+      bits=252: H=3, c3=1, score=(0, 2, 2, 2, 4), basin=3
+      bits=592: H=1, c3=0, score=(0, 1, 2, 3, 4), basin=3
+      bits=895: H=1, c3=0, score=(0, 1, 2, 3, 4), basin=3
+      bits=888: H=1, c3=0, score=(0, 1, 2, 3, 4), basin=3
+    Limit cycles: {4: 6}
+    From transitive: H trajectory = [1]
+      -> settled to H=1, c3=0, cycle_len=1
+
+  Rule: H-Gradient
+    Trials: 200, Time: 0.3s
+    Fixed points: 58 distinct (200 total convergences)
+      bits=235: H=15, c3=4, score=(1, 2, 2, 2, 3), basin=8
+      bits=716: H=15, c3=4, score=(1, 2, 2, 2, 3), basin=8
+      bits=195: H=15, c3=4, score=(1, 2, 2, 2, 3), basin=7
+      bits=871: H=15, c3=4, score=(1, 2, 2, 2, 3), basin=7
+      bits=930: H=15, c3=4, score=(1, 2, 2, 2, 3), basin=7
+    From transitive: H trajectory = [1, 9, 15]
+      -> settled to H=15, c3=4, cycle_len=1
+
+======================================================================
+EXPERIMENT 2: RANDOM WALK PHASE TRANSITION
+======================================================================
+
+--- n = 5, m = 10 arcs ---
+  200 trials x 30 flips, time: 0.3s
+
+  Step | mean(H)    | std(H)   | mean(c3) | mean(sv)
+  -----|------------|----------|----------|--------
+     0 |        1.0 |      0.0 |     0.00 |  2.000
+     1 |        2.4 |      1.9 |     0.68 |  1.728
+     2 |        3.9 |      3.2 |     1.24 |  1.504
+     3 |        5.0 |      3.9 |     1.60 |  1.360
+     4 |        5.7 |      4.0 |     1.90 |  1.240
+     5 |        6.5 |      4.3 |     2.13 |  1.148
+     6 |        7.0 |      4.2 |     2.33 |  1.066
+     7 |        7.1 |      4.2 |     2.36 |  1.056
+     8 |        6.7 |      4.0 |     2.27 |  1.094
+     9 |        7.5 |      4.0 |     2.52 |  0.990
+    10 |        8.1 |      4.0 |     2.69 |  0.922
+    11 |        8.0 |      4.0 |     2.67 |  0.930
+    12 |        8.0 |      4.3 |     2.63 |  0.946
+    13 |        8.1 |      4.2 |     2.66 |  0.936
+    14 |        7.9 |      4.1 |     2.67 |  0.932
+    15 |        7.5 |      4.1 |     2.52 |  0.994
+    16 |        7.2 |      4.3 |     2.40 |  1.038
+    17 |        7.2 |      4.2 |     2.41 |  1.036
+    18 |        7.3 |      4.2 |     2.41 |  1.036
+    19 |        7.1 |      4.4 |     2.37 |  1.052
+    20 |        7.1 |      4.2 |     2.37 |  1.052
+    21 |        7.3 |      4.3 |     2.42 |  1.032
+    22 |        7.5 |      4.4 |     2.49 |  1.004
+    23 |        7.1 |      4.0 |     2.38 |  1.048
+    24 |        7.4 |      4.1 |     2.50 |  1.002
+    25 |        7.6 |      4.2 |     2.52 |  0.992
+    26 |        7.0 |      4.1 |     2.35 |  1.060
+    27 |        6.9 |      4.2 |     2.33 |  1.068
+    28 |        7.5 |      4.3 |     2.50 |  1.000
+    29 |        7.5 |      4.2 |     2.49 |  1.004
+
+  Steepest H increase at step 2 (delta_H = 1.4)
+  H ranges: start=1.0, end=7.5
+  Theoretical mean(H) for random tournament: 7.5
+  H crosses midpoint (4.2) at step 3 = 0.30*m
+
+--- n = 6, m = 15 arcs ---
+  200 trials x 45 flips, time: 1.1s
+
+  Step | mean(H)    | std(H)   | mean(c3) | mean(sv)
+  -----|------------|----------|----------|--------
+     0 |        1.0 |      0.0 |     0.00 |  2.917
+     1 |        3.6 |      3.7 |     1.03 |  2.572
+     2 |        6.7 |      7.2 |     1.83 |  2.307
+     3 |        8.9 |      8.5 |     2.40 |  2.117
+     4 |       10.9 |      9.2 |     2.91 |  1.947
+     5 |       12.7 |      9.9 |     3.25 |  1.833
+     6 |       15.1 |     11.2 |     3.65 |  1.702
+     7 |       15.8 |     12.2 |     3.77 |  1.662
+     8 |       16.4 |     11.2 |     3.98 |  1.592
+     9 |       18.3 |     11.3 |     4.30 |  1.483
+    10 |       21.1 |     12.2 |     4.73 |  1.340
+    11 |       21.8 |     12.2 |     4.88 |  1.288
+    12 |       21.4 |     12.0 |     4.82 |  1.312
+    13 |       22.6 |     11.7 |     4.99 |  1.253
+    14 |       22.8 |     12.2 |     5.03 |  1.240
+    15 |       22.6 |     12.2 |     5.02 |  1.243
+    16 |       21.6 |     11.4 |     4.88 |  1.290
+    17 |       22.2 |     12.0 |     4.96 |  1.265
+    18 |       22.6 |     12.3 |     5.01 |  1.247
+    19 |       22.1 |     12.1 |     4.94 |  1.270
+    20 |       21.6 |     11.6 |     4.92 |  1.275
+    21 |       23.7 |     10.9 |     5.25 |  1.168
+    22 |       22.7 |     11.3 |     5.14 |  1.203
+    23 |       22.7 |     11.8 |     5.11 |  1.213
+    24 |       23.0 |     11.9 |     5.12 |  1.210
+    25 |       22.8 |     11.7 |     5.08 |  1.223
+    26 |       22.5 |     11.9 |     5.10 |  1.217
+    27 |       21.8 |     12.3 |     4.90 |  1.283
+    28 |       22.6 |     12.6 |     4.95 |  1.267
+    29 |       23.5 |     12.5 |     5.12 |  1.212
+
+  Steepest H increase at step 2 (delta_H = 3.1)
+  H ranges: start=1.0, end=21.9
+  Theoretical mean(H) for random tournament: 22.5
+  H crosses midpoint (11.8) at step 5 = 0.33*m
+
+--- n = 7, m = 21 arcs ---
+  50 trials x 63 flips, time: 0.6s
+
+  Step | mean(H)    | std(H)   | mean(c3) | mean(sv)
+  -----|------------|----------|----------|--------
+     0 |        1.0 |      0.0 |     0.00 |  4.000
+     1 |        5.7 |      8.0 |     1.34 |  3.617
+     2 |       13.6 |     20.2 |     2.46 |  3.297
+     3 |       17.4 |     22.4 |     3.28 |  3.063
+     4 |       23.6 |     24.9 |     4.22 |  2.794
+     5 |       27.5 |     24.5 |     4.64 |  2.674
+     6 |       35.4 |     29.7 |     5.20 |  2.514
+     7 |       40.3 |     31.1 |     5.78 |  2.349
+     8 |       41.2 |     34.2 |     5.92 |  2.309
+     9 |       49.5 |     36.2 |     6.54 |  2.131
+    10 |       49.4 |     37.8 |     6.44 |  2.160
+    11 |       52.8 |     39.5 |     6.74 |  2.074
+    12 |       54.2 |     40.6 |     6.72 |  2.080
+    13 |       58.1 |     42.5 |     7.32 |  1.909
+    14 |       57.6 |     42.8 |     7.40 |  1.886
+    15 |       63.6 |     45.2 |     7.62 |  1.823
+    16 |       64.4 |     45.2 |     7.72 |  1.794
+    17 |       72.8 |     41.5 |     8.38 |  1.606
+    18 |       73.2 |     41.4 |     8.48 |  1.577
+    19 |       71.6 |     40.4 |     8.40 |  1.600
+    20 |       67.2 |     40.4 |     8.22 |  1.651
+    22 |       72.9 |     39.5 |     8.44 |  1.589
+    24 |       76.6 |     41.5 |     8.52 |  1.566
+    26 |       82.7 |     42.2 |     8.90 |  1.457
+    28 |       74.4 |     41.5 |     8.38 |  1.606
+    30 |       72.2 |     41.0 |     8.32 |  1.623
+    32 |       87.9 |     42.7 |     9.28 |  1.349
+    34 |       76.8 |     43.4 |     8.54 |  1.560
+    36 |       87.2 |     42.0 |     9.28 |  1.349
+    38 |       81.0 |     45.5 |     8.86 |  1.469
+
+  Steepest H increase at step 32 (delta_H = 15.7)
+  H ranges: start=1.0, end=85.2
+  Theoretical mean(H) for random tournament: 78.8
+  H crosses midpoint (39.9) at step 7 = 0.33*m
+
+======================================================================
+EXPERIMENT 3: SPECTRAL ANALYSIS OF ISO-CLASS METAGRAPH
+======================================================================
+
+============================================================
+n = 4
+============================================================
+  Enumerating all 64 tournaments on n=4...
+  4 iso classes found in 0.0s
+  Building wiggly adjacency matrix...
+  5 edges in the metagraph
+  Build time: 0.0s
+
+  Basic metagraph stats:
+    Vertices (iso classes): 4
+    Edges: 5
+    SC classes: 2
+    Degree range: 2 to 3, mean=2.5
+    Density: 0.833
+
+  Eigenvalue spectrum (binary adj):
+    lambda_1 = 2.5616
+    lambda_2 = 0.0000
+    Spectral gap = 2.5616
+    lambda_2/lambda_1 = 0.0000
+    lambda_3 = -1.0000
+    lambda_min = -1.5616
+
+  Laplacian spectrum:
+    mu_1 (should be 0) = 0.000000
+    mu_2 (algebraic connectivity) = 2.0000
+    mu_max = 4.0000
+    Cheeger bound: h(G) >= 1.0000
+    Mixing time bound: t_mix <= 0.69
+
+  Fiedler ordering (algebraic 'geometry' of metagraph):
+    class_id: H, c3, score, SC?, Fiedler_val
+      1: H=    3, c3=  1, score=(1, 1, 1, 3),   , f=-0.7071
+      0: H=    1, c3=  0, score=(0, 1, 2, 3), SC, f=-0.0000
+      2: H=    5, c3=  2, score=(1, 1, 2, 2), SC, f=+0.0000
+      3: H=    3, c3=  1, score=(0, 2, 2, 2),   , f=+0.7071
+
+  Weighted adjacency spectrum (multiplicity of connections):
+    lambda_1 = 123.0
+    lambda_2 = 0.0
+    Spectral gap = 123.0
+
+  Clique number (lower bound): omega >= 3
+  Bipartite: False
+
+  Correlations:
+    corr(Fiedler, H) = 0.0000
+    corr(Fiedler, c3) = 0.0000
+
+
+============================================================
+n = 5
+============================================================
+  Enumerating all 1024 tournaments on n=5...
+  12 iso classes found in 0.3s
+  Building wiggly adjacency matrix...
+  30 edges in the metagraph
+  Build time: 0.6s
+
+  Basic metagraph stats:
+    Vertices (iso classes): 12
+    Edges: 30
+    SC classes: 8
+    Degree range: 2 to 7, mean=5.0
+    Density: 0.455
+
+  Eigenvalue spectrum (binary adj):
+    lambda_1 = 5.5823
+    lambda_2 = 1.9417
+    Spectral gap = 3.6406
+    lambda_2/lambda_1 = 0.3478
+    lambda_3 = 1.2234
+    lambda_min = -3.2551
+
+  Laplacian spectrum:
+    mu_1 (should be 0) = 0.000000
+    mu_2 (algebraic connectivity) = 1.6026
+    mu_max = 9.2600
+    Cheeger bound: h(G) >= 0.8013
+    Mixing time bound: t_mix <= 1.55
+
+  Fiedler ordering (algebraic 'geometry' of metagraph):
+    class_id: H, c3, score, SC?, Fiedler_val
+      7: H=    3, c3=  1, score=(0, 1, 3, 3, 3),   , f=-0.2475
+      1: H=    3, c3=  1, score=(1, 1, 1, 3, 4),   , f=-0.2475
+      0: H=    1, c3=  0, score=(0, 1, 2, 3, 4), SC, f=-0.2002
+      3: H=    3, c3=  1, score=(0, 2, 2, 2, 4), SC, f=-0.1652
+      5: H=    5, c3=  2, score=(0, 2, 2, 3, 3),   , f=-0.0761
+      2: H=    5, c3=  2, score=(1, 1, 2, 2, 4),   , f=-0.0761
+      6: H=    9, c3=  3, score=(1, 1, 2, 3, 3), SC, f=-0.0696
+      4: H=    9, c3=  3, score=(1, 1, 2, 3, 3), SC, f=-0.0678
+      9: H=   15, c3=  4, score=(1, 2, 2, 2, 3), SC, f=-0.0437
+      8: H=   11, c3=  4, score=(1, 2, 2, 2, 3), SC, f=+0.1675
+     10: H=   13, c3=  4, score=(1, 2, 2, 2, 3), SC, f=+0.1720
+     11: H=   15, c3=  5, score=(2, 2, 2, 2, 2), SC, f=+0.8542
+
+  Weighted adjacency spectrum (multiplicity of connections):
+    lambda_1 = 1725.4
+    lambda_2 = 607.0
+    Spectral gap = 1118.4
+
+  Clique number (lower bound): omega >= 4
+  Bipartite: False
+
+  Correlations:
+    corr(Fiedler, H) = 0.7275
+    corr(Fiedler, c3) = 0.7846
+
+
+============================================================
+n = 6
+============================================================
+  (n=6 may take a while due to canonical form computation...)
+  Enumerating all 32768 tournaments on n=6...
+  56 iso classes found in 72.7s
+  Building wiggly adjacency matrix...
+  290 edges in the metagraph
+  Build time: 146.0s
+
+  Basic metagraph stats:
+    Vertices (iso classes): 56
+    Edges: 290
+    SC classes: 12
+    Degree range: 3 to 14, mean=10.4
+    Density: 0.188
+
+  Eigenvalue spectrum (binary adj):
+    lambda_1 = 11.6697
+    lambda_2 = 6.7937
+    Spectral gap = 4.8760
+    lambda_2/lambda_1 = 0.5822
+    lambda_3 = 5.0107
+    lambda_min = -6.4783
+
+  Laplacian spectrum:
+    mu_1 (should be 0) = -0.000000
+    mu_2 (algebraic connectivity) = 1.9604
+    mu_max = 19.0152
+    Cheeger bound: h(G) >= 0.9802
+    Mixing time bound: t_mix <= 2.05
+
+  Fiedler ordering (algebraic 'geometry' of metagraph):
+    class_id: H, c3, score, SC?, Fiedler_val
+     54: H=   45, c3=  8, score=(2, 2, 2, 3, 3, 3), SC, f=-0.1329
+     55: H=   45, c3=  8, score=(2, 2, 2, 3, 3, 3), SC, f=-0.1157
+     50: H=   15, c3=  5, score=(0, 3, 3, 3, 3, 3),   , f=-0.1136
+     29: H=   15, c3=  5, score=(2, 2, 2, 2, 2, 5),   , f=-0.1136
+     46: H=   41, c3=  8, score=(2, 2, 2, 3, 3, 3), SC, f=-0.0887
+     51: H=   43, c3=  8, score=(2, 2, 2, 3, 3, 3),   , f=-0.0849
+     52: H=   43, c3=  8, score=(2, 2, 2, 3, 3, 3),   , f=-0.0849
+     53: H=   33, c3=  7, score=(1, 2, 3, 3, 3, 3),   , f=-0.0770
+     27: H=   33, c3=  7, score=(2, 2, 2, 2, 3, 4),   , f=-0.0770
+     49: H=   37, c3=  7, score=(1, 2, 3, 3, 3, 3),   , f=-0.0687
+     34: H=   37, c3=  7, score=(2, 2, 2, 2, 3, 4),   , f=-0.0687
+     47: H=   37, c3=  7, score=(1, 2, 3, 3, 3, 3),   , f=-0.0683
+     37: H=   37, c3=  7, score=(2, 2, 2, 2, 3, 4),   , f=-0.0683
+     48: H=   33, c3=  7, score=(1, 2, 3, 3, 3, 3),   , f=-0.0667
+     40: H=   33, c3=  7, score=(2, 2, 2, 2, 3, 4),   , f=-0.0667
+     28: H=   25, c3=  6, score=(1, 2, 2, 3, 3, 4),   , f=-0.0494
+     36: H=   25, c3=  6, score=(1, 2, 2, 3, 3, 4),   , f=-0.0494
+     30: H=   37, c3=  6, score=(1, 2, 2, 3, 3, 4), SC, f=-0.0488
+     17: H=   23, c3=  6, score=(1, 2, 2, 3, 3, 4),   , f=-0.0483
+     20: H=   23, c3=  6, score=(1, 2, 2, 3, 3, 4),   , f=-0.0483
+     38: H=   29, c3=  6, score=(1, 2, 2, 3, 3, 4), SC, f=-0.0457
+     39: H=   29, c3=  6, score=(1, 2, 2, 3, 3, 4), SC, f=-0.0445
+     31: H=   33, c3=  6, score=(1, 2, 2, 3, 3, 4), SC, f=-0.0436
+     45: H=   29, c3=  6, score=(1, 2, 2, 3, 3, 4),   , f=-0.0411
+     42: H=   29, c3=  6, score=(1, 2, 2, 3, 3, 4),   , f=-0.0411
+     32: H=   31, c3=  6, score=(1, 2, 2, 3, 3, 4),   , f=-0.0382
+     35: H=   31, c3=  6, score=(1, 2, 2, 3, 3, 4),   , f=-0.0382
+     23: H=   27, c3=  5, score=(1, 2, 2, 2, 4, 4),   , f=-0.0324
+     41: H=   27, c3=  5, score=(1, 1, 3, 3, 3, 4),   , f=-0.0324
+     21: H=   15, c3=  4, score=(1, 2, 2, 2, 3, 5),   , f=-0.0274
+     43: H=   15, c3=  4, score=(0, 2, 3, 3, 3, 4),   , f=-0.0274
+     44: H=   13, c3=  4, score=(0, 2, 3, 3, 3, 4),   , f=-0.0273
+     22: H=   13, c3=  4, score=(1, 2, 2, 2, 3, 5),   , f=-0.0273
+     18: H=   11, c3=  4, score=(0, 2, 3, 3, 3, 4),   , f=-0.0240
+      8: H=   11, c3=  4, score=(1, 2, 2, 2, 3, 5),   , f=-0.0240
+     19: H=   19, c3=  5, score=(1, 1, 3, 3, 3, 4),   , f=-0.0176
+     13: H=   19, c3=  5, score=(1, 2, 2, 2, 4, 4),   , f=-0.0176
+     33: H=   23, c3=  5, score=(1, 1, 3, 3, 3, 4),   , f=-0.0164
+     24: H=   23, c3=  5, score=(1, 2, 2, 2, 4, 4),   , f=-0.0164
+      9: H=   17, c3=  4, score=(1, 1, 2, 3, 4, 4), SC, f=-0.0016
+     10: H=    9, c3=  3, score=(0, 2, 2, 3, 4, 4),   , f=+0.0151
+      4: H=    9, c3=  3, score=(1, 1, 2, 3, 3, 5),   , f=+0.0151
+      5: H=    5, c3=  2, score=(0, 2, 2, 3, 3, 5), SC, f=+0.0194
+     11: H=   15, c3=  4, score=(1, 1, 2, 3, 4, 4),   , f=+0.0395
+     15: H=   15, c3=  4, score=(1, 1, 2, 3, 4, 4),   , f=+0.0395
+     14: H=    9, c3=  3, score=(0, 2, 2, 3, 4, 4),   , f=+0.0488
+      6: H=    9, c3=  3, score=(1, 1, 2, 3, 3, 5),   , f=+0.0488
+      3: H=    3, c3=  1, score=(0, 2, 2, 2, 4, 5),   , f=+0.0491
+      7: H=    3, c3=  1, score=(0, 1, 3, 3, 3, 5),   , f=+0.0491
+     12: H=    5, c3=  2, score=(0, 1, 3, 3, 4, 4),   , f=+0.0699
+      2: H=    5, c3=  2, score=(1, 1, 2, 2, 4, 5),   , f=+0.0699
+     25: H=   17, c3=  4, score=(1, 1, 2, 3, 4, 4), SC, f=+0.1049
+      0: H=    1, c3=  0, score=(0, 1, 2, 3, 4, 5), SC, f=+0.1202
+      1: H=    3, c3=  1, score=(1, 1, 1, 3, 4, 5),   , f=+0.3399
+     16: H=    3, c3=  1, score=(0, 1, 2, 4, 4, 4),   , f=+0.3399
+     26: H=    9, c3=  2, score=(1, 1, 1, 4, 4, 4), SC, f=+0.7549
+
+  Weighted adjacency spectrum (multiplicity of connections):
+    lambda_1 = 18938.4
+    lambda_2 = 11832.0
+    Spectral gap = 7106.4
+
+  Clique number (lower bound): omega >= 0
+  Bipartite: False
+
+  Correlations:
+    corr(Fiedler, H) = -0.5489
+    corr(Fiedler, c3) = -0.6417
+
