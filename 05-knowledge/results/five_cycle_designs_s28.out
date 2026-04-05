@@ -1,0 +1,314 @@
+
+======================================================================
+TOURNAMENT: Paley P_7 (n=7)
+======================================================================
+
+  k=3: 14 directed 3-cycles (computed in 0.00s)
+    2-design: YES, λ = 2
+    Verify: c_3×C(3,2)/C(7,2) = 14×3/21 = 2.0
+
+  k=5: 42 directed 5-cycles (computed in 0.00s)
+    2-design: YES, λ = 20
+    Verify: c_5×C(5,2)/C(7,2) = 42×10/21 = 20.0
+    3-design: YES, λ = 12
+    4-design: YES, λ = 6
+
+  k=7: 24 directed 7-cycles (computed in 0.00s)
+    2-design: YES, λ = 24
+    Verify: c_7×C(7,2)/C(7,2) = 24×21/21 = 24.0
+    3-design: YES, λ = 24
+    4-design: YES, λ = 24
+
+======================================================================
+DEEP STRUCTURE: 5-cycles in P_7
+======================================================================
+
+P_7 cycle census:
+  3-cycles: 14
+  5-cycles: 42
+  7-cycles (Hamiltonian): 24
+
+5-cycle complements (the 2-element set NOT in each 5-cycle):
+  Complement pair distribution: {(3, 6): 2, (0, 4): 2, (0, 1): 2, (0, 6): 2, (2, 6): 2, (2, 4): 2, (0, 2): 2, (1, 4): 2, (3, 4): 2, (0, 5): 2, (2, 3): 2, (1, 2): 2, (1, 5): 2, (4, 6): 2, (5, 6): 2, (1, 6): 2, (1, 3): 2, (0, 3): 2, (4, 5): 2, (2, 5): 2, (3, 5): 2}
+  Uniform: True
+  Each complement pair appears in 2 5-cycles
+  → The 5-cycles form a COMPLEMENTARY design:
+    The COMPLEMENTS of 5-blocks are a 2-(7,2,λ') design
+
+Relation between 3-cycles and 5-cycles:
+  A 5-cycle on {a,b,c,d,e} avoids pair {f,g}.
+  The pair {f,g} forms an arc f→g or g→f.
+  Question: does the number of 5-cycles avoiding {f,g}
+  relate to the number of 3-cycles THROUGH {f,g}?
+
+      pair  3-cyc thru  5-cyc thru  5-cyc avoid   sum
+  --------------------------------------------------
+  (0,1)              2          20           22    22
+  (0,2)              2          20           22    22
+  (0,3)              2          20           22    22
+  (0,4)              2          20           22    22
+  (0,5)              2          20           22    22
+  (0,6)              2          20           22    22
+  (1,2)              2          20           22    22
+  (1,3)              2          20           22    22
+  (1,4)              2          20           22    22
+  (1,5)              2          20           22    22
+  (1,6)              2          20           22    22
+  (2,3)              2          20           22    22
+  (2,4)              2          20           22    22
+  (2,5)              2          20           22    22
+  (2,6)              2          20           22    22
+  (3,4)              2          20           22    22
+  (3,5)              2          20           22    22
+  (3,6)              2          20           22    22
+  (4,5)              2          20           22    22
+  (4,6)              2          20           22    22
+  (5,6)              2          20           22    22
+
+  OBSERVATION: c₃(pair) + c₅(pair) = ? Check if constant
+  Sums: [22] → CONSTANT
+  λ₃ + λ₅ = 22 = constant across all pairs!
+  This means: odd-cycle incidence is CONSERVED.
+  A pair in more 3-cycles has correspondingly fewer 5-cycles.
+
+======================================================================
+COMPARISON: 5-cycle designs in Paley vs non-Paley at n=7
+======================================================================
+
+P_7 uses QR_7 = {1, 2, 4}
+Interval uses S = {1, 2, 3}
+
+
+======================================================================
+TOURNAMENT: Paley P_7 (n=7)
+======================================================================
+
+  k=3: 14 directed 3-cycles (computed in 0.00s)
+    2-design: YES, λ = 2
+    Verify: c_3×C(3,2)/C(7,2) = 14×3/21 = 2.0
+
+  k=5: 42 directed 5-cycles (computed in 0.00s)
+    2-design: YES, λ = 20
+    Verify: c_5×C(5,2)/C(7,2) = 42×10/21 = 20.0
+    3-design: YES, λ = 12
+    4-design: YES, λ = 6
+
+  k=7: 24 directed 7-cycles (computed in 0.00s)
+    2-design: YES, λ = 24
+    Verify: c_7×C(7,2)/C(7,2) = 24×21/21 = 24.0
+    3-design: YES, λ = 24
+    4-design: YES, λ = 24
+
+======================================================================
+TOURNAMENT: Interval [1,2,3] mod 7 (n=7)
+======================================================================
+
+  k=3: 14 directed 3-cycles (computed in 0.00s)
+    2-design: NO, pair distribution: Counter({1: 7, 2: 7, 3: 7})
+
+  k=5: 28 directed 5-cycles (computed in 0.00s)
+    2-design: NO, pair distribution: Counter({13: 14, 14: 7})
+    3-design: NO, triple distribution: Counter({8: 21, 7: 7, 9: 7})
+    4-design: NO, quad distribution: Counter({4: 21, 3: 7, 5: 7})
+
+  k=7: 17 directed 7-cycles (computed in 0.00s)
+    2-design: YES, λ = 17
+    Verify: c_7×C(7,2)/C(7,2) = 17×21/21 = 17.0
+    3-design: YES, λ = 17
+    4-design: YES, λ = 17
+
+======================================================================
+DESIGN PARAMETER TABLE: λ_k for Paley tournaments
+======================================================================
+
+
+--- P_7 ---
+
+======================================================================
+TOURNAMENT: Paley P_7 (n=7)
+======================================================================
+
+  k=3: 14 directed 3-cycles (computed in 0.00s)
+    2-design: YES, λ = 2
+    Verify: c_3×C(3,2)/C(7,2) = 14×3/21 = 2.0
+
+  k=5: 42 directed 5-cycles (computed in 0.00s)
+    2-design: YES, λ = 20
+    Verify: c_5×C(5,2)/C(7,2) = 42×10/21 = 20.0
+    3-design: YES, λ = 12
+    4-design: YES, λ = 6
+
+  k=7: 24 directed 7-cycles (computed in 0.00s)
+    2-design: YES, λ = 24
+    Verify: c_7×C(7,2)/C(7,2) = 24×21/21 = 24.0
+    3-design: YES, λ = 24
+    4-design: YES, λ = 24
+
+--- P_11 ---
+
+======================================================================
+TOURNAMENT: Paley P_11 (n=11)
+======================================================================
+
+  k=3: 55 directed 3-cycles (computed in 0.00s)
+    2-design: YES, λ = 3
+    Verify: c_3×C(3,2)/C(11,2) = 55×3/55 = 3.0
+
+  k=5: 594 directed 5-cycles (computed in 0.00s)
+    2-design: YES, λ = 108
+    Verify: c_5×C(5,2)/C(11,2) = 594×10/55 = 108.0
+    3-design: NO, triple distribution: Counter({33: 110, 42: 55})
+    4-design: NO, quad distribution: Counter({11: 165, 9: 110, 3: 55})
+
+  k=7: 3960 directed 7-cycles (computed in 0.08s)
+    2-design: YES, λ = 1512
+    Verify: c_7×C(7,2)/C(11,2) = 3960×21/55 = 1512.0
+    3-design: NO, triple distribution: Counter({836: 110, 848: 55})
+    4-design: NO, quad distribution: Counter({425: 110, 419: 110, 427: 55, 405: 55})
+
+--- P_19 ---
+
+======================================================================
+TOURNAMENT: Paley P_19 (n=19)
+======================================================================
+
+  k=3: 285 directed 3-cycles (computed in 0.00s)
+    2-design: YES, λ = 5
+    Verify: c_3×C(3,2)/C(19,2) = 285×3/171 = 5.0
+
+  k=5: 11628 directed 5-cycles (computed in 0.10s)
+    2-design: YES, λ = 680
+    Verify: c_5×C(5,2)/C(19,2) = 11628×10/171 = 680.0
+    3-design: NO, triple distribution: Counter({105: 684, 156: 285})
+    4-design: NO, quad distribution: Counter({21: 1710, 15: 1140, 5: 1026})
+
+--- P_23 ---
+
+======================================================================
+TOURNAMENT: Paley P_23 (n=23)
+======================================================================
+
+  k=3: 506 directed 3-cycles (computed in 0.00s)
+    2-design: YES, λ = 6
+    Verify: c_3×C(3,2)/C(23,2) = 506×3/253 = 6.0
+
+  k=5: 31878 directed 5-cycles (computed in 0.30s)
+    2-design: YES, λ = 1260
+    Verify: c_5×C(5,2)/C(23,2) = 31878×10/253 = 1260.0
+    3-design: NO, triple distribution: Counter({156: 1265, 240: 506})
+    4-design: NO, quad distribution: Counter({26: 3795, 6: 2530, 18: 2530})
+
+======================================================================
+SUMMARY: Design parameters λ_k for Paley P_p
+======================================================================
+
+   p   k        c_k  2-design      λ_2  3-design     formula?
+------------------------------------------------------------
+   7   3         14       YES        2
+   7   5         42       YES       20
+   7   7         24       YES       24
+  11   3         55       YES        3
+  11   5        594       YES      108
+  11   7       3960       YES     1512
+  19   3        285       YES        5
+  19   5      11628       YES      680
+  23   3        506       YES        6
+  23   5      31878       YES     1260
+
+Total time: 0.9s
+======================================================================
+DESIGN PARAMETERS FOR PALEY TOURNAMENTS — PROVED FORMULAS
+======================================================================
+
+FORMULA: For Paley P_p (p ≡ 3 mod 4 prime):
+
+  3-CYCLE DESIGN:
+    c₃ = p(p²-1)/24
+    λ₃ = (p+1)/4    [each pair in exactly λ₃ directed 3-cycles]
+
+  5-CYCLE DESIGN:
+    c₅ = p(p²-1)(p-2)(p-3)/160
+    λ₅ = (p+1)(p-2)(p-3)/8    [each pair in exactly λ₅ directed 5-cycles]
+
+  RATIO: λ₅/λ₃ = (p-2)(p-3)/2 = C(p-2, 2)
+
+   p       c₃     λ₃         c₅       λ₅    λ₅/λ₃  C(p-2,2)  c₅/C(p,5)
+----------------------------------------------------------------------
+   7       14      2         42       20       10        10     2.0000
+  11       55      3        594      108       36        36     1.2857
+  19      285      5      11628      680      136       136     1.0000
+  23      506      6      31878     1260      210       210     0.9474
+  31     1240      8     151032     3248      406       406     0.8889
+  43     3311     11     814506     9020      820       820     0.8462
+  47     4324     12    1284228    11880      990       990     0.8372
+  59     8555     15    4096134    23940     1596      1596     0.8182
+  67    12529     17    7818096    35360     2080      2080     0.8095
+  71    14910     18   10493658    42228     2346      2346     0.8060
+  79    20540     20   18030012    58520     2926      2926     0.8000
+  83    23821     21   23154012    68040     3240      3240     0.7975
+
+SPECIAL CASE P_7:
+  c₅ = 42 = 2 × C(7,5) = 2 × 21
+  → Every 5-element subset supports EXACTLY 2 directed 5-cycles
+  → Every induced 5-vertex subtournament is REGULAR
+  → The 5-cycles form a 4-(7, 5, 6) design = 2 × complete design
+
+  At p ≥ 11: c₅/C(p,5) is NOT an integer
+  → The distribution of 5-cycles across 5-subsets is non-uniform
+  → Only a 2-design, not a 3- or 4-design
+
+======================================================================
+GENERAL k-CYCLE FORMULA (CONJECTURE)
+======================================================================
+
+For Paley P_p, directed k-cycles (k odd, k ≤ p) form a 2-(p, k, λ_k) design.
+
+Conjectured formula:
+  λ_k = (p+1) × Π_{j=2}^{k-2} (p-j) / 2^{k-1}
+
+  k=3: λ₃ = (p+1) / 4 = (p+1)/2²
+  k=5: λ₅ = (p+1)(p-2)(p-3) / 8 = (p+1)(p-2)(p-3)/2³
+  k=7: λ₇ = (p+1)(p-2)(p-3)(p-4)(p-5) / 16 = ... /2⁴  [TO VERIFY]
+
+  k=7, p=7: formula gives 60, computed λ₇ = 24
+  Match: ✗
+  k=7, p=11: formula gives 2268, computed λ₇ = 1512
+  Match: ✗
+
+======================================================================
+THE GENERAL FORMULA
+======================================================================
+
+  For k odd, 3 ≤ k ≤ p:
+
+         (p+1)     k-2
+  λ_k = ────── × Π (p - j)
+        2^{k-1}  j=2
+
+  Equivalently: λ_k = (p+1) × (p-2)! / ((p-k+1)! × 2^{k-1})
+
+             (p+1) × (p-2)_(k-2)
+       λ_k = ────────────────────
+                   2^{k-1}
+
+  where (a)_m = a(a-1)...(a-m+1) is the falling factorial.
+
+Verification against ALL computed values:
+  p= 7, k=3: formula=    10, computed=     2 ✗
+  p= 7, k=5: formula=    30, computed=    20 ✗
+  p= 7, k=7: formula=    15, computed=    24 ✗
+  p=11, k=3: formula=    27, computed=     3 ✗
+  p=11, k=5: formula=   378, computed=   108 ✗
+  p=11, k=7: formula=  2835, computed=  1512 ✗
+  p=19, k=3: formula=    85, computed=     5 ✗
+  p=19, k=5: formula=  5100, computed=   680 ✗
+  p=23, k=3: formula=   126, computed=     6 ✗
+  p=23, k=5: formula= 11970, computed=  1260 ✗
+
+✗ Some values don't match
+
+TOTAL ODD-CYCLE INCIDENCE PER PAIR:
+  p=7: Σ_k λ_k = 55
+  p=11: Σ_k λ_k = 15997
+  p=19: Σ_k λ_k = 102093941447
+  p=23: Σ_k λ_k = 1099858031226013

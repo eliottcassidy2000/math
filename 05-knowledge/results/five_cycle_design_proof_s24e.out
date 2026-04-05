@@ -1,0 +1,85 @@
+==============================================================================
+  THE 2-DESIGN THEOREM FOR DIRECTED k-CYCLES IN PALEY TOURNAMENTS
+  opus-2026-04-05-S24e
+==============================================================================
+
+══════════════════════════════════════════════════════════════════════════════
+  THEOREM: Directed k-cycles of T_p form 2-designs for all odd k
+══════════════════════════════════════════════════════════════════════════════
+
+  THEOREM (2-Design for all odd k): For every prime p ≡ 3 (mod 4) and
+  every odd k with 3 ≤ k ≤ p, the directed k-cycles of the Paley
+  tournament T_p form a 2-(p, k, λ_k) design, where:
+
+    λ_k = c_k · C(k, 2) / C(p, 2) = c_k · k(k-1) / (p(p-1))
+
+  PROOF:
+
+  Define G = <Aff(QR), τ> where:
+    Aff(QR) = {x ↦ ax + b : a ∈ QR_p, b ∈ Z_p}  (automorphisms of T_p)
+    τ: x ↦ -x mod p                                (anti-automorphism of T_p)
+
+  |G| = 2|Aff(QR)| = p(p-1).
+
+  STEP 1: G acts transitively on unordered pairs.
+
+  Given pair {i₁, j₁}, map to {0, d₁} via translation (b = -i₁).
+  Then {0, d₁} → {0, d₂} via x → (d₂/d₁)x. Here a = d₂/d₁ ∈ F_p*.
+  If a ∈ QR: this is in Aff(QR), an automorphism. ✓
+  If a ∈ NQR: compose with τ. The map x → -ax has -a ∈ QR (since
+  -1 ∈ NQR and a ∈ NQR, so -a ∈ NQR·NQR = QR). But we need to be
+  more careful: the composition τ ∘ (x→ax) sends x → -ax, which is
+  x → (-a)x with -a ∈ QR. So the MAP is in Aff(QR) — it's an auto.
+  But τ ITSELF sends {0, d₁} to {0, -d₁} with -d₁ ∈ NQR·d₁.
+
+  Actually, let me redo. We want to map {0, d₁} to {0, d₂}.
+  Case 1: d₂/d₁ ∈ QR. Use g(x) = (d₂/d₁)x ∈ Aff(QR). ✓
+  Case 2: d₂/d₁ ∈ NQR. Use g = τ ∘ h where h(x) = (-d₂/d₁)x.
+    Then -d₂/d₁ ∈ NQR·NQR = QR (since -1 ∈ NQR). So h ∈ Aff(QR). ✓
+    g(x) = τ(h(x)) = -(-d₂/d₁)x = (d₂/d₁)x. Wait, that's the same map!
+    No: g maps x → -h(x) = -(−d₂/d₁)x = (d₂/d₁)x.
+    g(0) = 0, g(d₁) = d₂. ✓
+
+  But g = τ ∘ h is an anti-automorphism composed with an automorphism
+  = anti-automorphism. Does g preserve directed k-cycles?
+
+  An ANTI-automorphism φ of T_p satisfies: φ(i)→φ(j) in T_p iff j→i in T_p.
+  So φ maps a directed k-cycle C = (v₁→v₂→...→vₖ→v₁) to the REVERSED
+  cycle C' = (φ(vₖ)→φ(vₖ₋₁)→...→φ(v₁)→φ(vₖ)).
+
+  For ODD k: reversing a directed k-cycle gives a DIFFERENT directed
+  k-cycle on the same vertex set. (For even k, it would give a cycle
+  with different orientation parity, but for odd k, both directions
+  yield valid directed cycles.)
+
+  So an anti-automorphism maps the SET of directed k-cycles (k odd) to
+  itself, bijectively. Each unordered pair is in the same number of
+  directed k-cycles before and after applying g.
+
+  Since G acts transitively on unordered pairs AND preserves the set
+  of directed k-cycles (for odd k), the incidence number λ_k is the
+  same for all pairs. By double counting:
+
+    Σ_pairs λ_k = Σ_cycles C(k,2) = c_k · C(k,2)
+
+  with C(p,2) pairs, giving λ_k = c_k · C(k,2) / C(p,2). □
+
+  COROLLARY: λ_k = [m^k + (p-1)·Re(α^k)] · (k-1) / (p(p-1))
+  where m = (p-1)/2 and α = (-1+i√p)/2.
+  (Using c_k = (1/k)[m^k + (p-1)Re(α^k)] from THM-F2.)
+
+  Verification of 2-design property:
+
+     p   k        c_k  λ_k formula  λ_k actual  match
+  --------------------------------------------------
+     7   3         14            2           2      ✓
+     7   5         42           20          20      ✓
+     7   7         24           24          24      ✓
+    11   3         55            3           3      ✓
+    11   5        594          108         108      ✓
+    11   7       3960         1512        1512      ✓
+    11   9      11055         7236        7236      ✓
+    11  11       5505         5505        5505      ✓
+    19   3        285            5           5      ✓
+    19   5      11628          680         680      ✓
+    19   7     424080        52080       52080      ✓

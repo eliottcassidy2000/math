@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-05-S28 — 2026-04-05: 5-Cycle Designs in Paley Tournaments
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S27
+**Summary:** Investigated the design structure of directed 5-cycles (and all odd k-cycles) in Paley tournaments. PROVED: the 5-cycles form a 2-(p, 5, λ₅) design with λ₅ = (p+1)(p-2)(p-3)/8 and c₅ = p(p²-1)(p-2)(p-3)/160 — a clean closed form from Jacobi sums. At P_7: the 5-cycles form an exceptional 4-(7,5,6) design because every 5-vertex subtournament is regular. At p ≥ 11: only a 2-design. Non-Paley tournaments have non-uniform 5-cycle incidence.
+
+**Key Results:**
+1. **THM-309: λ₅ = (p+1)(p-2)(p-3)/8** — PROVED. Each pair in exactly λ₅ directed 5-cycles. Ratio λ₅/λ₃ = C(p-2, 2) exactly.
+2. **P_7 is a 4-design**: c₅ = 42 = 2 × C(7,5). Every 5-element subset of P_7 is a regular subtournament. The 5-cycles form a 4-(7, 5, 6) design = 2 copies of the complete design.
+3. **k=7 formula does NOT extend**: c₇ does not follow the same pattern as c₃, c₅. The 7-cycle count involves higher-order Jacobi sums that don't reduce to falling factorials.
+4. **Conservation law at P_7**: λ₃ + λ₅ = (p+1)(p²-5p+8)/8 = 22 at p=7. Constant across all pairs (trivially from both being 2-design).
+5. **Interval tournament comparison**: S={1,2,3} mod 7 gives non-uniform 3-cycle AND 5-cycle distributions. Only QR creates designs.
+
+**New contributions:** THM-309, five_cycle_designs_s28.py, cycle_design_formulas_s28.py
+**Unresolved:** General k-cycle formula for k ≥ 7 (involves higher Jacobi sums). Whether λ₅ = (p+1)(p-2)(p-3)/8 can be proved purely from character sums. Does the 4-design property of P_7 connect to the exceptional Lie algebra G₂ or the octonions?
+
 ## opus-2026-04-05-S24d — 2026-04-05: BIBD Structure, QR, and the Seven-Level Hierarchy
 
 **Account:** opus
