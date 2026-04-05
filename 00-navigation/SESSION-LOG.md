@@ -28,6 +28,15 @@ Entry format:
 **New contributions:** creative_explorations_s24.py, h_landscape_unimodality_s24.py, h_local_max_analysis_s24.py, phase_transition_precision_s24.py, three-dynamics-of-tournaments.md (reflection), HYP-1704–1708
 **Unresolved:** Does H=37 local max persist at n≥7? Prove majority rule convergence algebraically. Explain why t_50% = C(n-3,2)+2 (inner staircase connection). Characterize ALL local H-maxima at n=7.
 
+## opus-2026-04-05-S28 — 2026-04-05: Unified Burnside Enumerator — 5 Sequences Verified and Extended
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S27
+**Summary:** Rigorous verification and extension of the Burnside perturbation framework to 5 OEIS sequences. Fixed A000088 bug (floor(k/2) vs floor((k-1)/2) for even cycles). All 5 sequences verified against OEIS: A000568 ✓ (n≤15), A000088 ✓ (n≤12), A000273 ✓ (n≤8), A000595 ✓ (n≤8), A000666 ✓ (n≤8). Computed new exact values to n=21 for all sequences. Series approximation at n=200 in 1ms with <10^{-50} error for all sequences. Convergence rate ranking: A000595 > A000273 > A000568 ≈ A001174 > A000666 > A000088.
+
+**New contributions:** burnside_series_verified_s28.py (full verification), burnside_unified_s28.py (production tool)
+**Unresolved:** A001174 discrepancy at n=8 (even-cycle diameter pair issue). Extend to k-uniform hypergraph sequences. Submit new values to OEIS.
+
 ## opus-2026-04-05-S27 — 2026-04-05: Prime vs Composite n — Second-Order Burnside Effect
 
 **Account:** opus
