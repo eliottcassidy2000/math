@@ -13,6 +13,22 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-05-S24c — 2026-04-05: Merging 2-adic Valuations with QR-Tournament Theory
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S24b, S25
+**Summary:** Merged the 2-adic valuation work on a(n) (S25) with QR-tournament foundations (S24b). Three major advances: (1) HYP-1713 PROVED trivially — H/|Aff| odd follows from Rédei + parity of |Aff|; (2) HYP-1712 Part (a) PROVED — gap inequality shows only coprime 2-part partitions minimize v₂ for even n; (3) HYP-1712 Part (b) reduced to a Wolstenholme-type identity on odd totient reciprocals, verified n=4..24. Found and fixed critical bug in all_odd_partitions function.
+
+**Key Results:**
+1. **HYP-1713 PROVED**: For Paley primes p ≡ 3 mod 4, H(T_p)/|Aff(QR)| is odd. Proof: H odd (Rédei), |Aff| = p(p-1)/2 odd (since v₂(p-1)=1). Corollary: H/p ≡ (p-1)/2 mod (p-1). The anti-automorphism argument from S24b was unnecessary!
+2. **HYP-1712 Part (a) PROVED**: Only coprime 2-part odd partitions minimize v₂ in Burnside for even n. Gap ≥ 2 for non-coprime 2-part, ≥ 3 for 4+ parts (n≥6). Verified n=4..24.
+3. **HYP-1712 Part (b) REDUCED**: v₂(a(n)) = n/2 + v₂(c(n)) reduces to v₂(Σ_{D} 1/d) = v₂(n) + v₂(c(n)) where D = odd units mod n. This is a Wolstenholme-type identity. Verified n=4..24.
+4. **STRUCTURAL BRIDGE**: v₂(|Aff(QR)|) = 0 for all Paley primes connects THM-305 (v₂(a(p)) = (p-1)/2) directly to orbit parity.
+5. **Bug fix**: all_odd_partitions was including even parts in edge cases (n small relative to max_part). Fixed by adjusting range start.
+
+**New contributions:** v2_merge_s24c.py, prove_hyp1712_s24c.py, HYP-1712 partial proof, HYP-1713 full proof
+**Unresolved:** Complete algebraic proof of HYP-1712 Part (b). Odd part structure of a(n)/2^{(n-1)/2}.
+
 ## opus-2026-04-05-S26 — 2026-04-05: The QR Resonance Principle — Cross-Field Exploration
 
 **Account:** opus

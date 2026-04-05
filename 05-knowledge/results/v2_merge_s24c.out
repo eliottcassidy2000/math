@@ -1,0 +1,655 @@
+==============================================================================
+  MERGING 2-ADIC VALUATIONS WITH QR-TOURNAMENT THEORY
+  opus-2026-04-05-S24c
+==============================================================================
+
+══════════════════════════════════════════════════════════════════════════════
+  SECTION 1: v₂(a(n)) FOR n = 1..20
+══════════════════════════════════════════════════════════════════════════════
+
+    n                           a(n)    v₂                  odd part n odd? (n-1)/2  pred  match
+  ------------------------------------------------------------------------------------------
+    1                              1     0                         1    ODD       0     0      ✓
+    2                              1     0                         1   even             1      ✗
+    3                              2     1                         1    ODD       1     1      ✓
+    4                              4     2                         1   even             2      ✓
+    5                             12     2                         3    ODD       2     2      ✓
+    6                             56     3                         7   even             3      ✓
+    7                            456     3                        57    ODD       3     3      ✓
+    8                           6880     5                       215   even             5      ✓
+    9                         191536     4                     11971    ODD       4     4      ✓
+   10                        9733056     6                    152079   even             6      ✓
+   11                      903753248     5                  28242289    ODD       5     5      ✓
+   12                   154108311168     7                1203971181   even             7      ✓
+   13                 48542114686912     6              758470541983    ODD       6     6      ✓
+   14              28401423719122304     7           221886122805643   even             7      ✓
+   15           31021002160355166848     7        242351579377774741    ODD       7     7      ✓
+   16        63530415842308265100288    10      62041421721004165137   even            10      ✓
+   17    244912778438520759443245824     8  956690540775471716575179    ODD       8     8      ✓
+   18 1783398846284777975419600287232     9   3483200871...3241406811   even             9      ✓
+   19 24605641171260376770598003978281472     9   4805789291...4226520081    ODD       9     9      ✓
+   20 645022068557873570931850526424042500096    12   1574760909...9927744751   even            12      ✓
+
+
+══════════════════════════════════════════════════════════════════════════════
+  SECTION 2: BURNSIDE PARTITION ANALYSIS — THE MINIMIZING PARTITION
+══════════════════════════════════════════════════════════════════════════════
+
+  The Burnside formula: a(n) = (1/n!) × Σ_{λ all-odd ⊢ n} (n!/z_λ) × 2^{e(λ)}
+
+  where e(λ) = edge_orbits(λ) and z_λ = centralizer_order(λ).
+
+  Each term contributes: n!/z_λ × 2^{e(λ)} to n!·a(n).
+
+  The v₂ of each term = v₂(n!/z_λ) + e(λ).
+
+  Since v₂(n!) is fixed, the minimizer of v₂(term) maximizes
+  v₂(z_λ) - e(λ), or equivalently minimizes e(λ) - v₂(z_λ).
+
+  For ODD n:
+  THM-305 shows λ = (n) minimizes with e = (n-1)/2, z = n, v₂(z) = 0.
+  So min = e(n) - v₂(z_{(n)}) = (n-1)/2 - 0 = (n-1)/2.
+
+  For EVEN n:
+  The partition (n) is NOT all-odd. The candidate minimizers are:
+  - λ = (n-1, 1): e = (n-2)/2 + 0 + gcd(n-1,1) = (n-2)/2 + 1 = n/2.
+    z = (n-1)·1·1!·1! = n-1. v₂(z) = v₂(n-1).
+    Contribution v₂ = v₂(n!) - v₂(n-1) + n/2 = v₂(n!) - v₂(n-1) + n/2.
+
+  - λ = (1^n): e = C(n,2)/1 ... no. For (1^n), there are n fixed points.
+    e = 0 (no pairs within a 1-cycle) + Σ_{i<j} gcd(1,1) = C(n,2).
+    z = 1^n · n! = n!. v₂(z) = v₂(n!).
+    Contribution: n!/n! × 2^{C(n,2)} = 2^{C(n,2)}.
+    v₂ = C(n,2).
+
+  So (n-1,1) has MUCH smaller e than (1^n). Let's check systematically.
+
+
+  n = 4: all-odd partitions and their v₂ contributions:
+               partition   e(λ)          z_λ  v₂(z_λ)  e-v₂(z) v₂(n!/z) v₂(term)
+    ----------------------------------------------------------------------------
+                  (3, 1)      2            3        0        2        3        5  ← MIN
+            (1, 1, 1, 1)      6           24        3        3        0        6
+
+    v₂(n!) = 3, min v₂(term) = 5
+    → v₂(a(n)) ≥ 2
+    Actual v₂(a(n)) = 2
+    Terms at minimum: 1, gap to next: 1
+    Minimizing partition: (3, 1)
+    ✓ Minimizer is (n-1, 1) as predicted!
+
+  n = 6: all-odd partitions and their v₂ contributions:
+               partition   e(λ)          z_λ  v₂(z_λ)  e-v₂(z) v₂(n!/z) v₂(term)
+    ----------------------------------------------------------------------------
+                  (5, 1)      3            5        0        3        4        7  ← MIN
+                  (3, 3)      5           18        1        4        3        8
+            (3, 1, 1, 1)      7           18        1        6        3       10
+      (1, 1, 1, 1, 1, 1)     15          720        4       11        0       15
+
+    v₂(n!) = 4, min v₂(term) = 7
+    → v₂(a(n)) ≥ 3
+    Actual v₂(a(n)) = 3
+    Terms at minimum: 1, gap to next: 1
+    Minimizing partition: (5, 1)
+    ✓ Minimizer is (n-1, 1) as predicted!
+
+  n = 8: all-odd partitions and their v₂ contributions:
+               partition   e(λ)          z_λ  v₂(z_λ)  e-v₂(z) v₂(n!/z) v₂(term)
+    ----------------------------------------------------------------------------
+                  (5, 3)      4           15        0        4        7       11  ← MIN
+                  (7, 1)      4            7        0        4        7       11
+            (5, 1, 1, 1)      8           30        1        7        6       14
+            (3, 3, 1, 1)     10           36        2        8        5       15
+      (3, 1, 1, 1, 1, 1)     16          360        3       13        4       20
+    (1, 1, 1, 1, 1, 1...     28        40320        7       21        0       28
+
+    v₂(n!) = 7, min v₂(term) = 11
+    → v₂(a(n)) ≥ 4
+    Actual v₂(a(n)) = 5
+    Terms at minimum: 2, gap to next: 3
+    Minimizing partition: (5, 3)
+    ✗ Minimizer is (5, 3), NOT (n-1, 1)!
+
+  n = 10: all-odd partitions and their v₂ contributions:
+               partition   e(λ)          z_λ  v₂(z_λ)  e-v₂(z) v₂(n!/z) v₂(term)
+    ----------------------------------------------------------------------------
+                  (7, 3)      5           21        0        5        8       13  ← MIN
+                  (9, 1)      5            9        0        5        8       13
+            (5, 3, 1, 1)      9           30        1        8        7       16
+                  (5, 5)      9           50        1        8        7       16
+            (7, 1, 1, 1)      9           42        1        8        7       16
+            (3, 3, 3, 1)     15          162        1       14        7       22
+      (5, 1, 1, 1, 1, 1)     17          600        3       14        5       22
+      (3, 3, 1, 1, 1, 1)     19          432        4       15        4       23
+
+    v₂(n!) = 8, min v₂(term) = 13
+    → v₂(a(n)) ≥ 5
+    Actual v₂(a(n)) = 6
+    Terms at minimum: 2, gap to next: 3
+    Minimizing partition: (7, 3)
+    ✗ Minimizer is (7, 3), NOT (n-1, 1)!
+
+  n = 12: all-odd partitions and their v₂ contributions:
+               partition   e(λ)          z_λ  v₂(z_λ)  e-v₂(z) v₂(n!/z) v₂(term)
+    ----------------------------------------------------------------------------
+                  (7, 5)      6           35        0        6       10       16  ← MIN
+                 (11, 1)      6           11        0        6       10       16
+                  (9, 3)      8           27        0        8       10       18
+            (7, 3, 1, 1)     10           42        1        9        9       19
+            (9, 1, 1, 1)     10           54        1        9        9       19
+            (5, 3, 3, 1)     12           90        1       11        9       21
+            (5, 5, 1, 1)     14          100        2       12        8       22
+      (5, 3, 1, 1, 1, 1)     18          360        3       15        7       25
+
+    v₂(n!) = 10, min v₂(term) = 16
+    → v₂(a(n)) ≥ 6
+    Actual v₂(a(n)) = 7
+    Terms at minimum: 2, gap to next: 2
+    Minimizing partition: (7, 5)
+    ✗ Minimizer is (7, 5), NOT (n-1, 1)!
+
+  n = 14: all-odd partitions and their v₂ contributions:
+               partition   e(λ)          z_λ  v₂(z_λ)  e-v₂(z) v₂(n!/z) v₂(term)
+    ----------------------------------------------------------------------------
+                  (9, 5)      7           45        0        7       11       18  ← MIN
+                 (11, 3)      7           33        0        7       11       18
+                 (13, 1)      7           13        0        7       11       18
+            (7, 5, 1, 1)     11           70        1       10       10       21
+           (11, 1, 1, 1)     11           66        1       10       10       21
+            (7, 3, 3, 1)     13          126        1       12       10       23
+                  (7, 7)     13           98        1       12       10       23
+            (9, 3, 1, 1)     13           54        1       12       10       23
+
+    v₂(n!) = 11, min v₂(term) = 18
+    → v₂(a(n)) ≥ 7
+    Actual v₂(a(n)) = 7
+    Terms at minimum: 3, gap to next: 3
+    Minimizing partition: (9, 5)
+    ✗ Minimizer is (9, 5), NOT (n-1, 1)!
+
+
+══════════════════════════════════════════════════════════════════════════════
+  SECTION 3: PROVING HYP-1712 — v₂(a(n)) FOR EVEN n
+══════════════════════════════════════════════════════════════════════════════
+
+  THEOREM (HYP-1712 → THM): For even n ≥ 4:
+    v₂(a(n)) = n/2 + v₂(c(n))
+
+  where c(n) = #{odd k : 1 ≤ k < n/2, gcd(k,n) = 1}.
+
+  PROOF STRUCTURE:
+
+  Step 1: The Burnside sum for a(n) involves only all-odd partitions of n.
+  For even n, these have an even number of parts (since sum of odd #parts = odd).
+
+  Step 2: The partition λ = (n-1, 1) has:
+    - e(λ) = (n-1-1)/2 + gcd(n-1, 1) = (n-2)/2 + 1 = n/2
+    - z_λ = (n-1) · 1 · 1! · 1! = n-1
+    - v₂(z_λ) = v₂(n-1)
+    - v₂(term) = v₂(n!) - v₂(n-1) + n/2
+
+  Step 3: For ALL other all-odd partitions λ' ≠ (n-1,1) of even n:
+    v₂(term(λ')) > v₂(term((n-1,1))) + gap
+
+  This needs to be verified. The critical competitor is (n-3, 1, 1, 1):
+    - e = (n-4)/2 + 3·gcd(n-3,1) + 3·gcd(1,1) = (n-4)/2 + 3 + 3 = (n-4)/2 + 6
+    Wait, that's wrong. Let me recompute.
+
+  For λ = (n-3, 1, 1, 1):
+    - e = floor((n-3)/2) + 0 + 0 + 0 [within-cycle for each part]
+         + gcd(n-3,1) + gcd(n-3,1) + gcd(n-3,1) + gcd(1,1) + gcd(1,1) + gcd(1,1)
+         [cross-cycle pairs]
+    - = (n-4)/2 + 3·1 + 3·1 = (n-4)/2 + 6
+    Wait, gcd(1,1) = 1, and there are C(3,2) = 3 pairs among the three 1-parts.
+    And there are 3 pairs of (n-3)-part with each 1-part.
+    - e = (n-4)/2 + 3 + 3 = (n-4)/2 + 6 = n/2 + 4
+    - z = (n-3)·1·1·1 · 1!·3! = (n-3)·6
+    - v₂(z) = v₂(n-3) + v₂(6) = v₂(n-3) + 1
+    - v₂(term) = v₂(n!) - v₂(z) + e = v₂(n!) - v₂(n-3) - 1 + n/2 + 4
+
+  Compare with (n-1,1):
+    - v₂(term) = v₂(n!) - v₂(n-1) + n/2
+
+  Difference: [v₂(n-1) - v₂(n-3)] + [4 - 1] = v₂(n-1) - v₂(n-3) + 3
+
+  For n ≥ 4: v₂(n-1) ≥ 0 and v₂(n-3) ≥ 0.
+  If n-1 and n-3 are both odd (n even, n ≡ 0 mod 2):
+    n-1 odd ⟺ n even ✓
+    n-3 odd ⟺ n even ✓
+  So v₂(n-1) = 0 and v₂(n-3) = 0, giving difference = 0 + 3 = 3.
+
+  So (n-3,1,1,1) has v₂ exactly 3 more than (n-1,1). The gap is ≥ 3.
+
+  But wait — I said v₂(n-1) = 0 and v₂(n-3) = 0 for even n. That's because
+  n-1 and n-3 are odd when n is even. So the (n-1,1) term has
+  v₂(term) = v₂(n!) + n/2, and the (n-3,1,1,1) term has
+  v₂(term) = v₂(n!) - 1 + n/2 + 4 = v₂(n!) + n/2 + 3.
+
+  Now (n-1,1) itself: since n is even, n-1 is odd, v₂(n-1) = 0.
+  So v₂(term) = v₂(n!) - 0 + n/2 = v₂(n!) + n/2.
+  And v₂(a(n)) = v₂(term) - v₂(n!) = n/2.
+
+  But HYP-1712 says v₂(a(n)) = n/2 + v₂(c(n)), NOT just n/2.
+  The extra v₂(c(n)) comes from MULTIPLE terms achieving the same minimum!
+
+  When multiple terms have v₂ = v₂(n!) + n/2, their sum might have
+  higher v₂ if they cancel at the binary level.
+
+
+  Detailed minimum-level analysis for even n:
+
+  n= 4: 1 terms at min level, sum_odd_coeffs = 1, v₂(sum) = 0, c(n) = 1, v₂(c) = 0
+        v₂(a(n)) = 5 - 3 + 0 = 2, actual = 2, predicted = 2 ✓
+        λ=(3, 1), odd_coeff=1, e=2, z=3
+
+  n= 6: 1 terms at min level, sum_odd_coeffs = 9, v₂(sum) = 0, c(n) = 1, v₂(c) = 0
+        v₂(a(n)) = 7 - 4 + 0 = 3, actual = 3, predicted = 3 ✓
+        λ=(5, 1), odd_coeff=9, e=3, z=5
+
+  n= 8: 2 terms at min level, sum_odd_coeffs = 66, v₂(sum) = 1, c(n) = 2, v₂(c) = 1
+        v₂(a(n)) = 11 - 7 + 1 = 5, actual = 5, predicted = 5 ✓
+        λ=(5, 3), odd_coeff=21, e=4, z=15
+        λ=(7, 1), odd_coeff=45, e=4, z=7
+
+  n=10: 2 terms at min level, sum_odd_coeffs = 2250, v₂(sum) = 1, c(n) = 2, v₂(c) = 1
+        v₂(a(n)) = 13 - 8 + 1 = 6, actual = 6, predicted = 6 ✓
+        λ=(7, 3), odd_coeff=675, e=5, z=21
+        λ=(9, 1), odd_coeff=1575, e=5, z=9
+
+  n=12: 2 terms at min level, sum_odd_coeffs = 55890, v₂(sum) = 1, c(n) = 2, v₂(c) = 1
+        v₂(a(n)) = 16 - 10 + 1 = 7, actual = 7, predicted = 7 ✓
+        λ=(7, 5), odd_coeff=13365, e=6, z=35
+        λ=(11, 1), odd_coeff=42525, e=6, z=11
+
+  n=14: 3 terms at min level, sum_odd_coeffs = 5510295, v₂(sum) = 0, c(n) = 3, v₂(c) = 0
+        v₂(a(n)) = 18 - 11 + 0 = 7, actual = 7, predicted = 7 ✓
+        λ=(9, 5), odd_coeff=945945, e=7, z=45
+        λ=(11, 3), odd_coeff=1289925, e=7, z=33
+        λ=(13, 1), odd_coeff=3274425, e=7, z=13
+
+  n=16: 4 terms at min level, sum_odd_coeffs = 80684100, v₂(sum) = 2, c(n) = 4, v₂(c) = 2
+        v₂(a(n)) = 23 - 15 + 2 = 10, actual = 10, predicted = 10 ✓
+        λ=(9, 7), odd_coeff=10135125, e=8, z=63
+        λ=(11, 5), odd_coeff=11609325, e=8, z=55
+        λ=(13, 3), odd_coeff=16372125, e=8, z=39
+        λ=(15, 1), odd_coeff=42567525, e=8, z=15
+
+  n=18: 3 terms at min level, sum_odd_coeffs = 8518310325, v₂(sum) = 0, c(n) = 3, v₂(c) = 0
+        v₂(a(n)) = 25 - 16 + 0 = 9, actual = 9, predicted = 9 ✓
+        λ=(11, 7), odd_coeff=1268733375, e=9, z=77
+        λ=(13, 5), odd_coeff=1502961075, e=9, z=65
+        λ=(17, 1), odd_coeff=5746615875, e=9, z=17
+
+  n=20: 4 terms at min level, sum_odd_coeffs = 866170462500, v₂(sum) = 2, c(n) = 4, v₂(c) = 2
+        v₂(a(n)) = 28 - 18 + 2 = 12, actual = 12, predicted = 12 ✓
+        λ=(11, 9), odd_coeff=93745299375, e=10, z=99
+        λ=(13, 7), odd_coeff=101986644375, e=10, z=91
+        λ=(17, 3), odd_coeff=181976169375, e=10, z=51
+        λ=(19, 1), odd_coeff=488462349375, e=10, z=19
+
+
+══════════════════════════════════════════════════════════════════════════════
+  SECTION 4: WHY sum_odd = c(n) × (odd factor)
+══════════════════════════════════════════════════════════════════════════════
+
+  For even n, the minimum-level partitions all have the form (n-1, 1) up to
+  automorphism. But ARE there other partitions at the same minimum v₂ level?
+
+  The partition (n-1, 1) has:
+    v₂(term) = v₂(n!) + n/2  (since v₂(n-1) = 0 for even n)
+
+  Other 2-part partitions (a, b) with a+b = n, a,b odd, a > b ≥ 1:
+    e(a,b) = (a-1)/2 + (b-1)/2 + gcd(a,b) = (a+b-2)/2 + gcd(a,b) = (n-2)/2 + gcd(a,b)
+    z(a,b) = a·b  (if a ≠ b) or a²·2! = 2a² (if a = b)
+
+  For a ≠ b: v₂(term) = v₂(n!) - v₂(a·b) + (n-2)/2 + gcd(a,b)
+  Since a,b odd: v₂(a·b) = 0.
+  So v₂(term) = v₂(n!) + (n-2)/2 + gcd(a,b) = v₂(n!) + n/2 - 1 + gcd(a,b).
+
+  This equals the minimum v₂(n!) + n/2 iff gcd(a,b) = 1.
+
+  So the MINIMUM-LEVEL 2-PART PARTITIONS are exactly:
+    (a, b) with a + b = n, a > b ≥ 1, a,b odd, gcd(a,b) = 1.
+
+  The number of such partitions is:
+    #{b : 1 ≤ b < n/2, b odd, gcd(b, n-b) = 1}
+  = #{b : 1 ≤ b < n/2, b odd, gcd(b, n) = 1}  (since gcd(b,n-b) = gcd(b,n))
+
+  THIS IS EXACTLY c(n)!
+
+  So the minimum-level sum has c(n) terms, each contributing an odd coefficient.
+  The v₂ of their sum is v₂(c(n)) plus v₂(average odd coefficient)...
+  but the coefficients are not all 1. We need to check whether they are all
+  ≡ 1 mod 2 (which would give v₂(sum) = v₂(c(n)) since c(n) odd × something).
+
+  Verification:
+
+  n= 4: min-level = 1 partitions, c(n) = 1, all 2-part? True, match coprime? True
+  n= 6: min-level = 1 partitions, c(n) = 1, all 2-part? True, match coprime? True
+  n= 8: min-level = 2 partitions, c(n) = 2, all 2-part? True, match coprime? True
+  n=10: min-level = 2 partitions, c(n) = 2, all 2-part? True, match coprime? True
+  n=12: min-level = 2 partitions, c(n) = 2, all 2-part? True, match coprime? True
+  n=14: min-level = 3 partitions, c(n) = 3, all 2-part? True, match coprime? True
+  n=16: min-level = 4 partitions, c(n) = 4, all 2-part? True, match coprime? True
+  n=18: min-level = 3 partitions, c(n) = 3, all 2-part? True, match coprime? True
+  n=20: min-level = 4 partitions, c(n) = 4, all 2-part? True, match coprime? True
+
+
+══════════════════════════════════════════════════════════════════════════════
+  SECTION 5: ODD COEFFICIENTS AT THE MINIMUM LEVEL
+══════════════════════════════════════════════════════════════════════════════
+
+  For a 2-part partition (a, b) with a + b = n, a > b, gcd(a,b) = 1:
+    n!/z_λ = n!/(a·b) = n!/(a·b)
+
+  Since a, b are odd and coprime:
+    odd_part(n!/z_λ) = odd_part(n!) / (a·b)
+    (because a·b is odd, so v₂(n!/z) = v₂(n!))
+
+  Wait: v₂(n!/(a·b)) = v₂(n!) - v₂(a·b) = v₂(n!) - 0 = v₂(n!).
+  So the odd part of n!/(a·b) is n!/(2^{v₂(n!)} · a · b).
+
+  The minimum-level coefficient for partition (a,b) with gcd(a,b)=1 is:
+    odd_part(n!/(a·b)) = odd_part(n!) / (a·b)
+
+  The SUM of all minimum-level coefficients is:
+    Σ_{(a,b)} odd_part(n!) / (a·b)  where the sum is over coprime pairs
+
+  Since odd_part(n!) is a common factor, v₂ of the sum is:
+    v₂(sum) = v₂(Σ_{(a,b)} 1/(a·b) × odd_part(n!))
+            = v₂(odd_part(n!)) + v₂(Σ 1/(a·b))
+  But odd_part(n!) is ODD, so v₂(odd_part(n!)) = 0.
+  And 1/(a·b) is not an integer...
+
+  Let me reconsider. The sum of the n!/(a·b) terms at the minimum level is:
+    S = Σ_{(a,b): a+b=n, gcd(a,b)=1, a,b odd, a>b} n!/(a·b)
+
+  Factor out n!: S = n! × Σ 1/(a·b).
+  This is an integer because n!/(a·b) is always an integer.
+
+  v₂(S) = v₂(n!) + v₂(Σ 1/(a·b))
+
+  The full term is S × 2^{n/2} (since e(λ) = n/2 for coprime 2-part).
+  Wait, actually e(λ) = (n-2)/2 + gcd(a,b) = (n-2)/2 + 1 = n/2.
+  The term in n!·a(n) is: (n!/z_λ) × 2^{e(λ)} = (n!/(a·b)) × 2^{n/2}.
+
+  Sum over all minimum-level: S × 2^{n/2} where S = n! × Σ 1/(a·b).
+
+  v₂(S × 2^{n/2}) = v₂(S) + n/2.
+
+  Then v₂(a(n)) = v₂(S × 2^{n/2} + higher) - v₂(n!)
+               = v₂(S) + n/2 - v₂(n!)  (if higher terms don't affect)
+               = v₂(Σ n!/(a·b)) + n/2 - v₂(n!)
+               = [v₂(n!) + v₂(Σ 1/(a·b))] + n/2 - v₂(n!)
+               = v₂(Σ 1/(a·b)) + n/2
+
+  So HYP-1712 reduces to: v₂(Σ_{coprime (a,b)} 1/(a·b)) = v₂(c(n)).
+  i.e., v₂(Σ 1/(a·(n-a))) = v₂(c(n)) where sum is over odd a < n/2 with gcd(a,n) = 1.
+
+  Verification of the reduction v₂(Σ 1/(a(n-a))) = v₂(c(n)):
+
+  n= 4: c(n) = 1, v₂(c) = 0, Σ 1/(a(n-a)) = 1/3, v₂ = 0, match: ✓
+  n= 6: c(n) = 1, v₂(c) = 0, Σ 1/(a(n-a)) = 1/5, v₂ = 0, match: ✓
+  n= 8: c(n) = 2, v₂(c) = 1, Σ 1/(a(n-a)) = 22/105, v₂ = 1, match: ✓
+  n=10: c(n) = 2, v₂(c) = 1, Σ 1/(a(n-a)) = 10/63, v₂ = 1, match: ✓
+  n=12: c(n) = 2, v₂(c) = 1, Σ 1/(a(n-a)) = 46/385, v₂ = 1, match: ✓
+  n=14: c(n) = 3, v₂(c) = 0, Σ 1/(a(n-a)) = 833/6435, v₂ = 0, match: ✓
+  n=16: c(n) = 4, v₂(c) = 2, Σ 1/(a(n-a)) = 5692/45045, v₂ = 2, match: ✓
+  n=18: c(n) = 3, v₂(c) = 0, Σ 1/(a(n-a)) = 7419/85085, v₂ = 0, match: ✓
+  n=20: c(n) = 4, v₂(c) = 2, Σ 1/(a(n-a)) = 271580/2909907, v₂ = 2, match: ✓
+
+
+══════════════════════════════════════════════════════════════════════════════
+  SECTION 6: PROVING v₂(Σ 1/(a(n-a))) = v₂(c(n))
+══════════════════════════════════════════════════════════════════════════════
+
+  We need: v₂(Σ_{a ∈ C} 1/(a(n-a))) = v₂(|C|)
+  where C = {a : 1 ≤ a < n/2, a odd, gcd(a,n) = 1}.
+
+  Write Σ 1/(a(n-a)) = (1/n) Σ (1/a + 1/(n-a)) = (1/n) Σ n/(a(n-a))
+  Actually: 1/(a(n-a)) = (1/n)(1/a + 1/(n-a)).
+
+  So Σ 1/(a(n-a)) = (1/n) Σ_{a ∈ C} (1/a + 1/(n-a)).
+
+  Since n-a runs over {n-a : a ∈ C}, and n-a is also odd (since n even, a odd)
+  and gcd(n-a, n) = gcd(a, n) = 1, the set {n-a : a ∈ C} is a DIFFERENT
+  subset of the odd residues coprime to n.
+
+  Actually, if a < n/2, then n-a > n/2, so {n-a : a ∈ C} are the elements
+  in (n/2, n) that are odd and coprime to n. Together, C and {n-a : a ∈ C}
+  form ALL odd numbers in [1, n-1] coprime to n.
+
+  So Σ (1/a + 1/(n-a)) = Σ_{a ∈ C} 1/a + Σ_{a ∈ C} 1/(n-a)
+                        = Σ_{d : 1 ≤ d ≤ n-1, d odd, gcd(d,n)=1} 1/d
+
+  And Σ 1/(a(n-a)) = (1/n) × Σ_{d ∈ D} 1/d
+  where D = {d : 1 ≤ d ≤ n-1, d odd, gcd(d,n)=1}, |D| = 2|C| = 2c(n).
+
+  So the question reduces to: v₂(Σ_{d ∈ D} 1/d) = v₂(n) + v₂(c(n)).
+  Wait, let me redo: v₂(Σ 1/(a(n-a))) = v₂(1/n × Σ 1/d) = -v₂(n) + v₂(Σ 1/d).
+  We want this = v₂(c(n)).
+  So we need: v₂(Σ_{d ∈ D} 1/d) = v₂(n) + v₂(c(n)).
+
+  But v₂(n) ≥ 1 (n is even). And Σ 1/d is a fraction.
+  Hmm, this is getting complicated. Let me just verify numerically.
+
+  Detailed verification:
+
+  n=4: C = [1], |C| = 1
+        D = [1, 3], |D| = 2
+        Σ_D 1/d = 4/3
+        Σ_C 1/(a(n-a)) = 1/3
+        n × Σ_C = 4/3, equals Σ_D? True
+        v₂(Σ_C) = 0, v₂(c(n)) = 0
+
+  n=6: C = [1], |C| = 1
+        D = [1, 5], |D| = 2
+        Σ_D 1/d = 6/5
+        Σ_C 1/(a(n-a)) = 1/5
+        n × Σ_C = 6/5, equals Σ_D? True
+        v₂(Σ_C) = 0, v₂(c(n)) = 0
+
+  n=8: C = [1, 3], |C| = 2
+        D = [1, 3, 5, 7], |D| = 4
+        Σ_D 1/d = 176/105
+        Σ_C 1/(a(n-a)) = 22/105
+        n × Σ_C = 176/105, equals Σ_D? True
+        v₂(Σ_C) = 1, v₂(c(n)) = 1
+
+  n=10: C = [1, 3], |C| = 2
+        D = [1, 3, 7, 9], |D| = 4
+        Σ_D 1/d = 100/63
+        Σ_C 1/(a(n-a)) = 10/63
+        n × Σ_C = 100/63, equals Σ_D? True
+        v₂(Σ_C) = 1, v₂(c(n)) = 1
+
+  n=12: C = [1, 5], |C| = 2
+        D = [1, 5, 7, 11], |D| = 4
+        Σ_D 1/d = 552/385
+        Σ_C 1/(a(n-a)) = 46/385
+        n × Σ_C = 552/385, equals Σ_D? True
+        v₂(Σ_C) = 1, v₂(c(n)) = 1
+
+  n=14: C = [1, 3, 5], |C| = 3
+        D = [1, 3, 5, 9, 11, 13], |D| = 6
+        Σ_D 1/d = 11662/6435
+        Σ_C 1/(a(n-a)) = 833/6435
+        n × Σ_C = 11662/6435, equals Σ_D? True
+        v₂(Σ_C) = 0, v₂(c(n)) = 0
+
+
+══════════════════════════════════════════════════════════════════════════════
+  SECTION 7: ODD PARTS a(n)/2^{(n-1)/2} FOR ODD n
+══════════════════════════════════════════════════════════════════════════════
+
+    n                      a(n)   v₂                  odd part  prime?                        factors
+  --------------------------------------------------------------------------------------------------
+    3                         2    1                         1      no                              1
+    5                        12    2                         3     YES                              3
+    7                       456    3                        57      no                         3 × 19
+    9                    191536    4                     11971     YES                          11971
+   11                 903753248    5                  28242289     YES                       28242289
+   13            48542114686912    6              758470541983      no        7 × 11 × 83 × 118677913
+   15      31021002160355166848    7        242351579377774741       ?                    (too large)
+   17 244912778438520759443245824    8  956690540775471716575179       ?                    (too large)
+   19 24605641171260376770598003978281472    9   4805789291...4226520081       ?                    (too large)
+
+
+══════════════════════════════════════════════════════════════════════════════
+  SECTION 8: THE BRIDGE — v₂(a(p)) AND H(T_p)
+══════════════════════════════════════════════════════════════════════════════
+
+  For Paley prime p ≡ 3 mod 4:
+
+  FACT 1 (THM-305): v₂(a(p)) = (p-1)/2.
+  So a(p) = 2^{(p-1)/2} × (odd number).
+
+  FACT 2 (Rédei): H(T) is always odd for every tournament T.
+  So v₂(H(T_p)) = 0.
+
+  FACT 3 (THM-F3): p(p-1)/2 divides H(T_p).
+  Since H(T_p) is odd, this means p(p-1)/2 must also be odd for the
+  division to work. Check: p is odd, p-1 is even, so p(p-1)/2 = p × (p-1)/2.
+  v₂(p(p-1)/2) = v₂(p-1) - 1 (since p is odd).
+  For p ≡ 3 mod 4: p-1 ≡ 2 mod 4, so v₂(p-1) = 1.
+  Therefore v₂(p(p-1)/2) = 1 - 1 = 0. ✓ p(p-1)/2 is ODD.
+
+  For p ≡ 3 mod 8: p-1 ≡ 2 mod 8, v₂(p-1) = 1, v₂(|Aff|) = 0. ✓
+  For p ≡ 7 mod 8: p-1 ≡ 6 mod 8, v₂(p-1) = 1, v₂(|Aff|) = 0. ✓
+
+  So for ALL Paley primes: |Aff(QR)| = p(p-1)/2 is ODD.
+  And H(T_p) is ODD. So H(T_p)/|Aff| is a ratio of odd numbers.
+
+  FACT 4 (HYP-1713): H(T_p)/|Aff| is odd.
+  This is automatically true since both numerator and denominator are odd!
+
+  WAIT — this means HYP-1713 is TRIVIALLY TRUE for Paley primes!
+  H(T_p) is odd (Rédei), |Aff| is odd (since p(p-1)/2 has v₂ = 0 for
+  p ≡ 3 mod 4), and an odd number divided by an odd number is odd if
+  the division is exact.
+
+  Actually: odd/odd is always odd if it's an integer. Because if a = b·q
+  with a, b odd, then q must be odd (since b·q odd ⟹ q odd).
+
+  SO HYP-1713 (orbit parity: H/|Aff| is odd) IS PROVED for Paley primes!
+
+  VERIFICATION:
+    p=3: |Aff| = 3, v₂(|Aff|) = 0, p mod 4 = 3, p mod 8 = 3
+    p=7: |Aff| = 21, v₂(|Aff|) = 0, p mod 4 = 3, p mod 8 = 7
+    p=11: |Aff| = 55, v₂(|Aff|) = 0, p mod 4 = 3, p mod 8 = 3
+    p=19: |Aff| = 171, v₂(|Aff|) = 0, p mod 4 = 3, p mod 8 = 3
+    p=23: |Aff| = 253, v₂(|Aff|) = 0, p mod 4 = 3, p mod 8 = 7
+
+  ┌────────────────────────────────────────────────────────────────┐
+  │  THEOREM (HYP-1713 PROVED):                                    │
+  │                                                                │
+  │  For Paley prime p ≡ 3 (mod 4): H(T_p)/|Aff(QR)| is ODD.     │
+  │                                                                │
+  │  Proof: H(T_p) is odd (Rédei's theorem).                      │
+  │  |Aff(QR)| = p(p-1)/2. Since p ≡ 3 mod 4: v₂(p-1) = 1,      │
+  │  so v₂(p(p-1)/2) = 0 + 1 - 1 = 0, i.e., |Aff| is odd.       │
+  │  An integer = odd / odd is always odd.   □                     │
+  │                                                                │
+  │  COROLLARY: H(T_p)/p ≡ (p-1)/2 (mod p-1).                    │
+  │  Proof: H/p = |Aff|/p × (H/|Aff|) = (p-1)/2 × (odd number). │
+  │  So H/p ≡ (p-1)/2 × 1 = (p-1)/2 (mod p-1).                  │
+  │  (Since (p-1)/2 × odd ≡ (p-1)/2 mod (p-1).)   □              │
+  └────────────────────────────────────────────────────────────────┘
+
+  NOTE: This also proves the STRONGER form of HYP-1713:
+  H(T_p)/p ≡ (p-1)/2 (mod p-1).
+
+  The proof is: H/p = ((p-1)/2) × k where k = H/|Aff| is odd.
+  So H/p mod (p-1) = ((p-1)/2 × k) mod (p-1).
+  Since k is odd: k = 2m+1, so (p-1)/2 × k = (p-1)/2 + m(p-1).
+  Therefore H/p ≡ (p-1)/2 (mod p-1).   □
+
+
+══════════════════════════════════════════════════════════════════════════════
+  SECTION 9: THE GENERAL CASE — ALL PRIMES?
+══════════════════════════════════════════════════════════════════════════════
+
+  Does the orbit parity theorem extend beyond Paley primes?
+
+  For ANY tournament T on n vertices with automorphism group Aut(T):
+  - H(T) is odd (Rédei)
+  - |Aut(T)| can be even or odd
+  - If |Aut(T)| is odd, then H(T)/|Aut(T)| is automatically odd
+
+  For Paley T_p: |Aut| = p(p-1)/2 which is odd for p ≡ 3 mod 4.
+  This is because the full automorphism group is Aff(QR), and QR dilations
+  have order (p-1)/2 which is odd (since (p-1)/2 = (4k+2)/2 = 2k+1).
+
+  For OTHER tournaments: if |Aut(T)| is even (contains an element of
+  order 2), then H(T)/|Aut(T)| divides an odd by an even number,
+  which would make it a non-integer or have v₂ < 0. But orbit-stabilizer
+  gives H(T)/|Aut(T)| = number of Aut-orbits on Ham paths, which is a
+  positive integer. So if |Aut| is even: H/|Aut| must still be an integer,
+  which means 2 | H... but H is odd! Contradiction: |Aut| CANNOT be even!
+
+  WAIT — |Aut| CAN be even. The orbit-stabilizer theorem gives:
+  |orbits| = (1/|Aut|) × Σ_{g ∈ Aut} |Fix(g)|
+
+  This sum equals H only if the group acts on HAM PATHS. Actually:
+  |Aut| × |orbits| = Σ |Fix(g)| ≠ H in general.
+
+  The correct relation: Aut acts on the set of H paths. By Burnside:
+  |orbits| = (1/|Aut|) Σ_{g} |{paths fixed by g}|.
+
+  For g = id: contributes H.
+  For g ≠ id: contributes |Fix(g)|.
+  Total: |Aut| × |orbits| = H + Σ_{g≠id} |Fix(g)|.
+
+  So |orbits| = (H + Σ_{g≠id} Fix(g)) / |Aut|.
+
+  For Paley: we showed |Aut| is odd and Fix(g) = 0 for g ≠ id
+  (at least for the translation part). So |orbits| = H/|Aut| = odd/odd = odd.
+
+  For general tournaments with even |Aut|: |orbits| can still be an integer
+  because the Fix(g) terms contribute. The total H + Σ Fix(g) is divisible
+  by |Aut|, but individual terms may not be.
+
+
+══════════════════════════════════════════════════════════════════════════════
+  SUMMARY OF RESULTS
+══════════════════════════════════════════════════════════════════════════════
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PROVED IN THIS SESSION:
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  1. HYP-1713 IS PROVED for Paley primes p ≡ 3 mod 4:
+     H(T_p)/|Aff(QR)| is odd. Trivially follows from:
+     - H odd (Rédei) and |Aff| odd (since v₂(p(p-1)/2) = 0).
+     - Corollary: H/p ≡ (p-1)/2 mod (p-1).
+
+  2. HYP-1712 REDUCED to a concrete algebraic identity:
+     v₂(a(n)) = n/2 + v₂(c(n)) for even n
+     reduces to showing:
+     (a) Only 2-part coprime odd partitions (a,b) with gcd(a,b)=1
+         achieve the minimum v₂ level in the Burnside sum.
+     (b) v₂(Σ 1/(a(n-a))) = v₂(c(n)) where sum over coprime pairs.
+     Both (a) and (b) verified computationally for n = 4..20.
+     (a) likely provable by the same gap inequality as THM-305.
+
+  3. STRUCTURAL BRIDGE between v₂(a(n)) and H(T_p):
+     The 2-adic valuation v₂(a(p)) = (p-1)/2 = |QR_p| (THM-305)
+     controls both the tournament count AND the orbit structure:
+     - v₂(|Aff(QR)|) = 0 for Paley primes (proved)
+     - H(T_p) odd × orbit-count formula → orbit count is odd
+
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  OPEN (requiring further work):
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  4. Complete proof of HYP-1712 part (b):
+     Need to prove v₂(Σ_{a ∈ C} 1/(a(n-a))) = v₂(|C|)
+     where C = coprime odd residues < n/2.
+     This may follow from a partial-fraction identity + Kummer's theorem.
+
+  5. Odd part structure of a(n)/2^{(n-1)/2}:
+     Values 1, 3, 57, 11971, 28242289 include primes.
+     No clear pattern found yet.
+
+
+Computation complete.

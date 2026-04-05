@@ -1811,15 +1811,17 @@ Source: qr_tournament_enumeration_s25.py
 **What:** Tournament count mod p decomposes into Euler quotient f_p, Wilson quotient w_p, and remaining Burnside terms A_p. At Wilson primes (5, 13, 563), the middle term vanishes.
 Source: qr_tournament_enumeration_s25.py
 
-## HYP-1712: v_2(T(n)) = n/2 + v_2(c(n)) for even n ≥ 4 (opus-S25)
-**Status:** OPEN (verified n=4..20, not yet proved)
-**What:** For even n, the v_2 excess over n/2 equals v_2 of c(n), where c(n) = #{odd k : 1 ≤ k < n/2, gcd(k,n) = 1}. With n = 2^a × m (m odd): c = 2^{a-2}φ(m) (a≥2) or φ(m)/2 (a=1). The excess comes from cancellation of coprime 2-part partition terms, each contributing an odd coefficient.
-Source: even_v2_conjecture_s25.py
+## HYP-1712: v_2(T(n)) = n/2 + v_2(c(n)) for even n ≥ 4 (opus-S25, advanced S24c)
+**Status:** PARTIALLY PROVED (Part a proved, Part b verified n=4..24)
+**What:** For even n, v_2(a(n)) = n/2 + v_2(c(n)) where c(n) = #{odd k : 1 ≤ k < n/2, gcd(k,n) = 1}.
+**Part (a) PROVED:** Only coprime 2-part odd partitions (a,n-a) with gcd(a,n)=1 achieve minimum v₂ in Burnside. Gap ≥ 2 for non-coprime 2-part, ≥ 3 for ≥4-part (n≥6). Proof: e(a,b) = (n-2)/2 + gcd(a,b), and gcd=1 uniquely minimizes; k≥4 parts force k even (odd parts, even n) and the cross-gcd sum Σ_{i<j}gcd ≥ C(k,2) dominates.
+**Part (b) OPEN:** Reduces to v₂(Σ_{d ∈ D} 1/d) = v₂(n) + v₂(c(n)) where D = odd units mod n. Verified n=4..24. Equivalent to: sum of c(n) odd coefficients equals c(n) × (odd). True for all computed cases.
+Source: even_v2_conjecture_s25.py, prove_hyp1712_s24c.py, v2_merge_s24c.py
 
-## HYP-1713: ORBIT PARITY — H(T_p)/p ≡ (p-1)/2 mod (p-1) for all Paley primes (opus-S24b)
-**Status:** CONFIRMED at p = 3, 7, 11, 19, 23 — OPEN for general proof
-**What:** The number of Aff(QR)-orbits on Hamiltonian paths of the Paley tournament is always ODD. Equivalently, H(T_p) ≡ p(p-1)/2 (mod p(p-1)). Proof structure: the anti-automorphism τ̃ (reverse ∘ negate) pairs non-AP orbits, leaving the AP orbit as the unique fixed orbit.
-Source: qr_orbit_theorem_s24b.py, qr-tournament-foundations.md
+## HYP-1713: ORBIT PARITY — H(T_p)/p ≡ (p-1)/2 mod (p-1) for all Paley primes (opus-S24b, PROVED S24c)
+**Status:** PROVED
+**What:** For Paley primes p ≡ 3 mod 4: H(T_p)/|Aff(QR)| is odd. Corollary: H/p ≡ (p-1)/2 mod (p-1). PROOF: H(T_p) is odd (Rédei). |Aff(QR)| = p(p-1)/2 is odd because v₂(p-1) = 1 for p ≡ 3 mod 4, so v₂(p(p-1)/2) = 0+1-1 = 0. An integer that is odd/odd is odd. For the corollary: H/p = (p-1)/2 × k where k = H/|Aff| is odd, so H/p = (p-1)/2 × (2m+1) = (p-1)/2 + m(p-1), giving H/p ≡ (p-1)/2 mod (p-1). The anti-automorphism argument from S24b was unnecessary — the result is trivial from Rédei + parity of |Aff|.
+Source: v2_merge_s24c.py
 
 ## HYP-1714: Aff(QR) acts FREELY on Hamiltonian paths of T_p (opus-S24b)
 **Status:** CONFIRMED at p = 3, 7, 11, 19, 23 — no non-generic orbit found
