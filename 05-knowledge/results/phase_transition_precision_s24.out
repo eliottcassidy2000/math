@@ -1,0 +1,275 @@
+======================================================================
+PHASE TRANSITION PRECISION ANALYSIS
+======================================================================
+
+============================================================
+n = 5, m = 10, E[H_random] = 7.50, trials = 2000
+============================================================
+  Time: 2.5s
+
+  Crossing analysis (fraction of equilibrium reached):
+  Fraction |  Step |  Step/m | Step/m^2
+  ---------|-------|---------|---------
+      0.10 |     1 |   0.100 |   0.0100
+      0.25 |     2 |   0.200 |   0.0200
+      0.50 |     3 |   0.300 |   0.0300
+      0.75 |     5 |   0.500 |   0.0500
+      0.90 |     8 |   0.800 |   0.0800
+      0.95 |    10 |   1.000 |   0.1000
+      0.99 |    14 |   1.400 |   0.1400
+
+  MIDPOINT: step 3 = 0.3000 * m
+
+  Exponential relaxation: tau = 3.177 = 0.3177 * m
+  Relaxation time in units of m: 0.3177
+
+  Detailed trajectory (step, mean_H, std_H, normalized):
+    step    0: mean_H=     1.0, std=    0.0, normalized=0.0000
+    step    1: mean_H=     2.6, std=    2.3, normalized=0.2488
+    step    2: mean_H=     4.0, std=    3.2, normalized=0.4686
+    step    3: mean_H=     4.9, std=    3.7, normalized=0.6072
+    step    4: mean_H=     5.6, std=    3.9, normalized=0.7115
+    step    5: mean_H=     6.2, std=    4.1, normalized=0.8034
+    step    6: mean_H=     6.6, std=    4.2, normalized=0.8652
+    step    7: mean_H=     6.8, std=    4.2, normalized=0.8968
+    step    8: mean_H=     6.9, std=    4.2, normalized=0.9074
+    step    9: mean_H=     7.2, std=    4.2, normalized=0.9494
+    step   10: mean_H=     7.3, std=    4.2, normalized=0.9628
+    step   11: mean_H=     7.3, std=    4.2, normalized=0.9628
+    step   12: mean_H=     7.4, std=    4.2, normalized=0.9772
+    step   13: mean_H=     7.4, std=    4.2, normalized=0.9820
+    step   14: mean_H=     7.5, std=    4.2, normalized=0.9945
+    step   15: mean_H=     7.4, std=    4.3, normalized=0.9894
+    step   16: mean_H=     7.4, std=    4.3, normalized=0.9900
+    step   17: mean_H=     7.6, std=    4.2, normalized=1.0149
+    step   18: mean_H=     7.6, std=    4.2, normalized=1.0100
+    step   19: mean_H=     7.5, std=    4.2, normalized=0.9960
+    step   20: mean_H=     7.5, std=    4.2, normalized=1.0002
+    step   22: mean_H=     7.5, std=    4.2, normalized=0.9938
+    step   24: mean_H=     7.5, std=    4.3, normalized=0.9937
+    step   26: mean_H=     7.3, std=    4.2, normalized=0.9766
+    step   28: mean_H=     7.3, std=    4.2, normalized=0.9712
+    step   30: mean_H=     7.4, std=    4.2, normalized=0.9832
+    step   32: mean_H=     7.5, std=    4.2, normalized=1.0031
+    step   34: mean_H=     7.4, std=    4.2, normalized=0.9912
+    step   36: mean_H=     7.6, std=    4.2, normalized=1.0106
+    step   38: mean_H=     7.7, std=    4.2, normalized=1.0360
+    step   40: mean_H=     7.6, std=    4.2, normalized=1.0138
+    step   42: mean_H=     7.5, std=    4.1, normalized=1.0046
+    step   44: mean_H=     7.4, std=    4.2, normalized=0.9900
+    step   46: mean_H=     7.5, std=    4.2, normalized=0.9989
+    step   48: mean_H=     7.5, std=    4.2, normalized=0.9982
+    step   50: mean_H=     7.6, std=    4.3, normalized=1.0220
+
+============================================================
+n = 6, m = 15, E[H_random] = 22.50, trials = 1000
+============================================================
+  Time: 3.9s
+
+  Crossing analysis (fraction of equilibrium reached):
+  Fraction |  Step |  Step/m | Step/m^2
+  ---------|-------|---------|---------
+      0.10 |     1 |   0.067 |   0.0044
+      0.25 |     3 |   0.200 |   0.0133
+      0.50 |     5 |   0.333 |   0.0222
+      0.75 |     8 |   0.533 |   0.0356
+      0.90 |    13 |   0.867 |   0.0578
+      0.95 |    18 |   1.200 |   0.0800
+      0.99 |    26 |   1.733 |   0.1156
+
+  MIDPOINT: step 5 = 0.3333 * m
+
+  Exponential relaxation: tau = 5.703 = 0.3802 * m
+  Relaxation time in units of m: 0.3802
+
+  Detailed trajectory (step, mean_H, std_H, normalized):
+    step    0: mean_H=     1.0, std=    0.0, normalized=0.0000
+    step    1: mean_H=     3.5, std=    3.7, normalized=0.1163
+    step    2: mean_H=     6.1, std=    5.9, normalized=0.2380
+    step    3: mean_H=     8.7, std=    7.7, normalized=0.3592
+    step    4: mean_H=    10.9, std=    9.4, normalized=0.4617
+    step    5: mean_H=    12.8, std=   10.2, normalized=0.5487
+    step    6: mean_H=    14.4, std=   10.9, normalized=0.6255
+    step    7: mean_H=    16.0, std=   11.3, normalized=0.6967
+    step    8: mean_H=    17.2, std=   11.6, normalized=0.7514
+    step    9: mean_H=    18.0, std=   11.8, normalized=0.7891
+    step   10: mean_H=    18.7, std=   11.7, normalized=0.8220
+    step   11: mean_H=    19.6, std=   12.1, normalized=0.8629
+    step   12: mean_H=    20.1, std=   12.1, normalized=0.8901
+    step   13: mean_H=    20.5, std=   12.1, normalized=0.9091
+    step   14: mean_H=    20.8, std=   12.3, normalized=0.9215
+    step   15: mean_H=    20.8, std=   12.0, normalized=0.9193
+    step   16: mean_H=    20.6, std=   12.1, normalized=0.9100
+    step   17: mean_H=    21.2, std=   12.0, normalized=0.9391
+    step   18: mean_H=    21.5, std=   12.5, normalized=0.9552
+    step   19: mean_H=    21.6, std=   12.3, normalized=0.9605
+    step   20: mean_H=    21.8, std=   12.4, normalized=0.9670
+    step   21: mean_H=    21.5, std=   12.3, normalized=0.9519
+    step   22: mean_H=    21.7, std=   12.3, normalized=0.9624
+    step   23: mean_H=    22.0, std=   11.9, normalized=0.9774
+    step   24: mean_H=    21.9, std=   12.2, normalized=0.9733
+    step   25: mean_H=    22.0, std=   12.0, normalized=0.9767
+    step   26: mean_H=    22.7, std=   12.2, normalized=1.0094
+    step   27: mean_H=    22.9, std=   12.3, normalized=1.0184
+    step   28: mean_H=    22.5, std=   12.1, normalized=0.9993
+    step   29: mean_H=    22.5, std=   12.2, normalized=0.9992
+    step   30: mean_H=    22.6, std=   12.0, normalized=1.0065
+    step   33: mean_H=    22.2, std=   12.1, normalized=0.9873
+    step   36: mean_H=    22.0, std=   11.8, normalized=0.9770
+    step   39: mean_H=    23.1, std=   12.1, normalized=1.0294
+    step   42: mean_H=    22.2, std=   11.9, normalized=0.9846
+    step   45: mean_H=    22.7, std=   11.9, normalized=1.0085
+    step   48: mean_H=    22.6, std=   12.0, normalized=1.0061
+    step   51: mean_H=    22.1, std=   12.2, normalized=0.9798
+    step   54: mean_H=    22.3, std=   12.1, normalized=0.9891
+    step   57: mean_H=    22.4, std=   12.0, normalized=0.9977
+
+============================================================
+n = 7, m = 21, E[H_random] = 78.75, trials = 200
+============================================================
+  Time: 2.5s
+
+  Crossing analysis (fraction of equilibrium reached):
+  Fraction |  Step |  Step/m | Step/m^2
+  ---------|-------|---------|---------
+      0.10 |     2 |   0.095 |   0.0045
+      0.25 |     4 |   0.190 |   0.0091
+      0.50 |     8 |   0.381 |   0.0181
+      0.75 |    12 |   0.571 |   0.0272
+      0.90 |    23 |   1.095 |   0.0522
+      0.95 |    29 |   1.381 |   0.0658
+      0.99 |    32 |   1.524 |   0.0726
+
+  MIDPOINT: step 8 = 0.3810 * m
+
+  Exponential relaxation: tau = 9.711 = 0.4624 * m
+  Relaxation time in units of m: 0.4624
+
+  Detailed trajectory (step, mean_H, std_H, normalized):
+    step    0: mean_H=     1.0, std=    0.0, normalized=0.0000
+    step    1: mean_H=     4.9, std=    5.8, normalized=0.0504
+    step    2: mean_H=     9.5, std=   12.2, normalized=0.1098
+    step    3: mean_H=    17.0, std=   19.1, normalized=0.2060
+    step    4: mean_H=    22.8, std=   22.4, normalized=0.2803
+    step    5: mean_H=    28.2, std=   26.6, normalized=0.3497
+    step    6: mean_H=    32.8, std=   28.0, normalized=0.4086
+    step    7: mean_H=    37.8, std=   32.5, normalized=0.4733
+    step    8: mean_H=    43.6, std=   34.8, normalized=0.5482
+    step    9: mean_H=    49.5, std=   36.5, normalized=0.6233
+    step   10: mean_H=    54.5, std=   39.3, normalized=0.6876
+    step   11: mean_H=    57.9, std=   36.8, normalized=0.7312
+    step   12: mean_H=    61.0, std=   37.3, normalized=0.7723
+    step   13: mean_H=    62.0, std=   38.5, normalized=0.7842
+    step   14: mean_H=    61.6, std=   38.9, normalized=0.7790
+    step   15: mean_H=    63.6, std=   37.9, normalized=0.8051
+    step   16: mean_H=    64.9, std=   39.8, normalized=0.8214
+    step   17: mean_H=    65.6, std=   40.8, normalized=0.8309
+    step   18: mean_H=    65.2, std=   38.8, normalized=0.8253
+    step   19: mean_H=    67.6, std=   40.2, normalized=0.8565
+    step   20: mean_H=    66.5, std=   40.8, normalized=0.8418
+    step   21: mean_H=    68.0, std=   40.4, normalized=0.8624
+    step   22: mean_H=    68.5, std=   40.0, normalized=0.8680
+    step   23: mean_H=    72.4, std=   39.5, normalized=0.9188
+    step   24: mean_H=    71.9, std=   38.6, normalized=0.9115
+    step   25: mean_H=    72.2, std=   39.6, normalized=0.9159
+    step   26: mean_H=    72.3, std=   40.1, normalized=0.9170
+    step   27: mean_H=    73.3, std=   40.0, normalized=0.9299
+    step   28: mean_H=    72.8, std=   40.7, normalized=0.9237
+    step   29: mean_H=    76.8, std=   40.3, normalized=0.9743
+    step   30: mean_H=    77.8, std=   42.2, normalized=0.9884
+    step   31: mean_H=    76.6, std=   41.7, normalized=0.9726
+    step   32: mean_H=    79.8, std=   39.4, normalized=1.0129
+    step   33: mean_H=    78.5, std=   40.4, normalized=0.9964
+    step   34: mean_H=    78.1, std=   40.2, normalized=0.9916
+    step   35: mean_H=    74.8, std=   40.3, normalized=0.9491
+    step   36: mean_H=    75.5, std=   40.8, normalized=0.9576
+    step   37: mean_H=    74.5, std=   39.0, normalized=0.9453
+    step   38: mean_H=    74.4, std=   40.0, normalized=0.9441
+    step   39: mean_H=    72.8, std=   40.6, normalized=0.9239
+
+============================================================
+n = 8, m = 28, E[H_random] = 315.00, trials = 50
+============================================================
+  Time: 2.0s
+
+  Crossing analysis (fraction of equilibrium reached):
+  Fraction |  Step |  Step/m | Step/m^2
+  ---------|-------|---------|---------
+      0.10 |     4 |   0.143 |   0.0051
+      0.25 |     7 |   0.250 |   0.0089
+      0.50 |    12 |   0.429 |   0.0153
+      0.75 |    19 |   0.679 |   0.0242
+      0.90 |    35 |   1.250 |   0.0446
+      0.95 |    46 |   1.643 |   0.0587
+      0.99 |    47 |   1.679 |   0.0599
+
+  MIDPOINT: step 12 = 0.4286 * m
+
+  Exponential relaxation: tau = 12.422 = 0.4436 * m
+  Relaxation time in units of m: 0.4436
+
+  Detailed trajectory (step, mean_H, std_H, normalized):
+    step    0: mean_H=     1.0, std=    0.0, normalized=0.0000
+    step    1: mean_H=     7.5, std=    9.3, normalized=0.0208
+    step    2: mean_H=    16.0, std=   19.1, normalized=0.0479
+    step    3: mean_H=    29.8, std=   38.8, normalized=0.0917
+    step    4: mean_H=    45.8, std=   53.6, normalized=0.1428
+    step    5: mean_H=    56.5, std=   65.0, normalized=0.1768
+    step    6: mean_H=    68.7, std=   72.1, normalized=0.2157
+    step    7: mean_H=    88.0, std=   84.4, normalized=0.2769
+    step    8: mean_H=   108.0, std=   95.6, normalized=0.3408
+    step    9: mean_H=   124.4, std=   96.9, normalized=0.3931
+    step   10: mean_H=   137.0, std=   96.5, normalized=0.4331
+    step   11: mean_H=   146.7, std=  122.3, normalized=0.4641
+    step   12: mean_H=   161.4, std=  119.6, normalized=0.5110
+    step   13: mean_H=   182.9, std=  129.9, normalized=0.5794
+    step   14: mean_H=   210.9, std=  136.3, normalized=0.6685
+    step   15: mean_H=   216.8, std=  145.9, normalized=0.6873
+    step   16: mean_H=   202.7, std=  132.3, normalized=0.6424
+    step   17: mean_H=   210.4, std=  139.4, normalized=0.6668
+    step   18: mean_H=   225.6, std=  142.1, normalized=0.7153
+    step   19: mean_H=   238.4, std=  138.1, normalized=0.7562
+    step   20: mean_H=   245.5, std=  135.1, normalized=0.7787
+    step   21: mean_H=   259.2, std=  149.8, normalized=0.8223
+    step   22: mean_H=   258.0, std=  148.1, normalized=0.8183
+    step   23: mean_H=   260.2, std=  146.6, normalized=0.8255
+    step   24: mean_H=   257.0, std=  136.7, normalized=0.8154
+    step   25: mean_H=   270.0, std=  145.8, normalized=0.8566
+    step   26: mean_H=   252.4, std=  125.0, normalized=0.8008
+    step   27: mean_H=   255.7, std=  129.4, normalized=0.8111
+    step   28: mean_H=   263.7, std=  135.8, normalized=0.8367
+    step   29: mean_H=   273.7, std=  143.7, normalized=0.8684
+    step   30: mean_H=   270.1, std=  146.2, normalized=0.8571
+    step   31: mean_H=   271.0, std=  153.8, normalized=0.8600
+    step   32: mean_H=   271.0, std=  148.7, normalized=0.8599
+    step   33: mean_H=   267.8, std=  136.3, normalized=0.8496
+    step   34: mean_H=   283.6, std=  152.9, normalized=0.8999
+    step   35: mean_H=   293.0, std=  150.7, normalized=0.9298
+    step   36: mean_H=   267.4, std=  153.4, normalized=0.8483
+    step   37: mean_H=   268.4, std=  141.4, normalized=0.8516
+    step   38: mean_H=   278.2, std=  155.0, normalized=0.8827
+    step   39: mean_H=   275.4, std=  143.5, normalized=0.8738
+
+
+======================================================================
+CROSS-n COMPARISON
+======================================================================
+
+    n |    m |     E[H] |  t_50% |  t_50%/m |   tau/m
+  ----|------|----------|--------|----------|--------
+    5 |   10 |      7.5 |      3 |   0.3000 | 
+    6 |   15 |     22.5 |      5 |   0.3333 | 
+    7 |   21 |     78.8 |      8 |   0.3810 | 
+    8 |   28 |    315.0 |     12 |   0.4286 | 
+
+  Crossing at 10%:
+    n=5: step 1 = 0.1000 * m
+    n=6: step 1 = 0.0667 * m
+    n=7: step 2 = 0.0952 * m
+    n=8: step 4 = 0.1429 * m
+
+  Crossing at 90%:
+    n=5: step 8 = 0.8000 * m
+    n=6: step 13 = 0.8667 * m
+    n=7: step 23 = 1.0952 * m
+    n=8: step 35 = 1.2500 * m

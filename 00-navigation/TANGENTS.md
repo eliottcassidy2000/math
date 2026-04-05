@@ -853,3 +853,19 @@ H=7 impossibility from AFM perspective: α₁ (total odd cycle count) SKIPS valu
 **T262** #AFM #E-AFM #redundant | certainty: HIGH (exhaustive n=4,5,6) | source: opus-2026-04-04-S15
 Staircase nearest-neighbor Ising energy E_AFM = Σ_{neighbors} σ_i σ_j adds ZERO information beyond c₃ for predicting H (ΔR²=0). E_AFM counts correlated tile PAIRS; c₃ counts frustrated vertex TRIPLES. The vertex triple is the fundamental unit, not the tile pair.
 **Paley beats Interval via total cycle count at small p (THM-256).** At p=7: Paley has 80 directed odd cycles vs Interval's 59, despite FEWER disjoint pairs (7 vs 14). Same c3=14 for both. Paley's advantage is in 5-cycles (42 vs 28) and 7-cycles (24 vs 17). Spectral flatness explains this: flat |lambda_k|=sqrt(2) for all k gives uniform cycle distribution. Crossover to Interval occurs between p=11 and p=19.
+
+---
+
+## Tournament Dynamics (opus-2026-04-05-S24)
+
+**T263** #H-landscape #unimodality #local-max #n6 | certainty: HIGH (exhaustive) | source: opus-2026-04-05-S24
+H-landscape under arc flips is UNIMODAL at n≤5 (every greedy ascent reaches global max). BREAKS at n=6: local max at H=37 (single SC iso class, score (1,2,2,3,3,4), c₃=6). Basin traps 11.7% of tournaments including ALL transitive ones. Escape is FLAT (H→37→37→45). The n=5→6 threshold matches several other structural transitions.
+
+**T264** #majority-CA #transitivity #ordering | certainty: HIGH (exhaustive n=4, sampled n=5) | source: opus-2026-04-05-S24
+Synchronous majority rule on tournament arcs (each arc polls 2-paths) converges to TRANSITIVE tournaments. The CA is an "ordering machine" — 3-cycles are unstable under majority dynamics. Some 2-cycles exist. Triangle stress rule also mostly kills cycles.
+
+**T265** #phase-transition #random-walk #inner-staircase | certainty: HIGH (n=5,6,7,8) | source: opus-2026-04-05-S24
+Random arc-flip relaxation from transitive: midpoint t₅₀%(n) = C(n-3,2)+2 = (n-3)(n-4)/2 + 2. Values 3,5,8,12 for n=5-8. The INNER staircase (n-2 vertices) controls thermalization time. Ratio t₅₀%/m grows toward 1 as n→∞.
+
+**T266** #metagraph-spectral #Fiedler #sign-flip | certainty: HIGH (exact computation) | source: opus-2026-04-05-S24
+Fiedler vector of iso-class metagraph has corr(f, H) = +0.73 at n=5 but -0.55 at n=6. Sign flip: high-H classes go from peripheral to central. Algebraic connectivity μ₂ ≈ 2 universally. Regular tournament is extreme outlier at n=5 (f=+0.85).

@@ -1,0 +1,72 @@
+======================================================================
+DEEP ANALYSIS OF H=37 LOCAL MAXIMUM AT n=6
+======================================================================
+
+Step 1: Exhaustive local maxima search at n=6...
+  Time: 14.7s
+
+  Global max H = 45
+  Local maxima by H value:
+    H = 37: 720 tournaments (2.20%) (LOCAL MAX)
+    H = 45: 480 tournaments (1.46%) (GLOBAL MAX)
+
+
+Step 2: Characterizing H=37 local maxima...
+
+  H = 37 local maximum (720 tournaments):
+    Iso classes: 1
+    cf=144: 720 labeled tournaments, score=(1, 2, 2, 3, 3, 4), c3=6, SC=True
+      Neighbor H distribution: {5: 10, 17: 10, 27: 20, 31: 20, 33: 20, 37: 70}
+      Min neighbor H: 5, Valley depth: 32
+
+
+Step 3: Basin of attraction analysis (gradient ascent from all 32768 tournaments)...
+  Time: 167.8s
+
+  Overall basins:
+    H=37: 3840 (11.7%), max 3 steps
+    H=45: 28928 (88.3%), max 5 steps
+
+  Where do different starting H values end up?
+    Start H=1: 720 tournaments -> H=37:100%
+    Start H=3: 960 tournaments -> H=37:50%, H=45:50%
+    Start H=5: 2160 tournaments -> H=37:33%, H=45:67%
+    Start H=9: 2960 tournaments -> H=45:100%
+    Start H=11: 1440 tournaments -> H=45:100%
+    Start H=13: 1440 tournaments -> H=45:100%
+    Start H=15: 2208 tournaments -> H=45:100%
+    Start H=17: 1440 tournaments -> H=37:50%, H=45:50%
+    Start H=19: 1440 tournaments -> H=45:100%
+    Start H=23: 2880 tournaments -> H=45:100%
+    Start H=25: 1440 tournaments -> H=45:100%
+    Start H=27: 480 tournaments -> H=37:100%
+    Start H=29: 2880 tournaments -> H=45:100%
+    Start H=31: 1440 tournaments -> H=45:100%
+    Start H=33: 2640 tournaments -> H=45:100%
+    Start H=37: 3600 tournaments -> H=37:20%, H=45:80%
+    Start H=41: 720 tournaments -> H=45:100%
+    Start H=43: 1440 tournaments -> H=45:100%
+    Start H=45: 480 tournaments -> H=45:100%
+
+
+Step 4: Can we escape H=37 with 2 flips?
+  bits=144: can escape with 2 flips: True, escape paths: 16/225
+  bits=208: can escape with 2 flips: True, escape paths: 16/225
+  bits=265: can escape with 2 flips: True, escape paths: 16/225
+  bits=269: can escape with 2 flips: True, escape paths: 16/225
+  bits=317: can escape with 2 flips: True, escape paths: 16/225
+
+
+Step 5: Minimum saddle depth (barrier height to escape H=37 basin)
+  bits=144: best H reachable in 2 steps = 45
+    via H=37 -> H=45 (flips (0, 3), (2, 5))
+    Shallowest valley (highest H1 with H2 > 37): 37
+    Barrier depth: 0
+  bits=208: best H reachable in 2 steps = 45
+    via H=37 -> H=45 (flips (0, 1), (2, 5))
+    Shallowest valley (highest H1 with H2 > 37): 37
+    Barrier depth: 0
+  bits=265: best H reachable in 2 steps = 45
+    via H=37 -> H=45 (flips (0, 5), (1, 4))
+    Shallowest valley (highest H1 with H2 > 37): 37
+    Barrier depth: 0

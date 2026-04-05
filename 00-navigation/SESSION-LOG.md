@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-05-S24 — 2026-04-05: Three Creative Dynamics — CA, Phase Transitions, Spectral Metagraph
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S23
+**Summary:** Explored three genuinely novel directions: tournament cellular automata, random walk phase transitions, and spectral analysis of the iso-class metagraph. Major discoveries: (1) H-landscape is unimodal at n≤5 but develops a local maximum at H=37 at n=6 that traps all transitive tournaments. (2) Random arc-flip equilibration follows t_50%=C(n-3,2)+2 (verified n=5-8). (3) Fiedler-H correlation reverses sign between n=5 and n=6.
+
+**Key Results:**
+1. **H-LANDSCAPE UNIMODALITY BREAKS AT n=6** (HYP-1704, HYP-1705): At n≤5, greedy H-ascent from ANY tournament reaches the global max. At n=6, a single SC iso class at H=37 (score (1,2,2,3,3,4), c₃=6) traps 11.7% of starts. Every transitive tournament is trapped. Escape requires a flat lateral move.
+2. **MAJORITY RULE CA → TRANSITIVITY** (HYP-1706): Synchronous majority rule on arcs converges to total orders. Triangle stress rule similar. H-gradient climbs to max (or gets trapped at n≥6).
+3. **PHASE TRANSITION MIDPOINT** (HYP-1707): t_50%(n) = C(n-3,2)+2 = 3,5,8,12 for n=5-8. The inner staircase controls thermalization time.
+4. **FIEDLER SIGN FLIP** (HYP-1708): The spectral geometry of G_n reverses between n=5 (high-H peripheral) and n=6 (high-H central). Algebraic connectivity μ₂ ≈ 2 universally.
+
+**New contributions:** creative_explorations_s24.py, h_landscape_unimodality_s24.py, h_local_max_analysis_s24.py, phase_transition_precision_s24.py, three-dynamics-of-tournaments.md (reflection), HYP-1704–1708
+**Unresolved:** Does H=37 local max persist at n≥7? Prove majority rule convergence algebraically. Explain why t_50% = C(n-3,2)+2 (inner staircase connection). Characterize ALL local H-maxima at n=7.
+
 ## opus-2026-04-04-S23 — 2026-04-04: Proving the Open Questions — Claim A Decomposition, r_∞, β_c Scaling
 
 **Account:** opus
