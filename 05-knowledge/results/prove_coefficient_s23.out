@@ -1,0 +1,91 @@
+  ... 50 parents done
+╔══════════════════════════════════════════════════════════════════╗
+║  PROVING THE OPEN QUESTIONS                                    ║
+║  opus-2026-04-04-S23                                           ║
+╚══════════════════════════════════════════════════════════════════╝
+
+======================================================================
+  CLAIM A DECOMPOSITION: n = 4 → 5
+======================================================================
+
+  Claim A mismatches: 0/1024
+
+  Contribution by cycle length k:
+    k     mean 2·Σμ     as fraction of ΔH     coeff vs Δc₃
+    3      3.000000              0.666667         2.000000
+    5      1.500000              0.333333         1.000000
+  SUM      4.500000              1.000000         3.000000
+
+  Total coefficient from decomposition: 3.000000
+  Predicted (n-2)!/2^(n-4): 3.000000
+  Ratio: 1.000000
+
+  RECURSIVE STRUCTURE:
+  k=3 contribution coefficient = coeff of 3-cycle μ vs Δc₃
+  This should relate to H at (n-3) vertices times the 3-cycle count
+
+  [Claim A decomp n=5: 0.1s]
+
+======================================================================
+  VARIANCE DECOMPOSITION of H at n = 5
+======================================================================
+  1024 tournaments
+
+  Correlations:
+    corr(c₃, H) = 0.973329
+    corr(c₅, H) = 0.927173
+    corr(c₃, c₅) = 0.816497
+
+  R²(c₃ only) = 0.947368
+  R²(c₃ + c₅) = 1.000000 (ΔR² = 0.052632)
+    H ≈ 2.0000·c₃ + 2.0000·c₅ + 1.0000
+
+  c₃ fraction of α₁: 0.7692
+  corr(c₃, α₁) = 0.973329
+  → c₃ is 76.9% of total odd cycles, correlated at 0.973
+
+  [Variance decomp n=5: 0.1s]
+
+======================================================================
+  VARIANCE DECOMPOSITION of H at n = 6
+======================================================================
+  32768 tournaments
+
+  Correlations:
+    corr(c₃, H) = 0.960769
+    corr(c₅, H) = 0.963624
+    corr(α₂, H) = 0.759555
+    corr(c₃, c₅) = 0.925820
+    corr(c₃, α₂) = 0.632456
+
+  R²(c₃ only) = 0.923077
+  R²(c₃ + c₅) = 0.961538 (ΔR² = 0.038462)
+    H ≈ 3.0000·c₃ + 2.0000·c₅ + -1.5000
+  R²(c₃ + α₂) = 0.961538 (ΔR² = 0.038462)
+    H ≈ 5.0000·c₃ + 4.0000·α₂ + -5.0000
+  R²(c₃ + c₅ + α₂) = 1.000000 (ΔR² = 0.076923)
+  R²(α₁ + α₂) = 1.000000
+    H ≈ 2.0000·α₁ + 4.0000·α₂ + 1.0000
+    (OCF predicts: H = 2·α₁ + 4·α₂ + 1)
+
+  c₃ fraction of α₁: 0.5263
+  corr(c₃, α₁) = 0.971286
+  → c₃ is 52.6% of total odd cycles, correlated at 0.971
+
+  [Variance decomp n=6: 16.0s]
+
+======================================================================
+  PHASE TRANSITION at n = 6 (exhaustive)
+======================================================================
+  32768 tournaments, H in [1, 45]
+  Specific heat peak: C_max = 1.3585 at β_c = 0.3100
+
+  [Phase transition n=6: 6.0s]
+
+======================================================================
+  PHASE TRANSITION SCALING:
+  β_c(5) ≈ 0.7 (from S16)
+  β_c(6) ≈ 0.3100
+======================================================================
+
+  TOTAL: 22.2s

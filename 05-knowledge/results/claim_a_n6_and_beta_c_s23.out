@@ -1,0 +1,91 @@
+  ... 100/1024 parents
+  ... 200/1024 parents
+  ... 300/1024 parents
+  ... 400/1024 parents
+  ... 500/1024 parents
+  ... 600/1024 parents
+  ... 700/1024 parents
+  ... 800/1024 parents
+  ... 900/1024 parents
+  ... 1000/1024 parents
+  ... 200/1024 parents
+  ... 400/1024 parents
+  ... 600/1024 parents
+  ... 800/1024 parents
+  ... 1000/1024 parents
+
+======================================================================
+  CLAIM A DECOMPOSITION: n = 5 → 6
+======================================================================
+
+  Claim A mismatches: 16880/32768
+
+  Contribution by cycle length:
+    k          mean      fraction     coeff vs Δc₃
+    3        7.5000      0.500000         3.000000
+    5        5.3125      0.354167         1.875000
+  SUM       15.0000      1.000000         4.875000
+
+  Total coefficient: 4.875000
+  Predicted a(6) = 6.000000
+  Ratio: 0.812500
+
+  Average μ for 3-cycles (= avg H(T_3 subtournament)):
+    Mean: 1.477419
+    This should be related to mean_H(3) = 7.5/4 = 1.875... no
+    Mean H of random T_3: (1*6+3*2)/8 = 12/8 = 1.5
+
+  Average μ(3-cycle) by parent H:
+    H_sub=  1: mean μ = 1.000000 (n=3120)
+    H_sub=  3: mean μ = 1.183333 (n=3360)
+    H_sub=  5: mean μ = 1.290805 (n=6960)
+    H_sub=  9: mean μ = 1.556667 (n=7200)
+    H_sub= 11: mean μ = 1.700000 (n=3600)
+    H_sub= 13: mean μ = 1.877778 (n=3600)
+    H_sub= 15: mean μ = 1.979167 (n=1920)
+
+  [Claim A n=6: 10.8s]
+
+======================================================================
+  a_inter MECHANISM: μ vs H_sub at n = 5 → 6
+======================================================================
+
+  81920 (3-cycle, parent) pairs
+  μ range: [1, 3], mean=1.5000
+  corr(μ, H_sub) = 0.307794
+  μ ≈ 0.063158·H_sub + 1.026316, R²=0.094737
+  → Each unit of H_sub increases μ by 0.063158
+  → This maps to a_inter because:
+     ΔH from 3-cycles = 2·Δc₃·mean_μ ≈ 2·Δc₃·(0.0632·H_sub + 1.0263)
+     = 0.1263·Δc₃·H_sub + 2.0526·Δc₃
+  → Predicted a_inter from 3-cycles alone: 0.126316
+  → Measured a_inter at n=5→6: ~0.278
+
+  Mean μ by H_sub:
+    H_sub=  1: mean μ = 1.0000 ± 0.0000 (n=9600)
+    H_sub=  3: mean μ = 1.2000 ± 0.6000 (n=9600)
+    H_sub=  5: mean μ = 1.4000 ± 0.8000 (n=19200)
+    H_sub=  9: mean μ = 1.6000 ± 0.9165 (n=19200)
+    H_sub= 11: mean μ = 1.8000 ± 0.9798 (n=9600)
+    H_sub= 13: mean μ = 1.8000 ± 0.9798 (n=9600)
+    H_sub= 15: mean μ = 1.8750 ± 0.9922 (n=5120)
+
+  [a_inter: 1.7s]
+
+======================================================================
+  PHASE TRANSITION at n = 7 (5000 samples)
+======================================================================
+  H range: [1, 175], mean=77.99
+  Specific heat peak: C_max = 4.8953 at β_c = 0.2390
+
+  [β_c n=7: 2.5s]
+
+======================================================================
+  PHASE TRANSITION SCALING:
+  n=5: β_c ≈ 0.700
+  n=6: β_c ≈ 0.310
+  n=7: β_c ≈ 0.2390
+  Pattern: β_c decreasing. Product β_c·max_H: 10.5, 13.9, 45.2
+======================================================================
+
+  TOTAL: 15.1s
