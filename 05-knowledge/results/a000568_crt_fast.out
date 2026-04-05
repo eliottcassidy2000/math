@@ -1,0 +1,34 @@
+A000568 FAST CRT COMPUTATION
+============================================================
+  n=3: est 10 bits, using 2 primes of ~30 bits
+  Time: compute=0.284s, total=0.284s
+  a(3) = 2 ✓
+  n=4: est 11 bits, using 2 primes of ~30 bits
+  Time: compute=0.000s, total=0.000s
+  a(4) = 4 ✓
+  n=5: est 13 bits, using 2 primes of ~30 bits
+  Time: compute=0.000s, total=0.000s
+  a(5) = 12 ✓
+  n=6: est 15 bits, using 2 primes of ~30 bits
+  Time: compute=0.000s, total=0.000s
+  a(6) = 56 ✓
+  n=7: est 18 bits, using 2 primes of ~30 bits
+  Time: compute=0.000s, total=0.000s
+  a(7) = 456 ✓
+  n=8: est 22 bits, using 2 primes of ~30 bits
+  Time: compute=0.000s, total=0.000s
+  a(8) = 6880 ✓
+  n=9: est 27 bits, using 2 primes of ~30 bits
+  Time: compute=0.000s, total=0.000s
+  a(9) = 191536 ✓
+  n=10: est 33 bits, using 3 primes of ~30 bits
+  Time: compute=0.000s, total=0.000s
+  a(10) = 9733056 ✓
+
+Benchmark:
+  n=15: est 74 bits, using 4 primes of ~30 bits
+  Time: compute=0.001s, total=0.001s
+  a(15) = 31021002160355166848 (0.001s)
+  n=20: est 138 bits, using 6 primes of ~30 bits
+  Time: compute=0.003s, total=0.003s
+  a(20) = 645022068557873570931850526424042500096 (0.003s)
