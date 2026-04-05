@@ -13,6 +13,20 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-05-S24e — 2026-04-05: 2-Design Theorem for All Odd k-Cycles + λ₅ Formula
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S24d, S28
+**Summary:** Proved the 2-design theorem for ALL odd k-cycles in Paley tournaments (not just k=3). Discovered the closed-form λ₅ = (p+1)(p-2)(p-3)/8 = λ₃·C(p-2,2), verified for 12 primes. Analyzed 3-design failure: cyclic triples get MORE 5-cycles than transitive triples at p≥11.
+
+**Key Results:**
+1. **2-DESIGN FOR ALL ODD k (PROVED)**: G=<Aff(QR),τ> is 2-transitive on pairs and preserves odd k-cycles. λ_k = c_k·k(k-1)/(p(p-1)).
+2. **λ₅ = (p+1)(p-2)(p-3)/8**: Verified p=3..83. Ratio λ₅/λ₃ = C(p-2,2).
+3. **3-DESIGN FAILURE**: Triples split into cyclic vs transitive. Cyclic get MORE 5-cycles. Coincide only at p=7.
+4. **CONSERVATION LAW**: Σ_{odd k} λ_k = Λ per pair (from 2-design at each k).
+
+**New contributions:** five_cycle_design_proof_s24e.py, five_cycle_3design_s24e.py
+
 ## opus-2026-04-05-S28 — 2026-04-05: 5-Cycle Designs in Paley Tournaments
 
 **Account:** opus
