@@ -1,0 +1,173 @@
+    ... 5000/10000 done (2.3s)
+    ... 10000/10000 done (4.7s)
+    ... 500/2000 parents (3.8s)
+    ... 1000/2000 parents (7.6s)
+    ... 1500/2000 parents (11.4s)
+    ... 2000/2000 parents (15.2s)
+    ... 500/500 parents (4.9s)
+╔══════════════════════════════════════════════════════════════════╗
+║  DEEP PRINCIPLES AT LARGE n                                    ║
+║  opus-2026-04-04-S22                                           ║
+╚══════════════════════════════════════════════════════════════════╝
+
+======================================================================
+  P1: PARABOLIC LAW at n_sub = 7 (sampled, 1000 per score)
+======================================================================
+    s= 0: expected=0, actual=0.0000
+    s= 1: expected=  3.0000, actual=  2.9380, ratio=0.979333
+    s= 2: expected=  5.0000, actual=  4.9440, ratio=0.988800
+    s= 3: expected=  6.0000, actual=  6.0030, ratio=1.000500
+    s= 4: expected=  6.0000, actual=  5.9970, ratio=0.999500
+    s= 5: expected=  5.0000, actual=  5.0120, ratio=1.002400
+    s= 6: expected=  3.0000, actual=  2.9950, ratio=0.998333
+    s= 7: expected=0, actual=0.0000
+  Max deviation: 0.062000 (should be ~0 for large samples)
+
+======================================================================
+  P1: PARABOLIC LAW at n_sub = 8 (sampled, 1000 per score)
+======================================================================
+    s= 0: expected=0, actual=0.0000
+    s= 1: expected=  3.5000, actual=  3.4710, ratio=0.991714
+    s= 2: expected=  6.0000, actual=  5.9960, ratio=0.999333
+    s= 3: expected=  7.5000, actual=  7.5140, ratio=1.001867
+    s= 4: expected=  8.0000, actual=  8.0700, ratio=1.008750
+    s= 5: expected=  7.5000, actual=  7.4740, ratio=0.996533
+    s= 6: expected=  6.0000, actual=  5.9520, ratio=0.992000
+    s= 7: expected=  3.5000, actual=  3.5320, ratio=1.009143
+    s= 8: expected=0, actual=0.0000
+  Max deviation: 0.070000 (should be ~0 for large samples)
+
+======================================================================
+  P1: PARABOLIC LAW at n_sub = 9 (sampled, 1000 per score)
+======================================================================
+    s= 0: expected=0, actual=0.0000
+    s= 1: expected=  4.0000, actual=  3.8910, ratio=0.972750
+    s= 2: expected=  7.0000, actual=  7.1500, ratio=1.021429
+    s= 3: expected=  9.0000, actual=  8.9420, ratio=0.993556
+    s= 4: expected= 10.0000, actual= 10.0420, ratio=1.004200
+    s= 5: expected= 10.0000, actual= 10.0040, ratio=1.000400
+    s= 6: expected=  9.0000, actual=  9.0440, ratio=1.004889
+    s= 7: expected=  7.0000, actual=  6.9940, ratio=0.999143
+    s= 8: expected=  4.0000, actual=  4.0290, ratio=1.007250
+    s= 9: expected=0, actual=0.0000
+  Max deviation: 0.150000 (should be ~0 for large samples)
+
+  [Parabolic law: 0.2s]
+
+======================================================================
+  P2: FRUSTRATION-H CORRELATION at n = 7 (10000 samples)
+======================================================================
+  corr(c₃, H) = 0.956376
+  corr(sv, H) = -0.956376
+  H range: [1, 189], mean=78.94
+  c₃ range: [0, 14], mean=8.76
+  Linear: H ≈ 14.9963·c₃ + -52.3575, R²=0.914654
+  Quadratic: H ≈ 0.826280·c₃² + 1.7520·c₃ + -5.1987, R²=0.944900
+  c₃+sv: H ≈ 11.4217·c₃ + -12.5114·sv + -2.3120, R²=0.914654
+
+======================================================================
+  P2: FRUSTRATION-H CORRELATION at n = 8 (3000 samples)
+======================================================================
+  corr(c₃, H) = 0.956241
+  corr(sv, H) = -0.956241
+  H range: [1, 661], mean=319.36
+  c₃ range: [0, 20], mean=14.11
+  Linear: H ≈ 45.2549·c₃ + -319.1852, R²=0.914397
+  Quadratic: H ≈ 2.013359·c₃² + -7.2809·c₃ + 0.3182, R²=0.949417
+  c₃+sv: H ≈ 30.5210·c₃ + -58.9358·sv + -9.7725, R²=0.914397
+
+  [Frustration-H: 8.3s]
+
+======================================================================
+  P3: EXCHANGE COUPLING at n=6 → n=7
+  (2000 parents × 16 extensions)
+======================================================================
+
+  Data points: 32000
+  Simple:  ΔH ≈ 15.0288·Δc₃ + -0.5076,  R²=0.6167
+  +H_sub:  ΔH ≈ 15.0269·Δc₃ + 1.4101·H_sub + -31.7637,  R²=0.8851
+  Interact: ΔH ≈ 0.268853·Δc₃·H_sub + 10.0893·Δc₃ + 0.3989·H_sub + -13.1827,  R²=0.9112
+
+  Parabolic law check (E[Δc₃ | score=s] vs s(n_sub-s)/2):
+    s= 0: E[Δc₃]=   0.000, theory=   0.000
+    s= 1: E[Δc₃]=   2.484, theory=   2.500, ratio=0.9938
+    s= 2: E[Δc₃]=   4.008, theory=   4.000, ratio=1.0020
+    s= 3: E[Δc₃]=   4.516, theory=   4.500, ratio=1.0036
+    s= 4: E[Δc₃]=   3.993, theory=   4.000, ratio=0.9982
+    s= 5: E[Δc₃]=   2.503, theory=   2.500, ratio=1.0011
+    s= 6: E[Δc₃]=   0.000, theory=   0.000
+
+  Per-parent J_eff = mean_ΔH / mean_Δc₃ (top 10 H values):
+    H_sub=    1: J_eff=  4.1325  (n=592)
+    H_sub=    3: J_eff=  6.0688  (n=848)
+    H_sub=    5: J_eff=  7.9518  (n=2320)
+    H_sub=    9: J_eff=  9.9496  (n=2800)
+    H_sub=   11: J_eff= 11.9321  (n=1872)
+    H_sub=   23: J_eff= 16.0159  (n=2640)
+    H_sub=   33: J_eff= 19.1319  (n=2464)
+    H_sub=   37: J_eff= 19.7527  (n=3424)
+    H_sub=   41: J_eff= 22.2466  (n=624)
+    H_sub=   43: J_eff= 22.5295  (n=1104)
+    H_sub=   45: J_eff= 22.7699  (n=464)
+
+======================================================================
+  P3: EXCHANGE COUPLING at n=7 → n=8
+  (500 parents × 8 extensions)
+======================================================================
+
+  Data points: 4000
+  Simple:  ΔH ≈ 45.1010·Δc₃ + 0.6799,  R²=0.5238
+  +H_sub:  ΔH ≈ 44.6370·Δc₃ + 1.9176·H_sub + -148.4564,  R²=0.8994
+  Interact: ΔH ≈ 0.283484·Δc₃·H_sub + 25.7908·Δc₃ + 0.4226·H_sub + -49.3168,  R²=0.9321
+
+  Parabolic law check (E[Δc₃ | score=s] vs s(n_sub-s)/2):
+    s= 0: E[Δc₃]=   0.000, theory=   0.000
+    s= 1: E[Δc₃]=   3.009, theory=   3.000, ratio=1.0030
+    s= 2: E[Δc₃]=   5.025, theory=   5.000, ratio=1.0049
+    s= 3: E[Δc₃]=   6.050, theory=   6.000, ratio=1.0083
+    s= 4: E[Δc₃]=   6.001, theory=   6.000, ratio=1.0002
+    s= 5: E[Δc₃]=   4.980, theory=   5.000, ratio=0.9960
+    s= 6: E[Δc₃]=   2.871, theory=   3.000, ratio=0.9570
+    s= 7: E[Δc₃]=   0.000, theory=   0.000
+
+  Per-parent J_eff = mean_ΔH / mean_Δc₃ (top 10 H values):
+    H_sub=    1: J_eff=  6.0902  (n=24)
+    H_sub=    3: J_eff=  9.2135  (n=16)
+    H_sub=    5: J_eff= 11.6690  (n=56)
+    H_sub=    9: J_eff= 15.1565  (n=48)
+    H_sub=   79: J_eff= 45.1406  (n=48)
+    H_sub=  151: J_eff= 71.2814  (n=32)
+    H_sub=  153: J_eff= 72.3053  (n=24)
+    H_sub=  159: J_eff= 71.1531  (n=56)
+
+  [Exchange coupling: 20.1s]
+
+======================================================================
+  SCALING TABLE — ALL LEVELS
+======================================================================
+     Level    Simple a    R²(simple)    Interact a    R²(inter)    J growth
+  ────────  ──────────  ────────────  ────────────  ───────────  ──────────
+       3→4      2.0000        1.0000      0.000000       1.0000            
+       4→5      3.0000        0.8570      0.261000       0.9370       ×1.50
+       5→6      6.0000        0.7130      0.278000       0.9070       ×2.00
+
+  NEW RESULTS:
+  6→7:  simple=   15.0288  R²=0.6167  interact=    0.268853  R²=0.9112  growth=×2.50
+  7→8:  simple=   45.1010  R²=0.5238  interact=    0.283484  R²=0.9321  growth=×3.00
+
+  FRUSTRATION-H CORRELATION TREND:
+    n    corr(c₃,H)    corr(sv,H)     slope    R²(linear)
+    4      1.000000     -1.000000    2.0000      1.000000
+    5      0.973000     -0.973000    3.0000      0.947000
+    6      0.961000     -0.961000    6.0000      0.923000
+    7      0.956376     -0.956376   14.9963      0.914654
+    8      0.956241     -0.956241   45.2549      0.914397
+
+  COEFFICIENT SEQUENCE:
+  Coefficients: [2.0, 3.0, 6.0, np.float64(15.0), np.float64(45.1)]
+    Ratio a(4→5)/a(3→4) = 1.5000
+    Ratio a(5→6)/a(4→5) = 2.0000
+    Ratio a(6→7)/a(5→6) = 2.5048
+    Ratio a(7→8)/a(6→7) = 3.0010
+
+  TOTAL TIME: 28.6s
