@@ -1815,3 +1815,18 @@ Source: qr_tournament_enumeration_s25.py
 **Status:** OPEN (verified n=4..20, not yet proved)
 **What:** For even n, the v_2 excess over n/2 equals v_2 of c(n), where c(n) = #{odd k : 1 ≤ k < n/2, gcd(k,n) = 1}. With n = 2^a × m (m odd): c = 2^{a-2}φ(m) (a≥2) or φ(m)/2 (a=1). The excess comes from cancellation of coprime 2-part partition terms, each contributing an odd coefficient.
 Source: even_v2_conjecture_s25.py
+
+## HYP-1713: ORBIT PARITY — H(T_p)/p ≡ (p-1)/2 mod (p-1) for all Paley primes (opus-S24b)
+**Status:** CONFIRMED at p = 3, 7, 11, 19, 23 — OPEN for general proof
+**What:** The number of Aff(QR)-orbits on Hamiltonian paths of the Paley tournament is always ODD. Equivalently, H(T_p) ≡ p(p-1)/2 (mod p(p-1)). Proof structure: the anti-automorphism τ̃ (reverse ∘ negate) pairs non-AP orbits, leaving the AP orbit as the unique fixed orbit.
+Source: qr_orbit_theorem_s24b.py, qr-tournament-foundations.md
+
+## HYP-1714: Aff(QR) acts FREELY on Hamiltonian paths of T_p (opus-S24b)
+**Status:** CONFIRMED at p = 3, 7, 11, 19, 23 — no non-generic orbit found
+**What:** For Paley T_p, the affine group Aff(QR) = {x → ax+b : a ∈ QR, b ∈ Z_p} of order p(p-1)/2 acts freely (no fixed points) on the set of Hamiltonian paths. This gives p(p-1)/2 | H(T_p). Proved: σ-orbits all have size p (no σ-fixed paths). Aff orbits all have size p(p-1)/2 (verified p ≤ 7 exhaustively).
+Source: qr_tournament_master_s24b.py
+
+## HYP-1715: Burnside-Legendre identity — p!·a(p) ≡ 2^C(p,2) - (2/p) mod p (opus-S24b)
+**Status:** PROVED
+**What:** For prime p ≥ 3, the total Fix count in Burnside's formula for tournaments satisfies p!·a(p) ≡ 2^{C(p,2)} - (2/p) mod p, where (2/p) is the Legendre symbol. Proof: only the identity and p-cycle terms contribute mod p; others have p | (p!/z_λ). Wilson and Euler give the explicit evaluation. The two sources of (2/p) cancel mod p, giving the tautology p | p!·a(p).
+Source: qr_tournament_master_s24b.py
