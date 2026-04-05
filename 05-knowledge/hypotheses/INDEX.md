@@ -1795,3 +1795,23 @@ Source: phase_transition_precision_s24.py, creative_explorations_s24.py
 **What:** At n=5, corr(Fiedler_vector, H) = +0.73. At n=6, corr(Fiedler_vector, H) = -0.55. The spectral geometry of the iso-class metagraph undergoes a qualitative change: high-H classes go from peripheral (n=5) to central (n=6).
 **Algebraic connectivity:** μ₂ ≈ 2 at n=4,5,6. Mixing time bound ≤ 2 steps at all sizes.
 Source: creative_explorations_s24.py
+
+## HYP-1709: v_2(T(n)) = (n-1)/2 for all odd n ≥ 3 (opus-S25)
+**Status:** CONFIRMED → THM-305 (proved algebraically)
+**What:** The 2-adic valuation of the tournament count T(n) equals (n-1)/2 for every odd n. When n=p is prime, this equals |QR_p|. The n-cycle uniquely minimizes v_2 in the Burnside sum, with gap exactly 1 (always at partition (n-2,1,1)).
+Source: qr_tournament_enumeration_s25.py, prove_v2_inequality_s25.py
+
+## HYP-1710: 2^{C(p,2)} ≡ (2/p) mod p² for all odd primes (opus-S25)
+**Status:** CONFIRMED → THM-306 (proved)
+**What:** The labeled tournament count is congruent to the Legendre symbol of 2 modulo p². Elementary proof via Euler criterion and Fermat's little theorem.
+Source: qr_tournament_enumeration_s25.py
+
+## HYP-1711: T(p) ≡ f_p - (2/p)·w_p - A_p mod p (opus-S25)
+**Status:** CONFIRMED → THM-307 (proved)
+**What:** Tournament count mod p decomposes into Euler quotient f_p, Wilson quotient w_p, and remaining Burnside terms A_p. At Wilson primes (5, 13, 563), the middle term vanishes.
+Source: qr_tournament_enumeration_s25.py
+
+## HYP-1712: v_2(T(n)) = n/2 + v_2(c(n)) for even n ≥ 4 (opus-S25)
+**Status:** OPEN (verified n=4..20, not yet proved)
+**What:** For even n, the v_2 excess over n/2 equals v_2 of c(n), where c(n) = #{odd k : 1 ≤ k < n/2, gcd(k,n) = 1}. With n = 2^a × m (m odd): c = 2^{a-2}φ(m) (a≥2) or φ(m)/2 (a=1). The excess comes from cancellation of coprime 2-part partition terms, each contributing an odd coefficient.
+Source: even_v2_conjecture_s25.py

@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-05-S25 — 2026-04-05: Tournament Enumeration ↔ Quadratic Residues — The Binary Resonance
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S24
+**Summary:** Discovered three fundamental theorems connecting tournament enumeration to quadratic residues. The core insight: tournaments are BINARY structures (2 arc orientations), and the number 2 interacts with prime structure through the Euler criterion 2^{(p-1)/2} ≡ (2/p) mod p. This propagates through the Burnside sum to control the 2-adic valuation of T(n).
+
+**Key Results:**
+1. **THM-305 (2-adic Valuation Theorem) — PROVED**: v_2(T(n)) = (n-1)/2 for ALL odd n ≥ 3. When n=p is prime, this equals |QR_p|. Proof: the n-cycle uniquely minimizes v_2 in the Burnside sum. The gap to the next partition is always exactly 1, achieved by (n-2,1,1). Algebraic proof complete for all n.
+2. **THM-306 (Labeled QR Congruence) — PROVED**: 2^{C(p,2)} ≡ (2/p) mod p² for every odd prime p. The total labeled tournament count remembers the Legendre symbol at p²-precision.
+3. **THM-307 (Burnside-QR Decomposition) — PROVED**: T(p) ≡ f_p - (2/p)·w_p - A_p mod p, decomposing the tournament count into the Euler quotient of 2, the Wilson quotient, and remaining Burnside terms. At Wilson primes (5,13,563), the middle term vanishes.
+4. **HYP-1712 (Even-n v_2 Conjecture)**: v_2(T(n)) = n/2 + v_2(c(n)) for even n, where c(n) counts coprime odd 2-part partitions. Verified n=4..20.
+
+**New contributions:** THM-305, THM-306, THM-307, HYP-1709-1712, qr_tournament_enumeration_s25.py, prove_v2_inequality_s25.py, even_v2_conjecture_s25.py, the-binary-resonance.md (reflection)
+**Unresolved:** Prove even-n conjecture (HYP-1712). Find pattern in A_p mod p. Odd part T(n)/2^{(n-1)/2} factorization (some are prime: 3, 11971, 28242289). Connection to class numbers?
+
 ## opus-2026-04-05-S24 — 2026-04-05: Three Creative Dynamics — CA, Phase Transitions, Spectral Metagraph
 
 **Account:** opus

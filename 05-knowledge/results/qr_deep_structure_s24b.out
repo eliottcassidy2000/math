@@ -1,0 +1,68 @@
+==============================================================================
+  DEEP STRUCTURAL THEOREMS: QR × TOURNAMENT ENUMERATION
+  opus-2026-04-05-S24b
+==============================================================================
+
+══════════════════════════════════════════════════════════════════════════════
+  THEOREM A: H(T_p) ≡ 0 (mod p)
+  Detailed orbit analysis of Hamiltonian paths under cyclic shift
+══════════════════════════════════════════════════════════════════════════════
+
+  p = 3: H(T_p) = 3, H mod p = 0
+    Enumerated 3 Hamiltonian paths
+    Orbits under Z/3Z: 1
+    Orbit size distribution: {3: 1}
+    σ-fixed paths: 0
+    AP paths with QR step: 3
+    Expected: p × |QR| = 3 × 1 = 3
+    Time: 0.00s
+
+  p = 7: H(T_p) = 189, H mod p = 0
+    Enumerated 189 Hamiltonian paths
+    Orbits under Z/7Z: 27
+    Orbit size distribution: {7: 27}
+    σ-fixed paths: 0
+    AP paths with QR step: 21
+    Expected: p × |QR| = 7 × 3 = 21
+    Time: 0.00s
+
+  p = 11: H(T_p) = 95095, H mod p = 0
+    Time: 0.01s
+
+
+  DETAILED ORBIT ANALYSIS for p=7:
+  H(T_7) = 189
+  QR_7 = [1, 2, 4]
+  NQR_7 = [3, 5, 6]
+
+  Paths grouped by first step difference:
+    d=1 (QR): 63 paths
+    d=2 (QR): 63 paths
+    d=4 (QR): 63 paths
+
+  Distinct step sequences: 27
+    AP with step 1 (QR): 7 paths
+    AP with step 2 (QR): 7 paths
+    AP with step 4 (QR): 7 paths
+  Total AP paths: 21
+  Non-AP paths: 168
+  AP fraction: 0.111111
+  AP count / p = 3.0
+
+
+══════════════════════════════════════════════════════════════════════════════
+  THEOREM B: Independence polynomial coefficients mod p
+  Does p | α_k for all k ≥ 1?
+══════════════════════════════════════════════════════════════════════════════
+
+  p = 3: Ω has 1 cycles
+    Independence polynomial coefficients: α = [1, 1]
+    α mod p:
+      α_0 =          1, α_0 mod 3 = 1
+      α_1 =          1, α_1 mod 3 = 1
+    ALL α_k (k≥1) divisible by p? False
+
+    Re-check: H = Σ α_k · 2^k
+      α_0 · 2^0 = 1 · 1 = 1, mod p = 1
+      α_1 · 2^1 = 1 · 2 = 2, mod p = 2
+    H = 3, H mod p = 0
