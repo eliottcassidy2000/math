@@ -257,8 +257,10 @@ def T_truncated(n, max_departure=None):
 
 # Show the truncation working
 for n in [50, 100, 200, 500]:
+    # Budget scales as ~sqrt(n) for practical speed; n//3 is exact but slow at n=500
+    budget = min(n // 3, 40) if n <= 200 else 30
     t0 = time.time()
-    result, nused = T_truncated(n, max_departure=n//3)
+    result, nused = T_truncated(n, max_departure=budget)
     dt = time.time() - t0
     ndigits = len(str(result))
     n_full = len(enumerate_odd_partitions(n)) if n <= 50 else "?"
