@@ -28,6 +28,15 @@ Entry format:
 **New contributions:** creative_explorations_s24.py, h_landscape_unimodality_s24.py, h_local_max_analysis_s24.py, phase_transition_precision_s24.py, three-dynamics-of-tournaments.md (reflection), HYP-1704–1708
 **Unresolved:** Does H=37 local max persist at n≥7? Prove majority rule convergence algebraically. Explain why t_50% = C(n-3,2)+2 (inner staircase connection). Characterize ALL local H-maxima at n=7.
 
+## opus-2026-04-05-S27 — 2026-04-05: Prime vs Composite n — Second-Order Burnside Effect
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S26
+**Summary:** Systematic analysis of prime vs composite n through the Burnside perturbation lens. KEY FINDING: the difference is second-order. The leading corrections (identity + 3-cycle) are UNIVERSAL — same formula for all n. The composite-specific effect comes from "resonance partitions" (d^{n/d}) that exist only when d|n. The excess coupling at composite n is 1-18% (largest at n=6=2×3) and decreases with n. At prime n, all cross-gcds between correction terms equal 1 (orthogonal). At composite n, shared factors create "entanglement" between corrections. This connects directly to Tang-Yau's prime/composite eigenspace dimension distinction.
+
+**New contributions:** prime_composite_burnside_s27.py, prime-composite-through-perturbation-lens.md
+**Unresolved:** Exact excess formula from factorization. Phase transition at critical base value. Connection to L-functions.
+
 ## opus-2026-04-05-S26 — 2026-04-05: Burnside Perturbation Theory — Polynomial-Time A000568
 
 **Account:** opus

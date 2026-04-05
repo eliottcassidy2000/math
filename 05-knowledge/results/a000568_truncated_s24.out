@@ -1,0 +1,563 @@
+======================================================================
+A000568 via TRUNCATED PARTITION ENUMERATION
+======================================================================
+
+==================================================
+n = 5
+==================================================
+  n=5: est 1 digits, precision=101 dps
+  Deficit per 3-cycle: 6
+  Levels needed: 6
+  Departure budget: 5
+    #1: parts={}, e=10, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=4, deficit=6, ratio_to_id=3.125e-01
+    #3: parts={5: 1}, e=2, deficit=8, ratio_to_id=9.375e-02
+
+  Configs enumerated: 3
+  Max deficit seen: 8
+  Time: 0.002s
+  Fractional part distance from integer: 1.00e-01
+  Result digits: 1
+  Known value: 12
+  Our result:  0
+  CORRECT: False
+  *** MISMATCH! Difference: -12 ***
+
+==================================================
+n = 10
+==================================================
+  n=10: est 7 digits, precision=107 dps
+  Deficit per 3-cycle: 16
+  Levels needed: 7
+  Departure budget: 10
+    #1: parts={}, e=45, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=29, deficit=16, ratio_to_id=3.662e-03
+    #3: parts={3: 1, 5: 1}, e=9, deficit=36, ratio_to_id=1.760e-06
+    #4: parts={3: 1, 7: 1}, e=5, deficit=40, ratio_to_id=1.572e-07
+    #5: parts={3: 2}, e=19, deficit=26, ratio_to_id=1.252e-04
+    #6: parts={3: 3}, e=15, deficit=30, ratio_to_id=2.086e-05
+    #7: parts={5: 1}, e=17, deficit=28, ratio_to_id=2.253e-05
+    #8: parts={5: 2}, e=9, deficit=36, ratio_to_id=1.056e-06
+    #9: parts={7: 1}, e=9, deficit=36, ratio_to_id=1.257e-06
+    #10: parts={9: 1}, e=5, deficit=40, ratio_to_id=3.667e-07
+
+  Configs enumerated: 10
+  Max deficit seen: 40
+  Time: 0.000s
+  Fractional part distance from integer: 3.18e-01
+  Result digits: 1
+  Known value: 9733056
+  Our result:  3
+  CORRECT: False
+  *** MISMATCH! Difference: -9733053 ***
+
+==================================================
+n = 15
+==================================================
+  n=15: est 20 digits, precision=120 dps
+  Deficit per 3-cycle: 26
+  Levels needed: 8
+  Departure budget: 15
+    #1: parts={}, e=105, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=79, deficit=26, ratio_to_id=1.356e-05
+    #3: parts={3: 1, 5: 1}, e=39, deficit=66, ratio_to_id=2.344e-13
+    #4: parts={3: 1, 5: 1, 7: 1}, e=9, deficit=96, ratio_to_id=1.572e-19
+    #5: parts={3: 1, 5: 2}, e=19, deficit=86, ratio_to_id=5.634e-17
+    #6: parts={3: 1, 7: 1}, e=25, deficit=80, ratio_to_id=4.292e-16
+    #7: parts={3: 1, 9: 1}, e=17, deficit=88, ratio_to_id=2.608e-17
+    #8: parts={3: 1, 11: 1}, e=9, deficit=96, ratio_to_id=5.002e-19
+    #9: parts={3: 2}, e=59, deficit=46, ratio_to_id=2.845e-09
+    #10: parts={3: 2, 5: 1}, e=27, deficit=78, ratio_to_id=2.003e-15
+
+  Configs enumerated: 27
+  Max deficit seen: 98
+  Time: 0.000s
+  Fractional part distance from integer: 2.65e-01
+  Result digits: 8
+  Known value: 30995890806033613824
+  Our result:  23722268
+  CORRECT: False
+  *** MISMATCH! Difference: -30995890806009891556 ***
+
+==================================================
+n = 20
+==================================================
+  n=20: est 39 digits, precision=139 dps
+  Deficit per 3-cycle: 36
+  Levels needed: 9
+  Departure budget: 18
+    #1: parts={}, e=190, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=154, deficit=36, ratio_to_id=3.318e-08
+    #3: parts={3: 1, 5: 1}, e=94, deficit=96, ratio_to_id=4.274e-21
+    #4: parts={3: 1, 5: 1, 7: 1}, e=34, deficit=156, ratio_to_id=2.114e-33
+    #5: parts={3: 1, 5: 1, 9: 1}, e=24, deficit=166, ratio_to_id=3.211e-35
+    #6: parts={3: 1, 5: 1, 11: 1}, e=14, deficit=176, ratio_to_id=1.539e-37
+    #7: parts={3: 1, 5: 2}, e=54, deficit=136, ratio_to_id=3.694e-29
+    #8: parts={3: 1, 5: 2, 7: 1}, e=18, deficit=172, ratio_to_id=3.871e-37
+    #9: parts={3: 1, 5: 3}, e=34, deficit=156, ratio_to_id=5.919e-33
+    #10: parts={3: 1, 7: 1}, e=70, deficit=120, ratio_to_id=2.402e-26
+
+  Configs enumerated: 64
+  Max deficit seen: 180
+  Time: 0.001s
+  Fractional part distance from integer: 3.68e-01
+  Result digits: 21
+  Known value: 4951364705546250940976699872
+  Our result:  265124557581869515675
+  CORRECT: False
+  *** MISMATCH! Difference: -4951364440421693359107184197 ***
+
+==================================================
+n = 30
+==================================================
+  n=30: est 99 digits, precision=199 dps
+  Deficit per 3-cycle: 56
+  Levels needed: 11
+  Departure budget: 22
+    #1: parts={}, e=435, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=379, deficit=56, ratio_to_id=1.127e-13
+    #3: parts={3: 1, 5: 1}, e=279, deficit=156, ratio_to_id=1.722e-37
+    #4: parts={3: 1, 5: 1, 7: 1}, e=159, deficit=276, ratio_to_id=1.591e-65
+    #5: parts={3: 1, 5: 1, 7: 1, 9: 1}, e=57, deficit=378, ratio_to_id=6.332e-88
+    #6: parts={3: 1, 5: 1, 7: 1, 11: 1}, e=39, deficit=396, ratio_to_id=5.929e-92
+    #7: parts={3: 1, 5: 1, 7: 2}, e=81, deficit=354, ratio_to_id=1.220e-82
+    #8: parts={3: 1, 5: 1, 9: 1}, e=129, deficit=306, ratio_to_id=2.420e-72
+    #9: parts={3: 1, 5: 1, 9: 2}, e=51, deficit=384, ratio_to_id=1.154e-88
+    #10: parts={3: 1, 5: 1, 11: 1}, e=99, deficit=336, ratio_to_id=2.877e-79
+
+  Configs enumerated: 191
+  Max deficit seen: 396
+  Time: 0.002s
+  Fractional part distance from integer: 1.05e-01
+  Result digits: 67
+  Result: 1261037390876674782806059944837889959639030006158901538333813493862
+
+==================================================
+n = 40
+==================================================
+  n=40: est 187 digits, precision=287 dps
+  Deficit per 3-cycle: 76
+  Levels needed: 14
+  Departure budget: 28
+    #1: parts={}, e=780, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=704, deficit=76, ratio_to_id=2.615e-19
+    #3: parts={3: 1, 5: 1}, e=564, deficit=216, ratio_to_id=1.963e-54
+    #4: parts={3: 1, 5: 1, 7: 1}, e=384, deficit=396, ratio_to_id=3.104e-99
+    #5: parts={3: 1, 5: 1, 7: 1, 9: 1}, e=202, deficit=578, ratio_to_id=4.171e-143
+    #6: parts={3: 1, 5: 1, 7: 1, 9: 2}, e=92, deficit=688, ratio_to_id=7.411e-168
+    #7: parts={3: 1, 5: 1, 7: 1, 11: 1}, e=164, deficit=616, ratio_to_id=2.980e-152
+    #8: parts={3: 1, 5: 1, 7: 1, 13: 1}, e=132, deficit=648, ratio_to_id=1.068e-159
+    #9: parts={3: 1, 5: 1, 7: 1, 15: 1}, e=110, deficit=670, ratio_to_id=2.914e-164
+    #10: parts={3: 1, 5: 1, 7: 1, 17: 1}, e=80, deficit=700, ratio_to_id=2.155e-171
+
+  Configs enumerated: 506
+  Max deficit seen: 700
+  Time: 0.005s
+  Fractional part distance from integer: 1.29e-01
+  Result digits: 139
+  Result: 95522676260876042273735591397205676411694990205375479944894068996803792518906385...68205952701195083666
+
+==================================================
+n = 50
+==================================================
+  n=50: est 305 digits, precision=405 dps
+  Deficit per 3-cycle: 96
+  Levels needed: 16
+  Departure budget: 32
+    #1: parts={}, e=1225, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=1129, deficit=96, ratio_to_id=4.948e-25
+    #3: parts={3: 1, 5: 1}, e=949, deficit=276, ratio_to_id=1.189e-71
+    #4: parts={3: 1, 5: 1, 7: 1}, e=709, deficit=516, ratio_to_id=1.307e-133
+    #5: parts={3: 1, 5: 1, 7: 1, 9: 1}, e=447, deficit=778, ratio_to_id=5.020e-200
+    #6: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1}, e=207, deficit=1018, ratio_to_id=7.966e-259
+    #7: parts={3: 1, 5: 1, 7: 1, 9: 1, 13: 1}, e=171, deficit=1054, ratio_to_id=2.060e-267
+    #8: parts={3: 1, 5: 1, 7: 1, 9: 2}, e=257, deficit=968, ratio_to_id=2.015e-246
+    #9: parts={3: 1, 5: 1, 7: 1, 11: 1}, e=389, deficit=836, ratio_to_id=9.262e-215
+    #10: parts={3: 1, 5: 1, 7: 1, 11: 2}, e=179, deficit=1046, ratio_to_id=2.549e-265
+
+  Configs enumerated: 915
+  Max deficit seen: 1056
+  Time: 0.009s
+  Fractional part distance from integer: 3.41e-01
+  Result digits: 240
+  Result: 62458988028100978609279948243781206383259825921289375294696058859856835450268894...51566656182973282536
+
+==================================================
+n = 60
+==================================================
+  n=60: est 451 digits, precision=551 dps
+  Deficit per 3-cycle: 116
+  Levels needed: 18
+  Departure budget: 36
+    #1: parts={}, e=1770, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=1654, deficit=116, ratio_to_id=8.238e-31
+    #3: parts={3: 1, 5: 1}, e=1434, deficit=336, ratio_to_id=4.913e-89
+    #4: parts={3: 1, 5: 1, 7: 1}, e=1134, deficit=636, ratio_to_id=2.323e-168
+    #5: parts={3: 1, 5: 1, 7: 1, 9: 1}, e=792, deficit=978, ratio_to_id=9.266e-258
+    #6: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1}, e=452, deficit=1318, ratio_to_id=0.000e+00
+    #7: parts={3: 1, 5: 1, 7: 1, 9: 1, 13: 1}, e=396, deficit=1374, ratio_to_id=0.000e+00
+    #8: parts={3: 1, 5: 1, 7: 1, 9: 1, 15: 1}, e=352, deficit=1418, ratio_to_id=0.000e+00
+    #9: parts={3: 1, 5: 1, 7: 1, 9: 1, 17: 1}, e=296, deficit=1474, ratio_to_id=0.000e+00
+    #10: parts={3: 1, 5: 1, 7: 1, 9: 2}, e=522, deficit=1248, ratio_to_id=0.000e+00
+
+  Configs enumerated: 1597
+  Max deficit seen: 1476
+  Time: 0.017s
+  Fractional part distance from integer: 1.79e-01
+  Result digits: 369
+  Result: 96104257225215783324775237480881055342572284886454746432074273797018125280700052...57246902042927064342
+
+==================================================
+n = 80
+==================================================
+  n=80: est 833 digits, precision=933 dps
+  Deficit per 3-cycle: 156
+  Levels needed: 23
+  Departure budget: 46
+    #1: parts={}, e=3160, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=3004, deficit=156, ratio_to_id=1.799e-42
+    #3: parts={3: 1, 5: 1}, e=2704, deficit=456, ratio_to_id=4.188e-124
+    #4: parts={3: 1, 5: 1, 7: 1}, e=2284, deficit=876, ratio_to_id=1.640e-238
+    #5: parts={3: 1, 5: 1, 7: 1, 9: 1}, e=1782, deficit=1378, ratio_to_id=0.000e+00
+    #6: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1}, e=1242, deficit=1918, ratio_to_id=0.000e+00
+    #7: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 1}, e=726, deficit=2434, ratio_to_id=0.000e+00
+    #8: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 15: 1}, e=662, deficit=2498, ratio_to_id=0.000e+00
+    #9: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 17: 1}, e=586, deficit=2574, ratio_to_id=0.000e+00
+    #10: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 2}, e=812, deficit=2348, ratio_to_id=0.000e+00
+
+  Configs enumerated: 5763
+  Max deficit seen: 2576
+  Time: 0.076s
+  Fractional part distance from integer: 1.58e-01
+  Result digits: 714
+  Result: 35101918471267843731750304196977083153863515415709172808767625281145903880608576...61089873011755800123
+
+==================================================
+n = 100
+==================================================
+  n=100: est 1333 digits, precision=1433 dps
+  Deficit per 3-cycle: 196
+  Levels needed: 28
+  Departure budget: 56
+    #1: parts={}, e=4950, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=4754, deficit=196, ratio_to_id=3.220e-54
+    #3: parts={3: 1, 5: 1}, e=4374, deficit=576, ratio_to_id=2.022e-159
+    #4: parts={3: 1, 5: 1, 7: 1}, e=3834, deficit=1116, ratio_to_id=3.544e-309
+    #5: parts={3: 1, 5: 1, 7: 1, 9: 1}, e=3172, deficit=1778, ratio_to_id=0.000e+00
+    #6: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1}, e=2432, deficit=2518, ratio_to_id=0.000e+00
+    #7: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 1}, e=1676, deficit=3274, ratio_to_id=0.000e+00
+    #8: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 1, 15: 1}, e=984, deficit=3966, ratio_to_id=0.000e+00
+    #9: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 2}, e=1076, deficit=3874, ratio_to_id=0.000e+00
+    #10: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 15: 1}, e=1572, deficit=3378, ratio_to_id=0.000e+00
+    #10000 configs processed, max_deficit=3976
+
+  Configs enumerated: 18460
+  Max deficit seen: 3976
+  Time: 0.257s
+  Fractional part distance from integer: 4.22e-01
+  Result digits: 1175
+  Result: 14403605808246413673388813414910848150897195189675562731862633326580458138511641...73926017570272274263
+
+==================================================
+n = 150
+==================================================
+  n=150: est 3102 digits, precision=3202 dps
+  Deficit per 3-cycle: 296
+  Levels needed: 40
+  Departure budget: 80
+    #1: parts={}, e=11175, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=10879, deficit=296, ratio_to_id=8.660e-84
+    #3: parts={3: 1, 5: 1}, e=10299, deficit=876, ratio_to_id=2.805e-248
+    #4: parts={3: 1, 5: 1, 7: 1}, e=9459, deficit=1716, ratio_to_id=0.000e+00
+    #5: parts={3: 1, 5: 1, 7: 1, 9: 1}, e=8397, deficit=2778, ratio_to_id=0.000e+00
+    #6: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1}, e=7157, deficit=4018, ratio_to_id=0.000e+00
+    #7: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 1}, e=5801, deficit=5374, ratio_to_id=0.000e+00
+    #8: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 1, 15: 1}, e=4409, deficit=6766, ratio_to_id=0.000e+00
+    #9: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 1, 15: 1, 17: 1}, e=3049, deficit=8126, ratio_to_id=0.000e+00
+    #10: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 1, 15: 1, 19: 1}, e=2897, deficit=8278, ratio_to_id=0.000e+00
+    #10000 configs processed, max_deficit=8720
+    #20000 configs processed, max_deficit=8720
+    #30000 configs processed, max_deficit=8720
+    #40000 configs processed, max_deficit=8720
+    #50000 configs processed, max_deficit=8720
+    #60000 configs processed, max_deficit=8720
+    #70000 configs processed, max_deficit=8720
+    #80000 configs processed, max_deficit=8720
+    #90000 configs processed, max_deficit=8720
+    #100000 configs processed, max_deficit=8720
+    #110000 configs processed, max_deficit=8720
+    #120000 configs processed, max_deficit=8720
+    #130000 configs processed, max_deficit=8720
+    #140000 configs processed, max_deficit=8720
+    #150000 configs processed, max_deficit=8720
+    #160000 configs processed, max_deficit=8720
+    #170000 configs processed, max_deficit=8720
+    #180000 configs processed, max_deficit=8720
+    #190000 configs processed, max_deficit=8720
+    #200000 configs processed, max_deficit=8720
+    #210000 configs processed, max_deficit=8720
+
+  Configs enumerated: 215308
+  Max deficit seen: 8720
+  Time: 3.670s
+  Fractional part distance from integer: 3.41e-02
+  Result digits: 2839
+  Result: 31362792385837527102083566915559883673087569684639799558924996260779963404134434...24891258777797985372
+
+==================================================
+n = 200
+==================================================
+  n=200: est 5616 digits, precision=5716 dps
+  Deficit per 3-cycle: 396
+  Levels needed: 53
+  Departure budget: 106
+    #1: parts={}, e=19900, deficit=0, ratio_to_id=1.000e+00
+    #2: parts={3: 1}, e=19504, deficit=396, ratio_to_id=1.628e-113
+    #3: parts={3: 1, 5: 1}, e=18724, deficit=1176, ratio_to_id=0.000e+00
+    #4: parts={3: 1, 5: 1, 7: 1}, e=17584, deficit=2316, ratio_to_id=0.000e+00
+    #5: parts={3: 1, 5: 1, 7: 1, 9: 1}, e=16122, deficit=3778, ratio_to_id=0.000e+00
+    #6: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1}, e=14382, deficit=5518, ratio_to_id=0.000e+00
+    #7: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 1}, e=12426, deficit=7474, ratio_to_id=0.000e+00
+    #8: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 1, 15: 1}, e=10334, deficit=9566, ratio_to_id=0.000e+00
+    #9: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 1, 15: 1, 17: 1}, e=8174, deficit=11726, ratio_to_id=0.000e+00
+    #10: parts={3: 1, 5: 1, 7: 1, 9: 1, 11: 1, 13: 1, 15: 1, 17: 1, 19: 1}, e=6050, deficit=13850, ratio_to_id=0.000e+00
+    #10000 configs processed, max_deficit=15476
+    #20000 configs processed, max_deficit=15476
+    #30000 configs processed, max_deficit=15476
+    #40000 configs processed, max_deficit=15476
+    #50000 configs processed, max_deficit=15476
+    #60000 configs processed, max_deficit=15476
+    #70000 configs processed, max_deficit=15476
+    #80000 configs processed, max_deficit=15476
+    #90000 configs processed, max_deficit=15476
+    #100000 configs processed, max_deficit=15476
+    #110000 configs processed, max_deficit=15476
+    #120000 configs processed, max_deficit=15476
+    #130000 configs processed, max_deficit=15476
+    #140000 configs processed, max_deficit=15476
+    #150000 configs processed, max_deficit=15476
+    #160000 configs processed, max_deficit=15476
+    #170000 configs processed, max_deficit=15476
+    #180000 configs processed, max_deficit=15476
+    #190000 configs processed, max_deficit=15476
+    #200000 configs processed, max_deficit=15476
+    #210000 configs processed, max_deficit=15476
+    #220000 configs processed, max_deficit=15476
+    #230000 configs processed, max_deficit=15476
+    #240000 configs processed, max_deficit=15476
+    #250000 configs processed, max_deficit=15476
+    #260000 configs processed, max_deficit=15476
+    #270000 configs processed, max_deficit=15476
+    #280000 configs processed, max_deficit=15476
+    #290000 configs processed, max_deficit=15476
+    #300000 configs processed, max_deficit=15476
+    #310000 configs processed, max_deficit=15476
+    #320000 configs processed, max_deficit=15476
+    #330000 configs processed, max_deficit=15476
+    #340000 configs processed, max_deficit=15476
+    #350000 configs processed, max_deficit=15476
+    #360000 configs processed, max_deficit=15476
+    #370000 configs processed, max_deficit=15476
+    #380000 configs processed, max_deficit=15476
+    #390000 configs processed, max_deficit=15476
+    #400000 configs processed, max_deficit=15476
+    #410000 configs processed, max_deficit=15476
+    #420000 configs processed, max_deficit=15476
+    #430000 configs processed, max_deficit=15476
+    #440000 configs processed, max_deficit=15476
+    #450000 configs processed, max_deficit=15476
+    #460000 configs processed, max_deficit=15476
+    #470000 configs processed, max_deficit=15476
+    #480000 configs processed, max_deficit=15476
+    #490000 configs processed, max_deficit=15476
+    #500000 configs processed, max_deficit=15476
+    #510000 configs processed, max_deficit=15476
+    #520000 configs processed, max_deficit=15476
+    #530000 configs processed, max_deficit=15476
+    #540000 configs processed, max_deficit=15476
+    #550000 configs processed, max_deficit=15476
+    #560000 configs processed, max_deficit=15476
+    #570000 configs processed, max_deficit=15476
+    #580000 configs processed, max_deficit=15476
+    #590000 configs processed, max_deficit=15476
+    #600000 configs processed, max_deficit=15476
+    #610000 configs processed, max_deficit=15476
+    #620000 configs processed, max_deficit=15476
+    #630000 configs processed, max_deficit=15476
+    #640000 configs processed, max_deficit=15476
+    #650000 configs processed, max_deficit=15476
+    #660000 configs processed, max_deficit=15476
+    #670000 configs processed, max_deficit=15476
+    #680000 configs processed, max_deficit=15476
+    #690000 configs processed, max_deficit=15476
+    #700000 configs processed, max_deficit=15476
+    #710000 configs processed, max_deficit=15476
+    #720000 configs processed, max_deficit=15476
+    #730000 configs processed, max_deficit=15476
+    #740000 configs processed, max_deficit=15476
+    #750000 configs processed, max_deficit=15476
+    #760000 configs processed, max_deficit=15476
+    #770000 configs processed, max_deficit=15476
+    #780000 configs processed, max_deficit=15476
+    #790000 configs processed, max_deficit=15476
+    #800000 configs processed, max_deficit=15476
+    #810000 configs processed, max_deficit=15476
+    #820000 configs processed, max_deficit=15476
+    #830000 configs processed, max_deficit=15476
+    #840000 configs processed, max_deficit=15476
+    #850000 configs processed, max_deficit=15476
+    #860000 configs processed, max_deficit=15476
+    #870000 configs processed, max_deficit=15476
+    #880000 configs processed, max_deficit=15476
+    #890000 configs processed, max_deficit=15476
+    #900000 configs processed, max_deficit=15476
+    #910000 configs processed, max_deficit=15476
+    #920000 configs processed, max_deficit=15476
+    #930000 configs processed, max_deficit=15476
+    #940000 configs processed, max_deficit=15476
+    #950000 configs processed, max_deficit=15476
+    #960000 configs processed, max_deficit=15476
+    #970000 configs processed, max_deficit=15476
+    #980000 configs processed, max_deficit=15476
+    #990000 configs processed, max_deficit=15476
+    #1000000 configs processed, max_deficit=15476
+    #1010000 configs processed, max_deficit=15476
+    #1020000 configs processed, max_deficit=15476
+    #1030000 configs processed, max_deficit=15476
+    #1040000 configs processed, max_deficit=15476
+    #1050000 configs processed, max_deficit=15476
+    #1060000 configs processed, max_deficit=15476
+    #1070000 configs processed, max_deficit=15476
+    #1080000 configs processed, max_deficit=15476
+    #1090000 configs processed, max_deficit=15476
+    #1100000 configs processed, max_deficit=15476
+    #1110000 configs processed, max_deficit=15476
+    #1120000 configs processed, max_deficit=15476
+    #1130000 configs processed, max_deficit=15476
+    #1140000 configs processed, max_deficit=15476
+    #1150000 configs processed, max_deficit=15476
+    #1160000 configs processed, max_deficit=15476
+    #1170000 configs processed, max_deficit=15476
+    #1180000 configs processed, max_deficit=15476
+    #1190000 configs processed, max_deficit=15476
+    #1200000 configs processed, max_deficit=15476
+    #1210000 configs processed, max_deficit=15476
+    #1220000 configs processed, max_deficit=15476
+    #1230000 configs processed, max_deficit=15476
+    #1240000 configs processed, max_deficit=15476
+    #1250000 configs processed, max_deficit=15476
+    #1260000 configs processed, max_deficit=15476
+    #1270000 configs processed, max_deficit=15476
+    #1280000 configs processed, max_deficit=15476
+    #1290000 configs processed, max_deficit=15476
+    #1300000 configs processed, max_deficit=15476
+    #1310000 configs processed, max_deficit=15476
+    #1320000 configs processed, max_deficit=15476
+    #1330000 configs processed, max_deficit=15476
+    #1340000 configs processed, max_deficit=15476
+    #1350000 configs processed, max_deficit=15476
+    #1360000 configs processed, max_deficit=15476
+    #1370000 configs processed, max_deficit=15476
+    #1380000 configs processed, max_deficit=15476
+    #1390000 configs processed, max_deficit=15476
+    #1400000 configs processed, max_deficit=15476
+    #1410000 configs processed, max_deficit=15476
+    #1420000 configs processed, max_deficit=15476
+    #1430000 configs processed, max_deficit=15476
+    #1440000 configs processed, max_deficit=15476
+    #1450000 configs processed, max_deficit=15476
+    #1460000 configs processed, max_deficit=15476
+    #1470000 configs processed, max_deficit=15476
+    #1480000 configs processed, max_deficit=15476
+    #1490000 configs processed, max_deficit=15476
+    #1500000 configs processed, max_deficit=15476
+    #1510000 configs processed, max_deficit=15476
+    #1520000 configs processed, max_deficit=15476
+    #1530000 configs processed, max_deficit=15476
+    #1540000 configs processed, max_deficit=15476
+    #1550000 configs processed, max_deficit=15476
+    #1560000 configs processed, max_deficit=15476
+    #1570000 configs processed, max_deficit=15476
+    #1580000 configs processed, max_deficit=15476
+    #1590000 configs processed, max_deficit=15476
+    #1600000 configs processed, max_deficit=15476
+    #1610000 configs processed, max_deficit=15476
+    #1620000 configs processed, max_deficit=15476
+    #1630000 configs processed, max_deficit=15476
+    #1640000 configs processed, max_deficit=15476
+    #1650000 configs processed, max_deficit=15476
+    #1660000 configs processed, max_deficit=15476
+    #1670000 configs processed, max_deficit=15476
+    #1680000 configs processed, max_deficit=15476
+    #1690000 configs processed, max_deficit=15476
+    #1700000 configs processed, max_deficit=15476
+    #1710000 configs processed, max_deficit=15476
+    #1720000 configs processed, max_deficit=15476
+    #1730000 configs processed, max_deficit=15476
+    #1740000 configs processed, max_deficit=15476
+    #1750000 configs processed, max_deficit=15476
+    #1760000 configs processed, max_deficit=15476
+    #1770000 configs processed, max_deficit=15476
+    #1780000 configs processed, max_deficit=15476
+    #1790000 configs processed, max_deficit=15476
+    #1800000 configs processed, max_deficit=15476
+    #1810000 configs processed, max_deficit=15476
+    #1820000 configs processed, max_deficit=15476
+    #1830000 configs processed, max_deficit=15476
+    #1840000 configs processed, max_deficit=15476
+    #1850000 configs processed, max_deficit=15476
+    #1860000 configs processed, max_deficit=15476
+    #1870000 configs processed, max_deficit=15476
+    #1880000 configs processed, max_deficit=15476
+    #1890000 configs processed, max_deficit=15476
+    #1900000 configs processed, max_deficit=15476
+    #1910000 configs processed, max_deficit=15476
+    #1920000 configs processed, max_deficit=15476
+    #1930000 configs processed, max_deficit=15476
+    #1940000 configs processed, max_deficit=15476
+    #1950000 configs processed, max_deficit=15476
+    #1960000 configs processed, max_deficit=15476
+    #1970000 configs processed, max_deficit=15476
+    #1980000 configs processed, max_deficit=15476
+    #1990000 configs processed, max_deficit=15476
+    #2000000 configs processed, max_deficit=15476
+    #2010000 configs processed, max_deficit=15476
+    #2020000 configs processed, max_deficit=15476
+    #2030000 configs processed, max_deficit=15476
+    #2040000 configs processed, max_deficit=15476
+    #2050000 configs processed, max_deficit=15476
+    #2060000 configs processed, max_deficit=15476
+    #2070000 configs processed, max_deficit=15476
+    #2080000 configs processed, max_deficit=15476
+    #2090000 configs processed, max_deficit=15476
+    #2100000 configs processed, max_deficit=15476
+    #2110000 configs processed, max_deficit=15476
+    #2120000 configs processed, max_deficit=15476
+    #2130000 configs processed, max_deficit=15476
+    #2140000 configs processed, max_deficit=15476
+
+  Configs enumerated: 2147434
+  Max deficit seen: 15476
+  Time: 46.033s
+  Fractional part distance from integer: 3.50e-01
+  Result digits: 5241
+  Result: 50481986127341567808617892896783415130271471985749706600898996832798313072056100...40467078800608778568
+
+
+======================================================================
+BENCHMARK SUMMARY
+======================================================================
+      n |    configs |   time (s) |  digits |  configs/s | vs p(n)
+  ------|------------|------------|---------|------------|-------
+      5 |          3 |      0.002 |       1 |       1461 | 3.0e+00
+     10 |         10 |      0.000 |       1 |      66682 | 4.8e+00
+     15 |         27 |      0.000 |       8 |      84956 | 7.4e+00
+     20 |         64 |      0.001 |      21 |      92981 | 1.1e+01
+     30 |        191 |      0.002 |      67 |      99025 | 3.2e+01
+     40 |        506 |      0.005 |     139 |      98864 | 7.9e+01
+     50 |        915 |      0.009 |     240 |      96359 | 2.4e+02
+     60 |       1597 |      0.017 |     369 |      92866 | 6.4e+02
+     80 |       5763 |      0.076 |     714 |      75887 | 2.9e+03
+    100 |      18460 |      0.257 |    1175 |      71707 | 1.1e+04
+    150 |     215308 |      3.670 |    2839 |      58670 | 2.0e+05
+    200 |    2147434 |     46.033 |    5241 |      46650 | 1.9e+06
