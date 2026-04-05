@@ -28,6 +28,21 @@ Entry format:
 **New contributions:** creative_explorations_s24.py, h_landscape_unimodality_s24.py, h_local_max_analysis_s24.py, phase_transition_precision_s24.py, three-dynamics-of-tournaments.md (reflection), HYP-1704–1708
 **Unresolved:** Does H=37 local max persist at n≥7? Prove majority rule convergence algebraically. Explain why t_50% = C(n-3,2)+2 (inner staircase connection). Characterize ALL local H-maxima at n=7.
 
+## opus-2026-04-05-S24 — 2026-04-05: Deep Polynomial Exploration — Real-Rootedness, E[H]=n!/2^{n-1}, α₁=3 Mechanism
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S23
+**Summary:** Free exploration session yielding three theorem-level results:
+1. **E[H(T)] = n!/2^{n-1}** — proved by linearity of expectation. Sum over all labeled tournaments: W(n) = n! × 2^{C(n-1,2)}. Verified exact at n=1..7.
+2. **Real-rootedness theorem**: I(Ω(T), x) has all real negative zeros for n ≤ 8. Proof: Ω(T) is claw-free (needs 3 disjoint odd cycles = 9 vertices), by Chudnovsky-Seymour.
+3. **α₁=3 mechanism at n=7**: All 500 sampled α₁=3 tournaments have α₂=2, giving H=15 (never 7). The 3 three-cycles always have exactly 2 vertex-disjoint pairs.
+4. **I(Ω(T), x) is a finer invariant than H(T)**: At n=6, tournaments with same H can have different polynomials.
+5. **Ω(T) structure**: Complete graph at n=5 (α=1 always). Chordal for 49/56 classes at n=6. Always α(Ω)≤2 at n≤8 (claw-free).
+6. **OCF truncation exact for ensemble average**: E[Σα₃]=0 through n=6.
+
+**New contributions:** independence_poly_exploration_s24.py, alpha1_gap_investigation_s24.py, h7_at_n7_check_s24.py, w_n_and_sum_alpha_s24.py, omega_graph_properties_s24.py, reflections on real-rootedness and E[H] formula
+**Unresolved:** Real-rootedness conjecture for all n (breaks at n=9?). Structure of Ω(T) at n≥9. Prove α₁=3 → α₂≥2 for all n (would prove H=7 universally forbidden). Efficient cycle enumeration for n≥9.
+
 ## opus-2026-04-04-S23 — 2026-04-04: Proving the Open Questions — Claim A Decomposition, r_∞, β_c Scaling
 
 **Account:** opus

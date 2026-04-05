@@ -1,0 +1,82 @@
+============================================================
+Ω(T) properties at n=5
+============================================================
+  scores=(0, 1, 2, 3, 4): |Ω|=0, edges=0, ω=0, α=0, Δ=0, chordal=True
+  scores=(1, 1, 1, 3, 4): |Ω|=1, edges=0, ω=1, α=1, Δ=0, chordal=True
+  scores=(1, 1, 2, 2, 4): |Ω|=2, edges=1, ω=2, α=1, Δ=1, chordal=True
+  scores=(0, 2, 2, 2, 4): |Ω|=1, edges=0, ω=1, α=1, Δ=0, chordal=True
+  scores=(1, 1, 2, 3, 3): |Ω|=4, edges=6, ω=4, α=1, Δ=3, chordal=True
+  scores=(0, 2, 2, 3, 3): |Ω|=2, edges=1, ω=2, α=1, Δ=1, chordal=True
+  scores=(1, 1, 2, 3, 3): |Ω|=4, edges=6, ω=4, α=1, Δ=3, chordal=True
+  scores=(0, 1, 3, 3, 3): |Ω|=1, edges=0, ω=1, α=1, Δ=0, chordal=True
+  scores=(1, 2, 2, 2, 3): |Ω|=5, edges=10, ω=5, α=1, Δ=4, chordal=True
+  scores=(1, 2, 2, 2, 3): |Ω|=5, edges=10, ω=5, α=1, Δ=4, chordal=True
+  scores=(1, 2, 2, 2, 3): |Ω|=5, edges=10, ω=5, α=1, Δ=4, chordal=True
+  scores=(2, 2, 2, 2, 2): |Ω|=6, edges=15, ω=6, α=1, Δ=5, chordal=True
+
+============================================================
+Ω(T) properties at n=6
+============================================================
+Total iso classes: 56
+Chordal: 49/56
+
+Non-chordal examples:
+  scores=(1, 2, 2, 3, 3, 4): |Ω|=10, ω=8, α=2, has_C4=True
+  scores=(1, 2, 2, 3, 3, 4): |Ω|=10, ω=8, α=2, has_C4=True
+  scores=(2, 2, 2, 2, 3, 4): |Ω|=12, ω=10, α=2, has_C4=True
+
+(|V|, |E|, ω, α, chordal) distribution:
+  |Ω|= 0, |E|=  0, ω=0, α=0, chordal=True: 1 classes
+  |Ω|= 1, |E|=  0, ω=1, α=1, chordal=True: 4 classes
+  |Ω|= 2, |E|=  0, ω=1, α=2, chordal=True: 1 classes
+  |Ω|= 2, |E|=  1, ω=2, α=1, chordal=True: 3 classes
+  |Ω|= 4, |E|=  6, ω=4, α=1, chordal=True: 4 classes
+  |Ω|= 5, |E|= 10, ω=5, α=1, chordal=True: 6 classes
+  |Ω|= 6, |E|= 14, ω=5, α=2, chordal=True: 1 classes
+  |Ω|= 6, |E|= 15, ω=6, α=1, chordal=True: 2 classes
+  |Ω|= 7, |E|= 21, ω=7, α=1, chordal=True: 2 classes
+  |Ω|= 8, |E|= 27, ω=7, α=2, chordal=True: 2 classes
+  |Ω|= 8, |E|= 28, ω=8, α=1, chordal=True: 1 classes
+  |Ω|= 9, |E|= 35, ω=8, α=2, chordal=True: 2 classes
+  |Ω|= 9, |E|= 36, ω=9, α=1, chordal=True: 2 classes
+  |Ω|=10, |E|= 43, ω=8, α=2, chordal=False: 3 classes
+  |Ω|=10, |E|= 44, ω=9, α=2, chordal=True: 3 classes
+  |Ω|=10, |E|= 45, ω=10, α=1, chordal=True: 2 classes
+  |Ω|=11, |E|= 54, ω=10, α=2, chordal=True: 2 classes
+  |Ω|=11, |E|= 55, ω=11, α=1, chordal=True: 2 classes
+  |Ω|=12, |E|= 64, ω=10, α=2, chordal=False: 2 classes
+  |Ω|=12, |E|= 65, ω=11, α=2, chordal=True: 4 classes
+  |Ω|=12, |E|= 66, ω=12, α=1, chordal=True: 2 classes
+  |Ω|=14, |E|= 87, ω=10, α=2, chordal=False: 1 classes
+  |Ω|=14, |E|= 89, ω=12, α=2, chordal=False: 1 classes
+  |Ω|=14, |E|= 90, ω=13, α=2, chordal=True: 3 classes
+
+Clique number ω = independence number α relationship:
+  (ω, α) = (0, 0): 1 classes
+  (ω, α) = (1, 1): 4 classes
+  (ω, α) = (1, 2): 1 classes
+  (ω, α) = (2, 1): 3 classes
+  (ω, α) = (4, 1): 4 classes
+  (ω, α) = (5, 1): 6 classes
+  (ω, α) = (5, 2): 1 classes
+  (ω, α) = (6, 1): 2 classes
+  (ω, α) = (7, 1): 2 classes
+  (ω, α) = (7, 2): 2 classes
+  (ω, α) = (8, 1): 1 classes
+  (ω, α) = (8, 2): 5 classes
+  (ω, α) = (9, 1): 2 classes
+  (ω, α) = (9, 2): 3 classes
+  (ω, α) = (10, 1): 2 classes
+  (ω, α) = (10, 2): 5 classes
+  (ω, α) = (11, 1): 2 classes
+  (ω, α) = (11, 2): 4 classes
+  (ω, α) = (12, 1): 2 classes
+  (ω, α) = (12, 2): 1 classes
+  (ω, α) = (13, 2): 3 classes
+
+Ω(T) density:
+  scores=(1, 1, 2, 2, 4, 5): |Ω|=2, density=1.000
+  scores=(1, 1, 2, 3, 3, 5): |Ω|=4, density=1.000
+
+
+DONE.

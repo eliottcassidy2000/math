@@ -1,0 +1,95 @@
+======================================================================
+TOURNAMENT GAME THEORY ANALYSIS
+von Neumann, Morgenstern, Nash meets Redei
+======================================================================
+
+============================================================
+n = 4
+============================================================
+
+  4 iso classes analyzed in 0.0s
+
+    H  c3           score | Nash   val   ent | Shap_spread               Shap_sorted | Core TC UC M_ent
+  --- --- ----------------|------------------|---------------------------------------|-----------------
+    1   0    (0, 1, 2, 3) |    1 -0.00  0.00 |       0.000 (np.float64(0.25), np.float64(0.25), np.float64(0.25), np.float64(0.25)) |   no  1  1  0.00
+    3   1    (1, 1, 1, 3) |    1 -0.00  0.00 |       0.667 (np.float64(0.25), np.float64(0.92), np.float64(0.92), np.float64(0.92)) |   no  1  1  1.58
+    3   1    (0, 2, 2, 2) |    3 -0.00  1.58 |       0.667 (np.float64(0.25), np.float64(0.92), np.float64(0.92), np.float64(0.92)) |   no  3  3  1.79
+    5   2    (1, 1, 2, 2) |    3 -0.00  1.58 |       0.667 (np.float64(0.92), np.float64(0.92), np.float64(1.58), np.float64(1.58)) |  YES  4  3  1.95
+
+  KEY RELATIONSHIPS:
+    corr(H, Nash support        ) = +0.7071
+    corr(H, Nash entropy        ) = +0.7071
+    corr(H, Shapley spread      ) = +0.8165
+    corr(H, Top cycle size      ) = +0.8165
+    corr(H, Uncovered set size  ) = +0.7071
+    corr(H, Markov entropy      ) = +0.8842
+
+  SHAPLEY VALUE PROPERTIES:
+    H=1: sum(phi)=1.00 (should = H), phi=[np.float64(0.25), np.float64(0.25), np.float64(0.25), np.float64(0.25)]
+    H=3: sum(phi)=3.00 (should = H), phi=[np.float64(0.917), np.float64(0.917), np.float64(0.917), np.float64(0.25)]
+    H=3: sum(phi)=3.00 (should = H), phi=[np.float64(0.917), np.float64(0.25), np.float64(0.917), np.float64(0.917)]
+
+  CORE: 1 classes with non-empty core, 3 with empty core
+    H=5, score=(1, 1, 2, 2): core point = [np.float64(2.0), np.float64(1.0), np.float64(1.0), np.float64(1.0)]
+
+  SHAPLEY SPREAD (inequality among vertices):
+    H=3, c3=1, score=(1, 1, 1, 3): spread=0.667, sorted_phi=(np.float64(0.25), np.float64(0.92), np.float64(0.92), np.float64(0.92))
+    H=5, c3=2, score=(1, 1, 2, 2): spread=0.667, sorted_phi=(np.float64(0.92), np.float64(0.92), np.float64(1.58), np.float64(1.58))
+    H=3, c3=1, score=(0, 2, 2, 2): spread=0.667, sorted_phi=(np.float64(0.25), np.float64(0.92), np.float64(0.92), np.float64(0.92))
+    H=1, c3=0, score=(0, 1, 2, 3): spread=0.000, sorted_phi=(np.float64(0.25), np.float64(0.25), np.float64(0.25), np.float64(0.25))
+
+============================================================
+n = 5
+============================================================
+
+  12 iso classes analyzed in 0.3s
+
+    H  c3           score | Nash   val   ent | Shap_spread               Shap_sorted | Core TC UC M_ent
+  --- --- ----------------|------------------|---------------------------------------|-----------------
+    1   0 (0, 1, 2, 3, 4) |    1 -0.00  0.00 |       0.000 (np.float64(0.2), np.float64(0.2), np.float64(0.2), np.float64(0.2), np.float64(0.2)) |   no  1  1  0.00
+    3   1 (1, 1, 1, 3, 4) |    1 -0.00  0.00 |       0.667 (np.float64(0.2), np.float64(0.2), np.float64(0.87), np.float64(0.87), np.float64(0.87)) |   no  1  1  1.58
+    3   1 (0, 2, 2, 2, 4) |    1 -0.00  0.00 |       0.667 (np.float64(0.2), np.float64(0.2), np.float64(0.87), np.float64(0.87), np.float64(0.87)) |   no  1  1  1.79
+    3   1 (0, 1, 3, 3, 3) |    3 -0.00  1.58 |       0.667 (np.float64(0.2), np.float64(0.2), np.float64(0.87), np.float64(0.87), np.float64(0.87)) |   no  3  3  1.52
+    5   2 (1, 1, 2, 2, 4) |    1 -0.00  0.00 |       1.333 (np.float64(0.2), np.float64(0.87), np.float64(0.87), np.float64(1.53), np.float64(1.53)) |   no  1  1  1.95
+    5   2 (0, 2, 2, 3, 3) |    3 -0.00  1.58 |       1.333 (np.float64(0.2), np.float64(0.87), np.float64(0.87), np.float64(1.53), np.float64(1.53)) |   no  4  3  2.11
+    9   3 (1, 1, 2, 3, 3) |    3 -0.00  1.58 |       1.333 (np.float64(1.27), np.float64(1.27), np.float64(1.27), np.float64(2.6), np.float64(2.6)) |  YES  5  3  2.20
+    9   3 (1, 1, 2, 3, 3) |    3 -0.00  1.58 |       1.333 (np.float64(1.27), np.float64(1.27), np.float64(1.93), np.float64(1.93), np.float64(2.6)) |  YES  5  3  2.14
+   11   4 (1, 2, 2, 2, 3) |    3 -0.00  1.58 |       1.333 (np.float64(1.93), np.float64(1.93), np.float64(1.93), np.float64(1.93), np.float64(3.27)) |  YES  5  3  2.27
+   13   4 (1, 2, 2, 2, 3) |    3 -0.00  1.58 |       0.667 (np.float64(2.33), np.float64(2.33), np.float64(2.33), np.float64(3.0), np.float64(3.0)) |  YES  5  4  2.26
+   15   4 (1, 2, 2, 2, 3) |    5 -0.00  2.11 |       0.667 (np.float64(2.73), np.float64(2.73), np.float64(2.73), np.float64(3.4), np.float64(3.4)) |  YES  5  5  2.29
+   15   5 (2, 2, 2, 2, 2) |    5 -0.00  2.32 |       0.000 (np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0)) |  YES  5  5  2.32
+
+  KEY RELATIONSHIPS:
+    corr(H, Nash support        ) = +0.8449
+    corr(H, Nash entropy        ) = +0.7939
+    corr(H, Shapley spread      ) = +0.0000
+    corr(H, Top cycle size      ) = +0.8383
+    corr(H, Uncovered set size  ) = +0.8822
+    corr(H, Markov entropy      ) = +0.7165
+
+  SHAPLEY VALUE PROPERTIES:
+    H=1: sum(phi)=1.00 (should = H), phi=[np.float64(0.2), np.float64(0.2), np.float64(0.2), np.float64(0.2), np.float64(0.2)]
+    H=3: sum(phi)=3.00 (should = H), phi=[np.float64(0.867), np.float64(0.867), np.float64(0.867), np.float64(0.2), np.float64(0.2)]
+    H=3: sum(phi)=3.00 (should = H), phi=[np.float64(0.867), np.float64(0.2), np.float64(0.867), np.float64(0.867), np.float64(0.2)]
+
+  CORE: 6 classes with non-empty core, 6 with empty core
+    H=9, score=(1, 1, 2, 3, 3): core point = [np.float64(1.0), np.float64(2.0), np.float64(1.0), np.float64(4.0), np.float64(1.0)]
+    H=9, score=(1, 1, 2, 3, 3): core point = [np.float64(5.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0)]
+    H=11, score=(1, 2, 2, 2, 3): core point = [np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(6.0), np.float64(2.0)]
+    H=13, score=(1, 2, 2, 2, 3): core point = [np.float64(1.0), np.float64(2.0), np.float64(1.0), np.float64(1.0), np.float64(8.0)]
+    H=15, score=(1, 2, 2, 2, 3): core point = [np.float64(1.0), np.float64(2.0), np.float64(1.0), np.float64(10.0), np.float64(1.0)]
+    H=15, score=(2, 2, 2, 2, 2): core point = [np.float64(2.0), np.float64(1.0), np.float64(10.0), np.float64(1.0), np.float64(1.0)]
+
+  SHAPLEY SPREAD (inequality among vertices):
+    H=9, c3=3, score=(1, 1, 2, 3, 3): spread=1.333, sorted_phi=(np.float64(1.27), np.float64(1.27), np.float64(1.27), np.float64(2.6), np.float64(2.6))
+    H=5, c3=2, score=(0, 2, 2, 3, 3): spread=1.333, sorted_phi=(np.float64(0.2), np.float64(0.87), np.float64(0.87), np.float64(1.53), np.float64(1.53))
+    H=9, c3=3, score=(1, 1, 2, 3, 3): spread=1.333, sorted_phi=(np.float64(1.27), np.float64(1.27), np.float64(1.93), np.float64(1.93), np.float64(2.6))
+    H=5, c3=2, score=(1, 1, 2, 2, 4): spread=1.333, sorted_phi=(np.float64(0.2), np.float64(0.87), np.float64(0.87), np.float64(1.53), np.float64(1.53))
+    H=11, c3=4, score=(1, 2, 2, 2, 3): spread=1.333, sorted_phi=(np.float64(1.93), np.float64(1.93), np.float64(1.93), np.float64(1.93), np.float64(3.27))
+    H=15, c3=4, score=(1, 2, 2, 2, 3): spread=0.667, sorted_phi=(np.float64(2.73), np.float64(2.73), np.float64(2.73), np.float64(3.4), np.float64(3.4))
+    H=3, c3=1, score=(1, 1, 1, 3, 4): spread=0.667, sorted_phi=(np.float64(0.2), np.float64(0.2), np.float64(0.87), np.float64(0.87), np.float64(0.87))
+    H=3, c3=1, score=(0, 2, 2, 2, 4): spread=0.667, sorted_phi=(np.float64(0.2), np.float64(0.2), np.float64(0.87), np.float64(0.87), np.float64(0.87))
+    H=3, c3=1, score=(0, 1, 3, 3, 3): spread=0.667, sorted_phi=(np.float64(0.2), np.float64(0.2), np.float64(0.87), np.float64(0.87), np.float64(0.87))
+    H=13, c3=4, score=(1, 2, 2, 2, 3): spread=0.667, sorted_phi=(np.float64(2.33), np.float64(2.33), np.float64(2.33), np.float64(3.0), np.float64(3.0))
+    H=1, c3=0, score=(0, 1, 2, 3, 4): spread=0.000, sorted_phi=(np.float64(0.2), np.float64(0.2), np.float64(0.2), np.float64(0.2), np.float64(0.2))
+    H=15, c3=5, score=(2, 2, 2, 2, 2): spread=0.000, sorted_phi=(np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0), np.float64(3.0))
