@@ -1,0 +1,233 @@
+======================================================================
+1. SPECTRAL GAP — why identity dominates
+======================================================================
+
+The orbit count e(λ) counts independent edge orbits under permutation type λ.
+The identity (1^n) gives e = C(n,2) (every edge is its own orbit).
+The SPECTRAL GAP Δ = C(n,2) - e(next best) determines convergence.
+
+  n= 3: e_max=    3, gap=  1, next=2^1+1^1       (gap/n = 0.33)
+  n= 4: e_max=    6, gap=  2, next=2^2           (gap/n = 0.50)
+  n= 5: e_max=   10, gap=  3, next=2^1+1^3       (gap/n = 0.60)
+  n= 6: e_max=   15, gap=  4, next=2^1+1^4       (gap/n = 0.67)
+  n= 7: e_max=   21, gap=  5, next=2^1+1^5       (gap/n = 0.71)
+  n= 8: e_max=   28, gap=  6, next=2^1+1^6       (gap/n = 0.75)
+  n= 9: e_max=   36, gap=  7, next=2^1+1^7       (gap/n = 0.78)
+  n=10: e_max=   45, gap=  8, next=2^1+1^8       (gap/n = 0.80)
+  n=11: e_max=   55, gap=  9, next=2^1+1^9       (gap/n = 0.82)
+  n=12: e_max=   66, gap= 10, next=2^1+1^10      (gap/n = 0.83)
+  n=13: e_max=   78, gap= 11, next=2^1+1^11      (gap/n = 0.85)
+  n=14: e_max=   91, gap= 12, next=2^1+1^12      (gap/n = 0.86)
+  n=15: e_max=  105, gap= 13, next=2^1+1^13      (gap/n = 0.87)
+  n=16: e_max=  120, gap= 14, next=2^1+1^14      (gap/n = 0.88)
+  n=17: e_max=  136, gap= 15, next=2^1+1^15      (gap/n = 0.88)
+  n=18: e_max=  153, gap= 16, next=2^1+1^16      (gap/n = 0.89)
+  n=19: e_max=  171, gap= 17, next=2^1+1^17      (gap/n = 0.89)
+  n=20: e_max=  190, gap= 18, next=2^1+1^18      (gap/n = 0.90)
+  n=21: e_max=  210, gap= 19, next=2^1+1^19      (gap/n = 0.90)
+  n=22: e_max=  231, gap= 20, next=2^1+1^20      (gap/n = 0.91)
+  n=23: e_max=  253, gap= 21, next=2^1+1^21      (gap/n = 0.91)
+  n=24: e_max=  276, gap= 22, next=2^1+1^22      (gap/n = 0.92)
+
+======================================================================
+2. PHASE DIAGRAM — varying the base continuously
+======================================================================
+
+a(n; b) = (1/n!) Σ_λ (n!/z_λ) × b^{e(λ)}
+
+At b=1: a(n;1) = (1/n!) Σ_λ n!/z_λ = number of conjugacy classes? No...
+Actually at b=1: b^e = 1 for all e, so a(n;1) = (1/n!) Σ_λ n!/z_λ = p(n)? No...
+Σ_λ n!/z_λ = Σ_{σ ∈ S_n} 1 = n!
+So a(n;1) = n!/n! = 1. Every structure is "the same" when coloring = trivial.
+
+At b=0: b^e = 0 for e>0, = 1 for e=0. Only partitions with e=0 contribute.
+e=0 iff... the only partition with e=0 is (n) for n=1. For n≥2, all partitions
+have e≥1. So a(n;0) = 0 for n≥2. Trivially.
+
+So the range is b ∈ [0, ∞) with a(n;b) interpolating from 0 to ∞.
+
+Phase diagram at n=10:
+  b=  0.5: a(10;b) =            0.01, id_frac = 0.000000, coupling = 1.0000e+00
+  b=  1.0: a(10;b) =            1.00, id_frac = 1.000000, coupling = 1.1102e-16
+  b=  1.5: a(10;b) =          339.28, id_frac = 247486.018309, coupling = -2.4749e+05
+  b=  2.0: a(10;b) =     12005168.00, id_frac = 2930768.822963, coupling = -2.9308e+06
+  b=  2.5: a(10;b) = 229635845830.05, id_frac = 3517715.468273, coupling = -3.5177e+06
+  b=  3.0: a(10;b) = 819833163057369.25, id_frac = 3603553.551717, coupling = -3.6036e+06
+  b=  4.0: a(10;b) = 341378170022782959616.00, id_frac = 3626301.117036, coupling = -3.6263e+06
+  b=  5.0: a(10;b) = 7833164300852978855706624.00, id_frac = 3628381.626989, coupling = -3.6284e+06
+  b= 10.0: a(10;b) = 275573316249538987814083421619739426816.00, id_frac = 3628798.367018, coupling = -3.6288e+06
+
+Critical base b_c where coupling = 50% (n=10):
+  b_c(n=10) ≈ 1.000000
+
+Critical base b_c vs n:
+  n= 3: b_c = 1.000000
+  n= 4: b_c = 1.000000
+  n= 5: b_c = 1.000000
+  n= 6: b_c = 1.000000
+  n= 7: b_c = 1.000000
+  n= 8: b_c = 1.000000
+  n= 9: b_c = 1.000000
+  n=10: b_c = 1.000000
+  n=11: b_c = 1.000000
+  n=12: b_c = 1.000000
+  n=13: b_c = 1.000000
+  n=14: b_c = 1.000000
+  n=15: b_c = 1.000000
+
+======================================================================
+3. DEFECT ENERGY SPECTRUM — structure of corrections
+======================================================================
+Defect energy spectrum at n=15 (e_max = 105):
+
+    Δe       weight                 partition    density_of_states
+  ──── ──────────── ───────────────────────── ────────────────────
+     0            1                      1^15 (1 type)
+    13          105                  2^1+1^13 (1 type)
+    24         4095                  2^2+1^11 (1 type)
+    26          910                  3^1+1^12 (1 type)
+    33        75075                   2^3+1^9 (1 type)
+    37        68250                  4^1+1^11 (2 types)
+    40       675675                   2^4+1^7 (1 type)
+    45      2837835                   2^5+1^5 (1 type)
+    46      2002000                   3^2+1^9 (3 types)
+    48      4801797                  5^1+1^10 (2 types)
+    49      2027025                   2^7+1^1 (1 type)
+    53     20720700               4^1+2^2+1^7 (2 types)
+    55      7207200               3^2+2^1+1^7 (1 type)
+    57      6546540                   6^1+1^9 (3 types)
+    58    104053950               3^1+2^4+1^4 (2 types)
+    60     11211200                   3^3+1^6 (1 type)
+    61    198648450               3^1+2^5+1^2 (2 types)
+    62    178378200                   4^2+1^7 (4 types)
+    64    142702560               6^1+2^1+1^7 (3 types)
+    66     21930480                   7^1+1^8 (2 types)
+
+======================================================================
+4. EULER PRODUCT — factored perturbation expansion
+======================================================================
+
+The Burnside sum factors as:
+  Σ_λ (n!/z_λ) b^{e(λ)} = n! × coeff of x^n in F(x)
+where F(x) = Π_{k≥1} G_k(x)
+and G_k(x) = Σ_{m≥0} b^{e_self(k,m)} x^{km} / (k^m m!)
+
+The INTERACTION between different k values contributes cross-terms.
+But the SELF contribution of each k is independent.
+
+This gives a MULTIPLICATIVE structure to the perturbation expansion:
+  S(n) = Π_k S_k(n) × cross_corrections
+
+where S_k(n) captures the contribution of cycle length k.
+
+Self-contributions at n=12:
+  k= 1: λ=(1^12), e=  66, Δe=   0, ratio=1.000000e+00
+  k= 2: λ=(2^6), e=  36, Δe=  30, ratio=9.681098e-06
+  k= 3: λ=(3^4), e=  22, Δe=  44, ratio=1.400622e-08
+  k= 4: λ=(4^3), e=  18, Δe=  48, ratio=4.431655e-09
+  k= 6: λ=(6^2), e=  12, Δe=  54, ratio=3.693046e-10
+  k=12: λ=(12^1), e=   6, Δe=  60, ratio=3.462231e-11
+
+======================================================================
+5. UNIVERSAL LEADING CORRECTION — depends on smallest non-trivial cycle
+======================================================================
+
+For base b and structures on C(n,2) edges:
+  Leading correction from transpositions (k=2):
+    R₂(n) = C(n,2) × b^{-1} × ...
+  Leading correction from 3-cycles (k=3):
+    R₃(n) = C(n,3) × (2/3) × b^{-(2n-4)}
+
+General: the smallest allowed cycle determines the convergence rate.
+- All parts allowed (graphs, digraphs): k=2 → rate ~ b^{-1} per n → SLOW
+- Odd parts only (tournaments): k=3 → rate ~ b^{-2} per n → FASTER
+
+Convergence rate (ratio of coupling constants at successive n):
+
+    n     all parts      odd only           k≥3           k≥5
+    6      0.945586      0.648352      0.660657      0.706422
+    7      0.849170      0.467142      0.449397      0.273600
+    8      0.766078      0.369408      0.354938      0.164134
+    9      0.673995      0.349477      0.318755      0.113970
+   10      0.619432      0.338235      0.316795      0.104008
+   11      0.593841      0.334768      0.322572      0.097064
+   12      0.585833      0.329940      0.323207      0.097863
+   13      0.581889      0.323794      0.320047      0.096880
+   14      0.578030      0.317771      0.315699      0.094865
+   15      0.573828      0.312363      0.311227      0.092501
+   16      0.569615      0.307647      0.307030      0.090237
+   17      0.565604      0.303557      0.303224      0.088180
+   18      0.561880      0.299995      0.299817      0.086358
+   19      0.558464      0.296874      0.296779      0.084420
+
+======================================================================
+6. DEEP ABSTRACTION — each correction = an irrep of S_n
+======================================================================
+
+In the Burnside sum, each conjugacy class λ of S_n contributes:
+  (n!/z_λ) × b^{e(λ)}
+
+The conjugacy classes of S_n are indexed by partitions of n.
+The representation theory of S_n associates to each partition λ:
+  - An irreducible representation ρ_λ of dimension d_λ = n!/z_λ × (something)
+  - The character χ_λ evaluated at various conjugacy classes
+
+The Burnside sum is NOT the character sum — it's a DIFFERENT weighting.
+But the PARTITION INDEXING is the same!
+
+Key insight: the "defect energy" Δe(λ) = C(n,2) - e(λ) can be expressed as
+a function of the partition λ. And the convergence rate is determined by the
+MINIMAL defect, which corresponds to the SMALLEST non-trivial cycle.
+
+For S_n representation theory:
+- The trivial representation (1^n) → identity partition → Δe = 0
+- The sign representation (n) → full cycle → Δe = (n-1)(n-2)/2 (LARGE)
+- The standard representation → transposition (2,1^{n-2}) → Δe = 1
+
+So the perturbation expansion is ORDERED by representation-theoretic complexity,
+from trivial (identity) to most complex (full cycle).
+
+Defect energy vs representation-theoretic quantities:
+
+        partition    Δe     dim(ρ_λ)   Δe/dim
+              1^8     0            1   0.0000
+          2^1+1^6     6            7   0.8571
+          2^2+1^4    10           20   0.5000
+          2^3+1^2    12           28   0.4286
+              2^4    12           14   0.8571
+          3^1+1^5    12           21   0.5714
+      3^1+2^1+1^3    16           64   0.2500
+      3^1+2^2+1^1    18           70   0.2571
+          3^2+1^2    18           56   0.3214
+          3^2+2^1    20           42   0.4762
+          4^1+1^4    16           35   0.4571
+      4^1+2^1+1^2    18           90   0.2000
+
+======================================================================
+7. GENERATING FUNCTION — the partition function as formal series
+======================================================================
+
+The exponential generating function of a(n; b):
+  F(x; b) = Σ_{n≥0} a(n; b) × x^n
+
+For simple graphs (A000088 at b=2):
+  F(x; 2) = 1 + x + 2x² + 4x³/3! + 11x⁴/4! + ...
+
+The Burnside structure gives:
+  F(x; b) = Σ_{n≥0} (1/n!) Σ_{λ⊢n} (n!/z_λ) b^{e(λ)} × x^n
+           = Σ_λ (b^{e(λ)}/z_λ) × x^{|λ|}
+
+This factors as:
+  F(x; b) = Π_{k≥1} [Σ_{m≥0} b^{s(k,m)} × (x^k)^m / (k^m × m!)]
+
+where s(k,m) = m(k-1)/2 + C(m,2)k = self-edge contribution of (k^m).
+
+The CROSS-EDGE contributions couple different factors, so the product
+is not exact. But the perturbation expansion captures the corrections.
+
+  n= 5: a_exact=34, a_bare(no cross)=15, ratio=0.441176
+  n= 8: a_exact=12346, a_bare(no cross)=6923, ratio=0.560748
+  n=10: a_exact=12005168, a_bare(no cross)=9712006, ratio=0.808985
+
+
+DONE.

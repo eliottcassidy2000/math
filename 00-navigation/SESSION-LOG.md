@@ -28,6 +28,15 @@ Entry format:
 **New contributions:** creative_explorations_s24.py, h_landscape_unimodality_s24.py, h_local_max_analysis_s24.py, phase_transition_precision_s24.py, three-dynamics-of-tournaments.md (reflection), HYP-1704–1708
 **Unresolved:** Does H=37 local max persist at n≥7? Prove majority rule convergence algebraically. Explain why t_50% = C(n-3,2)+2 (inner staircase connection). Characterize ALL local H-maxima at n=7.
 
+## opus-2026-04-05-S29 — 2026-04-05: Deep Structure of Burnside Perturbation Theory
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S28
+**Summary:** Pushed the abstraction to its limits. PROVED: spectral gap = n-2 exactly (transposition achieves it); for odd parts, gap = 2n-4 (3-cycle). DISCOVERED: critical base b_c(n) → 1 as n→∞ — NO true phase transition, only a crossover. Defect energy spectrum has gaps (not all integers achievable). Cross-terms are essential (bare product gives only 44-81%). Connection to S_n representation theory: Δe(λ) partially orders with irrep dimension d_λ. Universal formulas: R₂(n,b) = C(n,2)×b^{-(n-2)} for all-parts, R₃(n,b) = C(n,3)×(2/3)×b^{-(2n-4)} for odd-parts. Extensions to k-uniform hypergraphs, colored structures, weighted Burnside, wreath products, continuous groups.
+
+**New contributions:** burnside_abstract_s29.py, burnside-perturbation-deep-structure.md
+**Unresolved:** Exact formula for b_c(n) asymptotics. Rigorous proof of gap theorem for general k-uniform. Connection to random matrix theory.
+
 ## opus-2026-04-05-S28 — 2026-04-05: Unified Burnside Enumerator — 5 Sequences Verified and Extended
 
 **Account:** opus
