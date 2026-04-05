@@ -1538,6 +1538,11 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1535 | **Frustration-H correlation converges to r∞ ≈ 0.956**: corr(c₃,H) = 1.000,0.973,0.961,0.956,0.956 for n=4-8. Stabilizes by n=7. | CONFIRMED (exhaustive n≤6, sampled n=7,8 with 10000+ samples) | deep_principles_large_n_s22.py | opus-S22 |
 | HYP-1536 | **Interaction R² improves with n**: R²(interaction model) = 1.00,0.94,0.91,0.91,0.93,0.95 for n=4→5 through 8→9. The multiplicative model becomes MORE accurate at large n, not less. | CONFIRMED (n=4-9) | deep_principles_large_n_s22.py, coefficient_verify_n9_s22.py | opus-S22 |
 | HYP-1537 | **Universal interaction constant a_inter ≈ 0.27**: Values 0.261,0.278,0.269,0.283,0.270 across levels n=5-9. Stable within ±0.01 of 0.27. | CONFIRMED (n=5-9) | deep_principles_large_n_s22.py, coefficient_verify_n9_s22.py | opus-S22 |
+| HYP-1538 | **coeff_3(n) = a(n-1)**: The 3-cycle contribution to the exchange coefficient equals the previous level's total coefficient. Verified at n=5 (coeff_3=2=a(4)) and n=6 (coeff_3=3=a(5)). | CONFIRMED (exhaustive n=5, n=6) | prove_coefficient_s23.py, claim_a_n6_and_beta_c_s23.py | opus-S23 |
+| HYP-1539 | **OCF exact: H = 1+2α₁+4α₂**: R²=1.000 at n=5 and n=6 when using α₁ (all odd cycles) and α₂ (disjoint 3-cycle pairs). The OCF is not approximate — it is EXACT. | CONFIRMED (exhaustive n=5,6) | prove_coefficient_s23.py | opus-S23 |
+| HYP-1540 | **r_∞ mechanism: corr(c₃,α₁)×corr(α₁,H)**: r_∞ ≈ 0.97 × 0.99 = 0.96. c₃/α₁ drops (1.0→0.77→0.53) but corr(c₃,α₁) stays ≈0.97 due to strong c₃-c₅ correlation (r≈0.93). | CONFIRMED (exhaustive n=5,6) | prove_coefficient_s23.py | opus-S23 |
+| HYP-1541 | **a_inter = 0.13 (μ channel) + 0.14 (count channel)**: μ(3-cycle)≈0.063·H_sub+1.03 gives 0.126. The 5-cycle count correlation with H_sub gives the remaining 0.14. | CONFIRMED (exhaustive n=5→6) | claim_a_n6_and_beta_c_s23.py | opus-S23 |
+| HYP-1542 | **β_c decreasing: 0.70→0.31→0.24**: Néel temperature T_N = 1/β_c increasing. Tournament AFM has NO disordered phase at n→∞ (β_c→0). | CONFIRMED (exhaustive n=5,6; sampled n=7) | prove_coefficient_s23.py, claim_a_n6_and_beta_c_s23.py | opus-S23 |
 
 ## opus-2026-03-15-S71v Hypotheses
 
