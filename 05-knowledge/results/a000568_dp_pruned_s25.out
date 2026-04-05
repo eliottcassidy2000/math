@@ -1,0 +1,61 @@
+======================================================================
+A000568 SPEEDUP BENCHMARKS
+======================================================================
+
+── Method 1: Bucket DP (exact) ──
+  a( 3) =                    2    0.0000s  ✓
+  a( 4) =                    4    0.0000s  ✓
+  a( 5) =                   12    0.0000s  ✓
+  a( 6) =                   56    0.0000s  ✓
+  a( 7) =                  456    0.0000s  ✓
+  a( 8) =                 6880    0.0000s  ✓
+  a( 9) =               191536    0.0000s  ✓
+  a(10) =              9733056    0.0000s  ✓
+  a(11) =            903753248    0.0000s  ✓
+  a(12) =         154108311168    0.0001s  ✓
+  a(13) =       48542114686912    0.0001s  ✓
+
+── Method 2: Pruned enumeration (threshold=0 = exact) ──
+  a(10) =              9733056    0.0000s  partitions=10  ✓
+  a(12) =         154108311168    0.0001s  partitions=15  ✓
+  a(14) =    28401423719122304    0.0002s  partitions=22  ✓
+
+── Method 2b: Aggressive pruning (approximate) ──
+  a(15) ≈ 31021002160335935126    0.0001s  counted=9 pruned=53  err=6.20e-13
+  a(20) ≈ 645022047157094734047534552783728182537    0.0002s  counted=3 pruned=124
+  a(25) ≈ 131326696669310184928548229462563319608278228391409826410974002175    0.0001s  counted=2 pruned=29
+
+── Method 3: Asymptotic recursion ──
+  a( 3): approx=                 1.3  exact=                   2  err=0.333333
+  a( 4): approx=                 2.7  exact=                   4  err=0.333333
+  a( 5): approx=                 6.9  exact=                  12  err=0.422222
+  a( 6): approx=                31.2  exact=                  56  err=0.442857
+  a( 7): approx=               260.2  exact=                 456  err=0.429417
+  a( 8): approx=              3992.2  exact=                6880  err=0.419735
+  a( 9): approx=            111615.9  exact=              191536  err=0.417259
+  a(10): approx=           5677066.0  exact=             9733056  err=0.416723
+  a(11): approx=         527213152.0  exact=           903753248  err=0.416640
+  a(12): approx=       89902198976.6  exact=        154108311168  err=0.416630
+  a(13): approx=    28318085108464.2  exact=      48542114686912  err=0.416629
+  a(14): approx= 16568584485153388.0  exact=   28401423719122304  err=0.416628
+  a(15): approx=18096772665698721792.0  exact=31021002160355166848  err=0.416628
+
+── Method 4: Partition contribution ranking (n=10) ──
+  Total partitions: 10, total sum = 35319313612800
+  #1: partition=[(1, 10)], e=45, contrib/total=0.996179, cumulative=0.996179
+  #2: partition=[(3, 1), (1, 7)], e=29, contrib/total=0.003648, cumulative=0.999828
+  #3: partition=[(3, 2), (1, 4)], e=19, contrib/total=0.000125, cumulative=0.999952
+  #4: partition=[(5, 1), (1, 5)], e=17, contrib/total=0.000022, cumulative=0.999975
+  #5: partition=[(3, 3), (1, 1)], e=15, contrib/total=0.000021, cumulative=0.999995
+  #6: partition=[(5, 1), (3, 1), (1, 2)], e=9, contrib/total=0.000002, cumulative=0.999997
+  #7: partition=[(7, 1), (1, 3)], e=9, contrib/total=0.000001, cumulative=0.999998
+  #8: partition=[(5, 2)], e=9, contrib/total=0.000001, cumulative=0.999999
+  #9: partition=[(9, 1), (1, 1)], e=5, contrib/total=0.000000, cumulative=1.000000
+  #10: partition=[(7, 1), (3, 1)], e=5, contrib/total=0.000000, cumulative=1.000000
+  99.000% reached at partition #1/10
+  99.900% reached at partition #2/10
+  99.990% reached at partition #3/10
+  99.999% reached at partition #5/10
+
+
+DONE.
