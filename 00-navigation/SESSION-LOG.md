@@ -13,6 +13,24 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-04-S20 — 2026-04-04: Exchange Coupling Renormalization — Universal a≈0.16, Strong Coupling
+
+**Account:** opus
+**Continuation of:** opus-2026-04-04-S19
+**Summary:** Integrated frustration propagation (S19) with exchange coupling (S17b) into a unified renormalization framework. The microscopic coupling a≈0.16 is universal (stable across n), the effective coupling J grows with ratio approaching 2.5 per step, and the H predictor from fiber bundle data achieves R²=0.91.
+
+**Key Results:**
+1. **Universal microscopic coupling**: a = 0.154 (n=4→5), a = 0.160 (n=5→6). Ratio 1.04 — essentially constant. Each unit of Δc₃ generates 0.16 additional H per unit of H_sub.
+
+2. **Effective J grows exponentially**: J(n) ratios: 1.47, 1.95, 2.45 — approaching ~2.5. The system enters strong coupling: J(7)=18.7 vs J(4)=2.7.
+
+3. **Practical H predictor**: H_n ≈ 0.16·Δc₃·H_sub + 5.4·Δc₃ + 1.4·H_sub - 3.8 (R²=0.91). Mean |error|=2.3 at n=6. Doesn't require Hamiltonian path computation.
+
+4. **Unified propagation**: mean_H grows as J(n) × E[Δc₃] per step, where E[Δc₃] = (n-1)(n-2)/8 (parabolic law) and J(n) = mean_ΔH / E[Δc₃].
+
+**New contributions:** exchange_renormalization.py, 1 result file
+**Unresolved:** Derive the J growth rate analytically. Prove a≈0.16 from OCF. Extend to n=7→8.
+
 ## opus-2026-04-04-S19 — 2026-04-04: Frustration Propagation Formula — F(n) = 2^n - 4(n-1)
 
 **Account:** opus
