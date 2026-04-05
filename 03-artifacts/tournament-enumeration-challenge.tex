@@ -13,13 +13,10 @@
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
-\newtheorem{problem}{Problem}
-\newtheorem{challenge}{Challenge}
 
 \lstset{
   language=Python,
@@ -38,13 +35,11 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{Tournament Enumeration Challenge}
-\rhead{Algorithms \& Number Theory}
+\lhead{Problem Set 7}
+\rhead{Algorithms \& Combinatorics}
 \cfoot{\thepage}
 
-\title{\vspace{-1.5em}\textbf{Tournament Enumeration Challenge} \\[6pt]
-\large From a 1954 formula to a sub-exponential algorithm \\[3pt]
-\normalsize OEIS A000568: Non-isomorphic tournaments on $n$ vertices}
+\title{\textbf{Problem Set 7: Counting Under Symmetry} \\[4pt] \normalsize Due: two weeks from today}
 \author{}
 \date{}
 
@@ -52,14 +47,14 @@
 \maketitle
 \thispagestyle{fancy}
 
-\begin{quote}
-\textit{``The formula has been known since 1954. The question is whether you can make it \emph{fast}.''}
-\end{quote}
+\noindent This problem set concerns Burnside's lemma applied to a concrete counting problem. You will implement a formula, optimize it, and then --- in the final problem --- discover something about its structure that reduces the computational complexity by many orders of magnitude. The final problem is open-ended and significantly harder than the others.
 
-\section{Background}
+\bigskip\hrule\bigskip
+
+\section*{Background}
 
 \begin{definition}
-A \textbf{tournament} on $n$ vertices is a directed complete graph: for every pair of distinct vertices $\{u, v\}$, exactly one of the arcs $u \to v$ or $v \to u$ is present. Two tournaments are \textbf{isomorphic} if one can be obtained from the other by relabeling vertices.
+A \textbf{tournament} on $n$ vertices is a complete directed graph: for every pair $\{u,v\}$, exactly one of $u \to v$ or $v \to u$ holds. Two tournaments are \textbf{isomorphic} if one can be obtained from the other by relabeling vertices.
 \end{definition}
 
 \begin{center}
@@ -67,309 +62,134 @@ A \textbf{tournament} on $n$ vertices is a directed complete graph: for every pa
   \node (a1) at (0, 1.5) {1};
   \node (a2) at (-1.2, 0) {2};
   \node (a3) at (1.2, 0) {3};
-  \draw[->] (a1) -- (a2);
-  \draw[->] (a2) -- (a3);
-  \draw[->] (a1) -- (a3);
+  \draw[->] (a1) -- (a2);  \draw[->] (a2) -- (a3);  \draw[->] (a1) -- (a3);
   \node[draw=none, below] at (0, -0.6) {\small Transitive};
-
   \node (b1) at (4, 1.5) {1};
   \node (b2) at (2.8, 0) {2};
   \node (b3) at (5.2, 0) {3};
-  \draw[->] (b1) -- (b2);
-  \draw[->] (b2) -- (b3);
-  \draw[->] (b3) -- (b1);
+  \draw[->] (b1) -- (b2);  \draw[->] (b2) -- (b3);  \draw[->] (b3) -- (b1);
   \node[draw=none, below] at (4, -0.6) {\small Cyclic};
 \end{tikzpicture}
 \end{center}
 
-\noindent The sequence $T(n)$ counting non-isomorphic tournaments on $n$ vertices is OEIS \href{https://oeis.org/A000568}{A000568}:
+\noindent Let $T(n)$ denote the number of non-isomorphic tournaments on $n$ vertices (OEIS~\href{https://oeis.org/A000568}{A000568}). The first few values are:
 \[
-1,\; 1,\; 1,\; 2,\; 4,\; 12,\; 56,\; 456,\; 6880,\; 191536,\; 9733056,\; \ldots
+T(0) = 1,\quad T(1) = 1,\quad T(2) = 1,\quad T(3) = 2,\quad T(4) = 4,\quad T(5) = 12,\quad T(6) = 56.
 \]
-
-Tournaments arise throughout mathematics: as round-robin competition schedules, as complete antisymmetric binary relations, as orientations of the complete graph, and as comparison-based decision systems. Every tournament has an odd number of Hamiltonian paths (R\'{e}dei, 1934), a fact central to the deeper theory.
-
-\subsection{History}
-
-The exact formula for $T(n)$ was first published by \textbf{R.~L.~Davis} in 1954 (``Structure of dominance relations,'' \emph{Bull.\ Math.\ Biophys.}\ 16), derived independently by Harary (1957), and is standard material in Moon's \emph{Topics on Tournaments} (1968) and Harary--Palmer's \emph{Graphical Enumeration} (1973). Implementations in Maple, PARI, Mathematica, and Python exist on the OEIS page (Jovovic 2001, Howroyd 2017, Alcover 2017, Wu 2024).
-
-\medskip
-\noindent\textbf{This document poses three escalating challenges:}
-\begin{enumerate}
-  \item \textbf{Implement} the known formula. (Problem~\ref{prob:formula})
-  \item \textbf{Optimize} it to handle $n = 200$. (Problem~\ref{prob:optimize})
-  \item \textbf{Break through} with a sub-exponential algorithm. (Problem~\ref{prob:truncated})
-\end{enumerate}
-The first two are engineering. The third is mathematics.
-
-\bigskip\hrule\bigskip
-
-%% ============================================================
-%% PART 1: WARM-UP
-%% ============================================================
-
-\begin{problem}[\textbf{Warm-Up}]\label{prob:warmup}
-\begin{enumerate}[label=(\alph*)]
-  \item How many \emph{labeled} tournaments are there on $n$ vertices?
-  \item List all non-isomorphic tournaments on $n = 4$ vertices with their score sequences. Verify $T(4) = 4$.
-  \item Which $n = 4$ tournament is self-complementary (reversing every arc gives an isomorphic tournament)?
-  \item \textbf{The asymptotic.} Show that $T(n) \sim 2^{\binom{n}{2}} / n!$. At what $n$ does the ratio first exceed $0.999$? Explain why the identity permutation dominates the Burnside sum.
-\end{enumerate}
-\end{problem}
 
 \bigskip
 
 %% ============================================================
-%% PART 2: THE FORMULA
+%% PROBLEM 1
 %% ============================================================
 
-\begin{problem}[\textbf{Davis's Formula}]\label{prob:formula}
+\subsection*{Problem 1: Warm-up \hfill \normalfont [15 points]}
 
-The following result is due to Davis (1954). We present it in two equivalent forms.
+\begin{enumerate}[label=(\alph*)]
+  \item Show that there are exactly $2^{\binom{n}{2}}$ labeled tournaments on $n$ vertices.
+  \item List all non-isomorphic tournaments on 4 vertices. For each, give its score sequence (the sorted list of out-degrees). Verify $T(4) = 4$.
+  \item One of the four is self-complementary: reversing all arcs yields an isomorphic tournament. Which one?
+  \item Show that the average number of Hamiltonian paths in a random labeled tournament on $n$ vertices is $n!/2^{n-1}$.
+\end{enumerate}
 
-\begin{theorem}[Davis's Formula for $T(n)$]\label{thm:davis}
+\bigskip
+
+%% ============================================================
+%% PROBLEM 2
+%% ============================================================
+
+\subsection*{Problem 2: Implementing the formula \hfill \normalfont [25 points]}
+
+The following result is due to Davis (1954).
+
+\begin{theorem}[Davis]\label{thm:davis}
 \begin{equation}\label{eq:davis}
-T(n) \;=\; \sum_{\substack{\lambda \vdash n \\ \text{all parts odd}}} \frac{2^{c(\lambda)}}{z_\lambda}
+T(n) = \sum_{\substack{\lambda \vdash n \\ \textup{all parts odd}}} \frac{2^{c(\lambda)}}{z_\lambda}
 \end{equation}
-where $\lambda = (l_1^{m_1}, l_2^{m_2}, \ldots)$ is a partition of $n$ in exponential notation (part $l_i$ with multiplicity $m_i$), the sum runs only over partitions where every part is odd, the \textbf{cycle exponent} is
-\begin{equation}\label{eq:cycle-exp}
-c(\lambda) \;=\; \sum_i m_i \left\lfloor \frac{l_i}{2} \right\rfloor + \sum_i \binom{m_i}{2} l_i + \sum_{i < j} m_i m_j \gcd(l_i, l_j),
+where $\lambda = (l_1^{m_1}, l_2^{m_2}, \ldots)$ is a partition of $n$ in exponential notation, the sum runs over partitions into odd parts only, the cycle exponent is
+\begin{equation}\label{eq:exponent}
+c(\lambda) = \sum_i m_i \left\lfloor \frac{l_i}{2} \right\rfloor + \sum_i \binom{m_i}{2} l_i + \sum_{i < j} m_i m_j \gcd(l_i, l_j),
 \end{equation}
-and the \textbf{centralizer order} is $z_\lambda = \prod_i l_i^{m_i} \cdot m_i!$.
+and $z_\lambda = \prod_i l_i^{m_i} \cdot m_i!$ is the centralizer order.
 \end{theorem}
 
-\begin{proof}[Derivation]
-Apply Burnside's lemma to the action of $S_n$ on the set of $2^{\binom{n}{2}}$ labeled tournaments. A permutation $\sigma$ with cycle type $\lambda$ acts on unordered pairs $\{i,j\}$ by $\sigma(\{i,j\}) = \{\sigma(i), \sigma(j)\}$. A tournament is fixed by $\sigma$ iff each orbit of pairs receives a consistent orientation.
-
-\emph{Even cycle obstruction:} If $\sigma$ contains a cycle of even length $l$, some pair orbits within that cycle force contradictory orientations (the orbit has even length, but arc reversal is an involution of order 2). Thus $\mathrm{Fix}(\sigma) = 0$ for any $\sigma$ with an even cycle.
-
-\emph{Odd cycles:} When all cycles have odd length, every pair orbit is consistent, and $\mathrm{Fix}(\sigma) = 2^{c(\lambda)}$ where $c(\lambda)$ counts orbits on pairs. Within a single $l$-cycle: $\lfloor l/2 \rfloor$ orbits. Between an $l_a$-cycle and an $l_b$-cycle: $\gcd(l_a, l_b)$ orbits. Summing gives~\eqref{eq:cycle-exp}.
-
-The conjugacy class of $\lambda$ has $n!/z_\lambda$ elements. Burnside's lemma gives
-\[
-T(n) = \frac{1}{n!} \sum_\lambda \frac{n!}{z_\lambda} \cdot 2^{c(\lambda)} = \sum_\lambda \frac{2^{c(\lambda)}}{z_\lambda}. \qedhere
-\]
-\end{proof}
-
-\begin{remark}
-The exponent admits the compact form
-\[
-c(\lambda) = \frac{1}{2}\!\left[\sum_{r,s} m_r m_s \gcd(r,s) - \sum_r m_r\right]
-\]
-(expand the double sum into diagonal $r = s$ and off-diagonal $r \neq s$ terms). This is the form used in the OEIS Python implementation by C.~W.~Wu (2024).
-\end{remark}
+\noindent This is a direct application of Burnside's lemma to the action of $S_n$ on the $2^{\binom{n}{2}}$ labeled tournaments. Only permutations with all odd-length cycles fix any tournament (even cycles force contradictory arc directions).
 
 \begin{enumerate}[label=(\alph*)]
-  \item Verify the algebraic equivalence of the two exponent forms.
-  \item Implement the formula. Verify against the table in Appendix~\ref{app:values}. Report the time for $T(50)$.
-  \item Profile: what fraction of time is partition generation vs.\ per-partition arithmetic?
+  \item Show that $c(\lambda)$ equals the number of orbits of unordered pairs under a permutation with cycle type $\lambda$.
+  \item The exponent has a compact form: $c(\lambda) = \frac{1}{2}[\sum_{r,s} m_r m_s \gcd(r,s) - \sum_r m_r]$. Prove this is equivalent to~\eqref{eq:exponent}.
+  \item Implement the formula in a language of your choice. Verify against the table in the appendix.
+  \item Report the running time for $T(50)$.
+  \item Profile your implementation. What fraction of time is partition generation vs.\ per-partition arithmetic? At what $n$ does it exceed 60 seconds?
 \end{enumerate}
-\end{problem}
 
 \bigskip
 
 %% ============================================================
-%% PART 3: OPTIMIZATION (Engineering)
+%% PROBLEM 3
 %% ============================================================
 
-\begin{problem}[\textbf{Optimization}]\label{prob:optimize}
+\subsection*{Problem 3: Optimization \hfill \normalfont [25 points]}
 
-The na\"ive implementation slows around $n = 60\text{--}80$. The bottleneck is the number of odd-part partitions $p_{\mathrm{odd}}(n)$, which grows as $\exp(\pi\sqrt{n/3}\,)$. Your task: make it fast enough for $T(200)$.
+The na\"ive implementation from Problem~2 slows around $n \approx 80$ because the number of odd-part partitions grows as $\exp(\pi\sqrt{n/3})$. Your task: compute $T(200)$ in under 60 seconds.
 
 \begin{enumerate}[label=(\alph*)]
-  \item \textbf{GCD precomputation} (${\sim}1.5\times$). Build a lookup table $G[i][j] = \gcd(i,j)$ before the partition loop.
-
-  \item \textbf{Avoid rational arithmetic} (${\sim}3\times$). Compute $L = \mathrm{lcm}$ of all $z_\lambda$, accumulate $(L/z_\lambda) \cdot 2^{c(\lambda)}$ as integers, divide by $L$ once.
-
-  \item \textbf{Bucket accumulation} (${\sim}3\text{--}5\times$). Since $2^{c(\lambda)}$ is enormous ($2^{19\,900}$ at $n = 200$):
-  \begin{enumerate}[label=\roman*.]
-    \item Create \texttt{bucket[t]} indexed by $t = c(\lambda)$.
-    \item For each $\lambda$, add $L/z_\lambda$ to \texttt{bucket}$[c(\lambda)]$.
-    \item After the loop, compute $\sum_t \texttt{bucket}[t] \cdot 2^t$.
-  \end{enumerate}
-
-  \item \textbf{Parallelization} (${\sim}k\times$ for $k$ cores). The partition loop is embarrassingly parallel.
-
-  \item \textbf{Language.} Compare Python vs.\ C/GMP. The per-partition cost is dominated by big-integer arithmetic in the assembly phase; C with GMP is typically $50\text{--}100\times$ faster.
+  \item \textbf{GCD table.} Precompute $\gcd(i,j)$ for $1 \leq i,j \leq n$.
+  \item \textbf{LCD scaling.} Compute $L = \mathrm{lcm}\{z_\lambda\}$ over all partitions. Accumulate $(L/z_\lambda) \cdot 2^{c(\lambda)}$ as integers. Divide once at the end.
+  \item \textbf{Bucket accumulation.} The values $2^{c(\lambda)}$ are large (up to $2^{19900}$ at $n = 200$). Instead, index an array by the exponent $c(\lambda)$, accumulate the integer prefactors, and multiply by powers of 2 once.
+  \item \textbf{Parallelism.} Describe a strategy for distributing partitions across threads.
+  \item \textbf{Language.} Compare Python (arbitrary-precision integers) against C with GMP.
 \end{enumerate}
 
 \medskip\noindent\textbf{Targets:}
 \begin{center}
 \begin{tabular}{lrl}
 \toprule
-Level & $n$ & Time target \\
+Level & $n$ & Time \\
 \midrule
-Bronze & 100 & $< 60$ seconds \\
-Silver & 200 & $< 60$ seconds \\
-Gold & 200 & $< 5$ seconds (C/GMP, multi-threaded) \\
+Bronze & 100 & $< 60\,\mathrm{s}$ \\
+Silver & 200 & $< 60\,\mathrm{s}$ \\
+Gold & 200 & $< 5\,\mathrm{s}$ (C/GMP, multi-threaded) \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-\noindent\textit{Achievability:} A C/GMP implementation with bucket accumulation and 8-thread parallelism computes $T(200)$ (5{,}616 digits) in approximately 200 seconds using a brute-force partition loop. With the optimization in Problem~\ref{prob:truncated}, the same value can be computed in seconds.
-\end{problem}
-
 \bigskip
 
 %% ============================================================
-%% PART 4: THE BREAKTHROUGH --- TRUNCATED PARTITIONS
+%% PROBLEM 4 --- THE CHALKBOARD PROBLEM
 %% ============================================================
 
-\begin{problem}[\textbf{The Truncated Partition Algorithm}]\label{prob:truncated}
-
-This is the key mathematical insight. The identity partition $\lambda = (1^n)$ contributes $2^{\binom{n}{2}}/n!$ to the sum~\eqref{eq:davis}. Every other partition contributes \emph{exponentially less}.
-
-\begin{theorem}[Dominance of the Identity Partition]\label{thm:dominance}
-For any odd-part partition $\lambda \neq (1^n)$, define the \textbf{deficit}
-\[
-\Delta(\lambda) = \binom{n}{2} - c(\lambda).
-\]
-Then $\Delta(\lambda) \geq 2(n-2)$ for all $\lambda \neq (1^n)$, with equality iff $\lambda = (3, 1^{n-3})$. The contribution ratio satisfies
-\[
-\frac{2^{c(\lambda)}/z_\lambda}{2^{\binom{n}{2}}/n!} \;=\; \frac{n!}{z_\lambda} \cdot 2^{-\Delta(\lambda)} \;\leq\; \binom{n}{3} \cdot 2 \cdot 2^{-2(n-2)},
-\]
-which is exponentially small in $n$.
-\end{theorem}
-
-\begin{proof}
-The identity partition has $c((1^n)) = \binom{n}{2}$ (all pairs form their own orbit). Any non-identity partition ``merges'' vertices into longer cycles, reducing the number of pair orbits. The partition $(3, 1^{n-3})$ merges exactly three vertices into a 3-cycle, losing $\binom{n}{2} - [1 + (n-3) + \binom{n-3}{2}] = 2n - 4 = 2(n-2)$ orbits. Larger merges lose more: the partition $(5, 1^{n-5})$ has deficit $4(n-3)$, roughly double.
-
-For the ratio bound: $|C_{(3,1^{n-3})}| = n!/z_{(3,1^{n-3})} = n!/(3 \cdot (n-3)!) = \binom{n}{3} \cdot 2$. Every other class has either larger deficit or smaller conjugacy class.
-\end{proof}
-
-\begin{corollary}[Sub-Exponential Algorithm]\label{cor:subexp}
-To compute $T(n)$ exactly, it suffices to sum over partitions $\lambda$ with deficit $\Delta(\lambda) \leq D$, where $D$ is chosen so the truncation error is less than~$\frac{1}{2}$. The number of such partitions grows as $p(B)$ where $B = O(n)$ is the ``departure budget'' $\sum_i (l_i - 1)$ over non-unit parts. Since each non-unit odd part contributes departure $\geq 2$, the budget is at most $D/(n-2)$. In practice:
-\[
-\text{configs needed} \;\approx\; p\!\left(\frac{n}{6}\right) \;\ll\; p_{\mathrm{odd}}(n).
-\]
-\end{corollary}
-
-\noindent\textbf{Speedup factors (verified):}
-\begin{center}
-\begin{tabular}{rrrl}
-\toprule
-$n$ & Full $p_{\mathrm{odd}}(n)$ & Truncated configs & Speedup \\
-\midrule
-50 & 204{,}226 & 915 & $223\times$ \\
-100 & $1.9 \times 10^8$ & 18{,}460 & $10{,}000\times$ \\
-200 & $4.0 \times 10^{12}$ & ${\sim}2 \times 10^6$ & $2{,}000{,}000\times$ \\
-500 & ${\sim}10^{22}$ & ${\sim}10^7$ & ${\sim}10^{15}\times$ \\
-\bottomrule
-\end{tabular}
-\end{center}
+\subsection*{Problem 4 \hfill \normalfont [35 points]}
 
 \begin{enumerate}[label=(\alph*)]
-  \item \textbf{Implement the truncated algorithm.} Use exact rational arithmetic (\texttt{fractions.Fraction} in Python) or high-precision floating point (\texttt{mpmath} with $\mathrm{dps} \geq \binom{n}{2} \log_{10} 2 + 100$). Verify against the reference values.
+  \item Compute the ratio $r(\lambda) = (n!/z_\lambda) \cdot 2^{c(\lambda) - \binom{n}{2}}$ for every odd-part partition $\lambda$ of $n = 10$. Sort them in decreasing order. What do you notice?
 
-  \item \textbf{Budget estimation.} Show that $D \leq \lceil \log_2 p_{\mathrm{odd}}(n) \rceil + 1$ suffices.
+  \item The identity partition $\lambda = (1^n)$ has $c((1^n)) = \binom{n}{2}$ and $z_{(1^n)} = n!$, contributing exactly $2^{\binom{n}{2}}/n!$ to the sum. What fraction of the total $T(n)$ does this single partition account for, at $n = 10$? At $n = 15$? At $n = 20$?
 
-  \item \textbf{Enumerate departure configurations.} A ``departure configuration'' is a multiset of odd integers $\geq 3$ with total $\leq n$ and total departure $\sum(l_i - 1) \leq B$. Since each $l_i - 1$ is even $\geq 2$, the number of configurations equals the number of partitions of $\leq B/2$ into positive integers with appropriate size constraints.
+  \item Define the \textbf{deficit} of a partition as $\Delta(\lambda) = \binom{n}{2} - c(\lambda)$. Show that the partition with the smallest positive deficit is always $\lambda = (3, 1^{n-3})$, with $\Delta = 2n - 4$.
 
-  \item \textbf{The Platinum target.} Using the truncated algorithm with C/GMP:
-  \begin{center}
-  \begin{tabular}{lrl}
-  \toprule
-  Level & $n$ & Time target \\
-  \midrule
-  Platinum & 500 & $< 60$ seconds \\
-  Diamond & 1000 & $< 600$ seconds \\
-  \bottomrule
-  \end{tabular}
-  \end{center}
+  \item Using (c), show that the second-largest contribution to the Burnside sum is
+  \[
+  \frac{n(n-1)(n-2)}{3} \cdot 2^{\binom{n}{2} - (2n-4)}.
+  \]
+  What is this as a fraction of the identity contribution?
+
+  \item Suppose you sum only over partitions with deficit $\Delta(\lambda) \leq D$, and round the result to the nearest integer. For what value of $D$ is this guaranteed to give the exact answer? How many partitions survive? Compare with $p_{\mathrm{odd}}(n)$.
+
+  \item Implement this truncated summation. Report the time for $T(500)$.
 \end{enumerate}
-\end{problem}
-
-\bigskip
-
-%% ============================================================
-%% PART 5: EXTEND THE OEIS
-%% ============================================================
-
-\begin{challenge}[\textbf{Extending the OEIS}]\label{chal:extend}
-
-The same Burnside/P\'{o}lya machinery applies to many combinatorial structures. By changing the edge-count function and the base, a single codebase computes dozens of OEIS sequences.
-
-\begin{enumerate}[label=(\alph*)]
-  \item Compute $T(0)$ through $T(200)$ and format as an OEIS b-file.
-
-  \item Implement a \emph{unified enumerator} for these sequences:
-
-  \begin{center}
-  \begin{tabular}{lllr}
-  \toprule
-  OEIS & Object & Key change & Prior terms \\
-  \midrule
-  A000568 & Tournaments & odd parts, base 2 & 77 \\
-  A000088 & Simple graphs & all parts, base 2 & 95 \\
-  A000273 & Directed graphs & all parts, base 2 & 65 \\
-  A000595 & Binary relations & loops, base 2 & 51 \\
-  A001174 & Oriented graphs & all parts, base 3 & 50 \\
-  A000666 & Symmetric relations & all parts, base 2 & 81 \\
-  A000665 & 3-uniform hypergraphs & $\binom{\cdot}{3}$ edges, base 2 & 29 \\
-  A051240 & 4-uniform hypergraphs & $\binom{\cdot}{4}$ edges, base 2 & 19 \\
-  \bottomrule
-  \end{tabular}
-  \end{center}
-
-  \item Apply the \textbf{inverse Euler transform} to derive connected variants (A001349, A003085, A051337, etc.).
-
-  \item \textbf{The truncated approach generalizes.} The identity-dominance phenomenon (Theorem~\ref{thm:dominance}) holds for \emph{all} these sequences: the identity partition always gives the leading term $b^{\binom{n}{k}}/n!$ where $b$ is the base and $k$ is the uniformity. The truncation speedup applies universally.
-\end{enumerate}
-\end{challenge}
 
 \newpage
 
 %% ============================================================
-%% APPENDIX A: MATHEMATICAL CONTEXT
+%% APPENDIX
 %% ============================================================
 
-\section*{Appendix A: Why Tournaments Matter}
-
-The enumeration formula connects to several active areas:
-
-\medskip\noindent\textbf{Statistical mechanics.} Every tournament is a frustrated spin system on a triangular lattice. The Hamiltonian path count $H(T) = I(\Omega(T), 2)$ is the hard-core lattice gas partition function at fugacity $\lambda = 2$, where $\Omega(T)$ is the odd-cycle conflict graph (Grinberg--Stanley, arXiv:2412.10572).
-
-\medskip\noindent\textbf{Game theory.} A tournament is a 2-player zero-sum game (adjacency matrix = payoff matrix). The Nash equilibrium support size, the cooperative game core, and the Shapley value all encode tournament structure. Notably, the Shapley value spread (how unequally Hamiltonian paths are distributed among vertices) is \emph{orthogonal} to the total path count $H(T)$.
-
-\medskip\noindent\textbf{Coding theory.} A tournament is a binary codeword of length $\binom{n}{2}$. The syndrome is the score sequence. The independence polynomial $I(\Omega(T), x)$ is the weight enumerator, and $H(T) = I(\Omega(T), 2)$ evaluates it at the cardinality of truth values in $\mathbf{Set}$.
-
-\medskip\noindent\textbf{Forbidden values.} The only odd numbers that can never be $H(T)$ for any tournament are $\{7, 21\} = \{\Phi_3(2), \Phi_3(4)\}$. This connects to cycle forcing: three directed 3-cycles on $n \leq 6$ vertices always create a 5-cycle.
-
-\bigskip\hrule\bigskip
-
-%% ============================================================
-%% APPENDIX B: PRIOR ART
-%% ============================================================
-
-\section*{Appendix B: Prior Art}
+\section*{Appendix: Reference Values}\label{app:values}
 
 \begin{center}
-\begin{tabular}{lll}
-\toprule
-Who & Year & Contribution \\
-\midrule
-R.~L.~Davis & 1954 & Original derivation of the partition formula \\
-F.~Harary & 1957 & Independent derivation via P\'{o}lya enumeration \\
-J.~W.~Moon & 1968 & Textbook treatment (\emph{Topics on Tournaments}, p.~87) \\
-Harary \& Palmer & 1973 & Definitive reference (\emph{Graphical Enumeration}) \\
-B.~Alspach & 1970 & Tournament automorphism groups have odd order \\
-K.~Briggs & pre-2007 & OEIS b-file to $n = 76$ \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\bigskip\hrule\bigskip
-
-%% ============================================================
-%% APPENDIX C: REFERENCE VALUES
-%% ============================================================
-
-\section*{Appendix C: Reference Values}\label{app:values}
-
-Computed by exact rational arithmetic (\texttt{fractions.Fraction}) and verified against OEIS through $n = 13$.
-
 {\small
-\begin{center}
 \begin{tabular}{r|r}
 \toprule
 $n$ & $T(n)$ \\
@@ -390,22 +210,18 @@ $n$ & $T(n)$ \\
 13 & 48{,}542{,}114{,}686{,}912 \\
 14 & 28{,}401{,}423{,}719{,}122{,}304 \\
 15 & 31{,}021{,}002{,}160{,}355{,}166{,}848 \\
-16 & 63{,}530{,}415{,}842{,}308{,}265{,}100{,}288 \\
-17 & 244{,}912{,}778{,}438{,}520{,}759{,}443{,}245{,}824 \\
-18 & 1{,}783{,}398{,}846{,}284{,}777{,}975{,}419{,}600{,}287{,}232 \\
-19 & 24{,}605{,}641{,}171{,}260{,}376{,}770{,}598{,}003{,}978{,}281{,}472 \\
-20 & 645{,}022{,}068{,}557{,}873{,}570{,}931{,}850{,}526{,}424{,}042{,}500{,}096 \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{center}
-}
 
-\medskip\noindent\textbf{Growth:} $T(n)$ has approximately $\binom{n}{2}\log_{10} 2 - \log_{10}(n!)$ digits. At $n = 100$ this is ${}\approx 1{,}333$ digits; at $n = 200$, ${}\approx 5{,}616$ digits; at $n = 500$, ${}\approx 36{,}200$ digits.
+\medskip
+\noindent At $n = 100$, $T(n)$ has 1{,}333 digits. At $n = 200$: 5{,}616 digits.
 
-\vfill
-\begin{center}
-\small\itshape
-``The formula is on the board. Make it fast.''
-\end{center}
+\medskip
+\noindent Number of odd-part partitions: 10 at $n = 10$; 64 at $n = 20$; 445{,}793 at $n = 100$.
+
+\section*{Prior art}
+
+{\small Davis (1954), Harary (1957), Moon (1968), Harary--Palmer (1973), Alspach (1970). OEIS b-file to $n = 76$ by Briggs. Implementations: Jovovic (Maple, 2001), Howroyd (PARI, 2017), Wu (Python, 2024).}
 
 \end{document}
