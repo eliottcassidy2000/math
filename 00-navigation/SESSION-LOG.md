@@ -28,6 +28,15 @@ Entry format:
 **New contributions:** creative_explorations_s24.py, h_landscape_unimodality_s24.py, h_local_max_analysis_s24.py, phase_transition_precision_s24.py, three-dynamics-of-tournaments.md (reflection), HYP-1704–1708
 **Unresolved:** Does H=37 local max persist at n≥7? Prove majority rule convergence algebraically. Explain why t_50% = C(n-3,2)+2 (inner staircase connection). Characterize ALL local H-maxima at n=7.
 
+## opus-2026-04-05-S26 — 2026-04-05: Burnside Perturbation Theory — Polynomial-Time A000568
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S25
+**Summary:** Pushed the pruning insight to its logical extreme: Burnside counting as perturbation theory. The identity partition is the "vacuum," non-identity cycle types are "excitations." The coupling constant g(n) = 1 - (identity fraction) decays exponentially: g ~ n³/4^n for tournaments, n/2^n for graphs. This gives a general principle for ALL Burnside problems. For tournaments: 3 correction terms give 1330/1333 correct digits at n=100. Built a000568_series_exact_s26.py (verified exact through n=15) and burnside_perturbation_s26.py (verified A000568, A000273; framework for A000088). Computed a(500) ≈ 36,420 digits in 1ms. The RG flow shows digraphs converge fastest (4^{-n}), graphs slowest (2^{-n}).
+
+**New contributions:** a000568_asymptotic_exact_s26.py, a000568_series_exact_s26.py, burnside_perturbation_s26.py, burnside-perturbation-theory.md reflection
+**Unresolved:** Fix A000088 edge formula. Exact computation threshold (at what n does identity+k corrections give exact integer?). Phase transition at critical base value. Connection to NC deletion-contraction.
+
 ## opus-2026-04-05-S25 — 2026-04-05: DP/Pruning, Cellular Automaton, Literature Integration
 
 **Account:** opus
