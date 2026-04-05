@@ -13,6 +13,21 @@ Entry format:
 **Unresolved threads:** [things left open for next session]
 ```
 
+## opus-2026-04-05-S27 — 2026-04-05: Barvinok-BIBD-QR Triangle — Permanent meets Design Theory
+
+**Account:** opus
+**Continuation of:** opus-2026-04-05-S26
+**Summary:** Read Barvinok's "On Testing Hamiltonicity of Graphs" (2014) and synthesized it with our QR resonance results (THM-305-308) and BIBD structure of Paley tournaments. Discovered the "Barvinok-BIBD-QR Triangle": three independent frameworks (analytic, combinatorial, number-theoretic) converge on the same algebraic object.
+
+**Key Results:**
+1. **per = ham for n ≤ 7:** For all tournaments at n ∈ {3,5,7}, per(A_T) = ham(A_T) — every cycle cover is a Hamiltonian cycle. This is a partition constraint: the only partition of n into odd parts ≥ 3 is (n) itself. Multi-cycle covers first appear at n=9.
+2. **P_7 is BIBD and H-max:** Paley P_7 has 14 3-cycles forming a 2-(7,3,2) BIBD with λ=2 uniform across all 21 pairs. It achieves H_max = 189 and per/ham = 1. The n=5 regular tournament is NOT BIBD (5 ≡ 1 mod 4).
+3. **The Triangle:** QR resonance ↔ BIBD structure ↔ Barvinok per/ham. All three are connected by S_n acting on binary structures with base 2 resonating through F_p. The BIBD property is the combinatorial shadow of the Legendre symbol; Barvinok's cycle merging parallels our wiggly framework; the Burnside formula bridges the tournament-independent count T(n) to the tournament-specific permanent per(A_T).
+4. **E[per(A_T)] = N_{≥3}(n)/2^n:** The expected permanent over random tournaments equals the count of derangement-like odd permutations (all cycles odd and ≥ 3) divided by 2^n. Verified at n=3,5.
+
+**New contributions:** barvinok_bibd_qr_s27.py, barvinok-bibd-qr-triangle.md (reflection)
+**Unresolved:** Does BIBD defect predict H at n ≥ 11? Prove BIBD → H-max via OCF. Compute per/ham ratio at n=9,11 for Paley.
+
 ## opus-2026-04-05-S24c — 2026-04-05: Merging 2-adic Valuations with QR-Tournament Theory
 
 **Account:** opus
