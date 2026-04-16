@@ -861,32 +861,45 @@ H-maximizing cyclic interval tournament C_n:
 
 **Complete verified table for C_n (cyclic interval tournament):**
 
-| n  | α₁ | α₂ | α₃ | α₁/(2α₂) | α₃/α₂ | H |
-|----|----|----|----|-----------|---------|----|
-| 17 | 1,651,334,601 | 1,482,234,998 | 458,011,858 | 0.5570 | 0.3090 | 13,689,269,499 |
-| 19 | 126,443,605,257 | 122,111,579,294 | 42,960,731,622 | 0.5177 | 0.3518 | 1,184,212,824,763 |
-| 21 | 12,030,499,746,751 | 12,330,182,836,208 | 4,796,354,751,404 | 0.4878 | 0.3890 | 125,547,534,942,879 |
+| n  | α₁ | α₂ | α₃ | α₁/(2α₂) | α₃/α₂ | H | H(n)/H(n-2) |
+|----|----|----|----|-----------|---------|----|-------------|
+| 17 | 1,651,334,601 | 1,482,234,998 | 458,011,858 | 0.5570 | 0.3090 | 13,689,269,499 | — |
+| 19 | 126,443,605,257 | 122,111,579,294 | 42,960,731,622 | 0.5177 | 0.3518 | 1,184,212,824,763 | 86.5 |
+| 21 | 12,030,499,746,751 | 12,330,182,836,208 | 4,796,354,751,404 | 0.4878 | 0.3890 | 125,547,534,942,879 | 106.0 |
+| 23 | 1,391,602,826,199,187 | 1,499,656,616,321,278 | 632,921,002,322,216 | 0.4640 | 0.4220 | 16,011,537,490,557,279 | 127.6 |
 
-**Full α-decomposition n=21 (NEW, kind-pasteur-2026-04-16-S1):**
+**Full α-decomposition n=21:**
   α₁=12,030,499,746,751   α₂=12,330,182,836,208   α₃=4,796,354,751,404
   α₄=738,531,326,288      α₅=58,868,297,768        α₆=1,454,221,328       α₇=12,571,712
   H = 125,547,534,942,879
 
-**Term ordering at n=21:** 4α₂ > 8α₃ > 2α₁ > 16α₄ > 32α₅ > 64α₆ > 128α₇
-  (49.32T > 38.37T > 24.06T > 11.82T > 1.88T > 93B > 1.6B)
+**Full α-decomposition n=23 (NEW, kind-pasteur-2026-04-16-S1):**
+  α₁=1,391,602,826,199,187   α₂=1,499,656,616,321,278   α₃=632,921,002,322,216
+  α₄=111,796,734,828,336     α₅=10,945,293,151,712       α₆=412,282,843,184       α₇=7,454,017,376
+  H = 16,011,537,490,557,279 ✓
 
-**Special structure:** α₇ = 12,571,712 = number of 7-triangle-packings.
-  At n=21, the ONLY 7-packing type is (3,3,3,3,3,3,3) since 7×3=21 (all vertices covered).
-  So α₇ = |{perfect partitions of C_21 into 7 directed triangles}|. Beautiful!
+**Term ordering at n=23:** 4α₂ > 8α₃ > 2α₁ > 16α₄ > 32α₅ > 64α₆ > 128α₇
+  (5.999P > 5.063P > 2.783P > 1.789P > 0.350P > 26.4T > 0.95T)
 
-**Key ratio α₃/α₂:** 0.039, 0.106, 0.201, 0.260, 0.309, 0.352, 0.389 for n=9..21
-  Growing by ~0.038 per step of 2. Third crossover (8α₃ > 4α₂ ↔ α₃/α₂ > 0.5): estimated n≈27-29.
+**Special structure at n=21:** α₇ = 12,571,712 = perfect 7-triangle-packings.
+  Only packing type is (3,3,3,3,3,3,3) since 7×3=21. Perfect vertex coverage.
+**Structure at n=23:** α₇ = 7,454,017,376 counts 7-packings with cycle-length sum ∈ {21, 23}.
+  Sum must be odd (7 odd numbers), and ≤23. So: sum=21 (all 3-cycles, 2 vertices free) OR
+  sum=23 (one 5-cycle + six 3-cycles, all 23 vertices covered). Sum=22 impossible (even).
 
-**Algorithm:** Numpy SSC with 2-prime CRT. At n=21: 552s total (2 primes × ~245s).
-  Implemented in `04-computation/alpha_full_ssc_numpy.py`. MUCH faster than pure Python.
-  (Pure Python SSC at n=21 timeout after 120s per call; numpy: ~40s per call.)
+**H growth ratio H(n+2)/H(n):** 86.5, 106.0, 127.6 → increments +19.5, +21.6 → growing.
+  Predicted H(25) ≈ H(23) × 150 ≈ 2.4 × 10^18.
 
-**Open:** Will α₃ become dominant (8α₃ > 4α₂)? Threshold n≈27-29.
-         Extend to n=23: needs ~2000s with current numpy implementation, or ~few min in C.
+**Key ratio α₃/α₂ progression:**
+  n=17: 0.3090, n=19: 0.3518 (+0.043), n=21: 0.3890 (+0.037), n=23: 0.4220 (+0.033)
+  First differences decreasing by ~0.004/step. Projected:
+  n=25: ≈0.451 (+0.029), n=27: ≈0.476 (+0.025), n=29: ≈0.497 (+0.021), n=31: ≈0.514 → THIRD CROSSOVER
+  **Revised estimate: third crossover (8α₃ > 4α₂) at n≈31**, not n≈27-29 as previously estimated.
 
-**Source:** kind-pasteur-2026-04-16-S1, `alpha_full_ssc_numpy_n21.out`, `alpha_full_ssc_numpy_n19.out`
+**Timing:** cycle_cc 383s, SSC runs 732s+612s. Total 1728s for n=23 with numpy.
+  Bottleneck is cycle_cc (Python BFS). C implementation would reduce to ~3s.
+
+**Open:** Third crossover: α₃ dominates at n≈31 (needs n=25,27 data to confirm).
+         C implementation of cycle_cc needed for n≥25.
+
+**Source:** kind-pasteur-2026-04-16-S1, `alpha_full_ssc_fast_n23.out`, `alpha_full_ssc_fast_n21.out`

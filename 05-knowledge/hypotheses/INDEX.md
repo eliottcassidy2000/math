@@ -1865,13 +1865,35 @@ Source: alpha_full_ssc_numpy.py + alpha_full_ssc_fast.py. Method: numpy SSC + 2-
 Source: alpha_decomp_n21_complete.out | kind-pasteur-2026-04-16
 
 ## HYP-1721: α₃/α₂ ratio trend and third crossover prediction (kind-pasteur-2026-04-16)
-**Status:** OPEN (trend confirmed, crossover predicted)
+**Status:** OPEN (trend confirmed through n=23; crossover estimate refined to n≈31)
 **What:** For C_n (cyclic interval), the ratio α₃/α₂ increases monotonically:
-  n=9: 0.039, n=11: 0.106 (Paley), n=17: 0.309, n=19: 0.352, n=21: 0.389
-  Increment per step of 2: ~0.037. THIRD CROSSOVER (8α₃ > 4α₂ ↔ α₃/α₂ > 0.5): predicted n≈27-29.
-  Supporting: 8α₃/2α₁ = 1.109 (n=17) → 1.359 (n=19) → 1.595 (n=21). Second crossover (8α₃>2α₁) at n≈15.
-  Compare: α₁/(2α₂) = 0.557 (n=17) → 0.518 (n=19) → 0.488 (n=21). First crossover (α₂>α₁ term) at n≈11.
-Source: OPEN-Q-044, alpha_full_ssc_numpy_n21.out | kind-pasteur-2026-04-16
+  n=17: 0.309, n=19: 0.352 (+0.043), n=21: 0.389 (+0.037), n=23: 0.422 (+0.033)
+  First differences DECREASING by ~0.004/step. THIRD CROSSOVER (8α₃ > 4α₂ ↔ α₃/α₂ > 0.5):
+  Extrapolated: n=25 ≈0.451, n=27 ≈0.476, n=29 ≈0.497, n=31 ≈0.514 → CROSSOVER AT n≈31.
+  Previous estimate of n≈27-29 was REVISED upward to n≈31.
+  Supporting: 8α₃/2α₁ = 1.109 (n=17) → 1.359 (n=19) → 1.595 (n=21) → 1.819 (n=23). Growing.
+  Compare: α₁/(2α₂) = 0.557 → 0.518 → 0.488 → 0.464 (steadily decreasing).
+Source: OPEN-Q-044, alpha_full_ssc_fast_n23.out | kind-pasteur-2026-04-16
+
+## HYP-1723: Complete α-decomposition for C_23 (kind-pasteur-2026-04-16)
+**Status:** CONFIRMED
+**What:** Full 7-term α-decomposition for cyclic interval tournament C_23 (S={1,...,11}):
+  α₁=1,391,602,826,199,187   α₂=1,499,656,616,321,278   α₃=632,921,002,322,216
+  α₄=111,796,734,828,336     α₅=10,945,293,151,712       α₆=412,282,843,184      α₇=7,454,017,376
+  H = 16,011,537,490,557,279 ✓ (matches OPEN-Q-026 reference value)
+  Term ordering: 4α₂(37.5%) > 8α₃(31.6%) > 2α₁(17.4%) > 16α₄(11.2%) > 32α₅(2.2%) > ...
+  H growth: H(23)/H(21) = 127.6 (growth ratio increasing: 86.5, 106.0, 127.6).
+Method: numpy SSC + 2-prime CRT. cycle_cc: 383s, SSC: 1344s, total: 1728s.
+Source: alpha_full_ssc_fast_n23.out | kind-pasteur-2026-04-16
+
+## HYP-1724: α₇ packing types at n=23 (kind-pasteur-2026-04-16)
+**Status:** CONFIRMED (structural argument)
+**What:** At n=23, kmax=7 and 7-packings consist EXACTLY of cycle-length sums ∈ {21, 23}. Proof:
+  Sum of 7 odd numbers ≥ 3 must be odd (7 odd = odd) and ≤ 23. Odd values in [21,23] are {21, 23}.
+  Sum=21: all 3-cycles, 2 vertices left uncovered. Sum=23: one 5-cycle + six 3-cycles (all vertices).
+  So α₇(C_23) = #{7 vertex-disjoint 3-cycles in C_23} + #{perfect packings with one 5-cycle+six 3-cycles}.
+  Unlike n=21 where α₇ = ONLY perfect triangle tilings, at n=23 there are two structural types.
+Source: kind-pasteur-2026-04-16 (structural argument, no separate computation needed)
 
 ## HYP-1722: Paley+complement are the UNIQUE circulant maximizers at n=7,11 (kind-pasteur-2026-04-16)
 **Status:** CONFIRMED (exhaustive)

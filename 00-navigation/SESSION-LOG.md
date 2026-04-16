@@ -2,28 +2,38 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
-## kind-pasteur-2026-04-16-S1 (CONTINUED) — 2026-04-16
+## kind-pasteur-2026-04-16-S1 (FINAL) — 2026-04-16
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-04-05-S30 (context limit), then continued within this session after context compaction
-**Summary of work (full session):**
-  (1) **Alpha decomposition n=17 verified:** H=13,689,269,499 ✓. Discovered missing [3,3,5,5] α₄ bug; fixed: α₄=45,997,104.
-  (2) **Paley vs Cyclic crossover:** Paley wins n=7,11; Cyclic wins n=19. Mechanism: Cyclic packs into higher-k packings much better.
-  (3) **SSC algorithm (pure Python):** Björklund SSC for all α_k in O(kmax·n²·2ⁿ). 124× faster at n=17.
-  (4) **Full α-decomposition n=19:** H=1,184,212,824,763 ✓. α₁..α₆ all verified.
-  (5) **Second crossover:** 8α₃ > 2α₁ between n=15-17. Term ordering at n=19: 4α₂ > 8α₃ > 2α₁.
-  (6) **Numpy SSC + CRT (NEW):** `alpha_full_ssc_numpy.py` vectorizes SSC with 2-prime modular arithmetic. n=21 takes 552s (was timeout with pure Python). Further optimized with reshape-SOS trick: `alpha_full_ssc_fast.py` runs n=21 in 229s (2.4× faster), n=17 in 5.8s.
-  (7) **COMPLETE α-decomposition n=21 (NEW):** H=125,547,534,942,879. α₁=12.03T, α₂=12.33T, α₃=4.80T, α₄=738B, α₅=58.9B, α₆=1.45B, α₇=12.6M.
-  (8) **α₂ > α₁ crossover:** First time α₂ > α₁ in raw values occurs at n=21 (ratio 1.025).
-  (9) **α₇ = perfect triangle packings:** At n=21, kmax=7 and ALL 7-packings must be (3,3,3,3,3,3,3). So α₇=12,571,712 = number of perfect directed triangle tilings of C₂₁.
-  (10) **α₃/α₂ trend:** 0.309 → 0.352 → 0.389 at n=17,19,21. Third crossover (α₃ dominates) predicted n≈27-29.
-  (11) **n=23 launched in background** using alpha_full_ssc_fast.py.
-**New files:** alpha_full_ssc_numpy.py, alpha_full_ssc_fast.py; results: alpha_full_ssc_numpy_n{17,19,21}.out, alpha_full_ssc_fast_n{17,21}.out, alpha_decomp_n21_complete.out
-**Unresolved threads:**
-  - n=23 running in background (results pending)
-  - α₃ dominance exact threshold (n≈27-29, needs n=23,25 data)
+**Summary of work (full session, including post-compaction):**
+  (1) **Alpha decomposition n=17,19,21 verified.** Numpy SSC + reshape-SOS trick + 2-prime CRT pipeline.
+  (2) **COMPLETE α-decomposition n=23 (NEW):** H=16,011,537,490,557,279 ✓
+      α₁=1.39P, α₂=1.50P, α₃=0.633P, α₄=111.8T, α₅=10.9T, α₆=412B, α₇=7.45B
+      cycle_cc 383s + SSC 1344s + total 1728s. Output: alpha_full_ssc_fast_n23.out.
+  (3) **C implementation of cycle_cc (NEW):** fast_cycle_cc.c + alpha_from_cc_bin.py pipeline.
+      Speedups: n=21: 74s→0.28s (264×). n=23: 383s→1.94s (197×). n=25: ~1600s→12.8s (~125×).
+      Also computed Paley T_23 cc: cc_n23_paley.bin (2.15s).
+  (4) **α₃/α₂ crossover revised:** Third crossover (8α₃ > 4α₂) estimated n≈31, not n≈27-29.
+      Data: n=17:0.309, n=19:0.352, n=21:0.389, n=23:0.422. Increments decelerating (+0.043,+0.037,+0.033).
+  (5) **n=25 SSC infeasible on 8 GB machine:** C cycle_cc takes 12.8s, but SSC needs 20.9 GB (3 arrays × 26 × 32M × 8).
+  (6) **H growth ratio:** H(n+2)/H(n) = 86.5, 106.0, 127.6 for n=17→19→21→23. Increasing.
+  (7) **α₇ packing types at n=23:** Two types — sum=21 (all 3-cycles, 2 free) or sum=23 (one 5-cycle + six 3-cycles).
+  (8) **Exhaustive circulant scan n=7,11:** Paley uniquely maximizes H (confirmed, HYP-1722).
+
+**New files:**
+  04-computation/alpha_full_ssc_numpy.py, alpha_full_ssc_fast.py (numpy SSC pipelines)
+  04-computation/fast_cycle_cc.c (C implementation, 200× speedup)
+  04-computation/alpha_from_cc_bin.py (Python SSC loading binary cc)
+  05-knowledge/results/alpha_full_ssc_fast_n23.out (verified H)
+  05-knowledge/results/cc_n21_circulant.bin, cc_n23_circulant.bin, cc_n23_paley.bin
+  05-knowledge/results/alpha_from_cc_n21_verify.out (pipeline verification)
+
+**Unresolved threads (next session):**
+  - Paley T_23 full SSC: cc file ready (cc_n23_paley.bin), run alpha_from_cc_bin.py 23 paley
+  - Third crossover n≈31: need n=25,27 SSC (requires ≥ 32 GB RAM machine or new algorithm)
+  - SSC memory optimization: implement C SSC with uint32 to reduce 3 arrays from 19.5→10 GB
   - Log SSC algorithm as formal theorem (THM-3xx)
-  - OPEN-Q-026: Paley vs Cyclic at n=29,31 (needs C implementation for cycle_cc)
-  - VC showcase (from earlier session request)
+  - Whether C_n globally maximizes H for all odd n (not just among circulants)
 
 Entry format:
 ```
