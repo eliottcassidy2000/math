@@ -1,0 +1,70 @@
+MECHANISM SHIFT TABLE — VERIFIED THROUGH n=17
+Generated: kind-pasteur-2026-04-16
+Source: n17_alpha.py + n17_alpha2.py
+
+n     H                 α₁            α₂           α₃         α₄        α₅    dom   ratio
+3         3               1             0            0          0         0    α₁      ∞
+5        15               7             0            0          0         0    α₁      ∞
+7       189              80             7            0          0         0    α₁   5.7143
+9      3357             954           336           13          0         0    α₁   1.4196
+11    95095           21169         10879         1155          0         0    α₂   0.9729
+13  3711175          606027        436748        87568       3224         0    α₂   0.6938
+15 198464295       27495799      22518662      5849428     397720      7472   α₂   0.6105
+17 13689269499   1651334601    1482234998    458011858  45997104   1800368   α₂   0.5570
+
+RATIO α₁/(2α₂): ∞, ∞, 5.71, 1.42, 0.97, 0.69, 0.61, 0.557
+
+α₃/α₂ TREND: 0, 0, 0.039, 0.106, 0.201, 0.260, 0.309
+α₃ DOMINANCE THRESHOLD (α₃/α₂ > 0.5): estimated n≈21-25
+
+ALPHA_4 STRUCTURE AT n=17:
+  [3,3,3,3]:   945,744  ( 2.1%)
+  [3,3,3,L≥5]: 28,778,144 (62.6%)  includes [3,3,3,5], [3,3,3,7], etc.
+  [3,3,5,5]:   16,273,216 (35.4%)  NEW type, first appears at n=17
+  Total:        45,997,104
+
+ALPHA_5 STRUCTURE AT n=17:
+  [3,3,3,3,3]:  703,936 (39.1%)  5 disjoint 3-cycles, 15 vertices
+  [3,3,3,3,5]: 1,096,432 (60.9%)  4 three-cycles + 1 five-cycle, 17 vertices (PERFECT)
+  Total:        1,800,368
+
+MAXIMIZING TOURNAMENT n=17:
+  S = {1,2,3,4,5,6,7,8} on Z_17 (or all-odd / all-even — same H by symmetry)
+  17 ≡ 1 mod 4: no Paley tournament
+  Best SC circulant H = 6,620,268,622 (much worse than 13,689,269,499)
+
+KEY BUG FIX:
+  alpha_4 at n≥17 requires [3,3,5,5] term (3+3+5+5=16≤17).
+  The "triple-of-3-cycles × f[complement]" method only captures quadruples
+  with ≥3 three-cycles. [3,3,5,5] needs separate enumeration via:
+    sum_{pairs of 3-cycles} c1*c2 × sum_{5-cycles m3 in complement} c3 * f5[comp\m3] / 2
+
+--- n=19 PARTIAL DATA (alpha_3 requires SSC algorithm, not yet computed) ---
+n=19 MAXIMIZER: cyclic C_19, S={1,...,9}, H=1,184,212,824,763
+  (beats Paley T_19 by 11,517,077,848 = 0.98%)
+n=19 ALPHA_1, ALPHA_2:
+  Cyclic:  α₁=126,443,605,257, α₂=122,111,579,294, ratio α₁/(2α₂)=0.5177
+  Paley:   α₁=130,965,270,477, α₂=123,659,531,220, ratio α₁/(2α₂)=0.5295
+
+PALEY VS CYCLIC CROSSOVER:
+  n=3:  TIE
+  n=7:  PALEY wins (189 vs 175) — ratio cyclic/paley = 0.9259
+  n=11: PALEY wins (95,095 vs 93,027) — ratio = 0.9783
+  n=19: CYCLIC wins (1.184T vs 1.173T) — ratio = 1.0098
+  Crossover: between n=11 and n=19 (no Paley primes in between)
+
+WHY CYCLIC WINS AT n=19:
+  Paley has MORE cycles of length 5,7,9,...,17 (α₁ and α₂ favor Paley by 15.2B)
+  But Cyclic wins by 11.5B total, so α₃+ favors Cyclic by 26.7B
+  = Cyclic's cycles arrange into disjoint TRIPLES (and beyond) far more efficiently
+  = Consecutive-half structure creates harmonically aligned cycles, Paley scatters them
+
+RATIO TABLE α₁/(2α₂) for CYCLIC tournaments:
+  n=3: ∞, n=5: ∞, n=7: 5.714, n=9: 1.420, n=11: 0.973, n=13: 0.694,
+  n=15: 0.610, n=17: 0.557, n=19: 0.518
+  [Trend: decreasing; approaches 0.5 from above]
+
+α₃/α₂ TREND (cyclic):
+  n=9: 0.039, n=11: 0.106, n=13: 0.201, n=15: 0.260, n=17: 0.309
+  n=19: NOT YET COMPUTED (need SSC algorithm for alpha_3)
+  α₃ DOMINANCE (α₃/α₂ > 0.5 → 8α₃ > 4α₂): estimated n≈21-23

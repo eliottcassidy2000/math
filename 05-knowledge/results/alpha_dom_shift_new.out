@@ -1,0 +1,23 @@
+========================================================================
+DOMINANT MECHANISM SHIFT TABLE
+H = 1 + 2α₁ + 4α₂ + 8α₃ + 16α₄
+========================================================================
+
+   n             tournament            H       α₁       α₂       α₃     α₄  dom   α₁/(2α₂)
+------------------------------------------------------------------------------------------
+   3              Paley T_3            3        1        0        0      0  α_1        inf
+   5             SC reg n=5           15        7        0        0      0  α_1        inf
+   7              Paley T_7          189       80        7        0      0  α_1     5.7143
+   9      max circulant n=9        3,357      954      336       13      0  α_1     1.4196
+  11             Paley T_11       95,095    21169    10879     1155      0  α_2     0.9729
+  13     max circulant n=13    3,711,175   606027   436748    87568   3224  α_2     0.6938
+
+CROSSOVER: α₁/(2α₂) ratio crosses 1 between n=9 (1.42) and n=11 (0.97).
+MECHANISM: At n≤9, maximize total odd cycles. At n≥11, maximize disjoint pairs.
+PATTERN: kmax = floor(n/3). Top-level α_kmax counts near-perfect cycle factorizations.
+
+CORRECTNESS NOTES:
+  - T_7 uses QR mod 7 = {1,2,4}, NOT {1,2,3}
+  - 5≡1 mod 4: no Paley for n=5; max circulants: S={1,3} or S={2,4}, both H=15
+  - 9 is not prime: no Paley; max circulant is {1,2,3,5}
+  - 13≡1 mod 4: no Paley; max circulant is {1,3,5,7,9,11} (all-odd S)
