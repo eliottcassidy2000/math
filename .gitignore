@@ -43,3 +43,6 @@ a000568_c_batch
 wn_rank4
 04-computation/*.exe
 test_images/
+
+# Binary cycle-count files (large, machine-generated, reproducible from fast_cycle_cc.c)
+05-knowledge/results/*.bin
