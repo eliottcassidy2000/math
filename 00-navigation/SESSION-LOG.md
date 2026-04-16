@@ -2,6 +2,29 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## kind-pasteur-2026-04-16-S1 (CONTINUED) — 2026-04-16
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-04-05-S30 (context limit), then continued within this session after context compaction
+**Summary of work (full session):**
+  (1) **Alpha decomposition n=17 verified:** H=13,689,269,499 ✓. Discovered missing [3,3,5,5] α₄ bug; fixed: α₄=45,997,104.
+  (2) **Paley vs Cyclic crossover:** Paley wins n=7,11; Cyclic wins n=19. Mechanism: Cyclic packs into higher-k packings much better.
+  (3) **SSC algorithm (pure Python):** Björklund SSC for all α_k in O(kmax·n²·2ⁿ). 124× faster at n=17.
+  (4) **Full α-decomposition n=19:** H=1,184,212,824,763 ✓. α₁..α₆ all verified.
+  (5) **Second crossover:** 8α₃ > 2α₁ between n=15-17. Term ordering at n=19: 4α₂ > 8α₃ > 2α₁.
+  (6) **Numpy SSC + CRT (NEW):** `alpha_full_ssc_numpy.py` vectorizes SSC with 2-prime modular arithmetic. n=21 takes 552s (was timeout with pure Python). Further optimized with reshape-SOS trick: `alpha_full_ssc_fast.py` runs n=21 in 229s (2.4× faster), n=17 in 5.8s.
+  (7) **COMPLETE α-decomposition n=21 (NEW):** H=125,547,534,942,879. α₁=12.03T, α₂=12.33T, α₃=4.80T, α₄=738B, α₅=58.9B, α₆=1.45B, α₇=12.6M.
+  (8) **α₂ > α₁ crossover:** First time α₂ > α₁ in raw values occurs at n=21 (ratio 1.025).
+  (9) **α₇ = perfect triangle packings:** At n=21, kmax=7 and ALL 7-packings must be (3,3,3,3,3,3,3). So α₇=12,571,712 = number of perfect directed triangle tilings of C₂₁.
+  (10) **α₃/α₂ trend:** 0.309 → 0.352 → 0.389 at n=17,19,21. Third crossover (α₃ dominates) predicted n≈27-29.
+  (11) **n=23 launched in background** using alpha_full_ssc_fast.py.
+**New files:** alpha_full_ssc_numpy.py, alpha_full_ssc_fast.py; results: alpha_full_ssc_numpy_n{17,19,21}.out, alpha_full_ssc_fast_n{17,21}.out, alpha_decomp_n21_complete.out
+**Unresolved threads:**
+  - n=23 running in background (results pending)
+  - α₃ dominance exact threshold (n≈27-29, needs n=23,25 data)
+  - Log SSC algorithm as formal theorem (THM-3xx)
+  - OPEN-Q-026: Paley vs Cyclic at n=29,31 (needs C implementation for cycle_cc)
+  - VC showcase (from earlier session request)
+
 Entry format:
 ```
 ## [INSTANCE-ID] — [DATE]

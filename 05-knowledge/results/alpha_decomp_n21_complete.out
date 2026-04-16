@@ -1,0 +1,73 @@
+### Complete α-decomposition: C_21 (cyclic interval tournament, S={1,...,10}) ###
+### Computed: kind-pasteur-2026-04-16-S1 using alpha_full_ssc_numpy.py         ###
+### Method: Björklund SSC + numpy int64 mod two primes (P1=2^31-1, P2=2^31-19) ###
+### Verified: α₁ and α₂ match previous Python SSC computation                  ###
+
+n=21, S=[1,2,3,4,5,6,7,8,9,10], kmax=7
+
+=== Raw α values ===
+α₁ = 12,030,499,746,751     (directed odd cycles, all sizes)
+α₂ = 12,330,182,836,208     (2-packings of vertex-disjoint odd cycles)
+α₃ =  4,796,354,751,404     (3-packings)
+α₄ =    738,531,326,288     (4-packings)
+α₅ =     58,868,297,768     (5-packings)
+α₆ =      1,454,221,328     (6-packings: 6×triangle or 5×triangle+pentagon)
+α₇ =         12,571,712     (7-packings: ONLY type is 7×triangle, covers all 21 vertices)
+
+=== H = I(Ω,2) via OCF ===
+H = 1 + 2α₁ + 4α₂ + 8α₃ + 16α₄ + 32α₅ + 64α₆ + 128α₇
+H = 125,547,534,942,879
+
+=== Term breakdown (showing contribution to H) ===
+   1           =                          1
+ 2¹ × α₁      =       24,060,999,493,502   (  19.2%  of H-1)
+ 2² × α₂      =       49,320,731,344,832   (  39.3%)  ← DOMINANT TERM
+ 2³ × α₃      =       38,370,838,011,232   (  30.6%)  ← SECOND
+ 2⁴ × α₄      =       11,816,501,220,608   (   9.4%)
+ 2⁵ × α₅      =        1,883,785,528,576   (   1.5%)
+ 2⁶ × α₆      =           93,070,164,992   (   0.07%)
+ 2⁷ × α₇      =            1,609,179,136   (   0.001%)
+                       ──────────────────
+ Total H-1     =      125,547,534,942,878
+
+=== Ratios and trends (comparing n=17,19,21) ===
+n  | α₁/(2α₂)  | α₃/α₂  | 8α₃/(2α₁) | growth H(n+2)/H(n)
+17 | 0.55704   | 0.30900 | 1.10943    |  —
+19 | 0.51774   | 0.35182 | 1.35905    | ×86.5
+21 | 0.48785   | 0.38900 | 1.59473    | ×106.1
+
+α₁/(2α₂) decreasing: 0.557 → 0.518 → 0.488 (converging to ~0.45?)
+α₃/α₂    increasing: 0.309 → 0.352 → 0.389 (extrapolated: ≈0.427 at n=23, ≈0.464 at n=25, ≈0.5 at n≈27)
+THIRD CROSSOVER (8α₃ > 4α₂ ↔ α₃/α₂ > 0.5): predicted n≈27-29
+
+=== Special structural feature: α₇ = perfect triangle packings ===
+At n=21, kmax=7. The ONLY way to pack 7 odd cycles into 21 vertices is:
+  (3,3,3,3,3,3,3) = seven triangles, total 21 vertices = ALL vertices covered.
+No other partition of 21 into 7 odd integers ≥ 3 exists (minimum 7×3=21, exactly).
+Therefore: α₇ = number of perfect partitions of C_21 into 7 directed triangles.
+α₇ = 12,571,712.
+
+By symmetry of C_21 (21 rotations, each giving same α₇):
+  number of non-rotationally-equivalent perfect triangle partitions = 12,571,712 / 21 = 598,653.4 — not integer!
+  This means perfect triangle decompositions are NOT uniformly distributed across rotations.
+  (Or: some decompositions are fixed by the 21-cycle rotation, i.e., rotationally symmetric.)
+
+=== α₆ = 6-packings ===
+Type (3,3,3,3,3,3): 6 triangles, 18 vertices, 3 uncovered     — one type
+Type (3,3,3,3,3,5): 5 triangles + 1 pentagon, 20 vertices, 1 uncovered — one type
+(Other types like (3,3,5,5,...) would need ≥22 vertices, impossible at n=21)
+α₆ = α₆^{(3⁶)} + α₆^{(3⁵·5)} = 1,454,221,328 (combined, not decomposed)
+
+=== Timing ===
+cycle_cc: 62.2s
+Index precomputation: 0.3s
+Modular run 1 (P1=2147483647): 6×40.9s = 245.4s  (k=2..7 each ~41s)
+Modular run 2 (P2=2147483629): 6×40.4s = 242.4s
+CRT recovery: <0.1s
+Total: 552.1 seconds (9.2 minutes)
+
+=== Algorithm: numpy SSC with 2-prime CRT ===
+See 04-computation/alpha_full_ssc_numpy.py
+Key insight: (P1-1)² ≈ 4.6×10¹⁸ < int64 max → products fit in int64 before mod.
+All hot loops vectorized as (n+1)×N/2 numpy array operations.
+Speedup over pure Python: ~100× (pure Python timed out; numpy: ~41s/call).

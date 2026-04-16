@@ -532,9 +532,26 @@ The proof is self-contained and works for ALL p >= 7 simultaneously. No finite v
 
 | p | H(Paley) | H(Interval) | Margin | Winner |
 |---|----------|-------------|--------|--------|
+| 7  | 189 | 175 | -7.4% | PALEY (small p) |
+| 11 | 95,095 | 93,027 | -2.2% | PALEY (small p) |
 | 13 | - | 3,711,175 | - | INTERVAL (p=1 mod 4, no Paley) |
-| 19 | 1,172,695,746,915 | 1,184,212,824,763 | -1.0% | INTERVAL |
+| 17 | - | 13,689,269,499 | - | INTERVAL (p=1 mod 4, no Paley) |
+| 19 | 1,172,695,746,915 | 1,184,212,824,763 | +0.98% | INTERVAL |
 | 23 | 15,760,206,976,379,349 | 16,011,537,490,557,279 | +1.59% | INTERVAL |
+
+Crossover: Paley wins at p=7 and p=11, Interval wins at p≥13.
+No Paley primes between 11 and 19 (since 13,17 ≡ 1 mod 4); exact crossover unknown.
+
+WHY interval wins for large p (kind-pasteur-2026-04-16):
+  Paley has MORE α₁ and α₂ at n=19, but Interval wins by +11.5B total.
+  Interval has +26.7B from α₃+ terms: its cycles pack into disjoint triples better.
+  Paley's pseudorandom structure creates many individual cycles but they scatter;
+  Interval's consecutive structure creates harmonically aligned cycles for packing.
+
+α-DECOMPOSITION COMPARISON at n=19 (kind-pasteur-2026-04-16):
+  Cyclic: α₁=126.4B, α₂=122.1B, α₃=43.0B, α₄=5.52B, α₅=331M, α₆=4.1M
+  Paley:  α₁=131.0B, α₂=123.7B (α₃+ not computed for Paley)
+  Cyclic has LESS α₁, α₂ but WINS via α₃+.
 
 The interval's margin is WIDENING with p, consistent with the spectral argument: |mu_1| ~ p/pi grows faster than Paley's sqrt(p)/2.
 
@@ -804,3 +821,48 @@ G_n = Q_{C(n,2)} / S_n is a genuinely new mathematical object (no prior literatu
 
 **Key reflections:** the-tiling-hypercube.md, the-boundary-between-1d-and-2d.md, euler-product-and-metagraph.md, paley-gives-dual-codes.md, h-is-band-limited.md, what-we-can-and-cannot-know.md, tournament-compression-and-beyond.md, terminology-evolution.md, diameter-is-feedback-arc-set.md
 
+
+---
+
+## OPEN-Q-044 🟢 Alpha Mechanism Shift: When Does Each α_k Dominate?
+
+**Discovery (kind-pasteur-2026-04-16):** The dominant term in H = I(Ω,2) = Σ 2^k · α_k shifts with n.
+H-maximizing cyclic interval tournament C_n:
+
+| n | dom term | 2^1·α₁ | 2^2·α₂ | 2^3·α₃ | notes |
+|---|----------|---------|---------|---------|-------|
+| 3-9  | α₁ | largest | 2nd | small | α₁/(2α₂) > 1 |
+| 11-17 | α₂ | 2nd | largest | 3rd | FIRST CROSSOVER n≈10 |
+| 19+ | α₂ | 3rd | largest | 2nd | SECOND CROSSOVER: α₃ overtakes α₁ at n≈17-19 |
+
+**Complete verified table for C_n (cyclic interval tournament):**
+
+| n  | α₁ | α₂ | α₃ | α₁/(2α₂) | α₃/α₂ | H |
+|----|----|----|----|-----------|---------|----|
+| 17 | 1,651,334,601 | 1,482,234,998 | 458,011,858 | 0.5570 | 0.3090 | 13,689,269,499 |
+| 19 | 126,443,605,257 | 122,111,579,294 | 42,960,731,622 | 0.5177 | 0.3518 | 1,184,212,824,763 |
+| 21 | 12,030,499,746,751 | 12,330,182,836,208 | 4,796,354,751,404 | 0.4878 | 0.3890 | 125,547,534,942,879 |
+
+**Full α-decomposition n=21 (NEW, kind-pasteur-2026-04-16-S1):**
+  α₁=12,030,499,746,751   α₂=12,330,182,836,208   α₃=4,796,354,751,404
+  α₄=738,531,326,288      α₅=58,868,297,768        α₆=1,454,221,328       α₇=12,571,712
+  H = 125,547,534,942,879
+
+**Term ordering at n=21:** 4α₂ > 8α₃ > 2α₁ > 16α₄ > 32α₅ > 64α₆ > 128α₇
+  (49.32T > 38.37T > 24.06T > 11.82T > 1.88T > 93B > 1.6B)
+
+**Special structure:** α₇ = 12,571,712 = number of 7-triangle-packings.
+  At n=21, the ONLY 7-packing type is (3,3,3,3,3,3,3) since 7×3=21 (all vertices covered).
+  So α₇ = |{perfect partitions of C_21 into 7 directed triangles}|. Beautiful!
+
+**Key ratio α₃/α₂:** 0.039, 0.106, 0.201, 0.260, 0.309, 0.352, 0.389 for n=9..21
+  Growing by ~0.038 per step of 2. Third crossover (8α₃ > 4α₂ ↔ α₃/α₂ > 0.5): estimated n≈27-29.
+
+**Algorithm:** Numpy SSC with 2-prime CRT. At n=21: 552s total (2 primes × ~245s).
+  Implemented in `04-computation/alpha_full_ssc_numpy.py`. MUCH faster than pure Python.
+  (Pure Python SSC at n=21 timeout after 120s per call; numpy: ~40s per call.)
+
+**Open:** Will α₃ become dominant (8α₃ > 4α₂)? Threshold n≈27-29.
+         Extend to n=23: needs ~2000s with current numpy implementation, or ~few min in C.
+
+**Source:** kind-pasteur-2026-04-16-S1, `alpha_full_ssc_numpy_n21.out`, `alpha_full_ssc_numpy_n19.out`

@@ -1,0 +1,6 @@
+n=21, S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], kmax=7
+Computing cc and f...
+  cc+f: 65.6s
+  α₁=12,030,499,746,751  α₂=12,330,182,836,208
+Computing G_2 = cc ★ G_1...
+TIMEOUT after 120s - stopping

@@ -1,0 +1,51 @@
+n=21 PARTIAL RESULTS (kind-pasteur-2026-04-16)
+S = [1,2,...,10] (cyclic interval), kmax=7
+
+cycle_cc: 65.6s
+α₁ = 12,030,499,746,751   (12.0 trillion)
+α₂ = 12,330,182,836,208   (12.3 trillion)
+α₃+ = NOT YET COMPUTED (SSC too slow at n=21 in Python, ~7 calls × ~4min each)
+
+NOTABLE: α₂ > α₁ (absolute value) for first time! 
+  At n=19: α₁=126.4B > α₂=122.1B (ratio α₁/α₂ = 1.035)
+  At n=21: α₁=12.03T < α₂=12.33T (ratio α₁/α₂ = 0.976)
+  CROSSOVER of |α₁| vs |α₂|: between n=19 and n=21!
+
+RATIO α₁/(2α₂) = 0.4879 (continuing decreasing trend toward 0)
+  n=17: 0.557, n=19: 0.518, n=21: 0.488
+
+EXTRAPOLATED α₃ at n=21 (using growth factor ~1.09 per step from n=19):
+  α₃(n=21) ≈ 42.96B * 1.09 = ~47B (very rough)
+  → 8α₃ ≈ 376B while 4α₂ = 49.3T and 2α₁ = 24.1T
+  This would confirm: α₃ term < α₁ term < α₂ term... wait that's wrong.
+  Actually: 8*47B = 376B << 2*12.03T = 24.1T? That's 376B << 24.1T = 24,100B. YES much smaller!
+  
+  Wait, that means α₃ term is still much smaller than α₁ term at n=21. But the SECOND CROSSOVER
+  (8α₃ overtaking 2α₁) I claimed happened at n=17... let me verify:
+  n=17: 8α₃ = 8*458M = 3.66B vs 2α₁ = 2*1.65B = 3.30B → 8α₃ > 2α₁ ✓ (barely)
+  n=19: 8α₃ = 8*43.0B = 344B vs 2α₁ = 2*126.4B = 252.8B → 8α₃ > 2α₁ ✓ (1.36×)
+  n=21 extrapolated: 8α₃ ≈ 376B vs 2α₁ = 24,100B → 8α₃ << 2α₁ (reversing!)??
+
+WAIT - the scaling is wrong. Let me recheck:
+n=17: α₁=1.65B, n=19: α₁=126.4B → ratio 76.6× (much more than 4× from doubling n)
+n=19: α₁=126.4B, n=21: α₁=12,030B → ratio 95.1× 
+
+So α₁ grows ~80-95× per step of 2 in n.
+α₃ at n=19 = 43.0B. If α₃ grows similarly: 43.0B * 95 ≈ 4.1T at n=21.
+Then 8α₃ ≈ 32.8T, 2α₁ = 24.1T → 8α₃ > 2α₁ ✓ still holds at n=21.
+
+The 47B estimate above was WRONG (didn't account for growth from scaling).
+Corrected estimate: α₃(n=21) ≈ 43B * 95 ≈ 4.1T.
+  → 8α₃ ≈ 32.8T > 2α₁ = 24.1T ✓ (second crossover confirmed)
+  → 8α₃ ≈ 32.8T < 4α₂ = 49.3T (α₂ still dominant)
+
+So at n=21 the order should be: 4α₂ > 8α₃ > 2α₁.
+
+TERM DOMINANCE PROJECTION:
+  n=17: α₂ > α₁ > α₃
+  n=19: α₂ > α₃ > α₁  (second crossover between n=17 and n=19)
+  n=21: α₂ > α₃ > α₁ (confirmed by estimates)
+
+To confirm: need α₃ at n=21. Requires C implementation or more optimized SSC.
+
+NEXT STEP: Implement SSC in C with GMP for n=21+ computations.
