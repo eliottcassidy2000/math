@@ -530,17 +530,32 @@ The proof is self-contained and works for ALL p >= 7 simultaneously. No finite v
 
 **Evidence:** Confirmed at p = 13 (exhaustive), p = 19 (THM-135), p = 23 (kind-pasteur-S57).
 
-| p | H(Paley) | H(Interval) | Margin | Winner |
-|---|----------|-------------|--------|--------|
-| 7  | 189 | 175 | -7.4% | PALEY (small p) |
-| 11 | 95,095 | 93,027 | -2.2% | PALEY (small p) |
-| 13 | - | 3,711,175 | - | INTERVAL (p=1 mod 4, no Paley) |
-| 17 | - | 13,689,269,499 | - | INTERVAL (p=1 mod 4, no Paley) |
-| 19 | 1,172,695,746,915 | 1,184,212,824,763 | +0.98% | INTERVAL |
-| 23 | 15,760,206,976,379,349 | 16,011,537,490,557,279 | +1.59% | INTERVAL |
+| p | H(Paley) | H(Interval) | Margin | Winner | Max circulant |
+|---|----------|-------------|--------|--------|---------------|
+| 7  | 189 | 175 | -7.4% | PALEY | Paley+complement ONLY (all others H=175) |
+| 11 | 95,095 | 93,027 | -2.2% | PALEY | Paley+complement ONLY (2nd: H=93,467×10) |
+| 13 | - | 3,711,175 | - | INTERVAL | (exhaustive, p≡1 mod 4, no Paley) |
+| 17 | - | 13,689,269,499 | - | INTERVAL | (exhaustive over SC circulants) |
+| 19 | 1,172,695,746,915 | 1,184,212,824,763 | +0.98% | INTERVAL | - |
+| 23 | 15,760,206,976,379,349 | 16,011,537,490,557,279 | +1.59% | INTERVAL | - |
 
-Crossover: Paley wins at p=7 and p=11, Interval wins at p≥13.
-No Paley primes between 11 and 19 (since 13,17 ≡ 1 mod 4); exact crossover unknown.
+EXHAUSTIVE SCANS (kind-pasteur-2026-04-16):
+  n=7: ALL 8 circulant tournaments. Top H=189 (2 tournaments: Paley+complement).
+       6 tournaments have H=175 (including Cyclic). Paley is 8% better than rest.
+  n=11: ALL 32 circulant tournaments. Top H=95,095 (2: Paley+complement).
+        10 tournaments share H=93,467. Cyclic has H=93,027 (rank ~18/32).
+  n=7,11 alpha breakdown:
+    n=7:  Paley α₁=80, α₂=7.  Cyclic α₁=59, α₂=14.  (Cyclic has 2× α₂!)
+    n=11: Paley α₁=21,169, α₂=10,879, α₃=1,155. Cyclic α₁=18,397, α₂=11,110, α₃=1,474.
+          Cyclic has MORE α₂ and α₃, but Paley's α₁ advantage (5,544 in H) > Cyclic's advantage (3,476).
+
+Crossover: Paley wins at p=7 and p=11 due to α₁ dominance. Interval wins at p≥13.
+The α₁ percentage gap narrows: 35.6% (n=7), 15.1% (n=11), 3.6% (n=19). Paley's α₁ lead evaporates.
+At n=7: kmax=2 (no 3-packings possible), so H has only α₁,α₂ terms — Paley α₁ wins.
+At n=11: Paley α₁ advantage still > Cyclic α₂+α₃ advantage.
+At n=19: Cyclic α₃+ advantage (26.7B) > Paley α₁+α₂ advantage (15.2B) → Cyclic wins.
+α₂ comparison crossover: Cyclic > Paley at n=7,11 (small n, disjoint packing easier);
+                          Paley > Cyclic at n=19 (large n, more α₁ → more α₂ pairs).
 
 WHY interval wins for large p (kind-pasteur-2026-04-16):
   Paley has MORE α₁ and α₂ at n=19, but Interval wins by +11.5B total.
@@ -548,10 +563,19 @@ WHY interval wins for large p (kind-pasteur-2026-04-16):
   Paley's pseudorandom structure creates many individual cycles but they scatter;
   Interval's consecutive structure creates harmonically aligned cycles for packing.
 
-α-DECOMPOSITION COMPARISON at n=19 (kind-pasteur-2026-04-16):
-  Cyclic: α₁=126.4B, α₂=122.1B, α₃=43.0B, α₄=5.52B, α₅=331M, α₆=4.1M
-  Paley:  α₁=131.0B, α₂=123.7B (α₃+ not computed for Paley)
-  Cyclic has LESS α₁, α₂ but WINS via α₃+.
+EXACT α-DECOMPOSITION COMPARISON at n=19 (kind-pasteur-2026-04-16, VERIFIED):
+  k | Paley α_k          | Cyclic α_k         | Cyclic advantage | H contribution
+  1 | 130,965,270,477    | 126,443,605,257    |   -4,521,665,220 | 2×diff = -9.04B  (Paley wins)
+  2 | 123,659,531,220    | 122,111,579,294    |   -1,547,951,926 | 4×diff = -6.19B  (Paley wins)
+  3 |  41,184,418,943    |  42,960,731,622    |   +1,776,312,679 | 8×diff = +14.21B (Cyclic wins)
+  4 |   4,903,920,444    |   5,521,030,944    |     +617,110,500 |16×diff = +9.87B  (Cyclic wins)
+  5 |     251,464,164    |     331,078,344    |      +79,614,180 |32×diff = +2.55B  (Cyclic wins)
+  6 |       2,221,081    |       4,100,656    |       +1,879,575 |64×diff = +0.12B  (Cyclic wins)
+  Net: Paley advantage 15.2B (via α₁,α₂) vs Cyclic advantage 26.7B (via α₃+) = +11.5B net for Cyclic.
+
+  α₃/α₂ ratios: Paley=0.333, Cyclic=0.352 → Cyclic is intrinsically better at 3-packing!
+  The k=5,6 percent advantage for Cyclic: +31.7% at k=5, +84.7% at k=6 — grows with k.
+  Source: paley_t19_alpha.out (H(Paley)=1,172,695,746,915 verified ✓)
 
 The interval's margin is WIDENING with p, consistent with the spectral argument: |mu_1| ~ p/pi grows faster than Paley's sqrt(p)/2.
 

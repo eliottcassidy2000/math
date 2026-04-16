@@ -94,8 +94,6 @@ def sos_forward_inplace(A_r, n, p):
     N = 1 << n
     for i in range(n):
         bit = 1 << i
-        # Reshape: separate bit i into its own dimension
-        # Index m = h*(2*bit) + b*bit + l, where h in [0, N/(2*bit)), b in {0,1}, l in [0, bit)
         A_r_4d = A_r.reshape(n+1, N // (2 * bit), 2, bit)
         A_r_4d[:, :, 1, :] = (A_r_4d[:, :, 1, :] + A_r_4d[:, :, 0, :]) % p
 

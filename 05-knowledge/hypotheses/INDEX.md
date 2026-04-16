@@ -1847,3 +1847,38 @@ Source: binary_resonance_cross_field_s26.py
 **Status:** OPEN (proved for tournaments and labeled counts, conjectured in generality)
 **What:** Every Burnside counting problem with non-square base exhibits QR resonance at every prime dividing the group order. The Euler criterion b^{(p-1)/2} ≡ (b/p) mod p propagates through the Burnside sum. The STRENGTH of the resonance depends on whether the p-cycle uniquely minimizes v_p. Trichotomy: trivial (square base), messy (unrestricted), clean (parity-restricted).
 Source: binary_resonance_cross_field_s26.py, qr-resonance-principle.md
+
+## HYP-1719: Complete α-decomposition for C_21 (kind-pasteur-2026-04-16)
+**Status:** CONFIRMED
+**What:** Full exact α-decomposition for the cyclic interval tournament C_21 = (Z_21, {1,...,10}):
+  α₁=12,030,499,746,751  α₂=12,330,182,836,208  α₃=4,796,354,751,404
+  α₄=738,531,326,288     α₅=58,868,297,768       α₆=1,454,221,328      α₇=12,571,712
+  H = 125,547,534,942,879
+Term ordering: 4α₂ > 8α₃ > 2α₁ > 16α₄ > 32α₅ > 64α₆ > 128α₇.
+Ratios: α₁/(2α₂)=0.4878, α₃/α₂=0.3890, 8α₃/2α₁=1.5947.
+α₂ > α₁ (raw): FIRST TIME α₂ exceeds α₁ in raw value (ratio 1.025). Crossover between n=19-21.
+Source: alpha_full_ssc_numpy.py + alpha_full_ssc_fast.py. Method: numpy SSC + 2-prime CRT.
+
+## HYP-1720: α₇ = perfect directed triangle tilings of C₂₁ (kind-pasteur-2026-04-16)
+**Status:** CONFIRMED
+**What:** At n=21, kmax=7 and the ONLY way to pack 7 odd cycles into 21 vertices is (3,3,3,3,3,3,3). Proof: 7 odd integers ≥ 3 summing to 21 forces all equal to 3 (minimum sum 7×3=21 achieved uniquely). Therefore: α₇(C_21) = number of perfect partitions of C_21 into 7 vertex-disjoint directed triangles = 12,571,712. In general: α_{n/3}(T) counts perfect directed triangle tilings when n≡0 mod 3 and kmax=n/3.
+Source: alpha_decomp_n21_complete.out | kind-pasteur-2026-04-16
+
+## HYP-1721: α₃/α₂ ratio trend and third crossover prediction (kind-pasteur-2026-04-16)
+**Status:** OPEN (trend confirmed, crossover predicted)
+**What:** For C_n (cyclic interval), the ratio α₃/α₂ increases monotonically:
+  n=9: 0.039, n=11: 0.106 (Paley), n=17: 0.309, n=19: 0.352, n=21: 0.389
+  Increment per step of 2: ~0.037. THIRD CROSSOVER (8α₃ > 4α₂ ↔ α₃/α₂ > 0.5): predicted n≈27-29.
+  Supporting: 8α₃/2α₁ = 1.109 (n=17) → 1.359 (n=19) → 1.595 (n=21). Second crossover (8α₃>2α₁) at n≈15.
+  Compare: α₁/(2α₂) = 0.557 (n=17) → 0.518 (n=19) → 0.488 (n=21). First crossover (α₂>α₁ term) at n≈11.
+Source: OPEN-Q-044, alpha_full_ssc_numpy_n21.out | kind-pasteur-2026-04-16
+
+## HYP-1722: Paley+complement are the UNIQUE circulant maximizers at n=7,11 (kind-pasteur-2026-04-16)
+**Status:** CONFIRMED (exhaustive)
+**What:** Exhaustive search over ALL circulant tournaments:
+  n=7 (8 tournaments): Max H=189, achieved ONLY by S={1,2,4} (Paley) and S={3,5,6} (complement). All 6 others have H=175. Paley 8% better than all others.
+  n=11 (32 tournaments): Max H=95,095, achieved ONLY by S={1,3,4,5,9} (Paley) and S={2,6,7,8,10} (complement). Second best: 10 tournaments with H=93,467. Cyclic has H=93,027 (rank ~18/32).
+  Mechanism at n=7: kmax=2 (no 3-packings), Paley wins purely via α₁ advantage (80 vs 59, H diff = 2×21=42).
+  Mechanism at n=11: Paley α₁ advantage (5,544 in H) > Cyclic α₂+α₃ advantage (3,476 in H).
+  Note: α₂ crossover (Cyclic > Paley in raw α₂) already occurs AT n=7,11 — Cyclic has more α₂ at these n!
+Source: n7_n11_exhaustive_scan (inline computation) | kind-pasteur-2026-04-16
