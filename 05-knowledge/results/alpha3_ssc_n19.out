@@ -1,0 +1,17 @@
+n=19, S=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+cc+f: 9.6s
+α₁=126,443,605,257  α₂=122,111,579,294
+Computing cc ★ cc via SSC...
+  SSC self-conv: n=19, N=524,288
+  rank-stratify: 0.1s
+  forward SOS: 7.4s
+  pointwise conv: 2.0s
+  inverse SOS: 6.2s
+  assemble: 0.2s
+Computing G_3[full]...
+  G_3 sum: 0.1s
+
+α₃ = 42,960,731,622  (total: 16.0s)
+
+Ratio α₁/(2α₂) = 0.51774
+Ratio α₃/α₂ = 0.35182

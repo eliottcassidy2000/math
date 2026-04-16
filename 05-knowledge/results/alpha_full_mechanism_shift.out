@@ -1,0 +1,62 @@
+FULL ALPHA MECHANISM SHIFT TABLE
+All values verified (H_ocf == H_ref for all n).
+Generated: kind-pasteur-2026-04-16
+
+Method: cycle_cc (canonical DP) + SOS + iterated SSC (Björklund subset sum convolution)
+SSC runtime: O(k_max * n^2 * 2^n) per tournament.
+  n=17 kmax=5: ~22s, n=19 kmax=6: ~137s
+
+=== TABLE ===
+n    H                      α₁           α₂           α₃          α₄         α₅         α₆   ratio
+3             3                1            0            0           0          0          0      ∞
+5            15                7            0            0           0          0          0      ∞
+7           189               80            7            0           0          0          0   5.7143
+9          3357              954          336           13           0          0          0   1.4196
+11        95095            21169        10879         1155           0          0          0   0.9729
+13      3711175           606027       436748        87568        3224          0          0   0.6938
+15    198464295         27495799     22518662      5849428      397720       7472          0   0.6105
+17  13689269499       1651334601   1482234998    458011858    45997104    1800368          0   0.5570
+19 1184212824763    126443605257 122111579294  42960731622  5521030944  331078344    4100656   0.5177
+
+=== TERM DOMINANCE ORDER ===
+(which 2^k * α_k term is largest?)
+n=3..9:   α₁ > α₂ > α₃    (α₁-dominant)
+n=11..17: α₂ > α₁ > α₃    (α₂-dominant, α₁ second)
+n=19:     α₂ > α₃ > α₁    (α₂-dominant, α₃ OVERTAKES α₁!)
+
+The SECOND CROSSOVER: 2α₁ vs 8α₃ cross at n≈17-19.
+  n=17: 2α₁=3.30B, 8α₃=3.66B → α₃ already larger than α₁!
+  n=19: 2α₁=252.9B, 8α₃=343.7B → α₃/α₁ = 0.340
+
+The FIRST CROSSOVER: 2α₁ vs 4α₂ cross at n≈10.
+
+=== α₃/α₂ RATIO TREND ===
+n=9: 0.039, n=11: 0.106, n=13: 0.201, n=15: 0.260, n=17: 0.309, n=19: 0.352
+Increments: 0.067, 0.095, 0.059, 0.049, 0.043
+Trend: growing but slowing.
+α₃ DOMINANCE (α₃/α₂ > 0.5 ↔ 8α₃ > 4α₂): estimated n≈27-31
+
+=== α₁/(2α₂) RATIO TREND ===
+n=3: ∞, n=5: ∞, n=7: 5.714, n=9: 1.420, n=11: 0.973, n=13: 0.694,
+n=15: 0.610, n=17: 0.557, n=19: 0.518
+Trend: decreasing, approaching 0.5 asymptotically (?)
+
+=== HIGHER TERMS ===
+At n=19: α₄=5.52B, α₅=331M, α₆=4.1M
+  α₆ counts 6-packings of 3-cycles (6*3=18 ≤ 19 vertices).
+  α₆ is the only non-zero "imperfect" top-level packing at n=19.
+
+=== PALEY VS CYCLIC ===
+At p=7 (p≡3 mod 4): Paley H=189 > Cyclic H=175
+At p=11 (p≡3 mod 4): Paley H=95,095 > Cyclic H=93,027
+At p=19 (p≡3 mod 4): Cyclic H=1,184,212,824,763 > Paley H=1,172,695,746,915
+WHY cyclic wins at n=19: Paley has more α₁, α₂ but cyclic wins through α₃+ by 26.7B.
+Both n=17 (p≡1 mod 4, no Paley) and n=19 favor cyclic interval.
+Crossover between n=11 and n=19 (no intervening Paley primes).
+
+=== NEW ALGORITHM ===
+The alpha_full_ssc.py implementation:
+- Replaces naive O(|nc|^2) loop for α₃ (would take hours at n=19)
+- Uses iterative SSC: G_k = cc ★ G_{k-1}, α_k = G_k[full] / k!
+- O(k_max * n^2 * 2^n) total time
+- 124× speedup for α₃ at n=17 (3s vs 372s)
