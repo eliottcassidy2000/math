@@ -2,6 +2,52 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-04-16-S2 — 2026-04-16
+**Account:** Eliott (primary)
+**Continuation of:** kind-pasteur-2026-04-16-S1
+**Summary of work:**
+  (1) **H(Paley_23) COMPUTED (NEW):** H = 15,760,206,976,379,349 < H(Interval_23) = 16,011,537,490,557,279.
+      Interval beats Paley at p=23 by 251,330,514,177,930 (1.57%). Used cc_n23_paley.bin (from prev session).
+  (2) **Complete α-decomposition for Paley_23:**
+      α₁=1,419,618,866,366,876   α₂=1,507,247,966,125,751   α₃=613,874,070,995,768
+      α₄=103,798,869,047,016     α₅=9,361,789,418,696        α₆=313,245,558,714     α₇=4,515,072,408
+  (3) **NEW STRUCTURAL FINDING:** At p=23, Paley has MORE α₁ AND MORE α₂ than Interval!
+      Paley wins at k=1,2 (cumul +86T), but loses decisively at k=3 (8Δα₃=-152T) and all higher k.
+      This differs from p=7,11 where Paley already lost α₂ but still won via α₁.
+  (4) **Complete small-n alpha table (exact)** via fast_cycle_cc + SSC pipeline:
+      n=9: H=3,267, α₁=837, α₂=354, α₃=22 (dom_k=1, α₁/(2α₂)=1.182)
+      n=11: H=93,027, α₁=18,397, α₂=11,110, α₃=1,474 (dom_k=2, α₁/(2α₂)=0.828)
+      n=13: H=3,711,175, α₁=606,027, α₂=436,748, α₃=87,568, α₄=3,224 (dom_k=2)
+      n=15: H=198,464,295, α₁=27,495,799, α₂=22,518,662, α₃=5,849,428, α₄=397,720, α₅=7,472 (dom_k=2)
+  (5) **CROSSOVER 1 PINPOINTED:** k=1→k=2 dominant between n=9 and n=11.
+      n=9: α₁/(2α₂)=1.182 (k=1 dom), n=11: α₁/(2α₂)=0.828 (k=2 dom). Interpolated: n≈10.2.
+  (6) **CROSSOVER 2 PREDICTED:** k=2→k=3 at n≈29 (exponential fit, RMSE=0.001).
+      Full data: 0.062(n=9), 0.133(11), 0.200(13), 0.260(15), 0.309(17), 0.352(19), 0.389(21), 0.422(23).
+      Logistic model gives asymptote 0.437 < 0.5 (uncertain). Power/exp models agree on n≈28-29.
+  (7) **CROSSOVER 3 UNCERTAIN:** α₄/α₃ ratio fits asymptote ≈0.43 < 0.5 → may never cross 0.5.
+      Data: 0.037(13), 0.068(15), 0.100(17), 0.129(19), 0.154(21), 0.177(23). Very slow growth.
+  (8) **Paley-vs-Interval phase diagram established:**
+      p=7,11: Paley wins α₁, loses α₂+ → but α₁ term still dominates → Paley wins overall
+      p=23: Paley wins α₁,α₂ both, loses α₃,α₄,α₅,α₆,α₇ → Interval wins overall
+      The Paley→Interval crossover happens between p=11 and p=19.
+
+**New files:**
+  04-computation/alpha_crossover_analysis.py (complete analysis with fits)
+  04-computation/alpha_ratio_trends.py (ratio trend analysis)
+  04-computation/alpha_crossover_smalln.py (small-n cycle finder, partially implemented)
+  05-knowledge/results/alpha_paley_n23.out (Paley T_23 full SSC ✓)
+  05-knowledge/results/alpha_full_n9.out, n11.out, n13.out, n15.out (complete tables)
+  05-knowledge/results/alpha_crossover_analysis.out (full crossover analysis)
+
+**New hypotheses:** HYP-1725, HYP-1726, HYP-1727, HYP-1728
+
+**Unresolved threads (next session):**
+  - Crossover 2 verification: need n=25 SSC (requires 32GB RAM or C SSC implementation)
+  - Does Interval maximize H globally (not just among circulants)?
+  - Does Paley deletion give global maximizer at n=18,22 (p=19,23 minus 1)?
+  - Why does Interval have more α₃,α₄,...? Arithmetic/geometric reason from spacing structure?
+  - Third crossover: is the logistic model right (no crossover 3) or exp/power (crossover at n≈60+)?
+
 ## kind-pasteur-2026-04-16-S1 (FINAL) — 2026-04-16
 **Account:** Eliott (primary)
 **Continuation of:** opus-2026-04-05-S30 (context limit), then continued within this session after context compaction

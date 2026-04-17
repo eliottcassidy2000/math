@@ -1,0 +1,35 @@
+n=11, type=circulant, kmax=3
+Loading cc from 05-knowledge/results/cc_n11_circulant.bin...
+  loaded: 0.0s
+Precomputing popcounts...
+  done: 0.0s
+
+=== Modular run 1 (p=2147483647) ===
+    k=1: G_1[full] ≡ 18397
+    k=2: G_2[full] ≡ 22220  [0.0s]
+    k=3: G_3[full] ≡ 8844  [0.0s]
+  Total run 1: 0.0s
+
+=== Modular run 2 (p=2147483629) ===
+    k=1: G_1[full] ≡ 18397
+    k=2: G_2[full] ≡ 22220  [0.0s]
+    k=3: G_3[full] ≡ 8844  [0.0s]
+  Total run 2: 0.0s
+
+=== CRT recovery ===
+  α_1 = 18,397
+  α_2 = 11,110
+  α_3 = 1,474
+
+=== FINAL RESULTS n=11 type=circulant ===
+H = 93,027
+
+Term breakdown:
+  2^1 × α_1 =                              36,794   (39.6%)   α_1=18,397
+  2^2 × α_2 =                              44,440   (47.8%)   α_2=11,110
+  2^3 × α_3 =                              11,792   (12.7%)   α_3=1,474
+
+Ratios:
+  α₁/(2α₂) = 0.827948
+  α₃/α₂    = 0.132673
+  8α₃/2α₁  = 0.320487  (>1 means 8α₃ > 2α₁)

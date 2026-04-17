@@ -1904,3 +1904,49 @@ Source: kind-pasteur-2026-04-16 (structural argument, no separate computation ne
   Mechanism at n=11: Paley α₁ advantage (5,544 in H) > Cyclic α₂+α₃ advantage (3,476 in H).
   Note: α₂ crossover (Cyclic > Paley in raw α₂) already occurs AT n=7,11 — Cyclic has more α₂ at these n!
 Source: n7_n11_exhaustive_scan (inline computation) | kind-pasteur-2026-04-16
+
+## HYP-1725: Complete α-decomposition for Paley_23 (opus-2026-04-16-S1)
+**Status:** CONFIRMED
+**What:** Full 7-term α-decomposition for Paley tournament T_23 (S=QR mod 23):
+  α₁=1,419,618,866,366,876   α₂=1,507,247,966,125,751   α₃=613,874,070,995,768
+  α₄=103,798,869,047,016     α₅=9,361,789,418,696        α₆=313,245,558,714      α₇=4,515,072,408
+  H(Paley_23) = 15,760,206,976,379,349
+  H(Interval_23) = 16,011,537,490,557,279 → INTERVAL WINS at n=23 by 251,330,514,177,930 (1.57%)
+  NEW STRUCTURAL FINDING: At n=23, Paley has MORE α₁ AND MORE α₂ than Interval, but loses on α₃,α₄,α₅,α₆,α₇.
+  Pattern: Paley wins k=1,2 (+86T cumulative), loses k=3 (-152T), then continues to lose at k=4..7.
+  This DIFFERS from p=7,11 where Paley already lost α₂ but still won on α₁.
+Source: alpha_paley_n23.out | opus-2026-04-16-S1
+
+## HYP-1726: Paley-vs-Interval α-dominance phase diagram (opus-2026-04-16-S1)
+**Status:** CONFIRMED (known data), OPEN (asymptotic)
+**What:** The crossover between Paley and Interval in terms of which wins each αₖ term:
+  p=7:  Paley wins α₁, loses α₂ → Paley wins overall
+  p=11: Paley wins α₁, loses α₂,α₃ → Paley wins overall (α₁ still dominant)
+  p=23: Paley wins α₁,α₂, loses α₃,α₄,α₅,α₆,α₇ → Interval wins overall (α₃ dominant)
+  The "Paley front" (# k-values where Paley wins αₖ) shifts from k=1 at p=7,11 to k=2 at p=23.
+  This reflects Paley's BIBD structure giving more uniform short cycles but Interval having better packing.
+Source: alpha_paley_n23.out, analytic_crossover.py | opus-2026-04-16-S1
+
+## HYP-1727: Dominant-term crossover sequence (opus-2026-04-16-S1)
+**Status:** CONFIRMED for crossover 1, PREDICTED for crossover 2, UNCERTAIN for crossover 3+
+**What:** The dominant term 2^k·αₖ in H = 1 + Σ 2^k αₖ shifts with n:
+  CROSSOVER 1 (k=1→k=2): n ≈ 10.2, first odd n=11 (α₁/2α₂ crosses 0.5 between n=9 and n=11)
+    n=9: α₁/(2α₂) = 1.182 (k=1 dominant), n=11: α₁/(2α₂) = 0.828 (k=2 dominant)
+  CROSSOVER 2 (k=2→k=3): n ≈ 29 predicted by exponential fit (RMSE=0.001), power law gives n≈28
+    Data: n=9: 0.062, n=11: 0.133, ..., n=23: 0.422 — DECELERATING increments
+    Logistic fit gives asymptote 0.437 < 0.5 → may NOT cross (uncertain)
+  CROSSOVER 3 (k=3→k=4): Exponential fit gives asymptote 0.431 < 0.5 → LIKELY NO CROSSOVER
+    Data: n=13: 0.037, n=15: 0.068, ..., n=23: 0.177 — very slowly growing
+  IMPLICATION: k=2 (pairs of disjoint odd cycles) is the dominant term for n ∈ [11, ~29].
+    If crossover 2 occurs, k=3 dominates for n ∈ [29, ∞) or until crossover 3 (if it exists).
+Source: alpha_crossover_analysis.out | opus-2026-04-16-S1
+
+## HYP-1728: Small-n alpha table (complete, exact) (opus-2026-04-16-S1)
+**Status:** CONFIRMED
+**What:** Complete exact alpha decompositions for interval tournament C_n, all odd n ≤ 23:
+  n= 9: H=3,267      α₁=837     α₂=354      α₃=22
+  n=11: H=93,027     α₁=18,397  α₂=11,110   α₃=1,474
+  n=13: H=3,711,175  α₁=606,027 α₂=436,748  α₃=87,568  α₄=3,224
+  n=15: H=198,464,295 α₁=27,495,799 α₂=22,518,662 α₃=5,849,428 α₄=397,720 α₅=7,472
+  Dominant k=1 at n≤9, dominant k=2 for n=11..23 (and presumably beyond)
+Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n15.out | opus-2026-04-16-S1

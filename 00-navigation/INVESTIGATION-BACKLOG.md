@@ -1942,3 +1942,22 @@ vertices needed for Ω₃ chains.
 5. α₁ gap mechanism for H=21 (needs n≥7 analysis)
 6. The staircase lattice as Brillouin zone of the tournament AFM
 **Priority:** HIGH (provides physics intuition for all open questions)
+
+### INV-052: Paley maximization vs Interval — complete status (opus-2026-04-16-S1)
+**Source:** opus-2026-04-16-S1 (this session)
+**Status:** RESOLVED for p=7,11,19,23; OPEN for p≥31
+**What:** Does Paley tournament T_p maximize H among all circulant tournaments? Among all tournaments?
+**Results:**
+- p=7:  H(Paley)=189 > H(Interval)=175 → Paley wins. EXHAUSTIVE: Paley = global max at n=7.
+- p=11: H(Paley)=95,095 > H(Interval)=93,027 → Paley wins (exhaustive among circulants).
+- p=19: H(Paley)=1,172,695,746,915 < H(Interval)=1,184,212,824,763 → Interval wins.
+- p=23: H(Paley)=15,760,206,976,379,349 < H(Interval)=16,011,537,490,557,279 → Interval wins by 1.57%.
+**Mechanism:** At p=23, Paley has MORE α₁ and α₂ than Interval but loses on α₃+.
+  The term 8(α₃_I - α₃_P) = +152T swamps the combined 2Δα₁+4Δα₂ = +86T advantage.
+**Dominant term crossover:** k=1→2 at n≈11; k=2→3 predicted at n≈29. The Paley→Interval crossover 
+  happens between p=11 and p=19, likely because k=2 becomes the dominant term around n=11.
+**Open questions:**
+  (1) Does INTERVAL maximize H among ALL tournaments (not just circulants) for n≥15?
+  (2) Is the Paley→Interval crossover at p=13? (p=13 ≡ 1 mod 4, no Paley, skip to p=19)
+  (3) Why does Interval win on α₃,α₄,...? Is this related to arithmetic spacing allowing more vertex-disjoint packings?
+**Scripts:** alpha_from_cc_bin.py, alpha_crossover_analysis.py, alpha_ratio_trends.py
