@@ -111,7 +111,8 @@ $\beta_m = \tfrac{m(m-3)}{2}$, $\beta_{m+1} = \tfrac{m(m+1)}{2}$ where $m = (p-1
 This \textbf{Euler characteristic formula $\chi = p$} follows from THM-125:
 the cyclic symmetry forces every eigenspace to contribute $\chi = 1$.
 The directed 3-cycles of $T_p$ form a $2$-$(p, 3, \frac{p+1}{4})$ balanced incomplete block design
-(\textbf{BIBD}) for all Paley primes — proved algebraically via the $\mathrm{Aff}(\mathrm{QR})$ transitive action.
+(\textbf{BIBD}) for all Paley primes; this follows from the 2-transitive action of $\mathrm{Aff}(\mathrm{QR})$
+and is classical in design theory, though the clean algebraic proof in the tournament setting is our work.
 
 \section{Universal Topological Constraints}
 
@@ -129,8 +130,9 @@ Three theorems hold for \emph{all} tournaments, not just Paley:
 
 Integer matrix rank is a bottleneck in algebraic topology, coding theory, and network analysis.
 The standard int64 approach uses $8n^2$ bytes.
-\textbf{Our technique}: reduce mod a small prime $p < 256$, store as \texttt{uint8}.
-Certify correctness at a second prime; if they agree, the rank is mathematically proved.
+Modular rank over $\mathbb{F}_p$ is known in sparse linear algebra; our contribution is
+packaging it for topological use: reduce mod a small prime $p < 256$, store as \texttt{uint8},
+then certify at a second independent prime.
 
 \vspace{4pt}
 \begin{center}
@@ -153,8 +155,13 @@ and numerically exact (no floating-point error possible).
 \subsection*{2. Circulant Eigenspace Collapse — $n\times$ speedup for symmetric computation}
 
 Any matrix with $\mathbb{Z}_n$ cyclic symmetry decomposes into $n$ eigenspaces.
-\textbf{THM-125} (proved): for the path-homology boundary matrices of any circulant tournament,
-\emph{all $n$ eigenspaces are identical}. Therefore: compute one rank, multiply by $n$.
+Tang and Yau (arXiv:2602.04140, Feb 2026) introduced a ``symbol matrix'' framework
+for circulant digraph path homology and proved stability at generic $t$.
+\textbf{THM-125} (our work, March 2026): we proved the \emph{stronger} result
+that the symbol matrix is \emph{identically constant} (independent of $t$) — an
+elementary two-line algebraic argument.
+This implies all $n$ eigenspaces have \textbf{identical} boundary ranks.
+Therefore: compute one rank, multiply by $n$.
 For $T_{11}$: $11\times$ speedup; for $T_{19}$: $19\times$ speedup.
 \textbf{Direct application to QC-LDPC codes} (5G/WiFi/DVB-S2): the parity-check matrix is block-circulant;
 THM-125 says one eigenspace rank suffices for code design, giving an $n\times$ faster design-iteration loop.
