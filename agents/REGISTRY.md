@@ -6,6 +6,7 @@ All machines participating in the research network. Add your machine by running 
 |------------|-------------|--------|---------------|-----------|
 | opus | Claude Opus 4.6, e's machine | active | 2026-03-05 | 2026-03-09 |
 | kind-pasteur | Claude Code in worktree kind-pasteur; first agent on network | active | 2026-03-05 | 2026-03-09 |
+| oracle | Oracle Cloud always-on server (aarch64, 5.8 GB RAM, 1 CPU) — persistent hub, remote-controlled | active | 2026-04-30 | 2026-04-30 |
 
 ---
 
