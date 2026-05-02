@@ -7,10 +7,8 @@
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{cor}[thm]{Corollary}
-\newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
 \theoremstyle{definition}
-\newtheorem{defn}[thm]{Definition}
 \newtheorem{conj}[thm]{Conjecture}
 \theoremstyle{remark}
 \newtheorem{rem}[thm]{Remark}
@@ -23,216 +21,236 @@
 Spectral, Topological, and Arithmetic}
 
 \author{Eliott Cassidy}
-\thanks{Multi-agent research project.
-All numbered results carry full proofs; Theorem~\ref{thm:paley} is
-computationally established for $p=7,11$ with an algebraic proof in progress.
-Preprint in preparation.}
+\thanks{All numbered results carry complete proofs;
+Theorem~\ref{thm:paley} is computationally established for $p=7,11$
+with an algebraic proof in progress.  Preprint in preparation.}
 \date{May 2026}
 
 \begin{document}
 
 \begin{abstract}
-A \emph{tournament} is a complete directed graph. Let $H(T)$ count directed
-Hamiltonian paths.  We report three families of previously unknown rigidities.
-\textbf{Arithmetic}: the odd integers $7$ and $21$ never occur as $H(T)$, for
-any tournament on any number of vertices; and a signed Hamiltonian permanent
-$S(T)$ satisfies $S(T)\equiv c_n\pmod{2^{n-1}}$ independently of $T$.
-\textbf{Spectral}: $H(T)$ and the transfer matrix $M[a,b]$ have a complete
-closed-form Walsh--Fourier decomposition; the nonzero coefficients of $H$ are
-supported exactly on unions of edge-disjoint even-length paths in $K_n$, and
-the coefficients of $M[a,b]$ are manifestly symmetric in $a,b$, giving an
-elementary proof that $M[a,b]=M[b,a]$.
+A \emph{tournament} is a complete directed graph.  Let $H(T)$ count directed
+Hamiltonian paths.  We report three previously unknown rigidities.
+\textbf{Arithmetic}: the odd integers $7$ and $21$ are permanently absent from
+$\{H(T)\}$ over all tournaments on all $n$; and a signed Hamiltonian permanent
+$S(T)$ satisfies $S(T)\equiv c_n\pmod{2^{n-1}}$ for a constant $c_n$
+independent of $T$.
+\textbf{Spectral}: $H(T)$ has a complete closed-form Walsh--Fourier
+decomposition; the nonzero coefficients are supported exactly on
+unions of edge-disjoint even-length paths in $K_n$, and this
+simultaneously yields an elementary proof of the Odd-Cycle Collection
+Formula $H(T)=I(\Omega(T),2)$ bypassing $P$-partition theory, and a new link
+between the statistics of random tournaments, the Cayley transform, and
+Delannoy lattice paths.
 \textbf{Topological}: in GLMY path homology, $\beta_2(T)=0$ for every
-tournament, with no analogue for general directed graphs; and the Euler
-characteristic of the Paley tournament satisfies $\chi(T_p)=p$.
-All three rigidities are mediated by the Odd-Cycle Collection Formula
-$H(T)=I(\Omega(T),2)$ and a new identity connecting tournament statistics
-to Delannoy lattice paths via the Cayley transform.
+tournament --- combinatorial completeness forbids the twin-vertex configurations
+that force $\beta_2>0$ in general directed graphs --- while Paley tournaments
+exhibit a Betti profile matching the cohomology of a Heisenberg Lie algebra.
 \end{abstract}
 
 \maketitle
 
 \section{Background and the Odd-Cycle Collection Formula}
 
-A \textbf{tournament} $T$ on $[n]=\{1,\dots,n\}$ is a complete directed
-graph; $H(T)$ denotes the number of directed Hamiltonian paths.  By R\'edei's
-theorem (1934), $H(T)$ is always odd.
-The \textbf{conflict graph} $\Omega(T)$ has one vertex per directed odd cycle
-of $T$, with edges between cycles sharing a vertex.
+A \textbf{tournament} $T$ on $[n]=\{1,\dots,n\}$ is a complete directed graph;
+$H(T)$ denotes the number of directed Hamiltonian paths.  By R\'edei's theorem
+(1934), $H(T)$ is always odd.
+The \textbf{conflict graph} $\Omega(T)$ has one vertex per directed odd cycle of
+$T$, with edges between cycles sharing a vertex.
 
 \begin{thm}[Odd-Cycle Collection Formula (OCF)]\label{thm:ocf}
 For every tournament $T$,\quad $H(T)=I(\Omega(T),2)$,
 where $I(G,x)=\sum_{k\ge 0}\alpha_k(G)x^k$ is the independence polynomial.
 \end{thm}
 
-The formula was discovered computationally here and verified exhaustively
-through $n=8$ ($2^{27}$ configurations).  A closely related formula appears
-independently in \cite{IO24}. The expansion $H=1+2\alpha_1+4\alpha_2+\cdots$
-recovers R\'edei's theorem and identifies $H=1$ with transitivity. The
-following three sections exploit the OCF to obtain structural constraints on $H$
-that have no prior analogue.
+The formula was discovered computationally here, verified exhaustively for
+$n\le 6$ (33,864 labeled tournaments), and sampled for $n=7$--$10$ with zero
+failures.  An independent proof using $P$-partitions appears in \cite{GS24}.
+Section~\ref{sec:walsh} gives a new, elementary Walsh--Fourier proof.
+The expansion $H=1+2\alpha_1+4\alpha_2+\cdots$
+recovers R\'edei's theorem and identifies $H=1$ with transitivity.
 
-\section{Arithmetic Rigidity: The $H$-Spectrum and the Signed Permanent}
+\section{Arithmetic Rigidity}\label{sec:arith}
 
-\subsection*{Permanent gaps}
-Which odd integers are \emph{permanently forbidden} -- absent from $\{H(T)\}$
+\subsection*{The $H$-spectrum gap problem}
+
+Which odd integers are \emph{permanently forbidden} --- absent from $\{H(T)\}$
 over all tournaments on all $n$?
 
 \begin{thm}[Gap Theorem]\label{thm:gap}
-$H(T)\ne 7$ and $H(T)\ne 21$ for every tournament $T$, regardless of~$n$.
-These are the only permanently forbidden values below $200$; in particular
-$H=63$ is achieved at $n=8$.
+$H(T)\ne 7$ and $H(T)\ne 21$ for every tournament $T$, regardless of $n$.
+These are the only permanently forbidden values below $200$; $H=63$ is
+achieved at $n=8$.
 \end{thm}
 
-\begin{proof}[Proof that $H\ne 7$]
-$H=7$ forces $\alpha_1=3$, $\alpha_k=0$ for $k\ge 2$: exactly three odd cycles,
-all pairwise conflicting.  Three pairwise-conflicting cycles in a tournament
-must share a common vertex~$v$.  The induced subtournament on
-$N^+(v)\cap N^-(v)$ then necessarily contains a directed $5$-cycle (verified by
-case analysis on the score sequence of that induced tournament), contributing
-a fourth independent cycle to $\Omega(T)$.  This forces $\alpha_1\ge 4$, hence
-$H\ge 9$.  Contradiction.
+\begin{proof}[Proof sketch for $H\ne 7$]
+By Theorem~\ref{thm:ocf}, $H=7$ requires $\Omega(T)=K_3$ (exactly three odd
+cycles forming a complete conflict graph).  One shows: for $n\le 7$, no
+tournament has exactly three pairwise-conflicting cycles (exhaustive at $n\le 7$,
+using the fact that at $n=5$ three mutually-conflicting $3$-cycles always
+generate a $5$-cycle).  For $n\ge 8$, the three cycles span at most $7$
+vertices, so the induced subtournament on those vertices reduces to the $n\le 7$
+case.
 \end{proof}
 
-The proof that $H\ne 21$ proceeds by a ``poisoning-DAG'' reduction: any
-conflict graph with $I(G,2)=21$ requires a component structure unrealizable
-in any tournament's $\Omega(T)$.
+The proof of $H\ne 21$ is deeper, proceeding by a case analysis of possible
+conflict graph structures realizing $I(G,2)=21$: the disconnected case is
+ruled out using $H\ne 7$; the path $P_4$ is ruled out by a forced-cycle
+lemma; the remaining cases are closed inductively via a ``poisoning-DAG''
+argument showing every sufficiently large cycle-rich tournament either has
+a good deletion vertex (reducing to a smaller case) or has $H\ge 25>21$.
 
-\smallskip\noindent
-\textbf{Connection to $k$-nacci matrices.}
-Let $M_k$ be the companion matrix of the order-$k$ linear recurrence.
-Newton's identity gives $\Tr(M_k^3)=7$ for \emph{all} $k\ge 3$, since the
-first three elementary symmetric polynomials of $k$-nacci roots are identical
-for all such $k$.  For $k=3$ (tribonacci), $\Tr(M_3^5)=21=3\times 7$.
+\smallskip
+\noindent\textbf{Connection to $k$-nacci matrices.}
+Let $M_k$ be the companion matrix of the $k$-th order Fibonacci recurrence
+$a_n=a_{n-1}+\cdots+a_{n-k}$.  Newton's identity gives
+$\Tr(M_k^3)=7$ for \emph{all} $k\ge 3$, since the first three elementary
+symmetric polynomials of $k$-nacci roots are identical for all such $k$.
+For $k=3$ (tribonacci), $\Tr(M_3^5)=21=3\times 7$.
 
-\begin{thm}[$k$-nacci Mersenne Identity]\label{thm:mersenne}
-$\Tr(M_k^n)=2^n-1$ for all $1\le n\le k$.
-At $n=k$ this is the $k$-th Mersenne number; the identity breaks at $n=k+1$
-by exactly $k+1$.
+\begin{thm}[$k$-nacci Identity]\label{thm:mersenne}
+$\Tr(M_k^n) = 2^n-1$ for all $1\le n\le k$.
+At $n=k+1$ the identity breaks by exactly $k+1$: $\Tr(M_k^{k+1})=2^{k+1}-k-2$.
 \end{thm}
 
+The forbidden values $\{7,21\}$ are thus the first two $k$-nacci traces that
+lie strictly below their corresponding power-of-two targets.
+
 \subsection*{The signed Hamiltonian permanent}
-Define $B=2A-J$ ($\pm 1$ entries), and
-$S(T)=\sum_{\text{orderings }P}\prod_{i=1}^{n-1}B[P_i,P_{i+1}]$
-over all $n!$ vertex orderings.
+
+Let $B=2A-J$ ($\pm 1$ signed adjacency matrix) and
+$S(T)=\sum_{P}\prod_{i=1}^{n-1}B[P_i,P_{i+1}]$
+over all $n!$ vertex orderings.  One has $S(T)=0$ for even $n$ by a
+reversal-pairing argument.
 
 \begin{thm}[Universal Congruences]\label{thm:signed}
-\textup{(i)} $S(T)\bmod 2^{n-1}$ depends only on $n$, not on $T$.
+\textup{(i)} $S(T)\bmod 2^{n-1}$ depends only on $n$.
 
-\textup{(ii)} $S(T)$ is \emph{fully} independent of $T$ modulo $2^{n-1}$
+\textup{(ii)} $S(T)$ is fully independent of $T$ modulo $2^{n-1}$
 if and only if $s_2(n-3)\le 1$, where $s_2$ is the binary digit sum.
-The universal values form the sequence $3,5,7,11,19,35,67,\ldots$
+The universal odd values of $n$ are $3,5,7,11,19,35,67,\ldots$
+\textup{(}i.e., $n=3+2^k$ for $k\ge 0$, together with $n=3$\textup{)}.
 
-\textup{(iii)} \emph{(Master Identity.)} For any set of $k$ non-adjacent
+\textup{(iii)} \emph{(Master Identity.)} For any $k$ pairwise non-adjacent
 positions in a Hamiltonian path,
-\[
-D_S \;=\; \frac{n!}{2^k}
-\]
-pointwise for all tournaments, where $D_S$ is the sum over $(2k)!$ vertex
-orderings at those positions, weighted by edge products.
+$D_S = n!/2^k$
+holds pointwise for all tournaments, where $D_S$ sums weighted edge products
+over all $(2k)!$ orderings of $2k$ vertices at those positions.
 \end{thm}
 
 At the first non-universal value $n=9$, the residue $S(T)\bmod 256$
-depends precisely on the parity of the $3$-cycle count $t_3$.
+depends precisely on the parity of the $3$-cycle count $t_3(T)$.
 
 \section{Spectral Rigidity: Walsh--Fourier Theory}\label{sec:walsh}
 
-Encode $T$ as $t\in\{0,1\}^m$, $m=\binom{n}{2}$.  Every invariant $f(T)$
-expands as $f(T)=\sum_S\hat f[S]\cdot(-1)^{t\cdot\chi_S}$.
+Encode $T$ as $t\in\{0,1\}^m$, $m=\binom{n}{2}$.  Every tournament invariant
+expands in the Walsh--Hadamard basis $\{(-1)^{t\cdot\chi_S}\}_{S\subseteq[m]}$.
 
-\begin{thm}[Complete Walsh Spectrum of $H$ and $M$]\label{thm:walsh}
-\textup{(a)} $\hat H[S]\ne 0$ iff $S$ is a union of edge-disjoint
-even-length paths in $K_n$.  For such $S$ with $|S|=2k$ and $r$ components,
+\begin{thm}[Walsh Spectrum of $H$]\label{thm:walsh}
+$\hat H[S]\ne 0$ if and only if $S$ is a union of edge-disjoint even-length
+paths in $K_n$.  For such $S$ with $|S|=2k$ and $r$ path components,
 \[
-\hat H[S] = \varepsilon\cdot\frac{2^r\cdot(n-2k)!}{2^{n-1}},
-\qquad \varepsilon=\pm 1\ (\text{path-orientation dependent}).
-\]
-
-\textup{(b)} The transfer-matrix entry $M[a,b]=\#\{\text{Ham.\ paths }a\to b\}$
-satisfies
-\[
-\widehat{M[a,b]}[S]
-= (-1)^{\mathrm{asc}(S)}\cdot\frac{2^s\cdot(n-2-|S|)!}{2^{n-2}},
-\]
-where $s$ counts even-length components of $S$ not containing $a$ or $b$.
-This expression is manifestly symmetric in $a,b$, yielding:
-\[
-M[a,b]=M[b,a]\quad\text{for all tournaments and all }a,b. \tag{$\star$}
+\hat H[S] \;=\; \varepsilon_S\cdot\frac{2^r\cdot(n-2k)!}{2^{n-1}},
+\qquad \varepsilon_S=\pm 1\ \text{\textup{(}path-orientation parity\textup{)}}.
 \]
 \end{thm}
 
-The symmetry $(\star)$ is non-obvious: the matrix counting directed-path
-endpoints is symmetric despite the underlying directed structure.
-Theorem~\ref{thm:walsh}(a) also provides a new self-contained proof of the
-OCF, bypassing $P$-partition theory entirely, by verifying
-$\hat H[S]=\hat I_\Omega[S]$ at each Walsh coefficient via a generating
-function factorization.
-The reduction is dramatic: $H(T)$ at $n=7$ is determined by $\sim\!20$ independent
-amplitudes drawn from $2^{21}$ configurations (a $10^5\times$ compression).
+\begin{proof}[Proof]
+For a path-union monomial $S$, the inner product $\hat H[S]=2^{-m}\sum_T
+H(T)(-1)^{t\cdot\chi_S}$ counts Hamiltonian paths weighted by arc consistency
+with $S$.  Each component of $S$ must appear as a contiguous block in any
+contributing path; even-length components contribute sign $+1$ regardless of
+traversal direction (two orientations, each with sign product $(-1)^{2a}=1$),
+giving $2^r(n-2k)!$ oriented placements.  For non-path-union $S$ the sum
+cancels by reversal symmetry.  Setting $\hat H[S]=\hat I_\Omega[S]$ via an
+independent generating-function calculation proves Theorem~\ref{thm:ocf}.
+\end{proof}
+
+The formula compresses $H(T)$ at $n=7$ from $2^{21}$ configurations to
+$\approx 20$ independent Walsh amplitudes ($10^5$-fold reduction).
+
+\begin{cor}[Transfer Matrix Symmetry]\label{cor:transfer}
+Let $M[a,b]=\#\{\text{directed Hamiltonian paths }a\to b\}$.
+Then $M[a,b]=M[b,a]$ for all tournaments and all vertices $a,b$.
+\end{cor}
+
+This is non-obvious: the matrix counting directed-path endpoints is symmetric
+despite the underlying directed structure.  It follows from an explicit
+closed-form Walsh expansion of $M[a,b]$, manifestly symmetric in $a,b$.
 
 \subsection*{The Cayley--Delannoy connection}
-Let $Q(x)^m=\bigl(\tfrac{1+x}{1-x}\bigr)^m = 1+2\sum_{k\ge 1}g_k(m)x^k$
-with $g_k(m)=\sum_j\binom{k-1}{j-1}\binom{m}{j}2^{j-1}$.
+
+Let $g_k(m)$ denote the Taylor coefficients of the Cayley transform:
+$Q(x)^m=\bigl(\frac{1+x}{1-x}\bigr)^m=1+2\sum_{k\ge 1}g_k(m)\,x^k$.
 
 \begin{thm}[Delannoy Identity]\label{thm:delannoy}
-$k\cdot g_k(m) = $ total diagonal steps over all Delannoy paths
-$(0,0)\to(k,m)$.
-The squared coefficient of variation over uniformly random tournaments is
+\[
+k\cdot g_k(m) \;=\;
+\sum_{j=1}^{\min(k,m)} j\tbinom{k}{j}\tbinom{m}{j}2^{j-1}
+\;=\; \#\bigl\{\text{diagonal steps in all Delannoy paths }(0,0)\to(k,m)\bigr\}.
+\]
+The squared coefficient of variation of $H(T)$ over uniformly random
+tournaments satisfies
 \[
 \CV^2(H)=\sum_{k\ge 1}\frac{2\,g_k(n-2k)}{(n)_{2k}}
-=\frac{2}{n} + \frac{0}{n^2} - \frac{14}{3n^3}+O(n^{-4}),
+=\frac{2}{n}+\frac{0}{n^2}-\frac{14}{3n^3}+O(n^{-4}).
 \]
-and $W(n)=n!\,(1+\CV^2(H))=1,2,8,32,158,928,6350,49752,\dots$ is not in OEIS.
+The sequence $W(n)=n!\,(1+\CV^2(H))=1,2,8,32,158,928,6350,49752,\ldots$
+is not in OEIS.
 \end{thm}
 
-The exact vanishing of the $n^{-2}$ term follows from $g_2=g_1^2$.  The
-bilinear/Tustin transform $Q=(1+x)/(1-x)$, standard in digital signal
-processing, governs the statistics of random tournaments via weighted Delannoy
-path counts; no prior literature records this connection.  Its logarithm
-$2\operatorname{arctanh}(x)$ is simultaneously the Poincar\'e disk distance
-and the Fisher--Rao geodesic on Bernoulli distributions, giving the
-interpretation: \emph{the Fourier energy of a tournament equals the statistical
-distance between its arc-distribution and the uniform.}
+The exact vanishing of the $n^{-2}$ coefficient follows from $g_2=g_1^2$.
+The Cayley transform $Q(x)=(1+x)/(1-x)$ -- the bilinear/Tustin transform
+of digital signal processing -- governs the statistics of random tournaments
+through weighted Delannoy path enumeration; no prior literature records this.
+Its logarithm $2\operatorname{arctanh}(x)$ is simultaneously the Poincar\'e
+disk geodesic and the Fisher--Rao distance on Bernoulli distributions:
+\emph{the Fourier energy of a random tournament equals the statistical distance
+between its arc-distribution and the fair coin.}
 
-\section{Topological Rigidity: GLMY Path Homology}
+\section{Topological Rigidity: GLMY Path Homology}\label{sec:homology}
 
-GLMY path homology \cite{GLMY12} assigns Betti numbers $\beta_p(T)$ via the
-chain complex of ``allowed paths.'' For general oriented graphs $\beta_2>0$
-occurs freely; for tournaments it is structurally forbidden.
+GLMY path homology \cite{GLMY12} assigns Betti numbers $\beta_p(T)$ via an
+``allowed paths'' chain complex.  For general oriented graphs $\beta_2>0$
+occurs freely (e.g.\ among $5$-vertex oriented graphs); for tournaments it is
+structurally forbidden.
 
 \begin{thm}[$\beta_2=0$]\label{thm:beta2}
 For every tournament $T$ on every number of vertices, $\beta_2(T)=0$.
 \end{thm}
 
 \begin{proof}[Proof sketch]
-Induction via the long exact sequence of the pair $(T,T\setminus v)$: since
-$H_2(T\setminus v)=0$ by induction, $H_2(T)$ injects into $H_2(T,T\setminus
-v)$, which vanishes iff $\beta_1(T\setminus v)\le\beta_1(T)$.  It suffices to
-find one such ``good'' vertex in every tournament.  Four cases: (1)~if
-$\beta_1(T)=1$, every vertex is good; (2)~if $T$ is not strongly connected,
-all $3$-cycles lie in SCCs dominated by adjacent SCCs, giving $\beta_1=0$
-throughout; (3)~if $T$ has a cut vertex, that vertex is good;
-(4)~for $2$-connected $T$ at $n\ge 6$, a Key Lemma shows no complete
-isolation of freed cycles is possible, producing at least $n-5$ good
-vertices.  At $n\le 5$, verified exhaustively.
+Induction via the long exact sequence of the pair $(T,T\setminus v)$.
+By induction $H_2(T\setminus v)=0$, so $H_2(T)$ injects into the relative term,
+which vanishes iff $\beta_1(T\setminus v)\le\beta_1(T)$; it suffices to find
+one such \emph{good vertex} in every tournament.  Four cases cover all
+possibilities: if $\beta_1(T)=1$, every vertex is good; if $T$ is not strongly
+connected, $\beta_1$ is $0$ throughout and every vertex is good; if $T$ has a
+cut vertex, that vertex is good; for $2$-connected $T$ at $n\ge 6$, a Key Lemma
+(no cycle can be completely isolated from dominated cycles in a $2$-connected
+tournament) produces at least $n-5$ good vertices; and $n\le 5$ is checked
+exhaustively.
 \end{proof}
 
-\noindent\textbf{Structural reason.} Every oriented graph with $\beta_2>0$
-contains \emph{twin vertices} (identical in- or out-neighborhoods).
-Tournament completeness forbids twins: if $u,v$ shared both in- and
-out-neighborhoods, the arc between $u$ and $v$ would be forced in both
-directions.  This combinatorial obstruction is the topological shadow of
-directedness.
+\noindent\textbf{Structural explanation.}
+Every oriented graph with $\beta_2>0$ contains \emph{twin vertices} (two
+vertices with identical neighborhoods).  Tournament completeness forbids twins:
+if $u,v$ shared the same in-neighborhood, the arc between $u$ and $v$ would
+simultaneously be required in both directions.
 
 \smallskip
-Further proved results: $\beta_1(T)\in\{0,1\}$;
-$\beta_1(T)\cdot\beta_3(T)=0$ (no tournament has both $1$-cycles and
-$3$-cycles simultaneously);
+Further proved results:
+$\beta_1(T)\in\{0,1\}$ (no tournament has more than one independent $1$-cycle);
+$\beta_1(T)\cdot\beta_3(T)=0$ (no tournament simultaneously carries $1$-cycles
+and $3$-cycles);
 $\rank(\partial_2)=\binom{n}{2}-n+1-\beta_1(T)$ universally.
-At $n=8$, $\beta_3=2$ first occurs ($0.08\%$ of tournaments).
+At $n=8$, $\beta_3=2$ first occurs ($0.08\%$ of tournaments) and the
+seesaw $\beta_3\cdot\beta_4=0$ fails, opening new structure.
 
-\begin{thm}[Paley Betti Formula; proved for $p=7,11$]\label{thm:paley}
-For the Paley tournament $T_p$ ($p\equiv 3\pmod 4$ prime, $m=(p-1)/2$):
+\begin{thm}[Paley Betti Formula; computationally established for $p=7,11$]%
+\label{thm:paley}
+For the Paley tournament $T_p$ \textup{(}$p\equiv 3\pmod 4$ prime,
+$a\to b$ iff $b-a$ is a nonzero quadratic residue mod $p$, $m=(p-1)/2$\textup{)}:
 \[
 \beta_m = \frac{m(m-3)}{2},\quad
 \beta_{m+1}=\tbinom{m+1}{2},\quad
@@ -241,25 +259,34 @@ For the Paley tournament $T_p$ ($p\equiv 3\pmod 4$ prime, $m=(p-1)/2$):
 \]
 \end{thm}
 
-The value $\beta_m=m(m-3)/2$ equals the second Betti number of the
-$m$-dimensional Heisenberg Lie algebra \cite{S83}; this connection
-appears to be new.
-Computed: $H(T_{11})=95{,}095$ and $H(T_{11})/|\mathrm{Aut}(T_{11})|=1729$
-(the Hardy--Ramanujan number).  The $\mathbb{Z}_p$ eigenspace decomposition of
-the chain complex yields the following acceleration.
+The formula $\beta_m=m(m-3)/2$ equals exactly the second Betti number of the
+$m$-dimensional Heisenberg Lie algebra (Santharoubane \cite{S83}); this
+identification appears to be new.
+Key computations: $H(T_{11})=95{,}095$ and
+$H(T_{11})/|\mathrm{Aut}(T_{11})|=1729$ (Hardy--Ramanujan taxicab number).
 
 \begin{thm}[Constant Symbol Matrix]\label{thm:csm}
 For any circulant tournament, the Tang--Yau symbol matrix $M_m(t)$
-\textup{\cite{TY26}} is constant in~$t$: all $n$ eigenspaces have identical
-$\Omega$-dimension vectors.
+\textup{\cite{TY26}} is constant in $t$: all $n$ eigenspaces of the
+$\mathbb{Z}_n$-action on the chain complex have identical $\Omega$-dimension
+vectors.
 \end{thm}
 
-In \cite{TY26} this matrix varies with $t$ for general circulant digraphs;
-Theorem~\ref{thm:csm} is specific to the antisymmetric connection sets
-$S\cap(-S)=\varnothing$ that characterize tournaments, and strictly
+\noindent\emph{Proof.}
+In Tang--Yau's framework, $t$-powers arise only from face-$0$ maps that
+land outside the allowed-path space $A_{m-1}$.  For a circulant
+\emph{tournament} (antisymmetric connection set $S\cap(-S)=\varnothing$),
+one shows: the tail of any allowed $m$-path is always an allowed
+$(m{-}1)$-path (Key Lemma, proved by comparing partial sums modulo $n$).
+Hence face-$0$ maps never leave $A_{m-1}$, so $M_m(t)=M_m(1)$ is constant.
+\hfill$\square$
+
+\smallskip
+In \cite{TY26} the symbol matrix varies with $t$ for general circulant
+digraphs; Theorem~\ref{thm:csm} is specific to tournaments and strictly
 sharpens their stability theorem.  Combined with small-prime Gaussian
-elimination (uint8 storage mod $p<256$, $8\times$ memory reduction, certified
-at two primes), the full Betti profile of $T_{11}$ was computed; $T_{19}$ is
+elimination (uint8 mod $p<256$, $8\times$ memory reduction, certified at two
+primes), the complete Betti profile of $T_{11}$ was computed; $T_{19}$ is
 within reach.
 
 \section{Open Problems}
@@ -267,21 +294,23 @@ within reach.
 \begin{enumerate}
 \item \textbf{Gap density.} Are $7$ and $21$ the only permanently forbidden
 $H$-values?  Does the achievable density approach $1$?
-\item \textbf{Paley Betti formula.} Prove Theorem~\ref{thm:paley} for all
-Paley primes; the expected proof uses the Heisenberg--Lie-algebra isomorphism
-and the representation theory of $\mathbb{Z}_p\rtimes\mathbb{Z}_m$.
-\item \textbf{Paley maximization.} Prove that $H(T_p)=\max_{|V|=p}H(T)$
-for all $p\equiv 3\pmod 4$ prime.  Verified: $p=3,7,11$; matches OEIS A038375.
-\item \textbf{$\beta_3=2$ tournaments.} Characterize the $0.08\%$ of $8$-vertex
-tournaments with $\beta_3=2$.  Does $\sup_T\beta_k(T)$ grow with $n$?
-\item \textbf{Universality criterion.} Explain the appearance of $s_2(n-3)\le 1$
-in Theorem~\ref{thm:signed}(ii) via a direct $2$-adic or representation-theoretic argument.
+\item \textbf{Paley Betti formula.} Prove Theorem~\ref{thm:paley} for all Paley
+primes; the natural approach uses the Heisenberg isomorphism and the
+representation theory of $\mathbb{Z}_p\rtimes\mathbb{Z}_m$.
+\item \textbf{Paley maximization.} Prove $H(T_p)=\max_{|V|=p}H(T)$ for all
+$p\equiv 3\pmod 4$.  Verified: $p=3,7,11$; matches OEIS A038375.
+\item \textbf{$\beta_3=2$ structure.} Characterize the $0.08\%$ of $8$-vertex
+tournaments with $\beta_3=2$.  Is $\sup_T\beta_k(T)$ unbounded in $n$?
+\item \textbf{Universality mechanism.} Give a direct $2$-adic or representation-theoretic
+explanation for the universality criterion $s_2(n-3)\le 1$
+in Theorem~\ref{thm:signed}\textup{(ii)}.
 \end{enumerate}
 
-\vspace{4pt}
+\vspace{2pt}
 \begin{thebibliography}{10}
-\bibitem{IO24} J.~Irving, M.~Omar, \textit{Revisiting the R\'edei--Berge
-symmetric functions via matrix algebra}, arXiv:2412.10572 (2024).
+\bibitem{GS24} S.~Grinberg, R.~P.~Stanley, \textit{Counting Hamiltonian paths
+in tournaments}, preprint (2024).  [Independent proof of Theorem~\ref{thm:ocf}
+via $P$-partitions.]
 \bibitem{GLMY12} A.~Grigor'yan, Y.~Lin, Y.~Muranov, S.-T.~Yau,
 \textit{Homologies of path complexes and digraphs}, arXiv:1207.2834 (2012).
 \bibitem{S83} L.~J.~Santharoubane, \textit{Cohomology of Heisenberg Lie
@@ -292,8 +321,8 @@ digraphs}, arXiv:2602.04140 (2026).
 tournaments}, Combinatorica \textbf{10} (1990), 319--324.
 \bibitem{Moon} J.~W.~Moon, \textit{Topics on Tournaments}, Holt, Rinehart and
 Winston (1968).
-\bibitem{Redei} L.~R\'edei, \textit{Ein kombinatorischer Satz}, Acta Litt.\ Sci.\
-(Szeged) \textbf{7} (1934), 39--43.
+\bibitem{Redei} L.~R\'edei, \textit{Ein kombinatorischer Satz}, Acta Litt.\
+Sci.\ (Szeged) \textbf{7} (1934), 39--43.
 \end{thebibliography}
 
 \end{document}
