@@ -1,0 +1,6 @@
+n=25, type=circulant, prime=2147483629, N=33554432
+Allocating paths (3.1 GB) + cc (128 MB)...
+Built cyclic interval tournament S={1..12}
+Running cycle_cc mod 2147483629...
+cycle_cc done: 13.97s
+Saved 33554432 int32 entries to 05-knowledge/results/cc_n25_circulant_p2147483629.i32 (128 MB)

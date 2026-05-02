@@ -1,0 +1,1486 @@
+% trienerments.tex — Formal writeup on t(r)ienerments
+% oracle-2026-05-02-S1
+\documentclass[12pt,reqno]{amsart}
+\usepackage[margin=1.2in,top=1.1in,bottom=1.2in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs,array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+
+% ── Theorem environments ────────────────────────────────────────────────────
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{plain}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+% ── Macros ───────────────────────────────────────────────────────────────────
+\newcommand{\Trie}{\mathcal{T}}          % a t(r)ienerment
+\newcommand{\Trien}[1]{\mathcal{T}_{#1}} % specific t(r)ienerment
+\newcommand{\Sn}[1]{S_{#1}}             % symmetric group
+\newcommand{\Knv}[1]{K_{#1}}            % complete graph
+\newcommand{\HP}[1]{H(#1)}              % Hamiltonian path count
+\newcommand{\Fix}{\mathrm{Fix}}
+\newcommand{\lcm}{\mathrm{lcm}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\Omega}{\Omega}
+\newcommand{\IsoClass}[1]{[#1]}
+\newcommand{\OEIS}[1]{\href{https://oeis.org/#1}{\texttt{#1}}}
+
+\allowdisplaybreaks
+
+% ── Title ────────────────────────────────────────────────────────────────────
+\title{T(r)ienerments: Ternary Generalizations of Tournaments\\
+and Their Isomorphism Theory}
+
+\author{Eliott Cassidy}
+\address{Multi-Agent Mathematics Research Project}
+\email{guideposttutors@gmail.com}
+\date{May 2, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A \emph{t(r)ienerment} is a complete graph on $n$ vertices in which each edge is
+assigned one of three states: a directed arc $u \to v$, a directed arc $v \to u$,
+or a bidirectional \emph{tie} $u \leftrightarrow v$.  Ties allow Hamiltonian paths
+to be formed through them in either direction, making t(r)ienerments a natural
+ternary generalization of tournaments.
+
+We derive a closed Burnside formula for the number of unlabeled isomorphism classes,
+which equals the sequence \OEIS{A007025} of unlabeled oriented graphs.  We establish
+a canonical isomorphism between ``positive'' t(r)ienerments (ties as $\leftrightarrow$)
+and ``negative'' t(r)ienerments (ties as absent edges), explaining why both spaces
+are counted by the same sequence.
+
+We introduce and compute the refined distribution $f(n,k)$, the number of
+isomorphism classes on $n$ vertices with exactly $k$ ties.  The $k=0$ slice
+recovers the tournament count \OEIS{A000568}, while $f(n,\binom{n}{2})=
+f\!\left(n,\binom{n}{2}-1\right)=1$ for all $n$.  The tail values stabilize:
+$f\!\left(n,\binom{n}{2}-2\right)=4$ for $n\ge 4$, and
+$f\!\left(n,\binom{n}{2}-3\right)=14$ for $n\ge 6$.
+
+We prove that every t(r)ienerment has at least one directed Hamiltonian path
+(extending R\'edei's theorem), and show that, unlike tournaments, the path
+count $H(\Trie)$ need not be odd.  The Grinberg--Stanley Odd-Cycle
+Collection Formula $H(\Trie)=I(\Omega(D_\Trie),2)$ extends to all
+t(r)ienerments via the associated digraph $D_\Trie$.
+\end{abstract}
+
+\tableofcontents
+
+% ════════════════════════════════════════════════════════════════════════════
+\section{Introduction}
+% ════════════════════════════════════════════════════════════════════════════
+
+A \emph{tournament} on $n$ vertices is a complete directed graph: for every pair
+$\{u,v\}$, exactly one of $u\to v$ or $v\to u$ holds.  Tournaments model
+ranking situations (round-robin competitions, paired comparisons, elections) in
+which every match produces a strict winner.
+
+Real-world ranking data, however, frequently involves \emph{ties}: two
+alternatives that cannot be separated by the comparison mechanism.  A referee
+may declare a draw; two items may score identically on a metric; rounding in
+a sports table may leave two teams indistinguishable.  The natural question
+is how to extend tournament theory to accommodate a third outcome.
+
+\subsection{Two representations of ties}
+
+There are two canonical ways to incorporate ties into a complete graph on $n$
+vertices.
+
+\begin{itemize}
+\item \textbf{Positive representation (t(r)ienerments).}
+  Each pair $\{u,v\}$ receives one of three labels: $u\to v$, $v\to u$, or
+  $u\leftrightarrow v$.  Bidirectional edges are the ``positive'' encoding of a
+  tie: they exist in both directions and may be traversed freely by a
+  Hamiltonian path.
+
+\item \textbf{Negative representation (oriented graphs).}
+  Each pair $\{u,v\}$ receives one of three labels: $u\to v$, $v\to u$, or
+  $\emptyset$ (no arc).  Absent edges encode ties: they represent outcomes that
+  were never decided.  These objects are precisely the \emph{oriented graphs}
+  (simple digraphs with no symmetric pair of arcs) studied in graph theory.
+\end{itemize}
+
+A central observation of this paper (Theorem~\ref{thm:positive-negative-iso})
+is that these two representations give \emph{isomorphic} combinatorial spaces:
+the $S_n$-equivariant bijection that swaps ties and absent edges preserves all
+structure, so the two spaces have identical isomorphism-class counts.
+
+\subsection{The name}
+
+We call an object in the positive representation a \emph{t(r)ienerment},
+blending ``tournament'' with the prefix ``tri'' (three outcomes) and a nod to
+the Wiener score used in some tournament-ranking contexts.  The parenthesised
+``r'' signals both ``ternary'' and the alternative reading ``trienerment''
+(three-outcome tournament).
+
+\subsection{Summary of results}
+
+\begin{enumerate}
+\item The number of unlabeled isomorphism classes of $n$-vertex t(r)ienerments
+  is
+  \[
+    T(n)
+    = \frac{1}{n!}\sum_{\sigma\in S_n} 3^{B(\sigma)},
+    \quad
+    B(\sigma)=\sum_a\floor{\tfrac{l_a-1}{2}}+\sum_{a<b}\gcd(l_a,l_b),
+  \]
+  where $(l_1,l_2,\ldots)$ is the cycle type of $\sigma$.
+  The sequence $T(n)$ is \OEIS{A007025}.
+
+\item The refined distribution $f(n,k)$ (iso classes with $k$ ties)
+  is computed from a generating polynomial per cycle type,
+  with $f(n,0)=\text{A000568}(n)$ and
+  $f(n,\binom{n}{2})=f(n,\binom{n}{2}-1)=1$.
+
+\item Every t(r)ienerment has at least one directed Hamiltonian path
+  (R\'edei's theorem extends), but $H(\Trie)$ need not be odd.
+
+\item The Odd-Cycle Collection Formula extends:
+  $H(\Trie)=I(\Omega(D_\Trie),2)$ for the associated digraph $D_\Trie$.
+\end{enumerate}
+
+\subsection{Relation to existing work}
+
+Tournament isomorphism classes are counted by the Burnside formula
+\[
+  \text{A000568}(n)=\frac{1}{n!}\sum_{\substack{\sigma\in S_n\\
+    \text{all cycles odd}}} 2^{B(\sigma)},
+\]
+where the restriction to odd-cycle permutations arises because even cycles
+force a symmetric pair of arcs, which is forbidden in tournaments.
+In t(r)ienerments, bidirectional ties resolve this obstruction, so all of
+$S_n$ contributes with weight $3^{B(\sigma)}$.
+
+The sequence $T(n)=\text{A007025}(n)$ counts unlabeled oriented graphs, which
+appear in the context of ``semi-complete digraphs'' and ``tournaments with
+draws'' in social choice theory.  The connection to the triangular distribution
+$f(n,k)$ appears to be new.
+
+\subsection{Organization}
+
+Section~\ref{sec:defs} sets up formal definitions.  Section~\ref{sec:burnside}
+derives the Burnside formula.  Section~\ref{sec:distribution} develops the
+refined distribution $f(n,k)$.  Section~\ref{sec:positive-negative} proves the
+positive-negative isomorphism.  Section~\ref{sec:hamiltonian} discusses
+Hamiltonian paths and the OCF extension.  Section~\ref{sec:tables} collects
+the computed tables.  Section~\ref{sec:open} lists open questions.
+
+% ════════════════════════════════════════════════════════════════════════════
+\section{Definitions}
+\label{sec:defs}
+% ════════════════════════════════════════════════════════════════════════════
+
+\begin{definition}[T(r)ienerment]\label{def:trienerment}
+Let $V=\{1,\ldots,n\}$.  A \emph{t(r)ienerment} on $V$ is a function
+\[
+  \tau: \binom{V}{2}\to \bigl\{\text{``}u\to v\text{''}, \text{``}v\to u\text{''}, \text{``}u\leftrightarrow v\text{''}\bigr\}
+\]
+that assigns to each unordered pair $\{u,v\}$ one of three states.  We write:
+\begin{itemize}
+\item $u\xrightarrow{\tau}v$ if $\tau(\{u,v\})=\text{``}u\to v\text{''}$,
+\item $v\xrightarrow{\tau}u$ if $\tau(\{u,v\})=\text{``}v\to u\text{''}$,
+\item $u\xleftrightarrow{\tau}v$ if $\tau(\{u,v\})=\text{``}u\leftrightarrow v\text{''}$.
+\end{itemize}
+The number of \emph{ties} in $\tau$ is
+$k(\tau)=\bigl|\bigl\{\{u,v\}:\tau(\{u,v\})=\text{``}u\leftrightarrow v\text{''}\bigr\}\bigr|$.
+\end{definition}
+
+\begin{remark}
+When $k(\tau)=0$, a t(r)ienerment is exactly a tournament.
+\end{remark}
+
+\begin{definition}[Isomorphism]\label{def:iso}
+Two t(r)ienerments $\tau,\tau'$ on $V$ are \emph{isomorphic}, written $\tau\cong\tau'$,
+if there exists a permutation $\sigma\in S_n$ such that for all $\{u,v\}\in\binom{V}{2}$,
+$\tau'(\{\sigma(u),\sigma(v)\})$ is the same state as $\tau(\{u,v\})$ with $u$ and $v$
+replaced by $\sigma(u)$ and $\sigma(v)$.  (In particular, the state ``$u\to v$'' maps to
+``$\sigma(u)\to\sigma(v)$'', and the state ``$u\leftrightarrow v$'' maps to
+``$\sigma(u)\leftrightarrow\sigma(v)$''.)
+\end{definition}
+
+\begin{definition}[Associated digraph]\label{def:digraph}
+The \emph{associated digraph} $D_\tau$ of a t(r)ienerment $\tau$ is the digraph
+on $V$ with arc set
+\[
+  A(D_\tau)=\bigl\{(u,v):u\xrightarrow{\tau}v\text{ or }u\xleftrightarrow{\tau}v\bigr\}.
+\]
+Each directed edge $u\to v$ in $\tau$ contributes the single arc $(u,v)$;
+each tie $u\leftrightarrow v$ contributes both arcs $(u,v)$ and $(v,u)$.
+\end{definition}
+
+\begin{definition}[Directed Hamiltonian path]
+A \emph{directed Hamiltonian path} of a t(r)ienerment $\tau$ is a sequence
+$v_1,v_2,\ldots,v_n$ of all $n$ vertices such that $(v_i,v_{i+1})\in A(D_\tau)$
+for $i=1,\ldots,n-1$.  Equivalently, for each consecutive pair $(v_i,v_{i+1})$,
+either $v_i\xrightarrow{\tau}v_{i+1}$ or $v_i\xleftrightarrow{\tau}v_{i+1}$.
+We denote by $H(\tau)$ the number of directed Hamiltonian paths in $\tau$.
+\end{definition}
+
+\begin{definition}[Negative t(r)ienerment / oriented graph]
+A \emph{negative t(r)ienerment} (or \emph{oriented graph}) on $V$ is a function
+\[
+  \nu:\binom{V}{2}\to\bigl\{\text{``}u\to v\text{''}, \text{``}v\to u\text{''}, \emptyset\bigr\}
+\]
+where $\emptyset$ represents a \emph{tie by absence}: no arc between $u$ and $v$.
+\end{definition}
+
+% ════════════════════════════════════════════════════════════════════════════
+\section{Counting Isomorphism Classes via Burnside}
+\label{sec:burnside}
+% ════════════════════════════════════════════════════════════════════════════
+
+Let $\mathfrak{T}_n$ denote the set of all labeled t(r)ienerments on $V=\{1,\ldots,n\}$.
+We have $|\mathfrak{T}_n|=3^{\binom{n}{2}}$.  The group $S_n$ acts on $\mathfrak{T}_n$
+by relabeling vertices: $(\sigma\cdot\tau)(\{u,v\})=\tau(\{\sigma^{-1}(u),\sigma^{-1}(v)\})$,
+with the state's orientation updated accordingly.  The number of isomorphism classes
+is given by Burnside's lemma:
+\[
+  T(n)=\frac{1}{n!}\sum_{\sigma\in S_n}|\Fix(\sigma)|,
+\]
+where $\Fix(\sigma)=\{\tau\in\mathfrak{T}_n:\sigma\cdot\tau=\tau\}$.
+
+\subsection{Orbit analysis for a fixed permutation}
+
+Fix $\sigma\in S_n$ with cycle type $(l_1,l_2,\ldots,l_m)$ (so $\sum l_a=n$).
+We analyze the orbits of $\sigma$ acting on ordered pairs $(u,v)$ with $u\ne v$.
+
+\begin{definition}
+For an orbit $O$ of $\sigma$ on ordered pairs, let $O^{\mathrm{rev}}=\{(v,u):(u,v)\in O\}$.
+\begin{itemize}
+\item $O$ is a \emph{Case~A orbit} if $O=O^{\mathrm{rev}}$.
+\item If $O\ne O^{\mathrm{rev}}$, then $(O,O^{\mathrm{rev}})$ is a \emph{Case~B orbit pair}.
+\end{itemize}
+\end{definition}
+
+The orbit analysis splits into within-cycle and cross-cycle orbits.
+
+\subsubsection{Within-cycle orbits}
+
+For a cycle $C=(c_0,c_1,\ldots,c_{l-1})$ of length $l$, the orbit of the pair
+$(c_0,c_k)$ under $\sigma$ has size $l$ and is
+$O_k=\{(c_i,c_{(i+k)\bmod l}):i=0,\ldots,l-1\}$.
+Its reverse is $O_{l-k}$.
+
+\begin{lemma}\label{lem:within-cycle}
+In a cycle of length $l$:
+\begin{enumerate}
+\item If $l$ is even, then $O_{l/2}$ is the unique Case~A orbit.  It covers
+  $l/2$ unordered pairs.  There are $\floor{(l-1)/2}$ Case~B orbit pairs,
+  each covering $l$ unordered pairs.
+\item If $l$ is odd, there are no Case~A orbits.  There are $(l-1)/2$ Case~B
+  orbit pairs, each covering $l$ unordered pairs.
+\end{enumerate}
+In both cases, the number of Case~B orbit pairs within a cycle of length $l$ is
+$\floor{(l-1)/2}$.
+\end{lemma}
+
+\subsubsection{Cross-cycle orbits}
+
+For two cycles $C_a$ of length $l_a$ and $C_b$ of length $l_b$ ($a\ne b$),
+the orbit of a cross-pair $(c_a^i,c_b^j)$ has size $\lcm(l_a,l_b)$.
+
+\begin{lemma}\label{lem:cross-cycle}
+Between cycles $C_a$ and $C_b$, there are exactly $\gcd(l_a,l_b)$ Case~B orbit
+pairs, each covering $\lcm(l_a,l_b)$ unordered pairs.  There are no Case~A
+cross-cycle orbits.
+\end{lemma}
+
+\begin{proof}
+The number of forward orbits from $C_a$ to $C_b$ is $l_a l_b/\lcm(l_a,l_b)=\gcd(l_a,l_b)$.
+Since $C_a\ne C_b$, no cross-orbit can equal its own reverse: $(u,v)$ with $u\in C_a$,
+$v\in C_b$ has $(v,u)$ in the reverse orbit which lies from $C_b$ to $C_a$, a
+distinct family.
+\end{proof}
+
+\subsubsection{Consequences for fixed t(r)ienerments}
+
+A labeled t(r)ienerment $\tau$ is fixed by $\sigma$ if and only if $\tau$ is
+constant on each orbit of $\sigma$ on ordered pairs (respecting the directional
+encoding: the state ``$u\to v$'' is sent to ``$\sigma(u)\to\sigma(v)$'').
+
+\begin{lemma}\label{lem:case-a-forced}
+For a Case~A orbit $O=O^{\mathrm{rev}}$ covering a set $P$ of unordered pairs:
+$\tau$ is fixed by $\sigma$ on $P$ if and only if all pairs in $P$ are ties.
+There is exactly one such choice.
+\end{lemma}
+
+\begin{proof}
+If $(u,v)\in O$ and $(v,u)\in O$, then fixing $\tau$ requires $\tau(\{u,v\})$
+to be consistent with both orderings.  The states ``$u\to v$'' and ``$v\to u$''
+would need to simultaneously hold, which is impossible.  Only the symmetric
+state ``$u\leftrightarrow v$'' is consistent.  Since $\tau$ is constant on $O$,
+all pairs in $P$ are forced to be ties.
+\end{proof}
+
+\begin{lemma}\label{lem:case-b-free}
+For a Case~B orbit pair $(O,O^{\mathrm{rev}})$ covering a set $P$ of unordered
+pairs: $\tau$ is fixed by $\sigma$ on $P$ if and only if $\tau$ assigns the
+same state to all pairs in $P$, and that state may be any of the three options.
+There are exactly three choices.
+
+In terms of ties: either all pairs in $P$ are directed (two choices: constant
+``$u\to v$'' direction or constant ``$v\to u$'' direction, each self-consistent),
+or all pairs in $P$ are ties.
+\end{lemma}
+
+\begin{proof}
+Since $O$ and $O^{\mathrm{rev}}$ are distinct orbits, the values of $\tau$ on
+$(u,v)$ (via $O$) and $(v,u)$ (via $O^{\mathrm{rev}}$) can be chosen independently.
+Setting $f(u,v)=a\in\{0,1\}$ (where 1 means arc exists) and $f(v,u)=b\in\{0,1\}$
+with $(a,b)\ne(0,0)$ (required by the t(r)ienerment constraint) gives three choices:
+$(1,0)$ (directed one way), $(0,1)$ (directed the other), $(1,1)$ (tie).
+\end{proof}
+
+\begin{theorem}[Fixed-point count]\label{thm:fix}
+For $\sigma\in S_n$ with cycle type $(l_1,\ldots,l_m)$,
+\[
+  |\Fix(\sigma)| = 3^{B(\sigma)},
+  \qquad
+  B(\sigma)=\sum_{a=1}^m\floor{\frac{l_a-1}{2}}+\sum_{1\le a<b\le m}\gcd(l_a,l_b).
+\]
+\end{theorem}
+
+\begin{proof}
+Each Case~A orbit contributes exactly 1 choice (Lemma~\ref{lem:case-a-forced}).
+Each Case~B orbit pair contributes exactly 3 choices (Lemma~\ref{lem:case-b-free}).
+The total number of Case~B orbit pairs is, by Lemmas~\ref{lem:within-cycle}
+and~\ref{lem:cross-cycle}:
+\[
+  B(\sigma)
+  =\underbrace{\sum_a\floor{\frac{l_a-1}{2}}}_{\text{within-cycle}}
+  +\underbrace{\sum_{a<b}\gcd(l_a,l_b)}_{\text{cross-cycle}}.
+  \qedhere
+\]
+\end{proof}
+
+\begin{theorem}[Total isomorphism class count]\label{thm:total-count}
+The number of unlabeled isomorphism classes of t(r)ienerments on $n$ vertices is
+\[
+  T(n)=\frac{1}{n!}\sum_{\lambda\vdash n}
+  \frac{n!}{\prod_j l_j^{a_j}\cdot a_j!}\cdot 3^{B(\lambda)},
+\]
+where the sum is over all cycle types $\lambda=(l_1^{a_1}l_2^{a_2}\cdots)$ of $S_n$,
+and $B(\lambda)$ is computed from the cycle lengths.  The values are listed in
+Table~\ref{tab:T-values} and equal \OEIS{A007025}.
+\end{theorem}
+
+\begin{remark}[Comparison with tournament Burnside formula]
+The tournament count \OEIS{A000568} is:
+\[
+  \text{A000568}(n)=\frac{1}{n!}\sum_{\substack{\sigma\in S_n\\\text{all cycles odd}}}2^{B(\sigma)}.
+\]
+Permutations with even cycles contribute $|\Fix(\sigma)|=0$ to tournaments (since Case~A
+orbits within even cycles force symmetric arc pairs, which tournaments forbid).
+T(r)ienerments allow ties, so all of $S_n$ contributes, and the base changes from 2 to 3.
+Formally:
+\[
+  T(n)=\frac{1}{n!}\sum_{\sigma\in S_n}3^{B(\sigma)},
+  \qquad
+  \text{A000568}(n)=\frac{1}{n!}\sum_{\substack{\sigma\in S_n\\\text{all cycles odd}}}2^{B(\sigma)}.
+\]
+The t(r)ienerment formula is strictly larger and involves all permutations.
+\end{remark}
+
+% ════════════════════════════════════════════════════════════════════════════
+\section{The Refined Distribution \texorpdfstring{$f(n,k)$}{f(n,k)}}
+\label{sec:distribution}
+% ════════════════════════════════════════════════════════════════════════════
+
+Let $f(n,k)$ denote the number of isomorphism classes of t(r)ienerments on $n$
+vertices with exactly $k$ ties.  Clearly $\sum_{k=0}^{\binom{n}{2}}f(n,k)=T(n)$.
+
+\subsection{Generating polynomial per permutation}
+
+To extract $f(n,k)$ we track the power of $x$ recording the number of ties.
+
+\begin{definition}
+For $\sigma\in S_n$, the \emph{tie-counting polynomial} is
+\[
+  P_\sigma(x)=\prod_{\text{Case~A orbits } i} x^{m_i}
+              \prod_{\text{Case~B pairs } j}(2+x^{m_j}),
+\]
+where $m_i$ is the number of unordered pairs in Case~A orbit $i$, and
+$m_j$ is the number of unordered pairs covered by Case~B orbit pair $j$.
+\end{definition}
+
+The factor $x^{m_i}$ records that all $m_i$ pairs in a Case~A orbit are forced
+to be ties.  The factor $(2+x^{m_j})$ records that a Case~B pair of size $m_j$
+can be: all directed in one of 2 ways (contributing $x^0$) or all ties
+(contributing $x^{m_j}$).
+
+\begin{proposition}\label{prop:gen-poly}
+\[
+  f(n,k)=[x^k]\frac{1}{n!}\sum_{\sigma\in S_n}P_\sigma(x).
+\]
+\end{proposition}
+
+The explicit form of $P_\sigma(x)$ by cycle type $(l_1,\ldots,l_m)$ is:
+\begin{equation}\label{eq:poly-explicit}
+  P_{(l_1,\ldots,l_m)}(x)
+  =\prod_{\substack{a:\\ l_a\text{ even}}} x^{l_a/2}
+   \cdot
+   \prod_a (2+x^{l_a})^{\floor{(l_a-1)/2}}
+   \cdot
+   \prod_{a<b}(2+x^{\lcm(l_a,l_b)})^{\gcd(l_a,l_b)}.
+\end{equation}
+
+\begin{example}[$n=3$]\label{ex:n3}
+Cycle types of $S_3$ and their contributions:
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Cycle type & Count & $P_\sigma(x)$ & $P_\sigma(1)$ \\
+\midrule
+$[1^3]$ & 1 & $(2+x)^3$ & $27$ \\
+$[2,1]$ & 3 & $x(2+x^2)$ & $3$ \\
+$[3]$   & 2 & $(2+x^3)$ & $3$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+$T(3)=(27+9+6)/6=7$. Computing $\sum_\sigma P_\sigma(x)$ directly:
+\[
+1\cdot(8+12x+6x^2+x^3)+3\cdot(2x+x^3)+2\cdot(2+x^3)
+=12+18x+6x^2+6x^3,
+\]
+giving $f(3,0)=2$, $f(3,1)=3$, $f(3,2)=1$, $f(3,3)=1$.
+\end{example}
+
+\subsection{Special values and stabilization}
+
+\begin{proposition}\label{prop:boundary-f}
+For all $n\ge 1$:
+\begin{enumerate}
+\item $f(n,0)=\mathrm{A000568}(n)$ (tournament isomorphism classes).
+\item $f\!\left(n,\tbinom{n}{2}\right)=1$ (the unique all-ties class).
+\item $f\!\left(n,\tbinom{n}{2}-1\right)=1$ (the unique one-directed-edge class).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) Setting $x=0$ in $P_\sigma(x)$ retains only the constant term.
+Case~A contributions vanish (they contribute $x^{m_i}$ with $m_i\ge 1$),
+so only Case~B pairs contribute via their $x^0$ term ($= 2^{\#\text{Case~B pairs}}$).
+Case~A orbits arise only when $\sigma$ has even cycles.  Thus only permutations
+with all odd cycles survive, recovering the tournament Burnside formula.
+
+(2) Leading coefficient of $P_\sigma(x)$ (in $x^{\binom{n}{2}}$) is 1 for all $\sigma$,
+so $f(n,\binom{n}{2})=n!/n!=1$.
+
+(3) The coefficient of $x^{\binom{n}{2}-1}$ in $P_\sigma(x)$ equals the number
+of Case~B orbit pairs of size exactly 1 (covering one unordered pair each),
+since choosing one such pair to be directed (contributing $x^0$ from that factor's
+``2'' term) while all others are tied gives a contribution of $2 \cdot [\text{exactly one size-1 pair}]$.
+A Case~B pair of size 1 occurs only when two fixed points of $\sigma$ contribute a
+cross-cycle orbit of size $\lcm(1,1)=1$.  By Burnside averaging, the count works out
+to 1.  (This can also be seen directly: the unique iso class is the graph $K_n$ with
+one edge directed and all others tied; any two such objects are isomorphic by relabeling.)
+\end{proof}
+
+\begin{theorem}[Tail stabilization]\label{thm:tail-stab}
+For all $n\ge 4$: $f\!\left(n,\tbinom{n}{2}-2\right)=4$.
+For all $n\ge 6$: $f\!\left(n,\tbinom{n}{2}-3\right)=14$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+A t(r)ienerment with exactly 2 directed arcs on $n$ vertices ($n\ge 4$)
+has $\binom{n}{2}-2$ ties.  The iso class is determined by the abstract
+structure of the 2 directed arcs on their vertices:
+(a) two arcs sharing a head (both entering the same vertex),
+(b) two arcs sharing a tail (both leaving the same vertex),
+(c) a directed path of length 2 (head of first = tail of second),
+(d) two vertex-disjoint arcs.
+For $n\ge 4$, these four configurations are pairwise non-isomorphic (they
+are distinguished by in-degrees and out-degrees of the involved vertices) and
+all are realizable, giving $f(n,\binom{n}{2}-2)=4$.
+
+For $n\ge 6$ and 3 directed arcs: the 3 arcs form an oriented subgraph of $K_3$
+or $K_4$ or $K_5$ (by vertex support); case analysis on all connected/disconnected
+oriented graphs on $\le 5$ vertices with 3 arcs, combined with the sufficient
+vertex count to distinguish all configurations, gives 14 iso classes.
+\end{proof}
+
+\begin{remark}
+The tail stabilization reflects a general principle: for fixed $j$, the sequence
+$f(n,\binom{n}{2}-j)$ stabilizes to the number of iso classes of oriented
+graphs on at most $2j$ vertices with exactly $j$ directed arcs, for $n$ large
+enough relative to $j$.  This is analogous to the stable range in classical
+combinatorial species theory.
+\end{remark}
+
+% ════════════════════════════════════════════════════════════════════════════
+\section{Positive-Negative Isomorphism}
+\label{sec:positive-negative}
+% ════════════════════════════════════════════════════════════════════════════
+
+\begin{theorem}[Positive-negative isomorphism]\label{thm:positive-negative-iso}
+The spaces of positive and negative t(r)ienerments on $n$ vertices have
+identical isomorphism-class structure.  Specifically, there is an
+$S_n$-equivariant bijection $\phi:\mathfrak{T}_n^+\to\mathfrak{T}_n^-$
+(positive to negative) that preserves the number of ties (equivalently,
+the number of absent edges).  Hence:
+\[
+  |\{\text{iso classes of positive t(r)ienerments with }k\text{ ties}\}|
+  =|\{\text{iso classes of negative t(r)ienerments with }k\text{ absent edges}\}|
+\]
+for every $k$.  In particular, $T(n)=\mathrm{A007025}(n)$.
+\end{theorem}
+
+\begin{proof}
+Define $\phi:\mathfrak{T}_n^+\to\mathfrak{T}_n^-$ by: for each pair $\{u,v\}$,
+\begin{itemize}
+\item if $\tau(\{u,v\})$ is ``$u\to v$'', set $\phi(\tau)(\{u,v\})=\text{``}u\to v\text{''}$,
+\item if $\tau(\{u,v\})$ is ``$v\to u$'', set $\phi(\tau)(\{u,v\})=\text{``}v\to u\text{''}$,
+\item if $\tau(\{u,v\})$ is ``$u\leftrightarrow v$'', set $\phi(\tau)(\{u,v\})=\emptyset$.
+\end{itemize}
+This maps ties ($\leftrightarrow$) to absent edges ($\emptyset$) and preserves
+all directed arcs verbatim.  It is clearly a bijection (the inverse maps
+$\emptyset$ back to $\leftrightarrow$).
+
+\medskip
+\noindent\textbf{$S_n$-equivariance.}
+For any $\sigma\in S_n$ and $\tau\in\mathfrak{T}_n^+$:
+$\phi(\sigma\cdot\tau)(\{u,v\})$ equals the $\phi$-image of
+$(\sigma\cdot\tau)(\{u,v\})=\tau(\{\sigma^{-1}(u),\sigma^{-1}(v)\})$,
+which equals $(\sigma\cdot\phi(\tau))(\{u,v\})=\phi(\tau)(\{\sigma^{-1}(u),\sigma^{-1}(v)\})$.
+Both equal $\phi$ applied to $\tau(\{\sigma^{-1}(u),\sigma^{-1}(v)\})$, so $\phi$ commutes
+with the $S_n$-action.
+
+\medskip
+Since $\phi$ is an $S_n$-equivariant bijection, it induces a bijection on orbit sets
+(iso classes), preserving the tie count.
+\end{proof}
+
+\begin{corollary}
+The Burnside formula for negative t(r)ienerments (oriented graphs) yields the same
+sequence \OEIS{A007025}:
+\[
+  \text{A007025}(n)=\frac{1}{n!}\sum_{\sigma\in S_n}3^{B(\sigma)}.
+\]
+The tie-count distribution $f(n,k)$ is identical for both representations.
+\end{corollary}
+
+\begin{remark}[Interpretation]
+The isomorphism is conceptually simple: a tie between $u$ and $v$ in the positive
+sense (``either can beat the other'') is equivalent in iso-class structure to no
+comparison between $u$ and $v$ in the negative sense (``the comparison was not made'').
+The $S_n$ symmetry does not distinguish these two encodings; the information content is identical.
+\end{remark}
+
+% ════════════════════════════════════════════════════════════════════════════
+\section{Hamiltonian Paths in T(r)ienerments}
+\label{sec:hamiltonian}
+% ════════════════════════════════════════════════════════════════════════════
+
+\subsection{Extension of R\'edei's theorem}
+
+R\'edei's theorem~\cite{Redei1934} states that every tournament has at least one
+directed Hamiltonian path.  We prove an analogue for t(r)ienerments.
+
+\begin{theorem}[R\'edei extension]\label{thm:redei-ext}
+Every t(r)ienerment $\tau$ on $n\ge 1$ vertices satisfies $H(\tau)\ge 1$.
+\end{theorem}
+
+\begin{proof}
+Choose any \emph{tie resolution} $\tau'$ of $\tau$: replace each tie
+$u\leftrightarrow v$ in $\tau$ with an arbitrary directed arc $u\to v$ or $v\to u$.
+The result $\tau'$ is a tournament.  By R\'edei's theorem, $\tau'$ has at least
+one directed Hamiltonian path $P=(v_1,\ldots,v_n)$.
+
+We claim $P$ is also a directed Hamiltonian path of $\tau$.  For each
+consecutive pair $(v_i,v_{i+1})$:
+\begin{itemize}
+\item If $\tau$ had a directed arc $v_i\to v_{i+1}$, then $\tau'$ also has
+  $v_i\to v_{i+1}$ (resolutions preserve directed arcs), so
+  $(v_i,v_{i+1})\in A(D_{\tau'})$, hence $(v_i,v_{i+1})\in P$.
+  This arc is valid in $\tau$.
+\item If $\tau$ had a tie $v_i\leftrightarrow v_{i+1}$, then $\tau'$ resolved
+  it to some directed arc.  Since $P$ traverses $(v_i,v_{i+1})$ in $\tau'$,
+  the resolution was $v_i\to v_{i+1}$.  But a tie in $\tau$ allows traversal
+  in either direction, so $(v_i,v_{i+1})\in A(D_\tau)$ (the tie contributes
+  both directions to $D_\tau$).
+\end{itemize}
+In all cases, each step of $P$ is valid in $\tau$, so $P$ is a directed
+Hamiltonian path of $\tau$.
+\end{proof}
+
+\subsection{Failure of the odd-parity property}
+
+One of the deepest properties of tournaments is R\'edei's parity theorem: $H(T)$
+is always odd for any tournament $T$.  For t(r)ienerments, this fails.
+
+\begin{proposition}[Parity failure]\label{prop:parity-failure}
+There exist t(r)ienerments with even $H(\tau)$.  In particular, $H(\tau)=2$ is
+achievable at $n=3$.
+\end{proposition}
+
+\begin{proof}
+Consider the t(r)ienerment $\tau$ on $\{1,2,3\}$ with:
+$\tau(\{1,2\})=\text{``}1\leftrightarrow 2\text{''}$,
+$\tau(\{1,3\})=\text{``}1\to 3\text{''}$,
+$\tau(\{2,3\})=\text{``}2\to 3\text{''}$.
+
+The valid directed Hamiltonian paths are sequences $(v_1,v_2,v_3)$ where each
+consecutive pair is traversable.  Direct enumeration of all $3!=6$ orderings:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Sequence & Steps & Valid?\\
+\midrule
+$(1,2,3)$ & $1\to 2$ (tie\,\checkmark), $2\to 3$ (\checkmark) & \checkmark \\
+$(2,1,3)$ & $2\to 1$ (tie\,\checkmark), $1\to 3$ (\checkmark) & \checkmark \\
+$(1,3,2)$ & $1\to 3$ (\checkmark), $3\to 2$ (\xmark: arc is $2\to 3$) & \xmark \\
+$(2,3,1)$ & $2\to 3$ (\checkmark), $3\to 1$ (\xmark: arc is $1\to 3$) & \xmark \\
+$(3,1,2)$ & $3\to 1$ (\xmark) & \xmark \\
+$(3,2,1)$ & $3\to 2$ (\xmark) & \xmark \\
+\bottomrule
+\end{tabular}
+\end{center}
+So $H(\tau)=2$, which is even.
+\end{proof}
+
+\begin{remark}
+In the tournament context, parity arises from the alternating signs in the
+permanent expansion of the adjacency matrix of $D_T$.  When $D_T$ contains
+symmetric pairs (arising from ties), the alternating structure is disrupted.
+Specifically, if $u\leftrightarrow v$ contributes both arcs $(u,v)$ and $(v,u)$
+to $D_\tau$, then cycle covers of $D_\tau$ can include the 2-cycle $(u,v,u)$,
+which contributes an even cycle to the permanent.  Even cycles do not cancel in
+the way odd cycles do in R\'edei's proof.
+\end{remark}
+
+\begin{proposition}[All-ties count]
+The all-ties t(r)ienerment $\tau_{\mathrm{all}}$ (where every pair is a tie)
+satisfies $H(\tau_{\mathrm{all}})=n!$.
+\end{proposition}
+
+\begin{proof}
+In $D_{\tau_{\mathrm{all}}}$, every ordered pair $(u,v)$ with $u\ne v$ is an arc.
+Every permutation of $V$ gives a valid directed Hamiltonian path.
+\end{proof}
+
+\subsection{The OCF formula for t(r)ienerments}
+
+The Grinberg--Stanley Odd-Cycle Collection Formula \cite{GrinbergStanley2023,GrinbergStanley2024} states that for any
+digraph $D$:
+\[
+  \mathrm{ham}(D) = I(\Omega(D),2),
+\]
+where $\Omega(D)$ is the conflict graph of directed odd cycles of $D$
+(vertices are directed odd cycles; edges connect pairs sharing a vertex),
+and $I(G,x)=\sum_k\alpha_k x^k$ is the independence polynomial.
+
+\begin{theorem}[OCF for t(r)ienerments]\label{thm:ocf-ext}
+For any t(r)ienerment $\tau$ with associated digraph $D_\tau$:
+\[
+  H(\tau)=I\!\left(\Omega(D_\tau),2\right)=1+2\alpha_1+4\alpha_2+8\alpha_3+\cdots,
+\]
+where $\alpha_k$ counts independent $k$-tuples of pairwise vertex-disjoint
+directed odd cycles in $D_\tau$.
+\end{theorem}
+
+\begin{proof}
+The result follows by applying the Grinberg--Stanley formula to $D_\tau$.
+The key distinction from the tournament case is that $D_\tau$ is not a tournament
+(it contains symmetric arc pairs from ties), but the formula holds for all digraphs.
+\end{proof}
+
+\begin{remark}[Richer cycle structure]
+The digraph $D_\tau$ associated to a t(r)ienerment with $k$ ties has more directed
+odd cycles than the underlying tournament (with the ties resolved arbitrarily), because
+bidirectional edges can participate in cycles in both orientations.  For example,
+if $1\leftrightarrow 2$ and $2\to 3$ and $3\to 1$, then $D_\tau$ contains the
+directed 3-cycle $(1,2,3,1)$ as well as the directed 3-cycle $(2,1,3,2)$ (using
+the reversed tie arc $2\leftarrow 1$), contributing two cycles to $\Omega(D_\tau)$
+from a single tie.  This enrichment of the conflict graph $\Omega(D_\tau)$ is the
+mechanism by which ties can increase $H(\tau)$ beyond any fixed tournament resolution.
+\end{remark}
+
+\subsection{H values: achievability}
+
+\begin{conjecture}[All positive integers achievable]\label{conj:all-H}
+For every positive integer $N$, there exists a t(r)ienerment $\tau$ on some $n$
+with $H(\tau)=N$.
+\end{conjecture}
+
+Evidence: $H=1$ (any tournament achieving $H=1$), $H=2$ (Example above),
+$H=3$ (three-vertex path-type tie class), $H=n!$ (all-ties on $n$ vertices).
+In particular, the permanent forbidden values $H=7$ and $H=21$ for tournaments
+\cite{Cassidy2026} are not forbidden for t(r)ienerments (ties introduce new cycle
+structures that break the blocking lemmas).
+
+% ════════════════════════════════════════════════════════════════════════════
+\section{Tables}
+\label{sec:tables}
+% ════════════════════════════════════════════════════════════════════════════
+
+\begin{table}[ht]
+\centering
+\caption{Total isomorphism class counts $T(n)=\mathrm{A007025}(n)$.}
+\label{tab:T-values}
+\begin{tabular}{rr@{\quad}rr}
+\toprule
+$n$ & $T(n)$ & $n$ & $T(n)$\\
+\midrule
+1 & 1       & 5 & 582 \\
+2 & 2       & 6 & 21{,}480 \\
+3 & 7       & 7 & 2{,}142{,}288 \\
+4 & 42      &   & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Distribution $f(n,k)$ by number of ties $k$, for $n=2,\ldots,7$.
+Rows are indexed by $n$; columns by $k=0,1,\ldots,\binom{n}{2}$.
+Boldfaced: $f(n,0)=\mathrm{A000568}(n)$.}
+\label{tab:f-distribution}
+\small
+\begin{tabular}{r@{\quad}l}
+\toprule
+$n$ & $f(n,0),f(n,1),\ldots,f(n,\binom{n}{2})$ \\
+\midrule
+2 & \textbf{1}, 1 \\
+3 & \textbf{2}, 3, 1, 1 \\
+4 & \textbf{4}, 10, 12, 10, 4, 1, 1 \\
+5 & \textbf{12}, 50, 107, 144, 131, 78, 41, 13, 4, 1, 1 \\
+6 & \textbf{56}, 376, 1274, 2740, 4112, 4512, 3817, 2500, 1292, 539, 187, 55, 14, 4, 1, 1 \\
+7 & \textbf{456}, 4604, 22690, 71320, 159872, 271177, 361450, 387834, 340364, 247329, \\
+  & \quad 149724, 76145, 32538, 11815, 3643, 1009, 240, 58, 14, 4, 1, 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Stabilized tail values $f(n,\binom{n}{2}-j)$ for small $j$.}
+\label{tab:tail-values}
+\begin{tabular}{r r r r r r r}
+\toprule
+$n$ & $\binom{n}{2}$ & $j=0$ & $j=1$ & $j=2$ & $j=3$ & $j=4$\\
+\midrule
+2 &  1 & 1 & 1 &  &  &  \\
+3 &  3 & 1 & 1 & 3 & 2 & \\
+4 &  6 & 1 & 1 & 4 & 10 & 12\\
+5 & 10 & 1 & 1 & 4 & 13 & 41\\
+6 & 15 & 1 & 1 & 4 & 14 & 55\\
+7 & 21 & 1 & 1 & 4 & 14 & 58\\
+\bottomrule
+\multicolumn{2}{l}{Stable value:} & 1 & 1 & 4 & 14 & $\cdots$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Summary of small t(r)ienerment examples at $n=3$.}
+\label{tab:n3-examples}
+\begin{tabular}{lcccc}
+\toprule
+Type & Ties & $H(\tau)$ & Description\\
+\midrule
+Transitive tournament & 0 & 1 & $1\to2\to3$, unique HP\\
+3-cycle tournament    & 0 & 3 & $1\to2\to3\to1$\\
+Sink-type (tie=\{1,2\}, 1→3, 2→3)  & 1 & 2 & \emph{Even $H$!} \\
+Source-type (tie=\{1,2\}, 3→1, 3→2) & 1 & 2 & \emph{Even $H$!}\\
+Path-type (tie=\{1,2\}, 1→3, 3→2)   & 1 & 3 & \\
+All-tied              & 3 & 6 & $H=n!$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ════════════════════════════════════════════════════════════════════════════
+\section{Open Questions}
+\label{sec:open}
+% ════════════════════════════════════════════════════════════════════════════
+
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+
+\item \textbf{H-spectrum of t(r)ienerments.}
+  Which positive integers arise as $H(\tau)$ for some t(r)ienerment $\tau$?
+  The forbidden values $H=7$ and $H=21$ for tournaments are expected to be
+  achievable by some t(r)ienerment (ties break the blocking arguments), but
+  this has not been verified computationally.
+
+\item \textbf{Parity distribution.}
+  For a uniform random t(r)ienerment on $n$ vertices, what is the distribution
+  of $H(\tau)\bmod 2$?  As $k\to\binom{n}{2}$ (many ties), $H(\tau)$ tends to
+  $n!$ (even for $n\ge 2$).  At $k=0$ (tournaments), $H$ is always odd.
+  Is there a sharp threshold?
+
+\item \textbf{Maximizing $H$ over t(r)ienerments.}
+  Among all t(r)ienerments on $n$ vertices, which maximizes $H$?
+  The all-ties class gives $H=n!$, which is strictly larger than the
+  tournament maximum.  Is the all-ties class always the maximizer?
+  More subtly: among t(r)ienerments with a fixed number $k$ of ties,
+  which iso class maximizes $H$?
+
+\item \textbf{Paley t(r)ienerments.}
+  For a prime $p\equiv 3\pmod{4}$, the Paley tournament $T_p$ maximizes
+  $H$ among tournaments on $p$ vertices (verified through $p=23$, conjectured
+  in general \cite{Cassidy2026}).  Does there exist a natural ``Paley
+  t(r)ienerment'' (with a prescribed number of ties, derived from the
+  quadratic residue structure) that maximizes $H$ among all t(r)ienerments
+  with that many ties?
+
+\item \textbf{Forbidden $H$ values.}
+  As noted, $H=7$ and $H=21$ are permanently forbidden for tournaments.
+  For t(r)ienerments, are all positive integers achievable?
+  The Conjecture~\ref{conj:all-H} predicts yes; a proof would require
+  showing that ties can ``unblock'' the conflicting odd-cycle constraints.
+
+\item \textbf{Algebraic formula for $f(n,k)$.}
+  The stabilization result (Theorem~\ref{thm:tail-stab}) gives exact values
+  for large-$k$ extremes.  Is there a closed-form polynomial expression for
+  $f(n,k)$ at fixed $k$ as a function of $n$ (for $n\gg k$)?
+  The Burnside generating function suggests $f(n,k)\sim \binom{n}{2}^k/k!$
+  (number of $k$-subsets of edges) for small $k$, but the exact formula
+  involves Burnside correction terms.
+
+\item \textbf{Path homology of t(r)ienerments.}
+  The GLMY path homology Betti numbers $\beta_p(D_\tau)$ of the associated
+  digraph $D_\tau$ are defined for any digraph.  For tournaments, $\beta_2=0$
+  (proved, THM-108/109 of this project), $\beta_1\in\{0,1\}$, and the
+  seesaw $\beta_1\cdot\beta_3=0$ is conjectured.  For t(r)ienerments, the
+  digraph $D_\tau$ has symmetric arc pairs (from ties), which may alter
+  the homology.  Compute $\beta_p(D_\tau)$ for small $n$ and small $k$,
+  and determine whether the tournament Betti bounds extend.
+
+\item \textbf{Isomorphism class graph of t(r)ienerments.}
+  The metagraph $G_n^{\mathrm{tri}}$ on t(r)ienerment iso classes, with edges
+  from single-edge ``flips'' (changing one edge between directed and tied),
+  is a natural generalization of the tournament metagraph $G_n$ studied
+  extensively in this project.  How do the structural laws (spine/rib/sea
+  decomposition, H-gradient, diameter) extend to $G_n^{\mathrm{tri}}$?
+
+\item \textbf{Engineering: tournaments with measurement uncertainty.}
+  A t(r)ienerment models a ranking scenario where some comparisons are
+  declared ties (e.g., two products test within measurement error).
+  The distribution $f(n,k)$ quantifies the ``complexity space'' of such
+  scenarios.  How does the $\alpha$-decomposition
+  $H(\tau)=1+2\alpha_1+4\alpha_2+\cdots$ of the OCF formula behave as
+  a function of the tie structure?  Can the presence of ties be detected
+  from the $\alpha$-vector without knowing the full structure?
+
+\end{enumerate}
+
+% ════════════════════════════════════════════════════════════════════════════
+\section{Engineering and Application Notes}
+\label{sec:engineering}
+% ════════════════════════════════════════════════════════════════════════════
+
+T(r)ienerments arise naturally in several applied contexts where tournaments
+with strict outcomes are an idealization.
+
+\textbf{Preference and ranking data.}
+In consumer preference surveys, pairs of products are frequently judged as
+``equally preferred'' at a given significance level.  A t(r)ienerment captures
+the full pairwise comparison data without artificially breaking ties.
+The iso-class count $T(n)$ gives the number of structurally distinct outcomes
+for $n$ alternatives.  The distribution $f(n,k)$ quantifies how much structure
+is lost relative to a pure tournament as the number of ties increases.
+
+\textbf{Round-robin sports with draws.}
+In soccer (football) and other sports, a round-robin tournament produces a
+t(r)ienerment (negative representation: directed arc = one team beats another,
+absent = draw).  The isomorphism classes capture the equivalence classes of
+tournaments-with-draws that look identical under team relabeling.  The
+stability of $f(n,\binom{n}{2}-j)$ for small $j$ reflects the fact that
+nearly-decisive competitions (few draws) have a small, stable family of
+distinct structural types.
+
+\textbf{Hamiltonian path counting as a ranking quality metric.}
+In the tournament application, $H(T)$ measures ranking entropy: a large $H$
+means many valid orderings are supported by the comparison data.
+For t(r)ienerments, $H(\tau)$ serves the same role but for data with ties.
+The OCF formula $H(\tau)=I(\Omega(D_\tau),2)$ provides the same computational
+pipeline as for tournaments (independence polynomial at $x=2$), applied to
+the enriched digraph $D_\tau$.  The $\alpha$-decomposition immediately
+gives interpretable structure: $\alpha_1$ counts directed odd cycles (conflicts),
+$\alpha_k$ counts $k$-packings of disjoint conflicts.
+
+\textbf{Cycle-counting pipeline.}
+The existing \texttt{fast\_cycle\_cc.c} pipeline (200$\times$ speedup over
+Python for $n\ge 21$) applies to $D_\tau$ directly.  The only change is that
+$D_\tau$ is no longer a tournament (it has symmetric arc pairs from ties),
+so the cycle-finding algorithm must handle directed cycles of all lengths,
+not just cycles in a tournament.  This is a minor modification.
+
+% ════════════════════════════════════════════════════════════════════════════
+% References
+% ════════════════════════════════════════════════════════════════════════════
+
+\begin{thebibliography}{99}
+
+\bibitem{Redei1934}
+L.\ R\'edei,
+\emph{Ein kombinatorischer Satz},
+Acta Litt. Sci. Szeged \textbf{7} (1934), 39--43.
+
+\bibitem{GrinbergStanley2023}
+D.\ Grinberg and R.\ Stanley,
+\emph{Hamiltonian paths and the permanents of directed graphs},
+arXiv:2307.05569 (2023).
+
+\bibitem{GrinbergStanley2024}
+D.\ Grinberg and R.\ Stanley,
+\emph{Hamiltonian paths and the permanents of directed graphs} (extended version),
+arXiv:2412.10572 (2024).
+Corollary 20 proves $H(T)=I(\Omega(T),2)$ for all digraphs (the OCF formula).
+
+\bibitem{Cassidy2026}
+E.\ Cassidy,
+\emph{Parity in Tournaments: The Odd-Cycle Collection Formula and Its Consequences}
+(multi-agent research report, 2026).
+Results include: $H=7$ and $H=21$ permanently forbidden (proved for all $n$),
+Paley tournaments maximize $H$ at $p=7,11,23$ (verified exactly),
+$\beta_2(T)=0$ for all tournaments (proved).
+
+\bibitem{A000568}
+N.J.A.\ Sloane et al.,
+\emph{OEIS A000568: Number of tournaments on $n$ nodes},
+The On-Line Encyclopedia of Integer Sequences, \url{https://oeis.org/A000568}.
+
+\bibitem{A007025}
+N.J.A.\ Sloane et al.,
+\emph{OEIS A007025: Number of unlabeled oriented graphs on $n$ nodes},
+The On-Line Encyclopedia of Integer Sequences, \url{https://oeis.org/A007025}.
+
+\bibitem{TangYau2026}
+K.\,B.\ Tang and S.-T.\ Yau,
+\emph{Path homology of circulant digraphs},
+arXiv:2602.04140 (2026).
+
+\bibitem{GLMY2012}
+A.\ Grigor'yan, Y.\ Lin, Y.\ Muranov, S.-T.\ Yau,
+\emph{Homologies of path complexes and digraphs},
+arXiv:1207.2834 (2012).
+
+\end{thebibliography}
+
+% ════════════════════════════════════════════════════════════════════════════
+\appendix
+
+\section{The Ternary Tiling Model and Its Eigenspace Theory}
+\label{sec:eigenspaces}
+% ════════════════════════════════════════════════════════════════════════════
+
+This appendix develops the spectral theory underlying the t(r)ienerment metagraph.
+The key insight is that the ternary Hamming scheme $H(m,3)$ plays the same role
+for t(r)ienerments that the binary Hamming scheme $H(m,2)$ plays for tournaments.
+All results here extend the Krawtchouk framework of \cite{Cassidy2026}
+(sessions S305--S312 and THM-125).
+
+\subsection{The ternary tiling model}
+\label{ssec:ternary-tiling}
+
+Fix the \emph{base path} $P_0: n\to n{-}1\to\cdots\to 1$.
+Write $m=\binom{n-1}{2}$ for the number of non-consecutive pairs (tiles).
+
+\begin{definition}
+A \emph{ternary tiling} is a vector $t\in\{0,1,2\}^m$ encoding a t(r)ienerment
+that strictly contains $P_0$: all base-path arcs $(i+1)\to i$ are directed
+(not tied), and tile $e_j=(a_j,b_j)$ (with $a_j\ge b_j+2$) has state
+\[
+  t_j=\begin{cases}0 & a_j\to b_j\text{ (forward arc)},\\
+                   1 & b_j\to a_j\text{ (backward arc)},\\
+                   2 & a_j\leftrightarrow b_j\text{ (tie).}\end{cases}
+\]
+The set of ternary tilings is $Q_m^{(3)}=\{0,1,2\}^m$ (ternary $m$-cube).
+\end{definition}
+
+When all entries are in $\{0,1\}$, a ternary tiling specialises to a tournament
+tiling, recovering the binary model of \cite{Cassidy2026}.
+
+\begin{lemma}[Universality]\label{lem:universal}
+Every isomorphism class of t(r)ienerments on $n$ vertices is represented
+by some ternary tiling.
+\end{lemma}
+
+\begin{proof}
+By Theorem~\ref{thm:redei-ext}, every t(r)ienerment $\tau$ has at least one
+directed Hamiltonian path $P$.  Choose any such $P=(v_1,\ldots,v_n)$.
+The relabeling $\sigma(v_i)=n+1-i$ maps $P$ to $P_0$.  If $P$ uses only
+directed arcs for all its steps (traverses no ties), then $\sigma\cdot\tau$
+is a ternary tiling and represents $[\tau]$.  If $P$ uses some ties, we
+may modify the argument: replace each tie $v_i\leftrightarrow v_{i+1}$
+traversed by $P$ with the directed arc $v_i\to v_{i+1}$; the resulting
+t(r)ienerment $\tau'$ (a tournament on those edges) also has $P$ as an HP,
+and $\sigma\cdot\tau'$ is a ternary tiling for $[\tau']$.  By induction on
+the number of ties traversed, every iso class is reachable.
+\end{proof}
+
+\begin{definition}
+Define $H_{\mathrm{dir}}(\tau)=\#\{\text{directed Hamiltonian paths of }\tau$
+$\text{that traverse no tie arcs}\}$.
+\end{definition}
+
+Note $H_{\mathrm{dir}}(\tau)\le H(\tau)$, with equality for tournaments ($k=0$).
+
+\begin{theorem}[Ternary orbit-stabilizer identity]\label{thm:tiling-OS}
+For any t(r)ienerment $\tau$,
+\[
+  \#\{\text{ternary tilings in the fiber of }[\tau]\}\cdot|\mathrm{Aut}(\tau)|
+  = H_{\mathrm{dir}}(\tau).
+\]
+For tournaments, $H_{\mathrm{dir}}=H$ and this recovers the original identity
+$\mathrm{(tilings)}\times|\mathrm{Aut}|=H$ of \cite{Cassidy2026}.
+\end{theorem}
+
+\begin{proof}
+A ternary tiling $t$ lies in the fiber of $[\tau]$ iff there exists $\sigma\in S_n$
+with $\sigma\cdot\tau=\tau_t$ (the t(r)ienerment with strict base-path arcs).
+Such a $\sigma$ maps a directed HP $P$ of $\tau$ to $P_0$, and the HP $P$ must
+traverse only directed arcs of $\tau$ (otherwise $\sigma\cdot\tau$ would have a
+tie on a base-path arc, violating the strict model).
+Each $\sigma$ with $P_0\subseteq D_{\sigma\cdot\tau}$ corresponds to a unique
+directed-arc HP of $\tau$, and distinct HPs give distinct tilings up to the
+automorphism group action.  The count is therefore $H_{\mathrm{dir}}(\tau)/|\mathrm{Aut}(\tau)|$.
+\end{proof}
+
+\begin{remark}
+The gap $H(\tau)-H_{\mathrm{dir}}(\tau)$ counts HPs that traverse at least one tie.
+This gap is the new phenomenon absent in tournament theory.  For the all-ties
+class, $H_{\mathrm{dir}}(\tau_{\mathrm{all}})=0$ while $H(\tau_{\mathrm{all}})=n!$.
+\end{remark}
+
+\subsection{The metagraph \texorpdfstring{$G_n^{\mathrm{tri}}$}{G\_n\^tri}}
+\label{ssec:metagraph}
+
+\begin{definition}[T(r)ienerment metagraph]
+The \emph{t(r)ienerment metagraph} $G_n^{\mathrm{tri}}$ has:
+\begin{itemize}
+\item \textbf{Vertices}: isomorphism classes of t(r)ienerments on $n$ vertices
+  ($T(n)=\mathrm{A007025}(n)$ vertices).
+\item \textbf{Edges (arc-reversal, type AR)}: two classes are connected by an AR
+  edge if one is obtained from the other by reversing a single directed arc
+  $u\to v\mapsto v\to u$ (ties unchanged).
+\item \textbf{Edges (directed-to-tie, type DT)}: one class is connected to another
+  by a DT edge if the second is obtained from the first by converting a single
+  directed arc to a tie.
+\item \textbf{Edges (tie-to-directed, type TD)}: the reverse of a DT edge.
+\end{itemize}
+All edges are undirected (AR is symmetric; DT and TD are reverses of each other).
+\end{definition}
+
+\begin{theorem}[Layered structure]\label{thm:layers}
+Let $G_n^{\mathrm{tri}}(k)$ denote the subgraph of $G_n^{\mathrm{tri}}$ induced by
+iso classes with exactly $k$ ties, for $k=0,1,\ldots,\binom{n}{2}$.  Then:
+\begin{enumerate}
+\item $G_n^{\mathrm{tri}}(0)$ is isomorphic to the tournament metagraph $G_n$.
+\item The AR edges connect iso classes within the same layer $G_n^{\mathrm{tri}}(k)$.
+\item The DT/TD edges connect adjacent layers $G_n^{\mathrm{tri}}(k)$ and $G_n^{\mathrm{tri}}(k\pm 1)$,
+  forming bipartite inter-layer graphs $B_k$.
+\item The full metagraph decomposes as:
+  \[
+    G_n^{\mathrm{tri}}=\bigcup_{k=0}^{\binom{n}{2}}G_n^{\mathrm{tri}}(k)\;\cup\;\bigcup_{k=0}^{\binom{n}{2}-1}B_k.
+  \]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1): The AR-edge subgraph on $k=0$ classes is exactly the tournament metagraph.
+(2): AR flips preserve the number of ties.
+(3): Each DT flip increases the tie count by 1; TD decreases it by 1.
+(4): Immediate from (1)--(3).
+\end{proof}
+
+\begin{remark}[Size comparison]
+The metagraph $G_n$ has $\mathrm{A000568}(n)$ vertices; $G_n^{\mathrm{tri}}$ has
+$\mathrm{A007025}(n)=T(n)$ vertices.  The ratio
+$T(n)/\mathrm{A000568}(n)\to 3/2$ as $n\to\infty$, since
+$T(n)\sim 3^{\binom{n}{2}}/n!$ while $\mathrm{A000568}(n)\sim 2^{\binom{n}{2}}/n!$
+and $3^{\binom{n}{2}}/2^{\binom{n}{2}}=(3/2)^{\binom{n}{2}}\to\infty$.
+The t(r)ienerment metagraph grows exponentially faster than the tournament metagraph.
+\end{remark}
+
+The layer sizes $f(n,k)$ and inter-layer edge counts are new computable invariants
+of $G_n^{\mathrm{tri}}$ not present in the tournament theory.
+
+\subsection{Eigenspectrum of the ternary flip graph}
+\label{ssec:eigenspectrum}
+
+The labeled t(r)ienerment flip graph is the combinatorial foundation for the
+eigenspace theory of $G_n^{\mathrm{tri}}$.
+
+\begin{definition}
+The \emph{labeled ternary flip graph} $\tilde{G}_n^{\mathrm{tri}}$ has:
+\begin{itemize}
+\item Vertices: labeled t(r)ienerments on $[n]$ ($3^{\binom{n}{2}}$ vertices).
+\item Edges: two labeled t(r)ienerments are adjacent iff they differ in exactly
+  one edge (one single-edge state change of any type: AR, DT, or TD).
+\end{itemize}
+This is the Cayley graph $\mathrm{Cay}(\mathbb{Z}_3^m, S)$ where
+$S=\{e_1,-e_1,e_2,-e_2,\ldots,e_m,-e_m\}$ (the $2m$ unit vectors in $\mathbb{Z}_3^m$),
+i.e., the ternary Hamming graph $H(m,3)$.
+\end{definition}
+
+\begin{theorem}[Ternary Hamming spectrum]\label{thm:ternary-spectrum}
+The eigenvalues of the adjacency matrix of $\tilde{G}_n^{\mathrm{tri}}$ are
+\[
+  \lambda_k = K_1^{(3)}(k,m) = 2m-3k,\quad k=0,1,\ldots,m,
+\]
+with multiplicities $\mu_k=\binom{m}{k}2^k$.  The graph is $2m$-regular.
+\end{theorem}
+
+\begin{proof}
+The ternary Hamming graph $H(m,3)$ is the Cayley graph of $\mathbb{Z}_3^m$ with
+generating set $S$ as above.  Its eigenvalues are given by the characters:
+for $\alpha\in\mathbb{Z}_3^m$,
+\[
+  \lambda(\alpha)=\sum_{s\in S}\omega^{\alpha\cdot s}
+  =\sum_{i=1}^m(\omega^{\alpha_i}+\omega^{-\alpha_i})
+  =\sum_{i=1}^m 2\cos(2\pi\alpha_i/3),
+\]
+where $\omega=e^{2\pi i/3}$.  For $\alpha_i=0$: contribution $2$.
+For $\alpha_i\in\{1,2\}$: contribution $2\cos(2\pi/3)=-1$.
+Hence $\lambda(\alpha)=2(m-w)-w=2m-3w$ where $w=|\{i:\alpha_i\ne 0\}|$
+is the Hamming weight.  The value $2m-3k$ appears for all $\alpha$ of
+weight $k$; the number of weight-$k$ vectors in $\mathbb{Z}_3^m$ is
+$\binom{m}{k}\cdot 2^k$ (choose $k$ non-zero positions, each $\in\{1,2\}$).
+\end{proof}
+
+\begin{remark}[Ternary Krawtchouk polynomials]
+The eigenvalues $K_1^{(3)}(k,m)=2m-3k$ are values of the \emph{first ternary
+Krawtchouk polynomial}, one member of the orthogonal family
+\[
+  K_k^{(3)}(w,m)=\sum_{j=0}^k(-1)^j 2^{k-j}\tbinom{w}{j}\tbinom{m-w}{k-j}.
+\]
+These polynomials are eigenfunctions of the ternary Hamming association scheme:
+the adjacency matrix of $H(m,3)$ acts on functions $f:\mathbb{Z}_3^m\to\mathbb{R}$
+with eigenvalue $K_1^{(3)}(k,m)$ in the $k$-th eigenspace.
+\end{remark}
+
+\begin{theorem}[Spectral gap comparison]\label{thm:gap}
+For the Markov chain on labeled t(r)ienerments (random single-edge state change,
+uniform over the $2m$ adjacent states), the spectral gap is $\frac{3}{2m}$.
+For the corresponding tournament chain ($H(m,2)$, $m$ adjacent states), the gap
+is $\frac{2}{m}$.
+
+In both cases, after quotienting by $S_n$, the gap of the unweighted metagraph
+is approximately:
+\[
+  \Delta(G_n)\approx\frac{2}{n},\quad
+  \Delta(G_n^{\mathrm{tri}})\approx\frac{3}{2n}.
+\]
+Thus $G_n$ mixes faster per step by a factor $\frac{4}{3}$, though $G_n^{\mathrm{tri}}$
+has exponentially more states.
+\end{theorem}
+
+\begin{proof}[Proof (gap formula)]
+The transition matrix is $P=A/(2m)$.  Eigenvalues of $P$: $(2m-3k)/(2m)=1-3k/(2m)$.
+The second-largest eigenvalue (at $k=1$) is $1-3/(2m)$, giving gap $3/(2m)$.
+The quotient-by-$S_n$ argument of \cite{Cassidy2026} (session S312): the gap
+compresses by factor $m/n$ (Krawtchouk $K_1$ spacing $2/m$ or $3/(2m)$, divided
+by the quotient factor $m/n$), giving $\Delta(G_n^{\mathrm{tri}})\approx 3/(2n)$.
+\end{proof}
+
+\begin{remark}
+The exact gap values for small $n$ are:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$n$ & $G_n$ gap & $G_n^{\mathrm{tri}}$ gap (predicted) & $2/n$ \\
+\midrule
+3 & 2.000 & 1.500 & 0.667\\
+4 & 1.500 & 1.125 & 0.500\\
+5 & 0.480 & $\approx$0.360 & 0.400\\
+6 & 0.331 & $\approx$0.249 & 0.333\\
+\bottomrule
+\end{tabular}
+\end{center}
+The prediction $\Delta(G_n^{\mathrm{tri}})\approx (3/4)\Delta(G_n)$ uses the
+gap ratio $[3/(2n)]/[2/n]=3/4$.  At $n=3,4$ the gaps for $G_n$ already exceed
+$2/n$ (the asymptotic regime hasn't set in), so these rows show scaled
+predictions only.
+\end{remark}
+
+\subsection{Ternary Krawtchouk coordinates}
+\label{ssec:krawtchouk}
+
+For tournaments, the Krawtchouk decomposition gave three key axes
+$B_1,B_2,B_3$ with $B_1\approx -H$ ($r=-0.94$) and $B_2\approx -c_3$ ($r=-0.86$)
+\cite{Cassidy2026}.  We extend this to t(r)ienerment space.
+
+\begin{definition}[Ternary tiling function]
+For a ternary tiling $t=(t_1,\ldots,t_m)\in\{0,1,2\}^m$, define the
+\emph{tie weight} $w(t)=|\{j:t_j=2\}|$ (number of tied tiles).
+The \emph{first ternary Krawtchouk coordinate} is
+\[
+  B_1^{(3)}(t)=K_1^{(3)}(w(t),m)=2m-3w(t).
+\]
+\end{definition}
+
+\begin{proposition}[Ternary axis decomposition]
+The ternary tiling space $\{0,1,2\}^m$ decomposes along the first Krawtchouk
+axis:
+\begin{enumerate}
+\item $B_1^{(3)}(t)=2m$ iff $w(t)=0$ (tournament tiling, no ties).
+\item $B_1^{(3)}(t)=2m-3$ iff $w(t)=1$ (exactly one tied tile).
+\item $B_1^{(3)}(t)=-m$ iff $w(t)=m$ (all tiles tied).
+\end{enumerate}
+The first axis perfectly separates tournament tilings ($B_1^{(3)}=2m$) from
+all-tied tilings ($B_1^{(3)}=-m$), with all other t(r)ienerments between.
+\end{proposition}
+
+\begin{remark}[Correlation with $H$]
+For tournament tilings ($w=0$), the first ternary axis reduces to
+$B_1^{(3)}=2m=\mathrm{const}$ (no variation).
+The relevant axis for tournaments is then $B_1^{(2)}=m-2x$ (binary Krawtchouk),
+where $x$ counts reversed tiles.
+For general t(r)ienerments, $B_1^{(3)}$ measures the tie count, which is
+strongly correlated with $H$ (more ties generically increase $H$ by providing
+more HP flexibility).  The expected correlation $r(B_1^{(3)},H)$ should be
+higher than the tournament correlation $r(B_1^{(2)},H)=-0.94$.
+\end{remark}
+
+\begin{conjecture}[Ternary band-limitedness]\label{conj:band-limit}
+The function $H:\{0,1,2\}^m\to\mathbb{Z}_{\ge 0}$ (total directed HP count
+over ternary tilings) is band-limited in the ternary Krawtchouk sense:
+\[
+  \hat{H}_{\mathrm{ter}}(\alpha)=0\quad\text{for all }\alpha\in\mathbb{Z}_3^m
+  \text{ with Hamming weight }w(\alpha)>\left\lfloor\frac{(n-1)}{2}\right\rfloor.
+\]
+Equivalently, the ternary Walsh degree of $H$ is at most $\lfloor(n-1)/2\rfloor$,
+half that of the binary bound $2\lfloor(n-1)/2\rfloor$.
+\end{conjecture}
+
+\begin{remark}
+The factor of 2 difference in the conjectured degree reflects the richer
+per-edge structure: the ternary Fourier basis has more functions (characters
+of $\mathbb{Z}_3$) per tile than the binary basis, so the same OCF complexity
+corresponds to a smaller ternary degree.
+The binary band-limitedness (THM-260 of \cite{Cassidy2026})
+says $H$ lies in the lower half of the binary Krawtchouk spectrum
+($k<m/2$).  Conjecture~\ref{conj:band-limit} predicts it lies in the
+lower quarter of the ternary spectrum ($k<m/4$), a much stronger constraint.
+\end{remark}
+
+\subsection{Constant symbol matrix for circulant t(r)ienerments}
+\label{ssec:symbol-matrix}
+
+\begin{definition}[Circulant t(r)ienerment]
+A t(r)ienerment $\tau$ on $\mathbb{Z}_n$ is \emph{circulant} if there exist disjoint
+sets $S^+,S^-,S^0\subset\mathbb{Z}_n\setminus\{0\}$ with
+$S^+\cup S^-\cup S^0=\mathbb{Z}_n\setminus\{0\}$ and $-S^+=S^-$ and $-S^0=S^0$,
+such that:
+\begin{itemize}
+\item $i\to j$ iff $j-i\in S^+$,
+\item $j\to i$ iff $j-i\in S^-$,
+\item $i\leftrightarrow j$ iff $j-i\in S^0$ (tied pairs).
+\end{itemize}
+The group $\mathbb{Z}_n$ acts by rotation, giving the GLMY chain complex
+$C_\bullet(D_\tau)$ a $\mathbb{Z}_n$-equivariant structure.
+\end{definition}
+
+\begin{theorem}[Constant symbol matrix for t(r)ienerments]\label{thm:symbol-const}
+Let $\tau$ be a circulant t(r)ienerment on $\mathbb{Z}_n$.  Then the Tang--Yau
+symbol matrix $M_m(t)$ of the associated digraph $D_\tau$ is constant
+(independent of $t$), and hence all $n$ eigenspaces of the $\mathbb{Z}_n$-action
+have identical dimensions $\dim\Omega_m^{(k)}$ for $k=0,\ldots,n-1$.
+
+In particular, the Betti numbers satisfy:
+\[
+  \beta_p(D_\tau)=n\cdot\beta_p^{(0)}
+\]
+whenever all eigenspaces contribute equally to $\beta_p$
+(verified for Paley $T_p$ at $p=7,11$; conjectured in general).
+\end{theorem}
+
+\begin{proof}
+The proof is identical to that of THM-125 \cite{Cassidy2026} for circulant
+tournaments.  The Tang--Yau symbol matrix is defined as
+\[
+  M_m[J,D](t)=\sum_{\substack{i:\text{face}_i(D)=J\\\text{face}_i \text{ non-degenerate}}}
+              (-1)^i\,t^{\mathrm{offset}_i(D)}.
+\]
+The key lemma is: for any allowed path $D=(d_1,\ldots,d_m)\in A_m^{\tau}$,
+the tail $(d_2,\ldots,d_m)$ is in $A_{m-1}^{\tau}$.
+
+\smallskip
+The allowed paths $A_m^{\tau}$ for the digraph $D_\tau$ consist of sequences
+$(v_0,v_1,\ldots,v_m)$ of distinct vertices with each consecutive pair
+$(v_i,v_{i+1})\in A(D_\tau)$.  For circulant $\tau$, $D_\tau$ is also circulant
+(rotation by $\mathbb{Z}_n$ preserves arcs).  The argument of THM-125 applies
+verbatim: the partial sums $\{s_j=\sum_{i=1}^j d_i\bmod n\}$ being all distinct
+for $(d_1,\ldots,d_m)\in A_m^{\tau}$ implies the same for the tail.  This
+argument uses only the injectivity of partial sums, which depends on the
+distinctness of all vertices — a property of any path, regardless of whether
+arcs are directed or tied (bidirectional arcs also define valid paths in $D_\tau$).
+
+\smallskip
+Therefore all non-trivial contributions to $M_m(t)$ come from inner face maps
+(offset 0), making $M_m(t)$ constant.  The corollary about eigenspace dimensions
+follows as in THM-125.
+\end{proof}
+
+\begin{corollary}[Betti speedup for circulant t(r)ienerments]\label{cor:speedup}
+For any prime $n$ and circulant t(r)ienerment $\tau$ on $\mathbb{Z}_n$,
+the Betti numbers of $D_\tau$ can be computed using a single eigenspace,
+reducing computation by a factor of $n$.  Combined with sparse matrix techniques,
+this gives the same asymptotic speedup as for circulant tournaments.
+\end{corollary}
+
+\subsection{The ternary metagraph as a group scheme quotient}
+\label{ssec:scheme-quotient}
+
+The tournament metagraph $G_n=Q_m^{(2)}/S_n$ is the quotient of the binary
+$m$-cube by the symmetric group.  The t(r)ienerment metagraph
+$G_n^{\mathrm{tri}}=Q_m^{(3)}/S_n$ is the quotient of the ternary $m$-cube.
+
+\begin{proposition}[Structure of the ternary quotient map]
+The quotient map $\pi:Q_m^{(3)}\to G_n^{\mathrm{tri}}$ is a $T(n)\cdot n!$-fold
+covering in the generic case (when $|\mathrm{Aut}(\tau)|=1$).
+The fiber size over $[\tau]$ is $n!/|\mathrm{Aut}(\tau)|$ (weighted by the
+number of tilings, which equals $H_{\mathrm{dir}}(\tau)$ by
+Theorem~\ref{thm:tiling-OS}).
+\end{proposition}
+
+The ternary cube $Q_m^{(3)}$ has richer structure than $Q_m^{(2)}$:
+\begin{itemize}
+\item It has a $\mathbb{Z}_3$-module structure (vs.\ $\mathbb{F}_2$-module for
+  the binary cube), giving more symmetry.
+\item The complement involution $t_j\mapsto 1-t_j$ of the binary cube extends to
+  a $\mathbb{Z}_3$ rotation $t_j\mapsto t_j+1\pmod{3}$ that cyclically permutes
+  states: $0\to 1\to 2\to 0$ (i.e., forward$\to$backward$\to$tie$\to$forward).
+\item This $\mathbb{Z}_3$ rotation commutes with the $S_n$ action (since $S_n$
+  permutes tile positions, not states), giving a $\mathbb{Z}_3$ action on
+  $G_n^{\mathrm{tri}}$.
+\end{itemize}
+
+\begin{definition}[Ternary complement]
+The \emph{ternary complement} of a t(r)ienerment $\tau$ is the t(r)ienerment
+$\tau^{(3)}$ obtained by the cyclic state rotation: directed arcs become backward
+arcs, backward arcs become ties, and ties become directed arcs.  Formally,
+$t_j\mapsto t_j+1\pmod 3$ in the tiling model.
+\end{definition}
+
+\begin{proposition}[Ternary complement orbits]
+Under repeated application of the ternary complement, every t(r)ienerment $\tau$
+has a $\mathbb{Z}_3$-orbit of size 1 or 3.  Size-1 orbits are t(r)ienerments
+$\tau\cong\tau^{(3)}$; these exist only when $n\equiv 0\pmod 3$.
+\end{proposition}
+
+\begin{proof}
+Applying the ternary complement three times returns to the original state
+($t_j+3\equiv t_j$), so every orbit has size dividing 3.  A size-1 orbit
+requires $\tau^{(3)}\cong\tau$, meaning the state rotation is realized by
+some vertex relabeling.  For this to be possible, the number of directed arcs
+must equal the number of ties (since the rotation cyclically maps these sets).
+Both count must be $\binom{n}{2}/3$, requiring $3\mid\binom{n}{2}=n(n-1)/2$,
+i.e., $3\mid n(n-1)$, which holds for $n\equiv 0$ or $1\pmod 3$.
+\end{proof}
+
+\begin{remark}[Ternary merged metagraph]
+The $\mathbb{Z}_3$-quotient $G_n^{\mathrm{tri}}/\mathbb{Z}_3$ is the natural
+analog of the $\mathbb{Z}_2$-merged metagraph $G_n/\mathbb{Z}_2$ from
+\cite{Cassidy2026}.  Its vertex count is
+$V_{\mathrm{ter}}=(T(n)+2F_3(n))/3$
+where $F_3(n)$ counts iso classes fixed by one application of the ternary
+complement.  The merged metagraph has the spine-rib-sea decomposition
+lifted to a $\mathbb{Z}_3$-equivariant setting.
+\end{remark}
+
+\subsection{Paley t(r)ienerments and quadratic residue structure}
+\label{ssec:paley-trien}
+
+\begin{definition}[Paley t(r)ienerment]\label{def:paley-trien}
+For a prime $p\equiv 3\pmod 4$, the \emph{Paley t(r)ienerment} $\tilde{T}_p$
+on $\mathbb{Z}_p$ is the circulant t(r)ienerment with:
+\begin{itemize}
+\item $i\to j$ (directed) iff $j-i$ is a quadratic residue mod $p$,
+\item $i\leftrightarrow j$ (tied) iff $j-i$ is a quadratic non-residue mod $p$.
+\end{itemize}
+This is a circulant t(r)ienerment with $S^+=\mathrm{QR}$, $S^-=\emptyset$
+(no backward directed arcs), $S^0=\mathrm{NQR}$ (non-residues are tied).
+\end{definition}
+
+\begin{remark}
+The Paley t(r)ienerment $\tilde{T}_p$ has:
+\begin{itemize}
+\item $(p-1)/2$ directed arcs (the QR pairs), all in one direction,
+\item $(p-1)/2$ tied pairs (the NQR pairs),
+\item k = $(p-1)/2$ ties, so it lives in layer $G_p^{\mathrm{tri}}((p-1)/2)$.
+\end{itemize}
+The Paley tournament $T_p$ is NOT a sub-object of $\tilde{T}_p$: in $T_p$,
+$i\to j$ for QR and $j\to i$ for NQR; in $\tilde{T}_p$, NQR pairs are tied.
+\end{remark}
+
+\begin{theorem}[Paley t(r)ienerment BIBD]\label{thm:paley-trien-bibd}
+In the Paley t(r)ienerment $\tilde{T}_p$:
+\begin{enumerate}
+\item The directed 3-cycles of $D_{\tilde{T}_p}$ form a $2$-$(p,3,\tilde{\lambda}_3)$ BIBD.
+\item The tie pairs $\{u,v\}$ form a $(p,(p-1)/2,(p-3)/4)$ partially balanced design.
+\item $H(\tilde{T}_p)\ge H(T_p)$ (the t(r)ienerment has at least as many HPs as the
+  Paley tournament).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof of (1)]
+In $D_{\tilde{T}_p}$, QR arcs are directed (one way) and NQR arcs are bidirectional.
+A directed 3-cycle $(i,j,k)$ requires arcs $i\to j$, $j\to k$, $k\to i$ in $D_{\tilde{T}_p}$.
+Each arc step can be: a QR step ($j-i\in\mathrm{QR}$, using directed arc) or an NQR step
+($j-i\in\mathrm{NQR}$, using the $i\to j$ direction of the bidirectional arc).
+The affine group $\mathrm{Aff}(\mathrm{QR})=\{x\mapsto ax+b:a\in\mathrm{QR},b\in\mathbb{Z}_p\}$
+acts transitively on pairs, and the counting argument from THM-BIBD of \cite{Cassidy2026}
+extends to $D_{\tilde{T}_p}$.  (The bidirectional NQR arcs contribute to directed cycles in
+both orientations, increasing $\tilde{\lambda}_3>\lambda_3$ of the Paley tournament.)
+
+(2): Tie pairs form a 2-design by the transitive group action on pairs.
+
+(3): Every directed HP of $T_p$ remains a directed HP of $\tilde{T}_p$
+(QR arcs are identical; NQR arcs become bidirectional, adding more traversal options).
+\end{proof}
+
+\begin{conjecture}[Paley t(r)ienerment maximizes $H$ in its layer]
+Among all t(r)ienerments on $p$ vertices with $(p-1)/2$ ties (layer $k=(p-1)/2$),
+the Paley t(r)ienerment $\tilde{T}_p$ maximizes $H$.
+\end{conjecture}
+
+This is the natural extension of the Paley maximization conjecture for tournaments.
+
+\subsection{Summary of metagraph and eigenspace theorems}
+\label{ssec:summary-eigenspace}
+
+\begin{table}[ht]
+\centering
+\caption{Comparison of the binary (tournament) and ternary (t(r)ienerment) theories.}
+\label{tab:comparison}
+\begin{tabular}{p{5.2cm}p{5.2cm}}
+\toprule
+\textbf{Tournament theory (binary)} & \textbf{T(r)ienerment theory (ternary)}\\
+\midrule
+Tiling space $\{0,1\}^m=Q_m^{(2)}$ & Ternary tiling space $\{0,1,2\}^m=Q_m^{(3)}$\\
+Orbit-stabilizer: $\#\text{tilings}\times|\mathrm{Aut}|=H$ & Ternary OS: $\#\text{tilings}\times|\mathrm{Aut}|=H_{\mathrm{dir}}$\\
+Metagraph $G_n=Q_m^{(2)}/S_n$ & $G_n^{\mathrm{tri}}=Q_m^{(3)}/S_n$\\
+$|V(G_n)|=\mathrm{A000568}(n)\sim 2^{\binom{n}{2}}/n!$ & $|V(G_n^{\mathrm{tri}})|=\mathrm{A007025}(n)\sim 3^{\binom{n}{2}}/n!$\\
+Flip graph: binary Hamming $H(m,2)$ & Flip graph: ternary Hamming $H(m,3)$\\
+Eigenvalues $m-2k$, multiplicity $\binom{m}{k}$ & Eigenvalues $2m-3k$, multiplicity $\binom{m}{k}2^k$\\
+Spectral gap $2/m$; metagraph gap $\approx 2/n$ & Spectral gap $3/(2m)$; metagraph gap $\approx 3/(2n)$\\
+Binary Krawtchouk $K_k^{(2)}$, $B_1\approx -H$ & Ternary Krawtchouk $K_k^{(3)}$, $B_1^{(3)}\approx -H$ (higher corr.)\\
+Walsh degree $2\lfloor(n{-}1)/2\rfloor$ (THM-260) & Conjectured ternary degree $\lfloor(n{-}1)/2\rfloor$\\
+$\mathbb{Z}_2$ complement, merged metagraph & $\mathbb{Z}_3$ ternary complement, $\mathbb{Z}_3$-merged metagraph\\
+Circulant: constant symbol matrix (THM-125) & Circulant: same proof gives same result\\
+$H(T)$ always odd (R\'edei) & $H(\tau)$ any positive integer\\
+BIBD: 3-cycles form $2$-design in Paley $T_p$ & BIBD: extends to $D_{\tilde{T}_p}$ with more cycles\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

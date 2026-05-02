@@ -2,6 +2,40 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-02-S1 — 2026-05-02
+**Account:** Eliott (primary)
+**Continuation of:** fresh start (remote-control session)
+**Summary of work:**
+  (1) **T(R)IENERMENTS — FULL FORMALIZATION (NEW):** Introduced t(r)ienerments, a ternary
+      generalization of tournaments where each edge can be directed →, ←, or bidirectional ↔.
+  (2) **BURNSIDE FORMULA DERIVED (PROVED):** |Fix(σ)| = 3^{B(σ)}, where B(σ) = Σ floor((l_a-1)/2) +
+      Σ_{a<b} gcd(l_a,l_b). Total iso classes T(n) = (1/n!)Σ_σ 3^{B(σ)} = A007025(n).
+      Values: T(1..7) = 1, 2, 7, 42, 582, 21480, 2142288.
+  (3) **DISTRIBUTION f(n,k) COMPUTED (NEW):** Generating polynomial per cycle type:
+      P_σ(x) = Π_{even cycles} x^{l/2} · Π_a (2+x^l)^{floor((l-1)/2)} · Π_{a<b} (2+x^{lcm})^{gcd}.
+      Full tables for n=2..7 verified by script. f(n,0)=A000568, f(n,C(n,2))=f(n,C(n,2)-1)=1.
+      Tail stabilization: f(n,C(n,2)-2)=4 for n≥4, f(n,C(n,2)-3)=14 for n≥6.
+  (4) **POSITIVE-NEGATIVE ISOMORPHISM (PROVED):** The equivariant map τ↦ν (ties→absent edges)
+      gives identical iso-class structures. T(n) = |oriented graph iso classes| = A007025.
+  (5) **RÉDEI EXTENSION (PROVED):** Every t(r)ienerment has H≥1. Simple proof via any tie resolution.
+  (6) **PARITY FAILURE:** H(τ) need not be odd. Explicit n=3 example with H=2.
+  (7) **OCF EXTENSION:** H(τ) = I(Ω(D_τ), 2) via Grinberg-Stanley for all digraphs.
+
+**New files:**
+  04-computation/trienerment_iso_count.py — Burnside computation for T(n) and f(n,k)
+  05-knowledge/results/trienerment_iso_counts.out — verified numerical output
+  06-writeups/trienerments.tex — formal LaTeX paper (~15 pages)
+  06-writeups/research-document-for-mathematicians.md — added §14 on t(r)ienerments
+
+**New contributions:** T(n) formula and proof, f(n,k) triangle, tail stabilization theorem,
+  positive-negative isomorphism theorem, Rédei extension, parity failure, OCF extension.
+
+**Unresolved threads (next session):**
+  - Verify computationally that H=7 and H=21 are achievable by some t(r)ienerment (small n).
+  - Connect t(r)ienerment metagraph G_n^tri to existing G_n metagraph theory.
+  - Investigate path homology Betti numbers for t(r)ienerments with small k.
+  - Does the Paley QR structure give an extremal t(r)ienerment for the α-decomposition?
+
 ## opus-2026-04-16-S2 — 2026-04-16
 **Account:** Eliott (primary)
 **Continuation of:** kind-pasteur-2026-04-16-S1

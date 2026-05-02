@@ -1,0 +1,20 @@
+n=21, type=circulant, kmax=7
+Loading 05-knowledge/results/cc_n21_circulant_p2147483647.i32 and 05-knowledge/results/cc_n21_circulant_p2147483629.i32 ...
+  loaded: 0.0s
+Precomputing popcounts...
+  done: 0.3s
+
+=== Modular run 1 (p=2147483647) ===
+    k=1: G_1[full] ≡ 296356257
+    k=2: G_2[full] ≡ 1479218781  [37.0s]
+    k=3: G_3[full] ≡ 1023767653  [33.5s]
+    k=4: G_4[full] ≡ 1944435367  [28.3s]
+    k=5: G_5[full] ≡ 886239299  [21.3s]
+    k=6: G_6[full] ≡ 1454221328  [13.1s]
+    k=7: G_7[full] ≡ 12571712  [3.5s]
+  Total run 1: 137.0s
+
+=== Modular run 2 (p=2147483629) ===
+    k=1: G_1[full] ≡ 296457093
+    k=2: G_2[full] ≡ 1479322119  [36.4s]
+    k=3: G_3[full] ≡ 1023807847  [32.5s]
