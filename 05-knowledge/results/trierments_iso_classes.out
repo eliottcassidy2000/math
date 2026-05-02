@@ -1,0 +1,52 @@
+T(r)ienerment iso classes by number of ↔ (dual-headed) edges
+=================================================================
+
+n = 1  (C(1,2) = 0 edges)
+  f(n,x) = 1
+  Coefficients [x^0 .. x^0]: [1]
+  Total iso classes: 1  (A007107 check: 1)
+  f(n,0) = 1  (A000568 check: 1)
+  Last two coeffs [x^-1, x^0]: N/A, 1
+
+n = 2  (C(2,2) = 1 edges)
+  f(n,x) = 1 + x
+  Coefficients [x^0 .. x^1]: [1, 1]
+  Total iso classes: 2  (A007107 check: 2)
+  f(n,0) = 1  (A000568 check: 1)
+  Last two coeffs [x^0, x^1]: 1, 1
+
+n = 3  (C(3,2) = 3 edges)
+  f(n,x) = 2 + 3x + x^2 + x^3
+  Coefficients [x^0 .. x^3]: [2, 3, 1, 1]
+  Total iso classes: 7  (A007107 check: 7)
+  f(n,0) = 2  (A000568 check: 2)
+  Last two coeffs [x^2, x^3]: 1, 1
+
+n = 4  (C(4,2) = 6 edges)
+  f(n,x) = 4 + 10x + 12x^2 + 10x^3 + 4x^4 + x^5 + x^6
+  Coefficients [x^0 .. x^6]: [4, 10, 12, 10, 4, 1, 1]
+  Total iso classes: 42  (A007107 check: 42)
+  f(n,0) = 4  (A000568 check: 4)
+  Last two coeffs [x^5, x^6]: 1, 1
+
+n = 5  (C(5,2) = 10 edges)
+  f(n,x) = 12 + 50x + 107x^2 + 144x^3 + 131x^4 + 78x^5 + 41x^6 + 13x^7 + 4x^8 + x^9 + x^10
+  Coefficients [x^0 .. x^10]: [12, 50, 107, 144, 131, 78, 41, 13, 4, 1, 1]
+  Total iso classes: 582  (A007107 check: 582)
+  f(n,0) = 12  (A000568 check: 12)
+  Last two coeffs [x^9, x^10]: 1, 1
+
+n = 6  (C(6,2) = 15 edges)
+  f(n,x) = 56 + 376x + 1274x^2 + 2740x^3 + 4112x^4 + 4512x^5 + 3817x^6 + 2500x^7 + 1292x^8 + 539x^9 + 187x^10 + 55x^11 + 14x^12 + 4x^13 + x^14 + x^15
+  Coefficients [x^0 .. x^15]: [56, 376, 1274, 2740, 4112, 4512, 3817, 2500, 1292, 539, 187, 55, 14, 4, 1, 1]
+  Total iso classes: 21480  (A007107 check: 21480)
+  f(n,0) = 56  (A000568 check: 56)
+  Last two coeffs [x^14, x^15]: 1, 1
+
+n = 7  (C(7,2) = 21 edges)
+  f(n,x) = 456 + 4604x + 22690x^2 + 71320x^3 + 159872x^4 + 271177x^5 + 361450x^6 + 387834x^7 + 340364x^8 + 247329x^9 + 149724x^10 + 76145x^11 + 32538x^12 + 11815x^13 + 3643x^14 + 1009x^15 + 240x^16 + 58x^17 + 14x^18 + 4x^19 + x^20 + x^21
+  Coefficients [x^0 .. x^21]: [456, 4604, 22690, 71320, 159872, 271177, 361450, 387834, 340364, 247329, 149724, 76145, 32538, 11815, 3643, 1009, 240, 58, 14, 4, 1, 1]
+  Total iso classes: 2142288  (A007107 check: 2142288)
+  f(n,0) = 456  (A000568 check: 456)
+  Last two coeffs [x^20, x^21]: 1, 1
+
