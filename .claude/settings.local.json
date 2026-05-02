@@ -40,7 +40,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd /Users/e/Documents/GitHub/math && python3 agents/check_session_closed.py"
+            "command": "python3 agents/check_session_closed.py"
           }
         ]
       }
