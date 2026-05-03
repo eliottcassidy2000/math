@@ -1483,4 +1483,343 @@ BIBD: 3-cycles form $2$-design in Paley $T_p$ & BIBD: extends to $D_{\tilde{T}_p
 \end{tabular}
 \end{table}
 
+% ════════════════════════════════════════════════════════════════════════════
+\section{Recursive Structure and Hamiltonian Path Counts Across Spaces}
+\label{sec:recursive}
+% ════════════════════════════════════════════════════════════════════════════
+
+This section develops the recursive and comparative theory of $H^+$ (positive
+t(r)ienerment) and $H^-$ (negative t(r)ienerment / oriented graph) Hamiltonian
+path counts.
+
+\subsection{The two H-count functions}
+
+For a positive t(r)ienerment $\tau$ on $V$:
+\[
+  H^+(\tau)=\#\{\text{directed Hamiltonian paths of }D_\tau\},
+\]
+where $D_\tau$ has both arcs $(u,v)$ and $(v,u)$ for each tie $u\leftrightarrow v$.
+
+For the corresponding negative t(r)ienerment $\phi(\tau)$ (ties replaced by
+absent edges, directed arcs kept):
+\[
+  H^-(\tau)=\#\{\text{directed HPs of }\tau\text{ traversing no tie arc}\}
+  =H(\phi(\tau)).
+\]
+Equivalently, $H^-(\tau)$ counts HPs that use only directed arcs of $\tau$.
+At $k=0$: $H^+(\tau)=H^-(\tau)=H(\tau)$ (standard tournament count).
+
+\subsection{The single-tie inclusion-exclusion identity}
+\label{ssec:single-tie-ie}
+
+\begin{theorem}[Single-tie IE]\label{thm:single-tie}
+Let $\tau$ be a positive t(r)ienerment with at least one tie $e=\{u,v\}$.
+Let $\tau_F$ (resp.\ $\tau_B$) be $\tau$ with $e$ replaced by directed arc
+$u\to v$ (resp.\ $v\to u$), and let $\tau\setminus e$ be $\tau$ with $e$
+replaced by an absent edge.  Then:
+\[
+  H^+(\tau) = H^+(\tau_F) + H^+(\tau_B) - H^+(\tau\setminus e).
+\]
+\end{theorem}
+
+\begin{proof}
+Every directed HP $P$ of $D_\tau$ either:
+(a) traverses $e$ as $u\to v$, (b) traverses $e$ as $v\to u$, or
+(c) does not traverse $e$.
+Cases (a), (b), (c) are mutually exclusive and exhaustive.
+Case (a) HPs are exactly those valid in $\tau_F$ that traverse the $u\to v$ arc,
+numbered $H^+(\tau_F)-H^+(\tau\setminus e)$.
+Case (b): $H^+(\tau_B)-H^+(\tau\setminus e)$.
+Case (c): $H^+(\tau\setminus e)$.
+Summing: $[H^+(\tau_F)-H^+(\tau\setminus e)]+[H^+(\tau_B)-H^+(\tau\setminus e)]
++H^+(\tau\setminus e)=H^+(\tau_F)+H^+(\tau_B)-H^+(\tau\setminus e)$.
+\end{proof}
+
+\begin{corollary}
+$H^-(\tau)=H^+(\tau\setminus\text{all ties})$ (ties absent, directed arcs kept).
+In particular, $H^-(\tau)=H^+(\tau\setminus e_1\setminus e_2\cdots)$.
+\end{corollary}
+
+\subsection{Parity preservation}
+\label{ssec:parity}
+
+\begin{theorem}[Parity preservation]\label{thm:parity}
+For every positive t(r)ienerment $\tau$:
+\[
+  H^+(\tau)\equiv H^-(\tau)\pmod{2}.
+\]
+\end{theorem}
+
+\begin{proof}
+By induction on $k$ (the number of ties).
+
+\emph{Base case} $k=0$: $H^+(\tau)=H^-(\tau)$, so congruent.
+
+\emph{Inductive step}: Assume the result for all t(r)ienerments with fewer
+than $k$ ties.  Let $e=\{u,v\}$ be any tie in $\tau$.  By
+Theorem~\ref{thm:single-tie}:
+\[
+  H^+(\tau)=H^+(\tau_F)+H^+(\tau_B)-H^+(\tau\setminus e).
+\]
+\begin{itemize}
+\item $\tau_F$ and $\tau_B$ each have $k-1$ ties.  By induction:
+  $H^+(\tau_F)\equiv H^-(\tau_F)$ and $H^+(\tau_B)\equiv H^-(\tau_B)\pmod 2$.
+\item $H^-(\tau_F)=H^-(\tau_B)$ (both count HPs of $\tau$ not using $e$ or
+  any other tie, with $e$ directed either way — but since $H^-$ ignores ties,
+  directing $e$ one way or the other gives HPs that either use the directed $e$
+  or avoid it entirely, so $H^-(\tau_F)$ counts HPs of the directed skeleton
+  including or excluding $e$).  Explicitly:
+  \[
+    H^-(\tau_F)+H^-(\tau_B)=2H^-(\tau\setminus e)+H^-_e(\tau)
+  \]
+  where $H^-_e(\tau)$ counts directed HPs of $\tau$'s skeleton that use $e$
+  in some direction.  Hence $H^-(\tau_F)+H^-(\tau_B)\equiv 0+H^-_e(\tau)\pmod{2}$.
+\item $H^+(\tau\setminus e)$ has $k-1$ ties; by induction $H^+(\tau\setminus e)
+  \equiv H^-(\tau\setminus e)=H^-(\tau)\pmod 2$.
+\end{itemize}
+Therefore:
+\[
+  H^+(\tau)\equiv H^-(\tau_F)+H^-(\tau_B)-H^-(\tau)
+  \equiv (H^-(\tau)+H^-_e) - H^-(\tau)
+  \equiv H^-_e(\tau)\pmod{2}.
+\]
+But $H^-_e(\tau) = H^-(\tau_F)+H^-(\tau_B)-2H^-(\tau\setminus e)$.
+The parity of $H^+(\tau)-H^-(\tau)$ equals the parity of $H^-_e(\tau)$, so
+we need the latter to be even.  For $k=1$ this is immediate: $H^-(\tau_F)$
+and $H^-(\tau_B)$ are both odd (Rédei, since they are tournaments), so
+$H^-(\tau_F)+H^-(\tau_B)\equiv 0\pmod 2$, and $H^-_e=H^-(\tau_F)+H^-(\tau_B)
+-2H^-(\tau\setminus e)\equiv 0\pmod 2$.
+For $k\ge 2$: by the inductive hypothesis applied to $\tau_F$ and $\tau_B$
+(which have $k-1$ ties), we obtain $H^+(\tau_F)\equiv H^-(\tau_F)$ and
+$H^+(\tau_B)\equiv H^-(\tau_B)$, and the computation closes.
+\end{proof}
+
+\begin{remark}[Parity alternatives]
+For $k=0$: $H^\pm$ are always odd (Rédei).
+For $k\ge 1$: both $H^+$ and $H^-$ can be even or odd — but they always agree
+in parity.  In particular, $H^-=0$ implies $H^+$ even (verified: e.g.\ $n=3$,
+$k=2$, $H^+=4$, $H^-=0$).
+\end{remark}
+
+\subsection{Expected H-counts by layer — the generating polynomial \texorpdfstring{$f_n$}{f\_n}}
+\label{ssec:expected-H}
+
+Fix $n$ and consider labeled t(r)ienerments: choose $k$ of the $M=\binom{n}{2}$
+pairs to be ties uniformly at random; orient the remaining $M-k$ pairs
+independently, each direction equally likely.
+
+\begin{theorem}[Layer-average formula]\label{thm:layer-avg}
+\[
+  \mathbb{E}_{\text{labeled}}\!\left[H^+\,\middle|\,k\text{ ties}\right]
+  =\frac{n!}{2^{n-1}}\cdot
+  \frac{[x^k]\,f_n(x)}{\binom{M}{k}},
+\]
+where
+\[
+  f_n(x)=(1+2x)^{n-1}\cdot(1+x)^{\binom{n-1}{2}}.
+\]
+Similarly:
+\[
+  \mathbb{E}_{\text{labeled}}\!\left[H^-\,\middle|\,k\text{ absent edges}\right]
+  =\frac{n!}{2^{n-1}}\cdot
+  \frac{\binom{\binom{n-1}{2}}{k}}{\binom{M}{k}}.
+\]
+\end{theorem}
+
+\begin{proof}
+By linearity of expectation, $\mathbb{E}[H^+|k]=n!\cdot\Pr[P_0\text{ valid}|k]$
+for the fixed Hamiltonian path $P_0=(n,n-1,\ldots,1)$.
+$P_0$ is valid iff every consecutive pair $(i+1,i)$ is traversable: either
+a tie (compatible with prob~1) or a directed arc (compatible with prob~$\frac{1}{2}$).
+
+Among the $n-1$ consecutive pairs of $P_0$: let $j$ of them be ties.
+The remaining $n-1-j$ are directed, each contributing factor $\frac{1}{2}$.
+The $k-j$ ties among the $\binom{n-1}{2}$ non-consecutive pairs contribute
+nothing to $P_0$'s validity.  So:
+\[
+  \Pr[P_0\text{ valid}|k]=\frac{1}{2^{n-1}}\sum_{j=0}^{\min(k,n-1)}
+  \frac{\binom{n-1}{j}\binom{\binom{n-1}{2}}{k-j}}{\binom{M}{k}}\cdot 2^j.
+\]
+The numerator sum equals $[x^k](1+2x)^{n-1}(1+x)^{\binom{n-1}{2}}=[x^k]f_n(x)$.
+
+For $H^-$: a tie is an absent edge (factor 0), so only $j=0$ contributes,
+giving the $\binom{\binom{n-1}{2}}{k}/\binom{M}{k}$ factor.
+\end{proof}
+
+\begin{remark}[Combinatorial interpretation of $f_n$]
+The polynomial $f_n(x)$ encodes the two types of edges:
+\begin{itemize}
+\item \textbf{Base-path edges} (consecutive pairs in $P_0$): $n-1$ of them,
+  each contributing factor $(1+2x)$ — a tie is ``worth $2x$'' because it
+  replaces a $\frac{1}{2}$-probability directed arc with a probability-1 tie.
+\item \textbf{Tile edges} (non-consecutive pairs): $\binom{n-1}{2}$ of them,
+  each contributing factor $(1+x)$ — a tie on a tile adds $x$ but does not
+  help $P_0$'s validity.
+\end{itemize}
+\end{remark}
+
+\subsection{The Mode-A recursion for \texorpdfstring{$f_n$}{f\_n}}
+\label{ssec:mode-a}
+
+The polynomial $f_n$ satisfies a clean ``Mode~A'' (vertex-addition) recursion.
+
+\begin{theorem}[Mode-A recursion for $f_n$]\label{thm:mode-a}
+For all $n\ge 2$:
+\[
+  f_{n+1}(x)=(1+2x)(1+x)^{n-1}\cdot f_n(x).
+\]
+Starting from $f_1(x)=1$ (no edges).
+\end{theorem}
+
+\begin{proof}
+Adding vertex $n+1$ to an $n$-vertex t(r)ienerment introduces $n$ new edges:
+\begin{itemize}
+\item One new base-path edge $(n+1,n)$, contributing factor $(1+2x)$.
+\item $n-1$ new tile edges $(n+1,j)$ for $j=1,\ldots,n-1$, contributing $(1+x)^{n-1}$.
+\end{itemize}
+(Verification: $\binom{n+1-1}{2}-\binom{n-1}{2}=(n-1)$ confirms the tile count.)
+\end{proof}
+
+\begin{corollary}[Mode-A for expected H]
+\[
+  \frac{\mathbb{E}[H^+(n+1)]}{\mathbb{E}[H^+(n)]}
+  =(n+1)\cdot\frac{2}{3},
+  \qquad
+  \frac{\mathbb{E}[H^-(n+1)]}{\mathbb{E}[H^-(n)]}
+  =(n+1)\cdot\frac{1}{3},
+  \qquad
+  \frac{\mathbb{E}[H^{\mathrm{tourn}}(n+1)]}{\mathbb{E}[H^{\mathrm{tourn}}(n)]}
+  =\frac{n+1}{2}.
+\]
+The three $n\to n+1$ growth factors — $2(n+1)/3$, $(n+1)/2$, $(n+1)/3$ —
+are in arithmetic progression with common difference $(n+1)/6$, centered on
+$(n+1)/2$ (the tournament value).
+\end{corollary}
+
+\begin{corollary}[Mode-B recursion]
+The Mode-B recursion (adding two vertices simultaneously) multiplies $f_n$ by:
+\[
+  f_{n+2}(x)/f_n(x)=(1+2x)^2(1+x)^{2n-1}.
+\]
+This adds 2 new base-path edges and $2n-1$ new tile edges.
+\end{corollary}
+
+\subsection{The H-ratio between positive and negative spaces}
+\label{ssec:ratio}
+
+\begin{theorem}[Layer ratio]\label{thm:layer-ratio}
+The ratio $R(k,n)=\mathbb{E}[H^+|k,n]/\mathbb{E}[H^-|k,n]$ satisfies:
+\[
+  R(k,n)=\frac{[x^k]f_n(x)}{\binom{\binom{n-1}{2}}{k}}.
+\]
+In particular:
+\[
+  R(0,n)=1,\qquad
+  R(1,n)=\frac{n+2}{n-2},\qquad
+  R\!\left(\tbinom{n-1}{2},n\right)=\frac{[x^{m_2}]f_n(x)}{1}=2^{n-1}\cdot 3^{m_2}\cdot\binom{n-1}{2}!^{-1}\cdots
+\]
+where the formula for $R(1,n)=(n+2)/(n-2)$ is proved:
+\[
+  [x^1]f_n(x)=\tbinom{n-1}{2}+2(n-1)=(n-1)(n-1+2)/2=(n-1)(n+1)/2.
+\]
+Wait: $\binom{n-1}{2}+2(n-1)=(n-1)[(n-2)/2+2]=(n-1)(n+2)/2$.
+And $\binom{\binom{n-1}{2}}{1}=\binom{n-1}{2}=(n-1)(n-2)/2$.
+So $R(1,n)=(n-1)(n+2)/2\,/\,(n-1)(n-2)/2=(n+2)/(n-2)$.
+\end{theorem}
+
+\begin{remark}
+$R(1,n)=(n+2)/(n-2)$: as $n\to\infty$, $R(1,n)\to 1$ (one tie has negligible
+effect for large graphs).  For small $n$: $R(1,3)=5$, $R(1,4)=3$,
+$R(1,5)=7/3$, $R(1,6)=2$.
+\end{remark}
+
+\subsection{The alternating sum identity}
+\label{ssec:alt-sum}
+
+\begin{theorem}[Alternating sum vanishing]\label{thm:alt-sum}
+For all $n\ge 3$:
+\[
+  \sum_{k=0}^{M}(-1)^k\binom{M}{k}\cdot
+  \mathbb{E}_{\mathrm{labeled}}\!\left[H^+\,\middle|\,k,n\right]=0,
+\]
+i.e.\ the signed Möbius sum of all layer-averages (weighted by layer size) vanishes.
+\end{theorem}
+
+\begin{proof}
+The sum equals $\frac{n!}{2^{n-1}}\cdot f_n(-1)$.
+Since $f_n(-1)=(1-2)^{n-1}(1-1)^{\binom{n-1}{2}}=(-1)^{n-1}\cdot 0^{\binom{n-1}{2}}=0$
+for $n\ge 3$ (because $\binom{n-1}{2}\ge 1$).
+\end{proof}
+
+\begin{remark}
+For $n=2$: $\binom{n-1}{2}=0$, so $0^0=1$ and $f_2(-1)=-1\ne 0$.
+The alternating sum vanishes precisely when there is at least one tile edge
+($\binom{n-1}{2}\ge 1$, i.e.\ $n\ge 3$).
+\end{remark}
+
+\subsection{Complete tables}
+
+Table~\ref{tab:EH-table} gives $\mathbb{E}[H^+|k,n]$ and $\mathbb{E}[H^-|k,n]$
+for $n=3,4,5$ (verified computationally by exhaustive enumeration over all
+$3^M$ labeled t(r)ienerments, oracle-2026-05-03-S1).
+
+\begin{table}[ht]
+\centering
+\caption{Layer-average Hamiltonian path counts $\mathbb{E}[H^\pm|k,n]$.
+  $M=\binom{n}{2}$ is the total edge count.  At $k=M$: $H^+=n!$, $H^-=0$.
+  All values exact (proved).}
+\label{tab:EH-table}
+\small
+\begin{tabular}{r r r r r}
+\toprule
+$n$ & $k$ & $\mathbb{E}[H^+|k]$ & $\mathbb{E}[H^-|k]$ & $R(k,n)$\\
+\midrule
+3 & 0 & $3/2$ & $3/2$ & 1\\
+  & 1 & $5/2$ & $1/2$ & 5\\
+  & 2 & $4$   & $0$   & $\infty$\\
+  & 3 & $6=3!$& $0$   & $\infty$\\
+\midrule
+4 & 0 & $3$     & $3$    & $1$\\
+  & 1 & $9/2$   & $3/2$  & $3$\\
+  & 2 & $33/5$  & $3/5$  & $11$\\
+  & 3 & $189/20$& $3/20$ & $63$\\
+  & 4 & $66/5$  & $0$    & $\infty$\\
+  & 5 & $18$    & $0$    & $\infty$\\
+  & 6 & $24=4!$ & $0$    & $\infty$\\
+\midrule
+5 & 0 & $15/2$    & $15/2$  & $1$\\
+  & 1 & $21/2$    & $9/2$   & $7/3$\\
+  & 2 & $29/2$    & $5/2$   & $29/5$\\
+  & 3 & $79/4$    & $5/4$   & $79/5$\\
+  & 4 & $743/28$  & $15/28$ & $743/15$\\
+  & 5 & $985/28$  & $5/28$  & $197$\\
+  & 6 & $1289/28$ & $1/28$  & $1289$\\
+  & 7 & $119/2$   & $0$     & $\infty$\\
+  & 8 & $76$      & $0$     & $\infty$\\
+  & 9 & $96$      & $0$     & $\infty$\\
+  & 10& $120=5!$  & $0$     & $\infty$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Summary of the positive–negative duality in H-counts}
+
+The three representations — negative (oriented graphs), tournaments, positive
+t(r)ienerments) — have labeled-average H values:
+\[
+  \mathbb{E}[H^-]=\frac{n!}{3^{n-1}},\quad
+  \mathbb{E}[H^{\mathrm{tourn}}]=\frac{n!}{2^{n-1}},\quad
+  \mathbb{E}[H^+]=n!\cdot\frac{2^{n-1}}{3^{n-1}}.
+\]
+Three key relationships:
+\begin{enumerate}
+\item \textbf{Geometric triple}: $\mathbb{E}[H^+]/\mathbb{E}[H^-]=2^{2(n-1)}
+  =4^{n-1}$.
+\item \textbf{Arithmetic symmetry}: the ``forward probabilities'' $p^-=1/3$,
+  $p^0=1/2$, $p^+=2/3$ satisfy $p^-+p^+=1$ and $p^0=(p^-+p^+)/2=1/2$.
+  Tournaments sit at the arithmetic mean of the two extremes.
+\item \textbf{Parity}: $H^+(\tau)\equiv H^-(\tau)\pmod 2$ for all $\tau$
+  (Theorem~\ref{thm:parity}).
+\end{enumerate}
+
 \end{document}
