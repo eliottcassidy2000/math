@@ -1,0 +1,159 @@
+======================================================================
+PART 1: THREE-LAYER SPEEDUP CASCADE
+  Layer 1: Labeled (2^C(n,2)) → Tiling (2^C(n-1,2)), factor 2^{n-1}
+  Layer 2: Tiling → A000255 (succession-free), factor til/A255
+  Layer 3: A000255 → DP (n²·2^n), factor A255/DP
+======================================================================
+
+  n |              labeled |          tilings |       A255 |         DP |     total ΣH
+--------------------------------------------------------------------------------
+   3 |                    8 |                2 |         11 |         72 |     1.11e-01×
+   4 |                   64 |                8 |         53 |        256 |     2.50e-01×
+   5 |                1,024 |               64 |        309 |        800 |     1.28e+00×
+   6 |               32,768 |            1,024 |       2119 |      2,304 |     1.42e+01×
+   7 |            2,097,152 |           32,768 |      16687 |      6,272 |     3.34e+02×
+   8 |          268,435,456 |        2,097,152 |     148329 |     16,384 |     1.64e+04×
+   9 |       68,719,476,736 |      268,435,456 |    1468457 |     41,472 |     1.66e+06×
+  10 |   35,184,372,088,832 |   68,719,476,736 |       None |    102,400 |     3.44e+08×
+
+======================================================================
+PART 2: W(n) = Σ_{σ∈S_n, succ-free} 2^{bp(σ)}
+  Computed via FORWARD bitmask DP: O(n²·2^n)
+======================================================================
+
+  n |                       W(n) |                   ΣH = W·2^f |     CV²=W/n!-1
+--------------------------------------------------------------------------------
+   1 |                          1 |                            1 | 0 ✓
+   2 |                          2 |                            1 | 0 ✓
+   3 |                          8 |                            4 | 1/3 ✓
+   4 |                         32 |                           32 | 1/3 ✓
+   5 |                        158 |                          632 | 19/60 ✓
+   6 |                        928 |                        29696 | 13/45 ✓
+   7 |                      6,350 |                      3251200 | 131/504 ✓
+   8 |                     49,752 |                    815136768 | 131/560 ✓
+   9 |                    439,670 |                 461027409920 | 1097/5184 ✓
+  10 |                  4,327,904 |              580881441882112 | 3121/16200 ✓
+  11 |                 46,963,358 |          1613648693762719744 | 3523279/199584 ✓
+  12 |                556,953,448 |       9798028675294972346368 | 9743981/598752 ✓
+  13 |              7,166,360,054 |  129097665875188830370267136 | 67095661/44478 ✓
+  14 |             99,428,495,088 | 3668264005044846525580276924 | 19631737/13970 ✓
+  15 |          1,479,600,188,798 | 2235908588680727773122521169 | 85962910399/65 ✓
+  16 |         23,506,712,352,248 | 2909990041281202289073117325 | 322990308031/2 ✓
+  17 |        397,095,175,477,430 | 8054047000667171523111074950 | 4140774738143/ ✓
+  18 |      7,107,209,383,674,112 | 4723550842342443542231067102 | 2753264366977/ ✓
+  19 |    134,345,623,603,516,190 | 5851577188515070365050446337 | 12700523194684 ✓
+
+OEIS candidate: W(n) for n=1..19:
+  [1, 2, 8, 32, 158, 928, 6350, 49752, 439670, 4327904, 46963358, 556953448, 7166360054, 99428495088, 1479600188798, 23506712352248, 397095175477430, 7107209383674112, 134345623603516190]
+
+======================================================================
+PART 3: H-DISTRIBUTION AT n=8 (exhaustive, 29s via C program)
+  Verifies: ΣH(8) = W(8) × 2^{C(7,2)−7} = 49752 × 16384
+======================================================================
+
+  Total tilings:          2,097,152 (= 2^21 ✓)
+  Total labeled T:        268,435,456 (= 2^28 ✓)
+  ΣH (tiling):            815,136,768
+  W(8) × 2^14:            815,136,768  ✓
+  H_max:                  661
+  Distinct H-values:      320/330 possible odd values in [1,661]
+
+  FORBIDDEN (eternal):    [7, 21]  ← Gap Theorem verified at n=8 ✓
+  FORBIDDEN near H_max:   [611, 615, 617, 619, 623, 625, 635, 647, 655]
+
+  Spectrum dense in [1,599]\{7,21}: all odd values achievable ✓
+  Spectrum sparse in [601,661]:      22/31 achievable
+
+======================================================================
+PART 4: ISO-CLASS H-DISTRIBUTION FROM TILING DATA
+  Novel: tile_dist[h]/h = |{iso-classes: H=h}| when all |Aut|=1
+  Non-integer → detects tournaments with |Aut|>1
+======================================================================
+
+Small n verification (all iso-classes enumerable):
+
+  n=3 (A000568=2, approx from tilings: 1.333):
+    H=   3: tile=    1, frac=1/3 → 1 iso-class with |Aut|=3
+
+  n=4 (A000568=4, approx from tilings: 2.667):
+    H=   3: tile=    2, frac=2/3 (non-trivial Aut)
+
+  n=5 (A000568=12, approx from tilings: 8.533):
+    H=  15: tile=    8, frac=8/15 (non-trivial Aut)
+
+  n=6 (A000568=56, approx from tilings: 45.511):
+    H=   3: tile=    4, frac=4/3 (non-trivial Aut)
+    H=   9: tile=   37, frac=37/9 (non-trivial Aut)
+    H=  15: tile=   46, frac=46/15 (non-trivial Aut)
+    H=  27: tile=   18, frac=2/3 (non-trivial Aut)
+    H=  33: tile=  121, frac=11/3 (non-trivial Aut)
+    H=  45: tile=   30, frac=2/3 (non-trivial Aut)
+
+  n=7 (A000568=456, approx from tilings: 416.102):
+    H=   3: tile=    5, frac=5/3 (non-trivial Aut)
+    H=   9: tile=   57, frac=19/3 (non-trivial Aut)
+    H=  15: tile=   94, frac=94/15 (non-trivial Aut)
+    H=  27: tile=  117, frac=13/3 (non-trivial Aut)
+    H=  33: tile=  341, frac=31/3 (non-trivial Aut)
+    H=  57: tile=  152, frac=8/3 (non-trivial Aut)
+    H=  75: tile=  425, frac=17/3 (non-trivial Aut)
+    H=  99: tile=  242, frac=22/9 (non-trivial Aut)
+    H= 111: tile= 1036, frac=28/3 (non-trivial Aut)
+    H= 129: tile=  817, frac=19/3 (non-trivial Aut)
+    H= 135: tile=  792, frac=88/15 (non-trivial Aut)
+    H= 159: tile=  530, frac=10/3 (non-trivial Aut)
+    H= 171: tile=   57, frac=1/3 → 1 iso-class with |Aut|=3
+    H= 175: tile=   25, frac=1/7 → 1 iso-class with |Aut|=7
+    H= 189: tile=    9, frac=1/21 → 1 iso-class with |Aut|=21
+
+Paley tournament T_7 (QR tournament on 7 vertices):
+  QR mod 7 = {1,2,4}; i→j iff (i-j) mod 7 ∈ {1,2,4}
+  H(Paley T_7) = 189  (VERIFIED)
+  |Aut(Paley T_7)| = 21 = F_{7,3} = Z_7 ⋊ Z_3  (VERIFIED)
+  tile_dist[189] = 9, tile_dist[189]/189 = 1/21
+  → tiling distribution DETECTS the Paley automorphism group ✓
+
+n=8 iso-class analysis:
+  Exact iso-class counts (|Aut|=1 confirmed): 257/320 H-values
+  Non-exact (|Aut|>1 detected):               63/320 H-values
+  Σ tile_dist[h]/h = 2^21/315 = 6657.6254
+  A000568(8) = 6880;  deficit = 222.3746
+  (deficit = Σ_I (1-1/|Aut(I)|) = sum over non-trivial Aut iso-classes)
+
+  Smallest 5 exact iso-class counts:
+    H=1: 1 iso-classes
+    H=3: 2 iso-classes
+    H=5: 5 iso-classes
+    H=11: 4 iso-classes
+    H=13: 4 iso-classes
+
+======================================================================
+PART 5: NOVEL SEQUENCES — OEIS SUBMISSION CANDIDATES
+======================================================================
+
+SEQ-A: W(n) = Σ_{σ∈S_n succ-free} 2^{bp(σ)}
+     = E_tile[H] · 2^{n-1}
+     = n! · (1 + CV²_tile[H])
+  n=1..19: [1, 2, 8, 32, 158, 928, 6350, 49752, 439670, 4327904, 46963358, 556953448, 7166360054, 99428495088, 1479600188798, 23506712352248, 397095175477430, 7107209383674112, 134345623603516190]
+
+SEQ-B: ΣH(n) = W(n) · 2^{C(n-1,2)−n+1}
+     = total H over all n-vertex tilings
+  n=1..12: [1, 32, 632, 29696, 3251200, 815136768, 461027409920, 580881441882112, 1613648693762719744, 9798028675294972346368]
+
+SEQ-C: CV²[H] numerators (W(n)/n! - 1 as fraction)
+  n= 1: 0
+  n= 2: 0
+  n= 3: 1/3
+  n= 4: 1/3
+  n= 5: 19/60
+  n= 6: 13/45
+  n= 7: 131/504
+  n= 8: 131/560
+  n= 9: 1097/5184
+  n=10: 3121/16200
+  n=11: 3523279/19958400
+  n=12: 9743981/59875200
+
+SEQ-D: H_max(n) over n-vertex tilings (fixed base path)
+  Known: n=1..8: [1, 1, 3, 3, 15, ?, ?, 661]
+  n=8: H_max=661 (prime)  FIRST COMPUTATION

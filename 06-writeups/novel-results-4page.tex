@@ -195,11 +195,23 @@ tournaments satisfies
 \CV^2(H)=\sum_{k\ge 1}\frac{2\,g_k(n-2k)}{(n)_{2k}}
 =\frac{2}{n}+\frac{0}{n^2}-\frac{14}{3n^3}+O(n^{-4}).
 \]
-The sequence $W(n)=n!\,(1+\CV^2(H))=1,2,8,32,158,928,6350,49752,\ldots$
+The sequence $W(n)=n!\,(1+\CV^2(H))=1,2,8,32,158,928,6350,49752,439670,
+4327904,46963358,\ldots$ (through $n{=}19$ via $O(n^2{2^n})$ bitmask DP)
 is not in OEIS.
 \end{thm}
 
 The exact vanishing of the $n^{-2}$ coefficient follows from $g_2=g_1^2$.
+
+\begin{rem}
+The \emph{$H$-weighting identity} $|\{T: H{=}h\}|_{\text{lab}} = (n!/h)\cdot|\{t: H{=}h\}|_{\text{tile}}$
+(CUT$\oplus$CYCLE, verified $n{\le}8$) gives a $2^{n-1}$-fold speedup.
+The complete $n{=}8$ H-distribution (first computation; $29\,\mathrm{s}$) confirms:
+$H{\ne}7$, $H{\ne}21$; $H_{\max}{=}661$ (prime); all odd values in
+$[1,599]\setminus\{7,21\}$ achieved; $\Sigma H(8)=W(8)\cdot 2^{14}$ exactly.
+Iso-class counts follow by $|\{I: H{=}h\}|=\mathsf{tile}(h)/h$ when
+all $|\mathrm{Aut}|{=}1$ at $H{=}h$: at $n{=}7$, $\mathsf{tile}(189)/189=1/21$
+identifies the Paley tournament $T_7$ ($|\mathrm{Aut}|{=}21$, verified).
+\end{rem}
 The Cayley transform $Q(x)=(1+x)/(1-x)$ -- the bilinear/Tustin transform
 of digital signal processing -- governs the statistics of random tournaments
 through weighted Delannoy path enumeration; no prior literature records this.
@@ -293,7 +305,9 @@ within reach.
 
 \begin{enumerate}
 \item \textbf{Gap density.} Are $7$ and $21$ the only permanently forbidden
-$H$-values?  Does the achievable density approach $1$?
+$H$-values?  Confirmed at $n{\le}8$: every odd value in $[1,599]\setminus\{7,21\}$
+is achieved; near $H_{\max}(8){=}661$ nine additional values are absent.
+Does achievable density approach~$1$?
 \item \textbf{Paley Betti formula.} Prove Theorem~\ref{thm:paley} for all Paley
 primes; the natural approach uses the Heisenberg isomorphism and the
 representation theory of $\mathbb{Z}_p\rtimes\mathbb{Z}_m$.
@@ -304,6 +318,10 @@ tournaments with $\beta_3=2$.  Is $\sup_T\beta_k(T)$ unbounded in $n$?
 \item \textbf{Universality mechanism.} Give a direct $2$-adic or representation-theoretic
 explanation for the universality criterion $s_2(n-3)\le 1$
 in Theorem~\ref{thm:signed}\textup{(ii)}.
+\item \textbf{$W(n)$ recursion.} No 2-term recurrence $(an{+}b)W_{n-1}+(cn{+}d)W_{n-2}$
+fits the sequence $W(n)=1,2,8,32,158,928,\ldots$ (checked through $n{=}19$).
+Find a recursion or a closed form; the ratio $W(n)/n!\to 1$ raises the question
+of the rate $\mathrm{CV}^2=W/n!-1\approx 2/n$ and its correction terms.
 \end{enumerate}
 
 \vspace{2pt}
