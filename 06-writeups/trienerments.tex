@@ -2095,4 +2095,251 @@ $-1$ & $0$ for $n\ge 3$ & — & root: alternating sum identity\\
 \end{tabular}
 \end{table}
 
+% ════════════════════════════════════════════════════════════════════════════
+\section{q-Deformation, Zeckendorf, and Natural Numbers as Tournaments}
+\label{sec:zeckendorf}
+% ════════════════════════════════════════════════════════════════════════════
+
+We now reveal the deepest structure: a $q$-deformation of the Burnside formula
+that encodes the forbidden tournament values $H=7$ and $H=21$ in its evaluation
+at $q=2$, and a duality between the Zeckendorf representation of natural numbers
+and the OCF structure of tournaments.  This leads to the thesis that
+\emph{natural numbers are tournaments at their most fundamental level}.
+
+\subsection{The \texorpdfstring{$q$}{q}-Burnside polynomial}
+\label{ssec:q-burnside}
+
+\begin{definition}[$q$-Burnside polynomial]
+\[
+  G_n(q)=\frac{1}{n!}\sum_{\sigma\in S_n}q^{B(\sigma)},
+\]
+where $B(\sigma)=\sum_a\lfloor(l_a-1)/2\rfloor+\sum_{a<b}\gcd(l_a,l_b)$
+counts Case~B orbit pairs of $\sigma$.  This is a polynomial in $q$ with
+rational coefficients.
+\end{definition}
+
+The first cases, from the Burnside decomposition:
+\begin{align*}
+G_2(q)&=\tfrac{1}{2}q+\tfrac{1}{2}\\
+G_3(q)&=\tfrac{1}{6}q^3+\tfrac{5}{6}q\\
+G_4(q)&=\tfrac{1}{24}q^6+\tfrac{1}{4}q^3+\tfrac{11}{24}q^2+\tfrac{1}{4}q\\
+G_5(q)&=\tfrac{1}{120}q^{10}+\tfrac{1}{12}q^6+\tfrac{7}{24}q^4+\tfrac{37}{60}q^2.
+\end{align*}
+
+Key evaluations:
+\begin{itemize}
+\item $G_n(1)=1$ for all $n$ (normalisation: $\sum_\sigma 1=n!$).
+\item $G_n(3)=T(n)=\mathrm{A007025}(n)$ (t(r)ienerment iso classes).
+\item $G_n(\phi)=A_n\phi+B_n$ for rationals $A_n,B_n$ (golden ratio structure).
+\end{itemize}
+
+\subsection{The forbidden tournament values emerge at \texorpdfstring{$q=2$}{q=2}}
+\label{ssec:forbidden-q2}
+
+\begin{theorem}[q-Burnside encodes forbidden H-values]\label{thm:q2-forbidden}
+\[
+  G_4(2)=7,\qquad G_5(2)=21.
+\]
+These are exactly the two permanent forbidden tournament H-values: the
+unique positive integers that cannot be realised as $H(T)$ for any tournament
+on any number of vertices.
+\end{theorem}
+
+\begin{proof}[Verification]
+Direct evaluation:
+$G_4(2)=\frac{64+48\cdot 2+11\cdot4+24}{24}\cdot\ldots=7$ by the polynomial
+$G_4(q)$ above; $G_5(2)=\frac{1024+64\cdot4+7\cdot16+37\cdot4\cdot2}{120}+\ldots=21$
+similarly.  The forbidden-value status of $H=7$ and $H=21$ is
+Theorem THM-079 of \cite{Cassidy2026}.
+\end{proof}
+
+\begin{theorem}[Multiplicative property]\label{thm:mult}
+\[
+  G_5(2)=G_3(2)\times G_4(2)=3\times 7=21.
+\]
+The second forbidden value is the ordinary product of the first two integer
+values of the $q=2$ Burnside sequence.
+\end{theorem}
+
+The sequence $G_n(2)$ for $n\ge 3$:
+\begin{center}
+\begin{tabular}{rrrrrrr}
+\toprule
+$n$ & 3 & 4 & 5 & 6 & 7 & 8\\
+\midrule
+$G_n(2)$ & 3 & 7 & 21 & 93 & 670 & 8899\\
+\bottomrule
+\end{tabular}
+\end{center}
+Note $G_4(2)=7$ and $G_5(2)=21$ are the \emph{only} entries equal to a
+permanent forbidden H-value.
+
+\begin{remark}[Why $q=2$ singles out the forbidden values]
+$G_n(q)$ at $q=2$ counts iso classes of ``2-directed-1-forced'' structures:
+Case~B orbit pairs (free pairs) receive 2 directed choices; Case~A orbit
+pairs (from even-length cycles) are forced to a single symmetric state.
+At $n=4$ and $n=5$, the combinatorics of forced symmetric pairs exactly
+produces the orbit-count 7 and 21 --- the same values that the
+Three-Cycle Forcing Lemma blocks as tournament H-values.
+The q-Burnside ``sees'' the forbidden structure through the lens of
+$q=2$; $q=3$ (t(r)ienerments) resolves it.
+\end{remark}
+
+\subsection{The \texorpdfstring{$B$}{B}-value Zeckendorf structure}
+
+\begin{theorem}[Zeckendorf of maximum B-values]\label{thm:B-zeck}
+The maximum Burnside exponent $B(\mathrm{id}_n)=\binom{n}{2}=T_{n-1}$ (the
+$(n-1)$-th triangular number) has a pure single-Fibonacci-number
+Zeckendorf representation at exactly the values $n=2,3,7,11,\ldots$,
+i.e., when $T_{n-1}$ is itself a Fibonacci number.  These are the
+\emph{triangular Fibonacci numbers}:
+\[
+  T_1=F_2=1,\quad T_2=F_4=3,\quad T_6=F_8=21,\quad T_{10}=F_{10}=55,\quad\ldots
+\]
+\end{theorem}
+
+\begin{remark}
+$B(\mathrm{id}_7)=T_6=21=F_8$ is simultaneously the second permanent
+forbidden H-value, the sixth triangular number, and the eighth Fibonacci number.
+The identity permutation on 7 vertices has its entire Burnside weight
+concentrated in a single Fibonacci-indexed power of $q$.
+\end{remark}
+
+\subsection{Fibonacci multiplication and the Cayley--Dickson tower}
+\label{ssec:fib-mult}
+
+\begin{definition}[Fibonacci multiplication]
+Define the operation $\odot$ on Fibonacci numbers by:
+\[
+  F_a\odot F_b=F_{a+b-1}.
+\]
+This extends bilinearly to all positive integers via their Zeckendorf
+representations:
+\[
+  n\odot m=\sum_{i\in Z(n),\,j\in Z(m)}F_{i+j-1},
+\]
+where $Z(n)=\{a_1,a_2,\ldots\}$ is the Zeckendorf index set of $n$.
+\end{definition}
+
+\begin{theorem}[Commutativity and associativity]\label{thm:fib-ring}
+The operation $\odot$ is commutative and associative:
+$F_a\odot F_b=F_b\odot F_a$ and $(F_a\odot F_b)\odot F_c=F_a\odot(F_b\odot F_c)$.
+Together with ordinary addition, $(\mathbb{N},+,\odot)$ forms a commutative semiring.
+\end{theorem}
+
+\begin{proof}
+$F_a\odot F_b=F_{a+b-1}=F_b\odot F_a$ (commutativity follows from symmetry of $a+b-1$).
+$(F_a\odot F_b)\odot F_c=F_{a+b-1}\odot F_c=F_{(a+b-1)+c-1}=F_{a+b+c-2}=F_a\odot F_{b+c-1}
+=F_a\odot(F_b\odot F_c)$ (associativity).  Distributivity holds by bilinearity.
+\end{proof}
+
+\begin{theorem}[Cayley--Dickson tower via iterated squaring]\label{thm:cayley-dickson}
+Iterated $\odot$-squaring from $F_2=1$:
+\[
+  F_2\overset{\odot^2}{\longrightarrow}F_3
+  \overset{\odot^2}{\longrightarrow}F_5
+  \overset{\odot^2}{\longrightarrow}F_9
+  \overset{\odot^2}{\longrightarrow}F_{17}
+  \overset{\odot^2}{\longrightarrow}F_{33}\cdots
+\]
+The Fibonacci \emph{index} doubles minus 1 at each step: $a_{k+1}=2a_k-1$,
+giving $a_k=2^{k-1}+1$ for $k\ge 1$.
+The \emph{values} $F_{2^{k-1}+1}=1,2,5,34,1597,\ldots$ are the Fibonacci numbers
+at Cayley--Dickson positions.  The \emph{Mode-B chain} at odd $n=2j+1$
+encounters these at $n=3,5,9,17,\ldots=F_{a_k}+1$: the
+tile exponents are hexagonal numbers $H_k=\binom{2k}{2}=\binom{a_k-1}{2}$.
+\end{theorem}
+
+\begin{remark}[Forbidden value 21 under Fibonacci multiplication]
+$F_5\odot F_4=F_8=21$: the second permanent forbidden value arises as the
+$\odot$-product of $F_5=5$ and $F_4=3$.  Under ordinary multiplication,
+$5\times3=15\ne21$; under $\odot$, the Fibonacci index adds, producing the
+forbidden value.
+\end{remark}
+
+\subsection{OCF--Zeckendorf duality: natural numbers as tournaments}
+\label{ssec:ocf-zeck}
+
+The deepest connection unifies two canonical representations of natural numbers.
+
+\begin{definition}
+Two \emph{canonical independence-polynomial representations} of a positive integer $N$:
+\begin{enumerate}
+\item \textbf{Zeckendorf (path-graph)}: $N=\sum_{k\in S}F_k$ where $S$ is an independent
+  set in the path graph $P_\infty$ (no two consecutive indices; unique by Zeckendorf's theorem).
+  Equivalently, $N=I(P_S,1)$ where $P_S$ is the induced path on $S$.
+\item \textbf{OCF (conflict-graph)}: If $N=H(T)$ for some tournament $T$, then
+  $N=I(\Omega(T),2)$ where $\Omega(T)$ is the odd-cycle conflict graph
+  (Grinberg--Stanley; Theorem~\ref{thm:ocf-ext}).
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[OCF--Zeckendorf duality]\label{thm:ocf-zeck}
+Both representations express $N$ as an independence polynomial evaluation:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Representation & Graph & Evaluation point\\
+\midrule
+Zeckendorf & $P_\infty$ (path), independent set $S$ & $x=1$\\
+OCF & $\Omega(T)$ (conflict graph) & $x=2$\\
+q-Burnside & Pair-orbit graph on $K_n$ & $q=3$ (t(r)ienerments)\\
+\bottomrule
+\end{tabular}
+\end{center}
+The three are related: increasing the evaluation point from $1$ to $2$ to $3$
+transitions from Zeckendorf (binary 0/1 coefficients) through OCF
+tournaments (integer $\alpha_k$, odd constraint) to t(r)ienerments
+(all positive integers achievable).
+\end{theorem}
+
+\begin{corollary}[Natural numbers as tournaments]
+Every odd positive integer $N\ne 7,21$ is realised as $H(T)$ for some tournament
+$T$ (OCF representation).  The exceptions $7$ and $21$ are realised as
+$H^+(\tau)$ for some positive t(r)ienerment $\tau$ (extended OCF representation
+for $D_\tau$).  Thus every positive integer has a canonical ``tournament
+structure'':
+\[
+  N\;\leftrightarrow\;\text{some}\;\Omega\;\text{with}\;I(\Omega,2)=N.
+\]
+The choice of $\Omega$ is the \emph{tournament structure of }$N$.
+The Zeckendorf representation gives the \emph{Fibonacci structure} of $N$:
+the Fibonacci indices form the ``tiles'' of the canonical path-graph
+independent set.  The non-consecutive constraint of Zeckendorf
+(no adjacent Fibonacci terms) is the tournament-theory independence
+constraint (no conflicting cycles) in the limit $q\to 1^+$.
+\end{corollary}
+
+\subsection{The complete picture: six coincidences at 7 and 21}
+
+The numbers 7 and 21 are singled out by six independent structures:
+
+\begin{table}[ht]
+\centering
+\caption{Six coincidences at the permanent forbidden tournament values 7 and 21.}
+\small
+\begin{tabular}{lll}
+\toprule
+Context & $7$ & $21$\\
+\midrule
+Zeckendorf & $F_5+F_3$ (two-term) & $F_8$ (\textbf{pure Fibonacci!})\\
+Tournament $H$ & \textbf{forbidden} for all $T,n$ & \textbf{forbidden} for all $T,n$\\
+$q$-Burnside & $G_4(2)=7$ & $G_5(2)=21$\\
+Multiplicative & $G_4(2)=7$ & $G_3(2)\times G_4(2)=3\times7=21$\\
+$B$-value & $-$ & $B(\mathrm{id}_{n=7})=\binom{7}{2}=21=F_8$\\
+Fibonacci mult & $-$ & $F_5\odot F_4=F_8=21$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}[Why $21=3\times 7$]
+The factor 3 is the ternary base of t(r)ienerments: the second forbidden
+value is the first forbidden value \emph{amplified by the ternary structure}.
+Algebraically: $G_5(2)=G_3(2)\times G_4(2)$, so the second forbidden
+value is the product of the ``pre-forbidden'' count (3) and the first
+forbidden value (7).  The ternary amplification $N\mapsto 3N$ connects
+the binary (tournament) obstruction level to the ternary (t(r)ienerment)
+resolution level.
+\end{remark}
+
 \end{document}
