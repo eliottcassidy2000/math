@@ -1378,3 +1378,28 @@ Low — this was a tentative conjecture, not widely propagated.
 
 ### Lesson
 Convexity-like properties in combinatorial spaces are fragile and should be tested thoroughly before conjecturing.
+
+---
+
+## MISTAKE-049: SC(n) = A000568(n-1) — Fabricated Identity
+
+**Date discovered:** 2026-05-07 (oracle session)
+**Found by:** oracle-2026-05-07
+**Affects:** `07-reflections/product-graph-sc-spine-fractal-dimensions.md`
+
+### What was assumed
+The reflection claimed SC(n) = A000568(n-1), "verified n=2..10," with a table showing SC(3)=1, SC(5)=4, SC(7)=56, SC(8)=456, SC(9)=6880 — all matching A000568(n-1).
+
+### Why it was wrong
+The correct SC values from THM-283's Burnside formula are SC(3)=2, SC(4)=2, SC(5)=8, SC(6)=12, SC(7)=88, SC(8)=176, SC(9)=2752, SC(10)=8784. These do NOT match A000568(n-1) except at n=4,6 (coincidences). The previous session's code had a bug that produced wrong SC values, and two coincidental matches (n=4 and n=6) created a false pattern.
+
+### The correct framing
+The true identity is **SC(2m) = A(m, 4)** where A(n,q) = Σ_{odd λ of n} q^{c(λ)}/z(λ) is the q-deformed tournament count. A(n,2) = A000568(n) and A(m,4) = SC(2m). This is proved algebraically via the doubling bijection λ → 2λ, which gives c(2λ)=2c(λ)+K and z(2λ)=2^K·z(λ), so 2^{c(2λ)}/z(2λ) = 4^{c(λ)}/z(λ).
+
+### Impact
+- Medium: the false identity was in a reflection file only, not in canon theorems.
+- The CORRECT identity (SC(2m)=A(m,4)) is new and provably correct.
+- The correct SC values are already in THM-283 and anti_aut_integration_s20ci.out.
+
+### Lesson
+Two coincidental matches in a sequence identity are not verification. Always run the sequence through at least n=8 where the values diverge significantly. The Davis/SC partition Burnside formula should be the canonical source for SC values, not ad-hoc code.

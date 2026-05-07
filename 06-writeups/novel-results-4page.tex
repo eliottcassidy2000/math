@@ -212,6 +212,14 @@ Iso-class counts follow by $|\{I: H{=}h\}|=\mathsf{tile}(h)/h$ when
 all $|\mathrm{Aut}|{=}1$ at $H{=}h$: at $n{=}7$, $\mathsf{tile}(189)/189=1/21$
 identifies the Paley tournament $T_7$ ($|\mathrm{Aut}|{=}21$, verified).
 \end{rem}
+\begin{rem}[$q$-deformed tournament count]
+$A(n,q)=\!\sum_{\lambda\vdash n,\,\text{odd}}\!q^{c(\lambda)}/z(\lambda)$ satisfies
+$A(n,2){=}A_{000568}(n)$ and $A(m,4){=}\mathrm{SC}(2m)$ (proved via
+$c(2\lambda){=}2c(\lambda){+}|\lambda|$, $z(2\lambda){=}2^{|\lambda|}z(\lambda)$, so
+$2^{c(2\lambda)}/z(2\lambda){=}4^{c(\lambda)}/z(\lambda)$).
+Runs in $O(p_\mathrm{dist}(n))$; computes both sequences through $n{=}30$ in ${<}1\,\mathrm{s}$.
+\end{rem}
+
 The Cayley transform $Q(x)=(1+x)/(1-x)$ -- the bilinear/Tustin transform
 of digital signal processing -- governs the statistics of random tournaments
 through weighted Delannoy path enumeration; no prior literature records this.

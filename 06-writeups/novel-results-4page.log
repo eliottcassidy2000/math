@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.2)  6 MAY 2026 21:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.2)  7 MAY 2026 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,13 +465,13 @@ Package rerunfilecheck Info: File `novel-results-4page.out' has not changed.
 (rerunfilecheck)             Checksum: F6385067D07F729D0FED8C93F685D2FC;1860.
  ) 
 Here is how much of TeX's memory you used:
- 12404 strings out of 476182
- 188131 string characters out of 5795596
+ 12405 strings out of 476182
+ 188138 string characters out of 5795596
  1941975 words of memory out of 5000000
  33919 multiletter control sequences out of 15000+600000
  574263 words of font info for 157 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
- 75i,7n,79p,1046b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,7n,79p,1046b,615s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texl
@@ -493,10 +493,10 @@ e1/public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb>
 Output written on /home/ubuntu/math/06-writeups/novel-results-4page.pdf (4 page
-s, 295508 bytes).
+s, 298148 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 215 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
  36937 words of extra memory for PDF output out of 42996 (max. 10000000)
 
