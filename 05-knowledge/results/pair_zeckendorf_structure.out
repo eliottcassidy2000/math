@@ -1,0 +1,115 @@
+TABLE A: Pair FSM counts = even/odd Fibonacci
+  n  | F_n (free)  | C_n (constr) | Total (n pairs) | Formula checks
+  0  |           1 |            1 |               3 | F_n=1✓ C_n=1✓
+  1  |           3 |            2 |               8 | F_n=3✓ C_n=2✓
+  2  |           8 |            5 |              21 | F_n=8✓ C_n=5✓
+  3  |          21 |           13 |              55 | F_n=21✓ C_n=13✓
+  4  |          55 |           34 |             144 | F_n=55✓ C_n=34✓
+  5  |         144 |           89 |             377 | F_n=144✓ C_n=89✓
+  6  |         377 |          233 |             987 | F_n=377✓ C_n=233✓
+  7  |         987 |          610 |            2584 | F_n=987✓ C_n=610✓
+  8  |        2584 |         1597 |            6765 | F_n=2584✓ C_n=1597✓
+
+TABLE B: Key GF identities
+  F(x) = 1/(1-3x+x^2)
+  C(x) = (1-x)/(1-3x+x^2)
+  1/(1-3x+x^2) = sum_{n>=0} F_{2n+2} x^n = 1+3x+8x^2+21x^3+55x^4+...
+  Denominator roots: x=1/phi^2 (|<1|) and x=phi^2 (|>1|)
+  => dominant growth rate phi^2 per pair step
+
+  Total valid pair strings of n pairs:
+  n=1 pairs: 3 = F_4 = 3 ✓
+  n=2 pairs: 8 = F_6 = 8 ✓
+  n=3 pairs: 21 = F_8 = 21 ✓
+  n=4 pairs: 55 = F_10 = 55 ✓
+  n=5 pairs: 144 = F_12 = 144 ✓
+  n=6 pairs: 377 = F_14 = 377 ✓
+
+TABLE C: Self-similarity at multiple scales
+Constraint at bit scale:  b_i=1 AND b_{i+1}=1 FORBIDDEN
+Constraint at pair scale: pair_k='01' AND pair_{k+1}='10' FORBIDDEN
+DFA at each scale:
+  States: F (free, last=0) and C (constrained, last=1)
+  F ->emit(F-type)-> F     [F stays F: 0 at bit, or 00/10 at pair]
+  F ->emit(C-type)-> C     [F becomes C: 1 at bit, or 01 at pair]
+  C ->emit(F-type)-> F     [C repays debt: 0 at bit, or 00 at pair]
+  C ->emit(C-type)-> C     [C rolls debt: 01 at pair only]
+  C ->emit(CROSS)  -> FORBIDDEN [1 at bit, or 10 at pair]
+
+Transfer matrix at bit scale: [[1,1],[1,0]] (Fibonacci matrix)
+Transfer matrix at pair scale: [[2,1],[1,1]] (Fibonacci matrix SQUARED)
+  [[1,1],[1,0]]^2 = [[2,1],[1,1]] ✓
+
+Eigenvalues at bit scale: phi and 1/phi
+Eigenvalues at pair scale: phi^2 and 1/phi^2
+At quad scale: phi^4 and 1/phi^4
+At scale 2^k: phi^{2^k} and 1/phi^{2^k}
+=> MODE B RECURSION: each doubling of scale squares the eigenvalue phi^k -> phi^{2k}
+
+TABLE D: The internal vs external constraint model
+
+10 pair (left-active): backward tile at position 2k-1 (first in pair)
+  * Consumes constraint INTERNALLY: tile 2k (second in pair) must be 0
+  * External effect on next pair: NONE (next pair completely free)
+  * 'Earns credit': backward arc done, next pair free to choose anything
+
+01 pair (right-active): backward tile at position 2k (second in pair)
+  * Consumes constraint EXTERNALLY: tile 2k+1 (first of NEXT pair) must be 0
+  * External effect: next pair CANNOT start with 1 (cannot be 10)
+  * 'Incurs debt': backward arc exported, next pair restricted
+
+00 pair (neutral): no backward tile
+  * No constraint generation or consumption
+  * Acts like F state at pair level
+
+CREDIT FLOW: valid pair sequences are exactly those where debt is
+never 'defaulted' (a 01 pair cannot hand off to a 10 pair = the)
+debt is immediately called in when the debtor (01) meets the
+claimant (10) directly.
+
+TABLE E: Forbidden transition (01)->(10) as partial tournament order
+
+Transition table (A can precede B):
+  A\B  | 00  | 01  | 10
+  -----+-----+-----+-----
+  00   |  Y  |  Y  |  Y  (00 can precede anything)
+  01   |  Y  |  Y  |  N  (01 CANNOT precede 10)
+  10   |  Y  |  Y  |  Y  (10 can precede anything)
+
+Partial order: (00, 10) > 01 in terms of 'freedom granted'
+The UNIQUE forbidden: 01 -> 10 = 'right-active exports debt to left-active'
+
+Tournament-theoretic interpretation:
+  The pair sequence is a tournament where pair k 'beats' pair k+1
+  iff the transition is allowed.
+  10 beats everyone (grants all choices to next)
+  00 beats everyone (neutral, same freedom)
+  01 beats 00 and 01, LOSES to 10
+  This is the only 'upset' in the tournament: 01 cannot be immediately
+  followed by 10. All other orderings are valid.
+
+TABLE F: Multi-tile H formula via pair decomposition
+
+n=5: H-values grouped by pair state sequence
+(Pairs: tiles 0-1, 2-3, 4-5; states: 00=both fwd, 01=right bwd, 10=left bwd)
+  ['00', '00', '00']: bits=[0, 0, 0, 0, 0, 0], H=  1, info=['00', '00', '00'], FSM=['F', 'F', 'F']
+  ['00', '00', '01']: bits=[0, 0, 0, 0, 0, 1], H=  3, info=['00', '00', '01(r=2)'], FSM=['F', 'F', 'C']
+  ['00', '00', '10']: bits=[0, 0, 0, 0, 1, 0], H=  5, info=['00', '00', '10(r=3)'], FSM=['F', 'F', 'F']
+  ['00', '01', '00']: bits=[0, 0, 0, 1, 0, 0], H=  9, info=['00', '01(r=4)', '00'], FSM=['F', 'C', 'F']
+  ['00', '01', '01']: bits=[0, 0, 0, 1, 0, 1], H=  9, info=['00', '01(r=4)', '01(r=2)'], FSM=['F', 'C', 'C']
+  ['00', '10', '00']: bits=[0, 0, 1, 0, 0, 0], H=  3, info=['00', '10(r=2)', '00'], FSM=['F', 'F', 'F']
+  ['00', '10', '01']: bits=[0, 0, 1, 0, 0, 1], H=  5, info=['00', '10(r=2)', '01(r=2)'], FSM=['F', 'F', 'C']
+  ['00', '10', '10']: bits=[0, 0, 1, 0, 1, 0], H=  5, info=['00', '10(r=2)', '10(r=3)'], FSM=['F', 'F', 'F']
+  ['01', '00', '00']: bits=[0, 1, 0, 0, 0, 0], H=  5, info=['01(r=3)', '00', '00'], FSM=['C', 'F', 'F']
+  ['01', '00', '01']: bits=[0, 1, 0, 0, 0, 1], H=  9, info=['01(r=3)', '00', '01(r=2)'], FSM=['C', 'F', 'C']
+  ['01', '00', '10']: bits=[0, 1, 0, 0, 1, 0], H= 13, info=['01(r=3)', '00', '10(r=3)'], FSM=['C', 'F', 'F']
+  ['01', '01', '00']: bits=[0, 1, 0, 1, 0, 0], H= 11, info=['01(r=3)', '01(r=4)', '00'], FSM=['C', 'C', 'F']
+  ['01', '01', '01']: bits=[0, 1, 0, 1, 0, 1], H= 13, info=['01(r=3)', '01(r=4)', '01(r=2)'], FSM=['C', 'C', 'C']
+  ['10', '00', '00']: bits=[1, 0, 0, 0, 0, 0], H=  3, info=['10(r=2)', '00', '00'], FSM=['F', 'F', 'F']
+  ['10', '00', '01']: bits=[1, 0, 0, 0, 0, 1], H=  9, info=['10(r=2)', '00', '01(r=2)'], FSM=['F', 'F', 'C']
+  ['10', '00', '10']: bits=[1, 0, 0, 0, 1, 0], H=  9, info=['10(r=2)', '00', '10(r=3)'], FSM=['F', 'F', 'F']
+  ['10', '01', '00']: bits=[1, 0, 0, 1, 0, 0], H=  9, info=['10(r=2)', '01(r=4)', '00'], FSM=['F', 'C', 'F']
+  ['10', '01', '01']: bits=[1, 0, 0, 1, 0, 1], H= 13, info=['10(r=2)', '01(r=4)', '01(r=2)'], FSM=['F', 'C', 'C']
+  ['10', '10', '00']: bits=[1, 0, 1, 0, 0, 0], H=  5, info=['10(r=2)', '10(r=2)', '00'], FSM=['F', 'F', 'F']
+  ['10', '10', '01']: bits=[1, 0, 1, 0, 0, 1], H= 11, info=['10(r=2)', '10(r=2)', '01(r=2)'], FSM=['F', 'F', 'C']
+  ['10', '10', '10']: bits=[1, 0, 1, 0, 1, 0], H=  9, info=['10(r=2)', '10(r=2)', '10(r=3)'], FSM=['F', 'F', 'F']

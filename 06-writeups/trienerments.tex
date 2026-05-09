@@ -2666,4 +2666,313 @@ polynomial evaluated at a specific value:
 \]
 \end{remark}
 
+% ════════════════════════════════════════════════════════════════════════════
+\section{Pair Interactions in Zeckendorf Tilings: the Credit-Debt Recursion}
+\label{sec:pair-recursion}
+% ════════════════════════════════════════════════════════════════════════════
+
+We now go deeper into the pair representation of Section~\ref{ssec:pairs-ternary},
+revealing a recursive \emph{credit-debt} dynamics that governs how consecutive
+pairs communicate, why the unique forbidden transition $(01)\to(10)$ is
+the sole constraint, and how the pair-level structure achieves fractal
+self-similarity across all scales of grouping.
+
+\subsection{The two-state pair automaton}
+\label{ssec:pair-automaton}
+
+Group the tiling bits into consecutive pairs $(b_{2k-1},b_{2k})$ as before.
+The three valid pair states are $\{00,01,10\}$:
+\begin{itemize}
+\item $\mathbf{00}$ (neutral): no backward tile within the pair.
+\item $\mathbf{10}$ (left-active): backward tile at the \emph{first} position of the pair.
+\item $\mathbf{01}$ (right-active): backward tile at the \emph{second} position of the pair.
+\end{itemize}
+
+The cross-pair constraint $(01)\to(10)$ is the unique forbidden transition.
+
+\begin{definition}[Free and Constrained states]
+Assign the \emph{automaton state} $\sigma_k\in\{F,C\}$ after emitting pair $k$:
+\[
+  \sigma_k=\begin{cases}C & \text{if pair }k=01\text{ (right-active)},\\
+                         F & \text{if pair }k\in\{00,10\}\text{ (neutral or left-active)}.\end{cases}
+\]
+The pair automaton transitions are:
+\[
+  F\xrightarrow{00}F,\quad F\xrightarrow{10}F,\quad F\xrightarrow{01}C,
+  \quad C\xrightarrow{00}F,\quad C\xrightarrow{01}C,\quad C\xrightarrow{10}=\text{FORBIDDEN}.
+\]
+\end{definition}
+
+\begin{theorem}[Even/odd Fibonacci at pair level]\label{thm:pair-fib}
+Let $F_n$ (resp.\ $C_n$) be the number of valid pair strings of length $n$
+continuing from state $F$ (resp.\ $C$).  The recursion is
+\[
+  \begin{pmatrix}F_n\\C_n\end{pmatrix}
+  =\underbrace{\begin{pmatrix}2&1\\1&1\end{pmatrix}}_{M'}\begin{pmatrix}F_{n-1}\\C_{n-1}\end{pmatrix},
+  \quad F_0=C_0=1,
+\]
+and the closed forms are
+\[
+  F_n=F_{2n+2},\qquad C_n=F_{2n+1},
+\]
+where $F_k$ on the right denotes the $k$-th Fibonacci number.  The total
+number of valid pair strings of $n$ pairs (any starting state) is
+$2F_n+C_n=F_{2n+4}$.
+\end{theorem}
+
+\begin{proof}
+From $F$-state: 2 transitions to $F$ (via $00$ or $10$) and 1 to $C$ (via $01$).
+From $C$-state: 1 to $F$ (via $00$) and 1 to $C$ (via $01$).
+This gives $F_n=2F_{n-1}+C_{n-1}$ and $C_n=F_{n-1}+C_{n-1}$.
+Substituting $F_{n-1}=F_{2n}$ and $C_{n-1}=F_{2n-1}$:
+$F_n=2F_{2n}+F_{2n-1}=F_{2n}+F_{2n+1}=F_{2n+2}$ ✓ (Fibonacci recurrence).
+\end{proof}
+
+\subsection{The generating functions and the squared Fibonacci matrix}
+\label{ssec:pair-gf}
+
+\begin{theorem}[Pair generating functions]\label{thm:pair-gf}
+\[
+  \mathcal{F}(x)=\sum_{n\ge0}F_n\,x^n=\frac{1}{1-3x+x^2},\qquad
+  \mathcal{C}(x)=\sum_{n\ge0}C_n\,x^n=\frac{1-x}{1-3x+x^2}.
+\]
+The common denominator $1-3x+x^2$ has roots $x=\phi^{-2}$ and $x=\phi^2$
+(reciprocal golden-ratio squares).  The dominant singularity is
+$x=1/\phi^2$, giving growth rate $\phi^2$ per pair step.
+\end{theorem}
+
+\begin{proof}
+From the recursion: $\mathcal{F}=1+x(2\mathcal{F}+\mathcal{C})$ and
+$\mathcal{C}=1+x(\mathcal{F}+\mathcal{C})$.  The second gives
+$\mathcal{C}=(1+x\mathcal{F})/(1-x)$; substituting into the first and
+simplifying yields $\mathcal{F}(1-3x+x^2)=1$.
+\end{proof}
+
+\begin{theorem}[Fibonacci matrix squared]\label{thm:fib-matrix}
+The pair transfer matrix $M'=\bigl(\begin{smallmatrix}2&1\\1&1\end{smallmatrix}\bigr)$
+is the square of the Fibonacci matrix:
+\[
+  \begin{pmatrix}1&1\\1&0\end{pmatrix}^2=\begin{pmatrix}2&1\\1&1\end{pmatrix}=M'.
+\]
+Consequently $M'^n$ generates $F_{2n+2}$ (even-indexed Fibonacci), while
+the Fibonacci matrix itself generates all Fibonacci numbers.
+The eigenvalues of $M'$ are $\phi^2$ and $\phi^{-2}$.
+\end{theorem}
+
+\subsection{The credit-debt model: internal vs.\ external constraint}
+\label{ssec:credit-debt}
+
+The pair type encodes how the non-consecutive constraint is \emph{consumed}:
+
+\begin{definition}[Internal and external consumption]
+\begin{itemize}
+\item \textbf{Left-active pair} $(10)$: the backward tile occupies the
+  \emph{first} position of the pair.  The non-consecutive constraint is
+  consumed \emph{internally}: the second tile of the same pair is forced
+  forward.  The \emph{next} pair is completely free.  We say the pair
+  \emph{earns credit}.
+\item \textbf{Right-active pair} $(01)$: the backward tile occupies the
+  \emph{second} position of the pair.  The constraint is consumed
+  \emph{externally}: the first tile of the \emph{next} pair is forced forward
+  (forbidding the next pair from being $10$).  We say the pair
+  \emph{incurs debt}.
+\item \textbf{Neutral pair} $(00)$: no backward tile; no constraint
+  generated or consumed.
+\end{itemize}
+\end{definition}
+
+The pair automaton encodes \emph{credit flow}: a valid pair sequence is
+one in which debt is never ``defaulted'' — a right-active pair ($C$-state)
+cannot immediately hand its obligation to a left-active pair, because
+that would require two consecutive 1s across the pair boundary.
+
+\begin{remark}[The unique default event]
+The unique forbidden transition $C\to 10$ = $(01)\to(10)$ is precisely
+the moment of ``default'': a $C$-state pair cannot emit a left-active
+pair because the second bit of $01$ is $1$ and the first bit of $10$ is $1$
+— violating the non-consecutive constraint at the pair boundary.
+\end{remark}
+
+\subsection{Fractal self-similarity at all scales}
+\label{ssec:self-similar}
+
+\begin{theorem}[Scale-invariant DFA structure]\label{thm:scale-inv}
+At every dyadic scale $2^j$ (grouping $2^j$ bits into blocks):
+\begin{itemize}
+\item The valid sequences at that scale are recognised by the \emph{same}
+  two-state DFA $\{F,C\}$ with the same transition rule (only $C\to C\text{-type}$
+  is restricted, not $C\to F\text{-type}$).
+\item The transfer matrix at scale $2^j$ is the $2^j$-th power of the
+  Fibonacci matrix $\bigl(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\bigr)^{2^j}$,
+  with eigenvalues $\phi^{2^j}$ and $\phi^{-2^j}$.
+\item The dominant growth rate at scale $2^j$ is $\phi^{2^j}$.
+\end{itemize}
+Iterating scale by $2$ (squaring) corresponds to Mode-B doubling:
+$\phi^1\to\phi^2\to\phi^4\to\phi^8\to\cdots$
+— the same tower as the Fibonacci multiplication $F_k\odot F_k=F_{2k-1}$
+and the Cayley--Dickson iteration.
+\end{theorem}
+
+\begin{proof}[Sketch]
+At scale $2^j$, the valid blocks of length $2^j$ satisfying the
+non-consecutive constraint can be analysed by induction: the constraint
+is that no two consecutive 1s appear anywhere in the string, which
+partitions into (a) no violations within each half, and (b) no violation
+at the midpoint boundary.  The midpoint-boundary constraint is exactly
+the pair-level $C\to10$ prohibition applied at scale $2^{j-1}$.
+The transfer matrix compounds multiplicatively: $M(2^j)=M(1)^{2^j}$.
+\end{proof}
+
+\subsection{The pair partial order and its tournament interpretation}
+\label{ssec:pair-partial-order}
+
+\begin{proposition}[Pair partial order]\label{prop:pair-order}
+Define: pair $A$ \emph{dominates} pair $B$ if $A$ is allowed to immediately
+precede $B$.  The domination relation on $\{00,01,10\}$ is:
+\[
+  00\to 00,\;00\to 01,\;00\to 10\;|\;
+  01\to 00,\;01\to 01\;(\mathbf{01\not\to 10})\;|\;
+  10\to 00,\;10\to 01,\;10\to 10.
+\]
+This gives the \emph{partial order}: $\{10,00\}\succ 01$ (both $10$ and $00$
+strictly dominate $01$ in terms of future freedom granted to the next pair),
+with the unique ``upset'' being $01\not\to10$.
+\end{proposition}
+
+\begin{remark}[Tournament analogy]
+The pair alphabet $\{00,01,10\}$ with the above relation forms a
+\emph{partial tournament}: $10$ and $00$ both beat $01$ (they can
+precede $01$ and also avoid being constrained by it), while $01$ loses
+to $10$ (cannot precede it).  The ONLY ``forbidden matchup'' is
+$(01)\to(10)$: a right-active pair cannot immediately hand off to
+a left-active pair.
+
+In tournament tiling terms:
+\begin{itemize}
+\item $10$ pair = backward tile at \emph{lower} position in pair =
+  smaller-range tile backward, larger-range tile forward.
+  The constraint is ``spent early'' on the smaller tile.
+\item $01$ pair = backward tile at \emph{higher} position in pair =
+  larger-range tile backward.
+  The constraint is ``deferred'' to the next pair.
+\end{itemize}
+The forbidden transition $01\to10$ says: one cannot defer a constraint
+(via $01$) and then immediately spend a new constraint (via $10$)
+without any neutral gap — this would require consecutive backward tiles.
+\end{remark}
+
+\subsection{H-values under the pair decomposition}
+\label{ssec:pair-H}
+
+\begin{proposition}[Single-pair H formula]\label{prop:single-pair-H}
+For a tiling with exactly one active pair of state $s$ and the backward
+tile having range $r$:
+\[
+  H=1+2^{r-1},
+\]
+regardless of whether $s=10$ (left-active, range of first tile) or
+$s=01$ (right-active, range of second tile).
+The FSM state ($F$ or $C$) reached does not affect the H-value for a
+single active pair.
+\end{proposition}
+
+\begin{proof}
+By Theorem~\ref{thm:atomic-H}: the single backward tile of range $r$
+creates $2^{r-2}$ directed odd cycles, all sharing both endpoints,
+so $\alpha_2=0$ and $H=1+2\cdot2^{r-2}=1+2^{r-1}$.
+\end{proof}
+
+\begin{remark}[Multi-pair H and cycle interactions]
+When multiple pairs are active, the H-value is \emph{not} the product or
+sum of single-pair H-values.  Let $\Delta_k=2^{r_k-2}$ be the cycle
+contribution of active pair $k$ in isolation.  Then:
+\[
+  \alpha_1(T) = \sum_k\Delta_k + \Delta_{\rm int},
+\]
+where $\Delta_{\rm int}$ is the \emph{interaction term} from paths that
+use multiple backward arcs simultaneously.
+
+$\Delta_{\rm int}$ can be \emph{positive} (new long odd cycles created
+by two backward arcs in combination) or \emph{negative} (existing cycles
+destroyed when a forward arc is replaced by a backward arc elsewhere).
+The FSM state sequence determines the \emph{structure} of allowed
+configurations, but not the sign or magnitude of $\Delta_{\rm int}$,
+which depends on the ranges.
+
+Verified for $n=5$: $\Delta_{\rm int}\in\{-1,0,+1,+2\}$ across all
+two-tile Zeckendorf tilings.  The formula for $\Delta_{\rm int}$ as a
+function of the Zeckendorf positions $\{a_1,\ldots,a_r\}$ is open.
+\end{remark}
+
+\begin{conjecture}[Pair-recursive H formula]\label{conj:pair-H}
+There exists a pair-level ``potential function'' $\psi(s_k, r_k, s_{k-1})$
+depending on the current pair state $s_k$, range $r_k$, and previous
+state $s_{k-1}$, such that
+\[
+  H(T_\mathbf{z})=1+2\sum_k\psi(s_k,r_k,s_{k-1}).
+\]
+For single active pairs: $\psi(s_k,r_k,\text{any})=2^{r_k-2}$ (Theorem~\ref{prop:single-pair-H}).
+For multi-pair tilings: $\psi$ encodes the interaction between consecutive
+active pairs, with the FSM transition $(F\to C)$ vs $(C\to C)$ vs $(C\to F)$
+determining the interaction sign.
+\end{conjecture}
+
+\subsection{The complete synthesis: numbers as tournaments across scales}
+\label{ssec:final-synthesis}
+
+The full picture connecting Zeckendorf, tournaments, and t(r)ienerments:
+
+\begin{table}[ht]
+\centering
+\caption{The Zeckendorf-Tournament correspondence across scales.}
+\small
+\begin{tabular}{llll}
+\toprule
+Scale & Object & Constraint & GF/Count\\
+\midrule
+Bit ($j=0$) & Individual tile $\in\{0,1\}$ & No consecutive 1s & $1/(1-x-x^2)$ gives $F_n$\\
+Pair ($j=1$) & Pair $\in\{00,01,10\}$ & No $(01)\to(10)$ & $1/(1-3x+x^2)$ gives $F_{2n+2}$\\
+Quad ($j=2$) & Quad $\in\{$ valid 4-bit $\}$ & No boundary 11 & $1/(1-7x+x^2)$? gives $F_{4n+2}$\\
+General $j$ & $2^j$-block & No $1\ldots1$ at boundary & $M^{2^j}$ eigval $\phi^{2^j}$\\
+\midrule
+\multicolumn{4}{l}{Tournament structures at each scale:}\\
+$H$ (single tile, range $r$) & $1+2^{r-1}$ & Atomic formula & ---\\
+$H$ (pair) & $\approx\prod 1+2^{r_k-1}$ & Non-additive, see Conj.~\ref{conj:pair-H} & ---\\
+$H$ (t(r)ienerment) & $I(\Omega(D_\tau),2)$ & OCF for $D_\tau$ & ---\\
+\midrule
+\multicolumn{4}{l}{The OCF-Zeckendorf bridge:}\\
+$N=I(P_S,1)$ & Zeckendorf & Independent set in $P_\infty$, $x=1$ & Unique (Zeckendorf thm)\\
+$H(T)=I(\Omega,2)$ & Tournament & Independent set in $\Omega(T)$, $x=2$ & Unique (OCF)\\
+$H^+(\tau)=I(\Omega(D_\tau),2)$ & T(r)ienerment & Independent set in $\Omega(D_\tau)$, $x=2$ & All $N$ achievable\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}[Numbers as tournaments: the final statement]
+Every positive integer $N$ admits a canonical \emph{multilevel} tournament
+structure:
+\begin{enumerate}
+\item \textbf{Zeckendorf level}: $N=F_{a_1}+\cdots+F_{a_r}$ gives a
+  Zeckendorf tiling — a tournament with non-consecutive backward tiles.
+  Each Fibonacci component encodes a specific sub-tournament of appropriate
+  size ($F_{a_k}=|\mathcal{Z}_{n_k}|$ for the perfect-match sizes).
+\item \textbf{Pair level}: the tiling string grouped into pairs reveals
+  the credit-debt structure — the flow of the non-consecutive constraint
+  through the pair automaton, governed by the generating function
+  $\mathcal{F}(x)=1/(1-3x+x^2)$ and eigenvalue $\phi^2$.
+\item \textbf{OCF level}: the tournament's Hamiltonian path count
+  $H(T_\mathbf{z})=I(\Omega(T_\mathbf{z}),2)$ is the ``OCF number'' of $N$
+  — the tournament-theoretic realisation of $N$'s structure.
+\item \textbf{T(r)ienerment level}: relaxing the non-consecutive constraint
+  (allowing $11$ pairs, i.e., ties) extends the structure to all positive
+  integers, resolving the forbidden values $H=7$ and $H=21$ through the
+  $q$-Burnside mechanism $G_n(2)\to G_n(3)$.
+\end{enumerate}
+
+The non-consecutive constraint IS the tournament constraint IS the Zeckendorf
+constraint: they are all the \emph{independence condition on a path graph},
+evaluated at different values ($x=1$ for Zeckendorf counting,
+$x=2$ for OCF Hamiltonian paths, $x=3$ for t(r)ienerment counting).
+\end{remark}
+
 \end{document}
