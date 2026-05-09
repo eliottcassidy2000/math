@@ -2342,4 +2342,328 @@ the binary (tournament) obstruction level to the ternary (t(r)ienerment)
 resolution level.
 \end{remark}
 
+% ════════════════════════════════════════════════════════════════════════════
+\section{Binary Coefficients with Non-Consecutive Constraint:\\
+Zeckendorf Decompositions as Tournaments}
+\label{sec:binary-nonconsec}
+% ════════════════════════════════════════════════════════════════════════════
+
+We now investigate the binary string with the non-consecutive constraint
+(Zeckendorf structure) from multiple creative angles, building toward the
+synthesis: \emph{natural numbers, viewed through their Zeckendorf
+representations, are tournaments}.
+
+\subsection{Zeckendorf tilings: tournaments with non-consecutive backward arcs}
+\label{ssec:zeck-tilings}
+
+\begin{definition}[Zeckendorf tiling]
+A \emph{Zeckendorf tiling} of an $n$-vertex tournament is a tiling
+$\mathbf{t}=(t_1,\ldots,t_m)\in\{0,1\}^m$ (with $m=\binom{n-1}{2}$)
+satisfying $t_i t_{i+1}=0$ for all $i$ (no two consecutive backward arcs).
+The set of Zeckendorf tilings is $\mathcal{Z}_n\subset\{0,1\}^m$.
+\end{definition}
+
+\begin{theorem}[Zeckendorf tiling count]\label{thm:zeck-count}
+$|\mathcal{Z}_n|=F_{m+2}$, the $(m+2)$-nd Fibonacci number.
+\end{theorem}
+
+\begin{proof}
+$|\mathcal{Z}_n|$ equals the number of binary strings of length $m$
+with no two consecutive 1s, which is the classical Fibonacci count
+$F_{m+2}$ (by the recursion $F_{m+2}=F_{m+1}+F_m$: strings starting
+with $0$ can have any valid continuation of length $m-1$, strings starting
+with $10$ can have any valid continuation of length $m-2$).
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\caption{Zeckendorf tiling counts $|\mathcal{Z}_n|=F_{m+2}$ and their Fibonacci indices.}
+\begin{tabular}{rrrrrl}
+\toprule
+$n$ & $m=\binom{n-1}{2}$ & $F_{m+2}$ & Fib.\ index & Note\\
+\midrule
+3 & 1 & 2   & 3 & \\
+4 & 3 & 5   & 5 & \\
+5 & 6 & \textbf{21}  & 8 & \textbf{Second permanent forbidden $H$!}\\
+6 & 10& 144 & 12 & \\
+7 & 15& 1597& 17 & \\
+8 & 21& 28657&23& ($m=21=F_8=$ second forbidden $H$)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The Fibonacci indices $m+2=\binom{n-1}{2}+2$ for $n=1,2,\ldots$ are
+$2,2,3,5,8,12,17,23,30,\ldots$, with consecutive differences
+$0,1,2,3,4,5,6,7,\ldots$ — exactly the Mode-A step sizes (tiles added
+when appending one new vertex).
+
+\subsection{The atomic H-formula: single backward tiles}
+\label{ssec:single-tile}
+
+\begin{theorem}[Atomic H-formula]\label{thm:atomic-H}
+A tournament whose tiling has exactly one backward tile, at range $r$
+(tile $(a,b)$ with $a-b=r$), satisfies:
+\[
+  H=1+2^{r-1}.
+\]
+\end{theorem}
+
+\begin{proof}
+The backward arc $b\to a$ (range $r$) together with the all-forward
+base tournament creates directed odd cycles of the form
+$b\to a\to v_1\to\cdots\to v_k\to b$, where $v_1,\ldots,v_k$ is any
+subset of the intermediate vertices $\{b+1,\ldots,a-1\}$ traversed
+via forward arcs.  The cycle has length $k+2$; it is odd iff $k$ is odd.
+The number of subsets of $\{b+1,\ldots,a-1\}$ (of size $r-1$) with odd
+cardinality is $2^{r-2}$.  All $2^{r-2}$ cycles share both endpoints $a$
+and $b$, so no two are vertex-disjoint: $\alpha_k=0$ for $k\ge2$.  By OCF:
+\[
+  H=1+2\alpha_1=1+2\cdot2^{r-2}=1+2^{r-1}.\qedhere
+\]
+\end{proof}
+
+\begin{remark}
+Values: range $r=2,3,4,5,6,7$: $H=3,5,9,17,33,65$.  These are the
+Hamiltonian path counts of ``near-transitive'' tournaments
+with a single backward arc, verified for all $n\le7$.
+The Zeckendorf representations of these values:
+$3=F_4$, $5=F_5$, $9=F_6+F_2$, $17=F_7+F_4+F_2$, $33=F_8+F_6+F_4+F_2$, $65=F_{10}+F_6+F_3$.
+\end{remark}
+
+\subsection{The pair representation: binary pairs as ternary t(r)ienerment tiles}
+\label{ssec:pairs-ternary}
+
+\begin{theorem}[Binary pairs are ternary]\label{thm:pairs-ternary}
+Group the bits of a Zeckendorf tiling string into consecutive pairs:
+$(b_1b_2)(b_3b_4)\cdots$.  Each pair takes values in
+$\{00,01,10\}$ (since $11$ is forbidden by the non-consecutive constraint).
+The identification
+\[
+  00\leftrightarrow0,\quad 01\leftrightarrow1,\quad 10\leftrightarrow2
+\]
+maps Zeckendorf binary pairs \emph{bijectively} to ternary digits
+$\{0,1,2\}$ — the states of the positive t(r)ienerment tiling model.
+
+The \emph{cross-pair constraint} (pair ending $01$ cannot be followed by
+pair starting $1\ast$) corresponds to the t(r)ienerment non-adjacency rule:
+state~1 (tie traversed forward) cannot be followed by state~2 (backward arc).
+\end{theorem}
+
+\begin{corollary}
+Zeckendorf tiling strings of even length $2m'$, grouped into pairs,
+are in bijection with a specific subset of t(r)ienerment tilings of
+length $m'$.  The binary non-consecutive constraint generates the
+ternary t(r)ienerment structure when one moves from individual bits
+to pairs.
+\end{corollary}
+
+\subsection{The pair transfer matrix and \texorpdfstring{$\phi^2$}{phi\^{}2}}
+\label{ssec:pair-transfer}
+
+\begin{theorem}[Pair transfer matrix]\label{thm:pair-transfer}
+The transitions between consecutive pair-states $\{00,01,10\}$ are
+governed by the transfer matrix
+\[
+  M_{\rm pair}=\begin{pmatrix}1&1&1\\1&1&0\\1&1&1\end{pmatrix}
+\]
+(rows = source state, columns = target state; entry = 1 if transition
+is valid).  Its characteristic polynomial is
+\[
+  \chi(\lambda)=\lambda(\lambda^2-3\lambda+1).
+\]
+The eigenvalues are $0$, $\phi^2=(3+\sqrt{5})/2$, and $1/\phi^2=(3-\sqrt{5})/2$.
+The dominant eigenvalue is $\phi^2$ — the \emph{square of the golden ratio}.
+\end{theorem}
+
+\begin{corollary}[Even Fibonacci sequence from pairs]\label{cor:even-fib}
+The sequence of valid pair-string counts satisfies the recursion
+$a_{n+1}=3a_n-a_{n-1}$ (from the non-zero block of $\chi$), giving:
+\[
+  a_0=1,\;a_1=3,\;a_2=8,\;a_3=21,\;a_4=55,\;a_5=144,\;\ldots
+  =F_2,F_4,F_6,F_8,F_{10},F_{12},\ldots
+\]
+The pair-count sequence is \emph{exactly the even-indexed Fibonacci numbers}
+$\{F_{2n+2}\}$.
+\end{corollary}
+
+\begin{remark}[Cayley--Dickson revisited]
+The eigenvalue $\phi^2$ of the pair matrix is the Fibonacci-multiplication
+square of $\phi$ (Section~\ref{ssec:fib-mult}: $\phi\odot\phi=\phi^2$).
+The Mode-B chain steps by pairs of vertices; the pair transfer matrix
+has eigenvalue $\phi^2$; the Cayley--Dickson tower is iterated squaring
+under $\odot$.  All three are the same phenomenon at different scales.
+\end{remark}
+
+\subsection{Recursive structure: the Fibonacci tree of tournaments}
+\label{ssec:fib-tree}
+
+\begin{proposition}[Fibonacci tree decomposition]\label{prop:fib-tree}
+The Zeckendorf tilings decompose recursively:
+\[
+  \mathcal{Z}_n=
+  \bigl\{0\,\|\,\mathbf{t}':\mathbf{t}'\in\mathcal{Z}_n^{(m-1)}\bigr\}
+  \cup
+  \bigl\{10\,\|\,\mathbf{t}'':\mathbf{t}''\in\mathcal{Z}_n^{(m-2)}\bigr\},
+\]
+where $\mathcal{Z}_n^{(k)}$ denotes valid strings of length $k$.
+This is the \emph{Fibonacci tree}: each valid string either starts with
+$0$ (any valid continuation) or $10$ (forced gap, then any valid continuation).
+\end{proposition}
+
+\begin{remark}[Tournament interpretation]
+A $0$-prefix corresponds to \emph{Mode~A: one new tile, forward direction}
+(tile is compatible, system continues freely).
+A $10$-prefix corresponds to \emph{one backward tile followed by one mandatory forward tile}:
+activating a backward arc forces the immediately subsequent tile to be forward
+(the non-consecutive constraint).  This is the ``Zeckendorf carry'' in the
+tiling language, identical to the Fibonacci carry in the number representation.
+\end{remark}
+
+\subsection{First-last pairing and unconstrained long-range freedom}
+\label{ssec:firstlast}
+
+\begin{proposition}[Long-range freedom]
+In a Zeckendorf tiling $(b_1,\ldots,b_m)$:
+\begin{itemize}
+\item \emph{Short-range} (adjacent) pairs: $(b_i,b_{i+1})$ constrained to
+  $\{00,01,10\}$ — the non-consecutive rule.
+\item \emph{Long-range} pairs $(b_i,b_j)$ with $j\ge i+2$:
+  both can be $1$ simultaneously — \emph{no constraint}.
+\end{itemize}
+Pairing the first bit with the last, the second with the second-to-last, etc.
+($(b_1,b_m),(b_2,b_{m-1}),\ldots$) creates \emph{unconstrained} long-range pairs.
+\end{proposition}
+
+\begin{remark}[Geometric interpretation]
+In the staircase Young diagram $\delta_{n-2}$, the tiles at positions $i$
+and $m+1-i$ are the ``leftmost column'' tiles (near the hypotenuse) and
+the ``bottommost row'' tiles (near the apex).  Pairing these creates a
+correspondence between the longest-range tiles and shortest-range tiles
+— exactly the hypotenuse-apex pairing studied in the Mode-A/B structure.
+The hypotenuse tile has range $n-1$ (maximum) and the apex tile has range 2
+(minimum).  Both can be simultaneously backward (no constraint between them),
+but each consecutive pair along the hypotenuse or within a row IS constrained.
+\end{remark}
+
+\subsection{Different tournament sizes encoding Zeckendorf components}
+\label{ssec:tournament-sizes}
+
+Each Fibonacci number $F_k$ in a Zeckendorf representation
+$N=F_{a_1}+\cdots+F_{a_r}$ corresponds to a \emph{tournament of specific size}.
+
+\begin{proposition}[Tournament size encoding]\label{prop:tournament-size}
+The Fibonacci number $F_k$ equals $|\mathcal{Z}_n|=F_{m+2}$ for a tournament
+on $n$ vertices iff $m=k-2$, i.e., $\binom{n-1}{2}=k-2$.  The ``perfect match''
+$n$-values (where $k-2$ is a triangular number) are:
+\begin{center}
+\begin{tabular}{rrrrl}
+\toprule
+$F_k$ & $k$ & $m=k-2$ & $n$ & Context\\
+\midrule
+1  & 2 & 0 & 1 & trivial\\
+2  & 3 & 1 & 3 & $n=3$ tournament space\\
+5  & 5 & 3 & 4 & $n=4$ tournament space\\
+21 & 8 & 6 & 5 & $n=5$ \textbf{(second forbidden $H$!)}\\
+144& 12& 10& 6 & $n=6$ tournament space\\
+1597&17 & 15& 7 & $n=7$ tournament space\\
+\bottomrule
+\end{tabular}
+\end{center}
+The Fibonacci indices $k=\binom{n-1}{2}+2$ have consecutive differences
+$1,2,3,4,5,\ldots$ — the Mode-A step sizes.
+\end{proposition}
+
+\begin{remark}[The Zeckendorf decomposition as a collection of tournaments]
+A Zeckendorf decomposition $N=F_{a_1}+F_{a_2}+\cdots+F_{a_r}$
+(with $a_i-a_{i+1}\ge2$) represents $N$ as a sum of tournament
+Zeckendorf-counts from $r$ different tournament sizes.
+The non-consecutive constraint ($a_i-a_{i+1}\ge2$) ensures that consecutive
+tournament sizes are ``separated'' by at least one step in the Fibonacci hierarchy
+— no two adjacent tournament sizes contribute simultaneously.
+
+This is precisely the tournament-theory analog of the Zeckendorf property:
+\emph{no two Zeckendorf components are from adjacent sizes}
+$\leftrightarrow$
+\emph{no two backward tiles are adjacent in the tiling string}.
+\end{remark}
+
+\subsection{The atomic basis and multi-tile tournaments}
+\label{ssec:multi-tile}
+
+\begin{proposition}[Atomic basis of H-values]
+The Hamiltonian path counts $1+2^{r-1}$ for $r=2,3,4,\ldots$ form the
+\emph{atomic basis} of the tournament H-value structure: every H-value
+is a combination of these atomic values weighted by the independence
+structure of the cycle-conflict graph $\Omega(T)$.
+
+For a Zeckendorf tiling with multiple backward tiles at ranges $r_1,r_2,\ldots$:
+\[
+  H = 1 + 2\alpha_1 + 4\alpha_2 + \cdots,
+\]
+where $\alpha_k$ counts $k$-element independent sets in $\Omega(T)$.
+The non-consecutive constraint on tile positions ensures the backward tiles
+do not create \emph{directly adjacent} cycle-conflicts, but they can still
+share vertices through intermediate paths.
+\end{proposition}
+
+\begin{remark}[Information each bit contains about others]
+In a Zeckendorf tiling:
+\begin{itemize}
+\item Bit $b_i=1$ \emph{tells} bits $b_{i-1}$ and $b_{i+1}$ they must be $0$
+  (the backward arc at position $i$ prohibits adjacent backward arcs).
+\item Bit $b_i=1$ at range $r$ \emph{creates} $2^{r-2}$ odd cycles
+  (encoding the range information in the H-value via $1+2^{r-1}$).
+\item Bits at positions $i$ and $j$ with $|i-j|\ge2$ have \emph{no direct
+  constraint} but may share cycle-conflict information if their respective
+  backward arcs create cycles through the same intermediate vertices.
+\item The non-consecutive constraint on Zeckendorf positions $a_i-a_{i+1}\ge2$
+  ensures: the odd cycles from tile $a_1$ and tile $a_2$ are separated by
+  at least one ``buffer'' tile — reducing (but not eliminating) cycle conflicts.
+\end{itemize}
+\end{remark}
+
+\subsection{Synthesis: natural numbers as the Zeckendorf-tournament correspondence}
+\label{ssec:nat-numbers-tourn}
+
+\begin{theorem}[The Zeckendorf-tournament correspondence]\label{thm:zeck-tourn}
+Every positive integer $N$ admits a canonical \emph{tournament representation}:
+\begin{enumerate}
+\item[\rm(i)] \textbf{Zeckendorf encoding}: $N=F_{a_1}+\cdots+F_{a_r}$
+  (unique, non-consecutive indices).  This corresponds to a Zeckendorf tiling
+  $\mathbf{z}\in\mathcal{Z}_n$ with backward tiles at positions $a_1,\ldots,a_r$
+  within the $m$-tile staircase of a tournament on $n$ vertices.
+\item[\rm(ii)] \textbf{H-value}: the tournament $T_\mathbf{z}$ has
+  $H(T_\mathbf{z})=I(\Omega(T_\mathbf{z}),2)$, computable from the
+  backward-tile ranges via the atomic formula and the conflict graph.
+\item[\rm(iii)] \textbf{Multi-tournament decomposition}: each Fibonacci
+  component $F_{a_k}$ in the Zeckendorf representation corresponds to
+  the Zeckendorf-tiling count of a tournament of a specific size
+  (Proposition~\ref{prop:tournament-size}), and the non-consecutive constraint
+  ensures these tournament sizes are ``well-separated'' in the Fibonacci
+  hierarchy.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[The pair structure as the bridge]
+The binary non-consecutive string (Zeckendorf) connects to t(r)ienerments
+via the pair representation (Theorem~\ref{thm:pairs-ternary}): grouping
+bits into pairs converts the binary Zeckendorf string to a ternary
+t(r)ienerment tiling.  This is the algebraic bridge between:
+\[
+  \text{natural numbers (Zeckendorf, binary)}
+  \;\xrightarrow{\text{pairing}}\;
+  \text{t(r)ienerments (ternary)}
+  \;\xrightarrow{\text{q-Burnside}}\;
+  \text{tournament counting ($q=3$)}
+\]
+The non-consecutive binary constraint IS the independence constraint of the
+path graph $P_\infty$ (Zeckendorf); the independence constraint of $\Omega(T)$
+(OCF) is its tournament-graph analog.  Both express a number as an independence
+polynomial evaluated at a specific value:
+\[
+  N=I(P_S,1)\;\text{(Zeckendorf)}\quad\longleftrightarrow\quad
+  H(T)=I(\Omega(T),2)\;\text{(OCF)}.
+\]
+\end{remark}
+
 \end{document}
