@@ -1,0 +1,110 @@
+============================================================
+PAIR AUTOMATON DP VERIFICATION
+============================================================
+
+n=2, m=0 tiles, 0 pairs:
+  Tile ranges: []
+  h-values:   []
+  Brute count = 1, F_{m+2} = F_{2} = 1 ✓
+  DP count    = 1 ✓
+  Brute sum(H_approx) = 1
+  DP sum(H_approx)    = 1 ✓
+
+n=3, m=1 (odd, skipping pair DP)
+
+n=4, m=3 (odd, skipping pair DP)
+
+n=5, m=6 tiles, 3 pairs:
+  Tile ranges: [2, 2, 2, 3, 3, 4]
+  h-values:   [3, 3, 3, 5, 5, 9]
+  Brute count = 21, F_{m+2} = F_{8} = 21 ✓
+  DP count    = 21 ✓
+  Brute sum(H_approx) = 635
+  DP sum(H_approx)    = 635 ✓
+
+n=6, m=10 tiles, 5 pairs:
+  Tile ranges: [2, 2, 2, 2, 3, 3, 3, 4, 4, 5]
+  h-values:   [3, 3, 3, 3, 5, 5, 5, 9, 9, 17]
+  Brute count = 144, F_{m+2} = F_{12} = 144 ✓
+  DP count    = 144 ✓
+  Brute sum(H_approx) = 81540
+  DP sum(H_approx)    = 81540 ✓
+
+n=7, m=15 (odd, skipping pair DP)
+
+BIJECTION TABLE n=5, m=6 tiles, F_{m+2}=F_{8}=21 tilings
+Tile ranges: [2, 2, 2, 3, 3, 4]
+h-values: [3, 3, 3, 5, 5, 9]
+    N |                 bits |   H_approx
+    0 |   [0, 0, 0, 0, 0, 0] |          1
+    1 |   [0, 0, 0, 0, 0, 1] |          9
+    2 |   [0, 0, 0, 0, 1, 0] |          5
+    3 |   [0, 0, 0, 1, 0, 0] |          5
+    4 |   [0, 0, 0, 1, 0, 1] |         45
+    5 |   [0, 0, 1, 0, 0, 0] |          3
+    6 |   [0, 0, 1, 0, 0, 1] |         27
+    7 |   [0, 0, 1, 0, 1, 0] |         15
+    8 |   [0, 1, 0, 0, 0, 0] |          3
+    9 |   [0, 1, 0, 0, 0, 1] |         27
+   10 |   [0, 1, 0, 0, 1, 0] |         15
+   11 |   [0, 1, 0, 1, 0, 0] |         15
+   12 |   [0, 1, 0, 1, 0, 1] |        135
+   13 |   [1, 0, 0, 0, 0, 0] |          3
+   14 |   [1, 0, 0, 0, 0, 1] |         27
+   15 |   [1, 0, 0, 0, 1, 0] |         15
+   16 |   [1, 0, 0, 1, 0, 0] |         15
+   17 |   [1, 0, 0, 1, 0, 1] |        135
+   18 |   [1, 0, 1, 0, 0, 0] |          9
+   19 |   [1, 0, 1, 0, 0, 1] |         81
+   20 |   [1, 0, 1, 0, 1, 0] |         45
+
+H_approx ordering at n=5:
+  N=  0, H_approx=    1, bits=[0, 0, 0, 0, 0, 0]
+  N=  5, H_approx=    3, bits=[0, 0, 1, 0, 0, 0]
+  N=  8, H_approx=    3, bits=[0, 1, 0, 0, 0, 0]
+  N= 13, H_approx=    3, bits=[1, 0, 0, 0, 0, 0]
+  N=  2, H_approx=    5, bits=[0, 0, 0, 0, 1, 0]
+  N=  3, H_approx=    5, bits=[0, 0, 0, 1, 0, 0]
+  N=  1, H_approx=    9, bits=[0, 0, 0, 0, 0, 1]
+  N= 18, H_approx=    9, bits=[1, 0, 1, 0, 0, 0]
+  N=  7, H_approx=   15, bits=[0, 0, 1, 0, 1, 0]
+  N= 10, H_approx=   15, bits=[0, 1, 0, 0, 1, 0]
+
+============================================================
+PAIR DP SPEEDUP: O(m) vs O(F_{m+2}) naive
+============================================================
+      m |        F_{m+2} |   DP time (μs) |        Speedup
+------------------------------------------------------------
+      6 |             21 |           0.33 |              7×
+     10 |            144 |           3.54 |             29×
+     15 |          1,597 |           0.79 |            228×
+     20 |         17,711 |           6.21 |          1,771×
+     25 |        196,418 |           4.14 |         16,368×
+     30 |      2,178,309 |           7.27 |        145,221×
+     35 |     24,157,817 |           6.24 |      1,421,048×
+     40 |    267,914,296 |          12.90 |     13,395,715×
+     45 |  2,971,215,073 |          11.23 |    135,055,231×
+
+============================================================
+KEY THEOREM: Pair automaton aggregate computation
+============================================================
+
+THEOREM (Pair DP for Zeckendorf Aggregate):
+  Let Z_n be the set of Zeckendorf tilings of the n-vertex staircase.
+  Let m = C(n-1,2) be the number of tiles, ordered as pairs (t_0,t_1), (t_2,t_3), ...
+  Let h_k = 1 + 2^{r_k - 1} where r_k is the range of tile k.
+
+  Define dp_F[0] = 1, dp_C[0] = 0 and for k = 0, 1, ..., m/2 - 1:
+    dp_F[k+1] = dp_F[k] * (1 + h_{2k}) + dp_C[k]
+    dp_C[k+1] = (dp_F[k] + dp_C[k]) * h_{2k+1}
+
+  Then:
+    ∑_{T ∈ Z_n} H_approx(T) = dp_F[m/2] + dp_C[m/2]
+
+  where H_approx(T) = ∏_{k active in T} h_k.
+
+  Setting h_k = 1 for all k gives:
+    |Z_n| = dp_F[m/2] + dp_C[m/2] = F_{m+2}
+
+  Time complexity: O(m) vs O(F_{m+2}) = O(φ^m) brute force.
+

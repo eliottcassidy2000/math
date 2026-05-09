@@ -2,6 +2,35 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-01-S2 — 2026-05-01
+**Account:** Eliott (primary)
+**Continuation of:** oracle-2026-05-01-S1 (context-compacted)
+**Summary of work:**
+  (1) **PAIR DP BUG FIXED:** The previous session's pair automaton DP had two bugs:
+      (a) initialized C-state with count=1 (should be 0); (b) the brute-force
+      verification in the old code was also wrong (reported sum=153 instead of 635).
+      Root cause: `dp={'F':[1,1],'C':[1,1]}` initializes both states; correct is
+      `dp_F=1, dp_C=0` (only F-state active at start). Verified: n=5 count=21=F_8 ✓,
+      sum(H_approx)=635 ✓; n=6 count=144=F_12 ✓, sum=81540 ✓.
+  (2) **PAIR DP THEOREM (FORMAL):** Wrote Theorem~\ref{thm:pair-DP} in trienerments.tex
+      (new §ssec:pair-dp). Gives O(m) computation of |Z_n|=F_{m+2} and aggregate
+      ∑_{T∈Z_n} H_approx(T) via two-state recursion on tile pairs. At m=40: 13.4M× speedup.
+  (3) **PRODUCT FORMULA + CHAIN CORRECTION (FORMAL):** Theorem~\ref{thm:product-formula}
+      (disjoint windows → H=∏(1+2^{r-1})) and Remark~\ref{rem:chain} (chained tiles:
+      correction = 2^{r_chain-1}) added.
+  (4) **TILE ORDERING CLARIFIED:** Diagonal tile order (range-first sweep) gives
+      tile ranges [2,2,2,3,3,4] at n=5, h-values [3,3,3,5,5,9]. This ordering makes
+      the pair DP self-similar across scales.
+
+**New files:**
+  04-computation/zeckendorf_pair_dp.py — corrected O(m) pair automaton DP
+  05-knowledge/results/zeckendorf_pair_dp.out — verification output
+
+**Open questions:**
+  - Chain correction general formula (multi-chain case)
+  - H-value formula for multi-tile Zeckendorf tilings (beyond product/additive approx)
+  - Odd-m pair DP extension (n=3,4,7 have odd m=1,3,15)
+
 ## oracle-2026-05-02-S1 — 2026-05-02
 **Account:** Eliott (primary)
 **Continuation of:** fresh start (remote-control session)

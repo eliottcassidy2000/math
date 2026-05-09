@@ -2975,4 +2975,173 @@ evaluated at different values ($x=1$ for Zeckendorf counting,
 $x=2$ for OCF Hamiltonian paths, $x=3$ for t(r)ienerment counting).
 \end{remark}
 
+% ──────────────────────────────────────────────────────────────────────────────
+\subsection{Pair automaton DP: \texorpdfstring{$O(m)$}{O(m)} aggregate computation}
+\label{ssec:pair-dp}
+% ──────────────────────────────────────────────────────────────────────────────
+
+We now formalise the pair automaton as an $O(m)$ computational tool for aggregate
+statistics over the Zeckendorf tiling set $\mathcal{Z}_n$.
+
+\begin{definition}[Tile ordering and pair structure]
+\label{def:tile-pairs}
+Fix $n\ge 2$ and let $m=\binom{n-1}{2}$.  Order the $m$ tiles of the
+staircase $\delta_{n-2}$ by \emph{diagonal sweep}: tile $k$ is $(b_k,a_k)$
+with $a_k-b_k=r_k\ge 2$, enumerated with range increasing first, then by
+left endpoint within each range.  Under this ordering $m$ is always even
+when $n\equiv 0,1\pmod 4$; for the general case write $m=2p+\epsilon$
+with $\epsilon\in\{0,1\}$.
+
+The \textbf{tile pairs} are the blocks
+\[
+  \text{pair } k \;=\; \bigl(\text{tile }2k,\;\text{tile }2k+1\bigr),
+  \qquad k=0,1,\ldots,p-1.
+\]
+The \textbf{h-value} of tile $j$ is $h_j = 1 + 2^{r_j-1}$, the
+Hamiltonian-path count of the corresponding single-backward-tile tournament
+(Theorem~\ref{thm:single-tile-H}).
+\end{definition}
+
+\begin{theorem}[Pair automaton DP — counting and aggregate sums]
+\label{thm:pair-DP}
+Let $h_0,\ldots,h_{m-1}$ be the h-values in the diagonal tile order.
+Define sequences $(\mathsf{dp}^F_k,\mathsf{dp}^C_k)$ by
+\[
+  \mathsf{dp}^F_0 = 1,\quad \mathsf{dp}^C_0 = 0,
+\]
+\[
+  \mathsf{dp}^F_{k+1} = \mathsf{dp}^F_k\,(1+h_{2k}) + \mathsf{dp}^C_k,
+  \qquad
+  \mathsf{dp}^C_{k+1} = (\mathsf{dp}^F_k + \mathsf{dp}^C_k)\,h_{2k+1}.
+\]
+Then:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item \textbf{(Counting).}  Setting all $h_j = 1$ the recursion becomes
+  \[
+    \mathsf{cnt}^F_{k+1} = 2\,\mathsf{cnt}^F_k + \mathsf{cnt}^C_k,
+    \qquad
+    \mathsf{cnt}^C_{k+1} = \mathsf{cnt}^F_k + \mathsf{cnt}^C_k,
+  \]
+  and after $p$ steps $\mathsf{cnt}^F_p + \mathsf{cnt}^C_p = F_{m+2}$,
+  recovering $|\mathcal{Z}_n|=F_{m+2}$ in $O(m)$ time.
+
+\item \textbf{(Product-sum).}  For the product-formula approximation
+  \[
+    H_{\rm approx}(\mathbf{z}) = \prod_{k:\,z_k=1} h_k,
+  \]
+  after $p$ steps,
+  \[
+    \sum_{\mathbf{z}\in\mathcal{Z}_n} H_{\rm approx}(\mathbf{z})
+    \;=\;
+    \mathsf{dp}^F_p + \mathsf{dp}^C_p.
+  \]
+\end{enumerate}
+Both computations run in $O(m)$ arithmetic operations, versus $O(F_{m+2})=O(\varphi^m)$
+by naive enumeration.
+\end{theorem}
+
+\begin{proof}
+The pair automaton has states $F$ (``free'': last emitted bit was $0$, or
+start of string) and $C$ (``constrained'': last emitted bit was $1$).
+At each pair step $k$ the valid emissions are:
+\begin{align*}
+  F &\xrightarrow{00} F &\quad&\text{(neither tile active)}\\
+  F &\xrightarrow{10} F &\quad&\text{(left tile active, $h$ multiplied by $h_{2k}$)}\\
+  F &\xrightarrow{01} C &\quad&\text{(right tile active, $h$ multiplied by $h_{2k+1}$)}\\
+  C &\xrightarrow{00} F &\quad&\text{(neither tile active)}\\
+  C &\xrightarrow{01} C &\quad&\text{(right tile active, $h$ multiplied by $h_{2k+1}$)}
+\end{align*}
+and the transition $C\xrightarrow{10}$ is \emph{forbidden} (it would place a
+$1$ immediately after the $1$ that moved us to state $C$, creating consecutive
+$1$s at the pair boundary).
+
+Tracking $\mathsf{dp}^F_k = \sum_{\mathbf{z}\text{ in state }F\text{ after }k\text{ pairs}} H_{\rm approx}(\mathbf{z})$
+and similarly for $\mathsf{dp}^C_k$, the contributions of the three $F$-transitions
+and two $C$-transitions give exactly the stated recursion.  At $k=0$ there is
+one tiling in state $F$ (the empty string, $H_{\rm approx}=1$) and none in $C$,
+giving the initial conditions.  Summing over all terminal states gives the total
+product-sum.
+
+For part (a), set $h_j=1$: each ``$h$ multiplication'' becomes $\times 1$,
+so $\mathsf{dp}^F_k$ counts tilings in state $F$ and $\mathsf{dp}^C_k$ counts those
+in $C$.  The state $F$ can be reached via $00$ from $F$ (1 way), $10$ from $F$
+(1 way), and $00$ from $C$ (1 way): total weight $2\,\mathsf{cnt}^F_k+\mathsf{cnt}^C_k$.
+State $C$ via $01$ from either: $\mathsf{cnt}^F_k+\mathsf{cnt}^C_k$.
+This gives the transfer matrix $M'=\bigl[\begin{smallmatrix}2&1\\1&1\end{smallmatrix}\bigr]$,
+whose eigenvalues are $\varphi^2$ and $1/\varphi^2$ and which satisfies $M'^p$ giving
+$F_{2p+2}$ and $F_{2p+1}$ in the appropriate entries, consistent with the pair FSM
+Theorem (Theorem~\ref{thm:pair-FSM}).
+\end{proof}
+
+\begin{table}[ht]
+\centering
+\caption{Pair DP speedup: $O(m)$ vs $O(F_{m+2})=O(\varphi^m)$ naive enumeration.
+Verified at $n=5$ ($m=6$, 21 tilings) and $n=6$ ($m=10$, 144 tilings).}
+\label{tab:speedup}
+\begin{tabular}{rrrrr}
+\toprule
+$m$ & $F_{m+2}$ & Speedup & $m$ & Speedup \\
+\midrule
+6 & 21 & $7\times$ & 25 & $16\,368\times$ \\
+10 & 144 & $29\times$ & 30 & $145\,221\times$ \\
+15 & 1\,597 & $228\times$ & 35 & $1.4\times 10^6\times$ \\
+20 & 17\,711 & $1\,771\times$ & 40 & $1.3\times 10^7\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}[Bijection $N\leftrightarrow T_N$]
+\label{rem:bijection}
+The Zeckendorf representation of any $N\in\{0,\ldots,F_{m+2}-1\}$ uses
+Fibonacci numbers $F_{a_1}>F_{a_2}>\cdots>F_{a_r}$ (standard indexing,
+$F_1=F_2=1$) with no two consecutive; the corresponding tiling $T_N$
+has active tile $a_i-1$ (0-indexed) for each $i$.  This gives an
+explicit $O(m)$ bijection $N\leftrightarrow T_N$ which is also computable
+by the pair automaton's \emph{address decoder}: the automaton state at
+pair $k$ encodes which tilings have $N < F_{2k+2}$ (state $F$) vs
+$N\in[F_{2k+2},F_{2k+3})$ (state $C$).
+\end{remark}
+
+\begin{theorem}[Product formula for disjoint-window tilings]
+\label{thm:product-formula}
+Let $\mathbf{z}\in\mathcal{Z}_n$ be a Zeckendorf tiling with active tiles
+$\mathcal{A}=\{(b_{i_1},a_{i_1}),\ldots,(b_{i_r},a_{i_r})\}$.
+Say the windows are \textbf{disjoint} if the half-open intervals
+$[b_{i_j}, a_{i_j})$ are pairwise disjoint.  If the windows are disjoint,
+\[
+  H(T_\mathbf{z}) = \prod_{j=1}^r \bigl(1 + 2^{r_{i_j}-1}\bigr).
+\]
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+When the range windows $[b,a)$ are disjoint, the backward arcs occupy
+vertex-disjoint segments of the base Hamiltonian path.  Odd cycles from
+distinct tiles share no vertices, so the conflict graph $\Omega(T_\mathbf{z})$
+decomposes as a disjoint union $\Omega_1\sqcup\cdots\sqcup\Omega_r$.
+The independence polynomial factorises:
+$I(\Omega,2)=\prod I(\Omega_j,2)$.
+By the atomic formula (Theorem~\ref{thm:single-tile-H}),
+$I(\Omega_j,2)=H(\text{single-tile range }r_j)=1+2^{r_j-1}$.
+\end{proof}
+
+\begin{remark}[Chain correction for adjacent windows]
+\label{rem:chain}
+When two tiles $(b_1,a_1)$ and $(b_2,a_2)$ are \textbf{chained}
+($a_1=b_2$, i.e., the windows share an endpoint), the conflict graph
+has additional cycle edges across the two segments.  Computation at $n=5$
+shows the correction:
+\[
+  \alpha_1^{\rm true} - \alpha_1^{\rm product} = 2^{r_{\rm chain}-3},
+\]
+where $r_{\rm chain}=a_2-b_1$ is the combined range.  Thus
+\[
+  H(T_\mathbf{z}) = \prod_{j=1}^r (1+2^{r_j-1})
+  - 4\cdot 2^{r_{\rm chain}-3}
+  = \prod_{j=1}^r (1+2^{r_j-1})
+  - 2^{r_{\rm chain}-1}
+\]
+for a single chained pair of tiles.  The general multi-chain correction
+formula is open.
+\end{remark}
+
 \end{document}

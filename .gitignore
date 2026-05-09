@@ -46,3 +46,11 @@ test_images/
 
 # Binary cycle-count files (large, machine-generated, reproducible from fast_cycle_cc.c)
 05-knowledge/results/*.bin
+# LaTeX build artifacts (only in repo root or 06-writeups)
+06-writeups/*.aux
+06-writeups/*.log
+06-writeups/*.toc
+06-writeups/*.pdf
+*.aux
+*.toc
+06-writeups/*.out
