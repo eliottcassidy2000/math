@@ -1,0 +1,350 @@
+======================================================================
+n=3: COMPLETE ISO CLASS ANALYSIS
+======================================================================
+
+  Tiles (explorer order): [(3, 1)]
+  TRANS_MAP: [0]
+  m=1 tiles, 2^m=2 total tilings
+  Iso classes: 2
+  Grid-symmetric tilings: 2 = 2^1?
+  Self-paired tiles: 1, Non-self pairs: 0
+  Free bits for grid-sym: 1 → 2^1 = 2 grid-sym tilings
+  Blue flip-pairs (both grid-sym): 1
+  Black flip-pairs (neither grid-sym): 0
+  Total flip-pairs: 1 = 2^m / 2 = 1
+
+  SC (self-complementary) classes: 2
+  NS (non-self-complementary) classes: 0
+  NS pairs: 0
+  All tiling counts odd? True (expected: True, since H=odd=|Aut|×#tilings)
+
+  MERGED tiling counts (sorted): [1, 1]
+  Sum: 2 = 2^1 ✓
+
+  Iso class table:
+   ci | #tilings |      H |  |Aut| |  H/|Aut| |   SC | grid-sym tilings
+  ----------------------------------------------------------------------
+    0 |        1 |      1 |      1 |        1 ✓ |   SC | 1
+    1 |        1 |      3 |      3 |        1 ✓ |   SC | 1
+
+  Zeckendorf tilings (no two consecutive active tiles, explorer order) per class:
+  Total Zeckendorf tilings: 2 = F_{3} = 2
+   ci | #Z-tilings | #tilings |   Z/#tot |     H | SC
+    0 |          1 |        1 |        1 |     1 | SC
+    1 |          1 |        1 |        1 |     3 | SC
+
+  Sum of Zeckendorf counts: 2 = F_{3} = 2
+  H-distribution over Zeckendorf tilings: {1: 1, 3: 1}
+
+======================================================================
+n=4: COMPLETE ISO CLASS ANALYSIS
+======================================================================
+
+  Tiles (explorer order): [(4, 1), (3, 1), (4, 2)]
+  TRANS_MAP: [0, 2, 1]
+  m=3 tiles, 2^m=8 total tilings
+  Iso classes: 4
+  Grid-symmetric tilings: 4 = 2^2?
+  Self-paired tiles: 1, Non-self pairs: 1
+  Free bits for grid-sym: 2 → 2^2 = 4 grid-sym tilings
+  Blue flip-pairs (both grid-sym): 2
+  Black flip-pairs (neither grid-sym): 2
+  Total flip-pairs: 4 = 2^m / 2 = 4
+
+  SC (self-complementary) classes: 2
+  NS (non-self-complementary) classes: 2
+  NS pairs: 1
+  All tiling counts odd? True (expected: True, since H=odd=|Aut|×#tilings)
+
+  MERGED tiling counts (sorted): [1, 2, 5]
+  Sum: 8 = 2^3 ✓
+
+  Iso class table:
+   ci | #tilings |      H |  |Aut| |  H/|Aut| |   SC | grid-sym tilings
+  ----------------------------------------------------------------------
+    0 |        1 |      1 |      1 |        1 ✓ |   SC | 1
+    1 |        1 |      3 |      3 |        1 ✓ |   NS | 0
+    2 |        5 |      5 |      1 |        5 ✓ |   SC | 3
+    3 |        1 |      3 |      3 |        1 ✓ |   NS | 0
+
+  Zeckendorf tilings (no two consecutive active tiles, explorer order) per class:
+  Total Zeckendorf tilings: 5 = F_{5} = 5
+   ci | #Z-tilings | #tilings |   Z/#tot |     H | SC
+    0 |          1 |        1 |        1 |     1 | SC
+    1 |          1 |        1 |        1 |     3 | NS
+    2 |          2 |        5 |      2/5 |     5 | SC
+    3 |          1 |        1 |        1 |     3 | NS
+
+  Sum of Zeckendorf counts: 5 = F_{5} = 5
+  H-distribution over Zeckendorf tilings: {1: 1, 3: 2, 5: 2}
+
+======================================================================
+n=5: COMPLETE ISO CLASS ANALYSIS
+======================================================================
+
+  Tiles (explorer order): [(5, 1), (4, 1), (3, 1), (5, 2), (4, 2), (5, 3)]
+  TRANS_MAP: [0, 3, 5, 1, 4, 2]
+  m=6 tiles, 2^m=64 total tilings
+  Iso classes: 12
+  Grid-symmetric tilings: 16 = 2^4?
+  Self-paired tiles: 2, Non-self pairs: 2
+  Free bits for grid-sym: 4 → 2^4 = 16 grid-sym tilings
+  Blue flip-pairs (both grid-sym): 8
+  Black flip-pairs (neither grid-sym): 24
+  Total flip-pairs: 32 = 2^m / 2 = 32
+
+  SC (self-complementary) classes: 8
+  NS (non-self-complementary) classes: 4
+  NS pairs: 2
+  All tiling counts odd? True (expected: True, since H=odd=|Aut|×#tilings)
+
+  MERGED tiling counts (sorted): [1, 1, 2, 3, 5, 9, 9, 10, 11, 13]
+  Sum: 64 = 2^6 ✓
+
+  Iso class table:
+   ci | #tilings |      H |  |Aut| |  H/|Aut| |   SC | grid-sym tilings
+  ----------------------------------------------------------------------
+    0 |        1 |      1 |      1 |        1 ✓ |   SC | 1
+    1 |        1 |      3 |      3 |        1 ✓ |   NS | 0
+    2 |        5 |      5 |      1 |        5 ✓ |   NS | 0
+    3 |        1 |      3 |      3 |        1 ✓ |   SC | 1
+    4 |        9 |      9 |      1 |        9 ✓ |   SC | 1
+    5 |        5 |      5 |      1 |        5 ✓ |   NS | 0
+    6 |        9 |      9 |      1 |        9 ✓ |   SC | 3
+    7 |        1 |      3 |      3 |        1 ✓ |   NS | 0
+    8 |       11 |     11 |      1 |       11 ✓ |   SC | 3
+    9 |        5 |     15 |      3 |        5 ✓ |   SC | 1
+   10 |       13 |     13 |      1 |       13 ✓ |   SC | 3
+   11 |        3 |     15 |      5 |        3 ✓ |   SC | 3
+
+  Zeckendorf tilings (no two consecutive active tiles, explorer order) per class:
+  Total Zeckendorf tilings: 21 = F_{8} = 21
+   ci | #Z-tilings | #tilings |   Z/#tot |     H | SC
+    0 |          1 |        1 |        1 |     1 | SC
+    1 |          1 |        1 |        1 |     3 | NS
+    2 |          2 |        5 |      2/5 |     5 | NS
+    3 |          1 |        1 |        1 |     3 | SC
+    4 |          2 |        9 |      2/9 |     9 | SC
+    5 |          3 |        5 |      3/5 |     5 | NS
+    6 |          4 |        9 |      4/9 |     9 | SC
+    7 |          1 |        1 |        1 |     3 | NS
+    8 |          2 |       11 |     2/11 |    11 | SC
+    9 |          1 |        5 |      1/5 |    15 | SC
+   10 |          3 |       13 |     3/13 |    13 | SC
+   11 |          0 |        3 |        0 |    15 | SC
+
+  Sum of Zeckendorf counts: 21 = F_{8} = 21
+  H-distribution over Zeckendorf tilings: {1: 1, 3: 3, 5: 5, 9: 6, 11: 2, 13: 3, 15: 1}
+
+======================================================================
+n=6: COMPLETE ISO CLASS ANALYSIS
+======================================================================
+
+  Tiles (explorer order): [(6, 1), (5, 1), (4, 1), (3, 1), (6, 2), (5, 2), (4, 2), (6, 3), (5, 3), (6, 4)]
+  TRANS_MAP: [0, 4, 7, 9, 1, 5, 8, 2, 6, 3]
+  m=10 tiles, 2^m=1024 total tilings
+  Iso classes: 56
+  Grid-symmetric tilings: 64 = 2^6?
+  Self-paired tiles: 2, Non-self pairs: 4
+  Free bits for grid-sym: 6 → 2^6 = 64 grid-sym tilings
+  Blue flip-pairs (both grid-sym): 32
+  Black flip-pairs (neither grid-sym): 480
+  Total flip-pairs: 512 = 2^m / 2 = 512
+
+  SC (self-complementary) classes: 12
+  NS (non-self-complementary) classes: 44
+  NS pairs: 22
+  All tiling counts odd? True (expected: True, since H=odd=|Aut|×#tilings)
+
+  MERGED tiling counts (sorted): [1, 1, 2, 2, 5, 6, 10, 10, 15, 15, 17, 17, 18, 18, 18, 22, 22, 26, 29, 29, 30, 33, 37, 38, 41, 46, 46, 50, 58, 62, 66, 74, 74, 86]
+  Sum: 1024 = 2^10 ✓
+
+  Iso class table:
+   ci | #tilings |      H |  |Aut| |  H/|Aut| |   SC | grid-sym tilings
+  ----------------------------------------------------------------------
+    0 |        1 |      1 |      1 |        1 ✓ |   SC | 1
+    1 |        1 |      3 |      3 |        1 ✓ |   NS | 0
+    2 |        5 |      5 |      1 |        5 ✓ |   NS | 0
+    3 |        1 |      3 |      3 |        1 ✓ |   NS | 0
+    4 |        9 |      9 |      1 |        9 ✓ |   NS | 0
+    5 |        5 |      5 |      1 |        5 ✓ |   SC | 3
+    6 |        9 |      9 |      1 |        9 ✓ |   NS | 0
+    7 |        1 |      3 |      3 |        1 ✓ |   NS | 0
+    8 |       11 |     11 |      1 |       11 ✓ |   NS | 0
+    9 |        5 |     15 |      3 |        5 ✓ |   NS | 0
+   10 |       13 |     13 |      1 |       13 ✓ |   NS | 0
+   11 |        3 |     15 |      5 |        3 ✓ |   NS | 0
+   12 |       17 |     17 |      1 |       17 ✓ |   SC | 5
+   13 |        9 |      9 |      1 |        9 ✓ |   NS | 0
+   14 |       15 |     15 |      1 |       15 ✓ |   NS | 0
+   15 |        5 |      5 |      1 |        5 ✓ |   NS | 0
+   16 |       19 |     19 |      1 |       19 ✓ |   NS | 0
+   17 |        9 |      9 |      1 |        9 ✓ |   NS | 0
+   18 |       15 |     15 |      1 |       15 ✓ |   NS | 0
+   19 |        1 |      3 |      3 |        1 ✓ |   NS | 0
+   20 |        9 |     27 |      3 |        9 ✓ |   NS | 0
+   21 |       23 |     23 |      1 |       23 ✓ |   NS | 0
+   22 |       17 |     17 |      1 |       17 ✓ |   SC | 5
+   23 |        1 |      9 |      9 |        1 ✓ |   SC | 1
+   24 |       23 |     23 |      1 |       23 ✓ |   NS | 0
+   25 |       11 |     11 |      1 |       11 ✓ |   NS | 0
+   26 |       19 |     19 |      1 |       19 ✓ |   NS | 0
+   27 |       23 |     23 |      1 |       23 ✓ |   NS | 0
+   28 |       11 |     33 |      3 |       11 ✓ |   NS | 0
+   29 |       25 |     25 |      1 |       25 ✓ |   NS | 0
+   30 |       37 |     37 |      1 |       37 ✓ |   SC | 7
+   31 |       33 |     33 |      1 |       33 ✓ |   SC | 7
+   32 |       31 |     31 |      1 |       31 ✓ |   NS | 0
+   33 |       23 |     23 |      1 |       23 ✓ |   NS | 0
+   34 |        9 |     27 |      3 |        9 ✓ |   NS | 0
+   35 |       29 |     29 |      1 |       29 ✓ |   NS | 0
+   36 |        5 |     15 |      3 |        5 ✓ |   NS | 0
+   37 |       13 |     13 |      1 |       13 ✓ |   NS | 0
+   38 |       37 |     37 |      1 |       37 ✓ |   NS | 0
+   39 |       31 |     31 |      1 |       31 ✓ |   NS | 0
+   40 |       25 |     25 |      1 |       25 ✓ |   NS | 0
+   41 |       29 |     29 |      1 |       29 ✓ |   NS | 0
+   42 |       37 |     37 |      1 |       37 ✓ |   NS | 0
+   43 |       29 |     29 |      1 |       29 ✓ |   SC | 7
+   44 |       29 |     29 |      1 |       29 ✓ |   SC | 7
+   45 |       33 |     33 |      1 |       33 ✓ |   NS | 0
+   46 |       41 |     41 |      1 |       41 ✓ |   SC | 9
+   47 |       37 |     37 |      1 |       37 ✓ |   NS | 0
+   48 |       33 |     33 |      1 |       33 ✓ |   NS | 0
+   49 |       37 |     37 |      1 |       37 ✓ |   NS | 0
+   50 |        3 |     15 |      5 |        3 ✓ |   NS | 0
+   51 |       43 |     43 |      1 |       43 ✓ |   NS | 0
+   52 |       43 |     43 |      1 |       43 ✓ |   NS | 0
+   53 |       11 |     33 |      3 |       11 ✓ |   NS | 0
+   54 |       15 |     45 |      3 |       15 ✓ |   SC | 9
+   55 |       15 |     45 |      3 |       15 ✓ |   SC | 3
+
+  Zeckendorf tilings (no two consecutive active tiles, explorer order) per class:
+  Total Zeckendorf tilings: 144 = F_{12} = 144
+   ci | #Z-tilings | #tilings |   Z/#tot |     H | SC
+    0 |          1 |        1 |        1 |     1 | SC
+    1 |          1 |        1 |        1 |     3 | NS
+    2 |          2 |        5 |      2/5 |     5 | NS
+    3 |          1 |        1 |        1 |     3 | NS
+    4 |          2 |        9 |      2/9 |     9 | NS
+    5 |          3 |        5 |      3/5 |     5 | SC
+    6 |          4 |        9 |      4/9 |     9 | NS
+    7 |          1 |        1 |        1 |     3 | NS
+    8 |          2 |       11 |     2/11 |    11 | NS
+    9 |          1 |        5 |      1/5 |    15 | NS
+   10 |          3 |       13 |     3/13 |    13 | NS
+   11 |          0 |        3 |        0 |    15 | NS
+   12 |          2 |       17 |     2/17 |    17 | SC
+   13 |          3 |        9 |      1/3 |     9 | NS
+   14 |          3 |       15 |      1/5 |    15 | NS
+   15 |          3 |        5 |      3/5 |     5 | NS
+   16 |          2 |       19 |     2/19 |    19 | NS
+   17 |          5 |        9 |      5/9 |     9 | NS
+   18 |          3 |       15 |      1/5 |    15 | NS
+   19 |          1 |        1 |        1 |     3 | NS
+   20 |          1 |        9 |      1/9 |    27 | NS
+   21 |          3 |       23 |     3/23 |    23 | NS
+   22 |          7 |       17 |     7/17 |    17 | SC
+   23 |          1 |        1 |        1 |     9 | SC
+   24 |          2 |       23 |     2/23 |    23 | NS
+   25 |          3 |       11 |     3/11 |    11 | NS
+   26 |          4 |       19 |     4/19 |    19 | NS
+   27 |          2 |       23 |     2/23 |    23 | NS
+   28 |          1 |       11 |     1/11 |    33 | NS
+   29 |          2 |       25 |     2/25 |    25 | NS
+   30 |          4 |       37 |     4/37 |    37 | SC
+   31 |          3 |       33 |     1/11 |    33 | SC
+   32 |          4 |       31 |     4/31 |    31 | NS
+   33 |          5 |       23 |     5/23 |    23 | NS
+   34 |          1 |        9 |      1/9 |    27 | NS
+   35 |          4 |       29 |     4/29 |    29 | NS
+   36 |          2 |        5 |      2/5 |    15 | NS
+   37 |          6 |       13 |     6/13 |    13 | NS
+   38 |          3 |       37 |     3/37 |    37 | NS
+   39 |          5 |       31 |     5/31 |    31 | NS
+   40 |          2 |       25 |     2/25 |    25 | NS
+   41 |          4 |       29 |     4/29 |    29 | NS
+   42 |          3 |       37 |     3/37 |    37 | NS
+   43 |          4 |       29 |     4/29 |    29 | SC
+   44 |          7 |       29 |     7/29 |    29 | SC
+   45 |          0 |       33 |        0 |    33 | NS
+   46 |          0 |       41 |        0 |    41 | SC
+   47 |          5 |       37 |     5/37 |    37 | NS
+   48 |          3 |       33 |     1/11 |    33 | NS
+   49 |          4 |       37 |     4/37 |    37 | NS
+   50 |          1 |        3 |      1/3 |    15 | NS
+   51 |          3 |       43 |     3/43 |    43 | NS
+   52 |          1 |       43 |     1/43 |    43 | NS
+   53 |          0 |       11 |        0 |    33 | NS
+   54 |          0 |       15 |        0 |    45 | SC
+   55 |          1 |       15 |     1/15 |    45 | SC
+
+  Sum of Zeckendorf counts: 144 = F_{12} = 144
+  H-distribution over Zeckendorf tilings: {1: 1, 3: 4, 5: 8, 9: 15, 11: 5, 13: 9, 15: 10, 17: 9, 19: 6, 23: 12, 25: 4, 27: 2, 29: 19, 31: 9, 33: 7, 37: 19, 43: 4, 45: 1}
+
+======================================================================
+PATTERN SUMMARY ACROSS n
+======================================================================
+
+n=3: m=1 tiles, 2^m=2, #classes=2, #SC=2, #NS-pairs=0
+  Merged sum: 1+1 = 2
+  Unmerged counts: [1, 1]
+  Fibonacci |Z_n| = F_{3} = 2
+  Count 1 = F_1
+  Count 1 = F_1
+
+n=4: m=3 tiles, 2^m=8, #classes=4, #SC=2, #NS-pairs=1
+  Merged sum: 1+2+5 = 8
+  Unmerged counts: [1, 1, 1, 5]
+  Fibonacci |Z_n| = F_{5} = 5
+  Count 1 = F_1
+  Count 1 = F_1
+  Count 1 = F_1
+  Count 5 = h(5), F_5
+
+n=5: m=6 tiles, 2^m=64, #classes=12, #SC=8, #NS-pairs=2
+  Merged sum: 1+1+2+3+5+9+9+10+11+13 = 64
+  Unmerged counts: [1, 1, 1, 1, 3, 5, 5, 5, 9, 9, 11, 13]
+  Fibonacci |Z_n| = F_{8} = 21
+  Count 1 = F_1
+  Count 1 = F_1
+  Count 1 = F_1
+  Count 1 = F_1
+  Count 3 = h(3), F_3
+  Count 5 = h(5), F_5
+  Count 5 = h(5), F_5
+  Count 5 = h(5), F_5
+  Count 9 = h(8)
+  Count 9 = h(8)
+  Count 13 = F_10
+
+n=6: m=10 tiles, 2^m=1024, #classes=56, #SC=12, #NS-pairs=22
+  Merged sum: 1+1+2+2+5+6+10+10+15+15+17+17+18+18+18+22+22+26+29+29+30+33+37+38+41+46+46+50+58+62+66+74+74+86 = 1024
+  Unmerged counts: [1, 1, 1, 1, 1, 1, 3, 3, 5, 5, 5, 5, 5, 9, 9, 9, 9, 9, 9, 11, 11, 11, 11, 13, 13, 15, 15, 15, 15, 17, 17, 19, 19, 23, 23, 23, 23, 25, 25, 29, 29, 29, 29, 31, 31, 33, 33, 33, 37, 37, 37, 37, 37, 41, 43, 43]
+  Fibonacci |Z_n| = F_{12} = 144
+  Count 1 = F_1
+  Count 1 = F_1
+  Count 1 = F_1
+  Count 1 = F_1
+  Count 1 = F_1
+  Count 1 = F_1
+  Count 3 = h(3), F_3
+  Count 3 = h(3), F_3
+  Count 5 = h(5), F_5
+  Count 5 = h(5), F_5
+  Count 5 = h(5), F_5
+  Count 5 = h(5), F_5
+  Count 5 = h(5), F_5
+  Count 9 = h(8)
+  Count 9 = h(8)
+  Count 9 = h(8)
+  Count 9 = h(8)
+  Count 9 = h(8)
+  Count 9 = h(8)
+  Count 13 = F_10
+  Count 13 = F_10
+  Count 17 = h(9)
+  Count 17 = h(9)
+  Count 33 = h(1)
+  Count 33 = h(1)
+  Count 33 = h(1)

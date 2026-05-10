@@ -1,0 +1,239 @@
+KEY FACTS from tournament-tiling-explorer.html
+
+TILING MODEL CONVENTION:
+  VERTS = [N, N-1, ..., 1]
+  Base Hamiltonian path: N->N-1->...->1 (A[k][k+1]=1 for k=0..N-2 in 0-indexed)
+  Tiles: for y in 1..N-2: for x in N..y+2 (decreasing): tile (x,y)
+  bit=0 [OFF]: arc x->y (lower label loses, x beats y)
+  bit=1 [ON]:  arc y->x (higher label loses, y beats x = "backward")
+
+  TRANS_MAP: tile (x,y) <-> tile (N-y+1, N-x+1)
+  Self-paired tiles: those where (N-y+1,N-x+1)=(x,y), i.e., x+y=N+1
+  Grid-symmetric: bits[i]==bits[TRANS_MAP[i]] for all non-self-paired tiles
+
+  Blue flip-line: {T, T_flip} where T_flip=all-bits-inverted, BOTH grid-sym
+  Black flip-line: BOTH not grid-sym (symmetry is preserved by tile complement)
+
+n=3  m=1  2^m=2  classes=2  SC=2  NS-pairs=0
+  Tiles (order): [(3, 1)]
+  TRANS_MAP:     [0]
+  Self-paired tile indices: [0] (labels: [(3, 1)])
+  Tile pairs via reflection: []
+  Grid-sym tilings: 2 = 2^1
+  Blue pairs: 1  Black pairs: 0
+
+  MERGED sum: [1, 1]
+  Sum = 2 = 2^1 
+  All individual counts odd: True
+
+  Zeckendorf: F_3=2 tilings total
+  Z-counts: SC classes get 2, NS classes get 0, sum=2
+  Classes with Z=0: 0 with H=[]
+  H-distribution over Z-tilings: {1: 1, 3: 1}
+
+  Tiling counts per class: [1, 1]
+  Z-counts per class:      [1, 1]
+
+n=4  m=3  2^m=8  classes=4  SC=2  NS-pairs=1
+  Tiles (order): [(4, 1), (3, 1), (4, 2)]
+  TRANS_MAP:     [0, 2, 1]
+  Self-paired tile indices: [0] (labels: [(4, 1)])
+  Tile pairs via reflection: [((3, 1), (4, 2))]
+  Grid-sym tilings: 4 = 2^2
+  Blue pairs: 2  Black pairs: 2
+
+  MERGED sum: [1, 2, 5]
+  Sum = 8 = 2^3 
+  All individual counts odd: True
+
+  Zeckendorf: F_5=5 tilings total
+  Z-counts: SC classes get 3, NS classes get 2, sum=5
+  Classes with Z=0: 0 with H=[]
+  H-distribution over Z-tilings: {1: 1, 3: 2, 5: 2}
+
+  Tiling counts per class: [1, 1, 1, 5]
+  Z-counts per class:      [1, 1, 1, 2]
+
+n=5  m=6  2^m=64  classes=12  SC=8  NS-pairs=2
+  Tiles (order): [(5, 1), (4, 1), (3, 1), (5, 2), (4, 2), (5, 3)]
+  TRANS_MAP:     [0, 3, 5, 1, 4, 2]
+  Self-paired tile indices: [0, 4] (labels: [(5, 1), (4, 2)])
+  Tile pairs via reflection: [((4, 1), (5, 2)), ((3, 1), (5, 3))]
+  Grid-sym tilings: 16 = 2^4
+  Blue pairs: 8  Black pairs: 24
+
+  MERGED sum: [1, 1, 2, 3, 5, 9, 9, 10, 11, 13]
+  Sum = 64 = 2^6 
+  All individual counts odd: True
+
+  Zeckendorf: F_8=21 tilings total
+  Z-counts: SC classes get 14, NS classes get 7, sum=21
+  Classes with Z=0: 1 with H=[15]
+  H-distribution over Z-tilings: {1: 1, 3: 3, 5: 5, 9: 6, 11: 2, 13: 3, 15: 1}
+
+  Tiling counts per class: [1, 1, 1, 1, 3, 5, 5, 5, 9, 9, 11, 13]
+  Z-counts per class:      [0, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 4]
+
+n=6  m=10  2^m=1024  classes=56  SC=12  NS-pairs=22
+  Tiles (order): [(6, 1), (5, 1), (4, 1), (3, 1), (6, 2), (5, 2), (4, 2), (6, 3), (5, 3), (6, 4)]
+  TRANS_MAP:     [0, 4, 7, 9, 1, 5, 8, 2, 6, 3]
+  Self-paired tile indices: [0, 5] (labels: [(6, 1), (5, 2)])
+  Tile pairs via reflection: [((5, 1), (6, 2)), ((4, 1), (6, 3)), ((3, 1), (6, 4)), ((4, 2), (5, 3))]
+  Grid-sym tilings: 64 = 2^6
+  Blue pairs: 32  Black pairs: 480
+
+  MERGED sum: [1, 1, 2, 2, 5, 6, 10, 10, 15, 15, 17, 17, 18, 18, 18, 22, 22, 26, 29, 29, 30, 33, 37, 38, 41, 46, 46, 50, 58, 62, 66, 74, 74, 86]
+  Sum = 1024 = 2^10 
+  All individual counts odd: True
+
+  Zeckendorf: F_12=144 tilings total
+  Z-counts: SC classes get 33, NS classes get 111, sum=144
+  Classes with Z=0: 5 with H=[15, 33, 33, 41, 45]
+  H-distribution over Z-tilings: {1: 1, 3: 4, 5: 8, 9: 15, 11: 5, 13: 9, 15: 10, 17: 9, 19: 6, 23: 12, 25: 4, 27: 2, 29: 19, 31: 9, 33: 7, 37: 19, 43: 4, 45: 1}
+
+  Tiling counts per class: [1, 1, 1, 1, 1, 1, 3, 3, 5, 5, 5, 5, 5, 9, 9, 9, 9, 9, 9, 11, 11, 11, 11, 13, 13, 15, 15, 15, 15, 17, 17, 19, 19, 23, 23, 23, 23, 25, 25, 29, 29, 29, 29, 31, 31, 33, 33, 33, 37, 37, 37, 37, 37, 41, 43, 43]
+  Z-counts per class:      [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 6, 7, 7]
+
+=== CORE THEOREM: Why tiling counts are always odd ===
+
+THEOREM: For any tournament iso class C, #tilings(C) is ODD.
+
+PROOF:
+  (1) H(T) is always odd for tournaments. [OCF: H=1+2α₁+4α₂+... ≡ 1 mod 2]
+  (2) Orbit-Stabilizer: #tilings(C) × |Aut(C)| = H(C)
+  (3) H(C) is odd = product of two integers → BOTH must be odd.
+  Therefore #tilings(C) is odd. ∎
+
+COROLLARY: NS pairs contribute EVEN merged counts (odd + odd = even).
+           SC classes contribute ODD individual counts.
+
+
+=== EXPLORER CODE DECODED ===
+
+TILING MODEL:
+  • VERTS = [N, N-1, ..., 1]
+  • Base Hamiltonian path: N→N-1→...→1 (fixed, always present)
+    → A[k][k+1]=1 in adjacency matrix (0-indexed: index 0 = vertex N)
+  • TILES: for y=1..N-2: for x=N downto y+2 → tile (x,y)
+    → bit=0: A[xi][yi]=1, arc x→y  (x beats y, forward/off)
+    → bit=1: A[yi][xi]=1, arc y→x  (y beats x, backward/on)
+  • Arc (x,y): xi=N-x, yi=N-y in 0-indexed adjacency matrix
+
+TILE ORDERING for n=5 (6 tiles, bits 0-5):
+  bit 0: (5,1)  range=4, xi=0, yi=4
+  bit 1: (4,1)  range=3, xi=1, yi=4
+  bit 2: (3,1)  range=2, xi=2, yi=4
+  bit 3: (5,2)  range=3, xi=0, yi=3
+  bit 4: (4,2)  range=2, xi=1, yi=3  ← self-paired (4+2=N+1=6)
+  bit 5: (5,3)  range=2, xi=0, yi=2
+
+TRANS_MAP for n=5: [0, 3, 5, 1, 4, 2]
+  Self-paired: bit 0 (5,1) since 5+1=6, bit 4 (4,2) since 4+2=6
+  Paired: bits 1↔3 [tile (4,1)↔(5,2)], bits 2↔5 [tile (3,1)↔(5,3)]
+
+GRID-SYMMETRIC: bits[1]=bits[3] AND bits[2]=bits[5]
+  → 2^4 = 16 grid-sym tilings (2 free self-paired + 2 free pairs)
+
+BLUE FLIP-LINE {T, T_flip}:
+  T_flip = ALL tile bits inverted (tile complement)
+  Blue = BOTH T and T_flip are grid-symmetric
+  Black = BOTH are NOT grid-symmetric
+  [Proof: T grid-sym ⟺ bits[1]=bits[3] ⟺ 1-bits[1]=1-bits[3] ⟺ T_flip grid-sym]
+
+
+=== n=5 SUM VERIFIED ===
+
+Merged sum (sorted): 1+1+2+3+5+9+9+10+11+13 = 64 = 2^6 ✓
+User wrote: 2+10+1+1+3+5+9+9+11+13 (same numbers, different order) ✓
+
+Decomposition:
+  NS pair 1: class H=3,|Aut|=3,#t=1 + class H=3,|Aut|=3,#t=1 → merged=2
+  NS pair 2: class H=5,|Aut|=1,#t=5 + class H=5,|Aut|=1,#t=5 → merged=10
+  SC class:  H=1, |Aut|=1, #t=1 → 1
+  SC class:  H=3, |Aut|=3, #t=1 → 1
+  SC class:  H=9, |Aut|=1, #t=9 → 9
+  SC class:  H=9, |Aut|=1, #t=9 → 9
+  SC class:  H=11,|Aut|=1, #t=11→ 11
+  SC class:  H=13,|Aut|=1, #t=13→ 13
+  SC class:  H=15,|Aut|=3, #t=5 → 5
+  SC class:  H=15,|Aut|=5, #t=3 → 3
+  Sum: 2+10+1+1+9+9+11+13+5+3 = 64 ✓
+
+
+=== ZECKENDORF CONNECTION ===
+
+DEFINITION: Zeckendorf tiling = tiling with no two consecutive active tiles
+  (no bits[k]=bits[k+1]=1 in the explorer ordering)
+
+|Z_n| = F_{m+2} where m=C(n-1,2)  [pair automaton: DFA for no-consecutive-1s]
+
+  n=3: |Z_n|=2, SC-Z=2, NS-Z=0, sum=2=2 ✓
+         Zero-Zeckendorf classes: 0 (H=[])
+         Max Z-count per class: 1 (H=1 class)
+  n=4: |Z_n|=5, SC-Z=3, NS-Z=2, sum=5=5 ✓
+         Zero-Zeckendorf classes: 0 (H=[])
+         Max Z-count per class: 2 (H=5 class)
+  n=5: |Z_n|=21, SC-Z=14, NS-Z=7, sum=21=21 ✓
+         Zero-Zeckendorf classes: 1 (H=[15])
+         Max Z-count per class: 4 (H=9 class)
+  n=6: |Z_n|=144, SC-Z=33, NS-Z=111, sum=144=144 ✓
+         Zero-Zeckendorf classes: 5 (H=[15, 33, 33, 41, 45])
+         Max Z-count per class: 7 (H=29 class)
+
+KEY ZECKENDORF INSIGHT #1: The Zeckendorf filter favors low-H classes.
+  H=1 (transitive): 1 tiling, ALL Zeckendorf → Z-count=1
+  H=max (most complex): few tilings but NONE Zeckendorf at n≥5 → Z-count=0
+  Reason: high-H tilings need many backward arcs, which must be consecutive.
+
+KEY ZECKENDORF INSIGHT #2: SC classes receive MORE Z-tilings than expected.
+  n=5: SC classes have 8/12 classes but get 14/21=2/3 of all Z-tilings
+  n=6: SC classes have 12/56 classes but get 33/144=23% of Z-tilings
+        NS classes have 44/56 classes and get 111/144=77% of Z-tilings
+
+KEY ZECKENDORF INSIGHT #3: The Z-count partition sums to F_{m+2}.
+  n=5: [0,1,1,1,1,1,2,2,2,3,3,4] summing to 21=F_8
+  n=6: [0×5,1×13,2×10,3×13,4×8,5×4,6×1,7×2] summing to 144=F_{12}
+
+EXPLICIT: These are the sums of Z-count values:
+  n=5: sum=21, max=4, #zeros=1
+  n=6: sum=144, max=7, #zeros=5
+
+
+=== STRUCTURE TABLE ACROSS n ===
+
+  n | m | 2^m  | classes | SC | NS-pairs | merged nodes | F_m+2 | grid-sym | blue
+--------------------------------------------------------------------------------
+  3 |  1 |    2 |       2 |  2 |        0 |            2 |      2 |        2 | 1
+  4 |  3 |    8 |       4 |  2 |        1 |            3 |      5 |        4 | 2
+  5 |  6 |   64 |      12 |  8 |        2 |           10 |     21 |       16 | 8
+  6 | 10 | 1024 |      56 | 12 |       22 |           34 |    144 |       64 | 32
+
+Note: merged nodes = SC + NS-pairs = (classes+SC)/2
+   grid-sym tilings = 2^{self-paired-tiles + pairs}
+   self-paired tile (x,y): x+y = N+1 (lie on anti-diagonal of staircase)
+
+
+=== RECURSIVE STRUCTURE (as user described) ===
+
+Each tournament = a ranking hierarchy:
+  H=1: single ranking (fully transitive, 1 Hamiltonian path)
+  H>1: multiple valid rankings, each corresponding to a different Hamiltonian path
+
+The STAIRCASE structure (tile grid) captures this recursively:
+  • Bottom row (y=1): arcs from vertex 1 to all others
+     Determines where vertex 1 sits in the ranking relative to all others
+  • Middle rows: successively shorter-range comparisons
+  • The EXPLORER shows the recursive parent class (purple center label)
+    = which n-1 class results from removing the top vertex (vertex N)
+
+ZECKENDORF = canonical recursive decomposition:
+  No two consecutive active tiles = a tournament where no two adjacent
+  levels of the ranking hierarchy have simultaneous upsets.
+  This gives the non-concentration property: upsets are spread out.
+  Count: F_{m+2} = the Fibonacci number of valid spread-out upset patterns.
+
+The sum 2+10+1+1+3+5+9+9+11+13:
+  Writes 64 as sum of odd numbers (all tiling counts are odd)
+  NS-pairs contribute even numbers (2=1+1, 10=5+5)
+  SC classes contribute odd numbers (1,1,3,5,9,9,11,13)
+  The pairing is by FULL arc complement (T^op), not tile complement
