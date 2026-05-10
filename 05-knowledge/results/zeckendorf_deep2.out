@@ -1,0 +1,16 @@
+======================================================================
+THREAD 1: Two-tile H formula — characterizing the correction
+======================================================================
+
+For two tiles (b1,a1) and (b2,a2), define:
+  r1 = a1-b1, r2 = a2-b2 (ranges)
+  b_min = min(b1,b2), a_max = max(a1,a2)  (total span = a_max - b_min)
+  overlap = max(0, min(a1,a2) - max(b1,b2))  (window intersection size)
+
+HYPOTHESIS: H(two tiles) = f(r1, r2, overlap) depends only on ranges and overlap.
+
+Traceback (most recent call last):
+  File "/home/ubuntu/math/04-computation/zeckendorf_deep2.py", line 90, in <module>
+    H = two_tile_H(n, tiles.index((b1 if a1-b1==r1 else b2), (a1 if a1-b1==r1 else a2)),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: 0 is not in list

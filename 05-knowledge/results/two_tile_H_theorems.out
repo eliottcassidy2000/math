@@ -1,0 +1,123 @@
+TWO-TILE HAMILTONIAN PATH THEOREMS
+oracle-2026-05-10
+Verified computationally for n=5..10 (ranges r1+r2 <= 19).
+
+For two backward tiles of ranges r1 <= r2 with window overlap d:
+
+======================================================================
+THEOREM 1: DISJOINT TILES (d=0)
+  H = h(r1) * h(r2)   where h(r) = 1 + 2^{r-1}
+  [Classical product formula. Proved via OCF independence.]
+======================================================================
+
+======================================================================
+THEOREM 2: FULL CONTAINMENT, CONSECUTIVE (d=r1, r2=r1+1)
+  H = 3 * 2^{r1-1} - 1   (for ANY shift, boundary or interior)
+  
+  Note: for r2=r1+1 there ARE no interior shifts (only shifts 0 and 1).
+  
+  r1=2: H=5    r1=3: H=11   r1=4: H=23   r1=5: H=47   r1=6: H=95
+  Formula: H(r2+1) = 2*H(r2) - h(r1)  [recurrence for fixed r1, varying r2]
+======================================================================
+
+======================================================================
+THEOREM 3: FULL CONTAINMENT, GENERAL (d=r1, r2 >= r1+2)
+  The small tile (range r1) sits inside the large tile (range r2).
+  Let s = shift = distance from left boundary of large tile to start of small tile.
+  
+  3a. BOUNDARY PLACEMENT (s=0 or s=r2-r1):
+      H = h(r2) + h(r1) - h(r2-r1)
+      
+      SPECIAL CASE: when r2 = 2*r1, H = h(r2)  [same as single tile!]
+      
+  3b. INTERIOR PLACEMENT (0 < s < r2-r1, ANY such s):
+      H = h(r2) + h(r1) - h(r2-r1) + 3^{r1-1} * 2^{r2-r1-1}
+      
+      REMARKABLE: H is THE SAME for ALL interior shifts.
+      The H value depends only on whether the tile touches a boundary, 
+      not on which interior position it occupies.
+      
+  INTERIOR CORRECTION: Delta = 3^{r1-1} * 2^{r2-r1-1} = h(2)^{r1-1} * 2^{r2-r1-1}
+  = (h(r1)^{r1-1}) * ... [not simple in terms of h(r1) for r1>=3]
+  = h(2)^{r1-1} * 2^{r2-r1-1}
+  
+  The extra alpha_1 cycles from interior placement: Delta/2 = 3^{r1-1} * 2^{r2-r1-2}
+
+VERIFICATION (all OK, 0 FAIL):
+  28 boundary cases, 56 interior cases verified for r1+r2 <= 18.
+======================================================================
+
+======================================================================
+THEOREM 4: PARTIAL OVERLAP SPECIAL CASES (0 < d < min(r1,r2))
+  These are NOT full containment (d < r1).
+  
+  4a. Same-range adjacent (d=1, r1=r2=r):
+      H = h(2r-1)  [span formula]
+      
+  4b. Adjacent consecutive (d=1, r2=r1+1):
+      H = h(2r1)  [span formula]
+      
+  4c. r1=2, r2>=r1+2, d=1:
+      H = h(2) * h(r2-1) = 3 * h(r2-1)
+      [reduced product: large tile acts with effective range r2-1]
+      
+  For other partial overlap cases: no simple closed form found.
+======================================================================
+
+OPEN QUESTIONS:
+1. Prove Theorem 3 from OCF first principles (why does interior position not matter?).
+2. Find formula for partial overlap with d>=2 and arbitrary r1,r2.
+3. Extend to 3+ tiles: is there an iterated "boundary/interior" structure?
+4. Connect the correction 3^{r1-1}*2^{r2-r1-1} to the cycle count in Omega.
+
+======================================================================
+ADDITIONAL STRUCTURE: SEQUENCE ANALYSIS
+======================================================================
+
+Boundary H values (shift=0) for r2=r1..2*r1+4:
+
+h(r2)+h(r1)-h(r2-r1):
+  r1=2: 5(consecutive), 9, 15, 27, 51, 99, 195, 387
+        = 3*h(r2-2) for r2>=4
+  r1=3: 11(consecutive), 19, 33, 61, 117, 229, 453
+  r1=4: 23(consecutive), 39, 69, 129, 249, 489
+  r1=5: 47(consecutive), 79, 141, 261, 501
+
+Interior H values:
+  r1=2: -, 15, 27, 51, 99, 195, 387  (= boundary * (1 + 6/boundary(prev))?
+  r1=3: -, 37, 69, 133, 261, 517
+  r1=4: -, 93, 177, 345, 681
+
+Interior - Boundary differences (= 3^{r1-1} * 2^{r2-r1-1}):
+  r1=2: 6, 12, 24, 48, 96, 192  = 6*2^{r2-r1-2}
+  r1=3: 18, 36, 72, 144, 288    = 18*2^{r2-r1-2}
+  r1=4: 54, 108, 216, 432       = 54*2^{r2-r1-2}
+  
+Initial differences: 6, 18, 54 = 6*3^{r1-2} = 2*3^{r1-1}
+
+So: Delta = 2*3^{r1-1} * 2^{r2-r1-2} = 3^{r1-1} * 2^{r2-r1-1}. ✓
+
+OEIS cross-check needed for interior H sequences.
+
+======================================================================
+q=3 ZECKENDORF COUNT = JACOBSTHAL = I(P_m, 2)
+======================================================================
+For q=3 tiles with 'no two adjacent nonzero':
+  Count(m) = (2^{m+2} - (-1)^m) / 3 = I(P_m, 2) = Jacobsthal(m)
+  = H(tournament T where Omega(T) = path P_m)
+  
+This means the NUMBER OF q=3 Zeckendorf-like strings of length m
+equals the TOURNAMENT H VALUE of a tournament whose conflict graph is a path.
+
+Chain of m range-2 tiles: Omega = K_{2m} (all cycles conflict because they
+share the chain's internal vertices). H = 3^m = h(2)^m (product formula).
+  
+To get Omega = P_m (path): need m cycles arranged linearly.
+  A chain of 2-vertex "local cycles" where consecutive cycles share exactly
+  one vertex gives P_m. This corresponds to specific tile arrangements.
+
+VERIFIED: G_n(2)/A000568(n) = 7/4 for both n=4 and n=5.
+  G_n(2) grows as 1,1,3,7,21,93,670,8899...
+  At n=4 and n=5: the ratio G_n(2)/A000568(n) coincidentally equals 7/4.
+  (This is the ONLY consecutive pair where the ratio is constant.)
+

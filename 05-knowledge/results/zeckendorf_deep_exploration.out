@@ -1,0 +1,477 @@
+======================================================================
+THREAD A: G_n(q) = (1/n!) Σ_σ q^{B(σ)} vs |Z_n| = F_{m+2}
+======================================================================
+
+    n | |Z_n|=F_{m+2} |   G_n(1) |   G_n(2) |     G_n(3) |  A000568
+    1 |            1 |        1 |        1★ |          1 |        1
+    2 |            1 |        1 |        1★ |          2 |        1
+    3 |            2 |        1 |        3 |          7 |        2
+    4 |            5 |        1 |        7 |         42 |        4
+    5 |           21 |        1 |       21★ |        582 |       12
+    6 |          144 |        1 |       93 |      21480 |       56
+    7 |         1597 |        1 |      670 |    2142288 |      456
+    8 |        28657 |        1 |     8899 |  575016219 |     6880
+
+  ★ = |Z_n| = G_n(2) (coincidence at n=5)
+
+  G_n(1) = (1/n!) Σ_σ 1^{B(σ)} = 1 for all n (trivially). ✓
+  G_n(1) = 1 always: True
+
+  G_n(2) sequence: [1, 1, 3, 7, 21, 93, 670, 8899]
+  F_{m+2} sequence: [1, 1, 2, 5, 21, 144, 1597, 28657]
+
+  G_n(2) / A000568(n) ratios:
+    n=2: G_n(2)/A000568=1/1 = 1
+    n=3: G_n(2)/A000568=3/2 = 3/2
+    n=4: G_n(2)/A000568=7/4 = 7/4
+    n=5: G_n(2)/A000568=21/12 = 7/4
+    n=6: G_n(2)/A000568=93/56 = 93/56
+    n=7: G_n(2)/A000568=670/456 = 335/228
+
+======================================================================
+THREAD B: Pair DP transfer matrix — discriminant & forbidden H values
+======================================================================
+
+For uniform h_k = h (all tiles same range r), the pair DP transfer matrix is:
+  M(h) = [[1+h, 1],
+           [h,   h]]
+
+Characteristic polynomial: λ² - (1+2h)λ + h² = 0
+  → λ = [(1+2h) ± sqrt(1+4h)] / 2
+Discriminant: Δ(h) = 1 + 4h.
+
+    r |  h=1+2^(r-1) |   Δ=1+4h |    sqrt(Δ) | notes
+-----------------------------------------------------------------
+    1 |            2 |        9 | √Δ=3 (perfect!)
+    2 |            3 |       13 | irrational
+    3 |            5 |       21 | irrational ← SECOND FORBIDDEN H!
+    4 |            9 |       37 | irrational
+    5 |           17 |       69 | irrational
+    6 |           33 |      133 | irrational
+    7 |           65 |      261 | irrational
+    8 |          129 |      517 | irrational
+
+KEY OBSERVATION:
+  Δ(r) = 1 + 4(1 + 2^(r-1)) = 5 + 2^(r+1)
+  r=1: Δ=9=3² (perfect square!)
+  r=2: Δ=13 (prime)
+  r=3: Δ=21 = 3·7 ← SECOND FORBIDDEN H VALUE
+  r=4: Δ=37 (prime)
+  r=5: Δ=69 = 3·23
+  r=6: Δ=133 = 7·19
+  r=7: Δ=261 = 9·29
+
+And: Δ(r=2) = 13 = ? (not forbidden)
+     Δ(r=3) = 21 = H_forbidden_2
+But: Δ(r=1) = 9 = 3², perfect square → eigenvalues (1+2±3)/2 → {4, 1}
+  → For r=1 (h=2): eigenvalues φ_h ∈ {4, 1} (rational!)
+  → The pair automaton with all range-1 tiles (degenerate case) has
+    integer eigenvalues, counting Zeckendorf strings at degenerate scale.
+
+  Eigenvalues of M(h) for each tile range r:
+  r=1, h=2: λ = 4, 1 (rational)
+  r=2, h=3: λ = (1+2·3 ± √13)/2 = (7 ± √13)/2
+  r=3, h=5: λ = (1+2·5 ± √21)/2 = (11 ± √21)/2
+  r=4, h=9: λ = (1+2·9 ± √37)/2 = (19 ± √37)/2
+  r=5, h=17: λ = (1+2·17 ± √69)/2 = (35 ± √69)/2
+  r=6, h=33: λ = (1+2·33 ± √133)/2 = (67 ± √133)/2
+
+NEW THEOREM CANDIDATE:
+  The second forbidden tournament H value (21) equals:
+  (a) G_5(2) = (1/5!) Σ_σ 2^{B(σ)} [Burnside at n=5, q=2]
+  (b) |Z_5| = F_8 = 21 [Zeckendorf tiling count at n=5]
+  (c) Δ(r=3) = 1 + 4·h(r=3) = 1 + 4·5 = 21 [discriminant for range-3 tiles]
+
+  The first forbidden H value (7) equals:
+  (a) G_4(2) = 7 [Burnside at n=4, q=2]
+  (b) ??? what's 7 = 1+4h? → h=1.5, not integer → NOT Δ(r) for integer r.
+  (c) But: 7 = Δ(r=2) - 6? No...
+
+  Actually: 7 = I(K_2, 2) = 1 + 2·2 + 0 = 5. Hmm. Wait, I(K_3, 2) = 1+3·2 = 7.
+  K_3 is the 3-clique conflict graph. So H=7 requires Ω ≅ K_3.
+  Is K_3 a conflict graph? Only if 3 cycles are pairwise conflicting.
+  For n=4: no 3 pairwise-conflicting cycles possible → H=7 forbidden.
+
+======================================================================
+THREAD C: Tribonacci DFA — 'no three consecutive 1s'
+======================================================================
+
+Binary DFA (Zeckendorf, no '11'):
+  States: {F, C}  Transfer: [[2,1],[1,1]], eigenvalue φ²
+
+Ternary DFA (Tribonacci, no '111'):
+  States: {F, C1, C2}  Transfer: M_3×3, eigenvalue = Tribonacci constant
+
+Quaternary DFA (Tetranacci, no '1111'):
+  States: {F, C1, C2, C3}  Transfer: M_4×4
+
+
+  Length m | k=2 (Fib) | k=3 (Trib) | k=4 (Tetranacci) | k=5
+  ------------------------------------------------------------
+         1 |         2✓ |          2✗ |                2 |     2
+         2 |         3✓ |          4✗ |                4 |     4
+         3 |         5✓ |          7✗ |                8 |     8
+         4 |         8✓ |         13✗ |               15 |    16
+         5 |        13✓ |         24✗ |               29 |    31
+         6 |        21✓ |         44✗ |               56 |    61
+         7 |        34✓ |         81✗ |              108 |   120
+         8 |        55✓ |        149✗ |              208 |   236
+         9 |        89✓ |        274✗ |              401 |   464
+        10 |       144✓ |        504✗ |              773 |   912
+        11 |       233✓ |        927✗ |             1490 |  1793
+        12 |       377✓ |       1705✗ |             2872 |  3525
+        13 |       610✓ |       3136✗ |             5536 |  6930
+        14 |       987✓ |       5768✗ |            10671 | 13624
+        15 |      1597✓ |      10609✗ |            20569 | 26784
+
+CONFIRMED:
+  k=2 (no '11'):  count = F_{m+2} (Fibonacci) ✓
+  k=3 (no '111'): count = T_{m+3} (Tribonacci) where T_1=T_2=T_3=1, T_n=T_{n-1}+T_{n-2}+T_{n-3}
+
+CONNECTION TO t(r)ienerments:
+  In a t(r)ienerment, each tile (edge) can be: 0=forward, 1=backward, 2=tie.
+  The 'Zeckendorf-like' constraint for t(r)ienerments:
+    - q=2 (tournament): no two consecutive backward tiles (no '11' in 01-bit)
+    - q=3 (t(r)ienerment): no three consecutive non-forward tiles (no '222' in ternary)
+
+  More precisely: in ternary tiling strings s ∈ {0,1,2}^m,
+  the 'Tribonacci t(r)ienerment' restricts to strings with no '222' substring.
+  This gives count = T_{m+3}^{ternary} (Tribonacci-analog).
+
+But: in ACTUAL t(r)ienerment, ALL 3^m strings are valid tilings.
+The Zeckendorf constraint is a SELECTION PRINCIPLE, not a validity rule.
+
+DEEP QUESTION: What does restricting to 'Tribonacci t(r)ienerments'
+(no three consecutive ties) give us combinatorially?
+
+======================================================================
+THREAD D: Exact H-distribution over Zeckendorf tilings Z_n
+======================================================================
+
+--- n=4 ---
+  |Z_4| = 5 = F_{5} = 5
+  Sum(H_true) = 17
+  Sum(H_approx) = 27
+  Mean H_true = 3.4000
+  Mean H_approx = 5.4000
+  Var H_true = 2.2400
+  H distribution: {1: 1, 3: 2, 5: 2}
+  GF(x) = Σ x^H: x^1 + 2·x^3 + 2·x^5
+  Tilings with H = H_approx: 4/5
+  Interaction corrections (H_approx - H_true) for multi-tile tilings:
+    ranges=[2, 3]: H=5, H_approx=15, correction=10
+
+--- n=5 ---
+  |Z_5| = 21 = F_{8} = 21
+  Sum(H_true) = 159
+  Sum(H_approx) = 635
+  Mean H_true = 7.5714
+  Mean H_approx = 30.2381
+  Var H_true = 14.9116
+  H distribution: {1: 1, 3: 3, 5: 6, 9: 6, 11: 1, 13: 3, 15: 1}
+  GF(x) = Σ x^H: x^1 + 3·x^3 + 6·x^5 + 6·x^9 + x^11 + 3·x^13 + x^15
+  Tilings with H = H_approx: 8/21
+  Interaction corrections (H_approx - H_true) for multi-tile tilings:
+    ranges=[2, 2]: H=9, H_approx=9, correction=0
+    ranges=[2, 2, 3]: H=13, H_approx=45, correction=32
+    ranges=[2, 2, 4]: H=13, H_approx=81, correction=68
+    ranges=[2, 3]: H=5, H_approx=15, correction=10
+    ranges=[2, 3]: H=5, H_approx=15, correction=10
+    ranges=[2, 3]: H=5, H_approx=15, correction=10
+    ranges=[2, 3]: H=9, H_approx=15, correction=6
+    ranges=[2, 3]: H=5, H_approx=15, correction=10
+    ranges=[2, 3, 4]: H=13, H_approx=135, correction=122
+    ranges=[2, 3, 4]: H=9, H_approx=135, correction=126
+    ranges=[2, 4]: H=9, H_approx=27, correction=18
+    ranges=[2, 4]: H=15, H_approx=27, correction=12
+    ranges=[2, 4]: H=9, H_approx=27, correction=18
+    ranges=[3, 4]: H=11, H_approx=45, correction=34
+
+--- n=6 ---
+  |Z_6| = 144 = F_{12} = 144
+  Sum(H_true) = 2874
+  Sum(H_approx) = 81540
+  Mean H_true = 19.9583
+  Mean H_approx = 566.2500
+  Var H_true = 107.6094
+  H distribution: {1: 1, 3: 4, 5: 9, 9: 17, 11: 4, 13: 14, 15: 15, 17: 9, 19: 7, 23: 12, 25: 5, 27: 3, 29: 16, 31: 10, 33: 4, 37: 11, 43: 2, 45: 1}
+  GF(x) = Σ x^H: x^1 + 4·x^3 + 9·x^5 + 17·x^9 + 4·x^11 + 14·x^13 + 15·x^15 + 9·x^17 + 7·x^19 + 12·x^23 + 5·x^25 + 3·x^27 + 16·x^29 + 10·x^31 + 4·x^33 + 11·x^37 + 2·x^43 + x^45
+  Tilings with H = H_approx: 15/144
+  Interaction corrections (H_approx - H_true) for multi-tile tilings:
+    ranges=[2, 2]: H=9, H_approx=9, correction=0
+    ranges=[2, 2]: H=9, H_approx=9, correction=0
+    ranges=[2, 2]: H=9, H_approx=9, correction=0
+    ranges=[2, 2, 3]: H=13, H_approx=45, correction=32
+    ranges=[2, 2, 3]: H=13, H_approx=45, correction=32
+    ranges=[2, 2, 3]: H=17, H_approx=45, correction=28
+    ranges=[2, 2, 3]: H=17, H_approx=45, correction=28
+    ranges=[2, 2, 3]: H=19, H_approx=45, correction=26
+    ranges=[2, 2, 3]: H=13, H_approx=45, correction=32
+    ranges=[2, 2, 3]: H=13, H_approx=45, correction=32
+    ranges=[2, 2, 3, 3]: H=25, H_approx=225, correction=200
+    ranges=[2, 2, 3, 3, 4]: H=43, H_approx=2025, correction=1982
+    ranges=[2, 2, 3, 3, 5]: H=37, H_approx=3825, correction=3788
+    ranges=[2, 2, 3, 4]: H=15, H_approx=405, correction=390
+    ranges=[2, 2, 3, 4]: H=15, H_approx=405, correction=390
+    ranges=[2, 2, 3, 4]: H=29, H_approx=405, correction=376
+    ranges=[2, 2, 3, 4]: H=23, H_approx=405, correction=382
+    ranges=[2, 2, 3, 4]: H=23, H_approx=405, correction=382
+    ranges=[2, 2, 3, 4]: H=23, H_approx=405, correction=382
+    ranges=[2, 2, 3, 4]: H=37, H_approx=405, correction=368
+    ranges=[2, 2, 3, 4]: H=29, H_approx=405, correction=376
+    ranges=[2, 2, 3, 4]: H=15, H_approx=405, correction=390
+    ranges=[2, 2, 3, 4]: H=37, H_approx=405, correction=368
+    ranges=[2, 2, 3, 4]: H=15, H_approx=405, correction=390
+    ranges=[2, 2, 3, 4, 5]: H=45, H_approx=6885, correction=6840
+    ranges=[2, 2, 3, 4, 5]: H=31, H_approx=6885, correction=6854
+    ranges=[2, 2, 3, 4, 5]: H=31, H_approx=6885, correction=6854
+    ranges=[2, 2, 3, 4, 5]: H=27, H_approx=6885, correction=6858
+    ranges=[2, 2, 3, 5]: H=29, H_approx=765, correction=736
+    ranges=[2, 2, 3, 5]: H=37, H_approx=765, correction=728
+    ranges=[2, 2, 3, 5]: H=23, H_approx=765, correction=742
+    ranges=[2, 2, 3, 5]: H=29, H_approx=765, correction=736
+    ranges=[2, 2, 3, 5]: H=33, H_approx=765, correction=732
+    ranges=[2, 2, 3, 5]: H=37, H_approx=765, correction=728
+    ranges=[2, 2, 3, 5]: H=29, H_approx=765, correction=736
+    ranges=[2, 2, 4]: H=13, H_approx=81, correction=68
+    ranges=[2, 2, 4]: H=31, H_approx=81, correction=50
+    ranges=[2, 2, 4]: H=17, H_approx=81, correction=64
+    ranges=[2, 2, 4]: H=17, H_approx=81, correction=64
+    ranges=[2, 2, 4]: H=31, H_approx=81, correction=50
+    ranges=[2, 2, 4]: H=13, H_approx=81, correction=68
+    ranges=[2, 2, 4, 5]: H=43, H_approx=1377, correction=1334
+    ranges=[2, 2, 4, 5]: H=23, H_approx=1377, correction=1354
+    ranges=[2, 2, 4, 5]: H=29, H_approx=1377, correction=1348
+    ranges=[2, 2, 5]: H=29, H_approx=153, correction=124
+    ranges=[2, 2, 5]: H=17, H_approx=153, correction=136
+    ranges=[2, 2, 5]: H=29, H_approx=153, correction=124
+    ranges=[2, 3]: H=5, H_approx=15, correction=10
+    ranges=[2, 3]: H=9, H_approx=15, correction=6
+    ranges=[2, 3]: H=5, H_approx=15, correction=10
+    ranges=[2, 3]: H=5, H_approx=15, correction=10
+    ranges=[2, 3]: H=9, H_approx=15, correction=6
+    ranges=[2, 3]: H=9, H_approx=15, correction=6
+    ranges=[2, 3]: H=5, H_approx=15, correction=10
+    ranges=[2, 3]: H=5, H_approx=15, correction=10
+    ranges=[2, 3]: H=15, H_approx=15, correction=0
+    ranges=[2, 3]: H=9, H_approx=15, correction=6
+    ranges=[2, 3]: H=5, H_approx=15, correction=10
+    ranges=[2, 3, 3]: H=15, H_approx=75, correction=60
+    ranges=[2, 3, 3]: H=15, H_approx=75, correction=60
+    ranges=[2, 3, 3]: H=23, H_approx=75, correction=52
+    ranges=[2, 3, 3, 4]: H=29, H_approx=675, correction=646
+    ranges=[2, 3, 3, 4]: H=23, H_approx=675, correction=652
+    ranges=[2, 3, 3, 4]: H=33, H_approx=675, correction=642
+    ranges=[2, 3, 3, 5]: H=31, H_approx=1275, correction=1244
+    ranges=[2, 3, 3, 5]: H=31, H_approx=1275, correction=1244
+    ranges=[2, 3, 3, 5]: H=31, H_approx=1275, correction=1244
+    ranges=[2, 3, 4]: H=9, H_approx=135, correction=126
+    ranges=[2, 3, 4]: H=13, H_approx=135, correction=122
+    ranges=[2, 3, 4]: H=19, H_approx=135, correction=116
+    ranges=[2, 3, 4]: H=13, H_approx=135, correction=122
+    ranges=[2, 3, 4]: H=13, H_approx=135, correction=122
+    ranges=[2, 3, 4]: H=9, H_approx=135, correction=126
+    ranges=[2, 3, 4]: H=31, H_approx=135, correction=104
+    ranges=[2, 3, 4]: H=13, H_approx=135, correction=122
+    ranges=[2, 3, 4]: H=13, H_approx=135, correction=122
+    ranges=[2, 3, 4]: H=9, H_approx=135, correction=126
+    ranges=[2, 3, 4]: H=13, H_approx=135, correction=122
+    ranges=[2, 3, 4]: H=17, H_approx=135, correction=118
+    ranges=[2, 3, 4]: H=13, H_approx=135, correction=122
+    ranges=[2, 3, 4]: H=25, H_approx=135, correction=110
+    ranges=[2, 3, 4]: H=19, H_approx=135, correction=116
+    ranges=[2, 3, 4]: H=13, H_approx=135, correction=122
+    ranges=[2, 3, 4]: H=19, H_approx=135, correction=116
+    ranges=[2, 3, 4]: H=9, H_approx=135, correction=126
+    ranges=[2, 3, 4, 5]: H=37, H_approx=2295, correction=2258
+    ranges=[2, 3, 4, 5]: H=33, H_approx=2295, correction=2262
+    ranges=[2, 3, 4, 5]: H=29, H_approx=2295, correction=2266
+    ranges=[2, 3, 4, 5]: H=37, H_approx=2295, correction=2258
+    ranges=[2, 3, 4, 5]: H=25, H_approx=2295, correction=2270
+    ranges=[2, 3, 4, 5]: H=29, H_approx=2295, correction=2266
+    ranges=[2, 3, 4, 5]: H=17, H_approx=2295, correction=2278
+    ranges=[2, 3, 5]: H=15, H_approx=255, correction=240
+    ranges=[2, 3, 5]: H=31, H_approx=255, correction=224
+    ranges=[2, 3, 5]: H=23, H_approx=255, correction=232
+    ranges=[2, 3, 5]: H=37, H_approx=255, correction=218
+    ranges=[2, 3, 5]: H=29, H_approx=255, correction=226
+    ranges=[2, 3, 5]: H=29, H_approx=255, correction=226
+    ranges=[2, 3, 5]: H=37, H_approx=255, correction=218
+    ranges=[2, 3, 5]: H=23, H_approx=255, correction=232
+    ranges=[2, 3, 5]: H=25, H_approx=255, correction=230
+    ranges=[2, 3, 5]: H=31, H_approx=255, correction=224
+    ranges=[2, 3, 5]: H=15, H_approx=255, correction=240
+    ranges=[2, 4]: H=9, H_approx=27, correction=18
+    ranges=[2, 4]: H=15, H_approx=27, correction=12
+    ranges=[2, 4]: H=15, H_approx=27, correction=12
+    ranges=[2, 4]: H=9, H_approx=27, correction=18
+    ranges=[2, 4]: H=9, H_approx=27, correction=18
+    ranges=[2, 4]: H=15, H_approx=27, correction=12
+    ranges=[2, 4]: H=15, H_approx=27, correction=12
+    ranges=[2, 4]: H=9, H_approx=27, correction=18
+    ranges=[2, 4, 5]: H=25, H_approx=459, correction=434
+    ranges=[2, 4, 5]: H=29, H_approx=459, correction=430
+    ranges=[2, 4, 5]: H=33, H_approx=459, correction=426
+    ranges=[2, 4, 5]: H=19, H_approx=459, correction=440
+    ranges=[2, 5]: H=15, H_approx=51, correction=36
+    ranges=[2, 5]: H=27, H_approx=51, correction=24
+    ranges=[2, 5]: H=27, H_approx=51, correction=24
+    ranges=[2, 5]: H=15, H_approx=51, correction=36
+    ranges=[3, 3]: H=17, H_approx=25, correction=8
+    ranges=[3, 3, 4]: H=29, H_approx=225, correction=196
+    ranges=[3, 3, 5]: H=29, H_approx=425, correction=396
+    ranges=[3, 4]: H=11, H_approx=45, correction=34
+    ranges=[3, 4]: H=11, H_approx=45, correction=34
+    ranges=[3, 4]: H=11, H_approx=45, correction=34
+    ranges=[3, 4]: H=23, H_approx=45, correction=22
+    ranges=[3, 4]: H=11, H_approx=45, correction=34
+    ranges=[3, 4, 5]: H=37, H_approx=765, correction=728
+    ranges=[3, 4, 5]: H=23, H_approx=765, correction=742
+    ranges=[3, 5]: H=19, H_approx=85, correction=66
+    ranges=[3, 5]: H=37, H_approx=85, correction=48
+    ranges=[3, 5]: H=19, H_approx=85, correction=66
+    ranges=[4, 5]: H=23, H_approx=153, correction=130
+
+======================================================================
+THREAD E: Higher moments of H_approx via pair DP
+======================================================================
+
+KEY INSIGHT: The r-th moment of H_approx over Z_n is:
+  E[H_approx^r] = (1/|Z_n|) * Σ_{T∈Z_n} H_approx(T)^r
+               = (1/F_{m+2}) * Σ_{T} ∏_{k active} h_k^r
+
+This is the same DP but with h_k^r in place of h_k!
+
+
+n=5, m=6, |Z_n|=21:
+  E[H_approx^1] = 635/21 = 30.238095
+  E[H_approx^2] = 50613/21 = 2410.142857
+  E[H_approx^3] = 5712155/21 = 272007.380952
+  E[H_approx^4] = 717411285/21 = 34162442.142857
+  Var[H_approx] = E[H²] - E[H]² = 16871/7 - (635/21)² = 659648/441 = 1495.8005
+  Std[H_approx] = 38.6756
+  Skewness numerator = E[H³] - 3E[H]E[H²] + 2E[H]³ = 108668.9386
+  → Distribution is right-skewed
+
+n=6, m=10, |Z_n|=144:
+  E[H_approx^1] = 81540/144 = 566.250000
+  E[H_approx^2] = 266600680/144 = 1851393.611111
+  E[H_approx^3] = 1474834555404/144 = 10241906634.750000
+  E[H_approx^4] = 9436309720038400/144 = 65529928611377.781250
+  Var[H_approx] = E[H²] - E[H]² = 33325085/18 - (2265/4)² = 220428655/144 = 1530754.5486
+  Std[H_approx] = 1237.2367
+  Skewness numerator = E[H³] - 3E[H]E[H²] + 2E[H]³ = 7459975476.1562
+  → Distribution is right-skewed
+
+======================================================================
+THREAD F: Interaction correction Δ(H_approx - H_true)
+======================================================================
+
+For two tiles with ranges r1, r2 and windows [b1,a1) and [b2,a2):
+  Case 1: Disjoint windows (a1 ≤ b2 and a2 ≤ b1): Δ = 0.
+  Case 2: Chained windows (a1 = b2 or a2 = b1): Δ = 2^{r_chain-1}.
+  Case 3: Overlapping windows (proper overlap): Δ = ???
+
+Let's systematically study the correction for all tile pairs at n=5,6,7.
+
+
+n=5: Two-tile interaction corrections:
+      tile_a     tile_b  ra  rb  r_ov    H Happrox     Δ type
+      (0, 2)     (1, 3)   2   2     3    5       9     4 overlap(1)
+      (0, 2)     (0, 3)   2   3     3    5      15    10 overlap(2)
+      (0, 2)     (1, 4)   2   3     4    9      15     6 overlap(1)
+      (0, 2)     (0, 4)   2   4     4    9      27    18 overlap(2)
+      (1, 3)     (2, 4)   2   2     3    5       9     4 overlap(1)
+      (1, 3)     (0, 3)   3   2     3    5      15    10 overlap(2)
+      (1, 3)     (1, 4)   2   3     3    5      15    10 overlap(2)
+      (1, 3)     (0, 4)   4   2     4   15      27    12 overlap(2)
+      (2, 4)     (0, 3)   3   2     4    9      15     6 overlap(1)
+      (2, 4)     (1, 4)   3   2     3    5      15    10 overlap(2)
+      (2, 4)     (0, 4)   4   2     4    9      27    18 overlap(2)
+      (0, 3)     (1, 4)   3   3     4   13      25    12 overlap(2)
+      (0, 3)     (0, 4)   3   4     4   11      45    34 overlap(3)
+      (1, 4)     (0, 4)   4   3     4   11      45    34 overlap(3)
+
+n=6: Two-tile interaction corrections:
+      tile_a     tile_b  ra  rb  r_ov    H Happrox     Δ type
+      (0, 2)     (1, 3)   2   2     3    5       9     4 overlap(1)
+      (0, 2)     (0, 3)   2   3     3    5      15    10 overlap(2)
+      (0, 2)     (1, 4)   2   3     4    9      15     6 overlap(1)
+      (0, 2)     (0, 4)   2   4     4    9      27    18 overlap(2)
+      (0, 2)     (1, 5)   2   4     5   15      27    12 overlap(1)
+      (0, 2)     (0, 5)   2   5     5   15      51    36 overlap(2)
+      (1, 3)     (2, 4)   2   2     3    5       9     4 overlap(1)
+      (1, 3)     (0, 3)   3   2     3    5      15    10 overlap(2)
+      (1, 3)     (1, 4)   2   3     3    5      15    10 overlap(2)
+      (1, 3)     (2, 5)   2   3     4    9      15     6 overlap(1)
+      (1, 3)     (0, 4)   4   2     4   15      27    12 overlap(2)
+      (1, 3)     (1, 5)   2   4     4    9      27    18 overlap(2)
+      (1, 3)     (0, 5)   5   2     5   27      51    24 overlap(2)
+      (2, 4)     (3, 5)   2   2     3    5       9     4 overlap(1)
+      (2, 4)     (0, 3)   3   2     4    9      15     6 overlap(1)
+      (2, 4)     (1, 4)   3   2     3    5      15    10 overlap(2)
+      (2, 4)     (2, 5)   2   3     3    5      15    10 overlap(2)
+      (2, 4)     (0, 4)   4   2     4    9      27    18 overlap(2)
+      (2, 4)     (1, 5)   4   2     4   15      27    12 overlap(2)
+      (2, 4)     (0, 5)   5   2     5   27      51    24 overlap(2)
+      (3, 5)     (1, 4)   3   2     4    9      15     6 overlap(1)
+      (3, 5)     (2, 5)   3   2     3    5      15    10 overlap(2)
+      (3, 5)     (0, 4)   4   2     5   15      27    12 overlap(1)
+      (3, 5)     (1, 5)   4   2     4    9      27    18 overlap(2)
+      (3, 5)     (0, 5)   5   2     5   15      51    36 overlap(2)
+      (0, 3)     (1, 4)   3   3     4   13      25    12 overlap(2)
+      (0, 3)     (2, 5)   3   3     5   17      25     8 overlap(1)
+      (0, 3)     (0, 4)   3   4     4   11      45    34 overlap(3)
+      (0, 3)     (1, 5)   3   4     5   23      45    22 overlap(2)
+      (0, 3)     (0, 5)   3   5     5   19      85    66 overlap(3)
+      (1, 4)     (2, 5)   3   3     4   13      25    12 overlap(2)
+      (1, 4)     (0, 4)   4   3     4   11      45    34 overlap(3)
+      (1, 4)     (1, 5)   3   4     4   11      45    34 overlap(3)
+      (1, 4)     (0, 5)   5   3     5   37      85    48 overlap(3)
+      (2, 5)     (0, 4)   4   3     5   23      45    22 overlap(2)
+      (2, 5)     (1, 5)   4   3     4   11      45    34 overlap(3)
+      (2, 5)     (0, 5)   5   3     5   19      85    66 overlap(3)
+      (0, 4)     (1, 5)   4   4     5   33      81    48 overlap(3)
+      (0, 4)     (0, 5)   4   5     5   23     153   130 overlap(4)
+      (1, 5)     (0, 5)   5   4     5   23     153   130 overlap(4)
+
+======================================================================
+THREAD G: Mode B recursion — how |Z_n| grows as n increases by 2
+======================================================================
+
+Mode A: n → n+1: adds m → m + (n-1) = C(n-1,2) + (n-1) = C(n,2) new tile set size.
+Mode B: n → n+2: adds m → m + 2(n-1) + 1 = C(n+1,2) - C(n-1,2) + ... tiles.
+
+Actually: m(n) = C(n-1,2). So:
+  m(n+1) - m(n) = (n-1)   [Mode A adds n-1 tiles]
+  m(n+2) - m(n) = (2n-1)  [Mode B adds 2n-1 tiles]
+
+|Z_n| = F_{m(n)+2}.
+Mode A: F_{m+2} → F_{m+n+1}.  [multiply F_{m+2} by ≈ φ^{n-1}]
+Mode B: F_{m+2} → F_{m+2n+1}. [multiply F_{m+2} by ≈ φ^{2n-1}]
+
+  n | m=C(n-1,2) | F_{m+2} | Mode-A step |  Mode-B step
+   2 |         0 |       1 | +0 tiles | +0 tiles
+   3 |         1 |       2 | +1 tiles | +1 tiles
+   4 |         3 |       5 | +2 tiles | +3 tiles
+   5 |         6 |      21 | +3 tiles | +5 tiles
+   6 |        10 |     144 | +4 tiles | +7 tiles
+   7 |        15 |    1597 | +5 tiles | +9 tiles
+   8 |        21 |   28657 | +6 tiles | +11 tiles
+   9 |        28 |  832040 | +7 tiles | +13 tiles
+  10 |        36 | 39088169 | +8 tiles | +15 tiles
+
+  Growth ratios |Z_{n+1}|/|Z_n| for Mode A:
+    n=2→3: F_{3}/F_{2} = 2/1 ≈ 2.0000
+    n=3→4: F_{5}/F_{3} = 5/2 ≈ 2.5000
+    n=4→5: F_{8}/F_{5} = 21/5 ≈ 4.2000
+    n=5→6: F_{12}/F_{8} = 144/21 ≈ 6.8571
+    n=6→7: F_{17}/F_{12} = 1597/144 ≈ 11.0903
+    n=7→8: F_{23}/F_{17} = 28657/1597 ≈ 17.9443
+    n=8→9: F_{30}/F_{23} = 832040/28657 ≈ 29.0344
+    n=9→10: F_{38}/F_{30} = 39088169/832040 ≈ 46.9787
+Traceback (most recent call last):
+  File "/home/ubuntu/math/04-computation/zeckendorf_deep_exploration.py", line 570, in <module>
+    |Z_{{n+1}}| = |Z_n| · F_n + |Z_n|_{shifted} · F_{{n-1}}
+                                       ^^^^^^^
+NameError: name 'shifted' is not defined

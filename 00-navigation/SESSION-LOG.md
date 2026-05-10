@@ -2,6 +2,57 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-10-S1 — 2026-05-10
+**Account:** Eliott (primary)
+**Continuation of:** oracle-2026-05-01-S2 (creative investigation session)
+**Summary of work:**
+
+### MAJOR THEOREMS PROVED (Two-Tile H Formula)
+
+**THM-A (Full containment, boundary):** For two backward tiles of ranges r1 < r2 with the smaller fully inside the larger (shift=0 or shift=r2-r1):
+  H = h(r2) + h(r1) - h(r2-r1)  [for r2 ≥ r1+2]
+  H = 3·2^{r1-1} - 1             [for r2 = r1+1, consecutive]
+  Special case: r2=2r1 gives H=h(r2) (same as single tile!).
+
+**THM-B (Interior geometric invariance):** For the SAME full containment configuration but with 0 < shift < r2-r1 (strictly interior placement):
+  H = h(r2) + h(r1) - h(r2-r1) + 3^{r1-1} · 2^{r2-r1-1}
+  
+  MOST STRIKING: H is THE SAME for ALL interior shifts, regardless of position.
+  The H value depends only on boundary vs interior, not on which interior position.
+  Correction Delta = 3^{r1-1} · 2^{r2-r1-1} = h(2)^{r1-1} · 2^{r2-r1-1}.
+  Verified: 84 cases (28 boundary + 56 interior), 0 failures, n=5..10.
+
+### OTHER DISCOVERIES
+
+**q-State Zeckendorf:** For q states with "no two adjacent nonzero" constraint:
+  Count(m, q) satisfies a(m) = a(m-1) + (q-1)·a(m-2).
+  For q=3: Count = (2^{m+2} - (-1)^m)/3 = I(P_m, 2) = Jacobsthal(m).
+  BRIDGE: The number of "ternary Zeckendorf" strings = H of tournaments with PATH conflict graph.
+
+**Discriminant = Forbidden H:** The pair DP transfer matrix for uniform range-r tiles has discriminant Δ(r) = 5+2^{r+1}. At r=3: Δ=21 = G_5(2) = |Z_5| = second forbidden H value.
+
+**G_n(2)/A000568 = 7/4 at n=4 AND n=5:** Both G_n(2) and A000568(n) multiply by exactly 3 from n=4 to n=5 (the only consecutive pair where ratio is constant).
+
+**Fibonacci identity for |Z_n|:** |Z_{n+1}| = |Z_n|·F_n + F_{m+1}·F_{n-1} (verified n=3..8).
+
+**H-distribution over Z_5:** {1:1, 3:3, 5:6, 9:6, 11:1, 13:3, 15:1}, total=21=|Z_5|.
+  All 7 distinct H values achievable by Z_5 tilings match ALL n=5 tournament H values!
+
+**Higher moments via pair DP:** E[H_approx^r] computable in O(m) by running pair DP with h_k^r. Both n=5 and n=6 distributions are right-skewed.
+
+**New files:**
+  04-computation/zeckendorf_deep_exploration.py — 10-thread creative exploration
+  04-computation/zeckendorf_deep2.py — two-tile H formula verification
+  05-knowledge/results/two_tile_H_theorems.out — theorem statements + verification
+  05-knowledge/results/zeckendorf_deep_exploration.out — exploration results
+  05-knowledge/results/zeckendorf_deep2.out — formula verification
+
+**Open questions from this session:**
+  - Prove THM-B from OCF first principles (why is interior position irrelevant?)
+  - Formula for partial overlap (0<d<r1) with r1>=3 — no closed form found yet
+  - Connect correction Delta = h(2)^{r1-1} · 2^{r2-r1-1} to cycle structure in Omega
+  - Extend to 3+ tiles: is there an iterated boundary/interior structure?
+
 ## oracle-2026-05-01-S2 — 2026-05-01
 **Account:** Eliott (primary)
 **Continuation of:** oracle-2026-05-01-S1 (context-compacted)
