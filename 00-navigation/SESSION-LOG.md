@@ -2,6 +2,27 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-11-S2 — 2026-05-11
+
+**Summary:** Deep structural analysis of SF/SCSF patterns through n=8. Verified SCSF(8)=5 by numpy canonicalization. Proved new theorem. Corrected earlier mistakes.
+
+**PROVED THEOREM: free_bits(n+2) - free_bits(n) = n for all n≥3.**
+  Proof: Δm=2n-1, Δs=1, Δfb=n. Corollary: blue(n+2) = 2^n × blue(n).
+
+**VERIFIED n=8 kernel:** SCSF(8)=5 confirmed. Score class (4,4,4,4,3,3,3,3): 85 iso classes, 15 SC, 43 SF, 5 SC∩SF. Kernel has gs=21-22 per class. max_H=661 by SC non-SF (breaks even-n pattern from n=4,6).
+
+**CORRECTED earlier claim:** SCSF(n)=SC(n-2) was a coincidence for n=4..7, fails at n=8 (5≠12). Similarly SC(2k)/SC(2k-1)=k/2 holds for k=2,3,4 but fails at k=5.
+
+**SC sequence from THM-283:** 2,2,8,12,88,176,2752,8784 for n=3..10. Asymptotic: SC(2k+2)/SC(2k) ≈ 2^{2k}/(k+1) from dominant partition.
+
+**Blue/SC pairing:** ≈2 (n=4,5), ≈5.5 (n=6,7), ≈23.5 (n=8,9), ≈120 (n=10,11). Each pair approximately equal, growing by ~5× per pair.
+
+**SCSF near-regularity confirmed at n=8:** scores (4,4,4,4,3,3,3,3), max dev=0.5 ✓.
+**Blueself/blackself alternation:** Even n → blueself, Odd n → blackself (proved for odd, verified for even ≤8).
+
+**Files:** sf_n8_verification.out (extended with corrections), 04-computation/n7_four_category_v2.py.
+**Open:** SCSF(9), full SF(8), formula for SCSF(n), proof of near-regularity.
+
 ## oracle-2026-05-11-S1 — 2026-05-11
 
 **Summary:** Deep investigation of self-flip (SF) operation, four-category structure at n=7, and new identities.

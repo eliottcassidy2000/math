@@ -1,0 +1,83 @@
+SF/SCSF ANALYSIS THROUGH n=8
+oracle-2026-05-11
+======================================================
+
+VERIFIED DATA:
+  #SC:   2, 2, 8, 12, 88, 176, 2752  for n=3..9
+  #V:    2, 4, 12, 56, 456, 6880, 191536 for n=3..9
+  SCSF: 1, 2, 2, 8, 5 for n=4..8 (CONFIRMED, n=8 by numpy canonicalization)
+  sfp:  0, 1, 4, 8, 44 for n=3..7
+
+n=8 COMPUTATION:
+  Score class (4,4,4,4,3,3,3,3): 85 iso classes (score-test-passing)
+  SC=15, SF=43, SC∩SF=5 ✓
+  Kernel details: 3×{#t=224,gs=22} + 1×{#t=74,gs=22} + 1×{#t=221,gs=21}
+  H values for all candidates: 621-661
+
+PROVED THEOREM: free_bits(n+2) - free_bits(n) = n for all n≥3.
+  Proof: Δm=2n-1, Δs=1, Δfb=Δs+(Δm-Δs)/2=1+(n-1)=n.
+  Corollary: blue(n+2) = 2^n × blue(n) [exact double-step blue growth]
+  Corollary: GS_fraction(n+2) = GS_fraction(n) / 2^{n-1}
+
+free_bits: 1,2,4,6,9,12,16,20,25,... for n=3,4,5,6,7,8,9,10,11,...
+blue:      2,4,16,64,512,4096,65536,1M,... for n=3..10
+
+CORRECTED SEQUENCE:
+  blue/SC ≈ 2(n=4,5), 5.5(n=6,7), 23.5(n=8,9)
+  Double-step growth of blue/SC: 2^n / SC_ratio
+
+KEY PATTERNS:
+1. SC(6) = 3 × V(4) EXACTLY (12=3×4). Near-exact at n=8 (176≈3×56=168).
+   Conjecture: SC(2k) ≈ 3 × V(2k-2) for even k.
+   
+2. At even n: ALL SCSF in single 'balanced' score class {n/2, n/2-1}.
+   Fraction of SC in balanced class that are SCSF: 100%(n=4), 100%(n=6), 33%(n=8).
+   The remaining SC non-SCSF include the global max_H class at n=8.
+   
+3. Blueself/blackself alternation:
+   Even n kernel → blueself (GS tilings form self-flip pairs)
+   Odd n kernel → blackself (non-GS tilings form self-flip pairs)
+   PROVED for odd n, verified computationally for even n.
+
+4. SCSF near-regularity: max score deviation ≤ 1 from (n-1)/2, all n=4..8.
+
+5. max_H by SC at all tested n≤8 (SC Maximizer). At n=8: H=661 by SC non-SCSF.
+   Pattern BREAKS at n=8: max_H not by kernel (unlike n=4,6).
+
+IDENTITY CORRECTION:
+  #SCSF(n) = #SC(n-2) holds for n=4..7 but FAILS at n=8 (5 ≠ 12=SC(6)).
+  This was a small-n coincidence, not a true theorem.
+
+ADDITIONAL FINDINGS FROM DEEP ANALYSIS:
+========================================
+
+PROVED THEOREM: free_bits(n+2) - free_bits(n) = n
+Proof: Δm=2n-1, Δs=1, Δfb=1+(2n-2)/2=n.
+Corollary: blue(n+2) = 2^n × blue(n) EXACTLY.
+Corollary: GS_fraction(n+2) = GS_fraction(n) / 2^{n-1}.
+
+CORRECTED SC SEQUENCE (from THM-283):
+n:  3  4  5   6    7    8    9    10      11       12
+SC: 2  2  8  12   88  176 2752  8784  279968  1492288
+
+CORRECTED PREDICTIONS:
+- SC(10) = 8784 (NOT 6880; k/2 theorem was coincidence for k=2,3,4 only)
+- SC(2k)/SC(2k-1) = 1, 3/2, 2, 3.19, 5.33 for k=2..6 (NOT k/2 asymptotically)
+- Asymptotic: SC(2k+2)/SC(2k) ≈ 2^{2k}/(k+1) [dominant partition in THM-283]
+
+BLUE/SC PAIRING:
+n=4,5: ≈2, n=6,7: ≈5.5, n=8,9: ≈23.5, n=10,11: ≈120
+(Approximately equal at consecutive (even,odd) pairs; grows by ~5× per pair)
+
+BLUESELF THEOREM CONTEXT:
+No blueself at any ODD n (proved). At EVEN n blueself can exist.
+SC∩SF classes at EVEN n: blueself (GS self-flip pairs)
+SC∩SF classes at ODD n: blackself (non-GS self-flip pairs)
+
+SF SELF-FLIP PAIRS CONSERVATION:
+sfp(n) + cross_pairs(n) = 2^{m(n)-1} (total flip-pairs)
+sfp: 0, 1, 4, 8, 44 for n=3..7 (sfp(8) unknown, ≥10 from kernel)
+
+OPEN: SCSF(9), SCSF(10), full SF count at n=8
+OPEN: Proof that SC∩SF is always near-regular
+OPEN: Formula for SCSF(n)
