@@ -2,6 +2,26 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-11-S1 — 2026-05-11
+
+**Summary:** Deep investigation of self-flip (SF) operation, four-category structure at n=7, and new identities.
+
+**New concept (SF):** A class C is self-flip iff tile-complement T̃ (reverse tile arcs, keep base path) gives T̃ ≅ T. SF is independent of SC.
+
+**Proved:** Score formula s̃(1)=n-2-s(1), s̃(n)=n-s(n), s̃(v)=n-1-s(v). Regular tournaments never SF. Paley(p)≡3(mod 4) is SC but not SF. P(7): H=189, |Aut|=21.
+
+**Key empirical identity:** #SC∩SF(n) = #SC(n-2) for n=4..7. Prediction: #SC∩SF(8)=12.
+
+**Data:** #SF = 0,1,2,8,30; #SCSF = 0,1,2,2,8; max_H = 3,5,15,45,189 for n=3..7. sfp = 0,1,4,8,44. Even n: max_H by SC∩SF. Odd prime n: max_H by Paley.
+
+**SC∩SF near-regularity conjectured** (max deviation ≤ 1 from mean).
+
+**Also:** Extended bl distribution computation to n=7 from previous session.
+
+**Files:** n7_four_category_v2.py, sf_selfflip_analysis.out, trienerments.tex (now 48 pages, §grid-sym-sc added).
+
+**Open:** Prove #SCSF(n)=#SC(n-2). Find uniform bijection. Verify prediction for n=8. Prove near-regularity.
+
 ## oracle-2026-05-10-S1 — 2026-05-10
 **Account:** Eliott (primary)
 **Continuation of:** oracle-2026-05-01-S2 (creative investigation session)

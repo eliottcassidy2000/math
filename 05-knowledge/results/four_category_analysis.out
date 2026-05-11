@@ -1,0 +1,340 @@
+======================================================================
+n=3  m=1  2^m=2  free_bits=1  blue=2  black=0
+======================================================================
+
+FOUR CATEGORIES:
+  Pure blue:  [1, 1]  sum=2
+  Mixed blue: []  sum=0
+  Mixed blk:  []  sum=0
+  Pure blk:   []  sum=0
+  Check: 2+0=2✓  0+0=0✓
+
+MIXED PAIRS (black, blue) [total 0]:
+  (black,blue) |   #t |     H | |Aut| |   Z | role
+
+PURE BLUE CLASSES:
+  ci0: blue=1, H=1, |Aut|=1, Z=1
+    → blue-connects to: [('ci1(H=3)',)]
+  ci1: blue=1, H=3, |Aut|=3, Z=1
+    → blue-connects to: [('ci0(H=1)',)]
+
+PURE BLACK (NS pairs):
+
+CONSTRAINT ANALYSIS:
+  Blue total=2: sum of 2 odd numbers
+  = 2 (pure) + 0 (mixed)
+  = 2 values summing to 2 + 0 values summing to 0
+  Black total=0: sum of 2 even numbers
+  = 0 (mixed) + 0 (pure)
+  = 0 positive even values + 0 positive even values + 2 zeros
+
+H-DISTRIBUTION BY CATEGORY:
+  H val | pure_blue | mixed | NS_class
+      1 |         1 |     0 |        0
+      3 |         1 |     0 |        0
+
+MIXED PAIRS SORTED BY H THEN |AUT|:
+
+======================================================================
+n=4  m=3  2^m=8  free_bits=2  blue=4  black=4
+======================================================================
+
+FOUR CATEGORIES:
+  Pure blue:  [1]  sum=1
+  Mixed blue: [3]  sum=3
+  Mixed blk:  [2]  sum=2
+  Pure blk:   [2]  sum=2
+  Check: 1+3=4✓  2+2=4✓
+
+MIXED PAIRS (black, blue) [total 1]:
+  (black,blue) |   #t |     H | |Aut| |   Z | role
+  (   2,  3) |    5 |     5 |     1 |   2 | self-loop
+
+PURE BLUE CLASSES:
+  ci0: blue=1, H=1, |Aut|=1, Z=1
+    → blue-connects to: [('ci2(H=5)',)]
+
+PURE BLACK (NS pairs):
+  [1,3]: black=2, H_a=3(au=3), H_b=3(au=3)
+
+CONSTRAINT ANALYSIS:
+  Blue total=4: sum of 2 odd numbers
+  = 1 (pure) + 3 (mixed)
+  = 1 values summing to 1 + 1 values summing to 3
+  Black total=4: sum of 3 even numbers
+  = 2 (mixed) + 2 (pure)
+  = 1 positive even values + 1 positive even values + 1 zeros
+
+H-DISTRIBUTION BY CATEGORY:
+  H val | pure_blue | mixed | NS_class
+      1 |         1 |     0 |        0
+      3 |         0 |     0 |        2
+      5 |         0 |     1 |        0
+
+MIXED PAIRS SORTED BY H THEN |AUT|:
+  H=   5, |Aut|=1: (bk=   2, bl= 3) #t=   5, bk/bl=0.67, bk+bl=   5
+
+======================================================================
+n=5  m=6  2^m=64  free_bits=4  blue=16  black=48
+======================================================================
+
+FOUR CATEGORIES:
+  Pure blue:  [1, 1, 3]  sum=5
+  Mixed blue: [1, 1, 3, 3, 3]  sum=11
+  Mixed blk:  [4, 6, 8, 8, 10]  sum=36
+  Pure blk:   [2, 10]  sum=12
+  Check: 5+11=16✓  36+12=48✓
+
+MIXED PAIRS (black, blue) [total 5]:
+  (black,blue) |   #t |     H | |Aut| |   Z | role
+  (   4,  1) |    5 |    15 |     3 |   1 | 
+  (   6,  3) |    9 |     9 |     1 |   4 | 
+  (   8,  1) |    9 |     9 |     1 |   2 | 
+  (   8,  3) |   11 |    11 |     1 |   2 | 
+  (  10,  3) |   13 |    13 |     1 |   3 | 
+
+PURE BLUE CLASSES:
+  ci0: blue=1, H=1, |Aut|=1, Z=1
+    → blue-connects to: [('ci6(H=9)',)]
+  ci3: blue=1, H=3, |Aut|=3, Z=1
+    → blue-connects to: [('ci10(H=13)',)]
+  ci11: blue=3, H=15, |Aut|=5, Z=0
+    → blue-connects to: [('ci8(H=11)',), ('ci9(H=15)',), ('ci10(H=13)',)]
+
+PURE BLACK (NS pairs):
+  [1,7]: black=2, H_a=3(au=3), H_b=3(au=3)
+  [2,5]: black=10, H_a=5(au=1), H_b=5(au=1)
+
+CONSTRAINT ANALYSIS:
+  Blue total=16: sum of 8 odd numbers
+  = 5 (pure) + 11 (mixed)
+  = 3 values summing to 5 + 5 values summing to 11
+  Black total=48: sum of 10 even numbers
+  = 36 (mixed) + 12 (pure)
+  = 5 positive even values + 2 positive even values + 3 zeros
+
+H-DISTRIBUTION BY CATEGORY:
+  H val | pure_blue | mixed | NS_class
+      1 |         1 |     0 |        0
+      3 |         1 |     0 |        2
+      5 |         0 |     0 |        2
+      9 |         0 |     2 |        0
+     11 |         0 |     1 |        0
+     13 |         0 |     1 |        0
+     15 |         1 |     1 |        0
+
+MIXED PAIRS SORTED BY H THEN |AUT|:
+  H=   9, |Aut|=1: (bk=   6, bl= 3) #t=   9, bk/bl=2.00, bk+bl=   9
+  H=   9, |Aut|=1: (bk=   8, bl= 1) #t=   9, bk/bl=8.00, bk+bl=   9
+  H=  11, |Aut|=1: (bk=   8, bl= 3) #t=  11, bk/bl=2.67, bk+bl=  11
+  H=  13, |Aut|=1: (bk=  10, bl= 3) #t=  13, bk/bl=3.33, bk+bl=  13
+  H=  15, |Aut|=3: (bk=   4, bl= 1) #t=   5, bk/bl=4.00, bk+bl=   5
+
+======================================================================
+n=6  m=10  2^m=1024  free_bits=6  blue=64  black=960
+======================================================================
+
+FOUR CATEGORIES:
+  Pure blue:  [1, 1]  sum=2
+  Mixed blue: [3, 3, 5, 5, 7, 7, 7, 7, 9, 9]  sum=62
+  Mixed blk:  [2, 6, 12, 12, 12, 22, 22, 26, 30, 32]  sum=176
+  Pure blk:   [2, 2, 6, 10, 10, 18, 18, 18, 22, 22, 26, 30, 38, 46, 46, 50, 58, 62, 66, 74, 74, 86]  sum=784
+  Check: 2+62=64✓  176+784=960✓
+
+MIXED PAIRS (black, blue) [total 10]:
+  (black,blue) |   #t |     H | |Aut| |   Z | role
+  (   2,  3) |    5 |     5 |     1 |   3 | 
+  (   6,  9) |   15 |    45 |     3 |   0 | self-loop
+  (  12,  3) |   15 |    45 |     3 |   1 | 
+  (  12,  5) |   17 |    17 |     1 |   2 | 
+  (  12,  5) |   17 |    17 |     1 |   7 | 
+  (  22,  7) |   29 |    29 |     1 |   4 | 
+  (  22,  7) |   29 |    29 |     1 |   7 | 
+  (  26,  7) |   33 |    33 |     1 |   3 | 
+  (  30,  7) |   37 |    37 |     1 |   4 | 
+  (  32,  9) |   41 |    41 |     1 |   0 | self-loop
+
+PURE BLUE CLASSES:
+  ci0: blue=1, H=1, |Aut|=1, Z=1
+    → blue-connects to: [('ci22(H=17)',)]
+  ci23: blue=1, H=9, |Aut|=9, Z=1
+    → blue-connects to: [('ci12(H=17)',)]
+
+PURE BLACK (NS pairs):
+  [1,19]: black=2, H_a=3(au=3), H_b=3(au=3)
+  [3,7]: black=2, H_a=3(au=3), H_b=3(au=3)
+  [11,50]: black=6, H_a=15(au=5), H_b=15(au=5)
+  [2,15]: black=10, H_a=5(au=1), H_b=5(au=1)
+  [9,36]: black=10, H_a=15(au=3), H_b=15(au=3)
+  [4,13]: black=18, H_a=9(au=1), H_b=9(au=1)
+  [6,17]: black=18, H_a=9(au=1), H_b=9(au=1)
+  [20,34]: black=18, H_a=27(au=3), H_b=27(au=3)
+  [8,25]: black=22, H_a=11(au=1), H_b=11(au=1)
+  [28,53]: black=22, H_a=33(au=3), H_b=33(au=3)
+  [10,37]: black=26, H_a=13(au=1), H_b=13(au=1)
+  [14,18]: black=30, H_a=15(au=1), H_b=15(au=1)
+  [16,26]: black=38, H_a=19(au=1), H_b=19(au=1)
+  [21,33]: black=46, H_a=23(au=1), H_b=23(au=1)
+  [24,27]: black=46, H_a=23(au=1), H_b=23(au=1)
+  [29,40]: black=50, H_a=25(au=1), H_b=25(au=1)
+  [35,41]: black=58, H_a=29(au=1), H_b=29(au=1)
+  [32,39]: black=62, H_a=31(au=1), H_b=31(au=1)
+  [45,48]: black=66, H_a=33(au=1), H_b=33(au=1)
+  [38,49]: black=74, H_a=37(au=1), H_b=37(au=1)
+  [42,47]: black=74, H_a=37(au=1), H_b=37(au=1)
+  [51,52]: black=86, H_a=43(au=1), H_b=43(au=1)
+
+CONSTRAINT ANALYSIS:
+  Blue total=64: sum of 12 odd numbers
+  = 2 (pure) + 62 (mixed)
+  = 2 values summing to 2 + 10 values summing to 62
+  Black total=960: sum of 34 even numbers
+  = 176 (mixed) + 784 (pure)
+  = 10 positive even values + 22 positive even values + 2 zeros
+
+H-DISTRIBUTION BY CATEGORY:
+  H val | pure_blue | mixed | NS_class
+      1 |         1 |     0 |        0
+      3 |         0 |     0 |        4
+      5 |         0 |     1 |        2
+      9 |         1 |     0 |        4
+     11 |         0 |     0 |        2
+     13 |         0 |     0 |        2
+     15 |         0 |     0 |        6
+     17 |         0 |     2 |        0
+     19 |         0 |     0 |        2
+     23 |         0 |     0 |        4
+     25 |         0 |     0 |        2
+     27 |         0 |     0 |        2
+     29 |         0 |     2 |        2
+     31 |         0 |     0 |        2
+     33 |         0 |     1 |        4
+     37 |         0 |     1 |        4
+     41 |         0 |     1 |        0
+     43 |         0 |     0 |        2
+     45 |         0 |     2 |        0
+
+MIXED PAIRS SORTED BY H THEN |AUT|:
+  H=   5, |Aut|=1: (bk=   2, bl= 3) #t=   5, bk/bl=0.67, bk+bl=   5
+  H=  17, |Aut|=1: (bk=  12, bl= 5) #t=  17, bk/bl=2.40, bk+bl=  17
+  H=  17, |Aut|=1: (bk=  12, bl= 5) #t=  17, bk/bl=2.40, bk+bl=  17
+  H=  29, |Aut|=1: (bk=  22, bl= 7) #t=  29, bk/bl=3.14, bk+bl=  29
+  H=  29, |Aut|=1: (bk=  22, bl= 7) #t=  29, bk/bl=3.14, bk+bl=  29
+  H=  33, |Aut|=1: (bk=  26, bl= 7) #t=  33, bk/bl=3.71, bk+bl=  33
+  H=  37, |Aut|=1: (bk=  30, bl= 7) #t=  37, bk/bl=4.29, bk+bl=  37
+  H=  41, |Aut|=1: (bk=  32, bl= 9) #t=  41, bk/bl=3.56, bk+bl=  41
+  H=  45, |Aut|=3: (bk=   6, bl= 9) #t=  15, bk/bl=0.67, bk+bl=  15
+  H=  45, |Aut|=3: (bk=  12, bl= 3) #t=  15, bk/bl=4.00, bk+bl=  15
+
+======================================================================
+CROSS-n PATTERNS
+======================================================================
+
+1. PURE BLUE CLASSES across n:
+     n |                 pure_blue vals |    sum | H values
+     3 |                         [1, 1] |      2 | [1, 3]
+     4 |                            [1] |      1 | [1]
+     5 |                      [1, 1, 3] |      5 | [1, 3, 15]
+     6 |                         [1, 1] |      2 | [1, 9]
+
+2. PURE BLACK (NS pairs) across n:
+     n |                 pure_black vals (merged) |  count
+     3 |                                       [] |      0
+     4 |                                      [2] |      1
+     5 |                                  [2, 10] |      2
+     6 | [2, 2, 6, 10, 10, 18, 18, 18, 22, 22, 26, 30, 38, 46, 46, 50, 58, 62, 66, 74, 74, 86] |     22
+
+3. MIXED PAIR COUNTS and SUMS across n:
+     n |  #mixed |   Σ_blue |   Σ_black |  tot_blue | tot_black
+     3 |       0 |        0 |         0 |         2 | 0
+     4 |       1 |        3 |         2 |         4 | 4
+     5 |       5 |       11 |        36 |        16 | 48
+     6 |      10 |       62 |       176 |        64 | 960
+
+4. THE (black, blue) PAIR STRUCTURE:
+   At each n, sorted mixed pairs show progression:
+   n=3: blue values [], pairs (bk,bl): []
+   n=4: blue values [3], pairs (bk,bl): [(2, 3)]
+   n=5: blue values [1, 3], pairs (bk,bl): [(4, 1), (6, 3), (8, 1), (8, 3), (10, 3)]
+   n=6: blue values [3, 5, 7, 9], pairs (bk,bl): [(2, 3), (6, 9), (12, 3), (12, 5), (12, 5), (22, 7), (22, 7), (26, 7), (30, 7), (32, 9)]
+
+5. PURE BLUE CONDITION: when is a SC class pure blue?
+   (black=0 iff ALL #tilings are grid-symmetric)
+   n=3: 2 pure blue classes
+     ci0: H=1, |Aut|=1, #t=1, blue=1, Z=1 [#t=1,all_grid_sym]
+     ci1: H=3, |Aut|=3, #t=1, blue=1, Z=1 [#t=1,all_grid_sym,|Aut|=3]
+   n=4: 1 pure blue classes
+     ci0: H=1, |Aut|=1, #t=1, blue=1, Z=1 [#t=1,all_grid_sym]
+   n=5: 3 pure blue classes
+     ci0: H=1, |Aut|=1, #t=1, blue=1, Z=1 [#t=1,all_grid_sym]
+     ci3: H=3, |Aut|=3, #t=1, blue=1, Z=1 [#t=1,all_grid_sym,|Aut|=3]
+     ci11: H=15, |Aut|=5, #t=3, blue=3, Z=0 [all_grid_sym,|Aut|=5]
+   n=6: 2 pure blue classes
+     ci0: H=1, |Aut|=1, #t=1, blue=1, Z=1 [#t=1,all_grid_sym]
+     ci23: H=9, |Aut|=9, #t=1, blue=1, Z=1 [#t=1,all_grid_sym,|Aut|=9]
+
+6. RATIO bk/bl FOR MIXED PAIRS (measures 'how black' each mixed node is):
+   n=3: []
+   n=4: [0.67]
+   n=5: [4.0, 2.0, 8.0, 2.67, 3.33]
+   n=6: [0.67, 0.67, 4.0, 2.4, 2.4, 3.14, 3.14, 3.71, 4.29, 3.56]
+
+7. MIXED PAIR STRUCTURE: (black, blue) pairs with #tilings:
+   Key identity: black + blue = #tilings = H/|Aut| (always odd)
+
+   n=3:
+
+   n=4:
+   H=   5, |Aut|=1, #t=   5: black=   2+blue= 3=   5, Z=2, self_loop=True
+
+   n=5:
+   H=  15, |Aut|=3, #t=   5: black=   4+blue= 1=   5, Z=1, self_loop=False
+   H=   9, |Aut|=1, #t=   9: black=   8+blue= 1=   9, Z=2, self_loop=False
+   H=   9, |Aut|=1, #t=   9: black=   6+blue= 3=   9, Z=4, self_loop=False
+   H=  11, |Aut|=1, #t=  11: black=   8+blue= 3=  11, Z=2, self_loop=False
+   H=  13, |Aut|=1, #t=  13: black=  10+blue= 3=  13, Z=3, self_loop=False
+
+   n=6:
+   H=   5, |Aut|=1, #t=   5: black=   2+blue= 3=   5, Z=3, self_loop=False
+   H=  45, |Aut|=3, #t=  15: black=  12+blue= 3=  15, Z=1, self_loop=False
+   H=  45, |Aut|=3, #t=  15: black=   6+blue= 9=  15, Z=0, self_loop=True
+   H=  17, |Aut|=1, #t=  17: black=  12+blue= 5=  17, Z=2, self_loop=False
+   H=  17, |Aut|=1, #t=  17: black=  12+blue= 5=  17, Z=7, self_loop=False
+   H=  29, |Aut|=1, #t=  29: black=  22+blue= 7=  29, Z=4, self_loop=False
+   H=  29, |Aut|=1, #t=  29: black=  22+blue= 7=  29, Z=7, self_loop=False
+   H=  33, |Aut|=1, #t=  33: black=  26+blue= 7=  33, Z=3, self_loop=False
+   H=  37, |Aut|=1, #t=  37: black=  30+blue= 7=  37, Z=4, self_loop=False
+   H=  41, |Aut|=1, #t=  41: black=  32+blue= 9=  41, Z=0, self_loop=True
+
+8. PURE BLUE VALUES as DIVISORS of 2^{free_bits}:
+   The pure_blue sum must divide into the total in a specific way.
+   n=3: 2^1=2 = 2(pure) + 0(mixed)
+   n=4: 2^2=4 = 1(pure) + 3(mixed)
+   n=5: 2^4=16 = 5(pure) + 11(mixed)
+   n=6: 2^6=64 = 2(pure) + 62(mixed)
+
+9. COUNTS SUMMARY TABLE:
+    n |   SC |  NS-pr |  #PureB |  #Mixed |  #PureBk | PureB_sum |  PureBk_sum
+    3 |    2 |      0 |       2 |       0 |        0 |         2 |           0
+    4 |    2 |      1 |       1 |       1 |        1 |         1 |           2
+    5 |    8 |      2 |       3 |       5 |        2 |         5 |          12
+    6 |   12 |     22 |       2 |      10 |       22 |         2 |         784
+
+10. ZECKENDORF vs BLUE COUNT CORRELATION:
+   Does higher blue count → more Zeckendorf tilings?
+   n=3: blue→Z distribution: {1: [1, 1]}
+   n=4: blue→Z distribution: {1: [1], 3: [2]}
+   n=5: blue→Z distribution: {1: [1, 1, 1, 2], 3: [0, 2, 3, 4]}
+   n=6: blue→Z distribution: {1: [1, 1], 3: [1, 3], 5: [2, 7], 7: [3, 4, 4, 7], 9: [0, 0]}
+
+11. PURE BLUE SELF-COMPLEMENT STRUCTURE:
+   For pure blue class C (all tilings grid-sym): what is C's flip-partner?
+   The flip-partner of a pure-blue class is always MIXED or PURE-BLUE.
+   n=3 ci0(H=1,blue=1): connects to [(1, 'pure_blue')]
+   n=3 ci1(H=3,blue=1): connects to [(0, 'pure_blue')]
+   n=4 ci0(H=1,blue=1): connects to [(2, 'mixed')]
+   n=5 ci0(H=1,blue=1): connects to [(6, 'mixed')]
+   n=5 ci3(H=3,blue=1): connects to [(10, 'mixed')]
+   n=5 ci11(H=15,blue=3): connects to [(8, 'mixed'), (9, 'mixed'), (10, 'mixed')]
+   n=6 ci0(H=1,blue=1): connects to [(22, 'mixed')]
+   n=6 ci23(H=9,blue=1): connects to [(12, 'mixed')]

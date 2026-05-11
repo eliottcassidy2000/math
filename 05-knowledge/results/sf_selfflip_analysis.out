@@ -1,0 +1,35 @@
+SELF-FLIP (SF) TOURNAMENT ANALYSIS
+oracle-2026-05-11
+======================================================
+
+DEFINITION: A class C is SF iff ∃ tiling M with flip(M) ∈ C,
+where flip reverses all tile bits (keeps base path).
+Equivalently: tile-complement T̃(M) ≅ T(M).
+
+SCORE FORMULA FOR T̃ (proved, verified n=3..7):
+  s̃(1) = n-2-s(1)     [sink vertex]
+  s̃(n) = n-s(n)       [source vertex]  
+  s̃(v) = n-1-s(v)     [middle vertices v=2..n-1]
+
+PROVED:
+1. Regular tournaments (Paley(p), p≡3 mod 4) are NEVER SF.
+   Proof: s̃(1) = n-2-(n-1)/2 = (n-3)/2 ≠ (n-1)/2 = s(1).
+
+DATA TABLE n=3..7:
+n | #cls | #SC | #SF | #SCSF | #NSSFpr | sfp  | max_H
+3 |    2 |   2 |   0 |     0 |       0 |    0 |     3
+4 |    4 |   2 |   1 |     1 |       0 |    1 |     5
+5 |   12 |   8 |   2 |     2 |       0 |    4 |    15
+6 |   56 |  12 |   8 |     2 |       3 |    8 |    45
+7 |  456 |  88 |  30 |     8 |      11 |   44 |   189
+
+KEY IDENTITY: #SCSF(n) = #SC(n-2) for n=4..7 (PREDICTION: #SCSF(8)=12)
+SC∩SF middle subtournaments always SC (verified n=4..6).
+At n=6: middles are DISTINCT → bijection via middle ✓
+At n=5: middles are SAME (both transitive) BUT uppers are distinct → bijection via upper
+
+SC∩SF NEAR-REGULARITY: max|s(v)-(n-1)/2| ≤ 1 always (conjectured).
+MAX-H PATTERN: Even n → max_H by SC∩SF; Odd prime n → max_H by Paley (SC, not SF).
+SF VARIANCE: SF classes have 2-4× lower score variance than non-SF.
+
+Paley(7): H=189, |Aut|=21, #t=9, bl=3, SC=True, SF=False.

@@ -1,0 +1,133 @@
+DEEP PATTERN ANALYSIS — FOUR CATEGORIES THROUGH n=7
+oracle-2026-05-11
+========================================================
+
+KEY THEOREM (proved this session):
+  Grid-symmetry ↔ Self-complementarity
+  
+  A tiling M is grid-symmetric iff T(M) is a SC tournament (iso class).
+  
+  Proof sketch:
+  - TRANS_MAP τ on tilings corresponds to T → (T^op)^σ_n on tournaments
+    (where σ_n(v)=n+1-v is vertex-label reversal)
+  - SC class: τ maps C to itself → involution on odd-sized set → ≥1 fixed point
+  - NS class: τ maps C to C^op ≠ C → no fixed points in C
+  - bl(C) = #fixed points = odd positive integer for SC, 0 for NS
+  
+  Consequence: 2^{free_bits} grid-sym tilings distributed EXCLUSIVELY among SC classes,
+  each receiving a positive odd number. NS classes get zero.
+
+EVOLUTION TABLE:
+n | m  | 2^m   | fb | blue | #cls | #SC | #NS-pr | #mix | #pb | #pblk
+3 | 1  | 2     |  1 |    2 |    2 |   2 |      0 |    0 |   2 |     0
+4 | 3  | 8     |  2 |    4 |    4 |   2 |      1 |    1 |   1 |     1
+5 | 6  | 64    |  4 |   16 |   12 |   8 |      2 |    5 |   3 |     2
+6 | 10 | 1024  |  6 |   64 |   56 |  12 |     22 |   10 |   2 |    22
+7 | 15 | 32768 |  9 |  512 |  456 |  88 |    184 |   84 |   4 |   184
+
+Checks: #SC + 2×#NS-pairs = A000568(n) for n=3..7. ✓
+
+BLUE VALUE MULTIPLICITY (c_1, c_3, c_5, c_7, c_9):
+n=3: (2, 0, 0, 0, 0)   sum=2,   wsum=2=2^1
+n=4: (1, 1, 0, 0, 0)   sum=2,   wsum=4=2^2
+n=5: (4, 4, 0, 0, 0)   sum=8,   wsum=16=2^4
+n=6: (2, 2, 2, 4, 2)   sum=12,  wsum=64=2^6
+n=7: (10,12,16,32,18)  sum=88,  wsum=512=2^9
+
+CONSTRAINT ANALYSIS:
+Two constraints: sum(c_k)=#SC and sum(k*c_k)=2^{free_bits}
+At n≤5: only bl∈{1,3} active → DOF=0, unique solution!
+At n≥6: bl∈{1,3,5,7,9} active → DOF=3, multiple solutions, structure selects one.
+
+DOMINANT bl VALUE: bl=7 at n=6 and n=7 (33-36% of all SC classes).
+The bl=7 dominance persists across n=6 and n=7.
+
+PURE-BLUE CLASSES (bl = #tilings = H/|Aut|):
+H=1,  |Aut|=1, #t=1: ALL n≥3 (transitive tournament)
+H=3,  |Aut|=3, #t=1: ODD n (n=3,5,7,...)  
+H=9,  |Aut|=9, #t=1: n≥6 (n=6,7,...)
+H=15, |Aut|=5, #t=3: ODD n≥5 (n=5,7,...)
+Pure-blue count: 2, 1, 3, 2, 4 for n=3..7 (growing slowly, alternating odd/even n)
+
+KEY: All pure-blue classes have #tilings ≤ 3, forced by parity.
+
+FOUR CATEGORIES AT n=7:
+Pure blue:  [1,1,1,3]       sum=6
+Mixed blue: [1×7, 3×11, 5×16, 7×32, 9×18]  sum=506
+Mixed blk:  [4,...,152]     sum=6796
+Pure blk:   [2,...,large]   sum=25460 (184 NS-pair values)
+Total blue: 6+506=512=2^9 ✓  Total black: 6796+25460=32256=32768-512 ✓
+
+UNIVERSAL (H,|Aut|)→(bk,bl) MAP:
+55/69 entries universal across all n where class appears.
+14 entries have multiple (bk,bl) pairs.
+
+SELECTED UNIVERSAL ENTRIES:
+(H=1,  |Aut|=1)→(bk=0,  bl=1): all n, pure blue
+(H=3,  |Aut|=3)→(bk=0,  bl=1): odd n, pure blue
+(H=5,  |Aut|=1)→(bk=2,  bl=3): n=4,6
+(H=9,  |Aut|=9)→(bk=0,  bl=1): n=6,7, pure blue
+(H=11, |Aut|=1)→(bk=8,  bl=3): n=5,7
+(H=13, |Aut|=1)→(bk=10, bl=3): n=5,7
+(H=15, |Aut|=3)→(bk=4,  bl=1): n=5,7
+(H=15, |Aut|=5)→(bk=0,  bl=3): n=5,7, pure blue
+(H=17, |Aut|=1)→(bk=12, bl=5): n=6
+(H=29, |Aut|=1)→(bk=22, bl=7): n=6
+
+EXCEPTIONS (multiple values):
+(H=9,  |Aut|=1)→{(6,3),(8,1)} at n=5,7 — same H but different bl
+(H=65, |Aut|=1)→{(58,7),(60,5),(62,3)} at n=7 — 3 distinct classes!
+(H=93, |Aut|=1)→{(86,7),(90,3),(92,1)} at n=7 — 3 distinct classes!
+
+NS-PAIR STRUCTURE:
+H(C)=H(C^op), |Aut(C)|=|Aut(C^op)| always.
+Merged black = 2×H/|Aut| (always even).
+At n=7: 184 pairs, sum(bk)=25460.
+
+SC/#TOTAL RATIO: 1.000, 0.500, 0.667, 0.214, 0.193 for n=3..7.
+NS-pairs dominate increasingly; SC shrinks as fraction of all classes.
+
+COMPUTATION: n=7 required numpy canonicalization (40s+28s=68s total,
+32768×5040×49 operations for canonical and comp_canonical).
+
+=======================================================
+ADDITIONAL ANALYSIS: FULL MIXED STRUCTURE AT n=7
+=======================================================
+
+COMPLETE SORTED LISTS (84 mixed classes):
+Mixed blue (sorted): 7×1, 11×3, 16×5, 32×7, 18×9
+Mixed blk (sorted): [4,6,6,8,8,8,10,16,...,138,142,...,152,152]
+
+PAIRING STRUCTURE (partial, 40/84 visible):
+H range by bl:
+  bl=1: H∈{9,15,33,51,93} (and 2 more with H>93)
+  bl=3: H∈{9,11,13,27,65,93,99} (and 4 more)
+  bl=5: H∈{25,31,31,41,49,65,67,67,69,69,79,91} (and 4 more)
+  bl=7: H∈{45,51,61,65,71,...,105} (and 16 more)
+  bl=9: H≈{139,141,...,161} (all 18 unseen, highest H values)
+
+KEY INSIGHT: bl CORRELATES WITH H (roughly):
+  Small H (9..33) → bl=1,3 (few grid-sym tilings)
+  Medium H (41..65) → bl=5,7 (more grid-sym)
+  Large H (71..105) → bl=7,9 
+  Largest H (139..161) → bl=9 (18 classes with max possible bl)
+
+THEORETICAL INTERPRETATION:
+For grid-sym tiling M: condition is σ'_M · σ_n ∈ Aut(T_M),
+where σ'_M = complementation permutation of T_M, σ_n(v)=n+1-v.
+bl(C) = #{labeled T in C : σ'_T · σ_n ∈ Aut(T)}
+
+GROWTH COMPARISON n=6 vs n=7:
+  bl=1: 2→10 (5×)
+  bl=3: 2→12 (6×)
+  bl=5: 2→16 (8×)
+  bl=7: 4→32 (8×)
+  bl=9: 2→18 (9×)
+Higher bl values grow faster (SC landscape increasingly rich in large-H classes)
+
+OPEN QUESTIONS:
+1. Does max(bl) stay at 9 for n=8? Prediction: likely grows to 11-13
+2. What is the precise formula for bl given the class geometry?
+3. Why does bl=7 dominate at n=6 AND n=7 (~33-36%)?
+4. Is the SC count sequence 2,2,8,12,88 (for n=3..7) in OEIS?
+

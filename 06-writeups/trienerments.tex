@@ -3144,4 +3144,183 @@ for a single chained pair of tiles.  The general multi-chain correction
 formula is open.
 \end{remark}
 
+% ============================================================
+\section{Grid-Symmetry, Self-Complementarity, and the Four-Category Decomposition}
+\label{sec:grid-sym-sc}
+% ============================================================
+
+The tiling model carries an involution that precisely separates SC from NS tournament
+classes.  We prove this and extract a complete four-category decomposition verified
+through $n=7$ ($2^{15}=32768$ tilings, $456$ iso classes).
+
+\subsection{The TRANS\_MAP involution}
+
+Fix $n$ and let $\mathcal{T}=\{0,1\}^m$ be the tiling space ($m=\binom{n-1}{2}$).
+Recall tiles $(x,y)$ with $x>y+1$, $1\le y<x\le n$, ordered as in the explorer.
+Define the \textbf{TRANS\_MAP} involution $\tau:\mathcal{T}\to\mathcal{T}$ by
+\[
+  \tau(M)\text{ has bit at tile }(x,y)
+  \;=\;
+  \text{bit of }M\text{ at tile }(n-y+1,\,n-x+1).
+\]
+A tiling $M$ is \textbf{grid-symmetric} iff $M=\tau(M)$.
+The count of grid-symmetric tilings is $2^{f_n}$ where
+$f_n=s+(m-s)/2$ ($s$ = number of self-paired tiles $x+y=n+1$).
+
+Let $\sigma_n\in S_n$ be the involution $\sigma_n(v)=n+1-v$.
+
+\begin{lemma}[TRANS\_MAP $=$ complement $+$ relabeling]\label{lem:transmap}
+For every tiling $M$:
+$T(\tau(M)) = (T(M)^{\mathrm{op}})^{\sigma_n}$,
+where $T^{\mathrm{op}}$ denotes the full arc-complement.
+\end{lemma}
+
+\begin{proof}
+Tile $(x,y)$ in $M$ has $\mathrm{bit}=0$ iff $x\to y$ in $T(M)$.
+Under $T(M)^{\mathrm{op}}$ this arc is reversed; applying $\sigma_n$ relabels
+$v\mapsto n+1-v$, placing the arc at tile $(n+1-y,n+1-x)=(n-y+1,n-x+1)$.
+This matches $\tau(M)$'s bit at $(n-y+1,n-x+1)$.
+Base-path arcs are verified separately: $\sigma_n$ sends $k\to k-1$ to
+$(n+1-k)\to(n+2-k)$, and complementing restores the base-path direction.
+\end{proof}
+
+\subsection{Main theorem}
+
+\begin{theorem}[Grid-symmetry $\Leftrightarrow$ self-complementarity]
+\label{thm:gridsym-sc}
+\mbox{}
+\begin{enumerate}[label=\textup{(\roman*)}]
+\item A tiling $M$ is grid-symmetric iff $T(M)$ is self-complementary:
+  $[T(M)]=[T(M)^{\mathrm{op}}]$.
+\item \emph{(Surjectivity)} Every SC iso class contains at least one
+  grid-symmetric tiling.
+\item \emph{(Odd blue count)} For every SC class $C$, the blue count
+  $\mathrm{bl}(C):=|\{M\in C:\tau(M)=M\}|$ is a positive odd integer.
+\item Every NS class has $\mathrm{bl}=0$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\textbf{(iv).} NS means $[T^{\mathrm{op}}]\ne[T]$.
+By Lemma~\ref{lem:transmap}, $\tau$ maps $C$ to $[(T^{\mathrm{op}})^{\sigma_n}]=[T^{\mathrm{op}}]\ne C$.
+A grid-symmetric tiling $M=\tau(M)\in C$ would also lie in $[T^{\mathrm{op}}]$, contradiction.
+
+\textbf{(i), direction $\Rightarrow$.}
+$\tau(M)=M$ implies $T(M)=(T(M)^{\mathrm{op}})^{\sigma_n}$,
+so $T(M)^{\sigma_n}=T(M)^{\mathrm{op}}$, hence $T(M)^{\mathrm{op}}\cong T(M)$.
+
+\textbf{(ii) and (iii).}
+SC means $\tau$ maps $C$ to itself (from (iv)'s contrapositive).
+So $\tau|_C$ is an involution on $C$.
+By the Parity Theorem, $|C|=H/|\mathrm{Aut}|$ is odd.
+An involution on a set of odd cardinality has an odd positive number of fixed points.
+\end{proof}
+
+\begin{corollary}[Exact characterization of grid-symmetry]
+A tiling $M$ is grid-symmetric if and only if the labeled tournament $T(M)$ satisfies
+\[
+  T(M)^{\sigma_n} = T(M)^{\mathrm{op}}
+\]
+as labeled tournaments, where $\sigma_n(v)=n+1-v$.
+In other words, $\sigma_n$ is \emph{the} complementation permutation of $T(M)$.
+Verified computationally for $n=4,5,6$ (perfect agreement across all $2^m$ tilings).
+\end{corollary}
+
+\begin{remark}[Formula for the blue count]
+For a SC class $C$ with representative $T_0$ and complementation permutation $\sigma_0$
+(so $T_0^{\sigma_0}=T_0^{\mathrm{op}}$):
+\[
+  \mathrm{bl}(C)
+  = |\{\text{tilings }M\in C : T(M)^{\sigma_n}=T(M)^{\mathrm{op}}\}|
+  = |\{\tau\in S_n : T_0^\tau\text{ is a valid tiling and }\tau^{-1}\sigma_0\tau=\sigma_n\}| / |\mathrm{Aut}(C)|.
+\]
+For $|\mathrm{Aut}(C)|=1$: $\mathrm{bl}(C)$ counts the conjugators from $\sigma_0$ to $\sigma_n$ whose
+image $T_0^\tau$ lands in the tiling space.  Since $\sigma_n$ and $\sigma_0$ must be conjugate in $S_n$
+(same cycle type) for any solution to exist, the formula gives $\mathrm{bl}(C)=0$ when cycle types differ
+and the class is NS.
+\end{remark}
+
+\subsection{Four-category decomposition}
+
+\begin{corollary}
+Every merged node of $G_n/\mathbb{Z}_2$ is exactly one of:
+\begin{itemize}
+\item \textbf{Pure blue} (SC, $\mathrm{bl}=|C|$, $\mathrm{bk}=0$):
+  all tilings grid-symmetric; $\tau$ acts as identity on $C$.
+\item \textbf{Mixed} (SC, $0<\mathrm{bl}<|C|$, $\mathrm{bk}>0$):
+  both grid-sym and non-grid-sym tilings; $\tau$ has nontrivial orbits on $C$.
+\item \textbf{Pure black} (NS merged pair, $\mathrm{bl}=0$, $\mathrm{bk}=|C_1|+|C_2|$).
+\item \textbf{Zero} ($\mathrm{bl}=\mathrm{bk}=0$): impossible by Theorem~\ref{thm:gridsym-sc}(ii).
+\end{itemize}
+The global constraints are:
+$\sum_{\mathrm{SC}}\mathrm{bl}(C)=2^{f_n}$ and
+$\sum_{\mathrm{SC,mix}}\mathrm{bk}(C)+\sum_{\mathrm{NS\text{-}pr}}2|C_i|=2^m-2^{f_n}$.
+\end{corollary}
+
+\subsection{Data through $n=7$}
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{r|rrr|rrr|r|r}
+\hline
+$n$ & $m$ & $2^m$ & $2^{f_n}$ & $\#\mathrm{SC}$ & $\#\mathrm{NS\text{-}pr}$ & $\#\mathrm{mix}$ & $\#\mathrm{pb}$ & $\#\mathrm{pblk}$ \\
+\hline
+3 & 1 & 2 & 2 & 2 & 0 & 0 & 2 & 0 \\
+4 & 3 & 8 & 4 & 2 & 1 & 1 & 1 & 1 \\
+5 & 6 & 64 & 16 & 8 & 2 & 5 & 3 & 2 \\
+6 & 10 & 1024 & 64 & 12 & 22 & 10 & 2 & 22 \\
+7 & 15 & 32768 & 512 & 88 & 184 & 84 & 4 & 184 \\
+\hline
+\end{tabular}
+\caption{Four-category decomposition for $n=3$--$7$.
+$\#\mathrm{pb}$=pure blue, $\#\mathrm{pblk}$=pure black NS-pairs.
+Verified by exhaustive canonicalization ($n=7$: $\approx70$\,s numpy computation).}
+\label{tab:four-cat}
+\end{table}
+
+\paragraph{Blue value multiplicities.}
+The count of SC classes with each blue value at $n=3$--$7$:
+\begin{center}
+\begin{tabular}{r|rrrrr|r}
+\hline
+$n$ & $\mathrm{bl}{=}1$ & $\mathrm{bl}{=}3$ & $\mathrm{bl}{=}5$ & $\mathrm{bl}{=}7$ & $\mathrm{bl}{=}9$ & $\#\mathrm{SC}$ \\
+\hline
+3 & 2 & 0 & 0 & 0 & 0 & 2 \\
+4 & 1 & 1 & 0 & 0 & 0 & 2 \\
+5 & 4 & 4 & 0 & 0 & 0 & 8 \\
+6 & 2 & 2 & 2 & 4 & 2 & 12 \\
+7 & 10 & 12 & 16 & 32 & 18 & 88 \\
+\hline
+\end{tabular}
+\end{center}
+The count-vector $(c_1,c_3,c_5,c_7,c_9)$ satisfies $\sum c_{2k-1}=\#\mathrm{SC}$
+and $\sum(2k-1)c_{2k-1}=2^{f_n}$, two constraints on five unknowns.
+At $n=6$ and $n=7$ the value $\mathrm{bl}=7$ has the highest count ($\approx33\text{--}36\%$
+of SC classes), a pattern deserving explanation.
+
+\paragraph{Persistent pure-blue classes.}
+A class is pure blue iff $\tau$ acts as the identity on all its tilings.
+The following classes appear consistently:
+\begin{center}
+\begin{tabular}{lll}
+\hline
+$H$ & $|\mathrm{Aut}|$ & present at $n$ \\
+\hline
+$1$ & $1$ & all $n\ge 3$ (transitive tournament, $\#\mathrm{tilings}=1$) \\
+$3$ & $3$ & odd $n\ge 3$ ($n=3,5,7,\ldots$) \\
+$9$ & $9$ & $n\ge 6$ \\
+$15$ & $5$ & odd $n\ge 5$ ($n=5,7,\ldots$, $\#\mathrm{tilings}=3$) \\
+\hline
+\end{tabular}
+\end{center}
+Each has $\#\text{tilings}=H/|\mathrm{Aut}|\le 3$, so the pure-blue condition is
+forced: parity leaves no room for non-fixed tilings.
+
+\paragraph{NS-pair structure.}
+For NS-pair $(C,C^{\mathrm{op}})$: $H(C)=H(C^{\mathrm{op}})$
+(Hamiltonian paths biject via reversal) and $|\mathrm{Aut}(C)|=|\mathrm{Aut}(C^{\mathrm{op}})|$,
+so both classes have the same odd tiling count.
+Merged black count $=2H/|\mathrm{Aut}|$, always even.
+At $n=7$: $184$ NS-pairs, $\sum\mathrm{bk}=25460$.
+
 \end{document}

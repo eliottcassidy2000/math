@@ -1,0 +1,317 @@
+=== DEEP PATTERN ANALYSIS ===
+
+PATTERN 1: The (H,|Aut|) signature determines (black,blue) UNIVERSALLY
+  Same (H,|Aut|) across different n gives same (bk,bl) pair.
+
+  (H, |Aut|) -> {(black, blue)} pairs seen across n=3..6:
+    (   1,  1): nt=  1, (bk,bl)=(0, 1) [UNIVERSAL ✓]
+    (   3,  3): nt=  1, (bk,bl)=(0, 1) [UNIVERSAL ✓]
+    (   5,  1): nt=  5, (bk,bl)=(2, 3) [UNIVERSAL ✓]
+    (   9,  1): nt=  9, (bk,bl)=[(6, 3), (8, 1)] [MULTIPLE! [(6, 3), (8, 1)]]
+    (   9,  9): nt=  1, (bk,bl)=(0, 1) [UNIVERSAL ✓]
+    (  11,  1): nt= 11, (bk,bl)=(8, 3) [UNIVERSAL ✓]
+    (  13,  1): nt= 13, (bk,bl)=(10, 3) [UNIVERSAL ✓]
+    (  15,  3): nt=  5, (bk,bl)=(4, 1) [UNIVERSAL ✓]
+    (  15,  5): nt=  3, (bk,bl)=(0, 3) [UNIVERSAL ✓]
+    (  17,  1): nt= 17, (bk,bl)=(12, 5) [UNIVERSAL ✓]
+    (  29,  1): nt= 29, (bk,bl)=(22, 7) [UNIVERSAL ✓]
+    (  33,  1): nt= 33, (bk,bl)=(26, 7) [UNIVERSAL ✓]
+    (  37,  1): nt= 37, (bk,bl)=(30, 7) [UNIVERSAL ✓]
+    (  41,  1): nt= 41, (bk,bl)=(32, 9) [UNIVERSAL ✓]
+    (  45,  3): nt= 15, (bk,bl)=[(6, 9), (12, 3)] [MULTIPLE! [(6, 9), (12, 3)]]
+
+PATTERN 2: The H/|Aut| = #tilings decomposition as odd=even+odd
+  For each class: #tilings = black + blue, where black=even, blue=odd.
+  The specific (bk,bl) split is determined by the geometric class structure.
+
+  (H, |Aut|) -> #tilings -> blue -> black -> bk/bl
+    (   1,1): #t=   1, bk=   0, bl= 1, bk/bl=0.0
+    (   3,3): #t=   1, bk=   0, bl= 1, bk/bl=0.0
+    (   5,1): #t=   5, bk=   2, bl= 3, bk/bl=0.667
+    (   9,1): #t=   9, bk=   6, bl= 3, bk/bl=2.0
+    (   9,1): #t=   9, bk=   8, bl= 1, bk/bl=8.0
+    (   9,9): #t=   1, bk=   0, bl= 1, bk/bl=0.0
+    (  11,1): #t=  11, bk=   8, bl= 3, bk/bl=2.667
+    (  13,1): #t=  13, bk=  10, bl= 3, bk/bl=3.333
+    (  15,3): #t=   5, bk=   4, bl= 1, bk/bl=4.0
+    (  15,5): #t=   3, bk=   0, bl= 3, bk/bl=0.0
+    (  17,1): #t=  17, bk=  12, bl= 5, bk/bl=2.4
+    (  29,1): #t=  29, bk=  22, bl= 7, bk/bl=3.143
+    (  33,1): #t=  33, bk=  26, bl= 7, bk/bl=3.714
+    (  37,1): #t=  37, bk=  30, bl= 7, bk/bl=4.286
+    (  41,1): #t=  41, bk=  32, bl= 9, bk/bl=3.556
+    (  45,3): #t=  15, bk=   6, bl= 9, bk/bl=0.667
+    (  45,3): #t=  15, bk=  12, bl= 3, bk/bl=4.0
+
+PATTERN 3: Self-loop classes
+  A class has a self-loop (T and T_flip both in same class) when:
+  The tile complement of a grid-sym tiling is isomorphic to the tiling.
+
+  n=3: no self-loops
+  n=4: ci2(H=5,|Aut|=1) has self-loop. blue=3: 1 self-loop uses 2 tilings, 1 cross-edge to H=1.
+  n=5: NO self-loops! All 8 blue pairs are cross-edges.
+  n=6: ci46(H=41,|Aut|=1) and ci54(H=45,|Aut|=3) have self-loops.
+
+  Self-loop structure at n=4 [H=5, blue=3]:
+    2 tilings pair within class (self-loop) + 1 tiling cross-links to H=1 class
+    => blue=2(from self-loop pair)+1(from cross-edge) = 3 ✓
+
+  Self-loop structure at n=6 [H=41, blue=9]:
+    1 self-loop pair = 2 tilings within class
+    7 tilings cross-link to other classes
+    => blue = 2+7 = 9 ✓
+
+PATTERN 4: Pure blue condition analysis
+  Pure blue iff ALL tilings are grid-symmetric (black=0).
+
+  Signatures (H,|Aut|) of pure blue classes:
+    n=3: [(1, 1), (3, 3)]
+    n=4: [(1, 1)]
+    n=5: [(1, 1), (3, 3), (15, 5)]
+    n=6: [(1, 1), (9, 9)]
+
+  KEY PATTERNS:
+  a) H=1, |Aut|=1 is ALWAYS pure blue (appears at all n)
+     The transitive tournament: 1 tiling, all arcs forward, trivially grid-sym.
+
+  b) H=3, |Aut|=3 is pure blue at n=3,5 but NOT at n=6 (becomes NS).
+     At n=6: H=3,|Aut|=3 classes are NS (paired with complement).
+
+  c) Pure blue with #t>1: requires HIGH |Aut|.
+     n=5: ci11(H=15,|Aut|=5,#t=3) — all 3 tilings grid-sym
+     n=6: ci23(H=9,|Aut|=9,#t=1) — only 1 tiling (trivially grid-sym)
+
+  d) FORMULA for pure blue: all tilings grid-sym iff
+     the SC class's automorphism group contains the transpose σ as a subgroup action.
+     Large |Aut| → more likely to force all tilings to be symmetric.
+
+PATTERN 5: Mixed pair pairing with the blue graph topology
+
+  n=5 blue ring connections and (bk,bl) values:
+  Pendant → Ring → Ring connections:
+  ci0(0,1) → ci6(6,3): pure_blue → mixed_ring
+  ci3(0,1) → ci10(10,3): pure_blue → mixed_ring
+  ci4(8,1) → ci8(8,3): mixed_pendant → mixed_ring
+  ci9(4,1) → ci11(0,3): mixed_pendant → pure_blue_ring
+
+  Ring edges:
+  ci6(6,3) — ci8(8,3): adjacent ring nodes
+  ci8(8,3) — ci11(0,3): ring node — pure_blue_ring
+  ci11(0,3) — ci10(10,3): pure_blue_ring — mixed_ring
+  ci10(10,3) — ci6(6,3): closing the square
+
+  OBSERVATION: The pure blue RING NODE (ci11, black=0) is between
+  the two highest-black mixed ring nodes (ci8 with black=8 and ci10 with black=10).
+  The zero-black node separates the two heaviest black nodes in the ring!
+
+PATTERN 6: Distributional constraints — the overlapping system
+
+At n=5, total blue=16 among 8 SC classes:
+  CONSTRAINT A: Blue values are odd
+  CONSTRAINT B: Sum = 16 = 2^4
+  CONSTRAINT C: Blue graph is C4-corona (degrees [1,1,1,1,3,3,3,3])
+  CONSTRAINT D: 3 pure-blue classes exist (ci0,ci3,ci11) with blue=1,1,3
+    From D: remaining sum = 16-5=11 among 5 mixed classes
+    From C: 3 ring nodes have blue=3, 2 pendant nodes have blue=1
+    (ci4 is pendant with blue=1, ci9 is pendant with blue=1)
+    From D+C: 5 mixed classes = {3 ring (blue=3), 2 pendant (blue=1)}
+    This uniquely determines the mixed blue distribution: {1,1,3,3,3}
+
+At n=5, total black=48 among 10 merged nodes:
+  CONSTRAINT E: Black values are even
+  CONSTRAINT F: Sum = 48
+  CONSTRAINT G: 3 SC classes are pure-blue (black=0)
+  CONSTRAINT H: NS pair blacks = 2×#tilings(C) = 2×1=2, 2×5=10
+    From G+H: remaining = 48-0-0-0-2-10=36 among 5 mixed classes
+  CONSTRAINT I: For each mixed class C: black = #tilings(C) - blue(C)
+    ci4: #t=9, bl=1 → bk=8
+    ci6: #t=9, bl=3 → bk=6
+    ci8: #t=11, bl=3 → bk=8
+    ci9: #t=5, bl=1 → bk=4
+    ci10: #t=13, bl=3 → bk=10
+    Sum = 8+6+8+4+10 = 36 ✓
+
+The constraints A-I together UNIQUELY determine all 10 black values and 8 blue values.
+
+PATTERN 7: The ratio bk/(bk+bl) = black_fraction per class
+
+  Pure blue: fraction = 0/nt = 0
+  Mixed: fraction = bk/nt = (nt-bl)/nt = 1 - bl/nt
+
+  At n=5:
+    H=5: black_fraction = 4/5 = 0.8000
+    H=9: black_fraction = 8/9 = 0.8889
+    H=9: black_fraction = 6/9 = 0.6667
+    H=11: black_fraction = 8/11 = 0.7273
+    H=13: black_fraction = 10/13 = 0.7692
+
+  Pattern: for |Aut|=1 classes with blue=3, black_fraction = (H-3)/H → 1 as H→∞
+  For |Aut|=1 classes with blue=1, black_fraction = (H-1)/H → 1 as H→∞
+
+  At n=6:
+    H=5,bl=3: black_fraction = 2/5 = 0.4000
+    H=15,bl=9: black_fraction = 6/15 = 0.4000
+    H=15,bl=3: black_fraction = 12/15 = 0.8000
+    H=17,bl=5: black_fraction = 12/17 = 0.7059
+    H=29,bl=7: black_fraction = 22/29 = 0.7586
+    H=33,bl=7: black_fraction = 26/33 = 0.7879
+    H=37,bl=7: black_fraction = 30/37 = 0.8108
+    H=41,bl=9: black_fraction = 32/41 = 0.7805
+
+PATTERN 8: The blue values at n=6 are {1,1,3,3,5,5,7,7,7,7,9,9}
+  = 2×{1} + 2×{3} + 2×{5} + 4×{7} + 2×{9}
+  Each blue value k appears an EVEN number of times except...
+  Counts: {'1': 2, '3': 2, '5': 2, '7': 4, '9': 2}
+  All even! → Can this always be split into equal pairs?
+  YES because: classes come in SC-pairs related by other symmetries,
+  and within same (H,|Aut|) class, two classes always have equal blue counts.
+
+  At n=5: blue values = {1,1,1,1,3,3,3,3}
+  = 4×{1} + 4×{3} — both even count!
+
+  CONJECTURE: The multiplicity of each blue value is always even at n≥5.
+  (Because classes come in pairs via some pairing within the SC tiling structure.)
+=== SYNTHESIS: CONSTRAINTS AND EVOLUTION ===
+
+THE UNIVERSAL CONSTRAINTS THAT DETERMINE ALL VALUES:
+
+CONSTRAINT HIERARCHY (each constraint prunes the solution space):
+
+LEVEL 1 — Global (always known):
+  total_tilings = 2^m
+  total_blue = 2^{free_bits} (where free_bits = self_paired + non_self_pairs)
+  total_black = 2^m - 2^{free_bits}
+  All blue values are ODD, all black values are EVEN.
+
+LEVEL 2 — Category split (from SC/NS classification):
+  NS pairs have blue=0 (pure black only)
+  SC classes have blue>0 (pure blue or mixed)
+  NS pair black = 2×#tilings(C) = 2×H(C)/|Aut(C)| (determined by iso class theory)
+  SC class black = #tilings(C) - blue(C) = H/|Aut| - blue
+
+LEVEL 3 — Pure vs mixed (from blue graph topology):
+  SC class is pure blue iff all its tilings are grid-symmetric (black=0)
+  This happens when: #t=1 OR |Aut| contains the transpose symmetry fully
+
+LEVEL 4 — Individual class blue counts (from blue graph degree sequence):
+  blue(C) = degree of C in the blue flip-pair multigraph
+  (each grid-sym tiling contributes exactly 1 to the degree)
+
+EVOLUTION TABLE: How each quantity changes with n
+
+  n | free_bits | blue_total | SC | NS-pairs | pure_B_sum | mixed_sum_B | mixed_sum_bk | pure_bk_sum
+----------------------------------------------------------------------------------------------------
+  3 |         1 |          2 |  2 |        0 |          2 |           0 |            0 |           0
+  4 |         2 |          4 |  2 |        1 |          1 |           3 |            2 |           2
+  5 |         4 |         16 |  8 |        2 |          5 |          11 |           36 |          12
+  6 |         6 |         64 | 12 |       22 |          2 |          62 |          176 |         784
+
+KEY OBSERVATION: pure_blue_sum grows as 2,1,5,2...
+  These are FIBONACCI NUMBERS! F_3=2, F_1=1, F_5=5, F_3=2.
+  But: 2,1,5,2 is not monotone. Let me check:
+  n=3: pure_blue_sum=2 = F_3 (2nd Fibonacci after 1,1)
+  n=4: pure_blue_sum=1 = F_1
+  n=5: pure_blue_sum=5 = F_5
+  n=6: pure_blue_sum=2 = F_3
+  Hmm, these are specific Fibonacci values but the INDEX is not n.
+
+THE MIXED PAIR DICTIONARY (universal (H,|Aut|) → (bk,bl)):
+
+  (H, |Aut|) | #t | (bk, bl) | bk/nt  | bl/nt  | pattern
+----------------------------------------------------------------------
+  (   1,  1) |   1 | (  0, 1) | 0.0000 | 1.0000 | pure_blue(#t=1)
+  (   3,  3) |   1 | (  0, 1) | 0.0000 | 1.0000 | pure_blue(#t=1)
+  (   5,  1) |   5 | (  2, 3) | 0.4000 | 0.6000 | ring: bl=3, bk=nt-3=2
+  (   9,  9) |   1 | (  0, 1) | 0.0000 | 1.0000 | pure_blue(#t=1)
+  (  11,  1) |  11 | (  8, 3) | 0.7273 | 0.2727 | ring: bl=3, bk=nt-3=8
+  (  13,  1) |  13 | ( 10, 3) | 0.7692 | 0.2308 | ring: bl=3, bk=nt-3=10
+  (  15,  3) |   5 | (  4, 1) | 0.8000 | 0.2000 | pendant: bl=1, bk=nt-1=4
+  (  15,  5) |   3 | (  0, 3) | 0.0000 | 1.0000 | ring: bl=3, bk=nt-3=0
+  (  17,  1) |  17 | ( 12, 5) | 0.7059 | 0.2941 | ring5: bl=5, bk=nt-5=12
+  (  29,  1) |  29 | ( 22, 7) | 0.7586 | 0.2414 | ring7: bl=7, bk=nt-7=22
+  (  33,  1) |  33 | ( 26, 7) | 0.7879 | 0.2121 | ring7: bl=7, bk=nt-7=26
+  (  37,  1) |  37 | ( 30, 7) | 0.8108 | 0.1892 | ring7: bl=7, bk=nt-7=30
+  (  41,  1) |  41 | ( 32, 9) | 0.7805 | 0.2195 | ring9: bl=9, bk=nt-9=32
+
+PATTERN: For |Aut|=1 classes with specific blue counts:
+  bl=1: (bk,bl) = (H-1, 1) → bk = H-1, always has bk+1 = H
+  bl=3: (bk,bl) = (H-3, 3) → bk = H-3
+  bl=5: (bk,bl) = (H-5, 5) → bk = H-5
+  bl=7: (bk,bl) = (H-7, 7) → bk = H-7
+  bl=9: (bk,bl) = (H-9, 9) → bk = H-9
+
+  FORMULA: For |Aut|=1 classes, (bk, bl) = (H-k, k) where k=blue_count
+  This just says black = #tilings - blue = H - blue. (trivially true!)
+  The NON-TRIVIAL part: which value k does a given class get?
+  k is determined by the class's position in the blue graph.
+
+WHICH H VALUES GET WHICH BLUE COUNTS:
+
+  bl=1 (pendants in blue graph): H=9(n=5), H=15(n=5,|Aut|=3)
+  bl=3 (ring/degree-3 in blue): H=5, H=9(n=5), H=11, H=13, H=33, H=45(n=6)
+  bl=5 (higher degree): H=17(n=6)
+  bl=7: H=29(n=6), H=33(n=6), H=37(n=6)
+  bl=9: H=41(n=6), H=45(n=6,|Aut|=3)
+
+  PATTERN: blue count increases with n (the maximum blue grows each n).
+  At n=5: max blue = 3. At n=6: max blue = 9.
+  The blue counts form ODD NUMBERS: 1, 3, 5, 7, 9, ...
+  The distribution at each n seems to be: few classes with high blue,
+  many with low blue. This mirrors the H distribution (more low-H classes).
+
+THE NON-UNIVERSAL CASES (H,|Aut|) WITH MULTIPLE (bk,bl):
+
+  (9,1): appears as BOTH (6,3) AND (8,1) at n=5.
+    These are two DISTINCT iso classes with H=9, |Aut|=1, but different
+    grid-sym structure: one has 3 grid-sym tilings, the other has 1.
+    At n=5, both are SC. The blue graph topology distinguishes them:
+    (6,3) = ring node (more connected), (8,1) = pendant (less connected).
+
+  (45,3): appears as BOTH (6,9) AND (12,3) at n=6.
+    Two SC classes with H=45, |Aut|=3, #t=15, but different grid-sym.
+    (6,9): 9 grid-sym tilings, HAS a self-loop in blue graph.
+    (12,3): 3 grid-sym tilings, no self-loop.
+
+  RULE: When two SC classes have same (H,|Aut|), they get DIFFERENT blue counts
+  iff they have different geometric structure in the tiling model.
+  The blue count distinguishes them: higher blue = more symmetric class.
+
+THE SELF-LOOP CRITERION:
+
+  A class C has a blue self-loop iff: ∃ T∈C, T grid-sym AND T_flip∈C.
+  = ∃ two different tilings T,T_flip in C, both grid-sym, T_flip=tile-complement(T).
+
+  n=4: H=5, blue=3 → 1 self-loop (2 grid-sym tilings within class pair up)
+  n=5: NO self-loops
+  n=6: H=41 (blue=9) → 1 self-loop, H=45,|Aut|=3 (blue=9) → 1 self-loop
+
+  OBSERVATION: Self-loops appear when blue≥3 AND the class contains
+  at least one grid-sym pair (T,T_flip) mapping WITHIN the class.
+  At n=5: even though 4 classes have blue=3, NONE have self-loops.
+  This is a constraint on the specific tiling geometry, not just the blue count.
+
+THE INTERPLAY OF CONSTRAINTS — UNIQUENESS:
+
+  Given the constraints, can we PREDICT the four-category decomposition?
+
+  KNOWN from theory alone:
+  1. total_blue = 2^{free_bits}, total_black = 2^m - 2^{free_bits}
+  2. NS pairs have black = 2×H/|Aut| (from iso class spectrum)
+  3. H=1,|Aut|=1 class always has (bk,bl)=(0,1) — trivially pure blue
+
+  REQUIRES computation:
+  4. Which other SC classes are pure blue (which have all tilings grid-sym)
+  5. The blue graph topology (C4-corona at n=5, more complex at n=6)
+  6. The blue count per class = position in blue graph
+
+  ONCE KNOWN:
+  7. Black per mixed class = #tilings - blue = H/|Aut| - blue
+  8. Pure blue sum = Σ_pureBclass blue = sum of small values from highly symmetric classes
+
+  The overlapping constraints narrow the solution space:
+  • total_blue must be decomposed into #SC odd parts summing to it
+  • #SC odd parts = #SC classes (known)
+  • These parts must form a valid degree sequence for the blue graph
+  • The blue graph must be connected (observed)
+  • The black counterparts = #t - blue must be non-negative even
+  These together with the H values of each class pin down all (bk,bl) pairs.
