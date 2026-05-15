@@ -1966,6 +1966,25 @@ vertices needed for Ω₃ chains.
 
 ## 2-Adic Column Family Investigations (oracle-2026-05-15)
 
+### INV-187: SC Blowup — $\Omega(T_{\mathrm{SC}})$ Structure and Cross-Lane Cycles
+**Source:** oracle-2026-05-15-S2 (sc-blowup-and-twin-gaining.md)
+**Status:** OPEN. Universal Score Theorem proved. H concentration data at n=3,4,5.
+**Key results (verified exhaustively n=3,4,5):**
+- Universal Score: all v₀ have out-degree n, all v₁ have out-degree n-1 (PROVED).
+- H_SC varies only 4.2% at n=5 (14937–15565). Minimized by transitive, maximized by regular.
+- H_SC = H_Lex iff T is regular (at n=3,5; first departure at Paley(7): H_SC=24453597 ≠ H_Lex=24589929).
+- SC preservation: T_SC is SC iff T is SC (PROVED via anti-automorphism τ(v_i) = σ(v)_{1-i}).
+- Kronecker: A(T_SC) = A(T)⊗I₂ + A(T)ᵀ⊗Φ + I_n⊗e₀₁.
+- Eigenvalue splitting (circulant): λ_{k,0}(T_SC) = 2Re(λ_k(T))+1, λ_{k,1} = 2i·Im(λ_k(T))−1.
+**Open questions:**
+1. What is Ω(T_SC) in terms of Ω(T)? Same-lane cycles = copies of Ω(T); cross-lane cycles = ?
+2. Is there a formula H(T_SC) = f(I(Ω(T), x)) for some x or some operation on the polynomial?
+3. Why does T_Lex ≅ T_SC for regular n=3,5 but NOT for Paley(7)? What breaks at n=7?
+4. Tower: H(Trans_n^SC) for n=3..?: 1, 41, 530293, ... No recurrence found. OEIS?
+5. HYP-SC-1 (H monotonicity): H(T₁) ≤ H(T₂) ⟹ H_SC(T₁) ≤ H_SC(T₂)? (Checked n=3,4; needs n=5 verify.)
+**Scripts:** blowup_study3.py, results: blowup_study.out
+**Next steps:** (1) Compute α₁(T_SC) for C3 and Trans-3. (2) Find Ω(T_SC) for n=3 cases by direct cycle enumeration. (3) Look for H_SC formula via independence polynomial at different evaluation point.
+
 ### INV-184: Tournament Blowup $T[K_2]$ — H Formula and Family Inheritance
 **Source:** oracle-2026-05-15 (2-adic column family analysis; see `07-reflections/adic-column-families.md`)
 **Status:** OPEN. Computationally accessible immediately.

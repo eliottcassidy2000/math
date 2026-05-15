@@ -904,6 +904,29 @@ H-maximizing cyclic interval tournament C_n:
 
 ---
 
+## OPEN-Q-046 🟡 The SC Blowup: $\Omega(T_{\mathrm{SC}})$ and H Formula
+
+The **SC blowup** $T_{\mathrm{SC}}$ (arc $u_r \to v_s$ iff $u \to v$ in $T$ and $r=s$, OR $v \to u$
+and $r \neq s$) satisfies the **Universal Score Theorem**: every $v_0$ has out-degree $n$, every
+$v_1$ has out-degree $n-1$, regardless of $T$. See `07-reflections/sc-blowup-and-twin-gaining.md`.
+
+The Kronecker formula $A(T_{\mathrm{SC}}) = A(T) \otimes I_2 + A(T)^\top \otimes \Phi + I_n \otimes e_{01}$
+shows $T_{\mathrm{SC}}$ encodes BOTH $T$ and $T^{\mathrm{op}}$ simultaneously.
+
+**Open (🟡):** What is $\Omega(T_{\mathrm{SC}})$ in terms of $\Omega(T)$? Is there a formula
+$$H(T_{\mathrm{SC}}) = I(\Omega(T_{\mathrm{SC}}), 2) = f(I(\Omega(T), x))$$
+for some operation on the independence polynomial?
+
+**Candidate:** $H(T_{\mathrm{SC}}) \approx I(\Omega(T), 2)^2 / C(n)$ or involves $I(\Omega(T), 2) \cdot I(\Omega(T^{\mathrm{op}}), 2)$ with correction. Currently ruled out as single-variable formula (H_SC is NOT a function of H(T) alone).
+
+**Key data:** At $n=5$, $H_{\mathrm{SC}}$ varies only 4.2% across all 12 iso classes ($14937$–$15565$).
+At $n=3$: $H_{\mathrm{SC}} \in \{41, 45\}$ for the two classes. $H_{\mathrm{SC}}(\mathrm{Trans}) = 41$,
+$H_{\mathrm{SC}}(C_3) = 45$.
+
+**Source:** oracle-2026-05-15-S2, `05-knowledge/results/blowup_study.out`
+
+---
+
 ## OPEN-Q-045 🟢 H Under Tournament Blowup (Column Row Step)
 
 The tournament **blowup** $T[K_2]$ replaces each vertex $v$ with a directed pair

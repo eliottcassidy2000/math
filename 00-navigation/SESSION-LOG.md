@@ -2,6 +2,28 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-15-S2 — 2026-05-15
+
+**Summary:** SC blowup deep dive: universal score theorem, Kronecker structure, eigenvalue splitting, H concentration. Two orthogonal tournament recursions fully characterized.
+
+**PROVED — Universal Score Theorem:** For ANY tournament T on n vertices, the SC blowup T_SC has every v₀ with out-degree n and every v₁ with out-degree n−1. PROOF: d⁺(v₀) = 1 + d⁺(v) + d⁻(v) = n (internal + lane + cross). Independent of T. Score sequence of T_SC is ALWAYS (n-1,...,n-1,n,...,n) — erases all score variation.
+
+**KEY STRUCTURES:**
+- Kronecker: A(T_SC) = A(T)⊗I₂ + A(T)ᵀ⊗Φ + I_n⊗e₀₁. T_SC encodes T AND T^op simultaneously.
+- Eigenvalue splitting (circulants): λ_{k,0}(T_SC) = 2Re(λ_k)+1, λ_{k,1} = 2i·Im(λ_k)−1. SC blowup decouples real/imaginary parts.
+- SC preservation: T_SC is SC iff T is SC (anti-automorphism τ(v_i)=σ(v)_{1-i}).
+
+**DATA (exhaustive n=3,4,5):**
+- H_SC ≥ H_Lex always. Equal iff T regular. (Paley(7): H_SC=24453597 ≠ H_Lex=24589929)
+- H_SC varies only 4.2% at n=5 (14937–15565). H_Lex varies 10000×.
+- Tower C3: 3→45→531141. Trans-3: 1→41→530293. No clean recurrence.
+- Coarse paths in T_SC: genuinely emergent, none match HPs of T or T^op.
+
+**Two recursions:** (1) n+1 lens: vertex insertion (diagonal in 2-adic grid). (2) n×2 lens: SC blowup (column row step). Together generate the full 2D 2-adic tournament grid.
+
+**Files:** 07-reflections/sc-blowup-and-twin-gaining.md, INV-187, OPEN-Q-046, T269, T270.
+**Open:** Ω(T_SC) formula, H_SC formula via independence polynomial, why T_Lex≅T_SC for n=3,5 regular but not n=7.
+
 ## oracle-2026-05-15-S1 — 2026-05-15
 
 **Summary:** 2-adic column family analysis. Connected the 2-adic grid $n = 2^r(2k-1)$ to the tiling model, Mode B recursion, tournament blowup, and HYP-217.
