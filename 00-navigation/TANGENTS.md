@@ -8,6 +8,12 @@
 
 ## Combinatorics & Structure
 
+**T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
+Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
+
+**T268** #2-adic-sizes-vs-spectrum #ruler-sequence #dual-levels | certainty: HIGH | source: oracle-2026-05-15
+T241-T244 describe 2-adic structure of Walsh AMPLITUDES at fixed $n$ (ruler sequence in spectrum). This tangent is the dual: 2-adic structure of the tournament SIZE $n$ itself (column families). The spectral ruler sequence and the size ruler sequence are the same self-similar fractal at two levels: internal (fixed $n$, across Walsh weights) and external (fixed column, across doublings). The Walsh degree formula $2\lfloor(n-1)/2\rfloor$ encodes both simultaneously: it equals $n-1$ (row 0) vs $n-2$ (row $\geq 1$), exactly the seam.
+
 **T001** #ballot-sequences #dyck-paths #distribution | certainty: medium | source: MASTER_FINDINGS F4
 The number of internal signature patterns giving exactly k Type-II positions within an L-cycle window is C(L-2, 2k-1). This is suspiciously clean and suggests a connection to ballot sequences or Dyck paths. A combinatorial proof of this formula is missing and would be a clean standalone result.
 

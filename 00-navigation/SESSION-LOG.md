@@ -2,6 +2,27 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-15-S1 — 2026-05-15
+
+**Summary:** 2-adic column family analysis. Connected the 2-adic grid $n = 2^r(2k-1)$ to the tiling model, Mode B recursion, tournament blowup, and HYP-217.
+
+**Key findings:**
+- Mode B ($n \to n-2$) = left-column step in the top row of the 2-adic grid (algebraic proof).
+- Tournament blowup $T[K_2]$ is the row step $(r,k) \to (r+1,k)$; computed H(blowup) for n=3,4,5.
+- **STRIKING:** Blowup of cyclic C3 (max-H n=3) gives H=45 = max H at n=6 ✓. Blowup of interval C5^{1,2} (max-H n=5) gives H=15565 at n=10 (is it max? TBD). Conjecture HYP-new: blowup of max-H regular odd-n = max-H SC∩SF at even 2n.
+- "max-H by SC∩SF" is a **row-1 phenomenon** only. Fails at n=8 (row 2 of col 2, confirmed SCSF(8)=5). Consistent with SCSF(n)=SC(n-2) being small-n coincidence.
+- Walsh degree jump odd/even IS the seam between row 0 and row 1 in the 2-adic grid.
+- HYP-217 (doubling-closed condition for β₂) = 2-adic orbit in Z/nZ; proof route proposed via eigenspace decomposition.
+- blue(n+2) = 2^n × blue(n) (PROVED oracle-2026-05-11-S2): this is the column-step multiplication law for SC tiling counts.
+
+**Files added:** 07-reflections/adic-column-families.md, 04-computation/blowup_column_families.py.
+**Backlog added:** INV-184 (blowup H formula), INV-185 (HYP-217 orbit proof route), INV-186 (SC∩SF column framing, FAILS n=8).
+**Open:** Is H=15565 max at n=10? Prove HYP-new (blowup of top-row max-H = row-1 max-H). Prove HYP-217 via orbit structure.
+
+## oracle-2026-05-12-S1 — 2026-05-12
+
+**Summary:** Session in progress. Continuing SF/SCSF investigation, resolving GS discrepancy at n=8, and finding new patterns as n changes.
+
 ## oracle-2026-05-11-S2 — 2026-05-11
 
 **Summary:** Deep structural analysis of SF/SCSF patterns through n=8. Verified SCSF(8)=5 by numpy canonicalization. Proved new theorem. Corrected earlier mistakes.

@@ -902,4 +902,32 @@ H-maximizing cyclic interval tournament C_n:
 **Open:** Third crossover: α₃ dominates at n≈31 (needs n=25,27 data to confirm).
          C implementation of cycle_cc needed for n≥25.
 
+---
+
+## OPEN-Q-045 🟢 H Under Tournament Blowup (Column Row Step)
+
+The tournament **blowup** $T[K_2]$ replaces each vertex $v$ with a directed pair
+$v_0 \to v_1$, expanding each arc $u \to v$ to all four arcs $u_i \to v_j$.
+This doubles $n$, corresponding to the row step $(r, k) \to (r+1, k)$ in the
+2-adic column family grid (see `07-reflections/adic-column-families.md`).
+
+**Q1:** Is there a formula $H(T[K_2]) = f(H(T), n)$?
+
+**Q2:** Does blowup preserve SC status within a column family? SF status?
+
+**Q3:** The **pairs anomaly** ($\lfloor n/2 \rfloor$ gains +1 at the $r=0 \to r=1$
+seam) suggests H may have analogous anomalous first-blowup behavior:
+$H(\text{blowup of odd-}n\, T)$ vs $H(\text{blowup of even-}n\, T)$ — are
+these qualitatively different?
+
+**Q4:** Does SC∩SF = SC($n-2$) for the family:
+$\#(\text{SC} \cap \text{SF})(2^r(2k-1)) = \#\text{SC}(2^r(2k-3))$ for $r \geq 1$?
+(This is the even-row analog of the proved odd-$n$ identity.)
+
+**Related:** Linial-Morgenstern conjecture (INV-013: random blowup of transitive
+tournament). The blowup operation is exactly the row step in the 2-adic grid.
+
+**Expected difficulty:** SMALL CASES immediately computable. General formula: MEDIUM.
+**Source:** oracle-2026-05-15 (2-adic column family analysis)
+
 **Source:** kind-pasteur-2026-04-16-S1, `alpha_full_ssc_fast_n23.out`, `alpha_full_ssc_fast_n21.out`

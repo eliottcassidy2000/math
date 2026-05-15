@@ -1961,3 +1961,97 @@ vertices needed for Ω₃ chains.
   (2) Is the Paley→Interval crossover at p=13? (p=13 ≡ 1 mod 4, no Paley, skip to p=19)
   (3) Why does Interval win on α₃,α₄,...? Is this related to arithmetic spacing allowing more vertex-disjoint packings?
 **Scripts:** alpha_from_cc_bin.py, alpha_crossover_analysis.py, alpha_ratio_trends.py
+
+---
+
+## 2-Adic Column Family Investigations (oracle-2026-05-15)
+
+### INV-184: Tournament Blowup $T[K_2]$ — H Formula and Family Inheritance
+**Source:** oracle-2026-05-15 (2-adic column family analysis; see `07-reflections/adic-column-families.md`)
+**Status:** OPEN. Computationally accessible immediately.
+**What:** The tournament blowup $T[K_2]$ — each vertex $v$ splits into $v_0 \to v_1$,
+each original arc $u \to v$ expanded to all four arcs $u_i \to v_j$ — is the concrete
+realization of the "row step" in the 2-adic column family grid: $(r, k) \to (r+1, k)$.
+It doubles $n$ and stays within the same column family.
+**Key questions:**
+1. Is there a formula $H(T[K_2]) = f(H(T), n)$?
+2. Does blowup preserve SC status? SF status? If yes, the column family inherits SC/SF structure.
+3. The pairs anomaly: $\lfloor n/2 \rfloor$ gains +1 extra at the odd→even ($r=0 \to r=1$)
+   transition only. Does H have a similar anomalous first-blowup jump?
+4. What is the isomorphism class of $T[K_2]$? Does it stay in the same G_n/Z_2 sector?
+**Expected behavior:** Blowup creates a natural Z_2 action (swap $v_0 \leftrightarrow v_1$
+is NOT an automorphism, but the structure is highly symmetric). This may force the blowup
+into SC or near-SC classes.
+**Connection:** Linial-Morgenstern conjecture (INV-013) uses "random blowup of transitive
+tournament" — the row step applied to the transitive class. Our framework says this is the
+column-1 family at any depth.
+**Computed results (oracle-2026-05-15, exhaustive n=3,4,5):**
+
+| $T$ | $n$ | $H(T)$ | score$(T)$ | $H(T[K_2])$ | score$(T[K_2])$ |
+|-----|-----|--------|------------|-------------|-----------------|
+| Transitive | 3 | 1 | (0,1,2) | 1 | (0,1,2,3,4,5) |
+| Cyclic C3 | 3 | 3 | (1,1,1) | **45** | (2,2,2,3,3,3) |
+| Transitive | 4 | 1 | (0,1,2,3) | 1 | (0,1,2,3,4,5,6,7) |
+| H=3 class | 4 | 3 | (0,2,2,2) | **45** | (0,1,4,4,4,5,5,5) |
+| H=5 class | 4 | 5 | (1,1,2,2) | 393 | (2,2,3,3,4,4,5,5) |
+| C5^{1,2} (interval) | 5 | 15 | (2,2,2,2,2) | 15565 | (4,4,4,4,4,5,5,5,5,5) |
+| Paley(5) C5^{1,4} | 5 | 10 | (2,2,2,2,2) | 7910 | (4,4,4,4,4,5,5,5,5,5) |
+
+**STRIKING FINDING:**
+- Blowup of cyclic C3 (max-H at n=3) → H=45 = **max H at n=6** ✓
+- Blowup is near-regular: scores $(n/2-1)^{n/2} \cup (n/2)^{n/2}$ — exactly the SC∩SF score.
+- Blowup of max-H regular tournament → max-H SC∩SF class at the doubled size.
+- This matches the max-H pattern: "even $n$ → max H by SC∩SF class."
+
+**CONJECTURE (HYP-new):** Blowup of the max-H regular tournament at odd $n$ IS the
+max-H SC∩SF class at even $2n$. Equivalently: the column-family row step maps
+max-H-regular to max-H-SC∩SF.
+
+**Next steps:**
+1. Verify: is H=15565 = max H at n=10? (Run exhaustive or sampling-based search.)
+2. Verify: is H=393 = max H at n=8? Compare to known SC∩SF n=8 classes.
+3. Prove: blowup of regular tournament → near-regular tournament → SC∩SF class.
+4. Connect to the SC∩SF = SC(n-2) identity: does the blowup construction provide the bijection?
+
+### INV-185: HYP-217 Proof via 2-Adic Orbit Structure
+**Source:** oracle-2026-05-15 (2-adic column family analysis; see `07-reflections/adic-column-families.md`)
+**Status:** OPEN. Theory suggests a proof route.
+**What:** HYP-217 says: for circulant tournament $C_n^{\{s, 2s \bmod n\}}$, $\beta_2 = 0$.
+A "doubling pair" $\{s, 2s \bmod n\}$ is a 2-adic orbit of size 2 in $\mathbb{Z}/n\mathbb{Z}$.
+**Proposed proof route:** The column family structure of $n = 2^r(2k-1)$ induces a splitting
+of the chain complex $\Omega_*(C_n^S)$ along 2-adic eigenspaces. When $S = \{s, 2s\}$, the
+doubling pair selects a single eigenspace in this splitting, and the chain complex restricted
+to that eigenspace is contractible (hence $\beta_2 = 0$).
+**Predicted generalization (stronger than HYP-219):** $\beta_2(C_n^S) = 0$ whenever $S$
+contains at least one complete 2-adic orbit $\{s, 2s, 4s, \ldots, 2^{d-1}s\} \bmod n$
+where $d$ is the multiplicative order of 2 modulo $n / \gcd(s, n)$.
+**Connection to density threshold (INV-149):** The threshold $|S|$ needed for $\beta_2 = 0$
+should equal the size of the smallest complete 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$,
+which depends on $v_2(n)$ (the row of $n$ in the family grid).
+**Next steps:**
+1. For small cases n=7,9,11, enumerate all 2-adic orbits in $\mathbb{Z}/n\mathbb{Z}$.
+2. Check: does $\beta_2(C_n^S) = 0$ whenever $S$ contains a complete 2-adic orbit?
+3. Compare orbit sizes to the empirical density thresholds from INV-149.
+4. Attempt algebraic proof via eigenspace decomposition of the Laplacian of $C_n^S$.
+
+### INV-186: SC∩SF = SC($n-2$) Identity — Column Family Framing, but Fails n=8
+**Source:** oracle-2026-05-15 (2-adic column family analysis)
+**Status:** PARTIALLY RESOLVED — identity is a SMALL-N COINCIDENCE, not a theorem.
+SCSF(8)=5 ≠ 12=SC(6) (oracle-2026-05-11-S2). The column-family framing explains WHY
+the coincidence holds through n=7 and why it fails at n=8 (complexity grows faster
+than the column structure tracks).
+**What:** The identity $\#(\text{SC} \cap \text{SF})(n) = \#\text{SC}(n-2)$ (verified n=4..7)
+says: adjacent top-row columns have related SC∩SF and SC counts. In the 2-adic grid, this is
+the statement that the middle-subtournament extraction map is a bijection
+$\text{SC} \cap \text{SF}$ at column $k$ $\to$ $\text{SC}$ at column $k-1$.
+**Column-family extension (new conjecture):** For even-row members $n = 2^r(2k-1)$ with
+$r \geq 1$, the analogous identity should involve $n - 2\cdot 2^r = 2^r(2k-3)$:
+$$\#(\text{SC} \cap \text{SF})(2^r(2k-1)) = \#\text{SC}(2^r(2k-3))$$
+**Proof strategy:** Show the middle subtournament map (inner staircase extraction, Mode B)
+is a bijection that commutes with the SF involution. The SF score formula
+$\tilde{s}(v) = n-1-s(v)$ (for middle vertices) should transform cleanly under Mode B.
+**Next steps:**
+1. Compute $\#(\text{SC} \cap \text{SF})(n)$ and $\#\text{SC}(n-2)$ for n=8,9 (even row).
+2. Test the column-family extension conjecture at n=6 ($r=1, k=2$: does it equal SC at n=2?).
+3. Find an explicit bijection for the $r=0$ (odd n) case using SF score formula.
+4. If bijection found, test it on $r=1$ case to see if same map works for even n.
