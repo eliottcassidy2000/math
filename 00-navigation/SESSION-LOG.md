@@ -2,6 +2,31 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-16-S3 — 2026-05-16
+
+**Summary:** x=6 cubic family fully characterized: triangle colorings, octahedron, alpha extraction.
+
+**PROVED:** I(Omega(T),6) = 3H(T)-2 + 24*alpha2 + 192*alpha3 + ... (exact formula).
+- At n<=5: I(Omega,6) = 3H-2 EXACTLY (alpha2=0 requires 6+ vertices).
+- Extraction: alpha2 = (I(Omega,6)-3H+2)/24 for n<=8.
+- Correction factors: 6^k-3*2^k = 3*2^k*(3^{k-1}-1).
+
+**GEOMETRIC INTERPRETATION:**
+- 6 = P(K_3,3) = proper 3-colorings of triangle K_3 = |S_3|.
+- I(Omega,6) counts (independent directed-cycle cover, S3-decoration of each cycle).
+- For 3-cycles specifically: S3-decoration = proper 3-coloring of triangle vertices.
+- The 6 proper 3-colorings of K_3 = 6 vertices of the OCTAHEDRON K_{2,2,2}.
+- KEY DUALITY: directed 3-cycles of T <-> vertices of octahedron.
+
+**CROSSROADS THEOREM:** x=6 is the UNIQUE value in BOTH the oblong family {n(n-1)} AND the chromatic family {P(K_3,k)}. It equals both 3(3-1)=6 and P(K_3,3)=6.
+
+**FORBIDDEN VALUES:** I(Omega,6)=19 is forbidden (same obstruction as H=7). The linear map H->3H-2 translates all forbidden H to forbidden I(Omega,6) values at n<=5.
+
+**COLORING HIERARCHY:** Level k correction 6^k-3*2^k = P(K_{k+2},k+2)*c_k. k=2: 24=4!=P(K_4,4). k=3: 192=8*24. Suggests a k-coloring tower of tournament invariants.
+
+**Files:** 07-reflections/cubic-family-x6-coloring.md.
+**Open:** The x=24 extension (4-colorings of tetrahedron), the tournament "chromatic polynomial" CP(T,k)=I(Omega,P(K_3,k)), whether I(Omega,6) separates iso classes that H doesn't.
+
 ## oracle-2026-05-16-S2 — 2026-05-16
 
 **Summary:** Extended Eureka/Zeckendorf/simplex-cuboid synthesis with new theorem and oblong fugacity family.
