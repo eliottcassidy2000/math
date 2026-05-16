@@ -2,6 +2,29 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-16-S1 — 2026-05-16
+
+**Summary:** Interleaved staircase construction: the n=4 2×2 table generalizes to a binary grid of 2^k distinct iso classes at n=2k.
+
+**PROVED — Degree Formula + Distinctness:** For the interleaved staircase (dominants beat all recessives in crossing; transitive within each type; bit a_p controls within-pair edge):
+- d_{2p} = (2k-2-p) + a_p (dominant of pair p)
+- d_{2p+1} = (k-1-p) + (1-a_p) (recessive of pair p)
+- Pair sum = 3k-2-2p (arithmetic sequence, step -2, independent of bits)
+- All 2^k degree sequences are distinct (proved via pair-sum recovery + bit decoding)
+
+**COMPUTED (verified k=2,3,4):**
+- k=2 (n=4): 4/4 = 100% iso classes covered (all distinct, H ∈ {1,3,5})
+- k=3 (n=6): 8/56 iso classes covered (all distinct, H ∈ {1,5,13,17,29})
+- k=4 (n=8): 16/543 iso classes covered (all distinct, H ∈ {1,9,33,41,49,91,123,233})
+- n=4 is special: score → iso class is bijective there, so 4 degree seqs = 4 iso classes
+
+**Structure:** All-1 bits → transitive (H=1). All-0 bits → max-H in the family: 5,29,233 for k=2,3,4. Hamming weight → H inversely correlated. Weight-k+1 cases all give same H (e.g., H=9 for all weight-3 at k=4).
+
+**Two-lens connection:** Staircase crossing (transitive bipartite) = asymmetric extreme. SC blowup crossing (2-2 round-robin) = symmetric extreme. They span the space of bipartite crossing structures.
+
+**Files:** 07-reflections/interleaved-staircase-binary-grid.md
+**Open:** Formula for all-0 H values (5,29,233,...). Why all weight-(k-1) bits give same H. Full coverage at n=4 but partial at n≥6.
+
 ## oracle-2026-05-15-S2 — 2026-05-15
 
 **Summary:** SC blowup deep dive: universal score theorem, Kronecker structure, eigenvalue splitting, H concentration. Two orthogonal tournament recursions fully characterized.
