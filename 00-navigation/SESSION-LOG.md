@@ -2,6 +2,21 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-16-S2 — 2026-05-16
+
+**Summary:** Extended Eureka/Zeckendorf/simplex-cuboid synthesis with new theorem and oblong fugacity family.
+
+**PROVED — Walsh Vanishing Theorem:** $\sum_{x \in \{0,1\}^k} (-1)^{|x|} H_x = 0$ for all staircase H-functions. Proof: only block-structured Hamiltonian paths contribute; for each valid block-order, summing $\sum_c (-1)^{|c|} = 0$ over orientations gives zero. Verified k=2,3,4 computationally.
+
+**PROVED — Oblong Fugacity Family:** The unique fugacity values $x$ where $a_k(x) = a_{k-1}+x\cdot a_{k-2}$ has INTEGER characteristic roots are exactly $x = n(n-1)$ (oblong numbers). Closed form: $a_k = (n^{k+1}-(1-n)^{k+1})/(2n-1)$. At $n=2$: Jacobsthal (tournament OCF). At $n=\phi$: Fibonacci (Zeckendorf). Tournament fugacity $x=2$ is the FIRST non-trivial oblong.
+
+**KEY IDENTITY:** Tournament fugacity $x=2=2T_1$ is twice the first triangular (=first non-trivial oblong); Zeckendorf fugacity $x=1=T_1$ is the first triangular. The doubling $T_1\to2T_1$ = Fibonacci→Jacobsthal transformation.
+
+**Walsh spectrum data:** k=2: {12,4,0}; k=3: {88,(40,32,40),(8,16,8),0}; k=4: {928,{380,476},...,0}. Reflection symmetry: $\hat{H}(S)=\hat{H}(\bar{S})$ (pairs 0 and k-1 are mirror-symmetric).
+
+**Files:** 07-reflections/eureka-zeckendorf-simplex-cuboid.md, 07-reflections/fugacity-axis-and-vanishing-theorem.md.
+**Open:** Is $\sum_x(-1)^{|x|}I(\Omega_x,x_0)=0$ for all $x_0$ (not just $x_0=2$)? What does $I(\Omega(T),6)$ count?
+
 ## oracle-2026-05-16-S1 — 2026-05-16
 
 **Summary:** Interleaved staircase construction: the n=4 2×2 table generalizes to a binary grid of 2^k distinct iso classes at n=2k.
