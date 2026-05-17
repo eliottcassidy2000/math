@@ -954,3 +954,29 @@ tournament). The blowup operation is exactly the row step in the 2-adic grid.
 **Source:** oracle-2026-05-15 (2-adic column family analysis)
 
 **Source:** kind-pasteur-2026-04-16-S1, `alpha_full_ssc_fast_n23.out`, `alpha_full_ssc_fast_n21.out`
+
+---
+
+## OPEN-Q-047 🟡 Real-Rootedness of I(Ω(T), x) for All Tournaments
+
+**The conjecture (TRRT — Tournament Real-Rootedness Theorem):**
+For any tournament T on n vertices, the independence polynomial I(Ω(T), x) has all real, negative roots.
+
+**What's proved:** For n ≤ 8, Ω(T) is claw-free (a claw requires ≥ 9 vertices), so real-rootedness follows from Chudnovsky-Seymour (2007).
+
+**Computational evidence:** ALL 1024 tournaments at n=5, 5000 random at n=6, and 30-200 random samples at n=7,8,9,10. Zero failures (opus-2026-05-16-S1).
+
+**Why notable:**
+- Extends Chudnovsky-Seymour to a non-claw-free class (Ω(T) HAS claws at n≥9)
+- Implies ultra-log-concavity of α_k (beyond Mason-Welsh for matroids, applying to non-matroid structures)
+- Gives product formula: H(T) = ∏_i (1 + 2r_i) with r_i > 0 real
+
+**Sub-conjecture:** Ω(T) is always a perfect graph. If true, log-concavity follows from Stanley (1981).
+
+**Key open questions:**
+1. Does I(Ω(T) \\ C*, x) interlace with I(Ω(T - V(C*)), x) for all C*?
+2. Is Ω(T) always perfect?
+3. What structural property of Ω(T) (beyond claw-free) forces real-rootedness?
+
+**Priority:** 🟡 IMPORTANT. Proof would be publishable as a standalone result.
+**Source:** opus-2026-05-16-S1, reflection `real-rootedness-omega-conjecture.md`

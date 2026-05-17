@@ -1,0 +1,6 @@
+=== Exact Formula Verification: β₃(T) = H̃₂(I(H_v)) ===
+
+n=3: 24 (v,T) pairs, 0 mismatches. OK
+n=4: 256 (v,T) pairs, 0 mismatches. OK
+n=5: 5120 (v,T) pairs, 0 mismatches. OK
+n=6: 196608 (v,T) pairs, 480 mismatches. FAIL

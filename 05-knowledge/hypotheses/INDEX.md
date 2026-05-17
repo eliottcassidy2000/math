@@ -1950,3 +1950,26 @@ Source: alpha_crossover_analysis.out | opus-2026-04-16-S1
   n=15: H=198,464,295 α₁=27,495,799 α₂=22,518,662 α₃=5,849,428 α₄=397,720 α₅=7,472
   Dominant k=1 at n≤9, dominant k=2 for n=11..23 (and presumably beyond)
 Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n15.out | opus-2026-04-16-S1
+
+## HYP-1729: Real-rootedness of I(Omega(T), x) for all tournaments (TRRT) (opus-2026-05-16-S1)
+**Status:** OPEN (proved for n≤8 via claw-free, conjectured for all n)
+**Statement:** For any tournament T, all roots of I(Ω(T), x) are real and negative.
+**Evidence:** All 1024 at n=5, 5000 at n=6, 30-200 at n=7..10. Zero failures.
+**Why n≤8 proved:** Omega(T) is claw-free for n≤8 (claw requires ≥9 vertices). Chudnovsky-Seymour (2007).
+**Implications:** Ultra-log-concavity of α_k; product formula H = ∏(1+2r_i).
+**See:** reflection `real-rootedness-omega-conjecture.md`, scripts `real_rootedness_test.py`
+
+## HYP-1730: All-0 staircase 3-cycle count = k(k-1) (PROVED) (opus-2026-05-16-S1)
+**Status:** CONFIRMED (proved via degree formula)
+**Statement:** The all-0 interleaved staircase at n=2k has exactly k(k-1) directed 3-cycles.
+**Proof:** From the degree formula d_{2p}=2k-2-p, d_{2p+1}=k-1-p, count 3-cycles directly.
+**Data:** k=2:2, k=3:6, k=4:12, k=5:20, k=6:30 = k(k-1) ✓
+**See:** script `markov_staircase_h.py`
+
+## HYP-1731: All-0 staircase H values (5,29,233,2489,33773) for k=2..6 (opus-2026-05-16-S1)
+**Status:** CONFIRMED (computed)
+**Note:** First three (5,29,233) are Markov numbers; 2489=19×131 is NOT Markov.
+**Note:** 5,233 are Fibonacci numbers; 29 is NOT.
+**Key:** H_k=3 = N_{Q(√35)/Q}(8+√35) = 29 (norm from quadratic field).
+**All roots real negative** confirmed at all k.
+**See:** script `markov_staircase_h.py`, results `markov_staircase_h.out`

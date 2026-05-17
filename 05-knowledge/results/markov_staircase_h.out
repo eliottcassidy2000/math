@@ -1,0 +1,94 @@
+======================================================================
+All-0 Interleaved Staircase: H values and independence polynomial
+======================================================================
+
+--- k=2, n=4 ---
+Score sequence: [1, 1, 2, 2]
+Number of directed odd cycles: 2
+  3-cycles: 2
+Omega(T): 2 vertices
+I(Omega, x) coefficients [alpha_0..alpha_k]: [1, 2]
+H = I(Omega, 2) = 5
+Is H a known Markov number? True
+Roots of I(Omega, x): ['-0.5000']
+All roots real? True
+All roots negative? True
+
+--- k=3, n=6 ---
+Score sequence: [1, 2, 2, 3, 3, 4]
+Number of directed odd cycles: 12
+  3-cycles: 6
+  5-cycles: 6
+Omega(T): 12 vertices
+I(Omega, x) coefficients [alpha_0..alpha_k]: [1, 12, 1]
+H = I(Omega, 2) = 29
+Is H a known Markov number? True
+Roots of I(Omega, x): ['-11.9161', '-0.0839']
+All roots real? True
+All roots negative? True
+
+--- k=4, n=8 ---
+Score sequence: [1, 2, 3, 3, 4, 4, 5, 6]
+Number of directed odd cycles: 68
+  3-cycles: 12
+  5-cycles: 28
+  7-cycles: 28
+Omega(T): 68 vertices
+I(Omega, x) coefficients [alpha_0..alpha_k]: [1, 68, 24]
+H = I(Omega, 2) = 233
+Is H a known Markov number? True
+Roots of I(Omega, x): ['-2.8186', '-0.0148']
+All roots real? True
+All roots negative? True
+
+--- k=5, n=10 ---
+Score sequence: [1, 2, 3, 4, 4, 5, 5, 6, 7, 8]
+Number of directed odd cycles: 530
+  3-cycles: 20
+  5-cycles: 80
+  7-cycles: 220
+  9-cycles: 210
+Omega(T): 530 vertices
+I(Omega, x) coefficients [alpha_0..alpha_k]: [1, 530, 317, 20]
+H = I(Omega, 2) = 2489
+Is H a known Markov number? False
+Roots of I(Omega, x): ['-13.9507', '-1.8974', '-0.0019']
+All roots real? True
+All roots negative? True
+
+--- k=6, n=12 ---
+Score sequence: [1, 2, 3, 4, 5, 5, 6, 6, 7, 8, 9, 10]
+Number of directed odd cycles: 5750
+  3-cycles: 30
+  5-cycles: 180
+  7-cycles: 906
+  9-cycles: 2480
+  11-cycles: 2154
+Omega(T): 5750 vertices
+I(Omega, x) coefficients [alpha_0..alpha_k]: [1, 5750, 4244, 642, 10]
+H = I(Omega, 2) = 33773
+Is H a known Markov number? False
+Roots of I(Omega, x): ['-56.9216', '-5.4119', '-1.8663', '-0.0002']
+All roots real? True
+All roots negative? True
+
+======================================================================
+SUMMARY
+======================================================================
+   k    n            H    Markov? alpha_k coefficients
+----------------------------------------------------------------------
+   2    4            5       True [1, 2]
+   3    6           29       True [1, 12, 1]
+   4    8          233       True [1, 68, 24]
+   5   10         2489      False [1, 530, 317, 20]
+   6   12        33773      False [1, 5750, 4244, 642, 10]
+
+--- Markov equation check (x, y, z): x²+y²+z² vs 3xyz ---
+H[0]=5, H[1]=29, H[2]=233: LHS=55155, RHS=101355, diff=-46200
+H[1]=29, H[2]=233, H[3]=2489: LHS=6250251, RHS=50454519, diff=-44204268
+H[2]=233, H[3]=2489, H[4]=33773: LHS=1146864939, RHS=58758636903, diff=-57611771964
+
+--- Pairwise Markov triple search ---
+H[0]=5, H[1]=29: Markov partners c = 433, 2
+  Check (5,29,433): 188355 vs 188355
+  Check (5,29,2): 870 vs 870

@@ -1,0 +1,61 @@
+Enumerating Markov numbers up to 10^8...
+Found 69 Markov numbers up to 10^8
+Sorted Markov numbers up to 100000:
+[1, 2, 5, 13, 29, 34, 89, 169, 194, 233, 433, 610, 985, 1325, 1597, 2897, 4181, 5741, 6466, 7561, 9077, 10946, 14701, 28657, 33461, 37666, 43261, 51641, 62210, 75025, 96557]
+
+H values: [5, 29, 233, 2489, 33773]
+  H=5: is Markov? True
+  H=29: is Markov? True
+  H=233: is Markov? True
+  H=2489: is Markov? False
+  H=33773: is Markov? False
+
+Searching for Markov triples among H values:
+  Markov triple (5, 29, 433) ✓
+  Markov triple (5, 29, 2) ✓
+
+--- Sequence analysis for 5, 29, 233, 2489, 33773 ---
+Ratios H[k+1]/H[k]: [5.8, 8.03448275862069, 10.682403433476395, 13.568903173965447]
+Differences: [24, 204, 2256, 31284]
+Second differences: [180, 2052, 29028]
+
+Testing linear recurrences:
+Order 2 recurrence: a(k) = 22.3273*a(k-1) + -93.5607*a(k-2)
+  Predicts H[2] = 179.69, actual = 233
+  Predicts H[4] = 33773.00, actual = 33773
+
+For order-2 integer recurrence:
+Coefficient of q: -17892
+RHS for q: 1673988
+q not integer: 1673988/-17892 = -93.560698
+
+--- Known sequence checks ---
+Fibonacci: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
+  H=5 is Fibonacci? True
+  H=29 is Fibonacci? False
+  H=233 is Fibonacci? True
+  H=2489 is Fibonacci? False
+  H=33773 is Fibonacci? False
+Pell: [0, 1, 2, 5, 12, 29, 70, 169, 408, 985, 2378, 5741, 13860, 33461, 80782, 195025, 470832, 1136689]
+Catalan: [1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, 208012, 742900, 2674440]
+
+--- Alpha coefficient structure ---
+Cycle counts by length:
+  3-cycles: 2, 6, 12, 20, 30 = k(k-1) for k=2..6 ✓
+  Check: [2, 6, 12, 20, 30]
+
+  5-cycle counts by k:
+    k=3: 6
+    k=4: 28
+    k=5: 80
+    k=6: 180
+  Ratios: [4.666666666666667, 2.857142857142857, 2.25]
+  Differences: [22, 52, 100]
+  5-cycles/3-cycles: [1.0, 2.3333333333333335, 4.0, 6.0]
+
+  Independence number (max IS) per k:
+    k=2: max_IS=1, count=2
+    k=3: max_IS=2, count=1
+    k=4: max_IS=2, count=24
+    k=5: max_IS=3, count=20
+    k=6: max_IS=4, count=10

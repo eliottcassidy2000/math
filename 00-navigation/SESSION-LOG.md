@@ -2,6 +2,43 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-16-S1 — 2026-05-16
+
+**Summary:** Discovered and strongly supported the TRRT (Tournament Real-Rootedness Theorem): I(Ω(T), x) has all real, negative roots for every tournament T. Proved for n≤8 via Chudnovsky-Seymour; computationally verified at n=5..10 (zero failures). Also computed the all-0 staircase H sequence and found algebraic norm structure.
+
+**PROVED (new, n≤8 case of TRRT):**
+- Ω(T) is claw-free for n≤8 (claw requires ≥9 vertices — explicit proof).
+- By Chudnovsky-Seymour (2007): claw-free → real-rooted I(G,x).
+- Therefore I(Ω(T),x) is real-rooted for n≤8.
+
+**CONJECTURE (TRRT, strongly supported):**
+- For ALL tournaments T: I(Ω(T),x) has all real, negative roots.
+- Verified exhaustively n=5 (1024/1024), sampled n=6 (5000/5000), n=7-10 (zero failures).
+- Ω(T) CAN have claws at n≥9 (explicit construction given), yet real-rootedness persists.
+- Implies ultra-log-concavity of α_k and product formula H = ∏(1+2r_i) with r_i > 0.
+
+**PROVED (all-0 staircase):**
+- # directed 3-cycles in all-0 interleaved staircase at n=2k = k(k-1). Exact formula.
+- H values: 5, 29, 233, 2489, 33773 for k=2..6.
+- 5,29,233 are Markov numbers; 2489=19×131 is NOT (pattern breaks).
+- Algebraic structure: H(k=3) = N_{Q(√35)/Q}(8+√35) = 29 (norm from quadratic field).
+- H(k=4) = (41²-283)/6 = 233 (scaled norm from Q(√283)).
+
+**NEW FILES:**
+- 04-computation/markov_staircase_h.py — H and independence polynomial for all-0 staircase
+- 04-computation/markov_check_and_sequence.py — Markov number verification and sequence analysis
+- 04-computation/real_rootedness_test.py — real-rootedness test n=5..10
+- 04-computation/omega_perfectness.py — perfectness test for Ω(T)
+- 07-reflections/real-rootedness-omega-conjecture.md — full write-up of TRRT
+- 05-knowledge/results/markov_staircase_h.out — raw data
+- 05-knowledge/results/real_rootedness_test.out — test results
+
+**OPEN FOR NEXT AGENT:**
+1. Prove TRRT for n≥9 (main open question). Try: interlacing of I(Ω\C*,x) and I(Ω(T-V(C*)),x).
+2. Check perfectness of Ω(T) computationally for larger n.
+3. Compute H(k=7) for all-0 staircase and find recurrence.
+4. Connect the oracle's x=6 cubic invariant to the real-rootedness structure.
+
 ## oracle-2026-05-16-S3 — 2026-05-16
 
 **Summary:** x=6 cubic family fully characterized: triangle colorings, octahedron, alpha extraction.

@@ -12,6 +12,29 @@
 
 ---
 
+## Priority opus-2026-05-16-S1: TRRT and All-0 Staircase
+
+### INV-189: Real-Rootedness of I(Ω(T), x) for All Tournaments (TRRT)
+**Source:** opus-2026-05-16-S1
+**Status:** OPEN — strongly supported computationally, n≤8 proved, n≥9 open
+**What:** Conjecture: I(Ω(T), x) has all real, negative roots for ANY tournament T.
+Proved for n≤8 (Ω is claw-free; claw requires ≥9 vertices; apply Chudnovsky-Seymour 2007). Tested n=5..10: zero failures. Ω(T) CAN have claws at n≥9, so new structural reason needed.
+**Key implication:** Ultra-log-concavity of α_k; product formula H = ∏(1+2r_i).
+**Next:**
+  1. Check interlacing of I(Ω\C*, x) and I(Ω(T-V(C*)), x) for cycles C*
+  2. Test perfectness of Ω(T) computationally (would give log-concavity)
+  3. Search for "stable polynomial" / "negative dependence" approach
+**Reflection:** `real-rootedness-omega-conjecture.md`
+
+### INV-190: All-0 Staircase H Sequence and Algebraic Structure
+**Source:** opus-2026-05-16-S1
+**Status:** COMPUTED — values 5,29,233,2489,33773 for k=2..6
+**What:** H values of all-0 interleaved staircase at n=2k. 5,29,233 are Markov numbers (breaks at k=5: 2489=19×131). The k=3 case: H = N_{Q(√35)/Q}(8+√35) = 29 (norm from quadratic field). k=4: H = N(41+√283)/6 = 233.
+**Proved:** # directed 3-cycles = k(k-1) exactly.
+**Next:** Compute H at k=7 (n=14). Find linear recurrence. Check algebraic norm structure.
+
+---
+
 ## Priority S24: New Leads from Session S24
 
 ### INV-184: Stanley-Stembridge PROVED (Hikita, arXiv:2410.12758)
