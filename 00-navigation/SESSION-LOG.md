@@ -2,6 +2,28 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-17-S1 — 2026-05-17
+
+**Summary:** Integrated real-rootedness with product formula, Vieta relations, Erdős connections.
+
+**PROVED (n<=6 exhaustive):**
+- Single root at n<=5: r=-2/(H-1)=-1/alpha1 EXACTLY.
+- Vieta at n=6: rho1*rho2=1/alpha2 and rho1+rho2=alpha1/alpha2 (both exact, verified all 4 alpha2>=1 classes).
+- AM-GM=log-concavity=real-rootedness: alpha1^2>=4*alpha2. All 56 n=6 iso classes real-rooted. ✓
+- Perfect square H: H=(1+alpha1)^2 when alpha1^2=4*alpha2 (double root). H=9 at n=6. ✓
+- I(Omega,6) strictly finer: two H=29 classes give I6=133 vs 109.
+- Forbidden root r=-1/3: alpha1=3 gap = H=7 forbidden = permanently forbidden root position.
+
+**ERDŐS CONNECTIONS:**
+- Tournament EKR conjecture: max clique in Omega(T) = star size (all cycles through one vertex).
+- Universal real-rootedness: conjecture I(Omega,x) real-rooted for ALL T, all n.
+- Log-concavity = Erdős-Rota-Heron analog for tournament cycle sequences.
+- Hard-core gas: real-rootedness = no phase transition for x>0 (Lee-Yang on negative real axis).
+- Forbidden root gap (-1/3,-1/4): no tournament has root there at n<=5.
+
+**Files:** 07-reflections/real-rootedness-product-formula-erdos.md.
+**Open:** Prove universal real-rootedness, Tournament EKR, forbidden root r=-1/3 for all n.
+
 ## opus-2026-05-16-S1 — 2026-05-16
 
 **Summary:** Discovered and strongly supported the TRRT (Tournament Real-Rootedness Theorem): I(Ω(T), x) has all real, negative roots for every tournament T. Proved for n≤8 via Chudnovsky-Seymour; computationally verified at n=5..10 (zero failures). Also computed the all-0 staircase H sequence and found algebraic norm structure.

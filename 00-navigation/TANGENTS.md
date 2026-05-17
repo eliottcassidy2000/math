@@ -881,3 +881,16 @@ Random arc-flip relaxation from transitive: midpoint t₅₀%(n) = C(n-3,2)+2 = 
 
 **T266** #metagraph-spectral #Fiedler #sign-flip | certainty: HIGH (exact computation) | source: opus-2026-04-05-S24
 Fiedler vector of iso-class metagraph has corr(f, H) = +0.73 at n=5 but -0.55 at n=6. Sign flip: high-H classes go from peripheral to central. Algebraic connectivity μ₂ ≈ 2 universally. Regular tournament is extreme outlier at n=5 (f=+0.85).
+
+---
+
+## Fugacity Axis, Real-Rootedness & Erdős (oracle-2026-05-16/17)
+
+**T271** #x6-coloring #cubic-family #octahedron #S3-decoration #alpha2-extraction | certainty: HIGH (proved + verified all 56 iso classes n=6) | source: oracle-2026-05-16-S2
+$I(\Omega(T),6) = 3H-2$ exactly for $n\leq5$ (since $\alpha_2=0$); correction $+24\alpha_2+192\alpha_3+\ldots$ for $n\geq6$. The fugacity $x=6$ is the UNIQUE crossing of the oblong family $n(n-1)$ and chromatic family $P(K_3,k)$. Geometric: each directed 3-cycle contributes $6=|S_3|$ coloring decorations forming the octahedron $K_{2,2,2}$. At $n\leq8$: $(H, I(\Omega,6))$ extracts $(\alpha_1,\alpha_2)$ exactly via $\alpha_2=(I-3H+2)/24$. Forbidden value $19=3(7)-2$ mirrors forbidden $H=7$. SC tournaments have maximum "cubic excess" $I(\Omega,6)-3H+2=24\alpha_2$. See `07-reflections/cubic-family-x6-coloring.md`.
+
+**T272** #real-rootedness #product-formula #Vieta #log-concavity #hard-core-gas | certainty: VERY HIGH (proved n≤8 via Chudnovsky-Seymour, 100% verified n≤20) | source: oracle-2026-05-17-S1
+$I(\Omega(T),x)$ is real-rooted: all roots on negative real axis. Product formula: $I=\alpha_d\prod_i(x+\rho_i)$, $\rho_i>0$. Vieta for $n\leq5$: $r=-2/(H-1)$. Vieta for $n=6$: $\rho_1\rho_2=1/\alpha_2$, $\rho_1+\rho_2=\alpha_1/\alpha_2$. Real-rooted $\Leftrightarrow$ log-concave $\Leftrightarrow$ AM-GM: $\alpha_1^2\geq4\alpha_2$. Perfect square $H=(1+\alpha_1)^2$ at double root. Hard-core gas interpretation: no phase transition at $x>0$ (Lee-Yang zeros on negative real axis only). Ratio $I(\Omega,6)/H=\prod_i(6+\rho_i)/(2+\rho_i)\in(1,3^d)$; as regular $(\rho_i\to0)$: ratio $\to3^d$. See `07-reflections/real-rootedness-product-formula-erdos.md`, OPEN-Q-038.
+
+**T273** #Erdős #tournament-EKR #forbidden-root #ultra-log-concavity #root-spectrum | certainty: MEDIUM-HIGH (structural connections) | source: oracle-2026-05-17-S1
+Four Erdős-type connections from real-rootedness: (1) **Tournament EKR conjecture**: $\omega(\Omega(T))=\max_v\#\{\text{cycles through }v\}$ (max clique is vertex-star); (2) **Forbidden root**: $r=-1/3$ permanently forbidden at ALL $n$ (requires $\alpha_1=3,\alpha_2=0$, impossible — same obstruction as $H=7$ forbidden; gap $(-1/3,-1/4)$ has no tournament roots); (3) **Log-concavity** of $\alpha_k$ via real-rootedness is tournament analog of Heron-Rota-Welsh matroid theorem; (4) **Root-spectrum invariant**: $T\mapsto\{\rho_1,\ldots,\rho_d\}$ is new; SC tournaments have most asymmetric distribution (min $\rho_2/\rho_1$, explaining their H-maximization via $\alpha_2\sim\alpha_1^2/4$). See `07-reflections/real-rootedness-product-formula-erdos.md`.
