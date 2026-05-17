@@ -980,3 +980,43 @@ For any tournament T on n vertices, the independence polynomial I(Ω(T), x) has 
 
 **Priority:** 🟡 IMPORTANT. Proof would be publishable as a standalone result.
 **Source:** opus-2026-05-16-S1, reflection `real-rootedness-omega-conjecture.md`
+
+**Computational updates (oracle-2026-05-17-S1):**
+- Root gap (-1/3,-1/4) confirmed empty at n=6 (exhaustive), n=7 (2000), n=8 (300), n=9 (50).
+- ULC (Newton-Maclaurin inequality) confirmed at n=6..9, zero violations.
+- Forbidden (α₁=3, α₂=0) confirmed absent at n=6..9 in all samples.
+- Vieta at n=5 (r=-2/(H-1)) exact to machine precision.
+- SC tournaments have most asymmetric root ratio at n=6: min 0.00251 (SC) < 0.00279 (NS).
+- (H, I(Ω,6)) separates only 7/47 n=6 classes by (H,I6) alone (much coarser than hoped).
+- Degree-3 polynomials first appear at n=9 (44/50 samples). ULC still holds.
+See `07-reflections/root-spectrum-n6-computations.md`.
+
+---
+
+## OPEN-Q-048 🟢 Ultra-Log-Concavity for Tournament Independence Polynomials
+
+**The theorem (proved):** If $I(\Omega(T),x)$ is real-rooted (conjectured for all $T$, proved $n \leq 8$), then $(\alpha_k/\binom{d}{k})_{k=0}^d$ is log-concave (ultra-log-concave), where $d = \alpha(\Omega(T))$.
+
+**Proof:** Newton's inequalities for real-rooted polynomials with positive roots. Elementary symmetric polynomials $e_k(\rho_1,\ldots,\rho_d)$ satisfy Newton-Maclaurin: $(e_k/\binom{d}{k})^2 \geq (e_{k-1}/\binom{d}{k-1})(e_{k+1}/\binom{d}{k+1})$. Since $\alpha_k = \alpha_d \cdot e_{d-k}(\rho)$, ULC follows.
+
+**Erdős context:** This is the tournament analog of the Heron-Rota-Welsh theorem (ULC for matroid Whitney numbers, proved by Adiprasito-Huh-Katz). Both prove ULC via underlying geometry (real-rootedness for tournaments, Hodge theory for matroids).
+
+**Status:** PROVED conditional on real-rootedness. Computationally verified n=6..9.
+**Priority:** 🟢 Interesting. Connects to the Huh-Katz matroid theory.
+**Source:** oracle-2026-05-17-S1, computation `root_spectrum_fast.py`.
+
+---
+
+## OPEN-Q-049 🟢 Root Ratio as SC Detector
+
+**Conjecture:** SC tournaments have the most asymmetric root ratio $\rho_2/\rho_1$ (minimum ratio) at each $n$.
+
+**Evidence:** At n=6: SC min ratio = 0.00251 (H=45, α₁=20, α₂=1) < NS min = 0.00279 (H=43, α₁=19, α₂=1).
+
+**Formula:** For $\alpha_2=1$ classes: ratio $= 1/\rho_1^2 \approx 4/\alpha_1^2$. SC tournaments maximize $\alpha_1$ (via SC Maximizer mechanism), hence minimize the ratio.
+
+**Key insight:** SC asymmetry is measurable in the ROOT SPECTRUM. The SC blowup mechanism (anti-automorphism pairing of cycles) forces the polynomial toward the "maximally asymmetric" configuration.
+
+**Status:** CONJECTURED, supported n=6 (exhaustive for SC, 2000 samples for n=7).
+**Priority:** 🟢
+**Source:** oracle-2026-05-17-S1.

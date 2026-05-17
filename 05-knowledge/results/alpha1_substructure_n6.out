@@ -1,0 +1,72 @@
+============================================================
+N=6 EXHAUSTIVE: Alpha-1 gap structure
+============================================================
+
+Degree-1 classes (alpha2=0): achievable alpha1 values
+  alpha1 values: [0, 1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 16]
+  Missing from 0..16: [3, 10, 13, 14, 15]
+
+  Formula H = 1 + 2*alpha1 for all degree-1 classes:
+    alpha1= 0: H in [1]            , formula=  1 ✓
+    alpha1= 1: H in [3]            , formula=  3 ✓
+    alpha1= 2: H in [5]            , formula=  5 ✓
+    alpha1= 4: H in [9]            , formula=  9 ✓
+    alpha1= 5: H in [11]           , formula= 11 ✓
+    alpha1= 6: H in [13]           , formula= 13 ✓
+    alpha1= 7: H in [15]           , formula= 15 ✓
+    alpha1= 8: H in [17]           , formula= 17 ✓
+    alpha1= 9: H in [19]           , formula= 19 ✓
+    alpha1=11: H in [23]           , formula= 23 ✓
+    alpha1=12: H in [25]           , formula= 25 ✓
+    alpha1=16: H in [33]           , formula= 33 ✓
+
+  All H=1+2*alpha1 exact: ✓
+
+Degree-2, alpha2=1 classes: H = 5 + 2*alpha1
+  alpha1= 2, alpha2=1: H in [9], formula=9 ✓
+  alpha1= 6, alpha2=1: H in [17], formula=17 ✓
+  alpha1= 9, alpha2=1: H in [23], formula=23 ✓
+  alpha1=11, alpha2=1: H in [27], formula=27 ✓
+  alpha1=12, alpha2=1: H in [29], formula=29 ✓
+  alpha1=13, alpha2=1: H in [31], formula=31 ✓
+  alpha1=14, alpha2=1: H in [33], formula=33 ✓
+  alpha1=16, alpha2=1: H in [37], formula=37 ✓
+  alpha1=19, alpha2=1: H in [43], formula=43 ✓
+  alpha1=20, alpha2=1: H in [45], formula=45 ✓
+
+All (alpha1, alpha2) -> H relationships:
+  alpha1= 0, alpha2=0: H in [1], formula H=1 ✓
+  alpha1= 1, alpha2=0: H in [3], formula H=3 ✓
+  alpha1= 2, alpha2=0: H in [5], formula H=5 ✓
+  alpha1= 2, alpha2=1: H in [9], formula H=9 ✓
+  alpha1= 4, alpha2=0: H in [9], formula H=9 ✓
+  alpha1= 5, alpha2=0: H in [11], formula H=11 ✓
+  alpha1= 6, alpha2=0: H in [13], formula H=13 ✓
+  alpha1= 6, alpha2=1: H in [17], formula H=17 ✓
+  alpha1= 7, alpha2=0: H in [15], formula H=15 ✓
+  alpha1= 8, alpha2=0: H in [17], formula H=17 ✓
+  alpha1= 9, alpha2=0: H in [19], formula H=19 ✓
+  alpha1= 9, alpha2=1: H in [23], formula H=23 ✓
+  alpha1=10, alpha2=2: H in [29], formula H=29 ✓
+  alpha1=11, alpha2=0: H in [23], formula H=23 ✓
+  alpha1=11, alpha2=1: H in [27], formula H=27 ✓
+  alpha1=12, alpha2=0: H in [25], formula H=25 ✓
+  alpha1=12, alpha2=1: H in [29], formula H=29 ✓
+  alpha1=12, alpha2=2: H in [33], formula H=33 ✓
+  alpha1=13, alpha2=1: H in [31], formula H=31 ✓
+  alpha1=14, alpha2=1: H in [33], formula H=33 ✓
+  alpha1=14, alpha2=2: H in [37], formula H=37 ✓
+  alpha1=14, alpha2=4: H in [45], formula H=45 ✓
+  alpha1=16, alpha2=0: H in [33], formula H=33 ✓
+  alpha1=16, alpha2=1: H in [37], formula H=37 ✓
+  alpha1=16, alpha2=2: H in [41], formula H=41 ✓
+  alpha1=19, alpha2=1: H in [43], formula H=43 ✓
+  alpha1=20, alpha2=1: H in [45], formula H=45 ✓
+
+============================================================
+KEY FINDINGS:
+  H = 1 + 2*alpha1 + 4*alpha2 always (exact linear relationship)
+  alpha1=3, alpha2=0 NEVER occurs at n=6
+  Alpha1 gap at degree-1: alpha1=3 is missing
+  The gap creates root gap: alpha1=3 -> r=-1/3 (impossible)
+  alpha1=4 -> r=-1/4 (boundary, achievable)
