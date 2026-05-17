@@ -1,0 +1,211 @@
+n=8, m=21, NT=2097152
+Phase 1: Score filter...
+  Balanced candidates: 51949 (4.5s)
+  SF-score-passing: 18152
+
+Phase 2: Building adjacency matrices for 18152 candidates...
+
+Phase 3: Building permutation indices (n!=40320)...
+  Done (40320 perms)
+
+Phase 4: Canonicalizing...
+  T: 8000/40320 (20%)  95.9s
+  T: 16000/40320 (40%)  190.7s
+  T: 24000/40320 (60%)  284.8s
+  T: 32000/40320 (79%)  380.1s
+  T: 40000/40320 (99%)  471.6s
+  T canonical done (474.0s)
+  T^op: 8000/40320 (20%)  31.8s
+  T^op: 16000/40320 (40%)  77.8s
+  T^op: 24000/40320 (60%)  109.7s
+  T^op: 32000/40320 (79%)  140.2s
+  T^op: 40000/40320 (99%)  171.2s
+  T^op canonical done (646.5s)
+  T~: 8000/40320 (20%)  62.9s
+  T~: 16000/40320 (40%)  123.8s
+  T~: 24000/40320 (60%)  183.0s
+  T~: 32000/40320 (79%)  243.9s
+  T~: 40000/40320 (99%)  298.4s
+  T~ canonical done (947.1s)
+
+Phase 5: Grouping...
+
+Phase 6: Computing |Aut|...
+  |Aut| done (1.2s)
+
+============================================================
+n=8 KERNEL ANALYSIS
+============================================================
+Candidates: 18152
+Iso classes: 85
+SC:   15
+SF:   43
+SC∩SF: 5
+
+Kernel (SC∩SF) classes:
+  # |    #t |   gs |  |Aut| |  bl=gs |   BS? | scores
+----------------------------------------------------------------------
+  1 |   224 |   22 |      1 |     22 |  BLUE | (4, 4, 4, 4, 3, 3, 3, 3)
+  2 |   224 |   22 |      1 |     22 |  BLUE | (4, 4, 4, 4, 3, 3, 3, 3)
+  3 |   221 |   21 |      1 |     21 |  BLUE | (4, 4, 4, 4, 3, 3, 3, 3)
+  4 |   224 |   22 |      1 |     22 |  BLUE | (4, 4, 4, 4, 3, 3, 3, 3)
+  5 |    74 |   22 |      3 |     22 |  BLUE | (4, 4, 4, 4, 3, 3, 3, 3)
+
+All SC classes:
+  # |    #t |   gs |  |Aut| |  SF? | scores
+------------------------------------------------------------
+  1 |   222 |   20 |      1 |   -- | (4, 4, 4, 4, 3, 3, 3, 3)
+  2 |   224 |   22 |      1 |   SF | (4, 4, 4, 4, 3, 3, 3, 3)
+  3 |   224 |   22 |      1 |   SF | (4, 4, 4, 4, 3, 3, 3, 3)
+  4 |   228 |   20 |      1 |   -- | (4, 4, 4, 4, 3, 3, 3, 3)
+  5 |   249 |   21 |      1 |   -- | (4, 4, 4, 4, 3, 3, 3, 3)
+  6 |   225 |   19 |      1 |   -- | (4, 4, 4, 4, 3, 3, 3, 3)
+  7 |    77 |    7 |      3 |   -- | (4, 4, 4, 4, 3, 3, 3, 3)
+  8 |   231 |   17 |      1 |   -- | (4, 4, 4, 4, 3, 3, 3, 3)
+  9 |   230 |   24 |      1 |   -- | (4, 4, 4, 4, 3, 3, 3, 3)
+ 10 |   221 |   21 |      1 |   SF | (4, 4, 4, 4, 3, 3, 3, 3)
+ 11 |   224 |   22 |      1 |   SF | (4, 4, 4, 4, 3, 3, 3, 3)
+ 12 |   243 |   19 |      1 |   -- | (4, 4, 4, 4, 3, 3, 3, 3)
+ 13 |   225 |   17 |      1 |   -- | (4, 4, 4, 4, 3, 3, 3, 3)
+ 14 |    74 |   22 |      3 |   SF | (4, 4, 4, 4, 3, 3, 3, 3)
+ 15 |    23 |    7 |      9 |   -- | (4, 4, 4, 4, 3, 3, 3, 3)
+
+============================================================
+BLUESELF/BLACKSELF ANALYSIS
+============================================================
+
+Kernel class 1: nt=224, gs=22, |Aut|=1
+  Scores: (4, 4, 4, 4, 3, 3, 3, 3)
+  BLUESELF: has 22 GS tilings
+  GS tilings in class: ['0x19c7', '0x88ce', '0x4999c', '0x4b199', '0x74a56', '0xd9f1c']
+  GS mask=0x19c7: flip=0x1fe638, same_class=False, flip_is_GS=True
+  GS mask=0x88ce: flip=0x1f7731, same_class=False, flip_is_GS=True
+  GS mask=0x4999c: flip=0x1b6663, same_class=False, flip_is_GS=True
+  GS mask=0x4b199: flip=0x1b4e66, same_class=True, flip_is_GS=True
+  GS mask=0x74a56: flip=0x18b5a9, same_class=False, flip_is_GS=True
+  GS mask=0xd9f1c: flip=0x1260e3, same_class=False, flip_is_GS=True
+  GS mask=0xda619: flip=0x1259e6, same_class=False, flip_is_GS=True
+  GS mask=0xdb719: flip=0x1248e6, same_class=False, flip_is_GS=True
+  GS mask=0xf4653: flip=0x10b9ac, same_class=False, flip_is_GS=True
+  GS mask=0xf6653: flip=0x1099ac, same_class=False, flip_is_GS=True
+  GS mask=0x153331: flip=0xaccce, same_class=False, flip_is_GS=True
+  GS mask=0x1533b1: flip=0xacc4e, same_class=False, flip_is_GS=True
+  GS mask=0x176272: flip=0x89d8d, same_class=False, flip_is_GS=True
+  GS mask=0x177372: flip=0x88c8d, same_class=False, flip_is_GS=True
+  GS mask=0x1a4ca5: flip=0x5b35a, same_class=False, flip_is_GS=True
+  GS mask=0x1a6ca5: flip=0x5935a, same_class=False, flip_is_GS=True
+  GS mask=0x1ad529: flip=0x52ad6, same_class=False, flip_is_GS=True
+  GS mask=0x1ad5a9: flip=0x52a56, same_class=False, flip_is_GS=True
+  GS mask=0x1b4e66: flip=0x4b199, same_class=True, flip_is_GS=True
+  GS mask=0x1b4ea5: flip=0x4b15a, same_class=False, flip_is_GS=True
+  GS mask=0x1b6e66: flip=0x49199, same_class=False, flip_is_GS=True
+  GS mask=0x1b6ea5: flip=0x4915a, same_class=False, flip_is_GS=True
+
+Kernel class 2: nt=224, gs=22, |Aut|=1
+  Scores: (4, 4, 4, 4, 3, 3, 3, 3)
+  BLUESELF: has 22 GS tilings
+  GS tilings in class: ['0x1947', '0xa8ce', '0x49199', '0x648d6', '0x74ad6', '0xd9719']
+  GS mask=0x1947: flip=0x1fe6b8, same_class=False, flip_is_GS=True
+  GS mask=0xa8ce: flip=0x1f5731, same_class=False, flip_is_GS=True
+  GS mask=0x49199: flip=0x1b6e66, same_class=False, flip_is_GS=True
+  GS mask=0x648d6: flip=0x19b729, same_class=False, flip_is_GS=True
+  GS mask=0x74ad6: flip=0x18b529, same_class=True, flip_is_GS=True
+  GS mask=0xd9719: flip=0x1268e6, same_class=False, flip_is_GS=True
+  GS mask=0xda699: flip=0x125966, same_class=False, flip_is_GS=True
+  GS mask=0xfc65a: flip=0x1039a5, same_class=False, flip_is_GS=True
+  GS mask=0xfe65a: flip=0x1019a5, same_class=False, flip_is_GS=True
+  GS mask=0x15b338: flip=0xa4cc7, same_class=False, flip_is_GS=True
+  GS mask=0x15b3b8: flip=0xa4c47, same_class=False, flip_is_GS=True
+  GS mask=0x1660f2: flip=0x99f0d, same_class=False, flip_is_GS=True
+  GS mask=0x175372: flip=0x8ac8d, same_class=False, flip_is_GS=True
+  GS mask=0x1762f2: flip=0x89d0d, same_class=False, flip_is_GS=True
+  GS mask=0x18b529: flip=0x74ad6, same_class=True, flip_is_GS=True
+  GS mask=0x18b5a9: flip=0x74a56, same_class=False, flip_is_GS=True
+  GS mask=0x1add2c: flip=0x522d3, same_class=False, flip_is_GS=True
+  GS mask=0x1addac: flip=0x52253, same_class=False, flip_is_GS=True
+  GS mask=0x1af529: flip=0x50ad6, same_class=False, flip_is_GS=True
+  GS mask=0x1af5a9: flip=0x50a56, same_class=False, flip_is_GS=True
+  GS mask=0x1b4e25: flip=0x4b1da, same_class=False, flip_is_GS=True
+  GS mask=0x1b6e25: flip=0x491da, same_class=False, flip_is_GS=True
+
+Kernel class 3: nt=221, gs=21, |Aut|=1
+  Scores: (4, 4, 4, 4, 3, 3, 3, 3)
+  BLUESELF: has 21 GS tilings
+  GS tilings in class: ['0xb1cb', '0x10a47', '0x51353', '0x5aa9c', '0x5b35a', '0x6d1da']
+  GS mask=0xb1cb: flip=0x1f4e34, same_class=False, flip_is_GS=True
+  GS mask=0x10a47: flip=0x1ef5b8, same_class=False, flip_is_GS=True
+  GS mask=0x51353: flip=0x1aecac, same_class=False, flip_is_GS=True
+  GS mask=0x5aa9c: flip=0x1a5563, same_class=False, flip_is_GS=True
+  GS mask=0x5b35a: flip=0x1a4ca5, same_class=False, flip_is_GS=True
+  GS mask=0x6d1da: flip=0x192e25, same_class=False, flip_is_GS=True
+  GS mask=0x88c8d: flip=0x177372, same_class=False, flip_is_GS=True
+  GS mask=0x8a44b: flip=0x175bb4, same_class=False, flip_is_GS=True
+  GS mask=0x9ae0d: flip=0x1651f2, same_class=False, flip_is_GS=True
+  GS mask=0xa4cc7: flip=0x15b338, same_class=False, flip_is_GS=True
+  GS mask=0xf4e95: flip=0x10b16a, same_class=False, flip_is_GS=True
+  GS mask=0xfce1c: flip=0x1031e3, same_class=False, flip_is_GS=True
+  GS mask=0x112ae6: flip=0xed519, same_class=False, flip_is_GS=True
+  GS mask=0x127163: flip=0xd8e9c, same_class=False, flip_is_GS=True
+  GS mask=0x1659b4: flip=0x9a64b, same_class=False, flip_is_GS=True
+  GS mask=0x19aeac: flip=0x65153, same_class=False, flip_is_GS=True
+  GS mask=0x1a5d66: flip=0x5a299, same_class=False, flip_is_GS=True
+  GS mask=0x1a64e3: flip=0x59b1c, same_class=False, flip_is_GS=True
+  GS mask=0x1f5f34: flip=0xa0cb, same_class=False, flip_is_GS=True
+  GS mask=0x1f66b1: flip=0x994e, same_class=False, flip_is_GS=True
+  GS mask=0x1fe638: flip=0x19c7, same_class=False, flip_is_GS=True
+
+Kernel class 4: nt=224, gs=22, |Aut|=1
+  Scores: (4, 4, 4, 4, 3, 3, 3, 3)
+  BLUESELF: has 22 GS tilings
+  GS tilings in class: ['0x4a0da', '0x51b15', '0x51b95', '0x89d4e', '0x92e47', '0x98e4e']
+  GS mask=0x4a0da: flip=0x1b5f25, same_class=False, flip_is_GS=True
+  GS mask=0x51b15: flip=0x1ae4ea, same_class=False, flip_is_GS=True
+  GS mask=0x51b95: flip=0x1ae46a, same_class=True, flip_is_GS=True
+  GS mask=0x89d4e: flip=0x1762b1, same_class=False, flip_is_GS=True
+  GS mask=0x92e47: flip=0x16d1b8, same_class=False, flip_is_GS=True
+  GS mask=0x98e4e: flip=0x1671b1, same_class=False, flip_is_GS=True
+  GS mask=0xac4cb: flip=0x153b34, same_class=False, flip_is_GS=True
+  GS mask=0xacc4e: flip=0x1533b1, same_class=False, flip_is_GS=True
+  GS mask=0xae4cb: flip=0x151b34, same_class=False, flip_is_GS=True
+  GS mask=0xec499: flip=0x113b66, same_class=False, flip_is_GS=True
+  GS mask=0xee499: flip=0x111b66, same_class=False, flip_is_GS=True
+  GS mask=0x1031e3: flip=0xfce1c, same_class=False, flip_is_GS=True
+  GS mask=0x1039a5: flip=0xfc65a, same_class=False, flip_is_GS=True
+  GS mask=0x10b16a: flip=0xf4e95, same_class=False, flip_is_GS=True
+  GS mask=0x111b25: flip=0xee4da, same_class=False, flip_is_GS=True
+  GS mask=0x111ba5: flip=0xee45a, same_class=False, flip_is_GS=True
+  GS mask=0x1248e6: flip=0xdb719, same_class=False, flip_is_GS=True
+  GS mask=0x1268e6: flip=0xd9719, same_class=False, flip_is_GS=True
+  GS mask=0x174ab4: flip=0x8b54b, same_class=False, flip_is_GS=True
+  GS mask=0x176ab4: flip=0x8954b, same_class=False, flip_is_GS=True
+  GS mask=0x193f25: flip=0x6c0da, same_class=False, flip_is_GS=True
+  GS mask=0x1ae46a: flip=0x51b95, same_class=True, flip_is_GS=True
+
+Kernel class 5: nt=74, gs=22, |Aut|=3
+  Scores: (4, 4, 4, 4, 3, 3, 3, 3)
+  BLUESELF: has 22 GS tilings
+  GS tilings in class: ['0x51b56', '0x6c0da', '0x6e0da', '0x89d0d', '0x89d8d', '0x90e47']
+  GS mask=0x51b56: flip=0x1ae4a9, same_class=False, flip_is_GS=True
+  GS mask=0x6c0da: flip=0x193f25, same_class=False, flip_is_GS=True
+  GS mask=0x6e0da: flip=0x191f25, same_class=True, flip_is_GS=True
+  GS mask=0x89d0d: flip=0x1762f2, same_class=False, flip_is_GS=True
+  GS mask=0x89d8d: flip=0x176272, same_class=False, flip_is_GS=True
+  GS mask=0x90e47: flip=0x16f1b8, same_class=False, flip_is_GS=True
+  GS mask=0x9ae4e: flip=0x1651b1, same_class=False, flip_is_GS=True
+  GS mask=0xac44b: flip=0x153bb4, same_class=False, flip_is_GS=True
+  GS mask=0xaccce: flip=0x153331, same_class=False, flip_is_GS=True
+  GS mask=0xae44b: flip=0x151bb4, same_class=False, flip_is_GS=True
+  GS mask=0xed519: flip=0x112ae6, same_class=False, flip_is_GS=True
+  GS mask=0xed599: flip=0x112a66, same_class=False, flip_is_GS=True
+  GS mask=0x1019a5: flip=0xfe65a, same_class=False, flip_is_GS=True
+  GS mask=0x1028e6: flip=0xfd719, same_class=False, flip_is_GS=True
+  GS mask=0x103163: flip=0xfce9c, same_class=False, flip_is_GS=True
+  GS mask=0x10b1ea: flip=0xf4e15, same_class=False, flip_is_GS=True
+  GS mask=0x113b25: flip=0xec4da, same_class=False, flip_is_GS=True
+  GS mask=0x113ba5: flip=0xec45a, same_class=False, flip_is_GS=True
+  GS mask=0x175b34: flip=0x8a4cb, same_class=False, flip_is_GS=True
+  GS mask=0x175bb4: flip=0x8a44b, same_class=False, flip_is_GS=True
+  GS mask=0x191f25: flip=0x6e0da, same_class=True, flip_is_GS=True
+  GS mask=0x1ae4ea: flip=0x51b15, same_class=False, flip_is_GS=True
+
+Total time: 956.0s

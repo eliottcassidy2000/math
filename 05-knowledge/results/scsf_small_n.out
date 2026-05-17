@@ -1,0 +1,80 @@
+SCSF KERNEL ANALYSIS: n=4..7
+======================================================================
+
+Analyzing n=4...
+  n=4, m=3, NT=8, free_bits=2
+  Canonicalizing T, T^op, T̃...
+  n=4: 2 SC, 1 SF, 1 SCSF  (0.0s)
+
+Analyzing n=5...
+  n=5, m=6, NT=64, free_bits=4
+  Canonicalizing T, T^op, T̃...
+  n=5: 8 SC, 2 SF, 2 SCSF  (0.0s)
+
+Analyzing n=6...
+  n=6, m=10, NT=1024, free_bits=6
+  Canonicalizing T, T^op, T̃...
+  n=6: 12 SC, 8 SF, 2 SCSF  (0.8s)
+
+Analyzing n=7...
+  n=7, m=15, NT=32768, free_bits=9
+  Canonicalizing T, T^op, T̃...
+  n=7: 88 SC, 30 SF, 8 SCSF  (470.4s)
+
+======================================================================
+KERNEL CLASSES BY n
+======================================================================
+
+n=4: 1 kernel classes
+    # |      type |   bl |  bsp |  bksp |  |Aut| |     #t | scores
+  -----------------------------------------------------------------
+    1 |  BLUESELF |    3 |    1 |     0 |      1 |      5 | (2, 2, 1, 1)
+
+n=5: 2 kernel classes
+    # |      type |   bl |  bsp |  bksp |  |Aut| |     #t | scores
+  -----------------------------------------------------------------
+    1 | BLACKSELF |    3 |    0 |     2 |      1 |     11 | (3, 2, 2, 2, 1)
+    2 | BLACKSELF |    3 |    0 |     2 |      1 |     13 | (3, 2, 2, 2, 1)
+
+n=6: 2 kernel classes
+    # |      type |   bl |  bsp |  bksp |  |Aut| |     #t | scores
+  -----------------------------------------------------------------
+    1 |  BLUESELF |    9 |    1 |     0 |      1 |     41 | (3, 3, 3, 2, 2, 2)
+    2 |  BLUESELF |    9 |    1 |     0 |      3 |     15 | (3, 3, 3, 2, 2, 2)
+
+n=7: 8 kernel classes
+    # |      type |   bl |  bsp |  bksp |  |Aut| |     #t | scores
+  -----------------------------------------------------------------
+    1 | BLACKSELF |    9 |    0 |     2 |      1 |    125 | (4, 4, 3, 3, 3, 2, 2)
+    2 | BLACKSELF |    9 |    0 |     2 |      1 |    147 | (4, 3, 3, 3, 3, 3, 2)
+    3 | BLACKSELF |    5 |    0 |     2 |      1 |    117 | (4, 4, 4, 3, 2, 2, 2)
+    4 | BLACKSELF |    9 |    0 |     2 |      1 |    153 | (4, 3, 3, 3, 3, 3, 2)
+    5 | BLACKSELF |    7 |    0 |     2 |      1 |    133 | (4, 4, 3, 3, 3, 2, 2)
+    6 | BLACKSELF |    9 |    0 |     4 |      1 |    159 | (4, 3, 3, 3, 3, 3, 2)
+    7 | BLACKSELF |    9 |    0 |     2 |      1 |    151 | (4, 3, 3, 3, 3, 3, 2)
+    8 | BLACKSELF |    7 |    0 |     2 |      1 |    141 | (4, 4, 3, 3, 3, 2, 2)
+
+======================================================================
+PATTERN SUMMARY
+======================================================================
+  n |  #SCSF |  #blue |  #black | bl_values
+------------------------------------------------------------
+  4 |      1 |      1 |       0 | [3]
+  5 |      2 |      0 |       2 | [3, 3]
+  6 |      2 |      2 |       0 | [9, 9]
+  7 |      8 |      0 |       8 | [5, 7, 7, 9, 9, 9, 9, 9]
+
+======================================================================
+SELF-FLIP PAIR STRUCTURE
+======================================================================
+
+n=4:
+  Class (bl=3, BLUESELF, #fp=1):
+Traceback (most recent call last):
+  File "/home/ubuntu/math/04-computation/scsf_small_n_analysis.py", line 221, in <module>
+    gs_set_c = set(mk2 for mk2 in c['members']
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/math/04-computation/scsf_small_n_analysis.py", line 226, in <genexpr>
+    if [tile_idx2[(n-y+1,n-x+1)] for x,y in
+        ^^^^^^^^^
+NameError: name 'tile_idx2' is not defined

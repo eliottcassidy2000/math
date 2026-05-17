@@ -1,0 +1,22 @@
+n=9, m=28, free_bits=16, GS=65536
+  Built 65536 GS masks
+Building adjacency matrices...
+  Done (0.2s)
+Computing certificates for GS tilings...
+  4096/65536 (6%) 2.3s
+  20480/65536 (31%) 12.4s
+  36864/65536 (56%) 22.2s
+  53248/65536 (81%) 32.6s
+  Certificates done (40.1s)
+
+Filtering by certificate...
+  Certificate matches: 0 out of 65536
+
+Full isomorphism check for 0 pairs...
+  Full iso check done: 0 SCSF GS tilings  (0.0s)
+
+Grouping 0 SCSF GS tilings into SC iso classes...
+
+SCSF(9) = 0
+
+Total time: 40.5s

@@ -1,0 +1,21 @@
+n=9, m=28, 2^m=268435456
+  Tile arc structure: 28 tiles, 12 GS-pair constraints
+
+Phase 1: Batch score filter (268435456 tilings in batches of 4194304)...
+  4M/268M (2%) 4s candidates=6918
+  37M/268M (14%) 34s candidates=285580
+  71M/268M (27%) 64s candidates=1005261
+  104M/268M (39%) 95s candidates=1345292
+  138M/268M (52%) 125s candidates=1932643
+  171M/268M (64%) 155s candidates=2563267
+  205M/268M (77%) 186s candidates=3563078
+  239M/268M (89%) 216s candidates=4335263
+
+Score filter done: 5093576 candidates  (242.3s)
+
+Phase 2: Building adjacency matrices for 5093576 candidates...
+Traceback (most recent call last):
+  File "/home/ubuntu/math/04-computation/scsf_n9.py", line 158, in <module>
+    A_flat[:, verts[k]*n + verts[k+1]] = 1  # Wait, need 0-indexed positions!
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: index 89 is out of bounds for axis 1 with size 81

@@ -1,0 +1,67 @@
+n=9, m=28
+  Self-paired tiles: 4 = [(9, 1), (8, 2), (7, 3), (6, 4)]
+  GS pair-constraints: 12
+  free_bits = 16, GS count = 2^16 = 65536
+
+Building GS masks...
+  65536 GS tilings built
+
+Building adjacency matrices for 131072 tilings...
+  Done. A_gs shape: (65536, 81)
+  Tournament sanity check passed.
+
+Precomputing permutation indices (9! = 362880)...
+  Done (362880 perms, 7.9s)
+
+Canonicalization of 131072 tilings...
+  36288/362880 (10%)  3843.8s  ETA 34594s
+  72576/362880 (20%)  7038.2s  ETA 28153s
+  108864/362880 (30%)  10231.0s  ETA 23872s
+  145152/362880 (40%)  13422.5s  ETA 20134s
+  181440/362880 (50%)  16618.1s  ETA 16618s
+  217728/362880 (60%)  19801.5s  ETA 13201s
+  254016/362880 (70%)  22988.2s  ETA 9852s
+  290304/362880 (80%)  26176.2s  ETA 6544s
+  326592/362880 (90%)  29364.7s  ETA 3263s
+  362880/362880 (100%)  32574.1s  ETA 0s
+  Canonicalization done (32574.1s)
+
+Grouping GS tilings into iso classes...
+  GS iso classes (= SC classes): 2752
+
+Checking SCSF condition...
+
+============================================================
+RESULTS: n=9
+============================================================
+  GS tilings:      65536 = 2^16
+  SC iso classes:  2752  (THM-283 says 2752)
+  SC∩SF (SCSF):    0
+
+Kernel classes (SC∩SF):
+  # |  #gs | #sflip |  |Aut| |     #t | scores
+----------------------------------------------------------------------
+
+All SC class sizes (top 20 by #gs tilings):
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+  gs=  39, |Aut|≈  9304
+
+Total time: 32582.1s
