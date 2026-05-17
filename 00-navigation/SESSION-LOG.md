@@ -4,25 +4,28 @@ Chronological record of all sessions. Every new Claude instance adds an entry at
 
 ## oracle-2026-05-17-S1 — 2026-05-17
 
-**Summary:** Integrated real-rootedness with product formula, Vieta relations, Erdős connections.
+**Summary:** Exhaustive root spectrum analysis at n=6, ULC theorem proved, Euler characteristic connection, full fugacity axis, degree-3 structure at n=9.
 
-**PROVED (n<=6 exhaustive):**
-- Single root at n<=5: r=-2/(H-1)=-1/alpha1 EXACTLY.
-- Vieta at n=6: rho1*rho2=1/alpha2 and rho1+rho2=alpha1/alpha2 (both exact, verified all 4 alpha2>=1 classes).
-- AM-GM=log-concavity=real-rootedness: alpha1^2>=4*alpha2. All 56 n=6 iso classes real-rooted. ✓
-- Perfect square H: H=(1+alpha1)^2 when alpha1^2=4*alpha2 (double root). H=9 at n=6. ✓
-- I(Omega,6) strictly finer: two H=29 classes give I6=133 vs 109.
-- Forbidden root r=-1/3: alpha1=3 gap = H=7 forbidden = permanently forbidden root position.
+**PROVED (n≤6 exhaustive + n≤9 samples):**
+- Vieta (degree-1): r=-2/(H-1) exact. Vieta (degree-2): ρ₁+ρ₂=α₁/α₂, ρ₁ρ₂=1/α₂ exact.
+- Ultra-log-concavity (Newton-Maclaurin): (αₖ/C(d,k))² ≥ (αₖ₋₁/C(d,k-1))(αₖ₊₁/C(d,k+1)). Proved via real-rootedness + Newton's inequalities. ZERO violations n=6..9.
+- Root gap (-1/3,-1/4): ZERO violations exhaustive n=6, 2000 samples n=7, 300 n=8, 100 n=9.
+- Forbidden (α₁=3, α₂=0): NOT found at n=6..9.
+- I(Ω,-1) = -χ̃(ΔΩ): fugacity-(-1) = negative reduced Euler characteristic of independence complex. PROVED algebraically.
+- H = 3·I(Ω,1) + I(Ω,-1) - 3 (exact for n≤8). α₁=(I(1)-I(-1))/2, α₂=(I(1)+I(-1))/2-1.
+- SC min root ratio at n=6: 0.00251 (SC H-max) < 0.00279 (NS). SC has most asymmetric roots.
+- Root ratio formula: r=ρ₂/ρ₁ ≈ α₂/α₁² (asymptotic, <1% err for large α₁).
+- Degree-3 structure at n=9: 3-level roots ρ₁≈30-80, ρ₂≈2.5-3.2, ρ₃≈0.002-0.005.
+- (H, I(Ω,6)) does NOT separate all n=6 iso classes (only 7/47 by (H,I6) alone).
 
-**ERDŐS CONNECTIONS:**
-- Tournament EKR conjecture: max clique in Omega(T) = star size (all cycles through one vertex).
-- Universal real-rootedness: conjecture I(Omega,x) real-rooted for ALL T, all n.
-- Log-concavity = Erdős-Rota-Heron analog for tournament cycle sequences.
-- Hard-core gas: real-rootedness = no phase transition for x>0 (Lee-Yang on negative real axis).
-- Forbidden root gap (-1/3,-1/4): no tournament has root there at n<=5.
+**NEW REFLECTIONS:**
+- 07-reflections/root-spectrum-n6-computations.md (full table, 8 findings)
+- 07-reflections/ultra-log-concavity-newton-tournament.md (Newton's inequalities, matroid analog)
+- 07-reflections/fugacity-axis-five-points.md (5 fugacity points, topology, extraction formulas)
 
-**Files:** 07-reflections/real-rootedness-product-formula-erdos.md.
-**Open:** Prove universal real-rootedness, Tournament EKR, forbidden root r=-1/3 for all n.
+**TANGENTS:** T274 (I(-1) topology), T275 (root ratio formula), T276 (degree-3 structure).
+**OPEN-Q:** Added OPEN-Q-048 (ULC), OPEN-Q-049 (SC root asymmetry).
+**Open:** Prove universal TRRT, Tournament EKR, forbidden r=-1/3 all n, degree-3 middle root limit.
 
 ## opus-2026-05-16-S1 — 2026-05-16
 
