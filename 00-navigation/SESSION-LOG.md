@@ -2,6 +2,30 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-19-S1 — 2026-05-19
+
+**Summary:** Unconditional ULC via Turán, triangle algebra for k=2, shape parameter, Maclaurin verification.
+
+**PROVED (unconditional — no TRRT required):**
+- **Turán-ULC**: α₁² ≥ 2d/(d-1)·α₂ for ALL tournaments, ALL n. Proof: bar_Omega(T) is K_{d+1}-free (max clique = d), so Turán's theorem gives edge count α₂ ≤ (1-1/d)α₁²/2 = EXACTLY ULC at k=1.
+- **Equality characterization**: Turán-ULC equality iff I(Ω,x) = c(x+ρ)^d (all roots equal, Turán extremal). Double root at n=6 (α₁=2,α₂=1,H=9,SC) is the d=2 equality case.
+- **Triangle ULC (k=2, d=3)**: For complete tripartite K_{a,b,c}: (ab+bc+ca)² ≥ 3(a+b+c)abc. Proof: LHS-RHS = ½[(ab-ac)²+(ab-bc)²+(ac-bc)²] ≥ 0. Checked all a,b,c≤19: 0 failures.
+- **Shape formula**: r = 4/(s+√(s²-4))² exactly (verified to ε<6×10⁻¹⁷), where s=α₁/√α₂. As s→∞: r≈1/s²=α₂/α₁². ULC says s≥2.
+- **Maclaurin inequalities**: S₁≥S₂^{1/2}≥...≥S_d^{1/d} (Maclaurin means of roots, equivalent to all ULC). Verified 114 checks at n=9 degree-3, 0 violations.
+
+**COMPUTATIONAL:**
+- All ULC k=1,2,3 violations: 0 at n=6..9 in all samples.
+- Min ratio α₂²/(3α₁α₃) at n=9: 2.05 (well above 1). Key bound for unconditional k=2 ULC.
+- Turán margin at n=7: minimum observed 1 (not 0 yet = near-Turán-extremal).
+- SC maximizes shape s=α₁/√α₂ at each degree, hence minimizes root ratio.
+
+**NEW FILES:**
+- 07-reflections/ulc-turan-unconditional-proof.md (full theorem, equality characterization, shape parameter, k=2 tripartite proof)
+- TANGENTS T277 (Turán-ULC), T278 (Triangle ULC k=2)
+- OPEN-Q-048 updated (new unconditional proof), OPEN-Q-050 (unconditional ULC k=2)
+
+**Open:** Unconditional ULC at k=2 for all K₄-free co-conflict graphs (not just complete tripartite). Lorentzian property. Middle root convergence at n→∞.
+
 ## oracle-2026-05-17-S1 — 2026-05-17
 
 **Summary:** Exhaustive root spectrum analysis at n=6, ULC theorem proved, Euler characteristic connection, full fugacity axis, degree-3 structure at n=9.

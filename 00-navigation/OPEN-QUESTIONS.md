@@ -1005,6 +1005,36 @@ See `07-reflections/root-spectrum-n6-computations.md`.
 **Priority:** 🟢 Interesting. Connects to the Huh-Katz matroid theory.
 **Source:** oracle-2026-05-17-S1, computation `root_spectrum_fast.py`.
 
+**NEW (oracle-2026-05-19-S1): UNCONDITIONAL proof of ULC at k=1 via Turán's theorem.**
+For any tournament T: since bar_Omega(T) is K_{d+1}-free (max clique size = d = degree of I),
+Turán's theorem gives alpha_2 <= (1-1/d)*alpha_1^2/2, which is exactly ULC at k=1:
+   alpha_1^2 >= 2d/(d-1)*alpha_2.
+No TRRT required. Equality iff I(Omega,x) = c*(x+rho)^d (all roots equal, Turán extremal).
+
+**Also proved (conditionally on K4-free structure):** ULC at k=2 for complete tripartite
+co-conflict graphs: (ab+bc+ca)^2 >= 3(a+b+c)*abc.
+Proof: LHS-RHS = (1/2)[(ab-ac)^2+(ab-bc)^2+(ac-bc)^2] >= 0.
+Verified: 0 violations in all n=9 samples (91/100 degree-3).
+See `07-reflections/ulc-turan-unconditional-proof.md`.
+
+---
+
+## OPEN-Q-050 🟡 Unconditional ULC at k=2 via Kruskal-Katona
+
+**Goal:** Prove $\alpha_2^2 \geq 3\alpha_1\alpha_3$ (ULC k=2, d=3) without assuming TRRT.
+
+**Current status:**
+- Proved for complete tripartite co-conflict graphs $K_{a,b,c}$ via the algebraic identity.
+- Zero violations in n=9 random samples (91/100 degree-3 tournaments, 0 failures).
+- TRRT implies this unconditionally (via Newton's inequalities).
+- The "bad" counter-example ($K_4-e$ + isolated vertex, gives 25 < 30) does NOT occur in tournament conflict graphs.
+
+**Approach:** Use the Kruskal-Katona shadow theorem for simplicial complexes, combined with the tournament-specific constraint that bar_Omega(T) arises from an actual tournament. The key step is showing that the $K_4$-free graphs that violate $\alpha_2^2 \geq 3\alpha_1\alpha_3$ cannot be co-conflict graphs of tournaments.
+
+**Why hard:** The complement of a tournament conflict graph has special "tournament Ramsey" structure beyond just being $K_{d+1}$-free. Characterizing all graphs that arise as $\bar\Omega(T)$ is an open problem.
+
+**Priority:** 🟡 Important. Would give the first unconditional ULC result beyond k=1.
+
 ---
 
 ## OPEN-Q-049 🟢 Root Ratio as SC Detector

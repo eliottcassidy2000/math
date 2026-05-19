@@ -1,0 +1,206 @@
+========================================================================
+SECTION 1: n=6 Exhaustive — Turán-ULC Verification
+========================================================================
+
+Turán bound: alpha_1^2 >= 2d/(d-1) * alpha_2  [ULC at k=1, unconditional]
+For d=2: alpha_1^2 >= 4*alpha_2  (classical log-concavity)
+For d=3: alpha_1^2 >= 3*alpha_2  (Turán for K4-free graph)
+
+  d   a1   a2   a3  SC    Turán LHS    Turán RHS     margin   lambda_1   lambda_2
+-------------------------------------------------------------------------------------
+  0    0    0    0  SC  (transitive — no bound needed)
+  1    1    0    0              1.0          nan        nan        inf          -
+  1    1    0    0              1.0          nan        nan        inf          -
+  1    1    0    0              1.0          nan        nan        inf          -
+  1    1    0    0              1.0          nan        nan        inf          -
+  1    2    0    0              4.0          nan        nan        inf          -
+  1    2    0    0  SC          4.0          nan        nan        inf          -
+  1    2    0    0              4.0          nan        nan        inf          -
+  1    4    0    0             16.0          nan        nan        inf          -
+  1    4    0    0             16.0          nan        nan        inf          -
+  1    5    0    0             25.0          nan        nan        inf          -
+  1    5    0    0             25.0          nan        nan        inf          -
+  1    6    0    0             36.0          nan        nan        inf          -
+  1    6    0    0             36.0          nan        nan        inf          -
+  1    7    0    0             49.0          nan        nan        inf          -
+  1    7    0    0             49.0          nan        nan        inf          -
+  1    7    0    0             49.0          nan        nan        inf          -
+  1    7    0    0             49.0          nan        nan        inf          -
+  1    7    0    0             49.0          nan        nan        inf          -
+  1    8    0    0  SC         64.0          nan        nan        inf          -
+  1    9    0    0             81.0          nan        nan        inf          -
+  1    9    0    0             81.0          nan        nan        inf          -
+  1   11    0    0            121.0          nan        nan        inf          -
+  1   12    0    0            144.0          nan        nan        inf          -
+  1   16    0    0            256.0          nan        nan        inf          -
+  1   16    0    0            256.0          nan        nan        inf          -
+  2    2    1    0  SC          4.0          4.0        0.0     4.0000          -
+  2    6    1    0  SC         36.0          4.0       32.0    36.0000          -
+  2    9    1    0             81.0          4.0       77.0    81.0000          -
+  2    9    1    0             81.0          4.0       77.0    81.0000          -
+  2   10    2    0  SC        100.0          8.0       92.0    50.0000          -
+  2   11    1    0            121.0          4.0      117.0   121.0000          -
+  2   11    1    0            121.0          4.0      117.0   121.0000          -
+  2   12    2    0  SC        144.0          8.0      136.0    72.0000          -
+  2   12    1    0  SC        144.0          4.0      140.0   144.0000          -
+  2   13    1    0            169.0          4.0      165.0   169.0000          -
+  2   14    2    0  SC        196.0          8.0      188.0    98.0000          -
+  2   14    2    0            196.0          8.0      188.0    98.0000          -
+  2   14    1    0            196.0          4.0      192.0   196.0000          -
+  2   14    2    0            196.0          8.0      188.0    98.0000          -
+  2   14    1    0            196.0          4.0      192.0   196.0000          -
+  2   14    4    0  SC        196.0         16.0      180.0    49.0000          -
+  2   16    1    0            256.0          4.0      252.0   256.0000          -
+  2   16    2    0  SC        256.0          8.0      248.0   128.0000          -
+  2   16    1    0            256.0          4.0      252.0   256.0000          -
+  2   19    1    0            361.0          4.0      357.0   361.0000          -
+  2   20    1    0  SC        400.0          4.0      396.0   400.0000          -
+
+Total classes: 47
+Turán-ULC violations at k=1: 0 (none ✓)
+ULC violations (any k): 0 (none ✓)
+
+Equality cases in Turán-ULC (a1^2 = 4*a2 for d=2):
+  a1=2, a2=1, H=9, SC=True
+  → double root, I = alpha_2*(x+rho)^2 with rho=1.0000
+  → bar_Omega = K_{a1/2, a1/2} = K_{1,1} (Turán extremal T(2,a1))
+
+[Time: 16.9s]
+
+────────────────────────────────────────────────────────────────────────
+SECTION 2: n=7, 1000 random samples — Turán-ULC check
+────────────────────────────────────────────────────────────────────────
+
+Degree distribution: {2: 860}
+
+Turán-ULC (k=1) violations: 0 (none ✓)
+ULC k=2 (d=3) violations: 0 (none ✓)
+ULC k=3 (d=4) violations: 0 (none ✓)
+
+Turán margin a1^2 - 4*a2 (d=2): mean=1274.7, min=0.0
+
+Near-equality (within 1% of Turán bound):
+  d=2, a1=2, a2=1, fraction of a1^2: 0.0000
+
+────────────────────────────────────────────────────────────────────────
+SECTION 2: n=8, 300 random samples — Turán-ULC check
+────────────────────────────────────────────────────────────────────────
+
+Degree distribution: {2: 295}
+
+Turán-ULC (k=1) violations: 0 (none ✓)
+ULC k=2 (d=3) violations: 0 (none ✓)
+ULC k=3 (d=4) violations: 0 (none ✓)
+
+Turán margin a1^2 - 4*a2 (d=2): mean=12584.7, min=92.0
+
+────────────────────────────────────────────────────────────────────────
+SECTION 2: n=9, 80 random samples — Turán-ULC check
+────────────────────────────────────────────────────────────────────────
+
+Degree distribution: {2: 17, 3: 63}
+
+Turán-ULC (k=1) violations: 0 (none ✓)
+ULC k=2 (d=3) violations: 0 (none ✓)
+ULC k=3 (d=4) violations: 0 (none ✓)
+
+Turán margin a1^2 - 4*a2 (d=2): mean=30601.1, min=617.0
+Turán margin a1^2 - 3*a2 (d=3): mean=227919.9, min=34057.0
+
+========================================================================
+SECTION 3: ULC at k=2 for d=3 — triangle algebra
+========================================================================
+
+For d=3: I(Omega,x) = 1 + a1*x + a2*x^2 + a3*x^3
+ULC at k=2: alpha_2^2 >= 3 * alpha_1 * alpha_3
+
+Equivalent to: a2^2 >= 3 * a1 * a3.
+
+Approach via the co-conflict graph bar_Omega (where edges = disjoint pairs,
+triangles = disjoint triples). Since d=3, bar_Omega is K4-free (no 4-clique).
+
+For a COMPLETE TRIPARTITE graph K_{a,b,c} (= Turán graph T(3, a1)):
+  a1 = a+b+c, a2 = ab+ac+bc, a3 = abc.
+
+Claim: (ab+ac+bc)^2 >= 3(a+b+c)*abc for all a,b,c >= 0.
+
+Proof:
+  LHS - RHS = (ab+ac+bc)^2 - 3(a+b+c)*abc
+            = a^2*b^2 + a^2*c^2 + b^2*c^2 - abc*(a+b+c)
+            = a^2*b^2 + a^2*c^2 + b^2*c^2 - a^2*bc - ab^2*c - abc^2
+            = (1/2)*[(ab-ac)^2 + (ab-bc)^2 + (ac-bc)^2]  >= 0  ✓
+
+Equality iff ab=ac=bc iff a=b=c (balanced parts).
+
+Checked all complete tripartite K_{a,b,c} for a,b,c <= 19:
+  Violations: 0 (none ✓)
+  Equality cases (a=b=c): 19 (balanced cases)
+  Examples: [(1, 1, 1), (2, 2, 2), (3, 3, 3), (4, 4, 4), (5, 5, 5)]
+
+THEOREM (Turán-Triangle ULC): For any complete tripartite graph K_{a,b,c}
+representing the co-conflict graph bar_Omega, ULC at k=2 holds:
+    (ab+ac+bc)^2 >= 3(a+b+c)*abc
+
+Proof: LHS-RHS = (1/2)[(ab-ac)^2 + (ab-bc)^2 + (ac-bc)^2] >= 0.  □
+
+KEY OPEN QUESTION: Does this extend to ALL K4-free graphs (not just complete tripartite)?
+The tournament structure restricts which K4-free graphs can be co-conflict graphs.
+Computationally: 0 violations found in all n=7,8,9 samples.
+=== n=9 ULC k=2 (alpha_2^2 >= 3*alpha_1*alpha_3) intensive check ===
+  91/100 are degree-3
+  ULC k=2 violations: 0
+  Min ratio a2^2/(3*a1*a3): 2.0488 (must be >= 1)
+
+=== The shape parameter sqrt(a1^2/a2) = a1/sqrt(a2) for degree-2 ===
+Claim: shape = sqrt(lambda_1) = a1/sqrt(a2) determines root asymmetry
+  shape^2 = lambda_1 = a1^2/a2
+  rho_1/rho_2 = ((a1+sqrt(a1^2-4*a2))/(a1-sqrt(a1^2-4*a2)))^1
+
+  a1= 2, a2=1: shape=2.0000, rho2/rho1=1.00000  double root
+  a1= 6, a2=1: shape=6.0000, rho2/rho1=0.02944  SC n=6 d=2
+  a1= 9, a2=1: shape=9.0000, rho2/rho1=0.01266  
+  a1=12, a2=1: shape=12.0000, rho2/rho1=0.00704  SC
+  a1=14, a2=2: shape=9.8995, rho2/rho1=0.01042  SC
+  a1=16, a2=2: shape=11.3137, rho2/rho1=0.00794  SC
+  a1=20, a2=1: shape=20.0000, rho2/rho1=0.00251  SC H-max
+  a1=14, a2=4: shape=7.0000, rho2/rho1=0.02129  SC H-max alt
+
+Pattern: shape^2 = lambda_1, and rho2/rho1 ≈ (2/shape - 1)^2 for large shape.
+The SC structure maximizes shape = a1/sqrt(a2) which minimizes root ratio.
+
+=== ULC bound sharpness at k=1 ===
+Turán gives: a2 <= (d-1)/(2d) * a1*(a1-1)
+ULC needs:   a2 <= (d-1)/(2d) * a1^2
+Difference:  (d-1)/(2d) * a1 --- this is always positive!
+
+Corollary: ULC at k=1 is STRICT (a1^2 > 2d/(d-1)*a2) whenever a1 >= 1.
+Equality (a1^2 = 2d/(d-1)*a2) is IMPOSSIBLE unless a1=0.
+
+Wait -- what about the double root case?
+Double root: a1=2, a2=1, d=2: a1^2=4, 2d/(d-1)*a2=4. EQUALITY!
+But a1*(a1-1) = 2, and (d-1)/(2d)*a1*(a1-1) = (1/4)*2 = 0.5 < 1 = a2. VIOLATION?
+
+Let me recheck: Turán for d=2 gives a2 <= floor(a1^2/4).
+For a1=2: floor(4/4)=1=a2. OK, Turán allows a2=1 when a1=2.
+And 4*a2=4=a1^2. So equality holds in ULC!
+
+The Turán bound is: a2 <= floor(a1*(a1-1)/4) [precise] or a2 <= a1^2/4 [approx]
+The ULC bound is:   a1^2 >= 4*a2 iff a2 <= a1^2/4
+Both give the same at integers: a2 <= floor(a1^2/4).
+
+CONCLUSION: Turán-ULC at k=1 is TIGHT. Equality occurs at:
+  - d=2: a1=2, a2=1 (double root, H=9 SC tournament)
+  - d=3: a1=3, a2=3, a3=1 (perfect 3-power, I=(1+x)^3/...?)
+  - d=d: a1=d, a2=C(d,2), a3=C(d,3),...,ad=1 (all-disjoint d cycles)
+  In the last case, Omega has d isolated vertices, bar_Omega=K_d, I=(1+x)^d
+=== Shape formula r = (s-sqrt(s^2-4))/(s+sqrt(s^2-4)) verification ===
+s = a1/sqrt(a2), r = rho2/rho1. Exact identity for degree-2.
+110 samples checked, max error: 5.72e-17 ✓
+
+=== Maclaurin S_1 >= S_2 >= ... check for n=9 degree-3 ===
+Maclaurin for n=9 degree-3: 114 checks, 0 violations ✓
+
+=== Turán margin at n=7: minimum over 500 samples ===
+Min (a1^2 - 4*a2) at n=7: 1
+(=0 would be double root = Turán extremal)
+(The double root SC at n=7 has a1=2, a2=1 if it occurs)
