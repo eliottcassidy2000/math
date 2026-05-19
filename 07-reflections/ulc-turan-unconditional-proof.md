@@ -97,6 +97,33 @@ $= \tfrac{1}{2}\left[(ab-ac)^2 + (ab-bc)^2 + (ac-bc)^2\right] \geq 0. \quad\squa
 
 ---
 
+## Algebraic Insight: Complete Tripartite Gives a Perfect Product
+
+For the complete tripartite co-conflict graph $\bar\Omega = K_{a,b,c}$, the conflict graph $\Omega$ is a **disjoint union of 3 cliques of sizes $a,b,c$**. The independence polynomial factors beautifully:
+
+$$I(\Omega, x) = (1 + ax)(1 + bx)(1 + cx)$$
+
+**Proof:** Independent sets in $\Omega$ (= clique union $K_a \sqcup K_b \sqcup K_c$) are exactly sets with at most one element from each clique. Counting gives $I(\Omega,x) = (1+ax)(1+bx)(1+cx)$. $\square$
+
+**Consequences:**
+- Roots are $-1/a, -1/b, -1/c$ (all real and negative) — **TRRT holds trivially!**
+- $\alpha_1 = a+b+c$, $\alpha_2 = ab+bc+ca$, $\alpha_3 = abc$
+- ULC k=2: $(ab+bc+ca)^2 \geq 3(a+b+c)(abc)$ — our **triangle identity** ✓
+
+This is why the K_{a,b,c} case is unconditional: the polynomial is a perfect product with obvious real roots.
+
+**ULC k=2 = Maclaurin $S_1 \geq S_2$:** With roots $\rho_i = 1/a_i$:
+$$(\rho_1+\rho_2+\rho_3)^2 \geq 3(\rho_1\rho_2+\rho_1\rho_3+\rho_2\rho_3)$$
+$$(1/2)\left[(\rho_1-\rho_2)^2+(\rho_1-\rho_3)^2+(\rho_2-\rho_3)^2\right] \geq 0$$
+This holds for ANY real numbers $\rho_i$ — it's just the sum of squared differences.
+
+**Key dichotomy:**
+- ULC k=1 (any d): UNCONDITIONAL via Turán
+- ULC k=2 (d=3) for K_{a,b,c}: UNCONDITIONAL (trivially real-rooted product)
+- ULC k=2 (d=3) for general: CONDITIONAL on TRRT (but Maclaurin holds for real roots)
+
+---
+
 ## The Full Hierarchy
 
 | Level | Condition | What is needed | Status |

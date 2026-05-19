@@ -204,3 +204,40 @@ Maclaurin for n=9 degree-3: 114 checks, 0 violations ✓
 Min (a1^2 - 4*a2) at n=7: 1
 (=0 would be double root = Turán extremal)
 (The double root SC at n=7 has a1=2, a2=1 if it occurs)
+n=9 degree-3: 47 cases, 0 ULC k=2 violations (✓)
+Min ratio a2^2/(3*a1*a3) = 2.3505
+
+KEY ALGEBRAIC INSIGHT:
+ULC k=2 (d=3): a2^2 >= 3*a1*a3
+= Maclaurin S_1 >= S_2 for the roots rho1,rho2,rho3 of I(Omega,x)!
+Because:
+  S_1 = (rho1+rho2+rho3)/3 = a2/(3*a3) [sum/3]
+  S_2 = sqrt((rho1*rho2+rho1*rho3+rho2*rho3)/3) = sqrt(a1/(3*a3)) [sym mean]
+  S_1 >= S_2 <=> a2^2/(9*a3^2) >= a1/(3*a3) <=> a2^2 >= 3*a1*a3 ✓
+
+And ULC k=1 (d=3): a1^2 >= 3*a2
+= Maclaurin S_2 >= S_3 for the roots!
+Because:
+  S_3 = (rho1*rho2*rho3)^{1/3} = (1/a3)^{1/3} [geom mean]
+  S_2 >= S_3 <=> a1/(3*a3) >= 1/a3 ... wait that gives a1 >= 3?
+  Let me recheck: S_2 = (e_2/C(3,2))^{1/2} where e_2 = rho1*rho2+...
+  Actually e_k are polys in roots rho, and alpha_k = alpha_3*e_{3-k}.
+  So: a1/a3 = e_2, a2/a3 = e_1, 1/a3 = e_3.
+  S_1 = (e_1/3)^1 = a2/(3*a3)
+  S_2 = (e_2/3)^{1/2} = (a1/(3*a3))^{1/2}
+  S_3 = e_3^{1/3} = (1/a3)^{1/3}
+  S_1>=S_2: a2^2/(9*a3^2) >= a1/(3*a3) => a2^2 >= 3*a1*a3 = ULC k=2 ✓
+  S_2>=S_3: a1/(3*a3) >= 1/a3 ... a1 >= 3?? That cannot be right.
+  Correct: S_2^2 >= S_3^2 means e_2/3 >= e_3^{2/3}
+  = a1/(3*a3) >= (1/a3)^{2/3}
+  = a1^3 >= 27/a3 ... hmm, not ULC k=1.
+
+Summary: S_1>=S_2 = ULC k=2. S_2>=S_3 is a different condition (not ULC k=1).
+ULC k=1 (d=3) comes from Turán, NOT directly from Maclaurin means.
+
+CORRECTED RELATIONSHIPS:
+  ULC k=1 (alpha_1^2 >= 3*alpha_2): comes from Turán (unconditional)
+  ULC k=2 (alpha_2^2 >= 3*alpha_1*alpha_3): = Maclaurin S_1>=S_2 for roots
+  Both hold for tournament conflict graphs (computationally verified)
+  ULC k=2 is CONDITIONAL on TRRT (roots being real), but also proved
+  for complete tripartite co-conflict graphs (UNCONDITIONAL for K_{a,b,c})
