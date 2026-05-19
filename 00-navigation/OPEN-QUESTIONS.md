@@ -1037,6 +1037,26 @@ See `07-reflections/ulc-turan-unconditional-proof.md`.
 
 ---
 
+## OPEN-Q-051 🔴 Interlacing Approach to TRRT
+
+**The proof strategy (computationally supported):**
+If for every cycle C* in Omega(T), I(Omega \ C*, x) interlaces I(Omega, x)
+when deg(I_del) = deg(I_full) - 1, then TRRT follows by induction via Hermite-Biehler.
+
+**The deletion-contraction:** I(Omega,x) = A(x) + x*B(x) where A = I(Omega\C*) and B = I(Omega-N[C*]).
+
+**Computational evidence:** 444/444 verified at n=6 (stride 16 sampling), 0 failures.
+
+**Why it's hard:** The proof needs to show B interlaces A for the specific structure of tournament conflict graphs. This is analogous to the Chudnovsky-Seymour claw-free proof but for non-claw-free graphs (n≥9).
+
+**Connection:** If Omega(T) is always a matroid/gammoid complex, TRRT follows from Choe-Oxley-Sokal-Wagner stability of matroid independence polynomials.
+
+**Priority:** 🔴 CRITICAL. Would unconditionally prove TRRT, the central open conjecture.
+**Source:** oracle-2026-05-19-S1, `interlacing_investigation.py`.
+See `07-reflections/interlacing-and-trrt-proof-strategy.md`.
+
+---
+
 ## OPEN-Q-049 🟢 Root Ratio as SC Detector
 
 **Conjecture:** SC tournaments have the most asymmetric root ratio $\rho_2/\rho_1$ (minimum ratio) at each $n$.

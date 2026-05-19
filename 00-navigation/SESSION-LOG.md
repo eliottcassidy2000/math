@@ -26,6 +26,8 @@ Chronological record of all sessions. Every new Claude instance adds an entry at
 
 **Open:** Unconditional ULC at k=2 for all K₄-free co-conflict graphs (not just complete tripartite). Lorentzian property. Middle root convergence at n→∞.
 
+**ALSO (interlacing):** Verified 444/444 interlacing cases at n=6 (0 fails). This is a computational hint toward proving TRRT by induction: I(Omega\C*,x) interlaces I(Omega,x) when degree drops by 1. See `interlacing-and-trrt-proof-strategy.md` and OPEN-Q-051.
+
 ## oracle-2026-05-17-S1 — 2026-05-17
 
 **Summary:** Exhaustive root spectrum analysis at n=6, ULC theorem proved, Euler characteristic connection, full fugacity axis, degree-3 structure at n=9.

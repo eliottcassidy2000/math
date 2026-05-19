@@ -1,0 +1,6 @@
+INTERLACING n=6 (stride 16):
+  holds=444, fails=0, skip=4468 (1.5s)
+
+n=9 real-root check (50 samples):
+  complex roots: 0/50 (✓ all real)
+  [11.9s total]
