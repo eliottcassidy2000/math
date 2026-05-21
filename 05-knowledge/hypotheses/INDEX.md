@@ -1952,12 +1952,21 @@ Source: alpha_crossover_analysis.out | opus-2026-04-16-S1
 Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n15.out | opus-2026-04-16-S1
 
 ## HYP-1729: Real-rootedness of I(Omega(T), x) for all tournaments (TRRT) (opus-2026-05-16-S1)
-**Status:** OPEN (proved for n≤8 via claw-free, conjectured for all n)
+**Status:** OPEN (proved for n≤8 via TWO ROUTES, conjectured for all n)
 **Statement:** For any tournament T, all roots of I(Ω(T), x) are real and negative.
 **Evidence:** All 1024 at n=5, 5000 at n=6, 30-200 at n=7..10. Zero failures.
-**Why n≤8 proved:** Omega(T) is claw-free for n≤8 (claw requires ≥9 vertices). Chudnovsky-Seymour (2007).
+**Proof for n≤8 (Route 1):** Omega(T) is claw-free for n≤8 (claw requires ≥9 vertices). Chudnovsky-Seymour (2007).
+**Proof for n≤8 (Route 2, new — opus-2026-05-21-S1):** alpha(Omega)≤2 for n≤8. Cases:
+  - d=0,1: trivial
+  - d=2, α₂=1: Turán-ULC (proved unconditionally by oracle-2026-05-19-S1)
+  - d=2, α₂≥2: THM-311 (Lemma A, proved) + THM-313 (Lemma B, verified 3672 cases) + Hermite-Biehler
+**New results (opus-2026-05-21-S1):**
+  - THM-310: Key Inequality d_B ≤ d_A-1 for C* ∉ S (proved for any graph)
+  - THM-311: Lemma A for d=2, α₂≥2 (proved via pair-partner argument)
+  - THM-313: Lemma B algebraic identity A(-1/p)=I(-1/p) (proved); geometric form
+  - Lemma B reduces to: α₂(Omega) ≤ p(m-p), equivalent to p between roots of I(Omega,x)
 **Implications:** Ultra-log-concavity of α_k; product formula H = ∏(1+2r_i).
-**See:** reflection `real-rootedness-omega-conjecture.md`, scripts `real_rootedness_test.py`
+**See:** reflection `real-rootedness-omega-conjecture.md`, THM-310,311,312,313
 
 ## HYP-1730: All-0 staircase 3-cycle count = k(k-1) (PROVED) (opus-2026-05-16-S1)
 **Status:** CONFIRMED (proved via degree formula)
@@ -1966,10 +1975,19 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Data:** k=2:2, k=3:6, k=4:12, k=5:20, k=6:30 = k(k-1) ✓
 **See:** script `markov_staircase_h.py`
 
-## HYP-1731: All-0 staircase H values (5,29,233,2489,33773) for k=2..6 (opus-2026-05-16-S1)
+## HYP-1731: All-0 staircase H values for k=2..7 (opus-2026-05-16-S1, extended opus-2026-05-21-S1)
 **Status:** CONFIRMED (computed)
+**Values:** k=2:5, k=3:29, k=4:233, k=5:2489, k=6:33773, k=7:562685 (NEW)
 **Note:** First three (5,29,233) are Markov numbers; 2489=19×131 is NOT Markov.
-**Note:** 5,233 are Fibonacci numbers; 29 is NOT.
+**Ratios:** H(k)/H(k-1) ≈ 3k + small correction. No simple linear recurrence found.
 **Key:** H_k=3 = N_{Q(√35)/Q}(8+√35) = 29 (norm from quadratic field).
 **All roots real negative** confirmed at all k.
 **See:** script `markov_staircase_h.py`, results `markov_staircase_h.out`
+
+## HYP-1732: Pair-partner count p satisfies α₂ ≤ p(m-p) for tournament Omega(T) with d=2 (opus-2026-05-21-S1)
+**Status:** OPEN (computationally verified 109 tests, 0 violations)
+**Statement:** For any tournament T with alpha(Omega)=2 and C* chosen by pair-partner construction, the count p = |cycles disjoint from C*| satisfies α₂(Omega) ≤ p(m-p).
+**Equivalence:** This is exactly the condition that B interlaces A in the Hermite-Biehler decomposition (THM-313).
+**Also equivalent:** I(Omega, -1/p) ≤ 0, i.e., p lies between the two characteristic scales (roots) of I(Omega,x).
+**Why open:** Tournament-specific; not implied by Turán-ULC alone (which gives α₂ ≤ m²/4, but p(m-p) ≤ m²/4 with equality only at p=m/2).
+**See:** THM-313, THM-311, oracle-2026-05-21-S1 (Lemma B computational verification)

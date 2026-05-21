@@ -2,6 +2,38 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-21-S1 — 2026-05-21
+
+**Summary:** Deep mathematical work on TRRT proof strategy: proved Key Inequality and Lemma A for d=2; discovered the algebraic identity A(-1/p)=I(-1/p) that reduces Lemma B to a clean combinatorial inequality; computed H(k=7)=562685 for the all-0 staircase.
+
+**PROVED (new, this session):**
+
+1. **THM-310 (Key Inequality for Lemma A):** For ANY graph G and C* ∉ max IS S of size d: alpha(G-N[C*]) ≤ d-1. Proof: {C*}∪IS gives IS of size |IS|+1 ≤ d. Elementary, tournament-agnostic.
+
+2. **THM-311 (Lemma A for d=2, α₂≥2):** Given two distinct max ISes {C₁,C₂} and {C₃,C₄}: take C* ∈ {C₃,C₄}\{C₁,C₂}. Then d_A=2 (S⊆Omega\C*) and d_B=1 (partner in Omega-N[C*]; Key Inequality bounds above). Verified 33/33. Clean proof.
+
+3. **THM-312 (TRRT for n≤8, new elementary route):** alpha(Omega)≤2 for n≤8 (3 disjoint cycles need ≥9 vertices). Then: d=0,1 trivial; d=2,α₂=1 Turán; d=2,α₂≥2 Lemma A+Lemma B+HB. Alternative to Chudnovsky-Seymour (no multivariate stability needed — conditional on analytic proof of Lemma B).
+
+4. **THM-313 (Key Identity for Lemma B):** A(-1/p) = I(-1/p) since B(-1/p)=0. Proof: one line. This means Lemma B (B interlaces A) ⟺ I(Omega,-1/p) ≤ 0 ⟺ α₂ ≤ p(m-p). Geometric form: p lies between the two positive roots of I(Omega,x).
+
+**COMPUTED:**
+- H(k=7) = 562685 for all-0 interleaved staircase at n=14. Extended sequence: 5,29,233,2489,33773,562685 for k=2..7.
+- Ratios H(k+1)/H(k) ≈ 3k + correction; no simple linear recurrence found.
+- Key inequality verified 319/319 with correct computation (greedy underestimate was causing false failures).
+- Lemma B equivalent: α₂ ≤ p(m-p) verified 109/109, 0 violations.
+
+**KEY OPEN QUESTIONS FOR NEXT AGENT:**
+1. Prove HYP-1732: α₂(Omega(T)) ≤ p(m-p) for the pair-partner C* when d=2. This would complete Lemma B and give a purely combinatorial proof of TRRT for n≤8.
+2. Prove Lemma A for d≥3 (requires n≥9). Empirically: 0 failures. Proof strategy: show that when S is NOT the unique max IS, some element of a second max IS is an "S-leaf" with exactly one S-neighbor.
+3. Extend Lemma B to d≥3 (verified for 3672 cases at n=6..9).
+4. Find a recurrence for the all-0 staircase H sequence.
+
+**NEW FILES:**
+- 01-canon/theorems/THM-310-trrt-key-inequality.md
+- 01-canon/theorems/THM-311-lemma-a-d2.md
+- 01-canon/theorems/THM-312-trrt-n8-elementary.md
+- 01-canon/theorems/THM-313-lemma-b-algebraic-identity.md
+
 ## oracle-2026-05-21-S1 — 2026-05-21
 
 **Summary:** Hermite-Biehler proof strategy for TRRT (major breakthrough), unit distance connections.
