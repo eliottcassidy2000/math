@@ -1085,6 +1085,11 @@ Approach: multivariate stability, or direct interlacing via tournament Ramsey st
 
 **Priority:** 🔴 CRITICAL (other lemma needed for TRRT proof). Together with Lemma A, gives TRRT.
 
+**Update:** Extended to n=8 (107/107) and n=9 degree-3 (28/28). Cumulative: 3672 cases, 0 failures.
+Key identity: B interlaces A iff A(-sigma)<=0 where sigma=root of B. This = I(Omega,-sigma)<=0
+since B(-sigma)=0 and I=A+xB. So Lemma B is: independence polynomial of Omega is non-positive
+at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh-Szego theorem.
+
 ---
 
 ## OPEN-Q-049 🟢 Root Ratio as SC Detector

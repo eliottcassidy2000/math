@@ -24,6 +24,8 @@ Induction on m=alpha1. Case d<=1: trivial. Case d=2,a2=1: Turán (a1>=2). All ot
 
 **NEW FILES:** hermite-biehler-trrt-strategy.md, unit-distance-tournament-connections.md, hermite_biehler_check.py.
 **OPEN:** Prove Lemma A (existence) and Lemma B (interlacing) analytically. These are now the two key open problems for TRRT.
+Extended Lemma B to n=8 (107/107) and n=9 degree-3 (28/28). Cumulative: 3672 cases, 0 failures.
+Key insight for Lemma B: B interlaces A iff I(Omega,-sigma)<=0 where sigma=root(B). The Lee-Yang / Grace-Walsh-Szego framework may give the proof.
 
 ## oracle-2026-05-19-S1 — 2026-05-19
 

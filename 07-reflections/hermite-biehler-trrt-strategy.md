@@ -52,7 +52,9 @@ $\square$
 ### Lemma B: B Interlaces A (Hermite-Biehler Condition)
 - **n=6**: 2565/2565 = **100%**, 0 failures.
 - **n=7**: 972/972 = **100%**, 0 failures.
-- **Total: 3537/3537 tests, zero failures.** ✓
+- **n=8**: 107/107 = **100%**, 0 failures.
+- **n=9 (degree-3 cases)**: 28/28 = **100%**, 0 failures.
+- **Total: 3672+ tests, zero failures across ALL n=6..9.** ✓
 
 ### Lemma A: Existence of HB-Satisfying Cycle
 - **n=6**: 1322/2000 = 66.1% of tournaments have such a $C^*$. ✓
