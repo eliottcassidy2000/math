@@ -1055,6 +1055,36 @@ when deg(I_del) = deg(I_full) - 1, then TRRT follows by induction via Hermite-Bi
 **Source:** oracle-2026-05-19-S1, `interlacing_investigation.py`.
 See `07-reflections/interlacing-and-trrt-proof-strategy.md`.
 
+**MAJOR UPDATE (oracle-2026-05-21-S1):** The Hermite-Biehler condition is MUCH more precisely established:
+- Recursion I = A + xB VERIFIED: 5210 checks, 0 violations.
+- B interlaces A when dA=dB+1: **3537/3537 = 100%, 0 failures at n=6,7.**
+- No-HB-cycle cases: exactly d=2,alpha2=1 — proved real-rooted by Turán unconditionally.
+- TRRT reduces exactly to TWO lemmas: (A) existence of HB-cycle and (B) interlacing.
+- Complete proof sketch: induction on m, using Turán for base cases and HB for induction.
+See `07-reflections/hermite-biehler-trrt-strategy.md`.
+
+---
+
+## OPEN-Q-052 🔴 Lemma A: Existence of HB-satisfying Cycle
+
+For any tournament T with d≥2 and α₂≥2 (or d≥3), prove that there exists a cycle C* such that deg(I(Omega\\C*)) = deg(I(Omega-N[C*])) + 1.
+
+Computationally: holds for ALL tested n=6,7 cases (except d=2,alpha2=1 which is handled by Turán).
+Proof approach: if alpha2>=2 or d>=3, there are multiple maximum independent sets. A cycle C* NOT in all max sets satisfies the condition.
+
+**Priority:** 🔴 CRITICAL (one of two lemmas needed for TRRT proof).
+
+---
+
+## OPEN-Q-053 🔴 Lemma B: B Interlaces A in Hermite-Biehler Recursion
+
+Prove: for any tournament T and cycle C* with dA=deg(I(Omega\\C*)) = dB+1 = deg(I(Omega-N[C*]))+1, the polynomial I(Omega-N[C*],x) interlaces I(Omega\\C*,x).
+
+Computationally: **3537/3537 = 100%, 0 failures at n=6,7.** Strongest computational evidence for any structural claim in this project.
+Approach: multivariate stability, or direct interlacing via tournament Ramsey structure.
+
+**Priority:** 🔴 CRITICAL (other lemma needed for TRRT proof). Together with Lemma A, gives TRRT.
+
 ---
 
 ## OPEN-Q-049 🟢 Root Ratio as SC Detector

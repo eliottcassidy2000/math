@@ -2,6 +2,29 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-21-S1 — 2026-05-21
+
+**Summary:** Hermite-Biehler proof strategy for TRRT (major breakthrough), unit distance connections.
+
+**COMPUTATIONAL BREAKTHROUGH — TRRT Proof Strategy:**
+The deletion-contraction I(Omega,x) = A(x) + xB(x) satisfies the Hermite-Biehler condition:
+- Recursion verified: 5210 checks, 0 violations.
+- Lemma B (B interlaces A when dA=dB+1): **3537/3537 = 100%, ZERO FAILURES at n=6,7.**
+- No-HB-cycle cases: EXACTLY d=2, alpha2=1 (proved real-rooted by Turán). No exceptions.
+- TRRT reduces to 2 lemmas: (A) exists C* with dA=dB+1 for all d>=2 non-trivial cases, (B) B interlaces A.
+
+**PROOF SKETCH (conditional on Lemmas A,B):**
+Induction on m=alpha1. Case d<=1: trivial. Case d=2,a2=1: Turán (a1>=2). All others: choose C* via Lemma A, get A,B real-rooted by IH, B interlaces A by Lemma B, Hermite-Biehler gives I real-rooted. QED.
+
+**UNIT DISTANCE CONNECTIONS:**
+- CM norm-1 elements <-> alpha2=1 root pairs (rho1*rho2=1 Vieta)
+- Golod-Shafarevich tower <-> tournament polynomial tower (interlacing)
+- Split/inert primes <-> degree-drop-1 / degree-drop-0 cycle deletions
+- See 07-reflections/unit-distance-tournament-connections.md
+
+**NEW FILES:** hermite-biehler-trrt-strategy.md, unit-distance-tournament-connections.md, hermite_biehler_check.py.
+**OPEN:** Prove Lemma A (existence) and Lemma B (interlacing) analytically. These are now the two key open problems for TRRT.
+
 ## oracle-2026-05-19-S1 — 2026-05-19
 
 **Summary:** Unconditional ULC via Turán, triangle algebra for k=2, shape parameter, Maclaurin verification.

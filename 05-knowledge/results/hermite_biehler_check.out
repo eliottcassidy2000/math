@@ -1,0 +1,64 @@
+=== HERMITE-BIEHLER: B interlaces A ===
+I = A + xB, Hermite-Biehler: I real-rooted IFF A,B real-rooted AND B interlaces A
+
+n=6 (1000 samples):
+  Recursion: 4476 ok, 0 fail
+  Degree-drop distribution: {0: 3935, 1: 541}
+  HB (B interlaces A, dA=dB+1): 2565/2565=100%, fails=0
+
+n=7 (300 samples):
+  Recursion: 1461 ok, 0 fail
+  Degree-drop distribution: {0: 1409, 1: 52}
+  HB (B interlaces A, dA=dB+1): 972/972=100%, fails=0
+
+[3.1s]
+
+KEY CONCLUSION:
+If HB holds for ALL cases (0 failures), then:
+  I(Omega,x) = A(x) + x*B(x) where B interlaces A
+  => By Hermite-Biehler: I is real-rooted whenever A and B are real-rooted
+  => TRRT follows by induction (A,B have fewer cycles -> real-rooted by IH)
+=== EXISTENCE CHECK: Every tournament has a HB-satisfying cycle? ===
+For each T: does SOME C* exist with dA=dB+1 AND B interlaces A?
+
+n=6 (2000 samples):
+  Tournaments with NO HB-satisfying C*: 678
+  ✗ 678 have no HB cycle!
+  HB holds when found: 1225, HB fails when dA=dB+1: 0
+
+n=7 (500 samples):
+  Tournaments with NO HB-satisfying C*: 42
+  ✗ 42 have no HB cycle!
+  HB holds when found: 457, HB fails when dA=dB+1: 0
+
+CONCLUSION:
+If every tournament always has at least one C* with dA=dB+1 AND B interlaces A,
+then TRRT follows by induction: I=A+xB is real-rooted by Hermite-Biehler.
+
+This gives the PROOF STRATEGY:
+  1. Induction on number of cycles m.
+  2. Base: m=0, I=1 trivially real-rooted.
+  3. Inductive step: choose a cycle C* with dA=dB+1 and B interlaces A.
+  4. A and B are real-rooted by IH (fewer cycles).
+  5. By Hermite-Biehler: I = A + xB is real-rooted. QED.
+
+The MISSING PIECE: prove that such C* ALWAYS exists.
+=== WHAT ARE THE NO-HB-CYCLE TOURNAMENTS? ===
+No-HB-cycle distribution by degree d: {2: 678}
+No-HB-cycle distribution by alpha2: {1: 678}
+
+INSIGHT: Are no-HB-cycle tournaments exactly those with alpha2=1 and d=2?
+  d=1 (degree-1, alpha2=0): 0
+  d=2 (degree-2): 678 total
+  d=2 with alpha2=1: 678
+  d=2 with alpha2>=2: 0
+  d>=3: 0
+
+For d=2 with alpha2=1: I=1+a1*x+x^2, real-rooted iff a1>=2.
+Turán gives a1^2 >= 4 iff a1 >= 2. So these are ALWAYS real-rooted by Turán. ✓
+
+PROOF STRATEGY REFINEMENT:
+  Case 1 (d<=1): trivially real-rooted
+  Case 2 (d=2, alpha2=1): real-rooted by Turán (a1^2 >= 4*1=4 iff a1>=2)
+  Case 3 (all others): there exists C* with dA=dB+1 and B interlaces A
+  => Hermite-Biehler: I real-rooted by induction
