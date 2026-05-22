@@ -1984,10 +1984,12 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **All roots real negative** confirmed at all k.
 **See:** script `markov_staircase_h.py`, results `markov_staircase_h.out`
 
-## HYP-1732: Pair-partner count p satisfies α₂ ≤ p(m-p) for tournament Omega(T) with d=2 (opus-2026-05-21-S1)
-**Status:** OPEN (computationally verified 109 tests, 0 violations)
+## HYP-1732: Pair-partner count p satisfies α₂ ≤ p(m-p) for tournament Omega(T) with d=2 (opus-2026-05-21-S1, updated opus-2026-05-22-S2)
+**Status:** OPEN (computationally verified 1637 tests n=7..11, 0 violations)
 **Statement:** For any tournament T with alpha(Omega)=2 and C* chosen by pair-partner construction, the count p = |cycles disjoint from C*| satisfies α₂(Omega) ≤ p(m-p).
-**Equivalence:** This is exactly the condition that B interlaces A in the Hermite-Biehler decomposition (THM-313).
-**Also equivalent:** I(Omega, -1/p) ≤ 0, i.e., p lies between the two characteristic scales (roots) of I(Omega,x).
-**Why open:** Tournament-specific; not implied by Turán-ULC alone (which gives α₂ ≤ m²/4, but p(m-p) ≤ m²/4 with equality only at p=m/2).
-**See:** THM-313, THM-311, oracle-2026-05-21-S1 (Lemma B computational verification)
+**Equivalences (all proved):** B interlaces A (HB condition) ⟺ I(Omega,-1/p)≤0 (via THM-313 identity) ⟺ α₂ ≤ p(m-p).
+**Portal structure (THM-315, proved):** B-B pairs only between groups with DISJOINT portal sets. Same-portal pairs impossible (sharing a V(C*) vertex = conflict).
+**Key inequality (proved):** For each B-B pair (b1,b2): e_AB(b1)+e_AB(b2) ≤ p (from K_3-free structure).
+**Why open:** Full proof requires tournament structure beyond K_3-free. Turán-ULC (proved) gives weaker α₂ ≤ m²/4. 
+**Note:** TRRT for d=2 already follows from Turán-ULC independently. HYP-1732 would give a structural HB-based proof.
+**See:** THM-313, THM-311, THM-315, oracle-2026-05-21-S1 (Lemma B computational verification)

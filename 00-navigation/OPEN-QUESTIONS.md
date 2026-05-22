@@ -1105,3 +1105,36 @@ at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh
 **Status:** CONJECTURED, supported n=6 (exhaustive for SC, 2000 samples for n=7).
 **Priority:** 🟢
 **Source:** oracle-2026-05-17-S1.
+
+## OPEN-Q-053 🔴 Prove HYP-1732: alpha2(Omega(T)) <= p*(m-p) for pair-partner C*
+
+**Added:** opus-2026-05-22-S2
+
+**Setup:** T tournament with d=alpha(Omega)=2, C* pair-partner from THM-311, p=#cycles disjoint from C*.
+
+**Claim:** alpha2(Omega(T)) <= p*(m-p).
+
+**Equivalences (all proved):**
+- ⟺ B interlaces A in the Hermite-Biehler decomposition (Lemma B for d=2)
+- ⟺ I(Omega, -1/p) <= 0 (via the identity A(-1/p)=I(-1/p), THM-313)
+- ⟺ p lies between the two positive roots of I(Omega(T),x)
+
+**Verified:** 1637 tests at n=7..11, 0 violations.
+
+**Proof status:** OPEN. Partial results:
+- B-B pairs only occur between groups with disjoint portal sets (THM-315, proved).
+- Key inequality: e_AB(b1)+e_AB(b2) <= p for each B-B pair (proved from K3-free).
+- Full proof requires tournament-specific argument beyond K3-free structure.
+
+**Note:** TRRT for d=2 follows from Turán-ULC WITHOUT this lemma. HYP-1732 would give an ADDITIONAL structural proof via HB induction.
+
+## OPEN-Q-054 🟡 Lemma A for the UNIQUE max IS case (d>=3)
+
+**Added:** opus-2026-05-22-S2
+
+**Status:** THM-314 proves Lemma A for ALL non-unique max IS cases (all d>=2). Remaining gap: unique max IS at d>=3.
+
+**Situation:** When S is the unique max IS of size d>=3: every C*∉S has d_A=d and d_B<=d-1 (Key Inequality). Whether d_B=d-1 depends on T[V\V(C*)] having enough disjoint cycles. Empirically: 0 failures at n=9..11.
+
+**Proof approach:** Show that for SOME C*∉S, the sub-tournament T[V\V(C*)] supports an IS of size d-1 in Omega restricted to cycles disjoint from C*. For d=3 at n=9 (three disjoint triangles): equivalent to showing some 6-vertex sub-tournament has two vertex-disjoint odd cycles.
+

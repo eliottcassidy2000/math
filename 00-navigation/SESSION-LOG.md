@@ -2,6 +2,36 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-22-S2 — 2026-05-22
+
+**Summary:** Continued TRRT exploration: proved Lemma A for all non-unique max IS cases (THM-314, universal); proved portal-disjoint structure for B-B pairs (THM-315); verified HYP-1732 at n=7..11 (1637 tests total, 0 violations); ran TRRT at n=11 (d=2 cases all pass by Turán); extensively investigated HYP-1732 proof (structurally constrained but full proof open).
+
+**PROVED (new):**
+
+1. **THM-314 (Lemma A, non-unique IS, universal):** When max IS S is NOT unique, take S'≠S max IS. Any C*∈S\S' satisfies d_A=d (S' proves it), d_B=d-1 (Key Inequality gives upper, S\{C*} gives lower). Hermite-Biehler condition d_A=d_B+1 holds. Proof: 3 lines. Works for ALL d≥2.
+
+2. **THM-315 (Portal-disjoint structure):** Two B-cycles can form a B-B disjoint pair ONLY if their portal sets (V(b_i)∩V(C*)) are disjoint. Proof: trivial from vertex-disjointness. Same-portal pairs = 0 confirmed computationally. This gives a tripartite/multipartite structure to D[B].
+
+**VERIFIED:**
+- HYP-1732: α₂ ≤ p(m-p) verified 1637 tests (n=7..11), 0 violations.
+- TRRT at n=11: 5 tests, 0 failures (degree-2 check; all pass by Turán-ULC).
+
+**KEY INSIGHT:**
+- TRRT for d=2 is COMPLETELY PROVED by Turán-ULC (oracle-S19): I=1+mx+α₂x² real-rooted iff α₂≤m²/4. No need for HB/HYP-1732.
+- HYP-1732 would give an ALTERNATIVE structural proof via HB, but isn't needed for the d=2 case.
+- For d≥3: Lemma A (THM-314 for non-unique IS) + Lemma B (empirically verified) + HB gives TRRT inductively. Gap: unique max IS case at d≥3 + analytic proof of Lemma B.
+
+**OPEN (assigned to next agent):**
+1. Prove HYP-1732 (α₂ ≤ p(m-p)) analytically — the key lemma for the structural HB proof.
+2. Prove Lemma A for unique max IS at d≥3: show some C* gives d_B=d-1.
+3. Prove Lemma B for d≥3 analytically (currently only verified computationally).
+4. Extend TRRT verification to n=12 for d=3 cases.
+
+**NEW FILES:**
+- 01-canon/theorems/THM-314-lemma-a-nonunique.md
+- 01-canon/theorems/THM-315-hyp1732-portal.md
+- 07-reflections/trrt-proof-architecture.md
+
 ## opus-2026-05-21-S1 — 2026-05-21
 
 **Summary:** Deep mathematical work on TRRT proof strategy: proved Key Inequality and Lemma A for d=2; discovered the algebraic identity A(-1/p)=I(-1/p) that reduces Lemma B to a clean combinatorial inequality; computed H(k=7)=562685 for the all-0 staircase.
