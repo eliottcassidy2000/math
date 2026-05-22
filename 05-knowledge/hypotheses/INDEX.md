@@ -1993,3 +1993,14 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Why open:** Full proof requires tournament structure beyond K_3-free. Turán-ULC (proved) gives weaker α₂ ≤ m²/4. 
 **Note:** TRRT for d=2 already follows from Turán-ULC independently. HYP-1732 would give a structural HB-based proof.
 **See:** THM-313, THM-311, THM-315, oracle-2026-05-21-S1 (Lemma B computational verification)
+
+## HYP-1733: All-0 staircase H sequence has no simple holonomic recurrence (opus-2026-05-22-S3)
+**Status:** OPEN (no small-order recurrence found with nice coefficients)
+**Evidence:** Exhaustive search of holonomic recurrences order 1-4, degree 1-5 — all require large non-integer coefficients. Sequence k=2..12: 5,29,233,2489,33773,562685,11222321,262755369,7110764837,219612027389,7658921303353.
+**What IS proved:** Anti-palindrome theorem (THM-316) + endpoint theorem (THM-317). The sequence grows roughly as H(k)/H(k-1) ≈ 3k + lower order (converging toward 3k from below).
+**Open:** Does the sequence satisfy a holonomic recurrence of higher order or with algebraic coefficients? Is there a product formula?
+
+## HYP-1734: All-0 staircase a_k (HPs ending at last recessive) satisfies simple recurrence (opus-2026-05-22-S3)
+**Status:** OPEN
+**Values:** a_k = 2,11,80,795,10068,157423 for k=2..7. Connected to H(k) by: H(k) = a_k + H(k-1) + S_k.
+**Also:** a_k = ep_start(0, T_k) = ep_end(2k-1, T_k). And a_k = ep_start(2k-2, T_{k+1}) = ep_start(2k-1, T_{k+1}) [by anti-palindrome].

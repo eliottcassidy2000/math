@@ -2,6 +2,41 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-22-S3 — 2026-05-22
+
+**Summary:** Extended staircase work: computed H(k=8..12), proved anti-palindrome theorem (THM-316) and endpoint theorem (THM-317). No simple holonomic recurrence found for H sequence. Also extended HYP-1732/TRRT context from S2.
+
+**COMPUTED:**
+- H(k) for k=1..12: 1,5,29,233,2489,33773,562685,11222321,262755369,7110764837,219612027389,7658921303353
+- Ratios H(k)/H(k-1) approach 3k from below: H(12)/H(11) ≈ 34.87 ≈ 3*12-1.13
+
+**PROVED:**
+
+**THM-316 (Anti-palindrome):** For all-0 staircase T_k: ep_start(v,T_k) = ep_end(2k-1-v,T_k) for ALL v.
+- Proof: φ(v)=2k-1-v is an anti-automorphism of T_k (reverses arcs AND vertex order).
+- Consequences: ep_start(0)=a_k, ep_start(1)=H(k-1), ep_start(2k-2)=ep_start(2k-1)=a_{k-1}.
+
+**THM-317 (Endpoint theorem):** ep_end(2k-2,T_k) = H(k-1).
+- Proof: vertex 2k-1 has out-degree 1, so any HP ending at 2k-2 has 2k-1 as second-to-last. Bijection with T_{k-1} HPs.
+- Verified for k=2..7.
+
+**FOUND (structural, no recurrence):**
+- H(k) = ep_end(2k-1) + ep_end(2k-2) + Σ_{v<2k-2} ep_end(v) = a_k + H(k-1) + S_k.
+- Holonomic search (order 1-4, degree 1-5): no recurrence with nice coefficients. All solutions have huge non-integer coefficients.
+- Growth: H(k)/H(k-1) ≈ 3k + sub-linear correction (second difference → ~0.17).
+
+**OPEN FOR NEXT AGENT:**
+1. Find recurrence for a_k = ep_end(2k-1, T_k) = HPs ending at last recessive.
+2. Understand why no simple holonomic recurrence exists: might be D-finite of higher order, or have non-polynomial coefficient structure.
+3. Connect to independence polynomial: I(Omega(T_k),x) has specific structure; does the degree d of I(Omega(T_k)) follow a pattern?
+4. HYP-1732: prove α₂ ≤ p(m-p) for the pair-partner C* (from S2).
+
+**NEW FILES:**
+- 01-canon/theorems/THM-316-staircase-antipalindrome.md
+- 01-canon/theorems/THM-317-staircase-endpoint.md
+- 04-computation/staircase_extended.py
+- 05-knowledge/results/staircase_extended.out
+
 ## opus-2026-05-22-S2 — 2026-05-22
 
 **Summary:** Continued TRRT exploration: proved Lemma A for all non-unique max IS cases (THM-314, universal); proved portal-disjoint structure for B-B pairs (THM-315); verified HYP-1732 at n=7..11 (1637 tests total, 0 violations); ran TRRT at n=11 (d=2 cases all pass by Turán); extensively investigated HYP-1732 proof (structurally constrained but full proof open).
