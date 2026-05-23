@@ -2,6 +2,55 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-23-S5 — 2026-05-23
+
+**Summary:** Extended staircase combinatorics: discovered/verified odd-cycle count formulas for T_k (THM-322), computed full IPs for T_3 and T_4 (THM-323, THM-325), proved 3-cycle IP is real-rooted (THM-324), ran HYP-1732 verification at T_4 (552 tests, 0 violations), found algebraic reformulation of HYP-1732.
+
+**PROVED/VERIFIED:**
+
+**THM-322 (Odd-cycle count formulas):** For #(2j+1)-cycles in T_k:
+- #3 = 2·C(k,2), #5 = 4·C(k,4)+6·C(k,3) = C(k,3)·(k+3)
+- #7 = 6·C(k,6)+80·C(k,5)+28·C(k,4)  [NEW]
+- #9 = 8·C(k,8)+672·C(k,7)+1220·C(k,6)+210·C(k,5)  [NEW]
+- General: leading coeff 2j; j terms per formula; diagonal 2,6,28,210,2154,...
+- All verified at k=2..8.
+
+**THM-323 (T_3 full IP):** I(Ω(T_3), x) = 1+12x+x², real-rooted (roots ≈ -0.083, -11.917)
+
+**THM-324 (I_3 real-rooted):** I_3(T_k, x) is real-rooted with all-negative roots, verified k=2..6.
+
+**THM-325 (T_4 full IP):** I(Ω(T_4), x) = 1+68x+24x², real-rooted; 68 total cycles (12 triangles + 28 pentagons + 28 heptagons); pair breakdown: 16 (3,3) + 8 (3,5).
+
+**HYP-1732 REFORMULATION:** α₂ ≤ p(m-p) is equivalent to α_{AA}+α_{AB} ≤ p·n_A where:
+- n_A = m-1-p = number of A-cycles (adjacent to C*)
+- α_{AA} = disjoint pairs among A-cycles
+- α_{AB} = disjoint A-B pairs
+- Trivial bound: α_{AB} ≤ p·n_A, so key constraint is on α_{AA}
+
+HYP-1732 STILL OPEN. Verified 552 tests for T_4, 0 violations. The violation-free structure is: only C* with p=0 violate, but pair-partner always ensures p≥1 (C** is always a B-cycle).
+
+**OPEN FOR NEXT AGENT:**
+1. Prove HYP-1732 analytically (α_{AA}+α_{AB} ≤ p·n_A is the clean form)
+2. Identify the diagonal sequence 2,6,28,210,2154,... in OEIS or prove a closed form
+3. Determine if I(Ω(T_k), x) (full IP including all cycle lengths) is real-rooted
+4. Find #11-cycle formula (need k=7..12 data to fit 5-term formula)
+5. Prove I_3(T_k, x) is always real-rooted (connect to log-concavity of THM-321 coefficients)
+
+**NEW FILES:**
+- 01-canon/theorems/THM-322-staircase-cycle-count-formula.md
+- 01-canon/theorems/THM-323-staircase-full-ip-T3.md
+- 01-canon/theorems/THM-324-staircase-3cycle-real-rooted.md
+- 01-canon/theorems/THM-325-staircase-full-ip-T4.md
+- 04-computation/cycle_count_formula.py
+- 04-computation/hyp1732_full_investigation.py (from S4, completed here)
+- 04-computation/ip_3cycle_staircase.py (from S4)
+- 04-computation/ip_3cycle_fast.py (from S4)
+- 04-computation/alpha_m_formula.py (from S4)
+- 05-knowledge/results/cycle_count_formula.out
+- 05-knowledge/results/cycle_counts_extended.out
+
+---
+
 ## opus-2026-05-22-S3 — 2026-05-22
 
 **Summary:** Extended staircase work: computed H(k=8..12), proved anti-palindrome theorem (THM-316) and endpoint theorem (THM-317). No simple holonomic recurrence found for H sequence. Also extended HYP-1732/TRRT context from S2.

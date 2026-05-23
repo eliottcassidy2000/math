@@ -2004,3 +2004,18 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Status:** OPEN
 **Values:** a_k = 2,11,80,795,10068,157423 for k=2..7. Connected to H(k) by: H(k) = a_k + H(k-1) + S_k.
 **Also:** a_k = ep_start(0, T_k) = ep_end(2k-1, T_k). And a_k = ep_start(2k-2, T_{k+1}) = ep_start(2k-1, T_{k+1}) [by anti-palindrome].
+
+## HYP-1735: Odd-cycle count diagonal sequence 2,6,28,210,2154,... has closed form (opus-2026-05-23-S5)
+**Status:** OPEN
+**Values:** d_j = #(2j+1)(T_{j+1}) = 2,6,28,210,2154 for j=1..5.
+**Observation:** d_j is the number of (2j+1)-cycles in the minimum-k staircase T_{j+1} (which has 2j+2 vertices and all (2j+1)-cycles skip exactly one vertex).
+**Non-match:** C(2j,j) = 2,6,20,70 (matches j=1,2, fails j=3,4). 2*(2j-1)!! = 2,6,30,210 (matches j=1,2,4, fails j=3).
+**Empirical:** No clean formula found. Ratios: 3, 14/3, 7.5, ~10.26 (not monotone in obvious way).
+**See:** 05-knowledge/results/cycle_counts_extended.out, THM-322
+
+## HYP-1736: I_3(T_k, x) is real-rooted with all-negative roots (opus-2026-05-23-S5)
+**Status:** VERIFIED k=2..6, OPEN for general k
+**Statement:** The independence polynomial of the 3-cycle conflict graph Ω_3(T_k) is real-rooted.
+**Evidence:** Explicit root computation for k=2..6. All roots real, all negative.
+**Connection:** Via THM-313, real-rootedness ⟺ Lemma B (B interlaces A) for each valid C*. Via THM-324, this is HYP-1736.
+**See:** THM-324, 05-knowledge/results/hyp1732_full_investigation.out

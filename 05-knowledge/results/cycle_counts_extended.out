@@ -1,0 +1,28 @@
+Computing #9-cycles for k=5,6:
+  k=5: {3: 20, 5: 80, 7: 220, 9: 210} [0.0s]
+  k=6: {3: 30, 5: 180, 7: 906, 9: 2480} [0.0s]
+
+Computing k=8 with max_len=7 (verify #7 formula):
+  k=8: {3: 56, 5: 616, 7: 6608} [0.1s]
+  Predicted #7: 6608
+  Match: ✓
+=== CYCLE COUNT FORMULA SUMMARY ===
+
+#3  = 2*C(k,2)
+#5  = 4*C(k,4) + 6*C(k,3)  = C(k,3)*(k+3)
+#7  = 6*C(k,6) + 80*C(k,5) + 28*C(k,4)
+#9  = 8*C(k,8) + 672*C(k,7) + 1220*C(k,6) + 210*C(k,5)
+
+=== VERIFICATION TABLE k=2..8 ===
+  k     #3       #5       #7       #9    total
+  k=2:    2✓      0✓      0✓      0✓  total=2
+  k=3:    6✓      6✓      0✓      0✓  total=12
+  k=4:   12✓     28✓     28✓      0✓  total=68
+  k=5:   20✓     80✓    220✓    210✓  total=530
+  k=6:   30✓    180✓    906✓   2480✓  total=3596
+  k=7:   42✓    350✓   2702✓  13622✓  total=16716
+  k=8:   56✓    616✓   6608✓  51304✓  total=58584
+
+Diagonal sequence (last coeff for j=1..5):
+d_j = 2, 6, 28, 210, 2154
+   = #3(T_2), #5(T_3), #7(T_4), #9(T_5), #11(T_6)

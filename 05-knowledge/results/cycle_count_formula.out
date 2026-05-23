@@ -1,0 +1,59 @@
+=== Cycle Count Formulas for All-0 Staircase T_k ===
+
+5-CYCLE COUNT FORMULA: C(k,3)*(k+3)
+  k=2: predicted=0, actual=0 ✓
+  k=3: predicted=6, actual=6 ✓
+  k=4: predicted=28, actual=28 ✓
+  k=5: predicted=80, actual=80 ✓
+  k=6: predicted=180, actual=180 ✓
+
+Computing k=7 odd cycles (max_len=9 to limit 9-cycles)...
+  k=7: {3: 42, 9: 13622, 7: 2702, 5: 350} [0.2s]
+  Predicted #5-cycles: 350
+
+VERIFYING #5-cycles = C(k,3)*(k+3):
+  k=2: C(2,3)*(2+3) = 0*5 = 0 ✓
+  k=3: C(3,3)*(3+3) = 1*6 = 6 ✓
+  k=4: C(4,3)*(4+3) = 4*7 = 28 ✓
+  k=5: C(5,3)*(5+3) = 10*8 = 80 ✓
+  k=6: C(6,3)*(6+3) = 20*9 = 180 ✓
+  k=7: C(7,3)*(7+3) = 35*10 = 350 ✓
+
+ANALYZING #7-cycles:
+  Data: [(4, 28), (5, 220), (6, 906), (7, 2702)]
+  C(k,4) =  [(4, 1), (5, 5), (6, 15), (7, 35)]
+  #7/C(k,4) =  [(4, 28.0), (5, 44.0), (6, 60.4), (7, 77.2)]
+  Fitting polynomial in k:
+  Degree 3 fit: [Fraction(-8120, 1), Fraction(16699, 3), Fraction(-1293, 1), Fraction(308, 3)]
+  Predictions: [(4, 28), (5, 220), (6, 906), (7, 2702)]
+
+=== FULL IP OF T_4 ===
+T_4: n=8, cycle counts: {3: 12, 7: 28, 5: 28}
+Total odd cycles: 68
+alpha_2 (full IP) = 24
+Pair breakdown by (len1, len2): [((3, 3), 16), ((3, 5), 8)]
+Full I(Omega(T_4), x) = 1 + 68x + 24x^2
+Discriminant = 68^2 - 4*24 = 4528
+Real-rooted: True
+Roots: -0.3548, -67.6452
+Roots x where p=|p| satisfies -1/p in [r2,r1]: p in [2.8186, 0.0148]
+
+=== SUMMARY TABLE ===
+  k     #3       #5       #7       #9   #total  alpha_2
+  k=2: #3=   2, #5=   0, #7=   0, #9=   0, total=    2
+  k=3: #3=   6, #5=   6, #7=   0, #9=   0, total=   12
+  k=4: #3=  12, #5=  28, #7=  28, #9=   0, total=   68
+  k=5: #3=  20, #5=  80, #7= 220, #9=   0, total=  320
+  k=6: #3=  30, #5= 180, #7= 906, #9=   0, total= 1116
+  k=7: #3=  42, #5= 350, #7=2702, #9=13622, total=16716
+
+=== CREATIVE STRUCTURE ===
+#3-cycles = k(k-1) = 2*C(k,2)
+#5-cycles = k(k-1)(k-2)(k+3)/6 = C(k,3)*(k+3)
+
+Interesting ratio: #5/#3 = C(k,3)*(k+3) / (k*(k-1))
+  k=3: #5/#3 = 6/6 = 1.0000
+  k=4: #5/#3 = 28/12 = 2.3333
+  k=5: #5/#3 = 80/20 = 4.0000
+  k=6: #5/#3 = 180/30 = 6.0000
+  k=7: #5/#3 = 350/42 = 8.3333

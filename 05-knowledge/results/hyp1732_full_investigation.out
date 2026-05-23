@@ -1,0 +1,95 @@
+======================================================================
+FULL ODD-CYCLE INVESTIGATION: ALL-0 STAIRCASE T_k
+======================================================================
+
+=== PART A: Cycle counts and independence polynomials ===
+
+  k   n   #3cyc   #5cyc   #7cyc   #total                  I_3               I_full  real_I3  real_full
+----------------------------------------------------------------------------------------------------
+k=2: n= 4, #3=   2, #5=   0, #7=   0, tot=   2  I3=[1, 2]  full=[1, 2]  realI3=Y  realFull=Y
+  [Formula check: OK, I_3 = [1, 2]]
+  I_3 roots: ['-0.5000']
+
+k=3: n= 6, #3=   6, #5=   6, #7=   0, tot=  12  I3=[1, 6, 1]  full=[1, 12, 1]  realI3=Y  realFull=Y
+  [Formula check: OK, I_3 = [1, 6, 1]]
+  I_3 roots: ['-5.8284', '-0.1716']
+  FULL - I_3 correction: [0, 6, 0]
+  FULL roots: ['-11.9161', '-0.0839']
+
+k=4: n= 8, #3=  12, #5=  28, #7=  28, tot=  68  I3=[1, 12, 16]  full=None  realI3=Y  realFull=?
+  [Formula check: OK, I_3 = [1, 12, 16]]
+  I_3 roots: ['-0.6545', '-0.0955']
+
+k=5: n=10, #3=  20, #5=  80, #7= 220, tot= 530  I3=[1, 20, 70, 20]  full=None  realI3=Y  realFull=?
+  [Formula check: OK, I_3 = [1, 20, 70, 20]]
+  I_3 roots: ['-3.1916', '-0.2443', '-0.0641']
+
+k=6: n=12, #3=  30, #5= 180, #7= 906, tot=5750  I3=[1, 30, 200, 240, 10]  full=None  realI3=Y  realFull=?
+  [Formula check: OK, I_3 = [1, 30, 200, 240, 10]]
+  I_3 roots: ['-23.1413', '-0.6768', '-0.1343', '-0.0475']
+
+
+=== PART B: HYP-1732 Structure Analysis (alpha=2 cases) ===
+
+k=2: alpha(Omega)=1, alpha2=0, not applicable. 
+k=3: alpha(Omega)=2, alpha2=1, not applicable. alpha2<2, Turan handles
+k=4 (n=8):
+  m=68 total odd cycles, alpha_2=24
+  Pair-partner tests: 552, violations: 0
+  Always bipartite G[A,B] (alpha_AA=0 always): False
+  Max alpha_AA observed: 20
+  HYP-1732 HOLDS for all 552 pair-partner choices. ✓
+  Example alpha_AA>0: C*=63, p=1, |A|=66, aa=18, ab=5, bound=67, holds=True
+
+k=5: 530 cycles, too large for full HYP-1732 analysis.
+k=6: 5750 cycles, too large for full HYP-1732 analysis.
+
+=== PART C: Real-Rootedness Analysis ===
+
+I_3(T_k, x) roots:
+  k=2: I_3=[1, 2], d=1, REAL-ROOTED, roots=['-0.500'], all_neg=True
+  k=3: I_3=[1, 6, 1], d=2, REAL-ROOTED, roots=['-5.828', '-0.172'], all_neg=True
+  k=4: I_3=[1, 12, 16], d=2, REAL-ROOTED, roots=['-0.655', '-0.095'], all_neg=True
+  k=5: I_3=[1, 20, 70, 20], d=3, REAL-ROOTED, roots=['-3.192', '-0.244', '-0.064'], all_neg=True
+  k=6: I_3=[1, 30, 200, 240, 10], d=4, REAL-ROOTED, roots=['-23.141', '-0.677', '-0.134', '-0.048'], all_neg=True
+
+I(Omega(T_k), x) roots (full):
+  k=2: I_full=[1, 2], d=1, REAL-ROOTED, roots=['-0.500'], all_neg=True
+  k=3: I_full=[1, 12, 1], d=2, REAL-ROOTED, roots=['-11.916', '-0.084'], all_neg=True
+  k=4: Too many cycles for full IP.
+  k=5: Too many cycles for full IP.
+  k=6: Too many cycles for full IP.
+
+=== PART D: Bipartite Structure Theorem Investigation ===
+
+Testing: For ALL choices of C* (not just pair-partner), is G[A,B] bipartite?
+(i.e., is alpha_AA = 0 for every C*?)
+
+k=2: alpha=1, skipping.
+k=3 (m=12 cycles, alpha2=1): alpha_AA=0 for ALL C*? False
+  Counterexamples (C*, |A|, p, alpha_AA): [(1, 11, 0, 1), (2, 11, 0, 1), (3, 11, 0, 1)]
+    C*=1: p=0, |A|=11, aa=1, ab=0, alpha2=1, bound=0, HYP-1732=False
+    C*=2: p=0, |A|=11, aa=1, ab=0, alpha2=1, bound=0, HYP-1732=False
+    C*=3: p=0, |A|=11, aa=1, ab=0, alpha2=1, bound=0, HYP-1732=False
+
+k=4 (m=68 cycles, alpha2=24): alpha_AA=0 for ALL C*? False
+  Counterexamples (C*, |A|, p, alpha_AA): [(0, 61, 6, 6), (1, 67, 0, 24), (2, 67, 0, 24)]
+    C*=0: p=6, |A|=61, aa=6, ab=12, alpha2=24, bound=372, HYP-1732=True
+    C*=1: p=0, |A|=67, aa=24, ab=0, alpha2=24, bound=0, HYP-1732=False
+    C*=2: p=0, |A|=67, aa=24, ab=0, alpha2=24, bound=0, HYP-1732=False
+
+k=5: 530 cycles, too large.
+k=6: 5750 cycles, too large.
+
+=== PART E: Key ratios and patterns ===
+
+k=2:
+  I_3 roots:  ['-0.5000']
+  full roots: ['-0.5000']
+  Roots of I_full vs I_3: [-0.5] vs [-0.5]
+
+k=3:
+  I_3 roots:  ['-5.8284', '-0.1716']
+  full roots: ['-11.9161', '-0.0839']
+  Roots of I_full vs I_3: [np.float64(-11.916079783099615), np.float64(-0.08392021690038397)] vs [np.float64(-5.82842712474619), np.float64(-0.1715728752538099)]
+

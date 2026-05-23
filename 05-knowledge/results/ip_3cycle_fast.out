@@ -1,0 +1,76 @@
+Computing 3-cycle IP for k=2..12
+============================================================
+k=2: d=2, I_3=[1, 2, 1] [0.0s]
+  ERROR: alpha_2: formula=0, computed=1
+k=3: d=2, I_3=[1, 6, 4] [0.0s]
+  ERROR: alpha_2: formula=1, computed=4
+k=4: d=4, I_3=[1, 12, 22, 12, 3] [0.0s]
+  ERROR: alpha_2: formula=16, computed=22
+  ERROR: alpha_3: formula=0, computed=12
+  ERROR: alpha_4: formula=0, computed=3
+k=5: d=4, I_3=[1, 20, 80, 80, 25] [0.0s]
+  ERROR: alpha_2: formula=70, computed=80
+  ERROR: alpha_3: formula=20, computed=80
+  ERROR: alpha_4: formula=0, computed=25
+k=6: d=6, I_3=[1, 30, 215, 420, 295, 90, 15] [0.0s]
+  ERROR: alpha_2: formula=200, computed=215
+  ERROR: alpha_3: formula=240, computed=420
+  ERROR: alpha_4: formula=10, computed=295
+  ERROR: alpha_5: formula=0, computed=90
+  ERROR: alpha_6: formula=0, computed=15
+k=7: d=6, I_3=[1, 42, 476, 1680, 2065, 1050, 210] [0.0s]
+  ERROR: alpha_2: formula=455, computed=476
+  ERROR: alpha_3: formula=1260, computed=1680
+  ERROR: alpha_4: formula=490, computed=2065
+  ERROR: alpha_5: formula=0, computed=1050
+  ERROR: alpha_6: formula=0, computed=210
+k=8: d=8, I_3=[1, 56, 924, 5320, 11130, 9800, 4060, 840, 105] [0.0s]
+  ERROR: alpha_2: formula=896, computed=924
+  ERROR: alpha_3: formula=4480, computed=5320
+  ERROR: alpha_4: formula=5320, computed=11130
+  ERROR: alpha_5: formula=560, computed=9800
+  ERROR: alpha_6: formula=0, computed=4060
+  ERROR: alpha_7: formula=0, computed=840
+  ERROR: alpha_8: formula=0, computed=105
+k=9: d=8, I_3=[1, 72, 1632, 14112, 47838, 68040, 45640, 15120, 2205] [0.2s]
+  ERROR: alpha_2: formula=1596, computed=1632
+  ERROR: alpha_3: formula=12600, computed=14112
+  ERROR: alpha_4: formula=31080, computed=47838
+  ERROR: alpha_5: formula=15120, computed=68040
+  ERROR: alpha_6: formula=280, computed=45640
+  ERROR: alpha_7: formula=0, computed=15120
+  ERROR: alpha_8: formula=0, computed=2205
+k=10: d=10, I_3=[1, 90, 2685, 32760, 169050, 376740, 396550, 214200, 61425, 9450, 945] [1.1s]
+  ERROR: alpha_2: formula=2640, computed=2685
+  ERROR: alpha_3: formula=30240, computed=32760
+  ERROR: alpha_4: formula=128100, computed=169050
+  ERROR: alpha_5: formula=156240, computed=376740
+  ERROR: alpha_6: formula=28000, computed=396550
+  ERROR: alpha_7: formula=0, computed=214200
+  ERROR: alpha_8: formula=0, computed=61425
+k=11: d=10, I_3=[1, 110, 4180, 68640, 509190, 1714020, 2736580, 2248400, 1002925, 242550, 27720] [8.0s]
+  ERROR: alpha_2: formula=4125, computed=4180
+  ERROR: alpha_3: formula=64680, computed=68640
+  ERROR: alpha_4: formula=420420, computed=509190
+  ERROR: alpha_5: formula=979440, computed=1714020
+  ERROR: alpha_6: formula=569800, computed=2736580
+  ERROR: alpha_7: formula=30800, computed=2248400
+  ERROR: alpha_8: formula=0, computed=1002925
+k=12: d=12, I_3=[1, 132, 6226, 132660, 1349205, 6569640, 15515500, 18858840, 12587575, 4781700, 1032570, 124740, 10395] [61.3s]
+  ERROR: alpha_2: formula=6160, computed=6226
+  ERROR: alpha_3: formula=126720, computed=132660
+  ERROR: alpha_4: formula=1173480, computed=1349205
+  ERROR: alpha_5: formula=4490640, computed=6569640
+  ERROR: alpha_6: formula=5716480, computed=15515500
+  ERROR: alpha_7: formula=1478400, computed=18858840
+  ERROR: alpha_8: formula=15400, computed=12587575
+
+=== EXTRACTING ALPHA_8 COEFFICIENTS ===
+Data for alpha_8: [(8, 105), (9, 2205), (10, 61425), (11, 1002925), (12, 12587575)]
+  k=8: alpha_8=105, contrib0=0, rhs=105
+  k=9: alpha_8=2205, contrib0=0, rhs=2205
+  k=10: alpha_8=61425, contrib0=0, rhs=61425
+  k=11: alpha_8=1002925, contrib0=0, rhs=1002925
+  k=12: alpha_8=12587575, contrib0=0, rhs=12587575
+
+=== PREDICTING ALPHA_8 FOR LARGER K ===
