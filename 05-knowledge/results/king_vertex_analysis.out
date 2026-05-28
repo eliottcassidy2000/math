@@ -1,0 +1,156 @@
+======================================================================
+KING VERTEX ANALYSIS — opus-2026-05-27-S1
+======================================================================
+
+============================================================
+THEOREM 1: Strong Connectivity Cut Theorem
+============================================================
+Verifying: T is strongly connected <=> every cut k has an upward tile
+  n=3: 2/2 correct, 0 errors
+  n=4: 8/8 correct, 0 errors
+  n=5: 64/64 correct, 0 errors
+  n=6: 1024/1024 correct, 0 errors
+  n=7: 32768/32768 correct, 0 errors
+
+Fraction of tilings that are strongly connected:
+  n=3: 1/2 = 0.5000
+  n=4: 5/8 = 0.6250
+  n=5: 50/64 = 0.7812
+  n=6: 903/1024 = 0.8818
+  n=7: 30773/32768 = 0.9391
+
+============================================================
+THEOREM 2: H-increment Lower Bound from King Theorem
+============================================================
+Verifying: H(T) - H(T-Q) >= 2 * |N^-(Q)|
+  n=3: 12 cases, 0 violations, 12 tight cases
+    Excess stats: min=0, max=0, avg=0.00
+  n=4: 104 cases, 0 violations, 80 tight cases
+    Excess stats: min=0, max=2, avg=0.46
+  n=5: 1560 cases, 0 violations, 560 tight cases
+    Excess stats: min=0, max=10, avg=2.72
+  n=6: 53184 cases, 0 violations, 7584 tight cases
+    Excess stats: min=0, max=30, avg=13.74
+
+============================================================
+THEOREM 3: Apex Tile Effect on H
+============================================================
+Flipping apex tile (n-1 -> 0) to (0 -> n-1): does H always increase?
+  n=3: 1 cases, delta<0: 0, delta=0: 0, delta>0: 1
+    delta stats: min=2, max=2, avg=2.000
+    SC before apex flip: 0/1, after: 1/1
+  n=4: 4 cases, delta<0: 0, delta=0: 1, delta>0: 3
+    delta stats: min=0, max=4, avg=2.000
+    SC before apex flip: 1/4, after: 4/4
+  n=5: 32 cases, delta<0: 2, delta=0: 4, delta>0: 26
+    DECREASES: [{'tile_bits': (0, 1, 1, 1, 0, 1), 'H0': 15, 'H1': 13, 'delta': -2, 'sc0': True, 'sc1': True, 'score0': [2, 2, 2, 2, 2], 'score1': [1, 2, 2, 2, 3]}, {'tile_bits': (0, 1, 1, 1, 1, 1), 'H0': 11, 'H1': 9, 'delta': -2, 'sc0': True, 'sc1': True, 'score0': [1, 2, 2, 2, 3], 'score1': [1, 1, 2, 3, 3]}]
+    SC before apex flip: 18/32, after: 32/32
+  n=6: 512 cases, delta<0: 65, delta=0: 62, delta>0: 385
+    DECREASES: [{'tile_bits': (0, 1, 1, 1, 1, 0, 0, 1, 0, 0), 'H0': 41, 'H1': 37, 'delta': -4, 'sc0': True, 'sc1': True, 'score0': [2, 2, 2, 3, 3, 3], 'score1': [2, 2, 2, 2, 3, 4]}, {'tile_bits': (0, 1, 1, 1, 1, 1, 0, 1, 0, 0), 'H0': 41, 'H1': 33, 'delta': -8, 'sc0': True, 'sc1': True, 'score0': [2, 2, 2, 3, 3, 3], 'score1': [2, 2, 2, 2, 3, 4]}]
+    SC before apex flip: 391/512, after: 512/512
+
+============================================================
+THEOREM 4: King Position in Hamiltonian Paths
+============================================================
+
+  n=3: Position of Q in Hamiltonian paths (grouped by max_degree)
+    deg_Q=1: 2 tourn, avg_frac_first=0.333, avg_frac_last=0.333
+    deg_Q=2: 6 tourn, avg_frac_first=1.000, avg_frac_last=0.000
+
+  n=4: Position of Q in Hamiltonian paths (grouped by max_degree)
+    deg_Q=2: 32 tourn, avg_frac_first=0.308, avg_frac_last=0.150
+    deg_Q=3: 32 tourn, avg_frac_first=1.000, avg_frac_last=0.000
+
+  n=5: Position of Q in Hamiltonian paths (grouped by max_degree)
+    deg_Q=2: 24 tourn, avg_frac_first=0.200, avg_frac_last=0.200
+    deg_Q=3: 680 tourn, avg_frac_first=0.311, avg_frac_last=0.094
+    deg_Q=4: 320 tourn, avg_frac_first=1.000, avg_frac_last=0.000
+
+============================================================
+THEOREM 5: Regular Tournaments and Universal King Property
+============================================================
+  n=3: reg+all_king=2, reg+not_all_king=0, notregular+all_king=0, notregular+not_all_king=6
+  n=4: reg+all_king=0, reg+not_all_king=0, notregular+all_king=0, notregular+not_all_king=64
+  n=5: reg+all_king=24, reg+not_all_king=0, notregular+all_king=40, notregular+not_all_king=960
+  n=6: reg+all_king=0, reg+not_all_king=0, notregular+all_king=1680, notregular+not_all_king=31088
+  n=7: reg+all_king=2640, reg+not_all_king=0, notregular+all_king=107408, notregular+not_all_king=1987104
+
+============================================================
+THEOREM 6: Q-P Gap and H Distribution
+============================================================
+
+  n=3: Q-P gap distribution
+    gap=0: count=2, min_H=3, max_H=3, avg_H=3.00
+    gap=2: count=6, min_H=1, max_H=1, avg_H=1.00
+    Pearson corr(gap, H) = -1.0000
+
+  n=4: Q-P gap distribution
+    gap=1: count=24, min_H=5, max_H=5, avg_H=5.00
+    gap=2: count=16, min_H=3, max_H=3, avg_H=3.00
+    gap=3: count=24, min_H=1, max_H=1, avg_H=1.00
+    Pearson corr(gap, H) = -1.0000
+
+  n=5: Q-P gap distribution
+    gap=0: count=24, min_H=15, max_H=15, avg_H=15.00
+    gap=2: count=520, min_H=9, max_H=15, avg_H=10.85
+    gap=3: count=320, min_H=3, max_H=5, avg_H=4.50
+    gap=4: count=160, min_H=1, max_H=3, avg_H=1.50
+    Pearson corr(gap, H) = -0.8980
+
+  n=6: Q-P gap distribution
+    gap=1: count=2640, min_H=41, max_H=45, avg_H=42.82
+    gap=2: count=4800, min_H=33, max_H=37, avg_H=35.40
+    gap=3: count=15248, min_H=9, max_H=37, avg_H=24.41
+    gap=4: count=8160, min_H=3, max_H=15, avg_H=9.35
+    gap=5: count=1920, min_H=1, max_H=5, avg_H=3.00
+    Pearson corr(gap, H) = -0.9103
+
+============================================================
+THEOREM 7: Court-Rivals 3-Cycle Density
+============================================================
+Verifying: c3(Q) >= |N^-(Q)| and c3(Q) <= |N^+(Q)| * |N^-(Q)|
+  n=3: 12 (T,Q) pairs
+    Lower bound c3(Q)>=|rivals|: 0 fails, 12 tight
+    Upper bound c3(Q)<=|court|*|rivals|: 0 fails, 12 tight
+    c3(Q)/|rivals|: min=1.00, max=1.00, avg=1.00
+    avg c3(Q) = 0.50, avg |court|*|rivals| = 0.50
+  n=4: 104 (T,Q) pairs
+    Lower bound c3(Q)>=|rivals|: 0 fails, 80 tight
+    Upper bound c3(Q)<=|court|*|rivals|: 0 fails, 56 tight
+    c3(Q)/|rivals|: min=1.00, max=2.00, avg=1.33
+    avg c3(Q) = 0.92, avg |court|*|rivals| = 1.38
+  n=5: 1560 (T,Q) pairs
+    Lower bound c3(Q)>=|rivals|: 0 fails, 800 tight
+    Upper bound c3(Q)<=|court|*|rivals|: 0 fails, 480 tight
+    c3(Q)/|rivals|: min=1.00, max=3.00, avg=1.69
+    avg c3(Q) = 1.46, avg |court|*|rivals| = 2.46
+  n=6: 53184 (T,Q) pairs
+    Lower bound c3(Q)>=|rivals|: 0 fails, 13824 tight
+    Upper bound c3(Q)<=|court|*|rivals|: 0 fails, 8304 tight
+    c3(Q)/|rivals|: min=1.00, max=4.00, avg=2.04
+    avg c3(Q) = 2.45, avg |court|*|rivals| = 4.22
+
+============================================================
+BONUS: When is H(T) - H(T-Q) = 2 * |N^-(Q)| EXACTLY? (tight bound)
+============================================================
+
+  n=3: 12 tight cases (delta=2*|rivals|)
+    SC: 6, not-SC: 6
+    score (0, 1, 2): 6 times
+    score (1, 1, 1): 6 times
+
+  n=4: 80 tight cases (delta=2*|rivals|)
+    SC: 24, not-SC: 56
+    score (0, 1, 2, 3): 24 times
+    score (0, 2, 2, 2): 24 times
+    score (1, 1, 1, 3): 8 times
+    score (1, 1, 2, 2): 24 times
+
+  n=5: 560 tight cases (delta=2*|rivals|)
+    SC: 0, not-SC: 560
+    score (0, 1, 2, 3, 4): 120 times
+    score (0, 1, 3, 3, 3): 120 times
+    score (0, 2, 2, 2, 4): 40 times
+    score (0, 2, 2, 3, 3): 120 times
+    score (1, 1, 1, 3, 4): 40 times
+    score (1, 1, 2, 2, 4): 120 times

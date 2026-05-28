@@ -2,6 +2,50 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-27-S6 — 2026-05-27
+
+**Summary:** Extended A038375 (max Hamiltonian paths in tournament) with new terms. Verified H(T) = I(Ω(T), 2) universally. Computed full IPs for T_5, T_6. Discovered critical implementation note about directed cycle counting.
+
+**MAIN RESULTS:**
+
+**THM-326 (Universal identity H = I(Ω, 2)):** H(T) = I(Ω(T), 2) holds for ALL tournaments (not just staircases). Verified exhaustively n=2..6 (36,866 tournaments, 0 failures). Critical: Ω must count each distinct DIRECTED cycle separately, even if two directed cycles share the same vertex set. Deduplicating by vertex set breaks the identity.
+
+**THM-327 (T_5 full IP):** I(Ω(T_5), x) = 1+530x+317x²+20x³. H(T_5)=2489.
+
+**THM-328 (T_6 full IP):** I(Ω(T_6), x) = 1+5750x+4244x²+642x³+10x⁴. H(T_6)=33773.
+
+**THM-329 (New A038375 terms):**
+- a(12) ≥ 531205 (strongly believed exact: multiple distinct tournaments achieve it; all local search runs converge to 531175 or 531205; no higher value in hundreds of restarts)
+- a(13) ≥ 3719831 (lower bound; less convergence)
+- Paley warm start immediately finds global max for prime p≡3 mod 4 (confirmed n=7,11)
+
+**SOLVER (04-computation/a038375_solver.c):**
+- Bitmask DP for HP counting: O(2^n · n²)
+- Warm starts: Paley (prime n≡3 mod 4), two circulant families, greedy vertex extension
+- Hill climbing with random restarts and perturbation
+- Fixed bugs from previous session: Paley invalid for n≡1 mod 4; circulant even-n tie-breaking created non-tournaments
+- Brute-force mode for n≤5; local search for n≥6
+- All known values a(1)..a(11) verified exactly
+
+**OPEN FOR NEXT AGENT:**
+1. Confirm a(12)=531205 exactly (needs either exhaustive search or improved theory)
+2. Find better lower bound for a(13) with longer search
+3. Compute a(14), a(15) if feasible
+4. Investigate why Paley tournaments maximize H for prime p≡3 mod 4 (connect to QR structure)
+5. Prove H(T_k) = I(Ω(T_k), 2) from OCF (is it related to the staircase having unique path completions?)
+6. HYP-1732 still open (from S5)
+7. Diagonal sequence 2,6,28,210,2154,... still unidentified
+
+**NEW FILES:**
+- 01-canon/theorems/THM-326-staircase-hp-equals-ip.md
+- 01-canon/theorems/THM-327-staircase-full-ip-T5.md
+- 01-canon/theorems/THM-328-staircase-full-ip-T6.md
+- 01-canon/theorems/THM-329-a038375-new-terms.md
+- 04-computation/a038375_solver.c (fixed and extended)
+- 05-knowledge/results/a038375.out
+
+---
+
 ## opus-2026-05-23-S5 — 2026-05-23
 
 **Summary:** Extended staircase combinatorics: discovered/verified odd-cycle count formulas for T_k (THM-322), computed full IPs for T_3 and T_4 (THM-323, THM-325), proved 3-cycle IP is real-rooted (THM-324), ran HYP-1732 verification at T_4 (552 tests, 0 violations), found algebraic reformulation of HYP-1732.

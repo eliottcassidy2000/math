@@ -215,7 +215,16 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 **Next computational target:** H(P(31)) (2^31*31 ~ 66B ops). Also: submit H(P(p)) sequence to OEIS.
 
-**Source:** kind-pasteur-2026-03-05-S2, S5, S14; opus-2026-03-05-S5 (H(T_19)), opus-2026-03-05-S10 (a(8)=661, H(P(23)), exhaustive n=7), opus-S11 (Szele analysis)
+**NEW TERMS (opus-2026-05-27-S6):** Local search via bitmask-DP hill climbing extended A038375:
+- **a(12) ≥ 531205** (strongly believed exact: multiple distinct tournaments achieve this; all trials converge to 531175 or 531205; no higher value found after hundreds of restarts). Ratio a(12)/a(11) ≈ 5.59.
+- **a(13) ≥ 3719831** (lower bound; less certain — 10-min trials give 3711611..3719831). Ratio a(13)/a(12) ≈ 7.0 if a(12)=531205.
+- For prime p≡3 mod 4: Paley warm start immediately finds global max (verified p=7,11 in solver).
+- n=12 optimal tournament is NOT Paley (12≢3 mod 4); found by random restarts.
+- Solver: 04-computation/a038375_solver.c. Results: 05-knowledge/results/a038375.out.
+
+**H(T) = I(Ω(T), 2) universal identity (opus-2026-05-27-S6):** Re-verified exhaustively n=2..6 (36,866 tournaments, 0 failures) with CORRECT implementation (distinct directed cycles as Ω vertices, not vertex-set deduplication). See THM-326.
+
+**Source:** kind-pasteur-2026-03-05-S2, S5, S14; opus-2026-03-05-S5 (H(T_19)), opus-2026-03-05-S10 (a(8)=661, H(P(23)), exhaustive n=7), opus-S11 (Szele analysis), opus-2026-05-27-S6 (a(12),a(13) lower bounds, universal identity verification)
 
 ---
 

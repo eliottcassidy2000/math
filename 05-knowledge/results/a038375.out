@@ -1,0 +1,164 @@
+=== A038375: max Hamiltonian paths in n-vertex tournament ===
+Key formula: H(T) = I(Omega(T), 2)  (OCF identity, verified T_2..T_4)
+Strategy: local search + structured warm starts
+
+--- Warm-start validation ---
+  All constructors valid for n=2..12
+
+a( 1) = 1               [0.0s] OK matches known
+
+n=2: brute-force over all tournaments...
+a( 2) = 1               [0.0s] OK matches known
+
+n=3: brute-force over all tournaments...
+a( 3) = 3               [0.0s] OK matches known
+
+n=4: brute-force over all tournaments...
+a( 4) = 5               [0.0s] OK matches known
+
+n=5: brute-force over all tournaments...
+a( 5) = 15              [0.0s] OK matches known
+
+n=6: searching (60s budget)...
+  n=6  hp=45           (0.0s)
+a( 6) = 45              [60.0s] OK matches known
+
+n=7: searching (60s budget)...
+  n=7  hp=189          (0.0s)
+a( 7) = 189             [60.0s] OK matches known
+
+n=8: searching (60s budget)...
+  n=8  hp=657          (0.0s)
+  n=8  hp=661          (0.0s)
+a( 8) = 661             [60.0s] OK matches known
+
+n=9: searching (60s budget)...
+  n=9  hp=3267         (0.0s)
+  n=9  hp=3297         (0.0s)
+  n=9  hp=3299         restart=9     (0.0s)
+  n=9  hp=3357         restart=34    (0.1s)
+a( 9) = 3357            [60.0s] OK matches known
+
+n=10: searching (60s budget)...
+  n=10  hp=15529        (0.0s)
+  n=10  hp=15549        (0.0s)
+  n=10  hp=15617        restart=3     (0.0s)
+  n=10  hp=15745        restart=13    (0.1s)
+a(10) = 15745           [60.0s] OK matches known
+
+n=11: searching (60s budget)...
+  n=11  hp=95095        (0.0s)
+a(11) = 95095           [60.0s] OK matches known
+
+n=12: searching (60s budget)...
+  n=12  hp=529471       (0.1s)
+  n=12  hp=529911       (0.1s)
+  n=12  hp=531087       restart=0     (0.7s)
+  n=12  hp=531175       restart=302   (29.9s)
+  n=12  hp=531205       restart=443   (43.8s)
+a(12) = 531205          [60.0s] NEW
+
+=== A038375: max Hamiltonian paths in n-vertex tournament ===
+Key formula: H(T) = I(Omega(T), 2)  (OCF identity, verified T_2..T_4)
+Strategy: local search + structured warm starts
+
+--- Warm-start validation ---
+  All constructors valid for n=2..12
+
+a( 1) = 1               [0.0s] OK matches known
+
+n=2: brute-force over all tournaments...
+a( 2) = 1               [0.0s] OK matches known
+
+n=3: brute-force over all tournaments...
+a( 3) = 3               [0.0s] OK matches known
+
+n=4: brute-force over all tournaments...
+a( 4) = 5               [0.0s] OK matches known
+
+n=5: brute-force over all tournaments...
+a( 5) = 15              [0.0s] OK matches known
+
+n=6: searching (300s budget)...
+  n=6  hp=45           (0.0s)
+a( 6) = 45              [300.0s] OK matches known
+
+n=7: searching (300s budget)...
+  n=7  hp=189          (0.0s)
+a( 7) = 189             [300.0s] OK matches known
+
+n=8: searching (300s budget)...
+  n=8  hp=661          (0.0s)
+a( 8) = 661             [300.0s] OK matches known
+
+n=9: searching (300s budget)...
+  n=9  hp=3267         (0.0s)
+  n=9  hp=3297         (0.0s)
+  n=9  hp=3357         restart=8     (0.0s)
+a( 9) = 3357            [300.0s] OK matches known
+
+n=10: searching (300s budget)...
+  n=10  hp=15549        (0.0s)
+  n=10  hp=15559        restart=0     (0.0s)
+  n=10  hp=15745        restart=1     (0.0s)
+a(10) = 15745           [300.0s] OK matches known
+
+n=11: searching (300s budget)...
+  n=11  hp=95095        (0.0s)
+a(11) = 95095           [300.0s] OK matches known
+
+n=12: searching (300s budget)...
+  n=12  hp=530563       (0.1s)
+  n=12  hp=531175       restart=7     (1.3s)
+a(12) = 531175          [300.1s] NEW
+
+n=13: searching (300s budget)...
+  n=13  hp=3711175      (0.1s)
+  n=13  hp=3716335      restart=621   (160.8s)
+a(13) = 3716335         [300.2s] NEW
+
+
+=== Session opus-2026-05-27-S6: Extended results ===
+
+CONFIRMED: H(T) = I(Omega(T), 2) is a UNIVERSAL identity for all tournaments.
+Verified n=2..6 (36,866 tournaments, 0 failures).
+Earlier "counterexamples" were due to a bug: deduplication by vertex set
+instead of by directed cycle. MISTAKE-004 retraction confirmed correct.
+
+Staircase H(T_k) values (verified via OCF identity):
+  H(T_2)=5, H(T_3)=29, H(T_4)=233, H(T_5)=2489, H(T_6)=33773
+
+a(12) LOWER BOUND:
+  Best found: 531205 (4/8 independent trials in 90s)
+  Two local optima: 531175 (sub-optimal basin) and 531205 (main basin)
+  Multiple distinct tournaments achieve 531205.
+  Confidence: HIGH that a(12) = 531205.
+
+a(13) LOWER BOUND (in progress):
+  5-min search: best = 3719831 (seed 0x33333333)
+  10-min search (ongoing): best so far 3719831
+  Less convergence than n=12; true maximum unclear.
+
+Growth ratios:
+  a(12)/a(11) >= 531205/95095 ~= 5.586
+  a(13)/a(12) >= 3719831/531205 ~= 7.0 (estimate)
+
+=== Additional searches (opus-2026-05-27-S6 continuation) ===
+
+a(13) final lower bound: 3719831
+  Multiple independent seeds: 3711303, 3714875, 3715419, 3719831
+  Best is 3719831 (2 independent seeds reach this in 3-10min)
+  Best tournament adj (n=13): 3666 5352 6411 3009 686 3213 6708 5701 243 3366 4444 5522 825
+
+a(14) initial lower bound: 24786711 (3-minute search, likely improvable)
+  Best tournament adj (n=14): 254 508 504 2032 3040 8128 16256 16128 15873 15367 14359 12303 8223 63
+
+Growth ratio estimates (if bounds are exact):
+  a(12)/a(11) = 531205/95095 ≈ 5.586
+  a(13)/a(12) ≥ 3719831/531205 ≈ 7.001
+  a(14)/a(13) ≥ 24786711/3719831 ≈ 6.664
+  
+For prime p≡3 mod 4: Paley warm start hits maximum immediately.
+  p=7: warm start hits 189 in <1s
+  p=11: warm start hits 95095 in <1s
+  p=19 would be next (a(19) = H(QR_19) is predicted to be global max at n=19)

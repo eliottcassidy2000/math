@@ -1,0 +1,2248 @@
+KING TIGHT BOUND — DEEP ANALYSIS
+opus-2026-05-27-S1
+======================================================================
+
+======================================================================
+DEEP ANALYSIS: Tight Bound Characterization
+======================================================================
+
+n=3: 12 (T,Q) pairs
+  Tight+SC:         6  |  Non-tight+SC:       0
+  Tight+nonSC:      6  |  Non-tight+nSC:      0
+  Conjecture 'tight => non-SC': FAILS
+  TIGHT+SC cases:
+    score=(1, 1, 1), deg_Q=1, n_rivals=1, H=3
+    score=(1, 1, 1), deg_Q=1, n_rivals=1, H=3
+    score=(1, 1, 1), deg_Q=1, n_rivals=1, H=3
+    score=(1, 1, 1), deg_Q=1, n_rivals=1, H=3
+    score=(1, 1, 1), deg_Q=1, n_rivals=1, H=3
+
+n=4: 104 (T,Q) pairs
+  Tight+SC:        24  |  Non-tight+SC:      24
+  Tight+nonSC:     56  |  Non-tight+nSC:      0
+  Conjecture 'tight => non-SC': FAILS
+  TIGHT+SC cases:
+    score=(1, 1, 2, 2), deg_Q=2, n_rivals=1, H=5
+    score=(1, 1, 2, 2), deg_Q=2, n_rivals=1, H=5
+    score=(1, 1, 2, 2), deg_Q=2, n_rivals=1, H=5
+    score=(1, 1, 2, 2), deg_Q=2, n_rivals=1, H=5
+    score=(1, 1, 2, 2), deg_Q=2, n_rivals=1, H=5
+    tight+SC score (1, 1, 2, 2): 24
+  Non-tight excess: min=2, max=2, avg=2.00
+  SC excess: min=2, avg=2.00
+
+n=5: 1560 (T,Q) pairs
+  Tight+SC:         0  |  Non-tight+SC:     880
+  Tight+nonSC:    560  |  Non-tight+nSC:    120
+  Conjecture 'tight => non-SC': HOLDS
+  Non-tight excess: min=2, max=10, avg=4.24
+  SC excess: min=2, avg=4.55
+
+n=6: 53184 (T,Q) pairs
+  Tight+SC:         0  |  Non-tight+SC:   39360
+  Tight+nonSC:   7584  |  Non-tight+nSC:   6240
+  Conjecture 'tight => non-SC': HOLDS
+  Non-tight excess: min=2, max=30, avg=16.02
+  SC excess: min=4, avg=17.89
+
+======================================================================
+TIGHT MECHANISM ANALYSIS (n=5)
+======================================================================
+At n=5: mu(C) = 1 for ALL odd cycles C through any vertex Q.
+  Reason: T-v has 4 vertices. Any 3-cycle C's {C\{v}} avoids 2 vertices,
+  leaving 2 vertices in T-v -- too few for odd cycles. So mu(3-cycle) = 1.
+  For 5-cycle: C\{v} = 4 vertices = all of T-v. mu(5-cycle) = 1.
+  For 7-cycle (not possible at n=5 -- max cycle length = n = 5).
+
+Therefore at n=5: delta = 2 * c_odd(Q) where c_odd(Q) = #{odd cycles through Q}.
+Tight (delta = 2|rivals|) iff c_odd(Q) = |rivals|.
+Since c_odd(Q) >= |rivals| by King theorem, tight iff each rival in exactly 1 odd cycle with Q.
+
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=10, 2*c_odd=2, score=(2, 2, 2, 2, 2)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=8, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=12, 2*c_odd=2, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 2, 2, 2, 3)
+  DISCREPANCY: delta=6, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=8, 2*c_odd=2, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(1, 1, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=4, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 2, 2, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+  DISCREPANCY: delta=2, 2*c_odd=0, score=(0, 1, 3, 3, 3)
+Verification at n=5: delta = 2*c_odd(Q) for all (T,Q) pairs? Checking...
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=2, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=10, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=8, 2c_odd=2
+  FAIL: delta=4, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=12, 2c_odd=2
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=8, 2c_odd=0
+  FAIL: delta=6, 2c_odd=0
+  FAIL: delta=4, 2c_odd=0

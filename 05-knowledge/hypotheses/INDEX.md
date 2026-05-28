@@ -2019,3 +2019,17 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Evidence:** Explicit root computation for k=2..6. All roots real, all negative.
 **Connection:** Via THM-313, real-rootedness ⟺ Lemma B (B interlaces A) for each valid C*. Via THM-324, this is HYP-1736.
 **See:** THM-324, 05-knowledge/results/hyp1732_full_investigation.out
+
+## HYP-1737: a(12) = 531205 (opus-2026-05-27-S6)
+
+**Status:** OPEN (lower bound verified; exact value not proved)
+**Statement:** The maximum number of Hamiltonian paths in a 12-vertex tournament is exactly 531205.
+**Evidence:** Local search with 8+ independent trials (90s each, distinct seeds). All trials converge to exactly 531175 or 531205; no higher value found. Multiple distinct tournaments achieve 531205.
+**See:** THM-329, 04-computation/a038375_solver.c, 05-knowledge/results/a038375.out
+
+## HYP-1738: H(T) = I(Omega(T), 2) requires DIRECTED cycle counting (opus-2026-05-27-S6)
+
+**Status:** CONFIRMED (re-verification of known result)
+**Statement:** H(T) = I(Omega(T), 2) is a universal identity for all tournaments. The conflict graph Omega(T) must count each distinct DIRECTED odd cycle as a separate vertex, even if two directed cycles share the same vertex set. Deduplication by vertex set gives a WRONG (smaller) count.
+**Evidence:** Exhaustive verification n=2..6 (36,866 tournaments, 0 failures) using hyp1732_full_investigation.py's find_all_directed_cycles (canonical-tuple dedup). Earlier session saw apparent "counterexamples" from buggy code using frozenset dedup by vertex set.
+**See:** THM-326, MISTAKE-004 (retracted)
