@@ -2033,3 +2033,40 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Statement:** H(T) = I(Omega(T), 2) is a universal identity for all tournaments. The conflict graph Omega(T) must count each distinct DIRECTED odd cycle as a separate vertex, even if two directed cycles share the same vertex set. Deduplication by vertex set gives a WRONG (smaller) count.
 **Evidence:** Exhaustive verification n=2..6 (36,866 tournaments, 0 failures) using hyp1732_full_investigation.py's find_all_directed_cycles (canonical-tuple dedup). Earlier session saw apparent "counterexamples" from buggy code using frozenset dedup by vertex set.
 **See:** THM-326, MISTAKE-004 (retracted)
+
+## HYP-1737: King-count = n implies H = H_max at n=5 (opus-2026-05-27-S1)
+**Status:** VERIFIED n=5, OPEN general n
+**Statement:** At n=5: #{kings} = 5 (all vertices are kings) ↔ H = 15 (the maximum). Specifically:
+- #kings=5: 64 tournaments, ALL have H=15, ALL strongly connected.
+- #kings=4: 120 tournaments, ALL have H=13, ALL strongly connected.
+- #kings=3: 520 tournaments, H∈{3,5,9,11}, 360 SC.
+- #kings=1: 320 tournaments, H∈{1,3,5}, 0 SC.
+**Note:** H=7 is impossible at n=5, and #kings=2 is also impossible (see Landau characterization). At n=6: #kings=6 gives H∈{43,45} (near-max but not unique). The n=5 case is remarkably rigid.
+**Connection:** #kings=5 at n=5 = universal king property = regular tournament (or near-regular SC).
+**See:** THM-331, computation king_vertex_analysis.py
+
+## HYP-1738: #kings = n-1 at n=5 implies H = 13 exactly (opus-2026-05-27-S1)
+**Status:** VERIFIED n=5, OPEN n≥6
+**Statement:** At n=5: exactly 120 tournaments have 4 king vertices. ALL have H=13. ALL are strongly connected.
+**Significance:** This is a remarkable rigid implication: king-count determines H exactly at this level for n=5.
+**Question:** At n=6, does #kings=5 determine H uniquely? Data: H∈[15,41] (NO - not unique).
+**Mechanism:** #kings=4 at n=5 means exactly 1 vertex is not a king. The non-king vertex has degree 1 (minimum) and the "missing" triangle structure forces a unique H.
+**See:** king_vertex_analysis.py output
+
+## HYP-1739: Non-SC tiling counts 1,3,14,121,1995,64648 (n=3..8) (opus-2026-05-27-S1)
+**Status:** COMPUTED, OPEN for pattern/formula
+**Values:** For n=3..8: non-SC counts = 1, 3, 14, 121, 1995, 64648.
+**Ratios:** 3, 4.667, 8.643, 16.488, 32.405 (growing, approximately doubling each step).
+**Inclusion-exclusion:** At n=5: non-SC = A_1 ∪ A_4 where A_k = "cut k all-downward". P = P(A_1) + P(A_4) - P(A_1∩A_4) = 1/8 + 1/8 - 1/32 = 7/32 = 14/64. ✓
+**SC tiling formula:** SC = 2^m - non-SC. At n=5: 50 = 64 - 14. ✓
+**OEIS:** Check if sequence 1,3,14,121,1995,64648 appears. Note: these are tilings, not tournaments.
+**See:** king_tight_bound_analysis.py, THM-330
+
+## HYP-1740: Min SC excess = 2(n-4) for n≥4 (opus-2026-05-27-S1)
+**Status:** OPEN (verified n=3..6: 0,0,2,4)
+**Statement:** For strongly connected tournaments with n≥4 vertices, the minimum excess (H(T)-H(T-Q) - 2|rivals|) over all SC (T,Q) pairs is:
+- n=3: 0, n=4: 0, n=5: 2, n=6: 4.
+**Pattern:** min excess = max(0, 2(n-4)) = 0,0,2,4 for n=3,4,5,6.
+**Mechanism:** At n=5: forced by extra 5-cycle (see THM-334 proof). At n=6: extra 5-cycle plus one more?
+**Achieving cases:** n=5: score (1,1,2,3,3), deg_Q=3, 1 rival. n=6: score (1,1,2,3,4,4), deg_Q=4, 1 rival.
+**See:** THM-334, king_tight_bound_analysis.py

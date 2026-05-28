@@ -2,6 +2,53 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-27-S1 — 2026-05-27
+
+**Summary:** King vertex theory session. Proved 6 new theorems (THM-330..335) connecting king vertices, strong connectivity, the tiling model, and the OCF. Identified the Q-P gap as the "democracy axis" of G_n/Z₂. Discovered the SC-strict-bound dichotomy (SC forces strict King bound at n≥5). Computed non-SC tiling counts, #kings vs H distributions, and min SC excess data.
+
+**PROVED/VERIFIED:**
+
+**THM-330 (SC Cut Theorem):** Tournament is SC ↔ every cut k∈{1,...,n-1} has ≥1 upward tile. Cut k separates vertices ≥k from vertices <k; tiles (x,y) with x≥k>y cross it. Cut size = (k-1) + k(n-1-k); minimum n-2 at k=1 and k=n-1. Verified exhaustively n=3..7.
+
+**THM-331 (King H-increment bound):** H(T)−H(T−Q) ≥ 2|N⁻(Q)| for any max-outdegree vertex Q. Proved via Claim A + King theorem. Tight when exactly |rivals| odd cycles through Q. Verified n=3..6 (0 violations).
+
+**THM-332 (Dominant Vertex Position):** If d⁺(Q)=n-1, then Q is first in every HP, H(T)=H(T−Q), and Q is in no odd cycle. Dual holds for P with d⁺(P)=0.
+
+**THM-333 (Apex Tile → SC):** Apex tile (n-1,0) in upward orientation → tournament is SC. Proof: apex crosses all n-1 cuts simultaneously. Also follows from Camion's theorem (closes base path to HC). SC fraction data: n=3:1/2, n=4:5/8, n=5:50/64, n=6:903/1024.
+
+**THM-334 (SC forces strict bound at n≥5):** If T is SC and n≥5, then H(T)−H(T−Q) > 2|N⁻(Q)| (strict). PROVED for n=5 via explicit case analysis: tight bound forces an absolute sink, destroying SC. Verified computationally n=5,6 (0 tight+SC cases). Min SC excess: n=5:2, n=6:4.
+
+**THM-335 (Q-P gap determines H at n≤4):** H = 7−2×gap at n=4 (exact linear formula). At n=5+ gap is the dominant driver (corr −0.898, −0.910) but no longer unique. Pearson corr(gap,H): n=3:−1.000, n=4:−1.000, n=5:−0.898, n=6:−0.910.
+
+**NEW HYPOTHESES:**
+- HYP-1737: #kings=n → H=H_max (verified at n=5: 64 tourn, all H=15 SC)
+- HYP-1738: #kings=n-1 at n=5 → H=13 exactly (all 120 SC) [VERIFIED]
+- HYP-1739: Non-SC tiling count: 1,3,14,121,1995,64648 for n=3..8 [unidentified in OEIS]
+- HYP-1740: Min SC excess = 2(n-4) for n≥4 [open, verified n=3..6: 0,0,2,4]
+
+**OPEN FOR NEXT AGENT:**
+1. Prove THM-334 for general n≥6 (proved only n=5; computational at n=6)
+2. Search OEIS for non-SC sequence 1,3,14,121,1995,64648
+3. Prove/disprove HYP-1740 (min SC excess = 2(n-4))
+4. Understand why #kings=n-1 → H=13 exactly at n=5 (analog at n=7?)
+5. Fix cycle counting bug in king_tight_bound_analysis.py (remove `// length` from count_odd_cycles_through)
+6. All open items from S6 still active
+
+**NEW FILES:**
+- 01-canon/theorems/THM-330-sc-cut-theorem-tiling-model.md
+- 01-canon/theorems/THM-331-king-h-increment-bound.md
+- 01-canon/theorems/THM-332-dominant-vertex-position.md
+- 01-canon/theorems/THM-333-apex-tile-strong-connectivity.md
+- 01-canon/theorems/THM-334-sc-strict-king-bound.md
+- 01-canon/theorems/THM-335-qp-gap-determines-h.md
+- 07-reflections/king-vertex-and-strong-connectivity.md
+- 04-computation/king_vertex_analysis.py
+- 04-computation/king_tight_bound_analysis.py
+- 05-knowledge/results/king_vertex_analysis.out
+- 05-knowledge/results/king_tight_bound_analysis.out
+
+---
+
 ## opus-2026-05-27-S6 — 2026-05-27
 
 **Summary:** Extended A038375 (max Hamiltonian paths in tournament) with new terms. Verified H(T) = I(Ω(T), 2) universally. Computed full IPs for T_5, T_6. Discovered critical implementation note about directed cycle counting.

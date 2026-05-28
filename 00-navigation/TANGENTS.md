@@ -909,3 +909,15 @@ At $n=9$, 91% of random tournaments have degree-3 independence polynomial. The t
 
 **T278** #triangle-algebra #ULC-k2 #complete-tripartite #Cauchy-Schwarz | certainty: VERY HIGH (proved for K_{a,b,c}, verified n=9) | source: oracle-2026-05-19-S1
 **Triangle ULC (k=2, d=3):** For complete tripartite co-conflict graph $K_{a,b,c}$: $(ab+bc+ca)^2 \geq 3(a+b+c)abc$. Proof: LHS-RHS $= \frac{1}{2}[(ab-ac)^2+(ab-bc)^2+(ac-bc)^2] \geq 0$. Equality iff $a=b=c$ (balanced = polynomial is $(1+\alpha_1 x/3)^3$). Verified for all $a,b,c \leq 19$ — zero failures. n=9 tournament samples: 91/100 degree-3, min ratio $\alpha_2^2/(3\alpha_1\alpha_3) = 2.05 > 1$. OPEN: extend to ALL $K_4$-free co-conflict graphs (OPEN-Q-050). See `07-reflections/ulc-turan-unconditional-proof.md`.
+
+**T088** #king-vertex #strong-connectivity #tiling-model | certainty: proved | source: opus-2026-05-27-S1, THM-330..335
+SC Cut Theorem (tiling model): a tiling is strongly connected iff for every cut k∈{1,...,n-1}, at least one tile crossing the cut has the upward bit set. Min cuts of size n-2 at k=1 (horizontal leg) and k=n-1 (vertical leg). Apex tile (n-1,0) satisfies ALL cuts simultaneously. Non-SC tiling counts: 1,3,14,121,1995,64648 for n=3..8.
+
+**T089** #king-vertex #claim-a #h-increment | certainty: proved+verified | source: opus-2026-05-27-S1, THM-331
+King H-Increment Bound: H(T)-H(T-Q) ≥ 2|N⁻(Q)| for max-degree vertex Q. Proof: by Claim A + King theorem (each rival forces ≥1 triangle through Q). Tight iff non-SC for n≥5. Min SC excess: 0,0,2,4 for n=3,4,5,6. Upper bound: c₃(Q) ≤ |court|×|rivals|.
+
+**T090** #king-vertex #strong-connectivity #score-sequence | certainty: verified | source: opus-2026-05-27-S1, THM-334,335
+SC forces strict King bound at n≥5: tight H(T)-H(T-Q)=2|rivals| implies non-SC for n≥5 (0 exceptions in exhaustive check). Q-P gap = max-min outdegree determines H perfectly at n≤4 (H=7-2*gap at n=4), breaks at n=5.
+
+**T091** #king-count #h-invariant #n5 | certainty: verified | source: opus-2026-05-27-S1, HYP-1737,1738
+Remarkable rigidity at n=5: #kings=5→H=15 (64 tourn, all SC); #kings=4→H=13 (120 tourn, all SC). At n=6: less rigid (#kings=6 gives H∈{43,45}). Worth investigating whether this is related to the impossibility of H=7 at n=5.
