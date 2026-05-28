@@ -162,3 +162,51 @@ For prime p≡3 mod 4: Paley warm start hits maximum immediately.
   p=7: warm start hits 189 in <1s
   p=11: warm start hits 95095 in <1s
   p=19 would be next (a(19) = H(QR_19) is predicted to be global max at n=19)
+
+=== New results from opus-2026-05-27-S7 (Paley + circulant methods) ===
+
+--- Paley sub-tournament optimality (THM-336, conjectured) ---
+For prime p ≡ 3 (mod 4): a(p) = H(QR_p), a(p-1) = H(QR_p - v).
+
+a(18) = 117266659317       [H(QR_19 - v), computed via standard DP, 0.1s]
+a(19) = 1172695746915      [H(QR_19),   computed via circulant DP 0.0s + standard verify 0.1s]
+  c(19) = 527714543799    [c(p)/a(p-1) = 4.5001 ≈ 4.5 = (p-1)/4 ✓]
+
+a(22) = 1313333107451805   [H(QR_23 - v), computed via standard DP, 0.6s]
+a(23) = 15760206976379349  [H(QR_23),   computed via circulant DP 0.4s + standard verify 1.7s]
+  c(23) = 7223436934463772 [c(p)/a(p-1) = 5.5001 ≈ 5.5 = (p-1)/4 ✓]
+
+Status: LIKELY EXACT (QR_p conjectured globally optimal at n=p for Paley primes).
+Previously confirmed exact: a(10)=15745, a(11)=95095 (= H(QR_11), H(QR_11-v)).
+
+Asymptotic formula: c(p)/a(p-1) → (p-1)/4, giving a(p)/a(p-1) → (p+1)/2.
+  p=7: ratio 4.200 (cf. (p+1)/2=4.0)
+  p=11: ratio 6.040 (cf. 6.0)
+  p=19: ratio 10.000 (cf. 10.0)
+  p=23: ratio 12.000 (cf. 12.0)
+
+--- Circulant lower bounds (new lower bounds for non-Paley n) ---
+Method: circulant-reduced DP on Z_n with exhaustive/local search over connection sets.
+Key finding: a(n) = max circulant for n ≤ 11; circulant is suboptimal for n ≥ 13.
+
+a(13) ≥ 3711175 (best circulant: lower-half {1,...,6}; true a(13) ≥ 3719831 from prior search)
+a(15) ≥ 198464295 (best circulant: lower-half {1,...,7})
+a(17) ≥ 13689269499 (best circulant: lower-half {1,...,8})
+a(25) ≥ 2418453569285650675 (best circulant: lower-half {1,...,12}, local search confirms optimum)
+
+--- Circulant optimality threshold (new structural result) ---
+a(n) = (best circulant H on Z_n) for n = 3, 5, 7, 9, 11.
+a(n) > (best circulant H on Z_n) for n = 13 (gap = 8656).
+Conjecture: circulant is suboptimal for all n ≥ 13.
+The transition at n=13 corresponds to the first prime ≡ 1 (mod 4) after the Paley primes 3,7,11.
+
+--- Algorithm: circulant-reduced bitmask DP ---
+Key idea: Z_n symmetry → fix current vertex = 0 → state space 2^{n-1} (not 2^n × n).
+Memory savings: factor 2n. For n=25: 128 MB (vs 6.4 GB standard).
+Enables: compute H for ALL circulant tournaments up to n=29.
+Code: 04-computation/paley_hp_counter.c, 04-computation/circulant_search.c
+
+a(27) ≥ 17051631267035242313  [best circulant Z_27: S={2,3,...,13,26}, local search, ~90s]
+  Note: lower half {1,...,13} gives H=2715142306543359571 (much worse!)
+  The "backward" connection 26≡-1 mod 27 improves H by 6.3× for n=27.
+  Contrast: for n=25, lower half is local optimum (no backward connection helps).

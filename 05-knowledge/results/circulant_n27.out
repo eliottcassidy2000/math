@@ -1,0 +1,13 @@
+=== Circulant Tournament HP Search, n=27 ===
+Memory: 2^26 × 8 = 536.9 MB
+
+Lower-half circulant ({1..13}): H=2715142306543359571  [14.73s]
+Candidate 1: H=2715142306543359571  [17.68s]
+Candidate 2: H=2715142306543359571  [17.41s]
+
+Local search from best found (H=2715142306543359571):
+  swap 1↔26 → H=17051631267035242313
+
+Best circulant on Z_27: H=17051631267035242313
+S={2,3,4,5,6,7,8,9,10,11,12,13,26} (complement: {25,24,23,22,21,20,19,18,17,16,15,14,1})
+Lower bound for a(27) ≥ 17051631267035242313

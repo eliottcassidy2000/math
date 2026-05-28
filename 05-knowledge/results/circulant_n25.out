@@ -1,0 +1,12 @@
+=== Circulant Tournament HP Search, n=25 ===
+Memory: 2^24 × 8 = 134.2 MB
+
+Lower-half circulant ({1..12}): H=2418453569285650675  [2.45s]
+Candidate 1: H=2418453569285650675  [2.82s]
+Candidate 2: H=2418453569285650675  [2.83s]
+
+Local search from best found (H=2418453569285650675):
+
+Best circulant on Z_25: H=2418453569285650675
+S={1,2,3,4,5,6,7,8,9,10,11,12} (complement: {24,23,22,21,20,19,18,17,16,15,14,13})
+Lower bound for a(25) ≥ 2418453569285650675

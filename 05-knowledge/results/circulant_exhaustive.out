@@ -1,0 +1,57 @@
+=== Exhaustive Circulant Tournament Search ===
+
+--- n=3 (2 connection sets) ---
+  New best: H=3  S=[2]
+  Tried 2 connection sets, best H=3, S=[2]
+  Paley QR_3: H=3  = Paley
+  Known a(3) = 3  ← BEST CIRCULANT = a(n)!
+
+--- n=5 (4 connection sets) ---
+  New best: H=15  S=[4, 3]
+  Tried 4 connection sets, best H=15, S=[3, 4]
+  Known a(5) = 15  ← BEST CIRCULANT = a(n)!
+
+--- n=7 (8 connection sets) ---
+  New best: H=175  S=[6, 5, 4]
+  New best: H=189  S=[1, 2, 4]
+  Tried 8 connection sets, best H=189, S=[1, 2, 4]
+  Paley QR_7: H=189  = Paley
+  Known a(7) = 189  ← BEST CIRCULANT = a(n)!
+
+--- n=9 (16 connection sets) ---
+  New best: H=3267  S=[8, 7, 6, 5]
+  New best: H=3357  S=[1, 7, 6, 5]
+  Tried 16 connection sets, best H=3357, S=[1, 5, 6, 7]
+  Known a(9) = 3357  ← BEST CIRCULANT = a(n)!
+
+--- n=11 (32 connection sets) ---
+  New best: H=93027  S=[10, 9, 8, 7, 6]
+  New best: H=95095  S=[10, 2, 8, 7, 6]
+  Tried 32 connection sets, best H=95095, S=[2, 6, 7, 8, 10]
+  Paley QR_11: H=95095  = Paley
+  Known a(11) = 95095  ← BEST CIRCULANT = a(n)!
+
+--- n=13 (64 connection sets) ---
+  New best: H=3711175  S=[12, 11, 10, 9, 8, 7]
+  Tried 64 connection sets, best H=3711175, S=[7, 8, 9, 10, 11, 12]
+  Known a(13) = 3719831  ← circulant is SUBOPTIMAL by 8656
+
+--- n=15 (128 connection sets) ---
+  New best: H=198464295  S=[14, 13, 12, 11, 10, 9, 8]
+  Tried 128 connection sets, best H=198464295, S=[8, 9, 10, 11, 12, 13, 14]
+
+--- n=17 (256 connection sets) ---
+  New best: H=13689269499  S=[16, 15, 14, 13, 12, 11, 10, 9]
+  Tried 256 connection sets, best H=13689269499, S=[9, 10, 11, 12, 13, 14, 15, 16]
+
+
+=== Summary ===
+n    Best circulant H          Best S                                   Notes
+   3                         3 [2]                                      = a(3) ✓ [Paley prime]
+   5                        15 [3, 4]                                   = a(5) ✓
+   7                       189 [1, 2, 4]                                = a(7) ✓ [Paley prime]
+   9                      3357 [1, 5, 6, 7]                             = a(9) ✓
+  11                     95095 [2, 6, 7, 8, 10]                         = a(11) ✓ [Paley prime]
+  13                   3711175 [7, 8, 9, 10, 11, 12]                    suboptimal (a=3719831)
+  15                 198464295 [8, 9, 10, 11, 12, 13, 14]               
+  17               13689269499 [9, 10, 11, 12, 13, 14, 15, 16]          

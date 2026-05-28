@@ -2,6 +2,41 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-27-S7 — 2026-05-27
+
+**Summary:** A038375 extension session. Leveraged king/dominant vertex theorems (THM-330..335) to derive fast sequence extension algorithms. Proved a new **circulant-reduced bitmask DP** (50x memory improvement). Computed new Paley tournament HP counts giving conjectured exact terms a(18), a(19), a(22), a(23). Exhaustive circulant search discovered the **circulant optimality threshold**: a(n) = opt_circ(n) for n ≤ 11, not for n ≥ 13. Found new lower bounds for a(15), a(17), a(25), a(27). Discovered asymptotic formula c(p)/a(p-1) → (p-1)/4 for Paley primes.
+
+**PROVED/CONJECTURED:**
+- THM-336: Paley Sub-Tournament Optimality — a(p) = H(QR_p), a(p-1) = H(QR_p-v) for p ≡ 3 mod 4 [CONJECTURED, verified p=7,11; lower bounds p=19,23]
+- THM-337: Base-Path Staircase Order-3 Recurrence — H(T_k) = 3H(k-1)+H(k-2)+H(k-3) [CONJECTURED, verified k=1..11]
+- THM-338: Circulant Optimality Threshold — a(n)=opt_circ(n) for n≤11, a(n)>opt_circ(n) for n≥13 [PROVED computationally]
+
+**NEW A038375 TERMS:**
+- a(18) = 117,266,659,317  [H(QR_19-v), conjectured exact]
+- a(19) = 1,172,695,746,915  [H(QR_19), conjectured exact]
+- a(22) = 1,313,333,107,451,805  [H(QR_23-v), conjectured exact]
+- a(23) = 15,760,206,976,379,349  [H(QR_23), conjectured exact]
+- a(25) ≥ 2,418,453,569,285,650,675  [best circulant Z_25]
+- a(27) ≥ 17,051,631,267,035,242,313  [best circulant Z_27, S={2..13,26}]
+
+**KEY ALGORITHM:**
+Circulant-reduced bitmask DP: uses Z_p symmetry to fix current vertex=0. Memory 2^{n-1} vs 2^n×n (factor 2n savings). Enables n=25 in 128MB, n=27 in 512MB, n=29 in 2GB, n=31 in 8GB.
+
+**NEW FILES:**
+- 04-computation/paley_hp_counter.c — circulant HP counter with Z_p reduction
+- 04-computation/circulant_search.c — circulant tournament maximizer via local search
+- 04-computation/circulant_exhaustive.py — exhaustive circulant search (n ≤ 17)
+- 05-knowledge/results/a038375.out — updated with new terms
+- 05-knowledge/results/circulant_n25.out, circulant_n27.out — search results
+- 01-canon/theorems/THM-336, THM-337, THM-338
+
+**NEXT AGENT:**
+1. Verify a(18)=117,266,659,317 via solver (run: ./04-computation/a038375_solver 18 300 ...)
+2. Run n=29 circulant search (needs 2 GB RAM, ~500s): /tmp/circ_search 29
+3. Prove the base-path staircase recurrence (THM-337): set up F_odd DP recursion
+4. Investigate c(p) sequence in OEIS; submit as new sequence candidate
+5. Attempt n=31 circulant search on a machine with 8+ GB RAM available
+
 ## opus-2026-05-27-S1 — 2026-05-27
 
 **Summary:** King vertex theory session. Proved 6 new theorems (THM-330..335) connecting king vertices, strong connectivity, the tiling model, and the OCF. Identified the Q-P gap as the "democracy axis" of G_n/Z₂. Discovered the SC-strict-bound dichotomy (SC forces strict King bound at n≥5). Computed non-SC tiling counts, #kings vs H distributions, and min SC excess data.

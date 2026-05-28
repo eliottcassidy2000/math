@@ -2097,3 +2097,55 @@ $\tilde{s}(v) = n-1-s(v)$ (for middle vertices) should transform cleanly under M
 2. Test the column-family extension conjecture at n=6 ($r=1, k=2$: does it equal SC at n=2?).
 3. Find an explicit bijection for the $r=0$ (odd n) case using SF score formula.
 4. If bijection found, test it on $r=1$ case to see if same map works for even n.
+
+---
+## opus-2026-05-27-S7: Paley + Circulant HP Extensions
+
+### INV-231: Paley Sub-Tournament Optimality Proof
+**Source:** opus-2026-05-27-S7
+**Status:** OPEN — conjectured (THM-336), verified p=7,11 exactly, p=19,23 as lower bounds
+**What:** For prime p ≡ 3 mod 4: H(QR_p) = a(p), H(QR_p - v) = a(p-1).
+Why is QR_p globally optimal? Current heuristics: regular + SC + maximum cycle density.
+No proof. Strong empirical support.
+**Next:**
+  1. Prove for p=19: need to verify a(18) from exhaustive/branch-and-bound solver
+  2. Exploit the SC structure and THM-334 (SC strict bound) for a lower bound proof
+  3. Check if the "c(p)/a(p-1) → (p-1)/4" formula has a combinatorial proof
+
+### INV-232: Base-Path Staircase Recurrence Proof
+**Source:** opus-2026-05-27-S7
+**Status:** OPEN — verified k=1..11, recurrence H(k) = 3H(k-1) + H(k-2) + H(k-3) (THM-337)
+**What:** The base-path staircase has order-3 recurrence. WHY? Need algebraic proof.
+**Next:**
+  1. Set up the F_odd recursion for T_k → T_{k+1} insertion
+  2. Show the # of odd-length paths between insertion neighborhoods satisfies this recurrence
+  3. Check OEIS for the sequence 1,5,17,57,193,653,2209,...
+
+### INV-233: Circulant Optimality Threshold
+**Source:** opus-2026-05-27-S7
+**Status:** OPEN — threshold at n=13 proved computationally; structural reason unclear
+**What:** a(n) = opt_circ(n) for n ≤ 11; a(n) > opt_circ(n) for n ≥ 13 (THM-338).
+Key insight: QR_p has both forward and backward connections; purely forward circulants are weaker.
+**Next:**
+  1. Run n=29 circulant search (2 GB RAM, ~500s) for a(29) lower bound
+  2. Try n=31 (8 GB RAM, ~150s) for a(30), a(31) lower bounds from circulant + Paley
+  3. Search for proof that n=13 breaks circulant optimality: what structure is exploited?
+
+### INV-234: A038375 Extended Terms
+**Source:** opus-2026-05-27-S7
+**Status:** CONFIRMED new lower bounds; need exact values
+**New bounds:** a(15) ≥ 198464295, a(17) ≥ 13689269499, a(25) ≥ 2418453569285650675,
+  a(27) ≥ 17051631267035242313
+**Conjectured exact (Paley):** a(18)=117266659317, a(19)=1172695746915,
+  a(22)=1313333107451805, a(23)=15760206976379349
+**Next:**
+  1. Run a038375 solver on n=14..16 to confirm circulant bounds (or improve them)
+  2. Submit new OEIS terms once a(p) = H(QR_p) is confirmed exact for p=19
+
+### INV-235: c(p) Odd Cycle Count as New OEIS Sequence
+**Source:** opus-2026-05-27-S7
+**Status:** OPEN
+**What:** c(p) = #{directed odd simple cycles through any vertex in QR_p}:
+  c(3)=1, c(7)=72, c(11)=39675, c(19)=527714543799, c(23)=7223436934463772
+**Formula:** c(p)/a(p-1) → (p-1)/4 (empirical, very tight).
+**Next:** Check OEIS for this sequence; submit if new.
