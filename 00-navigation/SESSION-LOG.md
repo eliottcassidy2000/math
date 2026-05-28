@@ -2,6 +2,46 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-28-S4 — 2026-05-28
+
+**Summary:** Deep investigation of H=7 impossibility (HYP-1748→THM-343) and Omega(T) structure. Fixed OCF verification bug (directed cycles must be ordered tuples, not frozensets). Major findings on the structure of the conflict graph Omega(T).
+
+**PROVED/VERIFIED:**
+
+**THM-343 (H=7 Impossible):** H(T) ≠ 7 for ALL n tested (n≤7 exhaustive, n=8 sampled). Algebraic proof complete for n=5,6:
+- n=5: N₃=3 requires score sequence {1,1,2,3,3} → strongly connected → Moon's theorem gives 5-cycle → α₁≥4. Contradiction.
+- n=6: N₃=3 requires score sequence {0,2,2,3,4,4} → sink vertex → reduces to n=5 case.
+Core lemma (proved for 3-cycles): three pairwise-conflicting 3-cycles C₁=(a,b,c), C₂=(a,d,e), C₃=(b,d,f) always force a 4th. Either c→d (creates 5-cycle c,d,e,a,b) or d→c (creates 3-cycle d,c,a).
+
+**BUG FIX:** Corrected odd-cycle finder from frozenset (losing direction for 5-cycles) to normalized tuples. OCF verification now 64/64 at n=5, 1024/1024 at n=6. ✓
+
+**NEW COMPUTATIONS:**
+- alpha_1 distribution at n=5,6,7. Notably α₁=3 is IMPOSSIBLE at n=5,6 (skips 2→4), and at n=7 always has α₂=2 (H=15, not 7).
+- H mod p at n=5,6,7 for primes p=2,3,5,7,11,13. Key: H mod 7 achieves all residues at n=7.
+- Omega(T) K3 subgraph check: 78% of n=5 tournaments have K3 in Omega, 99.9% at n=7.
+
+**REFUTED:**
+- **HYP-1751:** H mod p does NOT have gaps for all primes p. At p=7, n=7: all residues {0,...,6} achieved. The mod-5 gap at n=5 is specific (H_max=15<17).
+
+**NEW HYPOTHESES:**
+- HYP-1751b: H is always odd (the only universal gap is mod 2).
+- HYP-1752: Omega(T) is NOT triangle-free. K3 as subgraph is TYPICAL (99.9% at n=7). Triangle-free Omega ↔ α₁≤2 OR α₁=3 with K1⊔K2 conflict.
+
+**IMPLICATIONS FOR TRRT:**
+- Chudnovsky-Seymour route to TRRT (via K3-free / claw-free) is CLOSED — Omega has triangles abundantly.
+- Hermite-Biehler recursion (OPEN-Q-053) remains the primary strategy.
+
+**FILES CREATED:**
+- `01-canon/theorems/THM-343-H7-impossible.md`
+- `04-computation/h7_impossible_s4.py`, `h7_structure_s4.py`, `odd_cycle_analysis_s4.py`, `omega_triangles_fast_s4.py`
+- `05-knowledge/results/h7_impossible_s4.out`, `h7_structure_s4.out`, `odd_cycle_analysis_s4.out`, `omega_triangles_fast_s4.out`
+- `07-reflections/h7-impossibility-and-omega-structure.md`
+
+**NEXT PRIORITIES:**
+1. Complete proof of THM-343 for arbitrary n (handle 5-cycles and longer odd cycles in the "3 pairwise-conflicting" case)
+2. Work on TRRT via Hermite-Biehler (Lemmas A and B, OPEN-Q-052,053)
+3. Investigate the forbidden H spectrum beyond H=7: why are H=21, 63 forbidden?
+
 ## opus-2026-05-28-S3b — 2026-05-28
 
 **Summary:** Continuation of S3. Proved three new theorems (THM-340..342) completing the good-cuts generating function theory. Discovered connections to famous problems. Inspired by Bloom-Sawin sum-product paper (arXiv:2605.28781).

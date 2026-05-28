@@ -1,0 +1,155 @@
+============================================================
+SECTION 1: H=7 IMPOSSIBILITY CHECK
+============================================================
+n=5: m=6 tiles, 64 tilings
+
+n=5: H=7 appears 0 times
+  Achieved H values: [1, 3, 5, 9, 11, 13, 15]
+  H=7 achievable: NO — consistent with HYP-1748
+n=6: m=10 tiles, 1024 tilings
+
+n=6: H=7 appears 0 times
+  Achieved H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  H=7 achievable: NO — consistent with HYP-1748
+n=7: m=15 tiles, 32768 tilings
+
+n=7: H=7 appears 0 times
+  Achieved H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43]...
+  H=7 achievable: NO — consistent with HYP-1748
+
+============================================================
+SECTION 2: H MOD 7 DISTRIBUTION AT n=7 (HYP-1751)
+============================================================
+n=7: m=15, total tilings=32768
+
+H mod 7 distribution (over all 32768 labeled n=7 tournaments):
+  H ≡ 0 (mod 7): 3947 tournaments
+  H ≡ 1 (mod 7): 2776 tournaments
+  H ≡ 2 (mod 7): 4028 tournaments
+  H ≡ 3 (mod 7): 4902 tournaments
+  H ≡ 4 (mod 7): 6303 tournaments
+  H ≡ 5 (mod 7): 5980 tournaments
+  H ≡ 6 (mod 7): 4832 tournaments
+
+Missing residues mod 7: set()
+All distinct H values at n=7: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 65]...
+Total distinct H values: 77
+H mod 7 values achieved: [0, 1, 2, 3, 4, 5, 6]
+Missing mod 7 from distinct H values: set()
+
+============================================================
+SECTION 3: ALPHA_1=3 ANALYSIS (OCF CONSTRAINT FOR H=7)
+============================================================
+
+Checking n=5: tournaments with alpha_1 = 3 (required for H=7)
+n=5 alpha_1 distribution (over 64 labeled tournaments):
+  alpha_1=0: 1 tournaments
+  alpha_1=1: 3 tournaments
+  alpha_1=2: 10 tournaments
+  alpha_1=4: 18 tournaments
+  alpha_1=5: 29 tournaments
+  alpha_1=6: 3 tournaments
+
+Tournaments with alpha_1=3 at n=5: 0
+  -> alpha_1=3 is IMPOSSIBLE at n=5 — this alone explains H≠7!
+
+============================================================
+SECTION 4: INDEPENDENCE POLYNOMIAL vs H(T) VERIFICATION
+============================================================
+
+Verifying H(T) = I(Omega(T), 2) for n=5:
+  H(T) = I(Omega(T), 2): 43/64 verified (FAIL)
+
+Tournaments with alpha_1=3, alpha_2=0, alpha_3=0 at n=5:
+  None! The alpha_1=3 cases all have alpha_2>0 or alpha_3>0.
+
+============================================================
+SECTION 5: ALGEBRAIC ANALYSIS — WHY IS H=7 IMPOSSIBLE?
+============================================================
+
+Checking if alpha_1=3, alpha_2=0 is achievable in any tournament:
+(This is the NECESSARY AND SUFFICIENT condition for H=7)
+
+n=5: NO tournament has alpha_1=3, alpha_2=0. H=7 impossible at n=5.
+
+n=6: NO tournament has alpha_1=3, alpha_2=0. H=7 impossible at n=6.
+
+n=7: NO tournament has alpha_1=3, alpha_2=0. H=7 impossible at n=7.
+
+============================================================
+SECTION 6: STRUCTURAL ANALYSIS — ODD CYCLE TRIPLES
+============================================================
+
+H=7 requires: 3 odd cycles, all pairwise sharing vertices.
+Three pairwise-intersecting odd cycles in a tournament — is this possible?
+
+Key insight attempt:
+If C1, C2, C3 are 3 pairwise-intersecting odd cycles, do they form a structure
+that forces alpha_2 > 0 (two vertex-disjoint odd cycles to appear)?
+
+Case analysis for n=6 (smallest n where 2 disjoint 3-cycles can exist):
+- 3-cycles use 3 vertices, so two disjoint 3-cycles need 6 vertices.
+- For alpha_1=3 AND alpha_2=0: we need exactly 3 odd cycles, all intersecting.
+  But with 6 vertices, a 3-cycle {1,2,3} and another sharing a vertex with it
+  uses 3+2=5 vertices, leaving 1 vertex. The third 3-cycle uses those 5 vertices.
+
+Let's count: can 3 directed 3-cycles in a 6-vertex tournament all pairwise intersect?
+
+n=6: scanning all 1024 tilings for 3-cycle structure...
+  Tournaments with exactly 3 odd cycles: 0
+  Tournaments with exactly 3 odd cycles, all pairwise intersecting: 0
+
+============================================================
+SECTION 7: H MOD p FOR SMALL PRIMES
+============================================================
+
+H mod p distributions at n=5:
+  mod 2: achieved=[1], missing=[0]
+  mod 3: achieved=[0, 1, 2], missing=[]
+  mod 5: achieved=[0, 1, 3, 4], missing=[2]
+  mod 7: achieved=[1, 2, 3, 4, 5, 6], missing=[0]
+  mod 11: achieved=[0, 1, 2, 3, 4, 5, 9], missing=[6, 7, 8, 10]
+  mod 13: achieved=[0, 1, 2, 3, 5, 9, 11], missing=[4, 6, 7, 8, 10, 12]
+
+H mod p distributions at n=6 (all 1024 tilings):
+  mod 2: achieved=[1], missing=[0]
+  mod 3: achieved=[0, 1, 2], missing=[]
+  mod 5: achieved=[0, 1, 2, 3, 4], missing=[]
+  mod 7: achieved=[1, 2, 3, 4, 5, 6], missing=[0]
+  mod 11: achieved=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], missing=[]
+  mod 13: achieved=[0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12], missing=[8]
+
+H mod p distributions at n=7 (all 32768 tilings):
+  mod 2: achieved=[1], missing=[0]
+  mod 3: achieved=[0, 1, 2], missing=[]
+  mod 5: achieved=[0, 1, 2, 3, 4], missing=[]
+  mod 7: achieved=[0, 1, 2, 3, 4, 5, 6], missing=[]
+  mod 11: achieved=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], missing=[]
+  mod 13: achieved=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], missing=[]
+
+============================================================
+SECTION 8: H=7 PROOF SKETCH SYNTHESIS
+============================================================
+
+If the computational evidence shows H=7 is impossible for ALL n up to 7,
+the algebraic mechanism must be one of:
+
+(A) alpha_1=3, alpha_2=0 is impossible in any tournament — combinatorial reason
+(B) alpha_1=3, alpha_2=0 tournaments exist but always have additional odd cycles
+    making alpha_1 > 3
+
+Key question: In a tournament, if exactly 3 odd cycles exist and they pairwise
+share vertices, does this FORCE the existence of a 4th odd cycle?
+
+This would follow from a "tournament Ramsey-type" theorem on odd cycles.
+
+Let's check this by finding all tournaments with alpha_1=3, alpha_2=0,
+and examining how many actually achieve H=7 vs having more cycles.
+
+============================================================
+SUMMARY
+============================================================
+H=7 impossibility verification:
+  n=5: H=7 appears 0 times out of 64 tilings
+  n=6: H=7 appears 0 times out of 1024 tilings
+  n=7: H=7 appears 0 times out of 32768 tilings

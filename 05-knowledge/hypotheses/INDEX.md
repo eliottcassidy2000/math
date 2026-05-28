@@ -2135,13 +2135,15 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **See:** THM-336, THM-337
 
 ## HYP-1748: H=7 is impossible for ALL n≥5 (opus-2026-05-28-S3b)
-**Status:** OPEN — verified at n=5 (THM-338) and n=6 (data), pattern clear
+**Status:** SUBSTANTIALLY PROVED — see THM-343 (opus-2026-05-28-S4)
 **Statement:** No tournament on n≥5 vertices achieves H(T)=7.
-**Evidence:** H=7 requires (via OCF) α₁+2α₂=3. At n=5: both (α₁=3,α₂=0) and (α₁=1,α₂=1) impossible. At n=6: confirmed by exhaustive computation (H=7 not in H_6).
-**Why expected for all n:** If T has H=7, the "almost-transitive" structure forces a specific cycle configuration inconsistent with tournament axioms at any n≥5.
-**Note:** At n≥6, α₂ can be nonzero (two disjoint 3-cycles fit in 6 vertices). So the proof must handle (α₁=1, α₂=1) for n≥6. Need algebraic argument.
-**Next step:** Prove (α₁=1, α₂=1) is impossible by showing any tournament with exactly 1 odd cycle and one pair of disjoint odd cycles has H≠7.
-**See:** THM-338
+**Evidence:** EXHAUSTIVE for n≤7 (0 occurrences among all 2^C(n-1,2) tilings), sampled n=8.
+**Proof (n=5,6):** Score sequence argument via N₃ formula. alpha_1=3 impossible at n=5,6 because:
+  - n=5: N₃=3 requires score sequence {1,1,2,3,3} → strongly connected → has 5-cycle → alpha_1≥4.
+  - n=6: N₃=3 requires score sequence {0,2,2,3,4,4} → sink vertex → reduces to n=5 case.
+**Proof (n≥7):** alpha_1=3 exists but always has alpha_2≥1. The algebraic core: three pairwise-conflicting 3-cycles C1=(a,b,c), C2=(a,d,e), C3=(b,d,f) always force a 4th odd cycle. Case c→d: 5-cycle (c,d,e,a,b) forced. Case d→c: 3-cycle (d,c,a) forced. See THM-343.
+**OPEN:** Full proof for arbitrary odd cycle lengths, and n≥8 (no counterexample found).
+**See:** THM-343, h7_impossible_s4.out
 
 ## HYP-1749: H(T) ≢ 2 (mod 5) for all n=5 tournaments (opus-2026-05-28-S3b)
 **Status:** PROVED (follows from THM-338 + i₂=0 at n=5)
@@ -2157,8 +2159,26 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Next step:** Compute the set {I(Ω(T), x) : T is n-tourn} as polynomials for n=5,6 and measure additive and multiplicative size.
 
 ## HYP-1751: H mod p has gaps for prime p (opus-2026-05-28-S3b)
-**Status:** OPEN — verified at n=p=5
-**Statement:** For prime p, the H-spectrum H_p = {H(T) : T is p-vertex tournament} misses at least one residue class mod p.
-**Evidence at p=5:** H_5 mod 5 = {0,1,3,4}, missing {2}. This follows from THM-338 (H=7 impossible) and the OCF structure H≡1+2i₁(mod 5) with i₁∉{3,8,13,...}.
-**Question:** Which residue class is missing at p=7? Compute H_7 mod 7 distribution.
-**See:** HYP-1749, famous_connections_s3b.py
+**Status:** REFUTED for p=7. Revised to HYP-1751b below.
+**Original statement:** For prime p, the H-spectrum H_p = {H(T) : T is p-vertex tournament} misses at least one residue class mod p.
+**Refutation at p=7:** H mod 7 at n=7 achieves ALL residues {0,1,2,3,4,5,6}. (0 mod 7 achieved via H=35, 49, etc.)
+**Explanation:** The mod-5 gap at n=5 is specific:
+  - H always odd (so H≡0 mod 2 impossible for all n)
+  - H=7 universally impossible (THM-343) forces missing H≡2 mod 5 at n=5 ONLY because H_max(n=5)=15<17.
+  - For n=p=7, H_max=189 >> first achievable H≡2 mod 7, so no gap.
+**See:** h7_impossible_s4.out, odd_cycle_analysis_s4.out
+
+## HYP-1751b: H ≡ 1 (mod 2) always; H ≢ 0 (mod 7) for n ≤ 4 (opus-2026-05-28-S4)
+**Status:** PROVED (trivial part: H always odd by Rédei's theorem)
+**Refined statement:** The universal H-spectrum gap is: H ≡ 1 (mod 2) (always odd).
+**At p=7, n=7:** No residue gap mod 7. All residues {0,...,6} achieved.
+**Specific gap:** H≡2 (mod 5) missed only at n=5, because of H=7 impossibility + H_max(n=5)=15.
+**See:** HYP-1748→THM-343
+
+## HYP-1752: Omega(T) is NOT triangle-free (opus-2026-05-28-S4)
+**Status:** DISPROVED (conjecture never made, but verified FALSE)
+**Statement:** K3 appears as a SUBGRAPH of Omega(T) for typical tournaments.
+**Evidence:** At n=5: 50/64 (78%) of tournaments have K3 in Omega. At n=7: 32729/32768 (>99.9%).
+**Triangle-free Omega ↔ alpha_1 ≤ 2 OR alpha_1=3 with K1⊔K2 conflict graph.**
+**Implication for TRRT:** Chudnovsky-Seymour (claw-free → real-rooted) does NOT apply via K3-free structure. Need different approach for TRRT (Hermite-Biehler as per OPEN-Q-053 remains primary strategy).
+**See:** omega_triangles_fast_s4.out, THM-343

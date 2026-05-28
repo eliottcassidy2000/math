@@ -1,0 +1,82 @@
+============================================================
+TRIANGLE CHECK: Does Omega(T) contain K3 subgraph?
+============================================================
+n=5: tournaments with K3 in Omega: 50 / 64
+n=6: tournaments with K3 in Omega: 1003 / 1024
+n=7: tournaments with K3 in Omega: 32729 / 32768
+
+First K3 found: n=5, alpha_1=4
+  C1=(0, 2, 1)
+  C2=(1, 3, 2)
+  C3=(2, 4, 3)
+  Shared vertices: C1∩C2={1, 2}, C1∩C3={2}, C2∩C3={2, 3}
+
+============================================================
+SUBGRAPH vs FULL GRAPH DISTINCTION
+============================================================
+
+THM-343 shows: Omega(T) cannot EQUAL K3 (cannot have exactly 3 mutually
+conflicting cycles with no others).
+
+But Omega(T) CAN contain K3 as a SUBGRAPH when alpha_1 >= 4.
+
+Example: if 4 cycles C1,C2,C3 (mutually conflicting) and C4 (disjoint from all),
+then Omega has vertices {C1,C2,C3,C4}, edges {C1-C2, C1-C3, C2-C3}.
+This IS K3 + isolated vertex.
+
+The question above checks for this general case (K3 as subgraph).
+
+============================================================
+ALGEBRAIC PROOF VERIFICATION
+============================================================
+
+Proof of Key Lemma (Type 2 case):
+C1=(a,b,c), C2=(a,d,e), C3=(b,d,f) with {a,b,c,d,e,f} distinct.
+
+Arcs: a→b, b→c, c→a (C1); a→d, d→e, e→a (C2); b→d, d→f, f→b (C3).
+
+Claim: the arc between c and d forces a 4th odd cycle.
+  c→d: 5-cycle (c,d,e,a,b) formed.
+  d→c: 3-cycle (d,c,a) formed.
+
+Let's verify this with the tiling model at n=7:
+Find all tournaments where {C1=(0,2,1), C2=(0,3,4), C3=(2,3,5)} all exist.
+(a=0, b=2, c=1, d=3, e=4, f=5)
+
+Checking which canonical 3-cycles can appear in n=7 tilings...
+Most common 3-cycles in n=7 tilings:
+  (0, 2, 1): 128 tilings
+  (1, 3, 2): 128 tilings
+  (4, 6, 5): 64 tilings
+  (2, 4, 3): 64 tilings
+  (3, 5, 4): 64 tilings
+  (0, 6, 1): 64 tilings
+  (1, 4, 2): 64 tilings
+  (1, 5, 2): 64 tilings
+  (1, 3, 6): 32 tilings
+  (1, 4, 6): 32 tilings
+
+============================================================
+KEY RESULTS SUMMARY
+============================================================
+
+1. H=7 IMPOSSIBLE (THM-343): For ALL n tested (n≤7, sampled n=8).
+   - Algebraic proof for n=5,6 via score sequences.
+   - At n≥7: alpha_1=3 exists but always has alpha_2≥1 (K3 impossible as full graph).
+   - Core lemma: 3 pairwise-conflicting 3-cycles force a 4th (proved case-by-case).
+
+2. Alpha_1=3 structure at n=7: Always H=15, always K1⊔K2 conflict graph.
+
+3. HYP-1751 REFUTED for p=7: H mod 7 achieves all residues at n=7.
+   The mod-5 gap at n=5 is specific to n=p=5 and the universal H=7 impossibility.
+
+4. H mod p results:
+   - All n: H ≡ 1 (mod 2) (H always odd — proved by Rédei)
+   - n=5: H mod 5 misses {2} (because H=7 impossible AND H_max=15)
+   - n=6: H mod 5 achieves all residues (H=17≡2 mod 5 is achievable)
+   - n=7: H mod 7 achieves ALL residues {0,1,2,3,4,5,6}
+
+5. Omega(T) triangle check: PENDING (too slow for n=7 exhaustive).
+   Key theoretical question: is Omega always K3-free (as a subgraph)?
+   Our proof of THM-343 only shows K3 can't be the ENTIRE Omega.
+
