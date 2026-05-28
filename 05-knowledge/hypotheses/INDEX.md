@@ -2133,3 +2133,32 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Formula:** SC(n) = 2^{C(n-1,2)} − non-SC(n) where non-SC uses THM-337.
 **OEIS status:** NOT in OEIS (as of 2026-05-28). New candidate.
 **See:** THM-336, THM-337
+
+## HYP-1748: H=7 is impossible for ALL n≥5 (opus-2026-05-28-S3b)
+**Status:** OPEN — verified at n=5 (THM-338) and n=6 (data), pattern clear
+**Statement:** No tournament on n≥5 vertices achieves H(T)=7.
+**Evidence:** H=7 requires (via OCF) α₁+2α₂=3. At n=5: both (α₁=3,α₂=0) and (α₁=1,α₂=1) impossible. At n=6: confirmed by exhaustive computation (H=7 not in H_6).
+**Why expected for all n:** If T has H=7, the "almost-transitive" structure forces a specific cycle configuration inconsistent with tournament axioms at any n≥5.
+**Note:** At n≥6, α₂ can be nonzero (two disjoint 3-cycles fit in 6 vertices). So the proof must handle (α₁=1, α₂=1) for n≥6. Need algebraic argument.
+**Next step:** Prove (α₁=1, α₂=1) is impossible by showing any tournament with exactly 1 odd cycle and one pair of disjoint odd cycles has H≠7.
+**See:** THM-338
+
+## HYP-1749: H(T) ≢ 2 (mod 5) for all n=5 tournaments (opus-2026-05-28-S3b)
+**Status:** PROVED (follows from THM-338 + i₂=0 at n=5)
+**Statement:** For any 5-vertex tournament T, H(T) mod 5 ≠ 2.
+**Proof:** At n=5, i₂=0 (no two vertex-disjoint odd cycles fit in 5 vertices), so H = 1+2i₁. Then H≡2(mod 5) requires i₁≡3(mod 5), i.e., i₁∈{3,8,13,...}. But i₁=3 is impossible (= H=7 impossible = THM-338), and i₁≥8 requires H≥17 > H_max=15.
+**Corollary:** The mod-5 residues achieved by H at n=5 are exactly {0,1,3,4}.
+**See:** THM-338, famous_connections_s3b.py
+
+## HYP-1750: Sum-product in independence polynomial ring (opus-2026-05-28-S3b)
+**Status:** OPEN — new conjecture
+**Statement:** The map T → I(Ω(T), x) ∈ Z[x] might satisfy a sum-product type inequality: the images of n-vertex tournaments cannot simultaneously form a "small" set under polynomial addition and multiplication.
+**Motivation:** Inspired by Bloom-Sawin 2025 (arXiv:2605.28781). Product P_T·P_{T'} = I(Ω(T)⊔Ω(T'), x) is always achievable. The question is about the structure of the image set.
+**Next step:** Compute the set {I(Ω(T), x) : T is n-tourn} as polynomials for n=5,6 and measure additive and multiplicative size.
+
+## HYP-1751: H mod p has gaps for prime p (opus-2026-05-28-S3b)
+**Status:** OPEN — verified at n=p=5
+**Statement:** For prime p, the H-spectrum H_p = {H(T) : T is p-vertex tournament} misses at least one residue class mod p.
+**Evidence at p=5:** H_5 mod 5 = {0,1,3,4}, missing {2}. This follows from THM-338 (H=7 impossible) and the OCF structure H≡1+2i₁(mod 5) with i₁∉{3,8,13,...}.
+**Question:** Which residue class is missing at p=7? Compute H_7 mod 7 distribution.
+**See:** HYP-1749, famous_connections_s3b.py

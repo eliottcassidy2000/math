@@ -1,0 +1,81 @@
+=================================================================
+OEIS LOOKUP RETRY — opus-2026-05-28-S3b
+=================================================================
+
+SC tiling sequence (n=3..10)
+  Seq: 1,5,50,903,30773,2032504,264271477,68184627441
+  Desc: Path-fixed SC tournaments: strongly connected tilings of n-vertex staircase
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+Non-SC tiling sequence (n=3..10)
+  Seq: 1,3,14,121,1995,64648,4163979,534849295
+  Desc: Non-SC tilings: complement of SC tilings in 2^{C(n-1,2)}
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+Q(d,k) triangle (flat by rows)
+  Seq: 1,5,50,1,903,10,30773,125
+  Desc: Q(d,k)=[x^d]B(x)^k where B(x)=sum SC(n+1)x^n; k=1..floor(d/2)
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+Q(d,2) column = [x^d]B(x)^2
+  Seq: 1,10,125,2306,73076,4463038,552760703
+  Desc: d=4,5,6,7,8,9,10: [x^d](sum_{a>=2} SC(a+1)x^a)^2
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+K(n,1) = #{n-tourn with 1 king}
+  Seq: 2,6,32,320,6144,229376
+  Desc: = n * 2^{C(n-1,2)}, n=2..7
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+K(n,n) = #{n-tourn with all kings}
+  Seq: 0,2,0,64,1680,110048
+  Desc: n=2..7; zero for even n>=4, positive for odd n
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+K(n,3) for n=3..7
+  Seq: 2,32,520,11600,402640
+  Desc: #{n-vertex tournaments with exactly 3 kings}
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+#{distinct H values at n}
+  Seq: 1,2,3,7,19
+  Desc: n=2..6, count of achievable H(T) values
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+H-dist counts at n=6
+  Seq: 720,960,2160,2960,1440,1440,2208
+  Desc: n=6: counts for H=1,3,5,9,11,13,15
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+SC tilings n=5 by upward count
+  Seq: 1,9,18,15,6,1
+  Desc: n=5: #{SC tilings with j=1..6 upward tiles}
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+SC tilings n=6 by upward count
+  Seq: 1,17,81,180,240,208,120,45
+  Desc: n=6: #{SC tilings with j=1..10 upward tiles}
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+Total 3-cycles in all n-tourn
+  Seq: 2,64,2560,163840,18350080,3758096384
+  Desc: = 2^{C(n,2)-2}*C(n,3), n=3..8
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+SC upward-count col j=2 (n=5,6,7...)
+  Seq: 9,17
+  Desc: #{SC tilings with exactly 2 upward tiles}: at n=5: 9, n=6: 17
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+Q sub-diagonal = 5k
+  Seq: 5,10,15,20,25,30,35,40
+  Desc: Q(2k+1,k) = 5k for k=1,2,...; multiples of 5
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+Q 2nd sub-diagonal
+  Seq: 50,125,225,350,500,675
+  Desc: Q(2k+2,k) = 25k(k+3)/2 for k=1,2,...
+  ERROR: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>
+
+=================================================================
+DONE

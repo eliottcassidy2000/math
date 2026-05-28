@@ -1,0 +1,104 @@
+======================================================================
+OEIS LOOKUP — opus-2026-05-28-S3
+======================================================================
+
+SC tiling sequence: 1,5,50,903,30773,2032504,264271477,68184627441
+  (#{tilings of n-vertex staircase with SC tournament})
+  ERROR: OEIS search failed
+
+Non-SC tiling sequence: 1,3,14,121,1995,64648,4163979,534849295
+  (#{tilings NOT strongly connected})
+  ERROR: OEIS search failed
+
+Good-cuts triangle (flat): 1,0,1,1,0,2,5,1
+  (T(n,k) = #{tilings with exactly k good cuts})
+  ERROR: OEIS search failed
+
+Column k=2 of good-cuts (= n-2): 0,1,2,3,4,5,6,7
+  (trivial: natural numbers)
+  ERROR: OEIS search failed
+
+Column k=3: 5(n-3): 0,0,5,10,15,20,25,30
+  (multiples of 5)
+  ERROR: OEIS search failed
+
+Column k=4: (n-4)(n+95)/2: 0,0,0,50,101,153,206,260
+  (quadratic in n)
+  ERROR: OEIS search failed
+
+K(n,1) = #{tournaments with 1 king}: 2,6,32,320,6144,229376
+  (= n * 2^{C(n-1,2)})
+  ERROR: OEIS search failed
+
+K(n,n) = #{tournaments with all n kings}: 0,2,0,64,1680,110048
+  (= 0 for even n>=4, positive for odd n)
+  ERROR: OEIS search failed
+
+K(n,n) for odd n: n=3,5,7: 2,64,1680,110048
+  (all-king tournaments, odd n)
+  ERROR: OEIS search failed
+
+3-cycle dist n=4: [24,16,24]: 24,16,24
+  (too short, try with n=5 row)
+  ERROR: OEIS search failed
+
+3-cycle dist n=5: 120,120,240,240,280,24
+  (C3(5,k) for k=0..5)
+  ERROR: OEIS search failed
+
+H-values at n=6: 1,3,5,9,11,13,15,17
+  (achievable H in labeled 6-vertex tournament)
+  ERROR: OEIS search failed
+
+H-dist counts n=6: 720,960,2160,2960,1440,1440,2208
+  (#{6-vertex tournaments with H=1,3,5,9,11,13,15})
+  ERROR: OEIS search failed
+
+#{distinct H values at n}: 1,2,3,7,19
+  (n=2..6, count of distinct achievable H values)
+  ERROR: OEIS search failed
+
+SC tilings by upward count n=5: 1,9,18,15,6,1
+  (for j=1..6: #{SC tilings with j upward tiles})
+  ERROR: OEIS search failed
+
+SC tilings by upward count n=6: 1,17,81,180,240,208,120,45
+  (for j=1..10: #{SC tilings of 6-vertex with j upward tiles})
+  ERROR: OEIS search failed
+
+Q(d,2) convolution values: 1,10,125,2306,73076,4463038,552760703
+  ([x^d]A(x)^2 where A(x) = sum SC(b+1)*x^b)
+  ERROR: OEIS search failed
+
+Total directed 3-cycles in all n-vertex tournaments: 2,64,2560,163840,18350080,3758096384
+  (= 2^{C(n,2)-2} * C(n,3), n=3..8)
+  ERROR: OEIS search failed
+
+K(n,3) = #{tournaments with exactly 3 kings}: 2,32,520,11600,402640
+  (for n=3..7)
+  ERROR: OEIS search failed
+
+Last column of good-cuts triangle: 1,1,5,50,903,30773,2032504,264271477
+  (= SC(n): path-fixed SC tournament counts)
+  ERROR: OEIS search failed
+
+Non-SC counts (starting n=3): 1,3,14,121,1995,64648
+  (non-SC tiling counts for n=3..8)
+  ERROR: OEIS search failed
+
+K(n,4) for n=5,6,7: 120,7920,527520
+  (#{n-vertex tournaments with exactly 4 kings})
+  ERROR: OEIS search failed
+
+K(n,5) for n=5,6,7: 64,5424,491568
+  (#{n-vertex tournaments with exactly 5 kings})
+  ERROR: OEIS search failed
+
+Max H (A038375 check): 1,1,3,5,15,45
+  (n=1..6: max Hamiltonian paths in n-vertex tournament)
+  ERROR: OEIS search failed
+
+======================================================================
+OEIS LOOKUP COMPLETE
+======================================================================
+Sequences marked ** NOT IN OEIS ** are candidates for submission.

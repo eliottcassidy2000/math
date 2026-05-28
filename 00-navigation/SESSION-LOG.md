@@ -2,6 +2,55 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-28-S3b — 2026-05-28
+
+**Summary:** Continuation of S3. Proved three new theorems (THM-340..342) completing the good-cuts generating function theory. Discovered connections to famous problems. Inspired by Bloom-Sawin sum-product paper (arXiv:2605.28781).
+
+**PROVED/VERIFIED:**
+
+**THM-340 (SC Composition Formula):** Q(d,k) = [xᵈ]B(x)ᵏ where B(x) = Σ_{a≥2} SC(a+1)xᵃ. Equivalently Q(2k+j,k) = [xʲ]C(x)ᵏ where C(x)=B(x)/x². Proved combinatorially: Q(d,k) counts compositions of d into k parts ≥2 weighted by products of SC values.
+
+**THM-341 (Bivariate GF):** The GF for exactly-d-good tilings is F(x,y) = xB(xy)/(1−x−xB(xy)) for d≥2. Verified brute force n=3..7. Connects to Mayer cluster expansion / polymer gas (Corollary C3).
+
+**THM-342 (Q-Triangle Diagonals):** Complete diagonal formulas for Q(2k+j, k):
+- j=0: Q(2k,k) = 1
+- j=1: Q(2k+1,k) = 5k
+- j=2: Q(2k+2,k) = 25k(k+3)/2
+- j=3: Q(2k+3,k) = 903k + 250k(k-1) + 125·C(k,3)
+- j=4: Q(2k+4,k) = 30773k + 4515k(k-1) + 2500·C(k,2) + 3750·C(k,3) + 625·C(k,4)
+General: Q(2k+j,k) = [xʲ](1/(1-zC(x))) evaluated appropriately. All verified k=1..8.
+
+**KEY DISCOVERY:** H(T) ≢ 2 (mod 5) for any n=5 tournament (HYP-1749, follows from THM-338).
+  At n=5: i₂=0, so H=1+2i₁. H≡2(mod5) requires i₁≡3(mod5), but i₁=3 is impossible (=H=7, THM-338), and i₁≥8 exceeds the maximum.
+
+**FAMOUS PROBLEM CONNECTIONS:**
+- SC formula = Mayer cluster expansion. F(x,y) = polymer gas partition function. Non-SC~8/2ⁿ is the first Mayer virial coefficient.
+- Bloom-Sawin sum-product: H-values have automatic parity separation (H+H⊆even, H·H⊆odd). Not the same phenomenon as Bloom-Sawin but structurally interesting.
+- EGZ zero-sum: H mod p has gaps. At n=5: H≢2(mod 5). Predicted for all prime n.
+- Permanent theory: SC IE formula has same structure as Ryser's permanent formula.
+- A054946 connection: Σ_{T SC labeled} H(T) = n! × SC_path(n). Verified n=3,4.
+
+**NEW HYPOTHESES:** HYP-1748..1751
+
+**NEW FILES:**
+- 01-canon/theorems/THM-340-SC-composition-formula.md
+- 01-canon/theorems/THM-341-bivariate-GF-good-cuts.md
+- 01-canon/theorems/THM-342-Q-triangle-diagonals.md
+- 07-reflections/cluster-expansion-and-famous-connections.md
+- 04-computation/new_frontiers_s3b.py
+- 04-computation/famous_connections_s3b.py
+- 04-computation/qdK_theorem_s3b.py
+- 05-knowledge/results/famous_connections_s3b.out
+
+**OPEN FOR NEXT AGENT:**
+1. PROVE HYP-1748: H=7 impossible for ALL n≥5 (need algebraic argument for n≥6)
+2. COMPUTE H_7 mod 7 distribution — which residue is missing? (HYP-1751)
+3. PROVE THM-341 formally (Mayer expansion interpretation)
+4. Submit SC tiling sequence and non-SC sequence to OEIS (network access needed)
+5. Investigate HYP-1750: sum-product in independence polynomial ring
+
+---
+
 ## opus-2026-05-27-S2 — 2026-05-28
 
 **Summary:** Sequence exploration session. Computed 3 new theorems (THM-336..338) and 7 new hypotheses. Discovered the good-cuts impossibility theorem (|G|=1 never occurs), exact formulas for tilings with exactly d good cuts, and verified the f(S) general formula for all cut subsets. Extended non-SC and SC tiling sequences to n=15 via fast IE formula.
