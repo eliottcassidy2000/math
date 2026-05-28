@@ -1,0 +1,207 @@
+======================================================================
+EXTENDED SEQUENCE COMPUTATIONS
+======================================================================
+
+1. Non-SC / SC tiling sequences up to n=15:
+
+n:    [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+Non-SC: [1, 3, 14, 121, 1995, 64648, 4163979, 534849295, 137175056830, 70300582005021, 72022549494074543, 147537994739778382720, 604389195176853420636135]
+SC:     [1, 5, 50, 903, 30773, 2032504, 264271477, 68184627441, 35047197032002, 35958496436958947, 73714953745344131921, 302083916908917515293824, 2475275689375583696377612313]
+
+Comparison to dominant approximation 2^{m-n+3}:
+  n=3: non-SC=1, dominant=2^1=2, ratio=0.50000000
+  n=4: non-SC=3, dominant=2^2=4, ratio=0.75000000
+  n=5: non-SC=14, dominant=2^4=16, ratio=0.87500000
+  n=6: non-SC=121, dominant=2^7=128, ratio=0.94531250
+  n=7: non-SC=1995, dominant=2^11=2048, ratio=0.97412109
+  n=8: non-SC=64648, dominant=2^16=65536, ratio=0.98645020
+  n=9: non-SC=4163979, dominant=2^22=4194304, ratio=0.99276996
+  n=10: non-SC=534849295, dominant=2^29=536870912, ratio=0.99623444
+  n=11: non-SC=137175056830, dominant=2^37=137438953472, ratio=0.99807990
+  n=12: non-SC=70300582005021, dominant=2^46=70368744177664, ratio=0.99903136
+  n=13: non-SC=72022549494074543, dominant=2^56=72057594037927936, ratio=0.99951366
+  n=14: non-SC=147537994739778382720, dominant=2^67=147573952589676412928, ratio=0.99975634
+  n=15: non-SC=604389195176853420636135, dominant=2^79=604462909807314587353088, ratio=0.99987805
+
+2. Exactly-j-bad-cuts sequences:
+
+n=3 (m=1, cuts 1..2):
+  j=0..2: [1, 0, 1]
+  Total: 2 = 2^1 = 2? True
+n=4 (m=3, cuts 1..3):
+  j=0..3: [5, 2, 0, 1]
+  Total: 8 = 2^3 = 8? True
+n=5 (m=6, cuts 1..4):
+  j=0..4: [50, 10, 3, 0, 1]
+  Total: 64 = 2^6 = 64? True
+n=6 (m=10, cuts 1..5):
+  j=0..5: [903, 101, 15, 4, 0, 1]
+  Total: 1024 = 2^10 = 1024? True
+n=7 (m=15, cuts 1..6):
+  j=0..6: [30773, 1816, 153, 20, 5, 0, 1]
+  Total: 32768 = 2^15 = 32768? True
+n=8 (m=21, cuts 1..7):
+  j=0..7: [2032504, 61671, 2739, 206, 25, 6, 0, 1]
+  Total: 2097152 = 2^21 = 2097152? True
+n=9 (m=28, cuts 1..8):
+  j=0..8: [264271477, 4067314, 92695, 3672, 260, 30, 7, 0, 1]
+  Total: 268435456 = 2^28 = 268435456? True
+n=10 (m=36, cuts 1..9):
+  j=0..9: [68184627441, 528616030, 6104445, 123846, 4615, 315, 35, 8, 0, 1]
+  Total: 68719476736 = 2^36 = 68719476736? True
+
+Exactly-1-bad-cut (n=3..12):
+  [0, 2, 10, 101, 1816, 61671, 4067314, 528616030, 136373717920, 70094946824707]
+
+Exactly-2-bad-cuts (n=4..12):
+  [0, 3, 15, 153, 2739, 92695, 6104445, 793033884, 204567275771]
+
+Exactly-n-2-bad-cuts (always 0 for n>=3):
+  [0, 0, 0, 0, 0, 0, 0]  (confirms theorem: always 0)
+
+3. Exact count formulas:
+
+Exactly (n-3) bad cuts = n-2:
+  n=4: count=2, predicted=n-2=2, match=True
+  n=5: count=3, predicted=n-2=3, match=True
+  n=6: count=4, predicted=n-2=4, match=True
+  n=7: count=5, predicted=n-2=5, match=True
+  n=8: count=6, predicted=n-2=6, match=True
+  n=9: count=7, predicted=n-2=7, match=True
+  n=10: count=8, predicted=n-2=8, match=True
+  n=11: count=9, predicted=n-2=9, match=True
+  n=12: count=10, predicted=n-2=10, match=True
+
+Exactly (n-4) bad cuts = C(n,2):
+  n=5: count=10, predicted=C(n,2)=10, match=True
+  n=6: count=15, predicted=C(n,2)=15, match=True
+  n=7: count=20, predicted=C(n,2)=21, match=False
+  n=8: count=25, predicted=C(n,2)=28, match=False
+  n=9: count=30, predicted=C(n,2)=36, match=False
+  n=10: count=35, predicted=C(n,2)=45, match=False
+  n=11: count=40, predicted=C(n,2)=55, match=False
+
+Exactly (n-5) bad cuts:
+  n=6: count=101
+  n=7: count=153
+  n=8: count=206
+  n=9: count=260
+  n=10: count=315
+  n=11: count=371
+  Sequence:  [101, 153, 206, 260, 315, 371]
+
+4. f({i,j,k}) formula verification:
+f({i,j,k}) = ?  (need to derive)
+n=5:
+  f({1,2,3}) = 6, formula = 6, match = True
+  f({1,2,4}) = 6, formula = 6, match = True
+  f({1,3,4}) = 6, formula = 6, match = True
+  f({2,3,4}) = 6, formula = 6, match = True
+n=6:
+  f({1,2,3}) = 9, formula = 9, match = True
+  f({1,2,4}) = 10, formula = 10, match = True
+  f({1,2,5}) = 9, formula = 9, match = True
+  f({1,3,4}) = 10, formula = 10, match = True
+  f({1,3,5}) = 10, formula = 10, match = True
+  f({1,4,5}) = 9, formula = 9, match = True
+  f({2,3,4}) = 10, formula = 10, match = True
+  f({2,3,5}) = 10, formula = 10, match = True
+  f({2,4,5}) = 10, formula = 10, match = True
+  f({3,4,5}) = 9, formula = 9, match = True
+n=7:
+  f({1,2,3}) = 12, formula = 12, match = True
+  f({1,2,4}) = 14, formula = 14, match = True
+  f({1,2,5}) = 14, formula = 14, match = True
+  f({1,2,6}) = 12, formula = 12, match = True
+  f({1,3,4}) = 14, formula = 14, match = True
+  f({1,3,5}) = 15, formula = 15, match = True
+  f({1,3,6}) = 14, formula = 14, match = True
+  f({1,4,5}) = 14, formula = 14, match = True
+  f({1,4,6}) = 14, formula = 14, match = True
+  f({1,5,6}) = 12, formula = 12, match = True
+  f({2,3,4}) = 14, formula = 14, match = True
+  f({2,3,5}) = 15, formula = 15, match = True
+  f({2,3,6}) = 14, formula = 14, match = True
+  f({2,4,5}) = 15, formula = 15, match = True
+  f({2,4,6}) = 15, formula = 15, match = True
+  f({2,5,6}) = 14, formula = 14, match = True
+  f({3,4,5}) = 14, formula = 14, match = True
+  f({3,4,6}) = 14, formula = 14, match = True
+  f({3,5,6}) = 14, formula = 14, match = True
+  f({4,5,6}) = 12, formula = 12, match = True
+
+5. General formula for f(S):
+f(S) = Σ_{k∈S} k(n-k) - |S| - Σ_{i<j in S} i(n-j) + Σ_{i<j<k in S} i(n-k) - ...
+     = Σ_{k∈S} k(n-k) - |S| + Σ_{size>=2} (-1)^{size+1} * (min_S)*(n-max_S)
+
+Verifying general formula f(S):
+  n=4: ALL correct ✓
+  n=5: ALL correct ✓
+  n=6: ALL correct ✓
+  n=7: ALL correct ✓
+
+6. Non-SC closed form:
+
+|non-SC| = Σ_{∅≠S⊆{1..n-1}} (-1)^{|S|+1} * 2^{m - f(S)}
+where f(S) = Σ_{T⊆S, T≠∅} (-1)^{|T|+1} * h(T)
+      h({k}) = k(n-k) - 1
+      h(T) = min(T)*(n-max(T)) for |T|≥2
+
+7. All-kings labeled tournament sequence:
+
+Known: n=3..6: [2, 0, 64, 1680]
+
+At n=5: 24 regular + 40 score=(1,2,2,2,3) H=15 = 64 all-kings
+
+8. The impossible H=7 at n=5:
+
+Known: H ∈ {1,3,5,9,11,13,15} at n=5 (missing: 7)
+From OCF: H = 1 + 2α₁ + 4α₂ where α₁ = #odd cycles, α₂ = #disjoint pairs
+H=7 would require 1 + 2α₁ + 4α₂ = 7 => 2α₁ + 4α₂ = 6 => α₁ + 2α₂ = 3
+Solutions: (α₁,α₂) = (1,1) or (3,0)
+For (1,1): 1 odd cycle and 1 disjoint pair of odd cycles = impossible (1 cycle can't form a disjoint pair with itself)
+For (3,0): 3 odd cycles, no disjoint pair = all three share a vertex!
+  At n=5: 3 odd cycles all sharing a vertex means all 3 pass through some vertex v.
+  But then we'd have 3 odd cycles through v. Since T-v has 4 vertices:
+  Any 3-cycle through v uses 2 vertices of T-v.
+  We can have at most C(4,2)=6 different 3-cycles through v.
+  Having 3 disjoint (in T-v) 3-cycles through v: impossible since |T-v|=4.
+  Actually they can share vertices in T-v. But for NO disjoint pair,
+  any two cycles must share a vertex. At n=5, cycles through v use ≥2 other vertices.
+  If all 3 cycles are 3-cycles through v: they each use 2 other vertices.
+  For no two to be disjoint, any two 3-cycles must share a vertex in T-v.
+  But 3 different pairs of vertices from {a,b,c,d}: can we have 3 3-cycles all pairwise sharing a vertex?
+  Cycles: v-a-b, v-c-d, v-a-c (shares a with first, c with second). This works!
+  But: do these 3 cycles actually exist simultaneously in some tournament on {v,a,b,c,d}?
+
+This is why H=7 is impossible: (3,0) forces a structure that cannot coexist.
+
+9. Score sequence uniqueness at n=6:
+Score sequences NOT uniquely determining H at n=5: only (1,2,2,2,3)
+This corresponds to the 'near-regular' tournaments.
+
+======================================================================
+Key new sequences summary:
+======================================================================
+
+NON-SC tiling (n=3..15):
+[1, 3, 14, 121, 1995, 64648, 4163979, 534849295, 137175056830, 70300582005021, 72022549494074543, 147537994739778382720, 604389195176853420636135]
+
+SC tiling (n=3..15):
+[1, 5, 50, 903, 30773, 2032504, 264271477, 68184627441, 35047197032002, 35958496436958947, 73714953745344131921, 302083916908917515293824, 2475275689375583696377612313]
+
+Exactly-1-bad-cut (n=3..12):
+[0, 2, 10, 101, 1816, 61671, 4067314, 528616030, 136373717920, 70094946824707]
+
+Exactly-2-bad-cuts (n=4..12):
+[0, 3, 15, 153, 2739, 92695, 6104445, 793033884, 204567275771]
+
+Exactly-(n-3)-bad-cuts [should = n-2] (n=4..12):
+[2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Exactly-(n-4)-bad-cuts [should = C(n,2)] (n=5..11):
+[10, 15, 20, 25, 30, 35, 40]
+
+Exactly-(n-5)-bad-cuts (n=6..11):
+[101, 153, 206, 260, 315, 371]
+

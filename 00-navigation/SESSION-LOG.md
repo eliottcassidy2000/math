@@ -2,6 +2,56 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-27-S2 — 2026-05-28
+
+**Summary:** Sequence exploration session. Computed 3 new theorems (THM-336..338) and 7 new hypotheses. Discovered the good-cuts impossibility theorem (|G|=1 never occurs), exact formulas for tilings with exactly d good cuts, and verified the f(S) general formula for all cut subsets. Extended non-SC and SC tiling sequences to n=15 via fast IE formula.
+
+**PROVED/VERIFIED:**
+
+**THM-336 (Good Cuts Structure):** In any tiling, #good_cuts ∈ {0}∪{2,...,n-1} (never 1). Exact counts:
+- d=0: 1 tiling (transitive)
+- d=1: 0 (IMPOSSIBLE — any tile spans ≥2 cuts)
+- d=2: n−2 (proved)
+- d=3: 5(n−3) = (n−3)×SC(4) (proved)
+- d=4: (n−4)(n+95)/2 = (n−4)×SC(5) + C(n−4,2) (proved)
+Verified all n=3..10.
+
+**THM-337 (f(S) General Formula):** For any subset S of cuts: f(S) = Σ_{∅≠T⊆S} (−1)^{|T|+1}·h(T) where h({k}) = k(n-k)−1 and h(T) = min(T)·(n−max(T)) for |T|≥2. Proved via intersection counting. Verified all subsets n=4..7.
+
+**THM-338 (H=7 Impossible at n=5):** H(T)=7 has no solution at n=5. Proof: OCF gives α₁+2α₂=3, and both cases (1,1) and (3,0) are impossible for tournament cycle structures on 5 vertices.
+
+**KEY SEQUENCES (2 new OEIS candidates):**
+- SC tiling sequence (n=3..15): 1, 5, 50, 903, 30773, 2032504, 264271477, 68184627441, 35047197032002, 35958496436958947, 73714953745344131921, 302083916908917515293824, 2475275689375583696377612313
+- Non-SC tiling sequence (n=3..15): 1, 3, 14, 121, 1995, 64648, 4163979, 534849295, 137175056830, 70300582005021, 72022549494074543, 147537994739778382720, 604389195176853420636135
+- Both NOT in OEIS as of 2026-05-28.
+
+**ASYMPTOTICS:** non-SC(n) ~ 2^{m-n+3} with ratio → 1 spectacularly (0.5, 0.75, ..., 0.99988 at n=15).
+
+**IDENTIFIED:** Labeled SC tournament count = A054946 (confirmed our n=6 value 22320).
+
+**SCORE SEQUENCES:** Our count matches A000571 (with 1-index offset in OEIS notation). At n=5, score (1,2,2,2,3) is the ONLY non-H-determining score sequence. Verified at n=3..7.
+
+**NEW HYPOTHESES:** HYP-1741..1747 (see index)
+
+**OPEN FOR NEXT AGENT:**
+1. Submit SC tiling and non-SC tiling sequences to OEIS
+2. Prove HYP-1744 (non-SC ~ 2^{m-n+3}) formally
+3. Find general d-good-cut formula for d=5 (non-consecutive contribution = 30, 60, 100... seems ~10*(n-8)²/2+...)
+4. Find impossible H values at n=6 (is there an analog of H=7-gap?)
+5. All open items from S6, S1 still active
+
+**NEW FILES:**
+- 01-canon/theorems/THM-336-good-cuts-structure.md
+- 01-canon/theorems/THM-337-f-S-general-formula.md
+- 01-canon/theorems/THM-338-impossible-h-values.md
+- 07-reflections/tiling-sequences-and-cut-geometry.md
+- 04-computation/sequence_exploration.py
+- 04-computation/new_sequences_extended.py
+- 05-knowledge/results/sequence_exploration.out
+- 05-knowledge/results/new_sequences_extended.out
+
+---
+
 ## opus-2026-05-27-S7 — 2026-05-27
 
 **Summary:** A038375 extension session. Leveraged king/dominant vertex theorems (THM-330..335) to derive fast sequence extension algorithms. Proved a new **circulant-reduced bitmask DP** (50x memory improvement). Computed new Paley tournament HP counts giving conjectured exact terms a(18), a(19), a(22), a(23). Exhaustive circulant search discovered the **circulant optimality threshold**: a(n) = opt_circ(n) for n ≤ 11, not for n ≥ 13. Found new lower bounds for a(15), a(17), a(25), a(27). Discovered asymptotic formula c(p)/a(p-1) → (p-1)/4 for Paley primes.

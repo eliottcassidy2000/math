@@ -921,3 +921,26 @@ SC forces strict King bound at n≥5: tight H(T)-H(T-Q)=2|rivals| implies non-SC
 
 **T091** #king-count #h-invariant #n5 | certainty: verified | source: opus-2026-05-27-S1, HYP-1737,1738
 Remarkable rigidity at n=5: #kings=5→H=15 (64 tourn, all SC); #kings=4→H=13 (120 tourn, all SC). At n=6: less rigid (#kings=6 gives H∈{43,45}). Worth investigating whether this is related to the impossibility of H=7 at n=5.
+
+## T092: Good Cuts Structure — Impossible d=1 and Exact Formulas (opus-2026-05-27-S2)
+**Observation:** The good-cut count (cuts with ≥1 upward tile in a tiling) is never exactly 1. Exact formulas for small d: d=2→n−2, d=3→5(n−3), d=4→50(n−4)+C(n−4,2).
+**Key insight:** d=3 formula = (n−3)×SC(4) = 5(n−3) with NO non-consecutive contribution. d=4 formula = (n−4)×SC(5) + C(n−4,2) WITH a triangular non-consecutive contribution.
+**Connection:** The sub-tiling SC counts SC(d+1) appear as exact coefficients!
+**See:** THM-336, HYP-1742
+
+## T093: f(S) General Formula via Intersection Counting (opus-2026-05-27-S2)
+**Formula:** f(S) = Σ_{T⊆S} (-1)^{|T|+1} h(T) where h({k})=k(n-k)-1, h(T)=min(T)*(n-max(T)).
+**Clean structure:** h(T) for |T|≥2 depends ONLY on min and max of T, not the full set.
+**See:** THM-337
+
+## T094: Non-SC ~ 2^{m-n+3} Asymptotics (opus-2026-05-27-S2)
+**Discovery:** non-SC(n) / 2^{m-n+3} → 1 with spectacular accuracy. At n=15: ratio = 0.99988.
+**Equivalently:** 1 − P(SC) ≈ 8/2^n for large n.
+**Dominant term:** Two IE terms at k=1 and k=n−1 (the "boundary cuts" of size n−2) together contribute 2^{m-n+3}.
+**Open:** Prove formally. The sub-dominant term?
+**See:** HYP-1744
+
+## T095: Score (1,2,2,2,3) — Unique Non-H-Determining Score at n=5 (opus-2026-05-27-S2)
+**Observation:** At n=5, score (1,2,2,2,3) is the ONLY score sequence that doesn't uniquely determine H. H∈{11,13,15} with counts (120,120,40).
+**Connection:** This is the "near-regular" score class — one step from the regular tournament (2,2,2,2,2). The H variation comes from 5-cycle structure.
+**See:** THM-338, seq8 in sequence_exploration.py

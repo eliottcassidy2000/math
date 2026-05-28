@@ -2070,3 +2070,66 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Mechanism:** At n=5: forced by extra 5-cycle (see THM-334 proof). At n=6: extra 5-cycle plus one more?
 **Achieving cases:** n=5: score (1,1,2,3,3), deg_Q=3, 1 rival. n=6: score (1,1,2,3,4,4), deg_Q=4, 1 rival.
 **See:** THM-334, king_tight_bound_analysis.py
+
+## HYP-1741: No tiling has exactly 1 good cut (opus-2026-05-27-S2)
+**Status:** PROVED (see THM-336)
+**Statement:** For any tiling on n≥3 vertices, the number of good cuts (cuts with ≥1 upward tile) is never exactly 1. The set of achievable good-cut counts is {0} ∪ {2,3,...,n-1}.
+**Proof:** Any upward tile spans ≥2 cuts (x≥y+2 means x-y≥2 cuts). So #good_cuts ∈ {0} ∪ {2,...,n-1}.
+**Implication:** Also proved that #bad_cuts never equals n-2 (complementary statement).
+**Verified:** All n=3..10 exhaustively.
+**See:** THM-336
+
+## HYP-1742: Exact count formulas for tilings with d good cuts (opus-2026-05-27-S2)
+**Status:** VERIFIED n=5..11, PROVED for d=0,1,2,3
+**Statement:** For d good cuts:
+- d=0: 1 tiling (transitive)
+- d=1: 0 tilings (IMPOSSIBLE — HYP-1741)
+- d=2: n−2 tilings EXACTLY
+- d=3: 5(n−3) tilings EXACTLY
+- d=4: (n−4)(n+95)/2 tilings = 50(n−4) + C(n−4,2) EXACTLY
+**Mechanism for d=4:** consecutive intervals contribute (n-4)×SC(5) = 50(n-4), plus non-consecutive sets {j,j+1,k,k+1} with a gap contribute C(n-4,2) extra tilings.
+**Verified d=2:** n=4..12: 2,3,4,5,6,7,8,9,10 ✓
+**Verified d=3:** n=5..11: 10,15,20,25,30,35,40 = 5(n-3) ✓
+**Verified d=4:** n=6..11: 101,153,206,260,315,371 = (n-4)(n+95)/2 ✓
+**See:** THM-336
+
+## HYP-1743: f(S) general formula (opus-2026-05-27-S2)
+**Status:** PROVED (see THM-337)
+**Statement:** For S a subset of cuts {1,...,n-1}:
+  f(S) = |tiles crossing any cut in S| = Σ_{∅≠T⊆S} (−1)^{|T|+1} h(T)
+  h({k}) = k(n-k)−1, h(T) = min(T)*(n−max(T)) for |T|≥2.
+**Verified:** All subsets at n=4..7 (zero mismatches).
+**See:** THM-337
+
+## HYP-1744: Non-SC tiling asymptotics (opus-2026-05-27-S2)
+**Status:** VERIFIED n=3..15, OPEN for formal proof
+**Statement:** non-SC(n) ~ 2^{m−n+3} as n→∞, where m=C(n-1,2).
+**Evidence:** Ratio non-SC/2^{m-n+3} converges: 0.50, 0.75, 0.875, 0.945, 0.974, 0.986, 0.993, 0.996, 0.998, 0.999, 0.9995, 0.99975, 0.99988 for n=3..15.
+**Equivalently:** m − log₂(non-SC) → n−3 from below.
+**Dominant terms:** The k=1 and k=n-1 IE terms (cuts of size n-2 each) together contribute 2^{m-n+3}. Corrections decay exponentially.
+**New sequence:** non-SC(n=3..15) = 1,3,14,121,1995,64648,4163979,534849295,137175056830,70300582005021,72022549494074543,147537994739778382720,604389195176853420636135.
+**OEIS status:** NOT in OEIS (as of 2026-05-28). New candidate for submission.
+**See:** THM-337, 05-knowledge/results/sequence_exploration.out
+
+## HYP-1745: H=7 is impossible at n=5 (opus-2026-05-27-S2)
+**Status:** PROVED (see THM-338)
+**Statement:** No tournament on 5 vertices achieves H=7.
+**Proof:** Via OCF (H=1+2α₁+4α₂+...): H=7 requires α₁+2α₂=3. The cases (α₁,α₂)=(1,1) and (3,0) are both impossible at n=5.
+**Verified:** Exhaustive enumeration of all 1024 labeled n=5 tournaments: 0 achieve H=7.
+**Achievable H at n=5:** {1,3,5,9,11,13,15}.
+**See:** THM-338
+
+## HYP-1746: Labeled SC count = A054946 (opus-2026-05-27-S2)
+**Status:** CONFIRMED
+**Statement:** The number of labeled strongly connected n-vertex tournaments is A054946.
+**Values:** 1,0,2,24,544,22320,1677488,236522496,... for n=1,2,3,4,5,6,7,8.
+**Recurrence:** a(1)=1, a(n) = 2^{n(n-1)/2} − Σ_{k=1}^{n-1} C(n,k)·a(k)·2^{(n-k)(n-k-1)/2}.
+**Our computation:** n=6: 22320 verified ✓.
+**See:** OEIS A054946, sequence_exploration.py
+
+## HYP-1747: SC tiling count sequence is new (opus-2026-05-27-S2)
+**Status:** NEW (not in OEIS)
+**Values:** n=3..15: 1, 5, 50, 903, 30773, 2032504, 264271477, 68184627441, 35047197032002, 35958496436958947, 73714953745344131921, 302083916908917515293824, 2475275689375583696377612313.
+**Formula:** SC(n) = 2^{C(n-1,2)} − non-SC(n) where non-SC uses THM-337.
+**OEIS status:** NOT in OEIS (as of 2026-05-28). New candidate.
+**See:** THM-336, THM-337

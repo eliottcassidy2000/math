@@ -2149,3 +2149,34 @@ Key insight: QR_p has both forward and backward connections; purely forward circ
   c(3)=1, c(7)=72, c(11)=39675, c(19)=527714543799, c(23)=7223436934463772
 **Formula:** c(p)/a(p-1) → (p-1)/4 (empirical, very tight).
 **Next:** Check OEIS for this sequence; submit if new.
+
+## INV-NEW-S2-A: Submit non-SC and SC tiling sequences to OEIS (opus-2026-05-27-S2)
+**Source:** Session computation, THM-336/337
+**Status:** OPEN
+**Next step:** Both sequences are new (not in OEIS as of 2026-05-28). Compute more terms via IE formula (fast), write up definitions, and submit.
+**Sequence 1 (non-SC):** 1, 3, 14, 121, 1995, 64648, 4163979, 534849295, 137175056830, 70300582005021, ...
+**Sequence 2 (SC):** 1, 5, 50, 903, 30773, 2032504, 264271477, 68184627441, 35047197032002, ...
+**Formula:** sc_ie(n) gives both exactly. Fast computation via subset inclusion-exclusion.
+
+## INV-NEW-S2-B: Exact count for d good cuts — general formula (opus-2026-05-27-S2)
+**Source:** THM-336, HYP-1742
+**Status:** OPEN
+**Observation:** d=2→n−2, d=3→5(n−3), d=4→(n-4)(n+95)/2. Pattern suggests:
+  exactly-d-good(n) = (n-d)·SC(d+1) + (non-consecutive contribution depending on d and n)
+**Next step:** Compute d=5 formula. From data: n=8→2739, n=9→3672, n=10→4615. These give:
+  consecutive contribution: (n-5)·SC(6) = (n-5)·903. Non-consecutive: 2739-3*903=30, 3672-4*903=60, 4615-5*903=100.
+  Non-consecutive = 30, 60, 100 with differences 30, 40. Second diff = 10. So quadratic + 10*(n-8)²/2+...
+**Connection:** d=4 non-consecutive = C(n-4,2); d=5 non-consecutive seems quadratic in n. 
+
+## INV-NEW-S2-C: Prove non-SC(n) ~ 2^{m-n+3} rigorously (opus-2026-05-27-S2)
+**Source:** HYP-1744
+**Status:** OPEN
+**Approach:** The IE formula gives non-SC = 2·2^{m-n+2} + (smaller terms). Need to bound the sum of correction terms. The correction = IE at sizes ≥ 2, which contributes negative+positive terms.
+**Key:** Size-2 IE term at pairs {1,k}: f({1,k}) = 1*(n-k)-? → smaller exponent than size-1.
+
+## INV-NEW-S2-D: SC tiling sequence vs A054946 relationship (opus-2026-05-27-S2)
+**Source:** Session sequence computations
+**Status:** OPEN
+**Observation:** SC tiling counts (1,5,50,903,...) are NOT the same as A054946 (1,0,2,24,544,22320,...).
+**Reason:** SC tilings fix the base path; A054946 counts labeled tournaments (all 2^{C(n,2)} orientations).
+**Question:** P(SC tiling) ≠ P(SC labeled tournament). n=5: 50/64=0.781 vs 544/1024=0.531. Is there a clean relationship?

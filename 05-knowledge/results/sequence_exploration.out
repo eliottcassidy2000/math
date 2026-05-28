@@ -1,0 +1,424 @@
+opus-2026-05-27-S2: Tournament Sequence Exploration
+=================================================================
+
+=================================================================
+SEQUENCE 1: SC / Non-SC Tiling Counts
+=================================================================
+n=3: m=1, total=2^1=2, SC=1, non-SC=1, P(SC)=0.500000
+n=4: m=3, total=2^3=8, SC=5, non-SC=3, P(SC)=0.625000
+n=5: m=6, total=2^6=64, SC=50, non-SC=14, P(SC)=0.781250
+n=6: m=10, total=2^10=1024, SC=903, non-SC=121, P(SC)=0.881836
+n=7: m=15, total=2^15=32768, SC=30773, non-SC=1995, P(SC)=0.939117
+n=8: m=21, total=2^21=2097152, SC=2032504, non-SC=64648, P(SC)=0.969173
+n=9: m=28, total=2^28=268435456, SC=264271477, non-SC=4163979, P(SC)=0.984488
+n=10: m=36, total=2^36=68719476736, SC=68184627441, non-SC=534849295, P(SC)=0.992217
+n=11: m=45, total=2^45=35184372088832, SC=35047197032002, non-SC=137175056830, P(SC)=0.996101
+
+SC     (n=3..11): [1, 5, 50, 903, 30773, 2032504, 264271477, 68184627441, 35047197032002]
+Non-SC (n=3..11): [1, 3, 14, 121, 1995, 64648, 4163979, 534849295, 137175056830]
+
+SC ratios (consecutive):     ['5.0000', '10.0000', '18.0600', '34.0786', '66.0483', '130.0226', '258.0098', '514.0044']
+Non-SC ratios (consecutive): ['3.0000', '4.6667', '8.6429', '16.4876', '32.4050', '64.4100', '128.4467', '256.4742']
+
+Verifying IE against brute-force (n=3..7):
+  n=3: brute-force=1, IE=1, match=True
+  n=4: brute-force=3, IE=3, match=True
+  n=5: brute-force=14, IE=14, match=True
+  n=6: brute-force=121, IE=121, match=True
+  n=7: brute-force=1995, IE=1995, match=True
+
+=================================================================
+SEQUENCE 2: IE Structure by Subset Size
+=================================================================
+n=3 (m=1, cuts=[1, 2]):
+  size 1: contribution = 2
+  size 2: contribution = -1
+  total non-SC = 1
+  cut sizes f(n,k)=k(n-k)-1: {1: 1, 2: 1}
+n=4 (m=3, cuts=[1, 2, 3]):
+  size 1: contribution = 5
+  size 2: contribution = -3
+  size 3: contribution = 1
+  total non-SC = 3
+  cut sizes f(n,k)=k(n-k)-1: {1: 2, 2: 3, 3: 2}
+n=5 (m=6, cuts=[1, 2, 3, 4]):
+  size 1: contribution = 20
+  size 2: contribution = -9
+  size 3: contribution = 4
+  size 4: contribution = -1
+  total non-SC = 14
+  cut sizes f(n,k)=k(n-k)-1: {1: 3, 2: 5, 3: 5, 4: 3}
+n=6 (m=10, cuts=[1, 2, 3, 4, 5]):
+  size 1: contribution = 148
+  size 2: contribution = -37
+  size 3: contribution = 14
+  size 4: contribution = -5
+  size 5: contribution = 1
+  total non-SC = 121
+  cut sizes f(n,k)=k(n-k)-1: {1: 4, 2: 7, 3: 8, 4: 7, 5: 4}
+n=7 (m=15, cuts=[1, 2, 3, 4, 5, 6]):
+  size 1: contribution = 2208
+  size 2: contribution = -258
+  size 3: contribution = 60
+  size 4: contribution = -20
+  size 5: contribution = 6
+  size 6: contribution = -1
+  total non-SC = 1995
+  cut sizes f(n,k)=k(n-k)-1: {1: 5, 2: 9, 3: 11, 4: 11, 5: 9, 6: 5}
+n=8 (m=21, cuts=[1, 2, 3, 4, 5, 6, 7]):
+  size 1: contribution = 67904
+  size 2: contribution = -3588
+  size 3: contribution = 401
+  size 4: contribution = -90
+  size 5: contribution = 27
+  size 6: contribution = -7
+  size 7: contribution = 1
+  total non-SC = 64648
+  cut sizes f(n,k)=k(n-k)-1: {1: 6, 2: 11, 3: 14, 4: 15, 5: 14, 6: 11, 7: 6}
+
+=================================================================
+SEQUENCE 3: Score Sequence Counts vs A000571
+=================================================================
+n=1: 1 score sequences  (A000571=1) ✓
+n=2: 1 score sequences  (A000571=1) ✓
+n=3: 2 score sequences  (A000571=1) ✗
+n=4: 4 score sequences  (A000571=2) ✗
+n=5: 9 score sequences  (A000571=4) ✗
+n=6: 22 score sequences  (A000571=9) ✗
+n=7: 59 score sequences  (A000571=22) ✗
+
+Sequence: [1, 1, 2, 4, 9, 22, 59]
+
+=================================================================
+SEQUENCE 4: Labeled SC Tournament Counts
+=================================================================
+n=1: 1 labeled SC tournaments (out of 1 total)
+n=2: 0 labeled SC tournaments (out of 2 total)
+n=3: 2 labeled SC tournaments (out of 8 total)
+n=4: 24 labeled SC tournaments (out of 64 total)
+n=5: 544 labeled SC tournaments (out of 1024 total)
+n=6: 22320 labeled SC tournaments (out of 32768 total)
+
+Labeled SC sequence: [1, 0, 2, 24, 544, 22320]
+SC_tilings × 2^(n-1): [4, 40, 800, 28896, 1969472]
+(This would hold if SC fraction same across base-path choices)
+
+n=3: P_SC(tiling)=0.500000, P_SC(labeled)=0.250000, equal=False
+n=4: P_SC(tiling)=0.625000, P_SC(labeled)=0.375000, equal=False
+n=5: P_SC(tiling)=0.781250, P_SC(labeled)=0.531250, equal=False
+
+=================================================================
+SEQUENCE 5: H-Value Distributions
+=================================================================
+n=3: H∈[1, 3]
+  counts: {1: 6, 3: 2}
+  total: 8 = 2^3
+  missing odd H in [1,3]: []
+n=4: H∈[1, 3, 5]
+  counts: {1: 24, 3: 16, 5: 24}
+  total: 64 = 2^6
+  missing odd H in [1,5]: []
+n=5: H∈[1, 3, 5, 9, 11, 13, 15]
+  counts: {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 15: 64, 13: 120}
+  total: 1024 = 2^10
+  missing odd H in [1,15]: [7]
+
+Key sequences:
+  Max H(n) for n=3..5: [3, 5, 15]
+  = [3, 5, 15] (known: 3,5,15,...)
+  #tournaments achieving max H: [2, 24, 64]
+  #tournaments with H=1: [6, 24, 120]
+
+=================================================================
+SEQUENCE 6: #Kings Distributions
+=================================================================
+n=3: #kings distribution:
+  k=1: 6 tournaments, 0 SC
+  k=3: 2 tournaments, 2 SC
+  impossible: [2]
+
+n=4: #kings distribution:
+  k=1: 32 tournaments, 0 SC
+  k=3: 32 tournaments, 24 SC
+  impossible: [2, 4]
+
+n=5: #kings distribution:
+  k=1: 320 tournaments, 0 SC
+  k=3: 520 tournaments, 360 SC
+  k=4: 120 tournaments, 120 SC
+  k=5: 64 tournaments, 64 SC
+  impossible: [2]
+
+n=6: #kings distribution:
+  k=1: 6144 tournaments, 0 SC
+  k=3: 11600 tournaments, 8400 SC
+  k=4: 7920 tournaments, 7200 SC
+  k=5: 5424 tournaments, 5040 SC
+  k=6: 1680 tournaments, 1680 SC
+  impossible: [2]
+
+All-kings sequences:
+  n=3: 2 tournaments with ALL vertices as kings
+  n=4: 0 tournaments with ALL vertices as kings
+  n=5: 64 tournaments with ALL vertices as kings
+  n=6: 1680 tournaments with ALL vertices as kings
+
+=================================================================
+SEQUENCE 7: Min SC Excess (HYP-1740 verification)
+=================================================================
+n=3: min SC excess = 0  (case: score=(1, 1, 1), deg_Q=1, |rivals|=1, delta=2)
+n=4: min SC excess = 0  (case: score=(1, 1, 2, 2), deg_Q=2, |rivals|=1, delta=2)
+n=5: min SC excess = 2  (case: score=(1, 1, 2, 3, 3), deg_Q=3, |rivals|=1, delta=4)
+n=6: min SC excess = 4  (case: score=(1, 1, 2, 3, 4, 4), deg_Q=4, |rivals|=1, delta=6)
+
+Pattern: 0, 0, 2, 4 for n=3..6 => conj = 2(n-4) for n>=4
+Formula: max(0, 2(n-4)) = 0,0,2,4,6,8,... for n=3,4,5,6,7,8,...
+
+=================================================================
+SEQUENCE 8: H Distribution by Score Sequence
+=================================================================
+n=3:
+  (0, 1, 2): H∈[1]  (UNIQUE H)  counts=[6]  total=6
+  (1, 1, 1): H∈[3]  (UNIQUE H)  counts=[2]  total=2
+
+n=4:
+  (0, 1, 2, 3): H∈[1]  (UNIQUE H)  counts=[24]  total=24
+  (0, 2, 2, 2): H∈[3]  (UNIQUE H)  counts=[8]  total=8
+  (1, 1, 1, 3): H∈[3]  (UNIQUE H)  counts=[8]  total=8
+  (1, 1, 2, 2): H∈[5]  (UNIQUE H)  counts=[24]  total=24
+
+n=5:
+  (0, 1, 2, 3, 4): H∈[1]  (UNIQUE H)  counts=[120]  total=120
+  (0, 1, 3, 3, 3): H∈[3]  (UNIQUE H)  counts=[40]  total=40
+  (0, 2, 2, 2, 4): H∈[3]  (UNIQUE H)  counts=[40]  total=40
+  (0, 2, 2, 3, 3): H∈[5]  (UNIQUE H)  counts=[120]  total=120
+  (1, 1, 1, 3, 4): H∈[3]  (UNIQUE H)  counts=[40]  total=40
+  (1, 1, 2, 2, 4): H∈[5]  (UNIQUE H)  counts=[120]  total=120
+  (1, 1, 2, 3, 3): H∈[9]  (UNIQUE H)  counts=[240]  total=240
+  (1, 2, 2, 2, 3): H∈[11, 13, 15]  (MULTIPLE H)  counts=[120, 120, 40]  total=280
+  (2, 2, 2, 2, 2): H∈[15]  (UNIQUE H)  counts=[24]  total=24
+
+Score sequences that uniquely determine H:
+  n=3: 2 unique, 0 non-unique score sequences
+  n=4: 4 unique, 0 non-unique score sequences
+  n=5: 8 unique, 1 non-unique score sequences
+
+=================================================================
+SEQUENCE 9: Non-SC Tiling Cut Profile (via IE)
+=================================================================
+n=3: non-SC=1 = 1 (check: True)
+  by #bad cuts: {1: 0, 2: 1}
+  exactly 1 bad cut: 0
+n=4: non-SC=3 = 3 (check: True)
+  by #bad cuts: {1: 2, 2: 0, 3: 1}
+  exactly 1 bad cut: 2
+n=5: non-SC=14 = 14 (check: True)
+  by #bad cuts: {1: 10, 2: 3, 3: 0, 4: 1}
+  exactly 1 bad cut: 10
+n=6: non-SC=121 = 121 (check: True)
+  by #bad cuts: {1: 101, 2: 15, 3: 4, 4: 0, 5: 1}
+  exactly 1 bad cut: 101
+n=7: non-SC=1995 = 1995 (check: True)
+  by #bad cuts: {1: 1816, 2: 153, 3: 20, 4: 5, 5: 0, 6: 1}
+  exactly 1 bad cut: 1816
+n=8: non-SC=64648 = 64648 (check: True)
+  by #bad cuts: {1: 61671, 2: 2739, 3: 206, 4: 25, 5: 6, 6: 0, 7: 1}
+  exactly 1 bad cut: 61671
+
+=================================================================
+SEQUENCE 10: Transitive-like Tilings
+=================================================================
+n=3: by #good cuts: {0: 1, 2: 1}
+  SC = 1 (all n-1=2 cuts good)
+  transitive = 1 (0 cuts good)
+n=4: by #good cuts: {0: 1, 2: 2, 3: 5}
+  SC = 5 (all n-1=3 cuts good)
+  transitive = 1 (0 cuts good)
+n=5: by #good cuts: {0: 1, 2: 3, 3: 10, 4: 50}
+  SC = 50 (all n-1=4 cuts good)
+  transitive = 1 (0 cuts good)
+n=6: by #good cuts: {0: 1, 2: 4, 3: 15, 4: 101, 5: 903}
+  SC = 903 (all n-1=5 cuts good)
+  transitive = 1 (0 cuts good)
+n=7: by #good cuts: {0: 1, 2: 5, 3: 20, 4: 153, 5: 1816, 6: 30773}
+  SC = 30773 (all n-1=6 cuts good)
+  transitive = 1 (0 cuts good)
+n=8: SC=2032504, transitive=1 (all-downward tiling)
+
+=================================================================
+SEQUENCE 11: Odd Cycle Count Sequences
+=================================================================
+n=3: sum of directed odd cycles over all 8 labeled tournaments:
+  L=3: total=3, avg per tournament=0.3750
+n=4: sum of directed odd cycles over all 64 labeled tournaments:
+  L=3: total=96, avg per tournament=1.5000
+n=5: sum of directed odd cycles over all 1024 labeled tournaments:
+  L=3: total=3840, avg per tournament=3.7500
+  L=5: total=960, avg per tournament=0.9375
+
+Average #3-cycles formula: C(n,3)/4
+  n=3: C(n,3)/4 = 0 (as fraction: 6/24)
+  n=4: C(n,3)/4 = 1 (as fraction: 24/24)
+  n=5: C(n,3)/4 = 2 (as fraction: 60/24)
+  n=6: C(n,3)/4 = 5 (as fraction: 120/24)
+  n=7: C(n,3)/4 = 8 (as fraction: 210/24)
+
+=================================================================
+SEQUENCE 12: SC Tiling Fraction Numerators
+=================================================================
+n=3: SC=1/2^1=1/2  ≈ 0.50000000
+n=4: SC=5/2^3=5/8  ≈ 0.62500000
+n=5: SC=50/2^6=25/32  ≈ 0.78125000
+n=6: SC=903/2^10=903/1024  ≈ 0.88183594
+n=7: SC=30773/2^15=30773/32768  ≈ 0.93911743
+n=8: SC=2032504/2^21=254063/262144  ≈ 0.96917343
+n=9: SC=264271477/2^28=264271477/268435456  ≈ 0.98448797
+n=10: SC=68184627441/2^36=68184627441/68719476736  ≈ 0.99221692
+n=11: SC=35047197032002/2^45=17523598516001/17592186044416  ≈ 0.99610125
+n=12: SC=35958496436958947/2^55=35958496436958947/36028797018963968  ≈ 0.99804877
+
+SC sequence (n=3..11): [1, 5, 50, 903, 30773, 2032504, 264271477, 68184627441, 35047197032002, 35958496436958947]
+
+P(SC) convergence:
+  n=3: P(SC) = 0.5000000000  1-P(SC) = 5.00e-01
+  n=4: P(SC) = 0.6250000000  1-P(SC) = 3.75e-01
+  n=5: P(SC) = 0.7812500000  1-P(SC) = 2.19e-01
+  n=6: P(SC) = 0.8818359375  1-P(SC) = 1.18e-01
+  n=7: P(SC) = 0.9391174316  1-P(SC) = 6.09e-02
+  n=8: P(SC) = 0.9691734314  1-P(SC) = 3.08e-02
+  n=9: P(SC) = 0.9844879694  1-P(SC) = 1.55e-02
+  n=10: P(SC) = 0.9922169184  1-P(SC) = 7.78e-03
+  n=11: P(SC) = 0.9961012504  1-P(SC) = 3.90e-03
+  n=12: P(SC) = 0.9980487669  1-P(SC) = 1.95e-03
+
+=================================================================
+SEQUENCE 13: Non-SC IE Formula — Closed Form Analysis
+=================================================================
+f(S) formula for small S:
+f({k}) = k(n-k) - 1
+f({j,k}) for j<k: f({j}) + f({k}) - j*(n-k)
+                = j(k-j) + k(n-k) - 2
+
+n=4: Verifying f formulas:
+  f({1}) = 2 (formula=2) ✓
+  f({2}) = 3 (formula=3) ✓
+  f({3}) = 2 (formula=2) ✓
+  f({1,2}) = 3 (formula=3) ✓
+  f({1,3}) = 3 (formula=3) ✓
+  f({2,3}) = 3 (formula=3) ✓
+
+n=5: Verifying f formulas:
+  f({1}) = 3 (formula=3) ✓
+  f({2}) = 5 (formula=5) ✓
+  f({3}) = 5 (formula=5) ✓
+  f({4}) = 3 (formula=3) ✓
+  f({1,2}) = 5 (formula=5) ✓
+  f({1,3}) = 6 (formula=6) ✓
+  f({1,4}) = 5 (formula=5) ✓
+  f({2,3}) = 6 (formula=6) ✓
+  f({2,4}) = 6 (formula=6) ✓
+  f({3,4}) = 5 (formula=5) ✓
+
+n=6: Verifying f formulas:
+  f({1}) = 4 (formula=4) ✓
+  f({2}) = 7 (formula=7) ✓
+  f({3}) = 8 (formula=8) ✓
+  f({4}) = 7 (formula=7) ✓
+  f({5}) = 4 (formula=4) ✓
+  f({1,2}) = 7 (formula=7) ✓
+  f({1,3}) = 9 (formula=9) ✓
+  f({1,4}) = 9 (formula=9) ✓
+  f({1,5}) = 7 (formula=7) ✓
+  f({2,3}) = 9 (formula=9) ✓
+  f({2,4}) = 10 (formula=10) ✓
+  f({2,5}) = 9 (formula=9) ✓
+  f({3,4}) = 9 (formula=9) ✓
+  f({3,5}) = 9 (formula=9) ✓
+  f({4,5}) = 7 (formula=7) ✓
+
+n=7: Verifying f formulas:
+  f({1}) = 5 (formula=5) ✓
+  f({2}) = 9 (formula=9) ✓
+  f({3}) = 11 (formula=11) ✓
+  f({4}) = 11 (formula=11) ✓
+  f({5}) = 9 (formula=9) ✓
+  f({6}) = 5 (formula=5) ✓
+  f({1,2}) = 9 (formula=9) ✓
+  f({1,3}) = 12 (formula=12) ✓
+  f({1,4}) = 13 (formula=13) ✓
+  f({1,5}) = 12 (formula=12) ✓
+  f({1,6}) = 9 (formula=9) ✓
+  f({2,3}) = 12 (formula=12) ✓
+  f({2,4}) = 14 (formula=14) ✓
+  f({2,5}) = 14 (formula=14) ✓
+  f({2,6}) = 12 (formula=12) ✓
+  f({3,4}) = 13 (formula=13) ✓
+  f({3,5}) = 14 (formula=14) ✓
+  f({3,6}) = 13 (formula=13) ✓
+  f({4,5}) = 12 (formula=12) ✓
+  f({4,6}) = 12 (formula=12) ✓
+  f({5,6}) = 9 (formula=9) ✓
+
+Size-1 IE term = Σ_k 2^{m-k(n-k)+1}:
+  n=3: 2
+  n=4: 5
+  n=5: 20
+  n=6: 148
+  n=7: 2208
+  n=8: 67904
+  n=9: 4264960
+  n=10: 541216768
+  n=11: 137984868352
+
+Full non-SC sequence via IE:
+  n=3..10: [1, 3, 14, 121, 1995, 64648, 4163979, 534849295, 137175056830]
+
+log2(non-SC) vs m=C(n-1,2):
+  n=3: m=1, log2(non-SC)=0.0000, m-log2(non-SC)=1.0000
+  n=4: m=3, log2(non-SC)=1.5850, m-log2(non-SC)=1.4150
+  n=5: m=6, log2(non-SC)=3.8074, m-log2(non-SC)=2.1926
+  n=6: m=10, log2(non-SC)=6.9189, m-log2(non-SC)=3.0811
+  n=7: m=15, log2(non-SC)=10.9622, m-log2(non-SC)=4.0378
+  n=8: m=21, log2(non-SC)=15.9803, m-log2(non-SC)=5.0197
+  n=9: m=28, log2(non-SC)=21.9895, m-log2(non-SC)=6.0105
+  n=10: m=36, log2(non-SC)=28.9946, m-log2(non-SC)=7.0054
+  n=11: m=45, log2(non-SC)=36.9972, m-log2(non-SC)=8.0028
+
+=================================================================
+SEQUENCE 14: OEIS Searches for New Sequences
+=================================================================
+Non-SC tiling counts n=3..10: NOT in OEIS (new sequence!)
+SC tiling counts n=3..10: NOT in OEIS (new sequence!)
+SC labeled tourn n=1..6: FOUND - # Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: seq:1,0,2,24,544
+Showing 1-1 of 1
+
+%I A054946 #48 Nov 05 2025 15:22:00
+%S A054946 1,0,2,24,544,22320,1677488,2
+H-impossible count n=3..?: FOUND - # Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: seq:0,0,1
+Showing 1-10 of 24709
+
+%I A008683 #406 May 01 2026 16:37:04
+%S A008683 1,-1,-1,0,-1,1,-1,0,0,1,-1,0,
+
+=================================================================
+SEQUENCE 15: Q-P Gap Distributions
+=================================================================
+n=3: Q-P gap distribution:
+  gap=0: 2 tourn, H∈[3], avg_H=3.00
+  gap=2: 6 tourn, H∈[1], avg_H=1.00
+n=4: Q-P gap distribution:
+  gap=1: 24 tourn, H∈[5], avg_H=5.00
+  gap=2: 16 tourn, H∈[3], avg_H=3.00
+  gap=3: 24 tourn, H∈[1], avg_H=1.00
+n=5: Q-P gap distribution:
+  gap=0: 24 tourn, H∈[15], avg_H=15.00
+  gap=2: 520 tourn, H∈[9, 11, 13, 15], avg_H=10.85
+  gap=3: 320 tourn, H∈[3, 5], avg_H=4.50
+  gap=4: 160 tourn, H∈[1, 3], avg_H=1.50
+
+=================================================================
+Session complete.
