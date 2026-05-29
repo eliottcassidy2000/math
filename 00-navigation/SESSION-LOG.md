@@ -1,5 +1,14 @@
 # Session Log
 
+## codex-2026-05-29-main-unification — 2026-05-29
+
+**Account:** codex
+**Continuation of:** user request to merge all branches/PRs back into main, then run a small formalization session.
+**Git work:** Fast-forwarded local `main` to `origin/main`; merged `origin/claude/kind-pasteur`, `origin/claude/trierments-dual-arrows-6XsqY`, and `origin/codex-s95-recursive-results`. Resolved the Codex PR conflict by preserving the current main inbox archive, renumbering the Codex S95 hypotheses to HYP-1767..1769, and keeping all mathematical artifacts.
+**Summary of math:** Formalized the endpoint-transfer meta-principle as THM-345: the endpoint transfer always exposes the child odd-fiber boundary, but full GF(2) row rank is a separate quotient-specific property. This cleanly separates the tournament quotient's apparent parity injectivity from the even-graph quotient's automorphism-2-adic rank defect.
+**New contributions:** `01-canon/theorems/THM-345-endpoint-transfer-rank-separation.md`.
+**Verification:** `git branch -r --no-merged HEAD` returned no branches; `git diff --cached --check` passed after merge cleanup.
+
 ## codex-2026-05-29-S1 — 2026-05-29: GitHub Close-Out Guardrail + Even-Graph Endpoint Boundary
 
 **Account:** codex
