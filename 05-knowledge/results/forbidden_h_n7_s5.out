@@ -1,0 +1,35 @@
+n=7, 200000 samples:
+  Distinct H values encountered: 77
+  Min H = 1, Max H = 189
+  Counts for target potentially-forbidden H values:
+    H=7: 0
+    H=21: 0
+    H=35: 948
+    H=39: 1013
+  Odd H values in [1,189] NOT seen in sample (could be sampling artifacts for rare ones):
+  Count of missing: 18
+  First 30 missing: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+  Count for small H values (sample frequencies):
+    H=1: 528
+    H=3: 811
+    H=5: 1881
+    H=9: 3009
+    H=11: 1457
+    H=13: 1459
+    H=15: 3044
+    H=17: 1965
+    H=19: 1841
+    H=23: 3969
+    H=25: 2356
+    H=27: 2060
+    H=29: 4860
+    H=31: 2854
+    H=33: 4919
+    H=35: 948
+    H=37: 5781
+    H=39: 1013
+    H=41: 3314
+    H=43: 2811
+    H=45: 2457
+    H=47: 940
+    H=49: 3462

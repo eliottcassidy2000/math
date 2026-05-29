@@ -1,0 +1,109 @@
+=================================================================
+THM-340 VERIFICATION: Q(d,k) = [x^d] B(x)^k
+=================================================================
+  Q(2,1): expected=              1, computed=              1  ✓
+  Q(3,1): expected=              5, computed=              5  ✓
+  Q(4,1): expected=             50, computed=             50  ✓
+  Q(4,2): expected=              1, computed=              1  ✓
+  Q(5,1): expected=            903, computed=            903  ✓
+  Q(5,2): expected=             10, computed=             10  ✓
+  Q(6,1): expected=          30773, computed=          30773  ✓
+  Q(6,2): expected=            125, computed=            125  ✓
+  Q(6,3): expected=              1, computed=              1  ✓
+  Q(7,1): expected=        2032504, computed=        2032504  ✓
+  Q(7,2): expected=           2306, computed=           2306  ✓
+  Q(7,3): expected=             15, computed=             15  ✓
+  Q(8,1): expected=      264271477, computed=      264271477  ✓
+  Q(8,2): expected=          73076, computed=          73076  ✓
+  Q(8,3): expected=            225, computed=            225  ✓
+  Q(8,4): expected=              1, computed=              1  ✓
+  Q(9,1): expected=    68184627441, computed=    68184627441  ✓
+  Q(9,2): expected=        4463038, computed=        4463038  ✓
+  Q(9,3): expected=           4334, computed=           4334  ✓
+  Q(9,4): expected=             20, computed=             20  ✓
+  Q(10,2): expected=      552760703, computed=      552760703  ✓
+  Q(10,3): expected=         130659, computed=         130659  ✓
+  Q(10,4): expected=            350, computed=            350  ✓
+  Q(10,5): expected=              1, computed=              1  ✓
+
+ALL Q(d,k) VALUES VERIFIED: Q(d,k) = [x^d]B(x)^k  ✓
+
+=================================================================
+EXTENDED Q(d,k) TRIANGLE (d=2..15, k=1..floor(d/2))
+=================================================================
+
+B(x) = SC(3)x^2 + SC(4)x^3 + SC(5)x^4 + ... = x^2 + 5x^3 + 50x^4 + ...
+
+  d= 2: [1]
+  d= 3: [5]
+  d= 4: [50, 1]
+  d= 5: [903, 10]
+  d= 6: [30773, 125, 1]
+  d= 7: [2032504, 2306, 15]
+  d= 8: [264271477, 73076, 225, 1]
+  d= 9: [68184627441, 4463038, 4334, 20]
+  d=10: [35047197032002, 552760703, 130659, 350, 1]
+  d=11: [0, 139270796090, 7396827, 7112, 25]
+  d=12: [0, 70807285165867, 869255153, 207897, 500, 1]
+  d=13: [0, 357892799842766, 213476106882, 10964096, 10765, 30]
+  d=14: [0, 3648257065192104, 107304320267790, 1218368802, 309790, 675, 1]
+  d=15: [0, 68565994588456214, 1079282235498195, 291049592252, 15323195, 15418, 35]
+
+=================================================================
+EXACTLY-d-GOOD FORMULA VERIFICATION (using Q(d,k) = [x^d]B^k)
+=================================================================
+
+Spot-check formula vs brute force:
+  MISMATCH n=4, d=0: formula=0, brute=1
+  MISMATCH n=4, d=1: formula=0, brute=1
+  MISMATCH n=4, d=2: formula=2, brute=6
+  MISMATCH n=4, d=3: formula=5, brute=0
+  MISMATCH n=5, d=0: formula=0, brute=1
+  MISMATCH n=5, d=1: formula=0, brute=1
+  MISMATCH n=5, d=2: formula=3, brute=7
+  MISMATCH n=5, d=3: formula=10, brute=55
+  MISMATCH n=5, d=4: formula=50, brute=0
+  MISMATCH n=6, d=0: formula=0, brute=1
+  MISMATCH n=6, d=1: formula=0, brute=1
+  MISMATCH n=6, d=2: formula=4, brute=8
+  MISMATCH n=6, d=3: formula=15, brute=61
+  MISMATCH n=6, d=4: formula=101, brute=953
+  MISMATCH n=6, d=5: formula=903, brute=0
+  MISMATCH n=7, d=0: formula=0, brute=1
+  MISMATCH n=7, d=1: formula=0, brute=1
+  MISMATCH n=7, d=2: formula=5, brute=9
+  MISMATCH n=7, d=3: formula=20, brute=67
+  MISMATCH n=7, d=4: formula=153, brute=1014
+  MISMATCH n=7, d=5: formula=1816, brute=31676
+  MISMATCH n=7, d=6: formula=30773, brute=0
+  MISMATCH n=8, d=0: formula=0, brute=1
+  MISMATCH n=8, d=1: formula=0, brute=1
+  MISMATCH n=8, d=2: formula=6, brute=10
+  MISMATCH n=8, d=3: formula=25, brute=73
+  MISMATCH n=8, d=4: formula=206, brute=1076
+  MISMATCH n=8, d=5: formula=2739, brute=32714
+  MISMATCH n=8, d=6: formula=61671, brute=2063277
+  MISMATCH n=8, d=7: formula=2032504, brute=0
+  MISMATCH n=9, d=0: formula=0, brute=1
+  MISMATCH n=9, d=1: formula=0, brute=1
+  MISMATCH n=9, d=2: formula=7, brute=11
+  MISMATCH n=9, d=3: formula=30, brute=79
+  MISMATCH n=9, d=4: formula=260, brute=1139
+  MISMATCH n=9, d=5: formula=3672, brute=33763
+  MISMATCH n=9, d=6: formula=92695, brute=2096481
+  MISMATCH n=9, d=7: formula=4067314, brute=266303981
+  MISMATCH n=9, d=8: formula=264271477, brute=0
+
+exactly-d-good(n,d) table (formula):
+   n  d= 0  d= 1  d= 2  d= 3  d= 4  d= 5  d= 6  d= 7  d= 8  d= 9  d=10  d=11
+  n= 3      0      0      1
+  n= 4      0      0      2      5
+  n= 5      0      0      3     10     50
+  n= 6      0      0      4     15    101    903
+  n= 7      0      0      5     20    153   1816  30773
+  n= 8      0      0      6     25    206   2739  61671  2032504
+  n= 9      0      0      7     30    260   3672  92695  4067314  264271477
+  n=10      0      0      8     35    315   4615  123846  6104445  528616030  68184627441
+  n=11      0      0      9     40    371   5568  155125  8143912  793033884  136373717920  35047197032002
+  n=12      0      0     10     45    428   6531  186533  10185730  1057525265  204567275771  70094946824707      0
+  n=13      0      0     11     50    486   7504  218071  12229914  1322090400  272765305348  105143249508774  139270796090

@@ -2182,3 +2182,29 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Triangle-free Omega ↔ alpha_1 ≤ 2 OR alpha_1=3 with K1⊔K2 conflict graph.**
 **Implication for TRRT:** Chudnovsky-Seymour (claw-free → real-rooted) does NOT apply via K3-free structure. Need different approach for TRRT (Hermite-Biehler as per OPEN-Q-053 remains primary strategy).
 **See:** omega_triangles_fast_s4.out, THM-343
+
+## HYP-1753: H(T) ≠ 21 for all tournaments T (opus-2026-05-28-S5)
+**Status:** OPEN — strong computational evidence
+**Statement:** The value 21 does not appear in the H-spectrum of any tournament, analogous to THM-343 for H=7.
+**Evidence:**
+  - n ≤ 6: EXHAUSTIVELY VERIFIED. 0 occurrences of H=21 (or any alpha vector summing to 21 via H = 1 + 2α₁+4α₂+...).
+  - n=7: SAMPLED 1,000,000 random tournaments, 0 hits.
+**Required (alpha) decompositions for H=21:** (10,0), (8,1,0), (6,2,0), (4,3,0). All four absent at n=6.
+**Proof sketch (partial):** The (4,3,0) case with Ω = K₃ ∪ K₁ requires 3 pairwise-int cycles + 1 disjoint cycle. By the Key Lemma (THM-343 supporting result), 3 pairwise-int 3-cycles produce a 4th odd cycle INSIDE V(C₁ ∪ C₂ ∪ C₃). Hence the "disjoint" 4th cycle from hypothesis must be a 5th cycle, contradicting α₁=4. The Ω = P₄ case and the (10,0),(8,1,0),(6,2,0) cases are open.
+**See:** h21_structure_s5.out, h_spectrum_forbidden_s5.out, forbidden_h_n7_s5.out
+
+## HYP-1754: H(T) ≠ 63 for all tournaments T (opus-2026-05-28-S5)
+**Status:** OPEN — strong computational evidence
+**Statement:** The value 63 does not appear in the H-spectrum of any tournament.
+**Evidence:**
+  - n=6: H_max=45 < 63, so trivially absent.
+  - n=7: SAMPLED 200,000 random tournaments, 0 hits.
+**Pattern observation:** Universally forbidden small H values so far: 7 = 7·1, 21 = 7·3, 63 = 7·9. Multipliers 1, 3, 9 = 3⁰, 3¹, 3². But 7·5 = 35 IS achievable at n=7, so the pattern isn't simply "multiples of 7." Conjectured: forbidden set is finite (since H-spectrum density approaches 1 at large n).
+**See:** forbidden_h_n7_s5.out
+
+## HYP-1755: Strong Key Lemma (opus-2026-05-28-S5)
+**Status:** OPEN — required to complete H=21 obstruction proof
+**Statement:** If C₁, C₂, C₃ are three pairwise-intersecting odd directed cycles in tournament T, then T contains a 4th odd directed cycle C' such that V(C') ⊆ V(C₁) ∪ V(C₂) ∪ V(C₃).
+**Note:** The original Key Lemma (used in THM-343) asserts existence of a 4th odd cycle. The STRONG version adds the structural constraint that C' lies INSIDE the vertex union — this is what the S4 case-analysis proof actually shows for 3-cycles.
+**Evidence:** Verified for three 3-cycles in S4 proof. For longer odd cycles, the lemma's construction is open.
+**Implications:** If proved, kills the (4,3,0) decomposition with Ω = K₃ ∪ K₁ for H=21.

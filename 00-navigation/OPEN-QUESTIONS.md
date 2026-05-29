@@ -1147,3 +1147,26 @@ at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh
 
 **Proof approach:** Show that for SOME C*∉S, the sub-tournament T[V\V(C*)] supports an IS of size d-1 in Omega restricted to cycles disjoint from C*. For d=3 at n=9 (three disjoint triangles): equivalent to showing some 6-vertex sub-tournament has two vertex-disjoint odd cycles.
 
+
+---
+
+## OPEN-Q-055 🟡 Forbidden H-spectrum: Other universally forbidden H values beyond 7
+
+**Added:** opus-2026-05-28-S5 (with THM-343 completion).
+
+**Status:** THM-343 proves H(T) ≠ 7 for ALL tournaments. New computational evidence suggests H=21 and H=63 are ALSO universally forbidden.
+
+**Evidence:**
+- H=21: 0 occurrences at n≤6 (exhaustive); 0/1,000,000 at n=7 (random sample). All four decompositions (10,0), (8,1,0), (6,2,0), (4,3,0) of α-vectors absent at n=6.
+- H=63: 0/200,000 at n=7.
+- Pattern: forbidden small H = {7, 21, 63} = {7·3⁰, 7·3¹, 7·3²}. But 35=7·5 is achievable. Not "multiples of 7" alone.
+
+**Sub-questions:**
+- Prove HYP-1753 (H≠21 for all n).
+- Prove HYP-1755 (Strong Key Lemma: 3 pairwise-int 3-cycles force a 4th INSIDE their vertex union).
+- Find structural reason for the 7·3^k pattern.
+- Is the forbidden set finite? At what n does each forbidden value "unlock"?
+
+**Tools:** SCC decomposition + Moon-Moser + Moon-Camion (as in THM-343 proof). Strong Key Lemma. Score sequence analysis. Independence-vector enumeration.
+
+**Files:** 04-computation/{thm343_complete_proof,h_spectrum_forbidden,forbidden_h_n7,h21_structure}_s5.py

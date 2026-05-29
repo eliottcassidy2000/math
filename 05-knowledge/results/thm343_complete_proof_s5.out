@@ -1,0 +1,60 @@
+THM-343 COMPLETE PROOF VERIFICATION
+opus-2026-05-28-S5
+============================================================
+============================================================
+(a) Moon-Moser bound: SC on n verts has >= n-2 three-cycles
+============================================================
+  n=3: 2 SC tournaments; min 3-cycles = 1; max = 1; bound n-2 = 1; OK
+  n=4: 24 SC tournaments; min 3-cycles = 2; max = 2; bound n-2 = 2; OK
+  n=5: 544 SC tournaments; min 3-cycles = 3; max = 5; bound n-2 = 3; OK
+  n=6: 22320 SC tournaments; min 3-cycles = 4; max = 8; bound n-2 = 4; OK
+  Sampling n=7, 2000 random SC tournaments...
+  n=7: 1589/2000 were SC; min 3-cycles seen = 5 (bound = 5)
+
+============================================================
+(b) Moon-Camion: every SC tournament has a Hamilton cycle
+============================================================
+  n=3: 2 SC tournaments; violations (no Ham cycle) = 0
+  n=4: 24 SC tournaments; violations (no Ham cycle) = 0
+  n=5: 544 SC tournaments; violations (no Ham cycle) = 0
+  n=6: 22320 SC tournaments; violations (no Ham cycle) = 0
+
+============================================================
+(c)(d) Score sequences of SC tournaments
+============================================================
+  n=3: distinct SC score sequences:
+    (1, 1, 1): 1 three-cycles, 2 tournaments
+  n=4: distinct SC score sequences:
+    (1, 1, 2, 2): 2 three-cycles, 24 tournaments
+  n=5: distinct SC score sequences:
+    (1, 1, 2, 3, 3): 3 three-cycles, 240 tournaments
+    (1, 2, 2, 2, 3): 4 three-cycles, 280 tournaments
+    (2, 2, 2, 2, 2): 5 three-cycles, 24 tournaments
+
+============================================================
+(f) MAIN: SC tournament on s>=5 verts cannot have exactly 3 odd cycles
+============================================================
+  s=3: 2 SC tournaments; #(exactly 3 odd cycles) = 0
+    odd-cycle counts seen: [(1, 2)]
+  s=4: 24 SC tournaments; #(exactly 3 odd cycles) = 0
+    odd-cycle counts seen: [(2, 24)]
+  s=5: 544 SC tournaments; #(exactly 3 odd cycles) = 0
+    odd-cycle counts seen: [(4, 240), (5, 120), (6, 120), (7, 64)]
+  s=6: 22320 SC tournaments; #(exactly 3 odd cycles) = 0
+    odd-cycle counts seen: [(6, 720), (7, 1440), (8, 720), (9, 2880), (10, 720), (11, 1920), (12, 4320), (13, 1440), (14, 3840), (16, 2640), (19, 1440), (20, 240)]
+  Sampling s=7, 5000 random tournaments
+  s=7: 3985/5000 SC; min odd cycles = 9; SC with exactly 3 odd cycles = 0
+
+============================================================
+(e) Direct check: no n<=5 tournament has H=7
+============================================================
+  n=3: 8 tournaments, H=7 count: 0
+    H values: [1, 3]
+  n=4: 64 tournaments, H=7 count: 0
+    H values: [1, 3, 5]
+  n=5: 1024 tournaments, H=7 count: 0
+    H values: [1, 3, 5, 9, 11, 13, 15]
+
+============================================================
+VERIFICATION COMPLETE
+============================================================

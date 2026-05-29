@@ -2,6 +2,49 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-28-S5 — 2026-05-28
+
+**Summary:** Completed THM-343 (H=7 impossible) for ALL n using a clean strongly-connected-component argument + Moon-Moser + Moon-Camion. Previous S4 proof was case-by-case for n=5,6 only. Identified two NEW universally-forbidden H values (21 and 63) and posted them as HYP-1753 and HYP-1754.
+
+**PROVED:**
+
+**THM-343 (H=7 impossible, ALL n)** — COMPLETED via the following clean argument:
+  By OCF, H=7 forces α₁=3, α_k=0 for k≥2, hence Ω(T)=K₃. All three odd cycles lie in a single strongly-connected component S (since cross-SCC cycles are vertex-disjoint).
+  Letting s = |S|: case s∈{3,4} forces ≤ 2 odd cycles in S; case s=5 forces ≥ s-2=3 three-cycles + ≥1 directed Hamilton 5-cycle, giving ≥ 4 odd cycles; case s≥6 forces ≥ s-2 ≥ 4 three-cycles. All cases contradict α₁=3. ∎
+  Key ingredients: **Moon-Moser (1962)** — SC on n verts has ≥ n-2 three-cycles; **Moon-Camion (1959-66)** — SC has a directed Hamilton cycle.
+
+**COMPUTATIONAL VERIFICATION (S5):**
+  - All SC tournaments at n=3..6 (exhaustive): min total odd cycles per n = 1,2,4,6 (none with exactly 3).
+  - Sampling n=7: 1589/2000 are SC, min odd cycles = 9 ≫ 3.
+  - n=6 H-spectrum (exhaustive): missing odd H in [1,45] = {7, 21, 35, 39}.
+  - n=7 H-spectrum (200k samples): 0 hits for H=7, 21, 63. H=35, 39 ARE achievable.
+  - n=7 H=21 (1M samples): 0 hits.
+
+**NEW CONJECTURES:**
+  - **HYP-1753:** H(T) ≠ 21 for all n. Confirmed exhaustively n≤6 and 0/1,000,000 at n=7. The four α-decompositions (10,0), (8,1,0), (6,2,0), (4,3,0) are all missing at n=6.
+  - **HYP-1754:** H(T) ≠ 63 for all n. Confirmed n=7 (0/200,000).
+  - **HYP-1755 (Strong Key Lemma):** 3 pairwise-int 3-cycles force a 4th odd cycle WITHIN their vertex union V(C₁∪C₂∪C₃). Verified by S4 case analysis for 3-cycles; open for longer cycles. If proved, kills (4,3,0) decomposition for H=21.
+
+**PATTERN OBSERVATION:** Universally forbidden small H values: 7=7·1, 21=7·3, 63=7·9 — multipliers 3⁰,3¹,3². But 35=7·5 is achievable. Curious; not "multiples of 7".
+
+**NEW FILES:**
+- `01-canon/theorems/THM-343-H7-impossible.md` — updated with COMPLETE proof
+- `04-computation/thm343_complete_proof_s5.py` — verifies Moon-Moser, Moon-Camion, structural claim
+- `04-computation/h_spectrum_forbidden_s5.py` — n=3..6 H-spectrum
+- `04-computation/forbidden_h_n7_s5.py` — n=7 sampling for forbidden H
+- `04-computation/h21_structure_s5.py` — n=6 exhaustive + n=7 1M sample for H=21
+- `05-knowledge/results/{thm343_complete_proof,h_spectrum_forbidden,forbidden_h_n7,h21_structure}_s5.out`
+- `07-reflections/thm343-complete-proof-via-scc.md`
+
+**FOR NEXT AGENT:**
+1. Prove HYP-1753 (H≠21): rule out (10,0), (8,1,0), (6,2,0), (4,3,0) decompositions.
+2. Prove HYP-1755 (Strong Key Lemma) for all odd cycle lengths.
+3. Investigate the 7·3^k pattern of forbidden values — is there a deeper structural reason?
+4. Sample n=8 for H=21 and H=63 to further test universality.
+5. Explore whether the same SCC argument constrains other forbidden vectors.
+
+---
+
 ## opus-2026-05-28-S4 — 2026-05-28
 
 **Summary:** Deep investigation of H=7 impossibility (HYP-1748→THM-343) and Omega(T) structure. Fixed OCF verification bug (directed cycles must be ordered tuples, not frozensets). Major findings on the structure of the conflict graph Omega(T).

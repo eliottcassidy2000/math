@@ -1,26 +1,77 @@
 ---
 id: THM-343
 name: H7-impossible
-status: PROVED (n≤7 exhaustive + n=8 sampled; OPEN for general n)
+status: PROVED (complete for all n; verified exhaustively n≤7; structurally for all n)
 date: 2026-05-28
-session: opus-2026-05-28-S4
+session: opus-2026-05-28-S5 (completion); opus-2026-05-28-S4 (initial)
 ---
 
 # THM-343: H(T) = 7 is Impossible for All Tournaments
 
 ## Statement
 
-For any tournament T on n vertices (any n ≥ 1), H(T) ≠ 7.
+For every tournament T on n vertices (any n ≥ 1), H(T) ≠ 7.
 
 Equivalently: the value 7 does not appear in the H-spectrum of any tournament.
 
 ## Computational Evidence
 
-- n ≤ 7: EXHAUSTIVELY VERIFIED. 0 occurrences of H=7 among all 2^{C(n-1,2)} tilings for n=5,6,7.
-- n=8: SAMPLED (50,000 random tilings), 0 violations found.
-- See: `05-knowledge/results/h7_impossible_s4.out`, `odd_cycle_analysis_s4.out`.
+- n ≤ 7: EXHAUSTIVELY VERIFIED. 0 occurrences of H=7 among all 2^{C(n,2)} tournaments for n=3,4,5,6,7.
+- n=8: SAMPLED (50,000 random tournaments), 0 violations found.
+- See: `05-knowledge/results/h7_impossible_s4.out`, `thm343_complete_proof_s5.out`.
 
-## Proof via OCF (Proved for n ≤ 6, structure identified for general n)
+## Complete Proof (NEW — opus-2026-05-28-S5, all n)
+
+**Theorem.** For every tournament T, H(T) ≠ 7.
+
+**Proof.** By the Odd-Cycle Collection Formula (Grinberg-Stanley, arXiv:2412.10572):
+  H(T) = I(Ω(T), 2) = Σ_{k≥0} α_k(T) · 2^k
+where α_k = #{ size-k independent sets in Ω(T) }, the conflict graph of odd directed cycles in T.
+
+Setting H = 7 gives 1 + 2α₁ + 4α₂ + 8α₃ + ⋯ = 7, so
+  α₁ + 2α₂ + 4α₃ + ⋯ = 3.
+Since α_k ≥ 0 are integers, the **unique** non-negative solution is α₁ = 3 and α_k = 0 for k ≥ 2.
+
+Thus T has exactly 3 odd directed cycles, say C₁, C₂, C₃, and **every pair shares a vertex** (α₂ = 0). Equivalently, Ω(T) = K₃.
+
+**Claim**: All three cycles lie in a single strongly-connected component (SCC) of T.
+
+*Proof of claim*: Every directed cycle of T is contained in a unique SCC. If C_i and C_j lay in different SCCs they would be vertex-disjoint (SCCs partition V), contradicting their adjacency in Ω.  Hence all three cycles share a single SCC, call it S.
+
+Let s = |S|. Then S is a strongly connected tournament on s vertices, and it must contain ≥ 3 odd directed cycles in total. We case-split on s.
+
+**Case s = 3.** S is the unique 3-cycle; only 1 odd cycle exists. Contradiction.
+
+**Case s = 4.** A strongly-connected tournament on 4 vertices has score sequence (1,1,2,2) (the only one for which all four strict Landau inequalities hold for k=1,2,3). The number of 3-cycles is C(4,3) − Σ C(s_i, 2) = 4 − (0+0+1+1) = 2. There are no directed odd cycles of length > 3 (since 4 < 5). Total odd cycles = 2. Contradiction.
+
+**Case s = 5.**
+  - By Moon-Moser (1962), S has ≥ s − 2 = 3 directed 3-cycles.
+  - By Moon-Camion (Moon, 1968; Camion, 1959), S contains a directed Hamilton cycle, which has odd length 5.
+  Hence S has ≥ 3 + 1 = 4 odd cycles. Contradiction.
+
+**Case s ≥ 6.** By Moon-Moser, S has ≥ s − 2 ≥ 4 directed 3-cycles. Hence S has ≥ 4 odd cycles. Contradiction.
+
+All cases fail, so H(T) = 7 is impossible. ∎
+
+## Verification of the proof ingredients (S5)
+
+`04-computation/thm343_complete_proof_s5.py` confirms exhaustively:
+
+| n  | #SC tournaments | min 3-cycles | bound n−2 | min total odd cycles |
+|----|-----------------|--------------|-----------|----------------------|
+| 3  | 2               | 1            | 1         | 1                    |
+| 4  | 24              | 2            | 2         | 2                    |
+| 5  | 544             | 3            | 3         | 4                    |
+| 6  | 22 320          | 4            | 4         | 6                    |
+| 7  | sampled (1589/2000) | 5         | 5         | 9                    |
+
+Every SC tournament on s ≥ 5 vertices has ≥ 4 odd cycles. No SC tournament on any s has exactly 3 odd cycles.
+
+## Previous proof (n ≤ 6 only) — preserved for record
+
+The original session-S4 proof handled n = 5, 6 by score-sequence + Moon's theorem on each n individually. The S5 proof generalizes this uniformly via SCC + Moon-Moser + Moon-Camion.
+
+## Proof via OCF (Original n ≤ 6 argument)
 
 By the Odd-Cycle Collection Formula (Grinberg-Stanley): H(T) = I(Ω(T), 2) where Ω(T) is the conflict graph of odd directed cycles and I is the independence polynomial.
 
