@@ -33,14 +33,15 @@ et al.).
                    │
               ┌────┴─────┐
               │   H21    │  ──┐
-              │   H63    │    │
+              │   H63    │    │  (n≤7 only)
               │HSpectrum │    │
               └──────────┘    │
                               │
        ┌──────────────────────┘
        │
    ┌───┴────────────────────────┐
-   │ Forbidden trio  (H ≠ 7,21,63)
+   │ Universal pair (H ≠ 7,21)
+   │ Finite n≤7 trio (H ≠ 7,21,63)
    │ Rédei existence + parity   │
    └────────────────────────────┘
 
@@ -64,9 +65,10 @@ et al.).
 | `SCC.lean` | `Reaches`, `IsSCC`, `H`, Hamilton paths | foundation |
 | `OCF.lean` | OCF axiom, Moon-Moser, Moon-Camion | external classical axioms |
 | `Redei.lean` | Rédei 1934 (existence + parity) | axioms + corollaries |
-| `H7.lean`, `H21.lean`, `H63.lean` | Forbidden-H proofs | proved (modulo cited axioms) |
+| `H7.lean`, `H21.lean` | Universal forbidden-H proofs | proved (modulo cited axioms) |
+| `H63.lean` | Finite n≤7 absence of H=63 | finite verification axiom; universal claim false at n=8 |
 | `Forbidden.lean` | Generic α-enumeration + binomial bounds | mixed |
-| `HSpectrum.lean` | Forbidden-trio bundle | bundle |
+| `HSpectrum.lean` | Universal pair + finite trio bundles | bundle |
 | `Tilings.lean` | `HasBasePath`, `tilde`, score formula | axioms + corollaries |
 | `GridReflection.lean` | `op`, `relabel`, vertex reversal, THM-280 | axiom + corollaries |
 | `StaircaseModel.lean` | THM-330 (SC cut theorem) — **EASY DIRECTION PROVED** | mixed |
@@ -108,9 +110,11 @@ Sorted by Lean foundation → external classical → project-novel.
   *Recommended canonical replacement.*
 - `alpha_pair_bound`, `alpha_triple_subset`, etc. — specialisations.
 
-#### H = 21 / H = 63 case-by-case
+#### H = 21 case-by-case; H = 63 finite audit
 - `no_alpha_10_0`, `no_alpha_8_1`, `no_alpha_6_2`, `no_alpha_4_3`.
-- `H_ne_sixtythree_axiom`.
+- `H_ne_sixtythree_le_seven_axiom` records exhaustive n≤7 absence only.
+  The universal H≠63 theorem is false at n=8; see
+  `05-knowledge/results/h63_counterexample_audit_s8.out`.
 
 #### Tiling/staircase axioms
 - `tilde_score_sink`, `tilde_score_source`, `tilde_score_interior`

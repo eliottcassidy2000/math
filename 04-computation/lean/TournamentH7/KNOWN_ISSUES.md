@@ -15,7 +15,7 @@ A next agent with a working Lean environment should:
 
 - `TournamentH7/Forbidden.lean`
 - `TournamentH7/H21.lean`
-- `TournamentH7/H63.lean`
+- `TournamentH7/H63.lean` (finite n≤7 statement only; universal H≠63 is false)
 - `TournamentH7/Redei.lean`
 - `TournamentH7/HSpectrum.lean`
 - updated root `TournamentH7.lean` and `Verify.lean`
@@ -89,6 +89,7 @@ axioms for each of:
 - `H_ne_twentyone_audit` — additionally depends on `ocf_extended`,
   `alpha_chain_step`, `alpha_binomial_bound`, `no_alpha_10_0`,
   `no_alpha_8_1`, `no_alpha_6_2`, `no_alpha_4_3`.
-- `H_ne_sixtythree_audit` — depends on `H_ne_sixtythree_axiom` only.
+- `H_ne_sixtythree_le_seven_audit` — depends on `H_ne_sixtythree_le_seven_axiom` only.
 - `H_pos_audit` — depends on `redei_existence`.
-- `forbidden_trio_audit` — union of the above.
+- `forbidden_pair_audit` — universal {7,21} bundle.
+- `forbidden_trio_le_seven_audit` — finite n≤7 {7,21,63} bundle.

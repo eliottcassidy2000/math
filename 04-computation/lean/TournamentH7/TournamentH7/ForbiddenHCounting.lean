@@ -4,7 +4,7 @@
 
   ─── What this module formalises ──────────────────────────────────────
   The Lean formalisation of forbidden-H factors into an arithmetic
-  enumeration stage (this module) and a structural killing stage
+  enumeration stage (this module) and a structural killing/finite-audit stage
   (Forbidden.lean, H7.lean, H21.lean, H63.lean).
 
   Here we define f(N) = the count of arithmetic α-tuples consistent

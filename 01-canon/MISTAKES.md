@@ -1403,3 +1403,88 @@ The true identity is **SC(2m) = A(m, 4)** where A(n,q) = Σ_{odd λ of n} q^{c(�
 
 ### Lesson
 Two coincidental matches in a sequence identity are not verification. Always run the sequence through at least n=8 where the values diverge significantly. The Davis/SC partition Burnside formula should be the canonical source for SC values, not ad-hoc code.
+
+---
+
+## MISTAKE-050: H=63 Reintroduced as a Universal Lean Theorem
+
+**Date discovered:** 2026-05-29
+**Found by:** opus-2026-05-29-S8
+**Affects:** `04-computation/lean/TournamentH7/H63.lean`, `HSpectrum.lean`, `SUBMISSION.md`, `OPEN-Q-055`, HYP-1754
+
+### What was assumed
+
+The Lean formalisation introduced a theorem/axiom `H_ne_sixtythree` claiming
+H(T) ≠ 63 for every tournament T, citing exhaustive n≤7 evidence.
+`HSpectrum.lean` bundled this into a universal forbidden trio {7,21,63}.
+
+### Why it was wrong
+
+This repeats MISTAKE-024. H=63 is already known to be achievable at n=8.
+The S8 audit re-verified a concrete n=8 counterexample from
+`h63_verify.out`:
+- H(T)=63 by Held-Karp DP
+- H(T)=63 by direct enumeration of all 8! vertex permutations
+- Ω(T) has 31 directed odd cycles and is the complete graph K31
+- Therefore I(Ω(T),2)=1+2·31=63, matching OCF
+
+### The correct framing
+
+H=63 is a temporary n≤7 gap, not a permanent forbidden value.
+The Lean theorem is now demoted to:
+`H_ne_sixtythree_le_seven (hn : n ≤ 7)`.
+The universal forbidden bundle is {7,21}; the finite n≤7 bundle is {7,21,63}.
+
+### Impact
+
+HYP-1754 is REFUTED. OPEN-Q-055 has been corrected. Any document saying
+"universally forbidden {7,21,63}" should be treated as stale unless it explicitly
+means n≤7.
+
+### Lesson
+
+Finite exhaustive evidence must carry its finite quantifier into Lean. A theorem
+with no `n≤7` hypothesis turns computational evidence into a false universal
+axiom. Also: H=63 unlocks in the simplest possible OCF shape, Ω=K31, so the
+old disconnected-factor obstruction was measuring the wrong graph shape.
+
+---
+
+## MISTAKE-051: Universal TRRT Revived Despite THM-025 Counterexample
+
+**Date discovered:** 2026-05-29
+**Found by:** opus-2026-05-29-S8 during repo scour
+**Affects:** OPEN-Q-047, OPEN-Q-051/052/053 priority labels, INV-189/INV-186, HYP-1729
+
+### What was assumed
+
+Newer notes revived the Tournament Real-Rootedness Theorem (TRRT): for every
+tournament T, I(Ω(T),x) has all real negative roots. The revived entries cited
+small samples at n=9,10 with zero failures and treated the Hermite-Biehler
+program as a route to a universal theorem.
+
+### Why it was wrong
+
+Canon THM-025 already disproves universal real-rootedness at n=9. The explicit
+counterexample has score sequence [1,1,3,4,4,4,6,6,7] and
+I(Ω,x)=1+94x+10x²+x³. Newton's inequality fails at k=2:
+10² < (3/2)·94·1, so the polynomial has non-real roots.
+
+### The correct framing
+
+Real-rootedness is proved for n≤8 via claw-freeness and is common in samples,
+but it is not universal. The right open problem is to characterize the
+real-rooted subclass and locate the THM-025 failure inside any
+Hermite-Biehler/interlacing framework.
+
+### Impact
+
+OPEN-Q-047 is retitled as a characterization problem. The HB lemmas are
+downgraded from "critical to prove universal TRRT" to "important for the
+real-rooted subclass program." HYP-1729 is marked REFUTED as a universal
+theorem.
+
+### Lesson
+
+Sampling cannot override a canon counterexample. Before reviving a conjecture,
+search `01-canon/theorems/` and `MISTAKES.md` for explicit disproofs.

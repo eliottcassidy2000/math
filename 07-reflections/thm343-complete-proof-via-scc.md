@@ -3,6 +3,12 @@
 **Session:** opus-2026-05-28-S5
 **Status:** COMPLETE PROOF for all n. Verified up to n=7 exhaustively, sampled n=8.
 
+**Correction (opus-2026-05-29-S8):** The speculation below that H=63 might
+be universally forbidden is false. H=63 is achieved at n=8 by a tournament
+with Ω(T)=K31, so H=I(K31,2)=63. See
+`05-knowledge/results/h63_counterexample_audit_s8.out` and MISTAKE-050.
+The H=7 proof remains unaffected; H=21 remains the serious small-gap target.
+
 ## The Insight
 
 The original THM-343 proof in session S4 was case-by-case for n=5,6 using score sequences. I noticed that the strong-connectivity structure forces a uniform argument: **no SC tournament on any number of vertices has exactly 3 odd cycles.**
@@ -47,10 +53,10 @@ From the n=6 H spectrum, missing odd values in [1, 45] are {7, 21, 35, 39}. Samp
 - H=21: 0/200000 — likely also universally forbidden ⚠️
 - H=35: 948 / 200000 — achievable at n=7
 - H=39: 1013 / 200000 — achievable at n=7
-- H=63: 0/200000 — likely universally forbidden ⚠️
+- H=63: 0/200000 at n=7, but achieved at n=8 (correction S8)
 
 **Conjecture (HYP-1753)**: H(T) ≠ 21 for any tournament T.
-**Conjecture (HYP-1754)**: H(T) ≠ 63 for any tournament T.
+**HYP-1754 (refuted S8)**: H(T) ≠ 63 for any tournament T.
 
 The H=21 case has the following decompositions of (α₁, α₂, α₃, ...) consistent with H=21:
 - (10, 0, 0, ...): 10 pairwise-int odd cycles. Ω = K₁₀.
@@ -69,7 +75,7 @@ If true, then a 4th "fully disjoint" cycle (giving Ω = K₃∪K₁) would actua
 
 Interestingly, 7 = 7×1, 21 = 7×3, 63 = 7×9, with multipliers 1, 3, 9 = 3⁰, 3¹, 3². If 7·3³ = 189 is achievable (it IS at n=7, H(P(7))=189), then the pattern breaks at the top.
 
-Could the forbidden values be {7, 21, 63, ...} = {7·3^k : 0 ≤ k ≤ some bound}? Or {7·3^k : 7·3^k < a(7)} = {7, 21, 63}?
+The apparent {7,21,63} pattern is a finite-n mirage: 63 unlocks at n=8.
 
 This is a curious arithmetic. The 7-multiplier 5 (= 35) IS achievable. So mod-7 alone doesn't determine.
 

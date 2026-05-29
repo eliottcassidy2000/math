@@ -8,11 +8,12 @@ Lean 4 + Mathlib4 formalisation of forbidden H-values in tournaments.
 |---|---|---|
 | `Tournament.H_ne_seven` | For every tournament T (any n), H(T) ≠ 7 | THM-343 |
 | `Tournament.H_ne_twentyone` | For every tournament T (any n), H(T) ≠ 21 | HYP-1753 |
-| `Tournament.H_ne_sixtythree` | For every tournament T (any n), H(T) ≠ 63 | HYP-1754 |
+| `Tournament.H_ne_sixtythree_le_seven` | For every tournament T with n ≤ 7, H(T) ≠ 63 | exhaustive n≤7 |
 | `Tournament.H_pos` | For n ≥ 1, H(T) ≠ 0 (i.e., H(T) ≥ 1) | Rédei 1934 (R1) |
 | `Tournament.H_ne_two` | For n ≥ 1, H(T) ≠ 2 (corollary of parity) | Rédei 1934 (R2) |
 | `Tournament.H_ne_even` | For n ≥ 1, H(T) is never an even number | Rédei 1934 (R2) |
-| `Tournament.H_not_in_forbidden_trio` | H(T) ∉ {7, 21, 63} | bundle |
+| `Tournament.H_not_in_forbidden_pair` | H(T) ∉ {7, 21} | bundle |
+| `Tournament.H_not_in_forbidden_trio_le_seven` | If n≤7, H(T) ∉ {7, 21, 63} | finite bundle |
 | `Tournament.regular_not_SF` | regular base-path tournament has score differing at vertex 0 | oracle-2026-05-11-S1 |
 | `Tournament.regular_not_SF_id` | regular base-path tournament is *not* SF (identity) | corollary |
 | `Tournament.paleyLike_not_SF_id` | Paley-like tournament is not SF | corollary |
@@ -42,6 +43,12 @@ Additionally, exhaustive n = 7 enumeration of all 2,097,152 tournaments
   - H = 7  has 0 occurrences,
   - H = 21 has 0 occurrences,
   - H = 63 has 0 occurrences.
+
+Correction (opus-2026-05-29-S8): H = 63 is achievable at n = 8.  The
+counterexample in `04-computation/h63_counterexample_audit_s8.py` has
+H(T)=63 by both DP and direct permutation enumeration, and
+I(Ω(T),2)=63 with Ω(T)=K31.  Therefore no universal theorem H(T) ≠ 63
+should be cited from this Lean project.
 
 ## Axiom audit
 
@@ -79,7 +86,7 @@ theorem depends on. The axioms split into three classes:
 | `no_alpha_8_1` | Exhaustive n ≤ 7: no tournament has α₁=8 ∧ α₂=1 |
 | `no_alpha_6_2` | Exhaustive n ≤ 7: no tournament has α₁=6 ∧ α₂=2 |
 | `no_alpha_4_3` | Exhaustive n ≤ 7: no tournament has α₁=4 ∧ α₂=3 |
-| `H_ne_sixtythree_axiom` | Exhaustive n ≤ 7: no tournament has H=63 |
+| `H_ne_sixtythree_le_seven_axiom` | Exhaustive n ≤ 7: no tournament has H=63 |
 
 ## Honest status report
 
@@ -89,12 +96,11 @@ peer-reviewed literature. The chain-of-subsets reasoning is axiomatised even
 though it would be straightforward to de-axiomatise once a computable
 representation of `alphaCount` is provided.
 
-The H ≠ 21 and H ≠ 63 results have additional structural axioms (Class C)
-whose only justification at present is exhaustive computational verification
-at n ≤ 7. For n ≥ 8 these remain conjectures. The H ≠ 21 axioms are
-considerably more believable than H ≠ 63 because the H = 21 obstruction
-admits a structural reduction (via `omegaTriangleLocalises`) to the H ≠ 7
-obstruction in the (4,3) sub-case.
+The H ≠ 21 result has additional structural axioms (Class C) whose only
+justification at present is exhaustive computational verification at n ≤ 7
+plus partial structural reductions.  The old H ≠ 63 universal claim is
+false: H = 63 occurs at n = 8, so H63.lean now records only the finite
+n≤7 absence.
 
 ## Build
 
@@ -112,7 +118,7 @@ axioms` audit confirming the closed set of axioms each theorem depends on.
 This is a **structurally interesting** but **not fully rigorous** formalisation:
 
 - **Rigorous part**: the arithmetic of which α-vectors satisfy the OCF + chain
-  constraints for h ∈ {7, 21, 63} is fully proved in Lean. The arithmetic
+  constraints for h ∈ {7, 21, 63} is partly formalised in Lean. The arithmetic
   enumeration for H ≠ 7 reduces the problem to exactly one α-vector; for
   H ≠ 21 it reduces to four.
 
@@ -120,8 +126,9 @@ This is a **structurally interesting** but **not fully rigorous** formalisation:
   published literature.
 
 - **Conjectural part**: the structural unrealisability of each surviving
-  α-vector for h ∈ {21, 63} at large n is currently only verified
-  computationally up to n = 7.
+  α-vector for h = 21 at large n is currently only verified computationally
+  up to n = 7 and partially reduced.  For h = 63, universal unrealisability
+  is refuted by the n = 8 counterexample.
 
 A more rigorous follow-up would prove the Class C axioms structurally,
 which appears feasible for the (4,3) case (via reduction to THM-343)

@@ -1,0 +1,33 @@
+H=63 counterexample audit (opus-2026-05-29-S8)
+============================================================
+n = 8
+score sequence = [1, 2, 2, 3, 3, 5, 6, 6]
+SCC sizes = [8]
+
+Adjacency matrix:
+  0 1 0 0 0 1 0 1
+  0 0 1 1 1 1 1 1
+  1 0 0 1 1 1 1 1
+  1 0 0 0 1 0 0 0
+  1 0 0 0 0 0 0 0
+  0 0 0 1 1 0 0 1
+  1 0 0 1 1 1 0 1
+  0 0 0 1 1 0 0 0
+
+H(T) by DP = 63
+H(T) by direct permutation enumeration = 63
+Counts agree = True
+
+directed odd cycles |Omega vertices| = 31
+cycle length distribution = {3: 8, 5: 17, 7: 6}
+independence counts alpha_k = [1, 31]
+I(Omega(T), 2) = 63
+OCF agrees with H = True
+
+Omega connected components = [31]
+  component 1: size=31, edges=465, complete=True, cycle_lengths={3: 8, 5: 17, 7: 6}
+
+Conclusion:
+  This concrete tournament has H(T)=63 at n=8.
+  Therefore any universal theorem H(T) != 63 is false.
+  The true statement is only that H=63 is absent in the n<=7 data.

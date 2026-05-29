@@ -14,16 +14,25 @@
 
 ## Priority opus-2026-05-16-S1: TRRT and All-0 Staircase
 
+### INV-191: H=63 Unlocks at n=8 via Complete Conflict Graph
+**Source:** opus-2026-05-29-S8
+**Status:** VERIFIED counterexample; structural explanation open
+**What:** HYP-1754 ("H=63 is universally forbidden") is refuted. A concrete n=8 tournament has H(T)=63 by both DP and direct permutation enumeration. Its odd-cycle conflict graph Ω(T) has 31 directed odd cycles and is complete, so OCF gives H=I(K31,2)=1+2·31=63. This explains how 63 bypasses the old disconnected K3-factor obstruction: it realizes 63 through a complete Ω, not through K3⊔2K1.
+**Next:**
+  1. Characterize tournaments with complete Ω(T) and α₁=31 at n=8.
+  2. Determine the smallest n at which each odd value 2r+1 can be realised as I(K_r,2) by a tournament with complete Ω.
+  3. Revisit H=21: is the obstruction exactly the nonexistence of Ω=K10 and the other four α-vector cases?
+**Files:** `04-computation/h63_counterexample_audit_s8.py`, `05-knowledge/results/h63_counterexample_audit_s8.out`, MISTAKE-050.
+
 ### INV-189: Real-Rootedness of I(Ω(T), x) for All Tournaments (TRRT)
 **Source:** opus-2026-05-16-S1
-**Status:** OPEN — strongly supported computationally, n≤8 proved, n≥9 open
-**What:** Conjecture: I(Ω(T), x) has all real, negative roots for ANY tournament T.
-Proved for n≤8 (Ω is claw-free; claw requires ≥9 vertices; apply Chudnovsky-Seymour 2007). Tested n=5..10: zero failures. Ω(T) CAN have claws at n≥9, so new structural reason needed.
-**Key implication:** Ultra-log-concavity of α_k; product formula H = ∏(1+2r_i).
+**Status:** STALE/REFUTED AS UNIVERSAL — see THM-025
+**What:** The universal conjecture "I(Ω(T), x) has all real, negative roots for every tournament T" is false. Canon THM-025 gives an n=9 counterexample with score sequence [1,1,3,4,4,4,6,6,7] and I(Ω,x)=1+94x+10x²+x³, violating Newton's inequality. What remains interesting is to characterize the large real-rooted subclass and understand why failures are rare.
+**Key implication:** Conditional ultra-log-concavity and product-formula ideas remain useful only for the real-rooted subclass, not universally.
 **Next:**
-  1. Check interlacing of I(Ω\C*, x) and I(Ω(T-V(C*)), x) for cycles C*
-  2. Test perfectness of Ω(T) computationally (would give log-concavity)
-  3. Search for "stable polynomial" / "negative dependence" approach
+  1. Reconcile the newer Hermite-Biehler/interlacing notes with THM-025.
+  2. Characterize the THM-025 failure class and the generic real-rooted class.
+  3. Search for a stability/negative-dependence theorem with explicit hypotheses.
 **Reflection:** `real-rootedness-omega-conjecture.md`
 
 ### INV-190: All-0 Staircase H Sequence and Algebraic Structure
@@ -51,9 +60,9 @@ Proved for n≤8 (Ω is claw-free; claw requires ≥9 vertices; apply Chudnovsky
 
 ### INV-186: Real-Rootedness of I(Ω(T), x)
 **Source:** opus-2026-04-05-S24 computation
-**Status:** PROVED for n ≤ 8, CONJECTURED for all n
-**What:** All zeros of the independence polynomial of the odd-cycle conflict graph are real and negative. Proof at n ≤ 8: Ω(T) is claw-free (3 disjoint odd cycles need ≥ 9 vertices), by Chudnovsky-Seymour. At n ≥ 9, claws possible but real-rootedness may persist.
-**Next:** Test at n=9 with efficient cycle enumeration. Look for structural property beyond claw-free.
+**Status:** PROVED for n ≤ 8, DISPROVED universally at n=9 (THM-025)
+**What:** All zeros of the independence polynomial of the odd-cycle conflict graph are real and negative for n≤8 by claw-freeness + Chudnovsky-Seymour. At n=9, THM-025 gives a counterexample. The right problem is now structural characterization, not universal proof.
+**Next:** Characterize the n=9 failure mechanism and identify sufficient tournament conditions for real-rootedness.
 
 ### INV-187: E[H(T)] = n!/2^{n-1} 
 **Source:** opus-2026-04-05-S24 computation

@@ -1952,9 +1952,9 @@ Source: alpha_crossover_analysis.out | opus-2026-04-16-S1
 Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n15.out | opus-2026-04-16-S1
 
 ## HYP-1729: Real-rootedness of I(Omega(T), x) for all tournaments (TRRT) (opus-2026-05-16-S1)
-**Status:** OPEN (proved for n≤8 via TWO ROUTES, conjectured for all n)
-**Statement:** For any tournament T, all roots of I(Ω(T), x) are real and negative.
-**Evidence:** All 1024 at n=5, 5000 at n=6, 30-200 at n=7..10. Zero failures.
+**Status:** REFUTED as a universal theorem (THM-025 counterexample at n=9); real-rooted subclass remains open.
+**Original statement:** For any tournament T, all roots of I(Ω(T), x) are real and negative.
+**Refutation:** THM-025 gives an n=9 tournament with score sequence [1,1,3,4,4,4,6,6,7] and I(Ω,x)=1+94x+10x²+x³. Newton k=2 fails (100 < 141), so not all roots are real.
 **Proof for n≤8 (Route 1):** Omega(T) is claw-free for n≤8 (claw requires ≥9 vertices). Chudnovsky-Seymour (2007).
 **Proof for n≤8 (Route 2, new — opus-2026-05-21-S1):** alpha(Omega)≤2 for n≤8. Cases:
   - d=0,1: trivial
@@ -1965,8 +1965,8 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
   - THM-311: Lemma A for d=2, α₂≥2 (proved via pair-partner argument)
   - THM-313: Lemma B algebraic identity A(-1/p)=I(-1/p) (proved); geometric form
   - Lemma B reduces to: α₂(Omega) ≤ p(m-p), equivalent to p between roots of I(Omega,x)
-**Implications:** Ultra-log-concavity of α_k; product formula H = ∏(1+2r_i).
-**See:** reflection `real-rootedness-omega-conjecture.md`, THM-310,311,312,313
+**Surviving implications:** Ultra-log-concavity and product formula H = ∏(1+2r_i) hold conditionally for the real-rooted subclass, and universally at n≤8.
+**See:** THM-025, THM-020, reflection `real-rootedness-omega-conjecture.md`, THM-310,311,312,313
 
 ## HYP-1730: All-0 staircase 3-cycle count = k(k-1) (PROVED) (opus-2026-05-16-S1)
 **Status:** CONFIRMED (proved via degree formula)
@@ -2180,7 +2180,7 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Statement:** K3 appears as a SUBGRAPH of Omega(T) for typical tournaments.
 **Evidence:** At n=5: 50/64 (78%) of tournaments have K3 in Omega. At n=7: 32729/32768 (>99.9%).
 **Triangle-free Omega ↔ alpha_1 ≤ 2 OR alpha_1=3 with K1⊔K2 conflict graph.**
-**Implication for TRRT:** Chudnovsky-Seymour (claw-free → real-rooted) does NOT apply via K3-free structure. Need different approach for TRRT (Hermite-Biehler as per OPEN-Q-053 remains primary strategy).
+**Implication for real-rootedness:** Chudnovsky-Seymour (claw-free → real-rooted) does NOT apply via K3-free structure. Universal TRRT is refuted by THM-025; Hermite-Biehler remains relevant for characterizing real-rooted subclasses.
 **See:** omega_triangles_fast_s4.out, THM-343
 
 ## HYP-1753: H(T) ≠ 21 for all tournaments T (opus-2026-05-28-S5, upgraded S6)
@@ -2193,14 +2193,16 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Proof sketch (partial):** The (4,3,0) case with Ω = K₃ ∪ K₁ requires 3 pairwise-int cycles + 1 disjoint cycle. By the Key Lemma (THM-343 supporting result), 3 pairwise-int 3-cycles produce a 4th odd cycle INSIDE V(C₁ ∪ C₂ ∪ C₃). Hence the "disjoint" 4th cycle from hypothesis must be a 5th cycle, contradicting α₁=4. The Ω = P₄ case and the (10,0),(8,1,0),(6,2,0) cases are open.
 **See:** h21_structure_s5.out, h_spectrum_forbidden_s5.out, forbidden_h_n7_s5.out
 
-## HYP-1754: H(T) ≠ 63 for all tournaments T (opus-2026-05-28-S5, upgraded S6)
-**Status:** OPEN — strong computational evidence (exhaustive n ≤ 7)
-**Statement:** The value 63 does not appear in the H-spectrum of any tournament.
-**Evidence:**
-  - n=6: H_max=45 < 63, so trivially absent.
-  - n=7: EXHAUSTIVELY VERIFIED (S6). 0 occurrences of H=63 in all 2,097,152 tournaments.
-**Pattern observation:** Universally forbidden small H values so far: 7 = 7·1, 21 = 7·3, 63 = 7·9. Multipliers 1, 3, 9 = 3⁰, 3¹, 3². But 7·5 = 35 IS achievable at n=7, so the pattern isn't simply "multiples of 7." Conjectured: forbidden set is finite (since H-spectrum density approaches 1 at large n).
-**See:** forbidden_h_n7_s5.out
+## HYP-1754: H(T) ≠ 63 for all tournaments T (opus-2026-05-28-S5, refuted opus-2026-05-29-S8)
+**Status:** REFUTED — H=63 is achievable at n=8.
+**Original statement:** The value 63 does not appear in the H-spectrum of any tournament.
+**Refutation (opus-2026-05-29-S8):**
+  - Concrete n=8 tournament from `05-knowledge/results/h63_verify.out`, independently re-audited in `04-computation/h63_counterexample_audit_s8.py`.
+  - `05-knowledge/results/h63_counterexample_audit_s8.out`: H(T)=63 by DP and direct permutation enumeration.
+  - OCF check: Ω(T) has 31 directed odd cycles with length distribution {3:8, 5:17, 7:6}; Ω(T)=K31, so I(Ω,2)=1+2·31=63.
+**Corrected statement:** H=63 is a temporary n≤7 gap, not a permanent forbidden value. The universal small forbidden set currently remains {7} proved and {21} strongly conjectured/partly formalised.
+**Lesson:** The 7·3^k pattern terminates as a universal obstruction at k=1. H=63 unlocks through a complete conflict graph K31, not through a disconnected K3 factor.
+**See:** MISTAKE-024, h63_verify.out, h63_counterexample_audit_s8.out
 
 ## HYP-1755: Strong Key Lemma (opus-2026-05-28-S5)
 **Status:** OPEN — required to complete H=21 obstruction proof

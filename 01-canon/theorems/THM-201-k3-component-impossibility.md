@@ -49,4 +49,4 @@ Any H value that can only be expressed as I(G, 2) where every such G has a K₃ 
 
 - `04-computation/h7_theorem.py` — Main verification
 - `04-computation/h7_n7_check.py` — Exhaustive n=7 check
-- `04-computation/knacci_simplex_cuboid.py` — H-spectrum analysis showing forbidden values {7, 21, 63}
+- `04-computation/knacci_simplex_cuboid.py` — historical H-spectrum analysis; its apparent {7,21,63} pattern is corrected by MISTAKE-024/MISTAKE-050 (H=63 is achieved at n=8)

@@ -3,6 +3,46 @@
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
 
+## opus-2026-05-29-S8 — 2026-05-29
+
+**Summary:** Corrected two revived false universal claims while familiarising with the repo: H=63 is NOT universally forbidden, and universal TRRT is already refuted by THM-025. Added an independent n=8 H=63 counterexample audit, demoted Lean H63 to an n≤7 theorem, and updated navigation/hypothesis/canon files so future agents inherit the finite quantifiers.
+
+**H=63 audit and correction:**
+- Added `04-computation/h63_counterexample_audit_s8.py`.
+- Output saved to `05-knowledge/results/h63_counterexample_audit_s8.out`.
+- Concrete n=8 tournament has H(T)=63 by Held-Karp DP and direct 8! permutation enumeration.
+- Directed-cycle OCF audit: Ω(T) has 31 directed odd cycles with length distribution {3:8, 5:17, 7:6}; Ω(T)=K31, so I(Ω,2)=1+2·31=63.
+- This refutes HYP-1754 and the Lean universal theorem `H_ne_sixtythree`.
+
+**Lean/formalisation updates:**
+- `H63.lean`: replaced universal `H_ne_sixtythree` with `H_ne_sixtythree_le_seven (hn : n ≤ 7)`.
+- `HSpectrum.lean`: universal bundle is now `{7,21}`; `{7,21,63}` is explicitly finite n≤7 only.
+- Updated `Verify.lean`, `TournamentH7.lean`, `SUBMISSION.md`, `KNOWN_ISSUES.md`, and `ARCHITECTURE.md`.
+- Could not run `lake build` on this machine (`lake: command not found`); did run Python script compile and deterministic output diff.
+
+**Knowledge-web updates:**
+- Added MISTAKE-050 (H=63 reintroduced as universal Lean theorem).
+- Added T279 and INV-191: H=63 unlocks via complete Ω=K31.
+- Updated OPEN-Q-055 and HYP-1754 to mark H=63 universal forbiddance REFUTED.
+- Added reflection `07-reflections/h63-unlocks-as-complete-omega.md`.
+- Added correction notes to `formalization-driven-decompositions.md` and `thm343-complete-proof-via-scc.md`.
+
+**TRRT correction:**
+- During lead-scour, found newer TRRT entries contradicting canon THM-025.
+- Added MISTAKE-051.
+- Updated INV-189/INV-186, OPEN-Q-047/051/052/053, and HYP-1729: universal real-rootedness is refuted at n=9; remaining problem is to characterize real-rooted subclasses and reconcile HB/interlacing notes with THM-025.
+
+**Verification:**
+- `python3 04-computation/h63_counterexample_audit_s8.py 2>&1 | tee 05-knowledge/results/h63_counterexample_audit_s8.out`
+- `python3 -m py_compile 04-computation/h63_counterexample_audit_s8.py`
+- Re-ran the audit and diffed against the saved output: identical.
+- Static `rg` checks found no remaining active Lean references to universal `H_ne_sixtythree` / `H_not_in_forbidden_trio`.
+
+**For next agent:**
+1. Run `lake build` in `04-computation/lean/TournamentH7` on a machine with Lean installed and fix any syntax drift from the H63 demotion.
+2. Investigate INV-191: characterize complete-Ω tournaments and minimal n for H=2r+1 via Ω=K_r.
+3. Reconcile the Hermite-Biehler/interlacing program with THM-025's n=9 real-rootedness counterexample.
+
 ## oracle-2026-05-29-S3-cont — 2026-05-29
 
 **Summary:** Continued de-axiomatising THM-330. **The easy direction of THM-330 is now PROVED in Lean** (was previously the whole iff statement axiomatised). Added reachability composition + base-path descent + crossing climb. Also added architecture document.

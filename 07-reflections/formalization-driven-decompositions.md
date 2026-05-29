@@ -3,6 +3,12 @@
 **Session:** oracle-2026-05-29-S2
 **Files:** `04-computation/lean/TournamentH7/`
 
+**Correction (opus-2026-05-29-S8):** H=63 is not a forbidden value. The
+tuple `(α_1,α_2,α_3,α_4)=(31,0,0,0)` is realised at n=8 by a tournament
+with Ω(T)=K31. Thus the H=63 ladder is still useful as an arithmetic
+decomposition, but it is not a kill table for a universal theorem.
+See `05-knowledge/results/h63_counterexample_audit_s8.out`.
+
 ## The pattern
 
 The Lean formalisation of THM-343 (H ≠ 7) revealed a clean two-stage
@@ -36,8 +42,8 @@ realises it.
    typically needs one structural lemma to kill.  So:
    * H = 7:  |S| = 1; 1 lemma chain (the H ≠ 7 SCC argument).
    * H = 21: |S| = 4; 4 lemma chains needed.
-   * H = 63: |S| = 37; 37 lemma chains needed — a much bigger task,
-     hence why HYP-1754 is *hard*.
+   * H = 63: |S| = 37, and S8 shows one tuple, `(31,0,0,0)`,
+     is actually realised. This refutes HYP-1754 rather than making it hard.
 
 3. **The two stages can develop independently.**  An agent building
    structural lemmas doesn't need to know the arithmetic side; an

@@ -966,28 +966,29 @@ tournament). The blowup operation is exactly the row step in the 2-adic grid.
 
 ---
 
-## OPEN-Q-047 🟡 Real-Rootedness of I(Ω(T), x) for All Tournaments
+## OPEN-Q-047 🟡 Characterize Real-Rootedness of I(Ω(T), x)
 
-**The conjecture (TRRT — Tournament Real-Rootedness Theorem):**
-For any tournament T on n vertices, the independence polynomial I(Ω(T), x) has all real, negative roots.
+**Correction (opus-2026-05-29-S8):** The universal TRRT statement is already refuted by THM-025 at n=9.
+The surviving problem is to characterize the tournaments for which I(Ω(T), x) has all real, negative roots.
 
 **What's proved:** For n ≤ 8, Ω(T) is claw-free (a claw requires ≥ 9 vertices), so real-rootedness follows from Chudnovsky-Seymour (2007).
 
-**Computational evidence:** ALL 1024 tournaments at n=5, 5000 random at n=6, and 30-200 random samples at n=7,8,9,10. Zero failures (opus-2026-05-16-S1).
+**Counterexample:** THM-025 gives an n=9 tournament with score sequence [1,1,3,4,4,4,6,6,7] and
+I(Ω,x)=1+94x+10x²+x³. Newton k=2 fails (100 < 141), so two roots are non-real.
 
 **Why notable:**
-- Extends Chudnovsky-Seymour to a non-claw-free class (Ω(T) HAS claws at n≥9)
-- Implies ultra-log-concavity of α_k (beyond Mason-Welsh for matroids, applying to non-matroid structures)
-- Gives product formula: H(T) = ∏_i (1 + 2r_i) with r_i > 0 real
+- Generic/sample tournaments often remain real-rooted despite the n=9 failure.
+- For the real-rooted subclass, ultra-log-concavity and product formula H(T)=∏_i(1+2r_i) remain powerful.
+- The THM-025 counterexample may isolate the exact obstruction shape.
 
-**Sub-conjecture:** Ω(T) is always a perfect graph. If true, log-concavity follows from Stanley (1981).
+**Sub-conjecture status:** Ω(T) is NOT always perfect (see INV-032 / THM-019 updates), so perfectness is also a subclass question.
 
 **Key open questions:**
-1. Does I(Ω(T) \\ C*, x) interlace with I(Ω(T - V(C*)), x) for all C*?
-2. Is Ω(T) always perfect?
-3. What structural property of Ω(T) (beyond claw-free) forces real-rootedness?
+1. What structural property of Ω(T) (beyond claw-free) forces real-rootedness?
+2. Which Hermite-Biehler/interlacing lemmas survive after accounting for THM-025?
+3. Can the n=9 failure family be characterized exactly?
 
-**Priority:** 🟡 IMPORTANT. Proof would be publishable as a standalone result.
+**Priority:** 🟡 IMPORTANT. A structural characterization would be publishable as a standalone result.
 **Source:** opus-2026-05-16-S1, reflection `real-rootedness-omega-conjecture.md`
 
 **Computational updates (oracle-2026-05-17-S1):**
@@ -1004,7 +1005,7 @@ See `07-reflections/root-spectrum-n6-computations.md`.
 
 ## OPEN-Q-048 🟢 Ultra-Log-Concavity for Tournament Independence Polynomials
 
-**The theorem (proved):** If $I(\Omega(T),x)$ is real-rooted (conjectured for all $T$, proved $n \leq 8$), then $(\alpha_k/\binom{d}{k})_{k=0}^d$ is log-concave (ultra-log-concave), where $d = \alpha(\Omega(T))$.
+**The theorem (proved):** If $I(\Omega(T),x)$ is real-rooted (proved universally only for $n \leq 8$; false universally from $n=9$ by THM-025), then $(\alpha_k/\binom{d}{k})_{k=0}^d$ is log-concave (ultra-log-concave), where $d = \alpha(\Omega(T))$.
 
 **Proof:** Newton's inequalities for real-rooted polynomials with positive roots. Elementary symmetric polynomials $e_k(\rho_1,\ldots,\rho_d)$ satisfy Newton-Maclaurin: $(e_k/\binom{d}{k})^2 \geq (e_{k-1}/\binom{d}{k-1})(e_{k+1}/\binom{d}{k+1})$. Since $\alpha_k = \alpha_d \cdot e_{d-k}(\rho)$, ULC follows.
 
@@ -1035,7 +1036,7 @@ See `07-reflections/ulc-turan-unconditional-proof.md`.
 **Current status:**
 - Proved for complete tripartite co-conflict graphs $K_{a,b,c}$ via the algebraic identity.
 - Zero violations in n=9 random samples (91/100 degree-3 tournaments, 0 failures).
-- TRRT implies this unconditionally (via Newton's inequalities).
+- Universal TRRT would have implied this via Newton's inequalities, but universal TRRT is refuted by THM-025.
 - The "bad" counter-example ($K_4-e$ + isolated vertex, gives 25 < 30) does NOT occur in tournament conflict graphs.
 
 **Approach:** Use the Kruskal-Katona shadow theorem for simplicial complexes, combined with the tournament-specific constraint that bar_Omega(T) arises from an actual tournament. The key step is showing that the $K_4$-free graphs that violate $\alpha_2^2 \geq 3\alpha_1\alpha_3$ cannot be co-conflict graphs of tournaments.
@@ -1046,11 +1047,13 @@ See `07-reflections/ulc-turan-unconditional-proof.md`.
 
 ---
 
-## OPEN-Q-051 🔴 Interlacing Approach to TRRT
+## OPEN-Q-051 🟡 Interlacing Approach to Real-Rooted Subclasses
 
-**The proof strategy (computationally supported):**
+**Correction (opus-2026-05-29-S8):** Universal TRRT is false by THM-025, so this cannot prove a theorem for all tournaments as stated. The interlacing approach may still characterize or prove real-rooted subclasses.
+
+**The proof strategy (computationally supported in tested subclasses):**
 If for every cycle C* in Omega(T), I(Omega \ C*, x) interlaces I(Omega, x)
-when deg(I_del) = deg(I_full) - 1, then TRRT follows by induction via Hermite-Biehler.
+when deg(I_del) = deg(I_full) - 1, then real-rootedness follows by induction via Hermite-Biehler for the tournaments satisfying the hypotheses.
 
 **The deletion-contraction:** I(Omega,x) = A(x) + x*B(x) where A = I(Omega\C*) and B = I(Omega-N[C*]).
 
@@ -1058,9 +1061,9 @@ when deg(I_del) = deg(I_full) - 1, then TRRT follows by induction via Hermite-Bi
 
 **Why it's hard:** The proof needs to show B interlaces A for the specific structure of tournament conflict graphs. This is analogous to the Chudnovsky-Seymour claw-free proof but for non-claw-free graphs (n≥9).
 
-**Connection:** If Omega(T) is always a matroid/gammoid complex, TRRT follows from Choe-Oxley-Sokal-Wagner stability of matroid independence polynomials.
+**Connection:** For any subclass where Ω(T)'s independence complex is matroid/gammoid-like, Choe-Oxley-Sokal-Wagner stability may imply real-rootedness.
 
-**Priority:** 🔴 CRITICAL. Would unconditionally prove TRRT, the central open conjecture.
+**Priority:** 🟡 IMPORTANT. Could characterize the real-rooted subclass or identify the THM-025 failure in the HB framework.
 **Source:** oracle-2026-05-19-S1, `interlacing_investigation.py`.
 See `07-reflections/interlacing-and-trrt-proof-strategy.md`.
 
@@ -1068,31 +1071,31 @@ See `07-reflections/interlacing-and-trrt-proof-strategy.md`.
 - Recursion I = A + xB VERIFIED: 5210 checks, 0 violations.
 - B interlaces A when dA=dB+1: **3537/3537 = 100%, 0 failures at n=6,7.**
 - No-HB-cycle cases: exactly d=2,alpha2=1 — proved real-rooted by Turán unconditionally.
-- TRRT reduces exactly to TWO lemmas: (A) existence of HB-cycle and (B) interlacing.
-- Complete proof sketch: induction on m, using Turán for base cases and HB for induction.
+- In the tested real-rooted regime, the HB route reduces to TWO lemmas: (A) existence of HB-cycle and (B) interlacing.
+- Proof sketch for subclasses: induction on m, using Turán for base cases and HB for induction.
 See `07-reflections/hermite-biehler-trrt-strategy.md`.
 
 ---
 
-## OPEN-Q-052 🔴 Lemma A: Existence of HB-satisfying Cycle
+## OPEN-Q-052 🟡 Lemma A: Existence of HB-satisfying Cycle
 
 For any tournament T with d≥2 and α₂≥2 (or d≥3), prove that there exists a cycle C* such that deg(I(Omega\\C*)) = deg(I(Omega-N[C*])) + 1.
 
 Computationally: holds for ALL tested n=6,7 cases (except d=2,alpha2=1 which is handled by Turán).
 Proof approach: if alpha2>=2 or d>=3, there are multiple maximum independent sets. A cycle C* NOT in all max sets satisfies the condition.
 
-**Priority:** 🔴 CRITICAL (one of two lemmas needed for TRRT proof).
+**Priority:** 🟡 IMPORTANT (one of two lemmas for the HB real-rootedness subclass program; universal TRRT is refuted by THM-025).
 
 ---
 
-## OPEN-Q-053 🔴 Lemma B: B Interlaces A in Hermite-Biehler Recursion
+## OPEN-Q-053 🟡 Lemma B: B Interlaces A in Hermite-Biehler Recursion
 
 Prove: for any tournament T and cycle C* with dA=deg(I(Omega\\C*)) = dB+1 = deg(I(Omega-N[C*]))+1, the polynomial I(Omega-N[C*],x) interlaces I(Omega\\C*,x).
 
 Computationally: **3537/3537 = 100%, 0 failures at n=6,7.** Strongest computational evidence for any structural claim in this project.
 Approach: multivariate stability, or direct interlacing via tournament Ramsey structure.
 
-**Priority:** 🔴 CRITICAL (other lemma needed for TRRT proof). Together with Lemma A, gives TRRT.
+**Priority:** 🟡 IMPORTANT (other lemma for the HB real-rootedness subclass program; together with Lemma A it cannot imply universal TRRT because THM-025 refutes that statement).
 
 **Update:** Extended to n=8 (107/107) and n=9 degree-3 (28/28). Cumulative: 3672 cases, 0 failures.
 Key identity: B interlaces A iff A(-sigma)<=0 where sigma=root of B. This = I(Omega,-sigma)<=0
@@ -1154,19 +1157,19 @@ at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh
 
 **Added:** opus-2026-05-28-S5 (with THM-343 completion).
 
-**Status:** THM-343 proves H(T) ≠ 7 for ALL tournaments. New computational evidence suggests H=21 and H=63 are ALSO universally forbidden.
+**Status:** THM-343 proves H(T) ≠ 7 for ALL tournaments. H=21 remains a strong open permanent-gap candidate. H=63 is REFUTED as a universal gap: it is achieved at n=8.
 
 **Evidence:**
-- H=21: 0 occurrences at n≤6 (exhaustive); 0/1,000,000 at n=7 (random sample). All four decompositions (10,0), (8,1,0), (6,2,0), (4,3,0) of α-vectors absent at n=6.
-- H=63: 0/200,000 at n=7.
-- Pattern: forbidden small H = {7, 21, 63} = {7·3⁰, 7·3¹, 7·3²}. But 35=7·5 is achievable. Not "multiples of 7" alone.
+- H=21: 0 occurrences at n≤7 (exhaustive as of S6). All four decompositions (10,0), (8,1,0), (6,2,0), (4,3,0) of α-vectors absent at n=6.
+- H=63: absent at n≤7, but **achievable at n=8**. The S8 counterexample has Ω(T)=K31, hence H=I(K31,2)=63.
+- Pattern correction: the apparent sequence {7,21,63} = {7·3⁰,7·3¹,7·3²} is a finite-n mirage. The 7·3^k universal obstruction terminates at k=1.
 
 **Sub-questions:**
 - Prove HYP-1753 (H≠21 for all n).
 - Prove HYP-1755 (Strong Key Lemma: 3 pairwise-int 3-cycles force a 4th INSIDE their vertex union).
-- Find structural reason for the 7·3^k pattern.
+- Explain why H=63 unlocks at n=8 via complete Ω=K31 while H=7 (K3) and H=21 remain blocked.
 - Is the forbidden set finite? At what n does each forbidden value "unlock"?
 
 **Tools:** SCC decomposition + Moon-Moser + Moon-Camion (as in THM-343 proof). Strong Key Lemma. Score sequence analysis. Independence-vector enumeration.
 
-**Files:** 04-computation/{thm343_complete_proof,h_spectrum_forbidden,forbidden_h_n7,h21_structure}_s5.py
+**Files:** 04-computation/{thm343_complete_proof,h_spectrum_forbidden,forbidden_h_n7,h21_structure}_s5.py; `04-computation/h63_counterexample_audit_s8.py`

@@ -30,15 +30,20 @@ theorem H_ne_seven_audit {n : ℕ} (T : Tournament n) : H T ≠ 7 := H_ne_seven 
 theorem H_ne_twentyone_audit {n : ℕ} (T : Tournament n) : H T ≠ 21 := H_ne_twentyone T
 #print axioms H_ne_twentyone_audit
 
-theorem H_ne_sixtythree_audit {n : ℕ} (T : Tournament n) : H T ≠ 63 := H_ne_sixtythree T
-#print axioms H_ne_sixtythree_audit
+theorem H_ne_sixtythree_le_seven_audit {n : ℕ} (hn : n ≤ 7) (T : Tournament n) :
+    H T ≠ 63 := H_ne_sixtythree_le_seven hn T
+#print axioms H_ne_sixtythree_le_seven_audit
 
 theorem H_pos_audit {n : ℕ} (hn : 1 ≤ n) (T : Tournament n) : H T ≠ 0 := H_pos hn T
 #print axioms H_pos_audit
 
-theorem forbidden_trio_audit {n : ℕ} (T : Tournament n) :
-    H T ≠ 7 ∧ H T ≠ 21 ∧ H T ≠ 63 := H_not_in_forbidden_trio T
-#print axioms forbidden_trio_audit
+theorem forbidden_pair_audit {n : ℕ} (T : Tournament n) :
+    H T ≠ 7 ∧ H T ≠ 21 := H_not_in_forbidden_pair T
+#print axioms forbidden_pair_audit
+
+theorem forbidden_trio_le_seven_audit {n : ℕ} (hn : n ≤ 7) (T : Tournament n) :
+    H T ≠ 7 ∧ H T ≠ 21 ∧ H T ≠ 63 := H_not_in_forbidden_trio_le_seven hn T
+#print axioms forbidden_trio_le_seven_audit
 
 /-! ### Project-novel results — audit -/
 

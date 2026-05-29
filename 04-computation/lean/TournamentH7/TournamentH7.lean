@@ -5,13 +5,14 @@
 
   - `Tournament.H_ne_seven`         (THM-343)
   - `Tournament.H_ne_twentyone`     (HYP-1753)
-  - `Tournament.H_ne_sixtythree`    (HYP-1754)
+  - `Tournament.H_ne_sixtythree_le_seven` (finite n ≤ 7 verification)
   - `Tournament.redei_existence`    (Rédei 1934, axiom)
   - `Tournament.redei_parity`       (Rédei 1934, axiom)
   - `Tournament.H_pos`              (corollary: H ≥ 1)
   - `Tournament.H_ne_two`           (corollary of parity)
   - `Tournament.H_ne_even`          (corollary of parity)
-  - `Tournament.H_not_in_forbidden_trio`
+  - `Tournament.H_not_in_forbidden_pair`
+  - `Tournament.H_not_in_forbidden_trio_le_seven`
 
   ## Module layout
 
@@ -22,9 +23,9 @@
     · TournamentH7.H7           — Theorem H_ne_seven (THM-343).
     · TournamentH7.Forbidden    — Chain step, binomial bound, extended OCF.
     · TournamentH7.H21          — Theorem H_ne_twentyone (HYP-1753).
-    · TournamentH7.H63          — Theorem H_ne_sixtythree (HYP-1754).
+    · TournamentH7.H63          — Finite theorem H_ne_sixtythree_le_seven.
     · TournamentH7.Redei        — Rédei 1934 axioms + corollaries.
-    · TournamentH7.HSpectrum    — Forbidden-trio bundle.
+    · TournamentH7.HSpectrum    — Universal pair + finite trio bundles.
     · TournamentH7.Tilings      — Base path, tile-complement T̃, score formula
                                   (project-novel; oracle-2026-05-11-S1).
     · TournamentH7.GridReflection — THM-280 (grid reflection ↔ complement;
