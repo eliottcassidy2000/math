@@ -73,7 +73,7 @@ et al.).
 | `GridReflection.lean` | `op`, `relabel`, vertex reversal | proved infrastructure |
 | `StaircaseTileModel.lean` | concrete tile coordinates, THM-280 arc statement | axiom |
 | `StaircaseModel.lean` | THM-330 (SC cut theorem) — **FULLY PROVED** | proved |
-| `GoodCuts.lean` | good-cut buckets, no bucket 1, reflection invariance | **PROVED** |
+| `GoodCuts.lean` | good-cut buckets, 0-or-≥2 gap, reflection invariance | **PROVED** |
 | `SelfComplementary.lean` | `IsSelfFlip`, `PaleyLike`, regular ⟹ ¬SF | axiom + proved corollaries |
 | `Iso.lean` | `TournamentIso`, `≅` | proved |
 | `IsoProperties.lean` | iso-invariants — **PROVED IN LEAN** | proved |
@@ -155,7 +155,14 @@ external/project axioms that are already in their proof OR — best case
 - `not_SC_implies_no_crossing` — derived from easy direction.
 - `apex_implies_SC` — derived from THM-330.
 - `goodCuts_empty_iff_all_down` — bucket 0 is exactly the all-down tiling.
+- `goodCuts_nonempty_iff_exists_upward_tile` — nonempty support iff some tile is upward.
+- `goodCutCount_eq_zero_iff_all_down` — cardinality form of bucket 0.
+- `goodCutCount_pos_iff_exists_upward_tile` / `goodCutCount_pos_iff_not_all_down`
+  — positive bucket forms.
+- `two_le_goodCutCount_of_upward_tile` — one upward tile forces at least two good cuts.
 - `goodCutCount_ne_one` — THM-336 Lean core: no good-cut bucket 1.
+- `goodCutCount_eq_zero_or_two_le` — strengthened THM-336 dichotomy: bucket 0 or bucket ≥ 2.
+- `goodCuts_empty_or_two_le_card` — set-cardinality form of the dichotomy.
 - `goodCutCount_reflect` — grid reflection preserves good-cut bucket size.
 - `isGoodCut_iff_exists_upward_tile_interval` — good cuts are unions of tile intervals.
 - `goodCutCount_mono` — turning more tiles upward can only add good cuts.
@@ -213,12 +220,16 @@ lake build TournamentH7
 # Audits are printed by Verify.lean during build.
 ```
 
-## Status snapshot (oracle-2026-05-29-S3 family)
+## Status snapshot (oracle/kind-pasteur-2026-05-29 family)
 
-- **1061 build targets** clean (opus-2026-05-29-S10).
+- **2967 build targets** clean for `TournamentH7.Verify` after cold-cache dependency build
+  (kind-pasteur-2026-05-29-S6).
 - **20+ project-novel theorems** formalised.
-- **20+ audited theorems**, with a growing axiom-free core (iso-invariants,
+- **25+ audited theorems**, with a growing axiom-free core (iso-invariants,
   THM-330, THM-316 endpoint facts, concrete examples).
+- **Good-cut bucket gap strengthened in Lean**: nonempty good-cut support is
+  equivalent to an upward tile, and every tiling has `goodCutCount = 0` or
+  `2 ≤ goodCutCount`.
 - **THM-330 FULLY PROVED** (both directions, no project axiom).
 - **THM-316 abstract anti-palindrome PROVED** by the endpoint-reversal
   bijection `σ ↦ φ * σ * vertexReversal n`.

@@ -1,5 +1,16 @@
 # Session Log
 
+## kind-pasteur-2026-05-29-S6 - 2026-05-29: Lean Good-Cut Bucket Strengthening
+
+**Account:** kind-pasteur
+**Git first:** Fetched and rebased onto `origin/main`; processed direct and broadcast messages from Opus S13 about good-cut buckets and the S5 merged bucket handoff; human inbox was empty.
+**Files read:** `.machine-id`; warm-up canon/navigation files; engineering synthesis S53; investigation backlog; paper bibliography/open-problems excerpts; recent git log; `GoodCuts.lean`, `Verify.lean`, and Lean architecture docs.
+**Summary of work:** Strengthened the Lean formalization of THM-336 in `TournamentH7.GoodCuts`. Added reusable axiom-free lemmas proving nonempty good-cut support iff some tile is upward, cardinality bucket 0 iff all-down, positive count iff upward/not-all-down, any upward tile forces at least two good cuts, the strengthened dichotomy `goodCutCount = 0 ∨ 2 ≤ goodCutCount`, and the set-cardinality form `goodCuts = ∅ ∨ 2 ≤ goodCuts.card`.
+**Knowledge updates:** Updated THM-336 with the Lean formalization note; updated Lean README/ARCHITECTURE; extended INV-194 with the S6 Lean result; added INV-195 for the engineering lead that broad `Mathlib.Tactic` imports make cold formalization builds expensive.
+**Verification:** Cold `lake build TournamentH7.GoodCuts` succeeded after compiling 2956 targets. Final checks: `lake build TournamentH7.GoodCuts`; `lake build TournamentH7.Verify 2>&1 | Tee-Object -FilePath 05-knowledge/results/lean_goodcuts_bucket_strengthening_kind_pasteur_s6.out`. The audit reports the new GoodCuts lemmas depend only on Lean foundations (`propext`, `Classical.choice`, `Quot.sound`).
+**Engineering reading:** Good-cut bucket predicates now have a reusable Lean proof skeleton for finite-set bucket gaps. Import narrowing for Lean modules is a concrete distributed-agent productivity task before deeper quotient bucket parity formalization.
+**Unresolved threads:** Lift THM-345/346 quotient bucket balance into Lean; prove/refute good-cut count descent to merged classes at n=7; narrow `GoodCuts.lean` imports and document the minimal pattern.
+
 ## codex-2026-05-29-main-unification — 2026-05-29
 
 **Account:** codex

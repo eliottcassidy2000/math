@@ -190,11 +190,54 @@ theorem goodCuts_empty_iff_all_down_audit {n : ℕ} (b : StTiling n) :
   StTiling.goodCuts_empty_iff_all_down b
 #print axioms goodCuts_empty_iff_all_down_audit
 
+/-- Good-cut support is nonempty iff some tile is upward. PROVED. -/
+theorem goodCuts_nonempty_iff_exists_upward_tile_audit {n : ℕ} (b : StTiling n) :
+    b.goodCuts.Nonempty ↔ ∃ t : StTile n, b t = true :=
+  StTiling.goodCuts_nonempty_iff_exists_upward_tile b
+#print axioms goodCuts_nonempty_iff_exists_upward_tile_audit
+
+/-- Good-cut bucket 0, cardinality form. PROVED. -/
+theorem goodCutCount_eq_zero_iff_all_down_audit {n : ℕ} (b : StTiling n) :
+    b.goodCutCount = 0 ↔ ∀ t : StTile n, b t = false :=
+  StTiling.goodCutCount_eq_zero_iff_all_down b
+#print axioms goodCutCount_eq_zero_iff_all_down_audit
+
+/-- Positive good-cut count iff some tile is upward. PROVED. -/
+theorem goodCutCount_pos_iff_exists_upward_tile_audit {n : ℕ} (b : StTiling n) :
+    0 < b.goodCutCount ↔ ∃ t : StTile n, b t = true :=
+  StTiling.goodCutCount_pos_iff_exists_upward_tile b
+#print axioms goodCutCount_pos_iff_exists_upward_tile_audit
+
+/-- Positive good-cut count iff the tiling is not all-down. PROVED. -/
+theorem goodCutCount_pos_iff_not_all_down_audit {n : ℕ} (b : StTiling n) :
+    0 < b.goodCutCount ↔ ¬ ∀ t : StTile n, b t = false :=
+  StTiling.goodCutCount_pos_iff_not_all_down b
+#print axioms goodCutCount_pos_iff_not_all_down_audit
+
+/-- One upward tile forces at least two good cuts. PROVED. -/
+theorem two_le_goodCutCount_of_upward_tile_audit {n : ℕ}
+    {b : StTiling n} {t : StTile n} (ht : b t = true) :
+    2 ≤ b.goodCutCount :=
+  StTiling.two_le_goodCutCount_of_upward_tile ht
+#print axioms two_le_goodCutCount_of_upward_tile_audit
+
 /-- THM-336 Lean core: no tiling has exactly one good cut. PROVED. -/
 theorem goodCutCount_ne_one_audit {n : ℕ} (b : StTiling n) :
     b.goodCutCount ≠ 1 :=
   StTiling.goodCutCount_ne_one b
 #print axioms goodCutCount_ne_one_audit
+
+/-- THM-336 strengthened: bucket count is 0 or at least 2. PROVED. -/
+theorem goodCutCount_eq_zero_or_two_le_audit {n : ℕ} (b : StTiling n) :
+    b.goodCutCount = 0 ∨ 2 ≤ b.goodCutCount :=
+  StTiling.goodCutCount_eq_zero_or_two_le b
+#print axioms goodCutCount_eq_zero_or_two_le_audit
+
+/-- Good-cut set form: empty or cardinality at least two. PROVED. -/
+theorem goodCuts_empty_or_two_le_card_audit {n : ℕ} (b : StTiling n) :
+    b.goodCuts = ∅ ∨ 2 ≤ b.goodCuts.card :=
+  StTiling.goodCuts_empty_or_two_le_card b
+#print axioms goodCuts_empty_or_two_le_card_audit
 
 /-- Grid reflection preserves the good-cut bucket. PROVED. -/
 theorem goodCutCount_reflect_audit {n : ℕ} (b : StTiling n) :

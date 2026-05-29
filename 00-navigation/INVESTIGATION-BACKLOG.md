@@ -180,15 +180,28 @@
 
 ### INV-194: Merged Tiling Bucket Constraints
 **Source:** kind-pasteur-2026-05-29-S5
-**Status:** NEW THEOREM + OPEN EXTENSION
+**Status:** THEOREM + LEAN EXTENSION + OPEN EXTENSION
 **What:** Treat quotient maps out of the tiling cube as bucket maps. THM-346 proves the general half-line balance law for any quotient `q: Q_m -> B` and any mask family `M`: `2*self_b + incident_cross_b = |q^{-1}(b)|*|M|`. THM-345 specializes this to `pi: Q_m -> G_n/Z_2`, proving that bucket size parity detects SC/NS type exactly: SC buckets are odd, NS buckets are `2 mod 4`, and `sum_M B_M=2^m`. For every Hamming layer `d`, the ordered transport matrix `W_d(M,N)` is symmetric, has row sums `B_M*C(m,d)`, has even diagonal, and therefore has forced cross-outflow parity. Lucas' theorem says the active parity layers are exactly the binary submasks of `m=C(n-1,2)`.
+**S6 Lean update (kind-pasteur-2026-05-29-S6):** The local good-cut bucket gap was strengthened in `TournamentH7.GoodCuts`: nonempty good-cut support is equivalent to the existence of an upward tile, any upward tile forces at least two distinct good cuts, and every tiling satisfies `goodCutCount = 0 ∨ 2 ≤ goodCutCount`. The `TournamentH7.Verify` audit confirms this core depends only on Lean foundations.
 **Why it matters:** This turns the merged metagraph into a constrained reversible transport system, not just an unweighted graph. It also corrects the old S202 "merged tiling excess" narration: merged buckets still partition the fixed-base cube exactly.
 **Next steps:**
   1. Measure the excess over the parity lower bound by spine/ribs/sea edge type.
   2. Determine whether generic NS-sea transport is approximable from bucket sizes alone, with SC/rib corrections.
   3. Seek a Burnside formula for the bucket-size distribution, not just for the number of buckets.
-  4. Add bucket parity and normalized `W_d` features to the future `tournament_tda.py` extractor.
-**Files:** `01-canon/theorems/THM-345-merged-bucket-parity.md`, `01-canon/theorems/THM-346-tiling-quotient-bucket-balance.md`, `04-computation/merged_bucket_constraints_s5.py`, `04-computation/tiling_quotient_bucket_balance_s5.py`, `05-knowledge/results/merged_bucket_constraints_s5.out`, `05-knowledge/results/tiling_quotient_bucket_balance_s5.out`, `05-knowledge/variables/merged-bucket-size.md`, `05-knowledge/variables/tiling-bucket-balance.md`, `07-reflections/merged-tiling-bucket-constraints.md`.
+  4. Lift the quotient bucket parity lemmas themselves into Lean, using the good-cut dichotomy as the finite-set counting template.
+  5. Add bucket parity and normalized `W_d` features to the future `tournament_tda.py` extractor.
+**Files:** `01-canon/theorems/THM-336-good-cuts-structure.md`, `01-canon/theorems/THM-345-merged-bucket-parity.md`, `01-canon/theorems/THM-346-tiling-quotient-bucket-balance.md`, `04-computation/merged_bucket_constraints_s5.py`, `04-computation/tiling_quotient_bucket_balance_s5.py`, `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`, `05-knowledge/results/merged_bucket_constraints_s5.out`, `05-knowledge/results/tiling_quotient_bucket_balance_s5.out`, `05-knowledge/results/lean_goodcuts_bucket_strengthening_kind_pasteur_s6.out`, `05-knowledge/variables/merged-bucket-size.md`, `05-knowledge/variables/tiling-bucket-balance.md`, `07-reflections/merged-tiling-bucket-constraints.md`.
+
+### INV-195: Lean Import Narrowing for Fast Distributed Formalization
+**Source:** kind-pasteur-2026-05-29-S6
+**Status:** NEW ENGINEERING LEAD
+**What:** A cold build of `TournamentH7.GoodCuts` pulled in the broad `Mathlib.Tactic` umbrella and compiled 2956 targets before the small local theorem file built. The module itself only uses elementary finset/cardinality facts plus arithmetic automation (`omega`, `simp`, `rw`, `Finset.card_bij`, `Finset.card_pos`, `Finset.card_eq_zero`, `Finset.card_le_card`). Narrowing imports in proof-heavy files could materially improve agent turnaround time and reduce wasted compute in fresh workspaces.
+**Why it matters:** Formalization is now an active project deliverable. Faster cold builds make multi-agent Lean work more practical and reduce the cost of CI or new-machine onboarding.
+**Next steps:**
+  1. Replace broad `import Mathlib.Tactic` in `GoodCuts.lean` with the minimal tactic/data imports and verify a cold-ish build.
+  2. Scan other Lean modules for broad imports that can be narrowed without churn.
+  3. Document the minimal import pattern in `04-computation/lean/TournamentH7/README.md`.
+**Files:** `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`, `05-knowledge/results/lean_goodcuts_bucket_strengthening_kind_pasteur_s6.out`.
 
 ### INV-135: Tang-Yau (arXiv:2602.04140): Path Homology of Circulant Digraphs via Fourier
 **Source:** Web research kind-pasteur-2026-03-10-S50

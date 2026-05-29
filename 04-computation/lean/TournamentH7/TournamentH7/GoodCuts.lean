@@ -6,7 +6,7 @@
 
    • a tile crosses a cut when its interval spans that cut;
    • a cut is good for a tiling when some upward tile crosses it;
-   • the good-cut bucket `goodCutCount` is never equal to 1;
+   • the good-cut bucket `goodCutCount` is either 0 or at least 2;
    • bucket 0 is exactly the all-down/transitive tiling;
    • grid reflection preserves good-cut bucket size.
 
@@ -188,6 +188,29 @@ lemma StTiling.goodCut_of_upward_tile {b : StTiling n} {t : StTile n}
   · rw [StTiling.mem_goodCuts]
     exact ⟨t.lo_succ_succ_mem_cutSet, ⟨t, ht, t.crossesCut_lo_succ_succ⟩⟩
 
+/-- Any upward tile makes the good-cut set nonempty. -/
+theorem StTiling.goodCuts_nonempty_of_upward_tile {b : StTiling n} {t : StTile n}
+    (ht : b t = true) :
+    b.goodCuts.Nonempty := by
+  exact ⟨t.lo.val + 1, (StTiling.goodCut_of_upward_tile (b := b) (t := t) ht).1⟩
+
+/-- A nonempty good-cut set witnesses at least one upward tile. -/
+theorem StTiling.exists_upward_tile_of_goodCuts_nonempty {b : StTiling n}
+    (h : b.goodCuts.Nonempty) :
+    ∃ t : StTile n, b t = true := by
+  rcases h with ⟨k, hk⟩
+  rw [StTiling.mem_goodCuts] at hk
+  rcases hk with ⟨_, t, ht, _⟩
+  exact ⟨t, ht⟩
+
+/-- Positive good-cut support is equivalent to the existence of an upward tile. -/
+theorem StTiling.goodCuts_nonempty_iff_exists_upward_tile (b : StTiling n) :
+    b.goodCuts.Nonempty ↔ ∃ t : StTile n, b t = true := by
+  constructor
+  · exact StTiling.exists_upward_tile_of_goodCuts_nonempty
+  · rintro ⟨t, ht⟩
+    exact StTiling.goodCuts_nonempty_of_upward_tile (b := b) (t := t) ht
+
 /-- Bucket 0: if all tiles are down, there are no good cuts. -/
 theorem StTiling.goodCuts_empty_of_all_down {b : StTiling n}
     (h : ∀ t : StTile n, b t = false) :
@@ -215,10 +238,56 @@ theorem StTiling.goodCuts_empty_iff_all_down (b : StTiling n) :
     b.goodCuts = ∅ ↔ ∀ t : StTile n, b t = false :=
   ⟨StTiling.all_down_of_goodCuts_empty, StTiling.goodCuts_empty_of_all_down⟩
 
+/-- Cardinality form of bucket 0. -/
 theorem StTiling.goodCutCount_eq_zero_iff_all_down (b : StTiling n) :
     b.goodCutCount = 0 ↔ ∀ t : StTile n, b t = false := by
   unfold StTiling.goodCutCount
-  rw [Finset.card_eq_zero, StTiling.goodCuts_empty_iff_all_down]
+  rw [Finset.card_eq_zero]
+  exact StTiling.goodCuts_empty_iff_all_down b
+
+/-- Positive good-cut count is equivalent to the existence of an upward tile. -/
+theorem StTiling.goodCutCount_pos_iff_exists_upward_tile (b : StTiling n) :
+    0 < b.goodCutCount ↔ ∃ t : StTile n, b t = true := by
+  unfold StTiling.goodCutCount
+  rw [Finset.card_pos]
+  exact StTiling.goodCuts_nonempty_iff_exists_upward_tile b
+
+/-- A tiling has positive good-cut count iff it is not the all-down tiling. -/
+theorem StTiling.goodCutCount_pos_iff_not_all_down (b : StTiling n) :
+    0 < b.goodCutCount ↔ ¬ ∀ t : StTile n, b t = false := by
+  rw [StTiling.goodCutCount_pos_iff_exists_upward_tile]
+  constructor
+  · rintro ⟨t, ht⟩ hall
+    rw [hall t] at ht
+    contradiction
+  · intro hnot
+    by_contra hnone
+    apply hnot
+    intro t
+    cases ht : b t with
+    | false => rfl
+    | true => exact False.elim (hnone ⟨t, ht⟩)
+
+/-- A single upward tile forces at least two distinct good cuts. -/
+theorem StTiling.two_le_goodCutCount_of_upward_tile {b : StTiling n} {t : StTile n}
+    (ht : b t = true) :
+    2 ≤ b.goodCutCount := by
+  classical
+  unfold StTiling.goodCutCount
+  have htwo := StTiling.goodCut_of_upward_tile (b := b) (t := t) ht
+  let pair : Finset ℕ := {t.lo.val + 1, t.lo.val + 2}
+  have hsub : pair ⊆ b.goodCuts := by
+    intro k hk
+    simp [pair] at hk
+    rcases hk with hk | hk
+    · rw [hk]
+      exact htwo.1
+    · rw [hk]
+      exact htwo.2
+  have hcard : pair.card = 2 := by
+    simp [pair]
+  have hle := Finset.card_le_card hsub
+  omega
 
 /-- THM-336, Lean core: no tiling lives in good-cut bucket 1. -/
 theorem StTiling.goodCutCount_ne_one (b : StTiling n) :
@@ -242,14 +311,27 @@ theorem StTiling.goodCutCount_ne_one (b : StTiling n) :
     simpa using this
   omega
 
-/-- Bucket possibilities, formalized as a bound: only `0` or at least `2`. -/
+/-- THM-336 strengthened: every tiling has either zero or at least two good cuts. -/
 theorem StTiling.goodCutCount_eq_zero_or_two_le (b : StTiling n) :
     b.goodCutCount = 0 ∨ 2 ≤ b.goodCutCount := by
-  by_cases h0 : b.goodCutCount = 0
-  · exact Or.inl h0
-  · exact Or.inr (by
-      have h1 := StTiling.goodCutCount_ne_one b
-      omega)
+  by_cases h : ∃ t : StTile n, b t = true
+  · rcases h with ⟨t, ht⟩
+    exact Or.inr (StTiling.two_le_goodCutCount_of_upward_tile (b := b) (t := t) ht)
+  · left
+    rw [StTiling.goodCutCount_eq_zero_iff_all_down]
+    intro t
+    cases ht : b t with
+    | false => rfl
+    | true => exact False.elim (h ⟨t, ht⟩)
+
+/-- Set-cardinality form: the good-cut set is empty or has at least two elements. -/
+theorem StTiling.goodCuts_empty_or_two_le_card (b : StTiling n) :
+    b.goodCuts = ∅ ∨ 2 ≤ b.goodCuts.card := by
+  have h := StTiling.goodCutCount_eq_zero_or_two_le b
+  unfold StTiling.goodCutCount at h
+  rcases h with h0 | h2
+  · exact Or.inl (Finset.card_eq_zero.mp h0)
+  · exact Or.inr h2
 
 theorem StTiling.goodCutCount_bucket_bounds (b : StTiling n) :
     b.goodCutCount = 0 ∨

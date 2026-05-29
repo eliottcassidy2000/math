@@ -4,6 +4,7 @@ name: Good Cuts Structure Theorem
 status: PROVED
 session: opus-2026-05-27-S2
 verified: computationally n=3..10 (exhaustive for n≤7 via brute force)
+formalized: kind-pasteur-2026-05-29-S6 (`TournamentH7.GoodCuts`)
 depends_on: THM-330
 lean: 04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean
 ---
@@ -25,6 +26,28 @@ In the tiling model on n vertices (tiles = non-consecutive arc pairs, base path 
 ## Proof of Part 1
 
 Any tile (x,y) satisfies x ≥ y+2 (non-consecutive). An upward tile (x,y) witnesses every cut k with y < k ≤ x. The number of such cuts is x − y ≥ 2. Hence any upward tile witnesses **at least 2** good cuts simultaneously. Therefore if G(τ) ≠ ∅, then |G(τ)| ≥ 2. □
+
+**Lean formalization (kind-pasteur-2026-05-29-S6):** `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`
+now proves the reusable axiom-free core in the concrete staircase tile model:
+
+- `goodCuts_empty_iff_all_down`: bucket 0 is exactly the all-down tiling.
+- `goodCuts_nonempty_iff_exists_upward_tile`: nonempty good-cut support iff
+  at least one tile is upward.
+- `goodCutCount_eq_zero_iff_all_down`: cardinality form of bucket 0.
+- `goodCutCount_pos_iff_exists_upward_tile`: positive count iff some tile is
+  upward.
+- `goodCutCount_pos_iff_not_all_down`: positive count iff the tiling is not
+  all-down.
+- `two_le_goodCutCount_of_upward_tile`: one upward tile forces at least two
+  distinct good cuts.
+- `goodCutCount_ne_one`: no tiling has exactly one good cut.
+- `goodCutCount_eq_zero_or_two_le`: the strengthened dichotomy
+  `goodCutCount = 0 ∨ 2 ≤ goodCutCount`.
+- `goodCuts_empty_or_two_le_card`: set-cardinality form of the dichotomy.
+
+The audit target `TournamentH7.Verify` confirms these theorems depend only on
+Lean foundations (`propext`, `Classical.choice`, `Quot.sound`), not on project
+axioms; see `05-knowledge/results/lean_goodcuts_bucket_strengthening_kind_pasteur_s6.out`.
 
 ## Proof of Part 2: |G|=2 gives n−2
 

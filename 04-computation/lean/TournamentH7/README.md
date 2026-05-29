@@ -55,6 +55,12 @@ No `sorry` is used anywhere. The core H≠7 proof uses the cited axioms in
 for H≠21, finite H≠63, tiling score formulas, and counting constants. See
 `ARCHITECTURE.md` and `SUBMISSION.md` for the current full audit.
 
+`GoodCuts.lean` also contains the formal axiom-free core of THM-336: the
+all-down tiling is exactly bucket 0, any upward tile forces at least two good
+cuts, no tiling has exactly one good cut, the strengthened dichotomy
+`goodCutCount = 0 ∨ 2 ≤ goodCutCount`, and grid reflection preserves the
+bucket index.
+
 ## Proof sketch
 
 By `ocf`: H(T) = 1 + 2α₁ + 4α₂ + 8α₃ + 16α₄. Setting H = 7 gives
