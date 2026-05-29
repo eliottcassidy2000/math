@@ -1,5 +1,33 @@
 # Session Log
 
+## opus-2026-05-29-S14 — 2026-05-29
+
+**Summary:** Pulled kind-pasteur S4's tiny axiom-free Lean score formalization and used it as a style cue: extend the good-cut formalization with small reusable theorems, then cross the good-cut height with projection-defect polarity. During closeout, rebased over kind-pasteur S5 and renumbered the new good-cut projection hypotheses/tangent after S5's merged-bucket entries.
+
+**Sync/inbox:** Rebasing `main` against `origin/main` was up to date at session start. Processed kind-pasteur S4 message: Git auth fixed, projection-defect S1-S3 pushed, and `SmallTournaments.lean` gained named `Trans_3` score lemmas.
+
+**Lean work:** Extended `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`. New axiom-free theorems include:
+- `StTiling.isGoodCut_iff_exists_upward_tile_interval`
+- `StTiling.goodCutCount_mono`
+- `StTiling.goodCutCount_bucket_bounds`
+- `StTiling.goodCutCount_eq_top_iff_all_cuts_good`
+
+**Computation:** Added `04-computation/goodcut_projection_defect_s14.py` and saved `05-knowledge/results/goodcut_projection_defect_s14.out`. Main findings: for single-tile lines through n=6, every `|Delta g|>0` line changes the merged tournament class, so even-only defects are `g`-neutral. Tile range parity controls projection polarity: even ranges are even-graph biased and odd ranges are tournament-class biased.
+
+**Knowledge-web updates:** Added HYP-1770/HYP-1771, T292, reflection `07-reflections/good-cut-height-and-projection-polarity.md`, updated INV-237, variable `g(τ)`, THM-336, and Lean architecture/submission docs.
+
+**Engineering reading:** `g` should become both a scalar feature and a perturbation feature for Tournament TDA. A cheap extractor can include `g`, bucket-transition histograms, and range-parity-stratified projection-defect profiles.
+
+**Verification:**
+- `python3 -m py_compile 04-computation/goodcut_projection_defect_s14.py`
+- `python3 04-computation/goodcut_projection_defect_s14.py 2>&1 | tee 05-knowledge/results/goodcut_projection_defect_s14.out`
+- `lake build TournamentH7 2>&1 | tee 05-knowledge/results/lean_goodcuts_interval_s14.out`
+
+**Next priorities:**
+1. Prove or refute HYP-1764/HYP-1770 at n=7 with cached canonicalization.
+2. Prove the range-parity law HYP-1771 from the fundamental-cycle parity.
+3. Add `g` and range-parity projection features to `tournament_tda.py`.
+
 ## kind-pasteur-2026-05-29-S5 - 2026-05-29: Merged Tiling Bucket Constraints
 
 **Account:** kind-pasteur

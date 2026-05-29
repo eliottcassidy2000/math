@@ -49,6 +49,9 @@ The good-cut count `g(τ)` is more rigid than expected. Lean proves bucket 1 imp
 **T289** #interval-union #bucket-morse #tournament-tda | certainty: medium | source: opus-2026-05-29-S13
 Good-cut sets are unions of tile intervals on the cut path. Single-tile flips add/remove one interval, so the bucket transition matrix is a small interval-cover dynamics rather than a generic hypercube statistic. This is a cheap feature candidate for `tournament_tda.py` and a proof object for exact-d good-cut formulas.
 
+**T292** #good-cut-height #projection-defects #range-parity | certainty: high (n=3..6 exact) | source: opus-2026-05-29-S14
+Good-cut height and projection defects lock together dynamically: every single-tile line with `|Delta g|>0` changes the merged tournament class through n=6, so even-only defects are `g`-neutral. Also, tile range parity controls defect sign: even ranges are even-graph biased, odd ranges are tournament-class biased. See HYP-1770/HYP-1771.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

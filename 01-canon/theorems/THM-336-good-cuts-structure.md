@@ -5,6 +5,7 @@ status: PROVED
 session: opus-2026-05-27-S2
 verified: computationally n=3..10 (exhaustive for n≤7 via brute force)
 depends_on: THM-330
+lean: 04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean
 ---
 
 ## Statement
@@ -91,3 +92,17 @@ By THM-330, SC ⟺ |G|=n-1. The hierarchy is:
 - |G|=n-1: strongly connected (maximum democracy)
 
 The jump from 0 to ≥2 good cuts (skipping 1) reflects the binary tile structure: every tile spans ≥2 cuts simultaneously, preventing a "one-cut bridge."
+
+## Lean Formalization
+
+`TournamentH7.GoodCuts` formalizes the axiom-free core:
+
+- `StTiling.goodCutCount_ne_one`: no tiling has exactly one good cut.
+- `StTiling.goodCutCount_eq_zero_iff_all_down`: bucket 0 is exactly all-down.
+- `StTiling.goodCutCount_bucket_bounds`: `g(τ) ∈ {0} ∪ {2,...,n-1}`.
+- `StTiling.isGoodCut_iff_exists_upward_tile_interval`: good cuts are unions of upward tile intervals.
+- `StTiling.goodCutCount_mono`: turning more tiles upward can only add good cuts.
+- `StTiling.goodCutCount_eq_top_iff_all_cuts_good`: top bucket iff every legal cut is good.
+- `StTiling.goodCutCount_reflect`: grid reflection preserves `g`.
+
+The S14 audit shows these depend only on Lean foundations, not on project-specific axioms.

@@ -2384,3 +2384,17 @@ not only at the simple metagraph-edge level. This gives a quantitative bridge fr
 constraints to spine/ribs/sea conditioning.
 Source: tiling_quotient_bucket_balance_s5.py, tiling_quotient_bucket_balance_s5.out,
 07-reflections/merged-tiling-bucket-constraints.md
+
+## HYP-1770: Good-cut-changing single-tile flips always change merged tournament class (opus-2026-05-29-S14)
+**Status:** CONFIRMED for n=3..6 exact; OPEN generally.
+**Statement:** For a single-tile flip in the tiling hypercube, if `|Delta g|>0` then the merged tournament class changes. Equivalently, even-only projection defects and silent-both lines are `g`-neutral.
+**Evidence:** `goodcut_projection_defect_s14.py` stratifies all d=1 lines by `|Delta g|`. For n=4,5,6 every stratum with `|Delta g|≥1` has `silent_both=0` and `even_only=0`; all such lines are either `tournament_only` or `joint`.
+**Implication:** This is the dynamic version of HYP-1764. If `g` descends to `G_n/Z_2`, then changing `g` must cross a merged-class boundary. The computation shows exactly that for all single-tile lines through n=6.
+**See:** `05-knowledge/results/goodcut_projection_defect_s14.out`, `07-reflections/good-cut-height-and-projection-polarity.md`.
+
+## HYP-1771: Tile-range parity controls projection-defect polarity (opus-2026-05-29-S14)
+**Status:** CONFIRMED for n=4..6 exact single-tile families; OPEN generally.
+**Statement:** Single-tile projection-defect sign is governed by tile range parity. Even ranges, whose fundamental cycle has odd length, are even-graph biased; odd ranges, whose fundamental cycle has even length, are tournament-class biased.
+**Evidence:** At n=6 the range defects are `r=2:-0.0742`, `r=3:+0.1615`, `r=4:-0.1094`, `r=5:+0.1523`. At n=5, range 2 and 4 are even-biased while range 3 is tournament-biased. At n=4, range 2 is even-biased and range 3 is tournament-biased.
+**Implication:** The cut/cycle split is visible at the quotient-commutator level. Odd fundamental cycles are detected more strongly by `E_n`; even fundamental cycles are detected more strongly by `G_n/Z_2`.
+**See:** `05-knowledge/results/goodcut_projection_defect_s14.out`, T292.

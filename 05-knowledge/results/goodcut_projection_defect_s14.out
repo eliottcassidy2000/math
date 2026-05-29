@@ -1,0 +1,159 @@
+GOOD-CUT BUCKETS VS PROJECTION DEFECTS
+opus-2026-05-29-S14
+T-Edef = (tournament_only - even_only) / lines; dg = change in good-cut bucket.
+
+====================================================================================================
+n=3, m=1, tilings=2, T-classes=2, E-classes=2
+H-values: [1, 3]
+even degree sequences: [(0, 0, 0), (2, 2, 2)]
+
+single-tile lines by tile range
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+range=2                                          1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+
+single-tile lines by |Delta g|
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+|Delta g|=2                                      1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+
+structured moves with largest tournament-only polarity
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+d=1:single_tile:range=2:tile=(2,0)               1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:range_flip:r=2                               1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:upper_strip:hi=2                             1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:lower_strip:lo=0                             1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:vertex_star:v=0                              1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:vertex_star:v=2                              1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:full_complement_tiling                       1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+
+structured moves with largest even-only polarity
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+d=1:single_tile:range=2:tile=(2,0)               1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:range_flip:r=2                               1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:upper_strip:hi=2                             1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:lower_strip:lo=0                             1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:vertex_star:v=0                              1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:vertex_star:v=2                              1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+d=1:full_complement_tiling                       1     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+
+====================================================================================================
+n=4, m=3, tilings=8, T-classes=3, E-classes=3
+H-values: [1, 3, 5]
+even degree sequences: [(0, 0, 0, 0), (0, 2, 2, 2), (2, 2, 2, 2)]
+
+single-tile lines by tile range
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+range=2                                          8     0.00     0.00    50.00    50.00   -0.5000    0.750    2
+range=3                                          4    25.00    50.00     0.00    25.00   +0.5000    1.250    3
+
+single-tile lines by |Delta g|
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+|Delta g|=0                                      5    20.00     0.00    80.00     0.00   -0.8000    0.000    0
+|Delta g|=1                                      4     0.00    50.00     0.00    50.00   +0.5000    1.000    1
+|Delta g|=2                                      2     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+|Delta g|=3                                      1     0.00     0.00     0.00   100.00   +0.0000    3.000    3
+
+structured moves with largest tournament-only polarity
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+d=1:single_tile:range=3:tile=(3,0)               4    25.00    50.00     0.00    25.00   +0.5000    1.250    3
+d=1:range_flip:r=3                               4    25.00    50.00     0.00    25.00   +0.5000    1.250    3
+d=3:full_complement_tiling                       4    25.00    50.00     0.00    25.00   +0.5000    1.250    3
+d=2:range_flip:r=2                               4    75.00     0.00     0.00    25.00   +0.0000    0.750    3
+d=2:upper_strip:hi=3                             4     0.00     0.00    25.00    75.00   -0.2500    1.250    3
+d=2:lower_strip:lo=0                             4     0.00     0.00    25.00    75.00   -0.2500    1.250    3
+d=2:vertex_star:v=0                              4     0.00     0.00    25.00    75.00   -0.2500    1.250    3
+d=2:vertex_star:v=3                              4     0.00     0.00    25.00    75.00   -0.2500    1.250    3
+
+structured moves with largest even-only polarity
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+d=1:single_tile:range=2:tile=(2,0)               4     0.00     0.00    50.00    50.00   -0.5000    0.750    2
+d=1:single_tile:range=2:tile=(3,1)               4     0.00     0.00    50.00    50.00   -0.5000    0.750    2
+d=1:upper_strip:hi=2                             4     0.00     0.00    50.00    50.00   -0.5000    0.750    2
+d=1:lower_strip:lo=1                             4     0.00     0.00    50.00    50.00   -0.5000    0.750    2
+d=1:vertex_star:v=1                              4     0.00     0.00    50.00    50.00   -0.5000    0.750    2
+d=1:vertex_star:v=2                              4     0.00     0.00    50.00    50.00   -0.5000    0.750    2
+d=2:upper_strip:hi=3                             4     0.00     0.00    25.00    75.00   -0.2500    1.250    3
+d=2:lower_strip:lo=0                             4     0.00     0.00    25.00    75.00   -0.2500    1.250    3
+
+====================================================================================================
+n=5, m=6, tilings=64, T-classes=10, E-classes=7
+H-values: [1, 3, 5, 9, 11, 13, 15]
+even degree sequences: [(0, 0, 0, 0, 0), (0, 0, 2, 2, 2), (0, 2, 2, 2, 2), (2, 2, 2, 2, 2), (2, 2, 2, 2, 4), (2, 2, 2, 4, 4), (4, 4, 4, 4, 4)]
+
+single-tile lines by tile range
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+range=2                                         96     0.00     0.00     8.33    91.67   -0.0833    0.250    2
+range=3                                         64     6.25    31.25     6.25    56.25   +0.2500    0.375    3
+range=4                                         32     0.00     0.00    12.50    87.50   -0.1250    0.625    4
+
+single-tile lines by |Delta g|
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+|Delta g|=0                                    141     2.84     9.93    11.35    75.89   -0.0142    0.000    0
+|Delta g|=1                                     38     0.00    15.79     0.00    84.21   +0.1579    1.000    1
+|Delta g|=2                                     10     0.00     0.00     0.00   100.00   +0.0000    2.000    2
+|Delta g|=3                                      2     0.00     0.00     0.00   100.00   +0.0000    3.000    3
+|Delta g|=4                                      1     0.00     0.00     0.00   100.00   +0.0000    4.000    4
+
+structured moves with largest tournament-only polarity
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+d=3:upper_strip:hi=4                            32     3.12    34.38     3.12    59.38   +0.3125    0.625    4
+d=3:lower_strip:lo=0                            32     3.12    34.38     3.12    59.38   +0.3125    0.625    4
+d=3:vertex_star:v=0                             32     3.12    34.38     3.12    59.38   +0.3125    0.625    4
+d=3:vertex_star:v=4                             32     3.12    34.38     3.12    59.38   +0.3125    0.625    4
+d=1:single_tile:range=3:tile=(3,0)              32     6.25    31.25     6.25    56.25   +0.2500    0.375    3
+d=1:single_tile:range=3:tile=(4,1)              32     6.25    31.25     6.25    56.25   +0.2500    0.375    3
+d=2:range_flip:r=3                              32    28.12     9.38     3.12    59.38   +0.0625    0.500    4
+d=2:vertex_star:v=2                             32    31.25     6.25     0.00    62.50   +0.0625    0.438    4
+
+structured moves with largest even-only polarity
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+d=2:upper_strip:hi=3                            32     0.00     0.00    21.88    78.12   -0.2188    0.375    3
+d=2:lower_strip:lo=1                            32     0.00     0.00    21.88    78.12   -0.2188    0.375    3
+d=2:vertex_star:v=1                             32     0.00     0.00    21.88    78.12   -0.2188    0.375    3
+d=2:vertex_star:v=3                             32     0.00     0.00    21.88    78.12   -0.2188    0.375    3
+d=1:single_tile:range=4:tile=(4,0)              32     0.00     0.00    12.50    87.50   -0.1250    0.625    4
+d=1:single_tile:range=2:tile=(3,1)              32     0.00     0.00    12.50    87.50   -0.1250    0.125    2
+d=1:range_flip:r=4                              32     0.00     0.00    12.50    87.50   -0.1250    0.625    4
+d=1:single_tile:range=2:tile=(2,0)              32     0.00     0.00     6.25    93.75   -0.0625    0.312    2
+
+====================================================================================================
+n=6, m=10, tilings=1024, T-classes=34, E-classes=16
+H-values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+even degree sequences: [(0, 0, 0, 0, 0, 0), (0, 0, 0, 2, 2, 2), (0, 0, 2, 2, 2, 2), (0, 2, 2, 2, 2, 2), (0, 2, 2, 2, 2, 4), (0, 2, 2, 2, 4, 4), (0, 4, 4, 4, 4, 4), (2, 2, 2, 2, 2, 2), (2, 2, 2, 2, 2, 4), (2, 2, 2, 2, 4, 4), (2, 2, 2, 4, 4, 4), (2, 2, 4, 4, 4, 4), (2, 4, 4, 4, 4, 4), (4, 4, 4, 4, 4, 4)]
+
+single-tile lines by tile range
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+range=2                                       2048     0.00     0.00     7.42    92.58   -0.0742    0.082    2
+range=3                                       1536     3.06    25.07     8.92    62.96   +0.1615    0.112    3
+range=4                                       1024     0.00     0.00    10.94    89.06   -0.1094    0.164    4
+range=5                                        512     1.56    22.66     7.42    68.36   +0.1523    0.289    5
+
+single-tile lines by |Delta g|
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+|Delta g|=0                                   4561     1.21    10.09     9.63    79.08   +0.0046    0.000    0
+|Delta g|=1                                    480     0.00     7.92     0.00    92.08   +0.0792    1.000    1
+|Delta g|=2                                     65     0.00     4.62     0.00    95.38   +0.0462    2.000    2
+|Delta g|=3                                     11     0.00     0.00     0.00   100.00   +0.0000    3.000    3
+|Delta g|=4                                      2     0.00     0.00     0.00   100.00   +0.0000    4.000    4
+|Delta g|=5                                      1     0.00     0.00     0.00   100.00   +0.0000    5.000    5
+
+structured moves with largest tournament-only polarity
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+d=4:upper_strip:hi=5                           512     0.39    23.83     2.73    73.05   +0.2109    0.289    5
+d=4:lower_strip:lo=0                           512     0.39    23.83     2.73    73.05   +0.2109    0.289    5
+d=4:vertex_star:v=0                            512     0.39    23.83     2.73    73.05   +0.2109    0.289    5
+d=4:vertex_star:v=5                            512     0.39    23.83     2.73    73.05   +0.2109    0.289    5
+d=2:range_flip:r=4                             512     7.03    21.09     3.91    67.97   +0.1719    0.258    5
+d=1:single_tile:range=3:tile=(3,0)             512     2.93    25.20     8.79    63.09   +0.1641    0.148    3
+d=1:single_tile:range=3:tile=(5,2)             512     2.93    25.20     8.79    63.09   +0.1641    0.148    3
+d=1:single_tile:range=3:tile=(4,1)             512     3.32    24.80     9.18    62.70   +0.1562    0.039    3
+
+structured moves with largest even-only polarity
+bucket/profile                            lines  silent%  T-only%  E-only%   joint%    T-Edef  mean|dg| max
+d=1:single_tile:range=4:tile=(4,0)             512     0.00     0.00    10.94    89.06   -0.1094    0.164    4
+d=1:single_tile:range=4:tile=(5,1)             512     0.00     0.00    10.94    89.06   -0.1094    0.164    4
+d=1:single_tile:range=2:tile=(3,1)             512     0.00     0.00     8.20    91.80   -0.0820    0.023    2
+d=1:single_tile:range=2:tile=(4,2)             512     0.00     0.00     8.20    91.80   -0.0820    0.023    2
+d=1:single_tile:range=2:tile=(2,0)             512     0.00     0.00     6.64    93.36   -0.0664    0.141    2
+d=1:single_tile:range=2:tile=(5,3)             512     0.00     0.00     6.64    93.36   -0.0664    0.141    2
+d=1:upper_strip:hi=2                           512     0.00     0.00     6.64    93.36   -0.0664    0.141    2
+d=1:lower_strip:lo=3                           512     0.00     0.00     6.64    93.36   -0.0664    0.141    2

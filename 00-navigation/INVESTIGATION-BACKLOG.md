@@ -2253,12 +2253,14 @@ Key insight: QR_p has both forward and backward connections; purely forward circ
 **Source:** opus-2026-05-29-S13
 **Status:** ACTIVE; Lean core proved, exact n=3..6 census suggests quotient invariance.
 **What:** Formalize and investigate the good-cut bucket `g(τ)=|G(τ)|`, where `G(τ)` is the set of base-path cuts crossed by at least one upward tile. `TournamentH7.GoodCuts` proves bucket 0 iff all-down, bucket 1 impossible, and grid reflection invariance without project-specific axioms. The companion exact census finds every merged tournament class pure in `g` for n=3..6.
+**S14 update:** Lean now also proves the interval-union characterization, monotonicity, bucket bounds `{0}∪{2,...,n-1}`, and top-bucket iff every legal cut is good. A new projection-defect cross-scan found that single-tile lines with `|Delta g|>0` always change the merged tournament class through n=6, and tile range parity controls defect polarity: even ranges are even-graph biased, odd ranges tournament-class biased.
 **Key data:** Bucket counts are n=3 `{0:1,2:1}`, n=4 `{0:1,2:2,3:5}`, n=5 `{0:1,2:3,3:10,4:50}`, n=6 `{0:1,2:4,3:15,4:101,5:903}`. Merged-class purity is pure/mixed = 2/0, 3/0, 10/0, 34/0. Reflection bucket failures are zero.
-**Why it matters:** `g` looks like a coordinate artifact of the base-path staircase, but it may descend to `G_n/Z_2` as a real merged-metagraph coordinate. The Lean proof also turns the old no-one-good-cut observation into a reusable interval-cover constraint.
-**Scripts/results:** `04-computation/goodcut_bucket_merged_s13.py`; `05-knowledge/results/goodcut_bucket_merged_s13.out`; `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`; reflection `07-reflections/good-cut-buckets-as-merged-coordinate.md`; variable `05-knowledge/variables/good-cut-count.md`.
+**Why it matters:** `g` looks like a coordinate artifact of the base-path staircase, but it may descend to `G_n/Z_2` as a real merged-metagraph coordinate. The Lean proof also turns the old no-one-good-cut observation into a reusable interval-cover constraint, while S14 ties this coordinate to the tournament/even-graph quotient commutator.
+**Scripts/results:** `04-computation/goodcut_bucket_merged_s13.py`; `05-knowledge/results/goodcut_bucket_merged_s13.out`; `04-computation/goodcut_projection_defect_s14.py`; `05-knowledge/results/goodcut_projection_defect_s14.out`; `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`; reflections `07-reflections/good-cut-buckets-as-merged-coordinate.md` and `07-reflections/good-cut-height-and-projection-polarity.md`; variable `05-knowledge/variables/good-cut-count.md`.
 **Next steps:**
 1. Verify exact n=7 with cached or nauty-style canonicalization.
 2. Prove or refute HYP-1764: `g` is invariant under tournament isomorphism after complement merging.
 3. If HYP-1764 fails at n=7, characterize the first mixed class and its spine/ribs/sea position.
-4. Derive the interval-union generating function for bucket counts and connect it to INV-NEW-S2-B.
-5. Add `g`, bucket-transition profile, and interval-cover features to a future `tournament_tda.py`.
+4. Prove or refute the range-parity law HYP-1771.
+5. Derive the interval-union generating function for bucket counts and connect it to INV-NEW-S2-B.
+6. Add `g`, bucket-transition profile, range-parity, and interval-cover features to a future `tournament_tda.py`.
