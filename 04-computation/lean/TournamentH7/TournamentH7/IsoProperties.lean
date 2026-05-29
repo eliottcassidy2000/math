@@ -115,4 +115,25 @@ theorem H_iso_invariant (T₁ T₂ : Tournament n) (h : T₁ ≅ T₂) :
 lemma op_op_arc_eq (T : Tournament n) (i j : Fin n) :
     (op (op T)).arc i j = T.arc i j := rfl
 
+/-! ### `alphaCount` is iso-invariant -/
+
+/-- The independence-polynomial coefficients `α_k(T)` are isomorphism
+    invariants.  This is because Ω(T₁) ≅ Ω(T₂) as graphs whenever
+    T₁ ≅ T₂ as tournaments (the iso sends odd directed cycles to odd
+    directed cycles bijectively, preserving conflict). -/
+axiom alphaCount_iso_invariant (k : ℕ) (T₁ T₂ : Tournament n) (h : T₁ ≅ T₂) :
+    alphaCount k T₁ = alphaCount k T₂
+
+/-- `H` and `alphaCount` invariance combined: the OCF identity is iso-
+    invariant on both sides (a sanity check). -/
+example (T₁ T₂ : Tournament n) (h : T₁ ≅ T₂) :
+    (1 + 2 * alphaCount 1 T₁ + 4 * alphaCount 2 T₁
+       + 8 * alphaCount 3 T₁ + 16 * alphaCount 4 T₁) =
+    (1 + 2 * alphaCount 1 T₂ + 4 * alphaCount 2 T₂
+       + 8 * alphaCount 3 T₂ + 16 * alphaCount 4 T₂) := by
+  rw [alphaCount_iso_invariant 1 T₁ T₂ h,
+      alphaCount_iso_invariant 2 T₁ T₂ h,
+      alphaCount_iso_invariant 3 T₁ T₂ h,
+      alphaCount_iso_invariant 4 T₁ T₂ h]
+
 end Tournament

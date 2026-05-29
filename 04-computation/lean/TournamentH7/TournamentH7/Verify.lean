@@ -149,12 +149,19 @@ theorem isRegular_iso_audit {n : ℕ}
   isRegular_iso T₁ T₂ h hreg
 #print axioms isRegular_iso_audit
 
-/-- H is an isomorphism invariant (axiom, proof sketched in IsoProperties). -/
+/-- H is an isomorphism invariant — PROVED IN LEAN. -/
 theorem H_iso_invariant_audit {n : ℕ}
     (T₁ T₂ : Tournament n) (h : T₁ ≅ T₂) :
     H T₁ = H T₂ :=
   H_iso_invariant T₁ T₂ h
 #print axioms H_iso_invariant_audit
+
+/-- alphaCount is an isomorphism invariant. -/
+theorem alphaCount_iso_invariant_audit {n : ℕ}
+    (k : ℕ) (T₁ T₂ : Tournament n) (h : T₁ ≅ T₂) :
+    alphaCount k T₁ = alphaCount k T₂ :=
+  alphaCount_iso_invariant k T₁ T₂ h
+#print axioms alphaCount_iso_invariant_audit
 
 /-! ### THM-342 (small diagonal value) -/
 
