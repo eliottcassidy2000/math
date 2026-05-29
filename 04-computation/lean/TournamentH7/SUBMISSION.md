@@ -26,6 +26,9 @@ Lean 4 + Mathlib4 formalisation of forbidden H-values in tournaments.
 | `Tournament.H_eq_independence_poly_at_two_truncated` | THM-326: H(T) = I(Ω, 2) (truncated form) | opus-2026-05-27-S6 |
 | `Tournament.abstract_anti_palindrome` | anti-automorphism ⟹ epStart(v) = epEnd(φ v) (abstract THM-316) | opus-2026-05-22-S3 |
 | `Tournament.tilde_tilde` | tile-complement is an involution; PROVED IN LEAN | oracle-2026-05-11-S1 |
+| `Tournament.H_ge_three_pow_k_of_alpha_pos` | N_min(k)=3^k for k≤4: α_k≥1 ⟹ H(T)≥3^k | oracle-2026-05-29-S4 |
+| `Tournament.H_lt_27_no_alpha3` | H(T)<27 ⟹ α₃=0 | corollary |
+| `Tournament.H_lt_81_no_alpha4` | H(T)<81 ⟹ α₄=0 | corollary |
 | `Tournament.alpha_solution_H7` | arithmetic enumeration for H = 7 (1 candidate) | clean |
 | `Tournament.alpha_candidates_H21` | arithmetic enumeration for H = 21 (4 candidates) | new (oracle-S2) |
 
@@ -71,12 +74,16 @@ theorem depends on. The axioms split into three classes:
 |---|---|
 | `alpha_subset_bound` | Each k-indep set has k distinct vertices |
 | `alpha_chain_step` | Each k-indep set has k distinct (k-1)-indep subsets |
+| `alpha_descent` | Full downward closure: α_k≥1 ⟹ α_j≥C(k,j) |
 | `alpha_binomial_bound` | Distinct k-indep sets are distinct k-subsets |
 | `oddCyclesIn_size3` | A 3-vertex SC tournament is a 3-cycle |
 | `oddCyclesIn_size4` | The unique 4-vertex SC tournament has score (1,1,2,2) and 2 three-cycles |
 | `omegaTriangleLocalises` | Cycles are contained in single SCCs (basic SCC theory) |
 | `omegaCliqueLocalises` | Same, for clique on k cycles |
 | `oddCyclesIn_upper` | Trivial bound by 2^|S| |
+| `tilde_score_sink` | Tile-complement score formula at sink vertex 0 |
+| `abstract_anti_palindrome` | Endpoint-count anti-palindrome under an anti-automorphism |
+| `alphaCount_iso_invariant` | Independence-vector counts are invariant under tournament isomorphism |
 
 ### Class C: Structural axioms with computational citation (project-specific)
 
@@ -87,6 +94,23 @@ theorem depends on. The axioms split into three classes:
 | `no_alpha_6_2` | Exhaustive n ≤ 7: no tournament has α₁=6 ∧ α₂=2 |
 | `no_alpha_4_3` | Exhaustive n ≤ 7: no tournament has α₁=4 ∧ α₂=3 |
 | `H_ne_sixtythree_le_seven_axiom` | Exhaustive n ≤ 7: no tournament has H=63 |
+
+### Current `Verify.lean` audit highlights
+
+The build output from `lake build` / `lake env lean TournamentH7/Verify.lean`
+matches the intended proof-modulo-axioms status:
+
+- `H_ne_seven_audit` depends on OCF, Moon/Camion, `alpha_subset_bound`,
+  and the small SCC-localisation axioms.
+- `H_ne_twentyone_audit` depends on `ocf_extended`, the chain/binomial
+  α-axioms, and the four `no_alpha_*` structural axioms.
+- `H_ne_sixtythree_le_seven_audit` depends only on
+  `H_ne_sixtythree_le_seven_axiom` (besides Lean foundations).
+- The new `N_min(k)=3^k` corollaries depend only on `ocf` and
+  `alpha_descent` (besides Lean foundations).
+- The iso/regularity examples are mostly axiom-free; the remaining project
+  single-axiom dependencies are exactly `tilde_score_sink`,
+  `abstract_anti_palindrome`, and `alphaCount_iso_invariant`.
 
 ## Honest status report
 

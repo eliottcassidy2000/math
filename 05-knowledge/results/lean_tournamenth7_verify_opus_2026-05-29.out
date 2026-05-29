@@ -1,0 +1,82 @@
+'H_ne_seven_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ ocf,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'H_ne_twentyone_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf_extended]
+'H_ne_sixtythree_le_seven_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ H_ne_sixtythree_le_seven_axiom]
+'H_pos_audit' depends on axioms: [propext, Classical.choice, Quot.sound, redei_existence]
+'forbidden_pair_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf,
+ ocf_extended,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'forbidden_trio_le_seven_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ H_ne_sixtythree_le_seven_axiom,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf,
+ ocf_extended,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'regular_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+'thm330_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'thm330_easy_audit' depends on axioms: [propext, Quot.sound]
+'reaches_descent_audit' depends on axioms: [propext, Quot.sound]
+'reaches_zero_audit' depends on axioms: [propext, Quot.sound]
+'apex_implies_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'isSelfComplementary_iff_iso_op_audit' depends on axioms: [Quot.sound]
+'regular_not_SF_id_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+'paleyLike_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+'hp_ip_truncated_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+'abstract_anti_palindrome_audit' depends on axioms: [propext, Classical.choice, Quot.sound, abstract_anti_palindrome]
+'outDegree_iso_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'isRegular_iso_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_iso_invariant_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'alphaCount_iso_invariant_audit' depends on axioms: [Quot.sound, alphaCount_iso_invariant]
+'transitive_4_hasBasePath' depends on axioms: [propext, Quot.sound]
+'threeCycle_regular_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'transitive_not_regular_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_ge_three_pow_k_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+'H_lt_27_no_alpha3_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+'H_lt_81_no_alpha4_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]

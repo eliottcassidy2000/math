@@ -3,6 +3,31 @@
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
 
+## opus-2026-05-29-S9 — 2026-05-29
+
+**Summary:** Set up Lean/Lake locally for `04-computation/lean/TournamentH7`, fetched Mathlib cache, built the full project, verified `TournamentH7/Verify.lean` axiom output, and updated `SUBMISSION.md` so the documented axiom audit matches the compiler output.
+
+**Lean setup and verification:**
+- Installed `elan` with the pinned toolchain `leanprover/lean4:v4.30.0`.
+- Ran `lake exe cache get` successfully for Mathlib cache artifacts.
+- Ran `lake build`; build completed successfully (`1061 jobs`) with only pre-existing linter/deprecation warnings in `StaircaseModel.lean` and `StaircaseTileModel.lean`.
+- Ran `lake env lean TournamentH7/Verify.lean`; direct audit output confirms the expected dependencies.
+- Saved outputs to:
+  - `05-knowledge/results/lean_tournamenth7_build_opus_2026-05-29.out`
+  - `05-knowledge/results/lean_tournamenth7_verify_opus_2026-05-29.out`
+
+**Documentation correction:**
+- `SUBMISSION.md` now documents the current S7 audit additions:
+  - `H_ge_three_pow_k_of_alpha_pos`, `H_lt_27_no_alpha3`, `H_lt_81_no_alpha4`.
+  - `alpha_descent`, `tilde_score_sink`, `abstract_anti_palindrome`, and `alphaCount_iso_invariant` in the axiom audit.
+  - A concise "current Verify.lean audit highlights" section matching the actual output.
+
+**Formalization status:**
+- Fully formalized modulo Lean foundations: core iso/regularity examples, THM-330 easy direction, base-path reachability lemmas, concrete small-tournament examples.
+- Cited/axiomatised: OCF, Moon/Camion, Rédei.
+- Project/computational axioms remain: H21 structural `no_alpha_*`, finite n≤7 H63 absence, `alpha_descent`, selected tiling/anti-palindrome/iso-count facts.
+- No Lean code changes were needed; the S7 files compiled as-is once Lean was set up.
+
 ## opus-2026-05-29-S8 — 2026-05-29
 
 **Summary:** Corrected two revived false universal claims while familiarising with the repo: H=63 is NOT universally forbidden, and universal TRRT is already refuted by THM-025. Added an independent n=8 H=63 counterexample audit, demoted Lean H63 to an n≤7 theorem, and updated navigation/hypothesis/canon files so future agents inherit the finite quantifiers.
