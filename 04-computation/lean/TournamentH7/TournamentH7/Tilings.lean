@@ -194,9 +194,36 @@ lemma mem_outNbrs (T : Tournament n) {v w : Fin n} :
   routine but tedious bookkeeping; see canonical version in
   `00-navigation/SESSION-LOG.md`, oracle-2026-05-11-S1). -/
 
+/-! ### Toward de-axiomatising the score formula
+
+    Key identity: for any v, w ≠ v:
+      • non-consecutive: indicator(T.arc v w) + indicator(tilde T.arc v w) = 1.
+      • consecutive: indicator(T.arc v w) + indicator(tilde T.arc v w) = 2·indicator(T.arc v w).
+    Summing over w ≠ v gives:
+      outDeg T v + outDeg tilde T v = #nonconsec(v) + 2·#consec_out_T(v).
+
+    For v.val = 0: #nonconsec = n - 2, #consec_out = 0 ⟹ sum = n - 2.
+    For v.val = n-1: #nonconsec = n - 2, #consec_out = 1 ⟹ sum = n.
+    For interior: #nonconsec = n - 3, #consec_out = 1 ⟹ sum = n - 1.
+
+    The partition formulas are straightforward but lengthy.  We KEEP the
+    axioms for now and add a `Verify`-side reproof sketch as a comment. -/
+
 /-- **Axiom (oracle-2026-05-11-S1, project-novel).** Score formula for T̃,
-    base-path sink case. -/
-axiom tilde_score_sink (T : Tournament n) (h : HasBasePath T)
+    base-path sink case.
+
+    Proof (deferred): at vertex 0, the only consecutive neighbor is
+    vertex 1.  The base path gives arc 1 → 0, so by asymmetry
+    T.arc 0 1 = false.  Hence T's out-neighbors at vertex 0 lie entirely
+    among vertices 2, 3, …, n-1.  Same for tilde T.  For non-consecutive
+    w, exactly one of T.arc 0 w and tilde T.arc 0 w is true.  Hence the
+    two `outNbrs` sets are *complementary* in `{w : w.val ≥ 2}`, whose
+    cardinality is n - 2.
+
+    The Lean proof is straightforward bookkeeping with
+    `Finset.card_union_of_disjoint` but ~100 lines of careful Fin
+    arithmetic; deferred. -/
+axiom tilde_score_sink (T : Tournament n) (hbp : HasBasePath T)
     (hn : 2 ≤ n) (v : Fin n) (hv : v.val = 0) :
     (tilde T).outDegree v + T.outDegree v = n - 2
 
