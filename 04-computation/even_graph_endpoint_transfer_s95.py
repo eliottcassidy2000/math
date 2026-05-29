@@ -325,9 +325,10 @@ def main():
    The mod-2 boundary is therefore the set of even-graph classes whose
    automorphism group absorbs the full 2-adic valuation of n!.
 
-3. In the tested range, the even-graph endpoint transfer also has full row rank
-   over GF(2).  This suggests that recursive parity-injectivity may belong to
-   the tiling cube quotient itself, not specifically to tournaments.
+3. Unlike the tournament quotient, the even-graph endpoint transfer does NOT
+   have full row rank over GF(2) once n >= 3.  Recursive parity-injectivity is
+   therefore not just a property of arbitrary tiling-cube quotients; it is a
+   tournament-side feature that the coarser cycle-space quotient forgets.
 """)
 
 

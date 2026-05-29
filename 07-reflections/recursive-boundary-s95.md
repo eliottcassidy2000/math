@@ -95,9 +95,16 @@ full-row-rank `GF(2)` transfer maps.
    counts, and bridge exposure `Q_T`. Endpoint transfer is the fixed-path
    aggregate where those local cut sums become a class-level matrix.
 
-4. **Even graphs.** The same transfer should be built for the even-graph
-   quotient. If its parity boundary is also full-row-rank, then the cycle-space
-   lens and tournament lens share the same recursive skeleton.
+4. **Even graphs.** The same transfer was built for the even-graph quotient,
+   and it fails full row rank:
+
+   ```text
+   even parent counts: [1, 2, 3, 7, 16]
+   even GF2 ranks:     [1, 1, 2, 6, 8]
+   ```
+
+   The cycle-space lens keeps the row/column transfer theorem but loses
+   tournament parity-injectivity.
 
 5. **Betti/deletion threads.** Vertex deletion has repeatedly been the tool for
    proving path-homology constraints. This transfer matrix is the tiling-side
@@ -108,8 +115,9 @@ full-row-rank `GF(2)` transfer maps.
 
 1. Prove or refute full row rank of endpoint transfer over `GF(2)`.
 
-2. Compute the even-graph endpoint transfer ranks and compare them with the
-   tournament ranks.
+2. Explain the even-graph rank defect. The child boundary is the set of
+   classes with odd orbit size `n!/|Aut(G)|`, so the answer should involve
+   Sylow-2 structure of graph automorphism groups.
 
 3. Look for a Smith normal form of the integer transfer matrix. The mod-2 rank
    may be the first shadow of a stronger integral divisibility pattern.

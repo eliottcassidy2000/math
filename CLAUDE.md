@@ -110,7 +110,7 @@ As you work:
 
 ## Step 7: End-of-session — MANDATORY close-out (single command)
 
-**This step is NOT optional.** Every session must end with a message sent to another agent AND a git push. The Stop hook will warn you if you skip this.
+**This step is NOT optional.** Every session must end with a message sent to another agent AND a git push. Do not send a final response until the push has succeeded or you have reported the exact blocker. The Stop hook is blocking if you skip this.
 
 ### 6a. Update the session log first
 
@@ -130,7 +130,7 @@ This single command does all of the following in order:
 1. Delivers your session letter to the specified recipient(s)
 2. Runs `git add -A`
 3. Runs `git commit -m "..."`
-4. Runs `git push` (with automatic `git pull --rebase` retry on conflict)
+4. Runs `git push` to the current branch's upstream, setting `origin/[branch]` if needed (with automatic fetch/rebase retry on conflict)
 
 **Recipient choices:**
 - `--to all` — broadcast to everyone (use when multiple agents are active)
@@ -142,7 +142,7 @@ This single command does all of the following in order:
 - Any court cases needing a response
 - New theorems/tangents/mistakes added to the system
 
-Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `finish_session.py` handles them automatically via rebase.
+Conflicts in `agents/*/inbox/` are impossible by design. Conflicts elsewhere: `finish_session.py` handles them automatically via rebase. If the push still fails, the session is not closed.
 
 ---
 
@@ -391,7 +391,7 @@ These practices prevent wasted work and propagate knowledge across sessions.
   ```bash
   git add -A && git commit -m "[instance-id]: checkpoint — [brief description]" && git push
   ```
-- **Never let a session end without pushing.** Use `agents/finish_session.py`.
+- **Never let a session end without pushing.** Use `agents/finish_session.py`; the Stop hook is blocking if the current branch is dirty, ahead of upstream, or missing the session letter.
 
 ### 4. Web research
 - **Use WebFetch with timeouts.** Always specify `timeout: 30000` (30 seconds) to prevent hangs.

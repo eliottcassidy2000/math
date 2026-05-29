@@ -30,7 +30,7 @@ These scripts have been run but results exist only in /tmp or session transcript
 | `recursive_insertion_exposure_s95.py` | [STORED] | Vertex insertion formula using bridge-exposure boundary state `Q_T`; verifies endpoint/scalar states are insufficient and `Q_T` gives zero-failure insertion responses for n=2..5 | `recursive_insertion_exposure_s95.out` |
 | `merged_tiling_bucket_constraints_s95.py` | [STORED] | Derives merged tiling bucket parity: unmerged fibers are odd; SC merged nodes are odd; NSC merged nodes are exactly `2*odd`; weighted cube-edge incidences satisfy `2λ+Στ=mM` for n=3..7 | `merged_tiling_bucket_constraints_s95.out` |
 | `endpoint_transfer_bucket_recursion_s95.py` | [STORED] | Builds exact endpoint-insertion transfer matrices between fixed-path quotient levels; verifies row/column bucket sums, SC parity boundary, and full GF(2) row rank for transitions n=2..6 | `endpoint_transfer_bucket_recursion_s95.out` |
-| `even_graph_endpoint_transfer_s95.py` | [STORED] | Builds the endpoint-transfer analogue for the even-graph quotient; verifies quotient-agnostic row/column laws and full GF(2) row rank through transition n=6->7 | `even_graph_endpoint_transfer_s95.out` |
+| `even_graph_endpoint_transfer_s95.py` | [STORED] | Builds the endpoint-transfer analogue for the even-graph quotient; row/column sums still hold, but GF(2) ranks `[1,1,2,6,8]` show rank defects unlike the tournament quotient | `even_graph_endpoint_transfer_s95.out` |
 
 ### How to bulk-capture results
 

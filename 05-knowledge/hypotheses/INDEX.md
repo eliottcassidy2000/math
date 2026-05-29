@@ -1751,3 +1751,9 @@ Source: HYP-1704-merged-tiling-bucket-parity.md, merged_tiling_bucket_constraint
 **What:** Endpoint insertion gives exact quotient transfer matrices with row sums `2^(n-1)F_n` and column sums `F_{n+1}`; after merging, row sums are `2^(n-1)M_n` and column sums `M_{n+1}`. Mod 2, the unmerged transfer boundary is all child classes, while the merged boundary is exactly the SC child-node indicator. New conjecture: the parity transfer has full row rank for all n.
 **Evidence:** GF(2) ranks equal parent class counts `[1,2,4,12,56]` and parent merged counts `[1,2,3,10,34]` for transitions `2->3` through `6->7`.
 Source: HYP-1705-endpoint-transfer-recursive-boundary.md, endpoint_transfer_bucket_recursion_s95.py
+
+## HYP-1706: Even-graph endpoint rank defect (codex-S95)
+**Status:** CONFIRMED SMALL-N (n=2..7 exact)
+**What:** The endpoint-transfer row/column theorem holds for the even-graph quotient, but full GF(2) row rank fails: ranks `[1,1,2,6,8]` vs parent even-class counts `[1,2,3,7,16]`. The mod-2 boundary is not all child classes; it is the subset with odd labeled orbit size `n!/|Aut(G)|`.
+**Interpretation:** Tournament parity-injectivity is not a generic tiling-cube quotient property. The coarser cycle-space/even-graph lens forgets parity information controlled by graph automorphism 2-adics.
+Source: HYP-1706-even-graph-endpoint-rank-defect.md, THM-266-endpoint-transfer-boundary.md, even_graph_endpoint_transfer_s95.py
