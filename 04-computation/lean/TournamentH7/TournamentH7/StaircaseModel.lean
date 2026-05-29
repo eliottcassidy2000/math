@@ -1,37 +1,9 @@
 /-
   TournamentH7.StaircaseModel — THM-330 (SC Cut Theorem)
 
-  ─── What this module provides ─────────────────────────────────────────
-  The *staircase cut theorem* — a project-novel structural characterisation
-  of strong connectivity for tournaments with a fixed base path.
-
-  ─── Main theorem: THM-330 (project-novel, opus-2026-05-27-S1) ────────
-  A tournament `T : Tournament n` with the base path is strongly connected
-  iff, for every cut `k ∈ {1, …, n − 1}`,
-      ∃ (i, j) : Fin n × Fin n,  i.val ≥ k ∧ j.val < k ∧ j.val + 2 ≤ i.val
-                                  ∧ T.arc j i = true.
-
-  Equivalently, T is *not* SC iff there exists a cut k such that
-  **every** non-consecutive pair crossing the cut has its arc going from
-  the higher part to the lower part (all "downward", in tiling language).
-
-  ─── Proof structure ──────────────────────────────────────────────────
-  The two implications of the iff are contrapositives of one another, so
-  we record a single structural axiom and derive both directions of the
-  iff from it.
-
-  *Forward (SC ⟹ every cut has crossing-upward arc)*: contrapositive of
-   the axiom.
-
-  *Backward (every cut has crossing ⟹ SC)*: direct from the axiom.
-
-  ─── De-axiomatisation roadmap ────────────────────────────────────────
-  The axiom is the "if a tournament is SC, then for every upward-closed
-  proper subset S = upperCut k there is a crossing-upward arc to S".
-  This is genuine structural content, but in Lean it factors as:
-    (1) base path forces dominating sets to be upper-closed (elementary);
-    (2) SC ⟹ no proper dominating set (folklore on directed graphs).
-  Both are achievable in a focused future session.
+  Defines the cut-crossing predicate and proves THM-330 PARTIALLY in
+  Lean (the easy direction is now PROVED; the hard direction remains an
+  axiom).
 -/
 
 import TournamentH7.Basic
@@ -45,55 +17,55 @@ namespace Tournament
 
 variable {n : ℕ}
 
-/-! ### Cut k: the upward-closed dominating set predicate -/
+/-! ### Cuts -/
 
 /-- The upward-closed interval `{k, k+1, …, n−1} ⊂ Fin n`. -/
 def upperCut (n k : ℕ) : Finset (Fin n) :=
   Finset.univ.filter (fun v => k ≤ v.val)
 
 @[simp] lemma mem_upperCut {k : ℕ} {v : Fin n} :
-    v ∈ upperCut n k ↔ k ≤ v.val := by
-  unfold upperCut; simp
+    v ∈ upperCut n k ↔ k ≤ v.val := by unfold upperCut; simp
 
 /-- The lower complementary cut `{0, 1, …, k−1}`. -/
 def lowerCut (n k : ℕ) : Finset (Fin n) :=
   Finset.univ.filter (fun v => v.val < k)
 
 @[simp] lemma mem_lowerCut {k : ℕ} {v : Fin n} :
-    v ∈ lowerCut n k ↔ v.val < k := by
-  unfold lowerCut; simp
+    v ∈ lowerCut n k ↔ v.val < k := by unfold lowerCut; simp
 
-/-- `upperCut n k ∪ lowerCut n k = univ` (every vertex is on one side). -/
 lemma upper_union_lower (k : ℕ) :
     upperCut n k ∪ lowerCut n k = (Finset.univ : Finset (Fin n)) := by
   ext v; simp; omega
 
-/-- `upperCut n k` and `lowerCut n k` are disjoint. -/
 lemma upper_disjoint_lower (k : ℕ) :
     Disjoint (upperCut n k) (lowerCut n k) := by
-  rw [Finset.disjoint_left]; intro v hu hl
-  simp at hu hl; omega
+  rw [Finset.disjoint_left]; intro v hu hl; simp at hu hl; omega
 
-/-! ### "Crossing-upward" condition -/
+/-! ### Crossing-upward predicate -/
 
-/-- A non-consecutive pair `(i, j)` *crosses cut k upward* if
-    `i ∈ upperCut`, `j ∈ lowerCut`, the pair is non-consecutive
-    (`j.val + 2 ≤ i.val`), and the arc goes from `j` (lower) to `i`
-    (upper). -/
+/-- A non-consecutive pair `(i, j)` *crosses cut k upward* if i ∈ upperCut,
+    j ∈ lowerCut, the pair is non-consecutive, and the arc goes j → i. -/
 def CrossesUpward (T : Tournament n) (k : ℕ) : Prop :=
   ∃ (i j : Fin n), k ≤ i.val ∧ j.val < k ∧ j.val + 2 ≤ i.val
     ∧ T.arc j i = true
 
 /-! ### Strong connectivity -/
 
-/-- `T` is strongly connected: every pair is mutually reachable. -/
+/-- T is strongly connected: every pair is mutually reachable. -/
 def IsStronglyConnected (T : Tournament n) : Prop :=
   ∀ u v : Fin n, Reaches T u v
 
-/-! ### Key local lemma -/
+/-! ### Reachability composition -/
 
-/-- If T has the base path and cut k has no crossing-upward arc, then
-    every arc from `lowerCut k` to `upperCut k` is absent. -/
+/-- Composing reaches.  Reachability is transitive. -/
+lemma Reaches.trans (T : Tournament n) {a b c : Fin n}
+    (r1 : Reaches T a b) (r2 : Reaches T b c) : Reaches T a c := by
+  induction r1 with
+  | refl _ => exact r2
+  | step h _ ih => exact Reaches.step h (ih r2)
+
+/-! ### Local lemma: no crossing-upward gives all-downward arcs -/
+
 lemma all_arcs_downward_of_no_crossing
     (T : Tournament n) (hbp : HasBasePath T) (k : ℕ) (_hk : 1 ≤ k) (_hkn : k < n)
     (h : ¬ CrossesUpward T k) :
@@ -101,87 +73,160 @@ lemma all_arcs_downward_of_no_crossing
   intro j hjL i hiU
   simp at hjL hiU
   by_cases hcons : j.val + 1 = i.val
-  · -- consecutive: base path gives arc i → j; asym ⟹ T.arc j i = false.
-    have hi_lt : i.val < n := i.is_lt
+  · have hi_lt : i.val < n := i.is_lt
     have hj_lt : j.val + 1 < n := by rw [hcons]; exact hi_lt
     have hbp_arc : T.arc i j = true := by
       have h_eq : i = ⟨j.val + 1, hj_lt⟩ := Fin.ext hcons.symm
-      rw [h_eq]
-      exact hbp j hj_lt
+      rw [h_eq]; exact hbp j hj_lt
     cases hT : T.arc j i with
     | false => rfl
     | true => exact absurd (T.asym i j ⟨hbp_arc, hT⟩) (fun x => x)
-  · -- non-consecutive: T.arc j i = true would witness a crossing.
-    by_cases hT : T.arc j i = true
+  · by_cases hT : T.arc j i = true
     · exfalso; apply h
       refine ⟨i, j, hiU, hjL, ?_, hT⟩; omega
     · cases htv : T.arc j i with
       | false => rfl
       | true => exact absurd htv hT
 
-/-! ### Structural axiom -/
+/-! ### Base-path descent: every vertex reaches 0 -/
 
-/-- **Axiom (THM-330 structural content, opus-2026-05-27-S1).**
+/-- Auxiliary: for any `k < n`, the vertex `⟨k, _⟩` reaches `⟨0, _⟩`. -/
+private lemma reaches_zero_aux (T : Tournament n) (hbp : HasBasePath T) (hn : 0 < n) :
+    ∀ k (hk : k < n), Reaches T ⟨k, hk⟩ ⟨0, hn⟩ := by
+  intro k
+  induction k with
+  | zero => intro hk; exact Reaches.refl _
+  | succ k ih =>
+    intro hk
+    -- arc ⟨k+1, hk⟩ → ⟨k, _⟩ is the base path arc.
+    have hk_lt : k < n := by omega
+    have h_arc : T.arc ⟨k + 1, hk⟩ ⟨k, hk_lt⟩ = true := hbp ⟨k, hk_lt⟩ hk
+    have h_rec := ih hk_lt
+    exact Reaches.step h_arc h_rec
 
-    A tournament T with the base path is strongly connected iff every cut
-    k has at least one crossing-upward arc.
+/-- Base path implies every vertex reaches 0. -/
+lemma reaches_zero (T : Tournament n) (hbp : HasBasePath T) (hn : 0 < n) (u : Fin n) :
+    Reaches T u ⟨0, hn⟩ := by
+  have h_u : u = ⟨u.val, u.is_lt⟩ := rfl
+  rw [h_u]
+  exact reaches_zero_aux T hbp hn u.val u.is_lt
 
-    Proof outline (informal, project canon):
-     · "⟸" Suppose every cut has a crossing-upward arc.  Reach from any
-       u to any v as follows: descend the base path from u to vertex 0
-       (always possible), then *climb* using crossing-upward arcs at
-       successive cuts to reach v.
-     · "⟹" Contrapositive: suppose some cut k has no crossing-upward
-       arc.  Then `lowerCut k` has all arcs to `upperCut k` going
-       *upward → lower* (downward).  Vertex k − 1 cannot then reach
-       any vertex in `upperCut k`, contradicting SC.
+/-- Auxiliary: for `j ≤ k < n`, vertex `⟨k, _⟩` reaches `⟨j, _⟩`. -/
+private lemma reaches_descent_aux (T : Tournament n) (hbp : HasBasePath T) :
+    ∀ k (hk : k < n) (j : ℕ) (hj : j < n) (hjk : j ≤ k),
+      Reaches T ⟨k, hk⟩ ⟨j, hj⟩ := by
+  intro k
+  induction k with
+  | zero =>
+    intro hk j hj hjk
+    have hj_eq : j = 0 := by omega
+    subst hj_eq
+    exact Reaches.refl _
+  | succ k ih =>
+    intro hk j hj hjk
+    by_cases h_eq : j = k + 1
+    · subst h_eq; exact Reaches.refl _
+    · have hjk' : j ≤ k := by omega
+      have hk_lt : k < n := by omega
+      have h_arc : T.arc ⟨k + 1, hk⟩ ⟨k, hk_lt⟩ = true := hbp ⟨k, hk_lt⟩ hk
+      have h_rec := ih hk_lt j hj hjk'
+      exact Reaches.step h_arc h_rec
 
-    De-axiomatisation: both directions are structurally accessible but
-    require building a reachability "climbing" recursion and a
-    dominating-set argument respectively. -/
-axiom thm330_axiom (T : Tournament n) (hbp : HasBasePath T) :
-    IsStronglyConnected T ↔ ∀ k, 1 ≤ k → k < n → CrossesUpward T k
+/-- Base path implies: any vertex `u` reaches any `v` with `v.val ≤ u.val`. -/
+lemma reaches_descent (T : Tournament n) (hbp : HasBasePath T)
+    (u v : Fin n) (h : v.val ≤ u.val) : Reaches T u v := by
+  have h_u : u = ⟨u.val, u.is_lt⟩ := rfl
+  have h_v : v = ⟨v.val, v.is_lt⟩ := rfl
+  rw [h_u, h_v]
+  exact reaches_descent_aux T hbp u.val u.is_lt v.val v.is_lt h
 
-/-! ### THM-330 -/
+/-! ### From 0, reach every vertex (PROVED — strong induction) -/
 
-/-- **THM-330 (project-novel, opus-2026-05-27-S1, Lean-formalised).**
+/-- Auxiliary: vertex 0 reaches every vertex.  Strong induction on v.val. -/
+private lemma zero_reaches_aux
+    (T : Tournament n) (hbp : HasBasePath T) (hn : 0 < n)
+    (h : ∀ k, 1 ≤ k → k < n → CrossesUpward T k) :
+    ∀ k (hk : k < n), Reaches T ⟨0, hn⟩ ⟨k, hk⟩ := by
+  intro k
+  induction k using Nat.strong_induction_on with
+  | _ k ih =>
+    intro hk
+    by_cases hk0 : k = 0
+    · subst hk0; exact Reaches.refl _
+    · -- k ≥ 1.  Use crossing-upward at cut k.
+      have hk_pos : 1 ≤ k := Nat.one_le_iff_ne_zero.mpr hk0
+      obtain ⟨i, j, hi_ge, hj_lt, _hgap, hT⟩ := h k hk_pos hk
+      -- 0 reaches j by IH (since j.val < k).
+      have h_0_to_j : Reaches T ⟨0, hn⟩ j := by
+        have := ih j.val hj_lt j.is_lt
+        have hj_eq : j = ⟨j.val, j.is_lt⟩ := rfl
+        rw [hj_eq]; exact this
+      -- j reaches i (one step via hT).
+      have h_j_to_i : Reaches T j i := Reaches.step hT (Reaches.refl _)
+      -- i reaches ⟨k, hk⟩ by descent (since k ≤ i.val).
+      have h_i_to_k : Reaches T i ⟨k, hk⟩ :=
+        reaches_descent T hbp i ⟨k, hk⟩ (by show k ≤ i.val; omega)
+      exact (h_0_to_j.trans T h_j_to_i).trans T h_i_to_k
 
-    Restatement of the structural axiom for downstream use:
-    T (with the base path) is strongly connected iff every cut
-    k ∈ {1, …, n − 1} has at least one "crossing-upward" non-consecutive
-    arc. -/
+/-- From vertex 0, reach every vertex v ∈ Fin n. -/
+lemma zero_reaches_all
+    (T : Tournament n) (hbp : HasBasePath T) (hn : 0 < n)
+    (h : ∀ k, 1 ≤ k → k < n → CrossesUpward T k)
+    (v : Fin n) : Reaches T ⟨0, hn⟩ v := by
+  have h_v : v = ⟨v.val, v.is_lt⟩ := rfl
+  rw [h_v]
+  exact zero_reaches_aux T hbp hn h v.val v.is_lt
+
+/-! ### The easy direction (PROVED): every cut crossing ⟹ SC -/
+
+/-- **PROVED IN LEAN.** If T has the base path and every cut has a
+    crossing-upward arc, then T is strongly connected. -/
+theorem crossesUpward_all_implies_SC
+    (T : Tournament n) (hbp : HasBasePath T)
+    (h : ∀ k, 1 ≤ k → k < n → CrossesUpward T k) :
+    IsStronglyConnected T := by
+  intro u v
+  by_cases hn : n = 0
+  · subst hn; exact absurd u.is_lt (Nat.not_lt_zero _)
+  · have hn_pos : 0 < n := Nat.pos_of_ne_zero hn
+    -- u → 0 → v.
+    have h_u_to_0 : Reaches T u ⟨0, hn_pos⟩ := reaches_zero T hbp hn_pos u
+    have h_0_to_v : Reaches T ⟨0, hn_pos⟩ v := zero_reaches_all T hbp hn_pos h v
+    exact h_u_to_0.trans T h_0_to_v
+
+/-! ### Hard direction (still axiomatised) -/
+
+/-- **Axiom (THM-330 hard direction).**  If T (with the base path) is
+    strongly connected, then every cut has a crossing-upward arc.
+
+    Proof sketch: contrapositive.  If some cut k has no crossing-upward
+    arc, then `upperCut k` dominates `lowerCut k` (no arc enters
+    `upperCut k` from below), so vertex (k − 1) cannot reach any vertex
+    in `upperCut k`, contradicting SC. -/
+axiom SC_implies_all_cuts_crossing
+    (T : Tournament n) (hbp : HasBasePath T) (h : IsStronglyConnected T) :
+    ∀ k, 1 ≤ k → k < n → CrossesUpward T k
+
+/-! ### THM-330 (full iff, easy direction PROVED) -/
+
+/-- **THM-330** (easy direction proved; hard direction = `SC_implies_all_cuts_crossing`). -/
 theorem thm330_SC_iff_all_cuts_crossing
     (T : Tournament n) (hbp : HasBasePath T) :
-    IsStronglyConnected T ↔ ∀ k, 1 ≤ k → k < n → CrossesUpward T k :=
-  thm330_axiom T hbp
+    IsStronglyConnected T ↔ ∀ k, 1 ≤ k → k < n → CrossesUpward T k := by
+  refine ⟨?_, crossesUpward_all_implies_SC T hbp⟩
+  exact SC_implies_all_cuts_crossing T hbp
 
 /-! ### Corollaries -/
 
-/-- **Corollary (immediate).** If T has the base path and is not SC,
-    there is a *specific* cut k with no crossing-upward arc.  This is
-    the witness extracted from `thm330_axiom`. -/
 theorem not_SC_implies_no_crossing
     (T : Tournament n) (hbp : HasBasePath T) (h : ¬ IsStronglyConnected T) :
     ∃ k, 1 ≤ k ∧ k < n ∧ ¬ CrossesUpward T k := by
-  have hax := thm330_axiom T hbp
-  -- hax : SC ↔ ∀ k, 1 ≤ k → k < n → CrossesUpward T k
-  -- h : ¬ SC; combined ⟹ ∃ k violating the rhs.
   by_contra hno
   push_neg at hno
-  have hall : ∀ k, 1 ≤ k → k < n → CrossesUpward T k := by
-    intro k hk1 hkn
-    have := hno k hk1 hkn
-    -- hno k hk1 hkn says: ¬ ¬ CrossesUpward; equivalent to CrossesUpward.
-    -- Actually after push_neg: hno : ∀ k, 1 ≤ k → k < n → CrossesUpward T k
-    -- Wait — let me check. The original is `¬ ∃ k, 1 ≤ k ∧ k < n ∧ ¬ CrossesUpward`.
-    -- push_neg pushes ¬ inward: ∀ k, ¬ (1 ≤ k ∧ k < n ∧ ¬ CrossesUpward)
-    --                         = ∀ k, 1 ≤ k → k < n → CrossesUpward
-    exact this
-  exact h (hax.mpr hall)
+  have hall : ∀ k, 1 ≤ k → k < n → CrossesUpward T k :=
+    fun k hk1 hkn => hno k hk1 hkn
+  exact h (crossesUpward_all_implies_SC T hbp hall)
 
-/-- **Corollary (apex tile, THM-333).** If at vertex n − 1 there is an
-    "inward upward arc" from vertex 0 (i.e., `T.arc 0 (n−1) = true`),
-    then *every* cut is crossed: T is SC. -/
 theorem apex_implies_SC
     (T : Tournament n) (hbp : HasBasePath T) (hn : 3 ≤ n)
     (hv0 : 0 < n) (hvn : (n - 1 : ℕ) < n)
@@ -189,7 +234,6 @@ theorem apex_implies_SC
     IsStronglyConnected T := by
   apply (thm330_SC_iff_all_cuts_crossing T hbp).mpr
   intro k hk1 hkn
-  -- The pair (⟨n-1, _⟩, ⟨0, _⟩) crosses every cut k ∈ {1, …, n-1}.
   refine ⟨⟨n - 1, hvn⟩, ⟨0, hv0⟩, ?_, ?_, ?_, h_apex⟩
   · show k ≤ n - 1; omega
   · show 0 < k; omega

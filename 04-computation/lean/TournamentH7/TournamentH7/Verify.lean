@@ -69,6 +69,26 @@ theorem thm330_audit {n : ℕ} (T : Tournament n) (hbp : HasBasePath T) :
   thm330_SC_iff_all_cuts_crossing T hbp
 #print axioms thm330_audit
 
+/-- THM-330 EASY direction (now FULLY PROVED in Lean — no axioms beyond foundations). -/
+theorem thm330_easy_audit {n : ℕ} (T : Tournament n) (hbp : HasBasePath T)
+    (h : ∀ k, 1 ≤ k → k < n → CrossesUpward T k) : IsStronglyConnected T :=
+  crossesUpward_all_implies_SC T hbp h
+#print axioms thm330_easy_audit
+
+/-- Base-path descent: any vertex u reaches any v with v.val ≤ u.val. PROVED. -/
+theorem reaches_descent_audit {n : ℕ}
+    (T : Tournament n) (hbp : HasBasePath T) (u v : Fin n) (h : v.val ≤ u.val) :
+    Reaches T u v :=
+  reaches_descent T hbp u v h
+#print axioms reaches_descent_audit
+
+/-- Every vertex reaches 0 (via base path). PROVED. -/
+theorem reaches_zero_audit {n : ℕ}
+    (T : Tournament n) (hbp : HasBasePath T) (hn : 0 < n) (u : Fin n) :
+    Reaches T u ⟨0, hn⟩ :=
+  reaches_zero T hbp hn u
+#print axioms reaches_zero_audit
+
 /-- THM-333 (apex tile is SC): if the apex arc 0 → (n-1) is present, T is SC. -/
 theorem apex_implies_SC_audit {n : ℕ} (T : Tournament n)
     (hbp : HasBasePath T) (hn : 3 ≤ n) (hv0 : 0 < n) (hvn : n - 1 < n)

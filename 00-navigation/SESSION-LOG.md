@@ -2,6 +2,29 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+
+## oracle-2026-05-29-S3-cont — 2026-05-29
+
+**Summary:** Continued de-axiomatising THM-330. **The easy direction of THM-330 is now PROVED in Lean** (was previously the whole iff statement axiomatised). Added reachability composition + base-path descent + crossing climb. Also added architecture document.
+
+**NOW PROVED IN LEAN (zero project axioms):**
+- `reaches_zero` — every vertex reaches 0 via base-path descent.
+- `reaches_descent` — any vertex u reaches any v with v.val ≤ u.val.
+- `Reaches.trans` — reachability is transitive.
+- `zero_reaches_all` — from vertex 0, reach every vertex (using crossings + descent).
+- **`crossesUpward_all_implies_SC` (THM-330 easy direction).**
+- `not_SC_implies_no_crossing` — derived from easy direction.
+
+**AXIOMS SPLIT:** The previous axiom `thm330_axiom` (full iff) is now split:
+- Easy direction: PROVED (`crossesUpward_all_implies_SC`).
+- Hard direction: remains axiom `SC_implies_all_cuts_crossing`.
+
+**NEW DOC:** `04-computation/lean/TournamentH7/ARCHITECTURE.md` — module DAG, axiom hierarchy by category, full theorem list, de-axiomatisation roadmap.
+
+**AUDIT SNAPSHOT (`thm330_easy_audit` etc.):** depends only on `propext`, `Quot.sound` — no project axioms.
+
+**TOTAL FORMALISATION STATE:** 953 build targets. ~30 named theorems with audit. THM-330 easy direction now formal; remaining axioms = external (cited) + project-novel structural (the deepest ones).
+
 ## oracle-2026-05-29-S3-bonus — 2026-05-29
 
 **Summary:** Continued S3 session: PROVED `H_iso_invariant` in Lean (was axiom), added `SmallTournaments`, `IsomorphismClasses` (A000568), `SCFraction` (THM-330 corollary) modules. **953 build targets clean.**
