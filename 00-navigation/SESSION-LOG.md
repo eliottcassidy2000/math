@@ -1,5 +1,33 @@
 # Session Log
 
+## opus-2026-05-29-S13 — 2026-05-29
+
+**Summary:** Formalized the good-cut bucket constraints in Lean and used the formal object to generate a new merged-metagraph hypothesis: the good-cut count may descend from the base-path tiling model to `G_n/Z_2`.
+
+**Files read:** Startup canon and navigation sequence, recent projection-defect inbox messages, engineering synthesis S53, Lean TournamentH7 architecture/submission docs, and the existing good-cuts/SC-cut context around THM-330/THM-336.
+
+**Lean work:** Added `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean` and imported it from the root and `Verify.lean`. The module defines `cutSet`, `StTile.crossesCut`, `StTiling.IsGoodCut`, `StTiling.goodCuts`, and `StTiling.goodCutCount`, then proves:
+- `StTiling.goodCuts_empty_iff_all_down`
+- `StTiling.goodCutCount_ne_one`
+- `StTiling.goodCutCount_reflect`
+
+**Computation:** Added `04-computation/goodcut_bucket_merged_s13.py` and saved exact output to `05-knowledge/results/goodcut_bucket_merged_s13.out`. For n=3..6, every merged class in the tiling census is pure with respect to `g`: pure/mixed = 2/0, 3/0, 10/0, 34/0. Bucket counts are `{0:1,2:1}`, `{0:1,2:2,3:5}`, `{0:1,2:3,3:10,4:50}`, `{0:1,2:4,3:15,4:101,5:903}`.
+
+**Knowledge-web updates:** Added variable `g(τ)` in `05-knowledge/variables/good-cut-count.md`; added HYP-1764..1766; added T288/T289; added INV-237; wrote reflection `07-reflections/good-cut-buckets-as-merged-coordinate.md`; updated Lean documentation and variable index.
+
+**Engineering reading:** `g` is a cheap interval-cover feature for Tournament TDA. Its transition profile under single-tile flips is a low-cost structured perturbation signature, complementary to the projection-defect features from S1-S3.
+
+**Verification:**
+- `python3 -m py_compile 04-computation/goodcut_bucket_merged_s13.py`
+- `python3 04-computation/goodcut_bucket_merged_s13.py 2>&1 | tee 05-knowledge/results/goodcut_bucket_merged_s13.out`
+- `lake build TournamentH7 2>&1 | tee 05-knowledge/results/lean_goodcuts_build_opus_2026-05-29-S13.out`
+
+**Next priorities:**
+1. Run exact n=7 good-cut/merged purity with cached canonicalization.
+2. Prove or refute HYP-1764: `g` invariant under tournament isomorphism after complement merge.
+3. Derive the interval-union generating function for bucket counts.
+4. Add `g` and bucket-transition features to the future `tournament_tda.py` extractor.
+
 ## kind-pasteur-2026-05-29-S4 - 2026-05-29: Push Recovery and Tiny Lean Score Formalization
 
 **Account:** kind-pasteur

@@ -19,6 +19,8 @@ Lean 4 + Mathlib4 formalisation of forbidden H-values in tournaments.
 | `Tournament.paleyLike_not_SF_id` | Paley-like tournament is not SF | corollary |
 | `Tournament.thm330_SC_iff_all_cuts_crossing` | THM-330: SC iff every cut k has a crossing-upward arc | opus-2026-05-27-S1 |
 | `Tournament.apex_implies_SC` | apex tile present ⟹ SC (THM-333) | opus-2026-05-27-S1 |
+| `Tournament.StTiling.goodCutCount_ne_one` | THM-336 Lean core: good-cut bucket 1 is impossible | opus-2026-05-29-S13 |
+| `Tournament.StTiling.goodCutCount_reflect` | grid reflection preserves the good-cut bucket index | opus-2026-05-29-S13 |
 | `Tournament.isSelfComplementary_iff_iso_op` | IsSelfComplementary ↔ T ≅ op T | (clean characterisation) |
 | `Tournament.outDegree_iso` | iso preserves out-degree (up to relabel); **PROVED IN LEAN** | clean |
 | `Tournament.isRegular_iso` | iso preserves regularity; **PROVED IN LEAN** | clean |
@@ -110,6 +112,10 @@ matches the intended proof-modulo-axioms status:
 - `abstract_anti_palindrome_audit`, `epStart_sum_eq_H_audit`, and
   `epEnd_sum_eq_H_audit` now depend only on Lean foundations: endpoint
   reversal and endpoint partitioning have been formalized.
+- `goodCuts_empty_iff_all_down_audit`, `goodCutCount_ne_one_audit`, and
+  `goodCutCount_reflect_audit` depend only on Lean foundations: the
+  good-cut bucket constraints are fully formalized in the concrete tiling
+  model.
 - The iso/regularity examples are mostly axiom-free; the remaining project
   single-axiom dependencies here are exactly `tilde_score_sink` and
   `alphaCount_iso_invariant`.

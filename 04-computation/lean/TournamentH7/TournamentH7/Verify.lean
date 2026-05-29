@@ -19,6 +19,7 @@ import TournamentH7.IsoProperties
 import TournamentH7.SCCounts
 import TournamentH7.SmallTournaments
 import TournamentH7.ForbiddenHCounting
+import TournamentH7.GoodCuts
 
 open Tournament
 
@@ -180,6 +181,26 @@ theorem alphaCount_iso_invariant_audit {n : ℕ}
     alphaCount k T₁ = alphaCount k T₂ :=
   alphaCount_iso_invariant k T₁ T₂ h
 #print axioms alphaCount_iso_invariant_audit
+
+/-! ### Good-cut buckets for staircase tilings -/
+
+/-- Good-cut bucket 0 is exactly the all-down tiling. PROVED. -/
+theorem goodCuts_empty_iff_all_down_audit {n : ℕ} (b : StTiling n) :
+    b.goodCuts = ∅ ↔ ∀ t : StTile n, b t = false :=
+  StTiling.goodCuts_empty_iff_all_down b
+#print axioms goodCuts_empty_iff_all_down_audit
+
+/-- THM-336 Lean core: no tiling has exactly one good cut. PROVED. -/
+theorem goodCutCount_ne_one_audit {n : ℕ} (b : StTiling n) :
+    b.goodCutCount ≠ 1 :=
+  StTiling.goodCutCount_ne_one b
+#print axioms goodCutCount_ne_one_audit
+
+/-- Grid reflection preserves the good-cut bucket. PROVED. -/
+theorem goodCutCount_reflect_audit {n : ℕ} (b : StTiling n) :
+    b.reflect.goodCutCount = b.goodCutCount :=
+  StTiling.goodCutCount_reflect b
+#print axioms goodCutCount_reflect_audit
 
 /-! ### THM-342 (small diagonal value) -/
 

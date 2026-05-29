@@ -73,6 +73,7 @@ et al.).
 | `GridReflection.lean` | `op`, `relabel`, vertex reversal | proved infrastructure |
 | `StaircaseTileModel.lean` | concrete tile coordinates, THM-280 arc statement | axiom |
 | `StaircaseModel.lean` | THM-330 (SC cut theorem) — **FULLY PROVED** | proved |
+| `GoodCuts.lean` | good-cut buckets, no bucket 1, reflection invariance | **PROVED** |
 | `SelfComplementary.lean` | `IsSelfFlip`, `PaleyLike`, regular ⟹ ¬SF | axiom + proved corollaries |
 | `Iso.lean` | `TournamentIso`, `≅` | proved |
 | `IsoProperties.lean` | iso-invariants — **PROVED IN LEAN** | proved |
@@ -153,6 +154,9 @@ external/project axioms that are already in their proof OR — best case
 - `reaches_descent` — descent via base path.
 - `not_SC_implies_no_crossing` — derived from easy direction.
 - `apex_implies_SC` — derived from THM-330.
+- `goodCuts_empty_iff_all_down` — bucket 0 is exactly the all-down tiling.
+- `goodCutCount_ne_one` — THM-336 Lean core: no good-cut bucket 1.
+- `goodCutCount_reflect` — grid reflection preserves good-cut bucket size.
 - `threeCycle_isRegular` — 3-cycle is regular.
 - `transitive_hasBasePath` — transitive tournament has base path.
 - `transitive_not_regular` — transitive (n ≥ 2) is not regular.

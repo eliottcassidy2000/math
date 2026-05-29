@@ -2328,3 +2328,27 @@ Source: projection_defect_structured_moves_s2.py, projection_defect_structured_m
 **What:** Structured projection-defect sign does not reduce to how far a move travels in H or score space. At n=6, endpoint stars are tournament-biased (defect +0.2109) and have large tournament-only mean |Delta H| = 10.56, but range-3 single-tile moves are also tournament-biased (defect +0.1615) with mean |Delta H| = 6.70 per one-tile flip. Meanwhile range-2 single-tile moves are even-biased (defect -0.0742) even though their joint lines still have mean |Delta H| = 6.63.
 **Why it matters:** The endpoint polarity is a genuine two-quotient residual, not merely a proxy for H-gradient or score movement. H-gradient magnitude, score motion, and projection-defect sign should be treated as three coupled but distinct feature channels.
 Source: projection_defect_h_score_s3.py, projection_defect_h_score_s3.out
+
+## HYP-1764: Good-cut count descends to merged tournament classes (opus-2026-05-29-S13)
+**Status:** CONFIRMED for n=3..6 exact tiling census; OPEN generally.
+**Statement:** The good-cut count `g(τ)=|G(τ)|`, defined in the base-path tiling model, may be constant on every merged tournament class in `G_n/Z_2`. Equivalently, if two base-path tilings represent isomorphic tournaments after complement merging, then they have the same number of cuts crossed by upward tiles.
+**Evidence:** `04-computation/goodcut_bucket_merged_s13.py` found zero mixed merged classes for n=3..6. Class counts by n were pure/mixed = 2/0, 3/0, 10/0, 34/0; max bucket span was 0 in every case. Lean also proves `g(reflect τ)=g(τ)` in `TournamentH7.GoodCuts`.
+**Implication:** A statistic that looks coordinate-dependent may be a genuine coordinate on the merged metagraph. This would give `G_n/Z_2` a cheap height function with forbidden level 1.
+**Next:** Verify n=7 with cached canonicalization, then try to prove invariance under base-path-preserving isomorphism and tournament complement merge.
+**See:** `05-knowledge/results/goodcut_bucket_merged_s13.out`, variable `g(τ)`, INV-237, T288.
+
+## HYP-1765: Good-cut sets are interval-union codes (opus-2026-05-29-S13)
+**Status:** PARTIALLY PROVED in Lean; enumerative form OPEN.
+**Statement:** Every upward tile contributes the cut interval `{lo+1,...,hi}`, so every good-cut set is a union of tile intervals of length at least 2. Conversely, every such union realized by a subset of staircase tile intervals is a good-cut set. The bucket distribution should therefore be expressible as an interval-union or polymer-gas enumeration on the cut path.
+**Evidence:** Lean proves every upward tile supplies two distinct legal good cuts, giving `g≠1`. The exact counts n=3..6 are `{0:1,2:1}`, `{0:1,2:2,3:5}`, `{0:1,2:3,3:10,4:50}`, `{0:1,2:4,3:15,4:101,5:903}`.
+**Implication:** THM-336 is not just a strong-connectivity fact. It is a path-interval covering theorem inside the staircase triangle, and it should connect to the existing formulas for exactly-d good cuts.
+**Next:** Derive the ordinary generating function for bucket counts from interval unions and reconcile it with INV-NEW-S2-B.
+**See:** `TournamentH7.GoodCuts`, `05-knowledge/variables/good-cut-count.md`, INV-NEW-S2-B.
+
+## HYP-1766: Good-cut bucket transitions form a Morse coordinate for wiggly moves (opus-2026-05-29-S13)
+**Status:** CONFIRMED for n=3..6 exact single-tile transitions; OPEN structurally.
+**Statement:** Under a single tile flip, `g` changes by adding or removing one interval in the cut path. This gives a coarse Morse coordinate on the tiling hypercube and possibly on `G_n/Z_2`: bottom moves jump from 0 to levels 2 through n-1, level 1 is absent, and most high-level moves become within-bucket at larger n.
+**Evidence:** The S13 transition matrices show no state enters bucket 1 and many top-bucket self-transitions: at n=6 the directed symmetrized counts include `5->5:8568`, `4->4:524`, but the all-down tiling has outgoing jumps `0->2,0->3,0->4,0->5`.
+**Implication:** The good-cut bucket may be an engineering feature and a proof guide: structured perturbations can be measured by interval add/remove dynamics rather than raw Hamming radius.
+**Next:** Condition the transition matrix by spine/ribs/sea class type and compare with projection-defect signs from HYP-1756..1762.
+**See:** `05-knowledge/results/goodcut_bucket_merged_s13.out`, T289.

@@ -1,0 +1,128 @@
+GOOD-CUT BUCKETS VS MERGED TOURNAMENT CLASSES
+opus-2026-05-29-S13
+bit 1/upward tile contributes interval {lo+1,...,hi} of good cuts
+
+================================================================================================
+n=3, m=1, tilings=2, merged classes=2
+bucket counts d -> tilings: {0: 1, 2: 1}
+distinct good-cut sets: 2 of 4 possible cut subsets
+reflection bucket failures: 0
+class bucket purity: pure=2, mixed=0, max bucket span=0
+classes touched by bucket:
+  d=0: 1 merged classes
+  d=2: 1 merged classes
+widest merged classes by good-cut bucket span:
+  class=  0 H=  1 d=[0,0] profile={0: 1}
+  class=  1 H=  3 d=[2,2] profile={2: 1}
+single-tile bucket transition counts (directed, symmetrized):
+  0->2: 1
+  2->0: 1
+
+================================================================================================
+n=4, m=3, tilings=8, merged classes=3
+bucket counts d -> tilings: {0: 1, 2: 2, 3: 5}
+distinct good-cut sets: 4 of 8 possible cut subsets
+reflection bucket failures: 0
+class bucket purity: pure=3, mixed=0, max bucket span=0
+classes touched by bucket:
+  d=0: 1 merged classes
+  d=2: 1 merged classes
+  d=3: 1 merged classes
+widest merged classes by good-cut bucket span:
+  class=  0 H=  1 d=[0,0] profile={0: 1}
+  class=  1 H=  5 d=[3,3] profile={3: 5}
+  class=  2 H=  3 d=[2,2] profile={2: 2}
+single-tile bucket transition counts (directed, symmetrized):
+  0->2: 2
+  0->3: 1
+  2->0: 2
+  2->3: 4
+  3->0: 1
+  3->2: 4
+  3->3: 10
+
+================================================================================================
+n=5, m=6, tilings=64, merged classes=10
+bucket counts d -> tilings: {0: 1, 2: 3, 3: 10, 4: 50}
+distinct good-cut sets: 7 of 16 possible cut subsets
+reflection bucket failures: 0
+class bucket purity: pure=10, mixed=0, max bucket span=0
+classes touched by bucket:
+  d=0: 1 merged classes
+  d=2: 2 merged classes
+  d=3: 1 merged classes
+  d=4: 6 merged classes
+widest merged classes by good-cut bucket span:
+  class=  0 H=  1 d=[0,0] profile={0: 1}
+  class=  1 H=  9 d=[4,4] profile={4: 9}
+  class=  2 H=  5 d=[3,3] profile={3: 10}
+  class=  3 H= 11 d=[4,4] profile={4: 11}
+  class=  4 H=  3 d=[2,2] profile={2: 2}
+  class=  5 H=  9 d=[4,4] profile={4: 9}
+  class=  6 H= 13 d=[4,4] profile={4: 13}
+  class=  7 H= 15 d=[4,4] profile={4: 3}
+  class=  8 H=  3 d=[2,2] profile={2: 1}
+  class=  9 H= 15 d=[4,4] profile={4: 5}
+single-tile bucket transition counts (directed, symmetrized):
+  0->2: 3
+  0->3: 2
+  0->4: 1
+  2->0: 3
+  2->3: 8
+  2->4: 7
+  3->0: 2
+  3->2: 8
+  3->3: 20
+  3->4: 30
+  4->0: 1
+  4->2: 7
+  4->3: 30
+  4->4: 262
+
+================================================================================================
+n=6, m=10, tilings=1024, merged classes=34
+bucket counts d -> tilings: {0: 1, 2: 4, 3: 15, 4: 101, 5: 903}
+distinct good-cut sets: 12 of 32 possible cut subsets
+reflection bucket failures: 0
+class bucket purity: pure=34, mixed=0, max bucket span=0
+classes touched by bucket:
+  d=0: 1 merged classes
+  d=2: 2 merged classes
+  d=3: 2 merged classes
+  d=4: 7 merged classes
+  d=5: 22 merged classes
+widest merged classes by good-cut bucket span:
+  class=  0 H=  1 d=[0,0] profile={0: 1}
+  class=  1 H= 17 d=[5,5] profile={5: 17}
+  class=  2 H=  9 d=[4,4] profile={4: 18}
+  class=  3 H= 23 d=[5,5] profile={5: 46}
+  class=  4 H=  5 d=[3,3] profile={3: 10}
+  class=  5 H= 19 d=[5,5] profile={5: 38}
+  class=  6 H= 11 d=[4,4] profile={4: 22}
+  class=  7 H=  3 d=[2,2] profile={2: 2}
+  class=  8 H= 15 d=[5,5] profile={5: 30}
+  class=  9 H=  9 d=[4,4] profile={4: 18}
+single-tile bucket transition counts (directed, symmetrized):
+  0->2: 4
+  0->3: 3
+  0->4: 2
+  0->5: 1
+  2->0: 4
+  2->3: 12
+  2->4: 16
+  2->5: 8
+  3->0: 3
+  3->2: 12
+  3->3: 30
+  3->4: 60
+  3->5: 45
+  4->0: 2
+  4->2: 16
+  4->3: 60
+  4->4: 524
+  4->5: 408
+  5->0: 1
+  5->2: 8
+  5->3: 45
+  5->4: 408
+  5->5: 8568

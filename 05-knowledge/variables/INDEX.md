@@ -21,6 +21,7 @@ Each variable has its own file with full cross-references.
 | `D_k` | [D-k.md](D-k.md) | Degree-2k Fourier component of W | W = sum D_k; D_0 = c_0 |
 | `F_k` | [forward-counts.md](forward-counts.md) | Count of HPs with exactly k forward edges | F(T,x) = sum F_k * x^k |
 | `fwd(P)` | [forward-edges.md](forward-edges.md) | Number of forward edges in HP P | fwd(P) + bwd(P) = n-1 |
+| `g(τ)` | [good-cut-count.md](good-cut-count.md) | Number of cuts crossed by at least one upward tile | `g≠1`; `g(reflect τ)=g(τ)` |
 | `H(T)` | [hamiltonian-paths.md](hamiltonian-paths.md) | Total Hamiltonian path count | H = tr(M); H = I(Omega,2); H odd (Redei) |
 | `I(G,x)` | [independence-poly.md](independence-poly.md) | Independence polynomial of graph G | I(Omega(T), 2) = H(T) (OCF) |
 | `M[a,b]` | [transfer-matrix.md](transfer-matrix.md) | Transfer matrix entry | M symmetric; tr(M) = H; M[a,b] = sum_S (-1)^|S| E_a B_b |

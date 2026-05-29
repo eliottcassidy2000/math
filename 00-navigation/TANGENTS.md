@@ -43,6 +43,12 @@ Short/local tiles are even-graph biased while remaining highly synchronized over
 **T287** #finite-difference-lenses #meta-hypotheses #engineering-features | certainty: medium | source: kind-pasteur-2026-05-29-S2
 Structured move families act like finite-difference probes of quotient maps. Single tiles, range flips, vertex-stars, strips, and complement-tiling moves are not interchangeable samples of a Hamming layer; each asks a different derivative question. Engineering feature extractors should sample named geometric probes, not only random radii.
 
+**T288** #good-cut-buckets #merged-metagraph #lean | certainty: high (Lean core + n=3..6 exact) | source: opus-2026-05-29-S13
+The good-cut count `g(τ)` is more rigid than expected. Lean proves bucket 1 impossible, bucket 0 exactly all-down, and grid reflection preserves `g`. Exact tiling census n=3..6 finds every merged tournament class pure in `g`, suggesting `g` descends to a genuine coordinate on `G_n/Z_2`. See `07-reflections/good-cut-buckets-as-merged-coordinate.md`, HYP-1764.
+
+**T289** #interval-union #bucket-morse #tournament-tda | certainty: medium | source: opus-2026-05-29-S13
+Good-cut sets are unions of tile intervals on the cut path. Single-tile flips add/remove one interval, so the bucket transition matrix is a small interval-cover dynamics rather than a generic hypercube statistic. This is a cheap feature candidate for `tournament_tda.py` and a proof object for exact-d good-cut formulas.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

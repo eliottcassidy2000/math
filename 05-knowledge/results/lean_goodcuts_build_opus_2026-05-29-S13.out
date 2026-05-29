@@ -1,0 +1,89 @@
+ℹ [2970/2972] Replayed TournamentH7.Verify
+info: TournamentH7/Verify.lean:29:0: 'H_ne_seven_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ ocf,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+info: TournamentH7/Verify.lean:32:0: 'H_ne_twentyone_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf_extended]
+info: TournamentH7/Verify.lean:36:0: 'H_ne_sixtythree_le_seven_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ H_ne_sixtythree_le_seven_axiom]
+info: TournamentH7/Verify.lean:39:0: 'H_pos_audit' depends on axioms: [propext, Classical.choice, Quot.sound, redei_existence]
+info: TournamentH7/Verify.lean:43:0: 'forbidden_pair_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf,
+ ocf_extended,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+info: TournamentH7/Verify.lean:47:0: 'forbidden_trio_le_seven_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ H_ne_sixtythree_le_seven_axiom,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf,
+ ocf_extended,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+info: TournamentH7/Verify.lean:64:0: 'regular_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+info: TournamentH7/Verify.lean:72:0: 'thm330_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:78:0: 'thm330_easy_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:85:0: 'reaches_descent_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:92:0: 'reaches_zero_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:100:0: 'apex_implies_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:108:0: 'isSelfComplementary_iff_iso_op_audit' depends on axioms: [Quot.sound]
+info: TournamentH7/Verify.lean:117:0: 'regular_not_SF_id_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+info: TournamentH7/Verify.lean:123:0: 'paleyLike_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+info: TournamentH7/Verify.lean:131:0: 'hp_ip_truncated_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+info: TournamentH7/Verify.lean:140:0: 'abstract_anti_palindrome_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:146:0: 'epStart_sum_eq_H_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:152:0: 'epEnd_sum_eq_H_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:162:0: 'outDegree_iso_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:169:0: 'isRegular_iso_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:176:0: 'H_iso_invariant_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:183:0: 'alphaCount_iso_invariant_audit' depends on axioms: [Quot.sound, alphaCount_iso_invariant]
+info: TournamentH7/Verify.lean:191:0: 'goodCuts_empty_iff_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:197:0: 'goodCutCount_ne_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:203:0: 'goodCutCount_reflect_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:215:0: 'transitive_4_hasBasePath' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:220:0: 'threeCycle_regular_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:226:0: 'transitive_not_regular_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:237:0: 'H_ge_three_pow_k_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+info: TournamentH7/Verify.lean:243:0: 'H_lt_27_no_alpha3_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+info: TournamentH7/Verify.lean:249:0: 'H_lt_81_no_alpha4_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+Build completed successfully (2972 jobs).

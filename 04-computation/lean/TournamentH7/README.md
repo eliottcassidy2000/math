@@ -22,6 +22,7 @@ TournamentH7/
     ├── SCC.lean              Reachability, IsSCC, IsHamiltonianPath, H
     ├── OCF.lean              7 axioms (OCF + Moon-Moser + Moon-Camion + …)
     ├── H7.lean               The proof:  Tournament.H_ne_seven
+    ├── GoodCuts.lean         good-cut bucket constraints, axiom-free
     └── Verify.lean           #print axioms audit
 ```
 
