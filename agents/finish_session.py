@@ -5,7 +5,7 @@ finish_session.py — End-of-session closer for Claude agents.
 Performs all three mandatory end-of-session steps in one command:
   1. Sends a summary message to another agent (or broadcast)
   2. git add -A && git commit
-  3. git push (with rebase-retry on conflict)
+  3. git push to the current branch's upstream (with rebase-retry on conflict)
 
 Usage (interactive):
     python3 agents/finish_session.py
@@ -79,6 +79,68 @@ def send_message(to, subject, body_source, machine_id):
     return True
 
 
+def current_branch():
+    """Return the checked-out branch name, or None for detached HEAD."""
+    r = run(["git", "branch", "--show-current"], capture=True)
+    branch = (r.stdout or "").strip()
+    return branch or None
+
+
+def upstream_ref():
+    """Return the current branch upstream ref, e.g. origin/main, or None."""
+    r = run(
+        ["git", "rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}"],
+        capture=True,
+    )
+    if r.returncode != 0:
+        return None
+    upstream = (r.stdout or "").strip()
+    return upstream or None
+
+
+def push_current_branch():
+    """Push HEAD to the current branch's upstream, setting one if needed."""
+    branch = current_branch()
+    if branch is None:
+        print("ERROR: Cannot push from detached HEAD. Check out a branch first.", file=sys.stderr)
+        return False
+
+    upstream = upstream_ref()
+    if upstream is None:
+        print(f"\n-- git push (set upstream origin/{branch}) --------")
+        r = run(["git", "push", "-u", "origin", branch], capture=True)
+        if r.returncode == 0:
+            print(r.stdout or "  Pushed successfully.")
+            return True
+        print(f"ERROR: git push failed.\n{r.stdout}\n{r.stderr}", file=sys.stderr)
+        return False
+
+    remote, remote_branch = upstream.split("/", 1)
+    print(f"\n-- git push (to {upstream}) ----------------------")
+    r = run(["git", "push", remote, f"HEAD:{remote_branch}"], capture=True)
+    if r.returncode == 0:
+        print(r.stdout or "  Pushed successfully.")
+        return True
+
+    print(f"  Push to {upstream} failed — retrying with fetch/rebase...")
+    rf = run(["git", "fetch", remote], capture=True)
+    if rf.returncode != 0:
+        print(f"ERROR: git fetch failed.\n{rf.stdout}\n{rf.stderr}", file=sys.stderr)
+        return False
+
+    rr = run(["git", "rebase", upstream], capture=True)
+    if rr.returncode != 0:
+        print(f"ERROR: git rebase failed.\n{rr.stdout}\n{rr.stderr}", file=sys.stderr)
+        return False
+
+    r2 = run(["git", "push", remote, f"HEAD:{remote_branch}"], capture=True)
+    if r2.returncode != 0:
+        print(f"ERROR: git push failed even after rebase.\n{r2.stdout}\n{r2.stderr}", file=sys.stderr)
+        return False
+    print(r2.stdout or "  Pushed successfully.")
+    return True
+
+
 def git_commit_push(commit_msg):
     """Stage all, commit, push with rebase-retry."""
     print("\n-- git add -A ------------------------------------")
@@ -99,18 +161,7 @@ def git_commit_push(commit_msg):
     else:
         print(r.stdout, end="")
 
-    print("\n-- git push (to origin/main) ---------------------")
-    r = run(["git", "push", "origin", "HEAD:main"], capture=True)
-    if r.returncode != 0:
-        print("  Push failed — retrying with rebase onto origin/main...")
-        r2 = run_shell("git fetch origin && git rebase origin/main && git push origin HEAD:main", capture=True)
-        if r2.returncode != 0:
-            print(f"ERROR: git push failed even after rebase.\n{r2.stderr}", file=sys.stderr)
-            return False
-        print(r2.stdout, end="")
-    else:
-        print(r.stdout or "  Pushed successfully.")
-    return True
+    return push_current_branch()
 
 
 def interactive_mode(machine_id):

@@ -1650,6 +1650,7 @@ HYP-302, HYP-303, HYP-304, HYP-305, HYP-306, HYP-307, HYP-308, HYP-309, HYP-310,
 | HYP-1597 | **χ(T) ∈ {0,1} for all tournaments**: Exhaustive n=5,6: χ∈{0,1}. Sampled n=7: χ∈{0,1}. **CAUTION n=8**: β=[1,0,0,0,1,0] gives χ=2 with max_dim=5, but likely artifact of MISSING β₆,β₇ (max path at n=8 is 7). Need max_dim≥7 to verify n=8. n=8 has 2/500 such cases. | OPEN (verified n≤7, n=8 INCOMPLETE) | seesaw_identity.py, betti_concentration_v2.py | opus-S72d |
 | HYP-1598 | **β₃ first appears at n=6 (not n=7)**: Corrects prior claim. Exhaustive: 320/32768 n=6 tournaments have β₃=1. All have β₁=0. Two score types: [1,1,1,4,4,4] (80) and [2,2,2,3,3,3] (240). | CONFIRMED (exact) | betti_concentration_v2.py | opus-S72d |
 | HYP-1599 | **Strict Betti concentration (≤1 nonzero β_p for p≥1) is FALSE**: At n=7, one tournament (bits=1251547, score=[2,2,2,3,4,4,4]) has β₁=β₄=1 (χ=1). But β₁·β₃=0 still holds (weaker claim). | CONFIRMED (counterexample found) | betti_concentration_v2.py | opus-S72d |
+| HYP-1600 | **Cycle-space order/entropy blindspot**: H and min-FAS are strongly correlated but not functionally equivalent (`n=6` exhaustive corr=0.8625; same H can occur in multiple FAS strata). Acyclic orientations are not enough for a graph-side "dark H" because Royle-even/dark classes overlap heavily by `n=6`. Missing theory likely combines cycle-space tilings, feedback-arc filtration, Royle edge-sign representation, and Krawtchouk low-pass constraints. | EXPLORATORY | HYP-1600-meta-blindspot-cycle-space-order-entropy.md, meta_blindspot_probe_s95.py | codex-2026-05-29 |
 | HYP-1601 | **THM-080 amplitude table n=9 row is wrong**: Formula gives (n-2-d)!/2^{n-2} × 2^s. At n=9: d=1 should be 45/8 (table had 3/2); d=3,s=0 should be 3/16 (had 3/8); d=3,s=1 should be 3/8 (had 3/4); d=5,s=0 should be 1/64 (had 1/16). Only d=7=1/128 was correct. Mechanism: s-labels shifted (echo of MISTAKE-013b). CORRECTED in THM-080. | CONFIRMED (table error) | amplitude_table_check.py | opus-S73 |
 | HYP-1602 | **Ladder ratio H_amp/M_amp = n-d is always ODD**: For odd n and even d, n-d is odd. This means the H/M step never introduces factors of 2. ALL powers of 2 in the Walsh spectrum come from component counting (2^r or 2^s). The 2-adic valuation is v₂(amp) = s - d - s₂(n-2-d) where s₂ = binary digit sum. Connects to THM-J universality criterion s₂(n-3)≤1. | CONFIRMED (algebraic) | amplitude_glitch_analysis.py | opus-S73 |
 | HYP-1603 | **Spectral Legendre Identity**: v₂(M_amp(n,1,0)) - v₂(M_amp(n,n-2,0)) = v₂((n-3)!). The 2-adic "spread" of the M Walsh spectrum equals v₂((n-3)!) = (n-3) - s₂(n-3) by Legendre's formula. Verified n=3..29 (14 values, all match). Proof: direct from v₂ formula. | CONFIRMED (proved) | spectral_legendre.py | opus-S73 |
@@ -2352,3 +2353,21 @@ Source: projection_defect_h_score_s3.py, projection_defect_h_score_s3.out
 **Implication:** The good-cut bucket may be an engineering feature and a proof guide: structured perturbations can be measured by interval add/remove dynamics rather than raw Hamming radius.
 **Next:** Condition the transition matrix by spine/ribs/sea class type and compare with projection-defect signs from HYP-1756..1762.
 **See:** `05-knowledge/results/goodcut_bucket_merged_s13.out`, T289.
+
+## HYP-1767: Merged tiling bucket parity (codex-S95)
+**Status:** CONFIRMED (proved; verified n=3..7)
+**What:** In the fixed-path tournament-tiling explorer, every unmerged class fiber `F(C)=H(C)/|Aut(C)|` is odd. After complement merging, a node has odd mass exactly when it is self-complementary; every non-self-complementary merged node has mass `2*odd`. Weighted cube-edge buckets satisfy `2λ_u + Στ_uv = mM_u`, with the mod-2 cross-incidence detecting SC nodes whenever `m=C(n-1,2)` is odd.
+**Proof:** Redei gives odd `H`; tournament automorphism groups have odd order; complement preserves `H` and `|Aut|`; cube-edge incidence counts tile flips from each tiling.
+Source: HYP-1767-merged-tiling-bucket-parity.md, merged_tiling_bucket_constraints_s95.py
+
+## HYP-1768: Endpoint transfer recursive boundary (codex-S95)
+**Status:** PARTIALLY CONFIRMED (transfer theorem proved; full-row-rank conjecture verified n=2..6)
+**What:** Endpoint insertion gives exact quotient transfer matrices with row sums `2^(n-1)F_n` and column sums `F_{n+1}`; after merging, row sums are `2^(n-1)M_n` and column sums `M_{n+1}`. Mod 2, the unmerged transfer boundary is all child classes, while the merged boundary is exactly the SC child-node indicator. New conjecture: the parity transfer has full row rank for all n.
+**Evidence:** GF(2) ranks equal parent class counts `[1,2,4,12,56]` and parent merged counts `[1,2,3,10,34]` for transitions `2->3` through `6->7`.
+Source: HYP-1768-endpoint-transfer-recursive-boundary.md, endpoint_transfer_bucket_recursion_s95.py
+
+## HYP-1769: Even-graph endpoint rank defect (codex-S95)
+**Status:** CONFIRMED SMALL-N (n=2..7 exact)
+**What:** The endpoint-transfer row/column theorem holds for the even-graph quotient, but full GF(2) row rank fails: ranks `[1,1,2,6,8]` vs parent even-class counts `[1,2,3,7,16]`. The mod-2 boundary is not all child classes; it is the subset with odd labeled orbit size `n!/|Aut(G)|`.
+**Interpretation:** Tournament parity-injectivity is not a generic tiling-cube quotient property. The coarser cycle-space/even-graph lens forgets parity information controlled by graph automorphism 2-adics.
+Source: HYP-1769-even-graph-endpoint-rank-defect.md, THM-266-endpoint-transfer-boundary.md, even_graph_endpoint_transfer_s95.py

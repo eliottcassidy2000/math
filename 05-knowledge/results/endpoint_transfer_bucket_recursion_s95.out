@@ -1,0 +1,101 @@
+==============================================================================
+ENDPOINT TRANSFER BUCKET RECURSION S95
+==============================================================================
+Endpoint insertion gives Q_{m(n+1)} = Q_{m(n)} x Q_{n-1}.
+The transfer matrices below are this cube product after quotienting.
+
+------------------------------------------------------------------------------
+n=2->3: parent classes=1, child classes=2, parent merged=1, child merged=2, multiplier=2^1
+  exact sums: class row/col errors=0/0, merged row/col errors=0/0
+  class support: nonzero=2, row=2..2 avg=2.00, col=1..1 avg=1.00
+  merged support: nonzero=2, row=2..2 avg=2.00, col=1..1 avg=1.00
+  GF(2) class transfer: odd_entries=2, rank=1, row_fail=0, col_fail=0, boundary_weight=2, xor_boundary_ok=True
+  GF(2) merged transfer: odd_entries=2, rank=1, row_fail=0, col_fail=0, boundary_weight=2, xor_boundary_ok=True
+  class transfer weight spectrum={1: 2}
+  merged transfer weight spectrum={1: 2}
+
+------------------------------------------------------------------------------
+n=3->4: parent classes=2, child classes=4, parent merged=2, child merged=3, multiplier=2^2
+  exact sums: class row/col errors=0/0, merged row/col errors=0/0
+  class support: nonzero=5, row=2..3 avg=2.50, col=1..2 avg=1.25
+  merged support: nonzero=5, row=2..3 avg=2.50, col=1..2 avg=1.67
+  GF(2) class transfer: odd_entries=4, rank=2, row_fail=0, col_fail=0, boundary_weight=4, xor_boundary_ok=True
+  GF(2) merged transfer: odd_entries=4, rank=2, row_fail=0, col_fail=0, boundary_weight=2, xor_boundary_ok=True
+  class transfer weight spectrum={1: 3, 2: 1, 3: 1}
+  merged transfer weight spectrum={1: 3, 2: 1, 3: 1}
+
+------------------------------------------------------------------------------
+n=4->5: parent classes=4, child classes=12, parent merged=3, child merged=10, multiplier=2^3
+  exact sums: class row/col errors=0/0, merged row/col errors=0/0
+  class support: nonzero=22, row=4..7 avg=5.50, col=1..4 avg=1.83
+  merged support: nonzero=19, row=6..7 avg=6.33, col=1..3 avg=1.90
+  GF(2) class transfer: odd_entries=16, rank=4, row_fail=0, col_fail=0, boundary_weight=12, xor_boundary_ok=True
+  GF(2) merged transfer: odd_entries=12, rank=3, row_fail=0, col_fail=0, boundary_weight=8, xor_boundary_ok=True
+  class transfer weight spectrum={1: 9, 2: 3, 3: 5, 4: 1, 5: 1, 7: 1, 8: 1, 10: 1}
+  merged transfer weight spectrum={1: 6, 2: 3, 3: 3, 4: 2, 5: 2, 7: 1, 8: 1, 10: 1}
+
+------------------------------------------------------------------------------
+n=5->6: parent classes=12, child classes=56, parent merged=10, child merged=34, multiplier=2^4
+  exact sums: class row/col errors=0/0, merged row/col errors=0/0
+  class support: nonzero=181, row=6..23 avg=15.08, col=1..6 avg=3.23
+  merged support: nonzero=112, row=4..21 avg=11.20, col=1..6 avg=3.29
+  GF(2) class transfer: odd_entries=124, rank=12, row_fail=0, col_fail=0, boundary_weight=56, xor_boundary_ok=True
+  GF(2) merged transfer: odd_entries=62, rank=10, row_fail=0, col_fail=0, boundary_weight=12, xor_boundary_ok=True
+  class transfer weight spectrum={'head': [(1, 31), (2, 15), (3, 28), (4, 12), (5, 25), (6, 12)], 'tail': [(12, 10), (13, 5), (14, 2), (15, 9), (16, 2), (19, 1)], 'distinct': 17}
+  merged transfer weight spectrum={'head': [(1, 11), (2, 10), (3, 6), (4, 3), (5, 6), (6, 7)], 'tail': [(20, 2), (22, 1), (26, 2), (27, 1), (28, 1), (30, 1)], 'distinct': 23}
+
+------------------------------------------------------------------------------
+n=6->7: parent classes=56, child classes=456, parent merged=34, child merged=272, multiplier=2^5
+  exact sums: class row/col errors=0/0, merged row/col errors=0/0
+  class support: nonzero=2338, row=8..57 avg=41.75, col=1..7 avg=5.13
+  merged support: nonzero=1312, row=8..57 avg=38.59, col=1..7 avg=4.82
+  GF(2) class transfer: odd_entries=1390, rank=56, row_fail=0, col_fail=0, boundary_weight=456, xor_boundary_ok=True
+  GF(2) merged transfer: odd_entries=668, rank=34, row_fail=0, col_fail=0, boundary_weight=88, xor_boundary_ok=True
+  class transfer weight spectrum={'head': [(1, 97), (2, 62), (3, 120), (4, 83), (5, 152), (6, 92)], 'tail': [(68, 1), (69, 1), (70, 1), (76, 1), (78, 1), (92, 1)], 'distinct': 62}
+  merged transfer weight spectrum={'head': [(1, 37), (2, 31), (3, 32), (4, 18), (5, 38), (6, 30)], 'tail': [(85, 3), (87, 2), (90, 2), (92, 1), (95, 2), (137, 1)], 'distinct': 85}
+
+==============================================================================
+SEQUENCES
+==============================================================================
+  class support: [2, 5, 22, 181, 2338]
+  merged support: [2, 5, 19, 112, 1312]
+  class GF2 rank: [1, 2, 4, 12, 56]
+  merged GF2 rank: [1, 2, 3, 10, 34]
+  class odd entries: [2, 4, 16, 124, 1390]
+  merged odd entries: [2, 4, 12, 62, 668]
+  merged boundary weight = SC child count: [2, 2, 8, 12, 88]
+
+==============================================================================
+CONSTRAINT STATEMENTS
+==============================================================================
+
+1. Endpoint transfer matrix.
+   Let A_n(C,D) count endpoint-extension children of fixed-path tilings in
+   class C at n that land in class D at n+1. Then:
+       Σ_D A_n(C,D) = 2^(n-1) F_n(C)
+       Σ_C A_n(C,D) = F_{n+1}(D).
+   This is not asymptotic. It is the exact cube product
+       Q_{m(n+1)} = Q_{m(n)} x Q_{n-1}
+   after quotienting by isomorphism.
+
+2. Merged endpoint transfer matrix.
+   The same law holds after complement merging, with bucket masses M:
+       Σ_V B_n(U,V) = 2^(n-1) M_n(U)
+       Σ_U B_n(U,V) = M_{n+1}(V).
+
+3. Recursive parity boundary.
+   Mod 2, every parent row has even sum because 2^(n-1) is even.  In the
+   unmerged transfer, every child column has odd sum because every F(D) is odd.
+   Thus the XOR of all parent parity rows is the all-child vector.
+
+4. Merged recursive boundary.
+   In the merged transfer, the XOR of all parent parity rows is exactly the
+   self-complementary child-node indicator.  The SC spine at n+1 can therefore
+   be recovered from endpoint-extension parity alone.
+
+5. Rank as recursive memory.
+   The GF(2) ranks measured here are small shadows of how much parent-level
+   information survives endpoint insertion.  If the rank sequence has a closed
+   form, it would be a recursive invariant of the quotient tower distinct from
+   class count, chromatic number, and H moments.  In the tested range the
+   parity transfer has full row rank, i.e. no parent parity signal is lost.

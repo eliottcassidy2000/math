@@ -3,20 +3,22 @@
 check_session_closed.py — Stop hook for Claude Code.
 
 Runs when Claude ends its response. Checks whether the session was properly
-closed (letter sent + pushed). If not, prints a warning to stderr so it
-appears in the Claude Code UI.
+closed (letter sent + pushed). If not, prints a blocking error to stderr so it
+appears in the Claude Code UI and the session cannot silently end.
 
 Detection heuristic:
 - Look at recent git log for a push since session start (tracked via .session-state.json)
 - Check if any outbox message was written in this session
-- If neither happened, warn Claude.
+- If either requirement is missing, block session close.
 
-This script is NON-BLOCKING: it exits 0 regardless, so it never prevents
-Claude from ending. It only prints a reminder.
+This script is intentionally blocking after the first session-state
+initialization call: it exits nonzero until the session letter exists and the
+current branch is cleanly pushed to its upstream.
 """
 
 import json
 import subprocess
+import sys
 from datetime import datetime
 from pathlib import Path
 
@@ -52,6 +54,16 @@ def get_remote_head():
         capture_output=True, text=True
     )
     return r.stdout.strip() if r.returncode == 0 else None
+
+
+def has_uncommitted_changes() -> bool:
+    r = subprocess.run(
+        ["git", "status", "--porcelain"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+    )
+    return bool(r.stdout.strip()) if r.returncode == 0 else True
 
 
 def count_outbox_messages(since_time: str) -> int:
@@ -95,7 +107,7 @@ def main():
     # Check if pushed
     local  = get_git_head()
     remote = get_remote_head()
-    if local and remote and local == remote:
+    if local and remote and local == remote and not has_uncommitted_changes():
         state["pushed"] = True
 
     # Check if a message was sent during this session
@@ -131,6 +143,7 @@ def main():
             "\n",
             flush=True
         )
+        sys.exit(2)
 
 
 if __name__ == "__main__":

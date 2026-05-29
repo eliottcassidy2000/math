@@ -23,6 +23,14 @@ These scripts have been run but results exist only in /tmp or session transcript
 | `deletion_contraction_M.py` | /tmp only | M submatrix != M(T-v) | MISSING |
 | `M_n7_structure.py` | /tmp only | Diagonal all odd at n=7 | MISSING |
 | `reversal_proof_attempt.py` | /tmp only | M(T) != M(T^op), M(T) != M(T^op)^T | MISSING |
+| `sixteen_dimensions_s93d.py`, `cartan_attention_theorem.py` | [STORED] | Corrected full/traceless dark-mode ratios and norm-ladder increment `4k+3` | `cartan_dimension_ladder_s95.md` |
+| `meta_blindspot_probe_s95.py` | [STORED] | Under-bridged topic pairs; exhaustive `n=6` H/FAS correlation; Royle-even/dark acyclic-orientation overlap | `meta_blindspot_probe_s95.out` |
+| `meta_flashlight_s95.py` | [STORED] | Bare Cartan decomposition of 0/1 tournament adjacency is inert; OCF lift `Omega(T)` is the variable symmetric sector separating residual `t3` fibers through n<=6 | `meta_flashlight_s95.out` |
+| `tiling_hamiltonian_ratios_s95.py` | [STORED] | Proves and verifies `F(C)=H(C)/Aut(C)` for explorer fixed-path tilings; records ratio spectra, same-class pair moments, silent edges, and edge energies for n=3..7 | `tiling_hamiltonian_ratios_s95.out` |
+| `recursive_insertion_exposure_s95.py` | [STORED] | Vertex insertion formula using bridge-exposure boundary state `Q_T`; verifies endpoint/scalar states are insufficient and `Q_T` gives zero-failure insertion responses for n=2..5 | `recursive_insertion_exposure_s95.out` |
+| `merged_tiling_bucket_constraints_s95.py` | [STORED] | Derives merged tiling bucket parity: unmerged fibers are odd; SC merged nodes are odd; NSC merged nodes are exactly `2*odd`; weighted cube-edge incidences satisfy `2λ+Στ=mM` for n=3..7 | `merged_tiling_bucket_constraints_s95.out` |
+| `endpoint_transfer_bucket_recursion_s95.py` | [STORED] | Builds exact endpoint-insertion transfer matrices between fixed-path quotient levels; verifies row/column bucket sums, SC parity boundary, and full GF(2) row rank for transitions n=2..6 | `endpoint_transfer_bucket_recursion_s95.out` |
+| `even_graph_endpoint_transfer_s95.py` | [STORED] | Builds the endpoint-transfer analogue for the even-graph quotient; row/column sums still hold, but GF(2) ranks `[1,1,2,6,8]` show rank defects unlike the tournament quotient | `even_graph_endpoint_transfer_s95.out` |
 
 ### How to bulk-capture results
 

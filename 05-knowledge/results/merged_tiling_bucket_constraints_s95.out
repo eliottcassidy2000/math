@@ -1,0 +1,115 @@
+==============================================================================
+MERGED TILING BUCKET CONSTRAINTS S95
+==============================================================================
+Convention: merged NSC nodes receive both complementary fixed-path fibers,
+so merged bucket masses still sum to the full explorer cube 2^m.
+
+------------------------------------------------------------------------------
+n=3, m=1, 2^m=2, classes V=2, SC=2, merged=(V+SC)/2=2
+  theorem checks: fiber=0, F-even=0, Aut-even=0, merged parity/type=0, even-v2-not-1=0
+  bucket split: odd SC buckets=2, even NSC buckets=0, SC odd mass=2, NSC even mass=0, sum=2
+  one-representative quotient sum: SC_mass + NSC_mass/2 = 2 (loss=0)
+  second moments: Σ_unmerged F²=2, Σ_merged M²=2, merge bonus=0
+  cube-edge buckets: loops=0, cross=1, total=1, incidence_errors=0, parity_incidence_failures=0
+  edge parity: odd cross buckets=1/1, cross weight spectrum={1: 1}
+  bucket spectra: M={1: 2}, SC odd={1: 2}, NSC half={}
+  loop spectrum={0: 2}
+------------------------------------------------------------------------------
+n=4, m=3, 2^m=8, classes V=4, SC=2, merged=(V+SC)/2=3
+  theorem checks: fiber=0, F-even=0, Aut-even=0, merged parity/type=0, even-v2-not-1=0
+  bucket split: odd SC buckets=2, even NSC buckets=1, SC odd mass=6, NSC even mass=2, sum=8
+  one-representative quotient sum: SC_mass + NSC_mass/2 = 7 (loss=1)
+  second moments: Σ_unmerged F²=28, Σ_merged M²=30, merge bonus=2
+  cube-edge buckets: loops=5, cross=7, total=12, incidence_errors=0, parity_incidence_failures=0
+  edge parity: odd cross buckets=1/3, cross weight spectrum={1: 1, 2: 1, 4: 1}
+  bucket spectra: M={1: 1, 2: 1, 5: 1}, SC odd={1: 1, 5: 1}, NSC half={1: 1}
+  loop spectrum={0: 2, 5: 1}
+------------------------------------------------------------------------------
+n=5, m=6, 2^m=64, classes V=12, SC=8, merged=(V+SC)/2=10
+  theorem checks: fiber=0, F-even=0, Aut-even=0, merged parity/type=0, even-v2-not-1=0
+  bucket split: odd SC buckets=8, even NSC buckets=2, SC odd mass=52, NSC even mass=12, sum=64
+  one-representative quotient sum: SC_mass + NSC_mass/2 = 58 (loss=6)
+  second moments: Σ_unmerged F²=540, Σ_merged M²=592, merge bonus=52
+  cube-edge buckets: loops=20, cross=172, total=192, incidence_errors=0, parity_incidence_failures=0
+  edge parity: odd cross buckets=8/21, cross weight spectrum={1: 3, 2: 2, 4: 2, 5: 1, 6: 2, 7: 1, 8: 3, 9: 2, 14: 1, 16: 2, 22: 1, 23: 1}
+  bucket spectra: M={1: 2, 2: 1, 3: 1, 5: 1, 9: 2, 10: 1, 11: 1, 13: 1}, SC odd={1: 2, 3: 1, 5: 1, 9: 2, 11: 1, 13: 1}, NSC half={1: 1, 5: 1}
+  loop spectrum={0: 7, 4: 1, 6: 1, 10: 1}
+------------------------------------------------------------------------------
+n=6, m=10, 2^m=1024, classes V=56, SC=12, merged=(V+SC)/2=34
+  theorem checks: fiber=0, F-even=0, Aut-even=0, merged parity/type=0, even-v2-not-1=0
+  bucket split: odd SC buckets=12, even NSC buckets=22, SC odd mass=240, NSC even mass=784, sum=1024
+  one-representative quotient sum: SC_mass + NSC_mass/2 = 632 (loss=392)
+  second moments: Σ_unmerged F²=27800, Σ_merged M²=48724, merge bonus=20924
+  cube-edge buckets: loops=494, cross=4626, total=5120, incidence_errors=0, parity_incidence_failures=0
+  edge parity: odd cross buckets=8/143, cross weight spectrum={'head': [(1, 2), (2, 7), (4, 3), (5, 1), (6, 5), (8, 9), (10, 6)], 'tail': [(76, 2), (92, 1), (100, 1), (104, 1), (108, 1), (112, 1), (148, 1)], 'distinct': 44}
+  bucket spectra: M={'head': [(1, 2), (2, 2), (5, 1), (6, 1), (10, 2), (15, 2), (17, 2)], 'tail': [(46, 2), (50, 1), (58, 1), (62, 1), (66, 1), (74, 2), (86, 1)], 'distinct': 23}, SC odd={1: 2, 5: 1, 15: 2, 17: 2, 29: 2, 33: 1, 37: 1, 41: 1}, NSC half={'head': [(1, 2), (3, 1), (5, 2), (9, 3), (11, 2), (13, 1), (15, 1)], 'tail': [(23, 2), (25, 1), (29, 1), (31, 1), (33, 1), (37, 2), (43, 1)], 'distinct': 15}
+  loop spectrum={'head': [(0, 16), (5, 1), (6, 1), (8, 1), (10, 4), (12, 2), (17, 1)], 'tail': [(24, 1), (28, 1), (39, 1), (45, 1), (50, 1), (58, 1), (132, 1)], 'distinct': 15}
+------------------------------------------------------------------------------
+n=7, m=15, 2^m=32768, classes V=456, SC=88, merged=(V+SC)/2=272
+  theorem checks: fiber=0, F-even=0, Aut-even=0, merged parity/type=0, even-v2-not-1=0
+  bucket split: odd SC buckets=88, even NSC buckets=184, SC odd mass=7308, NSC even mass=25460, sum=32768
+  one-representative quotient sum: SC_mass + NSC_mass/2 = 20038 (loss=12730)
+  second moments: Σ_unmerged F²=3186296, Σ_merged M²=5547240, merge bonus=2360944
+  cube-edge buckets: loops=5504, cross=240256, total=245760, incidence_errors=0, parity_incidence_failures=0
+  edge parity: odd cross buckets=124/2123, cross weight spectrum={'head': [(1, 5), (2, 14), (3, 1), (4, 6), (5, 2), (6, 10), (7, 1)], 'tail': [(404, 2), (416, 1), (420, 2), (436, 1), (464, 1), (480, 1), (674, 1)], 'distinct': 211}
+  bucket spectra: M={'head': [(1, 3), (2, 3), (3, 1), (5, 1), (6, 1), (9, 3), (10, 4)], 'tail': [(266, 2), (270, 2), (274, 2), (278, 2), (286, 1), (302, 1), (306, 1)], 'distinct': 118}, SC odd={'head': [(1, 3), (3, 1), (5, 1), (9, 3), (11, 2), (13, 1), (17, 1)], 'tail': [(145, 2), (147, 1), (151, 3), (153, 1), (155, 1), (157, 1), (159, 3)], 'distinct': 55}, NSC half={'head': [(1, 3), (3, 1), (5, 4), (9, 4), (11, 3), (13, 1), (15, 5)], 'tail': [(133, 2), (135, 2), (137, 2), (139, 2), (143, 1), (151, 1), (153, 1)], 'distinct': 63}
+  loop spectrum={'head': [(0, 170), (4, 1), (6, 5), (8, 2), (10, 6), (12, 4), (14, 2)], 'tail': [(120, 1), (142, 1), (146, 1), (148, 1), (156, 1), (206, 1), (248, 1)], 'distinct': 51}
+==============================================================================
+SEQUENCES n=3..7
+==============================================================================
+  V classes: [2, 4, 12, 56, 456]
+  SC classes = odd merged buckets: [2, 2, 8, 12, 88]
+  merged nodes: [2, 3, 10, 34, 272]
+  SC odd mass: [2, 6, 52, 240, 7308]
+  NSC even mass: [0, 2, 12, 784, 25460]
+  one-representative quotient sum: [2, 7, 58, 632, 20038]
+  Σ merged M²: [2, 30, 592, 48724, 5547240]
+  merge bonus Σ_M M² - Σ_C F²: [0, 2, 52, 20924, 2360944]
+  merged silent loop edges: [0, 5, 20, 494, 5504]
+  merged cross edges: [1, 7, 172, 4626, 240256]
+  odd cross-edge buckets: [1, 1, 8, 8, 124]
+  odd weighted cross-incidence nodes: [2, 2, 0, 0, 88]
+==============================================================================
+CONSTRAINT STATEMENTS
+==============================================================================
+
+1. Odd-bucket theorem.
+   Every unmerged explorer fiber F(C)=H(C)/|Aut(C)| is odd. Redei gives H(C)
+   odd, and tournament automorphism groups have odd order because an involution
+   would reverse the edge inside one of its 2-cycles.
+
+2. Merged parity theorem.
+   In the complement-merged explorer, a node has odd mass exactly when it is
+   self-complementary. NSC nodes have mass 2F(C), hence v2(mass)=1. Therefore:
+       2^m = sum_{SC nodes} odd + sum_{NSC nodes} 2*odd.
+   Since 2^m and every NSC bucket are even, the SC mass is even; because it is
+   a sum of odd buckets, the number SC_n of self-complementary classes is even
+   for every n with a nonempty fixed-path cube.
+
+3. Self-complementary mass identity.
+   Let S_n be the sum of merged odd bucket masses. Then the sum obtained by
+   keeping only one representative from every NSC complement pair is
+       Q_n = S_n + (2^m - S_n)/2 = 2^(m-1) + S_n/2.
+   The previous parity theorem forces S_n even, so Q_n is always integral.
+
+4. Merged second-moment identity.
+   If NSC pairs have half-fiber f, merging changes the second moment by
+       (2f)^2 - f^2 - f^2 = 2f^2.
+   Hence
+       Σ_merged M^2 = Σ_unmerged F^2 + 2 Σ_NSC-pairs F^2.
+   This is the pair-count cost of hiding complement chirality.
+
+5. Weighted quotient-edge balance.
+   Let lambda_u be the number of one-tile cube edges staying inside merged node
+   u, and tau_uv the number of cube edges between merged nodes u and v. Then
+       2 lambda_u + Σ_{v!=u} tau_uv = m M_u.
+   Loops consume two flip incidences, cross buckets consume one incidence at
+   each endpoint. Summing over u recovers m*2^m = 2E(cube).
+
+6. Incidence parity constraint.
+   Because 2 lambda_u is even,
+       Σ_{v!=u} tau_uv == m M_u (mod 2).
+   Thus when m is odd, precisely the SC merged nodes have odd weighted
+   cross-incidence; when m is even, every merged node has even weighted
+   cross-incidence. This turns self-complementarity into an edge-parity
+   boundary condition on the merged graph.

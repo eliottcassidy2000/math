@@ -1,0 +1,52 @@
+========================================================================
+META FLASHLIGHT S95: WHERE THE CURRENT ANALOGIES HAVE BLIND SPOTS
+========================================================================
+
+1. Bare Cartan decomposition of 0/1 adjacency is inert
+   For every tournament A, S=(A+A^T)/2=(J-I)/2.
+   Therefore ||S||_F^2 = ||K||_F^2 = C(n,2)/2 for all T.
+   n=3: symmetric_norm_sq=skew_norm_sq=1.5
+   n=4: symmetric_norm_sq=skew_norm_sq=3.0
+   n=5: symmetric_norm_sq=skew_norm_sq=5.0
+   n=6: symmetric_norm_sq=skew_norm_sq=7.5
+   n=7: symmetric_norm_sq=skew_norm_sq=10.5
+
+2. OCF lift T -> Omega(T) is a variable symmetric dark sector
+
+   n=3: tournaments=8, OCF mismatches=0
+     H spectrum size=2, range=[1, 3]
+     odd gaps through max=[]
+     conductor D=odd_part(C(n,2))=3; H residues seen=[0, 1]
+     t3 fibers with multiple H values=0/2
+
+   n=4: tournaments=64, OCF mismatches=0
+     H spectrum size=3, range=[1, 5]
+     odd gaps through max=[]
+     conductor D=odd_part(C(n,2))=3; H residues seen=[0, 1, 2]
+     t3 fibers with multiple H values=0/3
+
+   n=5: tournaments=1024, OCF mismatches=0
+     H spectrum size=7, range=[1, 15]
+     odd gaps through max=[7]
+     conductor D=odd_part(C(n,2))=5; H residues seen=[0, 1, 3, 4]
+     t3 fibers with multiple H values=1/6
+       t3= 4: H range [ 11, 15], distinct= 3, |Omega|=[5, 6, 7], alpha2=[0]
+
+   n=6: tournaments=32768, OCF mismatches=0
+     H spectrum size=19, range=[1, 45]
+     odd gaps through max=[7, 21, 35, 39]
+     conductor D=odd_part(C(n,2))=15; H residues seen=[0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14]
+     t3 fibers with multiple H values=6/9
+       t3= 2: H range [  5,  9], distinct= 2, |Omega|=[2], alpha2=[0, 1]
+       t3= 4: H range [ 11, 17], distinct= 4, |Omega|=[5, 6, 7, 8], alpha2=[0, 1]
+       t3= 5: H range [ 15, 27], distinct= 4, |Omega|=[7, 9, 11], alpha2=[0, 1]
+       t3= 6: H range [ 23, 37], distinct= 6, |Omega|=[10, 11, 12, 13, 14], alpha2=[0, 1, 2]
+       t3= 7: H range [ 33, 37], distinct= 2, |Omega|=[14, 16], alpha2=[0, 1, 2]
+       t3= 8: H range [ 41, 45], distinct= 3, |Omega|=[14, 16, 19, 20], alpha2=[1, 2, 4]
+
+3. New meta-hypothesis suggested by the data
+   The useful symmetric sector is not the raw Cartan S of A; it is
+   the functorial lift Omega(T), transfer M(T), or weighted attention.
+   Conditioning on t3 removes the first centered skew-chaos term,
+   but H variation remains exactly where Omega gains independent sets.
+   Search target: residual H within fixed t3 fibers, ordered by alpha2.

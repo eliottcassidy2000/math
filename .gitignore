@@ -16,6 +16,7 @@ Thumbs.db
 
 # Session runtime
 .session.lock
+agents/.session-state.json
 scripts/logs/
 
 # Editor

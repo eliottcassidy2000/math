@@ -1,5 +1,14 @@
 # Session Log
 
+## codex-2026-05-29-S1 — 2026-05-29: GitHub Close-Out Guardrail + Even-Graph Endpoint Boundary
+
+**Account:** codex
+**Continuation of:** codex-s95-recursive-results
+**Files read:** CLAUDE.md; AGENTS.md; agents/finish_session.py; agents/check_session_closed.py; 04-computation/even_graph_endpoint_transfer_s95.py; 05-knowledge/hypotheses/HYP-1768-endpoint-transfer-recursive-boundary.md; 07-reflections/recursive-boundary-s95.md
+**Summary of work:** First committed and pushed stale inbox processing work to `origin/codex-s95-recursive-results`. Added Codex-facing repository close-out instructions and strengthened the existing closer/hook path so future sessions push the current branch upstream instead of leaving local work stranded. Reran the even-graph endpoint transfer computation and formalized the endpoint-transfer parity boundary.
+**New contributions:** `AGENTS.md`; `THM-266-endpoint-transfer-boundary.md`; HYP-1769 even-graph endpoint rank defect evidence refreshed; `agents/finish_session.py` now pushes the current branch/upstream; `agents/check_session_closed.py` now blocks dirty/ahead unclosed sessions.
+**Unresolved threads:** GitHub CLI auth token for `gh` is invalid on this machine, but normal `git push` over the configured SSH remote works. Full-row-rank of tournament endpoint transfer remains conjectural beyond tested levels; even-graph rank defect needs a Sylow-2 automorphism explanation.
+
 ## opus-2026-05-29-S13 — 2026-05-29
 
 **Summary:** Formalized the good-cut bucket constraints in Lean and used the formal object to generate a new merged-metagraph hypothesis: the good-cut count may descend from the base-path tiling model to `G_n/Z_2`.

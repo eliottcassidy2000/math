@@ -1,0 +1,126 @@
+==============================================================================
+TILING-HAMILTONIAN RATIOS S95
+==============================================================================
+
+Theorem under test: F(C) = H(C)/|Aut(C)| for the explorer fixed path.
+Terminology: F(C) is the path-fiber; F/H = 1/|Aut| is the tiling ratio.
+
+------------------------------------------------------------------------------
+n=3, m=C(n-1,2)=1, tilings=2^m=2, classes=2
+  theorem mismatches: 0
+  ratio spectrum F/H: {'1/1': 1, '1/3': 1}
+  sums: ΣF=2, ΣH=4, ΣF·H=4, ΣF²=2, ΣC(F,2)=0
+  cube edges: total=1, silent=0, cross=1, edge_F_energy=1, edge_H_energy=3
+  automorphic defect Σ(H-F)=ΣH(1-1/Aut)=2
+
+------------------------------------------------------------------------------
+n=4, m=C(n-1,2)=3, tilings=2^m=8, classes=4
+  theorem mismatches: 0
+  ratio spectrum F/H: {'1/1': 2, '1/3': 2}
+  sums: ΣF=8, ΣH=12, ΣF·H=32, ΣF²=28, ΣC(F,2)=10
+  cube edges: total=12, silent=5, cross=7, edge_F_energy=27, edge_H_energy=71
+  automorphic defect Σ(H-F)=ΣH(1-1/Aut)=4
+  H-collisions (H: class_count, total_F, [(F,Aut,c3,self_comp), ...]):
+    H=3: 2 classes, total_F=2, [(1, 3, 1, False), (1, 3, 1, False)]
+
+------------------------------------------------------------------------------
+n=5, m=C(n-1,2)=6, tilings=2^m=64, classes=12
+  theorem mismatches: 0
+  ratio spectrum F/H: {'1/1': 7, '1/3': 4, '1/5': 1}
+  sums: ΣF=64, ΣH=92, ΣF·H=632, ΣF²=540, ΣC(F,2)=238
+  cube edges: total=192, silent=20, cross=172, edge_F_energy=12296, edge_H_energy=18612
+  automorphic defect Σ(H-F)=ΣH(1-1/Aut)=28
+  H-collisions (H: class_count, total_F, [(F,Aut,c3,self_comp), ...]):
+    H=3: 3 classes, total_F=3, [(1, 3, 1, False), (1, 3, 1, False), (1, 3, 1, True)]
+    H=5: 2 classes, total_F=10, [(5, 1, 2, False), (5, 1, 2, False)]
+    H=9: 2 classes, total_F=18, [(9, 1, 3, True), (9, 1, 3, True)]
+    H=15: 2 classes, total_F=8, [(3, 5, 5, True), (5, 3, 4, True)]
+
+------------------------------------------------------------------------------
+n=6, m=C(n-1,2)=10, tilings=2^m=1024, classes=56
+  theorem mismatches: 0
+  ratio spectrum F/H: {'1/1': 41, '1/3': 12, '1/5': 2, '1/9': 1}
+  sums: ΣF=1024, ΣH=1224, ΣF·H=29696, ΣF²=27800, ΣC(F,2)=13388
+  cube edges: total=5120, silent=264, cross=4856, edge_F_energy=3832396, edge_H_energy=4393168
+  automorphic defect Σ(H-F)=ΣH(1-1/Aut)=200
+  H-collisions (H: class_count, total_F, [(F,Aut,c3,self_comp), ...]):
+    H=3: 4 classes, total_F=4, [(1, 3, 1, False), (1, 3, 1, False), (1, 3, 1, False), (1, 3, 1, False)]
+    H=5: 3 classes, total_F=15, [(5, 1, 2, False), (5, 1, 2, False), (5, 1, 2, True)]
+    H=9: 5 classes, total_F=37, [(1, 9, 2, True), (9, 1, 3, False), (9, 1, 3, False), (9, 1, 3, False), (9, 1, 3, False)]
+    H=11: 2 classes, total_F=22, [(11, 1, 4, False), (11, 1, 4, False)]
+    H=13: 2 classes, total_F=26, [(13, 1, 4, False), (13, 1, 4, False)]
+    H=15: 6 classes, total_F=46, [(3, 5, 5, False), (3, 5, 5, False), (5, 3, 4, False), (5, 3, 4, False), (15, 1, 4, False), (15, 1, 4, False)]
+    H=17: 2 classes, total_F=34, [(17, 1, 4, True), (17, 1, 4, True)]
+    H=19: 2 classes, total_F=38, [(19, 1, 5, False), (19, 1, 5, False)]
+    H=23: 4 classes, total_F=92, [(23, 1, 5, False), (23, 1, 5, False), (23, 1, 6, False), (23, 1, 6, False)]
+    H=25: 2 classes, total_F=50, [(25, 1, 6, False), (25, 1, 6, False)]
+    H=27: 2 classes, total_F=18, [(9, 3, 5, False), (9, 3, 5, False)]
+    H=29: 4 classes, total_F=116, [(29, 1, 6, False), (29, 1, 6, False), (29, 1, 6, True), (29, 1, 6, True)]
+
+------------------------------------------------------------------------------
+n=7, m=C(n-1,2)=15, tilings=2^m=32768, classes=456
+  theorem mismatches: 0
+  ratio spectrum F/H: {'1/1': 399, '1/21': 1, '1/3': 47, '1/5': 4, '1/7': 1, '1/9': 4}
+  sums: ΣF=32768, ΣH=35180, ΣF·H=3251200, ΣF²=3186296, ΣC(F,2)=1576764
+  cube edges: total=245760, silent=5504, cross=240256, edge_F_energy=2482098524, edge_H_energy=2585540208
+  automorphic defect Σ(H-F)=ΣH(1-1/Aut)=2412
+  H-collisions (H: class_count, total_F, [(F,Aut,c3,self_comp), ...]):
+    H=3: 5 classes, total_F=5, [(1, 3, 1, False), (1, 3, 1, False), (1, 3, 1, False), (1, 3, 1, False), (1, 3, 1, True)]
+    H=5: 4 classes, total_F=20, [(5, 1, 2, False), (5, 1, 2, False), (5, 1, 2, False), (5, 1, 2, False)]
+    H=9: 9 classes, total_F=57, [(1, 9, 2, False), (1, 9, 2, False), (1, 9, 2, True), (9, 1, 3, False), (9, 1, 3, False), (9, 1, 3, False), (9, 1, 3, False), (9, 1, 3, True), (9, 1, 3, True)]
+    H=11: 3 classes, total_F=33, [(11, 1, 4, False), (11, 1, 4, False), (11, 1, 4, True)]
+    H=13: 3 classes, total_F=39, [(13, 1, 4, False), (13, 1, 4, False), (13, 1, 4, True)]
+    H=15: 12 classes, total_F=94, [(3, 5, 5, False), (3, 5, 5, False), (3, 5, 5, True), (5, 3, 3, False), (5, 3, 3, False), (5, 3, 4, False), (5, 3, 4, False), (5, 3, 4, True), (15, 1, 4, False), (15, 1, 4, False), (15, 1, 4, False), (15, 1, 4, False)]
+    H=17: 4 classes, total_F=68, [(17, 1, 4, False), (17, 1, 4, False), (17, 1, 4, False), (17, 1, 4, False)]
+    H=19: 4 classes, total_F=76, [(19, 1, 5, False), (19, 1, 5, False), (19, 1, 5, False), (19, 1, 5, False)]
+    H=23: 8 classes, total_F=184, [(23, 1, 5, False), (23, 1, 5, False), (23, 1, 5, False), (23, 1, 5, False), (23, 1, 6, False), (23, 1, 6, False), (23, 1, 6, False), (23, 1, 6, False)]
+    H=25: 5 classes, total_F=125, [(25, 1, 5, True), (25, 1, 6, False), (25, 1, 6, False), (25, 1, 6, False), (25, 1, 6, False)]
+    H=27: 7 classes, total_F=117, [(9, 3, 5, False), (9, 3, 5, False), (9, 3, 5, False), (9, 3, 5, False), (27, 1, 5, False), (27, 1, 5, False), (27, 1, 5, True)]
+    H=29: 10 classes, total_F=290, [(29, 1, 5, False), (29, 1, 5, False), (29, 1, 6, False), (29, 1, 6, False), (29, 1, 6, False), (29, 1, 6, False), (29, 1, 6, False), (29, 1, 6, False), (29, 1, 6, False), (29, 1, 6, False)]
+
+==============================================================================
+SEQUENCES
+==============================================================================
+  classes: [2, 4, 12, 56, 456]
+  ΣF = total tilings: [2, 8, 64, 1024, 32768]
+  ΣH over classes: [4, 12, 92, 1224, 35180]
+  ΣF·H = path-fiber H moment: [4, 32, 632, 29696, 3251200]
+  ΣF² = ordered same-class tiling pairs: [2, 28, 540, 27800, 3186296]
+  ΣC(F,2) = unordered same-class tiling pairs: [0, 10, 238, 13388, 1576764]
+  silent cube edges: [0, 5, 20, 264, 5504]
+  cross cube edges: [1, 7, 172, 4856, 240256]
+  edge tiling energy Σ_edges F_i F_j: [1, 27, 12296, 3832396, 2482098524]
+  edge H energy Σ_edges H_i H_j: [3, 71, 18612, 4393168, 2585540208]
+  automorphic defect Σ(H-F): [2, 4, 28, 200, 2412]
+
+==============================================================================
+PROVED STATEMENTS
+==============================================================================
+
+1. Fixed-path fiber theorem.
+   For every isomorphism class C,
+       F(C) = H(C)/|Aut(C)|.
+   Proof: count pairs (labeled copy of C, Hamiltonian path in that copy).
+   There are (n!/|Aut|)H such pairs. The symmetric group is transitive on
+   the n! possible ordered vertex paths, so exactly H/|Aut| copies contain
+   the explorer's fixed path P0.
+
+2. Tiling ratio theorem.
+       F(C)/H(C) = 1/|Aut(C)|.
+   The only possible ratios are reciprocals of odd automorphism orders.
+   Generic rigid classes have ratio 1; symmetric classes are compressed.
+
+3. Total path-fiber theorem.
+       Σ_C F(C) = Σ_C H(C)/|Aut(C)| = 2^C(n-1,2).
+   This is just partitioning the explorer's staircase hypercube by class.
+
+4. Same-class pair theorem.
+       ordered same-class tiling pairs = Σ_C F(C)^2 = Σ_C H(C)^2/|Aut(C)|^2.
+       unordered same-class pairs = Σ_C C(F(C),2).
+   These are natural "second moment" sequences for the explorer quotient.
+
+5. Cube-edge balance theorem.
+   If W_ij counts directed single-tile flips from class i to class j, then
+       Σ_j W_ij = m F_i
+   and W is symmetric. Hence the quotient flip chain is reversible with
+   stationary distribution proportional to F_i = H_i/|Aut_i|.
