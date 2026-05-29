@@ -1,0 +1,61 @@
+Enumerating 2^21 = 2097152 n=7 tournaments
+  progress: 50000/2097152 (2.38%), eta 505s
+  progress: 100000/2097152 (4.77%), eta 505s
+  progress: 150000/2097152 (7.15%), eta 495s
+  progress: 200000/2097152 (9.54%), eta 486s
+  progress: 250000/2097152 (11.92%), eta 476s
+  progress: 300000/2097152 (14.31%), eta 460s
+  progress: 350000/2097152 (16.69%), eta 448s
+  progress: 400000/2097152 (19.07%), eta 434s
+  progress: 450000/2097152 (21.46%), eta 424s
+  progress: 500000/2097152 (23.84%), eta 412s
+  progress: 550000/2097152 (26.23%), eta 398s
+  progress: 600000/2097152 (28.61%), eta 387s
+  progress: 650000/2097152 (30.99%), eta 375s
+  progress: 700000/2097152 (33.38%), eta 364s
+  progress: 750000/2097152 (35.76%), eta 352s
+  progress: 800000/2097152 (38.15%), eta 338s
+  progress: 850000/2097152 (40.53%), eta 326s
+  progress: 900000/2097152 (42.92%), eta 312s
+  progress: 950000/2097152 (45.30%), eta 299s
+  progress: 1000000/2097152 (47.68%), eta 286s
+  progress: 1050000/2097152 (50.07%), eta 272s
+  progress: 1100000/2097152 (52.45%), eta 259s
+  progress: 1150000/2097152 (54.84%), eta 246s
+  progress: 1200000/2097152 (57.22%), eta 233s
+  progress: 1250000/2097152 (59.60%), eta 220s
+  progress: 1300000/2097152 (61.99%), eta 207s
+  progress: 1350000/2097152 (64.37%), eta 194s
+  progress: 1400000/2097152 (66.76%), eta 181s
+  progress: 1450000/2097152 (69.14%), eta 169s
+  progress: 1500000/2097152 (71.53%), eta 156s
+  progress: 1550000/2097152 (73.91%), eta 143s
+  progress: 1600000/2097152 (76.29%), eta 130s
+  progress: 1650000/2097152 (78.68%), eta 117s
+  progress: 1700000/2097152 (81.06%), eta 104s
+  progress: 1750000/2097152 (83.45%), eta 91s
+  progress: 1800000/2097152 (85.83%), eta 78s
+  progress: 1850000/2097152 (88.21%), eta 64s
+  progress: 1900000/2097152 (90.60%), eta 51s
+  progress: 1950000/2097152 (92.98%), eta 38s
+  progress: 2000000/2097152 (95.37%), eta 25s
+  progress: 2050000/2097152 (97.75%), eta 12s
+  Done in 545.7s
+n=7: H distribution computed
+  Number of distinct H values: 77
+  Min H = 1, Max H = 189
+  Total tournaments: 2097152
+  Expected: 2^21 = 2097152
+
+  Count for key target H values:
+    H=7: 0
+    H=21: 0
+    H=35: 10080
+    H=39: 10080
+    H=49: 35280
+    H=63: 0
+    H=77: 50400
+    H=91: 75600
+
+  Forbidden odd H in [1, 189] at n=7: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+  Count of forbidden: 18

@@ -1,0 +1,70 @@
+THM-343 AUDIT (opus-2026-05-28-S6)
+============================================================
+============================================================
+A1. OCF: H(T) = I(Omega(T), 2)
+============================================================
+  n=3: 8 tournaments, 0 OCF failures. OK
+  n=4: 64 tournaments, 0 OCF failures. OK
+  n=5: 1024 tournaments, 0 OCF failures. OK
+  n=6: 32768 tournaments, 0 OCF failures. OK
+
+============================================================
+A2. Uniqueness of (3,0,0,...) for alpha_1 + 2 alpha_2 + ... = 3
+============================================================
+  All raw non-neg integer solutions: [(1, 1, 0), (3, 0, 0)]
+  Solutions satisfying chain constraint: [(3, 0, 0)]
+  UNIQUE solution (3, 0, 0). OK
+
+============================================================
+A3. Chain constraint alpha_k >= 1 ==> alpha_{k-1} >= k
+============================================================
+  n=3: 8 tournaments, 0 violations. OK
+  n=4: 64 tournaments, 0 violations. OK
+  n=5: 1024 tournaments, 0 violations. OK
+  n=6: 32768 tournaments, 0 violations. OK
+
+============================================================
+A4. SCC partition property
+============================================================
+  n=2: 2 tournaments, 0 partition violations. OK
+  n=3: 8 tournaments, 0 partition violations. OK
+  n=4: 64 tournaments, 0 partition violations. OK
+  n=5: 1024 tournaments, 0 partition violations. OK
+
+============================================================
+A5. Directed cycles contained in single SCC
+============================================================
+  n=3: 8 tournaments, 0 violations. OK
+  n=4: 64 tournaments, 0 violations. OK
+  n=5: 1024 tournaments, 0 violations. OK
+
+============================================================
+A7. n=4 SC has unique score sequence (1,1,2,2)
+============================================================
+  n=4: 24 SC tournaments; distinct score sequences: {(1, 1, 2, 2)}
+  OK
+
+============================================================
+A8. 3-cycle count c_3 = C(n,3) - sum C(s_i, 2)
+============================================================
+  n=3: 8 tournaments, 0 mismatches. OK
+  n=4: 64 tournaments, 0 mismatches. OK
+  n=5: 1024 tournaments, 0 mismatches. OK
+
+============================================================
+A9. Moon-Moser: SC tournament on n verts has >= n-2 three-cycles
+============================================================
+  n=3: 2 SC tournaments; min c3 = 1; bound n-2=1; violations: 0
+  n=4: 24 SC tournaments; min c3 = 2; bound n-2=2; violations: 0
+  n=5: 544 SC tournaments; min c3 = 3; bound n-2=3; violations: 0
+  n=6: 22320 SC tournaments; min c3 = 4; bound n-2=4; violations: 0
+
+============================================================
+A10. Camion: SC tournament has directed Hamilton cycle
+============================================================
+  n=3: 2 SC tournaments; violations: 0
+  n=4: 24 SC tournaments; violations: 0
+  n=5: 544 SC tournaments; violations: 0
+  n=6: 22320 SC tournaments; violations: 0
+
+FAST AUDIT COMPLETE

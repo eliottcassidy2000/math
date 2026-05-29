@@ -21,38 +21,53 @@ Equivalently: the value 7 does not appear in the H-spectrum of any tournament.
 - n=8: SAMPLED (50,000 random tournaments), 0 violations found.
 - See: `05-knowledge/results/h7_impossible_s4.out`, `thm343_complete_proof_s5.out`.
 
-## Complete Proof (NEW — opus-2026-05-28-S5, all n)
+## Complete Proof (REVISED — opus-2026-05-28-S6 audit)
+
+**Audited assumptions** (`05-knowledge/results/audit_thm343_s6.out`):
+
+| ID  | Assumption                                                                  | Verification          |
+|-----|-----------------------------------------------------------------------------|-----------------------|
+| A1  | OCF: H(T) = I(Ω(T), 2)                                                       | exhaustive n=3..6 ✓   |
+| A2  | (3,0,0,...) is unique non-negative integer solution under chain constraint | algebraic + audit ✓   |
+| A3  | Chain constraint: α_k ≥ 1 ⇒ α_{k-1} ≥ k                                     | exhaustive n=3..6 ✓   |
+| A7  | n=4 SC has unique score sequence (1,1,2,2)                                   | exhaustive ✓          |
+| A8  | c₃(T) = C(n,3) − Σ C(s_i, 2)                                                 | exhaustive n=3..5 ✓   |
+| A9  | Moon (1966) Cor 2.1: SC tournament on n has ≥ n−k+1 cycles of length k       | n=3..6 ✓ for k=3      |
+| A10 | Camion (1959): SC ⇒ ∃ directed Hamilton cycle                                | exhaustive n=3..6 ✓   |
+
+**References:**
+  - Grinberg-Stanley, OCF: arXiv:2412.10572 Corollary 20.
+  - Moon, J.W. (1966), *On subtournaments of a tournament*, Canad. Math. Bull. 9 (3), 297-301 — **Corollary 2.1**: "The minimum number of cycles of length k a strong tournament T_n can contain is n − k + 1." (k = 3, ..., n.)
+  - Camion, P. (1959), *Chemins et circuits hamiltoniens des graphes complets*, C. R. Acad. Sci. Paris 249, 2151-2152.
+
+---
 
 **Theorem.** For every tournament T, H(T) ≠ 7.
 
-**Proof.** By the Odd-Cycle Collection Formula (Grinberg-Stanley, arXiv:2412.10572):
-  H(T) = I(Ω(T), 2) = Σ_{k≥0} α_k(T) · 2^k
-where α_k = #{ size-k independent sets in Ω(T) }, the conflict graph of odd directed cycles in T.
+**Proof.** Suppose for contradiction H(T) = 7.
 
-Setting H = 7 gives 1 + 2α₁ + 4α₂ + 8α₃ + ⋯ = 7, so
-  α₁ + 2α₂ + 4α₃ + ⋯ = 3.
-Since α_k ≥ 0 are integers, the **unique** non-negative solution is α₁ = 3 and α_k = 0 for k ≥ 2.
+**Step 1 (decomposition is unique).** By OCF, H = 1 + 2α₁ + 4α₂ + 8α₃ + ⋯ = 7, so α₁ + 2α₂ + 4α₃ + ⋯ = 3. The non-negative integer solutions are (3, 0, 0, ⋯) and (1, 1, 0, ⋯). The second is ruled out by the **chain constraint** α_k ≥ 1 ⇒ α_{k−1} ≥ k (each k-independent set has k distinct (k−1)-subsets, each itself independent): α₂ = 1 requires α₁ ≥ 2, but the decomposition has α₁ = 1. So only (3, 0, 0, ⋯) is feasible.
 
-Thus T has exactly 3 odd directed cycles, say C₁, C₂, C₃, and **every pair shares a vertex** (α₂ = 0). Equivalently, Ω(T) = K₃.
+Thus T has exactly 3 distinct odd directed cycles C₁, C₂, C₃, every pair sharing at least one vertex.
 
-**Claim**: All three cycles lie in a single strongly-connected component (SCC) of T.
+**Step 2 (local strong connectivity).** Let V' = V(C₁) ∪ V(C₂) ∪ V(C₃) and let T[V'] be the induced sub-tournament. Each cycle C_i is strongly connected (trivially, on its vertex set). Two strongly-connected sub-digraphs sharing at least one vertex have an SC union (reachability transits through the shared vertex). By transitivity, C₁ ∪ C₂ ∪ C₃ (as a sub-digraph of T) is SC. Since T[V'] contains C₁ ∪ C₂ ∪ C₃, and adding arcs to an SC digraph keeps it SC, **T[V'] is strongly connected**.
 
-*Proof of claim*: Every directed cycle of T is contained in a unique SCC. If C_i and C_j lay in different SCCs they would be vertex-disjoint (SCCs partition V), contradicting their adjacency in Ω.  Hence all three cycles share a single SCC, call it S.
+**Step 3 (size analysis).** Let s = |V'|. Since C₁ is a directed cycle of length ≥ 3, s ≥ 3.
 
-Let s = |S|. Then S is a strongly connected tournament on s vertices, and it must contain ≥ 3 odd directed cycles in total. We case-split on s.
+- **s = 3.** A 3-vertex tournament has exactly one directed 3-cycle (when SC). Cannot contain 3 distinct directed cycles. Contradiction.
 
-**Case s = 3.** S is the unique 3-cycle; only 1 odd cycle exists. Contradiction.
+- **s = 4.** Odd cycles in a 4-vertex tournament can only have length 3 (since 5 > 4). The unique SC score sequence at n=4 is (1,1,2,2), giving c₃ = C(4,3) − Σ C(s_i, 2) = 4 − 2 = 2 three-cycles. So T[V'] has at most 2 odd cycles, contradicting 3.
 
-**Case s = 4.** A strongly-connected tournament on 4 vertices has score sequence (1,1,2,2) (the only one for which all four strict Landau inequalities hold for k=1,2,3). The number of 3-cycles is C(4,3) − Σ C(s_i, 2) = 4 − (0+0+1+1) = 2. There are no directed odd cycles of length > 3 (since 4 < 5). Total odd cycles = 2. Contradiction.
+- **s ≥ 5.** By Moon's Corollary 2.1 (1966), T[V'] (a strong tournament on s vertices) contains at least s − 2 three-cycles. Since s − 2 ≥ 3, T[V'] has ≥ 3 three-cycles. Furthermore at s = 5 Moon's bound gives ≥ s − 4 = 1 five-cycle as well (the directed Hamilton cycle of T[V'] by Camion).
+  - s = 5: ≥ 3 three-cycles + ≥ 1 five-cycle = ≥ 4 odd cycles.
+  - s ≥ 6: ≥ s − 2 ≥ 4 three-cycles.
+  In either case, T[V'] has ≥ 4 odd cycles.
 
-**Case s = 5.**
-  - By Moon-Moser (1962), S has ≥ s − 2 = 3 directed 3-cycles.
-  - By Moon-Camion (Moon, 1968; Camion, 1959), S contains a directed Hamilton cycle, which has odd length 5.
-  Hence S has ≥ 3 + 1 = 4 odd cycles. Contradiction.
+**Step 4 (contradiction).** Every odd cycle of T[V'] is an odd cycle of T (since V' ⊆ V(T) and the arcs are inherited). Hence T has ≥ 4 odd cycles, contradicting α₁ = 3.
 
-**Case s ≥ 6.** By Moon-Moser, S has ≥ s − 2 ≥ 4 directed 3-cycles. Hence S has ≥ 4 odd cycles. Contradiction.
+All cases give a contradiction; H(T) ≠ 7. ∎
 
-All cases fail, so H(T) = 7 is impossible. ∎
+**Remark.** This proof avoids global SCC theory: we only need local SC of T[V'], which follows from the elementary fact "SC sub-digraphs sharing a vertex have SC union." This makes the proof suitable for direct formalization in Lean without needing Mathlib's currently-missing SCC infrastructure for digraphs.
 
 ## Verification of the proof ingredients (S5)
 

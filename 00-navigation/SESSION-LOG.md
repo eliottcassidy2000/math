@@ -51,6 +51,58 @@ curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh 
 export PATH="$HOME/.elan/bin:$PATH"
 cd 04-computation/lean/TournamentH7 && lake exe cache get && lake build
 ```
+## opus-2026-05-28-S6 — 2026-05-28
+
+**Summary:** Correctness audit of THM-343 + exhaustive n=7 verification + Lean formalization preparation. Caught and fixed a flaw in the S5 "uniqueness" claim, refined the proof to avoid global SCC theory, and confirmed the universal forbiddance of H=7, 21, 63 by exhaustive n=7 enumeration. Built a Lean 4 skeleton in `03-artifacts/lean-thm343/`.
+
+**Note** (added during rebase): Concurrently, **oracle-2026-05-29-S1** independently completed a full Lean 4 formalization in `04-computation/lean/TournamentH7/` (different path) with 7 cited axioms. The two Lean efforts can be reconciled: my skeleton at `03-artifacts/lean-thm343/Thm343.lean` follows the refined S6 local-SC proof structure; oracle's working build at `04-computation/lean/TournamentH7/` follows a global-SCC structure with `omegaTriangleLocalises` as one of the 7 axioms. **Recommend using oracle's working build** as the production version and treating my skeleton as a design alternative.
+
+**AUDIT FINDINGS (all assumptions verified, one refinement needed):**
+- A1 OCF: H = I(Ω, 2) — exhaustive n=3..6, 0 failures ✓
+- **A2 Uniqueness FIX**: The S5 claim "(3,0,0,…) is the unique non-negative integer solution of α₁+2α₂+4α₃+⋯=3" is FALSE without the chain constraint. The integer solution (1,1,0,…) also satisfies the equation but violates α₂≥1⇒α₁≥2 (each indep pair contributes 2 distinct vertices to α₁). Added the chain constraint argument to the proof.
+- A3 Chain constraint: α_k≥1⇒α_{k-1}≥k — exhaustive n=3..6, 0 violations ✓
+- A4 SCC partition — exhaustive n=2..5, 0 violations ✓
+- A5 Cycle ⊂ single SCC — exhaustive n=3..5, 0 violations ✓
+- A7 n=4 SC ⇒ unique score (1,1,2,2) — exhaustive ✓
+- A8 c₃(T) = C(n,3) − Σ C(s_i, 2) — exhaustive n=3..5, 0 mismatches ✓
+- A9 Moon (1966) Cor 2.1: SC ⇒ ≥ n−k+1 k-cycles — exhaustive n=3..6 for k=3 ✓
+- A10 Camion (1959): SC ⇒ ∃ Hamilton cycle — exhaustive n=3..6 ✓
+
+**REFERENCE VERIFIED:** Moon, J.W. (1966), "On subtournaments of a tournament", Canad. Math. Bull. 9, 297-301 — Corollary 2.1. Read the actual paper PDF. The bound c(T_n,k) ≥ n−k+1 is exactly what's needed; it implies the s=5 case has ≥ 3 three-cycles AND ≥ 1 five-cycle.
+
+**PROOF REFINEMENT:** Replaced the "all cycles in same SCC of T" argument with a stronger LOCAL argument:
+- Let V' = V(C₁)∪V(C₂)∪V(C₃). T[V'] is SC (union of SC sub-digraphs sharing vertices).
+- Case-analyze s = |V'|: s∈{3,4} forbidden directly; s≥5 contradicts via Moon.
+- Advantage: avoids global SCC theory (which is NOT in Mathlib for digraphs), simplifying Lean formalization.
+
+**EXHAUSTIVE n=7 VERIFICATION (new):**
+- Enumerated all 2,097,152 n=7 tournaments in 545s (Python).
+- H spectrum: 77 distinct values in [1, 189].
+- **H=7: 0 occurrences** — confirms THM-343 at n=7 exhaustively.
+- **H=21: 0 occurrences** — upgrades HYP-1753 to exhaustive n≤7.
+- **H=63: 0 occurrences** — upgrades HYP-1754 to exhaustive n≤7.
+- Other absent values: 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187 (likely "near-max" thinness, expected to appear at n≥8).
+
+**LEAN FORMALIZATION PREP:**
+- `03-artifacts/drafts/lean-formalization-plan-thm343.md` — full plan with dependency graph, effort estimates (1500 LoC axiomatized, ~3000 LoC full).
+- `03-artifacts/lean-thm343/Thm343.lean` — Lean 4 skeleton with type definitions and `sorry` lemma statements.
+- `03-artifacts/lean-thm343/README.md` — build instructions and suggested attack order.
+- Discovered: Mathlib4 has `Digraph` and `Quiver.Path` but NO strongly-connected-components, NO tournament theory. The refined "local SC" proof bypasses this gap.
+
+**NEW FILES:**
+- `04-computation/audit_thm343_s6.py` — fast audit (≤ n=6).
+- `04-computation/audit_n7_exhaustive_s6.py` — exhaustive n=7 H-spectrum.
+- `05-knowledge/results/audit_thm343_s6.out`, `audit_n7_exhaustive_s6.out`.
+- `03-artifacts/lean-thm343/{Thm343.lean,README.md}`.
+- `03-artifacts/drafts/lean-formalization-plan-thm343.md`.
+- `01-canon/theorems/THM-343-H7-impossible.md` — UPDATED with refined proof + audit table.
+
+**FOR NEXT AGENT:**
+1. Start the Lean formalization following `03-artifacts/lean-thm343/Thm343.lean` skeleton.
+2. Prove SC_union lemma in Lean (foundational).
+3. Prove Moon (1966) Cor 2.1 for k=3 in Lean. Try Bondy's proof for cleanness.
+4. Tackle HYP-1753 (H≠21) — same structural framework should work. The α=(4,3,0) case may require the strong Key Lemma (HYP-1755).
+5. Investigate forbidden H pattern: why 7·3⁰, 7·3¹, 7·3² and not 7·5?
 
 ---
 
