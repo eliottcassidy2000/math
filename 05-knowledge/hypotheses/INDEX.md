@@ -2215,6 +2215,29 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **Consequence:** The H=63 unlock is not merely an existence example; at n=8 it is uniquely forced through the complete-Ω mechanism.
 **Next:** Characterize complete-Ω tournaments by cycle-count/score data and determine which K_r occur as Ω(T) at minimal n.
 
+## HYP-1757: The two n=8 H=63 classes are single-core complete-Ω tournaments (opus-2026-05-29-S11)
+**Status:** CONFIRMED by deterministic fingerprint computation on the THM-344 representatives.
+**Statement:** For each of the two n=8 H=63 isomorphism classes, there is a unique vertex contained in every directed odd cycle. Deleting that vertex leaves the transitive 7-vertex tournament.
+**Evidence:** `04-computation/omega_extreme_fingerprints_s11.py` reconstructs the two `gentourng 8` representatives cids 2519 and 3285. For cid 2519 the cycle-family core is vertex 3; for cid 3285 the core is vertex 0. In both cases `H(T-v)=1`, the deletion has 0 odd cycles, and Ω(T)=K31.
+**Signatures:** Relative to the transitive deletion order, the core signatures are `1001100` and `1100110`. Both have weighted signature count 31.
+**See:** `05-knowledge/results/omega_extreme_fingerprints_s11.out`, INV-191, T280.
+
+## HYP-1758: Single-core complete-Ω cycle counts are weighted binary-signature inversion counts (opus-2026-05-29-S11)
+**Status:** FORMULA CONFIRMED by derivation/computation; persistent r=3 and r=10 gaps OPEN.
+**Statement:** If every odd cycle of T contains a core vertex v and T-v is transitive with source-to-sink order `1,...,m`, encode `s_i=1` when `v -> i` and `s_i=0` when `i -> v`. Then the number r of directed odd cycles in T is
+`r(s)=Σ_{i<j, s_i=1, s_j=0} 2^{max(j-i-2,0)}`.
+The summand counts even-size choices of interior vertices between i and j.
+**Evidence:** The formula gives r=31 for the two H=63 signatures `1001100` and `1100110`. Exhaustive signature search up to m=16 finds r=3 and r=10 absent at every length tested, while r=31 first appears at m=7.
+**Implication:** This may explain the complete-core part of the H=7 and H=21 obstructions: H=7 would require r=3, and complete-core H=21 would require r=10. It does not by itself handle non-core complete Ω or non-complete α-vector decompositions.
+**See:** `05-knowledge/results/single_core_signature_targets_s11.out`, variable `r_core(s)`, T280.
+
+## HYP-1759: Odd-cycle disjointness geometry is the shared meta-axis behind H-gaps and real-root failures (opus-2026-05-29-S11)
+**Status:** OPEN meta-hypothesis with concrete supporting examples.
+**Statement:** The useful first-class invariant is not just H(T) or I(Ω,2), but the disjointness graph of directed odd cycles: its core, independent-set profile, and lopsided independent triples. Complete Ω with a core unlocks H=63; almost-complete Ω with one independent triple and no core produces the THM-025 real-rootedness failure.
+**Evidence:** S11 compares the two H=63 classes (Ω=K31, core size 1, α=[1,31]) with the THM-025 n=9 counterexample (94 odd cycles, α=[1,94,10,1], no core, first independent triple supports `(0,4,6),(1,3,7),(2,5,8)`). These are opposite extremes of cycle-disjointness concentration.
+**Engineering implication:** Tournament TDA/ranking-feature extraction should include cycle-family core size, α-vector, disjointness-pair count, and independent-triple supports as features, not only H and score sequence.
+**See:** T281, `07-reflections/omega-extremes-as-cycle-disjointness-axis.md`.
+
 ## HYP-1755: Strong Key Lemma (opus-2026-05-28-S5)
 **Status:** OPEN — required to complete H=21 obstruction proof
 **Statement:** If C₁, C₂, C₃ are three pairwise-intersecting odd directed cycles in tournament T, then T contains a 4th odd directed cycle C' such that V(C') ⊆ V(C₁) ∪ V(C₂) ∪ V(C₃).

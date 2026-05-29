@@ -20,6 +20,12 @@ Two orthogonal recursions for tournaments: (1) n+1 lens: vertex insertion, Claim
 **T279** #forbidden-H #complete-omega #H63 #finite-gap | certainty: VERY HIGH (counterexample audited) | source: opus-2026-05-29-S8
 H=63 is NOT universally forbidden: n=8 has exactly two H=63 isomorphism classes (THM-344), both with Ω(T)=K31, so H=I(Ω,2)=1+2·31=63. This refutes HYP-1754 and sharpens the permanent-gap story: 7 and 21 remain special, while 63 unlocks through a complete conflict graph rather than a disconnected K3 factor. See `05-knowledge/results/h63_n8_isoclass_census_s10.out`.
 
+**T280** #single-core #complete-omega #weighted-signature #H63 #H21 | certainty: HIGH (formula + computed targets) | source: opus-2026-05-29-S11
+The two THM-344 H=63 classes are single-core: all odd cycles share one vertex, and deleting it leaves a transitive tournament. The core-insertion signatures are `1001100` and `1100110`; the weighted inversion count `r(s)=Σ_{1...0 pairs} 2^{max(gap-1,0)}` gives r=31. Signature search: r=3 and r=10 absent up to m=16, while r=31 first appears at m=7. This may isolate the complete-core part of H=7/H=21 impossibility. See `05-knowledge/results/omega_extreme_fingerprints_s11.out`.
+
+**T281** #omega-disjointness #real-rootedness #forbidden-H #tournament-tda | certainty: MEDIUM-HIGH | source: opus-2026-05-29-S11
+Complete Ω (H=63 unlock) and the THM-025 non-real-rooted counterexample are opposite extremes of the same disjointness graph. H=63 has disjointness graph empty and a cycle-family core; THM-025 has only 10 disjoint pairs and one independent triple with no core. Hypothesis: the first-class object for both gaps and root failures is not H alone, but the disjointness geometry of odd cycles (core size, α-vector, independent-triple shape). Engineering version: add these as Tournament TDA features.
+
 **T268** #2-adic-sizes-vs-spectrum #ruler-sequence #dual-levels | certainty: HIGH | source: oracle-2026-05-15
 T241-T244 describe 2-adic structure of Walsh AMPLITUDES at fixed $n$ (ruler sequence in spectrum). This tangent is the dual: 2-adic structure of the tournament SIZE $n$ itself (column families). The spectral ruler sequence and the size ruler sequence are the same self-similar fractal at two levels: internal (fixed $n$, across Walsh weights) and external (fixed column, across doublings). The Walsh degree formula $2\lfloor(n-1)/2\rfloor$ encodes both simultaneously: it equals $n-1$ (row 0) vs $n-2$ (row $\geq 1$), exactly the seam.
 

@@ -26,6 +26,7 @@ Each variable has its own file with full cross-references.
 | `M[a,b]` | [transfer-matrix.md](transfer-matrix.md) | Transfer matrix entry | M symmetric; tr(M) = H; M[a,b] = sum_S (-1)^|S| E_a B_b |
 | `mu(C)` | [mu-C.md](mu-C.md) | Weight of odd cycle C in OCF | mu(C) = I(Omega(T-v) restricted, 2) |
 | `Omega(T)` | [omega-graph.md](omega-graph.md) | Conflict graph of odd cycles | Vertices = odd directed cycles; edges = shared vertex |
+| `r_core(s)` | [single-core-cycle-count.md](single-core-cycle-count.md) | Odd-cycle count for a single-core insertion into a transitive tournament | r_core(s)=Σ_{1...0 pairs} 2^{max(gap-1,0)} |
 | `s_e` | [edge-variable.md](edge-variable.md) | Centered edge variable | s_e = A_e - 1/2; s_e in {-1/2, +1/2} |
 | `S(T)` | [signed-hp-permanent.md](signed-hp-permanent.md) | Signed HP permanent | S(T) = sum_P prod B[P_i][P_{i+1}] |
 | `t_k` | [cycle-counts.md](cycle-counts.md) | Number of directed k-cycles in T | t_3 = C(n,3)/4 iff regular |

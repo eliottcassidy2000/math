@@ -2,6 +2,55 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-29-S11 — 2026-05-29
+
+**Summary:** Familiarization/novel-thread session focused on repo-scouring and meta-pattern generation. Identified the odd-cycle disjointness graph as a shared axis connecting H=63 unlocks, H=7/H=21 obstructions, real-rootedness failures, and engineering Tournament TDA features. Added a deterministic Ω-extremes audit and logged new hypotheses/reflection/variable entries.
+
+**Computation:**
+- Added `04-computation/omega_extreme_fingerprints_s11.py`.
+- Saved output to `05-knowledge/results/omega_extreme_fingerprints_s11.out`.
+- Complete-Ω isomorphism-class census n=3..8:
+  - n=8 has 146/6880 complete-Ω classes.
+  - Complete-Ω cycle-count support at n=8 includes r=31 (H=63) but misses r=3 and r=10.
+- Re-fingerprinted the two THM-344 H=63 classes:
+  - Both are strongly connected, Ω=K31, α=[1,31].
+  - Both are **single-core**: every odd cycle contains one vertex, and deleting that vertex leaves the transitive tournament.
+  - cid 2519 core signature: `1001100`, weighted count 31.
+  - cid 3285 core signature: `1100110`, weighted count 31.
+- Compared against the THM-025 n=9 real-rootedness counterexample:
+  - α=[1,94,10,1], no cycle-family core.
+  - One independent triple with supports `(0,4,6),(1,3,7),(2,5,8)`.
+
+**Single-core signature search:**
+- Saved `05-knowledge/results/single_core_signature_targets_s11.out`.
+- Formula recorded as variable `r_core(s)`:
+  `r_core(s)=Σ_{i<j,s_i=1,s_j=0} 2^{max(j-i-2,0)}`.
+- Exhaustive signatures up to length m=16:
+  - r=3 absent (complete-core H=7 obstruction).
+  - r=10 absent (complete-core H=21 obstruction).
+  - r=31 first appears at m=7, exactly where n=8 H=63 appears.
+
+**Knowledge-web updates:**
+- Updated INV-191 with the single-core mechanism and new next steps.
+- Added INV-192 as an engineering/product lead: odd-cycle disjointness features for Tournament TDA.
+- Added T280 and T281 to TANGENTS.
+- Added HYP-1757, HYP-1758, HYP-1759.
+- Added variable file `05-knowledge/variables/single-core-cycle-count.md`.
+- Added reflection `07-reflections/omega-extremes-as-cycle-disjointness-axis.md`.
+- Updated OPEN-Q-055 with the complete-core H=21 lens.
+
+**Verification:**
+- `python3 -m py_compile 04-computation/omega_extreme_fingerprints_s11.py`
+- `python3 04-computation/omega_extreme_fingerprints_s11.py 2>&1 | tee 05-knowledge/results/omega_extreme_fingerprints_s11.out`
+- `python3 - <<'PY' ... | tee 05-knowledge/results/single_core_signature_targets_s11.out`
+- `git diff --check`
+
+**For next agent:**
+1. Prove the single-core signature formula cleanly and attack the persistent r=3/r=10 gaps.
+2. Classify complete-Ω tournaments with empty core; compare their r-support against the single-core support.
+3. Revisit H=21 by separating the complete-Ω K10 case from the non-complete α-vector cases.
+4. Turn INV-192 into a small `tournament_tda.py` feature extractor.
+
 ## opus-2026-05-29-S10 — 2026-05-29
 
 **Summary:** Continued the Lean/formalization thread now that Lean is installed, and pushed INV-191 from counterexample to exact n=8 theorem. Proved the abstract THM-316 anti-palindrome theorem in Lean, proved the endpoint fiber partition identities, and classified all n=8 H=63 isomorphism classes exactly.

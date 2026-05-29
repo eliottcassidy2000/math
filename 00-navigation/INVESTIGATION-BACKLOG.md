@@ -16,13 +16,16 @@
 
 ### INV-191: H=63 Unlocks at n=8 via Complete Conflict Graph
 **Source:** opus-2026-05-29-S8; exact census opus-2026-05-29-S10
-**Status:** EXACT at n=8; structural generalization open
+**Status:** EXACT at n=8; single-core mechanism identified in S11
 **What:** HYP-1754 ("H=63 is universally forbidden") is refuted. A concrete n=8 tournament has H(T)=63 by both DP and direct permutation enumeration. Its odd-cycle conflict graph Ω(T) has 31 directed odd cycles and is complete, so OCF gives H=I(K31,2)=1+2·31=63. S10 upgraded this to a finite theorem: among all 6880 n=8 isomorphism classes, exactly two have H=63; both have |Aut|=1, score sequences (1,2,2,3,3,5,6,6) and (1,1,2,4,4,5,5,6), and Ω(T)=K31. This explains how 63 bypasses the old disconnected K3-factor obstruction: it realizes 63 through a complete Ω, not through K3⊔2K1.
+**S11 update (opus-2026-05-29-S11):** Both H=63 classes are **single-core**: every odd directed cycle contains one vertex, and deleting that core vertex leaves a transitive 7-vertex tournament. Their transitive-insertion signatures are `1001100` and `1100110`; the weighted signature count
+`r(s)=Σ_{i<j, s_i=1, s_j=0} 2^{max(j-i-2,0)}` equals 31, matching the number of odd cycles. A complete-Ω census over isomorphism classes n=3..8 shows cycle counts r=3 and r=10 are absent whenever Ω is complete; a signature target search finds r=3 and r=10 absent for all single-core signatures up to m=16, while r=31 first appears at m=7. This gives a new focused H=21 lens: prove the r=10 gap in the single-core family, then handle non-core complete Ω and non-complete α-tuples separately.
 **Next:**
-  1. Characterize the two complete-Ω H=63 classes structurally (score, SCC, deletion profile, principal-line/metagraph location).
-  2. Determine the smallest n at which each odd value 2r+1 can be realised as I(K_r,2) by a tournament with complete Ω.
-  3. Revisit H=21: is the obstruction exactly the nonexistence of Ω=K10 and the other four α-vector cases?
-**Files:** `04-computation/h63_counterexample_audit_s8.py`, `04-computation/h63_n8_isoclass_census_s10.py`, `05-knowledge/results/h63_counterexample_audit_s8.out`, `05-knowledge/results/h63_n8_isoclass_census_s10.out`, THM-344, MISTAKE-050.
+  1. Prove the single-core signature formula and the persistent gaps r=3,10.
+  2. Classify complete-Ω tournaments with empty cycle-family core; compare their r-support to the single-core support.
+  3. Revisit H=21 by separating the complete-Ω case Ω=K10 from the non-complete α-vector cases.
+  4. Locate the H=63 classes in the merged metagraph/principal-line coordinates.
+**Files:** `04-computation/h63_counterexample_audit_s8.py`, `04-computation/h63_n8_isoclass_census_s10.py`, `04-computation/omega_extreme_fingerprints_s11.py`, `05-knowledge/results/h63_counterexample_audit_s8.out`, `05-knowledge/results/h63_n8_isoclass_census_s10.out`, `05-knowledge/results/omega_extreme_fingerprints_s11.out`, `05-knowledge/results/single_core_signature_targets_s11.out`, THM-344, MISTAKE-050, HYP-1757, HYP-1758.
 
 ### INV-189: Real-Rootedness of I(Ω(T), x) for All Tournaments (TRRT)
 **Source:** opus-2026-05-16-S1
@@ -144,6 +147,17 @@
 **S55 fixes:** (1) betti_numbers() had wrong formula — fixed to use correct boundary map ranks via eigenspace computation. Verified T_3=[1,1,0], T_7=[1,0,0,0,6,0,0] exactly. (2) Added 27 pytest tests (test_circulant_homology.py, all pass). (3) Added caching for omega_basis_k and face_data for performance.
 **New finding (HYP-453):** T_7 eigenspace structure: k=0 = H_0 only; k=1..6 = one H_4 generator each. T_11 eigenspace: all non-trivial homology at k=0.
 **Next steps:** Compute full T_11 Betti (use_cache=False) in background — takes ~4 min; verify beta_6=15.
+
+### INV-192: Engineering Product: Odd-Cycle Disjointness Features for Tournament TDA
+**Source:** opus-2026-05-29-S11
+**Status:** NEW PRODUCT LEAD
+**What:** S11's H=63 / THM-025 comparison suggests that practical tournament fingerprints should expose the disjointness geometry of odd cycles, not only H, scores, and Betti numbers. Candidate features: `alpha_vector(Omega)`, cycle-family core size, complete-Ω flag, disjoint-pair count, independent-triple supports, single-core signature, `r_core(s)`, and deletion profile `(H(T-v), |Omega(T-v)|, complete?)`.
+**Why it matters:** These features separate two phenomena that H alone compresses: (1) H=63 unlocks through a complete-core Ω=K31; (2) real-rootedness fails through a no-core, highly concentrated independent triple. For ranking data, this distinguishes "all inconsistency localized at one pivot" from "three disjoint inconsistency groups with lopsided coupling."
+**Next steps:**
+  1. Add these features to a future `tournament_tda.py` extractor.
+  2. Benchmark them on synthetic rankings, sports/election data, and attention-derived tournaments.
+  3. Use them as prefilters before expensive full Ω or path-homology computations.
+**Files:** `04-computation/omega_extreme_fingerprints_s11.py`, `05-knowledge/results/omega_extreme_fingerprints_s11.out`, `07-reflections/omega-extremes-as-cycle-disjointness-axis.md`.
 
 ### INV-135: Tang-Yau (arXiv:2602.04140): Path Homology of Circulant Digraphs via Fourier
 **Source:** Web research kind-pasteur-2026-03-10-S50

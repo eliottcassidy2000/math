@@ -1,0 +1,17 @@
+Single-core weighted signature target search (opus-2026-05-29-S11)
+targets: r=3 (H=7), r=10 (H=21 complete-core), r=31 (H=63 complete-core)
+m=2: r=3: absent, r=10: absent, r=31: absent
+m=3: r=3: absent, r=10: absent, r=31: absent
+m=4: r=3: absent, r=10: absent, r=31: absent
+m=5: r=3: absent, r=10: absent, r=31: absent
+m=6: r=3: absent, r=10: absent, r=31: absent
+m=7: r=3: absent, r=10: absent, r=31: 2 sample(s) ['1001100', '1100110']
+m=8: r=3: absent, r=10: absent, r=31: 4 sample(s) ['01001100', '01100110', '10011001', '11001101']
+m=9: r=3: absent, r=10: absent, r=31: 6 sample(s) ['001001100', '001100110', '010011001', '011001101']
+m=10: r=3: absent, r=10: absent, r=31: 8 sample(s) ['0001001100', '0001100110', '0010011001', '0011001101']
+m=11: r=3: absent, r=10: absent, r=31: 8 sample(s) ['00001001100', '00001100110', '00010011001', '00011001101']
+m=12: r=3: absent, r=10: absent, r=31: 8 sample(s) ['000001001100', '000001100110', '000010011001', '000011001101']
+m=13: r=3: absent, r=10: absent, r=31: 8 sample(s) ['0000001001100', '0000001100110', '0000010011001', '0000011001101']
+m=14: r=3: absent, r=10: absent, r=31: 8 sample(s) ['00000001001100', '00000001100110', '00000010011001', '00000011001101']
+m=15: r=3: absent, r=10: absent, r=31: 8 sample(s) ['000000001001100', '000000001100110', '000000010011001', '000000011001101']
+m=16: r=3: absent, r=10: absent, r=31: 8 sample(s) ['0000000001001100', '0000000001100110', '0000000010011001', '0000000011001101']

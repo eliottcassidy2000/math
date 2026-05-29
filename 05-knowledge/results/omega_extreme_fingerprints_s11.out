@@ -1,0 +1,190 @@
+Omega extremes fingerprint audit (opus-2026-05-29-S11)
+========================================================================
+
+Complete-Omega spectrum by isomorphism class
+====================================================
+n=3: complete classes=2/2
+  cycle-count support=[0, 1]
+  missing r in range=[]
+  r= 0: classes=  1, H=1+2r=  1, example cid=0, H=1, scores=(0, 1, 2)
+  r= 1: classes=  1, H=1+2r=  3, example cid=1, H=3, scores=(1, 1, 1)
+n=4: complete classes=4/4
+  cycle-count support=[0, 1, 2]
+  missing r in range=[]
+  r= 0: classes=  1, H=1+2r=  1, example cid=0, H=1, scores=(0, 1, 2, 3)
+  r= 1: classes=  2, H=1+2r=  3, example cid=1, H=3, scores=(1, 1, 1, 3)
+  r= 2: classes=  1, H=1+2r=  5, example cid=3, H=5, scores=(1, 1, 2, 2)
+n=5: complete classes=12/12
+  cycle-count support=[0, 1, 2, 4, 5, 6, 7]
+  missing r in range=[3]
+  r= 0: classes=  1, H=1+2r=  1, example cid=0, H=1, scores=(0, 1, 2, 3, 4)
+  r= 1: classes=  3, H=1+2r=  3, example cid=1, H=3, scores=(1, 1, 1, 3, 4)
+  r= 2: classes=  2, H=1+2r=  5, example cid=2, H=5, scores=(0, 2, 2, 3, 3)
+  r= 4: classes=  2, H=1+2r=  9, example cid=5, H=9, scores=(1, 1, 2, 3, 3)
+  r= 5: classes=  1, H=1+2r= 11, example cid=3, H=11, scores=(1, 2, 2, 2, 3)
+  r= 6: classes=  1, H=1+2r= 13, example cid=4, H=13, scores=(1, 2, 2, 2, 3)
+  r= 7: classes=  2, H=1+2r= 15, example cid=7, H=15, scores=(2, 2, 2, 2, 2)
+n=6: complete classes=31/56
+  cycle-count support=[0, 1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 16]
+  missing r in range=[3, 10, 13, 14, 15]
+  r= 0: classes=  1, H=1+2r=  1, example cid=0, H=1, scores=(0, 1, 2, 3, 4, 5)
+  r= 1: classes=  4, H=1+2r=  3, example cid=1, H=3, scores=(1, 1, 1, 3, 4, 5)
+  r= 2: classes=  3, H=1+2r=  5, example cid=8, H=5, scores=(0, 2, 2, 3, 3, 5)
+  r= 4: classes=  4, H=1+2r=  9, example cid=2, H=9, scores=(0, 2, 2, 3, 4, 4)
+  r= 5: classes=  2, H=1+2r= 11, example cid=10, H=11, scores=(1, 2, 2, 2, 3, 5)
+  r= 6: classes=  2, H=1+2r= 13, example cid=11, H=13, scores=(1, 2, 2, 2, 3, 5)
+  r= 7: classes=  6, H=1+2r= 15, example cid=6, H=15, scores=(1, 1, 2, 3, 4, 4)
+  r= 8: classes=  1, H=1+2r= 17, example cid=7, H=17, scores=(1, 1, 2, 3, 4, 4)
+  r= 9: classes=  2, H=1+2r= 19, example cid=25, H=19, scores=(1, 1, 3, 3, 3, 4)
+  r=11: classes=  2, H=1+2r= 23, example cid=3, H=23, scores=(1, 2, 2, 3, 3, 4)
+  r=12: classes=  2, H=1+2r= 25, example cid=24, H=25, scores=(1, 2, 2, 3, 3, 4)
+  r=16: classes=  2, H=1+2r= 33, example cid=28, H=33, scores=(2, 2, 2, 2, 3, 4)
+n=7: complete classes=70/456
+  cycle-count support=[0, 1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 15, 16, 18, 19, 22, 23, 24, 25, 34]
+  missing r in range=[3, 10, 14, 17, 20, 21, 26, 27, 28, 29, 30, 31, 32, 33]
+  r= 0: classes=  1, H=1+2r=  1, example cid=0, H=1, scores=(0, 1, 2, 3, 4, 5, 6)
+  r= 1: classes=  5, H=1+2r=  3, example cid=1, H=3, scores=(1, 1, 1, 3, 4, 5, 6)
+  r= 2: classes=  4, H=1+2r=  5, example cid=16, H=5, scores=(0, 2, 2, 3, 3, 5, 6)
+  r= 4: classes=  6, H=1+2r=  9, example cid=9, H=9, scores=(0, 2, 2, 3, 4, 4, 6)
+  r= 5: classes=  3, H=1+2r= 11, example cid=19, H=11, scores=(1, 2, 2, 2, 3, 5, 6)
+  r= 6: classes=  3, H=1+2r= 13, example cid=20, H=13, scores=(1, 2, 2, 2, 3, 5, 6)
+  r= 7: classes= 10, H=1+2r= 15, example cid=14, H=15, scores=(1, 1, 2, 3, 4, 4, 6)
+  r= 8: classes=  2, H=1+2r= 17, example cid=2, H=17, scores=(0, 2, 2, 3, 4, 5, 5)
+  r= 9: classes=  4, H=1+2r= 19, example cid=124, H=19, scores=(1, 1, 3, 3, 3, 4, 6)
+  r=11: classes=  4, H=1+2r= 23, example cid=11, H=23, scores=(1, 2, 2, 3, 3, 4, 6)
+  r=12: classes=  5, H=1+2r= 25, example cid=123, H=25, scores=(1, 2, 2, 3, 3, 4, 6)
+  r=13: classes=  2, H=1+2r= 27, example cid=7, H=27, scores=(1, 1, 2, 3, 4, 5, 5)
+  r=15: classes=  1, H=1+2r= 31, example cid=408, H=31, scores=(1, 1, 3, 3, 3, 5, 5)
+  r=16: classes=  7, H=1+2r= 33, example cid=8, H=33, scores=(1, 1, 2, 3, 4, 5, 5)
+  r=18: classes=  2, H=1+2r= 37, example cid=251, H=37, scores=(1, 1, 3, 3, 4, 4, 5)
+  r=19: classes=  2, H=1+2r= 39, example cid=36, H=39, scores=(1, 1, 3, 3, 4, 4, 5)
+  r=22: classes=  1, H=1+2r= 45, example cid=217, H=45, scores=(1, 2, 2, 3, 4, 4, 5)
+  r=23: classes=  2, H=1+2r= 47, example cid=3, H=47, scores=(1, 2, 2, 3, 4, 4, 5)
+  r=24: classes=  3, H=1+2r= 49, example cid=35, H=49, scores=(1, 2, 2, 3, 4, 4, 5)
+  r=25: classes=  1, H=1+2r= 51, example cid=31, H=51, scores=(1, 2, 3, 3, 3, 4, 5)
+  r=34: classes=  2, H=1+2r= 69, example cid=38, H=69, scores=(2, 2, 2, 3, 3, 4, 5)
+n=8: complete classes=146/6880
+  cycle-count support=[0, 1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 15, 16, 18, 19, 22, 23, 24, 25, 26, 30, 31, 32, 34, 36, 39, 40, 43, 47, 48, 53, 70]
+  missing r in range=[3, 10, 14, 17, 20, 21, 27, 28, 29, 33, 35, 37, 38, 41, 42, 44, 45, 46, 49, 50, 51, 52, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+  r= 0: classes=  1, H=1+2r=  1, example cid=0, H=1, scores=(0, 1, 2, 3, 4, 5, 6, 7)
+  r= 1: classes=  6, H=1+2r=  3, example cid=1, H=3, scores=(1, 1, 1, 3, 4, 5, 6, 7)
+  r= 2: classes=  5, H=1+2r=  5, example cid=26, H=5, scores=(0, 2, 2, 3, 3, 5, 6, 7)
+  r= 4: classes=  8, H=1+2r=  9, example cid=18, H=9, scores=(0, 2, 2, 3, 4, 4, 6, 7)
+  r= 5: classes=  4, H=1+2r= 11, example cid=30, H=11, scores=(1, 2, 2, 2, 3, 5, 6, 7)
+  r= 6: classes=  4, H=1+2r= 13, example cid=31, H=13, scores=(1, 2, 2, 2, 3, 5, 6, 7)
+  r= 7: classes= 14, H=1+2r= 15, example cid=24, H=15, scores=(1, 1, 2, 3, 4, 4, 6, 7)
+  r= 8: classes=  3, H=1+2r= 17, example cid=10, H=17, scores=(0, 2, 2, 3, 4, 5, 5, 7)
+  r= 9: classes=  6, H=1+2r= 19, example cid=434, H=19, scores=(1, 1, 3, 3, 3, 4, 6, 7)
+  r=11: classes=  6, H=1+2r= 23, example cid=21, H=23, scores=(1, 2, 2, 3, 3, 4, 6, 7)
+  r=12: classes=  8, H=1+2r= 25, example cid=433, H=25, scores=(1, 2, 2, 3, 3, 4, 6, 7)
+  r=13: classes=  4, H=1+2r= 27, example cid=16, H=27, scores=(1, 1, 2, 3, 4, 5, 5, 7)
+  r=15: classes=  2, H=1+2r= 31, example cid=5421, H=31, scores=(1, 1, 3, 3, 3, 5, 5, 7)
+  r=16: classes= 12, H=1+2r= 33, example cid=2, H=33, scores=(0, 2, 2, 3, 4, 5, 6, 6)
+  r=18: classes=  4, H=1+2r= 37, example cid=1891, H=37, scores=(1, 1, 3, 3, 4, 4, 5, 7)
+  r=19: classes=  4, H=1+2r= 39, example cid=259, H=39, scores=(1, 1, 3, 3, 4, 4, 5, 7)
+  r=22: classes=  4, H=1+2r= 45, example cid=719, H=45, scores=(1, 1, 2, 3, 4, 5, 6, 6)
+  r=23: classes=  4, H=1+2r= 47, example cid=12, H=47, scores=(1, 2, 2, 3, 4, 4, 5, 7)
+  r=24: classes=  6, H=1+2r= 49, example cid=258, H=49, scores=(1, 2, 2, 3, 4, 4, 5, 7)
+  r=25: classes=  4, H=1+2r= 51, example cid=8, H=51, scores=(1, 1, 2, 3, 4, 5, 6, 6)
+  r=26: classes=  2, H=1+2r= 53, example cid=3153, H=53, scores=(1, 1, 3, 3, 3, 5, 6, 6)
+  r=30: classes=  4, H=1+2r= 61, example cid=717, H=61, scores=(1, 2, 2, 2, 4, 5, 6, 6)
+  r=31: classes=  2, H=1+2r= 63, example cid=2519, H=63, scores=(1, 2, 2, 3, 3, 5, 6, 6)
+  r=32: classes=  1, H=1+2r= 65, example cid=9, H=65, scores=(1, 1, 2, 3, 4, 5, 6, 6)
+  r=34: classes=  6, H=1+2r= 69, example cid=261, H=69, scores=(2, 2, 2, 3, 3, 4, 5, 7)
+  r=36: classes=  4, H=1+2r= 73, example cid=2537, H=73, scores=(1, 1, 3, 3, 4, 5, 5, 6)
+  r=39: classes=  2, H=1+2r= 79, example cid=49, H=79, scores=(1, 1, 3, 3, 4, 5, 5, 6)
+  r=40: classes=  2, H=1+2r= 81, example cid=728, H=81, scores=(1, 1, 3, 4, 4, 4, 5, 6)
+  r=43: classes=  2, H=1+2r= 87, example cid=2492, H=87, scores=(1, 2, 2, 3, 4, 5, 5, 6)
+  r=47: classes=  2, H=1+2r= 95, example cid=3, H=95, scores=(1, 2, 2, 3, 4, 5, 5, 6)
+  r=48: classes=  6, H=1+2r= 97, example cid=48, H=97, scores=(1, 2, 2, 3, 4, 5, 5, 6)
+  r=53: classes=  2, H=1+2r=107, example cid=43, H=107, scores=(1, 2, 3, 3, 4, 4, 5, 6)
+  r=70: classes=  2, H=1+2r=141, example cid=52, H=141, scores=(2, 2, 2, 3, 4, 4, 5, 6)
+
+Single-core weighted-signature spectra
+==========================================
+m=2 transitive vertices: support=[0, 1]
+  missing in range=[]
+  r=3: absent
+  r=10: absent
+  r=31: absent
+m=3 transitive vertices: support=[0, 1, 2]
+  missing in range=[]
+  r=3: absent
+  r=10: absent
+  r=31: absent
+m=4 transitive vertices: support=[0, 1, 2, 4, 5]
+  missing in range=[3]
+  r=3: absent
+  r=10: absent
+  r=31: absent
+m=5 transitive vertices: support=[0, 1, 2, 4, 5, 7, 8, 9, 11]
+  missing in range=[3, 6, 10]
+  r=3: absent
+  r=10: absent
+  r=31: absent
+m=6 transitive vertices: support=[0, 1, 2, 4, 5, 7, 8, 9, 11, 12, 13, 15, 16, 18, 19, 22, 23, 25]
+  missing in range=[3, 6, 10, 14, 17, 20, 21, 24]
+  r=3: absent
+  r=10: absent
+  r=31: absent
+m=7 transitive vertices: support=[0, 1, 2, 4, 5, 7, 8, 9, 11, 12, 13, 15, 16, 18, 19, 22, 23, 25, 26, 30, 31, 32, 34, 36, 39, 40, 43, 47, 48, 53]
+  missing in range=[3, 6, 10, 14, 17, 20, 21, 24, 27, 28, 29, 33, 35, 37, 38, 41, 42, 44, 45, 46, 49, 50, 51, 52]
+  r=3: absent
+  r=10: absent
+  r=31: 2 signatures; examples 1001100, 1100110
+m=8 transitive vertices: support=[0, 1, 2, 4, 5, 7, 8, 9, 11, 12, 13, 15, 16, 18, 19, 22, 23, 25, 26, 30, 31, 32, 34, 36, 39, 40, 42, 43, 45, 47, 48, 49, 51, 53, 57, 58, 60, 61, 63, 64, 69, 70, 71, 72, 75, 78, 79, 82, 84, 85, 89, 93, 95, 97, 100, 106, 109, 113]
+  missing in range=[3, 6, 10, 14, 17, 20, 21, 24, 27, 28, 29, 33, 35, 37, 38, 41, 44, 46, 50, 52, 54, 55, 56, 59, 62, 65, 66, 67, 68, 73, 74, 76, 77, 80, 81, 83, 86, 87, 88, 90, 91, 92, 94, 96, 98, 99, 101, 102, 103, 104, 105, 107, 108, 110, 111, 112]
+  r=3: absent
+  r=10: absent
+  r=31: 4 signatures; examples 01001100, 01100110, 10011001, 11001101
+
+THM-344 n=8 H=63 class cid=2519 (labeled copies=40320)
+------------------------------------------------------
+n=8, H=63, scores=(1, 2, 2, 3, 3, 5, 6, 6), SCC sizes=(8,)
+odd cycles=31, lengths={3: 8, 5: 17, 7: 6}
+alpha=[1, 31], I(Omega,2)=63, complete_Omega=True
+disjoint-pair count=0, independent-triples=0
+cycle-family core=(3,)
+single-core signature at vertex 3: bits=1001100, weighted_count=31
+vertex cycle participation=(26, 13, 13, 31, 15, 15, 19, 19)
+pair intersection sizes={1: 28, 2: 102, 3: 154, 4: 116, 5: 50, 6: 15}
+deletion profile v:deg,H(T-v),cycles,lengths,alpha,complete,scores
+  (0, 6, 11, 5, {3: 4, 5: 1}, [1, 5], True, (1, 2, 2, 2, 3, 5, 6))
+  (1, 6, 37, 18, {3: 7, 5: 10, 7: 1}, [1, 18], True, (1, 2, 2, 3, 3, 5, 5))
+  (2, 5, 37, 18, {3: 7, 5: 10, 7: 1}, [1, 18], True, (1, 2, 2, 3, 3, 5, 5))
+  (3, 3, 1, 0, {}, [1, 0], True, (0, 1, 2, 3, 4, 5, 6))
+  (4, 3, 33, 16, {3: 6, 5: 9, 7: 1}, [1, 16], True, (1, 2, 2, 2, 4, 5, 5))
+  (5, 2, 33, 16, {3: 6, 5: 9, 7: 1}, [1, 16], True, (1, 2, 2, 2, 4, 5, 5))
+  (6, 2, 25, 12, {3: 5, 5: 6, 7: 1}, [1, 12], True, (1, 1, 2, 3, 4, 5, 5))
+  (7, 1, 25, 12, {3: 5, 5: 6, 7: 1}, [1, 12], True, (1, 1, 2, 3, 4, 5, 5))
+
+THM-344 n=8 H=63 class cid=3285 (labeled copies=40320)
+------------------------------------------------------
+n=8, H=63, scores=(1, 1, 2, 4, 4, 5, 5, 6), SCC sizes=(8,)
+odd cycles=31, lengths={3: 8, 5: 17, 7: 6}
+alpha=[1, 31], I(Omega,2)=63, complete_Omega=True
+disjoint-pair count=0, independent-triples=0
+cycle-family core=(0,)
+single-core signature at vertex 0: bits=1100110, weighted_count=31
+vertex cycle participation=(31, 19, 19, 15, 15, 13, 26, 13)
+pair intersection sizes={1: 28, 2: 102, 3: 154, 4: 116, 5: 50, 6: 15}
+deletion profile v:deg,H(T-v),cycles,lengths,alpha,complete,scores
+  (0, 4, 1, 0, {}, [1, 0], True, (0, 1, 2, 3, 4, 5, 6))
+  (1, 6, 25, 12, {3: 5, 5: 6, 7: 1}, [1, 12], True, (1, 1, 2, 3, 4, 5, 5))
+  (2, 5, 25, 12, {3: 5, 5: 6, 7: 1}, [1, 12], True, (1, 1, 2, 3, 4, 5, 5))
+  (3, 5, 33, 16, {3: 6, 5: 9, 7: 1}, [1, 16], True, (1, 1, 2, 4, 4, 4, 5))
+  (4, 4, 33, 16, {3: 6, 5: 9, 7: 1}, [1, 16], True, (1, 1, 2, 4, 4, 4, 5))
+  (5, 2, 37, 18, {3: 7, 5: 10, 7: 1}, [1, 18], True, (1, 1, 3, 3, 4, 4, 5))
+  (6, 1, 11, 5, {3: 4, 5: 1}, [1, 5], True, (0, 1, 3, 4, 4, 4, 5))
+  (7, 1, 37, 18, {3: 7, 5: 10, 7: 1}, [1, 18], True, (1, 1, 3, 3, 4, 4, 5))
+
+THM-025 n=9 real-rootedness counterexample
+------------------------------------------
+n=9, H=237, scores=(1, 1, 3, 4, 4, 4, 6, 6, 7), SCC sizes=(9,)
+odd cycles=94, lengths={3: 12, 5: 40, 7: 36, 9: 6}
+alpha=[1, 94, 10, 1], I(Omega,2)=237, complete_Omega=False
+disjoint-pair count=10, independent-triples=1
+cycle-family core=()
+vertex cycle participation=(57, 61, 62, 92, 57, 76, 57, 33, 47)
+pair intersection sizes={0: 10, 1: 169, 2: 539, 3: 1112, 4: 983, 5: 1003, 6: 291, 7: 249, 9: 15}
+first independent triple supports=[(0, 4, 6), (1, 3, 7), (2, 5, 8)]
