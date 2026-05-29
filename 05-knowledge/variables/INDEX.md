@@ -17,6 +17,8 @@ Each variable has its own file with full cross-references.
 | `B[i][j]` | [signed-matrix.md](signed-matrix.md) | Signed adjacency: B = 2A - J | B[i][j] in {-1, +1} |
 | `bc33` | [bc33.md](bc33.md) | Disjoint 3-cycle pairs | bc33 = alpha_2 at n=7 |
 | `bc35_w` | [bc35-w.md](bc35-w.md) | Weighted (3-cycle, 5-cycle) disjoint pairs | Appears in c_2 at n=9 |
+| `B_M` / `W_d` | [merged-bucket-size.md](merged-bucket-size.md) | Merged tiling bucket size and Hamming-layer transport | `sum B_M=2^m`; `row(W_d)=B_M*C(m,d)` |
+| `bucket_balance` | [tiling-bucket-balance.md](tiling-bucket-balance.md) | Half-line balance for any quotient of the tiling cube | `2*self + cross = |bucket|*|M|` |
 | `c_k` | [fourier-coefficients.md](fourier-coefficients.md) | Coefficients in W-polynomial expansion | W(T,r) = sum c_k * r^k |
 | `D_k` | [D-k.md](D-k.md) | Degree-2k Fourier component of W | W = sum D_k; D_0 = c_0 |
 | `F_k` | [forward-counts.md](forward-counts.md) | Count of HPs with exactly k forward edges | F(T,x) = sum F_k * x^k |

@@ -1,17 +1,17 @@
 ---
-id: THM-345
+id: THM-347
 name: endpoint-transfer-rank-separation
 status: PROVED
 date: 2026-05-29
 session: codex-2026-05-29-main-unification
 depends_on:
   - THM-266
-  - HYP-1767
-  - HYP-1768
-  - HYP-1769
+  - HYP-1770
+  - HYP-1771
+  - HYP-1772
 ---
 
-# THM-345: Endpoint Transfer Separates Fiber Boundary from Rank
+# THM-347: Endpoint Transfer Separates Fiber Boundary from Rank
 
 ## Terminology
 

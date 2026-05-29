@@ -4,18 +4,31 @@
 
 **Account:** codex
 **Continuation of:** user request to merge all branches/PRs back into main, then run a small formalization session.
-**Git work:** Fast-forwarded local `main` to `origin/main`; merged `origin/claude/kind-pasteur`, `origin/claude/trierments-dual-arrows-6XsqY`, and `origin/codex-s95-recursive-results`. Resolved the Codex PR conflict by preserving the current main inbox archive, renumbering the Codex S95 hypotheses to HYP-1767..1769, and keeping all mathematical artifacts.
-**Summary of math:** Formalized the endpoint-transfer meta-principle as THM-345: the endpoint transfer always exposes the child odd-fiber boundary, but full GF(2) row rank is a separate quotient-specific property. This cleanly separates the tournament quotient's apparent parity injectivity from the even-graph quotient's automorphism-2-adic rank defect.
-**New contributions:** `01-canon/theorems/THM-345-endpoint-transfer-rank-separation.md`.
+**Git work:** Fast-forwarded local `main` to `origin/main`; merged `origin/claude/kind-pasteur`, `origin/claude/trierments-dual-arrows-6XsqY`, and `origin/codex-s95-recursive-results`. Re-merged the newer `origin/main` S5 bucket formalization after push rejection. Resolved conflicts by preserving the current main inbox archive, keeping S5 as THM-345/346 and HYP-1767..1769, and renumbering the Codex S95 hypotheses to HYP-1770..1772.
+**Summary of math:** Formalized the endpoint-transfer meta-principle as THM-347: the endpoint transfer always exposes the child odd-fiber boundary, but full GF(2) row rank is a separate quotient-specific property. This cleanly separates the tournament quotient's apparent parity injectivity from the even-graph quotient's automorphism-2-adic rank defect.
+**New contributions:** `01-canon/theorems/THM-347-endpoint-transfer-rank-separation.md`.
 **Verification:** `git branch -r --no-merged HEAD` returned no branches; `git diff --cached --check` passed after merge cleanup.
+
+## kind-pasteur-2026-05-29-S5 - 2026-05-29: Merged Tiling Bucket Constraints
+
+**Account:** kind-pasteur
+**Git first:** Fetched and rebased onto `origin/main`; skipped obsolete local replay commits after conflicts and preserved the skipped local commit on backup branch `codex/recover-thread-compression-audit`.
+**Files read:** `.machine-id`; warm-up canon/navigation files; engineering synthesis S53; investigation backlog; paper bibliography/open-problems excerpts; recent session log; incoming processors.
+**Summary of work:** Formalized merged tiling bucket constraints. Added THM-345 proving SC merged buckets have odd fixed-base tiling count, NS buckets are `2 mod 4`, and each Hamming layer transport matrix has symmetry, row sums, even diagonal, and Lucas-active cross-outflow parity. Added THM-346 proving the general quotient bucket balance law `2*self_b + incident_cross_b = |bucket_b|*|M|` for any quotient of the tiling hypercube.
+**Computation:** Added `04-computation/merged_bucket_constraints_s5.py` and `04-computation/tiling_quotient_bucket_balance_s5.py`; saved outputs to `05-knowledge/results/merged_bucket_constraints_s5.out` and `05-knowledge/results/tiling_quotient_bucket_balance_s5.out`. Both scripts verified zero violations through `n=3..6`; the extension also audited the even-graph quotient `E_n`.
+**New findings:** At `n=6`, merged tournament cross-line mass is already sea-dominated: `d=1` has 276 spine / 1572 ribs / 2778 sea lines, and all-waggly has 25362 / 188160 / 286404. Bucket balance is exact but buckets are not generally equitable: at `n=6`, 18/34 merged buckets are non-equitable for `d=1`, 28/34 for `d=5`, and 10/34 for complement-tiling.
+**Engineering reading:** Bucket escape and neutrality profiles are normalized, self-checking perturbation features for future `tournament_tda.py`, and the balance identity is a cheap row-sum checksum for quotient builders.
+**Knowledge updates:** Added variables `B_M` / `W_d` and `bucket_balance`, reflection `07-reflections/merged-tiling-bucket-constraints.md`, tangents T290/T291, INV-194, OPEN-Q-056, and hypotheses HYP-1767..1769 after rebasing over Opus S13.
+**Verification:** `python3 -m py_compile 04-computation/merged_bucket_constraints_s5.py 04-computation/tiling_quotient_bucket_balance_s5.py`; reran both scripts with `Tee-Object` into their result files.
+**Unresolved threads:** Condition bucket escape/excess by H-gradient and principal-line distance; seek a Burnside formula for merged bucket-size distribution; add bucket parity, escape, and neutrality features to `tournament_tda.py`.
 
 ## codex-2026-05-29-S1 — 2026-05-29: GitHub Close-Out Guardrail + Even-Graph Endpoint Boundary
 
 **Account:** codex
 **Continuation of:** codex-s95-recursive-results
-**Files read:** CLAUDE.md; AGENTS.md; agents/finish_session.py; agents/check_session_closed.py; 04-computation/even_graph_endpoint_transfer_s95.py; 05-knowledge/hypotheses/HYP-1768-endpoint-transfer-recursive-boundary.md; 07-reflections/recursive-boundary-s95.md
+**Files read:** CLAUDE.md; AGENTS.md; agents/finish_session.py; agents/check_session_closed.py; 04-computation/even_graph_endpoint_transfer_s95.py; 05-knowledge/hypotheses/HYP-1771-endpoint-transfer-recursive-boundary.md; 07-reflections/recursive-boundary-s95.md
 **Summary of work:** First committed and pushed stale inbox processing work to `origin/codex-s95-recursive-results`. Added Codex-facing repository close-out instructions and strengthened the existing closer/hook path so future sessions push the current branch upstream instead of leaving local work stranded. Reran the even-graph endpoint transfer computation and formalized the endpoint-transfer parity boundary.
-**New contributions:** `AGENTS.md`; `THM-266-endpoint-transfer-boundary.md`; HYP-1769 even-graph endpoint rank defect evidence refreshed; `agents/finish_session.py` now pushes the current branch/upstream; `agents/check_session_closed.py` now blocks dirty/ahead unclosed sessions.
+**New contributions:** `AGENTS.md`; `THM-266-endpoint-transfer-boundary.md`; HYP-1772 even-graph endpoint rank defect evidence refreshed; `agents/finish_session.py` now pushes the current branch/upstream; `agents/check_session_closed.py` now blocks dirty/ahead unclosed sessions.
 **Unresolved threads:** GitHub CLI auth token for `gh` is invalid on this machine, but normal `git push` over the configured SSH remote works. Full-row-rank of tournament endpoint transfer remains conjectural beyond tested levels; even-graph rank defect needs a Sylow-2 automorphism explanation.
 
 ## opus-2026-05-29-S13 — 2026-05-29

@@ -1176,4 +1176,30 @@ at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh
 
 **Tools:** SCC decomposition + Moon-Moser + Moon-Camion (as in THM-343 proof). Strong Key Lemma. Score sequence analysis. Independence-vector enumeration. THM-344 n=8 class census.
 
+---
+
+## OPEN-Q-056 🟡 Merged Bucket Transport Excess
+
+**Added:** kind-pasteur-2026-05-29-S5
+
+**Question:** After THM-345's forced parity constraints and THM-346's general bucket-balance law, what controls the excess transport above the parity lower bound?
+
+For each Hamming layer `d`, THM-345 gives:
+
+- bucket sizes `B_M`;
+- row sums `B_M*C(m,d)`;
+- symmetry of `W_d`;
+- even diagonal;
+- forced cross-outflow parity.
+
+The actual cross-line mass is much larger than the parity minimum. Is that excess determined by spine/ribs/sea type, H-gradient position, bucket size, or a new invariant?
+
+**Next steps:**
+- Label `W_d(M,N)` entries by SC-SC / SC-NS / NS-NS.
+- Compare excess over parity lower bound by H-gradient and principal-line distance.
+- Test whether generic NS-NS sea entries are approximable from bucket sizes alone.
+- Package normalized bucket transport as a Tournament TDA feature.
+
+**Source:** THM-345, THM-346, INV-194, `04-computation/merged_bucket_constraints_s5.py`, `04-computation/tiling_quotient_bucket_balance_s5.py`.
+
 **Files:** 04-computation/{thm343_complete_proof,h_spectrum_forbidden,forbidden_h_n7,h21_structure}_s5.py; `04-computation/h63_counterexample_audit_s8.py`; `04-computation/omega_extreme_fingerprints_s11.py`; `04-computation/projection_defect_bridge_s12.py`; `05-knowledge/results/omega_extreme_fingerprints_s11.out`; `05-knowledge/results/single_core_signature_targets_s11.out`; `05-knowledge/results/projection_defect_bridge_s12.out`

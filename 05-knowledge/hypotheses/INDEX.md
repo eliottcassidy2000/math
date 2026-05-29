@@ -2281,6 +2281,13 @@ The summand counts even-size choices of interior vertices between i and j.
 **Implication:** The Paley/interval contrast may be better understood outside tournament language as a hypergraph shadow/fiber defect and a cycle-space codeword-weight distinction. These are cheap feature candidates for `tournament_tda.py`.
 **See:** T283, `07-reflections/projection-defect-as-common-residue.md`, `05-knowledge/results/projection_defect_bridge_s12.out`.
 
+## HYP-1767: Bucket transport excess predicts spine/ribs/sea structure (kind-pasteur-2026-05-29-S5)
+**Status:** OPEN extension; parity base theorem PROVED as THM-345.
+**Statement:** For each Hamming layer `d`, the transport matrix `W_d` between merged tiling buckets has a forced parity lower bound coming from SC buckets and Lucas parity. The excess above that lower bound is not uniform: it should concentrate differently on SC-SC spine edges, SC-NS ribs, and NS-NS sea edges.
+**Evidence:** THM-345 proves the bucket parity and layer transport constraints for all n, and `04-computation/merged_bucket_constraints_s5.py` verifies every layer for n=3..6. At n=6, active parity layers d=2,8,10 have 12 forced odd SC rows, while actual cross-line counts are far above the minimum (21476, 21792, 486 vs lower bound 6). The S5 balance run also shows NS-NS cross-lines dominate every n=6 layer, so the informative structure lives in the sea-heavy excess, not merely the parity obligation.
+**Next:** Condition the spine/ribs/sea excess by H-gradient direction and principal-line distance.
+**See:** THM-345, THM-346, INV-194, `05-knowledge/variables/merged-bucket-size.md`, `05-knowledge/variables/tiling-bucket-balance.md`, `07-reflections/merged-tiling-bucket-constraints.md`.
+
 ## HYP-1755: Strong Key Lemma (opus-2026-05-28-S5)
 **Status:** OPEN — required to complete H=21 obstruction proof
 **Statement:** If C₁, C₂, C₃ are three pairwise-intersecting odd directed cycles in tournament T, then T contains a 4th odd directed cycle C' such that V(C') ⊆ V(C₁) ∪ V(C₂) ∪ V(C₃).
@@ -2354,20 +2361,46 @@ Source: projection_defect_h_score_s3.py, projection_defect_h_score_s3.out
 **Next:** Condition the transition matrix by spine/ribs/sea class type and compare with projection-defect signs from HYP-1756..1762.
 **See:** `05-knowledge/results/goodcut_bucket_merged_s13.out`, T289.
 
-## HYP-1767: Merged tiling bucket parity (codex-S95)
+## HYP-1768: Finite Hamming layers are bucket-balanced but not generally equitable
+**Status:** CONFIRMED for n=4..6 exact; OPEN generally
+**What:** For quotient buckets of the tiling hypercube, THM-346 gives exact aggregate balance
+`2*self_b + incident_cross_b = |bucket_b|*|M|`, but this does not imply that every tiling inside
+the same bucket has the same number of same-bucket neighbors. At n=6 in the merged tournament
+quotient, non-equitable bucket counts are 18/34 for d=1, 28/34 for d=5, and 10/34 for
+complement-tiling. The all-waggly family is equitable internally for the trivial reason that
+every tiling sees all other tilings.
+**Why it matters:** Quotient matrices have conserved half-line mass without being regular covers.
+Future proofs and feature extractors should use bucket balance as a checksum, not assume uniform
+local behavior inside isomorphism buckets.
+Source: THM-346, tiling_quotient_bucket_balance_s5.py, tiling_quotient_bucket_balance_s5.out
+
+## HYP-1769: Tiling-level cross-line mass shifts from spine to sea by n=6
+**Status:** CONFIRMED for n=5..6 exact; OPEN as an asymptotic statement
+**What:** In the merged tournament quotient, cross-bucket tiling lines decompose into SC-SC spine,
+SC-NS ribs, and NS-NS sea. At n=5, d=1 cross-lines are spine-dominated (124 spine, 44 ribs,
+4 sea). At n=6, d=1 is sea-dominated (276 spine, 1572 ribs, 2778 sea). The all-waggly totals
+show the same shift: n=5 has 1108 spine / 624 ribs / 20 sea, while n=6 has 25362 spine /
+188160 ribs / 286404 sea.
+**Why it matters:** The geometric-alignment story is visible already at the tiling-line mass level,
+not only at the simple metagraph-edge level. This gives a quantitative bridge from bucket
+constraints to spine/ribs/sea conditioning.
+Source: tiling_quotient_bucket_balance_s5.py, tiling_quotient_bucket_balance_s5.out,
+07-reflections/merged-tiling-bucket-constraints.md
+
+## HYP-1770: Merged tiling bucket parity (codex-S95)
 **Status:** CONFIRMED (proved; verified n=3..7)
 **What:** In the fixed-path tournament-tiling explorer, every unmerged class fiber `F(C)=H(C)/|Aut(C)|` is odd. After complement merging, a node has odd mass exactly when it is self-complementary; every non-self-complementary merged node has mass `2*odd`. Weighted cube-edge buckets satisfy `2λ_u + Στ_uv = mM_u`, with the mod-2 cross-incidence detecting SC nodes whenever `m=C(n-1,2)` is odd.
 **Proof:** Redei gives odd `H`; tournament automorphism groups have odd order; complement preserves `H` and `|Aut|`; cube-edge incidence counts tile flips from each tiling.
-Source: HYP-1767-merged-tiling-bucket-parity.md, merged_tiling_bucket_constraints_s95.py
+Source: HYP-1770-merged-tiling-bucket-parity.md, merged_tiling_bucket_constraints_s95.py
 
-## HYP-1768: Endpoint transfer recursive boundary (codex-S95)
+## HYP-1771: Endpoint transfer recursive boundary (codex-S95)
 **Status:** PARTIALLY CONFIRMED (transfer theorem proved; full-row-rank conjecture verified n=2..6)
 **What:** Endpoint insertion gives exact quotient transfer matrices with row sums `2^(n-1)F_n` and column sums `F_{n+1}`; after merging, row sums are `2^(n-1)M_n` and column sums `M_{n+1}`. Mod 2, the unmerged transfer boundary is all child classes, while the merged boundary is exactly the SC child-node indicator. New conjecture: the parity transfer has full row rank for all n.
 **Evidence:** GF(2) ranks equal parent class counts `[1,2,4,12,56]` and parent merged counts `[1,2,3,10,34]` for transitions `2->3` through `6->7`.
-Source: HYP-1768-endpoint-transfer-recursive-boundary.md, endpoint_transfer_bucket_recursion_s95.py
+Source: HYP-1771-endpoint-transfer-recursive-boundary.md, endpoint_transfer_bucket_recursion_s95.py
 
-## HYP-1769: Even-graph endpoint rank defect (codex-S95)
+## HYP-1772: Even-graph endpoint rank defect (codex-S95)
 **Status:** CONFIRMED SMALL-N (n=2..7 exact)
 **What:** The endpoint-transfer row/column theorem holds for the even-graph quotient, but full GF(2) row rank fails: ranks `[1,1,2,6,8]` vs parent even-class counts `[1,2,3,7,16]`. The mod-2 boundary is not all child classes; it is the subset with odd labeled orbit size `n!/|Aut(G)|`.
 **Interpretation:** Tournament parity-injectivity is not a generic tiling-cube quotient property. The coarser cycle-space/even-graph lens forgets parity information controlled by graph automorphism 2-adics.
-Source: HYP-1769-even-graph-endpoint-rank-defect.md, THM-266-endpoint-transfer-boundary.md, even_graph_endpoint_transfer_s95.py
+Source: HYP-1772-even-graph-endpoint-rank-defect.md, THM-266-endpoint-transfer-boundary.md, even_graph_endpoint_transfer_s95.py

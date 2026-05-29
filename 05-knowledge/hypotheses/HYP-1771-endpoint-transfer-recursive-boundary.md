@@ -1,11 +1,11 @@
 ---
-id: HYP-1768
+id: HYP-1771
 status: PARTIALLY_CONFIRMED
 source: endpoint_transfer_bucket_recursion_s95.py
 session: codex-2026-05-29
 ---
 
-# HYP-1768: Endpoint Transfer Recursive Boundary
+# HYP-1771: Endpoint Transfer Recursive Boundary
 
 ## Exact Theorem
 

@@ -85,7 +85,7 @@ rank defects:       [0, 1, 1, 1, 8]
 
 So full row rank fails for the even-graph quotient in the tested range, unlike
 the tournament quotient and complement-merged tournament quotient from
-HYP-1768.
+HYP-1771.
 
 ## Verification Record
 
@@ -94,4 +94,4 @@ in:
 
 - `04-computation/even_graph_endpoint_transfer_s95.py`
 - `05-knowledge/results/even_graph_endpoint_transfer_s95.out`
-- `05-knowledge/hypotheses/HYP-1769-even-graph-endpoint-rank-defect.md`
+- `05-knowledge/hypotheses/HYP-1772-even-graph-endpoint-rank-defect.md`

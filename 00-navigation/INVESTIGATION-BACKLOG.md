@@ -178,6 +178,18 @@
   4. Package the cheap features into `tournament_tda.py` with INV-192.
 **Files:** `04-computation/projection_defect_bridge_s12.py`, `05-knowledge/results/projection_defect_bridge_s12.out`, `07-reflections/projection-defect-as-common-residue.md`, HYP-1760, HYP-1763, T282, T283.
 
+### INV-194: Merged Tiling Bucket Constraints
+**Source:** kind-pasteur-2026-05-29-S5
+**Status:** NEW THEOREM + OPEN EXTENSION
+**What:** Treat quotient maps out of the tiling cube as bucket maps. THM-346 proves the general half-line balance law for any quotient `q: Q_m -> B` and any mask family `M`: `2*self_b + incident_cross_b = |q^{-1}(b)|*|M|`. THM-345 specializes this to `pi: Q_m -> G_n/Z_2`, proving that bucket size parity detects SC/NS type exactly: SC buckets are odd, NS buckets are `2 mod 4`, and `sum_M B_M=2^m`. For every Hamming layer `d`, the ordered transport matrix `W_d(M,N)` is symmetric, has row sums `B_M*C(m,d)`, has even diagonal, and therefore has forced cross-outflow parity. Lucas' theorem says the active parity layers are exactly the binary submasks of `m=C(n-1,2)`.
+**Why it matters:** This turns the merged metagraph into a constrained reversible transport system, not just an unweighted graph. It also corrects the old S202 "merged tiling excess" narration: merged buckets still partition the fixed-base cube exactly.
+**Next steps:**
+  1. Measure the excess over the parity lower bound by spine/ribs/sea edge type.
+  2. Determine whether generic NS-sea transport is approximable from bucket sizes alone, with SC/rib corrections.
+  3. Seek a Burnside formula for the bucket-size distribution, not just for the number of buckets.
+  4. Add bucket parity and normalized `W_d` features to the future `tournament_tda.py` extractor.
+**Files:** `01-canon/theorems/THM-345-merged-bucket-parity.md`, `01-canon/theorems/THM-346-tiling-quotient-bucket-balance.md`, `04-computation/merged_bucket_constraints_s5.py`, `04-computation/tiling_quotient_bucket_balance_s5.py`, `05-knowledge/results/merged_bucket_constraints_s5.out`, `05-knowledge/results/tiling_quotient_bucket_balance_s5.out`, `05-knowledge/variables/merged-bucket-size.md`, `05-knowledge/variables/tiling-bucket-balance.md`, `07-reflections/merged-tiling-bucket-constraints.md`.
+
 ### INV-135: Tang-Yau (arXiv:2602.04140): Path Homology of Circulant Digraphs via Fourier
 **Source:** Web research kind-pasteur-2026-03-10-S50
 **Status:** INVESTIGATED (kind-pasteur-2026-03-10-S50). February 2026.
