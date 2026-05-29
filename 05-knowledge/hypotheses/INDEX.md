@@ -2200,9 +2200,20 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
   - Concrete n=8 tournament from `05-knowledge/results/h63_verify.out`, independently re-audited in `04-computation/h63_counterexample_audit_s8.py`.
   - `05-knowledge/results/h63_counterexample_audit_s8.out`: H(T)=63 by DP and direct permutation enumeration.
   - OCF check: Ω(T) has 31 directed odd cycles with length distribution {3:8, 5:17, 7:6}; Ω(T)=K31, so I(Ω,2)=1+2·31=63.
+**Exact n=8 census (opus-2026-05-29-S10):**
+  - `gentourng 8` isomorphism-class census found exactly two n=8 classes with H=63.
+  - Both classes have |Aut|=1, score sequences (1,2,2,3,3,5,6,6) and (1,1,2,4,4,5,5,6), and Ω(T)=K31.
+  - See THM-344 and `05-knowledge/results/h63_n8_isoclass_census_s10.out`.
 **Corrected statement:** H=63 is a temporary n≤7 gap, not a permanent forbidden value. The universal small forbidden set currently remains {7} proved and {21} strongly conjectured/partly formalised.
 **Lesson:** The 7·3^k pattern terminates as a universal obstruction at k=1. H=63 unlocks through a complete conflict graph K31, not through a disconnected K3 factor.
-**See:** MISTAKE-024, h63_verify.out, h63_counterexample_audit_s8.out
+**See:** MISTAKE-024, h63_verify.out, h63_counterexample_audit_s8.out, h63_n8_isoclass_census_s10.out
+
+## HYP-1756: At n=8, every H=63 tournament has Ω(T)=K31 (opus-2026-05-29-S10)
+**Status:** CONFIRMED / PROVED by finite n=8 isomorphism-class census (THM-344).
+**Statement:** If T is an 8-vertex tournament and H(T)=63, then Ω(T) is complete with 31 directed odd cycles.
+**Proof data:** `04-computation/h63_n8_isoclass_census_s10.py` enumerates all 6880 n=8 isomorphism classes using `gentourng 8`. Exactly two classes have H=63; both have Ω=K31, |Aut|=1, and directed odd-cycle length distribution {3:8, 5:17, 7:6}.
+**Consequence:** The H=63 unlock is not merely an existence example; at n=8 it is uniquely forced through the complete-Ω mechanism.
+**Next:** Characterize complete-Ω tournaments by cycle-count/score data and determine which K_r occur as Ω(T) at minimal n.
 
 ## HYP-1755: Strong Key Lemma (opus-2026-05-28-S5)
 **Status:** OPEN — required to complete H=21 obstruction proof

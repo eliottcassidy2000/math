@@ -70,12 +70,13 @@ et al.).
 | `Forbidden.lean` | Generic α-enumeration + binomial bounds | mixed |
 | `HSpectrum.lean` | Universal pair + finite trio bundles | bundle |
 | `Tilings.lean` | `HasBasePath`, `tilde`, score formula | axioms + corollaries |
-| `GridReflection.lean` | `op`, `relabel`, vertex reversal, THM-280 | axiom + corollaries |
-| `StaircaseModel.lean` | THM-330 (SC cut theorem) — **EASY DIRECTION PROVED** | mixed |
+| `GridReflection.lean` | `op`, `relabel`, vertex reversal | proved infrastructure |
+| `StaircaseTileModel.lean` | concrete tile coordinates, THM-280 arc statement | axiom |
+| `StaircaseModel.lean` | THM-330 (SC cut theorem) — **FULLY PROVED** | proved |
 | `SelfComplementary.lean` | `IsSelfFlip`, `PaleyLike`, regular ⟹ ¬SF | axiom + proved corollaries |
 | `Iso.lean` | `TournamentIso`, `≅` | proved |
 | `IsoProperties.lean` | iso-invariants — **PROVED IN LEAN** | proved |
-| `AntiAutomorphism.lean` | THM-316 abstract framework | axiom |
+| `AntiAutomorphism.lean` | THM-316 abstract framework | **PROVED** |
 | `HPIPIdentity.lean` | THM-326 restatement | proved from OCF |
 | `SCCounts.lean` | SC tile counts + THM-342 diagonals | axioms |
 | `SCFraction.lean` | SC tiling fractions (THM-330 cor) | axioms |
@@ -119,8 +120,8 @@ Sorted by Lean foundation → external classical → project-novel.
 #### Tiling/staircase axioms
 - `tilde_score_sink`, `tilde_score_source`, `tilde_score_interior`
   (oracle-2026-05-11-S1).
-- `tilde_eq_reversed_op` (THM-280, opus-2026-04-03-S27).
-- `SC_implies_all_cuts_crossing` (THM-330 hard direction).
+- `thm280_arc` (THM-280, opus-2026-04-03-S27), now stated in the
+  concrete `StaircaseTileModel.lean` coordinates.
 
 #### Counting constants
 - `SCcount_2..7`, `SCtilings_3..8`, `NonSCtilings_3..8`.
@@ -128,9 +129,6 @@ Sorted by Lean foundation → external classical → project-novel.
 
 #### THM-342 diagonal formulas
 - `thm342_diag0..3`.
-
-#### THM-316
-- `abstract_anti_palindrome`.
 
 #### H-invariance
 - `H_iso_invariant` — **NOW PROVED**.
@@ -144,8 +142,12 @@ external/project axioms that are already in their proof OR — best case
 ### Pure Lean proofs (no project axioms)
 
 - `H_iso_invariant` — Hamiltonian path count is iso-invariant.
+- `abstract_anti_palindrome` — anti-automorphism reverses endpoint counts.
+- `epStart_sum_eq_H` / `epEnd_sum_eq_H` — endpoint fibers partition H.
 - `outDegree_iso` — out-degree is iso-invariant (modulo relabel).
 - `isRegular_iso` — regularity is iso-invariant.
+- `SC_implies_all_cuts_crossing` (THM-330 hard direction).
+- `thm330_SC_iff_all_cuts_crossing` (THM-330 full iff).
 - `crossesUpward_all_implies_SC` (THM-330 easy direction).
 - `reaches_zero` — every vertex reaches 0 via base path.
 - `reaches_descent` — descent via base path.
@@ -165,7 +167,6 @@ external/project axioms that are already in their proof OR — best case
 | `regular_not_SF` | `tilde_score_sink` |
 | `regular_not_SF_id` | `tilde_score_sink` |
 | `paleyLike_not_SF_id` | `tilde_score_sink` |
-| `gridSym_iff_sc_via_reversal` | `tilde_eq_reversed_op` |
 | `H_eq_independence_poly_at_two_truncated` | `ocf` |
 | `alpha_solution_H7` | `alpha_descent`, `ocf` |
 | `alpha_candidates_H21` | `alpha2_pair_bound`, `alpha_descent`, `ocf` |
@@ -175,23 +176,19 @@ external/project axioms that are already in their proof OR — best case
 ## De-axiomatisation roadmap
 
 ### Easy targets (≤ 100 LOC of Lean)
-1. **`SC_implies_all_cuts_crossing`** — the THM-330 hard direction.
-   Argument: contrapositive via dominating-set on `upperCut k`.
-2. **`tilde_score_sink/source/interior`** — counting argument
+1. **`tilde_score_sink/source/interior`** — counting argument
    `outNbrs = consec ⊔ nonconsec` + `Finset.card_disjoint_union`.
-3. **Concrete SC tiling counts** (`SCcount_n`, `SCtilings_n`) by
+2. **Concrete SC tiling counts** (`SCcount_n`, `SCtilings_n`) by
    `native_decide` once a computable `IsSC` predicate exists.
 
 ### Medium targets (200-500 LOC)
-4. **`tilde_eq_reversed_op`** (THM-280) — case split on consecutive
-   vs non-consecutive pairs.
-5. **`abstract_anti_palindrome`** (THM-316) — bijection on the satisfying
-   `Equiv.Perm` finset, similar to `H_iso_invariant`.
-6. **`redei_existence`** — classical insertion argument (~150 lines).
+3. **`thm280_arc`** (THM-280) — case split on consecutive vs
+   non-consecutive pairs in `StaircaseTileModel.lean`.
+4. **`redei_existence`** — classical insertion argument (~150 lines).
 
 ### Hard targets (significant Mathlib development)
-7. **`ocf`** (Grinberg-Stanley) — requires deep combinatorial development.
-8. **`moonMoser` / `moonCamion_oddSize`** — classical structural theorems.
+5. **`ocf`** (Grinberg-Stanley) — requires deep combinatorial development.
+6. **`moonMoser` / `moonCamion_oddSize`** — classical structural theorems.
 
 ## Build & verify
 
@@ -210,8 +207,11 @@ lake build TournamentH7
 
 ## Status snapshot (oracle-2026-05-29-S3 family)
 
-- **953 build targets** clean.
+- **1061 build targets** clean (opus-2026-05-29-S10).
 - **20+ project-novel theorems** formalised.
-- **6 theorems** fully proved with 0 mathematical axioms (iso-invariants + Lean basics).
-- **THM-330 easy direction PROVED** (hard direction is the one remaining axiom for that theorem).
+- **20+ audited theorems**, with a growing axiom-free core (iso-invariants,
+  THM-330, THM-316 endpoint facts, concrete examples).
+- **THM-330 FULLY PROVED** (both directions, no project axiom).
+- **THM-316 abstract anti-palindrome PROVED** by the endpoint-reversal
+  bijection `σ ↦ φ * σ * vertexReversal n`.
 - Single SUBMISSION.md, this ARCHITECTURE.md, and 2 reflections in `07-reflections/`.

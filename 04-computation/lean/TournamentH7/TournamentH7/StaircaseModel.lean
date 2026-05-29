@@ -1,9 +1,7 @@
 /-
   TournamentH7.StaircaseModel — THM-330 (SC Cut Theorem)
 
-  Defines the cut-crossing predicate and proves THM-330 PARTIALLY in
-  Lean (the easy direction is now PROVED; the hard direction remains an
-  axiom).
+  Defines the cut-crossing predicate and proves THM-330 fully in Lean.
 -/
 
 import TournamentH7.Basic
@@ -113,7 +111,7 @@ lemma reaches_zero (T : Tournament n) (hbp : HasBasePath T) (hn : 0 < n) (u : Fi
 
 /-- Auxiliary: for `j ≤ k < n`, vertex `⟨k, _⟩` reaches `⟨j, _⟩`. -/
 private lemma reaches_descent_aux (T : Tournament n) (hbp : HasBasePath T) :
-    ∀ k (hk : k < n) (j : ℕ) (hj : j < n) (hjk : j ≤ k),
+    ∀ k (hk : k < n) (j : ℕ) (hj : j < n) (_hjk : j ≤ k),
       Reaches T ⟨k, hk⟩ ⟨j, hj⟩ := by
   intro k
   induction k with
@@ -211,7 +209,7 @@ private lemma exists_crossing_in_reaches
     intro h1 h2
     by_cases hv : v.val < k
     · exact ih hv h2
-    · push_neg at hv
+    · push Not at hv
       by_cases hcons : u.val + 1 = v.val
       · exfalso
         have hv_lt : v.val < n := v.is_lt
@@ -239,9 +237,10 @@ theorem SC_implies_all_cuts_crossing
   have hr : Reaches T v u := h v u
   exact exists_crossing_in_reaches T hbp k hk1 hr (by simp [v]; omega) (by simp [u]; omega)
 
-/-! ### THM-330 (full iff, easy direction PROVED) -/
+/-! ### THM-330 (full iff, PROVED) -/
 
-/-- **THM-330** (easy direction proved; hard direction = `SC_implies_all_cuts_crossing`). -/
+/-- **THM-330**: a base-path tournament is strongly connected iff every
+    cut has a crossing-upward arc. -/
 theorem thm330_SC_iff_all_cuts_crossing
     (T : Tournament n) (hbp : HasBasePath T) :
     IsStronglyConnected T ↔ ∀ k, 1 ≤ k → k < n → CrossesUpward T k := by
@@ -254,7 +253,7 @@ theorem not_SC_implies_no_crossing
     (T : Tournament n) (hbp : HasBasePath T) (h : ¬ IsStronglyConnected T) :
     ∃ k, 1 ≤ k ∧ k < n ∧ ¬ CrossesUpward T k := by
   by_contra hno
-  push_neg at hno
+  push Not at hno
   have hall : ∀ k, 1 ≤ k → k < n → CrossesUpward T k :=
     fun k hk1 hkn => hno k hk1 hkn
   exact h (crossesUpward_all_implies_SC T hbp hall)

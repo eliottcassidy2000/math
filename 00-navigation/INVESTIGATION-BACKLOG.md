@@ -15,14 +15,14 @@
 ## Priority opus-2026-05-16-S1: TRRT and All-0 Staircase
 
 ### INV-191: H=63 Unlocks at n=8 via Complete Conflict Graph
-**Source:** opus-2026-05-29-S8
-**Status:** VERIFIED counterexample; structural explanation open
-**What:** HYP-1754 ("H=63 is universally forbidden") is refuted. A concrete n=8 tournament has H(T)=63 by both DP and direct permutation enumeration. Its odd-cycle conflict graph Ω(T) has 31 directed odd cycles and is complete, so OCF gives H=I(K31,2)=1+2·31=63. This explains how 63 bypasses the old disconnected K3-factor obstruction: it realizes 63 through a complete Ω, not through K3⊔2K1.
+**Source:** opus-2026-05-29-S8; exact census opus-2026-05-29-S10
+**Status:** EXACT at n=8; structural generalization open
+**What:** HYP-1754 ("H=63 is universally forbidden") is refuted. A concrete n=8 tournament has H(T)=63 by both DP and direct permutation enumeration. Its odd-cycle conflict graph Ω(T) has 31 directed odd cycles and is complete, so OCF gives H=I(K31,2)=1+2·31=63. S10 upgraded this to a finite theorem: among all 6880 n=8 isomorphism classes, exactly two have H=63; both have |Aut|=1, score sequences (1,2,2,3,3,5,6,6) and (1,1,2,4,4,5,5,6), and Ω(T)=K31. This explains how 63 bypasses the old disconnected K3-factor obstruction: it realizes 63 through a complete Ω, not through K3⊔2K1.
 **Next:**
-  1. Characterize tournaments with complete Ω(T) and α₁=31 at n=8.
+  1. Characterize the two complete-Ω H=63 classes structurally (score, SCC, deletion profile, principal-line/metagraph location).
   2. Determine the smallest n at which each odd value 2r+1 can be realised as I(K_r,2) by a tournament with complete Ω.
   3. Revisit H=21: is the obstruction exactly the nonexistence of Ω=K10 and the other four α-vector cases?
-**Files:** `04-computation/h63_counterexample_audit_s8.py`, `05-knowledge/results/h63_counterexample_audit_s8.out`, MISTAKE-050.
+**Files:** `04-computation/h63_counterexample_audit_s8.py`, `04-computation/h63_n8_isoclass_census_s10.py`, `05-knowledge/results/h63_counterexample_audit_s8.out`, `05-knowledge/results/h63_n8_isoclass_census_s10.out`, THM-344, MISTAKE-050.
 
 ### INV-189: Real-Rootedness of I(Ω(T), x) for All Tournaments (TRRT)
 **Source:** opus-2026-05-16-S1

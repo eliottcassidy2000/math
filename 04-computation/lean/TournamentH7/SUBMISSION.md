@@ -17,14 +17,14 @@ Lean 4 + Mathlib4 formalisation of forbidden H-values in tournaments.
 | `Tournament.regular_not_SF` | regular base-path tournament has score differing at vertex 0 | oracle-2026-05-11-S1 |
 | `Tournament.regular_not_SF_id` | regular base-path tournament is *not* SF (identity) | corollary |
 | `Tournament.paleyLike_not_SF_id` | Paley-like tournament is not SF | corollary |
-| `Tournament.gridSym_iff_sc_via_reversal` | grid-symmetric ↔ SC via vertex reversal (THM-280 corollary) | opus-2026-04-03-S27 |
 | `Tournament.thm330_SC_iff_all_cuts_crossing` | THM-330: SC iff every cut k has a crossing-upward arc | opus-2026-05-27-S1 |
 | `Tournament.apex_implies_SC` | apex tile present ⟹ SC (THM-333) | opus-2026-05-27-S1 |
 | `Tournament.isSelfComplementary_iff_iso_op` | IsSelfComplementary ↔ T ≅ op T | (clean characterisation) |
 | `Tournament.outDegree_iso` | iso preserves out-degree (up to relabel); **PROVED IN LEAN** | clean |
 | `Tournament.isRegular_iso` | iso preserves regularity; **PROVED IN LEAN** | clean |
 | `Tournament.H_eq_independence_poly_at_two_truncated` | THM-326: H(T) = I(Ω, 2) (truncated form) | opus-2026-05-27-S6 |
-| `Tournament.abstract_anti_palindrome` | anti-automorphism ⟹ epStart(v) = epEnd(φ v) (abstract THM-316) | opus-2026-05-22-S3 |
+| `Tournament.abstract_anti_palindrome` | anti-automorphism ⟹ epStart(v) = epEnd(φ v); **PROVED IN LEAN** | opus-2026-05-22-S3 / opus-2026-05-29-S10 |
+| `Tournament.epStart_sum_eq_H` / `Tournament.epEnd_sum_eq_H` | endpoint fibers partition Hamiltonian paths; **PROVED IN LEAN** | opus-2026-05-29-S10 |
 | `Tournament.tilde_tilde` | tile-complement is an involution; PROVED IN LEAN | oracle-2026-05-11-S1 |
 | `Tournament.H_ge_three_pow_k_of_alpha_pos` | N_min(k)=3^k for k≤4: α_k≥1 ⟹ H(T)≥3^k | oracle-2026-05-29-S4 |
 | `Tournament.H_lt_27_no_alpha3` | H(T)<27 ⟹ α₃=0 | corollary |
@@ -82,7 +82,6 @@ theorem depends on. The axioms split into three classes:
 | `omegaCliqueLocalises` | Same, for clique on k cycles |
 | `oddCyclesIn_upper` | Trivial bound by 2^|S| |
 | `tilde_score_sink` | Tile-complement score formula at sink vertex 0 |
-| `abstract_anti_palindrome` | Endpoint-count anti-palindrome under an anti-automorphism |
 | `alphaCount_iso_invariant` | Independence-vector counts are invariant under tournament isomorphism |
 
 ### Class C: Structural axioms with computational citation (project-specific)
@@ -108,9 +107,12 @@ matches the intended proof-modulo-axioms status:
   `H_ne_sixtythree_le_seven_axiom` (besides Lean foundations).
 - The new `N_min(k)=3^k` corollaries depend only on `ocf` and
   `alpha_descent` (besides Lean foundations).
+- `abstract_anti_palindrome_audit`, `epStart_sum_eq_H_audit`, and
+  `epEnd_sum_eq_H_audit` now depend only on Lean foundations: endpoint
+  reversal and endpoint partitioning have been formalized.
 - The iso/regularity examples are mostly axiom-free; the remaining project
-  single-axiom dependencies are exactly `tilde_score_sink`,
-  `abstract_anti_palindrome`, and `alphaCount_iso_invariant`.
+  single-axiom dependencies here are exactly `tilde_score_sink` and
+  `alphaCount_iso_invariant`.
 
 ## Honest status report
 

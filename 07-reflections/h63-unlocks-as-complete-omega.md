@@ -1,6 +1,6 @@
 # H=63 Unlocks as Complete Omega
 
-**Instance:** opus-2026-05-29-S8  
+**Instance:** opus-2026-05-29-S8; exact census opus-2026-05-29-S10
 **Date:** 2026-05-29
 
 The false universal claim H(T) != 63 failed in the cleanest possible way.
@@ -11,6 +11,17 @@ The audited n=8 counterexample has:
 - Ω(T) has 31 directed odd cycles
 - Ω(T) is complete: Ω(T) = K31
 - Therefore OCF gives H(T) = I(K31,2) = 1 + 2*31 = 63
+
+S10 upgraded this from an audited example to a finite n=8 theorem. Using
+`gentourng 8`, exactly two n=8 isomorphism classes have H=63. Both have
+trivial automorphism group, the same odd-cycle profile `{3:8, 5:17, 7:6}`,
+and Ω(T)=K31. The score sequences are:
+
+- (1, 2, 2, 3, 3, 5, 6, 6)
+- (1, 1, 2, 4, 4, 5, 5, 6)
+
+So at n=8 the complete-Ω mechanism is not just one way for H=63 to happen;
+it is the only way.
 
 This matters because the old obstruction to H=63 attacked the disconnected
 factorization 63 = I(K3,2) * I(2K1,2). That obstruction was real but too
@@ -28,7 +39,8 @@ This suggests a new search axis:
 
 1. For which r is Ω(T)=K_r realizable?
 2. What is the minimal n for a complete-Ω tournament with α1=r?
-3. Is H=21 permanently forbidden because none of its α-vector shapes are
+3. Why are the two n=8 H=63 score sequences exactly those two?
+4. Is H=21 permanently forbidden because none of its α-vector shapes are
 compatible with tournament Ω, rather than because of a multiplicative
 7-obstruction?
 

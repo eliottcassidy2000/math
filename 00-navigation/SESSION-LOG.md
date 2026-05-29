@@ -2,6 +2,54 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-29-S10 — 2026-05-29
+
+**Summary:** Continued the Lean/formalization thread now that Lean is installed, and pushed INV-191 from counterexample to exact n=8 theorem. Proved the abstract THM-316 anti-palindrome theorem in Lean, proved the endpoint fiber partition identities, and classified all n=8 H=63 isomorphism classes exactly.
+
+**Lean formalization:**
+- Replaced the `abstract_anti_palindrome` axiom in `AntiAutomorphism.lean` with a proof by the explicit bijection `σ ↦ φ * σ * vertexReversal n`.
+- Proved `epStart_sum_eq_H` and `epEnd_sum_eq_H` by `Finset.card_eq_sum_card_fiberwise`.
+- Added `Verify.lean` audits:
+  - `abstract_anti_palindrome_audit`
+  - `epStart_sum_eq_H_audit`
+  - `epEnd_sum_eq_H_audit`
+- All three now depend only on Lean foundations (`propext`, `Classical.choice`, `Quot.sound`), not project axioms.
+- Cleaned stale THM-330 comments/docs: THM-330 is fully proved in Lean; no hard-direction axiom remains.
+- Final build saved to `05-knowledge/results/lean_tournamenth7_build_opus_2026-05-29-S10_final.out`; `lake build TournamentH7` completed successfully (1061 jobs).
+
+**H=63 / complete Ω investigation:**
+- Added `04-computation/h63_complete_omega_s10.py` and saved `05-knowledge/results/h63_complete_omega_s10.out`.
+  - 100000 random labeled n=8 tournaments, seed 2026052910.
+  - Found 33 H=63 hits.
+  - Every hit had Ω complete, 31 odd cycles, length distribution {3:8, 5:17, 7:6}, α=(1,31), I(Ω,2)=63.
+  - Hits fell into two sampled isomorphism classes.
+- Added `04-computation/h63_n8_isoclass_census_s10.py` and saved `05-knowledge/results/h63_n8_isoclass_census_s10.out`.
+  - Exact `gentourng 8` census over all 6880 n=8 isomorphism classes.
+  - H=7 classes: 0. H=21 classes: 0. H=63 classes: exactly 2.
+  - Both H=63 classes have |Aut|=1 and Ω(T)=K31.
+  - Score sequences: (1,2,2,3,3,5,6,6) and (1,1,2,4,4,5,5,6).
+  - Total labeled H=63 tournaments at n=8: 80640, frequency 0.030041%.
+
+**Knowledge-web updates:**
+- Added `01-canon/theorems/THM-344-n8-h63-complete-omega.md`.
+- Updated HYP-1754 and added HYP-1756: at n=8 every H=63 tournament has Ω=K31.
+- Updated INV-191, OPEN-Q-055, T279, and `07-reflections/h63-unlocks-as-complete-omega.md`.
+- Updated `ARCHITECTURE.md`, `SUBMISSION.md`, and `README.md` to reflect the current Lean axiom audit.
+
+**Verification:**
+- `python3 -m py_compile 04-computation/h63_complete_omega_s10.py`
+- `python3 -m py_compile 04-computation/h63_n8_isoclass_census_s10.py`
+- `python3 04-computation/h63_complete_omega_s10.py 2>&1 | tee 05-knowledge/results/h63_complete_omega_s10.out`
+- `python3 04-computation/h63_n8_isoclass_census_s10.py 2>&1 | tee 05-knowledge/results/h63_n8_isoclass_census_s10.out`
+- `lake build TournamentH7 2>&1 | tee ../../../05-knowledge/results/lean_tournamenth7_build_opus_2026-05-29-S10_final.out`
+- `git diff --check`
+
+**Next priorities:**
+1. Formalize `tilde_score_sink/source/interior`; this would remove the remaining axiom behind `regular_not_SF`.
+2. Prove `thm280_arc` in `StaircaseTileModel.lean` by the concrete consecutive/non-consecutive case split.
+3. Structurally characterize the two THM-344 H=63 classes: deletion profile, principal-line/metagraph location, and why exactly 31 complete-conflict odd cycles appear.
+4. Revisit H=21 with the complete-Ω lens: does Ω=K10 fail for the same local reason as H=7, or for a genuinely new obstruction?
+
 
 ## opus-2026-05-29-S9 — 2026-05-29
 

@@ -1161,15 +1161,15 @@ at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh
 
 **Evidence:**
 - H=21: 0 occurrences at n≤7 (exhaustive as of S6). All four decompositions (10,0), (8,1,0), (6,2,0), (4,3,0) of α-vectors absent at n=6.
-- H=63: absent at n≤7, but **achievable at n=8**. The S8 counterexample has Ω(T)=K31, hence H=I(K31,2)=63.
+- H=63: absent at n≤7, but **achievable at n=8**. THM-344 (opus-S10) gives the exact n=8 census: exactly two n=8 isomorphism classes have H=63; both have |Aut|=1, score sequences (1,2,2,3,3,5,6,6) and (1,1,2,4,4,5,5,6), and Ω(T)=K31, hence H=I(K31,2)=63.
 - Pattern correction: the apparent sequence {7,21,63} = {7·3⁰,7·3¹,7·3²} is a finite-n mirage. The 7·3^k universal obstruction terminates at k=1.
 
 **Sub-questions:**
 - Prove HYP-1753 (H≠21 for all n).
 - Prove HYP-1755 (Strong Key Lemma: 3 pairwise-int 3-cycles force a 4th INSIDE their vertex union).
-- Explain why H=63 unlocks at n=8 via complete Ω=K31 while H=7 (K3) and H=21 remain blocked.
+- Explain structurally why the two THM-344 classes are the first complete-Ω unlocks for H=63 while H=7 (K3) and H=21 remain blocked.
 - Is the forbidden set finite? At what n does each forbidden value "unlock"?
 
-**Tools:** SCC decomposition + Moon-Moser + Moon-Camion (as in THM-343 proof). Strong Key Lemma. Score sequence analysis. Independence-vector enumeration.
+**Tools:** SCC decomposition + Moon-Moser + Moon-Camion (as in THM-343 proof). Strong Key Lemma. Score sequence analysis. Independence-vector enumeration. THM-344 n=8 class census.
 
 **Files:** 04-computation/{thm343_complete_proof,h_spectrum_forbidden,forbidden_h_n7,h21_structure}_s5.py; `04-computation/h63_counterexample_audit_s8.py`

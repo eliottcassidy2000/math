@@ -142,8 +142,8 @@ lemma StTiling.reflect_complement (b : StTiling n) :
 /-- The arc relation induced by a staircase tiling. -/
 def StTiling.arc (b : StTiling n) (i j : Fin n) : Bool :=
   if i = j then false
-  else if h₁ : i.val = j.val + 1 then true
-  else if h₂ : j.val = i.val + 1 then false
+  else if _h₁ : i.val = j.val + 1 then true
+  else if _h₂ : j.val = i.val + 1 then false
   else if h₃ : j.val + 2 ≤ i.val then
     !(b ⟨i, j, h₃⟩)
   else if h₄ : i.val + 2 ≤ j.val then

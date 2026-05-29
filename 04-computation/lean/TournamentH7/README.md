@@ -49,8 +49,10 @@ omegaTriangleLocalises,                             -- folklore: cycles ↪ SCC 
 alpha_subset_bound                                  -- independence polynomial subset bound
 ```
 
-No `sorry` is used anywhere. Only `OCF.lean` introduces axioms, and each
-one carries a citation in its docstring.
+No `sorry` is used anywhere. The core H≠7 proof uses the cited axioms in
+`OCF.lean`; later project modules introduce additional documented axioms
+for H≠21, finite H≠63, tiling score formulas, and counting constants. See
+`ARCHITECTURE.md` and `SUBMISSION.md` for the current full audit.
 
 ## Proof sketch
 

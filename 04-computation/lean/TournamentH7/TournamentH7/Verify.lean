@@ -138,6 +138,18 @@ theorem abstract_anti_palindrome_audit {n : ℕ}
   abstract_anti_palindrome T hn φ hφ v
 #print axioms abstract_anti_palindrome_audit
 
+/-- Endpoint-start fibers partition the Hamiltonian paths. -/
+theorem epStart_sum_eq_H_audit {n : ℕ} (T : Tournament n) (hn : 0 < n) :
+    ∑ v : Fin n, epStart T hn v = H T :=
+  epStart_sum_eq_H T hn
+#print axioms epStart_sum_eq_H_audit
+
+/-- Endpoint-end fibers partition the Hamiltonian paths. -/
+theorem epEnd_sum_eq_H_audit {n : ℕ} (T : Tournament n) (hn : 0 < n) :
+    ∑ v : Fin n, epEnd T hn v = H T :=
+  epEnd_sum_eq_H T hn
+#print axioms epEnd_sum_eq_H_audit
+
 /-! ### Isomorphism invariants -/
 
 /-- Tournament isomorphism preserves vertex out-degrees (up to relabelling).

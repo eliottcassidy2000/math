@@ -1,0 +1,23 @@
+H=63 complete-Omega probe (opus-2026-05-29-S10)
+========================================================================
+n = 8
+trials = 100000
+seed = 2026052910
+
+H=63 hits = 33 (0.0330%)
+near-H distribution [51,75] = {51: 257, 53: 194, 55: 131, 57: 126, 59: 314, 61: 83, 63: 33, 65: 387, 67: 166, 69: 323, 71: 301, 73: 398, 75: 175}
+
+Omega profiles among H=63 hits:
+  count= 33 complete=True lengths={3: 8, 5: 17, 7: 6} alpha=(1, 31) I2=63
+
+Score sequences among H=63 hits:
+  count= 20 scores=(1, 1, 2, 4, 4, 5, 5, 6)
+  count= 13 scores=(1, 2, 2, 3, 3, 5, 6, 6)
+
+Distinct sampled isomorphism classes among H=63 hits = 2
+  class 1: labeled_hits=20, scores=(1, 1, 2, 4, 4, 5, 5, 6), aut=1
+  class 2: labeled_hits=13, scores=(1, 2, 2, 3, 3, 5, 6, 6), aut=1
+
+H=63 hits with non-complete Omega or I2!=63 = 0
+  none in this sample
+  empirical lead: sampled H=63 at n=8 always arrived as Omega=K31.

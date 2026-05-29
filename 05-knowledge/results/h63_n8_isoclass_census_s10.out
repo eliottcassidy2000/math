@@ -1,0 +1,21 @@
+Exact n=8 H=63 isomorphism-class census (opus-2026-05-29-S10)
+==============================================================================
+gentourng representatives = 6880
+expected A000568(8) = 6880
+
+H=7: 0 isomorphism classes
+H=21: 0 isomorphism classes
+H=63: 2 isomorphism classes
+  class 1: cid=2519, aut=1, labeled=40320, scores=(1, 2, 2, 3, 3, 5, 6, 6)
+    Omega: complete=True, cycles=31, lengths={3: 8, 5: 17, 7: 6}, alpha=[1, 31], I2=63, nonedges=0
+  class 2: cid=3285, aut=1, labeled=40320, scores=(1, 1, 2, 4, 4, 5, 5, 6)
+    Omega: complete=True, cycles=31, lengths={3: 8, 5: 17, 7: 6}, alpha=[1, 31], I2=63, nonedges=0
+
+Total labeled H=63 tournaments from these classes = 80640
+Total labeled n=8 tournaments = 268435456
+Labeled frequency = 0.030041%
+
+Conclusion:
+  Exactly two n=8 isomorphism classes have H=63.
+  Both have trivial automorphism group and Omega(T)=K31.
+  Hence every n=8 H=63 tournament realizes 63 as 1 + 2*31.
