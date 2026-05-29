@@ -18,6 +18,7 @@ import TournamentH7.Iso
 import TournamentH7.IsoProperties
 import TournamentH7.SCCounts
 import TournamentH7.SmallTournaments
+import TournamentH7.ForbiddenHCounting
 
 open Tournament
 
@@ -185,3 +186,26 @@ theorem transitive_not_regular_audit (n : ℕ) (hn : 2 ≤ n) :
     ¬ IsRegular (transitiveTournament n) :=
   transitive_not_regular n hn
 #print axioms transitive_not_regular_audit
+
+/-! ### N_min(k) = 3^k theorem -/
+
+/-- For any tournament T with α_k ≥ 1 (k ∈ {1, 2, 3, 4}),
+    H(T) ≥ 3^k.  Project-novel (oracle-S4). -/
+theorem H_ge_three_pow_k_audit {n : ℕ}
+    (T : Tournament n) (k : ℕ) (hk_pos : 1 ≤ k) (hk_le : k ≤ 4)
+    (h : 1 ≤ alphaCount k T) :
+    3 ^ k ≤ H T :=
+  H_ge_three_pow_k_of_alpha_pos T k hk_pos hk_le h
+#print axioms H_ge_three_pow_k_audit
+
+/-- H(T) < 27 ⟹ no independent triple of vertex-disjoint odd cycles. -/
+theorem H_lt_27_no_alpha3_audit {n : ℕ} (T : Tournament n) (hH : H T < 27) :
+    alphaCount 3 T = 0 :=
+  H_lt_27_no_alpha3 T hH
+#print axioms H_lt_27_no_alpha3_audit
+
+/-- H(T) < 81 ⟹ no independent quadruple of vertex-disjoint odd cycles. -/
+theorem H_lt_81_no_alpha4_audit {n : ℕ} (T : Tournament n) (hH : H T < 81) :
+    alphaCount 4 T = 0 :=
+  H_lt_81_no_alpha4 T hH
+#print axioms H_lt_81_no_alpha4_audit
