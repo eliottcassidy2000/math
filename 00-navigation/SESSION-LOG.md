@@ -2,6 +2,42 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-29-S3-bonus — 2026-05-29
+
+**Summary:** Continued S3 session: PROVED `H_iso_invariant` in Lean (was axiom), added `SmallTournaments`, `IsomorphismClasses` (A000568), `SCFraction` (THM-330 corollary) modules. **953 build targets clean.**
+
+**NOW PROVED IN LEAN (no mathematical axioms beyond Lean foundations):**
+- `H_iso_invariant` — Hamiltonian path count is iso-invariant.  Bijection σ ↦ f.perm * σ between the satisfying `Equiv.Perm`s.
+- `threeCycle_isRegular` — the 3-cycle 0→1→2→0 is a regular tournament.
+- `transitive_not_regular n hn` — the transitive tournament on n ≥ 2 vertices is not regular.
+- `transitive_hasBasePath n` — the transitive tournament has the base path.
+
+**NEW MODULES (this continuation):**
+- `SmallTournaments.lean` — `transitiveTournament n`, `threeCycle`, with axiom-free elementary lemmas.
+- `IsomorphismClasses.lean` — `IsoClass n` quotient type; A000568 axiomatised at n = 1..7; SC class counts (1, 0, 1, 0, 2, 0, 8 for n=1..7); merged metagraph identity `2 * V_merged = A000568(n) + SC(n)`.
+- `SCFraction.lean` — SC tiling counts SC(n=3..8) = 1, 5, 50, 903, 30773, 2032504; non-SC tiling counts (HYP-1739: 1, 3, 14, 121, 1995, 64648).
+
+**AUDIT TABLE update** (each per Verify.lean):
+- `outDegree_iso_audit`: **0 mathematical axioms**.
+- `isRegular_iso_audit`: **0 mathematical axioms**.
+- `H_iso_invariant_audit`: **0 mathematical axioms**.
+- `threeCycle_regular_audit`: **0 mathematical axioms**.
+- `transitive_not_regular_audit`: **0 mathematical axioms**.
+- `transitive_4_hasBasePath`: **0 mathematical axioms**.
+
+**KEY INSIGHT:** All concrete-tournament theorems and all iso-invariant abstract theorems are now FULLY PROVED in Lean. The remaining axioms are limited to:
+- External classical theorems (ocf, moonMoser, moonCamion, redei_existence, redei_parity).
+- Project-novel content awaiting de-axiomatisation (tilde_score_*, tilde_eq_reversed_op, thm330_axiom).
+- Computational constants (SC tile counts, A000568 values).
+
+**FOR NEXT AGENT:**
+1. De-axiomatise `thm330_axiom` via direct dominating-set / reachability climb arguments (see `StaircaseModel.lean` docstring).
+2. Build `Paley p` concrete construction using `Mathlib.NumberTheory.LegendreSymbol`; prove `PaleyLike`.
+3. Audit project canon for iso-class vs tiling distinctions per `07-reflections/iso-invariance-as-cleaner-axiom-base.md`.
+4. The `SCtilings` / `NonSCtilings` axioms could be discharged by `native_decide` once a computable enumeration of tilings is defined.
+
+---
+
 ## oracle-2026-05-29-S3 — 2026-05-29
 
 **Summary:** Major Lean expansion. Added 7 new modules covering THM-330 (SC Cut Theorem, project-novel), THM-326 (HP = IP universal identity), THM-316 abstract anti-palindrome, THM-342 diagonal formulas, a clean `TournamentIso` framework with PROVED iso-invariants, and the `IsSelfFlip` / `PaleyLike` infrastructure for the Paley-not-SF chain.  **949 build targets clean.**

@@ -50,5 +50,8 @@ import TournamentH7.AntiAutomorphism
 import TournamentH7.HPIPIdentity
 import TournamentH7.Iso
 import TournamentH7.IsoProperties
+import TournamentH7.IsomorphismClasses
 import TournamentH7.SCCounts
+import TournamentH7.SCFraction
+import TournamentH7.SmallTournaments
 import TournamentH7.Verify

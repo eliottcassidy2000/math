@@ -64,15 +64,46 @@ lemma isRegular_iso (T₁ T₂ : Tournament n) (h_iso : T₁ ≅ T₂)
   rw [outDegree_iso T₁ T₂ f, Equiv.apply_symm_apply] at this
   exact this
 
-/-! ### `H(T)` is iso-invariant
+/-! ### `H(T)` is iso-invariant — PROVED IN LEAN -/
 
-    Sketch: given f : T₁ ≅ T₂, the map σ ↦ f.perm * σ is a bijection
-    between the satisfying `Equiv.Perm`s.  Recorded as axiom; the
-    `outDegree_iso` lemma above is the inline-proved analogue. -/
+/-- The Hamiltonian path count is an isomorphism invariant.
 
-/-- The Hamiltonian path count is an isomorphism invariant. -/
-axiom H_iso_invariant (T₁ T₂ : Tournament n) (h : T₁ ≅ T₂) :
-    H T₁ = H T₂
+    Proof: given f : T₁ ≅ T₂, the map σ ↦ f.perm * σ is a bijection
+    between the satisfying `Equiv.Perm`s. -/
+theorem H_iso_invariant (T₁ T₂ : Tournament n) (h : T₁ ≅ T₂) :
+    H T₁ = H T₂ := by
+  obtain ⟨f⟩ := h
+  classical
+  unfold H
+  apply Finset.card_bij
+    (fun (σ : Equiv.Perm (Fin n)) (_ : σ ∈ _) => f.perm * σ)
+  · intro σ hσ
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hσ ⊢
+    intro i hi
+    have hcond := hσ i hi
+    have := f.arc_eq (σ i) (σ ⟨i.val + 1, hi⟩)
+    rw [hcond] at this
+    show T₂.arc (f.perm (σ i)) (f.perm (σ ⟨i.val + 1, hi⟩)) = true
+    exact this.symm
+  · intros _ _ _ _ heq
+    exact mul_left_cancel heq
+  · intro τ hτ
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hτ
+    refine ⟨f.perm.symm * τ, ?_, ?_⟩
+    · simp only [Finset.mem_filter, Finset.mem_univ, true_and]
+      intro i hi
+      have hcond := hτ i hi
+      have hf := f.arc_eq ((f.perm.symm * τ) i) ((f.perm.symm * τ) ⟨i.val + 1, hi⟩)
+      simp only [Equiv.Perm.mul_apply, Equiv.apply_symm_apply] at hf
+      show T₁.arc ((f.perm.symm * τ) i) ((f.perm.symm * τ) ⟨i.val + 1, hi⟩) = true
+      simp only [Equiv.Perm.mul_apply]
+      rw [hf]; exact hcond
+    · -- f.perm * (f.perm.symm * τ) = τ
+      rw [← mul_assoc]
+      -- Now: (f.perm * f.perm.symm) * τ = τ
+      have : f.perm * f.perm.symm = 1 := by
+        ext x; simp [Equiv.Perm.mul_apply]
+      rw [this, one_mul]
 
 /-! ### `op` arc-equality is just transposition
 

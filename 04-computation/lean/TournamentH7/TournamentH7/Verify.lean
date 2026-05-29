@@ -17,6 +17,7 @@ import TournamentH7.HPIPIdentity
 import TournamentH7.Iso
 import TournamentH7.IsoProperties
 import TournamentH7.SCCounts
+import TournamentH7.SmallTournaments
 
 open Tournament
 
@@ -144,3 +145,21 @@ theorem H_iso_invariant_audit {n : ℕ}
 
 example : Qcount 2 1 = 1 := by
   have := thm342_diag0 1 (by omega); simp at this; exact this
+
+/-! ### Concrete tournament examples (no axioms needed) -/
+
+/-- The transitive tournament on 4 vertices has the base path. -/
+theorem transitive_4_hasBasePath : HasBasePath (transitiveTournament 4) :=
+  transitive_hasBasePath 4
+#print axioms transitive_4_hasBasePath
+
+/-- The 3-cycle tournament is regular. -/
+theorem threeCycle_regular_audit : IsRegular threeCycle :=
+  threeCycle_isRegular
+#print axioms threeCycle_regular_audit
+
+/-- The transitive tournament on n ≥ 2 vertices is NOT regular. -/
+theorem transitive_not_regular_audit (n : ℕ) (hn : 2 ≤ n) :
+    ¬ IsRegular (transitiveTournament n) :=
+  transitive_not_regular n hn
+#print axioms transitive_not_regular_audit
