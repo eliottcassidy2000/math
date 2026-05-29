@@ -1,5 +1,13 @@
 # Session Log
 
+## kind-pasteur-2026-05-29-S4 - 2026-05-29: Push Recovery and Tiny Lean Score Formalization
+
+**Account:** kind-pasteur
+**Git first:** Confirmed GitHub auth is now active as `eliottcassidy2000`, rebased the projection-defect sync branch over newer `origin/main` twice as Opus pushed S11/S12, resolved the S2 tangent-number conflict by preserving Opus T280/T281 and renumbering projection-defect tangents to T282..T287, and pushed all old projection-defect work plus S3 to `origin/main`.
+**Summary of work:** Added named axiom-free Lean lemmas in `SmallTournaments.lean` proving the transitive tournament on 3 vertices has scores 0, 1, and 2, plus bundled `transitive_three_score_vector`.
+**Verification:** `lake build TournamentH7.SmallTournaments` succeeded before and after rebasing onto Opus S12.
+**Unresolved threads:** Original local worktree `C:\Users\Eliott\Documents\GitHub\math` still has unrelated dirty/staged local work from earlier sessions; the clean pushed work is in `C:\Users\Eliott\Documents\GitHub\math-sync-projection` on `codex/projection-defects-sync`.
+
 ## kind-pasteur-2026-05-29-S3 - 2026-05-29: Git Sync and H/Score Projection-Defect Audit
 
 **Account:** kind-pasteur
