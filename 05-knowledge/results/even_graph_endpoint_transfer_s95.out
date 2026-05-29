@@ -1,0 +1,74 @@
+==============================================================================
+EVEN GRAPH ENDPOINT TRANSFER S95
+==============================================================================
+Same endpoint cube recursion, but quotienting by even-graph isomorphism.
+Column parity now means odd labeled orbit size, not Redei oddness.
+
+------------------------------------------------------------------------------
+n=2->3: parent even classes=1, child even classes=2, multiplier=2^1
+  exact sums: row/col errors=0/0
+  support: nonzero=2, row=2..2 avg=2.00, col=1..1 avg=1.00
+  GF(2) transfer: odd_entries=2, rank=1, row_fail=0, col_fail=0, odd-orbit boundary=2, xor_boundary_ok=True
+  transfer weight spectrum={1: 2}
+  child odd-fiber class shapes={(0, (0, 0, 0)): 1, (3, (2, 2, 2)): 1}
+
+------------------------------------------------------------------------------
+n=3->4: parent even classes=2, child even classes=5, multiplier=2^2
+  exact sums: row/col errors=0/0
+  support: nonzero=7, row=3..4 avg=3.50, col=1..2 avg=1.40
+  GF(2) transfer: odd_entries=6, rank=2, row_fail=0, col_fail=0, odd-orbit boundary=4, xor_boundary_ok=True
+  transfer weight spectrum={1: 6, 2: 1}
+  child odd-fiber class shapes={(0, (0, 0, 0, 0)): 1, (3, (0, 2, 2, 2)): 2, (4, (2, 2, 2, 2)): 1}
+
+------------------------------------------------------------------------------
+n=4->5: parent even classes=5, child even classes=21, multiplier=2^3
+  exact sums: row/col errors=0/0
+  support: nonzero=42, row=6..12 avg=8.40, col=1..5 avg=2.00
+  GF(2) transfer: odd_entries=34, rank=5, row_fail=0, col_fail=0, odd-orbit boundary=16, xor_boundary_ok=True
+  transfer weight spectrum={1: 30, 2: 7, 3: 3, 4: 1, 7: 1}
+  child odd-fiber class shapes={(0, (0, 0, 0, 0, 0)): 1, (3, (0, 0, 2, 2, 2)): 4, (4, (0, 2, 2, 2, 2)): 3, (6, (2, 2, 2, 2, 4)): 3, (7, (2, 2, 2, 4, 4)): 4, (10, (4, 4, 4, 4, 4)): 1}
+
+------------------------------------------------------------------------------
+n=5->6: parent even classes=21, child even classes=152, multiplier=2^4
+  exact sums: row/col errors=0/0
+  support: nonzero=561, row=12..60 avg=26.71, col=1..14 avg=3.69
+  GF(2) transfer: odd_entries=430, rank=21, row_fail=0, col_fail=0, odd-orbit boundary=56, xor_boundary_ok=True
+  transfer weight spectrum={'head': [(1, 373), (2, 89), (3, 45), (4, 26), (5, 8), (6, 4)], 'tail': [(8, 5), (9, 2), (10, 2), (12, 3), (14, 1), (28, 1)], 'distinct': 13}
+  child odd-fiber class shapes={(0, (0, 0, 0, 0, 0, 0)): 1, (4, (0, 0, 2, 2, 2, 2)): 7, (6, (0, 2, 2, 2, 2, 4)): 12, (7, (0, 2, 2, 2, 4, 4)): 12, (8, (2, 2, 2, 2, 4, 4)): 17, (10, (0, 4, 4, 4, 4, 4)): 2, (10, (2, 2, 4, 4, 4, 4)): 4, (12, (4, 4, 4, 4, 4, 4)): 1}
+
+------------------------------------------------------------------------------
+n=6->7: parent even classes=152, child even classes=2653, multiplier=2^5
+  exact sums: row/col errors=0/0
+  support: nonzero=17969, row=25..528 avg=118.22, col=1..75 avg=6.77
+  GF(2) transfer: odd_entries=12538, rank=152, row_fail=0, col_fail=0, odd-orbit boundary=646, xor_boundary_ok=True
+  transfer weight spectrum={'head': [(1, 11168), (2, 4182), (3, 1025), (4, 812), (5, 180), (6, 213)], 'tail': [(44, 1), (51, 2), (52, 1), (60, 2), (86, 1), (142, 1)], 'distinct': 37}
+  child odd-fiber class shapes={'head': [((0, (0, 0, 0, 0, 0, 0, 0)), 1), ((3, (0, 0, 0, 0, 2, 2, 2)), 9), ((4, (0, 0, 0, 2, 2, 2, 2)), 13), ((6, (0, 0, 2, 2, 2, 2, 4)), 43), ((7, (0, 0, 2, 2, 2, 4, 4)), 52), ((7, (2, 2, 2, 2, 2, 2, 2)), 1)], 'tail': [((14, (2, 2, 4, 4, 4, 6, 6)), 52), ((14, (4, 4, 4, 4, 4, 4, 4)), 1), ((15, (2, 4, 4, 4, 4, 6, 6)), 43), ((17, (4, 4, 4, 4, 6, 6, 6)), 13), ((18, (4, 4, 4, 6, 6, 6, 6)), 9), ((21, (6, 6, 6, 6, 6, 6, 6)), 1)], 'distinct': 22}
+
+==============================================================================
+SEQUENCES
+==============================================================================
+  even class counts: [1, 2, 5, 21, 152]
+  support: [2, 7, 42, 561, 17969]
+  GF2 rank: [1, 2, 5, 21, 152]
+  parent class count: [1, 2, 5, 21, 152]
+  odd entries: [2, 6, 34, 430, 12538]
+  odd-orbit child boundary: [2, 4, 16, 56, 646]
+  child even class counts: [2, 5, 21, 152, 2653]
+
+==============================================================================
+CONSTRAINT STATEMENTS
+==============================================================================
+
+1. The endpoint transfer row/column theorem is quotient-agnostic.
+   Any quotient of the fixed-path tiling cube inherits a transfer matrix whose
+   rows sum to 2^(n-1) times parent fiber and whose columns sum to child fiber.
+
+2. The tournament quotient is special because every child fiber is odd.
+   For even graphs, child fibers are orbit sizes n!/|Aut(G)| and can be even.
+   The mod-2 boundary is therefore the set of even-graph classes whose
+   automorphism group absorbs the full 2-adic valuation of n!.
+
+3. In the tested range, the even-graph endpoint transfer also has full row rank
+   over GF(2).  This suggests that recursive parity-injectivity may belong to
+   the tiling cube quotient itself, not specifically to tournaments.
+

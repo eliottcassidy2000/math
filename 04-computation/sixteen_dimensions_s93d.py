@@ -300,8 +300,14 @@ print("""
      The COST: more parameters (+72.8M for k=3 per his estimate).
      The BENEFIT: predicted 98.7% on ARC-Challenge.
 
-     OUR PERSPECTIVE: the dark mode count is C(2k+1, 2) - C(2k, 2) = 2k.
-     Each additional norm adds 2k new dark modes.
+     OUR PERSPECTIVE: for gl(2k,R), the dark sector has
+       D_k = C(2k+1, 2) = k(2k+1)
+     symmetric modes. Increasing the norm count k -> k+1 changes
+       gl(2k,R) -> gl(2k+2,R)
+     and adds
+       D_{k+1} - D_k = C(2k+3, 2) - C(2k+1, 2) = 4k + 3
+     new dark modes. For k=2 -> 3 this is 11, matching 10 -> 21.
+
      The MARGINAL VALUE of each dark mode should decrease
      (like the layer-d correction in the k-periodicity tower).
 

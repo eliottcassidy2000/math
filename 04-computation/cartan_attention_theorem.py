@@ -2,10 +2,15 @@
 """
 cartan_attention_theorem.py -- kind-pasteur-2026-03-21-S12
 
-KEY DISCOVERY: The Napolitano dark/active ratio is (n+1)/(n-1) for gl(n,R).
+KEY DISCOVERY: The Napolitano full-symmetric dark/active ratio is
+(n+1)/(n-1) for gl(n,R).
 
 For n=4 (Napolitano's case): dark/active = 5/3 = 10/6. THAT'S IT.
 It's not a deep property of transformers — it's a property of gl(n,R).
+
+If the scalar center is split off, the traceless-symmetric dark/active ratio
+is instead (n+2)/n. For n=4 this is 9/6 = 3/2. The one-dimensional center is
+not a tournament mode; it is the uniform scale mode.
 
 But the EMPIRICAL finding is interesting: random attention matrices have
 anti_fraction ~ 0.19 at n=7, meaning ~81% of energy is "dark" (symmetric).
@@ -79,14 +84,17 @@ def explore_tournament_cartan_bridge():
     The key mathematical bridge between our tournament theory and
     Napolitano's gauge theory framework.
 
-    THEOREM: For gl(n,R) with Cartan decomposition gl = so(n) + p + R*I:
+    THEOREM: For gl(n,R) with Cartan decomposition gl = so(n) + p:
     - dim(so(n)) = n(n-1)/2  ["active" modes]
-    - dim(p) = n(n+1)/2 - 1  ["dark" modes]
+    - dim(p) = n(n+1)/2       ["full dark" symmetric modes]
+    - dim(p_0) = n(n+1)/2 - 1 ["traceless dark" modes]
     - dim(center) = 1
-    - dark/active = (n+1)/(n-1)  [EXACT formula]
+    - full_dark/active = (n+1)/(n-1)  [EXACT formula]
+    - traceless_dark/active = (n+2)/n [EXACT formula]
 
-    For n=4 (Napolitano): 10/6 = 5/3
-    For n=7 (our Paley prime): 27/21 = 9/7
+    For n=4 (Napolitano, full symmetric): 10/6 = 5/3
+    For n=4 (traceless symmetric): 9/6 = 3/2
+    For n=7 (our Paley prime, full symmetric): 28/21 = 4/3
 
     CONSEQUENCE: As n -> infinity, dark/active -> 1. The sectors become
     equally sized. But for small n (transformer-relevant: n=4 per block),
@@ -111,12 +119,14 @@ def explore_tournament_cartan_bridge():
     print("=" * 70)
 
     # Part 1: Dimensional analysis
-    print("\nPart 1: Dark/Active dimensional ratio = (n+1)/(n-1)")
+    print("\nPart 1: Dark/Active dimensional ratios")
     print("-" * 50)
     for n in range(3, 21):
         active = n*(n-1)//2
-        dark = n*(n+1)//2 - 1
-        ratio = dark/active
+        full_dark = n*(n+1)//2
+        traceless_dark = full_dark - 1
+        full_ratio = full_dark/active
+        traceless_ratio = traceless_dark/active
         marker = ""
         if n == 4:
             marker = " <-- Napolitano's gl(4,R)"
@@ -124,8 +134,9 @@ def explore_tournament_cartan_bridge():
             marker = " <-- Our Paley T_7"
         elif n == 11:
             marker = " <-- Our Paley T_11"
-        print(f"  n={n:2d}: active={active:3d}, dark={dark:3d}, "
-              f"ratio={ratio:.4f} = ({n+1})/({n-1}){marker}")
+        print(f"  n={n:2d}: active={active:3d}, full_dark={full_dark:3d}, "
+              f"traceless_dark={traceless_dark:3d}, "
+              f"full_ratio={full_ratio:.4f}, traceless_ratio={traceless_ratio:.4f}{marker}")
 
     # Part 2: Empirical anti_fraction for random attention
     print("\nPart 2: Random attention Cartan decomposition")
@@ -150,8 +161,10 @@ def explore_tournament_cartan_bridge():
     print("=" * 70)
     print("""
 The Napolitano paper claims that "dark modes" (symmetric sector of gl(4,R))
-carry all self-knowledge. But the dark/active ratio is simply (n+1)/(n-1):
-for n=4, dark has 10 dims vs active's 6. This is 67% of non-null space.
+carry all self-knowledge. But the full symmetric/antisymmetric ratio is
+simply (n+1)/(n-1): for n=4, full dark has 10 dims vs active's 6.
+If the scalar center is excluded, the traceless dark sector has 9 dims,
+with ratio (n+2)/n = 3/2.
 
 For RANDOM attention (softmax of Gaussian logits), the symmetric sector
 gets even MORE than its dimensional share of energy. This is because:

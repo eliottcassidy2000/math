@@ -1,0 +1,144 @@
+
+==============================================================================
+1. Prose Co-Occurrence Blindspots
+==============================================================================
+Topic document counts:
+  omega_conflict          194
+  paley_code              150
+  burnside                111
+  path_homology            99
+  staircase_tiling         92
+  ising_wick               91
+  vitali_gap               87
+  cartan_attention         47
+  chromatic                43
+  magnitude_reachability   41
+  krawtchouk               26
+  dark_even_graph          19
+  feedback_arc             10
+
+Under-bridged common pairs:
+  cartan_attention       + feedback_arc           co= 0, expected~ 1.2, score= 57.0
+  dark_even_graph        + vitali_gap             co= 1, expected~ 4.1, score= 53.0
+  chromatic              + feedback_arc           co= 1, expected~ 1.1, score= 26.5
+  feedback_arc           + magnitude_reachability co= 1, expected~ 1.0, score= 25.5
+  dark_even_graph        + feedback_arc           co= 1, expected~ 0.5, score= 14.5
+
+Suggested triads to inspect:
+  (cartan_attention, feedback_arc, dark_even_graph) -- pair-overlap-to-third=5, total-docs=76
+  (dark_even_graph, vitali_gap, feedback_arc) -- pair-overlap-to-third=3, total-docs=116
+  (chromatic, feedback_arc, cartan_attention) -- pair-overlap-to-third=8, total-docs=100
+  (feedback_arc, magnitude_reachability, dark_even_graph) -- pair-overlap-to-third=3, total-docs=70
+  (dark_even_graph, feedback_arc, vitali_gap) -- pair-overlap-to-third=3, total-docs=116
+
+==============================================================================
+2. H(T) versus Minimum Feedback Arc Set
+==============================================================================
+
+n=6 (exhaustive, 32768 labeled tournaments)
+  corr(H,FAS) = 0.8625
+  H range = 1..45, FAS range = 0..4
+  distinct H = 19, H values with multiple FAS = 5
+  score sequences with multiple (H,FAS) pairs = 11 / 22
+  H distribution by FAS:
+    FAS=0: count=   720, H_min=    1, H_med=    1.0, H_max=      1
+    FAS=1: count=  5280, H_min=    3, H_med=    5.0, H_max=     17
+    FAS=2: count= 13280, H_min=    9, H_med=   17.0, H_max=     37
+    FAS=3: count= 11568, H_min=   15, H_med=   31.0, H_max=     41
+    FAS=4: count=  1920, H_min=   43, H_med=   43.0, H_max=     45
+  first ambiguous H examples:
+    H=9: FAS values [1, 2]
+    H=15: FAS values [2, 3]
+    H=17: FAS values [1, 2]
+    H=33: FAS values [2, 3]
+    H=37: FAS values [2, 3]
+
+n=7 (sample, 5000 labeled tournaments)
+  corr(H,FAS) = 0.8482
+  H range = 1..189, FAS range = 0..7
+  distinct H = 77, H values with multiple FAS = 46
+  score sequences with multiple (H,FAS) pairs = 41 / 59
+  H distribution by FAS:
+    FAS=0: count=    18, H_min=    1, H_med=    1.0, H_max=      1
+    FAS=1: count=   141, H_min=    3, H_med=    9.0, H_max=     33
+    FAS=2: count=   650, H_min=    9, H_med=   23.0, H_max=     93
+    FAS=3: count=  1561, H_min=   15, H_med=   59.0, H_max=    123
+    FAS=4: count=  1709, H_min=   43, H_med=   93.0, H_max=    145
+    FAS=5: count=   808, H_min=   91, H_med=  131.0, H_max=    159
+    FAS=6: count=   110, H_min=  147, H_med=  151.0, H_max=    175
+    FAS=7: count=     3, H_min=  171, H_med=  171.0, H_max=    189
+  first ambiguous H examples:
+    H=9: FAS values [1, 2]
+    H=15: FAS values [2, 3]
+    H=17: FAS values [1, 2]
+    H=25: FAS values [2, 3]
+    H=27: FAS values [2, 3]
+    H=29: FAS values [2, 3]
+
+==============================================================================
+3. Royle-Even Graphs and a Candidate Dark-H Analog
+==============================================================================
+
+n=1: graph classes=1, Royle-even=1, dark=0
+  even acyclic orientations: min=1, median=1.0, max=1
+
+n=2: graph classes=2, Royle-even=2, dark=0
+  even acyclic orientations: min=1, median=1.5, max=2
+
+n=3: graph classes=4, Royle-even=2, dark=2
+  even acyclic orientations: min=1, median=1.5, max=2
+  dark acyclic orientations: min=4, median=5.0, max=6
+  smallest dark classes by (edges, degrees, acyclic_orientations):
+    (2, (1, 1, 2), 4)
+    (3, (2, 2, 2), 6)
+  acyclic-orientation value overlap count = 0
+
+n=4: graph classes=11, Royle-even=4, dark=7
+  even acyclic orientations: min=1, median=10.0, max=24
+  dark acyclic orientations: min=4, median=8.0, max=14
+  smallest dark classes by (edges, degrees, acyclic_orientations):
+    (2, (0, 1, 1, 2), 4)
+    (2, (1, 1, 1, 1), 4)
+    (3, (0, 2, 2, 2), 6)
+    (3, (1, 1, 1, 3), 8)
+    (3, (1, 1, 2, 2), 8)
+  acyclic-orientation value overlap count = 0
+
+n=5: graph classes=34, Royle-even=12, dark=22
+  even acyclic orientations: min=1, median=26.0, max=48
+  dark acyclic orientations: min=4, median=20.0, max=120
+  smallest dark classes by (edges, degrees, acyclic_orientations):
+    (2, (0, 0, 1, 1, 2), 4)
+    (2, (0, 1, 1, 1, 1), 4)
+    (3, (0, 0, 2, 2, 2), 6)
+    (3, (0, 1, 1, 1, 3), 8)
+    (3, (0, 1, 1, 2, 2), 8)
+  acyclic-orientation value overlap count = 3
+  overlap examples = [16, 24, 36]
+
+n=6: graph classes=156, Royle-even=56, dark=100
+  even acyclic orientations: min=1, median=94.0, max=720
+  dark acyclic orientations: min=4, median=94.0, max=504
+  smallest dark classes by (edges, degrees, acyclic_orientations):
+    (2, (0, 0, 0, 1, 1, 2), 4)
+    (2, (0, 0, 1, 1, 1, 1), 4)
+    (3, (0, 0, 0, 2, 2, 2), 6)
+    (3, (0, 0, 1, 1, 1, 3), 8)
+    (3, (0, 0, 1, 1, 2, 2), 8)
+  acyclic-orientation value overlap count = 22
+  overlap examples = [16, 24, 28, 32, 36, 48, 56, 60]
+
+==============================================================================
+4. Candidate Meta-Hypotheses
+==============================================================================
+HYP-A: H and min-FAS are not functionally equivalent, but they share a monotone
+       low-frequency component. FAS is the order parameter; H is the entropy
+       inside each order stratum.
+HYP-B: The graph-side 'dark H' should not be acyclic orientations alone:
+       that statistic overlaps heavily between Royle-even and dark classes.
+       A better analog should include the sign representation, e.g. a signed
+       acyclic-orientation count weighted by automorphism edge sign.
+HYP-C: The blind triads involving dark/even graphs, Krawtchouk/band limits,
+       and feedback arc distance suggest a missing theory of the cycle-space
+       quotient where distance-to-transitive and sign representation are dual
+       projections of the same GF(2) object.

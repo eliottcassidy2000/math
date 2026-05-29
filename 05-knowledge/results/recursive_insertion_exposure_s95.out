@@ -1,0 +1,116 @@
+==============================================================================
+RECURSIVE INSERTION EXPOSURE S95
+==============================================================================
+
+Formula: H(T+v) = starts(sig=1) + ends(sig=0) + bridge cut Q(sig=0, sig=1)
+where Q[a,b] counts old-vertex spines with only the a _ b slot left to repair.
+
+------------------------------------------------------------------------------
+n=2: tournaments=2, formula failures=0
+  distinct H: 1
+  distinct score: 1
+  distinct endpoint_M: 2
+  distinct hp_exposure_E: 2
+  distinct boundary_Q: 2
+  distinct insertion_response: 2
+  H is insufficient: key=1
+    bits 0 response starts (1, 1, 3, 1)
+    bits 1 response starts (1, 3, 1, 1)
+  score is insufficient: key=(1, 0)
+    bits 0 response starts (1, 1, 3, 1)
+    bits 1 response starts (1, 3, 1, 1)
+  endpoint_M predicts insertion response for n=2
+  hp_exposure_E predicts insertion response for n=2
+  boundary_Q determines response: True
+  Σ_ab E[a,b] = (n-1)H for every T: True
+
+------------------------------------------------------------------------------
+n=3: tournaments=8, formula failures=0
+  distinct H: 2
+  distinct score: 2
+  distinct endpoint_M: 8
+  distinct hp_exposure_E: 8
+  distinct boundary_Q: 8
+  distinct insertion_response: 7
+  H is insufficient: key=1
+    bits 0 response starts (1, 1, 3, 1, 5, 3, 5, 1)
+    bits 1 response starts (1, 3, 1, 1, 5, 5, 3, 1)
+  score is insufficient: key=(2, 1, 0)
+    bits 0 response starts (1, 1, 3, 1, 5, 3, 5, 1)
+    bits 1 response starts (1, 3, 1, 1, 5, 5, 3, 1)
+  endpoint_M predicts insertion response for n=3
+  hp_exposure_E predicts insertion response for n=3
+  boundary_Q determines response: True
+  Σ_ab E[a,b] = (n-1)H for every T: True
+
+------------------------------------------------------------------------------
+n=4: tournaments=64, formula failures=0
+  distinct H: 3
+  distinct score: 4
+  distinct endpoint_M: 44
+  distinct hp_exposure_E: 64
+  distinct boundary_Q: 64
+  distinct insertion_response: 56
+  H is insufficient: key=1
+    bits 0 response starts (1, 1, 3, 1, 5, 3, 5, 1)
+    bits 1 response starts (1, 3, 1, 1, 5, 5, 3, 1)
+  score is insufficient: key=(3, 2, 1, 0)
+    bits 0 response starts (1, 1, 3, 1, 5, 3, 5, 1)
+    bits 1 response starts (1, 3, 1, 1, 5, 5, 3, 1)
+  endpoint_M is insufficient: key=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0)
+    bits 0 response starts (1, 1, 3, 1, 5, 3, 5, 1)
+    bits 8 response starts (1, 1, 5, 3, 3, 1, 5, 1)
+  hp_exposure_E predicts insertion response for n=4
+  boundary_Q determines response: True
+  Σ_ab E[a,b] = (n-1)H for every T: True
+
+------------------------------------------------------------------------------
+n=5: tournaments=1024, formula failures=0
+  distinct H: 7
+  distinct score: 9
+  distinct endpoint_M: 664
+  distinct hp_exposure_E: 1024
+  distinct boundary_Q: 1024
+  distinct insertion_response: 932
+  H is insufficient: key=1
+    bits 0 response starts (1, 1, 3, 1, 5, 3, 5, 1)
+    bits 1 response starts (1, 3, 1, 1, 5, 5, 3, 1)
+  score is insufficient: key=(4, 3, 2, 1, 0)
+    bits 0 response starts (1, 1, 3, 1, 5, 3, 5, 1)
+    bits 1 response starts (1, 3, 1, 1, 5, 5, 3, 1)
+  endpoint_M is insufficient: key=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0)
+    bits 0 response starts (1, 1, 3, 1, 5, 3, 5, 1)
+    bits 16 response starts (1, 1, 5, 3, 3, 1, 5, 1)
+  hp_exposure_E predicts insertion response for n=5
+  boundary_Q determines response: True
+  Σ_ab E[a,b] = (n-1)H for every T: True
+
+==============================================================================
+SEQUENCE TABLE
+==============================================================================
+  distinct H: [1, 2, 3, 7]
+  distinct score: [1, 2, 4, 9]
+  distinct endpoint_M: [2, 8, 44, 664]
+  distinct hp_exposure_E: [2, 8, 64, 1024]
+  distinct boundary_Q: [2, 8, 64, 1024]
+  distinct insertion_response: [2, 7, 56, 932]
+
+==============================================================================
+CLARIFICATION
+==============================================================================
+
+Endpoint data is a terminal statistic: it remembers where Hamiltonian paths
+start and end.  HP exposure remembers valid consecutive arcs inside old
+Hamiltonian paths; in this small range it is already an extremely strong
+fingerprint.  But the direct local insertion formula uses the larger boundary
+object Q, because insertion can also repair invalid old adjacencies.
+
+The recursive simplification is:
+
+  carry Q_T = (start counts, end counts, bridge-exposure matrix)
+  instead of only H(T) or endpoint M(T).
+
+Then every insertion signature is evaluated by one cut sum across the bipartition
+sig^{-1}(0) | sig^{-1}(1), plus the two boundary terms.  The correction is
+literally the number of broken Hamiltonian spines that the new vertex repairs.
+
