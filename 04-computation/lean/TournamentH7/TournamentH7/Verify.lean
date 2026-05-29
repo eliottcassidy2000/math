@@ -41,15 +41,10 @@ theorem forbidden_trio_audit {n : ℕ} (T : Tournament n) :
 
 /-! ### Project-novel results — audit -/
 
-/-- THM-280 corollary: grid-symmetric ↔ self-complementary via vertex
-    reversal. -/
-theorem gridSym_iff_audit {n : ℕ} (T : Tournament n)
-    (hbp : HasBasePath T) (hn : 1 ≤ n) :
-    IsGridSymmetric T ↔
-    (∀ i j : Fin n,
-       T.arc i j = (op T).arc (vertexReversal n i) (vertexReversal n j)) :=
-  gridSym_iff_sc_via_reversal T hbp hn
-#print axioms gridSym_iff_audit
+-- (REMOVED) gridSym_iff_audit was based on the wrong tilde_eq_reversed_op
+-- axiom; tile-complement and grid-reflection are different tiling
+-- involutions; correct THM-280 formalisation requires a concrete
+-- tile-coordinate model and is deferred.
 
 /-- Score-formula corollary: regular tournaments are not self-flip
     (project-novel, oracle-2026-05-11-S1).  Used to prove

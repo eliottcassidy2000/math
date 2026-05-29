@@ -73,9 +73,13 @@ lemma isRegular_iff (T : Tournament n) :
 /-- T is *self-flip* (SF) via *identity relabelling* iff T equals its
     tile-complement T̃ vertex-wise.  This is the strongest (least
     forgiving) form; a tournament may still be SF in the project
-    iso-class sense if some permutation conjugates T to T̃. -/
+    iso-class sense if some permutation conjugates T to T̃.
+
+    Note: this predicate is vacuous for n ≥ 3 (no T satisfies T = tilde T
+    when there are non-consecutive pairs, since T.arc i j = !T.arc i j
+    has no solution).  Kept for completeness of the SF/regular chain. -/
 def IsSelfFlip_id (T : Tournament n) : Prop :=
-  IsGridSymmetric T
+  ∀ i j : Fin n, T.arc i j = (tilde T).arc i j
 
 /-- A tournament is *SF (up to relabelling)* iff some permutation σ
     conjugates T into T̃. -/

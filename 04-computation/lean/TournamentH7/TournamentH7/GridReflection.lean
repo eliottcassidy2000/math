@@ -129,32 +129,44 @@ lemma vertexReversal_preserves_consec (_hn : 1 ≤ n) (i j : Fin n) :
     · right; omega
     · left; omega
 
-/-! ### THM-280 — Grid Reflection Induces Complement -/
+/-! ### THM-280 — Grid Reflection ≠ Tile-Complement
 
-/-- **Theorem (THM-280, project-novel, opus-2026-04-03-S27).**
+    ─── Correction (oracle-2026-05-29-S3-final2) ───────────────────────
+    The project canon distinguishes TWO different involutions on tilings:
+     • *Tile-complement* (`tilde T` in this Lean library):
+       flip every non-base-path arc bit.
+     • *Grid reflection*: apply the tile-coordinate map
+       (x, y) ↦ (n+1−y, n+1−x), permuting WHICH tile gets which bit.
 
-    For any tournament T with the base path, the *tile-complement* T̃
-    equals the relabelling of T^op by the vertex-reversal permutation:
-        T̃ = relabel (op T) (vertexReversal n).
+    These are different operations.  Concretely, for n = 4 and tiling
+    b = (b_{3,1}, b_{4,1}, b_{4,2}) = (1, 0, 0):
+       tile-complement(b) = (0, 1, 1)
+       grid-reflection(b) = (0, 0, 1)
+    are distinct.
 
-    Equivalently: `(tilde T).arc i j = T.arc (σ j) (σ i)` for σ = vertexReversal.
+    THM-280 is about the GRID REFLECTION, not the tile-complement:
+       T(grid-reflection(b)) ≅ σ(T(b)^op)
+    where σ = vertex-reversal.
 
-    *Proof strategy* (informal, project canon):
-    Both sides agree on consecutive arcs (the base path direction is
-    preserved under vertexReversal because σ(j) and σ(i) are also
-    consecutive, and the base-path arc orientation flips, then `op`
-    flips it back). Both sides agree on non-consecutive arcs (T̃ flips
-    the tile bit; relabel(op T, σ) flips via op then permutes vertices).
-    A careful case split on consecutivity in both views completes it.
+    Since this Lean library represents tilings only at the *tournament
+    level* (no explicit tile coordinates), we cannot directly
+    formalise THM-280 here.  A future module `StaircaseTileModel.lean`
+    would introduce a concrete `Tile (n)` type and a tile-indexed
+    `Tiling n := Tile n → Bool`; THM-280 lives there.
 
-    Lean formalisation: the full proof requires manipulating the
-    interaction between vertex reversal and the base-path orientation.
-    It is straightforward case-bookkeeping but lengthy; deferred. -/
-axiom tilde_eq_reversed_op (T : Tournament n) (hbp : HasBasePath T) (hn : 1 ≤ n) :
-    ∀ i j : Fin n,
-      (tilde T).arc i j = (op T).arc (vertexReversal n i) (vertexReversal n j)
+    ─── What this section provides ──────────────────────────────────────
+    The corrected statement: vertex reversal on the tournament side
+    interacts nicely with `op T` but NOT directly with `tilde T`.  We
+    record the trivial lemma that `op` and `relabel` distribute, and
+    leave THM-280 proper for future formalisation. -/
 
-/-! ### Corollaries: SC ⇔ grid-symmetric tilings -/
+/-- Identity: (relabel (op T) σ).arc i j = T.arc (σ.symm j) (σ.symm i). -/
+lemma relabel_op_arc (T : Tournament n) (σ : Equiv.Perm (Fin n)) (i j : Fin n) :
+    (relabel (op T) σ).arc i j = T.arc (σ.symm j) (σ.symm i) := by
+  show (op T).arc (σ.symm i) (σ.symm j) = T.arc (σ.symm j) (σ.symm i)
+  exact op_arc T (σ.symm i) (σ.symm j)
+
+/-! ### Self-complementary predicate (kept; was correct) -/
 
 /-- A tournament T is *self-complementary* (SC) iff there exists a
     permutation σ such that `T = relabel (op T) σ`.  This captures
@@ -162,27 +174,5 @@ axiom tilde_eq_reversed_op (T : Tournament n) (hbp : HasBasePath T) (hn : 1 ≤ 
 def IsSelfComplementary (T : Tournament n) : Prop :=
   ∃ σ : Equiv.Perm (Fin n), ∀ i j : Fin n,
     T.arc i j = (op T).arc (σ i) (σ j)
-
-/-- A tiling-equipped tournament T is *grid-symmetric* iff T = T̃ (the
-    tile-complement equals T itself). -/
-def IsGridSymmetric (T : Tournament n) : Prop :=
-  ∀ i j : Fin n, T.arc i j = (tilde T).arc i j
-
-/-- **Corollary of THM-280.** A tournament T with base path is
-    grid-symmetric iff it is self-complementary via the vertex-reversal
-    permutation `vertexReversal n`. -/
-theorem gridSym_iff_sc_via_reversal (T : Tournament n)
-    (hbp : HasBasePath T) (hn : 1 ≤ n) :
-    IsGridSymmetric T ↔
-    (∀ i j : Fin n,
-       T.arc i j = (op T).arc (vertexReversal n i) (vertexReversal n j)) := by
-  unfold IsGridSymmetric
-  constructor
-  · intro h i j
-    rw [h]
-    exact tilde_eq_reversed_op T hbp hn i j
-  · intro h i j
-    rw [h]
-    exact (tilde_eq_reversed_op T hbp hn i j).symm
 
 end Tournament
