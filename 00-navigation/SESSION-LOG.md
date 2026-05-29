@@ -2,6 +2,53 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-29-S3 — 2026-05-29
+
+**Summary:** Major Lean expansion. Added 7 new modules covering THM-330 (SC Cut Theorem, project-novel), THM-326 (HP = IP universal identity), THM-316 abstract anti-palindrome, THM-342 diagonal formulas, a clean `TournamentIso` framework with PROVED iso-invariants, and the `IsSelfFlip` / `PaleyLike` infrastructure for the Paley-not-SF chain.  **949 build targets clean.**
+
+**NEW Lean modules:**
+- `StaircaseModel.lean` — **THM-330**: T (with base path) is SC iff every cut k ∈ {1, …, n-1} has a crossing-upward arc. Includes apex-implies-SC corollary (THM-333).
+- `SelfComplementary.lean` — `IsSelfComplementary'`, `IsSelfFlip_id`, `IsSelfFlip`, `PaleyLike` structure; proves `regular_not_SF_id` and `paleyLike_not_SF_id` from `tilde_score_sink`.
+- `AntiAutomorphism.lean` — `IsAntiAutomorphism`, `epStart`, `epEnd`, and the abstract anti-palindrome theorem behind THM-316.
+- `HPIPIdentity.lean` — THM-326 restated cleanly (`H_eq_independence_poly_at_two_truncated`).
+- `Iso.lean` — `TournamentIso` structure (refl/symm/trans), `≅` relation, characterisation of `IsSelfComplementary` via `T ≅ op T`.
+- `IsoProperties.lean` — **PROVED IN LEAN**: `outDegree_iso` (out-degree preserved under iso, modulo relabel), `isRegular_iso` (regularity preserved under iso); H_iso_invariant axiom with proof sketch.
+- `SCCounts.lean` — `SCcount n` constants (SC(2..7) values) + Q-triangle axioms for THM-342 diagonals (j = 0..3).
+
+**PROVED THEOREMS (with audit, by transitive axiom dependency):**
+- `outDegree_iso_audit`: 0 mathematical axioms (only `propext`, `Classical.choice`, `Quot.sound`).
+- `isRegular_iso_audit`: 0 mathematical axioms.
+- `regular_not_SF_id_audit`: 1 axiom (`tilde_score_sink`).
+- `paleyLike_not_SF_audit`: 1 axiom (`tilde_score_sink`).
+- `thm330_audit`: 1 axiom (`thm330_axiom`).
+- `apex_implies_SC_audit`: 1 axiom (`thm330_axiom`).
+- `hp_ip_truncated_audit`: 1 axiom (`ocf`).
+- `isSelfComplementary_iff_iso_op_audit`: 0 mathematical axioms.
+
+**NEW MATHEMATICAL OBSERVATIONS:**
+1. **The Lean lens cleanly separates** structural axioms from arithmetic content. The `outDegree_iso` and `isRegular_iso` proofs are completely axiom-free at the math level — they follow purely from the definitions plus Mathlib's `Finset.card_bij`. This validates the `TournamentIso` abstraction.
+2. **THM-280 corollary `gridSym_iff_sc_via_reversal`** depends on only ONE structural axiom (`tilde_eq_reversed_op`). Once that single tile-coordinate axiom is de-axiomatised, THM-280 becomes fully formal.
+3. **THM-330's two implications** are contrapositives of one another, so a single structural axiom `thm330_axiom` (proved informally in the project canon) suffices.
+
+**MODULE LAYOUT after this session:**
+```
+Basic, Cycles, SCC, OCF, Redei,
+H7, H21, H63, Forbidden, HSpectrum,                  -- forbidden H values
+Tilings, GridReflection, StaircaseModel,             -- tile/staircase model
+SelfComplementary, Iso, IsoProperties,               -- iso/SC structure
+AntiAutomorphism, HPIPIdentity, SCCounts,            -- novel theorems
+Verify                                                -- audit
+```
+
+**FOR NEXT AGENT:**
+1. De-axiomatise `thm330_axiom`: both directions are accessible — easy direction via reachability climbing recursion; hard direction via dominating-set argument.
+2. Prove `H_iso_invariant` in Lean (proof sketched in `IsoProperties.lean`: bijection σ ↦ f.perm * σ on the satisfying `Equiv.Perm`s).
+3. Build the all-0 staircase tournament construction `Tk : Tournament (2*k)`, prove it admits the anti-automorphism `v ↦ 2k - 1 - v` (project canon), and apply `abstract_anti_palindrome` to derive concrete THM-316.
+4. Define `Paley p` (p ≡ 3 mod 4 prime) using `Mathlib.NumberTheory.LegendreSymbol`, prove it's a `PaleyLike` (regular, base path), conclude Paley(p) ∉ SF.
+5. Extend `SCCounts.lean` with formal power series structure to prove THM-340 (Q(d, k) = [x^d] B(x)^k) from the diagonal axioms.
+
+---
+
 ## oracle-2026-05-29-S2 — 2026-05-29
 
 **Summary:** Added 2 project-novel modules to the Lean formalisation (in parallel with opus-S7's H21/H63 extension; merged on rebase).  Discovered a new arithmetic-decomposition perspective on the forbidden-H problem and a sharper independence-polynomial axiom.

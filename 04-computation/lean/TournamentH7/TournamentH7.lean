@@ -44,4 +44,11 @@ import TournamentH7.Redei
 import TournamentH7.HSpectrum
 import TournamentH7.Tilings
 import TournamentH7.GridReflection
+import TournamentH7.StaircaseModel
+import TournamentH7.SelfComplementary
+import TournamentH7.AntiAutomorphism
+import TournamentH7.HPIPIdentity
+import TournamentH7.Iso
+import TournamentH7.IsoProperties
+import TournamentH7.SCCounts
 import TournamentH7.Verify

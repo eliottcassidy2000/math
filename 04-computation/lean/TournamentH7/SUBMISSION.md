@@ -13,6 +13,20 @@ Lean 4 + Mathlib4 formalisation of forbidden H-values in tournaments.
 | `Tournament.H_ne_two` | For n ≥ 1, H(T) ≠ 2 (corollary of parity) | Rédei 1934 (R2) |
 | `Tournament.H_ne_even` | For n ≥ 1, H(T) is never an even number | Rédei 1934 (R2) |
 | `Tournament.H_not_in_forbidden_trio` | H(T) ∉ {7, 21, 63} | bundle |
+| `Tournament.regular_not_SF` | regular base-path tournament has score differing at vertex 0 | oracle-2026-05-11-S1 |
+| `Tournament.regular_not_SF_id` | regular base-path tournament is *not* SF (identity) | corollary |
+| `Tournament.paleyLike_not_SF_id` | Paley-like tournament is not SF | corollary |
+| `Tournament.gridSym_iff_sc_via_reversal` | grid-symmetric ↔ SC via vertex reversal (THM-280 corollary) | opus-2026-04-03-S27 |
+| `Tournament.thm330_SC_iff_all_cuts_crossing` | THM-330: SC iff every cut k has a crossing-upward arc | opus-2026-05-27-S1 |
+| `Tournament.apex_implies_SC` | apex tile present ⟹ SC (THM-333) | opus-2026-05-27-S1 |
+| `Tournament.isSelfComplementary_iff_iso_op` | IsSelfComplementary ↔ T ≅ op T | (clean characterisation) |
+| `Tournament.outDegree_iso` | iso preserves out-degree (up to relabel); **PROVED IN LEAN** | clean |
+| `Tournament.isRegular_iso` | iso preserves regularity; **PROVED IN LEAN** | clean |
+| `Tournament.H_eq_independence_poly_at_two_truncated` | THM-326: H(T) = I(Ω, 2) (truncated form) | opus-2026-05-27-S6 |
+| `Tournament.abstract_anti_palindrome` | anti-automorphism ⟹ epStart(v) = epEnd(φ v) (abstract THM-316) | opus-2026-05-22-S3 |
+| `Tournament.tilde_tilde` | tile-complement is an involution; PROVED IN LEAN | oracle-2026-05-11-S1 |
+| `Tournament.alpha_solution_H7` | arithmetic enumeration for H = 7 (1 candidate) | clean |
+| `Tournament.alpha_candidates_H21` | arithmetic enumeration for H = 21 (4 candidates) | new (oracle-S2) |
 
 ## Empirical validation of all axioms
 
