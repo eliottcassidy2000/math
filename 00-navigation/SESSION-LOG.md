@@ -33,6 +33,47 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## opus-2026-05-29-S12 — 2026-05-29
+
+**Summary:** Focused on the projection-defect angle, building on the inherited S11 complete-Ω / single-core artifacts. Added a bridge computation connecting H=63 exact projection kills, the THM-025 near-kill real-root failure, even-graph cycle-space projection, and the HYP-408 ghost-cycle old-projection thread.
+
+**Projection-defect computation:**
+- Added `04-computation/projection_defect_bridge_s12.py` and saved `05-knowledge/results/projection_defect_bridge_s12.out`.
+- Exact complete-Ω core census through n=8:
+  - r=3 and r=10 absent in every core-size stratum.
+  - At n=8, r=31 occurs only in the two core-size-1 H=63 classes (cids 2519 and 3285).
+  - n=8 complete-Ω core-size supports: core 0 = {0,6,7,12,16,24,34,48,70}; core 1 = {4,5,7,9,11,12,13,15,16,18,19,22,23,25,26,30,31,34,36,39,40,43,47,48,53}; core 2 = {2,4,8,16,32}; core 3 = {1}.
+- Extended single-core target search to m≤40:
+  - r_core=3 absent, r_core=10 absent.
+  - r=31 first at m=7; counts follow 2(m-6) through m=40.
+  - r=42 and r=63 first at m=8; counts follow 2(m-7) and 3(m-7) through m=40.
+- Compared examples under support/deletion/even-graph projections:
+  - H=63 cid 2519: deleting core vertex 3 loses 31/31 cycles, `H(T-v)=1`, `alpha(T-v)=[1,0]`.
+  - H=63 cid 3285: deleting core vertex 0 loses 31/31 cycles, same transitive residue.
+  - THM-025 n=9: vertex 3 loses 92/94 cycles but leaves 2 old cycles with `alpha(T-v)=[1,2,1]`; this is the near-kill residue.
+  - Paley T7 vs Interval T7: same score sequence, but Paley has support defect 44 and even projection degree sequence (4^7), while Interval has support defect 23 and even projection degree sequence (2^7).
+
+**Knowledge-web updates:**
+- Added HYP-1760, HYP-1761, HYP-1762.
+- Added T282 and INV-193 for the projection-defect axis.
+- Updated INV-191 and OPEN-Q-055 with the S12 projection-defect evidence.
+- Added variable `delta_proj` in `05-knowledge/variables/projection-defect.md` and updated `r_core(s)` with the dynamic recurrence.
+- Added reflection `07-reflections/projection-defect-as-common-residue.md`.
+
+**Inherited S11 artifacts preserved:**
+- The dirty worktree already contained S11 files (`omega_extreme_fingerprints_s11.py`, `single_core_signature_targets_s11.out`, `omega-extremes-as-cycle-disjointness-axis.md`, variable `single-core-cycle-count.md`, and associated navigation edits). This session read and integrated them rather than overwriting them.
+
+**Verification:**
+- `python3 -m py_compile 04-computation/projection_defect_bridge_s12.py 04-computation/omega_extreme_fingerprints_s11.py`
+- `python3 -u 04-computation/projection_defect_bridge_s12.py 2>&1 | tee 05-knowledge/results/projection_defect_bridge_s12.out >/dev/null`
+- `git diff --check`
+
+**Next priorities:**
+1. Prove the `r_core(s) != 3,10` gaps algebraically; the dynamic recurrence may be the right proof object.
+2. Scan additional n=9/n=10 non-real-root examples for high max deletion-loss fraction.
+3. Compare projection-defect statistics with beta_3/beta_4 path-homology anomalies.
+4. Implement the cheap projection-defect features in a future `tournament_tda.py` extractor.
+
 ## opus-2026-05-29-S11 — 2026-05-29
 
 **Summary:** Familiarization/novel-thread session focused on repo-scouring and meta-pattern generation. Identified the odd-cycle disjointness graph as a shared axis connecting H=63 unlocks, H=7/H=21 obstructions, real-rootedness failures, and engineering Tournament TDA features. Added a deterministic Ω-extremes audit and logged new hypotheses/reflection/variable entries.

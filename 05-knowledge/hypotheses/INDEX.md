@@ -2238,6 +2238,48 @@ The summand counts even-size choices of interior vertices between i and j.
 **Engineering implication:** Tournament TDA/ranking-feature extraction should include cycle-family core size, α-vector, disjointness-pair count, and independent-triple supports as features, not only H and score sequence.
 **See:** T281, `07-reflections/omega-extremes-as-cycle-disjointness-axis.md`.
 
+## HYP-1760: Projection-kill / near-kill controls Ω extremes (opus-2026-05-29-S12)
+**Status:** OPEN meta-hypothesis; exact examples measured.
+**Statement:** The H=63 complete-core unlock and the THM-025 real-rootedness failure are two values of the same old-projection defect. In H=63, deleting the core vertex kills all odd-cycle structure (`kept=0`). In THM-025, one vertex is an almost-core: deleting it loses 92 of 94 directed odd cycles but leaves two old cycles with `alpha(T-v)=[1,2,1]`, enough residue to support the unique independent triple.
+**Evidence:** `04-computation/projection_defect_bridge_s12.py` computes:
+  - H=63 cid 2519: core vertex 3, deletion loses 31/31 cycles, `H(T-v)=1`, `alpha(T-v)=[1,0]`.
+  - H=63 cid 3285: core vertex 0, same projection kill.
+  - THM-025: vertex 3 loses 92/94 cycles, keeps 2, `H(T-v)=9`, `alpha(T-v)=[1,2,1]`.
+**Implication:** Root failure may occur at the first nonzero residue after a projection kill: not enough old structure to be generic, but enough to create an independent-set shape forbidden in the complete-core case.
+**See:** `05-knowledge/results/projection_defect_bridge_s12.out`, T282.
+
+## HYP-1761: Complete-Ω core strata avoid r=3 and r=10 through n=8 (opus-2026-05-29-S12)
+**Status:** CONFIRMED for n≤8 isomorphism classes; OPEN in general.
+**Statement:** Among complete-Ω tournament classes, the cycle count strata are strongly constrained by cycle-family core size. In the exact n=3..8 census, no complete-Ω class has r=3 or r=10. At n=8, the only r=31 classes are the two core-size-1 H=63 classes.
+**Evidence:** The S12 complete-Ω core census gives n=8 core-size supports:
+  - core size 0: r in `{0,6,7,12,16,24,34,48,70}`
+  - core size 1: r in `{4,5,7,9,11,12,13,15,16,18,19,22,23,25,26,30,31,34,36,39,40,43,47,48,53}`
+  - core size 2: r in `{2,4,8,16,32}`
+  - core size 3: r in `{1}`.
+**Implication:** The complete-Ω component of H=7/H=21 obstruction may be provable by core-stratified support restrictions rather than by a monolithic forbidden-H argument.
+**See:** `05-knowledge/results/projection_defect_bridge_s12.out`, INV-191.
+
+## HYP-1762: Low single-core gaps r_core=3,10 persist through signature length 40 (opus-2026-05-29-S12)
+**Status:** COMPUTATIONALLY CONFIRMED through m=40; OPEN in general.
+**Statement:** The single-core weighted inversion statistic `r_core(s)` never equals 3 or 10 for binary signatures of length `m≤40`. Meanwhile r=31,42,63 appear with simple linear count laws after first occurrence.
+**Evidence:** S12 dynamic target search (pruning exact because `r_core` never decreases under extension) found:
+  - r=3: absent for m=2..40.
+  - r=10: absent for m=2..40.
+  - r=31: first at m=7, count `2(m-6)` through m=40.
+  - r=42: first at m=8, count `2(m-7)` through m=40.
+  - r=63: first at m=8, count `3(m-7)` through m=40.
+**Implication:** The gaps r=3 and r=10 look arithmetic inside the signature statistic, not merely low-n tournament accidents.
+**See:** variable `r_core(s)`, `05-knowledge/results/projection_defect_bridge_s12.out`.
+
+## HYP-1763: Support-excess and even-graph projection separate same-score regular regimes (opus-2026-05-29-S12)
+**Status:** OPEN meta-hypothesis with exact n=7 examples.
+**Statement:** For regular cyclic tournaments, Paley-like and interval-like behavior is visible as a projection defect even when coarse score data and support shadows agree. The meaningful object is the fiber multiplicity over odd-cycle supports, together with the even-graph cycle-space residue.
+**Evidence:** `04-computation/projection_defect_bridge_s12.py` computes:
+  - Paley T7: scores `(3,3,3,3,3,3,3)`, 80 directed odd cycles on 36 supports, `support_excess=44`, `max_mult=24`, `alpha=[1,80,7]`, even projection = 14 edges with degree sequence `(4,4,4,4,4,4,4)`.
+  - Interval T7: same score sequence and same 36 supports, but 59 cycles, `support_excess=23`, `max_mult=17`, `alpha=[1,59,14]`, even projection = 7 edges with degree sequence `(2,2,2,2,2,2,2)`.
+**Implication:** The Paley/interval contrast may be better understood outside tournament language as a hypergraph shadow/fiber defect and a cycle-space codeword-weight distinction. These are cheap feature candidates for `tournament_tda.py`.
+**See:** T283, `07-reflections/projection-defect-as-common-residue.md`, `05-knowledge/results/projection_defect_bridge_s12.out`.
+
 ## HYP-1755: Strong Key Lemma (opus-2026-05-28-S5)
 **Status:** OPEN — required to complete H=21 obstruction proof
 **Statement:** If C₁, C₂, C₃ are three pairwise-intersecting odd directed cycles in tournament T, then T contains a 4th odd directed cycle C' such that V(C') ⊆ V(C₁) ∪ V(C₂) ∪ V(C₃).

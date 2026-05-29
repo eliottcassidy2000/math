@@ -46,6 +46,12 @@ Structured move families act like finite-difference probes of quotient maps. Sin
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
+**T282** #projection-defect #omega-core #real-rootedness #path-homology | certainty: MEDIUM-HIGH | source: opus-2026-05-29-S12
+Projection defect may be the common residue behind three unrelated-looking threads: H=63 is an exact old-projection kill (delete the core and Ω vanishes), THM-025 is a near-kill (one vertex supports 92/94 cycles but the 2-cycle residue preserves α₂=1), and HYP-408/ghost cycles asks when through-v homology dies under old projection. The missing object is likely a family of defect indices measuring how much structure survives each forgetful map. See `07-reflections/projection-defect-as-common-residue.md`.
+
+**T283** #support-excess #even-graph #paley-interval #coding-theory | certainty: MEDIUM-HIGH | source: opus-2026-05-29-S12
+Paley T7 and interval T7 have the same regular score sequence and the same odd-cycle support shadow (36 supports), but different fiber multiplicities: Paley has 80 cycles/support_excess 44/max_mult 24, interval has 59/23/17. Their even-graph projections are also cleanly separated: Paley -> 14 edges with degree 4^7, interval -> 7 edges with degree 2^7. This connects the Paley-vs-interval story to hypergraph shadow defects, cycle-space codeword weights, and cheap Tournament TDA features.
+
 **T268** #2-adic-sizes-vs-spectrum #ruler-sequence #dual-levels | certainty: HIGH | source: oracle-2026-05-15
 T241-T244 describe 2-adic structure of Walsh AMPLITUDES at fixed $n$ (ruler sequence in spectrum). This tangent is the dual: 2-adic structure of the tournament SIZE $n$ itself (column families). The spectral ruler sequence and the size ruler sequence are the same self-similar fractal at two levels: internal (fixed $n$, across Walsh weights) and external (fixed column, across doublings). The Walsh degree formula $2\lfloor(n-1)/2\rfloor$ encodes both simultaneously: it equals $n-1$ (row 0) vs $n-2$ (row $\geq 1$), exactly the seam.
 

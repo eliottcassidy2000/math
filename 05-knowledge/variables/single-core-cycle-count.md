@@ -26,9 +26,10 @@ The exponent convention gives weight 1 when `i,j` are consecutive.
 
 ## Values and Gaps
 
-The S11 target search over all signatures of length `m <= 16` found:
+The S11 target search over all signatures of length `m <= 16`, extended by
+the S12 dynamic target search through `m <= 40`, found:
 
-| target r | status up to m=16 | interpretation |
+| target r | status up to m=40 | interpretation |
 |---:|---|---|
 | 3 | absent | complete-core H=7 obstruction |
 | 10 | absent | complete-core H=21 obstruction |
@@ -36,6 +37,28 @@ The S11 target search over all signatures of length `m <= 16` found:
 
 At `m=7`, the signatures with `r_core=31` include `1001100` and `1100110`,
 exactly the two THM-344 H=63 classes.
+
+S12 also found simple count laws in the tested range:
+
+| target r | first m | count law observed through m=40 |
+|---:|---:|---|
+| 31 | 7 | `2(m-6)` |
+| 42 | 8 | `2(m-7)` |
+| 63 | 8 | `3(m-7)` |
+
+The dynamic search tracks the state `(r, add0, last_bit)`, where `add0` is the
+new contribution if the next appended bit is 0. If the current signature has
+length `m`, then appending a 0 sends `r -> r + add0`, while appending a 1 leaves
+`r` unchanged. The next-state update is:
+
+```text
+next_add_without_new_1 = 2*add0 - last_bit
+append 0: (r + add0, next_add_without_new_1, 0)
+append 1: (r,        next_add_without_new_1 + 1, 1)
+```
+
+Since `r_core` never decreases under extension, pruning states with `r` above a
+target gives exact target counts.
 
 ## Equations Involving This Variable
 
@@ -57,6 +80,8 @@ exactly the two THM-344 H=63 classes.
 - `04-computation/omega_extreme_fingerprints_s11.py`
 - `05-knowledge/results/omega_extreme_fingerprints_s11.out`
 - `05-knowledge/results/single_core_signature_targets_s11.out`
+- `04-computation/projection_defect_bridge_s12.py`
+- `05-knowledge/results/projection_defect_bridge_s12.out`
 
 ## Tags
 

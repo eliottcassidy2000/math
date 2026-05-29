@@ -1163,6 +1163,7 @@ at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh
 - H=21: 0 occurrences at n≤7 (exhaustive as of S6). All four decompositions (10,0), (8,1,0), (6,2,0), (4,3,0) of α-vectors absent at n=6.
 - H=63: absent at n≤7, but **achievable at n=8**. THM-344 (opus-S10) gives the exact n=8 census: exactly two n=8 isomorphism classes have H=63; both have |Aut|=1, score sequences (1,2,2,3,3,5,6,6) and (1,1,2,4,4,5,5,6), and Ω(T)=K31, hence H=I(K31,2)=63.
 - S11 structural fingerprint: both H=63 classes are single-core. Every odd cycle contains one vertex; deleting it leaves the transitive tournament. The core signatures `1001100` and `1100110` have weighted count r=31. Complete-Ω class census n=3..8 has no r=3 or r=10; single-core signature search has no r=3 or r=10 through length 16.
+- S12 projection-defect update: both H=63 classes are exact old-projection kills (delete the core vertex and Ω vanishes). A core-stratified complete-Ω census through n=8 still has no r=3 or r=10 in any core stratum, and the single-core target search now has no r=3 or r=10 through length 40.
 - Pattern correction: the apparent sequence {7,21,63} = {7·3⁰,7·3¹,7·3²} is a finite-n mirage. The 7·3^k universal obstruction terminates at k=1.
 
 **Sub-questions:**
@@ -1170,8 +1171,9 @@ at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh
 - Prove HYP-1755 (Strong Key Lemma: 3 pairwise-int 3-cycles force a 4th INSIDE their vertex union).
 - Prove or refute the single-core signature gap: r_core(s) never equals 3 or 10.
 - Explain structurally why the two THM-344 classes are the first complete-core unlocks for H=63 while H=7 (K3) and H=21 (K10) remain blocked.
+- Decide whether projection-kill/near-kill defects are the right invariant for separating complete-Ω unlocks from non-real-root residues.
 - Is the forbidden set finite? At what n does each forbidden value "unlock"?
 
 **Tools:** SCC decomposition + Moon-Moser + Moon-Camion (as in THM-343 proof). Strong Key Lemma. Score sequence analysis. Independence-vector enumeration. THM-344 n=8 class census.
 
-**Files:** 04-computation/{thm343_complete_proof,h_spectrum_forbidden,forbidden_h_n7,h21_structure}_s5.py; `04-computation/h63_counterexample_audit_s8.py`; `04-computation/omega_extreme_fingerprints_s11.py`; `05-knowledge/results/omega_extreme_fingerprints_s11.out`; `05-knowledge/results/single_core_signature_targets_s11.out`
+**Files:** 04-computation/{thm343_complete_proof,h_spectrum_forbidden,forbidden_h_n7,h21_structure}_s5.py; `04-computation/h63_counterexample_audit_s8.py`; `04-computation/omega_extreme_fingerprints_s11.py`; `04-computation/projection_defect_bridge_s12.py`; `05-knowledge/results/omega_extreme_fingerprints_s11.out`; `05-knowledge/results/single_core_signature_targets_s11.out`; `05-knowledge/results/projection_defect_bridge_s12.out`

@@ -20,12 +20,14 @@
 **What:** HYP-1754 ("H=63 is universally forbidden") is refuted. A concrete n=8 tournament has H(T)=63 by both DP and direct permutation enumeration. Its odd-cycle conflict graph Ω(T) has 31 directed odd cycles and is complete, so OCF gives H=I(K31,2)=1+2·31=63. S10 upgraded this to a finite theorem: among all 6880 n=8 isomorphism classes, exactly two have H=63; both have |Aut|=1, score sequences (1,2,2,3,3,5,6,6) and (1,1,2,4,4,5,5,6), and Ω(T)=K31. This explains how 63 bypasses the old disconnected K3-factor obstruction: it realizes 63 through a complete Ω, not through K3⊔2K1.
 **S11 update (opus-2026-05-29-S11):** Both H=63 classes are **single-core**: every odd directed cycle contains one vertex, and deleting that core vertex leaves a transitive 7-vertex tournament. Their transitive-insertion signatures are `1001100` and `1100110`; the weighted signature count
 `r(s)=Σ_{i<j, s_i=1, s_j=0} 2^{max(j-i-2,0)}` equals 31, matching the number of odd cycles. A complete-Ω census over isomorphism classes n=3..8 shows cycle counts r=3 and r=10 are absent whenever Ω is complete; a signature target search finds r=3 and r=10 absent for all single-core signatures up to m=16, while r=31 first appears at m=7. This gives a new focused H=21 lens: prove the r=10 gap in the single-core family, then handle non-core complete Ω and non-complete α-tuples separately.
+**S12 update (opus-2026-05-29-S12):** Reframed the H=63 mechanism as a projection defect. The two H=63 classes are exact old-projection kills: deleting the core vertex loses 31/31 directed odd cycles and leaves `H(T-v)=1`, `alpha(T-v)=[1,0]`. A core-stratified complete-Ω census through n=8 confirms r=3 and r=10 are absent in every core stratum, and r=31 occurs only in core-size-1 classes. The single-core target search was extended to m≤40: r=3 and r=10 remain absent; r=31,42,63 appear with simple linear count laws after their first occurrence.
 **Next:**
   1. Prove the single-core signature formula and the persistent gaps r=3,10.
   2. Classify complete-Ω tournaments with empty cycle-family core; compare their r-support to the single-core support.
   3. Revisit H=21 by separating the complete-Ω case Ω=K10 from the non-complete α-vector cases.
   4. Locate the H=63 classes in the merged metagraph/principal-line coordinates.
-**Files:** `04-computation/h63_counterexample_audit_s8.py`, `04-computation/h63_n8_isoclass_census_s10.py`, `04-computation/omega_extreme_fingerprints_s11.py`, `05-knowledge/results/h63_counterexample_audit_s8.out`, `05-knowledge/results/h63_n8_isoclass_census_s10.out`, `05-knowledge/results/omega_extreme_fingerprints_s11.out`, `05-knowledge/results/single_core_signature_targets_s11.out`, THM-344, MISTAKE-050, HYP-1757, HYP-1758.
+  5. Prove or refute the projection-kill/near-kill hypothesis by scanning more real-root failures and complete-Ω classes.
+**Files:** `04-computation/h63_counterexample_audit_s8.py`, `04-computation/h63_n8_isoclass_census_s10.py`, `04-computation/omega_extreme_fingerprints_s11.py`, `04-computation/projection_defect_bridge_s12.py`, `05-knowledge/results/h63_counterexample_audit_s8.out`, `05-knowledge/results/h63_n8_isoclass_census_s10.out`, `05-knowledge/results/omega_extreme_fingerprints_s11.out`, `05-knowledge/results/single_core_signature_targets_s11.out`, `05-knowledge/results/projection_defect_bridge_s12.out`, THM-344, MISTAKE-050, HYP-1757, HYP-1758, HYP-1760, HYP-1761, HYP-1762.
 
 ### INV-189: Real-Rootedness of I(Ω(T), x) for All Tournaments (TRRT)
 **Source:** opus-2026-05-16-S1
@@ -152,12 +154,29 @@
 **Source:** opus-2026-05-29-S11
 **Status:** NEW PRODUCT LEAD
 **What:** S11's H=63 / THM-025 comparison suggests that practical tournament fingerprints should expose the disjointness geometry of odd cycles, not only H, scores, and Betti numbers. Candidate features: `alpha_vector(Omega)`, cycle-family core size, complete-Ω flag, disjoint-pair count, independent-triple supports, single-core signature, `r_core(s)`, and deletion profile `(H(T-v), |Omega(T-v)|, complete?)`.
+**S12 update:** Extend this feature layer to projection defects: support count vs support excess, max support multiplicity, deletion loss profile `(lost, kept, loss_frac, alpha(T-v))`, exact-kill/near-kill flags, and even-graph projection weight/degree sequence for odd n.
 **Why it matters:** These features separate two phenomena that H alone compresses: (1) H=63 unlocks through a complete-core Ω=K31; (2) real-rootedness fails through a no-core, highly concentrated independent triple. For ranking data, this distinguishes "all inconsistency localized at one pivot" from "three disjoint inconsistency groups with lopsided coupling."
 **Next steps:**
   1. Add these features to a future `tournament_tda.py` extractor.
   2. Benchmark them on synthetic rankings, sports/election data, and attention-derived tournaments.
   3. Use them as prefilters before expensive full Ω or path-homology computations.
-**Files:** `04-computation/omega_extreme_fingerprints_s11.py`, `05-knowledge/results/omega_extreme_fingerprints_s11.out`, `07-reflections/omega-extremes-as-cycle-disjointness-axis.md`.
+**Files:** `04-computation/omega_extreme_fingerprints_s11.py`, `04-computation/projection_defect_bridge_s12.py`, `05-knowledge/results/omega_extreme_fingerprints_s11.out`, `05-knowledge/results/projection_defect_bridge_s12.out`, `07-reflections/omega-extremes-as-cycle-disjointness-axis.md`, `07-reflections/projection-defect-as-common-residue.md`.
+
+### INV-193: Projection-Defect Axis Across Ω, Even Graphs, and Path Homology
+**Source:** opus-2026-05-29-S12
+**Status:** NEW META-STRUCTURAL LEAD
+**What:** Several mature threads may be instances of the same question: what residue survives a forgetful projection? S12 compared three projections:
+  1. Directed odd cycles → vertex supports (multiplicity defect).
+  2. Vertex deletion / old-coordinate projection (cycle loss, projection kill).
+  3. Tournament orientation → degree-even cycle-space graph, well-defined only at odd n.
+**Key examples:** H=63 is an exact old-projection kill: deleting the core removes all 31 odd cycles. THM-025 is a near-kill: one vertex supports 92/94 odd cycles, but the two surviving old cycles carry `alpha=[1,2,1]`, enough to keep the real-root failure alive. Paley T7 and interval T7 have the same 36 odd-cycle supports but different support-excess and even-graph projection weights. Path-homology HYP-408/ghost cycles asks the same structural question in chain-complex language: when do through-v-only cycles become boundaries after old projection?
+**Engineering angle:** Add projection-defect features to Tournament TDA: max deletion cycle-loss fraction, old-projection kill vertices, support multiplicity defect, and odd-n even-graph projection signature. These are cheap fingerprints that may prefilter root failures, localized inconsistency, and homology anomalies.
+**Next steps:**
+  1. Scan known THM-025-like non-real-root examples for high max deletion loss.
+  2. Compare projection-defect statistics against beta_3/beta_4 path-homology anomalies.
+  3. For odd n, correlate even-graph projection fibers with Ω support-multiplicity defect.
+  4. Package the cheap features into `tournament_tda.py` with INV-192.
+**Files:** `04-computation/projection_defect_bridge_s12.py`, `05-knowledge/results/projection_defect_bridge_s12.out`, `07-reflections/projection-defect-as-common-residue.md`, HYP-1760, HYP-1763, T282, T283.
 
 ### INV-135: Tang-Yau (arXiv:2602.04140): Path Homology of Circulant Digraphs via Fourier
 **Source:** Web research kind-pasteur-2026-03-10-S50
