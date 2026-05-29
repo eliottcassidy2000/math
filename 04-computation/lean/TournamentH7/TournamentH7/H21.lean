@@ -108,25 +108,25 @@ private lemma alpha_solution_of_H_eq_twentyone
   have h₄ : a₄ = 0 := by
     by_contra ha₄ne
     have ha₄ne' : a₄ ≠ 0 := ha₄ne
-    have h_a₄ : alphaCount 4 T ≠ 0 := by rw [← ha₄] at ha₄ne'; exact ha₄ne'
+    have h_a₄ : alphaCount 4 T ≠ 0 := ha₄ ▸ ha₄ne'
     have ha₁_4 : 4 ≤ a₁ := by
       have := alpha_quad_subset T h_a₄
-      rw [← ha₁] at this; exact this
+      exact this
     have ha₃_4 : 4 ≤ a₃ := by
       have := alpha_quad_chain T h_a₄
-      rw [← ha₃] at this; exact this
+      exact this
     omega
   -- a₃ = 0: if a₃ ≥ 1, chain a₂ ≥ 3 and a₁ ≥ 3 gives ≥ 3 + 6 + 4 = 13 > 10.
   have h₃ : a₃ = 0 := by
     by_contra ha₃ne
     have ha₃ne' : a₃ ≠ 0 := ha₃ne
-    have h_a₃ : alphaCount 3 T ≠ 0 := by rw [← ha₃] at ha₃ne'; exact ha₃ne'
+    have h_a₃ : alphaCount 3 T ≠ 0 := ha₃ ▸ ha₃ne'
     have ha₁_3 : 3 ≤ a₁ := by
       have := alpha_triple_subset T h_a₃
-      rw [← ha₁] at this; exact this
+      exact this
     have ha₂_3 : 3 ≤ a₂ := by
       have := alpha_triple_chain T h_a₃
-      rw [← ha₂] at this; exact this
+      exact this
     omega
   -- a₁ + 2a₂ = 10
   have hRed' : a₁ + 2*a₂ = 10 := by omega
@@ -136,12 +136,12 @@ private lemma alpha_solution_of_H_eq_twentyone
   -- a₂ = 5: a₁ = 0, but chain α₂ ≠ 0 → α₁ ≥ 2 fails.
   have hBin2 : a₂ ≤ Nat.choose a₁ 2 := by
     have := alpha_binomial_bound T 2
-    rw [← ha₁, ← ha₂] at this; exact this
+    exact this
   have hBnd2 : a₂ ≠ 0 → 2 ≤ a₁ := by
     intro h
-    have h' : alphaCount 2 T ≠ 0 := by rw [← ha₂] at h; exact h
+    have h' : alphaCount 2 T ≠ 0 := ha₂ ▸ h
     have := alpha_pair_bound T h'
-    rw [← ha₁] at this; exact this
+    exact this
   -- a₂ ≤ 5 from arithmetic
   have ha₂_le : a₂ ≤ 5 := by omega
   interval_cases a₂
@@ -159,11 +159,8 @@ private lemma alpha_solution_of_H_eq_twentyone
     omega
   · -- a₂ = 5, a₁ = 0 — chain kills this
     exfalso
-    have ha₁_val : a₁ = 0 := by omega
-    have ha₂ne : a₂ ≠ 0 := by omega
-    have ha₂ne' : alphaCount 2 T ≠ 0 := by rw [← ha₂] at ha₂ne; exact ha₂ne
+    have ha₂ne' : alphaCount 2 T ≠ 0 := ha₂ ▸ (by decide : (5 : ℕ) ≠ 0)
     have := alpha_pair_bound T ha₂ne'
-    rw [← ha₁, ha₁_val] at this
     omega
 
 /-! ### Main theorem -/

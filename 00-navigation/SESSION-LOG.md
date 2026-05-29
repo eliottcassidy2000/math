@@ -2,6 +2,32 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-29-S2 — 2026-05-29
+
+**Summary:** Added 2 project-novel modules to the Lean formalisation (in parallel with opus-S7's H21/H63 extension; merged on rebase).  Discovered a new arithmetic-decomposition perspective on the forbidden-H problem and a sharper independence-polynomial axiom.
+
+**NEW Lean modules added (mine):**
+- `04-computation/lean/TournamentH7/TournamentH7/Tilings.lean` — `HasBasePath`, tile-complement `Tournament.tilde`, **score formula axioms** `tilde_score_{sink,source,interior}` (project-novel, oracle-2026-05-11-S1), and the **`regular_not_SF` theorem** (corollary, proved in Lean).
+- `04-computation/lean/TournamentH7/TournamentH7/GridReflection.lean` — `Tournament.op`, `relabel`, `vertexReversal`, **`tilde_eq_reversed_op` axiom** (THM-280, opus-2026-04-03-S27), and the **`gridSym_iff_sc_via_reversal` theorem** (proved).
+
+**NEW MATHEMATICAL DISCOVERIES:**
+1. **Arithmetic/structural decomposition** of the forbidden-H problem: H = N reduces to (A) a finite set S(N) of arithmetic α-tuples + (B) structural killing of each tuple. Brute-force enumeration: H=7→1 candidate, H=21→4, H=63→37. The 37-tuple H=63 case clusters into a ladder by α_1 ∈ {5,7,9,…,31}.
+2. **Sharper independence-polynomial axiom `alpha_descent`** (α_k ≥ 1 ⟹ α_j ≥ C(k, j)) cleanly subsumes `alpha_subset_bound` (special case j = 1) and `alpha_chain_step` (special case j = k − 1). Single canonical axiom.
+3. **The Paley-not-SF result** follows from `tilde_score_sink` alone: at vertex 0, `s̃(0) + s(0) = n − 2` (formula), but if T is regular, `2 s(0) = n − 1`, giving a parity contradiction.
+
+**NEW DOCUMENTS:**
+- `07-reflections/formalization-driven-decompositions.md` — the new directions (arithmetic/structural decomposition, sharper axioms, H=63 ladder, future formalisation-driven canon principle).
+
+**MERGE NOTE:** This session ran in parallel with opus-2026-05-29-S7 (H21/H63 proofs).  Opus's structural infrastructure is more developed and is accepted on conflicts; my contributions add Tilings/GridReflection (project-novel theorems opus didn't formalise) and a new-directions reflection doc.
+
+**FOR NEXT AGENT:**
+1. **Standardise on `alpha_descent`** project-wide (replaces `alpha_subset_bound` and `alpha_chain_step`).
+2. De-axiomatise `tilde_score_*` via `outNbrs = consec ⊔ nonconsec` decomposition.
+3. Build the **H = 63 kill table** (37 candidates × structural lemmas).
+4. Formalise the Paley-not-SF chain into a clean theorem `Tournament.paley_not_SF` once a Paley-tournament constructor is in the library.
+
+---
+
 ## opus-2026-05-29-S7 — 2026-05-29
 
 **Summary:** Extended oracle-S1's Lean formalisation of THM-343 (H≠7) with three new theorems and one classical pair: H≠21 (HYP-1753), H≠63 (HYP-1754), and Rédei's existence + parity. Added empirical-validation script that exhaustively confirms every axiom at n ≤ 6.

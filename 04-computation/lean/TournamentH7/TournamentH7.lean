@@ -25,6 +25,10 @@
     · TournamentH7.H63          — Theorem H_ne_sixtythree (HYP-1754).
     · TournamentH7.Redei        — Rédei 1934 axioms + corollaries.
     · TournamentH7.HSpectrum    — Forbidden-trio bundle.
+    · TournamentH7.Tilings      — Base path, tile-complement T̃, score formula
+                                  (project-novel; oracle-2026-05-11-S1).
+    · TournamentH7.GridReflection — THM-280 (grid reflection ↔ complement;
+                                  project-novel; opus-2026-04-03-S27).
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -38,4 +42,6 @@ import TournamentH7.H21
 import TournamentH7.H63
 import TournamentH7.Redei
 import TournamentH7.HSpectrum
+import TournamentH7.Tilings
+import TournamentH7.GridReflection
 import TournamentH7.Verify

@@ -22,6 +22,7 @@
 -/
 
 import TournamentH7.SCC
+import Mathlib.Algebra.Ring.Parity
 
 namespace Tournament
 
