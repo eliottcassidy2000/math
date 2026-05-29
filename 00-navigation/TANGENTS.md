@@ -43,6 +43,9 @@ Short/local tiles are even-graph biased while remaining highly synchronized over
 **T287** #finite-difference-lenses #meta-hypotheses #engineering-features | certainty: medium | source: kind-pasteur-2026-05-29-S2
 Structured move families act like finite-difference probes of quotient maps. Single tiles, range flips, vertex-stars, strips, and complement-tiling moves are not interchangeable samples of a Hamming layer; each asks a different derivative question. Engineering feature extractors should sample named geometric probes, not only random radii.
 
+**T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
+Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
+
 **T268** #2-adic-sizes-vs-spectrum #ruler-sequence #dual-levels | certainty: HIGH | source: oracle-2026-05-15
 T241-T244 describe 2-adic structure of Walsh AMPLITUDES at fixed $n$ (ruler sequence in spectrum). This tangent is the dual: 2-adic structure of the tournament SIZE $n$ itself (column families). The spectral ruler sequence and the size ruler sequence are the same self-similar fractal at two levels: internal (fixed $n$, across Walsh weights) and external (fixed column, across doublings). The Walsh degree formula $2\lfloor(n-1)/2\rfloor$ encodes both simultaneously: it equals $n-1$ (row 0) vs $n-2$ (row $\geq 1$), exactly the seam.
 

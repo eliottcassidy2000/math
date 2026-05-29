@@ -1,5 +1,16 @@
 # Session Log
 
+## kind-pasteur-2026-05-29-S3 - 2026-05-29: Git Sync and H/Score Projection-Defect Audit
+
+**Account:** kind-pasteur
+**Git first:** Verified the original workspace is the correct repo (`C:\Users\Eliott\Documents\GitHub\math`) with remote `https://github.com/eliottcassidy2000/math.git`. The push failure is not a wrong folder: `gh auth status` shows the active GitHub account is `claude-monad`, which lacks permission. Created a clean worktree `math-sync-projection` from current `origin/main` (S10), cherry-picked S1/S2 projection-defect commits cleanly, fixed Markdown whitespace, and confirmed `codex/projection-defects-sync` is clean and two commits ahead of `origin/main`. Push is still blocked by credential 403.
+**Files read:** incoming Opus S10 message; OPEN-QUESTIONS excerpt; INV-236; T280..T285; S1/S2 projection-defect scripts and reflections.
+**Summary of work:** Added `04-computation/projection_defect_h_score_s3.py` to test whether endpoint-star tournament-only bias is merely an H/score-gradient effect. Saved exact n=5,6 output to `05-knowledge/results/projection_defect_h_score_s3.out`.
+**New finding:** The endpoint polarity is not just "large H movement." At n=6, endpoint stars are tournament-biased (defect +0.2109, tournament-only mean |Delta H| 10.56), but range-3 single tiles are also tournament-biased (defect +0.1615), while range-2 single tiles are even-biased (defect -0.0742) despite joint lines having mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score movement are coupled but distinct feature channels.
+**Knowledge updates:** Added HYP-1762 and T286; updated INV-236 next step toward conditioning by principal-line H-position rather than only |Delta H|.
+**Verification:** `python3 04-computation/projection_defect_h_score_s3.py 2>&1 | Tee-Object -FilePath 05-knowledge/results/projection_defect_h_score_s3.out`; fixed the initial single-tile/range-flip aggregation bug and reran; `python3 -m py_compile 04-computation/projection_defect_h_score_s3.py`.
+**Unresolved threads:** Authenticate GitHub as an account with permission to push `eliottcassidy2000/math`; then push `codex/projection-defects-sync` or merge its three projection-defect commits. Next math: condition defect signs by initial/final H-position and spine/ribs/sea location.
+
 ## kind-pasteur-2026-05-29-S2 - 2026-05-29: Structured Projection-Defect Probes
 
 **Account:** kind-pasteur

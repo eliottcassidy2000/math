@@ -2280,3 +2280,9 @@ Source: projection_defect_structured_moves_s2.py, projection_defect_structured_m
 **What:** Whole-layer projection-defect averages conceal opposite structured signals inside the same radii. At n=6, the d=1 single-tile family is nearly balanced (defect +0.0121), but individual range-3 tiles are strongly tournament-biased while range-2 and some range-4 tiles are even-biased. Named families such as vertex-stars, range flips, strips, and complement-tiling moves also differ sharply from their Hamming-layer averages.
 **Why it matters:** Future computations should treat structured move families as finite-difference probes of the quotient maps `Q_m -> G_n/Z_2` and `Q_m -> E_n`, rather than treating random Hamming-shell samples as representative.
 Source: projection_defect_structured_moves_s2.py, projection_defect_structured_moves_s2.out
+
+## HYP-1762: Projection-defect sign is not just H-gradient size
+**Status:** CONFIRMED as a caution for n=5..6 exact; OPEN structurally
+**What:** Structured projection-defect sign does not reduce to how far a move travels in H or score space. At n=6, endpoint stars are tournament-biased (defect +0.2109) and have large tournament-only mean |Delta H| = 10.56, but range-3 single-tile moves are also tournament-biased (defect +0.1615) with mean |Delta H| = 6.70 per one-tile flip. Meanwhile range-2 single-tile moves are even-biased (defect -0.0742) even though their joint lines still have mean |Delta H| = 6.63.
+**Why it matters:** The endpoint polarity is a genuine two-quotient residual, not merely a proxy for H-gradient or score movement. H-gradient magnitude, score motion, and projection-defect sign should be treated as three coupled but distinct feature channels.
+Source: projection_defect_h_score_s3.py, projection_defect_h_score_s3.out
