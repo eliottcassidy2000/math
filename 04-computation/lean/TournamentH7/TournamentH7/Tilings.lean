@@ -209,20 +209,34 @@ lemma mem_outNbrs (T : Tournament n) {v w : Fin n} :
     The partition formulas are straightforward but lengthy.  We KEEP the
     axioms for now and add a `Verify`-side reproof sketch as a comment. -/
 
+/-! ### Helper for the score formula -/
+
+/-- For HasBasePath T and n ≥ 2, T.arc 0 1 = false. -/
+private lemma T_arc_at_zero_to_one (T : Tournament n) (hbp : HasBasePath T)
+    (hn : 2 ≤ n) :
+    T.arc ⟨0, by omega⟩ ⟨1, by omega⟩ = false := by
+  have h0 : 0 < n := by omega
+  have h1 : 1 < n := by omega
+  have h_succ : (⟨0, h0⟩ : Fin n).val + 1 < n := by show 0 + 1 < n; omega
+  have h_bp : T.arc ⟨(⟨0, h0⟩ : Fin n).val + 1, h_succ⟩ ⟨0, h0⟩ = true :=
+    hbp ⟨0, h0⟩ h_succ
+  -- h_bp has type T.arc ⟨1, _⟩ ⟨0, _⟩ = true (after simp).
+  have h_bp' : T.arc ⟨1, h1⟩ ⟨0, h0⟩ = true := by
+    convert h_bp using 2
+  cases h : T.arc ⟨0, h0⟩ ⟨1, h1⟩ with
+  | false => rfl
+  | true =>
+    exact absurd (T.asym ⟨0, h0⟩ ⟨1, h1⟩ ⟨h, h_bp'⟩) (fun x => x)
+
 /-- **Axiom (oracle-2026-05-11-S1, project-novel).** Score formula for T̃,
     base-path sink case.
 
-    Proof (deferred): at vertex 0, the only consecutive neighbor is
-    vertex 1.  The base path gives arc 1 → 0, so by asymmetry
-    T.arc 0 1 = false.  Hence T's out-neighbors at vertex 0 lie entirely
-    among vertices 2, 3, …, n-1.  Same for tilde T.  For non-consecutive
-    w, exactly one of T.arc 0 w and tilde T.arc 0 w is true.  Hence the
-    two `outNbrs` sets are *complementary* in `{w : w.val ≥ 2}`, whose
-    cardinality is n - 2.
-
-    The Lean proof is straightforward bookkeeping with
-    `Finset.card_union_of_disjoint` but ~100 lines of careful Fin
-    arithmetic; deferred. -/
+    Proof outline (deferred): at vertex 0, the only consecutive neighbor
+    is vertex 1; the base path gives 1 → 0 so T.arc 0 1 = false.  Hence
+    T's out-neighbors at vertex 0 lie among {w : w.val ≥ 2}.  For non-
+    consecutive w, exactly one of T.arc 0 w and tilde T.arc 0 w is true.
+    Hence the two `outNbrs` sets are *complementary* in the size-(n-2) set
+    {w : w.val ≥ 2}. -/
 axiom tilde_score_sink (T : Tournament n) (hbp : HasBasePath T)
     (hn : 2 ≤ n) (v : Fin n) (hv : v.val = 0) :
     (tilde T).outDegree v + T.outDegree v = n - 2
