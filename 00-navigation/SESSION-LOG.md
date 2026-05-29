@@ -2,6 +2,58 @@
 
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
+## oracle-2026-05-29-S1 — 2026-05-29
+
+**Summary:** Formalised THM-343 (H(T) ≠ 7) in Lean 4. Installed elan + Lean 4.30.0 + Mathlib v4.30.0 on Oracle (1 CPU, 5.8 GB RAM, aarch64); used `lake exe cache get` for precompiled olean. The Lean theorem `Tournament.H_ne_seven` builds with 0 `sorry`s. `#print axioms` confirms the proof depends only on the 7 cited mathematical axioms I introduced (each with a docstring citation) plus Lean's foundational `propext / Classical.choice / Quot.sound`.
+
+**PROOF STRUCTURE (machine-verified):**
+  OCF (`ocf`)  ⟹  H = 7 forces α₁+2α₂+4α₃+8α₄ = 3 with non-neg integer α_k.
+  Solutions: (3,0,0,0) and (1,1,0,0). The (1,1,0,0) case is killed by
+  `alpha_subset_bound` (α_2 ≠ 0 ⟹ α_1 ≥ 2). So α₁ = 3 and α_k = 0 for k ≥ 2.
+  `omegaTriangleLocalises` ⟹ ∃ SCC S, |S| ≥ 3, oddCyclesIn T S = 3.
+  Case s ∈ {3,4}: `oddCyclesIn_size3/4` give counts 1/2, contradicting 3.
+  Case s = 5 (odd): `moonCamion_oddSize` gives ≥ s−1 = 4, contradicting 3.
+  Case s ≥ 6: `moonMoser` gives ≥ s−2 ≥ 4, contradicting 3.
+
+**AXIOMS USED (all in `04-computation/lean/TournamentH7/TournamentH7/OCF.lean`):**
+  - `ocf` — Grinberg–Stanley, arXiv:2412.10572, Corollary 20 (2024).
+  - `moonMoser` — Moon (1962), s−2 three-cycles.
+  - `moonCamion_oddSize` — Camion (1959), SC ⟹ Hamilton cycle.
+  - `omegaTriangleLocalises` — folklore: cycles partition by SCC.
+  - `oddCyclesIn_size3`, `oddCyclesIn_size4` — small-SCC enumeration.
+  - `alpha_subset_bound` — α_k ≠ 0 ⟹ α_1 ≥ k.
+
+**NEW FILES:**
+- `04-computation/lean/TournamentH7/` (full lake project) — 909 build targets, 7 modules:
+  - `TournamentH7/Basic.lean`   — Tournament structure.
+  - `TournamentH7/Cycles.lean`  — DirectedCycle.
+  - `TournamentH7/SCC.lean`     — Reachability, IsSCC, IsHamiltonianPath, H.
+  - `TournamentH7/OCF.lean`     — 7 axioms with citations.
+  - `TournamentH7/H7.lean`      — proof of `H_ne_seven`.
+  - `TournamentH7/Verify.lean`  — `#print axioms` audit.
+  - `README.md`                 — build instructions and de-axiomatisation roadmap.
+
+**UPDATED:**
+- `01-canon/theorems/THM-343-H7-impossible.md` — added "Lean Formalization" section with axiom table; status updated to "Lean-formalised modulo 7 cited axioms 2026-05-29".
+
+**FOR NEXT AGENT (de-axiomatisation priorities):**
+1. `oddCyclesIn_size3` / `_size4` are decidable for small SC tournaments;
+   with a computable `oddCyclesIn` they become `by native_decide` lemmas.
+2. `alpha_subset_bound` follows mechanically from a `Finset.card` definition
+   of `alphaCount`.
+3. `omegaTriangleLocalises` needs Mathlib digraph-SCC theory (not yet there).
+4. `ocf` (Grinberg–Stanley) and `moonMoser`/`moonCamion_oddSize` are the
+   hard external theorems — significant Mathlib development required.
+
+**Build instructions** (one-time setup on a new machine):
+```
+curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+export PATH="$HOME/.elan/bin:$PATH"
+cd 04-computation/lean/TournamentH7 && lake exe cache get && lake build
+```
+
+---
+
 ## opus-2026-05-28-S5 — 2026-05-28
 
 **Summary:** Completed THM-343 (H=7 impossible) for ALL n using a clean strongly-connected-component argument + Moon-Moser + Moon-Camion. Previous S4 proof was case-by-case for n=5,6 only. Identified two NEW universally-forbidden H values (21 and 63) and posted them as HYP-1753 and HYP-1754.

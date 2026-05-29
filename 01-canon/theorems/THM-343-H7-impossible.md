@@ -1,9 +1,10 @@
 ---
 id: THM-343
 name: H7-impossible
-status: PROVED (complete for all n; verified exhaustively n≤7; structurally for all n)
+status: PROVED (complete for all n; verified exhaustively n≤7; structurally for all n; Lean-formalised modulo 7 cited axioms 2026-05-29)
 date: 2026-05-28
-session: opus-2026-05-28-S5 (completion); opus-2026-05-28-S4 (initial)
+session: opus-2026-05-28-S5 (completion); opus-2026-05-28-S4 (initial); oracle-2026-05-29-S1 (Lean formalisation)
+lean: 04-computation/lean/TournamentH7/  (Tournament.H_ne_seven)
 ---
 
 # THM-343: H(T) = 7 is Impossible for All Tournaments
@@ -158,3 +159,30 @@ Full algebraic proof: open (stated as conjecture for n ≥ 8).
 - `05-knowledge/results/h7_impossible_s4.out`
 - `05-knowledge/results/h7_structure_s4.out`
 - `05-knowledge/results/odd_cycle_analysis_s4.out`
+
+## Lean Formalization (oracle-2026-05-29-S1)
+
+Location: `04-computation/lean/TournamentH7/`. Built against Lean 4.30.0
+and Mathlib v4.30.0. The Lean theorem is `Tournament.H_ne_seven`:
+
+```lean
+theorem H_ne_seven {n : ℕ} (T : Tournament n) : H T ≠ 7
+```
+
+The formalization machine-verifies the case-split logic of the
+session-S5 proof, depending on 7 cited mathematical axioms (in
+`TournamentH7/OCF.lean`):
+
+| Axiom                    | Source                                                |
+|--------------------------|-------------------------------------------------------|
+| `ocf`                    | Grinberg–Stanley, arXiv:2412.10572, Corollary 20      |
+| `moonMoser`              | Moon (1962), s−2 distinct 3-cycles in SC tournament   |
+| `moonCamion_oddSize`     | Camion (1959) / Moon (1968), SC ⟹ Hamilton cycle      |
+| `omegaTriangleLocalises` | Folklore: cycles partition by SCC                     |
+| `oddCyclesIn_size3`      | SC tournament on 3 vertices is unique (a 3-cycle)     |
+| `oddCyclesIn_size4`      | SC tournament on 4 vertices has score (1,1,2,2)       |
+| `alpha_subset_bound`     | Independence polynomial: α_k ≠ 0 ⟹ α₁ ≥ k             |
+
+No `sorry`s. `#print axioms H_ne_seven_audit` in `Verify.lean` confirms
+the dependency list. The de-axiomatisation roadmap is in
+`04-computation/lean/TournamentH7/README.md`.

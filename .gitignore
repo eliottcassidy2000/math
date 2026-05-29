@@ -54,3 +54,7 @@ test_images/
 *.aux
 *.toc
 06-writeups/*.out
+
+# Lean build artifacts (~6+ GB cache directories, regenerable via lake exe cache get).
+# Keep lakefile.toml, lake-manifest.json (pins dep versions), and lean-toolchain.
+04-computation/lean/**/.lake/
