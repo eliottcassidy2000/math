@@ -1,0 +1,86 @@
+LEAN AXIOM EMPIRICAL VALIDATION (opus-2026-05-29-S7)
+============================================================
+
+[Axiom group: OCF.lean]
+  A1 (ocf truncated k≤4):
+    n=2: 2 tournaments, 0 violations (tail nonzero ⟹ axiom miss)
+    n=3: 8 tournaments, 0 violations (tail nonzero ⟹ axiom miss)
+    n=4: 64 tournaments, 0 violations (tail nonzero ⟹ axiom miss)
+    n=5: 1024 tournaments, 0 violations (tail nonzero ⟹ axiom miss)
+    n=6: 32768 tournaments, 0 violations (tail nonzero ⟹ axiom miss)
+
+  A1' (alpha_subset_bound):
+    n=2: 2 tournaments, 0 violations
+    n=3: 8 tournaments, 0 violations
+    n=4: 64 tournaments, 0 violations
+    n=5: 1024 tournaments, 0 violations
+    n=6: 32768 tournaments, 0 violations
+
+  A2 (moonMoser, applied to every SCC):
+    n=3: 8 tournaments, 0 violations
+    n=4: 64 tournaments, 0 violations
+    n=5: 1024 tournaments, 0 violations
+    n=6: 32768 tournaments, 0 violations
+
+  A3 (moonCamion_oddSize):
+    n=5: 1024 tournaments, 0 violations
+    n=6: 32768 tournaments, 0 violations
+
+  A4 (omegaTriangleLocalises):
+    n=3: 8 tournaments, 0 matched α=(3,0), 0 violations
+    n=4: 64 tournaments, 0 matched α=(3,0), 0 violations
+    n=5: 1024 tournaments, 0 matched α=(3,0), 0 violations
+    n=6: 32768 tournaments, 0 matched α=(3,0), 0 violations
+
+  A5a (oddCyclesIn_size3) and A5b (oddCyclesIn_size4):
+    n=3: size3 violations=0, size4 violations=0
+    n=4: size3 violations=0, size4 violations=0
+    n=5: size3 violations=0, size4 violations=0
+    n=6: size3 violations=0, size4 violations=0
+
+
+[Axiom group: Forbidden.lean]
+  alpha_chain_step:
+    n=2: 2 tournaments, 0 violations
+    n=3: 8 tournaments, 0 violations
+    n=4: 64 tournaments, 0 violations
+    n=5: 1024 tournaments, 0 violations
+    n=6: 32768 tournaments, 0 violations
+
+  alpha_binomial_bound:
+    n=2: 2 tournaments, 0 violations
+    n=3: 8 tournaments, 0 violations
+    n=4: 64 tournaments, 0 violations
+    n=5: 1024 tournaments, 0 violations
+    n=6: 32768 tournaments, 0 violations
+
+
+[Axiom group: Redei.lean]
+  Redei existence (H ≥ 1) and parity (H odd):
+    n=1: existence violations=0, parity violations=0
+    n=2: existence violations=0, parity violations=0
+    n=3: existence violations=0, parity violations=0
+    n=4: existence violations=0, parity violations=0
+    n=5: existence violations=0, parity violations=0
+    n=6: existence violations=0, parity violations=0
+
+
+[Axiom group: H21.lean]
+  H21 α-vector unrealisability (no_alpha_10_0, _8_1, _6_2, _4_3):
+    n=3: (10,0)=0, (8,1)=0, (6,2)=0, (4,3)=0
+    n=4: (10,0)=0, (8,1)=0, (6,2)=0, (4,3)=0
+    n=5: (10,0)=0, (8,1)=0, (6,2)=0, (4,3)=0
+    n=6: (10,0)=0, (8,1)=0, (6,2)=0, (4,3)=0
+
+
+[Axiom group: H63.lean]
+  H_ne_sixtythree:
+    n=3: violations=0
+    n=4: violations=0
+    n=5: violations=0
+    n=6: violations=0
+
+
+Completed in 23.4s
+============================================================
+All checked axioms hold at all enumerated tournaments.
