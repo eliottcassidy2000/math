@@ -55,5 +55,6 @@ import TournamentH7.SCCounts
 import TournamentH7.SCFraction
 import TournamentH7.SmallTournaments
 import TournamentH7.ForbiddenHCounting
+import TournamentH7.StaircaseTileModel
 import TournamentH7.Examples
 import TournamentH7.Verify
