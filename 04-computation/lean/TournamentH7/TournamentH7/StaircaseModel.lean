@@ -194,18 +194,50 @@ theorem crossesUpward_all_implies_SC
     have h_0_to_v : Reaches T ⟨0, hn_pos⟩ v := zero_reaches_all T hbp hn_pos h v
     exact h_u_to_0.trans T h_0_to_v
 
-/-! ### Hard direction (still axiomatised) -/
+/-! ### Hard direction (PROVED) -/
 
-/-- **Axiom (THM-330 hard direction).**  If T (with the base path) is
-    strongly connected, then every cut has a crossing-upward arc.
+/-- Any reachability path from a lower-cut vertex to an upper-cut vertex
+    must contain a non-consecutive crossing-upward arc. -/
+private lemma exists_crossing_in_reaches
+    (T : Tournament n) (hbp : HasBasePath T) (k : ℕ) (_hk : 1 ≤ k) :
+    ∀ {a b : Fin n}, Reaches T a b → a.val < k → k ≤ b.val →
+      CrossesUpward T k := by
+  intro a b r
+  induction r with
+  | refl v =>
+    intro h1 h2
+    omega
+  | @step u v w h_arc r ih =>
+    intro h1 h2
+    by_cases hv : v.val < k
+    · exact ih hv h2
+    · push_neg at hv
+      by_cases hcons : u.val + 1 = v.val
+      · exfalso
+        have hv_lt : v.val < n := v.is_lt
+        have hu_succ : u.val + 1 < n := by rw [hcons]; exact hv_lt
+        have h_eq : v = ⟨u.val + 1, hu_succ⟩ := Fin.ext hcons.symm
+        have hbp_arc : T.arc v u = true := by
+          rw [h_eq]; exact hbp u hu_succ
+        exact T.asym u v ⟨h_arc, hbp_arc⟩
+      · refine ⟨v, u, hv, h1, ?_, h_arc⟩
+        omega
 
-    Proof sketch: contrapositive.  If some cut k has no crossing-upward
-    arc, then `upperCut k` dominates `lowerCut k` (no arc enters
-    `upperCut k` from below), so vertex (k − 1) cannot reach any vertex
-    in `upperCut k`, contradicting SC. -/
-axiom SC_implies_all_cuts_crossing
+/-- **PROVED (THM-330 hard direction).**
+
+    If T has the base path AND is strongly connected, then every cut
+    `k ∈ {1, …, n − 1}` has at least one crossing-upward arc. -/
+theorem SC_implies_all_cuts_crossing
     (T : Tournament n) (hbp : HasBasePath T) (h : IsStronglyConnected T) :
-    ∀ k, 1 ≤ k → k < n → CrossesUpward T k
+    ∀ k, 1 ≤ k → k < n → CrossesUpward T k := by
+  intro k hk1 hkn
+  -- Pick v = ⟨0, _⟩ ∈ lowerCut, u = ⟨n - 1, _⟩ ∈ upperCut.
+  have h0 : 0 < n := by omega
+  have hn1 : n - 1 < n := by omega
+  let v : Fin n := ⟨0, h0⟩
+  let u : Fin n := ⟨n - 1, hn1⟩
+  have hr : Reaches T v u := h v u
+  exact exists_crossing_in_reaches T hbp k hk1 hr (by simp [v]; omega) (by simp [u]; omega)
 
 /-! ### THM-330 (full iff, easy direction PROVED) -/
 
