@@ -1,5 +1,14 @@
 # Session Log
 
+## kind-pasteur-2026-05-29-S1 - 2026-05-29: Projection-Defect Negative-Space Scan
+
+**Account:** kind-pasteur
+**Continuation of:** fresh start on old local main; later rebased/deduplicated against current origin/main.
+**Files read:** 01-canon/MISTAKES.md; 01-canon/definitions.md; 00-navigation/OPEN-QUESTIONS.md; 00-navigation/SESSION-LOG.md; 00-navigation/TANGENTS.md; 05-knowledge/hypotheses/INDEX.md; 00-navigation/INVESTIGATION-BACKLOG.md; 03-artifacts/drafts/parity_tournaments_fixed.tex open problems/bibliography excerpt; 03-artifacts/drafts/engineering-synthesis-2026-03-10-S53.md; 07-reflections/even-graphs-as-first-class.md; 07-reflections/the-isomorphism-class-graph.md; inbox/PROCESSING-REPORT.md
+**Summary of work:** Ran a repo-scouting session focused on underexplored projection mismatches, then measured how all waggly Hamming layers synchronize or disagree under the two quotient maps `Q_m -> G_n/Z_2` and `Q_m -> E_n`.
+**New contributions:** Added `04-computation/projection_defect_waggly_layers_s1.py`, saved exact n=3..6 output to `05-knowledge/results/projection_defect_waggly_layers_s1.out`, wrote `07-reflections/projection-defects-and-negative-space.md`, added HYP-1756..1758, T093..T095, and INV-236. Main data: all-layer joint tournament/even changes rise 46.43% -> 72.32% -> 85.40% for n=4,5,6; at n=6 the middle layers synchronize more than d=1.
+**Unresolved threads:** Sample or optimize exact n=7 projection-defect tables; condition defect profiles on range flips / vertex-star flips / spine-ribs-sea location; add projection-defect features to `tournament_tda.py`. During later sync, the human image/inbox artifact was left with the newer remote inbox archive instead of duplicating it under `03-artifacts/images/`.
+
 Chronological record of all sessions. Every new Claude instance adds an entry at the **top** of this file before doing any work.
 
 ## opus-2026-05-29-S11 — 2026-05-29
