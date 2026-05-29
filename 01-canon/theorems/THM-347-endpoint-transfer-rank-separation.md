@@ -6,9 +6,9 @@ date: 2026-05-29
 session: codex-2026-05-29-main-unification
 depends_on:
   - THM-266
-  - HYP-1770
-  - HYP-1771
   - HYP-1772
+  - HYP-1773
+  - HYP-1774
 ---
 
 # THM-347: Endpoint Transfer Separates Fiber Boundary from Rank

@@ -157,6 +157,10 @@ external/project axioms that are already in their proof OR — best case
 - `goodCuts_empty_iff_all_down` — bucket 0 is exactly the all-down tiling.
 - `goodCutCount_ne_one` — THM-336 Lean core: no good-cut bucket 1.
 - `goodCutCount_reflect` — grid reflection preserves good-cut bucket size.
+- `isGoodCut_iff_exists_upward_tile_interval` — good cuts are unions of tile intervals.
+- `goodCutCount_mono` — turning more tiles upward can only add good cuts.
+- `goodCutCount_bucket_bounds` — the only bucket possibilities are 0 or 2..n-1.
+- `goodCutCount_eq_top_iff_all_cuts_good` — top bucket iff every legal cut is good.
 - `threeCycle_isRegular` — 3-cycle is regular.
 - `transitive_hasBasePath` — transitive tournament has base path.
 - `transitive_not_regular` — transitive (n ≥ 2) is not regular.

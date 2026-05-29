@@ -2387,20 +2387,34 @@ constraints to spine/ribs/sea conditioning.
 Source: tiling_quotient_bucket_balance_s5.py, tiling_quotient_bucket_balance_s5.out,
 07-reflections/merged-tiling-bucket-constraints.md
 
-## HYP-1770: Merged tiling bucket parity (codex-S95)
+## HYP-1770: Good-cut-changing single-tile flips always change merged tournament class (opus-2026-05-29-S14)
+**Status:** CONFIRMED for n=3..6 exact; OPEN generally.
+**Statement:** For a single-tile flip in the tiling hypercube, if `|Delta g|>0` then the merged tournament class changes. Equivalently, even-only projection defects and silent-both lines are `g`-neutral.
+**Evidence:** `goodcut_projection_defect_s14.py` stratifies all d=1 lines by `|Delta g|`. For n=4,5,6 every stratum with `|Delta g|≥1` has `silent_both=0` and `even_only=0`; all such lines are either `tournament_only` or `joint`.
+**Implication:** This is the dynamic version of HYP-1764. If `g` descends to `G_n/Z_2`, then changing `g` must cross a merged-class boundary. The computation shows exactly that for all single-tile lines through n=6.
+**See:** `05-knowledge/results/goodcut_projection_defect_s14.out`, `07-reflections/good-cut-height-and-projection-polarity.md`.
+
+## HYP-1771: Tile-range parity controls projection-defect polarity (opus-2026-05-29-S14)
+**Status:** CONFIRMED for n=4..6 exact single-tile families; OPEN generally.
+**Statement:** Single-tile projection-defect sign is governed by tile range parity. Even ranges, whose fundamental cycle has odd length, are even-graph biased; odd ranges, whose fundamental cycle has even length, are tournament-class biased.
+**Evidence:** At n=6 the range defects are `r=2:-0.0742`, `r=3:+0.1615`, `r=4:-0.1094`, `r=5:+0.1523`. At n=5, range 2 and 4 are even-biased while range 3 is tournament-biased. At n=4, range 2 is even-biased and range 3 is tournament-biased.
+**Implication:** The cut/cycle split is visible at the quotient-commutator level. Odd fundamental cycles are detected more strongly by `E_n`; even fundamental cycles are detected more strongly by `G_n/Z_2`.
+**See:** `05-knowledge/results/goodcut_projection_defect_s14.out`, T292.
+
+## HYP-1772: Merged tiling bucket parity (codex-S95)
 **Status:** CONFIRMED (proved; verified n=3..7)
 **What:** In the fixed-path tournament-tiling explorer, every unmerged class fiber `F(C)=H(C)/|Aut(C)|` is odd. After complement merging, a node has odd mass exactly when it is self-complementary; every non-self-complementary merged node has mass `2*odd`. Weighted cube-edge buckets satisfy `2λ_u + Στ_uv = mM_u`, with the mod-2 cross-incidence detecting SC nodes whenever `m=C(n-1,2)` is odd.
 **Proof:** Redei gives odd `H`; tournament automorphism groups have odd order; complement preserves `H` and `|Aut|`; cube-edge incidence counts tile flips from each tiling.
-Source: HYP-1770-merged-tiling-bucket-parity.md, merged_tiling_bucket_constraints_s95.py
+Source: HYP-1772-merged-tiling-bucket-parity.md, merged_tiling_bucket_constraints_s95.py
 
-## HYP-1771: Endpoint transfer recursive boundary (codex-S95)
+## HYP-1773: Endpoint transfer recursive boundary (codex-S95)
 **Status:** PARTIALLY CONFIRMED (transfer theorem proved; full-row-rank conjecture verified n=2..6)
 **What:** Endpoint insertion gives exact quotient transfer matrices with row sums `2^(n-1)F_n` and column sums `F_{n+1}`; after merging, row sums are `2^(n-1)M_n` and column sums `M_{n+1}`. Mod 2, the unmerged transfer boundary is all child classes, while the merged boundary is exactly the SC child-node indicator. New conjecture: the parity transfer has full row rank for all n.
 **Evidence:** GF(2) ranks equal parent class counts `[1,2,4,12,56]` and parent merged counts `[1,2,3,10,34]` for transitions `2->3` through `6->7`.
-Source: HYP-1771-endpoint-transfer-recursive-boundary.md, endpoint_transfer_bucket_recursion_s95.py
+Source: HYP-1773-endpoint-transfer-recursive-boundary.md, endpoint_transfer_bucket_recursion_s95.py
 
-## HYP-1772: Even-graph endpoint rank defect (codex-S95)
+## HYP-1774: Even-graph endpoint rank defect (codex-S95)
 **Status:** CONFIRMED SMALL-N (n=2..7 exact)
 **What:** The endpoint-transfer row/column theorem holds for the even-graph quotient, but full GF(2) row rank fails: ranks `[1,1,2,6,8]` vs parent even-class counts `[1,2,3,7,16]`. The mod-2 boundary is not all child classes; it is the subset with odd labeled orbit size `n!/|Aut(G)|`.
 **Interpretation:** Tournament parity-injectivity is not a generic tiling-cube quotient property. The coarser cycle-space/even-graph lens forgets parity information controlled by graph automorphism 2-adics.
-Source: HYP-1772-even-graph-endpoint-rank-defect.md, THM-266-endpoint-transfer-boundary.md, even_graph_endpoint_transfer_s95.py
+Source: HYP-1774-even-graph-endpoint-rank-defect.md, THM-266-endpoint-transfer-boundary.md, even_graph_endpoint_transfer_s95.py

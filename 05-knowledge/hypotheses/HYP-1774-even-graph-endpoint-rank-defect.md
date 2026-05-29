@@ -1,11 +1,11 @@
 ---
-id: HYP-1772
+id: HYP-1774
 status: CONFIRMED_SMALL_N
 source: even_graph_endpoint_transfer_s95.py
 session: codex-2026-05-29
 ---
 
-# HYP-1772: Even-Graph Endpoint Rank Defect
+# HYP-1774: Even-Graph Endpoint Rank Defect
 
 ## Statement
 

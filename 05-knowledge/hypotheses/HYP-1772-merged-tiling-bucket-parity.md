@@ -1,11 +1,11 @@
 ---
-id: HYP-1770
+id: HYP-1772
 status: CONFIRMED
 source: merged_tiling_bucket_constraints_s95.py
 session: codex-2026-05-29
 ---
 
-# HYP-1770: Merged Tiling Bucket Parity
+# HYP-1772: Merged Tiling Bucket Parity
 
 ## Statement
 

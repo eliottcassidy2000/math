@@ -28,6 +28,11 @@ noncomputable section
 /-- The legal cuts in the base-path staircase: `1, ..., n-1`. -/
 def cutSet (n : ℕ) : Finset ℕ := Finset.Icc 1 (n - 1)
 
+@[simp] lemma cutSet_card (n : ℕ) :
+    (cutSet n).card = n - 1 := by
+  unfold cutSet
+  simp
+
 /-- A tile `(hi, lo)` crosses cut `k` iff `lo < k ≤ hi`. -/
 def StTile.crossesCut (t : StTile n) (k : ℕ) : Prop :=
   t.lo.val < k ∧ k ≤ t.hi.val
@@ -84,6 +89,26 @@ lemma reflect_reflect_cut {k : ℕ} (hk : k ∈ cutSet n) :
   simp at hk
   omega
 
+lemma crossesCut_mem_cutSet {t : StTile n} {k : ℕ}
+    (h : t.crossesCut k) :
+    k ∈ cutSet n := by
+  unfold cutSet
+  have h_hi : t.hi.val < n := t.hi.is_lt
+  unfold crossesCut at h
+  simp
+  omega
+
+/-- The interval of cuts crossed by a tile. -/
+def cutInterval (t : StTile n) : Finset ℕ := by
+  classical
+  exact (cutSet n).filter (fun k => t.crossesCut k)
+
+lemma mem_cutInterval {t : StTile n} {k : ℕ} :
+    k ∈ t.cutInterval ↔ k ∈ cutSet n ∧ t.crossesCut k := by
+  unfold cutInterval
+  classical
+  simp
+
 /-- Grid-reflection sends cut `k` to cut `n-k`.
     The equivalence is arithmetically true for every natural `k`; outside
     the legal cut range both sides are false. -/
@@ -113,6 +138,46 @@ lemma StTiling.mem_goodCuts {b : StTiling n} {k : ℕ} :
     k ∈ b.goodCuts ↔ k ∈ cutSet n ∧ StTiling.IsGoodCut b k := by
   unfold StTiling.goodCuts
   simp
+
+/-- A cut is good exactly when it lies in the cut interval of some upward tile. -/
+theorem StTiling.isGoodCut_iff_exists_upward_tile_interval
+    {b : StTiling n} {k : ℕ} :
+    StTiling.IsGoodCut b k ↔
+      ∃ t : StTile n, b t = true ∧ k ∈ t.cutInterval := by
+  constructor
+  · rintro ⟨t, ht, hcross⟩
+    exact ⟨t, ht, (StTile.mem_cutInterval).2
+      ⟨StTile.crossesCut_mem_cutSet hcross, hcross⟩⟩
+  · rintro ⟨t, ht, hk⟩
+    exact ⟨t, ht, (StTile.mem_cutInterval.mp hk).2⟩
+
+lemma StTiling.goodCuts_subset_cutSet (b : StTiling n) :
+    b.goodCuts ⊆ cutSet n := by
+  intro k hk
+  exact (StTiling.mem_goodCuts.mp hk).1
+
+lemma StTiling.goodCutCount_le_cutSet_card (b : StTiling n) :
+    b.goodCutCount ≤ (cutSet n).card := by
+  unfold StTiling.goodCutCount
+  exact Finset.card_le_card (StTiling.goodCuts_subset_cutSet b)
+
+lemma StTiling.goodCutCount_le_n_minus_one (b : StTiling n) :
+    b.goodCutCount ≤ n - 1 := by
+  simpa using StTiling.goodCutCount_le_cutSet_card (b := b)
+
+lemma StTiling.goodCuts_mono {b c : StTiling n}
+    (h : ∀ t : StTile n, b t = true → c t = true) :
+    b.goodCuts ⊆ c.goodCuts := by
+  intro k hk
+  rw [StTiling.mem_goodCuts] at hk ⊢
+  rcases hk with ⟨hk_cut, t, ht, hcross⟩
+  exact ⟨hk_cut, ⟨t, h t ht, hcross⟩⟩
+
+lemma StTiling.goodCutCount_mono {b c : StTiling n}
+    (h : ∀ t : StTile n, b t = true → c t = true) :
+    b.goodCutCount ≤ c.goodCutCount := by
+  unfold StTiling.goodCutCount
+  exact Finset.card_le_card (StTiling.goodCuts_mono h)
 
 lemma StTiling.goodCut_of_upward_tile {b : StTiling n} {t : StTile n}
     (ht : b t = true) :
@@ -150,6 +215,11 @@ theorem StTiling.goodCuts_empty_iff_all_down (b : StTiling n) :
     b.goodCuts = ∅ ↔ ∀ t : StTile n, b t = false :=
   ⟨StTiling.all_down_of_goodCuts_empty, StTiling.goodCuts_empty_of_all_down⟩
 
+theorem StTiling.goodCutCount_eq_zero_iff_all_down (b : StTiling n) :
+    b.goodCutCount = 0 ↔ ∀ t : StTile n, b t = false := by
+  unfold StTiling.goodCutCount
+  rw [Finset.card_eq_zero, StTiling.goodCuts_empty_iff_all_down]
+
 /-- THM-336, Lean core: no tiling lives in good-cut bucket 1. -/
 theorem StTiling.goodCutCount_ne_one (b : StTiling n) :
     b.goodCutCount ≠ 1 := by
@@ -171,6 +241,60 @@ theorem StTiling.goodCutCount_ne_one (b : StTiling n) :
     rw [hk] at this
     simpa using this
   omega
+
+/-- Bucket possibilities, formalized as a bound: only `0` or at least `2`. -/
+theorem StTiling.goodCutCount_eq_zero_or_two_le (b : StTiling n) :
+    b.goodCutCount = 0 ∨ 2 ≤ b.goodCutCount := by
+  by_cases h0 : b.goodCutCount = 0
+  · exact Or.inl h0
+  · exact Or.inr (by
+      have h1 := StTiling.goodCutCount_ne_one b
+      omega)
+
+theorem StTiling.goodCutCount_bucket_bounds (b : StTiling n) :
+    b.goodCutCount = 0 ∨
+      (2 ≤ b.goodCutCount ∧ b.goodCutCount ≤ n - 1) := by
+  rcases StTiling.goodCutCount_eq_zero_or_two_le b with h0 | h2
+  · exact Or.inl h0
+  · exact Or.inr ⟨h2, StTiling.goodCutCount_le_n_minus_one b⟩
+
+/-- The top bucket is exactly the full cut set. -/
+theorem StTiling.goodCuts_eq_cutSet_iff (b : StTiling n) :
+    b.goodCuts = cutSet n ↔
+      ∀ k, k ∈ cutSet n → StTiling.IsGoodCut b k := by
+  constructor
+  · intro h k hk
+    have hk_good : k ∈ b.goodCuts := by
+      rw [h]
+      exact hk
+    exact (StTiling.mem_goodCuts.mp hk_good).2
+  · intro h
+    apply Finset.Subset.antisymm
+    · exact StTiling.goodCuts_subset_cutSet b
+    · intro k hk
+      rw [StTiling.mem_goodCuts]
+      exact ⟨hk, h k hk⟩
+
+theorem StTiling.goodCutCount_eq_cutSet_card_iff (b : StTiling n) :
+    b.goodCutCount = (cutSet n).card ↔ b.goodCuts = cutSet n := by
+  unfold StTiling.goodCutCount
+  constructor
+  · intro h
+    apply Finset.eq_of_subset_of_card_le (StTiling.goodCuts_subset_cutSet b)
+    omega
+  · intro h
+    rw [h]
+
+theorem StTiling.goodCutCount_eq_top_iff (b : StTiling n) :
+    b.goodCutCount = n - 1 ↔ b.goodCuts = cutSet n := by
+  rw [← cutSet_card n]
+  exact StTiling.goodCutCount_eq_cutSet_card_iff b
+
+theorem StTiling.goodCutCount_eq_top_iff_all_cuts_good (b : StTiling n) :
+    b.goodCutCount = n - 1 ↔
+      ∀ k, k ∈ cutSet n → StTiling.IsGoodCut b k := by
+  rw [StTiling.goodCutCount_eq_top_iff,
+    StTiling.goodCuts_eq_cutSet_iff]
 
 /-! ### Grid-reflection preserves buckets -/
 

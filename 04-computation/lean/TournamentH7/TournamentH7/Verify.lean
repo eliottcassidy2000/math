@@ -202,6 +202,34 @@ theorem goodCutCount_reflect_audit {n : ℕ} (b : StTiling n) :
   StTiling.goodCutCount_reflect b
 #print axioms goodCutCount_reflect_audit
 
+/-- Good cuts are exactly membership in an upward tile interval. PROVED. -/
+theorem isGoodCut_interval_union_audit {n : ℕ} {b : StTiling n} {k : ℕ} :
+    StTiling.IsGoodCut b k ↔
+      ∃ t : StTile n, b t = true ∧ k ∈ t.cutInterval :=
+  StTiling.isGoodCut_iff_exists_upward_tile_interval
+#print axioms isGoodCut_interval_union_audit
+
+/-- Good-cut count is monotone under turning more tiles upward. PROVED. -/
+theorem goodCutCount_mono_audit {n : ℕ} {b c : StTiling n}
+    (h : ∀ t : StTile n, b t = true → c t = true) :
+    b.goodCutCount ≤ c.goodCutCount :=
+  StTiling.goodCutCount_mono h
+#print axioms goodCutCount_mono_audit
+
+/-- The only possible buckets are 0 or at least 2, bounded above by n-1. PROVED. -/
+theorem goodCutCount_bucket_bounds_audit {n : ℕ} (b : StTiling n) :
+    b.goodCutCount = 0 ∨
+      (2 ≤ b.goodCutCount ∧ b.goodCutCount ≤ n - 1) :=
+  StTiling.goodCutCount_bucket_bounds b
+#print axioms goodCutCount_bucket_bounds_audit
+
+/-- The top bucket is equivalent to every legal cut being good. PROVED. -/
+theorem goodCutCount_eq_top_iff_all_cuts_good_audit {n : ℕ} (b : StTiling n) :
+    b.goodCutCount = n - 1 ↔
+      ∀ k, k ∈ cutSet n → StTiling.IsGoodCut b k :=
+  StTiling.goodCutCount_eq_top_iff_all_cuts_good b
+#print axioms goodCutCount_eq_top_iff_all_cuts_good_audit
+
 /-! ### THM-342 (small diagonal value) -/
 
 example : Qcount 2 1 = 1 := by

@@ -4,10 +4,38 @@
 
 **Account:** codex
 **Continuation of:** user request to merge all branches/PRs back into main, then run a small formalization session.
-**Git work:** Fast-forwarded local `main` to `origin/main`; merged `origin/claude/kind-pasteur`, `origin/claude/trierments-dual-arrows-6XsqY`, and `origin/codex-s95-recursive-results`. Re-merged the newer `origin/main` S5 bucket formalization after push rejection. Resolved conflicts by preserving the current main inbox archive, keeping S5 as THM-345/346 and HYP-1767..1769, and renumbering the Codex S95 hypotheses to HYP-1770..1772.
+**Git work:** Fast-forwarded local `main` to `origin/main`; merged `origin/claude/kind-pasteur`, `origin/claude/trierments-dual-arrows-6XsqY`, and `origin/codex-s95-recursive-results`. Re-merged newer `origin/main` S5 and S14 work after push rejections. Resolved conflicts by preserving the current main inbox archive, keeping S5 as THM-345/346 and HYP-1767..1769, keeping S14 as HYP-1770/1771, and renumbering the Codex S95 hypotheses to HYP-1772..1774.
 **Summary of math:** Formalized the endpoint-transfer meta-principle as THM-347: the endpoint transfer always exposes the child odd-fiber boundary, but full GF(2) row rank is a separate quotient-specific property. This cleanly separates the tournament quotient's apparent parity injectivity from the even-graph quotient's automorphism-2-adic rank defect.
 **New contributions:** `01-canon/theorems/THM-347-endpoint-transfer-rank-separation.md`.
 **Verification:** `git branch -r --no-merged HEAD` returned no branches; `git diff --cached --check` passed after merge cleanup.
+
+## opus-2026-05-29-S14 — 2026-05-29
+
+**Summary:** Pulled kind-pasteur S4's tiny axiom-free Lean score formalization and used it as a style cue: extend the good-cut formalization with small reusable theorems, then cross the good-cut height with projection-defect polarity. During closeout, rebased over kind-pasteur S5 and renumbered the new good-cut projection hypotheses/tangent after S5's merged-bucket entries.
+
+**Sync/inbox:** Rebasing `main` against `origin/main` was up to date at session start. Processed kind-pasteur S4 message: Git auth fixed, projection-defect S1-S3 pushed, and `SmallTournaments.lean` gained named `Trans_3` score lemmas.
+
+**Lean work:** Extended `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`. New axiom-free theorems include:
+- `StTiling.isGoodCut_iff_exists_upward_tile_interval`
+- `StTiling.goodCutCount_mono`
+- `StTiling.goodCutCount_bucket_bounds`
+- `StTiling.goodCutCount_eq_top_iff_all_cuts_good`
+
+**Computation:** Added `04-computation/goodcut_projection_defect_s14.py` and saved `05-knowledge/results/goodcut_projection_defect_s14.out`. Main findings: for single-tile lines through n=6, every `|Delta g|>0` line changes the merged tournament class, so even-only defects are `g`-neutral. Tile range parity controls projection polarity: even ranges are even-graph biased and odd ranges are tournament-class biased.
+
+**Knowledge-web updates:** Added HYP-1770/HYP-1771, T292, reflection `07-reflections/good-cut-height-and-projection-polarity.md`, updated INV-237, variable `g(τ)`, THM-336, and Lean architecture/submission docs.
+
+**Engineering reading:** `g` should become both a scalar feature and a perturbation feature for Tournament TDA. A cheap extractor can include `g`, bucket-transition histograms, and range-parity-stratified projection-defect profiles.
+
+**Verification:**
+- `python3 -m py_compile 04-computation/goodcut_projection_defect_s14.py`
+- `python3 04-computation/goodcut_projection_defect_s14.py 2>&1 | tee 05-knowledge/results/goodcut_projection_defect_s14.out`
+- `lake build TournamentH7 2>&1 | tee 05-knowledge/results/lean_goodcuts_interval_s14.out`
+
+**Next priorities:**
+1. Prove or refute HYP-1764/HYP-1770 at n=7 with cached canonicalization.
+2. Prove the range-parity law HYP-1771 from the fundamental-cycle parity.
+3. Add `g` and range-parity projection features to `tournament_tda.py`.
 
 ## kind-pasteur-2026-05-29-S5 - 2026-05-29: Merged Tiling Bucket Constraints
 
@@ -26,9 +54,9 @@
 
 **Account:** codex
 **Continuation of:** codex-s95-recursive-results
-**Files read:** CLAUDE.md; AGENTS.md; agents/finish_session.py; agents/check_session_closed.py; 04-computation/even_graph_endpoint_transfer_s95.py; 05-knowledge/hypotheses/HYP-1771-endpoint-transfer-recursive-boundary.md; 07-reflections/recursive-boundary-s95.md
+**Files read:** CLAUDE.md; AGENTS.md; agents/finish_session.py; agents/check_session_closed.py; 04-computation/even_graph_endpoint_transfer_s95.py; 05-knowledge/hypotheses/HYP-1773-endpoint-transfer-recursive-boundary.md; 07-reflections/recursive-boundary-s95.md
 **Summary of work:** First committed and pushed stale inbox processing work to `origin/codex-s95-recursive-results`. Added Codex-facing repository close-out instructions and strengthened the existing closer/hook path so future sessions push the current branch upstream instead of leaving local work stranded. Reran the even-graph endpoint transfer computation and formalized the endpoint-transfer parity boundary.
-**New contributions:** `AGENTS.md`; `THM-266-endpoint-transfer-boundary.md`; HYP-1772 even-graph endpoint rank defect evidence refreshed; `agents/finish_session.py` now pushes the current branch/upstream; `agents/check_session_closed.py` now blocks dirty/ahead unclosed sessions.
+**New contributions:** `AGENTS.md`; `THM-266-endpoint-transfer-boundary.md`; HYP-1774 even-graph endpoint rank defect evidence refreshed; `agents/finish_session.py` now pushes the current branch/upstream; `agents/check_session_closed.py` now blocks dirty/ahead unclosed sessions.
 **Unresolved threads:** GitHub CLI auth token for `gh` is invalid on this machine, but normal `git push` over the configured SSH remote works. Full-row-rank of tournament endpoint transfer remains conjectural beyond tested levels; even-graph rank defect needs a Sylow-2 automorphism explanation.
 
 ## opus-2026-05-29-S13 — 2026-05-29
