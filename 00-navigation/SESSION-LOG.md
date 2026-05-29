@@ -1,5 +1,16 @@
 # Session Log
 
+## kind-pasteur-2026-05-29-S2 - 2026-05-29: Structured Projection-Defect Probes
+
+**Account:** kind-pasteur
+**Continuation of:** S1 projection-defect negative-space scan; current local main already contains S1 script/output/reflection but the knowledge index entries were missing, so this session restored them under HYP-1756..1761, T280..T285, and INV-236.
+**Files read:** 01-canon/MISTAKES.md; 01-canon/definitions.md; 00-navigation/OPEN-QUESTIONS.md; 00-navigation/SESSION-LOG.md; 00-navigation/TANGENTS.md; 05-knowledge/hypotheses/INDEX.md; 00-navigation/INVESTIGATION-BACKLOG.md; 03-artifacts/drafts/engineering-synthesis-2026-03-10-S53.md; 07-reflections/projection-defects-and-negative-space.md; 04-computation/projection_defect_waggly_layers_s1.py.
+**Summary of work:** Measured structured move families inside the waggly hypercube to see what whole Hamming-layer averages hide. Added `04-computation/projection_defect_structured_moves_s2.py`, saved exact n=3..6 output to `05-knowledge/results/projection_defect_structured_moves_s2.out`, and wrote `07-reflections/structured-projection-defects.md`.
+**New findings:** Endpoint vertex-stars and boundary strips are tournament-only biased (individual defect +0.3125 at n=5 and +0.2109 at n=6). Short/local tiles can be even-only biased while remaining highly synchronized overall (range-2 n=6 defects -0.0664 to -0.0820 with 91-93% joint changes). Whole-layer averages therefore hide a boundary-vs-local geometric polarity.
+**Engineering reading:** Projection-defect features for `tournament_tda.py` should sample named geometric probes (endpoint-star, interior-star, range flip, complement-tiling, random middle layer), not only random Hamming radii.
+**Verification:** `python3 04-computation/projection_defect_structured_moves_s2.py 2>&1 | Tee-Object -FilePath 05-knowledge/results/projection_defect_structured_moves_s2.out`; `python3 -m py_compile 04-computation/projection_defect_structured_moves_s2.py`.
+**Unresolved threads:** Condition structured defects by spine/ribs/sea location in `G_n/Z_2`; add anti-diagonal/hypotenuse probes; test whether endpoint tournament-only bias tracks score-vector change and H-gradient position; sample n=7 with cached canonicalization.
+
 ## kind-pasteur-2026-05-29-S1 - 2026-05-29: Projection-Defect Negative-Space Scan
 
 **Account:** kind-pasteur

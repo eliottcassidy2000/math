@@ -2203,3 +2203,17 @@ Key insight: QR_p has both forward and backward connections; purely forward circ
 **Observation:** SC tiling counts (1,5,50,903,...) are NOT the same as A054946 (1,0,2,24,544,22320,...).
 **Reason:** SC tilings fix the base path; A054946 counts labeled tournaments (all 2^{C(n,2)} orientations).
 **Question:** P(SC tiling) ≠ P(SC labeled tournament). n=5: 50/64=0.781 vs 544/1024=0.531. Is there a clean relationship?
+
+### INV-236: Projection-Defect Profiles Across Tournament and Even-Graph Quotients
+**Source:** kind-pasteur-2026-05-29-S1/S2
+**Status:** ACTIVE; exact n=3..6 all-layer and structured-move computations complete.
+**What:** The tiling hypercube `Q_m` has two primary quotient lenses: merged tournament classes `G_n/Z_2` and even graph classes `E_n`. For every waggly line at Hamming distance d, classify whether it changes the tournament class, the even graph class, both, or neither. This measures the commutator/defect between the two projections.
+**Key data:** All-layer joint-change rates are 46.43% (n=4), 72.32% (n=5), and 85.40% (n=6). At n=6, d=1 has 80.57% joint changes, while middle layers d=5,6 have 86.56% and 86.61%; d=9 reaches 87.81%. Tournament-only defects dominate even-only defects at n=6 (10.05% vs 3.78% all layers). Structured moves expose hidden polarity: endpoint vertex-stars/strips are tournament-only biased (individual defect +0.3125 at n=5, +0.2109 at n=6), while short/local tiles can be even-only biased (range-2 n=6 defect -0.0664 to -0.0820 with 91-93% joint changes).
+**Why it matters:** The result connects three previously separate threads: waggly-layer structure, even graphs as first-class objects, and engineering feature extraction for tournament TDA. The defect profile may be a compact dual-lens fingerprint for ranking data.
+**Scripts/results:** `04-computation/projection_defect_waggly_layers_s1.py`; `05-knowledge/results/projection_defect_waggly_layers_s1.out`; `04-computation/projection_defect_structured_moves_s2.py`; `05-knowledge/results/projection_defect_structured_moves_s2.out`; reflections `07-reflections/projection-defects-and-negative-space.md` and `07-reflections/structured-projection-defects.md`.
+**Next steps:**
+1. Sample n=7, then optimize canonicalization for exact n=7.
+2. Condition defect profiles on anti-diagonal/hypotenuse families and other geometric probes not in S2.
+3. Condition by spine/ribs/sea position in `G_n/Z_2`.
+4. Add structured projection-defect features to `tournament_tda.py` rather than only random Hamming-shell features.
+5. Compare endpoint-biased examples against score-vector changes and H-gradient position to test the cut/score-amplifier interpretation.

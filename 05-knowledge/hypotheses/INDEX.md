@@ -2244,3 +2244,39 @@ The summand counts even-size choices of interior vertices between i and j.
 **Note:** The original Key Lemma (used in THM-343) asserts existence of a 4th odd cycle. The STRONG version adds the structural constraint that C' lies INSIDE the vertex union — this is what the S4 case-analysis proof actually shows for 3-cycles.
 **Evidence:** Verified for three 3-cycles in S4 proof. For longer odd cycles, the lemma's construction is open.
 **Implications:** If proved, kills the (4,3,0) decomposition with Ω = K₃ ∪ K₁ for H=21.
+
+## HYP-1756: Tournament/even-graph quotient synchronization strengthens with n
+**Status:** CONFIRMED for n=3..6; OPEN asymptotically
+**What:** Across all waggly Hamming layers in the tiling hypercube, most non-silent moves change both the merged tournament class and the even graph class. The all-layer joint-change rates are 46.43% (n=4), 72.32% (n=5), and 85.40% (n=6). Equivalently, among non-silent moves, the joint share rises to 86.06% by n=6.
+**Why it matters:** The two quotient lenses `Q_m -> G_n/Z_2` and `Q_m -> E_n` are not independent. They appear to synchronize rapidly with n, suggesting that even graph features can serve as a compressed proxy for most tournament-class perturbations.
+Source: projection_defect_waggly_layers_s1.py, projection_defect_waggly_layers_s1.out
+
+## HYP-1757: Middle waggly layers synchronize more than the d=1 wiggly layer
+**Status:** CONFIRMED for n=6; OPEN generally
+**What:** At n=6, the d=1 layer has 80.57% joint tournament/even changes, while middle layers d=4,5,6 have 84.85%, 86.56%, and 86.61% joint changes. The d=9 layer reaches 87.81%. The complement-tiling layer d=m drops back to 77.73%, so d=m is special rather than representative.
+**Why it matters:** The ordinary wiggly graph is not the most synchronized probe of the dual quotient structure. The high-entropy middle of the hypercube may be the natural regime for comparing `G_n/Z_2` and `E_n`.
+Source: projection_defect_waggly_layers_s1.py, projection_defect_waggly_layers_s1.out
+
+## HYP-1758: Projection defects are useful tournament fingerprints
+**Status:** OPEN engineering hypothesis, motivated by exact n=3..6 tables
+**What:** The four-way perturbation profile `(silent_both, tournament_only, even_only, joint)` over one or more Hamming radii is an invariant-aware feature vector for ranking/TDA applications. `tournament_only` should capture score/cut-space sensitivity, `even_only` should capture cycle-space changes absorbed by tournament symmetry, and `joint` should capture robust structural mutations.
+**Test:** Add projection-defect features to `tournament_tda.py` and compare against `(H, beta, score, c3)` on small ranking datasets or synthetic families (Paley, interval, near-transitive, random regular).
+Source: 07-reflections/projection-defects-and-negative-space.md
+
+## HYP-1759: Endpoint structured moves are tournament-class amplifiers
+**Status:** CONFIRMED for n=5..6 exact; OPEN generally
+**What:** Structured moves supported on the boundary of the staircase, especially endpoint vertex-stars and boundary upper/lower strips, are positively biased toward `tournament_only` projection defects. At n=5, endpoint stars/strips have defect +0.3125; at n=6, endpoint stars/strips have defect +0.2109. The n=6 vertex-star family has defect +0.1452, much larger than the d=1 single-tile family defect +0.0121.
+**Why it matters:** The staircase legs/endpoints appear to amplify changes seen by `G_n/Z_2` but muted by `E_n`. This fits the triangle picture: boundary moves are cut/score-sensitive probes, not generic cycle-space perturbations.
+Source: projection_defect_structured_moves_s2.py, projection_defect_structured_moves_s2.out
+
+## HYP-1760: Short-range local tiles are even-graph amplifiers
+**Status:** CONFIRMED for n=4..6 exact; OPEN generally
+**What:** Several short/local single-tile moves have negative tournament-minus-even defect: range-2 tiles at n=4 have defect -0.5000, and range-2 tiles at n=6 have defects -0.0664 to -0.0820 with 91-93% joint changes. At n=5, middle strips/stars also show even-only bias with defect -0.2188.
+**Why it matters:** Even-only defects are not just noise. They mark local cycle-space motion that the even-graph quotient detects while the merged tournament quotient sometimes absorbs. The high joint rate says the two lenses remain coupled even when the defect sign is even-biased.
+Source: projection_defect_structured_moves_s2.py, projection_defect_structured_moves_s2.out
+
+## HYP-1761: Hamming-layer averages hide geometric polarity
+**Status:** CONFIRMED for n=4..6 exact; OPEN as a general principle
+**What:** Whole-layer projection-defect averages conceal opposite structured signals inside the same radii. At n=6, the d=1 single-tile family is nearly balanced (defect +0.0121), but individual range-3 tiles are strongly tournament-biased while range-2 and some range-4 tiles are even-biased. Named families such as vertex-stars, range flips, strips, and complement-tiling moves also differ sharply from their Hamming-layer averages.
+**Why it matters:** Future computations should treat structured move families as finite-difference probes of the quotient maps `Q_m -> G_n/Z_2` and `Q_m -> E_n`, rather than treating random Hamming-shell samples as representative.
+Source: projection_defect_structured_moves_s2.py, projection_defect_structured_moves_s2.out

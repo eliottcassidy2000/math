@@ -25,6 +25,23 @@ The two THM-344 H=63 classes are single-core: all odd cycles share one vertex, a
 
 **T281** #omega-disjointness #real-rootedness #forbidden-H #tournament-tda | certainty: MEDIUM-HIGH | source: opus-2026-05-29-S11
 Complete Ω (H=63 unlock) and the THM-025 non-real-rooted counterexample are opposite extremes of the same disjointness graph. H=63 has disjointness graph empty and a cycle-family core; THM-025 has only 10 disjoint pairs and one independent triple with no core. Hypothesis: the first-class object for both gaps and root failures is not H alone, but the disjointness geometry of odd cycles (core size, α-vector, independent-triple shape). Engineering version: add these as Tournament TDA features.
+**T282** #projection-defects #even-graphs #waggly-layers | certainty: high (n=3..6 exact) | source: kind-pasteur-2026-05-29-S1
+The two quotient lenses `Q_m -> G_n/Z_2` and `Q_m -> E_n` almost synchronize across waggly layers: all-layer joint-change rates are 46%, 72%, 85% for n=4,5,6. The middle layers at n=6 are more synchronized than d=1. Defects split into tournament-only (cut/score-sensitive) and even-only (cycle-space changes absorbed by tournament symmetry). See `07-reflections/projection-defects-and-negative-space.md`.
+
+**T283** #negative-space #meta-hypotheses #projection-commutators | certainty: medium | source: kind-pasteur-2026-05-29-S1
+Many errors and discoveries cluster around noncommuting projections: tiling complement vs tournament complement, line vs edge, line color vs class type, d=1 vs all waggly, tournament quotient vs even-graph quotient. Meta-hypothesis: the next theorems live where two natural projections almost agree but have a measurable commutator.
+
+**T284** #tournament-tda #feature-engineering #dual-fingerprint | certainty: low | source: kind-pasteur-2026-05-29-S1
+Projection-defect profiles may be useful engineering features for ranking/TDA: sample perturbations at selected Hamming radii and record `(silent_both, tournament_only, even_only, joint)`. This gives a cheap dual-lens fingerprint beyond H, score sequence, and Betti profile.
+
+**T285** #structured-defects #endpoint-polarity #vertex-stars | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S2
+Whole-layer projection defects hide a boundary signal. Endpoint vertex-stars and boundary upper/lower strips are tournament-only biased: at n=5 their individual defect is +0.3125, and at n=6 it is +0.2109. These moves perturb the staircase legs/endpoints, suggesting they are cut/score amplifiers rather than even-graph amplifiers.
+
+**T286** #local-cycle-amplifiers #even-graphs #short-range | certainty: high (n=4..6 exact) | source: kind-pasteur-2026-05-29-S2
+Short/local tiles are even-graph biased while remaining highly synchronized overall. At n=6, range-2 tiles have negative defects (-0.0664 to -0.0820) but 91-93% joint changes. The even quotient is not merely a compressed proxy: local cycle-space motion can be visible to E_n while absorbed by the merged tournament quotient.
+
+**T287** #finite-difference-lenses #meta-hypotheses #engineering-features | certainty: medium | source: kind-pasteur-2026-05-29-S2
+Structured move families act like finite-difference probes of quotient maps. Single tiles, range flips, vertex-stars, strips, and complement-tiling moves are not interchangeable samples of a Hamming layer; each asks a different derivative question. Engineering feature extractors should sample named geometric probes, not only random radii.
 
 **T268** #2-adic-sizes-vs-spectrum #ruler-sequence #dual-levels | certainty: HIGH | source: oracle-2026-05-15
 T241-T244 describe 2-adic structure of Walsh AMPLITUDES at fixed $n$ (ruler sequence in spectrum). This tangent is the dual: 2-adic structure of the tournament SIZE $n$ itself (column families). The spectral ruler sequence and the size ruler sequence are the same self-similar fractal at two levels: internal (fixed $n$, across Walsh weights) and external (fixed column, across doublings). The Walsh degree formula $2\lfloor(n-1)/2\rfloor$ encodes both simultaneously: it equals $n-1$ (row 0) vs $n-2$ (row $\geq 1$), exactly the seam.
@@ -393,7 +410,6 @@ Even the 3-CYCLE-ONLY polynomial I(Omega_3(T), x) fails real-rootedness at n=9. 
 **T113** #R-minimization #deletion-ratio #variational #OCF-consequence | certainty: REFUTED at n=7 | source: kind-pasteur-2026-03-06-S18g
 DELETION-SUM RATIO FORMULA (THM-025): R(T) = n - E_weighted[|U(S)|] is PROVED. But the conjecture that H-maximizer minimizes R is FALSE at n=7 (tournaments with H=123 achieve R=1.585 < R(max)=5/3). The formula itself remains a clean identity connecting vertex deletion to independent sets. The breakdown at n=7 occurs because some non-maximal tournaments have very efficient vertex coverage despite lower total cycle count. The formula is useful structurally but NOT as a variational characterization of the maximizer.
 
-<<<<<<< Updated upstream
 **T114** #hopf-algebra-comultiplication #subset-convolution #OCF-structure | certainty: high (confirmed) | source: opus-2026-03-06-S5
 Grujić-Stojadinović (arXiv:2402.07606) Hopf algebra comultiplication Δ([T]) = Σ_S [T|_S] ⊗ [T|_{V\S}] is EXACTLY our subset convolution. The Hopf algebra deletion property for cycles (U_X = Σ (-1)^{|S|-1} U_{X\S} for edge subsets forming a cycle) could relate H(T) to H(T-v) via Claim A. The Hopf antipode encodes Berge's theorem. See web-synthesis-opus-S5.md.
 

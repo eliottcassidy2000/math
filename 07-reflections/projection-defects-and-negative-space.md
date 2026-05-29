@@ -1,7 +1,7 @@
 # Projection Defects And Negative Space
 
-**Session:** kind-pasteur-2026-05-29-S1  
-**Computation:** `04-computation/projection_defect_waggly_layers_s1.py`  
+**Session:** kind-pasteur-2026-05-29-S1
+**Computation:** `04-computation/projection_defect_waggly_layers_s1.py`
 **Results:** `05-knowledge/results/projection_defect_waggly_layers_s1.out`
 
 ## The Unlooked Place
