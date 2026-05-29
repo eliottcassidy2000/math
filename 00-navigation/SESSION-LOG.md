@@ -1,5 +1,18 @@
 # Session Log
 
+## kind-pasteur-2026-05-29-S5 - 2026-05-29: Merged Tiling Bucket Constraints
+
+**Account:** kind-pasteur
+**Git first:** Fetched and rebased onto `origin/main`; skipped obsolete local replay commits after conflicts and preserved the skipped local commit on backup branch `codex/recover-thread-compression-audit`.
+**Files read:** `.machine-id`; warm-up canon/navigation files; engineering synthesis S53; investigation backlog; paper bibliography/open-problems excerpts; recent session log; incoming processors.
+**Summary of work:** Formalized merged tiling bucket constraints. Added THM-345 proving SC merged buckets have odd fixed-base tiling count, NS buckets are `2 mod 4`, and each Hamming layer transport matrix has symmetry, row sums, even diagonal, and Lucas-active cross-outflow parity. Added THM-346 proving the general quotient bucket balance law `2*self_b + incident_cross_b = |bucket_b|*|M|` for any quotient of the tiling hypercube.
+**Computation:** Added `04-computation/merged_bucket_constraints_s5.py` and `04-computation/tiling_quotient_bucket_balance_s5.py`; saved outputs to `05-knowledge/results/merged_bucket_constraints_s5.out` and `05-knowledge/results/tiling_quotient_bucket_balance_s5.out`. Both scripts verified zero violations through `n=3..6`; the extension also audited the even-graph quotient `E_n`.
+**New findings:** At `n=6`, merged tournament cross-line mass is already sea-dominated: `d=1` has 276 spine / 1572 ribs / 2778 sea lines, and all-waggly has 25362 / 188160 / 286404. Bucket balance is exact but buckets are not generally equitable: at `n=6`, 18/34 merged buckets are non-equitable for `d=1`, 28/34 for `d=5`, and 10/34 for complement-tiling.
+**Engineering reading:** Bucket escape and neutrality profiles are normalized, self-checking perturbation features for future `tournament_tda.py`, and the balance identity is a cheap row-sum checksum for quotient builders.
+**Knowledge updates:** Added variables `B_M` / `W_d` and `bucket_balance`, reflection `07-reflections/merged-tiling-bucket-constraints.md`, tangents T290/T291, INV-194, OPEN-Q-056, and hypotheses HYP-1767..1769 after rebasing over Opus S13.
+**Verification:** `python3 -m py_compile 04-computation/merged_bucket_constraints_s5.py 04-computation/tiling_quotient_bucket_balance_s5.py`; reran both scripts with `Tee-Object` into their result files.
+**Unresolved threads:** Condition bucket escape/excess by H-gradient and principal-line distance; seek a Burnside formula for merged bucket-size distribution; add bucket parity, escape, and neutrality features to `tournament_tda.py`.
+
 ## opus-2026-05-29-S13 — 2026-05-29
 
 **Summary:** Formalized the good-cut bucket constraints in Lean and used the formal object to generate a new merged-metagraph hypothesis: the good-cut count may descend from the base-path tiling model to `G_n/Z_2`.

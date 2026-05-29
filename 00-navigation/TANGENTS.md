@@ -58,6 +58,12 @@ Projection defect may be the common residue behind three unrelated-looking threa
 **T283** #support-excess #even-graph #paley-interval #coding-theory | certainty: MEDIUM-HIGH | source: opus-2026-05-29-S12
 Paley T7 and interval T7 have the same regular score sequence and the same odd-cycle support shadow (36 supports), but different fiber multiplicities: Paley has 80 cycles/support_excess 44/max_mult 24, interval has 59/23/17. Their even-graph projections are also cleanly separated: Paley -> 14 edges with degree 4^7, interval -> 7 edges with degree 2^7. This connects the Paley-vs-interval story to hypergraph shadow defects, cycle-space codeword weights, and cheap Tournament TDA features.
 
+**T290** #merged-buckets #tiling-parity #SC-detection #transport | certainty: HIGH (proved THM-345/346) | source: kind-pasteur-2026-05-29-S5
+Merged tiling buckets `pi: Q_m -> G_n/Z_2` have exact 2-adic type: SC buckets are odd, NS buckets are `2 mod 4`, and bucket sizes sum to `2^m`. More generally, every tiling quotient has half-line balance `2*self+cross=|bucket|*|M|`. Every Hamming layer transport matrix has prescribed row sums, symmetry, even diagonal, and cross-outflow parity `B_M*C(m,d) mod 2`. Lucas-active layers are binary submasks of `m=C(n-1,2)`. See THM-345, THM-346, and `05-knowledge/results/merged_bucket_constraints_s5.out`.
+
+**T291** #bucket-constraints #spine-ribs-sea #projection-defect | certainty: MEDIUM | source: kind-pasteur-2026-05-29-S5
+The bucket parity theorem gives a conservation law underneath projection defects: parity forces some SC buckets to leak in Lucas-active layers, but the actual cross-line mass is much larger. Hypothesis: the excess over the parity lower bound is where spine/ribs/sea geometry lives, and may be a cheap transport feature for Tournament TDA.
+
 **T268** #2-adic-sizes-vs-spectrum #ruler-sequence #dual-levels | certainty: HIGH | source: oracle-2026-05-15
 T241-T244 describe 2-adic structure of Walsh AMPLITUDES at fixed $n$ (ruler sequence in spectrum). This tangent is the dual: 2-adic structure of the tournament SIZE $n$ itself (column families). The spectral ruler sequence and the size ruler sequence are the same self-similar fractal at two levels: internal (fixed $n$, across Walsh weights) and external (fixed column, across doublings). The Walsh degree formula $2\lfloor(n-1)/2\rfloor$ encodes both simultaneously: it equals $n-1$ (row 0) vs $n-2$ (row $\geq 1$), exactly the seam.
 
