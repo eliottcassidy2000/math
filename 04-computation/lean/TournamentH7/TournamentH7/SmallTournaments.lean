@@ -122,4 +122,36 @@ example : (transitiveTournament 2).outDegree ⟨1, by omega⟩ = 1 := by
     (fun w : Fin 2 => (transitiveTournament 2).arc ⟨1, by omega⟩ w = true)).card = 1
   decide
 
+/-! ### Named tiny score facts -/
+
+/-- The source of `Trans_3` has score 0. -/
+lemma transitive_three_score_zero :
+    (transitiveTournament 3).outDegree ⟨0, by omega⟩ = 0 := by
+  show (Finset.univ.filter
+    (fun w : Fin 3 => (transitiveTournament 3).arc ⟨0, by omega⟩ w = true)).card = 0
+  decide
+
+/-- The middle vertex of `Trans_3` has score 1. -/
+lemma transitive_three_score_one :
+    (transitiveTournament 3).outDegree ⟨1, by omega⟩ = 1 := by
+  show (Finset.univ.filter
+    (fun w : Fin 3 => (transitiveTournament 3).arc ⟨1, by omega⟩ w = true)).card = 1
+  decide
+
+/-- The sink of `Trans_3` in the base-path orientation has score 2. -/
+lemma transitive_three_score_two :
+    (transitiveTournament 3).outDegree ⟨2, by omega⟩ = 2 := by
+  show (Finset.univ.filter
+    (fun w : Fin 3 => (transitiveTournament 3).arc ⟨2, by omega⟩ w = true)).card = 2
+  decide
+
+/-- The transitive tournament on three vertices has score vector `(0, 1, 2)`. -/
+lemma transitive_three_score_vector :
+    (transitiveTournament 3).outDegree ⟨0, by omega⟩ = 0 ∧
+    (transitiveTournament 3).outDegree ⟨1, by omega⟩ = 1 ∧
+    (transitiveTournament 3).outDegree ⟨2, by omega⟩ = 2 := by
+  exact ⟨transitive_three_score_zero,
+    transitive_three_score_one,
+    transitive_three_score_two⟩
+
 end Tournament
