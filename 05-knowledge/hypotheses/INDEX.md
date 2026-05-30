@@ -2661,3 +2661,17 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** In full prime-circulant scans, `corr(H,top_fraction)` is `-1.0` at `p=7`, `-0.106581` at `p=11`, and `+0.444395` at `p=13`; Paley wins at `p=7,11`, while the interval-unit orbit wins at `p=13`.
 **Predictions:** Fixed-coordinate Fejer alignment and low-mode mass will misclassify unit-rotated intervals; orbit-invariant concentration features plus a character-resolved OCF should explain the crossover.
 **See:** `05-knowledge/hypotheses/HYP-1809-paley-interval-flat-fejer-transition.md`, `04-computation/fejer_root_sign_phase_probe_s359.py`, `05-knowledge/results/fejer_root_sign_phase_probe_s359.out`, `07-reflections/fejer-root-sign-phase-synthesis.md`.
+
+## HYP-1810: LRC tight examples have a unit-boundary skeleton (codex-2026-05-30 S359)
+**Status:** EXPLORATORY; verified on known/scanned tight examples in S359.
+**What:** For reduced tight Lonely Runner examples, the unprotected forbidden endpoints are `{0} union {a/(k+1): gcd(a,k+1)=1}`.
+**Evidence:** S359 endpoint-protection records match this skeleton for initial and known sporadic tight examples.
+**Predictions:** Any counterexample must protect the unit-boundary skeleton, forcing quotient-divisibility and a possible descent.
+**See:** `05-knowledge/hypotheses/HYP-1810-lrc-unit-boundary-skeleton.md`, `04-computation/lonely_runner_endpoint_protection_s359.py`, `05-knowledge/results/lonely_runner_endpoint_protection_s359.out`, `07-reflections/lonely-runner-endpoint-protection-s359.md`.
+
+## HYP-1811: LRC endpoint protection has no all-protected core (codex-2026-05-30 S359)
+**Status:** EXPLORATORY proof-search hypothesis.
+**What:** Every primitive reduced Lonely Runner endpoint-protection incidence graph has an unprotected endpoint after finite peeling; equivalently, no full-cover counterexample has a nonempty all-protected endpoint core.
+**Evidence:** Known tight examples and near-tight positive-gap examples in S359 retain explicit unprotected endpoints.
+**Predictions:** A protection-core peeling algorithm should either stay empty in bounded boxes or isolate the exact local motif needed for a counterexample.
+**See:** `05-knowledge/hypotheses/HYP-1811-lrc-protection-peeling.md`, `04-computation/lonely_runner_endpoint_protection_s359.py`, `07-reflections/lonely-runner-endpoint-protection-s359.md`.
