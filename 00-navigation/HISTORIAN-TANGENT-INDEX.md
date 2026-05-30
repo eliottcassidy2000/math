@@ -26,6 +26,11 @@ Useful synthetic maps added later:
   network meta-analysis ambiguity audits, Cartan attention diagnostics,
   tournament fingerprints, scheduling/cache/consensus hypotheses, and the
   pure-math targets most likely to become publishable.
+- `07-reflections/representation-lens-fundamentals-2026-05-30.md`:
+  abstract representation-theory pass that reduces repo concepts to root
+  signs, supports of relations, group actions, character channels, and
+  incidence/intertwiner ranks; proposes representation-refined OCF as the
+  highest-value abstract theorem target.
 
 ## Second-Pass Small Motif Ledger
 

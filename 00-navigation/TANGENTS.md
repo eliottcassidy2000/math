@@ -134,6 +134,9 @@ The parabolic law `E[Delta c3|score=s]=s(n-1-s)/2` is a checksum for complete bi
 **T319** #applications-probe #active-ranking #ocf #speedups | certainty: medium | source: codex-2026-05-30-applications-probe
 Application search argues the strongest near-term product is OCF-guided active pairwise ranking: use `H(T)` as a stopping statistic, expected H-drop as the next-comparison rule, and Omega cycles as named ambiguity packets for PRP/RAG, LLM evaluation, A/B testing, network meta-analysis, and scheduling. Pure-math bets remain circulant H-maximizers, H-value image gaps, Paley/circulant path homology, and n=9 real-root failure classification. See `07-reflections/applications-probe-2026-05-30.md`.
 
+**T320** #representation-lens #schur-weyl #root-signs #fundamentals | certainty: medium-high | source: codex-2026-05-30-representation-lens
+Representation pass reframes the repo as sign assignments on positive roots of type A, modulo the Weyl group, then probed by invariant, restriction, character/eigenspace, and intertwiner operations. Small concepts become root signs, relation supports, group actions, character channels, and incidence ranks. Best abstract target: a representation-refined OCF, upgrading `H(T)=I(Omega,2)` from scalar identity to a graded packet/chamber module identity. See `07-reflections/representation-lens-fundamentals-2026-05-30.md`.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

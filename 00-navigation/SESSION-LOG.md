@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-30-representation-lens - Root-Sign Representation Synthesis
+
+**Account:** Codex
+**Git first:** Started from `main...origin/main` with the generated `inbox/PROCESSING-REPORT.md` timestamp dirty from inbox processing.
+**User prompt:** Spend another math-thinking session from a representation-theory lens, abstractly identifying what is most fundamental across even the smallest repo concepts.
+**Exploration:** Read the existing Schur-Weyl/staircase synthesis, triple representation note, Krawtchouk coordinates, sl(n) and Burnside-Cartan reflections, waggly/coherent-configuration note, hidden orthogonality, residue-phase-incidence synthesis, Cartan ghost split, dark/sign representation note, Paley code bridge, and representative scripts for Schur-Weyl multiplicities and Paley QR signed-permutation decompositions. Re-ran `gn_schur_weyl_s217.py` and `deep_synthesis_representations.py` for concrete anchor data.
+**Synthesis:** Added `07-reflections/representation-lens-fundamentals-2026-05-30.md`. Main thesis: the repo's base object is a sign assignment on positive roots of type A, modulo the Weyl group, then probed by four operations: invariants, restriction/branching, character/eigenspace splitting, and intertwiners/incidence. The smallest recurring units are root signs, supports of relations, group actions, character channels, and incidence ranks.
+**Worktree preservation:** During close-out inspection, found untracked residue/phase/incidence contrast artifacts (`04-computation/residue_phase_incidence_contrast_s5.py` and saved output). They were coherent repo artifacts, py-compiled cleanly, and were preserved rather than left stranded.
+**Navigation updates:** Added T320 and a historian pointer to the new representation-lens note.
+**Next:** Try a representation-refined OCF as a graded packet/chamber module identity; audit path-homology exactness by isotypic component; treat single-core H-value signatures as a parabolic induction/image problem; consolidate Paley character-channel data.
+
 ## codex-2026-05-30-applications-probe - Applications And Speedup Search
 
 **Account:** Codex
