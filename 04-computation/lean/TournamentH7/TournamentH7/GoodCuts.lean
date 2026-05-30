@@ -215,6 +215,26 @@ theorem StTiling.isGoodCut_iff_exists_upward_tile_interval
   · rintro ⟨t, ht, hk⟩
     exact ⟨t, ht, (StTile.mem_cutInterval.mp hk).2⟩
 
+theorem StTiling.mem_goodCuts_iff_exists_upward_tile_interval
+    {b : StTiling n} {k : ℕ} :
+    k ∈ b.goodCuts ↔
+      ∃ t : StTile n, b t = true ∧ k ∈ t.cutInterval := by
+  constructor
+  · intro hk
+    exact StTiling.isGoodCut_iff_exists_upward_tile_interval.mp
+      (StTiling.mem_goodCuts.mp hk).2
+  · rintro ⟨t, ht, hk⟩
+    rw [StTiling.mem_goodCuts]
+    exact ⟨(StTile.mem_cutInterval.mp hk).1,
+      StTiling.isGoodCut_iff_exists_upward_tile_interval.mpr ⟨t, ht, hk⟩⟩
+
+lemma StTiling.cutInterval_subset_goodCuts_of_upward_tile
+    {b : StTiling n} {t : StTile n} (ht : b t = true) :
+    t.cutInterval ⊆ b.goodCuts := by
+  intro k hk
+  rw [StTiling.mem_goodCuts_iff_exists_upward_tile_interval]
+  exact ⟨t, ht, hk⟩
+
 lemma StTiling.goodCuts_subset_cutSet (b : StTiling n) :
     b.goodCuts ⊆ cutSet n := by
   intro k hk

@@ -1,0 +1,36 @@
+GOOD-CUT INTERVAL-UNION ENUMERATION
+opus-2026-05-29-S15
+B_N = B_{N-1} + sum_{L=2..N} c_L x^L B_{N-L-1}, with B_{-1}=B_0=1
+SMALL-N VERIFICATION AGAINST DIRECT TILING ENUMERATION
+  n=3: ok=True, counts={0: 1, 2: 1}
+  n=4: ok=True, counts={0: 1, 2: 2, 3: 5}
+  n=5: ok=True, counts={0: 1, 2: 3, 3: 10, 4: 50}
+  n=6: ok=True, counts={0: 1, 2: 4, 3: 15, 4: 101, 5: 903}
+  n=7: ok=True, counts={0: 1, 2: 5, 3: 20, 4: 153, 5: 1816, 6: 30773}
+  n=8: ok=True, counts={0: 1, 2: 6, 3: 25, 4: 206, 5: 2739, 6: 61671, 7: 2032504}
+
+CONNECTED RUN COVER COUNTS c_L
+  L= 2: c_L=1  (all interval subsets=2^1)
+  L= 3: c_L=5  (all interval subsets=2^3)
+  L= 4: c_L=50  (all interval subsets=2^6)
+  L= 5: c_L=903  (all interval subsets=2^10)
+  L= 6: c_L=30773  (all interval subsets=2^15)
+  L= 7: c_L=2032504  (all interval subsets=2^21)
+  L= 8: c_L=264271477  (all interval subsets=2^28)
+  L= 9: c_L=68184627441  (all interval subsets=2^36)
+  L=10: c_L=35047197032002  (all interval subsets=2^45)
+  L=11: c_L=35958496436958947  (all interval subsets=2^55)
+  L=12: c_L=73714953745344131921  (all interval subsets=2^66)
+
+BUCKET POLYNOMIALS FROM THE INTERVAL RECURRENCE
+  n= 3, cuts= 2, tiles= 1, total_ok=True, top=1, counts={0: 1, 2: 1}
+  n= 4, cuts= 3, tiles= 3, total_ok=True, top=5, counts={0: 1, 2: 2, 3: 5}
+  n= 5, cuts= 4, tiles= 6, total_ok=True, top=50, counts={0: 1, 2: 3, 3: 10, 4: 50}
+  n= 6, cuts= 5, tiles=10, total_ok=True, top=903, counts={0: 1, 2: 4, 3: 15, 4: 101, 5: 903}
+  n= 7, cuts= 6, tiles=15, total_ok=True, top=30773, counts={0: 1, 2: 5, 3: 20, 4: 153, 5: 1816, 6: 30773}
+  n= 8, cuts= 7, tiles=21, total_ok=True, top=2032504, counts={0: 1, 2: 6, 3: 25, 4: 206, 5: 2739, 6: 61671, 7: 2032504}
+  n= 9, cuts= 8, tiles=28, total_ok=True, top=264271477, counts={0: 1, 2: 7, 3: 30, 4: 260, 5: 3672, 6: 92695, 7: 4067314, 8: 264271477}
+  n=10, cuts= 9, tiles=36, total_ok=True, top=68184627441, counts={0: 1, 2: 8, 3: 35, 4: 315, 5: 4615, 6: 123846, 7: 6104445, 8: 528616030, 9: 68184627441}
+  n=11, cuts=10, tiles=45, total_ok=True, top=35047197032002, counts={0: 1, 2: 9, 3: 40, 4: 371, 5: 5568, 6: 155125, 7: 8143912, 8: 793033884, 9: 136373717920, 10: 35047197032002}
+  n=12, cuts=11, tiles=55, total_ok=True, top=35958496436958947, counts={0: 1, 2: 10, 3: 45, 4: 428, 5: 6531, 6: 186533, 7: 10185730, 8: 1057525265, 9: 204567275771, 10: 70094946824707, 11: 35958496436958947}
+  n=13, cuts=12, tiles=66, total_ok=True, top=73714953745344131921, counts={0: 1, 2: 11, 3: 50, 4: 486, 5: 7504, 6: 218071, 7: 12229914, 8: 1322090400, 9: 272765305348, 10: 105143249508774, 11: 71917132144713984, 12: 73714953745344131921}

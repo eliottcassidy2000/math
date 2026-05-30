@@ -58,6 +58,12 @@ The quotient-bucket balance theorem factors into two pieces: finite half-line co
 **T294** #good-cut-buckets #n7 #merged-coordinate | certainty: high (exact n=7 probe) | source: kind-pasteur-2026-05-30-S1
 Good-cut descent survives n=7: 32768 fixed-base tilings classify into 456 unmerged / 272 merged classes, and every merged class is pure in `g`. Bucket counts are `{0:1,2:5,3:20,4:153,5:1816,6:30773}`. This makes HYP-1764 feel structural, not a small-n accident.
 
+**T295** #good-cut-buckets #interval-gas #polymer #tournament-tda | certainty: HIGH (proved + brute n=3..8) | source: opus-2026-05-29-S15
+Good-cut buckets are exactly a 1D interval-cover gas on the cut path. Connected run covers `c_L` satisfy an inclusion-exclusion formula, and `B_N(x)=B_{N-1}(x)+Σ_{L≥2} c_L x^L B_{N-L-1}(x)`. This proves the full bucket recurrence, recovers THM-336 small-bucket formulas, and gives cheap normalization features for tiling-aware Tournament TDA. See THM-349 and `07-reflections/good-cut-interval-gas.md`.
+
+**T296** #quotient-transport #good-cut-gas #spine-ribs-sea | certainty: high (n=3..6 exact) | source: opus-2026-05-29-S15
+The interval-union good-cut gas and THM-346 quotient transport are the same conservation law at two scales. Ordered half-line scans show `Delta g != 0` always crosses a merged tournament boundary in tested layers, and n=6 nonzero height changes are mostly sea except the all-down-to-top jump, which is pure spine. The `Delta g=0` stratum is where self-loops, even-only defects, ribs, and sea mass hide. See HYP-1777 and `07-reflections/quotient-transport-and-good-cut-gas.md`.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

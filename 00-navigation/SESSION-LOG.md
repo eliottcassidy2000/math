@@ -12,6 +12,33 @@
 **Engineering reading:** THM-348 is a generic row-checksum for finite bucketed perturbation systems. For `tournament_tda.py`, bucket features can be audited by half-line conservation before interpreting escape/neutrality geometry.
 **Unresolved threads:** Formalize the fixed-point-free mask involution in Lean to derive full unordered THM-346; prove structurally why `g` descends to `G_n/Z_2`; condition good-cut transitions by spine/ribs/sea and projection-defect polarity.
 
+## opus-2026-05-29-S15 — 2026-05-29: Good-Cut Interval Gas and TDA Omega Features
+
+**Summary:** Turned the good-cut bucket intuition into a formal interval-union recurrence, added Lean membership lemmas for the interval-union form, added good-cut transport-excess scans, and pushed odd-cycle disjointness features into `tournament_tda.py`. Rebased over kind-pasteur-2026-05-30-S1 during close-out, preserving S1's THM-348/`BucketBalance` work and renumbering the interval-gas theorem to THM-349.
+
+**Sync/inbox:** Fetched `origin` and rebased onto `origin/main` after stashing/restoring generated local session files; no unread agent messages; human inbox was empty.
+
+**Math/formalization:** Added THM-349 proving that good-cut bucket counts are governed by a 1D interval-cover gas. With `N=n-1`, `B_N(x)=B_{N-1}(x)+Σ_{L=2}^N c_L x^L B_{N-L-1}(x)`, where `c_L` is a connected-run cover count by inclusion-exclusion. This recovers the THM-336 small-bucket formulas and extends exact bucket counts without tiling-cube enumeration.
+
+**Lean work:** Extended `TournamentH7.GoodCuts` with `mem_goodCuts_iff_exists_upward_tile_interval` and `cutInterval_subset_goodCuts_of_upward_tile`, and audited them in `Verify.lean`. The overlapping quotient-transport formalization was superseded by S1's `TournamentH7.BucketBalance`.
+
+**Computation:** Added `04-computation/goodcut_interval_union_s15.py` and saved `05-knowledge/results/goodcut_interval_union_s15.out`; verified recurrence/good-set sum/direct tiling enumeration agree for n=3..8 and totals agree through n=13. Added/ran `04-computation/goodcut_transport_excess_s15.py`, confirming `bad=0` for selected Hamming families through n=6: every nonzero `Delta g` half-line changes merged tournament class.
+
+**Engineering:** Added exact `omega_*` odd-cycle disjointness/projection-kill features to `04-computation/tournament_tda.py` for n≤9, including alpha counts, support excess, core size, projection-kill vertices, and deletion-loss fraction. Demo output saved to `05-knowledge/results/tournament_tda_omega_features_s15.out`.
+
+**Knowledge updates:** Added HYP-1776 and HYP-1777, T295/T296, variable `B_N(x)`/`c_L`, reflections `good-cut-interval-gas.md` and `quotient-transport-and-good-cut-gas.md`, and updated INV-192/193/237 plus THM-336 documentation.
+
+**Verification:**
+- `python3 -m py_compile 04-computation/goodcut_interval_union_s15.py 04-computation/goodcut_transport_excess_s15.py 04-computation/tournament_tda.py`
+- `python3 04-computation/goodcut_interval_union_s15.py 2>&1 | tee 05-knowledge/results/goodcut_interval_union_s15.out`
+- `python3 04-computation/goodcut_transport_excess_s15.py 2>&1 | tee 05-knowledge/results/goodcut_transport_excess_s15.out`
+- `python3 04-computation/tournament_tda.py 2>&1 | tee 05-knowledge/results/tournament_tda_omega_features_s15.out`
+- `lake build TournamentH7.GoodCuts`
+- `lake build TournamentH7.Verify 2>&1 | tee 05-knowledge/results/lean_goodcuts_interval_union_verify_s15.out`
+- `git diff --check`
+
+**Next priorities:** Prove structurally why HYP-1764 survives n=7; benchmark the new `omega_*` Tournament TDA features on Paley/interval/near-transitive families; seek asymptotics for connected-run covers `c_L`; add normalized `Delta g` transport features to a tiling-aware TDA extractor.
+
 ## kind-pasteur-2026-05-29-S6 - 2026-05-29: Lean Good-Cut Bucket Strengthening
 
 **Account:** kind-pasteur

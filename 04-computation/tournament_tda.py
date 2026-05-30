@@ -18,6 +18,8 @@ Features extracted:
   - Walsh amplitudes by degree (spectral decomposition)
   - Score sequence statistics
   - 3-cycle density and higher cycle counts
+  - Odd-cycle conflict/disjointness features
+  - Projection-kill and cycle-family core features
   - Transitivity ratio
   - H-ratio: H/H_max (decisiveness measure)
   - Regularity index
@@ -163,6 +165,104 @@ def count_5cycles(A, n):
                             continue
                         c5 += 1
     return c5 // 5  # each cycle counted 5 times
+
+def directed_odd_cycle_masks(A, n, max_length=None):
+    """Enumerate directed odd cycles as vertex masks.
+
+    A cycle is counted as a directed cyclic order, modulo rotation but not
+    modulo reversal. Multiple directed cycles with the same vertex support are
+    intentionally retained; OCF's alpha_1 counts directed cycles, not supports.
+    """
+    A = np.asarray(A)
+    if max_length is None:
+        max_length = n
+    masks = []
+    for length in range(3, min(n, max_length) + 1, 2):
+        for perm in permutations(range(n), length):
+            if perm[0] != min(perm):
+                continue
+            if all(A[perm[i], perm[(i + 1) % length]] == 1 for i in range(length)):
+                mask = 0
+                for v in perm:
+                    mask |= 1 << v
+                masks.append(mask)
+    return masks
+
+def odd_cycle_disjointness_features(A, n, max_exact_n=9, max_triple_cycles=400):
+    """Cheap exact features from the odd-cycle conflict graph Omega(T).
+
+    These are the engineering form of the H=63 / THM-025 insight: H alone
+    compresses away whether inconsistency is localized around a core vertex,
+    spread across disjoint cycle families, or hidden in support multiplicities.
+    """
+    if n > max_exact_n:
+        return {}
+
+    masks = directed_odd_cycle_masks(A, n)
+    alpha1 = len(masks)
+    features = {
+        'omega_alpha_1': alpha1,
+        'omega_empty': 1 if alpha1 == 0 else 0,
+    }
+
+    if alpha1 == 0:
+        features.update({
+            'omega_alpha_2': 0,
+            'omega_alpha_3': 0,
+            'omega_complete': 1,
+            'omega_disjoint_pair_density': 0.0,
+            'omega_support_count': 0,
+            'omega_support_excess': 0,
+            'omega_max_support_multiplicity': 0,
+            'omega_core_size': 0,
+            'omega_projection_kill_vertices': 0,
+            'omega_max_deletion_loss_frac': 0.0,
+        })
+        return features
+
+    support_counts = Counter(masks)
+    core_mask = (1 << n) - 1
+    vertex_loss = [0] * n
+    for mask in masks:
+        core_mask &= mask
+        for v in range(n):
+            if mask & (1 << v):
+                vertex_loss[v] += 1
+
+    alpha2 = 0
+    disjoint_pairs = []
+    for i, mi in enumerate(masks):
+        for j in range(i + 1, alpha1):
+            if mi & masks[j] == 0:
+                alpha2 += 1
+                disjoint_pairs.append((i, j, mi | masks[j]))
+
+    alpha3 = None
+    if alpha1 <= max_triple_cycles:
+        alpha3_count = 0
+        for i, j, union in disjoint_pairs:
+            for k in range(j + 1, alpha1):
+                if union & masks[k] == 0:
+                    alpha3_count += 1
+        alpha3 = alpha3_count
+
+    pair_total = alpha1 * (alpha1 - 1) // 2
+    max_loss = max(vertex_loss)
+    projection_kill_vertices = sum(1 for loss in vertex_loss if loss == alpha1)
+
+    features.update({
+        'omega_alpha_2': alpha2,
+        'omega_alpha_3': alpha3 if alpha3 is not None else -1,
+        'omega_complete': 1 if alpha2 == 0 else 0,
+        'omega_disjoint_pair_density': alpha2 / pair_total if pair_total else 0.0,
+        'omega_support_count': len(support_counts),
+        'omega_support_excess': alpha1 - len(support_counts),
+        'omega_max_support_multiplicity': max(support_counts.values()),
+        'omega_core_size': core_mask.bit_count(),
+        'omega_projection_kill_vertices': projection_kill_vertices,
+        'omega_max_deletion_loss_frac': max_loss / alpha1,
+    })
+    return features
 
 def score_sequence(A, n):
     """Compute score sequence (sorted out-degrees)."""
@@ -441,6 +541,10 @@ class TournamentFeatures:
             c5 = count_5cycles(A, n)
             features['t5'] = c5
 
+        # Odd-cycle conflict geometry / projection-kill features
+        if n <= 9:
+            features.update(odd_cycle_disjointness_features(A, n))
+
         # Condorcet structure
         cw = condorcet_winner(A, n)
         features['has_condorcet_winner'] = 1 if cw >= 0 else 0
@@ -489,6 +593,17 @@ class TournamentFeatures:
             numeric_keys.append('chi_partial')
         if 'walsh_0' in feats:
             numeric_keys.extend(['walsh_0', 'walsh_2'])
+        if 'omega_alpha_1' in feats:
+            numeric_keys.extend([
+                'omega_alpha_1',
+                'omega_alpha_2',
+                'omega_alpha_3',
+                'omega_disjoint_pair_density',
+                'omega_support_excess',
+                'omega_core_size',
+                'omega_projection_kill_vertices',
+                'omega_max_deletion_loss_frac',
+            ])
 
         vec = np.array([feats.get(k, 0) or 0 for k in numeric_keys], dtype=float)
         return vec, numeric_keys
@@ -502,6 +617,11 @@ class TournamentFeatures:
         print(f"    3-cycles: {feats['t3']} (density {feats['t3_density']:.4f})")
         print(f"    Transitivity ratio: {feats['transitivity_ratio']:.4f}")
         print(f"    Condorcet winner: {'yes' if feats['has_condorcet_winner'] else 'no'}")
+        if 'omega_alpha_1' in feats:
+            print(
+                f"    Ω cycles/disjoint pairs: "
+                f"{feats['omega_alpha_1']} / {feats['omega_alpha_2']}"
+            )
         if 'beta_1' in feats:
             print(f"    β₁ = {feats['beta_1']}")
         return feats
@@ -766,6 +886,8 @@ FEATURES:
   beta_1        1st Betti number (topological complexity)
   score_var     score sequence variance (regularity)
   walsh_*       Walsh-Fourier spectral amplitudes
+  omega_*       Odd-cycle conflict geometry (cycle count, disjoint pairs,
+                support excess, core size, projection-kill profile)
 
   All features are tournament isomorphism invariants.
 """)

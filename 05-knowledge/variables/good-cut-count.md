@@ -30,9 +30,11 @@ Exact tiling counts by `g`:
 | 5 | `{0: 1, 2: 3, 3: 10, 4: 50}` |
 | 6 | `{0: 1, 2: 4, 3: 15, 4: 101, 5: 903}` |
 | 7 | `{0: 1, 2: 5, 3: 20, 4: 153, 5: 1816, 6: 30773}` |
+| 8 | `{0: 1, 2: 6, 3: 25, 4: 206, 5: 2739, 6: 61671, 7: 2032504}` |
 
 Sources: `05-knowledge/results/goodcut_bucket_merged_s13.out` and
-`05-knowledge/results/goodcut_bucket_n7_fast_s1.out`.
+`05-knowledge/results/goodcut_bucket_n7_fast_s1.out`; recurrence extension from
+`05-knowledge/results/goodcut_interval_union_s15.out`.
 
 ## Equations
 
@@ -47,6 +49,9 @@ Sources: `05-knowledge/results/goodcut_bucket_merged_s13.out` and
   `g(τ) ≤ g(τ')`.
 - Interval form: `k` is good iff `k` lies in the interval `{lo+1,...,hi}`
   of some upward tile `(hi,lo)`.
+- THM-349: the full bucket distribution is the interval-union recurrence
+  `B_N(x)=B_{N-1}(x)+Σ_{L=2}^N c_L x^L B_{N-L-1}(x)`, where `c_L`
+  counts covers of one connected run by intervals of length at least 2.
 
 ## Relationships
 
@@ -57,6 +62,7 @@ Sources: `05-knowledge/results/goodcut_bucket_merged_s13.out` and
 - Related to `H(T)`: bucket extremes are transitive (`g=0`, `H=1`) and strongly connected (`g=n-1`, broad H range).
 - Related to `G_n/Z_2`: HYP-1764 says that `g` is constant on each merged
   tournament class; exact merged-class purity is confirmed for n=3..7.
+- Related to `B_N(x)`: the polynomial coefficient `[x^g]B_{n-1}` counts all tilings with `g(τ)=g`.
 
 ## Lean Formalisation
 
@@ -66,6 +72,8 @@ Sources: `05-knowledge/results/goodcut_bucket_merged_s13.out` and
 - `StTiling.goodCutCount_ne_one`
 - `StTiling.goodCutCount_reflect`
 - `StTiling.isGoodCut_iff_exists_upward_tile_interval`
+- `StTiling.mem_goodCuts_iff_exists_upward_tile_interval`
+- `StTiling.cutInterval_subset_goodCuts_of_upward_tile`
 - `StTiling.goodCutCount_mono`
 - `StTiling.goodCutCount_bucket_bounds`
 - `StTiling.goodCutCount_eq_top_iff_all_cuts_good`

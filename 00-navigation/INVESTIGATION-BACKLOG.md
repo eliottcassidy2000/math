@@ -152,15 +152,16 @@
 
 ### INV-192: Engineering Product: Odd-Cycle Disjointness Features for Tournament TDA
 **Source:** opus-2026-05-29-S11
-**Status:** NEW PRODUCT LEAD
+**Status:** PARTIALLY IMPLEMENTED (opus-2026-05-29-S15)
 **What:** S11's H=63 / THM-025 comparison suggests that practical tournament fingerprints should expose the disjointness geometry of odd cycles, not only H, scores, and Betti numbers. Candidate features: `alpha_vector(Omega)`, cycle-family core size, complete-Ω flag, disjoint-pair count, independent-triple supports, single-core signature, `r_core(s)`, and deletion profile `(H(T-v), |Omega(T-v)|, complete?)`.
 **S12 update:** Extend this feature layer to projection defects: support count vs support excess, max support multiplicity, deletion loss profile `(lost, kept, loss_frac, alpha(T-v))`, exact-kill/near-kill flags, and even-graph projection weight/degree sequence for odd n.
+**S15 update:** `04-computation/tournament_tda.py` now computes exact `omega_*` features for n≤9: `omega_alpha_1`, `omega_alpha_2`, `omega_alpha_3`, complete-Ω flag, disjoint-pair density, support count/excess, max support multiplicity, cycle-family core size, projection-kill vertex count, and max deletion-loss fraction. These are included in the flat ML feature vector and demo output is saved in `05-knowledge/results/tournament_tda_omega_features_s15.out`.
 **Why it matters:** These features separate two phenomena that H alone compresses: (1) H=63 unlocks through a complete-core Ω=K31; (2) real-rootedness fails through a no-core, highly concentrated independent triple. For ranking data, this distinguishes "all inconsistency localized at one pivot" from "three disjoint inconsistency groups with lopsided coupling."
 **Next steps:**
-  1. Add these features to a future `tournament_tda.py` extractor.
-  2. Benchmark them on synthetic rankings, sports/election data, and attention-derived tournaments.
-  3. Use them as prefilters before expensive full Ω or path-homology computations.
-**Files:** `04-computation/omega_extreme_fingerprints_s11.py`, `04-computation/projection_defect_bridge_s12.py`, `05-knowledge/results/omega_extreme_fingerprints_s11.out`, `05-knowledge/results/projection_defect_bridge_s12.out`, `07-reflections/omega-extremes-as-cycle-disjointness-axis.md`, `07-reflections/projection-defect-as-common-residue.md`.
+  1. Benchmark the implemented features on synthetic rankings, sports/election data, and attention-derived tournaments.
+  2. Use them as prefilters before expensive full Ω or path-homology computations.
+  3. Add odd-n even-graph projection signatures and deletion `alpha(T-v)` profiles as a second feature layer.
+**Files:** `04-computation/tournament_tda.py`, `04-computation/omega_extreme_fingerprints_s11.py`, `04-computation/projection_defect_bridge_s12.py`, `05-knowledge/results/tournament_tda_omega_features_s15.out`, `05-knowledge/results/omega_extreme_fingerprints_s11.out`, `05-knowledge/results/projection_defect_bridge_s12.out`, `07-reflections/omega-extremes-as-cycle-disjointness-axis.md`, `07-reflections/projection-defect-as-common-residue.md`.
 
 ### INV-193: Projection-Defect Axis Across Ω, Even Graphs, and Path Homology
 **Source:** opus-2026-05-29-S12
@@ -175,7 +176,7 @@
   1. Scan known THM-025-like non-real-root examples for high max deletion loss.
   2. Compare projection-defect statistics against beta_3/beta_4 path-homology anomalies.
   3. For odd n, correlate even-graph projection fibers with Ω support-multiplicity defect.
-  4. Package the cheap features into `tournament_tda.py` with INV-192.
+  4. Extend the S15 `tournament_tda.py` `omega_*` feature block with explicit deletion-residue alpha profiles and even-graph projection signatures.
 **Files:** `04-computation/projection_defect_bridge_s12.py`, `05-knowledge/results/projection_defect_bridge_s12.out`, `07-reflections/projection-defect-as-common-residue.md`, HYP-1760, HYP-1763, T282, T283.
 
 ### INV-194: Merged Tiling Bucket Constraints
@@ -186,7 +187,7 @@
 **S1 Lean update (kind-pasteur-2026-05-30-S1):** Added THM-348 / `TournamentH7.BucketBalance`, a generic axiom-free Lean proof of the oriented finite-set balance `|selfHalf|+|crossHalf|=|fiber|*|moves|`, plus the zero-cross closure criterion. This isolates the remaining Lean bridge for THM-346: prove the fixed-point-free involution pairing that turns internal half-lines into unordered self-lines counted twice.
 **Why it matters:** This turns the merged metagraph into a constrained reversible transport system, not just an unweighted graph. It also corrects the old S202 "merged tiling excess" narration: merged buckets still partition the fixed-base cube exactly.
 **Next steps:**
-  1. Measure the excess over the parity lower bound by spine/ribs/sea edge type.
+  1. Lift the unordered fixed-point-free involution specialization into Lean.
   2. Determine whether generic NS-sea transport is approximable from bucket sizes alone, with SC/rib corrections.
   3. Seek a Burnside formula for the bucket-size distribution, not just for the number of buckets.
   4. Formalize the fixed-point-free mask involution in Lean and derive the full unordered THM-346 from THM-348.
@@ -2274,14 +2275,15 @@ The proof is constructive via one upward tile covering `{1,...,r}`. This
 shows bucket 1 is the only interval-geometric obstruction; any further gaps
 in quotient/H/isomorphism statistics must come from tournament structure.
 **S1 update (kind-pasteur-2026-05-30-S1):** Fast n=7 hash-assisted canonicalization confirms HYP-1764 one level further: 456 unmerged classes, 88 SC classes, 272 merged classes, and every merged class is pure in `g` (pure/mixed = 272/0, max span 0).
+**S15 update (opus-2026-05-29-S15):** THM-349 proves the full interval-union recurrence for bucket counts. If `B_N(x)=Σ_g b(N,g)x^g`, then `B_N=B_{N-1}+Σ_{L=2}^N c_L x^L B_{N-L-1}`, where `c_L` is a connected-run cover count computed by inclusion-exclusion. The recurrence matches direct tiling enumeration for n=3..8 and gives exact counts through n=13 without enumerating the tiling cube. Lean now has the direct membership form `k ∈ goodCuts ↔ ∃ upward tile interval containing k`. The S15 transport-excess scan also extends the dynamic evidence: across selected Hamming layers through n=6, every ordered half-line with nonzero `Delta g` changes merged tournament class (`bad=0` throughout), while `Delta g=0` is where self, spine, ribs, sea, and even-only defects mix.
 **Key data:** Bucket counts are n=3 `{0:1,2:1}`, n=4 `{0:1,2:2,3:5}`, n=5 `{0:1,2:3,3:10,4:50}`, n=6 `{0:1,2:4,3:15,4:101,5:903}`, n=7 `{0:1,2:5,3:20,4:153,5:1816,6:30773}`. Merged-class purity is pure/mixed = 2/0, 3/0, 10/0, 34/0, 272/0. Reflection bucket failures are zero through n=6, and n=7 purity gives the merged-class check directly.
 **Why it matters:** `g` looks like a coordinate artifact of the base-path staircase, but it may descend to `G_n/Z_2` as a real merged-metagraph coordinate. The Lean proof also turns the old no-one-good-cut observation into a reusable interval-cover constraint, while S14 ties this coordinate to the tournament/even-graph quotient commutator.
-**Scripts/results:** `04-computation/goodcut_bucket_merged_s13.py`; `05-knowledge/results/goodcut_bucket_merged_s13.out`; `04-computation/goodcut_bucket_n7_fast_s1.py`; `05-knowledge/results/goodcut_bucket_n7_fast_s1.out`; `04-computation/goodcut_projection_defect_s14.py`; `05-knowledge/results/goodcut_projection_defect_s14.out`; `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`; reflections `07-reflections/good-cut-buckets-as-merged-coordinate.md`, `07-reflections/good-cut-height-and-projection-polarity.md`, and `07-reflections/good-cut-spectrum-complete.md`; variable `05-knowledge/variables/good-cut-count.md`.
+**Scripts/results:** `04-computation/goodcut_bucket_merged_s13.py`; `05-knowledge/results/goodcut_bucket_merged_s13.out`; `04-computation/goodcut_bucket_n7_fast_s1.py`; `05-knowledge/results/goodcut_bucket_n7_fast_s1.out`; `04-computation/goodcut_projection_defect_s14.py`; `05-knowledge/results/goodcut_projection_defect_s14.out`; `04-computation/goodcut_interval_union_s15.py`; `05-knowledge/results/goodcut_interval_union_s15.out`; `04-computation/goodcut_transport_excess_s15.py`; `05-knowledge/results/goodcut_transport_excess_s15.out`; `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`; reflections `07-reflections/good-cut-buckets-as-merged-coordinate.md`, `07-reflections/good-cut-height-and-projection-polarity.md`, `07-reflections/good-cut-spectrum-complete.md`, `07-reflections/good-cut-interval-gas.md`, and `07-reflections/quotient-transport-and-good-cut-gas.md`; variables `05-knowledge/variables/good-cut-count.md` and `05-knowledge/variables/good-cut-bucket-polynomial.md`.
 **Next steps:**
 1. Prove or refute HYP-1764 structurally: `g` is invariant under tournament isomorphism after complement merging.
 2. Re-run n=7 with nauty/canonical certificate if an independent implementation is desired.
 3. If HYP-1764 eventually fails, characterize the first mixed class and its spine/ribs/sea position.
 4. Prove or refute the range-parity law HYP-1771.
 5. Build `StTiling.toTournament` and prove `goodCutCount=n-1` iff the induced base-path tournament is strongly connected.
-6. Derive the interval-union generating function for bucket counts and connect it to INV-NEW-S2-B.
-7. Add `g`, bucket-transition profile, range-parity, and interval-cover features to a future `tournament_tda.py`.
+6. Seek asymptotics for the connected-run covers `c_L` and the top bucket.
+7. Add `g`, bucket-transition profile, range-parity, and interval-cover features to a future tiling-aware TDA extractor.

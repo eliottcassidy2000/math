@@ -183,6 +183,19 @@ theorem alphaCount_iso_invariant_audit {n : ℕ}
   alphaCount_iso_invariant k T₁ T₂ h
 #print axioms alphaCount_iso_invariant_audit
 
+/-! ### Bucket-balance half-line conservation (THM-346 core) -/
+
+/-- Ordered half-line bucket balance for any finite quotient and finite move set.
+    PROVED. -/
+theorem bucketBalance_halfLine_balance_audit
+    {X M B : Type*} [Fintype X] [DecidableEq B]
+    (q : X → B) (step : M → X → X) (moves : Finset M) (b : B) :
+    (BucketBalance.selfHalf q step moves b).card +
+      (BucketBalance.crossHalf q step moves b).card =
+        (BucketBalance.fiber q b).card * moves.card :=
+  BucketBalance.halfLine_balance q step moves b
+#print axioms bucketBalance_halfLine_balance_audit
+
 /-! ### Good-cut buckets for staircase tilings -/
 
 /-- Good-cut bucket 0 is exactly the all-down tiling. PROVED. -/
@@ -252,6 +265,18 @@ theorem isGoodCut_interval_union_audit {n : ℕ} {b : StTiling n} {k : ℕ} :
       ∃ t : StTile n, b t = true ∧ k ∈ t.cutInterval :=
   StTiling.isGoodCut_iff_exists_upward_tile_interval
 #print axioms isGoodCut_interval_union_audit
+
+theorem mem_goodCuts_interval_union_audit {n : ℕ} {b : StTiling n} {k : ℕ} :
+    k ∈ b.goodCuts ↔
+      ∃ t : StTile n, b t = true ∧ k ∈ t.cutInterval :=
+  StTiling.mem_goodCuts_iff_exists_upward_tile_interval
+#print axioms mem_goodCuts_interval_union_audit
+
+theorem cutInterval_subset_goodCuts_audit {n : ℕ} {b : StTiling n} {t : StTile n}
+    (ht : b t = true) :
+    t.cutInterval ⊆ b.goodCuts :=
+  StTiling.cutInterval_subset_goodCuts_of_upward_tile ht
+#print axioms cutInterval_subset_goodCuts_audit
 
 /-- Good-cut count is monotone under turning more tiles upward. PROVED. -/
 theorem goodCutCount_mono_audit {n : ℕ} {b c : StTiling n}

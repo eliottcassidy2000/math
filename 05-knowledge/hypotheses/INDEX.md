@@ -2347,12 +2347,13 @@ Source: projection_defect_h_score_s3.py, projection_defect_h_score_s3.out
 **See:** `05-knowledge/results/goodcut_bucket_merged_s13.out`, `05-knowledge/results/goodcut_bucket_n7_fast_s1.out`, variable `g(τ)`, INV-237, T288.
 
 ## HYP-1765: Good-cut sets are interval-union codes (opus-2026-05-29-S13)
-**Status:** PARTIALLY PROVED in Lean; enumerative form OPEN.
+**Status:** CONFIRMED / PROVED by THM-349 (opus-2026-05-29-S15).
 **Statement:** Every upward tile contributes the cut interval `{lo+1,...,hi}`, so every good-cut set is a union of tile intervals of length at least 2. Conversely, every such union realized by a subset of staircase tile intervals is a good-cut set. The bucket distribution should therefore be expressible as an interval-union or polymer-gas enumeration on the cut path.
-**Evidence:** Lean proves every upward tile supplies two distinct legal good cuts, giving `g≠1`. The exact counts n=3..7 are `{0:1,2:1}`, `{0:1,2:2,3:5}`, `{0:1,2:3,3:10,4:50}`, `{0:1,2:4,3:15,4:101,5:903}`, `{0:1,2:5,3:20,4:153,5:1816,6:30773}`.
+**Evidence:** Lean now proves the membership form `k ∈ goodCuts(b) ↔ ∃ upward tile t with k ∈ cutInterval(t)`. THM-349 gives the exact interval-cover recurrence
+`B_N(x)=B_{N-1}(x)+Σ_{L=2}^N c_L x^L B_{N-L-1}(x)` with connected-run inclusion-exclusion for `c_L`. The recurrence matches direct tiling enumeration for n=3..8 and extends exact bucket counts through n=13.
 **Implication:** THM-336 is not just a strong-connectivity fact. It is a path-interval covering theorem inside the staircase triangle, and it should connect to the existing formulas for exactly-d good cuts.
-**Next:** Derive the ordinary generating function for bucket counts from interval unions and reconcile it with INV-NEW-S2-B.
-**See:** `TournamentH7.GoodCuts`, `05-knowledge/variables/good-cut-count.md`, INV-NEW-S2-B.
+**Next:** Seek a closed asymptotic for the top coefficient `c_N` and use the recurrence as a fast checksum for quotient feature extractors.
+**See:** THM-349, `TournamentH7.GoodCuts`, `05-knowledge/variables/good-cut-count.md`, `05-knowledge/variables/good-cut-bucket-polynomial.md`, INV-237.
 
 ## HYP-1766: Good-cut bucket transitions form a Morse coordinate for wiggly moves (opus-2026-05-29-S13)
 **Status:** CONFIRMED for n=3..6 exact single-tile transitions; OPEN structurally.
@@ -2427,3 +2428,18 @@ Source: HYP-1774-even-graph-endpoint-rank-defect.md, THM-266-endpoint-transfer-b
 **Implication:** The formalization path for THM-346 is smaller than it looked. The generic half-line theorem is independent of tournaments and can also serve as an engineering checksum for any finite-state perturbation feature.
 **Next:** Add an abstract fixed-point-free involution lemma for finite move actions, then instantiate it for Boolean hypercube masks and derive THM-346 in Lean.
 **See:** THM-346, THM-348, `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`, `05-knowledge/results/lean_bucket_balance_kind_pasteur_2026-05-30-S1.out`, INV-194.
+
+## HYP-1776: Odd-cycle disjointness features improve Tournament TDA fingerprints (opus-2026-05-29-S15)
+**Status:** OPEN engineering hypothesis; feature layer implemented.
+**What:** The feature vector `(alpha_1, alpha_2, alpha_3, support_excess, max_support_multiplicity, core_size, projection_kill_vertices, max_deletion_loss_frac)` from the odd-cycle conflict graph should distinguish localized inconsistency, distributed disjoint cycle families, and support-multiplicity effects better than `(H, score, t3, beta_1)` alone.
+**Evidence:** S11/S12 showed H=63 complete-core classes and THM-025-style real-root failures differ mainly in odd-cycle disjointness/projection residue, not in H alone. S15 implements exact `omega_*` features for n≤9 in `04-computation/tournament_tda.py`; the demo now emits these in the ML feature vector.
+**Next:** Benchmark the `omega_*` feature block on synthetic Paley/interval/near-transitive families and real ranking datasets; test whether it prefilters real-root failures or path-homology anomalies.
+Source: `04-computation/tournament_tda.py`, `05-knowledge/results/tournament_tda_omega_features_s15.out`, INV-192, INV-193.
+
+## HYP-1777: Good-cut transport height changes are quotient-boundary crossings (opus-2026-05-29-S15)
+**Status:** CONFIRMED for n=3..6 exact selected mask families; OPEN generally.
+**What:** For ordered tiling half-lines in the tested Hamming mask families, `Delta g != 0` always changes the merged tournament class. Equivalently, same-class and even-only/silent defects live inside `g`-neutral transport.
+**Evidence:** `goodcut_transport_excess_s15.py` stratifies half-lines by source good-cut bucket, `Delta g`, projection defect, and self/spine/ribs/sea geometry. The `bad` count (nonzero `Delta g` without merged tournament change) is zero for n=3..6 across d=1, middle layers, complement-tiling, and all-waggly for n≤5.
+**Geometry:** At n=6, wiggly half-lines with `|Delta g|=1,2,3` are sea-dominated (73.8%, 67.7%, 72.7% sea), while the extreme `|Delta g|=5` jump is pure spine. The interval gas controls possible heights; quotient transport controls where height leaks into the merged metagraph.
+**Next:** Prove this from HYP-1764 or find the first n=7 counterexample; add normalized `Delta g` transport features to `tournament_tda.py`.
+Source: `04-computation/goodcut_transport_excess_s15.py`, `05-knowledge/results/goodcut_transport_excess_s15.out`, `07-reflections/quotient-transport-and-good-cut-gas.md`.

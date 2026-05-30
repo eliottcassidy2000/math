@@ -95,6 +95,27 @@ Total = 50(n−4) + C(n−4,2) = (n−4)(n+95)/2.
 - n=7: 3·102/2 = 153 ✓
 - n=8: 4·103/2 = 206 ✓
 
+## General Bucket Recurrence (THM-348)
+
+THM-348 upgrades the small-bucket arguments above to a full recurrence. With
+`N=n-1` legal cuts, let
+
+`B_N(x) = Σ_g #{tilings with |G|=g} x^g`.
+
+Let `c_L` be the number of interval subsets covering a connected run of `L`
+cuts, using intervals of length at least 2. Then
+
+`B_N(x) = B_{N-1}(x) + Σ_{L=2}^N c_L x^L B_{N-L-1}(x)`.
+
+This explains the formulas here uniformly:
+
+- `|G|=2`: one run of length 2, so `n-2`.
+- `|G|=3`: one run of length 3, so `5(n-3)`.
+- `|G|=4`: one run of length 4 plus two separated runs of length 2, giving
+  `50(n-4)+C(n-4,2)`.
+
+See `01-canon/theorems/THM-349-good-cut-interval-union-recurrence.md`.
+
 ## Computational Verification
 
 | n | |G|=0 | |G|=1 | |G|=2 | |G|=3 | |G|=4 | |G|=n-1 (SC) | Total |
@@ -128,4 +149,4 @@ The jump from 0 to ≥2 good cuts (skipping 1) reflects the binary tile structur
 - `StTiling.goodCutCount_eq_top_iff_all_cuts_good`: top bucket iff every legal cut is good.
 - `StTiling.goodCutCount_reflect`: grid reflection preserves `g`.
 
-The S14 audit shows these depend only on Lean foundations, not on project-specific axioms.
+The S15 audit shows these depend only on Lean foundations, not on project-specific axioms.
