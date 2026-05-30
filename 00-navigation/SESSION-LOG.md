@@ -1,5 +1,13 @@
 # Session Log
 
+## codex-2026-05-30-S4 - Third-Pass Ten-Lens Historian Noise Ledger
+
+**Account:** Codex
+**Git first:** Continued from clean `main...origin/main` and followed the user's request to spend a much deeper pass preserving obscure, minor, possibly irrelevant angles for future inspiration/noise.
+**Repo archaeology:** Read the current historian index, large session-log title ranges, recent endpoint-transfer/collision files, residue-calculus and good-cut/SCC files, fugacity/alphabet/Zeckendorf/cubic-family reflections, S71 philosophical descent logs, application/codec drafts, Knuth leads, and a random-ish sample of reflection titles.
+**Knowledge update:** Expanded `00-navigation/HISTORIAN-TANGENT-INDEX.md` with a new `Third-Pass Ten-Lens Noise Ledger` containing 12 passes: session-title freebies, endpoint boundary microscopy, residue/projection dust, good-cut/bucket micro-mechanics, fugacity/alphabet sparks, 2-adic/Baer/design breadcrumbs, S71 golden-projective echoes, physics/chemistry/transformer/agency analogies, applications/codecs, Knuth/literature leads, random title breadcrumbs, and arithmetic proper-noun sparks.
+**Next:** Future historian sessions should treat this section as intentionally noisy: append newly found one-line oddities rather than over-pruning them into only mature themes.
+
 ## codex-2026-05-30-representation-lens - Root-Sign Representation Synthesis
 
 **Account:** Codex

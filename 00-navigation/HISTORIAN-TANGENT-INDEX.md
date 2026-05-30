@@ -334,6 +334,401 @@ clean synthesis.
 - Tower crossings beyond k=2 and k=3 are analogies unless separately proved;
   7->21->42 is not a general forbidden cascade.
 
+## Third-Pass Ten-Lens Noise Ledger
+
+This pass is deliberately over-inclusive. It combines session-title harvests,
+recent S95/S355 files, older philosophical descents, random-ish reflection
+titles, and application/codec side quests. The point is not canon. The point is
+to leave future agents with many small handles that might unexpectedly open.
+
+### Pass 01: Session-Title Freebies
+
+- `codex-2026-05-30-breakthrough-map`: outward problem doors include odd
+  H-value realization, cyclic maximizers, real-root failure classification,
+  Paley/circulant GLMY Betti formulas, and Delsarte/QR bounds.
+- Formalization-driven decomposition: split forbidden-H proofs into arithmetic
+  alpha-tuples first, then structural kill lemmas; the alpha-polytope is its own
+  reusable object.
+- Lean import narrowing: a mundane tooling tangent, but preserved as evidence
+  that proof-search speed sometimes depends on shrinking the dependency cone.
+- Good-cut interval gas: good-cut sets behave like interval polymers on the
+  fixed Hamiltonian path, before the later SCC-defect explanation.
+- Projection-defect probe menu: endpoint stars, upper/lower strips, range
+  flips, and shells are different finite-difference operators.
+- All-0 staircase sequence: source/empty tiling H values and the breakdown of
+  naive `2^(n-2)+1` became a seed for tribonacci-style recursion.
+- QR/BIBD/Paley cluster: QR_7 cycle graph as cocktail party `CP(7)`, n=6
+  `2-(10,4,2)` BIBD, and Fano bridge are one design-theory corridor.
+- Burnside perturbation cluster: A000568 speedups, identity-partition
+  dominance, and the first 3-cycle Burnside correction form an enumeration
+  tangent distinct from H itself.
+- Antiferromagnetic cluster: frustration propagation, magnon flatness, and
+  exchange renormalization gave a physics language for c3/H interaction.
+- TIC/photo-codec cluster: prediction, scan order, color decorrelation, and
+  entropy coder compatibility became a non-math test bed for staircase ideas.
+- Napolitano/tournament-attention cluster: transformer gauge claims were
+  mostly weak, but the Cartan `gl(n)=so(n)+p+R` tournament bridge survived.
+- S71 descent cluster: golden projective ouroboros, seven dualities, Hertzsprung
+  atoms, Mobius strip, Euler identity, and the "cube closes" motif are a
+  long-form symbolic noise source.
+
+### Pass 02: Endpoint Boundary Microscopy
+
+- Endpoint transfer Smith split: tournament and merged endpoint matrices had
+  only odd nonzero Smith factors in tested range, while even-graph matrices
+  immediately had 2-primary torsion.
+- `Z_(2)` chain-homotopy dream: prove endpoint transfer is split-injective
+  after 2-localizing; this would lift mod-2 rank to an integral statement.
+- Private odd child mechanism: unmerged endpoint transfer through `6->7` has a
+  private odd child for every parent row, giving a triangular proof target.
+- Hall-support warning: even graphs at `5->6` have a full matching but rank
+  drops, so support-level Hall conditions are weaker than parity rank.
+- Automorphism tax slogan: tournament automorphism groups are odd, preserving
+  endpoint parity; graph automorphisms contain powers of two and torsionize it.
+- Merged private pivots are forced SC: in the complement-merged quotient, odd
+  boundary columns are self-complementary by parity.
+- Private-pivot heights: at `6->7`, merged private columns concentrate in
+  good-cut bucket 6, with small residue at buckets 0, 2, and 4.
+- Non-private SC sequence: `[0,0,0,1,14]` is a tiny endpoint-boundary sequence
+  worth remembering.
+- Ternary SC collisions: every non-private SC child column found has odd
+  support exactly 3; the first private failure is a triple, not chaos.
+- Collision child H list at n=7: `41,61,71,79,83,91,115,127,133,141,143,151,159,159`
+  are the small SC collision fingerprints.
+- Owner good-cut tuples: the 14 n=7 collisions have owner tuples
+  `(3,4,5)`, `(3,5,5)`, `(4,5,5)`, and `(5,5,5)`.
+- Not-a-triangle lesson: support-3 endpoint owners are not generally triangles
+  in the parent metagraph; induced edge counts are `{0:1,1:6,2:5,3:2}`.
+- Leaf-peelable collision block: the 3-uniform collision hypergraph peels
+  completely through `6->7`, giving a weaker triangularization.
+- Pair intersections warning: collision triples are not disjoint; among 14
+  triples there are six pairs sharing two owners, yet rank still survives.
+- Decomposable-vs-strong SC split: decomposable SC boundary nodes appear
+  private, while non-private collisions live only in the strongly connected
+  top layer.
+
+### Pass 03: Residue And Projection Dust
+
+- Residue-calculus slogan: choose supports, project/forget, then measure the
+  survivor; many old tangents become comparable only after naming the collapse.
+- Coordinate-as-defect rule: if a statistic looks path-dependent but is pure on
+  quotient classes, hunt for the quotient defect it is secretly counting.
+- Conservation is bookkeeping: row sums, half-line totals, and bucket balance
+  are checksums; the theorem often lives in the leftover escape mass.
+- Exact kill vs near kill: H=63 single-core classes have deletion residue
+  `alpha=(0,0)`, while THM-025 has small dangerous residue `alpha=(2,1)`.
+- Size/rank split: `keep_v` and `rank_res(v)` are different; a tiny survivor
+  can matter more than a broad generic residue.
+- Parity as rank-zero residue: OCF mod 2 leaves only the empty independent set,
+  but that rank-zero survivor still forces Redei oddness.
+- Paley/Interval fiber residue: same score/support shadow, different support
+  multiplicity and disjointness; not a near-kill, but a fiber-over-shadow gap.
+- Ghost-cycle search bias: look for high deletion loss, nonempty old residue,
+  and `rank_res>=2` rather than only large support.
+- Deletion-rank features: `omega_max_loss_residue_rank`, near-kill flags, and
+  residue alpha profiles were added as Tournament TDA features.
+- Flat/localized duality: Paley-like objects spread cycle mass; core-like
+  objects localize around one kill or near-kill vertex.
+- Residue vector dream: combine SCC defect, support excess, Omega alpha,
+  even-graph projection, transport leakage, and endpoint parity in one prefilter.
+- Projection commutator rule: where two natural projections almost commute, the
+  measurable residue often marks the next theorem.
+
+### Pass 04: Good-Cut And Bucket Micro-Mechanics
+
+- Good-cut identity: `good_cut_count = n - #SCC(T)`, so the old path statistic
+  is really strong-component defect.
+- Missing bucket 1 explained: `g=1` would require exactly `n-1` SCCs, hence one
+  SCC of size 2, impossible in a tournament.
+- Top bucket translation: `g=n-1` is exactly the strongly connected layer.
+- SCC contiguity along paths: SCCs appear as contiguous blocks in any directed
+  Hamiltonian path respecting the component order.
+- Endpoint insertion bias: private endpoint pivots seem to prefer children with
+  few SCCs, i.e. high good-cut height.
+- Odd buckets and SC: in merged parity, the odd child boundary is the
+  self-complementary bucket set.
+- Half-line conservation: quotient-bucket balance factors into finite half-line
+  counts plus fixed-point-free xor pairing.
+- Lucas-active leakage: bucket parity gives a lower bound, but actual cross-line
+  mass often greatly exceeds it; the excess may encode spine/ribs/sea geometry.
+- Transport row checksum: row sums, even diagonal, cross-outflow parity, and
+  Lucas-active layers are cheap sanity checks for quotient transport matrices.
+- Bucket Morse picture: single-tile flips change interval covers locally, so
+  good-cut transitions act like a low-cost Morse/TDA coordinate.
+- Endpoint row/column laws: endpoint transfer row sums are parent fiber sizes
+  and column sums are child fibers, but rank is a separate parity question.
+- Good-cut gas as polymer: interval unions on a path suggest 1D hard-core
+  recurrences distinct from the full Omega gas.
+
+### Pass 05: Fugacity, Alphabet, And Polynomial Sparks
+
+- Tournament alphabet triad: arc alphabet `{forward,backward}`, cycle alphabet
+  of odd-cycle supports, and fugacity alphabet `lambda` on `I(Omega,lambda)`.
+- `q`-tournament family: `H_q(T)=I(Omega(T),q)` changes forbidden values,
+  OCR, and dominance regimes while keeping the same conflict graph.
+- Chemistry shadow: `lambda=1` gives unweighted independent sets/Merrifield-
+  Simmons style quantities; tournaments live at `lambda=2`.
+- Topology shadow: `lambda=-1` gives Euler-characteristic cancellation, a
+  small bridge to Betti and clique-complex motifs.
+- Golden/tribonacci shadows: `lambda=phi` and `lambda=tau` were used as
+  intermediate "dimension-axis" probes of edge and triangle memory.
+- Cubic family at `x=6`: `I(Omega,6)=3H-2+sum_{k>=2}(6^k-3*2^k) alpha_k`.
+- Alpha extraction: for `n<=8`, the two evaluations `x=2` and `x=6` recover
+  both `alpha_1` and `alpha_2`.
+- Forbidden cubic values: `H=7` maps to `I(Omega,6)=19`, and `H=21` maps to
+  `61` before disjoint-cycle corrections appear.
+- `x=6` crossroads: it is both oblong `3*2` and `P(K_3,3)=6`, the proper
+  3-coloring count of a triangle.
+- Octahedral coloring space: the six proper colorings of `K_3` are the six
+  vertices of the octahedron `K_{2,2,2}`.
+- Correction factor `24`: the first cubic correction equals `P(K_4,4)`,
+  tying disjoint cycle pairs to tetrahedron colorings.
+- Cycle formula: `I(C_m,2)=2^m+(-1)^m`; odd m gives Mersenne numbers and even
+  m gives Fermat-type numbers.
+- Zeckendorf pairing: non-consecutive Fibonacci terms are independent sets in
+  a path; the skipped mediator is the hidden pair-bond.
+- Lucas minimum-gap rule: `L_m=F_{m-1}+F_{m+1}` is the tightest valid
+  Zeckendorf two-term packing.
+- `x=2` integer-root uniqueness: `I(P_k,x)` has integer characteristic roots
+  at positive integer `x` only for `x=2`, giving roots `2` and `-1`.
+
+### Pass 06: Two-Adic, Baer, And Design Breadcrumbs
+
+- Column family grid: every size decomposes as `n=2^r(2k-1)`, with row steps
+  as blowups and top-row column steps as `n->n+2`.
+- Mode B as column step: the `n->n-2` staircase recursion is cleanest on odd
+  sizes because it moves left along the top row.
+- Mode A as column crossing: `n->n-1` mixes families, matching its messier
+  "fast time scale" behavior.
+- Pair anomaly seam: from `r=0` to `r=1`, maximum matchings gain one extra pair
+  from the previously unmatched odd vertex gaining a twin.
+- SC/SF small-n warning: `SC cap SF(n)=SC(n-2)` fails at n=8, but
+  near-regularity of the classes may be the real invariant.
+- External/internal ruler duality: `v_2(n)` across sizes mirrors ruler-sequence
+  valuations inside Walsh amplitudes for fixed n.
+- HYP-217 doubling orbit: circulant `S={s,2s}` looks like an internal
+  2-adic orbit in `Z/nZ`, matching the external column-family map.
+- Baer tower refutation: `H != Phi_3(2^(2^k))` holds for k=0,1 but fails at
+  k=2 because H=273 is achievable.
+- Baer partition arithmetic: `PG(2,F_4)` decomposes as three Fano subplanes,
+  matching `21=3*7` descriptively, not predictively.
+- 360 Baer subplanes: `PG(2,F_4)` has 360 Fano subplanes, forming a
+  `2-(21,7,36)` design.
+- 960 Baer partitions: each disjoint pair of Fano subplanes extends uniquely
+  to a partition, and each subplane is disjoint from exactly 16 others.
+- `343=7^3` neighbors: each Baer subplane intersects 343 others; the
+  disjointness graph is 16-regular but not strongly regular.
+- Fibonacci polynomial mod 2: `x^2-x-1` becomes `x^2+x+1`, so phi and omega
+  collapse over `F_2`.
+- Biquadratic field `Q(sqrt(-3),sqrt(5))`: a tiny field package for omega,
+  phi, and the `F_4`/golden lift story.
+- QR_7 cocktail party graph: the 3-cycle conflict graph is `CP(7)`, with
+  complement `7K_2` pairing disjoint 3-cycles by uncovered vertex.
+- n=6 `2-(10,4,2)` BIBD: the alpha_2=4 patterns form a design on Petersen
+  vertices; alpha_2=3 is impossible because the fourth block is forced.
+
+### Pass 07: Golden Projective And S71 Echoes
+
+- `I(Omega,tau)=a+b tau`: a golden invariant that splits same-H classes at
+  n=5 and n=6.
+- Golden norm `a^2+a*b-b^2`: proposed multiplicative integer invariant of
+  `I(Omega,tau)`.
+- `C_5` eigenvalue surprise: the 5-cycle spectrum literally contains
+  `tau-1` and `-tau`.
+- `H=3` affine subspace: at n=4, the H=3 level set is XOR-closed, apparently
+  the only affine H-level set found.
+- Seven dualities as Fano points: projective, complement, Walsh, OCF,
+  Grassmann, Segre-Veronese, and statistical mechanics were organized by
+  `PG(2,F_2)`.
+- Effective duality group `(Z/2)^3`: complement, Walsh, and path reversal
+  were treated as independent involutive generators.
+- Ouroboros principle: the 2-vertex tournament `T_2` as seed/generator of the
+  whole structure.
+- H as formal language: minimal axioms `H(pt)=1` plus DP recurrence were
+  proposed to determine the invariant.
+- H information fraction: H was estimated to capture about 27% of tournament
+  information in small n, later suspected to decay analytically.
+- Type-theory reading: tournaments as types, Hamiltonian paths as inhabitants,
+  and H as number of inhabitants.
+- HP sheaf/Yoneda: `H` as global sections of a Hamiltonian-path sheaf over a
+  tournament object.
+- Mobius bundle: `M[a,*]` living on a non-orientable complement quotient,
+  with odd Walsh sections as a clue.
+- Hertzsprung/Vitali exactness: `TV(mu_H,mu_count)=1/4` at n=3,4,5 and
+  derangement fraction `D_n/n!` appeared as exact side identities.
+- Octonion echo: octonion multiplication table equals Fano plane incidence,
+  used as a mental organizer for the seven dualities.
+- Euler identity as tenth face: `e^{i pi}+1=0` was treated as the closing face
+  of the S71 symbolic descent.
+
+### Pass 08: Physics, Chemistry, Transformers, Agency
+
+- Four attention matrices: `W_Q,W_K,W_V,W_O` were treated as the intrinsic
+  quaternionic 4-tuple of an attention head.
+- `gl(4)=so(4)+p+R`: the `6+9+1` Cartan split gave the 2/3 tournament/dark
+  ratio in the transformer attention story.
+- CD-transformer tower: scalar residual, complex Q/K, quaternion head,
+  octonion head pair, sedenion layer, then no clean algebra between layers.
+- Sedenion zero divisors: full-layer hypercomplex structure predicts rank
+  collapse/information loss unless zero divisors are constrained.
+- Cartan ratio ladder: `so(4)/p=6/9`, `so(8)/p=28/35`, `so(16)/p=120/135`;
+  cooperation stays slightly larger than competition.
+- Napolitano caution: "transformers are gauge theories" was rated weak, but
+  dark-mode correctness and Cartan decomposition remain useful probes.
+- Soft OCF bridge: thresholded/soft attention tournaments make H-like
+  invariants differentiable candidates for uncertainty analysis.
+- Hard-core phase reading: `H=I(Omega,2)` puts tournaments at fugacity 2;
+  OCR breakdown at n=5 was tied to the hard-core uniqueness threshold.
+- Fiber fraction as free energy: Wallis decay `~1/sqrt(pi n)` gives a
+  logarithmic barrier `~(1/2)log(pi n)`.
+- Cycloalkane correspondence: cyclopropane/cyclobutane strain, cyclohexane
+  strain-free n=6, and cycloheptane forbidden-prime echoes.
+- n=5 24 regular tournaments: orbit size 24 was compared to 24-cell monopoles
+  and `D_4` triality.
+- Benzene/E7 bridge: `I(C_6,1)=18=h(E_7)` as a chemical shadow of the n=6
+  tournament transition.
+- Agentic mathematics: inert/ramified/split agents, H=7 as impossible society,
+  and proofs as crystallization protocols.
+- Protein-folding tower: alpha helix `i->i+4` as quaternionic coupling,
+  cotranslational folding as octonionic order-dependence, misfolding as
+  sedenion zero divisor.
+
+### Pass 09: Applications, Codecs, And Product Oddities
+
+- FormalRank for LLM evaluation: one-pass streaming ranking from pairwise
+  comparisons, pitched at Chatbot Arena-style data.
+- Wash-trading detection: streaming cycle sieve flags circular trades via
+  high observations but near-zero net score.
+- Attention-level hallucination monitor: fast-channel spikes in attention
+  tournaments were proposed as pre-token contradiction signals.
+- A/B test cycle detector: intransitive variant preferences expose Simpson-
+  style contradictions invisible to ordinary experiment dashboards.
+- Peer review aggregation: papers and reviewers form noisy pairwise
+  tournaments; SPLIT channel could flag contentious submissions.
+- Bug triage ranking: daily pairwise priority decisions produce a live
+  tournament with cycle warnings.
+- Content moderation severity: moderator disagreement can be handled as a
+  tournament instead of averaged scalar labels.
+- Cache eviction: LRU/LFU/ARC become tournament ranking strategies on cache
+  lines, with phase transitions in the fast channel.
+- Dating-app preferences: swipe choices are user-specific tournaments where
+  intransitivity measures multidimensional taste.
+- Microservice dependency monitoring: streaming cycle detection as sidecar for
+  circular service-call failures.
+- TIC-GR2 lesson: 64-context EMA + MED + simple color decorrelation beat more
+  elaborate JPEG-LS-inspired features on real photos.
+- TIC-GR4 warning: run mode, sign correction, and bias correction can hurt
+  when 365-context JPEG-LS sparsity meets small images.
+- `tc.html` hex truth: making the editable hex textarea the source of truth
+  turned compression into an interactive glitch-art lab.
+- Mosaic v4 codec: multi-backend and multi-predictor selection got 26/31 wins
+  versus WebP lossless but at slow brotli/lzma speeds.
+- Content-type codec rules: palette+brotli for UI screenshots, 4:2:0+MED+brotli
+  for medium photos, raw+lzma for code-editor images.
+- Prediction-entropy caution: a better predictor can compress worse if it
+  destroys the entropy coder's local regularity.
+
+### Pass 10: Knuth, Literature, And Algorithm Leads
+
+- Knuth Fascicle 8a: path flipping and exhaustive Hamiltonian path/cycle
+  enumeration may contain tournament-ready techniques.
+- Claude's Cycles: odd Cayley digraph decomposition via serpentine Gray codes
+  parallels Paley/QR exactness through algebraic structure.
+- Redei Revisited lead: Dirac/Berge stronger parity theorems for mixed graphs
+  may give mod-4 or mod-8 OCF information.
+- ZDD for `I(Omega,x)`: use zero-suppressed decision diagrams on sparse
+  complement constraints to push independence polynomial computation.
+- DLX exact cover: odd-cycle packings are exact-cover-like rows over vertex
+  columns; Dancing Links could enumerate OCF terms.
+- Permanent/cycle-cover bridge: tournament adjacency permanents count cycle
+  covers, adjacent to but not identical with OCF odd-cycle packings.
+- Polya/Burnside for Paley: orbit counts of odd-cycle packings under the affine
+  QR group might explain `H(T_p)/|Aut(T_p)|`.
+- A000568 correction term: the asymptotic recursion's first correction comes
+  from partition type `(1^{n-3},3^1)`.
+- Identity partition dominance: the Burnside identity partition contributes
+  about 99.6% at n=10, suggesting large-n enumeration is almost trivial plus
+  controlled resonances.
+- Mitrovic noncommutative Redei-Berge: deletion-contraction for noncommutative
+  digraph invariants remains a direct proof lead.
+- Hikita/Stanley-Stembridge: e-positivity of unit interval graphs is a
+  positivity neighbor for chromatic Redei bridges.
+- Tang-Yau symbol matrices: circulant path homology should be attacked through
+  Fourier/symbol ranks, especially Paley and interval tournaments.
+- Satake NDRT warning: the quartic-coset q=13 Satake NDRT is not an H-maximizer;
+  doubly/nearly regular structure alone does not predict H optimality.
+- `Claude-like` count 760: preserve this proper noun/number as an algorithmic
+  analogy for "LLM-guided construction later made exact."
+
+### Pass 11: Randomish Reflection Title Breadcrumbs
+
+- `staircase-paradox-controls-compression.md`: title-level reminder that
+  staircase recursion and codec scan/prediction tradeoffs were explicitly
+  connected.
+- `transport-row-checksum.md`: checksum language for quotient transport is a
+  small engineering bridge, not just proof bookkeeping.
+- `snark-generation.md`: snarks were repeatedly treated as resistant agents and
+  non-3-coloring obstructions parallel to prime/local impossibilities.
+- `geometric-alignment-of-merged-metagraph.md`: merged-metagraph geometry may
+  have alignment features beyond H, score, and bucket labels.
+- `fugacity-axis-five-points.md`: five special evaluations on the independence
+  polynomial axis are a compact way to remember the dimension ladder.
+- `three-types.md`: lossless, lossy, and crystallization were once treated as
+  the three computation types.
+- `two-thirds.md`: the 2/3 motif links Napolitano depth, `T_11` triples,
+  Cartan `6/9`, quaternion compression, and LLM dark/active ratios.
+- `the-cartan-passage.md`: Cartan decomposition is the recurring bridge from
+  antisymmetric tournament data to symmetric shadows.
+- `the-asymmetry-that-isnt.md`: the user's n=3 "3 ways vs 1 way" observation
+  became detailed balance plus concentrated creation.
+- `eigenvalues-of-the-merged-metagraph.md`: metagraph spectrum is an
+  under-preserved geometric invariant of the quotient itself.
+- `transform-algebra-as-compression.md`: transforms were treated as compression
+  engines, not merely representation changes.
+- `beyond-3-coloring.md`: 3-color obstruction language was pushed past ordinary
+  graph colorability into tournament/snark analogies.
+- `metagraph-summand-recursive.md`: summand-graph recursion and metagraph
+  recursion were once put in the same mental bucket.
+- `42-to-43.md`: the closed Hurwitz/Bernoulli world `42` and the new-agent
+  prime `43` remain a vivid phase-separation metaphor.
+- `the-orthogonal-shadow.md`: gauge/Wilson-loop shadow language is a preserved
+  bridge for future attention or representation-theory work.
+- `quotient-transport-and-good-cut-gas.md`: the quotient transport problem and
+  interval gas should be remembered as one coupled object.
+
+### Pass 12: Arithmetic Proper-Noun Sparks
+
+- Supersingular triples: `(2,24,sqrt(2))`, `(3,8,2cos(pi/7))`,
+  `(5,12,phi)` were used as real/complex/arithmetic archetypes.
+- Moonshine prime list: the 15 supersingular primes include Hurwitz
+  `{2,3,7}` and VS intruder 5, but not Sylvester 43.
+- `987=3*7*47`: read as `L_2*L_4*L_8`, accumulating Lucas twists at
+  power-of-two Fibonacci doublings.
+- Amplituhedron grammar: large signed sum, cancellation, positive geometry,
+  hierarchy, and 2-adic stability were matched to tournaments and chemistry.
+- Hückel rule echo: `4n+2` has exactly one factor of 2, a chemistry stability
+  condition compared with tournament 2-adic universality.
+- Base-42 Erdős-Straus: `4/n` Egyptian fractions reduced by base-42 covering
+  to a few hard residue classes.
+- Prime telescope music: sieve costs `ln(p/(p-1))/2` were heard as intervals,
+  with PNT density as harmonic survival.
+- CHORD/twin-prime constant: a multiplicative function for gap divisors was
+  tied to both prime density and prime spacing.
+- Paley 1729: `H(T_11)/|Aut|=1729=7*13*19`, with all factors splitting in
+  Eisenstein integers.
+- K-theory over `F_2`: `K_{2i-1}(F_2)=Z/(2^i-1)` was used as a Mersenne/forbidden
+  value echo.
+- Kervaire/exotic 7-spheres: `|Theta_7|=28=4*7` was logged as topology's copy
+  of the first forbidden value.
+- `j`-invariant constant: `744=24*31` tied binary tetrahedral order to
+  Mersenne 31 in moonshine speculation.
+- E8 exponent units: E8 exponents `1,7,11,13,17,19,23,29` are units mod 30,
+  another `{2,3,5}`-controlled data point.
+- Golay `[24,12,8]`: extended Golay parameters were repeatedly mapped to
+  Leech/Binary-Tetrahedral/E8 numerology.
+- `PSL(2,Z)=Z/2*Z/3`: the modular group as the free product of the two
+  tournament keys remains a compact meta-proper-noun.
+
 ## Core Tournament Geometry
 
 - Isomorphism class graph `G_n`: the "space of all tournaments" after
