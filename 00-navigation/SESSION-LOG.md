@@ -1,5 +1,13 @@
 # Session Log
 
+## opus-2026-05-30-S3 - Second-Pass Small Motif Ledger
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main` and followed the user's request to make the historian document preserve obscure, minor, possibly irrelevant concepts rather than only polished themes.
+**Repo archaeology:** Searched for user/human/inbox traces and read human Paley drops, old broadcast handoffs, mistake notes, random reflection samples, compression/application outputs, and side-quest files. Special attention went to small exact constants, failed conjecture fragments, one-off reductions, user observations, and "this might matter someday" proper nouns.
+**Knowledge update:** Expanded `00-navigation/HISTORIAN-TANGENT-INDEX.md` with a new `Second-Pass Small Motif Ledger` near the top. It preserves Paley T11 ratio/c9 fragments, A000255 overlap pyramid, log/doubling observation, blue-line tiling multiplicity, grid-overlap decomposition, summand graph `{1,4,6}`, Pascal three-strand sequence, demicube/simplex-cuboid/Baer motifs, Bernoulli/Sylvester/Kaprekar constants, H=21 star obstructions, quotient/clique-complex hooks, waggly coherent configuration, unit-distance CM analogy, precious-metals DAO, compression scan orders, and definition warnings.
+**Next:** Treat the small motif ledger as a living "minor-key index": whenever a future session finds a strange user-flavored aside, add a one-line preservation bullet even if it is not ready for the main tangent registry.
+
 ## codex-2026-05-30-breakthrough-map - Famous/Open Problem Research Sprint
 
 **Account:** Codex

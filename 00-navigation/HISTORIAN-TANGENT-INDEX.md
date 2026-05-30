@@ -18,6 +18,308 @@ Useful synthetic maps added later:
   Erdős tournament problems, Hamiltonian-path maximization, real-root failure
   classification, Paley/circulant path homology, and QR/coding-theory bridges.
 
+## Second-Pass Small Motif Ledger
+
+This section intentionally preserves small, odd, maybe-irrelevant fragments.
+Many came from human drops, user observations, or one-session side quests. They
+are listed because they are exactly the kind of thing that vanishes from a
+clean synthesis.
+
+### Human And User-Scented Fragments
+
+- Paley T_11 ratio coincidence: the hoped-for `c_7/C(11,7)=c_9/C(11,9)=4`
+  failed, but the failure exposed a useful "large k integrality" question for
+  Paley cycle counts.
+- Paley T_11 taxicab audit: `H(T_11)=95095`, so `H/|Aut|=1729`; the old
+  `3^k` pattern died, but the Hardy-Ramanujan number survived as a signal.
+- Paley `c_9` two-orbit reduction: every 9-cycle misses a pair, and QR/NQR
+  pair orbits give `c_9=(55/2)(h_QR+h_NQR)`.
+- QR deletion sub-tournament: `T_11 \ {0,1}` has score sequence
+  `(4,4,5,5,4,3,3,4,4)` and 28 directed 3-cycles; preserve this exact
+  9-vertex object as a named test case.
+- `h_QR+h_NQR <= 8`: the sharp condition the false `H(T_11)=4455`
+  conjecture would have required; useful as a negative benchmark.
+- `T_5` caution: the rotational 5-tournament is not a Paley tournament in the
+  prime `p == 1 mod 4` sense; do not fold it into uniform Paley patterns.
+- Human Document 5 correction framework: first-return decomposition and
+  Type A/B/C non-simple walk corrections were conceptually interesting even
+  though the arithmetic failed.
+- Per-path near-cancellation: in the failed per-path identity, `A-B` and `B-D`
+  have nearly equal opposite means; the "wrong" formula was pointing toward a
+  real aggregate compensation.
+- Type-II inflation vs 5-cycle payment: extra `mu=3` weight from a complementary
+  3-cycle may be "paid for" by longer through-v cycles.
+- User's "logs of things double": `ln(4)=2 ln(2)`, `ln(8)=3 ln(2)` became the
+  log-as-dimensional-annihilator motif.
+- Diagonal dimension: `D(sqrt(2))=phi*(sqrt(2)-1)≈0.670`; the diagonal is
+  "two-thirds of an edge" on the dimension axis.
+- `ln(2)*phi≈1.122`: total dimension of splitting a doubling into n roots;
+  a tiny information-geometry constant.
+- Square root vs logarithm: square root projects high dimension downward,
+  while logarithm annihilates tessellation dimension into information.
+- User-guided A000255 overlap pyramid: total compatible HP pairs
+  `n! * A000255(n-1)`; at n=5 the row `[14,20,14,4,1]` sums to 53.
+- Exact OCR decomposition at n=5: `1-OCR = P(PoS)*4 Var(c5|PoS)/Var(H) =
+  4/133`; the residual lives in one near-regular score class.
+- `133=(10-3)(10+9)=7*19`: tiny OCR denominator numerology around the
+  n=5 boundary.
+- HP overlap increases with H inside the PoS class: H=11,13,15 have average
+  path overlap 1.64, 1.74, 1.77.
+- User's n=3 asymmetry: 3 ways to break cyclic vs 1 way to create it from
+  transitive; generalized into detailed balance plus concentrated creation.
+- Skip-s creative capacity: from transitive, flipping a skip-s tile gives
+  `H=1+2^(s-1)`; apex flips have the largest creative capacity.
+- Source blue line: anti-diagonal class has `1+2^(n-2)` tilings, equal to its
+  H value for n=4,5,6.
+- H as tiling multiplicity: for single-tile blue neighbor classes, H equals
+  the number of fixed-base staircase tilings representing the iso class.
+- User grid-overlap structure: `tournament(n)` as two overlapping
+  `tournament(n-1)` grids sharing a `tournament(n-2)` plus an apex arc.
+- Four-region self-loop decomposition: `F(n)=2*bottom+overlap+apex`, with
+  bottom=top by complement symmetry; S_n mixing breaks clean orbit factoring.
+- Pair-stabilizer idea: use the stabilizer `S_{n-2}` of `{0,n-1}` to make
+  the four-region tiling decomposition invariant before inducing to S_n.
+- User's perpendicularity: blueself/blackself pairs are transverse to the
+  external blue line from transitive to full tiling.
+- Full tiling H sequence: `3,5,9,17,31,57,105,...`; the naive `2^(n-2)+1`
+  breaks at n=7 and gives way to a Tribonacci/A000213 sequence.
+- User Pascal sequence: `1,1,2,3,4,6,10,15,20,35,56,70,...` is three
+  interleaved binomial strands `C(2k+1,k)`, `C(2k+2,k)`, `C(2k+2,k+1)`.
+- Strand ratio 2: the third Pascal strand divided by the first is exactly 2,
+  a tiny echo of OCF fugacity.
+- User summand generators `{1,4,6}`: exactly the missing dependency module
+  when starting the distinct-summand graph from `{2,3}`.
+- Missing node 3: 3 would be 1-dependent, but it is already a seed in the
+  `{2,3}` generated component; that is why the module is `{1,4,6}`, not
+  `{1,3,6}`.
+- Zeckendorf of forbidden values: `7=F_2+F_4` is the tightest valid two-term
+  packing; `21=F_8` is a single Fibonacci reset point.
+- Zeckendorf of `H(T_7)=189`: indices `[3,5,8,11]`, gaps `[2,3,3]`, gap sum 8.
+- Zeckendorf of `H(T_11)=95095`: terms `[8,144,610,1597,17711,75025]`, indices
+  `[6,11,14,16,20,24]`; unexplained but preserved.
+- User simplex/cuboid frame: `(x+1)^n` simplices vs `(x+2)^n` cuboids, packing
+  simplices inside cuboids, and the Fano identity `4^2-3^2=7`.
+- Demicube corner theorem: the user's `2,4,8,...` corner-piece pattern became
+  volume `1/n!` for each of `2^(n-1)` demicube corners.
+- Baer subplane angle: projective plane sizes and Baer towers were tested as
+  forbidden-H analogues, then refuted beyond the first cases.
+- Human-requested projection-defect angle: H=63 exact deletion kill vs THM-025
+  near-kill with 92/94 cycles through one vertex.
+
+### Tiny Arithmetic And Constant Motifs
+
+- Bernoulli chain: `6 -> 42 -> 1806 -> 1806`; von Staudt denominators stabilize
+  at the self-selecting prime set `{2,3,7,43}`.
+- Sylvester primality filter: Bernoulli follows Sylvester products until
+  `1807=13*139` is composite, then freezes at 1806.
+- Sylvester Egyptian unity: `1 = 1/2 + 1/3 + 1/7 + 1/43 + 1/1807 + ...`.
+- Mersenne/Sylvester intersection: exactly `{3,7}`; after that binary and
+  cyclotomic encodings diverge.
+- Lucas-Lehmer vs Sylvester at 7: `47-43=4`, remembered as a Cayley-period
+  discrepancy.
+- Kaprekar constant: `6174 = 2^1 * 3^2 * 7^3`; likely numerology, but a vivid
+  "staircase exponents" motif.
+- 43 as bridge: `43 = Phi_6(7) = 42+1`, splits in Eisenstein integers, and
+  closes the first Bernoulli fixed set.
+- `42 -> 43` phase separation: 42 is computational triple point; 43 is the
+  first post-Hurwitz symmetry break.
+- 5 as content: 5 is the pentagon/golden/creative direction not generated by
+  the infrastructure lattice `{2,3,7}`.
+- 10 as interface: `10=2*5=C(5,2)=dim so(5)=|V(Petersen)|≈2eτ`, the n=5 arc
+  boundary where many fields meet.
+- `91=10^2-3^2=7*13`: arc-count square minus atom square; recurring n=5/n=6
+  surprise factor.
+- `210=2*3*5*7`: "all four agents" primorial: infrastructure plus content.
+- Golden rapidity: `rho_phi=arctanh(1/phi)=(3/2)ln(phi)`, a direction outside
+  the Hurwitz rapidity lattice `{ln2,ln3,ln7}/2`.
+- Universal k-nacci identity: for dominant k-nacci root `rho_k`,
+  `rho_k + rho_k^(-k) = 2`; preserves why OCF fugacity is 2.
+- Tau-phi/e crossover: `2eτ≈10` says binary, analytic, and tribonacci scales
+  meet at the n=5 arc count.
+- Two-thirds cluster: `D(sqrt(2))≈2/3`, Napolitano 67% depth, `T_11`
+  transitive-triple fraction exactly 2/3, and `dim so(4)/dim p_4=6/9`.
+- `n=11` uniqueness: regular tournament transitivity equals 2/3 only at n=11.
+- π from fiber fractions: central binomial `C(2k,k)/4^k≈1/sqrt(pi k)` because
+  score-preserving flips are random-walk returns.
+- π=4 in tournament L1 space: Hamming/taxicab circles have intrinsic π=4,
+  while Gaussian asymptotics return Euclidean π.
+- `4/pi` conversion factor: exchange rate between discrete L1 tournament
+  geometry and continuous L2 approximations.
+- Squigonometry: π_p for Lp metrics has π_1=π_infty=4 and π_2 minimal.
+- Wallis/Pochhammer ladder: fiber-fraction ratios reproduce the Wallis product
+  that converges to π.
+- Four staircase constants: `sqrt(2)`, π, e, and Euler's γ arise from L1/L2
+  geometry, CLT, Stirling, and next-order asymptotics.
+- `29=5^2+2^2=1^2+7*2^2`: mean H at n=6 split in Gaussian vs Hurwitz worlds.
+- `2^10=10^3+4!`: true arithmetic/tournament crossing at n=5; useful but
+  limited and explicitly audited as non-general.
+
+### Small Obstruction Shapes
+
+- H=21 `alpha_1=8, i_2=7` star: one 3-cycle disjoint from all seven others,
+  a `K_{1,7}` pattern.
+- H=21 `(8,1)` hole: why `i_2=1` never occurs when `alpha_1=8` remains a
+  crisp obstruction micro-problem.
+- H=21 `(10,0)` hole: `alpha_1=10` at n=8 always has source/sink and `i_2=2`.
+- Cycle-rich min-H: at n=8, tournaments with no source/sink and every vertex
+  in a 3-cycle have minimum H=25, just above the H=21 gap.
+- Vertex in no 3-cycle: then it lies in no directed cycle of any length; this
+  was the Key Lemma for deletion induction.
+- `mu=1` degeneracy at n<=5: the per-path identity was true only because
+  complements were too small to contain odd cycles.
+- First failure at n=6: a Type-II position fails exactly when the remaining
+  three vertices form a directed 3-cycle.
+- 5-cycle payment hypothesis: higher cycles may compensate for local 3-cycle
+  mu inflation in Claim A.
+- Ballot/Dyck residue: Type-II positions in L-cycle windows counted by clean
+  binomials `C(L-2,2k-1)`.
+- Complete-Omega target gaps: single-core weighted signatures miss `r=3` and
+  `r=10` through length 40, while `r=31` appears at H=63.
+- Support-excess: Paley and interval T_7 have identical odd-cycle support
+  shadows but different multiplicities.
+- Complete vs near-complete residue: H=63 kills all cycles by deleting the
+  core; THM-025 leaves a tiny residue that still breaks real-rootedness.
+- One data point warning: 7 being Mersenne and forbidden does not imply other
+  Mersennes are forbidden.
+
+### Obscure Geometry And Topology Hooks
+
+- Fano locus codimension 5: lines on cubic hypersurfaces, 27 lines on a cubic
+  surface, and pentagonal/golden codimension as a geometry-prime motif.
+- Geometric primes: primes as branch-locus fibers of `Z[omega] -> Z`, with
+  inert/split/ramified behavior.
+- Symbolic snarks: non-3-edge-colorable cubic graphs as global topological
+  obstructions, contrasted with locally detected primes.
+- Blindspot triads: underconnected topic pairs such as `cartan_attention +
+  feedback_arc`, `dark_even_graph + vitali_gap`, and `feedback_arc +
+  magnitude_reachability`.
+- min-FAS as order parameter: H is entropy inside a feedback-arc stratum, not
+  a complete substitute for order distance.
+- Dark H failure: acyclic-orientation counts overlap too much between
+  Royle-even/dark sides; the sign representation must enter.
+- Quotientope warning: `G_n=Q_m/S_n` quotients a cube, not a weak-order
+  permutohedron; it is quotientope-like but not a Pilaud-Santos quotientope.
+- Clique complex of merged metagraph: n=5 has beta_1=2; n=6 has beta_1=15
+  and beta_2=7, hinting at topological blowup of tournament space.
+- h-vector negativity: clique complexes of `G_n/Z_2` fail polytope-boundary
+  tests by negative h-vector entries and low connectivity.
+- Hypotenuse generates everything: fixed tiles on the staircase hypotenuse
+  determine GS tilings, SC fibers, blue lines, and spine/ribs/sea.
+- Staircase ASCII diagrams: n=5/n=7 reflected tile labels A/a, B/b, F are
+  worth preserving as a visual mental model.
+- Hamming scheme -> Schurian coherent configuration -> waggly fusion: the
+  waggly layers are a broken Hamming association scheme under S_n quotient.
+- Waggly paradox: scheme breaking grows with n while Markov accuracy improves.
+- n=8 catastrophe: SC backbone fragments, conflict graph perfectness fails,
+  beta_3<=1 breaks, seesaw breaks, and complement-flip overlap returns.
+- MacWilliams-type complement line: d=m waggly/complement move acts like a
+  MacWilliams transform on orbit weight distributions.
+- Prime/composite perturbation: composite n has tiny positive Burnside excess
+  from resonance partitions `(d^(n/d))`.
+- Prime n is clean: no nontrivial resonance partitions, so Burnside corrections
+  are more orthogonal.
+- Composite n is noisy: gcd entanglement among cycle parts mirrors composite
+  eigenspace jumps in Tang-Yau circulant homology.
+- Space-filling tournaments: Gray-code traversal of the tournament hypercube
+  would make H a constrained odd-valued random walk.
+- Tournament Hilbert curve: desired enumeration visits score classes locally,
+  then cycle structures, then H values.
+- Peano gaps: forbidden values are discontinuities in the discrete
+  space-filling path through achievable tournament polynomials.
+- Unit-distance bridge: CM norm-1 units correspond formally to independence
+  polynomial root pairs with `alpha_2=1`.
+- Golod-Shafarevich analogy: split cycles vs inert cycles as a possible
+  generator/relation criterion for interlacing persistence.
+- Spencer-Szemeredi-Trotter vs Turan: unit-distance upper-bound technology
+  suggested sharper alpha_2/ULC bounds.
+
+### Engineering And Application Oddities
+
+- Precious-metals micro-DAO: small-group physical gold/silver ownership as a
+  concrete use case for tournament trust scoring.
+- Proof of reserves via tournament coherence: physical auditors form a
+  pairwise agreement tournament; H/E[H] measures audit coherence.
+- Cayley trust voting: `Q(x)=(1+x)/(1-x)` converts agreement rate into odds
+  weight for governance.
+- Validator anomaly score: compare H(T) to E[H] and use vertex deletion
+  influence `|H(T)-H(T\i)|/E[H]` to flag bad actors.
+- Photo compression wall: tournament theory guided GRD/RBD color
+  decorrelation, MED prediction, and lzma choice, but not a whole codec.
+- Prediction-entropy duality: better per-pixel residuals can compress worse
+  if scan order destroys entropy-coder regularity.
+- Wavefront scan: best prediction, bad entropy stream; a cautionary algorithm.
+- Quincunx pyramid: multiresolution residuals compress well because levels
+  have stationary statistics.
+- Structure-aligned scanning: raster, transpose, diagonal, anti-diagonal, and
+  ring scans correspond to the two legs, two diagonals, and center of the
+  staircase triangle.
+- Ring scan: radial structure from the hypotenuse midpoint; useful for circles
+  and a direct image-compression echo of staircase geometry.
+- GRD/RBD color decorrelation: green-red-difference and red-blue-difference
+  channels exploit high RGB correlation.
+- Fractal tournament codec: store tournament-like structure by quotient,
+  residual, and reconstruction maps; mostly conceptual but recurrent.
+- Tournament Hilbert hashing: locality-preserving tournament enumeration could
+  support databases, MCMC, and differential compression.
+
+### Minor Algebraic/Conceptual Hooks
+
+- Hidden orthogonality template: directed structure -> symmetric shadow ->
+  scalar invariant; direction creates, symmetry reads, scalar controls.
+- OCR as "orthogonal control ratio": score shadows capture most H variance
+  because observable entropy matches score-sequence entropy.
+- Eigenvector three types: real eigenvalue=inert, Jordan block=ramified,
+  complex conjugate pair=split.
+- Exceptional point as ramification: split eigenvalues coalesce into a Jordan
+  crack at eigenvalue `1/phi`.
+- Self-observation chain: `3 -> 7 -> 47 -> 2207` via Lucas-Lehmer-like
+  recurrence; the `-2` is the Cassini atom.
+- Lossless/lossy/crystallization: isomorphism, projection residue, and
+  deterministic irreducible transformation as the three computation types.
+- Carry and ghost: 7 is `(1,1,0)` in the cuboid, the identity 1 with position
+  removed; forbiddenness as a carry the system cannot materialize.
+- Binary channel never carries: Redei oddness means the mod-2 coordinate stays
+  at x=1 forever.
+- 7 and 21 adjacent in cuboid curvature direction; 7 adjacent to identity in
+  position direction.
+- Polynomial as inter-dimensional messenger: `I_T(x)` speaks chemistry at x=1,
+  edge/Fibonacci near phi, triangle/tribonacci near tau, tournament at x=2,
+  topology at x=-1.
+- Inter-dimensional transfer matrix: correlations `Corr(I_T(x1),I_T(x2))`
+  could reveal blocks of information shared by different dimensions.
+- sigma-CR: proposed analogue of OCR for `sigma=I(1)` chemistry information.
+- SRCP polynomial question: does per-arc local cycle data determine the whole
+  independence polynomial, not just H?
+- Petersen as interface graph: `K(5,2)` vertices are arcs of a 5-tournament;
+  disjointness is the cycle-packing relation.
+- Petersen exceptionalism: `K(5,2)` is the Kneser graph with no Hamiltonian
+  cycle and was treated as tournament theory's small exceptional graph.
+- Fractional chromatic `chi_f(K(5,2))=5/2=Q(3/7)`: tiny Cayley-transform
+  bridge between Petersen and curvature ratios.
+- I(Petersen,2)=461: if Petersen were a conflict graph, this would be its
+  fictive H-value.
+- Tangent number connection: base polynomial value `P_n(0,0)` equals
+  `2^((n-1)/2)` times the nth tangent number, linking sec-tan permutations.
+- Null-space dimension formula: number of odd cycle types minus number of
+  distinct S-values; a small bookkeeping invariant in the master decomposition.
+- Inflated independence polynomial `G_T`: not a descent polynomial, but it
+  interpolates `I(Omega,x)`, `n!`, and Eulerian-style boundary values.
+
+### Small Definition Warnings
+
+- Complement tiling is not tournament complement: flipping all fixed-base
+  tiles stays in `Q_m` and preserves base-path arcs; `T^op` reverses all arcs.
+- Grid-symmetric fraction is not `2^{-(n-2)}`; the fixed anti-diagonal tile
+  count gives exponents `0,-1,-2,-4,-6,-9,...`.
+- Blue/black lines are d=m waggly lines, not class-level SC/NS edge types.
+- Line vs edge: one tiling/complement-tiling pair is a line; an iso-class
+  metagraph adjacency can be supported by many lines.
+- Full tiling `2^(n-2)+1` pattern dies at n=7; use Tribonacci sequence instead.
+- Paley cycle ratios can look clean at one k and fail at the next; preserve
+  the failed ratio because it prevents a repeat.
+- Tower crossings beyond k=2 and k=3 are analogies unless separately proved;
+  7->21->42 is not a general forbidden cascade.
+
 ## Core Tournament Geometry
 
 - Isomorphism class graph `G_n`: the "space of all tournaments" after
