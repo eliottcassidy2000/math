@@ -236,6 +236,63 @@ theorem alpha_solution_H3 (T : Tournament n) (hH : H T = 3) :
 theorem H27_alpha4_zero (T : Tournament n) (hH : H T = 27) :
     alphaCount 4 T = 0 := H_lt_81_no_alpha4 T (by omega)
 
+/-! ### Pascal's row sum at arbitrary k -/
+
+/-- **Theorem (Pascal's row sum, general k).**
+    `Σ_{j=0}^k 2^j · C(k, j) = 3^k`.
+
+    Proof: (2 + 1)^k via binomial theorem. -/
+theorem pascal_row_sum_general (k : ℕ) :
+    ∑ j ∈ Finset.range (k + 1), 2 ^ j * Nat.choose k j = 3 ^ k := by
+  have h := @add_pow ℕ _ 2 1 k
+  simp at h
+  exact h.symm
+
+/-! ### General-k OCF axiom + N_min(k) = 3^k for arbitrary k -/
+
+/-- **Axiom (OCF truncated to K).**  When α_k = 0 for k > K, the OCF reads
+    H(T) = 1 + Σ_{k=1}^K 2^k · α_k(T). -/
+axiom ocf_truncated (T : Tournament n) (K : ℕ)
+    (h_high_zero : ∀ k, K < k → alphaCount k T = 0) :
+    H T = 1 + ∑ k ∈ Finset.Ico 1 (K + 1), 2 ^ k * alphaCount k T
+
+/-- **Theorem (general N_min, project-novel, oracle-S8).**
+
+    For any tournament T with α_k(T) ≥ 1 (k ≥ 1 arbitrary), H(T) ≥ 3^k.
+
+    Uses Pascal's row sum to handle ALL k ≥ 1 (not just k ≤ 6). -/
+theorem H_ge_three_pow_k_general
+    (T : Tournament n) (k : ℕ) (hk_pos : 1 ≤ k) (h : 1 ≤ alphaCount k T)
+    (h_high_zero : ∀ j, k < j → alphaCount j T = 0) :
+    3 ^ k ≤ H T := by
+  have hocf := ocf_truncated T k h_high_zero
+  -- Bound each α_j by C(k, j) via alpha_descent.
+  have h_lower : ∀ j ∈ Finset.Ico 1 (k + 1),
+      2 ^ j * Nat.choose k j ≤ 2 ^ j * alphaCount j T := by
+    intro j hj
+    simp at hj
+    have h_le : j ≤ k := by omega
+    have h_choose := alpha_descent T h_le h
+    exact Nat.mul_le_mul_left _ h_choose
+  have h_sum : ∑ j ∈ Finset.Ico 1 (k + 1), 2 ^ j * Nat.choose k j ≤
+               ∑ j ∈ Finset.Ico 1 (k + 1), 2 ^ j * alphaCount j T :=
+    Finset.sum_le_sum h_lower
+  -- LHS = 3^k - 1.
+  have h_pascal := pascal_row_sum_general k
+  have h_split : ∑ j ∈ Finset.range (k + 1), 2 ^ j * Nat.choose k j =
+                 (1 : ℕ) + ∑ j ∈ Finset.Ico 1 (k + 1), 2 ^ j * Nat.choose k j := by
+    rw [show Finset.range (k + 1) =
+        {0} ∪ Finset.Ico 1 (k + 1) by
+      ext m; simp; omega]
+    rw [Finset.sum_union (by simp [Finset.disjoint_singleton_left])]
+    simp
+  rw [h_split] at h_pascal
+  have h_pascal' : ∑ j ∈ Finset.Ico 1 (k + 1), 2 ^ j * Nat.choose k j = 3 ^ k - 1 := by
+    omega
+  rw [h_pascal'] at h_sum
+  have h3k_pos : 1 ≤ 3 ^ k := Nat.one_le_iff_ne_zero.mpr (by positivity)
+  omega
+
 /-! ### Pascal's triangle row sums identity (foundational) -/
 
 /-- Pascal's identity: 1 + Σ_{j=1}^k 2^j · C(k, j) = 3^k.

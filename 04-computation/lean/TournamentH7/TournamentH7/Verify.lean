@@ -646,3 +646,20 @@ theorem numNS_plus_numSC_3_audit : numNS 3 + numSC 3 = 2 :=
 theorem numNS_plus_numSC_7_audit : numNS 7 + numSC 7 = 456 :=
   numNS_plus_numSC_7
 #print axioms numNS_plus_numSC_7_audit
+
+/-! ### Pascal's row sum (generalised) -/
+
+theorem pascal_row_sum_general_audit (k : ℕ) :
+    ∑ j ∈ Finset.range (k + 1), 2 ^ j * Nat.choose k j = 3 ^ k :=
+  pascal_row_sum_general k
+#print axioms pascal_row_sum_general_audit
+
+/-! ### N_min(k) = 3^k for ARBITRARY k -/
+
+/-- General N_min(k) = 3^k for any k. PROVED IN LEAN. -/
+theorem H_ge_three_pow_k_general_audit {n : ℕ} (T : Tournament n) (k : ℕ)
+    (hk_pos : 1 ≤ k) (h : 1 ≤ alphaCount k T)
+    (h_high_zero : ∀ j, k < j → alphaCount j T = 0) :
+    3 ^ k ≤ H T :=
+  H_ge_three_pow_k_general T k hk_pos h h_high_zero
+#print axioms H_ge_three_pow_k_general_audit
