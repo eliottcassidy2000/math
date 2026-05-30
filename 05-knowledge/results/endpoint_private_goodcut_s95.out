@@ -1,0 +1,278 @@
+==============================================================================
+ENDPOINT PRIVATE GOOD-CUT S95
+==============================================================================
+Do private endpoint-transfer child witnesses have good-cut structure?
+
+------------------------------------------------------------------------------
+n=2->3
+  unmerged tournament: private child columns=2, owners covered=1/1
+    owners without private child=0
+    private child good-cut mass={0: 1, 2: 1}
+    private child columns by good-cut={0: 1, 2: 1}
+    private child profile width spectrum={0: 2}
+    owner private-bucket span spectrum={2: 1}
+    examples:
+      owner=0, parent_g={0: 1}
+        child=cid=0:H=1:F=1, child_g={0: 1}
+        child=cid=1:H=3:F=1, child_g={2: 1}
+  merged tournament: private child columns=2, owners covered=1/1
+    owners without private child=0
+    private child good-cut mass={0: 1, 2: 1}
+    private child columns by good-cut={0: 1, 2: 1}
+    private child profile width spectrum={0: 2}
+    private child kind spectrum={'SC': 2}
+    all SC child columns by good-cut={0: 1, 2: 1}
+    private SC child columns by good-cut={0: 1, 2: 1}
+    non-private SC child columns by good-cut={}
+    owner private-bucket span spectrum={2: 1}
+    examples:
+      owner=0, parent_g={0: 1}
+        child=mid=0:type=SC:M=1, child_g={0: 1}
+        child=mid=1:type=SC:M=1, child_g={2: 1}
+
+------------------------------------------------------------------------------
+n=3->4
+  unmerged tournament: private child columns=4, owners covered=2/2
+    owners without private child=0
+    private child good-cut mass={0: 1, 2: 2, 3: 5}
+    private child columns by good-cut={0: 1, 2: 2, 3: 1}
+    private child profile width spectrum={0: 4}
+    owner private-bucket span spectrum={1: 1, 2: 1}
+    examples:
+      owner=0, parent_g={0: 1}
+        child=cid=0:H=1:F=1, child_g={0: 1}
+        child=cid=2:H=3:F=1, child_g={2: 1}
+      owner=1, parent_g={2: 1}
+        child=cid=1:H=3:F=1, child_g={2: 1}
+        child=cid=3:H=5:F=5, child_g={3: 5}
+  merged tournament: private child columns=2, owners covered=2/2
+    owners without private child=0
+    private child good-cut mass={0: 1, 3: 5}
+    private child columns by good-cut={0: 1, 3: 1}
+    private child profile width spectrum={0: 2}
+    private child kind spectrum={'SC': 2}
+    all SC child columns by good-cut={0: 1, 3: 1}
+    private SC child columns by good-cut={0: 1, 3: 1}
+    non-private SC child columns by good-cut={}
+    owner private-bucket span spectrum={0: 2}
+    examples:
+      owner=0, parent_g={0: 1}
+        child=mid=0:type=SC:M=1, child_g={0: 1}
+      owner=1, parent_g={2: 1}
+        child=mid=2:type=SC:M=5, child_g={3: 5}
+
+------------------------------------------------------------------------------
+n=4->5
+  unmerged tournament: private child columns=10, owners covered=4/4
+    owners without private child=0
+    private child good-cut mass={0: 1, 2: 3, 3: 10, 4: 36}
+    private child columns by good-cut={0: 1, 2: 3, 3: 2, 4: 4}
+    private child profile width spectrum={0: 10}
+    owner private-bucket span spectrum={1: 2, 2: 1, 4: 1}
+    examples:
+      owner=0, parent_g={0: 1}
+        child=cid=0:H=1:F=1, child_g={0: 1}
+        child=cid=8:H=11:F=11, child_g={4: 11}
+        child=cid=3:H=3:F=1, child_g={2: 1}
+      owner=1, parent_g={2: 1}
+        child=cid=1:H=3:F=1, child_g={2: 1}
+        child=cid=9:H=13:F=13, child_g={4: 13}
+      owner=2, parent_g={2: 1}
+        child=cid=2:H=3:F=1, child_g={2: 1}
+        child=cid=5:H=5:F=5, child_g={3: 5}
+      owner=3, parent_g={3: 5}
+        child=cid=4:H=5:F=5, child_g={3: 5}
+        child=cid=11:H=15:F=3, child_g={4: 3}
+        child=cid=6:H=9:F=9, child_g={4: 9}
+  merged tournament: private child columns=8, owners covered=3/3
+    owners without private child=0
+    private child good-cut mass={0: 1, 2: 1, 4: 50}
+    private child columns by good-cut={0: 1, 2: 1, 4: 6}
+    private child profile width spectrum={0: 8}
+    private child kind spectrum={'SC': 8}
+    all SC child columns by good-cut={0: 1, 2: 1, 4: 6}
+    private SC child columns by good-cut={0: 1, 2: 1, 4: 6}
+    non-private SC child columns by good-cut={}
+    owner private-bucket span spectrum={0: 1, 2: 1, 4: 1}
+    examples:
+      owner=0, parent_g={0: 1}
+        child=mid=0:type=SC:M=1, child_g={0: 1}
+        child=mid=6:type=SC:M=11, child_g={4: 11}
+        child=mid=5:type=SC:M=9, child_g={4: 9}
+      owner=1, parent_g={2: 2}
+        child=mid=7:type=SC:M=13, child_g={4: 13}
+        child=mid=2:type=SC:M=1, child_g={2: 1}
+      owner=2, parent_g={3: 5}
+        child=mid=9:type=SC:M=3, child_g={4: 3}
+        child=mid=4:type=SC:M=9, child_g={4: 9}
+        child=mid=8:type=SC:M=5, child_g={4: 5}
+
+------------------------------------------------------------------------------
+n=5->6
+  unmerged tournament: private child columns=29, owners covered=12/12
+    owners without private child=0
+    private child good-cut mass={0: 1, 2: 4, 3: 15, 4: 87, 5: 282}
+    private child columns by good-cut={0: 1, 2: 4, 3: 3, 4: 11, 5: 10}
+    private child profile width spectrum={0: 29}
+    owner private-bucket span spectrum={0: 2, 1: 6, 2: 2, 3: 1, 4: 1}
+    examples:
+      owner=0, parent_g={0: 1}
+        child=cid=0:H=1:F=1, child_g={0: 1}
+        child=cid=14:H=11:F=11, child_g={4: 11}
+        child=cid=4:H=3:F=1, child_g={2: 1}
+      owner=1, parent_g={2: 1}
+        child=cid=1:H=3:F=1, child_g={2: 1}
+        child=cid=32:H=25:F=25, child_g={5: 25}
+        child=cid=12:H=9:F=1, child_g={4: 1}
+      owner=2, parent_g={2: 1}
+        child=cid=2:H=3:F=1, child_g={2: 1}
+        child=cid=16:H=13:F=13, child_g={4: 13}
+      owner=3, parent_g={2: 1}
+        child=cid=3:H=3:F=1, child_g={2: 1}
+        child=cid=7:H=5:F=5, child_g={3: 5}
+      owner=4, parent_g={3: 5}
+        child=cid=5:H=5:F=5, child_g={3: 5}
+        child=cid=48:H=37:F=37, child_g={5: 37}
+        child=cid=31:H=25:F=25, child_g={5: 25}
+        child=cid=47:H=37:F=37, child_g={5: 37}
+      owner=5, parent_g={3: 5}
+        child=cid=6:H=5:F=5, child_g={3: 5}
+        child=cid=22:H=15:F=3, child_g={4: 3}
+        child=cid=10:H=9:F=9, child_g={4: 9}
+      owner=6, parent_g={4: 9}
+        child=cid=8:H=9:F=9, child_g={4: 9}
+        child=cid=23:H=17:F=17, child_g={5: 17}
+      owner=7, parent_g={4: 9}
+        child=cid=9:H=9:F=9, child_g={4: 9}
+  merged tournament: private child columns=11, owners covered=9/10
+    owners without private child=1
+    private child good-cut mass={0: 1, 3: 5, 4: 1, 5: 204}
+    private child columns by good-cut={0: 1, 3: 1, 4: 1, 5: 8}
+    private child profile width spectrum={0: 11}
+    private child kind spectrum={'SC': 11}
+    all SC child columns by good-cut={0: 1, 3: 1, 4: 1, 5: 9}
+    private SC child columns by good-cut={0: 1, 3: 1, 4: 1, 5: 8}
+    non-private SC child columns by good-cut={5: 1}
+    owner private-bucket span spectrum={0: 8, 2: 1}
+    examples:
+      owner=0, parent_g={0: 1}
+        child=mid=0:type=SC:M=1, child_g={0: 1}
+      owner=1, parent_g={2: 2}
+        child=mid=7:type=SC:M=1, child_g={4: 1}
+      owner=3, parent_g={3: 10}
+        child=mid=24:type=SC:M=33, child_g={5: 33}
+        child=mid=4:type=SC:M=5, child_g={3: 5}
+      owner=4, parent_g={4: 9}
+        child=mid=13:type=SC:M=17, child_g={5: 17}
+      owner=5, parent_g={4: 9}
+        child=mid=14:type=SC:M=17, child_g={5: 17}
+        child=mid=22:type=SC:M=29, child_g={5: 29}
+      owner=6, parent_g={4: 11}
+        child=mid=33:type=SC:M=15, child_g={5: 15}
+      owner=7, parent_g={4: 13}
+        child=mid=32:type=SC:M=15, child_g={5: 15}
+      owner=8, parent_g={4: 5}
+        child=mid=27:type=SC:M=37, child_g={5: 37}
+
+------------------------------------------------------------------------------
+n=6->7
+  unmerged tournament: private child columns=133, owners covered=56/56
+    owners without private child=0
+    private child good-cut mass={0: 1, 2: 5, 3: 20, 4: 139, 5: 1195, 6: 4467}
+    private child columns by good-cut={0: 1, 2: 5, 3: 4, 4: 19, 5: 47, 6: 57}
+    private child profile width spectrum={0: 133}
+    owner private-bucket span spectrum={0: 24, 1: 20, 2: 8, 3: 2, 4: 2}
+    examples:
+      owner=0, parent_g={0: 1}
+        child=cid=0:H=1:F=1, child_g={0: 1}
+        child=cid=21:H=11:F=11, child_g={4: 11}
+        child=cid=5:H=3:F=1, child_g={2: 1}
+      owner=1, parent_g={2: 1}
+        child=cid=1:H=3:F=1, child_g={2: 1}
+        child=cid=139:H=49:F=49, child_g={6: 49}
+        child=cid=17:H=9:F=1, child_g={4: 1}
+      owner=2, parent_g={2: 1}
+        child=cid=2:H=3:F=1, child_g={2: 1}
+        child=cid=57:H=25:F=25, child_g={5: 25}
+        child=cid=18:H=9:F=1, child_g={4: 1}
+      owner=3, parent_g={2: 1}
+        child=cid=3:H=3:F=1, child_g={2: 1}
+        child=cid=24:H=13:F=13, child_g={4: 13}
+      owner=4, parent_g={2: 1}
+        child=cid=4:H=3:F=1, child_g={2: 1}
+        child=cid=9:H=5:F=5, child_g={3: 5}
+      owner=5, parent_g={3: 5}
+        child=cid=6:H=5:F=5, child_g={3: 5}
+        child=cid=241:H=81:F=81, child_g={6: 81}
+        child=cid=140:H=49:F=49, child_g={6: 49}
+        child=cid=208:H=73:F=73, child_g={6: 73}
+      owner=6, parent_g={3: 5}
+        child=cid=7:H=5:F=5, child_g={3: 5}
+        child=cid=103:H=37:F=37, child_g={5: 37}
+        child=cid=56:H=25:F=25, child_g={5: 25}
+        child=cid=102:H=37:F=37, child_g={5: 37}
+      owner=7, parent_g={3: 5}
+        child=cid=8:H=5:F=5, child_g={3: 5}
+        child=cid=36:H=15:F=3, child_g={4: 3}
+        child=cid=14:H=9:F=9, child_g={4: 9}
+  merged tournament: private child columns=74, owners covered=28/34
+    owners without private child=6
+    private child good-cut mass={0: 1, 2: 1, 4: 51, 6: 5701}
+    private child columns by good-cut={0: 1, 2: 1, 4: 7, 6: 65}
+    private child profile width spectrum={0: 74}
+    private child kind spectrum={'SC': 74}
+    all SC child columns by good-cut={0: 1, 2: 1, 4: 7, 6: 79}
+    private SC child columns by good-cut={0: 1, 2: 1, 4: 7, 6: 65}
+    non-private SC child columns by good-cut={6: 14}
+    owner private-bucket span spectrum={0: 22, 2: 5, 6: 1}
+    examples:
+      owner=0, parent_g={0: 1}
+        child=mid=0:type=SC:M=1, child_g={0: 1}
+        child=mid=80:type=SC:M=51, child_g={6: 51}
+        child=mid=70:type=SC:M=45, child_g={6: 45}
+        child=mid=45:type=SC:M=31, child_g={6: 31}
+      owner=1, parent_g={2: 2}
+        child=mid=11:type=SC:M=1, child_g={4: 1}
+      owner=2, parent_g={2: 2}
+        child=mid=3:type=SC:M=1, child_g={2: 1}
+      owner=3, parent_g={3: 10}
+        child=mid=78:type=SC:M=49, child_g={6: 49}
+      owner=4, parent_g={3: 5}
+        child=mid=128:type=SC:M=77, child_g={6: 77}
+        child=mid=107:type=SC:M=69, child_g={6: 69}
+      owner=5, parent_g={4: 18}
+        child=mid=144:type=SC:M=85, child_g={6: 85}
+        child=mid=8:type=SC:M=9, child_g={4: 9}
+      owner=6, parent_g={4: 18}
+        child=mid=105:type=SC:M=67, child_g={6: 67}
+        child=mid=101:type=SC:M=65, child_g={6: 65}
+        child=mid=99:type=SC:M=65, child_g={6: 65}
+        child=mid=100:type=SC:M=65, child_g={6: 65}
+      owner=7, parent_g={4: 1}
+        child=mid=174:type=SC:M=11, child_g={6: 11}
+        child=mid=46:type=SC:M=31, child_g={6: 31}
+
+==============================================================================
+SEQUENCES
+==============================================================================
+  t_private_cols: [2, 4, 10, 29, 133]
+  t_owners: [1, 2, 4, 12, 56]
+  t_width0: [2, 4, 10, 29, 133]
+  m_private_cols: [2, 2, 8, 11, 74]
+  m_owners: [1, 2, 3, 9, 28]
+  m_width0: [2, 2, 8, 11, 74]
+
+==============================================================================
+INTERPRETATION
+==============================================================================
+
+1. If private child columns are good-cut pure, then the triangular rank witness
+   respects the good-cut Morse coordinate.
+
+2. If private witnesses concentrate in high good-cut buckets, endpoint
+   parity-injectivity is tied to crossing many cut barriers; if they spread
+   across all buckets, the rank mechanism is independent of the Morse height.
+
+3. Merged private witnesses are expected to be less pure because complement
+   merging hides chirality.  Any persistent good-cut purity there strengthens
+   the conjecture that good-cut count descends to G_n/Z_2.

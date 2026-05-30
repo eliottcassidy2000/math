@@ -1,0 +1,133 @@
+==============================================================================
+ENDPOINT TRANSFER WITNESSES S95
+==============================================================================
+Odd-support, matching, private-column, and dependency probes.
+
+------------------------------------------------------------------------------
+n=2->3
+  tournament classes: rows=1, cols=2
+    rank/matching/private: rank=1, matching=1, private_cols=2, rows_with_private=1
+    odd row weights: min=2, max=2, avg=2.00, spectrum={2: 1}
+    child odd-column support spectrum: {1: 2}
+    no dependencies; first pivot child columns=[1]
+  merged tournament nodes: rows=1, cols=2
+    rank/matching/private: rank=1, matching=1, private_cols=2, rows_with_private=1
+    odd row weights: min=2, max=2, avg=2.00, spectrum={2: 1}
+    child odd-column support spectrum: {1: 2}
+    no dependencies; first pivot child columns=[1]
+  even-graph classes: rows=1, cols=2
+    rank/matching/private: rank=1, matching=1, private_cols=2, rows_with_private=1
+    odd row weights: min=2, max=2, avg=2.00, spectrum={2: 1}
+    child odd-column support spectrum: {1: 2}
+    no dependencies; first pivot child columns=[1]
+
+------------------------------------------------------------------------------
+n=3->4
+  tournament classes: rows=2, cols=4
+    rank/matching/private: rank=2, matching=2, private_cols=4, rows_with_private=2
+    odd row weights: min=2, max=2, avg=2.00, spectrum={2: 2}
+    child odd-column support spectrum: {1: 4}
+    no dependencies; first pivot child columns=[2, 3]
+  merged tournament nodes: rows=2, cols=3
+    rank/matching/private: rank=2, matching=2, private_cols=2, rows_with_private=2
+    odd row weights: min=2, max=2, avg=2.00, spectrum={2: 2}
+    child odd-column support spectrum: {1: 2, 2: 1}
+    no dependencies; first pivot child columns=[1, 2]
+  even-graph classes: rows=2, cols=3
+    rank/matching/private: rank=1, matching=1, private_cols=2, rows_with_private=1
+    odd row weights: min=0, max=2, avg=1.00, spectrum={0: 1, 2: 1}
+    child odd-column support spectrum: {0: 1, 1: 2}
+    dependencies=1; first dependency rows:
+      size=1 -> ['1:fiber=1:edges=3:deg=(2, 2, 2)']
+
+------------------------------------------------------------------------------
+n=4->5
+  tournament classes: rows=4, cols=12
+    rank/matching/private: rank=4, matching=4, private_cols=10, rows_with_private=4
+    odd row weights: min=4, max=4, avg=4.00, spectrum={4: 4}
+    child odd-column support spectrum: {1: 10, 3: 2}
+    no dependencies; first pivot child columns=[8, 10, 9, 11]
+  merged tournament nodes: rows=3, cols=10
+    rank/matching/private: rank=3, matching=3, private_cols=8, rows_with_private=3
+    odd row weights: min=4, max=4, avg=4.00, spectrum={4: 3}
+    child odd-column support spectrum: {1: 8, 2: 2}
+    no dependencies; first pivot child columns=[6, 7, 9]
+  even-graph classes: rows=3, cols=7
+    rank/matching/private: rank=2, matching=2, private_cols=4, rows_with_private=2
+    odd row weights: min=0, max=4, avg=2.67, spectrum={0: 1, 4: 2}
+    child odd-column support spectrum: {0: 1, 1: 4, 2: 2}
+    dependencies=1; first dependency rows:
+      size=1 -> ['1:fiber=4:edges=3:deg=(0, 2, 2, 2)']
+
+------------------------------------------------------------------------------
+n=5->6
+  tournament classes: rows=12, cols=56
+    rank/matching/private: rank=12, matching=12, private_cols=29, rows_with_private=12
+    odd row weights: min=4, max=16, avg=10.33, spectrum={4: 1, 8: 4, 10: 2, 12: 3, 16: 2}
+    child odd-column support spectrum: {1: 29, 3: 20, 5: 7}
+    no dependencies; first pivot child columns=[30, 44, 36, 45, 48, 46, 43, 52, 55, 54]
+  merged tournament nodes: rows=10, cols=34
+    rank/matching/private: rank=10, matching=10, private_cols=11, rows_with_private=9
+    odd row weights: min=4, max=10, avg=6.20, spectrum={4: 3, 6: 4, 8: 2, 10: 1}
+    child odd-column support spectrum: {0: 4, 1: 11, 2: 12, 3: 1, 4: 6}
+    no dependencies; first pivot child columns=[8, 18, 11, 29, 25, 31, 33, 32, 27, 30]
+  even-graph classes: rows=7, cols=16
+    rank/matching/private: rank=6, matching=7, private_cols=3, rows_with_private=3
+    odd row weights: min=4, max=6, avg=4.29, spectrum={4: 6, 6: 1}
+    child odd-column support spectrum: {1: 3, 2: 12, 3: 1}
+    dependencies=1; first dependency rows:
+      size=3 -> ['1:fiber=10:edges=3:deg=(0, 0, 2, 2, 2)', '3:fiber=12:edges=5:deg=(2, 2, 2, 2, 2)', '5:fiber=10:edges=7:deg=(2, 2, 2, 4, 4)']
+
+------------------------------------------------------------------------------
+n=6->7
+  tournament classes: rows=56, cols=456
+    rank/matching/private: rank=56, matching=56, private_cols=133, rows_with_private=56
+    odd row weights: min=8, max=32, avg=24.82, spectrum={8: 3, 10: 1, 12: 1, 14: 1, 16: 9, 22: 1, 24: 1, 26: 8, 28: 13, 30: 4, 32: 14}
+    child odd-column support spectrum: {1: 133, 3: 205, 5: 92, 7: 26}
+    no dependencies; first pivot child columns=[142, 196, 194, 198, 197, 270, 247, 273, 317, 310]
+  merged tournament nodes: rows=34, cols=272
+    rank/matching/private: rank=34, matching=34, private_cols=74, rows_with_private=28
+    odd row weights: min=6, max=32, avg=19.65, spectrum={6: 1, 8: 2, 10: 2, 12: 1, 14: 3, 16: 6, 18: 1, 20: 3, 22: 3, 24: 1, 26: 5, 28: 2, 30: 3, 32: 1}
+    child odd-column support spectrum: {0: 20, 1: 74, 2: 74, 3: 14, 4: 68, 6: 22}
+    no dependencies; first pivot child columns=[80, 85, 53, 138, 140, 180, 176, 174, 212, 192]
+  even-graph classes: rows=16, cols=54
+    rank/matching/private: rank=8, matching=8, private_cols=13, rows_with_private=7
+    odd row weights: min=0, max=10, avg=3.88, spectrum={0: 8, 6: 3, 8: 3, 10: 2}
+    child odd-column support spectrum: {0: 25, 1: 13, 2: 7, 3: 3, 4: 5, 6: 1}
+    dependencies=8; first dependency rows:
+      size=1 -> ['1:fiber=20:edges=3:deg=(0, 0, 0, 2, 2, 2)']
+      size=1 -> ['3:fiber=72:edges=5:deg=(0, 2, 2, 2, 2, 2)']
+      size=1 -> ['4:fiber=90:edges=6:deg=(0, 2, 2, 2, 2, 4)']
+
+==============================================================================
+SEQUENCES
+==============================================================================
+  t_rank: [1, 2, 4, 12, 56]
+  t_matching: [1, 2, 4, 12, 56]
+  t_private_rows: [1, 2, 4, 12, 56]
+  m_rank: [1, 2, 3, 10, 34]
+  m_matching: [1, 2, 3, 10, 34]
+  m_private_rows: [1, 2, 3, 9, 28]
+  e_rank: [1, 1, 2, 6, 8]
+  e_matching: [1, 1, 2, 7, 8]
+  e_private_rows: [1, 1, 2, 3, 7]
+  e_dependencies: [0, 1, 1, 1, 8]
+
+==============================================================================
+INTERPRETATION
+==============================================================================
+
+1. A full odd-support matching is weaker than GF(2) independence.
+   If the even-graph quotient has full matching but deficient rank at a level,
+   then Hall support is not the obstruction; the obstruction is algebraic
+   cancellation among rows.
+
+2. Private child columns are a candidate proof mechanism.
+   If every tournament parent row had a private odd child column after a
+   suitable ordering, full rank would follow from triangularity. The raw
+   private-column counts show how close that direct mechanism is.
+
+3. Even-graph dependencies are explicit collapsed memories.
+   The dependency rows printed above are parent even-graph classes whose
+   endpoint-extension parity shadows cancel. These are the first concrete
+   witnesses for what the cycle-space quotient forgets.

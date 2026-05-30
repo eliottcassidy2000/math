@@ -1,0 +1,82 @@
+==============================================================================
+ENDPOINT TRANSFER SMITH S95
+==============================================================================
+Exact Smith normal forms for small endpoint-transfer matrices.
+
+------------------------------------------------------------------------------
+n=2->3
+  tournament: shape=1x2, rank_Z=1, odd_factors=1
+    invariant factors=[1]
+    v2 spectrum={0: 1}
+  merged: shape=1x2, rank_Z=1, odd_factors=1
+    invariant factors=[1]
+    v2 spectrum={0: 1}
+  even graph: shape=1x2, rank_Z=1, odd_factors=1
+    invariant factors=[1]
+    v2 spectrum={0: 1}
+
+------------------------------------------------------------------------------
+n=3->4
+  tournament: shape=2x4, rank_Z=2, odd_factors=2
+    invariant factors=[1, 1]
+    v2 spectrum={0: 2}
+  merged: shape=2x3, rank_Z=2, odd_factors=2
+    invariant factors=[1, 1]
+    v2 spectrum={0: 2}
+  even graph: shape=2x3, rank_Z=2, odd_factors=1
+    invariant factors=[1, 2]
+    v2 spectrum={0: 1, 1: 1}
+
+------------------------------------------------------------------------------
+n=4->5
+  tournament: shape=4x12, rank_Z=4, odd_factors=4
+    invariant factors=[1, 1, 1, 1]
+    v2 spectrum={0: 4}
+  merged: shape=3x10, rank_Z=3, odd_factors=3
+    invariant factors=[1, 1, 1]
+    v2 spectrum={0: 3}
+  even graph: shape=3x7, rank_Z=3, odd_factors=2
+    invariant factors=[1, 1, 2]
+    v2 spectrum={0: 2, 1: 1}
+
+------------------------------------------------------------------------------
+n=5->6
+  tournament: shape=12x56, rank_Z=12, odd_factors=12
+    invariant factors=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 15]
+    v2 spectrum={0: 12}
+  merged: shape=10x34, rank_Z=10, odd_factors=10
+    invariant factors=[1, 1, 1, 1, 1, 1, 1, 1, 3, 15]
+    v2 spectrum={0: 10}
+  even graph: shape=7x16, rank_Z=7, odd_factors=6
+    invariant factors=[1, 1, 1, 1, 1, 1, 8]
+    v2 spectrum={0: 6, 3: 1}
+
+------------------------------------------------------------------------------
+n=6->7, even graph only
+  even graph: shape=16x54, rank_Z=16, odd_factors=8
+    invariant factors=[1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 4, 4, 8]
+    v2 spectrum={0: 8, 1: 5, 2: 2, 3: 1}
+
+==============================================================================
+SEQUENCES
+==============================================================================
+  t_odd_factors: [1, 2, 4, 12]
+  m_odd_factors: [1, 2, 3, 10]
+  e_odd_factors: [1, 1, 2, 6, 8]
+  e_even_factors: [0, 1, 1, 1, 8]
+
+==============================================================================
+INTERPRETATION
+==============================================================================
+
+1. The number of odd Smith factors equals the GF(2) row rank.
+   Full GF(2) row rank is equivalent to all row-rank invariant factors being
+   odd.
+
+2. The tournament matrices through 5->6 have only odd Smith factors.  This is
+   stronger than mod-2 rank: the endpoint transfer has no visible 2-primary
+   cokernel obstruction in these small cases.
+
+3. The even-graph matrices have even Smith factors exactly where parity rank is
+   lost.  The rank defect is therefore an integral 2-adic torsion phenomenon,
+   not just an artifact of reducing entries modulo 2.

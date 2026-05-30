@@ -34,6 +34,12 @@ These scripts have been run but results exist only in /tmp or session transcript
 | `goodcut_scc_defect_s354.py` | [STORED] | Verifies THM-354: for every Hamiltonian base path, good-cut count equals `n - #SCC(T)`; exhaustive labeled n<=6 and fixed-base tilings n<=7 | `goodcut_scc_defect_s354.out` |
 | `residue_rank_probe_s355.py` | [STORED] | Compares transitive, Paley/Interval, H=63 single-core, and THM-025 examples by max-loss deletion-residue rank; separates exact kills (`rank_res=0`) from THM-025 near-kill (`rank_res=2`) | `residue_rank_probe_s355.out` |
 | `tournament_tda.py` | [STORED] | Demo now emits SCC residue features and deletion-residue rank features in the `omega_*` block | `tournament_tda_residue_features_s355.out` |
+| `endpoint_transfer_witnesses_s95.py` | [STORED] | Probes endpoint-transfer rank mechanisms; unmerged tournament rows all have private odd child witnesses through `6->7`, merged rows keep full matching/rank without all private witnesses, and even graphs show GF(2) cancellation | `endpoint_transfer_witnesses_s95.out` |
+| `endpoint_transfer_smith_s95.py` | [STORED] | Computes Smith normal forms for small endpoint-transfer matrices; tournament/merged factors are all odd through `5->6`, while even graphs show 2-primary factors up to `[2,2,2,2,2,4,4,8]` at `6->7` | `endpoint_transfer_smith_s95.out` |
+| `endpoint_private_goodcut_s95.py` | [STORED] | Checks endpoint-transfer private odd child columns against good-cut/SCC-defect profiles; all private columns are pure and merged non-private SC columns occur only in the strongly connected top bucket through `6->7` | `endpoint_private_goodcut_s95.out` |
+| `endpoint_sc_collision_s95.py` | [STORED] | Splits the merged SC endpoint boundary into decomposable/private and strongly connected collision blocks; non-private SC columns occur only in top bucket, have support exactly 3, and are independent through `6->7` | `endpoint_sc_collision_s95.out` |
+| `endpoint_collision_geometry_s95.py` | [STORED] | Tests whether support-3 SC collision owner triples are literal parent-metagraph triangles; at `6->7` induced edge counts are `{0:1,1:6,2:5,3:2}`, while the collision incidence hypergraph leaf-peels completely with empty core | `endpoint_collision_geometry_s95.out` |
+| `goodcut_class_purity_s95.py` | [STORED] | Verifies `good_cut_count = n - scc_count` and zero mixed unmerged/merged good-cut profiles for n=2..7, proving the good-cut bucket is strong-component defect | `goodcut_class_purity_s95.out` |
 
 ### How to bulk-capture results
 

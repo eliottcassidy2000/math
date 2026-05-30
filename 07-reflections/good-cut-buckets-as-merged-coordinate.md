@@ -68,3 +68,16 @@ For Tournament TDA, `g` is cheap: compute the union of upward-tile intervals.
 If HYP-1764 holds, `g` is a quotient-stable feature rather than a labeling
 artifact. Even if it eventually fails, its failure cases will measure exactly
 where base-path geometry and merged iso-geometry stop agreeing.
+
+## S95 Closure
+
+THM-354 closes the main question: good-cut count is exactly
+
+```text
+g(T,path) = n - scc(T).
+```
+
+So `g` descends first to ordinary tournament isomorphism classes, and then to
+merged classes because complement preserves strong-component count. The
+coordinate was not merely compatible with the merged quotient; it was measuring
+strong-component defect all along.

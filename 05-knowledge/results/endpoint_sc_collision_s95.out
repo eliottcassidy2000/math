@@ -1,0 +1,150 @@
+==============================================================================
+ENDPOINT SC COLLISION S95
+==============================================================================
+Merged endpoint-transfer SC boundary: private pivots vs collision block.
+
+------------------------------------------------------------------------------
+n=2->3: parent merged=1, child merged=2
+  merged GF2 rank=1
+  child top bucket=2
+  block sc: cols=2, rank=1, support_spectrum={1: 2}
+  block decomp_sc: cols=1, rank=1, support_spectrum={1: 1}
+  block top_sc: cols=1, rank=1, support_spectrum={1: 1}
+  block nsc: cols=0, rank=0, support_spectrum={}
+  block private_sc: cols=2, rank=1, support_spectrum={1: 2}
+  block nonprivate_sc: cols=0, rank=0, support_spectrum={}
+  SC by bucket={0: 1, 2: 1}
+  private SC by bucket={0: 1, 2: 1}
+  non-private SC by bucket={}
+  parent owners with decomp-private SC=1
+  parent owners with top-private SC=1
+  parent owners incident to top non-private SC=0
+
+------------------------------------------------------------------------------
+n=3->4: parent merged=2, child merged=3
+  merged GF2 rank=2
+  child top bucket=3
+  block sc: cols=2, rank=2, support_spectrum={1: 2}
+  block decomp_sc: cols=1, rank=1, support_spectrum={1: 1}
+  block top_sc: cols=1, rank=1, support_spectrum={1: 1}
+  block nsc: cols=1, rank=1, support_spectrum={2: 1}
+  block private_sc: cols=2, rank=2, support_spectrum={1: 2}
+  block nonprivate_sc: cols=0, rank=0, support_spectrum={}
+  SC by bucket={0: 1, 3: 1}
+  private SC by bucket={0: 1, 3: 1}
+  non-private SC by bucket={}
+  parent owners with decomp-private SC=1
+  parent owners with top-private SC=1
+  parent owners incident to top non-private SC=0
+
+------------------------------------------------------------------------------
+n=4->5: parent merged=3, child merged=10
+  merged GF2 rank=3
+  child top bucket=4
+  block sc: cols=8, rank=3, support_spectrum={1: 8}
+  block decomp_sc: cols=2, rank=2, support_spectrum={1: 2}
+  block top_sc: cols=6, rank=3, support_spectrum={1: 6}
+  block nsc: cols=2, rank=2, support_spectrum={2: 2}
+  block private_sc: cols=8, rank=3, support_spectrum={1: 8}
+  block nonprivate_sc: cols=0, rank=0, support_spectrum={}
+  SC by bucket={0: 1, 2: 1, 4: 6}
+  private SC by bucket={0: 1, 2: 1, 4: 6}
+  non-private SC by bucket={}
+  parent owners with decomp-private SC=2
+  parent owners with top-private SC=3
+  parent owners incident to top non-private SC=0
+
+------------------------------------------------------------------------------
+n=5->6: parent merged=10, child merged=34
+  merged GF2 rank=10
+  child top bucket=5
+  block sc: cols=12, rank=9, support_spectrum={1: 11, 3: 1}
+  block decomp_sc: cols=3, rank=3, support_spectrum={1: 3}
+  block top_sc: cols=9, rank=7, support_spectrum={1: 8, 3: 1}
+  block nsc: cols=22, rank=9, support_spectrum={0: 4, 2: 12, 4: 6}
+  block private_sc: cols=11, rank=9, support_spectrum={1: 11}
+  block nonprivate_sc: cols=1, rank=1, support_spectrum={3: 1}
+  SC by bucket={0: 1, 3: 1, 4: 1, 5: 9}
+  private SC by bucket={0: 1, 3: 1, 4: 1, 5: 8}
+  non-private SC by bucket={5: 1}
+  parent owners with decomp-private SC=3
+  parent owners with top-private SC=7
+  parent owners incident to top non-private SC=3
+  non-private SC owner-bucket tuples={(3, 4, 4): 1}
+  non-private SC child H mod 8={5: 1}
+  non-private SC child H values=[29]
+  non-private SC examples:
+    mid=21:SC:M=29:H=29:F=29:aut=1:g=5:support=3
+      owners=['3:g={3: 10}:M=10', '5:g={4: 9}:M=9', '7:g={4: 13}:M=13']
+
+------------------------------------------------------------------------------
+n=6->7: parent merged=34, child merged=272
+  merged GF2 rank=34
+  child top bucket=6
+  block sc: cols=88, rank=30, support_spectrum={1: 74, 3: 14}
+  block decomp_sc: cols=9, rank=9, support_spectrum={1: 9}
+  block top_sc: cols=79, rank=27, support_spectrum={1: 65, 3: 14}
+  block nsc: cols=184, rank=33, support_spectrum={0: 20, 2: 74, 4: 68, 6: 22}
+  block private_sc: cols=74, rank=28, support_spectrum={1: 74}
+  block nonprivate_sc: cols=14, rank=14, support_spectrum={3: 14}
+  SC by bucket={0: 1, 2: 1, 4: 7, 6: 79}
+  private SC by bucket={0: 1, 2: 1, 4: 7, 6: 65}
+  non-private SC by bucket={6: 14}
+  parent owners with decomp-private SC=9
+  parent owners with top-private SC=25
+  parent owners incident to top non-private SC=18
+  non-private SC owner-bucket tuples={(3, 4, 5): 1, (3, 5, 5): 2, (4, 5, 5): 2, (5, 5, 5): 9}
+  non-private SC child H mod 8={1: 1, 3: 3, 5: 3, 7: 7}
+  non-private SC child H values=[41, 61, 71, 79, 83, 91, 115, 127, 133, 141, 143, 151, 159, 159]
+  non-private SC examples:
+    mid=64:SC:M=41:H=41:F=41:aut=1:g=6:support=3
+      owners=['3:g={3: 10}:M=10', '5:g={4: 18}:M=18', '14:g={5: 17}:M=17']
+    mid=94:SC:M=61:H=61:F=61:aut=1:g=6:support=3
+      owners=['9:g={4: 26}:M=26', '16:g={5: 46}:M=46', '18:g={5: 50}:M=50']
+    mid=116:SC:M=71:H=71:F=71:aut=1:g=6:support=3
+      owners=['9:g={4: 26}:M=26', '22:g={5: 29}:M=29', '25:g={5: 66}:M=66']
+    mid=132:SC:M=79:H=79:F=79:aut=1:g=6:support=3
+      owners=['4:g={3: 5}:M=5', '20:g={5: 58}:M=58', '23:g={5: 62}:M=62']
+    mid=140:SC:M=83:H=83:F=83:aut=1:g=6:support=3
+      owners=['4:g={3: 5}:M=5', '20:g={5: 58}:M=58', '25:g={5: 66}:M=66']
+    mid=156:SC:M=91:H=91:F=91:aut=1:g=6:support=3
+      owners=['16:g={5: 46}:M=46', '21:g={5: 29}:M=29', '24:g={5: 33}:M=33']
+    mid=206:SC:M=115:H=115:F=115:aut=1:g=6:support=3
+      owners=['18:g={5: 50}:M=50', '28:g={5: 74}:M=74', '29:g={5: 74}:M=74']
+    mid=221:SC:M=127:H=127:F=127:aut=1:g=6:support=3
+      owners=['21:g={5: 29}:M=29', '23:g={5: 62}:M=62', '28:g={5: 74}:M=74']
+    mid=234:SC:M=133:H=133:F=133:aut=1:g=6:support=3
+      owners=['23:g={5: 62}:M=62', '25:g={5: 66}:M=66', '31:g={5: 86}:M=86']
+    mid=249:SC:M=141:H=141:F=141:aut=1:g=6:support=3
+      owners=['24:g={5: 33}:M=33', '25:g={5: 66}:M=66', '32:g={5: 15}:M=15']
+    mid=252:SC:M=143:H=143:F=143:aut=1:g=6:support=3
+      owners=['25:g={5: 66}:M=66', '27:g={5: 37}:M=37', '31:g={5: 86}:M=86']
+    mid=257:SC:M=151:H=151:F=151:aut=1:g=6:support=3
+      owners=['24:g={5: 33}:M=33', '25:g={5: 66}:M=66', '31:g={5: 86}:M=86']
+    mid=265:SC:M=159:H=159:F=159:aut=1:g=6:support=3
+      owners=['28:g={5: 74}:M=74', '29:g={5: 74}:M=74', '31:g={5: 86}:M=86']
+    mid=267:SC:M=159:H=159:F=159:aut=1:g=6:support=3
+      owners=['21:g={5: 29}:M=29', '31:g={5: 86}:M=86', '32:g={5: 15}:M=15']
+
+==============================================================================
+SEQUENCES
+==============================================================================
+  rank: [1, 2, 3, 10, 34]
+  sc: [2, 2, 8, 12, 88]
+  decomp_sc: [1, 1, 2, 3, 9]
+  top_sc: [1, 1, 6, 9, 79]
+  private_sc: [2, 2, 8, 11, 74]
+  nonprivate_sc: [0, 0, 0, 1, 14]
+  decomp_rank: [1, 1, 2, 3, 9]
+  top_rank: [1, 1, 3, 7, 27]
+  sc_rank: [1, 2, 3, 9, 30]
+  nonprivate_rank: [0, 0, 0, 1, 14]
+  nonprivate_sc_by_bucket: [{}, {}, {}, {5: 1}, {6: 14}]
+
+==============================================================================
+INTERPRETATION
+==============================================================================
+The merged SC boundary splits into a decomposable part and a strongly connected
+top bucket.  Through 6->7, every non-private SC column lies in the top bucket.
+Thus endpoint-transfer rank has a triangular decomposable boundary plus a
+smaller strongly connected collision block.

@@ -2343,10 +2343,11 @@ Source: projection_defect_h_score_s3.py, projection_defect_h_score_s3.out
 **Evidence:** `04-computation/goodcut_bucket_merged_s13.py` found zero mixed merged classes for n=3..6. Class counts by n were pure/mixed = 2/0, 3/0, 10/0, 34/0; max bucket span was 0 in every case. Lean also proves `g(reflect τ)=g(τ)` in `TournamentH7.GoodCuts`.
 **S1 update (kind-pasteur-2026-05-30-S1):** `04-computation/goodcut_bucket_n7_fast_s1.py` extends the exact check to n=7 using hash-assisted canonicalization: 456 unmerged classes, 88 SC classes, 272 merged classes, and pure/mixed = 272/0 with max bucket span 0. Bucket counts at n=7 are `{0:1, 2:5, 3:20, 4:153, 5:1816, 6:30773}`.
 **S354 update:** THM-354 proves the structural reason: for any Hamiltonian base path `P`, `g_P(T)=n-#SCC(T)`. Bad cuts are exactly boundaries between consecutive strong components in the condensation order. SCC count is invariant under isomorphism and complement, so `g` descends to `G_n/Z_2`.
+**S95 fixed-path check:** `goodcut_class_purity_s95.py` independently verifies zero formula failures and zero mixed unmerged/merged classes for fixed-path tilings through n=7.
 **Implication:** A statistic that looked coordinate-dependent is the strong-component defect ladder. It gives `G_n/Z_2` a cheap height function with forbidden level 1.
 **Next:** Formalize THM-354 in Lean by connecting good cuts to SCC condensation boundaries.
 **S354 artifacts:** THM-354; `05-knowledge/results/goodcut_scc_defect_s354.out`; `07-reflections/support-residue-calculus.md`.
-**See:** `05-knowledge/results/goodcut_bucket_merged_s13.out`, `05-knowledge/results/goodcut_bucket_n7_fast_s1.out`, variable `g(τ)`, INV-237, T288.
+**See:** `05-knowledge/results/goodcut_bucket_merged_s13.out`, `05-knowledge/results/goodcut_bucket_n7_fast_s1.out`, `05-knowledge/results/goodcut_class_purity_s95.out`, variable `g(τ)`, INV-237, T288.
 
 ## HYP-1765: Good-cut sets are interval-union codes (opus-2026-05-29-S13)
 **Status:** CONFIRMED / PROVED by THM-349 (opus-2026-05-29-S15).
@@ -2460,7 +2461,6 @@ Source: `04-computation/goodcut_transport_excess_s15.py`, `05-knowledge/results/
 **Evidence:** THM-354 identifies good-cut count as SCC defect. H=63 single-core classes are exact odd-cycle projection kills. THM-025 is a near-kill with a small dangerous residue. Paley/Interval separates support shadow from multiplicity and disjointness. Bucket balance leaves paired internal half-lines plus escape residue. Transfer diagonal keeps only signed position residue.
 **Predictions:** Real-root failures should be enriched by high deletion-loss fraction plus small top-heavy residues; `Delta g` transport should reduce to SCC-count transport; THM-143 slope profiles should predict Walsh-degree crossover; HYP-408 failures should resemble near-kill residues.
 **See:** `05-knowledge/hypotheses/HYP-1779-support-residue-calculus.md`, `07-reflections/support-residue-calculus.md`, THM-354.
-
 ## HYP-1780: Residue rank stratifies the next obstruction (kind-pasteur-2026-05-30-S3)
 **Status:** OPEN meta-hypothesis; mod-2 H residue formalized in Lean.
 **What:** Many obstructions are controlled not by raw support size but by the smallest surviving residue after projection. The first obstruction in a family appears when that residue has just enough rank, parity, or independence to survive cancellation.
@@ -2502,3 +2502,51 @@ Source: `05-knowledge/hypotheses/HYP-1784-flat-localized-residue-duality.md`, `0
 **Evidence:** S355 adds residue-rank features to `tournament_tda.py` and probes transitive T7, Paley T7, Interval T7, the two H=63 single-core signatures, and THM-025. H=63 examples have max-loss residue `alpha=(0,0)`, `rank_res=0`; THM-025 has `alpha=(2,1)`, `rank_res=2`, `I(R,2)=9`; Paley/Interval have broad residues `alpha=(20,1)` and `(16,2)`.
 **Predictions:** Non-real-rooted `I(Omega,x)` examples should be enriched in `0 < keep_v* <= 2` and `rank_res(v*)>=2`; complete-Omega unlocks should remain in `rank_res=0`; HYP-408 ghost failures should look more like THM-025 than H=63.
 **See:** `05-knowledge/hypotheses/HYP-1785-deletion-residue-rank-filter.md`, `05-knowledge/variables/residue-rank.md`, `04-computation/residue_rank_probe_s355.py`, `05-knowledge/results/residue_rank_probe_s355.out`.
+
+## HYP-1786: Endpoint private child witnesses (codex-S95)
+**Status:** OPEN (verified n=2..6 exact)
+**What:** Every unmerged tournament class has a private odd endpoint-extension child: a child class reached oddly from that parent and evenly from every other parent. This would prove full GF(2) row rank by a triangular witness criterion.
+**Evidence:** For transitions `2->3` through `6->7`, tournament private rows equal parent counts `[1,2,4,12,56]`. Merged tournaments keep full rank but not full private coverage (`[1,2,3,9,28]` private rows vs `[1,2,3,10,34]` rows). Even graphs show support matching is not enough: at `5->6`, matching is full (`7`) but rank is `6`.
+Source: HYP-1786-endpoint-private-child-witnesses.md, THM-356-endpoint-transfer-witness-criterion.md, endpoint_transfer_witnesses_s95.py
+
+## HYP-1787: Endpoint transfer Smith torsion split (codex-S95)
+**Status:** OPEN (verified small matrices)
+**What:** Tournament and complement-merged endpoint-transfer matrices may have only odd Smith invariant factors, lifting GF(2) row rank to a 2-local integral statement. Even-graph transfer matrices have explicit 2-primary Smith factors, matching their GF(2) rank defects.
+**Evidence:** Tournament factors through `5->6` are all odd, ending with `[1,...,1,15]`; merged factors through `5->6` are all odd, ending with `[1,...,1,3,15]`. Even graph factors include `[1,2]`, `[1,1,2]`, `[1^6,8]`, and at `6->7`, `[1^8,2,2,2,2,2,4,4,8]`.
+Source: HYP-1787-endpoint-transfer-smith-torsion.md, endpoint_transfer_smith_s95.py
+
+## HYP-1788: Endpoint private good-cut purity (codex-S95)
+**Status:** PROVED for purity by THM-354; concentration pattern remains open.
+**What:** Every private odd endpoint-transfer child column in the tournament and complement-merged quotients is good-cut pure because every tournament class has fixed `g=n-scc(T)`. In the merged quotient, private columns are also necessarily SC by the endpoint boundary law.
+**Evidence:** Private columns and width-zero columns match exactly: unmerged `[2,4,10,29,133]`; merged `[2,2,8,11,74]`. Merged private-child kind spectra are `{'SC':2}`, `{'SC':2}`, `{'SC':8}`, `{'SC':11}`, `{'SC':74}` for transitions `2->3` through `6->7`. The remaining open pattern is high-good-cut/SCC-defect concentration of private pivots.
+Source: HYP-1788-endpoint-private-goodcut-purity.md, THM-356-endpoint-transfer-witness-criterion.md, THM-354-good-cut-scc-count.md, endpoint_private_goodcut_s95.py, goodcut_class_purity_s95.py
+
+## HYP-1789: Merged private pivots cover the decomposable SC boundary (codex-S95)
+**Status:** OPEN (verified child levels n=3..7 exact)
+**What:** In complement-merged endpoint transfer, every self-complementary child node with more than one strongly connected component is a private odd column. Equivalently, all non-private SC child columns, if any, are strongly connected.
+**Evidence:** For child n=7, all SC nodes by good-cut are `{0:1,2:1,4:7,6:79}`, private SC nodes are `{0:1,2:1,4:7,6:65}`, and non-private SC nodes are `{6:14}`. For child n=6, the only non-private SC node is also top bucket `{5:1}`; for child n<=5 there are no non-private SC nodes.
+Source: HYP-1789-merged-private-decomposable-sc-boundary.md, endpoint_private_goodcut_s95.py, THM-354-good-cut-scc-count.md
+
+## HYP-1790: Merged SC collision columns are ternary (codex-S95)
+**Status:** OPEN (verified child levels n=3..7 exact)
+**What:** Every self-complementary child column that is not private in merged endpoint transfer has odd support exactly `3`. The first failure of private triangularity is ternary, not arbitrary.
+**Evidence:** Non-private SC support spectra are empty through `4->5`, then `{3:1}` at `5->6` and `{3:14}` at `6->7`. At child n=7 the owner good-cut triples are `{(3,4,5):1,(3,5,5):2,(4,5,5):2,(5,5,5):9}`.
+Source: HYP-1790-merged-sc-collision-triples.md, endpoint_sc_collision_s95.py
+
+## HYP-1791: SC collision block independence (codex-S95)
+**Status:** OPEN (verified child levels n=3..7 exact)
+**What:** The non-private self-complementary collision columns in merged endpoint transfer are linearly independent over `F_2`. The support-3 collision hypergraph has full column rank.
+**Evidence:** `endpoint_sc_collision_s95.py` gives `nonprivate_sc=[0,0,0,1,14]` and `nonprivate_rank=[0,0,0,1,14]` for transitions `2->3` through `6->7`. `endpoint_collision_geometry_s95.py` strengthens this with complete leaf-peeling of the collision hypergraph: `peel_removed=[0,0,0,1,14]`, empty core.
+Source: HYP-1791-sc-collision-block-independence.md, endpoint_sc_collision_s95.py, endpoint_collision_geometry_s95.py
+
+## HYP-1792: Endpoint collisions are incidence hyperedges (codex-S95)
+**Status:** CONFIRMED_SMALL_N; refutes the literal-clique strengthening of HYP-1790.
+**What:** Support-3 self-complementary collision columns in merged endpoint transfer are 3-uniform endpoint-incidence hyperedges, not necessarily triangles in the parent merged arc-flip metagraph.
+**Evidence:** `endpoint_collision_geometry_s95.py` finds the unique `5->6` collision owner triple is a clique, but at `6->7` the 14 owner triples have induced parent-metagraph edge counts `{0:1,1:6,2:5,3:2}`. One collision has no parent-metagraph edges at all.
+Source: HYP-1792-endpoint-collisions-are-incidence-hyperedges.md, endpoint_collision_geometry_s95.py
+
+## HYP-1793: SC collision hypergraph is leaf-peelable (codex-S95)
+**Status:** OPEN (verified child levels n=3..7 exact)
+**What:** The non-private SC collision columns form a 3-uniform incidence hypergraph that can be leaf-peeled: every remaining nonempty subcollection has a parent owner of degree 1. This would triangularize the collision block and prove HYP-1791.
+**Evidence:** `endpoint_collision_geometry_s95.py` gives `peel_removed=[0,0,0,1,14]` and `peel_core=[[],[],[],[],[]]`. At `6->7`, the hypergraph is not merely linear (`pair_intersections={0:53,1:32,2:6}`), so peelability is the visible mechanism.
+Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geometry_s95.py

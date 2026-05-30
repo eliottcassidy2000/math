@@ -1,0 +1,101 @@
+==============================================================================
+GOOD-CUT CLASS PURITY S95
+==============================================================================
+Does good-cut count descend to unmerged and merged tournament classes?
+
+------------------------------------------------------------------------------
+n=2, tilings=1, classes=1, merged=1
+  formula g=n-scc_count failures=0
+  scc_count tiling distribution={2: 1}
+  unmerged tournament classes: count=1, mixed=0, width_spectrum={0: 1}
+    pure classes by bucket={0: 1}
+    tiling mass by bucket={0: 1}
+  complement-merged nodes: count=1, mixed=0, width_spectrum={0: 1}
+    type_counts={'SC': 1}
+    mixed_type_counts={}
+    pure classes by bucket={0: 1}
+    tiling mass by bucket={0: 1}
+
+------------------------------------------------------------------------------
+n=3, tilings=2, classes=2, merged=2
+  formula g=n-scc_count failures=0
+  scc_count tiling distribution={1: 1, 3: 1}
+  unmerged tournament classes: count=2, mixed=0, width_spectrum={0: 2}
+    pure classes by bucket={0: 1, 2: 1}
+    tiling mass by bucket={0: 1, 2: 1}
+  complement-merged nodes: count=2, mixed=0, width_spectrum={0: 2}
+    type_counts={'SC': 2}
+    mixed_type_counts={}
+    pure classes by bucket={0: 1, 2: 1}
+    tiling mass by bucket={0: 1, 2: 1}
+
+------------------------------------------------------------------------------
+n=4, tilings=8, classes=4, merged=3
+  formula g=n-scc_count failures=0
+  scc_count tiling distribution={1: 5, 2: 2, 4: 1}
+  unmerged tournament classes: count=4, mixed=0, width_spectrum={0: 4}
+    pure classes by bucket={0: 1, 2: 2, 3: 1}
+    tiling mass by bucket={0: 1, 2: 2, 3: 5}
+  complement-merged nodes: count=3, mixed=0, width_spectrum={0: 3}
+    type_counts={'NSC': 1, 'SC': 2}
+    mixed_type_counts={}
+    pure classes by bucket={0: 1, 2: 1, 3: 1}
+    tiling mass by bucket={0: 1, 2: 2, 3: 5}
+
+------------------------------------------------------------------------------
+n=5, tilings=64, classes=12, merged=10
+  formula g=n-scc_count failures=0
+  scc_count tiling distribution={1: 50, 2: 10, 3: 3, 5: 1}
+  unmerged tournament classes: count=12, mixed=0, width_spectrum={0: 12}
+    pure classes by bucket={0: 1, 2: 3, 3: 2, 4: 6}
+    tiling mass by bucket={0: 1, 2: 3, 3: 10, 4: 50}
+  complement-merged nodes: count=10, mixed=0, width_spectrum={0: 10}
+    type_counts={'NSC': 2, 'SC': 8}
+    mixed_type_counts={}
+    pure classes by bucket={0: 1, 2: 2, 3: 1, 4: 6}
+    tiling mass by bucket={0: 1, 2: 3, 3: 10, 4: 50}
+
+------------------------------------------------------------------------------
+n=6, tilings=1024, classes=56, merged=34
+  formula g=n-scc_count failures=0
+  scc_count tiling distribution={1: 903, 2: 101, 3: 15, 4: 4, 6: 1}
+  unmerged tournament classes: count=56, mixed=0, width_spectrum={0: 56}
+    pure classes by bucket={0: 1, 2: 4, 3: 3, 4: 13, 5: 35}
+    tiling mass by bucket={0: 1, 2: 4, 3: 15, 4: 101, 5: 903}
+  complement-merged nodes: count=34, mixed=0, width_spectrum={0: 34}
+    type_counts={'NSC': 22, 'SC': 12}
+    mixed_type_counts={}
+    pure classes by bucket={0: 1, 2: 2, 3: 2, 4: 7, 5: 22}
+    tiling mass by bucket={0: 1, 2: 4, 3: 15, 4: 101, 5: 903}
+
+------------------------------------------------------------------------------
+n=7, tilings=32768, classes=456, merged=272
+  formula g=n-scc_count failures=0
+  scc_count tiling distribution={1: 30773, 2: 1816, 3: 153, 4: 20, 5: 5, 7: 1}
+  unmerged tournament classes: count=456, mixed=0, width_spectrum={0: 456}
+    pure classes by bucket={0: 1, 2: 5, 3: 4, 4: 21, 5: 72, 6: 353}
+    tiling mass by bucket={0: 1, 2: 5, 3: 20, 4: 153, 5: 1816, 6: 30773}
+  complement-merged nodes: count=272, mixed=0, width_spectrum={0: 272}
+    type_counts={'NSC': 184, 'SC': 88}
+    mixed_type_counts={}
+    pure classes by bucket={0: 1, 2: 3, 3: 2, 4: 14, 5: 36, 6: 216}
+    tiling mass by bucket={0: 1, 2: 5, 3: 20, 4: 153, 5: 1816, 6: 30773}
+
+==============================================================================
+SEQUENCES
+==============================================================================
+  unmerged_mixed: [0, 0, 0, 0, 0, 0]
+  merged_mixed:   [0, 0, 0, 0, 0, 0]
+
+==============================================================================
+INTERPRETATION
+==============================================================================
+The exhaustive formula check supports the theorem
+
+    good_cut_count(T, path) = n - scc_count(T).
+
+So zero mixed profiles are not accidental: strong-component count is an
+ordinary tournament isomorphism invariant.  This strengthens the S13
+merged-coordinate hypothesis and explains why every private endpoint-transfer
+pivot in endpoint_private_goodcut_s95.py was good-cut pure: all child classes
+at those levels are good-cut pure.

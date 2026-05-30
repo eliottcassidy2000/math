@@ -1,0 +1,141 @@
+==============================================================================
+ENDPOINT COLLISION GEOMETRY S95
+==============================================================================
+Do support-3 SC collisions form visible triples in the parent metagraph?
+
+------------------------------------------------------------------------------
+n=2->3
+  parent merged graph: V=1, E=0
+  non-private SC support spectrum={}
+  owner induced edge-count spectrum={}
+  owner edge-color tuples={}
+  owner good-cut tuples={}
+  owner kind tuples={}
+  collision owner-degree spectrum={}
+  collision pair-intersection spectrum={}
+  leaf peeling: removed=0, core=[]
+  child H mod 8={}
+  child H values={}
+  top-bucket failures=[]
+
+------------------------------------------------------------------------------
+n=3->4
+  parent merged graph: V=2, E=1
+  non-private SC support spectrum={}
+  owner induced edge-count spectrum={}
+  owner edge-color tuples={}
+  owner good-cut tuples={}
+  owner kind tuples={}
+  collision owner-degree spectrum={}
+  collision pair-intersection spectrum={}
+  leaf peeling: removed=0, core=[]
+  child H mod 8={}
+  child H values={}
+  top-bucket failures=[]
+
+------------------------------------------------------------------------------
+n=4->5
+  parent merged graph: V=3, E=3
+  non-private SC support spectrum={}
+  owner induced edge-count spectrum={}
+  owner edge-color tuples={}
+  owner good-cut tuples={}
+  owner kind tuples={}
+  collision owner-degree spectrum={}
+  collision pair-intersection spectrum={}
+  leaf peeling: removed=0, core=[]
+  child H mod 8={}
+  child H values={}
+  top-bucket failures=[]
+
+------------------------------------------------------------------------------
+n=5->6
+  parent merged graph: V=10, E=21
+  non-private SC support spectrum={3: 1}
+  owner induced edge-count spectrum={3: 1}
+  owner edge-color tuples={('NSC-SC', 'NSC-SC', 'SC-SC'): 1}
+  owner good-cut tuples={(3, 4, 4): 1}
+  owner kind tuples={('NSC', 'SC', 'SC'): 1}
+  collision owner-degree spectrum={1: 3}
+  collision pair-intersection spectrum={}
+  leaf peeling: removed=1, core=[]
+  child H mod 8={5: 1}
+  child H values={29: 1}
+  top-bucket failures=[]
+  examples:
+    child=21:H=29:g=5 owners=[3, 5, 7]
+      owner_g=[3, 4, 4] owner_kind=['NSC', 'SC', 'SC'] owner_H=[(5, 5), (9,), (13,)]
+      parent_edges=[(3, 5), (3, 7), (5, 7)] colors=['NSC-SC', 'NSC-SC', 'SC-SC']
+
+------------------------------------------------------------------------------
+n=6->7
+  parent merged graph: V=34, E=143
+  non-private SC support spectrum={3: 14}
+  owner induced edge-count spectrum={0: 1, 1: 6, 2: 5, 3: 2}
+  owner edge-color tuples={(): 1, ('NSC-NSC',): 4, ('NSC-NSC', 'NSC-NSC'): 2, ('NSC-NSC', 'NSC-NSC', 'NSC-NSC'): 2, ('NSC-NSC', 'NSC-SC'): 2, ('NSC-SC',): 2, ('NSC-SC', 'SC-SC'): 1}
+  owner good-cut tuples={(3, 4, 5): 1, (3, 5, 5): 2, (4, 5, 5): 2, (5, 5, 5): 9}
+  owner kind tuples={('NSC', 'NSC', 'NSC'): 4, ('NSC', 'NSC', 'SC'): 7, ('NSC', 'SC', 'SC'): 3}
+  collision owner-degree spectrum={1: 5, 2: 7, 3: 4, 5: 1, 6: 1}
+  collision pair-intersection spectrum={0: 53, 1: 32, 2: 6}
+  leaf peeling: removed=14, core=[]
+  child H mod 8={1: 1, 3: 3, 5: 3, 7: 7}
+  child H values={41: 1, 61: 1, 71: 1, 79: 1, 83: 1, 91: 1, 115: 1, 127: 1, 133: 1, 141: 1, 143: 1, 151: 1, 159: 2}
+  top-bucket failures=[]
+  examples:
+    child=64:H=41:g=6 owners=[3, 5, 14]
+      owner_g=[3, 4, 5] owner_kind=['NSC', 'NSC', 'SC'] owner_H=[(5, 5), (9, 9), (17,)]
+      parent_edges=[(3, 5), (3, 14)] colors=['NSC-NSC', 'NSC-SC']
+    child=94:H=61:g=6 owners=[9, 16, 18]
+      owner_g=[4, 5, 5] owner_kind=['NSC', 'NSC', 'NSC'] owner_H=[(13, 13), (23, 23), (25, 25)]
+      parent_edges=[(9, 16), (9, 18), (16, 18)] colors=['NSC-NSC', 'NSC-NSC', 'NSC-NSC']
+    child=116:H=71:g=6 owners=[9, 22, 25]
+      owner_g=[4, 5, 5] owner_kind=['NSC', 'SC', 'NSC'] owner_H=[(13, 13), (29,), (33, 33)]
+      parent_edges=[(22, 25)] colors=['NSC-SC']
+    child=132:H=79:g=6 owners=[4, 20, 23]
+      owner_g=[3, 5, 5] owner_kind=['SC', 'NSC', 'NSC'] owner_H=[(5,), (29, 29), (31, 31)]
+      parent_edges=[(20, 23)] colors=['NSC-NSC']
+    child=140:H=83:g=6 owners=[4, 20, 25]
+      owner_g=[3, 5, 5] owner_kind=['SC', 'NSC', 'NSC'] owner_H=[(5,), (29, 29), (33, 33)]
+      parent_edges=[(20, 25)] colors=['NSC-NSC']
+    child=156:H=91:g=6 owners=[16, 21, 24]
+      owner_g=[5, 5, 5] owner_kind=['NSC', 'SC', 'SC'] owner_H=[(23, 23), (29,), (33,)]
+      parent_edges=[(16, 24)] colors=['NSC-SC']
+    child=206:H=115:g=6 owners=[18, 28, 29]
+      owner_g=[5, 5, 5] owner_kind=['NSC', 'NSC', 'NSC'] owner_H=[(25, 25), (37, 37), (37, 37)]
+      parent_edges=[(18, 28), (28, 29)] colors=['NSC-NSC', 'NSC-NSC']
+    child=221:H=127:g=6 owners=[21, 23, 28]
+      owner_g=[5, 5, 5] owner_kind=['SC', 'NSC', 'NSC'] owner_H=[(29,), (31, 31), (37, 37)]
+      parent_edges=[(21, 23), (23, 28)] colors=['NSC-SC', 'NSC-NSC']
+    child=234:H=133:g=6 owners=[23, 25, 31]
+      owner_g=[5, 5, 5] owner_kind=['NSC', 'NSC', 'NSC'] owner_H=[(31, 31), (33, 33), (43, 43)]
+      parent_edges=[(23, 31), (25, 31)] colors=['NSC-NSC', 'NSC-NSC']
+    child=249:H=141:g=6 owners=[24, 25, 32]
+      owner_g=[5, 5, 5] owner_kind=['SC', 'NSC', 'SC'] owner_H=[(33,), (33, 33), (45,)]
+      parent_edges=[] colors=[]
+    child=252:H=143:g=6 owners=[25, 27, 31]
+      owner_g=[5, 5, 5] owner_kind=['NSC', 'SC', 'NSC'] owner_H=[(33, 33), (37,), (43, 43)]
+      parent_edges=[(25, 31)] colors=['NSC-NSC']
+    child=257:H=151:g=6 owners=[24, 25, 31]
+      owner_g=[5, 5, 5] owner_kind=['SC', 'NSC', 'NSC'] owner_H=[(33,), (33, 33), (43, 43)]
+      parent_edges=[(25, 31)] colors=['NSC-NSC']
+    child=265:H=159:g=6 owners=[28, 29, 31]
+      owner_g=[5, 5, 5] owner_kind=['NSC', 'NSC', 'NSC'] owner_H=[(37, 37), (37, 37), (43, 43)]
+      parent_edges=[(28, 29), (28, 31), (29, 31)] colors=['NSC-NSC', 'NSC-NSC', 'NSC-NSC']
+    child=267:H=159:g=6 owners=[21, 31, 32]
+      owner_g=[5, 5, 5] owner_kind=['SC', 'NSC', 'SC'] owner_H=[(29,), (43, 43), (45,)]
+      parent_edges=[(21, 32), (31, 32)] colors=['SC-SC', 'NSC-SC']
+
+==============================================================================
+SEQUENCES
+==============================================================================
+  edge_count_spectrum: [{}, {}, {}, {3: 1}, {0: 1, 1: 6, 2: 5, 3: 2}]
+  owner_degree_spectrum: [{}, {}, {}, {1: 3}, {1: 5, 2: 7, 3: 4, 5: 1, 6: 1}]
+  pair_intersections: [{}, {}, {}, {}, {0: 53, 1: 32, 2: 6}]
+  peel_removed: [0, 0, 0, 1, 14]
+  peel_core: [[], [], [], [], []]
+  top_bucket_failures: [[], [], [], [], []]
+
+==============================================================================
+INTERPRETATION
+==============================================================================
+A support-3 endpoint collision is not automatically a literal triangle in the parent merged arc-flip graph.  The induced edge count records whether the ternary residual is visible as adjacency geometry or only as endpoint-transfer incidence.
