@@ -2626,3 +2626,24 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** `fejer_kernel_wild_session.py` fits the law over all valid connection sets for `p=7,11,13,17,19,23`; the slope/intercept match the displayed formula and max fit error is roundoff. The same run gives `corr(IPR,J3var)=1.0000` on the `p=7,11,13` Hamiltonian-path cubes.
 **Predictions:** The first Fejer-to-space bridge should have a short proof via the oriented wedge transform. The real hard bridge is `J_3` localization to higher pinned simple-cycle profiles and Omega packing.
 **See:** `05-knowledge/hypotheses/HYP-1804-j3-energy-axis.md`, `04-computation/fejer_kernel_wild_session.py`, `05-knowledge/results/fejer_kernel_wild_session_2026_05_30.out`, `07-reflections/fejer-kernel-wild-session-2026-05-30.md`.
+
+## HYP-1805: Kernel pinning principle (codex-2026-05-30-kernel-residue-atlas)
+**Status:** EXPLORATORY meta-hypothesis.
+**What:** Many repo obstructions should be attacked by first identifying a kernel whose second moment is already a pinned local obstruction: `compressed shadow -> kernel/autocorrelation -> pinned local statistic`. The remaining proof work is then exclusion/incidence, not shadow-to-locality.
+**Evidence:** HYP-1804 is the model: Fejer/IPR concentration, additive energy, and pinned triangle variance are exactly one axis. Lonely Runner endpoint covers, Caccetta-Haggkvist return layers, and endpoint-transfer private pivots share the same shadow/kernel/pinning/incidence shape.
+**Predictions:** `J_5` profiles, path-homology ranks, real-root Newton defects, and endpoint-protection graphs should simplify after the right pinned-kernel second moment is identified.
+**See:** `05-knowledge/hypotheses/HYP-1805-kernel-pinning-principle.md`, `07-reflections/kernel-residue-trick-atlas-2026-05-30.md`.
+
+## HYP-1806: Packet compatibility transfer (codex-2026-05-30-kernel-residue-atlas)
+**Status:** EXPLORATORY cross-problem hypothesis.
+**What:** The OCF lesson should transfer beyond tournaments: counting local packets is weaker than understanding packet compatibility. For any problem with local witnesses or obstructions, build `packets -> conflict graph -> independence polynomial -> deletion residue`.
+**Evidence:** `H(T)=I(Omega(T),2)` and the Paley/Interval contrast show that more local packets can lose to more packable packets. Similar packet systems appear in matching/disjoint-cycle problems, Lonely Runner endpoint covers, CH/rainbow return paths, and active ranking ambiguity packets.
+**Predictions:** Packet-compatibility feature blocks should separate abundance-dominant from packability-dominant examples in circulant `H` maximization and in active ranking benchmarks.
+**See:** `05-knowledge/hypotheses/HYP-1806-packet-compatibility-transfer.md`, `07-reflections/kernel-residue-trick-atlas-2026-05-30.md`.
+
+## HYP-1807: Exclusion diagram expansion (codex-2026-05-30-kernel-residue-atlas)
+**Status:** EXPLORATORY proof-technology hypothesis.
+**What:** When a spectral/Fourier/transfer/cover kernel counts walks or overlaps too generously, use a finite expansion: `easy kernel count - illegal coincidence diagrams = actual simple object`.
+**Evidence:** In Fejer/circulants, `J_3` has no repeated-vertex corrections and collapses to additive energy; `J_5` is the first repeated-vertex diagram layer. Path homology, endpoint transfer, Lonely Runner, and CH all have analogous overcount-minus-collision structures.
+**Predictions:** Classifying the `J_5` correction diagrams will either yield a low-degree autocorrelation formula or expose the first new invariant beyond additive energy.
+**See:** `05-knowledge/hypotheses/HYP-1807-exclusion-diagram-expansion.md`, `07-reflections/kernel-residue-trick-atlas-2026-05-30.md`.

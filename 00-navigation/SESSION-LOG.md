@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-30-kernel-residue-atlas - Kernel/Residue Trick Atlas
+
+**Account:** Codex
+**Git first:** Started clean from `main...origin/main`.
+**User prompt:** Spend a long creative/abstract session on how the Fejer and residue ideas can apply across the repo and to famous problems.
+**Exploration:** Read the fresh Fejer/HYP-1804 note, applied residue/phase/incidence programs, representation-lens fundamentals, Lonely Runner tight-stratum note, Caccetta-Haggkvist return-residue note, open questions, concept map, and current tangent/hypothesis ranges. Checked current external anchors for Lonely Runner and Caccetta-Haggkvist: `arXiv:2604.23906`, `arXiv:2605.27941`, and Aharoni-Berger-Chudnovsky-Guo-Zerbib's SIAM CH/rainbow paper.
+**Synthesis:** Added `07-reflections/kernel-residue-trick-atlas-2026-05-30.md`. Main meta-trick: do not attack a scalar invariant directly; find a kernel whose second moment is already a pinned local obstruction, then handle exclusion/incidence diagrams. Fejer is the model: additive energy/IPR equals pinned `J_3` variance up to constants; the real proof work starts at `J_5` correction diagrams.
+**Knowledge updates:** Added HYP-1805 (kernel pinning principle), HYP-1806 (packet compatibility transfer), HYP-1807 (exclusion diagram expansion), and tangents T332-T334.
+**Applications/famous-problem bridges:** Lonely Runner becomes an endpoint-protection graph; Caccetta-Haggkvist becomes delayed return residue; union-closed and graph reconstruction become projection/kernel/rank problems; active ranking becomes expected `H`-drop on ambiguity packets.
+**Next:** Build the `J_5` correction atlas; add a circulant `phase_profile`; extend Lonely Runner scans with endpoint-protection hypergraphs; prototype packet-compatibility feature blocks.
+
 ## opus-2026-05-30-S5 - Applied Residue/Phase/Incidence Programs
 
 **Account:** Codex

@@ -170,6 +170,15 @@ The `k=3` CH case should be profiled by second-neighborhood surplus: for each ve
 **T331** #fejer-kernel #additive-energy #pinned-cycles #paley-interval | certainty: medium-high computational | source: codex-2026-05-30-fejer-wild
 Fejer/IPR concentration, additive energy, and pinned triangle localization appear to be exactly the same axis: over full circulant orientation cubes through `p=23`, `Var_{v!=0} J_3(0,v)=E(S)/(p-1)-(p^2-2p+5)/16`. This moves the proof gap one step later: prove how triangle localization survives into `J_5,J_7,...` and Omega hard-core packing. See HYP-1804 and `07-reflections/fejer-kernel-wild-session-2026-05-30.md`.
 
+**T332** #kernel-pinning #second-moment #proof-technology #famous-problems | certainty: medium | source: codex-2026-05-30-kernel-residue-atlas
+Meta-trick: do not attack the scalar first; find a kernel whose second moment is already the pinned local obstruction, then handle exclusion/incidence. Fejer gives the model (`E(S)` equals pinned `J_3` variance up to constants). Candidate transfers: path-homology ranks, real-root Newton defects, LRC endpoint covers, and CH return layers. See HYP-1805 and `07-reflections/kernel-residue-trick-atlas-2026-05-30.md`.
+
+**T333** #packet-compatibility #omega-generalization #packability #applications | certainty: medium | source: codex-2026-05-30-kernel-residue-atlas
+OCF's portable lesson is "packability beats abundance": count local packets only after building their conflict graph. This suggests Omega analogues for disjoint-cycle problems, union-closed families, graph reconstruction decks, rainbow cycles, and active ranking ambiguity packets. See HYP-1806.
+
+**T334** #exclusion-diagrams #pinned-walks #j5 #collision-expansion | certainty: medium | source: codex-2026-05-30-kernel-residue-atlas
+The next Fejer bridge is an exclusion-diagram expansion: pinned spectral walk counts are easy, simple pinned cycles equal those counts minus repeated-vertex diagrams. `J_3` has no corrections; `J_5` is the first real test. Same grammar may apply to path homology, endpoint transfer, LRC endpoint protection, and CH return collisions. See HYP-1807.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
