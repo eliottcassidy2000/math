@@ -524,6 +524,51 @@ theorem bucket_unordered_balance_boolCube_masks_audit
   BucketBalance.unordered_balance_boolCube_masks q moves b hmoves
 #print axioms bucket_unordered_balance_boolCube_masks_audit
 
+/-- Off-diagonal target-bucket transport rows are exactly escaping half-lines.
+    PROVED. -/
+theorem bucket_transport_offdiag_eq_crossHalf_audit {alpha beta move : Type}
+    [Fintype alpha] [Fintype beta] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) :
+    (∑ c ∈ (Finset.univ.erase b),
+        (BucketBalance.transportHalf q step moves b c).card) =
+      (BucketBalance.crossHalf q step moves b).card :=
+  BucketBalance.sum_transportHalf_card_offdiag_eq_crossHalf_card q step moves b
+#print axioms bucket_transport_offdiag_eq_crossHalf_audit
+
+/-- Target-bucket transport row checksum for fixed-point-free involutive move
+    systems. PROVED. -/
+theorem bucket_transport_row_balance_fixedPointFree_audit
+    {alpha beta move : Type}
+    [Fintype alpha] [Fintype beta] [DecidableEq alpha] [DecidableEq beta]
+    [DecidableEq move]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hstep : forall u, u ∈ moves -> Function.Involutive (step u))
+    (hfixed : forall u, u ∈ moves -> forall x, step u x ≠ x) :
+    2 * BucketBalance.internalLineCount q step moves b +
+        (∑ c ∈ (Finset.univ.erase b),
+          (BucketBalance.transportHalf q step moves b c).card) =
+      (BucketBalance.fiber q b).card * moves.card :=
+  BucketBalance.transport_row_balance_of_involutive_fixedPointFree
+    q step moves b hstep hfixed
+#print axioms bucket_transport_row_balance_fixedPointFree_audit
+
+/-- Boolean-cube target-bucket transport row checksum for nonzero xor-mask
+    families. PROVED. -/
+theorem bucket_transport_row_balance_boolCube_masks_audit
+    {index beta : Type} [Fintype index] [DecidableEq index]
+    [Fintype beta] [DecidableEq beta]
+    (q : BucketBalance.BoolCube index -> beta)
+    (moves : Finset (BucketBalance.BoolCube index)) (b : beta)
+    (hmoves : forall u, u ∈ moves -> BucketBalance.IsNonzeroMask u) :
+    2 * BucketBalance.internalLineCount q BucketBalance.xorMask moves b +
+        (∑ c ∈ (Finset.univ.erase b),
+          (BucketBalance.transportHalf q BucketBalance.xorMask moves b c).card) =
+      (BucketBalance.fiber q b).card * moves.card :=
+  BucketBalance.transport_row_balance_boolCube_masks q moves b hmoves
+#print axioms bucket_transport_row_balance_boolCube_masks_audit
+
 /-! ### THM-342 (small diagonal value) -/
 
 example : Qcount 2 1 = 1 := by

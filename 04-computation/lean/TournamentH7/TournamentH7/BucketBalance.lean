@@ -142,6 +142,51 @@ theorem crossHalf_card_eq_total_of_selfHalf_zero [Fintype alpha] [DecidableEq be
   have hbal := halfLine_balance q step moves b
   omega
 
+/-! ### Transport rows between buckets -/
+
+/-- Oriented half-lines starting in bucket `b` and landing in bucket `c`. -/
+def transportHalf [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b c : beta) : Finset (alpha × move) := by
+  classical
+  exact (incidentHalf q moves b).filter fun xu => q (step xu.2 xu.1) = c
+
+@[simp] theorem transportHalf_self [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) :
+    transportHalf q step moves b b = selfHalf q step moves b := by
+  classical
+  ext xu
+  simp [transportHalf, selfHalf]
+
+/-- The target-bucket transport row partitions all incident half-lines. -/
+theorem sum_transportHalf_card_eq_incidentHalf_card
+    [Fintype alpha] [Fintype beta] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) :
+    (∑ c : beta, (transportHalf q step moves b c).card) =
+      (incidentHalf q moves b).card := by
+  classical
+  have h := Finset.card_eq_sum_card_fiberwise
+    (s := incidentHalf q moves b) (t := (Finset.univ : Finset beta))
+    (f := fun xu : alpha × move => q (step xu.2 xu.1))
+    (by intro xu hxu; simp)
+  simpa [transportHalf] using h.symm
+
+/-- The off-diagonal target-bucket row is exactly the escaping half-line set. -/
+theorem sum_transportHalf_card_offdiag_eq_crossHalf_card
+    [Fintype alpha] [Fintype beta] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) :
+    (∑ c ∈ (Finset.univ.erase b),
+        (transportHalf q step moves b c).card) =
+      (crossHalf q step moves b).card := by
+  classical
+  have h := Finset.sum_card_fiberwise_eq_card_filter
+    (s := incidentHalf q moves b) (t := (Finset.univ.erase b))
+    (g := fun xu : alpha × move => q (step xu.2 xu.1))
+  simpa [transportHalf, crossHalf] using h
+
 /-! ### From oriented half-lines to unordered internal lines -/
 
 /-- A finite set with a fixed-point-free involution has even cardinality.
@@ -381,6 +426,39 @@ theorem unordered_balance_of_involutive_fixedPointFree
   exact unordered_balance_of_even_selfHalf q step moves b
     (selfHalf_card_even_of_involutive_fixedPointFree q step moves b hstep hfixed)
 
+/-! ### Transport-row checksums -/
+
+/-- Row-balance checksum for a target-bucket transport matrix once internal
+oriented half-lines have even cardinality. -/
+theorem transport_row_balance_of_even_selfHalf
+    [Fintype alpha] [Fintype beta] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hself : Even (selfHalf q step moves b).card) :
+    2 * internalLineCount q step moves b +
+        (∑ c ∈ (Finset.univ.erase b),
+          (transportHalf q step moves b c).card) =
+      (fiber q b).card * moves.card := by
+  classical
+  rw [sum_transportHalf_card_offdiag_eq_crossHalf_card]
+  exact unordered_balance_of_even_selfHalf q step moves b hself
+
+/-- Row-balance checksum for fixed-point-free involutive move systems. -/
+theorem transport_row_balance_of_involutive_fixedPointFree
+    [Fintype alpha] [Fintype beta] [DecidableEq alpha] [DecidableEq beta]
+    [DecidableEq move]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hstep : ∀ u, u ∈ moves -> Function.Involutive (step u))
+    (hfixed : ∀ u, u ∈ moves -> ∀ x, step u x ≠ x) :
+    2 * internalLineCount q step moves b +
+        (∑ c ∈ (Finset.univ.erase b),
+          (transportHalf q step moves b c).card) =
+      (fiber q b).card * moves.card := by
+  classical
+  exact transport_row_balance_of_even_selfHalf q step moves b
+    (selfHalf_card_even_of_involutive_fixedPointFree q step moves b hstep hfixed)
+
 /-! ### Boolean cube mask specialization -/
 
 /-- A finite Boolean cube, used for tiling masks by taking
@@ -429,6 +507,24 @@ theorem unordered_balance_boolCube_masks
       (fiber q b).card * moves.card := by
   classical
   refine unordered_balance_of_involutive_fixedPointFree q xorMask moves b ?_ ?_
+  · intro u _hu
+    exact xorMask_involutive u
+  · intro u hu
+    exact xorMask_fixedPointFree_of_nonzero (hmoves u hu)
+
+/-- Target-bucket transport row checksum for finite Boolean cubes and nonzero
+xor-mask families. -/
+theorem transport_row_balance_boolCube_masks
+    {index : Type z} [Fintype index] [DecidableEq index]
+    {beta : Type v} [Fintype beta] [DecidableEq beta]
+    (q : BoolCube index -> beta) (moves : Finset (BoolCube index)) (b : beta)
+    (hmoves : ∀ u, u ∈ moves -> IsNonzeroMask u) :
+    2 * internalLineCount q xorMask moves b +
+        (∑ c ∈ (Finset.univ.erase b),
+          (transportHalf q xorMask moves b c).card) =
+      (fiber q b).card * moves.card := by
+  classical
+  refine transport_row_balance_of_involutive_fixedPointFree q xorMask moves b ?_ ?_
   · intro u _hu
     exact xorMask_involutive u
   · intro u hu

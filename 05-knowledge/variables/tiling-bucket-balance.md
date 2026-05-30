@@ -2,7 +2,7 @@
 
 **Symbol:** `bucket_balance_q,M(b)`
 **Type:** integer identity / quotient-matrix row constraint
-**Defined in:** THM-346; Lean half-line core THM-348; unordered Lean layer THM-350; Boolean-mask specialization THM-351
+**Defined in:** THM-346; Lean half-line core THM-348; unordered Lean layer THM-350; Boolean-mask specialization THM-351; transport-row checksum THM-352
 
 ## Definition
 
@@ -71,6 +71,22 @@ It had 0 violations for `n=3..6` in both quotients.
 - If the space is a finite Boolean cube and each selected mask is nonzero,
   the selected xor moves are fixed-point-free involutions and the unordered
   balance follows directly (THM-351, Lean).
+- If `transportHalf_b,c(M)` counts oriented half-lines from bucket `b` to
+  target bucket `c`, then
+
+```text
+sum_{c != b} |transportHalf_b,c(M)| = incident_cross_b(M).
+```
+
+  Combining this with THM-351 gives the Boolean-cube row checksum
+
+```text
+2*internalLineCount_b(M) + sum_{c != b} |transportHalf_b,c(M)|
+  = |q^{-1}(b)|*|M|.
+```
+
+  This is THM-352 in Lean and is the preferred matrix-audit form for
+  quotient transport computations.
 - If `|M|=1`, then `incident_cross_b(M) == |q^{-1}(b)| mod 2`.
 - Normalized escape plus neutrality:
 
@@ -95,6 +111,7 @@ escape_b + neutral_b = 1.
 - `01-canon/theorems/THM-348-finite-bucket-halfline-balance.md`
 - `01-canon/theorems/THM-350-finite-unordered-bucket-balance-layer.md`
 - `01-canon/theorems/THM-351-boolean-cube-mask-bucket-balance.md`
+- `01-canon/theorems/THM-352-quotient-transport-row-checksum.md`
 - `01-canon/theorems/THM-345-merged-bucket-parity.md`
 - `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`
 - `04-computation/tiling_quotient_bucket_balance_s5.py`

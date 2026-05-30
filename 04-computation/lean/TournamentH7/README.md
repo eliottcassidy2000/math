@@ -76,7 +76,12 @@ follows for fixed-point-free involutive move systems. These are the Lean cores
 of THM-348 and THM-350. The same module also formalizes the Boolean-cube
 mask specialization of THM-351: nonzero xor masks are fixed-point-free
 involutions, so finite Boolean cube quotients satisfy the unordered bucket
-balance directly.
+balance directly. The transport-row layer is also formalized: `transportHalf`
+counts oriented half-lines from bucket `b` landing in bucket `c`, the
+off-diagonal row sum is exactly `crossHalf`, and fixed-point-free involutive
+systems satisfy the matrix checksum
+`2*internalLineCount + sum_{c != b} transportHalf(b,c) = |fiber b|*|moves|`.
+The Boolean-cube xor-mask specialization of this checksum is THM-352.
 
 ## Proof sketch
 

@@ -57,3 +57,8 @@ Tournament TDA extractor should include ordered transport features:
 
 Those features are normalized by the Lean balance theorem, so they come with a
 built-in row-sum checksum.
+
+**Codex-2026-05-30 update:** THM-352 now formalizes the target-bucket row
+version of that checksum in Lean. The off-diagonal sum of
+`transportHalf(b,c)` is exactly the escaping half-line term, and the
+Boolean-cube xor-mask specialization gives the matrix audit directly.

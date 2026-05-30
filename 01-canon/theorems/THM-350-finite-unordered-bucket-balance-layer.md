@@ -70,6 +70,11 @@ Thus the route to the full tiling-cube specialization is sharply localized:
 instantiate `step(u,x)=x xor u` for nonzero tiling masks. This final
 Boolean-cube specialization is now proved as THM-351.
 
+THM-352 adds the transport-matrix version: after defining
+`transportHalf(b,c)` by target bucket, the off-diagonal row sum is exactly
+`crossHalf(b)`, so this unordered balance becomes a row checksum for quotient
+transport computations.
+
 ## Lean Formalization
 
 `TournamentH7.BucketBalance` proves:
@@ -132,6 +137,7 @@ perturbation system whose moves are fixed-point-free involutions.
 - THM-346: tiling quotient bucket balance.
 - THM-348: finite bucket half-line balance.
 - THM-351: Boolean-cube mask bucket balance.
+- THM-352: quotient transport row checksum.
 - HYP-1775 and HYP-1778.
 - INV-194: merged tiling bucket constraints.
 - `05-knowledge/variables/tiling-bucket-balance.md`.
