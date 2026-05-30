@@ -683,3 +683,11 @@ theorem H_ge_one_from_ocf_audit {n : ℕ} (T : Tournament n) : 1 ≤ H T :=
 theorem H_ne_zero_from_ocf_audit {n : ℕ} (T : Tournament n) : H T ≠ 0 :=
   H_ne_zero T
 #print axioms H_ne_zero_from_ocf_audit
+
+theorem H_odd_from_ocf_audit {n : ℕ} (T : Tournament n) : Odd (H T) :=
+  H_odd_from_ocf T
+#print axioms H_odd_from_ocf_audit
+
+theorem H_not_even_audit {n : ℕ} (T : Tournament n) : ¬ Even (H T) :=
+  H_not_even T
+#print axioms H_not_even_audit

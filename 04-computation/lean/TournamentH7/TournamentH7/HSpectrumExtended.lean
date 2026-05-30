@@ -8,6 +8,7 @@
 import TournamentH7.HSpectrum
 import TournamentH7.PaleyAxiomatic
 import TournamentH7.Redei
+import TournamentH7.RedeiFromOCF
 import TournamentH7.ForbiddenHCounting
 
 namespace Tournament
@@ -23,9 +24,9 @@ namespace Tournament
 theorem H_spectrum_n7 (T : Tournament 7) :
     1 ≤ H T ∧ H T ≤ 189 ∧ Odd (H T) ∧ H T ≠ 7 ∧ H T ≠ 21 ∧ H T ≠ 63 := by
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_⟩
-  · exact redei_existence (by omega) T
+  · exact H_ge_one T
   · exact paley_7_maximises_H T
-  · exact redei_parity (by omega) T
+  · exact H_odd_from_ocf T
   · exact H_ne_seven T
   · exact H_ne_twentyone T
   · exact H_ne_sixtythree_le_seven (by omega) T
@@ -36,8 +37,8 @@ theorem H_spectrum_n7 (T : Tournament 7) :
 theorem H_spectrum_n3 (T : Tournament 3) :
     1 ≤ H T ∧ Odd (H T) ∧ H T ≠ 7 ∧ H T ≠ 21 := by
   refine ⟨?_, ?_, ?_, ?_⟩
-  · exact redei_existence (by omega) T
-  · exact redei_parity (by omega) T
+  · exact H_ge_one T
+  · exact H_odd_from_ocf T
   · exact H_ne_seven T
   · exact H_ne_twentyone T
 
