@@ -82,6 +82,18 @@ Several unrelated threads share one algebra: choose supports, project/forget, th
 **T302** #residue-rank #ocf #tda-features #obstruction-filters | certainty: medium | source: kind-pasteur-2026-05-30-S3
 The residue lens has a rank/threshold refinement: first obstructions appear when the surviving residue has just enough parity, independence, or rank to avoid cancellation. Lean now records the explicit OCF residue `H%2=1`; THM-354 gives SCC-defect residue; bucket transport leaves off-diagonal escape residue. Hypothesis: real-root failures, H-gaps, and ghost cycles should cluster by residue rank more than by raw support size. See HYP-1780 and `07-reflections/residue-feedback-loop.md`.
 
+**T303** #projection-residue #transport #omega #tournament-tda | certainty: medium | source: codex-2026-05-30
+Projection defects, bucket transport, endpoint transfer, Paley codes, and path-homology rank defects all share the same diagnostic shape: upstairs structure -> projected shadow + residue. Hypothesis: a combined residue vector from deletion loss, support multiplicity, Omega alpha, even-graph projection, transport leakage, and endpoint parity will prefilter H-gap exceptions, real-root failures, and homology anomalies. See HYP-1781 and `07-reflections/residue-calculus-feedback-loop.md`.
+
+**T304** #single-core #complete-omega #forbidden-H #signature-spectrum | certainty: medium-high computational | source: codex-2026-05-30
+Single-core complete-Omega tournaments have `H=1+2*r_core(s)`. Search through signature length m=40 finds `r_core=3` and `10` absent, while `31` first appears at m=7 as `1001100`/`1100110`, exactly the THM-344 H=63 unlock. Prove or refute the arithmetic image gap `r_core(s) notin {3,10}`. See HYP-1782.
+
+**T305** #paley #localized-core #projection-defect #phase-types | certainty: medium | source: codex-2026-05-30
+Two opposite residue regimes may explain many special tournaments. Paley-like objects are flat across score, deletion, code, and support projections; core-like objects are localized around one kill or near-kill vertex. Paley spreads cycle mass, H=63 concentrates it into complete Omega, and THM-025 is the unstable near-localized residue case. See HYP-1784.
+
+**T306** #quotient-gaps #transport-matrices #good-cut-buckets #lean | certainty: proved in Lean | source: codex-2026-05-30
+Empty quotient fibers are zero source rows and zero target columns for every finite transport system. Applied to `goodCutBucket : StTiling n -> Fin (n+1)`, the image is exactly `{0} ∪ {2,...,n-1}` for `n >= 3`, so buckets `1` and `n` are certified transport gaps. This turns missing bucket values into matrix row/column facts. See THM-355 and HYP-1783.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

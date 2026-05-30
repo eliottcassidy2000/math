@@ -193,12 +193,18 @@ external/project axioms that are already in their proof OR — best case
 - `BucketBalance.xorMask_involutive` — Boolean cube xor by a mask is an involution.
 - `BucketBalance.xorMask_fixedPointFree_of_nonzero` — Boolean cube xor by a nonzero mask has no fixed point.
 - `BucketBalance.unordered_balance_boolCube_masks` — finite Boolean cube quotients and nonzero mask families satisfy unordered bucket balance.
+- `BucketBalance.fiber_eq_empty_iff` — a finite quotient bucket is empty exactly when no point maps to it.
+- `BucketBalance.transportHalf_eq_empty_of_source_fiber_eq_empty` /
+  `BucketBalance.transportHalf_eq_empty_of_target_fiber_eq_empty` — empty quotient fibers give zero transport rows and columns.
 - `StTile.equivGapPair` — concrete staircase tiles are equivalent to the finite subtype of legal coordinate pairs.
 - `StTiling.nonzeroMasks` / `StTiling.singleTileMasks` / `StTiling.complementMask` — concrete staircase mask families.
 - `StTiling.transport_row_balance_allNonzeroMasks` / `StTiling.transport_row_balance_singleTileMasks` /
   `StTiling.transport_row_balance_complementMask` — THM-352 specialized to concrete staircase tiling masks.
 - `StTiling.goodCutBucket_eq_zero_iff_all_down` — the finite good-cut quotient bottom bucket is exactly all-down.
 - `StTiling.goodCutBucket_eq_top_iff_toTournament_SC` — the finite good-cut quotient top bucket is exactly strong connectivity.
+- `StTiling.goodCutBucket_image_iff` — for `n >= 3`, the finite good-cut quotient image is exactly `{0} ∪ {2,...,n-1}`.
+- `StTiling.goodCutBucket_fiber_one_eq_empty` /
+  `StTiling.goodCutBucket_fiber_overTop_eq_empty` — buckets `1` and `n` are certified finite quotient gaps.
 - `StTiling.transport_row_balance_goodCutBucket_allNonzeroMasks` /
   `StTiling.transport_row_balance_goodCutBucket_singleTileMasks` /
   `StTiling.transport_row_balance_goodCutBucket_complementMask` — concrete good-cut quotient row checksums.

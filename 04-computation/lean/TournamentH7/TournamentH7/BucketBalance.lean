@@ -151,6 +151,114 @@ def transportHalf [Fintype alpha] [DecidableEq beta]
   classical
   exact (incidentHalf q moves b).filter fun xu => q (step xu.2 xu.1) = c
 
+/-! ### Empty fibers and transport gaps -/
+
+theorem fiber_eq_empty_iff [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (b : beta) :
+    fiber q b = ∅ ↔ ∀ x, q x ≠ b := by
+  classical
+  constructor
+  · intro h x hx
+    have hxmem : x ∈ fiber q b := by
+      simp [fiber, hx]
+    rw [h] at hxmem
+    simp at hxmem
+  · intro h
+    ext x
+    constructor
+    · intro hx
+      have hq : q x = b := by
+        simpa [fiber] using hx
+      exact False.elim (h x hq)
+    · intro hx
+      simp at hx
+
+theorem incidentHalf_eq_empty_of_fiber_eq_empty [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (moves : Finset move) (b : beta)
+    (h : fiber q b = ∅) :
+    incidentHalf q moves b = ∅ := by
+  classical
+  simp [incidentHalf, h]
+
+theorem selfHalf_eq_empty_of_fiber_eq_empty [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) (h : fiber q b = ∅) :
+    selfHalf q step moves b = ∅ := by
+  classical
+  simp [selfHalf, incidentHalf, h]
+
+theorem crossHalf_eq_empty_of_fiber_eq_empty [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) (h : fiber q b = ∅) :
+    crossHalf q step moves b = ∅ := by
+  classical
+  simp [crossHalf, incidentHalf, h]
+
+theorem transportHalf_eq_empty_of_source_fiber_eq_empty
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b c : beta) (h : fiber q b = ∅) :
+    transportHalf q step moves b c = ∅ := by
+  classical
+  simp [transportHalf, incidentHalf, h]
+
+theorem transportHalf_eq_empty_of_target_fiber_eq_empty
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b c : beta) (h : fiber q c = ∅) :
+    transportHalf q step moves b c = ∅ := by
+  classical
+  ext xu
+  constructor
+  · intro hxu
+    have hfacts :
+        xu ∈ incidentHalf q moves b ∧ q (step xu.2 xu.1) = c := by
+      simpa [transportHalf] using hxu
+    have htarget : step xu.2 xu.1 ∈ fiber q c := by
+      simp [fiber, hfacts.2]
+    rw [h] at htarget
+    simp at htarget
+  · intro hxu
+    simp at hxu
+
+theorem transportHalf_card_eq_zero_of_source_fiber_eq_empty
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b c : beta) (h : fiber q b = ∅) :
+    (transportHalf q step moves b c).card = 0 := by
+  rw [transportHalf_eq_empty_of_source_fiber_eq_empty q step moves b c h]
+  simp
+
+theorem transportHalf_card_eq_zero_of_target_fiber_eq_empty
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b c : beta) (h : fiber q c = ∅) :
+    (transportHalf q step moves b c).card = 0 := by
+  rw [transportHalf_eq_empty_of_target_fiber_eq_empty q step moves b c h]
+  simp
+
+theorem sum_transportHalf_card_eq_zero_of_source_fiber_eq_empty
+    [Fintype alpha] [Fintype beta] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) (h : fiber q b = ∅) :
+    (∑ c : beta, (transportHalf q step moves b c).card) = 0 := by
+  classical
+  have hzero : ∀ c : beta, (transportHalf q step moves b c).card = 0 := by
+    intro c
+    exact transportHalf_card_eq_zero_of_source_fiber_eq_empty q step moves b c h
+  simp [hzero]
+
+theorem sum_transportHalf_card_eq_zero_of_target_fiber_eq_empty
+    [Fintype alpha] [Fintype beta] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (c : beta) (h : fiber q c = ∅) :
+    (∑ b : beta, (transportHalf q step moves b c).card) = 0 := by
+  classical
+  have hzero : ∀ b : beta, (transportHalf q step moves b c).card = 0 := by
+    intro b
+    exact transportHalf_card_eq_zero_of_target_fiber_eq_empty q step moves b c h
+  simp [hzero]
+
 @[simp] theorem transportHalf_self [Fintype alpha] [DecidableEq beta]
     (q : alpha -> beta) (step : move -> alpha -> alpha)
     (moves : Finset move) (b : beta) :

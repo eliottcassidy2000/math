@@ -2467,3 +2467,31 @@ Source: `04-computation/goodcut_transport_excess_s15.py`, `05-knowledge/results/
 **Evidence:** `H_mod_two_eq_one_from_ocf` explicitly formalizes the OCF mod-2 residue `H(T)%2=1`. THM-354 makes good-cut height the SCC-defect residue. THM-351/352/353 make bucket-transport semantics live in off-diagonal escape residue after row conservation. H=63 is exact odd-cycle kill; THM-025 is near-kill with a small dangerous residue; Paley/Interval separates equal support shadow from fiber residue.
 **Predictions:** Real-root failures should cluster at small nonempty deletion residues; H-spectrum gaps beyond parity should correspond to impossible OCF residue profiles; bucket transport should be stratified by residual off-diagonal rank; ghost-cycle failures should resemble near-kill residues.
 **See:** `05-knowledge/hypotheses/HYP-1780-residue-rank-stratification.md`, `07-reflections/residue-feedback-loop.md`, HYP-1779.
+
+## HYP-1781: Projection-transport residue calculus (codex-2026-05-30)
+**Status:** EXPLORATORY synthesis hypothesis.
+**What:** A combined residue vector made from deletion loss, support multiplicity, Omega alpha-vector, even-graph projection, quotient-transport leakage, and endpoint-transfer parity should separate complete-core H=63 classes, THM-025-style real-root failures, Paley/interval packing differences, good-cut transport boundaries, and homology rank defects better than any single invariant.
+**Evidence:** H=63 has a kill vertex with `rho=1`; THM-025 has near-kill `rho=92/94` with residue `alpha=[1,2,1]`; Paley/interval T7 share 36 supports but differ in support multiplicity, disjoint pairs, and even-graph projection; THM-350/351/353 prove exact quotient-transport row checksums.
+**Next:** Consolidate a `residue_vector(T)` feature block from existing projection-defect, good-cut-transport, and TDA scripts; test it against real-root failures and H-maximizer families.
+Source: `05-knowledge/hypotheses/HYP-1781-projection-transport-residue-calculus.md`, `07-reflections/residue-calculus-feedback-loop.md`.
+
+## HYP-1782: Single-core target spectrum (codex-2026-05-30)
+**Status:** EXPLORATORY arithmetic/proof target.
+**What:** In single-core complete-Omega tournaments, `H=1+2*r_core(s)`. The observed absence of `r_core=3` and `r_core=10` through signature length `m=40` suggests the complete-core mechanism cannot realize H=7 or H=21, while `r_core=31` first appears at `m=7` and unlocks H=63 at n=8.
+**Evidence:** The two THM-344 H=63 classes have signatures `1001100` and `1100110`, both with `r_core=31` and `Omega=K31`. The target-signature search reports `r=3` and `r=10` absent through `m=40`.
+**Next:** Prove `r_core(s) notin {3,10}` for all binary signatures, or find the first counterexample.
+Source: `05-knowledge/hypotheses/HYP-1782-single-core-target-spectrum.md`, `04-computation/projection_defect_bridge_s12.py`.
+
+## HYP-1783: Quotient gap/residue principle (codex-2026-05-30)
+**Status:** PARTIALLY-TRUE; finite-set core PROVED in Lean.
+**What:** Many unrelated-looking invariants are support/residue data of quotient maps: gaps are empty fibers, boundaries are parity-visible fibers, projection defects are residue after forgetting coordinates, and transport features describe how mass moves between nonempty fibers.
+**Evidence:** THM-355 proves the generic finite-set core: empty source fibers give zero transport rows and empty target fibers give zero transport columns. It also proves the concrete good-cut quotient image: for `n >= 3`, `goodCutBucket : StTiling n -> Fin (n+1)` has image exactly `{0} ∪ {2,...,n-1}`, so buckets `1` and `n` are genuine quotient gaps.
+**Next:** Test the same vocabulary on fixed-n H-value gaps, endpoint transfer boundaries, and projection-defect residues; add `gap_count`, `boundary_parity`, and `residue_mass` feature blocks to TDA experiments.
+**See:** `05-knowledge/hypotheses/HYP-1783-quotient-gap-residue-principle.md`, THM-347, THM-349, THM-355, `07-reflections/fiber-gaps-and-residue-boundaries.md`.
+
+## HYP-1784: Flat-versus-localized residue duality (codex-2026-05-30)
+**Status:** EXPLORATORY classification hypothesis.
+**What:** Structured extremal tournaments separate into flat-residue regimes (Paley-like: uniform scores, deletion losses, code shadows) and localized-residue regimes (core-like: one kill or near-kill vertex explains most odd cycles).
+**Evidence:** Paley T7 has uniform deletion loss `60/80` at every vertex; H=63 has one vertex with `rho=1`; THM-025 has one vertex with `rho=92/94`; interval T7 shares Paley's score/support shadow but has different multiplicity and even-graph residue.
+**Next:** Compare H-maximizer, Paley, interval, near-transitive, and real-root-failure samples on localization versus normalized transport leakage.
+Source: `05-knowledge/hypotheses/HYP-1784-flat-localized-residue-duality.md`, `07-reflections/residue-calculus-feedback-loop.md`.

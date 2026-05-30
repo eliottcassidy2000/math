@@ -177,6 +177,48 @@ theorem goodCutBucket_eq_top_iff_toTournament_SC (u : StTiling n) :
     apply Fin.ext
     exact (StTiling.goodCutCount_eq_top_iff_toTournament_stronglyConnected u).mpr h
 
+/-! ### Good-cut quotient gaps -/
+
+theorem goodCutBucket_image_iff (hn : 3 ≤ n) (b : Fin (n + 1)) :
+    (∃ u : StTiling n, goodCutBucket u = b) ↔
+      b.val = 0 ∨ (2 ≤ b.val ∧ b.val ≤ n - 1) := by
+  constructor
+  · rintro ⟨u, hu⟩
+    have hval : u.goodCutCount = b.val := congrArg Fin.val hu
+    exact (StTiling.goodCutCount_spectrum (n := n) (r := b.val) hn).mp
+      ⟨u, hval⟩
+  · intro hb
+    rcases (StTiling.goodCutCount_spectrum (n := n) (r := b.val) hn).mpr hb
+      with ⟨u, hu⟩
+    refine ⟨u, ?_⟩
+    apply Fin.ext
+    exact hu
+
+theorem goodCutBucket_ne_one (hn : 1 ≤ n) (u : StTiling n) :
+    goodCutBucket u ≠ (⟨1, by omega⟩ : Fin (n + 1)) := by
+  intro h
+  have hval : u.goodCutCount = 1 := congrArg Fin.val h
+  exact StTiling.goodCutCount_ne_one u hval
+
+theorem goodCutBucket_ne_overTop (hn : 1 ≤ n) (u : StTiling n) :
+    goodCutBucket u ≠ (⟨n, by omega⟩ : Fin (n + 1)) := by
+  intro h
+  have hval : u.goodCutCount = n := congrArg Fin.val h
+  have hle := StTiling.goodCutCount_le_n_minus_one u
+  omega
+
+theorem goodCutBucket_fiber_one_eq_empty (hn : 1 ≤ n) :
+    BucketBalance.fiber goodCutBucket (⟨1, by omega⟩ : Fin (n + 1)) = ∅ := by
+  classical
+  ext u
+  simp [BucketBalance.fiber, goodCutBucket_ne_one hn u]
+
+theorem goodCutBucket_fiber_overTop_eq_empty (hn : 1 ≤ n) :
+    BucketBalance.fiber goodCutBucket (⟨n, by omega⟩ : Fin (n + 1)) = ∅ := by
+  classical
+  ext u
+  simp [BucketBalance.fiber, goodCutBucket_ne_overTop hn u]
+
 theorem transport_row_balance_goodCutBucket_allNonzeroMasks (b : Fin (n + 1)) :
     2 * BucketBalance.internalLineCount goodCutBucket BucketBalance.xorMask
         (nonzeroMasks n) b +

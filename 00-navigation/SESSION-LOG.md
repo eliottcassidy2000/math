@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-30 - Quotient Gap Transport Layer
+
+**Account:** Codex
+**Git first:** Continued during an interactive rebase over `origin/main`, preserving the SCC/support-residue session as THM-354/HYP-1779, the residue-rank layer as HYP-1780, and renumbering the new gap layer to THM-355/HYP-1783.
+**Lean work:** Extended `TournamentH7.BucketBalance` with empty-fiber transport lemmas: empty fibers are exactly no preimage; empty source/target fibers force empty incident, self, cross, and target-specific transport half-line sets; and the corresponding transport entries plus row/column sums have cardinality zero. Specialized this in `TournamentH7.StaircaseBucketTransport` to the finite good-cut quotient.
+**New theorem:** Added THM-355, proving that quotient gaps are zero transport rows and zero transport columns. For `goodCutBucket : StTiling n -> Fin (n+1)`, Lean proves the image is exactly `{0} ∪ {2,...,n-1}` for `n >= 3`, so buckets `1` and `n` are certified finite transport gaps.
+**Knowledge updates:** Added HYP-1783, T306, reflection `07-reflections/fiber-gaps-and-residue-boundaries.md`, updated THM-352/353, the bucket-balance variable, Lean README/ARCHITECTURE, and the transport/good-cut reflections.
+**Idea synthesis:** The bucket-balance row checksum now has a complementary zero-row language: conservation governs occupied fibers, while gaps are silent rows/columns. This reframes missing good-cut values and prospective fixed-n `H` gaps as quotient-support facts rather than just absent scalar values.
+**Verification:** `lake build TournamentH7.BucketBalance TournamentH7.StaircaseBucketTransport TournamentH7.Verify`; `git diff --check`.
+**Next priorities:** Add quotient-native TDA features (`fiber_support`, `gap_count`, `boundary_parity`, `transport_escape`, `residue_mass`); test whether fixed-n H-value gaps have transport-neighbor signatures; keep the SCC proof path separate from this finite-set gap layer.
+
 ## kind-pasteur-2026-05-30-S3 - Residue Rank Feedback Loop + OCF Mod-2 Lean Residue
 
 **Account:** kind-pasteur
@@ -10,6 +21,17 @@
 **Knowledge updates:** Added HYP-1780, T302, updated HYP-1779/support-residue notes, and updated Lean README/ARCHITECTURE for the explicit OCF mod-2 residue.
 **Verification:** `lake build TournamentH7.RedeiFromOCF TournamentH7.Verify` saved to `05-knowledge/results/lean_redei_residue_kind_pasteur_2026-05-30-S3.out`; previous S3 checks include `lake build TournamentH7.ApexBridge`, `lake build TournamentH7.Verify`, `python3 -m py_compile 04-computation/goodcut_scc_defect_s354.py`, and `python3 04-computation/goodcut_scc_defect_s354.py`.
 **Next:** Add residue-rank features to `tournament_tda.py`; test deletion-residue filters on real-root failures and ghost-cycle cases; Lean-formalize THM-354 by building SCC condensation boundaries for Hamiltonian base paths.
+
+## codex-2026-05-30 - Residue Calculus Feedback Loop
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`; push was rejected after `origin/main` advanced, then rebased over `codex-2026-05-30-support-residue` and renumbered the new hypotheses to avoid the HYP-1779 collision.
+**Exploration:** Sampled canonical definitions, open questions, tangent registry, projection-defect notes, H=63/complete-Omega notes, good-cut interval gas and staircase connectivity notes, bucket-balance theorems, endpoint-transfer hypotheses, Paley code computations, and the metallic-mean/beta constraint-propagation thread.
+**Computation:** Re-ran `projection_defect_bridge_s12.py`, `goodcut_interval_union_s15.py`, and `paley_codes_s306.py` as spot checks. The run reconfirmed the exact/near projection-kill contrast (`rho=1` for the two H=63 classes, `rho=92/94` for THM-025), the interval-gas bucket recurrence through n=13, and the Paley code split (`A` raw gives simplex/dual-Golay side; `A+I` or rowspace gives Hamming/Golay at p=7,23). Added and ran `residue_vector_codex_2026_05_30.py`, saving a compact seed table of residue features.
+**Knowledge updates:** Added synthesis reflection `07-reflections/residue-calculus-feedback-loop.md`; added HYP-1781/HYP-1782/HYP-1784; added result `05-knowledge/results/residue_vector_codex_2026_05_30.out`; updated the hypothesis index and tangent registry with T303/T304/T305.
+**Main idea:** Several unrelated threads are instances of a finite projection-residue pattern. H=63 is exact deletion kill, THM-025 is near-kill with a small bad residue, good-cut height is interval projection plus quotient transport leakage, bucket balance is a formal row checksum for leakage, and Paley/code data is a flat fiber-shadow regime.
+**Verification:** `python3 -m py_compile 04-computation/residue_vector_codex_2026_05_30.py`; `python3 04-computation/residue_vector_codex_2026_05_30.py > 05-knowledge/results/residue_vector_codex_2026_05_30.out`; `lake build TournamentH7.BucketBalance TournamentH7.StaircaseBucketTransport`; `git diff --check`.
+**Next priorities:** Build a reusable `residue_vector(T)` feature block; benchmark it against real-root failures and H-maximizer families; attack the single-core arithmetic image gap `r_core(s) notin {3,10}`.
 
 ## codex-2026-05-30-support-residue - Good-Cut SCC Defect + Projection-Residue Synthesis
 

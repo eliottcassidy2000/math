@@ -1,0 +1,15 @@
+Residue-vector seed table (codex-2026-05-30)
+========================================================================
+label | n | H | scores | cycles | supports | support_excess | max_support_mult | alpha | complete_Omega | max_loss_frac | kill_vertices | top_deletion_v_lost_kept | even_edges | even_degree_seq
+------------------------------------------------------------------------
+transitive n=7 | 7 | 1 | (0, 1, 2, 3, 4, 5, 6) | 0 | 0 | 0 | 0 | (1, 0) | True | 0.0 | (0, 1, 2, 3, 4, 5, 6) | ((0, 0, 0), (1, 0, 0), (2, 0, 0)) | 21 | (6, 6, 6, 6, 6, 6, 6)
+Paley T7 | 7 | 189 | (3, 3, 3, 3, 3, 3, 3) | 80 | 36 | 44 | 24 | (1, 80, 7) | False | 0.75 | () | ((0, 60, 20), (1, 60, 20), (2, 60, 20)) | 14 | (4, 4, 4, 4, 4, 4, 4)
+interval T7 | 7 | 175 | (3, 3, 3, 3, 3, 3, 3) | 59 | 36 | 23 | 17 | (1, 59, 14) | False | 0.728814 | () | ((0, 43, 16), (1, 43, 16), (2, 43, 16)) | 7 | (2, 2, 2, 2, 2, 2, 2)
+H=63 cid=2519 | 8 | 63 | (1, 2, 2, 3, 3, 5, 6, 6) | 31 | 31 | 0 | 1 | (1, 31) | True | 1.0 | (3,) | ((3, 31, 0), (0, 26, 5), (6, 19, 12)) | None | None
+H=63 cid=3285 | 8 | 63 | (1, 1, 2, 4, 4, 5, 5, 6) | 31 | 31 | 0 | 1 | (1, 31) | True | 1.0 | (0,) | ((0, 31, 0), (6, 26, 5), (1, 19, 12)) | None | None
+THM-025 n=9 | 9 | 237 | (1, 1, 3, 4, 4, 4, 6, 6, 7) | 94 | 62 | 32 | 6 | (1, 94, 10, 1) | False | 0.978723 | () | ((3, 92, 2), (5, 76, 18), (2, 62, 32)) | 22 | (4, 4, 4, 4, 4, 4, 6, 6, 8)
+
+Reading guide:
+  max_loss_frac=1 means deletion of one vertex kills all odd cycles.
+  complete_Omega=True with cycles=r gives H=1+2r by OCF.
+  even_edges=None means the cycle-space projection is ambiguous at even n.

@@ -53,7 +53,8 @@ Consequently, when the selected moves are fixed-point-free involutions,
 
 For finite Boolean cubes with nonzero xor masks, this row checksum applies
 directly. THM-353 specializes this statement to the concrete staircase tiling
-cube `StTiling n`.
+cube `StTiling n`. THM-355 records the gap complement: empty source fibers
+give zero transport rows and empty target fibers give zero transport columns.
 
 ## Lean Formalization
 
@@ -108,5 +109,6 @@ even-graph, good-cut, projection-defect, and TDA feature transports.
 - THM-350: finite unordered bucket balance layer.
 - THM-351: Boolean-cube mask bucket balance.
 - THM-353: staircase tiling transport checksum.
+- THM-355: quotient gap transport vanishing.
 - `05-knowledge/variables/tiling-bucket-balance.md`.
 - `07-reflections/boolean-cube-balance-as-checksum.md`.

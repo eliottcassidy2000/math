@@ -132,11 +132,16 @@ It also clarifies the formal boundary: THM-351 and THM-352 are fully abstract
 Boolean-cube bookkeeping; THM-353 is the bridge proving that actual staircase
 tilings are one of those cubes.
 
+The follow-up THM-355 adds the gap layer: the finite good-cut quotient has
+image exactly `{0} ∪ {2,...,n-1}` for `n >= 3`, and empty quotient fibers give
+zero transport rows and columns.
+
 ## Related
 
 - THM-330: strong connectivity iff all base-path cuts are crossed upward.
 - THM-336: good-cut bucket spectrum and the missing bucket 1.
 - THM-351: Boolean-cube mask bucket balance.
 - THM-352: quotient transport row checksum.
+- THM-355: quotient gap transport vanishing.
 - `05-knowledge/variables/tiling-bucket-balance.md`.
 - `07-reflections/staircase-transport-is-boolean-transport.md`.

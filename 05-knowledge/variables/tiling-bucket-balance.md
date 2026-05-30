@@ -2,7 +2,7 @@
 
 **Symbol:** `bucket_balance_q,M(b)`
 **Type:** integer identity / quotient-matrix row constraint
-**Defined in:** THM-346; Lean half-line core THM-348; unordered Lean layer THM-350; Boolean-mask specialization THM-351; transport-row checksum THM-352; concrete staircase specialization THM-353
+**Defined in:** THM-346; Lean half-line core THM-348; unordered Lean layer THM-350; Boolean-mask specialization THM-351; transport-row checksum THM-352; concrete staircase specialization THM-353; quotient gap rows/columns THM-355
 
 ## Definition
 
@@ -91,6 +91,10 @@ sum_{c != b} |transportHalf_b,c(M)| = incident_cross_b(M).
   now formalized for all nonzero masks, single-tile masks, the complement
   mask for `n >= 3`, and the finite good-cut quotient
   `goodCutBucket : StTiling n -> Fin (n+1)` (THM-353, Lean).
+- If a quotient bucket has empty fiber, every transport row out of that bucket
+  and every transport column into that bucket is empty (THM-355, Lean).  For
+  `goodCutBucket`, the finite image is `{0} ∪ {2,...,n-1}` when `n >= 3`, so
+  buckets `1` and `n` are certified zero rows/columns.
 - If `|M|=1`, then `incident_cross_b(M) == |q^{-1}(b)| mod 2`.
 - Normalized escape plus neutrality:
 
@@ -117,6 +121,7 @@ escape_b + neutral_b = 1.
 - `01-canon/theorems/THM-351-boolean-cube-mask-bucket-balance.md`
 - `01-canon/theorems/THM-352-quotient-transport-row-checksum.md`
 - `01-canon/theorems/THM-353-staircase-tiling-transport-checksum.md`
+- `01-canon/theorems/THM-355-quotient-gap-transport-vanishing.md`
 - `01-canon/theorems/THM-345-merged-bucket-parity.md`
 - `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`
 - `04-computation/lean/TournamentH7/TournamentH7/StaircaseBucketTransport.lean`
@@ -127,10 +132,12 @@ escape_b + neutral_b = 1.
 - `05-knowledge/results/lean_boolcube_bucket_balance_opus_2026-05-30-S1.out`
 - `05-knowledge/results/lean_verify_boolcube_bucket_balance_opus_2026-05-30-S1.out`
 - `05-knowledge/results/lean_staircase_bucket_transport_codex_2026-05-30.out`
+- `05-knowledge/results/lean_bucket_gap_transport_codex_2026-05-30.out`
 - `07-reflections/merged-tiling-bucket-constraints.md`
 - `07-reflections/unordered-bucket-balance-orbits.md`
 - `07-reflections/boolean-cube-balance-as-checksum.md`
 - `07-reflections/staircase-transport-is-boolean-transport.md`
+- `07-reflections/fiber-gaps-and-residue-boundaries.md`
 
 ## Tags
 

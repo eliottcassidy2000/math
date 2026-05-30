@@ -91,7 +91,11 @@ The Boolean-cube xor-mask specialization of this checksum is THM-352.
 staircase tiling cube `StTiling n`: all nonzero masks, single-tile masks, and
 the complement mask all satisfy the row checksum, and the concrete
 `goodCutBucket : StTiling n -> Fin (n+1)` quotient inherits the same audit.
-This is THM-353.
+This is THM-353. The bucket module also records the finite gap behavior used
+by transport matrices: empty source fibers give zero rows and empty target
+fibers give zero columns. For `goodCutBucket`, the exact finite image is
+`{0} ∪ {2,...,n-1}` for `n >= 3`, so buckets `1` and `n` are certified gaps.
+This is THM-355.
 
 ## Proof sketch
 

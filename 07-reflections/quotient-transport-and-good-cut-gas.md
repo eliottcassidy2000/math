@@ -69,3 +69,9 @@ staircase model. The good-cut height is now packaged as a finite Lean quotient
 top equal to strong connectivity of the induced tournament. The single-tile,
 all-nonzero, and complement-mask transport rows for this quotient are all
 machine-checked instances of the same checksum.
+
+**Codex-2026-05-30 gap update:** THM-355 proves that the finite image of
+`goodCutBucket` is exactly `{0} ∪ {2,...,n-1}` for `n >= 3`. So the missing
+height `1` is not merely a spectrum fact; it is a zero row and zero column in
+the transport matrix. The extra sentinel bucket `n` in `Fin (n+1)` is also a
+certified gap.

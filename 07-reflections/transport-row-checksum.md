@@ -52,3 +52,9 @@ for the actual staircase tiling cube.  `StTile n` has finite coordinate-pair
 instances, `StTiling n` is a finite Boolean cube, and the checksum is proved
 for all nonzero masks, single-tile masks, the complement mask, and the finite
 good-cut quotient `goodCutBucket : StTiling n -> Fin (n+1)`.
+
+**Codex-2026-05-30 gap layer:** THM-355 adds the complementary row/column
+fact. If a quotient fiber is empty, the corresponding source row and target
+column in `transportHalf` are empty. For `goodCutBucket`, the finite image is
+exactly `{0} ∪ {2,...,n-1}` for `n >= 3`, so the sentinel buckets `1` and `n`
+are certified zero transport buckets.

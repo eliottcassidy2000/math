@@ -590,6 +590,80 @@ theorem bucket_transport_row_balance_boolCube_masks_audit
   BucketBalance.transport_row_balance_boolCube_masks q moves b hmoves
 #print axioms bucket_transport_row_balance_boolCube_masks_audit
 
+/-! ### Bucket gaps and empty transport rows/columns -/
+
+theorem bucket_fiber_eq_empty_iff_audit {alpha beta : Type}
+    [Fintype alpha] [DecidableEq beta] (q : alpha -> beta) (b : beta) :
+    BucketBalance.fiber q b = ∅ ↔ ∀ x, q x ≠ b :=
+  BucketBalance.fiber_eq_empty_iff q b
+#print axioms bucket_fiber_eq_empty_iff_audit
+
+theorem bucket_incidentHalf_empty_of_gap_audit {alpha beta move : Type}
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (moves : Finset move) (b : beta)
+    (h : BucketBalance.fiber q b = ∅) :
+    BucketBalance.incidentHalf q moves b = ∅ :=
+  BucketBalance.incidentHalf_eq_empty_of_fiber_eq_empty q moves b h
+#print axioms bucket_incidentHalf_empty_of_gap_audit
+
+theorem bucket_transportHalf_empty_of_source_gap_audit
+    {alpha beta move : Type} [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b c : beta)
+    (h : BucketBalance.fiber q b = ∅) :
+    BucketBalance.transportHalf q step moves b c = ∅ :=
+  BucketBalance.transportHalf_eq_empty_of_source_fiber_eq_empty q step moves b c h
+#print axioms bucket_transportHalf_empty_of_source_gap_audit
+
+theorem bucket_transportHalf_empty_of_target_gap_audit
+    {alpha beta move : Type} [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b c : beta)
+    (h : BucketBalance.fiber q c = ∅) :
+    BucketBalance.transportHalf q step moves b c = ∅ :=
+  BucketBalance.transportHalf_eq_empty_of_target_fiber_eq_empty q step moves b c h
+#print axioms bucket_transportHalf_empty_of_target_gap_audit
+
+theorem bucket_transportHalf_card_zero_of_source_gap_audit
+    {alpha beta move : Type} [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b c : beta)
+    (h : BucketBalance.fiber q b = ∅) :
+    (BucketBalance.transportHalf q step moves b c).card = 0 :=
+  BucketBalance.transportHalf_card_eq_zero_of_source_fiber_eq_empty
+    q step moves b c h
+#print axioms bucket_transportHalf_card_zero_of_source_gap_audit
+
+theorem bucket_transportHalf_card_zero_of_target_gap_audit
+    {alpha beta move : Type} [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b c : beta)
+    (h : BucketBalance.fiber q c = ∅) :
+    (BucketBalance.transportHalf q step moves b c).card = 0 :=
+  BucketBalance.transportHalf_card_eq_zero_of_target_fiber_eq_empty
+    q step moves b c h
+#print axioms bucket_transportHalf_card_zero_of_target_gap_audit
+
+theorem bucket_transportHalf_row_sum_zero_of_source_gap_audit
+    {alpha beta move : Type} [Fintype alpha] [Fintype beta] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (h : BucketBalance.fiber q b = ∅) :
+    (∑ c : beta, (BucketBalance.transportHalf q step moves b c).card) = 0 :=
+  BucketBalance.sum_transportHalf_card_eq_zero_of_source_fiber_eq_empty
+    q step moves b h
+#print axioms bucket_transportHalf_row_sum_zero_of_source_gap_audit
+
+theorem bucket_transportHalf_column_sum_zero_of_target_gap_audit
+    {alpha beta move : Type} [Fintype alpha] [Fintype beta] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (c : beta)
+    (h : BucketBalance.fiber q c = ∅) :
+    (∑ b : beta, (BucketBalance.transportHalf q step moves b c).card) = 0 :=
+  BucketBalance.sum_transportHalf_card_eq_zero_of_target_fiber_eq_empty
+    q step moves c h
+#print axioms bucket_transportHalf_column_sum_zero_of_target_gap_audit
+
 /-! ### Concrete staircase bucket transport -/
 
 theorem stTile_gapPair_roundtrip_audit {n : ℕ} (t : StTile n) :
@@ -656,6 +730,39 @@ theorem stTiling_goodCutBucket_top_iff_SC_audit {n : ℕ}
       IsStronglyConnected u.toTournament :=
   StTiling.goodCutBucket_eq_top_iff_toTournament_SC u
 #print axioms stTiling_goodCutBucket_top_iff_SC_audit
+
+theorem stTiling_goodCutBucket_image_iff_audit {n : ℕ}
+    (hn : 3 ≤ n) (b : Fin (n + 1)) :
+    (∃ u : StTiling n, StTiling.goodCutBucket u = b) ↔
+      b.val = 0 ∨ (2 ≤ b.val ∧ b.val ≤ n - 1) :=
+  StTiling.goodCutBucket_image_iff hn b
+#print axioms stTiling_goodCutBucket_image_iff_audit
+
+theorem stTiling_goodCutBucket_ne_one_audit {n : ℕ}
+    (hn : 1 ≤ n) (u : StTiling n) :
+    StTiling.goodCutBucket u ≠ (⟨1, by omega⟩ : Fin (n + 1)) :=
+  StTiling.goodCutBucket_ne_one hn u
+#print axioms stTiling_goodCutBucket_ne_one_audit
+
+theorem stTiling_goodCutBucket_ne_overTop_audit {n : ℕ}
+    (hn : 1 ≤ n) (u : StTiling n) :
+    StTiling.goodCutBucket u ≠ (⟨n, by omega⟩ : Fin (n + 1)) :=
+  StTiling.goodCutBucket_ne_overTop hn u
+#print axioms stTiling_goodCutBucket_ne_overTop_audit
+
+theorem stTiling_goodCutBucket_fiber_one_empty_audit {n : ℕ}
+    (hn : 1 ≤ n) :
+    BucketBalance.fiber StTiling.goodCutBucket
+      (⟨1, by omega⟩ : Fin (n + 1)) = ∅ :=
+  StTiling.goodCutBucket_fiber_one_eq_empty hn
+#print axioms stTiling_goodCutBucket_fiber_one_empty_audit
+
+theorem stTiling_goodCutBucket_fiber_overTop_empty_audit {n : ℕ}
+    (hn : 1 ≤ n) :
+    BucketBalance.fiber StTiling.goodCutBucket
+      (⟨n, by omega⟩ : Fin (n + 1)) = ∅ :=
+  StTiling.goodCutBucket_fiber_overTop_eq_empty hn
+#print axioms stTiling_goodCutBucket_fiber_overTop_empty_audit
 
 theorem stTiling_goodCutBucket_transport_row_singleTileMasks_audit
     {n : ℕ} (b : Fin (n + 1)) :
