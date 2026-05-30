@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-30-applications-probe - Applications And Speedup Search
+
+**Account:** Codex
+**Git first:** Started from `main...origin/main` with a pre-existing generated change in `inbox/PROCESSING-REPORT.md`.
+**User prompt:** Spend the session searching for possible applications of the work, including creative mathematical problems, practical applications, and speedups.
+**Exploration:** Read the repo application and synthesis spine (`README.md`, concept/open-question maps, applications roadmap/vision, breakthrough candidate map, residue-calculus theses, compression notes, tournament-toolkit README, `tournament_tda.py`, and representative tools). Checked current external primary/source pages around active pairwise reranking, PARWiS, noncommuting Redei-Berge deletion-contraction, circulant path homology, Grinberg-Stanley Redei-Berge, and Alon's Hamiltonian-path maximum theorem.
+**Synthesis:** Added `07-reflections/applications-probe-2026-05-30.md`. The main near-term product bet is OCF-guided active pairwise ranking: use `H(T)` as a stopping statistic, expected H-drop as acquisition, and Omega cycles as named ambiguity packets for PRP/RAG reranking, LLM evaluation, A/B testing, network meta-analysis, scheduling, and related pairwise systems. Pure-math bets remain circulant H-maximizer phase transition, H-value image gaps via single-core signatures, Paley/circulant GLMY Betti formulas, and n=9 real-root failure classification.
+**Navigation updates:** Added T319 and a historian pointer to the new applications probe.
+**Next:** Build an `H_topk` active-reranker prototype; run n=9 real-root failure census; implement Tang-Yau-style symbol matrices for Paley connection sets; make `tournament_tda.py` emit application-grade JSON reports.
+
 ## opus-2026-05-30-S4 - Residue, Phase, And Incidence Synthesis
 
 **Account:** Codex

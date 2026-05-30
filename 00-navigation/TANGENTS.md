@@ -131,6 +131,9 @@ Endpoint transfer exposes a third primitive: incidence. A full support matching 
 **T318** #completeness-defect #parabolic-law #trienerments #engineering | certainty: medium | source: opus-2026-05-30-S4
 The parabolic law `E[Delta c3|score=s]=s(n-1-s)/2` is a checksum for complete binary pair decisions. For partial, tied, weighted, or noisy comparison data, measure deviation from this tournament parabola before trusting hard `H`, residue-rank, or phase features. Trienerments realizing forbidden `H=7,21` are the first test case. See HYP-1797.
 
+**T319** #applications-probe #active-ranking #ocf #speedups | certainty: medium | source: codex-2026-05-30-applications-probe
+Application search argues the strongest near-term product is OCF-guided active pairwise ranking: use `H(T)` as a stopping statistic, expected H-drop as the next-comparison rule, and Omega cycles as named ambiguity packets for PRP/RAG, LLM evaluation, A/B testing, network meta-analysis, and scheduling. Pure-math bets remain circulant H-maximizers, H-value image gaps, Paley/circulant path homology, and n=9 real-root failure classification. See `07-reflections/applications-probe-2026-05-30.md`.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

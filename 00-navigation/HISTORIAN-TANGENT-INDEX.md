@@ -21,6 +21,11 @@ Useful synthetic maps added later:
   synthesis separating three recurring primitives: residue after projection,
   phase after orthogonal decomposition, and incidence through operation
   matrices/hypergraphs.
+- `07-reflections/applications-probe-2026-05-30.md`: outward-facing
+  application search centered on OCF-guided active pairwise ranking, A/B and
+  network meta-analysis ambiguity audits, Cartan attention diagnostics,
+  tournament fingerprints, scheduling/cache/consensus hypotheses, and the
+  pure-math targets most likely to become publishable.
 
 ## Second-Pass Small Motif Ledger
 
