@@ -97,6 +97,67 @@ def StTile.reflect (t : StTile n) : StTile n where
     (h_lo : s.lo = t.lo) : s = t := by
   cases s; cases t; congr
 
+/-! ### Finite/equality infrastructure for concrete tiles -/
+
+/-- Forget a staircase tile to its legal coordinate pair. -/
+def StTile.toGapPair (t : StTile n) :
+    {p : Fin n × Fin n // p.2.val + 2 ≤ p.1.val} :=
+  ⟨(t.hi, t.lo), t.gap⟩
+
+/-- Build a staircase tile from a legal coordinate pair. -/
+def StTile.ofGapPair
+    (p : {p : Fin n × Fin n // p.2.val + 2 ≤ p.1.val}) : StTile n where
+  hi := p.1.1
+  lo := p.1.2
+  gap := p.2
+
+@[simp] lemma StTile.toGapPair_ofGapPair
+    (p : {p : Fin n × Fin n // p.2.val + 2 ≤ p.1.val}) :
+    StTile.toGapPair (StTile.ofGapPair p) = p := by
+  cases p
+  rfl
+
+@[simp] lemma StTile.ofGapPair_toGapPair (t : StTile n) :
+    StTile.ofGapPair (StTile.toGapPair t) = t := by
+  cases t
+  rfl
+
+/-- Staircase tiles are equivalent to the finite subtype of legal coordinate pairs. -/
+def StTile.equivGapPair (n : ℕ) :
+    StTile n ≃ {p : Fin n × Fin n // p.2.val + 2 ≤ p.1.val} where
+  toFun := StTile.toGapPair
+  invFun := StTile.ofGapPair
+  left_inv := StTile.ofGapPair_toGapPair
+  right_inv := StTile.toGapPair_ofGapPair
+
+instance StTile.instDecidableEq (n : ℕ) : DecidableEq (StTile n) := by
+  classical
+  exact fun s t =>
+    decidable_of_iff (StTile.toGapPair s = StTile.toGapPair t) (by
+      constructor
+      · intro h
+        have := congrArg StTile.ofGapPair h
+        simpa using this
+      · intro h
+        exact congrArg StTile.toGapPair h)
+
+noncomputable instance StTile.instFintype (n : ℕ) : Fintype (StTile n) := by
+  classical
+  exact Fintype.ofEquiv _ (StTile.equivGapPair n).symm
+
+namespace StTiling
+
+noncomputable instance instFintype (n : ℕ) : Fintype (StTiling n) := by
+  dsimp [StTiling]
+  infer_instance
+
+noncomputable instance instDecidableEq (n : ℕ) : DecidableEq (StTiling n) := by
+  classical
+  dsimp [StTiling]
+  infer_instance
+
+end StTiling
+
 /-- The grid reflection is an involution. -/
 lemma StTile.reflect_reflect (t : StTile n) : t.reflect.reflect = t := by
   have h_hi : t.hi.val < n := t.hi.is_lt

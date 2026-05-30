@@ -95,7 +95,8 @@ Boolean-cube mask action.
 The follow-up THM-352 refines this into a target-bucket transport-row
 checksum: the off-diagonal sum of oriented lines from bucket `b` to all
 `c != b` equals the `crossHalf` term, so the same Boolean-cube proof audits
-computed quotient transport matrices row by row.
+computed quotient transport matrices row by row. THM-353 then instantiates
+the Boolean-cube theorem for the concrete staircase tiling cube `StTiling n`.
 
 The remaining work around bucket transport is no longer the balance theorem
 itself. It is structural and computational: understanding which quotient
@@ -109,6 +110,7 @@ features.
 - THM-348: finite bucket half-line balance.
 - THM-350: finite unordered bucket balance layer.
 - THM-352: quotient transport row checksum.
+- THM-353: staircase tiling transport checksum.
 - `05-knowledge/variables/tiling-bucket-balance.md`.
 - `07-reflections/unordered-bucket-balance-orbits.md`.
 - `07-reflections/boolean-cube-balance-as-checksum.md`.

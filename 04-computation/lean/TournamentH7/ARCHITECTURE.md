@@ -76,6 +76,7 @@ et al.).
 | `GoodCuts.lean` | good-cut buckets, exact spectrum `{0} ∪ {2,...,n-1}`, reflection invariance | **PROVED** |
 | `StaircaseConnectivity.lean` | concrete tilings induce tournaments; top good-cut bucket iff SC | **PROVED** |
 | `BucketBalance.lean` | abstract finite bucket half-line and unordered balance | **PROVED** |
+| `StaircaseBucketTransport.lean` | concrete staircase mask families and good-cut transport checksums | **PROVED** |
 | `SelfComplementary.lean` | `IsSelfFlip`, `PaleyLike`, regular ⟹ ¬SF | axiom + proved corollaries |
 | `Iso.lean` | `TournamentIso`, `≅` | proved |
 | `IsoProperties.lean` | iso-invariants — **PROVED IN LEAN** | proved |
@@ -191,6 +192,15 @@ external/project axioms that are already in their proof OR — best case
 - `BucketBalance.xorMask_involutive` — Boolean cube xor by a mask is an involution.
 - `BucketBalance.xorMask_fixedPointFree_of_nonzero` — Boolean cube xor by a nonzero mask has no fixed point.
 - `BucketBalance.unordered_balance_boolCube_masks` — finite Boolean cube quotients and nonzero mask families satisfy unordered bucket balance.
+- `StTile.equivGapPair` — concrete staircase tiles are equivalent to the finite subtype of legal coordinate pairs.
+- `StTiling.nonzeroMasks` / `StTiling.singleTileMasks` / `StTiling.complementMask` — concrete staircase mask families.
+- `StTiling.transport_row_balance_allNonzeroMasks` / `StTiling.transport_row_balance_singleTileMasks` /
+  `StTiling.transport_row_balance_complementMask` — THM-352 specialized to concrete staircase tiling masks.
+- `StTiling.goodCutBucket_eq_zero_iff_all_down` — the finite good-cut quotient bottom bucket is exactly all-down.
+- `StTiling.goodCutBucket_eq_top_iff_toTournament_SC` — the finite good-cut quotient top bucket is exactly strong connectivity.
+- `StTiling.transport_row_balance_goodCutBucket_allNonzeroMasks` /
+  `StTiling.transport_row_balance_goodCutBucket_singleTileMasks` /
+  `StTiling.transport_row_balance_goodCutBucket_complementMask` — concrete good-cut quotient row checksums.
 - `threeCycle_isRegular` — 3-cycle is regular.
 - `transitive_hasBasePath` — transitive tournament has base path.
 - `transitive_not_regular` — transitive (n ≥ 2) is not regular.
@@ -245,8 +255,8 @@ lake build TournamentH7
 
 ## Status snapshot (oracle/kind-pasteur-2026-05-29 family)
 
-- **2974 build targets** clean for `TournamentH7` after adding
-  `StaircaseConnectivity.lean` (codex-2026-05-30).
+- **2982 build targets** clean for `TournamentH7` after adding
+  `StaircaseBucketTransport.lean` (codex-2026-05-30).
 - **20+ project-novel theorems** formalised.
 - **25+ audited theorems**, with a growing axiom-free core (iso-invariants,
   THM-330, THM-316 endpoint facts, concrete examples).

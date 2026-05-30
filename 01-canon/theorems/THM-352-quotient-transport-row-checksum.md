@@ -52,7 +52,8 @@ Consequently, when the selected moves are fixed-point-free involutions,
 ```
 
 For finite Boolean cubes with nonzero xor masks, this row checksum applies
-directly.
+directly. THM-353 specializes this statement to the concrete staircase tiling
+cube `StTiling n`.
 
 ## Lean Formalization
 
@@ -106,5 +107,6 @@ even-graph, good-cut, projection-defect, and TDA feature transports.
 - THM-348: finite bucket half-line balance.
 - THM-350: finite unordered bucket balance layer.
 - THM-351: Boolean-cube mask bucket balance.
+- THM-353: staircase tiling transport checksum.
 - `05-knowledge/variables/tiling-bucket-balance.md`.
 - `07-reflections/boolean-cube-balance-as-checksum.md`.

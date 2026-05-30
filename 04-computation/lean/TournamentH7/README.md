@@ -26,6 +26,8 @@ TournamentH7/
     ├── StaircaseConnectivity.lean
     │                          concrete tilings -> tournaments; top bucket iff SC
     ├── BucketBalance.lean    abstract finite bucket half-line and unordered balance
+    ├── StaircaseBucketTransport.lean
+    │                          concrete staircase transport checksums
     └── Verify.lean           #print axioms audit
 ```
 
@@ -82,6 +84,11 @@ off-diagonal row sum is exactly `crossHalf`, and fixed-point-free involutive
 systems satisfy the matrix checksum
 `2*internalLineCount + sum_{c != b} transportHalf(b,c) = |fiber b|*|moves|`.
 The Boolean-cube xor-mask specialization of this checksum is THM-352.
+`StaircaseBucketTransport.lean` then instantiates that theorem for the actual
+staircase tiling cube `StTiling n`: all nonzero masks, single-tile masks, and
+the complement mask all satisfy the row checksum, and the concrete
+`goodCutBucket : StTiling n -> Fin (n+1)` quotient inherits the same audit.
+This is THM-353.
 
 ## Proof sketch
 

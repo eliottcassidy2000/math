@@ -162,6 +162,8 @@ half-line balance. This is useful for:
 - THM-348: finite bucket half-line balance (Lean core).
 - THM-350: finite unordered bucket balance layer.
 - THM-351: Boolean-cube mask bucket balance.
+- THM-352: quotient transport row checksum.
+- THM-353: staircase tiling transport checksum.
 - INV-194: merged tiling bucket constraints.
 - INV-236: projection-defect profiles across tournament and even-graph quotients.
 - `07-reflections/merged-tiling-bucket-constraints.md`.

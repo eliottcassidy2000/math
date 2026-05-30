@@ -33,6 +33,7 @@
     · TournamentH7.GoodCuts     — Good-cut buckets and exact spectrum.
     · TournamentH7.StaircaseConnectivity — Top good-cut bucket ↔ SC.
     · TournamentH7.BucketBalance — Abstract bucket balances and Boolean-cube masks.
+    · TournamentH7.StaircaseBucketTransport — Concrete staircase transport checksums.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -68,6 +69,7 @@ import TournamentH7.PaleyAxiomatic
 import TournamentH7.HSpectrumExtended
 import TournamentH7.ExamplesExtended
 import TournamentH7.ApexBridge
+import TournamentH7.StaircaseBucketTransport
 import TournamentH7.RedeiFromOCF
 import TournamentH7.HSpectrumClean
 import TournamentH7.HSpectrumSmallN

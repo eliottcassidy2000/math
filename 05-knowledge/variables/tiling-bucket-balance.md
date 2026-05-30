@@ -2,7 +2,7 @@
 
 **Symbol:** `bucket_balance_q,M(b)`
 **Type:** integer identity / quotient-matrix row constraint
-**Defined in:** THM-346; Lean half-line core THM-348; unordered Lean layer THM-350; Boolean-mask specialization THM-351; transport-row checksum THM-352
+**Defined in:** THM-346; Lean half-line core THM-348; unordered Lean layer THM-350; Boolean-mask specialization THM-351; transport-row checksum THM-352; concrete staircase specialization THM-353
 
 ## Definition
 
@@ -87,6 +87,10 @@ sum_{c != b} |transportHalf_b,c(M)| = incident_cross_b(M).
 
   This is THM-352 in Lean and is the preferred matrix-audit form for
   quotient transport computations.
+- In the concrete staircase tiling cube `StTiling n`, the same checksum is
+  now formalized for all nonzero masks, single-tile masks, the complement
+  mask for `n >= 3`, and the finite good-cut quotient
+  `goodCutBucket : StTiling n -> Fin (n+1)` (THM-353, Lean).
 - If `|M|=1`, then `incident_cross_b(M) == |q^{-1}(b)| mod 2`.
 - Normalized escape plus neutrality:
 
@@ -112,17 +116,21 @@ escape_b + neutral_b = 1.
 - `01-canon/theorems/THM-350-finite-unordered-bucket-balance-layer.md`
 - `01-canon/theorems/THM-351-boolean-cube-mask-bucket-balance.md`
 - `01-canon/theorems/THM-352-quotient-transport-row-checksum.md`
+- `01-canon/theorems/THM-353-staircase-tiling-transport-checksum.md`
 - `01-canon/theorems/THM-345-merged-bucket-parity.md`
 - `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`
+- `04-computation/lean/TournamentH7/TournamentH7/StaircaseBucketTransport.lean`
 - `04-computation/tiling_quotient_bucket_balance_s5.py`
 - `05-knowledge/results/tiling_quotient_bucket_balance_s5.out`
 - `05-knowledge/results/lean_bucket_balance_kind_pasteur_2026-05-30-S1.out`
 - `05-knowledge/results/lean_verify_unordered_kind_pasteur_2026-05-30-S2.out`
 - `05-knowledge/results/lean_boolcube_bucket_balance_opus_2026-05-30-S1.out`
 - `05-knowledge/results/lean_verify_boolcube_bucket_balance_opus_2026-05-30-S1.out`
+- `05-knowledge/results/lean_staircase_bucket_transport_codex_2026-05-30.out`
 - `07-reflections/merged-tiling-bucket-constraints.md`
 - `07-reflections/unordered-bucket-balance-orbits.md`
 - `07-reflections/boolean-cube-balance-as-checksum.md`
+- `07-reflections/staircase-transport-is-boolean-transport.md`
 
 ## Tags
 

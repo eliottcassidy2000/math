@@ -62,3 +62,10 @@ built-in row-sum checksum.
 version of that checksum in Lean. The off-diagonal sum of
 `transportHalf(b,c)` is exactly the escaping half-line term, and the
 Boolean-cube xor-mask specialization gives the matrix audit directly.
+
+**Codex-2026-05-30 continuation:** THM-353 pushes the audit into the concrete
+staircase model. The good-cut height is now packaged as a finite Lean quotient
+`goodCutBucket : StTiling n -> Fin (n+1)`, with bottom equal to all-down and
+top equal to strong connectivity of the induced tournament. The single-tile,
+all-nonzero, and complement-mask transport rows for this quotient are all
+machine-checked instances of the same checksum.

@@ -27,6 +27,7 @@ import TournamentH7.StaircaseTileModel
 import TournamentH7.HSpectrumExtended
 import TournamentH7.IsomorphismClasses
 import TournamentH7.ApexBridge
+import TournamentH7.StaircaseBucketTransport
 import TournamentH7.RedeiFromOCF
 import TournamentH7.HSpectrumClean
 import TournamentH7.HSpectrumSmallN
@@ -568,6 +569,109 @@ theorem bucket_transport_row_balance_boolCube_masks_audit
       (BucketBalance.fiber q b).card * moves.card :=
   BucketBalance.transport_row_balance_boolCube_masks q moves b hmoves
 #print axioms bucket_transport_row_balance_boolCube_masks_audit
+
+/-! ### Concrete staircase bucket transport -/
+
+theorem stTile_gapPair_roundtrip_audit {n : ℕ} (t : StTile n) :
+    StTile.ofGapPair (StTile.toGapPair t) = t :=
+  StTile.ofGapPair_toGapPair t
+#print axioms stTile_gapPair_roundtrip_audit
+
+theorem stTiling_singleUp_isNonzeroMask_audit {n : ℕ} (t : StTile n) :
+    BucketBalance.IsNonzeroMask (StTiling.singleUp t) :=
+  StTiling.singleUp_isNonzeroMask t
+#print axioms stTiling_singleUp_isNonzeroMask_audit
+
+theorem stTiling_allUp_isNonzeroMask_audit {n : ℕ} (hn : 3 ≤ n) :
+    BucketBalance.IsNonzeroMask (StTiling.allUp n) :=
+  StTiling.allUp_isNonzeroMask_of_three_le hn
+#print axioms stTiling_allUp_isNonzeroMask_audit
+
+theorem stTiling_transport_row_balance_allNonzeroMasks_audit
+    {n : ℕ} {beta : Type} [Fintype beta] [DecidableEq beta]
+    (q : StTiling n -> beta) (b : beta) :
+    2 * BucketBalance.internalLineCount q BucketBalance.xorMask
+        (StTiling.nonzeroMasks n) b +
+        (∑ c ∈ (Finset.univ.erase b),
+          (BucketBalance.transportHalf q BucketBalance.xorMask
+            (StTiling.nonzeroMasks n) b c).card) =
+      (BucketBalance.fiber q b).card * (StTiling.nonzeroMasks n).card :=
+  StTiling.transport_row_balance_allNonzeroMasks q b
+#print axioms stTiling_transport_row_balance_allNonzeroMasks_audit
+
+theorem stTiling_transport_row_balance_singleTileMasks_audit
+    {n : ℕ} {beta : Type} [Fintype beta] [DecidableEq beta]
+    (q : StTiling n -> beta) (b : beta) :
+    2 * BucketBalance.internalLineCount q BucketBalance.xorMask
+        (StTiling.singleTileMasks n) b +
+        (∑ c ∈ (Finset.univ.erase b),
+          (BucketBalance.transportHalf q BucketBalance.xorMask
+            (StTiling.singleTileMasks n) b c).card) =
+      (BucketBalance.fiber q b).card * (StTiling.singleTileMasks n).card :=
+  StTiling.transport_row_balance_singleTileMasks q b
+#print axioms stTiling_transport_row_balance_singleTileMasks_audit
+
+theorem stTiling_transport_row_balance_complementMask_audit
+    {n : ℕ} {beta : Type} [Fintype beta] [DecidableEq beta]
+    (q : StTiling n -> beta) (b : beta) (hn : 3 ≤ n) :
+    2 * BucketBalance.internalLineCount q BucketBalance.xorMask
+        (StTiling.complementMask n) b +
+        (∑ c ∈ (Finset.univ.erase b),
+          (BucketBalance.transportHalf q BucketBalance.xorMask
+            (StTiling.complementMask n) b c).card) =
+      (BucketBalance.fiber q b).card * (StTiling.complementMask n).card :=
+  StTiling.transport_row_balance_complementMask q b hn
+#print axioms stTiling_transport_row_balance_complementMask_audit
+
+theorem stTiling_goodCutBucket_zero_iff_all_down_audit {n : ℕ}
+    (u : StTiling n) :
+    StTiling.goodCutBucket u = (0 : Fin (n + 1)) ↔
+      ∀ t : StTile n, u t = false :=
+  StTiling.goodCutBucket_eq_zero_iff_all_down u
+#print axioms stTiling_goodCutBucket_zero_iff_all_down_audit
+
+theorem stTiling_goodCutBucket_top_iff_SC_audit {n : ℕ}
+    (u : StTiling n) :
+    StTiling.goodCutBucket u = StTiling.topGoodCutBucket n ↔
+      IsStronglyConnected u.toTournament :=
+  StTiling.goodCutBucket_eq_top_iff_toTournament_SC u
+#print axioms stTiling_goodCutBucket_top_iff_SC_audit
+
+theorem stTiling_goodCutBucket_transport_row_singleTileMasks_audit
+    {n : ℕ} (b : Fin (n + 1)) :
+    2 * BucketBalance.internalLineCount StTiling.goodCutBucket BucketBalance.xorMask
+        (StTiling.singleTileMasks n) b +
+        (∑ c ∈ (Finset.univ.erase b),
+          (BucketBalance.transportHalf StTiling.goodCutBucket BucketBalance.xorMask
+            (StTiling.singleTileMasks n) b c).card) =
+      (BucketBalance.fiber StTiling.goodCutBucket b).card *
+        (StTiling.singleTileMasks n).card :=
+  StTiling.transport_row_balance_goodCutBucket_singleTileMasks b
+#print axioms stTiling_goodCutBucket_transport_row_singleTileMasks_audit
+
+theorem stTiling_goodCutBucket_transport_row_allNonzeroMasks_audit
+    {n : ℕ} (b : Fin (n + 1)) :
+    2 * BucketBalance.internalLineCount StTiling.goodCutBucket BucketBalance.xorMask
+        (StTiling.nonzeroMasks n) b +
+        (∑ c ∈ (Finset.univ.erase b),
+          (BucketBalance.transportHalf StTiling.goodCutBucket BucketBalance.xorMask
+            (StTiling.nonzeroMasks n) b c).card) =
+      (BucketBalance.fiber StTiling.goodCutBucket b).card *
+        (StTiling.nonzeroMasks n).card :=
+  StTiling.transport_row_balance_goodCutBucket_allNonzeroMasks b
+#print axioms stTiling_goodCutBucket_transport_row_allNonzeroMasks_audit
+
+theorem stTiling_goodCutBucket_transport_row_complementMask_audit
+    {n : ℕ} (b : Fin (n + 1)) (hn : 3 ≤ n) :
+    2 * BucketBalance.internalLineCount StTiling.goodCutBucket BucketBalance.xorMask
+        (StTiling.complementMask n) b +
+        (∑ c ∈ (Finset.univ.erase b),
+          (BucketBalance.transportHalf StTiling.goodCutBucket BucketBalance.xorMask
+            (StTiling.complementMask n) b c).card) =
+      (BucketBalance.fiber StTiling.goodCutBucket b).card *
+        (StTiling.complementMask n).card :=
+  StTiling.transport_row_balance_goodCutBucket_complementMask b hn
+#print axioms stTiling_goodCutBucket_transport_row_complementMask_audit
 
 /-! ### THM-342 (small diagonal value) -/
 

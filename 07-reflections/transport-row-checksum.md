@@ -46,3 +46,9 @@ work only to interpret the transport channels after the checksum has passed.
 
 References: THM-350, THM-351, THM-352,
 `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`.
+
+**Codex-2026-05-30 continuation:** THM-353 now instantiates this row audit
+for the actual staircase tiling cube.  `StTile n` has finite coordinate-pair
+instances, `StTiling n` is a finite Boolean cube, and the checksum is proved
+for all nonzero masks, single-tile masks, the complement mask, and the finite
+good-cut quotient `goodCutBucket : StTiling n -> Fin (n+1)`.
