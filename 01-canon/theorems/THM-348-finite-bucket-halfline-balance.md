@@ -80,9 +80,9 @@ THM-346 is the unordered-line specialization for tiling hypercubes:
 ```
 
 THM-348 formalizes the oriented half-line conservation law underneath that
-identity.  THM-350 now formalizes the unordered algebra and the finite
-fixed-point-free involution orbit-cardinality theorem.  To recover full
-THM-346 in Lean, the remaining step is the specialization to each nonzero mask:
+identity. THM-350 formalizes the unordered algebra and the finite
+fixed-point-free involution orbit-cardinality theorem. THM-351 recovers full
+THM-346 at the Boolean-cube level by specializing to each nonzero mask:
 
 ```text
 (x,u) <-> (x xor u, u).
@@ -110,5 +110,6 @@ generic finite-state testing harnesses.
 - THM-345: merged bucket parity and Hamming-layer transport constraints.
 - THM-346: tiling quotient bucket balance.
 - THM-350: finite unordered bucket balance layer.
+- THM-351: Boolean-cube mask bucket balance.
 - INV-194: merged tiling bucket constraints.
 - `05-knowledge/variables/tiling-bucket-balance.md`.

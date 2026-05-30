@@ -1,5 +1,16 @@
 # Session Log
 
+## opus-2026-05-30-S1 - Boolean-Cube Mask Closure for Bucket Balance
+
+**Account:** opus
+**Git first:** Read `.machine-id`, fetched/rebased against `origin/main`, processed direct/broadcast agent messages, checked the human inbox (empty), and scoured INV-194/recent files for the remaining bucket-balance lead.
+**Lean work:** Extended `TournamentH7.BucketBalance` with `BoolCube`, `xorMask`, `IsNonzeroMask`, `xorMask_involutive`, `xorMask_fixedPointFree_of_nonzero`, and `unordered_balance_boolCube_masks`. This specializes the fixed-point-free involutive unordered balance theorem to finite Boolean cubes and finite families of nonzero xor masks.
+**Audit:** Added `Verify.lean` audits for xor involutivity, fixed-point-freeness of nonzero masks, and the finite Boolean-cube unordered bucket balance. The root audit reports only Lean foundation dependencies for the new entries (`propext`, `Classical.choice`, `Quot.sound` as applicable).
+**Knowledge updates:** Added THM-351, updated THM-346/348/350, HYP-1775/HYP-1778, INV-194, T293/T297/T299, the bucket-balance variable, Lean README/ARCHITECTURE/SUBMISSION, and reflection `07-reflections/boolean-cube-balance-as-checksum.md`.
+**Engineering reading:** THM-351 turns quotient bucket balance into a reusable Boolean-cube row checksum: any implementation producing mask-transport matrices can verify `2*internal + escaping = bucket_size * masks` before interpreting spine/ribs/sea or TDA features.
+**Verification:** `lake build TournamentH7.BucketBalance`; `lake build TournamentH7.Verify`; `lake build TournamentH7` (2974 jobs); `git diff --check`. Outputs saved under `05-knowledge/results/lean_*boolcube*opus_2026-05-30-S1.out`.
+**Unresolved threads:** Attach the Boolean-cube theorem to concrete staircase tiling coordinates only if a semantic wrapper is useful; next structural work is transport distribution across spine/ribs/sea and bucket-feature extraction.
+
 ## codex-2026-05-30 - Finalizing Paper on the Formalized Staircase Calculus
 
 **Account:** Codex

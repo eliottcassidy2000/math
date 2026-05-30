@@ -32,7 +32,7 @@
                                   project-novel; opus-2026-04-03-S27).
     · TournamentH7.GoodCuts     — Good-cut buckets and exact spectrum.
     · TournamentH7.StaircaseConnectivity — Top good-cut bucket ↔ SC.
-    · TournamentH7.BucketBalance — Abstract finite bucket half-line balances.
+    · TournamentH7.BucketBalance — Abstract bucket balances and Boolean-cube masks.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 

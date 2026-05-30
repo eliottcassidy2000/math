@@ -121,8 +121,9 @@ self-partnered internal half-lines, and proves the unordered balance whenever
 A later Codex pass closes the abstract orbit-parity step: Lean now proves that
 a finite fixed-point-free involution has even cardinality, and THM-350 derives
 the unordered balance directly for fixed-point-free involutive move systems.
-Thus the remaining Lean step for the full tiling statement is now only the
-Boolean-mask specialization `step(u,x)=x xor u` for nonzero masks.
+THM-351 closes the Boolean-cube specialization: xor by any nonzero mask is a
+fixed-point-free involution, so the full tiling-cube balance is now formalized
+at the abstract Boolean-mask level.
 
 ## Computation
 
@@ -160,6 +161,7 @@ half-line balance. This is useful for:
 - THM-345: merged-bucket parity and Hamming-layer transport constraints.
 - THM-348: finite bucket half-line balance (Lean core).
 - THM-350: finite unordered bucket balance layer.
+- THM-351: Boolean-cube mask bucket balance.
 - INV-194: merged tiling bucket constraints.
 - INV-236: projection-defect profiles across tournament and even-graph quotients.
 - `07-reflections/merged-tiling-bucket-constraints.md`.

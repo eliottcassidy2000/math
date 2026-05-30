@@ -2422,12 +2422,12 @@ Source: HYP-1773-endpoint-transfer-recursive-boundary.md, endpoint_transfer_buck
 Source: HYP-1774-even-graph-endpoint-rank-defect.md, THM-266-endpoint-transfer-boundary.md, even_graph_endpoint_transfer_s95.py
 
 ## HYP-1775: Quotient bucket balance factors through involution pairing (kind-pasteur-2026-05-30-S1)
-**Status:** PROVED IN LEAN ABSTRACTLY; tiling specialization OPEN in Lean.
+**Status:** PROVED IN LEAN through the Boolean-cube mask specialization.
 **Statement:** The general quotient-bucket balance theorem has two independent components: (1) a finite-set half-line conservation law, and (2) a fixed-point-free involution pairing on internal half-lines. Once both are formalized, the unordered tiling identity `2*self_b + cross_b = |bucket_b|*|M|` should follow by specialization with `step(u,x)=x xor u`.
-**Evidence:** THM-348 / `TournamentH7.BucketBalance` proves the oriented component in Lean: `|selfHalf_b| + |crossHalf_b| = |fiber_b|*|M|`, plus the zero-cross closure criterion. THM-350 adds the abstract unordered layer: partnering by `(step u x,u)` preserves internal half-lines for involutive moves, fixed-point-free moves have no self-paired internal half-lines, finite fixed-point-free involutions have even cardinality, and the unordered balance follows directly for fixed-point-free involutive move systems. THM-346 proves the full unordered tiling statement informally/computationally.
-**Implication:** The formalization path for THM-346 is smaller than it looked. The remaining bridge is now only the Boolean-mask fact that `x xor u != x` when `u != 0`, plus the surrounding cube type specialization.
-**Next:** Instantiate the abstract theorem for Boolean hypercube masks and derive full THM-346 from THM-350.
-**See:** THM-346, THM-348, THM-350, `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`, `05-knowledge/results/lean_verify_unordered_kind_pasteur_2026-05-30-S2.out`, INV-194.
+**Evidence:** THM-348 / `TournamentH7.BucketBalance` proves the oriented component in Lean: `|selfHalf_b| + |crossHalf_b| = |fiber_b|*|M|`, plus the zero-cross closure criterion. THM-350 adds the abstract unordered layer: partnering by `(step u x,u)` preserves internal half-lines for involutive moves, fixed-point-free moves have no self-paired internal half-lines, finite fixed-point-free involutions have even cardinality, and the unordered balance follows directly for fixed-point-free involutive move systems. THM-351 specializes this layer to finite Boolean cubes by proving nonzero xor masks are fixed-point-free involutions and deriving `unordered_balance_boolCube_masks`.
+**Implication:** The THM-346 formalization bridge is now reusable cube algebra: quotient-specific tournament buckets can import a proved Boolean mask checksum instead of reproving line pairing.
+**Next:** Attach this Boolean-cube theorem to concrete staircase tiling coordinates where useful, and reuse it for engineering bucket-transport audits.
+**See:** THM-346, THM-348, THM-350, THM-351, `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`, `05-knowledge/results/lean_verify_boolcube_bucket_balance_opus_2026-05-30-S1.out`, `07-reflections/boolean-cube-balance-as-checksum.md`, INV-194.
 
 ## HYP-1776: Odd-cycle disjointness features improve Tournament TDA fingerprints (opus-2026-05-29-S15)
 **Status:** OPEN engineering hypothesis; feature layer implemented.
@@ -2445,9 +2445,9 @@ Source: `04-computation/tournament_tda.py`, `05-knowledge/results/tournament_tda
 Source: `04-computation/goodcut_transport_excess_s15.py`, `05-knowledge/results/goodcut_transport_excess_s15.out`, `07-reflections/quotient-transport-and-good-cut-gas.md`.
 
 ## HYP-1778: Bucket balance formalization reduces to finite involution orbits (kind-pasteur-2026-05-30-S2)
-**Status:** PROVED in Lean abstractly; Boolean cube specialization OPEN.
-**What:** The remaining formal gap between THM-350 and full tiling THM-346 should be discharged by a reusable finite theorem: every fixed-point-free involution on a finite type has even cardinality, equivalently its elements split into two-element orbits.
-**Evidence:** `TournamentH7.BucketBalance` now proves the partner map is involutive under involutive moves, preserves `selfHalf`, has no fixed points under fixed-point-free moves, proves `even_card_of_fixedPointFree_involutiveOn`, derives `Even (selfHalf q step moves b).card`, and proves `unordered_balance_of_involutive_fixedPointFree`. The abstract theorem depends only on Lean foundations.
-**Prediction:** The Boolean tiling instance should reduce to the elementary identity `x xor u = x -> u = 0`.
-**Next:** Specialize to nonzero masks in the tiling cube and make THM-346 fully Lean.
-**See:** THM-346, THM-350, `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`, `07-reflections/unordered-bucket-balance-orbits.md`.
+**Status:** CONFIRMED / PROVED in Lean, including Boolean cube specialization.
+**What:** The formal gap between THM-350 and full tiling THM-346 is discharged by reusable finite orbit algebra: every fixed-point-free involution on a finite type has even cardinality, and nonzero Boolean xor masks provide the required fixed-point-free involutions.
+**Evidence:** `TournamentH7.BucketBalance` proves the partner map is involutive under involutive moves, preserves `selfHalf`, has no fixed points under fixed-point-free moves, proves `even_card_of_fixedPointFree_involutiveOn`, derives `Even (selfHalf q step moves b).card`, and proves `unordered_balance_of_involutive_fixedPointFree`. THM-351 adds `xorMask_involutive`, `xorMask_fixedPointFree_of_nonzero`, and `unordered_balance_boolCube_masks`; the Verify audit builds cleanly.
+**Resolution:** The predicted elementary identity was exactly enough: coordinatewise Boolean xor by a nonzero mask changes the coordinate where the mask is true.
+**Next:** Reuse the theorem as a checksum for quotient transport matrices and for the future `tournament_tda.py` bucket-feature block.
+**See:** THM-346, THM-350, THM-351, `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`, `05-knowledge/results/lean_verify_boolcube_bucket_balance_opus_2026-05-30-S1.out`, `07-reflections/unordered-bucket-balance-orbits.md`, `07-reflections/boolean-cube-balance-as-checksum.md`.

@@ -54,8 +54,9 @@ two-element orbits, yielding the unordered balance
 ```
 
 The corresponding Lean theorems are axiom-free apart from Lean foundations.
-What remains open for the full tiling-cube quotient theorem is no longer the
-generic orbit argument; it is the Boolean-mask specialization.
+The Boolean-cube mask specialization is now also formalized: xor by a nonzero
+mask is a fixed-point-free involution, so finite Boolean cube quotients satisfy
+the unordered bucket balance directly.
 
 ## 1. Introduction
 
@@ -496,9 +497,27 @@ case of fixed-point-free involutive move systems:
 BucketBalance.unordered_balance_of_involutive_fixedPointFree
 ```
 
-That theorem is the abstract core of the tiling quotient identity.  The
-remaining work for the full tiling-hypercube theorem is to instantiate
-`step(u,x)=x xor u` for nonzero Boolean masks.
+That theorem is the abstract core of the tiling quotient identity.
+
+### Theorem 6.5: Boolean-cube nonzero masks
+
+The final cube-level specialization is now formalized as:
+
+```lean
+BucketBalance.unordered_balance_boolCube_masks
+```
+
+Lean defines `BoolCube index := index -> Bool` and the mask action
+`xorMask u x`.  It proves:
+
+```lean
+BucketBalance.xorMask_involutive
+BucketBalance.xorMask_fixedPointFree_of_nonzero
+```
+
+Thus every finite Boolean cube quotient, together with any finite family of
+nonzero xor masks, satisfies the unordered bucket balance.  For staircase
+tilings, the index type is the tile set.
 
 ## 7. Interaction Between Good-Cut Height and Bucket Transport
 
@@ -592,30 +611,16 @@ The following are now formalized:
 8. Internal half-lines pair under fixed-point-free involutive moves.
 9. Finite fixed-point-free involutions have even cardinality.
 10. Fixed-point-free involutive move systems satisfy unordered bucket balance.
+11. Nonzero Boolean xor masks satisfy the unordered bucket balance on finite
+    Boolean cube quotients.
 
 ### Still open
 
-The main open formalization target is now narrow:
-
-```text
-Instantiate the abstract bucket theorem on the Boolean tiling cube.
-```
-
-Concretely, one should choose or define a Lean type for cube states and masks,
-then prove:
-
-```text
-x xor u is involutive;
-u != 0 implies x xor u != x.
-```
-
-Once this is in place, the abstract theorem
-
-```lean
-BucketBalance.unordered_balance_of_involutive_fixedPointFree
-```
-
-should yield the full Lean version of THM-346.
+The main formalization target listed in the previous draft is now closed at
+the Boolean-cube level.  What remains is structural rather than bookkeeping:
+attach the Boolean-cube theorem to concrete staircase tiling coordinates only
+if a semantic wrapper proves useful, and study how quotient transport mass
+decomposes across spine/ribs/sea and even-graph projections.
 
 Other mathematical questions remain:
 
@@ -677,6 +682,8 @@ That calculus is now available for future formalization and computation.
 - `01-canon/theorems/THM-346-tiling-quotient-bucket-balance.md`
 - `01-canon/theorems/THM-348-finite-bucket-halfline-balance.md`
 - `01-canon/theorems/THM-350-finite-unordered-bucket-balance-layer.md`
+- `01-canon/theorems/THM-351-boolean-cube-mask-bucket-balance.md`
 - `07-reflections/good-cut-spectrum-complete.md`
 - `07-reflections/staircase-top-bucket-is-strong-connectivity.md`
 - `07-reflections/unordered-bucket-balance-orbits.md`
+- `07-reflections/boolean-cube-balance-as-checksum.md`

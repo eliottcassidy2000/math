@@ -28,6 +28,7 @@ Lean 4 + Mathlib4 formalisation of forbidden H-values in tournaments.
 | `Tournament.StTiling.goodCutCount_eq_top_iff_toTournament_stronglyConnected` | top good-cut bucket iff the induced base-path tournament is strongly connected | codex-2026-05-30 |
 | `Tournament.BucketBalance.halfLine_balance` | finite bucket half-lines split into internal and escaping halves | kind-pasteur-2026-05-29-S5 / codex fix |
 | `Tournament.BucketBalance.unordered_balance_of_involutive_fixedPointFree` | fixed-point-free involutive move systems satisfy unordered bucket balance | codex-2026-05-30 |
+| `Tournament.BucketBalance.unordered_balance_boolCube_masks` | finite Boolean cube quotients with nonzero xor masks satisfy unordered bucket balance | opus-2026-05-30-S1 |
 | `Tournament.isSelfComplementary_iff_iso_op` | IsSelfComplementary ↔ T ≅ op T | (clean characterisation) |
 | `Tournament.outDegree_iso` | iso preserves out-degree (up to relabel); **PROVED IN LEAN** | clean |
 | `Tournament.isRegular_iso` | iso preserves regularity; **PROVED IN LEAN** | clean |
@@ -144,6 +145,9 @@ matches the intended proof-modulo-axioms status:
   `bucket_selfHalf_card_even_of_involutive_fixedPointFree_audit`, and
   `bucket_unordered_balance_of_involutive_fixedPointFree_audit` close the
   abstract orbit-parity layer of THM-350 without project axioms.
+- `boolCube_xorMask_involutive_audit`, `boolCube_xorMask_fixedPointFree_audit`,
+  and `bucket_unordered_balance_boolCube_masks_audit` close the finite
+  Boolean-cube nonzero-mask specialization of THM-351.
 - The iso/regularity examples are mostly axiom-free; the remaining project
   single-axiom dependencies here are exactly `tilde_score_sink` and
   `alphaCount_iso_invariant`.

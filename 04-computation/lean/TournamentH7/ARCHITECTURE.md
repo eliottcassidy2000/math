@@ -188,6 +188,9 @@ external/project axioms that are already in their proof OR — best case
 - `BucketBalance.selfHalf_card_even_of_involutive_fixedPointFree` — internal half-lines are even for fixed-point-free involutive move systems.
 - `BucketBalance.unordered_balance_of_even_selfHalf` — even internal half-line cardinality yields the unordered bucket balance.
 - `BucketBalance.unordered_balance_of_involutive_fixedPointFree` — fixed-point-free involutive move systems satisfy unordered bucket balance.
+- `BucketBalance.xorMask_involutive` — Boolean cube xor by a mask is an involution.
+- `BucketBalance.xorMask_fixedPointFree_of_nonzero` — Boolean cube xor by a nonzero mask has no fixed point.
+- `BucketBalance.unordered_balance_boolCube_masks` — finite Boolean cube quotients and nonzero mask families satisfy unordered bucket balance.
 - `threeCycle_isRegular` — 3-cycle is regular.
 - `transitive_hasBasePath` — transitive tournament has base path.
 - `transitive_not_regular` — transitive (n ≥ 2) is not regular.
@@ -259,7 +262,7 @@ lake build TournamentH7
   bucket map and finite move set satisfies
   `|selfHalf| + |crossHalf| = |fiber| * |moves|`; THM-350 proves the
   partner-map, finite orbit-parity, and fixed-point-free involutive unordered
-  layer. The remaining full THM-346 bridge is the Boolean mask specialization.
+  layer; THM-351 specializes it to finite Boolean cubes with nonzero xor masks.
 - **THM-330 FULLY PROVED** (both directions, no project axiom).
 - **THM-316 abstract anti-palindrome PROVED** by the endpoint-reversal
   bijection `σ ↦ φ * σ * vertexReversal n`.

@@ -17,7 +17,7 @@ import Mathlib.Tactic
 namespace Tournament
 namespace BucketBalance
 
-universe u v w
+universe u v w z
 
 variable {alpha : Type u} {beta : Type v} {move : Type w}
 
@@ -380,6 +380,59 @@ theorem unordered_balance_of_involutive_fixedPointFree
       (fiber q b).card * moves.card := by
   exact unordered_balance_of_even_selfHalf q step moves b
     (selfHalf_card_even_of_involutive_fixedPointFree q step moves b hstep hfixed)
+
+/-! ### Boolean cube mask specialization -/
+
+/-- A finite Boolean cube, used for tiling masks by taking
+`index = StTile n`. -/
+abbrev BoolCube (index : Type z) := index -> Bool
+
+/-- Apply a Boolean mask to a cube point by coordinatewise xor. -/
+def xorMask {index : Type z} (u x : BoolCube index) : BoolCube index :=
+  fun i => Bool.xor (x i) (u i)
+
+/-- A mask is nonzero when at least one coordinate is true. -/
+def IsNonzeroMask {index : Type z} (u : BoolCube index) : Prop :=
+  ∃ i, u i = true
+
+@[simp] theorem xorMask_apply {index : Type z}
+    (u x : BoolCube index) (i : index) :
+    xorMask u x i = Bool.xor (x i) (u i) := rfl
+
+/-- Xor by a fixed mask is an involution. -/
+theorem xorMask_involutive {index : Type z} (u : BoolCube index) :
+    Function.Involutive (xorMask u) := by
+  intro x
+  funext i
+  cases hxi : x i <;> cases hui : u i <;> simp [xorMask, hxi, hui]
+
+/-- Xor by a nonzero mask has no fixed point. -/
+theorem xorMask_fixedPointFree_of_nonzero {index : Type z}
+    {u : BoolCube index} (hu : IsNonzeroMask u) :
+    ∀ x, xorMask u x ≠ x := by
+  intro x h
+  rcases hu with ⟨i, hi⟩
+  have hcoord := congrFun h i
+  rw [xorMask_apply, hi] at hcoord
+  cases hx : x i <;> simp [hx] at hcoord
+
+/-- The THM-346 Boolean-cube specialization: any bucket map out of a finite
+Boolean cube satisfies the unordered balance for any finite family of nonzero
+xor masks. -/
+theorem unordered_balance_boolCube_masks
+    {index : Type z} [Fintype index] [DecidableEq index]
+    {beta : Type v} [DecidableEq beta]
+    (q : BoolCube index -> beta) (moves : Finset (BoolCube index)) (b : beta)
+    (hmoves : ∀ u, u ∈ moves -> IsNonzeroMask u) :
+    2 * internalLineCount q xorMask moves b +
+        (crossHalf q xorMask moves b).card =
+      (fiber q b).card * moves.card := by
+  classical
+  refine unordered_balance_of_involutive_fixedPointFree q xorMask moves b ?_ ?_
+  · intro u _hu
+    exact xorMask_involutive u
+  · intro u hu
+    exact xorMask_fixedPointFree_of_nonzero (hmoves u hu)
 
 end
 

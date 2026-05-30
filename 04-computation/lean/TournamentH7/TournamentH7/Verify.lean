@@ -488,6 +488,34 @@ theorem bucket_unordered_balance_of_involutive_fixedPointFree_audit
     q step moves b hstep hfixed
 #print axioms bucket_unordered_balance_of_involutive_fixedPointFree_audit
 
+/-- Xor by a Boolean mask is involutive. PROVED. -/
+theorem boolCube_xorMask_involutive_audit {index : Type}
+    (u : BucketBalance.BoolCube index) :
+    Function.Involutive (BucketBalance.xorMask u) :=
+  BucketBalance.xorMask_involutive u
+#print axioms boolCube_xorMask_involutive_audit
+
+/-- Xor by a nonzero Boolean mask is fixed-point-free. PROVED. -/
+theorem boolCube_xorMask_fixedPointFree_audit {index : Type}
+    {u : BucketBalance.BoolCube index}
+    (hu : BucketBalance.IsNonzeroMask u) :
+    ∀ x, BucketBalance.xorMask u x ≠ x :=
+  BucketBalance.xorMask_fixedPointFree_of_nonzero hu
+#print axioms boolCube_xorMask_fixedPointFree_audit
+
+/-- THM-346 Lean specialization: bucket balance for finite Boolean cubes and
+    nonzero xor-mask families. PROVED. -/
+theorem bucket_unordered_balance_boolCube_masks_audit
+    {index beta : Type} [Fintype index] [DecidableEq index] [DecidableEq beta]
+    (q : BucketBalance.BoolCube index -> beta)
+    (moves : Finset (BucketBalance.BoolCube index)) (b : beta)
+    (hmoves : forall u, u ∈ moves -> BucketBalance.IsNonzeroMask u) :
+    2 * BucketBalance.internalLineCount q BucketBalance.xorMask moves b +
+        (BucketBalance.crossHalf q BucketBalance.xorMask moves b).card =
+      (BucketBalance.fiber q b).card * moves.card :=
+  BucketBalance.unordered_balance_boolCube_masks q moves b hmoves
+#print axioms bucket_unordered_balance_boolCube_masks_audit
+
 /-! ### THM-342 (small diagonal value) -/
 
 example : Qcount 2 1 = 1 := by

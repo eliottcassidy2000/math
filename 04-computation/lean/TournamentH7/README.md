@@ -73,8 +73,10 @@ partner-map layer for unordered balance: internal half-lines are closed under
 involutive moves, fixed-point-free moves give no self-partners, finite
 fixed-point-free involutions have even cardinality, and the unordered balance
 follows for fixed-point-free involutive move systems. These are the Lean cores
-of THM-348 and THM-350; the remaining bridge toward full THM-346 is the
-Boolean-mask specialization.
+of THM-348 and THM-350. The same module also formalizes the Boolean-cube
+mask specialization of THM-351: nonzero xor masks are fixed-point-free
+involutions, so finite Boolean cube quotients satisfy the unordered bucket
+balance directly.
 
 ## Proof sketch
 

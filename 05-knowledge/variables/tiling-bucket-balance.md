@@ -2,7 +2,7 @@
 
 **Symbol:** `bucket_balance_q,M(b)`
 **Type:** integer identity / quotient-matrix row constraint
-**Defined in:** THM-346; Lean half-line core THM-348; unordered Lean layer THM-350
+**Defined in:** THM-346; Lean half-line core THM-348; unordered Lean layer THM-350; Boolean-mask specialization THM-351
 
 ## Definition
 
@@ -34,10 +34,11 @@ Lean now proves the oriented finite-set version (THM-348):
 
 The full unordered tiling formula is this half-line identity plus the
 mask-involution pairing `(x,u) <-> (x xor u,u)` on internal lines. THM-350
-now proves the abstract unordered algebra and the finite orbit-parity theorem:
+proves the abstract unordered algebra and the finite orbit-parity theorem:
 fixed-point-free involutive moves force `selfHalf_b(M)` to have even
-cardinality and therefore satisfy the unordered balance. The remaining Lean
-bridge is the Boolean-mask specialization.
+cardinality and therefore satisfy the unordered balance. THM-351 closes the
+Boolean-mask specialization by proving that xor by any nonzero mask is a
+fixed-point-free involution.
 
 ## Values at Small n
 
@@ -67,6 +68,9 @@ It had 0 violations for `n=3..6` in both quotients.
 - If each selected move is a fixed-point-free involution, then
   `Even |selfHalf_b(M)|` and the same unordered balance follows without a
   separate evenness assumption (THM-350, Lean).
+- If the space is a finite Boolean cube and each selected mask is nonzero,
+  the selected xor moves are fixed-point-free involutions and the unordered
+  balance follows directly (THM-351, Lean).
 - If `|M|=1`, then `incident_cross_b(M) == |q^{-1}(b)| mod 2`.
 - Normalized escape plus neutrality:
 
@@ -90,14 +94,18 @@ escape_b + neutral_b = 1.
 - `01-canon/theorems/THM-346-tiling-quotient-bucket-balance.md`
 - `01-canon/theorems/THM-348-finite-bucket-halfline-balance.md`
 - `01-canon/theorems/THM-350-finite-unordered-bucket-balance-layer.md`
+- `01-canon/theorems/THM-351-boolean-cube-mask-bucket-balance.md`
 - `01-canon/theorems/THM-345-merged-bucket-parity.md`
 - `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`
 - `04-computation/tiling_quotient_bucket_balance_s5.py`
 - `05-knowledge/results/tiling_quotient_bucket_balance_s5.out`
 - `05-knowledge/results/lean_bucket_balance_kind_pasteur_2026-05-30-S1.out`
 - `05-knowledge/results/lean_verify_unordered_kind_pasteur_2026-05-30-S2.out`
+- `05-knowledge/results/lean_boolcube_bucket_balance_opus_2026-05-30-S1.out`
+- `05-knowledge/results/lean_verify_boolcube_bucket_balance_opus_2026-05-30-S1.out`
 - `07-reflections/merged-tiling-bucket-constraints.md`
 - `07-reflections/unordered-bucket-balance-orbits.md`
+- `07-reflections/boolean-cube-balance-as-checksum.md`
 
 ## Tags
 
