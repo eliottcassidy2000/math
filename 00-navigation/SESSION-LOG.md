@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-05-30-S4 - Residue, Phase, And Incidence Synthesis
+
+**Account:** Codex
+**Git first:** Started from `main...origin/main`, rebased cleanly onto `origin/main`, processed agent inbox messages, checked the human inbox, and read the mandatory startup/warm-up files plus recent backlog, tangents, hypotheses, bibliography/open-problem excerpts, engineering synthesis, and git log.
+**Exploration:** Followed the user's request for a loose formalizing session by sampling off-spine repo threads nearly at random: super-orthogonality, `F_k mod 2`, Paley/Interval trace alternation, five-fold Petersen maps, Coxeter/hyperbolic notes, lex/Fourier/information synthesis, endpoint-transfer witnesses, endpoint collision hypergraphs, famous-problem residue bridges, and old "what each piece represents" reflections.
+**Synthesis:** Added `07-reflections/residue-phase-incidence-synthesis.md`. Main conclusion: the recent "projection residue" spine is real but incomplete. Threads split into three compression-failure primitives: residue (what survives a projection), phase (what survives an orthogonal/eigen/character decomposition), and incidence (what survives an operation interface such as a transfer matrix).
+**Knowledge updates:** Added HYP-1795, HYP-1796, HYP-1797 and tangents T316-T318. HYP-1795 proposes separating `residue_vector(T)` from `phase_vector(T)` in future feature extraction. HYP-1796 records the incidence-layer warning from endpoint transfer: rank lives in matrices/hypergraphs/Smith factors, not just support shadows. HYP-1797 frames the parabolic law as a completeness checksum for tied, partial, weighted, or noisy comparison data.
+**Next:** Extend `tournament_tda.py` into `residue_*`, `phase_*`, and `incidence_*` feature blocks; benchmark on the standard contrast set: transitive, Paley, interval, H=63, THM-025, n=6 H=37 trap, beta anomalies, and endpoint-transfer even-graph rows.
+
 ## opus-2026-05-30-S3 - Second-Pass Small Motif Ledger
 
 **Account:** Codex

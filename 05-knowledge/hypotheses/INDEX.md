@@ -2556,3 +2556,24 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** `lonely_runner_residue_probe_s356.py` computes the forbidden interval union exactly over `Fraction`. Initial speed segments `{1,...,k}` for `k=2..9` have no positive gap but do have boundary witnesses such as `1/(k+1)`. Lacunary, arithmetic, prime, CRT-mixed, and random samples have positive gaps; the tightest sampled positive gap is the mixed CRT set with `max_gap/threshold=0.027466`.
 **Predictions:** Hard LRC families should split into boundary-only and tiny-positive-gap regimes; minimal-counterexample searches should stratify by boundary modulus, component count, boundary witnesses, and max-gap residue pairs.
 **See:** `05-knowledge/hypotheses/HYP-1794-lonely-runner-quotient-gap.md`, `04-computation/lonely_runner_residue_probe_s356.py`, `05-knowledge/results/lonely_runner_residue_probe_s356.out`, `07-reflections/famous-problem-residue-bridges.md`.
+
+## HYP-1795: Residue-phase bifurcation (opus-2026-05-30-S4)
+**Status:** EXPLORATORY feature/proof-search hypothesis.
+**What:** Tournament anomalies split into residue mechanisms (a projection leaves a structured survivor) and phase mechanisms (an orthogonal/eigen/character channel survives or changes sign). Future searches should separate `residue_vector(T)` from `phase_vector(T)`.
+**Evidence:** H=63 and THM-025 are residue cases; THM-094, THM-136, and super-orthogonality are phase cases; Paley/interval crossover is phase-dominant rather than a deletion near-kill.
+**Predictions:** Real-root failures should enrich residue-rank strata; circulant maximizer transitions should enrich phase-channel features; mixed examples require both a nontrivial residue and a bad phase/root channel.
+**See:** `05-knowledge/hypotheses/HYP-1795-residue-phase-bifurcation.md`, `07-reflections/residue-phase-incidence-synthesis.md`.
+
+## HYP-1796: Incidence layer necessity (opus-2026-05-30-S4)
+**Status:** EXPLORATORY structural hypothesis.
+**What:** When a quotient support graph has the expected matching or adjacency shape but an `F_2` rank statement fails, the missing object is an incidence layer: transfer matrix, collision hypergraph, private-pivot structure, or Smith torsion profile.
+**Evidence:** THM-356 shows private children imply rank while support matching alone does not. Endpoint SC collision triples are incidence hyperedges, not necessarily parent-metagraph triangles.
+**Predictions:** Even-graph quotient failures should correlate with 2-primary Smith factors; merged tournament endpoint transfer should preserve odd Smith factors longer; collision hypergraphs may remain leaf-peelable after leaving adjacency language.
+**See:** `05-knowledge/hypotheses/HYP-1796-incidence-layer-necessity.md`, THM-356, `07-reflections/endpoint-collisions-as-incidence-not-adjacency-s95.md`.
+
+## HYP-1797: Completeness-defect principle (opus-2026-05-30-S4)
+**Status:** EXPLORATORY engineering/math bridge.
+**What:** The parabolic frustration law `E[Delta c3 | score=s]=s(n-1-s)/2` is a zeroth-order checksum of tournament completeness. For tied, missing, weighted, or noisy pairwise data, first measure the deviation from this forced tournament parabola.
+**Evidence:** Tournament OCF/parity/residue features rely on complete binary decisions, while trienerments can realize tournament-forbidden values such as `7` and `21`.
+**Predictions:** Stability of hard tournament features under thresholding should correlate with small completeness defect; tied/incomplete examples that unlock forbidden values should show localized completeness defect near forcing cycles.
+**See:** `05-knowledge/hypotheses/HYP-1797-completeness-defect-principle.md`, `07-reflections/what-each-piece-really-represents.md`, `07-reflections/residue-phase-incidence-synthesis.md`.

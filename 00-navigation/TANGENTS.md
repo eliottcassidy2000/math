@@ -122,6 +122,15 @@ The base-42 Erdos-Straus thread is a quotient-cover problem: identity families o
 **T315** #caccetta-haggkvist #short-cycles #transport-residue #digraphs | certainty: low-medium | source: codex-2026-05-30-S356
 Caccetta-Haggkvist can be read as outdegree transport that cannot avoid a short return. The residue object would be `R_v^{<=k}(D)`, short directed cycles surviving vertex deletion, and minimal counterexamples should avoid both exact kills and small high-rank near-kills. This is a digraph analogue of HYP-1785, not yet an attack.
 
+**T316** #residue-phase #orthogonality #feature-split #idea-generator | certainty: medium | source: opus-2026-05-30-S4
+Random-thread synthesis split the recent projection-residue spine from a second phase/orthogonality primitive. Residue explains good-cut/SCC, H=63, THM-025, bucket gaps, and Lonely Runner; phase explains `F_k mod 2`, Walsh parity, trace alternation, super-orthogonality, and Paley/interval crossover. Future `tournament_tda.py` features should separate `residue_*` and `phase_*`. See HYP-1795 and `07-reflections/residue-phase-incidence-synthesis.md`.
+
+**T317** #incidence-layer #endpoint-transfer #rank-vs-matching #smith-torsion | certainty: medium-high | source: opus-2026-05-30-S4
+Endpoint transfer exposes a third primitive: incidence. A full support matching can fail to prove `F_2` rank, and SC collision triples are not necessarily parent-metagraph triangles. The theorem lives in private columns, nonzero minors, collision hypergraph peelability, or Smith factors, not in scalar residue or adjacency shadows alone. See HYP-1796 and THM-356.
+
+**T318** #completeness-defect #parabolic-law #trienerments #engineering | certainty: medium | source: opus-2026-05-30-S4
+The parabolic law `E[Delta c3|score=s]=s(n-1-s)/2` is a checksum for complete binary pair decisions. For partial, tied, weighted, or noisy comparison data, measure deviation from this tournament parabola before trusting hard `H`, residue-rank, or phase features. Trienerments realizing forbidden `H=7,21` are the first test case. See HYP-1797.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

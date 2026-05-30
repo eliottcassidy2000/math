@@ -17,6 +17,10 @@ Useful synthetic maps added later:
   famous/open problem families where this repo might have leverage, including
   Erdős tournament problems, Hamiltonian-path maximization, real-root failure
   classification, Paley/circulant path homology, and QR/coding-theory bridges.
+- `07-reflections/residue-phase-incidence-synthesis.md`: random-thread
+  synthesis separating three recurring primitives: residue after projection,
+  phase after orthogonal decomposition, and incidence through operation
+  matrices/hypergraphs.
 
 ## Second-Pass Small Motif Ledger
 
