@@ -10,6 +10,7 @@ lean:
 results:
   - 05-knowledge/results/lean_bucket_balance_kind_pasteur_2026-05-30-S2.out
   - 05-knowledge/results/lean_verify_unordered_kind_pasteur_2026-05-30-S2.out
+  - 05-knowledge/results/lean_tournamenth7_root_kind_pasteur_2026-05-30-S2.out
 ---
 
 # THM-350: Finite Unordered Bucket Balance Layer

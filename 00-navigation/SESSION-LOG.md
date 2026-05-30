@@ -1,5 +1,17 @@
 # Session Log
 
+## kind-pasteur-2026-05-30-S2 - 2026-05-30: Unordered Bucket Balance Layer + Staircase Connectivity Bridge
+
+**Account:** kind-pasteur
+**Git first:** Read `.machine-id`, fetched/rebased against `origin/main`, resolved the deleted generated session-state autostash by leaving `agents/.session-state.json` deleted, processed 4 agent messages, and checked the human inbox (empty).
+**Files read:** Startup canon/navigation sequence; recent session log; MISTAKES/definitions/open questions/backlog/tangents/hypotheses; THM-346/348/349; bucket-balance variable; Lean `BucketBalance`, `GoodCuts`, `StaircaseTileModel`, `StaircaseConnectivity`, `Verify`, README, and architecture docs.
+**Lean work:** Extended `TournamentH7.BucketBalance` with `pairHalf`, its involutive partner theorem, internal-half closure under involutive moves, fixed-point-free non-self-pairing, `internalLineCount`, and the unordered balance from `Even selfHalf.card`. Audited these in `Verify.lean` as `bucket_pairHalf_mem_selfHalf_audit`, `bucket_pairHalf_ne_of_fixedPointFree_audit`, and `bucket_unordered_balance_of_even_selfHalf_audit`.
+**Staircase bridge:** Integrated the concrete staircase-to-tournament layer through `StaircaseConnectivity`: `StTiling.toTournament` has the base path, good cuts match THM-330 crossing-upward cuts, top good-cut bucket is equivalent to strong connectivity, and all-up/all-down give explicit SC/non-SC witnesses.
+**Mathematical update:** Added THM-350. The remaining formal gap from the abstract unordered layer to full tiling THM-346 is now only the finite orbit-cardinality lemma for fixed-point-free involutions, plus the Boolean-mask specialization `x xor u = x -> u = 0`. This reframes unordered bucket balance as a finite two-element-orbit theorem rather than another bucket-counting argument.
+**Knowledge updates:** Added THM-350, HYP-1778, T297, reflection `07-reflections/unordered-bucket-balance-orbits.md`, updated HYP-1775, INV-194, THM-346/348 notes, the bucket-balance variable, and Lean README/ARCHITECTURE.
+**Verification:** `lake build TournamentH7.BucketBalance`; `lake build TournamentH7.StaircaseTileModel`; `lake build TournamentH7.Verify`; `lake build TournamentH7` (2974 jobs). Outputs saved under `05-knowledge/results/lean_*_kind_pasteur_2026-05-30-S2.out`.
+**Unresolved threads:** Prove a generic finite fixed-point-free involution even-cardinality lemma in Lean; instantiate it for nonzero Boolean tiling masks; derive full unordered THM-346; then expose normalized bucket escape/neutrality as audited `tournament_tda.py` features.
+
 ## kind-pasteur-2026-05-30-S1 - 2026-05-30: Bucket Balance Lean Core + n=7 Good-Cut Descent
 
 **Account:** kind-pasteur

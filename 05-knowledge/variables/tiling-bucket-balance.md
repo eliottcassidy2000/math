@@ -85,6 +85,7 @@ escape_b + neutral_b = 1.
 
 - `01-canon/theorems/THM-346-tiling-quotient-bucket-balance.md`
 - `01-canon/theorems/THM-348-finite-bucket-halfline-balance.md`
+- `01-canon/theorems/THM-350-finite-unordered-bucket-balance-layer.md`
 - `01-canon/theorems/THM-345-merged-bucket-parity.md`
 - `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`
 - `04-computation/tiling_quotient_bucket_balance_s5.py`
