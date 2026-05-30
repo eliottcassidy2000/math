@@ -21,6 +21,7 @@
 **S11 update (opus-2026-05-29-S11):** Both H=63 classes are **single-core**: every odd directed cycle contains one vertex, and deleting that core vertex leaves a transitive 7-vertex tournament. Their transitive-insertion signatures are `1001100` and `1100110`; the weighted signature count
 `r(s)=Σ_{i<j, s_i=1, s_j=0} 2^{max(j-i-2,0)}` equals 31, matching the number of odd cycles. A complete-Ω census over isomorphism classes n=3..8 shows cycle counts r=3 and r=10 are absent whenever Ω is complete; a signature target search finds r=3 and r=10 absent for all single-core signatures up to m=16, while r=31 first appears at m=7. This gives a new focused H=21 lens: prove the r=10 gap in the single-core family, then handle non-core complete Ω and non-complete α-tuples separately.
 **S12 update (opus-2026-05-29-S12):** Reframed the H=63 mechanism as a projection defect. The two H=63 classes are exact old-projection kills: deleting the core vertex loses 31/31 directed odd cycles and leaves `H(T-v)=1`, `alpha(T-v)=[1,0]`. A core-stratified complete-Ω census through n=8 confirms r=3 and r=10 are absent in every core stratum, and r=31 occurs only in core-size-1 classes. The single-core target search was extended to m≤40: r=3 and r=10 remain absent; r=31,42,63 appear with simple linear count laws after their first occurrence.
+**S5 update (opus-2026-05-30):** The applied residue/phase contrast table classifies H=63 as the clean exact-kill endpoint of the standard anomaly set: `rho=1`, max-loss residue `(0,0,0)`, residue rank 0. This sharpens the next step: treat the single-core signature count as a finite-state target problem for absent values `r=3,10`, separate from THM-025-style near-kill failures.
 **Next:**
   1. Prove the single-core signature formula and the persistent gaps r=3,10.
   2. Classify complete-Ω tournaments with empty cycle-family core; compare their r-support to the single-core support.
@@ -34,10 +35,12 @@
 **Status:** STALE/REFUTED AS UNIVERSAL — see THM-025
 **What:** The universal conjecture "I(Ω(T), x) has all real, negative roots for every tournament T" is false. Canon THM-025 gives an n=9 counterexample with score sequence [1,1,3,4,4,4,6,6,7] and I(Ω,x)=1+94x+10x²+x³, violating Newton's inequality. What remains interesting is to characterize the large real-rooted subclass and understand why failures are rare.
 **Key implication:** Conditional ultra-log-concavity and product-formula ideas remain useful only for the real-rooted subclass, not universally.
+**S5 update (opus-2026-05-30):** The contrast table identifies THM-025 as a dangerous near-kill rather than an exact kill: one vertex supports 92/94 odd cycles, but the max-loss residue is `(alpha1,alpha2,alpha3)=(2,1,0)`, residue rank 2, and `I(R,2)=9`. New working target: failures may require both a tiny rank-2 deletion residue and a root/phase imbalance.
 **Next:**
   1. Reconcile the newer Hermite-Biehler/interlacing notes with THM-025.
   2. Characterize the THM-025 failure class and the generic real-rooted class.
   3. Search for a stability/negative-dependence theorem with explicit hypotheses.
+  4. Run an n=9 census stratified by `omega_near_kill_rank2_vertices` and Newton/root margins.
 **Reflection:** `real-rootedness-omega-conjecture.md`
 
 ### INV-190: All-0 Staircase H Sequence and Algebraic Structure

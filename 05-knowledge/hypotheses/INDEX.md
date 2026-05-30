@@ -2577,3 +2577,31 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** Tournament OCF/parity/residue features rely on complete binary decisions, while trienerments can realize tournament-forbidden values such as `7` and `21`.
 **Predictions:** Stability of hard tournament features under thresholding should correlate with small completeness defect; tied/incomplete examples that unlock forbidden values should show localized completeness defect near forcing cycles.
 **See:** `05-knowledge/hypotheses/HYP-1797-completeness-defect-principle.md`, `07-reflections/what-each-piece-really-represents.md`, `07-reflections/residue-phase-incidence-synthesis.md`.
+
+## HYP-1798: Standard contrast lens separability (opus-2026-05-30-S5)
+**Status:** EXPLORATORY feature/proof-search hypothesis.
+**What:** The standard anomaly set should be separable by residue, phase, and incidence lenses: H=63 is exact residue kill; THM-025 is dangerous near-kill; Paley/interval is broad phase/fiber contrast; H=37 is landscape/phase trap.
+**Evidence:** `residue_phase_incidence_contrast_s5.py` gives the contrast table: H=63 has `rho=1`, residue rank 0; THM-025 has residue `(2,1,0)`, rank 2; Paley/interval share low-order score/triangle data but differ in alpha/fiber profiles; H=37 has no projection-kill explanation.
+**Predictions:** Residue features classify near-kill failures, phase features classify Paley/interval and local traps, and endpoint-transfer rank remains unexplained without incidence features.
+**See:** `05-knowledge/hypotheses/HYP-1798-standard-contrast-lens-separability.md`, `04-computation/residue_phase_incidence_contrast_s5.py`, `07-reflections/applied-residue-phase-incidence-programs.md`.
+
+## HYP-1799: Real-root failure is near-kill plus phase imbalance (opus-2026-05-30-S5)
+**Status:** EXPLORATORY structural hypothesis.
+**What:** First non-real-rooted Omega independence polynomials should require a tiny max-loss deletion residue with rank at least 2 plus an imbalanced root/phase channel.
+**Evidence:** THM-025 has `I=1+94x+10x^2+x^3`, max-loss residue `(2,1,0)`, residue rank 2, and one near-kill rank-2 vertex; exact-kill H=63 and broad-residue Paley/interval examples are distinct mechanisms.
+**Predictions:** n=9 failures should be enriched in `omega_near_kill_rank2_vertices>0`, while exact complete-core kills alone should not predict failure.
+**See:** `05-knowledge/hypotheses/HYP-1799-real-root-failure-near-kill-phase.md`, THM-025, `05-knowledge/results/residue_phase_incidence_contrast_s5.out`.
+
+## HYP-1800: OCF active ranking acquisition (opus-2026-05-30-S5)
+**Status:** EXPLORATORY engineering hypothesis.
+**What:** Active pairwise ranking should query pairs by expected drop in `H(T)` and Omega residue complexity, then return a ranking plus named ambiguity packets rather than just a sorted list.
+**Evidence:** The applications probe identified active pairwise ranking as the nearest practical target; residue/phase features explain why ambiguity may be localized, broad/fiber-like, or unstable under incompleteness.
+**Predictions:** Expected H-drop acquisition should reduce query count on small exact benchmarks; completeness defect should warn when thresholded weighted comparisons make hard tournament features unstable.
+**See:** `05-knowledge/hypotheses/HYP-1800-ocf-active-ranking.md`, `07-reflections/applications-probe-2026-05-30.md`, `07-reflections/applied-residue-phase-incidence-programs.md`.
+
+## HYP-1801: Circulant maximizer transition is phase-dominant (opus-2026-05-30-S5)
+**Status:** EXPLORATORY structural hypothesis.
+**What:** The Paley/interval circulant H-maximizer transition is controlled primarily by Fourier/trace/additive-energy phase features, not localized deletion-residue rank.
+**Evidence:** Paley and interval T7 are both regular with equal `t3` and broad rank-2 residues, but split sharply in alpha/fiber geometry: Paley `(80,7,0)` vs interval `(59,14,0)`.
+**Predictions:** A circulant `phase_profile` should predict the crossover better than max-loss deletion residue and should also feed Paley/circulant path-homology symbol-matrix experiments.
+**See:** `05-knowledge/hypotheses/HYP-1801-circulant-transition-phase-dominance.md`, `07-reflections/applied-residue-phase-incidence-programs.md`.

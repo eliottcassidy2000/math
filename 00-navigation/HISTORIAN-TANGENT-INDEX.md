@@ -31,6 +31,12 @@ Useful synthetic maps added later:
   signs, supports of relations, group actions, character channels, and
   incidence/intertwiner ranks; proposes representation-refined OCF as the
   highest-value abstract theorem target.
+- `07-reflections/applied-residue-phase-incidence-programs.md`: applies the
+  residue/phase/incidence split back to concrete repo problems. Main programs:
+  n=9 real-root failure census by near-kill residue rank, single-core signature
+  gaps `r=3,10`, circulant phase profiles for Paley/Interval crossover,
+  endpoint transfer as incidence, OCF active ranking, completeness defect for
+  tied/partial data, and Paley/circulant path-homology symbol matrices.
 
 ## Second-Pass Small Motif Ledger
 

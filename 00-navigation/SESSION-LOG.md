@@ -1,5 +1,15 @@
 # Session Log
 
+## opus-2026-05-30-S5 - Applied Residue/Phase/Incidence Programs
+
+**Account:** Codex
+**Git first:** Started from `main...origin/main`, rebased cleanly, processed two broadcast inbox messages, and checked the human inbox. During the broader session window, the representation-lens closeout preserved the new contrast script, saved output, and applied-program reflection; this pass completed the knowledge/hypothesis integration.
+**User prompt:** Spend another longer session thinking more abstractly and creatively, then apply the ideas more concretely to specific problems already investigated across the repo.
+**Computation:** Added and ran `04-computation/residue_phase_incidence_contrast_s5.py`, storing `05-knowledge/results/residue_phase_incidence_contrast_s5.out`. The contrast set is transitive T7, Paley T7, interval T7, the two H=63 single-core classes, the n=6 H=37 local trap, and THM-025.
+**Synthesis:** Added `07-reflections/applied-residue-phase-incidence-programs.md`. Main conclusion: residue, phase, incidence, and completeness defect should be used as separate problem-program lenses. H=63 is exact residue kill; THM-025 is dangerous near-kill; Paley/Interval is broad phase/fiber contrast; H=37 is a landscape/phase trap.
+**Knowledge updates:** Added HYP-1798 through HYP-1801 and tangents T321-T325. Concrete programs: n=9 real-root failure census by near-kill rank, single-core signature gaps `r=3,10`, circulant phase profiles, endpoint transfer as incidence, OCF active ranking, completeness-defect stability tests, and Paley/circulant path-homology symbol matrices.
+**Next:** Implement the n=9 root-failure census with Newton margins; build a finite-state target search/proof attempt for `r_core=3,10`; add a circulant `phase_profile`; prototype `H_topk` active ranking JSON reports.
+
 ## codex-2026-05-30-S4 - Third-Pass Ten-Lens Historian Noise Ledger
 
 **Account:** Codex

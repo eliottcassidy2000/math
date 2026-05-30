@@ -137,6 +137,21 @@ Application search argues the strongest near-term product is OCF-guided active p
 **T320** #representation-lens #schur-weyl #root-signs #fundamentals | certainty: medium-high | source: codex-2026-05-30-representation-lens
 Representation pass reframes the repo as sign assignments on positive roots of type A, modulo the Weyl group, then probed by invariant, restriction, character/eigenspace, and intertwiner operations. Small concepts become root signs, relation supports, group actions, character channels, and incidence ranks. Best abstract target: a representation-refined OCF, upgrading `H(T)=I(Omega,2)` from scalar identity to a graded packet/chamber module identity. See `07-reflections/representation-lens-fundamentals-2026-05-30.md`.
 
+**T321** #contrast-table #residue-phase #standard-examples #tournament-tda | certainty: medium-high | source: opus-2026-05-30-S5
+The standard anomaly set now has a compact residue/phase contrast table: H=63 single-core classes are exact residue kills (`rho=1`, residue rank 0), THM-025 is a dangerous near-kill (`residue=(2,1,0)`, rank 2), Paley/Interval T7 are broad phase/fiber contrasts, and the n=6 H=37 local trap is a landscape phenomenon rather than a projection-kill story. See HYP-1798 and `residue_phase_incidence_contrast_s5.py`.
+
+**T322** #real-rootedness #near-kill #phase-imbalance #n9 | certainty: medium | source: opus-2026-05-30-S5
+Refined real-root failure guess: non-real-rooted `I(Omega,x)` needs a tiny max-loss deletion residue with rank at least 2 plus a bad root/phase channel. THM-025 fits exactly; H=63 exact kills and Paley/Interval broad residues are different regimes. Next: n=9 census stratified by `omega_near_kill_rank2_vertices` and Newton margins. See HYP-1799.
+
+**T323** #active-ranking #ambiguity-packets #expected-H-drop #applications | certainty: medium | source: opus-2026-05-30-S5
+OCF-guided ranking should be an ambiguity-packet scheduler: query the pair with largest expected `H` drop, break ties by Omega residue-rank change, and report the cyclic packets responsible for ranking instability. Completeness defect is the warning label for tied/missing/weighted comparisons. See HYP-1800.
+
+**T324** #circulants #phase-profile #paley-interval #path-homology | certainty: medium | source: opus-2026-05-30-S5
+Paley/Interval crossover looks phase-dominant: at T7 they are both regular with equal `t3` and broad rank-2 residues, but alpha/fiber geometry differs sharply. Build a circulant `phase_profile` from Fourier arguments, trace signs, additive energy, and cycle deviations; reuse it for Paley/circulant path-homology symbol matrices. See HYP-1801.
+
+**T325** #single-core #finite-state #signature-spectrum #H7-H21 | certainty: medium | source: opus-2026-05-30-S5
+The exact-kill H=63 mechanism reduces complete-core questions to the image of a weighted binary signature language. Treat `r_core(signature)` as a finite-state/transducer target problem; prove persistent gaps `r=3,10` or find counterexamples. This is the focused complete-Omega route to H=7/H=21.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
