@@ -22,6 +22,8 @@ import TournamentH7.ForbiddenHCounting
 import TournamentH7.GoodCuts
 import TournamentH7.StaircaseConnectivity
 import TournamentH7.BucketBalance
+import TournamentH7.PaleyAxiomatic
+import TournamentH7.StaircaseTileModel
 
 open Tournament
 
@@ -561,3 +563,58 @@ theorem H_lt_81_no_alpha4_audit {n : ℕ} (T : Tournament n) (hH : H T < 81) :
     alphaCount 4 T = 0 :=
   H_lt_81_no_alpha4 T hH
 #print axioms H_lt_81_no_alpha4_audit
+
+/-! ### PaleyAxiomatic audits -/
+
+theorem paley_7_not_SF_audit : ¬ IsSelfFlip_id paley_7.T := paley_7_not_SF
+#print axioms paley_7_not_SF_audit
+
+theorem paley_7_max_audit (T : Tournament 7) : H T ≤ 189 := paley_7_maximises_H T
+#print axioms paley_7_max_audit
+
+/-! ### StTile reflection audits (PROVED) -/
+
+theorem stTile_reflect_reflect_audit (t : StTile n) : t.reflect.reflect = t :=
+  StTile.reflect_reflect t
+#print axioms stTile_reflect_reflect_audit
+
+theorem stTiling_reflect_reflect_audit (b : StTiling n) :
+    b.reflect.reflect = b := StTiling.reflect_reflect b
+#print axioms stTiling_reflect_reflect_audit
+
+theorem stTiling_complement_complement_audit (b : StTiling n) :
+    b.complement.complement = b := StTiling.complement_complement b
+#print axioms stTiling_complement_complement_audit
+
+theorem stTiling_reflect_complement_commute_audit (b : StTiling n) :
+    b.reflect.complement = b.complement.reflect :=
+  StTiling.reflect_complement b
+#print axioms stTiling_reflect_complement_commute_audit
+
+/-! ### H = 3, H = 5 arithmetic enumeration (NEW) -/
+
+/-- H = 3 forces α-tuple (1, 0, 0, 0). PROVED. -/
+theorem alpha_solution_H3_audit {n : ℕ} (T : Tournament n) (h : H T = 3) :
+    alphaCount 1 T = 1 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0 :=
+  alpha_solution_H3 T h
+#print axioms alpha_solution_H3_audit
+
+/-- H = 5 forces α-tuple (2, 0, 0, 0). PROVED. -/
+theorem alpha_solution_H5_audit {n : ℕ} (T : Tournament n) (h : H T = 5) :
+    alphaCount 1 T = 2 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0 :=
+  alpha_solution_H5 T h
+#print axioms alpha_solution_H5_audit
+
+/-! ### N_min(k) for k = 5, 6 (extended) -/
+
+theorem H_ge_243_of_alpha5_pos_audit {n : ℕ} (T : Tournament n)
+    (h : 1 ≤ alphaCount 5 T) : 243 ≤ H T :=
+  H_ge_243_of_alpha5_pos T h
+#print axioms H_ge_243_of_alpha5_pos_audit
+
+theorem H_ge_729_of_alpha6_pos_audit {n : ℕ} (T : Tournament n)
+    (h : 1 ≤ alphaCount 6 T) : 729 ≤ H T :=
+  H_ge_729_of_alpha6_pos T h
+#print axioms H_ge_729_of_alpha6_pos_audit

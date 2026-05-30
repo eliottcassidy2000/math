@@ -69,85 +69,27 @@ opaque numSC : ℕ → ℕ
 axiom numSC_zero_iff (n : ℕ) (hn : 1 ≤ n) :
     numSC n = 0 ↔ ¬ (n % 4 = 0 ∨ n % 4 = 1)
 
-/-! ### Merged metagraph: V_merged = (A000568(n) + SC(n)) / 2 -/
+/-! ### Merged metagraph cardinalities
 
-/-- `numMergedClasses n` = number of vertices in the *merged* metagraph
-    G_n / Z_2 (where Z_2 acts by op).  Equals (A000568(n) + numSC(n)) / 2. -/
-opaque numMergedClasses : ℕ → ℕ
+    The project canon defines the merged metagraph G_n / Z_2 where Z_2
+    acts by op (T ↔ T^op).  Its cardinality satisfies
+        2 · V_merged(n) = numIsoClasses(n) + numSC(n)
+    when (numIsoClasses + numSC) is even.  This is the "Cauchy-Frobenius"
+    counting under the Z_2 action.
 
-/-- **Axiom (computed by project, verified n = 3..7).** -/
-axiom numMergedClasses_eq (n : ℕ) :
-    2 * numMergedClasses n = numIsoClasses n + numSC n
+    ─── CONSISTENCY CAVEAT ──────────────────────────────────────────────
+    At n = 3, numIsoClasses = 2 and (per the project canon sequence)
+    numSC = 1.  Then 2 + 1 = 3, an ODD number.  The formula V_merged =
+    (2 + 1)/2 = 1.5 isn't an integer.
 
-/-- Concrete computed values. -/
-example : 2 * numMergedClasses 3 = 3 := by
-  have := numMergedClasses_eq 3
-  simp at this; exact this
+    This inconsistency was noted oracle-2026-05-29-S3-bonus.  Possible
+    resolutions:
+      (a) numSC(3) is actually 0 or 2 (project canon error/clarification).
+      (b) numIsoClasses includes an extra class at n=3.
+      (c) The merged-class formula has a correction term at small n.
 
-example : 2 * numMergedClasses 5 = 14 := by
-  have := numMergedClasses_eq 5
-  simp at this; exact this
-
-example : 2 * numMergedClasses 7 = 464 := by
-  have := numMergedClasses_eq 7
-  simp at this; exact this
-
-/-! ### Merged metagraph cardinalities — PROVED IN LEAN -/
-
-/-- The merged metagraph at n = 3 has 1 vertex.  (Both 3-tournaments are SC.) -/
-theorem numMergedClasses_3_eq_2 : 2 * numMergedClasses 3 = 3 := by
-  have := numMergedClasses_eq 3
-  simp at this; exact this
-
-/-- The merged metagraph at n = 4 has 2 vertices.  (4 iso classes, 0 SC,
-    so V_merged = (4+0)/2 = 2.) -/
-theorem numMergedClasses_4 : 2 * numMergedClasses 4 = 4 := by
-  have := numMergedClasses_eq 4
-  simp at this; exact this
-
-/-- The merged metagraph at n = 5 has 7 vertices.  -/
-theorem numMergedClasses_5 : 2 * numMergedClasses 5 = 14 := by
-  have := numMergedClasses_eq 5
-  simp at this; exact this
-
-/-- The merged metagraph at n = 6 has 28 vertices.  (56 iso classes, 0 SC.) -/
-theorem numMergedClasses_6 : 2 * numMergedClasses 6 = 56 := by
-  have := numMergedClasses_eq 6
-  simp at this; exact this
-
-/-- The merged metagraph at n = 7 has 232 vertices.  (456 iso classes,
-    8 SC, so V_merged = (456+8)/2 = 232.) -/
-theorem numMergedClasses_7 : 2 * numMergedClasses 7 = 464 := by
-  have := numMergedClasses_eq 7
-  simp at this; exact this
-
-/-! ### The number of NS (non-self-complementary) iso classes
-
-    The NS iso classes come in op-pairs, so their count is even. The
-    project canon verifies this at n=3..7: numNS = A000568(n) - numSC(n)
-    is divisible by 2 in every case.
-
-    Verified examples (using axiomatised numIsoClasses, numSC):
-      n=3: numNS = 2 - 1 = 1 (NOT even)... wait, 1 isn't even.
-
-    Actually wait: at n=3, numIsoClasses = 2 (transitive and 3-cycle), and
-    numSC = 1 (the 3-cycle is SC since op(3-cycle) is the reversed cycle,
-    which is iso to original).  So numNS = 2 - 1 = 1.
-
-    Hmm — that's odd. Let me re-check the project canon.
-
-    Looking at numSC at n=3: project says 1.  But transitive is NOT SC
-    (T trans ↛ T op trans since op trans has the cycle reversed which is
-    a different transitive).  Wait — for n=3, op(transitive 2→1→0) has
-    arcs 0→1, 1→2, 0→2 = transitive 0→1→2.  These are isomorphic via the
-    permutation 0↔2, 1↔1.  So transitive IS SC.  Then numSC at n=3 = 2,
-    not 1.
-
-    But the canon (per my axiomatic values) says numSC_3 = 1.
-
-    POSSIBLE INTERPRETATION: numSC counts SC-with-NONTRIVIAL-aut classes?
-    Or counts "transpose-self" classes which is a subtype.
-
-    For now, defer to canon values without further claim. -/
+    Until the canon clarifies, we DO NOT axiomatise the merged-class
+    formula here (it would be inconsistent).  The numIsoClasses and
+    numSC values are retained as axiomatic constants. -/
 
 end Tournament

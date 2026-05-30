@@ -193,4 +193,100 @@ theorem H_lt_81_no_alpha4 (T : Tournament n) (hH : H T < 81) :
   have := H_ge_81_of_alpha4_pos T h'
   omega
 
+/-! ### Stronger structural derivations -/
+
+/-- For tournaments with H = 3, alpha_1 must be 1 and all higher α_k = 0. -/
+theorem alpha_solution_H3 (T : Tournament n) (hH : H T = 3) :
+    alphaCount 1 T = 1 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0 := by
+  have hOCF := ocf T
+  -- 3 = 1 + 2 a1 + 4 a2 + 8 a3 + 16 a4
+  -- Need 2 a1 + 4 a2 + 8 a3 + 16 a4 = 2, i.e., a1 + 2 a2 + 4 a3 + 8 a4 = 1.
+  -- So a1 = 1 and others 0.
+  refine ⟨?_, ?_, ?_, ?_⟩ <;> omega
+
+/-! ### Extension to k = 5, 6 via ocf_extended -/
+
+/-- H_ge_3^5 = 243 when α_5 ≥ 1. -/
+theorem H_ge_243_of_alpha5_pos (T : Tournament n) (h : 1 ≤ alphaCount 5 T) :
+    243 ≤ H T := by
+  have hocf := ocf_extended T
+  have hd1 : Nat.choose 5 1 ≤ alphaCount 1 T :=
+    alpha_descent T (by omega) h
+  have hd2 : Nat.choose 5 2 ≤ alphaCount 2 T :=
+    alpha_descent T (by omega) h
+  have hd3 : Nat.choose 5 3 ≤ alphaCount 3 T :=
+    alpha_descent T (by omega) h
+  have hd4 : Nat.choose 5 4 ≤ alphaCount 4 T :=
+    alpha_descent T (by omega) h
+  have hd5 : Nat.choose 5 5 ≤ alphaCount 5 T :=
+    alpha_descent T (by omega) h
+  have h_c1 : Nat.choose 5 1 = 5 := by decide
+  have h_c2 : Nat.choose 5 2 = 10 := by decide
+  have h_c3 : Nat.choose 5 3 = 10 := by decide
+  have h_c4 : Nat.choose 5 4 = 5 := by decide
+  have h_c5 : Nat.choose 5 5 = 1 := by decide
+  rw [h_c1] at hd1
+  rw [h_c2] at hd2
+  rw [h_c3] at hd3
+  rw [h_c4] at hd4
+  rw [h_c5] at hd5
+  -- 1 + 2*5 + 4*10 + 8*10 + 16*5 + 32*1 = 1 + 10 + 40 + 80 + 80 + 32 = 243
+  omega
+
+/-- H_ge_3^6 = 729 when α_6 ≥ 1. -/
+theorem H_ge_729_of_alpha6_pos (T : Tournament n) (h : 1 ≤ alphaCount 6 T) :
+    729 ≤ H T := by
+  have hocf := ocf_extended T
+  have hd1 : Nat.choose 6 1 ≤ alphaCount 1 T :=
+    alpha_descent T (by omega) h
+  have hd2 : Nat.choose 6 2 ≤ alphaCount 2 T :=
+    alpha_descent T (by omega) h
+  have hd3 : Nat.choose 6 3 ≤ alphaCount 3 T :=
+    alpha_descent T (by omega) h
+  have hd4 : Nat.choose 6 4 ≤ alphaCount 4 T :=
+    alpha_descent T (by omega) h
+  have hd5 : Nat.choose 6 5 ≤ alphaCount 5 T :=
+    alpha_descent T (by omega) h
+  have hd6 : Nat.choose 6 6 ≤ alphaCount 6 T :=
+    alpha_descent T (by omega) h
+  have h_c1 : Nat.choose 6 1 = 6 := by decide
+  have h_c2 : Nat.choose 6 2 = 15 := by decide
+  have h_c3 : Nat.choose 6 3 = 20 := by decide
+  have h_c4 : Nat.choose 6 4 = 15 := by decide
+  have h_c5 : Nat.choose 6 5 = 6 := by decide
+  have h_c6 : Nat.choose 6 6 = 1 := by decide
+  rw [h_c1] at hd1
+  rw [h_c2] at hd2
+  rw [h_c3] at hd3
+  rw [h_c4] at hd4
+  rw [h_c5] at hd5
+  rw [h_c6] at hd6
+  -- 1 + 12 + 60 + 160 + 240 + 192 + 64 = 729 = 3^6
+  omega
+
+/-- For tournaments with H = 5, alpha_1 = 2 and others 0.
+    Uses alpha_descent (α_2 ≥ 1 ⟹ α_1 ≥ 2) to rule out (α_1=0, α_2=1, ...). -/
+theorem alpha_solution_H5 (T : Tournament n) (hH : H T = 5) :
+    alphaCount 1 T = 2 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0 := by
+  have hOCF := ocf T
+  -- 5 = 1 + 2 a1 + 4 a2 + 8 a3 + 16 a4 ⟹ a1 + 2 a2 + 4 a3 + 8 a4 = 2.
+  -- Candidates: (a1=2, others 0) OR (a1=0, a2=1, others 0).
+  -- The latter is ruled out by alpha_descent: a2 ≥ 1 ⟹ a1 ≥ 2.
+  have hRed : alphaCount 1 T + 2 * alphaCount 2 T
+              + 4 * alphaCount 3 T + 8 * alphaCount 4 T = 2 := by omega
+  have h4 : alphaCount 4 T = 0 := by omega
+  have h3 : alphaCount 3 T = 0 := by omega
+  by_cases ha2 : alphaCount 2 T = 0
+  · refine ⟨by omega, ha2, h3, h4⟩
+  · -- α_2 ≥ 1 ⟹ α_1 ≥ C(2,1) = 2 (descent)
+    have ha2_pos : 1 ≤ alphaCount 2 T := Nat.one_le_iff_ne_zero.mpr ha2
+    have ha1_ge : Nat.choose 2 1 ≤ alphaCount 1 T :=
+      alpha_descent T (by omega) ha2_pos
+    have hch : Nat.choose 2 1 = 2 := by decide
+    rw [hch] at ha1_ge
+    -- a1 ≥ 2 ∧ a2 ≥ 1 ⟹ a1 + 2 a2 ≥ 4 > 2, contradiction
+    exfalso; omega
+
 end Tournament
