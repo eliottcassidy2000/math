@@ -20,6 +20,8 @@ Features extracted:
   - 3-cycle density and higher cycle counts
   - Odd-cycle conflict/disjointness features
   - Projection-kill and cycle-family core features
+  - Deletion-residue rank features
+  - SCC defect / strong-component residue features
   - Transitivity ratio
   - H-ratio: H/H_max (decisiveness measure)
   - Regularity index
@@ -37,7 +39,7 @@ from math import comb, factorial
 from itertools import permutations
 from collections import Counter, defaultdict
 import sys
-sys.stdout.reconfigure(line_buffering=True)
+sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
 # ============================================================
 # CORE: Tournament Construction
@@ -166,6 +168,45 @@ def count_5cycles(A, n):
                         c5 += 1
     return c5 // 5  # each cycle counted 5 times
 
+def strongly_connected_component_sizes(A, n):
+    """Return SCC sizes sorted descending.
+
+    THM-354 turns the good-cut coordinate into the SCC defect n - #SCC(T).
+    This feature exposes that residue without requiring a chosen Hamiltonian
+    base path.
+    """
+    rows = [0] * n
+    rev = [0] * n
+    for i in range(n):
+        for j in range(n):
+            if A[i, j] == 1:
+                rows[i] |= 1 << j
+                rev[j] |= 1 << i
+
+    def reach(start, graph):
+        seen = 0
+        stack = [start]
+        while stack:
+            v = stack.pop()
+            if (seen >> v) & 1:
+                continue
+            seen |= 1 << v
+            nxt = graph[v] & ~seen
+            while nxt:
+                lsb = nxt & -nxt
+                stack.append(lsb.bit_length() - 1)
+                nxt ^= lsb
+        return seen
+
+    remaining = (1 << n) - 1
+    sizes = []
+    while remaining:
+        v = (remaining & -remaining).bit_length() - 1
+        comp = reach(v, rows) & reach(v, rev)
+        sizes.append(comp.bit_count())
+        remaining &= ~comp
+    return sorted(sizes, reverse=True)
+
 def directed_odd_cycle_masks(A, n, max_length=None):
     """Enumerate directed odd cycles as vertex masks.
 
@@ -187,6 +228,38 @@ def directed_odd_cycle_masks(A, n, max_length=None):
                     mask |= 1 << v
                 masks.append(mask)
     return masks
+
+def disjoint_independence_counts(masks, max_triple_cycles=400):
+    """Return alpha_2, alpha_3, and disjoint-pair witnesses for cycle masks."""
+    alpha1 = len(masks)
+    alpha2 = 0
+    disjoint_pairs = []
+    for i, mi in enumerate(masks):
+        for j in range(i + 1, alpha1):
+            if mi & masks[j] == 0:
+                alpha2 += 1
+                disjoint_pairs.append((i, j, mi | masks[j]))
+
+    alpha3 = -1
+    if alpha1 <= max_triple_cycles:
+        alpha3_count = 0
+        for i, j, union in disjoint_pairs:
+            for k in range(j + 1, alpha1):
+                if union & masks[k] == 0:
+                    alpha3_count += 1
+        alpha3 = alpha3_count
+
+    return alpha2, alpha3, disjoint_pairs
+
+def residue_rank(alpha1, alpha2, alpha3):
+    """Largest observed independent odd-cycle packet size in a residue."""
+    if alpha3 not in (-1, None) and alpha3 > 0:
+        return 3
+    if alpha2 > 0:
+        return 2
+    if alpha1 > 0:
+        return 1
+    return 0
 
 def odd_cycle_disjointness_features(A, n, max_exact_n=9, max_triple_cycles=400):
     """Cheap exact features from the odd-cycle conflict graph Omega(T).
@@ -217,6 +290,16 @@ def odd_cycle_disjointness_features(A, n, max_exact_n=9, max_triple_cycles=400):
             'omega_core_size': 0,
             'omega_projection_kill_vertices': 0,
             'omega_max_deletion_loss_frac': 0.0,
+            'omega_min_deletion_residue_cycles': 0,
+            'omega_min_positive_deletion_residue_cycles': 0,
+            'omega_near_kill_vertices': 0,
+            'omega_near_kill_rank2_vertices': 0,
+            'omega_max_loss_vertex': -1,
+            'omega_max_loss_residue_alpha_1': 0,
+            'omega_max_loss_residue_alpha_2': 0,
+            'omega_max_loss_residue_alpha_3': 0,
+            'omega_max_loss_residue_rank': 0,
+            'omega_max_loss_residue_I2': 1,
         })
         return features
 
@@ -229,30 +312,42 @@ def odd_cycle_disjointness_features(A, n, max_exact_n=9, max_triple_cycles=400):
             if mask & (1 << v):
                 vertex_loss[v] += 1
 
-    alpha2 = 0
-    disjoint_pairs = []
-    for i, mi in enumerate(masks):
-        for j in range(i + 1, alpha1):
-            if mi & masks[j] == 0:
-                alpha2 += 1
-                disjoint_pairs.append((i, j, mi | masks[j]))
-
-    alpha3 = None
-    if alpha1 <= max_triple_cycles:
-        alpha3_count = 0
-        for i, j, union in disjoint_pairs:
-            for k in range(j + 1, alpha1):
-                if union & masks[k] == 0:
-                    alpha3_count += 1
-        alpha3 = alpha3_count
+    alpha2, alpha3, disjoint_pairs = disjoint_independence_counts(
+        masks, max_triple_cycles=max_triple_cycles
+    )
 
     pair_total = alpha1 * (alpha1 - 1) // 2
     max_loss = max(vertex_loss)
+    max_loss_vertex = vertex_loss.index(max_loss)
+    keep_counts = [alpha1 - loss for loss in vertex_loss]
+    positive_keeps = [keep for keep in keep_counts if keep > 0]
+    residue_masks = [
+        mask for mask in masks if not (mask & (1 << max_loss_vertex))
+    ]
+    res_alpha1 = len(residue_masks)
+    res_alpha2, res_alpha3, _ = disjoint_independence_counts(
+        residue_masks, max_triple_cycles=max_triple_cycles
+    )
+    res_rank = residue_rank(res_alpha1, res_alpha2, res_alpha3)
+    res_I2 = 1 + 2 * res_alpha1 + 4 * res_alpha2
+    if res_alpha3 != -1:
+        res_I2 += 8 * res_alpha3
     projection_kill_vertices = sum(1 for loss in vertex_loss if loss == alpha1)
+    near_kill_vertices = sum(1 for keep in keep_counts if 0 < keep <= 2)
+    near_kill_rank2_vertices = 0
+    for v, keep in enumerate(keep_counts):
+        if not (0 < keep <= 2):
+            continue
+        v_masks = [mask for mask in masks if not (mask & (1 << v))]
+        v_alpha2, v_alpha3, _ = disjoint_independence_counts(
+            v_masks, max_triple_cycles=max_triple_cycles
+        )
+        if residue_rank(len(v_masks), v_alpha2, v_alpha3) >= 2:
+            near_kill_rank2_vertices += 1
 
     features.update({
         'omega_alpha_2': alpha2,
-        'omega_alpha_3': alpha3 if alpha3 is not None else -1,
+        'omega_alpha_3': alpha3,
         'omega_complete': 1 if alpha2 == 0 else 0,
         'omega_disjoint_pair_density': alpha2 / pair_total if pair_total else 0.0,
         'omega_support_count': len(support_counts),
@@ -261,6 +356,16 @@ def odd_cycle_disjointness_features(A, n, max_exact_n=9, max_triple_cycles=400):
         'omega_core_size': core_mask.bit_count(),
         'omega_projection_kill_vertices': projection_kill_vertices,
         'omega_max_deletion_loss_frac': max_loss / alpha1,
+        'omega_min_deletion_residue_cycles': min(keep_counts),
+        'omega_min_positive_deletion_residue_cycles': min(positive_keeps) if positive_keeps else 0,
+        'omega_near_kill_vertices': near_kill_vertices,
+        'omega_near_kill_rank2_vertices': near_kill_rank2_vertices,
+        'omega_max_loss_vertex': max_loss_vertex,
+        'omega_max_loss_residue_alpha_1': res_alpha1,
+        'omega_max_loss_residue_alpha_2': res_alpha2,
+        'omega_max_loss_residue_alpha_3': res_alpha3,
+        'omega_max_loss_residue_rank': res_rank,
+        'omega_max_loss_residue_I2': res_I2,
     })
     return features
 
@@ -523,6 +628,14 @@ class TournamentFeatures:
         features['H_ratio'] = H / H_max
         features['log_H'] = np.log(H) if H > 0 else 0
 
+        # SCC residue (THM-354: good-cut count = n - #SCC)
+        scc_sizes = strongly_connected_component_sizes(A, n)
+        features['scc_count'] = len(scc_sizes)
+        features['scc_defect'] = n - len(scc_sizes)
+        features['scc_largest'] = scc_sizes[0] if scc_sizes else 0
+        features['scc_nontrivial_count'] = sum(1 for size in scc_sizes if size > 1)
+        features['scc_is_strong'] = 1 if len(scc_sizes) == 1 else 0
+
         # Score sequence
         scores = score_sequence(A, n)
         features['score_seq'] = scores
@@ -586,7 +699,8 @@ class TournamentFeatures:
         numeric_keys = [
             'H', 'H_ratio', 'log_H', 'score_range', 'score_var',
             'is_regular', 't3', 't3_density', 'transitivity_ratio',
-            'has_condorcet_winner'
+            'has_condorcet_winner', 'scc_count', 'scc_defect',
+            'scc_largest', 'scc_nontrivial_count', 'scc_is_strong'
         ]
         if 'beta_1' in feats:
             numeric_keys.append('beta_1')
@@ -603,6 +717,14 @@ class TournamentFeatures:
                 'omega_core_size',
                 'omega_projection_kill_vertices',
                 'omega_max_deletion_loss_frac',
+                'omega_min_deletion_residue_cycles',
+                'omega_min_positive_deletion_residue_cycles',
+                'omega_near_kill_vertices',
+                'omega_near_kill_rank2_vertices',
+                'omega_max_loss_residue_alpha_1',
+                'omega_max_loss_residue_alpha_2',
+                'omega_max_loss_residue_rank',
+                'omega_max_loss_residue_I2',
             ])
 
         vec = np.array([feats.get(k, 0) or 0 for k in numeric_keys], dtype=float)
@@ -614,6 +736,10 @@ class TournamentFeatures:
         print(f"  Tournament on {feats['n']} vertices:")
         print(f"    H = {feats['H']} ({feats['H_ratio']:.4f} of max)")
         print(f"    Score sequence: {feats['score_seq']}")
+        print(
+            f"    SCCs: {feats['scc_count']} "
+            f"(defect {feats['scc_defect']})"
+        )
         print(f"    3-cycles: {feats['t3']} (density {feats['t3_density']:.4f})")
         print(f"    Transitivity ratio: {feats['transitivity_ratio']:.4f}")
         print(f"    Condorcet winner: {'yes' if feats['has_condorcet_winner'] else 'no'}")
@@ -621,6 +747,14 @@ class TournamentFeatures:
             print(
                 f"    Ω cycles/disjoint pairs: "
                 f"{feats['omega_alpha_1']} / {feats['omega_alpha_2']}"
+            )
+            print(
+                "    Max deletion-loss residue: "
+                f"v={feats['omega_max_loss_vertex']}, "
+                f"alpha=({feats['omega_max_loss_residue_alpha_1']}, "
+                f"{feats['omega_max_loss_residue_alpha_2']}, "
+                f"{feats['omega_max_loss_residue_alpha_3']}), "
+                f"rank={feats['omega_max_loss_residue_rank']}"
             )
         if 'beta_1' in feats:
             print(f"    β₁ = {feats['beta_1']}")
@@ -789,8 +923,9 @@ def demo_ml_features():
             print(f"      H range: [{arr[:,0].min():.0f}, {arr[:,0].max():.0f}]")
             print(f"      Mean H-ratio: {arr[:,1].mean():.4f}")
             print(f"      Mean t3-density: {arr[:,7].mean():.4f}")
-            if arr.shape[1] > 10:
-                print(f"      Mean β₁: {arr[:,10].mean():.2f}")
+            if 'beta_1' in names:
+                beta_idx = names.index('beta_1')
+                print(f"      Mean β₁: {arr[:,beta_idx].mean():.2f}")
 
 def demo_supply_chain():
     """Demo: Supply chain dependency cycle detection."""
@@ -839,21 +974,23 @@ def demo_supply_chain():
 # MAIN
 # ============================================================
 
-print("=" * 72)
-print("TOURNAMENT TDA — FEATURE EXTRACTOR FOR ML PIPELINES")
-print("opus-2026-03-15-S72")
-print("=" * 72)
+def run_demos():
+    """Run the standalone demos."""
+    print("=" * 72)
+    print("TOURNAMENT TDA - FEATURE EXTRACTOR FOR ML PIPELINES")
+    print("opus-2026-03-15-S72")
+    print("=" * 72)
 
-demo_sports_league()
-demo_election_analysis()
-demo_ml_features()
-demo_supply_chain()
+    demo_sports_league()
+    demo_election_analysis()
+    demo_ml_features()
+    demo_supply_chain()
 
-# ---- API Summary ----
-print("\n" + "=" * 72)
-print("API SUMMARY")
-print("=" * 72)
-print("""
+    # ---- API Summary ----
+    print("\n" + "=" * 72)
+    print("API SUMMARY")
+    print("=" * 72)
+    print("""
 USAGE:
 
   from tournament_tda import TournamentFeatures
@@ -885,11 +1022,16 @@ FEATURES:
   transitivity  fraction of transitive triples
   beta_1        1st Betti number (topological complexity)
   score_var     score sequence variance (regularity)
+  scc_*         Strong-component residue features from THM-354
   walsh_*       Walsh-Fourier spectral amplitudes
-  omega_*       Odd-cycle conflict geometry (cycle count, disjoint pairs,
-                support excess, core size, projection-kill profile)
+  omega_*       Odd-cycle conflict geometry, projection-kill profile,
+                and deletion-residue rank at the max-loss vertex
 
   All features are tournament isomorphism invariants.
 """)
 
-print("\nDONE — tournament_tda.py complete")
+    print("\nDONE - tournament_tda.py complete")
+
+
+if __name__ == "__main__":
+    run_demos()

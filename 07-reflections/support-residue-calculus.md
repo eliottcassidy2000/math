@@ -146,3 +146,12 @@ residue.
 **S3 continuation:** `07-reflections/residue-feedback-loop.md` sharpens this
 into HYP-1780: first obstructions may be stratified by residue rank rather
 than by raw support size.
+
+**S355 continuation:** `07-reflections/residue-calculus-theses.md` and
+HYP-1785 turn the rank slogan into an implemented feature layer.  The new
+`tournament_tda.py` block records SCC residue features plus max-loss
+deletion-residue alpha/rank data.  The first probe separates:
+
+- H=63 single-core exact kills: `rank_res=0`;
+- THM-025 near-kill: `keep=2`, `rank_res=2`, `I(R,2)=9`;
+- Paley/Interval broad fiber residues: rank 2 but not small near-kills.

@@ -49,7 +49,9 @@ tournament isomorphism and complement-merged classes because SCC count does.
 
 1. Non-real-rooted `I(Omega,x)` examples at n>=9 should be enriched by large
    maximum deletion-loss fraction plus a small nonempty residue with top-heavy
-   independence profile.
+   independence profile.  S355 turns this into explicit features:
+   `omega_near_kill_vertices`, `omega_near_kill_rank2_vertices`, and
+   `omega_max_loss_residue_rank`.
 2. Any future `Delta g != 0` transport theorem should reduce to a change in
    SCC count, not to a special property of the base-path tiling coordinates.
 3. In circulant Paley/Interval comparisons, THM-143 slope profiles should
@@ -67,5 +69,6 @@ tournament isomorphism and complement-merged classes because SCC count does.
 - THM-143: interval co-occurrence linearity.
 - THM-350: finite unordered bucket balance layer.
 - HYP-1780: residue rank stratification.
+- HYP-1785: deletion-residue rank filter.
 - `07-reflections/support-residue-calculus.md`.
 - `07-reflections/residue-feedback-loop.md`.

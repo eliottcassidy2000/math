@@ -32,6 +32,8 @@ These scripts have been run but results exist only in /tmp or session transcript
 | `endpoint_transfer_bucket_recursion_s95.py` | [STORED] | Builds exact endpoint-insertion transfer matrices between fixed-path quotient levels; verifies row/column bucket sums, SC parity boundary, and full GF(2) row rank for transitions n=2..6 | `endpoint_transfer_bucket_recursion_s95.out` |
 | `even_graph_endpoint_transfer_s95.py` | [STORED] | Builds the endpoint-transfer analogue for the even-graph quotient; row/column sums still hold, but GF(2) ranks `[1,1,2,6,8]` show rank defects unlike the tournament quotient | `even_graph_endpoint_transfer_s95.out` |
 | `goodcut_scc_defect_s354.py` | [STORED] | Verifies THM-354: for every Hamiltonian base path, good-cut count equals `n - #SCC(T)`; exhaustive labeled n<=6 and fixed-base tilings n<=7 | `goodcut_scc_defect_s354.out` |
+| `residue_rank_probe_s355.py` | [STORED] | Compares transitive, Paley/Interval, H=63 single-core, and THM-025 examples by max-loss deletion-residue rank; separates exact kills (`rank_res=0`) from THM-025 near-kill (`rank_res=2`) | `residue_rank_probe_s355.out` |
+| `tournament_tda.py` | [STORED] | Demo now emits SCC residue features and deletion-residue rank features in the `omega_*` block | `tournament_tda_residue_features_s355.out` |
 
 ### How to bulk-capture results
 

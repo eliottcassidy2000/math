@@ -109,3 +109,29 @@ When a new invariant appears:
 
 This loop produced THM-354 from good cuts, and it suggests HYP-1780: the next
 obstructions should be stratified by residue rank, not by raw support size.
+
+## S355 Loop: Rank Becomes a Feature
+
+The next pass made the slogan operational in `tournament_tda.py`.
+
+The extractor now records both the size and the shape of the max-loss deletion
+residue:
+
+```text
+keep_v*,
+alpha_1(R_v*),
+alpha_2(R_v*),
+rank_res(v*),
+I(R_v*,2).
+```
+
+The first probe gives a clean three-way split:
+
+- H=63 single-core classes are exact kills: `rank_res=0`.
+- THM-025 is a small dangerous near-kill: `alpha=(2,1)`, `rank_res=2`.
+- Paley/Interval are broad fiber residues: rank 2 appears, but not at small
+  residue size.
+
+That creates HYP-1785: first Omega obstructions should be enriched among
+small nonempty max-loss residues with `rank_res>=2`, while complete-Omega
+unlocks remain in the exact-kill stratum.

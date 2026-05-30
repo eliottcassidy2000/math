@@ -2495,3 +2495,10 @@ Source: `05-knowledge/hypotheses/HYP-1782-single-core-target-spectrum.md`, `04-c
 **Evidence:** Paley T7 has uniform deletion loss `60/80` at every vertex; H=63 has one vertex with `rho=1`; THM-025 has one vertex with `rho=92/94`; interval T7 shares Paley's score/support shadow but has different multiplicity and even-graph residue.
 **Next:** Compare H-maximizer, Paley, interval, near-transitive, and real-root-failure samples on localization versus normalized transport leakage.
 Source: `05-knowledge/hypotheses/HYP-1784-flat-localized-residue-duality.md`, `07-reflections/residue-calculus-feedback-loop.md`.
+
+## HYP-1785: Deletion-residue rank filters first Omega obstructions (codex-2026-05-30 S355)
+**Status:** OPEN engineering/structural hypothesis; features implemented.
+**What:** First real-rootedness and ghost-cycle obstructions should be filtered by the rank of the max-loss deletion residue. Exact kills have `rank_res=0`; dangerous near-kills have tiny nonzero residue with `rank_res>=2`.
+**Evidence:** S355 adds residue-rank features to `tournament_tda.py` and probes transitive T7, Paley T7, Interval T7, the two H=63 single-core signatures, and THM-025. H=63 examples have max-loss residue `alpha=(0,0)`, `rank_res=0`; THM-025 has `alpha=(2,1)`, `rank_res=2`, `I(R,2)=9`; Paley/Interval have broad residues `alpha=(20,1)` and `(16,2)`.
+**Predictions:** Non-real-rooted `I(Omega,x)` examples should be enriched in `0 < keep_v* <= 2` and `rank_res(v*)>=2`; complete-Omega unlocks should remain in `rank_res=0`; HYP-408 ghost failures should look more like THM-025 than H=63.
+**See:** `05-knowledge/hypotheses/HYP-1785-deletion-residue-rank-filter.md`, `05-knowledge/variables/residue-rank.md`, `04-computation/residue_rank_probe_s355.py`, `05-knowledge/results/residue_rank_probe_s355.out`.

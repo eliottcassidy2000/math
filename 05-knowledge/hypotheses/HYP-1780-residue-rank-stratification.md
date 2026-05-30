@@ -47,8 +47,8 @@ first obstruction = smallest nontrivial residue with the wrong shape.
 
 ## Next Tests
 
-- Add deletion-residue rank and top-heavy alpha-profile features to the
-  `omega_*` Tournament TDA block.
+- Use the new S355 deletion-residue rank and top-heavy alpha-profile features
+  in the `omega_*` Tournament TDA block to scan n=9 real-root failures.
 - For good-cut transport, replace raw `Delta g` with `Delta #SCC` and compare
   against spine/ribs/sea escape mass.
 - For H-spectrum work, collect candidate alpha-vectors by residue rank and
@@ -59,5 +59,7 @@ first obstruction = smallest nontrivial residue with the wrong shape.
 ## Related
 
 - HYP-1779: support-residue calculus.
+- HYP-1785: deletion-residue rank filter.
 - THM-025, THM-344, THM-351, THM-352, THM-354.
 - `07-reflections/residue-feedback-loop.md`.
+- `04-computation/residue_rank_probe_s355.py`.

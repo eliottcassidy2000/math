@@ -11,6 +11,17 @@
 **Verification:** `lake build TournamentH7.BucketBalance TournamentH7.StaircaseBucketTransport TournamentH7.Verify`; `git diff --check`.
 **Next priorities:** Add quotient-native TDA features (`fiber_support`, `gap_count`, `boundary_parity`, `transport_escape`, `residue_mass`); test whether fixed-n H-value gaps have transport-neighbor signatures; keep the SCC proof path separate from this finite-set gap layer.
 
+## codex-2026-05-30-S355 - Residue Calculus Theses + Deletion-Rank Features
+
+**Account:** Codex
+**Exploration:** Continued the support-residue feedback loop across THM-354 SCC defects, H=63 exact kills, THM-025 near-kill real-root failure, Paley/Interval fiber residues, OCF parity, bucket escape residues, and ghost-cycle search heuristics.
+**Computation:** Extended `04-computation/tournament_tda.py` with SCC residue features and max-loss deletion-residue alpha/rank/I2 features; made the module import-safe behind a `__main__` demo guard; added `04-computation/residue_rank_probe_s355.py`.
+**Probe result:** `residue_rank_probe_s355.py` separates exact kill, near-kill, and broad fiber residue: H=63 signatures `1001100`/`1100110` have max-loss `rank_res=0`; THM-025 has `alpha=(2,1)`, `rank_res=2`, `I(R,2)=9`; Paley/Interval have broad rank-2 residues rather than near-kills.
+**Idea synthesis:** Added HYP-1785, variable `rank_res`, and `07-reflections/residue-calculus-theses.md`. The working filter is now: first Omega obstructions should be enriched where `0 < keep_v* <= 2` and `rank_res(v*) >= 2`.
+**Knowledge updates:** Updated HYP-1779/HYP-1780, projection-defect variable, variables/results indexes, T307-T309, support-residue and feedback-loop reflections.
+**Verification:** `python -m py_compile 04-computation/tournament_tda.py 04-computation/residue_rank_probe_s355.py`; `python 04-computation/residue_rank_probe_s355.py`; `python 04-computation/tournament_tda.py`. Outputs saved to `05-knowledge/results/residue_rank_probe_s355.out` and `05-knowledge/results/tournament_tda_residue_features_s355.out`.
+**Next:** Scan known n=9 real-root failures and random high-deletion-loss n=9 examples by `omega_near_kill_rank2_vertices`; compare HYP-408 ghost-cycle candidates against the same residue-rank filter.
+
 ## kind-pasteur-2026-05-30-S3 - Residue Rank Feedback Loop + OCF Mod-2 Lean Residue
 
 **Account:** kind-pasteur

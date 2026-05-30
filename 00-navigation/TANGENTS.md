@@ -94,6 +94,15 @@ Two opposite residue regimes may explain many special tournaments. Paley-like ob
 **T306** #quotient-gaps #transport-matrices #good-cut-buckets #lean | certainty: proved in Lean | source: codex-2026-05-30
 Empty quotient fibers are zero source rows and zero target columns for every finite transport system. Applied to `goodCutBucket : StTiling n -> Fin (n+1)`, the image is exactly `{0} ∪ {2,...,n-1}` for `n >= 3`, so buckets `1` and `n` are certified transport gaps. This turns missing bucket values into matrix row/column facts. See THM-355 and HYP-1783.
 
+**T307** #residue-rank #near-kill #real-rootedness #omega | certainty: medium-high | source: codex-2026-05-30-S355
+Deletion-residue rank separates exact kills from dangerous near-kills. H=63 single-core signatures `1001100` and `1100110` have max-loss residue `alpha=(0,0)`, `rank_res=0`; THM-025 has only two surviving cycles, but they are disjoint, so `alpha=(2,1)`, `rank_res=2`, `I(R,2)=9`. This suggests scanning real-root failures by `0<keep_v*<=2` and `rank_res>=2`. See HYP-1785 and `05-knowledge/results/residue_rank_probe_s355.out`.
+
+**T308** #tournament-tda #scc-defect #projection-features #engineering | certainty: high | source: codex-2026-05-30-S355
+`tournament_tda.py` now exposes THM-354 and HYP-1785 as features: `scc_count/scc_defect/scc_largest`, max-loss deletion residue alpha/rank/I2, min deletion residue, near-kill counts, and near-kill rank-2 counts. The module is import-safe behind a `__main__` demo guard. See `05-knowledge/results/tournament_tda_residue_features_s355.out`.
+
+**T309** #paley-interval #fiber-residue #support-shadow #rank-size-split | certainty: medium | source: codex-2026-05-30-S355
+Paley/Interval belong to the residue calculus but not to the THM-025 near-kill stratum. Paley T7 has broad max-loss residue `alpha=(20,1)` and Interval T7 has `alpha=(16,2)`; both rank 2, but neither has small residue size. Their contrast is fiber multiplicity/disjointness over a shared support shadow, not deletion-rank near-kill behavior.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
