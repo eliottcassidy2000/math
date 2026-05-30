@@ -2460,3 +2460,10 @@ Source: `04-computation/goodcut_transport_excess_s15.py`, `05-knowledge/results/
 **Evidence:** THM-354 identifies good-cut count as SCC defect. H=63 single-core classes are exact odd-cycle projection kills. THM-025 is a near-kill with a small dangerous residue. Paley/Interval separates support shadow from multiplicity and disjointness. Bucket balance leaves paired internal half-lines plus escape residue. Transfer diagonal keeps only signed position residue.
 **Predictions:** Real-root failures should be enriched by high deletion-loss fraction plus small top-heavy residues; `Delta g` transport should reduce to SCC-count transport; THM-143 slope profiles should predict Walsh-degree crossover; HYP-408 failures should resemble near-kill residues.
 **See:** `05-knowledge/hypotheses/HYP-1779-support-residue-calculus.md`, `07-reflections/support-residue-calculus.md`, THM-354.
+
+## HYP-1780: Residue rank stratifies the next obstruction (kind-pasteur-2026-05-30-S3)
+**Status:** OPEN meta-hypothesis; mod-2 H residue formalized in Lean.
+**What:** Many obstructions are controlled not by raw support size but by the smallest surviving residue after projection. The first obstruction in a family appears when that residue has just enough rank, parity, or independence to survive cancellation.
+**Evidence:** `H_mod_two_eq_one_from_ocf` explicitly formalizes the OCF mod-2 residue `H(T)%2=1`. THM-354 makes good-cut height the SCC-defect residue. THM-351/352/353 make bucket-transport semantics live in off-diagonal escape residue after row conservation. H=63 is exact odd-cycle kill; THM-025 is near-kill with a small dangerous residue; Paley/Interval separates equal support shadow from fiber residue.
+**Predictions:** Real-root failures should cluster at small nonempty deletion residues; H-spectrum gaps beyond parity should correspond to impossible OCF residue profiles; bucket transport should be stratified by residual off-diagonal rank; ghost-cycle failures should resemble near-kill residues.
+**See:** `05-knowledge/hypotheses/HYP-1780-residue-rank-stratification.md`, `07-reflections/residue-feedback-loop.md`, HYP-1779.

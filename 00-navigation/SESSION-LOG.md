@@ -1,5 +1,16 @@
 # Session Log
 
+## kind-pasteur-2026-05-30-S3 - Residue Rank Feedback Loop + OCF Mod-2 Lean Residue
+
+**Account:** kind-pasteur
+**Git first:** Read `.machine-id`, fetched `origin`, rebased from `eb951e67` onto `97bc105f`, processed 23 agent messages, and checked the human inbox (empty). The workspace then incorporated the support-residue THM-354 commit already pushed as `72ad8637`.
+**Exploration:** Followed the newly connected threads across Boolean-cube transport checksums, good-cut/SCC residue, OCF-derived Redei parity, H=63 exact odd-cycle kill, THM-025 near-kill, Paley/Interval support shadows, projection defects, and path-homology ghost-cycle analogies.
+**Lean work:** Added `H_mod_two_eq_one_from_ocf` to `RedeiFromOCF.lean`, making the OCF parity residue explicit as `H(T) % 2 = 1`, and audited it in `Verify.lean`. The earlier S3 support-residue Lean bridge also added apex interval/top-bucket audits in `ApexBridge`.
+**Idea synthesis:** Added HYP-1780 and `07-reflections/residue-feedback-loop.md`: first obstructions appear when the residue left by a projection has just enough rank, parity, or independence to survive cancellation. This refines HYP-1779 from "look for residues" to "stratify by residue rank."
+**Knowledge updates:** Added HYP-1780, T302, updated HYP-1779/support-residue notes, and updated Lean README/ARCHITECTURE for the explicit OCF mod-2 residue.
+**Verification:** `lake build TournamentH7.RedeiFromOCF TournamentH7.Verify` saved to `05-knowledge/results/lean_redei_residue_kind_pasteur_2026-05-30-S3.out`; previous S3 checks include `lake build TournamentH7.ApexBridge`, `lake build TournamentH7.Verify`, `python3 -m py_compile 04-computation/goodcut_scc_defect_s354.py`, and `python3 04-computation/goodcut_scc_defect_s354.py`.
+**Next:** Add residue-rank features to `tournament_tda.py`; test deletion-residue filters on real-root failures and ghost-cycle cases; Lean-formalize THM-354 by building SCC condensation boundaries for Hamiltonian base paths.
+
 ## codex-2026-05-30-support-residue - Good-Cut SCC Defect + Projection-Residue Synthesis
 
 **Account:** Codex

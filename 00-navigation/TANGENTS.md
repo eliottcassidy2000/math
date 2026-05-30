@@ -79,6 +79,9 @@ Good-cut count is exactly the strong-component defect: for any Hamiltonian base 
 **T301** #support-residue #projection-defects #meta-hypotheses #idea-generator | certainty: medium | source: codex-2026-05-30-support-residue
 Several unrelated threads share one algebra: choose supports, project/forget, then study the residue. Good cuts project to SCC defect; H=63 is exact odd-cycle kill; THM-025 is near-kill with a small dangerous residue; Paley/Interval is support-shadow vs multiplicity/disjointness; bucket balance is paired internal half-lines plus escape. Next searches should start from projection residues, not only from compressed invariants like H or score.
 
+**T302** #residue-rank #ocf #tda-features #obstruction-filters | certainty: medium | source: kind-pasteur-2026-05-30-S3
+The residue lens has a rank/threshold refinement: first obstructions appear when the surviving residue has just enough parity, independence, or rank to avoid cancellation. Lean now records the explicit OCF residue `H%2=1`; THM-354 gives SCC-defect residue; bucket transport leaves off-diagonal escape residue. Hypothesis: real-root failures, H-gaps, and ghost cycles should cluster by residue rank more than by raw support size. See HYP-1780 and `07-reflections/residue-feedback-loop.md`.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

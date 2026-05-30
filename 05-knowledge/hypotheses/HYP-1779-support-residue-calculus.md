@@ -66,4 +66,6 @@ tournament isomorphism and complement-merged classes because SCC count does.
 - THM-025: real-rootedness failure at n=9.
 - THM-143: interval co-occurrence linearity.
 - THM-350: finite unordered bucket balance layer.
+- HYP-1780: residue rank stratification.
 - `07-reflections/support-residue-calculus.md`.
+- `07-reflections/residue-feedback-loop.md`.

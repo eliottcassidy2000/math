@@ -56,6 +56,13 @@ theorem H_odd_from_ocf (T : Tournament n) : Odd (H T) := by
             + 4 * alphaCount 3 T + 8 * alphaCount 4 T, ?_⟩
   omega
 
+/-- OCF leaves the explicit mod-2 residue `1` for the Hamiltonian-path count. -/
+theorem H_mod_two_eq_one_from_ocf (T : Tournament n) :
+    H T % 2 = 1 := by
+  rcases H_odd_from_ocf T with ⟨k, hk⟩
+  rw [hk]
+  omega
+
 /-- H(T) is not even. -/
 theorem H_not_even (T : Tournament n) : ¬ Even (H T) := by
   rw [Nat.not_even_iff_odd]

@@ -65,6 +65,7 @@ et al.).
 | `SCC.lean` | `Reaches`, `IsSCC`, `H`, Hamilton paths | foundation |
 | `OCF.lean` | OCF axiom, Moon-Moser, Moon-Camion | external classical axioms |
 | `Redei.lean` | Rédei 1934 (existence + parity) | axioms + corollaries |
+| `RedeiFromOCF.lean` | Rédei existence/parity and `H % 2 = 1` derived from OCF | proved from OCF |
 | `H7.lean`, `H21.lean` | Universal forbidden-H proofs | proved (modulo cited axioms) |
 | `H63.lean` | Finite n≤7 absence of H=63 | finite verification axiom; universal claim false at n=8 |
 | `Forbidden.lean` | Generic α-enumeration + binomial bounds | mixed |
@@ -201,6 +202,7 @@ external/project axioms that are already in their proof OR — best case
 - `StTiling.transport_row_balance_goodCutBucket_allNonzeroMasks` /
   `StTiling.transport_row_balance_goodCutBucket_singleTileMasks` /
   `StTiling.transport_row_balance_goodCutBucket_complementMask` — concrete good-cut quotient row checksums.
+- `H_mod_two_eq_one_from_ocf` — OCF leaves the explicit Hamiltonian-path residue `H % 2 = 1`.
 - `threeCycle_isRegular` — 3-cycle is regular.
 - `transitive_hasBasePath` — transitive tournament has base path.
 - `transitive_not_regular` — transitive (n ≥ 2) is not regular.

@@ -142,3 +142,7 @@ The feedback loop is clear: when a new invariant appears coordinate-dependent,
 look for the quotient whose components it actually counts; when a theorem
 fails rarely, look for an almost-killed support family with a small structured
 residue.
+
+**S3 continuation:** `07-reflections/residue-feedback-loop.md` sharpens this
+into HYP-1780: first obstructions may be stratified by residue rank rather
+than by raw support size.

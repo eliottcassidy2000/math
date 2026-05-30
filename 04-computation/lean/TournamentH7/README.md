@@ -21,6 +21,7 @@ TournamentH7/
     ├── Cycles.lean           DirectedCycle T k
     ├── SCC.lean              Reachability, IsSCC, IsHamiltonianPath, H
     ├── OCF.lean              7 axioms (OCF + Moon-Moser + Moon-Camion + …)
+    ├── RedeiFromOCF.lean     H >= 1, odd H, and H % 2 = 1 from OCF
     ├── H7.lean               The proof:  Tournament.H_ne_seven
     ├── GoodCuts.lean         good-cut bucket constraints and exact spectrum
     ├── StaircaseConnectivity.lean
@@ -59,6 +60,8 @@ No `sorry` is used anywhere. The core H≠7 proof uses the cited axioms in
 `OCF.lean`; later project modules introduce additional documented axioms
 for H≠21, finite H≠63, tiling score formulas, and counting constants. See
 `ARCHITECTURE.md` and `SUBMISSION.md` for the current full audit.
+`RedeiFromOCF.lean` derives Rédei existence/parity consequences from OCF,
+including the explicit residue `H(T) % 2 = 1`.
 
 `GoodCuts.lean` also contains the formal axiom-free core of THM-336: the
 all-down tiling is exactly bucket 0, any upward tile forces at least two good

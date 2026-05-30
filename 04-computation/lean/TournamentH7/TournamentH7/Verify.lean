@@ -859,6 +859,11 @@ theorem H_odd_from_ocf_audit {n : ℕ} (T : Tournament n) : Odd (H T) :=
   H_odd_from_ocf T
 #print axioms H_odd_from_ocf_audit
 
+theorem H_mod_two_eq_one_from_ocf_audit {n : ℕ} (T : Tournament n) :
+    H T % 2 = 1 :=
+  H_mod_two_eq_one_from_ocf T
+#print axioms H_mod_two_eq_one_from_ocf_audit
+
 theorem H_not_even_audit {n : ℕ} (T : Tournament n) : ¬ Even (H T) :=
   H_not_even T
 #print axioms H_not_even_audit
