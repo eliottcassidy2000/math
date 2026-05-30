@@ -24,6 +24,8 @@ import TournamentH7.StaircaseConnectivity
 import TournamentH7.BucketBalance
 import TournamentH7.PaleyAxiomatic
 import TournamentH7.StaircaseTileModel
+import TournamentH7.HSpectrumExtended
+import TournamentH7.IsomorphismClasses
 
 open Tournament
 
@@ -618,3 +620,29 @@ theorem H_ge_729_of_alpha6_pos_audit {n : ℕ} (T : Tournament n)
     (h : 1 ≤ alphaCount 6 T) : 729 ≤ H T :=
   H_ge_729_of_alpha6_pos T h
 #print axioms H_ge_729_of_alpha6_pos_audit
+
+/-! ### Extended H-spectrum theorems -/
+
+theorem H_spectrum_n7_audit (T : Tournament 7) :
+    1 ≤ H T ∧ H T ≤ 189 ∧ Odd (H T) ∧ H T ≠ 7 ∧ H T ≠ 21 ∧ H T ≠ 63 :=
+  H_spectrum_n7 T
+#print axioms H_spectrum_n7_audit
+
+theorem H_spectrum_n3_audit (T : Tournament 3) :
+    1 ≤ H T ∧ Odd (H T) ∧ H T ≠ 7 ∧ H T ≠ 21 :=
+  H_spectrum_n3 T
+#print axioms H_spectrum_n3_audit
+
+/-! ### Iso class refinement (numNS) -/
+
+theorem numNS_eq_audit (n : ℕ) : numNS n = numIsoClasses n - numSC n :=
+  numNS_eq n
+#print axioms numNS_eq_audit
+
+theorem numNS_plus_numSC_3_audit : numNS 3 + numSC 3 = 2 :=
+  numNS_plus_numSC_3
+#print axioms numNS_plus_numSC_3_audit
+
+theorem numNS_plus_numSC_7_audit : numNS 7 + numSC 7 = 456 :=
+  numNS_plus_numSC_7
+#print axioms numNS_plus_numSC_7_audit

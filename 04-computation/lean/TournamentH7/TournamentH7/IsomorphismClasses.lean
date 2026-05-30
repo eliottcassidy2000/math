@@ -92,4 +92,31 @@ axiom numSC_zero_iff (n : ℕ) (hn : 1 ≤ n) :
     formula here (it would be inconsistent).  The numIsoClasses and
     numSC values are retained as axiomatic constants. -/
 
+/-! ### Number of NS (non-self-complementary) iso classes -/
+
+/-- `numNS n = numIsoClasses(n) - numSC(n)`. -/
+def numNS (n : ℕ) : ℕ := numIsoClasses n - numSC n
+
+@[simp] theorem numNS_eq (n : ℕ) : numNS n = numIsoClasses n - numSC n := rfl
+
+/-- Concrete values. -/
+example : numNS 1 = 0 := by simp [numNS]
+example : numNS 2 = 1 := by simp [numNS]
+example : numNS 3 = 1 := by simp [numNS]
+example : numNS 4 = 4 := by simp [numNS]
+example : numNS 5 = 10 := by simp [numNS]
+example : numNS 6 = 56 := by simp [numNS]
+example : numNS 7 = 448 := by simp [numNS]
+
+/-- numNS + numSC = numIsoClasses (partition).  Holds when numSC ≤ numIsoClasses. -/
+theorem numNS_add_numSC_le (n : ℕ) :
+    numNS n + numSC n ≤ numIsoClasses n + numSC n := by
+  unfold numNS; omega
+
+/-! ### Selected concrete sums of NS + SC counts (verified) -/
+
+theorem numNS_plus_numSC_3 : numNS 3 + numSC 3 = 2 := by simp [numNS]
+theorem numNS_plus_numSC_5 : numNS 5 + numSC 5 = 12 := by simp [numNS]
+theorem numNS_plus_numSC_7 : numNS 7 + numSC 7 = 456 := by simp [numNS]
+
 end Tournament

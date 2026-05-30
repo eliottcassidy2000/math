@@ -64,4 +64,6 @@ import TournamentH7.GoodCuts
 import TournamentH7.StaircaseConnectivity
 import TournamentH7.BucketBalance
 import TournamentH7.Examples
+import TournamentH7.PaleyAxiomatic
+import TournamentH7.HSpectrumExtended
 import TournamentH7.Verify
