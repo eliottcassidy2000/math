@@ -22,7 +22,8 @@ TournamentH7/
     ├── SCC.lean              Reachability, IsSCC, IsHamiltonianPath, H
     ├── OCF.lean              7 axioms (OCF + Moon-Moser + Moon-Camion + …)
     ├── H7.lean               The proof:  Tournament.H_ne_seven
-    ├── GoodCuts.lean         good-cut bucket constraints, axiom-free
+    ├── GoodCuts.lean         good-cut bucket constraints and exact spectrum
+    ├── BucketBalance.lean    abstract finite bucket half-line balance
     └── Verify.lean           #print axioms audit
 ```
 
@@ -58,8 +59,10 @@ for H≠21, finite H≠63, tiling score formulas, and counting constants. See
 `GoodCuts.lean` also contains the formal axiom-free core of THM-336: the
 all-down tiling is exactly bucket 0, any upward tile forces at least two good
 cuts, no tiling has exactly one good cut, the strengthened dichotomy
-`goodCutCount = 0 ∨ 2 ≤ goodCutCount`, and grid reflection preserves the
-bucket index.
+`goodCutCount = 0 ∨ 2 ≤ goodCutCount`, grid reflection preserves the
+bucket index, and for `n >= 3` the exact bucket spectrum is
+`{0} ∪ {2,...,n-1}`. `BucketBalance.lean` isolates the finite
+internal/escaping half-line count used by quotient-bucket arguments.
 
 ## Proof sketch
 

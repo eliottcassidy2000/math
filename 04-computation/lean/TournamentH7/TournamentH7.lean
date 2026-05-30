@@ -30,7 +30,8 @@
                                   (project-novel; oracle-2026-05-11-S1).
     · TournamentH7.GridReflection — THM-280 (grid reflection ↔ complement;
                                   project-novel; opus-2026-04-03-S27).
-    · TournamentH7.GoodCuts     — Good-cut buckets for staircase tilings.
+    · TournamentH7.GoodCuts     — Good-cut buckets and exact spectrum.
+    · TournamentH7.BucketBalance — Abstract finite bucket half-line balances.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -59,5 +60,6 @@ import TournamentH7.SmallTournaments
 import TournamentH7.ForbiddenHCounting
 import TournamentH7.StaircaseTileModel
 import TournamentH7.GoodCuts
+import TournamentH7.BucketBalance
 import TournamentH7.Examples
 import TournamentH7.Verify

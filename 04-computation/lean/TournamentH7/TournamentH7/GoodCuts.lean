@@ -83,6 +83,29 @@ lemma cutSet_reflect_mem {k : ℕ} (hk : k ∈ cutSet n) :
   simp at hk ⊢
   omega
 
+lemma exists_crossesCut_of_mem_cutSet (hn : 3 ≤ n) {k : ℕ}
+    (hk : k ∈ cutSet n) :
+    ∃ t : StTile n, t.crossesCut k := by
+  unfold cutSet at hk
+  simp at hk
+  by_cases hk1 : k = 1
+  · subst hk1
+    have h2n : 2 < n := by omega
+    have h0n : 0 < n := by omega
+    let t : StTile n := ⟨⟨2, h2n⟩, ⟨0, h0n⟩, by norm_num⟩
+    refine ⟨t, ?_⟩
+    unfold StTile.crossesCut
+    simp [t]
+  · have hk_ge : 2 ≤ k := by omega
+    have hk_lt : k < n := by omega
+    have hlo_lt : k - 2 < n := by omega
+    have hgap : (k - 2) + 2 ≤ k := by omega
+    let t : StTile n := ⟨⟨k, hk_lt⟩, ⟨k - 2, hlo_lt⟩, hgap⟩
+    refine ⟨t, ?_⟩
+    unfold StTile.crossesCut
+    simp [t]
+    omega
+
 lemma reflect_reflect_cut {k : ℕ} (hk : k ∈ cutSet n) :
     n - (n - k) = k := by
   unfold cutSet at hk
@@ -120,6 +143,47 @@ lemma reflect_crossesCut {t : StTile n} {k : ℕ} :
 end StTile
 
 /-! ### Good-cut buckets -/
+
+/-- The all-down tiling. -/
+def StTiling.allDown (n : ℕ) : StTiling n := fun _ => false
+
+/-- The all-up tiling. -/
+def StTiling.allUp (n : ℕ) : StTiling n := fun _ => true
+
+@[simp] lemma StTiling.allDown_apply (t : StTile n) :
+    StTiling.allDown n t = false := rfl
+
+@[simp] lemma StTiling.allUp_apply (t : StTile n) :
+    StTiling.allUp n t = true := rfl
+
+@[simp] lemma StTiling.complement_allDown :
+    (StTiling.allDown n).complement = StTiling.allUp n := by
+  funext t
+  simp [StTiling.complement, StTiling.allDown, StTiling.allUp]
+
+@[simp] lemma StTiling.complement_allUp :
+    (StTiling.allUp n).complement = StTiling.allDown n := by
+  funext t
+  simp [StTiling.complement, StTiling.allDown, StTiling.allUp]
+
+/-- The tiling with exactly one named tile upward. -/
+def StTiling.singleUp (t : StTile n) : StTiling n :=
+  fun s => decide (s.hi = t.hi ∧ s.lo = t.lo)
+
+@[simp] lemma StTiling.singleUp_apply_self (t : StTile n) :
+    StTiling.singleUp t t = true := by
+  simp [StTiling.singleUp]
+
+lemma StTiling.singleUp_eq_true_iff {s t : StTile n} :
+    StTiling.singleUp t s = true ↔ s = t := by
+  constructor
+  · intro hs
+    have hpair : s.hi = t.hi ∧ s.lo = t.lo := by
+      simpa [StTiling.singleUp] using hs
+    exact StTile.ext hpair.1 hpair.2
+  · intro h
+    subst h
+    simp [StTiling.singleUp]
 
 /-- A good cut is one crossed by at least one upward tile. -/
 def StTiling.IsGoodCut (b : StTiling n) (k : ℕ) : Prop :=
@@ -377,6 +441,90 @@ theorem StTiling.goodCutCount_eq_top_iff_all_cuts_good (b : StTiling n) :
       ∀ k, k ∈ cutSet n → StTiling.IsGoodCut b k := by
   rw [StTiling.goodCutCount_eq_top_iff,
     StTiling.goodCuts_eq_cutSet_iff]
+
+theorem StTiling.goodCuts_singleUp_eq_cutInterval (t : StTile n) :
+    (StTiling.singleUp t).goodCuts = t.cutInterval := by
+  ext k
+  rw [StTiling.mem_goodCuts, StTile.mem_cutInterval]
+  constructor
+  · rintro ⟨hk, s, hs, hcross⟩
+    have hst : s = t := StTiling.singleUp_eq_true_iff.mp hs
+    subst s
+    exact ⟨hk, hcross⟩
+  · rintro ⟨hk, hcross⟩
+    exact ⟨hk, t, by simp, hcross⟩
+
+theorem StTiling.exists_goodCutCount_eq_of_allowed
+    (hn : 3 ≤ n) {r : ℕ} (hr2 : 2 ≤ r) (hrn : r ≤ n - 1) :
+    ∃ b : StTiling n, b.goodCutCount = r := by
+  have hr_lt : r < n := by omega
+  have h0_lt : 0 < n := by omega
+  let t : StTile n := ⟨⟨r, hr_lt⟩, ⟨0, h0_lt⟩, by omega⟩
+  refine ⟨StTiling.singleUp t, ?_⟩
+  unfold StTiling.goodCutCount
+  rw [StTiling.goodCuts_singleUp_eq_cutInterval]
+  have hinterval : t.cutInterval = Finset.Icc 1 r := by
+    ext k
+    rw [StTile.mem_cutInterval]
+    unfold cutSet StTile.crossesCut
+    simp [t]
+    constructor <;> intro h <;> omega
+  rw [hinterval]
+  simp
+
+theorem StTiling.exists_goodCutCount_eq_zero (n : ℕ) :
+    ∃ b : StTiling n, b.goodCutCount = 0 := by
+  refine ⟨StTiling.allDown n, ?_⟩
+  rw [StTiling.goodCutCount_eq_zero_iff_all_down]
+  intro t
+  simp
+
+theorem StTiling.goodCutCount_spectrum (hn : 3 ≤ n) {r : ℕ} :
+    (∃ b : StTiling n, b.goodCutCount = r) ↔
+      r = 0 ∨ (2 ≤ r ∧ r ≤ n - 1) := by
+  constructor
+  · rintro ⟨b, hb⟩
+    rcases StTiling.goodCutCount_bucket_bounds b with h0 | hpos
+    · left
+      omega
+    · right
+      omega
+  · intro h
+    rcases h with h0 | ⟨hr2, hrn⟩
+    · subst h0
+      exact StTiling.exists_goodCutCount_eq_zero n
+    · exact StTiling.exists_goodCutCount_eq_of_allowed hn hr2 hrn
+
+theorem StTiling.allUp_all_cuts_good (hn : 3 ≤ n) :
+    ∀ k, k ∈ cutSet n → StTiling.IsGoodCut (StTiling.allUp n) k := by
+  intro k hk
+  rcases StTile.exists_crossesCut_of_mem_cutSet (n := n) hn hk with ⟨t, hcross⟩
+  exact ⟨t, by simp, hcross⟩
+
+theorem StTiling.goodCuts_allUp_eq_cutSet (hn : 3 ≤ n) :
+    (StTiling.allUp n).goodCuts = cutSet n := by
+  exact (StTiling.goodCuts_eq_cutSet_iff (StTiling.allUp n)).2
+    (StTiling.allUp_all_cuts_good hn)
+
+theorem StTiling.goodCutCount_allUp (hn : 3 ≤ n) :
+    (StTiling.allUp n).goodCutCount = n - 1 := by
+  exact (StTiling.goodCutCount_eq_top_iff (StTiling.allUp n)).2
+    (StTiling.goodCuts_allUp_eq_cutSet hn)
+
+theorem StTiling.goodCuts_complement_of_all_down {b : StTiling n}
+    (hn : 3 ≤ n) (h : ∀ t : StTile n, b t = false) :
+    b.complement.goodCuts = cutSet n := by
+  have hb : b.complement = StTiling.allUp n := by
+    funext t
+    simp [StTiling.complement, StTiling.allUp, h t]
+  rw [hb]
+  exact StTiling.goodCuts_allUp_eq_cutSet hn
+
+theorem StTiling.goodCutCount_complement_of_all_down {b : StTiling n}
+    (hn : 3 ≤ n) (h : ∀ t : StTile n, b t = false) :
+    b.complement.goodCutCount = n - 1 := by
+  rw [StTiling.goodCutCount_eq_top_iff]
+  exact StTiling.goodCuts_complement_of_all_down hn h
 
 /-! ### Grid-reflection preserves buckets -/
 

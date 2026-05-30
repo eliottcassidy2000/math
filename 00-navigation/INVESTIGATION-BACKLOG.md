@@ -183,14 +183,15 @@
 **Status:** THEOREM + LEAN EXTENSION + OPEN EXTENSION
 **What:** Treat quotient maps out of the tiling cube as bucket maps. THM-346 proves the general half-line balance law for any quotient `q: Q_m -> B` and any mask family `M`: `2*self_b + incident_cross_b = |q^{-1}(b)|*|M|`. THM-345 specializes this to `pi: Q_m -> G_n/Z_2`, proving that bucket size parity detects SC/NS type exactly: SC buckets are odd, NS buckets are `2 mod 4`, and `sum_M B_M=2^m`. For every Hamming layer `d`, the ordered transport matrix `W_d(M,N)` is symmetric, has row sums `B_M*C(m,d)`, has even diagonal, and therefore has forced cross-outflow parity. Lucas' theorem says the active parity layers are exactly the binary submasks of `m=C(n-1,2)`.
 **S6 Lean update (kind-pasteur-2026-05-29-S6):** The local good-cut bucket gap was strengthened in `TournamentH7.GoodCuts`: nonempty good-cut support is equivalent to the existence of an upward tile, any upward tile forces at least two distinct good cuts, and every tiling satisfies `goodCutCount = 0 ∨ 2 ≤ goodCutCount`. The `TournamentH7.Verify` audit confirms this core depends only on Lean foundations.
+**S1 Lean update (kind-pasteur-2026-05-30-S1):** Added THM-348 / `TournamentH7.BucketBalance`, a generic axiom-free Lean proof of the oriented finite-set balance `|selfHalf|+|crossHalf|=|fiber|*|moves|`, plus the zero-cross closure criterion. This isolates the remaining Lean bridge for THM-346: prove the fixed-point-free involution pairing that turns internal half-lines into unordered self-lines counted twice.
 **Why it matters:** This turns the merged metagraph into a constrained reversible transport system, not just an unweighted graph. It also corrects the old S202 "merged tiling excess" narration: merged buckets still partition the fixed-base cube exactly.
 **Next steps:**
   1. Measure the excess over the parity lower bound by spine/ribs/sea edge type.
   2. Determine whether generic NS-sea transport is approximable from bucket sizes alone, with SC/rib corrections.
   3. Seek a Burnside formula for the bucket-size distribution, not just for the number of buckets.
-  4. Lift the quotient bucket parity lemmas themselves into Lean, using the good-cut dichotomy as the finite-set counting template.
+  4. Formalize the fixed-point-free mask involution in Lean and derive the full unordered THM-346 from THM-348.
   5. Add bucket parity and normalized `W_d` features to the future `tournament_tda.py` extractor.
-**Files:** `01-canon/theorems/THM-336-good-cuts-structure.md`, `01-canon/theorems/THM-345-merged-bucket-parity.md`, `01-canon/theorems/THM-346-tiling-quotient-bucket-balance.md`, `04-computation/merged_bucket_constraints_s5.py`, `04-computation/tiling_quotient_bucket_balance_s5.py`, `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`, `05-knowledge/results/merged_bucket_constraints_s5.out`, `05-knowledge/results/tiling_quotient_bucket_balance_s5.out`, `05-knowledge/results/lean_goodcuts_bucket_strengthening_kind_pasteur_s6.out`, `05-knowledge/variables/merged-bucket-size.md`, `05-knowledge/variables/tiling-bucket-balance.md`, `07-reflections/merged-tiling-bucket-constraints.md`.
+**Files:** `01-canon/theorems/THM-336-good-cuts-structure.md`, `01-canon/theorems/THM-345-merged-bucket-parity.md`, `01-canon/theorems/THM-346-tiling-quotient-bucket-balance.md`, `01-canon/theorems/THM-348-finite-bucket-halfline-balance.md`, `04-computation/merged_bucket_constraints_s5.py`, `04-computation/tiling_quotient_bucket_balance_s5.py`, `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`, `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`, `05-knowledge/results/merged_bucket_constraints_s5.out`, `05-knowledge/results/tiling_quotient_bucket_balance_s5.out`, `05-knowledge/results/lean_goodcuts_bucket_strengthening_kind_pasteur_s6.out`, `05-knowledge/results/lean_bucket_balance_kind_pasteur_2026-05-30-S1.out`, `05-knowledge/variables/merged-bucket-size.md`, `05-knowledge/variables/tiling-bucket-balance.md`, `07-reflections/merged-tiling-bucket-constraints.md`.
 
 ### INV-195: Lean Import Narrowing for Fast Distributed Formalization
 **Source:** kind-pasteur-2026-05-29-S6
@@ -2267,13 +2268,19 @@ Key insight: QR_p has both forward and backward connections; purely forward circ
 **Status:** ACTIVE; Lean core proved, exact n=3..6 census suggests quotient invariance.
 **What:** Formalize and investigate the good-cut bucket `g(τ)=|G(τ)|`, where `G(τ)` is the set of base-path cuts crossed by at least one upward tile. `TournamentH7.GoodCuts` proves bucket 0 iff all-down, bucket 1 impossible, and grid reflection invariance without project-specific axioms. The companion exact census finds every merged tournament class pure in `g` for n=3..6.
 **S14 update:** Lean now also proves the interval-union characterization, monotonicity, bucket bounds `{0}∪{2,...,n-1}`, and top-bucket iff every legal cut is good. A new projection-defect cross-scan found that single-tile lines with `|Delta g|>0` always change the merged tournament class through n=6, and tile range parity controls defect polarity: even ranges are even-graph biased, odd ranges tournament-class biased.
+**Codex 2026-05-30 update:** Lean now proves the exact abstract spectrum:
+for n>=3, `exists b, b.goodCutCount = r` iff `r=0` or `2<=r<=n-1`.
+The proof is constructive via one upward tile covering `{1,...,r}`. This
+shows bucket 1 is the only interval-geometric obstruction; any further gaps
+in quotient/H/isomorphism statistics must come from tournament structure.
 **Key data:** Bucket counts are n=3 `{0:1,2:1}`, n=4 `{0:1,2:2,3:5}`, n=5 `{0:1,2:3,3:10,4:50}`, n=6 `{0:1,2:4,3:15,4:101,5:903}`. Merged-class purity is pure/mixed = 2/0, 3/0, 10/0, 34/0. Reflection bucket failures are zero.
 **Why it matters:** `g` looks like a coordinate artifact of the base-path staircase, but it may descend to `G_n/Z_2` as a real merged-metagraph coordinate. The Lean proof also turns the old no-one-good-cut observation into a reusable interval-cover constraint, while S14 ties this coordinate to the tournament/even-graph quotient commutator.
-**Scripts/results:** `04-computation/goodcut_bucket_merged_s13.py`; `05-knowledge/results/goodcut_bucket_merged_s13.out`; `04-computation/goodcut_projection_defect_s14.py`; `05-knowledge/results/goodcut_projection_defect_s14.out`; `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`; reflections `07-reflections/good-cut-buckets-as-merged-coordinate.md` and `07-reflections/good-cut-height-and-projection-polarity.md`; variable `05-knowledge/variables/good-cut-count.md`.
+**Scripts/results:** `04-computation/goodcut_bucket_merged_s13.py`; `05-knowledge/results/goodcut_bucket_merged_s13.out`; `04-computation/goodcut_projection_defect_s14.py`; `05-knowledge/results/goodcut_projection_defect_s14.out`; `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`; reflections `07-reflections/good-cut-buckets-as-merged-coordinate.md`, `07-reflections/good-cut-height-and-projection-polarity.md`, and `07-reflections/good-cut-spectrum-complete.md`; variable `05-knowledge/variables/good-cut-count.md`.
 **Next steps:**
 1. Verify exact n=7 with cached or nauty-style canonicalization.
 2. Prove or refute HYP-1764: `g` is invariant under tournament isomorphism after complement merging.
 3. If HYP-1764 fails at n=7, characterize the first mixed class and its spine/ribs/sea position.
 4. Prove or refute the range-parity law HYP-1771.
-5. Derive the interval-union generating function for bucket counts and connect it to INV-NEW-S2-B.
-6. Add `g`, bucket-transition profile, range-parity, and interval-cover features to a future `tournament_tda.py`.
+5. Build `StTiling.toTournament` and prove `goodCutCount=n-1` iff the induced base-path tournament is strongly connected.
+6. Derive the interval-union generating function for bucket counts and connect it to INV-NEW-S2-B.
+7. Add `g`, bucket-transition profile, range-parity, and interval-cover features to a future `tournament_tda.py`.

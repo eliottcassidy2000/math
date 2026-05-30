@@ -73,7 +73,8 @@ et al.).
 | `GridReflection.lean` | `op`, `relabel`, vertex reversal | proved infrastructure |
 | `StaircaseTileModel.lean` | concrete tile coordinates, THM-280 arc statement | axiom |
 | `StaircaseModel.lean` | THM-330 (SC cut theorem) — **FULLY PROVED** | proved |
-| `GoodCuts.lean` | good-cut buckets, 0-or-≥2 gap, reflection invariance | **PROVED** |
+| `GoodCuts.lean` | good-cut buckets, exact spectrum `{0} ∪ {2,...,n-1}`, reflection invariance | **PROVED** |
+| `BucketBalance.lean` | abstract finite bucket half-line balance | **PROVED** |
 | `SelfComplementary.lean` | `IsSelfFlip`, `PaleyLike`, regular ⟹ ¬SF | axiom + proved corollaries |
 | `Iso.lean` | `TournamentIso`, `≅` | proved |
 | `IsoProperties.lean` | iso-invariants — **PROVED IN LEAN** | proved |
@@ -168,6 +169,13 @@ external/project axioms that are already in their proof OR — best case
 - `goodCutCount_mono` — turning more tiles upward can only add good cuts.
 - `goodCutCount_bucket_bounds` — the only bucket possibilities are 0 or 2..n-1.
 - `goodCutCount_eq_top_iff_all_cuts_good` — top bucket iff every legal cut is good.
+- `exists_crossesCut_of_mem_cutSet` — for n≥3 every legal cut is crossed by some tile.
+- `goodCuts_singleUp_eq_cutInterval` — a one-tile tiling has exactly that tile's cut interval.
+- `exists_goodCutCount_eq_of_allowed` — every bucket size 2..n-1 is realised.
+- `goodCutCount_spectrum` — exact good-cut bucket spectrum: precisely `{0} ∪ {2,...,n-1}`.
+- `goodCutCount_allUp` / `goodCutCount_complement_of_all_down` — all-up and complement-of-bottom hit the top bucket.
+- `BucketBalance.halfLine_balance` — oriented incident half-lines split into internal and escaping half-lines.
+- `BucketBalance.crossHalf_card_eq_zero_iff` — no escaping half-lines iff every move from the bucket remains in it.
 - `threeCycle_isRegular` — 3-cycle is regular.
 - `transitive_hasBasePath` — transitive tournament has base path.
 - `transitive_not_regular` — transitive (n ≥ 2) is not regular.
@@ -227,9 +235,12 @@ lake build TournamentH7
 - **20+ project-novel theorems** formalised.
 - **25+ audited theorems**, with a growing axiom-free core (iso-invariants,
   THM-330, THM-316 endpoint facts, concrete examples).
-- **Good-cut bucket gap strengthened in Lean**: nonempty good-cut support is
-  equivalent to an upward tile, and every tiling has `goodCutCount = 0` or
-  `2 ≤ goodCutCount`.
+- **Good-cut bucket gap completed in Lean**: nonempty good-cut support is
+  equivalent to an upward tile, every tiling has `goodCutCount = 0` or
+  `2 ≤ goodCutCount`, and for n≥3 every allowed size `0` or `2..n-1`
+  is realised.
+- **Abstract bucket half-line balance formalised**: any finite bucket map and
+  finite move set satisfies the internal/escaping half-line split.
 - **THM-330 FULLY PROVED** (both directions, no project axiom).
 - **THM-316 abstract anti-palindrome PROVED** by the endpoint-reversal
   bijection `σ ↦ φ * σ * vertexReversal n`.

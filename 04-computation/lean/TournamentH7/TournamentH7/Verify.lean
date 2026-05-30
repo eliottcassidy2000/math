@@ -20,6 +20,7 @@ import TournamentH7.SCCounts
 import TournamentH7.SmallTournaments
 import TournamentH7.ForbiddenHCounting
 import TournamentH7.GoodCuts
+import TournamentH7.BucketBalance
 
 open Tournament
 
@@ -272,6 +273,81 @@ theorem goodCutCount_eq_top_iff_all_cuts_good_audit {n : ℕ} (b : StTiling n) :
       ∀ k, k ∈ cutSet n → StTiling.IsGoodCut b k :=
   StTiling.goodCutCount_eq_top_iff_all_cuts_good b
 #print axioms goodCutCount_eq_top_iff_all_cuts_good_audit
+
+/-- For n >= 3, every legal cut is crossed by some staircase tile. PROVED. -/
+theorem exists_crossesCut_of_mem_cutSet_audit {n : ℕ} (hn : 3 ≤ n) {k : ℕ}
+    (hk : k ∈ cutSet n) :
+    ∃ t : StTile n, t.crossesCut k :=
+  StTile.exists_crossesCut_of_mem_cutSet hn hk
+#print axioms exists_crossesCut_of_mem_cutSet_audit
+
+/-- A single-up tiling has good cuts exactly the interval crossed by that tile. PROVED. -/
+theorem goodCuts_singleUp_eq_cutInterval_audit {n : ℕ} (t : StTile n) :
+    (StTiling.singleUp t).goodCuts = t.cutInterval :=
+  StTiling.goodCuts_singleUp_eq_cutInterval t
+#print axioms goodCuts_singleUp_eq_cutInterval_audit
+
+/-- Every allowed nonzero good-cut bucket size is realized. PROVED. -/
+theorem exists_goodCutCount_eq_of_allowed_audit {n r : ℕ}
+    (hn : 3 ≤ n) (hr2 : 2 ≤ r) (hrn : r ≤ n - 1) :
+    ∃ b : StTiling n, b.goodCutCount = r :=
+  StTiling.exists_goodCutCount_eq_of_allowed hn hr2 hrn
+#print axioms exists_goodCutCount_eq_of_allowed_audit
+
+/-- Exact spectrum of the good-cut bucket abstraction. PROVED. -/
+theorem goodCutCount_spectrum_audit {n r : ℕ} (hn : 3 ≤ n) :
+    (∃ b : StTiling n, b.goodCutCount = r) ↔
+      r = 0 ∨ (2 ≤ r ∧ r ≤ n - 1) :=
+  StTiling.goodCutCount_spectrum hn
+#print axioms goodCutCount_spectrum_audit
+
+/-- For n >= 3, the all-up tiling is in the top good-cut bucket. PROVED. -/
+theorem goodCutCount_allUp_audit {n : ℕ} (hn : 3 ≤ n) :
+    (StTiling.allUp n).goodCutCount = n - 1 :=
+  StTiling.goodCutCount_allUp hn
+#print axioms goodCutCount_allUp_audit
+
+/-- Complementing an all-down tiling puts it in the top bucket. PROVED. -/
+theorem goodCutCount_complement_of_all_down_audit {n : ℕ}
+    {b : StTiling n} (hn : 3 ≤ n) (h : ∀ t : StTile n, b t = false) :
+    b.complement.goodCutCount = n - 1 :=
+  StTiling.goodCutCount_complement_of_all_down hn h
+#print axioms goodCutCount_complement_of_all_down_audit
+
+/-! ### Abstract bucket balances -/
+
+/-- THM-346 Lean core: oriented half-lines split into internal and escaping
+    half-lines. PROVED. -/
+theorem bucket_halfLine_balance_audit {alpha beta move : Type}
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) :
+    (BucketBalance.selfHalf q step moves b).card +
+      (BucketBalance.crossHalf q step moves b).card =
+        (BucketBalance.fiber q b).card * moves.card :=
+  BucketBalance.halfLine_balance q step moves b
+#print axioms bucket_halfLine_balance_audit
+
+/-- Bucket closure criterion: zero escaping half-lines iff every chosen move
+    from the fiber stays in the same bucket. PROVED. -/
+theorem bucket_crossHalf_card_eq_zero_iff_audit {alpha beta move : Type}
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) :
+    (BucketBalance.crossHalf q step moves b).card = 0 <->
+      forall x, x ∈ BucketBalance.fiber q b ->
+        forall u, u ∈ moves -> q (step u x) = b :=
+  BucketBalance.crossHalf_card_eq_zero_iff q step moves b
+#print axioms bucket_crossHalf_card_eq_zero_iff_audit
+
+theorem bucket_crossHalf_card_le_total_audit {alpha beta move : Type}
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) :
+    (BucketBalance.crossHalf q step moves b).card <=
+      (BucketBalance.fiber q b).card * moves.card :=
+  BucketBalance.crossHalf_card_le_total q step moves b
+#print axioms bucket_crossHalf_card_le_total_audit
 
 /-! ### THM-342 (small diagonal value) -/
 

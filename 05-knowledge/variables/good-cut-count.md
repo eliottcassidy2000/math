@@ -29,8 +29,10 @@ Exact tiling counts by `g`:
 | 4 | `{0: 1, 2: 2, 3: 5}` |
 | 5 | `{0: 1, 2: 3, 3: 10, 4: 50}` |
 | 6 | `{0: 1, 2: 4, 3: 15, 4: 101, 5: 903}` |
+| 7 | `{0: 1, 2: 5, 3: 20, 4: 153, 5: 1816, 6: 30773}` |
 
-Source: `05-knowledge/results/goodcut_bucket_merged_s13.out`.
+Sources: `05-knowledge/results/goodcut_bucket_merged_s13.out` and
+`05-knowledge/results/goodcut_bucket_n7_fast_s1.out`.
 
 ## Equations
 
@@ -48,12 +50,13 @@ Source: `05-knowledge/results/goodcut_bucket_merged_s13.out`.
 
 ## Relationships
 
-- Related to `delta_proj`: `g` is a cheap tiling-coordinate projection that appears to descend to merged tournament classes through n=6.
+- Related to `delta_proj`: `g` is a cheap tiling-coordinate projection that appears to descend to merged tournament classes through n=7.
 - Related to projection-defect polarity: S14 found that single-tile lines with
   `|Delta g|>0` are never even-only through n=6; even-only defects live inside
   `g`-neutral lines.
 - Related to `H(T)`: bucket extremes are transitive (`g=0`, `H=1`) and strongly connected (`g=n-1`, broad H range).
-- Related to `G_n/Z_2`: HYP-1764 conjectures that `g` is constant on each merged tournament class.
+- Related to `G_n/Z_2`: HYP-1764 says that `g` is constant on each merged
+  tournament class; exact merged-class purity is confirmed for n=3..7.
 
 ## Lean Formalisation
 

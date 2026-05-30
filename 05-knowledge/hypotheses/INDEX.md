@@ -2338,17 +2338,18 @@ Source: projection_defect_structured_moves_s2.py, projection_defect_structured_m
 Source: projection_defect_h_score_s3.py, projection_defect_h_score_s3.out
 
 ## HYP-1764: Good-cut count descends to merged tournament classes (opus-2026-05-29-S13)
-**Status:** CONFIRMED for n=3..6 exact tiling census; OPEN generally.
+**Status:** CONFIRMED for n=3..7 exact tiling census; OPEN generally.
 **Statement:** The good-cut count `g(τ)=|G(τ)|`, defined in the base-path tiling model, may be constant on every merged tournament class in `G_n/Z_2`. Equivalently, if two base-path tilings represent isomorphic tournaments after complement merging, then they have the same number of cuts crossed by upward tiles.
 **Evidence:** `04-computation/goodcut_bucket_merged_s13.py` found zero mixed merged classes for n=3..6. Class counts by n were pure/mixed = 2/0, 3/0, 10/0, 34/0; max bucket span was 0 in every case. Lean also proves `g(reflect τ)=g(τ)` in `TournamentH7.GoodCuts`.
+**S1 update (kind-pasteur-2026-05-30-S1):** `04-computation/goodcut_bucket_n7_fast_s1.py` extends the exact check to n=7 using hash-assisted canonicalization: 456 unmerged classes, 88 SC classes, 272 merged classes, and pure/mixed = 272/0 with max bucket span 0. Bucket counts at n=7 are `{0:1, 2:5, 3:20, 4:153, 5:1816, 6:30773}`.
 **Implication:** A statistic that looks coordinate-dependent may be a genuine coordinate on the merged metagraph. This would give `G_n/Z_2` a cheap height function with forbidden level 1.
-**Next:** Verify n=7 with cached canonicalization, then try to prove invariance under base-path-preserving isomorphism and tournament complement merge.
-**See:** `05-knowledge/results/goodcut_bucket_merged_s13.out`, variable `g(τ)`, INV-237, T288.
+**Next:** Prove invariance under tournament isomorphism after complement merging, or find the structural reason the n=7 check stays pure despite changing base paths.
+**See:** `05-knowledge/results/goodcut_bucket_merged_s13.out`, `05-knowledge/results/goodcut_bucket_n7_fast_s1.out`, variable `g(τ)`, INV-237, T288.
 
 ## HYP-1765: Good-cut sets are interval-union codes (opus-2026-05-29-S13)
 **Status:** PARTIALLY PROVED in Lean; enumerative form OPEN.
 **Statement:** Every upward tile contributes the cut interval `{lo+1,...,hi}`, so every good-cut set is a union of tile intervals of length at least 2. Conversely, every such union realized by a subset of staircase tile intervals is a good-cut set. The bucket distribution should therefore be expressible as an interval-union or polymer-gas enumeration on the cut path.
-**Evidence:** Lean proves every upward tile supplies two distinct legal good cuts, giving `g≠1`. The exact counts n=3..6 are `{0:1,2:1}`, `{0:1,2:2,3:5}`, `{0:1,2:3,3:10,4:50}`, `{0:1,2:4,3:15,4:101,5:903}`.
+**Evidence:** Lean proves every upward tile supplies two distinct legal good cuts, giving `g≠1`. The exact counts n=3..7 are `{0:1,2:1}`, `{0:1,2:2,3:5}`, `{0:1,2:3,3:10,4:50}`, `{0:1,2:4,3:15,4:101,5:903}`, `{0:1,2:5,3:20,4:153,5:1816,6:30773}`.
 **Implication:** THM-336 is not just a strong-connectivity fact. It is a path-interval covering theorem inside the staircase triangle, and it should connect to the existing formulas for exactly-d good cuts.
 **Next:** Derive the ordinary generating function for bucket counts from interval unions and reconcile it with INV-NEW-S2-B.
 **See:** `TournamentH7.GoodCuts`, `05-knowledge/variables/good-cut-count.md`, INV-NEW-S2-B.
@@ -2418,3 +2419,11 @@ Source: HYP-1773-endpoint-transfer-recursive-boundary.md, endpoint_transfer_buck
 **What:** The endpoint-transfer row/column theorem holds for the even-graph quotient, but full GF(2) row rank fails: ranks `[1,1,2,6,8]` vs parent even-class counts `[1,2,3,7,16]`. The mod-2 boundary is not all child classes; it is the subset with odd labeled orbit size `n!/|Aut(G)|`.
 **Interpretation:** Tournament parity-injectivity is not a generic tiling-cube quotient property. The coarser cycle-space/even-graph lens forgets parity information controlled by graph automorphism 2-adics.
 Source: HYP-1774-even-graph-endpoint-rank-defect.md, THM-266-endpoint-transfer-boundary.md, even_graph_endpoint_transfer_s95.py
+
+## HYP-1775: Quotient bucket balance factors through involution pairing (kind-pasteur-2026-05-30-S1)
+**Status:** PARTIALLY PROVED IN LEAN; tiling specialization OPEN in Lean.
+**Statement:** The general quotient-bucket balance theorem has two independent components: (1) a finite-set half-line conservation law, and (2) a fixed-point-free involution pairing on internal half-lines. Once both are formalized, the unordered tiling identity `2*self_b + cross_b = |bucket_b|*|M|` should follow by specialization with `step(u,x)=x xor u`.
+**Evidence:** THM-348 / `TournamentH7.BucketBalance` proves the oriented component in Lean: `|selfHalf_b| + |crossHalf_b| = |fiber_b|*|M|`, plus the zero-cross closure criterion. THM-346 proves the full unordered statement informally/computationally. The missing Lean bridge is exactly the mask pairing `(x,u) <-> (x xor u,u)` for nonzero masks.
+**Implication:** The formalization path for THM-346 is smaller than it looked. The generic half-line theorem is independent of tournaments and can also serve as an engineering checksum for any finite-state perturbation feature.
+**Next:** Add an abstract fixed-point-free involution lemma for finite move actions, then instantiate it for Boolean hypercube masks and derive THM-346 in Lean.
+**See:** THM-346, THM-348, `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`, `05-knowledge/results/lean_bucket_balance_kind_pasteur_2026-05-30-S1.out`, INV-194.

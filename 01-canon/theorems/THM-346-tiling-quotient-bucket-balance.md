@@ -96,6 +96,20 @@ The parity corollary follows when `|M|=1` because the formula becomes
 
 Reducing modulo 2 gives `incident_cross_b == |B_b| mod 2`.
 
+## Lean Core
+
+`TournamentH7.BucketBalance` formalizes the oriented finite-set core as
+THM-348:
+
+```text
+|selfHalf_b(M)| + |crossHalf_b(M)| = |q^{-1}(b)| * |M|.
+```
+
+This is the exact half-line conservation law behind the displayed unordered
+formula.  The remaining Lean step for the full tiling statement is the
+fixed-point-free involution pairing `(x,u) <-> (x xor u,u)`, which converts
+internal oriented half-lines into unordered self-lines counted twice.
+
 ## Computation
 
 `tiling_quotient_bucket_balance_s5.py` verifies the balance implementation
@@ -130,6 +144,7 @@ half-line balance. This is useful for:
 
 - MISTAKE-031 and MISTAKE-033: tiling complement is not tournament complement.
 - THM-345: merged-bucket parity and Hamming-layer transport constraints.
+- THM-348: finite bucket half-line balance (Lean core).
 - INV-194: merged tiling bucket constraints.
 - INV-236: projection-defect profiles across tournament and even-graph quotients.
 - `07-reflections/merged-tiling-bucket-constraints.md`.

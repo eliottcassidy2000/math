@@ -24,6 +24,8 @@ Lean 4 + Mathlib4 formalisation of forbidden H-values in tournaments.
 | `Tournament.StTiling.isGoodCut_iff_exists_upward_tile_interval` | good cuts are exactly unions of upward tile intervals | opus-2026-05-29-S14 |
 | `Tournament.StTiling.goodCutCount_bucket_bounds` | good-cut buckets lie in `{0} ∪ {2,...,n-1}` | opus-2026-05-29-S14 |
 | `Tournament.StTiling.goodCutCount_eq_top_iff_all_cuts_good` | top bucket iff every legal cut is good | opus-2026-05-29-S14 |
+| `Tournament.StTiling.goodCutCount_spectrum` | exact good-cut bucket spectrum is `{0} ∪ {2,...,n-1}` for n≥3 | codex-2026-05-30 |
+| `Tournament.BucketBalance.halfLine_balance` | finite bucket half-lines split into internal and escaping halves | kind-pasteur-2026-05-29-S5 / codex fix |
 | `Tournament.isSelfComplementary_iff_iso_op` | IsSelfComplementary ↔ T ≅ op T | (clean characterisation) |
 | `Tournament.outDegree_iso` | iso preserves out-degree (up to relabel); **PROVED IN LEAN** | clean |
 | `Tournament.isRegular_iso` | iso preserves regularity; **PROVED IN LEAN** | clean |
@@ -123,6 +125,11 @@ matches the intended proof-modulo-axioms status:
   `goodCutCount_bucket_bounds_audit`, and
   `goodCutCount_eq_top_iff_all_cuts_good_audit` are also axiom-free: the
   interval-union and top/bottom bucket structure now lives in Lean.
+- `goodCuts_singleUp_eq_cutInterval_audit`, `exists_goodCutCount_eq_of_allowed_audit`,
+  and `goodCutCount_spectrum_audit` complete the abstract good-cut spectrum:
+  for n≥3 the only missing bucket is exactly 1.
+- `bucket_halfLine_balance_audit` and `bucket_crossHalf_card_eq_zero_iff_audit`
+  are axiom-free finite-set bookkeeping for quotient-bucket transport.
 - The iso/regularity examples are mostly axiom-free; the remaining project
   single-axiom dependencies here are exactly `tilde_score_sink` and
   `alphaCount_iso_invariant`.

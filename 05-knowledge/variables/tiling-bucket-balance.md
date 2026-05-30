@@ -2,7 +2,7 @@
 
 **Symbol:** `bucket_balance_q,M(b)`
 **Type:** integer identity / quotient-matrix row constraint
-**Defined in:** THM-346
+**Defined in:** THM-346; Lean half-line core THM-348
 
 ## Definition
 
@@ -26,6 +26,15 @@ bucket_balance_q,M(b) = 0
 
 for every quotient `q`, mask family `M`, and bucket `b`.
 
+Lean now proves the oriented finite-set version (THM-348):
+
+```text
+|selfHalf_b(M)| + |crossHalf_b(M)| = |q^{-1}(b)| * |M|.
+```
+
+The full unordered tiling formula is this half-line identity plus the
+mask-involution pairing `(x,u) <-> (x xor u,u)` on internal lines.
+
 ## Values at Small n
 
 The S5 script checked this for the merged tournament quotient `G_n/Z_2` and
@@ -46,6 +55,8 @@ It had 0 violations for `n=3..6` in both quotients.
 ## Equations Involving This Variable
 
 - `2*self_b(M) + incident_cross_b(M) = |q^{-1}(b)|*|M|` (THM-346).
+- `|selfHalf_b(M)| + |crossHalf_b(M)| = |q^{-1}(b)|*|M|`
+  (THM-348, Lean).
 - If `|M|=1`, then `incident_cross_b(M) == |q^{-1}(b)| mod 2`.
 - Normalized escape plus neutrality:
 
@@ -67,9 +78,12 @@ escape_b + neutral_b = 1.
 ## Sources
 
 - `01-canon/theorems/THM-346-tiling-quotient-bucket-balance.md`
+- `01-canon/theorems/THM-348-finite-bucket-halfline-balance.md`
 - `01-canon/theorems/THM-345-merged-bucket-parity.md`
+- `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`
 - `04-computation/tiling_quotient_bucket_balance_s5.py`
 - `05-knowledge/results/tiling_quotient_bucket_balance_s5.out`
+- `05-knowledge/results/lean_bucket_balance_kind_pasteur_2026-05-30-S1.out`
 - `07-reflections/merged-tiling-bucket-constraints.md`
 
 ## Tags
