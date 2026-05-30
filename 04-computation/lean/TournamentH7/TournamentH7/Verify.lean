@@ -27,6 +27,7 @@ import TournamentH7.StaircaseTileModel
 import TournamentH7.HSpectrumExtended
 import TournamentH7.IsomorphismClasses
 import TournamentH7.ApexBridge
+import TournamentH7.RedeiFromOCF
 
 open Tournament
 
@@ -672,3 +673,13 @@ theorem singleUp_apex_toTournament_SC_audit (n : ℕ) (hn : 3 ≤ n) :
     IsStronglyConnected (StTiling.singleUp (apexTile n hn)).toTournament :=
   singleUp_apex_toTournament_SC n hn
 #print axioms singleUp_apex_toTournament_SC_audit
+
+/-! ### Rédei's existence derived from OCF (no axiom!) -/
+
+theorem H_ge_one_from_ocf_audit {n : ℕ} (T : Tournament n) : 1 ≤ H T :=
+  H_ge_one T
+#print axioms H_ge_one_from_ocf_audit
+
+theorem H_ne_zero_from_ocf_audit {n : ℕ} (T : Tournament n) : H T ≠ 0 :=
+  H_ne_zero T
+#print axioms H_ne_zero_from_ocf_audit
