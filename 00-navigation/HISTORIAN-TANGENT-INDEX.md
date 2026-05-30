@@ -37,6 +37,11 @@ Useful synthetic maps added later:
   gaps `r=3,10`, circulant phase profiles for Paley/Interval crossover,
   endpoint transfer as incidence, OCF active ranking, completeness defect for
   tied/partial data, and Paley/circulant path-homology symbol matrices.
+- `07-reflections/formalization-root-signs-and-packet-modules.md`: Lean-first
+  formalization pass turning the representation-lens slogan into type-A
+  root-sign infrastructure. Arcs become roots `e_i-e_j`, walks telescope to
+  endpoint charge, closed walks have zero total root, and odd cycles are posed
+  as the next "packet module" objects toward representation-refined OCF.
 
 ## Second-Pass Small Motif Ledger
 

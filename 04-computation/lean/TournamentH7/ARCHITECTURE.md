@@ -61,6 +61,7 @@ et al.).
 | Module | Content | Status |
 |---|---|---|
 | `Basic.lean` | `Tournament n` structure | foundation |
+| `RootSigns.lean` | type-A root lattice atoms; finite-walk telescoping and 3-cycle relation | **PROVED** |
 | `Cycles.lean` | `DirectedCycle`, `isOdd` | foundation |
 | `SCC.lean` | `Reaches`, `IsSCC`, `H`, Hamilton paths | foundation |
 | `OCF.lean` | OCF axiom, Moon-Moser, Moon-Camion | external classical axioms |
@@ -215,6 +216,11 @@ external/project axioms that are already in their proof OR — best case
 - `Reaches.trans` — reachability is transitive.
 - `tildeArc_exactly_one` — tilde produces a valid tournament.
 - `isSelfComplementary_iff_iso_op` — clean characterisation.
+- `TypeA.root_self` / `TypeA.root_swap` / `TypeA.root_add_root` /
+  `TypeA.walkRootSum_append_single` / `TypeA.walkRootSum_closed` /
+  `TypeA.root_cycle_sum` — type-A root-sign atoms, finite-walk
+  telescoping, and the directed-triangle relation as the first closed-walk
+  case.
 
 ### Lean proofs with project axioms (single-axiom dependence)
 

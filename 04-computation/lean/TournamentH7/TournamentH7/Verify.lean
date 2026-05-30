@@ -8,6 +8,7 @@
 -/
 
 import TournamentH7.HSpectrum
+import TournamentH7.RootSigns
 import TournamentH7.Tilings
 import TournamentH7.GridReflection
 import TournamentH7.StaircaseModel
@@ -33,6 +34,45 @@ import TournamentH7.HSpectrumClean
 import TournamentH7.HSpectrumSmallN
 
 open Tournament
+
+/-! ### Type-A root-sign atoms -/
+
+theorem typeA_root_self_audit {n : ℕ} (i : Fin n) :
+    TypeA.root i i = 0 :=
+  TypeA.root_self i
+#print axioms typeA_root_self_audit
+
+theorem typeA_root_swap_audit {n : ℕ} (i j : Fin n) :
+    TypeA.root j i = -TypeA.root i j :=
+  TypeA.root_swap i j
+#print axioms typeA_root_swap_audit
+
+theorem typeA_root_add_root_audit {n : ℕ} (i j k : Fin n) :
+    TypeA.root i j + TypeA.root j k = TypeA.root i k :=
+  TypeA.root_add_root i j k
+#print axioms typeA_root_add_root_audit
+
+theorem typeA_root_eq_zero_iff_audit {n : ℕ} (i j : Fin n) :
+    TypeA.root i j = 0 ↔ i = j :=
+  TypeA.root_eq_zero_iff i j
+#print axioms typeA_root_eq_zero_iff_audit
+
+theorem typeA_root_cycle_sum_audit {n : ℕ} (i j k : Fin n) :
+    TypeA.root i j + TypeA.root j k + TypeA.root k i = 0 :=
+  TypeA.root_cycle_sum i j k
+#print axioms typeA_root_cycle_sum_audit
+
+theorem typeA_walkRootSum_append_single_audit {n : ℕ}
+    (a b : Fin n) (middle : List (Fin n)) :
+    TypeA.walkRootSum (a :: middle ++ [b]) = TypeA.root a b :=
+  TypeA.walkRootSum_append_single a b middle
+#print axioms typeA_walkRootSum_append_single_audit
+
+theorem typeA_walkRootSum_closed_audit {n : ℕ}
+    (a : Fin n) (middle : List (Fin n)) :
+    TypeA.walkRootSum (a :: middle ++ [a]) = 0 :=
+  TypeA.walkRootSum_closed a middle
+#print axioms typeA_walkRootSum_closed_audit
 
 /-! ### Audit each individual theorem -/
 

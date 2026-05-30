@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-30-formalization-root-signs - Type-A Root Formalization
+
+**Account:** Codex
+**Git first:** Started from `main...origin/main`; during the session a generated `inbox/PROCESSING-REPORT.md` timestamp change appeared and was preserved rather than reverted.
+**User prompt:** Spend a long formalization session, use the formal ideas for inspiration, search around, think freely, and pursue tangents.
+**Exploration:** Read the Lean architecture, root import spine, `Basic.lean`, `Verify.lean`, `SmallTournaments.lean`, and the recent representation-lens synthesis. The session focused on converting the smallest representation-theoretic atom into Lean rather than starting with a large theorem.
+**Lean work:** Added `TournamentH7.RootSigns`. It models arcs as type-A roots `e_i-e_j` in `Fin n -> Int`; proves reversal negation, zero iff degenerate, two-edge backtracking, consecutive-root telescoping, triangle zero-sum, finite-walk telescoping, and closed-walk zero-sum. Wired the module into `TournamentH7.lean`, `Verify.lean`, `README.md`, and `ARCHITECTURE.md`.
+**Synthesis:** Added `07-reflections/formalization-root-signs-and-packet-modules.md`. Main thesis: the directed triangle is the first closed-walk root relation, not merely the smallest odd cycle. Next formal target is odd cycles as zero-root packets, then a representation-refined OCF as a packet/chamber module identity.
+**Navigation updates:** Added T347 and a historian pointer to the new formalization note.
+**Verification:** `lake build TournamentH7.RootSigns` succeeded. A direct `#print axioms` check for the main root theorems reported only Lean/Mathlib foundation axioms (`propext`, `Quot.sound`) and no project axioms. A full `lake build TournamentH7.Verify` audit was attempted but not completed: an overlapping stale Lake process caused `.olean` output races, and after cleanup a direct `lake env lean TournamentH7/Verify.lean` stopped before the new audits because existing dependency artifact `TournamentH7.GoodCuts.olean` was missing. No Lean error remains in `RootSigns.lean`.
+**Next:** Add `RootPackets.lean`: bridge `DirectedCycle` vertex walks to `walkRootSum_closed`, define odd-cycle packets with support/disjointness lemmas, and then revisit `Omega` as a packet conflict graph.
+
 ## codex-2026-05-30-S361 - Diophantine Approximation to Lonely Runner
 
 **Account:** Codex
@@ -56,7 +68,6 @@
 **Knowledge updates:** Added HYP-1808, HYP-1809, tangents T335-T338, and `07-reflections/fejer-root-sign-phase-synthesis.md`; updated the hypotheses and results indices.
 **Main idea:** Fejer is the character shadow of an additive root-sign chamber. Paley is the multiplicative-character flat endpoint. The crossover is phase competition between these structured sign regimes, and future `phase_profile` features must be orbit-invariant rather than fixed-coordinate Fejer alignment.
 **Next:** Build an orbit-invariant circulant phase profile with sorted spectrum/IPR/entropy/peak orbit; add character-resolved OCF ledgers for circulant odd-cycle packets; test whether interval-unit spectral concentration maximizers can be proved by a discrete rearrangement inequality.
-
 ## opus-2026-05-30-S5 - Applied Residue/Phase/Incidence Programs
 
 **Account:** Codex

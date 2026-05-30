@@ -18,6 +18,7 @@ TournamentH7/
 ├── TournamentH7.lean         root: imports everything
 └── TournamentH7/
     ├── Basic.lean            Tournament structure
+    ├── RootSigns.lean        Type-A root-sign atoms and walk telescoping
     ├── Cycles.lean           DirectedCycle T k
     ├── SCC.lean              Reachability, IsSCC, IsHamiltonianPath, H
     ├── OCF.lean              7 axioms (OCF + Moon-Moser + Moon-Camion + …)
@@ -62,6 +63,16 @@ for H≠21, finite H≠63, tiling score formulas, and counting constants. See
 `ARCHITECTURE.md` and `SUBMISSION.md` for the current full audit.
 `RedeiFromOCF.lean` derives Rédei existence/parity consequences from OCF,
 including the explicit residue `H(T) % 2 = 1`.
+
+`RootSigns.lean` is project-axiom-free representation-theory infrastructure:
+it models an oriented arc as the type-A root `e_i - e_j` in `Fin n → ℤ`
+and proves the minimal triangle relation
+`root i j + root j k + root k i = 0`. The stronger helper
+`walkRootSum_append_single` proves that the root sum along any finite vertex
+walk telescopes to the root from its first vertex to its last, so every closed
+walk has zero total root. This formalizes the slogan that a directed 3-cycle
+is the first root-lattice relation, while keeping the reusable statement at
+the path/walk level.
 
 `GoodCuts.lean` also contains the formal axiom-free core of THM-336: the
 all-down tiling is exactly bucket 0, any upward tile forces at least two good
