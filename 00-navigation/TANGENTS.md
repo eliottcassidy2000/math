@@ -52,6 +52,12 @@ Good-cut sets are unions of tile intervals on the cut path. Single-tile flips ad
 **T292** #good-cut-height #projection-defects #range-parity | certainty: high (n=3..6 exact) | source: opus-2026-05-29-S14
 Good-cut height and projection defects lock together dynamically: every single-tile line with `|Delta g|>0` changes the merged tournament class through n=6, so even-only defects are `g`-neutral. Also, tile range parity controls defect sign: even ranges are even-graph biased, odd ranges are tournament-class biased. See HYP-1770/HYP-1771.
 
+**T293** #bucket-balance #lean #half-lines #engineering-checksum | certainty: high (Lean proof) | source: kind-pasteur-2026-05-30-S1
+The quotient-bucket balance theorem factors into two pieces: finite half-line conservation plus an involution pairing. Lean now proves the generic conservation law `|selfHalf|+|crossHalf|=|fiber|*|moves|` in `TournamentH7.BucketBalance`; the remaining THM-346 formalization task is the mask pairing `(x,u)<->(x xor u,u)`. This is also a generic feature-extractor checksum.
+
+**T294** #good-cut-buckets #n7 #merged-coordinate | certainty: high (exact n=7 probe) | source: kind-pasteur-2026-05-30-S1
+Good-cut descent survives n=7: 32768 fixed-base tilings classify into 456 unmerged / 272 merged classes, and every merged class is pure in `g`. Bucket counts are `{0:1,2:5,3:20,4:153,5:1816,6:30773}`. This makes HYP-1764 feel structural, not a small-n accident.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

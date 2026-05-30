@@ -62,7 +62,9 @@ cuts, no tiling has exactly one good cut, the strengthened dichotomy
 `goodCutCount = 0 ∨ 2 ≤ goodCutCount`, grid reflection preserves the
 bucket index, and for `n >= 3` the exact bucket spectrum is
 `{0} ∪ {2,...,n-1}`. `BucketBalance.lean` isolates the finite
-internal/escaping half-line count used by quotient-bucket arguments.
+internal/escaping half-line count used by quotient-bucket arguments:
+`|selfHalf| + |crossHalf| = |fiber| * |moves|`.  This is the Lean core of
+THM-348 and the first formal layer of THM-346.
 
 ## Proof sketch
 

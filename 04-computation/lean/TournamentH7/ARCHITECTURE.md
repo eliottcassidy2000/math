@@ -230,8 +230,8 @@ lake build TournamentH7
 
 ## Status snapshot (oracle/kind-pasteur-2026-05-29 family)
 
-- **2967 build targets** clean for `TournamentH7.Verify` after cold-cache dependency build
-  (kind-pasteur-2026-05-29-S6).
+- **2968 build targets** clean for `TournamentH7.Verify` after adding
+  `BucketBalance.lean` (kind-pasteur-2026-05-30-S1).
 - **20+ project-novel theorems** formalised.
 - **25+ audited theorems**, with a growing axiom-free core (iso-invariants,
   THM-330, THM-316 endpoint facts, concrete examples).
@@ -239,8 +239,10 @@ lake build TournamentH7
   equivalent to an upward tile, every tiling has `goodCutCount = 0` or
   `2 ≤ goodCutCount`, and for n≥3 every allowed size `0` or `2..n-1`
   is realised.
-- **Abstract bucket half-line balance formalised**: any finite bucket map and
-  finite move set satisfies the internal/escaping half-line split.
+- **Abstract bucket half-line balance formalised**: THM-348 proves any finite
+  bucket map and finite move set satisfies
+  `|selfHalf| + |crossHalf| = |fiber| * |moves|`; this is the Lean core under
+  THM-346.
 - **THM-330 FULLY PROVED** (both directions, no project axiom).
 - **THM-316 abstract anti-palindrome PROVED** by the endpoint-reversal
   bijection `σ ↦ φ * σ * vertexReversal n`.

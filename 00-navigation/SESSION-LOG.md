@@ -1,5 +1,17 @@
 # Session Log
 
+## kind-pasteur-2026-05-30-S1 - 2026-05-30: Bucket Balance Lean Core + n=7 Good-Cut Descent
+
+**Account:** kind-pasteur
+**Git first:** Read `.machine-id`, fetched/rebased against `origin/main`, processed direct and broadcast agent messages, and checked the human inbox (empty). Continued after the current main incorporated the Codex good-cut spectrum formalization.
+**Files read:** Startup canon/navigation sequence; engineering synthesis S53; investigation backlog; recent session log; GoodCuts/Verify/Lean architecture docs; THM-345/346; bucket and good-cut variable files.
+**Lean work:** Added/verified `TournamentH7.BucketBalance`, proving the generic finite half-line balance `|selfHalf|+|crossHalf|=|fiber|*|moves|`, the zero-cross closure criterion, and total-cardinality corollaries. Wired the module into `TournamentH7.lean` and `Verify.lean`; audit is axiom-free beyond Lean foundations.
+**Computation:** Added and ran `04-computation/goodcut_bucket_n7_fast_s1.py`, a hash-assisted n=7 merged-class probe. It found 456 unmerged classes, 88 SC classes, 272 merged classes, and zero mixed merged classes by good-cut count. Bucket counts: `{0:1, 2:5, 3:20, 4:153, 5:1816, 6:30773}`.
+**Knowledge updates:** Added THM-348, HYP-1775, T293/T294, reflection `07-reflections/bucket-balance-as-half-line-conservation.md`, and updated INV-194/INV-237 plus the bucket-balance and good-cut variable records. HYP-1764 is now confirmed through n=7 exact tiling census.
+**Verification:** `lake build TournamentH7.Verify 2>&1 | Tee-Object -FilePath 05-knowledge/results/lean_bucket_balance_kind_pasteur_2026-05-30-S1.out`; `python3 -m py_compile 04-computation/goodcut_bucket_n7_fast_s1.py`; `python3 04-computation/goodcut_bucket_n7_fast_s1.py 2>&1 | Tee-Object -FilePath 05-knowledge/results/goodcut_bucket_n7_fast_s1.out`.
+**Engineering reading:** THM-348 is a generic row-checksum for finite bucketed perturbation systems. For `tournament_tda.py`, bucket features can be audited by half-line conservation before interpreting escape/neutrality geometry.
+**Unresolved threads:** Formalize the fixed-point-free mask involution in Lean to derive full unordered THM-346; prove structurally why `g` descends to `G_n/Z_2`; condition good-cut transitions by spine/ribs/sea and projection-defect polarity.
+
 ## kind-pasteur-2026-05-29-S6 - 2026-05-29: Lean Good-Cut Bucket Strengthening
 
 **Account:** kind-pasteur

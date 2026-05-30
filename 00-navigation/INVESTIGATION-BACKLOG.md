@@ -2265,7 +2265,7 @@ Key insight: QR_p has both forward and backward connections; purely forward circ
 
 ### INV-237: Good-Cut Bucket Coordinate for Merged Tiling Classes
 **Source:** opus-2026-05-29-S13
-**Status:** ACTIVE; Lean core proved, exact n=3..6 census suggests quotient invariance.
+**Status:** ACTIVE; Lean core proved, exact n=3..7 census suggests quotient invariance.
 **What:** Formalize and investigate the good-cut bucket `g(τ)=|G(τ)|`, where `G(τ)` is the set of base-path cuts crossed by at least one upward tile. `TournamentH7.GoodCuts` proves bucket 0 iff all-down, bucket 1 impossible, and grid reflection invariance without project-specific axioms. The companion exact census finds every merged tournament class pure in `g` for n=3..6.
 **S14 update:** Lean now also proves the interval-union characterization, monotonicity, bucket bounds `{0}∪{2,...,n-1}`, and top-bucket iff every legal cut is good. A new projection-defect cross-scan found that single-tile lines with `|Delta g|>0` always change the merged tournament class through n=6, and tile range parity controls defect polarity: even ranges are even-graph biased, odd ranges tournament-class biased.
 **Codex 2026-05-30 update:** Lean now proves the exact abstract spectrum:
@@ -2273,13 +2273,14 @@ for n>=3, `exists b, b.goodCutCount = r` iff `r=0` or `2<=r<=n-1`.
 The proof is constructive via one upward tile covering `{1,...,r}`. This
 shows bucket 1 is the only interval-geometric obstruction; any further gaps
 in quotient/H/isomorphism statistics must come from tournament structure.
-**Key data:** Bucket counts are n=3 `{0:1,2:1}`, n=4 `{0:1,2:2,3:5}`, n=5 `{0:1,2:3,3:10,4:50}`, n=6 `{0:1,2:4,3:15,4:101,5:903}`. Merged-class purity is pure/mixed = 2/0, 3/0, 10/0, 34/0. Reflection bucket failures are zero.
+**S1 update (kind-pasteur-2026-05-30-S1):** Fast n=7 hash-assisted canonicalization confirms HYP-1764 one level further: 456 unmerged classes, 88 SC classes, 272 merged classes, and every merged class is pure in `g` (pure/mixed = 272/0, max span 0).
+**Key data:** Bucket counts are n=3 `{0:1,2:1}`, n=4 `{0:1,2:2,3:5}`, n=5 `{0:1,2:3,3:10,4:50}`, n=6 `{0:1,2:4,3:15,4:101,5:903}`, n=7 `{0:1,2:5,3:20,4:153,5:1816,6:30773}`. Merged-class purity is pure/mixed = 2/0, 3/0, 10/0, 34/0, 272/0. Reflection bucket failures are zero through n=6, and n=7 purity gives the merged-class check directly.
 **Why it matters:** `g` looks like a coordinate artifact of the base-path staircase, but it may descend to `G_n/Z_2` as a real merged-metagraph coordinate. The Lean proof also turns the old no-one-good-cut observation into a reusable interval-cover constraint, while S14 ties this coordinate to the tournament/even-graph quotient commutator.
-**Scripts/results:** `04-computation/goodcut_bucket_merged_s13.py`; `05-knowledge/results/goodcut_bucket_merged_s13.out`; `04-computation/goodcut_projection_defect_s14.py`; `05-knowledge/results/goodcut_projection_defect_s14.out`; `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`; reflections `07-reflections/good-cut-buckets-as-merged-coordinate.md`, `07-reflections/good-cut-height-and-projection-polarity.md`, and `07-reflections/good-cut-spectrum-complete.md`; variable `05-knowledge/variables/good-cut-count.md`.
+**Scripts/results:** `04-computation/goodcut_bucket_merged_s13.py`; `05-knowledge/results/goodcut_bucket_merged_s13.out`; `04-computation/goodcut_bucket_n7_fast_s1.py`; `05-knowledge/results/goodcut_bucket_n7_fast_s1.out`; `04-computation/goodcut_projection_defect_s14.py`; `05-knowledge/results/goodcut_projection_defect_s14.out`; `04-computation/lean/TournamentH7/TournamentH7/GoodCuts.lean`; reflections `07-reflections/good-cut-buckets-as-merged-coordinate.md`, `07-reflections/good-cut-height-and-projection-polarity.md`, and `07-reflections/good-cut-spectrum-complete.md`; variable `05-knowledge/variables/good-cut-count.md`.
 **Next steps:**
-1. Verify exact n=7 with cached or nauty-style canonicalization.
-2. Prove or refute HYP-1764: `g` is invariant under tournament isomorphism after complement merging.
-3. If HYP-1764 fails at n=7, characterize the first mixed class and its spine/ribs/sea position.
+1. Prove or refute HYP-1764 structurally: `g` is invariant under tournament isomorphism after complement merging.
+2. Re-run n=7 with nauty/canonical certificate if an independent implementation is desired.
+3. If HYP-1764 eventually fails, characterize the first mixed class and its spine/ribs/sea position.
 4. Prove or refute the range-parity law HYP-1771.
 5. Build `StTiling.toTournament` and prove `goodCutCount=n-1` iff the induced base-path tournament is strongly connected.
 6. Derive the interval-union generating function for bucket counts and connect it to INV-NEW-S2-B.
