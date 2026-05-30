@@ -2647,3 +2647,17 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** In Fejer/circulants, `J_3` has no repeated-vertex corrections and collapses to additive energy; `J_5` is the first repeated-vertex diagram layer. Path homology, endpoint transfer, Lonely Runner, and CH all have analogous overcount-minus-collision structures.
 **Predictions:** Classifying the `J_5` correction diagrams will either yield a low-degree autocorrelation formula or expose the first new invariant beyond additive energy.
 **See:** `05-knowledge/hypotheses/HYP-1807-exclusion-diagram-expansion.md`, `07-reflections/kernel-residue-trick-atlas-2026-05-30.md`.
+
+## HYP-1808: Fejer kernel is a root-sign character shadow (codex-2026-05-30 S359)
+**Status:** EXPLORATORY structural hypothesis; identity verified computationally.
+**What:** For prime circulant tournaments, root-sign choices on cyclic pairs `{d,-d}` project to Fourier characters by `lambda_k=-1/2+i sum_d sigma_d sin(2*pi*k*d/p)`. The all-one chamber sign gives the Fejer kernel exactly.
+**Evidence:** `fejer_root_sign_phase_probe_s359.py` verifies the root-sign eigenvalue formula and interval/Fejer identity through `p=31` at numerical-zero error. Spectral-concentration maximizers for `p=7,11,13,17` are all interval-unit-orbit representatives in full samples.
+**Predictions:** Circulant `phase_profile` should be a character profile of root signs; concentration maximizers should be interval-unit orbits; character-resolved OCF should expose where interval packing beats Paley flatness.
+**See:** `05-knowledge/hypotheses/HYP-1808-fejer-root-sign-character-shadow.md`, `04-computation/fejer_root_sign_phase_probe_s359.py`, `05-knowledge/results/fejer_root_sign_phase_probe_s359.out`, `07-reflections/fejer-root-sign-phase-synthesis.md`.
+
+## HYP-1809: Paley-interval crossover is flat-versus-Fejer phase competition (codex-2026-05-30 S359)
+**Status:** EXPLORATORY refinement of HYP-1801.
+**What:** The Paley/interval transition is a competition between multiplicative-character flatness and additive-chamber Fejer concentration. Fejer concentration is an extremal phase coordinate, not a small-prime monotone theorem for `H`.
+**Evidence:** In full prime-circulant scans, `corr(H,top_fraction)` is `-1.0` at `p=7`, `-0.106581` at `p=11`, and `+0.444395` at `p=13`; Paley wins at `p=7,11`, while the interval-unit orbit wins at `p=13`.
+**Predictions:** Fixed-coordinate Fejer alignment and low-mode mass will misclassify unit-rotated intervals; orbit-invariant concentration features plus a character-resolved OCF should explain the crossover.
+**See:** `05-knowledge/hypotheses/HYP-1809-paley-interval-flat-fejer-transition.md`, `04-computation/fejer_root_sign_phase_probe_s359.py`, `05-knowledge/results/fejer_root_sign_phase_probe_s359.out`, `07-reflections/fejer-root-sign-phase-synthesis.md`.

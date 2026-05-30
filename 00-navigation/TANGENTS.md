@@ -179,6 +179,18 @@ OCF's portable lesson is "packability beats abundance": count local packets only
 **T334** #exclusion-diagrams #pinned-walks #j5 #collision-expansion | certainty: medium | source: codex-2026-05-30-kernel-residue-atlas
 The next Fejer bridge is an exclusion-diagram expansion: pinned spectral walk counts are easy, simple pinned cycles equal those counts minus repeated-vertex diagrams. `J_3` has no corrections; `J_5` is the first real test. Same grammar may apply to path homology, endpoint transfer, LRC endpoint protection, and CH return collisions. See HYP-1807.
 
+**T335** #fejer #root-signs #circulants #character-shadow | certainty: high identity / medium program | source: codex-2026-05-30-S359
+For prime circulant tournaments, root signs on cyclic pairs `{d,-d}` project to Fourier characters by `lambda_k=-1/2+i sum_d sigma_d sin(2*pi*k*d/p)`. The all-one chamber sign gives the Fejer kernel exactly. This makes Fejer the character shadow of an additive root-sign chamber. See HYP-1808.
+
+**T336** #paley-interval #flat-vs-fejer #phase-transition #circulants | certainty: medium computational | source: codex-2026-05-30-S359
+Paley vs interval is multiplicative-character flatness versus additive-chamber Fejer concentration. In full prime-circulant scans, `corr(H,top_fraction)` is negative at `p=7,11` but positive by `p=13`; Paley wins early while the interval-unit orbit wins at `p=13`. See HYP-1809.
+
+**T337** #unit-orbits #fejer-alignment #phase-profile #feature-warning | certainty: medium-high | source: codex-2026-05-30-S359
+Literal Fejer alignment is coordinate-bound: unit rotations of an interval preserve `H` and spectral concentration but can have low alignment with the fixed interval representative. Circulant `phase_profile` should record orbit-invariant features: sorted spectrum, top fraction, IPR, entropy, additive energy, and peak orbit.
+
+**T338** #root-sign-roughness #chamber-vs-character #feature-taxonomy | certainty: medium | source: codex-2026-05-30-S359
+Root-sign change count is chamber-coordinate data, not the character phase channel: the probe gives `corr(H,sign_changes)=0` for `p=7,11,13`. Keep `root_chamber_*` features separate from `phase_character_*` features in future TDA/profile extractors.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

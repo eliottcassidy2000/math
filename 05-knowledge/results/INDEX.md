@@ -45,6 +45,7 @@ These scripts have been run but results exist only in /tmp or session transcript
 | `caccetta_haggkvist_residue_probe_s357.py` | [STORED] | Cyclic Cayley zero-sum probe for Caccetta-Haggkvist; enumerates 1,612,949 small connection sets with no violations and isolates tight return-residue/Kemperman-equality profiles | `caccetta_haggkvist_residue_probe_s357.out` |
 | `lonely_runner_tight_scan_s357.py` | [STORED] | Exhaustive primitive-box scan for the LRC tight stratum; no open-cover candidates, rare boundary-only sets matching known tight examples, and quotient collapse to `k+1` in scanned tight cases | `lonely_runner_tight_scan_s357.out` |
 | `fejer_kernel_wild_session.py` | [STORED] | Verifies Fejer/autocorrelation identity for interval spectra; finds `Var(J_3)=E(S)/(p-1)-(p^2-2p+5)/16` over full circulant orientation cubes through `p=23`; compares IPR/J3/H sign reversal at `p=7,11,13` | `fejer_kernel_wild_session_2026_05_30.out` |
+| `fejer_root_sign_phase_probe_s359.py` | [STORED] | Verifies circulant root-sign eigenvalue formula and interval/Fejer identity; compares orbit-invariant concentration, Fejer alignment, Paley flatness, and `H` for small prime circulants | `fejer_root_sign_phase_probe_s359.out` |
 
 ### How to bulk-capture results
 

@@ -11,6 +11,17 @@
 **Applications/famous-problem bridges:** Lonely Runner becomes an endpoint-protection graph; Caccetta-Haggkvist becomes delayed return residue; union-closed and graph reconstruction become projection/kernel/rank problems; active ranking becomes expected `H`-drop on ambiguity packets.
 **Next:** Build the `J_5` correction atlas; add a circulant `phase_profile`; extend Lonely Runner scans with endpoint-protection hypergraphs; prototype packet-compatibility feature blocks.
 
+## codex-2026-05-30-S359 - Fejer Root-Sign Phase Synthesis
+
+**Account:** Codex
+**Prompt:** Integrate Fejer kernels and root-sign in another longer session, while exploring new tangents as they appear.
+**Exploration:** Read the representation-lens/root-sign synthesis, applied residue/phase/incidence programs, HYP-1801, and the existing Fejer/Walsh scripts and outputs. The working bridge became: circulant tournaments are root-sign choices on cyclic pairs `{d,-d}`, and Fourier characters read those choices by sine projections.
+**Computation:** Added `04-computation/fejer_root_sign_phase_probe_s359.py` and stored `05-knowledge/results/fejer_root_sign_phase_probe_s359.out`. The probe verifies `lambda_k=-1/2+i sum_d sigma_d sin(2*pi*k*d/p)` and the interval/Fejer identity through `p=31`; it computes phase features and full `H` for prime circulants through `p=13`.
+**Result:** The all-one cyclic root-sign chamber is exactly the Fejer kernel. Spectral-concentration maximizers for `p=7,11,13,17` are interval-unit-orbit representatives. However, Fejer concentration is not a small-prime monotone for `H`: Paley wins at `p=7,11` while flat, and interval-unit orbits win at `p=13`.
+**Knowledge updates:** Added HYP-1808, HYP-1809, tangents T335-T338, and `07-reflections/fejer-root-sign-phase-synthesis.md`; updated the hypotheses and results indices.
+**Main idea:** Fejer is the character shadow of an additive root-sign chamber. Paley is the multiplicative-character flat endpoint. The crossover is phase competition between these structured sign regimes, and future `phase_profile` features must be orbit-invariant rather than fixed-coordinate Fejer alignment.
+**Next:** Build an orbit-invariant circulant phase profile with sorted spectrum/IPR/entropy/peak orbit; add character-resolved OCF ledgers for circulant odd-cycle packets; test whether interval-unit spectral concentration maximizers can be proved by a discrete rearrangement inequality.
+
 ## opus-2026-05-30-S5 - Applied Residue/Phase/Incidence Programs
 
 **Account:** Codex
