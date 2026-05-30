@@ -705,3 +705,11 @@ theorem alpha_solution_H1_audit {n : ℕ} (T : Tournament n) (h : H T = 1) :
        ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0 :=
   alpha_solution_H1 T h
 #print axioms alpha_solution_H1_audit
+
+/-! ### Forbidden-set theorem -/
+
+theorem H_in_forbidden_set_audit {n : ℕ} (T : Tournament n) :
+    H T ≠ 0 ∧ H T ≠ 2 ∧ H T ≠ 4 ∧ H T ≠ 6 ∧ H T ≠ 7 ∧ H T ≠ 8 ∧
+    H T ≠ 10 ∧ H T ≠ 21 :=
+  H_in_forbidden_set T
+#print axioms H_in_forbidden_set_audit
