@@ -69,4 +69,5 @@ import TournamentH7.HSpectrumExtended
 import TournamentH7.ExamplesExtended
 import TournamentH7.ApexBridge
 import TournamentH7.RedeiFromOCF
+import TournamentH7.HSpectrumClean
 import TournamentH7.Verify

@@ -28,6 +28,7 @@ import TournamentH7.HSpectrumExtended
 import TournamentH7.IsomorphismClasses
 import TournamentH7.ApexBridge
 import TournamentH7.RedeiFromOCF
+import TournamentH7.HSpectrumClean
 
 open Tournament
 
@@ -691,3 +692,16 @@ theorem H_odd_from_ocf_audit {n : ℕ} (T : Tournament n) : Odd (H T) :=
 theorem H_not_even_audit {n : ℕ} (T : Tournament n) : ¬ Even (H T) :=
   H_not_even T
 #print axioms H_not_even_audit
+
+/-! ### Clean H-spectrum theorems (no redei_existence/parity axiom) -/
+
+theorem H_spectrum_universal_audit {n : ℕ} (T : Tournament n) :
+    1 ≤ H T ∧ Odd (H T) ∧ H T ≠ 7 ∧ H T ≠ 21 :=
+  H_spectrum_universal T
+#print axioms H_spectrum_universal_audit
+
+theorem alpha_solution_H1_audit {n : ℕ} (T : Tournament n) (h : H T = 1) :
+    alphaCount 1 T = 0 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0 :=
+  alpha_solution_H1 T h
+#print axioms alpha_solution_H1_audit
