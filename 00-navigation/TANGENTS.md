@@ -2,6 +2,8 @@
 
 **Purpose:** Dense, scannable index of interesting directions that have emerged. Each entry is 2–4 lines. A new Claude reads this whole file quickly to find a jumping-off point. Add entries with the tag format shown. Do not expand entries here — create a separate file in `03-artifacts/drafts/` if you want to develop a tangent.
 
+**Historian map:** For a cross-domain, non-chronological preservation pass over the repo's older proper nouns, speculative theories, and random inspiration hooks, read `00-navigation/HISTORIAN-TANGENT-INDEX.md`.
+
 **Format:** `#tag1 #tag2 | [certainty: low/medium/high] | [source]`
 
 ---

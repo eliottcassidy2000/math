@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-05-30-S2 - Historian Tangent Index
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main` and followed the user directive to act as a historian rather than prove a new theorem.
+**Repo archaeology:** Scanned the existing tangent registry, investigation backlog, hypothesis index, explainer index, and the full `07-reflections/` title set. The goal was preservation: identify old speculative angles, proper nouns, user-proposed investigation doors, and cross-domain analogies that future sessions might otherwise miss.
+**Knowledge update:** Added `00-navigation/HISTORIAN-TANGENT-INDEX.md`, a non-chronological quick-pickup map covering core tournament geometry, H/Omega/forbidden values, good-cut transport, even graphs, Paley/QR/coding theory, path homology, transfer/Walsh algebra, arithmetic constants, polytopes, physics/chemistry analogies, CS/LLM applications, literature leads, meta-patterns, and dead-end warnings.
+**Navigation update:** Added a pointer near the top of `00-navigation/TANGENTS.md` so future startup scans can jump from the chronological tangent log to the historian map.
+**Next:** When new speculative reflections or user-suggested theories are added, update both the dense chronological tangent entry and the historian map if the idea is a reusable inspiration hook.
+
 ## codex-2026-05-30 - Quotient Gap Transport Layer
 
 **Account:** Codex
