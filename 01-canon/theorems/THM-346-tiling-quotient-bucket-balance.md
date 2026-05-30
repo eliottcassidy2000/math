@@ -118,10 +118,11 @@ self-partnered internal half-lines, and proves the unordered balance whenever
 2*internalLineCount_b(M) + |crossHalf_b(M)| = |q^{-1}(b)| * |M|.
 ```
 
+A later Codex pass closes the abstract orbit-parity step: Lean now proves that
+a finite fixed-point-free involution has even cardinality, and THM-350 derives
+the unordered balance directly for fixed-point-free involutive move systems.
 Thus the remaining Lean step for the full tiling statement is now only the
-generic finite-cardinality/orbit lemma saying that a fixed-point-free
-involution has even cardinality, followed by the Boolean-mask specialization
-`step(u,x)=x xor u` for nonzero masks.
+Boolean-mask specialization `step(u,x)=x xor u` for nonzero masks.
 
 ## Computation
 

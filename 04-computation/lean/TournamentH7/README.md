@@ -70,10 +70,11 @@ base-path tournament. `BucketBalance.lean` isolates the finite
 internal/escaping half-line count used by quotient-bucket arguments:
 `|selfHalf| + |crossHalf| = |fiber| * |moves|`. It also formalizes the
 partner-map layer for unordered balance: internal half-lines are closed under
-involutive moves, fixed-point-free moves give no self-partners, and even
-internal half-line cardinality yields the unordered balance. These are the
-Lean cores of THM-348 and THM-350, and the remaining bridge toward full
-THM-346.
+involutive moves, fixed-point-free moves give no self-partners, finite
+fixed-point-free involutions have even cardinality, and the unordered balance
+follows for fixed-point-free involutive move systems. These are the Lean cores
+of THM-348 and THM-350; the remaining bridge toward full THM-346 is the
+Boolean-mask specialization.
 
 ## Proof sketch
 

@@ -34,9 +34,10 @@ Lean now proves the oriented finite-set version (THM-348):
 
 The full unordered tiling formula is this half-line identity plus the
 mask-involution pairing `(x,u) <-> (x xor u,u)` on internal lines. THM-350
-proves the abstract unordered algebra in Lean once `selfHalf_b(M)` has even
-cardinality, and proves the partner-map closure/non-self-pairing facts needed
-to derive that evenness from a fixed-point-free involution.
+now proves the abstract unordered algebra and the finite orbit-parity theorem:
+fixed-point-free involutive moves force `selfHalf_b(M)` to have even
+cardinality and therefore satisfy the unordered balance. The remaining Lean
+bridge is the Boolean-mask specialization.
 
 ## Values at Small n
 
@@ -63,6 +64,9 @@ It had 0 violations for `n=3..6` in both quotients.
 - If `Even |selfHalf_b(M)|`, then
   `2*internalLineCount_b(M) + |crossHalf_b(M)| = |q^{-1}(b)|*|M|`
   (THM-350, Lean).
+- If each selected move is a fixed-point-free involution, then
+  `Even |selfHalf_b(M)|` and the same unordered balance follows without a
+  separate evenness assumption (THM-350, Lean).
 - If `|M|=1`, then `incident_cross_b(M) == |q^{-1}(b)| mod 2`.
 - Normalized escape plus neutrality:
 

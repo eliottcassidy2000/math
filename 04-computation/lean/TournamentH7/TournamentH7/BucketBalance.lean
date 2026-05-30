@@ -8,9 +8,8 @@
   The oriented half-lines incident to a bucket split into internal
   half-lines and escaping half-lines, so their cardinalities add to
   `|fiber b| * |moves|`.  The unordered quotient balance
-  `2 * internal_lines + escaping_lines = |fiber b| * |moves|` will be a
-  later specialization once the fixed-point-free involution pairing for
-  each move is formalized.
+  `2 * internal_lines + escaping_lines = |fiber b| * |moves|` follows once
+  internal oriented half-lines are paired by fixed-point-free involutions.
 -/
 
 import Mathlib.Tactic
@@ -145,6 +144,96 @@ theorem crossHalf_card_eq_total_of_selfHalf_zero [Fintype alpha] [DecidableEq be
 
 /-! ### From oriented half-lines to unordered internal lines -/
 
+/-- A finite set with a fixed-point-free involution has even cardinality.
+
+This is the generic orbit-parity lemma behind the unordered bucket balance:
+remove any element and its partner, then recurse on the remaining
+partner-closed set. -/
+theorem even_card_of_fixedPointFree_involutiveOn
+    [DecidableEq alpha] (s : Finset alpha) (f : alpha -> alpha)
+    (hmem : ∀ x, x ∈ s -> f x ∈ s)
+    (hinv : ∀ x, x ∈ s -> f (f x) = x)
+    (hfixed : ∀ x, x ∈ s -> f x ≠ x) :
+    Even s.card := by
+  classical
+  let P : ℕ -> Prop := fun n =>
+    ∀ s : Finset alpha, s.card = n ->
+      (∀ x, x ∈ s -> f x ∈ s) ->
+      (∀ x, x ∈ s -> f (f x) = x) ->
+      (∀ x, x ∈ s -> f x ≠ x) ->
+      Even s.card
+  have hP : ∀ n, (∀ m, m < n -> P m) -> P n := by
+    intro n ih s hs_card hmem hinv hfixed
+    by_cases hs_empty : s = ∅
+    · simp [hs_empty]
+    · have hs_nonempty : s.Nonempty := Finset.nonempty_iff_ne_empty.mpr hs_empty
+      rcases hs_nonempty with ⟨x, hx⟩
+      let y := f x
+      have hy : y ∈ s := hmem x hx
+      have hyx : y ≠ x := hfixed x hx
+      let t := (s.erase x).erase y
+      have hy_erase : y ∈ s.erase x := by
+        simp [hy, hyx]
+      have ht_card_eq : t.card + 2 = s.card := by
+        have h₁ : (s.erase x).card = s.card - 1 :=
+          Finset.card_erase_of_mem hx
+        have h₂ : t.card = (s.erase x).card - 1 :=
+          Finset.card_erase_of_mem hy_erase
+        have hpair : ({x, y} : Finset alpha).card = 2 := by
+          simp [hyx.symm]
+        have hsub : ({x, y} : Finset alpha) ⊆ s := by
+          intro z hz
+          simp at hz
+          rcases hz with hz | hz
+          · rwa [hz]
+          · rwa [hz]
+        have htwo : 2 ≤ s.card := by
+          have := Finset.card_le_card hsub
+          rwa [hpair] at this
+        omega
+      have ht_lt : t.card < n := by
+        omega
+      have ht_mem : ∀ z, z ∈ t -> f z ∈ t := by
+        intro z hz
+        have hz_ne_y : z ≠ y := (Finset.mem_erase.mp hz).1
+        have hz_mem_erase_x : z ∈ s.erase x := (Finset.mem_erase.mp hz).2
+        have hz_ne_x : z ≠ x := (Finset.mem_erase.mp hz_mem_erase_x).1
+        have hz_s : z ∈ s := (Finset.mem_erase.mp hz_mem_erase_x).2
+        have hfz_s : f z ∈ s := hmem z hz_s
+        have hfz_ne_x : f z ≠ x := by
+          intro hfz_x
+          have hz_eq_y : z = y := by
+            calc
+              z = f (f z) := (hinv z hz_s).symm
+              _ = f x := congrArg f hfz_x
+              _ = y := rfl
+          exact hz_ne_y hz_eq_y
+        have hfz_ne_y : f z ≠ y := by
+          intro hfz_y
+          have hz_eq_x : z = x := by
+            calc
+              z = f (f z) := (hinv z hz_s).symm
+              _ = f y := congrArg f hfz_y
+              _ = x := by
+                simpa [y] using hinv x hx
+          exact hz_ne_x hz_eq_x
+        exact Finset.mem_erase.mpr
+          ⟨hfz_ne_y, Finset.mem_erase.mpr ⟨hfz_ne_x, hfz_s⟩⟩
+      have ht_inv : ∀ z, z ∈ t -> f (f z) = z := by
+        intro z hz
+        have hz_s : z ∈ s := by
+          exact (Finset.mem_erase.mp (Finset.mem_erase.mp hz).2).2
+        exact hinv z hz_s
+      have ht_fixed : ∀ z, z ∈ t -> f z ≠ z := by
+        intro z hz
+        have hz_s : z ∈ s := by
+          exact (Finset.mem_erase.mp (Finset.mem_erase.mp hz).2).2
+        exact hfixed z hz_s
+      rcases ih t.card ht_lt t rfl ht_mem ht_inv ht_fixed with ⟨k, hk⟩
+      refine ⟨k + 1, ?_⟩
+      omega
+  exact (Nat.strong_induction_on (p := P) s.card hP) s rfl hmem hinv hfixed
+
 /-- The natural partner of an oriented half-line `(x,u)` is `(step u x,u)`. -/
 def pairHalf (step : move -> alpha -> alpha) (xu : alpha × move) : alpha × move :=
   (step xu.2 xu.1, xu.2)
@@ -217,6 +306,39 @@ theorem two_mul_internalLineCount_eq_selfHalf_card_of_even
   rw [hk]
   omega
 
+/-- Internal oriented half-lines have even cardinality when selected moves act
+as fixed-point-free involutions. -/
+theorem selfHalf_card_even_of_involutive_fixedPointFree
+    [Fintype alpha] [DecidableEq alpha] [DecidableEq beta] [DecidableEq move]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hstep : ∀ u, u ∈ moves -> Function.Involutive (step u))
+    (hfixed : ∀ u, u ∈ moves -> ∀ x, step u x ≠ x) :
+    Even (selfHalf q step moves b).card := by
+  classical
+  refine even_card_of_fixedPointFree_involutiveOn
+    (selfHalf q step moves b) (pairHalf step) ?_ ?_ ?_
+  · intro xu hxu
+    exact pairHalf_mem_selfHalf q step moves b hstep hxu
+  · intro xu hxu
+    rcases xu with ⟨x, u⟩
+    have hfacts : (x ∈ fiber q b ∧ u ∈ moves) ∧ q (step u x) = b := by
+      simpa [selfHalf, incidentHalf] using hxu
+    simp [pairHalf, hstep u hfacts.1.2 x]
+  · intro xu hxu
+    exact pairHalf_ne_of_fixedPointFree q step moves b hfixed hxu
+
+theorem two_mul_internalLineCount_eq_selfHalf_card_of_involutive_fixedPointFree
+    [Fintype alpha] [DecidableEq alpha] [DecidableEq beta] [DecidableEq move]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hstep : ∀ u, u ∈ moves -> Function.Involutive (step u))
+    (hfixed : ∀ u, u ∈ moves -> ∀ x, step u x ≠ x) :
+    2 * internalLineCount q step moves b =
+      (selfHalf q step moves b).card := by
+  exact two_mul_internalLineCount_eq_selfHalf_card_of_even q step moves b
+    (selfHalf_card_even_of_involutive_fixedPointFree q step moves b hstep hfixed)
+
 /-- Unordered bucket balance once the internal oriented half-lines have been
 paired into `internal` unordered lines. -/
 theorem unordered_balance_of_selfHalf_card_eq_two_mul
@@ -245,6 +367,19 @@ theorem unordered_balance_of_even_selfHalf
     two_mul_internalLineCount_eq_selfHalf_card_of_even q step moves b hself
   have hbal := halfLine_balance q step moves b
   omega
+
+/-- Unordered bucket balance for fixed-point-free involutive move systems. -/
+theorem unordered_balance_of_involutive_fixedPointFree
+    [Fintype alpha] [DecidableEq alpha] [DecidableEq beta] [DecidableEq move]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hstep : ∀ u, u ∈ moves -> Function.Involutive (step u))
+    (hfixed : ∀ u, u ∈ moves -> ∀ x, step u x ≠ x) :
+    2 * internalLineCount q step moves b +
+        (crossHalf q step moves b).card =
+      (fiber q b).card * moves.card := by
+  exact unordered_balance_of_even_selfHalf q step moves b
+    (selfHalf_card_even_of_involutive_fixedPointFree q step moves b hstep hfixed)
 
 end
 

@@ -184,7 +184,10 @@ external/project axioms that are already in their proof OR — best case
 - `BucketBalance.crossHalf_card_eq_zero_iff` — no escaping half-lines iff every move from the bucket remains in it.
 - `BucketBalance.pairHalf_mem_selfHalf` — involutive moves partner internal half-lines with internal half-lines.
 - `BucketBalance.pairHalf_ne_of_fixedPointFree` — fixed-point-free moves give no self-partnered internal half-lines.
+- `BucketBalance.even_card_of_fixedPointFree_involutiveOn` — finite fixed-point-free involutions have even cardinality.
+- `BucketBalance.selfHalf_card_even_of_involutive_fixedPointFree` — internal half-lines are even for fixed-point-free involutive move systems.
 - `BucketBalance.unordered_balance_of_even_selfHalf` — even internal half-line cardinality yields the unordered bucket balance.
+- `BucketBalance.unordered_balance_of_involutive_fixedPointFree` — fixed-point-free involutive move systems satisfy unordered bucket balance.
 - `threeCycle_isRegular` — 3-cycle is regular.
 - `transitive_hasBasePath` — transitive tournament has base path.
 - `transitive_not_regular` — transitive (n ≥ 2) is not regular.
@@ -255,9 +258,8 @@ lake build TournamentH7
 - **Abstract bucket balance layers formalised**: THM-348 proves any finite
   bucket map and finite move set satisfies
   `|selfHalf| + |crossHalf| = |fiber| * |moves|`; THM-350 proves the
-  partner-map and even-cardinality unordered layer. The remaining full THM-346
-  bridge is the finite fixed-point-free involution cardinality lemma plus the
-  Boolean mask specialization.
+  partner-map, finite orbit-parity, and fixed-point-free involutive unordered
+  layer. The remaining full THM-346 bridge is the Boolean mask specialization.
 - **THM-330 FULLY PROVED** (both directions, no project axiom).
 - **THM-316 abstract anti-palindrome PROVED** by the endpoint-reversal
   bijection `σ ↦ φ * σ * vertexReversal n`.

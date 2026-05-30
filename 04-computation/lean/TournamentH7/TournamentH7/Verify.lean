@@ -435,6 +435,30 @@ theorem bucket_pairHalf_ne_of_fixedPointFree_audit {alpha beta move : Type}
   BucketBalance.pairHalf_ne_of_fixedPointFree q step moves b hfixed hxu
 #print axioms bucket_pairHalf_ne_of_fixedPointFree_audit
 
+/-- A finite fixed-point-free involution has even cardinality. PROVED. -/
+theorem bucket_even_card_of_fixedPointFree_involutiveOn_audit {alpha : Type}
+    [DecidableEq alpha] (s : Finset alpha) (f : alpha -> alpha)
+    (hmem : forall x, x ∈ s -> f x ∈ s)
+    (hinv : forall x, x ∈ s -> f (f x) = x)
+    (hfixed : forall x, x ∈ s -> f x ≠ x) :
+    Even s.card :=
+  BucketBalance.even_card_of_fixedPointFree_involutiveOn s f hmem hinv hfixed
+#print axioms bucket_even_card_of_fixedPointFree_involutiveOn_audit
+
+/-- Internal half-lines have even cardinality for fixed-point-free involutive
+    move systems. PROVED. -/
+theorem bucket_selfHalf_card_even_of_involutive_fixedPointFree_audit
+    {alpha beta move : Type}
+    [Fintype alpha] [DecidableEq alpha] [DecidableEq beta] [DecidableEq move]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hstep : forall u, u ∈ moves -> Function.Involutive (step u))
+    (hfixed : forall u, u ∈ moves -> forall x, step u x ≠ x) :
+    Even (BucketBalance.selfHalf q step moves b).card :=
+  BucketBalance.selfHalf_card_even_of_involutive_fixedPointFree
+    q step moves b hstep hfixed
+#print axioms bucket_selfHalf_card_even_of_involutive_fixedPointFree_audit
+
 /-- The unordered balance follows once internal oriented half-lines have even
     cardinality. PROVED. -/
 theorem bucket_unordered_balance_of_even_selfHalf_audit {alpha beta move : Type}
@@ -447,6 +471,22 @@ theorem bucket_unordered_balance_of_even_selfHalf_audit {alpha beta move : Type}
       (BucketBalance.fiber q b).card * moves.card :=
   BucketBalance.unordered_balance_of_even_selfHalf q step moves b hself
 #print axioms bucket_unordered_balance_of_even_selfHalf_audit
+
+/-- THM-350 strengthened: fixed-point-free involutive move systems satisfy the
+    unordered bucket balance without a separate evenness assumption. PROVED. -/
+theorem bucket_unordered_balance_of_involutive_fixedPointFree_audit
+    {alpha beta move : Type}
+    [Fintype alpha] [DecidableEq alpha] [DecidableEq beta] [DecidableEq move]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hstep : forall u, u ∈ moves -> Function.Involutive (step u))
+    (hfixed : forall u, u ∈ moves -> forall x, step u x ≠ x) :
+    2 * BucketBalance.internalLineCount q step moves b +
+        (BucketBalance.crossHalf q step moves b).card =
+      (BucketBalance.fiber q b).card * moves.card :=
+  BucketBalance.unordered_balance_of_involutive_fixedPointFree
+    q step moves b hstep hfixed
+#print axioms bucket_unordered_balance_of_involutive_fixedPointFree_audit
 
 /-! ### THM-342 (small diagonal value) -/
 

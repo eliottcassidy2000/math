@@ -1,7 +1,7 @@
 # Unordered Bucket Balance as an Orbit Theorem
 
 **Session:** kind-pasteur-2026-05-30-S2
-**Status:** reflection after Lean formalization
+**Status:** reflection after Lean orbit-parity formalization
 **Related:** THM-346, THM-348, THM-350, HYP-1775, HYP-1778
 
 The S1 half-line formalization made THM-346 look like two lemmas:
@@ -10,15 +10,17 @@ The S1 half-line formalization made THM-346 look like two lemmas:
 finite conservation + fixed-point-free involution = unordered balance.
 ```
 
-The S2 Lean layer sharpened that further. The unordered algebra itself is now
-done: if the internal half-line set has even cardinality, then the Lean theorem
-already gives
+The S2 Lean layer sharpened that further, and the new orbit lemma closes the
+abstract gap. Lean now proves that a finite fixed-point-free involution has
+even cardinality, then applies it to internal half-lines. The strengthened
+theorem gives
 
 ```text
 2*internalLineCount + crossHalf = |fiber|*|moves|.
 ```
 
-So the genuinely missing object is not a bucket theorem. It is an orbit theorem.
+So the genuinely missing object is no longer a bucket theorem or an orbit
+theorem. It is the Boolean-mask action theorem for the tiling cube.
 
 For each internal half-line `(x,u)`, the partner is
 
@@ -28,16 +30,15 @@ For each internal half-line `(x,u)`, the partner is
 
 If `step(u)` is an involution, this partner map comes back in two steps. If
 `step(u)` has no fixed points, no internal half-line can be its own partner.
-Lean now proves both local facts. The one thing still outside the formal
-chain is the global finite-cardinality statement:
+Lean now proves both local facts and the global finite-cardinality statement:
 
 ```text
 fixed-point-free involution on a finite set => even cardinality.
 ```
 
-That is a small lemma, but conceptually it is the place where unordered lines
-enter. The unordered edge is not primitive; it is the two-element orbit of the
-oriented partner action.
+That lemma is the conceptual place where unordered lines enter. The unordered
+edge is not primitive; it is the two-element orbit of the oriented partner
+action.
 
 This gives a useful way to think about quotient transport. A bucket boundary
 is measured by half-lines because half-lines are what the source bucket can
@@ -58,12 +59,11 @@ future exact computations should be organized around the same split: prove
 the row law once, prove the orbit parity once, then let the quotient geometry
 carry the interesting combinatorics.
 
-The next Lean move should therefore be deliberately boring:
+The next Lean move should therefore be cube-specific:
 
 ```text
-Finset.card_even_of_fixedPointFree_involutive
+step(u,x)=x xor u is a fixed-point-free involution for u != 0
 ```
 
-or an equivalent bijection-to-pairs theorem. Once that exists, the Boolean
-mask instance `x xor u` for `u != 0` should collapse the remaining formal gap
-between THM-350 and full THM-346.
+Once that exists, THM-350 should collapse the remaining formal gap to full
+THM-346.

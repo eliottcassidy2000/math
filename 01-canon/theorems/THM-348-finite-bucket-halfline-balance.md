@@ -65,10 +65,11 @@ axioms:
 The `TournamentH7.Verify` audit reports only Lean foundations
 (`propext`, `Classical.choice`, `Quot.sound`).
 
-The S2 extension in the same module also proves the first unordered layer
+The S2 extension in the same module also proves the unordered layer
 (THM-350): the partner map `(x,u) -> (step(u,x),u)` preserves internal
 half-lines for involutive moves, is nontrivial for fixed-point-free moves, and
-the unordered balance follows from even internal half-line cardinality.
+the unordered balance follows for fixed-point-free involutive move systems via
+the finite orbit-parity lemma.
 
 ## Relation to THM-346
 
@@ -79,10 +80,9 @@ THM-346 is the unordered-line specialization for tiling hypercubes:
 ```
 
 THM-348 formalizes the oriented half-line conservation law underneath that
-identity.  THM-350 now formalizes the unordered algebra once the internal
-half-lines are paired.  To recover full THM-346 in Lean, the remaining lemma is
-the finite orbit-cardinality theorem for fixed-point-free involutions, then the
-specialization to each nonzero mask:
+identity.  THM-350 now formalizes the unordered algebra and the finite
+fixed-point-free involution orbit-cardinality theorem.  To recover full
+THM-346 in Lean, the remaining step is the specialization to each nonzero mask:
 
 ```text
 (x,u) <-> (x xor u, u).

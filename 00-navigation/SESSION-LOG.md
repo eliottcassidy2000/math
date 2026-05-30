@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-30 - Fixed-Point-Free Orbit Parity for Bucket Balance
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**Lean work:** Extended `TournamentH7.BucketBalance` with `even_card_of_fixedPointFree_involutiveOn`, a strong-induction proof that any finite fixed-point-free involution has even cardinality. Derived `selfHalf_card_even_of_involutive_fixedPointFree`, `two_mul_internalLineCount_eq_selfHalf_card_of_involutive_fixedPointFree`, and `unordered_balance_of_involutive_fixedPointFree`.
+**Audit:** Added `Verify.lean` entries for the generic orbit lemma, internal self-half evenness, and the fixed-point-free involutive unordered balance. All new audits depend only on Lean foundations (`propext`, `Classical.choice`, `Quot.sound`).
+**Knowledge updates:** Updated THM-350, THM-346/348 notes, HYP-1775/HYP-1778, INV-194, T297, the bucket-balance variable, Lean README/ARCHITECTURE/SUBMISSION, and the unordered-bucket reflection. The remaining full THM-346 Lean bridge is now the Boolean-mask specialization, not generic orbit parity.
+**Verification:** `lake build TournamentH7.BucketBalance`; `lake build TournamentH7.Verify`; `lake build TournamentH7` (2974 jobs).
+**Unresolved threads:** Choose or define the Boolean cube/mask Lean type, prove `x xor u` is a fixed-point-free involution for nonzero masks, and instantiate THM-350 as full tiling quotient bucket balance.
+
 ## kind-pasteur-2026-05-30-S2 - 2026-05-30: Unordered Bucket Balance Layer + Staircase Connectivity Bridge
 
 **Account:** kind-pasteur
