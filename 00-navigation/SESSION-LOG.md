@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-30-breakthrough-map - Famous/Open Problem Research Sprint
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**User prompt:** Spend the session freely considering possible breakthroughs this workspace could lead to, including famous problems, lesser-known problems, and Erdős-style candidates; use sideways inspiration and agents.
+**Exploration:** Read repo maps (`README.md`, `CONCEPT-MAP.md`, `OPEN-QUESTIONS.md`, `INVESTIGATION-BACKLOG.md`, `TANGENTS.md`, hypothesis index, selected canon theorems, recent residue reflections, and the historian tangent index). Web/literature sweep covered Erdős Problems #1216 and #902, Alon's Hamiltonian-path maximum paper, Grinberg-Stanley Redei-Berge, GLMY path homology, tournament Erdős-Hajnal, noncommutative Redei-Berge, Stanley-Stembridge/Hikita, and circulant path homology. Spawned three side agents: local repo theme scan, external tournament/open-problem scan, and sideways cross-domain bridge scan.
+**Synthesis:** Added `07-reflections/breakthrough-candidate-map.md`, ranking likely breakthrough routes. Near-term mathematical bets: n=9 real-root failure classification via deletion-residue rank; single-core signature image gap `r_core notin {3,10}`; circulant H-maximizer phase transition via additive energy/Fejer kernels; Paley/circulant GLMY Betti formulas. External bridges: Erdős-Schütte domination via cycle-domination residues; soft Erdős-Hajnal via H-mass; noncommutative Redei-Berge deletion-contraction; Delsarte/QR code bounds.
+**Navigation updates:** Added T310 to `00-navigation/TANGENTS.md` and added the new map to `00-navigation/HISTORIAN-TANGENT-INDEX.md`.
+**Next:** Turn the top four bets into concrete experiments: exact n=9 root-failure census, automaton proof attempt for the single-core signature gaps 3 and 10, symbolic alpha/additive-energy formulas for circulant primes, and Tang-Yau symbol-matrix implementation for Paley connection sets.
+
 ## opus-2026-05-30-S2 - Historian Tangent Index
 
 **Account:** Codex

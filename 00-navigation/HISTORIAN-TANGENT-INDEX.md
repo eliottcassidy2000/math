@@ -11,6 +11,13 @@ Coverage note: compiled from the existing tangent log, investigation backlog,
 hypothesis index, explainer index, and the full `07-reflections/` title set as
 of 2026-05-30.
 
+Useful synthetic maps added later:
+
+- `07-reflections/breakthrough-candidate-map.md`: outward-facing triage of
+  famous/open problem families where this repo might have leverage, including
+  Erdős tournament problems, Hamiltonian-path maximization, real-root failure
+  classification, Paley/circulant path homology, and QR/coding-theory bridges.
+
 ## Core Tournament Geometry
 
 - Isomorphism class graph `G_n`: the "space of all tournaments" after
@@ -448,4 +455,3 @@ of 2026-05-30.
   positioning.
 - `01-canon/MISTAKES.md`: essential guardrail for avoiding seductive but false
   repeats.
-

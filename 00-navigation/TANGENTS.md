@@ -105,6 +105,9 @@ Deletion-residue rank separates exact kills from dangerous near-kills. H=63 sing
 **T309** #paley-interval #fiber-residue #support-shadow #rank-size-split | certainty: medium | source: codex-2026-05-30-S355
 Paley/Interval belong to the residue calculus but not to the THM-025 near-kill stratum. Paley T7 has broad max-loss residue `alpha=(20,1)` and Interval T7 has `alpha=(16,2)`; both rank 2, but neither has small residue size. Their contrast is fiber multiplicity/disjointness over a shared support shadow, not deletion-rank near-kill behavior.
 
+**T310** #breakthrough-map #erdos #famous-problems #research-triage | certainty: medium | source: codex-2026-05-30-breakthrough-map
+Research sprint mapped the repo onto famous and lesser-known open problem families. Best near-term bets: n=9 real-root failure classification by deletion-residue rank, single-core signature image gap `r_core notin {3,10}`, circulant H-maximizer phase transition via additive energy/Fejer kernels, and Paley/circulant GLMY Betti formulas. Best outside bridges: Erdős-Schütte domination through cycle-domination residues, soft Erdős-Hajnal via H-mass, noncommutative Redei-Berge deletion-contraction, and Delsarte/QR code bounds. See `07-reflections/breakthrough-candidate-map.md`.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
