@@ -2662,16 +2662,16 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Predictions:** Fixed-coordinate Fejer alignment and low-mode mass will misclassify unit-rotated intervals; orbit-invariant concentration features plus a character-resolved OCF should explain the crossover.
 **See:** `05-knowledge/hypotheses/HYP-1809-paley-interval-flat-fejer-transition.md`, `04-computation/fejer_root_sign_phase_probe_s359.py`, `05-knowledge/results/fejer_root_sign_phase_probe_s359.out`, `07-reflections/fejer-root-sign-phase-synthesis.md`.
 
-## HYP-1810: LRC tight examples have a unit-boundary skeleton (codex-2026-05-30 S359)
-**Status:** EXPLORATORY; verified on known/scanned tight examples in S359.
-**What:** For reduced tight Lonely Runner examples, the unprotected forbidden endpoints are `{0} union {a/(k+1): gcd(a,k+1)=1}`.
-**Evidence:** S359 endpoint-protection records match this skeleton for initial and known sporadic tight examples.
-**Predictions:** Any counterexample must protect the unit-boundary skeleton, forcing quotient-divisibility and a possible descent.
-**See:** `05-knowledge/hypotheses/HYP-1810-lrc-unit-boundary-skeleton.md`, `04-computation/lonely_runner_endpoint_protection_s359.py`, `05-knowledge/results/lonely_runner_endpoint_protection_s359.out`, `07-reflections/lonely-runner-endpoint-protection-s359.md`.
+## HYP-1810: LRC tight examples have a unit-boundary skeleton (codex-2026-05-30-S359)
+**Status:** EXPLORATORY; verified on known/scanned tight examples.
+**What:** For reduced `k`-speed Lonely Runner tight examples, the unprotected forbidden endpoints are `{0} union {a/(k+1): gcd(a,k+1)=1}`. The nonzero endpoints are exactly the boundary lonely witnesses.
+**Evidence:** `lonely_runner_endpoint_protection_s359.py` verifies `unit_skeleton=True` for initial segments `k=3,4,5,7` and sporadic tight examples `{1,3,4,7}`, `{1,3,4,5,9}`, `{1,4,5,6,7,11,13}`, `{1,2,3,4,5,7,12}`.
+**Predictions:** Tight examples collapse to the quotient `Z/(k+1)Z`; counterexamples must first protect the unit-boundary skeleton, forcing speeds divisible by `k+1` and possibly a divisibility descent.
+**See:** `05-knowledge/hypotheses/HYP-1810-lrc-unit-boundary-skeleton.md`, `04-computation/lonely_runner_endpoint_protection_s359.py`, `07-reflections/lonely-runner-endpoint-protection-s359.md`.
 
-## HYP-1811: LRC endpoint protection has no all-protected core (codex-2026-05-30 S359)
+## HYP-1811: LRC endpoint protection has no all-protected core (codex-2026-05-30-S359)
 **Status:** EXPLORATORY proof-search hypothesis.
-**What:** Every primitive reduced Lonely Runner endpoint-protection incidence graph has an unprotected endpoint after finite peeling; equivalently, no full-cover counterexample has a nonempty all-protected endpoint core.
-**Evidence:** Known tight examples and near-tight positive-gap examples in S359 retain explicit unprotected endpoints.
-**Predictions:** A protection-core peeling algorithm should either stay empty in bounded boxes or isolate the exact local motif needed for a counterexample.
-**See:** `05-knowledge/hypotheses/HYP-1811-lrc-protection-peeling.md`, `04-computation/lonely_runner_endpoint_protection_s359.py`, `07-reflections/lonely-runner-endpoint-protection-s359.md`.
+**What:** The endpoint-protection incidence graph of every primitive reduced speed set has an unprotected endpoint after finite peeling. Equivalently, there is no nonempty all-protected endpoint core capable of certifying a full open forbidden cover.
+**Evidence:** Known tight examples have explicit unit-boundary skeletons; near-tight positive-gap examples can have high protected ratios but still retain multiple unprotected endpoints. A counterexample would need every endpoint protected.
+**Predictions:** A protection-core peeling algorithm should find empty cores in bounded searches; any nonempty core should force a smaller quotient/divisibility obstruction.
+**See:** `05-knowledge/hypotheses/HYP-1811-lrc-protection-peeling.md`, `07-reflections/lonely-runner-endpoint-protection-s359.md`.

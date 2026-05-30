@@ -191,6 +191,12 @@ Literal Fejer alignment is coordinate-bound: unit rotations of an interval prese
 **T338** #root-sign-roughness #chamber-vs-character #feature-taxonomy | certainty: medium | source: codex-2026-05-30-S359
 Root-sign change count is chamber-coordinate data, not the character phase channel: the probe gives `corr(H,sign_changes)=0` for `p=7,11,13`. Keep `root_chamber_*` features separate from `phase_character_*` features in future TDA/profile extractors.
 
+**T339** #lonely-runner #endpoint-protection #unit-group #tight-stratum | certainty: medium-high computational | source: codex-2026-05-30-S359
+Endpoint-protection graph added for LRC. All checked tight examples have unprotected endpoints exactly `{0} union {a/(k+1): gcd(a,k+1)=1}`; the nonzero unit residues are the boundary witnesses. This upgrades "first witness `1/(k+1)`" to a unit-boundary skeleton. See HYP-1810 and `07-reflections/lonely-runner-endpoint-protection-s359.md`.
+
+**T340** #lonely-runner #protection-peeling #open-cover #incidence | certainty: medium | source: codex-2026-05-30-S359
+A counterexample to LRC is a full open forbidden cover, hence every forbidden endpoint must be strictly protected by another interval. Known tight and near-tight examples still have unprotected endpoints; proposed proof route is a leaf-peeling/no-all-protected-core theorem for the endpoint-protection incidence graph. See HYP-1811.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

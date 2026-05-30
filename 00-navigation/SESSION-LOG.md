@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-30-S359b - Lonely Runner Endpoint Protection
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**User prompt:** Spend the session trying to make progress on the Lonely Runner Conjecture, creatively and iteratively.
+**External status check:** General LRC remains open; recent finite-checking work covers reduced cases through `k in {10,11,12}` and mixed-threshold Fourier tools remain adjacent rather than a full solution.
+**Computation:** Used the existing tracked `04-computation/lonely_runner_endpoint_protection_s359.py` and regenerated `05-knowledge/results/lonely_runner_endpoint_protection_s359.out`. The script builds exact rational endpoint-protection incidence graphs: an endpoint is protected if it lies strictly inside another forbidden interval.
+**Main findings:** Known tight examples are not almost-counterexamples in the protection graph. Their unprotected endpoints are exactly `{0} union {a/(k+1): gcd(a,k+1)=1}`, with the nonzero unit residues as boundary lonely witnesses. Near-tight positive-gap examples can have high protected ratios but still show explicit unprotected endpoints.
+**Knowledge updates:** Added HYP-1810 (unit-boundary skeleton), HYP-1811 (no all-protected endpoint core / protection peeling), tangents T339-T340, and reflection `07-reflections/lonely-runner-endpoint-protection-s359.md`.
+**Next:** Optimize endpoint-protection scans; implement explicit protection-core peeling; search bounded boxes for nonempty all-protected cores; analyze which speeds protect unit-boundary endpoints.
+
 ## codex-2026-05-30-kernel-residue-atlas - Kernel/Residue Trick Atlas
 
 **Account:** Codex
