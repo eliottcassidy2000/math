@@ -10,6 +10,18 @@
 **Knowledge updates:** Added HYP-1798 through HYP-1801 and tangents T321-T325. Concrete programs: n=9 real-root failure census by near-kill rank, single-core signature gaps `r=3,10`, circulant phase profiles, endpoint transfer as incidence, OCF active ranking, completeness-defect stability tests, and Paley/circulant path-homology symbol matrices.
 **Next:** Implement the n=9 root-failure census with Newton margins; build a finite-state target search/proof attempt for `r_core=3,10`; add a circulant `phase_profile`; prototype `H_topk` active ranking JSON reports.
 
+## codex-2026-05-30-fejer-wild - Fejer Kernel Wild Session
+
+**Account:** Codex
+**Git first:** Started from `main...origin/main`.
+**User prompt:** Spend a long loose session on Fejer kernels and pursue tangents.
+**Exploration:** Read the existing Fejer/Paley/Interval spine: S64 session log, `fejer_walsh_bridge.py`, `fejer_extremal_proof.out`, co-occurrence and spectral-overlap scripts, and the relevant hypothesis entries HYP-513 through HYP-518.
+**Computation:** Added `04-computation/fejer_kernel_wild_session.py` and stored output in `05-knowledge/results/fejer_kernel_wild_session_2026_05_30.out`. The script verifies the interval identity `Q_k=|hat 1_S(k)|^2=Fejer_k=Fourier(autocorrelation)` through `p=31`, enumerates the `p=7,11,13` Hamiltonian-path orientation cubes, computes pinned profiles `J_3,J_5,J_7,J_9`, and checks single-flip mutations away from the interval.
+**Main finding:** Pinned triangle localization is not merely correlated with additive energy; it is the same axis. Over full circulant orientation cubes through `p=23`, `Var_{v!=0} J_3(0,v)=E(S)/(p-1)-(p^2-2p+5)/16` with roundoff-scale error. Added HYP-1804 and T331.
+**Synthesis:** Added `07-reflections/fejer-kernel-wild-session-2026-05-30.md`. The proof gap now looks later in the chain: Fejer/additive-energy -> `J_3` localization should be short; the hard part is proving localization survives repeated-vertex corrections in `J_5,J_7,...` strongly enough to force Omega packing and the OCF hard-core partition function.
+**Verification:** `python3 -m py_compile 04-computation/fejer_kernel_wild_session.py`; `python3 04-computation/fejer_kernel_wild_session.py > 05-knowledge/results/fejer_kernel_wild_session_2026_05_30.out`.
+**Next:** Prove the exact `J_3` energy law via the oriented wedge transform; classify pinned `J_5` correction diagrams.
+
 ## codex-2026-05-30-S4 - Third-Pass Ten-Lens Historian Noise Ledger
 
 **Account:** Codex

@@ -167,6 +167,9 @@ Rainbow CH replaces vertex out-stars by color classes, making a rainbow cycle a 
 **T330** #triangle-case #second-neighborhood #flag-algebras #residue-inequalities | certainty: low-medium | source: codex-2026-05-30-S358
 The `k=3` CH case should be profiled by second-neighborhood surplus: for each vertex, compare `N+(v)`, `N++(v)`, and collision edges back to `v`. Flag-algebra triangle-free bounds can be viewed as certificates that a proposed surplus ledger cannot exist at high outdegree.
 
+**T331** #fejer-kernel #additive-energy #pinned-cycles #paley-interval | certainty: medium-high computational | source: codex-2026-05-30-fejer-wild
+Fejer/IPR concentration, additive energy, and pinned triangle localization appear to be exactly the same axis: over full circulant orientation cubes through `p=23`, `Var_{v!=0} J_3(0,v)=E(S)/(p-1)-(p^2-2p+5)/16`. This moves the proof gap one step later: prove how triangle localization survives into `J_5,J_7,...` and Omega hard-core packing. See HYP-1804 and `07-reflections/fejer-kernel-wild-session-2026-05-30.md`.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
