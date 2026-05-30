@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-30-S360 - Lonely Runner Endpoint Formalization
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**User prompt:** Spend a session formalizing the most real Lonely Runner-related proven result in the repo, investigate related tangents, then formalize more.
+**External check:** Verified the current public frontier from primary arXiv pages: Rosenfeld's eight-runner proof (`arXiv:2509.14111`), Trakulthongchai's nine/ten-runner proof (`arXiv:2511.22427`), Sungkawichai-Trakulthongchai's eleven/twelve/thirteen-runner proof (`arXiv:2604.23906`), plus Tao's finite-checking/lower-bound paper (`arXiv:1701.02048`), Bedert's Riesz-product improvement (`arXiv:2511.16636`), and Jensen's mixed-threshold Fourier paper (`arXiv:2605.27941`).
+**Formalization:** Added THM-357, the Lonely Runner endpoint-protection trichotomy. For a speed set `V`, the forbidden interval union either leaves a positive open gap, leaves an unprotected endpoint boundary witness, or is a full open cover. The last case is exactly full forbidden measure plus every endpoint strictly protected.
+**Computation:** Added `04-computation/lonely_runner_endpoint_protection_s360.py` and stored `05-knowledge/results/lonely_runner_endpoint_protection_s360.out`. The script builds the exact endpoint-protection graph on `Q=(k+1)lcm(V)` and verifies the finite integer protection criterion against direct strict containment. In the inherited S357 primitive boxes, every full-measure case remained boundary-only; no all-protected open-cover candidate appeared.
+**Synthesis:** Added `07-reflections/lonely-runner-endpoint-formal-session-s360.md` and HYP-1812. Main idea: THM-357 isolates the finite certificate; HYP-1812 asks whether Fejer/Riesz safe-product kernels can rule out all-protected endpoint graphs by a nonnegative pressure argument.
+**Knowledge updates:** Updated HYP-1802, the hypotheses index, results index, and tangents T341-T343, preserving the S359b endpoint-skeleton and peeling additions.
+**Next:** Build the closed safe-product array on `Z/QZ`; search for shifted Fejer/Riesz kernels on tight and near-tight examples; compare endpoint indegree histograms with Jensen-style two-speed Fourier intersection terms.
+
 ## codex-2026-05-30-S359b - Lonely Runner Endpoint Protection
 
 **Account:** Codex
@@ -80,7 +92,7 @@
 **External status check:** Current frontier is not a full solution: `arXiv:2604.23906` (submitted 2026-04-26) gives a computer-assisted proof for `k in {10,11,12}` nonzero speeds, i.e. up to thirteen total runners. `arXiv:2605.27941` (submitted 2026-05-27) studies mixed thresholds with safe/unsafe Fourier indicator functions, arithmetic-progression summation, and exact two-speed integral formulas.
 **Mathematical correction:** HYP-1794's positive-gap/boundary-witness split is a finite-open-cover trichotomy. The real missing case is a full open forbidden cover of the time circle. A counterexample is equivalent to full forbidden measure plus every forbidden endpoint strictly protected by another forbidden interval.
 **Computation:** Added `04-computation/lonely_runner_tight_scan_s357.py` and stored `05-knowledge/results/lonely_runner_tight_scan_s357.out`. The exact scan enumerates primitive boxes through `(k,max_speed)=(3,24),(4,24),(5,20),(6,16),(7,14)`, separates positive-gap/boundary-only/open-cover cases, and checks known sporadic tight examples.
-**Result:** No open-cover candidates appeared. Boundary-only instances were rare and matched the standard small tight examples: initial segments plus `(1,3,4,7)`, `(1,3,4,5,9)`, `(1,2,3,4,5,7,12)`, and `(1,4,5,6,7,11,13)`. In all scanned/known tight cases, the first witness is `1/(k+1)` and the boundary quotient collapses to `k+1`.
+**Result:** No open-cover candidates appeared. Boundary-only instances were rare and matched the standard small tight examples: initial segments plus `(1,3,4,7)`, `(1,3,4,5,9)`, `(1,2,3,4,5,7,12)`, and `(1,4,5,6,7,11,13)`. In all scanned/known tight cases, the first witness is `1/(k+1)`; S360 later clarified that the full endpoint graph still lives at `Q(V)=(k+1)lcm(V)`.
 **Knowledge updates:** Added HYP-1802, T326, `07-reflections/lonely-runner-tight-stratum-s357.md`, and results index entries.
 **Next:** Build the endpoint-protection graph: vertices are forbidden endpoints in `Q(V)=(k+1)lcm(V)`, and an edge records one interval strictly covering another speed's endpoint. Search for local motifs that would force or forbid an all-protected full-measure cover, then compare against Rosenfeld/Sungkawichai/Trakulthongchai improper residue tuples.
 

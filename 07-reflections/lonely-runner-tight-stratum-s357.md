@@ -160,8 +160,9 @@ Main exact findings:
   - `k=7, max_speed=14`: 3 boundary-only sets, the initial segment and the two
     known `n=8` sporadic examples.
 - For all known/scanned tight examples, the first boundary witness is
-  `1/(k+1)` and the boundary quotient collapses to `Q = k+1`, even when the
-  speeds are not an initial segment.
+  `1/(k+1)`, even when the speeds are not an initial segment.  S360 later
+  clarified that the full endpoint graph still lives at
+  `Q(V)=(k+1)lcm(V)`.
 
 This exactly matches the external tight examples:
 
@@ -246,3 +247,15 @@ Concrete next steps:
 I do not see a complete proof today.  The session did narrow the problem:
 to solve LRC from this workspace, we should stop treating the continuous
 circle as continuous and attack the finite endpoint-protection hypergraph.
+
+## S360 Formalization Update
+
+THM-357 now formalizes the finite-open-cover trichotomy used above.  It proves
+that a counterexample is exactly a full-measure forbidden union in which every
+endpoint is strictly protected.  The new script
+`04-computation/lonely_runner_endpoint_protection_s360.py` builds this graph
+exactly and verifies the integer protection criterion.
+
+The main correction to carry forward is terminological: the first witness in
+tight examples often appears at `1/(k+1)`, but the full endpoint graph lives at
+`Q(V)=(k+1)lcm(V)`.

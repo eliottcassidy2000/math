@@ -9,6 +9,7 @@ related:
   - HYP-1802
   - THM-349
   - THM-355
+  - THM-357
 ---
 
 # HYP-1794: Lonely Runner as a Quotient-Gap Certificate
@@ -57,6 +58,11 @@ set of boundary points.
 Thus the sharpened target is HYP-1802: a genuine counterexample would be a
 full open cover of the circle, equivalently full forbidden measure plus every
 forbidden endpoint strictly protected by another forbidden interval.
+
+THM-357 now proves this trichotomy and endpoint-protection certificate
+equivalence.  HYP-1794's remaining value is the quotient-gap language:
+positive cells and unprotected endpoints are the two surviving finite residue
+types.
 
 ## Why This Belongs To Residue Calculus
 

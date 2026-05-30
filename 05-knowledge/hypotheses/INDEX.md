@@ -2609,9 +2609,9 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 ## HYP-1802: Lonely Runner endpoint-protection obstruction (codex-2026-05-30 S357)
 **Status:** EXPLORATORY; sharpens HYP-1794 from a witness split to a counterexample certificate.
 **What:** A reduced LRC counterexample is exactly a full-measure open forbidden interval cover in which every forbidden endpoint is strictly protected by another forbidden interval. Every endpoint lies in `Q(V)=(k+1)lcm(V)`, and protection is the finite integer inequality `|v_j*((k+1)m+eps)-a*(k+1)*v_i| < v_i`.
-**Evidence:** `lonely_runner_tight_scan_s357.py` scanned primitive boxes through `(k,max_speed)=(3,24),(4,24),(5,20),(6,16),(7,14)`: no open-cover candidates appeared. Boundary-only sets were rare and recovered the standard small tight examples, with first witness `1/(k+1)` and quotient collapse `Q=k+1`.
-**Predictions:** The next finite object should be the endpoint-protection graph/hypergraph; a proof would show every full-measure forbidden union has an unprotected endpoint, hence a boundary lonely witness.
-**See:** `05-knowledge/hypotheses/HYP-1802-lonely-runner-endpoint-protection.md`, `04-computation/lonely_runner_tight_scan_s357.py`, `05-knowledge/results/lonely_runner_tight_scan_s357.out`, `07-reflections/lonely-runner-tight-stratum-s357.md`.
+**Evidence:** THM-357 proves the endpoint-protection equivalence. `lonely_runner_tight_scan_s357.py` and `lonely_runner_endpoint_protection_s360.py` scanned primitive boxes through `(k,max_speed)=(3,24),(4,24),(5,20),(6,16),(7,14)`: no open-cover candidates appeared. Boundary-only sets were rare and recovered the standard small tight examples, with first witness `1/(k+1)`.
+**Predictions:** The proof search should combine the unit-boundary skeleton (HYP-1810), no-all-protected-core peeling (HYP-1811), and kernel-pressure certificates (HYP-1812).
+**See:** `05-knowledge/hypotheses/HYP-1802-lonely-runner-endpoint-protection.md`, THM-357, HYP-1810, HYP-1811, HYP-1812, `04-computation/lonely_runner_tight_scan_s357.py`, `04-computation/lonely_runner_endpoint_protection_s359.py`, `04-computation/lonely_runner_endpoint_protection_s360.py`, `05-knowledge/results/lonely_runner_tight_scan_s357.out`, `05-knowledge/results/lonely_runner_endpoint_protection_s359.out`, `05-knowledge/results/lonely_runner_endpoint_protection_s360.out`, `07-reflections/lonely-runner-tight-stratum-s357.md`, `07-reflections/lonely-runner-endpoint-protection-s359.md`, `07-reflections/lonely-runner-endpoint-formal-session-s360.md`.
 
 ## HYP-1803: Caccetta-Haggkvist criticality is return residue (codex-2026-05-30 S358)
 **Status:** EXPLORATORY bridge hypothesis; cyclic Cayley probe added.
@@ -2675,3 +2675,10 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** Known tight examples have explicit unit-boundary skeletons; near-tight positive-gap examples can have high protected ratios but still retain multiple unprotected endpoints. A counterexample would need every endpoint protected.
 **Predictions:** A protection-core peeling algorithm should find empty cores in bounded searches; any nonempty core should force a smaller quotient/divisibility obstruction.
 **See:** `05-knowledge/hypotheses/HYP-1811-lrc-protection-peeling.md`, `07-reflections/lonely-runner-endpoint-protection-s359.md`.
+
+## HYP-1812: Lonely Runner endpoint kernel pressure (codex-2026-05-30-S360)
+**Status:** EXPLORATORY proof-technology hypothesis.
+**What:** The all-protected endpoint certificate from THM-357 should be impossible because it creates too much local endpoint pressure in a nonnegative Fejer/Riesz test on `Z/QZ`, where `Q=(k+1)lcm(V)`.
+**Evidence:** THM-357 reduces a counterexample to a full-measure all-protected endpoint graph; S360 found no open-cover candidates in the inherited bounded boxes. Jensen's mixed-threshold Fourier formulas and Bedert's Riesz-product improvement suggest nonnegative safe-product kernels are the right analytic bridge.
+**Predictions:** Boundary-only tight cases should have endpoint-centered kernels; near-tight positive gaps should need wider shifted Fejer kernels; artificial all-protected toys, if found, should show abnormal low-frequency safe-product pressure.
+**See:** `05-knowledge/hypotheses/HYP-1812-lonely-runner-endpoint-kernel-pressure.md`, THM-357, `04-computation/lonely_runner_endpoint_protection_s360.py`, `05-knowledge/results/lonely_runner_endpoint_protection_s360.out`, `07-reflections/lonely-runner-endpoint-formal-session-s360.md`.

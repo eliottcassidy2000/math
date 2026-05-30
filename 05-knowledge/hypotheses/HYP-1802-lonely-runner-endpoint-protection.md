@@ -5,6 +5,10 @@ source: codex-2026-05-30 S357
 related:
   - HYP-1794
   - THM-355
+  - THM-357
+  - HYP-1810
+  - HYP-1811
+  - HYP-1812
 ---
 
 # HYP-1802: Lonely Runner Endpoint-Protection Obstruction
@@ -101,8 +105,8 @@ and exactly recovered the standard small tight examples in the scanned boxes:
 (1,4,5,6,7,11,13)
 ```
 
-In all these examples the first boundary witness is `1/(k+1)` and the
-boundary quotient collapses to `k+1`.
+In all these examples the first boundary witness is `1/(k+1)`.  The full
+endpoint-protection quotient is larger, namely `Q(V)=(k+1)lcm(V)`.
 
 `04-computation/lonely_runner_endpoint_protection_s359.py` adds the
 endpoint-protection ledger.  In the stored default run, all known tight
@@ -124,6 +128,25 @@ Sungkawichai-Trakulthongchai use finite ansatz times, lifting, projection, and
 local boundary obstruction that would make the improper residue tuples
 impossible without exhaustive lifting.
 
+## S360 Update
+
+THM-357 now proves the endpoint-protection equivalence as a theorem.  The
+remaining conjectural content of HYP-1802 is therefore only the final
+impossibility statement:
+
+```text
+no primitive speed set has full forbidden measure and all endpoints protected.
+```
+
+`04-computation/lonely_runner_endpoint_protection_s360.py` builds the exact
+endpoint-protection graph and verifies that the direct strict-containment test
+agrees with the finite integer inequality.  The S360 scan reproduces the S357
+bounded primitive boxes with zero open-cover candidates.
+
+One clarification: in the tight examples, the first visible boundary witness
+often collapses to `1/(k+1)`, but the full endpoint-protection graph lives in
+the larger quotient `Q(V)=(k+1)lcm(V)`.
+
 ## Test Plan
 
 1. Extend the S357 scan to build the endpoint-protection graph.
@@ -140,9 +163,12 @@ impossible without exhaustive lifting.
 
 - `04-computation/lonely_runner_tight_scan_s357.py`
 - `05-knowledge/results/lonely_runner_tight_scan_s357.out`
+- `04-computation/lonely_runner_endpoint_protection_s360.py`
+- `05-knowledge/results/lonely_runner_endpoint_protection_s360.out`
 - `07-reflections/lonely-runner-tight-stratum-s357.md`
 - `04-computation/lonely_runner_endpoint_protection_s359.py`
 - `05-knowledge/results/lonely_runner_endpoint_protection_s359.out`
 - `07-reflections/lonely-runner-distance-graph-colorings-s359.md`
+- `07-reflections/lonely-runner-endpoint-formal-session-s360.md`
 - `arXiv:2604.23906`
 - `arXiv:2605.27941`

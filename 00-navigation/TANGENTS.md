@@ -197,6 +197,15 @@ Endpoint-protection graph added for LRC. All checked tight examples have unprote
 **T340** #lonely-runner #protection-peeling #open-cover #incidence | certainty: medium | source: codex-2026-05-30-S359
 A counterexample to LRC is a full open forbidden cover, hence every forbidden endpoint must be strictly protected by another interval. Known tight and near-tight examples still have unprotected endpoints; proposed proof route is a leaf-peeling/no-all-protected-core theorem for the endpoint-protection incidence graph. See HYP-1811.
 
+**T341** #lonely-runner #endpoint-protection #finite-cover #theorem | certainty: proved trichotomy | source: codex-2026-05-30-S360
+THM-357 formalizes the exact LRC endpoint-protection trichotomy: positive forbidden-measure deficit gives an interval of lonely times; full measure with an unprotected endpoint gives a boundary lonely witness; a counterexample is exactly full forbidden measure plus every endpoint strictly protected. This turns the remaining LRC target into a finite all-protected endpoint graph obstruction. See THM-357 and `07-reflections/lonely-runner-endpoint-formal-session-s360.md`.
+
+**T342** #lonely-runner #endpoint-graph #integer-criterion #quotient-gaps | certainty: high computational | source: codex-2026-05-30-S360
+`lonely_runner_endpoint_protection_s360.py` builds the endpoint graph on `Q=(k+1)lcm(V)` and verifies the integer protection inequality against direct strict containment. In the inherited S357 primitive boxes, every full-measure case was boundary-only and no all-protected open-cover candidate appeared. The first witness often collapses to `1/(k+1)`, but the full endpoint graph does not. See `05-knowledge/results/lonely_runner_endpoint_protection_s360.out`.
+
+**T343** #fejer #riesz-products #lonely-runner #kernel-pressure | certainty: exploratory | source: codex-2026-05-30-S360
+HYP-1812 proposes a proof-technology bridge: an all-protected LRC endpoint graph should create too much local pressure for a nonnegative Fejer/Riesz safe-product kernel on `Z/QZ`. This connects THM-357 to Jensen's mixed-threshold Fourier formulas, Bedert's Riesz-product bound, and the repo's Fejer/root-sign chamber work. See HYP-1812.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
