@@ -9,6 +9,7 @@ related:
   - HYP-1810
   - HYP-1811
   - HYP-1812
+  - HYP-1813
 ---
 
 # HYP-1802: Lonely Runner Endpoint-Protection Obstruction
@@ -147,6 +148,18 @@ One clarification: in the tight examples, the first visible boundary witness
 often collapses to `1/(k+1)`, but the full endpoint-protection graph lives in
 the larger quotient `Q(V)=(k+1)lcm(V)`.
 
+## S361 Diophantine Approximation Update
+
+The broad Diophantine search reframes the dangerous case as a finite
+inhomogeneous Bohr-boundary problem.  Classical metric approximation explains
+why generic speed sets should have witnesses, but THM-357 says exceptional
+sets are controlled by endpoint incidence in `Q(V)`.
+
+HYP-1813 adds the proposed descent layer: an all-protected endpoint core should
+force either a divisibility quotient or a structured Bohr/GAP-like subquotient.
+Iterating that quotient descent should expose an unprotected endpoint, matching
+the peeling language of HYP-1811 and the kernel-pressure language of HYP-1812.
+
 ## Test Plan
 
 1. Extend the S357 scan to build the endpoint-protection graph.
@@ -158,6 +171,7 @@ the larger quotient `Q(V)=(k+1)lcm(V)`.
    finite-checking papers.
 5. Translate the endpoint-protection obstruction into safe-product Fourier /
    Walsh language.
+6. Track quotient descent data for each protection-core peel layer.
 
 ## Sources
 
@@ -170,5 +184,6 @@ the larger quotient `Q(V)=(k+1)lcm(V)`.
 - `05-knowledge/results/lonely_runner_endpoint_protection_s359.out`
 - `07-reflections/lonely-runner-distance-graph-colorings-s359.md`
 - `07-reflections/lonely-runner-endpoint-formal-session-s360.md`
+- `07-reflections/diophantine-approximation-lonely-runner-s361.md`
 - `arXiv:2604.23906`
 - `arXiv:2605.27941`

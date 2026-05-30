@@ -206,6 +206,15 @@ THM-357 formalizes the exact LRC endpoint-protection trichotomy: positive forbid
 **T343** #fejer #riesz-products #lonely-runner #kernel-pressure | certainty: exploratory | source: codex-2026-05-30-S360
 HYP-1812 proposes a proof-technology bridge: an all-protected LRC endpoint graph should create too much local pressure for a nonnegative Fejer/Riesz safe-product kernel on `Z/QZ`. This connects THM-357 to Jensen's mixed-threshold Fourier formulas, Bedert's Riesz-product bound, and the repo's Fejer/root-sign chamber work. See HYP-1812.
 
+**T344** #diophantine-approximation #lonely-runner #false-friends #repo-atlas | certainty: medium | source: codex-2026-05-30-S361
+Deep repo search splits the Diophantine-looking material into direct LRC endpoint/Bohr threads, quotient-cover analogues like base-42 Erdos-Straus, lattice/torus metaphors, and false friends such as Dirichlet series. The strongest usable DA bridge is not classical good approximation, but finite anti-approximation on `Q(V)=(k+1)lcm(V)`. See `07-reflections/diophantine-approximation-lonely-runner-s361.md`.
+
+**T345** #lonely-runner #anti-bohr #endpoint-boundary #quotient-gaps | certainty: medium | source: codex-2026-05-30-S361
+Reframe LRC as a finite anti-Bohr boundary theorem: forbidden arcs are inhomogeneous Bohr neighborhoods of integers, and lonely times are points outside all of them. THM-357 says the only dangerous case is a full open Bohr cover with every rational endpoint strictly protected, turning the continuous problem into finite boundary incidence.
+
+**T346** #bohr-boundary-descent #lonely-runner #gap-structure #protection-core | certainty: low-medium | source: codex-2026-05-30-S361
+HYP-1813 proposes that an all-protected endpoint core cannot remain primitive: protecting the unit-boundary skeleton should force either a divisibility quotient or a structured GAP-like subquotient, then repeat until an endpoint is exposed. This unifies HYP-1811 peeling, HYP-1812 kernel pressure, and Diophantine Bohr-set structure.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

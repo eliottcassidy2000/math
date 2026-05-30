@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-30-S361 - Diophantine Approximation to Lonely Runner
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**User prompt:** Search deeply and broadly for Diophantine approximation connections in the repo, then creatively connect them to Lonely Runner.
+**Repo search:** Swept literal and adjacent terms: Diophantine, approximation, Kronecker, Dirichlet, Bohr, Weyl, continued fractions, Farey, Minkowski, geometry of numbers, lattice, torus, mod 1, fractional part, nearest integer, covering radius, quotient gaps, and endpoints. The useful hits split into direct LRC endpoint/Bohr threads, distance-graph coloring, quotient-cover analogues, lattice/torus metaphors, and false friends such as Dirichlet series.
+**External check:** Rechecked primary arXiv anchors for the distinction between metric/generic Diophantine approximation and finite exceptional structure: Horvat-Stoffregen's almost-all velocity result (`arXiv:1103.1662`), Tao's finite-checking/lower-bound paper (`arXiv:1701.02048`), Chow's Bohr-set/GAP work (`arXiv:1703.07016`), and Jensen's mixed-threshold Fourier formulas (`arXiv:2605.27941`).
+**Synthesis:** Added `07-reflections/diophantine-approximation-lonely-runner-s361.md`. Main reframing: Lonely Runner is a finite anti-Bohr boundary theorem. Classical approximation explains generic ease, but THM-357 says the hard case is all-protected endpoint incidence in `Q(V)=(k+1)lcm(V)`.
+**Formalization:** Added HYP-1813, the Bohr-boundary descent hypothesis: any all-protected endpoint core should force either a divisibility quotient or a structured progression/subquotient, and iterating the descent should expose a boundary lonely witness.
+**Knowledge updates:** Updated HYP-1802, the hypotheses index, and tangents T344-T346.
+**Next:** Add endpoint-core peeling; record quotient layers and generated subgroups through each peel; search protected endpoint sets for GAP-like structure; compare descent layers against Fejer/Riesz safe-product kernels.
+
 ## codex-2026-05-30-S360 - Lonely Runner Endpoint Formalization
 
 **Account:** Codex
