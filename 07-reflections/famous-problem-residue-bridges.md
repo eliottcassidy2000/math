@@ -118,6 +118,11 @@ visible in Q(V).
 
 That is HYP-1794.
 
+S357 sharpened this point: for finite open interval unions, "positive gap or
+boundary residue" is automatic.  The genuine LRC obstruction is an open cover
+with no surviving endpoint.  This becomes HYP-1802, the endpoint-protection
+hypergraph in the finite boundary quotient `Q(V)`.
+
 What to try next:
 
 1. Exhaust primitive speed sets for small `max(V)`.

@@ -152,6 +152,21 @@ Paley/Interval crossover looks phase-dominant: at T7 they are both regular with 
 **T325** #single-core #finite-state #signature-spectrum #H7-H21 | certainty: medium | source: opus-2026-05-30-S5
 The exact-kill H=63 mechanism reduces complete-core questions to the image of a weighted binary signature language. Treat `r_core(signature)` as a finite-state/transducer target problem; prove persistent gaps `r=3,10` or find counterexamples. This is the focused complete-Omega route to H=7/H=21.
 
+**T326** #lonely-runner #tight-stratum #endpoint-protection #open-cover | certainty: medium exploratory | source: codex-2026-05-30-S357
+HYP-1794's positive-gap/boundary split is a finite-open-cover trichotomy. The real LRC target is the missing third case: a full open cover of the time circle. Such a counterexample is equivalent to full forbidden measure plus every forbidden endpoint strictly protected by another interval, an arithmetic hypergraph in `Q(V)=(k+1)lcm(V)`. S357 scanned primitive boxes through `k<=7` ranges, found no open-cover candidates, and recovered the standard tight examples as rare boundary-only cases with first witness `1/(k+1)`. See HYP-1802 and `07-reflections/lonely-runner-tight-stratum-s357.md`.
+
+**T327** #caccetta-haggkvist #return-residue #layer-growth #digraphs | certainty: medium | source: codex-2026-05-30-S358
+CH is better read as a return-residue theorem than as raw cycle counting: high outdegree gives transport budget, no short cycle kills return residues, and rooted layer growth must keep expanding until it wraps. Candidate general feature vector: layer sizes, return-walk counts, second-neighborhood surplus, and backward-collision edges. See HYP-1803.
+
+**T328** #cayley-digraphs #zero-sum #kemperman #additive-growth | certainty: medium-high computational | source: codex-2026-05-30-S358
+For `Cay(Z/nZ,A)`, directed girth is first zero-sum word length in `A`. The S357 probe checked 1,612,949 cyclic sets (`n<=24`, `|A|<=floor(n/3)`), found zero CH violations and 62,966 tight sets. The interval family `A={1,...,d}`, `n=d(g-1)+1`, has exact pre-return growth `|j(A union {0})|=jd+1`, the clean Kemperman-equality model.
+
+**T329** #rainbow-ch #endpoint-transfer #collision-hypergraphs #transversals | certainty: low-medium | source: codex-2026-05-30-S358
+Rainbow CH replaces vertex out-stars by color classes, making a rainbow cycle a return residue using distinct source fibers. This rhymes with endpoint-transfer collision columns: non-private support-3 collisions and leaf-peelable incidence hypergraphs may be toy models for rainbow triangle obstructions.
+
+**T330** #triangle-case #second-neighborhood #flag-algebras #residue-inequalities | certainty: low-medium | source: codex-2026-05-30-S358
+The `k=3` CH case should be profiled by second-neighborhood surplus: for each vertex, compare `N+(v)`, `N++(v)`, and collision edges back to `v`. Flag-algebra triangle-free bounds can be viewed as certificates that a proposed surplus ledger cannot exist at high outdegree.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

@@ -2605,3 +2605,17 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** Paley and interval T7 are both regular with equal `t3` and broad rank-2 residues, but split sharply in alpha/fiber geometry: Paley `(80,7,0)` vs interval `(59,14,0)`.
 **Predictions:** A circulant `phase_profile` should predict the crossover better than max-loss deletion residue and should also feed Paley/circulant path-homology symbol-matrix experiments.
 **See:** `05-knowledge/hypotheses/HYP-1801-circulant-transition-phase-dominance.md`, `07-reflections/applied-residue-phase-incidence-programs.md`.
+
+## HYP-1802: Lonely Runner endpoint-protection obstruction (codex-2026-05-30 S357)
+**Status:** EXPLORATORY; sharpens HYP-1794 from a witness split to a counterexample certificate.
+**What:** A reduced LRC counterexample is exactly a full-measure open forbidden interval cover in which every forbidden endpoint is strictly protected by another forbidden interval. Every endpoint lies in `Q(V)=(k+1)lcm(V)`, and protection is the finite integer inequality `|v_j*((k+1)m+eps)-a*(k+1)*v_i| < v_i`.
+**Evidence:** `lonely_runner_tight_scan_s357.py` scanned primitive boxes through `(k,max_speed)=(3,24),(4,24),(5,20),(6,16),(7,14)`: no open-cover candidates appeared. Boundary-only sets were rare and recovered the standard small tight examples, with first witness `1/(k+1)` and quotient collapse `Q=k+1`.
+**Predictions:** The next finite object should be the endpoint-protection graph/hypergraph; a proof would show every full-measure forbidden union has an unprotected endpoint, hence a boundary lonely witness.
+**See:** `05-knowledge/hypotheses/HYP-1802-lonely-runner-endpoint-protection.md`, `04-computation/lonely_runner_tight_scan_s357.py`, `05-knowledge/results/lonely_runner_tight_scan_s357.out`, `07-reflections/lonely-runner-tight-stratum-s357.md`.
+
+## HYP-1803: Caccetta-Haggkvist criticality is return residue (codex-2026-05-30 S358)
+**Status:** EXPLORATORY bridge hypothesis; cyclic Cayley probe added.
+**What:** Near-extremal Caccetta-Haggkvist examples should be controlled by delayed return residue: rooted out-neighborhood growth avoids returning until the CH boundary, then a forced return appears. In Cayley digraphs this is the first zero-sum word length in the connection set.
+**Evidence:** `caccetta_haggkvist_residue_probe_s357.py` enumerates cyclic `A subset {1,...,n-1}` with `|A|<=floor(n/3)` for `n<=24`: `1,612,949` sets, `0` CH violations, `62,966` CH-tight sets, `1,114` tight sets with zero Kemperman slack until return. The interval family `A={1,...,d}` in `n=d(g-1)+1` has exact growth `|j(A union {0})|=jd+1` until first return length `g`.
+**Predictions:** General minimal CH counterexamples, if any, should mimic progression-like additive growth in a rooted layer quotient; triangle-free high-outdegree examples should minimize second-neighborhood surplus; rainbow CH variants should be readable as transversal return residues.
+**See:** `05-knowledge/hypotheses/HYP-1803-caccetta-haggkvist-return-residue.md`, `04-computation/caccetta_haggkvist_residue_probe_s357.py`, `05-knowledge/results/caccetta_haggkvist_residue_probe_s357.out`, `07-reflections/caccetta-haggkvist-return-residue.md`.

@@ -18,6 +18,27 @@
 **Knowledge update:** Expanded `00-navigation/HISTORIAN-TANGENT-INDEX.md` with a new `Third-Pass Ten-Lens Noise Ledger` containing 12 passes: session-title freebies, endpoint boundary microscopy, residue/projection dust, good-cut/bucket micro-mechanics, fugacity/alphabet sparks, 2-adic/Baer/design breadcrumbs, S71 golden-projective echoes, physics/chemistry/transformer/agency analogies, applications/codecs, Knuth/literature leads, random title breadcrumbs, and arithmetic proper-noun sparks.
 **Next:** Future historian sessions should treat this section as intentionally noisy: append newly found one-line oddities rather than over-pruning them into only mature themes.
 
+## codex-2026-05-30-S358 - Caccetta-Haggkvist Return Residue
+
+**Account:** Codex
+**Exploration:** Focused the S356 Caccetta-Haggkvist tangent into a return-time/growth-residue program. Web anchors included the AIM problem statement, Nathanson's exposition of Hamidoune's additive proof for Cayley and vertex-transitive digraphs, Aharoni-Berger-Chudnovsky-Guo-Zerbib's nonuniform/rainbow CH paper, and Hladky-Kral-Norin's flag-algebra triangle-free bound.
+**Computation:** Added `04-computation/caccetta_haggkvist_residue_probe_s357.py`, a cyclic Cayley probe where directed cycles are first zero-sum words in a connection set `A`. It records `ceil(n/|A|)`, first zero-sum length, growth of `A union {0}`, Kemperman slack, and pre-return residue.
+**Result:** Stored `05-knowledge/results/caccetta_haggkvist_residue_probe_s357.out`. Exhaustive cyclic scan for `n<=24`, `|A|<=floor(n/3)` checked `1,612,949` sets, found `0` CH violations, `62,966` CH-tight sets, and `1,114` tight sets with zero Kemperman slack until return. The canonical interval family `A={1,...,d}` in `n=d(g-1)+1` has exact pre-return growth `|j(A union {0})|=jd+1`.
+**Knowledge updates:** Added HYP-1803, T327-T330, and `07-reflections/caccetta-haggkvist-return-residue.md`; updated the hypothesis/results indices.
+**Main idea:** CH should be attacked as delayed return residue. High outdegree supplies transport budget; absence of short cycles kills return residues; the layers must imitate additive progression growth; at the CH boundary that fake progression must wrap and return. The missing general tool is a quotient that makes arbitrary rooted layer growth behave like a sumset.
+**Next priorities:** Classify cyclic tight sets by unit/subgroup quotients; add a general digraph CH residue extractor (`L_j(v)`, return walks, second-neighborhood surplus, backward collisions); compare triangle-free high-outdegree samples to Cayley interval profiles; build a rainbow-cycle toy extractor and compare with endpoint collision hypergraphs.
+
+## codex-2026-05-30-S357 - Lonely Runner Tight Stratum
+
+**Account:** Codex
+**User prompt:** Spend the session investigating connections with the Lonely Runner Problem and try to solve it.
+**External status check:** Current frontier is not a full solution: `arXiv:2604.23906` (submitted 2026-04-26) gives a computer-assisted proof for `k in {10,11,12}` nonzero speeds, i.e. up to thirteen total runners. `arXiv:2605.27941` (submitted 2026-05-27) studies mixed thresholds with safe/unsafe Fourier indicator functions, arithmetic-progression summation, and exact two-speed integral formulas.
+**Mathematical correction:** HYP-1794's positive-gap/boundary-witness split is a finite-open-cover trichotomy. The real missing case is a full open forbidden cover of the time circle. A counterexample is equivalent to full forbidden measure plus every forbidden endpoint strictly protected by another forbidden interval.
+**Computation:** Added `04-computation/lonely_runner_tight_scan_s357.py` and stored `05-knowledge/results/lonely_runner_tight_scan_s357.out`. The exact scan enumerates primitive boxes through `(k,max_speed)=(3,24),(4,24),(5,20),(6,16),(7,14)`, separates positive-gap/boundary-only/open-cover cases, and checks known sporadic tight examples.
+**Result:** No open-cover candidates appeared. Boundary-only instances were rare and matched the standard small tight examples: initial segments plus `(1,3,4,7)`, `(1,3,4,5,9)`, `(1,2,3,4,5,7,12)`, and `(1,4,5,6,7,11,13)`. In all scanned/known tight cases, the first witness is `1/(k+1)` and the boundary quotient collapses to `k+1`.
+**Knowledge updates:** Added HYP-1802, T326, `07-reflections/lonely-runner-tight-stratum-s357.md`, and results index entries.
+**Next:** Build the endpoint-protection graph: vertices are forbidden endpoints in `Q(V)=(k+1)lcm(V)`, and an edge records one interval strictly covering another speed's endpoint. Search for local motifs that would force or forbid an all-protected full-measure cover, then compare against Rosenfeld/Sungkawichai/Trakulthongchai improper residue tuples.
+
 ## codex-2026-05-30-representation-lens - Root-Sign Representation Synthesis
 
 **Account:** Codex

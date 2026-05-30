@@ -144,6 +144,13 @@ So a lonely time is either a positive quotient gap or a boundary residue.  The
 initial speed segments `{1,...,k}` are boundary-only cases; mixed and random
 samples in `lonely_runner_residue_probe_s356.py` have positive gaps.
 
+S357 sharpened this: the positive-gap/boundary split is automatic for finite
+open interval unions.  A genuine counterexample would be a full open cover of
+the time circle, equivalently full forbidden measure plus every forbidden
+endpoint strictly protected by another forbidden interval.  This endpoint
+protection relation is a finite arithmetic hypergraph in `Q(V)`.  See
+HYP-1802 and `07-reflections/lonely-runner-tight-stratum-s357.md`.
+
 The same reading is weaker but visible elsewhere:
 
 - union-closed sets: coordinate frequencies are shadows; entropy under union

@@ -6,6 +6,7 @@ related:
   - HYP-1781
   - HYP-1783
   - HYP-1785
+  - HYP-1802
   - THM-349
   - THM-355
 ---
@@ -45,6 +46,17 @@ The conjectural witness is therefore either:
 The hypothesis is that every minimal counterexample candidate has a detectable
 transport residue in this boundary quotient before one needs continuous
 Diophantine approximation.
+
+## S357 Update
+
+The positive-gap/boundary-residue split is a finite-open-cover trichotomy, not
+the hard part by itself.  Since the forbidden set is a finite union of open
+intervals, any nonempty complement is either a positive interval or a finite
+set of boundary points.
+
+Thus the sharpened target is HYP-1802: a genuine counterexample would be a
+full open cover of the circle, equivalently full forbidden measure plus every
+forbidden endpoint strictly protected by another forbidden interval.
 
 ## Why This Belongs To Residue Calculus
 
@@ -127,8 +139,8 @@ boundary residue pair.
    vanish.
 4. Compare the hardest speed sets against known LRC proof reductions and
    minimal-counterexample bounds.
-5. Try to prove that every no-positive-gap family must contain a boundary
-   witness in the finite quotient `Q(V)`.
+5. Build the endpoint-protection graph of HYP-1802 and try to prove that a
+   full-measure forbidden union must have an unprotected endpoint.
 
 ## Sources
 
