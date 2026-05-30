@@ -106,9 +106,22 @@ THM-348:
 ```
 
 This is the exact half-line conservation law behind the displayed unordered
-formula.  The remaining Lean step for the full tiling statement is the
-fixed-point-free involution pairing `(x,u) <-> (x xor u,u)`, which converts
-internal oriented half-lines into unordered self-lines counted twice.
+formula.
+
+S2 adds THM-350, the next abstract Lean layer.  It defines the partner map
+`(x,u) -> (step u x,u)`, proves internal half-lines are closed under that map
+when the selected moves are involutions, proves fixed-point-free moves have no
+self-partnered internal half-lines, and proves the unordered balance whenever
+`selfHalf.card` is even:
+
+```text
+2*internalLineCount_b(M) + |crossHalf_b(M)| = |q^{-1}(b)| * |M|.
+```
+
+Thus the remaining Lean step for the full tiling statement is now only the
+generic finite-cardinality/orbit lemma saying that a fixed-point-free
+involution has even cardinality, followed by the Boolean-mask specialization
+`step(u,x)=x xor u` for nonzero masks.
 
 ## Computation
 
@@ -145,6 +158,7 @@ half-line balance. This is useful for:
 - MISTAKE-031 and MISTAKE-033: tiling complement is not tournament complement.
 - THM-345: merged-bucket parity and Hamming-layer transport constraints.
 - THM-348: finite bucket half-line balance (Lean core).
+- THM-350: finite unordered bucket balance layer.
 - INV-194: merged tiling bucket constraints.
 - INV-236: projection-defect profiles across tournament and even-graph quotients.
 - `07-reflections/merged-tiling-bucket-constraints.md`.

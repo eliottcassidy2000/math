@@ -2422,12 +2422,12 @@ Source: HYP-1773-endpoint-transfer-recursive-boundary.md, endpoint_transfer_buck
 Source: HYP-1774-even-graph-endpoint-rank-defect.md, THM-266-endpoint-transfer-boundary.md, even_graph_endpoint_transfer_s95.py
 
 ## HYP-1775: Quotient bucket balance factors through involution pairing (kind-pasteur-2026-05-30-S1)
-**Status:** PARTIALLY PROVED IN LEAN; tiling specialization OPEN in Lean.
+**Status:** MOSTLY PROVED IN LEAN ABSTRACTLY; tiling specialization OPEN in Lean.
 **Statement:** The general quotient-bucket balance theorem has two independent components: (1) a finite-set half-line conservation law, and (2) a fixed-point-free involution pairing on internal half-lines. Once both are formalized, the unordered tiling identity `2*self_b + cross_b = |bucket_b|*|M|` should follow by specialization with `step(u,x)=x xor u`.
-**Evidence:** THM-348 / `TournamentH7.BucketBalance` proves the oriented component in Lean: `|selfHalf_b| + |crossHalf_b| = |fiber_b|*|M|`, plus the zero-cross closure criterion. THM-346 proves the full unordered statement informally/computationally. The missing Lean bridge is exactly the mask pairing `(x,u) <-> (x xor u,u)` for nonzero masks.
-**Implication:** The formalization path for THM-346 is smaller than it looked. The generic half-line theorem is independent of tournaments and can also serve as an engineering checksum for any finite-state perturbation feature.
-**Next:** Add an abstract fixed-point-free involution lemma for finite move actions, then instantiate it for Boolean hypercube masks and derive THM-346 in Lean.
-**See:** THM-346, THM-348, `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`, `05-knowledge/results/lean_bucket_balance_kind_pasteur_2026-05-30-S1.out`, INV-194.
+**Evidence:** THM-348 / `TournamentH7.BucketBalance` proves the oriented component in Lean: `|selfHalf_b| + |crossHalf_b| = |fiber_b|*|M|`, plus the zero-cross closure criterion. THM-350 adds the abstract unordered layer: partnering by `(step u x,u)` preserves internal half-lines for involutive moves, fixed-point-free moves have no self-paired internal half-lines, and the unordered balance follows from `Even selfHalf.card`. THM-346 proves the full unordered tiling statement informally/computationally.
+**Implication:** The formalization path for THM-346 is smaller than it looked. The remaining bridge is now the generic finite orbit-cardinality theorem for fixed-point-free involutions plus the Boolean-mask fact that `x xor u != x` when `u != 0`.
+**Next:** Prove the finite fixed-point-free involution cardinality lemma in Lean, instantiate it for Boolean hypercube masks, and derive full THM-346 from THM-350.
+**See:** THM-346, THM-348, THM-350, `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`, `05-knowledge/results/lean_verify_unordered_kind_pasteur_2026-05-30-S2.out`, INV-194.
 
 ## HYP-1776: Odd-cycle disjointness features improve Tournament TDA fingerprints (opus-2026-05-29-S15)
 **Status:** OPEN engineering hypothesis; feature layer implemented.
@@ -2443,3 +2443,11 @@ Source: `04-computation/tournament_tda.py`, `05-knowledge/results/tournament_tda
 **Geometry:** At n=6, wiggly half-lines with `|Delta g|=1,2,3` are sea-dominated (73.8%, 67.7%, 72.7% sea), while the extreme `|Delta g|=5` jump is pure spine. The interval gas controls possible heights; quotient transport controls where height leaks into the merged metagraph.
 **Next:** Prove this from HYP-1764 or find the first n=7 counterexample; add normalized `Delta g` transport features to `tournament_tda.py`.
 Source: `04-computation/goodcut_transport_excess_s15.py`, `05-knowledge/results/goodcut_transport_excess_s15.out`, `07-reflections/quotient-transport-and-good-cut-gas.md`.
+
+## HYP-1778: Bucket balance formalization reduces to finite involution orbits (kind-pasteur-2026-05-30-S2)
+**Status:** OPEN Lean bridge; abstract local lemmas PROVED.
+**What:** The remaining formal gap between THM-350 and full tiling THM-346 should be discharged by a reusable finite theorem: every fixed-point-free involution on a finite type has even cardinality, equivalently its elements split into two-element orbits.
+**Evidence:** `TournamentH7.BucketBalance` now proves the partner map is involutive under involutive moves, preserves `selfHalf`, and has no fixed points under fixed-point-free moves. It also proves the unordered balance from `Even selfHalf.card`. The only global ingredient not yet formalized is converting those local partner facts into even cardinality.
+**Prediction:** A generic lemma such as `Finset.card_even_of_fixedPointFree_involutive` will immediately yield `Even (selfHalf q step moves b).card` for the partner action, and the Boolean tiling instance will reduce to the elementary identity `x xor u = x -> u = 0`.
+**Next:** Formalize the finite orbit lemma without project axioms; then specialize to nonzero masks in the tiling cube and make THM-346 fully Lean.
+**See:** THM-346, THM-350, `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`, `07-reflections/unordered-bucket-balance-orbits.md`.

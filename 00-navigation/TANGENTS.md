@@ -64,6 +64,12 @@ Good-cut buckets are exactly a 1D interval-cover gas on the cut path. Connected 
 **T296** #quotient-transport #good-cut-gas #spine-ribs-sea | certainty: high (n=3..6 exact) | source: opus-2026-05-29-S15
 The interval-union good-cut gas and THM-346 quotient transport are the same conservation law at two scales. Ordered half-line scans show `Delta g != 0` always crosses a merged tournament boundary in tested layers, and n=6 nonzero height changes are mostly sea except the all-down-to-top jump, which is pure spine. The `Delta g=0` stratum is where self-loops, even-only defects, ribs, and sea mass hide. See HYP-1777 and `07-reflections/quotient-transport-and-good-cut-gas.md`.
 
+**T297** #bucket-balance #finite-orbits #lean #unordered-lines | certainty: high (Lean abstract layer) | source: kind-pasteur-2026-05-30-S2
+The unordered bucket formula has been reduced in Lean to a finite orbit-parity lemma. `BucketBalance.pairHalf` closes internal half-lines under involutive moves, fixed-point-free moves give no self-partners, and the unordered balance follows from `Even selfHalf.card`. The remaining THM-346 bridge is no longer bucket-specific: prove finite fixed-point-free involutions have even cardinality, then instantiate `x xor u`. See THM-350 and HYP-1778.
+
+**T298** #good-cut-height #strong-connectivity #staircase #lean | certainty: proved in Lean | source: codex-2026-05-30
+The top good-cut bucket is exactly the strongly connected stratum of the concrete staircase tournament family. `StTiling.toTournament` now realizes a tiling as a base-path tournament, `IsGoodCut` is equivalent to THM-330's `CrossesUpward`, and `goodCutCount = n-1` iff `IsStronglyConnected`. This turns good-cut height from a pure interval-cover statistic into a graded approach to SC; all-up is the explicit SC witness and all-down the explicit non-SC witness.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

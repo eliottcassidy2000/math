@@ -129,7 +129,9 @@ See `01-canon/theorems/THM-349-good-cut-interval-union-recurrence.md`.
 
 ## Connection to SC Cut Theorem
 
-By THM-330, SC ⟺ |G|=n-1. The hierarchy is:
+By THM-330 plus the concrete bridge in `TournamentH7.StaircaseConnectivity`,
+Lean now proves SC iff `|G|=n-1` for the tournament induced by a staircase
+tiling. The hierarchy is:
 - |G|=0: transitive (maximum hierarchy)
 - |G|=1: impossible
 - |G|≥2: partial connectivity
@@ -139,7 +141,8 @@ The jump from 0 to ≥2 good cuts (skipping 1) reflects the binary tile structur
 
 ## Lean Formalization
 
-`TournamentH7.GoodCuts` formalizes the axiom-free core:
+`TournamentH7.GoodCuts` and `TournamentH7.StaircaseConnectivity` formalize
+the axiom-free core:
 
 - `StTiling.goodCutCount_ne_one`: no tiling has exactly one good cut.
 - `StTiling.goodCutCount_eq_zero_iff_all_down`: bucket 0 is exactly all-down.
@@ -148,5 +151,12 @@ The jump from 0 to ≥2 good cuts (skipping 1) reflects the binary tile structur
 - `StTiling.goodCutCount_mono`: turning more tiles upward can only add good cuts.
 - `StTiling.goodCutCount_eq_top_iff_all_cuts_good`: top bucket iff every legal cut is good.
 - `StTiling.goodCutCount_reflect`: grid reflection preserves `g`.
+- `StTiling.toTournament_hasBasePath`: concrete staircase tilings induce
+  base-path tournaments.
+- `StTiling.isGoodCut_iff_crossesUpward_toTournament`: good cuts translate to
+  THM-330 crossing-upward cuts.
+- `StTiling.goodCutCount_eq_top_iff_toTournament_stronglyConnected`: top bucket
+  iff the induced tournament is strongly connected.
 
-The S15 audit shows these depend only on Lean foundations, not on project-specific axioms.
+The S15/Codex audits show these depend only on Lean foundations, not on
+project-specific axioms.

@@ -1,7 +1,7 @@
 # Good-Cut Spectrum Complete
 
 **Session:** codex-2026-05-30
-**Lean:** `TournamentH7.GoodCuts`, `TournamentH7.BucketBalance`
+**Lean:** `TournamentH7.GoodCuts`, `TournamentH7.StaircaseConnectivity`, `TournamentH7.BucketBalance`
 
 The good-cut coordinate has now split into two clean layers.
 
@@ -45,9 +45,10 @@ spectrum theorem says "there are no other interval-geometric obstructions."
 Any missing value in a later quotient, H-layer, or isomorphism-class statistic
 must come from tournament structure, not from the cut-union coordinate itself.
 
-## The Next Formal Bridge
+## The Formal Bridge Is Now Closed
 
-The theorem still lives at the tiling-coordinate level. The intended bridge is:
+The spectrum theorem began at the tiling-coordinate level. The bridge is now
+formalized:
 
 ```text
 StTiling.goodCutCount = n-1
@@ -55,10 +56,13 @@ StTiling.goodCutCount = n-1
     <=> the induced base-path tournament is strongly connected.
 ```
 
-The last equivalence is already Lean-proved as `thm330_SC_iff_all_cuts_crossing`
-for abstract base-path tournaments. What remains is the concrete constructor
-`StTiling.toTournament` plus the lemma translating `StTiling.IsGoodCut` into
-`CrossesUpward` for that tournament. That would make the slogan precise:
+Lean now supplies the concrete constructor and translation lemmas:
+
+- `StTiling.toTournament_hasBasePath`;
+- `StTiling.isGoodCut_iff_crossesUpward_toTournament`;
+- `StTiling.goodCutCount_eq_top_iff_toTournament_stronglyConnected`.
+
+The slogan is now a theorem:
 
 > top good-cut bucket is exactly strong connectivity for the staircase model.
 

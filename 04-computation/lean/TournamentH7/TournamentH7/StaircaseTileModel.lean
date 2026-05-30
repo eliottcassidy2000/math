@@ -32,6 +32,7 @@
 import TournamentH7.Basic
 import TournamentH7.Tilings
 import TournamentH7.GridReflection
+import Mathlib.Tactic
 
 namespace Tournament
 
@@ -149,6 +150,139 @@ def StTiling.arc (b : StTiling n) (i j : Fin n) : Bool :=
   else if h₄ : i.val + 2 ≤ j.val then
     b ⟨j, i, h₄⟩
   else false  -- unreachable when i ≠ j
+
+@[simp] lemma StTiling.arc_self (b : StTiling n) (i : Fin n) :
+    b.arc i i = false := by
+  simp [StTiling.arc]
+
+lemma StTiling.arc_succ_down (b : StTiling n) (i : Fin n)
+    (h : i.val + 1 < n) :
+    b.arc ⟨i.val + 1, h⟩ i = true := by
+  have hne : (⟨i.val + 1, h⟩ : Fin n) ≠ i := by
+    intro heq
+    have := congrArg Fin.val heq
+    simp at this
+  simp [StTiling.arc, hne]
+
+lemma StTiling.arc_succ_up (b : StTiling n) (i : Fin n)
+    (h : i.val + 1 < n) :
+    b.arc i ⟨i.val + 1, h⟩ = false := by
+  have hne : i ≠ (⟨i.val + 1, h⟩ : Fin n) := by
+    intro heq
+    have := congrArg Fin.val heq
+    simp at this
+  have hnot : ¬ i.val = (⟨i.val + 1, h⟩ : Fin n).val + 1 := by
+    simp
+    omega
+  simp [StTiling.arc, hne, hnot]
+
+lemma StTiling.arc_nonconsec_down (b : StTiling n) {hi lo : Fin n}
+    (hgap : lo.val + 2 ≤ hi.val) :
+    b.arc hi lo = !(b ⟨hi, lo, hgap⟩) := by
+  have hne : hi ≠ lo := by
+    intro heq
+    have := congrArg Fin.val heq
+    omega
+  have hnot₁ : ¬ hi.val = lo.val + 1 := by omega
+  have hnot₂ : ¬ lo.val = hi.val + 1 := by omega
+  simp [StTiling.arc, hne, hnot₁, hnot₂, hgap]
+
+lemma StTiling.arc_nonconsec_up (b : StTiling n) {lo hi : Fin n}
+    (hgap : lo.val + 2 ≤ hi.val) :
+    b.arc lo hi = b ⟨hi, lo, hgap⟩ := by
+  have hne : lo ≠ hi := by
+    intro heq
+    have := congrArg Fin.val heq
+    omega
+  have hnot₁ : ¬ lo.val = hi.val + 1 := by omega
+  have hnot₂ : ¬ hi.val = lo.val + 1 := by omega
+  have hnot₃ : ¬ hi.val + 2 ≤ lo.val := by omega
+  simp [StTiling.arc, hne, hnot₁, hnot₂, hnot₃, hgap]
+
+lemma StTiling.arc_tile_down (b : StTiling n) (t : StTile n) :
+    b.arc t.hi t.lo = !(b t) := by
+  cases t
+  exact StTiling.arc_nonconsec_down b ‹_›
+
+lemma StTiling.arc_tile_up (b : StTiling n) (t : StTile n) :
+    b.arc t.lo t.hi = b t := by
+  cases t
+  exact StTiling.arc_nonconsec_up b ‹_›
+
+private lemma StTiling.arc_exactly_one (b : StTiling n) {i j : Fin n}
+    (hij : i ≠ j) :
+    (b.arc i j = true ∧ b.arc j i = false) ∨
+    (b.arc i j = false ∧ b.arc j i = true) := by
+  have hval_ne : i.val ≠ j.val := fun h => hij (Fin.ext h)
+  rcases lt_or_gt_of_ne hval_ne with hlt | hgt
+  · by_cases hsucc : i.val + 1 = j.val
+    · have hsucc_lt : i.val + 1 < n := by
+        rw [hsucc]
+        exact j.is_lt
+      have hj_eq : j = ⟨i.val + 1, hsucc_lt⟩ := Fin.ext hsucc.symm
+      subst hj_eq
+      right
+      exact ⟨StTiling.arc_succ_up b i hsucc_lt,
+        StTiling.arc_succ_down b i hsucc_lt⟩
+    · have hgap : i.val + 2 ≤ j.val := by omega
+      let t : StTile n := ⟨j, i, hgap⟩
+      have hij_arc : b.arc i j = b t := StTiling.arc_nonconsec_up b hgap
+      have hji_arc : b.arc j i = !(b t) := StTiling.arc_nonconsec_down b hgap
+      cases ht : b t
+      · right
+        rw [hij_arc, hji_arc, ht]
+        simp
+      · left
+        rw [hij_arc, hji_arc, ht]
+        simp
+  · by_cases hsucc : j.val + 1 = i.val
+    · have hsucc_lt : j.val + 1 < n := by
+        rw [hsucc]
+        exact i.is_lt
+      have hi_eq : i = ⟨j.val + 1, hsucc_lt⟩ := Fin.ext hsucc.symm
+      subst hi_eq
+      left
+      exact ⟨StTiling.arc_succ_down b j hsucc_lt,
+        StTiling.arc_succ_up b j hsucc_lt⟩
+    · have hgap : j.val + 2 ≤ i.val := by omega
+      let t : StTile n := ⟨i, j, hgap⟩
+      have hij_arc : b.arc i j = !(b t) := StTiling.arc_nonconsec_down b hgap
+      have hji_arc : b.arc j i = b t := StTiling.arc_nonconsec_up b hgap
+      cases ht : b t
+      · left
+        rw [hij_arc, hji_arc, ht]
+        simp
+      · right
+        rw [hij_arc, hji_arc, ht]
+        simp
+
+/-- The tournament induced by a concrete staircase tiling. -/
+def StTiling.toTournament (b : StTiling n) : Tournament n where
+  arc := b.arc
+  irrefl := StTiling.arc_self b
+  total := by
+    intro i j hij
+    rcases StTiling.arc_exactly_one b hij with h | h
+    · exact Or.inl h.1
+    · exact Or.inr h.2
+  asym := by
+    intro i j hboth
+    by_cases hij : i = j
+    · subst hij
+      simp at hboth
+    · rcases StTiling.arc_exactly_one b hij with h | h
+      · rw [h.2] at hboth
+        exact Bool.false_eq_true.mp hboth.2
+      · rw [h.1] at hboth
+        exact Bool.false_eq_true.mp hboth.1
+
+@[simp] lemma StTiling.toTournament_arc (b : StTiling n) (i j : Fin n) :
+    b.toTournament.arc i j = b.arc i j := rfl
+
+theorem StTiling.toTournament_hasBasePath (b : StTiling n) :
+    HasBasePath b.toTournament := by
+  intro i h
+  exact StTiling.arc_succ_down b i h
 
 /-! ### THM-280 statement (axiomatised; proof requires further work) -/
 

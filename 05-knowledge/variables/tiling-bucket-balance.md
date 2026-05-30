@@ -2,7 +2,7 @@
 
 **Symbol:** `bucket_balance_q,M(b)`
 **Type:** integer identity / quotient-matrix row constraint
-**Defined in:** THM-346; Lean half-line core THM-348
+**Defined in:** THM-346; Lean half-line core THM-348; unordered Lean layer THM-350
 
 ## Definition
 
@@ -33,7 +33,10 @@ Lean now proves the oriented finite-set version (THM-348):
 ```
 
 The full unordered tiling formula is this half-line identity plus the
-mask-involution pairing `(x,u) <-> (x xor u,u)` on internal lines.
+mask-involution pairing `(x,u) <-> (x xor u,u)` on internal lines. THM-350
+proves the abstract unordered algebra in Lean once `selfHalf_b(M)` has even
+cardinality, and proves the partner-map closure/non-self-pairing facts needed
+to derive that evenness from a fixed-point-free involution.
 
 ## Values at Small n
 
@@ -57,6 +60,9 @@ It had 0 violations for `n=3..6` in both quotients.
 - `2*self_b(M) + incident_cross_b(M) = |q^{-1}(b)|*|M|` (THM-346).
 - `|selfHalf_b(M)| + |crossHalf_b(M)| = |q^{-1}(b)|*|M|`
   (THM-348, Lean).
+- If `Even |selfHalf_b(M)|`, then
+  `2*internalLineCount_b(M) + |crossHalf_b(M)| = |q^{-1}(b)|*|M|`
+  (THM-350, Lean).
 - If `|M|=1`, then `incident_cross_b(M) == |q^{-1}(b)| mod 2`.
 - Normalized escape plus neutrality:
 
@@ -84,7 +90,9 @@ escape_b + neutral_b = 1.
 - `04-computation/tiling_quotient_bucket_balance_s5.py`
 - `05-knowledge/results/tiling_quotient_bucket_balance_s5.out`
 - `05-knowledge/results/lean_bucket_balance_kind_pasteur_2026-05-30-S1.out`
+- `05-knowledge/results/lean_verify_unordered_kind_pasteur_2026-05-30-S2.out`
 - `07-reflections/merged-tiling-bucket-constraints.md`
+- `07-reflections/unordered-bucket-balance-orbits.md`
 
 ## Tags
 

@@ -74,7 +74,8 @@ et al.).
 | `StaircaseTileModel.lean` | concrete tile coordinates, THM-280 arc statement | axiom |
 | `StaircaseModel.lean` | THM-330 (SC cut theorem) — **FULLY PROVED** | proved |
 | `GoodCuts.lean` | good-cut buckets, exact spectrum `{0} ∪ {2,...,n-1}`, reflection invariance | **PROVED** |
-| `BucketBalance.lean` | abstract finite bucket half-line balance | **PROVED** |
+| `StaircaseConnectivity.lean` | concrete tilings induce tournaments; top good-cut bucket iff SC | **PROVED** |
+| `BucketBalance.lean` | abstract finite bucket half-line and unordered balance | **PROVED** |
 | `SelfComplementary.lean` | `IsSelfFlip`, `PaleyLike`, regular ⟹ ¬SF | axiom + proved corollaries |
 | `Iso.lean` | `TournamentIso`, `≅` | proved |
 | `IsoProperties.lean` | iso-invariants — **PROVED IN LEAN** | proved |
@@ -174,8 +175,16 @@ external/project axioms that are already in their proof OR — best case
 - `exists_goodCutCount_eq_of_allowed` — every bucket size 2..n-1 is realised.
 - `goodCutCount_spectrum` — exact good-cut bucket spectrum: precisely `{0} ∪ {2,...,n-1}`.
 - `goodCutCount_allUp` / `goodCutCount_complement_of_all_down` — all-up and complement-of-bottom hit the top bucket.
+- `StTiling.toTournament_hasBasePath` — the tournament induced by a concrete staircase tiling has the base path.
+- `StTiling.isGoodCut_iff_crossesUpward_toTournament` — concrete good cuts are exactly THM-330 crossing-upward cuts.
+- `StTiling.goodCutCount_eq_top_iff_toTournament_stronglyConnected` — the top good-cut bucket is exactly strong connectivity.
+- `StTiling.allUp_toTournament_stronglyConnected` / `StTiling.allDown_toTournament_not_stronglyConnected`
+  — explicit SC and non-SC witnesses in the concrete tiling family.
 - `BucketBalance.halfLine_balance` — oriented incident half-lines split into internal and escaping half-lines.
 - `BucketBalance.crossHalf_card_eq_zero_iff` — no escaping half-lines iff every move from the bucket remains in it.
+- `BucketBalance.pairHalf_mem_selfHalf` — involutive moves partner internal half-lines with internal half-lines.
+- `BucketBalance.pairHalf_ne_of_fixedPointFree` — fixed-point-free moves give no self-partnered internal half-lines.
+- `BucketBalance.unordered_balance_of_even_selfHalf` — even internal half-line cardinality yields the unordered bucket balance.
 - `threeCycle_isRegular` — 3-cycle is regular.
 - `transitive_hasBasePath` — transitive tournament has base path.
 - `transitive_not_regular` — transitive (n ≥ 2) is not regular.
@@ -230,8 +239,8 @@ lake build TournamentH7
 
 ## Status snapshot (oracle/kind-pasteur-2026-05-29 family)
 
-- **2968 build targets** clean for `TournamentH7.Verify` after adding
-  `BucketBalance.lean` (kind-pasteur-2026-05-30-S1).
+- **2974 build targets** clean for `TournamentH7` after adding
+  `StaircaseConnectivity.lean` (codex-2026-05-30).
 - **20+ project-novel theorems** formalised.
 - **25+ audited theorems**, with a growing axiom-free core (iso-invariants,
   THM-330, THM-316 endpoint facts, concrete examples).
@@ -239,11 +248,17 @@ lake build TournamentH7
   equivalent to an upward tile, every tiling has `goodCutCount = 0` or
   `2 ≤ goodCutCount`, and for n≥3 every allowed size `0` or `2..n-1`
   is realised.
-- **Abstract bucket half-line balance formalised**: THM-348 proves any finite
+- **Concrete staircase connectivity bridge completed**: `StTiling.toTournament`
+  is now a valid base-path tournament, good cuts translate to crossing-upward
+  cuts, and `goodCutCount = n - 1` iff the induced tournament is strongly
+  connected.
+- **Abstract bucket balance layers formalised**: THM-348 proves any finite
   bucket map and finite move set satisfies
-  `|selfHalf| + |crossHalf| = |fiber| * |moves|`; this is the Lean core under
-  THM-346.
+  `|selfHalf| + |crossHalf| = |fiber| * |moves|`; THM-350 proves the
+  partner-map and even-cardinality unordered layer. The remaining full THM-346
+  bridge is the finite fixed-point-free involution cardinality lemma plus the
+  Boolean mask specialization.
 - **THM-330 FULLY PROVED** (both directions, no project axiom).
 - **THM-316 abstract anti-palindrome PROVED** by the endpoint-reversal
   bijection `σ ↦ φ * σ * vertexReversal n`.
-- Single SUBMISSION.md, this ARCHITECTURE.md, and 2 reflections in `07-reflections/`.
+- Single SUBMISSION.md, this ARCHITECTURE.md, and supporting reflections in `07-reflections/`.

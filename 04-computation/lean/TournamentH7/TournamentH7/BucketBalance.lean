@@ -143,6 +143,109 @@ theorem crossHalf_card_eq_total_of_selfHalf_zero [Fintype alpha] [DecidableEq be
   have hbal := halfLine_balance q step moves b
   omega
 
+/-! ### From oriented half-lines to unordered internal lines -/
+
+/-- The natural partner of an oriented half-line `(x,u)` is `(step u x,u)`. -/
+def pairHalf (step : move -> alpha -> alpha) (xu : alpha × move) : alpha × move :=
+  (step xu.2 xu.1, xu.2)
+
+@[simp] theorem pairHalf_fst (step : move -> alpha -> alpha) (xu : alpha × move) :
+    (pairHalf step xu).1 = step xu.2 xu.1 := rfl
+
+@[simp] theorem pairHalf_snd (step : move -> alpha -> alpha) (xu : alpha × move) :
+    (pairHalf step xu).2 = xu.2 := rfl
+
+/-- If every move is an involution, then `pairHalf` is an involution. -/
+theorem pairHalf_pairHalf (step : move -> alpha -> alpha)
+    (hstep : ∀ u, Function.Involutive (step u)) (xu : alpha × move) :
+    pairHalf step (pairHalf step xu) = xu := by
+  rcases xu with ⟨x, u⟩
+  simp [pairHalf, hstep u x]
+
+/-- Internal half-lines are closed under the partner map when the chosen move
+is involutive. -/
+theorem pairHalf_mem_selfHalf [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hstep : ∀ u, u ∈ moves -> Function.Involutive (step u))
+    {xu : alpha × move} (hxu : xu ∈ selfHalf q step moves b) :
+    pairHalf step xu ∈ selfHalf q step moves b := by
+  classical
+  rcases xu with ⟨x, u⟩
+  have hfacts : (x ∈ fiber q b ∧ u ∈ moves) ∧ q (step u x) = b := by
+    simpa [selfHalf, incidentHalf] using hxu
+  have hxq : q x = b := by
+    simpa [fiber] using hfacts.1.1
+  have hback : q (step u (step u x)) = b := by
+    rw [hstep u hfacts.1.2 x]
+    exact hxq
+  simp [selfHalf, incidentHalf, pairHalf, fiber, hfacts.1.2, hfacts.2, hback]
+
+/-- If the selected move has no fixed points, an internal half-line and its
+partner are distinct. -/
+theorem pairHalf_ne_of_fixedPointFree [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hfixed : ∀ u, u ∈ moves -> ∀ x, step u x ≠ x)
+    {xu : alpha × move} (hxu : xu ∈ selfHalf q step moves b) :
+    pairHalf step xu ≠ xu := by
+  classical
+  rcases xu with ⟨x, u⟩
+  have hfacts : (x ∈ fiber q b ∧ u ∈ moves) ∧ q (step u x) = b := by
+    simpa [selfHalf, incidentHalf] using hxu
+  intro hpair
+  have hx : step u x = x := by
+    simpa [pairHalf] using congrArg Prod.fst hpair
+  exact hfixed u hfacts.1.2 x hx
+
+/-- The internal unordered line count obtained by pairing internal half-lines. -/
+def internalLineCount [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) : ℕ :=
+  (selfHalf q step moves b).card / 2
+
+theorem two_mul_internalLineCount_eq_selfHalf_card_of_even
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hself : Even (selfHalf q step moves b).card) :
+    2 * internalLineCount q step moves b =
+      (selfHalf q step moves b).card := by
+  classical
+  unfold internalLineCount
+  rcases hself with ⟨k, hk⟩
+  rw [hk]
+  omega
+
+/-- Unordered bucket balance once the internal oriented half-lines have been
+paired into `internal` unordered lines. -/
+theorem unordered_balance_of_selfHalf_card_eq_two_mul
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta) (internal : ℕ)
+    (hinternal : (selfHalf q step moves b).card = 2 * internal) :
+    2 * internal + (crossHalf q step moves b).card =
+      (fiber q b).card * moves.card := by
+  classical
+  have hbal := halfLine_balance q step moves b
+  omega
+
+/-- Unordered bucket balance in the common case where the internal oriented
+half-lines have even cardinality. -/
+theorem unordered_balance_of_even_selfHalf
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hself : Even (selfHalf q step moves b).card) :
+    2 * internalLineCount q step moves b +
+        (crossHalf q step moves b).card =
+      (fiber q b).card * moves.card := by
+  classical
+  have htwo :=
+    two_mul_internalLineCount_eq_selfHalf_card_of_even q step moves b hself
+  have hbal := halfLine_balance q step moves b
+  omega
+
 end
 
 end BucketBalance

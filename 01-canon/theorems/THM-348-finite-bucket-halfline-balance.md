@@ -65,6 +65,11 @@ axioms:
 The `TournamentH7.Verify` audit reports only Lean foundations
 (`propext`, `Classical.choice`, `Quot.sound`).
 
+The S2 extension in the same module also proves the first unordered layer
+(THM-350): the partner map `(x,u) -> (step(u,x),u)` preserves internal
+half-lines for involutive moves, is nontrivial for fixed-point-free moves, and
+the unordered balance follows from even internal half-line cardinality.
+
 ## Relation to THM-346
 
 THM-346 is the unordered-line specialization for tiling hypercubes:
@@ -74,8 +79,10 @@ THM-346 is the unordered-line specialization for tiling hypercubes:
 ```
 
 THM-348 formalizes the oriented half-line conservation law underneath that
-identity.  To recover THM-346 in Lean, the remaining lemma is the
-fixed-point-free involution pairing for each nonzero mask:
+identity.  THM-350 now formalizes the unordered algebra once the internal
+half-lines are paired.  To recover full THM-346 in Lean, the remaining lemma is
+the finite orbit-cardinality theorem for fixed-point-free involutions, then the
+specialization to each nonzero mask:
 
 ```text
 (x,u) <-> (x xor u, u).
@@ -102,5 +109,6 @@ generic finite-state testing harnesses.
 
 - THM-345: merged bucket parity and Hamming-layer transport constraints.
 - THM-346: tiling quotient bucket balance.
+- THM-350: finite unordered bucket balance layer.
 - INV-194: merged tiling bucket constraints.
 - `05-knowledge/variables/tiling-bucket-balance.md`.

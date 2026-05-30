@@ -23,7 +23,9 @@ TournamentH7/
     ├── OCF.lean              7 axioms (OCF + Moon-Moser + Moon-Camion + …)
     ├── H7.lean               The proof:  Tournament.H_ne_seven
     ├── GoodCuts.lean         good-cut bucket constraints and exact spectrum
-    ├── BucketBalance.lean    abstract finite bucket half-line balance
+    ├── StaircaseConnectivity.lean
+    │                          concrete tilings -> tournaments; top bucket iff SC
+    ├── BucketBalance.lean    abstract finite bucket half-line and unordered balance
     └── Verify.lean           #print axioms audit
 ```
 
@@ -61,10 +63,17 @@ all-down tiling is exactly bucket 0, any upward tile forces at least two good
 cuts, no tiling has exactly one good cut, the strengthened dichotomy
 `goodCutCount = 0 ∨ 2 ≤ goodCutCount`, grid reflection preserves the
 bucket index, and for `n >= 3` the exact bucket spectrum is
-`{0} ∪ {2,...,n-1}`. `BucketBalance.lean` isolates the finite
+`{0} ∪ {2,...,n-1}`. `StaircaseConnectivity.lean` constructs the
+tournament induced by a concrete tiling and proves the top bucket
+`goodCutCount = n - 1` is exactly strong connectivity of that induced
+base-path tournament. `BucketBalance.lean` isolates the finite
 internal/escaping half-line count used by quotient-bucket arguments:
-`|selfHalf| + |crossHalf| = |fiber| * |moves|`.  This is the Lean core of
-THM-348 and the first formal layer of THM-346.
+`|selfHalf| + |crossHalf| = |fiber| * |moves|`. It also formalizes the
+partner-map layer for unordered balance: internal half-lines are closed under
+involutive moves, fixed-point-free moves give no self-partners, and even
+internal half-line cardinality yields the unordered balance. These are the
+Lean cores of THM-348 and THM-350, and the remaining bridge toward full
+THM-346.
 
 ## Proof sketch
 

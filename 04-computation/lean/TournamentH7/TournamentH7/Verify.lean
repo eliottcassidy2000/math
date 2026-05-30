@@ -20,6 +20,7 @@ import TournamentH7.SCCounts
 import TournamentH7.SmallTournaments
 import TournamentH7.ForbiddenHCounting
 import TournamentH7.GoodCuts
+import TournamentH7.StaircaseConnectivity
 import TournamentH7.BucketBalance
 
 open Tournament
@@ -339,6 +340,42 @@ theorem goodCutCount_complement_of_all_down_audit {n : ℕ}
   StTiling.goodCutCount_complement_of_all_down hn h
 #print axioms goodCutCount_complement_of_all_down_audit
 
+/-! ### Concrete staircase tilings as tournaments -/
+
+/-- A concrete staircase tiling induces a valid tournament. PROVED. -/
+theorem staircase_toTournament_hasBasePath_audit {n : ℕ} (b : StTiling n) :
+    HasBasePath b.toTournament :=
+  StTiling.toTournament_hasBasePath b
+#print axioms staircase_toTournament_hasBasePath_audit
+
+/-- Good cuts are exactly crossing-upward cuts of the induced tournament. PROVED. -/
+theorem isGoodCut_iff_crossesUpward_toTournament_audit {n : ℕ}
+    (b : StTiling n) {k : ℕ} :
+    StTiling.IsGoodCut b k ↔ CrossesUpward b.toTournament k :=
+  StTiling.isGoodCut_iff_crossesUpward_toTournament b
+#print axioms isGoodCut_iff_crossesUpward_toTournament_audit
+
+/-- Top good-cut bucket iff strong connectivity of the induced tournament. PROVED. -/
+theorem goodCutCount_eq_top_iff_toTournament_SC_audit {n : ℕ}
+    (b : StTiling n) :
+    b.goodCutCount = n - 1 ↔ IsStronglyConnected b.toTournament :=
+  StTiling.goodCutCount_eq_top_iff_toTournament_stronglyConnected b
+#print axioms goodCutCount_eq_top_iff_toTournament_SC_audit
+
+/-- The all-up tiling gives an explicit strongly connected staircase
+    tournament for n≥3. PROVED. -/
+theorem allUp_toTournament_SC_audit {n : ℕ} (hn : 3 ≤ n) :
+    IsStronglyConnected (StTiling.allUp n).toTournament :=
+  StTiling.allUp_toTournament_stronglyConnected hn
+#print axioms allUp_toTournament_SC_audit
+
+/-- The all-down tiling gives an explicit non-strongly-connected staircase
+    tournament for n≥2. PROVED. -/
+theorem allDown_toTournament_not_SC_audit {n : ℕ} (hn : 2 ≤ n) :
+    ¬ IsStronglyConnected (StTiling.allDown n).toTournament :=
+  StTiling.allDown_toTournament_not_stronglyConnected hn
+#print axioms allDown_toTournament_not_SC_audit
+
 /-! ### Abstract bucket balances -/
 
 /-- THM-346 Lean core: oriented half-lines split into internal and escaping
@@ -373,6 +410,43 @@ theorem bucket_crossHalf_card_le_total_audit {alpha beta move : Type}
       (BucketBalance.fiber q b).card * moves.card :=
   BucketBalance.crossHalf_card_le_total q step moves b
 #print axioms bucket_crossHalf_card_le_total_audit
+
+/-- Partnering an internal half-line by an involutive move keeps it internal.
+    PROVED. -/
+theorem bucket_pairHalf_mem_selfHalf_audit {alpha beta move : Type}
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hstep : forall u, u ∈ moves -> Function.Involutive (step u))
+    {xu : alpha × move} (hxu : xu ∈ BucketBalance.selfHalf q step moves b) :
+    BucketBalance.pairHalf step xu ∈ BucketBalance.selfHalf q step moves b :=
+  BucketBalance.pairHalf_mem_selfHalf q step moves b hstep hxu
+#print axioms bucket_pairHalf_mem_selfHalf_audit
+
+/-- A fixed-point-free selected move never pairs an internal half-line with
+    itself. PROVED. -/
+theorem bucket_pairHalf_ne_of_fixedPointFree_audit {alpha beta move : Type}
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hfixed : forall u, u ∈ moves -> forall x, step u x ≠ x)
+    {xu : alpha × move} (hxu : xu ∈ BucketBalance.selfHalf q step moves b) :
+    BucketBalance.pairHalf step xu ≠ xu :=
+  BucketBalance.pairHalf_ne_of_fixedPointFree q step moves b hfixed hxu
+#print axioms bucket_pairHalf_ne_of_fixedPointFree_audit
+
+/-- The unordered balance follows once internal oriented half-lines have even
+    cardinality. PROVED. -/
+theorem bucket_unordered_balance_of_even_selfHalf_audit {alpha beta move : Type}
+    [Fintype alpha] [DecidableEq beta]
+    (q : alpha -> beta) (step : move -> alpha -> alpha)
+    (moves : Finset move) (b : beta)
+    (hself : Even (BucketBalance.selfHalf q step moves b).card) :
+    2 * BucketBalance.internalLineCount q step moves b +
+        (BucketBalance.crossHalf q step moves b).card =
+      (BucketBalance.fiber q b).card * moves.card :=
+  BucketBalance.unordered_balance_of_even_selfHalf q step moves b hself
+#print axioms bucket_unordered_balance_of_even_selfHalf_audit
 
 /-! ### THM-342 (small diagonal value) -/
 
