@@ -29,6 +29,7 @@ import TournamentH7.IsomorphismClasses
 import TournamentH7.ApexBridge
 import TournamentH7.RedeiFromOCF
 import TournamentH7.HSpectrumClean
+import TournamentH7.HSpectrumSmallN
 
 open Tournament
 
@@ -713,3 +714,18 @@ theorem H_in_forbidden_set_audit {n : ℕ} (T : Tournament n) :
     H T ≠ 10 ∧ H T ≠ 21 :=
   H_in_forbidden_set T
 #print axioms H_in_forbidden_set_audit
+
+/-! ### H-spectrum at small n -/
+
+theorem H_n3_eq_one_or_three_audit (T : Tournament 3) : H T = 1 ∨ H T = 3 :=
+  H_n3_eq_one_or_three T
+#print axioms H_n3_eq_one_or_three_audit
+
+theorem H_n4_eq_135_audit (T : Tournament 4) : H T = 1 ∨ H T = 3 ∨ H T = 5 :=
+  H_n4_eq_135 T
+#print axioms H_n4_eq_135_audit
+
+theorem H_n5_in_spectrum_audit (T : Tournament 5) :
+    H T = 1 ∨ H T = 3 ∨ H T = 5 ∨ H T = 9 ∨ H T = 11 ∨ H T = 13 ∨ H T = 15 :=
+  H_n5_in_spectrum T
+#print axioms H_n5_in_spectrum_audit
