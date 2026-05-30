@@ -62,6 +62,7 @@ et al.).
 |---|---|---|
 | `Basic.lean` | `Tournament n` structure | foundation |
 | `RootSigns.lean` | type-A root lattice atoms; finite-walk telescoping and 3-cycle relation | **PROVED** |
+| `RootPackets.lean` | open-walk endpoint boundaries; closed packets; `DirectedCycle` to zero-root packet | **PROVED** |
 | `Cycles.lean` | `DirectedCycle`, `isOdd` | foundation |
 | `SCC.lean` | `Reaches`, `IsSCC`, `H`, Hamilton paths | foundation |
 | `OCF.lean` | OCF axiom, Moon-Moser, Moon-Camion | external classical axioms |
@@ -148,6 +149,9 @@ external/project axioms that are already in their proof OR — best case
 ### Pure Lean proofs (no project axioms)
 
 - `H_iso_invariant` — Hamiltonian path count is iso-invariant.
+- `TypeA.RootWalk.rootTotal_eq_boundary` — open root walks telescope to endpoint boundary.
+- `TypeA.RootPacket.rootTotal_eq_zero` — closed root packets carry zero total root.
+- `Tournament.DirectedCycle.toRootPacket_rootTotal` — directed cycles induce zero-root packets.
 - `abstract_anti_palindrome` — anti-automorphism reverses endpoint counts.
 - `epStart_sum_eq_H` / `epEnd_sum_eq_H` — endpoint fibers partition H.
 - `outDegree_iso` — out-degree is iso-invariant (modulo relabel).

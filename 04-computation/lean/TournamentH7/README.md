@@ -19,6 +19,7 @@ TournamentH7/
 └── TournamentH7/
     ├── Basic.lean            Tournament structure
     ├── RootSigns.lean        Type-A root-sign atoms and walk telescoping
+    ├── RootPackets.lean      open-walk boundaries and closed root packets
     ├── Cycles.lean           DirectedCycle T k
     ├── SCC.lean              Reachability, IsSCC, IsHamiltonianPath, H
     ├── OCF.lean              7 axioms (OCF + Moon-Moser + Moon-Camion + …)
@@ -73,6 +74,13 @@ walk telescopes to the root from its first vertex to its last, so every closed
 walk has zero total root. This formalizes the slogan that a directed 3-cycle
 is the first root-lattice relation, while keeping the reusable statement at
 the path/walk level.
+
+`RootPackets.lean` packages that telescope calculus as reusable objects:
+open `RootWalk`s have endpoint boundary `e_source - e_target`, closed
+`RootPacket`s have zero total root, and existing `DirectedCycle` records can
+be converted into closed type-A root packets. This is the first formal bridge
+from root-sign atoms toward odd-cycle packet support/disjointness and a later
+representation-refined OCF layer.
 
 `GoodCuts.lean` also contains the formal axiom-free core of THM-336: the
 all-down tiling is exactly bucket 0, any upward tile forces at least two good

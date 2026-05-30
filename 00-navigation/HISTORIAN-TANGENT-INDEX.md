@@ -42,6 +42,12 @@ Useful synthetic maps added later:
   root-sign infrastructure. Arcs become roots `e_i-e_j`, walks telescope to
   endpoint charge, closed walks have zero total root, and odd cycles are posed
   as the next "packet module" objects toward representation-refined OCF.
+- `07-reflections/root-packets-feedback-loop-s6.md`: second formalization pass
+  that adds `RootPackets.lean`, converting open walks to endpoint boundaries,
+  closed walks to zero-root packets, and existing `DirectedCycle` records to
+  closed type-A packets; proposes a boundary-fiber ladder from root signs to
+  endpoint fibers, packet compatibility, incidence rank, character phase, and
+  final scalar evaluation.
 
 ## Second-Pass Small Motif Ledger
 

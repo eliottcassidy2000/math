@@ -2689,3 +2689,17 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** THM-357 reduces counterexamples to all-protected finite endpoint graphs, while HYP-1810 shows known tight examples expose the unit-boundary skeleton. The S361 search found the strongest repo Diophantine thread in finite anti-Bohr boundary incidence rather than classical good-approximation machinery.
 **Predictions:** Endpoint-core peeling should return empty cores in bounded boxes; any artificial nonempty core should show quotient-factor or GAP-like structure; Fejer/Riesz certificates should localize around the same quotient layer selected by the descent.
 **See:** `05-knowledge/hypotheses/HYP-1813-lrc-bohr-boundary-descent.md`, THM-357, HYP-1802, HYP-1810, HYP-1811, HYP-1812, `07-reflections/diophantine-approximation-lonely-runner-s361.md`.
+
+## HYP-1814: Packet-boundary filtration of Hamiltonian paths (codex-2026-05-30-S6)
+**Status:** EXPLORATORY formalization target.
+**What:** Hamiltonian path counting should lift from scalar OCF to a filtration by endpoint-root fibers and compatible closed root packets; `H(T)=I(Omega(T),2)` should be the decategorified fugacity-2 evaluation.
+**Evidence:** `RootSigns.lean` proves endpoint telescoping and closed-walk zero root; `RootPackets.lean` packages open walks, closed packets, and `DirectedCycle` to zero-root packets. OCF already evaluates compatible odd-cycle packets, while endpoint-fiber theorems partition `H`.
+**Predictions:** Endpoint-root distributions and packet support features should explain examples that score and total `H` merge; a concrete odd-root-packet module should de-opaque parts of `alphaCount`; character-resolved packet ledgers should sharpen Paley/Interval crossover analysis.
+**See:** `05-knowledge/hypotheses/HYP-1814-packet-boundary-filtration.md`, `04-computation/lean/TournamentH7/TournamentH7/RootPackets.lean`, `07-reflections/root-packets-feedback-loop-s6.md`.
+
+## HYP-1815: Root-packet incidence rank controls transfer (codex-2026-05-30-S6)
+**Status:** EXPLORATORY proof-technology hypothesis.
+**What:** Support explains packet disjointness, but effective transfer is controlled by rank or torsion in packet incidence matrices indexed by vertices, arcs, endpoint fibers, deletion fibers, or quotient buckets.
+**Evidence:** Endpoint-transfer and even-graph sessions show support matching is weaker than `F_2` rank; Smith normal forms expose torsion; path homology already lives in boundary matrices; `RootPackets.lean` now supplies a formal closed-packet object with zero type-A boundary.
+**Predictions:** Packet incidence rank should separate THM-025 near-kill examples from exact kills, correlate with real-root/Newton margin anomalies, and improve active-ranking acquisition beyond expected `H` drop alone.
+**See:** `05-knowledge/hypotheses/HYP-1815-root-packet-incidence-rank.md`, HYP-1796, HYP-1806, `07-reflections/root-packets-feedback-loop-s6.md`.

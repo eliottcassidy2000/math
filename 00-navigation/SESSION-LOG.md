@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-30-S6 - Root Packets Formalization Feedback Loop
+
+**Account:** Codex
+**Git first:** Continued from clean `main...origin/main`; an earlier all-up `Verify` run was stale relative to the new import and was interrupted before the focused checks.
+**User prompt:** Spend a long formalization session, use the ideas for inspiration, search widely, and pursue tangents.
+**Exploration:** Started from the existing `RootSigns` formal seed, then sampled OCF/real-rootedness, endpoint-transfer/good-cut incidence, path-homology symbol outputs, Fejer/Paley circulant phase, Lonely Runner endpoint protection, Caccetta-Haggkvist return residue, and active/reconstruction application notes.
+**Lean work:** Added `TournamentH7.RootPackets`. It defines open `TypeA.RootWalk`s whose root total is the endpoint boundary, closed `TypeA.RootPacket`s whose root total is zero, and `Tournament.DirectedCycle.toRootPacket`, proving every existing directed cycle induces a zero-root packet. Wired the module into `TournamentH7.lean`, `Verify.lean`, `README.md`, and `ARCHITECTURE.md`.
+**Synthesis:** Added `07-reflections/root-packets-feedback-loop-s6.md`. Main thesis: scalar `H` should be treated as the last evaluation in a ladder `root signs -> endpoint-root fibers -> closed packets -> compatibility -> incidence/phase -> scalar`.
+**Knowledge updates:** Added HYP-1814 (packet-boundary filtration of Hamiltonian paths), HYP-1815 (root-packet incidence rank controls transfer), tangents T348-T350, and a historian pointer to the new reflection.
+**Verification:** `lake build TournamentH7.RootPackets` succeeded and is stored in `05-knowledge/results/lean_root_packets_s6.out`. A fresh all-up `TournamentH7.Verify` audit was attempted with a 300s timeout and recorded in `05-knowledge/results/lean_verify_root_packets_s6.out`; it timed out while still compiling dependencies and did not reach the `#print axioms` layer.
+**Next:** Add `RootSupport.lean`: support of roots, walks, and packets; prove `DirectedCycle.toRootPacket` support agrees with the cycle image; then build small packet incidence matrices and endpoint-root Hamiltonian fiber counts.
+
 ## codex-2026-05-30-formalization-root-signs - Type-A Root Formalization
 
 **Account:** Codex

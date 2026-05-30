@@ -10,6 +10,13 @@ python3 04-computation/SCRIPT.py 2>&1 | tee 05-knowledge/results/SCRIPT.out
 
 ---
 
+## Lean build and audit outputs
+
+| Target | Status | Key finding | Result file |
+|--------|--------|-------------|-------------|
+| `lake build TournamentH7.RootPackets` | [STORED] | New root-packet module builds successfully: open root walks telescope to endpoint boundary, closed packets have zero total root, and directed cycles convert to zero-root packets. | `lean_root_packets_s6.out` |
+| `timeout 300 lake build TournamentH7.Verify` | [STORED] | Full audit attempt timed out while still compiling dependencies; it did not reach the `#print axioms` layer. Use the narrow `RootPackets` build as the completed verification for this session. | `lean_verify_root_packets_s6.out` |
+
 ## Results catalog
 
 Scripts with stored results are marked [STORED]. Scripts without results are marked [MISSING].

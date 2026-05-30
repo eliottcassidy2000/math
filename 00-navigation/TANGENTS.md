@@ -218,6 +218,15 @@ HYP-1813 proposes that an all-protected endpoint core cannot remain primitive: p
 **T347** #formalization #root-signs #type-A #packet-modules | certainty: high (Lean seed proved) | source: codex-2026-05-30-formalization
 Formalization session added `RootSigns.lean`: arcs as type-A roots `e_i-e_j`, reversal as negation, finite walks as endpoint telescoping, and directed triangles as the first closed-walk root relation. Next target: formalize odd cycles as zero-root packets, then upgrade scalar OCF toward a packet/chamber module identity. See `07-reflections/formalization-root-signs-and-packet-modules.md`.
 
+**T348** #formalization #root-packets #directed-cycles #type-A | certainty: high (Lean module proved) | source: codex-2026-05-30-S6
+`RootPackets.lean` packages the root telescope theorem as open `RootWalk`s with endpoint boundary and closed `RootPacket`s with zero total root. Existing `DirectedCycle T k` records now convert to closed zero-root packets. This is the first concrete bridge from root-sign atoms to later Omega support/disjointness work. See `07-reflections/root-packets-feedback-loop-s6.md`.
+
+**T349** #endpoint-fibers #packet-boundary #OCF #formalization | certainty: exploratory | source: codex-2026-05-30-S6
+HYP-1814 proposes a boundary-fiber ladder for `H`: root signs -> endpoint-root Hamiltonian fibers -> closed odd packets -> packet compatibility -> scalar `I(Omega,2)`. This reframes OCF as a final evaluation rather than the primitive object.
+
+**T350** #incidence-rank #packet-support #transfer #torsion | certainty: exploratory | source: codex-2026-05-30-S6
+HYP-1815 separates packet support from packet incidence: support explains disjointness, while rank/torsion explains effective transfer. Endpoint transfer, even-graph rank defects, path homology, LRC endpoint protection, and CH return layers all fit this warning.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

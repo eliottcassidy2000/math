@@ -9,6 +9,7 @@
 
 import TournamentH7.HSpectrum
 import TournamentH7.RootSigns
+import TournamentH7.RootPackets
 import TournamentH7.Tilings
 import TournamentH7.GridReflection
 import TournamentH7.StaircaseModel
@@ -73,6 +74,22 @@ theorem typeA_walkRootSum_closed_audit {n : ℕ}
     TypeA.walkRootSum (a :: middle ++ [a]) = 0 :=
   TypeA.walkRootSum_closed a middle
 #print axioms typeA_walkRootSum_closed_audit
+
+theorem typeA_rootWalk_rootTotal_audit {n : ℕ} (W : TypeA.RootWalk n) :
+    W.rootTotal = TypeA.root W.source W.target :=
+  TypeA.RootWalk.rootTotal_eq_boundary W
+#print axioms typeA_rootWalk_rootTotal_audit
+
+theorem typeA_rootPacket_rootTotal_audit {n : ℕ} (P : TypeA.RootPacket n) :
+    P.rootTotal = 0 :=
+  TypeA.RootPacket.rootTotal_eq_zero P
+#print axioms typeA_rootPacket_rootTotal_audit
+
+theorem directedCycle_toRootPacket_rootTotal_audit {n k : ℕ} {T : Tournament n}
+    (C : Tournament.DirectedCycle T k) :
+    C.toRootPacket.rootTotal = 0 :=
+  Tournament.DirectedCycle.toRootPacket_rootTotal C
+#print axioms directedCycle_toRootPacket_rootTotal_audit
 
 /-! ### Audit each individual theorem -/
 
