@@ -1,5 +1,12 @@
 # Session Log
 
+## codex-2026-05-30 - Finalizing Paper on the Formalized Staircase Calculus
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**Writing work:** Added `03-artifacts/drafts/formalized-staircase-calculus-paper.md`, a condensed research-paper draft covering the formalized good-cut spectrum, the concrete staircase-to-tournament bridge, top good-cut bucket iff strong connectivity, finite bucket half-line conservation, fixed-point-free orbit parity, and the remaining Boolean-mask specialization for full THM-346.
+**Verification:** Manual structure/readability pass plus repository close-out checks.
+
 ## codex-2026-05-30 - Fixed-Point-Free Orbit Parity for Bucket Balance
 
 **Account:** Codex
