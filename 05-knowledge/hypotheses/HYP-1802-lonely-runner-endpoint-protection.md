@@ -31,6 +31,27 @@ The hypothesis is that no primitive `V` admits such a certificate.
 Equivalently, whenever the forbidden union has full measure, at least one
 endpoint is unprotected, and that endpoint is a boundary lonely witness.
 
+## Distance-Graph Coloring Form
+
+Let `G(Z,V)` be the integer distance graph with vertices `Z` and edges `x~y`
+whenever `|x-y| in V`.  A multiplier `t in R/Z` gives the regular circular
+coloring
+
+```text
+c_t(x) = tx mod 1.
+```
+
+This is a circular `(k+1)`-coloring exactly when
+
+```text
+||v_i t|| >= 1/(k+1)  for all i.
+```
+
+Thus HYP-1802 says that a failure of regular circular `(k+1)`-colorability
+would require a full-measure bad-multiplier cover whose every boundary
+coloring is strictly killed by another distance.  The conjectural obstruction
+is an impossible all-protected endpoint core.
+
 ## Finite Quotient Form
 
 Every endpoint lies in
@@ -83,6 +104,13 @@ and exactly recovered the standard small tight examples in the scanned boxes:
 In all these examples the first boundary witness is `1/(k+1)` and the
 boundary quotient collapses to `k+1`.
 
+`04-computation/lonely_runner_endpoint_protection_s359.py` adds the
+endpoint-protection ledger.  In the stored default run, all known tight
+examples have unprotected endpoints, and near-tight positive-gap examples in
+the boxes `k=4,max=18`, `k=5,max=16`, and `k=6,max=14` still leave explicit
+unprotected boundary colorings.  The tight sporadic `n=8` examples have high
+protected ratios (`0.92-0.94`) but still have `5` unprotected endpoints.
+
 ## Why It Matters
 
 HYP-1794's positive-gap/boundary split is a finite-open-cover trichotomy.  The
@@ -113,5 +141,8 @@ impossible without exhaustive lifting.
 - `04-computation/lonely_runner_tight_scan_s357.py`
 - `05-knowledge/results/lonely_runner_tight_scan_s357.out`
 - `07-reflections/lonely-runner-tight-stratum-s357.md`
+- `04-computation/lonely_runner_endpoint_protection_s359.py`
+- `05-knowledge/results/lonely_runner_endpoint_protection_s359.out`
+- `07-reflections/lonely-runner-distance-graph-colorings-s359.md`
 - `arXiv:2604.23906`
 - `arXiv:2605.27941`

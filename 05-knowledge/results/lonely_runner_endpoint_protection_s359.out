@@ -1,0 +1,132 @@
+Lonely Runner endpoint-protection graph (codex-2026-05-30 S359)
+Exact rational arithmetic; open intervals protect endpoints strictly.
+
+Known and near-tight examples
+[initial k=3]
+  speeds=(1, 2, 3)
+  forbidden_length=1 components=3 max_gap=0 gap/thresh=0.000000
+  endpoints=11 protected=8 unprotected=3 protected_ratio=0.727273
+  min/max/avg_protection=0/2/0.909 hist={0: 3, 1: 6, 2: 2}
+  boundary_witness_count=2 witness_protection_hist={0: 2}
+  t0=1/4 witness=True protection=0 incident=2 Q_endpoint=24 unit_skeleton=True
+  unprotected_sample=0, 1/4, 3/4
+
+[initial k=4]
+  speeds=(1, 2, 3, 4)
+  forbidden_length=1 components=5 max_gap=0 gap/thresh=0.000000
+  endpoints=17 protected=12 unprotected=5 protected_ratio=0.705882
+  min/max/avg_protection=0/3/1.059 hist={0: 5, 1: 8, 2: 2, 3: 2}
+  boundary_witness_count=4 witness_protection_hist={0: 4}
+  t0=1/5 witness=True protection=0 incident=2 Q_endpoint=60 unit_skeleton=True
+  unprotected_sample=0, 1/5, 2/5, 3/5, 4/5
+
+[sporadic n=5]
+  speeds=(1, 3, 4, 7)
+  forbidden_length=1 components=5 max_gap=0 gap/thresh=0.000000
+  endpoints=27 protected=22 unprotected=5 protected_ratio=0.814815
+  min/max/avg_protection=0/3/1.185 hist={0: 5, 1: 14, 2: 6, 3: 2}
+  boundary_witness_count=4 witness_protection_hist={0: 4}
+  t0=1/5 witness=True protection=0 incident=2 Q_endpoint=420 unit_skeleton=True
+  unprotected_sample=0, 1/5, 2/5, 3/5, 4/5
+
+[initial k=5]
+  speeds=(1, 2, 3, 4, 5)
+  forbidden_length=1 components=3 max_gap=0 gap/thresh=0.000000
+  endpoints=29 protected=26 unprotected=3 protected_ratio=0.896552
+  min/max/avg_protection=0/4/1.310 hist={0: 3, 1: 20, 2: 2, 3: 2, 4: 2}
+  boundary_witness_count=2 witness_protection_hist={0: 2}
+  t0=1/6 witness=True protection=0 incident=2 Q_endpoint=360 unit_skeleton=True
+  unprotected_sample=0, 1/6, 5/6
+
+[sporadic n=6]
+  speeds=(1, 3, 4, 5, 9)
+  forbidden_length=1 components=3 max_gap=0 gap/thresh=0.000000
+  endpoints=43 protected=40 unprotected=3 protected_ratio=0.930233
+  min/max/avg_protection=0/4/1.302 hist={0: 3, 1: 30, 2: 6, 3: 2, 4: 2}
+  boundary_witness_count=2 witness_protection_hist={0: 2}
+  t0=1/6 witness=True protection=0 incident=2 Q_endpoint=1080 unit_skeleton=True
+  unprotected_sample=0, 1/6, 5/6
+
+[initial k=7]
+  speeds=(1, 2, 3, 4, 5, 6, 7)
+  forbidden_length=1 components=5 max_gap=0 gap/thresh=0.000000
+  endpoints=53 protected=48 unprotected=5 protected_ratio=0.905660
+  min/max/avg_protection=0/6/1.509 hist={0: 5, 1: 36, 2: 4, 3: 2, 4: 2, 5: 2, 6: 2}
+  boundary_witness_count=4 witness_protection_hist={0: 4}
+  t0=1/8 witness=True protection=0 incident=2 Q_endpoint=3360 unit_skeleton=True
+  unprotected_sample=0, 1/8, 3/8, 5/8, 7/8
+
+[sporadic n=8 A]
+  speeds=(1, 4, 5, 6, 7, 11, 13)
+  forbidden_length=1 components=5 max_gap=0 gap/thresh=0.000000
+  endpoints=89 protected=84 unprotected=5 protected_ratio=0.943820
+  min/max/avg_protection=0/6/1.506 hist={0: 5, 1: 54, 2: 22, 3: 2, 4: 2, 5: 2, 6: 2}
+  boundary_witness_count=4 witness_protection_hist={0: 4}
+  t0=1/8 witness=True protection=0 incident=2 Q_endpoint=480480 unit_skeleton=True
+  unprotected_sample=0, 1/8, 3/8, 5/8, 7/8
+
+[sporadic n=8 B]
+  speeds=(1, 2, 3, 4, 5, 7, 12)
+  forbidden_length=1 components=5 max_gap=0 gap/thresh=0.000000
+  endpoints=65 protected=60 unprotected=5 protected_ratio=0.923077
+  min/max/avg_protection=0/6/1.477 hist={0: 5, 1: 44, 2: 8, 3: 2, 4: 2, 5: 2, 6: 2}
+  boundary_witness_count=4 witness_protection_hist={0: 4}
+  t0=1/8 witness=True protection=0 incident=2 Q_endpoint=3360 unit_skeleton=True
+  unprotected_sample=0, 1/8, 3/8, 5/8, 7/8
+
+[near tight k=8 mixed CRT]
+  speeds=(5, 8, 13, 21, 34, 55, 89, 144)
+  forbidden_length=2295126859/2453511060 components=47 max_gap=22/7209 gap/thresh=0.027466
+  endpoints=733 protected=640 unprotected=93 protected_ratio=0.873124
+  min/max/avg_protection=0/7/1.574 hist={0: 93, 1: 348, 2: 178, 3: 58, 4: 26, 5: 14, 6: 10, 7: 6}
+  boundary_witness_count=92 witness_protection_hist={0: 92}
+  t0=1/9 witness=False protection=1 incident=3 Q_endpoint=9814044240 unit_skeleton=False
+  unprotected_sample=0, 19/801, 4/153, 19/495, 53/1296, 41/648, 53/801, 82/801
+
+Near-tight positive-gap scans
+k=4, max_speed=18
+  speeds=(4, 7, 11, 15) gap/thresh=0.028571 protected_ratio=0.767123 unprotected=17 hist={0: 17, 1: 36, 2: 10, 3: 10}
+  speeds=(3, 10, 13, 16) gap/thresh=0.028846 protected_ratio=0.746988 unprotected=21 hist={0: 21, 1: 40, 2: 12, 3: 10}
+  speeds=(3, 4, 7, 11) gap/thresh=0.030303 protected_ratio=0.723404 unprotected=13 hist={0: 13, 1: 18, 2: 10, 3: 6}
+  speeds=(2, 13, 15, 17) gap/thresh=0.031373 protected_ratio=0.769231 unprotected=21 hist={0: 21, 1: 48, 2: 12, 3: 10}
+  speeds=(1, 12, 13, 14) gap/thresh=0.032051 protected_ratio=0.779221 unprotected=17 hist={0: 17, 1: 40, 2: 10, 3: 10}
+  speeds=(5, 7, 12, 17) gap/thresh=0.035294 protected_ratio=0.734177 unprotected=21 hist={0: 21, 1: 38, 2: 12, 3: 8}
+  speeds=(1, 13, 14, 15) gap/thresh=0.035897 protected_ratio=0.800000 unprotected=17 hist={0: 17, 1: 48, 2: 10, 3: 10}
+  speeds=(1, 8, 9, 17) gap/thresh=0.036765 protected_ratio=0.805970 unprotected=13 hist={0: 13, 1: 34, 2: 14, 3: 6}
+
+k=5, max_speed=16
+  speeds=(1, 3, 4, 5, 7) gap/thresh=0.035714 protected_ratio=0.810811 unprotected=7 hist={0: 7, 1: 20, 2: 6, 3: 2, 4: 2}
+  speeds=(1, 4, 5, 6, 7) gap/thresh=0.035714 protected_ratio=0.790698 unprotected=9 hist={0: 9, 1: 26, 2: 4, 3: 2, 4: 2}
+  speeds=(1, 3, 4, 5, 11) gap/thresh=0.036364 protected_ratio=0.844444 unprotected=7 hist={0: 7, 1: 24, 2: 10, 3: 2, 4: 2}
+  speeds=(1, 2, 3, 5, 8) gap/thresh=0.041667 protected_ratio=0.810811 unprotected=7 hist={0: 7, 1: 20, 2: 6, 3: 2, 4: 2}
+  speeds=(2, 3, 5, 8, 12) gap/thresh=0.041667 protected_ratio=0.786885 unprotected=13 hist={0: 13, 1: 32, 2: 12, 3: 2, 4: 2}
+  speeds=(2, 8, 11, 13, 15) gap/thresh=0.041958 protected_ratio=0.762887 unprotected=23 hist={0: 23, 1: 36, 2: 26, 3: 10, 4: 2}
+  speeds=(3, 9, 12, 15, 16) gap/thresh=0.050000 protected_ratio=0.876190 unprotected=13 hist={0: 13, 1: 54, 2: 26, 3: 6, 4: 6}
+  speeds=(3, 9, 12, 14, 15) gap/thresh=0.050000 protected_ratio=0.871287 unprotected=13 hist={0: 13, 1: 58, 2: 18, 3: 10, 4: 2}
+
+k=6, max_speed=14
+  speeds=(1, 4, 5, 6, 7, 11) gap/thresh=0.023810 protected_ratio=0.923077 unprotected=5 hist={0: 5, 1: 46, 2: 8, 3: 2, 4: 2, 5: 2}
+  speeds=(2, 3, 5, 7, 9, 12) gap/thresh=0.023810 protected_ratio=0.830769 unprotected=11 hist={0: 11, 1: 38, 2: 10, 3: 2, 4: 2, 5: 2}
+  speeds=(1, 2, 5, 6, 7, 8) gap/thresh=0.025000 protected_ratio=0.784314 unprotected=11 hist={0: 11, 1: 28, 2: 6, 3: 2, 4: 2, 5: 2}
+  speeds=(1, 5, 6, 7, 8, 13) gap/thresh=0.025641 protected_ratio=0.849315 unprotected=11 hist={0: 11, 1: 46, 2: 10, 3: 2, 4: 2, 5: 2}
+  speeds=(1, 3, 4, 5, 6, 9) gap/thresh=0.027778 protected_ratio=0.784314 unprotected=11 hist={0: 11, 1: 24, 2: 10, 3: 2, 4: 2, 5: 2}
+  speeds=(2, 3, 5, 8, 11, 13) gap/thresh=0.027972 protected_ratio=0.810127 unprotected=15 hist={0: 15, 1: 40, 2: 10, 3: 6, 4: 6, 5: 2}
+  speeds=(2, 6, 7, 8, 10, 13) gap/thresh=0.038462 protected_ratio=0.919540 unprotected=7 hist={0: 7, 1: 54, 2: 18, 3: 4, 4: 2, 5: 2}
+  speeds=(1, 6, 7, 8, 10, 13) gap/thresh=0.038462 protected_ratio=0.819277 unprotected=15 hist={0: 15, 1: 34, 2: 28, 3: 2, 4: 2, 5: 2}
+
+Primitive counterexample filter
+  If no speed is divisible by k+1, then t=1/(k+1) is immediately lonely.
+  Therefore every counterexample must contain a speed divisible by k+1.
+  Small mod-filter scans are possible with scan_mod_filter(), but are
+  omitted from the default run because endpoint protection is quadratic
+  in endpoints and intervals for each speed set.
+
+Takeaways
+  1. Boundary-only tight examples have many unprotected endpoints;
+     no scanned tight example is remotely close to all-protected.
+  2. The trivial t=1/(k+1) witness is exactly the first filter:
+     any counterexample must contain a speed divisible by k+1.
+  3. Near-tight positive-gap examples can have high protected ratios,
+     but still leave explicit unprotected endpoints/gaps.
+  4. The next obstruction should be a protection-peeling lemma:
+     full open covers would require an impossible all-protected core.
