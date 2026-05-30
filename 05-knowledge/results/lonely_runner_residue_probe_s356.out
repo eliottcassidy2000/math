@@ -1,0 +1,124 @@
+Lonely runner quotient-gap probe (codex-2026-05-30 S356)
+Reduced form: k moving runners, threshold = 1/(k+1).
+All interval arithmetic is exact over Fraction.
+
+[initial segment k=2]
+  speeds=(1, 2)
+  threshold=1/3 components=3 forbidden_length=1 gap_count=0
+  max_gap=0 (0.000000) max_gap/threshold=0.000000 witness=-
+  boundary_witness_count=2 boundary_witness=1/3
+  boundary_modulus=3 max_gap_boundary_residues=None
+
+[initial segment k=3]
+  speeds=(1, 2, 3)
+  threshold=1/4 components=3 forbidden_length=1 gap_count=0
+  max_gap=0 (0.000000) max_gap/threshold=0.000000 witness=-
+  boundary_witness_count=2 boundary_witness=1/4
+  boundary_modulus=4 max_gap_boundary_residues=None
+
+[initial segment k=4]
+  speeds=(1, 2, 3, 4)
+  threshold=1/5 components=5 forbidden_length=1 gap_count=0
+  max_gap=0 (0.000000) max_gap/threshold=0.000000 witness=-
+  boundary_witness_count=4 boundary_witness=1/5
+  boundary_modulus=5 max_gap_boundary_residues=None
+
+[initial segment k=5]
+  speeds=(1, 2, 3, 4, 5)
+  threshold=1/6 components=3 forbidden_length=1 gap_count=0
+  max_gap=0 (0.000000) max_gap/threshold=0.000000 witness=-
+  boundary_witness_count=2 boundary_witness=1/6
+  boundary_modulus=6 max_gap_boundary_residues=None
+
+[initial segment k=6]
+  speeds=(1, 2, 3, 4, 5, 6)
+  threshold=1/7 components=7 forbidden_length=1 gap_count=0
+  max_gap=0 (0.000000) max_gap/threshold=0.000000 witness=-
+  boundary_witness_count=6 boundary_witness=1/7
+  boundary_modulus=7 max_gap_boundary_residues=None
+
+[initial segment k=7]
+  speeds=(1, 2, 3, 4, 5, 6, 7)
+  threshold=1/8 components=5 forbidden_length=1 gap_count=0
+  max_gap=0 (0.000000) max_gap/threshold=0.000000 witness=-
+  boundary_witness_count=4 boundary_witness=1/8
+  boundary_modulus=8 max_gap_boundary_residues=None
+
+[initial segment k=8]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8)
+  threshold=1/9 components=7 forbidden_length=1 gap_count=0
+  max_gap=0 (0.000000) max_gap/threshold=0.000000 witness=-
+  boundary_witness_count=6 boundary_witness=1/9
+  boundary_modulus=9 max_gap_boundary_residues=None
+
+[initial segment k=9]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9)
+  threshold=1/10 components=5 forbidden_length=1 gap_count=0
+  max_gap=0 (0.000000) max_gap/threshold=0.000000 witness=-
+  boundary_witness_count=4 boundary_witness=1/10
+  boundary_modulus=10 max_gap_boundary_residues=None
+
+[powers of 2 k=6]
+  speeds=(1, 2, 4, 8, 16, 32)
+  threshold=1/7 components=17 forbidden_length=43/56 gap_count=16
+  max_gap=1/56 (0.017857) max_gap/threshold=0.125000 witness=19/112
+  boundary_witness_count=32 boundary_witness=1/7
+  boundary_modulus=112 max_gap_boundary_residues=(18, 20)
+
+[odd arithmetic k=6]
+  speeds=(1, 3, 5, 7, 9, 11)
+  threshold=1/7 components=6 forbidden_length=1424/1617 gap_count=5
+  max_gap=5/77 (0.064935) max_gap/threshold=0.454545 witness=1/2
+  boundary_witness_count=10 boundary_witness=8/49
+  boundary_modulus=1617 max_gap_boundary_residues=(756, 861)
+
+[small primes k=8]
+  speeds=(2, 3, 5, 7, 11, 13, 17, 19)
+  threshold=1/9 components=17 forbidden_length=19157/20349 gap_count=10
+  max_gap=5/323 (0.015480) max_gap/threshold=0.139319 witness=1451/5814
+  boundary_witness_count=26 boundary_witness=10/153
+  boundary_modulus=264537 max_gap_boundary_residues=(63973, 68068)
+
+[mixed CRT k=8]
+  speeds=(5, 8, 13, 21, 34, 55, 89, 144)
+  threshold=1/9 components=47 forbidden_length=2295126859/2453511060 gap_count=46
+  max_gap=22/7209 (0.003052) max_gap/threshold=0.027466 witness=1235/7209
+  boundary_witness_count=92 boundary_witness=19/801
+  boundary_modulus=9814044240 max_gap_boundary_residues=(1666304640, 1696254560)
+
+[random356 k=4]
+  speeds=(2, 9, 16, 21)
+  threshold=1/5 components=13 forbidden_length=223/252 gap_count=10
+  max_gap=19/840 (0.022619) max_gap/threshold=0.113095 witness=55/336
+  boundary_witness_count=22 boundary_witness=16/105
+  boundary_modulus=5040 max_gap_boundary_residues=(768, 882)
+
+[random356 k=5]
+  speeds=(13, 22, 27, 28, 29)
+  threshold=1/6 components=23 forbidden_length=2059151/2351349 gap_count=20
+  max_gap=6/377 (0.015915) max_gap/threshold=0.095491 witness=47/2262
+  boundary_witness_count=42 boundary_witness=1/78
+  boundary_modulus=18810792 max_gap_boundary_residues=(241164, 540540)
+
+[random356 k=7]
+  speeds=(20, 23, 26, 28, 41, 44, 50)
+  threshold=1/8 components=41 forbidden_length=65534809/75515440 gap_count=34
+  max_gap=13/1120 (0.011607) max_gap/threshold=0.092857 witness=743/2240
+  boundary_witness_count=74 boundary_witness=1/160
+  boundary_modulus=755154400 max_gap_boundary_residues=(246099425, 254864610)
+
+[random356 k=9]
+  speeds=(8, 21, 22, 34, 38, 51, 53, 61, 70)
+  threshold=1/10 components=65 forbidden_length=690804437/790897800 gap_count=64
+  max_gap=29/4148 (0.006991) max_gap/threshold=0.069913 witness=19253/41480
+  boundary_witness_count=128 boundary_witness=1/80
+  boundary_modulus=96489531600 max_gap_boundary_residues=(44448456360, 45123045660)
+
+Summary
+  sample_count=16
+  positive_gap_count=8
+  zero_positive_gap_labels=['initial segment k=2', 'initial segment k=3', 'initial segment k=4', 'initial segment k=5', 'initial segment k=6', 'initial segment k=7', 'initial segment k=8', 'initial segment k=9']
+  positive_or_boundary_witness_count=16
+  no_witness_labels=[]
+  widest_relative_gap=odd arithmetic k=6 ratio=0.454545 witness=1/2
+  tightest_positive_gap=mixed CRT k=8 ratio=0.027466 boundary_residues=(1666304640, 1696254560)

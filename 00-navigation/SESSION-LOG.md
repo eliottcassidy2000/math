@@ -8,6 +8,16 @@
 **Knowledge update:** Expanded `00-navigation/HISTORIAN-TANGENT-INDEX.md` with a new `Second-Pass Small Motif Ledger` near the top. It preserves Paley T11 ratio/c9 fragments, A000255 overlap pyramid, log/doubling observation, blue-line tiling multiplicity, grid-overlap decomposition, summand graph `{1,4,6}`, Pascal three-strand sequence, demicube/simplex-cuboid/Baer motifs, Bernoulli/Sylvester/Kaprekar constants, H=21 star obstructions, quotient/clique-complex hooks, waggly coherent configuration, unit-distance CM analogy, precious-metals DAO, compression scan orders, and definition warnings.
 **Next:** Treat the small motif ledger as a living "minor-key index": whenever a future session finds a strange user-flavored aside, add a one-line preservation bullet even if it is not ready for the main tangent registry.
 
+## codex-2026-05-30-S356 - Famous Problem Residue Bridges
+
+**Account:** Codex
+**Exploration:** Sampled the recent residue-calculus thread, then searched primary web sources around Lonely Runner, union-closed sets, graph reconstruction, Erdos-Straus, and Caccetta-Haggkvist. The common bridge is a projection-residue grammar: natural quotient, occupied fibers, boundary/gap residue, then feedback into a sharper quotient.
+**Computation:** Added `04-computation/lonely_runner_residue_probe_s356.py`, an exact `Fraction` interval-union probe for the reduced lonely runner conjecture. It pulls forbidden arcs `dist(vt,Z)<1/(k+1)` back to `R/Z`, reports quotient boundary modulus, positive gaps, boundary witnesses, and max-gap residue pairs.
+**Result:** Stored `05-knowledge/results/lonely_runner_residue_probe_s356.out`. Initial segments `{1,...,k}` for `k=2..9` are tight boundary-only cases with witnesses such as `1/(k+1)`. Lacunary, arithmetic, prime, CRT-mixed, and random samples have positive gaps; the tightest sampled positive gap is the mixed CRT set with `max_gap/threshold=0.027466`.
+**Knowledge updates:** Added HYP-1794, T311-T315, and `07-reflections/famous-problem-residue-bridges.md`; updated the hypotheses and results indices.
+**Main idea:** Lonely Runner is the cleanest outside lab for HYP-1783: forbidden interval fibers occupy a finite boundary quotient `Q(V)=(k+1)lcm(V)`, and witnesses split into positive quotient gaps or tight boundary residues. Union-closed, reconstruction, Erdos-Straus, and Caccetta-Haggkvist each inherit weaker but recognizable residue-calculus translations.
+**Next priorities:** Enumerate bounded primitive LRC speed sets and rank by `max_gap/threshold`; add a boundary-only mode; build toy projection-residue tables for union-closed families and graph reconstruction decks; convert the base-42 Erdos-Straus multi-r search into a first-r residue ledger.
+
 ## codex-2026-05-30-breakthrough-map - Famous/Open Problem Research Sprint
 
 **Account:** Codex

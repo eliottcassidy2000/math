@@ -130,6 +130,37 @@ This is the engineering version of the thesis.  Do not only ask for better
 global invariants.  Ask which projection the invariant is compressing, then add
 the residue profile it forgot.
 
+## Thesis 9: Boundary Residues Travel Outside Tournaments
+
+S356 pushed the same grammar into web-searched open problems.  The cleanest
+case is Lonely Runner.  Its forbidden arcs pull back to an interval union on
+the time circle, and every boundary lies in the finite quotient
+
+```text
+Q(V) = (k+1) * lcm(V).
+```
+
+So a lonely time is either a positive quotient gap or a boundary residue.  The
+initial speed segments `{1,...,k}` are boundary-only cases; mixed and random
+samples in `lonely_runner_residue_probe_s356.py` have positive gaps.
+
+The same reading is weaker but visible elsewhere:
+
+- union-closed sets: coordinate frequencies are shadows; entropy under union
+  is the survivor;
+- graph reconstruction: vertex-deleted cards are the shadow; covering-rank
+  rows are deletion residues;
+- Erdos-Straus: identity families cover residue fibers; multi-r fallback
+  repairs hard boundary classes;
+- Caccetta-Haggkvist: outdegree transport must leave a short-cycle return
+  residue.
+
+This widens the slogan:
+
+```text
+choose supports -> project/forget -> inspect the boundary residue.
+```
+
 ## Feedback Loop
 
 The loop that produced S355:
@@ -142,5 +173,10 @@ The loop that produced S355:
 6. The probe separated exact kill, near kill, and broad fiber residue.
 7. HYP-1785 turned that separation into a filter for the next searches.
 
-Next loop: scan n=9 real-root failures and ghost-cycle candidates by
-`0 < keep_v* <= 2` and `rank_res(v*) >= 2`.
+Next loops:
+
+1. scan n=9 real-root failures and ghost-cycle candidates by
+   `0 < keep_v* <= 2` and `rank_res(v*) >= 2`;
+2. enumerate primitive Lonely Runner speed sets and rank them by positive gap
+   versus boundary-only residue;
+3. build one toy residue table each for union-closed families and graph decks.

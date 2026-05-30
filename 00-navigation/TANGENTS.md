@@ -107,6 +107,20 @@ Paley/Interval belong to the residue calculus but not to the THM-025 near-kill s
 
 **T310** #breakthrough-map #erdos #famous-problems #research-triage | certainty: medium | source: codex-2026-05-30-breakthrough-map
 Research sprint mapped the repo onto famous and lesser-known open problem families. Best near-term bets: n=9 real-root failure classification by deletion-residue rank, single-core signature image gap `r_core notin {3,10}`, circulant H-maximizer phase transition via additive energy/Fejer kernels, and Paley/circulant GLMY Betti formulas. Best outside bridges: Erdős-Schütte domination through cycle-domination residues, soft Erdős-Hajnal via H-mass, noncommutative Redei-Berge deletion-contraction, and Delsarte/QR code bounds. See `07-reflections/breakthrough-candidate-map.md`.
+**T311** #lonely-runner #quotient-gaps #interval-cover #boundary-residue | certainty: medium exploratory | source: codex-2026-05-30-S356
+Lonely Runner is the cleanest outside problem for the quotient-gap grammar. Pull each forbidden arc `dist(vt,Z)<1/(k+1)` back to the time circle; every boundary lies in `Q(V)=(k+1)lcm(V)`, so witnesses split into positive gaps and tight boundary residues. The S356 exact probe finds initial segments are boundary-only while mixed/random samples have positive gaps. See HYP-1794 and `07-reflections/famous-problem-residue-bridges.md`.
+
+**T312** #union-closed #entropy-residue #coordinate-projection #frankl | certainty: low-medium | source: codex-2026-05-30-S356
+Union-closed sets can be read as a projection-residue problem: coordinate frequencies are the shadow, union transport `A,B -> A union B` is the move, and entropy increase under low frequencies is the residue. A repo-native attack would define deletion fibers `F_i^0/F_i^1` and search for a low-frequency/high-rank zero-fiber contradiction, echoing deletion-residue rank.
+
+**T313** #graph-reconstruction #deletion-deck #covering-rank #residue-vector | certainty: medium | source: codex-2026-05-30-S356
+Graph Reconstruction matches HYP-1785 at full scale: the deck is the all-vertex-deletion projection, and Kocay/covering-number matrices are rank certificates for whether deletion residues determine the upstairs graph. Build deck-residue vectors from cycle/cut/induced-subgraph residues and ask whether they generate full-rank covering rows.
+
+**T314** #erdos-straus #base-42 #quotient-cover #identity-families | certainty: medium | source: codex-2026-05-30-S356
+The base-42 Erdos-Straus thread is a quotient-cover problem: identity families occupy residue fibers, hard classes are gaps, and multi-r fallback is boundary repair. Next ledger: for primes `p == 1 mod 12`, record the first `r` whose denominator factorization supplies a `2 mod 3` splitter, then study first-r residues modulo 42/84/168.
+
+**T315** #caccetta-haggkvist #short-cycles #transport-residue #digraphs | certainty: low-medium | source: codex-2026-05-30-S356
+Caccetta-Haggkvist can be read as outdegree transport that cannot avoid a short return. The residue object would be `R_v^{<=k}(D)`, short directed cycles surviving vertex deletion, and minimal counterexamples should avoid both exact kills and small high-rank near-kills. This is a digraph analogue of HYP-1785, not yet an attack.
 
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.

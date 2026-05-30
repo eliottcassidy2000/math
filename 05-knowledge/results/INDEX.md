@@ -40,6 +40,7 @@ These scripts have been run but results exist only in /tmp or session transcript
 | `endpoint_sc_collision_s95.py` | [STORED] | Splits the merged SC endpoint boundary into decomposable/private and strongly connected collision blocks; non-private SC columns occur only in top bucket, have support exactly 3, and are independent through `6->7` | `endpoint_sc_collision_s95.out` |
 | `endpoint_collision_geometry_s95.py` | [STORED] | Tests whether support-3 SC collision owner triples are literal parent-metagraph triangles; at `6->7` induced edge counts are `{0:1,1:6,2:5,3:2}`, while the collision incidence hypergraph leaf-peels completely with empty core | `endpoint_collision_geometry_s95.out` |
 | `goodcut_class_purity_s95.py` | [STORED] | Verifies `good_cut_count = n - scc_count` and zero mixed unmerged/merged good-cut profiles for n=2..7, proving the good-cut bucket is strong-component defect | `goodcut_class_purity_s95.out` |
+| `lonely_runner_residue_probe_s356.py` | [STORED] | Exact rational forbidden-interval probe for Lonely Runner as a quotient-gap problem; initial segments are boundary-only, while sampled lacunary/arithmetic/CRT/random sets have positive gaps | `lonely_runner_residue_probe_s356.out` |
 
 ### How to bulk-capture results
 
