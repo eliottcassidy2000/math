@@ -2338,12 +2338,14 @@ Source: projection_defect_structured_moves_s2.py, projection_defect_structured_m
 Source: projection_defect_h_score_s3.py, projection_defect_h_score_s3.out
 
 ## HYP-1764: Good-cut count descends to merged tournament classes (opus-2026-05-29-S13)
-**Status:** CONFIRMED for n=3..7 exact tiling census; OPEN generally.
-**Statement:** The good-cut count `g(τ)=|G(τ)|`, defined in the base-path tiling model, may be constant on every merged tournament class in `G_n/Z_2`. Equivalently, if two base-path tilings represent isomorphic tournaments after complement merging, then they have the same number of cuts crossed by upward tiles.
+**Status:** PROVED by THM-354 (codex-2026-05-30-support-residue).
+**Statement:** The good-cut count `g(τ)=|G(τ)|`, defined in the base-path tiling model, is constant on every merged tournament class in `G_n/Z_2`. Equivalently, if two base-path tilings represent isomorphic tournaments after complement merging, then they have the same number of cuts crossed by upward tiles.
 **Evidence:** `04-computation/goodcut_bucket_merged_s13.py` found zero mixed merged classes for n=3..6. Class counts by n were pure/mixed = 2/0, 3/0, 10/0, 34/0; max bucket span was 0 in every case. Lean also proves `g(reflect τ)=g(τ)` in `TournamentH7.GoodCuts`.
 **S1 update (kind-pasteur-2026-05-30-S1):** `04-computation/goodcut_bucket_n7_fast_s1.py` extends the exact check to n=7 using hash-assisted canonicalization: 456 unmerged classes, 88 SC classes, 272 merged classes, and pure/mixed = 272/0 with max bucket span 0. Bucket counts at n=7 are `{0:1, 2:5, 3:20, 4:153, 5:1816, 6:30773}`.
-**Implication:** A statistic that looks coordinate-dependent may be a genuine coordinate on the merged metagraph. This would give `G_n/Z_2` a cheap height function with forbidden level 1.
-**Next:** Prove invariance under tournament isomorphism after complement merging, or find the structural reason the n=7 check stays pure despite changing base paths.
+**S354 update:** THM-354 proves the structural reason: for any Hamiltonian base path `P`, `g_P(T)=n-#SCC(T)`. Bad cuts are exactly boundaries between consecutive strong components in the condensation order. SCC count is invariant under isomorphism and complement, so `g` descends to `G_n/Z_2`.
+**Implication:** A statistic that looked coordinate-dependent is the strong-component defect ladder. It gives `G_n/Z_2` a cheap height function with forbidden level 1.
+**Next:** Formalize THM-354 in Lean by connecting good cuts to SCC condensation boundaries.
+**S354 artifacts:** THM-354; `05-knowledge/results/goodcut_scc_defect_s354.out`; `07-reflections/support-residue-calculus.md`.
 **See:** `05-knowledge/results/goodcut_bucket_merged_s13.out`, `05-knowledge/results/goodcut_bucket_n7_fast_s1.out`, variable `g(τ)`, INV-237, T288.
 
 ## HYP-1765: Good-cut sets are interval-union codes (opus-2026-05-29-S13)
@@ -2390,10 +2392,10 @@ Source: tiling_quotient_bucket_balance_s5.py, tiling_quotient_bucket_balance_s5.
 07-reflections/merged-tiling-bucket-constraints.md
 
 ## HYP-1770: Good-cut-changing single-tile flips always change merged tournament class (opus-2026-05-29-S14)
-**Status:** CONFIRMED for n=3..6 exact; OPEN generally.
+**Status:** PROVED generally as a corollary of THM-354.
 **Statement:** For a single-tile flip in the tiling hypercube, if `|Delta g|>0` then the merged tournament class changes. Equivalently, even-only projection defects and silent-both lines are `g`-neutral.
 **Evidence:** `goodcut_projection_defect_s14.py` stratifies all d=1 lines by `|Delta g|`. For n=4,5,6 every stratum with `|Delta g|≥1` has `silent_both=0` and `even_only=0`; all such lines are either `tournament_only` or `joint`.
-**Implication:** This is the dynamic version of HYP-1764. If `g` descends to `G_n/Z_2`, then changing `g` must cross a merged-class boundary. The computation shows exactly that for all single-tile lines through n=6.
+**S354 update:** Since `g=n-#SCC(T)`, changing `g` changes SCC count. Isomorphic tournaments and opposite tournaments have the same SCC count, so the merged class must change. This does not depend on the move being a single-tile flip.
 **See:** `05-knowledge/results/goodcut_projection_defect_s14.out`, `07-reflections/good-cut-height-and-projection-polarity.md`.
 
 ## HYP-1771: Tile-range parity controls projection-defect polarity (opus-2026-05-29-S14)
@@ -2437,11 +2439,11 @@ Source: HYP-1774-even-graph-endpoint-rank-defect.md, THM-266-endpoint-transfer-b
 Source: `04-computation/tournament_tda.py`, `05-knowledge/results/tournament_tda_omega_features_s15.out`, INV-192, INV-193.
 
 ## HYP-1777: Good-cut transport height changes are quotient-boundary crossings (opus-2026-05-29-S15)
-**Status:** CONFIRMED for n=3..6 exact selected mask families; OPEN generally.
+**Status:** PROVED generally as a corollary of THM-354.
 **What:** For ordered tiling half-lines in the tested Hamming mask families, `Delta g != 0` always changes the merged tournament class. Equivalently, same-class and even-only/silent defects live inside `g`-neutral transport.
 **Evidence:** `goodcut_transport_excess_s15.py` stratifies half-lines by source good-cut bucket, `Delta g`, projection defect, and self/spine/ribs/sea geometry. The `bad` count (nonzero `Delta g` without merged tournament change) is zero for n=3..6 across d=1, middle layers, complement-tiling, and all-waggly for n≤5.
 **Geometry:** At n=6, wiggly half-lines with `|Delta g|=1,2,3` are sea-dominated (73.8%, 67.7%, 72.7% sea), while the extreme `|Delta g|=5` jump is pure spine. The interval gas controls possible heights; quotient transport controls where height leaks into the merged metagraph.
-**Next:** Prove this from HYP-1764 or find the first n=7 counterexample; add normalized `Delta g` transport features to `tournament_tda.py`.
+**S354 update:** THM-354 proves the boundary-crossing part without reference to the chosen mask family: `Delta g != 0` is `Delta #SCC != 0`, which is impossible within a merged tournament class. The remaining open engineering task is to expose normalized `Delta g` / `Delta #SCC` transport features in `tournament_tda.py`.
 Source: `04-computation/goodcut_transport_excess_s15.py`, `05-knowledge/results/goodcut_transport_excess_s15.out`, `07-reflections/quotient-transport-and-good-cut-gas.md`.
 
 ## HYP-1778: Bucket balance formalization reduces to finite involution orbits (kind-pasteur-2026-05-30-S2)
@@ -2451,3 +2453,10 @@ Source: `04-computation/goodcut_transport_excess_s15.py`, `05-knowledge/results/
 **Resolution:** The predicted elementary identity was exactly enough: coordinatewise Boolean xor by a nonzero mask changes the coordinate where the mask is true.
 **Next:** Reuse the theorem as a checksum for quotient transport matrices and for the future `tournament_tda.py` bucket-feature block.
 **See:** THM-346, THM-350, THM-351, `04-computation/lean/TournamentH7/TournamentH7/BucketBalance.lean`, `05-knowledge/results/lean_verify_boolcube_bucket_balance_opus_2026-05-30-S1.out`, `07-reflections/unordered-bucket-balance-orbits.md`, `07-reflections/boolean-cube-balance-as-checksum.md`.
+
+## HYP-1779: Support-residue calculus organizes projection phenomena (codex-2026-05-30)
+**Status:** OPEN meta-hypothesis; THM-354 gives one confirmed instance.
+**What:** Many project invariants have the form `support family -> projection/forgetful map -> surviving residue geometry`. The useful statistic is often the defect, not the projection: killed supports, surviving supports, and the independence/parity/homology structure among survivors.
+**Evidence:** THM-354 identifies good-cut count as SCC defect. H=63 single-core classes are exact odd-cycle projection kills. THM-025 is a near-kill with a small dangerous residue. Paley/Interval separates support shadow from multiplicity and disjointness. Bucket balance leaves paired internal half-lines plus escape residue. Transfer diagonal keeps only signed position residue.
+**Predictions:** Real-root failures should be enriched by high deletion-loss fraction plus small top-heavy residues; `Delta g` transport should reduce to SCC-count transport; THM-143 slope profiles should predict Walsh-degree crossover; HYP-408 failures should resemble near-kill residues.
+**See:** `05-knowledge/hypotheses/HYP-1779-support-residue-calculus.md`, `07-reflections/support-residue-calculus.md`, THM-354.

@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-30-support-residue - Good-Cut SCC Defect + Projection-Residue Synthesis
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`; later synchronized with the current THM-351..353 Boolean-cube transport numbering already present in the workspace and placed this session's theorem at THM-354.
+**Exploration:** Sampled recent good-cut, quotient-transport, H=63/Omega, THM-025 real-root, Paley/Interval, transfer-matrix, Fourier-cycle, and homology-adjacent threads. A deliberately noisy file sample reinforced a common projection-residue pattern: choose supports, project/forget, then study the structured residue that survives.
+**New theorem:** Added THM-354, proving `goodCutCount(T,P)=n-#SCC(T)` for any Hamiltonian base path `P`. Bad cuts are exactly condensation boundaries. This proves HYP-1764 generally and makes HYP-1770/HYP-1777 immediate SCC-count corollaries.
+**Computation:** Added `04-computation/goodcut_scc_defect_s354.py`; verified exhaustive labeled tournaments through n=6, exact fixed-base tilings through n=7, sampled labeled n=7/n=8 and fixed-base n=8, all with zero violations. Output saved to `05-knowledge/results/goodcut_scc_defect_s354.out`.
+**Knowledge updates:** Added `07-reflections/support-residue-calculus.md`, HYP-1779, T300/T301, updated the good-cut variable, THM-336, INV-237, HYP-1764/1770/1777, and results index.
+**Next:** Lean-formalize THM-354 via SCC condensation; expose `#SCC`/`Delta #SCC` as normalized TDA and transport features; test the support-residue filter on real-root failures and HYP-408-style ghost-cycle anomalies.
+
 ## opus-2026-05-30-S1 - Boolean-Cube Mask Closure for Bucket Balance
 
 **Account:** opus

@@ -385,6 +385,26 @@ theorem allDown_toTournament_not_SC_audit {n : ℕ} (hn : 2 ≤ n) :
   StTiling.allDown_toTournament_not_stronglyConnected hn
 #print axioms allDown_toTournament_not_SC_audit
 
+/-! ### Apex tile bridge -/
+
+/-- The apex tile crosses every legal cut. PROVED. -/
+theorem apexTile_cutInterval_eq_cutSet_audit {n : ℕ} (hn : 3 ≤ n) :
+    (apexTile n hn).cutInterval = cutSet n :=
+  apexTile_cutInterval_eq_cutSet n hn
+#print axioms apexTile_cutInterval_eq_cutSet_audit
+
+/-- A single upward apex tile makes every legal cut good. PROVED. -/
+theorem singleUp_apex_goodCuts_eq_cutSet_audit {n : ℕ} (hn : 3 ≤ n) :
+    (StTiling.singleUp (apexTile n hn)).goodCuts = cutSet n :=
+  singleUp_apex_goodCuts_eq_cutSet n hn
+#print axioms singleUp_apex_goodCuts_eq_cutSet_audit
+
+/-- A single upward apex tile lies in the top good-cut bucket. PROVED. -/
+theorem singleUp_apex_goodCutCount_top_audit {n : ℕ} (hn : 3 ≤ n) :
+    (StTiling.singleUp (apexTile n hn)).goodCutCount = n - 1 :=
+  singleUp_apex_goodCutCount_top n hn
+#print axioms singleUp_apex_goodCutCount_top_audit
+
 /-! ### Abstract bucket balances -/
 
 /-- THM-346 Lean core: oriented half-lines split into internal and escaping

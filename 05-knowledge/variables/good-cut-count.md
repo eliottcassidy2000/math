@@ -38,6 +38,14 @@ Sources: `05-knowledge/results/goodcut_bucket_merged_s13.out` and
 
 ## Equations
 
+**Structural interpretation (THM-354):** for any Hamiltonian base path `P` of a
+tournament `T`,
+
+`g_P(T) = n - #SCC(T)`.
+
+Equivalently, bad cuts are exactly the boundaries between consecutive strong
+components in the condensation order.
+
 - `g(τ) = 0` iff every tile is downward.
 - `g(τ) ≠ 1` for every tiling. Each upward tile spans at least two cuts.
 - `g(τ) ≤ n-1`.
@@ -55,13 +63,15 @@ Sources: `05-knowledge/results/goodcut_bucket_merged_s13.out` and
 
 ## Relationships
 
-- Related to `delta_proj`: `g` is a cheap tiling-coordinate projection that appears to descend to merged tournament classes through n=7.
+- Related to `delta_proj`: `g` is a cheap tiling-coordinate projection whose
+  residue is the strong-component defect `n - #SCC(T)`.
 - Related to projection-defect polarity: S14 found that single-tile lines with
   `|Delta g|>0` are never even-only through n=6; even-only defects live inside
   `g`-neutral lines.
 - Related to `H(T)`: bucket extremes are transitive (`g=0`, `H=1`) and strongly connected (`g=n-1`, broad H range).
-- Related to `G_n/Z_2`: HYP-1764 says that `g` is constant on each merged
-  tournament class; exact merged-class purity is confirmed for n=3..7.
+- Related to `G_n/Z_2`: THM-354 proves that `g` is constant on each tournament
+  isomorphism class and on complement-merged classes, because SCC count is
+  preserved by isomorphism and by taking the opposite tournament.
 - Related to `B_N(x)`: the polynomial coefficient `[x^g]B_{n-1}` counts all tilings with `g(τ)=g`.
 
 ## Lean Formalisation
@@ -79,3 +89,11 @@ Sources: `05-knowledge/results/goodcut_bucket_merged_s13.out` and
 - `StTiling.goodCutCount_eq_top_iff_all_cuts_good`
 
 These build without project-specific axioms; the audit shows only Lean foundations.
+
+## Verification
+
+`04-computation/goodcut_scc_defect_s354.py` exhaustively verifies THM-354 for
+all labeled tournaments through `n=6`, all fixed-base tilings through `n=7`,
+and sampled labeled/fixed-base cases at `n=7,8`.
+
+Result: `05-knowledge/results/goodcut_scc_defect_s354.out`.

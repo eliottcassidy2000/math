@@ -160,3 +160,16 @@ the axiom-free core:
 
 The S15/Codex audits show these depend only on Lean foundations, not on
 project-specific axioms.
+
+## Strong-Component Interpretation (THM-354)
+
+THM-354 identifies the whole hierarchy structurally. For any tournament `T`
+and any Hamiltonian base path `P`,
+
+`g_P(T) = n - #SCC(T)`.
+
+Thus the missing good cuts are exactly the boundaries between consecutive
+strong components in the condensation order. The top bucket is the one-component
+case, the bottom bucket is the `n`-component transitive case, and the forbidden
+level `g=1` is equivalent to the impossibility of a tournament condensation
+with exactly `n-1` strong components.

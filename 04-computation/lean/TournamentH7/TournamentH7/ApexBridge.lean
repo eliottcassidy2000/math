@@ -27,6 +27,24 @@ noncomputable def apexTile (n : ℕ) (hn : 3 ≤ n) : StTile n where
 @[simp] lemma apexTile_lo (n : ℕ) (hn : 3 ≤ n) :
     (apexTile n hn).lo.val = 0 := rfl
 
+/-- The apex tile crosses every legal base-path cut. -/
+theorem apexTile_cutInterval_eq_cutSet (n : ℕ) (hn : 3 ≤ n) :
+    (apexTile n hn).cutInterval = cutSet n := by
+  ext k
+  rw [StTile.mem_cutInterval]
+  constructor
+  · exact And.left
+  · intro hk
+    refine ⟨hk, ?_⟩
+    unfold StTile.crossesCut
+    unfold cutSet at hk
+    simp at hk
+    constructor
+    · rw [apexTile_lo]
+      omega
+    · rw [apexTile_hi]
+      omega
+
 /-! ### The "singleUp apex" tiling is SC
 
     Setting only the apex tile to UP (and others to DOWN) gives a tiling
@@ -58,5 +76,17 @@ theorem singleUp_apex_toTournament_SC (n : ℕ) (hn : 3 ≤ n) :
   have h_bp : HasBasePath (StTiling.singleUp (apexTile n hn)).toTournament :=
     StTiling.toTournament_hasBasePath _
   exact apex_implies_SC _ h_bp hn (by omega) (by omega) h_apex
+
+/-- The single-up apex tiling has every legal cut good. -/
+theorem singleUp_apex_goodCuts_eq_cutSet (n : ℕ) (hn : 3 ≤ n) :
+    (StTiling.singleUp (apexTile n hn)).goodCuts = cutSet n := by
+  rw [StTiling.goodCuts_singleUp_eq_cutInterval]
+  exact apexTile_cutInterval_eq_cutSet n hn
+
+/-- The single-up apex tiling lies in the top good-cut bucket. -/
+theorem singleUp_apex_goodCutCount_top (n : ℕ) (hn : 3 ≤ n) :
+    (StTiling.singleUp (apexTile n hn)).goodCutCount = n - 1 := by
+  unfold StTiling.goodCutCount
+  rw [singleUp_apex_goodCuts_eq_cutSet n hn, cutSet_card]
 
 end Tournament
