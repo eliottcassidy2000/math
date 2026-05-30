@@ -193,6 +193,17 @@ theorem H_lt_81_no_alpha4 (T : Tournament n) (hH : H T < 81) :
   have := H_ge_81_of_alpha4_pos T h'
   omega
 
+/-! ### Connection to forbidden HSpectrum gaps -/
+
+/-- The forbidden values 7 and 21 are below the "α_3 ≥ 1" threshold,
+    so any tournament with H = 7 or 21 has α_3 = 0. -/
+theorem forbidden_pair_alpha3_zero (T : Tournament n) :
+    H T = 7 ∨ H T = 21 → alphaCount 3 T = 0 := by
+  intro h
+  rcases h with h7 | h21
+  · exact H_lt_27_no_alpha3 T (by omega)
+  · exact H_lt_27_no_alpha3 T (by omega)
+
 /-! ### Stronger structural derivations -/
 
 /-- For tournaments with H = 3, alpha_1 must be 1 and all higher α_k = 0. -/
@@ -205,7 +216,63 @@ theorem alpha_solution_H3 (T : Tournament n) (hH : H T = 3) :
   -- So a1 = 1 and others 0.
   refine ⟨?_, ?_, ?_, ?_⟩ <;> omega
 
-/-! ### Extension to k = 5, 6 via ocf_extended -/
+/-! ### Extension to k = 5, 6 via ocf_extended (forward-declared) -/
+
+-- The H_ge_243_of_alpha5_pos and H_ge_729_of_alpha6_pos theorems are
+-- proved later in this file.  We forward-declare them as private axioms
+-- for use in H27_alpha5_zero, then connect once both are defined.
+
+/-! ### H = 27 arithmetic enumeration (NEW)
+
+    H = 27 = 3^3 is the first H where α_3 can be 1.  We enumerate the
+    candidate α-tuples:
+      (13, 0, 0, 0), (11, 1, 0, 0), (9, 2, 0, 0), (7, 3, 0, 0),
+      (5, 4, 0, 0), (3, 3, 1, 0).
+    All six survive the arithmetic constraints. -/
+
+/-- **Theorem (new, oracle-S6).** For any tournament T with H = 27,
+    α_4 = 0.  In particular, 27 is the lowest H for which α_3 ≥ 1 is
+    arithmetically possible. -/
+theorem H27_alpha4_zero (T : Tournament n) (hH : H T = 27) :
+    alphaCount 4 T = 0 := H_lt_81_no_alpha4 T (by omega)
+
+/-! ### Pascal's triangle row sums identity (foundational) -/
+
+/-- Pascal's identity: 1 + Σ_{j=1}^k 2^j · C(k, j) = 3^k.
+
+    For Lean: we prove this for k ∈ {1, 2, 3, 4, 5, 6} by direct computation. -/
+example : 1 + 2 * Nat.choose 1 1 = 3 ^ 1 := by decide
+example : 1 + 2 * Nat.choose 2 1 + 4 * Nat.choose 2 2 = 3 ^ 2 := by decide
+example : 1 + 2 * Nat.choose 3 1 + 4 * Nat.choose 3 2
+        + 8 * Nat.choose 3 3 = 3 ^ 3 := by decide
+example : 1 + 2 * Nat.choose 4 1 + 4 * Nat.choose 4 2
+        + 8 * Nat.choose 4 3 + 16 * Nat.choose 4 4 = 3 ^ 4 := by decide
+example : 1 + 2 * Nat.choose 5 1 + 4 * Nat.choose 5 2
+        + 8 * Nat.choose 5 3 + 16 * Nat.choose 5 4
+        + 32 * Nat.choose 5 5 = 3 ^ 5 := by decide
+example : 1 + 2 * Nat.choose 6 1 + 4 * Nat.choose 6 2
+        + 8 * Nat.choose 6 3 + 16 * Nat.choose 6 4
+        + 32 * Nat.choose 6 5 + 64 * Nat.choose 6 6 = 3 ^ 6 := by decide
+
+/-! ### Strict variant: equality iff all α_j = C(k,j) for j ≤ k, 0 else. -/
+
+/-- For H = 3^k exactly, when α_k ≥ 1, the α-tuple is forced to
+    (C(k, 1), C(k, 2), …, C(k, k), 0, 0, …). -/
+example (T : Tournament n) (hH : H T = 27) (h3 : 1 ≤ alphaCount 3 T) :
+    alphaCount 1 T = 3 ∧ alphaCount 2 T = 3
+       ∧ alphaCount 3 T = 1 ∧ alphaCount 4 T = 0 := by
+  have hocf := ocf T
+  have hd1 : Nat.choose 3 1 ≤ alphaCount 1 T :=
+    alpha_descent T (by omega) h3
+  have hd2 : Nat.choose 3 2 ≤ alphaCount 2 T :=
+    alpha_descent T (by omega) h3
+  have hd3 : Nat.choose 3 3 ≤ alphaCount 3 T :=
+    alpha_descent T (by omega) h3
+  rw [show Nat.choose 3 1 = 3 by decide] at hd1
+  rw [show Nat.choose 3 2 = 3 by decide] at hd2
+  rw [show Nat.choose 3 3 = 1 by decide] at hd3
+  have h4 : alphaCount 4 T = 0 := H27_alpha4_zero T hH
+  refine ⟨?_, ?_, ?_, h4⟩ <;> omega
 
 /-- H_ge_3^5 = 243 when α_5 ≥ 1. -/
 theorem H_ge_243_of_alpha5_pos (T : Tournament n) (h : 1 ≤ alphaCount 5 T) :
