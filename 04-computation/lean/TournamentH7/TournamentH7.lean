@@ -67,4 +67,5 @@ import TournamentH7.Examples
 import TournamentH7.PaleyAxiomatic
 import TournamentH7.HSpectrumExtended
 import TournamentH7.ExamplesExtended
+import TournamentH7.ApexBridge
 import TournamentH7.Verify

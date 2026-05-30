@@ -26,6 +26,7 @@ import TournamentH7.PaleyAxiomatic
 import TournamentH7.StaircaseTileModel
 import TournamentH7.HSpectrumExtended
 import TournamentH7.IsomorphismClasses
+import TournamentH7.ApexBridge
 
 open Tournament
 
@@ -663,3 +664,11 @@ theorem H_ge_three_pow_k_general_audit {n : ℕ} (T : Tournament n) (k : ℕ)
     3 ^ k ≤ H T :=
   H_ge_three_pow_k_general T k hk_pos h h_high_zero
 #print axioms H_ge_three_pow_k_general_audit
+
+/-! ### Apex bridge -/
+
+/-- The single-up-apex tiling at n ≥ 3 is strongly connected. PROVED. -/
+theorem singleUp_apex_toTournament_SC_audit (n : ℕ) (hn : 3 ≤ n) :
+    IsStronglyConnected (StTiling.singleUp (apexTile n hn)).toTournament :=
+  singleUp_apex_toTournament_SC n hn
+#print axioms singleUp_apex_toTournament_SC_audit
