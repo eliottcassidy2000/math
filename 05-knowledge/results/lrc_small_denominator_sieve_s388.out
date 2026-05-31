@@ -1,0 +1,154 @@
+LRC small-denominator sieve and debt audit (codex-2026-05-31 S388)
+At level n, primitive point a/m with m<=n can only be strictly protected by speeds divisible by m.
+
+========================================================================================
+SMALL-DENOMINATOR SIEVE WITNESS AUDIT
+========================================================================================
+[initial n=8]
+  speeds=(1, 2, 3, 4, 5, 6, 7)
+  missing=(8,)  boundary t=1/8 (missing m=8, margin=0)
+  length=1  gap/th=0.000000  boundary=4  components=5
+  unprotected=4  coreE=0  first_peel=4  first_layer_group=8
+  unprotected_denoms=8:4
+
+[n8 sporadic tight]
+  speeds=(1, 4, 5, 6, 7, 11, 13)
+  missing=(8,)  boundary t=1/8 (missing m=8, margin=0)
+  length=1  gap/th=0.000000  boundary=4  components=5
+  unprotected=4  coreE=0  first_peel=4  first_layer_group=8
+  unprotected_denoms=8:4
+
+[initial n=14]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  missing=(14,)  boundary t=1/14 (missing m=14, margin=0)
+  length=1  gap/th=0.000000  boundary=6  components=7
+  unprotected=6  coreE=0  first_peel=6  first_layer_group=14
+  unprotected_denoms=14:6
+
+[drop 13 add 14]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+  missing=(13,)  open t=1/13 (missing m=13, margin=1/182)
+  length=189403/194040  gap/th=0.045455  boundary=24  components=13
+  unprotected=24  coreE=0  first_peel=24  first_layer_group=388080
+  unprotected_denoms=28:2 42:2 56:2 70:2 84:2 98:2 ...
+
+[drop 13 add 182]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182)
+  missing=-  sieve-complete
+  length=189403/194040  gap/th=0.065934  boundary=48  components=25
+  unprotected=48  coreE=0  first_peel=48  first_layer_group=5045040
+  unprotected_denoms=28:2 42:2 56:2 70:2 84:2 98:2 ...
+
+[n14 seven-ladder]
+  speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  missing=-  sieve-complete
+  length=142/143  gap/th=0.005411  boundary=84  components=61
+  unprotected=84  coreE=0  first_peel=84  first_layer_group=168168
+  unprotected_denoms=98:36 392:12 1078:12 1176:12 1274:12
+
+[initial n=15]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  missing=(15,)  boundary t=1/15 (missing m=15, margin=0)
+  length=1  gap/th=0.000000  boundary=8  components=9
+  unprotected=8  coreE=0  first_peel=8  first_layer_group=15
+  unprotected_denoms=15:8
+
+[drop 14 add 15]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  missing=(14,)  open t=1/14 (missing m=14, margin=1/210)
+  length=95717/96525  gap/th=0.030303  boundary=12  components=7
+  unprotected=12  coreE=0  first_peel=12  first_layer_group=96525
+  unprotected_denoms=45:2 75:2 135:2 165:2 195:2 225:2
+
+[drop 14 add 210]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 210)
+  missing=-  sieve-complete
+  length=95288/96525  gap/th=0.061905  boundary=24  components=13
+  unprotected=24  coreE=0  first_peel=24  first_layer_group=1351350
+  unprotected_denoms=45:2 75:2 135:2 165:2 195:2 225:2 ...
+
+[initial n=18]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+  missing=(18,)  boundary t=1/18 (missing m=18, margin=0)
+  length=1  gap/th=0.000000  boundary=6  components=7
+  unprotected=6  coreE=0  first_peel=6  first_layer_group=18
+  unprotected_denoms=18:6
+
+[drop 17 add 18]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18)
+  missing=(17,)  open t=1/17 (missing m=17, margin=1/306)
+  length=2127731/2162160  gap/th=0.033333  boundary=32  components=17
+  unprotected=32  coreE=0  first_peel=32  first_layer_group=12972960
+  unprotected_denoms=36:2 54:2 72:2 90:2 108:2 126:2 ...
+
+[drop 17 add 306]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 306)
+  missing=-  sieve-complete
+  length=2127731/2162160  gap/th=0.052288  boundary=64  components=33
+  unprotected=64  coreE=0  first_peel=64  first_layer_group=220540320
+  unprotected_denoms=36:2 54:2 72:2 90:2 108:2 126:2 ...
+
+========================================================================================
+INITIAL-SEGMENT GATE VS LCM-SIEVE TRANSFERS AT n=14
+========================================================================================
+drop | add n: missing gap/th boundary | add lcm(n,drop): missing gap/th boundary
+----------------------------------------------------------------------------------------
+   2 | -          0.2115        4 | -          0.2115        4
+   3 | -          0.1154        8 | -          0.1429        8
+   4 | -          0.1023        8 | -          0.1023        8
+   5 | -          0.0636       16 | -          0.0857       16
+   6 | -          0.0379        8 | -          0.0379        8
+   7 | -          0.0536       24 | -          0.0536       24
+   8 | 8          0.1905        8 | -          0.0893       16
+   9 | 9          0.1299       12 | -          0.0952       24
+  10 | 10         0.0879        8 | -          0.0429       16
+  11 | 11         0.1071       20 | -          0.0779       40
+  12 | 12         0.0571        8 | -          0.0214       16
+  13 | 13         0.0455       24 | -          0.0659       48
+
+========================================================================================
+INITIAL-SEGMENT GATE VS LCM-SIEVE TRANSFERS AT n=15
+========================================================================================
+drop | add n: missing gap/th boundary | add lcm(n,drop): missing gap/th boundary
+----------------------------------------------------------------------------------------
+   2 | -          0.1833        4 | -          0.2167        4
+   3 | -          0.1410        8 | -          0.1410        8
+   4 | -          0.0865        8 | -          0.1083        8
+   5 | -          0.0818       16 | -          0.0818       16
+   6 | -          0.0530        8 | -          0.0530        8
+   7 | -          0.0556       24 | -          0.0619       24
+   8 | 8          0.1556        8 | -          0.1083       16
+   9 | 9          0.1558       12 | -          0.0730       24
+  10 | 10         0.1099        8 | -          0.0381       16
+  11 | 11         0.1333       20 | -          0.0788       40
+  12 | 12         0.0857        8 | -          0.0333       16
+  13 | 13         0.0667       24 | -          0.0667       48
+  14 | 14         0.0303       12 | -          0.0619       24
+
+========================================================================================
+INITIAL-SEGMENT GATE VS LCM-SIEVE TRANSFERS AT n=18
+========================================================================================
+drop | add n: missing gap/th boundary | add lcm(n,drop): missing gap/th boundary
+----------------------------------------------------------------------------------------
+   2 | -          0.2206        4 | -          0.2206        4
+   3 | -          0.1458        8 | -          0.1458        8
+   4 | -          0.1083        8 | -          0.1083        8
+   5 | -          0.0857       16 | -          0.0889       16
+   6 | -          0.0705        8 | -          0.0705        8
+   7 | -          0.0595       24 | -          0.0635       24
+   8 | -          0.0511       16 | -          0.0511       16
+   9 | -          0.0444       24 | -          0.0444       24
+  10 | 10         0.1616        8 | -          0.0778       16
+  11 | 11         0.1250       20 | -          0.0808       40
+  12 | 12         0.1008        8 | -          0.0437       16
+  13 | 13         0.1190       24 | -          0.0684       48
+  14 | 14         0.0889       12 | -          0.0492       24
+  15 | 15         0.0682       16 | -          0.0389       32
+  16 | 16         0.0513       16 | -          0.0347       32
+  17 | 17         0.0333       32 | -          0.0523       64
+
+========================================================================================
+SYNTHESIS
+========================================================================================
+The lcm repair rows satisfy the full small-denominator sieve, but in the n=14,15,18 transfer tables they still remain positive-gap.  The focused endpoint audits of the largest lcm repairs are also terminal-core empty.
+This separates two obstructions: missing a small denominator gives an immediate witness; covering it by a larger lcm gate exports the problem into endpoint debt rather than producing a cover.

@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-31-S388 - LRC Small-Denominator Sieve and Slack Formalization
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`, then fast-forwarded over upstream S386; during close-out, rebased over upstream S387 Cayley-Dickson work and renumbered this strand to S388.
+**User prompt:** Work on formalizing and extending the LRC-related math in the repo; spend a long session generating new ideas while nailing things down.
+**Formalization:** Added THM-366, proving the small-denominator divisibility sieve: at threshold `1/n`, a primitive point `a/m` with `m<=n` can be strictly protected only by speeds divisible by `m`; missing `m<n` gives an open witness and missing `m=n` gives a boundary witness. Hence every full-open-cover counterexample must contain a speed divisible by every `m in {2,...,n}`.
+**Computation:** Added `04-computation/lrc_small_denominator_sieve_s388.py` and stored `05-knowledge/results/lrc_small_denominator_sieve_s388.out`. The script audits initial segments, tight examples, `n=14` seven-ladder, and `lcm(n,d)` transfer tables for `n=14,15,18`.
+**Findings:** `lcm(n,d)` repairs remove the explicit small-denominator witness but remain positive-gap across all transfer-table rows. Focused endpoint audits of the largest repairs are terminal-core empty: `n=14 drop 13 add 182` has `gap/th=0.065934`, `unprotected=48`, `coreE=0`; `n=15 drop 14 add 210` has `gap/th=0.061905`, `coreE=0`; `n=18 drop 17 add 306` has `gap/th=0.052288`, `coreE=0`.
+**Synthesis:** Added HYP-1855 and HYP-1856 plus `07-reflections/lrc-small-denominator-sieve-and-slack-s388.md`. The new grammar is: missing a small denominator gives an immediate rational witness; satisfying the sieve moves the work to endpoint debt, private pivots, critical-radius surplus, and labelled cycle slack.
+**Verification:** `python3 -m py_compile 04-computation/lrc_small_denominator_sieve_s388.py` succeeded; the S388 script ran end-to-end and produced the stored output.
+**Next:** Build the full endpoint-debt transfer matrix for `drop d -> lcm(n,d)` at `n=14`; extend `lonely_runner_endpoint_cycle_formal_s384.py` to compute arrow slack vectors; search for longest slack-compatible almost-cycles before first peel.
+
 ## codex-2026-05-31-S387 - LRC Cayley-Dickson Tower Analogy
 
 **Account:** Codex
