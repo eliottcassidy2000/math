@@ -38,6 +38,7 @@ import TournamentH7.BasePathSink
 import TournamentH7.IsoCharacterizations
 import TournamentH7.ScoreSequence
 import TournamentH7.Paley3
+import TournamentH7.TransitiveH
 
 open Tournament
 
@@ -1232,3 +1233,16 @@ theorem paley_3_H_eq_three_audit (P : PaleyType 3) (h : P.T ≅ threeCycle) :
     H P.T = 3 :=
   paley_3_H_eq_three P h
 #print axioms paley_3_H_eq_three_audit
+
+/-! ### H(transitive) ≥ 1 for any n -/
+
+theorem H_transitive_ge_one_audit (n : ℕ) (hn : 1 ≤ n) :
+    1 ≤ H (transitiveTournament n) :=
+  H_transitive_ge_one n hn
+#print axioms H_transitive_ge_one_audit
+
+/-- H(transitive_n) = 1 for all n ≥ 1 — PROVED via OCF + transitive_alphaCount_zero. -/
+theorem H_transitive_eq_one_general_audit (n : ℕ) (hn : 1 ≤ n) :
+    H (transitiveTournament n) = 1 :=
+  H_transitive_eq_one_from_ocf n hn
+#print axioms H_transitive_eq_one_general_audit

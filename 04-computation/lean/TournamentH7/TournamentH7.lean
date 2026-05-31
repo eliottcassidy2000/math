@@ -82,4 +82,5 @@ import TournamentH7.BasePathSink
 import TournamentH7.IsoCharacterizations
 import TournamentH7.ScoreSequence
 import TournamentH7.Paley3
+import TournamentH7.TransitiveH
 import TournamentH7.Verify

@@ -14,6 +14,7 @@ import TournamentH7.HSpectrumClean
 import TournamentH7.SmallTournaments
 import TournamentH7.IsoProperties
 import TournamentH7.ForbiddenHCounting
+import TournamentH7.TransitiveH
 
 namespace Tournament
 
@@ -32,10 +33,11 @@ variable {n : ℕ}
 axiom alpha1_zero_iff_transitive (T : Tournament n) (hn : 1 ≤ n) :
     alphaCount 1 T = 0 ↔ T ≅ transitiveTournament n
 
-/-- **Axiom (classical).** The transitive tournament on n vertices has H = 1
-    (the unique HamPath is the reversed identity). -/
-axiom H_transitive_eq_one (n : ℕ) (hn : 1 ≤ n) :
-    H (transitiveTournament n) = 1
+/-- **Theorem (derived from OCF).** The transitive tournament has H = 1.
+    Proved via OCF + transitive_alphaCount_zero (see TransitiveH.lean). -/
+theorem H_transitive_eq_one (n : ℕ) (hn : 1 ≤ n) :
+    H (transitiveTournament n) = 1 :=
+  H_transitive_eq_one_from_ocf n hn
 
 /-! ### Concrete checks via decide (small n) -/
 
