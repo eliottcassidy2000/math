@@ -1109,3 +1109,25 @@ theorem small_H_alpha34_zero_audit {n : ℕ} (T : Tournament n) (hH : H T ≤ 26
     alphaCount 3 T = 0 ∧ alphaCount 4 T = 0 :=
   small_H_alpha34_zero T hH
 #print axioms small_H_alpha34_zero_audit
+
+theorem alpha_solution_H17_audit {n : ℕ} (T : Tournament n) (h : H T = 17) :
+    (alphaCount 1 T = 8 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 6 ∧ alphaCount 2 T = 1
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 4 ∧ alphaCount 2 T = 2
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) :=
+  alpha_solution_H17 T h
+#print axioms alpha_solution_H17_audit
+
+theorem alpha_solution_H19_audit {n : ℕ} (T : Tournament n) (h : H T = 19) :
+    (alphaCount 1 T = 9 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 7 ∧ alphaCount 2 T = 1
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 5 ∧ alphaCount 2 T = 2
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 3 ∧ alphaCount 2 T = 3
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) :=
+  alpha_solution_H19 T h
+#print axioms alpha_solution_H19_audit
