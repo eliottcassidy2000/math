@@ -338,6 +338,12 @@ The S377 cycle sharpens the frontier feedback loop: `n=14` still has a unique tw
 **T387** #lonely-runner #product-sum #natural-gates #fragile-coordinates | certainty: medium-high computational | source: codex-2026-05-31-S377
 Natural product-sum target modes mark the fragile LRC quotient coordinates. For `n=14`, target coordinates beat non-target near-blockers (`56` versus `154` misses); coordinate `6` is the first visible distinct product-sum resonance. For `n=15`, target coordinates again dominate (`120` versus `260`), with tied order-3 stencils at coordinates `6` and `14`. See HYP-1833.
 
+**T388** #natural-numbers #operation-shadows #lonely-runner #recursion | certainty: medium-high computational synthesis | source: codex-2026-05-31-S378
+The natural-operation graph lens matches LRC recursion: addition forgets to the complete transitive order, multiplication survives as the sparse divisibility skeleton, and LRC initial segments are the additive Dirichlet equality spine while endpoint protection runs through divisibility in `n=k+1`. See HYP-1834.
+
+**T389** #lonely-runner #recursive-metagraph #scalar-puncture #torsion | certainty: medium-high computational synthesis | source: codex-2026-05-31-S378
+The scalar-puncture moat atlas through `n=22` shows prime/composite recursion as torsion selection: composites pick proper delta orders (`n=14` order 2, `n=15` order 3, `n=21` order 3), while primes pick full-order deltas. Non-reverting repairs cover old missed cells only by opening larger new exposed packages, e.g. ratio `11/2` at `n=14` and `61/9` at `n=20`. See HYP-1835.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

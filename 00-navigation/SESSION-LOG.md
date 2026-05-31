@@ -14,6 +14,18 @@
 **Verification:** `python3 -m py_compile 04-computation/lonely_runner_torsion_crt_feedback_s377.py 04-computation/lonely_runner_natural_gate_feedback_s377.py` succeeded; both scripts were run and stored outputs.
 **Next:** Prove the eight-stencil coordinate-6 half-turn lemma, derive the `n=15` one-defect formula for coordinates `6/14`, and replace random disproof searches with a protection-cycle-first solver.
 
+## codex-2026-05-31-S378 - Natural Operation Shadows and LRC Metagraph Metrics
+
+**Account:** Codex
+**Git first:** Rebased over remote S376/S377 metric work and preserved their HYP-1831..1833 numbering.
+**User prompt:** Revisit the natural-number incomplete-tournament idea with `x+y=z` and the sparser `x*y=z`, relate it to product-sum equations, and use it to think freely about recursive Lonely Runner metrics as `n` changes.
+**Computation:** Added `04-computation/natural_lrc_recursive_modes_s378.py` and stored `05-knowledge/results/natural_lrc_recursive_modes_s378.out`. Added the complementary `04-computation/lonely_runner_operation_metagraph_s378.py` and stored `05-knowledge/results/lonely_runner_operation_metagraph_s378.out`.
+**Findings:** Addition collapses to the complete transitive order while nonunit multiplication remains sparse (`5070/499500` simple shadow edges on `[1000]`). Product-sum minima change by factor-packing type. The metagraph pass extends the scalar-puncture moat atlas through `n=22`: composites select proper torsion layers (`n=14` order 2, `n=15` and `n=21` order 3), while primes select full-order deltas.
+**Repair metrics:** One-step non-reverting repair ratios include `11/2` at `n=14`, `14/3` at `n=15`, `61/9` at `n=20`, and `63/10` at `n=22`. This supports using repair-deficit edge weights in an LRC residue metagraph.
+**Synthesis:** Added HYP-1834/HYP-1835, `07-reflections/natural-lrc-recursive-modes-s378.md`, and `07-reflections/natural-lrc-recursive-metagraph-s378.md`. New proof-search target: an LRC-TDA feature extractor combining max-gap, unit skeleton, divisor gates, endpoint peel depth, operation closure, scalar distance, and exposed-cell repair deficit.
+**Verification:** `python3 -m py_compile 04-computation/natural_lrc_recursive_modes_s378.py 04-computation/lonely_runner_operation_metagraph_s378.py` succeeded; `natural_lrc_recursive_modes_s378.py` reproduced its stored output byte-for-byte, and `lonely_runner_operation_metagraph_s378.py` was run to regenerate the stored output.
+**Next:** Rank S373-S377 near-disproof families by the combined feature vector and use repair-deficit weights as branch-and-bound costs in the normalized `n=14` quotient search.
+
 ## codex-2026-05-31-S375 - Lonely Runner 14/15/Disproof Repair-Deficit Loop
 
 **Account:** Codex
