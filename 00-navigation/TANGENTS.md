@@ -293,6 +293,9 @@ The complete normalized `2`-torsion cube for `n=14` has a unique best near-block
 **T372** #lonely-runner #six-tournaments #fano #numerology-with-structure | certainty: low-medium | source: codex-2026-05-31-S368
 The S367 `56` missed cells equal the number of unlabeled tournaments on six vertices. This is not just a raw coincidence: the misses factor as `7` odd shifts (all residues mod 7) times `8` alpha stencils (four intervals plus mirror complements `bins -> 13-bins`). Test for a hidden `Z/7 x F_2^3` or Fano-plane encoding of six-vertex tournament classes.
 
+**T373** #lonely-runner #six-tournaments #chirality #perspective-gap | certainty: medium computational | source: codex-2026-05-31-S369
+The `56=12+44` split is structural at six vertices: `12` self-converse tournament classes plus `44` chiral classes. The LRC `56=14+42` split is also structural: one outer mirror stencil pair contributes `14`, six interior stencils contribute `42`. The old five-to-six perspective heuristic misses exactly `8` classes, matching the eight LRC alpha stencils. See HYP-1824.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S369 - LRC/Tournament 56 Chirality Bridge
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`.
+**User prompt:** Investigate the decompositions `56-12=44` and `56-14=42`, linking the S367 LRC missed cells to five- and six-vertex tournament structures and repo meanings of `42`.
+**Computation:** Added `04-computation/lrc_tournament_56_bridge_s369.py` and stored `05-knowledge/results/lrc_tournament_56_bridge_s369.out`. The script exactly enumerates tournament classes on five and six vertices, computes self-converse/chiral and strong/non-strong splits, builds the 5-to-6 extension/deletion ledger, and compares these to the S367 missed-cell stencils.
+**Findings:** The split `56=12+44` is structural: six-vertex tournaments decompose into `12` self-converse classes and `44` chiral classes. The LRC missed cells also have mirror structure: eight alpha stencils form four mirror pairs. The split `56=14+42` is also visible inside S367: the outer mirror pair contributes `2*7=14` cells, while the six interior stencils contribute `6*7=42`. On the tournament side, `42=2*21`, twice the `21` non-strong six-vertex classes.
+**Synthesis:** Added HYP-1824 and `07-reflections/lrc-tournament-56-bridge-s369.md`. The likely missing object is an eight-fold chirality/perspective residue: the old five-to-six perspective count gives `48`, missing exactly `8` classes, matching the eight LRC alpha stencils.
+**Next:** Try to identify the eight extra six-vertex perspective classes and test whether their self-converse/chiral signatures match the eight S367 alpha stencils.
+
 ## codex-2026-05-31-S368 - The 56 Echo
 
 **Account:** Codex
