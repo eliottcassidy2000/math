@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S400 - Bruhat-Tits Frontiers for LRC Endpoint Debt
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S398; during close-out, upstream S399 Bruhat-Tits harmonic-flow work landed first, so this frontier-mass pass was rebased and renumbered to S400/HYP-1868/T431.
+**User prompt:** Explore Bruhat-Tits as an angle for LRC proofs.
+**Computation:** Added `04-computation/lrc_bruhat_tits_frontier_s400.py` and stored `05-knowledge/results/lrc_bruhat_tits_frontier_s400.out`. The script maps exposed rational endpoints to p-adic denominator-cusp depths `h_p=max(0,v_p(den)-v_p(n))` and computes normalized frontier mass `sum p^(-h_p)`.
+**Findings:** The `n=16` dyadic ladders are a clean single Bruhat-Tits tree translation: `Gap_A*2^h=2/33` for depths `h=1,2,3,4`, while normalized frontier mass is `17,17,35/2,35/2`. Thus the S398 `35/34` product jump is a frontier-mass jump. The `n=14` and `n=18` ladders already live in products of p-trees, with mixed 2-adic and odd-prime depths.
+**Synthesis:** Added HYP-1868 and `07-reflections/lrc-bruhat-tits-frontier-s400.md`. The proof target becomes: after quotienting base denominator levels, every all-repaired endpoint core has positive frontier mass in at least one prime tree or in the adelic product building.
+**Verification:** `python -m py_compile 04-computation/lrc_bruhat_tits_frontier_s400.py` succeeded; rerunning the script produced the stored output.
+
 ## codex-2026-05-31-S398 - LRC Gap-Debt Product Law
 
 **Account:** Codex

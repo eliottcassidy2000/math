@@ -13,6 +13,8 @@ related:
   - HYP-1858
   - HYP-1859
   - HYP-1861
+  - HYP-1867
+  - HYP-1868
 ---
 
 # HYP-1866: LRC gap-debt product forbids simultaneous zero
@@ -133,6 +135,11 @@ The `n=16` phase tax `35/34` is therefore useful.  It may be the first place
 where the raw endpoint count is not the true norm and the weighted dyadic debt
 must be corrected.
 
+HYP-1868 gives the proposed correction geometry: exposed endpoints form a
+finite frontier in the Bruhat-Tits tree of `PGL_2(Q_p)`.  On the pure `n=16`
+dyadic branch, `Gap_A*2^h` stays constant and the `35/34` tax is exactly a
+normalized frontier-mass jump from `17` to `35/2`.
+
 ## Sources
 
 - `04-computation/lrc_gap_debt_product_s398.py`
@@ -143,3 +150,5 @@ must be corrected.
 - THM-365.
 - THM-366.
 - THM-367.
+- HYP-1867.
+- HYP-1868.

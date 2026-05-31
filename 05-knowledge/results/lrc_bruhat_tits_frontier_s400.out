@@ -1,0 +1,77 @@
+BRUHAT-TITS FRONTIER AUDIT FOR LRC ENDPOINT DEBT
+========================================================================================
+h_p = max(0, v_p(den endpoint) - v_p(n)).
+BT mass = sum p^(-h_p) over unprotected endpoints.
+
+CASE SUMMARY
+----------------------------------------------------------------------------------------
+  label          class          gap/th      debt     product
+  n14 initial    boundary_only          0       6           0
+  n14 d=7        positive_gap      5/924      84        5/11
+  n14 d=14       positive_gap     5/1848     168        5/11
+  n16 initial    boundary_only          0       8           0
+  n16 d=2        positive_gap       1/33      34       34/33
+  n16 d=4        positive_gap       1/66      68       34/33
+  n16 d=8        positive_gap      1/132     140       35/33
+  n16 d=16       positive_gap      1/264     280       35/33
+  n18 initial    boundary_only          0       6           0
+  n18 d=9        positive_gap      1/176     176           1
+  n18 d=18       positive_gap      1/352     352           1
+
+P-ADIC FRONTIERS
+----------------------------------------------------------------------------------------
+  label          p  depth_hist        BT_mass  active_mass  gap*p^h
+  n14 initial     2 0:6                     6            0        -
+  n14 initial     7 0:6                     6            0        -
+  n14 d=7         2 0:60,2:24              66            6    5/231
+  n14 d=7         7 1:84                   12           12    5/132
+  n14 d=14        2 1:120,3:48             66           66        -
+  n14 d=14        7 1:168                  24           24    5/264
+  n16 initial     2 0:8                     8            0        -
+  n16 d=2         2 1:34                   17           17     2/33
+  n16 d=4         2 2:68                   17           17     2/33
+  n16 d=8         2 3:140                35/2         35/2     2/33
+  n16 d=16        2 4:280                35/2         35/2     2/33
+  n18 initial     2 0:6                     6            0        -
+  n18 initial     3 0:6                     6            0        -
+  n18 d=9         2 0:112,4:64            116            4     1/11
+  n18 d=9         3 2:160,3:16         496/27       496/27        -
+  n18 d=18        2 1:224,5:128           116          116        -
+  n18 d=18        3 2:320,3:32         992/27       992/27        -
+
+TREE TRANSLATION CHECKS
+----------------------------------------------------------------------------------------
+  pair                 p  hL->hR  gap ratio  raw ratio  BT mass ratio
+  n14 d=7   ->n14 d=14    2   2->{1,3}        1/2          2             11
+  n16 d=2   ->n16 d=4     2   1->2            1/2          2              1
+  n16 d=4   ->n16 d=8     2   2->3            1/2      35/17          35/34
+  n16 d=8   ->n16 d=16    2   3->4            1/2          2              1
+  n18 d=9   ->n18 d=18    2   4->{1,5}        1/2          2             29
+
+N=16 DYADIC INFINITY-CUSP RESIDUES
+----------------------------------------------------------------------------------------
+Residues are units of (1/x)/2^depth modulo 16 for endpoints x.
+  n16 d=2    abs_depths=5:34     unit_residues_mod16=1:2,3:5,5:6,7:4,9:4,11:6,13:5,15:2
+  n16 d=4    abs_depths=6:68     unit_residues_mod16=1:6,3:11,5:10,7:7,9:7,11:10,13:11,15:6
+  n16 d=8    abs_depths=7:140    unit_residues_mod16=1:14,3:21,5:21,7:14,9:14,11:21,13:21,15:14
+  n16 d=16   abs_depths=8:280    unit_residues_mod16=1:28,3:42,5:42,7:28,9:28,11:42,13:42,15:28
+
+PROOF TRANSLATION
+----------------------------------------------------------------------------------------
+  LRC endpoint x=a/b     -> boundary point of P^1(Q_p)
+  extra denominator p^h  -> depth h in the infinity cusp
+  raw endpoint debt      -> horosphere population
+  BT mass sum p^(-h)     -> normalized frontier measure
+  real gap shrink        -> translation toward the cusp
+
+A Bruhat-Tits proof would show that every repaired endpoint core
+has positive normalized frontier mass in at least one p-tree.  Then
+moving deeper can hide the real gap only by creating more endpoint
+frontier, so the pair (Archimedean gap, p-adic debt) cannot both
+vanish.
+
+The n=16 rows are the clean single-tree lab: gap*2^h is constant
+while BT mass is 17,17,35/2,35/2.  The 35/34 jump is therefore
+a frontier-mass jump, not a failure of tree translation.  The n=14
+and n=18 rows already live in a product of p-trees, so a final
+proof should use an adelic product building rather than one tree.
