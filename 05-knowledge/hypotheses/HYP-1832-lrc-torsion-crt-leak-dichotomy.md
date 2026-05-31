@@ -9,6 +9,7 @@ related:
   - HYP-1824
   - HYP-1825
   - HYP-1833
+  - HYP-1837
   - THM-363
   - THM-364
 ---
@@ -124,3 +125,4 @@ torsion/CRT leak that appears when composite gates are inserted.
 - HYP-1824
 - HYP-1825
 - HYP-1833
+- HYP-1837

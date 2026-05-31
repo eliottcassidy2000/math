@@ -350,6 +350,9 @@ The speed set may not be the fundamental LRC object; the pulled-back circular-ar
 **T391** #lonely-runner #near-disproof #critical-radius #seven-ladder | certainty: high exact computation for examples | source: codex-2026-05-31-S379
 The `n=14` seven-ladder is tiny-gap but not near-tight in max-min height: `gap/th=0.005411` while exact `critical/th=1.217391`, with `84` unprotected endpoints. A tiny complement interval can be a steep valley; endpoint shape and critical radius are better near-counterexample diagnostics than visible gap width alone.
 
+**T392** #lonely-runner #fourteen-runners #composite-denominators #endpoint-transfer | certainty: medium-high computational | source: codex-2026-05-31-S380
+A composite-denominator disproof attempt found a sharper near-miss: `(1) union {14q: q=1..13, q!=6}` protects the designed unit/98/182 target layer and halves the seven-ladder gap ratio to `0.002706`, but still has positive gap `5/25872` and `168` unprotected endpoints. The 14 anomaly looks like endpoint-transfer debt, not an open-cover construction. See HYP-1837.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

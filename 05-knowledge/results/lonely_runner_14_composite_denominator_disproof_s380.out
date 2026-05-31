@@ -1,0 +1,304 @@
+Fourteen-runner composite-denominator disproof attempt (S380)
+Convention: k=13, threshold=1/14, speed search <= 420, grid=35672.
+A disproof would be an exact open cover: full forbidden length and no unprotected endpoint.
+
+Building grid masks...
+  pool_size=148
+Composite-denominator target layer
+  target_count=187
+  denominator_hist={2: 1, 7: 6, 8: 4, 13: 4, 14: 6, 26: 4, 49: 14, 56: 24, 91: 24, 98: 14, 154: 2, 168: 2, 182: 24, 392: 6, 1078: 12, 1176: 12, 1274: 6, 1456: 2, 3696: 2, 10192: 6, 25872: 12}
+  top target-protecting speeds:
+    speed=364 weight=1050 mod14= 0 gcd14=14
+    speed=392 weight= 846 mod14= 0 gcd14=14
+    speed=182 weight= 810 mod14= 0 gcd14=14
+    speed=280 weight= 602 mod14= 0 gcd14=14
+    speed= 42 weight= 586 mod14= 0 gcd14=14
+    speed=119 weight= 566 mod14= 7 gcd14= 7
+    speed=245 weight= 500 mod14= 7 gcd14= 7
+    speed= 98 weight= 470 mod14= 0 gcd14=14
+    speed=294 weight= 470 mod14= 0 gcd14=14
+    speed=196 weight= 446 mod14= 0 gcd14=14
+    speed=322 weight= 442 mod14= 0 gcd14=14
+    speed= 91 weight= 404 mod14= 7 gcd14= 7
+
+Seed composite/gate families on the target grid
+  initial segment: grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  single 14-gate: grid_uncovered=294 longest=-1 target_uncovered=12 target_weight=1912 composite_bonus=16
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  seven-ladder: grid_uncovered=300 longest=-1 target_uncovered=66 target_weight=1378 composite_bonus=63
+    speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  7-ladder skip=6: grid_uncovered=300 longest=-1 target_uncovered=66 target_weight=1378 composite_bonus=63
+    speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  7-ladder skip=12: grid_uncovered=420 longest=-1 target_uncovered=12 target_weight=1882 composite_bonus=63
+    speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 91)
+  7-ladder skip=10: grid_uncovered=780 longest=-1 target_uncovered=12 target_weight=1882 composite_bonus=63
+    speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 77, 84, 91)
+  7-ladder skip=4: grid_uncovered=780 longest=-1 target_uncovered=12 target_weight=1882 composite_bonus=63
+    speeds=(1, 7, 14, 21, 35, 42, 49, 56, 63, 70, 77, 84, 91)
+  7-ladder skip=2: grid_uncovered=972 longest=-1 target_uncovered=12 target_weight=1882 composite_bonus=63
+    speeds=(1, 7, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91)
+  7-ladder skip=13: grid_uncovered=1092 longest=-1 target_uncovered=36 target_weight=1570 composite_bonus=66
+    speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84)
+  7-ladder skip=5: grid_uncovered=1152 longest=-1 target_uncovered=14 target_weight=1866 composite_bonus=66
+    speeds=(1, 7, 14, 21, 28, 42, 49, 56, 63, 70, 77, 84, 91)
+
+Exact audit of seed families
+  initial segment: class=boundary_only forbidden=1 max_gap=0 gap/th=0.000000 boundary_wit=6 unprot=6 first_unprot=1/14 Q=5045040
+    max_gap_ends=- gap_denoms=()
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 6), (2, 6), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  seven-ladder: class=positive_gap forbidden=142/143 max_gap=5/12936 gap/th=0.005411 boundary_wit=84 unprot=84 first_unprot=9/98 Q=35315280
+    max_gap_ends=127/1078->139/1176 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12))
+    mod14=((0, 5), (1, 1), (7, 7)) gcd14=((1, 1), (7, 7), (14, 5))
+    speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  7-ladder skip=12: class=positive_gap forbidden=242689/245245 max_gap=1/1715 gap/th=0.008163 boundary_wit=84 unprot=84 first_unprot=57/686 Q=35315280
+    max_gap_ends=57/686->41/490 gap_denoms=((490, 12), (686, 12), (1078, 12), (1274, 12))
+    mod14=((0, 5), (1, 1), (7, 7)) gcd14=((1, 1), (7, 7), (14, 5))
+    speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 91)
+  7-ladder skip=13: class=positive_gap forbidden=219763/226380 max_gap=1/1176 gap/th=0.011905 boundary_wit=168 unprot=168 first_unprot=15/196 Q=2716560
+    max_gap_ends=155/1176->13/98 gap_denoms=((98, 12), (196, 12), (294, 12), (392, 12), (490, 12), (588, 12), (686, 12), (784, 12))
+    mod14=((0, 6), (1, 1), (7, 6)) gcd14=((1, 1), (7, 6), (14, 6))
+    speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84)
+  7-ladder skip=10: class=positive_gap forbidden=144107/147147 max_gap=4/4459 gap/th=0.012559 boundary_wit=84 unprot=84 first_unprot=9/98 Q=35315280
+    max_gap_ends=127/1274->69/686 gap_denoms=((686, 12), (882, 12), (1078, 12), (1274, 12))
+    mod14=((0, 5), (1, 1), (7, 7)) gcd14=((1, 1), (7, 7), (14, 5))
+    speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 77, 84, 91)
+  7-ladder skip=5: class=positive_gap forbidden=9701/10010 max_gap=1/980 gap/th=0.014286 boundary_wit=120 unprot=120 first_unprot=33/392 Q=35315280
+    max_gap_ends=11/98->111/980 gap_denoms=((98, 12), (196, 12), (392, 12), (980, 36), (1078, 12), (1274, 12))
+    mod14=((0, 6), (1, 1), (7, 6)) gcd14=((1, 1), (7, 6), (14, 6))
+    speeds=(1, 7, 14, 21, 28, 42, 49, 56, 63, 70, 77, 84, 91)
+  7-ladder skip=4: class=positive_gap forbidden=13723/14014 max_gap=9/8624 gap/th=0.014610 boundary_wit=84 unprot=84 first_unprot=9/98 Q=35315280
+    max_gap_ends=113/1078->83/784 gap_denoms=((784, 24), (1078, 12), (1274, 12))
+    mod14=((0, 5), (1, 1), (7, 7)) gcd14=((1, 1), (7, 7), (14, 5))
+    speeds=(1, 7, 14, 21, 35, 42, 49, 56, 63, 70, 77, 84, 91)
+  7-ladder skip=9: class=positive_gap forbidden=186377/196196 max_gap=1/637 gap/th=0.021978 boundary_wit=96 unprot=96 first_unprot=85/1078 Q=11771760
+    max_gap_ends=141/1274->11/98 gap_denoms=((98, 12), (196, 12), (686, 12), (784, 12), (1078, 12), (1274, 12))
+    mod14=((0, 6), (1, 1), (7, 6)) gcd14=((1, 1), (7, 6), (14, 6))
+    speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 70, 77, 84, 91)
+
+Target-grid greedy constructions
+  target-grid greedy forced=(1, 14, 98): grid_uncovered=336 longest=-1 target_uncovered=0 target_weight=2038 composite_bonus=84
+    speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  target-grid greedy forced=(1, 7, 14): grid_uncovered=648 longest=-1 target_uncovered=10 target_weight=1920 composite_bonus=16
+    speeds=(1, 4, 5, 6, 7, 8, 9, 10, 13, 14, 17, 22, 23)
+  target-grid greedy forced=(1, 14): grid_uncovered=814 longest=-1 target_uncovered=2 target_weight=2018 composite_bonus=11
+    speeds=(1, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 19, 23)
+
+Exact audit of greedy constructions
+  target-grid greedy forced=(1, 14, 98): class=positive_gap forbidden=142/143 max_gap=5/25872 gap/th=0.002706 boundary_wit=168 unprot=168 first_unprot=15/196 Q=70630560
+    max_gap_ends=197/2352->181/2156 gap_denoms=((784, 24), (2156, 24), (2352, 24), (2548, 24))
+    mod14=((0, 12), (1, 1)) gcd14=((1, 1), (14, 12))
+    speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  target-grid greedy forced=(1, 7, 14): class=positive_gap forbidden=26904379/27397370 max_gap=2/833 gap/th=0.033613 boundary_wit=30 unprot=30 first_unprot=15/182 Q=1972610640
+    max_gap_ends=99/238->41/98 gap_denoms=((56, 4), (70, 2), (98, 2), (182, 4), (238, 4), (308, 6), (322, 6))
+    mod14=((0, 1), (1, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 2), (9, 2), (10, 1), (13, 1)) gcd14=((1, 6), (2, 5), (7, 1), (14, 1))
+    speeds=(1, 4, 5, 6, 7, 8, 9, 10, 13, 14, 17, 22, 23)
+  target-grid greedy forced=(1, 14): class=positive_gap forbidden=119709477/122482360 max_gap=3/784 gap/th=0.053571 boundary_wit=24 unprot=24 first_unprot=15/112 Q=2204682480
+    max_gap_ends=15/112->27/196 gap_denoms=((56, 2), (112, 2), (140, 2), (154, 2), (182, 4), (196, 8), (266, 2), (322, 2))
+    mod14=((0, 1), (1, 1), (3, 1), (4, 1), (5, 2), (8, 1), (9, 2), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 8), (2, 4), (14, 1))
+    speeds=(1, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 19, 23)
+
+Composite leak splices around the seven-ladder/gate seeds
+  splice single 14-gate remove=(14,) add=(6,): grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  splice single 14-gate remove=(14,) add=(69,): grid_uncovered=72 longest=-1 target_uncovered=12 target_weight=1932 composite_bonus=9
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 69)
+  splice single 14-gate remove=(14,) add=(75,): grid_uncovered=80 longest=-1 target_uncovered=8 target_weight=1968 composite_bonus=9
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 75)
+  splice single 14-gate remove=(14,) add=(46,): grid_uncovered=106 longest=-1 target_uncovered=12 target_weight=1914 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 46)
+  splice single 14-gate remove=(14,) add=(17,): grid_uncovered=106 longest=-1 target_uncovered=12 target_weight=1914 composite_bonus=9
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 17)
+  splice single 14-gate remove=(14,) add=(23,): grid_uncovered=106 longest=-1 target_uncovered=12 target_weight=1914 composite_bonus=9
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 23)
+  splice single 14-gate remove=(14,) add=(29,): grid_uncovered=138 longest=-1 target_uncovered=14 target_weight=1898 composite_bonus=9
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 29)
+  splice single 14-gate remove=(4, 14) add=(17, 19): grid_uncovered=152 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=8
+    speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 17, 19)
+  splice single 14-gate remove=(4, 14) add=(46, 19): grid_uncovered=156 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=9
+    speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 19, 46)
+  splice single 14-gate remove=(14,) add=(150,): grid_uncovered=164 longest=-1 target_uncovered=16 target_weight=1882 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 150)
+
+Exact audit of splice constructions
+  splice single 14-gate remove=(14,) add=(6,): class=boundary_only forbidden=1 max_gap=0 gap/th=0.000000 boundary_wit=6 unprot=6 first_unprot=1/14 Q=5045040
+    max_gap_ends=- gap_denoms=()
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 6), (2, 6), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  splice single 14-gate remove=(14,) add=(69,): class=positive_gap forbidden=10607/10626 max_gap=2/5313 gap/th=0.005270 boundary_wit=18 unprot=18 first_unprot=1/14 Q=116035920
+    max_gap_ends=169/966->27/154 gap_denoms=((56, 2), (154, 2), (168, 2), (966, 6))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 2)) gcd14=((1, 7), (2, 5), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 69)
+  splice single 14-gate remove=(14,) add=(138,): class=positive_gap forbidden=5287/5313 max_gap=19/21252 gap/th=0.012516 boundary_wit=18 unprot=18 first_unprot=1/14 Q=116035920
+    max_gap_ends=337/1932->27/154 gap_denoms=((56, 2), (154, 2), (168, 2), (644, 2), (1932, 4))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 2), (13, 1)) gcd14=((1, 6), (2, 6), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 138)
+  splice single 14-gate remove=(14,) add=(75,): class=positive_gap forbidden=1921/1925 max_gap=2/1925 gap/th=0.014545 boundary_wit=10 unprot=10 first_unprot=1/14 Q=25225200
+    max_gap_ends=61/350->27/154 gap_denoms=((154, 2), (350, 2))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 2), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 7), (2, 5), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 75)
+  splice single 14-gate remove=(14,) add=(144,): class=positive_gap forbidden=1577/1584 max_gap=3/2464 gap/th=0.017045 boundary_wit=18 unprot=18 first_unprot=1/14 Q=10090080
+    max_gap_ends=39/224->27/154 gap_denoms=((56, 2), (154, 2), (168, 2), (224, 2), (2016, 4))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 2), (5, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 6), (2, 6), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 144)
+  splice single 14-gate remove=(14,) add=(213,): class=positive_gap forbidden=10873/10934 max_gap=1/781 gap/th=0.017926 boundary_wit=18 unprot=18 first_unprot=1/14 Q=358197840
+    max_gap_ends=173/994->27/154 gap_denoms=((56, 2), (154, 2), (168, 2), (994, 4), (2982, 2))
+    mod14=((1, 1), (2, 1), (3, 2), (4, 1), (5, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 7), (2, 5), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 213)
+  splice single 14-gate remove=(4, 14) add=(46, 19): class=positive_gap forbidden=1191/1196 max_gap=11/8372 gap/th=0.018395 boundary_wit=18 unprot=18 first_unprot=1/14 Q=2204682480
+    max_gap_ends=43/182->153/644 gap_denoms=((112, 4), (182, 2), (644, 6))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 2), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 7), (2, 5), (7, 1))
+    speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 19, 46)
+  splice single 14-gate remove=(14,) add=(17,): class=positive_gap forbidden=363/364 max_gap=1/728 gap/th=0.019231 boundary_wit=10 unprot=10 first_unprot=1/14 Q=85765680
+    max_gap_ends=29/182->9/56 gap_denoms=((56, 2), (182, 2))
+    mod14=((1, 1), (2, 1), (3, 2), (4, 1), (5, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 7), (2, 5), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 17)
+  splice single 14-gate remove=(14,) add=(23,): class=positive_gap forbidden=363/364 max_gap=1/728 gap/th=0.019231 boundary_wit=10 unprot=10 first_unprot=1/14 Q=116035920
+    max_gap_ends=29/182->9/56 gap_denoms=((56, 2), (182, 2))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (7, 1), (8, 1), (9, 2), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 7), (2, 5), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 23)
+  splice single 14-gate remove=(14,) add=(46,): class=positive_gap forbidden=363/364 max_gap=1/728 gap/th=0.019231 boundary_wit=10 unprot=10 first_unprot=1/14 Q=116035920
+    max_gap_ends=29/182->9/56 gap_denoms=((56, 2), (182, 2))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 2), (5, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 6), (2, 6), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 46)
+
+Composite-denominator mutation search
+  mutation seed=0: grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  mutation restart=5 step=405: grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  mutation restart=18 step=471: grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  mutation restart=23 step=19: grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  mutation restart=27 step=372: grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  mutation restart=35 step=399: grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  mutation restart=38 step=306: grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  mutation restart=39 step=430: grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  mutation restart=43 step=138: grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  mutation restart=45 step=140: grid_uncovered=6 longest=-1 target_uncovered=6 target_weight=1984 composite_bonus=10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+
+Exact audit of mutation constructions
+  mutation seed=0: class=boundary_only forbidden=1 max_gap=0 gap/th=0.000000 boundary_wit=6 unprot=6 first_unprot=1/14 Q=5045040
+    max_gap_ends=- gap_denoms=()
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 6), (2, 6), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  mutation seed=2: class=positive_gap forbidden=10607/10626 max_gap=2/5313 gap/th=0.005270 boundary_wit=18 unprot=18 first_unprot=1/14 Q=116035920
+    max_gap_ends=169/966->27/154 gap_denoms=((56, 2), (154, 2), (168, 2), (966, 6))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 2)) gcd14=((1, 7), (2, 5), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 69)
+  mutation restart=48 step=351: class=positive_gap forbidden=142/143 max_gap=5/12936 gap/th=0.005411 boundary_wit=84 unprot=84 first_unprot=29/1274 Q=35315280
+    max_gap_ends=29/1176->27/1078 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12))
+    mod14=((0, 5), (4, 1), (7, 7)) gcd14=((2, 1), (7, 7), (14, 5))
+    speeds=(4, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  mutation restart=46 step=27: class=positive_gap forbidden=142/143 max_gap=5/12936 gap/th=0.005411 boundary_wit=84 unprot=84 first_unprot=1/98 Q=35315280
+    max_gap_ends=29/1176->27/1078 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12))
+    mod14=((0, 5), (7, 7), (10, 1)) gcd14=((2, 1), (7, 7), (14, 5))
+    speeds=(7, 10, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  mutation restart=51 step=307: class=positive_gap forbidden=242689/245245 max_gap=1/1715 gap/th=0.008163 boundary_wit=92 unprot=92 first_unprot=1/84 Q=35315280
+    max_gap_ends=29/490->41/686 gap_denoms=((84, 8), (490, 12), (686, 12), (1078, 12), (1274, 12))
+    mod14=((0, 5), (6, 1), (7, 7)) gcd14=((2, 1), (7, 7), (14, 5))
+    speeds=(6, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 91)
+  mutation restart=49 step=380: class=positive_gap forbidden=130783/133133 max_gap=5/7448 gap/th=0.009398 boundary_wit=108 unprot=108 first_unprot=1/98 Q=670990320
+    max_gap_ends=127/1862->27/392 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12), (1862, 24))
+    mod14=((0, 4), (7, 8), (8, 1)) gcd14=((2, 1), (7, 8), (14, 4))
+    speeds=(7, 8, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91, 133)
+  mutation restart=30 step=188: class=positive_gap forbidden=293/294 max_gap=1/1176 gap/th=0.011905 boundary_wit=14 unprot=14 first_unprot=1/14 Q=5045040
+    max_gap_ends=47/294->9/56 gap_denoms=((56, 2), (98, 2), (168, 2), (294, 2))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (7, 2), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 6), (2, 5), (7, 2))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 63)
+  mutation restart=28 step=293: class=positive_gap forbidden=5287/5313 max_gap=19/21252 gap/th=0.012516 boundary_wit=18 unprot=18 first_unprot=1/14 Q=116035920
+    max_gap_ends=337/1932->27/154 gap_denoms=((56, 2), (154, 2), (168, 2), (644, 2), (1932, 4))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 2), (13, 1)) gcd14=((1, 6), (2, 6), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 138)
+  mutation seed=3: class=positive_gap forbidden=1921/1925 max_gap=2/1925 gap/th=0.014545 boundary_wit=10 unprot=10 first_unprot=1/14 Q=25225200
+    max_gap_ends=61/350->27/154 gap_denoms=((154, 2), (350, 2))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 2), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 7), (2, 5), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 75)
+  mutation restart=50 step=365: class=positive_gap forbidden=145951/150920 max_gap=5/4704 gap/th=0.014881 boundary_wit=240 unprot=240 first_unprot=1/98 Q=70630560
+    max_gap_ends=29/588->79/1568 gap_denoms=((392, 12), (490, 24), (588, 12), (686, 12), (1568, 36), (2156, 48), (4704, 48))
+    mod14=((0, 7), (4, 1), (7, 5)) gcd14=((2, 1), (7, 5), (14, 7))
+    speeds=(7, 14, 18, 28, 35, 42, 49, 56, 63, 70, 91, 154, 336)
+
+Best exact audited candidates overall
+  initial segment: class=boundary_only forbidden=1 max_gap=0 gap/th=0.000000 boundary_wit=6 unprot=6 first_unprot=1/14 Q=5045040
+    max_gap_ends=- gap_denoms=()
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 6), (2, 6), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  target-grid greedy forced=(1, 14, 98): class=positive_gap forbidden=142/143 max_gap=5/25872 gap/th=0.002706 boundary_wit=168 unprot=168 first_unprot=15/196 Q=70630560
+    max_gap_ends=197/2352->181/2156 gap_denoms=((784, 24), (2156, 24), (2352, 24), (2548, 24))
+    mod14=((0, 12), (1, 1)) gcd14=((1, 1), (14, 12))
+    speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  splice single 14-gate remove=(14,) add=(69,): class=positive_gap forbidden=10607/10626 max_gap=2/5313 gap/th=0.005270 boundary_wit=18 unprot=18 first_unprot=1/14 Q=116035920
+    max_gap_ends=169/966->27/154 gap_denoms=((56, 2), (154, 2), (168, 2), (966, 6))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 2)) gcd14=((1, 7), (2, 5), (7, 1))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 69)
+  seven-ladder: class=positive_gap forbidden=142/143 max_gap=5/12936 gap/th=0.005411 boundary_wit=84 unprot=84 first_unprot=9/98 Q=35315280
+    max_gap_ends=127/1078->139/1176 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12))
+    mod14=((0, 5), (1, 1), (7, 7)) gcd14=((1, 1), (7, 7), (14, 5))
+    speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  mutation restart=48 step=351: class=positive_gap forbidden=142/143 max_gap=5/12936 gap/th=0.005411 boundary_wit=84 unprot=84 first_unprot=29/1274 Q=35315280
+    max_gap_ends=29/1176->27/1078 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12))
+    mod14=((0, 5), (4, 1), (7, 7)) gcd14=((2, 1), (7, 7), (14, 5))
+    speeds=(4, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  splice seven-ladder remove=(1,) add=(6,): class=positive_gap forbidden=142/143 max_gap=5/12936 gap/th=0.005411 boundary_wit=84 unprot=84 first_unprot=29/1274 Q=35315280
+    max_gap_ends=29/1176->27/1078 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12))
+    mod14=((0, 5), (6, 1), (7, 7)) gcd14=((2, 1), (7, 7), (14, 5))
+    speeds=(6, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  mutation restart=46 step=27: class=positive_gap forbidden=142/143 max_gap=5/12936 gap/th=0.005411 boundary_wit=84 unprot=84 first_unprot=1/98 Q=35315280
+    max_gap_ends=29/1176->27/1078 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12))
+    mod14=((0, 5), (7, 7), (10, 1)) gcd14=((2, 1), (7, 7), (14, 5))
+    speeds=(7, 10, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  splice seven-ladder remove=(1,) add=(50,): class=positive_gap forbidden=142/143 max_gap=5/12936 gap/th=0.005411 boundary_wit=84 unprot=84 first_unprot=1/98 Q=176576400
+    max_gap_ends=29/1176->27/1078 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12))
+    mod14=((0, 5), (7, 7), (8, 1)) gcd14=((2, 1), (7, 7), (14, 5))
+    speeds=(7, 14, 21, 28, 35, 49, 50, 56, 63, 70, 77, 84, 91)
+  splice seven-ladder remove=(1,) add=(94,): class=positive_gap forbidden=142/143 max_gap=5/12936 gap/th=0.005411 boundary_wit=84 unprot=84 first_unprot=29/1274 Q=1659818160
+    max_gap_ends=29/1176->27/1078 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12))
+    mod14=((0, 5), (7, 7), (10, 1)) gcd14=((2, 1), (7, 7), (14, 5))
+    speeds=(7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91, 94)
+  splice seven-ladder remove=(1,) add=(106,): class=positive_gap forbidden=142/143 max_gap=5/12936 gap/th=0.005411 boundary_wit=88 unprot=88 first_unprot=1/98 Q=1871709840
+    max_gap_ends=29/1176->27/1078 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12), (1484, 4))
+    mod14=((0, 5), (7, 7), (8, 1)) gcd14=((2, 1), (7, 7), (14, 5))
+    speeds=(7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91, 106)
+  7-ladder skip=12: class=positive_gap forbidden=242689/245245 max_gap=1/1715 gap/th=0.008163 boundary_wit=84 unprot=84 first_unprot=57/686 Q=35315280
+    max_gap_ends=57/686->41/490 gap_denoms=((490, 12), (686, 12), (1078, 12), (1274, 12))
+    mod14=((0, 5), (1, 1), (7, 7)) gcd14=((1, 1), (7, 7), (14, 5))
+    speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 91)
+  mutation restart=51 step=307: class=positive_gap forbidden=242689/245245 max_gap=1/1715 gap/th=0.008163 boundary_wit=92 unprot=92 first_unprot=1/84 Q=35315280
+    max_gap_ends=29/490->41/686 gap_denoms=((84, 8), (490, 12), (686, 12), (1078, 12), (1274, 12))
+    mod14=((0, 5), (6, 1), (7, 7)) gcd14=((2, 1), (7, 7), (14, 5))
+    speeds=(6, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 91)
+  mutation restart=49 step=380: class=positive_gap forbidden=130783/133133 max_gap=5/7448 gap/th=0.009398 boundary_wit=108 unprot=108 first_unprot=1/98 Q=670990320
+    max_gap_ends=127/1862->27/392 gap_denoms=((392, 12), (1078, 12), (1176, 12), (1274, 12), (1862, 24))
+    mod14=((0, 4), (7, 8), (8, 1)) gcd14=((2, 1), (7, 8), (14, 4))
+    speeds=(7, 8, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91, 133)
+  mutation restart=30 step=188: class=positive_gap forbidden=293/294 max_gap=1/1176 gap/th=0.011905 boundary_wit=14 unprot=14 first_unprot=1/14 Q=5045040
+    max_gap_ends=47/294->9/56 gap_denoms=((56, 2), (98, 2), (168, 2), (294, 2))
+    mod14=((1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (7, 2), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) gcd14=((1, 6), (2, 5), (7, 2))
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 63)
+
+Disproof ledger
+  open_cover_candidates=0
+  boundary_only_candidates=1
+  positive_gap_candidates=89
+  best_positive_gap=target-grid greedy forced=(1, 14, 98); gap/th=0.002706; max_gap=5/25872; ends=(Fraction(197, 2352), Fraction(181, 2156)); speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  best_boundary_only=initial segment; unprotected=6; boundary_witnesses=6; speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+
+Interpretation
+  The composite-denominator route did not produce a fourteen-runner counterexample.
+  It did stress the right anomaly: protecting the unit layer with 14-gates and
+  targeting the 98/182 moat leaks keeps returning positive gaps instead of an
+  open cover.  The best audited positive gaps still have endpoint denominators
+  tied to the 2*7 and 2*7*13 layers, so the anomaly is real, but it behaves
+  like an endpoint-transfer obstruction rather than a disproof architecture.
+  Next disproof attempt should solve the endpoint protection graph first, with
+  variables constrained to protect the 98/182 leak orbit, then realize those
+  protection edges by speeds.

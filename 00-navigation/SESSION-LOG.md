@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-31-S380 - Fourteen-Runner Composite-Denominator Disproof Attempt
+
+**Account:** Codex
+**Git first:** Rebased over remote S378/S379 work and renumbered this disproof strand to S380.
+**User prompt:** Attempt a fourteen-runner LRC disproof using the fact that composite denominators affect scalar-puncture moat curvature and `14` is anomalous.
+**Computation:** Added `04-computation/lonely_runner_14_composite_denominator_disproof_s380.py` and stored `05-knowledge/results/lonely_runner_14_composite_denominator_disproof_s380.out`. The script builds a `187`-point target layer from unit endpoints, known `98/182` leak points, and exact seven-ladder/gate gaps, then searches target-protecting `13`-speed sets on a composite-aware grid before exact interval/endpoint audits.
+**Best near-disproof:** The greedy target-protecting `14`-multiple ladder `(1,14,28,42,56,70,98,112,126,140,154,168,182)` covered all designed target points and improved the seven-ladder gap ratio from `0.005411` to `0.002706`, but exact audit still found a positive gap `5/25872` and `168` unprotected endpoints.
+**Disproof outcome:** No open cover appeared. Among the `90` best exact-audited candidates: `0` open covers, `1` boundary-only candidate (the initial segment), and `89` positive-gap candidates.
+**Synthesis:** Added HYP-1837 and `07-reflections/lonely-runner-composite-denominator-disproof-s380.md`. The anomaly is real but behaves like endpoint-transfer debt: protecting the `14`, `98`, and `182` layers shrinks open gaps while moving leakage to descendant denominators such as `2156,2352,2548`.
+**Verification:** `python3 -m py_compile 04-computation/lonely_runner_14_composite_denominator_disproof_s380.py` succeeded; the S380 script ran end-to-end and produced a 304-line stored result.
+**Next:** Search endpoint-protection graphs first on the unit plus `98/182` leak orbit, then solve the integer realization problem for 13 speeds.
+
 ## codex-2026-05-31-S379 - Lonely Runner Shape Questions
 
 **Account:** Codex
