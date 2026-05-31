@@ -12,6 +12,17 @@
 **Knowledge updates:** Added HYP-1820, tangents T363-T364, and `07-reflections/natural-operation-digraphs-and-product-sum-s365.md`.
 **Next:** Build a two-colored operation complex with additive and multiplicative 2-cells; compute small critical-pair homology; treat product-sum numbers as a minimal-endpoint problem in the additive completion of the divisibility DAG.
 
+## codex-2026-05-31-S365b - Natural Mode Graphs and Product-Sum Defect
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`; during close-out rebased over the sibling S365 natural-operation digraph commit and preserved both strands.
+**User prompt:** Revisit the repo's incomplete natural-number tournament/mode graphs where `x+y=z` gives arrows to `z`, compare the sparser `x*y=z` version, and relate both to equations like `x+y=x*y`, `x+y+z=x*y*z`, etc.
+**Repo archaeology:** Read the old summand graph work (`04-computation/summand_graph_investigation.py`, `07-reflections/summand-graph-fermat-zeckendorf.md`, `07-reflections/lucas-summand-graph-zeckendorf-geometry.md`), the product graph reflection (`07-reflections/product-graph-sc-spine-fractal-dimensions.md`), and the self-product/Hurwitz thread (`04-computation/self_product_s116j.py`, `05-knowledge/results/self_product_s116j.out`).
+**Computation:** Added `04-computation/natural_mode_graph_s365.py` and stored `05-knowledge/results/natural_mode_graph_s365.out`. It compares additive and multiplicative binary mode graphs, checks the hidden binary and visible ternary product-sum resonances, enumerates product-sum tuples by arity through 10, and tabulates low core defects.
+**Theorem:** Added THM-361, the product-sum defect normal form. Stripping all `1`s from a product-sum tuple gives a core `C` with `product(C)-sum(C)=#ones`, and conversely every nonnegative-defect core gives a product-sum tuple by adding that many `1`s. It also proves the only distinct positive product-sum tuple is `{1,2,3}`.
+**Synthesis:** Added HYP-1821 and `07-reflections/natural-mode-graphs-sum-product-s365.md`. Main idea: the old additive complement `{1,4,6}` is a resonance boundary: `1` is source/identity, `4` is hidden diagonal binary equality `2+2=2*2`, and `6` is first visible distinct ternary equality `1+2+3=1*2*3`.
+**Next:** Build a defect atlas for special repo numbers `{6,7,21,42,63,189}`; compare tournament forbidden values by source/diagonal/resonance/triangular-threshold role; study whether product-sum core defects predict other recurring self-product constants.
+
 ## codex-2026-05-31-S364 - Lonely Runner 14/15 Feedback Loop
 
 **Account:** Codex

@@ -269,6 +269,15 @@ The proposed additive natural-number arrow graph `{x,y}->x+y`, after forgetting 
 **T364** #product-sum #sum-product #critical-pairs #divisor-layer | certainty: medium-high computational | source: codex-2026-05-31-S365
 Product-sum equations are additive/multiplicative gate critical pairs. For nonunit seed `F`, the defect `D=prod(F)-sum(F)` is the exact number of `1`s needed to solve `sum=product`, with arity `|F|+D`. The two-factor layer at arity `k` is `(a-1)(b-1)=k-1`; multi-factor packing first beats all two-factor seeds at `k=5` via `(2,2,2)`.
 
+**T365** #natural-modes #summand-graph #product-graph #incomplete-tournament | certainty: high computational | source: codex-2026-05-31-S365b
+The old summand graph and its sparser product analogue split sharply: additive closure from `{2,3}` is cofinite with missing set `{1,4,6}`, while product closure from `{2,3}` stays only `2,3`-smooth. Product atoms under distinct multiplication are primes plus prime squares.
+
+**T366** #product-sum #defect-normal-form #sum-product #theorem | certainty: proved | source: codex-2026-05-31-S365b
+THM-361: every positive product-sum tuple is a core `C` of entries `>=2` plus exactly `product(C)-sum(C)` copies of `1`. The only distinct positive solution is `(1,2,3)`. This makes `1`s additive slack repairing multiplicative excess.
+
+**T367** #natural-modes #special-numbers #one-four-six #resonance-boundary | certainty: medium-high | source: codex-2026-05-31-S365b
+The additive exceptional module `{1,4,6}` is now legible: `1` is source/identity, `4` is the hidden diagonal binary resonance `2+2=2*2`, and `6` is the first visible distinct ternary resonance `1+2+3=1*2*3`. Compare special repo numbers by defect role, not just value.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
