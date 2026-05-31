@@ -1,0 +1,75 @@
+LRC IN THE 2-ADIC COLUMN-FAMILY MODES
+================================================================================================
+n = 2^r * odd.  Odd roots move by x+2; columns move by x*2.
+Tournament blowup is the row step.  Mode-B/add-two is the top-row column step.
+
+BOUNDARY UNIT DEBT ALONG x*2 CHAINS
+================================================================================================
+For initial segments, boundary debt = phi(n).  The first doubling is the seam.
+
+  odd  n-chain              phi-chain            phi-ratios      phi/n-chain
+  3   3 -> 6 -> 12         2 -> 2 -> 4          1 -> 2          2/3 -> 1/3 -> 1/3
+  5   5 -> 10              4 -> 4               1               4/5 -> 2/5
+  7   7 -> 14              6 -> 6               1               6/7 -> 3/7
+  9   9 -> 18              6 -> 6               1               2/3 -> 1/3
+
+ODD ROOT x+2 CHAIN, FIRST EVEN CHILDREN 2*x
+================================================================================================
+This is the LRC analogue of top-row column motion followed by first blowup.
+
+  odd  child n  lpd  skip  gap/th      debt   product   BT_2     BT_odd
+  3         6    3     2       1/20      12       3/5        9        4
+  5        10    5     4       1/56      48       6/7       34     48/5
+  7        14    7     6      5/924      84      5/11       66       12
+  9        18    9     8      1/176     176         1      116   496/27
+
+DESIGNED QUOTIENT-LADDER ROW MODE n -> 2n
+================================================================================================
+Compare designed largest-proper-divisor ladders inside each odd-root column.
+
+  odd  pair        gap ratio  debt ratio  product ratio  BT2 ratio  note
+  1    4->8         6/35           4          24/35        3/2  frontier tax
+  1    8->16      35/132        35/6       1225/792      35/12  frontier tax
+  3    6->12       15/22        10/3          25/11      65/36  frontier tax
+  9    9->18      21/176       88/15           7/10      58/15  first-blowup seam
+
+SMALLEST DESIGNED FIRST-EVEN LADDERS BY VISIBLE GAP
+================================================================================================
+  rank  n   odd  gap/th      debt   product   interpretation
+     1  14     7      5/924      84      5/11  first even child of 7
+     2  18     9      1/176     176         1  first even child of 9
+     3  10     5       1/56      48       6/7  first even child of 5
+     4   6     3       1/20      12       3/5  first even child of 3
+
+GRID SNAPSHOT
+================================================================================================
+  n   (r,odd,k)  phi  phi/(n-1)  lpd  skip  ladder gap/debt/product
+   2  (1,1,1)      1    1.000000    -     -        -/-   /-
+   3  (0,3,2)      2    1.000000    -     -        -/-   /-
+   4  (2,1,1)      2    0.666667    2     2      1/6/6   /1
+   5  (0,5,3)      4    1.000000    -     -        -/-   /-
+   6  (1,3,2)      2    0.400000    3     2     1/20/12  /3/5
+   7  (0,7,4)      6    1.000000    -     -        -/-   /-
+   8  (3,1,1)      4    0.571429    4     6     1/35/24  /24/35
+   9  (0,9,5)      6    0.750000    3     8     1/21/30  /10/7
+  10  (1,5,3)      4    0.444444    5     4     1/56/48  /6/7
+  11  (0,11,6)     10    1.000000    -     -        -/-   /-
+  12  (2,3,2)      4    0.363636    6     2     3/88/40  /15/11
+  13  (0,13,7)     12    1.000000    -     -        -/-   /-
+  14  (1,7,4)      6    0.461538    7     6    5/924/84  /5/11
+  15  (0,15,8)      8    0.571429    5    14     1/65/78  /6/5
+  16  (4,1,1)      8    0.533333    8    14    1/132/140 /35/33
+  17  (0,17,9)     16    1.000000    -     -        -/-   /-
+  18  (1,9,5)      6    0.352941    9     8    1/176/176 /1
+
+SYNTHESIS
+================================================================================================
+1. Initial LRC boundary debt has the same seam shape as tournament pairs:
+   odd -> first even keeps phi fixed, then every further row step doubles it.
+2. The first-even children 2*odd are the natural LRC tests for x+2 motion
+   among odd roots.  n=14 and n=18 are adjacent first-even children, while
+   n=16 is the pure vertical column over odd root 1.
+3. Row-mode proof objects should be p-adic: external n->2n and internal
+   endpoint-depth translations both move down a Bruhat-Tits cusp.
+4. Column-mode proof objects should be odd-payload transfer matrices:
+   changing odd root by +2 changes which product-building trees carry debt.

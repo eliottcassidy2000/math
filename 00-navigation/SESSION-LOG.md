@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S421 - LRC Two-Mode Adic Recursion
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S400; during close-out, upstream S410 Bruhat-Tits descent and upstream S420 integer-programming mode lens landed first, so this strand was rebased and renumbered to S421/HYP-1891/T454.
+**User prompt:** Revisit the old repo idea that natural numbers are odd `x+2` chains with corresponding even `x*2` chains, tied to tournament recursion by doubling nodes and adding two nodes, and use that to progress on LRC.
+**Computation:** Added `04-computation/lrc_adic_column_modes_s421.py` and stored `05-knowledge/results/lrc_adic_column_modes_s421.out`. The script audits the frontier window `n<=18` in coordinates `n=2^r*odd`, comparing unit-boundary debt, designed quotient ladders, and Bruhat-Tits mass along row and column modes.
+**Findings:** Initial LRC boundary debt is `phi(n)` and has the same kind of seam as tournament row recursions: for odd `m`, `phi(2m)=phi(m)`, then later row steps double. The first-even children of odd roots show `14=2*7` and `18=2*9` as adjacent column-mode cases, while `16=16*1` is the pure dyadic vertical column.
+**Synthesis:** Added HYP-1891 and `07-reflections/lrc-two-mode-adic-recursion-s421.md`. The proposed proof split is row lemma plus column lemma: row mode is p-adic/Bruhat-Tits frontier flow; column mode is odd-payload transfer. HYP-1890 gives a complementary IP-dual form of the same row/column split.
+**Verification:** `python -m py_compile 04-computation/lrc_adic_column_modes_s421.py` succeeded; rerunning the script produced the stored output.
+
 ## codex-2026-05-31-S420 - LRC Integer-Programming Mode Lens
 
 **Account:** Codex

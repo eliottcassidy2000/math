@@ -482,6 +482,9 @@ The `n=14` S380 gate ladder pays every small-denominator row, and every one of i
 **T453** #lonely-runner #n16 #integer-programming #dyadic-cover | certainty: exact local set-cover lower bound | source: codex-2026-05-31-S420
 The `n=16` owner-16 endpoint subproblem is a literal IP lower bound: among lower columns `1..15`, covering all 32 endpoints has exact minimum `9`, forced by private rows, and the columns are `(1,3,5,7,8,9,11,13,15)`. This recovers THM-367 as a row-cover invoice for the global n=16 proof.
 
+**T454** #lonely-runner #two-adic-grid #column-families #odd-payload | certainty: high exact frontier-window audit + proof split | source: codex-2026-05-31-S421
+LRC inherits the repo's two natural-number modes: odd roots move by `x+2`, vertical columns by `x*2`. Boundary debt `phi(n)` has a first-doubling seam: `phi(2m)=phi(m)` for odd `m`, then later row steps double. Structurally, `14=2*7` and `18=2*9` are adjacent first-even column-mode children, while `16=16*1` is the pure dyadic row-mode lab; HYP-1890 recasts this as an IP row/column invoice. See HYP-1891.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

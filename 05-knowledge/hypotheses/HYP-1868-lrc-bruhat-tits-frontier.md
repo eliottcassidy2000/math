@@ -11,6 +11,7 @@ related:
   - HYP-1865
   - HYP-1866
   - HYP-1867
+  - HYP-1891
 ---
 
 # HYP-1868: LRC repair branches have positive Bruhat-Tits frontier mass
@@ -107,6 +108,12 @@ of the relevant trees.  A counterexample would have to send the real gap to
 zero while simultaneously erasing all product-building frontier mass.  That is
 the Bruhat-Tits version of "gap=0 and debt=0 simultaneously."
 
+HYP-1891 identifies the source of the mixed-prime complication: `n=14` and
+`n=18` are adjacent first-even children in the odd-root `x+2` chain, while
+`n=16` belongs to the pure vertical `x*2` chain over odd root `1`.  The former
+need odd-payload transfer matrices; the latter needs dyadic row-mode frontier
+mass.
+
 ## Sources
 
 - `04-computation/lrc_bruhat_tits_frontier_s400.py`
@@ -118,3 +125,4 @@ the Bruhat-Tits version of "gap=0 and debt=0 simultaneously."
 - THM-365.
 - THM-366.
 - THM-367.
+- HYP-1891.
