@@ -36,6 +36,7 @@ import TournamentH7.HSpectrumSmallN
 import TournamentH7.SmallHEnumerations
 import TournamentH7.BasePathSink
 import TournamentH7.IsoCharacterizations
+import TournamentH7.ScoreSequence
 
 open Tournament
 
@@ -1197,3 +1198,11 @@ theorem H_transitive_5_eq_one_audit : H (transitiveTournament 5) = 1 :=
 theorem H_threeCycle_eq_three_audit : H threeCycle = 3 :=
   H_threeCycle_eq_three
 #print axioms H_threeCycle_eq_three_audit
+
+/-! ### Regular tournaments require n to be odd -/
+
+/-- For a regular tournament on n ≥ 1 vertices, n must be odd. PROVED. -/
+theorem regular_implies_n_odd_audit {n : ℕ} (T : Tournament n) (hn : 1 ≤ n)
+    (hreg : IsRegular T) : Odd n :=
+  regular_implies_n_odd T hn hreg
+#print axioms regular_implies_n_odd_audit
