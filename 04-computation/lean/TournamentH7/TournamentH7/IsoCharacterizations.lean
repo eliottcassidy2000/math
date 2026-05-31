@@ -36,6 +36,33 @@ axiom alpha1_zero_iff_transitive (T : Tournament n) (hn : 1 ≤ n) :
 axiom H_transitive_eq_one (n : ℕ) (hn : 1 ≤ n) :
     H (transitiveTournament n) = 1
 
+/-! ### Concrete checks via decide (small n) -/
+
+/-- H of trivial 1-vertex tournament is 1. -/
+example : H (transitiveTournament 1) = 1 := by
+  unfold H transitiveTournament
+  decide
+
+/-- H of transitive 2 = 1 (only Hamilton path 1 → 0). -/
+example : H (transitiveTournament 2) = 1 := by
+  unfold H transitiveTournament
+  decide
+
+/-- H of transitive 3 = 1 (only path 2 → 1 → 0). -/
+example : H (transitiveTournament 3) = 1 := by
+  unfold H transitiveTournament
+  decide
+
+/-! ### Specific concrete H values that DON'T require axiom -/
+
+/-- H(transitive_3) = 1 — PROVED IN LEAN via decide. -/
+theorem H_transitive_3_eq_one : H (transitiveTournament 3) = 1 := by
+  unfold H transitiveTournament; decide
+
+/-- H(transitive_4) = 1 — PROVED IN LEAN via decide. -/
+theorem H_transitive_4_eq_one : H (transitiveTournament 4) = 1 := by
+  unfold H transitiveTournament; decide
+
 /-! ### Corollary: H(T) = 1 ⟺ T ≅ transitive -/
 
 /-- **Theorem.** For any tournament T with n ≥ 1, H(T) = 1 ⟺ T ≅ transitive. -/

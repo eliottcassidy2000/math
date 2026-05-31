@@ -1181,3 +1181,11 @@ theorem H_eq_one_iff_transitive_audit {n : ℕ} (T : Tournament n) (hn : 1 ≤ n
     H T = 1 ↔ T ≅ transitiveTournament n :=
   H_eq_one_iff_transitive T hn
 #print axioms H_eq_one_iff_transitive_audit
+
+theorem H_transitive_3_eq_one_audit : H (transitiveTournament 3) = 1 :=
+  H_transitive_3_eq_one
+#print axioms H_transitive_3_eq_one_audit
+
+theorem H_transitive_4_eq_one_audit : H (transitiveTournament 4) = 1 :=
+  H_transitive_4_eq_one
+#print axioms H_transitive_4_eq_one_audit
