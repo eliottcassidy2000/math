@@ -4,6 +4,7 @@ status: EXPLORATORY
 source: codex-2026-05-31-S369
 related:
   - HYP-1823
+  - HYP-1825
   - THM-363
 ---
 
@@ -66,6 +67,14 @@ Thus the user's decompositions are structurally meaningful:
 - the unexplained `8` in the old five-to-six perspective failure matches the
   eight LRC stencils.
 
+S370 extends this bridge to the Paley/Fano and base-42 layers.  Paley `T7`
+has directed odd-cycle counts `14+42+24=80`, support counts `14+21+1=36`,
+and support excess `44`.  Base 42 has `phi(42)=12`, with its coprime residue
+classes split as `8` easy and `4` hard in the Erdos-Straus cover.  This
+supports the broader HYP-1825 grammar: `12` is inherited symmetric core, `44`
+is chiral/support residue, `42` is doubled boundary/interior, and `8` is
+projection failure.
+
 ## Predictions
 
 1. The eight LRC stencils should carry the same symmetry type as the eight
@@ -82,5 +91,8 @@ Thus the user's decompositions are structurally meaningful:
 - `04-computation/lrc_tournament_56_bridge_s369.py`
 - `05-knowledge/results/lrc_tournament_56_bridge_s369.out`
 - `07-reflections/lrc-tournament-56-bridge-s369.md`
+- `04-computation/chirality_perspective_atlas_s370.py`
+- `05-knowledge/results/chirality_perspective_atlas_s370.out`
+- HYP-1825
 - HYP-1823
 - THM-363

@@ -296,6 +296,9 @@ The S367 `56` missed cells equal the number of unlabeled tournaments on six vert
 **T373** #lonely-runner #six-tournaments #chirality #perspective-gap | certainty: medium computational | source: codex-2026-05-31-S369
 The `56=12+44` split is structural at six vertices: `12` self-converse tournament classes plus `44` chiral classes. The LRC `56=14+42` split is also structural: one outer mirror stencil pair contributes `14`, six interior stencils contribute `42`. The old five-to-six perspective heuristic misses exactly `8` classes, matching the eight LRC alpha stencils. See HYP-1824.
 
+**T374** #chirality #perspective-residue #base42 #paley #lonely-runner | certainty: medium computational synthesis | source: codex-2026-05-31-S370
+The broader atlas gives a four-number grammar: `12` inherited symmetric core (`T(5)=phi(42)=self-converse T(6)`), `44` chiral/support residue (`T(6)` chiral classes and Paley `T7` support excess), `42` doubled boundary/interior (LRC interior cells, Paley pentagons, `2*21` non-strong six-classes), and `8` projection failure (LRC stencils, five-to-six gap, easy base-42 units). See HYP-1825.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

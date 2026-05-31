@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S370 - Chirality/Perspective Atlas
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`.
+**User prompt:** Apply the 56/12/44/42 perspective to as much as possible.
+**Computation:** Added `04-computation/chirality_perspective_atlas_s370.py` and stored `05-knowledge/results/chirality_perspective_atlas_s370.out`. The script extends S369 by computing six-vertex tournament H distributions, LRC stencil denominator structure, Paley/Fano `T7` odd-cycle/support ledgers, and base-42 residue splits.
+**Findings:** A stable grammar emerges: `12` is inherited symmetric core (`T(5)`, `phi(42)`, self-converse `T(6)`, and the count of `|Aut|=3` six-classes); `44` is chiral/support residue (six-vertex chiral classes and Paley `T7` support excess); `42` is doubled boundary/interior (LRC interior cells, Paley pentagons, and `2*21` non-strong six-classes); `8` is projection failure (LRC stencils, five-to-six perspective gap, and easy base-42 unit classes).
+**Synthesis:** Added HYP-1825 and `07-reflections/chirality-perspective-atlas-s370.md`. The proposed LRC proof tactic is to split HYP-1823 into outer mirror caps (`14`), interior `42`, and mirror/chiral residues before attempting a full normalized-vector certificate.
+**Next:** Identify the eight extra six-vertex perspective classes explicitly and compare their invariants to the eight S367 alpha stencils.
+
 ## codex-2026-05-31-S369 - LRC/Tournament 56 Chirality Bridge
 
 **Account:** Codex
