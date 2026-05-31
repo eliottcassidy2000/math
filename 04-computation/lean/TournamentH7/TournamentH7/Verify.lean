@@ -1199,6 +1199,10 @@ theorem H_threeCycle_eq_three_audit : H threeCycle = 3 :=
   H_threeCycle_eq_three
 #print axioms H_threeCycle_eq_three_audit
 
+theorem threeCycle_alpha1_eq_one_audit : alphaCount 1 threeCycle = 1 :=
+  threeCycle_alpha1_eq_one
+#print axioms threeCycle_alpha1_eq_one_audit
+
 /-! ### Regular tournaments require n to be odd -/
 
 /-- For a regular tournament on n ≥ 1 vertices, n must be odd. PROVED. -/

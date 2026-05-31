@@ -13,6 +13,7 @@
 import TournamentH7.HSpectrumClean
 import TournamentH7.SmallTournaments
 import TournamentH7.IsoProperties
+import TournamentH7.ForbiddenHCounting
 
 namespace Tournament
 
@@ -72,6 +73,21 @@ theorem H_transitive_5_eq_one : H (transitiveTournament 5) = 1 := by
 /-- H(threeCycle) = 3 — PROVED IN LEAN via decide. -/
 theorem H_threeCycle_eq_three : H threeCycle = 3 := by
   unfold H threeCycle threeCycleArc; decide
+
+/-! ### threeCycle is the unique non-transitive H = 3 tournament at n = 3 -/
+
+/-- The threeCycle has α_1 = 1 (exactly one odd cycle).
+
+    This follows from H = 3 = 1 + 2*1 + 0 + ... ⟹ α_1 = 1. -/
+theorem threeCycle_alpha1_eq_one :
+    alphaCount 1 threeCycle = 1 := by
+  have := alpha_solution_H3 threeCycle H_threeCycle_eq_three
+  exact this.1
+
+/-- H(threeCycle) = 3 verifies the small-n spectrum. -/
+example : H threeCycle = 3 ∧ Odd (H threeCycle) := by
+  refine ⟨H_threeCycle_eq_three, ?_⟩
+  rw [H_threeCycle_eq_three]; decide
 
 /-! ### Corollary: H(T) = 1 ⟺ T ≅ transitive -/
 
