@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S382 - Fourteen-Runner Gate/Tightness Duality
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`.
+**User prompt:** Consider the idea that at `n=14`, tightness requires having no multiple of `14`, but a counterexample requires one.
+**Computation:** Added `04-computation/lonely_runner_14_gate_tightness_s382.py` and stored `05-knowledge/results/lonely_runner_14_gate_tightness_s382.out`. The script separates unit-point safety, unit endpoint ownership, endpoint protection, and exact open-cover classification for `k=13`, threshold `1/14`.
+**Findings:** The counterexample half is structural: without a `14`-multiple, all six unit points `a/14` remain safe, so no open-cover counterexample is possible. A `14`-multiple protects all six at once. The local tightness half is supported by exact scans: initial tight is boundary-only with no gate, the one-swap scan found one additional boundary-only example `12->24` with no gate, and every one-swap/gate replacement containing a `14`-multiple was positive-gap.
+**Synthesis:** Added HYP-1839 and `07-reflections/lonely-runner-gate-tightness-duality-s382.md`. The refined slogan is: no `14`-gate preserves unit boundary witnesses; a `14`-gate is necessary for open cover but pushes debt to descendant endpoint layers.
+**Verification:** `python -m py_compile 04-computation/lonely_runner_14_gate_tightness_s382.py` succeeded; the S382 script ran end-to-end and produced the stored result.
+**Next:** Prove an endpoint-debt lower bound for the `has 14-gate` branch, with first descendant layers `98`, `182`, `196`, and the S380 `2156/2352/2548` gap denominators.
+
 ## codex-2026-05-31-S380 - Fourteen-Runner Composite-Denominator Disproof Attempt
 
 **Account:** Codex

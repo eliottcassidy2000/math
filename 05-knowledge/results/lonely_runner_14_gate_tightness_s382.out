@@ -1,0 +1,81 @@
+n=14 gate/tightness duality probe (codex-2026-05-31 S382)
+Convention: k=13 speeds, threshold=1/14.
+
+Residue action on the n=14 unit skeleton
+  Unit points are a/14 for a in {1,3,5,9,11,13}.
+  A speed with residue r mod 14 covers such a point iff r*a == 0 mod 14.
+  residue= 0 covers_unit_points=6
+  residue= 1 covers_unit_points=0
+  residue= 2 covers_unit_points=0
+  residue= 7 covers_unit_points=0
+  residue=13 covers_unit_points=0
+  Therefore: without a 14-multiple, all six unit points remain safe.
+
+Canonical exact audits
+  initial tight                      class=boundary_only has14=0 unit_safe=6 unit_owned=6 unit_unprot=6 len=1 gap/th=0.000000 unprot=6 first=1/14
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  initial replace 6 by 14            class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=851/858 gap/th=0.037879 unprot=8 first=29/182
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  initial replace 13 by 14           class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=189403/194040 gap/th=0.045455 unprot=24 first=15/196
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+  no-coprime no-gate test            class=positive_gap  has14=0 unit_safe=6 unit_owned=0 unit_unprot=0 len=6095/7056 gap/th=0.172449 unprot=76 first=1/28
+    speeds=(2, 4, 6, 7, 8, 10, 12, 16, 18, 20, 21, 35, 49)
+  seven-ladder                       class=positive_gap  has14=1 unit_safe=0 unit_owned=2 unit_unprot=0 len=142/143 gap/th=0.005411 unprot=84 first=9/98
+    speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  seven-ladder with 42               class=positive_gap  has14=1 unit_safe=0 unit_owned=2 unit_unprot=0 len=242689/245245 gap/th=0.008163 unprot=84 first=57/686
+    speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 91)
+  S380 14-multiple ladder            class=positive_gap  has14=1 unit_safe=0 unit_owned=2 unit_unprot=0 len=142/143 gap/th=0.002706 unprot=168 first=15/196
+    speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+
+One-swap scan around the initial tight set, new speed <= 112
+  without a 14-multiple: total=1183 classes={'boundary_only': 1, 'positive_gap': 1182}
+  swap 12->24                        class=boundary_only has14=0 unit_safe=6 unit_owned=6 unit_unprot=6 len=1 gap/th=0.000000 unprot=6 first=1/14
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  swap 6->69                         class=positive_gap  has14=0 unit_safe=6 unit_owned=6 unit_unprot=6 len=10607/10626 gap/th=0.005270 unprot=18 first=1/14
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 69)
+  swap 12->36                        class=positive_gap  has14=0 unit_safe=6 unit_owned=6 unit_unprot=6 len=1259/1260 gap/th=0.005556 unprot=10 first=1/14
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+  swap 10->20                        class=positive_gap  has14=0 unit_safe=6 unit_owned=6 unit_unprot=6 len=979/980 gap/th=0.007143 unprot=10 first=1/14
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20)
+  swap 6->63                         class=positive_gap  has14=0 unit_safe=6 unit_owned=6 unit_unprot=6 len=293/294 gap/th=0.011905 unprot=14 first=1/14
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 63)
+  with a 14-multiple: total=104 classes={'positive_gap': 104}
+  swap 6->98                         class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=292751/294294 gap/th=0.019231 unprot=12 first=29/182
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98)
+  swap 12->84                        class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=104542/105105 gap/th=0.021429 unprot=16 first=15/182
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+  swap 4->42                         class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=83191/84084 gap/th=0.036797 unprot=16 first=43/182
+    speeds=(1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 42)
+  swap 6->14                         class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=851/858 gap/th=0.037879 unprot=8 first=29/182
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  swap 6->28                         class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=851/858 gap/th=0.037879 unprot=8 first=29/182
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 28)
+
+Pure gate replacement ledger: replace one initial speed by 14*q, q<= 12
+  audited=156 class_counts={'positive_gap': 156}
+  best gate replacements:
+  remove 6, add 98                   class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=292751/294294 gap/th=0.019231 unprot=12 first=29/182
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98)
+  remove 6, add 126                  class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=125383/126126 gap/th=0.019841 unprot=12 first=29/182
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 126)
+  remove 12, add 84                  class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=104542/105105 gap/th=0.021429 unprot=16 first=15/182
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+  remove 12, add 168                 class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=29767/30030 gap/th=0.027381 unprot=16 first=15/182
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168)
+  remove 6, add 154                  class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=20869/21021 gap/th=0.031385 unprot=8 first=29/182
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 154)
+  remove 6, add 168                  class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=27847/28028 gap/th=0.031926 unprot=8 first=29/182
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 168)
+  remove 12, add 154                 class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=69413/70070 gap/th=0.032468 unprot=12 first=15/182
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 154)
+  remove 4, add 42                   class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=83191/84084 gap/th=0.036797 unprot=16 first=43/182
+    speeds=(1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 42)
+  remove 6, add 14                   class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=851/858 gap/th=0.037879 unprot=8 first=29/182
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  remove 6, add 28                   class=positive_gap  has14=1 unit_safe=0 unit_owned=6 unit_unprot=0 len=851/858 gap/th=0.037879 unprot=8 first=29/182
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 28)
+
+Interpretation
+  No 14-multiple leaves the six unit points a/14 safe.  Such a set can be tight only in the boundary-only sense, with unit witnesses available.
+  A genuine open-cover counterexample must destroy those unit witnesses, so it must contain at least one 14-multiple.
+  The local evidence supports the complementary heuristic: inserting a 14-gate into the initial tight architecture destroys exact tightness and moves the obstruction to positive gaps or descendant endpoints.
