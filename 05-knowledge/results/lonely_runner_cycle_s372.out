@@ -1,0 +1,213 @@
+Lonely Runner 14/15/disproof cycling sprint (codex S372)
+Exact quotient cell scans plus residue-template speed lifts.
+
+Cell system n=14: k=13 patterns=812 candidates=11368
+Cell system n=15: k=14 patterns=960 candidates=14400
+
+Cycle 1A: n=14 quotient support attack
+Exact normalized support scan n=14, support=1
+  scanned=156
+  best_missed=56
+  missed_hist_prefix=((56, 1), (84, 1), (96, 12), (126, 1), (144, 12), (154, 1), (168, 2), (196, 1), (216, 12), (224, 1))
+  top vectors
+  01. n=14 missed=   56 score=11312 support=(6,) source=support-1 vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+  02. n=14 missed=   84 score=11284 support=(12,) source=support-1 vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0)
+  03. n=14 missed=   96 score=11272 support=(6,) source=support-1 vector=(0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0)
+  04. n=14 missed=   96 score=11272 support=(6,) source=support-1 vector=(0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0)
+  05. n=14 missed=   96 score=11272 support=(6,) source=support-1 vector=(0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0)
+  06. n=14 missed=   96 score=11272 support=(6,) source=support-1 vector=(0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0)
+
+Exact normalized support scan n=14, support=2
+  scanned=11154
+  best_missed=112
+  missed_hist_prefix=((112, 1), (126, 1), (168, 1), (196, 1), (204, 12), (210, 2), (216, 12), (224, 3), (228, 12), (240, 24))
+  top vectors
+  01. n=14 missed=  112 score=11256 support=(8, 12) source=support-2 vector=(0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 7, 0)
+  02. n=14 missed=  126 score=11242 support=(4, 6) source=support-2 vector=(0, 0, 0, 7, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+  03. n=14 missed=  168 score=11200 support=(5, 6) source=support-2 vector=(0, 0, 0, 0, 7, 7, 0, 0, 0, 0, 0, 0, 0)
+  04. n=14 missed=  196 score=11172 support=(6, 12) source=support-2 vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 7, 0)
+  05. n=14 missed=  204 score=11164 support=(4, 6) source=support-2 vector=(0, 0, 0, 7, 0, 1, 0, 0, 0, 0, 0, 0, 0)
+  06. n=14 missed=  204 score=11164 support=(4, 6) source=support-2 vector=(0, 0, 0, 7, 0, 2, 0, 0, 0, 0, 0, 0, 0)
+
+Exact normalized support scan n=14, support=3
+  scanned=483340
+  best_missed=126
+  missed_hist_prefix=((126, 1), (210, 1), (224, 2), (238, 1), (252, 2), (266, 2), (276, 12), (294, 1), (300, 12), (308, 7))
+  top vectors
+  01. n=14 missed=  126 score=11242 support=(4, 6, 8) source=support-3 vector=(0, 0, 0, 7, 0, 7, 0, 7, 0, 0, 0, 0, 0)
+  02. n=14 missed=  210 score=11158 support=(5, 8, 12) source=support-3 vector=(0, 0, 0, 0, 7, 0, 0, 7, 0, 0, 0, 7, 0)
+  03. n=14 missed=  224 score=11144 support=(6, 8, 12) source=support-3 vector=(0, 0, 0, 0, 0, 7, 0, 7, 0, 0, 0, 7, 0)
+  04. n=14 missed=  224 score=11144 support=(4, 5, 6) source=support-3 vector=(0, 0, 0, 7, 7, 7, 0, 0, 0, 0, 0, 0, 0)
+  05. n=14 missed=  238 score=11130 support=(3, 8, 12) source=support-3 vector=(0, 0, 7, 0, 0, 0, 0, 7, 0, 0, 0, 7, 0)
+  06. n=14 missed=  252 score=11116 support=(8, 10, 12) source=support-3 vector=(0, 0, 0, 0, 0, 0, 0, 7, 0, 7, 0, 7, 0)
+
+Exact normalized subgroup scan n=14, label=2-torsion
+  values=(0, 7)
+  scanned=4095
+  best_missed=56
+  support_hist=((1, 12), (2, 66), (3, 220), (4, 495), (5, 792), (6, 924), (7, 792), (8, 495), (9, 220), (10, 66), (11, 12), (12, 1))
+  missed_hist_prefix=((56, 1), (84, 1), (112, 4), (126, 6), (154, 4), (168, 9), (182, 6), (196, 10), (210, 13), (224, 23))
+  top subgroup vectors
+  01. n=14 missed=   56 score=11312 support=(6,) source=2-torsion vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+  02. n=14 missed=   84 score=11284 support=(12,) source=2-torsion vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0)
+  03. n=14 missed=  112 score=11256 support=(8, 12) source=2-torsion vector=(0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 7, 0)
+  04. n=14 missed=  112 score=11256 support=(3, 4, 6, 8, 11, 12, 13) source=2-torsion vector=(0, 0, 7, 7, 0, 7, 0, 7, 0, 0, 7, 7, 7)
+  05. n=14 missed=  112 score=11256 support=(3, 4, 5, 6, 11, 12, 13) source=2-torsion vector=(0, 0, 7, 7, 7, 7, 0, 0, 0, 0, 7, 7, 7)
+  06. n=14 missed=  112 score=11256 support=(3, 4, 5, 6, 8, 11, 12, 13) source=2-torsion vector=(0, 0, 7, 7, 7, 7, 0, 7, 0, 0, 7, 7, 7)
+
+Deterministic local quotient search n=14
+  starts=126 restarts=120 sweeps=80
+  local optima
+  01. n=14 missed=   56 score=11312 support=(6,) source=local vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+  02. n=14 missed=   84 score=11284 support=(12,) source=local vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0)
+  03. n=14 missed=  112 score=11256 support=(3, 4, 6, 8, 11, 12, 13) source=local vector=(0, 0, 7, 7, 0, 7, 0, 7, 0, 0, 7, 7, 7)
+  04. n=14 missed=  126 score=11242 support=(4, 6, 8) source=local vector=(0, 0, 0, 7, 0, 7, 0, 7, 0, 0, 0, 0, 0)
+  05. n=14 missed=  126 score=11242 support=(4, 5, 6, 7, 8, 9) source=local vector=(0, 0, 0, 7, 7, 7, 7, 7, 7, 0, 0, 0, 0)
+  06. n=14 missed=  154 score=11214 support=(5,) source=local vector=(0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0)
+  07. n=14 missed=  154 score=11214 support=(2, 3, 4, 5, 6, 7, 8, 11, 12, 13) source=local vector=(0, 7, 7, 7, 7, 7, 7, 7, 0, 0, 7, 7, 7)
+  08. n=14 missed=  210 score=11158 support=(2, 3, 4, 8, 13) source=local vector=(0, 7, 7, 7, 0, 0, 0, 7, 0, 0, 0, 0, 7)
+
+Cycle 1A dead end: scalar quotient still has no full nonzero blocker; best remains a half-turn leak.
+
+Cycle 1B: force the quotient idea through n=15
+Exact normalized support scan n=15, support=1
+  scanned=182
+  best_missed=120
+  missed_hist_prefix=((120, 4), (144, 8), (156, 16), (160, 2), (192, 4), (200, 2), (208, 8), (240, 4), (260, 10), (280, 2))
+  top vectors
+  01. n=15 missed=  120 score=14280 support=(14,) source=support-1 vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+  02. n=15 missed=  120 score=14280 support=(14,) source=support-1 vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10)
+  03. n=15 missed=  120 score=14280 support=(6,) source=support-1 vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0)
+  04. n=15 missed=  120 score=14280 support=(6,) source=support-1 vector=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0)
+  05. n=15 missed=  144 score=14256 support=(14,) source=support-1 vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3)
+  06. n=15 missed=  144 score=14256 support=(14,) source=support-1 vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6)
+
+Exact normalized support scan n=15, support=2
+  scanned=15288
+  best_missed=220
+  missed_hist_prefix=((220, 4), (224, 8), (228, 16), (240, 4), (244, 16), (246, 16), (248, 16), (252, 8), (254, 32), (256, 8))
+  top vectors
+  01. n=15 missed=  220 score=14180 support=(6, 14) source=support-2 vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 5)
+  02. n=15 missed=  220 score=14180 support=(6, 14) source=support-2 vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 10)
+  03. n=15 missed=  220 score=14180 support=(6, 14) source=support-2 vector=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 5)
+  04. n=15 missed=  220 score=14180 support=(6, 14) source=support-2 vector=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 10)
+  05. n=15 missed=  224 score=14176 support=(6, 14) source=support-2 vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 3)
+  06. n=15 missed=  224 score=14176 support=(6, 14) source=support-2 vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 6)
+
+Exact normalized support scan n=15, support=3
+  scanned=784784
+  best_missed=280
+  missed_hist_prefix=((280, 10), (294, 16), (296, 16), (300, 24), (306, 16), (312, 40), (318, 4), (320, 2), (324, 32), (328, 32))
+  top vectors
+  01. n=15 missed=  280 score=14120 support=(4, 10, 14) source=support-3 vector=(0, 0, 0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 0, 10)
+  02. n=15 missed=  280 score=14120 support=(4, 6, 14) source=support-3 vector=(0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 5)
+  03. n=15 missed=  280 score=14120 support=(4, 6, 14) source=support-3 vector=(0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 10)
+  04. n=15 missed=  280 score=14120 support=(4, 6, 14) source=support-3 vector=(0, 0, 0, 5, 0, 10, 0, 0, 0, 0, 0, 0, 0, 5)
+  05. n=15 missed=  280 score=14120 support=(4, 6, 14) source=support-3 vector=(0, 0, 0, 5, 0, 10, 0, 0, 0, 0, 0, 0, 0, 10)
+  06. n=15 missed=  280 score=14120 support=(4, 10, 14) source=support-3 vector=(0, 0, 0, 10, 0, 0, 0, 0, 0, 10, 0, 0, 0, 5)
+
+Exact normalized subgroup scan n=15, label=order-3-subgroup
+  values=(0, 5, 10)
+  scanned=1594322
+  best_missed=120
+  support_hist=((1, 26), (2, 312), (3, 2288), (4, 11440), (5, 41184), (6, 109824), (7, 219648), (8, 329472), (9, 366080), (10, 292864), (11, 159744), (12, 53248), (13, 8192))
+  missed_hist_prefix=((120, 4), (160, 2), (200, 2), (220, 4), (230, 2), (240, 10), (250, 2), (260, 8), (270, 6), (280, 20))
+  top subgroup vectors
+  01. n=15 missed=  120 score=14280 support=(14,) source=order-3-subgroup vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+  02. n=15 missed=  120 score=14280 support=(14,) source=order-3-subgroup vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10)
+  03. n=15 missed=  120 score=14280 support=(6,) source=order-3-subgroup vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0)
+  04. n=15 missed=  120 score=14280 support=(6,) source=order-3-subgroup vector=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0)
+  05. n=15 missed=  160 score=14240 support=(12,) source=order-3-subgroup vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0)
+  06. n=15 missed=  160 score=14240 support=(12,) source=order-3-subgroup vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0)
+
+Deterministic local quotient search n=15
+  starts=168 restarts=160 sweeps=90
+  local optima
+  01. n=15 missed=  120 score=14280 support=(14,) source=local vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+  02. n=15 missed=  120 score=14280 support=(14,) source=local vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10)
+  03. n=15 missed=  120 score=14280 support=(6,) source=local vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0)
+  04. n=15 missed=  120 score=14280 support=(6,) source=local vector=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0)
+  05. n=15 missed=  160 score=14240 support=(12,) source=local vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0)
+  06. n=15 missed=  230 score=14170 support=(2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14) source=local vector=(0, 5, 5, 5, 5, 5, 5, 5, 5, 0, 5, 0, 10, 5)
+  07. n=15 missed=  260 score=14140 support=(7,) source=local vector=(0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0)
+  08. n=15 missed=  260 score=14140 support=(2, 3, 4, 6, 9, 13, 14) source=local vector=(0, 5, 5, 5, 0, 5, 0, 0, 5, 0, 0, 0, 10, 5)
+
+Cycle 1B dead end: the 15=3*5 analogue also leaks; the best obstruction lives in the order-3 subgroup.
+
+Cycle 1C: lift quotient near-blockers into actual speed-set pressure tests
+Residue-template lift pressure max_speed=90
+  templates=14 unique_attempts=208
+  01. n=15 class=positive_gap gap/thresh=0.023504 max_gap=11/7020 boundary=208 gate_mults=2 shift=6 source=n15-support-1:rnd0-miss120 speeds=(3, 12, 14, 15, 36, 48, 54, 57, 60, 66, 72, 78, 81, 84)
+  02. n=15 class=positive_gap gap/thresh=0.025641 max_gap=1/585 boundary=48 gate_mults=2 shift=3 source=n15-support-1:det-miss120 speeds=(2, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39)
+  03. n=15 class=positive_gap gap/thresh=0.025641 max_gap=1/585 boundary=50 gate_mults=2 shift=3 source=n15-support-1:det-miss120 speeds=(3, 6, 7, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39)
+  04. n=15 class=positive_gap gap/thresh=0.028571 max_gap=1/525 boundary=40 gate_mults=2 shift=9 source=n15-support-1:det-miss120 speeds=(1, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 39, 42)
+  05. n=15 class=positive_gap gap/thresh=0.028571 max_gap=1/525 boundary=40 gate_mults=2 shift=9 source=n15-support-1:det-miss120 speeds=(3, 6, 9, 11, 12, 15, 18, 21, 24, 27, 30, 33, 39, 42)
+  06. n=14 class=positive_gap gap/thresh=0.028571 max_gap=1/490 boundary=26 gate_mults=1 shift=4 source=n14-support-1:det-miss56 speeds=(2, 3, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 26)
+  07. n=15 class=positive_gap gap/thresh=0.029060 max_gap=17/8775 boundary=160 gate_mults=2 shift=6 source=n15-support-1:rnd0-miss120 speeds=(3, 4, 6, 9, 12, 21, 27, 33, 39, 45, 48, 51, 87, 90)
+  08. n=15 class=positive_gap gap/thresh=0.030303 max_gap=1/495 boundary=80 gate_mults=2 shift=6 source=n15-support-1:det-miss120 speeds=(3, 4, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 42)
+  09. n=15 class=positive_gap gap/thresh=0.030303 max_gap=1/495 boundary=78 gate_mults=2 shift=6 source=n15-support-1:det-miss120 speeds=(3, 6, 9, 12, 14, 15, 18, 21, 24, 27, 30, 33, 36, 42)
+  10. n=15 class=positive_gap gap/thresh=0.032328 max_gap=1/464 boundary=154 gate_mults=2 shift=9 source=n15-order-3-subgroup:rnd0-miss120 speeds=(6, 18, 30, 33, 39, 42, 48, 51, 57, 75, 81, 84, 87, 89)
+  11. n=15 class=positive_gap gap/thresh=0.036050 max_gap=23/9570 boundary=218 gate_mults=2 shift=3 source=n15-local:rnd0-miss120 speeds=(3, 21, 24, 36, 37, 45, 48, 66, 69, 72, 75, 78, 84, 87)
+  12. n=14 class=positive_gap gap/thresh=0.037879 max_gap=5/1848 boundary=14 gate_mults=0 shift=1 source=n14-support-1:det-miss56 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 27)
+
+Cycle 1C dead end: quotient-guided lifts still produce positive gaps, not open covers.
+
+Cycle 2A: return to n=14 with one more exact layer
+  progress scanned=2000000 current_best=252
+  progress scanned=4000000 current_best=252
+  progress scanned=6000000 current_best=252
+  progress scanned=8000000 current_best=238
+  progress scanned=10000000 current_best=182
+  progress scanned=12000000 current_best=182
+  progress scanned=14000000 current_best=182
+Exact normalized support scan n=14, support=4
+  scanned=14137695
+  best_missed=182
+  missed_hist_prefix=((182, 1), (210, 1), (238, 3), (252, 2), (266, 1), (280, 4), (288, 12), (294, 3), (300, 12), (308, 6))
+  top vectors
+  01. n=14 missed=  182 score=11186 support=(4, 5, 6, 8) source=support-4 vector=(0, 0, 0, 7, 7, 7, 0, 7, 0, 0, 0, 0, 0)
+  02. n=14 missed=  210 score=11158 support=(4, 6, 8, 9) source=support-4 vector=(0, 0, 0, 7, 0, 7, 0, 7, 7, 0, 0, 0, 0)
+  03. n=14 missed=  238 score=11130 support=(5, 6, 8, 12) source=support-4 vector=(0, 0, 0, 0, 7, 7, 0, 7, 0, 0, 0, 7, 0)
+  04. n=14 missed=  238 score=11130 support=(4, 6, 7, 8) source=support-4 vector=(0, 0, 0, 7, 0, 7, 7, 7, 0, 0, 0, 0, 0)
+  05. n=14 missed=  238 score=11130 support=(3, 6, 8, 12) source=support-4 vector=(0, 0, 7, 0, 0, 7, 0, 7, 0, 0, 0, 7, 0)
+  06. n=14 missed=  252 score=11116 support=(3, 8, 10, 12) source=support-4 vector=(0, 0, 7, 0, 0, 0, 0, 7, 0, 7, 0, 7, 0)
+
+Cycle 2A dead end: support 4 does not beat the coordinate-6 half-turn extremal.
+
+Cycle 2B: n=15 creative follow-up from the n=14 half-turn lesson
+  selected n=15 templates for second lift
+  01. n=15 missed=  120 score=14280 support=(14,) source=support-1 vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+  02. n=15 missed=  120 score=14280 support=(14,) source=order-3-subgroup vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+  03. n=15 missed=  120 score=14280 support=(14,) source=local vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+  04. n=15 missed=  120 score=14280 support=(14,) source=support-1 vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10)
+  05. n=15 missed=  120 score=14280 support=(14,) source=order-3-subgroup vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10)
+  06. n=15 missed=  120 score=14280 support=(14,) source=local vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10)
+  07. n=15 missed=  120 score=14280 support=(6,) source=support-1 vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0)
+  08. n=15 missed=  120 score=14280 support=(6,) source=order-3-subgroup vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0)
+
+Cycle 2B dead end: the selected templates are all nonzero quotient leaks with explicit missed cells.
+
+Cycle 2C: disproof pressure, second pass with only the sharpest templates
+Residue-template lift pressure max_speed=120
+  templates=9 unique_attempts=177
+  01. n=15 class=positive_gap gap/thresh=0.025641 max_gap=1/585 boundary=48 gate_mults=2 shift=3 source=n15-support-1:det-miss120 speeds=(2, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39)
+  02. n=15 class=positive_gap gap/thresh=0.025641 max_gap=1/585 boundary=50 gate_mults=2 shift=3 source=n15-support-1:det-miss120 speeds=(3, 6, 7, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39)
+  03. n=15 class=positive_gap gap/thresh=0.028571 max_gap=1/525 boundary=40 gate_mults=2 shift=9 source=n15-support-1:det-miss120 speeds=(1, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 39, 42)
+  04. n=15 class=positive_gap gap/thresh=0.028571 max_gap=1/525 boundary=40 gate_mults=2 shift=9 source=n15-support-1:det-miss120 speeds=(3, 6, 9, 11, 12, 15, 18, 21, 24, 27, 30, 33, 39, 42)
+  05. n=14 class=positive_gap gap/thresh=0.028571 max_gap=1/490 boundary=26 gate_mults=1 shift=4 source=n14-support-1:det-miss56 speeds=(2, 3, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 26)
+  06. n=15 class=positive_gap gap/thresh=0.030303 max_gap=1/495 boundary=80 gate_mults=2 shift=6 source=n15-support-1:det-miss120 speeds=(3, 4, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 42)
+  07. n=15 class=positive_gap gap/thresh=0.030303 max_gap=1/495 boundary=78 gate_mults=2 shift=6 source=n15-support-1:det-miss120 speeds=(3, 6, 9, 12, 14, 15, 18, 21, 24, 27, 30, 33, 36, 42)
+  08. n=15 class=positive_gap gap/thresh=0.033333 max_gap=1/450 boundary=332 gate_mults=2 shift=3 source=n15-order-3-subgroup:rnd0-miss120 speeds=(12, 18, 24, 30, 51, 54, 63, 66, 87, 99, 108, 111, 112, 120)
+  09. n=15 class=positive_gap gap/thresh=0.033730 max_gap=17/7560 boundary=262 gate_mults=2 shift=9 source=n15-support-1:rnd0-miss120 speeds=(9, 11, 12, 21, 27, 45, 60, 63, 72, 84, 93, 108, 111, 114)
+  10. n=15 class=positive_gap gap/thresh=0.034343 max_gap=17/7425 boundary=288 gate_mults=2 shift=6 source=n15-order-3-subgroup:rnd0-miss120 speeds=(6, 12, 24, 27, 42, 48, 59, 60, 66, 69, 81, 90, 93, 108)
+  11. n=15 class=positive_gap gap/thresh=0.034877 max_gap=113/48600 boundary=316 gate_mults=2 shift=12 source=n15-order-3-subgroup:rnd0-miss120 speeds=(6, 9, 12, 18, 24, 42, 51, 72, 75, 81, 88, 99, 108, 120)
+  12. n=15 class=positive_gap gap/thresh=0.035714 max_gap=1/420 boundary=330 gate_mults=2 shift=9 source=n15-order-3-subgroup:rnd0-miss120 speeds=(6, 12, 24, 39, 41, 48, 51, 60, 72, 78, 84, 87, 93, 105)
+
+Cycle 2C dead end: increasing the lift range lowered no case to an open cover.
+
+Synthesis
+  1. n=14: exact support <=4, full 2-torsion, and local search all point to (0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0) with missed=56.
+  2. n=15: the scalar-gauge quotient analogue has a sharper order-3 obstruction (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5) with missed=120.
+  3. The n=15 obstruction is the creative transfer: replace the n=14 half-turn coordinate by an order-3 coordinate at the far endpoint of the staircase.
+  4. Residue-template lifting is a better disproof pressure test than unguided gates, but every lifted candidate here still had a positive gap.
+  5. Next target: classify single-coordinate subgroup defects for all composite n, then turn their missed-cell families into a finite stencil certificate.
