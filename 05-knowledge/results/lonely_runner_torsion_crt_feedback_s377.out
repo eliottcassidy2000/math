@@ -1,0 +1,206 @@
+Lonely Runner 14/15/disproof feedback loop (S377)
+All micro-staircase coverage uses exact full-cell bitsets from S367.
+
+Fourteen-runner quotient model: n=14 k=13 patterns=812 candidates=11368
+  scalar_ramp_full_multipliers=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+Fifteen-runner quotient model: n=15 k=14 patterns=960 candidates=14400
+  scalar_ramp_full_multipliers=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+
+Cycle 1 -- exact quotient obstruction, then odd-modulus replacement
+Route 14: the hard object is still the quotient, not the scalar line.
+  single-coordinate half-turn profile=[(2, 196), (3, 224), (4, 126), (5, 154), (6, 56), (7, 294), (8, 280), (9, 336), (10, 168), (11, 350), (12, 84), (13, 168)]
+  exact normalized 2-torsion spectrum
+    support= 1 scanned=  12 best_missed=  56 best_count=  1 example_support=(6,)
+    support= 2 scanned=  66 best_missed= 112 best_count=  1 example_support=(8, 12)
+    support= 3 scanned= 220 best_missed= 126 best_count=  1 example_support=(4, 6, 8)
+    support= 4 scanned= 495 best_missed= 182 best_count=  1 example_support=(4, 5, 6, 8)
+    support= 5 scanned= 792 best_missed= 168 best_count=  1 example_support=(3, 6, 8, 12, 13)
+    support= 6 scanned= 924 best_missed= 126 best_count=  2 example_support=(4, 6, 7, 8, 9, 12)
+    support= 7 scanned= 792 best_missed= 112 best_count=  2 example_support=(3, 4, 6, 8, 11, 12, 13)
+    support= 8 scanned= 495 best_missed= 112 best_count=  1 example_support=(3, 4, 5, 6, 8, 11, 12, 13)
+    support= 9 scanned= 220 best_missed= 154 best_count=  1 example_support=(2, 3, 4, 6, 7, 8, 11, 12, 13)
+    support=10 scanned=  66 best_missed= 154 best_count=  1 example_support=(2, 3, 4, 5, 6, 7, 8, 11, 12, 13)
+    support=11 scanned=  12 best_missed= 336 best_count=  1 example_support=(2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13)
+    support=12 scanned=   1 best_missed= 476 best_count=  1 example_support=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  top binary vectors
+    missed=  56 support=(6,) vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed=  84 support=(12,) vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0)
+    missed= 112 support=(8, 12) vector=(0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 7, 0)
+    missed= 112 support=(3, 4, 6, 8, 11, 12, 13) vector=(0, 0, 7, 7, 0, 7, 0, 7, 0, 0, 7, 7, 7)
+    missed= 112 support=(3, 4, 5, 6, 11, 12, 13) vector=(0, 0, 7, 7, 7, 7, 0, 0, 0, 0, 7, 7, 7)
+    missed= 112 support=(3, 4, 5, 6, 8, 11, 12, 13) vector=(0, 0, 7, 7, 7, 7, 0, 7, 0, 0, 7, 7, 7)
+    missed= 126 support=(4,) vector=(0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+    missed= 126 support=(4, 6) vector=(0, 0, 0, 7, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+  coordinate-6 binary extremal ledger
+    vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed=56 pattern_count=8
+    shift_hist=[(1, 8), (3, 8), (5, 8), (7, 8), (9, 8), (11, 8), (13, 8)]
+    gcd_shift_hist=[(1, 48), (7, 8)]
+    width_hist=[('1/1386', 14), ('1/1176', 14), ('1/882', 14), ('1/728', 14)]
+    margin_hist=[(1, 56)]
+
+Route 15: no half-turn exists, so test the CRT subgroups of Z/15Z.
+  all residues: support=1 residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14) scanned=182 best_missed=120
+    missed= 120 support=(14,) vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+    missed= 120 support=(14,) vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10)
+    missed= 120 support=(6,) vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0)
+    missed= 120 support=(6,) vector=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0)
+    missed= 144 support=(14,) vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3)
+  all residues: support=2 residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14) scanned=15288 best_missed=220
+    missed= 220 support=(6, 14) vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 5)
+    missed= 220 support=(6, 14) vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 10)
+    missed= 220 support=(6, 14) vector=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 5)
+    missed= 220 support=(6, 14) vector=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 10)
+    missed= 224 support=(6, 14) vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 3)
+  3-torsion subgroup: support=3 residues=(5, 10) scanned=2288 best_missed=280
+    missed= 280 support=(4, 10, 14) vector=(0, 0, 0, 5, 0, 0, 0, 0, 0, 5, 0, 0, 0, 10)
+    missed= 280 support=(4, 6, 14) vector=(0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 5)
+    missed= 280 support=(4, 6, 14) vector=(0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 10)
+    missed= 280 support=(4, 6, 14) vector=(0, 0, 0, 5, 0, 10, 0, 0, 0, 0, 0, 0, 0, 5)
+    missed= 280 support=(4, 6, 14) vector=(0, 0, 0, 5, 0, 10, 0, 0, 0, 0, 0, 0, 0, 10)
+  5-torsion subgroup: support=3 residues=(3, 6, 9, 12) scanned=18304 best_missed=294
+    missed= 294 support=(6, 10, 14) vector=(0, 0, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 3)
+    missed= 294 support=(6, 10, 14) vector=(0, 0, 0, 0, 0, 3, 0, 0, 0, 6, 0, 0, 0, 6)
+    missed= 294 support=(6, 10, 14) vector=(0, 0, 0, 0, 0, 3, 0, 0, 0, 6, 0, 0, 0, 9)
+    missed= 294 support=(6, 10, 14) vector=(0, 0, 0, 0, 0, 3, 0, 0, 0, 12, 0, 0, 0, 3)
+    missed= 294 support=(6, 10, 14) vector=(0, 0, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0, 6)
+
+Route disproof: try to make an open-cover-looking gated family.
+  disproof pressure: k=13 n=14 max_speed=32 candidates>=180
+    max_gap=   5/1848 covered=  851/858 components=  5 complement= 4 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+    max_gap=    1/308 covered=189403/194040 components= 13 complement=12 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+    max_gap=    3/784 covered=2465329/2522520 components= 13 complement=12 speeds=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14)
+    max_gap=    1/245 covered=34609/35035 components=  5 complement= 4 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14)
+    max_gap=    1/220 covered=136523/140140 components=  9 complement= 8 speeds=(1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+    max_gap=  19/3248 covered=10409723/11083800 components= 31 complement=30 speeds=(1, 8, 14, 15, 18, 20, 21, 22, 23, 24, 25, 26, 29)
+    max_gap= 79/13020 covered=184972668499/203836432800 components= 37 complement=36 speeds=(1, 4, 10, 11, 17, 22, 23, 25, 26, 28, 30, 31, 32)
+    max_gap=    4/637 covered=61543/63063 components=  5 complement= 4 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14)
+  disproof pressure: k=14 n=15 max_speed=35 candidates>=220
+    max_gap=    1/495 covered=95717/96525 components=  7 complement= 6 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+    max_gap=   7/1980 covered=6362/6435 components=  5 complement= 4 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+    max_gap=    1/270 covered=26393/27027 components= 13 complement=12 speeds=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15)
+    max_gap=    1/225 covered=100237/103950 components= 13 complement=12 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15)
+    max_gap=    3/550 covered=217862/225225 components=  9 complement= 8 speeds=(1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+    max_gap=    1/175 covered=24599/25025 components=  5 complement= 4 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15)
+    max_gap=    3/520 covered=5737/5850 components=  5 complement= 4 speeds=(1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+    max_gap=  11/1800 covered=4510883497/4939913550 components= 41 complement=40 speeds=(1, 4, 7, 13, 14, 19, 22, 23, 26, 29, 30, 31, 32, 34)
+
+Cycle 2 -- local full-blocker pressure in the quotient
+Route 14: push random classes uphill after exact torsion failed.
+  reverse-cover local search n=14: restarts=42
+     1. missed=  56 vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+     2. missed=  84 vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0)
+     3. missed= 126 vector=(0, 0, 0, 7, 0, 7, 0, 7, 0, 0, 0, 0, 0)
+     4. missed= 126 vector=(0, 0, 0, 7, 7, 7, 7, 7, 7, 0, 0, 7, 0)
+     5. missed= 154 vector=(0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0)
+     6. missed= 210 vector=(0, 7, 7, 7, 0, 0, 0, 7, 0, 0, 0, 0, 7)
+     7. missed= 446 vector=(0, 5, 5, 5, 5, 5, 10, 10, 10, 1, 1, 1, 1)
+     8. missed= 456 vector=(0, 2, 3, 11, 12, 13, 0, 1, 2, 10, 11, 5, 13)
+  best reverse-cover ledger n=14
+    vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed=56 pattern_count=8
+    shift_hist=[(1, 8), (3, 8), (5, 8), (7, 8), (9, 8), (11, 8), (13, 8)]
+    gcd_shift_hist=[(1, 48), (7, 8)]
+    width_hist=[('1/1386', 14), ('1/1176', 14), ('1/882', 14), ('1/728', 14)]
+    margin_hist=[(1, 56)]
+
+Route 15: seed the search with CRT stripes and let the cell system reply.
+  reverse-cover local search n=15: restarts=48
+     1. missed= 120 vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+     2. missed= 120 vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10)
+     3. missed= 120 vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0)
+     4. missed= 120 vector=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0)
+     5. missed= 240 vector=(0, 5, 10, 5, 0, 10, 0, 0, 5, 10, 0, 0, 10, 5)
+     6. missed= 290 vector=(0, 10, 10, 10, 10, 10, 5, 0, 5, 0, 10, 0, 0, 0)
+     7. missed= 372 vector=(0, 12, 12, 12, 9, 9, 6, 6, 12, 3, 3, 0, 0, 0)
+     8. missed= 410 vector=(0, 10, 10, 0, 5, 5, 10, 5, 5, 5, 0, 5, 0, 10)
+  best reverse-cover ledger n=15
+    vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+    missed=120 pattern_count=12
+    shift_hist=[(1, 12), (2, 12), (4, 12), (5, 12), (7, 12), (8, 12), (10, 12), (11, 12), (13, 12), (14, 12)]
+    gcd_shift_hist=[(1, 96), (5, 24)]
+    width_hist=[('1/2730', 20), ('1/2310', 20), ('1/1890', 20), ('1/1050', 20), ('1/630', 20), ('1/210', 20)]
+    margin_hist=[(1, 120)]
+  n=15 best CRT signature: mod3=[(0, 13), (2, 1)] mod5=[(0, 14)]
+
+Route disproof: rank the closest exact interval-cover candidates again.
+  disproof pressure: k=13 n=14 max_speed=42 candidates>=260
+    max_gap=   5/1848 covered=  851/858 components=  5 complement= 4 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+    max_gap=    1/308 covered=189403/194040 components= 13 complement=12 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+    max_gap=    3/784 covered=2465329/2522520 components= 13 complement=12 speeds=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14)
+    max_gap=    1/245 covered=34609/35035 components=  5 complement= 4 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14)
+    max_gap=    1/220 covered=136523/140140 components=  9 complement= 8 speeds=(1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+    max_gap=    4/637 covered=61543/63063 components=  5 complement= 4 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14)
+    max_gap=   9/1232 covered=3907/4004 components=  5 complement= 4 speeds=(1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+    max_gap=    3/392 covered=72487/76440 components= 11 complement=10 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14)
+  disproof pressure: k=14 n=15 max_speed=45 candidates>=300
+    max_gap=    1/495 covered=95717/96525 components=  7 complement= 6 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+    max_gap=   7/1980 covered=6362/6435 components=  5 complement= 4 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+    max_gap=    1/270 covered=26393/27027 components= 13 complement=12 speeds=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15)
+    max_gap=    1/225 covered=100237/103950 components= 13 complement=12 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15)
+    max_gap=  42/8815 covered=36439949327023/39688830008100 components= 41 complement=40 speeds=(2, 4, 11, 13, 15, 16, 17, 23, 28, 32, 37, 38, 41, 43)
+    max_gap=  42/8815 covered=139828251201143/153733975695300 components= 43 complement=42 speeds=(1, 8, 11, 14, 15, 17, 19, 26, 29, 31, 38, 41, 43, 44)
+    max_gap=  42/8815 covered=1043555844631/1166861295600 components= 55 complement=54 speeds=(1, 2, 11, 15, 19, 22, 26, 28, 29, 32, 38, 41, 43, 44)
+    max_gap=  42/8815 covered=118876275500497/134719510280355 components= 59 complement=58 speeds=(1, 2, 4, 17, 26, 28, 29, 31, 34, 37, 41, 43, 44, 45)
+
+Cycle 3 -- convert dead ends into proof-shaped pressure
+Route 14: perturb the unique binary extremal and watch it get worse.
+  coordinate-6 half-turn plus one extra defect
+    missed= 126 support=(4, 6) vector=(0, 0, 0, 7, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed= 168 support=(5, 6) vector=(0, 0, 0, 0, 7, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed= 196 support=(6, 12) vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 7, 0)
+    missed= 216 support=(4, 6) vector=(0, 0, 0, 1, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed= 216 support=(4, 6) vector=(0, 0, 0, 2, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed= 216 support=(4, 6) vector=(0, 0, 0, 3, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed= 216 support=(4, 6) vector=(0, 0, 0, 4, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed= 216 support=(4, 6) vector=(0, 0, 0, 5, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed= 216 support=(4, 6) vector=(0, 0, 0, 6, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed= 216 support=(4, 6) vector=(0, 0, 0, 8, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+  best n=14 local optimum re-ledger
+    vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    missed=56 pattern_count=8
+    shift_hist=[(1, 8), (3, 8), (5, 8), (7, 8), (9, 8), (11, 8), (13, 8)]
+    gcd_shift_hist=[(1, 48), (7, 8)]
+    width_hist=[('1/1386', 14), ('1/1176', 14), ('1/882', 14), ('1/728', 14)]
+    margin_hist=[(1, 56)]
+
+Route 15: inspect the best odd-composite near-blocker by shift gcd.
+  best n=15 local optimum ledger
+    vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+    missed=120 pattern_count=12
+    shift_hist=[(1, 12), (2, 12), (4, 12), (5, 12), (7, 12), (8, 12), (10, 12), (11, 12), (13, 12), (14, 12)]
+    gcd_shift_hist=[(1, 96), (5, 24)]
+    width_hist=[('1/2730', 20), ('1/2310', 20), ('1/1890', 20), ('1/1050', 20), ('1/630', 20), ('1/210', 20)]
+    margin_hist=[(1, 120)]
+    CRT signature=mod3=[(0, 13), (2, 1)] mod5=[(0, 14)]
+
+Route disproof: force gate overload with two multiples of n.
+  two-gate overload: k=13 n=14 max_speed=56
+    max_gap=    3/784 covered=97151575/108636528 components= 59 speeds=(2, 8, 14, 19, 20, 28, 30, 34, 40, 44, 48, 52, 55)
+    max_gap= 83/16856 covered=9877479253/11263028700 components= 71 speeds=(5, 14, 20, 22, 23, 25, 28, 29, 34, 40, 43, 48, 50)
+    max_gap=   9/1820 covered=702888863/787763340 components= 61 speeds=(3, 10, 13, 14, 15, 21, 27, 28, 30, 36, 41, 46, 51)
+    max_gap=    1/200 covered=12821689471/14008114120 components= 53 speeds=(2, 11, 14, 20, 22, 24, 26, 28, 39, 41, 46, 50, 53)
+    max_gap=    1/195 covered=253318119451/282823050510 components= 59 speeds=(1, 2, 3, 6, 11, 14, 17, 28, 31, 37, 39, 45, 46)
+    max_gap=  27/5236 covered=26586262519/29791478640 components= 69 speeds=(6, 8, 10, 14, 19, 28, 31, 34, 38, 46, 48, 51, 55)
+  two-gate overload: k=14 n=15 max_speed=60
+    max_gap=  37/9405 covered=2056477309/2281239180 components= 63 speeds=(4, 7, 9, 11, 15, 23, 29, 30, 38, 41, 44, 51, 56, 57)
+    max_gap=191/44520 covered=95526615986/108676586655 components= 93 speeds=(1, 10, 13, 15, 26, 30, 39, 41, 45, 46, 53, 54, 56, 59)
+    max_gap=191/44370 covered=6024609869/6884227350 components= 71 speeds=(1, 2, 11, 15, 17, 28, 30, 31, 33, 39, 50, 51, 52, 58)
+    max_gap= 52/11925 covered=30536069287/34529350275 components= 73 speeds=(2, 6, 7, 14, 15, 24, 30, 41, 53, 54, 56, 57, 58, 59)
+    max_gap= 56/12375 covered=426115523/479313450 components= 67 speeds=(4, 12, 15, 16, 21, 22, 27, 30, 33, 40, 50, 53, 54, 58)
+    max_gap=  41/9027 covered=50666616131/56187658800 components= 65 speeds=(3, 14, 15, 18, 21, 26, 30, 32, 33, 36, 38, 51, 54, 59)
+
+Synthesis
+  1. The n=14 dead end sharpened: the coordinate-6 half-turn is not just
+     the best binary obstruction, it is the unique global minimum of the
+     full normalized 2-torsion cube.  Adding any second defect to it
+     immediately exposes more cells.
+  2. The n=15 replacement obstruction is not binary; its natural small
+     probes are the CRT subgroups of Z/15Z.  Exact small-support scans and
+     local search still leave positive missed-cell margins.
+  3. Disproof pressure keeps leaking: gated and two-gate interval-cover
+     candidates retain explicit positive complement gaps.
+  4. New proof idea: treat n=14 as a 2-torsion/chirality boundary and n=15
+     as a CRT-subgroup leakage problem.  A unified lemma should say every
+     non-scalar quotient defect exposes either a torsion stencil or a CRT
+     subgroup leak before it can become an open cover.

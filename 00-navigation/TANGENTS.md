@@ -332,6 +332,12 @@ The forced `n=15` analogue is a `{5,10}` torsion-shell moat: supports `1..4` hav
 **T385** #lonely-runner #recursive-metrics #unit-skeleton #quotient-ladders | certainty: medium computational synthesis | source: codex-2026-05-31-S376
 LRC now has a tournament-style recursive metric atlas over `n=2..18`: cell-arrangement complexity `C(n)`, unit density `phi(n)/(n-1)`, scalar-puncture moat, endpoint peel depth, gate response, and quotient-ladder pressure. Primes maximize the unit skeleton; composites create nonunit puncture deltas and tiny quotient-ladder gaps. The next object should be an LRC endpoint-transfer matrix from leak layers at `n` to leak layers at `n+1`. See HYP-1831.
 
+**T386** #lonely-runner #torsion-crt #fourteen-fifteen #disproof-pressure | certainty: high computational | source: codex-2026-05-31-S377
+The S377 cycle sharpens the frontier feedback loop: `n=14` still has a unique two-torsion global minimum at coordinate-6 half-turn, missed `56`, and a second defect raises misses to at least `126`; `n=15` replaces half-turn with order-3 CRT leaks at coordinates `6/14`, missed `120`. One- and two-gate disproof attempts still retain positive gaps. See HYP-1832.
+
+**T387** #lonely-runner #product-sum #natural-gates #fragile-coordinates | certainty: medium-high computational | source: codex-2026-05-31-S377
+Natural product-sum target modes mark the fragile LRC quotient coordinates. For `n=14`, target coordinates beat non-target near-blockers (`56` versus `154` misses); coordinate `6` is the first visible distinct product-sum resonance. For `n=15`, target coordinates again dominate (`120` versus `260`), with tied order-3 stencils at coordinates `6` and `14`. See HYP-1833.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

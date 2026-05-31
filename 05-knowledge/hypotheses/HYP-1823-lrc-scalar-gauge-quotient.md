@@ -10,6 +10,8 @@ related:
   - HYP-1819
   - HYP-1824
   - HYP-1825
+  - HYP-1832
+  - HYP-1833
   - HYP-1828
 ---
 
@@ -84,6 +86,13 @@ alpha in [29/182, 9/56)
 bins=(2,4,6,8,11,13,1,3,6,8,10,12,1).
 ```
 
+S377 extended this quotient pressure in two directions.  The exact `n=14`
+two-torsion cube still has the coordinate-6 half-turn as a unique global
+minimum, and adding a second defect to it raises the miss count to at least
+`126`.  The natural-gate scan also shows that the hardest one-defect
+coordinates are product-sum target modes: coordinate `6` for `n=14`, and
+coordinates `6` and `14` for `n=15`.
+
 ## Why It Matters
 
 HYP-1818 says scalar ramps must be excised before the composite
@@ -121,3 +130,5 @@ Dirichlet-equality spine, and every other class has a micro-staircase witness.
 - HYP-1824
 - HYP-1825
 - HYP-1828
+- HYP-1832
+- HYP-1833

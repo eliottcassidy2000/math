@@ -1,5 +1,19 @@
 # Session Log
 
+## codex-2026-05-31-S377 - Lonely Runner Torsion/CRT Feedback
+
+**Account:** Codex
+**Git first:** Started from `main...origin/main`, then preserved the existing S372-S376 Lonely Runner strands and numbered this work as S377.
+**User prompt:** Spend a long cycling session attacking the fourteen-runner case, switching to a new fifteen-runner idea at dead ends, and using possible disproof constructions as a third route.
+**Computation:** Added `04-computation/lonely_runner_torsion_crt_feedback_s377.py` and stored `05-knowledge/results/lonely_runner_torsion_crt_feedback_s377.out`. The script reuses the exact S367 full-cell bitset systems for `n=14` and `n=15`, cycling through exact quotient scans, CRT subgroup probes, local reverse-cover pressure, and exact interval-cover disproof attempts.
+**Natural gates:** Added `04-computation/lonely_runner_natural_gate_feedback_s377.py` and stored `05-knowledge/results/lonely_runner_natural_gate_feedback_s377.out`. This connects the natural-number operation cospan/product-sum critical-pair picture to LRC quotient fragility.
+**Findings:** The complete normalized `n=14` two-torsion cube has the coordinate-6 half-turn as a unique global minimum, missing the same `56=7*8` positive-margin cells as S367/S371. Adding a second defect to that half-turn raises the miss count to at least `126`; the existing S372 cycle support-4 scan also bottoms out at `182`. For `n=15`, the half-turn route is replaced by order-3 CRT leakage: support-1 residues `5/10` at coordinates `6` or `14` miss `120` cells.
+**Disproof route:** Mutated gated interval-cover candidates retained positive complement gaps: best one-gate gaps were `5/1848` for `k=13,n=14` and `1/495` for `k=14,n=15`; two-gate overload still leaked with best gaps `3/784` and `37/9405`.
+**Natural-mode synthesis:** Product-sum target coordinates dominate one-defect near-blockers. For `n=14`, product-sum targets have best miss count `56` versus `154` for non-target coordinates; for `n=15`, they have `120` versus `260`. All `600` operation-critical speed probes had positive gaps.
+**Synthesis:** Added HYP-1832/HYP-1833, `07-reflections/lonely-runner-torsion-crt-feedback-s377.md`, and `07-reflections/lonely-runner-natural-gates-s377.md`, plus tangents T386-T387. The new proof search grammar is a torsion/CRT leak dichotomy refined by natural gates: after scalar-ramp quotienting, product-sum target coordinates are the fragile coordinates to certify first.
+**Verification:** `python3 -m py_compile 04-computation/lonely_runner_torsion_crt_feedback_s377.py 04-computation/lonely_runner_natural_gate_feedback_s377.py` succeeded; both scripts were run and stored outputs.
+**Next:** Prove the eight-stencil coordinate-6 half-turn lemma, derive the `n=15` one-defect formula for coordinates `6/14`, and replace random disproof searches with a protection-cycle-first solver.
+
 ## codex-2026-05-31-S375 - Lonely Runner 14/15/Disproof Repair-Deficit Loop
 
 **Account:** Codex

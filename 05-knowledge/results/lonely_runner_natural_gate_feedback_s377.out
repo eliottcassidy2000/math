@@ -1,0 +1,166 @@
+Lonely Runner natural-gate feedback loop (codex-2026-05-31 S377)
+All LRC interval/protection data use exact rational arithmetic.
+
+Product-sum target modes near n=14
+  z= 4: k=2 core=(2, 2) ones=0
+  z= 6: k=3 core=(2, 3) ones=1
+  z= 8: k=4 core=(2, 4) ones=2; k=5 core=(2, 2, 2) ones=2
+  z= 9: k=5 core=(3, 3) ones=3
+  z=10: k=5 core=(2, 5) ones=3
+  z=12: k=6 core=(2, 6) ones=4; k=7 core=(3, 4) ones=5; k=8 core=(2, 2, 3) ones=5
+  z=14 <frontier-window>: k=7 core=(2, 7) ones=5
+  z=15 <frontier-window>: k=9 core=(3, 5) ones=7
+  z=16 <frontier-window>: k=8 core=(2, 8) ones=6; k=10 core=(4, 4) ones=8; k=11 core=(2, 2, 4) ones=8; k=12 core=(2, 2, 2, 2) ones=8
+  z=18 <frontier-window>: k=9 core=(2, 9) ones=7; k=11 core=(3, 6) ones=9; k=13 core=(2, 3, 3) ones=10
+  z=20 <frontier-window>: k=10 core=(2, 10) ones=8; k=13 core=(4, 5) ones=11; k=14 core=(2, 2, 5) ones=11
+  z=21 <frontier-window>: k=13 core=(3, 7) ones=11
+  z=22 <frontier-window>: k=11 core=(2, 11) ones=9
+  z=24 <frontier-window>: k=12 core=(2, 12) ones=10; k=15 core=(3, 8) ones=13; k=16 core=(4, 6) ones=14; k=17 core=(2, 2, 6) ones=14; k=18 core=(2, 3, 4) ones=15; k=19 core=(2, 2, 2, 3) ones=15
+  z=25 <frontier-window>: k=17 core=(5, 5) ones=15
+  z=26 <frontier-window>: k=13 core=(2, 13) ones=11
+  z=27 <frontier-window>: k=17 core=(3, 9) ones=15; k=21 core=(3, 3, 3) ones=18
+  z=28 <frontier-window>: k=14 core=(2, 14) ones=12; k=19 core=(4, 7) ones=17; k=20 core=(2, 2, 7) ones=17
+
+Cycle: quotient one-defect scan for n=14
+  scanned=156 candidates=11368
+  collision_target_coords<=k=(4, 6, 8, 9, 10, 12)
+  best_collision_target_missed=56 best_non_target_missed=154
+  top one-defects:
+    coord= 6 residue= 7 order= 2 missed=  56 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 8), (3, 8), (5, 8), (7, 8), (9, 8)) widths=1/1386:14, 1/1176:14, 1/882:14
+    coord=12 residue= 7 order= 2 missed=  84 tag=collision arities=(6, 7, 8) add_parents=((1, 11), (2, 10), (3, 9)) mul_parents=((2, 6), (3, 4)) shift_hist=((1, 12), (3, 12), (5, 12), (7, 12), (9, 12)) widths=1/1274:14, 1/1092:28, 1/924:28
+    coord= 6 residue= 1 order=14 missed=  96 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 4), (2, 8), (3, 8), (4, 8), (5, 8)) widths=1/1386:24, 1/1176:24, 1/882:24
+    coord= 6 residue= 2 order= 7 missed=  96 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 8), (2, 8), (3, 8), (4, 8), (5, 8)) widths=1/1386:24, 1/1176:24, 1/882:24
+    coord= 6 residue= 3 order=14 missed=  96 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 8), (2, 8), (3, 8), (4, 8), (5, 4)) widths=1/1386:24, 1/1176:24, 1/882:24
+    coord= 6 residue= 4 order= 7 missed=  96 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 8), (2, 8), (3, 8), (4, 8), (5, 8)) widths=1/1386:24, 1/1176:24, 1/882:24
+    coord= 6 residue= 5 order=14 missed=  96 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 8), (2, 8), (3, 4), (4, 8), (5, 8)) widths=1/1386:24, 1/1176:24, 1/882:24
+    coord= 6 residue= 6 order= 7 missed=  96 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 8), (2, 8), (3, 8), (4, 8), (5, 8)) widths=1/1386:24, 1/1176:24, 1/882:24
+    coord= 6 residue= 8 order= 7 missed=  96 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 8), (2, 8), (3, 8), (4, 8), (5, 8)) widths=1/1386:24, 1/1176:24, 1/882:24
+    coord= 6 residue= 9 order=14 missed=  96 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 8), (2, 8), (3, 4), (4, 8), (5, 8)) widths=1/1386:24, 1/1176:24, 1/882:24
+    coord= 6 residue=10 order= 7 missed=  96 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 8), (2, 8), (3, 8), (4, 8), (5, 8)) widths=1/1386:24, 1/1176:24, 1/882:24
+    coord= 6 residue=11 order=14 missed=  96 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 8), (2, 8), (3, 8), (4, 8), (5, 4)) widths=1/1386:24, 1/1176:24, 1/882:24
+  best by coordinate:
+      coord= 2 best_residue= 7 missed= 196
+      coord= 3 best_residue= 7 missed= 224
+    * coord= 4 best_residue= 7 missed= 126
+      coord= 5 best_residue= 7 missed= 154
+    * coord= 6 best_residue= 7 missed=  56
+      coord= 7 best_residue= 7 missed= 294
+    * coord= 8 best_residue= 7 missed= 280
+    * coord= 9 best_residue= 7 missed= 336
+    * coord=10 best_residue= 7 missed= 168
+      coord=11 best_residue= 7 missed= 350
+    * coord=12 best_residue= 7 missed=  84
+      coord=13 best_residue= 7 missed= 168
+
+Cycle: operation-critical speed probes for k=13, n=14
+  tested=300 class_hist=(('positive_gap', 300),)
+  tightest candidates:
+    replace (13,) by (26,): class=positive_gap gap/thresh=0.038462 max_gap=1/364 boundary_witnesses=10 unprotected=10 peel=13 core_E=0 targets=(26,) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26)
+    replace (12, 13) by (24, 26): class=positive_gap gap/thresh=0.038462 max_gap=1/364 boundary_witnesses=14 unprotected=14 peel=13 core_E=0 targets=(24, 26) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24, 26)
+    replace (13,) by (14,): class=positive_gap gap/thresh=0.045455 max_gap=1/308 boundary_witnesses=24 unprotected=24 peel=14 core_E=0 targets=(14,) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+    replace (13,) by (27,): class=positive_gap gap/thresh=0.045455 max_gap=1/308 boundary_witnesses=30 unprotected=30 peel=14 core_E=0 targets=(27,) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 27)
+    replace (11, 12, 13) by (22, 24, 26): class=positive_gap gap/thresh=0.045455 max_gap=1/308 boundary_witnesses=26 unprotected=26 peel=13 core_E=0 targets=(22, 24, 26) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22, 24, 26)
+    replace (13,) by (28,): class=positive_gap gap/thresh=0.047619 max_gap=1/294 boundary_witnesses=24 unprotected=24 peel=15 core_E=0 targets=(28,) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 28)
+    replace (12, 13) by (24, 27): class=positive_gap gap/thresh=0.050926 max_gap=11/3024 boundary_witnesses=30 unprotected=30 peel=15 core_E=0 targets=(24, 27) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24, 27)
+    replace (11, 12, 13) by (22, 24, 27): class=positive_gap gap/thresh=0.050926 max_gap=11/3024 boundary_witnesses=42 unprotected=42 peel=16 core_E=0 targets=(22, 24, 27) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22, 24, 27)
+    replace (12, 13) by (14, 24): class=positive_gap gap/thresh=0.053571 max_gap=3/784 boundary_witnesses=24 unprotected=24 peel=14 core_E=0 targets=(14, 24) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 24)
+    replace (11, 12, 13) by (14, 22, 24): class=positive_gap gap/thresh=0.053571 max_gap=3/784 boundary_witnesses=38 unprotected=38 peel=14 core_E=0 targets=(14, 22, 24) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 22, 24)
+
+Cycle: disproof pressure from natural-operation candidates k=13, n=14
+  open_covers=0 boundary_only=0 positive_gap=300
+  deepest leaking systems:
+    peel=19 gap/thresh=0.150794 unprotected= 72 targets=(14, 15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28) speeds=(1, 14, 15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28)
+    peel=19 gap/thresh=0.184615 unprotected= 24 targets=(26, 27, 28) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 26, 27, 28)
+    peel=18 gap/thresh=0.107143 unprotected= 44 targets=(24, 27, 28) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 24, 27, 28)
+    peel=18 gap/thresh=0.140000 unprotected= 44 targets=(25, 27, 28) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 25, 27, 28)
+    peel=18 gap/thresh=0.184615 unprotected= 26 targets=(14, 26, 27) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 26, 27)
+
+Product-sum target modes near n=15
+  z= 4: k=2 core=(2, 2) ones=0
+  z= 6: k=3 core=(2, 3) ones=1
+  z= 8: k=4 core=(2, 4) ones=2; k=5 core=(2, 2, 2) ones=2
+  z= 9: k=5 core=(3, 3) ones=3
+  z=10: k=5 core=(2, 5) ones=3
+  z=12: k=6 core=(2, 6) ones=4; k=7 core=(3, 4) ones=5; k=8 core=(2, 2, 3) ones=5
+  z=14: k=7 core=(2, 7) ones=5
+  z=15 <frontier-window>: k=9 core=(3, 5) ones=7
+  z=16 <frontier-window>: k=8 core=(2, 8) ones=6; k=10 core=(4, 4) ones=8; k=11 core=(2, 2, 4) ones=8; k=12 core=(2, 2, 2, 2) ones=8
+  z=18 <frontier-window>: k=9 core=(2, 9) ones=7; k=11 core=(3, 6) ones=9; k=13 core=(2, 3, 3) ones=10
+  z=20 <frontier-window>: k=10 core=(2, 10) ones=8; k=13 core=(4, 5) ones=11; k=14 core=(2, 2, 5) ones=11
+  z=21 <frontier-window>: k=13 core=(3, 7) ones=11
+  z=22 <frontier-window>: k=11 core=(2, 11) ones=9
+  z=24 <frontier-window>: k=12 core=(2, 12) ones=10; k=15 core=(3, 8) ones=13; k=16 core=(4, 6) ones=14; k=17 core=(2, 2, 6) ones=14; k=18 core=(2, 3, 4) ones=15; k=19 core=(2, 2, 2, 3) ones=15
+  z=25 <frontier-window>: k=17 core=(5, 5) ones=15
+  z=26 <frontier-window>: k=13 core=(2, 13) ones=11
+  z=27 <frontier-window>: k=17 core=(3, 9) ones=15; k=21 core=(3, 3, 3) ones=18
+  z=28 <frontier-window>: k=14 core=(2, 14) ones=12; k=19 core=(4, 7) ones=17; k=20 core=(2, 2, 7) ones=17
+  z=30 <frontier-window>: k=15 core=(2, 15) ones=13; k=19 core=(3, 10) ones=17; k=21 core=(5, 6) ones=19; k=23 core=(2, 3, 5) ones=20
+
+Cycle: quotient one-defect scan for n=15
+  scanned=182 candidates=14400
+  collision_target_coords<=k=(4, 6, 8, 9, 10, 12, 14)
+  best_collision_target_missed=120 best_non_target_missed=260
+  top one-defects:
+    coord= 6 residue= 5 order= 3 missed= 120 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 12), (2, 12), (4, 12), (5, 12), (7, 12)) widths=1/1560:20, 1/1320:20, 1/975:40
+    coord= 6 residue=10 order= 3 missed= 120 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 12), (2, 12), (4, 12), (5, 12), (7, 12)) widths=1/1560:20, 1/1320:20, 1/975:40
+    coord=14 residue= 5 order= 3 missed= 120 tag=collision arities=(7,) add_parents=((1, 13), (2, 12), (3, 11)) mul_parents=((2, 7),) shift_hist=((1, 12), (2, 12), (4, 12), (5, 12), (7, 12)) widths=1/2730:20, 1/2310:20, 1/1890:20
+    coord=14 residue=10 order= 3 missed= 120 tag=collision arities=(7,) add_parents=((1, 13), (2, 12), (3, 11)) mul_parents=((2, 7),) shift_hist=((1, 12), (2, 12), (4, 12), (5, 12), (7, 12)) widths=1/2730:20, 1/2310:20, 1/1890:20
+    coord= 6 residue= 3 order= 5 missed= 144 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 12), (2, 12), (3, 12), (4, 12), (6, 12)) widths=1/1560:24, 1/1320:24, 1/975:48
+    coord= 6 residue= 6 order= 5 missed= 144 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 12), (2, 12), (3, 12), (4, 12), (6, 12)) widths=1/1560:24, 1/1320:24, 1/975:48
+    coord= 6 residue= 9 order= 5 missed= 144 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 12), (2, 12), (3, 12), (4, 12), (6, 12)) widths=1/1560:24, 1/1320:24, 1/975:48
+    coord= 6 residue=12 order= 5 missed= 144 tag=collision arities=(3,) add_parents=((1, 5), (2, 4), (3, 3)) mul_parents=((2, 3),) shift_hist=((1, 12), (2, 12), (3, 12), (4, 12), (6, 12)) widths=1/1560:24, 1/1320:24, 1/975:48
+    coord=14 residue= 3 order= 5 missed= 144 tag=collision arities=(7,) add_parents=((1, 13), (2, 12), (3, 11)) mul_parents=((2, 7),) shift_hist=((1, 12), (2, 12), (3, 12), (4, 12), (6, 12)) widths=1/2730:24, 1/2310:24, 1/1890:24
+    coord=14 residue= 6 order= 5 missed= 144 tag=collision arities=(7,) add_parents=((1, 13), (2, 12), (3, 11)) mul_parents=((2, 7),) shift_hist=((1, 12), (2, 12), (3, 12), (4, 12), (6, 12)) widths=1/2730:24, 1/2310:24, 1/1890:24
+    coord=14 residue= 9 order= 5 missed= 144 tag=collision arities=(7,) add_parents=((1, 13), (2, 12), (3, 11)) mul_parents=((2, 7),) shift_hist=((1, 12), (2, 12), (3, 12), (4, 12), (6, 12)) widths=1/2730:24, 1/2310:24, 1/1890:24
+    coord=14 residue=12 order= 5 missed= 144 tag=collision arities=(7,) add_parents=((1, 13), (2, 12), (3, 11)) mul_parents=((2, 7),) shift_hist=((1, 12), (2, 12), (3, 12), (4, 12), (6, 12)) widths=1/2730:24, 1/2310:24, 1/1890:24
+  best by coordinate:
+      coord= 2 best_residue= 5 missed= 320
+      coord= 3 best_residue= 5 missed= 360
+    * coord= 4 best_residue= 5 missed= 280
+      coord= 5 best_residue= 5 missed= 360
+    * coord= 6 best_residue= 5 missed= 120
+      coord= 7 best_residue= 5 missed= 260
+    * coord= 8 best_residue= 5 missed= 480
+    * coord= 9 best_residue= 5 missed= 560
+    * coord=10 best_residue= 5 missed= 200
+      coord=11 best_residue= 5 missed= 620
+    * coord=12 best_residue= 5 missed= 160
+      coord=13 best_residue= 5 missed= 420
+    * coord=14 best_residue= 5 missed= 120
+
+Cycle: operation-critical speed probes for k=14, n=15
+  tested=300 class_hist=(('positive_gap', 300),)
+  tightest candidates:
+    replace (14,) by (15,): class=positive_gap gap/thresh=0.030303 max_gap=1/495 boundary_witnesses=12 unprotected=12 peel=16 core_E=0 targets=(15,) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+    replace (14,) by (28,): class=positive_gap gap/thresh=0.035714 max_gap=1/420 boundary_witnesses=10 unprotected=10 peel=14 core_E=0 targets=(28,) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 28)
+    replace (13, 14) by (26, 28): class=positive_gap gap/thresh=0.035714 max_gap=1/420 boundary_witnesses=20 unprotected=20 peel=14 core_E=0 targets=(26, 28) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26, 28)
+    replace (12, 13, 14) by (24, 26, 28): class=positive_gap gap/thresh=0.035714 max_gap=1/420 boundary_witnesses=28 unprotected=28 peel=14 core_E=0 targets=(24, 26, 28) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24, 26, 28)
+    replace (14,) by (30,): class=positive_gap gap/thresh=0.043590 max_gap=17/5850 boundary_witnesses=12 unprotected=12 peel=18 core_E=0 targets=(30,) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 30)
+    replace (13, 14) by (15, 26): class=positive_gap gap/thresh=0.048718 max_gap=19/5850 boundary_witnesses=18 unprotected=18 peel=17 core_E=0 targets=(15, 26) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 26)
+    replace (12, 13, 14) by (15, 24, 26): class=positive_gap gap/thresh=0.048718 max_gap=19/5850 boundary_witnesses=26 unprotected=26 peel=15 core_E=0 targets=(15, 24, 26) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 24, 26)
+    replace (13, 14) by (16, 28): class=positive_gap gap/thresh=0.059524 max_gap=1/252 boundary_witnesses=34 unprotected=34 peel=14 core_E=0 targets=(16, 28) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 16, 28)
+    target 28 with divisor payload (2, 4, 7, 14, 28): class=positive_gap gap/thresh=0.066667 max_gap=1/225 boundary_witnesses=32 unprotected=32 peel=14 core_E=0 targets=(28,) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 28)
+    replace (13, 14) by (15, 27): class=positive_gap gap/thresh=0.066667 max_gap=1/225 boundary_witnesses=36 unprotected=36 peel=15 core_E=0 targets=(15, 27) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 27)
+
+Cycle: disproof pressure from natural-operation candidates k=14, n=15
+  open_covers=0 boundary_only=0 positive_gap=300
+  deepest leaking systems:
+    peel=31 gap/thresh=0.087302 unprotected= 86 targets=(15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30) speeds=(1, 2, 15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30)
+    peel=19 gap/thresh=0.165584 unprotected= 28 targets=(15, 28, 30) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 28, 30)
+    peel=18 gap/thresh=0.043590 unprotected= 12 targets=(30,) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 30)
+    peel=18 gap/thresh=0.066667 unprotected= 40 targets=(24, 27, 30) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24, 27, 30)
+    peel=18 gap/thresh=0.085714 unprotected= 44 targets=(25, 27, 30) speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 25, 27, 30)
+
+Synthesis
+  14-route: the worst quotient one-defect is coordinate 6, the first
+  visible distinct product-sum resonance 1+2+3=6.  Coordinate 12, the
+  next rich product-sum target, is second.  This turns the S371 56-cell
+  target into a natural-mode fragility problem, not just a residue accident.
+  15-route: the best one-defect splits into two tied order-3 stencils,
+  coordinate 6 and endpoint coordinate 14.  This matches the 15=3*5 CRT
+  split and suggests proving the order-3 stencil pair before attempting
+  a full 3x5 micro-staircase.
+  disproof-route: product-sum/divisor critical speed sets still all leak.
+  The natural-operation candidates produce positive gaps and empty cores,
+  so the next counterexample search should solve protection cycles directly
+  instead of overloading operation-critical target modes.
