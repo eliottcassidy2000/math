@@ -365,6 +365,9 @@ The seven-ladder near-disproof has 84 exposed endpoints; the missing half-gate `
 **T396** #lonely-runner #fourteen-runners #unit-skeleton #gate-duality | certainty: high obstruction + bounded exact evidence | source: codex-2026-05-31-S382
 At `n=14`, no `14`-multiple leaves all six unit points `a/14` safe, so the no-gate branch cannot contain an open-cover counterexample. Locally, tight boundary-only behavior also avoids gates: initial tight and the one-swap tight example `12->24` have no `14`-multiple, while all checked one-swap/pure-gate replacements with a `14`-multiple are positive-gap. See HYP-1839.
 
+**T397** #lonely-runner #eighteen-runners #quotient-ladders #favorite-target | certainty: medium-high computational synthesis | source: codex-2026-05-31-S383
+For denominators above `14`, raw lpd-ladder pressure grows toward `24`, but `18=2*3^2` is the best next battlefield: lpd ladder `d=9`, `gap/th=0.005682`, `176` unprotected endpoints, low unit density `6/17`, and multi-factor product-sum seed `(2,3,4)`. `16` is the 2-adic lab, `21` the `3*7` transfer, and `24` the stress test. See HYP-1840.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

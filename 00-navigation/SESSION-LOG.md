@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S383 - Above-14 Runner Favorites
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`.
+**User prompt:** Think creatively about numbers above `14` that may make proof or disproof of LRC possible, and pick a favorite amount of runners.
+**Computation:** Added `04-computation/lrc_above14_runner_favorites_s383.py` and stored `05-knowledge/results/lrc_above14_runner_favorites_s383.out`. The script audits exact largest-proper-divisor ladders for `15<=n<=24`, records unit density, divisor count, endpoint/gap pressure, and product-sum comparison seeds.
+**Findings:** Raw pressure is largest at `n=24,22,20,18`, but the best balance of tractability and new structure is `n=18`. It has `18=2*3^2`, lpd ladder `d=9`, best skip `8`, `gap/th=0.005682`, `176` unprotected endpoints, `pressure/n^2=95.604938`, low unit density `6/17`, and product-sum seed `(2,3,4)`.
+**Synthesis:** Added HYP-1840 and `07-reflections/lrc-above14-runner-favorites-s383.md`. The pick is `18` total runners in the denominator convention (`17` moving speeds plus stationary): `16` is the clean 2-adic lab, `21` is the pretty `3*7` transfer, `24` is the stress test, but `18` is the next battlefield.
+**Verification:** `python -m py_compile 04-computation/lrc_above14_runner_favorites_s383.py` succeeded; the S383 script ran end-to-end and produced the stored result.
+**Next:** Build an endpoint-debt certificate for the `n=18` lpd ladder, split by no-`18`-gate / has-`18`-gate branches, and then search endpoint-protection cycles before speed sets.
+
 ## codex-2026-05-31-S382 - Fourteen-Runner Gate/Tightness Duality
 
 **Account:** Codex

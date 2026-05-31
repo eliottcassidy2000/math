@@ -1,0 +1,48 @@
+Above-14 Lonely Runner candidate triage (codex-2026-05-31 S383)
+
+Exact lpd-ladder triage for denominators above 14
+n is the forbidden denominator; moving speeds k=n-1.
+
+n factors phi/(n-1) tau lpd skip class gap/th unprot pressure/n^2 ps_min(seed)
+------------------------------------------------------------------------------------------------------------
+15     3*5   0.571429   4   5    6 positive_gap  0.010606     66    27.657143 24:(3, 8)+1^13
+16     2^4   0.533333   5   8   14 positive_gap  0.007576    140    72.187500 24:(4, 6)+1^14
+17      17   1.000000   2   -    -            -         -      -            - 24:(2, 2, 6)+1^14
+18   2*3^2   0.352941   6   9    8 positive_gap  0.005682    176    95.604938 24:(2, 3, 4)+1^15
+19      19   1.000000   2   -    -            -         -      -            - 24:(2, 2, 2, 3)+1^15
+20   2^2*5   0.421053   6  10   18 positive_gap  0.003077    180   146.250000 28:(2, 2, 7)+1^17
+21     3*7   0.600000   4   7   18 positive_gap  0.006593    152    52.275132 27:(3, 3, 3)+1^18
+22    2*11   0.476190   4  11   20 positive_gap  0.003565    260   150.681818 32:(4, 8)+1^20
+23      23   1.000000   2   -    -            -         -      -            - 30:(2, 3, 5)+1^20
+24   2^3*3   0.347826   8  12   10 positive_gap  0.002696    264   170.000000 48:(2, 24)+1^22
+
+Rankings
+  raw endpoint/gap pressure:
+    n=24 pressure=97920.000000 gap/th=0.002696 unprot=264
+    n=22 pressure=72930.000000 gap/th=0.003565 unprot=260
+    n=20 pressure=58500.000000 gap/th=0.003077 unprot=180
+    n=18 pressure=30976.000000 gap/th=0.005682 unprot=176
+    n=21 pressure=23053.333333 gap/th=0.006593 unprot=152
+    n=16 pressure=18480.000000 gap/th=0.007576 unprot=140
+  normalized pressure pressure/n^2:
+    n=24 pressure/n^2=170.000000 factors=2^3*3 lpd=12
+    n=22 pressure/n^2=150.681818 factors=2*11 lpd=11
+    n=20 pressure/n^2=146.250000 factors=2^2*5 lpd=10
+    n=18 pressure/n^2=95.604938 factors=2*3^2 lpd=9
+    n=16 pressure/n^2=72.187500 factors=2^4 lpd=8
+    n=21 pressure/n^2=52.275132 factors=3*7 lpd=7
+  lowest unit-skeleton density:
+    n=24 phi/(n-1)=0.347826 factors=2^3*3 tau=8
+    n=18 phi/(n-1)=0.352941 factors=2*3^2 tau=6
+    n=20 phi/(n-1)=0.421053 factors=2^2*5 tau=6
+    n=22 phi/(n-1)=0.476190 factors=2*11 tau=4
+    n=16 phi/(n-1)=0.533333 factors=2^4 tau=5
+    n=15 phi/(n-1)=0.571429 factors=3*5 tau=4
+
+My favorite next denominator: n=18
+  This is 18 total runners in the repo convention, or 17 moving speeds against a stationary runner.
+  Why: it is still computationally close to 14, but it is not just the same anomaly repeated.
+  Its lpd ladder uses d=9, has gap/th=0.005682, unprotected=176, and pressure/n^2=95.604938.
+  Structurally, 18=2*3^2 combines an even gate, a square 3-torsion layer, and a largest-proper-divisor layer 9.  That gives both a clean quotient ladder and a CRT/torsion interface.
+  Its product-sum comparison is m(18)=24 from seed (2, 3, 4) with 15 ones, so the natural-operation side is already multi-factor rather than purely binary.
+  My read: n=16 is the clean proof laboratory, n=21 is the pretty 3-by-7 transfer, and n=24 is the stress test.  But n=18 is the best next battlefield: small enough to certify, rich enough to expose the recursive mechanism.
