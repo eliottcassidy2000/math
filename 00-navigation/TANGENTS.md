@@ -440,6 +440,9 @@ The exact `ln2` remainder forces triangle area `1/2`. A line from the origin rea
 **T421** #reciprocal-symmetry #mellin-transform #cayley-shadow #q-coordinate | certainty: medium structural bridge | source: codex-2026-05-31-S394
 The bare defect `q0=x-1/x` is anti-invariant under inversion, `q0(1/x)=-q0(x)`, paired with `r=x+1/x` by `r^2-q0^2=4` and `Dq0=r, Dr=q0`. In log-coordinate `q0(e^u)=2sinh(u)`, and the one-sided Mellin transform is `-2/(s^2-1)`. Compare this anti-reciprocal coordinate with the repo's recurring Cayley shadow `Q(Q(x))=-1/x`.
 
+**T422** #log2 #hyperbola #q-gauge #anti-palindromic | certainty: proved identity + structural tangent | source: codex-2026-05-31-S395
+THM-368 extends the S394 q-counterterm thread with an equal-area q-gauge: every `q_L=x/L^2` on `[0,L]` gives `FP int_0^2(1/x+q_L)dx=1/2+log(2)`, while the pointwise splice uses the reciprocal-odd counterterm `q_ct=x-1/x`. A Euclidean 30-degree equal-area triangle has `L=3^(1/4)` and log cutoff `log(3)/4`; a base-two equal-area triangle has slope `1/4`. This makes triangle angle a gauge choice and `dx/x` the invariant. See THM-368 and HYP-1863.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

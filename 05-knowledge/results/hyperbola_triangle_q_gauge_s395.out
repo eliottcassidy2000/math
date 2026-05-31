@@ -1,0 +1,95 @@
+HYPERBOLA + TRIANGLE Q EXPLORATION
+==============================================================================
+Original area int_0^1 x dx + int_1^2 dx/x = 1.193147180560
+  1/2 = 0.500000000000
+  log(2) = 0.693147180560
+
+1. Equal-area triangle gauges q_L
+------------------------------------------------------------------------------
+Define q_L(x)=x/L^2 on 0<=x<=L, and 0 otherwise.
+Then int q_L dx = 1/2 and FP int_0^2 (1/x+q_L) dx = log(2)+1/2.
+
+  label                         L        slope     height    angle   log L      FP total
+  45 degree isosceles, L=1     1.000000   1.000000  1.000000  45.000  0.000000 1.193147181
+  base-two equal-area, L=2     2.000000   0.250000  0.500000  14.036  0.693147 1.193147181
+  30 degree equal-area         1.316074   0.577350  0.759836  30.000  0.274653 1.193147181
+  60 degree equal-area         0.759836   1.732051  1.316074  60.000 -0.274653 1.193147181
+
+Interpretation:
+  L=1 is the usual isosceles right triangle.
+  L=2 is the equal-area triangle spread across x=0..2; its Euclidean
+      angle is atan(1/4), not 30 degrees.
+  A Euclidean 30 degree equal-area triangle has L=3^(1/4), so its
+      log-coordinate cutoff is log(3)/4.
+
+2. If one forces a base-two Euclidean 30-60-90 triangle
+------------------------------------------------------------------------------
+  base=2, angle=  30: triangle area=1.154700538, log(2)+area=1.847847719
+    equal-area base-two slope would be 0.250000000; vertical display scale to look like 30 deg is 2.309401077
+  base=2, angle=  60: triangle area=3.464101615, log(2)+area=4.157248796
+    equal-area base-two slope would be 0.250000000; vertical display scale to look like 60 deg is 6.928203230
+
+So a literal 30-60-90 triangle with x-projection 2 changes the value.
+To keep log(2)+1/2, either rescale the triangle or view the angle
+after an anisotropic x/y display normalization.
+
+3. Pointwise q counterterm
+------------------------------------------------------------------------------
+On 0<x<1, write x = 1/x + (x - 1/x).
+Thus q_ct(x)=x-1/x cancels the hyperbola's left divergence.
+
+  epsilon        int_eps^2 1/x      int_eps^1 q_ct      sum
+    1.0e-01        2.995732274       -1.807585093  1.188147181
+    1.0e-02        5.298317367       -4.105220186  1.193097181
+    1.0e-04        9.903487553       -8.710340377  1.193147176
+    1.0e-08       19.113827925      -17.920680744  1.193147181
+  limit = 1.193147181
+
+Reciprocal parity:
+  x       q_ct(x)       q_ct(1/x)    sum
+  0.5  -1.500000000   1.500000000  0.00e+00
+  1.0   0.000000000   0.000000000  0.00e+00
+  2.0   1.500000000  -1.500000000  0.00e+00
+  3.0   2.666666667  -2.666666667  0.00e+00
+
+4. Log-coordinate form
+------------------------------------------------------------------------------
+Set x=e^t.  Then dx/x=dt, so the hyperbola is uniform in t.
+The original splice becomes
+  int_{-infty}^0 e^(2t) dt + int_0^log(2) dt = 1/2 + log(2).
+The counterterm is q_ct=e^t-e^(-t)=2*sinh(t).
+
+For q_L, the normalized mass 2*q_L(x) dx is an exponential tail
+in t with mean log(L)-1/2 and variance 1/4.
+
+  L=1.000000: log L=0.000000000, mean_t=-0.500000000, variance_t=0.250000000
+  L=2.000000: log L=0.693147181, mean_t=0.193147181, variance_t=0.250000000
+  L=1.316074: log L=0.274653072, mean_t=-0.225346928, variance_t=0.250000000
+
+5. Mellin-transform tangent
+------------------------------------------------------------------------------
+For q_L(x)=x/L^2 on [0,L],
+  M_q(s)=int_0^L x^s q_L(x) dx = L^s/(s+2).
+The triangle has moved the hyperbola pole at s=0 to a pole at s=-2.
+Changing L only multiplies by L^s, i.e. translates in log coordinate.
+
+  L        M_q(0)    M_q(1)    M_q(-1)
+  1.000000  0.500000  0.333333   1.000000
+  2.000000  0.500000  0.666667   0.500000
+  1.316074  0.500000  0.438691   0.759836
+
+SYNTHESIS
+==============================================================================
+There are two complementary readings of q(x):
+  q_L is a triangle-density gauge with fixed total mass 1/2.
+  q_ct=x-1/x is the reciprocal-odd counterterm making the splice
+      pointwise equal to 1/x+q_ct below x=1.
+
+The 30-60-90 tangent is a gauge choice, not a new value by itself.
+A true 30 degree equal-area q has log cutoff log(3)/4; a base-two
+equal-area q has log cutoff log(2) and slope 1/4.
+
+The deeper invariant is dx/x.  Logs are areas in rapidity/log
+coordinate, while triangles are exponential cutoff packets added
+to that invariant measure.
+

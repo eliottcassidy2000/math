@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S395 - Hyperbola Triangle q-Gauge Extension
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S391; during close-out, rebased over upstream S392/S393 n=16 work and upstream S394 hyperbola q-counterterm work, then renumbered this q-gauge extension to S395/HYP-1863.
+**User prompt:** Investigate the area `int_0^1 x dx + int_1^2 dx/x`, the isosceles/30-60-90 triangle decompositions, and the role of a function `q(x)` in writing the second decomposition as `q(x)+1/x`.
+**Formalization:** Added THM-368, proving the hyperbola-triangle q-gauge identity. Any integrable `q` with area `1/2` gives `FP int_0^2(1/x+q) dx = log(2)+1/2`; the equal-area line family is `q_L(x)=x/L^2` on `[0,L]`. The pointwise splice uses the reciprocal-odd counterterm `q_ct=x-1/x`, with `q_ct(1/x)=-q_ct(x)`.
+**Computation:** Added `04-computation/hyperbola_triangle_q_gauge_s395.py` and stored `05-knowledge/results/hyperbola_triangle_q_gauge_s395.out`. The script prints the equal-area triangle gauge table, the base-two 30-60-90 normalization warning, cutoff cancellation for `q_ct`, log-coordinate form, and Mellin transform `M_q(s)=L^s/(s+2)`.
+**Findings:** A literal base-two Euclidean 30-degree triangle does not preserve `1/2+log(2)`; it has area `2/sqrt(3)`. To preserve the value, either use the base-two equal-area triangle with slope `1/4`, or use a Euclidean 30-degree equal-area triangle with `L=3^(1/4)` and log cutoff `log(3)/4`. In log coordinate, the original splice is an exponential packet on `(-infty,0]` plus uniform log measure on `[0,log(2)]`.
+**Synthesis:** Added HYP-1863 and `07-reflections/hyperbola-triangle-q-gauge-s395.md`, extending upstream HYP-1862. The main tangent is that `q_ct=x-1/x` is the continuous seed of reciprocal-odd / anti-palindromic structure, suggesting old `log(2)` rapidity appearances can be reread as finite-part `dx/x + q` decompositions.
+**Verification:** `python -m py_compile 04-computation/hyperbola_triangle_q_gauge_s395.py` succeeded; rerunning the script reproduces the stored output.
+
 ## codex-2026-05-31-S394 - Hyperbola/Triangle q Counterterm
 
 **Account:** Codex
