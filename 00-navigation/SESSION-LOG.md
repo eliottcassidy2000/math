@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S387 - LRC Cayley-Dickson Tower Analogy
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S383; during close-out, rebased over upstream S384-S386 LRC strands and renumbered this work to S387.
+**User prompt:** Spend a session exploring the above-14 runner targets and integrate ideas like the Cayley-Dickson tower analogously.
+**Computation:** Added `04-computation/lrc_cayley_dickson_tower_s387.py` and stored `05-knowledge/results/lrc_cayley_dickson_tower_s387.out`. The script reads denominators `14..24` as `n=2^r*odd_core`, labels the `2^r` row by Cayley-Dickson level, computes exact lpd-ladder endpoint debt, and zooms into `n=18`.
+**Findings:** The disciplined analogy is: each doubling row closes one old freedom while exposing a new defect layer. `n=16` is the pure sedenion-row lab, `n=18=2*3^2` is the first attractive mixed row, and `n=24=8*3` is the octonion-row stress test. For the `n=18` lpd ladder, unprotected endpoints have layer histogram `(9:48, 27:16, 99:16, 117:16, 144:64, 153:16)`, so the first exposed layer is exactly the lpd payload `9`.
+**Synthesis:** Added HYP-1854 and `07-reflections/lrc-cayley-dickson-tower-s387.md`. Endpoint debt is proposed as the LRC analogue of Cayley-Dickson zero-divisor leakage: the mandatory gate kills the unit layer, but the obstruction descends to a quotient layer.
+**Verification:** `python -m py_compile 04-computation/lrc_cayley_dickson_tower_s387.py` succeeded; the S387 script ran end-to-end and produced the stored result.
+**Next:** Prove the first-layer debt claim for lpd ladders, starting with the pure `n=16` case and then the mixed `n=18` square-torsion case.
+
 ## codex-2026-05-31-S386 - LRC Labelled Cycles and Tournament Protection
 
 **Account:** Codex

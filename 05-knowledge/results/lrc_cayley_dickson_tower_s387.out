@@ -1,0 +1,40 @@
+LRC Cayley-Dickson tower analogy (codex-2026-05-31 S387)
+
+Cayley-Dickson reference tower
+  level dim symbol meaning
+      0   1      R ordered division baseline
+      1   2      C order lost; phase appears
+      2   4      H commutativity lost; handedness appears
+      3   8      O associativity lost; Fano-plane control
+      4  16      S division lost; zero-divisor debt
+      5  32      P higher zero-divisor jungle
+
+LRC denominators as Cayley-Dickson rows with odd torsion payloads
+n factors 2^r odd CD phi/(n-1) tau lpd gap/th unprot debt/unit layers ps(seed)
+----------------------------------------------------------------------------------------------------------------------
+14     2*7   2   7  C   0.461538   4   7 0.005411     84 14.000000 7:36,28:12,77:12,84:12,... 20:(2, 2, 5)+1^11
+15     3*5   1  15  R   0.571429   4   5 0.010606     66  8.250000 5:34,55:8,60:16,65:8 24:(3, 8)+1^13
+16     2^4  16   1  S   0.533333   5   8 0.007576    140 17.500000 8:56,24:14,40:14,72:14,... 24:(4, 6)+1^14
+17      17   1  17  R   1.000000   2   -        -      -         -                - 24:(2, 2, 6)+1^14
+18   2*3^2   2   9  C   0.352941   6   9 0.005682    176 29.333333 9:48,27:16,99:16,117:16,... 24:(2, 3, 4)+1^15
+19      19   1  19  R   1.000000   2   -        -      -         -                - 24:(2, 2, 2, 3)+1^15
+20   2^2*5   4   5  H   0.421053   6  10 0.003077    180 22.500000 10:72,50:18,70:18,110:18,... 28:(2, 2, 7)+1^17
+21     3*7   1  21  R   0.600000   4   7 0.006593    152 12.666667 7:76,35:14,49:12,77:12,... 27:(3, 3, 3)+1^18
+22    2*11   2  11  C   0.476190   4  11 0.003565    260 26.000000 11:100,33:20,77:20,99:20,... 32:(4, 8)+1^20
+23      23   1  23  R   1.000000   2   -        -      -         -                - 30:(2, 3, 5)+1^20
+24   2^3*3   8   3  O   0.347826   8  12 0.002696    264 33.000000 12:88,36:22,48:22,204:22,... 48:(2, 24)+1^22
+
+Zoom: n=18 lpd ladder as twisted Cayley-Dickson layer
+  speeds=(1, 9, 18, 27, 36, 45, 54, 63, 81, 90, 99, 108, 117, 126, 135, 144, 153)
+  lpd=9 skip=8 class=positive_gap gap/th=0.005682 unprotected=176 first=11/162
+  layer_hist=((9, 48), (27, 16), (99, 16), (117, 16), (144, 64), (153, 16))
+  denominator_hist_prefix=((162, 48), (486, 16), (1782, 16), (2106, 16), (2592, 64), (2754, 16))
+  residue_mod_18_hist=((-1, 176),)
+  first_leaks=['11/162', '145/2106', '179/2592', '181/2592', '125/1782', '13/162', '47/486', '251/2592', '253/2592', '269/2754', '17/162', '19/162', '343/2754', '323/2592']
+
+Synthesis
+  The Cayley-Dickson analogy is not that LRC literally is an algebra.  It is that every doubling row closes one old freedom while exposing a new defect layer.
+  n=16 is the pure S-row test: 2-adic, clean, and close to the sedenion zero-divisor threshold.
+  n=18 is the first attractive mixed row: CD row 2 (C) carrying odd core 9.  Its unprotected endpoints concentrate at layer 9, exactly the largest-proper-divisor payload.
+  n=24 is the stress test: row 8 with odd core 3, lowest unit density in this window, and the loudest normalized pressure.
+  My favorite remains n=18 because it is where the tower stops being pure doubling but has not yet become a large divisor-rich mess.

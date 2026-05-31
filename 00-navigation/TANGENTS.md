@@ -389,6 +389,9 @@ Tournament good-cut theory is already an endpoint-protection theorem on a Hamilt
 **T404** #lonely-runner #endpoint-transfer #incidence-layer #omega | certainty: exploratory bridge | source: codex-2026-05-31-S386
 The labelled LRC endpoint cycle should use the tournament incidence toolkit: private endpoints/triangular minors from THM-356, collision hypergraph peeling from HYP-1792/HYP-1793, root-sign packet modules, and an Omega-like graph whose vertices are labelled protection arrows. The seven-ladder may be a support-cycle mirage killed by labelled incidence leaves.
 
+**T405** #lonely-runner #cayley-dickson #endpoint-debt #doubling-tower | certainty: medium conceptual + exact lpd layers | source: codex-2026-05-31-S387
+Read LRC denominators as `n=2^r*odd_core`: the `2^r` factor is the Cayley-Dickson row and the odd core is the torsion payload. `n=16` is the pure sedenion-row lab, `n=18=2*9` is the first mixed square-torsion row, and `n=24=8*3` is the octonion-row stress test. Endpoint debt is the LRC analogue of zero-divisor leakage. See HYP-1854.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
