@@ -37,6 +37,7 @@ import TournamentH7.SmallHEnumerations
 import TournamentH7.BasePathSink
 import TournamentH7.IsoCharacterizations
 import TournamentH7.ScoreSequence
+import TournamentH7.Paley3
 
 open Tournament
 
@@ -1224,3 +1225,10 @@ theorem regular_basepath_n_in_odd_ge_three_audit {n : ℕ} (T : Tournament n)
     ∃ k, n = 2 * k + 3 :=
   regular_basepath_n_in_odd_ge_three T hbp hn hreg
 #print axioms regular_basepath_n_in_odd_ge_three_audit
+
+/-! ### Paley(3) ≅ threeCycle -/
+
+theorem paley_3_H_eq_three_audit (P : PaleyType 3) (h : P.T ≅ threeCycle) :
+    H P.T = 3 :=
+  paley_3_H_eq_three P h
+#print axioms paley_3_H_eq_three_audit
