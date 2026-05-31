@@ -533,6 +533,15 @@ For irrational rotations, Ostrowski numeration gives canonical return-time expan
 **T496** #lonely-runner #n14 #zeckendorf-shadow #endpoint-debt | certainty: exact labels + speculative use | source: codex-2026-05-31-S451
 S451 labels S450 quantities in Zeckendorf normal form: initial `n=14` debt `6=F1+F4`, lower-speed budget `13=F6`, seven-ladder debt `84=F5+F7+F9`, and S380 exported debt `168=F3+F7+F11`. The label is useful only if future endpoint-layer graphs make repairs into legal/illegal carries.
 
+**T497** #lonely-runner #nearest-neighbor #round-tournaments #distance-data | certainty: medium-high computation + proof route | source: codex-2026-05-31-S431
+Lift an LRC configuration at time `t` to `{0} union {v_i t}` on the circle. This carries an incomplete round tournament (`i->j` iff `j` lies in the clockwise open semicircle from `i`) and a two-nearest-neighbor digraph. The lonely gap is only the stationary vertex projection; collisions, antipodal ties, score defects, and zero-bracket contacts are the richer tournament data. See HYP-1903.
+
+**T498** #lonely-runner #sporadic-tight #residue-polygon #quotient-collision | certainty: exact examples | source: codex-2026-05-31-S431
+Scalar-identical tight examples split under the neighbor lift: initial `k=4` and sporadic `n=5` are the same regular 5-gon at `t=1/5`; initial `k=5` is a regular 6-gon with three antipodal half-tournament ties; sporadic `n=6` is scalar-tight at `t=1/6` but has a moving-runner collision `v3=v9`. This suggests sporadic tightness may be residue-polygon equality plus multiplicity, not a new scalar shape.
+
+**T499** #lonely-runner #n14 #difference-speeds #near-disproof-filter | certainty: exact sample metric | source: codex-2026-05-31-S431
+The n=14 seven-ladder and exported-debt near-misses have stationary gaps above threshold (`gap/th=1.208333` and `1.173972`) but much smaller pairwise runner gaps (`pair/th=0.169913` and `0.053301`). Tiny visible LRC gaps are therefore not necessarily near global packings; pairwise distance/difference-speed data should be a danger filter before treating a speed set as a real near-counterexample.
+
 **T500** #zeckendorf #lonely-runner #n14 #gate-fan | certainty: exact local enumeration | source: codex-2026-05-31-S460
 The `n=14` local gate cover family factors exactly: all minimum lower covers of the `14`-gate endpoints are `{1,3,5,7,9,11,13}` plus one arbitrary even bridge from `{2,4,6,8,10,12}`. Private endpoint rows force the whole odd fan; the even bridge is a local Fibonacci-cube fiber. See HYP-1920.
 

@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S431 - LRC Neighbor Tournament Lift
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S430; during close-out, upstream S440/S450/S451/S460 and oracle S22 landed first, so the neighbor-lift hypothesis was renumbered to HYP-1903 while retaining the S431 artifact names.
+**User prompt:** Think creatively about how tournament structure may show up in LRC-related problems, reframe usual attempt routes, and test whether tracking extra distance data or two nearest neighbors lets us leverage tournament knowledge.
+**Computation:** Added `04-computation/lrc_neighbor_tournament_lift_s431.py` and stored `05-knowledge/results/lrc_neighbor_tournament_lift_s431.out`. The script audits exact safe/tight times for known tight examples, a near-tight k=6 example, and two n=14 ladder examples, recording the circular half-distance tournament, two-nearest-neighbor graph, residue multiplicities, pairwise minimum gap, and zero-bracket pair.
+**Findings:** The scalar lonely gap is a lossy projection. Initial `k=4` and sporadic `n=5` collapse to the same regular 5-gon at `t=1/5`; initial `k=5` is a regular 6-gon with antipodal incomplete-tournament ties; sporadic `n=6` is scalar-tight but has a moving-runner collision `v3=v9` at `t=1/6`. The n=14 ladder near-misses have lonely gaps above threshold but pairwise gaps far below threshold, so they are crowded difference-speed configurations rather than near-regular packings. Oracle S22 independently landed a complementary marked-bracket formulation as HYP-1895.
+**Synthesis:** Added HYP-1903 and `07-reflections/lrc-neighbor-tournament-lift-s431.md`. The proposed lift views LRC as a one-parameter walk through round/incomplete tournament configurations observed from the stationary vertex. The new proof target is a two-nearest protection core: zero-bracket cuts, local contact arcs, quotient collisions, and antipodal ties should be peeled by the same private-leaf/good-cut instincts used on tournaments.
+**Next:** Implement two-nearest core peeling and add its private-leaf count to the LRC search feature vector alongside endpoint-core size, pairwise-min-gap ratio, collision count, half-tournament score defect, and S22 marked bracket margin.
+
 ## oracle-2026-05-31-S22 - LRC Two-Neighbor Distance Tournament Lens
 
 **Account:** Codex on `oracle`. **User prompt:** Think creatively about how tournament structure may show up in LRC, especially whether tracking extra distance data between runners or two nearest neighbors instead of one can leverage tournament knowledge.
