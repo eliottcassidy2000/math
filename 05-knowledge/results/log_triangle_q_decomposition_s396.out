@@ -1,0 +1,82 @@
+Log triangle q-decomposition probe (codex-2026-05-31 S396)
+
+1. Exact area ledger
+   f(x)=x on [0,1], f(x)=1/x on [1,2]
+   area = 1/2 + ln(2) = 1.193147180560
+
+   Subtract a right-triangle ramp y=a*x over [0,2].
+   Its area is integral_0^2 a*x dx = 2a.
+   To leave exactly ln(2), one needs 2a=1/2, hence a=1/4.
+   The angle is atan(1/4) = 14.036243 degrees,
+   not 30 degrees.
+
+2. 30-60-90 obstruction
+   A literal Euclidean 30-60-90 triangle leaving ln(2) would need area 1/2.
+   Such a triangle has hypotenuse 2/3^(1/4) = 1.519671, so its horizontal span is < 2.
+   Conversely, common span-2 interpretations have the wrong area:
+     long leg horizontal 2: area = 2/sqrt(3) = 1.154700538379
+     short leg horizontal 2: area = 2*sqrt(3) = 3.464101615138
+     hypotenuse length 2:  area = sqrt(3)/2 = 0.866025403784
+   So the log-preserving second carve is a 4:1 ramp triangle.  If a
+   30-60-90 triangle is intended, it must live in a transformed metric
+   or a different normalization.
+
+3. The q_a family
+   After subtracting y=a*x, the residual can be written
+       H(x-1)/x + q_a(x)
+   where
+       q_a(x)=(1-a)x on [0,1],    q_a(x)=-a*x on [1,2].
+   The q_a area is 1/2 - 2a, so q_a is area-neutral iff a=1/4.
+
+   a          triangle area   integral q_a   residual area
+   0          0               1/2           ln(2) + 1/2
+   1/6        1/3             1/6           ln(2) + 1/6
+   1/4        1/2             0             ln(2) + 0
+   1/3        2/3             -1/6          ln(2) - 1/6
+   1/2        1               -1/2          ln(2) - 1/2
+
+4. The log-preserving q = q_{1/4}
+   q(x)=3x/4 on [0,1], q(x)=-x/4 on [1,2].
+   It has zero area but nonzero transport moments.
+
+   moments M_n = integral_0^2 x^n q(x) dx = (1-2^n)/(n+2)
+     M_0 = 0
+     M_1 = -1/3
+     M_2 = -3/4
+     M_3 = -7/5
+     M_4 = -5/2
+     M_5 = -31/7
+     M_6 = -63/8
+     M_7 = -127/9
+
+   A primitive Q with Q(0)=Q(2)=0 is
+       Q(x)=3x^2/8      on [0,1]
+       Q(x)=(4-x^2)/8   on [1,2]
+   Sample values:
+     Q(0) = 0
+     Q(1/2) = 3/32
+     Q(1) = 3/8
+     Q(3/2) = 7/32
+     Q(2) = 0
+   This makes q a flux term: it moves area inside the decomposition
+   but contributes no net area, leaving the logarithmic piece untouched.
+
+5. Mellin/log tangent
+   The Mellin transform of q_a is
+       M_a(s) = integral_0^2 x^(s-1) q_a(x) dx
+              = (1 - a*2^(s+1))/(s+1).
+   For a=1/4:
+       M(s) = (1 - 2^(s-1))/(s+1), so M(1)=0.
+   The first log moment is the derivative at the zero:
+       M'(1)= integral q(x) log(x) dx = -ln(2)/2.
+   Numerically: -0.346573590280
+   So q is not noise; it is the zero-mass distribution whose first
+   Mellin variation remembers exactly half a bit.
+
+6. Synthesis
+   The robust identity is not '30-60-90 + ln(2)' in Euclidean area.
+   It is 'base-[0,2] ramp of slope 1/4 + a zero-area q transport + ln(2)'.
+   This suggests a useful general pattern: logarithms survive when the
+   polynomial/triangular part is adjusted until its signed correction
+   has zero mass.  The correction q then stores scale information in
+   its Mellin derivatives rather than in its area.

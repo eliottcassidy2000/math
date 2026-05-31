@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S396 - Log Triangle q-Decomposition
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S392; during close-out, rebased over upstream S393 n=16 proof gauntlet, upstream S394 hyperbola/triangle q-counterterm, and upstream S395 q-gauge extension, then renumbered this log/q strand to S396/HYP-1864.
+**User prompt:** Investigate the area under `y=x` on `[0,1]` and `y=1/x` on `[1,2]`, including the claimed 30-60-90 decomposition and tangents around `q(x)`.
+**Computation:** Added `04-computation/log_triangle_q_decomposition_s396.py` and stored `05-knowledge/results/log_triangle_q_decomposition_s396.out`. The script computes the exact area ledger, the span/area obstruction to the literal 30-60-90 reading, the ramp family `q_a`, the zero-area case `q_{1/4}`, its moments, and its Mellin transform.
+**Findings:** The first decomposition is exactly `1/2 + ln(2)`. A base-`[0,2]` ramp triangle that leaves `ln(2)` must have slope `1/4`, area `1/2`, and angle `atan(1/4)=14.036243 degrees`; it is not a Euclidean 30-60-90 triangle. A literal 30-60-90 triangle with area `1/2` has hypotenuse `2/3^(1/4)<2`, so it cannot span the whole interval.
+**q-object:** After subtracting `a*x`, the residual is `H(x-1)/x + q_a(x)` with `q_a=(1-a)x` on `[0,1]` and `q_a=-a*x` on `[1,2]`. The unique log-preserving correction is `a=1/4`, where `q` has zero area, moments `M_n=(1-2^n)/(n+2)`, and Mellin transform `M(s)=(1-2^(s-1))/(s+1)` with `M'(1)=-ln(2)/2`.
+**Synthesis:** Added HYP-1864 and `07-reflections/log-triangle-q-decomposition-s396.md`. The useful reframe is: logarithmic area remainders survive when the polynomial/triangular part is tuned so the induced `q` is zero-mass; the scale information then lives in Mellin/log derivatives of `q`.
+**Verification:** `python3 -m py_compile 04-computation/log_triangle_q_decomposition_s396.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S395 - Hyperbola Triangle q-Gauge Extension
 
 **Account:** Codex

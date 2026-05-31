@@ -443,6 +443,9 @@ The bare defect `q0=x-1/x` is anti-invariant under inversion, `q0(1/x)=-q0(x)`, 
 **T422** #log2 #hyperbola #q-gauge #anti-palindromic | certainty: proved identity + structural tangent | source: codex-2026-05-31-S395
 THM-368 extends the S394 q-counterterm thread with an equal-area q-gauge: every `q_L=x/L^2` on `[0,L]` gives `FP int_0^2(1/x+q_L)dx=1/2+log(2)`, while the pointwise splice uses the reciprocal-odd counterterm `q_ct=x-1/x`. A Euclidean 30-degree equal-area triangle has `L=3^(1/4)` and log cutoff `log(3)/4`; a base-two equal-area triangle has slope `1/4`. This makes triangle angle a gauge choice and `dx/x` the invariant. See THM-368 and HYP-1863.
 
+**T423** #logarithms #area-decomposition #q-transport #mellin | certainty: exact local calculation + exploratory pattern | source: codex-2026-05-31-S396
+For `f=x` on `[0,1]` and `f=1/x` on `[1,2]`, the log-preserving base-`[0,2]` triangle is the ramp `y=x/4`, not a Euclidean 30-60-90 triangle. The residual is `H(x-1)/x + q(x)` with `q=3x/4` on `[0,1]`, `q=-x/4` on `[1,2]`, `integral q=0`, moments `(1-2^n)/(n+2)`, and Mellin derivative `M'(1)=-ln(2)/2`. See HYP-1864.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
