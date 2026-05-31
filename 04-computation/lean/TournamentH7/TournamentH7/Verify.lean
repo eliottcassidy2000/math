@@ -1206,3 +1206,17 @@ theorem regular_implies_n_odd_audit {n : ℕ} (T : Tournament n) (hn : 1 ≤ n)
     (hreg : IsRegular T) : Odd n :=
   regular_implies_n_odd T hn hreg
 #print axioms regular_implies_n_odd_audit
+
+/-- Regular HasBasePath ⟹ n odd and n ≥ 3. -/
+theorem regular_basepath_n_odd_ge_three_audit {n : ℕ} (T : Tournament n)
+    (hbp : HasBasePath T) (hn : 2 ≤ n) (hreg : IsRegular T) :
+    Odd n ∧ 3 ≤ n :=
+  regular_basepath_n_odd_ge_three T hbp hn hreg
+#print axioms regular_basepath_n_odd_ge_three_audit
+
+/-- Regular HasBasePath: n = 2k + 3 for some k ≥ 0. -/
+theorem regular_basepath_n_in_odd_ge_three_audit {n : ℕ} (T : Tournament n)
+    (hbp : HasBasePath T) (hn : 2 ≤ n) (hreg : IsRegular T) :
+    ∃ k, n = 2 * k + 3 :=
+  regular_basepath_n_in_odd_ge_three T hbp hn hreg
+#print axioms regular_basepath_n_in_odd_ge_three_audit

@@ -66,4 +66,26 @@ theorem regular_implies_n_odd (T : Tournament n) (hn : 1 ≤ n) (hreg : IsRegula
     omega
   · exact hodd
 
+/-! ### Combined: regular HasBasePath tournaments are odd and ≥ 3 -/
+
+/-- **Theorem.** Any regular HasBasePath tournament on n ≥ 2 vertices has
+    n odd AND n ≥ 3.  Combining `regular_implies_n_odd` and
+    `regular_basepath_n_ge_three`. -/
+theorem regular_basepath_n_odd_ge_three (T : Tournament n)
+    (hbp : HasBasePath T) (hn : 2 ≤ n) (hreg : IsRegular T) :
+    Odd n ∧ 3 ≤ n := by
+  refine ⟨?_, ?_⟩
+  · exact regular_implies_n_odd T (by omega) hreg
+  · exact regular_basepath_n_ge_three T hbp hn hreg
+
+/-- Combining: for a regular HasBasePath T, n ∈ {3, 5, 7, 9, ...}. -/
+theorem regular_basepath_n_in_odd_ge_three (T : Tournament n)
+    (hbp : HasBasePath T) (hn : 2 ≤ n) (hreg : IsRegular T) :
+    ∃ k, n = 2 * k + 3 := by
+  obtain ⟨hodd, h_ge⟩ := regular_basepath_n_odd_ge_three T hbp hn hreg
+  rcases hodd with ⟨m, hm⟩
+  -- n = 2m + 1, n ≥ 3 ⟹ m ≥ 1.
+  refine ⟨m - 1, ?_⟩
+  omega
+
 end Tournament
