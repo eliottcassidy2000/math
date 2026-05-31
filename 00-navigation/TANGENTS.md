@@ -416,6 +416,12 @@ At `n=16`, no `16`-gate leaves every odd unit point `a/16` as a lonely boundary 
 **T413** #lonely-runner #n16 #dyadic-endpoint-count #debt-flow | certainty: proved local theorem + open global target | source: codex-2026-05-31-S391
 THM-367 proves the exact `n=16` pure dyadic endpoint-count formula: for owner `u=2^k`, protector `p=2^j q` protects all endpoints only as a super-gate, protects none for non-super `j>=k`, protects `2^(k-2)` for deep drops, and has shallow counts controlled by `q mod 16`. The first closeable lower-owner layer is `u=16`, where exactly nine residues `(1,3,5,7,8,9,11,13,15)` are forced by private endpoints. Higher pure dyadic owners have self-similar nine-covers, so the remaining n=16 proof needs a global endpoint-debt flow invariant. See THM-367 and HYP-1859.
 
+**T414** #lonely-runner #n16 #antipodal-quotient #half-turn | certainty: exact reduction + bounded evidence | source: codex-2026-05-31-S392
+At `n=16`, a counterexample must pass the half-turn pair certificate `even-forbidden OR (odd-forbidden AND shifted-odd-forbidden)` on `[0,1/2]`: even speeds cover both sides of an antipodal pair and odd speeds are one-sided. S392 found all `480` one-gate rows `{1,...,15}-{r}+{16q}`, `q<=32`, have positive pair gaps; closest `pair_gap/th=0.027344`. See HYP-1860.
+
+**T415** #lonely-runner #n16 #maximal-gate #dyadic-fan | certainty: exact local endpoint cover + proof-target hypothesis | source: codex-2026-05-31-S392
+The naive largest-speed endpoint-cover proof fails by a stable nine-speed fan: for dyadic `v>=32`, `(v/2) + (v/32)*{1,3,5,7,9,11,13,15}` covers all `2v` endpoints and normalizes to `(16,1,3,5,7,9,11,13,15)`. Its gcd is `v/32`, so primitivity forces six gcd-breaker speeds; HYP-1860 predicts those breakers are incompatible with the antipodal quotient certificate.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

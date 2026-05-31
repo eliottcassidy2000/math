@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S392 - LRC n=16 Antipodal/Fan Proof Search
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S390; during close-out, rebased over upstream S391 dyadic endpoint formalization and renumbered this strand to S392.
+**User prompt:** Spend a long session aiming for proof of the `n=16` Lonely Runner case; try many wild ideas and reframes.
+**Computation:** Added `04-computation/lrc_n16_antipodal_fan_proof_search_s392.py` and stored `05-knowledge/results/lrc_n16_antipodal_fan_proof_search_s392.out`. The script formalizes an antipodal half-turn quotient, audits one-gate rows in that quotient, constructs maximal dyadic endpoint fans, and compares exact candidate endpoint-flow summaries.
+**Findings:** The half-turn quotient is exact: even speeds cover both sides of an antipodal pair, while odd speeds are one-sided, so a counterexample must cover `[0,1/2]` by `even OR (odd AND shifted odd)`. The initial segment is pair-measure full but boundary-only (`4` pair boundary witnesses). Every audited gated/fan candidate had positive pair gap; the `best 8-ladder` has `pair_gap/th=0.007576`.
+**Search:** All `480` one-gate rows `{1,...,15}-{r}+{16q}` with `q<=32` had positive antipodal pair gaps; closest `pair_gap/th=0.027344`. The maximal dyadic fan audit found a stable nine-speed local endpoint cover: for `v>=32`, `(v/2) + (v/32)*{1,3,5,7,9,11,13,15}` covers all `2v` endpoints and normalizes to `(16,1,3,5,7,9,11,13,15)`, but has gcd `v/32`.
+**Synthesis:** Added HYP-1860 and `07-reflections/lrc-n16-antipodal-fan-proof-search-s392.md`. The new target is an incompatibility lemma: antipodal odd double-coverage and maximal scaled-fan closure should be impossible to satisfy simultaneously once primitivity forces gcd-breaker speeds.
+**Verification:** `python3 -m py_compile 04-computation/lrc_n16_antipodal_fan_proof_search_s392.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S391 - LRC n=16 Dyadic Endpoint Count Formalization
 
 **Account:** Codex

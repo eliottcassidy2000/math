@@ -1,0 +1,77 @@
+n=16 LRC antipodal/fan proof search (codex-2026-05-31 S392)
+Exact Fraction arithmetic; threshold=1/16; k=15 speeds.
+
+1. Antipodal pair quotient
+   For n=16, split the speeds into E=even and O=odd.
+   A full open cover implies the half-circle pair cover
+       F_E OR (F_O AND tau(F_O))
+   has no open or boundary gap, where tau is t -> t+1/2.
+   This is exact: even speeds are half-turn invariant; each odd
+   speed is one-sided on an antipodal pair.
+
+2. Pair-quotient audits
+   label                         even     odd2     pair     gap/th  gaps boundary first_gap
+   initial 1..15                0.291071 0.290987 0.500000 0.000000     0        4 -
+   drop 15 add 16               0.322321 0.253608 0.489003 0.038462     8       16 1/32->7/208
+   best 8-ladder skip=14        0.492152 0.000000 0.492152 0.007576    24       80 17/1920->15/1664
+   odd units plus gates         0.291071 0.290987 0.412155 0.071429    74      156 1/256->15/1792
+   fan64 plus odd breakers      0.397866 0.173232 0.436839 0.202083    14       36 17/480->15/416
+   fan128 plus small breakers   0.405563 0.106061 0.432845 0.101042    42       86 33/1024->31/960
+   The initial segment pair quotient is measure-full but boundary-only;
+   the gated and fan rows have honest positive pair gaps.
+
+3. One-gate antipodal scan
+   scanned={1..15}-r+16q with q<= 32: 480 rows
+   class_hist={'positive_pair_gap': 480}
+   closest pair-quotient rows
+     remove  4, add 16*32 pair_gap/th=0.027344 boundary=18  pair_measure=26011/53248
+     remove  6, add 16*32 pair_gap/th=0.027344 boundary=20  pair_measure=856763/1757184
+     remove 12, add 16*32 pair_gap/th=0.027344 boundary=20  pair_measure=34921/71680
+     remove 14, add 16*32 pair_gap/th=0.027344 boundary=28  pair_measure=1602083/3294720
+     remove 15, add 16*32 pair_gap/th=0.027344 boundary=28  pair_measure=991469/2050048
+     remove  2, add 16*32 pair_gap/th=0.027344 boundary=28  pair_measure=29251/61440
+     remove  8, add 16*32 pair_gap/th=0.027344 boundary=32  pair_measure=48425/101376
+     remove 10, add 16*32 pair_gap/th=0.027344 boundary=44  pair_measure=2907539/6150144
+     remove  3, add 16*32 pair_gap/th=0.027344 boundary=44  pair_measure=10025/21504
+     remove  7, add 16*32 pair_gap/th=0.027344 boundary=52  pair_measure=1938169/4100096
+   The pair quotient gives an independent obstruction: even before
+   checking every original endpoint, all scanned gated perturbations
+   still leave an antipodal pair gap.
+
+4. Maximal-gate nine-speed fan
+   A local endpoint-cover proof by largest speed fails in a structured
+   way: a dyadic speed v has a nine-speed lower fan that covers all
+   2v endpoints.  The normalized fan is stable.
+   v     gcd(fan) normalized fan                  covered gains
+   16    1        (8, 1, 3, 5, 7, 9, 11, 13, 15)    32/32   16,2,2,2,2,2,2,2,2
+   32    1        (16, 1, 3, 5, 7, 9, 11, 13, 15)   64/64   32,4,4,4,4,4,4,4,4
+   64    2        (16, 1, 3, 5, 7, 9, 11, 13, 15)  128/128  64,8,8,8,8,8,8,8,8
+   128   4        (16, 1, 3, 5, 7, 9, 11, 13, 15)  256/256  128,16,16,16,16,16,16,16,16
+   256   8        (16, 1, 3, 5, 7, 9, 11, 13, 15)  512/512  256,32,32,32,32,32,32,32,32
+   512   16       (16, 1, 3, 5, 7, 9, 11, 13, 15) 1024/1024 512,64,64,64,64,64,64,64,64
+   New proof target: if a maximal branch closes by this fan, the fan is
+   imprimitive at scale gcd=v/32.  The six remaining speeds must break
+   that gcd and simultaneously protect the fan's descendant endpoints.
+
+5. Exact candidate audits with dyadic owner flow
+   label                         gap/th   forb     unprot core pairgap/th boundary owners private
+   initial 1..15                0.000000        1       8    0   0.000000        4 {0: 120, 1: 64, 2: 32, 3: 16} 0->0:36,0->1:26,0->2:12,0->3:8
+   drop 15 add 16               0.038462 126719/128128      16    0   0.038462       16 {0: 92, 1: 64, 2: 32, 3: 16, 4: 32} 0->0:24,0->1:22,0->2:10,0->3:6
+   best 8-ladder skip=14        0.007576 50773/51480     140    0   0.007576       80 {0: 2, 3: 960, 4: 672} 3->0:20,3->3:252,3->4:238,4->3:336
+   fan64 plus odd breakers      0.202083 1274807/1441440      44    0   0.202083       36 {0: 68, 1: 240, 4: 64} 0->0:4,0->1:22,0->4:8,1->0:74
+   fan128 plus small breakers   0.101042 1750493/1921920      92    0   0.101042       86 {0: 52, 1: 4, 2: 480, 4: 128} 0->2:18,0->4:8,1->4:2,2->0:96
+   Every non-initial row here has pair gap, ordinary gap, unprotected
+   endpoints, and terminal coreE=0.  The fan closes the top endpoints
+   locally but does not close the global arithmetic endpoint system.
+
+6. Synthesis / next proof attempt
+   A counterexample at n=16 must now pass three gates at once:
+   (i) contain a 16-gate by the unit-skeleton lemma;
+   (ii) have no antipodal pair gap in E OR (O AND tau O);
+   (iii) if a maximal dyadic branch uses the nine-speed fan, the six
+   non-fan speeds must break the fan gcd without creating private debt.
+   The wild idea that survived this pass is to prove incompatibility
+   between (ii) and (iii).  Odd double-coverage wants two odd lanes on
+   every pair not already covered by evens; the maximal fan wants a
+   scaled odd residue fan plus a half-gate.  Those demands point in
+   opposite quotient directions once primitivity is imposed.
