@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-05-31-S17 - "If 15 Were Prime": Structure Shapes Truth (reflection)
+
+**Account:** Oracle (remote-control, continuation of S16 LRC thread).
+**User prompt:** Consider how the structures we study would differ if 15 were prime instead of 3·5; think in this absurd way to understand how structure shapes mathematical truth.
+**Output:** `07-reflections/if-fifteen-were-prime-structure-shapes-truth-s17.md`. Treats the false premise as a *knockout experiment* (disable a number's factorization, watch which theorems break) and sorts facts about 15 into three layers: (A) truths that FLIP because they were really about `3·5` — no GF(15), no primitive root ((Z/15)*≅Z/2×Z/4 non-cyclic), no Paley tournament on 15 vertices, CRT/RSA-ness; (B) truths INVARIANT but RE-ROUTED — unique cyclic group of order 15 (15 = smallest composite with a unique group, via `3∤4 ∧ 5∤2`), doubly-regular tournament on 15 exists via skew-Hadamard order 16 even without Paley, and **LRC at n=15**: prime⇒odd-prime polynomial method fires (algebraic proof), composite⇒that tool dies but folding symmetries `t↦t+1/3`, `t↦t+1/5` appear (sieve/CRT proof); (C) truths anchored ELSEWHERE and untouched — 15=T₅=C(6,2), the 15-theorem magnitude.
+**Synthesis:** "Structure shapes truth" = every theorem silently rides on some structures; a prime factorization is a *bundle* of structures (field-or-not, cyclic-or-product units, Paley-able-or-not, CRT-splitting) theorems mount without announcing it. The LRC difficulty profile across n (prime levels yield to algebra, composite levels resist until folding/sieve) is literally a portrait of integer multiplicative structure drawn by a circle problem. Named the move: **counterfactual/knockout reasoning on a specific object** = reverse mathematics localized to one integer. Connects to the Cayley-Dickson tower (existence gated by dimension type) one level up.
+**Repo touch:** reflection only; no new hypotheses/scripts.
+**Next:** Could make the n=15 folding-symmetry proof sketch concrete (CRT descent through proven n=3, n=5) as a companion to the n=14 antipodal idea (HYP-1851).
+
 ## codex-2026-05-31-S384 - Lonely Runner Endpoint-Cycle Formalization
 
 **Account:** Codex
