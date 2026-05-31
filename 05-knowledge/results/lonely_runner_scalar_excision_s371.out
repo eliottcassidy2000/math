@@ -1,0 +1,155 @@
+Lonely Runner scalar-ramp excision ledger (codex-2026-05-31 S371)
+Reduced fourteen-runner cell system: k=13, n=14.
+
+Representative pattern intervals recovered=812/812
+
+Scalar-ramp cell blocking audit
+  n=14 patterns=812 candidates=11368
+  theorem_probe=midpoint identity residues(v=m*i, s, alpha) == initial_segment_bins(alpha+s*m/n)
+  m= 0 gcd=14 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m= 1 gcd= 1 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m= 2 gcd= 2 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m= 3 gcd= 1 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m= 4 gcd= 2 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m= 5 gcd= 1 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m= 6 gcd= 2 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m= 7 gcd= 7 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m= 8 gcd= 2 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m= 9 gcd= 1 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m=10 gcd= 2 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m=11 gcd= 1 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m=12 gcd= 2 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+  m=13 gcd= 1 covered=11368/11368 missed=0 midpoint_failures=0 blocker_hist=((1, 5684), (2, 4228), (3, 616), (4, 420), (5, 112), (6, 112), (7, 28), (8, 28), (9, 28), (10, 28), (11, 28), (12, 28), (13, 28)) endpoint_hits=(0:10430, 13:10430) top_unique_coords=((1, 812), (11, 700), (9, 672), (7, 588), (8, 560))
+
+Scalar-neighborhood deformation scan radius=1
+  scanned_non_scalar=2366
+  full_non_scalar=0
+  best_missed=56
+  missed_hist_prefix=((56, 14), (84, 14), (96, 168), (126, 14), (144, 168), (154, 14), (168, 28), (196, 14), (216, 168), (224, 14))
+  rank=01 base_m= 0 gcd=14 missed=  56 score=11312 defects=((6, 0, 7),) vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+  rank=02 base_m= 1 gcd= 1 missed=  56 score=11312 defects=((6, 6, 13),) vector=(1, 2, 3, 4, 5, 13, 7, 8, 9, 10, 11, 12, 13)
+  rank=03 base_m= 2 gcd= 2 missed=  56 score=11312 defects=((6, 12, 5),) vector=(2, 4, 6, 8, 10, 5, 0, 2, 4, 6, 8, 10, 12)
+  rank=04 base_m= 3 gcd= 1 missed=  56 score=11312 defects=((6, 4, 11),) vector=(3, 6, 9, 12, 1, 11, 7, 10, 13, 2, 5, 8, 11)
+  rank=05 base_m= 4 gcd= 2 missed=  56 score=11312 defects=((6, 10, 3),) vector=(4, 8, 12, 2, 6, 3, 0, 4, 8, 12, 2, 6, 10)
+  rank=06 base_m= 5 gcd= 1 missed=  56 score=11312 defects=((6, 2, 9),) vector=(5, 10, 1, 6, 11, 9, 7, 12, 3, 8, 13, 4, 9)
+  rank=07 base_m= 6 gcd= 2 missed=  56 score=11312 defects=((6, 8, 1),) vector=(6, 12, 4, 10, 2, 1, 0, 6, 12, 4, 10, 2, 8)
+  rank=08 base_m= 7 gcd= 7 missed=  56 score=11312 defects=((6, 0, 7),) vector=(7, 0, 7, 0, 7, 7, 7, 0, 7, 0, 7, 0, 7)
+  rank=09 base_m= 8 gcd= 2 missed=  56 score=11312 defects=((6, 6, 13),) vector=(8, 2, 10, 4, 12, 13, 0, 8, 2, 10, 4, 12, 6)
+  rank=10 base_m= 9 gcd= 1 missed=  56 score=11312 defects=((6, 12, 5),) vector=(9, 4, 13, 8, 3, 5, 7, 2, 11, 6, 1, 10, 5)
+  rank=11 base_m=10 gcd= 2 missed=  56 score=11312 defects=((6, 4, 11),) vector=(10, 6, 2, 12, 8, 11, 0, 10, 6, 2, 12, 8, 4)
+  rank=12 base_m=11 gcd= 1 missed=  56 score=11312 defects=((6, 10, 3),) vector=(11, 8, 5, 2, 13, 3, 7, 4, 1, 12, 9, 6, 3)
+
+Scalar-neighborhood deformation scan radius=2
+  scanned_non_scalar=184548
+  full_non_scalar=0
+  best_missed=112
+  missed_hist_prefix=((112, 14), (126, 14), (168, 14), (196, 14), (204, 168), (210, 28), (216, 168), (224, 42), (228, 168), (240, 336))
+  rank=01 base_m= 0 gcd=14 missed= 112 score=11256 defects=((8, 0, 7), (12, 0, 7)) vector=(0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 7, 0)
+  rank=02 base_m= 1 gcd= 1 missed= 112 score=11256 defects=((8, 8, 1), (12, 12, 5)) vector=(1, 2, 3, 4, 5, 6, 7, 1, 9, 10, 11, 5, 13)
+  rank=03 base_m= 2 gcd= 2 missed= 112 score=11256 defects=((8, 2, 9), (12, 10, 3)) vector=(2, 4, 6, 8, 10, 12, 0, 9, 4, 6, 8, 3, 12)
+  rank=04 base_m= 3 gcd= 1 missed= 112 score=11256 defects=((8, 10, 3), (12, 8, 1)) vector=(3, 6, 9, 12, 1, 4, 7, 3, 13, 2, 5, 1, 11)
+  rank=05 base_m= 4 gcd= 2 missed= 112 score=11256 defects=((8, 4, 11), (12, 6, 13)) vector=(4, 8, 12, 2, 6, 10, 0, 11, 8, 12, 2, 13, 10)
+  rank=06 base_m= 5 gcd= 1 missed= 112 score=11256 defects=((8, 12, 5), (12, 4, 11)) vector=(5, 10, 1, 6, 11, 2, 7, 5, 3, 8, 13, 11, 9)
+  rank=07 base_m= 6 gcd= 2 missed= 112 score=11256 defects=((8, 6, 13), (12, 2, 9)) vector=(6, 12, 4, 10, 2, 8, 0, 13, 12, 4, 10, 9, 8)
+  rank=08 base_m= 7 gcd= 7 missed= 112 score=11256 defects=((8, 0, 7), (12, 0, 7)) vector=(7, 0, 7, 0, 7, 0, 7, 7, 7, 0, 7, 7, 7)
+  rank=09 base_m= 8 gcd= 2 missed= 112 score=11256 defects=((8, 8, 1), (12, 12, 5)) vector=(8, 2, 10, 4, 12, 6, 0, 1, 2, 10, 4, 5, 6)
+  rank=10 base_m= 9 gcd= 1 missed= 112 score=11256 defects=((8, 2, 9), (12, 10, 3)) vector=(9, 4, 13, 8, 3, 12, 7, 9, 11, 6, 1, 3, 5)
+  rank=11 base_m=10 gcd= 2 missed= 112 score=11256 defects=((8, 10, 3), (12, 8, 1)) vector=(10, 6, 2, 12, 8, 4, 0, 3, 6, 2, 12, 1, 4)
+  rank=12 base_m=11 gcd= 1 missed= 112 score=11256 defects=((8, 4, 11), (12, 6, 13)) vector=(11, 8, 5, 2, 13, 10, 7, 11, 1, 12, 9, 13, 3)
+
+Best S364 non-scalar missed-cell ledger
+  vector=(8, 2, 10, 4, 12, 13, 0, 8, 2, 10, 4, 12, 6)
+  score=11312/11368 missed=56
+  scalar_multiplier=None
+  base_scalar_m=8 base_vector=(8, 2, 10, 4, 12, 6, 0, 8, 2, 10, 4, 12, 6)
+  defects_from_base=((6, 6, 13),)
+  base_scalar_blocks_all=True
+  missed_shift_hist=((1, 8), (3, 8), (5, 8), (7, 8), (9, 8), (11, 8), (13, 8))
+  missed_width_hist=(('1/1386', 14), ('1/1176', 14), ('1/882', 14), ('1/728', 14))
+  missed_min_margin_hist=((1, 56),)
+  missed_residue_hist=((1, 84), (2, 42), (3, 70), (4, 49), (5, 42), (6, 77), (7, 77), (8, 42), (9, 49), (10, 70), (11, 42), (12, 84))
+  base_unique_blocker_coord_hist=((6, 56),)
+  missed_cells=
+    idx= 1017 s= 1 pidx=205 alpha=[39/154,16/63) width=1/1386 margin=1 pattern=(3, 7, 10, 0, 3, 7, 10, 0, 3, 7, 11, 0, 4) residues=(11, 9, 6, 4, 1, 6, 10, 8, 5, 3, 1, 12, 10)
+    idx= 1018 s= 1 pidx=206 alpha=[16/63,25/98) width=1/882 margin=1 pattern=(3, 7, 10, 0, 3, 7, 10, 0, 4, 7, 11, 0, 4) residues=(11, 9, 6, 4, 1, 6, 10, 8, 6, 3, 1, 12, 10)
+    idx= 1019 s= 1 pidx=207 alpha=[25/98,43/168) width=1/1176 margin=1 pattern=(3, 7, 10, 0, 3, 7, 11, 0, 4, 7, 11, 0, 4) residues=(11, 9, 6, 4, 1, 6, 11, 8, 6, 3, 1, 12, 10)
+    idx= 1030 s= 1 pidx=218 alpha=[15/56,7/26) width=1/728 margin=1 pattern=(3, 7, 11, 1, 4, 8, 12, 2, 5, 9, 13, 3, 6) residues=(11, 9, 7, 5, 2, 7, 12, 10, 7, 5, 3, 1, 12)
+    idx= 1289 s= 1 pidx=477 alpha=[107/182,33/56) width=1/728 margin=1 pattern=(8, 2, 10, 4, 13, 7, 1, 9, 4, 12, 6, 0, 9) residues=(2, 4, 6, 8, 11, 6, 1, 3, 6, 8, 10, 12, 1)
+    idx= 1300 s= 1 pidx=488 alpha=[101/168,59/98) width=1/1176 margin=1 pattern=(8, 2, 11, 5, 0, 8, 2, 11, 5, 0, 8, 3, 11) residues=(2, 4, 7, 9, 12, 7, 2, 5, 7, 10, 12, 1, 3)
+    idx= 1301 s= 1 pidx=489 alpha=[59/98,38/63) width=1/882 margin=1 pattern=(8, 2, 11, 5, 0, 8, 3, 11, 5, 0, 8, 3, 11) residues=(2, 4, 7, 9, 12, 7, 3, 5, 7, 10, 12, 1, 3)
+    idx= 1302 s= 1 pidx=490 alpha=[38/63,93/154) width=1/1386 margin=1 pattern=(8, 2, 11, 5, 0, 8, 3, 11, 6, 0, 8, 3, 11) residues=(2, 4, 7, 9, 12, 7, 3, 5, 8, 10, 12, 1, 3)
+    idx= 2525 s= 3 pidx= 89 alpha=[17/154,1/9) width=1/1386 margin=1 pattern=(1, 3, 4, 6, 7, 9, 10, 12, 13, 1, 3, 4, 6) residues=(11, 9, 6, 4, 1, 6, 10, 8, 5, 3, 1, 12, 10)
+    idx= 2526 s= 3 pidx= 90 alpha=[1/9,11/98) width=1/882 margin=1 pattern=(1, 3, 4, 6, 7, 9, 10, 12, 0, 1, 3, 4, 6) residues=(11, 9, 6, 4, 1, 6, 10, 8, 6, 3, 1, 12, 10)
+    idx= 2527 s= 3 pidx= 91 alpha=[11/98,19/168) width=1/1176 margin=1 pattern=(1, 3, 4, 6, 7, 9, 11, 12, 0, 1, 3, 4, 6) residues=(11, 9, 6, 4, 1, 6, 11, 8, 6, 3, 1, 12, 10)
+    idx= 2538 s= 3 pidx=102 alpha=[1/8,23/182) width=1/728 margin=1 pattern=(1, 3, 5, 7, 8, 10, 12, 0, 1, 3, 5, 7, 8) residues=(11, 9, 7, 5, 2, 7, 12, 10, 7, 5, 3, 1, 12)
+    idx= 2797 s= 3 pidx=361 alpha=[81/182,25/56) width=1/728 margin=1 pattern=(6, 12, 4, 10, 3, 9, 1, 7, 0, 6, 12, 4, 11) residues=(2, 4, 6, 8, 11, 6, 1, 3, 6, 8, 10, 12, 1)
+    idx= 2808 s= 3 pidx=372 alpha=[11/24,45/98) width=1/1176 margin=1 pattern=(6, 12, 5, 11, 4, 10, 2, 9, 1, 8, 0, 7, 13) residues=(2, 4, 7, 9, 12, 7, 2, 5, 7, 10, 12, 1, 3)
+    idx= 2809 s= 3 pidx=373 alpha=[45/98,29/63) width=1/882 margin=1 pattern=(6, 12, 5, 11, 4, 10, 3, 9, 1, 8, 0, 7, 13) residues=(2, 4, 7, 9, 12, 7, 3, 5, 7, 10, 12, 1, 3)
+    idx= 2810 s= 3 pidx=374 alpha=[29/63,71/154) width=1/1386 margin=1 pattern=(6, 12, 5, 11, 4, 10, 3, 9, 2, 8, 0, 7, 13) residues=(2, 4, 7, 9, 12, 7, 3, 5, 8, 10, 12, 1, 3)
+    idx= 4305 s= 5 pidx=245 alpha=[55/182,17/56) width=1/728 margin=1 pattern=(4, 8, 12, 2, 7, 11, 1, 5, 10, 0, 4, 8, 13) residues=(2, 4, 6, 8, 11, 6, 1, 3, 6, 8, 10, 12, 1)
+    idx= 4316 s= 5 pidx=256 alpha=[53/168,31/98) width=1/1176 margin=1 pattern=(4, 8, 13, 3, 8, 12, 2, 7, 11, 2, 6, 11, 1) residues=(2, 4, 7, 9, 12, 7, 2, 5, 7, 10, 12, 1, 3)
+    idx= 4317 s= 5 pidx=257 alpha=[31/98,20/63) width=1/882 margin=1 pattern=(4, 8, 13, 3, 8, 12, 3, 7, 11, 2, 6, 11, 1) residues=(2, 4, 7, 9, 12, 7, 3, 5, 7, 10, 12, 1, 3)
+    idx= 4318 s= 5 pidx=258 alpha=[20/63,7/22) width=1/1386 margin=1 pattern=(4, 8, 13, 3, 8, 12, 3, 7, 12, 2, 6, 11, 1) residues=(2, 4, 7, 9, 12, 7, 3, 5, 8, 10, 12, 1, 3)
+    idx= 4845 s= 5 pidx=785 alpha=[149/154,61/63) width=1/1386 margin=1 pattern=(13, 13, 12, 12, 11, 11, 10, 10, 9, 9, 9, 8, 8) residues=(11, 9, 6, 4, 1, 6, 10, 8, 5, 3, 1, 12, 10)
+    idx= 4846 s= 5 pidx=786 alpha=[61/63,95/98) width=1/882 margin=1 pattern=(13, 13, 12, 12, 11, 11, 10, 10, 10, 9, 9, 8, 8) residues=(11, 9, 6, 4, 1, 6, 10, 8, 6, 3, 1, 12, 10)
+    idx= 4847 s= 5 pidx=787 alpha=[95/98,163/168) width=1/1176 margin=1 pattern=(13, 13, 12, 12, 11, 11, 11, 10, 10, 9, 9, 8, 8) residues=(11, 9, 6, 4, 1, 6, 11, 8, 6, 3, 1, 12, 10)
+    idx= 4858 s= 5 pidx=798 alpha=[55/56,179/182) width=1/728 margin=1 pattern=(13, 13, 13, 13, 12, 12, 12, 12, 11, 11, 11, 11, 10) residues=(11, 9, 7, 5, 2, 7, 12, 10, 7, 5, 3, 1, 12)
+    idx= 5813 s= 7 pidx=129 alpha=[29/182,9/56) width=1/728 margin=1 pattern=(2, 4, 6, 8, 11, 13, 1, 3, 6, 8, 10, 12, 1) residues=(2, 4, 6, 8, 11, 6, 1, 3, 6, 8, 10, 12, 1)
+    idx= 5824 s= 7 pidx=140 alpha=[29/168,17/98) width=1/1176 margin=1 pattern=(2, 4, 7, 9, 12, 0, 2, 5, 7, 10, 12, 1, 3) residues=(2, 4, 7, 9, 12, 7, 2, 5, 7, 10, 12, 1, 3)
+    idx= 5825 s= 7 pidx=141 alpha=[17/98,11/63) width=1/882 margin=1 pattern=(2, 4, 7, 9, 12, 0, 3, 5, 7, 10, 12, 1, 3) residues=(2, 4, 7, 9, 12, 7, 3, 5, 7, 10, 12, 1, 3)
+    idx= 5826 s= 7 pidx=142 alpha=[11/63,27/154) width=1/1386 margin=1 pattern=(2, 4, 7, 9, 12, 0, 3, 5, 8, 10, 12, 1, 3) residues=(2, 4, 7, 9, 12, 7, 3, 5, 8, 10, 12, 1, 3)
+    idx= 6353 s= 7 pidx=669 alpha=[127/154,52/63) width=1/1386 margin=1 pattern=(11, 9, 6, 4, 1, 13, 10, 8, 5, 3, 1, 12, 10) residues=(11, 9, 6, 4, 1, 6, 10, 8, 5, 3, 1, 12, 10)
+    idx= 6354 s= 7 pidx=670 alpha=[52/63,81/98) width=1/882 margin=1 pattern=(11, 9, 6, 4, 1, 13, 10, 8, 6, 3, 1, 12, 10) residues=(11, 9, 6, 4, 1, 6, 10, 8, 6, 3, 1, 12, 10)
+    idx= 6355 s= 7 pidx=671 alpha=[81/98,139/168) width=1/1176 margin=1 pattern=(11, 9, 6, 4, 1, 13, 11, 8, 6, 3, 1, 12, 10) residues=(11, 9, 6, 4, 1, 6, 11, 8, 6, 3, 1, 12, 10)
+    idx= 6366 s= 7 pidx=682 alpha=[47/56,153/182) width=1/728 margin=1 pattern=(11, 9, 7, 5, 2, 0, 12, 10, 7, 5, 3, 1, 12) residues=(11, 9, 7, 5, 2, 7, 12, 10, 7, 5, 3, 1, 12)
+    idx= 7321 s= 9 pidx= 13 alpha=[3/182,1/56) width=1/728 margin=1 pattern=(0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3) residues=(2, 4, 6, 8, 11, 6, 1, 3, 6, 8, 10, 12, 1)
+    idx= 7332 s= 9 pidx= 24 alpha=[5/168,3/98) width=1/1176 margin=1 pattern=(0, 0, 1, 1, 2, 2, 2, 3, 3, 4, 4, 5, 5) residues=(2, 4, 7, 9, 12, 7, 2, 5, 7, 10, 12, 1, 3)
+    idx= 7333 s= 9 pidx= 25 alpha=[3/98,2/63) width=1/882 margin=1 pattern=(0, 0, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5, 5) residues=(2, 4, 7, 9, 12, 7, 3, 5, 7, 10, 12, 1, 3)
+    idx= 7334 s= 9 pidx= 26 alpha=[2/63,5/154) width=1/1386 margin=1 pattern=(0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 4, 5, 5) residues=(2, 4, 7, 9, 12, 7, 3, 5, 8, 10, 12, 1, 3)
+    idx= 7861 s= 9 pidx=553 alpha=[15/22,43/63) width=1/1386 margin=1 pattern=(9, 5, 0, 10, 5, 1, 10, 6, 1, 11, 7, 2, 12) residues=(11, 9, 6, 4, 1, 6, 10, 8, 5, 3, 1, 12, 10)
+    idx= 7862 s= 9 pidx=554 alpha=[43/63,67/98) width=1/882 margin=1 pattern=(9, 5, 0, 10, 5, 1, 10, 6, 2, 11, 7, 2, 12) residues=(11, 9, 6, 4, 1, 6, 10, 8, 6, 3, 1, 12, 10)
+    idx= 7863 s= 9 pidx=555 alpha=[67/98,115/168) width=1/1176 margin=1 pattern=(9, 5, 0, 10, 5, 1, 11, 6, 2, 11, 7, 2, 12) residues=(11, 9, 6, 4, 1, 6, 11, 8, 6, 3, 1, 12, 10)
+    idx= 7874 s= 9 pidx=566 alpha=[39/56,127/182) width=1/728 margin=1 pattern=(9, 5, 1, 11, 6, 2, 12, 8, 3, 13, 9, 5, 0) residues=(11, 9, 7, 5, 2, 7, 12, 10, 7, 5, 3, 1, 12)
+    idx= 9369 s=11 pidx=437 alpha=[83/154,34/63) width=1/1386 margin=1 pattern=(7, 1, 8, 2, 9, 3, 10, 4, 11, 5, 13, 6, 0) residues=(11, 9, 6, 4, 1, 6, 10, 8, 5, 3, 1, 12, 10)
+    idx= 9370 s=11 pidx=438 alpha=[34/63,53/98) width=1/882 margin=1 pattern=(7, 1, 8, 2, 9, 3, 10, 4, 12, 5, 13, 6, 0) residues=(11, 9, 6, 4, 1, 6, 10, 8, 6, 3, 1, 12, 10)
+    idx= 9371 s=11 pidx=439 alpha=[53/98,13/24) width=1/1176 margin=1 pattern=(7, 1, 8, 2, 9, 3, 11, 4, 12, 5, 13, 6, 0) residues=(11, 9, 6, 4, 1, 6, 11, 8, 6, 3, 1, 12, 10)
+    idx= 9382 s=11 pidx=450 alpha=[31/56,101/182) width=1/728 margin=1 pattern=(7, 1, 9, 3, 10, 4, 12, 6, 13, 7, 1, 9, 2) residues=(11, 9, 7, 5, 2, 7, 12, 10, 7, 5, 3, 1, 12)
+    idx= 9641 s=11 pidx=709 alpha=[159/182,7/8) width=1/728 margin=1 pattern=(12, 10, 8, 6, 5, 3, 1, 13, 12, 10, 8, 6, 5) residues=(2, 4, 6, 8, 11, 6, 1, 3, 6, 8, 10, 12, 1)
+    idx= 9652 s=11 pidx=720 alpha=[149/168,87/98) width=1/1176 margin=1 pattern=(12, 10, 9, 7, 6, 4, 2, 1, 13, 12, 10, 9, 7) residues=(2, 4, 7, 9, 12, 7, 2, 5, 7, 10, 12, 1, 3)
+    idx= 9653 s=11 pidx=721 alpha=[87/98,8/9) width=1/882 margin=1 pattern=(12, 10, 9, 7, 6, 4, 3, 1, 13, 12, 10, 9, 7) residues=(2, 4, 7, 9, 12, 7, 3, 5, 7, 10, 12, 1, 3)
+    idx= 9654 s=11 pidx=722 alpha=[8/9,137/154) width=1/1386 margin=1 pattern=(12, 10, 9, 7, 6, 4, 3, 1, 0, 12, 10, 9, 7) residues=(2, 4, 7, 9, 12, 7, 3, 5, 8, 10, 12, 1, 3)
+    idx=10877 s=13 pidx=321 alpha=[61/154,25/63) width=1/1386 margin=1 pattern=(5, 11, 2, 8, 13, 5, 10, 2, 7, 13, 5, 10, 2) residues=(11, 9, 6, 4, 1, 6, 10, 8, 5, 3, 1, 12, 10)
+    idx=10878 s=13 pidx=322 alpha=[25/63,39/98) width=1/882 margin=1 pattern=(5, 11, 2, 8, 13, 5, 10, 2, 8, 13, 5, 10, 2) residues=(11, 9, 6, 4, 1, 6, 10, 8, 6, 3, 1, 12, 10)
+    idx=10879 s=13 pidx=323 alpha=[39/98,67/168) width=1/1176 margin=1 pattern=(5, 11, 2, 8, 13, 5, 11, 2, 8, 13, 5, 10, 2) residues=(11, 9, 6, 4, 1, 6, 11, 8, 6, 3, 1, 12, 10)
+    idx=10890 s=13 pidx=334 alpha=[23/56,75/182) width=1/728 margin=1 pattern=(5, 11, 3, 9, 0, 6, 12, 4, 9, 1, 7, 13, 4) residues=(11, 9, 7, 5, 2, 7, 12, 10, 7, 5, 3, 1, 12)
+    idx=11149 s=13 pidx=593 alpha=[19/26,41/56) width=1/728 margin=1 pattern=(10, 6, 2, 12, 9, 5, 1, 11, 8, 4, 0, 10, 7) residues=(2, 4, 6, 8, 11, 6, 1, 3, 6, 8, 10, 12, 1)
+    idx=11160 s=13 pidx=604 alpha=[125/168,73/98) width=1/1176 margin=1 pattern=(10, 6, 3, 13, 10, 6, 2, 13, 9, 6, 2, 13, 9) residues=(2, 4, 7, 9, 12, 7, 2, 5, 7, 10, 12, 1, 3)
+    idx=11161 s=13 pidx=605 alpha=[73/98,47/63) width=1/882 margin=1 pattern=(10, 6, 3, 13, 10, 6, 3, 13, 9, 6, 2, 13, 9) residues=(2, 4, 7, 9, 12, 7, 3, 5, 7, 10, 12, 1, 3)
+    idx=11162 s=13 pidx=606 alpha=[47/63,115/154) width=1/1386 margin=1 pattern=(10, 6, 3, 13, 10, 6, 3, 13, 10, 6, 2, 13, 9) residues=(2, 4, 7, 9, 12, 7, 3, 5, 8, 10, 12, 1, 3)
+
+Single-coordinate mutation pressure from best non-scalar
+  interpretation=fixed counts missed cells repaired; lost counts old covered cells reopened
+  rank=01 coord= 6 13-> 6 new_missed=   0 score=11368 fixed= 56 lost=  0
+  rank=02 coord= 6 13-> 0 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=03 coord= 6 13-> 1 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=04 coord= 6 13-> 2 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=05 coord= 6 13-> 3 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=06 coord= 6 13-> 4 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=07 coord= 6 13-> 5 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=08 coord= 6 13-> 7 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=09 coord= 6 13-> 8 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=10 coord= 6 13-> 9 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=11 coord= 6 13->10 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=12 coord= 6 13->11 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=13 coord= 6 13->12 new_missed=  96 score=11272 fixed=  8 lost= 48
+  rank=14 coord= 4  4->11 new_missed= 126 score=11242 fixed=  0 lost= 70
+  rank=15 coord= 5 12-> 5 new_missed= 168 score=11200 fixed=  0 lost=112
+  rank=16 coord=12 12-> 5 new_missed= 196 score=11172 fixed=  0 lost=140
+
+Synthesis
+  1. The scalar-ramp obstruction is exactly the shifted initial-segment equality case cell-by-cell.
+  2. The S364 best non-scalar n=14 vector is not generic: it is scalar m=8 with one coordinate defect.
+  3. Its 56 missed cells are the scalar cells uniquely blocked by the defect coordinate.
+  4. No one- or two-coordinate scalar-neighborhood deformation is a non-scalar full blocker.
+  5. The next finite proof target is a fragility theorem: every non-scalar deformation of a scalar ramp
+     exposes at least one uniquely protected micro-staircase cell, then extend beyond small defect radius.

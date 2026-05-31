@@ -4,6 +4,7 @@ status: EXPLORATORY
 source: codex-2026-05-31-S363
 related:
   - THM-363
+  - THM-364
   - THM-357
   - THM-358
   - THM-360
@@ -110,7 +111,7 @@ p=101: |I(13,p,1)|=12697411, find_cover=113.117640s, final=0
 This suggests that a proof extension needs a stronger understanding of the
 initial bad sets `I(13,p,1)`, not a more elaborate lift after they are found.
 
-## S364 Correction
+## S364/S371 Correction
 
 S364 found that the full scalar-ramp family
 
@@ -119,8 +120,13 @@ v_i = m i mod 14
 ```
 
 blocks every full micro-staircase cell.  This is not a counterexample to the
-program; it is the Dirichlet equality spine in residue form.  HYP-1817 should
-therefore be read together with HYP-1818: first excise scalar ramps, use
+program; it is the Dirichlet equality spine in residue form.  S371 upgraded
+this to THM-364, which proves scalar-ramp cell blocking directly for all `n`.
+
+The same S371 audit shows that the best known `n=14` non-scalar near-blocker
+is a one-coordinate defect of scalar ramp `m=8`, and its `56` missed cells are
+exactly scalar cells uniquely blocked by the defect coordinate.  HYP-1817
+should therefore be read together with HYP-1818: first excise scalar ramps, use
 quotient/divisibility descent for nonunit members, and only then demand a
 generic micro-staircase witness for non-scalar vectors.
 
@@ -161,3 +167,7 @@ seven odd shifts.
 - `05-knowledge/results/lonely_runner_k13_microstaircase_s363.out`.
 - `04-computation/lonely_runner_k13_scalar_gauge_s367.py`.
 - `05-knowledge/results/lonely_runner_k13_scalar_gauge_s367.out`.
+- THM-363.
+- THM-364.
+- `04-computation/lonely_runner_scalar_excision_s371.py`.
+- `05-knowledge/results/lonely_runner_scalar_excision_s371.out`.

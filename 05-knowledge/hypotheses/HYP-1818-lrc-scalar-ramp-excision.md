@@ -1,9 +1,10 @@
 ---
 id: HYP-1818
-status: EXPLORATORY
-source: codex-2026-05-31-S364
+status: PARTIALLY_PROVED
+source: codex-2026-05-31-S364/codex-2026-05-31-S371
 related:
   - THM-363
+  - THM-364
   - THM-358
   - THM-360
   - HYP-1813
@@ -58,6 +59,12 @@ candidates.  The gcd histogram is:
 gcd(m,15): 1 -> 8, 3 -> 4, 5 -> 2, 15 -> 1.
 ```
 
+THM-363 proves scalar-gauge reindexing, and THM-364 proves the scalar-ramp
+blocking identity directly for all `n`, not only for the computed `n=14` and
+`n=15` cases.  On every open micro-staircase cell, the shifted scalar-ramp
+residues are exactly the initial-segment floor-vector at the shifted time
+`alpha+s*m/n`; THM-358 then forces a blocked coordinate.
+
 Once scalar ramps are excluded, deterministic local search found no full
 blocker:
 
@@ -65,6 +72,19 @@ blocker:
 n=14 best non-scalar: 11312/11368 covered, 56 missed.
 n=15 best non-scalar: 14280/14400 covered, 120 missed.
 ```
+
+The S371 follow-up reconstructs all `812` representative `n=14` cells and
+checks the scalar midpoint identity with zero failures.  It also shows that the
+S364 best `n=14` non-scalar vector is not generic:
+
+```text
+(8,2,10,4,12,13,0,8,2,10,4,12,6)
+```
+
+is the scalar ramp `m=8` with one coordinate changed, `v_6: 6 -> 13`.  Its
+`56` missed cells are exactly the cells uniquely blocked by that scalar
+coordinate.  An exact scan of all one- and two-coordinate scalar-neighborhood
+deformations found no non-scalar full blocker.
 
 The same run tried deterministic and random gated speed-set constructions for
 the `14`- and `15`-runner cases.  It found no open-cover candidate; all sampled
@@ -93,8 +113,9 @@ s v_i + floor(n * {i alpha})
 ```
 
 is the floor-vector for the initial segment at a shifted time, up to boundary
-carry behavior.  The initial segment is tight but only boundary-tight, so every
-open cell is blocked.
+carry behavior.  THM-363 removes the ambiguity: on open cells this is the exact
+shifted initial-segment floor-vector.  The initial segment is tight but only
+boundary-tight, so every open cell is blocked.
 
 This explains why the first S363 micro-staircase statement was too optimistic:
 it cannot ask every residue vector to have a cell witness.  It must first
@@ -104,13 +125,15 @@ ramifications, and only then classify genuinely non-scalar vectors.
 ## Test Plan
 
 1. Prove the scalar-ramp blocking identity and scalar-gauge reindexing lemma
-   for all `n`.
+   for all `n`.  Done in THM-363 and THM-364.
 2. Separate unit scalar ramps from nonunit ramps in the lifted prime-grid
    variables and map the nonunit cases to the endpoint/divisibility descent.
 3. Enumerate all non-scalar full blockers for `n=14` by exact SAT/backtracking,
-   not just local search.
+   not just local search.  S371 has completed the radius-1 and radius-2
+   scalar-neighborhood scan; a global search remains open.
 4. For the best `n=14` near-blocker, list the `56` missed cells and search for
-   a short mixed-threshold or endpoint-pressure certificate.
+   a short mixed-threshold or endpoint-pressure certificate.  S371 lists the
+   cells and identifies them as unique scalar-protection cells.
 5. Repeat the same missed-cell classification for the `n=15` best near-blocker
    to see which features transfer.
 
@@ -121,7 +144,10 @@ ramifications, and only then classify genuinely non-scalar vectors.
 - `04-computation/lonely_runner_k13_scalar_gauge_s367.py`.
 - `05-knowledge/results/lonely_runner_k13_scalar_gauge_s367.out`.
 - THM-363.
+- THM-364.
 - HYP-1823.
+- `04-computation/lonely_runner_scalar_excision_s371.py`.
+- `05-knowledge/results/lonely_runner_scalar_excision_s371.out`.
 - HYP-1817 and `04-computation/lonely_runner_k13_microstaircase_s363.py`.
 - Sungkawichai and Trakulthongchai, `arXiv:2604.23906`.
 - Jensen, `arXiv:2605.27941`.

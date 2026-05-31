@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S371 - Lonely Runner Scalar Excision Formalization
+
+**Account:** Codex
+**Git first:** Rebased over `origin/main` twice, preserving parallel S366-S370 work and moving this LRC scalar-excision strand to S371 after the chirality/perspective atlas claimed S370.
+**User prompt:** Make progress formalizing and extending the 14-runner related Lonely Runner work, spending a long session on many tasks.
+**Formalization:** Added THM-364, proving scalar-ramp cell blocking for all `n`. For `v_i=m i mod n`, shifted micro-staircase residues on an open cell equal the initial-segment floor-vector at `alpha+s*m/n`; THM-358 then forces a blocked coordinate because an all-safe shifted time would be a unit endpoint and put `alpha` on a breakpoint.
+**Computation:** Added `04-computation/lonely_runner_scalar_excision_s371.py` and stored `05-knowledge/results/lonely_runner_scalar_excision_s371.out`. The script rebuilds the `n=14` full cell system, reconstructs all `812` representative intervals, verifies zero scalar midpoint identity failures, scans all one- and two-coordinate scalar-ramp deformations, and lists the missed-cell ledger for the best S364 non-scalar vector.
+**Main finding:** The best known `n=14` non-scalar near-blocker `(8,2,10,4,12,13,0,8,2,10,4,12,6)` is scalar ramp `m=8` with one defect `v_6:6->13`. Its `56` missed cells are exactly cells uniquely blocked by coordinate `6` in the scalar ramp, with widths split evenly among `1/728`, `1/882`, `1/1176`, and `1/1386`.
+**Synthesis:** Updated HYP-1817 and HYP-1818 alongside the S367 scalar-gauge quotient, added `07-reflections/lonely-runner-scalar-excision-formal-s371.md`, and added tangents T375-T376. The next proof target is a scalar-defect fragility lemma plus a global non-scalar blocker search driven by exposed cells rather than raw vector enumeration.
+
 ## codex-2026-05-31-S370 - Chirality/Perspective Atlas
 
 **Account:** Codex
