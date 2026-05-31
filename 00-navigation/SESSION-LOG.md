@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-31-S384 - Lonely Runner Endpoint-Cycle Formalization
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after the S379 endpoint-incidence work was already pushed; during close-out rebased over parallel S380-S383 LRC work and the oracle S16 frontier-representation pass.
+**User prompt:** Spend a long session formalizing work related to Lonely Runner and generating new ideas.
+**Formalization:** Added THM-365, proving that any nonempty endpoint/interval protection core contains a directed endpoint-protection cycle. Combined with THM-357 and THM-359, every reduced LRC counterexample must realize a directed cycle in the labelled arithmetic endpoint-protection graph.
+**Computation:** Added `04-computation/lonely_runner_endpoint_cycle_formal_s384.py` and stored `05-knowledge/results/lonely_runner_endpoint_cycle_formal_s384.out`. The script searches abstract cyclic arc systems, audits sampled LRC endpoint cores, and prints a labelled-cycle grammar for the next proof/search pass.
+**Findings:** Bare circular-arc topology is too weak: abstract all-protected full covers appear immediately, e.g. on `Z/3Z` with arcs `(0->2),(1->0),(2->1)`, and persist through `q=9` including short-arc variants. In contrast, the sampled LRC systems all peel to empty terminal core; the `n=14` seven-ladder still has `coreE=0` and loses `84` endpoints in the first peel layer.
+**Synthesis:** Added HYP-1841 and `07-reflections/lonely-runner-endpoint-cycle-formal-s384.md`. The new proof object is not a bare endpoint cycle, but a labelled arithmetic cycle carrying owner/protector speeds and strict inequalities `|p*(n*m+eps)-a*n*u|<u`.
+**Verification:** `python3 -m py_compile 04-computation/lonely_runner_endpoint_cycle_formal_s384.py` succeeded; rerunning the script reproduced the stored 60-line output byte-for-byte.
+**Next:** Enumerate labelled endpoint cycles for `n=14`, define a cycle-slack potential, and test whether product-sum/torsion coordinates are precisely the shortest almost-closing labelled cycles.
+
 ## oracle-2026-05-31-S16 - Lonely Runner n=14 Frontier: New Representations
 
 **Account:** Oracle (remote-control session).

@@ -1,0 +1,60 @@
+Lonely Runner endpoint-cycle formal session (codex-2026-05-31 S384)
+
+FORMAL ENDPOINT-CYCLE REDUCTION
+========================================================================================
+Given a finite endpoint/interval system (E,I,B,P), draw an arrow e -> f when some interval protecting e has f as a boundary endpoint.
+Every nonempty protection core has at least one outgoing arrow from each remaining endpoint, hence contains a directed endpoint cycle.
+By THM-357 and THM-359, an LRC counterexample therefore must realize a directed cycle in the labelled integer endpoint-protection graph.
+
+ABSTRACT CIRCULAR-ARC MIRAGES
+========================================================================================
+Bare topology is too weak: all-protected circular-arc covers appear immediately once arithmetic labels are forgotten.
+
+q max_len min_arcs total_len endpoints coreE coreI cycle arcs
+----------------------------------------------------------------------------------------
+3     any        3         6         3     3     3 0->1->0     (0->2;L2) (1->0;L2) (2->1;L2)
+3       2        3         6         3     3     3 0->1->0     (0->2;L2) (1->0;L2) (2->1;L2)
+4     any        2         6         4     4     2 0->1->0     (0->3;L3) (2->1;L3)
+4       2        4         8         4     4     4 0->1->0     (0->2;L2) (1->3;L2) (2->0;L2) (3->1;L2)
+5     any        2         7         4     4     2 0->1->0     (0->3;L3) (2->1;L4)
+5       3        3         8         5     5     3 0->1->0     (0->2;L2) (1->4;L3) (3->1;L3)
+6     any        2         8         4     4     2 0->1->0     (0->3;L3) (2->1;L5)
+6       3        3         9         6     6     3 0->1->0     (0->3;L3) (2->5;L3) (4->1;L3)
+7     any        2         9         4     4     2 0->1->0     (0->3;L3) (2->1;L6)
+7       4        3        10         5     5     3 0->1->0     (0->2;L2) (1->5;L4) (4->1;L4)
+8     any        2        10         4     4     2 0->1->0     (0->3;L3) (2->1;L7)
+8       4        3        11         6     6     3 0->1->0     (0->3;L3) (2->6;L4) (5->1;L4)
+9     any        2        11         4     4     2 0->1->0     (0->3;L3) (2->1;L8)
+9       5        3        12         5     5     3 0->1->0     (0->2;L2) (1->6;L5) (5->1;L5)
+
+LRC TERMINAL-CORE CYCLE AUDIT
+========================================================================================
+The sampled LRC systems all peel to empty terminal core.  This is stronger than having no visible gap: even tiny-gap ladders fail to hold an endpoint cycle after protection peeling.
+
+label                  n class          gap/th endpoints unprot peel coreE coreI cycle first_layer
+----------------------------------------------------------------------------------------------------------------
+initial n=8             8 boundary_only  0.000000        52       4    7     0     0    no removed=4,subgroup=8
+sporadic tight n=8A     8 boundary_only  0.000000        88       4    8     0     0    no removed=4,subgroup=8
+initial n=14           14 boundary_only  0.000000       176       6   15     0     0    no removed=6,subgroup=14
+n14 seven-ladder       14 positive_gap   0.005411      1150      84   27     0     0    no removed=84,subgroup=168168
+n14 single-gate        14 positive_gap   0.045455       180      24   14     0     0    no removed=24,subgroup=388080
+initial n=15           15 boundary_only  0.000000       202       8   14     0     0    no removed=8,subgroup=15
+n15 3x5 ladder         15 positive_gap   0.080000       600     150   16     0     0    no removed=150,subgroup=94500
+
+ARITHMETIC LABEL GRAMMAR FOR THE NEXT SEARCH
+========================================================================================
+A protected endpoint cycle is not just e0 -> e1 -> ... -> e0.  Each arrow must carry an owner speed u, a protector speed p, a center m, and a sign eps satisfying the strict integer inequality
+
+    | p*(n*m + eps) - a*n*u | < u
+
+for some integer a.  The cycle-first search should enumerate these labelled inequalities, then ask whether their boundary intervals can also produce full measure.  That separates real LRC arithmetic from abstract circular-arc mirages.
+
+NEW IDEAS GENERATED
+========================================================================================
+1. Endpoint-cycle rank: the length and slack profile of the first surviving protection cycle after partial peeling.
+2. Arithmetic mirage filter: generate abstract all-protected cores first, then reject them by speed-orbit and integer-inequality labels.
+3. Cycle slack potential: sum the strict margins u-|p*(n*m+eps)-a*n*u| around a cycle; prove primitive cycles have positive leak.
+4. Unit-layer trap: any cycle touching unit endpoints must pass through speeds divisible by n, so quotient descent should start there.
+5. Torsion shortcut test: product-sum/torsion coordinates may be exactly the short labelled cycles that almost close but expose higher endpoints.
+6. LRC-TDA feature: terminal-core size is too coarse; record the largest preterminal directed cycle before its first endpoint leaf is removed.
+
