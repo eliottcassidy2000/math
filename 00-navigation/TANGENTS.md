@@ -494,6 +494,15 @@ For even denominators, `lpd(n)=n/2`, so the largest-proper-divisor quotient ladd
 **T457** #natural-numbers #product-sum #lrc-recursion #top-row | certainty: medium proof architecture | source: codex-2026-05-31-S411
 The old natural-number split gives a two-mode LRC proof architecture: top-row `+2` motion changes `phi(n)`, prime/composite status, and product-sum factor cores; row `*2` motion keeps odd core and transfers endpoint debt through `n/2`. Thus `n=14` is the first prime-core seam `7->14`, `n=16` is the pure dyadic row lab, and `n=18` is the first square-odd-core seam `9->18`; S400/S410 Bruhat-Tits depth is the row-mode metric. See HYP-1881.
 
+**T470** #lonely-runner #lens-atlas #isomorphic-problems #incidence-core | certainty: high atlas + open synthesis | source: codex-2026-05-31-S430
+LRC has at least 20 useful lenses. S430 records 11 in one formulation/transport component: runner frame, Diophantine norm, forbidden intervals, endpoint hypergraph, coarse sieve, torus/subtorus, view obstruction, distance graph/circular coloring, flow/matroid implication, zonotope covering radius, and Lonely Runner spectrum. The common object is a labelled incidence core, with statuses separating strict restatements from necessary constraints. See HYP-1900.
+
+**T471** #tournament-structure #lonely-runner #good-cuts #endpoint-protection | certainty: medium-high structural bridge | source: codex-2026-05-31-S430
+The LRC endpoint-protection certificate and tournament good-cut/SCC machinery share a row/column grammar: LRC endpoints are rows, speed intervals are protectors, unprotected endpoints are witnesses; tournament Hamiltonian-path cuts are rows, backward arcs are protectors, bad cuts are witnesses. A counterexample is a leafless all-protected hypergraph, mirroring every cut protected inside an SCC. See HYP-1900.
+
+**T472** #lonely-runner #finite-checking #prime-sieve #integer-programming | certainty: current web frontier + repo proof target | source: codex-2026-05-31-S430
+Recent public LRC progress uses finite checking plus prime-product sieves: Rosenfeld proved the 8-runner case, Trakulthongchai proved 9 and 10, and Sungkawichai-Trakulthongchai report `k=10,11,12` nonzero-speed cases (13 total runners). S430 asks whether this prime-product sieve can be rewritten as a dual row-weight certificate in the S420 IP matrix.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

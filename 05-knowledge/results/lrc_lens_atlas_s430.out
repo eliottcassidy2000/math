@@ -1,0 +1,214 @@
+LRC lens atlas (codex-2026-05-31 S430)
+
+1. LRC LENS INVENTORY
+============================================================================================
+Total lenses recorded: 20
+  equivalent graph-coloring formulation 1
+  equivalent implication family      1
+  exact convex-geometric restatement 1
+  exact finite certificate           1
+  exact formulation                  4
+  exact geometric formulation        1
+  proof technology                   2
+  proved necessary certificate       1
+  repo exploratory lens              1
+  repo organizing lens               1
+  repo proof technology              3
+  structural exact lens              1
+  variant lens                       1
+  variant lens with counterexamples  1
+
+ 1. moving runners / stationary runner
+    status:      exact formulation
+    atom:        relative speed v_i
+    certificate: exists t with all ||v_i t|| >= 1/(k+1)
+    tournament:  choose a distinguished vertex and measure all comparisons relative to it
+    sources:     Wills/Cusick/Goddyn, THM-357
+
+ 2. simultaneous Diophantine approximation
+    status:      exact formulation
+    atom:        integer vector v
+    certificate: max_t min_i ||v_i t|| >= 1/(k+1)
+    tournament:  score/height functional on a labelled complete decision vector
+    sources:     Cambridge finite-checking intro, THM-369
+
+ 3. forbidden interval cover on R/Z
+    status:      exact formulation
+    atom:        open interval ||v t|| < 1/n
+    certificate: union fails to be the whole circle
+    tournament:  good-cut coverage: an uncovered cut is a witness
+    sources:     THM-357, HYP-1855
+
+ 4. endpoint-protection hypergraph
+    status:      exact finite certificate
+    atom:        forbidden endpoint (n*m+eps)/(n*v)
+    certificate: full-measure cover and every endpoint protected
+    tournament:  labelled cut-protection cycles in tournament SCC/good-cut theory
+    sources:     THM-357, THM-365, S386
+
+ 5. small-denominator divisibility sieve
+    status:      proved necessary certificate
+    atom:        reduced fraction a/q with q <= n
+    certificate: counterexample must pay every q by a divisible speed
+    tournament:  cut rows that force at least one crossing backward arc
+    sources:     THM-366, THM-369
+
+ 6. one-dimensional subtorus of (R/Z)^k
+    status:      exact formulation
+    atom:        line t*v modulo Z^k
+    certificate: line hits the central cube
+    tournament:  orbit of a tournament under a one-parameter flip/order flow
+    sources:     Giri-Kravitz spectrum, HYP-1893
+
+ 7. view obstruction by centered cubes
+    status:      exact geometric formulation
+    atom:        ray through a periodic obstacle field
+    certificate: a line of sight misses all obstacles
+    tournament:  visibility through the tournament tiling hypercube
+    sources:     Cusick, Henze-Malikiosis
+
+ 8. distance graph / circular chromatic number
+    status:      equivalent graph-coloring formulation
+    atom:        integer-distance edge set D
+    certificate: circular coloring threshold exceeds the LRC bound
+    tournament:  chromatic/fugacity axis of tournament conflict graphs
+    sources:     distance graph literature, chromatic tournament thread
+
+ 9. nowhere-zero flows and regular matroids
+    status:      equivalent implication family
+    atom:        flow value set
+    certificate: reduce arbitrary k values to [1..k]
+    tournament:  cycle-space constraints behind tournament OCF/flow shadows
+    sources:     Bienia-Goddyn-Gvozdjak-Sebo-Tarsi
+
+10. lattice zonotope covering radius
+    status:      exact convex-geometric restatement
+    atom:        LR zonotope with n generators in dimension n-1
+    certificate: covering/intersection condition at center
+    tournament:  zonotope/polytope shadow of the tournament staircase
+    sources:     Henze-Malikiosis, Malikiosis-Santos-Schymura
+
+11. finite checking / minimal counterexample bound
+    status:      proof technology
+    atom:        bounded primitive integer velocity vector
+    certificate: check all speeds below a computable threshold
+    tournament:  finite labelled tournament enumeration after quotienting symmetries
+    sources:     Tao, linearly-exponential checking, Rosenfeld
+
+12. prime-product counterexample sieve
+    status:      proof technology
+    atom:        minimal counterexample product
+    certificate: forced prime divisibility outruns the finite-check bound
+    tournament:  Lucas-active parity/sieve layers in tournament bucket transport
+    sources:     Rosenfeld 8, Trakulthongchai 9/10, Sungkawichai-Trakulthongchai 11-13
+
+13. integer program / set cover
+    status:      repo proof technology
+    atom:        speed column vs denominator/endpoint row
+    certificate: no n-1 primitive columns cover all rows
+    tournament:  tournament good-cut incidence matrix and dual row weights
+    sources:     HYP-1890, S420
+
+14. p-adic / Bruhat-Tits endpoint frontier
+    status:      repo proof technology
+    atom:        endpoint denominator depth vector
+    certificate: all-repaired branch has positive frontier mass
+    tournament:  valuation skeleton of natural-number multiplication shadow
+    sources:     HYP-1868, HYP-1880, S399-S410
+
+15. adelic gap-debt product
+    status:      repo proof technology
+    atom:        real gap times p-adic endpoint debt
+    certificate: avoid the simultaneous zero corner
+    tournament:  AFM-style conservation: frustration cannot vanish in all projections
+    sources:     HYP-1866, HYP-1892
+
+16. Lonely Runner spectra
+    status:      structural exact lens
+    atom:        value D(T) for proper subtori
+    certificate: spectrum stays below the LRC bound
+    tournament:  H-spectrum / root-spectrum style invariant for tournaments
+    sources:     Giri-Kravitz spectrum
+
+17. mixed thresholds / Fourier bands
+    status:      variant lens
+    atom:        threshold vector d_i
+    certificate: nonempty simultaneous safe band for unequal radii
+    tournament:  weighted tournament arcs / nonuniform cut thresholds
+    sources:     Jensen mixed thresholds
+
+18. shifted LRC / coloopless-cosimple zonotopes
+    status:      variant lens with counterexamples
+    atom:        runners with shifted starts or zonotope translations
+    certificate: covering-radius statement can fail outside the original class
+    tournament:  warning: tournament complement/tiling complement analogies can split
+    sources:     shifted LRC, coloopless zonotopes
+
+19. natural-number operation modes
+    status:      repo organizing lens
+    atom:        n = 2^r * odd root
+    certificate: row x*2 and top-row x+2 moves preserve obstruction mass
+    tournament:  tournament n->2n blowup and n->n+2 Mode-B recursion
+    sources:     HYP-1881, HYP-1891, THM-362
+
+20. product-sum / Egyptian reciprocal ledger
+    status:      repo exploratory lens
+    atom:        additive slack equals multiplicative factor packing
+    certificate: primitive breaker creates gap or private endpoint leaf
+    tournament:  additive shadow is transitive tournament; product shadow is divisibility DAG
+    sources:     S365, HYP-1865, S397
+
+2. FORMULATION / TRANSPORT GRAPH
+============================================================================================
+Edges here mean: exact restatement, standard transport, or necessary
+constraint family living on the same LRC core.  Status lines above
+separate strict equivalences from proof constraints.
+  runner_frame           <-> diophantine_norm
+  diophantine_norm       <-> forbidden_intervals
+  forbidden_intervals    <-> endpoint_hypergraph
+  diophantine_norm       <-> torus_line
+  torus_line             <-> view_obstruction
+  torus_line             <-> zonotope_radius
+  diophantine_norm       <-> distance_graph
+  diophantine_norm       <-> flows_matroids
+  diophantine_norm       <-> coarse_sieve
+  torus_line             <-> spectrum
+
+component size 11: coarse_sieve, diophantine_norm, distance_graph, endpoint_hypergraph, flows_matroids, forbidden_intervals, runner_frame, spectrum, torus_line, view_obstruction, zonotope_radius
+
+3. PROOF-TECHNOLOGY GRAPH
+============================================================================================
+Edges here mean: same obstruction measured with different proof machinery.
+  finite_checking        <-> product_prime_sieve
+  product_prime_sieve    <-> coarse_sieve
+  coarse_sieve           <-> integer_program
+  endpoint_hypergraph    <-> integer_program
+  endpoint_hypergraph    <-> bruhat_tits
+  bruhat_tits            <-> adelic_product
+  natural_modes          <-> bruhat_tits
+  natural_modes          <-> product_sum
+  integer_program        <-> natural_modes
+  product_sum            <-> distance_graph
+
+component size 10: adelic_product, bruhat_tits, coarse_sieve, distance_graph, endpoint_hypergraph, finite_checking, integer_program, natural_modes, product_prime_sieve, product_sum
+
+4. COMMON INCIDENCE CORE WITH TOURNAMENTS
+============================================================================================
+LRC object                   incidence role                     tournament analogue
+--------------------------------------------------------------------------------------------
+LRC forbidden endpoint       row to be protected                Hamiltonian-path cut / good cut
+LRC speed interval           column/protector                   backward arc crossing a cut
+uncovered endpoint           lonely witness                     bad cut / non-SC certificate
+all endpoints protected      counterexample certificate         every cut protected inside SCC
+unit endpoint a/n            coarse denominator row             boundary cut forced by a single crossing
+p-adic endpoint depth        row export after repair            projection defect after deleting/adding vertices
+finite-check speed bound     finite labelled search modulo symmetries finite tournament enumeration modulo S_n/complement
+distance/circular coloring   avoid forbidden difference set     color conflict graph Omega(T) at fugacity/chromatic axes
+
+5. QUESTIONS GENERATED BY THE ATLAS
+============================================================================================
+1. Can the finite-checking prime-product sieve be rewritten as a dual row-weight certificate in the S420 IP matrix?
+2. Does the Giri-Kravitz spectrum recursion S(n) -> S(n-1) have a direct tournament analogue as deletion of a vertex or quotient by a cut?
+3. Can view-obstruction cubes be replaced by a tournament tiling polytope whose facets are good cuts and odd-cycle conflict rows?
+4. Is the row/column natural-number split the common skeleton behind zonotope paving, p-adic endpoint depth, and product-sum factor packing?
+5. Can a counterexample be defined without speeds first: as a leafless labelled protection hypergraph satisfying all coarse sieve rows and then asking realizability?

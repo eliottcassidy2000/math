@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S430 - LRC Lens Atlas and Tournament Incidence Core
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S421/S20.
+**User prompt:** Investigate how many lenses LRC can be seen through, what other isomorphic problems exist, how they relate to underlying tournament structure, and poke around the web and repo for ideas.
+**Web/context:** Checked recent LRC web literature: survey/finite-checking/zonotope/view-obstruction/flow/spectrum formulations, Quanta's March 2026 account of 8/9/10-runner progress, and the April 2026 Sungkawichai-Trakulthongchai preprint claiming the `k=10,11,12` nonzero-speed cases. Also re-read local THM-357/358/369, S386 tournament labelled-cycle bridge, natural-operation shadows, and S398-S421 LRC mode work.
+**Computation:** Added `04-computation/lrc_lens_atlas_s430.py` and stored `05-knowledge/results/lrc_lens_atlas_s430.out`. The script records 20 LRC lenses, with 11 in one formulation/transport component and 10 connected as proof technologies around the endpoint/coarse-sieve/IP/Bruhat-Tits/product-sum obstruction.
+**Synthesis:** Added HYP-1900 and `07-reflections/lrc-lens-atlas-s430.md`. The proposed bridge is a labelled incidence core shared by LRC and tournaments: rows are endpoints/cuts/cells, columns are speed intervals/backward arcs/protectors, witnesses are uncovered rows, and bad objects are full covers with no private leaf or gap.
+**Next:** Try to rewrite the recent prime-product finite-checking sieve as a dual row-weight certificate in the S420 IP matrix; separately, test whether the Giri-Kravitz spectrum recursion has a tournament vertex-deletion or cut-quotient analogue.
+
 ## codex-2026-05-31-S421 - LRC Two-Mode Adic Recursion
 
 **Account:** Codex
