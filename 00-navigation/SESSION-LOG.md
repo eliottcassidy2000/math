@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S410 - LRC Bruhat-Tits Descent
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S396; during close-out, rebased over upstream S397 Egyptian/q LRC bridge, upstream S398 gap-debt product law, upstream S399 Bruhat-Tits tree flow, and upstream S400 Bruhat-Tits frontier mass. This strand was assigned sparse id S410/HYP-1880 to avoid further active close-out collisions.
+**User prompt:** Think about Bruhat-Tits descent regarding the Lonely Runner Conjecture.
+**Repo archaeology:** Re-read the endpoint-protection trichotomy (THM-357), protection-core peeling (THM-359), unit endpoint divisibility filter (THM-360), Bohr-boundary descent (HYP-1813/S362), and n=16 dyadic endpoint-count law (THM-367). The existing quotient-layer/debt language already has a p-adic tree shadow.
+**Computation:** Added `04-computation/lrc_bruhat_tits_descent_s410.py` and stored `05-knowledge/results/lrc_bruhat_tits_descent_s410.out`. The script assigns every endpoint a p-adic denominator-depth vector at primes `p|n`, prints unit-gate tables for `n=14,16`, audits gate-export depths, records endpoint/peel depth histograms for structured `n=14` and `n=16` candidates, and restates THM-367 as a pure dyadic radial table.
+**Findings:** THM-360 is exactly the first Bruhat-Tits layer: unit endpoints `a/n` sit at depth `(v_p(n))` and are protected only by an `n`-gate. If `v=n*q`, every endpoint owned by `v` has depth `2*v_p(n)+v_p(q)` for `p|n`, since `n*m+/-1` is a p-adic unit. Thus gates do not erase debt; they export it to child vertices. In `n=14`, the S380 14-multiple ladder exposes depths `{2:2,7:2}` and `{2:4,7:2}`. In `n=16`, `16`-gates export `{2:4}` to `{2:8}` and beyond.
+**Synthesis:** Added HYP-1880 and `07-reflections/lrc-bruhat-tits-descent-s410.md`. The new proof target is a product-tree divergence invariant: an all-protected endpoint cycle should have nonzero Bruhat-Tits divergence unless it uses a super-gate, and super-gates export to deeper children. For `n=14` this lives on the product of the `2`- and `7`-adic trees; for `n=16` it is a rank-one dyadic flow with residue branch labels.
+**Verification:** `python3 -m py_compile 04-computation/lrc_bruhat_tits_descent_s410.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S400 - Bruhat-Tits Frontiers for LRC Endpoint Debt
 
 **Account:** Codex

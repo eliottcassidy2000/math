@@ -470,6 +470,9 @@ The Bruhat-Tits view is the valuation skeleton of the natural-number multiplicat
 **T431** #lonely-runner #bruhat-tits #p-adic-frontier #endpoint-debt | certainty: high exact rows + open proof route | source: codex-2026-05-31-S400
 Endpoint debt can be modeled as a Bruhat-Tits frontier: for endpoint `x=a/b`, extra denominator depth `h_p=max(0,v_p(b)-v_p(n))` is depth in the infinity cusp of the `PGL_2(Q_p)` tree, and normalized mass is `sum p^(-h_p)`. For `n=16`, `Gap_A*2^h=2/33` across the dyadic ladders, while BT mass is `17,17,35/2,35/2`; the `35/34` phase tax is a frontier-mass jump. Mixed `n=14` and `n=18` need product buildings. See HYP-1868.
 
+**T450** #lonely-runner #bruhat-tits #p-adic-depth #endpoint-debt | certainty: exact local identity + exploratory proof route | source: codex-2026-05-31-S410
+LRC endpoint protection has a Bruhat-Tits tree shadow: for primes `p|n`, attach depth `v_p(denominator(t))` to every endpoint. Unit endpoints `a/n` sit at depth `(v_p(n))` and are killed only by an `n`-gate. If `v=n*q`, then every endpoint owned by `v` has depth `2*v_p(n)+v_p(q)` because `n*m+/-1` is p-adically unit. Thus gate repair exports endpoint debt to child vertices. See HYP-1880.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

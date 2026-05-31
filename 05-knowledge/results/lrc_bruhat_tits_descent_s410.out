@@ -1,0 +1,131 @@
+LRC Bruhat-Tits descent probe (codex-2026-05-31 S410)
+
+Unit layer gate table for n=14
+  primes=(2, 7) gate_depth={2:1,7:1} unit_count=6
+  residue classes that protect at least one unit endpoint:
+    r= 0 protects= 6/6 local_vector={2:1,7:1}
+  exact THM-360 shadow: the unit layer is killed only by an n-gate.
+
+Unit layer gate table for n=16
+  primes=(2,) gate_depth={2:4} unit_count=8
+  residue classes that protect at least one unit endpoint:
+    r= 0 protects= 8/8 local_vector={2:4}
+  exact THM-360 shadow: the unit layer is killed only by an n-gate.
+
+Gate endpoint export depths for n=14
+  If v=n*q, every endpoint (n*m+/-1)/(n*v) has depth 2*gate_depth + depth(q).
+  gate_depth={2:1,7:1}
+    q=1  speed=14   exported_depth={2:2,7:2}
+    q=2  speed=28   exported_depth={2:3,7:2}
+    q=3  speed=42   exported_depth={2:2,7:2}
+    q=4  speed=56   exported_depth={2:4,7:2}
+    q=5  speed=70   exported_depth={2:2,7:2}
+    q=6  speed=84   exported_depth={2:3,7:2}
+    q=7  speed=98   exported_depth={2:2,7:3}
+    q=8  speed=112  exported_depth={2:5,7:2}
+
+Gate endpoint export depths for n=16
+  If v=n*q, every endpoint (n*m+/-1)/(n*v) has depth 2*gate_depth + depth(q).
+  gate_depth={2:4}
+    q=1  speed=16   exported_depth={2:8}
+    q=2  speed=32   exported_depth={2:9}
+    q=3  speed=48   exported_depth={2:8}
+    q=4  speed=64   exported_depth={2:10}
+    q=5  speed=80   exported_depth={2:8}
+    q=6  speed=96   exported_depth={2:9}
+    q=7  speed=112  exported_depth={2:8}
+    q=8  speed=128  exported_depth={2:11}
+
+Candidate endpoint-depth ledgers
+[n=14 initial tight]
+  n=14 primes=(2, 7) gate_depth={2:1,7:1}
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  class=boundary_only forbidden=1 gap/th=0.000000 Q=5045040
+  n_gates=none speed_depth_hist={2:0,7:0}:6 {2:0,7:1}:1 {2:1,7:0}:3 {2:2,7:0}:2 {2:3,7:0}:1
+  endpoint_depths={2:1,7:1}:78 {2:1,7:2}:14 {2:2,7:1}:36 {2:3,7:1}:32 {2:4,7:1}:16 unique=176
+  exposed_depths={2:1,7:1}:6 unprotected=6 first=1/14
+  peel-depth first layers:
+    step=0 deadE=6    deadI=11   remE=170  depths={2:1,7:1}:6
+    step=1 deadE=20   deadI=15   remE=150  depths={2:1,7:1}:6 {2:2,7:1}:10 {2:3,7:1}:2 {2:4,7:1}:2
+    step=2 deadE=26   deadI=13   remE=124  depths={2:1,7:1}:20 {2:2,7:1}:4 {2:3,7:1}:2
+    step=3 deadE=34   deadI=17   remE=90   depths={2:1,7:1}:12 {2:1,7:2}:2 {2:2,7:1}:2 {2:3,7:1}:12 {2:4,7:1}:6
+
+[n=14 replace 13 by 14]
+  n=14 primes=(2, 7) gate_depth={2:1,7:1}
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+  class=positive_gap forbidden=189403/194040 gap/th=0.045455 Q=388080
+  n_gates=(14,) speed_depth_hist={2:0,7:0}:5 {2:0,7:1}:1 {2:1,7:0}:3 {2:1,7:1}:1 {2:2,7:0}:2 {2:3,7:0}:1
+  endpoint_depths={2:1,7:1}:54 {2:1,7:2}:14 {2:2,7:1}:36 {2:2,7:2}:28 {2:3,7:1}:32 {2:4,7:1}:16 unique=180
+  exposed_depths={2:1,7:1}:8 {2:1,7:2}:2 {2:2,7:1}:6 {2:2,7:2}:2 {2:3,7:1}:4 {2:4,7:1}:2 unprotected=24 first=15/196
+  peel-depth first layers:
+    step=0 deadE=24   deadI=23   remE=156  depths={2:1,7:1}:8 {2:1,7:2}:2 {2:2,7:1}:6 {2:2,7:2}:2 {2:3,7:1}:4 {2:4,7:1}:2
+    step=1 deadE=44   deadI=32   remE=112  depths={2:1,7:1}:12 {2:1,7:2}:2 {2:2,7:1}:8 {2:2,7:2}:8 {2:3,7:1}:8 {2:4,7:1}:6
+    step=2 deadE=54   deadI=16   remE=58   depths={2:1,7:1}:18 {2:1,7:2}:8 {2:2,7:1}:10 {2:2,7:2}:8 {2:3,7:1}:8 {2:4,7:1}:2
+    step=3 deadE=32   deadI=8    remE=26   depths={2:1,7:1}:10 {2:2,7:1}:6 {2:2,7:2}:6 {2:3,7:1}:6 {2:4,7:1}:4
+
+[n=14 S380 14-multiple ladder]
+  n=14 primes=(2, 7) gate_depth={2:1,7:1}
+  speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  class=positive_gap forbidden=142/143 gap/th=0.002706 Q=70630560
+  n_gates=(14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182) speed_depth_hist={2:0,7:0}:1 {2:1,7:1}:6 {2:1,7:2}:1 {2:2,7:1}:2 {2:3,7:1}:2 {2:4,7:1}:1
+  endpoint_depths={2:1,7:1}:2 {2:2,7:2}:1092 {2:2,7:3}:196 {2:3,7:2}:336 {2:4,7:2}:448 {2:5,7:2}:224 unique=2298
+  exposed_depths={2:2,7:2}:120 {2:4,7:2}:48 unprotected=168 first=15/196
+  peel-depth first layers:
+    step=0 deadE=168  deadI=205  remE=2130 depths={2:2,7:2}:120 {2:4,7:2}:48
+    step=1 deadE=288  deadI=181  remE=1842 depths={2:2,7:2}:144 {2:2,7:3}:24 {2:3,7:2}:72 {2:4,7:2}:24 {2:5,7:2}:24
+    step=2 deadE=312  deadI=157  remE=1530 depths={2:2,7:2}:192 {2:3,7:2}:24 {2:4,7:2}:72 {2:5,7:2}:24
+    step=3 deadE=312  deadI=157  remE=1218 depths={2:2,7:2}:120 {2:2,7:3}:48 {2:3,7:2}:24 {2:4,7:2}:48 {2:5,7:2}:72
+
+[n=16 initial tight]
+  n=16 primes=(2,) gate_depth={2:4}
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+  class=boundary_only forbidden=1 gap/th=0.000000 Q=5765760
+  n_gates=none speed_depth_hist={2:0}:8 {2:1}:4 {2:2}:2 {2:3}:1
+  endpoint_depths={2:4}:120 {2:5}:64 {2:6}:32 {2:7}:16 unique=232
+  exposed_depths={2:4}:8 unprotected=8 first=1/16
+  peel-depth first layers:
+    step=0 deadE=8    deadI=15   remE=224  depths={2:4}:8
+    step=1 deadE=28   deadI=21   remE=196  depths={2:4}:2 {2:5}:24 {2:6}:2
+    step=2 deadE=42   deadI=21   remE=154  depths={2:4}:38 {2:6}:4
+    step=3 deadE=42   deadI=21   remE=112  depths={2:4}:12 {2:5}:18 {2:6}:10 {2:7}:2
+
+[n=16 drop 15 add 16]
+  n=16 primes=(2,) gate_depth={2:4}
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16)
+  class=positive_gap forbidden=126719/128128 gap/th=0.038462 Q=11531520
+  n_gates=(16,) speed_depth_hist={2:0}:7 {2:1}:4 {2:2}:2 {2:3}:1 {2:4}:1
+  endpoint_depths={2:4}:92 {2:5}:64 {2:6}:32 {2:7}:16 {2:8}:32 unique=236
+  exposed_depths={2:4}:6 {2:5}:4 {2:6}:2 {2:7}:2 {2:8}:2 unprotected=16 first=17/256
+  peel-depth first layers:
+    step=0 deadE=16   deadI=15   remE=220  depths={2:4}:6 {2:5}:4 {2:6}:2 {2:7}:2 {2:8}:2
+    step=1 deadE=28   deadI=20   remE=192  depths={2:4}:14 {2:5}:4 {2:6}:2 {2:7}:4 {2:8}:4
+    step=2 deadE=38   deadI=18   remE=154  depths={2:4}:10 {2:5}:16 {2:6}:8 {2:7}:2 {2:8}:2
+    step=3 deadE=36   deadI=16   remE=118  depths={2:4}:22 {2:5}:2 {2:6}:4 {2:7}:2 {2:8}:6
+
+[n=16 odd units plus seven 16-gates]
+  n=16 primes=(2,) gate_depth={2:4}
+  speeds=(1, 3, 5, 7, 9, 11, 13, 15, 16, 32, 48, 64, 80, 96, 112)
+  class=positive_gap forbidden=10346747/11531520 gap/th=0.071429 Q=46126080
+  n_gates=(16, 32, 48, 64, 80, 96, 112) speed_depth_hist={2:0}:8 {2:4}:4 {2:5}:2 {2:6}:1
+  endpoint_depths={2:4}:120 {2:8}:512 {2:9}:256 {2:10}:128 unique=1016
+  exposed_depths={2:4}:32 {2:8}:116 {2:9}:16 {2:10}:12 unprotected=176 first=17/240
+  peel-depth first layers:
+    step=0 deadE=176  deadI=105  remE=840  depths={2:4}:32 {2:8}:116 {2:9}:16 {2:10}:12
+    step=1 deadE=180  deadI=101  remE=660  depths={2:4}:14 {2:8}:78 {2:9}:72 {2:10}:16
+    step=2 deadE=152  deadI=73   remE=508  depths={2:4}:24 {2:8}:76 {2:9}:24 {2:10}:28
+    step=3 deadE=190  deadI=87   remE=318  depths={2:4}:14 {2:8}:92 {2:9}:50 {2:10}:34
+
+Pure dyadic n=16 radial table
+  For owner u=2^k, every endpoint has 2-adic depth 4+k. A protector p=2^j*q translates the ray upward by j edges.
+  owner=2   depth={2:5} lower_union=  2/4   j=0[2:1]
+  owner=4   depth={2:6} lower_union=  4/8   j=0[2:2] j=1[4:1]
+  owner=8   depth={2:7} lower_union=  8/16  j=0[2:4] j=1[4:2] j=2[8:1]
+  owner=16  depth={2:8} lower_union= 32/32  j=0[4:8] j=1[4:4] j=2[8:2] j=3[16:1]
+  owner=32  depth={2:9} lower_union= 64/64  j=0[8:16] j=1[8:8] j=2[8:4] j=3[16:2] j=4[32:1]
+  owner=64  depth={2:10} lower_union=128/128 j=0[16:32] j=1[16:16] j=2[16:8] j=3[16:4] j=4[32:2] j=5[64:1]
+  Read this as a BT-tree warning: local radial descent is real, but u>=16 has a stable nine-fan that can close one branch locally.
+
+Synthesis
+  Bruhat-Tits descent is a sharper language for the existing Bohr-boundary descent.  Unit endpoints are first-layer boundary rays at the primes dividing n.  THM-360 says only an n-gate moves all of those rays back to the root.
+  But an n-gate creates its own endpoints at depth 2*v_p(n)+v_p(q). So gate repair is not deletion; it is debt export into child vertices of the local p-adic tree.
+  The n=16 dyadic theorem is exactly the rank-one BT lab: diagonal translation by p=2^j controls endpoint counts, while odd residue classes decide which branches are hit.  The next proof target is a global product-tree potential whose boundary strictly increases under every attempted all-protected core.
