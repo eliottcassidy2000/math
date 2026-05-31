@@ -410,6 +410,9 @@ The `n=16` dyadic ladders preserve a norm-like debt ledger: `d=2,4,8,16` have ga
 **T411** #lonely-runner #scalar-moat #half-turns #n16 | certainty: exact finite-cell evidence | source: codex-2026-05-31-S389
 The normalized `n=16` scalar quotient has `1152` alpha patterns and `18432` candidate cells. All scalar ramps cover, but the best one-coordinate defect misses `128` cells (half-turn at coordinate `15`) and the best two-coordinate defect misses `160` cells (half-turns at coordinates `10,15`). This is the pure 2-adic lab version of the scalar-puncture moat.
 
+**T412** #lonely-runner #sixteen-runners #dyadic-debt #sedenion-row | certainty: proved branch + exploratory proof route | source: codex-2026-05-31-S390
+At `n=16`, no `16`-gate leaves every odd unit point `a/16` as a lonely boundary witness, so any open-cover counterexample must contain a `16`-gate. Exact audits show the pure `2`-, `4`-, and `8`-ladders expose first debt layers `2`, `4`, and `8`; all `960` one-gate replacements through `16q, q<=64` stayed positive-gap. A maximum-branch `v=16` needs exactly nine lower residues to cover all `32` endpoints. See HYP-1858.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

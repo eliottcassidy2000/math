@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S390 - LRC n=16 Sedenion Endpoint-Debt Proof Search
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`; during close-out, rebased over upstream S388 small-denominator sieve and upstream S389 n=16 Cayley-Dickson proof attempt, then renumbered this dyadic endpoint-debt strand to S390.
+**User prompt:** Work on `n=16` like the Cayley-Dickson pass; spend a long creative session trying to come up with a proof.
+**Computation:** Added `04-computation/lrc_sixteen_sedenion_proof_search_s390.py` and stored `05-knowledge/results/lrc_sixteen_sedenion_proof_search_s390.out`. The script runs six attacks: unit-gate branch, half-turn parity, structured exact audits, one-gate replacement scan, dyadic endpoint-debt cascade, and forced-gate random stress.
+**Findings:** The no-`16`-gate branch is clean: every odd unit point `a/16` survives as a lonely boundary witness unless some speed is `0 mod 16`. The best `8`-ladder has `gap/th=0.007576`, `140` unprotected endpoints, `coreE=0`, and first exposed debt layer `8`, exactly the half-dimension below the sedenion row. The `2`-, `4`-, and `8`-ladders expose first layers `2`, `4`, and `8` respectively.
+**Search:** All `960` one-gate replacements `{1,...,15}-{r}+{16q}` for `q<=64` remained positive-gap; closest gap ratio was `0.013672`. A forced-gate random stress sample of `48` primitive sets also stayed positive-gap, with closest endpoint audits still peeling to `coreE=0`. Locally, a maximum-branch `v=16` needs exactly nine lower residues to cover all `32` endpoints.
+**Synthesis:** Added HYP-1858 and `07-reflections/lrc-sixteen-sedenion-proof-search-s390.md`. This complements the upstream S389 scalar-moat/debt-norm pass: the candidate proof here is a dyadic endpoint set-cover/debt-flow inequality where a `16`-gate closes the unit layer but leaks debt downward, maximal gates cannot use super-gates, and half-turn parity makes odd protectors one-sided.
+**Verification:** `python -m py_compile 04-computation/lrc_sixteen_sedenion_proof_search_s390.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S389 - Lonely Runner n=16 Cayley-Dickson Proof Attempt
 
 **Account:** Codex
@@ -22,7 +33,6 @@
 **Synthesis:** Added HYP-1855 and HYP-1856 plus `07-reflections/lrc-small-denominator-sieve-and-slack-s388.md`. The new grammar is: missing a small denominator gives an immediate rational witness; satisfying the sieve moves the work to endpoint debt, private pivots, critical-radius surplus, and labelled cycle slack.
 **Verification:** `python3 -m py_compile 04-computation/lrc_small_denominator_sieve_s388.py` succeeded; the S388 script ran end-to-end and produced the stored output.
 **Next:** Build the full endpoint-debt transfer matrix for `drop d -> lcm(n,d)` at `n=14`; extend `lonely_runner_endpoint_cycle_formal_s384.py` to compute arrow slack vectors; search for longest slack-compatible almost-cycles before first peel.
-
 ## codex-2026-05-31-S387 - LRC Cayley-Dickson Tower Analogy
 
 **Account:** Codex

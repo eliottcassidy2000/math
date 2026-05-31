@@ -1,0 +1,126 @@
+n=16 Lonely Runner sedenion-row proof search (codex-2026-05-31 S390)
+denominator n=16, moving speeds k=15, threshold=1/16
+
+1. Unit skeleton gate lemma
+   Odd points a/16 are the pure sedenion row's unit boundary.
+   residue mod16  v2  min_{a odd} ||r*a/16||  verdict
+              0 inf                        0  kills units
+              1   0                     1/16  safe boundary
+              2   1                      1/8  safe boundary
+              3   0                     1/16  safe boundary
+              4   2                      1/4  safe boundary
+              5   0                     1/16  safe boundary
+              6   1                      1/8  safe boundary
+              7   0                     1/16  safe boundary
+              8   3                      1/2  safe boundary
+              9   0                     1/16  safe boundary
+             10   1                      1/8  safe boundary
+             11   0                     1/16  safe boundary
+             12   2                      1/4  safe boundary
+             13   0                     1/16  safe boundary
+             14   1                      1/8  safe boundary
+             15   0                     1/16  safe boundary
+   Consequence: if no speed is 0 mod 16, every odd a/16 is a lonely
+   boundary witness.  So an open-cover counterexample must contain a
+   16-gate.  This is a clean proved branch, not just evidence.
+
+2. Half-turn parity attack
+   Under t -> t+1/2, even speeds are unchanged and odd speeds flip
+   forbidden neighborhoods to the opposite half of the circle.
+   residue parity  behavior at threshold 1/16
+   even            same forbidden status at t and t+1/2
+   odd             cannot forbid both antipodal times
+   Proof-shape: pair antipodal times.  Odd speeds can spend budget on
+   at most one side of each pair; even speeds descend to the quotient.
+   This wants an induction on the dyadic shell vector, not a density
+   argument.
+
+3. Exact audits of structured n=16 candidates
+   label                         class         gap/th   unprot peel coreE first layer_hist
+   initial segment              boundary_only 0.000000       8   15     0     1/16 1:8
+   best 8-ladder skip=14        positive_gap 0.007576     140   25     0    9/128 8:56,24:14,40:14,72:14,88:14,...
+   best 4-ladder skip=14        positive_gap 0.015152      68   23     0     5/64 4:28,12:8,20:6,36:6,44:8,...
+   best 2-ladder skip=14        positive_gap 0.030303      34   21     0     3/32 2:14,6:4,10:4,18:4,22:4,...
+   powers of two spine          positive_gap 0.129808      80   16     0   17/256 2:4,3:2,4:2,5:2,8:2,...
+   odd units plus seven 16-gate positive_gap 0.071429     176   27     0   17/240 9:4,11:10,13:12,15:6,16:42,...
+   pure 16-gate ladder          positive_gap 0.004464     308   29     0   17/256 16:112,32:28,64:28,112:28,128:28,...
+   dyadic staircase             positive_gap 0.050000     268   30     0   43/640 8:48,16:32,24:14,32:20,40:28,...
+
+   Best 8-ladder speeds:
+   (1, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 120)
+   The pure lpd ladder is positive-gap, but its first debt layer is 8:
+   exactly the half-dimension below the sedenion row.
+
+4. One-gate replacement scan around the tight initial segment
+   scanned=960 replacements remove r, add 16q with q<=64
+   class_hist={'positive_gap': 960}
+   closest positive-gap rows
+     6->16*64   gap/th=0.013672 forbidden=3471139/3514368 boundary=36
+     14->16*64  gap/th=0.013672 forbidden=3249443/3294720 boundary=44
+     15->16*64  gap/th=0.013672 forbidden=2016493/2050048 boundary=48
+     12->16*64  gap/th=0.013672 forbidden=20119311/20500480 boundary=52
+     4->16*64   gap/th=0.013672 forbidden=260939/266240 boundary=48
+     2->16*64   gap/th=0.013672 forbidden=119957/122880 boundary=56
+     10->16*64  gap/th=0.013672 forbidden=11962219/12300288 boundary=76
+     7->16*64   gap/th=0.013672 forbidden=7973431/8200192 boundary=80
+     3->16*64   gap/th=0.013672 forbidden=20777/21504 boundary=84
+     5->16*64   gap/th=0.013672 forbidden=1350473/1397760 boundary=92
+   No one-gate perturbation became boundary-only or open-cover.  The
+   best rows move toward the 8-layer debt, not toward a closed cover.
+
+5. Dyadic endpoint-debt cascade
+   For a speed v, its 2v endpoints are protected by integer residues p
+   satisfying |p*(16m+/-1)-a*16v| < v.  The table separates two cases:
+   a super-gate p=0 mod 16v protects everything, while a maximum-speed
+   branch can only use p<v.
+   v   endpoints  best p<v cover  exact<=16  greedy p<v cover  first greedy protectors
+   1           2               0/2           -     0 speeds cover   0/2    -
+   2           4               2/4           -     1 speeds cover   2/4    1
+   4           8               4/8           -     1 speeds cover   4/8    2
+   8          16               8/16          -     1 speeds cover   8/16   4
+   16         32              16/32          9     9 speeds cover  32/32   8,1,3,5,7,9,11,13
+       exact lower cover for v=16: (1, 3, 5, 7, 8, 9, 11, 13, 15)
+   32         64              32/64          -     9 speeds cover  64/64   16,1,3,5,7,9,11,13
+   64        128              64/128         -    11 speeds cover 128/128  32,1,5,6,7,11,13,27
+   128       256             128/256         -    13 speeds cover 256/256  64,1,9,10,11,14,4,34
+   Read this as a possible proof spine: a largest 16-divisible gate
+   cannot use a super-gate, so it asks for half-gate residues; those
+   ask for quarter-gates; the unit layer asks to be rescued by a
+   16-gate.  This is a finite dyadic debt cycle, not a linear cover.
+
+6. Deterministic random stress with forced 16-gates
+   sampled=48 primitive forced-gate sets
+   class_hist={'positive_gap': 48}
+     random_gate_35   gap/th=0.037338 forbidden=16833188851/18759037440 shells={0: 3, 1: 5, 2: 2, 3: 1, 4: 2, 5: 2}
+     random_gate_9    gap/th=0.053472 forbidden=5762304432149/6408313591680 shells={0: 8, 1: 3, 2: 1, 3: 1, 4: 1, 5: 1}
+     random_gate_20   gap/th=0.053750 forbidden=352863054647/391091500800 shells={0: 8, 1: 4, 2: 2, 5: 1}
+     random_gate_7    gap/th=0.053977 forbidden=303462795883/339683121855 shells={0: 8, 1: 1, 2: 1, 3: 1, 4: 2, 5: 2}
+     random_gate_3    gap/th=0.054801 forbidden=1786297719/2058842240 shells={0: 3, 1: 6, 2: 2, 4: 1, 5: 3}
+     random_gate_15   gap/th=0.057292 forbidden=12428695157/14042246400 shells={0: 5, 1: 3, 2: 3, 4: 3, 5: 1}
+     random_gate_26   gap/th=0.057292 forbidden=1868273094799/2149831918080 shells={0: 6, 1: 4, 2: 1, 3: 1, 4: 1, 5: 2}
+     random_gate_33   gap/th=0.057487 forbidden=29189235374059/32926800466560 shells={0: 6, 1: 5, 2: 2, 4: 2}
+   endpoint audits of the three closest random rows
+     random_gate_35   unprot=  248 peel= 20 coreE=  0 first=  33/992 layers=((3, 2), (8, 4), (9, 4), (16, 16))
+     random_gate_9    unprot=  156 peel= 15 coreE=  0 first=    1/96 layers=((4, 2), (6, 8), (7, 2), (11, 4))
+     random_gate_20   unprot=  184 peel= 23 coreE=  0 first=  13/512 layers=((4, 4), (6, 2), (7, 2), (9, 8))
+   Again the near rows are gap-positive and core-empty.  The forced
+   gate buys coverage at the unit layer but pays for it in private
+   dyadic endpoints.
+
+7. Proof synthesis after the failed attacks
+   Candidate theorem A (proved here): no 16-gate implies no open cover,
+   because odd unit points a/16 survive as boundary witnesses.
+   Candidate theorem B (new target): every primitive n=16 full-measure
+   set containing a 16-gate has a nonempty dyadic endpoint-debt leaf.
+   Equivalently, the endpoint-protection core peels to empty before an
+   arithmetic cycle can close.
+   The wild but now concrete route is a dyadic debt-flow inequality:
+   charge endpoints by their layer 1,2,4,8,16; half-turn symmetry makes
+   odd protectors one-sided; maximum-speed endpoints cannot use a
+   super-gate; and the debt cycle must eventually ask the original
+   16-gate to rescue the unit layer.  Show that this directed debt
+   cycle has positive divergence for only 15 speeds.
+   The Cayley-Dickson analogy becomes precise here: the sedenion row is
+   exactly where division fails, and in LRC that failure is endpoint
+   debt leaking one dyadic layer downward every time a gate closes an
+   older boundary.
