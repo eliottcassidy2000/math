@@ -257,6 +257,12 @@ After scalar-ramp excision, local search found no full non-scalar blocker. Best 
 **T360** #lonely-runner #counterexample-search #gated-speeds #endpoint-cover | certainty: medium negative evidence | source: codex-2026-05-31-S364
 Deterministic and random `14`/`15`-gated speed families did not produce open-cover candidates. Simply adding the forced `n`-divisible speed tends to reopen positive gaps or boundary witnesses, supporting quotient/descent over counterexample construction.
 
+**T361** #lonely-runner #composite-gates #fourteen-fifteen #endpoint-peeling | certainty: medium computational | source: opus-2026-05-31-S364
+Composite gate insertions leak in both frontier cases. Exact gated boxes found `1820/1820` positive-gap cases for `k=13,n=14,max_speed=17` and `2380/2380` positive-gap cases for `k=14,n=15,max_speed=18`; no full-measure or open-cover candidates appeared. The hardest `n=14` gate leak has a 27-layer peel ending in small subgroup moduli `2156,728,112,140,168,196`. See HYP-1819 and `05-knowledge/results/lonely_runner_frontier_feedback_s364.out`.
+
+**T362** #lonely-runner #disproof-search #gate-overload #protection-cycles | certainty: medium negative evidence | source: opus-2026-05-31-S364
+Gate-overload is a bad disproof architecture: adding more multiples of the denominator protects the unit layer but creates many higher-denominator leaks (`n=14` unprotected counts `24,28,40,52,96,148`; `n=15` counts `12,32,36,60,88,124`). Future disproof search should generate endpoint-protection cycles first, then solve for speeds, rather than sample dense gated speed sets.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

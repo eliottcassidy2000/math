@@ -1,0 +1,147 @@
+Lonely Runner frontier feedback loop (opus-2026-05-31 S364)
+All interval/core computations use exact rational arithmetic.
+
+Cycle 1: attack k=13 / n=14 by extending the CRT gate scan
+Exact primitive gate scan k=13, n=14, max_speed=17
+  total_primitive=2380
+  pass_14_gate=1820
+  positive_gap=1820
+  full_measure=0
+  boundary_only=0
+  open_cover=0
+  top_gate_profiles=[(((2, 6), (7, 2), (14, 1)), 588), (((2, 7), (7, 2), (14, 1)), 392), (((2, 5), (7, 2), (14, 1)), 280), (((2, 7), (7, 1), (14, 1)), 196), (((2, 6), (7, 1), (14, 1)), 168)]
+  tightest_positive=
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14) gap/thresh=0.037879 unprotected=8 peel=27 core_E=0
+    speeds=(1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16) gap/thresh=0.037879 unprotected=32 peel=19 core_E=0
+    speeds=(1, 2, 3, 4, 9, 10, 11, 12, 13, 14, 15, 16, 17) gap/thresh=0.038462 unprotected=36 peel=23 core_E=0
+    speeds=(1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15) gap/thresh=0.039683 unprotected=28 peel=22 core_E=0
+    speeds=(1, 2, 3, 5, 8, 9, 10, 11, 12, 13, 14, 15, 17) gap/thresh=0.041667 unprotected=28 peel=23 core_E=0
+    speeds=(1, 2, 3, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17) gap/thresh=0.041667 unprotected=40 peel=24 core_E=0
+
+Dead-end audit for tightest n=14 gated positive example: full endpoint peel
+  speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14) class=positive_gap Q=5045040 unprotected=8 quotient_layer=higher_denoms_56,154,168,182 core_E=0
+  layer=00 removed_E=   8 removed_I=   6 remaining_E= 184 remaining_I=  93 subgroup=24024
+  layer=01 removed_E=   4 removed_I=   4 remaining_E= 180 remaining_I=  89 subgroup=490
+  layer=02 removed_E=  16 removed_I=   8 remaining_E= 164 remaining_I=  81 subgroup=560560
+  layer=03 removed_E=   6 removed_I=   4 remaining_E= 158 remaining_I=  77 subgroup=294
+  layer=04 removed_E=   8 removed_I=   4 remaining_E= 150 remaining_I=  73 subgroup=10192
+  layer=05 removed_E=   8 removed_I=   4 remaining_E= 142 remaining_I=  69 subgroup=5544
+  layer=06 removed_E=  12 removed_I=   6 remaining_E= 130 remaining_I=  63 subgroup=80080
+  layer=07 removed_E=  12 removed_I=   6 remaining_E= 118 remaining_I=  57 subgroup=168168
+  layer=08 removed_E=  12 removed_I=   6 remaining_E= 106 remaining_I=  51 subgroup=64680
+  layer=09 removed_E=   6 removed_I=   3 remaining_E= 100 remaining_I=  48 subgroup=1274
+  layer=10 removed_E=   8 removed_I=   3 remaining_E=  92 remaining_I=  45 subgroup=2940
+  layer=11 removed_E=  10 removed_I=   5 remaining_E=  82 remaining_I=  40 subgroup=22932
+  layer=12 removed_E=   8 removed_I=   5 remaining_E=  74 remaining_I=  35 subgroup=168
+  layer=13 removed_E=   6 removed_I=   3 remaining_E=  68 remaining_I=  32 subgroup=3920
+  layer=14 removed_E=   6 removed_I=   3 remaining_E=  62 remaining_I=  29 subgroup=14014
+  layer=15 removed_E=   6 removed_I=   3 remaining_E=  56 remaining_I=  26 subgroup=560
+  layer=16 removed_E=  10 removed_I=   5 remaining_E=  46 remaining_I=  21 subgroup=32760
+  layer=17 removed_E=   6 removed_I=   3 remaining_E=  40 remaining_I=  18 subgroup=980
+  layer=18 removed_E=  10 removed_I=   5 remaining_E=  30 remaining_I=  13 subgroup=38808
+  layer=19 removed_E=   6 removed_I=   3 remaining_E=  24 remaining_I=  10 subgroup=12936
+  layer=20 removed_E=   6 removed_I=   3 remaining_E=  18 remaining_I=   7 subgroup=546
+  layer=21 removed_E=   6 removed_I=   2 remaining_E=  12 remaining_I=   5 subgroup=2156
+  layer=22 removed_E=   4 removed_I=   1 remaining_E=   8 remaining_I=   4 subgroup=728
+  layer=23 removed_E=   2 removed_I=   1 remaining_E=   6 remaining_I=   3 subgroup=112
+  layer=24 removed_E=   2 removed_I=   1 remaining_E=   4 remaining_I=   2 subgroup=140
+  layer=25 removed_E=   2 removed_I=   1 remaining_E=   2 remaining_I=   1 subgroup=168
+  layer=26 removed_E=   2 removed_I=   1 remaining_E=   0 remaining_I=   0 subgroup=196
+
+Cycle 2: forced creative jump to k=14 / n=15
+[initial segment k=14]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  n=15 class=boundary_only forbidden_length=1 max_gap=0 gap/thresh=0.000000
+  endpoints=202 unprotected=8 peel_depth=14 core_E=0
+[first 15-gated window]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  n=15 class=positive_gap forbidden_length=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 peel_depth=16 core_E=0
+[double 15-gated window]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 30)
+  n=15 class=positive_gap forbidden_length=19783/20790 max_gap=1/150 gap/thresh=0.100000
+  endpoints=242 unprotected=32 peel_depth=17 core_E=0
+[3x5 pressure]
+  speeds=(1, 2, 3, 4, 5, 6, 9, 10, 12, 15, 20, 25, 30, 45)
+  n=15 class=positive_gap forbidden_length=2788/3375 max_gap=2/225 gap/thresh=0.133333
+  endpoints=374 unprotected=76 peel_depth=19 core_E=0
+
+Exact primitive gate scan k=14, n=15, max_speed=18
+  total_primitive=3060
+  pass_15_gate=2380
+  positive_gap=2380
+  full_measure=0
+  boundary_only=0
+  open_cover=0
+  top_gate_profiles=[(((3, 5), (5, 3), (15, 1)), 600), (((3, 4), (5, 3), (15, 1)), 450), (((3, 5), (5, 2), (15, 1)), 450), (((3, 6), (5, 2), (15, 1)), 240), (((3, 6), (5, 3), (15, 1)), 210)]
+  tightest_positive=
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15) gap/thresh=0.030303 unprotected=12 peel=16 core_E=0
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 17) gap/thresh=0.032051 unprotected=20 peel=16 core_E=0
+    speeds=(1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 15, 16, 17) gap/thresh=0.032051 unprotected=28 peel=15 core_E=0
+    speeds=(1, 2, 3, 4, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18) gap/thresh=0.032051 unprotected=38 peel=20 core_E=0
+    speeds=(1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16, 17) gap/thresh=0.032468 unprotected=34 peel=24 core_E=0
+    speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 15, 16) gap/thresh=0.034722 unprotected=24 peel=15 core_E=0
+
+Cycle 3: disproof-construction pressure by overloading gate multiples
+Gate-overload family k=13, n=14
+  mults=1 class=positive_gap gap/thresh=0.045455 unprotected=24 peel=14 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+  mults=2 class=positive_gap gap/thresh=0.110390 unprotected=28 peel=16 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 28)
+  mults=3 class=positive_gap gap/thresh=0.228571 unprotected=40 peel=18 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 28, 42)
+  mults=4 class=positive_gap gap/thresh=0.160714 unprotected=52 peel=21 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 28, 42, 56)
+  mults=5 class=positive_gap gap/thresh=0.114286 unprotected=96 peel=23 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 14, 28, 42, 56, 70)
+  mults=6 class=positive_gap gap/thresh=0.083333 unprotected=148 peel=27 speeds=(1, 2, 3, 4, 5, 6, 7, 14, 28, 42, 56, 70, 84)
+
+Gate-overload family k=14, n=15
+  mults=1 class=positive_gap gap/thresh=0.030303 unprotected=12 peel=16 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  mults=2 class=positive_gap gap/thresh=0.100000 unprotected=32 peel=17 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 30)
+  mults=3 class=positive_gap gap/thresh=0.206061 unprotected=36 peel=19 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 30, 45)
+  mults=4 class=positive_gap gap/thresh=0.166667 unprotected=60 peel=22 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 30, 45, 60)
+  mults=5 class=positive_gap gap/thresh=0.120000 unprotected=88 peel=24 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 30, 45, 60, 75)
+  mults=6 class=positive_gap gap/thresh=0.088889 unprotected=124 peel=28 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 15, 30, 45, 60, 75, 90)
+
+Cycle 4: back to n=14, micro-staircase obstruction instead of endpoint gates
+n=14 coarse r/14 obstruction and prime-grid repair
+  n=14 vector=(7, 4, 9, 6, 7, 8, 5, 0, 1, 12, 13, 12, 7)
+  coarse_blocked=196/196
+  micro_resolution=denom 17, s=1, r=1
+  bins=(0, 1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 9, 10)
+  residues=(7, 5, 11, 9, 11, 12, 10, 6, 8, 6, 8, 7, 3)
+  no_wrap_cell=[9/154, 5/84) width=1/924
+
+Cycle 5: forced n=15 analogue, looking for a 3x5 micro-staircase
+n=15 coarse r/15 obstruction and prime-grid repair
+  n=15 vector=(1, 11, 13, 14, 0, 9, 9, 13, 13, 5, 6, 1, 10, 8)
+  coarse_blocked=219/225
+  micro_resolution=denom 17, s=1, r=5
+  bins=(4, 8, 13, 2, 7, 11, 0, 5, 9, 14, 3, 7, 12, 1)
+  residues=(5, 4, 11, 1, 7, 5, 9, 3, 7, 4, 9, 8, 7, 9)
+
+Cycle 6: counterexample search after both staircase lanes hit finite certificates
+Random counterexample pressure k=13, n=14, max_speed=80, trials=30
+  speeds=(7, 16, 21, 25, 27, 37, 42, 56, 57, 58, 62, 63, 70) class=positive_gap gap/thresh=0.046659 gate_mults={2: 6, 7: 6, 14: 3} unprotected=188 peel=13 core_E=0
+  speeds=(6, 13, 18, 27, 38, 44, 46, 51, 61, 62, 65, 70, 79) class=positive_gap gap/thresh=0.053763 gate_mults={2: 7, 7: 1, 14: 1} unprotected=196 peel=18 core_E=0
+  speeds=(3, 8, 18, 24, 45, 46, 47, 49, 52, 53, 60, 66, 70) class=positive_gap gap/thresh=0.055349 gate_mults={2: 8, 7: 2, 14: 1} unprotected=172 peel=13 core_E=0
+  speeds=(2, 9, 12, 17, 25, 31, 33, 42, 53, 61, 67, 77, 79) class=positive_gap gap/thresh=0.057056 gate_mults={2: 3, 7: 2, 14: 1} unprotected=152 peel=13 core_E=0
+  speeds=(3, 14, 21, 23, 33, 36, 48, 53, 59, 62, 67, 70, 80) class=positive_gap gap/thresh=0.060012 gate_mults={2: 6, 7: 3, 14: 2} unprotected=172 peel=13 core_E=0
+  speeds=(2, 8, 10, 18, 34, 40, 51, 56, 57, 58, 70, 72, 79) class=positive_gap gap/thresh=0.063983 gate_mults={2: 10, 7: 2, 14: 2} unprotected=190 peel=15 core_E=0
+  speeds=(1, 3, 26, 33, 42, 43, 44, 50, 52, 61, 66, 71, 72) class=positive_gap gap/thresh=0.065346 gate_mults={2: 7, 7: 1, 14: 1} unprotected=188 peel=17 core_E=0
+  speeds=(5, 12, 13, 33, 39, 41, 44, 54, 56, 57, 61, 66, 72) class=positive_gap gap/thresh=0.065476 gate_mults={2: 6, 7: 1, 14: 1} unprotected=152 peel=19 core_E=0
+
+Random counterexample pressure k=14, n=15, max_speed=90, trials=30
+  speeds=(9, 13, 16, 22, 29, 36, 39, 42, 49, 58, 60, 71, 81, 90) class=positive_gap gap/thresh=0.052649 gate_mults={3: 7, 5: 2, 15: 2} unprotected=200 peel=14 core_E=0
+  speeds=(3, 5, 13, 23, 26, 32, 34, 42, 58, 71, 73, 84, 88, 90) class=positive_gap gap/thresh=0.054328 gate_mults={3: 4, 5: 2, 15: 1} unprotected=176 peel=20 core_E=0
+  speeds=(10, 21, 24, 25, 45, 50, 52, 54, 65, 68, 70, 71, 80, 90) class=positive_gap gap/thresh=0.055556 gate_mults={3: 5, 5: 8, 15: 2} unprotected=198 peel=14 core_E=0
+  speeds=(2, 8, 13, 14, 31, 40, 49, 60, 64, 71, 76, 78, 85, 88) class=positive_gap gap/thresh=0.058239 gate_mults={3: 2, 5: 3, 15: 1} unprotected=196 peel=18 core_E=0
+  speeds=(4, 12, 22, 31, 37, 39, 49, 57, 63, 74, 76, 81, 88, 90) class=positive_gap gap/thresh=0.063719 gate_mults={3: 6, 5: 1, 15: 1} unprotected=208 peel=17 core_E=0
+  speeds=(6, 10, 16, 22, 24, 34, 36, 60, 65, 70, 73, 77, 85, 88) class=positive_gap gap/thresh=0.066667 gate_mults={3: 4, 5: 5, 15: 1} unprotected=196 peel=21 core_E=0
+  speeds=(3, 4, 28, 31, 32, 42, 45, 47, 48, 53, 63, 67, 74, 89) class=positive_gap gap/thresh=0.066964 gate_mults={3: 5, 5: 1, 15: 1} unprotected=200 peel=19 core_E=0
+  speeds=(1, 4, 8, 18, 39, 40, 41, 51, 58, 67, 75, 77, 78, 81) class=positive_gap gap/thresh=0.067152 gate_mults={3: 6, 5: 2, 15: 1} unprotected=206 peel=17 core_E=0
+
+Cycle 7: synthesis
+  n=14 dead end: larger exact gated boxes still leaked; the long peel
+  has no terminal endpoint core, so the route needs a structural descent.
+  n=15 new idea: the same composite phenomenon appears with 15=3*5;
+  it has a stronger CRT gate but likely needs a two-prime micro-staircase.
+  disproof pressure: gate-overload and random searches made positive gaps,
+  not open covers.  The best candidates are boundary-adjacent leaks,
+  suggesting future attacks should rank peel depth and cell width together.

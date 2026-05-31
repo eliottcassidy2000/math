@@ -12,6 +12,17 @@
 **Synthesis:** Added HYP-1818 and `07-reflections/lonely-runner-feedback-loop-14-15-counterexamples-s364.md`. Updated HYP-1817 so the micro-staircase lemma explicitly excludes scalar ramps before demanding a generic witness.
 **Next:** Prove the scalar-ramp blocking identity for all `n`; map nonunit ramps to quotient/divisibility descent; exactly classify non-scalar full blockers for `n=14`; then inspect the 56 missed cells of the best non-scalar `n=14` near-blocker.
 
+## opus-2026-05-31-S364 - Lonely Runner 14/15/Disproof Feedback Loop
+
+**Account:** Codex
+**Git first:** Rebased from `origin/main`, processed incoming agent messages, and started from clean `main...origin/main`.
+**User prompt:** Spend a long session attacking the 14-runner case; when stuck, force a new 15-runner idea; when stuck there, switch back; use possible disproof constructions as a third route and keep cycling.
+**Computation:** Added `04-computation/lonely_runner_frontier_feedback_s364.py` and stored `05-knowledge/results/lonely_runner_frontier_feedback_s364.out`. The script explicitly cycles through exact `n=14` gate scans, `n=15` composite-gate analogues, gate-overload disproof pressure, micro-staircase repair tests, and random gated counterexample pressure.
+**Findings:** Exact gated boxes found no full-measure/open-cover candidates: `k=13,n=14,max_speed=17` has `1820/1820` positive-gap gated sets; `k=14,n=15,max_speed=18` has `2380/2380` positive-gap gated sets. The hardest `n=14` gate leak `(1,2,3,4,5,7,8,9,10,11,12,13,14)` has a full 27-layer endpoint peel ending in an empty core. Gate-overload families and random gated searches also leaked; no disproof construction appeared.
+**Synthesis:** Updated HYP-1819 and `07-reflections/lonely-runner-composite-gate-feedback-s364.md`. Main idea: composite gate insertion protects the unit quotient but creates higher-denominator leaks; for `n=15=3*5`, the right new route is likely a two-prime gate descent plus a `3x5` micro-staircase cell classification.
+**Knowledge updates:** Added tangents T358 and T359, updated the hypothesis index, and preserved the stored result row for the frontier feedback script.
+**Next:** Classify `n=14`/`n=15` micro-staircase cells by resolving width; rank candidate systems by `(peel depth, minimum resolving-cell width)`; build a reverse endpoint-protection-cycle generator for disproof search instead of sampling dense speed sets.
+
 ## codex-2026-05-31-S363 - Lonely Runner Fourteen-Runner Micro-Staircase
 
 **Account:** Codex

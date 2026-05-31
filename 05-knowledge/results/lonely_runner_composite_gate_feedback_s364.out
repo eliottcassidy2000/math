@@ -1,0 +1,333 @@
+Lonely Runner 14/15/disproof feedback loop (codex-2026-05-31 S364)
+Exact interval scoring; endpoint/core deepening on dangerous survivors.
+
+=== Feedback lap 1 ===
+Cycle A: fourteen-runner attack (k=13, n=14)
+[14.1]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  gates 14:0 2:6 7:1 units:6
+  class=boundary_only forbidden=1 max_gap=0 gap/thresh=0.000000
+  endpoints=176 unprotected=6 unit=True peel=15 core_E=0 first_mod=14
+
+[14.2]
+  speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  gates 14:1 2:6 7:2 units:6
+  class=positive_gap forbidden=851/858 max_gap=5/1848 gap/thresh=0.037879
+  endpoints=192 unprotected=8 unit=False peel=27 core_E=0 first_mod=24024
+
+[14.3]
+  speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  gates 14:1 2:6 7:2 units:6
+  class=positive_gap forbidden=851/858 max_gap=5/1848 gap/thresh=0.037879
+  endpoints=192 unprotected=8 unit=False peel=27 core_E=0 first_mod=24024
+
+[14.4]
+  speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  gates 14:1 2:6 7:2 units:6
+  class=positive_gap forbidden=851/858 max_gap=5/1848 gap/thresh=0.037879
+  endpoints=192 unprotected=8 unit=False peel=27 core_E=0 first_mod=24024
+
+[14.5]
+  speeds=(1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16)
+  gates 14:1 2:6 7:1 units:7
+  class=positive_gap forbidden=274311/280280 max_gap=5/1848 gap/thresh=0.037879
+  endpoints=222 unprotected=32 unit=False peel=19 core_E=0 first_mod=3363360
+
+[14.6]
+  speeds=(1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15)
+  gates 14:1 2:6 7:1 units:7
+  class=positive_gap forbidden=1232027/1261260 max_gap=5/1764 gap/thresh=0.039683
+  endpoints=206 unprotected=28 unit=False peel=22 core_E=0 first_mod=2522520
+
+Dead-end note: every 14-gated survivor still has positive gap or empty core.
+
+Cycle B: fifteen-runner idea (k=14, n=15)
+[15.1]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  gates 15:0 3:4 5:2 units:8
+  class=boundary_only forbidden=1 max_gap=0 gap/thresh=0.000000
+  endpoints=202 unprotected=8 unit=True peel=14 core_E=0 first_mod=15
+
+[15.2]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+[15.3]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+[15.4]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+[15.5]
+  speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 17)
+  gates 15:1 3:4 5:3 units:8
+  class=positive_gap forbidden=1623394/1640925 max_gap=1/468 gap/thresh=0.032051
+  endpoints=226 unprotected=20 unit=False peel=16 core_E=0 first_mod=6563700
+
+[15.6]
+  speeds=(1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 15, 16, 17)
+  gates 15:1 3:4 5:3 units:8
+  class=positive_gap forbidden=6474451/6563700 max_gap=1/468 gap/thresh=0.032051
+  endpoints=242 unprotected=28 unit=False peel=15 core_E=0 first_mod=26254800
+
+Dead-end note: the 15=3*5 gate also leaks; no all-protected core found.
+
+Cycle C: disproof-construction pressure
+[X.1]
+  speeds=(7, 8, 17, 43, 46, 53, 56, 58, 62, 63, 70, 71, 79, 90)
+  gates 15:1 3:2 5:2 units:11
+  class=positive_gap forbidden=2530998724849669/2830784205500370 max_gap=181/67095 gap/thresh=0.040465
+  endpoints=1430 unprotected=212 unit=False peel=14 core_E=0 first_mod=169847052330022200
+
+[X.2]
+  speeds=(3, 5, 10, 15, 32, 35, 38, 54, 62, 68, 73, 80, 89, 90)
+  gates 15:2 3:4 5:6 units:6
+  class=positive_gap forbidden=6408790762009/7377175877400 max_gap=131/45900 gap/thresh=0.042810
+  endpoints=1288 unprotected=228 unit=False peel=19 core_E=0 first_mod=29508703509600
+
+[X.3]
+  speeds=(1, 2, 6, 35, 38, 61, 64, 72, 82, 83, 84, 85, 90)
+  gates 14:1 2:8 7:2 units:4
+  class=positive_gap forbidden=8333325316147/9461998486080 max_gap=3/976 gap/thresh=0.043033
+  endpoints=1386 unprotected=232 unit=False peel=27 core_E=0 first_mod=18923996972160
+
+[X.4]
+  speeds=(1, 19, 24, 32, 33, 36, 39, 44, 55, 63, 75, 85, 89, 90)
+  gates 15:2 3:7 5:4 units:5
+  class=positive_gap forbidden=1365495512009/1553890338000 max_gap=3/1000 gap/thresh=0.045000
+  endpoints=1366 unprotected=220 unit=False peel=18 core_E=0 first_mod=3107780676000
+
+[X.5]
+  speeds=(6, 10, 20, 27, 35, 41, 55, 73, 76, 78, 84, 85, 89)
+  gates 14:1 2:6 7:2 units:6
+  class=positive_gap forbidden=16948476052237/19150327336140 max_gap=155/48216 gap/thresh=0.045006
+  endpoints=1324 unprotected=182 unit=False peel=19 core_E=0 first_mod=651111129428760
+
+[X.6]
+  speeds=(10, 14, 18, 27, 38, 56, 68, 70, 71, 77, 78, 84, 89)
+  gates 14:4 2:9 7:5 units:3
+  class=positive_gap forbidden=1936867530869/2206524279960 max_gap=41/12460 gap/thresh=0.046067
+  endpoints=1390 unprotected=200 unit=False peel=13 core_E=0 first_mod=30891339919440
+
+[X.7]
+  speeds=(1, 5, 31, 32, 39, 42, 46, 50, 74, 79, 80, 81, 88)
+  gates 14:1 2:7 7:1 units:6
+  class=positive_gap forbidden=19940738739661/22530777469200 max_gap=20/5957 gap/thresh=0.047004
+  endpoints=1282 unprotected=188 unit=False peel=15 core_E=0 first_mod=1892585307412800
+
+[X.8]
+  speeds=(3, 7, 10, 17, 23, 30, 42, 55, 60, 67, 68, 70, 85, 90)
+  gates 15:3 3:5 5:7 units:5
+  class=positive_gap forbidden=397938964/453863025 max_gap=178/55275 gap/thresh=0.048304
+  endpoints=1232 unprotected=192 unit=False peel=17 core_E=0 first_mod=5446356300
+
+Dead-end note: random high-coverage gated searches did not produce an open cover.
+
+=== Feedback lap 2 ===
+Cycle A: fourteen-runner attack (k=13, n=14)
+[14.1]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  gates 14:0 2:6 7:1 units:6
+  class=boundary_only forbidden=1 max_gap=0 gap/thresh=0.000000
+  endpoints=176 unprotected=6 unit=True peel=15 core_E=0 first_mod=14
+
+[14.2]
+  speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  gates 14:1 2:6 7:2 units:6
+  class=positive_gap forbidden=851/858 max_gap=5/1848 gap/thresh=0.037879
+  endpoints=192 unprotected=8 unit=False peel=27 core_E=0 first_mod=24024
+
+[14.3]
+  speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  gates 14:1 2:6 7:2 units:6
+  class=positive_gap forbidden=851/858 max_gap=5/1848 gap/thresh=0.037879
+  endpoints=192 unprotected=8 unit=False peel=27 core_E=0 first_mod=24024
+
+[14.4]
+  speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  gates 14:1 2:6 7:2 units:6
+  class=positive_gap forbidden=851/858 max_gap=5/1848 gap/thresh=0.037879
+  endpoints=192 unprotected=8 unit=False peel=27 core_E=0 first_mod=24024
+
+[14.5]
+  speeds=(1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16)
+  gates 14:1 2:6 7:1 units:7
+  class=positive_gap forbidden=274311/280280 max_gap=5/1848 gap/thresh=0.037879
+  endpoints=222 unprotected=32 unit=False peel=19 core_E=0 first_mod=3363360
+
+[14.6]
+  speeds=(1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15)
+  gates 14:1 2:6 7:1 units:7
+  class=positive_gap forbidden=1232027/1261260 max_gap=5/1764 gap/thresh=0.039683
+  endpoints=206 unprotected=28 unit=False peel=22 core_E=0 first_mod=2522520
+
+Dead-end note: every 14-gated survivor still has positive gap or empty core.
+
+Cycle B: fifteen-runner idea (k=14, n=15)
+[15.1]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  gates 15:0 3:4 5:2 units:8
+  class=boundary_only forbidden=1 max_gap=0 gap/thresh=0.000000
+  endpoints=202 unprotected=8 unit=True peel=14 core_E=0 first_mod=15
+
+[15.2]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+[15.3]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+[15.4]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+[15.5]
+  speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 17)
+  gates 15:1 3:4 5:3 units:8
+  class=positive_gap forbidden=1623394/1640925 max_gap=1/468 gap/thresh=0.032051
+  endpoints=226 unprotected=20 unit=False peel=16 core_E=0 first_mod=6563700
+
+[15.6]
+  speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 23)
+  gates 15:1 3:4 5:3 units:8
+  class=positive_gap forbidden=1462289/1480050 max_gap=1/468 gap/thresh=0.032051
+  endpoints=238 unprotected=16 unit=False peel=16 core_E=0 first_mod=2960100
+
+Dead-end note: the 15=3*5 gate also leaks; no all-protected core found.
+
+Cycle C: disproof-construction pressure
+[X.1]
+  speeds=(5, 8, 9, 14, 28, 55, 62, 68, 70, 78, 79, 86, 88)
+  gates 14:3 2:9 7:3 units:4
+  class=positive_gap forbidden=1332699095269/1505287743960 max_gap=181/66220 gap/thresh=0.038266
+  endpoints=1292 unprotected=236 unit=False peel=17 core_E=0 first_mod=3010575487920
+
+[X.2]
+  speeds=(9, 12, 20, 22, 27, 56, 60, 67, 68, 78, 79, 86, 89)
+  gates 14:1 2:8 7:1 units:5
+  class=positive_gap forbidden=103636752820199/118452019582260 max_gap=97/33712 gap/thresh=0.040282
+  endpoints=1330 unprotected=196 unit=False peel=13 core_E=0 first_mod=5211888861619440
+
+[X.3]
+  speeds=(8, 12, 16, 35, 37, 47, 57, 64, 66, 67, 73, 75, 83, 90)
+  gates 15:2 3:5 5:3 units:8
+  class=positive_gap forbidden=24581395066843561/27885820498767000 max_gap=124/45225 gap/thresh=0.041128
+  endpoints=1446 unprotected=264 unit=False peel=16 core_E=0 first_mod=223086563990136000
+
+[X.4]
+  speeds=(7, 8, 20, 30, 33, 34, 50, 53, 60, 67, 72, 74, 75, 83)
+  gates 15:3 3:5 5:5 units:7
+  class=positive_gap forbidden=170051361820253/192709845751500 max_gap=34/12395 gap/thresh=0.041146
+  endpoints=1324 unprotected=228 unit=False peel=14 core_E=0 first_mod=385419691503000
+
+[X.5]
+  speeds=(3, 4, 8, 15, 30, 33, 36, 48, 52, 56, 78, 85, 88)
+  gates 14:1 2:9 7:1 units:4
+  class=positive_gap forbidden=15439267/17153136 max_gap=7/2288 gap/thresh=0.042832
+  endpoints=1054 unprotected=188 unit=False peel=18 core_E=0 first_mod=171531360
+
+[X.6]
+  speeds=(6, 21, 26, 36, 42, 44, 45, 53, 54, 57, 60, 66, 86)
+  gates 14:1 2:9 7:2 units:3
+  class=positive_gap forbidden=48895113929/54613819260 max_gap=47/13860 gap/thresh=0.047475
+  endpoints=1182 unprotected=170 unit=False peel=15 core_E=0 first_mod=109227638520
+
+[X.7]
+  speeds=(3, 22, 29, 30, 51, 56, 58, 65, 74, 76, 77, 87, 89, 90)
+  gates 15:2 3:5 5:3 units:8
+  class=positive_gap forbidden=5565355665757/6412785894900 max_gap=179/54600 gap/thresh=0.049176
+  endpoints=1598 unprotected=236 unit=False peel=17 core_E=0 first_mod=166732433267400
+
+[X.8]
+  speeds=(1, 13, 15, 29, 31, 42, 47, 56, 75, 78, 80, 88, 89, 90)
+  gates 15:3 3:5 5:4 units:8
+  class=positive_gap forbidden=725578250165/813083943672 max_gap=92/28035 gap/thresh=0.049224
+  endpoints=1458 unprotected=224 unit=False peel=23 core_E=0 first_mod=203270985918000
+
+Dead-end note: random high-coverage gated searches did not produce an open cover.
+
+Cross-cycle hardest survivors
+[hard.1]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  gates 14:0 2:6 7:1 units:6
+  class=boundary_only forbidden=1 max_gap=0 gap/thresh=0.000000
+  endpoints=176 unprotected=6 unit=True peel=15 core_E=0 first_mod=14
+
+[hard.2]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  gates 14:0 2:6 7:1 units:6
+  class=boundary_only forbidden=1 max_gap=0 gap/thresh=0.000000
+  endpoints=176 unprotected=6 unit=True peel=15 core_E=0 first_mod=14
+
+[hard.3]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  gates 15:0 3:4 5:2 units:8
+  class=boundary_only forbidden=1 max_gap=0 gap/thresh=0.000000
+  endpoints=202 unprotected=8 unit=True peel=14 core_E=0 first_mod=15
+
+[hard.4]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  gates 15:0 3:4 5:2 units:8
+  class=boundary_only forbidden=1 max_gap=0 gap/thresh=0.000000
+  endpoints=202 unprotected=8 unit=True peel=14 core_E=0 first_mod=15
+
+[hard.5]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+[hard.6]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+[hard.7]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+[hard.8]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+[hard.9]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+[hard.10]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  gates 15:1 3:5 5:3 units:7
+  class=positive_gap forbidden=95717/96525 max_gap=1/495 gap/thresh=0.030303
+  endpoints=206 unprotected=12 unit=False peel=16 core_E=0 first_mod=96525
+
+Synthesis
+  14-runner route: the n=14 gate is necessary but seems to create
+  leaks; the hardest local example has a long peel rather than a core.
+  15-runner route: n=15=3*5 suggests the same CRT-gate descent, now
+  with two prime channels; exploratory gated sets also leak.
+  Disproof route: sampling tries to maximize coverage under the same
+  gates, but no open cover or nonempty protection core appears.
+  New common target: prove composite-gate protection cores project to
+  smaller Bohr-boundary cores along the n-divisible speed channel.
