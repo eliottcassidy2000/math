@@ -329,6 +329,9 @@ The `n=14` scalar-puncture misses have a repair deficit: the best non-reverting 
 **T384** #lonely-runner #fifteen-runners #torsion-shell #disproof-pressure | certainty: medium-high computational | source: codex-2026-05-31-S375
 The forced `n=15` analogue is a `{5,10}` torsion-shell moat: supports `1..4` have best missed counts `120,220,280,290`, while far-from-scalar local search bottoms out at `230`. Local gated disproof search still leaks: best gap ratios were `0.037879` for `n=14` and `0.030303` for `n=15`, with empty endpoint cores.
 
+**T385** #lonely-runner #recursive-metrics #unit-skeleton #quotient-ladders | certainty: medium computational synthesis | source: codex-2026-05-31-S376
+LRC now has a tournament-style recursive metric atlas over `n=2..18`: cell-arrangement complexity `C(n)`, unit density `phi(n)/(n-1)`, scalar-puncture moat, endpoint peel depth, gate response, and quotient-ladder pressure. Primes maximize the unit skeleton; composites create nonunit puncture deltas and tiny quotient-ladder gaps. The next object should be an LRC endpoint-transfer matrix from leak layers at `n` to leak layers at `n+1`. See HYP-1831.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

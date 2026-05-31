@@ -2808,3 +2808,10 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** `lonely_runner_feedback_loop_s375.py` scans constrained far-from-scalar searches, `n=14` half-turn shells, `n=15` `{5,10}` shells, exposed-cell repair ledgers, and local gated disproof searches. The `n=15` best non-reverting repair covers only `60/120` old misses and creates at least `340` total misses.
 **Predictions:** A Hall-style exposed-cell deficit theorem should prove the scalar-puncture moat symbolically and provide a branch-and-bound lower bound for the normalized `n=14` quotient search.
 **See:** `05-knowledge/hypotheses/HYP-1830-lrc-exposed-cell-repair-deficit.md`, `04-computation/lonely_runner_feedback_loop_s375.py`, `05-knowledge/results/lonely_runner_feedback_loop_s375.out`, `07-reflections/lonely-runner-feedback-loop-s375.md`.
+
+## HYP-1831: The Lonely Runner frontier has a recursive metric tower (codex-2026-05-31-S376)
+**Status:** EXPLORATORY recursive-structure hypothesis.
+**What:** The LRC analogue of the tournament structure program is a metric tower over threshold denominator `n`: arrangement complexity `C(n)`, unit-boundary density, scalar-puncture moat curvature, endpoint closure defect, and quotient-ladder/gate pressure.
+**Evidence:** `lonely_runner_recursive_metrics_s376.py` computes exact rows for `n=2..18`. Primes maximize `phi(n)/(n-1)`, composites expose quotient layers and nonunit puncture deltas, `C(n)` has divisor-sensitive jumps, and tiny quotient-ladder gaps below `0.02` occur at `n=10,12,14,15,16,18` but with large endpoint defects.
+**Predictions:** A useful recursive LRC theorem should be a transfer theorem with separate prime/composite layers, not a scalar monotonicity theorem. Future searches should rank candidates by the vector `(ladder gap, endpoint defect, scalar moat density)`.
+**See:** `05-knowledge/hypotheses/HYP-1831-lrc-recursive-metric-tower.md`, HYP-1829, `04-computation/lonely_runner_recursive_metrics_s376.py`, `05-knowledge/results/lonely_runner_recursive_metrics_s376.out`, `07-reflections/lonely-runner-recursive-metrics-s376.md`.

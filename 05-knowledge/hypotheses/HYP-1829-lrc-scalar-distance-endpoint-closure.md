@@ -6,6 +6,7 @@ related:
   - HYP-1823
   - HYP-1827
   - HYP-1828
+  - HYP-1831
   - THM-357
   - THM-360
 ---
@@ -121,3 +122,4 @@ forces a finite endpoint leak layer.
 - `07-reflections/lonely-runner-feedback-cycle-s374.md`
 - HYP-1827
 - HYP-1828
+- HYP-1831

@@ -13,6 +13,16 @@
 **Verification:** `python3 -m py_compile 04-computation/lonely_runner_feedback_loop_s375.py` succeeded; the S375 script was run end-to-end and produced the stored 142-line result.
 **Next:** Prove the one-step repair deficit symbolically; extend to two-step repair sets; feed repair deficit into a normalized `n=14` branch-and-bound certificate and endpoint-descent ranking.
 
+## codex-2026-05-31-S376 - Lonely Runner Recursive Metric Atlas
+
+**Account:** Codex
+**Git first:** Rebased over remote S375 repair-deficit work and renumbered this metric-atlas strand to S376.
+**User prompt:** Understand the recursive nature of the Lonely Runner Conjecture as `n` changes, in the spirit of the repo's tournament-structure metrics and higher-order concepts.
+**Computation:** Added `04-computation/lonely_runner_recursive_metrics_s376.py` and stored `05-knowledge/results/lonely_runner_recursive_metrics_s376.out`. The script computes exact metrics for `n=2..18`: micro-staircase arrangement complexity `C(n)`, denominator spectra, unit-boundary density, initial endpoint peel depth, scalar-puncture moat profiles, one-gate response, and quotient-ladder pressure.
+**Findings:** The LRC recursion splits into several layers. Primes maximize the unit-boundary skeleton `phi(n)/(n-1)`, while composites introduce quotient layers and nonunit scalar-puncture deltas. Arrangement jumps are divisor-sensitive (`C(14)=812`, `C(18)=1728`, with `17->18` jump `368`). Tiny quotient-ladder gaps appear at `n=10,12,14,15,16,18`, but they carry large endpoint defects, e.g. `n=14` gap/th `0.005411` with `84` unprotected endpoints.
+**Synthesis:** Added HYP-1831 and `07-reflections/lonely-runner-recursive-metrics-s376.md`. The proposed tournament-style LRC invariant vector is `(arrangement complexity, unit density, scalar moat curvature, endpoint closure defect, quotient-ladder gap pressure)`.
+**Next:** Build an LRC endpoint-transfer matrix from `n` to `n+1`, prove or explain the denominator-arrangement formula for `C(n)`, and extend the exact atlas beyond `n=18` with an optimized gate channel.
+
 ## codex-2026-05-31-S374 - Forced 14/15/Disproof Feedback Cycle
 
 **Account:** Codex

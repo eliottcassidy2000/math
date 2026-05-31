@@ -1,0 +1,86 @@
+Lonely Runner recursive metric atlas (codex-2026-05-31 S376)
+Exact arithmetic, n=2..18, gate q<= 32.
+
+Core recursive LRC metrics
+n  factors  C(n)  dC  denoms  phi  phi/(n-1)  E0  peel  moat  moat/cand  pos_gcd  delta_gcd
+ 2        2     2    -      2    1   1.000000    1     1     0   0.000000       1         1
+ 3        3     6    4      4    2   1.000000    4     2     2   0.111111       1         1
+ 4      2^2    16   10      7    2   0.666667   10     3     4   0.062500       2       1,2
+ 5        5    30   14      8    4   1.000000   16     4     6   0.040000       1         1
+ 6      2*3    60   30     14    2   0.400000   28     6    12   0.033333       2         3
+ 7        7    84   24     12    6   1.000000   36     6    20   0.034014       1         1
+ 8      2^3   144   60     19    4   0.571429   52     7    16   0.013889       2         4
+ 9      3^2   198   54     20    6   0.750000   66     8    36   0.020202     1,3         3
+10      2*5   280   82     26    4   0.444444   86     9    30   0.010714       2         5
+11       11   352   72     20   10   1.000000  100    10    72   0.018595       1         1
+12    2^2*3   504  152     39    4   0.363636  128    11    72   0.011905     2,6         6
+13       13   598   94     24   12   1.000000  144    12    44   0.005660       1         1
+14      2*7   812  214     38    6   0.461538  176    15    56   0.004926       2         7
+15      3*5   960  148     44    8   0.571429  202    14   120   0.008333     1,3         5
+16      2^4  1152  192     47    8   0.533333  232    15   128   0.006944       1         8
+17       17  1360  208     32   16   1.000000  256    16   240   0.010381       1         1
+18    2*3^2  1728  368     62    6   0.352941  300    18   198   0.006366       2         9
+
+Counterexample-pressure channels
+n= 2 gate:   -
+     ladder: -
+n= 3 gate:   drop=2,gate=96; positive_gap; gap/th=0.010417; unprot=64; first=97/288
+     ladder: -
+n= 4 gate:   drop=2,gate=128; positive_gap; gap/th=0.015625; unprot=44; first=5/12
+     ladder: d=2,skip=2; positive_gap; gap/th=0.166667; unprot=6; first=1/4
+n= 5 gate:   drop=2,gate=160; positive_gap; gap/th=0.018750; unprot=32; first=321/800
+     ladder: -
+n= 6 gate:   drop=2,gate=192; positive_gap; gap/th=0.020833; unprot=20; first=13/30
+     ladder: d=3,skip=2; positive_gap; gap/th=0.050000; unprot=12; first=13/72
+n= 7 gate:   drop=6,gate=224; positive_gap; gap/th=0.022321; unprot=28; first=225/1568
+     ladder: -
+n= 8 gate:   drop=6,gate=256; positive_gap; gap/th=0.023438; unprot=16; first=9/56
+     ladder: d=4,skip=6; positive_gap; gap/th=0.028571; unprot=24; first=5/32
+n= 9 gate:   drop=4,gate=288; positive_gap; gap/th=0.024306; unprot=24; first=577/2592
+     ladder: d=3,skip=3; positive_gap; gap/th=0.039683; unprot=34; first=19/162
+n=10 gate:   drop=4,gate=30; positive_gap; gap/th=0.014286; unprot=12; first=71/300
+     ladder: d=5,skip=4; positive_gap; gap/th=0.017857; unprot=48; first=7/50
+n=11 gate:   drop=10,gate=352; positive_gap; gap/th=0.025568; unprot=24; first=353/3872
+     ladder: -
+n=12 gate:   drop=4,gate=384; positive_gap; gap/th=0.026042; unprot=24; first=25/108
+     ladder: d=6,skip=10; positive_gap; gap/th=0.015873; unprot=60; first=7/72
+n=13 gate:   drop=6,gate=13; positive_gap; gap/th=0.022727; unprot=8; first=27/169
+     ladder: -
+n=14 gate:   drop=6,gate=224; positive_gap; gap/th=0.016369; unprot=12; first=29/182
+     ladder: d=7,skip=6; positive_gap; gap/th=0.005411; unprot=84; first=9/98
+n=15 gate:   drop=6,gate=75; positive_gap; gap/th=0.023030; unprot=16; first=31/195
+     ladder: d=5,skip=6; positive_gap; gap/th=0.010606; unprot=66; first=7/75
+n=16 gate:   drop=6,gate=512; positive_gap; gap/th=0.027344; unprot=20; first=33/208
+     ladder: d=8,skip=14; positive_gap; gap/th=0.007576; unprot=140; first=9/128
+n=17 gate:   drop=16,gate=17; positive_gap; gap/th=0.025641; unprot=16; first=18/289
+     ladder: -
+n=18 gate:   drop=8,gate=108; positive_gap; gap/th=0.021044; unprot=24; first=37/306
+     ladder: d=9,skip=8; positive_gap; gap/th=0.005682; unprot=176; first=11/162
+
+Transition signatures n -> n+1
+edge  dC  dphi  dmoat  density_shift  event
+ 2->3     4     1      2      0.111111 prime
+ 3->4    10     0      2     -0.048611 divs=1;nonunit_delta=1,2
+ 4->5    14     2      2     -0.022500 prime
+ 5->6    30    -2      6     -0.006667 divs=2;nonunit_delta=3
+ 6->7    24     4      8      0.000680 prime
+ 7->8    60    -2     -4     -0.020125 divs=2;nonunit_delta=4
+ 8->9    54     2     20      0.006313 divs=1;nonunit_delta=3
+ 9->10   82    -2     -6     -0.009488 divs=2;nonunit_delta=5;tiny_ladder_gap
+10->11   72     6     42      0.007881 prime
+11->12  152    -6      0     -0.006690 divs=4;nonunit_delta=6;tiny_ladder_gap
+12->13   94     8    -28     -0.006245 prime
+13->14  214    -6     12     -0.000734 divs=2;nonunit_delta=7;tiny_ladder_gap
+14->15  148     2     64      0.003407 divs=2;nonunit_delta=5;tiny_ladder_gap
+15->16  192     0      8     -0.001389 divs=3;nonunit_delta=8;tiny_ladder_gap
+16->17  208     8    112      0.003436 prime
+17->18  368   -10    -42     -0.004015 divs=4;nonunit_delta=9;tiny_ladder_gap
+
+Higher-order concepts suggested by the atlas
+  1. C(n) is an arrangement-complexity analogue of tournament class counts; its increments jump at divisor-rich n.
+  2. phi(n)/(n-1) is the unit-boundary skeleton density; primes maximize it, while composites expose quotient layers.
+  3. The scalar-puncture moat is a local curvature metric around the Dirichlet equality spine.
+  4. Nonunit puncture deltas mark divisor resonance. In this range they occur at n=[4, 6, 8, 9, 10, 12, 14, 15, 16, 18].
+  5. Quotient ladders are the LRC analogue of special tournament families: they have tiny global gaps but usually large endpoint defects.
+  6. Tiny ladder gaps below 0.02 occur at n=[10, 12, 14, 15, 16, 18]; these are the right places to study endpoint-transfer obstructions.
+  phase_hist={'prime': 7, 'composite': 10}
