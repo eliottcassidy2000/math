@@ -485,6 +485,15 @@ The `n=16` owner-16 endpoint subproblem is a literal IP lower bound: among lower
 **T454** #lonely-runner #two-adic-grid #column-families #odd-payload | certainty: high exact frontier-window audit + proof split | source: codex-2026-05-31-S421
 LRC inherits the repo's two natural-number modes: odd roots move by `x+2`, vertical columns by `x*2`. Boundary debt `phi(n)` has a first-doubling seam: `phi(2m)=phi(m)` for odd `m`, then later row steps double. Structurally, `14=2*7` and `18=2*9` are adjacent first-even column-mode children, while `16=16*1` is the pure dyadic row-mode lab; HYP-1890 recasts this as an IP row/column invoice. See HYP-1891.
 
+**T455** #lonely-runner #unit-skeleton #column-family #totient | certainty: exact verified range + theorem-shaped | source: codex-2026-05-31-S411
+Initial LRC segments expose exactly the unit skeleton: S411 verifies `unprotected({1,...,n-1}) = phi(n)` for `3<=n<=40`. Along a fixed odd core `b`, `phi(2b)=phi(b)` at the first doubling and then the unit count doubles on later rows. This is the LRC version of the tournament column-family seam. See HYP-1881.
+
+**T456** #lonely-runner #lpd-ladder #row-parent #doubling-mode | certainty: exact computation through n=24 + structural identity | source: codex-2026-05-31-S411
+For even denominators, `lpd(n)=n/2`, so the largest-proper-divisor quotient ladder is literally the row parent in the `n=2^r*b` grid. S411 records exact lpd ladder pressure through `n=24`; examples: `n=14` product `5/11`, `n=16` product `35/33`, `n=18` product `1`, `n=20` product `36/65`, `n=24` product `121/170`. See HYP-1881.
+
+**T457** #natural-numbers #product-sum #lrc-recursion #top-row | certainty: medium proof architecture | source: codex-2026-05-31-S411
+The old natural-number split gives a two-mode LRC proof architecture: top-row `+2` motion changes `phi(n)`, prime/composite status, and product-sum factor cores; row `*2` motion keeps odd core and transfers endpoint debt through `n/2`. Thus `n=14` is the first prime-core seam `7->14`, `n=16` is the pure dyadic row lab, and `n=18` is the first square-odd-core seam `9->18`; S400/S410 Bruhat-Tits depth is the row-mode metric. See HYP-1881.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

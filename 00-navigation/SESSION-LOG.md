@@ -41,6 +41,16 @@
 **Synthesis:** Added HYP-1868 and `07-reflections/lrc-bruhat-tits-frontier-s400.md`. The proof target becomes: after quotienting base denominator levels, every all-repaired endpoint core has positive frontier mass in at least one prime tree or in the adelic product building.
 **Verification:** `python -m py_compile 04-computation/lrc_bruhat_tits_frontier_s400.py` succeeded; rerunning the script produced the stored output.
 
+## codex-2026-05-31-S411 - LRC Column/Row Mode Atlas
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S399; during close-out, upstream S400 Bruhat-Tits frontier and S410 Bruhat-Tits descent landed first, so this session was rebased and renumbered to S411/HYP-1881. Later close-out rebases landed upstream S420 and S421, which claimed T451-T454, so the tangents shifted to T455-T457.
+**User prompt:** Revisit the old natural-number view as odd `x+2` chains and even `x*2` chains, relate it to tournament recursion modes `n->n+2` and `n->2n`, and use it to make LRC progress.
+**Computation:** Added `04-computation/lrc_column_row_modes_s411.py` and stored `05-knowledge/results/lrc_column_row_modes_s411.out`. The script writes each denominator as `n=2^r*b`, verifies initial-segment boundary debt against `phi(n)` through `n<=40`, scans largest-proper-divisor ladders through `n=24`, and overlays product-sum minima near the LRC frontier.
+**Findings:** Initial segments leave exactly `phi(n)` unprotected endpoints in the verified range. Along a fixed odd core `b`, `phi(2b)=phi(b)` at the first doubling, then `phi(2^(r+1)b)=2 phi(2^r b)` for later rows. Thus the first row doubling opens quotient/nonunit room without adding unit witnesses, mirroring the tournament column-family seam. For every even denominator in the ladder table, `lpd(n)=n/2`, so the dominant quotient ladder is literally the row parent.
+**Synthesis:** Added HYP-1881 and `07-reflections/lrc-column-row-modes-s411.md`. The proposed proof split is two-dimensional: top-row `+2` movement should be controlled by unit skeleton and product-sum cores, while row `*2` movement should be controlled by endpoint-debt transfer from `n/2` to `n`; the latter now sits beside the S400/S410 Bruhat-Tits frontier/descent machinery.
+**Next:** Add `(row, odd_core)`, `phi(n)`, seam defect, `lpd` mode, row-parent debt, and product-sum core to the LRC search feature vector.
+
 ## codex-2026-05-31-S398 - LRC Gap-Debt Product Law
 
 **Account:** Codex
