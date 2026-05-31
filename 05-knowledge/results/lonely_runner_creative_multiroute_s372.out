@@ -1,0 +1,139 @@
+Lonely Runner creative multi-route sprint (codex-2026-05-31 S372)
+Reduced frontier: k=13 moving speeds, n=14, threshold=1/14.
+
+Cell system n=14: patterns=812 candidates=11368 all_scalar_full=True gcd_hist=((1, 6), (2, 6), (7, 1), (14, 1))
+Cell system n=15: patterns=960 candidates=14400 all_scalar_full=True gcd_hist=((1, 8), (3, 4), (5, 2), (15, 1))
+
+Route 1: scalar-puncture moat atlas
+  n  patterns  best_h1_missed  best_count  positions  deltas
+   4       16               4          12 (2,)             (1, 2, 3)
+   5       30               6          20 (2,)             (1, 2, 3, 4)
+   6       60              12           6 (2,)             (3,)
+   7       84              20          84 (3, 6)           (1, 2, 3, 4, 5, 6)
+   8      144              16           8 (6,)             (4,)
+   9      198              36          36 (4, 6)           (3, 6)
+  10      280              30          10 (4,)             (5,)
+  11      352              72         110 (10,)            (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+  12      504              72          24 (6, 10)          (6,)
+  13      598              44         156 (6,)             (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+  14      812              56          14 (6,)             (7,)
+  15      960             120          60 (6, 14)          (5, 10)
+  16     1152             128          16 (15,)            (8,)
+  17     1360             240         272 (16,)            (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
+  18     1728             198          18 (8,)             (9,)
+  19     1938             204         342 (18,)            (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+  20     2400             180          20 (18,)            (10,)
+  21     2688             224          42 (20,)            (7, 14)
+  22     3080             220          22 (10,)            (11,)
+
+Route 2: exact radius-1 and radius-2 punctures around scalar ramps
+  n=14 radius=1 checked=2366 best_missed=56 best_count=14 positions=(6,) deltas=(7,)
+    example=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    example=(1, 2, 3, 4, 5, 13, 7, 8, 9, 10, 11, 12, 13)
+    example=(2, 4, 6, 8, 10, 5, 0, 2, 4, 6, 8, 10, 12)
+  n=14 radius=2 checked=184548 best_missed=112 best_count=14 positions=(8, 12) deltas=(7,)
+    example=(0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 7, 0)
+    example=(1, 2, 3, 4, 5, 6, 7, 1, 9, 10, 11, 5, 13)
+    example=(2, 4, 6, 8, 10, 12, 0, 9, 4, 6, 8, 3, 12)
+  n=15 radius=1 checked=2940 best_missed=120 best_count=60 positions=(6, 14) deltas=(5, 10)
+    example=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0)
+    example=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0)
+    example=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+  n=15 radius=2 checked=267540 best_missed=220 best_count=60 positions=(6, 14) deltas=(5, 10)
+    example=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 5)
+    example=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 10)
+    example=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 5)
+
+Route 3: greedy non-scalar blocker searches
+  n=14 best=11312/11368 missed=56 distance_to_scalar=1 vector=(8, 2, 10, 4, 12, 13, 0, 8, 2, 10, 4, 12, 6)
+  n=15 best=14280/14400 missed=120 distance_to_scalar=1 vector=(7, 14, 6, 13, 5, 12, 4, 11, 3, 10, 2, 9, 1, 3)
+
+Route 4: anatomy of the n=14 one-puncture witness moat
+  zero-ramp puncture at i=6 by +7
+  vector=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+  missed_cells=56
+  s_hist=((1, 8), (3, 8), (5, 8), (7, 8), (9, 8), (11, 8), (13, 8))
+  unique_patterns=8 total_alpha_width=7/858
+  s= 1 pattern_ranges=[(129, 129), (140, 142), (669, 671), (682, 682)]
+  s= 3 pattern_ranges=[(129, 129), (140, 142), (669, 671), (682, 682)]
+  s= 5 pattern_ranges=[(129, 129), (140, 142), (669, 671), (682, 682)]
+  s= 7 pattern_ranges=[(129, 129), (140, 142), (669, 671), (682, 682)]
+  s= 9 pattern_ranges=[(129, 129), (140, 142), (669, 671), (682, 682)]
+  s=11 pattern_ranges=[(129, 129), (140, 142), (669, 671), (682, 682)]
+  s=13 pattern_ranges=[(129, 129), (140, 142), (669, 671), (682, 682)]
+  alpha_cells=
+    p= 129 [29/182, 9/56) width=1/728
+    p= 140 [29/168, 17/98) width=1/1176
+    p= 141 [17/98, 11/63) width=1/882
+    p= 142 [11/63, 27/154) width=1/1386
+    p= 669 [127/154, 52/63) width=1/1386
+    p= 670 [52/63, 81/98) width=1/882
+    p= 671 [81/98, 139/168) width=1/1176
+    p= 682 [47/56, 153/182) width=1/728
+
+  S364 transported best near-blocker
+  vector=(8, 2, 10, 4, 12, 13, 0, 8, 2, 10, 4, 12, 6)
+  missed_cells=56
+  s_hist=((1, 8), (3, 8), (5, 8), (7, 8), (9, 8), (11, 8), (13, 8))
+  unique_patterns=56 total_alpha_width=49/858
+  s= 1 pattern_ranges=[(205, 207), (218, 218), (477, 477), (488, 490)]
+  s= 3 pattern_ranges=[(89, 91), (102, 102), (361, 361), (372, 374)]
+  s= 5 pattern_ranges=[(245, 245), (256, 258), (785, 787), (798, 798)]
+  s= 7 pattern_ranges=[(129, 129), (140, 142), (669, 671), (682, 682)]
+  s= 9 pattern_ranges=[(13, 13), (24, 26), (553, 555), (566, 566)]
+  s=11 pattern_ranges=[(437, 439), (450, 450), (709, 709), (720, 722)]
+  s=13 pattern_ranges=[(321, 323), (334, 334), (593, 593), (604, 606)]
+  alpha_cells=
+    p=  13 [3/182, 1/56) width=1/728
+    p=  24 [5/168, 3/98) width=1/1176
+    p=  25 [3/98, 2/63) width=1/882
+    p=  26 [2/63, 5/154) width=1/1386
+    p=  89 [17/154, 1/9) width=1/1386
+    p=  90 [1/9, 11/98) width=1/882
+    p=  91 [11/98, 19/168) width=1/1176
+    p= 102 [1/8, 23/182) width=1/728
+    p= 129 [29/182, 9/56) width=1/728
+    p= 140 [29/168, 17/98) width=1/1176
+    p= 141 [17/98, 11/63) width=1/882
+    p= 142 [11/63, 27/154) width=1/1386
+    p= 205 [39/154, 16/63) width=1/1386
+    p= 206 [16/63, 25/98) width=1/882
+    p= 207 [25/98, 43/168) width=1/1176
+    p= 218 [15/56, 7/26) width=1/728
+
+Route 5: speed-set gate pressure
+  Hand-built n=14 families
+  initial segment: class=boundary_only mult_14=0 gap/thresh=0.000000 max_gap=0 boundary=6 unprotected=6 peel=15 core_E=0 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  single 14 gate: class=positive_gap mult_14=1 gap/thresh=0.045455 max_gap=1/308 boundary=24 unprotected=24 peel=14 core_E=0 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+  drop six add 14: class=positive_gap mult_14=1 gap/thresh=0.037879 max_gap=5/1848 boundary=8 unprotected=8 peel=27 core_E=0 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  factor 2x7 ladder: class=positive_gap mult_14=3 gap/thresh=0.122449 max_gap=3/343 boundary=116 unprotected=116 peel=14 core_E=0 speeds=(2, 4, 6, 7, 8, 10, 12, 14, 21, 28, 35, 42, 49)
+
+  Hand-built n=15 families
+  initial segment: class=boundary_only mult_15=0 gap/thresh=0.000000 max_gap=0 boundary=8 unprotected=8 peel=14 core_E=0 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  single 15 gate: class=positive_gap mult_15=1 gap/thresh=0.030303 max_gap=1/495 boundary=12 unprotected=12 peel=16 core_E=0 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  drop six add 15: class=positive_gap mult_15=1 gap/thresh=0.053030 max_gap=7/1980 boundary=8 unprotected=8 peel=29 core_E=0 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+  factor 3x5 ladder: class=positive_gap mult_15=3 gap/thresh=0.080000 max_gap=2/375 boundary=150 unprotected=150 peel=16 core_E=0 speeds=(3, 5, 6, 9, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50)
+
+  Random n=14 gate pressure
+  random gate 14 #19: class=positive_gap mult_14=2 gap/thresh=0.047167 max_gap=313/92904 boundary=188 unprotected=188 peel=21 core_E=0 speeds=(2, 6, 14, 22, 31, 40, 48, 58, 71, 74, 79, 81, 84)
+  random gate 14 #4: class=positive_gap mult_14=1 gap/thresh=0.057540 max_gap=29/7056 boundary=184 unprotected=184 peel=13 core_E=0 speeds=(7, 12, 19, 37, 45, 47, 49, 50, 65, 67, 72, 78, 84)
+  random gate 14 #35: class=positive_gap mult_14=1 gap/thresh=0.058725 max_gap=88/20979 boundary=158 unprotected=158 peel=19 core_E=0 speeds=(3, 10, 22, 24, 34, 36, 37, 42, 46, 61, 71, 72, 81)
+  random gate 14 #28: class=positive_gap mult_14=2 gap/thresh=0.058730 max_gap=37/8820 boundary=228 unprotected=228 peel=14 core_E=0 speeds=(4, 16, 36, 37, 47, 48, 56, 60, 63, 70, 74, 76, 79)
+  random gate 14 #29: class=positive_gap mult_14=2 gap/thresh=0.060714 max_gap=17/3920 boundary=224 unprotected=224 peel=18 core_E=0 speeds=(4, 5, 24, 40, 42, 48, 50, 62, 70, 76, 77, 80, 83)
+
+  Random n=15 gate pressure
+  random gate 15 #40: class=positive_gap mult_15=1 gap/thresh=0.048395 max_gap=98/30375 boundary=212 unprotected=212 peel=14 core_E=0 speeds=(3, 24, 26, 35, 38, 50, 57, 66, 68, 75, 81, 83, 84, 87)
+  random gate 15 #32: class=positive_gap mult_15=2 gap/thresh=0.050081 max_gap=154/46125 boundary=240 unprotected=240 peel=14 core_E=0 speeds=(8, 15, 18, 47, 50, 55, 56, 58, 64, 67, 75, 82, 86, 89)
+  random gate 15 #28: class=positive_gap mult_15=1 gap/thresh=0.050906 max_gap=74/21805 boundary=252 unprotected=252 peel=15 core_E=0 speeds=(7, 15, 27, 40, 44, 49, 58, 62, 66, 71, 81, 86, 88, 89)
+  random gate 15 #10: class=positive_gap mult_15=1 gap/thresh=0.051555 max_gap=21/6110 boundary=158 unprotected=158 peel=17 core_E=0 speeds=(4, 19, 20, 21, 25, 27, 45, 47, 52, 56, 69, 70, 72, 89)
+  random gate 15 #34: class=positive_gap mult_15=1 gap/thresh=0.051680 max_gap=4/1161 boundary=220 unprotected=220 peel=14 core_E=0 speeds=(9, 20, 25, 33, 36, 47, 56, 58, 60, 67, 76, 84, 85, 86)
+
+Synthesis
+  1. The old near-blockers are scalar ramps with a single divisor jump, not generic obstructions.
+  2. In the exact n=14 full-cell system, radius-1 scalar punctures leave at least 56 witnesses;
+     radius-2 punctures leave at least 112.  The scalar line has a visible moat.
+  3. The n=14 moat is organized as seven odd s-layers times eight alpha-cells, with
+     total alpha width 7/858 for the zero-ramp representative.
+  4. Random and hand-built gated speed sets again leaked by positive gaps or boundary witnesses.
+  5. Next proof target: prove the scalar-puncture moat symbolically, then combine it with
+     endpoint descent so any putative blocker must be far from every scalar ramp and still core-free.

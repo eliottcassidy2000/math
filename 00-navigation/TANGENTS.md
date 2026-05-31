@@ -314,6 +314,9 @@ Product-sum minima are usually factor packings, not binary divisor witnesses. Th
 **T379** #divisibility-dag #transitive-completion #sum-product #operation-complex | certainty: exploratory | source: codex-2026-05-31-S366b
 The operation complex has a clean projection ladder: two-input gates -> one-shadow -> endpoint minimization. Addition gives the transitive completion; multiplication gives the divisibility skeleton; product-sum numbers are minimal common endpoints after unit padding. This mirrors OCF-style packing and Paley/interval additive-versus-multiplicative phase competition.
 
+**T380** #lonely-runner #fourteen-runners #scalar-ramp #micro-staircase | certainty: exact local computation | source: codex-2026-05-31-S372
+The S364 best non-scalar blockers are scalar ramps with one coordinate punctured. In the exact `n=14` full-cell system, every radius-1 scalar puncture opens at least `56` witness cells, and every radius-2 puncture opens at least `112`; the best radius-1 case is coordinate `i=6` shifted by `+7`, giving seven odd `s`-layers times eight alpha-cells. See HYP-1827.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

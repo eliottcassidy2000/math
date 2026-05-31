@@ -50,6 +50,19 @@
 **Synthesis:** Added HYP-1823 and `07-reflections/lonely-runner-fourteen-runner-scalar-gauge-s367.md`. The new proof target is the zero-class lemma: every nonzero normalized residue vector should have a safe micro-staircase cell. This refines HYP-1817/HYP-1818 from "exclude scalar ramps" to "quotient the scalar line and prove zero is the only full blocker."
 **Next:** Use THM-363 as the gauge quotient foundation; formalize the `2`-torsion hard case by interval stencils; then build a branch-and-bound certificate for all normalized `n=14` classes using unit-shift splitting and nonunit quotient descent.
 
+## codex-2026-05-31-S372 - Lonely Runner Creative Multiroute Scalar-Puncture Moat
+
+**Account:** Codex
+**Git first:** Rebased over the remote S367/S368/S369/S370/S371 LRC thread and renumbered this local scalar-puncture route to avoid hypothesis/session collisions.
+**User prompt:** Spend a long creative session trying many multitudes of creative ways to crack the 14-runner case, a la thm-363 and others.
+**Computation:** Added `04-computation/lonely_runner_creative_multiroute_s372.py` and stored `05-knowledge/results/lonely_runner_creative_multiroute_s372.out`. The script tries scalar-puncture atlases, exact radius-1/radius-2 scalar-shell searches, greedy non-scalar blocker search, missed-cell anatomy, hand-built gate families, and random gated speed-set pressure.
+**Main finding:** The S364 best non-scalar blockers are not generic. They are scalar ramps with one coordinate punctured. For `n=14`, exact scalar-shell enumeration gives radius-1 minimum `56` witness cells and radius-2 minimum `112`; the best radius-1 case is coordinate `i=6` shifted by `+7` mod `14`, transported along scalar ramps. The zero-ramp representative has `56 = 7*8` witness cells: seven odd `s`-layers times eight alpha-cells, total alpha width `7/858`.
+**15-runner analogue:** For `n=15`, the exact radius-1 minimum is `120` witness cells, with positions `(6,14)` and deltas `(5,10)`; radius 2 bottoms out at `220`. This supports a divisor-layer interpretation rather than random residue behavior.
+**Disproof pressure:** Hand-built and random `14`/`15`-gated speed sets again leaked by positive gaps or boundary witnesses. All endpoint peels in the logged pressure examples ended with empty cores.
+**Synthesis:** Added HYP-1827 and `07-reflections/lonely-runner-creative-multiroute-s372.md`. New route: prove the scalar-puncture moat symbolically, then combine scalar-distance with quotient/endpoint descent so any full blocker must be both far from the Dirichlet scalar spine and unable to sustain an endpoint core.
+**Verification:** `python3 -m py_compile 04-computation/lonely_runner_creative_multiroute_s372.py` succeeded; the stored S372 result preserves the completed deterministic scalar-puncture ledger under the renumbered filename.
+**Next:** Prove the `n=14` radius-1 moat from the eight alpha-cell intervals; extend to radius 2; add a SAT/backtracking search constrained to scalar distance at least three; rank candidate speed sets by `(gap ratio, peel depth, scalar-distance signature)`.
+
 ## codex-2026-05-31-S366b - Formal Extension Investigation Operation Modes
 
 **Account:** Codex
