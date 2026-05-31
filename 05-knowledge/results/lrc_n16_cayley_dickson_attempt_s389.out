@@ -1,0 +1,94 @@
+LRC n=16 Cayley-Dickson proof attempt (codex-2026-05-31 S389)
+n=16 means k=15 moving speeds and threshold 1/16.
+
+Cayley-Dickson dictionary:
+  doubling layer      -> dyadic quotient layer
+  norm conservation   -> gap/debt ledger
+  dimension-16 zero divisor -> 16-gate protecting old units but leaking
+  lost alternativity  -> labelled endpoint cycle must be checked, not
+                         just the projected support cycle
+
+UNIT-GATE LEMMA
+==============================================================================
+For odd a, the unit endpoint t=a/16 can be strictly protected by
+speed v only if v*a == 0 mod 16, hence only if 16 divides v.
+This gives a real first branch of a proof attempt:
+  no 16-multiple -> an odd a/16 endpoint is a boundary witness.
+
+  v=16 protects odd unit endpoints [1, 3, 5, 7, 9, 11, 13, 15]
+  v=32 protects odd unit endpoints [1, 3, 5, 7, 9, 11, 13, 15]
+
+DYADIC GATE AND DESCENDANT-DEBT AUDIT
+==============================================================================
+family                 mult16 class         gap/th      unprot debt_norm  peel core first
+--------------------------------------------------------------------------------------------
+initial 1..15               0 boundary_only   0.000000       8         0    15    0     1/16
+single 16 gate              1 positive_gap   0.038462      16      8/13    16    0   17/256
+drop 8 add 16               1 positive_gap   0.048611      16       7/9    23    0   17/144
+drop 14 add 16              1 positive_gap   0.060606      12      8/11    18    0   17/240
+d=2 ladder skip 14          1 positive_gap   0.030303      34     34/33    21    0     3/32
+d=4 ladder skip 14          3 positive_gap   0.015152      68     34/33    23    0     5/64
+d=8 ladder skip 14          6 positive_gap   0.007576     140     35/33    25    0    9/128
+d=16 ladder skip 14        14 positive_gap   0.003788     280     35/33    29    0   17/256
+
+Unprotected endpoint layers for the dyadic ladders
+layer=(v2(denominator), odd_part(denominator))
+  d=2 ladder skip 14     layers {(5, 1):14, (5, 3):4, (5, 5):4, (5, 9):4, (5, 11):4, (5, 13):2, (5, 15):2}; owners {v2=1:48}
+  d=4 ladder skip 14     layers {(6, 1):28, (6, 3):8, (6, 5):6, (6, 9):6, (6, 11):8, (6, 13):6, (6, 15):6}; owners {v2=2:96}
+  d=8 ladder skip 14     layers {(7, 1):56, (7, 3):14, (7, 5):14, (7, 9):14, (7, 11):14, (7, 13):14, (7, 15):14}; owners {v2=3:196}
+  d=16 ladder skip 14    layers {(8, 1):112, (8, 3):28, (8, 5):28, (8, 9):28, (8, 11):28, (8, 13):28, (8, 15):28}; owners {v2=4:392}
+
+CAYLEY-DICKSON-STYLE NORM LEDGER
+==============================================================================
+Each doubling pushes the first unprotected endpoints one dyadic level
+deeper.  The visible gap halves, but endpoint debt doubles, so the
+product unprotected*(gap/th) stays essentially fixed.
+
+  d=2 ladder skip 14     gap/th=   1/33 unprot= 34 norm=34/33
+  d=4 ladder skip 14     gap/th=   1/66 unprot= 68 norm=34/33
+  d=8 ladder skip 14     gap/th=  1/132 unprot=140 norm=35/33
+  d=16 ladder skip 14    gap/th=  1/264 unprot=280 norm=35/33
+
+Interpretation:
+  The 16-gate is not closing a cover; it is acting like a zero-divisor
+  repair.  It kills the old unit witnesses and creates a kernel one
+  dyadic level lower.  A proof should preserve this debt norm until an
+  endpoint leaf appears.
+
+NORMALIZED SCALAR-QUOTIENT MOAT AT n=16
+==============================================================================
+cell_system: patterns=1152 candidates=18432 scalar_full=True scalar_gcd_hist=((1, 8), (2, 4), (4, 2), (8, 1), (16, 1))
+radius=1: checked=3600 best_missed=128 best_count=16 positions=(15,) deltas=(8,)
+  first_example=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8)
+radius=2: checked=378000 best_missed=160 best_count=16 positions=(10, 15) deltas=(8,)
+  first_example=(0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 8)
+
+Interpretation:
+  The best one-defect is a half-turn in the last coordinate, missing
+  128 cells.  The best two-defect still misses 160 cells.  This is the
+  finite scalar moat a full n=16 proof would need to lift from the
+  normalized residue model back to arbitrary primitive speed sets.
+
+FIXED GATE SAMPLE AUDIT
+==============================================================================
+These are deterministic high-speed 16-gate samples retained from a
+short random pressure pass; they are exact interval/endpoint audits.
+  fixed gate sample A: class=positive_gap mult16=2 gap/th=0.040264 unprot=424 peel=15 core_E=0
+  fixed gate sample B: class=positive_gap mult16=2 gap/th=0.042188 unprot=380 peel=15 core_E=0
+  fixed gate sample C: class=positive_gap mult16=3 gap/th=0.043243 unprot=278 peel=16 core_E=0
+
+PROOF ATTEMPT STATUS
+==============================================================================
+A plausible n=16 proof now has this shape:
+  1. No 16-gate is impossible for a counterexample by the unit-gate lemma.
+  2. A 16-gate closes the old unit skeleton only by exporting endpoint
+     debt to v2-denominator layers 5,6,7,8.  The dyadic ladders preserve
+     a positive debt norm instead of approaching an open cover.
+  3. In the normalized scalar quotient, every one- or two-coordinate
+     non-scalar dyadic defect has a large moat.
+
+Missing lemma:
+  Every primitive n=16 all-protected endpoint system with a 16-gate
+  either descends to one of the dyadic debt ledgers above, or contains
+  a labelled endpoint cycle with a private dyadic leaf.  Proving that
+  would turn the Cayley-Dickson analogy into an actual n=16 proof.

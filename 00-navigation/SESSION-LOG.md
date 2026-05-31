@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S389 - Lonely Runner n=16 Cayley-Dickson Proof Attempt
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S386; during close-out, rebased over the remote S387 Cayley-Dickson tower strand and remote S388 small-denominator sieve strand, then renumbered this focused `n=16` proof attempt to S389.
+**User prompt:** Make an attempt at an `n=16` proof, thinking about Cayley-Dickson analogously.
+**Computation:** Added `04-computation/lrc_n16_cayley_dickson_attempt_s389.py` and stored `05-knowledge/results/lrc_n16_cayley_dickson_attempt_s389.out`. The script audits the no-`16`-gate branch, dyadic ladders `d=2,4,8,16`, normalized scalar-puncture moats, and fixed high-speed `16`-gate samples.
+**Findings:** The no-gate branch is a real lemma: for odd `a`, endpoint `a/16` can be strictly protected only by a speed divisible by `16`. In the gated dyadic ladders, the visible gap halves while endpoint debt doubles: `d=2,4,8,16` have debt norms `34/33,34/33,35/33,35/33` and unprotected layers moving from `v2(denominator)=5` to `8`. The normalized `n=16` cell system has `1152` alpha patterns and `18432` candidates; every scalar ramp is full, but the best one- and two-defect punctures still miss `128` and `160` cells.
+**Synthesis:** Added HYP-1857 and `07-reflections/lonely-runner-n16-cayley-dickson-attempt-s389.md`. The Cayley-Dickson analogy becomes a dyadic debt law: a `16`-gate acts like a zero-divisor repair, killing old unit witnesses while leaking new descendant endpoints.
+**Verification:** `python3 -m py_compile 04-computation/lrc_n16_cayley_dickson_attempt_s389.py` succeeded; the script ran end-to-end and reproduced the stored 94-line output.
+**Next:** Prove the missing private-dyadic-leaf lemma: every primitive `n=16` all-protected endpoint system with a `16`-gate either descends to a dyadic debt ledger or has a private labelled endpoint leaf.
+
 ## codex-2026-05-31-S388 - LRC Small-Denominator Sieve and Slack Formalization
 
 **Account:** Codex

@@ -401,6 +401,15 @@ Sieve completion is not disproof progress by itself. In S388, `lcm(n,d)` repairs
 **T408** #lonely-runner #labelled-cycles #slack-potential #endpoint-core | certainty: low-medium proof-object hypothesis | source: codex-2026-05-31-S388
 A THM-365 protection arrow has strict slack `u-|p*(n*m+eps)-a*n*u|`. HYP-1856 proposes that integer-realizable labelled endpoint cycles cannot close unless the slack also pays every THM-366 small-denominator gate; otherwise slack descends into endpoint debt/private leaves.
 
+**T409** #lonely-runner #n16 #cayley-dickson #dyadic-gate | certainty: high lemma + exploratory proof shape | source: codex-2026-05-31-S389
+At `n=16`, the no-gate branch is structurally closed: for odd `a`, endpoint `a/16` can be strictly protected only by speeds divisible by `16`. Thus any open-cover counterexample needs a `16`-gate. The Cayley-Dickson analogy points to that gate as a zero-divisor move: it kills the old unit witnesses but leaks to descendant dyadic endpoints. See HYP-1857.
+
+**T410** #lonely-runner #dyadic-debt #quotient-ladders #endpoint-export | certainty: high computational pattern | source: codex-2026-05-31-S389
+The `n=16` dyadic ladders preserve a norm-like debt ledger: `d=2,4,8,16` have gap ratios `1/33,1/66,1/132,1/264` and unprotected endpoints `34,68,140,280`, so `unprotected*(gap/th)` is `34/33,34/33,35/33,35/33`. Endpoint leaks move from `v2(denominator)=5` to `8`.
+
+**T411** #lonely-runner #scalar-moat #half-turns #n16 | certainty: exact finite-cell evidence | source: codex-2026-05-31-S389
+The normalized `n=16` scalar quotient has `1152` alpha patterns and `18432` candidate cells. All scalar ramps cover, but the best one-coordinate defect misses `128` cells (half-turn at coordinate `15`) and the best two-coordinate defect misses `160` cells (half-turns at coordinates `10,15`). This is the pure 2-adic lab version of the scalar-puncture moat.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
