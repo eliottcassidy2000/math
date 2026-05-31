@@ -503,6 +503,15 @@ The LRC endpoint-protection certificate and tournament good-cut/SCC machinery sh
 **T472** #lonely-runner #finite-checking #prime-sieve #integer-programming | certainty: current web frontier + repo proof target | source: codex-2026-05-31-S430
 Recent public LRC progress uses finite checking plus prime-product sieves: Rosenfeld proved the 8-runner case, Trakulthongchai proved 9 and 10, and Sungkawichai-Trakulthongchai report `k=10,11,12` nonzero-speed cases (13 total runners). S430 asks whether this prime-product sieve can be rewritten as a dual row-weight certificate in the S420 IP matrix.
 
+**T480** #lonely-runner #fourteen-runners #gate-fan #set-cover | certainty: exact local computation | source: codex-2026-05-31-S440
+A `14`-gate has an exact local fan tax: covering all 28 owner-14 endpoints with lower columns `1..13` needs 8 columns `(7,1,2,3,5,9,11,13)`. The private rows force `(1,3,5,7,9,11,13)`, so the branch must pay six unit residues, the half-gate `7`, and one even bridge. See HYP-1910.
+
+**T481** #lonely-runner #n14 #product-depth #frontier-mass | certainty: exact comparative ledger | source: codex-2026-05-31-S440
+The seven-ladder and S380 gate ladder have the same product-depth frontier mass `66/7`, but S380 doubles exposed endpoints and quadruples denominator pressure (`1092 -> 4368`). The gate ladder shifts debt one 2-adic step deeper while carrying the 7-adic payload; it does not erase the debt.
+
+**T482** #lonely-runner #n14 #owner-charge #endpoint-debt | certainty: high exact audit | source: codex-2026-05-31-S440
+Endpoint debt should be charged to owner speeds. In S380, owners `154=2*77`, `168=8*21`, and `182=2*91` each carry 48 exposed endpoint labels; owners `14,42,70,126` carry 24 each. This suggests a labelled endpoint-cycle potential with positive owner-charge divergence.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

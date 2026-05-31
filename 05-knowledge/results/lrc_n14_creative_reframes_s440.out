@@ -1,0 +1,123 @@
+n=14 LRC creative proof reframes (codex-2026-05-31 S440)
+All endpoint and interval computations are exact over Fraction.
+
+============================================================================================
+N=14 CANDIDATE ROWS THROUGH FOUR PROOF LENSES
+============================================================================================
+gap/th is the ordinary LRC complement gap.  pair-gap/th is the antipodal quotient gap: a gap there means some t or t+1/2 is safe.
+
+label                    class          gap/th   pair/th  unprot peel core missing fragile
+------------------------------------------------------------------------------------------
+initial                  boundary_only  0.000000 0.000000      6   15    0 14       7,8,9,10,11,12,13
+boundary 12->24          boundary_only  0.000000 0.000000      6   16    0 14       7,9,10,11,12,13
+drop13 add14             positive_gap   0.045455 0.045455     24   14    0 13       8,9,10,11,12,14
+drop13 add182            positive_gap   0.065934 0.065934     48   14    0 -        8,9,10,11,12,13,14
+seven-ladder             positive_gap   0.005411 0.005411     84   27    0 -        6,8,9,10,11,12,13
+seven with 42            positive_gap   0.008163 0.008163     84   22    0 12       6,8,9,10,11,13
+S380 gate ladder         positive_gap   0.002706 0.002706    168   27    0 -        9,11,12,13
+
+============================================================================================
+PRODUCT-DEPTH ENDPOINT DEBT
+============================================================================================
+Depths are extra denominator exponents beyond the base n=14 lattice. frontier_mass=sum 1/(2^a 7^b); denominator_pressure=sum 2^a 7^b.
+
+label                    unprotected depth histogram                  frontier  pressure
+----------------------------------------------------------------------------------------
+initial                            6 {2:+0,7:+0}:6                           6         6
+boundary 12->24                    6 {2:+0,7:+0}:6                           6         6
+drop13 add14                      24 {2:+0,7:+0}:8 {2:+0,7:+1}:2 {2:+1,7:+0}:6 {2:+1,7:+1}:2 {2:+2,7:+0}:4 {2:+3,7:+0}:2   355/28        94
+drop13 add182                     48 {2:+0,7:+0}:8 {2:+0,7:+1}:2 {2:+1,7:+0}:6 {2:+1,7:+1}:26 {2:+2,7:+0}:4 {2:+3,7:+0}:2   403/28       430
+seven-ladder                      84 {2:+0,7:+1}:60 {2:+2,7:+1}:24        66/7      1092
+seven with 42                     84 {2:+0,7:+1}:72 {2:+0,7:+2}:12      516/49      1092
+S380 gate ladder                 168 {2:+1,7:+1}:120 {2:+3,7:+1}:48       66/7      4368
+
+============================================================================================
+LOCAL 14-GATE FAN TAX
+============================================================================================
+A 14-gate has 28 endpoints.  If it is maximal, its endpoints must be covered by lower columns.  This local set cover is the n=14 analogue of the n=16 nine-cover, but with a 2 x 7 CRT flavor.
+
+exact lower-cover size=8 columns=(7, 1, 2, 3, 5, 9, 11, 13)
+forced columns by private endpoint rows=(1, 3, 5, 7, 9, 11, 13)
+
+  p  mode         covers private private_depths
+   1  2^0*1          4       2 {2:+1,7:+1}:2
+   2  2^1*1          4       0 -
+   3  2^0*3          4       2 {2:+1,7:+1}:2
+   4  2^2*1          4       0 -
+   5  2^0*5          4       2 {2:+1,7:+1}:2
+   6  2^1*3          4       0 -
+   7  2^0*7         14      12 {2:+1,7:+1}:12
+   8  2^3*1          4       0 -
+   9  2^0*9          4       2 {2:+1,7:+1}:2
+  10  2^1*5          4       0 -
+  11  2^0*11         4       2 {2:+1,7:+1}:2
+  12  2^2*3          4       0 -
+  13  2^0*13         4       2 {2:+1,7:+1}:2
+
+Reframe: a single 14-gate locally demands the six unit residue columns, the half-gate 7, and at least one even bridge.  So a global proof can charge every 14-gate against a heptagonal fan before counting the deeper product-depth endpoints it creates.
+
+============================================================================================
+OWNER-WISE ENDPOINT DEBT
+============================================================================================
+Unprotected endpoint values are counted back against the speed whose forbidden interval owns that endpoint.  This identifies which gates export the debt.
+
+[seven-ladder] owner-wise exposed endpoint labels
+  owner  speed_mode        labels  unique
+     77  2^0*77          24      24
+     84  2^2*21          24      24
+     91  2^0*91          24      24
+      7  2^0*7           12      12
+     21  2^0*21          12      12
+     35  2^0*35          12      12
+     63  2^0*63          12      12
+
+[S380 gate ladder] owner-wise exposed endpoint labels
+  owner  speed_mode        labels  unique
+    154  2^1*77          48      48
+    168  2^3*21          48      48
+    182  2^1*91          48      48
+     14  2^1*7           24      24
+     42  2^1*21          24      24
+     70  2^1*35          24      24
+    126  2^1*63          24      24
+
+[drop13 add182] owner-wise exposed endpoint labels
+  owner  speed_mode        labels  unique
+    182  2^1*91          26      26
+      2  2^1*1            2       2
+      3  2^0*3            2       2
+      4  2^2*1            2       2
+      5  2^0*5            2       2
+      6  2^1*3            2       2
+      7  2^0*7            2       2
+      8  2^3*1            2       2
+      9  2^0*9            2       2
+     10  2^1*5            2       2
+
+============================================================================================
+ANTIPODAL / CRT FOLD INTERPRETATION
+============================================================================================
+The quotient t~t+1/2 is not a new theorem by itself, but it forces an even/odd split.  Even speeds cover both sides of a pair in the same way.  Odd speeds must cover one side through a low band and the other through a high band.  At n=14 this pairs the 2-adic fold with the mod-7 unit cycle.
+
+initial                  odd= 7 even= 6 14-gates= 0 pair_components=   7 pair_gap/th=0.000000
+boundary 12->24          odd= 7 even= 6 14-gates= 0 pair_components=   7 pair_gap/th=0.000000
+drop13 add14             odd= 6 even= 7 14-gates= 1 pair_components=  13 pair_gap/th=0.045455
+drop13 add182            odd= 6 even= 7 14-gates= 1 pair_components=  25 pair_gap/th=0.065934
+seven-ladder             odd= 8 even= 5 14-gates= 5 pair_components=  61 pair_gap/th=0.005411
+seven with 42            odd= 8 even= 5 14-gates= 5 pair_components=  51 pair_gap/th=0.008163
+S380 gate ladder         odd= 1 even=12 14-gates=12 pair_components=  71 pair_gap/th=0.002706
+
+Creative target: prove that any n=14 row with enough even/14-gate mass to kill unit points leaves an antipodal high-band deficit unless it imports odd unit columns; those odd columns are exactly the local fan-tax columns in the 14-gate cover.
+
+============================================================================================
+NEW PROOF MODELS GENERATED
+============================================================================================
+1. Gate fan tax.
+   Before a 14-gate can help globally, its own endpoints demand a local cover of size eight: six unit residues, 7, and an even bridge.
+2. Product-depth debt.
+   The S380 ladder pays every small-denominator row and uses only forced columns, but leaves debt at {2:+1,7:+1} and {2:+3,7:+1}.
+3. Antipodal CRT fold.
+   The even fold t~t+1/2 separates even columns from odd high/low columns.  For n=14 the missing proof should couple this with the mod-7 unit cycle.
+4. Owner-charge descent.
+   Endpoint debt should be charged to owner speeds, not just to the set as a whole.  Gate-heavy candidates expose which owners export which denominator depths.
+

@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S440 - n=14 LRC Creative Reframes
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S420; during close-out, upstream S421 two-mode adic recursion, oracle S21 gate-frontier work, and S430 lens atlas landed first, so this strand was renumbered to S440/HYP-1910/T480-T482.
+**User prompt:** Spend a session trying creative new reframes for the `n=14` LRC proof.
+**Computation:** Added `04-computation/lrc_n14_creative_reframes_s440.py` and stored `05-knowledge/results/lrc_n14_creative_reframes_s440.out`. The script audits canonical `n=14` rows through small-denominator modulus-market rows, antipodal `t~t+1/2` fold data, local owner-14 endpoint set cover, owner-wise exposed endpoint labels, and product-depth potentials on the `2 x 7` CRT grid.
+**Findings:** The exact local 14-gate fan tax is new: covering all `28` endpoints owned by a `14`-gate using lower columns `1..13` has exact minimum `8`, with cover `(7,1,2,3,5,9,11,13)` and forced private-row columns `(1,3,5,7,9,11,13)`. The S380 gate ladder and seven-ladder have the same root-weighted frontier mass `66/7`, but S380 doubles exposed endpoints and quadruples denominator pressure from `1092` to `4368`. Owner-wise debt in S380 concentrates on owners `154,168,182` with `48` exposed labels each.
+**Synthesis:** Added HYP-1910 and `07-reflections/lrc-n14-creative-reframes-s440.md`. The proposed proof grammar is: unit rows force a `14`-gate; every `14`-gate must pay the heptagonal fan tax; gate-heavy repairs then export product-depth endpoint rows with positive owner-charge divergence. The antipodal fold is useful as a parity/CRT split rather than as a separate gap invariant.
+**Verification:** `python3 -m py_compile 04-computation/lrc_n14_creative_reframes_s440.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S430 - LRC Lens Atlas and Tournament Incidence Core
 
 **Account:** Codex
