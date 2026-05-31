@@ -524,6 +524,15 @@ Zonotope covering debt, distance-graph failed multiplier colorings, and repo end
 **T493** #lonely-runner #n14 #protected-boundary #near-counterexamples | certainty: exact S450 recomputation | source: codex-2026-05-31-S450
 The S450 exact atlas confirms the near-counterexample moral: `initial n=14` is boundary-only with `6` unprotected endpoints; the seven-ladder has `gap/th=5/924` and `84` unprotected endpoints; the S380 gate ladder shrinks the gap to `5/1848` but has `168` unprotected endpoints. Gap shrinks, boundary debt grows.
 
+**T494** #lonely-runner #zeckendorf #ostrowski #boundary-normal-form | certainty: medium structural bridge | source: codex-2026-05-31-S451
+Zeckendorf should enter LRC as a no-adjacent-carry normal form, not as Fibonacci numerology. Zeckendorf is `I(P_infty,1)` independence, tournament OCF is `I(Omega,2)`, and LRC endpoint debt may become Zeckendorf-like only after quotienting the protection hypergraph to path-like debt layers. See HYP-1902.
+
+**T495** #lonely-runner #golden-rotation #anti-bohr #ostrowski | certainty: high analogy, exact for irrational rotations | source: codex-2026-05-31-S451
+For irrational rotations, Ostrowski numeration gives canonical return-time expansions from continued-fraction denominators. At the golden slope all digits are `1`, so Ostrowski is Zeckendorf. This makes the golden rotation the clean anti-Bohr model for boundary recursion with no adjacent carries.
+
+**T496** #lonely-runner #n14 #zeckendorf-shadow #endpoint-debt | certainty: exact labels + speculative use | source: codex-2026-05-31-S451
+S451 labels S450 quantities in Zeckendorf normal form: initial `n=14` debt `6=F1+F4`, lower-speed budget `13=F6`, seven-ladder debt `84=F5+F7+F9`, and S380 exported debt `168=F3+F7+F11`. The label is useful only if future endpoint-layer graphs make repairs into legal/illegal carries.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

@@ -212,6 +212,30 @@ Graph reconstruction has deletion decks; union-closed sets have coordinate
 frequency shadows.  They are not LRC, but they help name what we care about:
 the obstruction living at the edge of a projection.
 
+### Zeckendorf and Ostrowski normal forms
+
+Zeckendorf decomposition belongs in this thread as a normal-form model, not as
+an exact LRC formulation.  The repo's earlier bridge is:
+
+```text
+Zeckendorf = independent sets in P_infty at fugacity x=1
+Tournament OCF = independent sets in Omega(T) at fugacity x=2
+```
+
+For LRC, the useful imported structure is the no-adjacent-carry rule.  If the
+endpoint-protection hypergraph can be quotiented to a path-like debt automaton,
+then exposed endpoints may have a unique Zeckendorf-style normal form: repairs
+are carries, adjacent carries are illegal, and a proof certificate is a
+nonzero normal form that cannot be annihilated.
+
+There is also an anti-Bohr version: Ostrowski numeration for irrational
+rotations encodes return times by continued-fraction denominators.  For the
+golden slope, all continued-fraction digits are `1`, so the Ostrowski expansion
+is exactly Zeckendorf.  The golden rotation is therefore the clean model case
+for anti-Bohr boundary recursion with no adjacent carries.
+
+See `07-reflections/lrc-zeckendorf-bridge-s451.md` and HYP-1902.
+
 ## Exact Finite Check From S450
 
 `04-computation/lrc_analogy_atlas_s450.py` reruns small exact boundary checks:
@@ -308,3 +332,5 @@ engine.
 5. Treat `n=14` as the first post-2026 frontier and search for a certificate
    that can be read simultaneously as endpoint peel, IP dual, and zonotope
    covering debt.
+6. Build an endpoint-layer graph for known near-counterexamples and test
+   whether exposed debt has a Zeckendorf/Ostrowski no-adjacent normal form.

@@ -15,6 +15,7 @@ related:
   - HYP-1890
   - HYP-1891
   - HYP-1900
+  - HYP-1902
 ---
 
 # HYP-1901: LRC analogues factor through protected anti-Bohr boundary incidence
@@ -106,14 +107,19 @@ long emphasis on `n=14` as the first mixed product-building case.
 5. For `n=14`, a serious certificate should be readable in at least three
    equivalent languages: endpoint peel, IP dual rows, and zonotope covering
    debt.
+6. A Zeckendorf/Ostrowski analogue is useful only if it gives a normal form for
+   endpoint debt, not merely a Fibonacci label for the final numbers.
 
 ## Sources
 
 Repo:
 
 - `04-computation/lrc_analogy_atlas_s450.py`
+- `04-computation/lrc_zeckendorf_bridge_s451.py`
 - `05-knowledge/results/lrc_analogy_atlas_s450.out`
+- `05-knowledge/results/lrc_zeckendorf_bridge_s451.out`
 - `07-reflections/lrc-analogy-atlas-s450.md`
+- `07-reflections/lrc-zeckendorf-bridge-s451.md`
 - THM-357.
 - THM-360.
 - HYP-1836.
@@ -121,6 +127,7 @@ Repo:
 - HYP-1891.
 - HYP-1894.
 - HYP-1900.
+- HYP-1902.
 
 Web:
 
