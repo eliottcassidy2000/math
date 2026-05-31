@@ -3,11 +3,13 @@ id: HYP-1818
 status: EXPLORATORY
 source: codex-2026-05-31-S364
 related:
+  - THM-363
   - THM-358
   - THM-360
   - HYP-1813
   - HYP-1816
   - HYP-1817
+  - HYP-1823
 ---
 
 # HYP-1818: LRC scalar-ramp excision before composite micro-staircases
@@ -68,6 +70,19 @@ The same run tried deterministic and random gated speed-set constructions for
 the `14`- and `15`-runner cases.  It found no open-cover candidate; all sampled
 hard cases retained either a boundary witness or a positive open gap.
 
+S367 sharpens the excision into an actual quotient.  Adding `m*i` to a residue
+vector preserves raw cell coverage by reindexing alpha cells; after normalizing
+`v_1=0`, every scalar ramp becomes the zero vector.  In the exact `n=14`
+system, the best nonzero quotient search result is
+
+```text
+(0,0,0,0,0,7,0,0,0,0,0,0,0),
+```
+
+with `56` missed cells.  Exact scans through support `3` and the full
+normalized `2`-torsion cube found no full blocker; in that cube, the above
+coordinate-6 half-turn is the unique best near-blocker.
+
 ## Interpretation
 
 The scalar ramp identity is the finite cell version of THM-358.  If
@@ -88,7 +103,8 @@ ramifications, and only then classify genuinely non-scalar vectors.
 
 ## Test Plan
 
-1. Prove the scalar-ramp blocking identity for all `n`.
+1. Prove the scalar-ramp blocking identity and scalar-gauge reindexing lemma
+   for all `n`.
 2. Separate unit scalar ramps from nonunit ramps in the lifted prime-grid
    variables and map the nonunit cases to the endpoint/divisibility descent.
 3. Enumerate all non-scalar full blockers for `n=14` by exact SAT/backtracking,
@@ -102,6 +118,10 @@ ramifications, and only then classify genuinely non-scalar vectors.
 
 - `04-computation/lonely_runner_feedback_loop_s364.py`.
 - `05-knowledge/results/lonely_runner_feedback_loop_s364.out`.
+- `04-computation/lonely_runner_k13_scalar_gauge_s367.py`.
+- `05-knowledge/results/lonely_runner_k13_scalar_gauge_s367.out`.
+- THM-363.
+- HYP-1823.
 - HYP-1817 and `04-computation/lonely_runner_k13_microstaircase_s363.py`.
 - Sungkawichai and Trakulthongchai, `arXiv:2604.23906`.
 - Jensen, `arXiv:2605.27941`.

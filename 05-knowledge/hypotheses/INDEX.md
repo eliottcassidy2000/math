@@ -2752,3 +2752,10 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** THM-362 proves the additive collapse, multiplicative divisor-DAG description, and prime Hasse reduction. `natural_operation_graphs_s365.py` verifies the finite shadows; at `N=80`, addition has all `3160` order edges while nonunit multiplication has `209`.
 **Predictions:** Additive number theory in this framework lives in operation fibers, not simple edges; multiplicative number theory survives the simple shadow through prime factorization. Incomplete-tournament language should distinguish the dense additive completion from the sparse multiplicative divisor skeleton.
 **See:** `05-knowledge/hypotheses/HYP-1822-natural-operation-cospans.md`, HYP-1820, THM-362, `04-computation/natural_operation_graphs_s365.py`, `05-knowledge/results/natural_operation_graphs_s365.out`, `07-reflections/natural-operation-graphs-s365.md`.
+
+## HYP-1823: Fourteen-runner scalar-gauge quotient lemma (codex-2026-05-31-S367)
+**Status:** EXPLORATORY proof-search hypothesis.
+**What:** In the `n=14,k=13` micro-staircase system, quotient residue vectors by scalar ramps `v_i ~ v_i + m i` and normalize by `v_1=0`; the zero class should be the only full blocker.
+**Evidence:** THM-363 proves scalar-gauge reindexing in the full cell arrangement. `lonely_runner_k13_scalar_gauge_s367.py` verifies raw scalar-gauge invariance computationally, collapses all scalar ramps to zero, and finds no full nonzero quotient blocker. Exact support scans through size `3` and the full normalized `2`-torsion cube show the unique binary extremal is the coordinate-6 half-turn, still missing `56/11368` candidates.
+**Predictions:** A proof should split into THM-363's gauge quotient, a `2`-torsion interval-stencil proof, and a unit/nonunit shift descent for all other normalized classes.
+**See:** `05-knowledge/hypotheses/HYP-1823-lrc-scalar-gauge-quotient.md`, THM-363, HYP-1817, HYP-1818, `04-computation/lonely_runner_k13_scalar_gauge_s367.py`, `05-knowledge/results/lonely_runner_k13_scalar_gauge_s367.out`, `07-reflections/lonely-runner-fourteen-runner-scalar-gauge-s367.md`.

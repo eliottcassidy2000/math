@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-31-S367 - Fourteen-Runner Scalar-Gauge Quotient
+
+**Account:** Codex
+**Git first:** Started from `main...origin/main` with only the new S367 worktree artifacts present from this session.
+**User prompt:** Spend a long session creatively attempting to make progress on 14-runner proofs.
+**External check:** Reconfirmed the public finite frontier context from the recent arXiv proof thread: the known reduced cases go through `k=12`, so `k=13` / fourteen total runners is the next natural case.
+**Computation:** Added `04-computation/lonely_runner_k13_scalar_gauge_s367.py` and stored `05-knowledge/results/lonely_runner_k13_scalar_gauge_s367.out`. The script rebuilds the exact `n=14,k=13` micro-staircase system (`812` patterns, `11368` candidates), verifies raw scalar-gauge invariance, normalizes by `v_1=0`, runs quotient local search, and exhausts small-support and `2`-torsion subfamilies.
+**Main finding:** Scalar ramps are a genuine gauge orbit: adding `m*i` reindexes alpha cells. After quotienting, all scalar ramps collapse to zero. The best nonzero quotient near-blocker is uniquely the `2`-torsion coordinate-6 half-turn in the full binary cube; it still misses `56` candidates, namely eight explicit alpha cells repeated across the seven odd shifts.
+**Theorem:** Added THM-363, the scalar-gauge reindexing theorem. It proves that `v_i -> v_i+m i` preserves full-cell coverage by the cell translation `alpha -> alpha+s*m/n`; together with THM-358, this explains why every scalar ramp is a full blocker.
+**Synthesis:** Added HYP-1823 and `07-reflections/lonely-runner-fourteen-runner-scalar-gauge-s367.md`. The new proof target is the zero-class lemma: every nonzero normalized residue vector should have a safe micro-staircase cell. This refines HYP-1817/HYP-1818 from "exclude scalar ramps" to "quotient the scalar line and prove zero is the only full blocker."
+**Next:** Use THM-363 as the gauge quotient foundation; formalize the `2`-torsion hard case by interval stencils; then build a branch-and-bound certificate for all normalized `n=14` classes using unit-shift splitting and nonunit quotient descent.
+
 ## codex-2026-05-31-S366 - Product-Sum Defect Lean Formalization
 
 **Account:** Codex

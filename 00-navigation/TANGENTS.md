@@ -284,6 +284,12 @@ Sorted length-`k` product-sum collisions obey the finite prefix gate `a_1*...*a_
 **T369** #formalization #product-sum #defect-normal-form #lean | certainty: proved in Lean | source: codex-2026-05-31-S366
 `TournamentH7.ProductSum` formalizes the THM-361 list core: deleting ones preserves product and changes sum by exactly `ones`, product-sum iff `core.prod = core.sum + ones`, padding by defect many ones repairs equality, and the positive ordered two-entry resonance is only `(2,2)`. See `05-knowledge/results/lean_product_sum_s366.out`.
 
+**T370** #lonely-runner #scalar-gauge #fourteen-runners #micro-staircase | certainty: proved gauge / proof target | source: codex-2026-05-31-S367
+THM-363 proves scalar-gauge reindexing: adding `m*i` to a residue vector reindexes alpha cells by `alpha -> alpha + s*m/n`. In the `n=14,k=13` system, normalize by `v_1=0`; all scalar ramps collapse to zero. The quotient proof target is now sharp: prove every nonzero normalized class has a safe cell. See HYP-1823.
+
+**T371** #lonely-runner #2-torsion #near-blocker #unit-shifts | certainty: high computational | source: codex-2026-05-31-S367
+The complete normalized `2`-torsion cube for `n=14` has a unique best near-blocker: the coordinate-6 half-turn `(0,0,0,0,0,7,0,0,0,0,0,0,0)`, missing 56 cells. All misses occur at odd shifts, eight alpha patterns repeated across seven shifts. Support scans through size 3 get worse, suggesting a parity/unit-shift proof route.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

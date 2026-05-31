@@ -3,11 +3,13 @@ id: HYP-1817
 status: EXPLORATORY
 source: codex-2026-05-31-S363
 related:
+  - THM-363
   - THM-357
   - THM-358
   - THM-360
   - HYP-1813
   - HYP-1818
+  - HYP-1823
 ---
 
 # HYP-1817: The fourteen-runner case needs a micro-staircase lift
@@ -122,6 +124,22 @@ therefore be read together with HYP-1818: first excise scalar ramps, use
 quotient/divisibility descent for nonunit members, and only then demand a
 generic micro-staircase witness for non-scalar vectors.
 
+## S367 Quotient Refinement
+
+S367 turns "excise scalar ramps" into a concrete gauge quotient.  Adding
+`m*i` to a residue vector reindexes the full alpha-cell system, so we can
+normalize by `v_1=0`.  All scalar ramps collapse to zero.  The new finite
+micro-staircase target is therefore:
+
+```text
+Every nonzero normalized class has a safe (s, alpha-cell).
+```
+
+The exact support scans and full normalized `2`-torsion scan found no full
+nonzero blocker.  The unique binary extremal is the coordinate-6 half-turn,
+which still misses `56` candidates across eight explicit alpha cells and the
+seven odd shifts.
+
 ## Test Plan
 
 1. Build an exact SAT/backtracking checker for the full `n=14` micro-staircase
@@ -132,6 +150,8 @@ generic micro-staircase witness for non-scalar vectors.
    them with the `I(13,p,1)` bad sets produced by the public verifier.
 5. Add cover-search pruning based on "this partial tuple already has a
    micro-staircase witness" before the DFS reaches depth 13.
+6. Prove HYP-1823's quotient lemma, starting with the scalar-gauge identity and
+   the exact `2`-torsion interval stencil.
 
 ## Sources
 
@@ -139,3 +159,5 @@ generic micro-staircase witness for non-scalar vectors.
 - Public verifier: `https://github.com/vzsky/13-lonely-runners`.
 - `04-computation/lonely_runner_k13_microstaircase_s363.py`.
 - `05-knowledge/results/lonely_runner_k13_microstaircase_s363.out`.
+- `04-computation/lonely_runner_k13_scalar_gauge_s367.py`.
+- `05-knowledge/results/lonely_runner_k13_scalar_gauge_s367.out`.
