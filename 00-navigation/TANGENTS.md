@@ -455,6 +455,9 @@ The best one-coordinate half-turn defect is `c=15`, with `128` missed cells; it 
 **T426** #ln2 #egyptian-shells #endpoint-debt #n16 | certainty: high computation + analogy | source: codex-2026-05-31-S397
 The harmonic shell `sum_{m<j<=2m} 1/j` is an Egyptian-fraction approximation to `ln2`. At `m=16`, the shell `[17,32]` is the first denominator octave beyond the `16`-gate and undershoots by `0.015380978...`; S397 reads this finite-shell error as the area analogue of LRC endpoint debt exported beyond the dyadic gate.
 
+**T427** #lonely-runner #gap-debt #product-formula #dyadic | certainty: high exact rows + open invariant | source: codex-2026-05-31-S398
+The LRC obstruction can be read adelically: normalized gap is the Archimedean size, exposed endpoint debt is the denominator/2-adic size, and the repair branch should satisfy `ArchGap*Debt_2 >= c(n)>0`. Exact ladders preserve products `n=14: 5/11`, `n=18: 1`, and `n=16: 34/33` then `35/33`, with a `35/34` phase tax. Boundary rows are separate: `gap=0` but `debt>0`. A counterexample needs both zeroes simultaneously. See HYP-1866.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

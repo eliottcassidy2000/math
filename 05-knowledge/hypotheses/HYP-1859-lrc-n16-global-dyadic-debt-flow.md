@@ -12,6 +12,7 @@ related:
   - HYP-1844
   - HYP-1857
   - HYP-1858
+  - HYP-1866
 ---
 
 # HYP-1859: n=16 needs a global dyadic debt-flow inequality
@@ -109,6 +110,17 @@ Combined with THM-365, this would rule out labelled endpoint cycles in the
 gated branch.  Combined with THM-366, it would prove the `n=16` Lonely Runner
 case.
 
+HYP-1866 reframes this target as a product inequality:
+
+```text
+ArchGap * Debt_2 >= c(16) > 0.
+```
+
+The raw dyadic ladders already show two exact plateaus, `34/33` and `35/33`,
+with a `35/34` phase tax when the exposed layer changes.  This suggests that
+the global debt-flow divergence should be normalized as a 2-adic debt size,
+not merely as an endpoint count.
+
 ## Sources
 
 - THM-367.
@@ -116,3 +128,4 @@ case.
 - `05-knowledge/results/lrc_n16_dyadic_endpoint_formula_s391.out`
 - HYP-1857.
 - HYP-1858.
+- HYP-1866.

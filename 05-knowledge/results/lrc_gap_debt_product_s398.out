@@ -1,0 +1,51 @@
+LRC GAP-DEBT PRODUCT AUDIT
+==============================================================================
+ArchGap = max_gap / threshold.  Debt = unprotected endpoint count.
+The layer histogram records the 2-adic quotient where the debt lives.
+
+BOUNDARY BRANCH: GAP=0 BUT DEBT IS A WITNESS
+------------------------------------------------------------------------------
+  label                  class          gap/th      debt     product   first layer_hist
+  n=14 initial           boundary_only          0       6           0    1/14 1:6
+  n=16 initial           boundary_only          0       8           0    1/16 1:8
+  n=18 initial           boundary_only          0       6           0    1/18 1:6
+
+POSITIVE-GAP DEBT EXPORT ROWS
+------------------------------------------------------------------------------
+  label                  class          gap/th      debt     product   first layer_hist
+  n14 d=7                positive_gap      5/924      84        5/11    9/98 7:36,28:12,77:12,84:12,91:12
+  n14 d=14               positive_gap     5/1848     168        5/11  15/196 14:72,56:24,154:24,168:24,182:24
+  n16 d=2                positive_gap       1/33      34       34/33    3/32 2:14,6:4,10:4,18:4,22:4,...
+  n16 d=4                positive_gap       1/66      68       34/33    5/64 4:28,12:8,20:6,36:6,44:8,...
+  n16 d=8                positive_gap      1/132     140       35/33   9/128 8:56,24:14,40:14,72:14,88:14,...
+  n16 d=16               positive_gap      1/264     280       35/33  17/256 16:112,48:28,80:28,144:28,176:28,...
+  n18 d=9                positive_gap      1/176     176           1  11/162 9:48,27:16,99:16,117:16,144:64,...
+  n18 d=18               positive_gap      1/352     352           1  19/324 18:96,54:32,198:32,234:32,288:128,...
+
+DOUBLING CHECKS
+------------------------------------------------------------------------------
+  pair                 gap ratio  debt ratio  product ratio  note
+  n14 d=7   ->n14 d=14         1/2           2              1
+  n16 d=2   ->n16 d=4          1/2           2              1
+  n16 d=4   ->n16 d=8          1/2       35/17          35/34  layer tax
+  n16 d=8   ->n16 d=16         1/2           2              1
+  n18 d=9   ->n18 d=18         1/2           2              1
+
+EXACT PRODUCT PLATEAUS
+------------------------------------------------------------------------------
+  n=14: 5/11 = 5/11
+  n=16: 34/33 = 34/33; 35/33 = 35/33
+  n=18: 1 = 1
+  n=16 phase step: (35/33)/(34/33) = 35/34
+
+PROOF GRAMMAR
+------------------------------------------------------------------------------
+  boundary witness:      ArchGap=0, Debt>0
+  positive-gap witness:  ArchGap>0, any Debt
+  exported debt branch:  ArchGap*Debt >= c(n) > 0
+  counterexample target: ArchGap=0 and Debt=0
+
+A product lower bound belongs to the exported branch, not to the
+initial boundary branch.  It says that if a repair shrinks the
+Archimedean gap, 2-adic endpoint debt must grow quickly enough that
+the pair cannot converge to (0,0).

@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S398 - LRC Gap-Debt Product Law
+
+**Account:** Codex
+**Git first:** Started from `main...origin/main` after S395; during close-out, upstream S396 log-triangle q and S397 Egyptian/LRC q bridge landed first, so this session was rebased and renumbered to S398/HYP-1866/T427.
+**User prompt:** Formalize the idea that the LRC gap is Archimedean size, endpoint debt is 2-adic size, and a positive product lower bound prevents a counterexample from having both `gap=0` and `debt=0`.
+**Computation:** Added `04-computation/lrc_gap_debt_product_s398.py` and stored `05-knowledge/results/lrc_gap_debt_product_s398.out`. The script audits boundary branches and positive-gap debt-export ladders for `n=14,16,18`.
+**Findings:** Boundary-only initial segments have zero normalized gap but positive endpoint debt, so the product lower bound is not their certificate. In the exported branches, the exact products are conserved on plateaus: `n=14` gives `5/11`, `n=18` gives `1`, and `n=16` gives `34/33` for `d=2,4` and `35/33` for `d=8,16`, with phase tax `35/34`.
+**Synthesis:** Added HYP-1866 and `07-reflections/lrc-gap-debt-product-s398.md`. The proposed proof grammar is adelic: positive real gap gives a lonely interval, endpoint debt gives a boundary witness, and a lower bound on `ArchGap*Debt_2` forbids convergence to `(0,0)` in the repair branch.
+**Verification:** `python -m py_compile 04-computation/lrc_gap_debt_product_s398.py` succeeded; rerunning the script produced the stored output.
+
 ## codex-2026-05-31-S397 - Egyptian Fractions, q, and n=16 LRC
 
 **Account:** Codex
