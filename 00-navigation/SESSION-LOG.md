@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S460 - LRC Zeckendorf Shell Bridge
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S440; during close-out, upstream S450 anti-Bohr analogy and S451 Zeckendorf boundary-normal-form work landed first, so this strand was rebased over them as S460/HYP-1920/T500-T503.
+**User prompt:** Connect Zeckendorf decomposition to LRC and tournaments, exploring old threads thoroughly for ideas.
+**Repo archaeology:** Re-read the Zeckendorf/tournament bridge (`zeckendorf_tournament.py`), non-consecutivity/fugacity pairing, summand graph/Fermat/Zeckendorf reflections, Lucas minimum-gap geometry, S386 labelled LRC/tournament protection, S411/S420 row-column/IP LRC modes, S430 incidence core, and S440 n=14 gate fan tax.
+**Computation:** Added `04-computation/lrc_zeckendorf_bridge_s460.py` and stored `05-knowledge/results/lrc_zeckendorf_bridge_s460.out`. The script labels LRC speed columns by Zeckendorf supports, prints the path/cycle fugacity dictionary `I(P_m,1)` vs `I(P_m,2)`, audits the `14,15,16,18,21,24` denominator shell, enumerates local `n`-gate lower-cover families for `n=14,15,16`, and rewrites owner-debt ledgers in Zeckendorf coordinates.
+**Findings:** The `n=14` local gate row has a complete exact factorization: all minimum lower covers are `{1,3,5,7,9,11,13}` plus exactly one even bridge in `{2,4,6,8,10,12}`. Thus private endpoint rows force the whole odd fan, while the even bridge is locally a one-coordinate Fibonacci-cube fiber. The frontier denominators align as `14=F6+F1`, `15=F6+F2`, `16=F6+F3`, `18=F6+F4`, and `21=F7`.
+**Synthesis:** Added HYP-1920 and `07-reflections/lrc-zeckendorf-shell-bridge-s460.md`. Proposed proof target: branch on the forced odd fan, quotient the six even bridges as a local Zeckendorf fiber, then prove coarse denominator rows, primitivity, and exported owner-debt rows put positive dual weight on every bridge fiber.
+**Verification:** `python3 -m py_compile 04-computation/lrc_zeckendorf_bridge_s460.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S451 - LRC Zeckendorf Boundary Normal Form
 
 **Account:** Codex

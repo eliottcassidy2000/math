@@ -533,6 +533,18 @@ For irrational rotations, Ostrowski numeration gives canonical return-time expan
 **T496** #lonely-runner #n14 #zeckendorf-shadow #endpoint-debt | certainty: exact labels + speculative use | source: codex-2026-05-31-S451
 S451 labels S450 quantities in Zeckendorf normal form: initial `n=14` debt `6=F1+F4`, lower-speed budget `13=F6`, seven-ladder debt `84=F5+F7+F9`, and S380 exported debt `168=F3+F7+F11`. The label is useful only if future endpoint-layer graphs make repairs into legal/illegal carries.
 
+**T500** #zeckendorf #lonely-runner #n14 #gate-fan | certainty: exact local enumeration | source: codex-2026-05-31-S460
+The `n=14` local gate cover family factors exactly: all minimum lower covers of the `14`-gate endpoints are `{1,3,5,7,9,11,13}` plus one arbitrary even bridge from `{2,4,6,8,10,12}`. Private endpoint rows force the whole odd fan; the even bridge is a local Fibonacci-cube fiber. See HYP-1920.
+
+**T501** #zeckendorf #lrc-frontier #fibonacci-shells | certainty: exact coordinate observation | source: codex-2026-05-31-S460
+The LRC frontier denominators sit in one Zeckendorf shell: `14=F6+F1`, `15=F6+F2`, `16=F6+F3`, `18=F6+F4` (Lucas/min-gap pair), and `21=F7` (reset). This reframes `14/15/16/18/21` as low-payload motion over Fibonacci anchors, not just adjacent runner counts.
+
+**T502** #tournaments #zeckendorf #fugacity #jacobsthal | certainty: high old-thread synthesis | source: codex-2026-05-31-S460
+Zeckendorf and OCF share the same path-independence skeleton at different fugacities: `I(P_m,1)` gives Fibonacci counts, while `I(P_m,2)` gives Jacobsthal/tournament path-conflict counts. Anchors: `7=I(C_3,2)=F4+F2`, `21=I(P_4,2)=F7`. LRC endpoint IP adds the row-cover version of the same object.
+
+**T503** #lonely-runner #owner-debt #zeckendorf-height #product-depth | certainty: medium proof route from exact rows | source: codex-2026-05-31-S460
+S380 owner debt rises in Zeckendorf height: top exposed owners include `154=F11+F5+F2`, `168=F11+F7+F3`, and `182=F11+F8+F3+F1`. A proof may combine p-adic product-depth with Zeckendorf top-index divergence: gate repairs can preserve frontier mass only by exporting owner labels to higher Fibonacci shells.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
