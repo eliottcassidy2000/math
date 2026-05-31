@@ -1,0 +1,35 @@
+LRC n=16 adelic Gap*Debt product (oracle-2026-05-31-S19)
+
+======================================================================
+A. Dyadic ladders (reproduce codex's conserved product)
+======================================================================
+ d=2  gap_ratio=0.030303 debt=34   product=1.030303  layers(v2)={5: 34}
+ d=4  gap_ratio=0.015152 debt=68   product=1.030303  layers(v2)={6: 68}
+ d=8  gap_ratio=0.007576 debt=140  product=1.060606  layers(v2)={7: 140}
+ d=16 gap_ratio=0.003788 debt=280  product=1.060606  layers(v2)={8: 280}
+ -> product ~ const across ladders is the adelic conservation.
+
+======================================================================
+B. Structured non-ladder sets
+======================================================================
+ [initial 1..15] no-gate gap_ratio=0.000000 forbidden=1 debt=8 product=0.000000 layers={4: 8}
+ [1..15 drop8 add16] 16gate gap_ratio=0.048611 forbidden=203459/205920 debt=16 product=0.777778 layers={4: 8, 8: 8}
+ [1..15 drop15 add16] 16gate gap_ratio=0.038462 forbidden=126719/128128 debt=16 product=0.615385 layers={4: 6, 5: 4, 6: 2, 7: 2, 8: 2}
+ [odds+16] 16gate gap_ratio=0.196759 forbidden=4123448587/4493059200 debt=44 product=8.657407 layers={4: 38, 8: 6}
+
+======================================================================
+C. Random forced-16-gate primitive 15-sets: is the product bounded below?
+======================================================================
+ trials=300  tested=300  open-cover counterexamples found=0
+ smallest positive product=4.918919 at debt=64 gap_ratio=0.076858
+
+======================================================================
+D. The bad corner test: any set with forbidden=1 AND debt=0?
+======================================================================
+ near-tight trials=300
+ near-tight (forbidden>=0.99) sets: 0
+ of those with debt=0 (=counterexample corner): 0
+
+SUMMARY: if no set reaches (forbidden=1, debt=0) and Gap*Debt stays
+bounded away from 0, the adelic product formula forbids the bad corner
+=> evidence that no n=16 counterexample exists.
