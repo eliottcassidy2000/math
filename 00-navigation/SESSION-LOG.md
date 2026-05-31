@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S391 - LRC n=16 Dyadic Endpoint Count Formalization
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S390.
+**User prompt:** Continue the n=16 Lonely Runner exploration and formalize more of the dyadic endpoint-debt proof route.
+**Formalization:** Added THM-367, proving the exact pure dyadic endpoint-protection count at denominator `16`. For owner `u=2^k` and protector `p=2^j q mod 16u`, the protected endpoint count is all endpoints for a super-gate, zero for non-super `j>=k`, `2^(k-2)` for deep drops `k-j>=3`, and shallow counts controlled by `q mod 16` for drops `1` and `2`.
+**Computation:** Added `04-computation/lrc_n16_dyadic_endpoint_formula_s391.py` and stored `05-knowledge/results/lrc_n16_dyadic_endpoint_formula_s391.out`. The script verifies all residues for `k=0..8`, audits lower-cover numbers for pure dyadic owners, prints a private-endpoint certificate for `u=16`, constructs a self-similar nine-cover family for higher pure dyadic owners, and scans odd payloads `u=16w`.
+**Findings:** Owners `u=2,4,8` cannot be closed by lower protectors. Owner `u=16` has exact lower-cover number `9`, forced by private endpoints for residues `(1,3,5,7,8,9,11,13,15)`. The bounded solver also finds exact lower-cover number `9` for `u=32,64`, but the simple private-leaf certificate disappears; this redirects the proof target from local private leaves to a global debt-flow inequality.
+**Synthesis:** Added HYP-1859 and `07-reflections/lrc-n16-dyadic-endpoint-formalization-s391.md`. The revised n=16 proof object is a dyadic endpoint-flow network: THM-366 forces the `16`-gate branch, THM-365 turns any counterexample into a labelled endpoint cycle, and THM-367 supplies the exact local capacities. The missing step is proving every such labelled cycle has positive dyadic divergence.
+**Verification:** `python -m py_compile 04-computation/lrc_n16_dyadic_endpoint_formula_s391.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S390 - LRC n=16 Sedenion Endpoint-Debt Proof Search
 
 **Account:** Codex

@@ -3,12 +3,14 @@ id: HYP-1858
 status: OPEN
 source: codex-2026-05-31-S390
 related:
+  - THM-367
   - HYP-1839
   - HYP-1841
   - HYP-1842
   - HYP-1844
   - HYP-1854
   - HYP-1857
+  - HYP-1859
 ---
 
 # HYP-1858: n=16 LRC counterexamples are killed by dyadic endpoint debt
@@ -126,6 +128,23 @@ into a positive-divergence inequality: with only `15` speeds, the debt cannot
 descend, close the unit layer, and also form a leafless arithmetic endpoint
 cycle.
 
+THM-367 now proves the pure dyadic local count law.  For owner `u=2^k` and
+protector `p=2^j q mod 16u`, the protected endpoint count is:
+
+```text
+p = 0 mod 16u: all 2u endpoints;
+j >= k, non-super: 0;
+k-j >= 3: 2^(k-2);
+k-j = 2: 2^(k-1) only for q = +/-1,+/-3 mod 16;
+k-j = 1: 2^k only for q = +/-1 mod 16.
+```
+
+The theorem also sharpens the local cover picture: `u=2,4,8` cannot be closed
+by lower protectors, while `u=16` has exact lower-cover number `9`, forced by
+private endpoints.  Higher pure dyadic owners have self-similar nine-covers,
+so the remaining proof target is the global debt-flow inequality recorded in
+HYP-1859.
+
 ## Predictions
 
 1. Any exact branch-and-bound for `n=16` should terminate fastest when ordered
@@ -142,9 +161,14 @@ cycle.
 
 - `04-computation/lrc_sixteen_sedenion_proof_search_s390.py`
 - `05-knowledge/results/lrc_sixteen_sedenion_proof_search_s390.out`
+- THM-367
+- `04-computation/lrc_n16_dyadic_endpoint_formula_s391.py`
+- `05-knowledge/results/lrc_n16_dyadic_endpoint_formula_s391.out`
 - `07-reflections/lrc-sixteen-sedenion-proof-search-s390.md`
+- `07-reflections/lrc-n16-dyadic-endpoint-formalization-s391.md`
 - HYP-1841
 - HYP-1842
 - HYP-1844
 - HYP-1854
 - HYP-1857
+- HYP-1859

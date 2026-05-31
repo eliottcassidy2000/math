@@ -413,6 +413,9 @@ The normalized `n=16` scalar quotient has `1152` alpha patterns and `18432` cand
 **T412** #lonely-runner #sixteen-runners #dyadic-debt #sedenion-row | certainty: proved branch + exploratory proof route | source: codex-2026-05-31-S390
 At `n=16`, no `16`-gate leaves every odd unit point `a/16` as a lonely boundary witness, so any open-cover counterexample must contain a `16`-gate. Exact audits show the pure `2`-, `4`-, and `8`-ladders expose first debt layers `2`, `4`, and `8`; all `960` one-gate replacements through `16q, q<=64` stayed positive-gap. A maximum-branch `v=16` needs exactly nine lower residues to cover all `32` endpoints. See HYP-1858.
 
+**T413** #lonely-runner #n16 #dyadic-endpoint-count #debt-flow | certainty: proved local theorem + open global target | source: codex-2026-05-31-S391
+THM-367 proves the exact `n=16` pure dyadic endpoint-count formula: for owner `u=2^k`, protector `p=2^j q` protects all endpoints only as a super-gate, protects none for non-super `j>=k`, protects `2^(k-2)` for deep drops, and has shallow counts controlled by `q mod 16`. The first closeable lower-owner layer is `u=16`, where exactly nine residues `(1,3,5,7,8,9,11,13,15)` are forced by private endpoints. Higher pure dyadic owners have self-similar nine-covers, so the remaining n=16 proof needs a global endpoint-debt flow invariant. See THM-367 and HYP-1859.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
