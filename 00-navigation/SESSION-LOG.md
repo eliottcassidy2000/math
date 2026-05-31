@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S397 - Egyptian Fractions, q, and n=16 LRC
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S394; during close-out, rebased over upstream S395 q-gauge and S396 log-triangle q-decomposition, then renumbered this Egyptian/LRC bridge to S397/HYP-1865.
+**User prompt:** Explore how the S394 `q` ideas relate to Egyptian fractions and investigate creative angles regarding LRC at `n=16`.
+**Computation:** Added `04-computation/lrc_egyptian_q_bridge_s397.py` and stored `05-knowledge/results/lrc_egyptian_q_bridge_s397.out`. The script compares two-term Egyptian splitability of `16/c`, product-sum arities, exact `u=16` endpoint counts, half-turn missed-cell counts, harmonic Egyptian shells for `ln2`, and exact LRC probes from nine-cover/even-breaker speed sets.
+**Findings:** The best one-coordinate half-turn defect is `c=15`, which is also the anti-residue `-1 mod 16` and has the trivial Egyptian split `16/15=1+1/15`. The best support-2 half-turn pair is `(10,15)`: an unsplit even residue plus that anti-residue, suggesting a finite `q` pattern. The exact nine-cover plus `16`-gate still needs five of six even breakers; every simple five-breaker choice stays positive-gap, closest omitting `14` with `gap/th=0.060606`.
+**Synthesis:** Added HYP-1865 and `07-reflections/lrc-egyptian-q-bridge-s397.md`. The proposed proof target is an Egyptian split ledger for `n=16`: endpoint protection cycles split reciprocal mass by congruence/inequality, unsplit residues force even breaker speeds, and primitive breakers create a `q`-defect visible as positive gap or a private endpoint leaf.
+**Verification:** `python3 -m py_compile 04-computation/lrc_egyptian_q_bridge_s397.py` succeeded; rerunning the script reproduced the stored output.
+
 ## codex-2026-05-31-S396 - Log Triangle q-Decomposition
 
 **Account:** Codex

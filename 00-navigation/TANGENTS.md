@@ -446,6 +446,15 @@ THM-368 extends the S394 q-counterterm thread with an equal-area q-gauge: every 
 **T423** #logarithms #area-decomposition #q-transport #mellin | certainty: exact local calculation + exploratory pattern | source: codex-2026-05-31-S396
 For `f=x` on `[0,1]` and `f=1/x` on `[1,2]`, the log-preserving base-`[0,2]` triangle is the ramp `y=x/4`, not a Euclidean 30-60-90 triangle. The residual is `H(x-1)/x + q(x)` with `q=3x/4` on `[0,1]`, `q=-x/4` on `[1,2]`, `integral q=0`, moments `(1-2^n)/(n+2)`, and Mellin derivative `M'(1)=-ln(2)/2`. See HYP-1864.
 
+**T424** #egyptian-fractions #lonely-runner #n16 #split-ledger | certainty: medium computational proof target | source: codex-2026-05-31-S397
+Egyptian splitting `16/c = 1/b + 1/d` and LRC endpoint protection share a residue grammar: `d|c^2, d == -c mod 16` versus `|p*(16m+eps)-16au|<u`. S397 proposes an `n=16` endpoint proof ledger where unsplit Egyptian residues must be paid by even breaker speeds, producing positive gap or private endpoint leaves. See HYP-1865.
+
+**T425** #lonely-runner #n16 #half-turn #anti-residue #q-counterterm | certainty: exact quotient evidence | source: codex-2026-05-31-S397
+The best one-coordinate half-turn defect is `c=15`, with `128` missed cells; it is also `-1 mod 16` and has the trivial Egyptian split `16/15=1+1/15`. The best support-2 pair is `(10,15)`, missed `160`: an unsplit even residue plus the anti-residue. This looks like a finite `q` pattern, debt plus reciprocal counterterm.
+
+**T426** #ln2 #egyptian-shells #endpoint-debt #n16 | certainty: high computation + analogy | source: codex-2026-05-31-S397
+The harmonic shell `sum_{m<j<=2m} 1/j` is an Egyptian-fraction approximation to `ln2`. At `m=16`, the shell `[17,32]` is the first denominator octave beyond the `16`-gate and undershoots by `0.015380978...`; S397 reads this finite-shell error as the area analogue of LRC endpoint debt exported beyond the dyadic gate.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

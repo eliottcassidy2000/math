@@ -1,0 +1,98 @@
+LRC/Egyptian/q bridge (codex-2026-05-31 S397)
+n=16 Lonely Runner threshold = 1/16
+
+1. Coordinate ledger: Egyptian split vs n=16 LRC pressure
+   c  16/c split      ps-arity inv16 endpoints16 halfmiss nine evenbreak
+    1             -         -     1           4      576    Y         -
+    2             -         -     -           4      272    -         Y
+    3             -         -    11           4      368    Y         -
+    4             -         2     -           8      240    -         Y
+    5             -         -    13           4      320    Y         -
+    6             -         3     -           4      144    -         Y
+    7             -         -     7           4      240    Y         -
+    8       1/1+1/1       4,5     -          16      256    Y         -
+    9             -         5     9           4      560    Y         -
+   10             -         5     -           4      304    -         Y
+   11             -         -     3           4      624    Y         -
+   12       1/1+1/3     6,7,8     -           8      176    -         Y
+   13             -         -     5           4      464    Y         -
+   14       1/1+1/7         7     -           4      144    -         Y
+   15      1/1+1/15         9    15           4      128    Y         -
+
+   Read: '16/c split' uses the master Egyptian criterion
+         16/c = 1/b + 1/c'.  The same coordinates are also LRC
+         half-turn defect coordinates and endpoint-cover residues.
+   The best S393 half-turn coordinate is c=15: it is the
+   anti-residue -1 mod 16 and has the trivial split 16/15=1+1/15.
+   The best support-2 pair (10,15) mixes that anti-residue with
+   c=10, which is not two-unit-fraction splitable at numerator 16.
+
+2. Best support-2 half-turn pairs
+   rank pair    missed  split-flags product-sum-arities
+      1 (10, 15)     160          -S                  5/9
+      2  (8, 12)     240          SS            4,5/6,7,8
+      3   (4, 6)     256          --                  2/3
+      4  (6, 14)     256          -S                  3/7
+      5  (6, 15)     272          -S                  3/9
+      6 (12, 14)     304          SS              6,7,8/7
+      7 (12, 15)     304          SS              6,7,8/9
+      8   (6, 7)     336          --                  3/-
+      9  (6, 12)     336          -S              3/6,7,8
+     10  (4, 15)     352          -S                  2/9
+     11 (14, 15)     352          SS                  7/9
+     12   (2, 4)     368          --                  -/2
+
+   The best pair is (10,15): an unsplit even residue plus the
+   anti-residue -1 mod 16.  This looks like a q-pattern: one
+   coordinate carries the unsplit debt, the other supplies the
+   reciprocal counterterm.
+
+3. Egyptian shells approximating ln 2
+   m     sum_{m<j<=2m} 1/j        error over ln2
+     1                        1/2   -0.193147181
+     2                       7/12   -0.109813847
+     4                    533/840   -0.058623371
+     8               95549/144144   -0.030275330
+    16   13981692518567/20629078984800   -0.015380978
+    32   810320648392931898373256717/1182266884102822267511361600   -0.007751472
+    64   9204159030559409899503223815970003359186125226214526531/13353756090997411579403749204440236542538872688049072000   -0.003890992
+   128   6627586275367781704108890780566202934113955049652407035307160198671063536149480864510486127111014034689701/9588551355316758293075910725575839764387765675048678464609231565002236558901686564342533964737784982944000   -0.001949310
+
+   These finite Egyptian fractions are the rectangle-sum version of
+   the S394 hyperbola area.  At m=16 the shell [17,32] is the first
+   denominator octave beyond the n=16 gate; the error is endpoint-debt
+   in area language.
+
+4. Exact LRC probes from Egyptian/dyadic breaker sets
+   label                         class          gap/th unprot endpoints modulus
+   nine+16 omit 2                positive_gap  0.216667      4       260 11531520
+   nine+16 omit 4                positive_gap  0.105769      8       256 11531520
+   nine+16 omit 6                positive_gap  0.068182      8       252 11531520
+   nine+16 omit 10               positive_gap  0.131868      8       244 11531520
+   nine+16 omit 12               positive_gap  0.114286      8       240 11531520
+   nine+16 omit 14               positive_gap  0.060606     12       236 11531520
+   nine+16 + {2,4,6,10,160}      positive_gap  0.087500     28       532 23063040
+   nine+16 + {2,4,6,15,160}      positive_gap  0.075000     40       512 21621600
+   nine+16 + {2,4,10,15,160}     positive_gap  0.081250     40       500 21621600
+
+   The nine-cover plus a 16-gate still needs five of six even breakers.
+   Every simple five-breaker choice stays positive-gap; high 16-multiple
+   Egyptian probes also stay positive-gap with exposed endpoints.
+
+5. Synthesis
+   Egyptian fractions and n=16 LRC share the same hidden question:
+     can reciprocal mass be split without leaving a residue?
+   For k/N = 1/b + 1/c the residue is a divisor congruence
+     d | N^2, d == -N mod k.
+   For an LRC endpoint, the residue is an inequality
+     |p*(16m+eps) - 16*a*u| < u.
+   The S394 q-counterterm is the finite-part version of the same
+   move: replace an infinite reciprocal object by a finite triangular
+   one and keep track of the anti-reciprocal defect x-1/x.
+
+   Creative n=16 proof angle:
+     prove that any all-protected endpoint system with a 16-gate
+     induces an Egyptian split ledger across dyadic layers; the
+     unsplit residues must be paid by even breaker speeds, and those
+     breakers create a q-like negative counterterm visible as a
+     positive LRC gap or a private endpoint leaf.
