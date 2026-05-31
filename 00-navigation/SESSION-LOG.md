@@ -10,6 +10,16 @@
 **Synthesis:** Added HYP-1866 and `07-reflections/lrc-gap-debt-product-s398.md`. The proposed proof grammar is adelic: positive real gap gives a lonely interval, endpoint debt gives a boundary witness, and a lower bound on `ArchGap*Debt_2` forbids convergence to `(0,0)` in the repair branch.
 **Verification:** `python -m py_compile 04-computation/lrc_gap_debt_product_s398.py` succeeded; rerunning the script produced the stored output.
 
+## codex-2026-05-31-S399 - Bruhat-Tits Tree View of n=16 LRC
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S397; during close-out, upstream S398 gap-debt product law landed first, so this session was rebased and renumbered to S399/HYP-1867/T428-T430.
+**User prompt:** Think about Bruhat-Tits regarding the LRC and extend the current work on it.
+**Computation:** Added `04-computation/lrc_bruhat_tits_tree_s399.py` and stored `05-knowledge/results/lrc_bruhat_tits_tree_s399.out`. The script reorganizes THM-367 as a finite Bruhat-Tits tree kernel for `PGL_2(Q_2)`: owner `u=2^k` is a dyadic horosphere, protector `p=2^j q` has drop `L=k-j`, and odd `q mod 16` is a boundary direction.
+**Findings:** After normalizing by `2u` endpoints, every dyadic drop has total active residue mass exactly `1`: `{1,15}` at capacity `1/2`, `{1,3,13,15}` at `1/4`, and all eight odd residues at `1/8`. The nine-cover is a finite tree-star current `u/2 + (u/32)*{1,3,5,7,9,11,13,15}`, normalized to `(16,1,3,5,7,9,11,13,15)` for `u>=32`. The `u=16` private-endpoint proof is a base case; from `u>=32`, all-lower private endpoints vanish and the local incidence graph has the full core.
+**Synthesis:** Added HYP-1867 and `07-reflections/lrc-bruhat-tits-tree-s399.md`. The new proof target is a global harmonic-flow obstruction: imprimitive fans are locally harmonic, while primitive gcd-breakers should create positive divergence visible as interval gap, endpoint leaf, or Egyptian/q defect.
+**Next:** Add Bruhat-Tits features to the n=16 branch-and-bound ledger: drop distribution, active residue mass, lower-truncation deficit, fan-apex load, and gcd divergence. A disproof construction would need to be a leafless harmonic current on a finite dyadic subtree, not merely a dense interval cover.
+
 ## codex-2026-05-31-S397 - Egyptian Fractions, q, and n=16 LRC
 
 **Account:** Codex

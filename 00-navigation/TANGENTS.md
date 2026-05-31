@@ -458,6 +458,15 @@ The harmonic shell `sum_{m<j<=2m} 1/j` is an Egyptian-fraction approximation to 
 **T427** #lonely-runner #gap-debt #product-formula #dyadic | certainty: high exact rows + open invariant | source: codex-2026-05-31-S398
 The LRC obstruction can be read adelically: normalized gap is the Archimedean size, exposed endpoint debt is the denominator/2-adic size, and the repair branch should satisfy `ArchGap*Debt_2 >= c(n)>0`. Exact ladders preserve products `n=14: 5/11`, `n=18: 1`, and `n=16: 34/33` then `35/33`, with a `35/34` phase tax. Boundary rows are separate: `gap=0` but `debt>0`. A counterexample needs both zeroes simultaneously. See HYP-1866.
 
+**T428** #lonely-runner #n16 #bruhat-tits #dyadic-kernel | certainty: exact reformulation of THM-367 | source: codex-2026-05-31-S399
+THM-367 is a conservative Bruhat-Tits tree kernel. For owner `u=2^k` and protector drop `L=k-v2(p)`, normalized endpoint capacities are `{1,15}` at `1/2` for `L=1`, `{1,3,13,15}` at `1/4` for `L=2`, and all eight odd residues at `1/8` for `L>=3`; in every case active mass sums to `1`. See HYP-1867.
+
+**T429** #lonely-runner #n16 #fan-current #primitive-divergence | certainty: high computation + proof target | source: codex-2026-05-31-S399
+The n=16 nine-cover is a finite tree-star current: for `u>=32`, `u/2 + (u/32)*{1,3,5,7,9,11,13,15}` normalizes to `(16,1,3,5,7,9,11,13,15)` and has average endpoint indegree `3/2`, with two apex cylinders hit by all nine speeds. It is locally harmonic but imprimitive; primitive gcd-breakers should create positive divergence.
+
+**T430** #natural-modes #bruhat-tits #lonely-runner #valuation-shadow | certainty: medium structural bridge | source: codex-2026-05-31-S399
+The Bruhat-Tits view is the valuation skeleton of the natural-number multiplication mode graph. Addition `X+Y=Z` gives an order shadow, multiplication `X*Y=Z` gives divisibility, and `v2` plus odd residue gives tree depth plus boundary direction. LRC endpoint protection is a metric thickening of this mode graph; product-sum and Egyptian equations are equality versions of the same split-mass balance.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

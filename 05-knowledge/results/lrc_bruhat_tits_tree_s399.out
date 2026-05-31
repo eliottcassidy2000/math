@@ -1,0 +1,131 @@
+BRUHAT-TITS DICTIONARY FOR THE n=16 DYADIC ROW
+==============================================================================
+  owner u=2^k        -> dyadic horosphere / tree depth k
+  endpoint (16m+-1)/(16u) -> two unit boundary fibers over m
+  protector p=2^j q  -> tree step with drop L=k-j
+  odd q mod 16       -> boundary residue direction
+  protected count    -> finite Hecke-kernel capacity
+
+1. THM-367 AS A TREE-KERNEL MASS LAW
+==============================================================================
+For every checked owner depth k, active odd residue classes at a fixed
+drop L have equal capacity, and their normalized total mass is 1.
+
+  k owner drop active q mod 16          each capacity  active mass
+  4    16    1 {1,15}                             1/2            1
+  4    16    2 {1,3,13,15}                        1/4            1
+  4    16    3 {1,3,5,7,9,11,13,15}               1/8            1
+  4    16    4 {1,3,5,7,9,11,13,15}               1/8            1
+
+  5    32    1 {1,15}                             1/2            1
+  5    32    2 {1,3,13,15}                        1/4            1
+  5    32    3 {1,3,5,7,9,11,13,15}               1/8            1
+  5    32    4 {1,3,5,7,9,11,13,15}               1/8            1
+  5    32    5 {1,3,5,7,9,11,13,15}               1/8            1
+
+  6    64    1 {1,15}                             1/2            1
+  6    64    2 {1,3,13,15}                        1/4            1
+  6    64    3 {1,3,5,7,9,11,13,15}               1/8            1
+  6    64    4 {1,3,5,7,9,11,13,15}               1/8            1
+  6    64    5 {1,3,5,7,9,11,13,15}               1/8            1
+  6    64    6 {1,3,5,7,9,11,13,15}               1/8            1
+
+  7   128    1 {1,15}                             1/2            1
+  7   128    2 {1,3,13,15}                        1/4            1
+  7   128    3 {1,3,5,7,9,11,13,15}               1/8            1
+  7   128    4 {1,3,5,7,9,11,13,15}               1/8            1
+  7   128    5 {1,3,5,7,9,11,13,15}               1/8            1
+  7   128    6 {1,3,5,7,9,11,13,15}               1/8            1
+  7   128    7 {1,3,5,7,9,11,13,15}               1/8            1
+
+  8   256    1 {1,15}                             1/2            1
+  8   256    2 {1,3,13,15}                        1/4            1
+  8   256    3 {1,3,5,7,9,11,13,15}               1/8            1
+  8   256    4 {1,3,5,7,9,11,13,15}               1/8            1
+  8   256    5 {1,3,5,7,9,11,13,15}               1/8            1
+  8   256    6 {1,3,5,7,9,11,13,15}               1/8            1
+  8   256    7 {1,3,5,7,9,11,13,15}               1/8            1
+  8   256    8 {1,3,5,7,9,11,13,15}               1/8            1
+
+Read: L=1 has two active boundary residues, each covering half the horosphere; L=2 has four active residues, each covering a quarter; L>=3 has eight active residues, each covering an eighth.
+
+2. LOWER-PROTECTOR TRUNCATION
+==============================================================================
+The full residue kernel is symmetric in q mod 16.  A maximal owner,
+however, can only use lower protectors p<u.  This takes a one-sided
+truncation of the Bruhat-Tits apartment.
+
+  owner u=16:
+    drop  1: available={1}                      active lower={1}
+    drop  2: available={1,3}                    active lower={1,3}
+    drop  3: available={1,3,5,7}                active lower={1,3,5,7}
+    drop  4: available={1,3,5,7,9,11,13,15}     active lower={1,3,5,7,9,11,13,15}
+
+  owner u=32:
+    drop  1: available={1}                      active lower={1}
+    drop  2: available={1,3}                    active lower={1,3}
+    drop  3: available={1,3,5,7}                active lower={1,3,5,7}
+    drop  4: available={1,3,5,7,9,11,13,15}     active lower={1,3,5,7,9,11,13,15}
+    drop  5: available={1,3,5,7,9,11,13,15}     active lower={1,3,5,7,9,11,13,15}
+
+  owner u=64:
+    drop  1: available={1}                      active lower={1}
+    drop  2: available={1,3}                    active lower={1,3}
+    drop  3: available={1,3,5,7}                active lower={1,3,5,7}
+    drop  4: available={1,3,5,7,9,11,13,15}     active lower={1,3,5,7,9,11,13,15}
+    drop  5: available={1,3,5,7,9,11,13,15}     active lower={1,3,5,7,9,11,13,15}
+    drop  6: available={1,3,5,7,9,11,13,15}     active lower={1,3,5,7,9,11,13,15}
+
+  owner u=128:
+    drop  1: available={1}                      active lower={1}
+    drop  2: available={1,3}                    active lower={1,3}
+    drop  3: available={1,3,5,7}                active lower={1,3,5,7}
+    drop  4: available={1,3,5,7,9,11,13,15}     active lower={1,3,5,7,9,11,13,15}
+    drop  5: available={1,3,5,7,9,11,13,15}     active lower={1,3,5,7,9,11,13,15}
+    drop  6: available={1,3,5,7,9,11,13,15}     active lower={1,3,5,7,9,11,13,15}
+    drop  7: available={1,3,5,7,9,11,13,15}     active lower={1,3,5,7,9,11,13,15}
+
+3. NINE-SPEED FAN AS A FINITE TREE STAR
+==============================================================================
+For u>=32 the constructive cover is:
+  u/2 plus (u/32)*{1,3,5,7,9,11,13,15}.
+It is one radial L=1 direction plus the full eight-direction boundary
+sphere at L=5.  Its raw incidence mass is always 3u, so average
+endpoint indegree is 3/2.
+
+  owner gcd normalized cover                         fan indeg hist
+     16   1 (8, 1, 3, 5, 7, 9, 11, 13, 15)           ((1, 30), (9, 2))
+     32   1 (16, 1, 3, 5, 7, 9, 11, 13, 15)          ((1, 46), (2, 16), (9, 2))
+     64   2 (16, 1, 3, 5, 7, 9, 11, 13, 15)          ((1, 92), (2, 32), (9, 4))
+    128   4 (16, 1, 3, 5, 7, 9, 11, 13, 15)          ((1, 184), (2, 64), (9, 8))
+    256   8 (16, 1, 3, 5, 7, 9, 11, 13, 15)          ((1, 368), (2, 128), (9, 16))
+    512  16 (16, 1, 3, 5, 7, 9, 11, 13, 15)          ((1, 736), (2, 256), (9, 32))
+
+All-lower local cores and private endpoints:
+  owner all-lower indeg hist                 private endpoints  core(E,P)
+     16 ((1, 24), (3, 4), (7, 2), (15, 2))                24  (8, 15)
+     32 ((2, 12), (3, 32), (4, 12), (7, 4), (15, 2), (31, 2))                 0  (64, 31)
+     64 ((4, 8), (5, 4), (6, 8), (7, 76), (8, 12), (9, 8), (10, 4), (15, 4), (31, 2), (63, 2))                 0  (128, 63)
+    128 ((8, 4), (9, 4), (11, 4), (12, 4), (13, 16), (14, 36), (15, 104), (16, 44), (17, 12), (18, 12), (19, 4), (22, 4), (31, 4), (63, 2), (127, 2))                 0  (256, 127)
+    256 ((17, 4), (19, 4), (23, 4), (25, 8), (26, 4), (27, 4), (28, 12), (29, 28), (30, 52), (31, 244), (32, 64), (33, 36), (34, 12), (35, 4), (36, 8), (37, 8), (39, 4), (45, 4), (63, 4), (127, 2), (255, 2))                 0  (512, 255)
+
+Boundary cylinder signatures for the fan, using cylinders (m mod 16, sign):
+  signature tuple = (bucket size, min indeg, max indeg, total indeg)
+  owner  16: (((1, 1, 1, 1), 30), ((1, 9, 9, 9), 2))
+  owner  32: (((2, 1, 1, 2), 22), ((2, 1, 9, 10), 2), ((2, 2, 2, 4), 8))
+  owner  64: (((4, 1, 1, 4), 22), ((4, 1, 9, 20), 2), ((4, 2, 2, 8), 8))
+  owner 128: (((8, 1, 1, 8), 22), ((8, 1, 9, 40), 2), ((8, 2, 2, 16), 8))
+  owner 256: (((16, 1, 1, 16), 22), ((16, 1, 9, 80), 2), ((16, 2, 2, 32), 8))
+
+4. PROOF TARGETS SUGGESTED BY THE TREE VIEW
+==============================================================================
+A. The local dyadic endpoint theorem is a normalized Markov/Hecke kernel:
+   every tree drop has total active residue mass exactly one.
+B. The known nine-cover is a star current: one radial half-horosphere
+   plus eight deep boundary eighth-horospheres.
+C. The u=16 private-leaf proof is exceptional.  From u=32 onward, the
+   all-lower local incidence graph has no private endpoints and has a
+   nonempty 2-core, so the n=16 proof needs a global flow inequality.
+D. A would-be disproof should look like a harmonic current on a truncated
+   2-adic tree.  The conjectural obstruction is that primitive gcd-breaker
+   speeds create positive divergence, visible as gap or endpoint leaves.
