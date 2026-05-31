@@ -248,6 +248,15 @@ For the next frontier `k=13`, `n=14`, the direct prime-field tight-class analogu
 **T357** #lonely-runner #finite-checking #initial-bad-set #k13 | certainty: medium computational | source: codex-2026-05-31-S363
 Running the public `vzsky/13-lonely-runners` verifier's experimental `LrcVerifier<13>` path on primes `17..101` emptied every final set; once `I(13,p,1)` was computed, the first `c=2` squeeze killed everything. The bottleneck is the initial cover search, with `p=101` taking 113.117640s. See `05-knowledge/results/lonely_runner_k13_microstaircase_s363.out`.
 
+**T358** #lonely-runner #scalar-ramp #dirichlet-equality #micro-staircase | certainty: high computational / proof target | source: codex-2026-05-31-S364
+The full scalar-ramp family `v_i=m i mod n` blocks every full micro-staircase cell for both `n=14` and `n=15`. This is the Dirichlet equality spine in residue form, so any composite micro-staircase lemma must first excise scalar ramps. See HYP-1818 and `05-knowledge/results/lonely_runner_feedback_loop_s364.out`.
+
+**T359** #lonely-runner #non-scalar-blockers #missed-cells #fourteen-runners | certainty: medium computational | source: codex-2026-05-31-S364
+After scalar-ramp excision, local search found no full non-scalar blocker. Best `n=14` near-blocker covers `11312/11368` cells, missing only 56; best `n=15` covers `14280/14400`, missing 120. The missed-cell ledgers are the next finite proof target.
+
+**T360** #lonely-runner #counterexample-search #gated-speeds #endpoint-cover | certainty: medium negative evidence | source: codex-2026-05-31-S364
+Deterministic and random `14`/`15`-gated speed families did not produce open-cover candidates. Simply adding the forced `n`-divisible speed tends to reopen positive gaps or boundary witnesses, supporting quotient/descent over counterexample construction.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

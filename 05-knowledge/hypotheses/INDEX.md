@@ -2712,8 +2712,15 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **See:** `05-knowledge/hypotheses/HYP-1816-fourteen-runner-crt-gate-descent.md`, `04-computation/lonely_runner_fourteen_runner_s363.py`, `05-knowledge/results/lonely_runner_fourteen_runner_s363.out`, `07-reflections/lonely-runner-fourteen-runner-crt-gate-s363.md`.
 
 ## HYP-1817: The fourteen-runner case needs a micro-staircase lift (codex-2026-05-31-S363)
-**Status:** EXPLORATORY.
-**What:** For the next LRC frontier `k=13`, `n=14`, the prime-field tight-class lemma fails on coarse `r/14` cells, but finer cells of `floor(14*{i alpha})` can resolve the obstruction on actual prime grids.
+**Status:** EXPLORATORY; corrected by HYP-1818 to exclude scalar ramps first.
+**What:** For the next LRC frontier `k=13`, `n=14`, the prime-field tight-class lemma fails on coarse `r/14` cells, but finer cells of `floor(14*{i alpha})` can resolve non-scalar obstructions on actual prime grids.
 **Evidence:** `lonely_runner_k13_microstaircase_s363.py` finds a mod-14 vector blocking all `14*14` coarse candidates, then resolves it with the cell `(0,0,0,1,1,1,2,2,2,3,3,3,4)` on `[2/91,1/42)`. The public verifier's experimental `k=13` path empties every tested small-prime final set once `I(13,p,1)` is computed.
-**Predictions:** A proof should classify micro-staircase cells by resolving width, then use those certificates to prune the initial bad-set search `I(13,p,1)`.
-**See:** `05-knowledge/hypotheses/HYP-1817-lrc-k13-microstaircase.md`, HYP-1813, `04-computation/lonely_runner_k13_microstaircase_s363.py`, `05-knowledge/results/lonely_runner_k13_microstaircase_s363.out`, `07-reflections/lonely-runner-fourteen-runner-microstaircase-s363.md`.
+**Predictions:** A proof should first split off scalar ramps, then classify micro-staircase cells by resolving width and use those certificates to prune the initial bad-set search `I(13,p,1)`.
+**See:** `05-knowledge/hypotheses/HYP-1817-lrc-k13-microstaircase.md`, HYP-1813, HYP-1818, `04-computation/lonely_runner_k13_microstaircase_s363.py`, `05-knowledge/results/lonely_runner_k13_microstaircase_s363.out`, `07-reflections/lonely-runner-fourteen-runner-microstaircase-s363.md`.
+
+## HYP-1818: LRC scalar-ramp excision before composite micro-staircases (codex-2026-05-31-S364)
+**Status:** EXPLORATORY.
+**What:** Composite-denominator micro-staircase lemmas must first split off the affine scalar-ramp family `v_i=m i mod n`. Unit ramps are reindexed initial segments; nonunit ramps are quotient/descent cases.
+**Evidence:** `lonely_runner_feedback_loop_s364.py` builds full cell systems for `n=14` (`812` patterns, `11368` candidates) and `n=15` (`960` patterns, `14400` candidates). Every scalar multiplier blocks every cell in both systems. After scalar excision, local search found no full non-scalar blocker: best `n=14` covers `11312/11368`, best `n=15` covers `14280/14400`.
+**Predictions:** Prove the scalar-ramp blocking identity for all `n`; route nonunit ramps through divisibility descent; then certify the missed cells of best non-scalar near-blockers by mixed-threshold or endpoint-pressure arguments.
+**See:** `05-knowledge/hypotheses/HYP-1818-lrc-scalar-ramp-excision.md`, `04-computation/lonely_runner_feedback_loop_s364.py`, `05-knowledge/results/lonely_runner_feedback_loop_s364.out`, `07-reflections/lonely-runner-feedback-loop-14-15-counterexamples-s364.md`.

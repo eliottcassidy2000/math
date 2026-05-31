@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-31-S364 - Lonely Runner 14/15 Feedback Loop
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**User prompt:** Spend a long cycling session attacking the 14-runner case, switching to a creative 15-runner route at dead ends, and using possible disproof constructions as a third route.
+**External check:** Rechecked the current finite frontier from arXiv sources. Rosenfeld proves 8 runners (`arXiv:2509.14111`), Trakulthongchai proves 9/10 (`arXiv:2511.22427`), Sungkawichai-Trakulthongchai prove reduced `k in {10,11,12}` / up to 13 total runners (`arXiv:2604.23906`), and Jensen's mixed-threshold paper (`arXiv:2605.27941`) supplied the session's Fourier/mixed-margin inspiration.
+**Computation:** Added `04-computation/lonely_runner_feedback_loop_s364.py` and stored `05-knowledge/results/lonely_runner_feedback_loop_s364.out`. The script builds exact full-cell systems for `n=14` and `n=15`, runs scalar-ramp and non-scalar blocker searches, and tries deterministic/random gated near-counterexample constructions.
+**Main finding:** The naive S363 micro-staircase target must be corrected: for both `n=14` and `n=15`, every scalar ramp `v_i=m i mod n` blocks every full cell. This is the Dirichlet equality spine, not a random obstruction. After scalar-ramp excision, local search found no full non-scalar blocker: the best `n=14` vector covered `11312/11368` cells and the best `n=15` vector covered `14280/14400`.
+**Disproof route:** Deterministic `14`/`15`-gated families and 90 random gated trials in each case produced no open-cover candidate; all hard samples retained either a boundary witness or a positive open gap.
+**Synthesis:** Added HYP-1818 and `07-reflections/lonely-runner-feedback-loop-14-15-counterexamples-s364.md`. Updated HYP-1817 so the micro-staircase lemma explicitly excludes scalar ramps before demanding a generic witness.
+**Next:** Prove the scalar-ramp blocking identity for all `n`; map nonunit ramps to quotient/divisibility descent; exactly classify non-scalar full blockers for `n=14`; then inspect the 56 missed cells of the best non-scalar `n=14` near-blocker.
+
 ## codex-2026-05-31-S363 - Lonely Runner Fourteen-Runner Micro-Staircase
 
 **Account:** Codex

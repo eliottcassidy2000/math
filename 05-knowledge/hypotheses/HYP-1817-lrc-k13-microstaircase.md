@@ -7,6 +7,7 @@ related:
   - THM-358
   - THM-360
   - HYP-1813
+  - HYP-1818
 ---
 
 # HYP-1817: The fourteen-runner case needs a micro-staircase lift
@@ -31,8 +32,8 @@ alpha = a/(14 i),  1 <= i <= 13.
 ```
 
 For every lifted tight-class residue vector `v in (Z/14Z)^13` that is not
-already handled by the gcd condition, there should be some `s mod 14` and some
-cell of `R_alpha` such that
+already a scalar-ramp/Dirichlet-equality case and is not handled by the gcd
+condition, there should be some `s mod 14` and some cell of `R_alpha` such that
 
 ```text
 s v_i + R_alpha(i) notin {0,13} mod 14
@@ -107,12 +108,26 @@ p=101: |I(13,p,1)|=12697411, find_cover=113.117640s, final=0
 This suggests that a proof extension needs a stronger understanding of the
 initial bad sets `I(13,p,1)`, not a more elaborate lift after they are found.
 
+## S364 Correction
+
+S364 found that the full scalar-ramp family
+
+```text
+v_i = m i mod 14
+```
+
+blocks every full micro-staircase cell.  This is not a counterexample to the
+program; it is the Dirichlet equality spine in residue form.  HYP-1817 should
+therefore be read together with HYP-1818: first excise scalar ramps, use
+quotient/divisibility descent for nonunit members, and only then demand a
+generic micro-staircase witness for non-scalar vectors.
+
 ## Test Plan
 
 1. Build an exact SAT/backtracking checker for the full `n=14` micro-staircase
-   cell arrangement, not merely random search.
-2. Classify residue vectors by the smallest cell width that resolves them.
-3. Prove a uniform lower width bound for all non-gcd tight-lift vectors.
+   cell arrangement, not merely random search, after excluding scalar ramps.
+2. Classify non-scalar residue vectors by the smallest cell width that resolves them.
+3. Prove a uniform lower width bound for all non-scalar, non-gcd tight-lift vectors.
 4. If the width bound is too small, isolate the exceptional vectors and compare
    them with the `I(13,p,1)` bad sets produced by the public verifier.
 5. Add cover-search pruning based on "this partial tuple already has a
