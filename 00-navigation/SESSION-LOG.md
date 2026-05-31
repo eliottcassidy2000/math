@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-31-S450 - LRC Anti-Bohr Analogy Atlas
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S421; upstream later advanced through S430/S21/S440, so this session was renumbered to S450/HYP-1901/T490-T493 and rebased as a companion to the upstream lens and gate-fan atlases.
+**User prompt:** Search the repo and web for analogous problems to LRC or similar, identify what is isomorphic, and say what underlying structure matters.
+**Repo archaeology:** Re-read THM-357, HYP-1836, HYP-1890, HYP-1891, the distance-graph coloring note, the anti-Bohr/Diophantine note, and the prior famous-problem residue atlas. The repo already points at finite endpoint incidence rather than raw speed sets.
+**Web pass:** Checked current LRC progress and equivalents: Rosenfeld's eight-runner proof, Trakulthongchai's nine/ten result, Sungkawichai-Trakulthongchai's eleven/thirteen result, Barajas-Serra on distance-graph regular chromatic number, Henze-Malikiosis/zonotope covering radius, Cambridge finite-checking, Giri-Kravitz spectra, and the flow/view-obstruction paper.
+**Computation:** Added `04-computation/lrc_analogy_atlas_s450.py` and stored `05-knowledge/results/lrc_analogy_atlas_s450.out`. The script reruns exact finite-boundary checks for initial `n=8,14,16`, the `n=14` seven-ladder, and the S380 gate ladder, then classifies analogues by relation strength.
+**Findings:** The exact models all preserve the same triple: one-parameter subgroup, forbidden neighborhoods, and finite protected boundary incidence. Near-counterexamples shrink real gaps but retain exposed boundary debt: seven-ladder has `gap/th=5/924` with `84` unprotected endpoints; S380 gate ladder has `gap/th=5/1848` with `168` unprotected endpoints. The 2026 web frontier makes `n=14` the natural first-open denominator if the current preprints are accepted.
+**Synthesis:** Added HYP-1901 and `07-reflections/lrc-analogy-atlas-s450.md`. It refines upstream HYP-1900's labelled incidence core by making protected anti-Bohr boundary incidence the proposed invariant. The proposed test for future analogies is blunt: if the analogy cannot say what an unprotected endpoint becomes, it is probably poetic but not a proof engine.
+**Verification:** `python -m py_compile 04-computation/lrc_analogy_atlas_s450.py` succeeded; rerunning the script produced the stored output.
+
 ## codex-2026-05-31-S440 - n=14 LRC Creative Reframes
 
 **Account:** Codex

@@ -512,6 +512,18 @@ The seven-ladder and S380 gate ladder have the same product-depth frontier mass 
 **T482** #lonely-runner #n14 #owner-charge #endpoint-debt | certainty: high exact audit | source: codex-2026-05-31-S440
 Endpoint debt should be charged to owner speeds. In S380, owners `154=2*77`, `168=8*21`, and `182=2*91` each carry 48 exposed endpoint labels; owners `14,42,70,126` carry 24 each. This suggests a labelled endpoint-cycle potential with positive owner-charge divergence.
 
+**T490** #lonely-runner #anti-bohr #boundary-incidence #analogies | certainty: high exact equivalence atlas + open proof target | source: codex-2026-05-31-S450
+Exact LRC formulations preserve a common object: a one-parameter subgroup, forbidden coordinate neighborhoods, and a finite protected boundary. Distance-graph multiplier colorings, torus cube avoidance, view obstruction, zonotope covering radius, spectra, endpoint peel, IP rows, and Bruhat-Tits mass are useful precisely when they preserve positive gaps and unprotected endpoints. This sharpens HYP-1900's incidence-core lens into HYP-1901's protected anti-Bohr boundary universality test.
+
+**T491** #lonely-runner #fourteen-runners #current-frontier #web-status | certainty: current preprint-dependent | source: codex-2026-05-31-S450
+The 2026 web pass changes the strategic context: Rosenfeld proves eight runners, Trakulthongchai proves nine/ten, and Sungkawichai-Trakulthongchai prove the title range eleven through thirteen by computer-assisted sieving/polynomial refinements. If those preprints are the working frontier, `n=14` is exactly the next first-open denominator, matching the repo's long mixed-prime focus.
+
+**T492** #lonely-runner #zonotope #distance-graph #endpoint-debt | certainty: medium-high structural bridge | source: codex-2026-05-31-S450
+Zonotope covering debt, distance-graph failed multiplier colorings, and repo endpoint debt appear to be the same obstruction seen through three projections. Proposed test: a useful analogy must say where an unprotected endpoint goes. Ordinary chromatic number, volume, or visual obstruction alone forget too much; regular/multiplier coloring and covering-radius facets are closer.
+
+**T493** #lonely-runner #n14 #protected-boundary #near-counterexamples | certainty: exact S450 recomputation | source: codex-2026-05-31-S450
+The S450 exact atlas confirms the near-counterexample moral: `initial n=14` is boundary-only with `6` unprotected endpoints; the seven-ladder has `gap/th=5/924` and `84` unprotected endpoints; the S380 gate ladder shrinks the gap to `5/1848` but has `168` unprotected endpoints. Gap shrinks, boundary debt grows.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
