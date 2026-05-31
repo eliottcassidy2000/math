@@ -77,6 +77,21 @@ resolved at denominator `17`.  This suggests the composite-gate descent and
 micro-staircase routes are not separate tricks but two views of the same
 finite boundary leak.
 
+S373 pushed the disproof direction harder for `n=14` with speed-first
+constructions.  It found no open-cover candidates, but did find a sharper
+positive-gap near-miss:
+
+```text
+(1,7,14,21,28,35,49,56,63,70,77,84,91)
+forbidden_length = 142/143
+max_gap/thresh = 0.005411
+unprotected endpoints = 84
+```
+
+This strengthens the "gate leak" picture: quotient ladders can almost cover
+the circle, but the price is a large exposed endpoint layer rather than an
+all-protected core.
+
 ## Why It Matters
 
 The current published frontier proves the reduced conjecture through `k=12`.
@@ -100,5 +115,9 @@ searches should generate protection cycles first and solve for speeds second.
 - `05-knowledge/results/lonely_runner_composite_gate_feedback_s364.out`
 - `04-computation/lonely_runner_frontier_feedback_s364.py`
 - `05-knowledge/results/lonely_runner_frontier_feedback_s364.out`
+- `04-computation/lonely_runner_14_disproof_hunt_s373.py`
+- `05-knowledge/results/lonely_runner_14_disproof_hunt_s373.out`
 - `07-reflections/lonely-runner-composite-gate-feedback-s364.md`
+- `07-reflections/lonely-runner-fourteen-disproof-hunt-s373.md`
 - HYP-1816
+- HYP-1828

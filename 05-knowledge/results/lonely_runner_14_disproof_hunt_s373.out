@@ -1,0 +1,138 @@
+Lonely Runner fourteen-runner disproof hunt (codex-2026-05-31 S373)
+Convention: k=13 moving speeds, threshold=1/14, grid=12012.
+Exact audits use S356 interval union and S360 endpoint protection.
+
+Building grid masks for speeds 1..252 ...
+Grid masks ready.
+
+Baseline tight equality object
+  initial segment: class=boundary_only grid_uncovered=6 grid_longest=1 forbidden_len=1 max_gap=0 gap/thresh=0.000000 boundary_witnesses=6 unprotected=6 first_unprotected=1/14 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+
+Single 14-gate replacements
+  single-gate remove=6 add=224: class=positive_gap grid_uncovered=76 grid_longest=14 forbidden_len=668471/672672 max_gap=11/9408 gap/thresh=0.016369 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=20180160
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 224)
+  single-gate remove=6 add=98: class=positive_gap grid_uncovered=64 grid_longest=17 forbidden_len=292751/294294 max_gap=1/728 gap/thresh=0.019231 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=35315280
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98)
+  single-gate remove=6 add=126: class=positive_gap grid_uncovered=72 grid_longest=17 forbidden_len=125383/126126 max_gap=5/3528 gap/thresh=0.019841 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 126)
+  single-gate remove=6 add=196: class=positive_gap grid_uncovered=82 grid_longest=18 forbidden_len=146161/147147 max_gap=45/30184 gap/thresh=0.020872 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=35315280
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 196)
+  single-gate remove=12 add=84: class=positive_gap grid_uncovered=64 grid_longest=18 forbidden_len=104542/105105 max_gap=3/1960 gap/thresh=0.021429 boundary_witnesses=16 unprotected=16 first_unprotected=15/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+  single-gate remove=6 add=252: class=positive_gap grid_uncovered=86 grid_longest=20 forbidden_len=62620/63063 max_gap=1/588 gap/thresh=0.023810 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 252)
+  single-gate remove=6 add=154: class=positive_gap grid_uncovered=88 grid_longest=27 forbidden_len=20869/21021 max_gap=29/12936 gap/thresh=0.031385 boundary_witnesses=8 unprotected=8 first_unprotected=29/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 154)
+  single-gate remove=6 add=168: class=positive_gap grid_uncovered=80 grid_longest=28 forbidden_len=27847/28028 max_gap=59/25872 gap/thresh=0.031926 boundary_witnesses=8 unprotected=8 first_unprotected=29/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 168)
+
+Multi-gate overloads
+  2-gate remove=4,6 add=42,98: class=positive_gap grid_uncovered=158 grid_longest=17 forbidden_len=580967/588588 max_gap=1/728 gap/thresh=0.019231 boundary_witnesses=32 unprotected=32 first_unprotected=29/182 Q=35315280
+    speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 42, 98)
+  2-gate remove=4,6 add=42,196: class=positive_gap grid_uncovered=176 grid_longest=18 forbidden_len=580109/588588 max_gap=45/30184 gap/thresh=0.020872 boundary_witnesses=32 unprotected=32 first_unprotected=29/182 Q=35315280
+    speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 42, 196)
+  2-gate remove=10,12 add=70,84: class=positive_gap grid_uncovered=192 grid_longest=26 forbidden_len=310316/315315 max_gap=19/8820 gap/thresh=0.030159 boundary_witnesses=36 unprotected=36 first_unprotected=15/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 70, 84)
+  2-gate remove=4,6 add=42,154: class=positive_gap grid_uncovered=160 grid_longest=27 forbidden_len=7543/7644 max_gap=29/12936 gap/thresh=0.031385 boundary_witnesses=28 unprotected=28 first_unprotected=29/182 Q=5045040
+    speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 42, 154)
+  2-gate remove=4,12 add=42,154: class=positive_gap grid_uncovered=186 grid_longest=28 forbidden_len=37633/38220 max_gap=5/2156 gap/thresh=0.032468 boundary_witnesses=32 unprotected=32 first_unprotected=15/182 Q=5045040
+    speeds=(1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13, 42, 154)
+  2-gate remove=6,10 add=70,98: class=positive_gap grid_uncovered=204 grid_longest=28 forbidden_len=166931/169785 max_gap=4/1715 gap/thresh=0.032653 boundary_witnesses=32 unprotected=32 first_unprotected=15/154 Q=35315280
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 70, 98)
+  2-gate remove=4,6 add=42,224: class=positive_gap grid_uncovered=184 grid_longest=31 forbidden_len=662471/672672 max_gap=87/34496 gap/thresh=0.035308 boundary_witnesses=28 unprotected=28 first_unprotected=29/182 Q=20180160
+    speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 42, 224)
+  2-gate remove=4,6 add=42,126: class=positive_gap grid_uncovered=200 grid_longest=32 forbidden_len=5063/5148 max_gap=17/6468 gap/thresh=0.036797 boundary_witnesses=28 unprotected=28 first_unprotected=29/182 Q=5045040
+    speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 42, 126)
+
+CRT residue lifts
+  crt-lift s367-raw-halfturn trial=421: class=positive_gap grid_uncovered=1070 grid_longest=19 forbidden_len=75567010096441/82940971921080 max_gap=53/33600 gap/thresh=0.022083 boundary_witnesses=396 unprotected=396 first_unprotected=43/2100 Q=766374580550779200
+    speeds=(4, 22, 36, 58, 68, 122, 138, 139, 150, 156, 158, 160, 168)
+  crt-lift s367-raw-halfturn trial=822: class=positive_gap grid_uncovered=1128 grid_longest=20 forbidden_len=4501562224173527/4978558975309920 max_gap=97/57218 gap/thresh=0.023734 boundary_witnesses=348 unprotected=348 first_unprotected=15/1456 Q=169271005160537280
+    speeds=(8, 32, 58, 60, 72, 84, 104, 110, 122, 134, 136, 138, 181)
+  crt-lift s367-raw-halfturn trial=164: class=positive_gap grid_uncovered=1144 grid_longest=21 forbidden_len=450773550420679/498542261096880 max_gap=61/34720 gap/thresh=0.024597 boundary_witnesses=306 unprotected=306 first_unprotected=5/476 Q=997084522193760
+    speeds=(8, 18, 22, 30, 38, 80, 102, 104, 110, 124, 139, 142, 168)
+  crt-lift s367-raw-halfturn trial=484: class=positive_gap grid_uncovered=1120 grid_longest=23 forbidden_len=4392967300019/4852622174400 max_gap=73/37800 gap/thresh=0.027037 boundary_witnesses=436 unprotected=436 first_unprotected=1/252 Q=29115733046400
+    speeds=(18, 30, 69, 82, 100, 102, 104, 110, 120, 136, 162, 168, 192)
+  crt-lift s367-raw-halfturn trial=397: class=positive_gap grid_uncovered=1150 grid_longest=24 forbidden_len=2002651198039/2213612200800 max_gap=1/504 gap/thresh=0.027778 boundary_witnesses=440 unprotected=440 first_unprotected=1/308 Q=4427224401600
+    speeds=(22, 30, 34, 36, 80, 96, 100, 116, 126, 144, 178, 180, 195)
+  crt-lift s367-raw-halfturn trial=23: class=positive_gap grid_uncovered=1140 grid_longest=24 forbidden_len=2065611497042679/2278968755583520 max_gap=139/69678 gap/thresh=0.027928 boundary_witnesses=392 unprotected=392 first_unprotected=15/1232 Q=41021437600503360
+    speeds=(8, 38, 41, 58, 88, 96, 110, 126, 134, 136, 156, 158, 174)
+  crt-lift s367-raw-halfturn trial=709: class=positive_gap grid_uncovered=1148 grid_longest=26 forbidden_len=306319924481863/338308843229280 max_gap=9/4288 gap/thresh=0.029384 boundary_witnesses=326 unprotected=326 first_unprotected=29/2240 Q=8796029923961280
+    speeds=(12, 13, 14, 44, 86, 94, 108, 110, 116, 130, 134, 148, 160)
+  crt-lift s367-raw-halfturn trial=363: class=positive_gap grid_uncovered=1130 grid_longest=30 forbidden_len=249372182819339/275137455978000 max_gap=215/85008 gap/thresh=0.035408 boundary_witnesses=368 unprotected=368 first_unprotected=15/2576 Q=1100549823912000
+    speeds=(14, 24, 32, 36, 50, 68, 82, 100, 116, 122, 125, 132, 184)
+
+Greedy grid set covers
+  greedy anchored 1 forced 14,28: class=positive_gap grid_uncovered=72 grid_longest=4 forbidden_len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary_witnesses=84 unprotected=84 first_unprotected=9/98 Q=35315280
+    speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  greedy anchored 1: class=positive_gap grid_uncovered=122 grid_longest=19 forbidden_len=472618707/477179528 max_gap=3/1904 gap/thresh=0.022059 boundary_witnesses=34 unprotected=34 first_unprotected=1/14 Q=42989103677520
+    speeds=(1, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 31, 37)
+  greedy anchored 1 forced 14: class=positive_gap grid_uncovered=154 grid_longest=21 forbidden_len=256691172449/260014739985 max_gap=9/5180 gap/thresh=0.024324 boundary_witnesses=28 unprotected=28 first_unprotected=43/518 Q=20801179198800
+    speeds=(1, 6, 8, 10, 11, 13, 14, 17, 19, 23, 25, 27, 37)
+  greedy anchored 1 forced 28: class=positive_gap grid_uncovered=388 grid_longest=38 forbidden_len=7522932146/7770938175 max_gap=61/19292 gap/thresh=0.044267 boundary_witnesses=72 unprotected=72 first_unprotected=43/308 Q=497340043200
+    speeds=(1, 4, 10, 12, 22, 25, 26, 27, 28, 31, 32, 40, 53)
+
+Mandatory-gate mutation search
+  mutation restart=0: class=boundary_only grid_uncovered=6 grid_longest=1 forbidden_len=1 max_gap=0 gap/thresh=0.000000 boundary_witnesses=6 unprotected=6 first_unprotected=1/14 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  mutation restart=5: class=positive_gap grid_uncovered=72 grid_longest=4 forbidden_len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary_witnesses=84 unprotected=84 first_unprotected=9/98 Q=35315280
+    speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  mutation restart=8: class=positive_gap grid_uncovered=76 grid_longest=14 forbidden_len=668471/672672 max_gap=11/9408 gap/thresh=0.016369 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=20180160
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 224)
+  mutation restart=2: class=positive_gap grid_uncovered=64 grid_longest=17 forbidden_len=292751/294294 max_gap=1/728 gap/thresh=0.019231 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=35315280
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98)
+  mutation restart=4: class=positive_gap grid_uncovered=72 grid_longest=17 forbidden_len=125383/126126 max_gap=5/3528 gap/thresh=0.019841 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 126)
+  mutation restart=1: class=positive_gap grid_uncovered=64 grid_longest=18 forbidden_len=104542/105105 max_gap=3/1960 gap/thresh=0.021429 boundary_witnesses=16 unprotected=16 first_unprotected=15/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+  mutation restart=27: class=positive_gap grid_uncovered=86 grid_longest=20 forbidden_len=62620/63063 max_gap=1/588 gap/thresh=0.023810 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 252)
+  mutation restart=30: class=positive_gap grid_uncovered=104 grid_longest=23 forbidden_len=29767/30030 max_gap=23/11760 gap/thresh=0.027381 boundary_witnesses=16 unprotected=16 first_unprotected=15/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168)
+
+Best exact audited candidates overall
+  mutation restart=0: class=boundary_only grid_uncovered=6 grid_longest=1 forbidden_len=1 max_gap=0 gap/thresh=0.000000 boundary_witnesses=6 unprotected=6 first_unprotected=1/14 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  greedy anchored 1 forced 14,28: class=positive_gap grid_uncovered=72 grid_longest=4 forbidden_len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary_witnesses=84 unprotected=84 first_unprotected=9/98 Q=35315280
+    speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  single-gate remove=6 add=224: class=positive_gap grid_uncovered=76 grid_longest=14 forbidden_len=668471/672672 max_gap=11/9408 gap/thresh=0.016369 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=20180160
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 224)
+  single-gate remove=6 add=98: class=positive_gap grid_uncovered=64 grid_longest=17 forbidden_len=292751/294294 max_gap=1/728 gap/thresh=0.019231 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=35315280
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98)
+  2-gate remove=4,6 add=42,98: class=positive_gap grid_uncovered=158 grid_longest=17 forbidden_len=580967/588588 max_gap=1/728 gap/thresh=0.019231 boundary_witnesses=32 unprotected=32 first_unprotected=29/182 Q=35315280
+    speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 42, 98)
+  single-gate remove=6 add=126: class=positive_gap grid_uncovered=72 grid_longest=17 forbidden_len=125383/126126 max_gap=5/3528 gap/thresh=0.019841 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 126)
+  single-gate remove=6 add=196: class=positive_gap grid_uncovered=82 grid_longest=18 forbidden_len=146161/147147 max_gap=45/30184 gap/thresh=0.020872 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=35315280
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 196)
+  2-gate remove=4,6 add=42,196: class=positive_gap grid_uncovered=176 grid_longest=18 forbidden_len=580109/588588 max_gap=45/30184 gap/thresh=0.020872 boundary_witnesses=32 unprotected=32 first_unprotected=29/182 Q=35315280
+    speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 42, 196)
+  single-gate remove=12 add=84: class=positive_gap grid_uncovered=64 grid_longest=18 forbidden_len=104542/105105 max_gap=3/1960 gap/thresh=0.021429 boundary_witnesses=16 unprotected=16 first_unprotected=15/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+  greedy anchored 1: class=positive_gap grid_uncovered=122 grid_longest=19 forbidden_len=472618707/477179528 max_gap=3/1904 gap/thresh=0.022059 boundary_witnesses=34 unprotected=34 first_unprotected=1/14 Q=42989103677520
+    speeds=(1, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 31, 37)
+  single-gate remove=6 add=252: class=positive_gap grid_uncovered=86 grid_longest=20 forbidden_len=62620/63063 max_gap=1/588 gap/thresh=0.023810 boundary_witnesses=12 unprotected=12 first_unprotected=29/182 Q=5045040
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 252)
+  greedy anchored 1 forced 14: class=positive_gap grid_uncovered=154 grid_longest=21 forbidden_len=256691172449/260014739985 max_gap=9/5180 gap/thresh=0.024324 boundary_witnesses=28 unprotected=28 first_unprotected=43/518 Q=20801179198800
+    speeds=(1, 6, 8, 10, 11, 13, 14, 17, 19, 23, 25, 27, 37)
+
+Construction ledger
+  open_cover_candidates=0
+  audited_boundary_only=1
+  audited_positive_gap=69
+  best_positive_gap=greedy anchored 1 forced 14,28 gap/thresh=0.005411 max_gap=5/12936 speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  best_boundary_only=mutation restart=0 boundary_witnesses=6 unprotected=6 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+
+Creative dead ends
+  1. The initial segment already has full measure, but exposes the unit layer at a/14.
+  2. A single 14-gate protects that unit layer and immediately opens positive gaps.
+  3. Adding more gates worsens the leak; gate overload is not a viable cover architecture.
+  4. S367 residue near-blocker lifts do not become interval counterexamples; repeated residues leak.
+  5. Greedy and mutation pressure find dense covers, but exact audits still expose gaps or boundary witnesses.
+
+New disproof idea worth keeping
+  Instead of choosing speeds first, solve for a directed endpoint-protection cycle on the
+  unit layer plus one higher quotient layer, then realize that cycle by speeds.  The
+  speed-first searches repeatedly pay for unit protection by creating higher-denominator
+  leaks, so the next counterexample attempt should prescribe the protection graph first.

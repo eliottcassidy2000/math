@@ -10,6 +10,7 @@ related:
   - HYP-1819
   - HYP-1824
   - HYP-1825
+  - HYP-1828
 ---
 
 # HYP-1823: Fourteen-runner scalar-gauge quotient lemma
@@ -119,3 +120,4 @@ Dirichlet-equality spine, and every other class has a micro-staircase witness.
 - HYP-1818
 - HYP-1824
 - HYP-1825
+- HYP-1828

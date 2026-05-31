@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S373 - Fourteen-Runner Disproof Hunt
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`, then rebased over remote S371/S372 work and renumbered this strand to S373.
+**User prompt:** Spend a session attempting to disprove the 14-runner case with creative constructions.
+**Computation:** Added `04-computation/lonely_runner_14_disproof_hunt_s373.py` and stored `05-knowledge/results/lonely_runner_14_disproof_hunt_s373.out`. The script combines a fast grid cover heuristic with exact S356/S360 audits and tries single-gate replacements, multi-gate overloads, CRT/S367 residue lifts, anchored greedy set cover, and mandatory-gate mutation.
+**Findings:** No exact open-cover candidate appeared. The initial segment remains the only boundary-only final candidate, with the six unit witnesses. The best positive-gap near-miss is the anchored seven-ladder `(1,7,14,21,28,35,49,56,63,70,77,84,91)`, with forbidden length `142/143`, max gap `5/12936`, gap/threshold `0.005411`, and `84` exposed endpoints. The best simple single-gate replacement has fewer exposed endpoints (`12`) but a larger gap ratio (`0.016369`).
+**Synthesis:** Added HYP-1828 and `07-reflections/lonely-runner-fourteen-disproof-hunt-s373.md`. The new disproof-search rule is to build endpoint-protection cycles first, then solve for speeds, because speed-first searches repeatedly protect the unit layer only to open higher-denominator leaks.
+**Next:** Build the finite endpoint graph on the first leak layers (`9/98`, `29/182`, `15/182`) and search for directed protection cycles before assigning speed sets.
+
 ## codex-2026-05-31-S371 - Lonely Runner Scalar Excision Formalization
 
 **Account:** Codex
