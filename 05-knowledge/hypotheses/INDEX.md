@@ -2886,26 +2886,26 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Predictions:** Counterexample search should enumerate labelled endpoint cycles first and solve integer inequalities second; proof search should define a cycle-slack potential showing every primitive labelled cycle leaks a gap or endpoint. Product-sum/torsion coordinates may be the shortest almost-closing labelled cycles.
 **See:** `05-knowledge/hypotheses/HYP-1841-lrc-arithmetic-endpoint-cycle-obstruction.md`, THM-357, THM-359, THM-365, HYP-1811, HYP-1828, HYP-1836, `04-computation/lonely_runner_endpoint_cycle_formal_s384.py`, `05-knowledge/results/lonely_runner_endpoint_cycle_formal_s384.out`, `07-reflections/lonely-runner-endpoint-cycle-formal-s384.md`.
 
-## HYP-1842: LRC endpoint protection is controlled by a private-pivot matroid (codex-2026-05-31-S385)
+## HYP-1842: LRC endpoint protection is controlled by a private-pivot matroid (codex-2026-05-31-S386)
 **Status:** EXPLORATORY endpoint-incidence hypothesis.
 **What:** The pulled-back LRC endpoint-protection relation should be studied as a binary endpoint/interval matroid. A counterexample would need a leafless, private-pivot-free, integer-realizable protection matrix after quotienting the scalar boundary spine.
-**Evidence:** S385 computed GF(2) endpoint-protection ranks and private endpoint counts. Every sampled tight, `n=14`, and `n=15` system peeled to `coreE=0`, including the `n14 14-ladder debt` example with `2298` endpoints, `rank/null=1025/1105`, and `1420` private endpoints.
+**Evidence:** S386 computed GF(2) endpoint-protection ranks and private endpoint counts. Every sampled tight, `n=14`, and `n=15` system peeled to `coreE=0`, including the `n14 14-ladder debt` example with `2298` endpoints, `rank/null=1025/1105`, and `1420` private endpoints.
 **Predictions:** Abstract circular-arc all-protected cores may exist, but integer-speed realizability should force a private pivot or scalar-boundary peel.
-**See:** `05-knowledge/hypotheses/HYP-1842-lrc-endpoint-private-pivot-matroid.md`, HYP-1815, HYP-1836, THM-359, `04-computation/lonely_runner_hypothesis_noise_s385.py`, `05-knowledge/results/lonely_runner_hypothesis_noise_s385.out`, `07-reflections/lonely-runner-hypothesis-noise-s385.md`.
+**See:** `05-knowledge/hypotheses/HYP-1842-lrc-endpoint-private-pivot-matroid.md`, HYP-1815, HYP-1836, THM-359, `04-computation/lonely_runner_hypothesis_noise_s386.py`, `05-knowledge/results/lonely_runner_hypothesis_noise_s386.out`, `07-reflections/lonely-runner-hypothesis-noise-s385.md`.
 
-## HYP-1843: LRC near-disproof danger is critical-radius surplus, not gap width (codex-2026-05-31-S385)
+## HYP-1843: LRC near-disproof danger is critical-radius surplus, not gap width (codex-2026-05-31-S386)
 **Status:** EXPLORATORY search-metric hypothesis.
 **What:** Tiny visible complement gaps at threshold are often steep safe valleys. Candidate danger should be ranked by critical-radius surplus and endpoint-core size, with max-gap width only a secondary diagnostic.
-**Evidence:** S385's `n14 14-ladder debt` has `gap/th=0.002706` but gap-probe `critical/th=1.208333`, `168` exposed endpoints, and `coreE=0`. The exact `n14 single-gate` has a larger visible gap but smaller exact critical surplus (`critical/th=1.076923`), so gap width and true danger are not the same order.
+**Evidence:** S386's `n14 14-ladder debt` has `gap/th=0.002706` but gap-probe `critical/th=1.208333`, `168` exposed endpoints, and `coreE=0`. The exact `n14 single-gate` has a larger visible gap but smaller exact critical surplus (`critical/th=1.076923`), so gap width and true danger are not the same order.
 **Predictions:** Serious disproof candidates must push `critical/th` toward `1` and produce nonzero endpoint core pressure simultaneously.
-**See:** `05-knowledge/hypotheses/HYP-1843-lrc-critical-radius-surplus.md`, HYP-1812, HYP-1836, `04-computation/lonely_runner_shape_questions_s379.py`, `04-computation/lonely_runner_hypothesis_noise_s385.py`, `05-knowledge/results/lonely_runner_hypothesis_noise_s385.out`, `07-reflections/lonely-runner-hypothesis-noise-s385.md`.
+**See:** `05-knowledge/hypotheses/HYP-1843-lrc-critical-radius-surplus.md`, HYP-1812, HYP-1836, `04-computation/lonely_runner_shape_questions_s379.py`, `04-computation/lonely_runner_hypothesis_noise_s386.py`, `05-knowledge/results/lonely_runner_hypothesis_noise_s386.out`, `07-reflections/lonely-runner-hypothesis-noise-s385.md`.
 
-## HYP-1844: LRC quotient protection obeys a debt-export law (codex-2026-05-31-S385)
+## HYP-1844: LRC quotient protection obeys a debt-export law (codex-2026-05-31-S386)
 **Status:** EXPLORATORY quotient-layer hypothesis.
 **What:** Divisor gates that protect a chosen quotient layer shrink visible gaps by exporting unprotected endpoint obligations to descendant denominator layers.
-**Evidence:** S385 sharpens S380: moving from the `n14 seven-ladder` to the `n14 14-ladder debt` family halves the gap ratio (`0.005411 -> 0.002706`) while doubling unprotected endpoints (`84 -> 168`), low-layer debt (`36 -> 72`), and private endpoints (`710 -> 1420`), with terminal `coreE=0` in both cases.
+**Evidence:** S386 sharpens S380: moving from the `n14 seven-ladder` to the `n14 14-ladder debt` family halves the gap ratio (`0.005411 -> 0.002706`) while doubling unprotected endpoints (`84 -> 168`), low-layer debt (`36 -> 72`), and private endpoints (`710 -> 1420`), with terminal `coreE=0` in both cases.
 **Predictions:** Disproof searches should solve the endpoint-debt ledger before speed selection; otherwise they will keep finding tiny-gap positive covers.
-**See:** `05-knowledge/hypotheses/HYP-1844-lrc-quotient-debt-export.md`, HYP-1837, HYP-1842, `04-computation/lonely_runner_14_composite_denominator_disproof_s380.py`, `04-computation/lonely_runner_hypothesis_noise_s385.py`, `05-knowledge/results/lonely_runner_hypothesis_noise_s385.out`, `07-reflections/lonely-runner-hypothesis-noise-s385.md`.
+**See:** `05-knowledge/hypotheses/HYP-1844-lrc-quotient-debt-export.md`, HYP-1837, HYP-1842, `04-computation/lonely_runner_14_composite_denominator_disproof_s380.py`, `04-computation/lonely_runner_hypothesis_noise_s386.py`, `05-knowledge/results/lonely_runner_hypothesis_noise_s386.out`, `07-reflections/lonely-runner-hypothesis-noise-s385.md`.
 
 ## HYP-1850: LRC modulus-sieve localizes tightness at the uncovered scale (oracle-2026-05-31-S16)
 **Status:** EXPLORATORY; underlying lemma is PROVED, the localization is the hypothesis. Independent oracle-session companion to codex HYP-1816/HYP-1839.
@@ -2927,3 +2927,10 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** `lonely_runner_lattice_sum_s363.py` verifies the lattice sum converges to the exact lonely measure (e.g. (1,2,5) at n=4: 0.2 vs 0.1975).
 **Predictions:** A fixed-degree box minorant positive on all sieve-admissible lattices at n=14 would be an analytic proof; tight cases are exactly lattice sums equal to 0.
 **See:** `04-computation/lonely_runner_lattice_sum_s363.py`, `05-knowledge/results/lonely_runner_lattice_sum_s363.out`, `07-reflections/lonely-runner-n14-frontier-representations-s363.md`, HYP-1812.
+
+## HYP-1853: LRC labelled cycles are circular tournament cut-protection cores (codex-2026-05-31-S386)
+**Status:** EXPLORATORY; structural bridge from S386.
+**What:** The labelled arithmetic endpoint cycle from THM-365 is the circular arithmetic analogue of the tournament good-cut/SCC protection system from THM-354. Along a Hamiltonian path, a backward arc `v_j -> v_i` protects every cut `i < k <= j`; in LRC, a forbidden interval protects rational circular endpoints when its speed labels satisfy the strict integer slack inequality.
+**Evidence:** `lrc_tournament_labelled_cycle_bridge_s386.py` audits transitive, cyclic, core-tail, and circulant tournament examples, recovering THM-354 as `goodCuts=n-scc_count` in protection language. This aligns with THM-356 private-pivot incidence rank, HYP-1792/HYP-1793 collision hypergraph peeling, root-sign packet relations, and OCF/Omega compatibility graphs.
+**Predictions:** THM-354 should be restatable as a generic endpoint-protection theorem for path cuts; LRC should have a condensation-like quotient-layer leak order; labelled endpoint cycles should be attacked by private endpoints, triangular minors, and leaf-peelable labelled hypergraphs rather than overlap density.
+**See:** `05-knowledge/hypotheses/HYP-1853-lrc-labelled-cycles-are-tournament-cut-protection.md`, THM-354, THM-356, THM-365, HYP-1792, HYP-1793, HYP-1841, `04-computation/lrc_tournament_labelled_cycle_bridge_s386.py`, `05-knowledge/results/lrc_tournament_labelled_cycle_bridge_s386.out`, `07-reflections/lrc-labelled-cycles-and-tournament-protection-s386.md`.

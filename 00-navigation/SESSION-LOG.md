@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S386 - LRC Labelled Cycles and Tournament Protection
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`; during close-out, rebased over the upstream S385 hypothesis-noise strand and renumbered this work to S386.
+**User prompt:** See how the labelled arithmetic cycle from Lonely Runner is analogous to tournament-related work in the repo, creatively.
+**Computation:** Added `04-computation/lrc_tournament_labelled_cycle_bridge_s386.py` and stored `05-knowledge/results/lrc_tournament_labelled_cycle_bridge_s386.out`. The script recasts tournament good cuts as a labelled cut-protection system and compares LRC endpoint cycles with good-cut/SCC, endpoint-transfer rank, root-sign packets, OCF/Omega, projection residue, and single-core anomaly threads.
+**Findings:** The bridge is exact at the cut level: along a Hamiltonian path, a backward tournament arc `v_j -> v_i` protects every cut `i < k <= j`. Thus THM-354 reads as an endpoint-protection theorem on a line: bad cuts are unprotected endpoints, backward arcs are protector intervals, and strong components are protection cores.
+**Synthesis:** Added HYP-1853 and `07-reflections/lrc-labelled-cycles-and-tournament-protection-s386.md`. The LRC labelled endpoint cycle is the circular arithmetic analogue of tournament good-cut protection; the decisive extra difficulty is the integer label/slack test `|p*(n*m+eps)-a*n*u|<u`.
+**Verification:** `python3 -m py_compile 04-computation/lrc_tournament_labelled_cycle_bridge_s386.py` succeeded; the script ran end-to-end and produced the stored 57-line output.
+**Next:** Formalize THM-354 as a generic endpoint-protection theorem, build the LRC Omega graph whose vertices are labelled protection arrows, and test whether the `n=14` seven-ladder is a support-matching-with-zero-rank phenomenon in the labelled incidence layer.
+
 ## codex-2026-05-31-S385 - Lonely Runner Hypothesis Noise and Reframe Pass
 
 **Account:** Codex

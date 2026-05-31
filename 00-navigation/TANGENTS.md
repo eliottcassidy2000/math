@@ -383,6 +383,12 @@ Gap width is a bad danger metric. The `n14 14-ladder debt` model has `gap/th=0.0
 **T402** #lonely-runner #quotient-layers #debt-export #composite-denominators | certainty: medium-high computational synthesis | source: codex-2026-05-31-S385
 Protecting quotient layers exports endpoint debt. From the `n14 seven-ladder` to the `n14 14-ladder debt` family, gap ratio halves (`0.005411 -> 0.002706`) while unprotected endpoints double (`84 -> 168`), low-layer debt doubles (`36 -> 72`), and private endpoints double (`710 -> 1420`). See HYP-1844.
 
+**T403** #lonely-runner #good-cuts #scc #cut-protection | certainty: high structural analogy | source: codex-2026-05-31-S386
+Tournament good-cut theory is already an endpoint-protection theorem on a Hamiltonian path: a backward arc `v_j -> v_i` protects every cut `i < k <= j`. THM-354 becomes `goodCuts = n - scc_count`; bad cuts are unprotected endpoints and SCCs are protection cores. See HYP-1853.
+
+**T404** #lonely-runner #endpoint-transfer #incidence-layer #omega | certainty: exploratory bridge | source: codex-2026-05-31-S386
+The labelled LRC endpoint cycle should use the tournament incidence toolkit: private endpoints/triangular minors from THM-356, collision hypergraph peeling from HYP-1792/HYP-1793, root-sign packet modules, and an Omega-like graph whose vertices are labelled protection arrows. The seven-ladder may be a support-cycle mirage killed by labelled incidence leaves.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

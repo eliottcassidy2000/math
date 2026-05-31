@@ -1,0 +1,57 @@
+LRC labelled cycles vs tournament machinery (codex-2026-05-31 S386)
+
+LABELLED PROTECTION SCHEMA
+========================================================================================
+system                 atom                  protector
+                       label                 core/cycle meaning
+----------------------------------------------------------------------------------------
+LRC endpoint program   endpoint e             forbidden interval that strictly contains e
+                       speed labels (u,p,m,eps,a) and strict slack  nonempty core => endpoint cycle
+Tournament good cuts   Hamiltonian-path cut k backward arc v_j -> v_i crossing the cut
+                       root label e_j-e_i and interval i<k<=j       all cuts protected inside each SCC
+Endpoint transfer      parent quotient row    odd child column / private pivot
+                       incidence matrix entry over F2               rank core, private-pivot or peel order
+OCF/Omega              odd-cycle packet       vertex-disjoint compatible packet
+                       root-relation support and fugacity weight    hard-core independent packet family
+
+TOURNAMENT CUT-PROTECTION AUDIT
+========================================================================================
+label              n scc goodCuts badCuts backward_arcs cut_cycle
+----------------------------------------------------------------------------------------
+transitive T4      4   4        0 (1, 2, 3)  ()                           none
+directed C3        3   1        2 ()         ((2, 0),)                    1->1
+3-core plus tail   5   3        2 (3, 4)     ((2, 0),)                    1->1
+circulant C5       5   1        4 ()         ((3, 0), (4, 0), (4, 1))     1->1
+
+THM-354 says goodCuts = n - scc.  Read through this protection lens, bad cuts are unprotected endpoints and strong components are the surviving protection cores.
+
+DEEP ANALOGIES
+========================================================================================
+[Good-cut/SCC]
+  analogy:   LRC endpoints are circular cuts; protector intervals are backward arcs on a circle.
+  next move: Try a condensation theorem for endpoint cores: quotient layers should form a transitive leak order.
+[Endpoint-transfer rank]
+  analogy:   The labelled LRC cycle is an incidence object, not ordinary graph adjacency.
+  next move: Use private endpoints, triangular minors, or leaf-peelable hypergraphs instead of overlap density.
+[Root-sign representation]
+  analogy:   Tournament cycles are zero sums of type-A roots; LRC protection cycles are near-zero relations among characters t -> vt.
+  next move: Look for a root/character packet module whose boundary is the strict slack vector.
+[OCF hard-core packets]
+  analogy:   Omega counts compatible odd-cycle packets; LRC disproof would be a compatible endpoint-protector packet.
+  next move: Build an LRC Omega graph where vertices are labelled protection arrows and conflicts are inconsistent endpoints/speeds.
+[Projection residue]
+  analogy:   Both theories fail when a scalar shadow forgets incidence: score forgets cycle packets, speed lists forget endpoint labels.
+  next move: TDA features should keep residue rank, peel depth, private labels, and slack, not just H or gap width.
+[Single-core anomalies]
+  analogy:   H=63 complete-Omega single-core and LRC all-protected core are opposite concentrated-core regimes.
+  next move: Search for endpoint single-core signatures with weighted language gaps, like r_core(signature).
+
+NEW QUESTIONS
+========================================================================================
+1. Can THM-354 be rewritten as an endpoint-protection theorem, then generalized from path cuts to circular LRC endpoints?
+2. Is there an LRC analogue of condensation order: a quotient-layer partial order that every labelled protection cycle must violate?
+3. Can labelled endpoint cycles be triangularized by private endpoint witnesses, just like THM-356 private child columns?
+4. What is the LRC Omega graph: labelled protection arrows as vertices, conflicts from incompatible speed/endpoint labels, fugacity measuring repair cost?
+5. Does the n=14 seven-ladder fail because its putative cycle lives in the wrong projected graph, exactly like endpoint-collision triples that are not parent-metagraph triangles?
+6. Can cycle slack be represented as a character-valued boundary map, with positive leak analogous to nonzero rank or SCC defect?
+
