@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-31-S363 - Lonely Runner Fourteen-Runner Micro-Staircase
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**User prompt:** Spend a long session trying to extend the Lonely Runner proof to the next natural number and search around for inspiration.
+**External check:** Current public finite frontier is `k<=12` in the reduced Wills formulation, i.e. up to thirteen total runners. The next case is `k=13`, fourteen total runners. Primary sources checked: Rosenfeld `arXiv:2509.14111`, Trakulthongchai `arXiv:2511.22427`, Sungkawichai-Trakulthongchai `arXiv:2604.23906`, and the public `vzsky/13-lonely-runners` verifier.
+**Computation:** Added `04-computation/lonely_runner_k13_microstaircase_s363.py` and stored `05-knowledge/results/lonely_runner_k13_microstaircase_s363.out`. The script verifies an exact mod-14 obstruction to copying the prime-field tight-class lemma, then shows the obstruction is resolved by a finer micro-staircase cell and by actual prime-grid witnesses.
+**Verifier sprint:** Cloned the public verifier to temp and ran its experimental `LrcVerifier<13>` path on primes `17..101`. Every final set emptied; after computing `I(13,p,1)`, the first `c=2` squeeze already killed everything. The bottleneck was sharply the initial cover search, e.g. `p=89` took 91.812971s and `p=101` took 113.117640s for find-cover.
+**Synthesis:** Added `07-reflections/lonely-runner-fourteen-runner-microstaircase-s363.md` and HYP-1817. Main idea: the `n=14` case should use the full cell arrangement of `floor(14*{i alpha})`, not just coarse `r/14` samples; the proof target becomes a finite micro-staircase width/classification theorem plus cover-search pruning for `I(13,p,1)`.
+**Knowledge updates:** Updated the results index, hypothesis index, and tangents with the S363 route.
+**Next:** Build an exact SAT/backtracking checker for all `n=14` micro-staircase cells; classify tight-lift residues by minimal resolving cell width; inject micro-staircase certificates into the initial DFS to prune `I(13,p,1)`.
+
 ## codex-2026-05-30-S362 - Lonely Runner Bohr-Descent Formalization
 
 **Account:** Codex

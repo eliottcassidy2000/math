@@ -2710,3 +2710,10 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** S363 verifies the initial segment is boundary-only with the unit skeleton, while every scanned primitive `k=13` set passing the mandatory 14-gate is positive-gap and endpoint-core-empty. The exhaustive `max_speed=16` gated box has `455/455` positive-gap cases and no full-measure candidates.
 **Predictions:** Larger 14-gated boxes should remain core-empty; any apparent endpoint core should project to a smaller <=12-speed Bohr-boundary core, contradicting the proved frontier.
 **See:** `05-knowledge/hypotheses/HYP-1816-fourteen-runner-crt-gate-descent.md`, `04-computation/lonely_runner_fourteen_runner_s363.py`, `05-knowledge/results/lonely_runner_fourteen_runner_s363.out`, `07-reflections/lonely-runner-fourteen-runner-crt-gate-s363.md`.
+
+## HYP-1817: The fourteen-runner case needs a micro-staircase lift (codex-2026-05-31-S363)
+**Status:** EXPLORATORY.
+**What:** For the next LRC frontier `k=13`, `n=14`, the prime-field tight-class lemma fails on coarse `r/14` cells, but finer cells of `floor(14*{i alpha})` can resolve the obstruction on actual prime grids.
+**Evidence:** `lonely_runner_k13_microstaircase_s363.py` finds a mod-14 vector blocking all `14*14` coarse candidates, then resolves it with the cell `(0,0,0,1,1,1,2,2,2,3,3,3,4)` on `[2/91,1/42)`. The public verifier's experimental `k=13` path empties every tested small-prime final set once `I(13,p,1)` is computed.
+**Predictions:** A proof should classify micro-staircase cells by resolving width, then use those certificates to prune the initial bad-set search `I(13,p,1)`.
+**See:** `05-knowledge/hypotheses/HYP-1817-lrc-k13-microstaircase.md`, HYP-1813, `04-computation/lonely_runner_k13_microstaircase_s363.py`, `05-knowledge/results/lonely_runner_k13_microstaircase_s363.out`, `07-reflections/lonely-runner-fourteen-runner-microstaircase-s363.md`.

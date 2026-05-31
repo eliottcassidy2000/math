@@ -1,0 +1,64 @@
+﻿Lonely Runner k=13 micro-staircase probe (codex-2026-05-31 S363)
+Reduced form: k=13 moving runners, threshold=1/14.
+
+Exact r/14 tight-lift audit
+  obstruction_vector_mod_14=(7, 4, 9, 6, 7, 8, 5, 0, 1, 12, 13, 12, 7)
+  blocked_candidates=196/196
+  resolved_on_r_over_14=False
+  interpretation=the prime-field tight-class lemma does not copy directly to n=14
+
+Micro-staircase cell
+  bins=(0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4)
+  alpha_interval=[2/91, 1/42)
+  interval_width=1/546
+  residues_with_s_1=(7, 4, 9, 7, 8, 9, 7, 2, 3, 1, 2, 1, 11)
+  resolves_obstruction=True
+
+Prime-grid witnesses for the same obstruction
+  p=17: s=1 r=1 bins=(0, 1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 9, 10) residues=(7, 5, 11, 9, 11, 12, 10, 6, 8, 6, 8, 7, 3)
+  p=19: s=1 r=1 bins=(0, 1, 2, 2, 3, 4, 5, 5, 6, 7, 8, 8, 9) residues=(7, 5, 11, 8, 10, 12, 10, 5, 7, 5, 7, 6, 2)
+  p=29: s=1 r=5 bins=(2, 4, 7, 9, 12, 0, 2, 5, 7, 10, 12, 0, 3) residues=(9, 8, 2, 1, 5, 8, 7, 5, 8, 8, 11, 12, 10)
+  p=43: s=1 r=1 bins=(0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4) residues=(7, 4, 9, 7, 8, 9, 7, 2, 3, 1, 2, 1, 11) first_micro_r=1
+  p=97: s=1 r=3 bins=(0, 0, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5, 5) residues=(7, 4, 10, 7, 9, 10, 8, 3, 4, 2, 3, 3, 12)
+  p=181: s=1 r=4 bins=(0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4) residues=(7, 4, 9, 7, 8, 9, 7, 2, 3, 1, 2, 1, 11) first_micro_r=4
+  p=191: s=1 r=5 bins=(0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 4, 4, 4) residues=(7, 4, 10, 7, 8, 10, 7, 2, 4, 1, 3, 2, 11)
+  p=199: s=1 r=5 bins=(0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4) residues=(7, 4, 10, 7, 8, 10, 7, 2, 4, 1, 2, 2, 11)
+  p=211: s=1 r=5 bins=(0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4) residues=(7, 4, 9, 7, 8, 9, 7, 2, 3, 1, 2, 1, 11) first_micro_r=5
+  p=251: s=1 r=6 bins=(0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4) residues=(7, 4, 10, 7, 8, 10, 7, 2, 4, 1, 2, 2, 11)
+  p=307: s=1 r=7 bins=(0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4) residues=(7, 4, 9, 7, 8, 9, 7, 2, 3, 1, 2, 1, 11) first_micro_r=7
+  p=401: s=1 r=9 bins=(0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4) residues=(7, 4, 9, 7, 8, 9, 7, 2, 3, 1, 2, 1, 11) first_micro_r=9
+  p=701: s=1 r=16 bins=(0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4) residues=(7, 4, 9, 7, 8, 9, 7, 2, 3, 1, 2, 1, 11) first_micro_r=16
+
+Published-verifier k=13 small-prime ledger
+  source=external vzsky/13-lonely-runners code, run locally in temp
+  config=LrcVerifier<13>::Config = Squeeze<2>, Squeeze<3>, Print
+  checked_primes=20
+  all_final_sets_empty=True
+  total_find_cover_seconds=286.962639
+  largest_initial_bad_set=p101 size=12697411 find_cover_seconds=113.117640
+  p= 17 I13p1_size=      99 find_cover_s=  0.001502 final_size=0
+  p= 19 I13p1_size=      55 find_cover_s=  0.000907 final_size=0
+  p= 23 I13p1_size=       6 find_cover_s=  0.000298 final_size=0
+  p= 29 I13p1_size=   15511 find_cover_s=  0.115932 final_size=0
+  p= 31 I13p1_size=   11831 find_cover_s=  0.093718 final_size=0
+  p= 37 I13p1_size=    4048 find_cover_s=  0.043737 final_size=0
+  p= 41 I13p1_size=    1001 find_cover_s=  0.013994 final_size=0
+  p= 43 I13p1_size=  163507 find_cover_s=  1.335027 final_size=0
+  p= 47 I13p1_size=   84023 find_cover_s=  0.559538 final_size=0
+  p= 53 I13p1_size=   14414 find_cover_s=  0.094802 final_size=0
+  p= 59 I13p1_size= 1135845 find_cover_s=  8.499790 final_size=0
+  p= 61 I13p1_size=  845384 find_cover_s=  6.618051 final_size=0
+  p= 67 I13p1_size=  240365 find_cover_s=  2.082710 final_size=0
+  p= 71 I13p1_size= 3302243 find_cover_s= 25.440498 final_size=0
+  p= 73 I13p1_size= 2611797 find_cover_s= 19.905382 final_size=0
+  p= 79 I13p1_size=  515605 find_cover_s=  3.868331 final_size=0
+  p= 83 I13p1_size=  115903 find_cover_s=  0.887726 final_size=0
+  p= 89 I13p1_size=11804159 find_cover_s= 91.812971 final_size=0
+  p= 97 I13p1_size= 1619090 find_cover_s= 12.470085 final_size=0
+  p=101 I13p1_size=12697411 find_cover_s=113.117640 final_size=0
+
+Takeaway
+  The next proof does not yet follow from these data.
+  However, the hard part is sharply isolated: computing I(13,p,1).
+  Once that set is found for tested primes, a c=2 squeeze already empties it.
+  The analytic replacement to chase is a micro-staircase lemma for n=14.
