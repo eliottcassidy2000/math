@@ -431,6 +431,15 @@ Covering all `32` endpoints of a `16`-gate using lower residues has exact minimu
 **T418** #lonely-runner #n16 #two-torsion #scalar-moat | certainty: exact finite quotient | source: codex-2026-05-31-S393
 The full normalized `n=16` half-turn cube was exhausted: `1152` alpha patterns, `18432` cells. Best support-1 half-turn misses `128` cells at coordinate `15`; best support-2 misses `160` at `(10,15)`; support-3 misses at least `256`. Compression to the half-turn cube may turn the scalar moat into a proof certificate.
 
+**T419** #hyperbola #logarithm #q-counterterm #finite-part | certainty: high calculus identity | source: codex-2026-05-31-S394
+For `p(x)=min(x,1/x)` on `[0,2]`, the area is `1/2+ln2`. Writing `p=1/x+q` forces `q(x)=x-1/x` on `(0,1]` and `q=0` on `[1,2]`; with cutoff `epsilon`, the divergent terms `ln(2/epsilon)` and `ln epsilon` cancel, leaving `1/2+ln2`. Thus `q` is a reciprocal counterterm, not a positive area piece. See HYP-1862.
+
+**T420** #hyperbola #triangle #30-60-90 #area-defect | certainty: exact normalization check | source: codex-2026-05-31-S394
+The exact `ln2` remainder forces triangle area `1/2`. A line from the origin reaching height `1` at angle `theta` has area `1/(2tan theta)`, so `30 deg` gives `sqrt(3)/2`, `45 deg` gives `1/2`, and `60 deg` gives `1/(2sqrt(3))`. A literal `30-60-90` triangle therefore needs a `q`-defect: area surplus/deficit, endpoint jump, or slope change.
+
+**T421** #reciprocal-symmetry #mellin-transform #cayley-shadow #q-coordinate | certainty: medium structural bridge | source: codex-2026-05-31-S394
+The bare defect `q0=x-1/x` is anti-invariant under inversion, `q0(1/x)=-q0(x)`, paired with `r=x+1/x` by `r^2-q0^2=4` and `Dq0=r, Dr=q0`. In log-coordinate `q0(e^u)=2sinh(u)`, and the one-sided Mellin transform is `-2/(s^2-1)`. Compare this anti-reciprocal coordinate with the repo's recurring Cayley shadow `Q(Q(x))=-1/x`.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

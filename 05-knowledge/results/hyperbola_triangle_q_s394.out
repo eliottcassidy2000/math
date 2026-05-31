@@ -1,0 +1,98 @@
+Hyperbola/triangle q exploration (codex-2026-05-31 S394)
+Object: p(x)=x on [0,1], p(x)=1/x on [1,2].
+
+1. Triangle sanity checks
+-------------------------
+area under p(x)=min(x,1/x) on [0,2] = 1/2 + ln 2 = 1.193147
+To leave exactly ln 2, the carved triangle must have area 1/2.
+
+Line from the origin reaching height 1 at angle theta:
+  base = cot(theta), triangle area = 1/(2 tan(theta))
+  theta=30 deg: area=0.866025, remainder if total fixed=0.327122
+  theta=45 deg: area=0.500000, remainder if total fixed=0.693147
+  theta=60 deg: area=0.288675, remainder if total fixed=0.904472
+  Only theta=45 deg gives the exact 1/2 triangle while gluing to (1,1).
+
+If a triangle has horizontal span 2 and area 1/2, its height is 1/2.
+  The corresponding base angle is atan((1/2)/2) = 14.036243 deg.
+If a 30-60-90 triangle has hypotenuse/horizontal span 2, its area is sqrt(3)/2.
+  sqrt(3)/2 = 0.866025, not 1/2.
+
+2. q(x)+1/x as a cutoff identity
+--------------------------------
+For epsilon>0:
+  int_epsilon^2 1/x dx = ln(2/epsilon)
+  int_epsilon^1 q(x) dx = 1/2 + ln(epsilon) - epsilon^2/2
+  sum = 1/2 + ln 2 - epsilon^2/2 -> 1/2 + ln 2
+
+epsilon     hyperbola       q-counterterm   finite total
+1/10         2.995732274    -1.807585093    1.188147181
+1/100        5.298317367    -4.105220186    1.193097181
+1/1000       7.600902460    -6.407755779    1.193146681
+1/10000      9.903487553    -8.710340377    1.193147176
+1/100000    12.206072646   -11.012925465    1.193147181
+
+3. Log-coordinate view
+----------------------
+Set x=e^u.  Then dx/x = du, so 1/x is flat log-measure.
+The patched curve has area density p(e^u)e^u:
+  e^(2u) for u<=0, and 1 for 0<=u<=ln 2.
+Hence:
+  int_{-infty}^0 e^(2u) du = 1/2
+  int_0^ln2 1 du = ln 2
+The triangle is an exponential soft cutoff of the negative log-ray.
+
+In the same coordinate, q(e^u)e^u = e^(2u)-1 for u<=0, and 0 for u>=0.
+So q deletes the infinite negative log-ray and replaces it by a finite tail.
+
+4. Algebra of the bare reciprocal defect
+----------------------------------------
+Bare q0(x)=x-1/x is anti-invariant under reciprocal inversion:
+  x=0.25: q0(x)=-3.750000, q0(1/x)= 3.750000, sum= 0.00e+00
+  x=0.5 : q0(x)=-1.500000, q0(1/x)= 1.500000, sum= 0.00e+00
+  x=2   : q0(x)= 1.500000, q0(1/x)=-1.500000, sum= 0.00e+00
+  x=4   : q0(x)= 3.750000, q0(1/x)=-3.750000, sum= 0.00e+00
+
+With r(x)=x+1/x:
+  r^2 - q0^2 = 4
+  D q0 = r and D r = q0 for D=x*d/dx
+  so D^2 q0 = q0. In log-coordinate, q0(e^u)=2 sinh(u).
+
+Mellin moments of q0 on (0,1):
+  int_0^1 x^n (x-1/x) dx = 1/(n+2) - 1/n = -2/(n(n+2))
+  n=1: -2/3 = -0.666666667
+  n=2: -1/4 = -0.250000000
+  n=3: -2/15 = -0.133333333
+  n=4: -1/12 = -0.083333333
+  n=5: -2/35 = -0.057142857
+  n=6: -1/24 = -0.041666667
+  n=7: -2/63 = -0.031746032
+The meromorphic Mellin transform is M_q(s)=1/(s+1)-1/(s-1)=-2/(s^2-1).
+
+5. A family of possible q-cutoffs
+---------------------------------
+Replace the left branch by x^a while keeping p(1)=1.
+Then the left mass is int_0^1 x^a dx = 1/(a+1).
+The exact 1/2 mass is forced by a=1.
+
+a       left mass       scale needed for mass 1/2       jump at x=1
+0.25     0.800000000                    0.625000000    -0.375000000
+0.50     0.666666667                    0.750000000    -0.250000000
+1.00     0.500000000                    1.000000000     0.000000000
+2.00     0.333333333                    1.500000000     0.500000000
+3.00     0.250000000                    2.000000000     1.000000000
+5.00     0.166666667                    3.000000000     2.000000000
+
+So the isosceles triangle is unique if we demand both:
+  (i) continuity with the hyperbola at x=1, and
+  (ii) triangle/cutoff mass exactly 1/2.
+Other triangles are possible only by paying a q-defect: a jump, a slope change, or an area debt.
+
+6. Tangents suggested by q
+--------------------------
+  1. q is a renormalization counterterm, not a positive area.
+  2. q0=x-1/x is the anti-reciprocal coordinate paired with r=x+1/x.
+  3. The cutoff p(x)=1/x+q(x) is a one-sided Heaviside gate at the fixed point x=1.
+  4. The Mellin kernel -2/(s^2-1) makes q a two-pole residue object.
+  5. In log-space, the triangle is the exponential tail e^(2u), while 1/x is flat measure.
+  6. A literal 30-60-90 triangle cannot keep the ln 2 remainder without an extra q-defect.

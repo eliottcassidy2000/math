@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S394 - Hyperbola/Triangle q Counterterm
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S393.
+**User prompt:** Explore the area under `y=x` on `[0,1]` and `y=1/x` on `[1,2]`, compare triangle decompositions, and investigate the `q(x)+1/x` framing.
+**Computation:** Added `04-computation/hyperbola_triangle_q_s394.py` and stored `05-knowledge/results/hyperbola_triangle_q_s394.out`. The script audits triangle normalizations, cutoff identities, log-coordinate density, reciprocal algebra, Mellin moments, and a power-cutoff family.
+**Findings:** The patched curve is `p(x)=min(x,1/x)` with area `1/2+ln2`. The exact `ln2` remainder forces a carved triangle of area `1/2`; if the line from the origin glues to `(1,1)`, only the `45` degree triangle works. A literal `30-60-90` triangle must pay a `q`-defect: area surplus/deficit, endpoint jump, or slope change.
+**Synthesis:** Added HYP-1862 and `07-reflections/hyperbola-triangle-q-s394.md`. The structural object is the one-sided counterterm `q(x)=x-1/x` on `(0,1]`, so `p(x)=1/x+q(x)` after cutoff. In log-coordinate, `1/x` is flat measure, the triangle is the exponential tail `e^(2u)`, and bare `q0=x-1/x=2sinh(u)` is anti-reciprocal with Mellin transform `-2/(s^2-1)`.
+**Verification:** `python3 04-computation/hyperbola_triangle_q_s394.py | tee 05-knowledge/results/hyperbola_triangle_q_s394.out` succeeded.
+
 ## codex-2026-05-31-S393 - n=16 Proof Gauntlet: Folded Danger and Endpoint Leaves
 
 **Account:** Codex
