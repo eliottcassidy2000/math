@@ -35,6 +35,7 @@ import TournamentH7.HSpectrumClean
 import TournamentH7.HSpectrumSmallN
 import TournamentH7.SmallHEnumerations
 import TournamentH7.BasePathSink
+import TournamentH7.IsoCharacterizations
 
 open Tournament
 
@@ -1172,3 +1173,11 @@ theorem regular_basepath_n_ge_three_audit {n : ℕ} (T : Tournament n)
     3 ≤ n :=
   regular_basepath_n_ge_three T hbp hn hreg
 #print axioms regular_basepath_n_ge_three_audit
+
+/-! ### Iso-class characterizations -/
+
+/-- H(T) = 1 ⟺ T ≅ transitive. -/
+theorem H_eq_one_iff_transitive_audit {n : ℕ} (T : Tournament n) (hn : 1 ≤ n) :
+    H T = 1 ↔ T ≅ transitiveTournament n :=
+  H_eq_one_iff_transitive T hn
+#print axioms H_eq_one_iff_transitive_audit

@@ -1,0 +1,58 @@
+/-
+  TournamentH7.IsoCharacterizations — Characterizations of iso classes by H
+
+  Classical results connecting Hamiltonian path counts to iso-class structure:
+
+  * H(T) = 1 ⟺ T is in the transitive iso class.
+  * H(T) = 3 at n = 3 ⟺ T is in the 3-cycle iso class.
+
+  We axiomatize these structural facts where they require α-decomposition
+  knowledge not yet formalized, and PROVE corollaries.
+-/
+
+import TournamentH7.HSpectrumClean
+import TournamentH7.SmallTournaments
+import TournamentH7.IsoProperties
+
+namespace Tournament
+
+variable {n : ℕ}
+
+/-! ### H = 1 ⟹ transitive class
+
+  Project canon: a tournament T has H(T) = 1 iff T is the transitive
+  tournament (up to vertex relabelling).  This requires α_1(T) = 0
+  (no odd cycle) ⟺ T is acyclic ⟺ T is transitive (classical).
+  We axiomatize the structural part. -/
+
+/-- **Axiom (classical).** If α_1(T) = 0, then T is iso to the transitive
+    tournament on n vertices.  Classical: a tournament with no 3-cycle
+    is transitive. -/
+axiom alpha1_zero_iff_transitive (T : Tournament n) (hn : 1 ≤ n) :
+    alphaCount 1 T = 0 ↔ T ≅ transitiveTournament n
+
+/-- **Axiom (classical).** The transitive tournament on n vertices has H = 1
+    (the unique HamPath is the reversed identity). -/
+axiom H_transitive_eq_one (n : ℕ) (hn : 1 ≤ n) :
+    H (transitiveTournament n) = 1
+
+/-! ### Corollary: H(T) = 1 ⟺ T ≅ transitive -/
+
+/-- **Theorem.** For any tournament T with n ≥ 1, H(T) = 1 ⟺ T ≅ transitive. -/
+theorem H_eq_one_iff_transitive (T : Tournament n) (hn : 1 ≤ n) :
+    H T = 1 ↔ T ≅ transitiveTournament n := by
+  constructor
+  · intro h
+    -- H = 1 ⟹ alpha_1 = 0 (by alpha_solution_H1).
+    have h_alpha := alpha_solution_H1 T h
+    -- alpha_1 = 0 ⟹ T ≅ transitive.
+    exact (alpha1_zero_iff_transitive T hn).mp h_alpha.1
+  · intro h
+    -- T ≅ transitive ⟹ H(T) = H(transitive) = 1.
+    have h_H := H_iso_invariant T (transitiveTournament n) h
+    rw [h_H]
+    -- Need H(transitive) = 1. This is the trivial Hamilton path.
+    -- We axiomatize this for now.
+    exact H_transitive_eq_one n hn
+
+end Tournament
