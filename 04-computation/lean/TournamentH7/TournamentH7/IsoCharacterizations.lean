@@ -63,6 +63,12 @@ theorem H_transitive_3_eq_one : H (transitiveTournament 3) = 1 := by
 theorem H_transitive_4_eq_one : H (transitiveTournament 4) = 1 := by
   unfold H transitiveTournament; decide
 
+/-- H(transitive_5) = 1 — PROVED IN LEAN via decide. -/
+theorem H_transitive_5_eq_one : H (transitiveTournament 5) = 1 := by
+  unfold H transitiveTournament; decide
+
+-- Note: n ≥ 6 times out for `decide` due to factorial growth in permutations.
+
 /-! ### Corollary: H(T) = 1 ⟺ T ≅ transitive -/
 
 /-- **Theorem.** For any tournament T with n ≥ 1, H(T) = 1 ⟺ T ≅ transitive. -/
