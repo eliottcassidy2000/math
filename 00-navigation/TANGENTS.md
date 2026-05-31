@@ -344,6 +344,12 @@ The natural-operation graph lens matches LRC recursion: addition forgets to the 
 **T389** #lonely-runner #recursive-metagraph #scalar-puncture #torsion | certainty: medium-high computational synthesis | source: codex-2026-05-31-S378
 The scalar-puncture moat atlas through `n=22` shows prime/composite recursion as torsion selection: composites pick proper delta orders (`n=14` order 2, `n=15` order 3, `n=21` order 3), while primes pick full-order deltas. Non-reverting repairs cover old missed cells only by opening larger new exposed packages, e.g. ratio `11/2` at `n=14` and `61/9` at `n=20`. See HYP-1835.
 
+**T390** #lonely-runner #endpoint-incidence #circular-arcs #fundamental-shape | certainty: medium-high conceptual + exact examples | source: codex-2026-05-31-S379
+The speed set may not be the fundamental LRC object; the pulled-back circular-arc endpoint-incidence system is closer. Speeds generate unsafe fibers, endpoints are equality events, protected endpoints are hidden boundary failures, and counterexamples are full open covers with every endpoint protected. See HYP-1836.
+
+**T391** #lonely-runner #near-disproof #critical-radius #seven-ladder | certainty: high exact computation for examples | source: codex-2026-05-31-S379
+The `n=14` seven-ladder is tiny-gap but not near-tight in max-min height: `gap/th=0.005411` while exact `critical/th=1.217391`, with `84` unprotected endpoints. A tiny complement interval can be a steep valley; endpoint shape and critical radius are better near-counterexample diagnostics than visible gap width alone.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

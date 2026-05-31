@@ -1,0 +1,97 @@
+Lonely Runner shape questions (codex-2026-05-31 S379)
+
+WHAT DO THE OBJECTS REPRESENT?
+========================================================================================
+  speed v                -> a character t -> v*t on R/Z; one frequency of the forbidden wave
+  speed set V            -> a family of characters; equivalently a pullback machine from torus to time circle
+  threshold 1/(k+1)      -> Dirichlet equality radius; the point where volume count alone is tight
+  forbidden interval     -> one runner's unsafe fiber pulled back to the common time circle
+  endpoint               -> a boundary event where one runner is exactly at distance 1/(k+1)
+  protected endpoint     -> a boundary event hidden inside another runner's unsafe interior
+  boundary-only example  -> the cover has no open gap, but its open intervals fail at finite endpoints
+  counterexample         -> a full open cover whose every endpoint is protected
+  scalar ramp            -> Dirichlet equality spine / gauge orbit in the micro-staircase quotient
+  torsion defect         -> a quotient leak through a proper subgroup of Z/nZ
+
+REPRESENTATION COMPARISON TABLE
+========================================================================================
+label                  n class          crit/th maxgap/th bdyW unprot peel overlap dens divE addG mulG quotient
+---------------------------------------------------------------------------------------------------------------
+initial n=8             8 boundary_only  1.000000  0.000000    4       4    7       4 0.105820    9   12    9 unit_mod_8
+sporadic tight n=8A     8 boundary_only  1.000000  0.000000    4       4    8       4 0.062905    6    6    7 unit_mod_8
+initial n=14           14 boundary_only  1.000000  0.000000    6       6   15       6 0.041270   24   42   20 unit_mod_14
+n14 seven-ladder       14 positive_gap   1.217391  0.005411   84      84   27      60 0.006035   32   32   14 higher_denoms_5_types
+n14 single-gate        14 positive_gap   1.076923  0.045455   24      24   14      12 0.040373   26   42   21 higher_denoms_12_types
+initial n=15           15 boundary_only  1.000000  0.000000    8       8   14       8 0.036264   27   49   22 unit_mod_15
+n15 3x5 ladder         15 positive_gap   1.363636  0.080000  150     150   16      78 0.012511   26   31    8 higher_denoms_8_types
+n15 mixed gates        15 positive_gap   2.142857  0.120000  112     112   22      56 0.012618   41   23   25 higher_denoms_9_types
+
+ENDPOINT SHAPE FINGERPRINTS
+========================================================================================
+The endpoint graph remembers something the speed list hides: which boundary failures are isolated, multiply-owned, or deeply protected.
+
+[initial n=8]
+  Q=8 endpoints=52 intervals=28 components=5 critical=1/8 at t=1/8
+  unit_skeleton=True protection_pressure=0.923077 owner_hist=((1, 48), (2, 4)) protector_hist=((0, 4), (1, 36), (2, 4), (3, 2), (4, 2), (5, 2), (6, 2))
+[sporadic tight n=8A]
+  Q=8 endpoints=88 intervals=47 components=5 critical=1/8 at t=1/8
+  unit_skeleton=True protection_pressure=0.954545 owner_hist=((1, 84), (2, 2), (3, 2)) protector_hist=((0, 4), (1, 54), (2, 22), (3, 2), (4, 2), (5, 2), (6, 2))
+[initial n=14]
+  Q=14 endpoints=176 intervals=91 components=7 critical=1/14 at t=1/14
+  unit_skeleton=True protection_pressure=0.965909 owner_hist=((1, 170), (2, 6)) protector_hist=((0, 6), (1, 128), (2, 12), (3, 8), (4, 4), (5, 4), (6, 2), (7, 2), (8, 2), (9, 2), (10, 2), (11, 2), (12, 2))
+[n14 seven-ladder]
+  Q=168168 endpoints=1150 intervals=596 components=61 critical=2/23 at t=19/161
+  unit_skeleton=False protection_pressure=0.926957 owner_hist=((1, 1108), (2, 42)) protector_hist=((0, 84), (1, 710), (2, 188), (3, 36), (4, 28), (5, 18), (6, 14), (7, 14), (8, 14), (9, 14), (10, 14), (11, 14), (12, 2))
+[n14 single-gate]
+  Q=388080 endpoints=180 intervals=92 components=13 critical=1/13 at t=1/13
+  unit_skeleton=False protection_pressure=0.866667 owner_hist=((1, 176), (2, 4)) protector_hist=((0, 24), (1, 112), (2, 12), (3, 8), (4, 4), (5, 4), (6, 4), (7, 2), (8, 2), (9, 2), (10, 2), (11, 2), (12, 2))
+[initial n=15]
+  Q=15 endpoints=202 intervals=105 components=9 critical=1/15 at t=1/15
+  unit_skeleton=True protection_pressure=0.960396 owner_hist=((1, 194), (2, 8)) protector_hist=((0, 8), (1, 148), (2, 12), (3, 8), (4, 4), (5, 4), (6, 4), (7, 2), (8, 2), (9, 2), (10, 2), (11, 2), (12, 2), (13, 2))
+[n15 3x5 ladder]
+  Q=94500 endpoints=600 intervals=305 components=79 critical=1/11 at t=2/55
+  unit_skeleton=False protection_pressure=0.750000 owner_hist=((1, 590), (2, 10)) protector_hist=((0, 150), (1, 204), (2, 112), (3, 36), (4, 28), (5, 16), (6, 16), (7, 10), (8, 10), (9, 10), (10, 2), (11, 2), (12, 2), (13, 2))
+[n15 mixed gates]
+  Q=47250 endpoints=634 intervals=318 components=57 critical=1/7 at t=9/35
+  unit_skeleton=False protection_pressure=0.823344 owner_hist=((1, 632), (2, 2)) protector_hist=((0, 112), (1, 232), (2, 144), (3, 44), (4, 32), (5, 22), (6, 14), (7, 14), (8, 10), (9, 2), (10, 2), (11, 2), (12, 2), (13, 2))
+
+SMALL ANSWERS FROM THIS PASS
+========================================================================================
+1. The speed list is not the fundamental shape.
+   The same arithmetic-looking operations can produce very different endpoint fingerprints.  The cover/endpoint incidence graph is closer to the object that decides.
+
+2. Tight examples in this sample are endpoint, not interval, failures.
+   initial n=8: critical/th=1.000000, boundary_witnesses=4, unit_skeleton=True, quotient=unit_mod_8
+   sporadic tight n=8A: critical/th=1.000000, boundary_witnesses=4, unit_skeleton=True, quotient=unit_mod_8
+   initial n=14: critical/th=1.000000, boundary_witnesses=6, unit_skeleton=True, quotient=unit_mod_14
+   initial n=15: critical/th=1.000000, boundary_witnesses=8, unit_skeleton=True, quotient=unit_mod_15
+
+3. Near-disproofs are not nearly tight in the same representation.
+   n14 seven-ladder: gap/th=0.005411, critical/th=1.217391, unprotected=84, quotient=higher_denoms_5_types
+   n14 single-gate: gap/th=0.045455, critical/th=1.076923, unprotected=24, quotient=higher_denoms_12_types
+   n15 3x5 ladder: gap/th=0.080000, critical/th=1.363636, unprotected=150, quotient=higher_denoms_8_types
+   n15 mixed gates: gap/th=0.120000, critical/th=2.142857, unprotected=112, quotient=higher_denoms_9_types
+
+4. Protection pressure and visible gap are different axes.
+   Highest protection pressure here: initial n=14 (0.965909).
+   Smallest positive visible gap here: n14 seven-ladder (gap/th=0.005411), but it still has 84 unprotected endpoints.
+
+5. The likely fundamental object is a finite circular-arc incidence system.
+   LRC asks whether an open circular-arc cover can be full while its boundary incidence graph has no leaf after the right protection peel. The speed set is a generator of that system, not the system itself.
+
+NEW QUESTIONS GENERATED
+========================================================================================
+1. Can every primitive LRC endpoint-protection graph be peeled by a potential that sees only cyclic order and owner/protector degrees?
+2. Is the scalar-ramp family best understood as the complete/additive shadow, with all real difficulty living in the residue after quotienting it?
+3. Can critical radius, endpoint peel depth, and repair deficit be unified as one Morse function on a circular-arc metagraph?
+4. Which endpoint fingerprints are realizable by integer speed sets, and which are abstract circular-arc mirages?
+5. Does every tiny-gap near-disproof fail because it protects a low quotient layer while increasing unprotected endpoints in a higher quotient layer?
+6. For n=14, can the eight alpha stencils be characterized without mentioning alpha, just as the minimal leaf types of the endpoint incidence graph?
+7. Is product-sum target status a coordinate-level shadow of the same additive/multiplicative split visible in endpoint protection?
+8. What is the right notion of homology for an open circular-arc cover with protected endpoints: nerve homology, leaf-peeling core, or repair graph cycles?
+
+SYNTHESIS
+========================================================================================
+The most fundamental representation seems to be neither speeds nor times alone, but the boundary of the pulled-back forbidden cover.  Speeds generate maps; intervals are unsafe fibers; endpoints are the places where the proof can fail; protection is the local mechanism that could turn a tight example into a counterexample.
+So the central shape is a finite circular-arc incidence system with a peeling dynamics.  Scalar ramps are the equality spine of this system. Torsion and product-sum gates mark where quotient layers leak.  Repair deficit measures the cost of moving inside the residue metagraph.
+A good next proof question is not 'where is the lonely time?' but 'why must the endpoint-protection graph have a leaf after the scalar equality spine is quotiented?'

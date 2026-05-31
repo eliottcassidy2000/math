@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-31-S379 - Lonely Runner Shape Questions
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`.
+**User prompt:** Spend a long exploratory session generating and investigating Lonely Runner ideas, focusing on what the objects represent, what is fundamental, and what shape determines the structure.
+**Computation:** Added `04-computation/lonely_runner_shape_questions_s379.py` and stored `05-knowledge/results/lonely_runner_shape_questions_s379.out`. The script compares selected tight and near-disproof examples as speed lists, pulled-back interval covers, endpoint-protection graphs, interval-overlap shadows, operation-closure profiles, and exact max-min loneliness landscapes.
+**Findings:** The speed set looks less fundamental than the finite circular-arc endpoint-incidence system it generates. Tight examples in the sample are endpoint failures (`critical/th=1`, boundary-only, unit skeleton true), while tiny-gap near-disproofs are not truly near-tight in height/endpoint space: the `n=14` seven-ladder has `gap/th=0.005411` but `critical/th=1.217391` and `84` unprotected endpoints.
+**Reframing:** A speed is a character `t -> vt` on `R/Z`; a forbidden interval is an unsafe fiber pulled back to the time circle; an endpoint is an equality event; protection is the local mechanism that could turn a tight example into a counterexample; scalar ramps are the Dirichlet equality spine/gauge orbit.
+**Synthesis:** Added HYP-1836 and `07-reflections/lonely-runner-shape-questions-s379.md`. The proposed proof question is: why must the endpoint-protection graph have a leaf after the scalar equality spine is quotiented?
+**Verification:** `python3 -m py_compile 04-computation/lonely_runner_shape_questions_s379.py` succeeded; the script ran end-to-end and produced the stored 97-line result.
+**Next:** Characterize the S367/S371 eight alpha stencils as endpoint leaf types; search for abstract all-protected circular-arc systems and test integer-speed realizability; build endpoint-core/repair-graph homology candidates.
+
 ## codex-2026-05-31-S377 - Lonely Runner Torsion/CRT Feedback
 
 **Account:** Codex
