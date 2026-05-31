@@ -1,0 +1,74 @@
+LRC DISTANCE-TOURNAMENT TWO-NEIGHBOR LENS (oracle-2026-05-31-S22)
+============================================================================================================
+Rows include initial boundary systems, quotient ladders, and S21 coarse-row completions for n=14,15,16.
+pos/ties/coll/anti means number of position classes, lex tie pairs, collision pairs, and antipodal pairs.
+
+A. STATIONARY TWO-NEIGHBOR BRACKET
+============================================================================================================
+  label                    class        t-kind   t          gap/th debt left        right       margin
+  n14 initial              boundary_only boundary 1/14            0    6 1/14[13]    1/14[1]          +0
+  n14 d=7 ladder           positive_gap gap-mid  3053/25872  5/924   84 27/308[84]  29/336[77]   +5/336
+  n14 d=14 ladder          positive_gap gap-mid  4339/51744 5/1848  168 29/336[154] 4339/51744[1] +643/51744
+  n14 window completion    positive_gap gap-mid  8165/22176 85/792   88 3527/22176[5] 773/7392[3] +35/1056
+  n15 initial              boundary_only boundary 1/15            0    8 1/15[14]    1/15[1]          +0
+  n15 d=3 ladder           positive_gap gap-mid  3271/11880  7/396   36 29/330[36]  31/360[33]   +7/360
+  n15 d=5 ladder           positive_gap gap-mid  3271/19800  7/660   66 29/330[60]  31/360[55]   +7/360
+  n15 d=15 ladder          positive_gap gap-mid  4649/59400 7/1980  208 31/360[165] 4649/59400[1] +689/59400
+  n15 window completion    positive_gap gap-mid  7/72       13/180   80 11/72[19]   7/72[1]     +11/360
+  n16 initial              boundary_only boundary 1/16            0    8 1/16[15]    1/16[1]          +0
+  n16 d=2 ladder           positive_gap gap-mid  47/264       1/33   34 1/12[22]    3/44[6]      +1/176
+  n16 d=4 ladder           positive_gap gap-mid  47/528       1/66   68 1/12[44]    3/44[12]     +1/176
+  n16 d=8 ladder           positive_gap gap-mid  85/1056     1/132  140 3/44[24]    85/1056[1]   +1/176
+  n16 d=16 ladder          positive_gap gap-mid  179/2112    1/264  280 1/12[176]   3/44[48]     +1/176
+  n16 window completion    positive_gap gap-mid  2545/29568 59/924   76 143/1344[22] 2545/29568[1] +697/29568
+
+B. NEAREST AND SECOND-NEAREST DIGRAPH DATA
+============================================================================================================
+  label                    NN0         2nd0        inNN0 in2NN0 mutual pos/ties/coll/anti
+  n14 initial              1/14[1,13]  1/7[2,12]       2      2      1 14/7/0/7
+  n14 d=7 ladder           29/336[77]  27/308[84]      0      1      5 14/0/0/0
+  n14 d=14 ladder          4339/51744[1] 29/336[154]     0      3      6 14/0/0/0
+  n14 window completion    773/7392[3] 245/1584[14]     0      0      4 14/0/0/0
+  n15 initial              1/15[1,14]  2/15[2,13]      2      2      1 15/0/0/0
+  n15 d=3 ladder           31/360[33]  29/330[36]      0      3      5 15/0/0/0
+  n15 d=5 ladder           31/360[55]  29/330[60]      0      1      5 15/0/0/0
+  n15 d=15 ladder          4649/59400[1] 31/360[165]     0      3      6 15/0/0/0
+  n15 window completion    7/72[1]     5/36[22]        0      2      5 15/1/0/1
+  n16 initial              1/16[1,15]  1/8[2,14]       2      2      1 16/8/0/8
+  n16 d=2 ladder           3/44[6]     1/12[22]        1      2      4 16/0/0/0
+  n16 d=4 ladder           3/44[12]    1/12[44]        0      2      3 16/0/0/0
+  n16 d=8 ladder           3/44[24]    85/1056[1]      1      1      4 16/0/0/0
+  n16 d=16 ladder          3/44[48]    1/12[176]       0      2      3 16/0/0/0
+  n16 window completion    2545/29568[1] 143/1344[22]     2      2      5 16/0/0/0
+
+C. LEX-COMPLETED CIRCULAR TOURNAMENT SHADOW
+============================================================================================================
+  label                    out0 score_hist          cycles cycles_through_0
+  n14 initial                 7 6:7,7:7                112               21
+  n14 d=7 ladder              6 5:1,6:6,7:6,8:1        110               21
+  n14 d=14 ladder             6 5:3,6:4,7:4,8:3        106               22
+  n14 window completion       5 4:2,5:3,6:2,7:2,8:3,9:2     94               31
+  n15 initial                 7 7:15                   140               28
+  n15 d=3 ladder              7 6:2,7:11,8:2           138               30
+  n15 d=5 ladder              7 6:1,7:13,8:1           139               29
+  n15 d=15 ladder             6 5:1,6:4,7:5,8:4,9:1    132               28
+  n15 window completion       6 4:1,5:3,6:3,7:1,8:3,9:3,10:1    116               38
+  n16 initial                 8 7:8,8:8                168               28
+  n16 d=2 ladder              6 6:3,7:5,8:5,9:3        162               31
+  n16 d=4 ladder              6 6:2,7:6,8:6,9:2        164               30
+  n16 d=8 ladder              8 7:8,8:8                168               31
+  n16 d=16 ladder             6 6:2,7:6,8:6,9:2        164               30
+  n16 window completion       7 5:3,6:1,7:4,8:4,9:1,10:3    148               41
+
+D. SYNTHESIS
+============================================================================================================
+  1. The LRC condition is exactly a two-sided bracket condition around the stationary vertex:
+     left_gap(t) >= 1/n and right_gap(t) >= 1/n.
+     All 15 sampled witness rows satisfy this exact local condition.
+  2. Quotient ladders preserve more local metric data than max-gap alone records.  Repeated ladder bracket margins:
+     n=15, margin=+7/360: n15 d=3 ladder, n15 d=5 ladder
+     n=16, margin=+1/176: n16 d=2 ladder, n16 d=4 ladder, n16 d=8 ladder, n16 d=16 ladder
+  3. The global nearest-neighbor digraph is extra data, not a substitute for the bracket.
+     Positive-gap rows where no moving runner has the stationary runner as its nearest neighbor:
+     n14 d=7 ladder, n14 d=14 ladder, n14 window completion, n15 d=3 ladder, n15 d=5 ladder, n15 d=15 ladder, n15 window completion, n16 d=4 ladder, n16 d=16 ladder
+  4. Tournament structure enters through the circular order flow.  As t moves, adjacent swaps and half-turn ties change the lex-completed circular tournament; a counterexample would need every such order state to keep at least one of the two stationary bracket gaps below 1/n.

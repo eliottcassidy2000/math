@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-05-31-S22 - LRC Two-Neighbor Distance Tournament Lens
+
+**Account:** Codex on `oracle`. **User prompt:** Think creatively about how tournament structure may show up in LRC, especially whether tracking extra distance data between runners or two nearest neighbors instead of one can leverage tournament knowledge.
+**Computation:** Added `04-computation/lrc_distance_tournament_lens_s22.py` and stored `05-knowledge/results/lrc_distance_tournament_lens_s22.out`. The script audits initial boundary rows, quotient ladders, and S21 completions for `n=14,15,16`, recording the stationary two-sided bracket, nearest/second-nearest shells, nearest-neighbor digraph data, and a lex-completed circular tournament shadow.
+**Findings:** LRC is exactly a two-neighbor condition around the stationary vertex: the predecessor and successor gaps around `0` must both be at least `1/n`. This marked bracket contains information not visible in the scalar max-gap or unmarked nearest-neighbor graph. In the sampled ladders, `n=16` preserves bracket margin `+1/176` across `d=2,4,8,16` even while time-gap ratios halve; `n=15` preserves margin `+7/360` across the `d=3` and `d=5` ladders. Many positive-gap rows have no moving runner for which the stationary runner is the nearest neighbor, so the global nearest-neighbor graph alone is not the right object.
+**Synthesis:** Added HYP-1895 and `07-reflections/lrc-distance-tournament-two-neighbor-s22.md`. The proposed tournament reframe is a marked circular-order flow: every time state gives a circular tournament completion, and a counterexample must keep at least one of the two stationary bracket gaps below threshold in every order state while also paying endpoint and coarse divisor invoices.
+**Verification:** `python3 -m py_compile 04-computation/lrc_distance_tournament_lens_s22.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S460 - LRC Zeckendorf Shell Bridge
 
 **Account:** Codex
@@ -43,7 +51,6 @@
 **Findings:** The exact local 14-gate fan tax is new: covering all `28` endpoints owned by a `14`-gate using lower columns `1..13` has exact minimum `8`, with cover `(7,1,2,3,5,9,11,13)` and forced private-row columns `(1,3,5,7,9,11,13)`. The S380 gate ladder and seven-ladder have the same root-weighted frontier mass `66/7`, but S380 doubles exposed endpoints and quadruples denominator pressure from `1092` to `4368`. Owner-wise debt in S380 concentrates on owners `154,168,182` with `48` exposed labels each.
 **Synthesis:** Added HYP-1910 and `07-reflections/lrc-n14-creative-reframes-s440.md`. The proposed proof grammar is: unit rows force a `14`-gate; every `14`-gate must pay the heptagonal fan tax; gate-heavy repairs then export product-depth endpoint rows with positive owner-charge divergence. The antipodal fold is useful as a parity/CRT split rather than as a separate gap invariant.
 **Verification:** `python3 -m py_compile 04-computation/lrc_n14_creative_reframes_s440.py` succeeded; the script ran end-to-end and produced the stored output.
-
 ## codex-2026-05-31-S430 - LRC Lens Atlas and Tournament Incidence Core
 
 **Account:** Codex
