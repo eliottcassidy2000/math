@@ -1,0 +1,102 @@
+NATURAL OPERATION DIGRAPH SHADOWS
+========================================================================
+
+Simple one-input shadows on [N]:
+  additive:       x -> z iff exists y>=1 with x+y=z
+                  so x -> z iff x<z: the transitive tournament
+  multiplicative: x -> z iff exists y>=1 with xy=z
+                  so x -> z iff x|z: the divisibility DAG
+
+N  complete  add_edges  prod_edges(+1)  prod_edges(no1)  prod_density(+1)  add_gates  prod_gates(+1)  prime_covers
+------------------------------------------------------------------------------------------------------------------
+  8        28         28              12                5            0.4286         16              11             8
+ 12        66         66              23               12            0.3485         36              19            14
+ 20       190        190              46               27            0.2421        100              35            26
+ 50      1225       1225             157              108            0.1282        625             107            77
+100      4950       4950             382              283            0.0772       2500             246           171
+
+N=12: product shadow misses 43 additive comparisons; first misses: 2->3, 2->5, 2->7, 2->9, 2->11, 3->4, 3->5, 3->7, 3->8, 3->10, 3->11, 4->5
+N=20: product shadow misses 144 additive comparisons; first misses: 2->3, 2->5, 2->7, 2->9, 2->11, 2->13, 2->15, 2->17, 2->19, 3->4, 3->5, 3->7
+
+BINARY GATE COLLISIONS
+========================================================================
+Positive unordered x+y=xy collisions below 40: [(2, 2, 4)]
+  Rearrangement: (x-1)(y-1)=1, so the only positive collision is (2,2)->4.
+
+Two-factor product-sum layer by total arity k:
+  r ones plus a,b>1 solve r+a+b=ab with k=r+2
+  equivalently (a-1)(b-1)=k-1, so this layer is the divisor graph of k-1.
+  k= 2: 2,2->P=4
+  k= 3: 2,3->P=6
+  k= 4: 2,4->P=8
+  k= 5: 2,5->P=10, 3,3->P=9
+  k= 6: 2,6->P=12
+  k= 7: 2,7->P=14, 3,4->P=12
+  k= 8: 2,8->P=16
+  k= 9: 2,9->P=18, 3,5->P=15
+  k=10: 2,10->P=20, 4,4->P=16
+  k=11: 2,11->P=22, 3,6->P=18
+  k=12: 2,12->P=24
+  k=13: 2,13->P=26, 3,7->P=21, 4,5->P=20
+  k=14: 2,14->P=28
+
+PRODUCT-SUM CRITICAL PAIRS
+========================================================================
+For seed F of entries >1, let P=prod(F), S=sum(F), defect D=P-S.
+D copies of 1 repair the additive fold: D + S = P.
+Total arity is k=|F|+D.  Minimal P by k gives the product-sum number.
+
+k  min_P  compact witness        seed>1        ones  runner_up_Ps
+-----------------------------------------------------------------
+ 2      4  2 2                     2 2              0  -
+ 3      6  1 + 2 3                 2 3              1  -
+ 4      8  1^2 + 2 4               2 4              2  -
+ 5      8  1^2 + 2 2 2             2 2 2            2  9,10
+ 6     12  1^4 + 2 6               2 6              4  -
+ 7     12  1^5 + 3 4               3 4              5  14
+ 8     12  1^5 + 2 2 3             2 2 3            5  16
+ 9     15  1^7 + 3 5               3 5              7  18
+10     16  1^8 + 4 4               4 4              8  20
+11     16  1^8 + 2 2 4             2 2 4            8  18,22
+12     16  1^8 + 2 2 2 2           2 2 2 2          8  24
+13     18  1^10 + 2 3 3            2 3 3           10  20,21,26
+14     20  1^11 + 2 2 5            2 2 5           11  28
+15     24  1^13 + 3 8              3 8             13  30
+16     24  1^14 + 4 6              4 6             14  32
+17     24  1^14 + 2 2 6            2 2 6           14  25,27,34
+18     24  1^15 + 2 3 4            2 3 4           15  36
+19     24  1^15 + 2 2 2 3          2 2 2 3         15  28,30,38
+20     28  1^17 + 2 2 7            2 2 7           17  40
+21     27  1^18 + 3 3 3            3 3 3           18  30,33,42
+22     32  1^20 + 4 8              4 8             20  44
+23     30  1^20 + 2 3 5            2 3 5           20  32,36,46
+24     48  1^22 + 2 24             2 24            22  -
+
+First arity where a multi-factor seed beats every two-factor seed:
+  k=5: best seed (2, 2, 2) gives P=8, beating two-factor minimum P=9.
+
+DEFECT HISTOGRAM FOR SMALL MULTIPLICATIVE SEEDS
+========================================================================
+Seeds with product <=250 and induced arity <=40: 110
+By nonunit seed length:
+  length 2: 78
+  length 3: 25
+  length 4: 6
+  length 5: 1
+Most common one-defects D=P-S:
+  D=29: 7
+  D=35: 7
+  D=15: 5
+  D=23: 5
+  D=26: 5
+  D= 8: 4
+  D=22: 4
+  D=17: 4
+  D=11: 4
+  D=20: 4
+  D=25: 3
+  D=31: 3
+
+SYNTHESIS
+========================================================================
+The additive shadow by itself is too coarse: it is just the total order. The multiplicative shadow is the divisibility DAG sitting inside that transitive completion.  Product-sum equations are therefore best treated as critical pairs in the labeled gate hypergraph, not as ordinary edges.

@@ -263,6 +263,12 @@ Composite gate insertions leak in both frontier cases. Exact gated boxes found `
 **T362** #lonely-runner #disproof-search #gate-overload #protection-cycles | certainty: medium negative evidence | source: opus-2026-05-31-S364
 Gate-overload is a bad disproof architecture: adding more multiples of the denominator protects the unit layer but creates many higher-denominator leaks (`n=14` unprotected counts `24,28,40,52,96,148`; `n=15` counts `12,32,36,60,88,124`). Future disproof search should generate endpoint-protection cycles first, then solve for speeds, rather than sample dense gated speed sets.
 
+**T363** #natural-numbers #operation-digraphs #partial-tournaments #divisibility | certainty: high structural | source: codex-2026-05-31-S365
+The proposed additive natural-number arrow graph `{x,y}->x+y`, after forgetting the second input, is the transitive tournament: `x->z` iff `x<z`. The multiplication analogue is the true incomplete tournament: `x->z` iff `x|z`, the divisibility DAG inside the additive completion. Keep the two-input gate labels or the additive side loses its content. See HYP-1820.
+
+**T364** #product-sum #sum-product #critical-pairs #divisor-layer | certainty: medium-high computational | source: codex-2026-05-31-S365
+Product-sum equations are additive/multiplicative gate critical pairs. For nonunit seed `F`, the defect `D=prod(F)-sum(F)` is the exact number of `1`s needed to solve `sum=product`, with arity `|F|+D`. The two-factor layer at arity `k` is `(a-1)(b-1)=k-1`; multi-factor packing first beats all two-factor seeds at `k=5` via `(2,2,2)`.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

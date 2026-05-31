@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-31-S365 - Natural Operation Digraphs And Product-Sum Critical Pairs
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**User prompt:** Explore the old incomplete-tournament idea on natural-number nodes with arrows from summands to their sum, compare the sparser multiplication version, and relate both to equations `X+Y=X*Y`, `X+Y+Z=X*Y*Z`, etc.
+**Repo archaeology:** Connected the prompt to `natural_numbers_s116i.py` and `understand_naturals_s90ay.py` (multiplication linearizes in rapidity; addition becomes log-sum-exp), `sum_product_tournament.py` (additive versus multiplicative phase competition), `non_tournament_apps_s253.py` (partial/incomplete tournaments), and `audit.py` (the old `(1,2,3)` sum=product check).
+**Computation:** Added `04-computation/natural_operation_digraphs_s365.py` and stored `05-knowledge/results/natural_operation_digraphs_s365.out`. The script computes additive and multiplicative one-input shadows on `[N]`, product DAG sparsity, binary gate collisions, the divisor formula for two-factor product-sum layers, and minimal product-sum witnesses through arity `24`.
+**Main finding:** The additive arrow shadow is not incomplete at all: `x -> z` iff `x<z`, so it is the transitive tournament. The multiplication shadow is the divisibility DAG inside that transitive completion. Therefore the interesting object is the labeled two-input gate hypergraph `{x,y}->x+y` and `{x,y}->xy`, not the ordinary directed one-shadow.
+**Product-sum synthesis:** For a seed `F` of nonunit factors, `D(F)=prod(F)-sum(F)` counts exactly how many ones repair the additive fold into the multiplicative endpoint. Total arity is `|F|+D(F)`. The two-factor layer is governed by `(a-1)(b-1)=k-1`; at `k=5`, the multi-factor seed `(2,2,2)` already beats every two-factor seed.
+**Knowledge updates:** Added HYP-1820, tangents T363-T364, and `07-reflections/natural-operation-digraphs-and-product-sum-s365.md`.
+**Next:** Build a two-colored operation complex with additive and multiplicative 2-cells; compute small critical-pair homology; treat product-sum numbers as a minimal-endpoint problem in the additive completion of the divisibility DAG.
+
 ## codex-2026-05-31-S364 - Lonely Runner 14/15 Feedback Loop
 
 **Account:** Codex
