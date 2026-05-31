@@ -1,0 +1,70 @@
+14-runner composite-anomaly disproof attempt (codex-2026-05-31 S378)
+Target: k=13 speeds, threshold=1/14, exact open-cover classification.
+
+Baseline half-divisor quotient ladder
+  seven-ladder: class=positive_gap len=142/143 gap=5/12936 gap/th=0.005411 boundary=84 unprotected=84 first=9/98 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+
+Seven-ladder exposed endpoint anatomy
+  leaks=84
+  denominator_hist=((98, 36), (392, 12), (1078, 12), (1176, 12), (1274, 12))
+  residue_mod_14_hist=((-1, 84),)
+  residue_mod_98_hist_prefix=((-1, 48), (9, 1), (11, 1), (13, 1), (15, 1), (17, 1), (19, 1), (23, 1), (25, 1), (27, 1), (29, 1), (31, 1), (33, 1), (37, 1))
+  first_leaks=['9/98', '11/98', '127/1078', '139/1176', '47/392', '153/1274', '13/98', '15/98', '211/1274', '65/392', '197/1176', '181/1078']
+
+Top direct protectors of the seven-ladder leak layer
+  speed= 42 covers=48 introduced= 84 residue14= 0 q7= 6 score= 53.000
+  speed= 98 covers=36 introduced=196 residue14= 0 q7=14 score= 37.000
+  speed=196 covers=36 introduced=392 residue14= 0 q7=28 score= 30.000
+  speed=119 covers=24 introduced=238 residue14= 7 q7=17 score= 19.500
+  speed=133 covers=24 introduced=266 residue14= 7 q7=19 score= 18.500
+  speed=161 covers=24 introduced=322 residue14= 7 q7=23 score= 16.500
+  speed=175 covers=24 introduced=350 residue14= 7 q7=25 score= 15.500
+  speed=217 covers=24 introduced=434 residue14= 7 q7=31 score= 12.500
+  speed=  8 covers=14 introduced= 16 residue14= 8 q7= - score= 13.429
+  speed=  9 covers=14 introduced= 18 residue14= 9 q7= - score= 13.357
+  speed= 10 covers=14 introduced= 20 residue14=10 q7= - score= 13.286
+  speed= 11 covers=14 introduced= 22 residue14=11 q7= - score= 13.214
+  speed= 12 covers=14 introduced= 24 residue14=12 q7= - score= 13.143
+  speed= 13 covers=14 introduced= 26 residue14=13 q7= - score= 13.071
+  speed= 15 covers=14 introduced= 30 residue14= 1 q7= - score= 12.929
+  speed= 16 covers=14 introduced= 32 residue14= 2 q7= - score= 12.857
+  speed= 17 covers=14 introduced= 34 residue14= 3 q7= - score= 12.786
+  speed= 18 covers=14 introduced= 36 residue14= 4 q7= - score= 12.714
+
+Exact replacement of one ladder speed by the missing half-gate 42
+  insert42 remove=84: class=positive_gap len=242689/245245 gap=1/1715 gap/th=0.008163 boundary=84 unprotected=84 first=57/686 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 91)
+  insert42 remove=91: class=positive_gap len=219763/226380 gap=1/1176 gap/th=0.011905 boundary=168 unprotected=168 first=15/196 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84)
+  insert42 remove=70: class=positive_gap len=144107/147147 gap=4/4459 gap/th=0.012559 boundary=84 unprotected=84 first=9/98 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 77, 84, 91)
+  insert42 remove=35: class=positive_gap len=9701/10010 gap=1/980 gap/th=0.014286 boundary=120 unprotected=120 first=33/392 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 42, 49, 56, 63, 70, 77, 84, 91)
+  insert42 remove=28: class=positive_gap len=13723/14014 gap=9/8624 gap/th=0.014610 boundary=84 unprotected=84 first=9/98 peel=- coreE=- speeds=(1, 7, 14, 21, 35, 42, 49, 56, 63, 70, 77, 84, 91)
+  insert42 remove=77: class=positive_gap len=84447/89180 gap=1/784 gap/th=0.017857 boundary=144 unprotected=144 first=99/1274 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 84, 91)
+  insert42 remove=63: class=positive_gap len=186377/196196 gap=1/637 gap/th=0.021978 boundary=96 unprotected=96 first=85/1078 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 70, 77, 84, 91)
+  insert42 remove=21: class=positive_gap len=615/637 gap=1/588 gap/th=0.023810 boundary=72 unprotected=72 first=9/98 peel=- coreE=- speeds=(1, 7, 14, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91)
+  insert42 remove=56: class=positive_gap len=47149/49049 gap=2/1029 gap/th=0.027211 boundary=84 unprotected=84 first=113/1274 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 35, 42, 49, 63, 70, 77, 84, 91)
+  insert42 remove=49: class=positive_gap len=7963/8580 gap=3/1456 gap/th=0.028846 boundary=108 unprotected=108 first=71/882 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 35, 42, 56, 63, 70, 77, 84, 91)
+  insert42 remove=14: class=positive_gap len=1241/1274 gap=11/5096 gap/th=0.030220 boundary=60 unprotected=60 first=29/392 peel=- coreE=- speeds=(1, 7, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91)
+  insert42 remove=7: class=positive_gap len=46/49 gap=1/196 gap/th=0.071429 boundary=48 unprotected=48 first=9/98 peel=- coreE=- speeds=(1, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91)
+
+Composite repair pool: size=70 max=252 multiples_of_7=36 multiples_of_14=18
+
+Exact one-speed replacement by top composite protectors
+  skipped in the stored bounded run; enable RUN_TOP_PROTECTOR_REPLACEMENTS for the larger pass.
+
+Hand-anchored exact audits forcing 42 plus high-cover protectors
+  hand add=(42, 98) remove=(35, 49): class=positive_gap len=402949/420420 gap=1/1540 gap/th=0.009091 boundary=240 unprotected=240 first=71/882 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 42, 56, 63, 70, 77, 84, 91, 98)
+  hand add=(42, 119, 196) remove=(21, 35, 84): class=positive_gap len=87963/91630 gap=29/35672 gap/th=0.011381 boundary=192 unprotected=192 first=57/686 peel=- coreE=- speeds=(1, 7, 14, 28, 42, 49, 56, 63, 70, 77, 91, 119, 196)
+  hand add=(42, 119) remove=(70, 84): class=positive_gap len=143603/147147 gap=4/4851 gap/th=0.011544 boundary=132 unprotected=132 first=57/686 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 77, 91, 119)
+  hand add=(42, 119, 196) remove=(21, 70, 84): class=positive_gap len=4803665/5002998 gap=4/4851 gap/th=0.011544 boundary=144 unprotected=144 first=57/686 peel=- coreE=- speeds=(1, 7, 14, 28, 35, 42, 49, 56, 63, 77, 91, 119, 196)
+  hand add=(42, 98) remove=(70, 84): class=positive_gap len=712867/735735 gap=4/4459 gap/th=0.012559 boundary=96 unprotected=96 first=57/686 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 77, 91, 98)
+  hand add=(42, 196) remove=(70, 84): class=positive_gap len=712867/735735 gap=4/4459 gap/th=0.012559 boundary=96 unprotected=96 first=57/686 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 77, 91, 196)
+  hand add=(42, 98, 196) remove=(21, 70, 84): class=positive_gap len=1394219/1471470 gap=1/1029 gap/th=0.013605 boundary=144 unprotected=144 first=57/686 peel=- coreE=- speeds=(1, 7, 14, 28, 35, 42, 49, 56, 63, 77, 91, 98, 196)
+  hand add=(42, 119) remove=(35, 70): class=positive_gap len=29531/32487 gap=2/539 gap/th=0.051948 boundary=120 unprotected=120 first=141/1666 peel=- coreE=- speeds=(1, 7, 14, 21, 28, 42, 49, 56, 63, 77, 84, 91, 119)
+
+Final disproof status
+  FOUND_OPEN_COVER=NO
+  best=seven-ladder class=positive_gap gap/th=0.005411 unprotected=84 first=9/98 speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+
+Interpretation
+  The 14=2*7 anomaly really does create a near-disproof channel: the largest-proper-divisor ladder is extremely close in measure.
+  But the same composite repair layer is endpoint-expensive.  The missing 42 gate protects many old leaks, yet every replacement keeps a positive gap or creates a large new boundary layer.
+  In this search, the anomaly behaves more like evidence for an endpoint closure obstruction than like a counterexample recipe.

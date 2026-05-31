@@ -50,6 +50,19 @@
 **Verification:** `python3 -m py_compile 04-computation/natural_lrc_recursive_modes_s378.py 04-computation/lonely_runner_operation_metagraph_s378.py` succeeded; `natural_lrc_recursive_modes_s378.py` reproduced its stored output byte-for-byte, and `lonely_runner_operation_metagraph_s378.py` was run to regenerate the stored output.
 **Next:** Rank S373-S377 near-disproof families by the combined feature vector and use repair-deficit weights as branch-and-bound costs in the normalized `n=14` quotient search.
 
+## codex-2026-05-31-S381 - LRC Operation-Shadow Bridge
+
+**Account:** Codex
+**Git first:** Finished the in-progress rebase over remote S375/S376 work, then rebased again over remote S377-S380 work and renumbered this bridge note to S381.
+**User prompt:** Revisit the natural-number incomplete-tournament/mode graph idea for arrows induced by `X+Y=Z`, compare the sparser `X*Y=Z` version, relate both to `X+Y=X*Y`, `X+Y+Z=X*Y*Z`, and push the Lonely Runner recursive metric program in the style of tournament structure.
+**Repo archaeology:** Re-read the S365/S366 natural-operation files, HYP-1820/1821/1822, the S376 recursive LRC atlas, and the recent 14/15 endpoint-pressure strands. The key bridge is that addition forgets to the transitive completion while multiplication leaves the divisor-DAG residue; LRC composites appear to expose the same residue through quotient ladders.
+**Computation:** Added `04-computation/lrc_operation_shadow_bridge_s377.py` and stored `05-knowledge/results/lrc_operation_shadow_bridge_s377.out`. The script computes operation-shadow metrics through `[24]`, parses the stored S376 LRC rows, runs an exact largest-proper-divisor ladder scan through `n=18`, prints transition signatures, correlations, and endpoint-defect/gap pressure rankings.
+**Findings:** In every stored composite LRC row with a quotient ladder through `n<=18`, the best ladder divisor equals `lpd(n)` (`10/10` cases). The pressure ranking by `unprotected endpoints / gap_ratio` begins `18,16,14,15,12,10`, so the fourteen-runner case is the first loud member of a larger largest-proper-divisor quotient family rather than an isolated accident.
+**Side disproof probe:** Adopted the untracked `04-computation/lonely_runner_14_composite_disproof_s378.py`, bounded the exact repair pass for reproducibility, and stored `05-knowledge/results/lonely_runner_14_composite_disproof_s378.out`. The missing half-gate `42` covers `48/84` seven-ladder leaks, but all one-replacement audits remain positive-gap and the bounded hand-anchored samples find no open cover.
+**Synthesis:** Added HYP-1838 and `07-reflections/lrc-operation-shadow-bridge-s377.md`. Product-sum `1`s and LRC unit endpoints now have the same role in the local dictionary: additive slack/boundary mass that repairs multiplicative excess while preserving leak data.
+**Verification:** `python -m py_compile 04-computation/lrc_operation_shadow_bridge_s377.py` and `python -m py_compile 04-computation/lonely_runner_14_composite_disproof_s378.py` succeeded; both scripts were run end-to-end and outputs were stored.
+**Next:** Prove or refute the `lpd(n)` ladder-minimization claim among one-divisor quotient ladders; build the first divisor-indexed LRC endpoint-transfer matrix with rows for unit, largest-proper-divisor, and lower divisor layers; compare exceptions to multi-factor product-sum packing transitions.
+
 ## codex-2026-05-31-S375 - Lonely Runner 14/15/Disproof Repair-Deficit Loop
 
 **Account:** Codex

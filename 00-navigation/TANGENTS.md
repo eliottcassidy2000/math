@@ -353,6 +353,15 @@ The `n=14` seven-ladder is tiny-gap but not near-tight in max-min height: `gap/t
 **T392** #lonely-runner #fourteen-runners #composite-denominators #endpoint-transfer | certainty: medium-high computational | source: codex-2026-05-31-S380
 A composite-denominator disproof attempt found a sharper near-miss: `(1) union {14q: q=1..13, q!=6}` protects the designed unit/98/182 target layer and halves the seven-ladder gap ratio to `0.002706`, but still has positive gap `5/25872` and `168` unprotected endpoints. The 14 anomaly looks like endpoint-transfer debt, not an open-cover construction. See HYP-1837.
 
+**T393** #lonely-runner #operation-shadows #divisor-dag #quotient-ladders | certainty: medium-high computational synthesis | source: codex-2026-05-31-S381
+The natural operation split `addition -> transitive completion`, `multiplication -> divisor-DAG residue` appears inside the LRC denominator tower. In the stored exact rows `n<=18`, every composite quotient-ladder best divisor is the largest proper divisor (`10/10` cases). Endpoint-defect/gap pressure ranks `18,16,14,15,12,10,...`, making `n=14` the first loud member of a larger lpd-ladder family. See HYP-1838.
+
+**T394** #product-sum #lonely-runner #unit-slack #endpoint-transfer | certainty: exploratory | source: codex-2026-05-31-S381
+Product-sum `1`s and LRC unit endpoints have the same formal role: additive slack/boundary mass repairing multiplicative excess while recording leak data. Compare multi-factor product-sum wins at arities `5,8,11,12,13,14,17,18,...` with LRC tiny quotient-ladder levels `10,12,14,15,16,18` when building the first divisor-indexed endpoint-transfer matrix.
+
+**T395** #lonely-runner #fourteen-runners #composite-anomaly #disproof-negative | certainty: bounded exact negative evidence | source: codex-2026-05-31-S381
+The seven-ladder near-disproof has 84 exposed endpoints; the missing half-gate `42` directly covers 48 of them, but every exact one-replacement by `42` remains positive-gap. The bounded hand-anchored composite repair samples found no open cover and kept the seven-ladder as best (`gap/th=0.005411`, `unprotected=84`). This supports endpoint-closure obstruction over disproof construction.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
