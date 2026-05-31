@@ -33,6 +33,7 @@ import TournamentH7.StaircaseBucketTransport
 import TournamentH7.RedeiFromOCF
 import TournamentH7.HSpectrumClean
 import TournamentH7.HSpectrumSmallN
+import TournamentH7.SmallHEnumerations
 
 open Tournament
 
@@ -1067,3 +1068,44 @@ theorem H_n5_in_spectrum_audit (T : Tournament 5) :
     H T = 1 ∨ H T = 3 ∨ H T = 5 ∨ H T = 9 ∨ H T = 11 ∨ H T = 13 ∨ H T = 15 :=
   H_n5_in_spectrum T
 #print axioms H_n5_in_spectrum_audit
+
+/-! ### Small H arithmetic enumerations -/
+
+theorem alpha_solution_H9_audit {n : ℕ} (T : Tournament n) (h : H T = 9) :
+    (alphaCount 1 T = 4 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 2 ∧ alphaCount 2 T = 1
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) :=
+  alpha_solution_H9 T h
+#print axioms alpha_solution_H9_audit
+
+theorem alpha_solution_H11_audit {n : ℕ} (T : Tournament n) (h : H T = 11) :
+    (alphaCount 1 T = 5 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 3 ∧ alphaCount 2 T = 1
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) :=
+  alpha_solution_H11 T h
+#print axioms alpha_solution_H11_audit
+
+theorem alpha_solution_H13_audit {n : ℕ} (T : Tournament n) (h : H T = 13) :
+    (alphaCount 1 T = 6 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 4 ∧ alphaCount 2 T = 1
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) :=
+  alpha_solution_H13 T h
+#print axioms alpha_solution_H13_audit
+
+theorem alpha_solution_H15_audit {n : ℕ} (T : Tournament n) (h : H T = 15) :
+    (alphaCount 1 T = 7 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 5 ∧ alphaCount 2 T = 1
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 3 ∧ alphaCount 2 T = 2
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) :=
+  alpha_solution_H15 T h
+#print axioms alpha_solution_H15_audit
+
+theorem small_H_alpha34_zero_audit {n : ℕ} (T : Tournament n) (hH : H T ≤ 26) :
+    alphaCount 3 T = 0 ∧ alphaCount 4 T = 0 :=
+  small_H_alpha34_zero T hH
+#print axioms small_H_alpha34_zero_audit
