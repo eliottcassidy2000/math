@@ -58,6 +58,46 @@ Stored output:
 05-knowledge/results/lonely_runner_endpoint_protection_s359.out
 ```
 
+## Protection Core Peeling
+
+The session added an explicit endpoint-core peel.  An interval is allowed to
+protect an endpoint only if both endpoints of that protecting interval are
+still present.  Then repeatedly delete every endpoint with no surviving
+protector.
+
+```text
+active endpoints E
+active intervals I with both endpoints in E
+delete e in E if no interval in I strictly contains e
+iterate to a fixed point
+```
+
+A full open cover would have every forbidden endpoint strictly protected, so
+it would survive as a nonempty core.  Thus a theorem that all primitive speed
+sets peel to the empty core would prove LRC in this reduced form.
+
+The bounded scan found no nonempty cores, including inside the necessary
+counterexample subfamily where at least one speed is divisible by `k+1`:
+
+```text
+k=3, max_speed=20: primitive 997,  mod-filter 563,  nonempty cores 0
+k=4, max_speed=16: primitive 1745, mod-filter 1066, nonempty cores 0
+k=5, max_speed=13: primitive 1281, mod-filter 819,  nonempty cores 0
+k=6, max_speed=11: primitive 462,  mod-filter 252,  nonempty cores 0
+```
+
+The hardest empty-core examples are not shallow artifacts.  The longest peel
+in this scan used 17 rounds, for example
+
+```text
+(4,5,6,7,10,11): removed profile
+(9,16,4,2,4,8,2,2,4,4,4,4,2,6,4,4,2)
+```
+
+This makes protection peeling a stronger object than simply finding an
+initial exposed endpoint: some examples have high protected ratios and long
+dependency chains, but the self-supporting core still collapses.
+
 ## Main Observations
 
 ### 1. Known tight examples are not close to all-protected
@@ -137,8 +177,9 @@ The endpoint-protection formulation suggests a possible proof strategy:
 ```text
 1. Any counterexample must contain a speed divisible by n=k+1.
 2. Divisible speeds try to protect the unit-boundary skeleton a/n.
-3. Protection of unit endpoints forces additional endpoint exposures elsewhere.
-4. Iterate/peel until an unprotected endpoint remains.
+3. Protection of unit endpoints creates new dependency endpoints elsewhere.
+4. A denominator/interval potential should decrease along protection chains.
+5. Peeling then forces the endpoint core to vanish.
 ```
 
 This is analogous to endpoint-transfer private pivots in the tournament repo:
@@ -160,9 +201,16 @@ it is the strongest small-data pattern.
 ### Protection-peeling
 
 A full open cover would require a nonempty all-protected endpoint core.  The
-next finite theorem should try to prove no primitive speed set has such a core,
-or at least that every all-protected core forces a smaller counterexample after
-dividing a common quotient.
+new finite theorem to pursue is:
+
+```text
+primitive speed set => endpoint-protection core is empty.
+```
+
+The scan supports this through the bounded boxes above.  The hard examples
+suggest the proof cannot be only "find one exposed endpoint"; it needs a
+monotone charge, denominator height, interval endpoint order, or transfer
+argument that explains why every protection cycle eventually leaks.
 
 ### Divisibility descent
 
@@ -175,11 +223,11 @@ now stated in endpoint-protection language.
 ## Next Experiments
 
 - Optimize endpoint protection so larger mod-filter scans are feasible.
-- For every endpoint, record the first protecting speed and build a directed
-  protection hypergraph.
-- Implement a leaf-peeling algorithm: repeatedly remove unprotected endpoints
-  and intervals that only protect removed endpoints.
-- Search directly for nonempty all-protected endpoint cores in bounded boxes.
+- For every endpoint, record protecting speed chains and build a directed
+  protection hypergraph with removal depths.
+- Search for a denominator-height potential that strictly decreases after
+  compressing protection chains.
+- Run larger mod-filter scans restricted to sets containing a multiple of
+  `k+1`, since other sets expose `1/(k+1)` immediately.
 - Test whether boundary-only examples beyond the known ones always have the
   unit-boundary skeleton.
-

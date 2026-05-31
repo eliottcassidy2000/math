@@ -195,7 +195,7 @@ Root-sign change count is chamber-coordinate data, not the character phase chann
 Endpoint-protection graph added for LRC. All checked tight examples have unprotected forbidden endpoints at the nonzero unit residues `{a/(k+1): gcd(a,k+1)=1}`; `0` is part of the Dirichlet orbit but is a forbidden center, not an endpoint. This upgrades "first witness `1/(k+1)`" to a unit-boundary skeleton. See HYP-1810 and `07-reflections/lonely-runner-endpoint-protection-s359.md`.
 
 **T340** #lonely-runner #protection-peeling #open-cover #incidence | certainty: medium | source: codex-2026-05-30-S359
-A counterexample to LRC is a full open forbidden cover, hence every forbidden endpoint must be strictly protected by another interval. Known tight and near-tight examples still have unprotected endpoints; proposed proof route is a leaf-peeling/no-all-protected-core theorem for the endpoint-protection incidence graph. See HYP-1811.
+A counterexample to LRC is a full open forbidden cover, hence every forbidden endpoint must be strictly protected by another interval. The explicit core peel keeps an interval only while both its endpoints survive; primitive boxes `(3,20),(4,16),(5,13),(6,11)` had zero nonempty cores, including 2,700 sets passing the `k+1` divisibility filter. See HYP-1811.
 
 **T341** #lonely-runner #endpoint-protection #finite-cover #theorem | certainty: proved trichotomy | source: codex-2026-05-30-S360
 THM-357 formalizes the exact LRC endpoint-protection trichotomy: positive forbidden-measure deficit gives an interval of lonely times; full measure with an unprotected endpoint gives a boundary lonely witness; a counterexample is exactly full forbidden measure plus every endpoint strictly protected. This turns the remaining LRC target into a finite all-protected endpoint graph obstruction. See THM-357 and `07-reflections/lonely-runner-endpoint-formal-session-s360.md`.
@@ -238,6 +238,9 @@ The S362 descent probe records peel quotient layers. Tight examples peel first a
 
 **T354** #lonely-runner #divisibility-filter #unit-endpoints #counterexample | certainty: proved | source: codex-2026-05-30-S362
 THM-360 proves the first exact quotient filter: a unit endpoint `a/(k+1)` can only be strictly protected by a speed divisible by `k+1`. Therefore any full-open-cover LRC counterexample must contain a speed divisible by `k+1`; one such speed protects the whole unit layer at once.
+
+**T355** #lonely-runner #peeling-depth #potential-function #denominators | certainty: medium | source: codex-2026-05-30-S359-core
+Protection depth now looks like the proof object. Some examples have high protected ratios and long dependency chains, but every chain leaks. Candidate theorem: assign endpoint/interval charge by denominator height, residue class, or protecting-speed quotient so each peel round strictly exports charge to already exposed endpoints.
 
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
