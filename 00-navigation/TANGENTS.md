@@ -263,11 +263,11 @@ Composite gate insertions leak in both frontier cases. Exact gated boxes found `
 **T362** #lonely-runner #disproof-search #gate-overload #protection-cycles | certainty: medium negative evidence | source: opus-2026-05-31-S364
 Gate-overload is a bad disproof architecture: adding more multiples of the denominator protects the unit layer but creates many higher-denominator leaks (`n=14` unprotected counts `24,28,40,52,96,148`; `n=15` counts `12,32,36,60,88,124`). Future disproof search should generate endpoint-protection cycles first, then solve for speeds, rather than sample dense gated speed sets.
 
-**T363** #natural-numbers #operation-digraphs #partial-tournaments #divisibility | certainty: high structural | source: codex-2026-05-31-S365
-The proposed additive natural-number arrow graph `{x,y}->x+y`, after forgetting the second input, is the transitive tournament: `x->z` iff `x<z`. The multiplication analogue is the true incomplete tournament: `x->z` iff `x|z`, the divisibility DAG inside the additive completion. Keep the two-input gate labels or the additive side loses its content. See HYP-1820.
+**T363** #natural-numbers #operation-graphs #summand-graph #divisor-dag | certainty: high elementary | source: codex-2026-05-31-S365
+The additive operation graph `x+y=z`, after forgetting the complement label, collapses to the complete transitive order `x->z iff x<z`. The multiplicative analogue forgets to the proper-divisor DAG, with Hasse skeleton `x->x*p`. The right object is therefore a labeled operation cospan: additive structure lives in fibers, multiplicative structure survives in the shadow. See HYP-1820 and `07-reflections/natural-operation-graphs-s365.md`.
 
-**T364** #product-sum #sum-product #critical-pairs #divisor-layer | certainty: medium-high computational | source: codex-2026-05-31-S365
-Product-sum equations are additive/multiplicative gate critical pairs. For nonunit seed `F`, the defect `D=prod(F)-sum(F)` is the exact number of `1`s needed to solve `sum=product`, with arity `|F|+D`. The two-factor layer at arity `k` is `(a-1)(b-1)=k-1`; multi-factor packing first beats all two-factor seeds at `k=5` via `(2,2,2)`.
+**T364** #product-sum #defect-cores #egyptian-fractions #natural-modes | certainty: high elementary / exploratory use | source: codex-2026-05-31-S365
+The equation family `x_1+...+x_k=x_1*...*x_k` is the collision stack between k-fold addition and multiplication. Deleting 1s leaves a nonunit core `c`; padding by `q` ones solves exactly when `q=product(c)-sum(c)>=0`. Thus `1` acts as an additive-defect absorber, and each target natural has a collision spectrum of arities and cores. See HYP-1821.
 
 **T365** #natural-modes #summand-graph #product-graph #incomplete-tournament | certainty: high computational | source: codex-2026-05-31-S365b
 The old summand graph and its sparser product analogue split sharply: additive closure from `{2,3}` is cofinite with missing set `{1,4,6}`, while product closure from `{2,3}` stays only `2,3`-smooth. Product atoms under distinct multiplication are primes plus prime squares.
@@ -277,6 +277,9 @@ THM-361: every positive product-sum tuple is a core `C` of entries `>=2` plus ex
 
 **T367** #natural-modes #special-numbers #one-four-six #resonance-boundary | certainty: medium-high | source: codex-2026-05-31-S365b
 The additive exceptional module `{1,4,6}` is now legible: `1` is source/identity, `4` is the hidden diagonal binary resonance `2+2=2*2`, and `6` is the first visible distinct ternary resonance `1+2+3=1*2*3`. Compare special repo numbers by defect role, not just value.
+
+**T368** #shifted-divisors #collision-spectrum #sum-product #speedup | certainty: high elementary / computation | source: codex-2026-05-31-S365
+Sorted length-`k` product-sum collisions obey the finite prefix gate `a_1*...*a_{k-1}<=k`, giving a fast exact enumeration. The two-core layer is the shifted divisor graph `(a-1)(b-1)=k-1`, e.g. `k=13` yields `(2,13)->26`, `(3,7)->21`, `(4,5)->20`. Grouped by target through arity `20`, `z=24` is richest with six fibers, hinting that collision spectra measure factorability with an additive-defect filter.
 
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
