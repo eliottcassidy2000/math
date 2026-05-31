@@ -137,4 +137,28 @@ theorem base_path_source_outDegree_ge (T : Tournament n) (hbp : HasBasePath T)
   rw [Finset.mem_filter]
   exact ⟨Finset.mem_univ _, h_arc⟩
 
+/-! ### Regular HasBasePath tournament: n must be odd and ≥ 3 -/
+
+/-- For a regular HasBasePath tournament on n vertices, every vertex has
+    score (n-1)/2 ≥ 1 ⟹ n ≥ 3. -/
+theorem regular_basepath_n_ge_three (T : Tournament n) (hbp : HasBasePath T)
+    (hn : 2 ≤ n) (hreg : IsRegular T) :
+    3 ≤ n := by
+  -- vertex n-1 has outDegree (n-1)/2 ≥ 1 (from base_path_source_outDegree_ge).
+  -- 2 · outDegree = n - 1, so outDegree = (n-1)/2.
+  -- (n-1)/2 ≥ 1 ⟹ n - 1 ≥ 2 ⟹ n ≥ 3.
+  have h_lower := base_path_source_outDegree_ge T hbp hn
+  have h_reg := hreg ⟨n - 1, by omega⟩
+  -- h_reg : 2 * T.outDegree ⟨n-1, _⟩ = n - 1
+  -- h_lower : 1 ≤ T.outDegree ⟨n-1, _⟩
+  omega
+
+/-- For a regular HasBasePath tournament on n vertices, the (n-1)/2
+    score at vertex 0 must satisfy (n-1)/2 ≤ n - 2 ⟹ n ≥ 3 (always true
+    when n ≥ 3 already). -/
+theorem regular_basepath_sink_bound (T : Tournament n) (hbp : HasBasePath T)
+    (hn : 3 ≤ n) (hreg : IsRegular T) :
+    2 * T.outDegree ⟨0, by omega⟩ = n - 1 := by
+  exact hreg _
+
 end Tournament

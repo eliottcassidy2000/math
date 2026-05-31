@@ -1165,3 +1165,10 @@ theorem base_path_source_outDegree_ge_audit {n : ℕ} (T : Tournament n)
     1 ≤ T.outDegree ⟨n - 1, by omega⟩ :=
   base_path_source_outDegree_ge T hbp hn
 #print axioms base_path_source_outDegree_ge_audit
+
+/-- Regular HasBasePath tournament: n ≥ 3. -/
+theorem regular_basepath_n_ge_three_audit {n : ℕ} (T : Tournament n)
+    (hbp : HasBasePath T) (hn : 2 ≤ n) (hreg : IsRegular T) :
+    3 ≤ n :=
+  regular_basepath_n_ge_three T hbp hn hreg
+#print axioms regular_basepath_n_ge_three_audit
