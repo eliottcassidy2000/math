@@ -2664,17 +2664,17 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 
 ## HYP-1810: LRC tight examples have a unit-boundary skeleton (codex-2026-05-30-S359)
 **Status:** EXPLORATORY; verified on known/scanned tight examples.
-**What:** For reduced `k`-speed Lonely Runner tight examples, the unprotected forbidden endpoints are `{0} union {a/(k+1): gcd(a,k+1)=1}`. The nonzero endpoints are exactly the boundary lonely witnesses.
-**Evidence:** `lonely_runner_endpoint_protection_s359.py` verifies `unit_skeleton=True` for initial segments `k=3,4,5,7` and sporadic tight examples `{1,3,4,7}`, `{1,3,4,5,9}`, `{1,4,5,6,7,11,13}`, `{1,2,3,4,5,7,12}`.
+**What:** For reduced `k`-speed Lonely Runner tight examples, the unprotected forbidden endpoints are the nonzero unit residues `{a/(k+1): 1<=a<=k, gcd(a,k+1)=1}`. The point `0` belongs to the Dirichlet orbit but is a forbidden center, not a forbidden endpoint.
+**Evidence:** THM-358 proves this for the initial-segment family by the equality case of Dirichlet's pigeonhole argument. THM-360 proves a unit endpoint can only be protected by a speed divisible by `k+1`. `lonely_runner_endpoint_protection_s359.py` verifies `unit_skeleton=True` for initial segments `k=3,4,5,7` and sporadic tight examples `{1,3,4,7}`, `{1,3,4,5,9}`, `{1,4,5,6,7,11,13}`, `{1,2,3,4,5,7,12}`. `lonely_runner_bohr_descent_s362.py` rechecks initial segments through `n=36`.
 **Predictions:** Tight examples collapse to the quotient `Z/(k+1)Z`; counterexamples must first protect the unit-boundary skeleton, forcing speeds divisible by `k+1` and possibly a divisibility descent.
-**See:** `05-knowledge/hypotheses/HYP-1810-lrc-unit-boundary-skeleton.md`, `04-computation/lonely_runner_endpoint_protection_s359.py`, `07-reflections/lonely-runner-endpoint-protection-s359.md`.
+**See:** `05-knowledge/hypotheses/HYP-1810-lrc-unit-boundary-skeleton.md`, THM-358, THM-360, `04-computation/lonely_runner_endpoint_protection_s359.py`, `04-computation/lonely_runner_bohr_descent_s362.py`, `05-knowledge/results/lonely_runner_bohr_descent_s362.out`, `07-reflections/lonely-runner-endpoint-protection-s359.md`.
 
 ## HYP-1811: LRC endpoint protection has no all-protected core (codex-2026-05-30-S359)
 **Status:** EXPLORATORY proof-search hypothesis.
 **What:** The endpoint-protection incidence graph of every primitive reduced speed set has an unprotected endpoint after finite peeling. Equivalently, there is no nonempty all-protected endpoint core capable of certifying a full open forbidden cover.
-**Evidence:** Known tight examples have explicit unit-boundary skeletons; near-tight positive-gap examples can have high protected ratios but still retain multiple unprotected endpoints. A counterexample would need every endpoint protected.
+**Evidence:** Known tight examples have explicit unit-boundary skeletons; near-tight positive-gap examples can have high protected ratios but still retain multiple unprotected endpoints. THM-359 proves the endpoint/interval peeling algorithm computes the largest core for the finite incidence notion, and `lonely_runner_bohr_descent_s362.py` finds empty terminal cores in all inherited full-measure primitive boxes.
 **Predictions:** A protection-core peeling algorithm should find empty cores in bounded searches; any nonempty core should force a smaller quotient/divisibility obstruction.
-**See:** `05-knowledge/hypotheses/HYP-1811-lrc-protection-peeling.md`, `07-reflections/lonely-runner-endpoint-protection-s359.md`.
+**See:** `05-knowledge/hypotheses/HYP-1811-lrc-protection-peeling.md`, THM-359, `04-computation/lonely_runner_bohr_descent_s362.py`, `05-knowledge/results/lonely_runner_bohr_descent_s362.out`, `07-reflections/lonely-runner-endpoint-protection-s359.md`.
 
 ## HYP-1812: Lonely Runner endpoint kernel pressure (codex-2026-05-30-S360)
 **Status:** EXPLORATORY proof-technology hypothesis.
@@ -2686,9 +2686,9 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 ## HYP-1813: Lonely Runner Bohr-boundary descent (codex-2026-05-30-S361)
 **Status:** EXPLORATORY Diophantine approximation bridge.
 **What:** Every hypothetical all-protected LRC endpoint core should admit a strict descent in the finite Bohr-boundary quotient: either divide out a forced common divisibility class or extract a structured progression/subquotient whose induced endpoint graph is smaller and still all-protected.
-**Evidence:** THM-357 reduces counterexamples to all-protected finite endpoint graphs, while HYP-1810 shows known tight examples expose the unit-boundary skeleton. The S361 search found the strongest repo Diophantine thread in finite anti-Bohr boundary incidence rather than classical good-approximation machinery.
+**Evidence:** THM-357 reduces counterexamples to all-protected finite endpoint graphs, while THM-358 proves the initial-segment unit skeleton, THM-359 formalizes largest-core peeling, and THM-360 proves unit-endpoint protection forces divisibility by `k+1`. The S362 probe finds empty terminal cores in all inherited full-measure primitive boxes and identifies the first peel layer as `unit_mod_n`.
 **Predictions:** Endpoint-core peeling should return empty cores in bounded boxes; any artificial nonempty core should show quotient-factor or GAP-like structure; Fejer/Riesz certificates should localize around the same quotient layer selected by the descent.
-**See:** `05-knowledge/hypotheses/HYP-1813-lrc-bohr-boundary-descent.md`, THM-357, HYP-1802, HYP-1810, HYP-1811, HYP-1812, `07-reflections/diophantine-approximation-lonely-runner-s361.md`.
+**See:** `05-knowledge/hypotheses/HYP-1813-lrc-bohr-boundary-descent.md`, THM-357, THM-358, THM-359, THM-360, HYP-1802, HYP-1810, HYP-1811, HYP-1812, `04-computation/lonely_runner_bohr_descent_s362.py`, `05-knowledge/results/lonely_runner_bohr_descent_s362.out`, `07-reflections/diophantine-approximation-lonely-runner-s361.md`, `07-reflections/lonely-runner-bohr-descent-formal-session-s362.md`.
 
 ## HYP-1814: Packet-boundary filtration of Hamiltonian paths (codex-2026-05-30-S6)
 **Status:** EXPLORATORY formalization target.

@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-05-30-S362 - Lonely Runner Bohr-Descent Formalization
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**User prompt:** Spend another long session formalizing as much as possible.
+**Formal theorems:** Added THM-358, THM-359, and THM-360. THM-358 proves the initial-segment LRC safe set is exactly `{a/n:gcd(a,n)=1}`, the equality case of Dirichlet's pigeonhole approximation proof. THM-359 proves endpoint/interval peeling computes the largest finite protection core for the incidence system used by the LRC endpoint program. THM-360 proves a unit endpoint can only be protected by a speed divisible by `k+1`, so every full-open-cover counterexample must contain such a speed.
+**Computation:** Added `04-computation/lonely_runner_bohr_descent_s362.py` and stored `05-knowledge/results/lonely_runner_bohr_descent_s362.out`. The script verifies THM-358 through `n=36`, builds exact endpoint/interval systems, records quotient-layer data, and runs conservative core peeling.
+**Findings:** Every inherited full-measure primitive-box case has the nonzero unit endpoint skeleton and empty terminal protection core. Tight examples peel first at `unit_mod_n`; near-tight positive-gap examples begin at higher denominator layers.
+**Synthesis:** Added `07-reflections/lonely-runner-bohr-descent-formal-session-s362.md`. Main idea: known tight examples are Dirichlet equality/unit-quotient cases, while a counterexample would need to protect the unit layer and prevent every subsequent endpoint/interval peel from exposing a quotient layer.
+**Knowledge updates:** Corrected the HYP-1810 endpoint language (`0` is a Dirichlet-orbit basepoint/forbidden center, not a forbidden endpoint), updated HYP-1811 and HYP-1813 with S362 evidence, updated result/hypothesis indexes, and added tangents T351-T354.
+**Next:** Extend peeling beyond inherited boxes; add protector-speed ledgers for unit endpoints; study what new endpoint exposures are forced by speeds divisible by `n`; compare peel layers with HYP-1812 Fejer/Riesz kernels.
+
 ## codex-2026-05-30-S6 - Root Packets Formalization Feedback Loop
 
 **Account:** Codex
@@ -55,7 +67,7 @@
 **User prompt:** Spend the session trying to make progress on the Lonely Runner Conjecture, creatively and iteratively.
 **External status check:** General LRC remains open; recent finite-checking work covers reduced cases through `k in {10,11,12}` and mixed-threshold Fourier tools remain adjacent rather than a full solution.
 **Computation:** Used the existing tracked `04-computation/lonely_runner_endpoint_protection_s359.py` and regenerated `05-knowledge/results/lonely_runner_endpoint_protection_s359.out`. The script builds exact rational endpoint-protection incidence graphs: an endpoint is protected if it lies strictly inside another forbidden interval.
-**Main findings:** Known tight examples are not almost-counterexamples in the protection graph. Their unprotected endpoints are exactly `{0} union {a/(k+1): gcd(a,k+1)=1}`, with the nonzero unit residues as boundary lonely witnesses. Near-tight positive-gap examples can have high protected ratios but still show explicit unprotected endpoints.
+**Main findings:** Known tight examples are not almost-counterexamples in the protection graph. Their unprotected forbidden endpoints are the nonzero unit residues `{a/(k+1): gcd(a,k+1)=1}`; S362 later clarified that `0` is a Dirichlet-orbit basepoint/forbidden center, not an endpoint. Near-tight positive-gap examples can have high protected ratios but still show explicit unprotected endpoints.
 **Knowledge updates:** Added HYP-1810 (unit-boundary skeleton), HYP-1811 (no all-protected endpoint core / protection peeling), tangents T339-T340, and reflection `07-reflections/lonely-runner-endpoint-protection-s359.md`.
 **Next:** Optimize endpoint-protection scans; implement explicit protection-core peeling; search bounded boxes for nonempty all-protected cores; analyze which speeds protect unit-boundary endpoints.
 

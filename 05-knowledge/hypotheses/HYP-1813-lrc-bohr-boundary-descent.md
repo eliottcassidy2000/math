@@ -4,6 +4,9 @@ status: EXPLORATORY
 source: codex-2026-05-30-S361
 related:
   - THM-357
+  - THM-358
+  - THM-359
+  - THM-360
   - HYP-1794
   - HYP-1802
   - HYP-1810
@@ -58,7 +61,7 @@ Known tight examples do not resemble this dangerous case.  HYP-1810 says their
 unprotected endpoints collapse to the unit-boundary skeleton
 
 ```text
-{0} union {a/n : gcd(a,n)=1}.
+{a/n : 1 <= a <= n-1 and gcd(a,n)=1}.
 ```
 
 So a counterexample must first protect the unit residues.  That protection
@@ -100,9 +103,40 @@ Bohr descent       = exposed quotient after denominator refinement
 5. Fejer/Riesz safe-product certificates from HYP-1812 should localize around
    the same quotient layer selected by the descent.
 
+## S362 Formalization
+
+THM-358 proves the first descent model exactly.  For initial-segment speeds
+`{1,...,n-1}`, the safe set is precisely
+
+```text
+{a/n : gcd(a,n)=1}.
+```
+
+This is the equality case of Dirichlet's pigeonhole theorem: unless the
+points `0,t,2t,...,(n-1)t` form a regular `n`-gon, some difference gives
+`||v t|| < 1/n`.  Thus the unit-boundary skeleton is not just an observed
+artifact; it is the rigid equality case of the basic Diophantine lemma.
+
+THM-359 formalizes endpoint/interval core peeling as a greatest-fixed-core
+algorithm.  Starting with all forbidden intervals and endpoints, repeatedly
+remove endpoints with no remaining protector and then remove intervals whose
+boundary has been removed.  The terminal pair is the largest protection core
+for that incidence system.
+
+`lonely_runner_bohr_descent_s362.py` implements this exact finite system.  It
+verifies THM-358 through `n=36`, checks the known tight examples, and finds
+empty terminal cores in all inherited full-measure primitive-box cases.  The
+first removed layer in tight examples is always the unit quotient layer
+`unit_mod_n`.
+
+THM-360 proves the first quotient filter inside that layer: a unit endpoint
+`a/n` can only be protected by a speed divisible by `n`.  Hence every
+full-open-cover counterexample must contain at least one speed divisible by
+`k+1`.
+
 ## Test Plan
 
-1. Add endpoint-core peeling to the S359/S360 endpoint-protection scripts.
+1. Extend endpoint-core peeling beyond the inherited S360 primitive boxes.
 2. For every peeled layer, record the gcd of endpoint residues, the generated
    subgroup of `Z/QZ`, and the smallest quotient on which the layer remains
    distinguishable.
@@ -116,7 +150,12 @@ Bohr descent       = exposed quotient after denominator refinement
 ## Sources
 
 - THM-357.
+- THM-358.
+- THM-359.
+- THM-360.
 - HYP-1802, HYP-1810, HYP-1811, HYP-1812.
 - `07-reflections/diophantine-approximation-lonely-runner-s361.md`.
+- `04-computation/lonely_runner_bohr_descent_s362.py`.
+- `05-knowledge/results/lonely_runner_bohr_descent_s362.out`.
 - `04-computation/lonely_runner_endpoint_protection_s360.py`.
 - `05-knowledge/results/lonely_runner_endpoint_protection_s360.out`.

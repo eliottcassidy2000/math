@@ -5,13 +5,15 @@
 ## Statement
 
 For a reduced `k`-speed Lonely Runner tight example with threshold
-`1/(k+1)`, the unprotected forbidden endpoints are
+`1/(k+1)`, the unprotected forbidden endpoints are the nonzero unit residues
 
 ```text
-{0} union {a/(k+1) : gcd(a,k+1)=1}.
+{a/(k+1) : 1 <= a <= k and gcd(a,k+1)=1}.
 ```
 
-The nonzero endpoints in this set are exactly the boundary lonely witnesses.
+The point `0` belongs to the standard Dirichlet-pigeonhole orbit, but it is a
+forbidden center rather than a forbidden endpoint.  The endpoint skeleton is
+therefore the nonzero unit group of `Z/(k+1)Z`.
 
 ## Evidence
 
@@ -25,6 +27,19 @@ protection records for:
 The stored output lists the unprotected samples; in each listed tight example
 they match this unit-boundary skeleton.
 
+THM-358 proves the statement for the initial-segment family
+`{1,2,...,k}`.  It is exactly the equality case of Dirichlet's pigeonhole
+approximation argument: the `k+1` points `0,t,2t,...,kt` must either have a
+gap smaller than `1/(k+1)` or form the regular `(k+1)`-gon.
+
+THM-360 proves the first divisibility filter: a unit endpoint `a/(k+1)` can
+only be strictly protected by a speed divisible by `k+1`.  Thus any
+full-open-cover counterexample must contain at least one such speed.
+
+`lonely_runner_bohr_descent_s362.py` verifies this theorem computationally
+through `n=36` and rechecks the known/scanned tight examples.  In the inherited
+full-measure primitive boxes, every case has the unit skeleton.
+
 ## Why It Matters
 
 This is sharper than saying `1/(k+1)` is a witness.  It says the entire tight
@@ -36,4 +51,8 @@ speed divisible by `k+1` and may force a divisibility descent.
 
 - `04-computation/lonely_runner_endpoint_protection_s359.py`
 - `05-knowledge/results/lonely_runner_endpoint_protection_s359.out`
+- `04-computation/lonely_runner_bohr_descent_s362.py`
+- `05-knowledge/results/lonely_runner_bohr_descent_s362.out`
 - `07-reflections/lonely-runner-endpoint-protection-s359.md`
+- THM-358
+- THM-360

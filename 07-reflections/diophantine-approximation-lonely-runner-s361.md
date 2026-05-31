@@ -221,9 +221,10 @@ endpoints protected.
 
 That gives a three-layer attack:
 
-1. **Unit skeleton.**  HYP-1810 says known tight examples leave exactly
-   `{0} union (Z/(k+1)Z)^* /(k+1)` unprotected.  This is the first residue
-   quotient.
+1. **Unit skeleton.**  HYP-1810 says known tight examples leave exactly the
+   nonzero unit residues `(Z/(k+1)Z)^* /(k+1)` unprotected as forbidden
+   endpoints.  This is the first residue quotient.  The point `0` is part of
+   the Dirichlet-pigeonhole orbit but is a forbidden center, not an endpoint.
 
 2. **Boundary peeling.**  HYP-1811 asks whether every full-measure endpoint
    graph has an unprotected endpoint after peeling.  This is the incidence
@@ -274,3 +275,29 @@ Bohr/GAP refinement.
 The key psychological shift: stop asking whether Dirichlet approximation can
 find a time.  Ask why the finite anti-Dirichlet boundary cannot be completely
 protected.
+
+## S362 Formalization Addendum
+
+The next session turned two parts of this note into formal objects.
+
+THM-358 proves the initial-segment case:
+
+```text
+V={1,...,n-1} has safe set {a/n : gcd(a,n)=1}.
+```
+
+This is exactly the equality case of Dirichlet's pigeonhole approximation
+argument.  The unit-boundary skeleton is therefore not just a pattern in the
+data; for the standard tight family it is the rigid equality case of the basic
+Diophantine lemma.
+
+THM-359 proves that endpoint/interval peeling computes the largest finite
+protection core.  The S362 computation implements this and finds empty cores in
+all inherited full-measure primitive-box examples.  In tight cases, the first
+peeled quotient layer is `unit_mod_n`; in near-tight positive-gap cases, the
+first layer lives at higher endpoint denominators.
+
+THM-360 adds the first divisibility filter inside the unit layer: a unit
+endpoint `a/n` can only be strictly protected by a speed divisible by `n`.
+Thus any full-open-cover counterexample must contain a speed divisible by
+`k+1` before higher Bohr-boundary structure can even enter.

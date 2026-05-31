@@ -66,10 +66,10 @@ For all standard tight examples checked, there are explicit unprotected
 endpoints.  Examples:
 
 ```text
-(1,2,3,4):          5 unprotected endpoints
-(1,3,4,7):          5 unprotected endpoints
-(1,3,4,5,9):        3 unprotected endpoints
-(1,4,5,6,7,11,13):  5 unprotected endpoints
+(1,2,3,4):          4 unprotected forbidden endpoints
+(1,3,4,7):          4 unprotected forbidden endpoints
+(1,3,4,5,9):        2 unprotected forbidden endpoints
+(1,4,5,6,7,11,13):  4 unprotected forbidden endpoints
 ```
 
 So the known tight stratum is not an almost-counterexample in the protection
@@ -80,11 +80,12 @@ graph.  It is a rigid boundary skeleton.
 In every known tight example checked, the unprotected endpoints are exactly
 
 ```text
-{0} union {a/(k+1) : gcd(a,k+1)=1}.
+{a/(k+1) : 1 <= a <= k and gcd(a,k+1)=1}.
 ```
 
-The lonely witnesses are the nonzero unit residues `a/(k+1)`.  The endpoint
-`0` is unprotected but not lonely.
+The lonely witnesses are these nonzero unit residues `a/(k+1)`.  S362 later
+clarified the earlier shorthand: `0` belongs to the Dirichlet-pigeonhole orbit,
+but it is a forbidden center, not a forbidden endpoint.
 
 This holds for:
 

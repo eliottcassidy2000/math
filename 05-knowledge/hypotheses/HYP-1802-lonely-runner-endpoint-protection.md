@@ -6,6 +6,9 @@ related:
   - HYP-1794
   - THM-355
   - THM-357
+  - THM-358
+  - THM-359
+  - THM-360
   - HYP-1810
   - HYP-1811
   - HYP-1812
@@ -160,6 +163,27 @@ force either a divisibility quotient or a structured Bohr/GAP-like subquotient.
 Iterating that quotient descent should expose an unprotected endpoint, matching
 the peeling language of HYP-1811 and the kernel-pressure language of HYP-1812.
 
+## S362 Formalization Update
+
+THM-358 proves the standard initial-segment tight family:
+
+```text
+V={1,...,n-1}  ->  safe set = {a/n : gcd(a,n)=1}.
+```
+
+This is exactly the equality case of Dirichlet's pigeonhole approximation
+argument.  It also corrects the endpoint language: `0` is part of the
+pigeonhole orbit but is a forbidden center, not an unprotected forbidden
+endpoint.
+
+THM-359 proves that the endpoint/interval peeling algorithm computes the
+largest protection core for the finite incidence system.  The S362 probe found
+empty terminal cores in all inherited full-measure primitive-box cases.
+
+THM-360 proves the first divisibility filter: if no speed is divisible by
+`k+1`, then `1/(k+1)` is already a lonely witness.  Equivalently, protecting
+the unit endpoint layer requires a speed divisible by `k+1`.
+
 ## Test Plan
 
 1. Extend the S357 scan to build the endpoint-protection graph.
@@ -185,5 +209,11 @@ the peeling language of HYP-1811 and the kernel-pressure language of HYP-1812.
 - `07-reflections/lonely-runner-distance-graph-colorings-s359.md`
 - `07-reflections/lonely-runner-endpoint-formal-session-s360.md`
 - `07-reflections/diophantine-approximation-lonely-runner-s361.md`
+- `07-reflections/lonely-runner-bohr-descent-formal-session-s362.md`
+- `04-computation/lonely_runner_bohr_descent_s362.py`
+- `05-knowledge/results/lonely_runner_bohr_descent_s362.out`
+- THM-358
+- THM-359
+- THM-360
 - `arXiv:2604.23906`
 - `arXiv:2605.27941`

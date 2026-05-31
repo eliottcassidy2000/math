@@ -192,7 +192,7 @@ Literal Fejer alignment is coordinate-bound: unit rotations of an interval prese
 Root-sign change count is chamber-coordinate data, not the character phase channel: the probe gives `corr(H,sign_changes)=0` for `p=7,11,13`. Keep `root_chamber_*` features separate from `phase_character_*` features in future TDA/profile extractors.
 
 **T339** #lonely-runner #endpoint-protection #unit-group #tight-stratum | certainty: medium-high computational | source: codex-2026-05-30-S359
-Endpoint-protection graph added for LRC. All checked tight examples have unprotected endpoints exactly `{0} union {a/(k+1): gcd(a,k+1)=1}`; the nonzero unit residues are the boundary witnesses. This upgrades "first witness `1/(k+1)`" to a unit-boundary skeleton. See HYP-1810 and `07-reflections/lonely-runner-endpoint-protection-s359.md`.
+Endpoint-protection graph added for LRC. All checked tight examples have unprotected forbidden endpoints at the nonzero unit residues `{a/(k+1): gcd(a,k+1)=1}`; `0` is part of the Dirichlet orbit but is a forbidden center, not an endpoint. This upgrades "first witness `1/(k+1)`" to a unit-boundary skeleton. See HYP-1810 and `07-reflections/lonely-runner-endpoint-protection-s359.md`.
 
 **T340** #lonely-runner #protection-peeling #open-cover #incidence | certainty: medium | source: codex-2026-05-30-S359
 A counterexample to LRC is a full open forbidden cover, hence every forbidden endpoint must be strictly protected by another interval. Known tight and near-tight examples still have unprotected endpoints; proposed proof route is a leaf-peeling/no-all-protected-core theorem for the endpoint-protection incidence graph. See HYP-1811.
@@ -226,6 +226,18 @@ HYP-1814 proposes a boundary-fiber ladder for `H`: root signs -> endpoint-root H
 
 **T350** #incidence-rank #packet-support #transfer #torsion | certainty: exploratory | source: codex-2026-05-30-S6
 HYP-1815 separates packet support from packet incidence: support explains disjointness, while rank/torsion explains effective transfer. Endpoint transfer, even-graph rank defects, path homology, LRC endpoint protection, and CH return layers all fit this warning.
+
+**T351** #lonely-runner #dirichlet-equality #unit-skeleton #theorem | certainty: proved | source: codex-2026-05-30-S362
+THM-358 proves the initial-segment LRC skeleton: for speeds `{1,...,n-1}`, the safe set is exactly `{a/n:gcd(a,n)=1}`. It is the equality case of Dirichlet's pigeonhole proof: if `0,t,...,(n-1)t` do not have two points closer than `1/n`, they form the regular `n`-gon.
+
+**T352** #endpoint-peeling #protection-core #lonely-runner #finite-fixed-point | certainty: proved abstract / computational LRC | source: codex-2026-05-30-S362
+THM-359 proves endpoint/interval peeling computes the largest finite protection core. Applied by `lonely_runner_bohr_descent_s362.py`, every inherited full-measure primitive-box LRC case has empty terminal core, so no all-protected subsystem survives this incidence notion.
+
+**T353** #bohr-boundary-descent #quotient-layers #lonely-runner #computation | certainty: medium computational | source: codex-2026-05-30-S362
+The S362 descent probe records peel quotient layers. Tight examples peel first at `unit_mod_n`; near-tight positive-gap examples start at higher denominator layers. This suggests a usable descent invariant: first exposed quotient layer, followed by subgroup moduli of later removed endpoint layers.
+
+**T354** #lonely-runner #divisibility-filter #unit-endpoints #counterexample | certainty: proved | source: codex-2026-05-30-S362
+THM-360 proves the first exact quotient filter: a unit endpoint `a/(k+1)` can only be strictly protected by a speed divisible by `k+1`. Therefore any full-open-cover LRC counterexample must contain a speed divisible by `k+1`; one such speed protects the whole unit layer at once.
 
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
