@@ -473,6 +473,15 @@ Endpoint debt can be modeled as a Bruhat-Tits frontier: for endpoint `x=a/b`, ex
 **T450** #lonely-runner #bruhat-tits #p-adic-depth #endpoint-debt | certainty: exact local identity + exploratory proof route | source: codex-2026-05-31-S410
 LRC endpoint protection has a Bruhat-Tits tree shadow: for primes `p|n`, attach depth `v_p(denominator(t))` to every endpoint. Unit endpoints `a/n` sit at depth `(v_p(n))` and are killed only by an `n`-gate. If `v=n*q`, then every endpoint owned by `v` has depth `2*v_p(n)+v_p(q)` because `n*m+/-1` is p-adically unit. Thus gate repair exports endpoint debt to child vertices. See HYP-1880.
 
+**T451** #lonely-runner #integer-programming #natural-modes #set-cover | certainty: exact subproblems + open dual target | source: codex-2026-05-31-S420
+LRC speed sets can be treated as selected columns in a two-mode IP matrix, with `v=2^h*odd_core`: odd cores are horizontal `x+2` chains and dyadic heights are vertical `x*2` chains. Small-denominator rows are divisibility invoices; endpoint rows are strict-protection invoices. See HYP-1890.
+
+**T452** #lonely-runner #fourteen-runners #product-depth #endpoint-debt | certainty: high exact row-cover evidence | source: codex-2026-05-31-S420
+The `n=14` S380 gate ladder pays every small-denominator row, and every one of its 13 columns is forced by some private endpoint row, but it still covers only `2130/2298` target endpoint rows. The `168` uncovered rows sit at exported product depths `{2:+1,7:+1}:120` and `{2:+3,7:+1}:48`, making the composite anomaly a row-cover debt, not spare-column waste.
+
+**T453** #lonely-runner #n16 #integer-programming #dyadic-cover | certainty: exact local set-cover lower bound | source: codex-2026-05-31-S420
+The `n=16` owner-16 endpoint subproblem is a literal IP lower bound: among lower columns `1..15`, covering all 32 endpoints has exact minimum `9`, forced by private rows, and the columns are `(1,3,5,7,8,9,11,13,15)`. This recovers THM-367 as a row-cover invoice for the global n=16 proof.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

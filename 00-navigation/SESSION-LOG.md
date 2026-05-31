@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S420 - LRC Integer-Programming Mode Lens
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S410.  Assigned sparse id S420/HYP-1890 to avoid active close-out collisions.
+**User prompt:** Think about LRC from an integer-programming lens, using the earlier natural-number split into odd `x+2` chains and even/doubling `x*2` chains, and relate that to tournament recursion modes.
+**Computation:** Added `04-computation/lrc_integer_programming_modes_s420.py` and stored `05-knowledge/results/lrc_integer_programming_modes_s420.out`. The script splits speed columns as `v=2^h*odd_core`, builds small-denominator divisibility invoices, runs exact endpoint-protection set-cover subproblems, and audits structured `n=14`/`n=16` rows against the full endpoint machinery.
+**Findings:** Unit endpoint rows reproduce THM-360 as a one-column IP gate: `n=14` needs column `14`, `n=16` needs column `16`. The `n=16` owner-16 endpoint row has exact lower-cover number `9`, forced by private endpoint rows, recovering `(1,3,5,7,8,9,11,13,15)`. The `n=14` S380 gate ladder satisfies every small-denominator row and every ladder column is forced, but it still leaves `168` endpoint rows uncovered at exported prime depths `{2:+1,7:+1}` and `{2:+3,7:+1}`.
+**Synthesis:** Added HYP-1890 and `07-reflections/lrc-integer-programming-modes-s420.md`. The new proof target is a dual row-weight certificate: horizontal sieve rows force gates, gate columns export vertical endpoint debt, and a primitive `n-1` column set should be unable to pay both. For `n=16` this is a one-prime dyadic dual; for `n=14` it is a product-depth dual on the `2`- and `7`-adic rows.
+**Verification:** `python3 -m py_compile 04-computation/lrc_integer_programming_modes_s420.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S410 - LRC Bruhat-Tits Descent
 
 **Account:** Codex

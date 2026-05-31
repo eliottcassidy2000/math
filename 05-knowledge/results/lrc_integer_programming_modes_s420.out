@@ -1,0 +1,117 @@
+LRC integer-programming mode lens (codex-2026-05-31 S420)
+The calculation treats natural numbers as odd-core x+2 chains with vertical x*2 doublings, then builds exact LRC row/column ledgers.
+
+========================================================================================
+SPEED COLUMNS AS ODD-CORE / DOUBLING MODES
+========================================================================================
+A speed column is written v=2^h*odd_core.  h is the vertical x*2 height; odd_core moves horizontally by x+2.
+label                  n  dyadic h-counts        odd-core counts
+----------------------------------------------------------------------------------------
+n14 initial            14  0:7 1:3 2:2 3:1        1:4 3:3 5:2 7:1 9:1 11:1 13:1
+n14 drop13 add14       14  0:6 1:4 2:2 3:1        1:4 3:3 5:2 7:2 9:1 11:1
+n14 drop13 add182      14  0:6 1:4 2:2 3:1        1:4 3:3 5:2 7:1 9:1 11:1 91:1
+n14 S380 gate ladder   14  0:1 1:7 2:2 3:2 4:1    1:1 7:4 21:2 35:2 49:1 63:1 77:1 91:1
+n16 initial            16  0:8 1:4 2:2 3:1        1:4 3:3 5:2 7:2 9:1 11:1 13:1 15:1
+n16 drop15 add16       16  0:7 1:4 2:2 3:1 4:1    1:5 3:3 5:2 7:2 9:1 11:1 13:1
+n16 best 8-ladder      16  0:1 3:8 4:3 5:2 6:1    1:5 3:3 5:2 7:1 9:1 11:1 13:1 15:1
+
+========================================================================================
+SMALL-DENOMINATOR IP INVOICES
+========================================================================================
+Rows are m=2..n.  A speed column pays row m exactly when m divides it. Missing rows give immediate THM-366 witnesses.
+label                  missing rows       fragile one-payer rows
+----------------------------------------------------------------------------------------
+n14 initial            14                 7,8,9,10,11,12,13
+n14 drop13 add14       13                 8,9,10,11,12,14
+n14 drop13 add182      -                  8,9,10,11,12,13,14
+n14 S380 gate ladder   -                  9,11,12,13
+n16 initial            16                 8,9,10,11,12,13,14,15
+n16 drop15 add16       15                 9,10,11,12,13,14,16
+n16 best 8-ladder      -                  7,9,11,13,14,15
+
+========================================================================================
+EXACT LRC AUDITS OF THE SAME COLUMNS
+========================================================================================
+These are full interval-union endpoint audits, not just the IP relaxation.  The key pattern is that sieve repairs produce gap or endpoint debt, not open covers.
+label                  class          gap/th     unprotected  peel coreE
+----------------------------------------------------------------------------------------
+n14 initial            boundary_only  0.000000           6    15     0
+n14 drop13 add14       positive_gap   0.045455          24    14     0
+n14 drop13 add182      positive_gap   0.065934          48    14     0
+n14 S380 gate ladder   positive_gap   0.002706         168    27     0
+n16 initial            boundary_only  0.000000           8    15     0
+n16 drop15 add16       positive_gap   0.038462          16    16     0
+n16 best 8-ladder      positive_gap   0.007576         140    25     0
+
+========================================================================================
+ENDPOINT-PROTECTION SET-COVER SUBPROBLEMS
+========================================================================================
+Each row is an IP relaxation: choose speed columns so every listed endpoint has at least one strict protector.  The target endpoints are fixed first, so this is a certificate microscope rather than the full nonlinear counterexample search.
+[n14 unit layer, candidates 1..28]
+  n=14 targets=6 candidates=28 active=2 max_col=6
+  union=6/6 uncovered=0 uncovered_dyadic_depths=-
+  uncovered_prime_depths=-
+  forced_columns=-
+  greedy=1:(14,)
+  exact=1:(14,) search_calls=1
+
+[n14 owner 14 endpoints, lower 1..13]
+  n=14 targets=28 candidates=13 active=13 max_col=14
+  union=28/28 uncovered=0 uncovered_dyadic_depths=-
+  uncovered_prime_depths=-
+  forced_columns=1,3,5,7,9,11,13
+  greedy=8:(7, 1, 2, 3, 5, 9, 11, 13)
+  exact=8:(7, 1, 2, 3, 5, 9, 11, 13) search_calls=8
+
+[n14 owner 14 endpoints, 1..28]
+  n=14 targets=28 candidates=28 active=25 max_col=14
+  union=28/28 uncovered=0 uncovered_dyadic_depths=-
+  uncovered_prime_depths=-
+  forced_columns=-
+  greedy=8:(7, 1, 2, 3, 5, 9, 11, 13)
+  exact=7:(15, 26, 20, 24, 23, 25, 2) search_calls=628
+
+[n14 S380 ladder endpoints by same ladder]
+  n=14 targets=2298 candidates=13 active=13 max_col=478
+  union=2130/2298 uncovered=168 uncovered_dyadic_depths=h+1:120 h+3:48
+  uncovered_prime_depths={2:+1,7:+1}:120 {2:+3,7:+1}:48
+  forced_columns=1,14,28,42,56,70,98,112,126,140,154,168,182
+  greedy=-
+  exact=- search_calls=0
+
+[n16 unit layer, candidates 1..32]
+  n=16 targets=8 candidates=32 active=2 max_col=8
+  union=8/8 uncovered=0 uncovered_dyadic_depths=-
+  uncovered_prime_depths=-
+  forced_columns=-
+  greedy=1:(16,)
+  exact=1:(16,) search_calls=1
+
+[n16 owner 16 endpoints, lower 1..15]
+  n=16 targets=32 candidates=15 active=15 max_col=16
+  union=32/32 uncovered=0 uncovered_dyadic_depths=-
+  uncovered_prime_depths=-
+  forced_columns=1,3,5,7,8,9,11,13,15
+  greedy=9:(8, 1, 3, 5, 7, 9, 11, 13, 15)
+  exact=9:(8, 1, 3, 5, 7, 9, 11, 13, 15) search_calls=9
+
+[n16 best 8-ladder endpoints by same ladder]
+  n=16 targets=1634 candidates=15 active=15 max_col=338
+  union=1494/1634 uncovered=140 uncovered_dyadic_depths=h+3:140
+  uncovered_prime_depths={2:+3}:140
+  forced_columns=1,8,16,24,32,40,48,56,64,72,80,88,96,104,120
+  greedy=-
+  exact=- search_calls=0
+
+========================================================================================
+TWO-MODE IP PROOF TARGET
+========================================================================================
+Primal variables: x_v in {0,1}, with v=2^h*odd_core.  Horizontal constraints are small-denominator and odd-core invoices; vertical constraints are endpoint debt at dyadic heights.
+
+Counterexample feasibility would require, at minimum:
+  (1)  sum_{m|v} x_v >= 1 for every 2 <= m <= n.
+  (2)  sum_{p: ||p*t|| < 1/n} x_p >= 1 for every active endpoint t.
+  (3)  exactly n-1 primitive speed columns, with gcd(v: x_v=1)=1.
+
+The useful dual should weight rows, not speeds.  Unit rows force an n-gate; the n-gate exports endpoint rows to deeper denominator layers.  For n=16 the vertical invoice is already sharp: owner 16 requires nine lower columns (1,3,5,7,8,9,11,13,15).  For n=14 the horizontal sieve can be paid by 14-gates, but the same-gate ladder still leaves endpoint rows uncovered at exported 2- and 7-adic depths.
+
