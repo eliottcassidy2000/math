@@ -1,0 +1,72 @@
+Fourteen-runner quotient-gate probe (codex-2026-05-31 S363)
+Target: reduced k=13, threshold 1/14.
+
+Necessary quotient gates
+  t=1/2 forces at least one even speed.
+  t=1/7 forces at least one speed divisible by 7.
+  t=1/14 forces at least one speed divisible by 14.
+  Therefore every k=13 counterexample must pass the 14-gate.
+
+[initial segment k=13]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  gate=14:0 7only:1 even_only:6 units:6 other:0
+  classification=boundary_only forbidden_length=1 max_gap=0 gap/thresh=0.000000
+  endpoints=176 unprotected=6 unit_skeleton=True peel_depth=15 core_E=0
+  first_peel_layer=removed_E=6,removed_I=11,subgroup=14
+
+[first 14-gated window]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+  gate=14:1 7only:1 even_only:6 units:5 other:0
+  classification=positive_gap forbidden_length=189403/194040 max_gap=1/308 gap/thresh=0.045455
+  endpoints=180 unprotected=24 unit_skeleton=False peel_depth=14 core_E=0
+  first_peel_layer=removed_E=24,removed_I=23,subgroup=388080
+
+[double 14-gated window]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 28)
+  gate=14:2 7only:1 even_only:5 units:5 other:0
+  classification=positive_gap forbidden_length=186079/194040 max_gap=17/2156 gap/thresh=0.110390
+  endpoints=212 unprotected=28 unit_skeleton=False peel_depth=16 core_E=0
+  first_peel_layer=removed_E=28,removed_I=26,subgroup=388080
+
+[odd-seven pressure]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 9, 11, 13, 14, 21, 28)
+  gate=14:2 7only:2 even_only:3 units:6 other:0
+  classification=positive_gap forbidden_length=26491/28665 max_gap=2/147 gap/thresh=0.190476
+  endpoints=242 unprotected=24 unit_skeleton=False peel_depth=17 core_E=0
+  first_peel_layer=removed_E=24,removed_I=22,subgroup=630630
+
+Exhaustive primitive k=13 box max_speed=16
+  total_primitive=560
+  pass_14_gate=455
+  endpoint_summarized=8
+  positive_gap=455
+  full_measure=0
+  boundary_only=0
+  open_cover=0
+  nonempty_cores=0
+  top_gate_profiles=[((1, 1, 6, 5, 0), 147), ((1, 1, 5, 6, 0), 147), ((1, 0, 6, 6, 0), 49), ((1, 1, 7, 4, 0), 35), ((1, 1, 4, 7, 0), 35), ((1, 0, 7, 5, 0), 21)]
+  tightest_positive=
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14) gap/thresh=0.037879 unprotected=8 peel=27 core_E=0
+    speeds=(1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16) gap/thresh=0.037879 unprotected=32 peel=19 core_E=0
+    speeds=(1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15) gap/thresh=0.039683 unprotected=28 peel=22 core_E=0
+    speeds=(1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16) gap/thresh=0.044643 unprotected=20 peel=19 core_E=0
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) gap/thresh=0.045455 unprotected=24 peel=14 core_E=0
+
+Random 14-gated k=13 candidates max_speed=80 trials=80
+  speeds=(3, 4, 5, 17, 28, 32, 42, 56, 60, 64, 70, 78, 80) class=positive_gap gap/thresh=0.047619 gate14=4 unprotected=212 peel=19 core_E=0
+  speeds=(4, 14, 20, 35, 39, 42, 53, 60, 61, 67, 74, 76, 80) class=positive_gap gap/thresh=0.048507 gate14=2 unprotected=208 peel=14 core_E=0
+  speeds=(8, 13, 21, 37, 40, 53, 54, 55, 60, 62, 70, 76, 80) class=positive_gap gap/thresh=0.050195 gate14=1 unprotected=188 peel=13 core_E=0
+  speeds=(5, 9, 19, 22, 25, 42, 45, 47, 60, 61, 63, 69, 71) class=positive_gap gap/thresh=0.051014 gate14=1 unprotected=158 peel=18 core_E=0
+  speeds=(4, 13, 14, 18, 19, 42, 45, 61, 64, 67, 69, 70, 77) class=positive_gap gap/thresh=0.057058 gate14=3 unprotected=168 peel=13 core_E=0
+  speeds=(3, 14, 26, 31, 32, 34, 38, 47, 49, 56, 66, 67, 75) class=positive_gap gap/thresh=0.059066 gate14=2 unprotected=160 peel=13 core_E=0
+  speeds=(6, 18, 20, 27, 28, 31, 36, 38, 40, 48, 70, 76, 77) class=positive_gap gap/thresh=0.060307 gate14=2 unprotected=180 peel=13 core_E=0
+  speeds=(8, 19, 28, 44, 45, 46, 51, 60, 61, 64, 66, 72, 73) class=positive_gap gap/thresh=0.061111 gate14=1 unprotected=228 peel=13 core_E=0
+
+Interpretation
+  No k=13 open cover or nonempty protection core appeared.
+  The initial segment is boundary-only with the unit skeleton, as
+  expected.  Once the mandatory 14-gate is inserted, the scanned
+  candidates become positive-gap again rather than more dangerous.
+  The next proof angle is a 14=2*7 CRT descent: after a speed divisible
+  by 14 protects the unit layer, divide that protected channel by 14
+  and show the remaining endpoint peel cannot maintain a core.

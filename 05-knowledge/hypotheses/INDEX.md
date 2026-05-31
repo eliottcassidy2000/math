@@ -2703,3 +2703,10 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** Endpoint-transfer and even-graph sessions show support matching is weaker than `F_2` rank; Smith normal forms expose torsion; path homology already lives in boundary matrices; `RootPackets.lean` now supplies a formal closed-packet object with zero type-A boundary.
 **Predictions:** Packet incidence rank should separate THM-025 near-kill examples from exact kills, correlate with real-root/Newton margin anomalies, and improve active-ranking acquisition beyond expected `H` drop alone.
 **See:** `05-knowledge/hypotheses/HYP-1815-root-packet-incidence-rank.md`, HYP-1796, HYP-1806, `07-reflections/root-packets-feedback-loop-s6.md`.
+
+## HYP-1816: Fourteen-runner CRT-gate descent (codex-2026-05-31-S363)
+**Status:** EXPLORATORY proof-search hypothesis.
+**What:** In the reduced `k=13` case, every counterexample must contain a speed divisible by `14`; passing this gate should force an endpoint-protection descent along the divisible-by-14 channel rather than produce a stable all-protected core.
+**Evidence:** S363 verifies the initial segment is boundary-only with the unit skeleton, while every scanned primitive `k=13` set passing the mandatory 14-gate is positive-gap and endpoint-core-empty. The exhaustive `max_speed=16` gated box has `455/455` positive-gap cases and no full-measure candidates.
+**Predictions:** Larger 14-gated boxes should remain core-empty; any apparent endpoint core should project to a smaller <=12-speed Bohr-boundary core, contradicting the proved frontier.
+**See:** `05-knowledge/hypotheses/HYP-1816-fourteen-runner-crt-gate-descent.md`, `04-computation/lonely_runner_fourteen_runner_s363.py`, `05-knowledge/results/lonely_runner_fourteen_runner_s363.out`, `07-reflections/lonely-runner-fourteen-runner-crt-gate-s363.md`.
