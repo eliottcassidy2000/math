@@ -69,6 +69,10 @@ theorem H_transitive_5_eq_one : H (transitiveTournament 5) = 1 := by
 
 -- Note: n ≥ 6 times out for `decide` due to factorial growth in permutations.
 
+/-- H(threeCycle) = 3 — PROVED IN LEAN via decide. -/
+theorem H_threeCycle_eq_three : H threeCycle = 3 := by
+  unfold H threeCycle threeCycleArc; decide
+
 /-! ### Corollary: H(T) = 1 ⟺ T ≅ transitive -/
 
 /-- **Theorem.** For any tournament T with n ≥ 1, H(T) = 1 ⟺ T ≅ transitive. -/

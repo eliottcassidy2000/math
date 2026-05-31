@@ -1193,3 +1193,7 @@ theorem H_transitive_4_eq_one_audit : H (transitiveTournament 4) = 1 :=
 theorem H_transitive_5_eq_one_audit : H (transitiveTournament 5) = 1 :=
   H_transitive_5_eq_one
 #print axioms H_transitive_5_eq_one_audit
+
+theorem H_threeCycle_eq_three_audit : H threeCycle = 3 :=
+  H_threeCycle_eq_three
+#print axioms H_threeCycle_eq_three_audit
