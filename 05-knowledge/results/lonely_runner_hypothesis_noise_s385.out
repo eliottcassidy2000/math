@@ -1,0 +1,113 @@
+Lonely Runner creative hypothesis noise pass (S385)
+
+Noise sources used as model generators
+  projection defects        -> compare support shadows with rank/residue
+  endpoint transfer         -> private pivots and all-protected cores
+  Fejer/Riesz kernels       -> critical-radius surplus and kernel centers
+  quotient transport        -> peel layers as exported debt
+  natural operation modes   -> additive closure vs divisor closure
+  composite denominator 14  -> protect low layers, watch higher leaks
+
+  fingerprinting initial n=8...
+  fingerprinting sporadic tight n=8A...
+  fingerprinting initial n=14...
+  fingerprinting n14 seven-ladder...
+  fingerprinting n14 14-ladder debt...
+  fingerprinting n14 single-gate...
+  fingerprinting initial n=15...
+  fingerprinting n15 3x5 ladder...
+  fingerprinting n15 mixed gates...
+
+Endpoint-incidence fingerprints
+label                  n class          gap/th  crit/th mode        endpts unprot peel coreE rank/null rankP privateE debt divE add mul quotient
+------------------------------------------------------------------------------------------------------------------------------------------------
+initial n=8             8 boundary_only  0.000000 1.000000 exact          52       4    7     0   24/24   0.500000       36    4    9  12   9 unit_mod_8
+sporadic tight n=8A     8 boundary_only  0.000000 1.000000 exact          88       4    8     0   43/41   0.511905       54    4    6   6   7 unit_mod_8
+initial n=14           14 boundary_only  0.000000 1.000000 exact         176       6   15     0   79/91   0.464706      128    6   24  42  20 unit_mod_14
+n14 seven-ladder       14 positive_gap   0.005411 1.208333 gap_probe    1150      84   27     0  514/552  0.482176      710   36   32  32  14 higher_denoms_5_types
+n14 14-ladder debt     14 positive_gap   0.002706 1.208333 gap_probe    2298     168   27     0 1025/1105 0.481221     1420   72   32  32  13 higher_denoms_5_types
+n14 single-gate        14 positive_gap   0.045455 1.076923 exact         180      24   14     0   74/82   0.474359      112   24   26  42  21 higher_denoms_12_types
+initial n=15           15 boundary_only  0.000000 1.000000 exact         202       8   14     0   87/107  0.448454      148    8   27  49  22 unit_mod_15
+n15 3x5 ladder         15 positive_gap   0.080000 1.363636 exact         600     150   16     0  229/221  0.508889      204   72   26  31   8 higher_denoms_8_types
+n15 mixed gates        15 positive_gap   0.120000 2.142857 exact         634     112   22     0  224/298  0.429119      232   48   41  23  25 higher_denoms_9_types
+
+Semantic one-swap provocations
+  Pool = low speeds, product-sum targets, divisor ladders, and n-gates.
+
+[n14 seven-ladder]
+  1->15     class=positive_gap gap/th=0.005411 forbidden=     142/143 bdyW=  84 unprot=  84 first=1/98
+    speeds=(7, 14, 15, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  1->2      class=positive_gap gap/th=0.005411 forbidden=     142/143 bdyW=  84 unprot=  84 first=5/98
+    speeds=(2, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  1->22     class=positive_gap gap/th=0.005411 forbidden=     142/143 bdyW=  84 unprot=  84 first=1/98
+    speeds=(7, 14, 21, 22, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  1->3      class=positive_gap gap/th=0.005411 forbidden=     142/143 bdyW=  84 unprot=  84 first=29/1176
+    speeds=(3, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  1->4      class=positive_gap gap/th=0.005411 forbidden=     142/143 bdyW=  84 unprot=  84 first=29/1274
+    speeds=(4, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  1->5      class=positive_gap gap/th=0.005411 forbidden=     142/143 bdyW=  84 unprot=  84 first=29/1274
+    speeds=(5, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+
+[n14 14-ladder debt]
+  1->11     class=positive_gap gap/th=0.002706 forbidden=     142/143 bdyW= 168 unprot= 168 first=29/2548
+    speeds=(11, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  1->13     class=positive_gap gap/th=0.002706 forbidden=     142/143 bdyW= 168 unprot= 168 first=29/2548
+    speeds=(13, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  1->15     class=positive_gap gap/th=0.002706 forbidden=     142/143 bdyW= 168 unprot= 168 first=1/196
+    speeds=(14, 15, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  1->17     class=positive_gap gap/th=0.002706 forbidden=     142/143 bdyW= 168 unprot= 168 first=1/196
+    speeds=(14, 17, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  1->19     class=positive_gap gap/th=0.002706 forbidden=     142/143 bdyW= 168 unprot= 168 first=1/196
+    speeds=(14, 19, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  1->3      class=positive_gap gap/th=0.002706 forbidden=     142/143 bdyW= 168 unprot= 168 first=5/196
+    speeds=(3, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+
+[n14 single-gate]
+  14->13    class=boundary_only gap/th=0.000000 forbidden=           1 bdyW=   6 unprot=   6 first=1/14
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  6->13     class=positive_gap gap/th=0.037879 forbidden=     851/858 bdyW=   8 unprot=   8 first=29/182
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  14->26    class=positive_gap gap/th=0.038462 forbidden=     181/182 bdyW=  10 unprot=  10 first=1/14
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26)
+  12->24    class=positive_gap gap/th=0.053571 forbidden= 17123/17640 bdyW=  24 unprot=  24 first=15/196
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 24)
+  7->13     class=positive_gap gap/th=0.053571 forbidden=2465329/2522520 bdyW=  24 unprot=  24 first=15/112
+    speeds=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14)
+  12->13    class=positive_gap gap/th=0.057143 forbidden= 34609/35035 bdyW=   8 unprot=   8 first=15/182
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14)
+
+[n15 mixed gates]
+  30->26    class=positive_gap gap/th=0.120000 forbidden=265156/307125 bdyW=  88 unprot=  88 first=19/225
+    speeds=(1, 3, 5, 6, 9, 10, 14, 15, 20, 25, 26, 45, 60, 75)
+  3->8      class=positive_gap gap/th=0.120000 forbidden= 83269/94500 bdyW=  96 unprot=  96 first=8/105
+    speeds=(1, 5, 6, 8, 9, 10, 14, 15, 20, 25, 30, 45, 60, 75)
+  20->16    class=positive_gap gap/th=0.120000 forbidden=164651/189000 bdyW= 100 unprot= 100 first=8/105
+    speeds=(1, 3, 5, 6, 9, 10, 14, 15, 16, 25, 30, 45, 60, 75)
+  3->11     class=positive_gap gap/th=0.120000 forbidden=231151/259875 bdyW= 100 unprot= 100 first=8/105
+    speeds=(1, 5, 6, 9, 10, 11, 14, 15, 20, 25, 30, 45, 60, 75)
+  3->4      class=positive_gap gap/th=0.120000 forbidden=     821/945 bdyW= 100 unprot= 100 first=8/105
+    speeds=(1, 4, 5, 6, 9, 10, 14, 15, 20, 25, 30, 45, 60, 75)
+  30->29    class=positive_gap gap/th=0.120000 forbidden=1177369/1370250 bdyW= 100 unprot= 100 first=8/105
+    speeds=(1, 3, 5, 6, 9, 10, 14, 15, 20, 25, 29, 45, 60, 75)
+
+New models and reframes generated
+
+1. Endpoint-incidence matroid model
+   Treat the protection relation as a binary matrix.  A counterexample would need no leaf and an unusually self-supporting protection matroid. In the sample, the strongest rank pressure is sporadic tight n=8A with rank pressure 0.511905, but it still has 4 exposed endpoints.
+
+2. Morse landscape model
+   Visible gap width is a bad proxy for danger.  The tiny-gap example n14 14-ladder debt has gap/th=0.002706 but critical/th=1.208333 at t=6749/51744.  A tiny gap can be a steep safe valley, not a near-counterexample plateau.
+
+3. Debt export model
+   Protecting low quotient layers exports unprotected endpoints upward. The largest low-layer debt in the sample is n14 14-ladder debt: 72 low-layer exposed endpoints, despite 32 divisor edges.
+
+4. Two-shadow operation model
+   Addition supplies the Dirichlet/scalar equality spine; multiplication supplies divisor gates and endpoint protection channels.  Product-sum targets should be viewed as interference coordinates between these two shadows, not as numerology.
+
+5. Abstract-arc mirage model
+   Search separately in abstract circular-arc endpoint systems and in integer-speed realizations.  Some all-protected arc systems may be topologically possible but arithmetically unrealizable.
+
+Hypotheses to preserve
+  HYP-1842: endpoint protection is controlled by a private-pivot matroid.
+  HYP-1843: near-disproof danger is critical-radius surplus, not gap width.
+  HYP-1844: protecting quotient layers obeys a debt-export law.

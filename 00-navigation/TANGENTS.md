@@ -374,6 +374,15 @@ THM-365 proves every nonempty endpoint/interval protection core contains a direc
 **T399** #lonely-runner #abstract-mirages #circular-arcs #realizability | certainty: high computational/conceptual | source: codex-2026-05-31-S384
 Pure circular-arc topology cannot prove LRC: abstract all-protected covers appear immediately, e.g. `Z/3Z` arcs `(0->2),(1->0),(2->1)`, and through `q=9` including short-arc variants. The obstruction must be arithmetic realizability of labelled endpoint cycles, not bare cycle absence.
 
+**T400** #lonely-runner #endpoint-incidence #matroid #private-pivots | certainty: medium-high computational synthesis | source: codex-2026-05-31-S385
+Treat the LRC endpoint-protection relation as a binary endpoint/interval matroid. In S385 every sampled tight, `n=14`, and `n=15` system has terminal `coreE=0`; even the `n14 14-ladder debt` system has `2298` endpoints, `rank/null=1025/1105`, and `1420` private endpoints. A counterexample would need a leafless, private-pivot-free, integer-realizable protection matroid. See HYP-1842.
+
+**T401** #lonely-runner #critical-radius #near-disproof #morse-landscape | certainty: medium-high computational synthesis | source: codex-2026-05-31-S385
+Gap width is a bad danger metric. The `n14 14-ladder debt` model has `gap/th=0.002706` but gap-probe `critical/th=1.208333`, `168` exposed endpoints, and `coreE=0`; it is a tiny visible gap but a steep safe valley. Search should rank by critical-radius surplus plus endpoint-core size. See HYP-1843.
+
+**T402** #lonely-runner #quotient-layers #debt-export #composite-denominators | certainty: medium-high computational synthesis | source: codex-2026-05-31-S385
+Protecting quotient layers exports endpoint debt. From the `n14 seven-ladder` to the `n14 14-ladder debt` family, gap ratio halves (`0.005411 -> 0.002706`) while unprotected endpoints double (`84 -> 168`), low-layer debt doubles (`36 -> 72`), and private endpoints double (`710 -> 1420`). See HYP-1844.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

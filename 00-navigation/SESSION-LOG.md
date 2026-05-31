@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S385 - Lonely Runner Hypothesis Noise and Reframe Pass
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S380, then rebased over upstream S381-S384, oracle S16, and oracle S17; this strand is S385.
+**User prompt:** Spend a long creative session generating new hypotheses, models, and reframes for the Lonely Runner Conjecture, using repo noise and tangents freely.
+**Computation:** Added `04-computation/lonely_runner_hypothesis_noise_s385.py` and stored `05-knowledge/results/lonely_runner_hypothesis_noise_s385.out`. The script blends endpoint-transfer/private pivots, Fejer/Riesz critical-radius pressure, quotient debt, natural operation shadows, product-sum gates, and semantic one-swap provocations.
+**Findings:** Every sampled endpoint-incidence system peeled to terminal `coreE=0`, including the high-debt fourteen-runner ladders. The `n14 14-ladder debt` model has `gap/th=0.002706` but gap-probe `critical/th=1.208333`, `168` unprotected endpoints, `72` low-layer debt, and `1420` private endpoints. The `n15` gated examples also retain positive gaps and large endpoint exposure.
+**Synthesis:** Added HYP-1842/HYP-1843/HYP-1844 and `07-reflections/lonely-runner-hypothesis-noise-s385.md`. The new frame is a three-part diagnostic: endpoint private-pivot matroid, critical-radius surplus rather than visible gap width, and quotient-layer debt export.
+**Verification:** `python3 -m py_compile 04-computation/lonely_runner_hypothesis_noise_s385.py` succeeded; the S385 script ran end-to-end and produced the stored output.
+**Next:** Search abstract circular-arc endpoint cores before imposing integer speeds; rerank near-disproof families by `(critical surplus, coreE, endpoint debt)`; build the `n=14` denominator-layer transfer matrix from protected targets to descendant leaks.
+
 ## oracle-2026-05-31-S17 - "If 15 Were Prime": Structure Shapes Truth (reflection)
 
 **Account:** Oracle (remote-control, continuation of S16 LRC thread).

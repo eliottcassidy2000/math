@@ -2886,6 +2886,27 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Predictions:** Counterexample search should enumerate labelled endpoint cycles first and solve integer inequalities second; proof search should define a cycle-slack potential showing every primitive labelled cycle leaks a gap or endpoint. Product-sum/torsion coordinates may be the shortest almost-closing labelled cycles.
 **See:** `05-knowledge/hypotheses/HYP-1841-lrc-arithmetic-endpoint-cycle-obstruction.md`, THM-357, THM-359, THM-365, HYP-1811, HYP-1828, HYP-1836, `04-computation/lonely_runner_endpoint_cycle_formal_s384.py`, `05-knowledge/results/lonely_runner_endpoint_cycle_formal_s384.out`, `07-reflections/lonely-runner-endpoint-cycle-formal-s384.md`.
 
+## HYP-1842: LRC endpoint protection is controlled by a private-pivot matroid (codex-2026-05-31-S385)
+**Status:** EXPLORATORY endpoint-incidence hypothesis.
+**What:** The pulled-back LRC endpoint-protection relation should be studied as a binary endpoint/interval matroid. A counterexample would need a leafless, private-pivot-free, integer-realizable protection matrix after quotienting the scalar boundary spine.
+**Evidence:** S385 computed GF(2) endpoint-protection ranks and private endpoint counts. Every sampled tight, `n=14`, and `n=15` system peeled to `coreE=0`, including the `n14 14-ladder debt` example with `2298` endpoints, `rank/null=1025/1105`, and `1420` private endpoints.
+**Predictions:** Abstract circular-arc all-protected cores may exist, but integer-speed realizability should force a private pivot or scalar-boundary peel.
+**See:** `05-knowledge/hypotheses/HYP-1842-lrc-endpoint-private-pivot-matroid.md`, HYP-1815, HYP-1836, THM-359, `04-computation/lonely_runner_hypothesis_noise_s385.py`, `05-knowledge/results/lonely_runner_hypothesis_noise_s385.out`, `07-reflections/lonely-runner-hypothesis-noise-s385.md`.
+
+## HYP-1843: LRC near-disproof danger is critical-radius surplus, not gap width (codex-2026-05-31-S385)
+**Status:** EXPLORATORY search-metric hypothesis.
+**What:** Tiny visible complement gaps at threshold are often steep safe valleys. Candidate danger should be ranked by critical-radius surplus and endpoint-core size, with max-gap width only a secondary diagnostic.
+**Evidence:** S385's `n14 14-ladder debt` has `gap/th=0.002706` but gap-probe `critical/th=1.208333`, `168` exposed endpoints, and `coreE=0`. The exact `n14 single-gate` has a larger visible gap but smaller exact critical surplus (`critical/th=1.076923`), so gap width and true danger are not the same order.
+**Predictions:** Serious disproof candidates must push `critical/th` toward `1` and produce nonzero endpoint core pressure simultaneously.
+**See:** `05-knowledge/hypotheses/HYP-1843-lrc-critical-radius-surplus.md`, HYP-1812, HYP-1836, `04-computation/lonely_runner_shape_questions_s379.py`, `04-computation/lonely_runner_hypothesis_noise_s385.py`, `05-knowledge/results/lonely_runner_hypothesis_noise_s385.out`, `07-reflections/lonely-runner-hypothesis-noise-s385.md`.
+
+## HYP-1844: LRC quotient protection obeys a debt-export law (codex-2026-05-31-S385)
+**Status:** EXPLORATORY quotient-layer hypothesis.
+**What:** Divisor gates that protect a chosen quotient layer shrink visible gaps by exporting unprotected endpoint obligations to descendant denominator layers.
+**Evidence:** S385 sharpens S380: moving from the `n14 seven-ladder` to the `n14 14-ladder debt` family halves the gap ratio (`0.005411 -> 0.002706`) while doubling unprotected endpoints (`84 -> 168`), low-layer debt (`36 -> 72`), and private endpoints (`710 -> 1420`), with terminal `coreE=0` in both cases.
+**Predictions:** Disproof searches should solve the endpoint-debt ledger before speed selection; otherwise they will keep finding tiny-gap positive covers.
+**See:** `05-knowledge/hypotheses/HYP-1844-lrc-quotient-debt-export.md`, HYP-1837, HYP-1842, `04-computation/lonely_runner_14_composite_denominator_disproof_s380.py`, `04-computation/lonely_runner_hypothesis_noise_s385.py`, `05-knowledge/results/lonely_runner_hypothesis_noise_s385.out`, `07-reflections/lonely-runner-hypothesis-noise-s385.md`.
+
 ## HYP-1850: LRC modulus-sieve localizes tightness at the uncovered scale (oracle-2026-05-31-S16)
 **Status:** EXPLORATORY; underlying lemma is PROVED, the localization is the hypothesis. Independent oracle-session companion to codex HYP-1816/HYP-1839.
 **What:** Modulus-sieve lemma (proved): at level `n`, if no speed is divisible by `m` for some `2<=m<=n-1` then `t=1/m` is lonely (`||v/m||>=1/m>1/n`); for `m=n`, `t=1/n` is a boundary witness. Hence a counterexample must contain a speed divisible by EVERY `m in {2,...,n}`. Localization hypothesis: a primitive tight set's surviving witnesses live at the modulus scale(s) it fails to cover; the initial segment `{1,...,n-1}` covers `{2,...,n-1}` and misses only `n`, so its witnesses are exactly the units `a/n`.
