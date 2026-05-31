@@ -1,5 +1,13 @@
 # Session Log
 
+## codex-2026-05-31-S368 - The 56 Echo
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`.
+**User prompt:** Observed that the `56/11368` missed cells from S367 match the number of isomorphism classes of tournaments on six vertices.
+**Synthesis:** The S367 extremal half-turn misses factor as `56 = 7*8`: seven odd shifts modulo `14` and eight alpha-pattern stencils. The eight stencils are four intervals and their `bins -> 13-bins` mirrors; the odd shifts reduce modulo `7` to all residues. This does not yet give a tournament-class bijection, but it upgrades the coincidence into a precise shape: `Z/7` times a binary/mirror stencil, suspiciously close to the repo's Fano/tournament-six boundary.
+**Next:** Test whether the eight stencils encode labelled three-bit data and whether quotienting by mirror/shift symmetries produces the same orbit statistics as six-vertex tournament classes.
+
 ## codex-2026-05-31-S367 - Fourteen-Runner Scalar-Gauge Quotient
 
 **Account:** Codex
