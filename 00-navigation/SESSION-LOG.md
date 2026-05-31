@@ -1,5 +1,21 @@
 # Session Log
 
+## oracle-2026-05-31-S16 - Lonely Runner n=14 Frontier: New Representations
+
+**Account:** Oracle (remote-control session).
+**Git first:** Started from clean `main`.
+**User prompt:** Spend a long session on the 14-runner case of the lonely runner problem, both proof and disproof; contemplate new ways to think about what is fundamentally going on; be abstract and creative about what things represent.
+**Context check:** Verified externally that LRC is now proven through 13 runners (Rosenfeld `arXiv:2509.14111` for 8; `2511.22427`/`2512.01912` for 9,10; Sungkawichai-Trakulthongchai `2604.23906` for 11,12,13). So **n=14 (k=13, threshold 1/14) is the first OPEN case**. n=14 is even+composite (2·7), so the odd-prime polynomial-method tool (`k+1` prime) gives nothing — a structural reason 14 is the wall.
+**New representations (07-reflections/lonely-runner-n14-frontier-representations-s363.md):**
+  1. **Modulus-sieve / whack-a-mole** (HYP-1850). Proved lemma: a counterexample must contain a speed divisible by EVERY `m in {2,...,n}`. The initial segment covers `{2,...,n-1}`, misses only `n`, so its tightness localizes at the single uncovered scale and its witnesses are the units `a/n`. Covering modulus 14 forces dropping a small speed -> re-opens a coarser scale with a macroscopic gap (verified exactly).
+  2. **Gap-floor / no-multiple-of-n at full measure** (HYP-1851). General form: any full-measure forbidden union contains NO speed divisible by `n`; would prove LRC level-by-level. EVERY known tight example (n=4..8, incl. sporadics) corroborates; n=14 search (structured + ~40k random sets forced to contain a multiple of 14) found no tight set, min gap stayed positive.
+  3. **Pushforward lattice-sum identity** (HYP-1852, PROVED). `hat{mu_V}(a)=[a.v=0]`, so `Leb(lonely)=sum_{a in L(V)} prod f_n(a_i)`. Since this is `>=0` automatically, ALL content lives in the measure-zero tight stratum -> explains why density/Fourier methods are insufficient and the endpoint program is the right altitude. Sharpening: Beurling-Selberg box-minorant LP.
+  4. **Torus-knot / view-obstruction** and the even/composite anatomy of 14=2·7 (antipodal `t->t+1/2` involution as the even-`n` substitute for the missing prime tool; `(Z/14)*~Z/6` makes the unit skeleton a "mod-7 doubled" object, suggesting CRT-descent through the proven n=7 case).
+**Computation:** Added `lonely_runner_n14_frontier_s363.py`, `lonely_runner_n14_gapfloor_s363.py`, `lonely_runner_lattice_sum_s363.py`; outputs in `05-knowledge/results/`. No open-cover counterexample anywhere; identity verified numerically.
+**Knowledge updates:** Added HYP-1850, HYP-1851, HYP-1852 to the index.
+**Proof/disproof assessment:** Disproof not expected (counterexample boxed in by sieve + measure budget 13/7 + all-protected endpoints + gap-floor evidence). Proof route mirrors recent papers; the n=14-specific gap is handling near-initial-segment families when 14 is even/composite — candidate fix is the 2-adic antipodal involution + CRT descent to n=7.
+**Parallel work:** Codex independently ran S363-S382 on n=14 and converged on the same core tension (codex HYP-1839); my HYP-1850/1841/1842 are the oracle-session companions, cross-referenced in the index.
+**Next:** Attack the gap-floor hypothesis structurally; build the Beurling-Selberg LP at n=14; CRT-descent experiment mod 2 and mod 7; classify tight 13-sets (is the initial segment unique at n=14?).
 ## codex-2026-05-31-S383 - Above-14 Runner Favorites
 
 **Account:** Codex

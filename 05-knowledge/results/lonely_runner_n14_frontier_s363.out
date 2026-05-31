@@ -1,0 +1,154 @@
+Lonely Runner n=14 frontier analysis (oracle-2026-05-31-S16)
+runners n=14, speeds k=13, threshold 1/14
+
+========================================================================
+A. The tight baseline: initial segment {1,...,13}
+========================================================================
+[initial segment 1..13]  -> boundary-only (tight)
+  speeds = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  forbidden_length = 1  max_gap = 0 (0.00000)  components = 7
+  boundary_witnesses = 6  first = 1/14
+  UNCOVERED moduli (no speed divisible by) = [14]   => t = 1/14 is lonely
+
+Interpretation: covers every modulus 2..13 (speed m divides m), misses
+only m=14.  The 6 surviving boundary witnesses are exactly the units
+a/14, gcd(a,14)=1 -> the tightness lives at the one uncovered scale.
+
+========================================================================
+B. Whack-a-mole: inserting a multiple of 14 re-opens a coarse scale
+========================================================================
+[drop 13, add 14]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+  forbidden_length = 189403/194040  max_gap = 1/308 (0.00325)  components = 13
+  boundary_witnesses = 24  first = 15/196
+  UNCOVERED moduli (no speed divisible by) = [13]   => t = 1/13 is lonely
+
+[drop 11, add 14]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14)
+  forbidden_length = 72487/76440  max_gap = 3/392 (0.00765)  components = 11
+  boundary_witnesses = 20  first = 5/56
+  UNCOVERED moduli (no speed divisible by) = [11]   => t = 1/11 is lonely
+
+[drop 9, add 14]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14)
+  forbidden_length = 53355/56056  max_gap = 5/539 (0.00928)  components = 7
+  boundary_witnesses = 12  first = 3/28
+  UNCOVERED moduli (no speed divisible by) = [9]   => t = 1/9 is lonely
+
+[drop 8, add 14]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14)
+  forbidden_length = 20071/21021  max_gap = 2/147 (0.01361)  components = 5
+  boundary_witnesses = 8  first = 5/42
+  UNCOVERED moduli (no speed divisible by) = [8]   => t = 1/8 is lonely
+
+[drop 5, add 14]  -> positive-gap
+  speeds = (1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  forbidden_length = 136523/140140  max_gap = 1/220 (0.00455)  components = 9
+  boundary_witnesses = 16  first = 29/154
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+[drop 7, add 14]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14)
+  forbidden_length = 2465329/2522520  max_gap = 3/784 (0.00383)  components = 13
+  boundary_witnesses = 24  first = 15/112
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+[drop 12, add 14]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14)
+  forbidden_length = 34609/35035  max_gap = 1/245 (0.00408)  components = 5
+  boundary_witnesses = 8  first = 15/182
+  UNCOVERED moduli (no speed divisible by) = [12]   => t = 1/12 is lonely
+
+[drop 10, add 14]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14)
+  forbidden_length = 61543/63063  max_gap = 4/637 (0.00628)  components = 5
+  boundary_witnesses = 8  first = 15/154
+  UNCOVERED moduli (no speed divisible by) = [10]   => t = 1/10 is lonely
+
+[drop 6, add 14]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  forbidden_length = 851/858  max_gap = 5/1848 (0.00271)  components = 5
+  boundary_witnesses = 8  first = 29/182
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+========================================================================
+C. Cover m=14 AND the dropped scale with one combined large speed
+========================================================================
+[drop 13, add 182 (=2*7*13)]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182)
+  forbidden_length = 189403/194040  max_gap = 3/637 (0.00471)  components = 25
+  boundary_witnesses = 48  first = 183/2548
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+[drop 11,13 add 14,143]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 143)
+  forbidden_length = 59032/63063  max_gap = 6/1001 (0.00599)  components = 39
+  boundary_witnesses = 76  first = 5/56
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+[drop 8, add 56 (=8*7, covers 8&14&7)]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 56)
+  forbidden_length = 40571/42042  max_gap = 5/784 (0.00638)  components = 9
+  boundary_witnesses = 16  first = 5/42
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+[drop 9, add 126 (=2*9*7 covers 9,14,...)]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 126)
+  forbidden_length = 479051/504504  max_gap = 1/147 (0.00680)  components = 13
+  boundary_witnesses = 24  first = 3/28
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+[one super-speed 360360 + small filler]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 360360)
+  forbidden_length = 222617/229320  max_gap = 1/420420 (0.00000)  components = 12291
+  boundary_witnesses = 24580  first = 360361/5045040
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+========================================================================
+D. Sets that DO satisfy the full divisibility sieve (no uncovered m)
+========================================================================
+[sieve-complete v1]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14)
+  forbidden_length = 2465329/2522520  max_gap = 3/784 (0.00383)  components = 13
+  boundary_witnesses = 24  first = 15/112
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+[sieve-complete v2]  -> positive-gap
+  speeds = (1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  forbidden_length = 353/364  max_gap = 11/728 (0.01511)  components = 3
+  boundary_witnesses = 4  first = 85/182
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+[sieve-complete near-initial]  -> positive-gap
+  speeds = (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14)
+  forbidden_length = 2465329/2522520  max_gap = 3/784 (0.00383)  components = 13
+  boundary_witnesses = 24  first = 15/112
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+[use 28 for {4,7,14,2}]  -> positive-gap
+  speeds = (1, 2, 3, 5, 6, 8, 9, 10, 11, 12, 13, 27, 28)
+  forbidden_length = 3534581/3783780  max_gap = 5/784 (0.00638)  components = 17
+  boundary_witnesses = 32  first = 15/112
+  divisibility sieve fully covered (all m in 2..14 hit)
+
+========================================================================
+E. Even-n antipodal tool: all-odd speeds make t=1/2 lonely
+========================================================================
+[13 odd speeds (1,3,..,25)]  -> positive-gap
+  speeds = (1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25)
+  forbidden_length = 1419841/1605975  max_gap = 6/175 (0.03429)  components = 24
+  boundary_witnesses = 40  first = 1/14
+  UNCOVERED moduli (no speed divisible by) = [2, 4, 6, 8, 10, 12, 14]   => t = 1/2 is lonely
+
+Any all-odd set is loneliness-trivial at t=1/2 (||v/2||=1/2). So a
+counterexample must contain an even speed -- automatically supplied by
+the required multiple of 14.
+
+========================================================================
+SUMMARY
+========================================================================
+No open-cover counterexample among any set analyzed.
+The divisibility sieve {2,...,14} cannot be satisfied by 13 small
+speeds without either (i) missing a modulus scale (boundary witness
+re-opens), or (ii) admitting a large speed whose intervals are too
+sparse to keep the cover full (a positive gap opens).
