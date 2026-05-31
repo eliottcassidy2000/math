@@ -2742,9 +2742,9 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 ## HYP-1821: Natural mode graphs meet along the product-sum defect interface (codex-2026-05-31-S365b)
 **Status:** EXPLORATORY; supported by THM-361.
 **What:** The additive natural-number mode graph and the sparser multiplicative mode graph should be compared through the defect `product(C)-sum(C)` on cores `C` with entries at least `2`. Product-sum equations are exactly the zero-slack interface after adding `1`s.
-**Evidence:** `natural_mode_graph_s365.py` rechecks the additive/product graph split, verifies binary distinct `x+y=x*y` has no solution, binary diagonal gives `(2,2)->4`, ternary distinct gives `(1,2,3)->6`, and enumerates product-sum arities through `10`. THM-361 proves the defect normal form and uniqueness of the distinct positive solution.
+**Evidence:** `natural_mode_graph_s365.py` rechecks the additive/product graph split, verifies binary distinct `x+y=x*y` has no solution, binary diagonal gives `(2,2)->4`, ternary distinct gives `(1,2,3)->6`, and enumerates product-sum arities through `10`. THM-361 proves the defect normal form and uniqueness of the distinct positive solution; S366 formalizes the list-level normal form and positive two-entry uniqueness in Lean.
 **Predictions:** The old additive module `{1,4,6}` is a general resonance-boundary pattern: source/identity, hidden diagonal collision, first visible distinct resonance. Other recurring repo numbers should be classified by this defect role.
-**See:** `05-knowledge/hypotheses/HYP-1821-natural-mode-defect-interface.md`, THM-361, `04-computation/natural_mode_graph_s365.py`, `05-knowledge/results/natural_mode_graph_s365.out`, `07-reflections/natural-mode-graphs-sum-product-s365.md`.
+**See:** `05-knowledge/hypotheses/HYP-1821-natural-mode-defect-interface.md`, THM-361, `04-computation/lean/TournamentH7/TournamentH7/ProductSum.lean`, `05-knowledge/results/lean_product_sum_s366.out`, `04-computation/natural_mode_graph_s365.py`, `05-knowledge/results/natural_mode_graph_s365.out`, `07-reflections/natural-mode-graphs-sum-product-s365.md`.
 
 ## HYP-1822: Natural-number operation graphs are labeled cospans (codex-2026-05-31-S365)
 **Status:** EXPLORATORY synthesis.

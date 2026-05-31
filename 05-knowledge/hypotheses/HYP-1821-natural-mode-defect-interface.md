@@ -65,6 +65,12 @@ k=5:  (1,1,1,2,5), (1,1,1,3,3), (1,1,2,2,2)
 
 and every row obeys the defect normal form.
 
+The S366 Lean session formalized the list-level normal form in
+`TournamentH7.ProductSum`: deleting all `1`s preserves product and records the
+sum loss as `ones`, adjoining exactly `d` ones repairs any core with
+`prod=sum+d`, and the ordered positive two-entry case is forced to `(2,2)`.
+The full build `lake build TournamentH7` succeeds with these audits.
+
 ## Interpretation
 
 The old exceptional additive module `{1,4,6}` becomes legible as a three-part
@@ -93,6 +99,8 @@ defect layer where identities or diagonal collisions compensate for the gap.
 ## Sources
 
 - THM-361.
+- `04-computation/lean/TournamentH7/TournamentH7/ProductSum.lean`.
+- `05-knowledge/results/lean_product_sum_s366.out`.
 - `04-computation/natural_mode_graph_s365.py`.
 - `05-knowledge/results/natural_mode_graph_s365.out`.
 - `07-reflections/summand-graph-fermat-zeckendorf.md`.

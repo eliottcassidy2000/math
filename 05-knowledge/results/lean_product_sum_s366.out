@@ -1,0 +1,50 @@
+Session: codex-2026-05-31-S366
+Target: Lean formalization of THM-361 list-level product-sum defect normal form.
+
+Commands:
+
+  lake build TournamentH7.ProductSum
+  lake build TournamentH7.Verify
+  lake build TournamentH7
+
+Results:
+
+  TournamentH7.ProductSum builds successfully.
+  TournamentH7.Verify builds successfully.
+  TournamentH7 top-level build succeeds with the new ProductSum import.
+
+New audited Lean declarations:
+
+  Tournament.ProductSum.product_sum_iff_core
+    Product-sum lists are exactly lists whose non-one core satisfies
+    core.prod = core.sum + number_of_ones.
+
+  Tournament.ProductSum.pad_core_product_sum
+    If c.prod = c.sum + d, then adjoining d copies of 1 to c is product-sum.
+
+  Tournament.ProductSum.core_defect_eq_ones_of_product_sum
+    Product-sum lists satisfy the subtraction form
+    core.prod - core.sum = number_of_ones.
+
+  Tournament.ProductSum.two_entry_product_sum
+    For positive natural a,b, IsProductSum [a,b] implies a=2 and b=2.
+
+Audit excerpts from TournamentH7.Verify:
+
+  product_sum_iff_core_audit:
+    depends on axioms [propext, Quot.sound]
+
+  pad_core_product_sum_audit:
+    depends on axioms [propext]
+
+  core_defect_eq_ones_of_product_sum_audit:
+    depends on axioms [propext, Quot.sound]
+
+  two_entry_product_sum_audit:
+    depends on axioms [propext, Classical.choice, Quot.sound]
+
+Interpretation:
+
+  The formalized core of THM-361 is theorem-prover foundational only: it
+  introduces no project axioms.  The multiset/distinct uniqueness statement is
+  not fully formalized yet; the ordered positive two-entry resonance is.

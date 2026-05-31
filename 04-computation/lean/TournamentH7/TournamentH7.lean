@@ -36,6 +36,7 @@
     · TournamentH7.StaircaseConnectivity — Top good-cut bucket ↔ SC.
     · TournamentH7.BucketBalance — Abstract bucket balances and Boolean-cube masks.
     · TournamentH7.StaircaseBucketTransport — Concrete staircase transport checksums.
+    · TournamentH7.ProductSum   — Product-sum defect normal form.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -83,4 +84,5 @@ import TournamentH7.IsoCharacterizations
 import TournamentH7.ScoreSequence
 import TournamentH7.Paley3
 import TournamentH7.TransitiveH
+import TournamentH7.ProductSum
 import TournamentH7.Verify

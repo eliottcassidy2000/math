@@ -4,6 +4,7 @@ name: product-sum-defect-normal-form
 status: PROVED
 date: 2026-05-31
 session: codex-2026-05-31-S365
+lean: TournamentH7.ProductSum
 depends_on: []
 ---
 
@@ -109,8 +110,30 @@ This explains why the first low-dimensional resonances are:
 The first is a diagonal binary resonance; the second is the unique distinct
 positive resonance.
 
+## Lean formalization
+
+The list-level core of this theorem is formalized in
+`04-computation/lean/TournamentH7/TournamentH7/ProductSum.lean` and audited
+from `TournamentH7.Verify`.
+
+Formalized statements include:
+
+```lean
+Tournament.ProductSum.product_sum_iff_core
+Tournament.ProductSum.pad_core_product_sum
+Tournament.ProductSum.core_defect_eq_ones_of_product_sum
+Tournament.ProductSum.two_entry_product_sum
+```
+
+This covers the core defect normal form, the padding converse, the natural
+subtraction corollary, and the positive ordered two-entry uniqueness `(2,2)`.
+The multiset-level quotient and the full distinct positive uniqueness theorem
+remain future formalization targets.
+
 ## Related
 
+- `04-computation/lean/TournamentH7/TournamentH7/ProductSum.lean`.
+- `05-knowledge/results/lean_product_sum_s366.out`.
 - `04-computation/natural_mode_graph_s365.py`.
 - `05-knowledge/results/natural_mode_graph_s365.out`.
 - `07-reflections/summand-graph-fermat-zeckendorf.md`.

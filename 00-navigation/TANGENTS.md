@@ -281,6 +281,9 @@ The additive exceptional module `{1,4,6}` is now legible: `1` is source/identity
 **T368** #shifted-divisors #collision-spectrum #sum-product #speedup | certainty: high elementary / computation | source: codex-2026-05-31-S365
 Sorted length-`k` product-sum collisions obey the finite prefix gate `a_1*...*a_{k-1}<=k`, giving a fast exact enumeration. The two-core layer is the shifted divisor graph `(a-1)(b-1)=k-1`, e.g. `k=13` yields `(2,13)->26`, `(3,7)->21`, `(4,5)->20`. Grouped by target through arity `20`, `z=24` is richest with six fibers, hinting that collision spectra measure factorability with an additive-defect filter.
 
+**T369** #formalization #product-sum #defect-normal-form #lean | certainty: proved in Lean | source: codex-2026-05-31-S366
+`TournamentH7.ProductSum` formalizes the THM-361 list core: deleting ones preserves product and changes sum by exactly `ones`, product-sum iff `core.prod = core.sum + ones`, padding by defect many ones repairs equality, and the positive ordered two-entry resonance is only `(2,2)`. See `05-knowledge/results/lean_product_sum_s366.out`.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

@@ -39,8 +39,35 @@ import TournamentH7.IsoCharacterizations
 import TournamentH7.ScoreSequence
 import TournamentH7.Paley3
 import TournamentH7.TransitiveH
+import TournamentH7.ProductSum
 
 open Tournament
+
+/-! ### Product-sum defect normal form (THM-361 list core) -/
+
+theorem product_sum_iff_core_audit (xs : List Nat) :
+    ProductSum.IsProductSum xs ↔
+      (ProductSum.core xs).prod = (ProductSum.core xs).sum + ProductSum.ones xs :=
+  ProductSum.product_sum_iff_core xs
+#print axioms product_sum_iff_core_audit
+
+theorem pad_core_product_sum_audit {d : Nat} {c : List Nat}
+    (h : c.prod = c.sum + d) :
+    ProductSum.IsProductSum ((List.replicate d 1) ++ c) :=
+  ProductSum.pad_core_product_sum h
+#print axioms pad_core_product_sum_audit
+
+theorem core_defect_eq_ones_of_product_sum_audit {xs : List Nat}
+    (h : ProductSum.IsProductSum xs) :
+    (ProductSum.core xs).prod - (ProductSum.core xs).sum = ProductSum.ones xs :=
+  ProductSum.core_defect_eq_ones_of_product_sum h
+#print axioms core_defect_eq_ones_of_product_sum_audit
+
+theorem two_entry_product_sum_audit {a b : Nat} (ha : 0 < a) (hb : 0 < b)
+    (h : ProductSum.IsProductSum [a, b]) :
+    a = 2 ∧ b = 2 :=
+  ProductSum.two_entry_product_sum ha hb h
+#print axioms two_entry_product_sum_audit
 
 /-! ### Type-A root-sign atoms -/
 

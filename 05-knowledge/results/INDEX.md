@@ -16,6 +16,7 @@ python3 04-computation/SCRIPT.py 2>&1 | tee 05-knowledge/results/SCRIPT.out
 |--------|--------|-------------|-------------|
 | `lake build TournamentH7.RootPackets` | [STORED] | New root-packet module builds successfully: open root walks telescope to endpoint boundary, closed packets have zero total root, and directed cycles convert to zero-root packets. | `lean_root_packets_s6.out` |
 | `timeout 300 lake build TournamentH7.Verify` | [STORED] | Full audit attempt timed out while still compiling dependencies; it did not reach the `#print axioms` layer. Use the narrow `RootPackets` build as the completed verification for this session. | `lean_verify_root_packets_s6.out` |
+| `lake build TournamentH7.ProductSum`; `lake build TournamentH7.Verify`; `lake build TournamentH7` | [STORED] | THM-361 list-level product-sum defect normal form now builds in Lean: removing ones preserves product and records additive slack, padding a core by defect many ones repairs product-sum equality, and the positive two-entry resonance is only `(2,2)`. | `lean_product_sum_s366.out` |
 
 ## Results catalog
 

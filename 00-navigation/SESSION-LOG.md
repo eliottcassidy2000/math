@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S366 - Product-Sum Defect Lean Formalization
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**User prompt:** Spend a long overnight session on formalization.
+**Formalization:** Added `TournamentH7.ProductSum`, a Lean module for the list-level core of THM-361. It defines `ones`, `core`, and `IsProductSum`, then proves removing ones preserves product, decomposes sum as `core.sum + ones`, and gives the equivalence `IsProductSum xs <-> (core xs).prod = (core xs).sum + ones xs`.
+**Converse and resonance:** Proved the padding converse: if `c.prod = c.sum + d`, then `List.replicate d 1 ++ c` is product-sum. Also proved the ordered positive two-entry resonance is unique: `IsProductSum [a,b]` with `a,b>0` forces `a=b=2`.
+**Audit:** Wired the module into `TournamentH7.Verify` and the top-level `TournamentH7` import. Verified `lake build TournamentH7.ProductSum`, `lake build TournamentH7.Verify`, and `lake build TournamentH7`; stored `05-knowledge/results/lean_product_sum_s366.out`.
+**Knowledge updates:** Updated THM-361, HYP-1821, the hypotheses/results indexes, tangents T369, and `07-reflections/product-sum-defect-lean-formalization-s366.md`.
+**Next:** Formalize the multiset quotient of the list theorem, then the full distinct positive uniqueness result `{1,2,3}` by proving the monotone lower bound for distinct cores of size at least three.
+
 ## codex-2026-05-31-S365 - Natural Operation Graphs and Product-Sum Collisions
 
 **Account:** Codex
