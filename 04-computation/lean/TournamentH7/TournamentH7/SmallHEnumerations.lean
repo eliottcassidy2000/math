@@ -257,6 +257,65 @@ theorem alpha_solution_H19 (T : Tournament n) (hH : H T = 19) :
       · -- α₁ ≥ 8. 8 + 2α₂ ≥ 8 + 2 = 10 > 9.
         exfalso; omega
 
+/-! ### H = 23 -/
+
+/-- For H = 23, the α-tuple is one of (11,0), (9,1), (7,2), (5,3). -/
+theorem alpha_solution_H23 (T : Tournament n) (hH : H T = 23) :
+    (alphaCount 1 T = 11 ∧ alphaCount 2 T = 0
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 9 ∧ alphaCount 2 T = 1
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 7 ∧ alphaCount 2 T = 2
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) ∨
+    (alphaCount 1 T = 5 ∧ alphaCount 2 T = 3
+       ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) := by
+  have hocf := ocf T
+  have h3_zero : alphaCount 3 T = 0 := H_lt_27_no_alpha3 T (by omega)
+  have h4_zero : alphaCount 4 T = 0 := H_lt_81_no_alpha4 T (by omega)
+  have hRed : alphaCount 1 T + 2 * alphaCount 2 T = 11 := by omega
+  by_cases h2_zero : alphaCount 2 T = 0
+  · left; exact ⟨by omega, h2_zero, h3_zero, h4_zero⟩
+  have h2_pos : 1 ≤ alphaCount 2 T := Nat.one_le_iff_ne_zero.mpr h2_zero
+  have h1_ge : Nat.choose 2 1 ≤ alphaCount 1 T :=
+    alpha_descent T (by omega) h2_pos
+  rw [show Nat.choose 2 1 = 2 by decide] at h1_ge
+  have h_binom := alpha_binomial_bound T 2
+  -- α₁ + 2α₂ = 11. α₁ is odd.
+  -- Options: (3, 4), (5, 3), (7, 2), (9, 1), (11, 0 excluded).
+  -- (3, 4): C(3,2) = 3, so α₂ ≤ 3. But α₂ = 4 > 3. ✗
+  rcases Nat.lt_or_ge (alphaCount 1 T) 5 with h_lt5 | h_ge5
+  · rcases Nat.lt_or_ge (alphaCount 1 T) 4 with h_lt4 | h_ge4
+    · rcases Nat.lt_or_ge (alphaCount 1 T) 3 with h_lt3 | h_ge3
+      · -- α₁ = 2. 2 + 2α₂ = 11 ⟹ α₂ = 9/2.
+        exfalso; omega
+      · -- α₁ = 3. α₂ = 4. C(3,2) = 3, violation.
+        have h_eq3 : alphaCount 1 T = 3 := by omega
+        rw [h_eq3] at h_binom
+        rw [show Nat.choose 3 2 = 3 by decide] at h_binom
+        exfalso; omega
+    · -- α₁ = 4. 4 + 2α₂ = 11 ⟹ α₂ = 7/2.
+      exfalso; omega
+  · rcases Nat.lt_or_ge (alphaCount 1 T) 7 with h_lt7 | h_ge7
+    · rcases Nat.lt_or_ge (alphaCount 1 T) 6 with h_lt6 | h_ge6
+      · -- α₁ = 5, α₂ = 3.
+        right; right; right
+        refine ⟨by omega, ?_, h3_zero, h4_zero⟩; omega
+      · -- α₁ = 6. 6 + 2α₂ = 11 ⟹ α₂ = 5/2.
+        exfalso; omega
+    · rcases Nat.lt_or_ge (alphaCount 1 T) 9 with h_lt9 | h_ge9
+      · rcases Nat.lt_or_ge (alphaCount 1 T) 8 with h_lt8 | h_ge8
+        · -- α₁ = 7, α₂ = 2.
+          right; right; left
+          refine ⟨by omega, ?_, h3_zero, h4_zero⟩; omega
+        · -- α₁ = 8. 8 + 2α₂ = 11 ⟹ α₂ = 3/2.
+          exfalso; omega
+      · rcases Nat.lt_or_ge (alphaCount 1 T) 10 with h_lt10 | h_ge10
+        · -- α₁ = 9, α₂ = 1.
+          right; left
+          refine ⟨by omega, ?_, h3_zero, h4_zero⟩; omega
+        · -- α₁ ≥ 10. α₁ ≥ 10 + 2*1 = 12 > 11.
+          exfalso; omega
+
 /-! ### Summary: realizable small H values -/
 
 /-- For H ∈ {1, 3, 5, 9, 11, 13}, ALL α-tuples have α_3 = α_4 = 0
