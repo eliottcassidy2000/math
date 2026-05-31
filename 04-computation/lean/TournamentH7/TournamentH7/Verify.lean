@@ -34,6 +34,7 @@ import TournamentH7.RedeiFromOCF
 import TournamentH7.HSpectrumClean
 import TournamentH7.HSpectrumSmallN
 import TournamentH7.SmallHEnumerations
+import TournamentH7.BasePathSink
 
 open Tournament
 
@@ -1143,3 +1144,17 @@ theorem alpha_solution_H23_audit {n : ℕ} (T : Tournament n) (h : H T = 23) :
        ∧ alphaCount 3 T = 0 ∧ alphaCount 4 T = 0) :=
   alpha_solution_H23 T h
 #print axioms alpha_solution_H23_audit
+
+/-! ### BasePathSink: vertex 0 score bound -/
+
+/-- For any HasBasePath T on n ≥ 2 vertices, vertex 0 has out-degree ≤ n - 2. -/
+theorem base_path_sink_outDegree_le_audit {n : ℕ} (T : Tournament n)
+    (hbp : HasBasePath T) (hn : 2 ≤ n) :
+    T.outDegree ⟨0, by omega⟩ ≤ n - 2 :=
+  base_path_sink_outDegree_le T hbp hn
+#print axioms base_path_sink_outDegree_le_audit
+
+theorem outDegree_le_n_minus_one_audit {n : ℕ} (T : Tournament n) (hn : 1 ≤ n)
+    (v : Fin n) : T.outDegree v ≤ n - 1 :=
+  outDegree_le_n_minus_one T hn v
+#print axioms outDegree_le_n_minus_one_audit

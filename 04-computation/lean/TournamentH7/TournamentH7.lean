@@ -78,4 +78,5 @@ import TournamentH7.RedeiFromOCF
 import TournamentH7.HSpectrumClean
 import TournamentH7.HSpectrumSmallN
 import TournamentH7.SmallHEnumerations
+import TournamentH7.BasePathSink
 import TournamentH7.Verify
