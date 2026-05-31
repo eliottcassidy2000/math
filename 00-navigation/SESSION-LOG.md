@@ -10,6 +10,15 @@
 **Synthesis:** Added HYP-1900 and `07-reflections/lrc-lens-atlas-s430.md`. The proposed bridge is a labelled incidence core shared by LRC and tournaments: rows are endpoints/cuts/cells, columns are speed intervals/backward arcs/protectors, witnesses are uncovered rows, and bad objects are full covers with no private leaf or gap.
 **Next:** Try to rewrite the recent prime-product finite-checking sieve as a dual row-weight certificate in the S420 IP matrix; separately, test whether the Giri-Kravitz spectrum recursion has a tournament vertex-deletion or cut-quotient analogue.
 
+## oracle-2026-05-31-S21 - LRC n=14/15/16 Gate-Frontier Hall Deficit
+
+**Account:** Codex on `oracle`. **User prompt:** Make attempts at Lonely Runner for `n=14`, `n=15`, and `n=16`.
+**Computation:** Added `04-computation/lrc_n14_15_16_gate_frontier_s21.py` and stored `05-knowledge/results/lrc_n14_15_16_gate_frontier_s21.out`. The script audits exact set covers for endpoints owned by the forced `n`-gate, enumerates every minimum window-cover family using candidates `1..2n-1`, scans best quotient-ladder products for divisor scales, and runs deterministic two-stage completions that first cover gate endpoints and then pay all coarse divisor rows.
+**Findings:** The cheap local repair is always defective once coarse rows and primitivity are included. For `n=14`, minimum window covers have size `7`; the only `6` that pay all coarse rows are gcd-`2` even covers. For `n=15`, all `32` minimum window covers are primitive, but every one leaves at least two coarse divisor rows unpaid. For `n=16`, the minimum window cover is unique, `(8,18,22,26,30)` with the `16`-gate; it is gcd-`2` and still misses rows `7,12,14`.
+**Ladder comparison:** Best quotient-ladder products: `n=14` scale `7/14` products `5/11`; `n=15` scale `3` product `7/11` while scale `5` has smaller visible gap but product `7/10`; `n=16` retains `34/33,34/33,35/33,35/33`. This makes `n=15` look like a mixed odd-prime product-building case, not just an interpolation between the `n=14` scalar moat and pure dyadic `n=16`.
+**Synthesis:** Added HYP-1894 and `07-reflections/lrc-n14-n15-n16-gate-frontier-s21.md`. Proposed proof target: a Hall/dual row-weight certificate combining forced `n`-gate endpoint rows, coarse divisor rows from THM-369, and primitivity/gcd rows; every speed column should pay at most one unit of dual weight unless it leaves a positive gap or endpoint debt.
+**Verification:** `python3 -m py_compile 04-computation/lrc_n14_15_16_gate_frontier_s21.py` succeeded; the script ran end-to-end in about 45 seconds and produced the stored output.
+
 ## codex-2026-05-31-S421 - LRC Two-Mode Adic Recursion
 
 **Account:** Codex
