@@ -1,0 +1,142 @@
+Lonely Runner 14/15/disproof feedback loop (codex-2026-05-31 S375)
+Exact micro-staircase systems plus exact interval/endpoint checks.
+
+Cell system n=14: patterns=812 candidates=11368 all_scalar_full=True gcd_hist=((1, 6), (2, 6), (7, 1), (14, 1))
+Cell system n=15: patterns=960 candidates=14400 all_scalar_full=True gcd_hist=((1, 8), (3, 4), (5, 2), (15, 1))
+
+Cycle 1: n=14 route, force the search away from the scalar moat
+  n=14 far-from-scalar search, distance >= 3
+  rank=01 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(0, 0, 7, 7, 7, 7, 0, 7, 0, 0, 7, 7, 7)
+  rank=02 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(7, 0, 0, 7, 7, 7, 7, 7, 7, 0, 0, 7, 0)
+  rank=03 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(12, 10, 1, 13, 4, 9, 0, 5, 10, 8, 13, 11, 9)
+  rank=04 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(13, 12, 4, 3, 2, 1, 7, 13, 5, 4, 10, 9, 8)
+  rank=05 n=14 missed=  112 score=11256 scalar_dist= 6 vector=(7, 0, 0, 7, 0, 7, 7, 0, 7, 0, 0, 7, 0)
+  rank=06 n=14 missed=  112 score=11256 scalar_dist= 6 vector=(12, 10, 1, 13, 11, 9, 0, 12, 10, 8, 13, 11, 9)
+  rank=07 n=14 missed=  126 score=11242 scalar_dist= 6 vector=(10, 6, 2, 5, 1, 11, 7, 3, 13, 2, 12, 8, 4)
+  rank=08 n=14 missed=  126 score=11242 scalar_dist= 6 vector=(11, 8, 5, 9, 6, 3, 0, 11, 8, 12, 9, 6, 3)
+
+  n=14 far-from-scalar search, distance >= 5
+  rank=01 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(0, 0, 7, 7, 0, 7, 0, 7, 0, 0, 7, 7, 7)
+  rank=02 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(0, 0, 7, 7, 7, 7, 0, 7, 0, 0, 7, 7, 7)
+  rank=03 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(7, 0, 0, 7, 0, 7, 7, 7, 7, 0, 0, 7, 0)
+  rank=04 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(7, 0, 0, 7, 7, 7, 7, 7, 7, 0, 0, 7, 0)
+  rank=05 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(8, 2, 3, 11, 12, 13, 0, 1, 2, 10, 11, 5, 13)
+  rank=06 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(9, 4, 6, 1, 3, 5, 7, 9, 11, 6, 8, 3, 12)
+  rank=07 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(10, 6, 9, 5, 1, 11, 0, 3, 6, 2, 5, 1, 11)
+  rank=08 n=14 missed=  112 score=11256 scalar_dist= 7 vector=(10, 6, 9, 5, 8, 11, 0, 3, 6, 2, 5, 1, 11)
+
+  dead end: no full blocker emerged; best candidates stay well short of a full cover.
+
+Cycle 2: forced n=15 idea, use the 5-layer torsion shell instead of random vectors
+  n=15 scalar + {5,10}-layer shell
+  support=1 checked=420 best_missed=120 best_count=60 positions=((6, 30), (14, 30)) deltas=((5, 30), (10, 30))
+    example=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0)
+    example=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0)
+  support=2 checked=5460 best_missed=220 best_count=60 positions=((6, 60), (14, 60)) deltas=((5, 60), (10, 60))
+    example=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 5)
+    example=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 10)
+  support=3 checked=43680 best_missed=280 best_count=150 positions=((4, 150), (6, 120), (10, 30), (14, 150)) deltas=((5, 225), (10, 225))
+    example=(0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 5)
+    example=(0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 10)
+  support=4 checked=240240 best_missed=290 best_count=60 positions=((4, 60), (6, 60), (10, 60), (14, 60)) deltas=((5, 120), (10, 120))
+    example=(0, 0, 0, 5, 0, 5, 0, 0, 0, 5, 0, 0, 0, 10)
+    example=(0, 0, 0, 5, 0, 10, 0, 0, 0, 5, 0, 0, 0, 10)
+
+  n=15 far-from-scalar search, distance >= 3
+  rank=01 n=15 missed=  230 score=14170 scalar_dist= 7 vector=(5, 0, 5, 10, 0, 5, 10, 0, 5, 5, 0, 0, 0, 0)
+  rank=02 n=15 missed=  230 score=14170 scalar_dist= 7 vector=(10, 0, 10, 5, 0, 10, 5, 0, 10, 10, 0, 0, 0, 0)
+  rank=03 n=15 missed=  240 score=14160 scalar_dist= 9 vector=(5, 0, 10, 10, 5, 10, 0, 5, 10, 0, 0, 0, 10, 10)
+  rank=04 n=15 missed=  240 score=14160 scalar_dist= 9 vector=(12, 14, 1, 8, 10, 7, 4, 1, 13, 10, 2, 9, 11, 3)
+  rank=05 n=15 missed=  240 score=14160 scalar_dist= 8 vector=(8, 6, 4, 7, 10, 13, 11, 4, 2, 0, 13, 6, 9, 12)
+  rank=06 n=15 missed=  280 score=14120 scalar_dist= 3 vector=(0, 0, 0, 5, 0, 5, 0, 0, 0, 0, 0, 0, 0, 10)
+  rank=07 n=15 missed=  280 score=14120 scalar_dist= 3 vector=(0, 0, 0, 10, 0, 0, 0, 0, 0, 10, 0, 0, 0, 5)
+  rank=08 n=15 missed=  280 score=14120 scalar_dist= 3 vector=(0, 0, 0, 10, 0, 5, 0, 0, 0, 0, 0, 0, 0, 5)
+
+  dead end: the 5-layer shell also opens witnesses quickly; switch to disproof pressure.
+
+Cycle 3: possible disproof constructions by local speed-set pressure
+  n=14 local disproof search
+  local 1: class=positive_gap gap/thresh=0.037879 max_gap=5/1848 boundary=8 mult_14=1 nonunit_mod_14=7 unprotected=8 peel=29 core_E=0 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 84)
+  local 31: class=positive_gap gap/thresh=0.037879 max_gap=5/1848 boundary=8 mult_14=1 nonunit_mod_14=7 unprotected=8 peel=28 core_E=0 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 42)
+  seed 2: class=positive_gap gap/thresh=0.037879 max_gap=5/1848 boundary=8 mult_14=1 nonunit_mod_14=7 unprotected=8 peel=27 core_E=0 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14)
+  local 21: class=positive_gap gap/thresh=0.037879 max_gap=5/1848 boundary=28 mult_14=1 nonunit_mod_14=7 unprotected=28 peel=24 core_E=0 speeds=(1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 24, 84)
+  seed 0: class=positive_gap gap/thresh=0.045455 max_gap=1/308 boundary=24 mult_14=1 nonunit_mod_14=8 unprotected=24 peel=14 core_E=0 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+  local 16: class=positive_gap gap/thresh=0.050595 max_gap=17/4704 boundary=28 mult_14=1 nonunit_mod_14=8 unprotected=28 peel=27 core_E=0 speeds=(1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 48, 84)
+  seed 1: class=positive_gap gap/thresh=0.053571 max_gap=3/784 boundary=24 mult_14=1 nonunit_mod_14=7 unprotected=24 peel=20 core_E=0 speeds=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14)
+  local 24: class=positive_gap gap/thresh=0.071429 max_gap=1/196 boundary=32 mult_14=2 nonunit_mod_14=8 unprotected=32 peel=18 core_E=0 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 42, 84)
+
+  n=15 local disproof search
+  seed 0: class=positive_gap gap/thresh=0.030303 max_gap=1/495 boundary=12 mult_15=1 nonunit_mod_15=7 unprotected=12 peel=16 core_E=0 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
+  local 35: class=positive_gap gap/thresh=0.043590 max_gap=17/5850 boundary=12 mult_15=1 nonunit_mod_15=7 unprotected=12 peel=18 core_E=0 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 30)
+  local 33: class=positive_gap gap/thresh=0.051961 max_gap=53/15300 boundary=20 mult_15=1 nonunit_mod_15=7 unprotected=20 peel=17 core_E=0 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 85)
+  seed 2: class=positive_gap gap/thresh=0.053030 max_gap=7/1980 boundary=8 mult_15=1 nonunit_mod_15=6 unprotected=8 peel=29 core_E=0 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+  local 16: class=positive_gap gap/thresh=0.053030 max_gap=7/1980 boundary=20 mult_15=2 nonunit_mod_15=7 unprotected=20 peel=19 core_E=0 speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 15, 60)
+  seed 1: class=positive_gap gap/thresh=0.055556 max_gap=1/270 boundary=24 mult_15=1 nonunit_mod_15=7 unprotected=24 peel=23 core_E=0 speeds=(1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15)
+  local 21: class=positive_gap gap/thresh=0.057143 max_gap=2/525 boundary=22 mult_15=1 nonunit_mod_15=7 unprotected=22 peel=19 core_E=0 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 15, 70)
+  local 12: class=positive_gap gap/thresh=0.066667 max_gap=1/225 boundary=40 mult_15=1 nonunit_mod_15=8 unprotected=40 peel=15 core_E=0 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 69)
+
+  dead end: local counterexample pressure still leaks by positive gaps or boundary witnesses.
+
+Cycle 4: back to n=14, inspect exposed-cell repair rather than whole-vector score
+  n=14 scalar + half-turn support shell
+  support=1 checked=182 best_missed=56 best_count=14 positions=((6, 14),) deltas=((7, 14),)
+    example=(0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0)
+    example=(1, 2, 3, 4, 5, 13, 7, 8, 9, 10, 11, 12, 13)
+  support=2 checked=1092 best_missed=112 best_count=14 positions=((8, 14), (12, 14)) deltas=((7, 28),)
+    example=(0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 7, 0)
+    example=(1, 2, 3, 4, 5, 6, 7, 1, 9, 10, 11, 5, 13)
+  support=3 checked=4004 best_missed=126 best_count=14 positions=((4, 14), (6, 14), (8, 14)) deltas=((7, 42),)
+    example=(0, 0, 0, 7, 0, 7, 0, 7, 0, 0, 0, 0, 0)
+    example=(1, 2, 3, 11, 5, 13, 7, 1, 9, 10, 11, 12, 13)
+  support=4 checked=10010 best_missed=182 best_count=14 positions=((4, 14), (5, 14), (6, 14), (8, 14)) deltas=((7, 56),)
+    example=(0, 0, 0, 7, 7, 7, 0, 7, 0, 0, 0, 0, 0)
+    example=(1, 2, 3, 11, 12, 13, 7, 1, 9, 10, 11, 12, 13)
+  support=5 checked=18018 best_missed=168 best_count=14 positions=((3, 14), (6, 14), (8, 14), (12, 14), (13, 14)) deltas=((7, 70),)
+    example=(0, 0, 7, 0, 0, 7, 0, 7, 0, 0, 0, 7, 7)
+    example=(1, 2, 10, 4, 5, 13, 7, 1, 9, 10, 11, 5, 6)
+
+  n=14 exposed-cell repair ledger for zero-ramp i=6 half-turn
+  coord= 6  7-> 0 gain_old_misses= 56 new_missed=   0 delta= -56
+  coord= 3  0-> 7 gain_old_misses= 56 new_missed= 308 delta=+252
+  coord= 9  0-> 7 gain_old_misses= 42 new_missed= 350 delta=+294
+  coord= 6  7-> 1 gain_old_misses=  8 new_missed=  96 delta= +40
+  coord= 6  7-> 2 gain_old_misses=  8 new_missed=  96 delta= +40
+  coord= 6  7-> 3 gain_old_misses=  8 new_missed=  96 delta= +40
+  coord= 6  7-> 4 gain_old_misses=  8 new_missed=  96 delta= +40
+  coord= 6  7-> 5 gain_old_misses=  8 new_missed=  96 delta= +40
+  coord= 6  7-> 6 gain_old_misses=  8 new_missed=  96 delta= +40
+  coord= 6  7-> 8 gain_old_misses=  8 new_missed=  96 delta= +40
+
+  dead end: the best one-step repair covers old misses but creates a larger new leak.
+
+Cycle 5: forced n=15 analogue, inspect exposed-cell repair for a best 5-layer puncture
+  chosen n=15 best puncture=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0)
+  n=15 exposed-cell repair ledger for a best 5-layer puncture
+  coord= 6  5-> 0 gain_old_misses=120 new_missed=   0 delta=-120
+  coord= 4  0-> 5 gain_old_misses= 60 new_missed= 340 delta=+220
+  coord= 4  0->10 gain_old_misses= 60 new_missed= 340 delta=+220
+  coord= 2  0-> 5 gain_old_misses= 60 new_missed= 380 delta=+260
+  coord= 2  0->10 gain_old_misses= 60 new_missed= 380 delta=+260
+  coord= 8  0-> 5 gain_old_misses= 50 new_missed= 500 delta=+380
+  coord= 8  0->10 gain_old_misses= 50 new_missed= 500 delta=+380
+  coord= 6  5-> 3 gain_old_misses= 24 new_missed= 144 delta= +24
+  coord= 6  5-> 6 gain_old_misses= 24 new_missed= 144 delta= +24
+  coord= 6  5-> 9 gain_old_misses= 24 new_missed= 144 delta= +24
+
+  dead end: n=15 behaves like a two-prime version of the same repair deficit.
+
+Cycle 6: disproof route, try CRT-overloaded hand families after the repair failures
+  CRT-overloaded hand families
+  n14 2x7 ladder: class=positive_gap gap/thresh=0.122449 max_gap=3/343 boundary=116 mult_14=3 nonunit_mod_14=13 unprotected=116 peel=14 core_E=0 speeds=(2, 4, 6, 7, 8, 10, 12, 14, 21, 28, 35, 42, 49)
+  n14 mixed gates: class=positive_gap gap/thresh=0.100000 max_gap=1/140 boundary=96 mult_14=4 nonunit_mod_14=10 unprotected=96 peel=21 core_E=0 speeds=(1, 2, 4, 7, 8, 11, 13, 14, 21, 28, 35, 42, 56)
+  n15 3x5 ladder: class=positive_gap gap/thresh=0.080000 max_gap=2/375 boundary=150 mult_15=3 nonunit_mod_15=14 unprotected=150 peel=16 core_E=0 speeds=(3, 5, 6, 9, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50)
+  n15 mixed gates: class=positive_gap gap/thresh=0.120000 max_gap=1/125 boundary=112 mult_15=5 nonunit_mod_15=12 unprotected=112 peel=22 core_E=0 speeds=(1, 3, 5, 6, 9, 10, 14, 15, 20, 25, 30, 45, 60, 75)
+
+  dead end: overloading divisors protects some layers but makes higher-denominator leaks.
+
+Cycle 7: synthesis of the loop
+  1. n=14 far-field searches did not find a blocker once scalar distance was forced >=3 or >=5.
+  2. n=15's creative 5-layer analogue has the same moat flavor: small torsion supports open witnesses.
+  3. Exposed-cell repair looks like a Hall deficit: the moves that cover old misses create more new misses.
+  4. Disproof-style speed sets remain leaky; the best route is now an exposed-cell repair theorem
+     combined with endpoint descent, not denser gate sampling.

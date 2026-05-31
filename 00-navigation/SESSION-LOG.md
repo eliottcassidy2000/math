@@ -1,5 +1,18 @@
 # Session Log
 
+## codex-2026-05-31-S375 - Lonely Runner 14/15/Disproof Repair-Deficit Loop
+
+**Account:** Codex
+**Git first:** Rebased over remote S373/S374 work and renumbered this repair-deficit strand to S375.
+**User prompt:** Cycle for a long session between attacks on the 14-runner case, forced creative 15-runner analogues at dead ends, and possible disproof constructions.
+**Computation:** Added `04-computation/lonely_runner_feedback_loop_s375.py` and stored `05-knowledge/results/lonely_runner_feedback_loop_s375.out`. The script builds exact `n=14,15` micro-staircase systems, runs constrained far-from-scalar searches, scans `n=14` half-turn and `n=15` `{5,10}` torsion shells, computes exposed-cell repair ledgers, and runs local gated speed-set disproof pressure.
+**Findings:** For `n=14`, scalar-distance-constrained searches with distance at least `3` and `5` still bottomed out at `112` missed cells. The half-turn shell has best missed counts `56,112,126,182,168` for supports `1..5`. For `n=15`, the `{5,10}` shell has best missed counts `120,220,280,290` for supports `1..4`, and far-from-scalar search bottomed out at `230`.
+**Repair deficit:** In `n=14`, the best non-reverting one-step repair of the `i=6` half-turn puncture covers all `56` old misses but creates `308` total misses. In `n=15`, the best non-reverting repairs of the `i=6,+5` puncture cover only `60/120` old misses and create at least `340` total misses.
+**Disproof pressure:** Local gated speed-set search produced no open-cover candidates. The best `n=14` local examples retained positive gap ratio `0.037879` with empty endpoint core; the best `n=15` example retained positive gap ratio `0.030303`, also core-empty.
+**Synthesis:** Added HYP-1830 and `07-reflections/lonely-runner-feedback-loop-s375.md`. New proof target: an exposed-cell repair-deficit theorem, first for the eight `n=14` alpha stencils, then as a branch-and-bound lower bound for the normalized quotient search.
+**Verification:** `python3 -m py_compile 04-computation/lonely_runner_feedback_loop_s375.py` succeeded; the S375 script was run end-to-end and produced the stored 142-line result.
+**Next:** Prove the one-step repair deficit symbolically; extend to two-step repair sets; feed repair deficit into a normalized `n=14` branch-and-bound certificate and endpoint-descent ranking.
+
 ## codex-2026-05-31-S374 - Forced 14/15/Disproof Feedback Cycle
 
 **Account:** Codex

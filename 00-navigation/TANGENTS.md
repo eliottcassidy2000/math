@@ -323,6 +323,12 @@ Direct fourteen-runner disproof attempts found no open-cover candidates. The str
 **T382** #lonely-runner #scalar-distance #endpoint-closure #fourteen-fifteen | certainty: medium computational synthesis | source: codex-2026-05-31-S374
 Forced cycling between 14-runner proof pressure, 15-runner transfer, and disproof construction suggests the useful invariant is joint scalar distance plus endpoint-closure size. The n=14 scalar-puncture near-blocker only repairs by reverting to the scalar ramp; true second defects still miss `126` cells. The n=15 moat thickens to `120` at divisor coordinates `6,14` with jumps `5,10`. The seven-ladder keeps its tiny gap but endpoint protectors introduce large new boundary layers. See HYP-1829.
 
+**T383** #lonely-runner #exposed-cells #repair-deficit #hall-lemma | certainty: high computational / proof target | source: codex-2026-05-31-S375
+The `n=14` scalar-puncture misses have a repair deficit: the best non-reverting one-step repair covers all `56` old misses but creates `308` total misses. In `n=15`, the best non-reverting repair of the `i=6,+5` puncture covers only `60/120` old misses and creates at least `340` total misses. See HYP-1830.
+
+**T384** #lonely-runner #fifteen-runners #torsion-shell #disproof-pressure | certainty: medium-high computational | source: codex-2026-05-31-S375
+The forced `n=15` analogue is a `{5,10}` torsion-shell moat: supports `1..4` have best missed counts `120,220,280,290`, while far-from-scalar local search bottoms out at `230`. Local gated disproof search still leaks: best gap ratios were `0.037879` for `n=14` and `0.030303` for `n=15`, with empty endpoint cores.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
