@@ -50,6 +50,18 @@
 **Synthesis:** Added HYP-1823 and `07-reflections/lonely-runner-fourteen-runner-scalar-gauge-s367.md`. The new proof target is the zero-class lemma: every nonzero normalized residue vector should have a safe micro-staircase cell. This refines HYP-1817/HYP-1818 from "exclude scalar ramps" to "quotient the scalar line and prove zero is the only full blocker."
 **Next:** Use THM-363 as the gauge quotient foundation; formalize the `2`-torsion hard case by interval stencils; then build a branch-and-bound certificate for all normalized `n=14` classes using unit-shift splitting and nonunit quotient descent.
 
+## codex-2026-05-31-S366b - Formal Extension Investigation Operation Modes
+
+**Account:** Codex
+**Git first:** Started from clean `main...origin/main`.
+**User prompt:** Spend a long overnight-style session cycling between formalization, extension, and investigation, using each mode as inspiration for the other two.
+**Formalization loop:** Added `04-computation/lean/TournamentH7/TournamentH7/NaturalOperationDigraphs.lean`, imported it into `TournamentH7.lean` and `Verify.lean`, and documented it in the Lean README/architecture/submission notes. The module axiom-free proves the additive operation shadow is strict order, the unit/nonunit multiplication shadows are divisibility/proper divisibility, the shifted binary collision, the two-factor product-sum divisor layer, the universal binary witness `m(k)<=2k`, and the seed-defect padding identity.
+**Extension loop:** Added `04-computation/natural_operation_modes_s366.py` and stored `05-knowledge/results/natural_operation_modes_s366.out`. The script uses the formal seed-defect/binary-bound ideas to enumerate all potentially minimal product-sum witnesses through arity `120`, compare binary divisor witnesses with multi-factor packings, and measure product-shadow sparsity through `[1000]`.
+**Investigation loop:** The product shadow remains tiny inside the additive completion: on `[1000]`, addition has `499500` transitive comparisons while multiplication has only `6069` unit-including divisibility edges. In the product-sum atlas, strict multi-factor wins over the binary divisor layer occur in `96/119` arities through `k<=120`; minimal seed lengths distribute as `2:23, 3:52, 4:30, 5:11, 6:3`.
+**Synthesis:** Added HYP-1826 and `07-reflections/formal-extension-investigation-operation-modes-s366.md`. Main idea: product-sum numbers are minimal endpoints in the additive completion of the divisibility DAG, and their minima are governed by factor-packing dominance, not just the two-factor divisor layer.
+**Verification:** `lake build TournamentH7.NaturalOperationDigraphs`, `lake build TournamentH7.Verify`, and full root `lake build TournamentH7` succeeded. Outputs are stored in `05-knowledge/results/lean_natural_operation_digraphs_s366.out`, `05-knowledge/results/lean_verify_natural_operation_s366.out`, and `05-knowledge/results/lean_tournamenth7_natural_operation_s366.out`.
+**Next:** Formalize a `Seed`/minimal-endpoint definition; prove the finite search bound in that abstraction; search for a dominance theorem explaining when many small factors beat one large binary factor; build the two-colored operation complex and compute small critical cycles.
+
 ## codex-2026-05-31-S366 - Product-Sum Defect Lean Formalization
 
 **Account:** Codex

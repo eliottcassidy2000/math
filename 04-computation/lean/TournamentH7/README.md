@@ -20,6 +20,8 @@ TournamentH7/
     ├── Basic.lean            Tournament structure
     ├── RootSigns.lean        Type-A root-sign atoms and walk telescoping
     ├── RootPackets.lean      open-walk boundaries and closed root packets
+    ├── NaturalOperationDigraphs.lean
+    │                          natural-number operation shadows and product-sum layer
     ├── Cycles.lean           DirectedCycle T k
     ├── SCC.lean              Reachability, IsSCC, IsHamiltonianPath, H
     ├── OCF.lean              7 axioms (OCF + Moon-Moser + Moon-Camion + …)
@@ -81,6 +83,14 @@ open `RootWalk`s have endpoint boundary `e_source - e_target`, closed
 be converted into closed type-A root packets. This is the first formal bridge
 from root-sign atoms toward odd-cycle packet support/disjointness and a later
 representation-refined OCF layer.
+
+`NaturalOperationDigraphs.lean` is a small axiom-free natural-number sidecar
+from the S365/S366 product-sum thread. It proves that the additive operation
+shadow `{x,y}->x+y` is exactly strict order, while the nonunit multiplicative
+shadow `{x,y}->xy` is proper divisibility. It also formalizes the shifted
+binary collision `x+y=xy`, the two-factor product-sum divisor layer, the
+universal binary witness giving `m(k)<=2k`, and the seed-defect identity for
+unit padding.
 
 `GoodCuts.lean` also contains the formal axiom-free core of THM-336: the
 all-down tiling is exactly bucket 0, any upward tile forces at least two good

@@ -10,6 +10,7 @@
 import TournamentH7.HSpectrum
 import TournamentH7.RootSigns
 import TournamentH7.RootPackets
+import TournamentH7.NaturalOperationDigraphs
 import TournamentH7.Tilings
 import TournamentH7.GridReflection
 import TournamentH7.StaircaseModel
@@ -123,6 +124,38 @@ theorem directedCycle_toRootPacket_rootTotal_audit {n k : ℕ} {T : Tournament n
     C.toRootPacket.rootTotal = 0 :=
   Tournament.DirectedCycle.toRootPacket_rootTotal C
 #print axioms directedCycle_toRootPacket_rootTotal_audit
+
+/-! ### Natural-number operation shadows -/
+
+theorem natOperation_addShadow_iff_lt_audit (x z : ℕ) :
+    NatOperation.AddShadow x z ↔ x < z :=
+  NatOperation.addShadow_iff_lt x z
+#print axioms natOperation_addShadow_iff_lt_audit
+
+theorem natOperation_mulUnitShadow_iff_dvd_audit {x z : ℕ} (hz : 1 ≤ z) :
+    NatOperation.MulUnitShadow x z ↔ x ∣ z :=
+  NatOperation.mulUnitShadow_iff_dvd hz
+#print axioms natOperation_mulUnitShadow_iff_dvd_audit
+
+theorem natOperation_mulShadow_iff_dvd_and_lt_audit {x z : ℕ} (hx : 1 ≤ x) :
+    NatOperation.MulShadow x z ↔ x ∣ z ∧ x < z :=
+  NatOperation.mulShadow_iff_dvd_and_lt hx
+#print axioms natOperation_mulShadow_iff_dvd_and_lt_audit
+
+theorem natOperation_shifted_binary_collision_iff_audit (a b : ℕ) :
+    (a + 1) + (b + 1) = (a + 1) * (b + 1) ↔ a * b = 1 :=
+  NatOperation.shifted_binary_collision_iff a b
+#print axioms natOperation_shifted_binary_collision_iff_audit
+
+theorem natOperation_twoFactor_productSum_iff_audit (r a b : ℕ) :
+    r + (a + 1) + (b + 1) = (a + 1) * (b + 1) ↔ a * b = r + 1 :=
+  NatOperation.twoFactor_productSum_iff r a b
+#print axioms natOperation_twoFactor_productSum_iff_audit
+
+theorem natOperation_trivial_twoFactor_productSum_audit (r : ℕ) :
+    r + (1 + 1) + ((r + 1) + 1) = (1 + 1) * ((r + 1) + 1) :=
+  NatOperation.trivial_twoFactor_productSum r
+#print axioms natOperation_trivial_twoFactor_productSum_audit
 
 /-! ### Audit each individual theorem -/
 

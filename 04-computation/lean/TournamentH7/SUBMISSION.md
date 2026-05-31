@@ -29,6 +29,10 @@ Lean 4 + Mathlib4 formalisation of forbidden H-values in tournaments.
 | `Tournament.BucketBalance.halfLine_balance` | finite bucket half-lines split into internal and escaping halves | kind-pasteur-2026-05-29-S5 / codex fix |
 | `Tournament.BucketBalance.unordered_balance_of_involutive_fixedPointFree` | fixed-point-free involutive move systems satisfy unordered bucket balance | codex-2026-05-30 |
 | `Tournament.BucketBalance.unordered_balance_boolCube_masks` | finite Boolean cube quotients with nonzero xor masks satisfy unordered bucket balance | opus-2026-05-30-S1 |
+| `NatOperation.addShadow_iff_lt` | additive operation shadow is strict order | codex-2026-05-31-S366 |
+| `NatOperation.mulShadow_iff_dvd_and_lt` | nonunit multiplication shadow is proper divisibility | codex-2026-05-31-S366 |
+| `NatOperation.twoFactor_productSum_iff` | two-factor product-sum witnesses are classified by `a*b=r+1` | codex-2026-05-31-S366 |
+| `NatOperation.trivial_twoFactor_productSum` | universal binary product-sum witness giving `m(k)<=2k` | codex-2026-05-31-S366 |
 | `Tournament.isSelfComplementary_iff_iso_op` | IsSelfComplementary ↔ T ≅ op T | (clean characterisation) |
 | `Tournament.outDegree_iso` | iso preserves out-degree (up to relabel); **PROVED IN LEAN** | clean |
 | `Tournament.isRegular_iso` | iso preserves regularity; **PROVED IN LEAN** | clean |

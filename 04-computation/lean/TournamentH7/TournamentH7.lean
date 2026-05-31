@@ -19,6 +19,7 @@
     · TournamentH7.Basic        — Tournament structure.
     · TournamentH7.RootSigns    — Type-A root-sign atoms and walk telescoping.
     · TournamentH7.RootPackets  — Open-walk boundaries and closed root packets.
+    · TournamentH7.NaturalOperationDigraphs — natural-number operation shadows.
     · TournamentH7.Cycles       — DirectedCycle, isOdd.
     · TournamentH7.SCC          — Reachability, IsSCC, HamPath, H(T).
     · TournamentH7.OCF          — External axioms (OCF, Moon, etc.).
@@ -43,6 +44,7 @@
 import TournamentH7.Basic
 import TournamentH7.RootSigns
 import TournamentH7.RootPackets
+import TournamentH7.NaturalOperationDigraphs
 import TournamentH7.Cycles
 import TournamentH7.SCC
 import TournamentH7.OCF

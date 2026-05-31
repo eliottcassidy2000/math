@@ -305,6 +305,15 @@ THM-364 proves scalar-ramp cell blocking directly: on any open cell of `floor(n*
 **T376** #lonely-runner #fourteen-runners #defect-fragility #missed-cells | certainty: high computational | source: codex-2026-05-31-S371
 The best S364 non-scalar `n=14` near-blocker is not generic: it is scalar ramp `m=8` with one defect `v_6:6->13`. Its 56 missed cells are exactly cells uniquely blocked by coordinate 6 in the scalar ramp. S371 scans all one/two-coordinate scalar-neighborhood deformations and finds no non-scalar full blocker; next target is a scalar-defect fragility lemma.
 
+**T377** #formalization #natural-numbers #operation-shadows #lean | certainty: proved | source: codex-2026-05-31-S366b
+`NaturalOperationDigraphs.lean` proves the S365 shadow claims axiom-free: additive shadow is strict order, unit multiplication shadow is divisibility, nonunit multiplication shadow is proper divisibility, and the two-factor product-sum layer is `a*b=r+1`. It also proves the universal binary witness and seed-defect padding identity. See HYP-1820.
+
+**T378** #product-sum #factor-packing #minimal-endpoints #computation | certainty: medium-high computational | source: codex-2026-05-31-S366b
+Product-sum minima are usually factor packings, not binary divisor witnesses. Through `k<=120`, strict multi-factor wins occur in `96/119` arities; minimal seed lengths are `2:23, 3:52, 4:30, 5:11, 6:3`. Early wins: `(2,2,2)` at `k=5`, `(2,2,3)` at `k=8`, `(2,2,2,2)` at `k=12`, `(3,3,3)` at `k=21`. See HYP-1826.
+
+**T379** #divisibility-dag #transitive-completion #sum-product #operation-complex | certainty: exploratory | source: codex-2026-05-31-S366b
+The operation complex has a clean projection ladder: two-input gates -> one-shadow -> endpoint minimization. Addition gives the transitive completion; multiplication gives the divisibility skeleton; product-sum numbers are minimal common endpoints after unit padding. This mirrors OCF-style packing and Paley/interval additive-versus-multiplicative phase competition.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
