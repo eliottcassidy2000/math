@@ -1158,3 +1158,10 @@ theorem outDegree_le_n_minus_one_audit {n : ℕ} (T : Tournament n) (hn : 1 ≤ 
     (v : Fin n) : T.outDegree v ≤ n - 1 :=
   outDegree_le_n_minus_one T hn v
 #print axioms outDegree_le_n_minus_one_audit
+
+/-- Vertex n-1 in HasBasePath has out-degree ≥ 1 (base path arc to n-2). -/
+theorem base_path_source_outDegree_ge_audit {n : ℕ} (T : Tournament n)
+    (hbp : HasBasePath T) (hn : 2 ≤ n) :
+    1 ≤ T.outDegree ⟨n - 1, by omega⟩ :=
+  base_path_source_outDegree_ge T hbp hn
+#print axioms base_path_source_outDegree_ge_audit

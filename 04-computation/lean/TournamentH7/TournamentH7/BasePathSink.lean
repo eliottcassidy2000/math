@@ -113,4 +113,28 @@ theorem base_path_sink_outDegree_le (T : Tournament n) (hbp : HasBasePath T)
   calc _ ≤ (Finset.univ \ ({v0, v1} : Finset (Fin n))).card := Finset.card_le_card h_sub
        _ = n - 2 := h_card_sdiff
 
+/-! ### Vertex n - 1 (source) lower bound -/
+
+/-- In a HasBasePath tournament with n ≥ 2, vertex n-1 beats vertex n-2
+    (the base-path arc), so T.arc (n-1) (n-2) = true. -/
+theorem base_path_source_arc (T : Tournament n) (hbp : HasBasePath T)
+    (hn : 2 ≤ n) :
+    T.arc ⟨n - 1, by omega⟩ ⟨n - 2, by omega⟩ = true := by
+  have h_succ : (⟨n - 2, by omega⟩ : Fin n).val + 1 < n := by show n - 2 + 1 < n; omega
+  have h_bp := hbp ⟨n - 2, by omega⟩ h_succ
+  convert h_bp using 2
+  apply Fin.ext; show n - 1 = n - 2 + 1; omega
+
+/-- **Theorem.** In a HasBasePath T with n ≥ 2, vertex n-1 has out-degree ≥ 1. -/
+theorem base_path_source_outDegree_ge (T : Tournament n) (hbp : HasBasePath T)
+    (hn : 2 ≤ n) :
+    1 ≤ T.outDegree ⟨n - 1, by omega⟩ := by
+  have h_arc := base_path_source_arc T hbp hn
+  -- h_arc : T.arc ⟨n-1, _⟩ ⟨n-2, _⟩ = true; so vertex n-2 ∈ outNbrs.
+  unfold Tournament.outDegree
+  rw [Finset.one_le_card]
+  refine ⟨⟨n - 2, by omega⟩, ?_⟩
+  rw [Finset.mem_filter]
+  exact ⟨Finset.mem_univ _, h_arc⟩
+
 end Tournament
