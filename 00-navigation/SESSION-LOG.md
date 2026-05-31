@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S374 - Forced 14/15/Disproof Feedback Cycle
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`.
+**User prompt:** Spend a long session cycling between the fourteen-runner case, the fifteen-runner analogue, and possible disproof constructions; every dead end should force a new creative idea on another route.
+**Computation:** Added `04-computation/lonely_runner_feedback_cycle_s374.py` and stored `05-knowledge/results/lonely_runner_feedback_cycle_s374.out`. The script reuses the S356/S360/S372/S373 exact tools and runs a reproducible forced loop: local repair pressure on the best `n=14` scalar puncture, transferred `n=15` scalar-puncture anatomy, quotient-ladder disproof attempts, one-swap repairs around the seven-ladder, and endpoint-protector pressure.
+**Findings:** No counterexample or open-cover candidate appeared. The `n=14` near-blocker can only be fully repaired by undoing the scalar puncture; the best true second-defect pressure still misses `126` cells. The `n=15` analogue thickens the scalar moat to `120` cells and singles out divisor coordinates `6` and `14` with jumps `5` and `10`. The seven-ladder remains a tiny-gap near-disproof with max-gap ratio `0.005411`, but one-swap repairs do not close it and endpoint protectors introduce large new boundary layers.
+**Synthesis:** Added HYP-1829 and `07-reflections/lonely-runner-feedback-cycle-s374.md`. The new invariant is joint optimization of scalar distance and endpoint-protection closure: scalar-near residue blockers hit the `56/120` moat, while tiny-gap quotient ladders hit endpoint-closure blowup.
+**Next:** Build the finite endpoint graph on `{a/14, 9/98, 29/182, 15/182}`, search for directed protection cycles first, then compute scalar-distance signatures of realizing speed sets before exact interval audits.
+
 ## codex-2026-05-31-S373 - Fourteen-Runner Disproof Hunt
 
 **Account:** Codex

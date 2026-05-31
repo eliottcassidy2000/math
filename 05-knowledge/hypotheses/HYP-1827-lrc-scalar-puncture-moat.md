@@ -6,6 +6,7 @@ related:
   - HYP-1817
   - HYP-1818
   - HYP-1819
+  - HYP-1829
   - THM-358
   - THM-360
 ---
@@ -104,3 +105,4 @@ This turns the micro-staircase problem into two parts:
 - `05-knowledge/results/lonely_runner_creative_multiroute_s372.out`.
 - `07-reflections/lonely-runner-creative-multiroute-s372.md`.
 - `05-knowledge/hypotheses/HYP-1818-lrc-scalar-ramp-excision.md`.
+- `05-knowledge/hypotheses/HYP-1829-lrc-scalar-distance-endpoint-closure.md`.

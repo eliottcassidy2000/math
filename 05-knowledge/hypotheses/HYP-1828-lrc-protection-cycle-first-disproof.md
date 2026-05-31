@@ -9,6 +9,7 @@ related:
   - HYP-1816
   - HYP-1819
   - HYP-1823
+  - HYP-1829
 ---
 
 # HYP-1828: Fourteen-runner disproof searches should solve protection cycles first
@@ -115,3 +116,4 @@ speeds do not merely push the leak to the next quotient layer.
 - HYP-1816
 - HYP-1819
 - HYP-1823
+- HYP-1829

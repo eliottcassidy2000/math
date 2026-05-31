@@ -1,0 +1,138 @@
+Lonely Runner forced feedback cycle (codex-2026-05-31 S374)
+Routes: A=14-runner, B=15-runner, C=counterexample construction.
+
+Cell systems: n=14 patterns=812 candidates=11368; n=15 patterns=960 candidates=14400
+
+Cycle 1A: 14-runner attack - can the known 56-miss vector be repaired locally?
+  n=14 best scalar-puncture near-blocker
+    vector=(8, 2, 10, 4, 12, 13, 0, 8, 2, 10, 4, 12, 6)
+    distance_to_scalar=1 nearest_m=8
+    missed=56 s_hist=((1, 8), (3, 8), (5, 8), (7, 8), (9, 8), (11, 8), (13, 8)) unique_patterns=56 total_alpha_width=49/858
+    width_hist=(('1/1386', 14), ('1/1176', 14), ('1/882', 14), ('1/728', 14))
+    pattern_ranges=[(13, 13), (24, 26), (89, 91), (102, 102), (129, 129), (140, 142), (205, 207), (218, 218), (245, 245), (256, 258)]
+    mutation_rank=1 coord=6 13->6 missed=0 fixed=56 lost=0
+    mutation_rank=2 coord=6 13->0 missed=96 fixed=8 lost=48
+    mutation_rank=3 coord=6 13->1 missed=96 fixed=8 lost=48
+    mutation_rank=4 coord=6 13->2 missed=96 fixed=8 lost=48
+    mutation_rank=5 coord=6 13->3 missed=96 fixed=8 lost=48
+    mutation_rank=6 coord=6 13->4 missed=96 fixed=8 lost=48
+    mutation_rank=7 coord=6 13->5 missed=96 fixed=8 lost=48
+    mutation_rank=8 coord=6 13->7 missed=96 fixed=8 lost=48
+  dead_end=only reverting the punctured coordinate repairs all cells; best true second-defect pressure has missed=126 count=1.
+  forced_new_15_idea=transfer the scalar-puncture anatomy to n=15, where the moat is larger.
+
+Cycle 1B: 15-runner transfer - anatomy of the best n=15 scalar punctures
+  n=15 S372 best non-scalar vector
+    vector=(7, 14, 6, 13, 5, 12, 4, 11, 3, 10, 2, 9, 1, 3)
+    distance_to_scalar=1 nearest_m=7
+    missed=120 s_hist=((1, 12), (2, 12), (4, 12), (5, 12), (7, 12), (8, 12), (10, 12), (11, 12), (13, 12), (14, 12)) unique_patterns=120 total_alpha_width=3332/19305
+    width_hist=(('1/2730', 20), ('1/2310', 20), ('1/1890', 20), ('1/1050', 20), ('1/630', 20), ('1/210', 20))
+    pattern_ranges=[(0, 1), (21, 22), (50, 51), (62, 63), (76, 77), (85, 86), (105, 106), (114, 115), (128, 129), (140, 141)]
+  n=15 zero-ramp puncture
+    vector=(0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0)
+    distance_to_scalar=1 nearest_m=0
+    missed=120 s_hist=((1, 12), (2, 12), (4, 12), (5, 12), (7, 12), (8, 12), (10, 12), (11, 12), (13, 12), (14, 12)) unique_patterns=12 total_alpha_width=73/6435
+    width_hist=(('1/1560', 2), ('1/1320', 2), ('1/975', 4), ('1/900', 4))
+    pattern_ranges=[(153, 154), (165, 168), (791, 794), (805, 806)]
+  n=15 zero-ramp puncture
+    vector=(0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0)
+    distance_to_scalar=1 nearest_m=0
+    missed=120 s_hist=((1, 12), (2, 12), (4, 12), (5, 12), (7, 12), (8, 12), (10, 12), (11, 12), (13, 12), (14, 12)) unique_patterns=12 total_alpha_width=73/6435
+    width_hist=(('1/1560', 2), ('1/1320', 2), ('1/975', 4), ('1/900', 4))
+    pattern_ranges=[(153, 154), (165, 168), (791, 794), (805, 806)]
+  n=15 zero-ramp puncture
+    vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5)
+    distance_to_scalar=1 nearest_m=0
+    missed=120 s_hist=((1, 12), (2, 12), (4, 12), (5, 12), (7, 12), (8, 12), (10, 12), (11, 12), (13, 12), (14, 12)) unique_patterns=12 total_alpha_width=1666/96525
+    width_hist=(('1/2730', 2), ('1/2310', 2), ('1/1890', 2), ('1/1050', 2), ('1/630', 2), ('1/210', 2))
+    pattern_ranges=[(64, 65), (204, 205), (341, 342), (617, 618), (754, 755), (894, 895)]
+  n=15 zero-ramp puncture
+    vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10)
+    distance_to_scalar=1 nearest_m=0
+    missed=120 s_hist=((1, 12), (2, 12), (4, 12), (5, 12), (7, 12), (8, 12), (10, 12), (11, 12), (13, 12), (14, 12)) unique_patterns=12 total_alpha_width=1666/96525
+    width_hist=(('1/2730', 2), ('1/2310', 2), ('1/1890', 2), ('1/1050', 2), ('1/630', 2), ('1/210', 2))
+    pattern_ranges=[(64, 65), (204, 205), (341, 342), (617, 618), (754, 755), (894, 895)]
+  dead_end=n=15 has a thicker scalar moat: best radius-1 punctures miss 120 cells, with active coordinates 6 or 14 and jumps 5 or 10.
+  forced_disproof_idea=try quotient ladders that skip the dangerous puncture coordinate.
+
+Cycle 1C: disproof construction - quotient ladders and skipped coordinates
+  n=14 seven-ladders
+  n=14 d=7 skip=6: class=positive_gap len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary=84 unprotected=84 first=9/98 speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  n=14 d=7 skip=12: class=positive_gap len=242689/245245 max_gap=1/1715 gap/thresh=0.008163 boundary=84 unprotected=84 first=57/686 speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 91)
+  n=14 d=7 skip=13: class=positive_gap len=219763/226380 max_gap=1/1176 gap/thresh=0.011905 boundary=168 unprotected=168 first=15/196 speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84)
+  n=14 d=7 skip=10: class=positive_gap len=144107/147147 max_gap=4/4459 gap/thresh=0.012559 boundary=84 unprotected=84 first=9/98 speeds=(1, 7, 14, 21, 28, 35, 42, 49, 56, 63, 77, 84, 91)
+  n=14 d=7 skip=5: class=positive_gap len=9701/10010 max_gap=1/980 gap/thresh=0.014286 boundary=120 unprotected=120 first=33/392 speeds=(1, 7, 14, 21, 28, 42, 49, 56, 63, 70, 77, 84, 91)
+  n=14 d=7 skip=4: class=positive_gap len=13723/14014 max_gap=9/8624 gap/thresh=0.014610 boundary=84 unprotected=84 first=9/98 speeds=(1, 7, 14, 21, 35, 42, 49, 56, 63, 70, 77, 84, 91)
+
+  n=15 three-ladders
+  n=15 d=3 skip=6: class=positive_gap len=19159/19305 max_gap=7/5940 gap/thresh=0.017677 boundary=36 unprotected=36 first=4/45 speeds=(1, 3, 6, 9, 12, 15, 21, 24, 27, 30, 33, 36, 39, 42)
+  n=15 d=3 skip=7: class=positive_gap len=656459/675675 max_gap=1/630 gap/thresh=0.023810 boundary=80 unprotected=80 first=4/45 speeds=(1, 3, 6, 9, 12, 15, 18, 24, 27, 30, 33, 36, 39, 42)
+  n=15 d=3 skip=14: class=positive_gap len=95189/96525 max_gap=1/585 gap/thresh=0.025641 boundary=48 unprotected=48 first=16/225 speeds=(1, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39)
+  n=15 d=3 skip=5: class=positive_gap len=218681/225225 max_gap=1/550 gap/thresh=0.027273 boundary=64 unprotected=64 first=31/450 speeds=(1, 3, 6, 9, 12, 18, 21, 24, 27, 30, 33, 36, 39, 42)
+  n=15 d=3 skip=12: class=positive_gap len=73937/75075 max_gap=1/525 gap/thresh=0.028571 boundary=40 unprotected=40 first=4/45 speeds=(1, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 39, 42)
+  n=15 d=3 skip=13: class=positive_gap len=99643/103950 max_gap=1/495 gap/thresh=0.030303 boundary=78 unprotected=78 first=31/405 speeds=(1, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 42)
+
+  n=15 five-ladders
+  n=15 d=5 skip=6: class=positive_gap len=31883/32175 max_gap=7/9900 gap/thresh=0.010606 boundary=66 unprotected=66 first=7/75 speeds=(1, 5, 10, 15, 20, 25, 35, 40, 45, 50, 55, 60, 65, 70)
+  n=15 d=5 skip=7: class=positive_gap len=3283801/3378375 max_gap=1/1050 gap/thresh=0.014286 boundary=130 unprotected=130 first=19/225 speeds=(1, 5, 10, 15, 20, 25, 30, 40, 45, 50, 55, 60, 65, 70)
+  n=15 d=5 skip=14: class=positive_gap len=475571/482625 max_gap=1/975 gap/thresh=0.015385 boundary=78 unprotected=78 first=16/225 speeds=(1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65)
+  n=15 d=5 skip=5: class=positive_gap len=1093054/1126125 max_gap=3/2750 gap/thresh=0.016364 boundary=106 unprotected=106 first=76/975 speeds=(1, 5, 10, 15, 20, 30, 35, 40, 45, 50, 55, 60, 65, 70)
+  n=15 d=5 skip=12: class=positive_gap len=24627/25025 max_gap=1/875 gap/thresh=0.017143 boundary=70 unprotected=70 first=31/375 speeds=(1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 65, 70)
+  n=15 d=5 skip=13: class=positive_gap len=499249/519750 max_gap=1/825 gap/thresh=0.018182 boundary=128 unprotected=128 first=23/300 speeds=(1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 70)
+
+  dead_end=the best n=14 ladder is extremely close by measure but has 84 exposed endpoints; the n=15 ladders are worse by gap ratio.
+  forced_new_14_idea=repair the seven-ladder by one speed swap before abandoning speed-first search.
+
+Cycle 2A: 14-runner attack - one-swap repairs around the seven-ladder
+  best one-swap exact audits
+  swap 1->1: class=positive_gap len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary=84 unprotected=84 first=9/98 speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  swap 1->2: class=positive_gap len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary=84 unprotected=84 first=5/98 speeds=(2, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  swap 1->3: class=positive_gap len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary=84 unprotected=84 first=29/1176 speeds=(3, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  swap 1->4: class=positive_gap len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary=84 unprotected=84 first=29/1274 speeds=(4, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  swap 1->5: class=positive_gap len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary=84 unprotected=84 first=29/1274 speeds=(5, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  swap 1->6: class=positive_gap len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary=84 unprotected=84 first=29/1274 speeds=(6, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  swap 1->8: class=positive_gap len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary=84 unprotected=84 first=1/98 speeds=(7, 8, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  swap 1->9: class=positive_gap len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary=84 unprotected=84 first=1/98 speeds=(7, 9, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  swap 1->10: class=positive_gap len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary=84 unprotected=84 first=1/98 speeds=(7, 10, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  swap 1->11: class=positive_gap len=142/143 max_gap=5/12936 gap/thresh=0.005411 boundary=84 unprotected=84 first=1/98 speeds=(7, 11, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+
+  dead_end=no one-swap open cover; best swaps either return to the same seven-ladder geometry or reopen larger endpoint leaks.
+  forced_new_15_idea=look for the analogue of one-swap repair as endpoint-protector pressure.
+
+Cycle 2B: 15-runner idea - endpoint protector pressure for best n=15 ladders
+  best15_ladder=(1, 5, 10, 15, 20, 25, 35, 40, 45, 50, 55, 60, 65, 70) gap/thresh=0.010606 leaks=66
+  top_protectors=(covered, -introduced_endpoint_count, speed) [(34, -150, 75), (34, -300, 150), (34, -450, 225), (34, -600, 300), (32, -60, 30), (16, -190, 95), (16, -230, 115), (16, -250, 125)]
+  introduced_endpoint_count_hist_prefix=((4, 1), (6, 1), (8, 1), (12, 1), (14, 1), (16, 1), (18, 1), (22, 1), (24, 1), (26, 1))
+  dead_end=available single protectors cover only slices of the leak layer and introduce many new endpoints.
+  forced_disproof_idea=run the same endpoint-pressure test on the n=14 seven-ladder.
+
+Cycle 2C: disproof construction - endpoint pressure on the seven-ladder
+  seven_ladder_leaks=84
+  top_protectors=(covered, -introduced_endpoint_count, speed) [(48, -84, 42), (36, -196, 98), (36, -392, 196), (24, -238, 119), (24, -266, 133), (24, -322, 161), (24, -350, 175), (24, -434, 217), (14, -16, 8), (14, -18, 9), (14, -20, 10), (14, -22, 11)]
+  introduced_endpoint_count_hist_prefix=((4, 1), (6, 1), (8, 1), (10, 1), (12, 1), (16, 1), (18, 1), (20, 1), (22, 1), (24, 1))
+  dead_end=protection is not scarce, but every protector brings a large new endpoint boundary; this is the endpoint-cycle-first problem in miniature.
+  forced_new_14_idea=combine scalar-cell moat and endpoint pressure as a two-layer obstruction.
+
+Cycle 3A: 14-runner synthesis - scalar moat plus endpoint pressure
+  observation=the best cell-blocker is one scalar puncture away from equality, while the best interval-cover disproof is a seven-ladder with many exposed endpoints.
+  candidate_theorem=any speed set close enough to the Dirichlet/scalar spine to cover the unit layer inherits either the 56-cell scalar moat or the seven-ladder endpoint leak.
+  dead_end=this is not a proof yet; it needs a bridge between residue-vector cell blocking and endpoint-cover leakage.
+  forced_new_15_idea=test whether the bridge should use divisor coordinates 6/14 for n=15.
+
+Cycle 3B: 15-runner synthesis - divisor-coordinate warning
+  observation=n=15 punctures prefer coordinates 6 and 14 with jumps 5 or 10; these are exactly the 3*5 divisor jumps, not random coordinates.
+  candidate_theorem=for composite n, minimal scalar punctures live on coordinates whose gcd with n exposes a proper quotient, and their jump is a complementary divisor layer.
+  dead_end=still local around scalar ramps; far-from-scalar blockers need a search certificate.
+  forced_disproof_idea=record a reusable next search: endpoint cycles first, scalar distance second.
+
+Cycle 3C: disproof route - next reproducible search specification
+  1. choose a finite leak layer L, starting with {a/14, 9/98, 29/182, 15/182};
+  2. find a directed protection cycle on L using the integer protection inequality;
+  3. minimize scalar distance of realizing speeds to avoid the 56/120 scalar moats;
+  4. only then run exact interval audits.
+
+Final synthesis
+  A. 14-runner route: local scalar repair is dead; the 56-cell moat is robust.
+  B. 15-runner route: the transferred moat thickens to 120 and singles out divisor coordinates.
+  C. disproof route: quotient ladders give tiny measure gaps but fail endpoint protection.
+  D. new loop invariant: scalar distance and endpoint-protection closure must be optimized together.

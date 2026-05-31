@@ -320,6 +320,9 @@ The S364 best non-scalar blockers are scalar ramps with one coordinate punctured
 **T381** #lonely-runner #disproof-search #endpoint-protection #seven-ladder | certainty: medium negative evidence / new route | source: codex-2026-05-31-S373
 Direct fourteen-runner disproof attempts found no open-cover candidates. The strongest speed-first near-miss is the seven-ladder `(1,7,14,21,28,35,49,56,63,70,77,84,91)`, with forbidden length `142/143` and max-gap ratio `0.005411`, but it exposes `84` endpoints. Conclusion: search endpoint-protection cycles first, then solve for speeds; speed-first gate/lift/CRT routes keep moving leaks to higher quotients. See HYP-1828.
 
+**T382** #lonely-runner #scalar-distance #endpoint-closure #fourteen-fifteen | certainty: medium computational synthesis | source: codex-2026-05-31-S374
+Forced cycling between 14-runner proof pressure, 15-runner transfer, and disproof construction suggests the useful invariant is joint scalar distance plus endpoint-closure size. The n=14 scalar-puncture near-blocker only repairs by reverting to the scalar ramp; true second defects still miss `126` cells. The n=15 moat thickens to `120` at divisor coordinates `6,14` with jumps `5,10`. The seven-ladder keeps its tiny gap but endpoint protectors introduce large new boundary layers. See HYP-1829.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
