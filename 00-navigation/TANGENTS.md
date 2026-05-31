@@ -422,6 +422,15 @@ At `n=16`, a counterexample must pass the half-turn pair certificate `even-forbi
 **T415** #lonely-runner #n16 #maximal-gate #dyadic-fan | certainty: exact local endpoint cover + proof-target hypothesis | source: codex-2026-05-31-S392
 The naive largest-speed endpoint-cover proof fails by a stable nine-speed fan: for dyadic `v>=32`, `(v/2) + (v/32)*{1,3,5,7,9,11,13,15}` covers all `2v` endpoints and normalizes to `(16,1,3,5,7,9,11,13,15)`. Its gcd is `v/32`, so primitivity forces six gcd-breaker speeds; HYP-1860 predicts those breakers are incompatible with the antipodal quotient certificate.
 
+**T416** #lonely-runner #n16 #folded-antipodal #endpoint-leaf | certainty: medium computational proof target | source: codex-2026-05-31-S393
+The antipodal fold `s=2t` is useful but not sufficient: even speeds descend to `||w*s||<1/16`, odd speeds kill only one side via low/high bands, yet initial/single-gate and some sieve-beam rows have zero folded witness mass. In every S393 folded-danger beam row, exact gap stayed positive and endpoint core was empty. New target: folded danger forces a private dyadic endpoint leaf. See HYP-1861.
+
+**T417** #lonely-runner #n16 #local-cover #sixteen-gate | certainty: high exact local computation | source: codex-2026-05-31-S393
+Covering all `32` endpoints of a `16`-gate using lower residues has exact minimum `9`, namely `(1,3,5,7,8,9,11,13,15)`. Forcing this local cover plus the `16`-gate and giving the adversary five extra beam-chosen speeds still produced only positive-gap, sieve-complete, core-empty rows; best exact `gap/th=0.041667`. This is the computational stress-test companion to THM-367's exact local count law.
+
+**T418** #lonely-runner #n16 #two-torsion #scalar-moat | certainty: exact finite quotient | source: codex-2026-05-31-S393
+The full normalized `n=16` half-turn cube was exhausted: `1152` alpha patterns, `18432` cells. Best support-1 half-turn misses `128` cells at coordinate `15`; best support-2 misses `160` at `(10,15)`; support-3 misses at least `256`. Compression to the half-turn cube may turn the scalar moat into a proof certificate.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

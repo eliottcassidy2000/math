@@ -1,0 +1,121 @@
+n=16 Lonely Runner proof gauntlet (codex-2026-05-31 S393)
+denominator n=16, k=15 moving speeds, threshold=1/16
+
+1. Folded antipodal quotient attack
+   label             even odd even_safe folded_witness danger witness_s
+   initial              7   8   117/280              0  117/280         -
+   single 16 gate       8   7   199/560              0  199/560         -
+   best 8-ladder       14   1  101/6435       101/8580 101/25740    85/528
+   min-cover seed       2   8     13/16      749/22880 17841/22880  191/1144
+   S390 random near     8   7 1722092419/4919523840 499634498712509/12386254136256000 239762921345951/774140883516000   83/7800
+   Folded parity is not a proof by itself: the initial and single-gate
+   rows have zero folded witness mass, meaning the antipodal pair test
+   can lose boundary-only information.  But when the fold does expose
+   mass, it gives a literal quotient witness interval.  The useful
+   target is therefore folded parity plus endpoint-leaf debt.
+
+2. Exact normalized 2-torsion cube
+   patterns=1152 candidates=18432
+   support  best_missed best_count example_support
+         1          128          1 (15,)
+         2          160          1 (10, 15)
+         3          256          1 (4, 6, 8)
+         4          304          1 (6, 10, 12, 15)
+         5          368          2 (4, 6, 8, 10, 15)
+         6          320          1 (2, 3, 4, 8, 10, 15)
+         7          272          1 (3, 5, 6, 8, 10, 12, 14)
+         8          272          1 (4, 5, 6, 7, 8, 9, 10, 12)
+         9          288          3 (2, 3, 4, 5, 7, 8, 9, 10, 11)
+        10          272          1 (6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+        11          320          1 (4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+        12          352          1 (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+        13          432          1 (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+        14          832          1 (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+   global best half-turn vectors
+     missed= 128 support=(15,) vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8)
+     missed= 144 support=(14,) vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0)
+     missed= 144 support=(6,) vector=(0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+     missed= 160 support=(10, 15) vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 8)
+     missed= 176 support=(12,) vector=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0)
+     missed= 240 support=(8, 12) vector=(0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
+     missed= 240 support=(7,) vector=(0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0)
+     missed= 240 support=(4,) vector=(0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+   Even the entire half-turn cube has a moat.  The best pure dyadic
+   non-scalar defect is still the last-coordinate half-turn with 128
+   missed cells.
+
+3. Exact local set covers for dyadic gate endpoints
+   speed endpoints exact_min exact_cover greedy_count greedy_cover_prefix
+       8        16      None ()                                            1 (4,) (8/16)
+      16        32         9 (1, 3, 5, 7, 8, 9, 11, 13, 15)                9 (8, 15, 13, 11, 9, 7, 5, 3, 1) (32/32)
+      32        64      None ()                                           11 (16, 31, 27, 26, 25, 15, 14, 22, 10, 6) (64/64)
+      64       128      None ()                                           11 (32, 63, 55, 53, 23, 10, 7, 60, 39, 4) (128/128)
+   The 16-gate endpoint cover forces a very specific nine-speed local
+   basis.  The next experiment treats that basis as an adversary's
+   opening move, then gives it five extra speeds.
+
+4. Adversarial completion from the exact 16-gate local cover
+   seed=(1, 3, 5, 7, 8, 9, 11, 13, 15, 16)
+   label            miss fixed_len fixed_gap exact_gap missing unprot core fold_witness
+   mincover_beam_0     0 312783/320320     1/384  0.041667           ()     36    0        1/160
+     speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 15, 16, 42, 120)
+   mincover_beam_1     0 931771/960960     1/384  0.041667           ()     48    0        1/160
+     speeds=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 15, 16, 20, 42, 120)
+   mincover_beam_2     0 467981/480480   11/3840  0.045833           ()     40    0        1/120
+     speeds=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 15, 16, 42, 240)
+   mincover_beam_3     0 1861771/1921920   11/3840  0.045833           ()     56    0        1/120
+     speeds=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 15, 16, 20, 42, 240)
+   mincover_beam_4     0 9281443/9609600   11/3840  0.045833           ()     64    0        1/600
+     speeds=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 15, 16, 42, 50, 240)
+   mincover_beam_5     0 466549/480480     1/320  0.050000           ()     36    0   1103/68640
+     speeds=(1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13, 15, 16, 42, 60)
+   mincover_beam_6     0 7883879/8168160     1/320  0.050000           ()     44    0  1421/106080
+     speeds=(1, 2, 3, 5, 6, 7, 8, 9, 11, 13, 15, 16, 17, 42, 60)
+   mincover_beam_7     0 42143/43680     1/320  0.050000           ()     36    0         1/96
+     speeds=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 15, 16, 17, 42, 60)
+   Giving the exact local cover five extra speeds still leaves positive
+   fixed-threshold gaps and empty endpoint cores in the best beam rows.
+
+5. Sieve-aware beam from primitive seed {1,16}
+   label         miss fixed_len fixed_gap exact_gap class       unprot core fold_witness
+   sieve_beam_0     0 15077322193/15249803712  43/39360  0.017480 positive_gap     38    0            0
+     speeds=(1, 3, 4, 10, 13, 14, 16, 17, 18, 19, 22, 23, 31, 41, 60)
+   sieve_beam_1     0 40848891/41385344     1/832  0.019231 positive_gap     60    0       1/4560
+     speeds=(1, 4, 6, 10, 13, 14, 16, 17, 18, 19, 22, 23, 34, 52, 60)
+   sieve_beam_2     0 14114853359/14277943680  29/22080  0.021014 positive_gap     50    0       1/4560
+     speeds=(1, 4, 6, 10, 13, 14, 16, 17, 18, 19, 22, 23, 26, 34, 60)
+   sieve_beam_3     0 10424621/10559208  29/22080  0.021014 positive_gap     46    0            0
+     speeds=(1, 3, 4, 10, 13, 14, 16, 17, 18, 19, 22, 23, 37, 47, 60)
+   sieve_beam_4     0 1355921/1372800   11/6720  0.026190 positive_gap     44    0            0
+     speeds=(1, 4, 6, 10, 13, 14, 16, 17, 18, 19, 22, 23, 25, 26, 60)
+   sieve_beam_5     0 39739845311/40237841280   11/6720  0.026190 positive_gap     36    0            0
+     speeds=(1, 4, 6, 10, 13, 14, 16, 17, 18, 19, 22, 23, 26, 31, 60)
+   sieve_beam_6     0 5833585/5912192   11/6720  0.026190 positive_gap     48    0            0
+     speeds=(1, 3, 4, 10, 12, 13, 14, 16, 17, 18, 19, 22, 23, 52, 60)
+   sieve_beam_7     0 70508971109/71367547680    7/4160  0.026923 positive_gap     44    0            0
+     speeds=(1, 3, 4, 10, 14, 16, 17, 18, 19, 22, 23, 26, 29, 37, 60)
+   sieve_beam_8     0 3781486073/3826232160    5/2912  0.027473 positive_gap     42    0   247/257520
+     speeds=(1, 3, 4, 10, 11, 13, 14, 16, 17, 18, 19, 23, 29, 37, 120)
+   sieve_beam_9     0 10972909/11085360     1/528  0.030303 positive_gap     30    0       1/4560
+     speeds=(1, 4, 6, 10, 13, 14, 16, 17, 18, 19, 22, 23, 26, 29, 60)
+   The beam finds sieve-complete high-coverage sets; some even defeat
+   the folded antipodal witness test.  They still have positive exact
+   gaps and empty endpoint cores.  So the obstruction is not failure to
+   guess the right gate; it is the inability to make the dyadic debt
+   leafless after the sieve is paid.
+
+6. Synthesis / proof targets left standing
+   Route A: Folded antipodal plus endpoint-leaf theorem.  The fold alone
+   can miss boundary-only structure, but any folded-danger set found by
+   the beams still peels to empty endpoint core.  Prove that folded
+   danger forces a private dyadic endpoint leaf.
+   Route B: Local-cover rigidity.  The 16-gate's endpoint cover forces
+   the nine-residue pattern (1,3,5,7,8,9,11,13,15) up to dilation.
+   Prove that any five-speed completion keeps a positive fixed-threshold
+   gap or a private endpoint leaf.
+   Route C: 2-torsion moat.  The full normalized half-turn cube has a
+   128-cell moat.  Prove non-half-turn residues are no better by a
+   compression/rounding argument, then lift through endpoint debt.
+   These are three different shadows of the same thing: in the pure
+   2-adic row, every attempt to close a boundary creates a lower-layer
+   private obligation before a labelled protection cycle can close.

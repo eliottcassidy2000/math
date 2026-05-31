@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S393 - n=16 Proof Gauntlet: Folded Danger and Endpoint Leaves
+
+**Account:** Codex
+**Git first:** Started after S390, then rebased over upstream S391 dyadic endpoint-count formalization and upstream S392 antipodal/fan proof search during close-out; renumbered this folded-danger gauntlet to S393/HYP-1861.
+**User prompt:** Spend another long session trying to prove the `16` runner case; be creative and try many wild ideas.
+**Computation:** Added `04-computation/lrc_n16_proof_gauntlet_s393.py` and stored `05-knowledge/results/lrc_n16_proof_gauntlet_s393.out`. The script tries folded antipodal quotient intervals, exact normalized half-turn cube exhaustion, exact local endpoint set covers for dyadic gates, adversarial completions of the exact `16`-gate local cover, and a sieve-aware beam from `{1,16}`.
+**Findings:** Folded antipodal parity is useful but not sufficient: some rows have zero folded witness mass. However, the sieve-complete folded-danger beam rows remain positive-gap and endpoint-core-empty; the closest has exact `gap/th=0.017480`, `38` unprotected endpoints, and `coreE=0`. The full normalized half-turn cube has a `128`-cell moat, uniquely at coordinate `15` for support `1`; support `2` bottoms out at `160` cells. Covering all `32` endpoints of a `16`-gate with lower residues requires exactly `(1,3,5,7,8,9,11,13,15)`, and every five-speed beam completion stayed positive-gap/core-empty.
+**Synthesis:** Added HYP-1861 and `07-reflections/lrc-n16-proof-gauntlet-s393.md`. The new target is not "folded danger impossible"; it is "folded danger forces a private dyadic endpoint leaf." A plausible proof now needs three locks: THM-366/THM-367 dyadic sieve and capacities, folded antipodal parity, and endpoint-leaf divergence.
+**Verification:** `python3 -m py_compile 04-computation/lrc_n16_proof_gauntlet_s393.py` succeeded; the script ran end-to-end and produced the stored output, and the rerun matched the stored output.
+**Next:** Prove a folded-danger/private-leaf lemma; formalize local-cover rigidity for the `16`-gate seed; search for a compression from arbitrary residue vectors to the exact half-turn cube without increasing coverage.
+
 ## codex-2026-05-31-S392 - LRC n=16 Antipodal/Fan Proof Search
 
 **Account:** Codex
