@@ -554,6 +554,15 @@ Zeckendorf and OCF share the same path-independence skeleton at different fugaci
 **T503** #lonely-runner #owner-debt #zeckendorf-height #product-depth | certainty: medium proof route from exact rows | source: codex-2026-05-31-S460
 S380 owner debt rises in Zeckendorf height: top exposed owners include `154=F11+F5+F2`, `168=F11+F7+F3`, and `182=F11+F8+F3+F1`. A proof may combine p-adic product-depth with Zeckendorf top-index divergence: gate repairs can preserve frontier mass only by exporting owner labels to higher Fibonacci shells.
 
+**T504** #lonely-runner #two-nearest #cycle-independence #zeckendorf | certainty: exact static reformulation | source: codex-2026-05-31-S452
+For any fixed `n`-runner circle configuration, a runner is lonely iff the two adjacent circular gaps around it are both at least `1/n`. Thus no-lonely static configurations have safe gaps forming a nonempty independent set in `C_n`; the empty mask is infeasible by the average-gap constraint. This makes Zeckendorf/OCF enter LRC through literal cycle/path independence, not only endpoint-debt analogy. See THM-370.
+
+**T505** #lonely-runner #pairwise-distances #tournament-lift #triangular-numbers | certainty: structural exact count + exploratory invariants | source: codex-2026-05-31-S452
+The complete pairwise LRC lift has `binom(n,2)=T_{n-1}` distance coordinates, exactly the triangular count of tournament arcs. Orienting `i -> j` when `j` lies in the clockwise half-circle from `i` gives score-sequence and directed-3-cycle features; S452 separates initial `n=14` (`3cyc=70`) from seven-ladder (`110`) and S380 (`106`) global crowding.
+
+**T506** #lonely-runner #chamber-automaton #safe-gap-mask #edge-cover | certainty: proof-program target | source: codex-2026-05-31-S452
+Between runner collisions, circular order is fixed and gaps are affine; collisions perform adjacent swaps. A counterexample would force, in every chamber, unsafe gaps to form an edge cover of `C_n` (equivalently safe gaps remain independent). Proposed proof target: build the chamber automaton and use endpoint rows as a Hall/Farkas obstruction to maintaining this edge cover without exported debt.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

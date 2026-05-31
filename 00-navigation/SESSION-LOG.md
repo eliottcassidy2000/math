@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-05-31-S452 - LRC Runner-Distance Tournament Lift
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S451; during close-out, upstream S431/S22/S460 landed first, so the runner-distance hypothesis and tangents were renumbered to HYP-1904/T504-T506 while retaining the S452 artifact names.
+**User prompt:** Think creatively about how tournament structure may show up in LRC, including extra distance data between runners, two-nearest-neighbor information, Zeckendorf, and the polygonal number theorem.
+**Repo archaeology:** Re-read the S450/S451 LRC analogy and Zeckendorf notes, HYP-1836 endpoint incidence, HYP-1902 boundary normal form, and the n=14/n=16 gate/debt hypotheses. The existing repo picture was one-star endpoint cover plus boundary debt; this session added the circular gap word and complete pairwise-distance lift.
+**Computation:** Added `04-computation/lrc_runner_distance_tournament_s452.py` and stored `05-knowledge/results/lrc_runner_distance_tournament_s452.out`. The script compares star/cycle/complete runner-distance data, counts safe-gap independent sets in `C_n`, and prints exact snapshots for initial `n=14`, the seven-ladder, S380, and initial `n=16` with close-degree and circular-distance-tournament features.
+**Findings:** The two-nearest-neighbor lift is exact (canonized as THM-370): a runner is lonely iff its two adjacent circular gaps are both at least `1/n`. Therefore no-lonely static configurations have safe gaps forming a nonempty independent set in `C_n`; this gives a concrete Zeckendorf/OCF bridge. The complete pairwise lift has `binom(n,2)=T_{n-1}` coordinates, matching tournament arc counts and giving score-sequence, directed-3-cycle, close-degree, and chamber-swap invariants.
+**Synthesis:** Added THM-370, HYP-1904, and `07-reflections/lrc-runner-distance-tournament-s452.md`. The proposed proof direction is to build chamber automata whose nodes are circular orders and safe-gap masks, then use tournament-style pairwise features and Hall/Farkas edge-cover obstruction language to show no counterexample can maintain unsafe gap covers forever without endpoint debt.
+**Verification:** `python -m py_compile 04-computation/lrc_runner_distance_tournament_s452.py` succeeded; rerunning the script produced the stored output.
+
 ## codex-2026-05-31-S431 - LRC Neighbor Tournament Lift
 
 **Account:** Codex

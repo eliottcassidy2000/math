@@ -3,11 +3,14 @@ id: HYP-1902
 status: OPEN
 source: codex-2026-05-31-S451
 related:
+  - THM-370
   - HYP-1290
   - HYP-1881
   - HYP-1890
   - HYP-1900
   - HYP-1901
+  - HYP-1903
+  - HYP-1904
   - HYP-1910
 ---
 
@@ -42,6 +45,12 @@ Fibonacci digits" becomes "no adjacent repair layers can both be spent without
 exporting new endpoint debt."
 
 ## Evidence
+
+S452/THM-370 adds a more literal Zeckendorf entry point: in a fixed runner
+configuration, safe circular gaps form a subset of the cycle graph `C_n`, and
+no-lonely means that subset is independent.  Cutting the cycle at an unsafe gap
+turns the local obstruction into path independence, the exact graph behind
+Zeckendorf normal forms.
 
 `lrc_zeckendorf_bridge_s451.py` records the fugacity bridge:
 
@@ -89,8 +98,12 @@ no-adjacent-carry rule.
 ## Sources
 
 - `04-computation/lrc_zeckendorf_bridge_s451.py`
+- `04-computation/lrc_runner_distance_tournament_s452.py`
+- `01-canon/theorems/THM-370-lrc-two-neighbor-cycle-independence.md`
 - `05-knowledge/results/lrc_zeckendorf_bridge_s451.out`
+- `05-knowledge/results/lrc_runner_distance_tournament_s452.out`
 - `07-reflections/lrc-zeckendorf-bridge-s451.md`
+- `07-reflections/lrc-runner-distance-tournament-s452.md`
 - `07-reflections/lrc-analogy-atlas-s450.md`
 - `07-reflections/zeckendorf-non-consecutivity-pairing.md`
 - `07-reflections/lucas-summand-graph-zeckendorf-geometry.md`

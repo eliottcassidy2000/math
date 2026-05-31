@@ -1,0 +1,52 @@
+Runner-data lifts
+========================================================================================
+  n star distances   cycle gaps   complete distances polygonal name
+  8              7            8                   28 T_7=28
+ 14             13           14                   91 T_13=91
+ 16             15           16                  120 T_15=120
+
+Interpretation
+========================================================================================
+- star: the usual stationary-runner frame
+- cycle: the two nearest neighbors; loneliness is two adjacent safe gaps
+- complete: all pairwise distances, indexed by tournament edges
+
+Static two-nearest obstruction masks
+========================================================================================
+  n     I(C_n,1)   feasible no-lonely     I(C_n,2)      formula
+  8           47                   46          257          257
+ 14          843                  842        16385        16385
+ 16         2207                 2206        65537        65537
+
+A safe gap is one with length at least 1/n.  A runner is lonely exactly when the two adjacent gaps around it are safe.  Thus a configuration with no lonely runner has safe gaps forming an independent set in C_n; the empty mask is not geometrically feasible because all gaps would be shorter than average.
+
+Exact runner-distance snapshots
+========================================================================================================================
+example                                 t      left0     right0         two-nearest0             lonely   gap/th   3cyc safe-gap-mask
+initial n=14 boundary                1/14       1/14       1/14            1/14,1/14 0,1,2,3,4,5,6,7,...        1     70 11111111111111
+n14 seven-ladder max gap       3053/25872     27/308     29/336        29/336,27/308               0,12  481/264    110 10010101010011
+n14 S380 max gap               4339/51744     29/336 4339/51744    4339/51744,29/336                  0  481/264    106 10100101010101
+initial n=16 boundary                1/16       1/16       1/16            1/16,1/16 0,1,2,3,4,5,6,7,...        1    112 1111111111111111
+
+Complete pairwise-distance / tournament summaries
+========================================================================================================================
+example                      close-degree hist            score sequence hist            3cyc comment
+initial n=14 boundary        0^14                         6^14                             70 complete lift
+n14 seven-ladder max gap     0^2 1^8 2^4                  5 6^6 7^6 8                     110 complete lift
+n14 S380 max gap             0 1^12 2                     5^3 6^4 7^4 8^3                 106 complete lift
+initial n=16 boundary        0^16                         7^16                            112 complete lift
+
+Methodology reframes
+========================================================================================
+route                  object                               payoff
+endpoint cover         single stationary star               THM-357 boundary peel
+two-neighbor cycle     gap polygon C_n                      safe masks are independent sets; import Zeckendorf/OCF
+pairwise lift          complete graph K_n                   distances indexed by tournament edges T_{n-1}
+order chambers         circular orders between collisions   adjacent swaps act like tournament arc flips
+distance tournament    i -> j when j is in i's clockwise half-circle score/cycle data measures global crowding
+
+S452 synthesis
+========================================================================================
+The two-nearest-neighbor lift is exact: a runner is lonely iff the two adjacent gaps around it are both at least 1/n.
+Therefore no-lonely static configurations are controlled by independent sets in the gap cycle C_n.  This is the clean place where Zeckendorf/OCF enters LRC.
+The full pairwise-distance lift has one coordinate per edge of K_n, the same triangular-number count as tournament data.  This suggests a proof route through chamber graphs, adjacent swaps, good cuts, and cycle/score invariants rather than scalar distance alone.

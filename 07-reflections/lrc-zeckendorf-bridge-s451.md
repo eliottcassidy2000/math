@@ -111,6 +111,14 @@ annihilate it.
 
 ## Proof Direction
 
+S452 adds a sharper local version of the same idea.  If the actual runner
+positions are ordered on the circle, then a runner is lonely exactly when the
+two adjacent gap edges are both safe.  Thus no-lonely safe-gap masks are
+independent sets in the cycle `C_n`; after cutting at an unsafe gap they become
+path independent sets, the native Zeckendorf graph.  This does not replace the
+endpoint-debt automaton below, but it gives a concrete place to test whether
+the endpoint layers really collapse to a path/cycle normal form.
+
 The bridge suggests a new kind of LRC certificate:
 
 ```text
