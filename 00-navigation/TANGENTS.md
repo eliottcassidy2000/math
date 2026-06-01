@@ -644,6 +644,18 @@ The first concrete disproof-like signal for n=14/n=18 should be `pressure_larges
 **T543** #lonely-runner #safe-gap-masks #circular-arc #edge-cover | certainty: exact static reformulation + noise bridge | source: codex-2026-06-01-S490
 Circular-arc/independent-set noise gives a useful LRC mask language: no-lonely static states have safe gaps independent in `C_n`, equivalently unsafe gaps edge-cover `C_n`. S490 witness masks have adjacent safe pairs, so the known hard rows are visibly not no-lonely masks.
 
+**T544** #lonely-runner #n14 #n18 #bridge-fiber | certainty: exact local set-cover audit | source: codex-2026-06-01-S481
+The local `n`-gate invoice has exact lower-cover size `8` for both `n=14` and `n=18`: six unit residues, the half-gate, and one bridge. The bridge fiber differs sharply: `n=14` has six even choices `{2,4,6,8,10,12}`, while `n=18` has only `{6,12}`. See HYP-1942.
+
+**T545** #lonely-runner #gap-debt #first-even #endpoint-frontier | certainty: exact ladder audit | source: codex-2026-06-01-S481
+The row-parent/gate/double-gate ladders conserve gap-debt products: `n=14` has `(5/924,84)`, `(5/1848,168)`, `(5/3696,336)` all product `5/11`; `n=18` has `(1/176,176)`, `(1/352,352)`, `(1/704,704)` all product `1`.
+
+**T546** #tournament-analysis #lrc #two-neighbor #pressure-gauge | certainty: computational probe | source: codex-2026-06-01-S481
+Mixed two-neighbor slack behaves like a rank gauge and collapses to transitive tournaments in the S481 rows. Edge-local gauges keep structure: close-threshold and deletion-pressure tournaments at n14/n18 ladder midpoints have nonzero cyclic triples and large SCCs. The proof object should be deletion relief or close-pair switches, not scalar two-neighbor scores.
+
+**T547** #agents #methodology #tournament-analysis #scripts | certainty: repository instruction | source: codex-2026-06-01-S481
+Future computational scripts should aim to include Tournament Analysis when meaningfully available: declare pairwise observable, switch/gauge, tie Hamiltonian path, and tournament fingerprints such as score histograms, directed cycles, SCCs, edge flips, and H counts when feasible. This is now recorded in `AGENTS.md`.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

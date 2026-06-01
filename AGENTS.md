@@ -3,6 +3,16 @@
 This repository is a persistent research workspace. Do not end a session from
 this checkout with local work stranded on the machine.
 
+## Research Default: Tournament Analysis
+
+When adding or updating computational research scripts, aim to include
+Tournament Analysis whenever it is meaningfully available. Declare the pairwise
+observable, the switch/gauge that turns pair data into a binary relation, and
+the tie Hamiltonian path. Report tournament fingerprints such as score
+histograms, directed cycles, SCCs, edge flips, and Hamiltonian-path counts when
+feasible. If a script cannot use Tournament Analysis cleanly, state why in its
+methodology or notes.
+
 ## Mandatory GitHub Close-Out
 
 Before the final response in every future Codex session from this repository:

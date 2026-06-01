@@ -1,0 +1,102 @@
+n=14 / n=18 LRC Tournament Analysis ping-pong (codex-2026-06-01 S481)
+All LRC interval and endpoint computations are exact over Fraction.
+
+========================================================================================================
+DETERMINISTIC FORCED-RANDOMNESS CARDS
+========================================================================================================
+Seed 481.  These are not evidence; they decide what to test next.
+1. Bruhat-Tits frontier: shrinking the real gap should push endpoint mass deeper, not erase it
+2. two-neighbor braid: the nearest runner alone is a projection of a left/right handoff pair
+3. SC blowup: first-even rows create a twin sheet that hides inherited unit data
+4. basketball tie path: arbitrary labels are still a Hamiltonian path and should be declared
+
+========================================================================================================
+PING: LOCAL n-GATE COVER FAMILIES
+========================================================================================================
+Cover endpoints owned by the n-gate using only lower columns 1..n-1.
+n   forced columns                 exact  covers  free bridge parts       example
+--------------------------------------------------------------------------------------------------------
+14  (1, 3, 5, 7, 9, 11, 13)            8       6 (2,), (4,), (6,), (8,), (10,), (12,) (7, 1, 2, 3, 5, 9, 11, 13)
+18  (1, 5, 7, 9, 11, 13, 17)           8       2 (6,), (12,)             (9, 6, 1, 5, 7, 11, 13, 17)
+
+Reading:
+- n=14: forced odd fan plus one arbitrary even bridge.
+- n=18: forced unit/half fan plus one square-torsion bridge, only 6 or 12.
+- Both local invoices have size 8, but n=18 has a much thinner bridge fiber.
+
+========================================================================================================
+PONG: ROW-PARENT/GATE DEBT CASCADE
+========================================================================================================
+Rows are interleaved n=14 then n=18 at each repair depth.
+label              mode          class          gap/th      debt  product  frontier pressure depth histogram
+--------------------------------------------------------------------------------------------------------
+n14 initial        initial       boundary_only          0       6        0        6        6 {2:+0,7:+0}:6
+n18 initial        initial       boundary_only          0       6        0        6        6 {2:+0,3:+0}:6
+n14 row-parent     row-parent    positive_gap       5/924      84     5/11     66/7     1092 {2:+0,7:+1}:60 {2:+2,7:+1}:24
+n18 row-parent     row-parent    positive_gap       1/176     176        1   316/27    10512 {2:+0,3:+2}:96 {2:+0,3:+3}:16 {2:+4,3:+2}:64
+n14 gate           gate          positive_gap      5/1848     168     5/11     66/7     4368 {2:+1,7:+1}:120 {2:+3,7:+1}:48
+n18 gate           gate          positive_gap       1/352     352        1   316/27    42048 {2:+1,3:+2}:192 {2:+1,3:+3}:32 {2:+5,3:+2}:128
+n14 double-gate    double-gate   positive_gap      5/3696     336     5/11     66/7    17472 {2:+2,7:+1}:240 {2:+4,7:+1}:96
+n18 double-gate    double-gate   positive_gap       1/704     704        1   316/27   168192 {2:+2,3:+2}:384 {2:+2,3:+3}:64 {2:+6,3:+2}:256
+
+Check:
+- n=14 ladder levels preserve gap*debt = 5/11 while depth moves down the 2-sheet.
+- n=18 ladder levels preserve gap*debt = 1 with the same doubling pattern.
+- The scalar gap improves only by exporting twice as many endpoint witnesses.
+
+========================================================================================================
+TOURNAMENT ANALYSIS AT SELECTED TIMES
+========================================================================================================
+For positive-gap rows use the middle of the largest gap; for boundary rows use the first exposed endpoint. H is omitted for n=18 to keep the audit fast.
+row                t-kind   t             gauge              info                         c3   scc       H          score
+------------------------------------------------------------------------------------------------------------------------------
+n14 initial        boundary 1/14          semicircle         collision=0 antipodal=7         112 14          24104937  6^7 7^7
+n14 initial        boundary 1/14          close-threshold    close_flips=0 exact_th=14         0 1,1,1,1,...          1  0 1 2 3 4 5 6 7 8 9 10 11 12 13
+n14 initial        boundary 1/14          pressure           relief_ties=91                    0 1,1,1,1,...          1  0 1 2 3 4 5 6 7 8 9 10 11 12 13
+n14 initial        boundary 1/14          mixed-two-neighbor profiles=1                        0 1,1,1,1,...          1  0 1 2 3 4 5 6 7 8 9 10 11 12 13
+n18 initial        boundary 1/18          semicircle         collision=0 antipodal=9         240 18                 -  8^9 9^9
+n18 initial        boundary 1/18          close-threshold    close_flips=0 exact_th=18         0 1,1,1,1,...          -  0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+n18 initial        boundary 1/18          pressure           relief_ties=153                   0 1,1,1,1,...          -  0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+n18 initial        boundary 1/18          mixed-two-neighbor profiles=1                        0 1,1,1,1,...          -  0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+n14 row-parent     gap-mid  3053/25872    semicircle         collision=0 antipodal=0         110 14          22168229  5 6^6 7^6 8
+n14 row-parent     gap-mid  3053/25872    close-threshold    close_flips=8 exact_th=0         38 13,1          109371  1^2 4^2 5 6^2 7^2 8 9 10^2 13
+n14 row-parent     gap-mid  3053/25872    pressure           relief_ties=84                   14 12,1,1          3601  0 1 3^2 4 5 7^2 8 9 10^2 12^2
+n14 row-parent     gap-mid  3053/25872    mixed-two-neighbor profiles=7                        0 1,1,1,1,...          1  0 1 2 3 4 5 6 7 8 9 10 11 12 13
+n18 row-parent     gap-mid  3991/57024    semicircle         collision=0 antipodal=0         240 18                 -  8^9 9^9
+n18 row-parent     gap-mid  3991/57024    close-threshold    close_flips=9 exact_th=0         64 17,1               -  1 2 3 4 5 6 7 8^3 9 10 11 12 13 14 15 17
+n18 row-parent     gap-mid  3991/57024    pressure           relief_ties=147                  12 14,1,1,1,...          -  0 1 3^2 4 5 6 7 8 9 10 11 12 13 14^2 16 17
+n18 row-parent     gap-mid  3991/57024    mixed-two-neighbor profiles=6                        0 1,1,1,1,...          -  0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+n14 gate           gap-mid  4339/51744    semicircle         collision=0 antipodal=0         106 14          17826951  5^3 6^4 7^4 8^3
+n14 gate           gap-mid  4339/51744    close-threshold    close_flips=7 exact_th=0         36 13,1          207651  1 2 3 4 5 6^3 7 8 9 10 11 13
+n14 gate           gap-mid  4339/51744    pressure           relief_ties=85                    8 10,1,1,1,...        161  0 1 3^2 4 5 6 7 8 9 10^2 12 13
+n14 gate           gap-mid  4339/51744    mixed-two-neighbor profiles=6                        0 1,1,1,1,...          1  0 1 2 3 4 5 6 7 8 9 10 11 12 13
+n18 gate           gap-mid  8681/114048   semicircle         collision=0 antipodal=0         236 18                 -  7^2 8^7 9^7 10^2
+n18 gate           gap-mid  8681/114048   close-threshold    close_flips=10 exact_th=0        60 17,1               -  1^2 3 4 5 6 8^4 9 10 11 13^2 14^2 17
+n18 gate           gap-mid  8681/114048   pressure           relief_ties=145                  22 16,1,1             -  0 1 3^2 4 5 7^2 8 9 10 11 12 13 14^2 16^2
+n18 gate           gap-mid  8681/114048   mixed-two-neighbor profiles=8                        0 1,1,1,1,...          -  0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+n14 double-gate    gap-mid  8035/103488   semicircle         collision=0 antipodal=0         106 14          17826951  5^3 6^4 7^4 8^3
+n14 double-gate    gap-mid  8035/103488   close-threshold    close_flips=7 exact_th=0         36 13,1          207651  1 2 3 4 5 6^3 7 8 9 10 11 13
+n14 double-gate    gap-mid  8035/103488   pressure           relief_ties=85                    8 10,1,1,1,...        161  0 1 3^2 4 5 6 7 8 9 10^2 12 13
+n14 double-gate    gap-mid  8035/103488   mixed-two-neighbor profiles=6                        0 1,1,1,1,...          1  0 1 2 3 4 5 6 7 8 9 10 11 12 13
+n18 double-gate    gap-mid  15017/228096  semicircle         collision=0 antipodal=0         236 18                 -  7^2 8^7 9^7 10^2
+n18 double-gate    gap-mid  15017/228096  close-threshold    close_flips=10 exact_th=0        60 17,1               -  1^2 3 4 5 6 8^4 9 10 11 13^2 14^2 17
+n18 double-gate    gap-mid  15017/228096  pressure           relief_ties=145                  27 16,1,1             -  0 1 3^2 4 5 7 8^2 9 10 11 12^2 14^2 16^2
+n18 double-gate    gap-mid  15017/228096  mixed-two-neighbor profiles=8                        0 1,1,1,1,...          -  0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+
+========================================================================================================
+HYPOTHESIS CHECKS GENERATED BY THE PING-PONG
+========================================================================================================
+1. Same local tax, different bridge fiber.
+   n=14 exact=8, free=((2,), (4,), (6,), (8,), (10,), (12,)); n=18 exact=8, free=((6,), (12,)).
+   So n=18 is not locally larger at the n-gate invoice; it is locally more rigid.  Its difficulty is the square 3-torsion debt channel.
+
+2. Gap-debt product is conserved on both first-even ladders.
+   n=14: gaps=('5/924', '5/1848', '5/3696') debts=(84, 168, 336) products=('5/11', '5/11', '5/11')
+   n=18: gaps=('1/176', '1/352', '1/704') debts=(176, 352, 704) products=('1', '1', '1')
+   The product is not a proof yet, but it is a stable certificate target: visible improvement is paid for by exact endpoint multiplication.
+
+3. Tournament gauges separate rank collapse from edge-local structure.
+   The mixed-two-neighbor gauge is deliberately rank-like; pressure is edge-local.  If mixed slack collapses but pressure has cycles/SCCs, the proof object should be deletion relief, not scalar two-neighbor score.
+
+4. Working next lemma.
+   First-even LRC rows 2m should be attacked by a bridge-fiber lemma: unit/half fan rows force one bridge fiber, and every bridge fiber either reopens a small denominator row or exports a positive endpoint frontier mass under the pressure tournament.

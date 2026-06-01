@@ -18,6 +18,17 @@
 **Synthesis:** Added HYP-1950 and `07-reflections/lrc-n14-n18-tournament-feedback-s490.md`. Current judgment: n=14 is still the better proof target; n=18 is the better mixed-torsion discovery lab, but not a stronger disproof candidate unless a nontrivial pressure SCC appears under perturbation.
 **Next:** Implement pressure-core peeling over exact endpoint rows; for `n=18`, scan bounded perturbations around `d=9` and `d=18` specifically for `pressure_largest_scc > 1`; merge safe-gap edge-cover transitions with endpoint-private rows.
 
+## codex-2026-06-01-S481 - n14/n18 LRC Tournament Ping-Pong
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S471/S480 Tournament Analysis framework work.
+**User prompt:** Work back and forth between `n=14` and `n=18` LRC, using forced-randomness searches for inspiration when stuck, and make sure future agents know to aim for Tournament Analysis in computational scripts when possible.
+**Web/context noise:** Checked current LRC search context and recent mixed-threshold work. Used this only as inspiration: product-divisibility finite sieves suggested bridge-fiber invoices, and mixed thresholds suggested testing unequal/two-neighbor gauges.
+**Computation:** Added `04-computation/lrc_n14_n18_tournament_pingpong_s481.py` and stored `05-knowledge/results/lrc_n14_n18_tournament_pingpong_s481.out`. The script alternates `n=14` and `n=18` local gate-cover checks, row-parent/gate/double-gate exact endpoint ledgers, and Tournament Analysis gauges: semicircle orientation, close-threshold switch, deletion-pressure tournament, and mixed-two-neighbor control gauge.
+**Findings:** The local `n`-gate invoice has exact lower-cover size `8` for both rows. `n=14` forces `(1,3,5,7,9,11,13)` plus one even bridge from six choices; `n=18` forces `(1,5,7,9,11,13,17)` plus one bridge from only `{6,12}`. Thus `n=18` is locally more rigid, not locally larger. Gap-debt products are conserved across ladder levels: `n=14` stays `5/11`; `n=18` stays `1`.
+**Synthesis:** Added HYP-1942 and `07-reflections/lrc-n14-n18-tournament-pingpong-s481.md`. The proposed proof route is a first-even bridge-fiber lemma: unit/half fan rows force one bridge fiber, and every bridge fiber either reopens a small-denominator row or exports positive endpoint frontier mass under an edge-local tournament. Also updated `AGENTS.md` so future agents should include Tournament Analysis in scripts when meaningfully available.
+**Verification:** `python3 -m py_compile 04-computation/lrc_n14_n18_tournament_pingpong_s481.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S480 - Tournament Analysis Metric Lifts
 
 **Account:** Codex
