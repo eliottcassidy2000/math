@@ -38,6 +38,53 @@
 **HYP-2040 (n=4 picture, exhaustive to speeds<=100, 135,739 triples):** (1) {1,2,3} is the UNIQUE measure-zero triple (n=5,6 NOT unique — special to n=4). (2) MEASURE GAP: every non-AP primitive triple has |SAFE| >= 1/28, equality at {1,6,7}; slow family (1,4k+2,4k+3) -> 1/28,1/22,1/20,1/19,... (3) AP witness t=1/4 -> margins (1/4,1/2,1/4). (4) Parity lemma PROVED: all-odd => t=1/4 witness, so tight => has an even speed. REDUCTION: measure gap + AP witness => LRC(n=4); a sharper finite-flavored target than bounding the non-collapsing 3-term resonance R3.
 **Handoff:** prove the 1/28 measure gap off {1,2,3} (use |SAFE| = 1/4 + R2 - P3, bound the triple overlap P3 away from 1/4+R2 except at the AP); or prove {1,2,3} unique-tight for ALL speeds; understand why n=4 has a unique tight set but n=5,6 do not.
 **Artifacts:** THM-391; HYP-2040; reflection lrc-the-measure-is-trivially-nonneg-the-tight-set-is-everything-s1.md; 04-computation/lrc_n4_{mod4_character,tight_characterization,measure_gap}_monad.py (+.out).
+## monad-reviewer-2026-06-01 — DAILY QC DIGEST (LRC frontier verify + THM-390 collision fix)
+
+**Role:** QC / skeptic. Verified the 2026-06-01 LRC batch (S544–S548, concurrent oracle/opus/codex), fixed one canon defect, flagged one exploratory overclaim.
+
+**1. CANON DEFECT FIXED — THM-390 claimed twice (→ MISTAKE-052).** codex-S547 and
+codex-S548 independently filed two *distinct, both-PROVED* theorems under id THM-390.
+Resolution (first-claimant convention, per THM-084 precedent): S547 `cover-core` keeps
+**THM-390**; S548 `star-peeling` renumbered to **THM-391**. Renamed file + updated all
+star-pointing references (definitions.md, TANGENTS, results/INDEX, hypotheses/INDEX,
+HYP-2036 [now depends on both], HYP-2038, 2 reflections, verifier script). Both proofs
+**independently re-derived and CONFIRMED** — see QC notes in each theorem file.
+
+**2. VERIFIED — THM-390 (cover-core).** Sieve semantics (`q∤v ⇒ ‖v/q‖≥1/q`) and the
+unique minimum AP open cover `U_n={u:2u≥n}`, `|U_n|=⌊n/2⌋`, both re-derived cleanly.
+Coverage + singleton-carrier minimality check out. CONFIRMED.
+
+**3. VERIFIED — THM-391 (star-peeling).** Separation (`r_s≤1/(2q)` vs center gap `≥1/q`)
++ strict-protection + maximal-radius argument is correct; q-agnostic (primality unused).
+Boundary case n=2,s=q checked. Verifier: 3255 bounded cases, all cores empty. CONFIRMED.
+
+**4. EXPLORATORY OVERCLAIM FLAGGED — opus-S548 `lrc_global_to_local_s548.out`.** Its
+PART-5 printed summary claims "for the initial segment, corrections are EXACTLY zero →
+product = outside credit `((n-2)/n)^{n-1}` > 0". The script's *own* numbers refute this:
+the initial-segment product is `~4e-5` (n=4), `~8e-5` (n=5), and **exactly 0** (n=6,7) —
+because the last runner's conditional clearance `P_last≈0` (AP = wall-only = lonely
+*measure* 0). The SESSION-LOG entry itself is honest; only the .out summary paragraph
+overstates. Caveat appended to the opus-S548 entry. No canon impact (exploratory only).
+Class of error matches MISTAKE-024/028: a clean narrative not matching the data.
+
+**5. CROSS-SESSION CONVERGENCE (worth a reflection).** Three independent S543–S548
+attacks — entropy order-parameter (HYP-2038, `h_touch`: 1 generic / 0 tight-AP / −∞
+violation), global→local product (opus-S548), and defect-transport (HYP-2039) — all
+rediscover the SAME structural fact: at the AP / regular polygon the lonely SET is
+nonempty (wall points) but the lonely MEASURE → 0; the AP is the critical/tight extreme.
+THM-390 (sieve gate) + THM-391 (star peels) are the exact local layer beneath this.
+
+**OPEN THREAD for tomorrow (highest-value, honest):** the **set-vs-measure gap at the
+regular polygon** — lower-bound the lonely measure by `(1-2/n)^{n-1} − additive-energy`
+(oracle handoff), and prove the lonely SET stays nonempty where the measure vanishes.
+This is where every entropy/transport/product reframe currently bottoms out. The local
+gates (THM-390/391) are settled; the global lower bound is the wall.
+
+**No court case opened** — the only canon issue was a mechanical id collision (fixed
+directly per established renumber precedent), not a mathematical dispute. Existing latent
+id debt (THM-260×3, THM-338×2, THM-336/337 dups) noted in MISTAKE-052 for future cleanup.
+
+---
 
 ## oracle-2026-06-01-S544o - When GLOBAL SPREAD guarantees LOCAL EMPTINESS: the space/frequency reframe (frequency spread = decorrelation = the engine) (HYP-2039)
 
@@ -63,14 +110,31 @@
 **THE LAST-RUNNER BOTTLENECK:** After constraining all but the fastest, the feasible set is tiny. The fastest runner must hit this tiny set. For the initial segment: the feasible set is perfectly aligned with the last runner's close zone → P_last ≈ 0 (wall-only). For non-AP: alignment is imperfect → P_last > 0 (open lonely).
 **DANGER ZONE OCCUPANCY:** Poisson(λ=2(n-1)/n) predicts P(D=0)≈20%. Actual ≈10% — half of Poisson. The runners are MORE correlated than independent (dependence reduces lonely probability). The ratio actual/Poisson ≈ 0.53 across all n.
 **THE PRODUCT FORMULA = THE RESONANCE DEBT in conditional form:** outside credit = Π((n-2)/n) = ((n-2)/n)^{m}. The corrections ε_k are near zero for all but the last runner. The last runner's correction is maximal for AP (debt = credit). The product formula makes the global→local bridge EXPLICIT: each level clears independently, the product of clearances is positive.
-## codex-2026-06-01-S548 - formalized zero-branch star peeling as THM-390
+
+> **QC note (monad-reviewer-2026-06-01):** This log entry is accurate, but the PART 5
+> *printed summary* inside `lrc_global_to_local_s548.out` overstates: it asserts "for
+> the initial segment, corrections are EXACTLY zero → product = outside credit
+> = ((n-2)/n)^{n-1} > 0". The script's own numbers contradict that — the initial-segment
+> product is `0.00004` (n=4), `0.00008` (n=5), and **exactly 0** (n=6, n=7), because the
+> last runner's conditional clearance `P_last ≈ 0` (the AP/wall case has lonely *measure*
+> zero). So `corrections` are NOT zero (the last factor's correction is ≈ (n-2)/n, maximal),
+> and the empirical product equals the lonely measure (→0 at the wall), not the outside
+> credit. The bridge claim "product > 0 ⇒ lonely exists" only holds in the **open** (non-AP)
+> regime; the AP is wall-only and needs the separate compact-witness argument (cf. THM-390).
+> No canon claim is affected — exploratory output only.
+## codex-2026-06-01-S548 - formalized zero-branch star peeling as THM-390 [renumbered → THM-391]
+
+> **QC note (monad-reviewer-2026-06-01):** This star-peeling theorem was renumbered
+> from THM-390 to **THM-391**. codex-S547 had already claimed THM-390 for the distinct
+> p-adic zero-branch/AP cover-core theorem (committed earlier). First claimant keeps the
+> number; references below to "THM-390" in this entry now mean THM-391. See MISTAKE-052.
 
 **Context:** User asked for a long formalization session on recent novel work, with discovery allowed to steer.  The live cluster was HYP-2036 (p-adic zero-branch cover trienerments), HYP-2037/HYP-2038 (tree entropy/order parameters), and the S546b prime-power endpoint-core audit.
 **Formalization:** Added THM-390, proving that for `n>=2`, `2<=q<=n`, any nonzero q-grid center set and any speeds all divisible by q form a zero-branch star with empty strict endpoint-protection core.  The proof is a separation+nestedness argument: different q-grid centers cannot strictly protect each other's endpoints, and a largest-radius interval at any center has no strict protector.
 **Discovery:** The theorem is q-agnostic.  Prime powers matter as p-adic branch labels, not as special local interval geometry.  Peel layers are explicit: speeds peel in increasing speed order with layer size `|C| * multiplicity(s)`.
 **Computation:** Added `04-computation/lrc_zero_branch_star_theorem_s548.py` and stored `05-knowledge/results/lrc_zero_branch_star_theorem_s548.out`; the verifier checks `3255` bounded exact stars plus selected n=14/n=18 examples and confirms the peel-layer formula.
 **Synthesis:** HYP-2036's local negative result is now theorem-level: covered zero branches kill THM-369 unit witnesses but cannot be local counterexample cores.  HYP-2037/HYP-2038 entropy/box-dimension signals must retain exported labels (endpoint descendants, event owners, critical walls, cross-prime coordinates, or Gabor zero columns) before they can become proof-bearing cyclic trienerments.
-**Artifacts:** `01-canon/theorems/THM-390-lrc-zero-branch-star-core-peeling.md`; `07-reflections/lrc-zero-branch-star-formalization-s548.md`; updated HYP-2036, T636, definitions, and result index.
+**Artifacts:** `01-canon/theorems/THM-391-lrc-zero-branch-star-core-peeling.md` (renumbered from THM-390); `07-reflections/lrc-zero-branch-star-formalization-s548.md`; updated HYP-2036, T636, definitions, and result index.
 
 ## oracle-2026-06-01-S543 - Entropy on the tree: the loneliness box-dimension is the order parameter; tight AP = critical point (HYP-2038)
 

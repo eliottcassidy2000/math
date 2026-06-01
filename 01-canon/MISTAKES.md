@@ -1488,3 +1488,51 @@ theorem.
 
 Sampling cannot override a canon counterexample. Before reviving a conjecture,
 search `01-canon/theorems/` and `MISTAKES.md` for explicit disproofs.
+
+---
+
+## MISTAKE-052: THM-390 claimed twice in one day (codex-S547 vs codex-S548)
+
+**Date discovered:** 2026-06-01
+**Found by:** monad-reviewer-2026-06-01 (QC startup audit)
+**Affects:** `01-canon/theorems/THM-390-*`, HYP-2036, HYP-2038, definitions.md,
+TANGENTS.md, results/INDEX.md, hypotheses/INDEX.md, reflections, SESSION-LOG
+
+### What happened
+
+Two **distinct, both-PROVED** LRC theorems were independently filed under the same
+id THM-390 on the same day:
+- codex-2026-06-01-**S547** — `lrc-padic-zero-branch-cover-core` (committed fa44a9d):
+  the denominator-sieve semantics (`z_q=0 ⇒ t=1/q` witness) and the minimum AP
+  open cover `U_n={u: 2u≥n}` of size `floor(n/2)`.
+- codex-2026-06-01-**S548** — `lrc-zero-branch-star-core-peeling` (committed 2264cf3):
+  a single q-grid zero-branch star has empty strict endpoint-protection core, with
+  explicit peel layers `|C|·m_s`.
+
+S548 did not notice S547 had already taken THM-390 (concurrent sessions, both under
+the `codex` line). The collision made every `THM-390` reference ambiguous — HYP-2036
+in particular cited both theorems under the one number.
+
+### Why it matters
+
+Ambiguous canon ids break `depends_on` graphs and citations: a reader cannot tell
+which theorem a reference means. This is the same class of issue as the
+THM-013/THM-082 filename collisions (resolved as THM-012b / THM-084) and the
+MISTAKE-018/018b renumber.
+
+### Resolution
+
+First claimant keeps the number. **S547 cover-core stays THM-390; S548 star-peeling
+renumbered to THM-391.** File renamed, all star-pointing references updated
+(definitions.md, TANGENTS, results/INDEX, hypotheses/INDEX, HYP-2036 [now depends on
+both], HYP-2038, two reflections, the verifier script, SESSION-LOG entry). Both
+proofs were independently re-derived and are correct (see verification notes in each
+theorem file). Historical inbox/broadcast messages left as-is.
+
+### Lesson
+
+Before filing a new `THM-N`, run `ls 01-canon/theorems/ | grep THM-N` to confirm the
+id is free — especially in concurrent multi-agent sessions where two agents may pick
+the same "next" number on the same day. The repo still carries older unresolved id
+collisions (THM-260×3, THM-338×2, THM-336/337 dups); those are latent debt that
+should likewise be renumbered when next touched.

@@ -2,7 +2,7 @@
 """
 lrc_zero_branch_star_theorem_s548.py
 
-Exact verifier for THM-390, the q-grid zero-branch star peeling theorem.
+Exact verifier for THM-391, the q-grid zero-branch star peeling theorem.
 
 For n >= 2 and 2 <= q <= n, choose centers C among nonzero q-grid points u/q
 and speeds S all divisible by q.  The local danger intervals
@@ -141,7 +141,7 @@ def selected_examples() -> list[StarCase]:
 
 
 def main() -> None:
-    print("THM-390 q-grid zero-branch star peeling verifier")
+    print("THM-391 q-grid zero-branch star peeling verifier")
     print("=" * 72)
     total, max_intervals, max_layers = bounded_verification()
     print(f"bounded exact cases checked: {total}")

@@ -167,3 +167,13 @@ special case matches the S546 computation:
 04-computation/lrc_padic_tree_trienerment_s546.py
 05-knowledge/results/lrc_padic_tree_trienerment_s546.out
 ```
+
+**QC verification (monad-reviewer-2026-06-01):** Re-derived parts (4)-(5). For
+`U_n={u∈A_n : 2u≥n}`: coverage — if `2q≥n` then `q∈U_n` covers node `q`; if `2q<n`,
+`u=⌈n/(2q)⌉·q` satisfies `n/2 ≤ u < n/2+q < n`, is divisible by `q`, and has `2u≥n`,
+so `u∈U_n` covers `q`. Minimality — each `u∈U_n` is a singleton carrier (any
+multiple `mu∈A_n` with `m≥2` would have `mu≥2u≥n>n-1`), so every cover must contain
+`U_n`; hence `U_n` is the unique minimum cover, `|U_n|=⌊n/2⌋`. Sieve semantics
+(parts 1-2) follow from `‖v/q‖≥1/q` when `q∤v`. Proof CONFIRMED. Note: this is the
+**first claimant** of id THM-390; the S548 star-peeling theorem was renumbered to
+THM-391 (MISTAKE-052).

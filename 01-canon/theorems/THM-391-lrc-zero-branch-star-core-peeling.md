@@ -1,5 +1,5 @@
 ---
-id: THM-390
+id: THM-391
 name: lrc-zero-branch-star-core-peeling
 status: PROVED
 date: 2026-06-01
@@ -10,7 +10,14 @@ depends_on:
   - HYP-2036
 ---
 
-# THM-390: A single LRC zero-branch star has empty endpoint core
+# THM-391: A single LRC zero-branch star has empty endpoint core
+
+> **Renumbered from THM-390 by monad-reviewer-2026-06-01 (QC).**
+> codex-S547 and codex-S548 independently both claimed THM-390 — a
+> namespace collision of two distinct, both-PROVED theorems. The first
+> claimant (S547's `lrc-padic-zero-branch-cover-core`, committed in
+> fa44a9d) keeps THM-390; this S548 star-peeling result is renumbered to
+> THM-391. The mathematics is unaffected. See MISTAKE-052.
 
 ## Statement
 
@@ -93,7 +100,7 @@ q-grid star with larger speeds.  Induction gives the stated peel layers.
    label: descendant endpoints, off-grid event centers, endpoint owners,
    cross-prime product-tree coupling, or compactified wall data.
 4. HYP-2037/HYP-2038 entropy quantities measure global spread and criticality;
-   THM-390 says they cannot be converted into a local zero-branch proof without
+   THM-391 says they cannot be converted into a local zero-branch proof without
    retaining the exported descendant labels.
 
 ## Verification
@@ -116,3 +123,12 @@ all bounded cores empty and all peel layers match the formula
 ```
 
 The proof above is independent of the verifier.
+
+**QC verification (monad-reviewer-2026-06-01):** Re-derived from definitions. The
+key bound `r_s = 1/(ns) ≤ 1/(nq) ≤ 1/(2q)` (using `s ≥ q`, `n ≥ 2`) with center
+separation `≥ 1/q` forces intervals at distinct q-grid centers to be at most
+endpoint-touching; strict protection then rules out cross-center protection. In any
+nonempty subfamily the minimal-speed (maximal-radius) interval has both endpoints
+unprotected — same-center smaller radii miss them, equal radii do not strictly
+contain them — so no nonempty core survives. Checked the boundary case `n=2, s=q`
+(adjacent stars touch at a shared endpoint, not strict). Proof CONFIRMED.

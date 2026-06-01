@@ -17,7 +17,7 @@ The recent work around HYP-2036, HYP-2037, and HYP-2038 has two voices:
 
 The formal question is where these meet.  S546b had computed that covered
 prime-power zero branches kill unit witnesses but have no local endpoint core.
-S548 turns that into THM-390.
+S548 turns that into THM-391.
 
 ## The Formal Object
 
@@ -40,7 +40,7 @@ after the zero branch is covered.
 
 ## Theorem Extracted
 
-THM-390:
+THM-391:
 
 ```text
 Every q-grid zero-branch star has empty strict endpoint-protection core.
@@ -79,7 +79,7 @@ is proved.  A branch with `z_q>0` kills the obvious rational witness.  It does
 not create a local obstruction core.
 
 HYP-2037/HYP-2038 now have a cleaner job description.  Entropy and
-box-dimension see global spread/criticality.  THM-390 says that a proof cannot
+box-dimension see global spread/criticality.  THM-391 says that a proof cannot
 collapse that global signal onto a bare zero branch.  It must keep at least one
 export label:
 
@@ -101,12 +101,12 @@ It should have vertices such as:
 
 ## New Mathematical Direction
 
-THM-390 suggests a two-stage proof grammar:
+THM-391 suggests a two-stage proof grammar:
 
 ```text
 sieve branch covered
   => unit witness killed
-  => zero-branch star peels by THM-390
+  => zero-branch star peels by THM-391
   => endpoint debt exported to descendant labels
   => only labelled descendant cores can obstruct LRC.
 ```

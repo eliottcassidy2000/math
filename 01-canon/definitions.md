@@ -106,7 +106,7 @@ pressure SCC whenever the core is pressure-realized.
 `C subset {1/q,...,(q-1)/q}`, and speeds `S` all divisible by `q`, the local
 interval family
 `(u/q - 1/(n s), u/q + 1/(n s))` for `u/q in C` and `s in S`.  In the p-adic
-application `q=p^d` and `C` is usually the unit set `(u,q)=1`.  THM-390 proves
+application `q=p^d` and `C` is usually the unit set `(u,q)=1`.  THM-391 proves
 that every such star has empty strict endpoint-protection core and explicit
 peel layers.
 

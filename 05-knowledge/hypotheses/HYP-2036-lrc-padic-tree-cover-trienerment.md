@@ -20,6 +20,7 @@ related:
   - HYP-2039
   - THM-369
   - THM-390
+  - THM-391
 ---
 
 # HYP-2036: p-adic zero-branch covers form a tree trienerment for LRC sieve channels
@@ -125,7 +126,7 @@ zero branch `z_q=0` is a pinned transport success: the guaranteed hole is
 already at the observer at `t=1/q`.  Covered branches are the cases where the
 hole must be moved by endpoint descendants, owners, or cross-branch coupling.
 
-**Star-core update (THM-390).** S548 also proves the local statement in full
+**Star-core update (THM-391).** S548 also proves the local statement in full
 generality.  The proof does not use q being a prime power: for any
 `2 <= q <= n`, any nonzero q-grid centers, and any speeds all divisible by q,
 the centered q-grid star has empty strict endpoint-protection core.  Prime
@@ -211,7 +212,7 @@ open-sieve survivor fibers and forced singleton carriers.
 `05-knowledge/results/lrc_padic_tree_trienerment_s546.out`;
 `04-computation/lrc_prime_power_zero_branch_core_s546b.py`;
 `05-knowledge/results/lrc_prime_power_zero_branch_core_s546b.out`;
-`01-canon/theorems/THM-390-lrc-zero-branch-star-core-peeling.md`;
+`01-canon/theorems/THM-391-lrc-zero-branch-star-core-peeling.md`;
 `04-computation/lrc_zero_branch_star_theorem_s548.py`;
 `05-knowledge/results/lrc_zero_branch_star_theorem_s548.out`;
 `07-reflections/lrc-padic-tree-cover-trienerment-s546.md`;
