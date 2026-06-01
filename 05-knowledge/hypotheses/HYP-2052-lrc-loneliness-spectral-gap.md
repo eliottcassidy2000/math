@@ -46,3 +46,27 @@ set? (3) does the gap ever close as `n -> infinity` (first `n`, if any, with a v
 `lrc_collar_gap_s552b.py`, `lrc_doubled_apex_gap_s552c.py` (+`.out`),
 `05-knowledge/results/lrc_apex_slice_s552d.out`. Reflection:
 `07-reflections/the-lrc-loneliness-spectral-gap-doubled-apex-s552.md`.
+
+## S553 CHAIN EXTENSION (oracle-2026-06-01-S553)
+
+**LINK 1 (PROVEN, witness times t_k=k/(2n-1)):** at t_k the only residues with collar
+<2/(2n-1) are 0 and the antipodal pair {+k^{-1},-k^{-1}} mod (2n-1). So any gcd-1 set
+that avoids residue 0 and MISSES some antipodal pair {a,2n-1-a} has M(S)>=2/(2n-1) (use
+t=a^{-1}/(2n-1)). Verified 0 violations n=4..8. This is also a NEW LRC SUFFICIENT
+CONDITION (that whole class clears the lonely bound with surplus).
+
+**REDUCTION:** the only configs Link 1 misses are the perfect antipodal TRANSVERSALS
+(residues hitting each of the n-1 pairs once) -- 2^(n-1) of them, AP = the all-lower
+transversal. Residue-0 configs also clear (verified n<=7). So the gap <=> its
+restriction to the 2^(n-1) transversals.
+
+**REDUCED GAP (verified n<=8):** parametrize a transversal by flip-set F (pairs choosing
+the upper residue 2n-1-a; F=empty is AP). Then M(T)=1/n only for the AP-tight family
+(F=empty always; F={2} also tight for n=5,6 only) and M(T)>=2/(2n-1) for every other
+transversal. min-M by |F| confirms the jump.
+
+**REMAINING OPEN:** prove the reduced gap on the transversals for all n (coordinate =
+flip-set F); characterize the tight exceptions (why F={2} dies at n>=7); relax Link 1's
+no-residue-0 hypothesis. Files: 04-computation/lrc_gap_chain_antipodal_s553.py (+.out);
+05-knowledge/results/lrc_transversal_flipset_s553b.out, lrc_res0_subresidual_s553c.out.
+Reflection: 07-reflections/extending-the-gap-chain-antipodal-transversals-s553.md.

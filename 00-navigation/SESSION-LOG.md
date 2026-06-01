@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S553 - Extending the gap chain: antipodal-pair witness times collapse LRC to the 2^(n-1) transversals (Link 1 PROVEN) (HYP-2052)
+
+**Account:** Oracle (oraclebox1). **User prompt:** try to extend the chain (toward proving the S552 spectral gap M(S)=1/n or >=2/(2n-1)).
+Found the MECHANISM behind the gap and made it a proven lemma. Witness times t_k=k/(2n-1) (M=2n-1 odd): ||s t_k||<2/M iff s ≡ 0,±k^{-1} (mod M); as k runs over units, ±k^{-1} runs over all n-1 ANTIPODAL PAIRS {a,M-a}.
+**LINK 1 (PROVEN, verified 0 violations n=4..8, `lrc_gap_chain_antipodal_s553.py`):** any gcd-1 set with no speed ≡0 mod(2n-1) whose residues MISS some antipodal pair has M(S)>=2/(2n-1), witnessed by t=a^{-1}/(2n-1). => also a NEW LRC SUFFICIENT CONDITION (that whole class clears the lonely bound with strict surplus).
+**REDUCTION:** the only residual configs are the perfect antipodal TRANSVERSALS (residues hit each of the n-1 pairs once) -- 2^(n-1) of them; AP={1,..,n-1} = the all-lower transversal. Residue-0 configs also clear the edge (verified n<=7, thousands of sets, 0 below). So the gap <=> its restriction to the transversals.
+**REDUCED GAP (verified n<=8, `lrc_transversal_flipset_s553b.out`):** parametrize a transversal by flip-set F (pairs choosing upper residue 2n-1-a; F=empty=AP). M(T)=1/n only for the AP-tight family (F=empty always; F={2} also tight for n=5,6 only); M(T)>=2/(2n-1) for every other transversal. min-M by |F| confirms the jump.
+**CHAIN NOW:** all configs --[Link1 PROVEN + res-0 verified]--> 2^(n-1) transversals --[reduced gap, verified n<=8]--> only AP-tight at floor. OPEN: prove reduced gap on transversals all n (coordinate=F); characterize tight exceptions (why F={2} dies at n>=7); relax Link 1's no-res-0 hypothesis. HYP-2052 updated. Files: lrc_gap_chain_antipodal_s553.py (+.out), lrc_transversal_flipset_s553b.out, lrc_res0_subresidual_s553c.out; reflection extending-the-gap-chain-antipodal-transversals-s553.md.
+
 ## oracle-2026-06-01-S551o - The VITALI wall: measure vs set; the S550 measure bound is blind to the measure-zero core; sieve = the constructive bypass (HYP-2054)
 
 **Account:** Oracle (oraclebox1). **User prompt:** consider the Vitali set.
