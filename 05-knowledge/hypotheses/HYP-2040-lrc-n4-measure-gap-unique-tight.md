@@ -48,6 +48,9 @@ At `n=4` (threshold 1/4, 3 runners), with the mod-4 character decomposition
    and by fast scan to speeds<=100; the minimum positive value is a stable
    `1/28` from speed-bound 20 through 100. The smallest-measure family is
    `(1, 4k+2, 4k+3)`: `|SAFE| = 1/28, 1/22, 1/20, 1/19, ...` (k=1,2,3,4).
+   **S552 update:** THM-392 proves the exact formula for the whole adjacent
+   family `(1,q,q+1)`, including that `(1,6,7)` is the unique positive minimum
+   in that family.
 
 3. **Boundary witness at the AP.** For `{1,2,3}`, `t* = 1/4` gives
    `(||1/4||, ||2/4||, ||3/4||) = (1/4, 1/2, 1/4) >= 1/4`. Lonely. ∎ (for AP)
@@ -88,4 +91,7 @@ resonance sum directly.
   set & measure floor to speeds<=100; parity lemma.
 - `04-computation/lrc_n4_measure_gap_monad.py` (+.out): exact smallest measures,
   `1/28` gap confirmed.
+- `04-computation/lrc_n4_adjacent_family_s552.py` (+.out): exact adjacent-family
+  formula, proving the main near-tight family bottoms at `(1,6,7)`.
+- `01-canon/theorems/THM-392-lrc-n4-adjacent-family-measure-formula.md`.
 - Reflection: `07-reflections/lrc-the-measure-is-trivially-nonneg-the-tight-set-is-everything-s1.md`.

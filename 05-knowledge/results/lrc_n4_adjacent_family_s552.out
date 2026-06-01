@@ -1,0 +1,48 @@
+LRC n=4 adjacent-family formula (codex-S552)
+Family: speeds (1,q,q+1), threshold 1/4
+
+Closed form by residue class
+  q=0 mod 4: M(q)=(q+2)/(16(q+1))
+  q=1 mod 4: M(q)=(q+3)/(16q)
+  q=2 mod 4: M(q)=(q-2)/(16(q+1))
+  q=3 mod 4: M(q)=(q-1)/(16q)
+
+Verification table
+  q= 2 q=4r+2  exact=     0 formula=     0 intervals= 0 pos_count= 0 pos_sum=0 sum_formula=0
+  q= 3 q=4r+3  exact=  1/24 formula=  1/24 intervals= 2 pos_count= 1 pos_sum=1/4 sum_formula=1/24
+  q= 4 q=4r    exact=  3/40 formula=  3/40 intervals= 2 pos_count= 1 pos_sum=3/4 sum_formula=3/40
+  q= 5 q=4r+1  exact=  1/10 formula=  1/10 intervals= 4 pos_count= 2 pos_sum=3/2 sum_formula=1/10
+  q= 6 q=4r+2  exact=  1/28 formula=  1/28 intervals= 2 pos_count= 1 pos_sum=3/4 sum_formula=1/28
+  q= 7 q=4r+3  exact=  3/56 formula=  3/56 intervals= 4 pos_count= 2 pos_sum=3/2 sum_formula=3/56
+  q= 8 q=4r    exact=  5/72 formula=  5/72 intervals= 4 pos_count= 2 pos_sum=5/2 sum_formula=5/72
+  q= 9 q=4r+1  exact=  1/12 formula=  1/12 intervals= 6 pos_count= 3 pos_sum=15/4 sum_formula=1/12
+  q=10 q=4r+2  exact=  1/22 formula=  1/22 intervals= 4 pos_count= 2 pos_sum=5/2 sum_formula=1/22
+  q=11 q=4r+3  exact=  5/88 formula=  5/88 intervals= 6 pos_count= 3 pos_sum=15/4 sum_formula=5/88
+  q=12 q=4r    exact= 7/104 formula= 7/104 intervals= 6 pos_count= 3 pos_sum=21/4 sum_formula=7/104
+  q=13 q=4r+1  exact=  1/13 formula=  1/13 intervals= 8 pos_count= 4 pos_sum=7 sum_formula=1/13
+  q=14 q=4r+2  exact=  1/20 formula=  1/20 intervals= 6 pos_count= 3 pos_sum=21/4 sum_formula=1/20
+  q=15 q=4r+3  exact= 7/120 formula= 7/120 intervals= 8 pos_count= 4 pos_sum=7 sum_formula=7/120
+  q=16 q=4r    exact= 9/136 formula= 9/136 intervals= 8 pos_count= 4 pos_sum=9 sum_formula=9/136
+  q=17 q=4r+1  exact=  5/68 formula=  5/68 intervals=10 pos_count= 5 pos_sum=45/4 sum_formula=5/68
+  q=18 q=4r+2  exact=  1/19 formula=  1/19 intervals= 8 pos_count= 4 pos_sum=9 sum_formula=1/19
+  q=22 q=4r+2  exact=  5/92 formula=  5/92 intervals=10 pos_count= 5 pos_sum=55/4 sum_formula=5/92
+  q=26 q=4r+2  exact=  1/18 formula=  1/18 intervals=12 pos_count= 6 pos_sum=39/2 sum_formula=1/18
+  q=30 q=4r+2  exact= 7/124 formula= 7/124 intervals=14 pos_count= 7 pos_sum=105/4 sum_formula=7/124
+  q=34 q=4r+2  exact=  2/35 formula=  2/35 intervals=16 pos_count= 8 pos_sum=34 sum_formula=2/35
+  q=38 q=4r+2  exact=  3/52 formula=  3/52 intervals=18 pos_count= 9 pos_sum=171/4 sum_formula=3/52
+
+formula mismatches for q=2..41: 0
+minimum positive adjacent-family measure for q=3..41: q=6, M=1/28
+global adjacent-family theorem: M(2)=0 and M(q)>=1/28 for all q>=3, equality at q=6
+
+Tournament Analysis
+  vertices: adjacent rows q=2..17 representing triples (1,q,q+1)
+  observable: exact safe measure M(q); lower means tighter
+  switch: q_i -> q_j iff M(q_i) < M(q_j); ties use natural q order
+  tie path: q=2 -> q=3 -> ... -> q=17
+  scores: {2: 15, 3: 13, 4: 3, 5: 0, 6: 14, 7: 10, 8: 5, 9: 1, 10: 12, 11: 9, 12: 6, 13: 2, 14: 11, 15: 8, 16: 7, 17: 4}
+  score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1}
+  directed_3_cycles: 0
+  SCCs: [[2], [6], [3], [10], [14], [7], [11], [15], [16], [12], [8], [17], [4], [13], [9], [5]]
+  Hamiltonian_path_count: 1
+  edge_flips_vs_natural_q_path: ['q=6>q=3', 'q=6>q=4', 'q=7>q=4', 'q=8>q=4', 'q=10>q=4', 'q=11>q=4', 'q=12>q=4', 'q=14>q=4', 'q=15>q=4', 'q=16>q=4', 'q=17>q=4', 'q=6>q=5', 'q=7>q=5', 'q=8>q=5', 'q=9>q=5', 'q=10>q=5', 'q=11>q=5', 'q=12>q=5', 'q=13>q=5', 'q=14>q=5', 'q=15>q=5', 'q=16>q=5', 'q=17>q=5', 'q=10>q=7'] ...

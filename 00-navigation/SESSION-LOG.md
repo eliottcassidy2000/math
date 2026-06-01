@@ -18,6 +18,16 @@
 **RESISTANCE CURVE:** hill-climb max min-witness-modulus = 34 (speeds<=60), 35 (speeds<=300), both on FULLY-loaded sets -- bounded speeds keep witnesses small; hardness is carried purely by divisibility loading (=> large speeds). New HYP-2052+ (open): q_min(V) ≈ least q not divisor-killed by any speed.
 **TOURNAMENT ANALYSIS (directive, `lrc_n14_witness_tournament_s551.py`):** at a witness the runners sit in the safe band [1/n,1-1/n]; half-turn runner tournament has #SCC∈{1,13} (S525 confirmed, 284/300 single strong block; the 16 exceptions are antipodal-tie degeneracies at even q), largest gap straddles the observer 93% (the witness-arc signature), score sequences a vanishing near-regular slice of A000568(13). Tight AP = regular 13-gon rotational tournament, gap exactly 2/n at t=1/14.
 **Handoff:** (a) prove HYP-2052+ to bound witnesses by speeds; (b) prove the loaded blind family lonely unconditionally (upgrades "unbounded" to a theorem); (c) attack the set-vs-measure residual (HYP-2039) on the round-tournament slice. Files: 07-reflections/lrc-n14-sieve-has-no-finite-completeness-witness-denominator-unbounded-s551.md; 04-computation/lrc_n14_{multiprime_sieve,sieve_completeness_probe,witness_tournament}_s551.py (+.out); HYP-2052.
+## codex-2026-06-01-S552 - Proved the adjacent-family n=4 LRC measure formula (THM-392)
+
+**Context:** User asked for a long LRC-related proof attempt.  I targeted the sharp HYP-2040 n=4 measure-gap handoff, especially the near-tight adjacent family `(1,4k+2,4k+3)` containing `(1,6,7)`.
+**Theorem:** Added THM-392.  For adjacent triples `(1,q,q+1)` at threshold `1/4`, the exact safe measure is:
+`q=0 mod4 -> (q+2)/(16(q+1))`; `q=1 mod4 -> (q+3)/(16q)`; `q=2 mod4 -> (q-2)/(16(q+1))`; `q=3 mod4 -> (q-1)/(16q)`.
+**Proof mechanism:** Put `t=1/2+u`.  The speed-1 runner gives `u in [-1/4,1/4]`; by symmetry it suffices to sum `u>=0`.  For even `q`, the safe intervals are `(j+3/4)/(q+1) <= u <= (j+3/4)/q`; for odd `q`, `(j+1/4)/(q+1) <= u <= (j+1/4)/q`.  Summing interval lengths gives the four formulas.
+**Payoff:** In this whole adjacent family, `(1,2,3)` is the only zero and `(1,6,7)` is the unique positive minimum `1/28`.  This proves the main observed near-tight branch of the HYP-2040 n=4 gap, but not the full non-adjacent gap.
+**Next obstruction:** Exact scan of small positive triples through speeds `<=44` shows the first non-adjacent competitors are additive-return triples `(a,b,a+b)`: `(2,3,5)`, `(2,5,7)`, `(3,10,13)`, `(3,5,8)`, etc.  Next theorem target: exact formula or `>=1/28` bound for primitive sum triples.
+**Tournament Analysis:** `lrc_n4_adjacent_family_s552.py` treats `q=2..17` as vertices, exact safe measure as observable, and lower-measure-as-tighter as the switch.  The tournament is transitive, with score histogram `{0:1,...,15:1}`, no directed 3-cycles, singleton SCCs, and one Hamiltonian path; flips versus natural q order isolate `q=6` as the first positive AP-branch bottleneck.
+**Artifacts:** `01-canon/theorems/THM-392-lrc-n4-adjacent-family-measure-formula.md`; `04-computation/lrc_n4_adjacent_family_s552.py`; `05-knowledge/results/lrc_n4_adjacent_family_s552.out`; `07-reflections/lrc-n4-adjacent-family-measure-gap-s552.md`.
 
 ## oracle-2026-06-01-S549 - Doubled primes are the recursion's Goldbach bridges (H1<->H2, parity, scale) (HYP-2049)
 
