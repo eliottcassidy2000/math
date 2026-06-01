@@ -1,5 +1,15 @@
 # Session Log
 
+## opus-2026-06-01-S535 - Alternative tournament mappings: APEX-REDUCED gives only 2 iso classes
+
+**Account:** Oracle (remote-control)
+**User prompt:** Come up with different mappings of LRC to tournament space with more meaningfully restricted iso class sets.
+**Computation:** `04-computation/lrc_alternative_tournament_mappings_s535.py`. Compared 5 mappings at n=4,5,6: standard half-turn, distance-rank, apex-reduced, modular (mod-2, mod-3), layered.
+**THE FINDING:** The apex-reduced mapping (condition on c=1, build half-turn tournament on remaining n-2 runners) gives only 1-2 unpointed iso classes across all tested speed sets. At n=5: 2 classes (of A000568(3)=2 possible). At n=6: 2 classes (of A000568(4)=4 possible — half are unrealizable!).
+**Other mappings:** Distance-rank gives n classes (linear, trivially transitive = the outdegree walk). Modular mod-2 gives 6 classes (constant!). Layered gives O(n) classes.
+**Significance:** The apex-reduced mapping makes the LRC reachability question a 2-STATE SYSTEM. The walk on 2 states is trivially ergodic — both states are visited. If either state is lonely-compatible, LRC is proved.
+**The hierarchy:** Distance-rank (n) > Layered (O(n)) > Modular (constant) > Apex-reduced (2!) > Standard (A000016). The apex-reduced mapping is the MOST restricted and most promising for proof.
+
 ## codex-2026-06-01-S534 - Lean residual family for LRC n=3 (THM-388)
 
 **Context:** User asked to keep trying to prove LRC and formalize smaller values. I built on the concurrent Lean `LonelyRunner.lean` work (THM-369/386 and HYP-2006), which already proved the all-`n` no-multiple case, `n=2`, and the `n=3` sieve cover.

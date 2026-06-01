@@ -1,0 +1,112 @@
+Alternative Tournament Mappings for LRC — opus-S535
+
+======================================================================
+COMPARING TOURNAMENT MAPPINGS FOR LRC
+======================================================================
+
+============================================================
+n=4
+============================================================
+
+Speed sets tested: 409
+
+  STANDARD (half-turn, n=4 vertices):
+    unpointed iso classes: 2
+    pointed iso classes: 8
+
+  DISTANCE-RANK (n=4 vertices, 50 speed sets):
+    pointed iso classes: 4
+
+  APEX-REDUCED (2 runners, conditioned on c=1, 50 sets):
+    unpointed iso classes: 1
+    apex-aligned cells: 1454
+
+  MODULAR (mod-2, 3 vertices, 50 sets):
+    pointed iso classes: 6
+
+  LAYERED (3 layers + observer = 4 vertices, 50 sets):
+    (class, layer_sizes) pairs: 7
+
+============================================================
+n=5
+============================================================
+
+Speed sets tested: 205
+
+  STANDARD (half-turn, n=5 vertices):
+    unpointed iso classes: 9
+    pointed iso classes: 22
+
+  DISTANCE-RANK (n=5 vertices, 50 speed sets):
+    pointed iso classes: 5
+
+  APEX-REDUCED (3 runners, conditioned on c=1, 50 sets):
+    unpointed iso classes: 2
+    apex-aligned cells: 1778
+
+  MODULAR (mod-2, 3 vertices, 50 sets):
+    pointed iso classes: 6
+
+  LAYERED (3 layers + observer = 4 vertices, 50 sets):
+    (class, layer_sizes) pairs: 14
+
+============================================================
+n=6
+============================================================
+
+Speed sets tested: 126
+
+  STANDARD (half-turn, n=6 vertices):
+    unpointed iso classes: 24
+    pointed iso classes: 52
+
+  DISTANCE-RANK (n=6 vertices, 50 speed sets):
+    pointed iso classes: 6
+
+  APEX-REDUCED (4 runners, conditioned on c=1, 50 sets):
+    unpointed iso classes: 2
+    apex-aligned cells: 2510
+
+  MODULAR (mod-2, 2 vertices, 50 sets):
+    pointed iso classes: 6
+
+  MODULAR (mod-3, 4 vertices, 50 sets):
+    pointed iso classes: 16
+
+  LAYERED (3 layers + observer = 4 vertices, 50 sets):
+    (class, layer_sizes) pairs: 21
+
+============================================================
+SUMMARY: Iso class counts by mapping
+============================================================
+
+The MOST RESTRICTED mapping = fewest iso classes.
+The MOST USEFUL mapping = captures LRC condition + few classes.
+
+RANKINGS (fewer = better for proof):
+  1. Distance-rank: n pointed classes (trivially transitive)
+     BUT: runner structure lost. Walk = walk on {0,...,n-1}.
+  2. Layered: O(n) classes (partition by distance shell)
+     Captures coarse structure. Lonely = layer0 empty.
+  3. Modular: O(A000568(sqrt(n))) classes
+     CRT structure preserved. Lonely = observer beats all classes.
+  4. Apex-reduced: A000568(n-2) classes (one fewer runner)
+     Conditioned on apex. Captures the INTERIOR structure.
+  5. Standard: A000016(n-1) classes (current best)
+
+THE KEY INSIGHT: the distance-rank mapping collapses to n classes
+because the tournament is ALWAYS TRANSITIVE (total order by distance).
+This is the SIMPLEST possible mapping. The walk on {0,...,n-1}
+(observer position in the distance ranking) IS the observer outdegree walk.
+LRC = the walk reaches position n-1 (observer at the bottom = all safe).
+
+But the distance-rank walk is NOT just a random walk on {0,...,n-1}.
+It's constrained by the runner dynamics. The CONSTRAINTS come from
+the runner sub-tournament — which the distance-rank mapping LOSES.
+
+The IDEAL mapping preserves enough runner structure to constrain the walk
+while having few enough classes for a tractable reachability analysis.
+The MODULAR mapping at n=14 with modulus 7 gives O(A000568(8))=O(6880)
+classes — but the CRT restriction makes most unrealizable.
+The ACTUAL count of realizable CRT-modular classes at n=14 may be << 6880.
+
