@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-01-S512 - LRC as threshold-decorated A000568 class fiber
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S509/HYP-1976 and the S508 concurrent-session protocol.
+**User prompt:** Explore the hypothesis that LRC is analogous to a problem on tournament isomorphism classes and A000568, where runner systems map to a restricted subset of similarly sized tournament classes; try small `n=3,4` as a proof template and think creatively toward `n=14`.
+**Computation:** Added `04-computation/lrc_iso_class_constraint_s512.py` and stored `05-knowledge/results/lrc_iso_class_constraint_s512.out`. The script enumerates A000568 values by Burnside/direct canonicalization, then compares runner lifts: raw half-turn phase class, observer-marked phase class, safe-colored phase class, marked gap-rank class, threshold-decorated gap class, marked pair-deficit class, and threshold-decorated pair-deficit class. It samples exact open cells and equality walls for primitive total `n=3,4` speed sets.
+**Findings:** Raw A000568 class is a real base but too coarse. For total `n=3`, phase, observer-marked, gap-rank, and pair-deficit-rank fibers are mixed and certify `0/79` sampled speed sets; threshold-decorated gap and pair-cell fibers certify `79/79`. For total `n=4`, the same raw/rank lifts certify `0/109`, while threshold-decorated gap and pair-cell fibers certify `109/109`. Open half-turn menus remain restricted (`n=5` sees `4/12` classes), but equality walls with the fixed tie path expand the boundary image (`n=5` sees `11/12`).
+**Synthesis:** Added HYP-1982 and `07-reflections/lrc-as-threshold-decorated-tournament-class-fiber-s512.md`, updated HYP-1951/HYP-1976, result/hypothesis indexes, concept map, and tangent T605. The viable n=14 route is not full A000568(14) enumeration; it is proving that the hard quotient-ladder walk in a compressed gap/pair/endpoint-pressure fiber must hit a good-only threshold class.
+**Verification:** `python3 -m py_compile 04-computation/lrc_iso_class_constraint_s512.py`; full script rerun stored output.
+
 ## oracle-2026-06-01-S511 - LRC as source-reachability in the marked A000568 quotient
 
 **Account:** Oracle (remote-control). **User prompt:** explore many creative paths for how LRC is completely analogous to a problem on tournament iso-classes and A000568.

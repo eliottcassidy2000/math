@@ -3,6 +3,7 @@ id: HYP-1976
 status: OPEN
 source: codex-2026-06-01-S509
 related:
+  - HYP-1982
   - HYP-1972
   - HYP-1975
   - HYP-1974
@@ -111,6 +112,9 @@ k=24 best seed: 1^22 + 2 24
 4. A counterexample-shaped row should require not just small runner gaps but a
    nontrivial pair-cell core after quotienting the transitive tie-path
    completion.
+5. HYP-1982 predicts that the pair-cell vector becomes proof-relevant when its
+   classes are threshold-decorated by zero/nonzero danger colors; rank-only
+   pair-deficit classes are still too coarse.
 
 ## Sources
 
@@ -118,6 +122,7 @@ k=24 best seed: 1^22 + 2 24
 - `05-knowledge/results/lrc_pair_cell_operation_grid_s509.out`
 - `07-reflections/lrc-pair-cell-operation-grid-s509.md`
 - HYP-1972
+- HYP-1982
 - HYP-1963
 - HYP-1965
 - HYP-1966

@@ -10,6 +10,7 @@ related:
   - HYP-1931
   - HYP-1967
   - HYP-1971
+  - HYP-1982
 ---
 
 # HYP-1951: The runner tournament-clock realizes a fixed circular menu in G_n
@@ -59,6 +60,13 @@ marked, high-H side of the clock: near-regular circular cells can have many
 vertices whose two adjacent gaps are both safe.  Thus `H` is useful, but the
 LRC invariant must also remember the marked stationary vertex, the safe-gap
 mask, and pressure/deletion data.  See HYP-1971.
+
+S512 adds the A000568-class-fiber correction.  The open circular menu is a
+real restriction, but equality walls with the fixed tie Hamiltonian path form a
+larger boundary compactification.  For LRC, raw unmarked classes and
+observer-marked classes are mixed in total `n=3,4`; threshold-decorated gap and
+pair-cell fibers are the first class objects that separate good-only witness
+states.  See HYP-1982.
 
 ## Evidence
 
@@ -116,6 +124,7 @@ data.
 - HYP-1931
 - HYP-1967
 - HYP-1971
+- HYP-1982
 - `04-computation/h_loneliness_meter_s506.py`
 - `05-knowledge/results/h_loneliness_meter_s506.out`
 - `07-reflections/h-as-loneliness-meter-s506.md`
