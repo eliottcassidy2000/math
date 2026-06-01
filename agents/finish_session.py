@@ -141,6 +141,40 @@ def push_current_branch():
     return True
 
 
+def verify_not_ahead():
+    """Verify that HEAD is not ahead of its configured upstream."""
+    upstream = upstream_ref()
+    if upstream is None:
+        print("ERROR: Cannot verify ahead/behind state without an upstream.", file=sys.stderr)
+        return False
+
+    remote = upstream.split("/", 1)[0]
+    rf = run(["git", "fetch", remote], capture=True)
+    if rf.returncode != 0:
+        print(f"ERROR: git fetch for verification failed.\n{rf.stdout}\n{rf.stderr}", file=sys.stderr)
+        return False
+
+    r = run(["git", "rev-list", "--left-right", "--count", f"{upstream}...HEAD"], capture=True)
+    if r.returncode != 0:
+        print(f"ERROR: git ahead/behind verification failed.\n{r.stdout}\n{r.stderr}", file=sys.stderr)
+        return False
+
+    parts = (r.stdout or "").strip().split()
+    if len(parts) != 2:
+        print(f"ERROR: Unexpected ahead/behind output: {r.stdout!r}", file=sys.stderr)
+        return False
+
+    behind, ahead = (int(parts[0]), int(parts[1]))
+    if ahead != 0:
+        print(f"ERROR: Branch is still ahead of {upstream} by {ahead} commit(s).", file=sys.stderr)
+        return False
+
+    suffix = f" and behind by {behind}" if behind else ""
+    print(f"\n-- git verification -----------------------------")
+    print(f"  Verified: HEAD is not ahead of {upstream}{suffix}.")
+    return True
+
+
 def git_commit_push(commit_msg):
     """Stage all, commit, push with rebase-retry."""
     print("\n-- git add -A ------------------------------------")
@@ -161,7 +195,11 @@ def git_commit_push(commit_msg):
     else:
         print(r.stdout, end="")
 
-    return push_current_branch()
+    if not push_current_branch():
+        return False
+
+    return verify_not_ahead()
+
 
 
 def interactive_mode(machine_id):

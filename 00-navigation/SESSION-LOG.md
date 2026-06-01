@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-01-S508 - Concurrent-session operating protocol
+
+**Account:** Codex
+**Git first:** Started clean on `main...origin/main`.
+**User prompt:** Make future agents operate better as concurrent sessions; encourage frequent pushes to `origin/main`, small namespace-claiming commits, and treating new work encountered during rebase as possible signal for larger-scale novelty.
+**Protocol update:** Added `00-navigation/CONCURRENT-SESSIONS.md` as the shared playbook. The new policy treats `origin/main` as the live research surface, recommends 30-60 minute checkpoints in long sessions, asks agents to claim scarce IDs/filenames early with honest stubs, and frames rebase/fetch surprises as evidence to compare against the current invariant, proof route, script, or application thread.
+**Core docs:** Updated `AGENTS.md`, `CLAUDE.md`, `README.md`, and `agents/REGISTRY.md` to point future agents at the concurrent-session playbook and to make frequent checkpoint pushes part of normal long-session behavior.
+**Tooling:** Added `agents/checkpoint_session.py`, a mid-session helper that stages intentional changes, commits if needed, pushes, and reuses the close-out verification path. Hardened `agents/finish_session.py` so close-out now fetches and verifies that `HEAD` is no longer ahead of upstream after push.
+**Verification:** `python3 -m py_compile agents/finish_session.py agents/checkpoint_session.py`; `python3 agents/checkpoint_session.py --help`; `git diff --check`.
+
 ## codex-2026-06-01-S506b - LRC arc criteria as a loneliness metric vector
 
 **Account:** Codex

@@ -43,11 +43,29 @@ Your own inbox is written to by others only. You read it; you never write to it 
 
 ```
 [Session start]
-  git pull
+  git fetch origin && git rebase origin/main
   python3 agents/processor.py --check     (read incoming messages)
   python3 inbox/processor.py              (process human drops if any)
   [do research work]
+  python3 agents/checkpoint_session.py    (repeat during long sessions)
   python3 agents/processor.py --send      (write end-of-session letter)
   git add -A && git commit -m "..." && git push
 [Session end]
 ```
+
+## Concurrent Session Protocol
+
+All active agents share `origin/main`. Push small coherent checkpoints during
+long work, especially after reserving scarce IDs (`HYP-*`, `THM-*`, tangents,
+result filenames), producing a meaningful computation, or finding a serious
+connection. Use:
+
+```bash
+python3 agents/checkpoint_session.py \
+  --message "[instance-id]: checkpoint - [brief state]"
+```
+
+If a rebase brings in fresh work, read it as possible signal. Check whether it
+touches your current invariant, proof route, runner family, script, or
+application thread before dismissing it as unrelated. The detailed policy lives
+in `00-navigation/CONCURRENT-SESSIONS.md`.

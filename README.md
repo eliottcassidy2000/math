@@ -394,6 +394,12 @@ Tournament eigenvalues live on a truncated adelic space A_T(n) = R x prod_{p|D} 
 
 This is a multi-agent research project where multiple Claude instances collaborate asynchronously via git. Each session is identified as `[machine]-[date]-S[N]`. The `CLAUDE.md` file contains the full protocol including startup sequence, session logging, and end-of-session close-out.
 
+Concurrency is intentional. Agents should use `origin/main` as the live shared
+research surface, push small checkpoints during long sessions, claim scarce
+namespaces early, and treat new work seen during rebase as possible evidence for
+the current investigation. See `00-navigation/CONCURRENT-SESSIONS.md` for the
+operating playbook.
+
 ---
 
 ## References

@@ -35,14 +35,20 @@ Estimated reading time: ~5 minutes. Do not skip this.
 
 ---
 
-## Step 3: Pull latest from main first
+## Step 3: Sync with main first
 
 ```bash
 git fetch origin && git rebase origin/main
 ```
 
-This ensures your worktree has all recent opus commits before working.
-All agents push to `origin/main`; this keeps you in sync.
+This ensures your worktree has all recent commits before working. All agents
+push to `origin/main`; this keeps the shared research surface live.
+
+If the rebase brings in new work, read it as possible signal before continuing.
+Check whether it touches your current invariant, proof route, runner family,
+script, namespace, or application thread. Integrate real connections in the
+backlog, hypothesis log, reflection, or session log instead of treating fresh
+concurrent work as mere noise.
 
 ## Step 4: Process incoming messages
 
@@ -84,6 +90,24 @@ If this generates a `inbox/PROCESSING-REPORT.md`, read it and integrate the cont
 
 The goal is to ensure NO reference, conjecture, or connection sits uninvestigated without at least being cataloged.
 
+## Step 5c: Claim scarce names and checkpoint early
+
+Before deep work, reserve any scarce namespace your session will need:
+`HYP-*`, `THM-*`, tangent IDs, result filenames, new script filenames, and
+session-log territory. Use honest stubs only: state what is claimed, what is
+known, and what still needs evidence. Do not put speculation in canon.
+
+After reserving names or creating stubs, push immediately:
+
+```bash
+python3 agents/checkpoint_session.py \
+  --message "[instance-id]: checkpoint - reserve [HYP/result/script/etc.]"
+```
+
+During long sessions, checkpoint every 30-60 minutes and after each meaningful
+finding. This prevents late-session rebase pileups and lets other agents build
+on live partial results. See `00-navigation/CONCURRENT-SESSIONS.md`.
+
 ---
 
 ## Step 6: Do the actual work
@@ -105,6 +129,8 @@ As you work:
 - **Log every hypothesis** to `05-knowledge/hypotheses/INDEX.md` (confirmed OR refuted)
 - **Update variable files** in `05-knowledge/variables/` when you discover new equations
 - **Write reflections** to `07-reflections/` when you notice meta-patterns, cross-domain resonances, or connections that transcend the particular theorem you're proving (see `07-reflections/README.md`)
+- **Push checkpoints** whenever the repo has a useful partial state, especially
+  after claiming IDs, storing outputs, or crossing a proof/computation boundary.
 
 ---
 
@@ -112,11 +138,11 @@ As you work:
 
 **This step is NOT optional.** Every session must end with a message sent to another agent AND a git push. Do not send a final response until the push has succeeded or you have reported the exact blocker. The Stop hook is blocking if you skip this.
 
-### 6a. Update the session log first
+### 7a. Update the session log first
 
 Add an entry to the TOP of `00-navigation/SESSION-LOG.md` using the format described there. Do this before running the close-out command.
 
-### 6b. Run the close-out command
+### 7b. Run the close-out command
 
 ```bash
 python3 agents/finish_session.py \
