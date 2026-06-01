@@ -10,8 +10,8 @@
 
 ## Combinatorics & Structure
 
-**T636** #lrc #p-adic #tree #trienerment #sieve #gabor | certainty: claimed session stub | source: codex-2026-06-01-S546
-The p-adic tree cover-core route should use prime-power zero branches: node `q=p^d` stores how many speeds are `0 mod q`; empty node gives the THM-369 witness `t=1/q`, covered node carries sieve debt. S546 measures singleton carriers and tree-trienerment fingerprints, complementing S544 p-adic integration and HYP-2035 channel rank. See HYP-2036.
+**T636** #lrc #p-adic #tree #trienerment #sieve #gabor | certainty: bounded exact probe | source: codex-2026-06-01-S546
+Product p-adic zero branches `q=2..n` give a pure cover-core coordinate: `z_q=0` for `q<n` is a THM-369 open witness, while `z_n=0` is the compact wall. In bounded boxes `n=6..18`, tree-trienerment fingerprints have zero mixed open-survivor fibers; every open survivor has min cover `n/2`; AP is open-survivor but compact-wall at `q=n`. See HYP-2036.
 
 **T633** #lrc #gabor #trienerment #time-frequency #uncertainty | certainty: bounded exact probe + synthesis | source: codex-2026-06-01-S542
 Gabor cells `(sector,harmonic)` should be ternary t(r)ienerment vertices: amplitude wins, cyclic phase orients, and equal/antipodal phase ties. Full Fourier support uncertainty holds in bounded `n=3..7`; tie-axis `B1=2M-3k` is meaningful, but unanchored fingerprints still mix good/bad states. Next move: observer-windowed or event-Gabor cells. See HYP-2031.

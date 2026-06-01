@@ -1,0 +1,270 @@
+﻿LRC p-adic tree-cover trienerment scan, S546
+Nodes q=2..n are product p-adic zero branches; z_q counts speeds divisible by q.
+Empty q<n gives open THM-369 witness t=1/q; empty q=n is compactified wall.
+
+=== n=6, max_speed=8 ===
+primitive speed sets: 56
+channel rank omega(n/2): 1
+open sieve survivors q=2..5: 25
+compact q=2..6 survivors: 16
+best open witness q distribution: {'3': 6, '4': 6, '5': 19, 'wall': 9, 'none': 16}
+prime-power empty distribution: {'0': 25, '1': 29, '2': 2}
+all records:
+  open empty count avg/range: 0.589 / 0..2
+  compact empty count avg/range: 0.964 / 0..3
+  singleton nodes avg/range: 2.393 / 0..4
+  forced carrier count avg/range: 2.071 / 0..3
+  max singleton load avg/range: 1.304 / 0..2
+  min open cover size distribution: {'3': 25, 'None': 31}
+  tree tie count avg/range: 2.232 / 0..5
+  tree B1 avg/range: 13.304 / 5..20
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 6.071 / 1..18
+open survivors:
+  open empty count avg/range: 0.000 / 0..0
+  compact empty count avg/range: 0.360 / 0..1
+  singleton nodes avg/range: 3.160 / 2..4
+  forced carrier count avg/range: 2.720 / 2..3
+  max singleton load avg/range: 1.440 / 1..2
+  min open cover size distribution: {'3': 25}
+  tree tie count avg/range: 3.400 / 1..5
+  tree B1 avg/range: 9.800 / 5..17
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 10.000 / 2..18
+tree-trienerment fingerprint classes:
+  total classes: 20
+  open-survivor classes: 8
+  mixed survivor/non-survivor classes: 0
+named examples:
+  AP: open_survivor=True, compact_survivor=False, open_empty=(), compact_empty=(6,), singletons=(3, 4, 5), forced_carriers=((3, 3), (4, 4), (5, 5)), min_cover=3, ties=3, HP=6
+  shifted: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(4, 5, 6), forced_carriers=((4, 4), (5, 5), (6, 6)), min_cover=3, ties=3, HP=6
+  apex_replaced: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(3, 4, 5, 6), forced_carriers=((3, 6), (4, 4), (5, 5), (6, 6)), min_cover=3, ties=5, HP=18
+
+=== n=8, max_speed=10 ===
+primitive speed sets: 120
+channel rank omega(n/2): 1
+open sieve survivors q=2..7: 44
+compact q=2..8 survivors: 30
+best open witness q distribution: {'3': 1, '4': 8, '5': 8, '6': 33, '7': 26, 'wall': 14, 'none': 30}
+prime-power empty distribution: {'0': 49, '1': 54, '2': 16, '3': 1}
+all records:
+  open empty count avg/range: 0.742 / 0..2
+  compact empty count avg/range: 1.042 / 0..3
+  singleton nodes avg/range: 3.208 / 1..5
+  forced carrier count avg/range: 2.917 / 1..4
+  max singleton load avg/range: 1.283 / 1..2
+  min open cover size distribution: {'4': 44, 'None': 76}
+  tree tie count avg/range: 4.892 / 2..10
+  tree B1 avg/range: 27.325 / 12..36
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 27.483 / 4..192
+open survivors:
+  open empty count avg/range: 0.000 / 0..0
+  compact empty count avg/range: 0.318 / 0..1
+  singleton nodes avg/range: 4.091 / 3..5
+  forced carrier count avg/range: 3.636 / 3..4
+  max singleton load avg/range: 1.432 / 1..2
+  min open cover size distribution: {'4': 44}
+  tree tie count avg/range: 6.773 / 4..10
+  tree B1 avg/range: 21.682 / 12..30
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 52.909 / 12..192
+tree-trienerment fingerprint classes:
+  total classes: 45
+  open-survivor classes: 14
+  mixed survivor/non-survivor classes: 0
+named examples:
+  AP: open_survivor=True, compact_survivor=False, open_empty=(), compact_empty=(8,), singletons=(4, 5, 6, 7), forced_carriers=((4, 4), (5, 5), (6, 6), (7, 7)), min_cover=4, ties=6, HP=24
+  shifted: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(5, 6, 7, 8), forced_carriers=((5, 5), (6, 6), (7, 7), (8, 8)), min_cover=4, ties=7, HP=48
+  apex_replaced: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(4, 5, 6, 7, 8), forced_carriers=((4, 8), (5, 5), (6, 6), (7, 7), (8, 8)), min_cover=4, ties=9, HP=96
+
+=== n=10, max_speed=12 ===
+primitive speed sets: 220
+channel rank omega(n/2): 1
+open sieve survivors q=2..9: 70
+compact q=2..10 survivors: 50
+best open witness q distribution: {'4': 1, '5': 10, '6': 10, '7': 53, '8': 42, '9': 34, 'wall': 20, 'none': 50}
+prime-power empty distribution: {'0': 77, '1': 111, '2': 31, '3': 1}
+all records:
+  open empty count avg/range: 0.845 / 0..3
+  compact empty count avg/range: 1.095 / 0..3
+  singleton nodes avg/range: 3.959 / 1..7
+  forced carrier count avg/range: 3.695 / 1..5
+  max singleton load avg/range: 1.259 / 1..2
+  min open cover size distribution: {'5': 70, 'None': 150}
+  tree tie count avg/range: 7.936 / 3..19
+  tree B1 avg/range: 48.191 / 15..63
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 174.218 / 6..3720
+open survivors:
+  open empty count avg/range: 0.000 / 0..0
+  compact empty count avg/range: 0.286 / 0..1
+  singleton nodes avg/range: 4.943 / 4..7
+  forced carrier count avg/range: 4.571 / 4..5
+  max singleton load avg/range: 1.357 / 1..2
+  min open cover size distribution: {'5': 70}
+  tree tie count avg/range: 10.857 / 6..19
+  tree B1 avg/range: 39.429 / 15..54
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 403.200 / 24..3720
+tree-trienerment fingerprint classes:
+  total classes: 83
+  open-survivor classes: 26
+  mixed survivor/non-survivor classes: 0
+named examples:
+  AP: open_survivor=True, compact_survivor=False, open_empty=(), compact_empty=(10,), singletons=(5, 6, 7, 8, 9), forced_carriers=((5, 5), (6, 6), (7, 7), (8, 8), (9, 9)), min_cover=5, ties=10, HP=120
+  shifted: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(6, 7, 8, 9, 10), forced_carriers=((6, 6), (7, 7), (8, 8), (9, 9), (10, 10)), min_cover=5, ties=11, HP=240
+  apex_replaced: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(5, 6, 7, 8, 9, 10), forced_carriers=((5, 10), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10)), min_cover=5, ties=14, HP=600
+
+=== n=12, max_speed=14 ===
+primitive speed sets: 364
+channel rank omega(n/2): 2
+open sieve survivors q=2..11: 104
+compact q=2..12 survivors: 77
+best open witness q distribution: {'10': 43, '11': 43, '4': 1, '5': 12, '6': 12, '7': 12, '8': 74, '9': 63, 'wall': 27, 'none': 77}
+prime-power empty distribution: {'0': 147, '1': 176, '2': 40, '3': 1}
+all records:
+  open empty count avg/range: 0.959 / 0..3
+  compact empty count avg/range: 1.173 / 0..3
+  singleton nodes avg/range: 5.118 / 2..8
+  forced carrier count avg/range: 4.687 / 2..6
+  max singleton load avg/range: 1.398 / 1..3
+  min open cover size distribution: {'6': 104, 'None': 260}
+  tree tie count avg/range: 13.473 / 6..27
+  tree B1 avg/range: 69.582 / 29..92
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 1924.813 / 48..61920
+open survivors:
+  open empty count avg/range: 0.000 / 0..0
+  compact empty count avg/range: 0.260 / 0..1
+  singleton nodes avg/range: 6.173 / 5..8
+  forced carrier count avg/range: 5.519 / 5..6
+  max singleton load avg/range: 1.577 / 1..2
+  min open cover size distribution: {'6': 104}
+  tree tie count avg/range: 17.644 / 13..27
+  tree B1 avg/range: 57.067 / 29..71
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 5066.538 / 720..61920
+tree-trienerment fingerprint classes:
+  total classes: 104
+  open-survivor classes: 25
+  mixed survivor/non-survivor classes: 0
+named examples:
+  AP: open_survivor=True, compact_survivor=False, open_empty=(), compact_empty=(12,), singletons=(6, 7, 8, 9, 10, 11), forced_carriers=((6, 6), (7, 7), (8, 8), (9, 9), (10, 10), (11, 11)), min_cover=6, ties=16, HP=1440
+  shifted: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(7, 8, 9, 10, 11, 12), forced_carriers=((7, 7), (8, 8), (9, 9), (10, 10), (11, 11), (12, 12)), min_cover=6, ties=16, HP=1440
+  apex_replaced: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(6, 7, 8, 9, 10, 11, 12), forced_carriers=((6, 12), (7, 7), (8, 8), (9, 9), (10, 10), (11, 11), (12, 12)), min_cover=6, ties=21, HP=8640
+
+=== n=14, max_speed=16 ===
+primitive speed sets: 560
+channel rank omega(n/2): 1
+open sieve survivors q=2..13: 147
+compact q=2..14 survivors: 112
+best open witness q distribution: {'10': 87, '11': 75, '12': 53, '13': 53, '5': 1, '6': 14, '7': 14, '8': 14, '9': 102, 'wall': 35, 'none': 112}
+prime-power empty distribution: {'0': 263, '1': 251, '2': 45, '3': 1}
+all records:
+  open empty count avg/range: 1.014 / 0..3
+  compact empty count avg/range: 1.202 / 0..3
+  singleton nodes avg/range: 5.927 / 3..9
+  forced carrier count avg/range: 5.573 / 3..7
+  max singleton load avg/range: 1.329 / 1..2
+  min open cover size distribution: {'7': 147, 'None': 413}
+  tree tie count avg/range: 18.248 / 9..35
+  tree B1 avg/range: 101.255 / 51..129
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 16214.743 / 192..574560
+open survivors:
+  open empty count avg/range: 0.000 / 0..0
+  compact empty count avg/range: 0.238 / 0..1
+  singleton nodes avg/range: 7.068 / 6..9
+  forced carrier count avg/range: 6.476 / 6..7
+  max singleton load avg/range: 1.524 / 1..2
+  min open cover size distribution: {'7': 147}
+  tree tie count avg/range: 23.769 / 16..35
+  tree B1 avg/range: 84.694 / 51..108
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 48235.102 / 1440..574560
+tree-trienerment fingerprint classes:
+  total classes: 154
+  open-survivor classes: 40
+  mixed survivor/non-survivor classes: 0
+named examples:
+  AP: open_survivor=True, compact_survivor=False, open_empty=(), compact_empty=(14,), singletons=(7, 8, 9, 10, 11, 12, 13), forced_carriers=((7, 7), (8, 8), (9, 9), (10, 10), (11, 11), (12, 12), (13, 13)), min_cover=7, ties=22, HP=10080
+  shifted: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(8, 9, 10, 11, 12, 13, 14), forced_carriers=((8, 8), (9, 9), (10, 10), (11, 11), (12, 12), (13, 13), (14, 14)), min_cover=7, ties=24, HP=30240
+  apex_replaced: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(7, 8, 9, 10, 11, 12, 13, 14), forced_carriers=((7, 14), (8, 8), (9, 9), (10, 10), (11, 11), (12, 12), (13, 13), (14, 14)), min_cover=7, ties=28, HP=70560
+
+=== n=16, max_speed=18 ===
+primitive speed sets: 816
+channel rank omega(n/2): 1
+open sieve survivors q=2..15: 200
+compact q=2..16 survivors: 156
+best open witness q distribution: {'10': 132, '11': 117, '12': 101, '13': 88, '14': 64, '15': 64, '5': 1, '6': 1, '7': 16, '8': 16, '9': 16, 'wall': 44, 'none': 156}
+prime-power empty distribution: {'0': 428, '1': 322, '2': 63, '3': 3}
+all records:
+  open empty count avg/range: 1.061 / 0..3
+  compact empty count avg/range: 1.228 / 0..3
+  singleton nodes avg/range: 6.831 / 4..10
+  forced carrier count avg/range: 6.477 / 4..8
+  max singleton load avg/range: 1.330 / 1..3
+  min open cover size distribution: {'8': 200, 'None': 616}
+  tree tie count avg/range: 24.924 / 14..46
+  tree B1 avg/range: 135.228 / 72..168
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 224994.000 / 1440..17660160
+open survivors:
+  open empty count avg/range: 0.000 / 0..0
+  compact empty count avg/range: 0.220 / 0..1
+  singleton nodes avg/range: 7.970 / 7..10
+  forced carrier count avg/range: 7.440 / 7..8
+  max singleton load avg/range: 1.475 / 1..2
+  min open cover size distribution: {'8': 200}
+  tree tie count avg/range: 31.390 / 25..46
+  tree B1 avg/range: 115.830 / 72..135
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 717746.400 / 60480..17660160
+tree-trienerment fingerprint classes:
+  total classes: 201
+  open-survivor classes: 46
+  mixed survivor/non-survivor classes: 0
+named examples:
+  AP: open_survivor=True, compact_survivor=False, open_empty=(), compact_empty=(16,), singletons=(8, 9, 10, 11, 12, 13, 14, 15), forced_carriers=((8, 8), (9, 9), (10, 10), (11, 11), (12, 12), (13, 13), (14, 14), (15, 15)), min_cover=8, ties=30, HP=161280
+  shifted: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(9, 10, 11, 12, 13, 14, 15, 16), forced_carriers=((9, 9), (10, 10), (11, 11), (12, 12), (13, 13), (14, 14), (15, 15), (16, 16)), min_cover=8, ties=31, HP=241920
+  apex_replaced: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(8, 9, 10, 11, 12, 13, 14, 15, 16), forced_carriers=((8, 16), (9, 9), (10, 10), (11, 11), (12, 12), (13, 13), (14, 14), (15, 15), (16, 16)), min_cover=8, ties=37, HP=1290240
+
+=== n=18, max_speed=20 ===
+primitive speed sets: 1140
+channel rank omega(n/2): 1
+open sieve survivors q=2..17: 264
+compact q=2..18 survivors: 210
+best open witness q distribution: {'10': 18, '11': 167, '12': 148, '13': 132, '14': 102, '15': 102, '16': 76, '17': 76, '6': 1, '7': 18, '8': 18, '9': 18, 'wall': 54, 'none': 210}
+prime-power empty distribution: {'0': 532, '1': 485, '2': 116, '3': 7}
+all records:
+  open empty count avg/range: 1.114 / 0..3
+  compact empty count avg/range: 1.264 / 0..3
+  singleton nodes avg/range: 7.922 / 5..11
+  forced carrier count avg/range: 7.487 / 5..9
+  max singleton load avg/range: 1.390 / 1..3
+  min open cover size distribution: {'9': 264, 'None': 876}
+  tree tie count avg/range: 33.351 / 19..56
+  tree B1 avg/range: 171.947 / 104..215
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 4068214.737 / 17280..198132480
+open survivors:
+  open empty count avg/range: 0.000 / 0..0
+  compact empty count avg/range: 0.205 / 0..1
+  singleton nodes avg/range: 9.136 / 8..11
+  forced carrier count avg/range: 8.409 / 8..9
+  max singleton load avg/range: 1.606 / 1..2
+  min open cover size distribution: {'9': 264}
+  tree tie count avg/range: 41.587 / 34..56
+  tree B1 avg/range: 147.239 / 104..170
+  strict 3-cycles avg/range: 0.000 / 0..0
+  HP count avg/range: 14025861.818 / 967680..198132480
+tree-trienerment fingerprint classes:
+  total classes: 259
+  open-survivor classes: 63
+  mixed survivor/non-survivor classes: 0
+named examples:
+  AP: open_survivor=True, compact_survivor=False, open_empty=(), compact_empty=(18,), singletons=(9, 10, 11, 12, 13, 14, 15, 16, 17), forced_carriers=((9, 9), (10, 10), (11, 11), (12, 12), (13, 13), (14, 14), (15, 15), (16, 16), (17, 17)), min_cover=9, ties=39, HP=2177280
+  shifted: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(10, 11, 12, 13, 14, 15, 16, 17, 18), forced_carriers=((10, 10), (11, 11), (12, 12), (13, 13), (14, 14), (15, 15), (16, 16), (17, 17), (18, 18)), min_cover=9, ties=40, HP=4354560
+  apex_replaced: open_survivor=True, compact_survivor=True, open_empty=(), compact_empty=(), singletons=(9, 10, 11, 12, 13, 14, 15, 16, 17, 18), forced_carriers=((9, 18), (10, 10), (11, 11), (12, 12), (13, 13), (14, 14), (15, 15), (16, 16), (17, 17), (18, 18)), min_cover=9, ties=46, HP=13063680
+

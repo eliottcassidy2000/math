@@ -26,10 +26,13 @@
 (5) RESONANCE = TREE-GRADED FOURIER: intra-level resonances are strong (same p-adic ball). Inter-level resonances decay p-adically. Total debt = Σ level debts + small inter-level corrections.
 **n=14 p-adic structure:** 2-adic: 4 levels (7+3+2+1 runners). 7-adic: 2 levels (12+1). CRT product Z/8×Z/7. The cascade descends each prime tree independently.
 **n=18 p-adic structure:** 2-adic: 5 levels. 3-adic: 3 levels (the 9=3² structure = oracle-S534o's n*=9). CRT product Z/2×Z/9.
-## codex-2026-06-01-S546 - p-adic tree-cover trienerments for LRC sieve channels (HYP-2036, in progress)
+## codex-2026-06-01-S546 - p-adic tree-cover trienerments for LRC sieve channels (HYP-2036)
 
 **Context:** User asked for another long session continuing the Gabor/t(r)ienerment themes and integrating the p-adic tree.  Fresh mainline already has HYP-2032 identifying p-adic ultrametrics as arithmetic metric/tie channels, HYP-2033 on annular braid image, incoming S544 integrating the p-adic tree with sieve/vineyard/braid, and HYP-2035 on channel rank `omega(n/2)`.  This session claims the narrower cover-core computation.
-**Stub:** HYP-2036 and tangent T636 reserve the prime-power zero-branch cover core: vertices are `q=p^d <= n`; node mass is `# {v_i: q divides v_i}`; empty zero branch gives the THM-369 witness `t=1/q`; covered zero branch is sieve debt.  Planned artifacts: `lrc_padic_tree_trienerment_s546.py/.out` and reflection `lrc-padic-tree-cover-trienerment-s546.md`.
+**Computation:** Added `04-computation/lrc_padic_tree_trienerment_s546.py` and stored `05-knowledge/results/lrc_padic_tree_trienerment_s546.out`. Vertices are product p-adic zero-branch obligations `q=2..n`; node mass is `z_q=# {v_i:q|v_i}`. Empty `q<n` gives an open THM-369 witness, while empty `q=n` gives the compactified wall. The tree trienerment orders lower cover mass first, sends equal-mass comparable nodes toward deeper divisibility branches, and ties equal-mass incomparable branches.
+**Findings:** In bounded primitive boxes `(n,max_speed)=(6,8),(8,10),...,(18,20)`, open survivors / compact survivors are `25/16,44/30,70/50,104/77,147/112,200/156,264/210`. Every open survivor has minimum open cover size exactly `n/2`. Tree-trienerment fingerprint classes have zero mixed open-survivor/non-survivor fibers in every scanned `n`. Strict 3-cycles are always zero, as expected for a hierarchical ultrametric/product-poset relation.
+**Synthesis:** HYP-2035 gives the p-adic channel rank; HYP-2036 supplies the cover-core ledger below it. AP appears uniformly as open-surviving but compact-wall with `compact_empty=(n,)` and singleton carriers `(n/2,...,n-1)`. The next symbolic/Gabor alphabet should label events by first empty `q` or singleton carrier when `z_q=1`.
+**Artifacts:** HYP-2036; reflection `07-reflections/lrc-padic-tree-cover-trienerment-s546.md`; tangent T636; script/output `lrc_padic_tree_trienerment_s546.py/.out`.
 
 ## opus-2026-06-01-S543 - Vineyard stability + annular braid: the topological proof of LRC
 
