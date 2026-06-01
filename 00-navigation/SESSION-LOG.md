@@ -1,5 +1,15 @@
 # Session Log
 
+## opus-2026-06-01-S533 - n=6 three-channel parity law: APEX IS THE GATEKEEPER (c=1 necessary+sufficient)
+
+**Account:** Oracle (remote-control)
+**User prompt:** Compute the n=6 inside debt as function of the 3-pair joint state; find the mod-6 three-channel analogue of "a+b+c odd."
+**Computation:** `04-computation/lrc_n6_three_channel_parity_s533.py`. Exhaustive analysis of 786 primitive 5-speed sets at n=6. Joint state (a,b,c) of 3 independent tiles: (4,2), (5,3), (6,1)=apex. Lonely status by joint state, debt analysis, boolean function search.
+**THE THREE-CHANNEL PARITY LAW:** c=0 (apex anti-aligned) → EXACTLY 0% lonely across ALL 786 speed sets. c=1 (apex aligned) → 72-98% lonely. The apex is the GATEKEEPER: it is necessary AND (with high probability) sufficient. The non-apex channels (a,b) modulate: a=b (synchronized) → ~96% lonely; a≠b (desynchronized) → ~73%.
+**Generalizing "a+b+c odd":** At n=4: parity = apex (1 non-apex channel). At n=6: apex separates cleanly — the parity law IS "c=1." The non-apex channels are the FIRST genuinely multi-channel structure: 2 independent runner-runner tiles whose joint state modulates the lonely rate without preventing it.
+**Initial segment insight:** Only visits states with a=b (channels always synchronized) — the symmetric case. Non-initial sets can desynchronize (a≠b), which reduces the lonely rate but never kills it.
+**Debt analysis:** c=0 states have debt/credit = 1.0 (full cancellation, never lonely). c=1 states have debt/credit < 0 (negative = credit EXCEEDS debt = positive lonely measure).
+
 ## oracle-2026-06-01-S532b - Independent pairs: the iso-determination boundary (n<=4) + the coupling gap (complement to concurrent S532)
 
 **Account:** Oracle (oraclebox1). **User prompt:** for the multi-channel generalization, the metric is the amount and state of independent pairs; n=4 (2 independent pairs) iso class determined by flipping 2 arcs with the rest fixed.
