@@ -1,0 +1,89 @@
+LRC loneliness tournament gauges (codex-2026-06-01-S507)
+sample grid: t=a/840, a=1..839
+
+Tournament Analysis declaration
+  vertices: moving runners in the speed set
+  target: normalized loneliness depth (k+1)*min_i ||s_i t||
+  tie Hamiltonian path: increasing speed/index order
+  gauges:
+    half_turn                i beats j when j lies in i's trailing/leading semicircle; the S26 1/2 meter.
+    theta_close_switch       reverse the base path on pairs closer than 2/(k+1).
+    antipodal_open_switch    reverse the base path on pairs within 1/(k+1) of antipodal separation.
+    unsafe_dominance         a runner inside the forbidden origin interval beats a safe runner; ties use half-turn.
+    safe_dominance           a safe runner beats an unsafe runner; ties use half-turn.
+    lrc_band_dominance       comfortable-safe beats near-safe beats unsafe; equal bands use half-turn.
+    endpoint_wall_pressure   runner nearer the LRC endpoint wall ||st||=1/(k+1) wins; ties use half-turn.
+    origin_bracket_flip      flip half-turn on pairs bracketing the origin inside the 2/(k+1) corridor.
+    same_side_escape         on one side of the origin, farther runner wins; opposite-side pairs use half-turn.
+    relief_bottleneck        runner whose deletion most improves the current lonely distance wins.
+
+Case target summaries
+  consecutive-4   k=4 theta=1/5  safe=  4/839 max_norm=1.000 mean_norm=0.477 unsafe_count_hist=0:4 1:532 2:193 3:28 4:82
+  consecutive-5   k=5 theta=1/6  safe=  2/839 max_norm=1.000 mean_norm=0.441 unsafe_count_hist=0:2 1:506 2:239 3:24 4:14 5:54
+  consecutive-6   k=6 theta=1/7  safe=  6/839 max_norm=1.000 mean_norm=0.469 unsafe_count_hist=0:6 1:512 2:204 3:59 4:12 5:8 6:38
+  consecutive-7   k=7 theta=1/8  safe=  4/839 max_norm=1.000 mean_norm=0.440 unsafe_count_hist=0:4 1:478 2:254 3:51 4:12 5:6 6:6 7:28
+  prime-6         k=6 theta=1/7  safe= 66/839 max_norm=1.750 mean_norm=0.431 unsafe_count_hist=0:66 1:315 2:340 3:78 4:20 5:2 6:18
+  mixed-7         k=7 theta=1/8  safe= 60/839 max_norm=1.771 mean_norm=0.457 unsafe_count_hist=0:60 1:360 2:278 3:95 4:26 5:8 6:4 7:8
+
+Gauge leaderboard across all cases
+  gauge                    use   best rho(feature)       pure safeIso unsafeIso  span(H+score)
+  unsafe_dominance        0.555  -0.223(scc_count        )  0.996    0.845      0.866   1.039
+  safe_dominance          0.555  -0.223(scc_count        )  0.996    0.845      0.866   1.040
+  antipodal_open_switch   0.326  -0.207(scc_count        )  0.981    0.310      0.622   0.778
+  theta_close_switch      0.294  -0.266(score_width      )  0.980    0.254      0.618   0.878
+  origin_bracket_flip     0.137  -0.172(scc_count        )  0.973    0.028      0.513   0.996
+  relief_bottleneck       0.130  -0.064(score_width      )  0.974    0.042      0.567   1.211
+  same_side_escape        0.097   0.081(hamiltonian_paths)  0.973    0.014      0.426   1.007
+  half_turn               0.086  -0.157(scc_count        )  0.973    0.028      0.246   1.151
+  lrc_band_dominance      0.082  -0.046(score_width      )  0.976    0.162      0.024   1.486
+  endpoint_wall_pressure  0.016  -0.076(largest_scc      )  0.972    0.000      0.002   1.504
+
+Per-case best gauges by H+score safe/unsafe purity
+  consecutive-4   unsafe_dominance safeIso=1.000 amb=0/3 span=0.966 | safe_dominance safeIso=1.000 amb=0/3 span=0.966 | relief_bottleneck safeIso=0.000 amb=1/3 span=0.968 | same_side_escape safeIso=0.000 amb=1/3 span=0.897
+  consecutive-5   theta_close_switch safeIso=1.000 amb=0/5 span=0.822 | unsafe_dominance safeIso=1.000 amb=0/6 span=0.980 | safe_dominance safeIso=1.000 amb=0/6 span=0.980 | relief_bottleneck safeIso=0.500 amb=1/7 span=0.969
+  consecutive-6   unsafe_dominance safeIso=1.000 amb=0/7 span=0.898 | safe_dominance safeIso=1.000 amb=0/7 span=0.898 | relief_bottleneck safeIso=0.000 amb=1/8 span=0.909 | origin_bracket_flip safeIso=0.000 amb=1/13 span=0.782
+  consecutive-7   unsafe_dominance safeIso=1.000 amb=0/14 span=0.868 | safe_dominance safeIso=1.000 amb=0/14 span=0.868 | origin_bracket_flip safeIso=0.500 amb=2/24 span=0.788 | relief_bottleneck safeIso=0.250 amb=3/12 span=0.912
+  prime-6         unsafe_dominance safeIso=1.000 amb=0/11 span=0.932 | safe_dominance safeIso=1.000 amb=0/11 span=0.932 | antipodal_open_switch safeIso=0.273 amb=4/25 span=0.763 | origin_bracket_flip safeIso=0.030 amb=3/29 span=0.958
+  mixed-7         theta_close_switch safeIso=0.767 amb=3/69 span=0.552 | antipodal_open_switch safeIso=0.433 amb=6/76 span=0.480 | unsafe_dominance safeIso=0.650 amb=1/23 span=1.189 | safe_dominance safeIso=0.650 amb=1/23 span=1.194
+
+Safe vs unsafe fingerprint sketches
+  unsafe_dominance
+    H unsafe: 1:0.61, 9:0.12, 5:0.08, 23:0.06
+    H safe:   23:0.35, 1:0.15, 41:0.13, 33:0.10
+    score unsafe: (0, 1, 2, 3, 4, 5):0.18, (0, 1, 2, 3):0.16, (0, 1, 2, 3, 4, 5, 6):0.13, (0, 1, 2, 3, 4):0.12
+    score safe:   (1, 2, 2, 3, 3, 4):0.35, (2, 2, 2, 3, 3, 3):0.15, (0, 1, 2, 3, 4, 5, 6):0.15, (1, 1, 2, 3, 4, 5, 5):0.10
+  safe_dominance
+    H unsafe: 1:0.61, 9:0.12, 5:0.08, 23:0.06
+    H safe:   23:0.35, 1:0.15, 41:0.13, 33:0.10
+    score unsafe: (0, 1, 2, 3, 4, 5):0.18, (0, 1, 2, 3):0.16, (0, 1, 2, 3, 4, 5, 6):0.13, (0, 1, 2, 3, 4):0.12
+    score safe:   (1, 2, 2, 3, 3, 4):0.35, (2, 2, 2, 3, 3, 3):0.15, (0, 1, 2, 3, 4, 5, 6):0.15, (1, 1, 2, 3, 4, 5, 5):0.10
+  antipodal_open_switch
+    H unsafe: 1:0.15, 5:0.15, 11:0.10, 41:0.06
+    H safe:   11:0.34, 9:0.14, 13:0.08, 49:0.07
+    score unsafe: (1, 1, 2, 2):0.14, (2, 2, 2, 3, 3, 3):0.10, (1, 2, 2, 2, 3):0.09, (1, 2, 2, 3, 3, 4):0.07
+    score safe:   (1, 2, 2, 2, 3, 5):0.21, (0, 2, 3, 3, 3, 4):0.17, (1, 1, 2, 3, 3, 5, 6):0.08, (1, 2, 2, 3, 3, 4, 6):0.08
+  theta_close_switch
+    H unsafe: 1:0.17, 41:0.09, 5:0.09, 11:0.09
+    H safe:   33:0.15, 17:0.11, 11:0.08, 69:0.08
+    score unsafe: (2, 2, 2, 3, 3, 3):0.14, (1, 1, 2, 2):0.09, (1, 2, 2, 2, 3):0.09, (0, 1, 2, 3):0.08
+    score safe:   (2, 2, 2, 2, 3, 4):0.15, (1, 2, 2, 3, 4, 4, 5):0.15, (0, 2, 3, 3, 3, 4):0.08, (0, 2, 2, 3, 4, 5, 5):0.08
+  origin_bracket_flip
+    H unsafe: 1:0.27, 5:0.11, 33:0.05, 23:0.05
+    H safe:   23:0.36, 1:0.18, 33:0.14, 41:0.08
+    score unsafe: (0, 1, 2, 3):0.11, (1, 2, 2, 3, 3, 4):0.09, (2, 2, 3, 3, 3, 4, 4):0.07, (0, 1, 2, 3, 4, 5):0.07
+    score safe:   (1, 2, 2, 3, 3, 4):0.39, (0, 1, 2, 3, 4, 5, 6):0.15, (2, 2, 2, 3, 3, 3):0.11, (1, 1, 2, 3, 4, 5, 5):0.10
+
+Interpretation
+  1. Pure half-turn remains a spread/1/2-gap meter, not an LRC-safe meter.
+  2. Unsafe/safe dominance turns the score sequence into a coarse LRC
+     witness detector: zero unsafe runners becomes a visible block event.
+  3. Theta-close and antipodal-open switches are the best shape-only
+     candidates: weaker than status dominance, but less tautological and
+     especially good on the mixed-7 case.
+  4. LRC band dominance records unsafe/near/deep endpoint slack, but by
+     itself is a pressure diagnostic rather than a safe-witness classifier.
+  5. Endpoint-wall pressure is a boundary meter rather than a witness meter:
+     it spikes near ||s_i t|| = 1/(k+1), useful for corridor/peel scripts.
+  6. Origin-bracket and same-side escape are shape gauges: weaker as direct
+     classifiers, but they preserve pair geometry that scalar rank gauges
+     erase.

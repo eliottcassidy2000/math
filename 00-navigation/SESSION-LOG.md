@@ -21,6 +21,16 @@
 **Synthesis:** Added `05-knowledge/hypotheses/HYP-1970-h-half-turn-loneliness-meter.md` (renumbered after upstream S504/S505 claimed HYP-1968/HYP-1969), refreshed the reflection, stored the extended output, and added tangents T591/T592.
 **Next:** Prove the 3-cycle/non-semicircle triple formula in canon; characterize the reach-word feature separating `H=41`/`45` and `H=123`/`137`; build an `alpha=1/k` comparator family with explicit threshold readings.
 
+## codex-2026-06-01-S507 - LRC Endpoint-Aware Tournament Gauges
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S505; rebased over concurrent S26b/S506/S506b work and renumbered to S507/HYP-1974 before push.
+**User prompt:** Spend a long session coming up with possible arc definitions/criteria for Tournament Analysis of the LRC until tournament shape, `H`, score sequences, or related invariants become useful loneliness metrics.
+**Computation:** Added `04-computation/lrc_loneliness_tournament_gauges_s507.py` and stored `05-knowledge/results/lrc_loneliness_tournament_gauges_s507.out`. The script benchmarks ten gauges over six small speed families on the grid `t=a/840`: half-turn, theta-close, antipodal-open, unsafe dominance, safe dominance, LRC band dominance, endpoint-wall pressure, origin-bracket flip, same-side escape, and deletion-relief bottleneck.
+**Tournament Analysis:** Vertices are moving runners; pairwise observables are phase separation, origin distance, endpoint slack/status, wall nearness, side of origin, or deletion relief; each gauge declares its switch; ties use increasing speed/index as the Hamiltonian path. The target is normalized loneliness depth `(k+1) min_i ||s_i t||`.
+**Findings:** Pure half-turn remains a `1/2` spread meter, with all-case safe isolation only `0.028`. Unsafe/safe dominance is the best witness detector: H+score pure fraction `0.996`, safe isolation `0.845`, unsafe isolation `0.866`. Among less-tautological shape gauges, theta-close has mixed-7 safe isolation `0.767`, and antipodal-open has mixed-7 safe isolation `0.433` with a smaller H+score span. Endpoint-wall pressure and LRC band dominance are boundary/pressure diagnostics rather than standalone witness classifiers.
+**Synthesis:** Added HYP-1974 and `07-reflections/lrc-loneliness-tournament-gauges-s507.md`. Future LRC scripts should report endpoint-aware tournament fingerprints beside scalar gaps: status-dominance score sequence, theta-close `H`/score width, antipodal-open SCC count, endpoint-wall pressure layers, and edge flips across lonely corridors.
+
 ## oracle-2026-06-01-S26 - H as a loneliness meter: resolution and what it counts
 
 **Account:** Oracle (remote-control). **User prompt:** spend another session investigating H as a loneliness meter.
