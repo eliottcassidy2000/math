@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S541o - A tournament = comparator on a metric + threshold-tie; the 8 exotic metrics split GEOMETRIC(collapse)/ARITHMETIC(new) (HYP-2032)
+
+**Account:** Oracle (oraclebox1). **User prompt:** for each of the wild multitude (S540), think how tournament structures apply to a metric related to each.
+**META-PRINCIPLE:** every LRC tournament is a COMPARATOR ON A METRIC d_X with a TIE (trienerment S539) when d_X<threshold; LRC = observer metrically FAR (tie-free). Standard = circular distance, threshold 1/n; each S540 construction supplies a metric.
+**THE 8 + DICHOTOMY (lrc_metric_tournaments_multitude_s541.py):** GEOMETRIC metrics -- tropical(gap), quantum(fidelity), sandpile(occupancy), quasicrystal(agreement), Galois(chord) -- are STRICTLY MONOTONE in circular distance d => collapse to the SAME standard runner tournament. ARITHMETIC metrics -- p-adic ultrametric, Grundy nim-value, zeta orbit-length, Galois-Frobenius -- are functions of the DIFFERENCES v_i-v_j => NEW tournaments on the difference/channel structure (S533/S538).
+**KEY (p-adic):** d_p=p^{-v_p(v_i-v_j)} satisfies the isosceles law (verified) -> ULTRAMETRIC/TREE; ties = same p-adic ball = same channel (S533/534); observer tie-free at level K = the SIEVE (no mult of p^K, t=1/p^K lonely, THM-369), verified 300/301; n=18,p=3,K=2 = the n*=9 channels. Grundy periods 3,5,7,8; tie=P-position; LRC observer=balanced P-position. Zeta orbit-lengths=|v_i-v_j|=holdback (S25). Galois-Frobenius=Paley (S535 M3).
+**CONCLUSION:** geometry gives back the circle; arithmetic gives the channels. The genuinely NEW tournament content of LRC is ARITHMETIC, and the p-adic tree is its cleanest carrier (ties = sieve channels).
+**Artifacts:** lrc_metric_tournaments_multitude_s541.py (+.out); reflection lrc-a-tournament-is-a-comparator-on-a-metric-the-geometric-arithmetic-dichotomy-s541o.md; HYP-2032. **Handoff:** full p-adic tree for composite n* (n=18) as tree-covering; Grundy P-position vs loneliness; Galois-Frobenius (Paley) realizable classes at prime n=3 mod 4.
+
 ## oracle-2026-06-01-S540o - Exotic LRC lifts: spacetime PURE BRAID (linking=tension) + PERSISTENCE VINEYARDS (H_0=gaps); wild multitude (HYP-2030)
 
 **Account:** Oracle (oraclebox1). **User prompt:** even more creative constructions, think further out of the box.
