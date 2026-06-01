@@ -63,13 +63,22 @@ wall `t = 1/n` (a measure-zero touch). So loneliness is a genuine
 
 ## Part III — Tangents (creative extensions)
 
-**T1 — Moment method / anti-concentration.** `E[N] = 2(n-1)/n`. If the `B_i` were
-independent the lonely measure would be `(1-2/n)^m -> e^{-2} ~ 0.135 > 0`. The
-obstruction is *correlation*: `measure(B_i ∩ B_j)` exceeds `(2/n)^2` for
-**resonant** pairs (small `v_i ± v_j`, large `gcd`). A second-moment/Paley–Zygmund
-bound would give `mu > 0` (hence LRC) for speed sets with controlled pairwise
-correlations. *[Second-moment data being computed; the question is whether
-"all pairwise correlations `<= 1`" forces `mu > 0`.]*
+**T1 — Moment method / anti-concentration (quantified).** `E[N] = 2(n-1)/n ~ 2`.
+If the `B_i` were independent, `Var(N) = m·(2/n)(1-2/n)` and the lonely measure
+would be `(1-2/n)^m -> e^{-2} ~ 0.135 > 0`. Computed: the actual `Var(N)` runs
+slightly **above** the independent value on average (e.g. n=8: 1.49 vs 1.31), and
+the danger count sits `mean/std ~ 1.6` above `0`, so loneliness is a `~1.6σ`
+downward excursion of `N` — which essentially every set achieves in an interior
+cell. The exceptions are exactly the **extremal/tight** sets, which are
+**variance-MINIMIZERS**: e.g. AP `(1,2,3,4)` has `Var = 0.907` and `(1,3,4,5,9)`
+has `0.978`, both below the independent `~1.1`, so `N` stays concentrated near its
+mean and reaches `0` only at the boundary wall `t = 1/n`. So **the LRC-hard sets
+are the configurations that minimize the variance of the danger count** — the most
+"rigid"/anti-concentrated arrangements. A second-moment/Paley–Zygmund bound would
+give `mu > 0` (hence LRC) for sets whose pairwise correlations stay controlled.
+*[Pairwise-correlation `measure(B_i ∩ B_j)` data computed separately; resonant
+pairs (small `v_i ± v_j`, large `gcd`) over-correlate and are what the
+variance-minimizers exploit.]*
 
 **T2 — Covering systems.** Def 4 turns a counterexample into a covering of `Z/N_*`
 by generalized APs (one family per speed, modulus `N_*/v_i`, block-width `~2L/v_i`).
@@ -105,6 +114,13 @@ discrete-geometry analogue of the covering bound.
   `measure(B_i ∩ B_j) <= (2/n)^2` (no resonance), then `mu >= e^{-2}(1-o(1)) > 0`
   and LRC holds with slack. (Tests the second-moment route; ties to the no-pair /
   no-resonance reductions of earlier S521.)
+- **HYP (variance-minimizer = extremizer).** The arithmetic-progression speed set
+  `{1,...,n-1}` minimizes `Var(N)` among all primitive `m`-sets (and the tight
+  extremizers are exactly the low-variance, "most rigid" configurations). If true,
+  LRC reduces to a single inequality at the variance-minimizer, and a lower bound
+  `Var(N) >= c(n)` away from the minimizer would give interior loneliness. Computed
+  evidence: tight sets have `Var` strictly below the independent value while
+  generic sets exceed it.
 - **HYP (coalescent monotonicity).** Over one period the observer's arc length, as
   a function tracked through merge/split events, must hit its minimum (a singleton)
   because the two observer-adjacent runners recede monotonically between wraps
