@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T638** #lrc #goldbach #lemoine #doubled-primes #parity-gates | certainty: synthesis / open proof object | source: codex-2026-06-01-S551
+Doubled primes in `N=p+2q` are first-even parity gates, not generic composite summands: they spend one dyadic factor while preserving odd prime core `q`. In the n=4 mod-4 LRC frame they are boundary-active but pairwise quiet, since an even reduced cofactor kills the `chi4` pair correction while an even speed can destroy the all-odd `t=1/4` witness. Next computation should use bridge vertices `(N,p,q)` rather than runner vertices and compare fingerprints against the S513 add/multiply stack. See HYP-2044.
+
 **T637** #lrc #tournament-analysis #conditional-clearance #wedge-debt #transitivity | certainty: theorem + exact verifier | source: codex-2026-06-01-S549/S550
 A cascade should be read as a product of conditional clearances plus a hidden anti-wedge ledger. THM-392 proves the tournament core: `T` is transitive iff every edge `X->Y` has no backward wedge `{Z: Z->X and Y->Z}`, and total wedge mass is `3*c_3(T)`. HYP-2041 reads this as no-return/resonance debt; HYP-2042 warns the 3-cycle layer is necessary but not sufficient. The next lift should put the ledger on endpoint owners, wall events, or clearance obligations. See HYP-2040.
 
