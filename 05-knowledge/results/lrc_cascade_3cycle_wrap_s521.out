@@ -1,0 +1,7 @@
+Verify: round-tournament triple is a 3-cycle  <=>  it WRAPS (no empty semicircle):
+  matches: 3960, mismatches: 0
+
+  => 3-cycles (where Fact 2 / acyclicity binds) = wrapping triples = long-pair/apex/seam.
+  The cascade clears the transitive backbone (within-semicircle, Facts 1&2 hold) freely;
+  it deadlocks only at the seam (observer), where wrapping odd cycles (the OCF) live.
+  LRC <=> the cascade closes <=> the observer is on no frustrating odd cycle (a source).
