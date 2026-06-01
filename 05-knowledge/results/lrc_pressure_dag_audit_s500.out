@@ -1,0 +1,45 @@
+LRC pressure DAG audit (codex-2026-06-01 S500)
+
+PRESSURE-DAG METHOD
+============================================================================================================
+Pressure edges compare deletion reliefs: a -> b means a is the more
+irreplaceable blocker of b's nearest-neighbor moat.
+
+If the strict pressure graph is a DAG, the search has returned:
+  source layer: blockers that can be charged first
+  sink layer: most blocked runners
+  topological height: length of dependency cascade
+  no SCC core: no mutual pressure knot to support a disproof candidate
+
+DAG AUDIT ACROSS PRESSURE SEARCH SAMPLES
+============================================================================================================
+case             n samples      DAGs  cyclic maxSCC height longest max arcs   src range  sink range d1-desc
+------------------------------------------------------------------------------------------------------------
+n14-d7          14    1177 1177/1177       0      1      5       4       10      (0, 7)      (0, 9)   70.1%
+n14-d14         14    2349 2349/2349       0      1      5       4       10      (0, 7)      (0, 9)   69.4%
+n18-d3          18     100  100/100        0      1      4       3       12      (0, 8)     (0, 11)   73.3%
+n18-d9          18     233  233/233        0      1      4       3       11      (0, 8)     (0, 11)   76.2%
+n18-d18         18     425  425/425        0      1      5       4       12      (0, 8)     (0, 11)   72.3%
+
+MAXIMAL DEPENDENCY DAGS
+============================================================================================================
+case                      t  arcs/ties height longest layers                   sources            sinks
+------------------------------------------------------------------------------------------------------------
+n14-d7              337/980    9/82         5       4 5,6,1,1,1                35,49,56           0,14,21,70,77,84
+n14-d14            811/2156   10/81         5       4 4,6,2,1,1                1,56,98,112        0,14,42,140,154,168
+n18-d3               73/594   10/143        4       3 8,7,2,1                  1,6,15,27,45       0,3,18,21,30,48
+n18-d9             271/1782   10/143        4       3 8,7,2,1                  1,18,45,81,135     0,9,54,63,90,144
+n18-d18            649/5508    5/148        5       4 13,2,1,1,1               1                  18,288
+
+INTERPRETATION
+============================================================================================================
+Across these cases, cyclic pressure samples = 0/4284.
+A pressure search returning DAGs should be read as a failed counterexample search but a successful certificate search: the obstruction has a topological order.
+
+Proof-useful reframe:
+  1. pressure sources are chargeable blockers;
+  2. pressure sinks are exposed blocked runners;
+  3. topological layers give an induction order;
+  4. the first non-DAG sample would be the first serious disproof-like core.
+
+The d1-descent column is not perfect, so the DAG is not merely sorting by nearest distance.  It is a real relation-level residue of the two-neighbor geometry.

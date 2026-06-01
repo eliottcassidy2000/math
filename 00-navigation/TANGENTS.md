@@ -683,6 +683,15 @@ One-slot `n=18` scans show scalar gap can prefer nonmultiples, but endpoint/prod
 **T556** #lonely-runner #pressure-leaves #peeling #tournament-analysis | certainty: sampled exact n18 pressure audit | source: codex-2026-06-01-S493
 In the sampled `n=18` lpd, gate, and single-gate repair rows, `k1`, `k2`, and deficit pressure tournaments all have largest SCC `1` and no directed pressure triangle. This turns pressure leaves into proof assets: a counterexample must survive endpoint-private peeling and mobile pressure peeling simultaneously.
 
+**T557** #lonely-runner #pressure-dag #certificate #peeling | certainty: exact sampled audit | source: codex-2026-06-01-S500
+Pressure searches returning DAGs are certificate-shaped, not empty. S500 finds `4284/4284` sampled hard-ladder pressure graphs are DAGs across `n14-d7`, `n14-d14`, `n18-d3`, `n18-d9`, and `n18-d18`, with max height `5`. Sources are chargeable blockers; sinks are blocked runners. See HYP-1960.
+
+**T558** #lonely-runner #pressure-scc #counterexample-filter #dag | certainty: medium-high proof filter | source: codex-2026-06-01-S500
+The first serious disproof-shaped pressure object is not a small scalar gap but `pressure_largest_scc > 1`. If pressure graphs remain DAGs over full chamber decompositions, the proof should induct over topological layers and pair pressure sources with endpoint-private rows.
+
+**T559** #lonely-runner #pressure-potential #non-scalar-order #two-neighbor | certainty: exact S500 diagnostic | source: codex-2026-06-01-S500
+Pressure DAGs are not merely nearest-distance rankings: pressure edges descend `d1` only about `69-76%` of the time in S500. The acyclic order is therefore a real two-neighbor relation residue, matching the ranker/analyzer split in Tournament Analysis.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

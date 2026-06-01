@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-01-S500 - LRC Pressure DAG Audit
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S490/S471.
+**User prompt:** Investigate the concept of pressure searches returning DAGs.
+**Computation:** Added `04-computation/lrc_pressure_dag_audit_s500.py` and stored `05-knowledge/results/lrc_pressure_dag_audit_s500.out`. The script reconstructs two-neighbor deletion-relief pressure graphs, checks DAG-ness, topological layers, longest paths, source/sink labels, and how often pressure edges descend nearest-neighbor distance.
+**Findings:** Across `4284` sampled pressure graphs from `n14-d7`, `n14-d14`, `n18-d3`, `n18-d9`, and `n18-d18`, every strict pressure graph was a DAG (`0` cyclic samples, max SCC `1`). Max dependency height was `5`, with longest paths of length `4`. Pressure edges agree with nearest-distance descent only about `69-76%` of the time, so the DAG is not merely a scalar ranking.
+**Synthesis:** Added HYP-1960 and `07-reflections/lrc-pressure-dag-audit-s500.md`. A pressure search returning DAGs should be read as a certificate search: sources are chargeable blockers, sinks are blocked runners, topological layers are a peel order, and the first non-DAG pressure sample would be the first serious disproof-like core.
+**Next:** Compute transitive reductions of pressure DAGs and compare source/sink labels with endpoint-private owner rows, endpoint peel depth, and denominator/product-tree depth.
+
 ## codex-2026-06-01-S493 - n=18 LRC square-core packet certificate
 
 **Account:** Codex
@@ -28,6 +38,7 @@
 **Findings:** (1) FIXED MENU per n: visited iso-classes/H are a fixed small set independent of speeds: n=5->H in {1,9,11,15} (4 of 12); n=6->{1,17,23,23,41,45} (6 of 56). The phase lens realizes only "circular" tournaments; speeds pick only the WALK. Spread-chain: transitive(H=1,bunched)->regular/near-regular(H=max,even; n=5 top=rotational R_5). (2) transitive <=> empty semicircle <=> 1/2-gap (0 mismatches n=5,6,7); H is a MONOTONE loneliness meter (H=1<->maxgap .75 ... H=15<->.26). (3) Extremal LRC set (0..n-1) = MINIMAL clock (fewest cells/classes); maximal resonance=minimal walk; #cells~sum|s_i-s_j|. (4) GEOMETRY CONSTRAINS IMAGE: basketball flux lift reaches outside the circular menu (teams H=5,13 not in {1,9,11,15}); only circle-geometry restricts to 4 classes.
 **Dot-connected:** runner resonance <-> closed walk in G_n; loneliness <-> low-H cells; extremal LRC <-> minimal metagraph loop. New HYP-1951. Reflection: `07-reflections/tournament-clock-runner-walks-in-Gn-s24.md`.
 **Next:** prove circular-menu=realizable-on-circle; alpha=1/k comparator family <-> LRC threshold 1/k; signature as resonance-lattice invariant; homology of extremal loop in G_n.
+
 ## codex-2026-06-01-S490 - n=14/n=18 LRC Tournament Feedback Loop
 
 **Account:** Codex
