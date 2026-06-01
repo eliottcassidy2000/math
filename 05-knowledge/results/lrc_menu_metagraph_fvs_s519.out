@@ -1,0 +1,15 @@
+n=5: menu |V|=4 edges=3  lonely(transitive)=1
+   M_n minus lonely: |V|=3 edges=2 comps=1  ACYCLIC(forest)=True  => lonely is FVS: True
+   H-values in menu: [1, 9, 11, 15]
+   whole M_n: components=1, has_cycle=False
+
+n=6: menu |V|=6 edges=7  lonely(transitive)=1
+   M_n minus lonely: |V|=5 edges=6 comps=1  ACYCLIC(forest)=False  => lonely is FVS: False
+   H-values in menu: [1, 17, 23, 41, 45]
+   whole M_n: components=1, has_cycle=True
+
+n=7: menu |V|=10 edges=13  lonely(transitive)=1
+   M_n minus lonely: |V|=9 edges=12 comps=1  ACYCLIC(forest)=False  => lonely is FVS: False
+   H-values in menu: [1, 33, 47, 51, 105, 123, 137, 151, 175]
+   whole M_n: components=1, has_cycle=True
+

@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S519 - Walk-on-metagraph attempt at n=14: honest negative + the real obstruction
+
+**Account:** Oracle (remote-control). **User prompt:** use the walk-on-the-tournament-metagraph concept to try to prove n=14; reframe the LRC->iso-class mapping if needed.
+**Attempt:** LRC@n = a closed t-ordered runner-walk in the menu metagraph M_n (2*Fib(n-2) circular classes; edges=single wall-crossings) must hit a lonely class. REFRAME tried: are lonely classes a FEEDBACK VERTEX SET (M_n minus lonely acyclic => every cycle hits lonely)? Computed M_n (lrc_menu_metagraph_fvs_s519.py): n=5 = 4-vtx TREE; n=6 = 6V/7E (2 cycles); n=7 = 10V/13E (4 cycles). The half-turn 'transitive' target is NOT a FVS for n>=6.
+**Honest obstruction (why the reframe fails to reduce LRC):** (1) closed WALKS (not simple cycles) can backtrack and avoid almost any set, so FVS is not equiv to 'every closed walk hits lonely'; (2) realizable runner-walks are an arithmetically-special, measure-zero family (each edge (i,j) flips 2|v_i-v_j| times in a speed-determined order) -- characterizing them = LRC. So the metagraph picture is FAITHFUL+clarifying but NOT reducing; the difficulty is the walk family, not the graph.
+**What survives:** M_n is a genuine small explicit object (its cycle space = non-bunching walks). The walk meets the sieve exactly at the n-gon cells t=a/n (loneliness there <=> no speed divisible by n = THM-369); the fine q>n regime between them is the S18 coarse/fine residual. The real lever is order-combinatorial (interval-exchange / wall-crossing order = the bounded-ansatz cofactor S514), not a pure graph property.
+**Verdict:** did NOT prove n=14; correctly located the irreducible content (which closed t-walks the runner arithmetic realizes). New HYP-1997. Reflection: 07-reflections/lrc-walk-on-metagraph-proof-attempt-s519.md.
+
 ## oracle-2026-06-01-S518 - LRC@n as a tournament; the Fibonacci menu of circular iso-classes
 
 **Account:** Oracle (remote-control). **User prompt:** see how LRC@n is modeled by a tournament of some size and its possible iso-class structure.

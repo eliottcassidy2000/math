@@ -3489,3 +3489,10 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** lrc_tournament_model_isoclasses_s518.py (+ .out): realizable counts 2,2,4,6,10,16 = 2*Fib(m-2); regular realizable iff m odd; H-menus {1,9,11,15} (m=5), {1,17,23,41,45} (m=6).
 **Predictions:** a(m)=2*Fib(m-2) provable via reach-sequence/composition count; menu Hasse-poset edges = single wall-crossings = G_n edges; loneliness end is a dominating target for every realizable walk.
 **See:** 07-reflections/lrc-as-a-tournament-and-its-fibonacci-isoclass-menu-s518.md, HYP-1981, HYP-1987, HYP-1991, HYP-1993, THM-369.
+
+## HYP-1997: the menu-metagraph walk is faithful but non-reducing; LRC = realizable-walk family (oracle-2026-06-01-S519)
+**Status:** EXPLORATORY (honest negative). Clarifies the walk-on-metagraph program (HYP-1996).
+**What:** LRC@n = a closed t-ordered runner-walk in the menu metagraph M_n (2*Fib(n-2) circular classes; edges=single wall-crossings) must hit a lonely class. The natural reduction "lonely classes are a feedback vertex set of M_n" FAILS: computed M_n is n=5 tree / n=6 6V7E(2 cycles) / n=7 10V13E(4 cycles), and transitive is NOT a FVS for n>=6. Two reasons it cannot reduce LRC: (a) closed walks backtrack so FVS != 'every closed walk hits lonely'; (b) realizable runner-walks are arithmetically special (edge (i,j) flips 2|v_i-v_j| times in a speed-determined order) and characterizing them IS LRC. So the metagraph is faithful+clarifying, not reducing. The walk meets the sieve (THM-369) exactly at the n-gon cells t=a/n; the residual is the fine q>n regime (S18) governed by the bounded-ansatz cofactor (S514, interval-exchange/wall-crossing order).
+**Evidence:** lrc_menu_metagraph_fvs_s519.py (+ .out): M_n vertex/edge/cycle counts; FVS test False for n>=6.
+**Predictions:** progress on n=14 needs the order-combinatorial (interval-exchange) structure of the realizable walk, not a pure graph property; M_n's cycle space (cyclomatic 0,2,4 for n=5,6,7) enumerates the non-bunching walk types.
+**See:** 07-reflections/lrc-walk-on-metagraph-proof-attempt-s519.md, HYP-1996, HYP-1991(ansatz), THM-369, HYP-1987.
