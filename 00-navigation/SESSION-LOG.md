@@ -69,6 +69,12 @@
 **CASCADE (lrc_cascade_conditional_clearance_noreturn_s545.py):** F_k=F_{k-1} cap {||v_k t||>=1/n}, c_k=|F_k|/|F_{k-1}|, prod=lonely measure. c_1=1-2/n exactly. The product DEFICIT below (1-2/n)^{n-1} is driven by the # of RETURN 3-cycles = 3-term resonances. Generic: few returns -> product ~ (1-2/n)^{n-1} (propagate). REGULAR POLYGON (AP): ALL triples resonant -> c_k collapse (last=0) -> product EXACTLY 0 (tight). Fibonacci 1,2,3,5,8,13 (each a+b=c) resonance-rich -> deficit.
 **UNIFICATION:** Fact2(no return) <=> no 3-term resonance <=> inside debt vanishes (S529/533) <=> cascade product stays (1-2/n)^{n-1}>0 <=> local emptiness (S544). Cascade needs BOTH facts: Fact1 builds forward, Fact2 prevents re-block. Returns = sole obstruction, maximal at the regular polygon. REFRAME: LRC = 'no return wins' (returns kill the measure at the regular polygon but conjecturally not the set).
 **Convergent** with codex-S549/HYP-2040 (transitive wedge debt). **Artifacts:** lrc_cascade_conditional_clearance_noreturn_s545.py (+.out); reflection lrc-cascade-as-conditional-clearances-the-no-return-fact-is-the-resonance-obstruction-s545o.md; HYP-2041. **Handoff:** quantitative bound prod c_k >= (1-2/n)^{n-1} - f(#returns); set-vs-measure gap at the regular polygon; higher-order returns = full inside debt.
+## codex-2026-06-01-S550 - Doubled primes as parity lifts of prime cycles (HYP-2041)
+
+**Context:** User asked to understand odd/even cycles, odd/even numbers, Goldbach for evens, Lemoine/Levy `N=p+2q` for odds, and the importance of doubled primes.
+**Synthesis:** Added HYP-2041 and a reflection.  Odd cycles are parity obstructions; even cycles are two-sheet-compatible.  A doubled prime `2p` is the bipartite double cover of the prime odd cycle `p`: even enough to live on the parity-balanced sheet, but still carrying one irreducible prime odd core.
+**Goldbach/Lemoine bridge:** Even Goldbach is `P+P` with parity `1+1=0`; Lemoine is `P+2P` with parity `1+0=1`, equivalently the diagonal ternary form `p+q+q`.  On the mod-6 wheel, `P={1,5}`, `2P={2,4}`, so `P+P` covers the even residue channels `{0,2,4}` and `P+2P` covers the odd channels `{1,3,5}`.  Doubled primes are therefore the parity-shifted copy of the prime necklace and the first-even row `p -> 2p` in the HYP-1984 add/multiply grid.
+**Artifacts:** `05-knowledge/hypotheses/HYP-2041-doubled-primes-parity-lift.md`; `07-reflections/doubled-primes-as-parity-lift-s550.md`.
 
 ## codex-2026-06-01-S549 - Conditional clearance product plus hidden transitive wedge debt (HYP-2040)
 
