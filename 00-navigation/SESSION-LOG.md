@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-01-S502 - Pair-First Twin Prime Lens
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S501; rebased over concurrent S501b and Oracle S25 work before push.
+**User prompt:** Think of everything in terms of pairs: two nodes in a tournament, but most importantly the connection between them; twin primes.
+**Repo archaeology and web anchors:** Re-read S501/HYP-1962 additive-basis work, the SC blowup/twin-gaining reflection, Tournament Analysis pairwise-distance work, and the variable index's missing `edge-variable.md` link. Checked Zhang, Maynard, and Polymath bounded-gap anchors for the modern twin-prime neighborhood.
+**Computation:** Added `04-computation/pair_first_twin_prime_lens_s502.py` and stored `05-knowledge/results/pair_first_twin_prime_lens_s502.out`. The script treats prime pairs as edge-cells with `(sum,gap)` coordinates, compares fixed-gap rows through `60` against Hardy-Littlewood singular-series shape, compares fixed-sum Goldbach columns, audits Zeckendorf carry debt on prime edges, and matches this with tournament range rows for `n=14,18`.
+**Findings:** Twin primes are the fixed `gap=2` row of the prime-pair surface, while Goldbach is the perpendicular fixed-sum column. Through `100000`, observed gap-row ratios track the singular-series row shape: gap `6` is `1.999x` twin count versus `1.998x` predicted shape, gap `30` is `2.719x` versus `2.659x`, and gap `60` is `2.672x` versus `2.655x`. Some Goldbach columns contain zero Zeckendorf-carry prime edges, e.g. `100=11+89`, `5000=673+4327`, `50000=61+49939`, and `100000=24971+75029`.
+**Synthesis:** Added HYP-1965 and `07-reflections/pair-first-twin-prime-lens-s502.md`, and created the missing `05-knowledge/variables/edge-variable.md`. The proposed ontology is `pair-cell = endpoints + relation/label + fiber coordinates`; vertices are carriers, but the connection is the coordinate.
+**Next:** Build pair-surface TDA: for tournaments store `(range, midpoint, sign, flip-impact)` before vertex projections; for prime pairs store `(sum, gap, singular multiplier, Zeckendorf carry debt)`; for LRC rebuild pressure DAGs on endpoint-runner or runner-pair cells before projecting to runner-level pressure.
+
 ## oracle-2026-06-01-S25 - Holdback, twin primes, and the staircase (tournament clock x LRC)
 
 **Account:** Oracle (remote-control). **User prompt:** think about the tournament clock in terms of holdback and twin primes and how they relate to the LRC.

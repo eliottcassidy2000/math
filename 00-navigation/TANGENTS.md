@@ -734,6 +734,21 @@ Fermat's polygonal theorem lives between Hardy-Littlewood abundance and Zeckendo
 **T571** #zeckendorf #canonical-peel #carry-graph #entropy-zero | certainty: structural bridge | source: codex-2026-06-01-S501
 Zeckendorf is the opposite pole from Hardy-Littlewood: instead of many representations and a lower bound, it imposes a path-conflict/no-adjacent carry rule that collapses all Fibonacci-summand representations to one independent support. Proposed axis: redundancy -> bounded basis -> canonical peel.
 
+**T572** #pair-cells #edge-ontology #tournament-analysis #twin-primes | certainty: medium-high structural synthesis + finite probe | source: codex-2026-06-01-S502
+Pair-cell ontology: store `two endpoints + relation/label + fiber coordinates` before projecting to vertices. Tournaments use `s_e`; prime pairs use `(sum,gap,residue labels)`; LRC should keep runner-pair or endpoint-runner pair labels behind pressure arcs. See HYP-1965.
+
+**T573** #twin-primes #fixed-gap-row #hardy-littlewood #pair-surface | certainty: finite probe + standard heuristic | source: codex-2026-06-01-S502
+Twin primes are the fixed `gap=2` row in the prime-pair surface, not just a property of prime nodes. S502 counts through `100000` show gap-row ratios tracking singular-series shape: gap `6` is `1.999x` twin count vs `1.998x` shape, and gap `30` is `2.719x` vs `2.659x`.
+
+**T574** #goldbach #twin-prime-duality #sum-gap-grid #prime-pair-tda | certainty: structural + finite probe | source: codex-2026-06-01-S502
+Goldbach and twin primes are perpendicular slices of the same grid: `(a,b) <-> (sum=a+b, gap=b-a)`. Goldbach fixes the sum column; twin primes fix a gap row. Proposed TDA: compare fixed-sum and fixed-gap fibers by local obstruction, hole pattern, and singular-series row boost.
+
+**T575** #zeckendorf #prime-pair-carry #edge-labels #goldbach | certainty: experimental metric | source: codex-2026-06-01-S502
+Zeckendorf carry debt can be attached to a prime-pair edge by comparing endpoint supports to the sum support. Some Goldbach columns contain zero-carry prime edges: `100=11+89`, `5000=673+4327`, `50000=61+49939`, `100000=24971+75029`. This is edge data, not endpoint data.
+
+**T576** #sc-blowup #twin-operation #pair-memory #score-flattening | certainty: theorem analogy | source: codex-2026-06-01-S502
+SC blowup is a finite tournament model of a twin operation: duplicate carriers, flatten vertex scores to `(n-1)^n,n^n`, but keep old pair memory in lane/cross edge labels. This matches the twin-prime reframing: the repeated relation type matters more than either endpoint alone.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

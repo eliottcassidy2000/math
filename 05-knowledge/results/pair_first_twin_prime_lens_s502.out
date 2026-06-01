@@ -1,0 +1,153 @@
+
+================================================================================================================
+Pair-first ontology
+================================================================================================================
+object           pair-cell          relation                   labels
+tournament       {i,j}              orientation sign s_ij      range j-i, midpoint i+j, flip impact
+twin primes      {p,p+2}            both endpoints prime       fixed gap row g=2
+Goldbach         {p,N-p}            both endpoints prime       fixed sum column s=N
+SC blowup        {u_r,v_s}          lane/cross orientation     four edge-cells between each old pair
+LRC distances    {runner i, runner j} chosen metric switch       time-varying chord/gap/pressure label
+
+Synthesis:
+  A vertex is a carrier.  The connection between two carriers is the coordinate.
+  Twin primes are the recurrence of the smallest nontrivial prime-pair edge label.
+  Goldbach and twin primes are perpendicular slices of the same prime-pair surface.
+
+================================================================================================================
+Twin primes as the gap=2 row of the prime-pair surface
+================================================================================================================
+Prime-pair rows with p,p+gap <= 100000
+C2 approximation from primes <= 100000: 0.660162345
+ gap   count  HL-shape  count/twin  shape/twin    odd factors
+   2    1224    1247.1       1.000       1.000              -
+   4    1216    1246.4       0.993       0.999              -
+   6    2447    2491.9       1.999       1.998              3
+   8    1260    1245.6       1.029       0.999              -
+  10    1624    1660.4       1.327       1.331              5
+  12    2420    2490.0       1.977       1.997              3
+  14    1487    1493.7       1.215       1.198              7
+  16    1233    1244.5       1.007       0.998              -
+  18    2477    2488.7       2.024       1.996              3
+  20    1645    1658.9       1.344       1.330              5
+  22    1351    1382.2       1.104       1.108             11
+  24    2475    2487.6       2.022       1.995              3
+  26    1348    1356.7       1.101       1.088             13
+  28    1467    1492.2       1.199       1.197              7
+  30    3328    3315.6       2.719       2.659            3,5
+  32    1203    1243.2       0.983       0.997              -
+  34    1306    1325.9       1.067       1.063             17
+  36    2463    2485.8       2.012       1.993              3
+  38    1292    1315.9       1.056       1.055             19
+  40    1638    1656.9       1.338       1.329              5
+  42    2930    2982.1       2.394       2.391            3,7
+  44    1409    1380.5       1.151       1.107             11
+  46    1292    1301.5       1.056       1.044             23
+  48    2482    2484.4       2.028       1.992              3
+  50    1645    1656.1       1.344       1.328              5
+  52    1309    1354.9       1.069       1.086             13
+  54    2438    2483.7       1.992       1.992              3
+  56    1469    1490.1       1.200       1.195              7
+  58    1270    1287.6       1.038       1.033             29
+  60    3271    3310.8       2.672       2.655            3,5
+
+Read this as edge-row geometry, not isolated prime numerology:
+  multiplying the gap by a new odd prime removes fewer residue classes,
+  so the whole row gets a Hardy-Littlewood singular-series boost.
+
+================================================================================================================
+Goldbach/twin duality in (sum, gap) coordinates
+================================================================================================================
+For same-parity endpoints, the coordinate change is invertible:
+  endpoints = ((sum-gap)/2, (sum+gap)/2)
+  twin primes: fixed gap=2
+  Goldbach:    fixed even sum=N
+
+      N  Goldbach pairs       gap range    best carry pair   carry
+    100               6           6..94           (11, 89)       0
+    500              13         42..474          (13, 487)       4
+   1000              28         18..994           (3, 997)       5
+   5000              76       234..4986        (673, 4327)       0
+  10000             127       162..9882       (3209, 6791)       4
+  50000             450       66..49986        (61, 49939)       0
+ 100000             810      246..99978     (24971, 75029)       0
+
+  Fixed-sum columns usually contain many possible gaps; fixed-gap rows
+  usually contain many possible sums.  The same edge can be read both ways.
+
+================================================================================================================
+A small prime-pair surface sample
+================================================================================================================
+Prime pair edges with endpoints <= 400 and gap <= 40: 539
+Gap row counts:
+  2:21 4:21 6:42 8:19 10:27 12:36 14:25 16:21 18:35 20:25 22:18 24:37 26:22 28:20 30:48 32:18 34:21 36:39 38:18 40:26
+Most common sum residues mod 30:
+  0:68 24:60 6:60 18:53 12:49 10:34 20:31 22:28 28:26 14:23
+Most common midpoint residues mod 30:
+  0:38 27:33 3:32 15:30 24:29 18:28 12:27 21:25 6:24 9:24
+
+The residue data is a reminder that the pair-cell carries local obstruction
+data.  A prime-pair edge is an arithmetic connection, not just two prime nodes.
+
+================================================================================================================
+Tournament edge board as the finite unsieved analogue
+================================================================================================================
+n=14: total pair-cells C(n,2)=91
+  range rows: 1:13 2:12 3:11 4:10 5:9 6:8 7:7 8:6 9:5 10:4 11:3 12:2 13:1
+  entropy by range is triangular before any orientation; Tournament Analysis then adds one sign bit per cell.
+n=18: total pair-cells C(n,2)=153
+  range rows: 1:17 2:16 3:15 4:14 5:13 6:12 7:11 8:10 9:9 10:8 11:7 12:6 13:5 14:4 15:3 16:2 17:1
+  entropy by range is triangular before any orientation; Tournament Analysis then adds one sign bit per cell.
+
+Analogy:
+  tournament board: all pair-cells exist, then orientation signs decorate them.
+  prime-pair board: all integer pair-cells exist, then the sieve deletes most cells.
+  LRC board: all runner pair-cells exist, then time changes their metric labels.
+
+================================================================================================================
+SC blowup: pair cells become twin lanes
+================================================================================================================
+For each old tournament pair {u,v}, SC blowup creates four edge-cells:
+  lane:  u0-v0, u1-v1 follow T
+  cross: u0-v1, u1-v0 follow T^op
+
+This is why 'twin' is the right word inside the repo too:
+  the old pair is not discarded; it is doubled into lane/cross structure.
+  Score variation is erased at the vertex level, but remembered in pair labels.
+  That mirrors twin primes: the node property prime is less informative than
+  the repeated connection type gap=2 surviving the sieve.
+
+================================================================================================================
+Zeckendorf carry debt on prime-pair edges
+================================================================================================================
+Twin prime edge audits:
+        pair    sum            raw support             target  score
+      (3, 5)      8                 (3, 4)               (5,)      4
+      (5, 7)     12                 (2, 4)          (1, 3, 5)      7
+    (11, 13)     24              (3, 5, 6)             (3, 7)      4
+    (41, 43)     84        (1, 2, 4, 5, 8)          (5, 7, 9)     10
+  (137, 139)    276       (1, 3, 6, 8, 10)      (1, 5, 8, 12)     11
+  (347, 349)    696   (1, 3, 4, 7, 10, 12)   (2, 5, 7, 9, 14)     18
+  (881, 883)   1764   (1, 3, 4, 8, 12, 14)     (2, 7, 11, 16)     19
+
+Best carry Goldbach edge in selected columns:
+    sum               pair            raw support             target  score
+    100           (11, 89)             (3, 5, 10)         (3, 5, 10)      0
+    500          (13, 487)         (6, 7, 10, 13)        (8, 10, 13)      4
+   1000           (3, 997)          (2, 3, 5, 15)            (6, 15)      5
+   5000        (673, 4327)  (2, 5, 9, 11, 14, 18) (2, 5, 9, 11, 14, 18)      0
+  10000       (3209, 6791) (2, 4, 6, 7, 14, 17, 19) (2, 4, 8, 14, 17, 19)      4
+  50000        (61, 49939)  (1, 4, 9, 15, 17, 23) (1, 4, 9, 15, 17, 23)      0
+
+This gives a repo-native metric for prime edges:
+  how much local carry work is needed to collapse endpoint supports to the
+  support of the sum.  It is pair data, not endpoint data.
+
+================================================================================================================
+New questions suggested by the pair-first lens
+================================================================================================================
+1. Can Tournament Analysis store every pair-cell as (range, midpoint, sign, flip-impact) and only later project to vertex scores?
+2. Can prime-pair work store every edge as (sum, gap, residue singular factor, carry debt) and compare fixed-sum vs fixed-gap fibers?
+3. Is the right Goldbach/twin bridge a TDA of the prime-pair surface, with holes created by local residue deletions and filled by singular-series boosts?
+4. For LRC, do pressure DAGs become clearer if their nodes are runner-pairs or endpoint-runner pairs rather than runners alone?
+5. Can SC blowup be used as the finite tournament model of an arithmetic twin operation: duplicate carriers, keep connection memory, flatten node scores?
