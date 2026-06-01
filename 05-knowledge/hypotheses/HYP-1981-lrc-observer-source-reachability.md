@@ -8,7 +8,10 @@ related:
   - HYP-1978
   - HYP-1979
   - HYP-1982
+  - HYP-1987
+  - HYP-1988
   - THM-369
+  - THM-385
 ---
 
 # HYP-1981: LRC is source-reachability in the observer-marked A000568 quotient
@@ -71,6 +74,13 @@ observer-pointed half-turn classes can mix safe and unsafe states.  The
 observer-source construction repairs that by using the LRC threshold on the
 observer incident arcs.
 
+S517 adds THM-385: the observer-source construction also records exact
+distance-to-source.  The observer indegree is the number of runners currently
+blocking the observer, so source, almost-source, and every observer-score layer
+have direct LRC meanings.  The S517 audit found zero marked-class mixing by
+blocker count in bounded `n=4,5,6,7` windows, while runner-subtournament
+classes did mix blocker counts.
+
 ## Predictions
 
 1. The reachable source classes are a small subset of `A000568(n-1)`, likely
@@ -95,6 +105,8 @@ observer incident arcs.
 3. Combine source reachability with the threshold-decorated fibers of HYP-1982:
    a source class is the witness target, while decorated bad/mixed fibers
    explain how an A000568 projection can hide or reveal that target.
+4. Add observer-score, side-defect, and observer 2-king repair layers to the
+   reachable-source classification, especially for tight and near-tight rows.
 
 ## Sources
 
@@ -106,3 +118,5 @@ observer incident arcs.
 - HYP-1977
 - HYP-1979
 - HYP-1982
+- HYP-1987
+- HYP-1988

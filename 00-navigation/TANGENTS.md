@@ -82,6 +82,9 @@ The three-layer LRC stack ranks hard rows nontrivially (`full_stack H=87`, `c3=1
 **T611** #lrc #source-gap #threshold-fiber #boundary-compactification | certainty: proved local criterion + proof route | source: codex-2026-06-01-S516
 THM-384 turns THM-382's threshold-gap evidence into a local theorem: the observer is lonely iff the two observer-adjacent gaps are both `>=1/n`. The global LRC task becomes forced visitation of the compactified source-gap fiber `(long,long)`; a counterexample must avoid it while remaining sieve-complete and THM-380 pressure-cyclic. See HYP-1986.
 
+**T612** #lrc #observer-score #almost-source #pressure-repair | certainty: proved local stratification + computed audit | source: codex-2026-06-01-S517
+THM-385 shows observer indegree in the marked LRC tournament is exactly the number of blocking runners. Thus source means zero blockers, almost-source means one blocker, and observer score is distance-to-source. S517 adds side-defect and observer 2-king repair layers as possible bridges to labelled endpoint pressure. See HYP-1988.
+
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
 

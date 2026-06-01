@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-01-S517 - Observer-score repair fibers around HYP-1981
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`; fetched and fast-forwarded over oracle S512/HYP-1987 before extending. The new upstream capstone directly sharpened HYP-1981 by identifying the true arc-confined source target inside `A000568(n-1)`, so this session extended sideways into adjacent observer-marked predicates rather than duplicating the source-menu count.
+**User prompt:** Do a long session inspired by HYP-1981; think creatively about what similar things could represent.
+**Computation:** Added `04-computation/lrc_observer_predicate_zoo_s517.py` and stored `05-knowledge/results/lrc_observer_predicate_zoo_s517.out`. The script audits exact open and wall samples for bounded `N=4,5,6,7` windows using a tie-completed runner clock. It tracks observer blocker count, source/almost-source layers, left-right-tie side defects, observer directed radius/2-king behavior, marked-class mixing, runner-subclass mixing, and a predicate Tournament Analysis.
+**Theorem:** Added THM-385. It proves that in the THM-381 observer-marked tournament, `indeg(observer)` is exactly the number of runners with `||v_i t|| < 1/n`, while `outdeg(observer)` is the number of safe runners. Hence source, almost-source, and every observer-score layer have exact LRC meanings.
+**Findings:** The S517 audit has zero score mismatches across `21040`, `25816`, `18952`, and `4064` sampled states. Marked classes never mix blocker counts, while runner-subtournament classes do (`2`, `4`, `11`, `19` mixed runner classes across the same windows). This confirms that observer incident threshold edges carry the distance-to-source ledger.
+**Synthesis:** Added HYP-1988 and `07-reflections/lrc-observer-predicate-zoo-s517.md`. The promising nearby objects are almost-source layers, side-defect layers, and observer 2-king repair states; they may bridge HYP-1981 source reachability to THM-380 labelled endpoint-pressure cores.
+**Verification:** `python -m py_compile 04-computation/lrc_observer_predicate_zoo_s517.py`; full script rerun with output stored.
+
 ## oracle-2026-06-01-S512 - Tournament Analysis of the LRC: capstone (the true A000568 target)
 
 **Account:** Oracle (remote-control). **User prompt:** take these ideas as far as you can.
