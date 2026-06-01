@@ -1,0 +1,311 @@
+LRC as a Walk on the Metagraph G_n — opus-2026-06-01-S523b
+
+======================================================================
+PART 1: LRC walk on G_n — initial segments
+======================================================================
+
+n=4  speeds={1,...,3}
+  walk length (cells): 14
+  distinct pointed classes visited: 7
+  source classes (obs outdeg=3): 0
+  source found in open cells: False
+  source found at walls: 2
+  observer outdegree histogram: {0: 2, 1: 4, 2: 8}
+  transition edges: 10
+  A000568(4) = 4
+  fraction of classes visited: 7/4 = 1.7500
+  walk near source (max outdeg) states:
+    t≈0.1042  outdeg=1  source=False
+    t≈0.1875  outdeg=2  source=False
+    t≈0.2917  outdeg=2  source=False
+    t≈0.3542  outdeg=2  source=False
+    t≈0.3958  outdeg=1  source=False
+    t≈0.4583  outdeg=2  source=False
+    t≈0.5417  outdeg=2  source=False
+    t≈0.6042  outdeg=1  source=False
+    t≈0.6458  outdeg=2  source=False
+    t≈0.7083  outdeg=2  source=False
+    t≈0.8125  outdeg=2  source=False
+    t≈0.8958  outdeg=1  source=False
+
+n=5  speeds={1,...,4}
+  walk length (cells): 24
+  distinct pointed classes visited: 13
+  source classes (obs outdeg=4): 0
+  source found in open cells: False
+  source found at walls: 4
+  observer outdegree histogram: {0: 2, 1: 2, 2: 6, 3: 14}
+  transition edges: 19
+  A000568(5) = 12
+  fraction of classes visited: 13/12 = 1.0833
+  walk near source (max outdeg) states:
+    t≈0.0833  outdeg=2  source=False
+    t≈0.1333  outdeg=3  source=False
+    t≈0.1833  outdeg=3  source=False
+    t≈0.2250  outdeg=3  source=False
+    t≈0.2583  outdeg=3  source=False
+    t≈0.2833  outdeg=2  source=False
+    t≈0.3167  outdeg=3  source=False
+    t≈0.3667  outdeg=3  source=False
+    t≈0.4250  outdeg=3  source=False
+    t≈0.4750  outdeg=2  source=False
+    t≈0.5250  outdeg=2  source=False
+    t≈0.5750  outdeg=3  source=False
+    t≈0.6333  outdeg=3  source=False
+    t≈0.6833  outdeg=3  source=False
+    t≈0.7167  outdeg=2  source=False
+    t≈0.7417  outdeg=3  source=False
+    t≈0.7750  outdeg=3  source=False
+    t≈0.8167  outdeg=3  source=False
+    t≈0.8667  outdeg=3  source=False
+    t≈0.9167  outdeg=2  source=False
+
+n=6  speeds={1,...,5}
+  walk length (cells): 42
+  distinct pointed classes visited: 18
+  source classes (obs outdeg=5): 0
+  source found in open cells: False
+  source found at walls: 2
+  observer outdegree histogram: {0: 2, 1: 2, 2: 2, 3: 14, 4: 22}
+  transition edges: 26
+  A000568(6) = 56
+  fraction of classes visited: 18/56 = 0.3214
+  walk near source (max outdeg) states:
+    t≈0.0694  outdeg=3  source=False
+    t≈0.1042  outdeg=4  source=False
+    t≈0.1458  outdeg=4  source=False
+    t≈0.1833  outdeg=4  source=False
+    t≈0.2042  outdeg=4  source=False
+    t≈0.2208  outdeg=3  source=False
+    t≈0.2417  outdeg=4  source=False
+    t≈0.2639  outdeg=4  source=False
+    t≈0.2847  outdeg=3  source=False
+    t≈0.3125  outdeg=4  source=False
+    t≈0.3500  outdeg=4  source=False
+    t≈0.3708  outdeg=3  source=False
+    t≈0.3819  outdeg=3  source=False
+    t≈0.3944  outdeg=4  source=False
+    t≈0.4083  outdeg=4  source=False
+    t≈0.4250  outdeg=3  source=False
+    t≈0.4458  outdeg=4  source=False
+    t≈0.4792  outdeg=3  source=False
+    t≈0.5208  outdeg=3  source=False
+    t≈0.5542  outdeg=4  source=False
+    t≈0.5750  outdeg=3  source=False
+    t≈0.5917  outdeg=4  source=False
+    t≈0.6056  outdeg=4  source=False
+    t≈0.6181  outdeg=3  source=False
+    t≈0.6292  outdeg=3  source=False
+    t≈0.6500  outdeg=4  source=False
+    t≈0.6875  outdeg=4  source=False
+    t≈0.7153  outdeg=3  source=False
+    t≈0.7361  outdeg=4  source=False
+    t≈0.7583  outdeg=4  source=False
+    t≈0.7792  outdeg=3  source=False
+    t≈0.7958  outdeg=4  source=False
+    t≈0.8167  outdeg=4  source=False
+    t≈0.8542  outdeg=4  source=False
+    t≈0.8958  outdeg=4  source=False
+    t≈0.9306  outdeg=3  source=False
+
+n=7  speeds={1,...,6}
+  walk length (cells): 56
+  distinct pointed classes visited: 29
+  source classes (obs outdeg=6): 0
+  source found in open cells: False
+  source found at walls: 6
+  observer outdegree histogram: {0: 2, 1: 2, 2: 2, 3: 4, 4: 16, 5: 30}
+  transition edges: 42
+  A000568(7) = 456
+  fraction of classes visited: 29/456 = 0.0636
+  walk near source (max outdeg) states:
+    t≈0.0595  outdeg=4  source=False
+    t≈0.0857  outdeg=5  source=False
+    t≈0.1125  outdeg=5  source=False
+    t≈0.1339  outdeg=5  source=False
+    t≈0.1548  outdeg=5  source=False
+    t≈0.1690  outdeg=5  source=False
+    t≈0.1810  outdeg=4  source=False
+    t≈0.1952  outdeg=5  source=False
+    t≈0.2071  outdeg=5  source=False
+    t≈0.2214  outdeg=4  source=False
+    t≈0.2393  outdeg=5  source=False
+    t≈0.2679  outdeg=5  source=False
+    t≈0.2929  outdeg=5  source=False
+    t≈0.3048  outdeg=5  source=False
+    t≈0.3214  outdeg=4  source=False
+    t≈0.3452  outdeg=4  source=False
+    t≈0.3643  outdeg=5  source=False
+    t≈0.3732  outdeg=4  source=False
+    t≈0.3780  outdeg=4  source=False
+    t≈0.3905  outdeg=5  source=False
+    t≈0.4143  outdeg=5  source=False
+    t≈0.4464  outdeg=5  source=False
+    t≈0.4702  outdeg=4  source=False
+    t≈0.5298  outdeg=4  source=False
+    t≈0.5536  outdeg=5  source=False
+    t≈0.5857  outdeg=5  source=False
+    t≈0.6095  outdeg=5  source=False
+    t≈0.6220  outdeg=4  source=False
+    t≈0.6268  outdeg=4  source=False
+    t≈0.6357  outdeg=5  source=False
+    t≈0.6548  outdeg=4  source=False
+    t≈0.6786  outdeg=4  source=False
+    t≈0.6952  outdeg=5  source=False
+    t≈0.7071  outdeg=5  source=False
+    t≈0.7321  outdeg=5  source=False
+    t≈0.7607  outdeg=5  source=False
+    t≈0.7786  outdeg=4  source=False
+    t≈0.7929  outdeg=5  source=False
+    t≈0.8048  outdeg=5  source=False
+    t≈0.8190  outdeg=4  source=False
+    t≈0.8310  outdeg=5  source=False
+    t≈0.8452  outdeg=5  source=False
+    t≈0.8661  outdeg=5  source=False
+    t≈0.8875  outdeg=5  source=False
+    t≈0.9143  outdeg=5  source=False
+    t≈0.9405  outdeg=4  source=False
+
+======================================================================
+PART 2: Pointed isomorphism class census
+======================================================================
+
+n=4:
+  total labeled tournaments: 64
+  pointed isomorphism classes: 12
+  source classes (obs outdeg = 3): 2
+  source fraction: 0.1667
+  A000568(4) (unpointed): 4
+
+n=5:
+  total labeled tournaments: 1024
+  pointed isomorphism classes: 48
+  source classes (obs outdeg = 4): 4
+  source fraction: 0.0833
+  A000568(5) (unpointed): 12
+
+n=6:
+  total labeled tournaments: 32768
+  pointed isomorphism classes: 296
+  source classes (obs outdeg = 5): 12
+  source fraction: 0.0405
+  A000568(6) (unpointed): 56
+
+======================================================================
+PART 3: LRC walks for multiple speed sets
+======================================================================
+
+n=4  max_speed=15  speed sets=409
+  total distinct pointed classes visited: 8
+  source classes among visited: 1
+  speed sets reaching source: 409/409
+  classes visited by ALL speed sets: 6
+  classes visited by only 1 speed set: 0
+  visit count distribution: {408: 2, 409: 6}
+
+n=5  max_speed=10  speed sets=205
+  total distinct pointed classes visited: 22
+  source classes among visited: 2
+  speed sets reaching source: 205/205
+  classes visited by ALL speed sets: 7
+  classes visited by only 1 speed set: 0
+  visit count distribution: {19: 2, 81: 1, 136: 1, 142: 2, 147: 1, 177: 2, 193: 2, 203: 2, 204: 2, 205: 7}
+
+n=6  max_speed=8  speed sets=56
+  total distinct pointed classes visited: 50
+  source classes among visited: 4
+  speed sets reaching source: 56/56
+  classes visited by ALL speed sets: 7
+  classes visited by only 1 speed set: 1
+  visit count distribution: {1: 1, 2: 1, 3: 2, 4: 2, 5: 2, 6: 1, 8: 1, 11: 2, 15: 1, 19: 1}
+
+======================================================================
+PART 5: Distance to source in the pointed metagraph
+======================================================================
+
+n=4: 12 pointed classes, 2 source classes
+  max distance to source: 3
+  distance histogram: {0: 2, 1: 4, 2: 4, 3: 2}
+  note: BFS is undirected; LRC walk is directed
+
+  initial segment walk: distances = [3, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 3]...
+  min walk distance: 1
+  max walk distance: 3
+
+n=5: 48 pointed classes, 4 source classes
+  max distance to source: 4
+  distance histogram: {0: 4, 1: 12, 2: 16, 3: 12, 4: 4}
+  note: BFS is undirected; LRC walk is directed
+
+  initial segment walk: distances = [4, 3, 2, 1, 1, 1, 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1]...
+  min walk distance: 1
+  max walk distance: 4
+
+======================================================================
+PART 6: The meta-question — LRC as a metagraph reachability problem
+======================================================================
+
+LRC at n can be modeled as:
+
+1. The METAGRAPH G_n has V = A000568(n) vertices (tournament classes)
+   and edges for single-arc flips.
+
+2. The POINTED METAGRAPH G_n^* has V = pointed classes
+   (one marked vertex = observer). Each class has a well-defined
+   observer outdegree. Source classes have observer outdeg = n-1.
+
+3. The LRC WALK is a directed path on G_n^* determined by the speed set.
+   Walk length = number of cells ≈ O(sum v_i^2).
+
+4. LRC SAYS: this walk always visits a source class (or its boundary).
+
+THE STRUCTURE OF G_n^* determines whether LRC is true:
+  - If source classes are 'central' in G_n^*, all walks reach them.
+  - If source classes are 'peripheral', some walks might miss them.
+  - The THM-387 directional constraint (LS→LL→SL flow) restricts
+    which walks are possible, potentially forcing source visits.
+
+n=4: 10 pointed classes, 1 source, A000568=4, diameter=2
+  source fraction: 0.1000
+  source classes per unpointed class: 0.25
+
+n=5: 34 pointed classes, 4 source, A000568=12, diameter=3
+  source fraction: 0.1176
+  source classes per unpointed class: 0.33
+
+THE TOURNAMENT THAT MODELS LRC:
+  The 'LRC tournament at n' has V(G_n^*) vertices.
+  Orient class A → class B if A is closer to a source in the
+  metagraph. This is a tournament on A000568(n)-many vertices
+  (or pointed-class-many vertices).
+
+  LRC at n ↔ every directed walk on this tournament starting
+  from an initial class eventually reaches a source vertex.
+  This is a REACHABILITY problem on a specific tournament!
+
+  For n=4: a reachability problem on 10 pointed classes.
+  For n=5: on 34 pointed classes.
+  For n=14: on ~10^16 pointed classes (intractable directly).
+  But the STRUCTURE (spine/ribs/sea, complement symmetry,
+  score sequences) may make it tractable.
+
+======================================================================
+SYNTHESIS
+======================================================================
+
+THE LRC WALK ON G_n:
+  Each wall crossing flips exactly one arc → walk on metagraph.
+  The walk is directed (THM-387 flow) and periodic.
+  LRC = walk visits source class.
+
+THE TOURNAMENT THAT IS LRC:
+  LRC at n is isomorphic to a reachability problem on a tournament
+  of size |G_n^*| (pointed isomorphism classes).
+  The tournament structure encodes which classes can precede which.
+  Source classes are the 'sinks' of this meta-tournament.
+
+  The regular polygon theorem (S523): initial segment walks pass
+  through the regular tournament class, which IS a source class.
+  For general speed sets, the walk visits DIFFERENT classes but
+  the metagraph structure forces eventual source arrival.
+

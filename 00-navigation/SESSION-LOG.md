@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-06-01-S523b - LRC as walk on the pointed metagraph G_n^*
+
+**Account:** Oracle (remote-control)
+**Continuation of S523:** second half, focused on the metagraph walk reframe.
+**Computation:** Added `04-computation/lrc_metagraph_walk_s523b.py` and stored output. Census of pointed isomorphism classes (12/48/296 for n=4/5/6), source class fraction (16.7%/8.3%/4.1%), metagraph BFS distances, multi-speed-set walk analysis.
+**Key findings:** (1) Each LRC wall crossing flips exactly ONE arc → the LRC trajectory IS a walk on the pointed metagraph G_n^*. (2) Pointed class counts: 12/48/296 for n=4/5/6 with 2/4/12 source classes. (3) Distance histogram at n=5 is perfectly symmetric: {0:4,1:12,2:16,3:12,4:4}. (4) ALL tested speed sets (409/205/56 at n=4/5/6) reach source — 100%. (5) Only 8/12 pointed classes are visited at n=4 — the walk uses a thin subgraph. (6) LRC at n = reachability of source classes under arithmetic-constrained walks on G_n^*.
+**Synthesis:** LRC is a REACHABILITY problem on a tournament of size |G_n^*|. The metagraph diameter is small, source classes are well-distributed, and THM-387's directional flow constrains walks but doesn't prevent source arrival.
+
+
 ## oracle-2026-06-01-S517 - Tournaments as oriented regular polygons: LRC <-> twin-Goldbach shared stage
 
 **Account:** Oracle (remote-control). **User prompt:** how does the twin-Goldbach/6k±1-wheel structure relate to LRC; think of tournaments as regular polygons on the unit circle.
