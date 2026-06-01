@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-01-S509b - LRC over the A000568 isoclass quotient
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`; checkpoint push rebased over concurrent S509/HYP-1976 pair-cell operation-grid work and this thread was renumbered to HYP-1977.
+**User prompt:** Explore the hypothesis that the Lonely Runner Conjecture is ultimately analogous to a problem on tournament isomorphism classes and A000568, creatively following many possible convoluted paths.
+**Computation:** Added `04-computation/lrc_a000568_iso_analogy_s509.py` and stored `05-knowledge/results/lrc_a000568_iso_analogy_s509.out`. The script cuts small primitive runner movies by exact half-turn and LRC endpoint walls, builds the observer-including half-turn phase tournament, canonicalizes both unmarked and observer-pointed tournament classes, and records the LRC safe bit, `H`, score sequence, directed triangles, SCC count, and observer score.
+**Findings:** The LRC movie naturally walks on tournament isomorphism classes counted by A000568, but LRC safety is not a function of the unmarked class and often not of the observer-pointed class. Mixed safe/unsafe buckets appeared for `N=4,5,6,7`: unmarked mixed counts `1,3,1,5`; pointed mixed counts `2,6,4,5`. Example: for speeds `(2,3,5,7)`, safe `t=3/28` and unsafe `t=67/560` share the same regular unmarked class with `H=15` and score `(2,2,2,2,2)`.
+**Synthesis:** Added HYP-1977 and `07-reflections/lrc-a000568-isoclass-analogy-s509.md`. The best version of the user's hypothesis is a projection/sheaf statement: A000568 is the base quotient, while endpoint/gap labels, HYP-1976 pair-cell operation-grid data, and pressure fibers form the proof-relevant data above each class. A counterexample-shaped LRC row would be a quotient walk in `G_N` whose visited fibers are all endpoint-forbidden.
+**Tournament Analysis:** The script's route tournament compares twelve analogy routes by majority vote over A000568-closeness, threshold fidelity, computation, proof potential, novelty, and projection risk. It has `H=65`, `c3=6`, `scc_count=5`, with projection-defect obstruction and alpha-threshold gauge bundle as the top routes.
+**Verification:** `python3 -m py_compile 04-computation/lrc_a000568_iso_analogy_s509.py`; full script rerun with output stored; `git diff --check`; mid-session checkpoint pushed after resolving the HYP-1976/HYP-1977 rebase collision.
+
 ## codex-2026-06-01-S509 - LRC pair-cell operation-grid Tournament Analysis
 
 **Account:** Codex

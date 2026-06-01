@@ -1,7 +1,7 @@
 ---
 id: HYP-1977
 status: OPEN
-source: codex-2026-06-01-S509
+source: codex-2026-06-01-S509b
 related:
   - HYP-1932
   - HYP-1940

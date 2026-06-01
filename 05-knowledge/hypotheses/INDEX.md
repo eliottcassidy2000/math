@@ -3347,7 +3347,7 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Predictions:** Corridor-level LRC scripts should emit the S506b runner vector and the S509 pair-cell vector together. Static dyadic/odd/product-sum pair-cell criteria should separate families across denominators better than times within one family.
 **See:** `05-knowledge/hypotheses/HYP-1976-lrc-pair-cell-operation-grid.md`, `04-computation/lrc_pair_cell_operation_grid_s509.py`, `05-knowledge/results/lrc_pair_cell_operation_grid_s509.out`, `07-reflections/lrc-pair-cell-operation-grid-s509.md`, HYP-1972, HYP-1963, HYP-1965, HYP-1966.
 
-## HYP-1977: LRC is a projection-defect problem over the A000568 quotient (codex-2026-06-01-S509)
+## HYP-1977: LRC is a projection-defect problem over the A000568 quotient (codex-2026-06-01-S509b)
 **Status:** OPEN; exact small-cell projection audit plus route Tournament Analysis.
 **What:** LRC is analogous to A000568 through a quotient tower, not through a scalar property of plain tournament isomorphism classes. A speed-set movie maps to labelled half-turn/threshold tournaments, then to observer-pointed classes, then to unmarked A000568 classes. LRC safety is a section condition in the endpoint/gap fiber over that base.
 **Evidence:** `lrc_a000568_iso_analogy_s509.py` samples exact time cells for small primitive speed sets and canonicalizes the half-turn phase tournament. Safe/unsafe cells mix inside unmarked classes for `N=4,5,6,7` with mixed counts `1,3,1,5`; they also mix inside pointed classes with counts `2,6,4,5`. Examples include `(2,3,5,7)` at `N=5`, where safe `t=3/28` and unsafe `t=67/560` share the same regular unmarked class with `H=15` and score `(2,2,2,2,2)`.
