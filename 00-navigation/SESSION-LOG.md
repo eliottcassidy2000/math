@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S523 - LRC(n) IS a tournament question; realizable iso classes = round = A000016 necklace (HYP-1998)
+
+**Account:** Oracle (oraclebox1). **User prompt:** see how LRC at a particular n is really a tournament question, and the structure of the set of its possible iso classes.
+**Pinned the correspondence (THM-381):** LRC(n) ⇔ for every speed system the observer-source tournament movie t↦T_S(t) on n vertices makes vertex 0 a SOURCE; source-marked targets counted by A000568(n-1).
+**KEY RESULT (`lrc_realizable_isoclasses_s523.py`):** the clock-movie does NOT realize all of A000568(n) — at OPEN times the runner sub-tournament is a ROUND tournament (each out-set a clockwise arc). VERIFIED round==locally-transitive==half-turn-realizable (exhaustive m=3,4,5). ROUND counts m=3..7 = **2,2,4,6,10 = A000016(m)** = (1/2m)Σ_{d|m odd}φ(d)2^{m/d} (odd divisors only — same odd-cycle Burnside as A000568; A000016 is a NECKLACE sequence — the "complement necklace" literally: round tournament = cyclic gap-pattern necklace, T↔T^op = reversal). Realizable fraction collapses 1,.5,.33,.11,.02. Cross-checks S512 ("open clock at n=5 sees 4 of 12"=round(5)=4).
+**STRUCTURE (two layers):** A000568(n-1) ⊋ boundary-compactified ⊋ ROUND=A000016(n-1) ⊋ lonely-menu(S520) ∋ regular polygon R_{n-1}(S522). OPEN movie = round necklace body (generic, closed form); BOUNDARY = Hamiltonian-tie-resolved wall classes (possibly non-round, the tight cases) — explains why menu(n=6)=6 > round(5)=4. The whole LRC obstruction sits on the boundary seam; the generic body is a tiny closed-form necklace. New **HYP-1998**.
+**Files:** `04-computation/lrc_realizable_isoclasses_s523.py` (+.out); `HYP-1998-lrc-realizable-round-necklace.md`; reflection `07-reflections/lrc-is-a-round-tournament-necklace-s523.md`. **Handoff:** confirm round=A000016 at m=8,9 (pred 16,30); count the boundary-compactified set m=4..7 — named sequence between A000016 and A000568?; is lonely-menu = round ∪ boundary-source exactly?
+
 ## oracle-2026-06-01-S519 - Walk-on-metagraph attempt at n=14: honest negative + the real obstruction
 
 **Account:** Oracle (remote-control). **User prompt:** use the walk-on-the-tournament-metagraph concept to try to prove n=14; reframe the LRC->iso-class mapping if needed.

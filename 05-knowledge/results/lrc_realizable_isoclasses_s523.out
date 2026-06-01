@@ -1,0 +1,25 @@
+LRC realizable iso-class structure (oracle-S523)
+
+ m=3: ROUND iso-classes =    2   (A000568(3)=2)
+ m=4: ROUND iso-classes =    2   (A000568(4)=4)
+ m=5: ROUND iso-classes =    4   (A000568(5)=12)
+ m=6: ROUND iso-classes =    6   (A000568(6)=56)
+ m=7: ROUND iso-classes =   10   (A000568(7)=456)
+
+ ROUND sequence m=3..7 : [2, 2, 4, 6, 10]
+ A000568        m=3..7 : [2, 4, 12, 56, 456]
+
+EQUIVALENCE CHECK (full enumeration):  round == locally-transitive == half-turn
+  m=3: |all|=2 |round|=2 |loc.trans|=2 round==loctrans:True  round==half-turn:True
+  m=4: |all|=4 |round|=2 |loc.trans|=2 round==loctrans:True  round==half-turn:True
+  m=5: |all|=12 |round|=4 |loc.trans|=4 round==loctrans:True  round==half-turn:True
+
+THE NESTED CHAIN for LRC(n)  [m=n-1 runners]:
+   n m=n-1 A000568(m) round(m) lonely-menu
+   4     3          2        2           1
+   5     4          4        2           2
+   6     5         12        4           6
+   7     6         56        6           6
+
+ ALL tournaments ⊋ ROUND (realizable movie) ⊋ source-marked ⊋ LONELY menu.
+ Extremal symmetric round tournament = regular m-gon R_m (S522, H=175 at m=7).

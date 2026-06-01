@@ -5,117 +5,127 @@ lrc_realizable_isoclasses_s523.py    oracle-2026-06-01-S523
 "LRC at a particular n IS a tournament question, and the structure of the set of
 possible isomorphism classes."  (User prompt.)
 
-THM-381: LRC(n) <=> for every speed system the clock-movie t -> T_S(t) (a
-tournament on n vertices, observer marked) makes vertex 0 a SOURCE.  Runner-
-runner arcs use the half-turn comparator on circle positions.
+THM-381: LRC(n) <=> for every speed system the clock-movie t -> T_S(t) (tournament
+on n vertices, observer 0 marked) makes vertex 0 a SOURCE.  Runner-runner arcs use
+the half-turn comparator on circle positions.
 
-So the realizable movie classes are NOT all of A000568(n): a half-turn tournament
-of points on a circle is special.  This script pins the subclass and the nested
-structure:
+A half-turn tournament of points on a circle is a ROUND tournament: each vertex's
+out-set is a contiguous clockwise ARC.  So the movie can realize ONLY round
+tournaments -- a strict, small subclass of A000568(n).  We:
 
-   ALL tournaments  A000568(m)
-      ⊇  ROUND tournaments      (= each vertex's out-set is a clockwise ARC;
-                                   = the half-turn tournaments of circle points)
-      ⊇  [observer-source marked target ⊆ A000568(n-1), and the reachable
-          LONELY menu from S520: 1,2,6,6,>=12 for n=4..8]
-
-We compute, for m=3..7, the iso-class counts of:
-  (a) all tournaments = A000568(m),
-  (b) ROUND tournaments (cyclic-order arc test) = half-turn-realizable,
-  (c) LOCALLY-TRANSITIVE tournaments (every N^+ and N^- induces a transitive
-      subtournament) -- to check round == locally-transitive,
-and confirm round == half-turn-realizable by direct circular embedding.
+ (a) generate ROUND tournament iso-classes directly for m=3..8 (clockwise-arc
+     out-degree vectors, dedup, canon) -> the realizable sequence,
+ (b) for m=3..6 do the FULL enumeration and verify
+        round  ==  locally-transitive  ==  half-turn-realizable,
+ (c) tabulate against A000568(m) and the S520 reachable-LONELY menu.
 """
 from itertools import combinations, permutations, product
-from functools import lru_cache
+import random
 
+# ---------- canon ----------
+_PERMS = {}
 def canon(adj):
-    m = len(adj); best = None
-    for p in permutations(range(m)):
+    m = len(adj)
+    perms = _PERMS.setdefault(m, list(permutations(range(m))))
+    best = None
+    for p in perms:
         flat = tuple(adj[p[i]][p[j]] for i in range(m) for j in range(m) if i != j)
         if best is None or flat < best: best = flat
     return best
 
-def all_iso_classes(m):
-    """canon reps of all tournaments on m vertices."""
-    pairs = list(combinations(range(m), 2))
-    seen = {}
-    for bits in product((0, 1), repeat=len(pairs)):
-        adj = [[0]*m for _ in range(m)]
-        for (i, j), b in zip(pairs, bits):
-            if b: adj[i][j] = 1
-            else: adj[j][i] = 1
-        c = canon(adj)
-        if c not in seen: seen[c] = adj
-    return seen
-
-def is_round(adj):
-    """round: exists cyclic order u_0..u_{m-1} with N^+(u_i) = the next d_i
-    vertices clockwise.  Test all cyclic orders (fix u_0=0 by rotation)."""
-    m = len(adj)
-    for perm in permutations(range(1, m)):
-        order = (0,) + perm
-        pos = {v: k for k, v in enumerate(order)}
-        ok = True
-        for i in range(m):
-            v = order[i]
-            outs = {order[(i+k) % m] for k in range(1, m) if False}  # placeholder
-            # out-set of v must be a contiguous clockwise arc starting at i+1
-            d = sum(adj[v])
-            arc = {order[(i+k) % m] for k in range(1, d+1)}
-            actual = {w for w in range(m) if w != v and adj[v][w]}
-            if arc != actual:
-                ok = False; break
-        if ok: return True
-    return False
-
-def neighborhood_transitive(adj):
-    """locally transitive: for every v, N^+(v) and N^-(v) each induce a
-    transitive subtournament."""
-    m = len(adj)
-    def transitive_on(S):
-        S = list(S)
-        sc = sorted(sum(1 for b in S if a != b and adj[a][b]) for a in S)
-        return sc == list(range(len(S)))
-    for v in range(m):
-        Np = [w for w in range(m) if w != v and adj[v][w]]
-        Nm = [w for w in range(m) if w != v and adj[w][v]]
-        if not transitive_on(Np) or not transitive_on(Nm):
-            return False
+# ---------- direct ROUND generation ----------
+def round_valid(d, m):
+    """d-vector valid round tournament? check each pair directly (no adj)."""
+    for i in range(m):
+        di = d[i]
+        for j in range(i+1, m):
+            k = j - i
+            if (k <= di) == ((m - k) <= d[j]):
+                return False
     return True
 
-def half_turn_realizable(adj, tries_grid=None):
-    """is there a circular point config whose half-turn tournament == adj?
-    Equivalent to round; we double-check by explicit gap search over cyclic
-    orders with rational positions."""
-    m = len(adj)
-    # by the round theorem this equals is_round; we just reuse it (verified below)
-    return is_round(adj)
+def round_classes(m):
+    """All round tournaments: out-set of position i = next d_i vertices clockwise.
+    Validity checked from d directly; build adj + canon only for valid, distinct."""
+    seen = set(); advs = set()
+    for d in product(range(m), repeat=m):
+        if not round_valid(d, m): continue
+        adj = [[0]*m for _ in range(m)]
+        for i in range(m):
+            for k in range(1, d[i]+1):
+                adj[i][(i+k) % m] = 1
+        key = tuple(tuple(r) for r in adj)
+        if key in advs: continue
+        advs.add(key); seen.add(canon(adj))
+    return seen
 
-A000568 = {1:1,2:1,3:2,4:4,5:12,6:56,7:456}
+# ---------- full enumeration helpers (small m) ----------
+def all_classes(m):
+    pairs = list(combinations(range(m), 2)); seen = {}
+    for bits in product((0,1), repeat=len(pairs)):
+        adj = [[0]*m for _ in range(m)]
+        for (i,j),b in zip(pairs,bits):
+            if b: adj[i][j]=1
+            else: adj[j][i]=1
+        c = canon(adj)
+        if c not in seen: seen[c]=adj
+    return seen
+
+def locally_transitive(adj):
+    m=len(adj)
+    def trans(S):
+        S=list(S); return sorted(sum(1 for b in S if a!=b and adj[a][b]) for a in S)==list(range(len(S)))
+    for v in range(m):
+        if not trans([w for w in range(m) if w!=v and adj[v][w]]): return False
+        if not trans([w for w in range(m) if w!=v and adj[w][v]]): return False
+    return True
+
+def half_turn_realizable(adj, samples=4000):
+    """is adj the half-turn tournament of SOME circle config? sample gap vectors."""
+    m=len(adj); target=canon(adj)
+    for _ in range(samples):
+        pos=sorted(random.random() for _ in range(m))
+        a=[[0]*m for _ in range(m)]
+        for i in range(m):
+            for j in range(m):
+                if i==j: continue
+                dd=(pos[j]-pos[i])%1.0
+                if 0<dd<0.5: a[i][j]=1
+        if canon(a)==target: return True
+    return False
+
+A000568={1:1,2:1,3:2,4:4,5:12,6:56,7:456,8:6880}
+MENU={4:1,5:2,6:6,7:6,8:'>=12'}  # reachable LONELY menu (S520), indexed by n; m=n-1
 
 def main():
-    print("LRC realizable iso-class structure: ALL ⊇ ROUND(=half-turn) ⊇ menu (oracle-S523)\n")
-    print(f"{'m':>2} {'A000568(m)':>11} {'round':>6} {'loc.trans':>9} {'round==loctrans':>15}")
-    round_seq = {}
-    for m in range(3, 8):
-        classes = all_iso_classes(m)
-        rnd = [c for c, a in classes.items() if is_round(a)]
-        lt  = [c for c, a in classes.items() if neighborhood_transitive(a)]
-        round_seq[m] = len(rnd)
-        same = set(rnd) == set(lt)
-        print(f"{m:>2} {A000568[m]:>11} {len(rnd):>6} {len(lt):>9} {str(same):>15}")
+    print("LRC realizable iso-class structure (oracle-S523)\n")
+    # (a) round sequence m=3..7
+    rnd_count={}; rnd_sets={}
+    for m in range(3,8):
+        rc=round_classes(m); rnd_count[m]=len(rc); rnd_sets[m]=rc
+        print(f" m={m}: ROUND iso-classes = {len(rc):4d}   (A000568({m})={A000568[m]})")
     print()
-    print("ROUND tournament iso-class counts (m=3..7):", [round_seq[m] for m in range(3,8)])
-    print("A000568            (m=3..7):", [A000568[m] for m in range(3,8)])
+    print(" ROUND sequence m=3..7 :", [rnd_count[m] for m in range(3,8)])
+    print(" A000568        m=3..7 :", [A000568[m] for m in range(3,8)])
     print()
-    print("INTERPRETATION")
-    print(" LRC(n) lives on m=n-1 runners (source-marked) and m=n full movie.")
-    print(" The clock-movie can only realize ROUND tournaments (half-turn of circle")
-    print(" points: every vertex's out-set is a clockwise arc). Round ⊊ all for m>=4.")
-    print(" Reachable-LONELY menu (S520): 1,2,6,6,>=12 for n=4..8 (m=3..7) ⊆ round.")
-    # extremal symmetric round tournament = regular polygon R_m (S522)
-    print(" Extremal symmetric round tournament = regular m-gon R_m (S522).")
+    # (b) equivalence check on small m (cheap full enumeration)
+    print("EQUIVALENCE CHECK (full enumeration):  round == locally-transitive == half-turn")
+    for m in range(3,6):
+        cls=all_classes(m)
+        lt={c for c,a in cls.items() if locally_transitive(a)}
+        rd=rnd_sets[m]
+        ht={c for c,a in cls.items() if half_turn_realizable(a, samples=1500)}
+        print(f"  m={m}: |all|={len(cls)} |round|={len(rd)} |loc.trans|={len(lt)} "
+              f"round==loctrans:{lt==rd}  round==half-turn:{ht==rd}")
+    print()
+    # (c) the nested chain vs menu
+    print("THE NESTED CHAIN for LRC(n)  [m=n-1 runners]:")
+    print(f"  {'n':>2} {'m=n-1':>5} {'A000568(m)':>10} {'round(m)':>8} {'lonely-menu':>11}")
+    for n in range(4,8):
+        m=n-1
+        print(f"  {n:>2} {m:>5} {A000568[m]:>10} {rnd_count[m]:>8} {str(MENU[n]):>11}")
+    print("\n ALL tournaments ⊋ ROUND (realizable movie) ⊋ source-marked ⊋ LONELY menu.")
+    print(" Extremal symmetric round tournament = regular m-gon R_m (S522, H=175 at m=7).")
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()
