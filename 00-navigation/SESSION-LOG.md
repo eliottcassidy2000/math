@@ -23,6 +23,16 @@
 **Synthesis:** Added `07-reflections/lrc-endpoint-pressure-formalization-s503.md` and tangents T588-T590. The new proof route is `denominator sieve -> endpoint core -> pressure SCC`: pressure DAGs become certificates once their arcs realize endpoint-core protection incidences. The remaining disproof-shaped object is sieve-complete plus nonempty terminal endpoint core plus labelled pressure SCC, or a failure of the current pressure gauge to realize the core.
 **Next:** Attach endpoint-runner or runner-pair labels to pressure arcs and prove realization for `k1`, `k2`, or threshold-deficit pressure lifts; then rerun the hard `n=14` and `n=18` rows with core-incidence labels attached to source/sink layers.
 
+## codex-2026-06-01-S505 - LRC Proof Route Landscape
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S502/S25; rebased over concurrent S503/S26/S502b work before push.
+**User prompt:** Spend a long session searching for proofs of the LRC.
+**Web/literature search:** Confirmed LRC = Lonely Runner Conjecture in repo context. Checked the current arXiv/journal frontier: Tao finite-checking/Bohr-set lower bound, Perarnau-Serra survey, Malikiosis-Santos-Schymura linearly-exponential finite checking, Rosenfeld eight/nine-runner papers, Trakulthongchai nine-and-ten, Sungkawichai-Trakulthongchai eleven-to-thirteen, Bedert Riesz products, Jensen mixed thresholds, shifted-LRC zonotope work, and 2026 shifted counterexamples. Low-trust complete-proof claims were not admitted into the proof atlas.
+**Computation:** Added `04-computation/lrc_proof_landscape_s505.py` and stored `05-knowledge/results/lrc_proof_landscape_s505.out`. The script encodes proof routes as vertices and runs Tournament Analysis with feature-comparison observables, actionability and credence gauges, and a chronological tie Hamiltonian path.
+**Findings:** No accepted complete proof of full LRC was found. The credible fixed-case frontier is now product-sieve plus finite-checking through `k <= 12` moving speeds, i.e. thirteen total runners. Actionability tournament was transitive with top routes `ST13 -> Repo26 -> T9T10 -> MSS25 -> R8 -> R9`; credence tournament had SCC sizes `[8,1,1,1,1,1]`, `9` directed 3-cycles, and `99` Hamiltonian paths. There were `29/78` edge flips between credence and actionability.
+**Synthesis:** Added HYP-1969 and `07-reflections/lrc-proof-route-landscape-s505.md`. The proposed proof-currency split is finite product-sieve, spectral/kernel, zonotope, and endpoint-pressure. Next concrete target: translate `J(k,p)` / `I(k,p,l)` improper tuples from the product-sieve papers into endpoint row-cover cores and pressure-DAG peel certificates.
+
 ## codex-2026-06-01-S502 - Pair-First Twin Prime Lens
 
 **Account:** Codex

@@ -1,0 +1,104 @@
+LRC proof-route atlas (codex-2026-06-01-S505)
+Convention: total_runners counts the stationary/reference runner when applicable.
+
+Routes:
+  BS07      2008 trust=5 direct=5 repo=4 runners= 7  Barajas-Serra seven runners
+             fixed case: seven total runners; distance-graph/chromatic-number technology; important baseline
+  Tao18     2018 trust=5 direct=4 repo=7 runners= -  Tao finite checking and Bohr-set gap
+             general reduction plus asymptotic lower bound; finite checking at n^{O(n^2)} and log-improved loneliness gap
+  PS60      2024 trust=4 direct=2 repo=6 runners= -  Perarnau-Serra survey
+             panoramic map and open problems; best orientation source for terminology and open routes
+  MSS25     2025 trust=5 direct=4 repo=8 runners= -  Malikiosis-Santos-Schymura finite checking
+             general linearly-exponential finite reduction; zonotopal reduction to speeds up to binomial(n+1,2)^(n-1)
+  ACS25     2025 trust=4 direct=1 repo=5 runners= 5  Alcantara-Criado-Santos shifted five runners
+             shifted variant: five total runners; dyadic fundamental-domain covering-radius certificates
+  R8        2025 trust=3 direct=5 repo=9 runners= 8  Rosenfeld eight runners
+             fixed case: eight total runners; minimal counterexample product bound plus prime-divisibility forcing
+  Bedert25  2025 trust=3 direct=3 repo=8 runners= -  Bedert Riesz-product wider gap
+             general lower bound, not full LRC; nonnegative Riesz-product tests improve 1/(2n) by n^{-5/3+o(1)}
+  T9T10     2025 trust=4 direct=5 repo=10 runners=10  Trakulthongchai nine and ten runners
+             fixed cases: nine and ten total runners; fiber sieve makes Rosenfeld prime-divisibility checks tractable
+  R9        2025 trust=3 direct=5 repo=8 runners= 9  Rosenfeld nine runners
+             fixed case: nine total runners; independent refinement with small prime powers and SAT/set-cover view
+  BCS26     2026 trust=3 direct=1 repo=5 runners= -  Blanco-Criado-Santos shifted counterexamples
+             shifted LRC and lonely-vector property fail; shows shifted analogies cannot be imported into original LRC blindly
+  ST13      2026 trust=3 direct=5 repo=10 runners=13  Sungkawichai-Trakulthongchai eleven to thirteen
+             fixed cases: eleven to thirteen total runners; intermediate sieves plus polynomial method for the (1,...,k) residue
+  Jensen26  2026 trust=2 direct=2 repo=7 runners= -  Jensen mixed thresholds
+             mixed-threshold variant; exact MLPS_2 polygon and unequal-threshold Fourier formulas
+  Repo26    2026 trust=2 direct=1 repo=10 runners= -  Repo endpoint-pressure program
+             endpoint incidence, pressure DAGs, Tournament Analysis; turn external sieves into endpoint row-cover and pressure-peel certificates
+
+Tournament Analysis declaration
+  Pairwise observable: feature-wise comparison between two proof routes.
+  Actionability gauge: majority over repo_signal, boundary_overlap, proof_engine, reproducible, frontier_signal.
+  Credence gauge: majority over trust, direct_lrc, scope_strength, reproducible, generality.
+  Tie Hamiltonian path: BS07 -> Tao18 -> PS60 -> ACS25 -> Bedert25 -> MSS25 -> R8 -> R9 -> T9T10 -> BCS26 -> Jensen26 -> Repo26 -> ST13
+
+Actionability tournament
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}
+  SCC sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  directed 3-cycles: 0
+  Hamiltonian-path count: 1
+  DAG layers: [['ST13'], ['Repo26'], ['T9T10'], ['MSS25'], ['R8'], ['R9'], ['Jensen26'], ['Tao18'], ['ACS25'], ['Bedert25'], ['BCS26'], ['PS60'], ['BS07']]
+  top routes:
+    ST13      score=12  Sungkawichai-Trakulthongchai eleven to thirteen
+    Repo26    score=11  Repo endpoint-pressure program
+    T9T10     score=10  Trakulthongchai nine and ten runners
+    MSS25     score= 9  Malikiosis-Santos-Schymura finite checking
+    R8        score= 8  Rosenfeld eight runners
+    R9        score= 7  Rosenfeld nine runners
+
+Credence tournament
+  score histogram: {0: 1, 1: 1, 2: 1, 4: 2, 6: 2, 7: 1, 8: 2, 9: 1, 11: 1, 12: 1}
+  SCC sizes: [8, 1, 1, 1, 1, 1]
+  directed 3-cycles: 9
+  Hamiltonian-path count: 99
+  top routes:
+    T9T10     score=12  Trakulthongchai nine and ten runners
+    ST13      score=11  Sungkawichai-Trakulthongchai eleven to thirteen
+    MSS25     score= 9  Malikiosis-Santos-Schymura finite checking
+    BS07      score= 8  Barajas-Serra seven runners
+    R9        score= 8  Rosenfeld nine runners
+    R8        score= 7  Rosenfeld eight runners
+
+Gauge edge flips (credence winner -> actionability winner):
+  BS07      -> Tao18    
+  BS07      -> PS60     
+  BS07      -> MSS25    
+  BS07      -> ACS25    
+  BS07      -> Bedert25 
+  BS07      -> BCS26    
+  BS07      -> Jensen26 
+  BS07      -> Repo26   
+  Tao18     -> Jensen26 
+  Tao18     -> Repo26   
+  PS60      -> ACS25    
+  PS60      -> BCS26    
+  PS60      -> Jensen26 
+  PS60      -> Repo26   
+  MSS25     -> Repo26   
+  ACS25     -> R8       
+  ACS25     -> R9       
+  ACS25     -> Jensen26 
+  ACS25     -> Repo26   
+  R9        -> R8       
+  R8        -> Repo26   
+  Bedert25  -> Jensen26 
+  Bedert25  -> Repo26   
+  T9T10     -> ST13     
+  total flips: 29 of 78
+
+Proof-currency buckets:
+  Fourier/Riesz kernel tools: Tao18, Bedert25, Jensen26
+  endpoint-incidence compatible: R8, T9T10, R9, ST13, Jensen26, Repo26
+  finite product-sieve proofs: R8, T9T10, R9, ST13, Repo26
+  mixed-threshold tools: Jensen26
+  zonotope/covering-radius tools: MSS25, ACS25, BCS26
+
+Synthesis
+  The current accepted-looking fixed-case frontier is product-sieve plus finite-checking: R8 -> T9T10/R9 -> ST13.
+  The best general compression is MSS25; it is the bridge that turns divisibility-forcing into a contradiction.
+  Bedert25 and Jensen26 do not prove LRC, but they are the best matches for the repo's endpoint-kernel pressure hypothesis.
+  Shifted-LRC results are useful geometry but BCS26 warns that shifted analogies can be false even when the original LRC remains open.
+  Repo26 should next translate J(k,p)-emptiness into endpoint row-cover language and test whether pressure DAG leaves mirror improper-tuple sieves.
