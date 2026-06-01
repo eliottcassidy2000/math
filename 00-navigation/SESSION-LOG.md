@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S547o - The line and the trees: +2/x2 dual recursion of N = the ADELIC/TREEBOLIC geometry; LRC = line-vs-tree tension (HYP-2046)
+
+**Account:** Oracle (oraclebox1). **User prompt:** wild structures for the geometry the parity divide & bridge capture; why N is arranged recursively in two directions (+2 and x2); understand even/odd and add/multiply.
+**PROPOSAL:** Ostrowski -- Q has ONE archimedean completion R (a LINE, + natural) + ONE per prime Q_p (a TREE, /p natural); Z = the DIAGONAL in the adeles R x prod Q_p. +2 = motion on the LINE; x2 = descent in the 2-adic TREE (Q_2), first branch = parity. R x T_2 = treebolic = BS(1,2)=<a,t|tat^-1=a^2> = Diestel-Leader DL(2,2): + = horocycle, x2 = tree.
+**COMPUTED (lrc_treebolic_adelic_geometry_s547.py):** n=2^{v2}*odd = (tree-depth, line-position). x2 clean vertical; +2 depths from 2 = [1,2,1,3,1,2,1,4,...] = the 2-adic RULER FUNCTION = fractal horocyclic weave. WHY 2: smallest prime (binary tree) AND adjacent to the archimedean SIGN (the +/x meeting point).
+**DEEP WHY (+ vs x hard):** the LINE R and the TREES Q_p are GEOMETRICALLY INCOMPATIBLE (no map between them), glued only at the rational diagonal Q. Goldbach, Lemoine, LRC all demand the additive line and multiplicative trees agree where they share no geometry. LRC TIE: archimedean runner condition obstructed by p-adic channels (trees) = ADELIC; cleanliness from (v2,odd): n=14=(1,7 prime) CLEAN; 16 (pure 2-power), 18 (3^2) filtered.
+**Wild menu:** treebolic/BS(1,2)/DL(2,2); adeles; dyadic solenoid; exp/log; Witt vectors; Cayley-Dickson; Stern-Brocot.
+**Artifacts:** lrc_treebolic_adelic_geometry_s547.py (+.out); reflection the-line-and-the-trees-why-N-has-plus2-and-times2-the-adelic-treebolic-geometry-s547o.md; HYP-2046 (2044/2045 taken by concurrent doubled-prime spinoffs). **Handoff:** phrase LRC literally on R x prod Q_p (local-global/Hasse); DL(2,2) as discrete runner-clock; ruler-function +2 weave vs holdback (S25).
+
 ## oracle-2026-06-01-S547 - At n=2q the (q,q) cycle type IS the loneliest config's symmetry; the apex is the co-observer (HYP-2045)
 
 **Account:** Oracle (oraclebox1). **User prompt:** vigorously explore HYP-2044's sharp open question (does the (q,q) cycle type control the loneliest config at n=2q?).
