@@ -1,0 +1,60 @@
+LRC n=18 wacky attempts (oracle-2026-06-01-S515)  [n=18 = 2*3^2]
+
+======================================================================
+A: anti-concentration  (E[N]=17/9, Poisson e^-17/9 = 0.15124)
+======================================================================
+ [initial 1..17 (tight) ] P(N=0)=0.00000  max_gap=0
+ [drop17 add18          ] P(N=0)=0.01592  max_gap=1/540
+ [drop16 add18          ] P(N=0)=0.01501  max_gap=1/351
+ [drop9 add18           ] P(N=0)=0.01414  max_gap=1/405
+ [primes+18             ] P(N=0)=0.06482  max_gap=154/17343
+
+======================================================================
+B: bounded ansatz cofactor s  (witness at t=j/(18 s))
+======================================================================
+ [initial 1..17 (tight) ] s=1   t=1/18 (bndry)
+ [drop17 add18          ] s=2   t=17/36 (bndry)
+ [drop16 add18          ] s=3   t=17/54 (bndry)
+ [drop9 add18           ] s=10  t=19/180 (bndry)
+ [primes+18             ] s=2   t=1/12 (open)
+ [rand (1, 2, 3)...     ] s=2   t=1/12 (open)
+ [rand (3, 5, 10)...    ] s=3   t=4/27 (open)
+ [rand (1, 2, 7)...     ] s=3   t=2/27 (open)
+ [rand (5, 7, 8)...     ] s=3   t=1/27 (open)
+ [rand (2, 13, 14)...   ] s=3   t=5/54 (open)
+ [rand (7, 8, 11)...    ] s=2   t=7/36 (bndry)
+
+ => cofactors seen: [1, 2, 3, 10];  worst s = 10  (18*s = 180)
+    (compare n=14: s in {1,2,4,5,7}. For 18=2*3^2 expect 2-part & 3-part.)
+
+======================================================================
+B': cofactor stability vs speed size (does s blow up?)
+======================================================================
+   speeds<60: worst ansatz cofactor s = 4 (18*s=72)
+   speeds<200: worst ansatz cofactor s = 4 (18*s=72)
+   speeds<800: worst ansatz cofactor s = 4 (18*s=72)
+
+======================================================================
+C/D: parity (2) and triadic (3) splits
+======================================================================
+ [initial 1..17 (tight)]
+   parity:  |odd|=9 |even|=8  -> smaller 8 speeds = PROVED LRC@9 (18=9 doubled, t<->2t)
+   mod 3:   sizes 5/6/6  -> the ==0 mod 3 speeds fold via t<->3t; 3|9 ladder
+ [drop17 add18]
+   parity:  |odd|=8 |even|=9  -> smaller 8 speeds = PROVED LRC@9 (18=9 doubled, t<->2t)
+   mod 3:   sizes 6/6/5  -> the ==0 mod 3 speeds fold via t<->3t; 3|9 ladder
+ [drop16 add18]
+   parity:  |odd|=9 |even|=8  -> smaller 8 speeds = PROVED LRC@9 (18=9 doubled, t<->2t)
+   mod 3:   sizes 6/5/6  -> the ==0 mod 3 speeds fold via t<->3t; 3|9 ladder
+
+======================================================================
+E: sieve gates a counterexample must contain (prime powers <=18)
+======================================================================
+   forced divisibility gates (maximal prime powers <=18): [2, 3, 5, 7, 11, 13, 17]
+   => a counterexample needs speeds divisible by 16 (the n=16 sedenion gate!),
+      9 (=3^2 triadic gate), 5,7,11,13,17 -- inherits BOTH the dyadic-16 and a
+      triadic-9 obstruction. n=18 sits above n=16 and n=9 in the sieve tower.
+
+SUMMARY: n=18 = 2*3^2 -- parity gives a proved LRC@9 half; the 3^2 adds a
+triadic 3|9 ladder (analog of n=16's dyadic 2|4|8|16); the sieve forces the
+16-gate AND 9-gate. Whimsy: 18 = 9 doubled, and inherits 16's dyadic debt.

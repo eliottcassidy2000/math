@@ -1,5 +1,25 @@
 # Session Log
 
+## oracle-2026-06-01-S515b - Wacky LRC n=18 attempts (2*3^2: parity, triadic ladder, inherited 16-gate)
+
+**Account:** Oracle (remote-control; distinct from codex-S515). **User prompt:** work on LRC n=18 with the same whimsy.
+**n=18 = 2*3^2, 17 speeds, threshold 1/18. Screened (lrc_n18_wacky_attempts_s515.py):**
+- A) ANTI-CONCENTRATION: E[N]=17/9~1.889, Poisson e^-17/9~0.151; only exact resonant initial segment reaches P(N=0)=0 (same wall as n=14).
+- B) BOUNDED ANSATZ: t=j/(18 s); most sets s in {1,2,3}, random stable s<=4 up to speed 800 -- BUT prime-square perturbation drop9+18 needs s=10 (vs n=14 worst 7). The 3^2 coarsens the ansatz, localized at the 9-gate.
+- C) PARITY SPLIT: 18=9 doubled; smaller side <=8 speeds = PROVED LRC@9; coupling t<->2t.
+- D) TRIADIC SPLIT (NEW): mod-3 classes; mult-of-3 speeds fold via t<->3t; the 3|9 ladder = ternary analog of codex's n=16 dyadic 2|4|8|16 ladder.
+- E) SIEVE GATES: counterexample needs divisibility by 16(=2^4 sedenion gate, inherited since 16<=18), 9(=3^2), 5,7,11,13,17. n=18 dominates BOTH n=16 and n=9 in the sieve tower.
+**Program:** two-prime descent -- parity (2-part -> proved LRC@9) + triadic 3|9 ladder (3-part), CRT-coupled via t<->6t. First frontier needing BOTH dyadic and triadic descent. New HYP-1993. Reflection: 07-reflections/lrc-n18-wacky-attempts-s515.md.
+
+## oracle-2026-06-01-S520 - LRC source-menu extended to n=8 + box-saturation (HYP-1987)
+
+**Account:** Oracle (oraclebox1, just joined the monad cluster). **User prompt:** run a math session on the LRC + keep tabs on cluster health.
+**Built directly on S512/HYP-1987 and codex-S516.** Extended the reachable source-class menu (the TRUE LRC win-set in A000568(n-1)) past where S512/S516 stopped:
+- **n=8 computed:** reachable menu >=12 (of A000568(7)=456); **LRC re-verified on the tournament side for n=8** (0 source-avoidance failures over boxes of 36/330/792 primitive speed sets) — extends S512's n<=7 verification.
+- **Box-saturation tested every term** (the question S512 left open — were 1,2,6,6 converged or single-box lower bounds?): n=5:2 (stable to ms=26), n=6:6 (to ms=15), n=7:6 (to ms=14) are **box-stable**; **n=8 is NOT converged** — count grew 11->12 (new class H=24) when box went 11->12, so it is a **lower bound >=12**. Caveat folded into HYP-1987: single-box menu counts are lower bounds until saturation shown.
+- **Structural finding:** menu = **A000568(n-1)/2 exactly** for n=4,5,6 (1,2,6) then **collapses sharply at n=7** (6 vs 28) — the HYP-1987 "vanishing fraction" switches on at n=7 (same threshold as width-formula failure / E_7 odd holes), not gradually. Reflection: `07-reflections/lrc-source-menu-collapses-at-n7-s520.md`.
+**Files:** `04-computation/lrc_source_reachability_n8_s520.py`, results `lrc_source_reachability_n8_s520.out` + `lrc_source_menu_saturation_s520.out`. **Cluster:** oraclebox1 joined Nomad cluster today as a `pro` node; 3 nodes ready (oraclebox1, claudebox, bigo-server); math collaboration is rolling hard (108 commits/24h, oracle+codex on LRC) via the git/messaging layer (Nomad research-job dispatch not yet deployed). **Handoff:** open question = the true n=8 menu size (needs a bigger box than ms=12); and *why* the /2 identity breaks exactly at n=7.
+
 ## oracle-2026-06-01-S514 - Wacky LRC n=14 attempts (anti-concentration, bounded ansatz, parity split)
 
 **Account:** Oracle (remote-control). **User prompt:** try wacky theorems / new ideas to prove LRC for n=14.
@@ -40,11 +60,11 @@
 ## codex-2026-06-01-S520 - n=18 observer-source gate battlefield from THM-382/383 and HYP-1981
 
 **Account:** Codex
-**Git first:** Started clean at `main...origin/main` after S514; during recovery, `git fetch` brought in THM-381/382/383 and the Lean S515 commit. Push races then brought in THM-384/HYP-1986, HYP-1987, THM-385/HYP-1988, HYP-1989, HYP-1990, and HYP-1991, so this n=18 strand was rebased as S520/HYP-1992.
+**Git first:** Started clean at `main...origin/main` after S514; during recovery, `git fetch` brought in THM-381/382/383 and the Lean S515 commit. Push races then brought in THM-384/HYP-1986, HYP-1987, THM-385/HYP-1988, HYP-1989, HYP-1990, and HYP-1991, so this n=18 strand was rebased as S520/HYP-1993.
 **User prompt:** Take THM-382 and THM-383 as major inspiration; then use HYP-1981 as a major source of inspiration.
 **Computation:** Added `04-computation/lrc_n18_gate_battlefield_s520.py` and stored `05-knowledge/results/lrc_n18_gate_battlefield_s520.out`. The script combines THM-382 threshold-decorated fibers, THM-383 boundary compactification, HYP-1981 observer-source reachability, THM-384/HYP-1986 source-gap forcing, HYP-1987's arc-confined source menu, THM-385/HYP-1988 observer-score blocker stratification, and THM-386/HYP-1990 gap-flow forcing with the older n=14/n=18 gate battlefield. It audits n=18 unit residues, canonical initial/gate/lpd rows, targeted one-step repairs around coordinates `6,8,9,12,16,17`, pure gate replacements, HYP-1981 observer-source fingerprints, and a representative branch Tournament Analysis.
 **Findings:** The n=18 unit skeleton is a source-target survival split: without an `18`-multiple all six unit points remain observer-source boundary targets, so the no-gate branch cannot be an open-cover counterexample. Gate rows kill those unit source targets but create open source targets while exporting endpoint debt. The lpd/gate chain is rigid: `9*` has `gap/th=1/176`, `unprotected=176`, first `11/162`; `18*` has `1/352`, `352`, first `19/324`; `36*` has `1/704`, `704`, first `37/648`.
-**Synthesis:** Added HYP-1992 and `07-reflections/lrc-n18-observer-source-gate-battlefield-s520.md`. The branch tournament is transitive (`H=1`, `c3=0`), ranking double-gate > gate > lpd > local gate replacements. The n=18 proof target is an observer-source endpoint-debt certificate for the `9 -> 18 -> 36` chain, split into even and `3^2` torsion layers; the next refinement is to add THM-385 blocker layers to the descendant debt rows.
+**Synthesis:** Added HYP-1993 and `07-reflections/lrc-n18-observer-source-gate-battlefield-s520.md`. The branch tournament is transitive (`H=1`, `c3=0`), ranking double-gate > gate > lpd > local gate replacements. The n=18 proof target is an observer-source endpoint-debt certificate for the `9 -> 18 -> 36` chain, split into even and `3^2` torsion layers; the next refinement is to add THM-385 blocker layers to the descendant debt rows.
 **Verification:** `python3 -m py_compile 04-computation/lrc_n18_gate_battlefield_s520.py`; full script rerun with output stored.
 
 ## codex-2026-06-01-S517 - Observer-score repair fibers around HYP-1981
