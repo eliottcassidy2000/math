@@ -1,0 +1,39 @@
+==========================================================================
+STAR: vertices = PAIRS (edges of K_n), carrying difference-speeds w_ij = v_i-v_j
+      (a TENSION: cocycle w_ij+w_jk+w_ki=0) -- a 2nd-order LRC on differences
+==========================================================================
+  n=4: 6 pair-vertices; realizable pair-tournament iso-classes = 74 / 56 (R=1.321); cocycle holds=True; 151 speed sets
+  n=5: 10 pair-vertices; realizable LABELED pair-tournaments = 24535 of 2^45 possible (~35184372088832); a vanishing slice (cocycle-restricted)
+  => the pair (difference/tension) tournament lives on C(n,2) vertices but its
+     realizable classes are restricted by the COCYCLE (additive consistency):
+     the difference-speeds are a coboundary, not free. A second-order LRC.
+
+==========================================================================
+MULTITUDE rung -- GAPS: vertices = the n arcs between consecutive points
+==========================================================================
+  n=4: realizable gap-multiset order-types (quantized) = 253709; distinct-gap-length histogram over samples = {2: 256, 3: 53815, 4: 395929}
+  n=5: realizable gap-multiset order-types (quantized) = 304206; distinct-gap-length histogram over samples = {2: 71, 3: 7670, 4: 98651, 5: 343608}
+  n=6: realizable gap-multiset order-types (quantized) = 328974; distinct-gap-length histogram over samples = {2: 37, 3: 2129, 4: 28745, 5: 160202, 6: 258887}
+  => gap-vectors sum to 1 and cluster to FEW distinct lengths (three-gap/Steinhaus
+     rigidity); the apex = largest gap = loneliness target (S530). Restricted.
+
+==========================================================================
+THE MULTITUDE (further complex/precise vertex objects; posed precisely)
+==========================================================================
+  - HARMONIC/SPECTRAL: vertices = frequencies m in {1..n-1}; edge by phase of
+    ghat(m) e^{2pi i m * something}; the 'character tournament' (dual of S537 flows).
+  - ARRANGEMENT CELLS: vertices = cells of the COMBINED braid {x_i=x_j} + threshold
+    {x_i=+-1/n} arrangement on T^{n-1}; each = (cyclic order, loneliness pattern);
+    the runner orbit is a closed walk; realizable cells = a thin slice (S521o).
+  - INCIDENCE CELLS: vertices = occupied (sector, runner) pairs (S536 x runners);
+    a bipartite-lift tournament; realizable = doubly-restricted.
+  - MATROID FLATS: vertices = flats of the resonance matroid M_v (S537); edge by
+    containment/closure order; LRC reads the connectivity of M_v.
+  - TIME-FREQUENCY (GABOR) CELLS: vertices = (sector, harmonic) pairs -- the joint
+    space x frequency lift unifying S536 (space) and S537 (frequency); the
+    'uncertainty' tournament; realizable cells obey a discrete uncertainty bound.
+  - WIRING-DIAGRAM EVENTS: vertices = crossing events (adjacent transpositions);
+    realizable = stretchable allowable sequences (S535 MAP-wire).
+  Each: 'which iso-classes are exhibitable' with restriction from a DIFFERENT
+  consistency law (cocycle / three-gap / arrangement / matroid / uncertainty /
+  stretchability).
