@@ -1,0 +1,322 @@
+The Apex Tile — opus-S529
+
+======================================================================
+PART 1: The apex tile — closing the polygon
+======================================================================
+
+n=4:
+  base path: 4 → 3 → ... → 1  (3 edges)
+  apex tile: (4, 1) = tile A
+  total tiles: C(3,2) = 3
+  interior tiles (non-apex): 2
+  polygon boundary = base path + apex = 4 edges
+
+  apex position: row 1 (bottom), column 4 (rightmost)
+  skip distance: 3 (longest possible)
+  in the staircase, the apex is at the HYPOTENUSE vertex
+
+  ALIGNED: 4→1 (source beats sink, no boundary cycle)
+  ANTI-ALIGNED: 1→4 (sink beats source, Hamiltonian cycle)
+
+n=5:
+  base path: 5 → 4 → ... → 1  (4 edges)
+  apex tile: (5, 1) = tile A
+  total tiles: C(4,2) = 6
+  interior tiles (non-apex): 5
+  polygon boundary = base path + apex = 5 edges
+
+  apex position: row 1 (bottom), column 5 (rightmost)
+  skip distance: 4 (longest possible)
+  in the staircase, the apex is at the HYPOTENUSE vertex
+
+  ALIGNED: 5→1 (source beats sink, no boundary cycle)
+  ANTI-ALIGNED: 1→5 (sink beats source, Hamiltonian cycle)
+
+n=6:
+  base path: 6 → 5 → ... → 1  (5 edges)
+  apex tile: (6, 1) = tile A
+  total tiles: C(5,2) = 10
+  interior tiles (non-apex): 9
+  polygon boundary = base path + apex = 6 edges
+
+  apex position: row 1 (bottom), column 6 (rightmost)
+  skip distance: 5 (longest possible)
+  in the staircase, the apex is at the HYPOTENUSE vertex
+
+  ALIGNED: 6→1 (source beats sink, no boundary cycle)
+  ANTI-ALIGNED: 1→6 (sink beats source, Hamiltonian cycle)
+
+n=7:
+  base path: 7 → 6 → ... → 1  (6 edges)
+  apex tile: (7, 1) = tile A
+  total tiles: C(6,2) = 15
+  interior tiles (non-apex): 14
+  polygon boundary = base path + apex = 7 edges
+
+  apex position: row 1 (bottom), column 7 (rightmost)
+  skip distance: 6 (longest possible)
+  in the staircase, the apex is at the HYPOTENUSE vertex
+
+  ALIGNED: 7→1 (source beats sink, no boundary cycle)
+  ANTI-ALIGNED: 1→7 (sink beats source, Hamiltonian cycle)
+
+n=8:
+  base path: 8 → 7 → ... → 1  (7 edges)
+  apex tile: (8, 1) = tile A
+  total tiles: C(7,2) = 21
+  interior tiles (non-apex): 20
+  polygon boundary = base path + apex = 8 edges
+
+  apex position: row 1 (bottom), column 8 (rightmost)
+  skip distance: 7 (longest possible)
+  in the staircase, the apex is at the HYPOTENUSE vertex
+
+  ALIGNED: 8→1 (source beats sink, no boundary cycle)
+  ANTI-ALIGNED: 1→8 (sink beats source, Hamiltonian cycle)
+
+n=14:
+  base path: 14 → 13 → ... → 1  (13 edges)
+  apex tile: (14, 1) = tile A
+  total tiles: C(13,2) = 78
+  interior tiles (non-apex): 77
+  polygon boundary = base path + apex = 14 edges
+
+  apex position: row 1 (bottom), column 14 (rightmost)
+  skip distance: 13 (longest possible)
+  in the staircase, the apex is at the HYPOTENUSE vertex
+
+  ALIGNED: 14→1 (source beats sink, no boundary cycle)
+  ANTI-ALIGNED: 1→14 (sink beats source, Hamiltonian cycle)
+
+THE APEX IN THE 'EVERYTHING IS THE TRIANGLE' FRAMEWORK:
+  The staircase is a right triangle. The three sides are:
+    - VERTICAL (source column): scores, hierarchy, cut space
+    - HORIZONTAL (sink row): complement, anti-hierarchy
+    - HYPOTENUSE (anti-diagonal): the fiber fraction, Walsh order-2
+  The APEX TILE sits at the VERTEX where the hypotenuse meets
+  the horizontal leg — the corner of the triangle.
+  It connects the vertical (source) to the horizontal (sink).
+  Flipping the apex rotates between transitive and cyclic global structure.
+
+======================================================================
+PART 2: The apex tile on the LRC walk
+======================================================================
+
+n=4 (initial segment):
+  apex = arc (observer, runner_1=speed 1)
+  aligned (runner 1 safe): 8/14 (57.1%)
+  anti-aligned (runner 1 blocks): 6/14 (42.9%)
+  lonely (all safe): 0/14
+  apex is LAST BLOCKER: 2/14 (14.3%)
+
+  last-blocker distribution:
+    speed 1: last blocker in 2 cells
+    speed 2: last blocker in 2 cells
+    speed 3: last blocker in 4 cells
+
+n=5 (initial segment):
+  apex = arc (observer, runner_1=speed 1)
+  aligned (runner 1 safe): 14/22 (63.6%)
+  anti-aligned (runner 1 blocks): 8/22 (36.4%)
+  lonely (all safe): 0/22
+  apex is LAST BLOCKER: 2/22 (9.1%)
+
+  last-blocker distribution:
+    speed 1: last blocker in 2 cells
+    speed 2: last blocker in 2 cells
+    speed 3: last blocker in 4 cells
+    speed 4: last blocker in 4 cells
+
+n=6 (initial segment):
+  apex = arc (observer, runner_1=speed 1)
+  aligned (runner 1 safe): 28/38 (73.7%)
+  anti-aligned (runner 1 blocks): 10/38 (26.3%)
+  lonely (all safe): 0/38
+  apex is LAST BLOCKER: 2/38 (5.3%)
+
+  last-blocker distribution:
+    speed 1: last blocker in 2 cells
+    speed 2: last blocker in 2 cells
+    speed 3: last blocker in 4 cells
+    speed 4: last blocker in 4 cells
+    speed 5: last blocker in 8 cells
+
+n=7 (initial segment):
+  apex = arc (observer, runner_1=speed 1)
+  aligned (runner 1 safe): 36/48 (75.0%)
+  anti-aligned (runner 1 blocks): 12/48 (25.0%)
+  lonely (all safe): 0/48
+  apex is LAST BLOCKER: 2/48 (4.2%)
+
+  last-blocker distribution:
+    speed 1: last blocker in 2 cells
+    speed 2: last blocker in 2 cells
+    speed 3: last blocker in 4 cells
+    speed 4: last blocker in 4 cells
+    speed 5: last blocker in 8 cells
+    speed 6: last blocker in 4 cells
+
+======================================================================
+PART 3: The apex's impact on H(T)
+======================================================================
+
+n=4 (tiles: 3, apex at index 0):
+  apex ALIGNED: avg H = 3.00, range [1, 5]
+  apex ANTI-ALIGNED: avg H = 5.00, range [5, 5]
+  H ratio (anti/aligned): 1.6667
+  tile H-impact ranking:
+    (4,1): impact=2.00 *** APEX ***
+    (3,1): impact=1.00 
+    (4,2): impact=1.00 
+
+n=5 (tiles: 6, apex at index 0):
+  apex ALIGNED: avg H = 7.88, range [1, 15]
+  apex ANTI-ALIGNED: avg H = 11.88, range [9, 15]
+  H ratio (anti/aligned): 1.5079
+  tile H-impact ranking:
+    (5,1): impact=4.00 *** APEX ***
+    (3,1): impact=1.75 
+    (5,3): impact=1.75 
+    (4,1): impact=1.25 
+    (5,2): impact=1.25 
+
+n=6 (tiles: 10, apex at index 0):
+  apex ALIGNED: avg H = 25.00, range [1, 45]
+  apex ANTI-ALIGNED: avg H = 33.00, range [15, 45]
+  H ratio (anti/aligned): 1.3200
+  tile H-impact ranking:
+    (6,1): impact=8.00 *** APEX ***
+    (3,1): impact=4.00 
+    (6,4): impact=4.00 
+    (5,1): impact=3.25 
+    (6,2): impact=3.25 
+
+======================================================================
+PART 4: The apex tile in the cascade
+======================================================================
+
+n=5:
+  APEX tile = (observer, runner_1) where runner_1 has speed 1
+  apex aligned iff ||t|| ≥ 1/5, i.e., t ∈ [1/5, 4/5]
+  initial feasible set: width = 3/5 = 0.6000
+
+  CASCADE STEP 1 (apex): constrains t to [0.2000, 0.8000]
+    This is 60.0% of the circle.
+  CASCADE STEPS:
+    step 2: speed 2, granularity 1/10=0.1000, image_len=1.200 ✓
+    step 3: speed 3, granularity 1/15=0.0667, image_len=1.080 ✓
+    step 4: speed 4, granularity 1/20=0.0500, image_len=0.864 ✗
+
+n=7:
+  APEX tile = (observer, runner_1) where runner_1 has speed 1
+  apex aligned iff ||t|| ≥ 1/7, i.e., t ∈ [1/7, 6/7]
+  initial feasible set: width = 5/7 = 0.7143
+
+  CASCADE STEP 1 (apex): constrains t to [0.1429, 0.8571]
+    This is 71.4% of the circle.
+  CASCADE STEPS:
+    step 2: speed 2, granularity 1/14=0.0714, image_len=1.429 ✓
+    step 3: speed 3, granularity 1/21=0.0476, image_len=1.531 ✓
+    step 4: speed 4, granularity 1/28=0.0357, image_len=1.458 ✓
+    step 5: speed 5, granularity 1/35=0.0286, image_len=1.302 ✓
+    step 6: speed 6, granularity 1/42=0.0238, image_len=1.116 ✓
+    step 7: speed 7, granularity 1/49=0.0204, image_len=0.930 ✗
+
+n=14:
+  APEX tile = (observer, runner_1) where runner_1 has speed 1
+  apex aligned iff ||t|| ≥ 1/14, i.e., t ∈ [1/14, 13/14]
+  initial feasible set: width = 12/14 = 0.8571
+
+  CASCADE STEP 1 (apex): constrains t to [0.0714, 0.9286]
+    This is 85.7% of the circle.
+  CASCADE STEPS:
+    step 2: speed 2, granularity 1/28=0.0357, image_len=1.714 ✓
+    step 3: speed 3, granularity 1/42=0.0238, image_len=2.204 ✓
+    step 4: speed 4, granularity 1/56=0.0179, image_len=2.519 ✓
+    step 5: speed 5, granularity 1/70=0.0143, image_len=2.699 ✓
+    step 6: speed 6, granularity 1/84=0.0119, image_len=2.776 ✓
+    step 7: speed 7, granularity 1/98=0.0102, image_len=2.776 ✓
+    step 8: speed 8, granularity 1/112=0.0089, image_len=2.719 ✓
+    step 9: speed 9, granularity 1/126=0.0079, image_len=2.622 ✓
+    step 10: speed 10, granularity 1/140=0.0071, image_len=2.497 ✓
+
+THE APEX'S ROLE:
+  The apex tile is processed FIRST in the cascade.
+  It sets the COARSEST constraint: t ∈ [1/n, (n-1)/n].
+  This is the polygon's OUTSIDE — the boundary minus one edge.
+  All subsequent constraints operate INSIDE this boundary.
+
+  The cascade is a REFINEMENT from outside to inside:
+  Step 1 (apex, speed 1): the coarsest constraint, width (n-2)/n
+  Step 2 (speed 2): finer, granularity 1/(2n)
+  Step k (speed k): finest, granularity 1/(kn)
+
+  The LAST step (speed n-1) is the finest constraint.
+  It corresponds to the SHORTEST diagonal in the polygon
+  (connecting near-adjacent vertices).
+
+  OUTSIDE → INSIDE = COARSE → FINE = SLOW → FAST
+  The cascade refines from the polygon boundary to the interior.
+
+======================================================================
+PART 5: The Hamiltonian cycle — apex anti-aligned
+======================================================================
+
+When the APEX is anti-aligned (1 → n, sink beats source):
+  The polygon boundary forms a HAMILTONIAN CYCLE:
+  n → n-1 → ... → 2 → 1 → n
+  (base path: n→...→1, plus apex: 1→n)
+
+  Every vertex reaches every other via the cycle.
+  The tournament is 'maximally cyclic' at the boundary level.
+  H is MAXIMIZED for this boundary (the cycle contributes
+  many paths that wrap around).
+
+When the APEX is aligned (n → 1, source beats sink):
+  The boundary is a DIRECTED PATH (no cycle):
+  n → n-1 → ... → 1, and n → 1
+  The source n beats ALL others via the path + direct arc.
+  The tournament is 'maximally transitive' at the boundary level.
+  H is MINIMIZED for this boundary (only one path: the base path).
+
+THE LRC TRANSITION:
+  At t < 1/n: runner 1 is close → apex ANTI-ALIGNED → cyclic boundary
+  At t = 1/n: runner 1 crosses threshold → apex FLIPS → transitive boundary
+  At t > 1/n: runner 1 is safe → apex ALIGNED → observer can be source
+
+  The FIRST event in the cascade (apex flipping at t=1/n) is the
+  TRANSITION from cyclic to transitive boundary structure.
+  All subsequent cascade steps happen WITHIN the transitive boundary.
+
+  This is why the initial segment has its lonely time at t=1/n:
+  it's exactly when the apex flips, opening the transitive window.
+
+======================================================================
+SYNTHESIS: The apex closes the polygon
+======================================================================
+
+The regular polygon has n boundary edges:
+  n-1 BASE PATH edges (the ranking)
+  1 APEX TILE (closing the cycle)
+
+The apex tile is the MOST IMPORTANT tile because:
+  1. It determines the global topology (path vs cycle)
+  2. It connects the two extremes (source to sink)
+  3. It's the FIRST constraint in the cascade (coarsest)
+  4. Its flip at t=1/n opens the transitive window
+  5. Its H-impact is among the largest of all tiles
+
+For LRC: the apex = 'is the slowest runner safe?'
+  When the apex flips from anti-aligned (cyclic) to aligned
+  (transitive), the observer's source potential opens up.
+  The remaining cascade steps check the interior tiles.
+
+THE PICTURE:
+  t < 1/n: apex CLOSED → cyclic boundary → observer blocked
+  t = 1/n: apex OPENS → transition to transitive boundary
+  t > 1/n: apex OPEN → cascade checks interior → lonely or not
+
+  The polygon's OUTSIDE (base path + apex) sets the STAGE.
+  The polygon's INSIDE (diagonals) determines the OUTCOME.
+  The apex is the GATE between these two worlds.
+

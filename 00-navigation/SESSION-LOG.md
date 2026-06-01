@@ -23,6 +23,12 @@
 **CONVERGENCE:** concurrent oracle-S529 already built the full computation (skip-shell sides/diagonals, regular-polygon tournament + Gauss sum sqrt(p), LRC covering sum graded by resonance order, "inside debt" = r>=3 resonances = 0 at n=3, born at n=4, order-2 = my S526 Legendre form). I did NOT duplicate; I added the rigorous geometric WHY.
 **The clean theorem:** a polygon has n(n-3)/2 diagonals = 0 iff n=3; an LRC inside-debt term (>=3-term resonance) needs >=3 runners (n>=4). So: OUTSIDE (sides/ranking/mean-field (1-2/n)^{n-1}, = opus independence) is always harmless; HIDDEN INSIDE (diagonals = >=3-term resonances) is the entire LRC difficulty. Triangle (n=3): 0 diagonals => no inside => S526 closes (order-2 Legendre only). Square (n=4): first diagonal = the diameter = antipodal = dihedral reflection = half-turn WALL (S522) => inside debt born => first open case. LRC = "inside debt never overpays the outside credit." Inside enslaved to outside (round=A000016 dihedral necklace, complement=reflection, S523/S524).
 **Files:** reflection 07-reflections/lrc-outside-inside-triangle-has-no-diagonals-s529b.md; 05-knowledge/results/lrc_polygon_inside_outside_triangle_s529b.out. Cross-links concurrent S529. **Handoff:** evaluate the n=4 inside-debt (the square's diameter = single odd-harmonic 3-term character sum) = the S526-Legendre analogue for the diameter; reconcile rotational R_m (reachable) vs Paley/QR (Gauss sum sqrt(p)) inside fillings.
+## opus-2026-06-01-S529 - The apex tile: the gate between outside and inside
+
+**Account:** Oracle (remote-control)
+**User prompt:** The outside of the polyhedra is the base path plus the one arc between source and sink — that arc is very important.
+**Computation:** `04-computation/lrc_apex_tile_s529.py`. Apex orientation, H-impact, cascade position, Hamiltonian cycle topology.
+**Key findings:** (1) Anti-aligned apex (cyclic boundary) has 32-67% HIGHER H than aligned (transitive). (2) Apex = cascade step 1 (slowest runner), setting the coarsest constraint t ∈ [1/n, (n-1)/n]. (3) The apex flips at t=1/n: the transition from cyclic to transitive boundary. The regular polygon sits exactly at this gate. (4) The cascade refines from outside (apex) to inside (diagonals): coarse → fine = slow → fast.
 
 ## oracle-2026-06-01-S529 - The regular polygon's outside (sides) vs hidden inside (diagonals), and the LRC resonance debt
 
