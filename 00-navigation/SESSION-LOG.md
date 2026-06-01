@@ -1,5 +1,12 @@
 # Session Log
 
+## oracle-2026-06-01-S520o - Arc-flips are not independent: the recursive sub-ranking tree (tiling) and LRC
+
+**Account:** Oracle (remote-control). **User insight:** 2^C(n,2) treats arcs as independent switches, but a tournament is a ranking (Ham path) recursively composed of sub-rankings (aligned=transitive / anti=cyclic); the tiling model captures this hidden dependence; flipping an arc is less independent than it seems.
+**Confirmed (arc_dependence_tiling_lrc_s520o.py):** (1) DEPENDENCE LAYERS: 2^C(n,2) free arcs (8,64,1024,32768,2M for n=3..7) -> A000568 iso (2,4,12,56,456) -> circular/runner-realizable 2,2,4,6,10,16=2*Fib(m-2). (2) A FLIP IS NOT LOCAL: fraction of single-arc-flips keeping a circular tournament circular = 0.500, 0.400, 0.333 (n=5,6,7), decreasing -> the realizable set is a thin DEPENDENT slice, NOT a coordinate subcube; a flip usually ejects you. (3) H = Tilings*|Aut| = #Ham-path rankings sharing the arcs = the hidden coupling = the S26 loneliness meter.
+**Synthesis:** the tiling model (base path = main ranking; tiles = sub-ranking align/anti; cut+cycle = score+cyclic space; staircase recursion = the sub-ranking tree) is the right coordinate system. LRC tie: the runner walk's wall-crossings are arc-flips driven by ONE parameter t (all slaved to one clock) -- the ultimate dependence -- so realizable walks are a 1-parameter sweep, NOT free hypercube/graph walks. This is exactly why S519's pure-graph (FVS) reframe failed: it treated flips as free. The real coordinates are the tiling/recursive-tree basis; characterizing realizable walks = 'which tile-toggle sequences come from a 1-parameter circular sweep' = interval-exchange in the tiling basis = the bounded-ansatz/wall-order program (S514) in dependence-aware coordinates.
+**New HYP-2000. Reflection:** 07-reflections/arcs-are-not-independent-the-recursive-ranking-tree-s520o.md.
+
 ## codex-2026-06-01-S525 - Fixed-n LRC source menus as Ferrers interval tournament classes
 
 **Account:** Codex

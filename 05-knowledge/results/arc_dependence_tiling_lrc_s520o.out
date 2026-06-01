@@ -1,0 +1,30 @@
+Arc dependence / tiling / LRC (oracle-2026-06-01-S520o)
+
+(1) DEPENDENCE LAYERS:
+ n | 2^C(n,2) labeled | A000568 iso | 2*Fib(n-2) circular
+ 3 |          8 |      2 |    2
+ 4 |         64 |      4 |    4
+ 5 |       1024 |     12 |    6
+ 6 |      32768 |     56 |   10
+ 7 |    2097152 |    456 |   16
+   => the 'independent arc' count is astronomically larger than the
+      essence (iso classes), and the runner-realizable slice is Fibonacci-thin.
+
+(2) ARC-FLIP IS NOT LOCAL (fraction of single-arc-flips staying circular):
+ n=5: 20/40 = 0.500 of single-arc-flips of a circular
+        tournament stay circular  (C(n,2)=10 arcs/class)
+ n=6: 36/90 = 0.400 of single-arc-flips of a circular
+        tournament stay circular  (C(n,2)=15 arcs/class)
+ n=7: 70/210 = 0.333 of single-arc-flips of a circular
+        tournament stay circular  (C(n,2)=21 arcs/class)
+   => the realizable (round) set is NOT closed under independent arc-flips:
+      it is a thin dependent slice, not a coordinate subcube. A flip mostly
+      throws you OUT of the realizable family -> arcs are correlated.
+
+(3) H = #rankings (Hamiltonian paths) the arcs support = the dependence:
+ n=5: circular menu H-values = [1, 9, 11, 15]  (H counts the rankings sharing the arcs)
+ n=6: circular menu H-values = [1, 17, 23, 41, 45]  (H counts the rankings sharing the arcs)
+ n=7: circular menu H-values = [1, 33, 47, 51, 105, 123, 137, 151, 175]  (H counts the rankings sharing the arcs)
+   => the same arc-set supports H different Ham-path rankings; they share arcs,
+      so a flip perturbs ALL of them at once. H is exactly this hidden coupling
+      (and was the S26 loneliness meter).
