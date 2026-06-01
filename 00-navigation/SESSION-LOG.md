@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-01-S511 - LRC operation-weighted danger fibers
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S509/HYP-1976 and S509b/HYP-1977 landed; checkpoint push rebased over concurrent marked-A000568 work, so this strand was renumbered to S511/HYP-1980 and integrated as the operation-weighted fiber above HYP-1978/HYP-1979.
+**User prompt:** Spend a long creative session defining LRC Tournament Analysis arcs until their `H`, score sequences, or shapes become useful loneliness metrics, with the LRC/A000568 analogy understood through the `x+2`/`x*2` grid, addition, multiplication, and product-sum equations.
+**Computation:** Added `04-computation/lrc_operation_grid_arc_criteria_s511.py` and stored `05-knowledge/results/lrc_operation_grid_arc_criteria_s511.out`. The script imports S506 runner gauges, adds runner-level aggregates induced by S509 pair-cell operation labels, and tests twenty criteria over exact small clocks plus selected `n=14`/`n=18` initial, row-parent, gate, and double-gate rows.
+**Findings:** Pure static operation labels (`dyadic_branch_pressure`, `odd_core_branch_count`, `same_odd_chain_degree`, `additive_shadow_degree`, `multiplicative_shadow_degree`, `product_sum_interface`) have zero within-clock time signal, so they are branch coordinates. Once weighted by current pair danger, they become useful moving gauges: `additive_danger_interface` has mean |rho| `0.882`, `product_sum_danger` `0.840`, `dyadic_danger_curvature` `0.792`, and `multiplicative_danger_interface` `0.783`.
+**A000568 synthesis:** The resulting proof object is an operation-weighted danger fiber over the A000568 quotient: addition is horizontal transport among `x+2` odd-core cells, multiplication is vertical refinement along `x*2` branches, and product-sum equations such as `(a-1)(b-1)=N-1` are the addition/multiplication interfaces where current danger should be measured.
+**Tournament Analysis:** The criteria-choice tournament compares the twenty arc rules by signal, threshold fidelity, operation-grid content, dynamic motion, novelty, and projection risk. It is transitive (`H=1`), with the hybrid operation-danger gauges as the top five profile winners.
+**Verification:** `python3 -m py_compile 04-computation/lrc_operation_grid_arc_criteria_s511.py`; full script rerun stored the output; rebase conflicts with HYP-1978/HYP-1979 were resolved by preserving both incoming marked-quotient threads and making this HYP-1980 the operation-weighted danger fiber.
+
 ## codex-2026-06-01-S509b - LRC over the A000568 isoclass quotient
 
 **Account:** Codex

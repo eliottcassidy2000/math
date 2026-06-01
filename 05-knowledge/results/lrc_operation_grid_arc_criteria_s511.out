@@ -1,0 +1,493 @@
+LRC operation-grid arc-criteria Tournament Analysis (S511)
+========================================================================================================
+Tie Hamiltonian path: increasing runner label 0->1->... .
+Imported S506 criteria keep their native pairwise switch; local criteria
+compare runner scalar values induced by pair-cells and operation labels.
+
+Criteria switchboard:
+  s506_phase_half                    layer=imported runner gauge   dynamic=True
+    observable=pair phase delta frac(x_j-x_i)
+    switch=i -> j iff j is clockwise from i by less than 1/2
+  s506_lrc_close_sector              layer=imported runner gauge   dynamic=True
+    observable=pair phase delta frac(x_j-x_i)
+    switch=strict arc only inside the LRC danger sector of width 1/n
+  s506_local_moat_min                layer=imported runner gauge   dynamic=True
+    observable=vertex score min(left_gap,right_gap)
+    switch=larger two-sided local moat points to smaller local moat
+  s506_safe_deficit                  layer=imported runner gauge   dynamic=True
+    observable=vertex score local deficit below threshold on two adjacent gaps
+    switch=smaller deficit points to larger deficit
+  s506_threshold_deficit_pressure    layer=imported runner gauge   dynamic=True
+    observable=pairwise relief of two-neighbor deficit below 1/n
+    switch=blocker points to runner whose threshold deficit it removes more
+  origin_clearance_rank              layer=runner geometry         dynamic=True
+    observable=runner distance from observer 0
+    switch=farther from 0 points to closer to 0
+  local_two_guard                    layer=runner geometry         dynamic=True
+    observable=min(left adjacent gap, right adjacent gap)
+    switch=larger two-sided guard points to smaller guard
+  incident_danger_sum                layer=pair-cell aggregate     dynamic=True
+    observable=sum_j max(0,1/N-dist(i,j,t))
+    switch=more incident threshold danger points to less danger
+  incident_close_count               layer=pair-cell aggregate     dynamic=True
+    observable=number of incident pair-cells below the LRC threshold
+    switch=more close incident pair-cells points to fewer
+  dyadic_branch_pressure             layer=operation grid          dynamic=False
+    observable=sum_j v2(|v_i-v_j|)
+    switch=higher x*2 branch pressure points to lower
+  odd_core_branch_count              layer=operation grid          dynamic=False
+    observable=number of distinct odd cores among incident speed gaps
+    switch=more x+2 branch diversity points to less
+  same_odd_chain_degree              layer=operation grid          dynamic=False
+    observable=count of runners sharing the same odd-core doubling chain
+    switch=more same-chain incidence points to less
+  additive_shadow_degree             layer=operation grid          dynamic=False
+    observable=participation in speed equations a+b=c or |a-b|=c
+    switch=more additive-shadow incidence points to less
+  multiplicative_shadow_degree       layer=operation grid          dynamic=False
+    observable=divisibility incidence among nonzero speeds
+    switch=more multiplicative-shadow incidence points to less
+  product_sum_interface              layer=operation grid          dynamic=False
+    observable=sum_j 1/(1+|(v_i mod N)(v_j mod N)-(N-1)|)
+    switch=closer to product-sum interface points to farther
+  dyadic_danger_curvature            layer=hybrid                  dynamic=True
+    observable=incident danger deficit weighted by 1+v2(|v_i-v_j|)
+    switch=more deep-branch danger points to less
+  odd_chain_danger                   layer=hybrid                  dynamic=True
+    observable=incident danger deficit restricted to same odd-core chains
+    switch=more same-chain danger points to less
+  additive_danger_interface          layer=hybrid                  dynamic=True
+    observable=incident danger deficit weighted by additive-shadow pair incidence
+    switch=more additive danger points to less
+  multiplicative_danger_interface    layer=hybrid                  dynamic=True
+    observable=incident danger deficit weighted by divisibility pair incidence
+    switch=more multiplicative danger points to less
+  product_sum_danger                 layer=hybrid                  dynamic=True
+    observable=incident danger deficit weighted by product-sum closeness
+    switch=more product-sum danger points to less
+
+SMALL EXACT CLOCK SCORECARD
+========================================================================================================
+criterion                          best_abs  common_best_feature->target                  H~origin H~close originScore~origin topScore~danger flips ties scc
+s506_lrc_close_sector                 1.000  tie_rate->close_pair_count                 -0.116  +0.171     +0.194     -0.019 0.152 0.689 0.174
+additive_danger_interface             0.882  tie_rate->safe_gap_count                   +0.000  +0.000     -0.310     +0.000 0.238 0.121 0.174
+product_sum_danger                    0.840  tie_rate->safe_gap_count                   +0.000  +0.000     -0.298     +0.000 0.228 0.121 0.174
+s506_local_moat_min                   0.837  origin_score_norm->lonely_vertices                  +0.000  +0.000     +0.305     +0.000 0.170 0.491 0.174
+local_two_guard                       0.837  origin_score_norm->lonely_vertices                  +0.000  +0.000     +0.305     +0.000 0.170 0.491 0.174
+incident_danger_sum                   0.815  origin_score_norm->max_gap                          +0.000  +0.000     -0.413     +0.000 0.214 0.268 0.174
+s506_phase_half                       0.798  H->max_gap                          +0.145  -0.679     +0.000     +0.630 0.169 0.000 0.881
+dyadic_danger_curvature               0.792  origin_score_norm->max_gap                          +0.000  +0.000     -0.359     +0.000 0.219 0.267 0.174
+multiplicative_danger_interface       0.783  origin_score_norm->origin_clearance                 +0.000  +0.000     -0.353     +0.000 0.239 0.163 0.174
+s506_safe_deficit                     0.782  origin_score_norm->lonely_vertices                  +0.000  +0.000     +0.279     +0.000 0.212 0.300 0.174
+incident_close_count                  0.748  tie_rate->close_pair_count                 +0.000  +0.000     -0.282     +0.000 0.196 0.412 0.174
+s506_threshold_deficit_pressure       0.653  tie_rate->close_pair_count                 -0.029  +0.226     +0.313     -0.104 0.046 0.926 0.174
+odd_chain_danger                      0.460  -->-                                +0.000  +0.000     +0.195     +0.000 0.072 0.772 0.174
+origin_clearance_rank                 0.000  -->-                                +0.000  +0.000     +0.000     +0.000 0.150 0.000 0.174
+dyadic_branch_pressure                0.000  -->-                                +0.000  +0.000     +0.000     +0.000 0.000 0.275 0.174
+odd_core_branch_count                 0.000  -->-                                +0.000  +0.000     +0.000     +0.000 0.000 0.401 0.174
+same_odd_chain_degree                 0.000  -->-                                +0.000  +0.000     +0.000     +0.000 0.000 0.566 0.174
+additive_shadow_degree                0.000  -->-                                +0.000  +0.000     +0.000     +0.000 0.000 0.479 0.174
+multiplicative_shadow_degree          0.000  -->-                                +0.000  +0.000     +0.000     +0.000 0.000 0.396 0.174
+product_sum_interface                 0.000  -->-                                +0.000  +0.000     +0.000     +0.000 0.000 0.073 0.174
+
+Reading: dynamic threshold aggregates should score in the time direction;
+static operation-grid criteria can score only through fixed branch shape,
+so zero Spearman here means coordinate label, not mathematical uselessness.
+
+SELECTED n=14/n=18 RUNNER ROWS
+========================================================================================================
+H is computed through N=14 and omitted for N=18.  Large-row fingerprints
+should be read as score shape, observer score, ties, triangles, and SCCs.
+
+[initial n=14]
+  class=boundary_only gap/th=0 unprotected=6 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  time=unit      t=          1/14 origin_clear=      1 bracket=      1 safe=14 lonely=14 max_gap/th=      1 close_pairs=  0 danger/th=  0.00
+    s506_phase_half                    v=14 H=      24104937 score=[6:7 7:7] w= 1 o=  7 strict= 84 ties=  7 tri= 70 scc=14 tie%=0.077
+    s506_lrc_close_sector              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 56 ties= 35 tri=  0 scc= 1 tie%=0.385
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  5 strict= 91 ties=  0 tri=  0 scc= 1 tie%=0.000
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+  time=half-unit t=          1/28 origin_clear=    1/2 bracket=    1/2 safe= 1 lonely= 0 max_gap/th=   15/2 close_pairs= 13 danger/th=  6.50
+    s506_phase_half                    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 91 ties=  0 tri=  0 scc= 1 tie%=0.000
+    s506_lrc_close_sector              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 24 ties= 67 tri=  0 scc= 1 tie%=0.736
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 56 ties= 35 tri=  0 scc= 1 tie%=0.385
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  5 strict= 91 ties=  0 tri=  0 scc= 1 tie%=0.000
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 24 ties= 67 tri=  0 scc= 1 tie%=0.736
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  0 strict= 66 ties= 25 tri=  0 scc= 1 tie%=0.275
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 44 ties= 47 tri=  0 scc= 1 tie%=0.516
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  7 strict= 90 ties=  1 tri=  0 scc= 1 tie%=0.011
+
+[initial n=18]
+  class=boundary_only gap/th=0 unprotected=6 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+  time=unit      t=          1/18 origin_clear=      1 bracket=      1 safe=18 lonely=18 max_gap/th=      1 close_pairs=  0 danger/th=  0.00
+    s506_phase_half                    v=18 H=             - score=[8:9 9:9] w= 1 o=  9 strict=144 ties=  9 tri=168 scc=18 tie%=0.059
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=112 ties= 41 tri=  0 scc= 1 tie%=0.268
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  8 strict=153 ties=  0 tri=  0 scc= 1 tie%=0.000
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+  time=half-unit t=          1/36 origin_clear=    1/2 bracket=    1/2 safe= 1 lonely= 0 max_gap/th=   19/2 close_pairs= 17 danger/th=  8.50
+    s506_phase_half                    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=153 ties=  0 tri=  0 scc= 1 tie%=0.000
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict= 32 ties=121 tri=  0 scc= 1 tie%=0.791
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=112 ties= 41 tri=  0 scc= 1 tie%=0.268
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  8 strict=153 ties=  0 tri=  0 scc= 1 tie%=0.000
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict= 32 ties=121 tri=  0 scc= 1 tie%=0.791
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  0 strict=104 ties= 49 tri=  0 scc= 1 tie%=0.320
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict= 60 ties= 93 tri=  0 scc= 1 tie%=0.608
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 10 strict=153 ties=  0 tri=  0 scc= 1 tie%=0.000
+
+[n=14 lpd ladder skip 6]
+  class=positive_gap gap/th=5/924 unprotected=84 speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  time=unit      t=          1/14 origin_clear=      0 bracket=      0 safe= 3 lonely= 1 max_gap/th=      7 close_pairs= 36 danger/th= 36.00
+    s506_phase_half                    v=14 H=           921 score=[0:1 2:2 4:2 6:2 7:2 9:2 11:2 13:1] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+    s506_lrc_close_sector              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  6 strict= 55 ties= 36 tri=  0 scc= 1 tie%=0.396
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  5 strict= 68 ties= 23 tri=  0 scc= 1 tie%=0.253
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 12 strict= 55 ties= 36 tri=  0 scc= 1 tie%=0.396
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  7 strict= 73 ties= 18 tri=  0 scc= 1 tie%=0.198
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 83 ties=  8 tri=  0 scc= 1 tie%=0.088
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 73 ties= 18 tri=  0 scc= 1 tie%=0.198
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 55 ties= 36 tri=  0 scc= 1 tie%=0.396
+  time=half-unit t=          1/28 origin_clear=      0 bracket=      0 safe= 4 lonely= 0 max_gap/th=    7/2 close_pairs= 20 danger/th= 18.00
+    s506_phase_half                    v=14 H=       4889077 score=[2:1 4:2 5:1 6:3 7:2 8:3 10:2] w= 8 o= 10 strict= 55 ties= 36 tri=  6 scc=14 tie%=0.396
+    s506_lrc_close_sector              v=14 H=          1021 score=[0:1 2:2 3:1 4:1 6:2 7:1 9:3 10:1 11:1 13:1] w=13 o= 13 strict=  4 ties= 87 tri=  0 scc= 1 tie%=0.956
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 72 ties= 19 tri=  0 scc= 1 tie%=0.209
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  5 strict= 68 ties= 23 tri=  0 scc= 1 tie%=0.253
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 12 strict= 55 ties= 36 tri=  0 scc= 1 tie%=0.396
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 77 ties= 14 tri=  0 scc= 1 tie%=0.154
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  3 strict= 86 ties=  5 tri=  0 scc= 1 tie%=0.055
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  6 strict= 75 ties= 16 tri=  0 scc= 1 tie%=0.176
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 75 ties= 16 tri=  0 scc= 1 tie%=0.176
+  time=gap-mid   t=    3053/25872 origin_clear=  29/24 bracket=  29/24 safe= 7 lonely= 2 max_gap/th=481/264 close_pairs=  8 danger/th=  3.70
+    s506_phase_half                    v=14 H=      22168229 score=[5:1 6:6 7:6 8:1] w= 3 o=  7 strict= 91 ties=  0 tri=110 scc=14 tie%=0.000
+    s506_lrc_close_sector              v=14 H=         82969 score=[1:2 4:2 5:1 6:3 7:1 8:1 9:1 10:1 11:1 13:1] w=12 o= 13 strict=  8 ties= 83 tri=  0 scc= 1 tie%=0.912
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 62 ties= 29 tri=  0 scc= 1 tie%=0.319
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  5 strict= 68 ties= 23 tri=  0 scc= 1 tie%=0.253
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 12 strict= 55 ties= 36 tri=  0 scc= 1 tie%=0.396
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 62 ties= 29 tri=  0 scc= 1 tie%=0.319
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 77 ties= 14 tri=  0 scc= 1 tie%=0.154
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 77 ties= 14 tri=  0 scc= 1 tie%=0.154
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 78 ties= 13 tri=  0 scc= 1 tie%=0.143
+  time=boundary  t=          9/98 origin_clear=      1 bracket=      1 safe=12 lonely=11 max_gap/th=      2 close_pairs=  2 danger/th=  1.00
+    s506_phase_half                    v=14 H=      20372043 score=[5:2 6:5 7:5 8:2] w= 3 o=  8 strict= 85 ties=  6 tri= 73 scc=14 tie%=0.066
+    s506_lrc_close_sector              v=14 H=           513 score=[0:1 1:1 3:2 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:2 13:1] w=13 o= 13 strict=  2 ties= 89 tri=  0 scc= 1 tie%=0.978
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  5 strict= 68 ties= 23 tri=  0 scc= 1 tie%=0.253
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 12 strict= 55 ties= 36 tri=  0 scc= 1 tie%=0.396
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+
+[n=18 lpd ladder skip 8]
+  class=positive_gap gap/th=1/176 unprotected=176 speeds=(1, 9, 18, 27, 36, 45, 54, 63, 81, 90, 99, 108, 117, 126, 135, 144, 153)
+  time=unit      t=          1/18 origin_clear=      0 bracket=      0 safe= 3 lonely= 1 max_gap/th=      9 close_pairs= 64 danger/th= 64.00
+    s506_phase_half                    v=18 H=             - score=[0:1 2:2 4:2 6:2 8:2 9:2 11:2 13:2 15:2 17:1] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  8 strict= 89 ties= 64 tri=  0 scc= 1 tie%=0.418
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  7 strict=124 ties= 29 tri=  0 scc= 1 tie%=0.190
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 16 strict= 89 ties= 64 tri=  0 scc= 1 tie%=0.418
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  8 strict=129 ties= 24 tri=  0 scc= 1 tie%=0.157
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=144 ties=  9 tri=  0 scc= 1 tie%=0.059
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=130 ties= 23 tri=  0 scc= 1 tie%=0.150
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 89 ties= 64 tri=  0 scc= 1 tie%=0.418
+  time=half-unit t=          1/36 origin_clear=      0 bracket=      0 safe= 4 lonely= 0 max_gap/th=    9/2 close_pairs= 32 danger/th= 30.00
+    s506_phase_half                    v=18 H=             - score=[4:1 5:1 6:3 7:1 8:4 9:1 10:3 11:1 12:2 13:1] w= 9 o= 13 strict= 89 ties= 64 tri= 16 scc=18 tie%=0.418
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 2:2 3:1 4:1 6:2 7:1 8:1 9:1 10:1 11:1 13:3 14:1 ...] w=17 o= 17 strict=  4 ties=149 tri=  0 scc= 1 tie%=0.974
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=109 ties= 44 tri=  0 scc= 1 tie%=0.288
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  7 strict=124 ties= 29 tri=  0 scc= 1 tie%=0.190
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 16 strict= 89 ties= 64 tri=  0 scc= 1 tie%=0.418
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=137 ties= 16 tri=  0 scc= 1 tie%=0.105
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  3 strict=125 ties= 28 tri=  0 scc= 1 tie%=0.183
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=125 ties= 28 tri=  0 scc= 1 tie%=0.183
+  time=gap-mid   t=    3991/57024 origin_clear=3991/3168 bracket=3991/3168 safe= 9 lonely= 1 max_gap/th=699/352 close_pairs=  9 danger/th=  3.21
+    s506_phase_half                    v=18 H=             - score=[8:9 9:9] w= 1 o=  8 strict=153 ties=  0 tri=240 scc=18 tie%=0.000
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  9 ties=144 tri=  0 scc= 1 tie%=0.941
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  0 strict= 61 ties= 92 tri=  0 scc= 1 tie%=0.601
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  7 strict=124 ties= 29 tri=  0 scc= 1 tie%=0.190
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 16 strict= 89 ties= 64 tri=  0 scc= 1 tie%=0.418
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  0 strict= 61 ties= 92 tri=  0 scc= 1 tie%=0.601
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  0 strict=110 ties= 43 tri=  0 scc= 1 tie%=0.281
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  0 strict=106 ties= 47 tri=  0 scc= 1 tie%=0.307
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  0 strict=109 ties= 44 tri=  0 scc= 1 tie%=0.288
+  time=boundary  t=        11/162 origin_clear=      1 bracket=      1 safe=16 lonely=15 max_gap/th=      2 close_pairs=  2 danger/th=  1.00
+    s506_phase_half                    v=18 H=             - score=[7:2 8:7 9:7 10:2] w= 3 o= 10 strict=145 ties=  8 tri=173 scc=18 tie%=0.052
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 12:2 ...] w=17 o= 17 strict=  2 ties=151 tri=  0 scc= 1 tie%=0.987
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  7 strict=124 ties= 29 tri=  0 scc= 1 tie%=0.190
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 16 strict= 89 ties= 64 tri=  0 scc= 1 tie%=0.418
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+
+[n=14 gate ladder skip 6]
+  class=positive_gap gap/th=5/1848 unprotected=168 speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  time=unit      t=          1/14 origin_clear=      0 bracket=      0 safe= 2 lonely= 1 max_gap/th=     13 close_pairs= 78 danger/th= 78.00
+    s506_phase_half                    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+    s506_lrc_close_sector              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  9 strict= 69 ties= 22 tri=  0 scc= 1 tie%=0.242
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  9 strict= 69 ties= 22 tri=  0 scc= 1 tie%=0.242
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 87 ties=  4 tri=  0 scc= 1 tie%=0.044
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 83 ties=  8 tri=  0 scc= 1 tie%=0.088
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+  time=half-unit t=          1/28 origin_clear=      0 bracket=      0 safe= 2 lonely= 0 max_gap/th=      7 close_pairs= 42 danger/th= 39.00
+    s506_phase_half                    v=14 H=           921 score=[0:1 2:2 4:2 6:2 7:2 9:2 11:2 13:1] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+    s506_lrc_close_sector              v=14 H=           921 score=[0:1 2:2 4:2 6:2 7:2 9:2 11:2 13:1] w=13 o= 13 strict=  6 ties= 85 tri=  0 scc= 1 tie%=0.934
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  6 strict= 55 ties= 36 tri=  0 scc= 1 tie%=0.396
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  9 strict= 69 ties= 22 tri=  0 scc= 1 tie%=0.242
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  6 strict= 77 ties= 14 tri=  0 scc= 1 tie%=0.154
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 83 ties=  8 tri=  0 scc= 1 tie%=0.088
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 74 ties= 17 tri=  0 scc= 1 tie%=0.187
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  6 strict= 55 ties= 36 tri=  0 scc= 1 tie%=0.396
+  time=gap-mid   t=    4339/51744 origin_clear=4339/3696 bracket=4339/3696 safe= 7 lonely= 1 max_gap/th=481/264 close_pairs=  7 danger/th=  3.26
+    s506_phase_half                    v=14 H=      17826951 score=[5:3 6:4 7:4 8:3] w= 3 o=  7 strict= 91 ties=  0 tri=106 scc=14 tie%=0.000
+    s506_lrc_close_sector              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  7 ties= 84 tri=  0 scc= 1 tie%=0.923
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  0 strict= 45 ties= 46 tri=  0 scc= 1 tie%=0.505
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  9 strict= 69 ties= 22 tri=  0 scc= 1 tie%=0.242
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  0 strict= 45 ties= 46 tri=  0 scc= 1 tie%=0.505
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  0 strict= 70 ties= 21 tri=  0 scc= 1 tie%=0.231
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  0 strict= 70 ties= 21 tri=  0 scc= 1 tie%=0.231
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  0 strict= 45 ties= 46 tri=  0 scc= 1 tie%=0.505
+  time=boundary  t=        15/196 origin_clear=      1 bracket=      1 safe=12 lonely=11 max_gap/th=      2 close_pairs=  2 danger/th=  1.00
+    s506_phase_half                    v=14 H=      24104937 score=[6:7 7:7] w= 1 o=  7 strict= 85 ties=  6 tri= 72 scc=14 tie%=0.066
+    s506_lrc_close_sector              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  2 ties= 89 tri=  0 scc= 1 tie%=0.978
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  9 strict= 69 ties= 22 tri=  0 scc= 1 tie%=0.242
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+
+[n=18 gate ladder skip 8]
+  class=positive_gap gap/th=1/352 unprotected=352 speeds=(1, 18, 36, 54, 72, 90, 108, 126, 162, 180, 198, 216, 234, 252, 270, 288, 306)
+  time=unit      t=          1/18 origin_clear=      0 bracket=      0 safe= 2 lonely= 1 max_gap/th=     17 close_pairs=136 danger/th=136.00
+    s506_phase_half                    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=149 ties=  4 tri=  0 scc= 1 tie%=0.026
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=137 ties= 16 tri=  0 scc= 1 tie%=0.105
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+  time=half-unit t=          1/36 origin_clear=      0 bracket=      0 safe= 2 lonely= 0 max_gap/th=      9 close_pairs= 72 danger/th= 68.00
+    s506_phase_half                    v=18 H=             - score=[0:1 2:2 4:2 6:2 8:2 9:2 11:2 13:2 15:2 17:1] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 2:2 4:2 6:2 8:2 9:2 11:2 13:2 15:2 17:1] w=17 o= 17 strict=  8 ties=145 tri=  0 scc= 1 tie%=0.948
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  8 strict= 89 ties= 64 tri=  0 scc= 1 tie%=0.418
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  8 strict=129 ties= 24 tri=  0 scc= 1 tie%=0.157
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=147 ties=  6 tri=  0 scc= 1 tie%=0.039
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=125 ties= 28 tri=  0 scc= 1 tie%=0.183
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  8 strict= 89 ties= 64 tri=  0 scc= 1 tie%=0.418
+  time=gap-mid   t=   8681/114048 origin_clear=  41/32 bracket=  41/32 safe= 9 lonely= 2 max_gap/th=699/352 close_pairs= 10 danger/th=  3.66
+    s506_phase_half                    v=18 H=             - score=[7:2 8:7 9:7 10:2] w= 3 o= 10 strict=153 ties=  0 tri=236 scc=18 tie%=0.000
+    s506_lrc_close_sector              v=18 H=             - score=[1:2 3:1 4:1 5:1 6:1 8:4 9:1 10:1 11:1 12:1 13:1 14:1 ...] w=16 o= 17 strict= 10 ties=143 tri=  0 scc= 1 tie%=0.935
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict= 86 ties= 67 tri=  0 scc= 1 tie%=0.438
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict= 86 ties= 67 tri=  0 scc= 1 tie%=0.438
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict= 86 ties= 67 tri=  0 scc= 1 tie%=0.438
+  time=boundary  t=        19/324 origin_clear=      1 bracket=      1 safe=16 lonely=15 max_gap/th=      2 close_pairs=  2 danger/th=  1.00
+    s506_phase_half                    v=18 H=             - score=[8:9 9:9] w= 1 o=  9 strict=145 ties=  8 tri=170 scc=18 tie%=0.052
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  2 ties=151 tri=  0 scc= 1 tie%=0.987
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+
+[n=14 double-gate ladder skip 6]
+  class=positive_gap gap/th=5/3696 unprotected=336 speeds=(1, 28, 56, 84, 112, 140, 196, 224, 252, 280, 308, 336, 364)
+  time=unit      t=          1/14 origin_clear=      0 bracket=      0 safe= 2 lonely= 1 max_gap/th=     13 close_pairs= 78 danger/th= 78.00
+    s506_phase_half                    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+    s506_lrc_close_sector              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  9 strict= 69 ties= 22 tri=  0 scc= 1 tie%=0.242
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  9 strict= 69 ties= 22 tri=  0 scc= 1 tie%=0.242
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 87 ties=  4 tri=  0 scc= 1 tie%=0.044
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 83 ties=  8 tri=  0 scc= 1 tie%=0.088
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+  time=half-unit t=          1/28 origin_clear=      0 bracket=      0 safe= 1 lonely= 0 max_gap/th=   27/2 close_pairs= 91 danger/th= 84.50
+    s506_phase_half                    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+    s506_lrc_close_sector              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  9 strict= 69 ties= 22 tri=  0 scc= 1 tie%=0.242
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  9 strict= 69 ties= 22 tri=  0 scc= 1 tie%=0.242
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 87 ties=  4 tri=  0 scc= 1 tie%=0.044
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  1 strict= 82 ties=  9 tri=  0 scc= 1 tie%=0.099
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1 tie%=0.857
+  time=gap-mid   t=   8035/103488 origin_clear=8035/7392 bracket=8035/7392 safe= 7 lonely= 1 max_gap/th=481/264 close_pairs=  7 danger/th=  3.18
+    s506_phase_half                    v=14 H=      17826951 score=[5:3 6:4 7:4 8:3] w= 3 o=  7 strict= 91 ties=  0 tri=106 scc=14 tie%=0.000
+    s506_lrc_close_sector              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  7 ties= 84 tri=  0 scc= 1 tie%=0.923
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  0 strict= 45 ties= 46 tri=  0 scc= 1 tie%=0.505
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  9 strict= 69 ties= 22 tri=  0 scc= 1 tie%=0.242
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  0 strict= 45 ties= 46 tri=  0 scc= 1 tie%=0.505
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  0 strict= 70 ties= 21 tri=  0 scc= 1 tie%=0.231
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  0 strict= 70 ties= 21 tri=  0 scc= 1 tie%=0.231
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  0 strict= 45 ties= 46 tri=  0 scc= 1 tie%=0.505
+  time=boundary  t=        29/392 origin_clear=      1 bracket=      1 safe=12 lonely=11 max_gap/th=      2 close_pairs=  2 danger/th=  1.00
+    s506_phase_half                    v=14 H=      24104937 score=[6:7 7:7] w= 1 o=  7 strict= 85 ties=  6 tri= 72 scc=14 tie%=0.066
+    s506_lrc_close_sector              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  2 ties= 89 tri=  0 scc= 1 tie%=0.978
+    incident_danger_sum                v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    dyadic_branch_pressure             v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o=  9 strict= 69 ties= 22 tri=  0 scc= 1 tie%=0.242
+    product_sum_interface              v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    additive_danger_interface          v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    multiplicative_danger_interface    v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+    product_sum_danger                 v=14 H=             1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=13 o= 10 strict= 36 ties= 55 tri=  0 scc= 1 tie%=0.604
+
+[n=18 double-gate ladder skip 8]
+  class=positive_gap gap/th=1/704 unprotected=704 speeds=(1, 36, 72, 108, 144, 180, 216, 252, 324, 360, 396, 432, 468, 504, 540, 576, 612)
+  time=unit      t=          1/18 origin_clear=      0 bracket=      0 safe= 2 lonely= 1 max_gap/th=     17 close_pairs=136 danger/th=136.00
+    s506_phase_half                    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=149 ties=  4 tri=  0 scc= 1 tie%=0.026
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=137 ties= 16 tri=  0 scc= 1 tie%=0.105
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+  time=half-unit t=          1/36 origin_clear=      0 bracket=      0 safe= 1 lonely= 0 max_gap/th=   35/2 close_pairs=153 danger/th=144.50
+    s506_phase_half                    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=149 ties=  4 tri=  0 scc= 1 tie%=0.026
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=136 ties= 17 tri=  0 scc= 1 tie%=0.111
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1 tie%=0.889
+  time=gap-mid   t=  15017/228096 origin_clear=15017/12672 bracket=15017/12672 safe= 9 lonely= 2 max_gap/th=699/352 close_pairs= 10 danger/th=  3.47
+    s506_phase_half                    v=18 H=             - score=[7:2 8:7 9:7 10:2] w= 3 o= 10 strict=153 ties=  0 tri=236 scc=18 tie%=0.000
+    s506_lrc_close_sector              v=18 H=             - score=[1:2 3:1 4:1 5:1 6:1 7:1 8:3 9:1 10:1 11:1 12:1 13:1 ...] w=16 o= 17 strict= 10 ties=143 tri=  0 scc= 1 tie%=0.935
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict= 86 ties= 67 tri=  0 scc= 1 tie%=0.438
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict= 86 ties= 67 tri=  0 scc= 1 tie%=0.438
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o=  1 strict= 86 ties= 67 tri=  0 scc= 1 tie%=0.438
+  time=boundary  t=        37/648 origin_clear=      1 bracket=      1 safe=16 lonely=15 max_gap/th=      2 close_pairs=  2 danger/th=  1.00
+    s506_phase_half                    v=18 H=             - score=[8:9 9:9] w= 1 o=  9 strict=145 ties=  8 tri=170 scc=18 tie%=0.052
+    s506_lrc_close_sector              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  2 ties=151 tri=  0 scc= 1 tie%=0.987
+    incident_danger_sum                v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    dyadic_branch_pressure             v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 12 strict=121 ties= 32 tri=  0 scc= 1 tie%=0.209
+    product_sum_interface              v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1 tie%=1.000
+    dyadic_danger_curvature            v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    additive_danger_interface          v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    multiplicative_danger_interface    v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+    product_sum_danger                 v=18 H=             - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=17 o= 14 strict= 48 ties=105 tri=  0 scc= 1 tie%=0.686
+
+A000568, x+2/x*2, AND OPERATION INTERFACES
+========================================================================================================
+A000568 terms from the odd-partition Burnside formula:
+  1, 1, 2, 4, 12, 56, 456, 6880, 191536, 9733056
+Only odd cycle partitions contribute; this is the quotient-level analogue
+of an odd-core survival rule for complete orientations.
+
+2-adic operation grid up to 48:
+  horizontal move: odd core x -> x+2
+  vertical move:   branch height x -> 2x
+  odd core  1: 1 -> 2 -> 4 -> 8 -> 16 -> 32
+  odd core  3: 3 -> 6 -> 12 -> 24 -> 48
+  odd core  5: 5 -> 10 -> 20 -> 40
+  odd core  7: 7 -> 14 -> 28
+  odd core  9: 9 -> 18 -> 36
+  odd core 11: 11 -> 22 -> 44
+  odd core 13: 13 -> 26
+  odd core 15: 15 -> 30
+  odd core 17: 17 -> 34
+  odd core 19: 19 -> 38
+  odd core 21: 21 -> 42
+  odd core 23: 23 -> 46
+
+How the script turns operations into arc criteria:
+  addition: speed equations a+b=c or |a-b|=c give additive-shadow degree.
+  multiplication: divisibility and doubling branches give x*2 pressure.
+  product-sum: (a-1)(b-1)=N-1 gives a critical interface score.
+  hybrid: multiply each static operation label by current 1/N danger.
+
+Two-factor product-sum landmarks:
+  N=14: two-factor (2,14)->28; seed 1^11 + 2 2 5
+  N=18: two-factor (2,18)->36; seed 1^15 + 2 3 4
+  N=21: two-factor (2,21)->42, (3,11)->33, (5,6)->30; seed 1^18 + 3 3 3
+  N=24: two-factor (2,24)->48; seed 1^22 + 2 24
+  N=30: two-factor (2,30)->60; seed 1^26 + 2 2 3 3
+
+CRITERIA-CHOICE TOURNAMENT
+========================================================================================================
+Vertices are arc criteria. Observable is a six-attribute profile:
+signal, threshold fidelity, operation-grid content, dynamic motion, novelty,
+and lower projection risk. Switch is majority vote; tie path is list order.
+  H=1 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1} c3=0 largest_scc=1
+  top criteria by profile:
+    additive_danger_interface          profile=37 t_score=19 sig=9 thr=5 op=5 dyn=5 risk=1
+    dyadic_danger_curvature            profile=36 t_score=18 sig=8 thr=5 op=5 dyn=5 risk=1
+    multiplicative_danger_interface    profile=36 t_score=17 sig=8 thr=5 op=5 dyn=5 risk=1
+    product_sum_danger                 profile=36 t_score=16 sig=8 thr=5 op=5 dyn=5 risk=1
+    odd_chain_danger                   profile=33 t_score=15 sig=5 thr=5 op=5 dyn=5 risk=1
+    s506_lrc_close_sector              profile=25 t_score=14 sig=10 thr=5 op=1 dyn=5 risk=2
+    s506_safe_deficit                  profile=23 t_score=13 sig=8 thr=5 op=1 dyn=5 risk=2
+    local_two_guard                    profile=23 t_score=12 sig=8 thr=5 op=1 dyn=5 risk=2
+    incident_danger_sum                profile=23 t_score=11 sig=8 thr=5 op=1 dyn=5 risk=2
+    s506_threshold_deficit_pressure    profile=22 t_score=10 sig=7 thr=5 op=1 dyn=5 risk=2
+
+SYNTHESIS
+========================================================================================================
+Most useful arc criteria in this audit:
+  s506_lrc_close_sector: tie_rate->close_pair_count, mean_abs_spearman=1.000, ties=0.689, scc=0.174
+  additive_danger_interface: tie_rate->safe_gap_count, mean_abs_spearman=0.882, ties=0.121, scc=0.174
+  product_sum_danger: tie_rate->safe_gap_count, mean_abs_spearman=0.840, ties=0.121, scc=0.174
+  s506_local_moat_min: origin_score_norm->lonely_vertices, mean_abs_spearman=0.837, ties=0.491, scc=0.174
+  local_two_guard: origin_score_norm->lonely_vertices, mean_abs_spearman=0.837, ties=0.491, scc=0.174
+  incident_danger_sum: origin_score_norm->max_gap, mean_abs_spearman=0.815, ties=0.268, scc=0.174
+  s506_phase_half: H->max_gap, mean_abs_spearman=0.798, ties=0.000, scc=0.881
+
+Interpretation:
+  1. Static x+2/x*2 labels are not time-loneliness meters by themselves.
+     Their job is to name the operation-grid branch of each obstruction.
+  2. Once those labels weight current pair danger, they become moving
+     loneliness coordinates: dyadic, additive, multiplicative, and
+     product-sum danger are all different projections of the same fiber.
+  3. A000568 supplies the quotient/base analogy: complete orientations are
+     classified after forgetting labels, while LRC needs the labelled
+     operation-grid and endpoint-pressure fiber above that base.
+  4. Addition behaves like horizontal transport among odd-core cells;
+     multiplication behaves like vertical branch refinement; product-sum
+     equations are the interfaces where arity/addition is traded for
+     multiplicative factor structure.
+
+Candidate loneliness-related metric vector:
+  phase_H, lrc_close_tie_rate, incident_danger_origin_score,
+  dyadic_danger_score_hist, additive_danger_score_hist,
+  multiplicative_danger_score_hist, product_sum_danger_score_hist,
+  strict pressure SCCs, endpoint-labelled origin bracket.
+
+Conjectural next move: project hard rows to the A000568 base, but carry this
+operation-weighted danger vector as fiber data; mixed fibers are repair
+opportunities and all-forbidden fibers are the counterexample-shaped object.
