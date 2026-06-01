@@ -17,7 +17,9 @@ related:
   - HYP-2035
   - HYP-2037
   - HYP-2038
+  - HYP-2039
   - THM-369
+  - THM-390
 ---
 
 # HYP-2036: p-adic zero-branch covers form a tree trienerment for LRC sieve channels
@@ -90,6 +92,38 @@ the THM-369 unit witness, but the local intervals around that unit point are
 nested stars and peel to empty.  The zero branch is a gate/debt carrier, not a
 local counterexample core.  In n=18, this holds even while the `n*=9` modular
 full-support zero-flow counts remain enormous (`~1.88e14` to `~2.50e14`).
+
+**Formalized sublayer.** THM-390 proves the exact sieve semantics behind this
+coordinate: an empty `q<n` node gives the open witness `t=1/q`, an empty
+`q=n` node gives the compactified wall witness `t=1/n`, and the AP row
+`{1,...,n-1}` has a unique minimum open cover core
+
+```text
+U_n = {u in {1,...,n-1} : 2u >= n}
+```
+
+of size `floor(n/2)`.  The even-denominator scans in this hypothesis are the
+special case where the proven AP core has size `n/2` and singleton carriers
+`n/2,...,n-1`.
+
+This leaves the genuinely computational part of HYP-2036 intact: whether the
+zero-mixed tree-trienerment fibers persist beyond the bounded scan, and whether
+the observed `n/2` minimum-cover law extends from AP to every open survivor in
+the tested even boxes for structural rather than accidental reasons.
+
+**Entropy integration.** Incoming HYP-2037/HYP-2038 add a complementary
+entropy reading: AP/regular rows are the high-entropy or critical boundary
+cases, while THM-390 identifies the exact finite denominator leaves that force
+the AP wall core.  Thus the p-adic entropy layer should distinguish total
+channel spread from the local zero-branch occupancy proved here: entropy can
+say the row is spread or critical, but the `z_q=0` obligation is the exact
+sieve gate that creates an explicit witness.
+
+**Defect-transport integration.** HYP-2039 reframes LRC as transporting the
+guaranteed large hole to the observer.  In this denominator quotient, an empty
+zero branch `z_q=0` is a pinned transport success: the guaranteed hole is
+already at the observer at `t=1/q`.  Covered branches are the cases where the
+hole must be moved by endpoint descendants, owners, or cross-branch coupling.
 
 **Interpretation.** HYP-2035 says the coarse channel rank is `omega(n/2)`.
 HYP-2036 adds a cover-core layer below that rank:

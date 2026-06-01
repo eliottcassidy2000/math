@@ -174,6 +174,47 @@ zero branch, then leaves exactly the wall branch `q=n` empty.  This matches the
 symbolic-dynamics compactification story: the open word has no target, but the
 wall supplies one.
 
+## Formalization: THM-390
+
+The proved core is now split off as THM-390.  The theorem says:
+
+```text
+empty q<n  =>  t=1/q is an open lonely witness
+empty q=n  =>  t=1/n is a compactified wall witness
+AP          =>  covers every q<n and misses only q=n
+AP core     =>  unique minimum open cover U_n={u: 2u >= n}, size floor(n/2)
+```
+
+Thus the tree-cover scan is using proof-obligation vertices, not just a
+decorative p-adic metaphor.  The quotient preserves exactly the explicit
+denominator-witness part of LRC and records the singleton carriers forced by
+the AP wall.
+
+The still-open part is sharper after this separation: the zero-mixed
+tree-trienerment fingerprint fibers and the all-open-survivors `n/2` cover law
+are computational phenomena beyond the AP cover-core theorem.
+
+New incoming entropy work (HYP-2037/HYP-2038) fits here without replacing the
+cover-core object.  Entropy reads AP/regular rows as high-spread or critical
+boundary states; THM-390 identifies the forced finite leaves on that boundary.
+The resulting split is useful:
+
+```text
+channel/tree entropy  = spread or criticality of the row
+zero-branch mass z_q  = exact local sieve gate at denominator q
+singleton AP leaves   = forced wall support where entropy collapses to the
+                        finite critical set
+```
+
+So the entropy attack should use `z_q=0` and singleton carriers as local
+certificates, not replace them with a scalar spread statistic.
+
+HYP-2039's defect-transport frame says the large hole always exists and the
+problem is moving it to the observer.  The zero-branch theorem gives the pinned
+transport cases: when `z_q=0`, the observer hole is already present at
+`t=1/q`; when every branch is covered, transport has to pass through the
+labelled cover-core machinery rather than a bare spread argument.
+
 ## Relation To The Existing Threads
 
 HYP-2032/HYP-2035 identify the p-adic tree as the arithmetic metric and channel

@@ -39,6 +39,14 @@
 **OTHER TREES:** p-adic Bruhat-Tits entropy (S541) = channel spread (S534); sieve speeds have 0 level-1 entropy; the 0-BRANCH occupancy is the sieve-loneliness gate (t=1/p lonely iff 0-branch empty). Iso-class WALK entropy = menu mixing over 2Fib(n-2).
 **SYNTHESIS:** three tree entropies all measure spread/mixing; arithmetic regularity = HIGH entropy on each; S_H cleanest (tree-additive, max at the LRC-tight regular polygon). LRC = walk reaching a high-S_H config.
 **Artifacts:** lrc_tree_entropy_attack_s543.py (+.out); reflection lrc-the-H-entropy-is-tree-additive-and-maximal-at-the-tight-witness-s543o.md; HYP-2037. **Handoff:** prove S_H max=log2 H_regular over realizable tournaments; mean-S_H arithmetic-structure detector; 0-branch p-adic entropy as the exact sieve gate.
+## codex-2026-06-01-S547 - Formalized the LRC p-adic zero-branch/AP cover-core theorem (THM-390)
+
+**Context:** User asked to spend the session formalizing recent novel LRC work.  The freshest frontier was S546/HYP-2036: product p-adic zero-branch obligations `q=2..n`, tree-trienerment fingerprints, and AP as an open survivor with compact wall debt.
+**Formalization:** Added THM-390.  It proves the exact denominator-obligation semantics: if `z_q(V)=0` for `q<n`, then `t=1/q` is an open lonely witness; if `z_n(V)=0`, then `t=1/n` is a compactified wall witness.  For the AP row `{1,...,n-1}`, all open obligations are covered and only `q=n` is empty.  The unique minimum AP open cover is `U_n={u: 2u>=n}`, with size `floor(n/2)`; for even `n`, this is exactly the S546 singleton-carrier block `n/2,...,n-1`.
+**Separation:** THM-390 proves the sieve semantics and AP cover core.  HYP-2036 remains the stronger computational hypothesis about zero-mixed tree-trienerment fibers and the observed `n/2` cover law for every bounded open survivor in the even scans.
+**Incoming integration:** During close-out, origin/main added HYP-2037/HYP-2038 on tree entropy/order parameters.  The connection is now recorded: entropy detects AP/regular rows as spread/critical states, while THM-390 supplies the exact local zero-branch gate and forced AP singleton leaves.
+**Second incoming integration:** A later rebase added HYP-2039's defect-transport frame.  THM-390 is the pinned transport subcase: `z_q=0` puts the large hole at the observer at `t=1/q`; covered branches are where transport machinery is still needed.
+**Artifacts:** `01-canon/theorems/THM-390-lrc-padic-zero-branch-cover-core.md`; updated HYP-2036 and its S546 reflection.
 
 ## oracle-2026-06-01-S542 - The p-adic tree unifies LRC: channels=branches, apex=root-branch, moat=boundary; channel rank=omega(n/2) (HYP-2035)
 
