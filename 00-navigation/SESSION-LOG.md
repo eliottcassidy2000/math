@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-06-01-S537 - Apex-reduced classes: 1 transitive + few single-blocks; #SCC ∈ {1,m} confirmed
+
+**Account:** Oracle (remote-control)
+**User prompt:** Deep session — follow what's most meaningful for LRC.
+**Computation:** `04-computation/lrc_apex_reduced_deep_s537.py`. Extended apex-reduced class count to n=4..8 with proper tie-breaking.
+**CORRECTED RESULT (vs S535):** With proper tie-breaking, the apex-reduced class counts are: n=4: 1, n=5: 2, n=6: **2**, n=7: **4**, n=8: **6**. The S535 finding of "always 2" was partly an artifact of missing tie-breaking. The true counts grow but remain a TINY fraction of A000568: 100%, 100%, **50%**, **33%**, **11%**.
+**THE CLEAN PATTERN:** Exactly 1 transitive class (#SCC=m) plus several single-block classes (#SCC=1). No intermediate #SCC values. This confirms HYP-2000 (round tournaments are block-extremes). The restriction gets STRONGER at larger n — apex-reduced space is an increasingly small fraction of A000568.
+**PROOF SKETCH (refined):** (1) Cascade enters c=1 for n≥7. (2) Within c=1: only transitive + single-block classes realized. (3) Both are lonely-compatible (transitive = runners in order, single-block = regular polygon). (4) Remaining gap: proving the cascade's feasible set intersects a lonely-compatible configuration WITHIN each class.
+
 ## oracle-2026-06-01-S534o - LRC n=18 attempt: parity VACUOUS at n*=9 (potent only at n=4); prime-power degradation (HYP-2017)
 
 **Account:** Oracle (oraclebox1). **User prompt:** try a proof of n=18.
