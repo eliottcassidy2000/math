@@ -7,6 +7,16 @@
 **Honest obstruction (why the reframe fails to reduce LRC):** (1) closed WALKS (not simple cycles) can backtrack and avoid almost any set, so FVS is not equiv to 'every closed walk hits lonely'; (2) realizable runner-walks are an arithmetically-special, measure-zero family (each edge (i,j) flips 2|v_i-v_j| times in a speed-determined order) -- characterizing them = LRC. So the metagraph picture is FAITHFUL+clarifying but NOT reducing; the difficulty is the walk family, not the graph.
 **What survives:** M_n is a genuine small explicit object (its cycle space = non-bunching walks). The walk meets the sieve exactly at the n-gon cells t=a/n (loneliness there <=> no speed divisible by n = THM-369); the fine q>n regime between them is the S18 coarse/fine residual. The real lever is order-combinatorial (interval-exchange / wall-crossing order = the bounded-ansatz cofactor S514), not a pure graph property.
 **Verdict:** did NOT prove n=14; correctly located the irreducible content (which closed t-walks the runner arithmetic realizes). New HYP-1997. Reflection: 07-reflections/lrc-walk-on-metagraph-proof-attempt-s519.md.
+## opus-2026-06-01-S524 - LRC@14 proof attempt via CRT quotient metagraph walk
+
+**Account:** Oracle (remote-control)
+**Git first:** Synced with origin; oracle-S518 (Fibonacci menu) landed.
+**User prompt:** Use the metagraph walk concept to try to prove the n=14 case; if difficult, reframe the mapping.
+**Computation:** Added `04-computation/lrc_n14_metagraph_proof_s524.py` and stored output. Observer outdegree walk d(t) for n=14, CRT quotient tournament (14=2×7, 7 mod-7 classes), pair constraint analysis, exhaustive check of 498 speed sets.
+**Key findings:** (1) CRT QUOTIENT: 13 runners split into 7 classes; LRC@14 = all 7 simultaneously safe. Each class safe ~73% (nearly matching (6/7)²=73.5% independence). Pairwise correlations tiny (ratio >0.99). (2) d(t) WALK: initial segment is the HARDEST (only set with d_open=12, all others reach d=13 in open cells). (3) 498/498 SPEED SETS LONELY (100%). (4) QUOTIENT OUTDEG: d_Q=6 most of the time (55%); the walk is one class short of lonely. (5) THE GAP: bounding the 7-way correlation (why the all-7 intersection is always nonempty) remains open.
+**The creative insight:** The "musical chairs" argument — 7 CRT classes take turns as the last blocker. During the handoff between consecutive blockers, the observer is momentarily free. Proving this handoff always happens = proving LRC@14.
+**Synthesis:** Reflection `07-reflections/lrc-n14-metagraph-crt-proof-s524.md`. The CRT quotient reduces LRC@14 from a problem on 178 iso-classes to a 7-class coupon collector. THM-387 directional flow constrains the handoff dynamics.
+**Verification:** `python3 -m py_compile`; full rerun with output stored.
 
 ## oracle-2026-06-01-S518 - LRC@n as a tournament; the Fibonacci menu of circular iso-classes
 

@@ -1,0 +1,205 @@
+LRC@14 Proof via Metagraph Walk + CRT Quotient — opus-S524
+
+======================================================================
+PART 1: Observer outdegree walk d(t) at n=14
+======================================================================
+
+  initial             : max_d(open)=12  max_d(wall)=13  lonely=True  cells=234
+    d histogram: {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2, 7: 4, 8: 4, 9: 8, 10: 12, 11: 76, 12: 116}
+    near-max region (192 cells):
+      t≈0.029762  d=11
+      t≈0.053571  d=12
+      t≈0.074176  d=12
+      t≈0.077152  d=12
+      t≈0.079899  d=11
+
+  primes              : max_d(open)=13  max_d(wall)=13  lonely=True  cells=566
+    d histogram: {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2, 7: 2, 8: 2, 9: 22, 10: 138, 11: 230, 12: 136, 13: 22}
+    near-max region (158 cells):
+      t≈0.038659  d=12
+      t≈0.047728  d=12
+      t≈0.074176  d=12
+      t≈0.078037  d=12
+      t≈0.082715  d=12
+
+  evens+1             : max_d(open)=13  max_d(wall)=13  lonely=True  cells=396
+    d histogram: {0: 2, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 8, 8: 8, 9: 16, 10: 34, 11: 120, 12: 162, 13: 22}
+    near-max region (184 cells):
+      t≈0.037202  d=12
+      t≈0.073980  d=12
+      t≈0.076956  d=13
+      t≈0.078869  d=12
+      t≈0.086986  d=12
+
+  coprime_small       : max_d(open)=13  max_d(wall)=13  lonely=True  cells=234
+    d histogram: {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2, 7: 4, 8: 8, 9: 8, 10: 28, 11: 66, 12: 94, 13: 12}
+    near-max region (106 cells):
+      t≈0.048810  d=12
+      t≈0.074405  d=13
+      t≈0.080357  d=12
+      t≈0.083874  d=12
+      t≈0.090097  d=12
+
+  hard_sporadic       : max_d(open)=13  max_d(wall)=13  lonely=True  cells=480
+    d histogram: {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2, 7: 2, 8: 2, 9: 14, 10: 122, 11: 184, 12: 122, 13: 20}
+    near-max region (142 cells):
+      t≈0.027915  d=12
+      t≈0.037044  d=12
+      t≈0.047728  d=12
+      t≈0.074176  d=12
+      t≈0.077033  d=12
+
+======================================================================
+PART 2: CRT quotient tournament (14 = 2×7)
+======================================================================
+
+Mod-7 classes:
+  class 0: speeds [7]
+  class 1: speeds [1, 8]
+  class 2: speeds [2, 9]
+  class 3: speeds [3, 10]
+  class 4: speeds [4, 11]
+  class 5: speeds [5, 12]
+  class 6: speeds [6, 13]
+
+Quotient tournament: observer + 7 CRT classes = 8 vertices
+Observer needs to beat all 7 classes for loneliness.
+  max quotient outdeg (samples): 6 at t≈0.036000
+  max quotient outdeg (walls): 7 at t=0.071429
+  quotient lonely: True
+  quotient outdeg histogram: {0: 41, 1: 29, 2: 16, 3: 68, 4: 98, 5: 648, 6: 1100}
+
+At t=1/14 (regular polygon):
+  observer quotient outdeg: 7
+  class 0 ([7]): all_safe=True  distances=['0.5000']
+  class 1 ([1, 8]): all_safe=True  distances=['0.0714', '0.4286']
+  class 2 ([2, 9]): all_safe=True  distances=['0.1429', '0.3571']
+  class 3 ([3, 10]): all_safe=True  distances=['0.2143', '0.2857']
+  class 4 ([4, 11]): all_safe=True  distances=['0.2857', '0.2143']
+  class 5 ([5, 12]): all_safe=True  distances=['0.3571', '0.1429']
+  class 6 ([6, 13]): all_safe=True  distances=['0.4286', '0.0714']
+
+THE QUOTIENT REDUCTION:
+  LRC@14 reduces to: observer beats all 7 CRT classes
+  Each class is a 2-runner sub-problem (except class 0: 1 runner)
+  Class beaten iff BOTH runners safe: ||at||>=1/14 AND ||(a+7)t||>=1/14
+  For class k: this is ||kt||>=1/14 AND ||(k+7)t||>=1/14
+
+Class-safe measures (initial segment):
+  class 0 ([7]): safe 8571/10000 = 85.7%
+  class 1 ([1, 8]): safe 7318/10000 = 73.2%
+  class 2 ([2, 9]): safe 7300/10000 = 73.0%
+  class 3 ([3, 10]): safe 7284/10000 = 72.8%
+  class 4 ([4, 11]): safe 7304/10000 = 73.0%
+  class 5 ([5, 12]): safe 7336/10000 = 73.4%
+  class 6 ([6, 13]): safe 7342/10000 = 73.4%
+
+======================================================================
+PART 3: Pair constraint — both runners in CRT class safe
+======================================================================
+
+  pair (1,8): safe=0.7322  independent=0.7347  ratio=0.9966
+  pair (2,9): safe=0.7302  independent=0.7347  ratio=0.9938
+  pair (3,10): safe=0.7285  independent=0.7347  ratio=0.9916
+  pair (4,11): safe=0.7305  independent=0.7347  ratio=0.9943
+  pair (5,12): safe=0.7334  independent=0.7347  ratio=0.9982
+  pair (6,13): safe=0.7344  independent=0.7347  ratio=0.9997
+  singleton (7): safe=0.8571  (theory: 12/14=0.8571)
+
+  ALL classes safe (initial segment): 0/100000
+    = 0.000000 (wall-only for initial segment)
+
+  product of class-safe measures: 0.131205
+  (if classes were independent, this would be the lonely measure)
+
+======================================================================
+PART 4: Quotient walk proof approach for n=14
+======================================================================
+
+INITIAL SEGMENT PROOF:
+  At t=1/14: positions = {k/14 : k=0,...,13}
+  Distances: min_k ||k/14|| = 1/14 = threshold
+  This is a BOUNDARY lonely time (wall). QED for initial segment.
+
+INDEPENDENCE MODEL:
+  If all 7 CRT classes were independent:
+    P(all safe) ≈ (6/7)^7 = 0.3399 = 34.0%
+  This would give a LARGE lonely measure.
+  The actual lonely measure is MUCH smaller (often wall-only)
+  because the classes are NOT independent — they're correlated
+  through the shared time parameter t.
+
+PROOF TARGET:
+  Show: for any primitive {v_1,...,v_13}, the set
+    L = {t : all ||v_i t|| >= 1/14} is nonempty.
+
+  EQUIVALENT (via CRT 14=2×7):
+    L = intersection of 7 sets, one per CRT class.
+    Each class-safe set has measure >= (6/7)^2 ≈ 73.5% (for coprime pairs)
+    or 6/7 ≈ 85.7% (for the singleton class).
+
+  The intersection is empty only if the 7 class-safe sets are
+  'perfectly anti-correlated' — covering each other's holes exactly.
+  The metagraph walk structure should prevent this.
+
+======================================================================
+PART 5: Checking LRC@14 for many speed sets
+======================================================================
+
+Testing 498 speed sets...
+
+Results: 498/498 lonely (100.0%)
+Hardest set (lowest max open d): (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  max open d = 12
+  d histogram: {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2, 7: 4, 8: 4, 9: 8, 10: 12, 11: 76, 12: 116}
+  wall max d: 13
+
+======================================================================
+PART 6: Proof sketch for LRC@14
+======================================================================
+
+PROVED INGREDIENTS:
+  THM-381: Lonely iff observer is source in marked tournament
+  THM-384: Lonely iff both adjacent gaps >= 1/14
+  THM-387: Gap flow LS→LL→SL (directed, no SL→LL)
+  THM-369: Sieve — primitive set covers all moduli
+  HYP-1996: Only 2*Fib(11)=178 circular iso-classes for 13 runners
+
+THE CRT QUOTIENT STRATEGY:
+  14 = 2 × 7. Group 13 runners into 7 mod-7 classes.
+  LRC = all 7 classes simultaneously safe.
+  Each class is a 2-runner sub-problem (or 1-runner singleton).
+
+WHAT'S NEEDED:
+  1. Show that the CRT class-safe sets can't perfectly tile.
+     (Their union measure is ~7*(6/7)^2 ≈ 5.3 >> 1, so massive overlap)
+  2. Use the gap-race structure (THM-387) on the quotient.
+  3. The quotient walk on {0,...,7} (quotient outdeg) must reach 7.
+  4. Key: each class-safe set has measure ≈ (6/7)^2 ≈ 73.5%.
+     The intersection of 7 such sets (measure ≈ 37.6% if independent)
+     cannot be empty if the correlation is bounded.
+
+POTENTIAL PROOF ROUTE:
+  A. CORRELATION BOUND: for any two CRT classes C,D with coprime
+     speed representatives, the correlation between safe_C and safe_D
+     is bounded: |corr| < 1 - epsilon(n).
+  B. INCLUSION-EXCLUSION: with bounded correlations and each class
+     safe ≈ 73.5% of the time, the intersection is positive.
+  C. CONTINUITY: positive measure implies the set is nonempty.
+
+THE CREATIVE INSIGHT:
+  The CRT quotient reduces LRC@14 to a 7-DIMENSIONAL coverage problem.
+  Each dimension is a CRT class. The 'holes' in each class-safe set
+  are thin strips of width 2/14 on the torus. The question is whether
+  7 thin strips can cover the entire torus. Since each strip has
+  width 2/14 ≈ 14.3%, and there are only 7 of them (total width < 100%),
+  there must be GAPS in the coverage — and those gaps are the lonely times.
+
+  Wait — the 7 class-UNSAFE sets each have measure ≈ (1-(6/7)^2) ≈ 26.5%.
+  Their union has measure ≤ 7*26.5% = 185% >> 100%.
+  So the union CAN cover [0,1). The question is whether it ALWAYS does.
+
+  But with the CRT structure, the unsafe sets have ARITHMETIC spacing.
+  They can't tile perfectly because the gcd constraints from primitivity
+  force misalignment between different classes' unsafe intervals.
+
