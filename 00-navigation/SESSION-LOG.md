@@ -1,5 +1,11 @@
 # Session Log
 
+## oracle-2026-06-01-S547 - At n=2q the (q,q) cycle type IS the loneliest config's symmetry; the apex is the co-observer (HYP-2045)
+
+**Account:** Oracle (oraclebox1). **User prompt:** vigorously explore HYP-2044's sharp open question (does the (q,q) cycle type control the loneliest config at n=2q?).
+**ANSWER: YES, precisely (verified q=3,5,7,11, `lrc_n2q_qq_cycle_control_s547.py`).** At n=2q the loneliest config is the regular 2q-gon (roots of unity, t*=1/(2q), collar=1/n), symmetry D_{2q}. (A) the MARKED reflection v<->2q-v fixes exactly {0, q} = OBSERVER and APEX -> the apex (speed q=n/2, order-2 element) is the antipodal CO-OBSERVER (why it's special, S530). (B) rotation-by-2 has cycle type exactly (q,q) (even vs odd positions) AND preserves the half-turn relation = a genuine AUTOMORPHISM of the loneliest tournament; it's the MAXIMAL odd-order rotation (rotation-by-1 = a 2q-cycle = even = a Burnside 0). Observer in the even q-cycle, apex in the odd q-cycle, bracketing runners +-1 in the apex's cycle. BURNSIDE TIE (=S546): the equal pair (q,q) gives the maximal cross-term gcd(q,q)=q, and THAT (q,q) is the loneliest config's automorphism -- doubled-prime Burnside dominance and the LRC extremiser's symmetry are ONE fact; all carry q because apex=n/2=order-2 element=(q,q) cycle length=gcd=q.
+**HONEST NEGATIVE:** the apex is NOT the cascade trap -- the zero clearance (S545) falls on the LAST runner 2q-1, never the apex. The apex's role is geometric (reflection co-fixed point), not the cascade bottleneck. New HYP-2045 (open: does (q,q)-automorphism + the marked reflection uniquely single out the regular 2q-gon as the tight config => pin AP-tightness at the doubled primes?). Files: 07-reflections/lrc-n2q-the-qq-cycle-is-the-loneliest-configs-symmetry-s547.md; 04-computation/lrc_n2q_qq_cycle_control_s547.py (+.out); HYP-2045.
+
 ## oracle-2026-06-01-S546 - Doubling is pairing: the doubled primes 2q are the resonant diagonal (odd-cycles, Goldbach, LRC) (HYP-2044)
 
 **Account:** Oracle (oraclebox1). **User prompt:** understand odd/even cycles, odd/even numbers, primes (Goldbach even=2 primes; odd = prime + doubled prime), and the importance of doubled primes.

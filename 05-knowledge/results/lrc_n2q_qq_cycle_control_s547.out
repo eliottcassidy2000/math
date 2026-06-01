@@ -1,0 +1,35 @@
+n=2q doubled-prime: does the (q,q) cycle type control the loneliest config? (oracle-S547)
+
+=== n=6=2*3: loneliest t*=1/6, collar=1/6 (=1/n? True); apex speed=n/2=3 ===
+  loneliest config = regular 6-gon (roots of unity)? True
+  (A) reflection v<->6-v fixed points = [0, 3]  (= observer 0 and APEX 3: the apex is the co-observer)
+  (B) rotation-by-2 cycle type = (3, 3) (== (q,q)=(3,3)? True); observer 0 in EVEN q-cycle, apex 3 in ODD q-cycle
+      rotation-by-2 preserves the half-turn relation (an automorphism)? True
+      observer's nearest runners (bracketing) = positions [1, 5], parities ['ODD', 'ODD']
+  (C) cascade trap (first zero clearance) = runner speed 5  (apex=3? False); is it the LAST runner 5? True
+
+=== n=10=2*5: loneliest t*=1/10, collar=1/10 (=1/n? True); apex speed=n/2=5 ===
+  loneliest config = regular 10-gon (roots of unity)? True
+  (A) reflection v<->10-v fixed points = [0, 5]  (= observer 0 and APEX 5: the apex is the co-observer)
+  (B) rotation-by-2 cycle type = (5, 5) (== (q,q)=(5,5)? True); observer 0 in EVEN q-cycle, apex 5 in ODD q-cycle
+      rotation-by-2 preserves the half-turn relation (an automorphism)? True
+      observer's nearest runners (bracketing) = positions [1, 9], parities ['ODD', 'ODD']
+  (C) cascade trap (first zero clearance) = runner speed 9  (apex=5? False); is it the LAST runner 9? True
+
+=== n=14=2*7: loneliest t*=1/14, collar=1/14 (=1/n? True); apex speed=n/2=7 ===
+  loneliest config = regular 14-gon (roots of unity)? True
+  (A) reflection v<->14-v fixed points = [0, 7]  (= observer 0 and APEX 7: the apex is the co-observer)
+  (B) rotation-by-2 cycle type = (7, 7) (== (q,q)=(7,7)? True); observer 0 in EVEN q-cycle, apex 7 in ODD q-cycle
+      rotation-by-2 preserves the half-turn relation (an automorphism)? True
+      observer's nearest runners (bracketing) = positions [1, 13], parities ['ODD', 'ODD']
+  (C) cascade trap (first zero clearance) = runner speed 13  (apex=7? False); is it the LAST runner 13? True
+
+=== n=22=2*11: loneliest t*=1/22, collar=1/22 (=1/n? True); apex speed=n/2=11 ===
+  loneliest config = regular 22-gon (roots of unity)? True
+  (A) reflection v<->22-v fixed points = [0, 11]  (= observer 0 and APEX 11: the apex is the co-observer)
+  (B) rotation-by-2 cycle type = (11, 11) (== (q,q)=(11,11)? True); observer 0 in EVEN q-cycle, apex 11 in ODD q-cycle
+      rotation-by-2 preserves the half-turn relation (an automorphism)? True
+      observer's nearest runners (bracketing) = positions [1, 21], parities ['ODD', 'ODD']
+  (C) cascade trap (first zero clearance) = runner speed 21  (apex=11? False); is it the LAST runner 21? True
+
+READING below in the reflection.

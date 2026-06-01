@@ -1,0 +1,72 @@
+========================================================================
+THE TREEBOLIC DECOMPOSITION: n = 2^{v2} * odd = (tree-depth, line-position)
+========================================================================
+  n  -> (v2=tree depth, odd=line position)   parity   note
+   1 -> (v2=0, odd= 1)   ODD (tree top)   
+   2 -> (v2=1, odd= 1)   even (depth 1)   pure power 2^1
+   3 -> (v2=0, odd= 3)   ODD (tree top)   
+   4 -> (v2=2, odd= 1)   even (depth 2)   pure power 2^2
+   5 -> (v2=0, odd= 5)   ODD (tree top)   
+   6 -> (v2=1, odd= 3)   even (depth 1)   DOUBLED PRIME 2*3
+   7 -> (v2=0, odd= 7)   ODD (tree top)   
+   8 -> (v2=3, odd= 1)   even (depth 3)   pure power 2^3
+   9 -> (v2=0, odd= 9)   ODD (tree top)   
+  10 -> (v2=1, odd= 5)   even (depth 1)   DOUBLED PRIME 2*5
+  11 -> (v2=0, odd=11)   ODD (tree top)   
+  12 -> (v2=2, odd= 3)   even (depth 2)   
+  13 -> (v2=0, odd=13)   ODD (tree top)   
+  14 -> (v2=1, odd= 7)   even (depth 1)   DOUBLED PRIME 2*7
+  15 -> (v2=0, odd=15)   ODD (tree top)   
+  16 -> (v2=4, odd= 1)   even (depth 4)   pure power 2^4
+  17 -> (v2=0, odd=17)   ODD (tree top)   
+  18 -> (v2=1, odd= 9)   even (depth 1)   
+  19 -> (v2=0, odd=19)   ODD (tree top)   
+  20 -> (v2=2, odd= 5)   even (depth 2)   
+
+========================================================================
+THE TWO RECURSIONS as the two directions of the geometry
+========================================================================
+  x2 (TREE DESCENT, clean vertical): (a,m)->(a+1,m)
+       3 = (v2=0, odd=3)
+       6 = (v2=1, odd=3)
+      12 = (v2=2, odd=3)
+      24 = (v2=3, odd=3)
+      48 = (v2=4, odd=3)
+  +2 (HOROCYCLIC, erratic in tree depth): weaves through levels
+     2:(d1)  4:(d2)  6:(d1)  8:(d3)  10:(d1)  12:(d2)  14:(d1)  16:(d4)  18:(d1)  20:(d2)
+     tree-depths visited by +2 from 2: [1, 2, 1, 3, 1, 2, 1, 4, 1, 2] (ERRATIC = horocyclic)
+  => x2 moves straight down ONE tree (clean); +2 is a horocycle weaving across
+     tree levels. The two recursions = the two perpendicular directions of R x T_2.
+
+========================================================================
+PARITY DIVIDE = the 2-adic tree's FIRST branch; bridge x2 = descent
+========================================================================
+  odd numbers (v2=0) = the tree TOP (the 'odd line'); even = descended via x2.
+  ODD = atomic/free (tree top); EVEN = doubled (one+ levels down). The bridge that
+  carries an odd number n across the divide is x2: n -> 2n (down one level).
+
+========================================================================
+LRC TIE: channel cleanliness from (v2(n), odd(n)); the ADELIC interface
+========================================================================
+  n   (v2,odd)     n*=n/2^[even]   odd-part type        LRC channels
+  13  (v2=0,odd=13)   n*=13          PRIME                CLEAN
+  14  (v2=1,odd= 7)   n*= 7          PRIME                CLEAN
+  15  (v2=0,odd=15)   n*=15          composite            filtered/messy
+  16  (v2=4,odd= 1)   n*= 8          (unit, pure 2-power) filtered/messy
+  17  (v2=0,odd=17)   n*=17          PRIME                CLEAN
+  18  (v2=1,odd= 9)   n*= 9          prime-power 3^2      filtered/messy
+  22  (v2=1,odd=11)   n*=11          PRIME                CLEAN
+  => n=14=(v2=1,odd=7 PRIME) -> CLEAN (doubled prime); n=16=(v2=4,odd=1) pure 2-power,
+     n=18=(v2=1,odd=9=3^2) prime-power -> filtered. The (v2, odd) treebolic coordinates
+     of n predict its LRC channel structure. The ARCHIMEDEAN runner condition (||v t||
+     >=1/n on R/Z) is obstructed by the p-ADIC channels (the trees) -- LRC is ADELIC.
+
+========================================================================
+WILD STRUCTURES (proposed): (1) BS(1,2) treebolic R x T_2 / Diestel-Leader DL(2,2)
+(+ = horocycle, x2 = tree). (2) ADELES R x prod Q_p (+ at R, /p at the p-trees;
+parity = Q_2's first branch). (3) the dyadic SOLENOID (inverse limit under x2).
+(4) exp/log bridging + and x (primes = multiplicative frequencies). (5) WITT vectors
+(+ and x unified via ghost components). (6) CAYLEY-DICKSON dim-doubling 1,2,4,8 (repo).
+(7) STERN-BROCOT/Calkin-Wilf binary tree of Q+. WHY 2 is special: smallest prime AND
+the archimedean place carries the SIGN (the order), so the +/x tension centers on 2.
+========================================================================
