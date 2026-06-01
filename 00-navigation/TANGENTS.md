@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T633** #lrc #gabor #trienerment #time-frequency #uncertainty | certainty: bounded exact probe + synthesis | source: codex-2026-06-01-S542
+Gabor cells `(sector,harmonic)` should be ternary t(r)ienerment vertices: amplitude wins, cyclic phase orients, and equal/antipodal phase ties. Full Fourier support uncertainty holds in bounded `n=3..7`; tie-axis `B1=2M-3k` is meaningful, but unanchored fingerprints still mix good/bad states. Next move: observer-windowed or event-Gabor cells. See HYP-2031.
+
 **T632** #lrc #symbolic-dynamics #subshift #compactification #return-words | certainty: bounded exact probe + proof-language | source: codex-2026-06-01-S541
 LRC can be coded as a compactified periodic word: open chambers use `G/L/R/B` for observer danger occupancy and walls use `W` for closed witnesses. A counterexample would be a periodic arithmetic word avoiding `{G,W}`. Bounded `n=4..7` scans have no compactified target-free candidates; AP rows are exactly no-open-`G` but wall-`W`. Coarse bad-symbol subshifts have spurious cycles everywhere, so the next alphabet needs consistency-law labels: gate/owner/gap-race/carry or HYP-2027 pair-tension data. See HYP-2029.
 

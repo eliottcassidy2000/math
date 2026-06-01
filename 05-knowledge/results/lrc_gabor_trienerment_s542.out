@@ -1,0 +1,248 @@
+﻿LRC Gabor t(r)ienerment scan, S542
+Gauge: larger sector amplitude wins; equal amplitude uses cyclic phase; equal/antipodal phase ties.
+Target predicate: sectors 0 and n-1 are empty.
+
+=== n=3, max_speed=10 ===
+primitive speed sets: 31
+open cells scanned: 154
+distinct sector vectors: 6
+LRC-good cells/vectors: 21/1
+LRC-bad cells/vectors: 133/5
+full Fourier support uncertainty S*(F_nonzero+1) >= n: True
+good vectors:
+  cell mass: 21
+  sector support avg/range: 1.000 / 1..1
+  nonzero harmonic support avg/range: 2.000 / 2..2
+  full Fourier support avg/range: 3.000 / 3..3
+  non-DC Gabor S*F avg/range: 2.000 / 2..2
+  full uncertainty S*F avg/range: 3.000 / 3..3
+  tie count avg/range: 1.000 / 1..1
+  tie rate ppm avg/range: 66667.000 / 66667..66667
+  ternary B1 avg/range: 27.000 / 27..27
+  strict 3-cycles avg/range: 2.000 / 2..2
+  SCC count avg/range: 3.000 / 3..3
+  HP counts distribution: {8: 1}
+bad vectors:
+  cell mass: 133
+  sector support avg/range: 1.600 / 1..2
+  nonzero harmonic support avg/range: 2.000 / 2..2
+  full Fourier support avg/range: 3.000 / 3..3
+  non-DC Gabor S*F avg/range: 3.200 / 2..4
+  full uncertainty S*F avg/range: 4.800 / 3..6
+  tie count avg/range: 1.800 / 1..3
+  tie rate ppm avg/range: 120000.200 / 66667..200000
+  ternary B1 avg/range: 24.600 / 21..27
+  strict 3-cycles avg/range: 1.200 / 0..2
+  SCC count avg/range: 3.000 / 3..3
+  HP counts distribution: {8: 5}
+Gabor-trienerment fingerprint separation:
+  classes: 4
+  pure good / pure bad / mixed: 0 / 3 / 1
+  mixed example 1: [(0, 0, 2), (0, 2, 0)]
+minimum uncertainty good example:
+  counts=(0, 2, 0), cell_mass=21
+  S=1, F_nonzero=2, F_full=3, S*F_full=3
+  ties=1/15, B1=27, strict_3cycles=2
+  SCCs=3, largest_SCC=4, HP=8
+maximum tie-rate bad example:
+  counts=(2, 0, 0), cell_mass=35
+  S=1, F_nonzero=2, F_full=3, S*F_full=3
+  ties=3/15, B1=21, strict_3cycles=0
+  SCCs=3, largest_SCC=2, HP=8
+
+=== n=4, max_speed=10 ===
+primitive speed sets: 109
+open cells scanned: 1018
+distinct sector vectors: 20
+LRC-good cells/vectors: 140/4
+LRC-bad cells/vectors: 878/16
+full Fourier support uncertainty S*(F_nonzero+1) >= n: True
+good vectors:
+  cell mass: 140
+  sector support avg/range: 1.500 / 1..2
+  nonzero harmonic support avg/range: 3.000 / 3..3
+  full Fourier support avg/range: 4.000 / 4..4
+  non-DC Gabor S*F avg/range: 4.500 / 3..6
+  full uncertainty S*F avg/range: 6.000 / 4..8
+  tie count avg/range: 16.000 / 11..23
+  tie rate ppm avg/range: 242424.500 / 166667..348485
+  ternary B1 avg/range: 84.000 / 63..99
+  strict 3-cycles avg/range: 0.000 / 0..0
+  SCC count avg/range: 2.500 / 2..3
+  HP counts distribution: {2808: 2, 183600: 1, 188928: 1}
+bad vectors:
+  cell mass: 878
+  sector support avg/range: 2.125 / 1..3
+  nonzero harmonic support avg/range: 3.000 / 3..3
+  full Fourier support avg/range: 4.000 / 4..4
+  non-DC Gabor S*F avg/range: 6.375 / 3..9
+  full uncertainty S*F avg/range: 8.500 / 4..12
+  tie count avg/range: 15.750 / 11..23
+  tie rate ppm avg/range: 238636.625 / 166667..348485
+  ternary B1 avg/range: 84.750 / 63..99
+  strict 3-cycles avg/range: 0.000 / 0..0
+  SCC count avg/range: 2.625 / 2..3
+  HP counts distribution: {2808: 6, 5472: 2, 6480: 2, 164160: 2, 183600: 3, 188928: 1}
+Gabor-trienerment fingerprint separation:
+  classes: 10
+  pure good / pure bad / mixed: 1 / 6 / 3
+  mixed example 1: [(0, 0, 2, 1), (0, 1, 2, 0), (2, 0, 0, 1), (2, 1, 0, 0)]
+  mixed example 2: [(0, 0, 1, 2), (0, 2, 1, 0), (1, 0, 0, 2), (1, 2, 0, 0)]
+minimum uncertainty good example:
+  counts=(0, 0, 3, 0), cell_mass=9
+  S=1, F_nonzero=3, F_full=4, S*F_full=4
+  ties=19/66, B1=75, strict_3cycles=0
+  SCCs=2, largest_SCC=9, HP=188928
+maximum tie-rate bad example:
+  counts=(0, 0, 0, 3), cell_mass=3
+  S=1, F_nonzero=3, F_full=4, S*F_full=4
+  ties=23/66, B1=63, strict_3cycles=0
+  SCCs=2, largest_SCC=9, HP=183600
+
+=== n=5, max_speed=8 ===
+primitive speed sets: 69
+open cells scanned: 976
+distinct sector vectors: 56
+LRC-good cells/vectors: 100/12
+LRC-bad cells/vectors: 876/44
+full Fourier support uncertainty S*(F_nonzero+1) >= n: True
+good vectors:
+  cell mass: 100
+  sector support avg/range: 2.083 / 1..3
+  nonzero harmonic support avg/range: 4.000 / 4..4
+  full Fourier support avg/range: 5.000 / 5..5
+  non-DC Gabor S*F avg/range: 8.333 / 4..12
+  full uncertainty S*F avg/range: 10.417 / 5..15
+  tie count avg/range: 12.333 / 10..18
+  tie rate ppm avg/range: 64912.500 / 52632..94737
+  ternary B1 avg/range: 343.000 / 326..350
+  strict 3-cycles avg/range: 78.000 / 32..164
+  SCC count avg/range: 2.583 / 2..3
+  HP counts distribution: not computed for this vertex count
+bad vectors:
+  cell mass: 876
+  sector support avg/range: 2.818 / 1..4
+  nonzero harmonic support avg/range: 4.000 / 4..4
+  full Fourier support avg/range: 5.000 / 5..5
+  non-DC Gabor S*F avg/range: 11.273 / 4..16
+  full uncertainty S*F avg/range: 14.091 / 5..20
+  tie count avg/range: 13.909 / 10..30
+  tie rate ppm avg/range: 73205.955 / 52632..157895
+  ternary B1 avg/range: 338.273 / 290..350
+  strict 3-cycles avg/range: 57.091 / 32..164
+  SCC count avg/range: 2.705 / 2..3
+  HP counts distribution: not computed for this vertex count
+Gabor-trienerment fingerprint separation:
+  classes: 12
+  pure good / pure bad / mixed: 2 / 8 / 2
+  mixed example 1: [(0, 0, 0, 2, 2), (0, 0, 2, 0, 2), (0, 0, 2, 2, 0), (0, 2, 0, 0, 2)]
+  mixed example 2: [(0, 0, 1, 1, 2), (0, 0, 1, 2, 1), (0, 0, 2, 1, 1), (0, 1, 0, 1, 2)]
+minimum uncertainty good example:
+  counts=(0, 0, 4, 0, 0), cell_mass=1
+  S=1, F_nonzero=4, F_full=5, S*F_full=5
+  ties=18/190, B1=326, strict_3cycles=164
+  SCCs=2, largest_SCC=16, HP=None
+maximum tie-rate bad example:
+  counts=(4, 0, 0, 0, 0), cell_mass=69
+  S=1, F_nonzero=4, F_full=5, S*F_full=5
+  ties=30/190, B1=290, strict_3cycles=128
+  SCCs=2, largest_SCC=16, HP=None
+
+=== n=6, max_speed=7 ===
+primitive speed sets: 21
+open cells scanned: 438
+distinct sector vectors: 105
+LRC-good cells/vectors: 43/15
+LRC-bad cells/vectors: 395/90
+full Fourier support uncertainty S*(F_nonzero+1) >= n: True
+good vectors:
+  cell mass: 43
+  sector support avg/range: 3.133 / 2..4
+  nonzero harmonic support avg/range: 5.000 / 5..5
+  full Fourier support avg/range: 6.000 / 6..6
+  non-DC Gabor S*F avg/range: 15.667 / 10..20
+  full uncertainty S*F avg/range: 18.800 / 12..24
+  tie count avg/range: 60.000 / 52..82
+  tie rate ppm avg/range: 137931.000 / 119540..188506
+  ternary B1 avg/range: 690.000 / 624..714
+  strict 3-cycles avg/range: 59.800 / 25..81
+  SCC count avg/range: 3.000 / 3..3
+  HP counts distribution: not computed for this vertex count
+bad vectors:
+  cell mass: 395
+  sector support avg/range: 3.622 / 1..5
+  nonzero harmonic support avg/range: 4.867 / 3..5
+  full Fourier support avg/range: 5.867 / 4..6
+  non-DC Gabor S*F avg/range: 17.578 / 5..25
+  full uncertainty S*F avg/range: 21.200 / 6..30
+  tie count avg/range: 64.044 / 52..110
+  tie rate ppm avg/range: 147228.622 / 119540..252874
+  ternary B1 avg/range: 677.867 / 540..714
+  strict 3-cycles avg/range: 67.344 / 25..260
+  SCC count avg/range: 2.922 / 2..3
+  HP counts distribution: not computed for this vertex count
+Gabor-trienerment fingerprint separation:
+  classes: 53
+  pure good / pure bad / mixed: 1 / 43 / 9
+  mixed example 1: [(0, 0, 0, 1, 2, 2), (0, 2, 0, 1, 2, 0), (0, 2, 2, 1, 0, 0)]
+  mixed example 2: [(0, 0, 1, 0, 2, 2), (0, 0, 2, 0, 1, 2), (0, 2, 2, 0, 1, 0)]
+minimum uncertainty good example:
+  counts=(0, 2, 3, 0, 0, 0), cell_mass=1
+  S=2, F_nonzero=5, F_full=6, S*F_full=12
+  ties=82/435, B1=624, strict_3cycles=81
+  SCCs=3, largest_SCC=20, HP=None
+maximum tie-rate bad example:
+  counts=(1, 0, 1, 1, 1, 1), cell_mass=10
+  S=5, F_nonzero=5, F_full=6, S*F_full=30
+  ties=110/435, B1=540, strict_3cycles=230
+  SCCs=2, largest_SCC=25, HP=None
+
+=== n=7, max_speed=7 ===
+primitive speed sets: 7
+open cells scanned: 188
+distinct sector vectors: 87
+LRC-good cells/vectors: 12/10
+LRC-bad cells/vectors: 176/77
+full Fourier support uncertainty S*(F_nonzero+1) >= n: True
+good vectors:
+  cell mass: 12
+  sector support avg/range: 4.300 / 3..5
+  nonzero harmonic support avg/range: 6.000 / 6..6
+  full Fourier support avg/range: 7.000 / 7..7
+  non-DC Gabor S*F avg/range: 25.800 / 18..30
+  full uncertainty S*F avg/range: 30.100 / 21..35
+  tie count avg/range: 42.000 / 33..51
+  tie rate ppm avg/range: 48780.500 / 38328..59233
+  ternary B1 avg/range: 1596.000 / 1569..1623
+  strict 3-cycles avg/range: 469.200 / 336..756
+  SCC count avg/range: 2.900 / 2..3
+  HP counts distribution: not computed for this vertex count
+bad vectors:
+  cell mass: 176
+  sector support avg/range: 4.325 / 1..6
+  nonzero harmonic support avg/range: 6.000 / 6..6
+  full Fourier support avg/range: 7.000 / 7..7
+  non-DC Gabor S*F avg/range: 25.948 / 6..36
+  full uncertainty S*F avg/range: 30.273 / 7..42
+  tie count avg/range: 48.195 / 33..105
+  tie rate ppm avg/range: 55975.273 / 38328..121951
+  ternary B1 avg/range: 1577.416 / 1407..1623
+  strict 3-cycles avg/range: 691.013 / 324..1908
+  SCC count avg/range: 2.896 / 2..4
+  HP counts distribution: not computed for this vertex count
+Gabor-trienerment fingerprint separation:
+  classes: 16
+  pure good / pure bad / mixed: 0 / 13 / 3
+  mixed example 1: [(0, 0, 0, 0, 2, 2, 2), (0, 0, 2, 0, 2, 0, 2), (0, 2, 2, 2, 0, 0, 0)]
+  mixed example 2: [(0, 0, 1, 1, 1, 2, 1), (0, 1, 0, 1, 1, 2, 1), (0, 1, 1, 0, 1, 2, 1), (0, 1, 1, 1, 0, 2, 1)]
+minimum uncertainty good example:
+  counts=(0, 2, 2, 2, 0, 0, 0), cell_mass=1
+  S=3, F_nonzero=6, F_full=7, S*F_full=21
+  ties=51/861, B1=1569, strict_3cycles=756
+  SCCs=2, largest_SCC=24, HP=None
+maximum tie-rate bad example:
+  counts=(6, 0, 0, 0, 0, 0, 0), cell_mass=7
+  S=1, F_nonzero=6, F_full=7, S*F_full=7
+  ties=105/861, B1=1407, strict_3cycles=1728
+  SCCs=2, largest_SCC=36, HP=None
+
