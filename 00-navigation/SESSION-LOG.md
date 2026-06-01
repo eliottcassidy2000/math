@@ -14,7 +14,7 @@
 **Account:** Oracle (remote-control). **User:** prove cases <n=14 using ONLY the permutohedron/geodesic methodology.
 **n=3 PROVEN** (center-grid): scaling-invariance -> gcd(v1,v2)=1, 0<v1<v2; if v2>=3 the times t_k=(2k+1)/(2v2) have ||v2 t_k||=1/2 and {||v1 t_k||} are v2 equally-spaced points (spacing 1/v2<=1/3), so one lies in [1/3,2/3] -> lonely; if v2<=2 then {1,2}, t=1/3. Verified 1101/1101 coprime pairs. Pure methodology: 1-D grid forced to meet the 1-D far-band.
 **n=4 frontier (lrc_geometric_small_n_s522o.py, 1336 primitive triples):** single center-grid witness 1275/1336 (95%); +n-gon 1299 (97%); residual 37 all = {1,k,k+1} (resonant near-extremal), all lonely (0 counterexamples). Fails to close by one witness because fixing the largest runner far leaves a 1-D center-grid that must meet a 2-D box -- per-cell step (S521o) needed. CODIMENSION grows: n=3 grid-vs-band (auto); n=4 1D-grid-vs-2D-box (codim 1); each runner +1 codim. n=14 = the high-codim version on resonant families.
-**New HYP-2003. Reflection:** 07-reflections/lrc-geometric-proof-n3-and-n4-frontier-s522o.md.
+**New HYP-2005. Reflection:** 07-reflections/lrc-geometric-proof-n3-and-n4-frontier-s522o.md.
 ## opus-2026-06-01-S527 - CASCADE PROOF: LRC for n=3..8 via image wrapping; n≥7 fully automatic
 
 **Account:** Oracle (remote-control)
@@ -41,13 +41,17 @@
 **Computed (lrc_permutohedron_geometry_s521o.py):** (a) braid crossings over [0,1) = sum|v_i-v_j| (=S25 staircase total); resonant speeds make wall-times COINCIDE (extremal n=5: 6 distinct times vs 20 crossings) = S25 synchrony as coincident hyperplanes; (b) distinct cyclic orders visited tiny: 6,10,12 (extremal n=5,6,7) of (n-1)!=24,120,720 = order-analogue of the Fibonacci menu; (c) loneliness is NOT at braid-cell centers (0 lonely midpoints even for easy sets) -> loneliness is strictly finer than the order skeleton, carved by the 1/n-walls = the view-obstruction.
 **n=14 attempt:** LRC@14 = closed geodesic of class (v_1..v_13) on T^13 pierces box B (side 6/7). Equidistribution kills the Q-independent case; the hard case is closed geodesics (integer speeds) -- the permutohedron makes the dichotomy crisp but doesn't remove it. Weyl/zonotope covering stalls because B is a cube, not Weyl-aligned with the permutohedron. HONEST: did not prove n=14; same wall as S519/S520 (order coarse, 1/n metric is the content) at maximal geometric clarity. SHARPENING: inside each braid cell, order is fixed so loneliness = a LINEAR interval condition; LRC = union of per-cell lonely sub-intervals nonempty = the bounded-ansatz (S514) geometrized.
 **New HYP-2002. Reflection:** 07-reflections/lrc-permutohedron-geometry-and-n14-attempt-s521o.md.
-## codex-2026-06-01-S526 - Permutohedral n=14 proof attempt (stub)
+
+## codex-2026-06-01-S526 - Permutohedral n=14 proof attempt
 
 **Account:** Codex
-**Git first:** Synced over HYP-2000 tiling-dependence/block-extreme work before reserving this lane.
+**Git first:** Synced over HYP-2000 tiling-dependence/block-extreme work, then checkpointed the HYP-2001/T625 claim before computing.
 **User prompt:** Come to understand the deep permutohedron geometry and attempt an n=14 proof.
-**Claim:** Reserve HYP-2001/T625 and the result lane `lrc_n14_permutohedron_s526.py`. The working model is that an LRC counterexample at `n=14` would be a one-parameter rational line avoiding the source facets of the braid/permutohedral chamber fan; the proof attempt will test whether the seven CRT blocker handoff can be lifted to an oriented facet-crossing/normal-cone obstruction.
-**Known before computation:** HYP-1997 says the pure metagraph is faithful but non-reducing; HYP-1999 identifies the fixed safe-arc target; HYP-2000 says arc/tile flips are dependent and the runner walk is a one-parameter sweep. The missing point is whether the permutohedral chamber geometry forces a source facet at `n=14`, rather than merely explaining why free graph walks are too large.
+**Computation:** Added `04-computation/lrc_n14_permutohedron_s526.py` and stored `05-knowledge/results/lrc_n14_permutohedron_s526.out`. The script lifts n=14 rows to the affine braid arrangement / permutohedral chamber fan: collision times are adjacent-swap facets, open cells carry circular orders, and THM-384 source is exactly the long-long pair of observer-adjacent gaps.
+**Findings:** The lift is the right geometry but the naive handoff theorem is false. Initial `1..13` is wall-only (`source_measure=0`, `6` wall sources). The seven-ladder, S380 gate-ladder, and double-gate ladder all have the same open source measure `1/143` but increasingly many chambers (`2034`, `4224`, `8506`) and raw blocker handoff defects (`142`, `310`, `600`). Their blocker state graph has max SCC `3`, while generic rows have larger source measure but larger raw blocker SCCs. In the bounded primitive family `max_speed<=16`, all `560` systems have a source hit; only initial is wall-only.
+**Synthesis:** Updated HYP-2001 and added `07-reflections/lrc-n14-permutohedral-proof-attempt-s526.md`. This complements HYP-2002's closed-geodesic/cube formulation and HYP-2003's blocking-arc extremality target: the proof target is not "all blocker handoffs cross source"; it is a labelled permutohedral handoff theorem where source-avoiding handoffs must export endpoint debt, and a real n=14 proof should combine the chamber ledger with Hall/Farkas/private-endpoint peeling.
+**Verification:** `python3 -m py_compile 04-computation/lrc_n14_permutohedron_s526.py`; full script rerun with output stored.
+
 ## opus-2026-06-01-S526 - Permutohedron geometry + n=14 proof attempt (honest negative)
 
 **Account:** Oracle (remote-control)

@@ -1,0 +1,106 @@
+LRC n=14 permutohedron audit -- codex-2026-06-01 S526
+
+GEOMETRIC MODEL
+========================================================================
+The circular order of {0, v_i t} is a chamber of the affine braid fan.
+Collision times are adjacent-swap facets of the permutohedron.
+THM-384 makes the LRC target the long-long pair of gaps adjacent to
+the observer.  A counterexample would be a closed one-parameter sweep
+through these chambers avoiding every long-long source facet.
+
+PART A: selected n=14 rows
+========================================================================
+initial_1_to_13:
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  chambers=234 distinct_orders=58 collisions=57 adjacent_swaps=1144 obs_neighbor_swaps=57
+  source_measure=0 (0.000000) open_cells=0 wall_sources=6 best_margin=0 (0.000000)
+  CRT qsafe max: open=6/7 wall=7/7
+  blocker handoffs=98 single_owner=6 raw_handoff_defects=92 blocker_edges=74 blocker_SCC_max=24
+  top blocker class states: [((1,), 34), ((6,), 34), ((4,), 34), ((5,), 26), ((3,), 24), ((2,), 24)]
+  sample wall/source times: 1/14, 3/14, 5/14, 9/14, 11/14, 13/14
+
+seven_ladder_drop_42:
+  speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  chambers=2034 distinct_orders=654 collisions=885 adjacent_swaps=8592 obs_neighbor_swaps=511
+  source_measure=1/143 (0.006993) open_cells=28 wall_sources=88 best_margin=5/322 (0.015528)
+  CRT qsafe max: open=2/2 wall=2/2
+  blocker handoffs=142 single_owner=26 raw_handoff_defects=142 blocker_edges=6 blocker_SCC_max=3
+  top blocker class states: [((0,), 1824), ((0, 1), 126), ((1,), 56)]
+  sample wall/source times: 9/98, 11/98, 127/1078, 139/1176, 47/392, 153/1274
+
+gate_ladder_s380:
+  speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  chambers=4224 distinct_orders=754 collisions=1927 adjacent_swaps=17286 obs_neighbor_swaps=1043
+  source_measure=1/143 (0.006993) open_cells=62 wall_sources=182 best_margin=5/322 (0.015528)
+  CRT qsafe max: open=2/2 wall=2/2
+  blocker handoffs=310 single_owner=78 raw_handoff_defects=310 blocker_edges=6 blocker_SCC_max=3
+  top blocker class states: [((0,), 3778), ((0, 1), 266), ((1,), 118)]
+  sample wall/source times: 15/196, 211/2548, 15/181, 65/784, 197/2352, 14/167
+
+double_gate_ladder:
+  speeds=(1, 28, 56, 84, 112, 140, 196, 224, 252, 280, 308, 336, 364)
+  chambers=8506 distinct_orders=754 collisions=3913 adjacent_swaps=34674 obs_neighbor_swaps=2089
+  source_measure=1/143 (0.006993) open_cells=116 wall_sources=356 best_margin=181/12048 (0.015023)
+  CRT qsafe max: open=2/2 wall=2/2
+  blocker handoffs=600 single_owner=136 raw_handoff_defects=600 blocker_edges=6 blocker_SCC_max=3
+  top blocker class states: [((0,), 7662), ((0, 1), 532), ((1,), 196)]
+  sample wall/source times: 29/392, 393/5096, 28/363, 121/1568, 365/4704, 26/335
+
+primes_row:
+  speeds=(1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37)
+  chambers=762 distinct_orders=392 collisions=391 adjacent_swaps=3240 obs_neighbor_swaps=273
+  source_measure=1079979252/12108430523 (0.089192) open_cells=46 wall_sources=74 best_margin=5/28 (0.178571)
+  CRT qsafe max: open=7/7 wall=7/7
+  blocker handoffs=296 single_owner=20 raw_handoff_defects=290 blocker_edges=134 blocker_SCC_max=28
+  top blocker class states: [((1,), 90), ((2,), 88), ((3,), 78), ((2, 3), 56), ((5,), 48), ((1, 3), 42)]
+  sample wall/source times: 1/14, 43/518, 1/12, 27/322, 43/434, 1/10
+
+hard_sporadic_s524:
+  speeds=(1, 3, 4, 5, 9, 11, 13, 15, 17, 19, 23, 25, 29)
+  chambers=576 distinct_orders=252 collisions=251 adjacent_swaps=2650 obs_neighbor_swaps=205
+  source_measure=71860198/770201575 (0.093301) open_cells=40 wall_sources=66 best_margin=2/21 (0.095238)
+  CRT qsafe max: open=6/6 wall=6/6
+  blocker handoffs=208 single_owner=8 raw_handoff_defects=202 blocker_edges=96 blocker_SCC_max=21
+  top blocker class states: [((1,), 86), ((4,), 62), ((5,), 50), ((2,), 44), ((1, 4), 34), ((3,), 26)]
+  sample wall/source times: 1/14, 29/350, 1/12, 27/322, 15/154, 1/10
+
+PART B: bounded primitive family, max_speed=16
+========================================================================
+systems=560
+no_source=0 wall_only=1
+max_raw_handoff_defects=116 max_blocker_SCC=25
+hardest_by_source_measure=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) source_measure=0 raw_defects=92 blocker_SCC=24
+
+PART C: Tournament Analysis over selected rows
+========================================================================
+score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1))
+c3=0
+SCCs=(1, 1, 1, 1, 1, 1)
+Hamiltonian_paths=1
+ranking by proof-strength profile:
+  hard_sporadic_s524: strength=('71860198/770201575', 66, -202, -21, -576, '2/21', '6/6', '6/6')
+  primes_row: strength=('1079979252/12108430523', 74, -290, -28, -762, '5/28', '7/7', '7/7')
+  double_gate_ladder: strength=('1/143', 356, -600, -3, -8506, '181/12048', '2/2', '2/2')
+  gate_ladder_s380: strength=('1/143', 182, -310, -3, -4224, '5/322', '2/2', '2/2')
+  seven_ladder_drop_42: strength=('1/143', 88, -142, -3, -2034, '5/322', '2/2', '2/2')
+  initial_1_to_13: strength=('0', 6, -92, -24, -234, '0', '6/7', '7/7')
+
+SYNTHESIS
+========================================================================
+1. The permutohedron lift is the right geometry: each row is a
+   one-parameter path through adjacent-swap chambers, and the LRC
+   target is exactly the long-long facet at the observer.
+2. The tempting raw lemma 'every blocker-owner handoff crosses source'
+   is false in the hard rows: raw_handoff_defects are nonzero and
+   blocker owner states can have nontrivial SCCs.  So the free graph
+   obstruction from HYP-1997 survives in permutohedral language.
+3. The useful refinement is labelled debt: hard handoffs that avoid
+   source are precisely where endpoint debt is exported to deeper
+   quotient layers (seven-ladder -> gate-ladder -> double-gate).
+4. A plausible n=14 proof should combine this chamber ledger with a
+   Farkas/Hall endpoint-debt certificate: no closed blocker-owner
+   circulation in the permutohedral fan should be realizable after all
+   private endpoint leaves are peeled.
+5. This session therefore does not prove n=14.  It narrows the proof
+   target to a labelled permutohedral handoff theorem, rather than a
+   scalar gap argument or a pure metagraph feedback-vertex argument.
