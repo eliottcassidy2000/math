@@ -1,0 +1,13 @@
+Band-window Fourier coefficients hhat(c): positive-definite (all >=0)?  [the spread test]
+  n=5: negative coeffs among c=1..19: [1, 2, 6, 7, 11, 12, 16, 17]
+        sample: hhat(1)=-0.3027, hhat(2)=-0.0935, hhat(0)=0.6000
+  n=7: negative coeffs among c=1..19: [1, 2, 3, 8, 9, 10, 15, 16, 17]
+        sample: hhat(1)=-0.2489, hhat(2)=-0.1552, hhat(0)=0.7143
+
+  => SIGN-INDEFINITE. The band excludes the observer 0, so any w>=0 on B has
+     w(0)=sum_c hhat(c)=0; positive-definiteness (hhat>=0) then forces w==0.
+     No positive-definite window on the safe band exists -> no pure-spread proof of LRC.
+     The permitted sign-cancellation IS the resonance obstruction (mu can be 0 on tight sets).
+
+  Working spread condition (PROVED elsewhere): relation-sparsity
+     sum_{c!=0,<c,v>=0} |prod hhat(c_i)| < (1-2/n)^m  =>  mu>0  =>  lonely.
