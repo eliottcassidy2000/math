@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 {
   "session_start": "2026-06-01T12:12:41.713225",
   "start_commit": "c1af662fa21de0b0c22a32ca9bea8c22669e2d4b",
   "pushed": false,
   "message_sent": true
 }
+=======
+{}
+>>>>>>> 98153cb6 (opus-2026-06-01-S548: global→local bridge via conditional clearance product)

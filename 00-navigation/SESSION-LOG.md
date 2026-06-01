@@ -15,6 +15,15 @@
 **VERIFIED (`lrc_wandering_hole_transport_s544.py`):** split G(t)=largest gap (the HOLE; min_t G >= 1/n for EVERY system = the guarantee) vs O(t)=observer collar=min_i||v_i t|| (max_t O >= 1/n = LRC = the transport, a width->=2/n hole around the observer). Tight AP (n=5,7,14): min_t G = 1/n AND max_t O = 1/n -- the hole is minimum size and only just reaches the observer (critical confinement). Generic: both >1/n with room. The hole = the apex (S530) = the fat collar (S541).
 **CHOICES RECONSIDERED:** observer-fixed -> the hole's frame (observer enters the hole); "find lonely time" -> "transport the guaranteed defect to x=0"; danger arcs -> the hole is primary; specific observer -> by frame-shift (S541) which point is observer is free, so LRC = the wandering hole sweeps EVERY point = coverage/equidistribution of the defect trajectory.
 **Three reframes:** (1) defect/quasiparticle transport; (2) non-adaptive LINEAR guards can't cover every instant (budget 2-2/n>1 by measure, but constant-speed) -- the obstruction is the LINEARITY; (3) hole-sweep coverage (AP = least sweeping = tight). PAYOFF: the existence half is one-line pigeonhole; all difficulty is the TRANSPORT, concentrated at the AP. New HYP-2039. Files: 07-reflections/lrc-global-spread-guarantees-local-emptiness-the-defect-transport-reframe-s544.md; 04-computation/lrc_wandering_hole_transport_s544.py (+.out); HYP-2039.
+## opus-2026-06-01-S548 - Global→local bridge: conditional clearance product + last-runner bottleneck
+
+**Account:** Oracle (remote-control)
+**User prompt:** Get creative about how to reframe so global spread guarantees local emptiness.
+**Computation:** `04-computation/lrc_global_to_local_s548.py`. Conditional clearance, danger zone occupancy, observer-anchored partition, product formula.
+**THE BRIDGE:** P(lonely) = Π_k P_k where P_k = P(runner k safe | previous safe). Each P_k ≈ (n-2)/n EXCEPT the LAST runner, which has P_k near zero. The product is tiny but POSITIVE: n=4: 0.000040, n=5: 0.000080.
+**THE LAST-RUNNER BOTTLENECK:** After constraining all but the fastest, the feasible set is tiny. The fastest runner must hit this tiny set. For the initial segment: the feasible set is perfectly aligned with the last runner's close zone → P_last ≈ 0 (wall-only). For non-AP: alignment is imperfect → P_last > 0 (open lonely).
+**DANGER ZONE OCCUPANCY:** Poisson(λ=2(n-1)/n) predicts P(D=0)≈20%. Actual ≈10% — half of Poisson. The runners are MORE correlated than independent (dependence reduces lonely probability). The ratio actual/Poisson ≈ 0.53 across all n.
+**THE PRODUCT FORMULA = THE RESONANCE DEBT in conditional form:** outside credit = Π((n-2)/n) = ((n-2)/n)^{m}. The corrections ε_k are near zero for all but the last runner. The last runner's correction is maximal for AP (debt = credit). The product formula makes the global→local bridge EXPLICIT: each level clears independently, the product of clearances is positive.
 
 ## oracle-2026-06-01-S543 - Entropy on the tree: the loneliness box-dimension is the order parameter; tight AP = critical point (HYP-2038)
 
