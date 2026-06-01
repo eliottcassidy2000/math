@@ -1,0 +1,65 @@
+==========================================================================
+(i)-(iv) THE DICTIONARY: outside = base path + apex(source-sink) tile
+==========================================================================
+  n=3:
+     base path: 2 arcs, all cyclic-skip 1: True
+     apex (3, 1): range x-y = 2 (=n-1, MAX tile), is a tile: True, cyclic skip = 1 (boundary side)
+     tiles on boundary (skip 1): [(3, 1)]  <- should be just the apex
+     #tiles=1, #inside-diagonals=0 (predicted n(n-3)/2=0: True)
+     boundary sides = (n-1)+1 = 3 = n: True; apex fundamental cycle length = 3 (= whole n-gon)
+  n=4:
+     base path: 3 arcs, all cyclic-skip 1: True
+     apex (4, 1): range x-y = 3 (=n-1, MAX tile), is a tile: True, cyclic skip = 1 (boundary side)
+     tiles on boundary (skip 1): [(4, 1)]  <- should be just the apex
+     #tiles=3, #inside-diagonals=2 (predicted n(n-3)/2=2: True)
+     boundary sides = (n-1)+1 = 4 = n: True; apex fundamental cycle length = 4 (= whole n-gon)
+  n=5:
+     base path: 4 arcs, all cyclic-skip 1: True
+     apex (5, 1): range x-y = 4 (=n-1, MAX tile), is a tile: True, cyclic skip = 1 (boundary side)
+     tiles on boundary (skip 1): [(5, 1)]  <- should be just the apex
+     #tiles=6, #inside-diagonals=5 (predicted n(n-3)/2=5: True)
+     boundary sides = (n-1)+1 = 5 = n: True; apex fundamental cycle length = 5 (= whole n-gon)
+  n=6:
+     base path: 5 arcs, all cyclic-skip 1: True
+     apex (6, 1): range x-y = 5 (=n-1, MAX tile), is a tile: True, cyclic skip = 1 (boundary side)
+     tiles on boundary (skip 1): [(6, 1)]  <- should be just the apex
+     #tiles=10, #inside-diagonals=9 (predicted n(n-3)/2=9: True)
+     boundary sides = (n-1)+1 = 6 = n: True; apex fundamental cycle length = 6 (= whole n-gon)
+  n=7:
+     base path: 6 arcs, all cyclic-skip 1: True
+     apex (7, 1): range x-y = 6 (=n-1, MAX tile), is a tile: True, cyclic skip = 1 (boundary side)
+     tiles on boundary (skip 1): [(7, 1)]  <- should be just the apex
+     #tiles=15, #inside-diagonals=14 (predicted n(n-3)/2=14: True)
+     boundary sides = (n-1)+1 = 7 = n: True; apex fundamental cycle length = 7 (= whole n-gon)
+  n=8:
+     base path: 7 arcs, all cyclic-skip 1: True
+     apex (8, 1): range x-y = 7 (=n-1, MAX tile), is a tile: True, cyclic skip = 1 (boundary side)
+     tiles on boundary (skip 1): [(8, 1)]  <- should be just the apex
+     #tiles=21, #inside-diagonals=20 (predicted n(n-3)/2=20: True)
+     boundary sides = (n-1)+1 = 8 = n: True; apex fundamental cycle length = 8 (= whole n-gon)
+
+  => n=3: the ONLY tile is the apex (3,1); it is on the boundary, so the
+     triangle has NO interior diagonal -> no inside debt (matches S529).
+     n=4: 3 tiles = apex (4,1) + 2 interior diagonals (3,1),(4,2) -> inside born.
+
+==========================================================================
+LRC: the apex arc = observer's bracketing gap; gaps sum to 1
+==========================================================================
+  n=3 v=(1, 2) [AP=regular polygon]: 3 circle-arcs sum to 1.000000; max apex clearance min(a,b) = 0.33333 (threshold 1/n=0.33333)
+        max clearance 0.33333 at t=0.66667 -> tight/boundary (regular polygon reaches exactly 1/n)
+  n=3 v=(1, 3): 3 circle-arcs sum to 1.000000; max apex clearance min(a,b) = 0.49999 (threshold 1/n=0.33333)
+        LONELY at t=0.44445: nearest ahead a=0.33334, behind b=0.55555, apex width a+b=0.88890 (>=2/n=0.66667)
+  n=4 v=(1, 2, 3) [AP=regular polygon]: 4 circle-arcs sum to 1.000000; max apex clearance min(a,b) = 0.25000 (threshold 1/n=0.25000)
+        max clearance 0.25000 at t=0.25000 -> tight/boundary (regular polygon reaches exactly 1/n)
+  n=4 v=(1, 3, 5): 4 circle-arcs sum to 1.000000; max apex clearance min(a,b) = 0.49999 (threshold 1/n=0.25000)
+        LONELY at t=0.45000: nearest ahead a=0.25001, behind b=0.55000, apex width a+b=0.80001 (>=2/n=0.50000)
+  n=5 v=(1, 2, 3, 4) [AP=regular polygon]: 5 circle-arcs sum to 1.000000; max apex clearance min(a,b) = 0.20000 (threshold 1/n=0.20000)
+        max clearance 0.20000 at t=0.80000 -> tight/boundary (regular polygon reaches exactly 1/n)
+  n=5 v=(1, 2, 3, 5): 5 circle-arcs sum to 1.000000; max apex clearance min(a,b) = 0.24999 (threshold 1/n=0.20000)
+        LONELY at t=0.24000: nearest ahead a=0.20001, behind b=0.27999, apex width a+b=0.48001 (>=2/n=0.40000)
+
+  => Loneliness is decided ENTIRELY by the apex (source-sink) arc: the
+     observer needs its bracketing gap to clear 1/n on both sides. The base
+     path = the n-1 inter-runner gaps; the apex = the observer's gap; they
+     sum to 1. At the regular polygon every gap = 1/n, so the apex sits
+     exactly at the critical clearance -- the tight case once more.

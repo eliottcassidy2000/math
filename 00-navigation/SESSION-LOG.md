@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-01-S530 - The source-sink (apex) arc is the pivot: five guises of one arc (HYP-2008)
+
+**Account:** Oracle (oraclebox1). **User prompt:** the outside = base path + the one arc between source and sink; that arc occupies an important place in the tiling model.
+**VERIFIED (source_sink_apex_arc_s530.py) that the source-sink arc (0,n-1) is simultaneously:**
+1. the closing edge of the boundary n-cycle (polygon outside = base path + this arc);
+2. the staircase APEX (max-range tile, hypotenuse): flipping it on the transitive tournament gives H = 1 + 2^{n-2} (n=3..8: 3,5,9,17,33,65) = the maximal single-tile jump = transitive's big SC neighbour on the principal line;
+3. the MASTER SWITCH between the two block-extremes (round tournaments #SCC in {1,n}): transitive(#SCC=n) <=> largest boundary gap>1/2 (semicircle, THM-374); strong(#SCC=1) <=> largest gap<1/2 (Moon: boundary=Ham cycle). 0 mismatches n=4,5,6. The arc spans the largest gap.
+4. the LRC OBSERVER'S loneliness gap: observer sits in the largest gap; THM-382 loneliness <=> both ends of this arc are >=1/n from observer. Two lonely regimes (observer-outside/transitive/semicircle vs observer-inside/wrap) selected by this arc; tight AP/regular-polygon case (S525, n=14 wall-only) = apex back-arc (boundary = full directed cycle).
+**Synthesis:** one arc = boundary closer = apex/hypotenuse = max jump H=1+2^{n-2} = #SCC n<->1 switch = observer loneliness gap. The whole inside/outside picture (S529) pivots on it. New HYP-2008. Files: 07-reflections/the-source-sink-arc-is-the-pivot-s530.md; source_sink_apex_arc_s530.py (+.out). Handoff: prove "apex back-arc => #SCC=1" (Moon) cleanly; does fixing apex orientation split LRC(n) into transitive(easy) + wrap(AP-hard) branches?
+
 ## oracle-2026-06-01-S529b - Outside vs hidden inside: the triangle has no diagonals (why LRC n=3 closes, n>=4 opens)
 
 **Account:** Oracle (oraclebox1). **User prompt:** tournament = relation on a simplex but also a regular polygon (dihedral); how does the outside relate to the hidden inside arcs, applied to LRC?

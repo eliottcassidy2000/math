@@ -1,0 +1,25 @@
+source-sink (apex) arc: the closing edge of the outside (oracle-S530)
+
+(1) APEX = source-sink arc = max-range tile. Flip it on the transitive tournament:
+   n=3: H(transitive + apex back-arc) = 3   1+2^(n-2) = 3   match=True
+   n=4: H(transitive + apex back-arc) = 5   1+2^(n-2) = 5   match=True
+   n=5: H(transitive + apex back-arc) = 9   1+2^(n-2) = 9   match=True
+   n=6: H(transitive + apex back-arc) = 17   1+2^(n-2) = 17   match=True
+   n=7: H(transitive + apex back-arc) = 33   1+2^(n-2) = 33   match=True
+   n=8: H(transitive + apex back-arc) = 65   1+2^(n-2) = 65   match=True
+   => the source-sink arc is the hypotenuse / principal-line tile: its single
+      flip is the maximal H jump (transitive -> its big strongly-connected neighbour).
+
+(2) ROUND tournaments from circle gaps: largest gap vs #SCC vs source-sink arc
+   n=4: samples=3000;  (transitive <=> largest gap>1/2) mismatches=0   [transitive&big-gap=492, strong&small-gap=2508]
+   n=5: samples=3000;  (transitive <=> largest gap>1/2) mismatches=0   [transitive&big-gap=159, strong&small-gap=2841]
+   n=6: samples=3000;  (transitive <=> largest gap>1/2) mismatches=0   [transitive&big-gap=18, strong&small-gap=2982]
+   => exactly one boundary gap > 1/2 (the empty arc, a SEMICIRCLE) <=> transitive;
+      the source-sink arc spans that gap. All gaps < 1/2 (runners wrap) <=> one
+      strong block (Ham cycle = the boundary). The apex arc is the block switch.
+
+(3) LRC: observer in the largest gap; the source-sink arc brackets it.
+    transitive lonely = observer OUTSIDE the runner cluster (semicircle, big gap);
+    strong lonely     = observer INSIDE a wrap-around (AP / regular-polygon tight).
+    Loneliness (THM-382) = both observer-adjacent gaps >= 1/n = the two ends of
+    the source-sink arc are each >= 1/n from the observer.
