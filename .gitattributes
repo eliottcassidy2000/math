@@ -1,2 +1,17 @@
 scripts/*.sh text eol=lf
 scripts/*.ps1 text eol=crlf
+
+# ─── Concurrency: union-merge for append-heavy coordination files ─────────────
+# Multiple agent sessions append/prepend to these shared logs concurrently. The
+# built-in `union` merge driver keeps BOTH sides' lines on conflict, so
+# finish_session.py's fetch/rebase/push never stops on a manual conflict.
+# (Verified: a two-session SESSION-LOG prepend race rebases cleanly, both kept.)
+00-navigation/SESSION-LOG.md            merge=union
+00-navigation/TANGENTS.md               merge=union
+00-navigation/INVESTIGATION-BACKLOG.md  merge=union
+00-navigation/OPEN-QUESTIONS.md         merge=union
+00-navigation/CONCURRENT-SESSIONS.md    merge=union
+01-canon/MISTAKES.md                    merge=union
+05-knowledge/results/INDEX.md           merge=union
+05-knowledge/hypotheses/INDEX.md        merge=union
+05-knowledge/variables/INDEX.md         merge=union
