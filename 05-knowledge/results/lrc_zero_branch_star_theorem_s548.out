@@ -1,4 +1,4 @@
-THM-390 q-grid zero-branch star peeling verifier
+THM-391 q-grid zero-branch star peeling verifier
 ========================================================================
 bounded exact cases checked: 3255
 max intervals in bounded check: 21

@@ -8,8 +8,11 @@ related:
   - HYP-2034
   - HYP-2036
   - HYP-2039
+  - HYP-2041
+  - HYP-2042
   - THM-381
   - THM-389
+  - THM-392
 ---
 
 # HYP-2040: LRC conditional-clearance cascades carry a hidden transitive wedge debt
@@ -49,7 +52,8 @@ obligations.
 
 ## Exact tournament identity
 
-For a tournament `T`, define the backward-wedge set of an oriented edge:
+THM-392 canonizes the exact tournament part of this hypothesis.  For a
+tournament `T`, define the backward-wedge set of an oriented edge:
 
 ```text
 W_T(X,Y) = { Z : Z -> X and Y -> Z }.
@@ -71,6 +75,13 @@ because each directed triangle contributes exactly one backward wedge to each
 of its three edges.  The user's hidden fact is this identity in local form: an
 edge in a transitive tournament is not passive; it deletes a whole class of
 future placements.
+
+Incoming S545/S545o work gives the right boundary on this exact identity.
+HYP-2041 reads the same local rule as the no-return or 3-term resonance
+obstruction in the conditional-clearance product.  HYP-2042 shows why the
+3-cycle/Helly-3 layer is necessary but not sufficient for the full LRC ladder:
+the exact tournament fact is the base ledger, not by itself the complete LRC
+certificate.
 
 ## LRC reading
 
@@ -157,17 +168,26 @@ dependent clearances as independent.
 4. Bare runner tournaments will often collapse to transitive shadows.  The
    useful cyclic signal should appear after lifting vertices to endpoint
    owners, wall events, Gabor zero columns, or p-adic branch obligations.
-5. A future script should report, for each cascade prefix, the conditional
-   clearance `P_k`, the accepted-edge backward-wedge count, directed 3-cycles,
-   SCCs, edge flips, and Hamiltonian-path count of the relevant lifted
-   tournament.
+5. The S550 verifier starts this ledger: it reports `P_k` for sample LRC
+   cascades and tournament fingerprints including backward-wedge mass,
+   directed 3-cycles, SCC sizes, score histograms, and Hamiltonian-path counts.
+   The remaining script work is to build the LRC-specific lifted tournament
+   whose vertices are endpoint owners, wall events, or clearance obligations.
 
 ## Status
 
-Open.  The tournament identity is exact, and it explains what the hidden
-transitivity fact is.  The remaining work is to choose the LRC lift where the
-backward-wedge debt becomes a certificate rather than a visualization.
+Open as an LRC lift claim.  THM-392 proves the exact tournament identity and
+turns the hidden transitivity fact into a canon ledger.  HYP-2041 identifies
+the same ledger with no-return/resonance debt, while HYP-2042 records the
+honest limitation that fixed triple clearance is not enough for the order-`n`
+cascade.  The remaining work is to choose the LRC lift where the backward-wedge
+debt becomes a certificate rather than a visualization.
 
 ## Files
 
-`07-reflections/lrc-conditional-clearance-wedge-transitivity-s549.md`.
+`01-canon/theorems/THM-392-backward-wedge-transitivity.md`;
+`04-computation/lrc_conditional_clearance_wedge_s550.py`;
+`05-knowledge/results/lrc_conditional_clearance_wedge_s550.out`;
+`07-reflections/lrc-conditional-clearance-wedge-transitivity-s549.md`;
+`07-reflections/lrc-cascade-as-conditional-clearances-the-no-return-fact-is-the-resonance-obstruction-s545o.md`;
+`05-knowledge/hypotheses/HYP-2042-lrc-cascade-clearance-ladder.md`.

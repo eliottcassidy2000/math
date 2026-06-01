@@ -66,8 +66,15 @@ T transitive  <=>  W_T(X,Y)=empty for every edge X -> Y,
 sum_edges |W_T(X,Y)| = 3*c_3(T).
 ```
 
-This packages the hidden fact as a measurable obstruction.  The first directed
-3-cycle is exactly the first unpaid backward wedge.
+THM-392 now records this as a canon theorem.  This packages the hidden fact as
+a measurable obstruction.  The first directed 3-cycle is exactly the first
+unpaid backward wedge.
+
+The later S545/S545o notes use complementary language: HYP-2041 calls the same
+edge-local obstruction a no-return or 3-term resonance debt, while HYP-2042
+marks the limitation that the Helly-3 layer is necessary but not sufficient for
+the full LRC cascade.  So the theorem is the exact transitive ledger; the LRC
+proof still needs the correct order-`n` lift.
 
 ## LRC reading
 
@@ -149,6 +156,11 @@ the product cascade is scalar.
 
 The better object is scalar product plus edge-local wedge ledger.
 
+After THM-392, the exact theorem-level content is no longer speculative:
+transitive clearance is equivalent to zero backward-wedge debt.  The open LRC
+choice is the lift in which that debt is certificate-bearing rather than only
+descriptive.
+
 ## Proof shape this suggests
 
 A future proof route could try to build a finite lifted tournament at each
@@ -160,11 +172,20 @@ edge: forced-before / clears-before / protects-before
 statistics: P_k, backward-wedge count, c_3, SCCs, HP count
 ```
 
+The S550 verifier covers the exact base layer of this plan: it exhaustively
+checks the backward-wedge identity for all tournaments on up to six vertices
+and prints exact `P_k` rows for AP, generic, and lacunary LRC cascades.
+
 If the lifted tournament stays transitive after enough clearances, the no-wedge
 rule should peel the remaining endpoint core.  If it develops cycles, those
 cycles name the exact dependence debt instead of leaving it as a mysterious
 epsilon in the product.  Either outcome is useful: transitive means clearance
 propagates; cyclic means the script has found the real obstruction layer.
+
+The proof obligation can therefore be written as a cascade of ordinary
+conditional clearances multiplied by THM-392 anti-wedge clearances.  A zero in
+the second ledger is not noise; it is exactly a directed triangle in the lifted
+object.
 
 The slogan I would keep:
 

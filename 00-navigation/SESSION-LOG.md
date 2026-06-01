@@ -160,6 +160,15 @@ Turned the doubling/apex/cascade metaphor thread into an EXACT, falsifiable extr
 **Synthesis:** Added HYP-2051 and a reflection.  Odd cycles are parity obstructions; even cycles are two-sheet-compatible.  A doubled prime `2p` is the bipartite double cover of the prime odd cycle `p`: even enough to live on the parity-balanced sheet, but still carrying one irreducible prime odd core.  This is the parity-lift sibling of oracle-S549/HYP-2049, which treats doubled primes as H1/H2 recursion bridges.
 **Goldbach/Lemoine bridge:** Even Goldbach is `P+P` with parity `1+1=0`; Lemoine is `P+2P` with parity `1+0=1`, equivalently the diagonal ternary form `p+q+q`.  On the mod-6 wheel, `P={1,5}`, `2P={2,4}`, so `P+P` covers the even residue channels `{0,2,4}` and `P+2P` covers the odd channels `{1,3,5}`.  Doubled primes are therefore the parity-shifted copy of the prime necklace and the first-even row `p -> 2p` in the HYP-1984 add/multiply grid.
 **Artifacts:** `05-knowledge/hypotheses/HYP-2051-doubled-primes-parity-lift.md`; `07-reflections/doubled-primes-as-parity-lift-s550.md`.
+## codex-2026-06-01-S550 - Canonized backward-wedge transitivity and LRC clearance ledger
+
+**Context:** User sharpened the S549 idea: an LRC cascade is a product of conditional clearances, and tournament transitivity has a hidden propagated fact.  If `X->Y`, then a transitive lift forbids the backward wedge `Z->X` and `Y->Z`.
+**Formalization:** Added THM-392.  For any finite tournament, transitivity is equivalent to every edge having empty backward-wedge set `W_T(X,Y)={Z: Z->X and Y->Z}`, and total wedge mass satisfies `sum_edges |W_T| = 3*c_3(T)`.  This moves the exact tournament part of HYP-2040 from hypothesis language into canon.
+**Computation:** Added `04-computation/lrc_conditional_clearance_wedge_s550.py` and stored `05-knowledge/results/lrc_conditional_clearance_wedge_s550.out`.  The verifier exhausts all tournaments on `n<=6`, reports score histograms/SCCs/Hamiltonian-path fingerprints on samples, and prints exact LRC `P_k` products: AP rows hit final zero factors, while generic/lacunary rows keep positive final clearance.
+**Incoming integration:** After rebase, connected the theorem to HYP-2041's no-return/resonance reading and HYP-2042's Helly-3 limitation.  THM-392 is the exact base ledger for the hidden transitivity fact, not the whole LRC certificate by itself.
+**Namespace repair:** Concurrent mainline had two THM-390 files.  Kept the S547 p-adic zero-branch cover-core theorem as THM-390 and renamed the S548 zero-branch star peeling theorem to THM-391, updating references and result labels.
+**LRC reading:** The proof object is now `prod_k P_k` plus a THM-392 anti-wedge ledger.  The next useful lift should not assume vertices are runners; endpoint owners, wall events, clearance obligations, p-adic branches, cover arcs, Gabor modes, and proof obligations remain live candidates.
+**Artifacts:** `01-canon/theorems/THM-392-backward-wedge-transitivity.md`; `05-knowledge/hypotheses/HYP-2040-lrc-conditional-clearance-wedge-transitivity.md`; `07-reflections/lrc-conditional-clearance-wedge-transitivity-s549.md`; `04-computation/lrc_conditional_clearance_wedge_s550.py`; `05-knowledge/results/lrc_conditional_clearance_wedge_s550.out`.
 
 ## codex-2026-06-01-S549 - Conditional clearance product plus hidden transitive wedge debt (HYP-2040)
 
@@ -274,13 +283,15 @@ id debt (THM-260×3, THM-338×2, THM-336/337 dups) noted in MISTAKE-052 for futu
 > from THM-390 to **THM-391**. codex-S547 had already claimed THM-390 for the distinct
 > p-adic zero-branch/AP cover-core theorem (committed earlier). First claimant keeps the
 > number; references below to "THM-390" in this entry now mean THM-391. See MISTAKE-052.
+## codex-2026-06-01-S548 - formalized zero-branch star peeling as THM-391
 
 **Context:** User asked for a long formalization session on recent novel work, with discovery allowed to steer.  The live cluster was HYP-2036 (p-adic zero-branch cover trienerments), HYP-2037/HYP-2038 (tree entropy/order parameters), and the S546b prime-power endpoint-core audit.
-**Formalization:** Added THM-390, proving that for `n>=2`, `2<=q<=n`, any nonzero q-grid center set and any speeds all divisible by q form a zero-branch star with empty strict endpoint-protection core.  The proof is a separation+nestedness argument: different q-grid centers cannot strictly protect each other's endpoints, and a largest-radius interval at any center has no strict protector.
+**Formalization:** Added THM-391, proving that for `n>=2`, `2<=q<=n`, any nonzero q-grid center set and any speeds all divisible by q form a zero-branch star with empty strict endpoint-protection core.  The proof is a separation+nestedness argument: different q-grid centers cannot strictly protect each other's endpoints, and a largest-radius interval at any center has no strict protector.
 **Discovery:** The theorem is q-agnostic.  Prime powers matter as p-adic branch labels, not as special local interval geometry.  Peel layers are explicit: speeds peel in increasing speed order with layer size `|C| * multiplicity(s)`.
 **Computation:** Added `04-computation/lrc_zero_branch_star_theorem_s548.py` and stored `05-knowledge/results/lrc_zero_branch_star_theorem_s548.out`; the verifier checks `3255` bounded exact stars plus selected n=14/n=18 examples and confirms the peel-layer formula.
 **Synthesis:** HYP-2036's local negative result is now theorem-level: covered zero branches kill THM-369 unit witnesses but cannot be local counterexample cores.  HYP-2037/HYP-2038 entropy/box-dimension signals must retain exported labels (endpoint descendants, event owners, critical walls, cross-prime coordinates, or Gabor zero columns) before they can become proof-bearing cyclic trienerments.
 **Artifacts:** `01-canon/theorems/THM-391-lrc-zero-branch-star-core-peeling.md` (renumbered from THM-390); `07-reflections/lrc-zero-branch-star-formalization-s548.md`; updated HYP-2036, T636, definitions, and result index.
+**Artifacts:** `01-canon/theorems/THM-391-lrc-zero-branch-star-core-peeling.md`; `07-reflections/lrc-zero-branch-star-formalization-s548.md`; updated HYP-2036, T636, definitions, and result index.
 
 ## oracle-2026-06-01-S543 - Entropy on the tree: the loneliness box-dimension is the order parameter; tight AP = critical point (HYP-2038)
 

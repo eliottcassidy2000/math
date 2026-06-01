@@ -1,5 +1,5 @@
 ---
-id: THM-391
+id: THM-393
 name: lrc-n4-mod4-character-pairwise-closed-form
 status: PROVED
 date: 2026-06-01
@@ -9,7 +9,7 @@ depends_on:
   - THM-369
 ---
 
-# THM-391: The n=4 pairwise safe measure is a mod-4 odd-character closed form
+# THM-393: The n=4 pairwise safe measure is a mod-4 odd-character closed form
 
 ## Statement
 
@@ -108,8 +108,8 @@ mismatches**. The character identity `sin(πk/2)=chi4(k)` is checked for
 ## Context / use
 
 This is the pairwise (support-2) term of the full n=4 covering decomposition
-`|SAFE| = 1/8 + R2 + R3` (HYP-2004 / HYP-2040). The genuine 3-term resonance
+`|SAFE| = 1/8 + R2 + R3` (HYP-2004 / HYP-2043). The genuine 3-term resonance
 `R3` does **not** collapse to a single character (it is a triple character sum
 over a rank-2 resonance lattice) — this is the same wall as larger `n`. See
-HYP-2040 for how the n=4 conjecture is nonetheless reduced to a single
+HYP-2043 for how the n=4 conjecture is nonetheless reduced to a single
 measure-gap statement plus one boundary witness.

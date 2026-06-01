@@ -1,15 +1,15 @@
 ---
-id: HYP-2040
+id: HYP-2043
 status: SUPPORTED (verified exhaustively to speeds<=100); reduction is a THEOREM modulo the gap
 source: monad-researcher-2026-06-01-S1
 related:
   - HYP-2004
   - HYP-2039
-  - THM-391
+  - THM-393
   - THM-369
 ---
 
-# HYP-2040: LRC(n=4) reduces to a single measure gap + one boundary witness; {1,2,3} is the UNIQUE tight triple
+# HYP-2043: LRC(n=4) reduces to a single measure gap + one boundary witness; {1,2,3} is the UNIQUE tight triple
 
 ## The methodological correction (important)
 
@@ -36,7 +36,7 @@ not a residual.
 ## The n=4 result
 
 At `n=4` (threshold 1/4, 3 runners), with the mod-4 character decomposition
-`|SAFE| = 1/8 + R2 + R3` (R2 closed form = THM-391):
+`|SAFE| = 1/8 + R2 + R3` (R2 closed form = THM-393):
 
 1. **Unique tight set.** Across ALL primitive triples with speeds `<= 100`
    (135,739 triples), the *only* measure-zero triple is the AP `{1,2,3}`.
@@ -77,7 +77,7 @@ n=4 is reduced to proving the single inequality "`|SAFE| < 1/28 => triple is
 resonance sum directly.
 
 ## Why the gap, not the raw measure, is the right object
-- `R2` is known in closed form (THM-391), but `R3` (the genuine 3-term
+- `R2` is known in closed form (THM-393), but `R3` (the genuine 3-term
   resonance, a triple `chi4`-character sum over the rank-2 lattice
   `{k : k.(a,b,c)=0}`) does not collapse to one character.
 - Measure lower bounds via Bonferroni are too weak (e.g.
@@ -95,7 +95,7 @@ resonance sum directly.
 
 ## Files
 - `04-computation/lrc_n4_mod4_character_monad.py` (+.out): character identity,
-  THM-391 verification (0 fails), full decomposition, AP tightness.
+  THM-393 verification (0 fails), full decomposition, AP tightness.
 - `04-computation/lrc_n4_tight_characterization_monad.py` (+.out): unique tight
   set & measure floor to speeds<=100; parity lemma.
 - `04-computation/lrc_n4_measure_gap_monad.py` (+.out): exact smallest measures,

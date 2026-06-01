@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T637** #lrc #tournament-analysis #conditional-clearance #wedge-debt #transitivity | certainty: theorem + exact verifier | source: codex-2026-06-01-S549/S550
+A cascade should be read as a product of conditional clearances plus a hidden anti-wedge ledger. THM-392 proves the tournament core: `T` is transitive iff every edge `X->Y` has no backward wedge `{Z: Z->X and Y->Z}`, and total wedge mass is `3*c_3(T)`. HYP-2041 reads this as no-return/resonance debt; HYP-2042 warns the 3-cycle layer is necessary but not sufficient. The next lift should put the ledger on endpoint owners, wall events, or clearance obligations. See HYP-2040.
+
 **T636** #lrc #p-adic #tree #trienerment #sieve #gabor | certainty: theorem + bounded exact probe | source: codex-2026-06-01-S546/S546b/S548
 Product p-adic zero branches `q=2..n` give a pure cover-core coordinate: `z_q=0` for `q<n` is a THM-369 open witness, while `z_n=0` is the compact wall. In bounded boxes `n=6..18`, tree-trienerment fingerprints have zero mixed open-survivor fibers and every open survivor has min cover `n/2`. THM-391 proves the local star theorem: any covered q-grid zero branch peels to empty endpoint core, with no primality assumption. Cyclic content must use endpoint descendants, event owners, cross-prime coupling, or Gabor zero-column labels. See HYP-2036.
 

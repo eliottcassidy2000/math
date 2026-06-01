@@ -38,7 +38,7 @@ cover the circle up to measure zero.
 
 At n=4 the harmonic substrate is the **odd Dirichlet character mod 4**:
 `g_k = -chi4(k)/(πk)`, because `sin(πk/2) = chi4(k)` — even harmonics die. The
-pairwise term collapses to a closed form (THM-391),
+pairwise term collapses to a closed form (THM-393),
 
 ```text
 |S_a ∩ S_b| = 1/4 + chi4(a')chi4(b')/(4 a' b'),
