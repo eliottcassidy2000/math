@@ -28,6 +28,12 @@ Endpoint-private debt in the hard first-even rows aligns more with pressure sink
 **T565** #lrc #tournament-analysis #transitive-reduction #labelled-pressure | certainty: high computational | source: codex-2026-06-01-S504
 The strict LRC deletion-relief pressure DAGs are sparse and mostly irredundant: transitive-reduction retention is `97.0%` to `99.8%` on the n=14/n=18 hard rows. The next THM-380 realization target is not a scalar potential, but endpoint labels on nearly every strict pressure edge. See `07-reflections/lrc-pressure-private-overlap-s504.md`.
 
+**T566** #lrc #hamiltonian-paths #loneliness-metric #phase-entropy | certainty: high computational | source: codex-2026-06-01-S505
+H(T) of the half-turn phase tournament is a global loneliness entropy: high H means spread/cyclic/no clean hierarchy, low H means bunched/transitive-side. Normalizing by `n!/2^(n-1)`, the LRC initial rows are high (`n14:2.2651`, `n18:2.3675`), and hard row-parent rows remain high before the first gate drop. See HYP-1969.
+
+**T567** #lrc #recursive-structure #h-plateau #endpoint-debt | certainty: high computational / proof target | source: codex-2026-06-01-S505
+The hard LRC ladders split into two recursions: endpoint ledger `gap*debt` stays fixed (`n14=5/11`, `n18=1`) while H drops once at the first gate and then freezes (`n14: 22168229 -> 17826951 -> 17826951`; `n18: 117137481061 -> 102405804217 -> 102405804217`). H sees phase-state plateau; endpoint debt sees 2-adic translation. See `07-reflections/lrc-h-loneliness-recursion-s505.md`.
+
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
 
