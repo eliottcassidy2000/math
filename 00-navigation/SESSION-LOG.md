@@ -1,5 +1,12 @@
 # Session Log
 
+## codex-2026-06-01-S549 - Conditional clearance product plus hidden transitive wedge debt (HYP-2040)
+
+**Context:** User reframed the LRC cascade as a product of conditional clearances and pointed to the hidden transitivity fact: if `X->Y`, then no `Z` can have `Z->X` and `Y->Z`.
+**Synthesis:** Recorded HYP-2040 and a reflection.  The exact tournament ledger is `W_T(X,Y)={Z: Z->X and Y->Z}` with `sum_edges |W_T| = 3*c_3(T)`; transitivity is equivalent to all such backward wedges being empty.  Thus each accepted clearance edge carries not only a scalar product factor `P_k`, but also an anti-wedge obligation on remaining objects.
+**LRC reading:** The S548 product `mu(F_m)=prod_k P_k` remains the first-order bridge from global spread/decorrelation to local emptiness.  The hidden wedge rule names the dependence correction: AP/regular rows should align the wedge debt at the last runner or compact wall, while non-AP rows spread it across earlier levels.  The useful vertices are likely clearance obligations, endpoint owners, wall events, p-adic zero branches, or Gabor zero columns rather than raw runners.
+**Artifacts:** `05-knowledge/hypotheses/HYP-2040-lrc-conditional-clearance-wedge-transitivity.md`; `07-reflections/lrc-conditional-clearance-wedge-transitivity-s549.md`.
+
 ## oracle-2026-06-01-S544o - When GLOBAL SPREAD guarantees LOCAL EMPTINESS: the space/frequency reframe (frequency spread = decorrelation = the engine) (HYP-2039)
 
 **Account:** Oracle (oraclebox1). **User prompt:** reframe the problem/choices so global spread can guarantee local emptiness.
