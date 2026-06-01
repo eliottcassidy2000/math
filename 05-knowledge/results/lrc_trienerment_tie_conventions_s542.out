@@ -1,0 +1,27 @@
+LRC trienerment tie-convention audit (S542)
+
+Strict tie: dist < 1/n.  Weak tie: dist <= 1/n.
+Closed LRC uses strict observer tie-freeness.
+Global pigeonhole non-purity uses weak ties.
+
+Regular-wall calibration for initial segments
+n  t=a/n samples  strict_ties  weak_ties  regular
+ 3            2          [0]        [3]  [True]
+ 4            2          [0]        [4]  [True]
+ 5            4          [0]        [5]  [True]
+ 6            2          [0]        [6]  [True]
+ 7            6          [0]        [7]  [True]
+ 8            4          [0]        [8]  [True]
+ 9            6          [0]        [9]  [True]
+
+Bounded exact-clock audit
+n max_speed sets states strict_free regular_viol weak_viol observer_mism
+4        10  109   34688          34            0         0             0
+5         8   69   41345          28            0         0             0
+6         7   21   22440           4            0         0             0
+7         8   28   79366          12            0         0             0
+
+Conclusion:
+  strict observer tie-free == closed LRC: zero mismatches
+  weak tie count is never zero in the sampled exact clocks
+  strict globally tie-free states occur only at regular n-gon walls

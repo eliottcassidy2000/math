@@ -32,6 +32,25 @@ the circle `ℝ/ℤ`, written in the proof-friendly "far from every integer" for
 def Lonely {ι : Type*} (n : ℕ) (v : ι → ℤ) (t : ℝ) : Prop :=
   ∀ i, ∀ m : ℤ, (1 : ℝ) / n ≤ |(v i : ℝ) * t - m|
 
+/-- The observer has no *strict* LRC ties to the moving runners at time `t`.
+Equivalently, no runner lies in the open forbidden observer window
+`dist(v_i t, ℤ) < 1/n`. -/
+def ObserverTieFree {ι : Type*} (n : ℕ) (v : ι → ℤ) (t : ℝ) : Prop :=
+  ∀ i, ¬ ∃ m : ℤ, |(v i : ℝ) * t - m| < (1 : ℝ) / n
+
+/-- Closed-threshold loneliness is exactly strict observer tie-freeness.  This
+is the Lean core of the LRC trienerment convention: strict ties record open
+nearness, while boundary contacts are still allowed LRC witnesses. -/
+theorem lonely_iff_observerTieFree {ι : Type*} (n : ℕ) (v : ι → ℤ) (t : ℝ) :
+    Lonely n v t ↔ ObserverTieFree n v t := by
+  unfold Lonely ObserverTieFree
+  constructor
+  · intro h i htie
+    rcases htie with ⟨m, hlt⟩
+    exact not_lt_of_ge (h i m) hlt
+  · intro h i m
+    exact le_of_not_gt (fun hlt => h i ⟨m, hlt⟩)
+
 section Sieve
 variable {ι : Type*}
 
@@ -268,6 +287,7 @@ Each `#print axioms` should report only the foundational
 project-specific axioms underlie the LRC sieve theory. -/
 
 #print axioms sieve_frac
+#print axioms lonely_iff_observerTieFree
 #print axioms sieve_one_div
 #print axioms counterexample_needs_all_divisors
 #print axioms all_odd_half_lonely

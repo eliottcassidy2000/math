@@ -19,6 +19,7 @@ related:
   - THM-383
   - THM-384
   - THM-387
+  - THM-389
 ---
 
 # HYP-2029: LRC is a compactified target-hitting theorem for an arithmetic subshift
@@ -174,6 +175,13 @@ HYP-2028 says every raw sector-vector is existentially realizable, so sector
 existence alone is not the obstruction.  This hypothesis is about fixed-clock
 languages: for each primitive speed set, does its own periodic arithmetic word
 hit the good face `c_0=c_{n-1}=0` or compactified wall `W`?
+
+THM-389 explains why the alphabet must remain compactified.  Strict
+trienerment ties make observer tie-degree `0` equivalent to closed LRC, but
+strict globally tie-free states are exactly regular wall states; weak ties are
+needed for the global pigeonhole ledger.  Symbolically, `G` is the open
+strict-tie-free observer event and `W` is the boundary event that preserves the
+regular-wall witnesses.
 
 **Predictions.**
 

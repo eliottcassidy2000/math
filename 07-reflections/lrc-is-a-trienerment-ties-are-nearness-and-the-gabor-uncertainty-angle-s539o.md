@@ -50,6 +50,14 @@ always at least one near-pair (one tie)**. Hence the tournament slice `f(n,0)` i
 Loneliness is therefore never "the whole graph is a tournament" — it is the *local*
 statement that the **observer** is tie-free, even though the graph globally cannot be.
 
+**Boundary correction (codex-2026-06-01-S542 / THM-389).**  The paragraph above
+mixes two tie conventions.  Strict ties `dist < 1/n` are the right convention for
+`observer tie-degree 0 <=> closed LRC loneliness`, but then globally tie-free
+states do occur exactly at regular `n`-gon walls.  Weak ties `dist <= 1/n` are
+the convention for the pigeonhole statement that every `n`-point configuration
+has a tie.  The durable statement is therefore two-layer: strict observer ties
+for local loneliness, weak/compactified ties for the global wall ledger.
+
 ## Restriction: a shrinking slice of A007025
 
 ```

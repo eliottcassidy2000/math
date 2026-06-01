@@ -64,6 +64,15 @@ tie-resolved comparator such as the half-turn phase clock.  THM-381 proves
 that the observer is lonely at `t` iff the marked observer vertex is a source,
 and that the source-marked target classes are counted by `A000568(n-1)`.
 
+**LRC trienerment**: a three-state LRC pair comparator on the same circular
+positions.  A strict tie means circular distance `< 1/n`; a weak tie means
+circular distance `<= 1/n`; non-tied pairs are oriented by a complete circular
+comparator such as half-turn order.  THM-389 fixes the boundary convention:
+closed-threshold LRC loneliness is equivalent to observer strict-tie-degree
+`0`, while the global pigeonhole statement that every `n`-point configuration
+has a tie uses weak ties.  With strict ties, the only globally tie-free states
+are regular `n`-gon wall states.
+
 **LRC threshold-decorated class fiber**: a tournament-isomorphism class
 together with LRC threshold colors, such as which circular gaps are at least
 `1/n` or which pair-cells have zero danger deficit.  THM-382 records that in
