@@ -33,6 +33,16 @@
 **Rebase signal:** The first checkpoint push rebased over `codex-s506: add LRC arc gauge bundle` (HYP-1975). This was exactly the intended pattern: the new LRC gauge-bundle work did not conflict with the meta-policy files, but it showed why hypothesis/result namespace claims and frequent pushes matter. It also reinforces that future LRC Tournament Analysis sessions should compare incoming gauge bundles rather than treating concurrent additions as background noise.
 **Verification:** `python3 -m py_compile agents/finish_session.py agents/checkpoint_session.py`; `python3 agents/checkpoint_session.py --help`; `git diff --check`.
 
+## codex-2026-06-01-S507 - LRC as a marked A000568 quotient problem
+
+**Account:** Codex
+**Git first:** Started clean on `main...origin/main`; close-out rebased over concurrent S506c/S508/S509/S509b work and renumbered this hypothesis to HYP-1978 with tangents T600/T601.
+**User prompt:** Explore the hypothesis that LRC is ultimately analogous to tournament isomorphism classes and A000568, creatively and through the convoluted possible paths.
+**Computation:** Added `04-computation/lrc_a000568_isoclass_atlas_s507.py` and stored `05-knowledge/results/lrc_a000568_isoclass_atlas_s507.out`. The script declares Tournament Analysis observables/switches/tie path, computes A000568/Burnside scale data, exact rooted/unrooted small tournament quotients, initial LRC half-turn clock quotient walks, and n=14/n=18 hard-row rooted shadows for `phase_half`, `safe_phase_gate`, and `pressure_k2`.
+**Findings:** The A000568 analogy should be rooted/marked. Ordinary A000568 is the unrooted base, but LRC needs the stationary observer, endpoint/safe labels, and pressure labels. Exact small counts: `n=6` has A000568 `56` but rooted `296`; H is only a height (`19` buckets), not a full coordinate. The initial LRC clock is a thin quotient path (`n=7`: `7` unrooted / `17` rooted states out of `456`). Hard ladders often stabilize in coarse rooted shadow while endpoint debt doubles (`n14-s14/s28`: `168 -> 336`, product `5/11`; `n18-s18/s36`: `352 -> 704`, product `1`).
+**Synthesis:** Added HYP-1978 and `07-reflections/lrc-a000568-isoclass-analogy-s507.md`, updated result/hypothesis indexes, concept map, and tangents T600/T601. The proof target becomes emptiness of bad marked classes over the A000568 base, not a scalar H inequality.
+**Verification:** `python -m py_compile 04-computation/lrc_a000568_isoclass_atlas_s507.py`; full script rerun stored the output.
+
 ## codex-2026-06-01-S506b - LRC arc criteria as a loneliness metric vector
 
 **Account:** Codex

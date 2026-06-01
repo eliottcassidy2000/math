@@ -52,6 +52,12 @@ LRC loneliness should be measured as a gauge bundle, not one tournament: phase/o
 **T598** #lrc #open-arc-density #H #n14 | certainty: computed bridge gauge | source: codex-2026-06-01-S506c
 Open-arc density is a promising bridge between half-turn H and local crowding: on n=14 it separates row-parent from gate (`H=2952757` vs `452385`) and its c3 count correlates `+0.403` with observer margin across deterministic hard-row time samples.
 
+**T600** #lrc #A000568 #rooted-quotient #tournament-isomorphism | certainty: medium-high structural synthesis + exact small census | source: codex-2026-06-01-S507
+The A000568 analogy should be rooted/marked: ordinary tournament classes are the unrooted base, while LRC needs the stationary observer, endpoint labels, safe masks, and pressure labels in the fiber. Exact small counts already show the expansion (`n=6`: A000568 `56`, rooted `296`), and the initial LRC clock visits a thin quotient path (`n=7`: `7` unrooted / `17` rooted states out of `456`). See HYP-1978.
+
+**T601** #lrc #recursive-structure #marked-fibers #endpoint-debt | certainty: high for audited hard rows | source: codex-2026-06-01-S507
+Hard LRC ladders look like motion inside marked fibers over stable tournament shadows: `phase_half` gives the same coarse rooted shadow for `n14-s14/s28` while debt doubles `168 -> 336` with `gap*debt=5/11`, and likewise `n18-s18/s36` doubles `352 -> 704` with product `1`. The proof target becomes emptiness of bad marked classes, not a scalar H inequality.
+
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
 

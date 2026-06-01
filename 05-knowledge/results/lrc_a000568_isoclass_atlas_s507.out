@@ -1,0 +1,105 @@
+LRC/A000568 isoclass analogy atlas (codex-2026-06-01 S507)
+================================================================================================================
+Question: can the LRC proof be organized as an isomorphism-class problem analogous to A000568?
+
+A000568/Burnside quotient scale
+================================================================================================================
+ n         2^C(n,2)        A000568     avg orbit label bits  odd part frac
+----------------------------------------------------------------------------------------------------------------
+ 3                8              2          4.00      2.000            2/3
+ 4               64              4         16.00      4.000            2/5
+ 5             1024             12         85.33      6.415            3/7
+ 6            32768             56        585.14      9.193           4/11
+ 7          2097152            456       4599.02     12.167            1/3
+ 8        268435456           6880      39016.78     15.252           3/11
+ 9      68719476736         191536     358781.00     18.453           4/15
+10   35184372088832        9733056    3614935.75     21.786           5/21
+
+Reading: A000568 is not just a count.  It is the quotient cost of forgetting vertex labels from binary pair decisions.
+The odd-part column is the Burnside fixed-point filter: even cycles kill orientation fixed points.
+
+Small exact tournament quotient census
+================================================================================================================
+ n  A000568   rooted   root/A H buckets   score  struct          H range
+----------------------------------------------------------------------------------------------------------------
+ 3        2        4     2.00         2       2       2       1..3
+ 4        4       12     3.00         3       4       4       1..5
+ 5       12       48     4.00         7       9       9       1..15
+ 6       56      296     5.29        19      22      22       1..45
+
+Reading: H and score sequence are useful quotient coordinates, but they are far coarser than isomorphism.  Rooting already expands the state space by a factor between 1 and n.
+
+Initial LRC half-turn clock as a path in the quotient
+================================================================================================================
+ n  cells  labeled  unrooted   rooted H vals  A000568 rooted all  unroot %   root %
+----------------------------------------------------------------------------------------------------------------
+ 3      4        4         2        3      2        2          4   100.00%   75.00%
+ 4      8        8         2        6      2        4         12    50.00%   50.00%
+ 5     12       12         4        9      4       12         48    33.33%   18.75%
+ 6     20       20         4       12      4       56        296     7.14%    4.05%
+ 7     24       24         7       17      7      456          -     1.54%        -
+
+Reading: the LRC clock is a thin deterministic walk in the tournament quotient, not a census of all A000568 classes.  Rooting by the stationary runner recovers information that the unrooted quotient deliberately forgets.
+
+n=14/n=18 hard-row rooted isoclass shadows
+================================================================================================================
+gauge            row           sid   Hratio  root width    c3  SCC   debt   gap*debt
+----------------------------------------------------------------------------------------------------------------
+phase_half       n14-initial    S1   2.2651     7     1   112   14      6          0
+phase_half       n14-s7         S2   2.0831     7     3   110   14     84       5/11
+phase_half       n14-s14        S3   1.6752     7     3   106   14    168       5/11
+phase_half       n14-s28        S3   1.6752     7     3   106   14    336       5/11
+phase_half       n18-initial    S4   2.3675     9     1   240   18      6          0
+phase_half       n18-s9         S5   2.3981     8     1   240   18    176          1
+phase_half       n18-s18        S6   2.0965    10     3   236   18    352          1
+phase_half       n18-s36        S6   2.0965    10     3   236   18    704          1
+----------------------------------------------------------------------------------------------------------------
+safe_phase_gate  n14-initial    S1   2.2651     7     1   112   14      6          0
+safe_phase_gate  n14-s7         S2   0.0495    12     8    70   12     84       5/11
+safe_phase_gate  n14-s14        S3   0.2304    13     9    84   13    168       5/11
+safe_phase_gate  n14-s28        S3   0.2304    13     9    84   13    336       5/11
+safe_phase_gate  n18-initial    S4   2.3675     9     1   240   18      6          0
+safe_phase_gate  n18-s9         S5   0.2601    17    10   201   17    176          1
+safe_phase_gate  n18-s18        S6   0.0204    16    12   158   16    352          1
+safe_phase_gate  n18-s36        S6   0.0204    16    12   158   16    704          1
+----------------------------------------------------------------------------------------------------------------
+pressure_k2      n14-initial    S1   0.0000    13    13     0    1      6          0
+pressure_k2      n14-s7         S2   0.0172    12    11    40   14     84       5/11
+pressure_k2      n14-s14        S3   0.0052    13    11    26   13    168       5/11
+pressure_k2      n14-s28        S3   0.0052    13    11    26   13    336       5/11
+pressure_k2      n18-initial    S4   0.0000    17    17     0    1      6          0
+pressure_k2      n18-s9         S5   0.0000    17    15    37   17    176          1
+pressure_k2      n18-s18        S6   0.0000    15    14    40   18    352          1
+pressure_k2      n18-s36        S7   0.0000    15    16    24   17    704          1
+----------------------------------------------------------------------------------------------------------------
+
+Reading: after the first gate, the hard ladders often keep the same coarse rooted shadow while endpoint debt continues to move.  This is exactly the shape of a fiber problem over an A000568-like base.
+
+Creative bridge routes
+================================================================================================================
+route                A000568 side                               LRC side                                         risk
+----------------------------------------------------------------------------------------------------------------
+unrooted base        ordinary tournament quotient, counted by A000568 phase_half H lives here as a coarse class height cannot see the stationary observer or endpoint debt
+rooted lift          tournament quotient with one marked vertex observer 0 is fixed; root score becomes meaningful probably the first faithful LRC quotient
+marked lift          rooted class plus safe mask / endpoint labels safe_phase_gate and endpoint debt live in this fiber needs a Burnside formula with colored vertices/arcs
+pressure lift        rooted class plus deletion-relief orientation pressure_k2 SCCs model all-protected endpoint cores H is intentionally small; use SCC/source/sink data
+fiber recursion      A000568 roughly multiplies by 2^(n-1)/n    LRC gates add binary pair data then quotient by time/speed symmetry first-gate H drop plus debt plateau is the diagnostic
+fixed-point killing  even permutation cycles contribute zero to Burnside unit endpoint protection requires divisibility/gate support turn endpoint impossibility into a fixed-point-free lemma
+bad-class emptiness  prove no isoclass has a forbidden invariant vector counterexample class would have phase alarm plus pressure SCC plus no witness requires a finite marked-species theorem, not a scalar inequality
+
+S507 synthesis
+================================================================================================================
+The strong version of the user's hypothesis should be phrased as a marked quotient theorem, not as plain equality with A000568.
+
+Candidate theorem shape:
+
+  LRC counterexamples correspond to nonempty bad orbits in a rooted, endpoint-marked tournament species over the A000568 base.
+
+The bad orbit must simultaneously have:
+
+  1. no positive lonely gap and no unprotected endpoint;
+  2. high or unstable phase_half H rather than a harmless plateau;
+  3. a safe_phase endpoint alarm;
+  4. a pressure_k2 SCC carrying the surviving endpoint core.
+
+The computations here support the opposite pattern on the known hard ladders: phase shadows stabilize after the first gate while endpoint debt is exported inside the rooted/marked fiber.
