@@ -37,5 +37,6 @@ find the 3-channel analogue of "a+b+c odd" (a condition mod 6). Characterize whi
 of the 8/16 n=4 frames give the iso bijection (likely the strongly-connected 4-cycle
 frames). Relate the special pair (speed n/2) to the source-sink/diameter (HYP-2008).
 
-**Files:** `04-computation/independent_pairs_channels_s532.py` (+.out). Reflection:
+**Files:** `04-computation/independent_pairs_channels_s532.py` (+.out),
+`04-computation/lrc_independent_pairs_s532.py` (+.out). Reflection:
 `07-reflections/independent-pairs-are-the-channels-s532.md`.

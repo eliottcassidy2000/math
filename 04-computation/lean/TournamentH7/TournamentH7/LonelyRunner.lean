@@ -215,6 +215,50 @@ theorem three_lonely_sieve_cover (v : ι → ℤ)
   · exact ⟨(1 : ℝ) / 3, sieve_one_div 3 3 v (le_refl 3) (by norm_num) h3⟩
   · exact ⟨(1 : ℝ) / 2, sieve_one_div 3 2 v (by norm_num) (by norm_num) h2⟩
 
+/-- **A checked residual family at `n = 3`.**  The sieve cover above cannot see
+families containing a multiple of `3`; nevertheless each pair `{1, 3r}` has the
+explicit witness `t = 1/3 + 1/(9r)`.  The first runner lies just inside the
+central band and the second runner lands exactly at fractional part `1/3`. -/
+theorem three_one_three_mul_lonely (r : ℕ) (hr : 0 < r) :
+    ∃ t : ℝ, Lonely 3
+      (fun i : Fin 2 => if i = 0 then (1 : ℤ) else (3 * (r : ℤ))) t := by
+  let t : ℝ := (1 : ℝ) / 3 + 1 / (9 * (r : ℝ))
+  refine ⟨t, ?_⟩
+  rw [lonely_iff_fract_mem]
+  intro i
+  have hrR : (0 : ℝ) < (r : ℝ) := by exact_mod_cast hr
+  have hrR1 : (1 : ℝ) ≤ (r : ℝ) := by exact_mod_cast hr
+  have hden : (9 : ℝ) ≤ 9 * (r : ℝ) := by nlinarith
+  have hsmall : (1 : ℝ) / (9 * (r : ℝ)) ≤ 1 / 9 := by
+    exact one_div_le_one_div_of_le (by norm_num : (0 : ℝ) < 9) hden
+  have ht_ge : (1 : ℝ) / 3 ≤ t := by
+    dsimp [t]
+    have hnonneg : (0 : ℝ) ≤ 1 / (9 * (r : ℝ)) := by positivity
+    linarith
+  have ht_le : t ≤ (2 : ℝ) / 3 := by
+    dsimp [t]
+    linarith
+  have ht_nonneg : (0 : ℝ) ≤ t := by linarith
+  have ht_lt_one : t < 1 := by linarith
+  have hfract_t : Int.fract t = t := Int.fract_eq_self.mpr ⟨ht_nonneg, ht_lt_one⟩
+  fin_cases i
+  · norm_num
+    rw [hfract_t]
+    constructor
+    · exact ht_ge
+    · linarith
+  · norm_num
+    have hmul : (3 : ℝ) * (r : ℝ) * t = (r : ℝ) + (1 : ℝ) / 3 := by
+      dsimp [t]
+      field_simp [ne_of_gt hrR]
+      ring_nf
+    rw [hmul]
+    have hfract : Int.fract ((r : ℝ) + (1 : ℝ) / 3) = (1 : ℝ) / 3 := by
+      rw [Int.fract_natCast_add]
+      norm_num
+    rw [hfract]
+    constructor <;> norm_num
+
 end Cases
 
 /-! ### Axiom audit
@@ -234,5 +278,6 @@ project-specific axioms underlie the LRC sieve theory. -/
 #print axioms lonely_of_no_multiple
 #print axioms lonely_two
 #print axioms three_lonely_sieve_cover
+#print axioms three_one_three_mul_lonely
 
 end LonelyRunner

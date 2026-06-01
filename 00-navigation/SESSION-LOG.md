@@ -7,6 +7,13 @@
 **MY DISTINCT RESULTS (independent_pairs_boundary_s532b.py):** (1) Independent pairs index the ENTIRE iso-class set EXACTLY iff n<=4: 2^floor(n/2) >= A000568(n) holds (equality) only n=3,4; verified n=5 best 2-arc matching reaches only 4 of 12. (2) COUPLING GAP = ceil(log2 A000568) - floor(n/2) = 0,0,2,3,6,9 (n=3..8) = coupled bits beyond independent pairs = the multi-channel remainder, zero only n<=4. (3) Channel gcd-decomposition: skip j -> gcd(n,j) cycles len n/gcd(n,j); PERFECT MATCHING iff j=n/2 (diameter, even n only); n=4 = smallest even n with a diameter matching = the 2 diameters = where inside is born (S529); odd n has NO matching channel. (4) Synthesis: independent pairs = FACTORING channels (S531 modular H); coupling gap = the inside-debt obstruction (S529).
 **Artifacts:** independent_pairs_boundary_s532b.py (+.out); reflection independent-pairs-determination-boundary-and-coupling-gap-s532b.md; HYP-2013. **Handoff:** is the coupling gap an achievable bound? does LRC inside-debt resonance order match the coupling-gap channel count?
 
+## codex-2026-06-01-S533 - Integrated independent-pair channel evidence for HYP-2012
+
+**Context:** User reiterated that the multi-channel generalization should track the amount and state of independent pairs; fetched concurrent opus S532 work on independent pairs as tournament degrees of freedom.
+**Integration:** Patched `04-computation/lrc_independent_pairs_s532.py` to use exact skip-graph matching rather than a greedy independent-set pass; this corrects the n=8 tile-channel count from 3 to 4 and aligns the script with HYP-2012's `floor(n/2)` channel statement. Regenerated `05-knowledge/results/lrc_independent_pairs_s532.out`.
+**Indexing:** Added the opus script to HYP-2012's file list and to `05-knowledge/results/INDEX.md`; added HYP-2012 to the hypotheses index with the fixed-frame n=4 bijection, n=14 CRT matching, and n=6 joint-state next target.
+**Preserved local Lean work:** A concurrent local edit added `three_one_three_mul_lonely` to `LonelyRunner.lean`; focused `lake env lean TournamentH7/LonelyRunner.lean` succeeds and reports only the standard Lean axioms.
+
 ## oracle-2026-06-01-S532 - Independent pairs are the channels: the multi-channel metric is floor(n/2) (HYP-2012)
 
 **Account:** Oracle (oraclebox1). **User prompt:** the multi-channel metric is the amount & state of INDEPENDENT PAIRS; a 4-tournament's iso class is determined by flipping its 2 matching arcs (rest fixed).

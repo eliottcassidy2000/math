@@ -23,7 +23,7 @@ from __future__ import annotations
 
 from fractions import Fraction
 from math import gcd, comb, pi, sin
-from functools import reduce
+from functools import reduce, lru_cache
 from itertools import combinations
 from collections import defaultdict
 
@@ -49,47 +49,42 @@ def independent_pairs_in_tiles(n_values=[4, 5, 6, 7, 8, 14]):
         tiles = [(x, y) for y in range(1, n - 1) for x in range(y + 2, n + 1)]
         m = len(tiles)
 
-        # Build tile adjacency (tiles sharing a vertex)
-        adj = defaultdict(set)
-        for i, (x1, y1) in enumerate(tiles):
-            for j, (x2, y2) in enumerate(tiles):
-                if i < j and (x1 == x2 or x1 == y2 or y1 == x2 or y1 == y2):
-                    adj[i].add(j)
-                    adj[j].add(i)
+        allowed = {(min(x, y), max(x, y)) for x, y in tiles}
 
-        # Find maximum independent set (greedy for small n, exact for ≤ 14)
-        # For the tile graph: the max independent set = max matching of K_n
-        # restricted to the non-base-path edges.
-        # Actually, max matching of the "skip graph" on n vertices.
+        # Independent tiles are a matching in the skip graph on vertices 1..n.
+        # Use an exact recursion; the previous greedy pass undercounted n=8.
 
-        # Greedy approach: pick a tile, add it to the set, remove neighbors
-        remaining = set(range(m))
-        independent = []
-        # Sort tiles by degree (most constrained first)
-        degrees = [(len(adj[i]), i) for i in range(m)]
-        degrees.sort()
+        @lru_cache(maxsize=None)
+        def best_matching(remaining):
+            if len(remaining) < 2:
+                return ()
+            v = remaining[0]
+            best = best_matching(remaining[1:])
+            for idx in range(1, len(remaining)):
+                w = remaining[idx]
+                if (min(v, w), max(v, w)) not in allowed:
+                    continue
+                rest = remaining[1:idx] + remaining[idx + 1:]
+                candidate = ((max(v, w), min(v, w)),) + best_matching(rest)
+                if len(candidate) > len(best):
+                    best = candidate
+            return best
 
-        for _, i in degrees:
-            if i in remaining:
-                independent.append(i)
-                remaining.discard(i)
-                for j in adj[i]:
-                    remaining.discard(j)
-
-        alpha = len(independent)
+        independent_tiles = list(best_matching(tuple(range(1, n + 1))))
+        alpha = len(independent_tiles)
 
         print(f"n={n}:")
         print(f"  tiles: {m} = C({n-1},2)")
-        print(f"  max independent set (greedy): α = {alpha}")
-        print(f"  independent tiles: {[tiles[i] for i in independent]}")
+        print(f"  max independent set (exact): α = {alpha}")
+        print(f"  independent tiles: {independent_tiles}")
         print(f"  2^α = {2**alpha}")
         print(f"  A000568({n}) = {dict(zip(range(9),[1,1,1,2,4,12,56,456,6880])).get(n,'?') if n <= 8 else '?'}")
         print(f"  ratio 2^α / A000568: {2**alpha / dict(zip(range(9),[1,1,1,2,4,12,56,456,6880])).get(n,'?'):.4f}" if n <= 8 else "")
 
         # Vertex coverage by independent tiles
         used_vertices = set()
-        for i in independent:
-            used_vertices.update(tiles[i])
+        for x, y in independent_tiles:
+            used_vertices.update((x, y))
         unused = set(range(1, n + 1)) - used_vertices
         print(f"  vertices covered: {len(used_vertices)}/{n}  unused: {unused}")
         print()
@@ -97,7 +92,7 @@ def independent_pairs_in_tiles(n_values=[4, 5, 6, 7, 8, 14]):
     print("KEY PATTERN:")
     print("  n=4: α=2, 2^2=4=A000568(4). Independent pairs FULLY determine class!")
     print("  n=5: α=2, 2^2=4≠12. Need 3 'contexts' for the 4 dependent tiles.")
-    print("  n=6: α=3?, 2^3=8 vs 56. Need 7 contexts.")
+    print("  n=6: α=3, 2^3=8 vs 56. Need 7 contexts.")
     print("  The gap 2^α vs A000568 grows: the dependent structure matters more at large n.")
     print()
 

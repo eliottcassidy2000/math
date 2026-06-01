@@ -1,4 +1,4 @@
-Independent Pairs: The True Degrees of Freedom — opus-S532
+﻿Independent Pairs: The True Degrees of Freedom — opus-S532
 
 ======================================================================
 PART 1: Independent pairs in the tile graph
@@ -6,7 +6,7 @@ PART 1: Independent pairs in the tile graph
 
 n=4:
   tiles: 3 = C(3,2)
-  max independent set (greedy): α = 2
+  max independent set (exact): α = 2
   independent tiles: [(3, 1), (4, 2)]
   2^α = 4
   A000568(4) = 4
@@ -15,17 +15,17 @@ n=4:
 
 n=5:
   tiles: 6 = C(4,2)
-  max independent set (greedy): α = 2
-  independent tiles: [(4, 2), (3, 1)]
+  max independent set (exact): α = 2
+  independent tiles: [(4, 2), (5, 3)]
   2^α = 4
   A000568(5) = 12
   ratio 2^α / A000568: 0.3333
-  vertices covered: 4/5  unused: {5}
+  vertices covered: 4/5  unused: {1}
 
 n=6:
   tiles: 10 = C(5,2)
-  max independent set (greedy): α = 3
-  independent tiles: [(4, 2), (5, 3), (6, 1)]
+  max independent set (exact): α = 3
+  independent tiles: [(3, 1), (5, 2), (6, 4)]
   2^α = 8
   A000568(6) = 56
   ratio 2^α / A000568: 0.1429
@@ -33,26 +33,26 @@ n=6:
 
 n=7:
   tiles: 15 = C(6,2)
-  max independent set (greedy): α = 3
-  independent tiles: [(4, 2), (5, 3), (6, 1)]
+  max independent set (exact): α = 3
+  independent tiles: [(4, 2), (6, 3), (7, 5)]
   2^α = 8
   A000568(7) = 456
   ratio 2^α / A000568: 0.0175
-  vertices covered: 6/7  unused: {7}
+  vertices covered: 6/7  unused: {1}
 
 n=8:
   tiles: 21 = C(7,2)
-  max independent set (greedy): α = 3
-  independent tiles: [(4, 2), (5, 3), (6, 1)]
-  2^α = 8
+  max independent set (exact): α = 4
+  independent tiles: [(3, 1), (4, 2), (7, 5), (8, 6)]
+  2^α = 16
   A000568(8) = 6880
-  ratio 2^α / A000568: 0.0012
-  vertices covered: 6/8  unused: {8, 7}
+  ratio 2^α / A000568: 0.0023
+  vertices covered: 8/8  unused: set()
 
 n=14:
   tiles: 78 = C(13,2)
-  max independent set (greedy): α = 7
-  independent tiles: [(4, 2), (5, 3), (8, 6), (9, 7), (12, 10), (13, 11), (14, 1)]
+  max independent set (exact): α = 7
+  independent tiles: [(3, 1), (4, 2), (7, 5), (8, 6), (11, 9), (13, 10), (14, 12)]
   2^α = 128
   A000568(14) = ?
 
@@ -61,7 +61,7 @@ n=14:
 KEY PATTERN:
   n=4: α=2, 2^2=4=A000568(4). Independent pairs FULLY determine class!
   n=5: α=2, 2^2=4≠12. Need 3 'contexts' for the 4 dependent tiles.
-  n=6: α=3?, 2^3=8 vs 56. Need 7 contexts.
+  n=6: α=3, 2^3=8 vs 56. Need 7 contexts.
   The gap 2^α vs A000568 grows: the dependent structure matters more at large n.
 
 ======================================================================
