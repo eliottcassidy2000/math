@@ -10,6 +10,12 @@
 
 ## Combinatorics & Structure
 
+**T560** #goldbach #polygonal-numbers #zeckendorf #additive-bases | certainty: structural synthesis + finite audit | source: codex-2026-06-01-S501
+Goldbach/Helfgott, Hardy-Littlewood, Fermat polygonal numbers, and Zeckendorf are the same representation-hypergraph question with different proof currencies: smoothing by many prime representations, bounded arity by polygonal summands, or canonical no-adjacent carries by Fibonacci atoms. See HYP-1963.
+
+**T561** #lrc #proof-currencies #normal-form #bounded-certificate | certainty: proof-strategy reframing | source: codex-2026-06-01-S501
+LRC bridge-fiber work now looks like a hybrid additive-basis proof: finite row/gate invoices are Fermat-polygonal-style bounded-arity certificates, while exported endpoint debt wants a Zeckendorf/Ostrowski normal form. Random Tournament Analysis gauges are the smoothing currency.
+
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
 

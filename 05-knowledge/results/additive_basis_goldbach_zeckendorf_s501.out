@@ -1,0 +1,62 @@
+=== Additive basis comparison S501 ===
+N=5000, primes=669, largest_prime=4999
+
+Goldbach / Helfgott finite audit
+  binary Goldbach missing evens: [] count=0
+  ternary Goldbach missing odds: [] count=0
+  even n: ordered prime-pair count vs Hardy-Littlewood shape
+    n= 100 r2=  12 HL~   8.30 ratio= 1.45 local_primes=[2, 5]
+    n= 210 r2=  38 HL~  31.03 ratio= 1.22 local_primes=[2, 3, 5, 7]
+    n= 420 r2=  60 HL~  48.64 ratio= 1.23 local_primes=[2, 3, 5, 7]
+    n=1000 r2=  56 HL~  36.89 ratio= 1.52 local_primes=[2, 5]
+    n=2310 r2= 228 HL~ 180.79 ratio= 1.26 local_primes=[2, 3, 5, 7, 11]
+    n=4096 r2= 106 HL~  78.17 ratio= 1.36 local_primes=[2]
+    n=5000 r2= 152 HL~ 121.34 ratio= 1.25 local_primes=[2, 5]
+  odd n: ordered prime-triple count, normalized by n^2/log^3 n
+    n= 101 r3=    210 r3/scale=  2.02
+    n= 211 r3=    576 r3/scale=  1.98
+    n= 421 r3=   1641 r3/scale=  2.04
+    n=1001 r3=   6468 r3/scale=  2.13
+    n=2311 r3=  23337 r3/scale=  2.03
+    n=4097 r3=  60987 r3/scale=  2.09
+    n=4999 r3=  80130 r3/scale=  1.98
+
+Fermat polygonal finite audit
+  3-gonal: atoms<=5000:  99, max_terms=3, hist={1: 99, 2: 2409, 3: 2492}, first_tight=[5, 8, 14, 17, 19, 23, 26, 32]
+  4-gonal: atoms<=5000:  70, max_terms=4, hist={1: 70, 2: 1373, 3: 2726, 4: 831}, first_tight=[7, 15, 23, 28, 31, 39, 47, 55]
+  5-gonal: atoms<=5000:  57, max_terms=5, hist={1: 57, 2: 1205, 3: 3545, 4: 187, 5: 6}, first_tight=[9, 21, 31, 43, 55, 89]
+  6-gonal: atoms<=5000:  50, max_terms=6, hist={1: 50, 2: 933, 3: 3572, 4: 432, 5: 11, 6: 2}, first_tight=[11, 26]
+  7-gonal: atoms<=5000:  45, max_terms=7, hist={1: 45, 2: 760, 3: 3386, 4: 769, 5: 33, 6: 5, 7: 2}, first_tight=[13, 31]
+  8-gonal: atoms<=5000:  41, max_terms=8, hist={1: 41, 2: 637, 3: 2747, 4: 1431, 5: 127, 6: 10, 7: 5, 8: 2}, first_tight=[15, 36]
+
+Zeckendorf normal-form audit
+  Fibonacci atoms<=5000: 18 ([1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181])
+  digit_count_hist={1: 18, 2: 134, 3: 532, 4: 1211, 5: 1579, 6: 1110, 7: 369, 8: 46, 9: 1}
+  max_digits=9, avg_digits=4.848
+  all adjacent gaps >=2: True
+
+Residue smoothing table
+  m | U+U | U+U+U | tri^3 | sq^4 | pent^5 | Zeck
+  2 |  1/2 |   1/2 |     Y |    Y |      Y |    Y
+  3 |  3/3 |   3/3 |     Y |    Y |      Y |    Y
+  4 |  2/4 |   2/4 |     Y |    Y |      Y |    Y
+  5 |  5/5 |   5/5 |     Y |    Y |      Y |    Y
+  6 |  3/6 |   3/6 |     Y |    Y |      Y |    Y
+  7 |  7/7 |   7/7 |     Y |    Y |      Y |    Y
+  8 |  4/8 |   4/8 |     Y |    Y |      Y |    Y
+  9 |  9/9 |   9/9 |     Y |    Y |      Y |    Y
+ 10 | 5/10 |  5/10 |     Y |    Y |      Y |    Y
+ 11 | 11/11 | 11/11 |     Y |    Y |      Y |    Y
+ 12 | 6/12 |  6/12 |     Y |    Y |      Y |    Y
+ 13 | 13/13 | 13/13 |     Y |    Y |      Y |    Y
+ 14 | 7/14 |  7/14 |     Y |    Y |      Y |    Y
+ 15 | 15/15 | 15/15 |     Y |    Y |      Y |    Y
+ 16 | 8/16 |  8/16 |     Y |    Y |      Y |    Y
+ 17 | 17/17 | 17/17 |     Y |    Y |      Y |    Y
+ 18 | 9/18 |  9/18 |     Y |    Y |      Y |    Y
+
+Synthesis
+  primes: dense atoms, many reps; ternary adds smoothing and enables Helfgott.
+  polygonals: sparse polynomial atoms, but bounded arity kills local obstructions.
+  Zeckendorf: exponentially sparse atoms; uniqueness replaces averaging.
+  common object: representation hypergraph; the deep choice is smoothing vs normal form.

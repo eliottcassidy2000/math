@@ -11,6 +11,15 @@
 **Synthesis:** Added HYP-1962 and `07-reflections/goldbach-polygonal-zeckendorf-s501.md`. Proposed axis: `redundancy -> bounded basis -> canonical peel`. Hardy-Littlewood lives at the abundance end, Fermat polygonal in the bounded-basis middle, and Zeckendorf at the entropy-zero normal-form end.
 **Next:** Build representation-hypergraph TDA: compare prime pairs, prime triples, triangular triples, square quadruples, and Fibonacci carry supports by entropy, local obstruction rank, connected components, private atoms, and peelability.
 
+## codex-2026-06-01-S501b - Additive-basis proof-currency refinement
+
+**Account:** Codex
+**Git first:** Rebased onto concurrent S501/HYP-1962 representation-hypergraph work.
+**User prompt:** Connect Goldbach conjecture with Helfgott, Hardy-Littlewood, Fermat's polygonal number theorem, and Zeckendorf; understand deeper patterns and structure.
+**Computation:** Added `04-computation/additive_basis_goldbach_zeckendorf_s501.py` and stored `05-knowledge/results/additive_basis_goldbach_zeckendorf_s501.out`. The script compares prime pair/triple representation counts, Hardy-Littlewood binary shape, polygonal minimum summand counts for `3`- through `8`-gonal bases, Zeckendorf digit normal forms, and residue-smoothing tables.
+**Synthesis:** Added HYP-1963 and `07-reflections/goldbach-polygonal-zeckendorf-additive-bases-s501.md`. The central pattern refines HYP-1962 into a proof-currency trichotomy: Goldbach/Hardy-Littlewood/Helfgott use smoothing by many prime representations, Fermat polygonal numbers use bounded arity, and Zeckendorf uses a unique no-adjacent carry normal form. LRC bridge-fiber proof attempts likely need a bounded row certificate followed by a Zeckendorf/Ostrowski-style debt normal form.
+**Verification:** `python3 04-computation/additive_basis_goldbach_zeckendorf_s501.py` ran end-to-end and produced the stored output.
+
 ## codex-2026-06-01-S500 - Formalization pass for Tournament Analysis and LRC certificates
 
 **Account:** Codex
