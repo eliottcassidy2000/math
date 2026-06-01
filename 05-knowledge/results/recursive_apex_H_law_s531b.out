@@ -1,0 +1,21 @@
+======================================================================
+(1) DISJOINT apex flips: is H multiplicative over a separating vertex?
+======================================================================
+  n=7: H(A=[(3, 1)])=3, H(B=[(7, 5)])=3, H(A+B)=9; product=9, 1+(hA-1)+(hB-1)=5, match_prod=True, match_addq=False
+  n=8: H(A=[(3, 1)])=3, H(B=[(8, 6)])=3, H(A+B)=9; product=9, 1+(hA-1)+(hB-1)=5, match_prod=True, match_addq=False
+  n=8: H(A=[(4, 1)])=5, H(B=[(8, 5)])=5, H(A+B)=25; product=25, 1+(hA-1)+(hB-1)=9, match_prod=True, match_addq=False
+  n=9: H(A=[(4, 1)])=5, H(B=[(9, 6)])=5, H(A+B)=25; product=25, 1+(hA-1)+(hB-1)=9, match_prod=True, match_addq=False
+
+======================================================================
+(2) NESTED concentric ('diameter onion')  vs  endpoint-anchored chain
+======================================================================
+  n=5: concentric [(1, 5), (2, 4)] -> H=15;  anchored [(1, 5), (1, 3)] -> H=9, regular(rotational) H=15
+  n=6: concentric [(1, 6), (2, 5)] -> H=37;  anchored [(1, 6), (1, 4)] -> H=19
+  n=7: concentric [(1, 7), (2, 6), (3, 5)] -> H=123;  anchored [(1, 7), (1, 5), (1, 3)] -> H=31, regular(rotational) H=175
+  n=8: concentric [(1, 8), (2, 7), (3, 6)] -> H=389;  anchored [(1, 8), (1, 6), (1, 4)] -> H=73
+  n=9: concentric [(1, 9), (2, 8), (3, 7), (4, 6)] -> H=1479;  anchored [(1, 9), (1, 7), (1, 5), (1, 3)] -> H=117, regular(rotational) H=3267
+
+  Reading: concentric 'diameter onion' apex flips climb toward the regular
+  tournament H (the LRC tight witness); endpoint-anchored flips do not. The
+  apex recursion is COUPLED (S520o): H is not multiplicative even over a
+  separating vertex -- the recursive sub-ranking dependence is real.

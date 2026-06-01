@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-01-S531 - The apex applies RECURSIVELY = modular decomposition; H multiplicative over disjoint apex-modules; recursive LRC carving (HYP-2010)
+
+**Account:** Oracle (oraclebox1). **User prompt:** be very creative, long session, push math forward; see how this (the apex) applies recursively.
+**THE RECURSION:** every tile (x,y) is the APEX of the sub-polygon on the contiguous rank-block [y,x], so S530's outside/inside split recurs at every scale. The recursion IS the tournament's MODULAR DECOMPOSITION tree (= recursive sub-ranking tree S520o = recursive triangulation).
+**Three quantities, verified (recursive_apex_hierarchy_s531.py, recursive_apex_H_law_s531b.py):**
+ A. COMBINATORICS exactly self-similar: n-gon contains (n-s+1) sub-polygons of size s (s=3..n), sum=C(n-1,2)=#tiles.
+ B. H (loneliness meter): single apex-flipped block size s has H=1+2^{s-2} (verified 3,5,9,17,33,65). DISJOINT apex blocks MULTIPLY: 3*3=9, 5*5=25 (n=7,8,9) => H(T)=prod_modules H(module) (modular decomposition, transitive quotient H=1) -- CANDIDATE THM with proof sketch. NESTED flips COUPLE: concentric "diameter onion" climbs to REGULAR tournament (=regular exactly n=5 H=15; n=7=123; n=9=1479); anchored chain stays low (n=7=31). Disjoint-multiply/nested-couple = quantitative S520o "arcs not independent".
+ C. LRC: feasible arc carved recursively (cascade S527); carve tree mirrors sub-polygon tree; #components branches 1,2,4,4,2 then prunes; shrink ~ (n-2)/n. REGULAR POLYGON carves apex to EXACTLY 0 (tight); non-AP leaves positive apex. LRC = "recursive carving never empties the observer's apex".
+**Artifacts:** recursive_apex_hierarchy_s531.py (+.out), recursive_apex_H_law_s531b.py (+.out); reflection the-apex-recursion-modular-tree-recursive-H-and-recursive-carving-s531.md; HYP-2010. **Handoff:** (1) prove modular H-multiplicativity cleanly (THM candidate); (2) nested-coupling generating function; (3) make recursive carve rigorous via three-gap (Steinhaus) theorem.
+
 ## oracle-2026-06-01-S530b - Apex/source-sink arc: the exact combinatorial dictionary + LRC gap-sum (convergent with the parallel S530 pivot)
 
 **Account:** Oracle (oraclebox1). **User prompt:** outside = base path + the one arc between source and sink; that arc occupies an important place in the tiling model.

@@ -1,0 +1,21 @@
+n=4 inside-debt parity criterion + odd-sum LRC (oracle-S531)
+
+primitive triples (speeds<= 22): 1336
+(1) 'all-odd resonance <=> sum even' violations: 0
+(2) ODD-SUM triples: 752;  min |SAFE| = 1/18 = 0.0556  (all > 0 => LRC(n=4) holds on odd-sum)
+    1-odd triples: 591;  their |SAFE| values: [0.08333333333333333, 0.10714285714285714, 0.11363636363636363, 0.11666666666666667, 0.12142857142857143]  (predict all = 1/8=0.125 unless even-even pair resonates)
+    3-odd triples: 161;  e.g. (1,3,5) |SAFE|=0.1000
+(3) EVEN-SUM tight (|SAFE|=0) sets: [(1, 2, 3)]  (all even-sum: True)
+    => the hard core of LRC(n=4) is exactly the EVEN-SUM triples (inside debt active).
+
+(4) general even n: g_k != 0 iff (n/2) does NOT divide k. Top-resonance obstruction:
+   n=4: support residues mod (n/2=2): [1]  => single class {1} mod 2 => clean parity criterion (sum s_i)
+   n=6: support residues mod (n/2=3): [1, 2]  => multiple residues => no single-congruence obstruction (messier)
+   n=8: support residues mod (n/2=4): [1, 2, 3]  => multiple residues => no single-congruence obstruction (messier)
+
+READING: n=4 is special — the character lives on ONE residue class mod 2, so the
+inside debt vanishes by a clean PARITY law (sum of speeds odd). That PROVES
+LRC(n=4) on all odd-sum triples and isolates the even-sum triples (AP {1,2,3})
+as the entire remaining difficulty. n>=6 the support spreads over several
+residues, so no single parity kills the debt — the structural reason n=4 is the
+last 'clean' case.
