@@ -1,0 +1,111 @@
+LRC exact gap-race swap audit -- codex-2026-06-01 S522
+THM-387: LL can only be entered by winning an LS gap race
+
+========================================================================
+PART A: Exact swap-aware bounded audit
+========================================================================
+
+n=3 max_speed=30 primitive_sets=277
+  full analysis has closed LL: 277/277
+  exact reset race reaches LL: 277/277
+  open-winning sets: 0/277
+  wall-winning sets: 277/277
+  full/race mismatches: 0
+  aggregate race outcomes: (('loss_SS', 2523), ('non_LS', 2593), ('wall_LL', 2730))
+
+n=4 max_speed=20 primitive_sets=997
+  full analysis has closed LL: 997/997
+  exact reset race reaches LL: 997/997
+  open-winning sets: 0/997
+  wall-winning sets: 997/997
+  full/race mismatches: 0
+  aggregate race outcomes: (('degenerate', 3350), ('loss_SS', 7505), ('non_LS', 10172), ('wall_LL', 7188))
+
+n=5 max_speed=15 primitive_sets=1325
+  full analysis has closed LL: 1325/1325
+  exact reset race reaches LL: 1325/1325
+  open-winning sets: 0/1325
+  wall-winning sets: 1325/1325
+  full/race mismatches: 0
+  aggregate race outcomes: (('degenerate', 8062), ('loss_SS', 8185), ('non_LS', 12570), ('wall_LL', 8263))
+
+n=6 max_speed=12 primitive_sets=786
+  full analysis has closed LL: 786/786
+  exact reset race reaches LL: 786/786
+  open-winning sets: 0/786
+  wall-winning sets: 786/786
+  full/race mismatches: 0
+  aggregate race outcomes: (('degenerate', 6542), ('loss_SS', 5309), ('non_LS', 5884), ('wall_LL', 3865))
+
+========================================================================
+PART B: Initial segment exact race profile
+========================================================================
+
+n= 3 races=  1 outcomes=(('wall_LL', 1),) open_mu=0 wall_LL=2 max_L0=1/2 best_dt=1/6
+n= 4 races=  3 outcomes=(('loss_SS', 2), ('wall_LL', 1)) open_mu=0 wall_LL=2 max_L0=1/2 best_dt=1/12
+n= 5 races=  6 outcomes=(('degenerate', 2), ('loss_SS', 2), ('wall_LL', 2)) open_mu=0 wall_LL=4 max_L0=1/3 best_dt=1/20
+n= 6 races= 10 outcomes=(('degenerate', 2), ('loss_SS', 7), ('wall_LL', 1)) open_mu=0 wall_LL=2 max_L0=1/3 best_dt=1/30
+n= 7 races= 15 outcomes=(('degenerate', 7), ('loss_SS', 5), ('wall_LL', 3)) open_mu=0 wall_LL=6 max_L0=1/4 best_dt=1/42
+n= 8 races= 21 outcomes=(('degenerate', 7), ('loss_SS', 12), ('wall_LL', 2)) open_mu=0 wall_LL=4 max_L0=1/4 best_dt=1/56
+n= 9 races= 28 outcomes=(('degenerate', 12), ('loss_SS', 13), ('wall_LL', 3)) open_mu=0 wall_LL=6 max_L0=1/5 best_dt=1/72
+n=10 races= 36 outcomes=(('degenerate', 14), ('loss_SS', 20), ('wall_LL', 2)) open_mu=0 wall_LL=4 max_L0=1/5 best_dt=1/90
+n=11 races= 45 outcomes=(('degenerate', 23), ('loss_SS', 17), ('wall_LL', 5)) open_mu=0 wall_LL=10 max_L0=1/6 best_dt=1/110
+n=12 races= 55 outcomes=(('degenerate', 23), ('loss_SS', 30), ('wall_LL', 2)) open_mu=0 wall_LL=4 max_L0=1/6 best_dt=1/132
+n=13 races= 66 outcomes=(('degenerate', 32), ('loss_SS', 28), ('wall_LL', 6)) open_mu=0 wall_LL=12 max_L0=1/7 best_dt=1/156
+n=14 races= 78 outcomes=(('degenerate', 32), ('loss_SS', 43), ('wall_LL', 3)) open_mu=0 wall_LL=6 max_L0=1/7 best_dt=1/182
+n=15 races= 91 outcomes=(('degenerate', 45), ('loss_SS', 42), ('wall_LL', 4)) open_mu=0 wall_LL=8 max_L0=1/8 best_dt=1/210
+n=16 races=105 outcomes=(('degenerate', 51), ('loss_SS', 50), ('wall_LL', 4)) open_mu=0 wall_LL=8 max_L0=1/8 best_dt=1/240
+n=17 races=120 outcomes=(('degenerate', 62), ('loss_SS', 50), ('wall_LL', 8)) open_mu=0 wall_LL=16 max_L0=1/9 best_dt=1/272
+n=18 races=136 outcomes=(('degenerate', 62), ('loss_SS', 71), ('wall_LL', 3)) open_mu=0 wall_LL=6 max_L0=1/9 best_dt=1/306
+n=19 races=153 outcomes=(('degenerate', 79), ('loss_SS', 65), ('wall_LL', 9)) open_mu=0 wall_LL=18 max_L0=1/10 best_dt=1/342
+n=20 races=171 outcomes=(('degenerate', 79), ('loss_SS', 88), ('wall_LL', 4)) open_mu=0 wall_LL=8 max_L0=1/10 best_dt=1/380
+
+========================================================================
+PART C: Tournament Analysis of exact race profiles
+========================================================================
+
+ 0. n3_initial           n=3 open_mu=0 wall=2 wins=1 losses=0 max_L0=1/2 rescued=0 strength=(0, 1, 1, Fraction(1, 1), Fraction(1, 2), 0, Fraction(-1, 6))
+    outcomes=(('wall_LL', 1),)
+ 1. n5_initial           n=5 open_mu=0 wall=4 wins=2 losses=2 max_L0=1/3 rescued=0 strength=(0, 1, 2, Fraction(1, 3), Fraction(1, 3), -2, Fraction(-1, 20))
+    outcomes=(('degenerate', 2), ('loss_SS', 2), ('wall_LL', 2))
+ 2. n5_gap_sum_refuter   n=5 open_mu=67/850 wall=18 wins=7 losses=16 max_L0=5/6 rescued=0 strength=(1, 1, 7, Fraction(7, 41), Fraction(5, 6), -16, Fraction(-1, 85))
+    outcomes=(('loss_SS', 16), ('non_LS', 18), ('wall_LL', 7))
+ 3. n6_initial           n=6 open_mu=0 wall=2 wins=1 losses=7 max_L0=1/3 rescued=0 strength=(0, 1, 1, Fraction(1, 10), Fraction(1, 3), -7, Fraction(-1, 30))
+    outcomes=(('degenerate', 2), ('loss_SS', 7), ('wall_LL', 1))
+ 4. n14_initial          n=14 open_mu=0 wall=6 wins=3 losses=43 max_L0=1/7 rescued=0 strength=(0, 1, 3, Fraction(1, 26), Fraction(1, 7), -43, Fraction(-1, 182))
+    outcomes=(('degenerate', 32), ('loss_SS', 43), ('wall_LL', 3))
+ 5. n14_gate_7           n=14 open_mu=57191/2522520 wall=24 wins=12 losses=34 max_L0=1/4 rescued=0 strength=(1, 1, 12, Fraction(12, 85), Fraction(1, 4), -34, Fraction(-1, 196))
+    outcomes=(('degenerate', 33), ('loss_SS', 34), ('non_LS', 6), ('wall_LL', 12))
+ 6. n18_initial          n=18 open_mu=0 wall=6 wins=3 losses=71 max_L0=1/9 rescued=0 strength=(0, 1, 3, Fraction(3, 136), Fraction(1, 9), -71, Fraction(-1, 306))
+    outcomes=(('degenerate', 62), ('loss_SS', 71), ('wall_LL', 3))
+ 7. n18_gate_8           n=18 open_mu=3403/262548 wall=16 wins=8 losses=64 max_L0=2/11 rescued=0 strength=(1, 1, 8, Fraction(4, 73), Fraction(2, 11), -64, Fraction(-1, 306))
+    outcomes=(('degenerate', 68), ('loss_SS', 64), ('non_LS', 6), ('wall_LL', 8))
+
+Tournament fingerprints:
+  score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1))
+  c3=0
+  SCCs=(1, 1, 1, 1, 1, 1, 1, 1)
+  Hamiltonian_paths=1
+  top order by score:
+    score=7 n14_gate_7
+    score=6 n18_gate_8
+    score=5 n5_gap_sum_refuter
+    score=4 n14_initial
+    score=3 n18_initial
+    score=2 n5_initial
+    score=1 n3_initial
+    score=0 n6_initial
+
+========================================================================
+SYNTHESIS
+========================================================================
+
+1. Exact reset races match the full closed-LL audit in the bounded windows.
+2. The no-swap approximation fails only at compactified wall/tie or
+   swap-sensitive resets in these windows; those are proof objects, not
+   counterexamples.
+3. Initial segments are visible as wall-ledger extremals: open LL measure
+   stays zero while exact reset races still hit compactified LL walls.
+4. The next proof target is a reset ledger theorem: every primitive system
+   has at least one reset whose exact wall trace reaches closed LL before
+   the next reset or short-left loss.

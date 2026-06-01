@@ -26,6 +26,9 @@ the gap race is won by g_right (i.e., LL is reached).
   3385 primitive speed sets at `n=3,4,5,6`; it predicts an `LL` race for all
   but the known wall/tie edge cases where the full compactified analysis is
   needed.
+- The exact swap-aware reset trace in `lrc_gap_race_swap_s522.py` has zero
+  full/race mismatches in the same bounded windows and shows every successful
+  first hit is a compactified `wall_LL`.
 - The initial segment {1,...,n-1} always visits LL (wall-only at t = k/n).
 - The minimum lonely measure across all tested sets approaches 0 from above
   (tightest at initial segment, where only walls are LL).
@@ -55,7 +58,7 @@ condition `L_0 > 1 - 1/n` is sufficient in simple cases but not necessary.
 ## Next steps
 
 1. Compute the exact, swap-aware race outcome rather than the current no-swap
-   approximation.
+   approximation.  (S522 supplies the first exact audit.)
 2. Prove a lower bound on the best reset runway after accounting for active
    speeds and swaps.
 3. Connect to THM-369 sieve completeness.
