@@ -632,6 +632,18 @@ A basketball lineup is a human switchboard: pass-flux orients directed social en
 **T532** #lonely-runner #switchboards #safe-distance #cyclic-crowding | certainty: sampled exact snapshots | source: codex-2026-06-01-S454
 The LRC safe-distance switchboard separates initial skeletons from structured ladders: `n14` initial and `n16` initial have safe-switch cycle count `0`, while the n14 seven-ladder and n16 dyadic ladder have `93` and `139`. Scalar lonely safety can coexist with cyclic pairwise crowding, so LRC feature extractors should keep a marked bracket plus pairwise switchboard shadows.
 
+**T540** #lonely-runner #n14 #pressure-peeling #endpoint-private | certainty: exact sampled evidence + proof target | source: codex-2026-06-01-S490
+The `n=14` hard ladders remain pressure-peelable in sampled Tournament Analysis: `d=7` and `d=14` have pressure triangles `0` and largest pressure SCC `1`. Proof target: endpoint-private row plus mobile pressure leaf gives a peel; no leaf should force an arithmetic labelled SCC. See HYP-1950.
+
+**T541** #lonely-runner #n18 #mixed-torsion #product-tree | certainty: exact scale-ladder audit | source: codex-2026-06-01-S490
+For `n=18=2*3^2`, scale ladders show controlled debt growth: `d=9` has `gap/th=1/176, unprotected=176`; `d=18` has `gap/th=1/352, unprotected=352`. This is the mixed-prime analogue of the n=14 gate-export pattern, and should be read as product-tree wall crossing.
+
+**T542** #lonely-runner #pressure-scc #disproof-filter #tournament-analysis | certainty: medium-high sampled filter | source: codex-2026-06-01-S490
+The first concrete disproof-like signal for n=14/n=18 should be `pressure_largest_scc > 1` after private leaves are removed. S490 found no such SCC in selected hard rows for `n=14 d=7,d=14` or `n=18 d=3,d=9,d=18`, pushing both toward proof-lab status.
+
+**T543** #lonely-runner #safe-gap-masks #circular-arc #edge-cover | certainty: exact static reformulation + noise bridge | source: codex-2026-06-01-S490
+Circular-arc/independent-set noise gives a useful LRC mask language: no-lonely static states have safe gaps independent in `C_n`, equivalently unsafe gaps edge-cover `C_n`. S490 witness masks have adjacent safe pairs, so the known hard rows are visibly not no-lonely masks.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-01-S490 - n=14/n=18 LRC Tournament Feedback Loop
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S480.
+**User prompt:** Work back and forth on `n=14` and `n=18` LRC many times, using forced-random searches for inspiration when stuck, and turn the resulting noise into new hypothesis checks through deep Tournament Analysis.
+**External noise:** Brief web pass used circular-arc independent set algorithms, strong-tournament Hamiltonian-path lower bounds, and zonotope/covering-radius formulations of LRC as idea injectors.
+**Computation:** Added `04-computation/lrc_n14_n18_tournament_feedback_s490.py` and stored `05-knowledge/results/lrc_n14_n18_tournament_feedback_s490.out`. The script alternates n=14 and n=18 scale ladders, computes endpoint pressure, selected two-neighbor pressure tournaments, safe-gap masks, static cycle-mask counts, and an explicit stuck/noise/next-action ledger.
+**Findings:** Known hard rows for both denominators remain pressure-peelable in sampled Tournament Analysis: `n=14 d=7,d=14` and `n=18 d=3,d=9,d=18` all have pressure triangles `0` and largest pressure SCC `1`. Endpoint debt grows as visible gaps shrink: `n=14 d=14` has `gap/th=5/1848, unprotected=168`; `n=18 d=18` has `gap/th=1/352, unprotected=352`. Safe-gap witness masks have adjacent safe pairs, so they are not no-lonely static masks.
+**Synthesis:** Added HYP-1950 and `07-reflections/lrc-n14-n18-tournament-feedback-s490.md`. Current judgment: n=14 is still the better proof target; n=18 is the better mixed-torsion discovery lab, but not a stronger disproof candidate unless a nontrivial pressure SCC appears under perturbation.
+**Next:** Implement pressure-core peeling over exact endpoint rows; for `n=18`, scan bounded perturbations around `d=9` and `d=18` specifically for `pressure_largest_scc > 1`; merge safe-gap edge-cover transitions with endpoint-private rows.
+
 ## codex-2026-05-31-S480 - Tournament Analysis Metric Lifts
 
 **Account:** Codex
