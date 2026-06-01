@@ -1,0 +1,44 @@
+LRC small-n via covering + roots-of-unity characters (oracle-S526)
+
+================================================================
+n=3 (2 runners): |B_a ∩ B_b| = 4/9 + (2/9)chi(a)chi(b)/(ab)
+================================================================
+  (a,b)=(1,2): |B∩B|=1/3=0.3333  numeric=0.3333  lonely=True (margin 0.3333)   <- TIGHT (=1/3)
+  closed form matches numerics: True
+  min over all coprime (a,b)<=12 of |B_a∩B_b| = 1/3 (= 1/3, at (1,2))
+  => |B_a∩B_b| >= 1/3 always (proved); danger arcs never cover => LRC(n=3) PROVED.
+
+================================================================
+Independence main term (1-2/n)^(n-1)  vs opus-S524
+================================================================
+  n= 3: (1-2/3)^2 = 0.1111
+  n= 4: (1-2/4)^3 = 0.1250
+  n= 5: (1-2/5)^4 = 0.1296
+  n= 6: (1-2/6)^5 = 0.1317
+  n= 7: (1-2/7)^6 = 0.1328
+  n= 8: (1-2/8)^7 = 0.1335
+  n= 9: (1-2/9)^8 = 0.1339
+  n=10: (1-2/10)^9 = 0.1342
+  n=11: (1-2/11)^10 = 0.1344
+  n=12: (1-2/12)^11 = 0.1346
+  n=13: (1-2/13)^12 = 0.1347
+  n=14: (1-2/14)^13 = 0.1348  <- opus-S524's 13.1% = (6/7)^13
+  n=15: (1-2/15)^14 = 0.1349
+  (LRC needs |SAFE| = this main term + resonance corrections > 0 or boundary.)
+
+================================================================
+n=4..7: tightness scan (exact). lonely? + min-loneliness margin
+================================================================
+  n=4: scanned 997 primitive sets (speeds<= 20); LRC failures=0; tight(margin=1/4)=1; AP (1, 2, 3) tight? True
+     tight sets: [(1, 2, 3)]
+  n=5: scanned 1745 primitive sets (speeds<= 16); LRC failures=0; tight(margin=1/5)=2; AP (1, 2, 3, 4) tight? True
+     tight sets: [(1, 2, 3, 4), (1, 3, 4, 7)]
+  n=6: scanned 1281 primitive sets (speeds<= 13); LRC failures=0; tight(margin=1/6)=2; AP (1, 2, 3, 4, 5) tight? True
+     tight sets: [(1, 2, 3, 4, 5), (1, 3, 4, 5, 9)]
+  n=7: scanned 462 primitive sets (speeds<= 11); LRC failures=0; tight(margin=1/7)=1; AP (1, 2, 3, 4, 5, 6) tight? True
+     tight sets: [(1, 2, 3, 4, 5, 6)]
+
+READING: n=3 PROVED cleanly (covering + mod-3 Legendre character). The same
+harmonic identity reduces every n to bounding a resonance/character sum; the
+main term (1-2/n)^(n-1) is opus's independence value. n>=4 leaves the multi-
+way resonance correction = the same wall as n=14, now explicit as a character sum.

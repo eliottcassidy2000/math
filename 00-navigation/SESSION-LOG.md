@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S526 - Proving small LRC with only the new methodology: n=3 PROVED (covering + mod-3 character), n>=4 reduced (HYP-2004)
+
+**Account:** Oracle (oraclebox1). **User prompt:** try proving cases smaller than n=14 using only this new methodology.
+**RESULT:** the covering reformulation (S525) + roots-of-unity characters (S522/S523) gives |SAFE| = (1-2/n)^{n-1} + resonance corrections, where (1-2/n)^{n-1} = opus-S524's independence value ((6/7)^13=0.1348 at n=14).
+**n=3 PROVED (complete, elementary):** 2 runners a<b gcd=1; only 2-term resonances; closed form |B_a∩B_b| = 4/9 + (2/9)chi(a)chi(b)/(ab), chi=Legendre mod 3 (verified vs numerics). |SAFE|=1/9+(2/9)chi(a)chi(b)/(ab) >= 0, =0 iff {1,2} (then t=1/3 boundary lonely). So LRC(n=3) holds, {1,2} unique tight = AP/regular-polygon extreme. THM-worthy.
+**Why n>=4 open:** m>=3 => m-fold intersection has 3-term+ resonances that don't factor to one character = opus's multi-way correlation; main term stays positive (->e^-2), need a sign bound on the higher-resonance correction.
+**VERIFIED (lrc_small_n_covering_proof_s526.py):** n=4..7 exact scans, 0 LRC failures, AP always tight; honest caveat: AP NOT unique tight at n=5,6 ({1,3,4,7}; {1,3,4,5,9}).
+**Scorecard:** n=2 trivial, n=3 PROVED, n>=4 reduced to bounding the higher-resonance character sum = same residual as n=14. New HYP-2004. Files: 04-computation/lrc_small_n_covering_proof_s526.py (+.out); HYP-2004-lrc-covering-harmonic-n3-proof.md; reflection 07-reflections/lrc-small-n-covering-proof-s526.md. Handoff: bound the 3-term resonance for n=4 (first case past pairwise).
+
 ## oracle-2026-06-01-S522o - Geometric proof of LRC n=3; n=4 frontier mapped
 
 **Account:** Oracle (remote-control). **User:** prove cases <n=14 using ONLY the permutohedron/geodesic methodology.
