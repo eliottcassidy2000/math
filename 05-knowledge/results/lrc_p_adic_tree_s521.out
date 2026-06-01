@@ -1,0 +1,13 @@
+TIME TREE (p=2): # lonely-live nodes per level. Fat(grows)=non-tight; 0=tight (path 1/n).
+  v=(1, 2, 4, 7) (n=5): live lvl1..6 = [2, 2, 4, 4, 6, 12]   -> non-tight (fat, dim 1)
+  v=(1, 2, 3, 4) (n=5): live lvl1..6 = [0, 0, 0, 0, 0, 0]   -> TIGHT (dim 0, path 1/n)
+  v=(1, 3, 4, 5, 9) (n=6): live lvl1..6 = [0, 0, 0, 0, 0, 0]   -> TIGHT (dim 0, path 1/n)
+  v=(2, 3, 5, 7, 11) (n=6): live lvl1..6 = [2, 4, 6, 6, 6, 10]   -> non-tight (fat, dim 1)
+
+SPEED TREE: doublings (2-adic edges, benign) vs sum-relations (cross-tree, obstruction):
+  v=(1, 2, 3, 4): 2-adic vals={1: 0, 2: 1, 3: 0, 4: 2}; doublings=[(1, 2), (2, 4)]; sum-relations=[(1, 2, 3), (1, 3, 4)]  => RESONANT
+  v=(1, 2, 4, 7): 2-adic vals={1: 0, 2: 1, 4: 2, 7: 0}; doublings=[(1, 2), (2, 4)]; sum-relations=[]  => non-resonant
+  v=(2, 3, 5, 7, 11): 2-adic vals={2: 1, 3: 0, 5: 0, 7: 0, 11: 0}; doublings=[]; sum-relations=[(2, 3, 5), (2, 5, 7)]  => RESONANT
+
+  Doublings are harmless 2-adic tree edges; the cross-tree additive triples v_i+v_j=v_k
+  are the equidistribution obstruction (Galois-Weil). First-even bridge n=2*odd = 2-adic split.
