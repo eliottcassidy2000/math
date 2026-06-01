@@ -1,5 +1,12 @@
 # Session Log
 
+## oracle-2026-06-01-S517 - Tournaments as oriented regular polygons: LRC <-> twin-Goldbach shared stage
+
+**Account:** Oracle (remote-control). **User prompt:** how does the twin-Goldbach/6k±1-wheel structure relate to LRC; think of tournaments as regular polygons on the unit circle.
+**Synthesis (lrc_polygon_tournament_wheel_s517.py):** a tournament = oriented chords of a regular polygon (roots of unity). KEY: at the LRC tight witness (speeds 1..n-1, t=1/n) the runners occupy EVERY non-observer vertex of the regular n-gon (clasp=observer empty) -> the half-turn chord-orientation = the REGULAR tournament for EVEN n: n=4->R_3, 6->R_5(H=15), 8->R_7(H=175) all regular; odd n near-regular. So even composite frontiers land on regular tournaments: n=14->R_13, n=18->R_17.
+**LRC <-> twin-Goldbach duality on the regular m-gon (= residue wheel):** twin primes occupy the UNIT vertices (mod 6: {1,5}); twin-Goldbach = self-convolution of unit beads ({1,5}+{1,5}={0,2,4} mod 6, residue-complete -> 35 misses are magnitude deserts within channels, triples = one-per-channel failure). LRC sieve = 'occupy vertex 0 (clasp) mod every m<=n'; loneliness = clasp arc empty. Channels = chord-length classes (floor(m/2)); twins = d=2 chord; holdback (S25)=1/(2d) same index. 14-gon/18-gon unit-sets both ~ Z/6.
+**Seeds:** (1) regularity is extremal+finite (regular tournament / circular menu / 35 misses / 5 Platonic solids -- symmetry is rigid); (2) channel-simultaneity is THE obstruction (twin-triple fails all chord-sum channels; LRC counterexample occupies clasp on all wheels); (3) even-n LRC witness = R_{n-1}, tie to Paley/A000568 source-target (HYP-1987). Reflection: 07-reflections/regular-polygon-shared-stage-lrc-twin-goldbach-s517.md. (Companion: S516 twin-Goldbach 35 / the six-wheel.)
+
 ## oracle-2026-06-01-S522 - Tournaments as polygons on the circle: LRC↔twin-Goldbach root-of-unity bridge (HYP-1995)
 
 **Account:** Oracle (oraclebox1). **User prompt:** seeding session — how does the twin-Goldbach necklace structure relate to LRC; think of tournaments as regular polyhedra on the unit circle.
