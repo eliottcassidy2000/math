@@ -1,0 +1,50 @@
+﻿
+=== n=4, max_speed=10, primitive_sets=109 ===
+target coverage: open=108, wall_only=1, missing=0
+avg block complexity p(1..4): 5.99, 9.98, 16.84, 25.32
+max target gap=123, avg return types=4.96, bad-subshift-cycle sets=109/109
+return-order score histograms: {(0, 1, 2, 3): 109}
+return-order directed 3-cycles: {0: 109}
+return-order SCC counts: {4: 109}
+return-order Hamiltonian-path counts: {1: 109}
+example AP/wall speeds=(1, 2, 3) open=False wall=True targets=2 max_gap=15 p=(5, 8, 11, 16) return_types=2 letters=('.', 'B', 'L', 'R') score=(0, 1, 2, 3) tri=0 hp=1
+  compact word prefix: .R.R.R.RWL.R.B.L.R.B.L.RWL.L.L.L
+
+=== n=5, max_speed=8, primitive_sets=69 ===
+target coverage: open=67, wall_only=2, missing=0
+avg block complexity p(1..4): 5.97, 9.94, 17.03, 25.10
+max target gap=139, avg return types=5.04, bad-subshift-cycle sets=69/69
+return-order score histograms: {(0, 1, 2, 3): 69}
+return-order directed 3-cycles: {0: 69}
+return-order SCC counts: {4: 69}
+return-order Hamiltonian-path counts: {1: 69}
+example AP/wall speeds=(1, 2, 3, 4) open=False wall=True targets=4 max_gap=23 p=(5, 8, 11, 16) return_types=4 letters=('.', 'B', 'L', 'R') score=(0, 1, 2, 3) tri=0 hp=1
+  compact word prefix: .R.R.R.R.R.RWL.R.B.L.R.RWL.L.L.R.R.RWL.L.R.B.L.RWL.L.L.L.L.L
+
+=== n=6, max_speed=7, primitive_sets=21 ===
+target coverage: open=20, wall_only=1, missing=0
+avg block complexity p(1..4): 5.95, 9.90, 16.24, 23.24
+max target gap=151, avg return types=4.62, bad-subshift-cycle sets=21/21
+return-order score histograms: {(0, 1, 2, 3): 21}
+return-order directed 3-cycles: {0: 21}
+return-order SCC counts: {4: 21}
+return-order Hamiltonian-path counts: {1: 21}
+example AP/wall speeds=(1, 2, 3, 4, 5) open=False wall=True targets=2 max_gap=79 p=(5, 8, 12, 18) return_types=2 letters=('.', 'B', 'L', 'R') score=(0, 1, 2, 3) tri=0 hp=1
+  compact word prefix: .R.R.R.R.R.R.R.R.R.RWL.R.B.B.L.R.R.B.L.L.R.B.B.L.R.B.L.L.L.L.R.R.R.R.B.L.R.B.B.L
+
+=== n=7, max_speed=8, primitive_sets=28 ===
+target coverage: open=27, wall_only=1, missing=0
+avg block complexity p(1..4): 5.96, 9.93, 16.96, 24.29
+max target gap=219, avg return types=5.64, bad-subshift-cycle sets=28/28
+return-order score histograms: {(0, 1, 2, 3): 28}
+return-order directed 3-cycles: {0: 28}
+return-order SCC counts: {4: 28}
+return-order Hamiltonian-path counts: {1: 28}
+example AP/wall speeds=(1, 2, 3, 4, 5, 6) open=False wall=True targets=6 max_gap=47 p=(5, 8, 12, 18) return_types=6 letters=('.', 'B', 'L', 'R') score=(0, 1, 2, 3) tri=0 hp=1
+  compact word prefix: .R.R.R.R.R.R.R.R.R.R.R.RWL.R.B.B.L.R.B.L.L.R.R.RWL.L.L.L.R.R.R.B.L.L.R.RWL.L.L.L
+
+=== compactified target-free candidates ===
+none in the bounded scan
+
+=== interpretation ===
+The open word can avoid G on the AP wall, but the compactified wall symbol W repairs it.  A genuine counterexample would be a periodic arithmetic word avoiding both G and W.  The bad-subshift cycle counts show that coarse symbolic factors often admit spurious target-free cycles; the proof problem is to rule out arithmetic realizability of those cycles or refine the alphabet until they disappear.

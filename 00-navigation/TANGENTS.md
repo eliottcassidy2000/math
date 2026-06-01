@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T632** #lrc #symbolic-dynamics #subshift #compactification #return-words | certainty: bounded exact probe + proof-language | source: codex-2026-06-01-S541
+LRC can be coded as a compactified periodic word: open chambers use `G/L/R/B` for observer danger occupancy and walls use `W` for closed witnesses. A counterexample would be a periodic arithmetic word avoiding `{G,W}`. Bounded `n=4..7` scans have no compactified target-free candidates; AP rows are exactly no-open-`G` but wall-`W`. Coarse bad-symbol subshifts have spurious cycles everywhere, so the next alphabet needs consistency-law labels: gate/owner/gap-race/carry or HYP-2027 pair-tension data. See HYP-2029.
+
 **T631** #lrc #nowhere-zero-flow #support-flow #cut-flow #endpoint-core | certainty: computational proof-shape | source: codex-2026-06-01-S540
 Full LRC safe measure is a support-decomposed NZ-flow enumerator over every speed sub-dipole, not only HYP-2025's full support. Dually, danger intervals form a nonnegative cover flow on the endpoint cell cycle: open witnesses are zero-flow cuts; AP walls have nowhere-zero open coverage but empty strict endpoint cores. A counterexample would need total support-flow cancellation plus a nonpeeling cover-flow core below margin `1/n`. See HYP-2026.
 
