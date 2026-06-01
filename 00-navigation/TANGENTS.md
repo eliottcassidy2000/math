@@ -692,6 +692,15 @@ The first serious disproof-shaped pressure object is not a small scalar gap but 
 **T559** #lonely-runner #pressure-potential #non-scalar-order #two-neighbor | certainty: exact S500 diagnostic | source: codex-2026-06-01-S500
 Pressure DAGs are not merely nearest-distance rankings: pressure edges descend `d1` only about `69-76%` of the time in S500. The acyclic order is therefore a real two-neighbor relation residue, matching the ranker/analyzer split in Tournament Analysis.
 
+**T560** #lonely-runner #pressure-dag #peel-certificate #tournament-analysis | certainty: exact bounded audit | source: codex-2026-06-01-S491
+A pressure search returning a DAG is not null output. For S491's bounded windows on `n14 initial`, `n14 d=7,d=14`, `n18 initial`, and `n18 d=3,d=9,d=18`, every strict deletion-relief pressure graph was a DAG: cyclic count `0`, max SCC `1`, max pressure triangles `0`. See HYP-1961.
+
+**T561** #lonely-runner #pressure-layers #endpoint-private #dag-peeling | certainty: proof-route hypothesis | source: codex-2026-06-01-S491
+Pressure DAGs give topological peel layers that should be matched to endpoint-private rows. Example source peels: `n14 d=7` has `{1,14,49}->{7,35,56,77,91}->{0,84}`; `n18 d=18` has `{1,36,90,162,270}->{18,54,126,180,198,288,306}->{0}`.
+
+**T562** #lonely-runner #pressure-scc #disproof-signal #search-priority | certainty: methodological filter | source: codex-2026-06-01-S491
+The first disproof-like pressure signal should be a labelled SCC after private leaves are removed, not merely a smaller scalar gap. Acyclic pressure means dependencies can be sorted; cyclic pressure means every runner in the core blocks another in a closed loop requiring THM-365-style arithmetic labels.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

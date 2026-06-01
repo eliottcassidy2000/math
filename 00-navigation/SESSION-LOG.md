@@ -40,6 +40,17 @@
 **Synthesis:** Patched HYP-1950 and added `07-reflections/lrc-n14-n18-tournament-pingpong-s492.md`. The first disproof-like signal to search for is now sharpened to `k2_largest_scc > 1` or `deficit_largest_scc > 1`, not merely a smaller scalar gap.
 **Verification:** `python3 -m py_compile 04-computation/lrc_n14_n18_tournament_pingpong_s492.py` succeeded; rerunning through `run_and_save.sh` produced the stored output.
 
+## codex-2026-06-01-S491 - LRC Pressure DAG Certificates
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S481/S490/S24 Tournament Analysis LRC work.
+**User prompt:** Investigate the concept of pressure searches returning DAGs.
+**Repo archaeology:** Re-read HYP-1930 and HYP-1950, plus S470/S490 pressure scripts. Prior sessions treated lack of pressure SCCs as a negative disproof signal; this session turned that into a positive certificate question.
+**Computation:** Added `04-computation/lrc_pressure_dag_s491.py` and stored `05-knowledge/results/lrc_pressure_dag_s491.out`. The script builds the strict deletion-relief pressure graph on runners `{0} union V`, records DAG status, SCCs, directed pressure triangles, source/sink topological peel layers, longest chains, exact widths on selected rows, and top relief margins.
+**Findings:** Across bounded pressure search windows for `n14 initial`, `n14 d=7`, `n14 d=14`, `n18 initial`, `n18 d=3`, `n18 d=9`, and `n18 d=18`, every sampled strict pressure graph was a DAG: cyclic count `0`, max SCC `1`, max pressure triangles `0`. Representative gap-midpoint DAGs have explicit small source/sink peel layers, e.g. `n14 d=7` source peel `{1,14,49}->{7,35,56,77,91}->{0,84}` and `n18 d=18` source peel `{1,36,90,162,270}->{18,54,126,180,198,288,306}->{0}`.
+**Synthesis:** Added HYP-1961 and `07-reflections/lrc-pressure-dags-s491.md`. The new framing: pressure cycles/SCCs are the disproof-like signal, while pressure DAGs are ordered peel certificates that should be paired with endpoint-private rows. Future pressure searches should store DAG layer vectors, not only SCC size.
+**Verification:** `python3 -m py_compile 04-computation/lrc_pressure_dag_s491.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## oracle-2026-06-01-S24 - Tournament Analysis: the runner clock as a walk in G_n
 
 **Account:** Oracle (remote-control). **User prompt:** Tournament Analysis -- lift pairwise metrics (basketball passes; runner distances/chords on a circle/sphere) to tournaments via a chosen continuous->binary comparator; find patterns as variables change.
