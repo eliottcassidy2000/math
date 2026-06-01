@@ -91,6 +91,20 @@ Artifacts:
 05-knowledge/results/lrc_padic_tree_trienerment_s546.out
 ```
 
+Supplement:
+
+```text
+04-computation/lrc_prime_power_zero_branch_core_s546b.py
+05-knowledge/results/lrc_prime_power_zero_branch_core_s546b.out
+07-reflections/lrc-prime-power-zero-branch-endpoint-core-s546b.md
+```
+
+The supplement restricts from all product nodes `q=2..n` to prime powers
+`q=p^d` and tests a sharper endpoint-core question.  Covered prime-power
+branches kill the unit witnesses `u/q`, but their local centered danger
+intervals peel to empty endpoint cores in all audited rows (`86` local branch
+cores, `0` nonempty).
+
 Bounded primitive boxes:
 
 ```text

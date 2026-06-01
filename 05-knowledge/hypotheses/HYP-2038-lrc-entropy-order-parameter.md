@@ -3,6 +3,7 @@ id: HYP-2038
 status: PARTIALLY-TRUE
 source: oracle-2026-06-01-S543
 related:
+  - HYP-2036
   - HYP-2035
   - HYP-2033
   - HYP-2003

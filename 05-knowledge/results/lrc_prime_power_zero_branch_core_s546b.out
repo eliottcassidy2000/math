@@ -1,0 +1,167 @@
+Prime-power zero-branch cover cores -- codex S546b
+==============================================================================
+A q-zero branch is the set of speeds divisible by q=p^d.
+If it is empty, unit times u/q are THM-369 sieve witnesses.
+If it is covered, the local branch intervals are tested for a
+nonpeeling endpoint-protection core.
+
+CASE n6_AP_wall: n=6, speeds=(1, 2, 3, 4, 5)
+  n*=3 factor={3: 1} valuation_hist=(('v3=0', 4), ('v3>=1', 1))
+  NZ Z_n* full-support flow count=12
+  full danger-cover endpoint core: core=0, peel_rounds=6, layers=(9, 4, 4, 4, 3, 1)
+  branch trienerment: vertices=5, ties=0, score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1)), strict_c3=0, sccs=(1, 1, 1, 1, 1), HP=1
+  q-branches:
+    q= 2 [pp] zero= 2 phi= 1 status=       covered radius=1/12 local_intervals=  2 core=0 peel_rounds=2
+    q= 3 [pp] zero= 1 phi= 2 status=       covered radius=1/18 local_intervals=  2 core=0 peel_rounds=1
+    q= 4 [pp] zero= 1 phi= 2 status=       covered radius=1/24 local_intervals=  2 core=0 peel_rounds=1
+    q= 5 [pp] zero= 1 phi= 4 status=       covered radius=1/30 local_intervals=  4 core=0 peel_rounds=1
+    q= 6 [gate] zero= 0 phi= 2 status=closed-witness radius=0 local_intervals=  0 core=0 peel_rounds=0
+
+CASE n6_Z3_bridge_open: n=6, speeds=(1, 3, 6, 9, 12)
+  n*=3 factor={3: 1} valuation_hist=(('v3=0', 1), ('v3>=1', 4))
+  NZ Z_n* full-support flow count=0
+  full danger-cover endpoint core: core=0, peel_rounds=6, layers=(19, 8, 4, 6, 2, 2)
+  branch trienerment: vertices=5, ties=0, score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1)), strict_c3=0, sccs=(1, 1, 1, 1, 1), HP=1
+  q-branches:
+    q= 2 [pp] zero= 2 phi= 1 status=       covered radius=1/36 local_intervals=  2 core=0 peel_rounds=2
+    q= 3 [pp] zero= 4 phi= 2 status=       covered radius=1/18 local_intervals=  8 core=0 peel_rounds=4
+    q= 4 [pp] zero= 1 phi= 2 status=       covered radius=1/72 local_intervals=  2 core=0 peel_rounds=1
+    q= 5 [pp] zero= 0 phi= 4 status=  open-witness radius=0 local_intervals=  0 core=0 peel_rounds=0
+    q= 6 [gate] zero= 2 phi= 2 status=       covered radius=1/36 local_intervals=  4 core=0 peel_rounds=2
+
+CASE n8_AP_wall: n=8, speeds=(1, 2, 3, 4, 5, 6, 7)
+  n*=4 factor={2: 2} valuation_hist=(('v2=0', 4), ('v2=1', 2), ('v2>=2', 1))
+  NZ Z_n* full-support flow count=555
+  full danger-cover endpoint core: core=0, peel_rounds=7, layers=(15, 10, 7, 3, 3, 2, 2)
+  branch trienerment: vertices=6, ties=0, score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1)), strict_c3=0, sccs=(1, 1, 1, 1, 1, 1), HP=1
+  q-branches:
+    q= 2 [pp] zero= 3 phi= 1 status=       covered radius=1/16 local_intervals=  3 core=0 peel_rounds=3
+    q= 3 [pp] zero= 2 phi= 2 status=       covered radius=1/24 local_intervals=  4 core=0 peel_rounds=2
+    q= 4 [pp] zero= 1 phi= 2 status=       covered radius=1/32 local_intervals=  2 core=0 peel_rounds=1
+    q= 5 [pp] zero= 1 phi= 4 status=       covered radius=1/40 local_intervals=  4 core=0 peel_rounds=1
+    q= 7 [pp] zero= 1 phi= 6 status=       covered radius=1/56 local_intervals=  6 core=0 peel_rounds=1
+    q= 8 [pp] zero= 0 phi= 4 status=closed-witness radius=0 local_intervals=  0 core=0 peel_rounds=0
+
+CASE n14_AP_wall: n=14, speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  n*=7 factor={7: 1} valuation_hist=(('v7=0', 12), ('v7>=1', 1))
+  NZ Z_n* full-support flow count=1865813436
+  full danger-cover endpoint core: core=0, peel_rounds=15, layers=(25, 16, 14, 18, 12, 6, 4, 4)
+  branch trienerment: vertices=10, ties=0, score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1)), strict_c3=0, sccs=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1), HP=1
+  q-branches:
+    q= 2 [pp] zero= 6 phi= 1 status=       covered radius=1/28 local_intervals=  6 core=0 peel_rounds=6
+    q= 3 [pp] zero= 4 phi= 2 status=       covered radius=1/42 local_intervals=  8 core=0 peel_rounds=4
+    q= 4 [pp] zero= 3 phi= 2 status=       covered radius=1/56 local_intervals=  6 core=0 peel_rounds=3
+    q= 5 [pp] zero= 2 phi= 4 status=       covered radius=1/70 local_intervals=  8 core=0 peel_rounds=2
+    q= 7 [pp] zero= 1 phi= 6 status=       covered radius=1/98 local_intervals=  6 core=0 peel_rounds=1
+    q= 8 [pp] zero= 1 phi= 4 status=       covered radius=1/112 local_intervals=  4 core=0 peel_rounds=1
+    q= 9 [pp] zero= 1 phi= 6 status=       covered radius=1/126 local_intervals=  6 core=0 peel_rounds=1
+    q=11 [pp] zero= 1 phi=10 status=       covered radius=1/154 local_intervals= 10 core=0 peel_rounds=1
+    q=13 [pp] zero= 1 phi=12 status=       covered radius=1/182 local_intervals= 12 core=0 peel_rounds=1
+    q=14 [gate] zero= 0 phi= 6 status=closed-witness radius=0 local_intervals=  0 core=0 peel_rounds=0
+
+CASE n18_AP_wall: n=18, speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+  n*=9 factor={3: 2} valuation_hist=(('v3=0', 12), ('v3=1', 4), ('v3>=2', 1))
+  NZ Z_n* full-support flow count=250199979305648
+  full danger-cover endpoint core: core=0, peel_rounds=18, layers=(29, 16, 16, 14, 16, 12, 10, 10)
+  branch trienerment: vertices=12, ties=0, score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1)), strict_c3=0, sccs=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), HP=1
+  q-branches:
+    q= 2 [pp] zero= 8 phi= 1 status=       covered radius=1/36 local_intervals=  8 core=0 peel_rounds=8
+    q= 3 [pp] zero= 5 phi= 2 status=       covered radius=1/54 local_intervals= 10 core=0 peel_rounds=5
+    q= 4 [pp] zero= 4 phi= 2 status=       covered radius=1/72 local_intervals=  8 core=0 peel_rounds=4
+    q= 5 [pp] zero= 3 phi= 4 status=       covered radius=1/90 local_intervals= 12 core=0 peel_rounds=3
+    q= 7 [pp] zero= 2 phi= 6 status=       covered radius=1/126 local_intervals= 12 core=0 peel_rounds=2
+    q= 8 [pp] zero= 2 phi= 4 status=       covered radius=1/144 local_intervals=  8 core=0 peel_rounds=2
+    q= 9 [pp] zero= 1 phi= 6 status=       covered radius=1/162 local_intervals=  6 core=0 peel_rounds=1
+    q=11 [pp] zero= 1 phi=10 status=       covered radius=1/198 local_intervals= 10 core=0 peel_rounds=1
+    q=13 [pp] zero= 1 phi=12 status=       covered radius=1/234 local_intervals= 12 core=0 peel_rounds=1
+    q=16 [pp] zero= 1 phi= 8 status=       covered radius=1/288 local_intervals=  8 core=0 peel_rounds=1
+    q=17 [pp] zero= 1 phi=16 status=       covered radius=1/306 local_intervals= 16 core=0 peel_rounds=1
+    q=18 [gate] zero= 0 phi= 6 status=closed-witness radius=0 local_intervals=  0 core=0 peel_rounds=0
+
+CASE n18_no_9_zero_branch: n=18, speeds=(1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 19)
+  n*=9 factor={3: 2} valuation_hist=(('v3=0', 13), ('v3=1', 4))
+  NZ Z_n* full-support flow count=250199979297450
+  full danger-cover endpoint core: core=0, peel_rounds=17, layers=(43, 28, 32, 20, 20, 13, 7, 7)
+  branch trienerment: vertices=12, ties=0, score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1)), strict_c3=0, sccs=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), HP=1
+  q-branches:
+    q= 2 [pp] zero= 8 phi= 1 status=       covered radius=1/36 local_intervals=  8 core=0 peel_rounds=8
+    q= 3 [pp] zero= 4 phi= 2 status=       covered radius=1/54 local_intervals=  8 core=0 peel_rounds=4
+    q= 4 [pp] zero= 4 phi= 2 status=       covered radius=1/72 local_intervals=  8 core=0 peel_rounds=4
+    q= 5 [pp] zero= 3 phi= 4 status=       covered radius=1/90 local_intervals= 12 core=0 peel_rounds=3
+    q= 7 [pp] zero= 2 phi= 6 status=       covered radius=1/126 local_intervals= 12 core=0 peel_rounds=2
+    q= 8 [pp] zero= 2 phi= 4 status=       covered radius=1/144 local_intervals=  8 core=0 peel_rounds=2
+    q= 9 [pp] zero= 0 phi= 6 status=  open-witness radius=0 local_intervals=  0 core=0 peel_rounds=0
+    q=11 [pp] zero= 1 phi=10 status=       covered radius=1/198 local_intervals= 10 core=0 peel_rounds=1
+    q=13 [pp] zero= 1 phi=12 status=       covered radius=1/234 local_intervals= 12 core=0 peel_rounds=1
+    q=16 [pp] zero= 1 phi= 8 status=       covered radius=1/288 local_intervals=  8 core=0 peel_rounds=1
+    q=17 [pp] zero= 1 phi=16 status=       covered radius=1/306 local_intervals= 16 core=0 peel_rounds=1
+    q=18 [gate] zero= 0 phi= 6 status=closed-witness radius=0 local_intervals=  0 core=0 peel_rounds=0
+
+CASE n18_18_gate_skip8: n=18, speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+  n*=9 factor={3: 2} valuation_hist=(('v3=0', 11), ('v3=1', 4), ('v3>=2', 2))
+  NZ Z_n* full-support flow count=250199979240064
+  full danger-cover endpoint core: core=0, peel_rounds=20, layers=(30, 10, 14, 12, 16, 14, 12, 10)
+  branch trienerment: vertices=12, ties=0, score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1)), strict_c3=0, sccs=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), HP=1
+  q-branches:
+    q= 2 [pp] zero= 8 phi= 1 status=       covered radius=1/36 local_intervals=  8 core=0 peel_rounds=8
+    q= 3 [pp] zero= 6 phi= 2 status=       covered radius=1/54 local_intervals= 12 core=0 peel_rounds=6
+    q= 4 [pp] zero= 3 phi= 2 status=       covered radius=1/72 local_intervals=  6 core=0 peel_rounds=3
+    q= 5 [pp] zero= 3 phi= 4 status=       covered radius=1/90 local_intervals= 12 core=0 peel_rounds=3
+    q= 7 [pp] zero= 2 phi= 6 status=       covered radius=1/126 local_intervals= 12 core=0 peel_rounds=2
+    q= 8 [pp] zero= 1 phi= 4 status=       covered radius=1/288 local_intervals=  4 core=0 peel_rounds=1
+    q= 9 [pp] zero= 2 phi= 6 status=       covered radius=1/162 local_intervals= 12 core=0 peel_rounds=2
+    q=11 [pp] zero= 1 phi=10 status=       covered radius=1/198 local_intervals= 10 core=0 peel_rounds=1
+    q=13 [pp] zero= 1 phi=12 status=       covered radius=1/234 local_intervals= 12 core=0 peel_rounds=1
+    q=16 [pp] zero= 1 phi= 8 status=       covered radius=1/288 local_intervals=  8 core=0 peel_rounds=1
+    q=17 [pp] zero= 1 phi=16 status=       covered radius=1/306 local_intervals= 16 core=0 peel_rounds=1
+    q=18 [gate] zero= 1 phi= 6 status=       covered radius=1/324 local_intervals=  6 core=0 peel_rounds=1
+
+CASE n18_36_double_gate_skip8: n=18, speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 36)
+  n*=9 factor={3: 2} valuation_hist=(('v3=0', 11), ('v3=1', 4), ('v3>=2', 2))
+  NZ Z_n* full-support flow count=250199979240064
+  full danger-cover endpoint core: core=0, peel_rounds=21, layers=(30, 11, 16, 12, 14, 18, 12, 10)
+  branch trienerment: vertices=12, ties=0, score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1)), strict_c3=0, sccs=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), HP=1
+  q-branches:
+    q= 2 [pp] zero= 8 phi= 1 status=       covered radius=1/36 local_intervals=  8 core=0 peel_rounds=8
+    q= 3 [pp] zero= 6 phi= 2 status=       covered radius=1/54 local_intervals= 12 core=0 peel_rounds=6
+    q= 4 [pp] zero= 4 phi= 2 status=       covered radius=1/72 local_intervals=  8 core=0 peel_rounds=4
+    q= 5 [pp] zero= 3 phi= 4 status=       covered radius=1/90 local_intervals= 12 core=0 peel_rounds=3
+    q= 7 [pp] zero= 2 phi= 6 status=       covered radius=1/126 local_intervals= 12 core=0 peel_rounds=2
+    q= 8 [pp] zero= 1 phi= 4 status=       covered radius=1/288 local_intervals=  4 core=0 peel_rounds=1
+    q= 9 [pp] zero= 2 phi= 6 status=       covered radius=1/162 local_intervals= 12 core=0 peel_rounds=2
+    q=11 [pp] zero= 1 phi=10 status=       covered radius=1/198 local_intervals= 10 core=0 peel_rounds=1
+    q=13 [pp] zero= 1 phi=12 status=       covered radius=1/234 local_intervals= 12 core=0 peel_rounds=1
+    q=16 [pp] zero= 1 phi= 8 status=       covered radius=1/288 local_intervals=  8 core=0 peel_rounds=1
+    q=17 [pp] zero= 1 phi=16 status=       covered radius=1/306 local_intervals= 16 core=0 peel_rounds=1
+    q=18 [gate] zero= 1 phi= 6 status=       covered radius=1/648 local_intervals=  6 core=0 peel_rounds=1
+
+CASE n18_deep_3_zero_branch: n=18, speeds=(1, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48)
+  n*=9 factor={3: 2} valuation_hist=(('v3=0', 1), ('v3=1', 11), ('v3>=2', 5))
+  NZ Z_n* full-support flow count=187649984495616
+  full danger-cover endpoint core: core=0, peel_rounds=18, layers=(113, 114, 78, 50, 26, 10, 9, 7)
+  branch trienerment: vertices=12, ties=0, score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1)), strict_c3=0, sccs=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), HP=1
+  q-branches:
+    q= 2 [pp] zero= 8 phi= 1 status=       covered radius=1/108 local_intervals=  8 core=0 peel_rounds=8
+    q= 3 [pp] zero=16 phi= 2 status=       covered radius=1/54 local_intervals= 32 core=0 peel_rounds=16
+    q= 4 [pp] zero= 4 phi= 2 status=       covered radius=1/216 local_intervals=  8 core=0 peel_rounds=4
+    q= 5 [pp] zero= 3 phi= 4 status=       covered radius=1/270 local_intervals= 12 core=0 peel_rounds=3
+    q= 7 [pp] zero= 2 phi= 6 status=       covered radius=1/378 local_intervals= 12 core=0 peel_rounds=2
+    q= 8 [pp] zero= 2 phi= 4 status=       covered radius=1/432 local_intervals=  8 core=0 peel_rounds=2
+    q= 9 [pp] zero= 5 phi= 6 status=       covered radius=1/162 local_intervals= 30 core=0 peel_rounds=5
+    q=11 [pp] zero= 1 phi=10 status=       covered radius=1/594 local_intervals= 10 core=0 peel_rounds=1
+    q=13 [pp] zero= 1 phi=12 status=       covered radius=1/702 local_intervals= 12 core=0 peel_rounds=1
+    q=16 [pp] zero= 1 phi= 8 status=       covered radius=1/864 local_intervals=  8 core=0 peel_rounds=1
+    q=17 [pp] zero= 0 phi=16 status=  open-witness radius=0 local_intervals=  0 core=0 peel_rounds=0
+    q=18 [gate] zero= 2 phi= 6 status=       covered radius=1/324 local_intervals= 12 core=0 peel_rounds=2
+
+SYNTHESIS
+------------------------------------------------------------------------------
+Audited local branch cores: 86, nonempty=0
+Audited full cover cores: 9, nonempty=0
+Prime-power zero branches do exactly one thing locally: they kill
+the unit sieve witnesses u/q.  Their local danger intervals are
+nested around those unit points, so endpoint-core peeling deletes them.
+Thus the branch does not store a counterexample core at q itself;
+it exports endpoint debt to descendant wall/event layers.
+For n=18 this matches the p-adic story: n*=9 makes zero-flow
+branches abundant, but the audited cover cores remain empty.

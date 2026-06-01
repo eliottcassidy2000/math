@@ -10,8 +10,8 @@
 
 ## Combinatorics & Structure
 
-**T636** #lrc #p-adic #tree #trienerment #sieve #gabor | certainty: bounded exact probe | source: codex-2026-06-01-S546
-Product p-adic zero branches `q=2..n` give a pure cover-core coordinate: `z_q=0` for `q<n` is a THM-369 open witness, while `z_n=0` is the compact wall. In bounded boxes `n=6..18`, tree-trienerment fingerprints have zero mixed open-survivor fibers; every open survivor has min cover `n/2`; AP is open-survivor but compact-wall at `q=n`. See HYP-2036.
+**T636** #lrc #p-adic #tree #trienerment #sieve #gabor | certainty: bounded exact probe + local lemma | source: codex-2026-06-01-S546/S546b
+Product p-adic zero branches `q=2..n` give a pure cover-core coordinate: `z_q=0` for `q<n` is a THM-369 open witness, while `z_n=0` is the compact wall. In bounded boxes `n=6..18`, tree-trienerment fingerprints have zero mixed open-survivor fibers and every open survivor has min cover `n/2`. Prime-power branches `Z_q={v:q|v}` kill unit witnesses when covered, but their local centered intervals peel to empty endpoint cores (`86` local cores, `0` nonempty), so cyclic content needs endpoint descendants, event owners, cross-prime coupling, or Gabor zero-column labels. See HYP-2036.
 
 **T633** #lrc #gabor #trienerment #time-frequency #uncertainty | certainty: bounded exact probe + synthesis | source: codex-2026-06-01-S542
 Gabor cells `(sector,harmonic)` should be ternary t(r)ienerment vertices: amplitude wins, cyclic phase orients, and equal/antipodal phase ties. Full Fourier support uncertainty holds in bounded `n=3..7`; tie-axis `B1=2M-3k` is meaningful, but unanchored fingerprints still mix good/bad states. Next move: observer-windowed or event-Gabor cells. See HYP-2031.

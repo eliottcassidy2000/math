@@ -3,13 +3,20 @@ id: HYP-2036
 status: SUPPORTED
 source: codex-2026-06-01-S546
 related:
+  - HYP-1811
+  - HYP-1812
+  - HYP-1992
   - HYP-2017
   - HYP-2019
+  - HYP-2025
+  - HYP-2026
   - HYP-2029
   - HYP-2031
   - HYP-2032
   - HYP-2033
   - HYP-2035
+  - HYP-2037
+  - HYP-2038
   - THM-369
 ---
 
@@ -67,6 +74,23 @@ AP: open_survivor=True, compact_survivor=False,
 So the product p-adic tree sees AP as the canonical open-sieve survivor whose
 only remaining sieve target is the compactified wall node `q=n`.
 
+**Prime-power endpoint-core supplement.** The companion audit
+`lrc_prime_power_zero_branch_core_s546b.py` restricts to prime powers
+`q=p^d <= n` and asks whether a covered zero branch can itself hold a local
+endpoint-protection core.  For each q-divisible speed, it builds the danger
+intervals centered at every killed unit point `u/q`.
+
+```text
+Audited local branch cores: 86, nonempty=0
+Audited full cover cores: 9, nonempty=0
+```
+
+This refines the product-tree cover scan: a branch with `z_q>0` really does kill
+the THM-369 unit witness, but the local intervals around that unit point are
+nested stars and peel to empty.  The zero branch is a gate/debt carrier, not a
+local counterexample core.  In n=18, this holds even while the `n*=9` modular
+full-support zero-flow counts remain enormous (`~1.88e14` to `~2.50e14`).
+
 **Interpretation.** HYP-2035 says the coarse channel rank is `omega(n/2)`.
 HYP-2036 adds a cover-core layer below that rank:
 
@@ -81,6 +105,14 @@ Tournament Analysis.  It is the fingerprint of an ultrametric/product-poset
 object: this p-adic relation is hierarchical rather than cyclic.  The
 Hamiltonian-path count and ternary `B1` measure cover degeneracy and tie
 freedom inside that hierarchy.
+
+HYP-2037/HYP-2038's entropy threads are complementary rather than
+contradictory: p-adic/H entropy and lonely-set box-dimension measure global
+spread, mixing, and phase boundaries on tree-like objects, while this HYP asks
+whether the local zero branch keeps a nonpeeling proof core.  The S546b answer
+is negative for bare prime-power branches, so entropy becomes proof-useful only
+after endpoint descendants, event owners, critical-wall labels, or product-tree
+coupling are retained.
 
 **Assumption challenge.** The session considered runners, gaps, fixed sections,
 section boundaries, wall-crossing events, residues, cover arcs, Fourier/Gabor
@@ -130,7 +162,13 @@ open-sieve survivor fibers and forced singleton carriers.
 5. Gabor zero-column events should be indexed by these product-tree nodes:
    `q<n` gives an open observer-zero window at `t=1/q`, and `q=n` gives the
    compactified wall analogue.
+6. Nontrivial cyclic branch trienerments require endpoint descendants, event
+   owners, or cross-prime product-tree coupling; bare prime-power branch debt is
+   transitive in the S546b audit.
 
 **Files.** `04-computation/lrc_padic_tree_trienerment_s546.py`;
 `05-knowledge/results/lrc_padic_tree_trienerment_s546.out`;
-`07-reflections/lrc-padic-tree-cover-trienerment-s546.md`.
+`04-computation/lrc_prime_power_zero_branch_core_s546b.py`;
+`05-knowledge/results/lrc_prime_power_zero_branch_core_s546b.out`;
+`07-reflections/lrc-padic-tree-cover-trienerment-s546.md`;
+`07-reflections/lrc-prime-power-zero-branch-endpoint-core-s546b.md`.
