@@ -12,8 +12,9 @@
 | Concept | Definition | Key Properties | Where Used |
 |---------|-----------|---------------|------------|
 | **Tournament** T | Complete directed graph on n vertices | Every pair has exactly one arc | Everywhere |
-| **Tournament Analysis** | Pipeline from pairwise/geometric data to binary comparators/gauges/switchboards, tournaments, invariants, and wall-crossing paths | Rankers summarize objects; switchboards summarize relations; edge-local/switch lifts preserve cyclic structure | HYP-1931, HYP-1932, HYP-1940, HYP-1941, HYP-1942, S23, S454, S455, S480, S471 |
-| **LRC first-even bridge seam** | First doubling `m -> 2m` in Lonely Runner denominators, with inherited odd-parent units and new nonunit bridge room | `n=14` has six even bridges; `n=18` has two triadic bridges `(6,12)`; gap-debt product is the key ledger | HYP-1905, HYP-1910, HYP-1920, HYP-1942, S453, S455 |
+| **Tournament Analysis** | Pipeline from pairwise/geometric data to binary comparators/gauges/switchboards, tournaments, invariants, and wall-crossing paths | Rankers summarize objects; switchboards summarize relations; edge-local/switch lifts preserve cyclic structure | HYP-1931, HYP-1932, HYP-1940, HYP-1941, HYP-1942, HYP-1952, S23, S454, S455, S480, S471, S493 |
+| **LRC first-even bridge seam** | First doubling `m -> 2m` in Lonely Runner denominators, with inherited odd-parent units and new nonunit bridge room | `n=14` has six even bridges; `n=18` has two triadic bridges `(6,12)`; gap-debt product and pressure peeling are the key ledgers | HYP-1905, HYP-1910, HYP-1920, HYP-1942, HYP-1950, HYP-1952, S453, S455, S490, S492, S493 |
+| **LRC n=18 square-core packet** | Normalized endpoint-depth packet for the `18=2*3^2` first-even row | Row-parent/gate/double-gate ladders are dyadic translates of `96*(0,2)+16*(0,3)+64*(4,2)`; bridges `6` and `12` are locally identical but globally signed | HYP-1952, S493 |
 | **Opposite tournament** T^op | Reverse all arcs: T^op(u,v) = T(v,u) | H(T) = H(T^op) for Hamiltonian paths | THM-002, THM-030 |
 | **Self-complementary (SC) tournament** | T ≅ T^op via some permutation | Exists only at n ≡ 0,1 (mod 4); |Aut| always odd (Moon) | THM-024, INV-043, T019 |
 | **Self-converse tournament** | T has an anti-automorphism | SC ⊂ Self-converse; all circulant tournaments are SC | THM-052 |

@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-01-S493 - n=18 LRC square-core packet certificate
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S492/S24 integrations.
+**User prompt:** Spend a session on `n=18` LRC, getting more abstract and creative whenever the direct route hits a wall.
+**Computation:** Added `04-computation/lrc_n18_abstract_certificate_s493.py` and stored `05-knowledge/results/lrc_n18_abstract_certificate_s493.out`. The script focuses only on `n=18`: bridge residual identity, global owner-row bridge shadows, row-parent/gate/double-gate endpoint packets, one-slot gap/debt scans, and S492-style pressure summaries.
+**Findings:** The two local bridges `6` and `12` are identical on the residual owner-18 endpoints after the forced fan; the branch only becomes signed across owner rows `7,8,9,10,11,12,16`. The row-parent/gate/double-gate ladders are dyadic translates of one normalized square-core packet `96*(0,2)+16*(0,3)+64*(4,2)` with conserved product `gap/th * debt = 1`. Nonmultiple one-slot repairs can shrink scalar gap but keep endpoint/product debt. The sampled pressure lifts still have largest SCC `1` and no directed pressure triangle.
+**Synthesis:** Added HYP-1952 and `07-reflections/lrc-n18-abstract-certificate-s493.md`. The proposed proof route is a four-part certificate: local fan lemma, global bridge-charge lemma, product-packet lemma, and pressure-leaf peeling lemma. A counterexample-like branch must erase both endpoint-private and pressure-leaf peelings, not merely improve scalar gap.
+**Verification:** `python -m py_compile 04-computation/lrc_n18_abstract_certificate_s493.py` succeeded; rerunning the script produced the stored output.
+
 ## codex-2026-06-01-S492 - n=14/n=18 LRC k2 and deficit pressure ping-pong
 
 **Account:** Codex

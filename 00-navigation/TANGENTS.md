@@ -668,6 +668,21 @@ In the scan "drop `n-1`, add one speed in `[n,n(n-1)]`," the best nonmultiple re
 **T551** #lonely-runner #n18 #tournament-analysis #safe-switch | certainty: sampled exact switchboard at t=1/n | source: codex-2026-06-01-S455
 Safe-distance switchboards are transitive on initial first-even rows but cyclic on row-parent ladders: `n=14` initial safe cycles `0` versus row-parent `93`; `n=18` initial safe cycles `0` versus row-parent `207`. Pairwise crowding is a separate obstruction layer from the scalar lonely gap.
 
+**T552** #lonely-runner #n18 #bridge-fiber #local-identity | certainty: exact residual cover computation | source: codex-2026-06-01-S493
+After the forced `n=18` fan `(1,5,7,9,11,13,17)`, bridges `6` and `12` cover exactly the same six residual owner-18 endpoints: `53/324,55/324,161/324,163/324,269/324,271/324`. The local bridge branch is a quotient illusion, not a real local dichotomy. See HYP-1952.
+
+**T553** #lonely-runner #n18 #global-bridge-charge #dual-certificate | certainty: exact owner-row shadow | source: codex-2026-06-01-S493
+The bridges `6` and `12` become distinguishable only after global owner rows enter. Owner rows `8,9,10,12` favor bridge `6`, while `7,11,16` favor bridge `12`; this signed vector is the first finite target for a row-weight dual certificate.
+
+**T554** #lonely-runner #n18 #square-core #dyadic-quotient | certainty: exact endpoint-depth invariant | source: codex-2026-06-01-S493
+The `n=18` row-parent, gate, and double-gate ladders are dyadic translates of one square-core endpoint packet. After normalizing scale `9*2^r`, each row gives `96*(0,2)+16*(0,3)+64*(4,2)`, while `gap/th * endpoint_debt = 1`.
+
+**T555** #lonely-runner #n18 #gap-debt #two-coordinate-norm | certainty: bounded one-slot scan | source: codex-2026-06-01-S493
+One-slot `n=18` scans show scalar gap can prefer nonmultiples, but endpoint/product debt does not vanish with it. The search metric should be two-coordinate: archimedean gap plus endpoint/product debt, with the conserved product acting as a certificate obstruction.
+
+**T556** #lonely-runner #pressure-leaves #peeling #tournament-analysis | certainty: sampled exact n18 pressure audit | source: codex-2026-06-01-S493
+In the sampled `n=18` lpd, gate, and single-gate repair rows, `k1`, `k2`, and deficit pressure tournaments all have largest SCC `1` and no directed pressure triangle. This turns pressure leaves into proof assets: a counterexample must survive endpoint-private peeling and mobile pressure peeling simultaneously.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
