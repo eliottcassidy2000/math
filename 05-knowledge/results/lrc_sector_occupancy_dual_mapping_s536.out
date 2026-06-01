@@ -1,0 +1,25 @@
+==========================================================================
+DUAL MAPPING: nodes = n evenly-spaced SECTORS; runners toggle edges on crossing
+==========================================================================
+  LONELINESS <=> observer's two sectors empty (c_0 = c_{n-1} = 0).
+  Pigeonhole: n-1 runners in n sectors => always >=1 empty sector.
+
+  n | realizable occ-iso / all compositions | realizable sector-tourn iso / A000568 | LRC(observer emptied)
+  4 |   13 / 20                   |   3 / 4                         | 120/121
+  5 |   38 / 70                   |   4 / 12                        | 120/121
+  6 |   136 / 252                   |   10 / 56                       | 120/121
+  7 |   470 / 924                   |   (skipped n=7)                 | 60/61
+
+  => realizable occupancy iso-classes and sector-tournament iso-classes are a
+     RESTRICTED subset; LRC = every speed set reaches the observer-emptied class.
+     (misses from LRC count = the tight AP/regular-polygon set, lonely only at
+      measure-zero t=k/n the grid skips -- the boundary extremal.)
+
+==========================================================================
+DUALITY: DFT of occupancy vector = the S529 exponential/character sum
+==========================================================================
+  n=5, speeds=(9, 12, 20, 24): max |DFT(occupancy)_m - sum_j e(-m*sector_j/n)| = 6.28e-16 (0 => exact dual)
+  n=6, speeds=(3, 16, 19, 26, 27): max |DFT(occupancy)_m - sum_j e(-m*sector_j/n)| = 4.97e-16 (0 => exact dual)
+  n=7, speeds=(2, 3, 10, 21, 26, 34): max |DFT(occupancy)_m - sum_j e(-m*sector_j/n)| = 9.04e-16 (0 => exact dual)
+  => SECTORS are the real-space dual of the Fourier/resonance picture (S529).
+     Empty observer cells (loneliness) <-> the character-sum condition, by DFT.

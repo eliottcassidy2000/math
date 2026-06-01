@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S536o - The DUAL sector mapping: nodes = n evenly-spaced sectors; most-restricted sector-tournament; DFT-dual of the resonance picture (HYP-2022)
+
+**Account:** Oracle (oraclebox1). **User prompt:** nodes of the tournament = evenly spaced sections of the circle; edges change as runners enter/leave their boundaries.
+**MAPPING:** nodes = n sectors S_k=[k/n,(k+1)/n) (regular n-gon cells), width 1/n = loneliness threshold; runners toggle edges crossing boundaries. Occupancy c(t), sum=n-1. LONELINESS <=> observer's two cells empty (c_0=c_{n-1}=0). Pigeonhole: always >=1 empty sector; LRC = steer empty cell(s) to observer (2 adjacent empty = 2/n gap); regular n-gon = tight extremal.
+**SECTOR-TOURNAMENT (occupancy ranking, cyclic tiebreak; edges flip on crossings):** realizable iso-classes 3/4, 4/12, 10/56 (R=0.75,0.33,0.18 n=4,5,6) -- MOST restricted tournament mapping yet (beats near-graph 0.59,0.35 and the runner menu). LRC=membership (observer-emptied reachable; 120/121 etc., misses=tight AP boundary). Occupancy-iso: 13/20,38/70,136/252,470/924.
+**THE DUALITY (verified ~1e-16):** DFT(occupancy) = the S529 exponential/character sum (chat_m = sum_j e^{-2pi i m sector_j/n}). SECTORS = real-space dual of the Fourier/resonance/covering picture (S529-S535). Empty observer cells (loneliness, a 2/n discrepancy hole) <-> the character condition. Unifies the dual mapping with the resonance program; LRC = one-sided occupancy discrepancy at the observer.
+**Artifacts:** lrc_sector_occupancy_dual_mapping_s536.py (+.out); reflection lrc-sectors-as-nodes-dual-mapping-occupancy-and-the-dft-duality-s536o.md; HYP-2022. **Handoff:** characterize realizable sector-tournament classes (3,4,10,...); LRC as one-sided Erdos-Turan discrepancy at observer (ties cascade S527/n=18 S534); empty-cell exclusion process.
+
 ## oracle-2026-06-01-S535o - A spectrum of LRC->structure mappings: restriction = retained metric; NEAR-GRAPH is the sweet spot (HYP-2018/2019)
 
 **Account:** Oracle (oraclebox1). **User prompt:** come up with different mappings of LRC to tournament space, still "which iso-classes can be exhibited" but with the realizable set more meaningfully RESTRICTED; multitudes of creative abstract hypotheses.
