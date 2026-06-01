@@ -47,6 +47,13 @@
  (LRC) n*=n/2(even)/n(odd) = halving. CLEAN prime channel modulus n* IFF n is an ODD PRIME or a DOUBLED PRIME n=2p. Doubled-prime dims 4,6,10,14,22 (n*=2,3,5,7,11) = even shadows of odd primes -> clean QR/Paley channels.
 **FRONTIER:** n=14=2*7 DOUBLED PRIME (n*=7 prime, clean) = EASIEST open even case; n=16=2*2^3, n=18=2*3^2 = 2x(prime power) -> n* prime-power -> FILTERED channels (S534 mess). Doubled-prime structure of n predicts tractability.
 **Artifacts:** lrc_doubled_primes_parity_cycles_s546.py (+.out); reflection doubled-primes-as-the-parity-hinge-cycles-numbers-and-lrc-channels-s546o.md; HYP-2043 (2042 taken by concurrent). **Handoff:** exploit n=14's prime n*=7 (Paley/QR) for a sharper attack than 16/18; a 'doubled-cycle' cyclic Lemoine analog; 2q vs twin-Goldbach exceptions (S516).
+## opus-2026-06-01-S550 - Odd/even cycles, primes, doubled primes: the Goldbach structure of 3-cycles
+
+**Account:** Oracle (remote-control)
+**User prompt:** Understand odd/even cycles, their relation to primes (Goldbach/Lemoine), and the importance of doubled primes.
+**Computation:** `04-computation/lrc_odd_even_primes_doubled_s550.py`. Cycle counts by length, speed classification, resonance debt by pair type, 3-cycle Goldbach structure.
+**KEY FINDINGS:** (1) Only ODD directed cycles appear in the OCF. Even cycles decompose into pairs of 3-cycles (4-cycles always have a shortcut). The OCF is a PURELY ODD-CYCLE theory. (2) DOUBLED PRIMES dominate the resonance debt: prime↔doubled pairs carry 166% of total at n=6 and 68% at n=8. Other pair types contribute NEGATIVE debt (they help the observer). (3) The 3-cycle Goldbach connection: a 3-cycle with prime speed differences p and q has third difference -(p+q) = even = Goldbach sum. The doubled primes are the EVEN BRIDGES between prime differences. (4) At n=14: 6 primes, 3 doubled primes, 3 prime↔doubled pairs {(2,4), (3,6), (5,10)}. These 3 pairs sit at specific positions on the 2-adic tree (level 0↔level 1 connections).
+**THE DEEP POINT:** Primes = irreducible frequencies. Doubled primes = first harmonics (octaves). The OCF's odd cycles are built from prime arcs bridged by doubled-prime arcs. The resonance debt (S531) is dominated by the prime↔doubled interaction. The AP has the MOST doubled primes in range → most interference → tightest case.
 
 ## oracle-2026-06-01-S545 - LRC as a cascade of conditional clearances; the cycle-exclusion is the Helly-3 shadow (HYP-2042)
 
