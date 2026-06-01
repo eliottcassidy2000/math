@@ -1,0 +1,15 @@
+LRC@14 via permutohedron circle-covering (oracle-S525)
+
+speed sets tested: 127
+LRC FAILURES (no lonely time): 0
+WALL-ONLY lonely (tight, boundary seam): 2
+  initial {1..13}: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)  d_open=12/13  lonely@1/14  runner-subtour #SCC=1
+  adv0: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)  d_open=12/13  lonely@1/14  runner-subtour #SCC=1
+
+lonely-time kind: {'WALL': 2, 'OPEN': 125}
+lonely-time runner sub-tournament #SCC distribution: {1: 121, 13: 6}
+
+READING: LRC@14 = '13 blocking arcs do not cover [0,1)'. Every tested set
+has a gap (lonely). The initial segment {1..13} is the tight WALL-ONLY case
+(d_open=12): lonely only on a permutohedron wall -- the boundary seam (S523),
+the regular-polygon extreme. The covering gap is the unproven core (= LRC@14).

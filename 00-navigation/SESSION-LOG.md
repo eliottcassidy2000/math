@@ -1,5 +1,12 @@
 # Session Log
 
+## oracle-2026-06-01-S521o - Permutohedron geometry of LRC + n=14 attempt
+
+**Account:** Oracle (remote-control). **User prompt:** understand the deep permutohedron geometry and attempt an n=14 proof.
+**Geometry:** runners' sorted order = a permutohedron Pi_{n-1} vertex (braid-arrangement {x_i=x_j} region); order changes at crossings (v_i-v_j)t in Z. So a runner system = a CLOSED GEODESIC on the permutohedral torus T^{n-1}=R^{n-1}/Lambda, homology class (v_1..v_{n-1}); its cyclic-order walk = a closed walk on the (cyclic) permutohedron. Loneliness = a SECOND arrangement {x_i=±1/n}; LRC = the geodesic enters the lonely region of the COMBINED arrangement (braid + 1/n walls). LRC = closed geodesic pierces the central box B=[1/n,1-1/n]^{n-1} (view-obstruction).
+**Computed (lrc_permutohedron_geometry_s521o.py):** (a) braid crossings over [0,1) = sum|v_i-v_j| (=S25 staircase total); resonant speeds make wall-times COINCIDE (extremal n=5: 6 distinct times vs 20 crossings) = S25 synchrony as coincident hyperplanes; (b) distinct cyclic orders visited tiny: 6,10,12 (extremal n=5,6,7) of (n-1)!=24,120,720 = order-analogue of the Fibonacci menu; (c) loneliness is NOT at braid-cell centers (0 lonely midpoints even for easy sets) -> loneliness is strictly finer than the order skeleton, carved by the 1/n-walls = the view-obstruction.
+**n=14 attempt:** LRC@14 = closed geodesic of class (v_1..v_13) on T^13 pierces box B (side 6/7). Equidistribution kills the Q-independent case; the hard case is closed geodesics (integer speeds) -- the permutohedron makes the dichotomy crisp but doesn't remove it. Weyl/zonotope covering stalls because B is a cube, not Weyl-aligned with the permutohedron. HONEST: did not prove n=14; same wall as S519/S520 (order coarse, 1/n metric is the content) at maximal geometric clarity. SHARPENING: inside each braid cell, order is fixed so loneliness = a LINEAR interval condition; LRC = union of per-cell lonely sub-intervals nonempty = the bounded-ansatz (S514) geometrized.
+**New HYP-2002. Reflection:** 07-reflections/lrc-permutohedron-geometry-and-n14-attempt-s521o.md.
 ## codex-2026-06-01-S526 - Permutohedral n=14 proof attempt (stub)
 
 **Account:** Codex

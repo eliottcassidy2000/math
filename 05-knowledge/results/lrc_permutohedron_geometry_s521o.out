@@ -1,0 +1,19 @@
+Permutohedron geometry of LRC (oracle-2026-06-01-S521o)
+
+(1) braid-wall crossings = sum|v_i-v_j| ; distinct cyclic orders; lonely cells
+ [n5 extremal (0,1,2,3,4)] crossings=6  sum|vi-vj|=20  match=True
+     distinct cyclic orders visited=6 (of (n-1)!=24)  cells=6  lonely cells=0
+ [n5 (0,2,3,5,7)] crossings=16  sum|vi-vj|=34  match=True
+     distinct cyclic orders visited=10 (of (n-1)!=24)  cells=16  lonely cells=0
+ [n6 extremal (0,1,2,3,4,5)] crossings=10  sum|vi-vj|=35  match=True
+     distinct cyclic orders visited=10 (of (n-1)!=120)  cells=10  lonely cells=0
+ [n6 (0,1,3,4,5,9)] crossings=22  sum|vi-vj|=58  match=True
+     distinct cyclic orders visited=22 (of (n-1)!=120)  cells=22  lonely cells=0
+ [n7 extremal (0..6)] crossings=12  sum|vi-vj|=56  match=True
+     distinct cyclic orders visited=12 (of (n-1)!=720)  cells=12  lonely cells=0
+
+(2) metric refinement: cyclic order does NOT determine loneliness
+   cyclic orders with BOTH lonely & non-lonely cells: 0 of 10
+   => loneliness is a METRIC condition inside a braid cell, not an order
+      property. The permutohedron is the coarse order-skeleton; LRC is
+      the 1/n metric thickening (the view-obstruction).
