@@ -1,5 +1,5 @@
 ---
-id: HYP-2041
+id: HYP-2051
 status: OPEN
 source: codex-2026-06-01-S550
 related:
@@ -7,9 +7,10 @@ related:
   - HYP-1984
   - HYP-1994
   - HYP-2040
+  - HYP-2049
 ---
 
-# HYP-2041: doubled primes are the one-dyadic lift that lets prime cycles cross parity
+# HYP-2051: doubled primes are the one-dyadic lift that lets prime cycles cross parity
 
 **Claim.** The doubled primes `2p` are important because they are the minimal
 even objects that still remember a prime odd core.  They sit at dyadic height
@@ -123,6 +124,10 @@ That is why they keep recurring near first-even frontiers such as `n=2p`:
 they carry one dyadic seam and one prime branch, with no extra odd factors and
 no higher dyadic depth.  In LRC language they are rank-one parity lifts, not
 generic composites.
+
+HYP-2049 strengthens this parity-lift reading into the recursion-bridge
+language: `2p=p+p=2*p` is the rung where the additive Goldbach diagonal and the
+multiplicative doubling bridge coincide.
 
 ## Predictions
 

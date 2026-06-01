@@ -1,0 +1,53 @@
+Level-4 tetration as the hyper-lacunary LRC extreme (codex-S551)
+sample grid: 5003 midpoints, threshold=1/(m+1) with m=6 runners
+cascade reading: runner clearances c_k are level-2 factors; prod_k c_k is the level-3 repeated-x closure
+
+Family clearance ledger
+  L2_AP        speeds=(1,2,3,4,5,6)
+    product=0.000000  credit=0.132810  product/credit=0.000000  free_energy=inf
+    danger_overlap=1.1124  mean_H_entropy=4.2321
+    c_k=[0.714171, 0.799888, 0.666200, 0.625000, 0.240336, 0.000000]
+    prefix prod=[0.714171, 0.571257, 0.380572, 0.237857, 0.057166, 0.000000]
+  L2_Fibonacci speeds=(1,2,3,5,8,13)
+    product=0.048771  credit=0.132810  product/credit=0.367221  free_energy=3.0206
+    danger_overlap=1.0210  mean_H_entropy=4.3702
+    c_k=[0.714171, 0.799888, 0.666200, 0.449580, 0.581776, 0.489960]
+    prefix prod=[0.714171, 0.571257, 0.380572, 0.171097, 0.099540, 0.048771]
+  L3_geom2     speeds=(1,2,4,8,16,32)
+    product=0.231861  credit=0.132810  product/credit=1.7458  free_energy=1.4616
+    danger_overlap=1.2907  mean_H_entropy=3.4193
+    c_k=[0.714171, 0.799888, 0.750175, 0.833955, 0.799776, 0.811189]
+    prefix prod=[0.714171, 0.571257, 0.428543, 0.357386, 0.285829, 0.231861]
+  L3_geom3     speeds=(1,3,9,27,81,243)
+    product=0.155707  credit=0.132810  product/credit=1.1724  free_energy=1.8598
+    danger_overlap=1.0778  mean_H_entropy=3.9376
+    c_k=[0.714171, 0.732997, 0.757159, 0.732728, 0.731590, 0.732832]
+    prefix prod=[0.714171, 0.523486, 0.396362, 0.290426, 0.212473, 0.155707]
+  L4_tetr2     speeds=(1,2,4,16,65536,2^^5)
+    product=0.167100  credit=0.132810  product/credit=1.2582  free_energy=1.7892
+    danger_overlap=1.1107  mean_H_entropy=3.7503
+    c_k=[0.714171, 0.799888, 0.750175, 0.749067, 0.719801, 0.723183]
+    prefix prod=[0.714171, 0.571257, 0.428543, 0.321007, 0.231061, 0.167100]
+  L4_tetr3     speeds=(1,3,27,7625597484987,3^^4,3^^5)
+    product=0.187288  credit=0.132810  product/credit=1.4102  free_energy=1.6751
+    danger_overlap=1.1825  mean_H_entropy=3.1556
+    c_k=[0.714171, 0.732997, 0.716686, 0.701652, 0.711465, 1.0000]
+    prefix prod=[0.714171, 0.523486, 0.375175, 0.263242, 0.187288, 0.187288]
+
+Tournament Analysis
+  vertices: speed families
+  observable: product high, product/credit high, danger-overlap low, mean H low, free energy low
+  switch: majority vote over the five signs; tie path = L4_tetr3 > L4_tetr2 > L3_geom3 > L3_geom2 > L2_Fibonacci > L2_AP
+  edges: L2_Fibonacci->L2_AP, L3_geom2->L2_AP, L3_geom2->L2_Fibonacci, L3_geom2->L3_geom3, L3_geom2->L4_tetr2, L3_geom2->L4_tetr3, L3_geom3->L2_AP, L3_geom3->L2_Fibonacci, L4_tetr2->L2_AP, L4_tetr2->L2_Fibonacci, L4_tetr2->L3_geom3, L4_tetr3->L2_AP, L4_tetr3->L2_Fibonacci, L4_tetr3->L3_geom3, L4_tetr3->L4_tetr2
+  scores: {'L2_AP': 0, 'L2_Fibonacci': 1, 'L3_geom2': 5, 'L3_geom3': 2, 'L4_tetr2': 3, 'L4_tetr3': 4}
+  score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3_cycles: 0
+  SCCs: [['L3_geom2'], ['L4_tetr3'], ['L4_tetr2'], ['L3_geom3'], ['L2_Fibonacci'], ['L2_AP']]
+  Hamiltonian_path_count: 1
+  edge_flips_vs_tie_path: ['L3_geom2>L3_geom3', 'L3_geom2>L4_tetr2', 'L3_geom2>L4_tetr3']
+
+Synthesis
+  Tetration does what the ladder predicts qualitatively: it is the hyper-lacunary edge of the speed spectrum, with low H-entropy and a positive sampled cascade.
+  The finite modulus still matters: towers fold modulo the sampling denominators, so a tetration family can reduce entropy without automatically maximizing the product. It is best read as the decorrelation extreme whose remaining obstructions are aliasing events.
+  Best sampled product: L3_geom2; lowest mean H-entropy: L4_tetr3.
+  Cascade product = repeated multiplication of runner clearances; the proof target is to show finite aliasing cannot create an AP-like zero factor outside the additive/tight regime.
