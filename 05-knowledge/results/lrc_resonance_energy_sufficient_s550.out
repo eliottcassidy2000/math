@@ -1,0 +1,38 @@
+==========================================================================
+RIGOROUS SUFFICIENT CONDITION: E(v) < (1-2/n)^{n-1}  =>  LRC(v).
+E dominated by small resonances; controlled by minimal resonance length l(v).
+==========================================================================
+
+(1)+(2) minimal resonance l(v), pairwise energy E2, main term, lonely measure
+
+  n=5: main term (1-2/n)^(n-1) = 0.1296
+    AP 1..n-1 (regular)  v=(1, 2, 3, 4): l(v)= 3, E2=0.1224, |LONELY|=0.0000  [LRC (E2<main)]
+    random#1             v=(24, 39, 52, 58): l(v)= 7, E2=0.0071, |LONELY|=0.1280  [LRC (E2<main)]
+    random#2             v=(2, 8, 21, 35): l(v)= 5, E2=0.0235, |LONELY|=0.1081  [LRC (E2<main)]
+    random#3             v=(20, 23, 38, 51): l(v)= 6, E2=0.0002, |LONELY|=0.1246  [LRC (E2<main)]
+    random#4             v=(8, 11, 44, 58): l(v)= 5, E2=0.0262, |LONELY|=0.1110  [LRC (E2<main)]
+
+  n=6: main term (1-2/n)^(n-1) = 0.1317
+    AP 1..n-1 (regular)  v=(1, 2, 3, 4, 5): l(v)= 3, E2=0.1053, |LONELY|=0.0000  [LRC (E2<main)]
+    random#1             v=(4, 9, 62, 63, 69): l(v)= 5, E2=0.0105, |LONELY|=0.1432  [LRC (E2<main)]
+    random#2             v=(10, 26, 35, 48, 65): l(v)= 5, E2=0.0156, |LONELY|=0.1325  [LRC (E2<main)]
+    random#3             v=(30, 38, 57, 59, 61): l(v)= 4, E2=0.0004, |LONELY|=0.1338  [LRC (E2<main)]
+    random#4             v=(19, 25, 37, 48, 63): l(v)= 4, E2=0.0003, |LONELY|=0.1243  [LRC (E2<main)]
+
+  n=7: main term (1-2/n)^(n-1) = 0.1328
+    AP 1..n-1 (regular)  v=(1, 2, 3, 4, 5, 6): l(v)= 3, E2=0.1630, |LONELY|=0.0000  [bound fails]
+    random#1             v=(33, 41, 56, 63, 76, 81): l(v)= 5, E2=0.0010, |LONELY|=0.1378  [LRC (E2<main)]
+    random#2             v=(17, 19, 34, 39, 56, 71): l(v)= 3, E2=0.0275, |LONELY|=0.1462  [LRC (E2<main)]
+    random#3             v=(6, 25, 26, 37, 42, 78): l(v)= 4, E2=0.0181, |LONELY|=0.1169  [LRC (E2<main)]
+    random#4             v=(19, 21, 26, 33, 70, 77): l(v)= 4, E2=0.0026, |LONELY|=0.1333  [LRC (E2<main)]
+
+==========================================================================
+(3) HARD CORE map: fraction of primitive sets where E2 >= main (bound fails)
+==========================================================================
+  n=5: E2>=main (bound fails) for 0/150 primitive sets; those have SMALL minimal resonance, e.g. []
+  n=6: E2>=main (bound fails) for 0/150 primitive sets; those have SMALL minimal resonance, e.g. []
+
+  => the rigorous bound E(v)<main PROVES LRC for the decorrelated majority (large
+     minimal resonance); the hard core (E>=main) is the small-minimal-resonance
+     sets, led by the AP/regular polygon. Progress = LRC reduced to bounding the
+     resonance energy of the small-minimal-resonance core (the returns, S545).

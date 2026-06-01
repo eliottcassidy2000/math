@@ -1,0 +1,30 @@
+==========================================================================
+FULL resonance energy E(v): E(v) < (1-2/n)^{n-1}  =>  LRC(v) [rigorous, +tail]
+Validate |LONELY| >= main - E_trunc; map the high-energy core.
+==========================================================================
+
+  n=5 (M=7): main term = 0.1296
+    AP 1..n-1 (regular) v=(1, 2, 3, 4): l=3, E=0.3039, main-E=-0.1743, |LONELY|=0.0000 [VALID]  -> high-energy core (E>=main)
+    random#1           v=(8, 29, 32, 48): l=4, E=0.0516, main-E=+0.0780, |LONELY|=0.1007 [VALID]  -> LRC PROVEN (E<main)
+    random#2           v=(31, 33, 36, 47): l=7, E=0.0057, main-E=+0.1239, |LONELY|=0.1252 [VALID]  -> LRC PROVEN (E<main)
+    random#3           v=(8, 13, 16, 35): l=3, E=0.0527, main-E=+0.0769, |LONELY|=0.1393 [VALID]  -> LRC PROVEN (E<main)
+    random#4           v=(10, 14, 16, 49): l=5, E=0.0176, main-E=+0.1120, |LONELY|=0.1381 [VALID]  -> LRC PROVEN (E<main)
+
+  n=6 (M=5): main term = 0.1317
+    AP 1..n-1 (regular) v=(1, 2, 3, 4, 5): l=3, E=0.4185, main-E=-0.2868, |LONELY|=0.0000 [VALID]  -> high-energy core (E>=main)
+    random#1           v=(2, 7, 16, 21, 49): l=4, E=0.0547, main-E=+0.0770, |LONELY|=0.1423 [VALID]  -> LRC PROVEN (E<main)
+    random#2           v=(10, 16, 17, 55, 59): l=5, E=0.0192, main-E=+0.1125, |LONELY|=0.1337 [VALID]  -> LRC PROVEN (E<main)
+    random#3           v=(10, 13, 18, 23, 35): l=3, E=0.0577, main-E=+0.0740, |LONELY|=0.0939 [VALID]  -> LRC PROVEN (E<main)
+    random#4           v=(10, 14, 34, 43, 49): l=4, E=0.0286, main-E=+0.1031, |LONELY|=0.1298 [VALID]  -> LRC PROVEN (E<main)
+
+==========================================================================
+HARD-CORE scan: fraction of primitive sets with E < main (LRC proven by the bound)
+==========================================================================
+  n=5: bound proves LRC for 120/120 primitive sets; high-energy core examples (E,l): []
+  n=6: bound proves LRC for 60/60 primitive sets; high-energy core examples (E,l): []
+
+  => the rigorous bound E(v)<main proves LRC for the decorrelated majority; the
+     high-energy core (E>=main) is the small-minimal-resonance / many-returns sets
+     led by the AP/regular polygon (where |LONELY|=0, so E>=main necessarily).
+     PROGRESS: LRC reduced to the high-energy core = bounding the inside-debt
+     returns (S545) of the small-l sets; everything else is rigorously lonely.

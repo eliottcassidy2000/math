@@ -1,0 +1,59 @@
+==============================================================================
+LRC minimax extremizers, the loneliness margin, and doubled-prime (q,q)
+oracle-2026-06-01-S552
+==============================================================================
+
+(P1)+(P2) exact minimax M1=min_S M(S), the tight family, and the margin
+------------------------------------------------------------------------------
+ n      1/n         M1  #tight           M2    margin=M2-1/n  ratio M2/M1
+ 4      1/4        1/4       1          2/7             1/28       1.1429
+     M1 == 1/n ? True   (LRC holds for entries<= 12: True)
+ 5      1/5        1/5       2          2/9             1/45       1.1111
+     M1 == 1/n ? True   (LRC holds for entries<= 12: True)
+ 6      1/6        1/6       2         2/11             1/66       1.0909
+     M1 == 1/n ? True   (LRC holds for entries<= 11: True)
+ 7      1/7        1/7       1         2/13             1/91       1.0769
+     M1 == 1/n ? True   (LRC holds for entries<= 11: True)
+ 8      1/8        1/8       1         2/15            1/120       1.0667
+     M1 == 1/n ? True   (LRC holds for entries<= 11: True)
+
+(P1) the EXACT tight family (all S with M(S)=M1) per n:
+------------------------------------------------------------------------------
+ n=4: M1=1/4  (1 tight)
+      (1, 2, 3)@t*=1/4 [=AP]
+      AP (1, 2, 3) in tight family? True
+ n=5: M1=1/5  (2 tight)
+      (1, 2, 3, 4)@t*=1/5 [=AP]
+      (1, 3, 4, 7)@t*=1/5
+      AP (1, 2, 3, 4) in tight family? True
+ n=6: M1=1/6  (2 tight)
+      (1, 2, 3, 4, 5)@t*=1/6 [=AP]
+      (1, 3, 4, 5, 9)@t*=1/6
+      AP (1, 2, 3, 4, 5) in tight family? True
+ n=7: M1=1/7  (1 tight)
+      (1, 2, 3, 4, 5, 6)@t*=6/7 [=AP]
+      AP (1, 2, 3, 4, 5, 6) in tight family? True
+ n=8: M1=1/8  (1 tight)
+      (1, 2, 3, 4, 5, 6, 7)@t*=1/8 [=AP]
+      AP (1, 2, 3, 4, 5, 6, 7) in tight family? True
+
+(P3) doubled primes n=2q: observer-source tournament cycle type of each
+     extremizer at its loneliest time; rotation-by-2 = the (q,q) test
+------------------------------------------------------------------------------
+ n=6=2*3: q=3; predicted necklace rotation-by-2 cycle type = (3,3)
+      rotation-by-2 cycle type (3, 3): 2 extremizer(s) <== (q,q) MATCH
+      AP (1, 2, 3, 4, 5) at t*=1/6: necklace order (by angle) = [0, 1, 2, 3, 4, 5]
+          rotation-by-2 cycle type = (3, 3)
+ n=10=2*5: q=5; predicted necklace rotation-by-2 cycle type = (5,5)
+      rotation-by-2 cycle type (5, 5): 1 extremizer(s) <== (q,q) MATCH
+      AP (1, 2, 3, 4, 5, 6, 7, 8, 9) at t*=3/10: necklace order (by angle) = [0, 7, 4, 1, 8, 5, 2, 9, 6, 3]
+          rotation-by-2 cycle type = (5, 5)
+
+==============================================================================
+READING
+------------------------------------------------------------------------------
+ M1 = 1/n exactly at every n tested => LRC holds in range AND the AP is a
+ minimax extremizer. The TIGHT FAMILY and the MARGIN mu(n)=M2-1/n are the
+ real content: a positive, clean margin means only the tight family is
+ delicate and everything else clears with room. At doubled primes the
+ extremizer necklace's rotation-by-2 cycle type is read off directly.

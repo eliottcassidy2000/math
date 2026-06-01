@@ -1,0 +1,69 @@
+==============================================================================
+LRC loneliness SPECTRAL GAP: no max-collar in (1/n, 2/(2n-1))
+oracle-2026-06-01-S552b
+==============================================================================
+
+(1)+(3) minimax M1, second value M2, margin, and the M2-family
+------------------------------------------------------------------------------
+ n= 4 (B=13): M1=1/4  M2=2/7  margin=1/28   M2==2/(2n-1)? True   margin==1/(n(2n-1))? True  [OK]
+      M2-family (4 sets) examples:
+        (1, 2, 6) @ t*=5/7   (S-AP=(0, 0, 3))
+        (1, 3, 4) @ t*=4/7   (S-AP=(0, 1, 1))
+        (1, 5, 6) @ t*=5/7   (S-AP=(0, 3, 3))
+        (2, 3, 5) @ t*=6/7   (S-AP=(1, 1, 2))
+ n= 5 (B=13): M1=1/5  M2=2/9  margin=1/45   M2==2/(2n-1)? True   margin==1/(n(2n-1))? True  [OK]
+      M2-family (4 sets) examples:
+        (1, 2, 3, 8) @ t*=7/9   (S-AP=(0, 0, 0, 4))
+        (1, 3, 4, 5) @ t*=5/9   (S-AP=(0, 1, 1, 1))
+        (1, 4, 5, 6) @ t*=5/9   (S-AP=(0, 2, 2, 2))
+        (3, 4, 7, 11) @ t*=8/9   (S-AP=(2, 2, 4, 7))
+ n= 6 (B=12): M1=1/6  M2=2/11  margin=1/66   M2==2/(2n-1)? True   margin==1/(n(2n-1))? True  [OK]
+      M2-family (5 sets) examples:
+        (1, 2, 3, 4, 10) @ t*=2/11   (S-AP=(0, 0, 0, 0, 5))
+        (1, 2, 3, 5, 8) @ t*=8/11   (S-AP=(0, 0, 0, 1, 3))
+        (1, 3, 4, 5, 7) @ t*=6/11   (S-AP=(0, 1, 1, 1, 2))
+        (1, 3, 4, 7, 10) @ t*=5/11   (S-AP=(0, 1, 1, 3, 5))
+        (1, 4, 5, 6, 7) @ t*=4/11   (S-AP=(0, 2, 2, 2, 2))
+ n= 7 (B=11): M1=1/7  M2=2/13  margin=1/91   M2==2/(2n-1)? True   margin==1/(n(2n-1))? True  [OK]
+      M2-family (4 sets) examples:
+        (1, 2, 5, 6, 7, 8) @ t*=4/13   (S-AP=(0, 0, 2, 2, 2, 2))
+        (1, 3, 4, 5, 6, 9) @ t*=7/13   (S-AP=(0, 1, 1, 1, 1, 3))
+        (1, 4, 5, 6, 7, 11) @ t*=4/13   (S-AP=(0, 2, 2, 2, 2, 5))
+        (2, 5, 6, 8, 10, 11) @ t*=12/13   (S-AP=(1, 3, 3, 4, 5, 5))
+ n= 8 (B=10): M1=1/8  M2=1/7  margin=1/56   M2==2/(2n-1)? False   margin==1/(n(2n-1))? False  [CHECK]
+      M2-family (6 sets) examples:
+        (1, 2, 3, 4, 5, 6, 8) @ t*=6/7   (S-AP=(0, 0, 0, 0, 0, 0, 1))
+        (1, 2, 3, 4, 5, 6, 9) @ t*=3/7   (S-AP=(0, 0, 0, 0, 0, 0, 2))
+        (1, 2, 3, 4, 5, 6, 10) @ t*=3/7   (S-AP=(0, 0, 0, 0, 0, 0, 3))
+        (1, 2, 4, 5, 6, 8, 10) @ t*=3/7   (S-AP=(0, 0, 1, 1, 1, 2, 3))
+        (1, 2, 4, 6, 7, 8, 10) @ t*=5/14   (S-AP=(0, 0, 1, 2, 2, 2, 3))
+        (1, 2, 6, 7, 8, 9, 10) @ t*=5/14   (S-AP=(0, 0, 3, 3, 3, 3, 3))
+ n= 9 (B=10): M1=1/9  M2=1/8  margin=1/72   M2==2/(2n-1)? False   margin==1/(n(2n-1))? False  [CHECK]
+      M2-family (2 sets) examples:
+        (1, 2, 3, 4, 5, 6, 7, 9) @ t*=1/8   (S-AP=(0, 0, 0, 0, 0, 0, 0, 1))
+        (1, 2, 3, 4, 5, 6, 7, 10) @ t*=1/8   (S-AP=(0, 0, 0, 0, 0, 0, 0, 2))
+ n=10 (B=11): M1=1/10  M2=1/9  margin=1/90   M2==2/(2n-1)? False   margin==1/(n(2n-1))? False  [CHECK]
+      M2-family (2 sets) examples:
+        (1, 2, 3, 4, 5, 6, 7, 8, 10) @ t*=5/9   (S-AP=(0, 0, 0, 0, 0, 0, 0, 0, 1))
+        (1, 2, 3, 4, 5, 6, 7, 8, 11) @ t*=5/9   (S-AP=(0, 0, 0, 0, 0, 0, 0, 0, 2))
+
+(2) STRESS TEST n=6: raise B; confirm NOTHING lands in (1/6, 2/11)
+------------------------------------------------------------------------------
+  B=12: #distinct M values=35  min=1/6 second=2/11   values strictly in (1/6,2/11): NONE -> gap holds
+  B=15: #distinct M values=62  min=1/6 second=2/11   values strictly in (1/6,2/11): NONE -> gap holds
+  B=18: #distinct M values=91  min=1/6 second=2/11   values strictly in (1/6,2/11): NONE -> gap holds
+  --- n=7 ---
+  B=11: min=1/7 second=2/13   in (1/7,2/13): NONE -> gap holds
+  B=14: min=1/7 second=2/13   in (1/7,2/13): NONE -> gap holds
+
+==============================================================================
+READING
+------------------------------------------------------------------------------
+ CLEAN LRC RESULT (this thread -> a theorem-shaped statement):
+   For n-1 distinct gcd-1 speeds, the LRC max-collar M(S) satisfies
+        M(S) = 1/n  (only the AP-tight family)   OR   M(S) >= 2/(2n-1).
+   i.e. a SPECTRAL GAP of width margin(n)=1/(n(2n-1)) ~ 1/(2n^2) just
+   above the conjectured floor 1/n. The AP is isolated: every non-tight
+   config clears the LRC bound with a definite surplus >= 1/(n(2n-1)).
+   This is exactly the 'how hard is LRC at n' quantity: the difficulty
+   is concentrated entirely in the tiny tight family; the bulk clears.

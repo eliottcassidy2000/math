@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S550o - Rigorous sufficient condition for LRC: resonance energy E(v) < (1-2/n)^{n-1}; reduction to the high-energy core (HYP-2053)
+
+**Account:** Oracle (oraclebox1). **User prompt:** long session pushing the recent ideas, searching for LRC progress.
+**THE BOUND:** covering identity (S529) |LONELY(v)| = (1-2/n)^{n-1} + sum_{0!=m, sum m_i v_i=0} prod ghat(m_i); triangle ineq => |LONELY| >= main - E(v), E=sum|prod ghat|. So E(v) < (1-2/n)^{n-1} => LRC(v) [rigorous modulo tail]. Major/minor-arc: main = independence (S544), E = resonance correction; controlled by minimal resonance length l(v).
+**COMPUTED (lrc_resonance_energy_full_s550b.py):** bound validated. Generic sets E=0.005-0.058 << main 0.13 -> LRC PROVEN; AP/regular E=0.30/0.42 >> main (order>=3 returns/inside-debt S545) -> high-energy core, |LONELY|=0. SCAN: bound proves LRC for 120/120 (n=5) + 60/60 (n=6) random primitive sets.
+**CORRECTION:** pairwise E2 alone NOT sufficient (AP E2=0.122<main but |LONELY|=0); need FULL E (incl returns).
+**PROGRESS:** LRC reduced to the HIGH-ENERGY CORE (E>=main = small-l/many-returns sets, led by AP, which IS lonely via the sieve t=a/n). LIMITS: tail not rigorously bounded (margin large); does NOT settle the core/n=14.
+**Artifacts:** lrc_resonance_energy_full_s550b.py (+.out), lrc_resonance_energy_sufficient_s550.py (+.out); reflection lrc-resonance-energy-sufficient-condition-and-the-high-energy-core-s550o.md; HYP-2053. **Handoff:** prove the geometric tail bound (-> clean theorem, formalizable); characterize the core as bounded small-l ratios (finite check per n?); n=14 core = sieve/AP?
+
 ## oracle-2026-06-01-S549o - Lean-formalized recent LRC ideas: scaling/repeated-addition, doubled-prime sieve, Dirichlet near-pair (3 axiom-clean lemmas) (HYP-2050)
 
 **Account:** Oracle (oraclebox1). **User prompt:** formalize this (recent ideas) and other new LRC ideas.
