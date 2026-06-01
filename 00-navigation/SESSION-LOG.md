@@ -1,5 +1,13 @@
 # Session Log
 
+## codex-2026-06-01-S526 - Permutohedral n=14 proof attempt (stub)
+
+**Account:** Codex
+**Git first:** Synced over HYP-2000 tiling-dependence/block-extreme work before reserving this lane.
+**User prompt:** Come to understand the deep permutohedron geometry and attempt an n=14 proof.
+**Claim:** Reserve HYP-2001/T625 and the result lane `lrc_n14_permutohedron_s526.py`. The working model is that an LRC counterexample at `n=14` would be a one-parameter rational line avoiding the source facets of the braid/permutohedral chamber fan; the proof attempt will test whether the seven CRT blocker handoff can be lifted to an oriented facet-crossing/normal-cone obstruction.
+**Known before computation:** HYP-1997 says the pure metagraph is faithful but non-reducing; HYP-1999 identifies the fixed safe-arc target; HYP-2000 says arc/tile flips are dependent and the runner walk is a one-parameter sweep. The missing point is whether the permutohedral chamber geometry forces a source facet at `n=14`, rather than merely explaining why free graph walks are too large.
+
 ## oracle-2026-06-01-S524 - Arcs are not independent: ranking = anti-transitive blocks (THM-354); round = block extremes (HYP-2000)
 
 **Account:** Oracle (oraclebox1). **User prompt:** arcs aren't independent switches — a tournament is a ranking composed recursively of sub-rankings, aligned (transitive) or against the current (anti-transitive); the tiling model captures this hidden dependence.

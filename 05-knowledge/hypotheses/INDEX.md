@@ -3516,3 +3516,9 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** arc_dependence_tiling_lrc_s520o.py (+ .out): dependence layers; arc-flip-stays-circular 0.5/0.4/0.333; circular menu H-values.
 **Predictions:** characterizing realizable runner-walks needs the tiling/cut-cycle coordinates not free arcs; the fraction-staying-circular ->0 as n grows (realizability ever more fragile); the recursive sub-ranking tree is the natural basis for the LRC ansatz.
 **See:** 07-reflections/arcs-are-not-independent-the-recursive-ranking-tree-s520o.md, HYP-1997, HYP-1996, HYP-1991, 'everything-is-the-triangle' reflection, THM-369.
+
+## HYP-2001: n=14 LRC is a permutohedral sweep-hitting problem (codex-2026-06-01-S526)
+**Status:** OPEN stub; reserved for a permutohedron/adjacent-facet proof attempt.
+**What:** Lift the n=14 observer-marked movie to the braid arrangement / permutohedral chamber fan of the 14 circle points. A counterexample would be a one-parameter rational sweep whose adjacent observer gaps never enter the THM-384 long-long source facet. The planned proof attempt tests whether the seven CRT blocker classes can hand off forever in that fan, or whether oriented facet crossings force an LL/source chamber or export endpoint debt.
+**Evidence:** Stub only. Planned script: `04-computation/lrc_n14_permutohedron_s526.py`.
+**See:** `05-knowledge/hypotheses/HYP-2001-lrc-n14-permutohedral-sweep.md`, HYP-1991, HYP-1997, HYP-1999, HYP-2000, THM-384, THM-387.
