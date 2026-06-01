@@ -1,0 +1,9 @@
+(1) Nerve/winding: do danger sub-arcs cover S^1? (cover <=> strict-LRC fails)
+   (1, 2, 3, 4): 10 sub-arcs, cover circle? True  -> strictly non-lonely (tight/boundary)
+   (1, 2, 4, 7): 14 sub-arcs, cover circle? False  -> LONELY (uncovered gap)
+   (1, 3, 4, 5, 9): 22 sub-arcs, cover circle? True  -> strictly non-lonely (tight/boundary)
+   (2, 3, 5, 7, 11): 28 sub-arcs, cover circle? False  -> LONELY (uncovered gap)
+
+(2) Factor complexity p(k) of the crossing word (symbolic dynamics):
+   (1, 2, 3) (word len 24): p(1..6)=[3, 5, 6, 6, 6, 6]  (plateaus: rational line => periodic)
+   (1, 2, 4, 7) (word len 70): p(1..6)=[4, 7, 9, 11, 12, 13]  (plateaus: rational line => periodic)
