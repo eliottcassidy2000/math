@@ -1,0 +1,48 @@
+======================================================================
+(A) Fact1(completion) <=> Fact2(no-return) <=> no-3-cycle, n=5
+======================================================================
+  4000/4000 random tournaments: Fact1 == Fact2 == (no 3-cycle). The two facts are
+  the SAME transitivity; Fact2 = 'the arc X->Y forbids the return cycle Z->X->Y->Z'.
+
+======================================================================
+(B)+(C) cascade product vs (1-2/n)^{n-1}, and the 'return' 3-cycles
+======================================================================
+  n=5: independent value (1-2/n)^(n-1) = 0.1296; #triples=4
+    AP 1..n-1 (regular)            v=(1, 2, 3, 4)
+        conditional clearances c_k=[0.6, 0.667, 0.333, 0.0]
+        product (lonely measure)=0.0000  vs indep 0.1296  (DEFICIT: returns/resonances re-block); return 3-cycles(3-term resonances)=4/4
+    random primitive               v=(7, 11, 14, 21)
+        conditional clearances c_k=[0.6, 0.602, 0.662, 0.341]
+        product (lonely measure)=0.0814  vs indep 0.1296  (DEFICIT: returns/resonances re-block); return 3-cycles(3-term resonances)=1/4
+    resonance-rich {1,2,3,5,8,..}  v=(1, 2, 3, 5)
+        conditional clearances c_k=[0.6, 0.667, 0.333, 0.4]
+        product (lonely measure)=0.0533  vs indep 0.1296  (DEFICIT: returns/resonances re-block); return 3-cycles(3-term resonances)=4/4
+  n=6: independent value (1-2/n)^(n-1) = 0.1317; #triples=10
+    AP 1..n-1 (regular)            v=(1, 2, 3, 4, 5)
+        conditional clearances c_k=[0.667, 0.75, 0.556, 0.5, 0.0]
+        product (lonely measure)=0.0000  vs indep 0.1317  (DEFICIT: returns/resonances re-block); return 3-cycles(3-term resonances)=10/10
+    random primitive               v=(2, 32, 35, 37, 43)
+        conditional clearances c_k=[0.667, 0.656, 0.661, 0.557, 0.729]
+        product (lonely measure)=0.1175  vs indep 0.1317  (>=indep: clearances propagate (transitive-like)); return 3-cycles(3-term resonances)=6/10
+    resonance-rich {1,2,3,5,8,..}  v=(1, 2, 3, 5, 8)
+        conditional clearances c_k=[0.667, 0.75, 0.556, 0.32, 0.156]
+        product (lonely measure)=0.0139  vs indep 0.1317  (DEFICIT: returns/resonances re-block); return 3-cycles(3-term resonances)=10/10
+  n=7: independent value (1-2/n)^(n-1) = 0.1328; #triples=20
+    AP 1..n-1 (regular)            v=(1, 2, 3, 4, 5, 6)
+        conditional clearances c_k=[0.714, 0.8, 0.667, 0.625, 0.24, 0.0]
+        product (lonely measure)=0.0000  vs indep 0.1328  (DEFICIT: returns/resonances re-block); return 3-cycles(3-term resonances)=20/20
+    random primitive               v=(3, 4, 16, 25, 39, 40)
+        conditional clearances c_k=[0.714, 0.7, 0.702, 0.742, 0.675, 0.696]
+        product (lonely measure)=0.1224  vs indep 0.1328  (>=indep: clearances propagate (transitive-like)); return 3-cycles(3-term resonances)=9/20
+    resonance-rich {1,2,3,5,8,..}  v=(1, 2, 3, 5, 8, 13)
+        conditional clearances c_k=[0.714, 0.8, 0.667, 0.45, 0.583, 0.489]
+        product (lonely measure)=0.0489  vs indep 0.1328  (DEFICIT: returns/resonances re-block); return 3-cycles(3-term resonances)=19/20
+
+======================================================================
+READING: c_1 = 1-2/n exactly (first clearance, unconditional). Generic speeds:
+c_k stay ~ 1-2/n, product ~ (1-2/n)^{n-1} -> clearances PROPAGATE (Fact 1), few
+return 3-cycles (Fact 2 holds) -> LOCAL EMPTINESS. AP/regular: many 3-term
+resonances (RETURN cycles, Fact 2 fails maximally) -> conditional clearances
+collapse, product -> 0 (tight). The hidden no-return fact = no resonance = the
+inside debt vanishes = the cascade product stays positive. LRC = no return wins.
+======================================================================

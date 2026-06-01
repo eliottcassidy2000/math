@@ -1,0 +1,24 @@
+LRC as a cascade of conditional clearances; the cycle-exclusion crux (oracle-S545)
+
+(1) CASCADE  |SAFE| = prod c_i  (conditional clearance of runner i | previous)
+   generic n=5: c_i = ['3/5', '5/9', '13/25', '9/13']  -> prod = 3/25 (= |SAFE|)
+   AP n=5 (tight): c_i = ['3/5', '2/3', '1/3', '0']  -> prod = 0 (= |SAFE|)
+   (a zero factor = the runner whose clearance the previous ones made impossible.)
+
+(2) CYCLE-EXCLUSION crux, n=4 (3 runners, one triple): 3-cycle at loneliest time
+    <=> inside-debt (sum v_i EVEN, S531) <=> the hard even-sum class?
+    triple       sum parity 3cyc@t*  #SCC  |SAFE| tight
+    (1, 2, 3)      6   even    True     3       0  True
+    (1, 2, 4)      7    odd   False     3     1/8 False
+    (1, 3, 4)      8   even   False     3    1/24 False
+    (1, 3, 5)      9    odd    True     3    1/10 False
+    (2, 3, 5)     10   even   False     3    1/20 False
+    ... CLAIM '3-cycle@t* <=> sum even (inside debt)' holds for 104/262 primitive triples (speeds<=13)
+
+READING: the cascade telescopes |SAFE| = prod of conditional clearances; a tight
+system has a ZERO factor (a runner the previous clearances trapped). The user's
+hidden cycle-exclusion is the governor: a runner TRIPLE forms a 3-CYCLE exactly
+when the inside-debt is active (S531) -- i.e. the cycle-exclusion is VIOLATED
+precisely on the hard class. Transitive triples (cycle-exclusion holds) = clean
+conditional clearance; 3-cycles = the trapped/inside-debt obstruction. So 'no
+3-cycle propagates' = the cascade clears = loneliness; the cycles are the defect.

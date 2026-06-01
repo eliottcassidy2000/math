@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S545o - The cascade = product of conditional clearances; the hidden no-return fact = the resonance/3-cycle obstruction (HYP-2041)
+
+**Account:** Oracle (oraclebox1). **User prompt:** think of a cascade as a product of conditional clearances; transitivity = completion, but a second hidden fact (X,Y) arc => NOT((Z,X)&(Y,Z)) propagates with it.
+**THE TWO FACTS:** Fact1(completion) propagates clearances forward; Fact2(HIDDEN no-return) (X,Y) forbids the 3-cycle Z->X->Y->Z = no later runner cyclically re-blocks. VERIFIED 4000/4000: Fact1<=>Fact2<=>no-3-cycle (same transitivity, Fact2 = the cascade-relevant face).
+**CASCADE (lrc_cascade_conditional_clearance_noreturn_s545.py):** F_k=F_{k-1} cap {||v_k t||>=1/n}, c_k=|F_k|/|F_{k-1}|, prod=lonely measure. c_1=1-2/n exactly. The product DEFICIT below (1-2/n)^{n-1} is driven by the # of RETURN 3-cycles = 3-term resonances. Generic: few returns -> product ~ (1-2/n)^{n-1} (propagate). REGULAR POLYGON (AP): ALL triples resonant -> c_k collapse (last=0) -> product EXACTLY 0 (tight). Fibonacci 1,2,3,5,8,13 (each a+b=c) resonance-rich -> deficit.
+**UNIFICATION:** Fact2(no return) <=> no 3-term resonance <=> inside debt vanishes (S529/533) <=> cascade product stays (1-2/n)^{n-1}>0 <=> local emptiness (S544). Cascade needs BOTH facts: Fact1 builds forward, Fact2 prevents re-block. Returns = sole obstruction, maximal at the regular polygon. REFRAME: LRC = 'no return wins' (returns kill the measure at the regular polygon but conjecturally not the set).
+**Convergent** with codex-S549/HYP-2040 (transitive wedge debt). **Artifacts:** lrc_cascade_conditional_clearance_noreturn_s545.py (+.out); reflection lrc-cascade-as-conditional-clearances-the-no-return-fact-is-the-resonance-obstruction-s545o.md; HYP-2041. **Handoff:** quantitative bound prod c_k >= (1-2/n)^{n-1} - f(#returns); set-vs-measure gap at the regular polygon; higher-order returns = full inside debt.
+
 ## codex-2026-06-01-S549 - Conditional clearance product plus hidden transitive wedge debt (HYP-2040)
 
 **Context:** User reframed the LRC cascade as a product of conditional clearances and pointed to the hidden transitivity fact: if `X->Y`, then no `Z` can have `Z->X` and `Y->Z`.
