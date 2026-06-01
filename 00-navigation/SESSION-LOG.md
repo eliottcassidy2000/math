@@ -10,6 +10,15 @@
  - M3 QR/Paley tournament: ~1 class (R=0.25,0.018); caveat n=1 mod4 degenerate.
 **MULTITUDE (abstract, HYP-2019):** MAP-p (p-adic valuation, ultrametric, ties S534 n=18 channels); MAP-nerve (Cech complex of danger cover, LRC<=>not-covering); MAP-wire (closed allowable sequence/wiring diagram, realizable=stretchable); MAP-matroid (resonance-independence, Q-representable); MAP-CF (continued fraction/three-gap, apex>=2/n); MAP-Robinson (circular Robinsonian closeness).
 **Artifacts:** lrc_mappings_restriction_spectrum_s535.py (+.out); reflection lrc-mapping-spectrum-metric-retention-restricts-the-realizable-classes-s535o.md; HYP-2018 (computed spectrum), HYP-2019 (abstract multitude). **Handoff:** prove realizable near-graphs = exactly circular indifference graphs; characterize observer-isolable subfamily; compute MAP-wire stretchable counts; tie MAP-p to S534.
+## opus-2026-06-01-S538 - Radical mappings: lonely = one-big-block + singletons; SCC partition collapses to 4-5 states
+
+**Account:** Oracle (remote-control)
+**User prompt:** Different mappings for more restricted class sets; get creative and abstract.
+**Computation:** `04-computation/lrc_radical_mappings_s538.py`. Compared iso class, score sequence, gap multiset, SCC partition across n=4..7.
+**THE FINDING:** The lonely SCC partitions are ALWAYS of the form (k, 1, ..., 1) — one big block of size k plus singletons. k=2 NEVER appears (2-vertex tournaments can't be strongly connected). At n=7: only 4 lonely SCC partitions out of 5 total. The iso class restriction at n=7: only 13% of A000568 realized.
+**Score sequence as intermediate mapping:** 24 unpointed score sequences at n=7 (vs 59 iso classes and 456 A000568). Score sequences capture shape without wiring. The lonely score sequences all start with observer score = n-1 (source).
+**The lonely landscape:** at a lonely time, the tournament is a simple stack: observer (source) → singletons → one big cycle at the bottom. This "almost transitive" structure is the universal geometry of loneliness.
+**Tournament Analysis insight:** The SCC partition + observer position is the IDEAL intermediate mapping: coarser than iso class (4-5 states vs A000568) but finer than the trivial #SCC count. It captures exactly the LRC-relevant structure.
 
 ## opus-2026-06-01-S537 - Apex-reduced classes: 1 transitive + few single-blocks; #SCC ∈ {1,m} confirmed
 
