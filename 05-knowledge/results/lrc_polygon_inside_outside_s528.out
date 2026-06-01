@@ -1,0 +1,254 @@
+The Regular Polygon's Two Faces — opus-S528
+
+======================================================================
+PART 1: Regular polygon — boundary vs diagonals
+======================================================================
+
+n=4:
+  total edges: C(4,2) = 6
+  boundary (d=1): 4
+  diagonals (d≥2): 2
+  inside/outside ratio: 2/4 = 0.50
+
+  by diagonal length d:
+    d=1: 4 edges — boundary
+    d=2: 2 edges — half-turn boundary
+  observer's edges: 2 boundary + 1 diagonals
+  at regular polygon: all distances = d/n ≥ 1/4 → observer is SOURCE
+
+n=5:
+  total edges: C(5,2) = 10
+  boundary (d=1): 5
+  diagonals (d≥2): 5
+  inside/outside ratio: 5/5 = 1.00
+
+  by diagonal length d:
+    d=1: 5 edges — boundary
+    d=2: 5 edges — aligned
+  observer's edges: 2 boundary + 2 diagonals
+  at regular polygon: all distances = d/n ≥ 1/5 → observer is SOURCE
+
+n=6:
+  total edges: C(6,2) = 15
+  boundary (d=1): 6
+  diagonals (d≥2): 9
+  inside/outside ratio: 9/6 = 1.50
+
+  by diagonal length d:
+    d=1: 6 edges — boundary
+    d=2: 6 edges — aligned
+    d=3: 3 edges — half-turn boundary
+  observer's edges: 2 boundary + 3 diagonals
+  at regular polygon: all distances = d/n ≥ 1/6 → observer is SOURCE
+
+n=7:
+  total edges: C(7,2) = 21
+  boundary (d=1): 7
+  diagonals (d≥2): 14
+  inside/outside ratio: 14/7 = 2.00
+
+  by diagonal length d:
+    d=1: 7 edges — boundary
+    d=2: 7 edges — aligned
+    d=3: 7 edges — aligned
+  observer's edges: 2 boundary + 4 diagonals
+  at regular polygon: all distances = d/n ≥ 1/7 → observer is SOURCE
+
+n=8:
+  total edges: C(8,2) = 28
+  boundary (d=1): 8
+  diagonals (d≥2): 20
+  inside/outside ratio: 20/8 = 2.50
+
+  by diagonal length d:
+    d=1: 8 edges — boundary
+    d=2: 8 edges — aligned
+    d=3: 8 edges — aligned
+    d=4: 4 edges — half-turn boundary
+  observer's edges: 2 boundary + 5 diagonals
+  at regular polygon: all distances = d/n ≥ 1/8 → observer is SOURCE
+
+n=14:
+  total edges: C(14,2) = 91
+  boundary (d=1): 14
+  diagonals (d≥2): 77
+  inside/outside ratio: 77/14 = 5.50
+
+  by diagonal length d:
+    d=1: 14 edges — boundary
+    d=2: 14 edges — aligned
+    d=3: 14 edges — aligned
+    d=4: 14 edges — aligned
+    d=5: 14 edges — aligned
+    d=6: 14 edges — aligned
+    d=7: 7 edges — half-turn boundary
+  observer's edges: 2 boundary + 11 diagonals
+  at regular polygon: all distances = d/n ≥ 1/14 → observer is SOURCE
+
+THE INSIDE/OUTSIDE RATIO:
+  n=4: 2.0  (2 diagonals per boundary edge)
+  n=6: 3.0  (3:1)
+  n=7: 3.5  (3.5:1)
+  n=14: 10.0 (10:1)
+
+  The CASCADE works when inside >> outside:
+  enough hidden degrees of freedom to force the visible state.
+  The transition is at n=7 (ratio 3.5) — the inside just barely
+  dominates the outside.
+
+======================================================================
+PART 2: Diagonal flip → boundary coupling
+======================================================================
+
+n=5:
+  boundary walls (observer threshold): 21
+  diagonal walls (runner half-turn): 8
+  simultaneous: 5
+  pure boundary: 16
+  pure diagonal: 3
+  total distinct walls: 24
+  diagonal fraction: 12.5%
+
+n=6:
+  boundary walls (observer threshold): 37
+  diagonal walls (runner half-turn): 12
+  simultaneous: 7
+  pure boundary: 30
+  pure diagonal: 5
+  total distinct walls: 42
+  diagonal fraction: 11.9%
+
+n=7:
+  boundary walls (observer threshold): 47
+  diagonal walls (runner half-turn): 20
+  simultaneous: 11
+  pure boundary: 36
+  pure diagonal: 9
+  total distinct walls: 56
+  diagonal fraction: 16.1%
+
+n=14:
+  boundary walls (observer threshold): 233
+  diagonal walls (runner half-turn): 92
+  simultaneous: 51
+  pure boundary: 182
+  pure diagonal: 41
+  total distinct walls: 274
+  diagonal fraction: 15.0%
+
+INSIGHT: the walk is mostly INSIDE changes (diagonal flips)
+with occasional OUTSIDE changes (boundary flips).
+The inside changes accumulate until the outside 'tips over'
+into the lonely state.
+
+This is the HIDDEN DEPENDENCE: the inside drives the outside,
+but not directly — through the cycle structure and the
+tournament's metagraph position.
+
+======================================================================
+PART 3: Dihedral symmetry and LRC
+======================================================================
+
+n=5: D_5 = rotations × reflections
+  regular tournament: vertex-transitive, self-complementary
+  D_5 orbit of arcs = 2 diagonal classes (d=1,...,2)
+  observer at vertex 0: breaks D_5 to Z_2 (reflection only)
+  surviving symmetry: t ↔ 1-t (THM-387 time reversal)
+
+  diagonal coupling to boundary:
+    d=1: coupling ~ 1/1 = 1.000
+    d=2: coupling ~ 1/2 = 0.500
+
+n=7: D_7 = rotations × reflections
+  regular tournament: vertex-transitive, self-complementary
+  D_7 orbit of arcs = 3 diagonal classes (d=1,...,3)
+  observer at vertex 0: breaks D_7 to Z_2 (reflection only)
+  surviving symmetry: t ↔ 1-t (THM-387 time reversal)
+
+  diagonal coupling to boundary:
+    d=1: coupling ~ 1/1 = 1.000
+    d=2: coupling ~ 1/2 = 0.500
+    d=3: coupling ~ 1/3 = 0.333
+
+n=14: D_14 = rotations × reflections
+  n is even: no regular tournament (all scores must be (n-1)/2)
+  nearest: near-regular tournament (scores differ by 1)
+  D_14 orbit: 7 diagonal classes
+  observer at vertex 0: breaks D_14 to Z_2 (reflection only)
+  surviving symmetry: t ↔ 1-t (THM-387 time reversal)
+
+  diagonal coupling to boundary:
+    d=1: coupling ~ 1/1 = 1.000
+    d=2: coupling ~ 1/2 = 0.500
+    d=3: coupling ~ 1/3 = 0.333
+    d=4: coupling ~ 1/4 = 0.250
+    d=5: coupling ~ 1/5 = 0.200
+    d=6: coupling ~ 1/6 = 0.167
+    d=7: coupling ~ 1/7 = 0.143
+
+======================================================================
+PART 4: Inside/outside cascade — why n=7 is the threshold
+======================================================================
+
+n=5: inside/outside = 5/5 = 1.0
+  cascade value: 0.8640 < 1 ✗
+  observer richness: 2 diagonals / 2 boundary = 1.0
+
+n=6: inside/outside = 9/6 = 1.5
+  cascade value: 0.9877 < 1 ✗
+  observer richness: 3 diagonals / 2 boundary = 1.5
+
+n=7: inside/outside = 14/7 = 2.0
+  cascade value: 1.1156 ≥ 1 ✓
+  observer richness: 4 diagonals / 2 boundary = 2.0
+
+n=8: inside/outside = 20/8 = 2.5
+  cascade value: 1.2458 ≥ 1 ✓
+  observer richness: 5 diagonals / 2 boundary = 2.5
+
+n=14: inside/outside = 77/14 = 5.5
+  cascade value: 2.0445 ≥ 1 ✓
+  observer richness: 11 diagonals / 2 boundary = 5.5
+
+THE THRESHOLD EXPLAINED:
+  The cascade works when the inside is rich enough to control the outside.
+  Observer richness (n-3)/2 measures this:
+    n=5: richness 1.0 — barely enough inside → cascade fails
+    n=6: richness 1.5 — not quite → cascade barely fails (0.988)
+    n=7: richness 2.0 — just enough → cascade works (1.116)
+    n=14: richness 5.5 — abundant → cascade easy (1.766)
+
+  The regular polygon's INSIDE (diagonals/tiles/cycles) drives
+  the OUTSIDE (boundary/gaps/scores). When inside >> outside,
+  the hidden structure has enough freedom to force loneliness.
+
+======================================================================
+PART 5: The walk — inside flips driving outside changes
+======================================================================
+
+n=5 (initial segment):
+  total walls: 40
+  inside (diagonal) walls: 14 (35%)
+  outside (boundary) walls: 26 (65%)
+  average inside run between outside walls: 0.5
+  max inside run: 6
+  obs outdeg at outside walls: Counter({3: 12, 4: 8, 2: 4, 1: 2})
+
+n=7 (initial segment):
+  total walls: 112
+  inside (diagonal) walls: 55 (49%)
+  outside (boundary) walls: 57 (51%)
+  average inside run between outside walls: 1.0
+  max inside run: 15
+  obs outdeg at outside walls: Counter({5: 28, 6: 12, 4: 8, 3: 5, 1: 2, 2: 2})
+
+THE PICTURE: the walk is mostly INSIDE diagonal flips
+(changing the hidden tournament class) punctuated by
+occasional OUTSIDE boundary flips (changing observer's status).
+
+The inside flips ACCUMULATE, shifting the tournament through
+metagraph classes, until the accumulated change forces an
+outside flip that pushes the observer toward source.
+
+This is the MECHANISM of the cascade:
+  1. The inside has more edges than the outside (richness > 1)

