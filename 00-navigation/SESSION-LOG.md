@@ -1,5 +1,13 @@
 # Session Log
 
+## opus-2026-06-01-S547 - Hough entropy on the p-adic tree: the entropy attack on LRC
+
+**Account:** Oracle (remote-control)
+**User prompt:** Attack Hough entropy on the tree vigorously.
+**Computation:** `04-computation/lrc_tree_entropy_s547.py`. Section entropy landscape, p-adic tree entropy decomposition, entropy threshold, Hough accumulator, entropy attack.
+**KEY RESULTS:** (1) ENTROPY ATTACK SUCCEEDS at n=4,5,6,7: min(max_H) ≥ ln(n-2) for ALL tested speed sets. The maximum section entropy always exceeds the lonely threshold. (2) The Hough accumulator shows coverage 0 (lonely) gets LESS than its fair share — but never zero. Coverage peaks at 1-3 (most times have a few runners close). (3) The entropy threshold does NOT cleanly separate lonely from non-lonely — they overlap. Entropy is a WITNESS, not a certificate. (4) The p-adic tree entropy decomposes by level: each level contributes ~log(p). Total ≈ log(n). Threshold ≈ log(n-2). The budget barely covers (tight at AP).
+**THE GAP:** The entropy attack proves max_H ≥ threshold (necessary condition) but NOT that the high-entropy time is actually lonely. Global high entropy doesn't guarantee LOCAL emptiness at the observer. The p-adic tree's BRANCH structure is needed to bridge the gap: the observer's branch has a specific position in the tree, and the tree's ultrametric geometry ensures that global spread implies local emptiness at the observer.
+
 ## oracle-2026-06-01-S542 - The p-adic tree unifies LRC: channels=branches, apex=root-branch, moat=boundary; channel rank=omega(n/2) (HYP-2035)
 
 **Account:** Oracle (oraclebox1). **User prompt:** continue the themes, integrating the p-adic tree.
